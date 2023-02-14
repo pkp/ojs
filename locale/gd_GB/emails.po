@@ -74,6 +74,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Clàradh mar lèirmheasaiche aig {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Leis na tha de dh’eòlas agad, bha sinn cho dàna ’s gun do chlàraich sinn d’ "
@@ -112,22 +113,6 @@ msgstr ""
 "<br />\n"
 "Mòran taing airson sìor ùidh a nochdadh nar n-obair,<br />\n"
 "{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Dearbhadh air tagradh"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Shin thu,<br />\n"
-"<br />\n"
-"Chuir {$submitterName} an sgrìobhainn “{$submissionTitle}” gu "
-"{$contextName}. <br />\n"
-"<br />\n"
-"Ma tha ceist sam bith agad, cuir fios thugam. Mòran taing airson an t-iris-"
-"leabhar seo a thaghadh mar dhòigh foillseachaidh dha d’ obair.<br />\n"
-"<br />\n"
-"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -264,6 +249,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Iarrtas airson lèirmheas air a chur gu neoini"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -699,6 +685,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Chaidh tionndadh lèirmheaste a luchdadh suas"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Deasaichean:<br />\n"

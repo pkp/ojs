@@ -70,6 +70,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "在《{$contextName}》注册为审稿人"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "基于您的经验, 我们已经注册您的名字到期刊《{$contextName}》的审稿人数据库. 这"
@@ -100,21 +101,6 @@ msgstr ""
 "<br />\n"
 "感谢您持续地关注我们的作品，<br />\n"
 "{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "投稿致谢函"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"您好,<br />\n"
-"<br />\n"
-"{$submitterName} 已将稿件 &quot;{$submissionTitle}&quot; 投稿给 "
-"{$contextName}. <br />\n"
-"<br />\n"
-"如果您有任何问题，请立即与我们联系。 感谢您考虑在本杂志出版您的作品。<br />\n"
-"<br />\n"
-"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -242,6 +228,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "请取消审查工作"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -630,6 +617,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "修订版上传"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "{$recipientName}:<br />\n"

@@ -76,6 +76,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Inscription en tant que rapporteur de {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Compte tenu de votre expertise, nous avons pris l'initiative d'inscrire "
@@ -114,23 +115,6 @@ msgstr ""
 "<br />\n"
 "Nous vous remercions de l'intérêt que vous portez à notre revue,<br />\n"
 "{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Accusé de réception de la soumission"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Bonjour,<br />\n"
-"<br />\n"
-"Le manuscrit intitulé , &quot;{$submissionTitle}&quot;, a été soumis par "
-"{$submitterName} à {$contextName}.<br />\n"
-"<br />\n"
-"Si vous avez des questions, n'hésitez pas à communiquer avec nous. Nous vous "
-"remercions d'avoir pensé à {$contextName} pour la publication de vos travaux."
-"<br />\n"
-"<br />\n"
-"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -268,6 +252,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Annulation de la demande d'évaluation"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -693,6 +678,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Version révisée téléversée"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Rédacteurs, rédactrices,<br />\n"

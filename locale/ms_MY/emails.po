@@ -85,6 +85,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Pendaftaran sebagai Pengulas dengan {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Mengikut kepakaran anda, kami dengan bebas mendaftarkan nama anda di "
@@ -110,6 +111,7 @@ msgstr ""
 msgid "emails.issuePublishNotify.subject"
 msgstr "Terbitan Baharu Diterbitkan"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Pembaca yang dihormati, </p><p>{$contextName} baru sahaja menerbitkan "
@@ -117,19 +119,6 @@ msgstr ""
 "Kandungan di sini dan kemudian mengunjungi laman web kami untuk meninjau "
 "artikel dan item yang menarik</p><p>Terima kasih atas minat berterusan dalam "
 "kerja kami,</p>{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Pengesahan penyerahan"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"<p>Hello {$recipientName},</p><p>Anda telah dinamakan sebagai pengarang "
-"bersama atas penyerahan kepada {$contextName}. Yang menghantar, "
-"{$submitterName} memberikan butiran seperti berikut:</p><p>{$submissionTitle}"
-"<br>{$authorsWithAffiliation}</p><p>Jika mana-mana butiran ini tidak betul, "
-"atau anda tidak mahu dinamakan pada penyerahan ini, sila hubungi saya.</"
-"p><p> Terima kasih kerana mempertimbangkan jurnal ini sebagai tempat kerja "
-"anda.</p>{$contextSignature}"
 
 msgid "emails.editorAssign.subject"
 msgstr ""
@@ -150,6 +139,7 @@ msgstr ""
 msgid "emails.reviewRequest.subject"
 msgstr "Jemputan untuk menyemak"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "<p> {$recipientName} yang dihormati,</p><p>Saya percaya bahawa anda akan "
@@ -191,6 +181,7 @@ msgstr ""
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Permintaan untuk menyemak penyerahan yang disemak"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "<p> {$recipientName} yang dihormati,</p><p>Terima kasih atas ulasan anda "
@@ -212,6 +203,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Permintaan untuk Semakan Dibatalkan"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -227,6 +219,7 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "Bolehkah anda masih menyemak untuk {$contextName}?"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>Yang dihormati {$recipientName},</p><p>Kami baru-baru ini telah "
@@ -282,6 +275,7 @@ msgstr ""
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Peringatan untuk melengkapkan ulasan anda"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "<p> {$recipientName} yang dihormati:</p><p>E-mel ini ialah peringatan "
@@ -344,6 +338,7 @@ msgid "emails.layoutRequest.subject"
 msgstr ""
 "Penyerahan {$submissionId} sedia untuk pengeluaran di {$contextAcronym}"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "<p> {$recipientName} yang dihormati,</p><p>Serahan baharu sedia untuk "
@@ -360,6 +355,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Galley Selesai"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "<p> {$recipientName} yang dihormati,<p><p>Galleys kini telah disediakan "
@@ -613,6 +609,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Versi Semakan Dimuat naik"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Editor: <br />\n"

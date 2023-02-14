@@ -75,6 +75,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Registratie als Reviewer bij {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Met het oog op uw expertise hebben wij de vrijheid genomen om uw naam op te "
@@ -110,22 +111,6 @@ msgstr ""
 "<br />\n"
 "Dank voor uw interesse in ons werk,<br />\n"
 "{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Bevestiging van inzending"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Beste,<br />\n"
-"<br />\n"
-"{$submitterName} heeft het manuscript &quot;{$submissionTitle}&quot; "
-"ingezonden voor {$contextName}. <br />\n"
-"<br />\n"
-"Neemt u alstublieft contact op als u vragen heeft. Dank u voor het overwegen "
-"van dit tijdschrift als podium voor u werk.<br />\n"
-"<br />\n"
-"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -263,6 +248,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Reviewverzoek ingetrokken"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -672,6 +658,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Herziene versie geladen"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "{$recipientName}:<br />\n"

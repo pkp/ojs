@@ -85,6 +85,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Регистрација како рецензент со {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Со оглед на вашето познавање, си земавме за слобода да го регистрираме "
@@ -111,6 +112,7 @@ msgstr ""
 msgid "emails.issuePublishNotify.subject"
 msgstr "Објавено е ново издание: {$issueIdentification}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Читатели:</p><p>{$contextName} само што го објави најновото издание на "
@@ -119,22 +121,6 @@ msgstr ""
 "би ве интересирале. </p><p>Ви благодариме за непрекината заинтересираност за "
 "нашата работа,</p>\n"
 "{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Потврда за поднесување"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Почитувани,<br />\n"
-"<br />\n"
-"{$submitterName} го поднесе ракописот, &quot;{$submissionTitle}&quot; до "
-"{$contextName}. <br />\n"
-"<br />\n"
-"Доколку имате било какви прашања, ве молам да ме контактирате. Ви "
-"благодариме што го земавте во предвид ова списание како место за вашата "
-"работа.<br />\n"
-"<br />\n"
-"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -236,6 +222,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Барањето за рецензија е откажано"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -400,6 +387,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Galleys се завршени"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -667,6 +655,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Прикачена корегирана верзија"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Уредници:<br />\n"

@@ -93,6 +93,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Registrazione come revisore per {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Alla luce delle tue competenze, ci siamo presi la libertà di registrare il "
@@ -122,6 +123,7 @@ msgstr ""
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nuova uscita disponibile: {$issueIdentification}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Gentile lettore,</p>\n"
@@ -131,20 +133,6 @@ msgstr ""
 "<br />\n"
 "<p>Grazie per l'interesse dimostratoci,</p>\n"
 "<p>{$signature}</p>"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Conferma di ricezione della proposta"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"<p>Gentilissimo {$recipientName}</p>\n"
-"<p>{$submitterName} ha aggiunto il suo nominativo in qualità di co-author "
-"del manoscritto \"{$submissionTitle}\" inviato per la pubblicazione alla "
-"rivista {$contextName}. </p>\n"
-"<p>questi sono i dettagli forniti: {$authorsWithAffiliation}</p>\n"
-"<p>Se non fossero corretti la prego di contattarci. Siamo a disposizione per "
-"qualsiasi chiarimento e la ringraziamo per la sua collaborazione.</p>\n"
-"<p>{$contextSignature}</p>"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -174,6 +162,7 @@ msgstr ""
 msgid "emails.reviewRequest.subject"
 msgstr "Invito alla revisione"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "<p>Gentile {$recipientName},</p><p>desidero invitarti alla revisione del "
@@ -253,6 +242,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Cancellazione richiesta di revisione"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "Gentile {$recipientName}:<br />\n"
@@ -269,6 +259,7 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "Sei ancora disponibile alla revisione per {$contextName}?"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>Gentilissimo {$recipientName}:</p>\n"
@@ -334,6 +325,7 @@ msgstr ""
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Reminder automatico: una revisione è in attesa di essere completata"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "Gentile {$recipientName},<br />\n"
@@ -396,6 +388,7 @@ msgstr ""
 "Ms {$submissionId} accettato da {$contextAcronym} è pronto per la "
 "preparazione delle bozze"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "<p>{$recipientName}:</p>\n"
@@ -676,6 +669,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Caricamento di versione revisionata"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Caro editor:<br />\n"

@@ -70,6 +70,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "ثبت نام به عنوان کارشناس {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "با توجه با تجارب جنابعالی, {$contextName} فرصت را مغتنم شمرده و نام شما را "
@@ -106,22 +107,6 @@ msgstr ""
 "<br />\n"
 "از توجه همیشگی مستمر شما نسبت به این مجله متشکریم.<br />\n"
 "{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "قدردانی برای ارسال مقاله"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"با سلام,<br />\n"
-"<br />\n"
-"مقاله {$submitterName} مقاله &quot;{$submissionTitle}&quot; را به مجله "
-"{$contextName} ارسال نمودند <br />\n"
-"<br />\n"
-"در صورت داشتن هر گونه سوالی با من تماس حاصل فرمایید. از اینکه نتیجه پژوهش "
-"خود را برای این مجله ارسال نمودید، سپاسگذاریم<br />\n"
-"<br />\n"
-"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -245,6 +230,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "درخواست لغو کارشناسی"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -259,6 +245,7 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr ""
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 
@@ -649,6 +636,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "آپلود نسخه اصلاح شده"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "دبیر محترم:<br />\n"

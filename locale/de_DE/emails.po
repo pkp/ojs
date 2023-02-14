@@ -77,6 +77,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Registrierung als Gutachter/in bei {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Angesichts Ihrer Erfahrung haben wir uns erlaubt, Ihren Namen der Gutachter/"
@@ -115,22 +116,6 @@ msgstr ""
 "<br />\n"
 "Danke für das andauernde Interesse an unserer Arbeit,<br />\n"
 "{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Eingangsbestätigung"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Liebe/r Autor/in,<br />\n"
-"<br />\n"
-"{$submitterName} hat das Manuskript &quot;{$submissionTitle}&quot; bei "
-"{$contextName} eingereicht. <br />\n"
-"<br />\n"
-"Für weitere Fragen stehen wir Ihnen gern zur Verfügung. Danke für Ihr "
-"Interesse an einer Veröffentlichung in unserer Zeitschrift.<br />\n"
-"<br />\n"
-"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -273,6 +258,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Rücknahme einer Bitte um ein Gutachten"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName},<br />\n"
@@ -289,6 +275,7 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "Anfrage nach einem Gutachten wiederhergestellt."
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName},<br />\n"
@@ -698,6 +685,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Überarbeitete Version hochgeladen"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Sehr geehrte Redaktion,<br />\n"

@@ -75,6 +75,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Rekisteröinti arvioijaksi julkaisuun {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Asiantuntemuksenne perusteella olemme ottaneet vapauden rekisteröidä teidät "
@@ -112,22 +113,6 @@ msgstr ""
 "<br />\n"
 "Kiitos mielenkiinnostanne työtämme kohtaan.<br />\n"
 "{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Käsikirjoituksesi on vastaanotettu"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Hei,<br />\n"
-"<br />\n"
-"{$submitterName} on lähettänyt julkaisuumme {$contextName} käsikirjoituksen "
-"&quot;{$submissionTitle}&quot;.<br />\n"
-"<br />\n"
-"Jos teillä on kysyttävää, otattehan yhteyttä minuun. Kiitos, että valitsitte "
-"tämän julkaisun työllenne.<br />\n"
-"<br />\n"
-"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -266,6 +251,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Arviointipyynnön peruminen"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "Hyvä {$recipientName},<br />\n"
@@ -688,6 +674,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Korjattu versio on ladattu"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Hyvät toimittajat,<br />\n"

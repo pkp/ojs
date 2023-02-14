@@ -86,6 +86,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Регистрация в качестве рецензента в журнале «{$contextName}»"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Принимая во внимание Ваш опыт, мы взяли на себя смелость зарегистрировать "
@@ -113,6 +114,7 @@ msgstr ""
 msgid "emails.issuePublishNotify.subject"
 msgstr "Новый выпуск уже доступен: {$issueIdentification}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Уважаемый читатель!</p><p>Журнал «{$contextName}» рад сообщить, что "
@@ -121,19 +123,6 @@ msgstr ""
 "интересуют. Благодарим наших авторов, рецензентов и редакторов за их "
 "неоценимый вклад в эту работу, а наших читателей — за постоянный интерес к "
 "нашей работе.</p><p>С уважением,</p>{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Подтверждение отправки"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"<p>Здравствуйте, {$recipientName}!</p><p>Вы были указаны в качестве соавтора "
-"материала, направленного в журнал «{$contextName}». Отправитель, "
-"{$submitterName}, указал следующую информацию:</p><p>{$submissionTitle}"
-"<br>{$authorsWithAffiliation}</p><p>Если что-то в этой информации "
-"неправильно или Вы не хотите, чтобы Вас указывали в этом материале, "
-"пожалуйста, свяжитесь со мной.</p><p>Спасибо за выбор нашего журнала для "
-"публикации Вашей работы.</p><p>С уважением,</p>{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -154,6 +143,7 @@ msgstr ""
 msgid "emails.reviewRequest.subject"
 msgstr "Приглашение к рецензированию"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "<p>Здравствуйте, {$recipientName}!</p><p>Я полагаю, что Вы могли бы быть "
@@ -194,6 +184,7 @@ msgstr ""
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Запрос на рецензирование исправленного материала"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "<p>Здравствуйте, {$recipientName}!</p><p>Благодарю Вас за рецензирование "
@@ -215,6 +206,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Запрос на рецензирование отменен"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "Здравствуйте, {$recipientName}!<br />\n"
@@ -230,6 +222,7 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "Можете ли Вы ещё отрецензировать кое-что для «{$contextName}»?"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>Здравствуйте, {$recipientName}!</p><p>Мы недавно отменили наш запрос на "
@@ -287,6 +280,7 @@ msgstr ""
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Напоминание о необходимости завершить рецензирование"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "<p>Здравствуйте, {$recipientName}!</p><p>Это письмо — автоматическое "
@@ -346,6 +340,7 @@ msgstr ""
 msgid "emails.layoutRequest.subject"
 msgstr "Материал «{$submissionId}» готов к верстке в «{$contextAcronym}»"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "<p>Здравствуйте, {$recipientName}!</p><p>Новый материал готов для верстки:</"
@@ -362,6 +357,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Гранки сделаны"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "<p>Здравствуйте, {$recipientName}!<p><p>Гранки для следующего материала уже "
@@ -626,6 +622,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Загружена исправленная версия"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Уважаемые редакторы!<br />\n"

@@ -75,6 +75,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Registrirani ste kao recenzent časopisa {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Imajući u vidu vaše područje ekspertize, odlučili smo registrirati vas u "
@@ -113,12 +114,6 @@ msgstr ""
 "<br />\n"
 "Hvala vam na interesu za naš rad,<br />\n"
 "{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr ""
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -215,12 +210,14 @@ msgstr ""
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr ""
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 
 msgid "emails.reviewCancel.subject"
 msgstr "Povlačenje zamolbe za recenziju"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "Poštovana/i {$recipientName},<br />\n"
@@ -235,6 +232,7 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr ""
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 
@@ -530,6 +528,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr ""
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 

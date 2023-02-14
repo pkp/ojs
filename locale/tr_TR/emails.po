@@ -85,6 +85,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "{$ContextName} ile Hakem Olarak Kayıt"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Uzmanlık alanınız ışığında, adınızı  {$contextName} için hakem veri tabanına "
@@ -108,6 +109,7 @@ msgstr ""
 msgid "emails.issuePublishNotify.subject"
 msgstr "Yeni sayı yayımlandı: {$issueIdentification}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "Sayın Okuyucumuz,<br />\n"
@@ -119,19 +121,6 @@ msgstr ""
 "<br />\n"
 "Dergimize gösterdiğiniz ilgi için teşekkür ederiz.<br />\n"
 "{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Gönderme onayı"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"<p>Sayın {$recipientName},</p><p>{$contextName} için gönderilen aday "
-"makaleye ortak yazar olarak eklendiniz. Aday makaleyi gönderen, "
-"{$submitterName} aşağıdaki ayrıntıları sundu:</p><p>{$submissionTitle}"
-"<br>{$authorsWithAffiliation}</p><p>Bu detaylardan herhangi biri yanlış ise "
-"ya da bu aday makalede adınızın geçmesini istemiyorsanız, lütfen benimle "
-"iletişime geçin.</p><p>Dergimizi tercih ettiğiniz için teşekkür ederiz.</"
-"p><p>Saygılarımla,</p>{$contextSignature}"
 
 msgid "emails.editorAssign.subject"
 msgstr ""
@@ -269,6 +258,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Değerlendirmenin iptalini rica ederiz"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "Sayın {$recipientName},<br />\n"
@@ -687,6 +677,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Düzeltilmiş Sürüm Yüklendi"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Sayın Editörler,<br />\n"

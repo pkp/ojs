@@ -82,6 +82,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "რეცენზენტად რეგისტრაცია ჟურნალში {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "თქვენი გამოცდილების გათვალისწინებით, ჩვენ თავს უფლება მივეცით თქვენი "
@@ -117,22 +118,6 @@ msgstr ""
 "<br />\n"
 "გმადლობთ, რომ დაინტერესდით ჩვენი ჟურნალით,<br />\n"
 "{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "გაგზავნის დადასტურება"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Hello,<br />\n"
-"<br />\n"
-"{$submitterName} has submitted the manuscript, &quot;{$submissionTitle}"
-"&quot; to {$contextName}. <br />\n"
-"<br />\n"
-"If you have any questions, please contact me. Thank you for considering this "
-"journal as a venue for your work..<br />\n"
-"<br />\n"
-"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -260,6 +245,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "სტატიის რეცენზირების მოთხოვნა"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -684,6 +670,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "ატვირთულია ჩასწორებული ვერსია"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Editors:<br />\n"

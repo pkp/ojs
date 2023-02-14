@@ -85,6 +85,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Registrering som granskare hos {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Baserat på den ämnesexpertis du besitter har vi tagit oss friheten att "
@@ -110,6 +111,7 @@ msgstr ""
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nytt nummer publicerat: {$issueIdentification}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Till registrerade läsare:</p><p>{$contextName} publicerade precis ett "
@@ -119,18 +121,6 @@ msgstr ""
 "<p>\n"
 "Tack för visat intresse för vårt arbete,</p>\n"
 "{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Bekräftelse på mottaget bidrag"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"<p>{$recipientName},</p><p>Du har angivits som medförfattare till "
-"{$contextName}. {$submitterName} skickade med följande detaljer:</"
-"p><p>{$submissionTitle}<br>{$authorsWithAffiliation}</p><p>Kontakta gärna "
-"oss om detta behöver korrigeras, eller om du inte vill vara angiven som "
-"medförfattare till detta bidrag.</p><p>Vänliga hälsningar,</"
-"p>{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -150,6 +140,7 @@ msgstr ""
 msgid "emails.reviewRequest.subject"
 msgstr "Förfrågan om granskning av artikel"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "<p>{$recipientName}:</p><p>Jag tror att du skulle passa utmärkt som "
@@ -207,6 +198,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Förfrågan om granskning återkallad"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -221,6 +213,7 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "Har du fortfarande möjlighet att granska bidrag till {$contextName}?"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>{$recipientName},</p><p> Nyligen avbokade vi ditt erbjudande om att "
@@ -275,6 +268,7 @@ msgstr ""
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Automatisk påminnelse om granskning av bidrag"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "<p>{$recipientName}:</p><p>Det här är bara en påminnelse om vår förfrågan om "
@@ -330,6 +324,7 @@ msgstr ""
 msgid "emails.layoutRequest.subject"
 msgstr "Bidraget {$submissionId} är redo att redigeras hos {$contextAcronym}"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "<p>{$recipientName}:</p>\n"
@@ -351,6 +346,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Publiceringsversioner klara"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "<p>Hej {$recipientName},<p><p>Publiceringsformat har nu färdigställts för "
@@ -605,6 +601,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Reviderad version uppladdad"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Redaktörer:<br />\n"

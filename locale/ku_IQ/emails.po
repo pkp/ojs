@@ -72,6 +72,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "تۆماركردن وه‌كو پێداچوونه‌وه‌ له‌گه‌ڵ  ناوی ده‌ق"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "لە ژێر ڕۆشنایی شارەزایی ئێوەدا، ئێمە ناوی تۆمان وەک هەڵسەنگێنەر تۆمار کردووە "
@@ -107,22 +108,6 @@ msgstr ""
 "<br />\n"
 "سوپاس بۆ گرنگیدان بە کارەکانمان،<br />\n"
 "{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "دانپێدانانی پێشکەشکردن"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"سڵاو،<br />\n"
-"<br />\n"
-"{$submitterName} ڕەشنوسی توێژینەوەکەی پێشکەش کرد, &quot;{$submissionTitle}"
-"&quot; بۆ{$contextName}. <br />\n"
-"<br />\n"
-"ئەگەر هەر پرسیارێکت هەیە، تکایە پەیوەندیم پێوە بکە. سوپاس بۆ هەڵبژاردنی "
-"گۆڤارەکەمان.<br />\n"
-"<br />\n"
-"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -249,6 +234,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "داواکاریی هەڵسەنگاندنی توێژینەوە هەڵوەشێندرایەوە"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -264,6 +250,7 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "داواکاریی هەڵسەنگاندنی توێژینەوە دوبارە کرایەوە"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -649,6 +636,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "وەشانی دوای پێداچونەوە بار کرا"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "بەڕێزان، سەرنوسەران:<br />\n"

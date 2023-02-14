@@ -71,6 +71,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "הרשמה כסוקר עם {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "לאור המומחיות שלך, רשמנו את שמך במאגר הסוקרים עבור {$contextName}. זה לא "
@@ -103,20 +104,6 @@ msgstr ""
 "<br />\n"
 "תודה על ההתעניינות המתמשכת בעבודה שלנו, <br />\n"
 "{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "אישור הגשה"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"שלום,<br />\n"
-"<br />\n"
-"{$submitterName} הגיש כתב יד {$sumbissionTitle} ל{$contextName}.<br />\n"
-"<br />\n"
-"בכל שאלה ניתן לפנות אלי. תודה על פנייתך לכתב עת זה.<br />\n"
-"<br />\n"
-"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -234,6 +221,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "ביטול בקשה לסקירה"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:\n"
@@ -308,6 +296,7 @@ msgstr ""
 msgid "emails.reviewRemindAuto.subject"
 msgstr "תזכורת הגשת ביקורת אוטומטית"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 
@@ -333,12 +322,14 @@ msgstr ""
 msgid "emails.layoutRequest.subject"
 msgstr ""
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 
 msgid "emails.layoutComplete.subject"
 msgstr ""
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 
@@ -414,6 +405,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr ""
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 

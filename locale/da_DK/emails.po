@@ -86,6 +86,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Registrering som bedømmer hos {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "På baggrund af din ekspertise har vi taget den frihed at registrere dit navn "
@@ -112,6 +113,7 @@ msgstr ""
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nyt nummer er blevet publiceret: {$issueIdentification}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Kære læser</p><p>{$contextName} har lige publiceret det seneste nummer på "
@@ -121,20 +123,6 @@ msgstr ""
 "værdifulde bidrag til dette arbejde, og også mange tak til vores læsere for "
 "jeres fortsatte interesse i vores arbejde.</p><p>Med venlig hilsen</"
 "p>{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Indsendelsesbekræftelse"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"<p>Kære {$recipientName}</p><p>Du er angivet som medforfatter på et "
-"manuskript indsendt til {$contextName}. Indsenderen, {$submitterName}, har "
-"angivet følgende information:</p><p>{$submissionTitle}"
-"<br>{$authorsWithAffiliation}</p><p>Hvis nogle af disse oplysninger er "
-"forkerte, eller du ikke ønsker at være angivet som medforfatter på dette "
-"manuskript, bedes du venligst kontakte mig.</p><p>Tak for at overveje dette "
-"tidsskrift til at udgive dit arbejde i.</p><p>Med venlig hilsen</"
-"p>{$contextSignature}"
 
 msgid "emails.editorAssign.subject"
 msgstr ""
@@ -155,6 +143,7 @@ msgstr ""
 msgid "emails.reviewRequest.subject"
 msgstr "Forespørgsel om bedømmelse af artikel"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "<p> Kære {$recipientName}</p><p>Jeg tror, at du vil være en fremragende "
@@ -197,6 +186,7 @@ msgstr ""
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Forespørgsel om bedømmelse af en revideret artikel"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "<p>Kære {$recipientName}</p><p>Tak for din bedømmelse af <a href="
@@ -219,6 +209,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Annullering af forespørgsel om bedømmelse"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "Kære {$recipientName}<br />\n"
@@ -234,6 +225,7 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "Kan du stadig bedømme noget for {$contextName}?"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>Kære {$recipientName}</p><p>Vi har for nyligt aflyst vores forespørgsel "
@@ -292,6 +284,7 @@ msgstr ""
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Påmindelse om at afslutte din bedømmelse"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "<p>Kære {$recipientName}</p><p>Dette er en automatisk påmindelse fra "
@@ -352,6 +345,7 @@ msgid "emails.layoutRequest.subject"
 msgstr ""
 "Indsendelsen {$submissionId} er klar til produktion til {$contextAcronym}"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "<p>Kære{$recipientName}</p><p>En ny indsendelse er klar til layout "
@@ -370,6 +364,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Publiceringsversion færdiggjort"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "<p>Kære {$recipientName}</p><p>Der er nu færdiggjort en publiceringsklar fil "
@@ -627,6 +622,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Revideret udgave uploadet"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Kære Redaktører<br />\n"

@@ -87,6 +87,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Cadastrado como Avaliador em {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "<p>Prezado(a),</p>\n"
@@ -110,6 +111,7 @@ msgstr ""
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nova Edição Publicada: {$issueIdentification}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Caro leitor, </p><p>{$contextName} tem o prazer de anunciar a publicação "
@@ -119,21 +121,6 @@ msgstr ""
 "autores, avaliadores e editores por suas valiosas contribuições para este "
 "trabalho, e aos nossos leitores por seu interesse contínuo.</"
 "p><p>{$contextUrl}</p><p>Atenciosamente,</p>{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Confirmação de submissão"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"<p>Prezado(a) {$recipientName},</p>\n"
-"<br />\n"
-"<p>Você foi designado coautor em uma submissão ao periódico {$contextName}. "
-"O remetente, {$submitterName}, forneceu os seguintes detalhes:</"
-"p><p>{$submissionTitle}<br />{$authorsWithAffiliation}</p><p>Se algum desses "
-"detalhes estiver incorreto ou você não deseja ser designado nesta submissão, "
-"entre em contato conosco.</p><p>Agradecemos por considerar este periódico "
-"para publicar o seu trabalho.</p><br /><p>Atenciosamente,</"
-"p>{$contextSignature}"
 
 msgid "emails.editorAssign.subject"
 msgstr "Você foi designado como editor em uma submissão para {$contextName}"
@@ -231,6 +218,7 @@ msgstr ""
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Solicitação de avaliação de uma submissão revisada"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "Prezado(a) {$recipientName}:<br />\n"
@@ -266,6 +254,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Cancelamento de solicitação de avaliação"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "Prezado(a) {$recipientName},<br />\n"
@@ -285,6 +274,7 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "Você ainda pode avaliar algo para {$contextName}?"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>Prezado(a) {$recipientName}, </p><p>nós gostaríamos de convidá-lo(a) "
@@ -426,6 +416,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Composições Concluídas"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "<p>Prezado(a) {$recipientName},</p><p>As provas topográficas já foram "
@@ -691,6 +682,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Envio de versão atualizada"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Prezados editores: <br />\n"

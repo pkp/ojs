@@ -104,6 +104,7 @@ msgstr "{$contextName}के साथ समीक्षक के रूप �
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 5
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) xmltags: Added XML tags
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "आपकी विशेषज्ञता के प्रकाश में, हमने {$contextName} के लिए समीक्षक डेटाबेस में आपका नाम "
@@ -153,24 +154,6 @@ msgstr ""
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$contextName}
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "सबमिशन स्वीकृति"
-
-# (pofilter) simplecaps: Different capitalization
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Hello,<br />\n"
-"<br />\n"
-"{$submitterName} ने पांडुलिपि जमा की है, &quot;{$submissionTitle}&quot; to "
-"{$contextName}. <br />\n"
-"<br />\n"
-"यदि आपके पास किसी तरह का प्रश्न है, तो कृपया मुझ से सम्पर्क करें। अपने काम के लिए इस जर्नल "
-"को एक स्थान के रूप में विचार करने के लिए धन्यवाद.<br />\n"
-"<br />\n"
-"{$contextSignature}"
-
-# (pofilter) endpunc: Different punctuation at the end
 #, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr "संपादकीय असाइनमेंट"
@@ -344,6 +327,7 @@ msgstr "समीक्षा रद्द करने का अनुरो�
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -872,6 +856,7 @@ msgid "emails.revisedVersionNotify.subject"
 msgstr "संशोधित संस्करण अपलोड किया गया"
 
 # (pofilter) endpunc: Different punctuation at the end
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "संपादकों:<br />\n"

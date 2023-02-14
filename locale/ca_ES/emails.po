@@ -77,6 +77,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Registre com a revisor a {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Després d'avaluar el vostre perfil, ens hem pres la llibertat de registrar "
@@ -113,22 +114,6 @@ msgstr ""
 "<br />\n"
 "Us agraïm l'interès per la nostra revista,<br />\n"
 "{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Confirmació de tramesa"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Hola,<br />\n"
-"<br />\n"
-"{$submitterName} ha tramès el manuscrit «{$submissionTitle}» a "
-"{$contextName}. <br />\n"
-"<br />\n"
-"Si teniu cap pregunta, contacteu amb mi. Gràcies per tenir en compte aquesta "
-"publicació per desenvolupar la vostra feina.<br />\n"
-"<br />\n"
-"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -262,6 +247,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Sol·licitud de revisió cancel·lada"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "Benvolgut/uda {$recipientName},<br />\n"
@@ -683,6 +669,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Versió revisada carregada"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Editors/ores:<br />\n"

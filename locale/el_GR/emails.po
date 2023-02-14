@@ -88,6 +88,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Εγγραφή ως Αξιολογητής στο περιοδικό {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Λαμβάνονας υπόψη τα επιστημονικά σας ενδιαφέροντα, πήραμε την πρωτοβουλία να "
@@ -127,23 +128,6 @@ msgstr ""
 "<br />\n"
 "Σας ευχαριστούμε για το ενδιαφέρον σας σχετικά με τις εκδόσεις μας,<br />\n"
 "{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Επιβεβαίωση υποβολής"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Αγαπητέ/η<br />\n"
-"<br />\n"
-"Ο/Η {$submitterName} έχει υποβάλει την εργασία &quot;{$submissionTitle}"
-"&quot; στο περιοδικό {$contextName}. <br />\n"
-"<br />\n"
-"Εάν έχετε ερωτήσεις, παρακαλούμε επικοινωνήστε μαζί μας. Σας ευχαριστούμε "
-"που θεωρήσατε το περιοδικό μας κατάλληλο για δημοσίευση της εργασίας σας."
-"<br />\n"
-"<br />\n"
-"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -278,6 +262,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Ακύρωση αιτήματος για αξιολόγηση"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -706,6 +691,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Μεταφόρτωση αναθεωρημένης έκδοσης"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Editors:<br />\n"

@@ -73,6 +73,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Zaregistrovaný na pozícii recenzenta pre {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "S ohľadom na Vašu odbornosť sme si Vás dovolili zaregistrovať do databázy "
@@ -109,22 +110,6 @@ msgstr ""
 "<br />\n"
 "Ďakujeme za Váš dlhodobý záujem o našu prácu,<br />\n"
 "{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Poďakovanie za príspevok"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Dobrý deň,<br />\n"
-"<br />\n"
-"{$submitterName} nahral rukopis, &quot;{$submissionTitle}&quot; do časopisu "
-"{$contextName}. <br />\n"
-"<br />\n"
-"Ak máte nejaké otázky, kontaktujte ma, prosím. Ďakujeme vám za využívanie "
-"nášho príspevku pre vaše práce.<br />\n"
-"<br />\n"
-"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -259,6 +244,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Žiadosť o zrušenie recenzie"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -673,6 +659,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Nahraná opravená verzia príspevku"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Editori:<br />\n"

@@ -76,6 +76,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Реєстрація рецензента видання {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "З огляду на Ваш досвід, ми взяли на себе сміливість внести Ваше ім'я до бази "
@@ -113,22 +114,6 @@ msgstr ""
 "<br />\n"
 "Дякуємо, що продовжуєте цікавитись нашою роботою,<br />\n"
 "{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Подяка за подання рукопису"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Вітаємо,<br />\n"
-"<br />\n"
-"Користувач {$submitterName} подав рукопис, &quot;{$submissionTitle}&quot; "
-"{$contextName}. <br />\n"
-"<br />\n"
-"Якщо у вас є якісь питання, будь ласка, зв'яжіться зі мною. Дякуємо, що "
-"розглянули цей журнал як місце для публікації вашої роботи.<br />\n"
-"<br />\n"
-"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -264,6 +249,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Запит на рецензування скасвано"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -684,6 +670,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Перероблена версія вивантажена"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "{$recipientName}:<br />\n"

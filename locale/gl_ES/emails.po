@@ -74,6 +74,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Rexistro como revisor de {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Despois de avaliar o seu perfil, tomamos a liberdade de rexistrar o seu nome "
@@ -111,22 +112,6 @@ msgstr ""
 "<br />\n"
 "Agradecemos o seu interese  pola nosa revista,<br />\n"
 "{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Xustificante de recepción do envío"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Ola,<br />\n"
-"<br />\n"
-"{$submitterName} enviou o manuscrito &quot;{$submissionTitle}&quot; a "
-"{$contextName}. <br />\n"
-"<br />\n"
-"Se ten calquera pregunta, non dubide en contactar connosco. Agradecémoslle "
-"que pensase nesta revista para dar a coñecer o seu traballo.<br />\n"
-"<br />\n"
-"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -262,6 +247,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Solicitude de revisión cancelada"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -345,6 +331,7 @@ msgstr ""
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Recordatorio automático de revisión dun envío"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -677,6 +664,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Versión revisada cargada"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Editores/as:<br />\n"

@@ -84,6 +84,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Zaregistrování na pozici recenzenta pro {$contextName}"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "S ohledem na Vaši odbornost jsme Vás zaregistrovali do databáze recenzentů "
@@ -108,6 +109,7 @@ msgstr ""
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nové číslo bylo vydáno: {$issueIdentification}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 "<p>Vážení čtenáři/vážená čtenářko,</p><p>{$contextName} s potěšením oznamuje "
@@ -115,19 +117,6 @@ msgstr ""
 "návštěvě stránek časopisu a k prohlídce článků a zajímavostí. Děkujeme našim "
 "autorům, recenzentům a redaktorům za jejich cenné příspěvky k tomuto dílu a "
 "našim čtenářům za váš trvalý zájem.</p><p>S pozdravem,</p>{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Potvrzení příspěvku"
-
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Vážený/á {$recipientName}, byl/a jste uveden/a jako spoluautor/spoluautorka "
-"v příspěvku zaslaném do {$contextName}. Předkladatel, {$submitterName}, "
-"poskytl následující údaje:</p><p>{$submissionTitle}"
-"<br>{$authorsWithAffiliation}</p><p>. Pokud jsou některé z těchto údajů "
-"nesprávné nebo si nepřejete být v tomto příspěvku uvedeni, kontaktujte mě "
-"prosím.</p><p>Děkuji, že zvažujete náš časopis jako místo pro publikaci své "
-"práce.</p><p>S pozdravem,</p>{$contextSignature}"
 
 msgid "emails.editorAssign.subject"
 msgstr "Byl /a jste přiřazen jako editor příspěvku pro {$contextName}"
@@ -147,6 +136,7 @@ msgstr ""
 msgid "emails.reviewRequest.subject"
 msgstr "Pozvánka k recenzi"
 
+#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 "<p>Vážený/á {$recipientName},</p><p>Domnívám se, že byste byl/a vynikajícím "
@@ -186,6 +176,7 @@ msgstr ""
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Požadavek na recenzi upravené verze příspěvku"
 
+#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 "Vážený/vážená {$recipientName},,</p><p>Děkujeme vám za vaši recenzi článku "
@@ -205,6 +196,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Žádost o zrušení recenze"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -220,6 +212,7 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr "Můžete, prosím, stále ještě udělat recenzi pro časopis {$contextName}?"
 
+#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 "<p>Vážený/á {$recipientName},</p><p>Nedávno jsme zrušili naši žádost o "
@@ -275,6 +268,7 @@ msgstr ""
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Připomínáme, abyste dokončili svou recenzi"
 
+#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 "<p>Vážený/á {$recipientName}:</p><p>Tento email je automatickým připomenutím "
@@ -336,6 +330,7 @@ msgstr ""
 "Příspěvek {$submissionId} je připraven do produkční fáze v periodiku "
 "{$contextAcronym}"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "<p>Vážený/á{$recipientName},</p><p>Nový příspěvek  je připraven k editaci "
@@ -352,6 +347,7 @@ msgstr ""
 msgid "emails.layoutComplete.subject"
 msgstr "Sazebnice dokončeny"
 
+#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 "{$recipientName}:<br /><br />Nyní jsou vytvořeny sazebnicové verze souborů "
@@ -604,6 +600,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Nahrána opravená verze příspěvku"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Editoři:<br />\n"

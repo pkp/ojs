@@ -75,6 +75,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "ユーザー名『{$contextName}』で査読者として登録されました"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "突然のメールをお許しください。<br />\n"
@@ -115,22 +116,6 @@ msgstr ""
 "<br />\n"
 "引き続きよろしくお願いいたします。<br />\n"
 "{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "投稿のお礼"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"拝啓<br />\n"
-"<br />\n"
-"{$submitterName}が雑誌『{$journalName}』に原稿「{$contextName}」をご投稿され"
-"ました。 <br />\n"
-"<br />\n"
-"何かご不明な点がございましたら、ご連絡ください。研究成果の発表の場として、本"
-"誌をご検討いただき、誠にありがとうございました。<br />\n"
-"<br />\n"
-"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -260,6 +245,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "査読依頼取消のお願い"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "{$recipientName} 様:<br />\n"
@@ -395,6 +381,7 @@ msgstr ""
 msgid "emails.layoutRequest.subject"
 msgstr "ゲラ作成のお願い"
 
+#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 "{$recipientName}:<br />\n"
@@ -693,6 +680,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "改訂版アップロード"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "編集部 御中:<br />\n"

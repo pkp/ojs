@@ -78,6 +78,7 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr "Regisztráció szakmai lektorként a(z) {$contextName} folyóirathoz"
 
+#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 "Tisztelt Szakértő!<br />\n"
@@ -116,24 +117,6 @@ msgstr ""
 "<br />\n"
 "Köszönjük, hogy érdeklődik folyóiratunk iránt,<br />\n"
 "{$signature}"
-
-msgid "emails.submissionAckNotAuthor.subject"
-msgstr "Értesítés cikk beküldéséről"
-
-#, fuzzy
-msgid "emails.submissionAckNotAuthor.body"
-msgstr ""
-"Tisztelt Szerző!<br />\n"
-"<br />\n"
-"Ezúton értesítjük, hogy {$submitterName} benyújtotta a(z) {$contextName} "
-"folyóirathoz a(z) &quot;{$submissionTitle}&quot; című kéziratot.<br />\n"
-"<br />\n"
-"Köszönjük, hogy munkájuk publikálásához folyóiratunkat választották.<br />\n"
-"<br />\n"
-"Ha a szerkesztési munkafolyamat során segítségére lehetünk, kérjük forduljon "
-"szerkesztőségünkhöz.<br />\n"
-"<br />\n"
-"{$contextSignature}"
 
 #, fuzzy
 msgid "emails.editorAssign.subject"
@@ -263,6 +246,7 @@ msgstr ""
 msgid "emails.reviewCancel.subject"
 msgstr "Lektori felkérés visszavonása"
 
+#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 "Tisztelt {$recipientName}!<br />\n"
@@ -684,6 +668,7 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Átdolgozott változat feltöltve"
 
+#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "Tisztelt Szerkesztő!<br />\n"
