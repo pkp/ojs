@@ -204,7 +204,7 @@ web_cache_hours = 1
 [i18n]
 
 ; Default locale
-locale = en_US
+locale = en
 
 ; Database connection character set
 connection_charset = utf8
