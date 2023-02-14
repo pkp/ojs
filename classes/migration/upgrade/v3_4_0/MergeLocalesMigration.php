@@ -56,7 +56,7 @@ class MergeLocalesMigration extends \PKP\migration\upgrade\v3_4_0\MergeLocalesMi
         throw new DowngradeNotSupportedException();
     }
 
-    protected function getSettingsTables(): Collection
+    public static function getSettingsTables(): Collection
     {
         return collect([
             'issue_galley_settings' => 'galley_id',
