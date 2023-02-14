@@ -210,8 +210,9 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
             default:
                 if ($advice == 'update') {
                     if ($element->getAttribute('type') == 'doi') {
-                        if ($doiObject = $issue->getData('doiObject')) {
-                            Repo::doi()->edit($doiObject, ['doi' => $element->textContent]);
+                        $doiFound = Repo::doi()->getCollector()->filterByIdentifier($element->textContent)->getMany()->first();
+                        if ($doiFound) {
+                            $issue->setData('doiId', $doiFound->getId());
                         } else {
                             $newDoiObject = Repo::doi()->newDataObject(
                                 [
