@@ -1,10 +1,10 @@
-# Primož Svetek <primoz.svetek@gmail.com>, 2022.
+# Primož Svetek <primoz.svetek@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
-"PO-Revision-Date: 2022-08-27 16:50+0000\n"
+"PO-Revision-Date: 2023-02-13 09:10+0000\n"
 "Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "sl_SI/>\n"
@@ -2062,7 +2062,6 @@ msgstr ""
 "tt> v primernem urejevalniku besedila in zamenjajte njeno vsebino z vsebino "
 "polj spodaj.</p>"
 
-#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>Namestitev OJS se je uspešno zaključila.</p>\n"
@@ -2077,7 +2076,6 @@ msgstr ""
 "pomoč</a>, če imate vprašanja ali komentarje.</li>\n"
 "</ol>"
 
-#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>Nadgradnja OJS na verzijo {$version} se je uspešno zaključila.</p>\n"

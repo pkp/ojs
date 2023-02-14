@@ -1,7 +1,7 @@
-# Dago Salas <dago.salas@gmail.com>, 2022.
+# Dago Salas <dago.salas@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-11-16 02:02+0000\n"
+"PO-Revision-Date: 2023-02-11 21:48+0000\n"
 "Last-Translator: Dago Salas <dago.salas@gmail.com>\n"
 "Language-Team: Spanish (Mexico) <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/es_MX/>\n"
@@ -348,13 +348,13 @@ msgstr ""
 "será devuelta a la fase de revisión. Explique el motivo de esta decisión e "
 "informe al autor de la revisión adicional que se llevará a cabo."
 
-#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
-"Envíe un correo electrónico a los autores para informarles de que este envío "
-"se someterá a la revisión por pares. Si es posible, indique a los autores "
-"cuánto tiempo puede durar el proceso de revisión por pares y cuándo deben "
-"esperar volver a tener noticias de los editores."
+"Envíe un correo electrónico a los autores para informarles que este envío se "
+"enviará para revisión por pares. Si es posible, brinde a los autores alguna "
+"indicación de cuánto tiempo podría tomar el proceso de revisión por pares y "
+"cuándo deben esperar tener noticias de los editores nuevamente. Este correo "
+"electrónico no se enviará hasta que se registre la decisión."
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Seleccione los archivos que deben ser enviados a la etapa de revisión."
@@ -384,21 +384,32 @@ msgstr "Esta galerada no se puede editar porque ya se ha publicado."
 
 msgid "submission.copyright.description"
 msgstr ""
+"Por favor, lea y comprenda los términos de derechos de autor para los envíos "
+"a esta revista."
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
+"No se le permite enviar a esta revista porque los autores deben estar "
+"registrados por el personal editorial. Si cree que se trata de un error, "
+"comuníquese con <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
+"No puede realizar envíos a esta revista porque los envíos a todas las "
+"secciones de esta revista han sido desactivados o restringidos. Si cree que "
+"se trata de un error, comuníquese con <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
+"{$contextName} no acepta envíos a la sección {$section}. Si necesita ayuda "
+"para recuperar su envío, comuníquese con <a "
+"href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.sectionNotFound"
-msgstr ""
+msgstr "No se pudo encontrar la sección para este envío."
 
 msgid "submission.sectionRestrictedToEditors"
-msgstr ""
+msgstr "Solo el personal editorial puede enviar a esta sección."
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Se requiere por lo menos un autor."

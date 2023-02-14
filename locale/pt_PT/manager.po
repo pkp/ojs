@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2023-01-02 09:02+0000\n"
+"PO-Revision-Date: 2023-02-13 14:04+0000\n"
 "Last-Translator: José Carvalho <jcarvalho@keep.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/pt_PT/>\n"
@@ -2245,21 +2245,17 @@ msgstr "Um resumo do tipo, nome, duração e preço da subscrição"
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Informação sobre a adesão do assinante"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr "O nome da instituição"
+msgstr "O nome da instituição subscritora"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr "O endereço da instituição"
+msgstr "O endereço da instituição subscritora"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
-msgstr "Domínio"
+msgstr "O nome de domínio associado ao(s) IP(s) desta subscrição"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr "Intervalos de IP para autentição por subscrição"
+msgstr "Intervalos de IP para autentição desta subscrição"
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Valide E-mail (registo na revista)"
