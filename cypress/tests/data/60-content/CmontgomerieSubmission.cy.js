@@ -26,9 +26,9 @@ describe('Data suite: Cmontgomerie', function() {
 		],
 		'additionalAuthors': [
 			{
-				givenName: {en_US: 'Mark'},
-				familyName: {en_US: 'Irvine'},
-				affiliation: {en_US: 'University of Victoria'},
+				givenName: {en: 'Mark'},
+				familyName: {en: 'Irvine'},
+				affiliation: {en: 'University of Victoria'},
 				email: 'mirvine@mailinator.com',
 				country: 'CA',
 				userGroupId: Cypress.env('authorUserGroupId')

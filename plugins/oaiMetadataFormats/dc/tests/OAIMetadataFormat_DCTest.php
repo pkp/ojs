@@ -11,6 +11,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormat_DCTest
+ *
  * @ingroup plugins_oaiMetadataFormats_dc_tests
  *
  * @see OAIMetadataFormat_DC
@@ -85,9 +86,9 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
 
         // Author
         $author = new Author();
-        $author->setGivenName('author-firstname', 'en_US');
-        $author->setFamilyName('author-lastname', 'en_US');
-        $author->setAffiliation('author-affiliation', 'en_US');
+        $author->setGivenName('author-firstname', 'en');
+        $author->setFamilyName('author-lastname', 'en');
+        $author->setAffiliation('author-affiliation', 'en');
         $author->setEmail('someone@example.com');
 
         // Publication
@@ -103,14 +104,14 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->getMock();
         $publication->setData('issueId', 96);
         $publication->setData('pages', 15);
-        $publication->setData('type', 'art-type', 'en_US');
-        $publication->setData('title', 'article-title-en', 'en_US');
-        $publication->setData('title', 'article-title-de', 'de_DE');
-        $publication->setData('coverage', ['en_US' => ['article-coverage-geo', 'article-coverage-chron', 'article-coverage-sample']]);
-        $publication->setData('abstract', 'article-abstract', 'en_US');
-        $publication->setData('sponsor', 'article-sponsor', 'en_US');
+        $publication->setData('type', 'art-type', 'en');
+        $publication->setData('title', 'article-title-en', 'en');
+        $publication->setData('title', 'article-title-de', 'de');
+        $publication->setData('coverage', ['en' => ['article-coverage-geo', 'article-coverage-chron', 'article-coverage-sample']]);
+        $publication->setData('abstract', 'article-abstract', 'en');
+        $publication->setData('sponsor', 'article-sponsor', 'en');
         $publication->setData('doiObject', $publicationDoiObject);
-        $publication->setData('languages', 'en_US');
+        $publication->setData('languages', 'en');
         $publication->setData('copyrightHolder', 'article-copyright');
         $publication->setData('copyrightYear', 'year');
         $publication->setData('authors', collect([$author]));
@@ -163,9 +164,9 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->method('getSetting')
             ->with('publishingMode')
             ->will($this->returnValue(\APP\journal\Journal::PUBLISHING_MODE_OPEN));
-        $journal->setName('journal-title', 'en_US');
+        $journal->setName('journal-title', 'en');
         $journal->setData('publisherInstitution', 'journal-publisher');
-        $journal->setPrimaryLocale('en_US');
+        $journal->setPrimaryLocale('en');
         $journal->setPath('journal-path');
         $journal->setData('onlineIssn', 'onlineIssn');
         $journal->setData('printIssn', null);
@@ -174,7 +175,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
 
         // Section
         $section = new Section();
-        $section->setIdentifyType('section-identify-type', 'en_US');
+        $section->setIdentifyType('section-identify-type', 'en');
 
         /** @var Doi|MockObject */
         $issueDoiObject = $this->getMockBuilder(Doi::class)
@@ -255,7 +256,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->getMock();
         $submissionSubjectDao->expects($this->any())
             ->method('getSubjects')
-            ->will($this->returnValue(['en_US' => ['article-subject', 'article-subject-class']]));
+            ->will($this->returnValue(['en' => ['article-subject', 'article-subject-class']]));
         DAORegistry::registerDAO('SubmissionSubjectDAO', $submissionSubjectDao);
 
         // Mocked DAO to return the keywords
@@ -264,7 +265,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->getMock();
         $submissionKeywordDao->expects($this->any())
             ->method('getKeywords')
-            ->will($this->returnValue(['en_US' => ['article-keyword']]));
+            ->will($this->returnValue(['en' => ['article-keyword']]));
         DAORegistry::registerDAO('SubmissionKeywordDAO', $submissionKeywordDao);
 
 

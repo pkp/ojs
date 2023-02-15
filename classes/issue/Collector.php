@@ -397,7 +397,7 @@ class Collector implements CollectorInterface
 
             // Add support for searching for the volume, number and year
             // using the localized issue identification formats. In
-            // en_US this will match Vol. 1. No. 1 (2018) against:
+            // en this will match Vol. 1. No. 1 (2018) against:
             // i.volume = 1 AND i.number = 1 AND i.year = 2018
             $volume = '';
             $number = '';

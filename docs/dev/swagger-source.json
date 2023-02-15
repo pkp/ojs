@@ -227,7 +227,7 @@
 			"type": "object",
 			"description": "Key/value pairs containing data stored by locale key.",
 			"example": {
-				"en_US": "Filename",
+				"en": "Filename",
 				"fr_CA": "Nom de fichier"
 			}
 		},
@@ -5430,7 +5430,7 @@
 					},
 					{
 						"name": "locale",
-						"description": "The locale key, such as `en_US`, you want to retrieve entries for. If no `locale` is provided, entries will be provided in the user's current locale or fall back to the journal's primary locale.",
+						"description": "The locale key, such as `en`, you want to retrieve entries for. If no `locale` is provided, entries will be provided in the user's current locale or fall back to the journal's primary locale.",
 						"in": "query",
 						"required": false,
 						"type": "string"
