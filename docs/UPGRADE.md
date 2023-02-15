@@ -1,7 +1,7 @@
 # Upgrading an OJS Installation
 
 Note: Before upgrading your installation, perform a complete backup of your
-data files and database. If the upgrade process fails, you will need to recover
+data files and database. If the upgrade process fails, you may need to recover
 from backup before continuing.
 
 If you are using PHP Safe Mode, please ensure that the max_execution_time
@@ -10,30 +10,9 @@ or any other time limit (e.g. Apache's "Timeout" directive) is reached and
 the upgrade process is interrupted, manual intervention will be required.
 
 
-## Upgrading from OJS 2.0.x, 2.1.x, 2.2.x, or 2.3.x
+## Upgrading from OJS 2.x
 
 See [docs/UPGRADE-UNSUPPORTED](UPGRADE-UNSUPPORTED.md).
-
-
-## Upgrading from OJS 2.4.x
-
-OJS 3.x is a major rewrite of Open Journal Systems, introducing numerous new
-concepts and different approaches. The upgrade process from 2.x to 3.x does its
-best to adapt old content to the new structures, but we strongly recommend
-performing a test upgrade and exploring the new system before committing your
-content to the upgrade. Downgrades from 3.x to 2.x will not be supported.
-
-Note that upgrading from OJS 2.4.x to OJS 3.0 will rearrange your submission
-file storage, so be sure to back it up before running an upgrade.
-
-It is recommended that you execute the upgrade script under the same user
-account that your server uses to execute OJS. If you cannot do this, you will
-need to ensure file permissions in your files directory allow the upgrade
-script to manage files there *before* the upgrade, and then reset file
-permissions *after* the upgrade completes (so that OJS can manage files there
-when invoked normally via the web).
-
-With that noted, follow the OJS 3.0 process described below.
 
 
 ## Upgrading from OJS 3.x
@@ -43,8 +22,8 @@ Upgrading to the latest version of OJS involves two steps:
 - [Obtaining the latest OJS code](#obtaining-the-latest-ojs-code)
 - [Upgrading the OJS database](#upgrading-the-ojs-database)
 
-It is highly recommended that you also review the release notes ([docs/RELEASE](RELEASE))
-and other documentation in the docs directory before performing an upgrade.
+It is highly recommended that you also review the release notes ([RELEASE](RELEASE))
+and [How to Upgrade](https://docs.pkp.sfu.ca/dev/upgrade-guide/en/) before performing an upgrade.
 
 
 ### Obtaining the latest OJS code
@@ -63,13 +42,10 @@ downloading the complete package for the latest release of OJS:
 	OJS installation:
 	
 		- config.inc.php
-		- public/
-		- Your uploaded files directory ("files_dir" in config.inc.php), if it
-			resides within your OJS directory
+		- public
 			
-- Synchronize new changes from config.TEMPLATE.inc.php to config.inc.php
-- Replace the current OJS directory with the new OJS directory, moving the
-	old one to a safe location as a backup
+- Move the old OJS installation directory to a safe location and move the new one into
+	its place
 - Be sure to review the Configuration Changes section of the release notes
 	in docs/release-notes/README-(version) for all versions between your
 	original version and the new version. You may need to manually add
