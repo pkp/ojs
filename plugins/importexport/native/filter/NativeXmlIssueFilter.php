@@ -195,6 +195,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
     public function parseIdentifier($element, $issue)
     {
         $deployment = $this->getDeployment();
+        $context = $deployment->getContext();
         $advice = $element->getAttribute('advice');
         switch ($element->getAttribute('type')) {
             case 'internal':
@@ -208,9 +209,25 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
                 break;
             default:
                 if ($advice == 'update') {
-                    // Load pub id plugins
-                    $pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $deployment->getContext()->getId());
-                    $issue->setStoredPubId($element->getAttribute('type'), $element->textContent);
+                    if ($element->getAttribute('type') == 'doi') {
+                        $doiFound = Repo::doi()->getCollector()->filterByIdentifier($element->textContent)->getMany()->first();
+                        if ($doiFound) {
+                            $issue->setData('doiId', $doiFound->getId());
+                        } else {
+                            $newDoiObject = Repo::doi()->newDataObject(
+                                [
+                                    'doi' => $element->textContent,
+                                    'contextId' => $context->getId()
+                                ]
+                            );
+                            $doiId = Repo::doi()->add($newDoiObject);
+                            $issue->setData('doiId', $doiId);
+                        }
+                    } else {
+                        // Load pub id plugins
+                        $pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $context->getId());
+                        $issue->setStoredPubId($element->getAttribute('type'), $element->textContent);
+                    }
                 }
         }
     }
