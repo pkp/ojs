@@ -24,7 +24,7 @@ msgstr ""
 "esta revista."
 
 msgid "api.submissions.400.wrongContext"
-msgstr ""
+msgstr "El envío que solicitó no está en esta revista."
 
 msgid "api.submissions.403.cantChangeContext"
 msgstr "No puede cambiar la revista de un artículo."
@@ -56,13 +56,16 @@ msgid "api.contexts.404.contextNotFound"
 msgstr "No se encontró la revista solicitada."
 
 msgid "api.dois.400.contextsNotMatched"
-msgstr ""
+msgstr "El DOI que solicitó no forma parte de esta revista."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"
 msgstr ""
+"No se ha configurado ninguna agencia de registro DOI para esta revista."
 
 msgid "api.dois.400.depositFailed"
 msgstr ""
+"Algunos artículos no se depositaron correctamente. Verifique los elementos "
+"individuales para ver sus mensajes de error específicos."
 
 msgid "api.emailTemplates.403.notAllowedChangeContext"
 msgstr ""
