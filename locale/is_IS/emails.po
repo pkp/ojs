@@ -102,6 +102,7 @@ msgstr ""
 "Með kærri þökk,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Nýtt tölublað er komið út: {$issueIdentification}"
 
@@ -273,6 +274,7 @@ msgstr ""
 msgid "emails.subscriptionNotify.body"
 msgstr ""
 
+#, fuzzy
 msgid "emails.openAccessNotify.subject"
 msgstr ""
 

@@ -10,7 +10,7 @@
  * @class OpenAccessMailUsers
  * @ingroup jobs
  *
- * @brief Class to send issue open access notification to users
+ * @brief Class to send issue open access notification to userIds
  */
 
 namespace APP\jobs\notifications;
@@ -19,26 +19,26 @@ use APP\core\Application;
 use APP\facades\Repo;
 use APP\journal\Journal;
 use APP\mail\mailables\OpenAccessNotify;
-use APP\template\TemplateManager;
+use APP\notification\Notification;
+use APP\notification\NotificationManager;
 use Illuminate\Bus\Batchable;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\LazyCollection;
 use PKP\jobs\BaseJob;
-use Symfony\Component\Mime\Message;
 
 class OpenAccessMailUsers extends BaseJob
 {
     use Batchable;
 
-    protected LazyCollection $users;
+    protected Collection $userIds;
     protected int $contextId;
     protected int $issueId;
 
-    public function __construct(LazyCollection $users, int $contextId, int $issueId)
+    public function __construct(Collection $userIds, int $contextId, int $issueId)
     {
         parent::__construct();
 
-        $this->users = $users;
+        $this->userIds = $userIds;
         $this->contextId = $contextId;
         $this->issueId = $issueId;
     }
@@ -47,29 +47,36 @@ class OpenAccessMailUsers extends BaseJob
     {
         $contextDao = Application::getContextDAO();
         $context = $contextDao->getById($this->contextId); /** @var Journal $context */
-        $issue = Repo::issue()->get($this->issueId);
+        $issue = Repo::issue()->get($this->issueId, $this->contextId);
+
+        if (!$context || !$issue) {
+            return;
+        }
+
         $locale = $context->getPrimaryLocale();
         $template = Repo::emailTemplate()->getByKey($this->contextId, OpenAccessNotify::getEmailTemplateKey());
 
-        foreach ($this->users as $user) {
+        foreach ($this->userIds as $userId) {
+            $user = Repo::user()->get($userId);
+            if (!$user) {
+                continue;
+            }
+
+            $notificationManager = new NotificationManager();
+            $notification = $notificationManager->createNotification(
+                null,
+                $userId,
+                Notification::NOTIFICATION_TYPE_OPEN_ACCESS,
+                $this->contextId
+            );
+
             $mailable = new OpenAccessNotify($context, $issue);
             $mailable
-                ->from($context->getData('contactEmail'), $context->getData('contactName'))
-                ->recipients([$user]);
-
-            $templateMgr = TemplateManager::getManager(Application::get()->getRequest());
-            $templateMgr->assign($mailable->getSmartyTemplateVariables());
-
-            $mailable
                 ->subject($template->getLocalizedData('subject', $locale))
-                ->body($templateMgr->fetch('payments/openAccessNotifyEmail.tpl'));
-
-            $mailable->withSymfonyMessage(function (Message $message) use ($templateMgr) {
-                $message->getHeaders()->addHeader(
-                    'Content-Type',
-                    'multipart/alternative; boundary="' . $templateMgr->getTemplateVars('mimeBoundary') . '"'
-                );
-            });
+                ->body($template->getLocalizedData('body', $locale))
+                ->from($context->getData('contactEmail'), $context->getData('contactName'))
+                ->recipients([$user])
+                ->allowUnsubscribe($notification);
 
             Mail::send($mailable);
         }

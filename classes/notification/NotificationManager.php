@@ -195,6 +195,11 @@ class NotificationManager extends PKPNotificationManager
             'emailSettingName' => 'emailNotificationPublishedIssue',
             'settingKey' => 'notification.type.issuePublished',
         ];
+        $settingsMap[Notification::NOTIFICATION_TYPE_OPEN_ACCESS] = [
+            'settingName' => 'notificationOpenAccess',
+            'emailSettingName' => 'emailNotificationOpenAccess',
+            'settingKey' => 'notification.type.openAccess',
+        ];
         return $settingsMap;
     }
 }

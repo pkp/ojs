@@ -379,6 +379,7 @@ msgstr ""
 "<br />\n"
 "{$subscriptionSignature}"
 
+#, fuzzy
 msgid "emails.openAccessNotify.subject"
 msgstr "صدور عدد مجاني الآن"
 

@@ -30,6 +30,7 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm
         for ($i = 0; $i < count($categories); $i++) {
             if ($categories[$i]['categoryKey'] === 'notification.type.public') {
                 $categories[$i]['settings'][] = Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE;
+                $categories[$i]['settings'][] = Notification::NOTIFICATION_TYPE_OPEN_ACCESS;
                 break;
             }
         }

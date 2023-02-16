@@ -465,6 +465,7 @@ msgstr ""
 "<br />\n"
 "{$subscriptionSignature}"
 
+#, fuzzy
 msgid "emails.openAccessNotify.subject"
 msgstr "Agora o número é de acceso libre"
 

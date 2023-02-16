@@ -463,6 +463,7 @@ msgstr ""
 "<br />\n"
 "{$subscriptionSignature}"
 
+#, fuzzy
 msgid "emails.openAccessNotify.subject"
 msgstr "オープンアクセスのお知らせ"
 

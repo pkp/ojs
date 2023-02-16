@@ -632,6 +632,7 @@ msgstr ""
 
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startcaps: Different capitalization at the start
+#, fuzzy
 msgid "emails.openAccessNotify.subject"
 msgstr "अंक अब ओपन एक्सेस"
 

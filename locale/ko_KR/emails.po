@@ -42,6 +42,7 @@ msgstr ""
 msgid "emails.reviewerRegister.body"
 msgstr ""
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr ""
 
@@ -156,6 +157,7 @@ msgstr ""
 msgid "emails.subscriptionNotify.body"
 msgstr ""
 
+#, fuzzy
 msgid "emails.openAccessNotify.subject"
 msgstr ""
 

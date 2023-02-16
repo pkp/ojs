@@ -416,6 +416,7 @@ msgstr ""
 "Mvh.\n"
 "{$subscriptionsignature}"
 
+#, fuzzy
 msgid "emails.openAccessNotify.subject"
 msgstr "Udgave nu i Open Access-format"
 

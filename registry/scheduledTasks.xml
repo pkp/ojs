@@ -67,4 +67,8 @@
 		<descr>Automatically remove jobs that failed more than X days ago. The time limit can be changed in the the delete_failed_jobs_after setting in the config file.</descr>
 		<frequency day="1"/>
 	</task>
+	<task class="APP\tasks\OpenAccessNotification">
+		<descr>Send automated email to registered readers that have requested to be notified when an issue becomes open access.</descr>
+		<frequency hour="0"/>
+	</task>
 </scheduled_tasks>

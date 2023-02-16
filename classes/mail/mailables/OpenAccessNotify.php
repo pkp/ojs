@@ -14,18 +14,20 @@
 
 namespace APP\mail\mailables;
 
-use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\journal\Journal;
+use APP\mail\variables\IssueEmailVariable;
 use PKP\mail\Mailable;
 use PKP\mail\traits\Configurable;
 use PKP\mail\traits\Recipient;
+use PKP\mail\traits\Unsubscribe;
 use PKP\security\Role;
 
 class OpenAccessNotify extends Mailable
 {
     use Configurable;
     use Recipient;
+    use Unsubscribe;
 
     protected static ?string $name = 'mailable.openAccessNotify.name';
     protected static ?string $description = 'mailable.openAccessNotify.description';
@@ -35,26 +37,27 @@ class OpenAccessNotify extends Mailable
     protected static array $toRoleIds = [Role::ROLE_ID_READER];
 
     protected Journal $context;
-    protected Issue $issue;
 
     public function __construct(Journal $context, Issue $issue)
     {
-        parent::__construct([$context]);
+        parent::__construct([$context, $issue]);
+
         $this->context = $context;
-        $this->issue = $issue;
+    }
+
+    protected static function templateVariablesMap(): array
+    {
+        $map = parent::templateVariablesMap();
+        $map[Issue::class] = IssueEmailVariable::class;
+        return $map;
     }
 
     /**
-     * Setup Smarty variables for the message template
+     * Adds a footer with unsubscribe link
      */
-    public function getSmartyTemplateVariables(): array
+    protected function addFooter(string $locale): Mailable
     {
-        $template = Repo::emailTemplate()->getByKey($this->context->getId(), static::$emailTemplateKey);
-        return [
-            'body' => $template->getData('body', $this->context->getPrimaryLocale()),
-            'mimeBoundary' => '==boundary_' . md5(microtime()),
-            'issue' => $this->issue,
-            'publishedSubmissions' => Repo::submission()->getInSections($this->issue->getId(), $this->issue->getJournalId()),
-        ];
+        $this->setupUnsubscribeFooter($locale, $this->context);
+        return $this;
     }
 }

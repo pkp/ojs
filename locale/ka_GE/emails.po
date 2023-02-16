@@ -104,6 +104,7 @@ msgstr ""
 "გმადლობთ,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "გამოქვეყნებულია ახალი გამოცემა"
 
@@ -467,6 +468,7 @@ msgstr ""
 "<br />\n"
 "{$subscriptionSignature}"
 
+#, fuzzy
 msgid "emails.openAccessNotify.subject"
 msgstr "გამოცემაზე ღია წვდომა გახსნილია"
 

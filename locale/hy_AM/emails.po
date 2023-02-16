@@ -104,6 +104,7 @@ msgstr ""
 "Շնորհակալություն,<br />\n"
 "{$signature}"
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr "Այժմ հասանելի է նոր թողարկում՝ {$issueIdentification}"
 
@@ -405,6 +406,7 @@ msgstr ""
 "<br />\n"
 "{$subscriptionSignature}"
 
+#, fuzzy
 msgid "emails.openAccessNotify.subject"
 msgstr "Թողարկումը արդեն բաց հասանելիությունում է"
 

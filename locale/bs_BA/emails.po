@@ -413,6 +413,7 @@ msgstr ""
 "Srdačno,<br />\n"
 "{$subscriptionSignature}"
 
+#, fuzzy
 msgid "emails.openAccessNotify.subject"
 msgstr "Broj dostupan pod uvjetima otvorenog pristupa"
 

@@ -470,6 +470,7 @@ msgstr ""
 "<br />\n"
 "{$subscriptionSignature}"
 
+#, fuzzy
 msgid "emails.openAccessNotify.subject"
 msgstr "Nuovo fascicolo disponibile ad accesso aperto"
 
