@@ -25,6 +25,10 @@ describe('Crossref tests', function () {
 		// Crossref is enabled as DOI registration agency.
 		cy.get('a:contains("Distribution")').click();
 		cy.get('button#dois-button').click();
+		cy.get(
+			'#doiSetup input[name="enabledDoiTypes"][value="representation"]'
+		).should('not.exist');
+
 		cy.get('button#doisRegistration-button').click();
 
 		cy.get('select#doiRegistrationSettings-registrationAgency-control').select(
@@ -43,6 +47,12 @@ describe('Crossref tests', function () {
 			'have.value',
 			'crossrefplugin'
 		);
+
+		cy.log('Check representation pubObject type disabled');
+		cy.get('button#doisSetup-button').click();
+		cy.get(
+			'#doiSetup input[name="enabledDoiTypes"][value="representation"]'
+		).should('not.exist');
 	});
 
 	it('Check Crossref Export', function () {
