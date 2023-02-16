@@ -112,7 +112,7 @@ class DOAJJsonFilter extends PKPImportExportFilter
         }
 
         // Article title
-        $article['bibjson']['title'] = $pubObject->getTitle($pubObject->getLocale());
+        $article['bibjson']['title'] = $publication?->getLocalizedTitle($publication->getData('locale')) ?? '';
         // Identifiers
         $article['bibjson']['identifier'] = [];
         // DOI

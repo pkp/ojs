@@ -289,6 +289,10 @@ reset_seconds = 7200
 ; stripped.
 allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,dd,b,i,u,img[src|alt],sup,sub,br,p"
 
+; Allowed HTML tags for submission titles only
+; Unspecified attributes will be stripped.
+allowed_title_html = "b,i,u,sup,sub"
+
 ;N.b.: The implicit_auth parameter has been removed in favor of plugin implementations such as shibboleth
 
 ;;;;;;;;;;;;;;;;;;

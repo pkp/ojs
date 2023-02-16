@@ -160,7 +160,7 @@ class ArticleReportPlugin extends ReportPlugin
             // Store the submission results
             $results[] = [
                 'submissionId' => $submission->getId(),
-                'title' => $publication->getLocalizedFullTitle(),
+                'title' => htmlspecialchars($publication->getLocalizedFullTitle(null, 'html')),
                 'abstract' => html_entity_decode(strip_tags($publication->getLocalizedData('abstract'))),
                 'authors' => array_map(function ($author) {
                     return [

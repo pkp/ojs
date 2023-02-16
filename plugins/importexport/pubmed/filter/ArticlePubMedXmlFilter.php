@@ -89,9 +89,9 @@ class ArticlePubMedXmlFilter extends PersistableFilter
 
             $locale = $publication->getData('locale');
             if ($locale == 'en_US') {
-                $articleNode->appendChild($doc->createElement('ArticleTitle'))->appendChild($doc->createTextNode($publication->getLocalizedTitle($locale)));
+                $articleNode->appendChild($doc->createElement('ArticleTitle'))->appendChild($doc->createTextNode($publication->getLocalizedTitle($locale, 'html')));
             } else {
-                $articleNode->appendChild($doc->createElement('VernacularTitle'))->appendChild($doc->createTextNode($publication->getLocalizedTitle($locale)));
+                $articleNode->appendChild($doc->createElement('VernacularTitle'))->appendChild($doc->createTextNode($publication->getLocalizedTitle($locale, 'html')));
             }
 
             $startPage = $publication->getStartingPage();

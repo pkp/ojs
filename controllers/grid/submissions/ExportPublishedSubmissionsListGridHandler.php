@@ -15,6 +15,7 @@
 
 namespace APP\controllers\grid\submissions;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\Collector;
 use PKP\controllers\grid\feature\PagingFeature;
@@ -312,7 +313,7 @@ class ExportPublishedSubmissionsListGridHandler extends GridHandler
     public function getGridCellProvider()
     {
         // Fetch the authorized roles.
-        $authorizedRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
+        $authorizedRoles = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_USER_ROLES);
         return new ExportPublishedSubmissionsListGridCellProvider($this->_plugin, $authorizedRoles);
     }
 }

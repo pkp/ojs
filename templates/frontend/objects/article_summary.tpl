@@ -41,10 +41,11 @@
 
 	<{$heading} class="title">
 		<a id="article-{$article->getId()}" {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if}>
-			{$article->getLocalizedTitle()|strip_unsafe_html}
-			{if $article->getLocalizedSubtitle()}
+			{assign var=publication value=$article->getCurrentPublication()}
+			{$publication->getLocalizedTitle(null, 'html')|strip_unsafe_html}
+			{if $publication->getLocalizedSubtitle()}
 				<span class="subtitle">
-					{$article->getLocalizedSubtitle()|escape}
+					{$publication->getLocalizedSubtitle(null, 'html')|strip_unsafe_html}
 				</span>
 			{/if}
 		</a>
