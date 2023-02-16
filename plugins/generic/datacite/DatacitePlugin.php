@@ -16,6 +16,7 @@ namespace APP\plugins\generic\datacite;
 
 use APP\core\Application;
 use APP\core\Services;
+use APP\facades\Repo;
 use APP\plugins\generic\datacite\classes\DataciteSettings;
 use APP\plugins\IDoiRegistrationAgency;
 use Illuminate\Support\Collection;
@@ -260,6 +261,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         PluginRegistry::register('importexport', new DataciteExportPlugin($this), $this->getPluginPath());
 
         Hook::add('DoiSettingsForm::setEnabledRegistrationAgencies', [$this, 'addAsRegistrationAgencyOption']);
+        Hook::add('DoiSetupSettingsForm::getObjectTypes', [$this, 'addAllowedObjectTypes']);
         Hook::add('DoiListPanel::setConfig', [$this, 'addRegistrationAgencyName']);
     }
 
@@ -280,6 +282,32 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         return HOOK::CONTINUE;
     }
 
+    /**
+     * Adds self to "allowed" list of pub object types that can be assigned DOIs for this registration agency.
+     *
+     * @param string $hookName DoiSetupSettingsForm::getObjectTypes
+     * @param array $args [
+     *      @option array &$objectTypeOptions
+     * ]
+     */
+    public function addAllowedObjectTypes(string $hookName, array $args): bool
+    {
+        $objectTypeOptions = &$args[0];
+        $allowedTypes = $this->getAllowedDoiTypes();
+
+        $objectTypeOptions = array_map(function ($option) use ($allowedTypes) {
+            if (in_array($option['value'], $allowedTypes)) {
+                $option['allowedBy'][] = $this->getName();
+            }
+            return $option;
+        }, $objectTypeOptions);
+
+        return Hook::CONTINUE;
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function getSettingsObject(): RegistrationAgencySettings
     {
         if (!isset($this->settingsObject)) {
@@ -287,5 +315,17 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         }
 
         return $this->settingsObject;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getAllowedDoiTypes(): array
+    {
+        return [
+            Repo::doi()::TYPE_PUBLICATION,
+            Repo::doi()::TYPE_REPRESENTATION,
+            Repo::doi()::TYPE_ISSUE,
+        ];
     }
 }
