@@ -4,31 +4,31 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/
 	http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
-	<dc:title xml:lang="en-US">article-title-en</dc:title>
-	<dc:title xml:lang="de-DE">article-title-de</dc:title>
+	<dc:title xml:lang="en">article-title-en</dc:title>
+	<dc:title xml:lang="de">article-title-de</dc:title>
 	<dc:creator>author-lastname, author-firstname</dc:creator>
-	<dc:subject xml:lang="en-US">article-keyword</dc:subject>
-	<dc:subject xml:lang="en-US">article-subject</dc:subject>
-	<dc:subject xml:lang="en-US">article-subject-class</dc:subject>
-	<dc:description xml:lang="en-US">article-abstract</dc:description>
-	<dc:publisher xml:lang="en-US">journal-publisher</dc:publisher>
-	<dc:contributor xml:lang="en-US">article-sponsor</dc:contributor>
+	<dc:subject xml:lang="en">article-keyword</dc:subject>
+	<dc:subject xml:lang="en">article-subject</dc:subject>
+	<dc:subject xml:lang="en">article-subject-class</dc:subject>
+	<dc:description xml:lang="en">article-abstract</dc:description>
+	<dc:publisher xml:lang="en">journal-publisher</dc:publisher>
+	<dc:contributor xml:lang="en">article-sponsor</dc:contributor>
 	<dc:date>2010-11-05</dc:date>
 	<dc:type>info:eu-repo/semantics/article</dc:type>
 	<dc:type>info:eu-repo/semantics/publishedVersion</dc:type>
-	<dc:type xml:lang="en-US">section-identify-type</dc:type>
-	<dc:type xml:lang="en-US">art-type</dc:type>
+	<dc:type xml:lang="en">section-identify-type</dc:type>
+	<dc:type xml:lang="en">art-type</dc:type>
 	<dc:format>galley-filetype</dc:format>
 	<dc:identifier>article-view-9</dc:identifier>
 	<dc:identifier>article-doi</dc:identifier>
-	<dc:source xml:lang="en-US">journal-title; issue-identification; 15</dc:source>
+	<dc:source xml:lang="en">journal-title; issue-identification; 15</dc:source>
 	<dc:source>onlineIssn</dc:source>
 	<dc:source>issue-doi</dc:source>
-	<dc:language>en_US</dc:language>
+	<dc:language>en</dc:language>
 	<dc:relation>article-view-9-98</dc:relation>
 	<dc:relation>galley-doi</dc:relation>
-	<dc:coverage xml:lang="en-US">article-coverage-geo</dc:coverage>
-	<dc:coverage xml:lang="en-US">article-coverage-chron</dc:coverage>
-	<dc:coverage xml:lang="en-US">article-coverage-sample</dc:coverage>
-	<dc:rights xml:lang="en-US">Copyright (c) year article-copyright</dc:rights>
+	<dc:coverage xml:lang="en">article-coverage-geo</dc:coverage>
+	<dc:coverage xml:lang="en">article-coverage-chron</dc:coverage>
+	<dc:coverage xml:lang="en">article-coverage-sample</dc:coverage>
+	<dc:rights xml:lang="en">Copyright (c) year article-copyright</dc:rights>
 </oai_dc:dc>
