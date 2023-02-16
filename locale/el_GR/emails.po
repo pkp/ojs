@@ -483,6 +483,7 @@ msgstr ""
 "<br />\n"
 "{$subscriptionSignature}"
 
+#, fuzzy
 msgid "emails.openAccessNotify.subject"
 msgstr "Τεύχος διαθέσιμο με ανοικτή πρόσβαση"
 

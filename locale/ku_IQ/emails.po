@@ -437,6 +437,7 @@ msgstr ""
 "<br />\n"
 "{$subscriptionSignature}"
 
+#, fuzzy
 msgid "emails.openAccessNotify.subject"
 msgstr "ئەم ژمارەیە لە ئێستادا بەردەستە"
 

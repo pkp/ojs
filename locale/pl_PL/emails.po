@@ -457,6 +457,7 @@ msgstr ""
 "<br />\n"
 "{$subscriptionSignature}"
 
+#, fuzzy
 msgid "emails.openAccessNotify.subject"
 msgstr "Numer czasopisma teraz w otwartym dostępie"
 

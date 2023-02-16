@@ -484,6 +484,7 @@ msgstr ""
 "<br />\n"
 "{$subscriptionSignature}"
 
+#, fuzzy
 msgid "emails.openAccessNotify.subject"
 msgstr "Шығарылым қазірдің өзінде жалпыға қолжетімді"
 

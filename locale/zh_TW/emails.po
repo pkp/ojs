@@ -43,6 +43,7 @@ msgstr ""
 msgid "emails.reviewerRegister.body"
 msgstr ""
 
+#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr ""
 
@@ -157,6 +158,7 @@ msgstr "訂閱通知"
 msgid "emails.subscriptionNotify.body"
 msgstr ""
 
+#, fuzzy
 msgid "emails.openAccessNotify.subject"
 msgstr "發布即時開放取用"
 

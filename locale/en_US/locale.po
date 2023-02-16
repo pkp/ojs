@@ -2064,6 +2064,9 @@ msgstr "An issue has been published."
 msgid "notification.type.newAnnouncement"
 msgstr "A new announcement has been created."
 
+msgid "notification.type.openAccess"
+msgstr "An issue has been made open access."
+
 msgid "notification.type.reviewerFormComment"
 msgstr "A review form review has been submitted for \"{$title}.\""
 

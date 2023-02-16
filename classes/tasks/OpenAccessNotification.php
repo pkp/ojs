@@ -19,9 +19,11 @@ use APP\facades\Repo;
 use APP\issue\Collector;
 use APP\jobs\notifications\OpenAccessMailUsers;
 use APP\journal\Journal;
+use APP\notification\Notification;
 use Illuminate\Support\Facades\Bus;
 use PKP\db\DAORegistry;
 use PKP\mail\Mailer;
+use PKP\notification\NotificationSubscriptionSettingsDAO;
 use PKP\scheduledTask\ScheduledTask;
 
 class OpenAccessNotification extends ScheduledTask
@@ -55,23 +57,27 @@ class OpenAccessNotification extends ScheduledTask
                 ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES)
                 ->getMany();
 
+            // Notify all users who have open access notification set for this journal
+            /** @var NotificationSubscriptionSettingsDAO $notificationSubscriptionSettingsDao */
+            $notificationSubscriptionSettingsDao = DAORegistry::getDAO('NotificationSubscriptionSettingsDAO');
+            $userIds = $notificationSubscriptionSettingsDao->getSubscribedUserIds(
+                [NotificationSubscriptionSettingsDAO::BLOCKED_NOTIFICATION_KEY, NotificationSubscriptionSettingsDAO::BLOCKED_EMAIL_NOTIFICATION_KEY],
+                [Notification::NOTIFICATION_TYPE_OPEN_ACCESS],
+                [$journal->getId()]
+            );
+
+            if ($userIds->isEmpty()) {
+                return;
+            }
+
             $jobs = [];
             foreach ($issues as $issue) {
                 $accessStatus = $issue->getAccessStatus();
                 $openAccessDate = $issue->getOpenAccessDate();
-
                 if ($accessStatus == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION && !empty($openAccessDate) && strtotime($openAccessDate) == mktime(0, 0, 0, $curMonth, $curDay, $curYear)) {
-                    // Notify all users who have open access notification set for this journal
-                    $users = Repo::user()->getCollector()
-                        ->filterByContextIds([$journal->getId()])
-                        ->filterBySettings(['openAccessNotification' => 1])
-                        ->getMany();
-
-                    if ($users->isNotEmpty()) {
-                        $userChunks = $users->chunk(Mailer::BULK_EMAIL_SIZE_LIMIT);
-                        foreach ($userChunks as $chunk) {
-                            $jobs[] = new OpenAccessMailUsers($chunk, $journal->getId(), $issue->getId());
-                        }
+                    $userChunks = $userIds->chunk(Mailer::BULK_EMAIL_SIZE_LIMIT);
+                    foreach ($userChunks as $chunk) {
+                        $jobs[] = new OpenAccessMailUsers($chunk, $journal->getId(), $issue->getId());
                     }
                 }
             }

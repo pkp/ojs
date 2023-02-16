@@ -15,8 +15,8 @@
 
 namespace APP\mail\mailables;
 
-use APP\core\Application;
 use APP\issue\Issue;
+use APP\mail\variables\IssueEmailVariable;
 use PKP\context\Context;
 use PKP\mail\Mailable;
 use PKP\mail\traits\Configurable;
@@ -39,49 +39,20 @@ class IssuePublishedNotify extends Mailable
     protected static array $fromRoleIds = [Role::ROLE_ID_SUB_EDITOR];
     protected static array $toRoleIds = [Role::ROLE_ID_READER];
 
-    protected static string $issueIdentification = 'issueIdentification';
-    protected static string $issuePublishedUrl = 'issuePublishedUrl';
-
     protected Context $context;
 
     public function __construct(Context $context, Issue $issue)
     {
-        parent::__construct([$context]);
+        parent::__construct([$context, $issue]);
+
         $this->context = $context;
-        $this->setIssueData($issue);
     }
 
-    /**
-     * Adds description to the issueIdentification email template variable
-     */
-    public static function getDataDescriptions(): array
+    protected static function templateVariablesMap(): array
     {
-        $variables = parent::getDataDescriptions();
-        $variables[static::$issueIdentification] = __('emailTemplate.variable.issue.issueIdentification');
-        $variables[static::$issuePublishedUrl] = __('emailTemplate.variable.issue.issuePublishedUrl');
-        return $variables;
-    }
-
-    /**
-     * Include current issue identification to be used as an email template variable
-     */
-    protected function setIssueData(Issue $issue)
-    {
-        $application = Application::get();
-        $request = $application->getRequest();
-        $dispatcher = $application->getDispatcher();
-
-        $this->addData([
-            static::$issueIdentification => $issue->getData('identification'),
-            static::$issuePublishedUrl => $dispatcher->url(
-                $request,
-                Application::ROUTE_PAGE,
-                $this->context->getData('urlPath'),
-                'issue',
-                'view',
-                $issue->getId()
-            ),
-        ]);
+        $map = parent::templateVariablesMap();
+        $map[Issue::class] = IssueEmailVariable::class;
+        return $map;
     }
 
     /**
