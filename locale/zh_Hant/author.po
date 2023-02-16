@@ -21,8 +21,8 @@ msgstr "處理中稿件"
 
 msgid "author.competingInterests"
 msgstr ""
-"利益衝突<a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">CI Policy</a>"
+"利益衝突<a target=\"_new\" class=\"action\" "
+"href=\"{$competingInterestGuidelinesUrl}\">CI Policy</a>"
 
 msgid "author.submit.submitArticle"
 msgstr "提交稿件"

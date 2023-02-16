@@ -76,22 +76,22 @@ msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
 msgstr "Mostrar la imagen de página de inicio como fondo de la cabecera."
 
 msgid "plugins.themes.default.option.displayStats.label"
-msgstr ""
+msgstr "Opciones de visualización de estadísticas de uso"
 
 msgid "plugins.themes.default.option.displayStats.none"
-msgstr ""
+msgstr "No mostrar el gráfico de estadísticas de envíos para el lector."
 
 msgid "plugins.themes.default.option.displayStats.bar"
-msgstr ""
+msgstr "Use la gráfica de barras para mostrar las estadísticas de uso."
 
 msgid "plugins.themes.default.option.displayStats.line"
-msgstr ""
+msgstr "Use la gráfica de líneas para mostrar las estadísticas de uso."
 
 msgid "plugins.themes.default.displayStats.monthInitials"
-msgstr ""
+msgstr "Ene Feb Mar Abr May Jun Jul Ago Sep Oct Nov Dic"
 
 msgid "plugins.themes.default.displayStats.downloads"
-msgstr ""
+msgstr "Descargas"
 
 msgid "plugins.themes.default.displayStats.noStats"
-msgstr ""
+msgstr "Los datos de descarga aún no están disponibles."
