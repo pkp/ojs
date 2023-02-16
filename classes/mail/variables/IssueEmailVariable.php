@@ -50,7 +50,7 @@ class IssueEmailVariable extends Variable
         return
         [
             static::ISSUE_ID => $this->issue->getId(),
-            static::ISSUE_IDENTIFICATION => $this->issue->getIssueIdentification(),
+            static::ISSUE_IDENTIFICATION => htmlspecialchars($this->issue->getIssueIdentification()),
             static::ISSUE_URL => $this->getIssueUrl(),
         ];
     }
