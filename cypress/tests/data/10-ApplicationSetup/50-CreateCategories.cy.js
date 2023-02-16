@@ -18,7 +18,7 @@ describe('Data suite tests', function() {
 		// Create an Applied Science category
 		cy.get('a[id^=component-grid-settings-category-categorycategorygrid-addCategory-button-]').click();
 		cy.wait(1000); // Avoid occasional failure due to form init taking time
-		cy.get('input[id^="name-en_US-"]').type('Applied Science', {delay: 0});
+		cy.get('input[id^="name-en-"]').type('Applied Science', {delay: 0});
 		cy.get('input[id^="path-"]').type('applied-science', {delay: 0});
 		cy.get('form[id=categoryForm]').contains('OK').click();
 		cy.get('tr[id^="component-grid-settings-category-categorycategorygrid-category-"] a:contains("Applied Science")');
@@ -26,7 +26,7 @@ describe('Data suite tests', function() {
 		// Create a Computer Science subcategory
 		cy.get('a[id^=component-grid-settings-category-categorycategorygrid-addCategory-button-]').click();
 		cy.wait(1000); // Avoid occasional failure due to form init taking time
-		cy.get('input[id^="name-en_US-"]').type('Computer Science', {delay: 0});
+		cy.get('input[id^="name-en-"]').type('Computer Science', {delay: 0});
 		cy.get('select[id="parentId"]').select('Applied Science');
 		cy.get('input[id^="path-"]').type('comp-sci', {delay: 0});
 		cy.get('form[id=categoryForm]').contains('OK').click();
@@ -35,7 +35,7 @@ describe('Data suite tests', function() {
 		// Create an Engineering subcategory
 		cy.get('a[id^=component-grid-settings-category-categorycategorygrid-addCategory-button-]').click();
 		cy.wait(1000); // Avoid occasional failure due to form init taking time
-		cy.get('input[id^="name-en_US-"]').type('Engineering', {delay: 0});
+		cy.get('input[id^="name-en-"]').type('Engineering', {delay: 0});
 		cy.get('select[id="parentId"]').select('Applied Science');
 		cy.get('input[id^="path-"]').type('eng', {delay: 0});
 		cy.get('form[id=categoryForm]').contains('OK').click();
@@ -44,7 +44,7 @@ describe('Data suite tests', function() {
 		// Create a Social Sciences category
 		cy.get('a[id^=component-grid-settings-category-categorycategorygrid-addCategory-button-]').click();
 		cy.wait(1000); // Avoid occasional failure due to form init taking time
-		cy.get('input[id^="name-en_US-"]').type('Social Sciences', {delay: 0});
+		cy.get('input[id^="name-en-"]').type('Social Sciences', {delay: 0});
 		cy.get('input[id^="path-"]').type('social-sciences', {delay: 0});
 		cy.get('form[id=categoryForm]').contains('OK').click();
 		cy.get('tr[id^="component-grid-settings-category-categorycategorygrid-category-"] a:contains("Social Sciences")');
@@ -52,7 +52,7 @@ describe('Data suite tests', function() {
 		// Create a Sociology subcategory
 		cy.get('a[id^=component-grid-settings-category-categorycategorygrid-addCategory-button-]').click();
 		cy.wait(1000); // Avoid occasional failure due to form init taking time
-		cy.get('input[id^="name-en_US-"]').type('Sociology', {delay: 0});
+		cy.get('input[id^="name-en-"]').type('Sociology', {delay: 0});
 		cy.get('select[id="parentId"]').select('Social Sciences');
 		cy.get('input[id^="path-"]').type('sociology', {delay: 0});
 		cy.get('form[id=categoryForm]').contains('OK').click();
@@ -61,7 +61,7 @@ describe('Data suite tests', function() {
 		// Create a Anthropology subcategory
 		cy.get('a[id^=component-grid-settings-category-categorycategorygrid-addCategory-button-]').click();
 		cy.wait(1000); // Avoid occasional failure due to form init taking time
-		cy.get('input[id^="name-en_US-"]').type('Anthropology', {delay: 0});
+		cy.get('input[id^="name-en-"]').type('Anthropology', {delay: 0});
 		cy.get('select[id="parentId"]').select('Social Sciences');
 		cy.get('input[id^="path-"]').type('anthropology', {delay: 0});
 		cy.get('form[id=categoryForm]').contains('OK').click();

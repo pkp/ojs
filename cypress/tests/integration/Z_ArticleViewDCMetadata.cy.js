@@ -32,18 +32,18 @@ describe('Article View Metadata - DC Plugin', function() {
 			submitterRole: 'Journal manager',
 			additionalAuthors: [
 				{
-					givenName: {en_US: 'Name 1'},
-					familyName: {en_US: 'Author 1'},
+					givenName: {en: 'Name 1'},
+					familyName: {en: 'Author 1'},
 					country: 'US',
-					affiliation: {en_US: 'Stanford University'},
+					affiliation: {en: 'Stanford University'},
 					email: 'nameauthor1Test@mailinator.com',
 					userGroupId: Cypress.env('authorUserGroupId')
 				},
 				{
-					givenName: {en_US: 'Name 2'},
-					familyName: {en_US: 'Author 2'},
+					givenName: {en: 'Name 2'},
+					familyName: {en: 'Author 2'},
 					country: 'US',
-					affiliation: {en_US: 'Stanford University'},
+					affiliation: {en: 'Stanford University'},
 					email: 'nameauthor2Test@mailinator.com',
 					userGroupId: Cypress.env('authorUserGroupId')
 				}
@@ -88,7 +88,7 @@ describe('Article View Metadata - DC Plugin', function() {
 					],
 				},
 				{
-					locale: 'en_US',
+					locale: 'en',
 					manyValues: [
 						{
 							metadata: 'keywords',
@@ -145,7 +145,7 @@ describe('Article View Metadata - DC Plugin', function() {
 							locale: 'en',
 							contents: [
 								submission.localeMetadata
-									.find(element => element.locale == 'en_US')
+									.find(element => element.locale == 'en')
 									.oneValue
 									.find(element => element.metadata == 'coverage')
 									.value
@@ -199,7 +199,7 @@ describe('Article View Metadata - DC Plugin', function() {
 							locale: 'en',
 							contents: [
 								submission.localeMetadata
-									.find(element => element.locale == 'en_US')
+									.find(element => element.locale == 'en')
 									.oneValue
 									.find(element => element.metadata == 'type')
 									.value
@@ -224,7 +224,7 @@ describe('Article View Metadata - DC Plugin', function() {
 						{
 							locale: 'en',
 							contents: submission.localeMetadata
-								.find(element => element.locale == 'en_US')
+								.find(element => element.locale == 'en')
 								.manyValues
 								.find(element => element.metadata == 'keywords')
 								.values
@@ -394,8 +394,8 @@ describe('Article View Metadata - DC Plugin', function() {
 		// Open multilanguage inputs and add data to fr_CA inputs
 		cy.get('div#titleAbstract button').contains('French').click();
 
-		cy.get('#titleAbstract input[name=prefix-en_US]').type(submission.prefix, {delay: 0});
-		cy.setTinyMceContent('titleAbstract-subtitle-control-en_US', submission.subtitle);
+		cy.get('#titleAbstract input[name=prefix-en]').type(submission.prefix, {delay: 0});
+		cy.setTinyMceContent('titleAbstract-subtitle-control-en', submission.subtitle);
 
 		cy.setTinyMceContent('titleAbstract-title-control-fr_CA', submission.localeTitles.fr_CA.title);
 		cy.get('#titleAbstract input[name=prefix-fr_CA]').type(submission.localeTitles.fr_CA.prefix, {delay: 0});
