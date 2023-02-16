@@ -17,8 +17,8 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en_US">Press managerxx</name>
-			<abbrev locale="en_US">PM</abbrev>
+			<name locale="en">Press managerxx</name>
+			<abbrev locale="en">PM</abbrev>
 			<stage_assignments />
 		</user_group>
 		<user_group>
@@ -27,8 +27,8 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en_US">Press editorxx</name>
-			<abbrev locale="en_US">PE</abbrev>
+			<name locale="en">Press editorxx</name>
+			<abbrev locale="en">PE</abbrev>
 			<stage_assignments>1:2:3:4:5</stage_assignments>
 		</user_group>
 		<user_group>
@@ -37,8 +37,8 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en_US">Production editorxx</name>
-			<abbrev locale="en_US">ProdE</abbrev>
+			<name locale="en">Production editorxx</name>
+			<abbrev locale="en">ProdE</abbrev>
 			<stage_assignments>4:5</stage_assignments>
 		</user_group>
 		<user_group>
@@ -47,8 +47,8 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en_US">Series editorxx</name>
-			<abbrev locale="en_US">AcqE</abbrev>
+			<name locale="en">Series editorxx</name>
+			<abbrev locale="en">AcqE</abbrev>
 			<stage_assignments>1:2:3:4:5</stage_assignments>
 		</user_group>
 		<user_group>
@@ -57,8 +57,8 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en_US">Copyeditorxx</name>
-			<abbrev locale="en_US">CE</abbrev>
+			<name locale="en">Copyeditorxx</name>
+			<abbrev locale="en">CE</abbrev>
 			<stage_assignments>4</stage_assignments>
 		</user_group>
 		<user_group>
@@ -67,8 +67,8 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en_US">Designerxx</name>
-			<abbrev locale="en_US">Design</abbrev>
+			<name locale="en">Designerxx</name>
+			<abbrev locale="en">Design</abbrev>
 			<stage_assignments>5</stage_assignments>
 		</user_group>
 		<user_group>
@@ -77,8 +77,8 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en_US">Funding coordinator</name>
-			<abbrev locale="en_US">FC</abbrev>
+			<name locale="en">Funding coordinator</name>
+			<abbrev locale="en">FC</abbrev>
 			<stage_assignments>1:2:3</stage_assignments>
 		</user_group>
 		<user_group>
@@ -87,8 +87,8 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en_US">Indexer</name>
-			<abbrev locale="en_US">IND</abbrev>
+			<name locale="en">Indexer</name>
+			<abbrev locale="en">IND</abbrev>
 			<stage_assignments>5</stage_assignments>
 		</user_group>
 		<user_group>
@@ -97,8 +97,8 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en_US">Layout Editor</name>
-			<abbrev locale="en_US">LE</abbrev>
+			<name locale="en">Layout Editor</name>
+			<abbrev locale="en">LE</abbrev>
 			<stage_assignments>5</stage_assignments>
 		</user_group>
 		<user_group>
@@ -107,8 +107,8 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en_US">Marketing and sales coordinator</name>
-			<abbrev locale="en_US">MS</abbrev>
+			<name locale="en">Marketing and sales coordinator</name>
+			<abbrev locale="en">MS</abbrev>
 			<stage_assignments>4</stage_assignments>
 		</user_group>
 		<user_group>
@@ -117,8 +117,8 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en_US">Proofreader</name>
-			<abbrev locale="en_US">PR</abbrev>
+			<name locale="en">Proofreader</name>
+			<abbrev locale="en">PR</abbrev>
 			<stage_assignments>5</stage_assignments>
 		</user_group>
 		<user_group>
@@ -127,8 +127,8 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en_US">Author</name>
-			<abbrev locale="en_US">AU</abbrev>
+			<name locale="en">Author</name>
+			<abbrev locale="en">AU</abbrev>
 			<stage_assignments>1:2:3:4:5</stage_assignments>
 		</user_group>
 		<user_group>
@@ -137,8 +137,8 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en_US">Volume editor</name>
-			<abbrev locale="en_US">VE</abbrev>
+			<name locale="en">Volume editor</name>
+			<abbrev locale="en">VE</abbrev>
 			<stage_assignments>1:2:3:4:5</stage_assignments>
 		</user_group>
 		<user_group>
@@ -147,8 +147,8 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en_US">Chapter Author</name>
-			<abbrev locale="en_US">CA</abbrev>
+			<name locale="en">Chapter Author</name>
+			<abbrev locale="en">CA</abbrev>
 			<stage_assignments>4:5</stage_assignments>
 		</user_group>
 		<user_group>
@@ -157,8 +157,8 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en_US">Translator</name>
-			<abbrev locale="en_US">Trans</abbrev>
+			<name locale="en">Translator</name>
+			<abbrev locale="en">Trans</abbrev>
 			<stage_assignments>1:2:3:4:5</stage_assignments>
 		</user_group>
 		<user_group>
@@ -167,8 +167,8 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en_US">Internal Reviewer</name>
-			<abbrev locale="en_US">IR</abbrev>
+			<name locale="en">Internal Reviewer</name>
+			<abbrev locale="en">IR</abbrev>
 			<stage_assignments>2</stage_assignments>
 		</user_group>
 		<user_group>
@@ -177,15 +177,15 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en_US">External Reviewer</name>
-			<abbrev locale="en_US">ER</abbrev>
+			<name locale="en">External Reviewer</name>
+			<abbrev locale="en">ER</abbrev>
 			<stage_assignments>3</stage_assignments>
 		</user_group>
 	</user_groups>
 	<users>
 		<user>
-			<givenname locale="en_US">John</givenname>
-			<familyname locale="en_US">Author</familyname>
+			<givenname locale="en">John</givenname>
+			<familyname locale="en">Author</familyname>
 			<email>john@author.com</email>
 			<username>author</username>
 			<password is_disabled="false" must_change="false"
@@ -198,8 +198,8 @@
 			<user_group_ref>Author</user_group_ref>
 		</user>
 		<user>
-			<givenname locale="en_US">John</givenname>
-			<familyname locale="en_US">Editor</familyname>
+			<givenname locale="en">John</givenname>
+			<familyname locale="en">Editor</familyname>
 			<email>john@editor.com</email>
 			<username>editor</username>
 			<password is_disabled="false" must_change="false"
@@ -212,8 +212,8 @@
 			<user_group_ref>Press editor</user_group_ref>
 		</user>
 		<user>
-			<givenname locale="en_US">admin</givenname>
-			<familyname locale="en_US">Smith</familyname>
+			<givenname locale="en">admin</givenname>
+			<familyname locale="en">Smith</familyname>
 			<country>CA</country>
 			<email>john@admin-site.com</email>
 			<url>http://www.admin-site.com</url>
@@ -234,8 +234,8 @@
 			<review_interests>Math, Chemistry, life science</review_interests>
 		</user>
 		<user>
-			<givenname locale="en_US">John</givenname>
-			<familyname locale="en_US">Reviewer</familyname>
+			<givenname locale="en">John</givenname>
+			<familyname locale="en">Reviewer</familyname>
 			<email>john@reviewer.com</email>
 			<username>reviewer</username>
 			<password is_disabled="false" must_change="false"
