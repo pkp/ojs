@@ -147,8 +147,8 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('#contributor-givenName-error-en').contains('This field is required.');
 		cy.get('#contributor-email-error').contains('This field is required.');
 		cy.get('#contributor-country-error').contains('This field is required.');
-		cy.get('.pkpFormField:contains("Given Name")').find('input[name*="en"]').type(submission.authors[0].givenName);
-		cy.get('.pkpFormField:contains("Family Name")').find('input[name*="en"]').type(submission.authors[0].familyName);
+		cy.get('.pkpFormField:contains("Given Name")').find('input[name*="givenName-en"]').type(submission.authors[0].givenName);
+		cy.get('.pkpFormField:contains("Family Name")').find('input[name*="familyName-en"]').type(submission.authors[0].familyName);
 		cy.get('.pkpFormField:contains("Country")').find('select').select(submission.authors[0].country)
 		cy.get('.pkpFormField:contains("Email")').find('input').type('notanemail');
 		cy.get('.modal__panel:contains("Add Contributor")').find('button').contains('Save').click();
@@ -174,7 +174,7 @@ describe('Data suite: Amwandenga', function() {
 
 		// Delete a contributor
 		cy.get('.listPanel:contains("Contributors")').find('button').contains('Add Contributor').click();
-		cy.get('.pkpFormField:contains("Given Name")').find('input[name*="en"]').type('Fake Author Name');
+		cy.get('.pkpFormField:contains("Given Name")').find('input[name*="givenName-en"]').type('Fake Author Name');
 		cy.get('.pkpFormField:contains("Email")').find('input').type('delete@mailinator.com');
 		cy.get('.pkpFormField:contains("Country")').find('select').select('Barbados');
 		cy.get('.modal__panel:contains("Add Contributor")').find('button').contains('Save').click();
