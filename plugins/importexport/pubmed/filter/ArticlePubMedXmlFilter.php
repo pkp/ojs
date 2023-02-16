@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticlePubMedXmlFilter
+ *
  * @brief Class that converts a Article to a PubMed XML document.
  */
 
@@ -88,7 +89,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
             $publication = $submission->getCurrentPublication();
 
             $locale = $publication->getData('locale');
-            if ($locale == 'en_US') {
+            if ($locale == 'en') {
                 $articleNode->appendChild($doc->createElement('ArticleTitle'))->appendChild($doc->createTextNode($publication->getLocalizedTitle($locale, 'html')));
             } else {
                 $articleNode->appendChild($doc->createElement('VernacularTitle'))->appendChild($doc->createTextNode($publication->getLocalizedTitle($locale, 'html')));

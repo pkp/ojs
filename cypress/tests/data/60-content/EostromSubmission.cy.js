@@ -22,9 +22,9 @@ describe('Data suite tests', function() {
 		],
 		'additionalAuthors': [
 			{
-				givenName: {en_US: 'Frank'},
-				familyName: {en_US: 'van Laerhoven'},
-				affiliation: {en_US: 'Indiana University'},
+				givenName: {en: 'Frank'},
+				familyName: {en: 'van Laerhoven'},
+				affiliation: {en: 'Indiana University'},
 				email: 'fvanlaerhoven@mailinator.com',
 				country: 'US',
 				userGroupId: Cypress.env('authorUserGroupId')

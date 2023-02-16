@@ -23,9 +23,9 @@ describe('Data suite tests', function() {
 		],
 		'additionalAuthors': [
 			{
-				givenName: {en_US: 'Margaret'},
-				familyName: {en_US: 'Morse'},
-				affiliation: {en_US: 'Stanford University'},
+				givenName: {en: 'Margaret'},
+				familyName: {en: 'Morse'},
+				affiliation: {en: 'Stanford University'},
 				email: 'mmorse@mailinator.com',
 				country: 'US',
 				userGroupId: Cypress.env('authorUserGroupId')
