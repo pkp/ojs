@@ -59,16 +59,16 @@ describe('Data suite: Ccorino', function() {
 
 		cy.get('#publication-button').click();
 		cy.get('#metadata-button').click();
-		cy.get('#metadata-keywords-control-en_US').type('pr', {delay: 0});
+		cy.get('#metadata-keywords-control-en').type('pr', {delay: 0});
 		cy.wait(500);
 		cy.get('li').contains('Professional Development').click({force: true});
-		cy.get('#metadata-keywords-control-en_US').type('socia', {delay: 0});
+		cy.get('#metadata-keywords-control-en').type('socia', {delay: 0});
 		cy.contains('Social Transformation');
-		cy.get('#metadata-keywords-control-en_US').type('l{downarrow}{downarrow}{enter}', {delay: 0});
+		cy.get('#metadata-keywords-control-en').type('l{downarrow}{downarrow}{enter}', {delay: 0});
 		cy.get('#metadata button').contains('Save').click();
 		cy.get('#metadata [role="status"]').contains('Saved');
-		cy.get('#metadata-keywords-selected-en_US').contains('Professional Development');
-		cy.get('#metadata-keywords-selected-en_US').contains('Social Transformation');
+		cy.get('#metadata-keywords-selected-en').contains('Professional Development');
+		cy.get('#metadata-keywords-selected-en').contains('Social Transformation');
 	});
 
 	it('Logins as a section editor and recommends accept', function() {
