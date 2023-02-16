@@ -100,6 +100,15 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 		$issueFile = $issueFileDao->getById($issueGalley->getFileId());
 
 		if ($issueFile) {
+			import('classes.file.IssueFileManager');
+			$issueFileManager = new IssueFileManager($issueGalley->getIssueId());
+
+			$filePath = $issueFileManager->getFilesDir() . '/' . $issueFileManager->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName();
+			if (!file_exists($filePath)) {
+				$this->getDeployment()->addWarning(ASSOC_TYPE_ISSUE_GALLEY, $issueGalley->getId(), __('plugins.importexport.common.error.issueGalleyFileMissing', ['id' => $issueGalley->getId(), 'path' => $filePath]));
+				return;
+			}
+
 			$deployment = $this->getDeployment();
 			$issueFileNode = $doc->createElementNS($deployment->getNamespace(), 'issue_file');
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_name', htmlspecialchars($issueFile->getServerFileName(), ENT_COMPAT, 'UTF-8')));
@@ -110,10 +119,7 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_uploaded', strftime('%Y-%m-%d', strtotime($issueFile->getDateUploaded()))));
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_modified', strftime('%Y-%m-%d', strtotime($issueFile->getDateModified()))));
 
-			import('classes.file.IssueFileManager');
-			$issueFileManager = new IssueFileManager($issueGalley->getIssueId());
 
-			$filePath = $issueFileManager->getFilesDir() . '/' . $issueFileManager->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName();
 			$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
 			$embedNode->setAttribute('encoding', 'base64');
 			$issueFileNode->appendChild($embedNode);
