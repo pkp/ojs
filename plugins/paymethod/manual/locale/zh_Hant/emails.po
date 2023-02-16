@@ -19,7 +19,7 @@ msgid "emails.manualPaymentNotification.body"
 msgstr ""
 
 msgid "emails.manualPaymentNotification.description"
-msgstr ""
+msgstr "此電郵樣式用作通知期刊主管有一手動付款的請求。"
 
 msgid "emailTemplate.variable.manualPaymentPlugin.senderUsername"
 msgstr "已付款用戶的用戶名稱"

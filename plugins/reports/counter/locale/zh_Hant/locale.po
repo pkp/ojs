@@ -14,6 +14,8 @@ msgstr ""
 
 msgid "plugins.reports.counter.description"
 msgstr ""
+"計數器外掛程式允許紀錄以及提供<a href=\"http://www.projectcounter.org/about."
+"html\" target=\"_new\">計數器</a>-報告網站活動。"
 
 msgid "plugins.reports.counter"
 msgstr "計數器報告"
@@ -47,3 +49,42 @@ msgstr "文章報告1"
 
 msgid "plugins.reports.counter.jr1.title"
 msgstr "期刊報告1"
+
+#~ msgid "plugins.reports.counter.clearLog"
+#~ msgstr "清除紀錄"
+
+#~ msgid "plugins.reports.counter.confirmClear"
+#~ msgstr "你確定你希望清除掉這分紀錄？這個動作無法復原。"
+
+#~ msgid "plugins.reports.counter.browseLog"
+#~ msgstr "瀏覽紀錄"
+
+#~ msgid "plugins.reports.counter.browseLog.logBrowser"
+#~ msgstr "紀錄瀏覽器"
+
+#~ msgid "plugins.reports.counter.entry.timestamp"
+#~ msgstr "時間郵戳"
+
+#~ msgid "plugins.reports.counter.entry.site"
+#~ msgstr "網站"
+
+#~ msgid "plugins.reports.counter.entry.journal"
+#~ msgstr "期刊"
+
+#~ msgid "plugins.reports.counter.entry.user"
+#~ msgstr "使用者"
+
+#~ msgid "plugins.reports.counter.sessionNumber"
+#~ msgstr "Session #{$sessionNumber}"
+
+#~ msgid "plugins.reports.counter.entry.type"
+#~ msgstr "類型"
+
+#~ msgid "plugins.reports.counter.entry.type.article"
+#~ msgstr "文章"
+
+#~ msgid "plugins.reports.counter.entry.type.search"
+#~ msgstr "搜尋"
+
+#~ msgid "plugins.reports.counter.entry.value"
+#~ msgstr "值"

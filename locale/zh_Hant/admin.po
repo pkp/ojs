@@ -39,6 +39,8 @@ msgstr "是否確認解除此區性的安裝？此會影響所有現正使用此
 
 msgid "admin.languages.installNewLocalesInstructions"
 msgstr ""
+"選取任何額外區性以安裝相關支援至本系統。必須先安裝區性，才可在所支援的期刊使"
+"用。請查閱OJS documentation以了解添加新語言的詳情。"
 
 msgid "admin.systemVersion"
 msgstr "OJS版本"
@@ -94,10 +96,10 @@ msgid "admin.journals.importSubscriptions"
 msgstr "導入訂閱"
 
 msgid "admin.journals.transcode"
-msgstr ""
+msgstr "從ISO8859-1為文章元資料為進行轉碼"
 
 msgid "admin.journals.redirect"
-msgstr ""
+msgstr "產生代碼把OJS 1的URL變址至OJS 2的URL"
 
 msgid "admin.journals.form.importPathRequired"
 msgstr "必須提供導入路徑。"
@@ -112,19 +114,23 @@ msgid "admin.mergeUsers.mergeUser"
 msgstr "合併用戶"
 
 msgid "admin.mergeUsers.into.description"
-msgstr ""
+msgstr "請選擇一個用戶，以轉移上一個用戶的作者身份、編輯分配等等。"
 
 msgid "admin.mergeUsers.from.description"
 msgstr ""
+"請選擇一個（或多個）用戶，以合併至另一用戶（例如：當同一人擁有多個用戶）。先"
+"選擇的用戶將被刪除，相關的投稿、配置等等將會轉移至第二個用戶。"
 
 msgid "admin.mergeUsers.allUsers"
-msgstr ""
+msgstr "所有登記用戶"
 
 msgid "admin.mergeUsers.confirm"
 msgstr ""
+"你是否希望合併所選取的 {$oldAccountCount}個用戶至另一用戶\"{$newUsername}\"？"
+"屆時你所選取的 {$oldAccountCount}個用戶將會被刪除。這個動作不可逆轉。"
 
 msgid "admin.mergeUsers.noneEnrolled"
-msgstr ""
+msgstr "沒有登記用戶。"
 
 msgid "admin.scheduledTask.subscriptionExpiryReminder"
 msgstr "訂閱過期提示"
@@ -143,7 +149,7 @@ msgstr "此期校對樣本ID不是整數。"
 
 msgid ""
 "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
-msgstr ""
+msgstr "期數ID與assoc ID不相符。"
 
 msgid "admin.settings.enableBulkEmails.description"
 msgstr ""
@@ -153,6 +159,8 @@ msgstr ""
 
 msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
 msgstr ""
+"此期刊的批量發送電郵已被解除。請到<a href=\"{$siteSettingsUrl}\">管理員 > 網"
+"站設定</a>啟動此功能。"
 
 msgid "admin.siteManagement.description"
 msgstr "從此網站增添、編輯或移除期刊及管理全網站設定。"
