@@ -73,10 +73,9 @@ class NativeFilterHelper {
 				$filePath = $publicFileManager->getContextFilesPath($contextId) . '/' . $coverImageName;
 
 				if (!file_exists($filePath)) {
-					$deployment()->addWarning(ASSOC_TYPE_PUBLICATION, $object->getId(), __('plugins.importexport.common.error.publicationCoverImageMissing', ['id' => $object->getId(), 'path' => $filePath]));
+					$deployment->addWarning(ASSOC_TYPE_PUBLICATION, $object->getId(), __('plugins.importexport.common.error.publicationCoverImageMissing', ['id' => $object->getId(), 'path' => $filePath]));
 					continue;
 				}
-
 				$coverNode = $doc->createElementNS($deployment->getNamespace(), 'cover');
 				$coverNode->setAttribute('locale', $locale);
 				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', htmlspecialchars($coverImageName, ENT_COMPAT, 'UTF-8')));
@@ -88,7 +87,7 @@ class NativeFilterHelper {
 				$coversNode->appendChild($coverNode);
 			}
 		}
-		return $coversNode;
+		return $coversNode->firstChild ? $coversNode : null;
 	}
 
 	/**
@@ -109,10 +108,9 @@ class NativeFilterHelper {
 				$publicFileManager = new PublicFileManager();
 				$filePath = $publicFileManager->getContextFilesPath($object->getJournalId()) . '/' . $coverImage;
 				if (!file_exists($filePath)) {
-					$deployment()->addWarning(ASSOC_TYPE_ISSUE, $object->getId(), __('plugins.importexport.native.common.issueCoverImageMissing', ['id' => $object->getId(), 'path' => $filePath]));
+					$deployment->addWarning(ASSOC_TYPE_ISSUE, $object->getId(), __('plugins.importexport.native.common.issueCoverImageMissing', ['id' => $object->getId(), 'path' => $filePath]));
 					continue;
 				}
-
 				$coverNode = $doc->createElementNS($deployment->getNamespace(), 'cover');
 				$coverNode->setAttribute('locale', $locale);
 				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', htmlspecialchars($coverImage, ENT_COMPAT, 'UTF-8')));
@@ -124,7 +122,7 @@ class NativeFilterHelper {
 				$coversNode->appendChild($coverNode);
 			}
 		}
-		return $coversNode;
+		return $coversNode->firstChild ? $coversNode : null;
 	}
 
 	/**
