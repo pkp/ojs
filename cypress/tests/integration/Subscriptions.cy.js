@@ -109,7 +109,7 @@ describe('Subscription tests', function() {
 		cy.get('a[name="subscriptionTypes"]').click();
 		cy.get('a:contains("Create New Subscription Type")').click();
 		cy.wait(1000); // Form initialization problem
-		cy.get('form#subscriptionTypeForm input[id^="typeName-en_US-"]').type('Yearly Subscription', {delay: 0});
+		cy.get('form#subscriptionTypeForm input[id^="typeName-en-"]').type('Yearly Subscription', {delay: 0});
 		cy.get('form#subscriptionTypeForm select[name=currency]').select('Canadian Dollar (CAD)');
 		cy.get('form#subscriptionTypeForm input[name=cost]').type('50', {delay: 0});
 		cy.get('form#subscriptionTypeForm input[name=duration]').type('12', {delay: 0});
