@@ -30,6 +30,8 @@ import StatsUsersPage from '@/components/Container/StatsUsersPage.vue';
 import SubmissionWizardPage from '@/components/Container/SubmissionWizardPage.vue';
 import WorkflowPage from '@/components/Container/WorkflowPageOJS.vue';
 import JobsPage from '@/components/Container/JobsPage.vue';
+import FailedJobsPage from '@/components/Container/FailedJobsPage.vue';
+import FailedJobDetailsPage from '@/components/Container/FailedJobDetailsPage.vue';
 
 // Required by the URN plugin
 import FieldText from '@/components/Form/fields/FieldText.vue';
@@ -46,6 +48,8 @@ window.pkp = Object.assign(PkpLoad, {
 		ImportExportPage,
 		ManageEmailsPage,
 		JobsPage,
+		FailedJobsPage,
+		FailedJobDetailsPage,
 		Page,
 		SettingsPage,
 		StartSubmissionPage,
