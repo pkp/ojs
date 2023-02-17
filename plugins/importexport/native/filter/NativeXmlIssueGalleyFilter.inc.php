@@ -60,7 +60,7 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter {
 	/**
 	 * Handle a submission element
 	 * @param $node DOMElement
-	 * @return IssueGalley
+	 * @return ?IssueGalley
 	 */
 	function handleElement($node) {
 		$deployment = $this->getDeployment();
@@ -103,6 +103,12 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter {
 						$issueFileManager->writeFile($filePath, base64_decode($o->textContent));
 						break;
 				}
+
+				if (!$issueGalley->getFileId()) {
+					$deployment->addWarning(ASSOC_TYPE_ISSUE_GALLEY, 0, __('plugins.importexport.common.error.import.issueGalleyFileMissing'));
+					return null;
+				}
+
 				$issueFileId = $issueFileDao->insertObject($issueFile);
 				$issueGalley->setFileId($issueFileId);
 				break;
