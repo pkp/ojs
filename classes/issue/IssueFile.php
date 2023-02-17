@@ -67,7 +67,7 @@ class IssueFile extends PKPFile
     /**
      * Get modified date of file.
      *
-     * @return date
+     * @return string
      */
     public function getDateModified()
     {
@@ -77,7 +77,7 @@ class IssueFile extends PKPFile
     /**
      * set modified date of file.
      *
-     * @param date $dateModified
+     * @param string $dateModified
      */
     public function setDateModified($dateModified)
     {
@@ -87,5 +87,5 @@ class IssueFile extends PKPFile
 
 if (!PKP_STRICT_MODE) {
     class_alias('\APP\issue\IssueFile', '\IssueFile');
-    define('ISSUE_FILE_PUBLIC', \IssueFile::ISSUE_FILE_PUBLIC);
+    define('ISSUE_FILE_PUBLIC', IssueFile::ISSUE_FILE_PUBLIC);
 }
