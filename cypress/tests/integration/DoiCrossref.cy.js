@@ -79,5 +79,16 @@ describe('Crossref tests', function () {
 				expect(response.body).to.haveOwnProperty('temporaryFileId');
 				expect(response.body.temporaryFileId).to.be.a('number');
 			});
+
+		cy.log('Deselect Crossref as registered agency for downstream tests');
+		cy.get('a:contains("Distribution")').click();
+		cy.get('button#dois-button').click();
+		cy.get('button#doisRegistration-button').click();
+		cy.get('select#doiRegistrationSettings-registrationAgency-control').select(
+			'None'
+		);
+		// Save
+		cy.get('#doisRegistration button').contains('Save').click();
+		cy.get('#doisRegistration [role="status"]').contains('Saved');
 	});
 });
