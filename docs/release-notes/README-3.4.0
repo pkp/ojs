@@ -30,6 +30,9 @@ configuration parameters.
 
 - The setting i18n.client_charset was removed. It used to support two options "ISO-8859-1" (LATIN1) and "UTF-8", now we're UTF-8 only.
 
+- The setting i18n.locale will likely need to be updated because locale codes have been standardized. For example, "en_US" has become "en".
+    Check the `locale/` directory for a list of available locale codes.
+
 New config.inc.php section for queues is added, with the following parameters:
     - default_connection (default value: database), being the default queue driver to be used;
     - default_queue (default value: queue), being the default queue to be used if someone forgot to associate a queue during Queue::push()
