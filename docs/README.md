@@ -116,13 +116,13 @@ To add support for other languages, the following sets of PO files must be
 localized and placed in an appropriately named directory (using ISO locale 
 codes, e.g. `fr_FR`, is recommended):
 
-* `locale/en_US`
-* `lib/pkp/locale/en_US`
+* `locale/en`
+* `lib/pkp/locale/en`
 * `docs/manual/en`
 * `plugins/[plugin category]/[plugin name]/locale`, where applicable
 
 The only critical files that need translation for the system to function
-properly are found in `locale/en_US`, `lib/pkp/locale/en_US`.
+properly are found in `locale/en`, `lib/pkp/locale/en`.
 
 Translations can be contributed back to PKP for distribution with future
 releases of OJS at https://translate.pkp.sfu.ca/projects/.
