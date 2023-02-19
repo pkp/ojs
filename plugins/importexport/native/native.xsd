@@ -121,7 +121,7 @@
 		<sequence>
 			<element name="label" type="string" minOccurs="1" maxOccurs="1" />
 			<element ref="pkp:id" minOccurs="0" maxOccurs="unbounded" />
-			<element ref="pkp:issue_file" minOccurs="0" maxOccurs="1" />
+			<element ref="pkp:issue_file" minOccurs="1" maxOccurs="1" />
 		</sequence>
 		<attribute name="locale" type="string" />
 	</complexType>
