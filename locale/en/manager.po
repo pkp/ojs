@@ -1624,7 +1624,7 @@ msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
 msgstr "An issue galley could not be imported, its missing the file."
 
 msgid "plugins.importexport.common.error.issueGalleyFileMissing"
-msgstr "The issue galley {$id} was partially exported, its file was not found at the path \"{$path}\"."
+msgstr "The issue galley {$id} could not be exported, its file was not found at the path \"{$path}\"."
 
 msgid "plugins.importexport.common.error.issueCoverImageMissing"
 msgstr "The cover image of the issue {$id} was not exported, its file was not found at the path \"{$path}\"."

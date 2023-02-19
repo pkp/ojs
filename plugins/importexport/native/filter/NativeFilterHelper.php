@@ -77,7 +77,7 @@ class NativeFilterHelper extends \PKP\plugins\importexport\native\filter\PKPNati
             $coverNode = $doc->createElementNS($deployment->getNamespace(), 'cover');
             $filePath = $publicFileManager->getContextFilesPath($object->getJournalId()) . '/' . $coverImage;
             if (!file_exists($filePath)) {
-                $deployment->addWarning(Application::ASSOC_TYPE_ISSUE, $object->getId(), __('plugins.importexport.native.common.issueCoverImageMissing', ['id' => $object->getId(), 'path' => $filePath]));
+                $deployment->addWarning(Application::ASSOC_TYPE_ISSUE, $object->getId(), __('plugins.importexport.common.error.issueCoverImageMissing', ['id' => $object->getId(), 'path' => $filePath]));
                 continue;
             }
 

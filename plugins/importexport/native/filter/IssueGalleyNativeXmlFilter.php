@@ -69,7 +69,9 @@ class IssueGalleyNativeXmlFilter extends \PKP\plugins\importexport\native\filter
 
         $rootNode = $doc->createElementNS($deployment->getNamespace(), 'issue_galleys');
         foreach ($issueGalleys as $issueGalley) {
-            $rootNode->appendChild($this->createIssueGalleyNode($doc, $issueGalley));
+            if ($issueGalleyNode = $this->createIssueGalleyNode($doc, $issueGalley)) {
+                $rootNode->appendChild($issueGalleyNode);
+            }
         }
 
         $doc->appendChild($rootNode);
@@ -84,23 +86,20 @@ class IssueGalleyNativeXmlFilter extends \PKP\plugins\importexport\native\filter
     //
     /**
      * Create and return an issueGalley node.
-     *
-     * @param \DOMDocument $doc
-     * @param IssueGalley $issueGalley
-     *
-     * @return \DOMElement
      */
-    public function createIssueGalleyNode($doc, $issueGalley)
+    public function createIssueGalleyNode(DOMDocument $doc, IssueGalley $issueGalley): ?DOMElement
     {
         // Create the root node and attributes
         $deployment = $this->getDeployment();
         $issueGalleyNode = $doc->createElementNS($deployment->getNamespace(), 'issue_galley');
         $issueGalleyNode->setAttribute('locale', $issueGalley->getLocale());
-        $issueGalleyNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'label', htmlspecialchars($issueGalley->getLabel(), ENT_COMPAT, 'UTF-8')));
+        $issueGalleyNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'label', htmlspecialchars($issueGalley->getLabel(), ENT_COMPAT, 'UTF-8')));
 
         $this->addIdentifiers($doc, $issueGalleyNode, $issueGalley);
 
-        $this->addFile($doc, $issueGalleyNode, $issueGalley);
+        if (!$this->addFile($doc, $issueGalleyNode, $issueGalley)) {
+            return null;
+        }
 
         return $issueGalleyNode;
     }
@@ -108,20 +107,20 @@ class IssueGalleyNativeXmlFilter extends \PKP\plugins\importexport\native\filter
     /**
      * Add the issue file to its DOM element.
      */
-    public function addFile(DOMDocument $doc, DOMElement $issueGalleyNode, IssueGalley $issueGalley): void
+    public function addFile(DOMDocument $doc, DOMElement $issueGalleyNode, IssueGalley $issueGalley): bool
     {
         $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /** @var IssueFileDAO $issueFileDao */
         $issueFile = $issueFileDao->getById($issueGalley->getFileId());
 
         if (!$issueFile) {
-            return;
+            return false;
         }
 
         $issueFileManager = new IssueFileManager($issueGalley->getIssueId());
         $filePath = $issueFileManager->getFilesDir() . '/' . $issueFileManager->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName();
         if (!file_exists($filePath)) {
             $this->getDeployment()->addWarning(Application::ASSOC_TYPE_ISSUE_GALLEY, $issueGalley->getId(), __('plugins.importexport.common.error.issueGalleyFileMissing', ['id' => $issueGalley->getId(), 'path' => $filePath]));
-            return;
+            return false;
         }
 
         $deployment = $this->getDeployment();
@@ -139,6 +138,7 @@ class IssueGalleyNativeXmlFilter extends \PKP\plugins\importexport\native\filter
         $issueFileNode->appendChild($embedNode);
 
         $issueGalleyNode->appendChild($issueFileNode);
+        return true;
     }
 
     /**
