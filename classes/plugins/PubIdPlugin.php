@@ -361,12 +361,12 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
         foreach ($submissionIds as $submissionId) {
             $submission = Repo::submission()->get($submissionId);
             if ($submissionPubIdEnabled) { // Does this option have to be enabled here for?
-                foreach ((array) $submission->getData('publications') as $publication) {
+                foreach ($submission->getData('publications') as $publication) {
                     Repo::publication()->dao->deletePubId($publication->getId(), $pubIdType);
                 }
             }
             if ($representationPubIdEnabled || $filePubIdEnabled) { // Does this option have to be enabled here for?
-                foreach ((array) $submission->getData('publications') as $publication) {
+                foreach ($submission->getData('publications') as $publication) {
                     $representations = Application::getRepresentationDAO()->getByPublicationId($publication->getId());
                     foreach ($representations as $representation) {
                         if ($representationPubIdEnabled) { // Does this option have to be enabled here for?
