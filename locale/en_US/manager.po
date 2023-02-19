@@ -1689,7 +1689,7 @@ msgid "plugins.importexport.common.error.unknownObjects"
 msgstr "The specified objects could not be found."
 
 msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
-msgstr "An issue galley could not be imported, its missing the file."
+msgstr "An issue galley could not be imported, its file is missing."
 
 msgid "plugins.importexport.common.error.issueGalleyFileMissing"
 msgstr "The issue galley {$id} could not be exported, its file was not found at the path \"{$path}\"."
