@@ -56,7 +56,9 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 
 		$rootNode = $doc->createElementNS($deployment->getNamespace(), 'issue_galleys');
 		foreach ($issueGalleys as $issueGalley) {
-			$rootNode->appendChild($this->createIssueGalleyNode($doc, $issueGalley));
+			if ($issueGalleyNode = $this->createIssueGalleyNode($doc, $issueGalley)) {
+				$rootNode->appendChild($issueGalleyNode);
+			}
 		}
 
 		$doc->appendChild($rootNode);
@@ -73,7 +75,7 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 	 * Create and return an issueGalley node.
 	 * @param $doc DOMDocument
 	 * @param $issueGalley IssueGalley
-	 * @return DOMElement
+	 * @return ?DOMElement
 	 */
 	function createIssueGalleyNode($doc, $issueGalley) {
 		// Create the root node and attributes
@@ -84,7 +86,9 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 
 		$this->addIdentifiers($doc, $issueGalleyNode, $issueGalley);
 
-		$this->addFile($doc, $issueGalleyNode, $issueGalley);
+		if (!$this->addFile($doc, $issueGalleyNode, $issueGalley)) {
+			return null;
+		}
 
 		return $issueGalleyNode;
 	}
@@ -106,7 +110,7 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 			$filePath = $issueFileManager->getFilesDir() . '/' . $issueFileManager->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName();
 			if (!file_exists($filePath)) {
 				$this->getDeployment()->addWarning(ASSOC_TYPE_ISSUE_GALLEY, $issueGalley->getId(), __('plugins.importexport.common.error.issueGalleyFileMissing', ['id' => $issueGalley->getId(), 'path' => $filePath]));
-				return;
+				return false;
 			}
 
 			$deployment = $this->getDeployment();
@@ -125,7 +129,9 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 			$issueFileNode->appendChild($embedNode);
 
 			$issueGalleyNode->appendChild($issueFileNode);
+			return true;
 		}
+		return false;
 	}
 
 	/**
