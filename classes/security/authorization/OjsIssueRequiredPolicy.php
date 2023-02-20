@@ -63,7 +63,7 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy
         // access to it.
         $userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
         if (!$issue->getPublished() && count(array_intersect(
-            $userRoles,
+            (array) $userRoles,
             [
                 Role::ROLE_ID_SITE_ADMIN,
                 Role::ROLE_ID_MANAGER,
