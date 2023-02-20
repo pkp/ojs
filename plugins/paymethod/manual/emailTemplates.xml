@@ -10,5 +10,5 @@
   * Email templates XML file.
   -->
 <emails>
-	<email key="MANUAL_PAYMENT_NOTIFICATION" subject="emails.manualPaymentNotification.subject" body="emails.manualPaymentNotification.body"/>
+	<email key="MANUAL_PAYMENT_NOTIFICATION" name="plugins.paymethod.manual.manualPaymentNotify.name" subject="emails.manualPaymentNotification.subject" body="emails.manualPaymentNotification.body"/>
 </emails>
