@@ -95,11 +95,35 @@ class DAO extends \PKP\section\DAO
             ->whereIn('s.section_id', $sectionIds)
             ->orderBy('section_seq')
             ->get();
-        return LazyCollection::make(function () use ($rows) {
-            foreach ($rows as $row) {
+
+        return LazyCollection::make(function () use ($rows, $issueId) {
+            // In case when the only article of a section the custom order exists for
+            // is (re)moved from that section, the section will stay in the DB table custom_section_orders.
+            // Thus, clean that now, so that other places in the code that use this function already
+            // get the right/clean DB table custom_section_orders.
+            // Also for the case when an article is assigned to a section the custom order does not exists for yet,
+            // this will provide the right DB table custom_section_orders.
+            $customOrderingExists = Repo::section()->customSectionOrderingExists($issueId);
+            if ($customOrderingExists) {
+                $this->deleteCustomSectionOrdering($issueId);
+            }
+            foreach ($rows as $i => $row) {
+                if ($customOrderingExists) {
+                    Repo::section()->upsertCustomSectionOrder($issueId, $row->section_id, $i);
+                }
                 yield $row->section_id => $this->fromRow($row);
             }
         });
+    }
+
+    /**
+     * Check if an issue has custom section ordering.
+     */
+    public function customSectionOrderingExists(int $issueId): bool
+    {
+        return DB::table('custom_section_orders')
+            ->where('issue_id', $issueId)
+            ->exists();
     }
 
     /**
