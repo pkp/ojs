@@ -28,7 +28,7 @@ msgstr ""
 "postmeddelandet så kommer ditt lösenord fortsätta vara samma som förut. Om "
 "du vill återställa ditt lösenord, klicka på URL:en nedan.<br />\n"
 "<br />\n"
-"Återställ mitt lösenord: {$passwordResetUrl}<br />\n"
+"Återställ mitt lösenord: {$lostPasswordUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

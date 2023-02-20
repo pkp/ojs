@@ -27,7 +27,7 @@ msgstr ""
 "nespremenjeno. Če želite ponastaviti geslo, kliknite na spodnjo povezavo."
 "<br />\n"
 "<br />\n"
-"Ponastavi moje geslo: {$passwordResetUrl}<br />\n"
+"Ponastavi moje geslo: {$lostPasswordUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 
