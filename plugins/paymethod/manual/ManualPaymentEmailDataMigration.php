@@ -18,13 +18,16 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;
 use PKP\db\XMLDAO;
 use PKP\facades\Locale;
+use PKP\install\Installer;
 
 class ManualPaymentEmailDataMigration extends Migration
 {
+    protected Installer $installer;
     private ManualPaymentPlugin $plugin;
 
-    public function __construct(ManualPaymentPlugin $plugin)
+    public function __construct(Installer $installer, ManualPaymentPlugin $plugin)
     {
+        $this->installer = $installer;
         $this->plugin = $plugin;
     }
 
@@ -32,6 +35,45 @@ class ManualPaymentEmailDataMigration extends Migration
      * Run the migrations.
      */
     public function up(): void
+    {
+        $currentVersion = $this->installer->getCurrentVersion();
+        $newVersion = $this->installer->getNewVersion();
+        if (
+            $currentVersion->compare('3.4.0.0') < 0 &&
+            $newVersion->compare('3.4.0.0') >= 0
+        ) {
+            $this->migrateEmailTemplatesName();
+        }
+    }
+
+    /**
+     * Revers the migrations
+     */
+    public function down(): void
+    {
+        $xmlDao = new XMLDAO();
+
+        $data = $xmlDao->parseStruct($this->plugin->getInstallEmailTemplatesFile(), ['email']);
+
+        if (!isset($data['email'])) {
+            return;
+        }
+
+        foreach ($data['email'] as $entry) {
+            $attrs = $entry['attributes'];
+            $emailKey = $attrs['key'];
+
+            DB::table('email_templates_default_data')
+                ->where('email_key', $emailKey)
+                ->update(['name' => '']);
+        }
+    }
+
+    /**
+     * Adds name to the MANUAL_PAYMENT_NOTIFICATION email template
+     * Execute only during upgrade to 3.4
+     */
+    public function migrateEmailTemplatesName(): void
     {
         $xmlDao = new XMLDAO();
 
@@ -64,29 +106,6 @@ class ManualPaymentEmailDataMigration extends Migration
             }
 
             Locale::setMissingKeyHandler($previous);
-        }
-    }
-
-    /**
-     * Revers the migrations
-     */
-    public function down(): void
-    {
-        $xmlDao = new XMLDAO();
-
-        $data = $xmlDao->parseStruct($this->plugin->getInstallEmailTemplatesFile(), ['email']);
-
-        if (!isset($data['email'])) {
-            return;
-        }
-
-        foreach ($data['email'] as $entry) {
-            $attrs = $entry['attributes'];
-            $emailKey = $attrs['key'];
-
-            DB::table('email_templates_default_data')
-                ->where('email_key', $emailKey)
-                ->update(['name' => '']);
         }
     }
 }
