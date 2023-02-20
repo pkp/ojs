@@ -251,20 +251,6 @@ msgstr ""
 "p><p>Ако имате какви било прашања, ве молиме контактирајте ме.</p><p>Со "
 "почит,</p>{$signature}"
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Може да рецензира"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Уредници:<br />\n"
-"<br />\n"
-"Јас сум во состојба и подготвен да го рецензирам поднесокот, &quot;"
-"{$submissionTitle},&quot; за {$contextName}. Ви благодарам што помисливте на "
-"мене, и планирам да ја завршам рецензијата до крајниот датум, "
-"{$reviewDueDate}, ако не и порано.<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Не може да рецензира"
 

@@ -225,20 +225,6 @@ msgstr ""
 "Kami berharap Anda dapat membantu proses review jurnal kami.</p><p>Jika ada "
 "pertanyaan, silakan hubungi saya.</p><p>Salam Hormat,</p>{$signature}"
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Dapat Melakukan Review"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Editor:<br />\n"
-"<br />\n"
-"Saya dapat dan bersedia melakukan review terhadap naskah, &quot;"
-"{$submissionTitle},&quot; untuk {$contextName}. Terimakasih telah "
-"mempercayakan kepada saya, dan saya berencana untuk menyelesaikan review ini "
-"sesuai tenggat, {$reviewDueDate}, atau sebelumnya.<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Tidak Dapat Melakukan Review"
 

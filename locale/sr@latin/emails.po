@@ -91,12 +91,6 @@ msgstr ""
 msgid "emails.reviewReinstate.body"
 msgstr ""
 
-msgid "emails.reviewConfirm.subject"
-msgstr ""
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-
 msgid "emails.reviewDecline.subject"
 msgstr ""
 

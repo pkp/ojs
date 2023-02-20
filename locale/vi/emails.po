@@ -278,20 +278,6 @@ msgstr ""
 "<br />\n"
 "Nếu bạn có thắc mắc, xin vui lòng liên hệ với chúng tôi."
 
-#, fuzzy
-msgid "emails.reviewConfirm.subject"
-msgstr "Đồng ý đánh giá"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Kính gửi Biên tập viên,<br />\n"
-"<br />\n"
-"Tôi có thể và sẵn sàng đánh giá bài gửi, &quot;{$submissionTitle},&quot; cho "
-"{$contextName}. Cảm ơn bạn đã nghĩ đến tôi và tôi dự định hoàn thành bản "
-"đánh giá trước ngày {$reviewDueDate}.<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Không thể nhận đánh giá"
 

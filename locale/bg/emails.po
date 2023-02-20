@@ -226,19 +226,6 @@ msgstr ""
 "за преглед.</p><p>Ако имате въпроси, моля, свържете се с мен.</p><p>С "
 "уважение,</p>{$signature}"
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Съгласен/а да рецензира"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"До радакторите:<br />\n"
-"<br />\n"
-"Мога и желая да прегледам подадените материали, &quot;{$submissionTitle},"
-"&quot; за {$contextName}. Благодаря, че ме имате предвид и смятам да направя "
-"рецензията до крайния срок, {$reviewDueDate}, или преди това.<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Не мога да дам рецензия"
 

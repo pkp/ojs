@@ -224,20 +224,6 @@ msgstr ""
 "ladda upp granskningsfilerna och skicka in din bedömning.</p><p>Om du har "
 "några frågor, kontakta mig.</p><p>Vänliga hälsningar,</p>{$signature}"
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Accepterar granskningsuppdrag"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Redaktörer:<br />\n"
-"<br />\n"
-"Jag har möjlighet och åtar mig gärna uppdraget att granska bidraget &quot;"
-"{$submissionTitle}&quot; för {$contextName}. Tack för att ni tänkte på mig. "
-"Jag kommer att ha granskningen färdig till deadline {$reviewDueDate}, om "
-"inte förr.<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Tackar nej till granskningsuppdrag"
 

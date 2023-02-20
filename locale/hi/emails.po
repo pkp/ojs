@@ -367,29 +367,6 @@ msgstr ""
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
-#, fuzzy
-msgid "emails.reviewConfirm.subject"
-msgstr "समीक्षा करने में सक्षम"
-
-# (pofilter) brackets: Added '{', '}'
-# (pofilter) long: The translation is much longer than the original
-# (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$recipientName}, {$ reviewDueDate}, {$submissionTitle}, {$contextName}
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-# (pofilter) simplecaps: Different capitalization
-# (pofilter) startcaps: Different capitalization at the start
-# (pofilter) xmltags: Added XML tags
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Editors:<br />\n"
-"<br />\n"
-"मैं सबमिशन की समीक्षा करने में सक्षम और तैयार हूं, &quot;{$submissionTitle},&quot; for "
-"{$contextName}. मेरे बारे में सोचने के लिए धन्यवाद, और मेरी योजना इसकी नियत तारीख, {$ "
-"reviewDueDate} से पूरी होने की है, अगर पहले नहीं.<br />\n"
-"<br />\n"
-"{$senderName}"
-
-# (pofilter) simplecaps: Different capitalization
 msgid "emails.reviewDecline.subject"
 msgstr "समीक्षा करने में असमर्थ"
 

@@ -246,18 +246,6 @@ msgstr ""
 "<br />\n"
 "אם יש לך שאלות, אנא צור איתי קשר."
 
-msgid "emails.reviewConfirm.subject"
-msgstr "יכול לבדוק"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"לעורכים:<br />\n"
-"<br />\n"
-"אני מסכים לבדוק ההגשה \"{$submissionTitle}\" ל{$contextName}. תודה שפניתם "
-"אלי ואני מתכנן להחזיר את חוות הדעת עד {$reviewDueDate}, אם לא לפני.<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "אינו יכול לבדוק"
 

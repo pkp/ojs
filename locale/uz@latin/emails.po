@@ -233,19 +233,6 @@ msgstr ""
 "ko'rib chiqish so'rovingizni yuboring.</p><p>Agar sizda biron bir savol "
 "bo'lsa, men bilan bog'laning.</p><p>Hurmat bilan,</p>{$signature}"
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Ko'rib chiqish imkoniyati"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Tahrirlovchilar: <br />\n"
-"<br/>\n"
-"Men &quot; {$submissionTitle}, &quot; {$contextName} uchun. Men haqimda "
-"o'ylaganingiz uchun tashakkur va men ko'rib chiqishni o'z vaqtida tugatishni "
-"rejalashtiryapman, {$reviewDueDate}, agar oldin bo'lmasa. <br />\n"
-"<br/>\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Tekshirib bo'lmadi"
 

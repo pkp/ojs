@@ -272,20 +272,6 @@ msgstr ""
 "<br />\n"
 "Ak máte nejaké otázky, kontaktujte ma."
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Môžem spracovať recenziu"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Editori:<br />\n"
-"<br />\n"
-"Môžem a som ochotný spracovať recenziu príspevku &quot;{$submissionTitle}"
-"&quot; pre {$contextName}. Dakujem, že ste ma oslovili. Plánujem dokončiť "
-"spracovanie recenzie v stanovenom termíne {$reviewDueDate}, prípadne skôr."
-"<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Nemôžem spracovať recenziu"
 

@@ -277,21 +277,6 @@ msgstr ""
 "<br />\n"
 "Ma tha ceist sam bith agad, cuir fios thugam."
 
-#, fuzzy
-msgid "emails.reviewConfirm.subject"
-msgstr "Bidh e comasach lèirmheas a dhèanamh air"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Deasaichean:<br />\n"
-"<br />\n"
-"Tha mi deiseil is deònach lèirmheas a dhèanamh air an tagradh "
-"“{$submissionTitle},” airson {$contextName}. Mòran taing airson an cothrom "
-"seo a thoirt dhomh agus tha mi an dòchas an lèirmheas a choileanadh ron "
-"{$reviewDueDate}.<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Cha bhi e comasach lèirmheas a dhèanamh air"
 

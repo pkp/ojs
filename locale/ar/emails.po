@@ -217,19 +217,6 @@ msgstr ""
 "</p><p>إذا كانت لديكم أي استفسارات، يرجى التواصل معي.</p><p>أطيب التحايا،</"
 "p>{$signature}"
 
-msgid "emails.reviewConfirm.subject"
-msgstr "قادر على التحكيم"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"أعزائي المحررون:<br />\n"
-"<br />\n"
-"أنا متمكن وراغب بتحكيم المؤلَّف الموسوم &quot;{$submissionTitle},&quot; "
-"والمرسل إلى {$contextName}. أشكر لكم إعتمادكم عليَّ، وأخطط لإنجاز التحكيم "
-"المطلوب حتى يوم استيجابه مني في {$reviewDueDate} إن لم يكن قبله.<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "غير قادر على التحكيم"
 

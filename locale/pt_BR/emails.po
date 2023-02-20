@@ -279,22 +279,6 @@ msgstr ""
 "dúvida, por favor, entre em contato comigo.</p><p> Atenciosamente, </"
 "p>{$signature}"
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Disponível para realizar avaliação"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Prezados editores, <br />\n"
-"<br />\n"
-"eu tenho disponibilidade para dar um parecer para a submissão, &quot;"
-"{$submissionTitle}&quot;, para o periódico {$contextName}. Agradeço por "
-"lembrar de mim, e pretendo enviar o parecer até {$reviewDueDate}, se não "
-"antes.<br />\n"
-"<br />\n"
-"Atenciosamente,\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Indisponível para realizar avaliação"
 

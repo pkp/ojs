@@ -283,23 +283,6 @@ msgstr ""
 "<br />\n"
 "Herhangi bir sorunuz olursa, lütfen benimle iletişime geçin."
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Değerlendirmeyi Yapacağım"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Sayın {$recipientName},<br />\n"
-"<br />\n"
-"{$contextName} adlı dergide yayımlanması için değerlendirilmek üzere "
-"gönderilen &quot;{$submissionTitle}&quot; başlıklı makalenin değerlendirme "
-"talebini kabul ediyorum. Değerlendirme raporunu en geç {$reviewDueDate} "
-"tarihine kadar göndereceğim.<br />\n"
-"<br />\n"
-"Çalışmayı değerlendirmek üzere tarafıma gönderdiğiniz için teşekkür ederim."
-"<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Değerlendirmeyeceğim"
 

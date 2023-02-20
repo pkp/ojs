@@ -228,20 +228,6 @@ msgstr ""
 "վերբեռնելու գրախոսման նիշքերը և ներկայացնել ձեր գրախոսականը:</p><p>Եթե ունեք "
 "հարցեր, խնդրում եմ կապվեք ինձ հետ:</p><p>Հարգանքով,</p>{$signature}"
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Կարող է գրախոսել"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Խմբագիրներ:<br />\n"
-"<br />\n"
-"Ես կարող եմ և ցանկանում եմ գրախոսել &quot;{$submissionTitle},&raquo; "
-"ներկայացումը, {$contextName} -ի համար: Շնորհակալ եմ, որ մտածում եք իմ մասին, "
-"և ես նախատեսում եմ գրախոսությունն ավարտել մինչև իր վերջնաժամկետը` "
-"{$reviewDueDate}, եթե ոչ ավելի վաղ:<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Հնարավոր չէ գրախոսել"
 

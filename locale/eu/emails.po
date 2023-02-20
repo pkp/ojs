@@ -264,20 +264,6 @@ msgstr ""
 msgid "emails.reviewReinstate.body"
 msgstr ""
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Ebaluazioa egiteko prest"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"{$contextName} aldizkarirako &quot;{$submissionTitle}&quot; artikulua "
-"ebaluatzeko aukera aztertu dut, eta prest nago lan hori egiteko. Eskerrik "
-"asko nigan pentsatzeagatik; nire txostena garaiz jasoko duzue, mugaegunerako "
-"({$reviewDueDate}) eginda egongo da, lehenago ez bada.<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Ebaluazioa egin ezina"
 

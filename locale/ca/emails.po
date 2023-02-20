@@ -275,20 +275,6 @@ msgstr ""
 "<br />\n"
 "Si teniu qualsevol pregunta no dubteu a contactar-me."
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Accepto la revisió"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Benvolgut/uda {$recipientName},<br />\n"
-"<br />\n"
-"Accepto revisar la tramesa &quot;{$submissionTitle}&quot; per a "
-"{$contextName}, i us agraeixo que m'hàgiu tingut en compte per a aquesta "
-"tasca. La meva intenció és tenir-la acabada per a la data de venciment "
-"prevista ({$reviewDueDate}), o abans si és possible.<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Rebutjo la revisió"
 

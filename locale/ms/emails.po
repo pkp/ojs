@@ -231,20 +231,6 @@ msgstr ""
 "semakan anda.</p><p>Jika anda mempunyai sebarang soalan, sila hubungi saya.</"
 "p><p>Sekian,</p>{$signature}"
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Mampu Mengulas"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Penyunting:<br />\n"
-"<br />\n"
-"Saya mampu dan bersedia menyemak penyerahan, &quot;{$submissionTitle},&quot; "
-"untuk {$contextName}. Terima kasih untuk pemakluman dan saya bercadang untuk "
-"menyelesaikan semakan sebelum tarikh tamatnya, {$reviewDueDate}, jika tidak "
-"sebelum ini.<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Tidak dapat Menyemak"
 

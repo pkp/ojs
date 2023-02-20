@@ -275,20 +275,6 @@ msgstr ""
 "<br />\n"
 "何かご不明な点がございましたら、ご連絡ください。"
 
-msgid "emails.reviewConfirm.subject"
-msgstr "査読依頼の受諾"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"編集部 御中:<br />\n"
-"<br />\n"
-"雑誌『{$contextName}』への投稿物「{$submissionTitle}」の査読の件ですが、喜ん"
-"でやらせていただきます。査読者に選んでいただき、ありがとうございました。ご指"
-"定の査読期限、{$reviewDueDate}までには査読を終わらせるつもりです。<br />\n"
-"<br />\n"
-"よろしくお願いします。<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "査読依頼の謝絶"
 

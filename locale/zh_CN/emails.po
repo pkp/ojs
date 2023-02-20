@@ -253,18 +253,6 @@ msgstr ""
 "<br/>\n"
 "如果您有任何问题，请同我们联系。"
 
-msgid "emails.reviewConfirm.subject"
-msgstr "可以进行审查工作"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"我可以并且愿意为《{$contextName}》审查稿件〈{$submissionTitle}〉。谢谢您考虑"
-"我当审查人，而我计划在审查截止日{$reviewDueDate}前完成审查。<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "无法进行审查工作"
 

@@ -261,20 +261,6 @@ msgstr ""
 "<br />\n"
 "ئەگەر هەر پرسیارێکتان هەیە، تکایە بە ئیمەیڵ پەیوەندیم پێوە بکەن."
 
-msgid "emails.reviewConfirm.subject"
-msgstr "توانای هەڵسەنگاندن هەیە"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"بەڕێزان، سەرنوسەران:<br />\n"
-"<br />\n"
-"من لە توانام دایە و حەزدەکەم هەڵسەنگاندن بۆ توێژینەوەی&quot;"
-"{$submissionTitle},&quot; بکەم بۆ{$contextName}. سوپاس بۆ بیرکردنەوە لە من و "
-"من لە پلانم دایە کە هەڵسەنگاندنەکە هەتا{$reviewDueDate} تەواو بکەم، ئەگەر "
-"پێشتر نەبێت.<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "هەڵسەنگاندنەکە ناتوانم"
 

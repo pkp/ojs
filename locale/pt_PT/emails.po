@@ -223,19 +223,6 @@ msgstr ""
 "por pares da revista.</p><p>Se tiver alguma dúvida, por favor, entre em "
 "contato.</p><p> Atenciosamente, </p>{$signature}"
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Disponível para realizar a revisão"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Cara(o) Editor:<br />\n"
-"<br />\n"
-"Estou disponível e interessado em rever a submissão &quot;{$submissionTitle}"
-"&quot; a {$contextName}. Agradeço a consideração e estimo concluir a revisão "
-"até à data definida, {$reviewDueDate}, ou antes do prazo.<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Indisponível para realizar a revisão"
 

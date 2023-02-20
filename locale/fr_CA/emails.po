@@ -298,20 +298,6 @@ msgstr ""
 "avez des questions, n'hésitez pas à communiquer avec moi,</p><p>Cordialement,"
 "</p>{$signature}"
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Acceptation d'évaluation"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Rédacteurs-trices,<br />\n"
-"<br />\n"
-"Je suis en mesure d'évaluer la soumission intitulée « {$submissionTitle} » "
-"pour la revue {$contextName}. Je vous remercie d'avoir pensé à moi. Je "
-"devrais être en mesure de compléter l'évaluation pour la date du "
-"{$reviewDueDate}, voire avant.<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Refus d'évaluation"
 
