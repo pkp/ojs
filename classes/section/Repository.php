@@ -23,6 +23,12 @@ class Repository extends \PKP\section\Repository
         return $this->dao->getByIssueId($issueId);
     }
 
+    /** @copydoc DAO::customSectionOrderingExists() */
+    public function customSectionOrderingExists(int $issueId): bool
+    {
+        return $this->dao->customSectionOrderingExists($issueId);
+    }
+
     /** @copydoc DAO::deleteCustomSectionOrdering() */
     public function deleteCustomSectionOrdering(int $issueId): void
     {
