@@ -290,20 +290,6 @@ msgstr ""
 "<br />\n"
 "Αν έχετε απορίες, επικοινωνήστε μαζί μου."
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Αποδοχή αιτήματος αξιολόγησης"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Editors:<br />\n"
-"<br />\n"
-"Θα ήθελα να σας ενημερώσω ότι μπορώ να αναλάβω την αξιολόγηση της εργασίας "
-"&quot;{$submissionTitle},&quot; για το περιοδικό {$contextName}. Σας "
-"ευχαριστώ για την εμπιστοσύνη σας και σκοπεύω να έχω την αξιολόγηση έτοιμη "
-"μέχρι τη λήξη της προθεσμίας, στις {$reviewDueDate}, αν όχι νωρίτερα.<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Μη δυνατότητα πραγματοποίησης αξιολόγησης"
 

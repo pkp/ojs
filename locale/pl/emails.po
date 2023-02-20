@@ -273,20 +273,6 @@ msgstr ""
 "pliki i prześlij prośbę o sprawdzenie.</p><p>Jeśli masz jakieś pytania, "
 "proszę o kontakt.</p><p>Pozdrawiamy</p>{$signature}"
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Zgoda na wykonanie recenzji"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Szanowni Państwo,<br />\n"
-"<br />\n"
-"zgadzam się na wykonanie recenzji tekstu \"{$submissionTitle}\", zgłoszonego "
-"do czasopisma \"{$contextName}\". Recenzja będzie gotowa do dnia "
-"{$reviewDueDate}.<br />\n"
-"<br />\n"
-"Z wyrazami szacunku,\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Odrzucenie prośby o wykonanie recenzji"
 

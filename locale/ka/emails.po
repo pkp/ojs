@@ -273,20 +273,6 @@ msgstr ""
 "<br />\n"
 "If you have any questions, please contact me."
 
-msgid "emails.reviewConfirm.subject"
-msgstr "თანხმობა რეცენზირებაზე"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Editors:<br />\n"
-"<br />\n"
-"I am able and willing to review the submission, &quot;{$submissionTitle},"
-"&quot; for {$contextName}. Thank you for thinking of me, and I plan to have "
-"the review completed by its due date, {$reviewDueDate}, if not before..<br /"
-">\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "რეცენზიის მიცემა შეუძლებელია"
 

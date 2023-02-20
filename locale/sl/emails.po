@@ -238,20 +238,6 @@ msgstr ""
 "priporočilo.</p><p>Če imate kakršnakoli vprašanja, se prosim obrnite name.</"
 "p><p>S spoštovanjem,</p>{$signature}"
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Potrditev recenzije"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Editors:<br />\n"
-"<br />\n"
-"Pripravljen sem opraviti recenzijo prispevka, &quot;{$submissionTitle},"
-"&quot; za revijo {$contextName}. Hvala za povabilo. Sporočam vam, da "
-"nameravam recenzijo dokončati do predvidenega datuma, {$reviewDueDate}, če "
-"ne prej.<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Ne morem opraviti recenzije"
 

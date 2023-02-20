@@ -275,20 +275,6 @@ msgstr ""
 "<br />\n"
 "Voor vragen kunt u contact met mij opnemen."
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Review mogelijk"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Ik ben bereid en in staat om een review te doen van de inzending &quot;"
-"{$submissionTitle}&quot; voor {$contextName}. Dank u dat u aan mij gedacht "
-"heeft. Ik verwacht de review gereed te hebben op of voor de afloopdatum, "
-"{$reviewDueDate}.<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Review niet mogelijk"
 

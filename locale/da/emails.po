@@ -237,21 +237,6 @@ msgstr ""
 "spørgsmål, er du velkommen til at kontakte mig.</p><p>Med venlig hilsen</"
 "p>{$signature}"
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Kan foretage bedømmelse"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Kære Redaktører<br />\n"
-"<br />\n"
-"Jeg kan og er villig til at bedømme manuskriptet &quot;{$submissionTitle}"
-"&quot; til {$contextName}. Tak, fordi du tænkte på mig, og jeg planlægger at "
-"være færdig med bedømmelsen senest på forfaldsdatoen, {$reviewDueDate}, hvis "
-"ikke før.<br />\n"
-"<br />\n"
-"Mvh.\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Kan ikke foretage bedømmelse"
 

@@ -273,20 +273,6 @@ msgstr ""
 "<br />\n"
 "Felmerülő kérdés esetén, kérem, keressen."
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Lektori felkérés elfogadása"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Tisztelt Szerkesztők!<br />\n"
-"<br />\n"
-"Vállalom a(z) {$contextName} folyóirathoz beküldött &quot;{$submissionTitle},"
-"&quot; című kézirat lektorálását. Köszönöm a felkérést, a bírálatot a "
-"megadott határidőig ({$reviewDueDate}) elvégzem.<br />\n"
-"<br />\n"
-"Üdvözlettel,<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Lektorálási felkérés elutasítása"
 

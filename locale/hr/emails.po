@@ -237,20 +237,6 @@ msgstr ""
 msgid "emails.reviewReinstate.body"
 msgstr ""
 
-msgid "emails.reviewConfirm.subject"
-msgstr "U mogućnosti sam izvršiti recenziju"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Poštovana/i {$recipientName},<br />\n"
-"<br />\n"
-"u mogućnosti sam izvršiti recenziju članka &quot;{$submissionTitle}&quot; za "
-"časopis {$contextName}. Recenziju namjeravam izvršiti  unutar dogovorenog "
-"vremenskog roka, {$reviewDueDate}.<br />\n"
-"<br />\n"
-"Srdačno,<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Nisam u mogućnosti izvršiti recenziju"
 

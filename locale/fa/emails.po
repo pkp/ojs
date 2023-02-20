@@ -249,19 +249,6 @@ msgstr ""
 msgid "emails.reviewReinstate.body"
 msgstr ""
 
-msgid "emails.reviewConfirm.subject"
-msgstr "داوری را قبول می کنم"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"دبیر محترم:<br />\n"
-"<br />\n"
-"اینجانب داوری مقاله ارسالی &quot;{$submissionTitle}&quot;مربوط به "
-"{$contextName} را قبول می نمایم. از توجه شما متشکرم و بررسی آنرا در موعد "
-"مقرر ( {$reviewDueDate}) انجام خواهد داد.<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "قادر به داوری نمی باشم"
 

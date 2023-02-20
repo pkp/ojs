@@ -273,20 +273,6 @@ msgstr ""
 "<br />\n"
 "Si tiene cualquier pregunta no dude en contactarme."
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Acepto la revisión"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"Editores/as:<br />\n"
-"<br />\n"
-"Tengo la capacidad y deseo revisar el envío &quot;{$submissionTitle},&quot; "
-"para {$contextName}. Gracias por acordarse de mí, es mi intención tener la "
-"revisión completa en el plazo indicado: {$reviewDueDate}, a ser posible "
-"antes.<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Rechazo la revisión"
 

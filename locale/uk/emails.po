@@ -277,20 +277,6 @@ msgstr ""
 "<br />\n"
 "Якщо у вас виникнуть якісь питання, будь ласка, зв'яжіться зі мною."
 
-msgid "emails.reviewConfirm.subject"
-msgstr "Погоджуюсь здійснити рецензування"
-
-msgid "emails.reviewConfirm.body"
-msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"Я маю можливість та бажання працювати над рецензією подання &quot;"
-"{$submissionTitle}&quot; для видання &quot;{$contextName}&quot;. Дякую за "
-"довіру. Я планую закінчити роботу над рецензією не пізніше {$reviewDueDate}."
-"<br />\n"
-"<br />\n"
-"{$senderName}"
-
 msgid "emails.reviewDecline.subject"
 msgstr "Неможливо здійснити рецензування"
 
