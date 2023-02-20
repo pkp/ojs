@@ -1,8 +1,12 @@
-OJS 3.4.0 Release Notes
+OJS 3.4.0rc1 Release Notes
 Git tag: 3_4_0-0
 
-Release date:
-==============================
+Release date: February 20, 2023
+===============================
+
+=========================================================================
+THIS IS A PRE-RELEASE VERSION OF OJS AND NOT INTENDED FOR PRODUCTION USE.
+=========================================================================
 
 Configuration Changes
 ---------------------

@@ -4,9 +4,10 @@
 
 | Version | Supported                                             | End Of Life   |
 | ------- | ----------------------------------------------------- | ------------- |
-| 3.4.x   | :heavy_check_mark: Active development                 |               |
-| 3.3.x   | :heavy_check_mark: Active maintenance                 |               |
-| 3.2.x   | :white_check_mark: Security only                      | 2023          |
+| 3.5.x   | :x: Pre-release                                       | 2026 (est)    |
+| 3.4.x   | :heavy_check_mark: Active development                 | 2025 (est)    |
+| 3.3.x   | :heavy_check_mark: Active maintenance                 | 2026 (est)    |
+| 3.2.x   | :x: Not supported                                     | 2023          |
 | 3.1.x   | :x: Not supported                                     | 2022          |
 | 3.0.x   | :x: Not supported                                     | 2022          |
 | 2.x     | :x: Not supported                                     | 2021          |
