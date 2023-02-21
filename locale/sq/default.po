@@ -1,8 +1,31 @@
 # Rudin Dakli <rdakli@gmail.com>, 2023.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-02-21 17:56+0000\n"
+"Last-Translator: Rudin Dakli <rdakli@gmail.com>\n"
+"Language-Team: Albanian <http://translate.pkp.sfu.ca/projects/ojs/default/sq/"
+">\n"
 "Language: sq\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "section.default.title"
+msgstr "Artikujt"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "default.genres.article"
+msgstr "Teksti i Artikullit"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"Kjo revistë siguron qasje të menjëhershme të hapur në përmbajtjen e saj "
+"nisur nga parimi që vendosja e kërkimit shkencor në dispozicion të publikut, "
+"pa kushte mbështet një shkëmbim më të madh global të njohurive."
+
+msgid "default.groups.name.manager"
+msgstr "Manaxheri i Revistës"
