@@ -1,7 +1,7 @@
 # Rudin Dakli <rdakli@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-02-21 17:56+0000\n"
+"PO-Revision-Date: 2023-02-22 04:18+0000\n"
 "Last-Translator: Rudin Dakli <rdakli@gmail.com>\n"
 "Language-Team: Albanian <http://translate.pkp.sfu.ca/projects/ojs/locale/sq/>"
 "\n"
@@ -295,3 +295,15 @@ msgstr "Deklarata e Privacisë"
 
 msgid "section.abbreviation.example"
 msgstr "(Për shembull, Artikujt=ART)"
+
+msgid "comments.commentsOnArticle"
+msgstr "Komentet në këtë artikull"
+
+msgid "search.results.orderBy.article"
+msgstr "Titulli i Artikullit"
+
+msgid "reviewer.pendingReviews"
+msgstr "Artikuj që Presin Reçensën"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Skedarë për tu rishikuar"
