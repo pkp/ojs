@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2023-02-02 21:32+0000\n"
+"PO-Revision-Date: 2023-02-23 08:14+0000\n"
 "Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "emails/pt_BR/>\n"
@@ -106,9 +106,8 @@ msgstr ""
 "Atenciosamente,<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.issuePublishNotify.subject"
-msgstr "Nova Edição Publicada: {$issueIdentification}"
+msgstr "Nova Edição Publicada: {$issueIdentification} de {$contextName}"
 
 msgid "emails.issuePublishNotify.body"
 msgstr ""
@@ -452,9 +451,10 @@ msgstr ""
 "<br />\n"
 "{$subscriptionSignature}"
 
-#, fuzzy
 msgid "emails.openAccessNotify.subject"
-msgstr "Nova edição de Acesso Livre"
+msgstr ""
+"Gratuito para ler: {$issueIdentification} de {$contextName} agora é de "
+"acesso livre"
 
 msgid "emails.openAccessNotify.body"
 msgstr ""
