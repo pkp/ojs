@@ -75,12 +75,7 @@ describe('DOI tests', function() {
 		cy.log('Check Issue Filter Behaviour (pre-deposit)');
 		loginAndGoToDoiPage('issue');
 
-		cy.checkDoiFilterResults('Needs DOI', 'Vol. 2 No. 1 (2015)', 1, 'issue');
-		cy.checkDoiFilterResults('Unpublished', 'Vol. 2 No. 1 (2015)', 1, 'issue');
-		clearFilter('issue');
-		cy.checkDoiFilterResults('Unpublished', 'Vol. 2 No. 1 (2015)', 1, 'issue');
-		cy.checkDoiFilterResults('DOI Assigned', 'No items found.', 0, 'issue');
-		clearFilter('issue');
+		cy.checkDoiFilterResults('Needs DOI', 'Vol. 2 No. 1 (2015)', 1, 'issue');;
 		cy.checkDoiFilterResults('DOI Assigned', 'Vol. 1 No. 2 (2014)', 1, 'issue');
 		clearFilter('issue');
 		cy.checkDoiFilterResults('Unregistered', 'Vol. 1 No. 2 (2014)', 1, 'issue');
@@ -97,10 +92,7 @@ describe('DOI tests', function() {
 		goToDoiPage();
 
 		cy.checkDoiFilterResults('Needs DOI', 'Woods — Finocchiaro: Arguments About Arguments', 7);
-		cy.checkDoiFilterResults('Unpublished', 'Woods — Finocchiaro: Arguments About Arguments', 6);
-		clearFilter();
 		cy.checkDoiFilterResults('DOI Assigned', 'Karbasizaed — Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran', 1);
-		cy.checkDoiFilterResults('Unpublished', 'No items found.', 0);
 		clearFilter();
 		cy.checkDoiFilterResults('Unregistered', 'Karbasizaed — Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran', 1);
 		clearFilter();
@@ -118,22 +110,22 @@ describe('DOI tests', function() {
 
 		cy.log('Check unpublished Issue Marked Registered displays error');
 		cy.checkDoiMarkedStatus('Registered', unpublishedIssueId, false, 'Unpublished', 'issue');
-		cy.log('Check Issue Marked Stale');
-		cy.checkDoiMarkedStatus('Stale', issueId, true, 'Stale', 'issue');
+		cy.log('Check Issue Marked Needs Sync');
+		cy.checkDoiMarkedStatus('Needs Sync', issueId, true, 'Needs Sync', 'issue');
 		cy.log('Check Issue Marked Unregistered');
 		cy.checkDoiMarkedStatus('Unregistered', issueId, true, 'Unregistered', 'issue');
-		cy.log('Check invalid Issue Marked Stale displays error');
-		cy.checkDoiMarkedStatus('Stale', issueId, false, 'Unregistered', 'issue');
+		cy.log('Check invalid Issue Marked Needs Sync displays error');
+		cy.checkDoiMarkedStatus('Needs Sync', issueId, false, 'Unregistered', 'issue');
 
 		goToDoiPage();
 
 		cy.log('Check unpublished Submission Marked Registered displays error');
 		cy.checkDoiMarkedStatus('Registered', unpublishedSubmissionId, false, 'Unpublished');
-		cy.log('Check Submission Marked Stale');
-		cy.checkDoiMarkedStatus('Stale', submissionId, true, 'Stale');
+		cy.log('Check Submission Marked Needs Sync');
+		cy.checkDoiMarkedStatus('Needs Sync', submissionId, true, 'Needs Sync');
 		cy.log('Check Submission Marked Unregistered');
 		cy.checkDoiMarkedStatus('Unregistered', submissionId, true, 'Unregistered');
-		cy.log('Check invalid Submission Marked Stale displays error');
-		cy.checkDoiMarkedStatus('Stale', submissionId, false, 'Unregistered');
+		cy.log('Check invalid Submission Marked Needs Sync displays error');
+		cy.checkDoiMarkedStatus('Needs Sync', submissionId, false, 'Unregistered');
 	});
 });
