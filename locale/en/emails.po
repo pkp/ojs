@@ -605,7 +605,7 @@ msgstr ""
 "<p>Congratulations on the acceptance of your submission, {$submissionTitle}, to {$contextName}. "
 "Now that your submission has been accepted, we would like to request payment of the publication fee.</p>"
 "<p>This fee covers the production costs of bringing your submission to publication. "
-"To make the payment, please visit <a href=\"{$queuedPaymentUrl}\">{$queuedPaymentUrl}.</p>"
+"To make the payment, please visit <a href=\"{$queuedPaymentUrl}\">{$queuedPaymentUrl}</a>.</p>"
 "<p>If you have any questions, please see our <a href=\"{$submissionGuidelinesUrl}\">Submission Guidelines</a></p>"
 
 msgid "emails.paymentRequestNotification.footer"
