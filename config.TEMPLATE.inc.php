@@ -320,18 +320,6 @@ sendmail_path = "/usr/sbin/sendmail -bs"
 ; smtp_auth = ssl
 ; smtp_username = username
 ; smtp_password = password
-;
-; Supported smtp_authtype: RAM-MD5, LOGIN, PLAIN, XOAUTH2 (see PHPMailer AuthType)
-; (Leave blank to try them in that order)
-; smtp_authtype =
-
-; The following are required for smtp_authtype = XOAUTH2 (e.g. GMail OAuth)
-; (See https://github.com/PHPMailer/PHPMailer/wiki/Using-Gmail-with-XOAUTH2)
-; smtp_oauth_provider = Google
-; smtp_oauth_email =
-; smtp_oauth_clientid =
-; smtp_oauth_clientsecret =
-; smtp_oauth_refreshtoken =
 
 ; Enable suppressing verification of SMTP certificate in PHPMailer
 ; Note: this is not recommended per PHPMailer documentation
@@ -365,14 +353,6 @@ sendmail_path = "/usr/sbin/sendmail -bs"
 ; You can use '%n' to insert the users name from the original from header
 ; and '%s' to insert the localized sitename.
 ; dmarc_compliant_from_displayname = '%n via %s'
-
-; Amount of time required between attempts to send non-editorial emails
-; in seconds. This can be used to help prevent email relaying via OJS.
-time_between_emails = 3600
-
-; Maximum number of recipients that can be included in a single email
-; (either as To:, Cc:, or Bcc: addresses) for a non-privileged user
-max_recipients = 10
 
 ; If enabled, email addresses must be validated before login is possible.
 require_validation = Off
