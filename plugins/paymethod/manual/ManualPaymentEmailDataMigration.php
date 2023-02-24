@@ -36,45 +36,10 @@ class ManualPaymentEmailDataMigration extends Migration
      */
     public function up(): void
     {
-        $currentVersion = $this->installer->getCurrentVersion();
-        $newVersion = $this->installer->getNewVersion();
-        if (
-            $currentVersion->compare('3.4.0.0') < 0 &&
-            $newVersion->compare('3.4.0.0') >= 0
-        ) {
-            $this->migrateEmailTemplatesName();
-        }
-    }
-
-    /**
-     * Revers the migrations
-     */
-    public function down(): void
-    {
-        $xmlDao = new XMLDAO();
-
-        $data = $xmlDao->parseStruct($this->plugin->getInstallEmailTemplatesFile(), ['email']);
-
-        if (!isset($data['email'])) {
+        if (!$this->nameShouldBeMigrated()) {
             return;
         }
 
-        foreach ($data['email'] as $entry) {
-            $attrs = $entry['attributes'];
-            $emailKey = $attrs['key'];
-
-            DB::table('email_templates_default_data')
-                ->where('email_key', $emailKey)
-                ->update(['name' => '']);
-        }
-    }
-
-    /**
-     * Adds name to the MANUAL_PAYMENT_NOTIFICATION email template
-     * Execute only during upgrade to 3.4
-     */
-    public function migrateEmailTemplatesName(): void
-    {
         $xmlDao = new XMLDAO();
 
         $data = $xmlDao->parseStruct($this->plugin->getInstallEmailTemplatesFile(), ['email']);
@@ -107,5 +72,46 @@ class ManualPaymentEmailDataMigration extends Migration
 
             Locale::setMissingKeyHandler($previous);
         }
+    }
+
+    /**
+     * Revers the migrations
+     */
+    public function down(): void
+    {
+        if (!$this->nameShouldBeMigrated()) {
+            return;
+        }
+
+        $xmlDao = new XMLDAO();
+
+        $data = $xmlDao->parseStruct($this->plugin->getInstallEmailTemplatesFile(), ['email']);
+
+        if (!isset($data['email'])) {
+            return;
+        }
+
+        foreach ($data['email'] as $entry) {
+            $attrs = $entry['attributes'];
+            $emailKey = $attrs['key'];
+
+            DB::table('email_templates_default_data')
+                ->where('email_key', $emailKey)
+                ->update(['name' => '']);
+        }
+    }
+
+    /**
+     * Checks the current, new version and the product. Core plugins are expected to be upgraded together with the app.
+     * Name should be migrated only during upgrade to 3.4
+     */
+    protected function nameShouldBeMigrated(): bool
+    {
+        $currentVersion = $this->installer->getCurrentVersion();
+        $newVersion = $this->installer->getNewVersion();
+
+        return $currentVersion->getProduct() === 'ojs2' &&
+            $currentVersion->compare('3.4.0.0') < 0 &&
+            $newVersion->compare('3.4.0.0') >= 0;
     }
 }
