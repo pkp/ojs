@@ -32,7 +32,7 @@ class I7129_IssueEntityDAORefactor extends \PKP\migration\Migration
         // Move current issue status from Issue to Journal
         Schema::table('journals', function (Blueprint $table) {
             $table->bigInteger('current_issue_id')->nullable()->default(null);
-            $table->foreign('current_issue_id')->references('issue_id')->on('issues');
+            $table->foreign('current_issue_id')->references('issue_id')->on('issues')->onDelete('set null');
             $table->index(['current_issue_id'], 'journals_current_issue_id');
         });
         $this->transferCurrentStatusToJournal();

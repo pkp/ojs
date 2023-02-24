@@ -392,7 +392,7 @@ class OJSMigration extends \PKP\migration\Migration
 
         // Add additional foreign key constraints once all tables have been created
         Schema::table('journals', function (Blueprint $table) {
-            $table->foreign('current_issue_id')->references('issue_id')->on('issues');
+            $table->foreign('current_issue_id')->references('issue_id')->on('issues')->onDelete('set null');
             $table->index(['current_issue_id'], 'journals_issue_id');
         });
     }
