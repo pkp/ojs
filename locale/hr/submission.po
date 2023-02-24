@@ -1,7 +1,7 @@
 # Boris Badurina <boris.badurina@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-02-23 08:14+0000\n"
+"PO-Revision-Date: 2023-02-24 10:38+0000\n"
 "Last-Translator: Boris Badurina <boris.badurina@gmail.com>\n"
 "Language-Team: Croatian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "hr/>\n"
@@ -20,4 +20,4 @@ msgid "submission.title"
 msgstr "Naslov"
 
 msgid "submission.upload.selectComponent"
-msgstr "Odaberi komponentu članka"
+msgstr "Odaberi sastavnicu članka"
