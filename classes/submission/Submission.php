@@ -200,7 +200,7 @@ class Submission extends PKPSubmission
         $this->setData(
             'galleys',
             Repo::galley()->getCollector()
-                ->filterByPublicationIds([$this->getCurrentPublication()->getId()])
+                ->filterByPublicationIds([$this->getData('currentPublicationId')])
                 ->getMany()
                 ->toArray()
         );
