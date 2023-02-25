@@ -1,14 +1,14 @@
-# Primož Svetek <primoz.svetek@gmail.com>, 2021, 2022.
+# Primož Svetek <primoz.svetek@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
-"PO-Revision-Date: 2022-12-16 16:02+0000\n"
+"PO-Revision-Date: 2023-02-26 15:48+0000\n"
 "Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
-"sl_SI/>\n"
-"Language: sl_SI\n"
+"sl/>\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2788,3 +2788,31 @@ msgstr ""
 #~ msgstr ""
 #~ "Zožaj območje rezultato z izbiro tipa objekta (revija, številka, "
 #~ "prispevek, tip datoteke) in/ali eno ali več IDjev objekta/ov."
+
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr "Poštni naslov revije"
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr "Povezava do strani s statistikami objavljenih člankov"
+
+msgid "mailable.paymentRequest.description"
+msgstr ""
+"This automated email is sent to the author to request payment of the "
+"publication fee when their submission is accepted."
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr "URL to the page where the author can make payment"
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr "URL to the submission guidelines"
+
+msgid "emailTemplate.variable.issueId"
+msgstr "ID številke"
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
+"Ta email s pregledom stanja sistema se avtomatsko mesečno pošlje urednikom "
+"in urednikom revije."
+
+msgid "mailable.paymentRequest.name"
+msgstr "Payment Request"
