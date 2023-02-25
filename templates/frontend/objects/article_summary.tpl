@@ -29,9 +29,9 @@
 	{if $publication->getLocalizedData('coverImage')}
 		<div class="cover">
 			<a {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if} class="file">
-				{assign var="coverImage" value=$article->getCurrentPublication()->getLocalizedData('coverImage')}
+				{assign var="coverImage" value=$publication->getLocalizedData('coverImage')}
 				<img
-					src="{$article->getCurrentPublication()->getLocalizedCoverImageUrl($article->getData('contextId'))|escape}"
+					src="{$publication->getLocalizedCoverImageUrl($article->getData('contextId'))|escape}"
 					alt="{$coverImage.altText|escape|default:''}"
 				>
 			</a>
@@ -49,7 +49,9 @@
 		</a>
 	</{$heading}>
 
-	{if $showAuthor || $article->getPages() || ($article->getDatePublished() && $showDatePublished)}
+	{assign var=submissionPages value=$publication->getData('pages')}
+	{assign var=submissionDatePublished value=$publication->getData('datePublished')}
+	{if $showAuthor || $submissionPages || ($submissionDatePublished && $showDatePublished)}
 	<div class="meta">
 		{if $showAuthor}
 		<div class="authors">
@@ -58,15 +60,15 @@
 		{/if}
 
 		{* Page numbers for this article *}
-		{if $article->getPages()}
+		{if $submissionPages}
 			<div class="pages">
-				{$article->getPages()|escape}
+				{$submissionPages|escape}
 			</div>
 		{/if}
 
-		{if $showDatePublished && $article->getDatePublished()}
+		{if $showDatePublished && $submissionDatePublished}
 			<div class="published">
-				{$article->getDatePublished()|date_format:$dateFormatShort}
+				{$submissionDatePublished|date_format:$dateFormatShort}
 			</div>
 		{/if}
 
@@ -87,7 +89,7 @@
 					{if $currentContext->getSetting('publishingMode') == $smarty.const.PUBLISHING_MODE_OPEN || $publication->getData('accessStatus') == $smarty.const.ARTICLE_ACCESS_OPEN}
 						{assign var="hasArticleAccess" value=1}
 					{/if}
-					{include file="frontend/objects/galley_link.tpl" parent=$article labelledBy="article-{$article->getId()}" hasAccess=$hasArticleAccess purchaseFee=$currentJournal->getData('purchaseArticleFee') purchaseCurrency=$currentJournal->getData('currency')}
+					{include file="frontend/objects/galley_link.tpl" parent=$article publication=$publication labelledBy="article-{$article->getId()}" hasAccess=$hasArticleAccess purchaseFee=$currentJournal->getData('purchaseArticleFee') purchaseCurrency=$currentJournal->getData('currency')}
 				</li>
 			{/foreach}
 		</ul>

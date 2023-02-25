@@ -232,7 +232,7 @@ class Submission extends PKPSubmission {
 	function getGalleys() {
 		$galleys = $this->getData('galleys');
 		if (is_null($galleys)) {
-			$this->setData('galleys', Application::get()->getRepresentationDAO()->getByPublicationId($this->getCurrentPublication()->getId(), $this->getData('contextId'))->toArray());
+			$this->setData('galleys', Application::get()->getRepresentationDAO()->getByPublicationId($this->getData('currentPublicationId'), $this->getData('contextId'))->toArray());
 			return $this->getData('galleys');
 		}
 		return $galleys;
