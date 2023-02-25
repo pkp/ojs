@@ -415,25 +415,28 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO {
 				break;
 		}
 
-
-		$result = $this->retrieveRange(
-			$sql = 'SELECT DISTINCT s.*, iss.institution_name, iss.mailing_address, iss.domain,
-				' . $userDao->getFetchColumns() .'
-			FROM	subscriptions s
-				JOIN subscription_types st ON (s.type_id = st.type_id)
-				JOIN users u ON (s.user_id = u.user_id)
-				JOIN institutional_subscriptions iss ON (s.subscription_id = iss.subscription_id)
-				' . $userDao->getFetchJoins() . '
-				' . $ipRangeSql1 . '
-			WHERE	st.institutional = 1
+		$baseSql = '
+			FROM subscriptions s
+			JOIN subscription_types st ON (s.type_id = st.type_id)
+			JOIN users u ON (s.user_id = u.user_id)
+			JOIN institutional_subscriptions iss ON (s.subscription_id = iss.subscription_id)
+			' . $userDao->getFetchJoins() . '
+			' . $ipRangeSql1 . '
+			WHERE st.institutional = 1
 				' . $ipRangeSql2 . '
 				AND s.journal_id = ?
-			' . $searchSql . ' ORDER BY iss.institution_name ASC, s.subscription_id',
+				' . $searchSql . '
+		';
+
+		$result = $this->retrieveRange(
+			'SELECT DISTINCT s.*, iss.institution_name, iss.mailing_address, iss.domain, ' . $userDao->getFetchColumns() . "
+			{$baseSql}
+			ORDER BY iss.institution_name ASC, s.subscription_id",
 			$params,
 			$rangeInfo
 		);
 
-		return new DAOResultFactory($result, $this, '_fromRow', [], $sql, $params, $rangeInfo); // Counted in subscription grid paging
+		return new DAOResultFactory($result, $this, '_fromRow', [], "SELECT 0 {$baseSql}", $params, $rangeInfo); // Counted in subscription grid paging
 	}
 
 	/**
