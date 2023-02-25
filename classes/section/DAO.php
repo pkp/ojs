@@ -72,27 +72,25 @@ class DAO extends \PKP\section\DAO
         if (!$issue->getPublished()) {
             $allowedStatuses[] = Submission::STATUS_SCHEDULED;
         }
-        $submissions = Repo::submission()->getCollector()
+
+        $submissionsCollector = Repo::submission()->getCollector()
             ->filterByContextIds([$issue->getJournalId()])
             ->filterByIssueIds([$issueId])
             ->filterByStatus($allowedStatuses)
-            ->orderBy(\APP\submission\Collector::ORDERBY_SEQUENCE, \APP\submission\Collector::ORDER_DIR_ASC)
-            ->getMany();
+            ->orderBy(\APP\submission\Collector::ORDERBY_SEQUENCE, \APP\submission\Collector::ORDER_DIR_ASC);
 
-        $sectionIds = $submissions
-            ->map(fn ($submission) => $submission->getCurrentPublication()->getData('sectionId'))
-            ->unique()
-            ->values();
-        if (empty($sectionIds)) {
-            return new LazyCollection();
-        }
+        // Extend the submissions query to fetch the list of section IDs instead
+        $sectionIdsQuery = $submissionsCollector->getQueryBuilder()
+            ->join('publications AS p', 'p.publication_id', '=', 's.current_publication_id')
+            ->select('p.section_id');
+
         $rows = DB::table('sections', 's')
             ->select('s.*', DB::raw('COALESCE(o.seq, s.seq) AS section_seq'))
             ->leftJoin('custom_section_orders AS o', function ($join) use ($issueId) {
                 $join->on('s.section_id', '=', 'o.section_id')
                     ->on('o.issue_id', '=', DB::raw($issueId));
             })
-            ->whereIn('s.section_id', $sectionIds)
+            ->whereIn('s.section_id', $sectionIdsQuery)
             ->orderBy('section_seq')
             ->get();
 
