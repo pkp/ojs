@@ -44,6 +44,11 @@ body[dir="rtl"] {
 		.pkp_structure_sidebar {
 			float: left;
 		}
+
+		.pkp_navigation_search_wrapper {
+			float: left;
+			text-align: left;
+		}
 	}
 
 	@media(min-width: @screen-lg-desktop) {
@@ -77,25 +82,6 @@ body[dir="rtl"] {
 
 		li {
 			text-align: right;
-		}
-	}
-
-	.pkp_head_wrapper .pkp_search {
-		right: auto;
-		left: 0;
-		text-align: left;
-
-		&.is_open {
-
-			.search_prompt {
-				border-left: none;
-				border-right: @bg-border;
-			}
-
-			input[type="text"] {
-				padding-right: 0.5em;
-				padding-left: 180px;
-			}
 		}
 	}
 
