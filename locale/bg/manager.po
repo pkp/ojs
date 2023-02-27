@@ -2225,6 +2225,9 @@ msgstr "Имейл подпис на списанието за автомати�
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Имейл адресът на основния контакт на списанието"
 
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr "Пощенският адрес на списанието"
+
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Името на вида плащане"
 
@@ -2271,6 +2274,23 @@ msgstr "Домейн"
 #, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "IP диапазон за удостоверяване на абонамент"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr "URL към страницата, където авторът може да извърши плащане"
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr "URL към указанията за подаване на материали"
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr "Връзка към страницата със статистика на публикуваните статии"
+
+msgid "emailTemplate.variable.issueId"
+msgstr "Идентификационният номер на броя"
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
+"Този имейл се изпраща автоматично ежемесечно до редакторите и мениджърите на "
+"списания, за да им предостави преглед на състоянието на системата."
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Потвърждаване на имейл (регистрация в списание)"
@@ -2630,20 +2650,6 @@ msgstr ""
 "Този имейл се изпраща до мениджърите на списанието, когато е получен нов "
 "материал и няма асоциирани редактори."
 
-#~ msgid "doi.manager.settings.enablePublicationDoi"
-#~ msgstr "Статии"
-
-msgid "emailTemplate.variable.context.mailingAddress"
-msgstr "Пощенският адрес на списанието"
-
-msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr "URL към страницата, където авторът може да извърши плащане"
-
-msgid "mailable.statisticsReportNotify.description"
-msgstr ""
-"Този имейл се изпраща автоматично ежемесечно до редакторите и мениджърите на "
-"списания, за да им предостави преглед на състоянието на системата."
-
 msgid "mailable.paymentRequest.name"
 msgstr "Искане за плащане"
 
@@ -2652,11 +2658,5 @@ msgstr ""
 "Този автоматичен имейл се изпраща на автора с искане за плащане на таксата "
 "за публикация, когато подадените материали бъдат приети."
 
-msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr "URL към указанията за подаване на материали"
-
-msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr "Връзка към страницата със статистика на публикуваните статии"
-
-msgid "emailTemplate.variable.issueId"
-msgstr "Идентификационният номер на броя"
+#~ msgid "doi.manager.settings.enablePublicationDoi"
+#~ msgstr "Статии"

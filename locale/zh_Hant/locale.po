@@ -1764,7 +1764,6 @@ msgstr ""
 "\"_new\">support forum</a>。</li>\n"
 "</ol>"
 
-#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 
@@ -1909,6 +1908,9 @@ msgstr "新一期已出版。"
 
 msgid "notification.type.newAnnouncement"
 msgstr "已創建新公告。"
+
+msgid "notification.type.openAccess"
+msgstr ""
 
 msgid "notification.type.reviewerFormComment"
 msgstr "「{$title}」的評審表格已被提交。"

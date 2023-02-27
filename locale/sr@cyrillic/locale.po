@@ -2291,6 +2291,9 @@ msgstr "Издање је објављено."
 msgid "notification.type.newAnnouncement"
 msgstr "Ново обавештење је направљено."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "Рецензија преко рецензентске форме је предата за \"{$param}\"."
 

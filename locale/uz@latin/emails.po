@@ -138,6 +138,12 @@ msgstr ""
 "mos kelmasa, taqdim etishni rad eting.</p><p>Oldindan rahmat.</p> <p>Hurmat "
 "bilan,</p>{$contextSignature}"
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 msgid "emails.reviewRequest.subject"
 msgstr "Ko'rib chiqish uchun taklif"
 
@@ -177,7 +183,8 @@ msgstr ""
 "mumkin.</p><p>{$submissionTitle}</p><p>Abstrakt</p>{$submissionAbstract}<p "
 ">Yuborish yoki ko‘rib chiqish jarayoniga oid har qanday savol bilan men "
 "bilan bog‘laning.</p><p>Ushbu so‘rovni ko‘rib chiqqaningiz uchun tashakkur. "
-"Sizning yordamingiz juda qadrlanadi.</p><p>Hurmat bilan,</p>{$contextSignature}"
+"Sizning yordamingiz juda qadrlanadi.</p><p>Hurmat bilan,</"
+"p>{$contextSignature}"
 
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Qayta ko'rib chiqilgan arizani ko'rib chiqishni so'rash"
@@ -647,6 +654,15 @@ msgstr ""
 "<br/>\n"
 "<a href=\"{$announcementUrl}\"> to'liq e'lonni </a> o'qish uchun veb -"
 "saytimizga tashrif buyuring."
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
+msgstr ""
 
 #~ msgid "emails.notification.body"
 #~ msgstr ""

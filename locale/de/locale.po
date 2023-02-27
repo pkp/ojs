@@ -2388,6 +2388,9 @@ msgstr "Eine Ausgabe wurde veröffentlicht."
 msgid "notification.type.newAnnouncement"
 msgstr "Eine neue Ankündigung wurde erstellt."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "Für \"{$title}\" wurde ein Begutachtungsformular eingereicht."
 

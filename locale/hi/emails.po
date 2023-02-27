@@ -179,6 +179,12 @@ msgstr ""
 "<br />\n"
 "Thank you."
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
 # (pofilter) simplecaps: Different capitalization
@@ -857,4 +863,13 @@ msgid "emails.announcement.subject"
 msgstr ""
 
 msgid "emails.announcement.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
 msgstr ""

@@ -136,6 +136,12 @@ msgstr ""
 "<br />\n"
 "Z wyrazami szacunku"
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 msgid "emails.reviewRequest.subject"
 msgstr "Prośba o wykonanie recenzji tekstu"
 
@@ -691,6 +697,15 @@ msgstr ""
 "<br />\n"
 "Odwiedź naszą stronę i przeczytaj <a href=\"{$announcementUrl}\">pełne "
 "ogłoszenie</a>."
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
+msgstr ""
 
 #~ msgid "emails.notificationMaillist.subject"
 #~ msgstr "Nowe powiadomienie ze strony czasopisma {$siteTitle}"

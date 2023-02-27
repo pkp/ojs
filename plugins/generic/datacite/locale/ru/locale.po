@@ -84,6 +84,12 @@ msgstr "Пароль для тестирования"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Префикс DOI для тестирования"
 
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
+msgstr ""
+
+msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
+msgstr ""
+
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Задача автоматической регистрации DataCite"
 

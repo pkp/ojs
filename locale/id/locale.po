@@ -2087,9 +2087,9 @@ msgstr ""
 "file config.inc.php.</p>\n"
 "<p>Jika Anda belum terdaftar dan ingin menerima berita dan update, "
 "<strong>silakan daftar di <a href=\"https://pkp.sfu.ca/developer-newsletter"
-"\" target=\"_new\">https://pkp.sfu.ca/developer-newsletter</a>.</"
-"strong> Jika Anda memiliki pertanyaan atau komentar, silakan kunjungi <a "
-"href=\"https://forum.pkp.sfu.ca\" target=\"_new\">forum dukungan</a>.</p>"
+"\" target=\"_new\">https://pkp.sfu.ca/developer-newsletter</a>.</strong> "
+"Jika Anda memiliki pertanyaan atau komentar, silakan kunjungi <a href="
+"\"https://forum.pkp.sfu.ca\" target=\"_new\">forum dukungan</a>.</p>"
 
 msgid "site.upgradeAvailable.admin"
 msgstr ""
@@ -2269,6 +2269,9 @@ msgstr "Ada terbitan baru."
 
 msgid "notification.type.newAnnouncement"
 msgstr "Ada pengumuman baru."
+
+msgid "notification.type.openAccess"
+msgstr ""
 
 msgid "notification.type.reviewerFormComment"
 msgstr "Form review telah dikirimkan untuk \"{$title}.\""

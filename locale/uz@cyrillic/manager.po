@@ -1787,7 +1787,6 @@ msgstr ""
 msgid "emailTemplate.variable.context.contactName"
 msgstr ""
 
-#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr ""
 
@@ -1795,6 +1794,9 @@ msgid "emailTemplate.variable.context.contextSignature"
 msgstr ""
 
 msgid "emailTemplate.variable.context.contactEmail"
+msgstr ""
+
+msgid "emailTemplate.variable.context.mailingAddress"
 msgstr ""
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
@@ -1827,20 +1829,31 @@ msgstr ""
 msgid "emailTemplate.variable.subscription.membership"
 msgstr ""
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr ""
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr ""
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr ""
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr ""
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr ""
+
+msgid "emailTemplate.variable.issueId"
+msgstr ""
+
+msgid "mailable.statisticsReportNotify.description"
 msgstr ""
 
 msgid "mailable.validateEmailContext.name"
@@ -2114,4 +2127,10 @@ msgid "mailable.publicationVersionNotify.description"
 msgstr ""
 
 msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+
+msgid "mailable.paymentRequest.name"
+msgstr ""
+
+msgid "mailable.paymentRequest.description"
 msgstr ""

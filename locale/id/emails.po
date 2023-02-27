@@ -136,6 +136,12 @@ msgstr ""
 "ketentuan jurnal, silakan naskah ditolak.</p><p>Terima kasih.</p><p>Salam "
 "hormat,</p>{$contextSignature}"
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 #, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Undangan Review"
@@ -654,6 +660,15 @@ msgstr ""
 "<br />\n"
 "Kunjungi website kami untuk melihat <a href="
 "\"{$announcementUrl}\">pengumuman selengkapnya</a>."
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
+msgstr ""
 
 #~ msgid "emails.editorDecisionBackToSubmission.body"
 #~ msgstr ""

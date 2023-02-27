@@ -128,6 +128,12 @@ msgstr ""
 "<br />\n"
 "Eskerrik asko."
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 #, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Artikulua ebaluatzeko eskaera"
@@ -260,7 +266,6 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr ""
 
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 
@@ -661,6 +666,15 @@ msgid "emails.announcement.subject"
 msgstr ""
 
 msgid "emails.announcement.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
 msgstr ""
 
 #~ msgid "emails.submissionComment.subject"

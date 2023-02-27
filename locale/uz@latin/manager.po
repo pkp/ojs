@@ -2224,6 +2224,9 @@ msgstr "Avtomatlashtirilgan elektron pochta uchun jurnalning elektron imzosi"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Jurnal asosiy kontaktining elektron pochta manzili"
 
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr ""
+
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "To'lov turining nomi"
 
@@ -2270,6 +2273,21 @@ msgstr "Domen"
 #, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "Obunani autentifikatsiya qilish uchun IP diapazonlari"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr ""
+
+msgid "emailTemplate.variable.issueId"
+msgstr ""
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Elektron pochtani tasdiqlash (Jurnalni ro'yxatdan o'tkazish)"
@@ -2607,6 +2625,12 @@ msgid "mailable.publicationVersionNotify.description"
 msgstr ""
 
 msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+
+msgid "mailable.paymentRequest.name"
+msgstr ""
+
+msgid "mailable.paymentRequest.description"
 msgstr ""
 
 #~ msgid "doi.manager.settings.enablePublicationDoi"

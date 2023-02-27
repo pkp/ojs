@@ -2308,6 +2308,9 @@ msgstr "Жаңа басылым шықты."
 msgid "notification.type.newAnnouncement"
 msgstr "Жаңа хабарлама."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "Шолу нысаны \"{$title}\" үшін жіберілді."
 

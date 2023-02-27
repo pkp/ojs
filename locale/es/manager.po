@@ -2268,7 +2268,6 @@ msgstr "URL a la página de inicio de la revista"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "El nombre del contacto principal de la revista"
 
-#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr ""
 
@@ -2278,6 +2277,9 @@ msgstr "La firma para los correos electrónicos automatizados de la revista"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr ""
 "La dirección de correo electrónico del contacto principal de la revista"
+
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr ""
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "El nombre del tipo de pago"
@@ -2309,20 +2311,31 @@ msgstr ""
 msgid "emailTemplate.variable.subscription.membership"
 msgstr ""
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr ""
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr ""
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr ""
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr ""
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr ""
+
+msgid "emailTemplate.variable.issueId"
+msgstr ""
+
+msgid "mailable.statisticsReportNotify.description"
 msgstr ""
 
 msgid "mailable.validateEmailContext.name"
@@ -2664,6 +2677,12 @@ msgid "mailable.publicationVersionNotify.description"
 msgstr ""
 
 msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+
+msgid "mailable.paymentRequest.name"
+msgstr ""
+
+msgid "mailable.paymentRequest.description"
 msgstr ""
 
 #~ msgid "manager.setup.metadata.coverage"

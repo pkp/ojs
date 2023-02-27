@@ -1332,8 +1332,8 @@ msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
 msgstr ""
 "<strong>Nota:</strong> Untuk mengaktifkan pilihan ini, pentadbir tapak mesti "
 "mendayakan pilihan <tt>scheduled_tasks</tt> dalam fail konfigurasi OJS. "
-"Konfigurasi pelayan tambahan mungkin diperlukan untuk menyokong fungsi ini ("
-"yang mungkin tidak boleh dilakukan pada semua pelayan), seperti yang "
+"Konfigurasi pelayan tambahan mungkin diperlukan untuk menyokong fungsi ini "
+"(yang mungkin tidak boleh dilakukan pada semua pelayan), seperti yang "
 "ditunjukkan dalam dokumentasi OJS."
 
 msgid "manager.subscriptionPolicies.expirySelectOne"
@@ -2121,9 +2121,8 @@ msgstr "Mengenai statistik isu"
 
 msgid "stats.issues.tooltip.text"
 msgstr ""
-"<strong>Paparan</strong>: Bilangan pelawat yang melihat jadual kandungan "
-"isu.<br><strong>Muat turun</strong>: Bilangan muat turun galley isu, jika "
-"ada."
+"<strong>Paparan</strong>: Bilangan pelawat yang melihat jadual kandungan isu."
+"<br><strong>Muat turun</strong>: Bilangan muat turun galley isu, jika ada."
 
 msgid "stats.publicationStats"
 msgstr "Statistik Artikel"
@@ -2201,6 +2200,9 @@ msgstr "Tandatangan e-mel jurnal untuk e-mel automatik"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Alamat e-mel kenalan utama jurnal"
 
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr ""
+
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Nama jenis pembayaran"
 
@@ -2246,6 +2248,21 @@ msgstr "Domain"
 #, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "Lingkungan IP untuk pengesahan langganan"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr ""
+
+msgid "emailTemplate.variable.issueId"
+msgstr ""
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Sahkan E-mel (Pendaftaran Jurnal)"
@@ -2446,8 +2463,8 @@ msgstr ""
 
 msgid "doi.editor.assignDoi.assigned"
 msgstr ""
-"DOI {$pubId} telah ditetapkan. Untuk mengedit DOI, lawati <a href=\""
-"{$doiManagementLink}\">halaman Pengurusan DOI</a>."
+"DOI {$pubId} telah ditetapkan. Untuk mengedit DOI, lawati <a href="
+"\"{$doiManagementLink}\">halaman Pengurusan DOI</a>."
 
 msgid "doi.editor.assignDoi.toBeAssigned"
 msgstr "DOI {$pubId} akan diberikan pada penerbitan."
@@ -2600,3 +2617,9 @@ msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
 "E-mel ini dihantar kepada pengurus jurnal apabila penyerahan baharu dibuat "
 "dan tiada editor diberikan."
+
+msgid "mailable.paymentRequest.name"
+msgstr ""
+
+msgid "mailable.paymentRequest.description"
+msgstr ""

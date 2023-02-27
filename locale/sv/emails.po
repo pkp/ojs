@@ -137,6 +137,12 @@ msgstr ""
 "för tidskriften kan du avslå det. </p><p>Tack på förhand.</p><p>Vänliga "
 "hälsningar,</p>{$contextSignature}"
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 msgid "emails.reviewRequest.subject"
 msgstr "Förfrågan om granskning av artikel"
 
@@ -635,6 +641,15 @@ msgstr ""
 "<br />\n"
 "Besök vår webbsida för att läsa <a href=\"{$announcementUrl}\">hela "
 "meddelandet</a>."
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
+msgstr ""
 
 #~ msgid "emails.editorDecisionBackToSubmission.body"
 #~ msgstr ""

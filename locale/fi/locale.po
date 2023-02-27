@@ -2321,6 +2321,9 @@ msgstr "Numero on julkaistu."
 msgid "notification.type.newAnnouncement"
 msgstr "Uusi tiedote on luotu."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "Arviointilomake käsikirjoituksesta \"{$title}\" on lähetetty."
 

@@ -2348,6 +2348,9 @@ msgstr "È stato pubblicato un nuovo fascicolo."
 msgid "notification.type.newAnnouncement"
 msgstr "È stato pubblicato un nuovo avviso."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "È stato completato un modulo di revisione per \"{$title}\">"
 

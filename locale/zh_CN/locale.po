@@ -2107,6 +2107,9 @@ msgstr "一个期次已经出版。"
 msgid "notification.type.newAnnouncement"
 msgstr "一条新公告已创建。"
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "一个关于 \"{$title}\"的审稿评论已经提交。"
 

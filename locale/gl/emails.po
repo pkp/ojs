@@ -131,6 +131,12 @@ msgstr ""
 "<br />\n"
 "Grazas."
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 #, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Solicitude de revisión dun artigo"
@@ -698,3 +704,12 @@ msgstr ""
 "<br />\n"
 "Visite o noso sitio web para ler <a href=\"{$announcementUrl}\">o anuncio "
 "completo</a>."
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
+msgstr ""

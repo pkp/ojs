@@ -2247,6 +2247,9 @@ msgstr "Електронний підпис журналу для автомат
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Адреса електронної пошти основної контактної особи журналу"
 
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr ""
+
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Назва виду платежу"
 
@@ -2293,6 +2296,21 @@ msgstr "Домен"
 #, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "Діапазони IP-адрес для аутентифікації за підпискою"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr ""
+
+msgid "emailTemplate.variable.issueId"
+msgstr ""
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Перевірка електронної пошти (реєстрація в журналі)"
@@ -2638,6 +2656,12 @@ msgid "mailable.publicationVersionNotify.description"
 msgstr ""
 
 msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+
+msgid "mailable.paymentRequest.name"
+msgstr ""
+
+msgid "mailable.paymentRequest.description"
 msgstr ""
 
 #~ msgid "manager.payment.options.acceptGiftSubscriptionPayments"

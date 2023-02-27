@@ -2324,6 +2324,9 @@ msgstr "Muammo chop etildi."
 msgid "notification.type.newAnnouncement"
 msgstr "Yangi e'lon e'lon qilindi."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "\"{$title}.\" uchun taqriz shakli ko‘rib chiqildi"
 

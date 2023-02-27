@@ -138,6 +138,12 @@ msgstr ""
 "поднесокот не е соодветен за ова списание, одбиете го.</p><p>Ви благодариме "
 "однапред.</p> <p>Со почит,</p>{$contextSignature}"
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 #, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Покана за рецензирање"
@@ -689,3 +695,12 @@ msgstr ""
 "<br />\n"
 "Посетете ја нашата веб-страница за да го прочитате <a href="
 "\"{$announcementUrl}\">целосното известување</a>."
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
+msgstr ""

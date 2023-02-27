@@ -2328,6 +2328,9 @@ msgstr "Der er blevet udgivet et nummer."
 msgid "notification.type.newAnnouncement"
 msgstr "Der er blevet oprettet en ny meddelelse."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "Der er blevet indsendt en bedømmelsesformular vedrørende \"{$title}.\""
 

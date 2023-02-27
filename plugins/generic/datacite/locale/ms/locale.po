@@ -80,6 +80,12 @@ msgstr "Uji Kata Laluan"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Uji Awalan DOI"
 
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
+msgstr ""
+
+msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
+msgstr ""
+
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Tugasan pendaftaran automatik DataCite"
 

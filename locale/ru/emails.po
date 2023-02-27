@@ -140,6 +140,12 @@ msgstr ""
 "материал не подходит для этого журнала, пожалуйста отклоните его.</"
 "p><p>Заранее благодарю.</p><p>С уважением,</p>{$contextSignature}"
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 msgid "emails.reviewRequest.subject"
 msgstr "Приглашение к рецензированию"
 
@@ -179,7 +185,8 @@ msgstr ""
 "p><p>{$submissionTitle}</p><p>Аннотация</p>{$submissionAbstract}"
 "<p>Пожалуйста, свяжитесь со мной, если у Вас есть какие-то вопросы по "
 "материалу или процессу рецензирования.</p><p>Благодарю Вас за рассмотрение "
-"этой просьбы. Мы высоко ценим вашу помощь.</p><p>С уважением,</p>{$contextSignature}"
+"этой просьбы. Мы высоко ценим вашу помощь.</p><p>С уважением,</"
+"p>{$contextSignature}"
 
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Запрос на рецензирование исправленного материала"
@@ -657,6 +664,15 @@ msgstr ""
 "<br />\n"
 "Посетите наш веб-сайт, чтобы прочитать <a href="
 "\"{$announcementUrl}\">объявление полностью</a>."
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
+msgstr ""
 
 #~ msgid "mailable.subscriptionExpiredLast.description"
 #~ msgstr ""

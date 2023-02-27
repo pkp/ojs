@@ -134,6 +134,12 @@ msgstr ""
 "<br />\n"
 "Moltes gràcies."
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 msgid "emails.reviewRequest.subject"
 msgstr "Invitació de revisió"
 
@@ -705,6 +711,15 @@ msgstr ""
 "<br />\n"
 "Visiteu el nostre lloc web per llegir <a href=\"{$announcementUrl}\">l'avís "
 "complet</a>."
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
+msgstr ""
 
 #~ msgid "emails.submissionComment.subject"
 #~ msgstr "Comentari de la tramesa"

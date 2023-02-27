@@ -2245,6 +2245,9 @@ msgstr "Assinatura dos e-mails automáticos da revista"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "E-mail do contato principal da revista"
 
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr "O endereço de correspondência da revista"
+
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Nome do tipo de pagamento"
 
@@ -2287,6 +2290,23 @@ msgstr "O nome de domínio do(s) endereço(s) IP válido(s) para esta assinatura
 
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "Os intervalos de IP válidos para esta assinatura"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr "URL para a página onde o autor pode efetuar o pagamento"
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr "URL para as diretrizes de submissões"
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr "O link para a página de estatísticas dos artigos publicados"
+
+msgid "emailTemplate.variable.issueId"
+msgstr "O ID da Edição"
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
+"Este e-mail é enviado automaticamente mensalmente aos editores e gerentes de "
+"periódicos para fornecer a eles uma visão geral da integridade do sistema."
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Validar e-mail (registro de revista)"
@@ -2641,6 +2661,14 @@ msgstr ""
 "Este e-mail é enviado aos gerentes de revistas quando uma nova submissão é "
 "feita e nenhum editor é designado."
 
+msgid "mailable.paymentRequest.name"
+msgstr "Pedido de Pagamento"
+
+msgid "mailable.paymentRequest.description"
+msgstr ""
+"Este e-mail automático é enviado ao autor para solicitar o pagamento da taxa "
+"de publicação quando sua submissão for aceita."
+
 #~ msgid "manager.setup.announcements.success"
 #~ msgstr "As configurações de notícias foram atualizadas."
 
@@ -2717,31 +2745,3 @@ msgstr ""
 
 #~ msgid "doi.editor.doiObjectTypeGalley"
 #~ msgstr "composição"
-
-msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr "URL para a página onde o autor pode efetuar o pagamento"
-
-msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr "URL para as diretrizes de submissões"
-
-msgid "emailTemplate.variable.context.mailingAddress"
-msgstr "O endereço de correspondência da revista"
-
-msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr "O link para a página de estatísticas dos artigos publicados"
-
-msgid "mailable.statisticsReportNotify.description"
-msgstr ""
-"Este e-mail é enviado automaticamente mensalmente aos editores e gerentes de "
-"periódicos para fornecer a eles uma visão geral da integridade do sistema."
-
-msgid "mailable.paymentRequest.name"
-msgstr "Pedido de Pagamento"
-
-msgid "mailable.paymentRequest.description"
-msgstr ""
-"Este e-mail automático é enviado ao autor para solicitar o pagamento da taxa "
-"de publicação quando sua submissão for aceita."
-
-msgid "emailTemplate.variable.issueId"
-msgstr "O ID da Edição"

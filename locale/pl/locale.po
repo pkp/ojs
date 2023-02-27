@@ -2277,6 +2277,9 @@ msgstr "Nowy numer został opublikowany."
 msgid "notification.type.newAnnouncement"
 msgstr "Nowe ogłoszenie zostało utworzone."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "Recenzja od recenzenta została przesłana do \"{$title}.\""
 

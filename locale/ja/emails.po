@@ -134,6 +134,12 @@ msgstr ""
 "<br />\n"
 "よろしくお願いいたします。"
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 #, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "論文査読のお願い"
@@ -713,3 +719,12 @@ msgstr ""
 "<br />\n"
 "詳しいお知らせを読むためにウェブサイト<a href=\"{$announcementUrl}\">をご覧く"
 "ださい。</a>."
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
+msgstr ""

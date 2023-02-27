@@ -138,6 +138,12 @@ msgstr ""
 "<br />\n"
 "Thank you."
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 msgid "emails.reviewRequest.subject"
 msgstr "მოწვევა განხილვისთვის"
 
@@ -705,6 +711,15 @@ msgstr ""
 "<br />\n"
 "Visit our website to read the  <a href=\"{$announcementUrl}\">full "
 "announcement</a>."
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
+msgstr ""
 
 #~ msgid "emails.submissionAckNotAuthor.description"
 #~ msgstr ""

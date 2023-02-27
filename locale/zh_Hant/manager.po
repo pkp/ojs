@@ -1939,6 +1939,9 @@ msgstr "期刊自動電郵之簽署"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "期刊優先聯絡電郵地址"
 
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr ""
+
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "付款種類"
 
@@ -1984,6 +1987,21 @@ msgstr "網域"
 #, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "訂閱認證的IP範圍"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr ""
+
+msgid "emailTemplate.variable.issueId"
+msgstr ""
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
 
 msgid "mailable.validateEmailContext.name"
 msgstr "認證電郵（註冊期刊）"
@@ -2275,6 +2293,12 @@ msgid "mailable.publicationVersionNotify.description"
 msgstr ""
 
 msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+
+msgid "mailable.paymentRequest.name"
+msgstr ""
+
+msgid "mailable.paymentRequest.description"
 msgstr ""
 
 #~ msgid "manager.section.noSectionEditors"

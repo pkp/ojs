@@ -2307,6 +2307,9 @@ msgstr "Một số đã được xuất bản."
 msgid "notification.type.newAnnouncement"
 msgstr "Một thông báo mới đã được tạo ra."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "Một mẫu phản biện đã được gửi cho \"{$title}.\""
 

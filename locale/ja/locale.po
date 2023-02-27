@@ -2252,6 +2252,9 @@ msgstr "新しい巻号が出版された。"
 msgid "notification.type.newAnnouncement"
 msgstr "新しいお知らせが作成された。"
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "「{$title}」についての査読が査読フォームから送信された。"
 

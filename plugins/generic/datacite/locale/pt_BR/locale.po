@@ -78,6 +78,12 @@ msgstr "Senha de teste"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Prefixo DOI de teste"
 
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
+msgstr ""
+
+msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
+msgstr ""
+
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Dados DataCite do remetente"
 

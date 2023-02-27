@@ -158,6 +158,12 @@ msgstr ""
 "<p>Cordiali saluti,</p>\n"
 "<p>{$contextSignature}</p>"
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 #, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Invito alla revisione"
@@ -198,10 +204,10 @@ msgstr ""
 "La revisione serve entro il {$reviewDueDate}.</p><p>Se non ha le sue "
 "username e password per il sito, può ridefinire la password con questo link "
 "(che manderà una mail al suo indirizzo con il suo username): "
-"{$lostPasswordUrl}</p><p>URL della proposta: {$reviewAssignmentUrl}</"
-"p><p>La ringrazio per aver preso in considerazione questa richiesta.</"
-"p><p>{$contextSignature}</p><p>Dati della proposta:</p><p>&quot;{$submissionTitle}"
-"&quot;</p><p>{$submissionAbstract}"
+"{$lostPasswordUrl}</p><p>URL della proposta: {$reviewAssignmentUrl}</p><p>La "
+"ringrazio per aver preso in considerazione questa richiesta.</"
+"p><p>{$contextSignature}</p><p>Dati della proposta:</p><p>&quot;"
+"{$submissionTitle}&quot;</p><p>{$submissionAbstract}"
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
@@ -703,6 +709,15 @@ msgstr ""
 "<br />\n"
 "Visita il nostro sito per leggere <a href="
 "\"{$announcementUrl}\">l'informazione completa</a>."
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
+msgstr ""
 
 #~ msgid "emails.submissionUnsuitable.subject"
 #~ msgstr "Proposta non idonea"

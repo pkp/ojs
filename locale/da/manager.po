@@ -2214,6 +2214,9 @@ msgstr "Tidsskriftets e-mailsignatur til automatiserede e-mails"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "E-mail-adressen på tidsskriftets primære kontaktperson"
 
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr ""
+
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Navnet på betalingstypen"
 
@@ -2260,6 +2263,21 @@ msgstr "Domæne"
 #, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "IP ranges for abonnements-autentificering"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr ""
+
+msgid "emailTemplate.variable.issueId"
+msgstr ""
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Validér E-mail (Tidsskriftsregistrering)"
@@ -2614,6 +2632,12 @@ msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
 "Denne e-mail sendes til tidsskriftschefer, når en ny indsendelse er lavet og "
 "der ikke er blevet tildelt en redaktør."
+
+msgid "mailable.paymentRequest.name"
+msgstr ""
+
+msgid "mailable.paymentRequest.description"
+msgstr ""
 
 #~ msgid "manager.setup.metadata.coverage"
 #~ msgstr "Dækning"

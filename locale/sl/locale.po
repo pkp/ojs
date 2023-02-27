@@ -2268,6 +2268,9 @@ msgstr "Objavljena je bila nova številka."
 msgid "notification.type.newAnnouncement"
 msgstr "Objavljena je bila nova številka."
 
+msgid "notification.type.openAccess"
+msgstr "An issue has been made open access."
+
 msgid "notification.type.reviewerFormComment"
 msgstr "Rezencija preko recenzentskega obrazca je bila oddana za \"{$title}\""
 
@@ -2466,6 +2469,3 @@ msgstr "Izberite način ureditve člankov v tej kategoriji."
 
 #~ msgid "category.category"
 #~ msgstr "Kategorije"
-
-msgid "notification.type.openAccess"
-msgstr "An issue has been made open access."

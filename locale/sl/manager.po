@@ -2163,6 +2163,9 @@ msgstr "Noga avtomatskih emailov revije"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Email naslov glavnega kontakta revije"
 
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr "Poštni naslov revije"
+
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Ime tipa plačila"
 
@@ -2208,6 +2211,23 @@ msgstr "Domena"
 #, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "IP razponi za avtentikacijo naročnine"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr "URL to the page where the author can make payment"
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr "URL to the submission guidelines"
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr "Povezava do strani s statistikami objavljenih člankov"
+
+msgid "emailTemplate.variable.issueId"
+msgstr "ID številke"
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
+"Ta email s pregledom stanja sistema se avtomatsko mesečno pošlje urednikom "
+"in urednikom revije."
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Potrdi email (registracija pri reviji)"
@@ -2552,6 +2572,14 @@ msgstr ""
 "Ta email se avtomatično pošlje glavnim urednikom, ko je oddan nov prispevek, "
 "ki mu ni dodoljen noben urednik."
 
+msgid "mailable.paymentRequest.name"
+msgstr "Payment Request"
+
+msgid "mailable.paymentRequest.description"
+msgstr ""
+"This automated email is sent to the author to request payment of the "
+"publication fee when their submission is accepted."
+
 #~ msgid "manager.setup.editorialTeam.description"
 #~ msgstr ""
 #~ "Naštejte urednike, odgovorne urednike in ostale posameznike, ki "
@@ -2788,31 +2816,3 @@ msgstr ""
 #~ msgstr ""
 #~ "Zožaj območje rezultato z izbiro tipa objekta (revija, številka, "
 #~ "prispevek, tip datoteke) in/ali eno ali več IDjev objekta/ov."
-
-msgid "emailTemplate.variable.context.mailingAddress"
-msgstr "Poštni naslov revije"
-
-msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr "Povezava do strani s statistikami objavljenih člankov"
-
-msgid "mailable.paymentRequest.description"
-msgstr ""
-"This automated email is sent to the author to request payment of the "
-"publication fee when their submission is accepted."
-
-msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr "URL to the page where the author can make payment"
-
-msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr "URL to the submission guidelines"
-
-msgid "emailTemplate.variable.issueId"
-msgstr "ID številke"
-
-msgid "mailable.statisticsReportNotify.description"
-msgstr ""
-"Ta email s pregledom stanja sistema se avtomatsko mesečno pošlje urednikom "
-"in urednikom revije."
-
-msgid "mailable.paymentRequest.name"
-msgstr "Payment Request"

@@ -2298,6 +2298,9 @@ msgstr "Bolo publikované číslo."
 msgid "notification.type.newAnnouncement"
 msgstr "Bolo vytvorené nové oznámenie."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "Bol vyplnený recenzný formulár k článku \"{$title}.\""
 

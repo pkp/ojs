@@ -2187,6 +2187,9 @@ msgstr "Tidsskriftets e-postsignatur til automatiserte e-post"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "E-postadressen til tidsskriftets kontaktperson"
 
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr ""
+
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Navn på betalingstypen"
 
@@ -2233,6 +2236,21 @@ msgstr "Domene"
 #, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "IP-intervall for autentisering av abbonenter"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr ""
+
+msgid "emailTemplate.variable.issueId"
+msgstr ""
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Validér E-post ved registrering i tidsskrift"
@@ -2575,10 +2593,10 @@ msgstr ""
 msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
 
-msgid "mailable.lockssExistingArchive.name"
+msgid "mailable.paymentRequest.name"
 msgstr ""
 
-msgid "mailable.lockssNewArchive.name"
+msgid "mailable.paymentRequest.description"
 msgstr ""
 
 #~ msgid "manager.groups"

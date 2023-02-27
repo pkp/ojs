@@ -2328,6 +2328,9 @@ msgstr "Հրատարակվել է հերթական համարը."
 msgid "notification.type.newAnnouncement"
 msgstr "Ստեղծվել է նոր հայտարարություն."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "Գրախոսման ձև է ուղարկվել այս ներկայացման համար \"{$title}.\""
 

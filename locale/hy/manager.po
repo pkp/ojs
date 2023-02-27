@@ -2235,6 +2235,9 @@ msgstr "Ամսագրի էլեկտրոնային ստորագրությունը �
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Ամսագրի հիմնական կոնտակտի էլ. փոստի հասցեն"
 
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr ""
+
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Վճարման տեսակի անվանումը"
 
@@ -2282,6 +2285,21 @@ msgstr "Դոմեյն"
 #, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "Բաժանորդագրության նույնականացման IP միջակայքերը"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr ""
+
+msgid "emailTemplate.variable.issueId"
+msgstr ""
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Վավերացնել էլ․ փոստը (ամսագրի գրանցում)"
@@ -2641,11 +2659,17 @@ msgstr ""
 "Այս նամակն ուղարկվում է ամսագրի կառավարիչներին, երբ նոր ներկայացում է "
 "կատարվում, և չկան նշանակված խմբագիրներ:"
 
-msgid "mailable.lockssExistingArchive.name"
-msgstr "Արխիվային հարցում"
+msgid "mailable.paymentRequest.name"
+msgstr ""
 
-msgid "mailable.lockssNewArchive.name"
-msgstr "Արխիվային հարցում (Նոր)"
+msgid "mailable.paymentRequest.description"
+msgstr ""
+
+#~ msgid "mailable.lockssExistingArchive.name"
+#~ msgstr "Արխիվային հարցում"
+
+#~ msgid "mailable.lockssNewArchive.name"
+#~ msgstr "Արխիվային հարցում (Նոր)"
 
 #~ msgid "manager.setup.submissionPreparationChecklistDescription"
 #~ msgstr ""

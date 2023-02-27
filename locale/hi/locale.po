@@ -2460,6 +2460,9 @@ msgstr "एक अंक प्रकाशित किया गया है�
 msgid "notification.type.newAnnouncement"
 msgstr "एक नई घोषणा की गई है।"
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "\"{$ title}\" के लिए एक समीक्षा फ़ॉर्म समीक्षा प्रस्तुत की गई है।"
 

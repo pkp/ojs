@@ -2325,6 +2325,9 @@ msgstr "Egy folyóiratszám publikálásra került."
 msgid "notification.type.newAnnouncement"
 msgstr "Egy új közlemény készült."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "A(z) \"{$title}\" című cikkhez szakmai lektorálási űrlapot küldtek be."
 

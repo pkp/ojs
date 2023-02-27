@@ -2362,6 +2362,9 @@ msgstr "Броят беше публикуван."
 msgid "notification.type.newAnnouncement"
 msgstr "Създадено е ново съобщение."
 
+msgid "notification.type.openAccess"
+msgstr "Броят е пуснат с отворен достъп."
+
 msgid "notification.type.reviewerFormComment"
 msgstr "Подадена е преглед на формуляра за рецензия за \"{$title}.\""
 
@@ -2486,6 +2489,3 @@ msgstr "Изберете как да сортирате статиите в та
 
 #~ msgid "category.category"
 #~ msgstr "Категории"
-
-msgid "notification.type.openAccess"
-msgstr "Броят е пуснат с отворен достъп."

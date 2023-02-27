@@ -2364,6 +2364,9 @@ msgstr "Un numéro a été publié."
 msgid "notification.type.newAnnouncement"
 msgstr "Une nouvelle annonce a été créée."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr ""
 "Une évaluation de formulaire d'évaluation a été soumise pour « {$title} »."

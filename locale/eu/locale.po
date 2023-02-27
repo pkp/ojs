@@ -2332,6 +2332,9 @@ msgstr "Zenbaki bat argitaratu da."
 msgid "notification.type.newAnnouncement"
 msgstr "Iragarki berria sortu da."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr ""
 "Ebaluazio-inprimaki baten ebaluazioa bidali da \"{$title}\" artikuluarentzat."

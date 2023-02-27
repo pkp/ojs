@@ -2309,6 +2309,9 @@ msgstr "ახალი გამოცემა გამოქვეყნდ�
 msgid "notification.type.newAnnouncement"
 msgstr "შეიქმნა ახალი განცხადება."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "რეცენზიის ფორმა გაგზავნილია: “{$title}.”"
 

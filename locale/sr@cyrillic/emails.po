@@ -38,29 +38,30 @@ msgstr ""
 msgid "emails.reviewerRegister.subject"
 msgstr ""
 
-#, fuzzy
 msgid "emails.reviewerRegister.body"
 msgstr ""
 
-#, fuzzy
 msgid "emails.issuePublishNotify.subject"
 msgstr ""
 
-#, fuzzy
 msgid "emails.issuePublishNotify.body"
 msgstr ""
 
-#, fuzzy
 msgid "emails.editorAssign.subject"
 msgstr ""
 
 msgid "emails.editorAssign.body"
 msgstr ""
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 msgid "emails.reviewRequest.subject"
 msgstr ""
 
-#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
 
@@ -73,21 +74,18 @@ msgstr ""
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr ""
 
-#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 
 msgid "emails.reviewCancel.subject"
 msgstr ""
 
-#, fuzzy
 msgid "emails.reviewCancel.body"
 msgstr ""
 
 msgid "emails.reviewReinstate.subject"
 msgstr ""
 
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 
@@ -106,7 +104,6 @@ msgstr ""
 msgid "emails.reviewRemindAuto.subject"
 msgstr ""
 
-#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 
@@ -125,14 +122,12 @@ msgstr ""
 msgid "emails.layoutRequest.subject"
 msgstr ""
 
-#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 
 msgid "emails.layoutComplete.subject"
 msgstr ""
 
-#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 
@@ -171,7 +166,6 @@ msgstr ""
 "<br />\n"
 "{$subscriptionSignature}"
 
-#, fuzzy
 msgid "emails.openAccessNotify.subject"
 msgstr ""
 
@@ -229,7 +223,6 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr ""
 
-#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 
@@ -243,4 +236,13 @@ msgid "emails.announcement.subject"
 msgstr ""
 
 msgid "emails.announcement.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
 msgstr ""

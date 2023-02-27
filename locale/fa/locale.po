@@ -2192,6 +2192,9 @@ msgstr "یک شماره مجله منتشر شده است"
 msgid "notification.type.newAnnouncement"
 msgstr "یک اطلاعیه جدید ایجاد شده است"
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "یک فرم داوری در خصوص \"{$title}\" ثبت شده است"
 

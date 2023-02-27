@@ -2328,6 +2328,9 @@ msgstr "Објавено е издание."
 msgid "notification.type.newAnnouncement"
 msgstr "Создадено е ново соопштение."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "Поднесена е преглед на образец за преглед за „{$title}.“"
 

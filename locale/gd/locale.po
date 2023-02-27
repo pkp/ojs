@@ -2426,6 +2426,9 @@ msgstr "Chaidh iris fhoillseachadh."
 msgid "notification.type.newAnnouncement"
 msgstr "Chaidh fios-naidheachd ùr a chruthachadh."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "Chaidh lèirmheas air foirm lèirmheis a chur mu choinneamh “{$title}.”"
 

@@ -79,6 +79,12 @@ msgstr "Тестілеуге арналған құпия сөз"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Тестілеуге арналған DOI префиксі"
 
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
+msgstr ""
+
+msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
+msgstr ""
+
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "DataCite автоматты тіркеу тапсырмасы"
 

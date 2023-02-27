@@ -2245,6 +2245,9 @@ msgstr "Firma per email automatiche"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Indirizzo email del contatto principale della rivista"
 
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr ""
+
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Nome per la tipologia di pagamento"
 
@@ -2293,6 +2296,21 @@ msgstr "Dominio"
 #, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "Intervalli IP per l'autenticazione dell'abbonamento"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr ""
+
+msgid "emailTemplate.variable.issueId"
+msgstr ""
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Confermare Email (registrazione di rivista)"
@@ -2642,6 +2660,12 @@ msgid "mailable.publicationVersionNotify.description"
 msgstr ""
 
 msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+
+msgid "mailable.paymentRequest.name"
+msgstr ""
+
+msgid "mailable.paymentRequest.description"
 msgstr ""
 
 #~ msgid "manager.setup.metadata.coverage"

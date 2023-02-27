@@ -79,6 +79,12 @@ msgstr "Testno geslo"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Tesntna DOI predpona"
 
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
+msgstr ""
+
+msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
+msgstr ""
+
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Opravilo avtomatske registracije pri DataCite"
 

@@ -2393,6 +2393,9 @@ msgstr "Ένα τεύχος έχει δημοσιευτεί."
 msgid "notification.type.newAnnouncement"
 msgstr "Μία νέα ανακοίνωση έχει δημιουργηθεί."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "Μία φόρμα αξιολόγησης έχει υποβληθεί για το \"{$title}\"."
 

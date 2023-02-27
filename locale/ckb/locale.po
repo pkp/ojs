@@ -2259,6 +2259,9 @@ msgstr "گۆڤار ژمارەیەکی نوێی بڵاو کردەوە."
 msgid "notification.type.newAnnouncement"
 msgstr "ڕاگەیاندنێکی نوێ دروست کرا."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "فۆڕمی هەڵسەنگاندنی \"{$title}.\" پێشکەش کرا"
 

@@ -2284,6 +2284,9 @@ msgstr "Publicouse un número."
 msgid "notification.type.newAnnouncement"
 msgstr "Creouse un novo anuncio."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "Enviouse a revisión do formulario de avaliación para \"{$title}\"."
 

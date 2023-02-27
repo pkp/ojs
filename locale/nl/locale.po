@@ -2318,6 +2318,9 @@ msgstr "Er is een nieuw nummer gepubliceerd."
 msgid "notification.type.newAnnouncement"
 msgstr "Er is een nieuw nieuwsbericht gemaakt."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "Er is een reviewformulier ingediend voor \"{$title}.\""
 

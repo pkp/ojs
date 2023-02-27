@@ -1925,11 +1925,9 @@ msgstr ""
 msgid "installer.overwriteConfigFileInstructions"
 msgstr ""
 
-#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 
-#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 
@@ -2105,6 +2103,9 @@ msgstr "Búið er að gefa út tölublað."
 
 msgid "notification.type.newAnnouncement"
 msgstr "Ný tilkynning hefur verið búin til."
+
+msgid "notification.type.openAccess"
+msgstr ""
 
 msgid "notification.type.reviewerFormComment"
 msgstr "Búið er að skila ritrýnieyðublaði fyrir \"{$title}.\""

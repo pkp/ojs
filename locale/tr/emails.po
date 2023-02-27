@@ -137,6 +137,12 @@ msgstr ""
 "makale dergimiz için uygun değilse, lütfen aday makaleyi reddediniz.</"
 "p><p>Şimdiden teşekkür ederiz.</p><p>Saygılarımızla,</p>{$contextSignature}"
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 msgid "emails.reviewRequest.subject"
 msgstr "Hakemlik daveti"
 
@@ -708,6 +714,15 @@ msgstr ""
 "<br />\n"
 "Web sitesini ziyaret et ve <a href=\"{$announcementUrl}\">tüm duyuruyu</a> "
 "oku."
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
+msgstr ""
 
 #~ msgid "emails.submissionComment.subject"
 #~ msgstr "Başvuru ile ilgili yeni yorum"

@@ -2340,6 +2340,9 @@ msgstr "Опублікований випуск."
 msgid "notification.type.newAnnouncement"
 msgstr "Створений новий анонс."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "Надіслана форма рецензування для подання \"{$title}.\""
 

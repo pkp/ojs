@@ -2310,6 +2310,9 @@ msgstr "Ett nummer har publicerats."
 msgid "notification.type.newAnnouncement"
 msgstr "Ett meddelande skickades ut."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr ""
 "En granskning enligt granskningsformuläret har skickats in för \"{$title}.\""

@@ -7,8 +7,8 @@ msgstr ""
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
 "PO-Revision-Date: 2023-02-23 08:14+0000\n"
 "Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
-"Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/manager/tr/>"
-"\n"
+"Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/manager/tr/"
+">\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2184,6 +2184,9 @@ msgstr "Otomatik e-postalar için derginin e-posta imzası"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Derginin birincil irtibat kişisinin e-posta adresi"
 
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr "Derginin posta adresi"
+
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Ödeme türünün adı"
 
@@ -2229,6 +2232,23 @@ msgstr "Alan adı"
 #, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "Abonelik kimlik doğrulaması için IP aralıkları"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr "Yazarın ödeme yapabileceği sayfanın URL'si"
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr "Makale gönderim rehberinin URL'si"
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr "Yayımlanan makalelerin istatistik rapor sayfasına bağlantı"
+
+msgid "emailTemplate.variable.issueId"
+msgstr "Sayı ID"
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
+"Bu e-posta, sistem durumuna genel bir bakış sağlamak için editörlere ve "
+"dergi yöneticilerine aylık olarak otomatik gönderilir."
 
 msgid "mailable.validateEmailContext.name"
 msgstr "E-postayı Doğrula (Dergi kaydı için)"
@@ -2564,6 +2584,14 @@ msgstr ""
 "Bu e-posta, yeni makale gönderildiğin ve herhangi bir editör atanmadığında "
 "dergi yöneticilerine gönderilir."
 
+msgid "mailable.paymentRequest.name"
+msgstr "Ödeme Talebi"
+
+msgid "mailable.paymentRequest.description"
+msgstr ""
+"Bu e-posta, aday makale kabul edildiğinde makale ücretinin ödenmesini talep "
+"etmek için yazara gönderilir."
+
 #~ msgid "manager.setup.metadata.coverage"
 #~ msgstr "Kapsam"
 
@@ -2655,31 +2683,3 @@ msgstr ""
 #~ "Henüz bölüm editörü atanmamış. Bölüm editörü atamak için öncelikle "
 #~ "Yönetim > Ayarlar > Kullanıcılar  &amp; Roller yolunu takip ederek bu "
 #~ "role az bir kullanıcı ekleyin."
-
-msgid "emailTemplate.variable.context.mailingAddress"
-msgstr "Derginin posta adresi"
-
-msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr "Yazarın ödeme yapabileceği sayfanın URL'si"
-
-msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr "Makale gönderim rehberinin URL'si"
-
-msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr "Yayımlanan makalelerin istatistik rapor sayfasına bağlantı"
-
-msgid "mailable.paymentRequest.name"
-msgstr "Ödeme Talebi"
-
-msgid "mailable.paymentRequest.description"
-msgstr ""
-"Bu e-posta, aday makale kabul edildiğinde makale ücretinin ödenmesini talep "
-"etmek için yazara gönderilir."
-
-msgid "emailTemplate.variable.issueId"
-msgstr "Sayı ID"
-
-msgid "mailable.statisticsReportNotify.description"
-msgstr ""
-"Bu e-posta, sistem durumuna genel bir bakış sağlamak için editörlere ve "
-"dergi yöneticilerine aylık olarak otomatik gönderilir."

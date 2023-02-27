@@ -83,6 +83,12 @@ msgstr "كلمة المرور التجريبية"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "بادئة DOI التجريبية"
 
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
+msgstr ""
+
+msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
+msgstr ""
+
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "مهمة التسجيل التلقائي لـ DataCite"
 

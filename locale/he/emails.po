@@ -122,6 +122,12 @@ msgstr ""
 "<br />\n"
 "תודה."
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 #, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "בקשה לביקורת מאמר"
@@ -284,7 +290,6 @@ msgstr ""
 msgid "emails.reviewRemindAuto.subject"
 msgstr "תזכורת הגשת ביקורת אוטומטית"
 
-#, fuzzy
 msgid "emails.reviewRemindAuto.body"
 msgstr ""
 
@@ -310,14 +315,12 @@ msgstr ""
 msgid "emails.layoutRequest.subject"
 msgstr ""
 
-#, fuzzy
 msgid "emails.layoutRequest.body"
 msgstr ""
 
 msgid "emails.layoutComplete.subject"
 msgstr ""
 
-#, fuzzy
 msgid "emails.layoutComplete.body"
 msgstr ""
 
@@ -336,7 +339,6 @@ msgstr ""
 msgid "emails.subscriptionNotify.body"
 msgstr ""
 
-#, fuzzy
 msgid "emails.openAccessNotify.subject"
 msgstr ""
 
@@ -394,7 +396,6 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr ""
 
-#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 
@@ -408,4 +409,13 @@ msgid "emails.announcement.subject"
 msgstr ""
 
 msgid "emails.announcement.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
 msgstr ""

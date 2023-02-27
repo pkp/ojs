@@ -2181,6 +2181,9 @@ msgstr "Žurnāla e-pasta paraksts automātiskajiem e-pastiem"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Žurnāla galvenās kontaktpersonas e-pasta adrese"
 
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr ""
+
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Maksājuma veida nosaukums"
 
@@ -2226,6 +2229,21 @@ msgstr "Domēns"
 #, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "IP diapazoni abonēšanas autentificēšanai"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr ""
+
+msgid "emailTemplate.variable.issueId"
+msgstr ""
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
 
 msgid "mailable.validateEmailContext.name"
 msgstr "E-pasta apstiprināšana (žurnāla reģistrācija)"
@@ -2560,6 +2578,12 @@ msgid "mailable.publicationVersionNotify.description"
 msgstr ""
 
 msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+
+msgid "mailable.paymentRequest.name"
+msgstr ""
+
+msgid "mailable.paymentRequest.description"
 msgstr ""
 
 #~ msgid "manager.setup.submissionPreparationChecklistDescription"

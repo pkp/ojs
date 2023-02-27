@@ -129,6 +129,12 @@ msgstr ""
 "<br />\n"
 "Ďakujeme."
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 #, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Žiadosť o spracovanie recenzie článku"
@@ -693,3 +699,12 @@ msgstr ""
 "<br />\n"
 "Navštívte našu webovú stránku, ak si chcete prečítať<a href="
 "\"{$announcementUrl}\">plný text</a>."
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
+msgstr ""

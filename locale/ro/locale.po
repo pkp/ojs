@@ -2342,6 +2342,9 @@ msgstr "Un număr a fost publicat."
 msgid "notification.type.newAnnouncement"
 msgstr "A fost creat un anunț de revizuire."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "A fost încărcată o evaluare pentru \"{$title}.\""
 

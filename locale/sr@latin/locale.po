@@ -2287,6 +2287,9 @@ msgstr "Izdanje je objavljeno."
 msgid "notification.type.newAnnouncement"
 msgstr "Novo obaveštenje je napravljeno."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "Recenzija preko recenzentske forme je predata za \"{$title}\"."
 

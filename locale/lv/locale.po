@@ -2294,6 +2294,9 @@ msgstr "Žurnāla numurs ir publicēts."
 msgid "notification.type.newAnnouncement"
 msgstr "Ir izveidots jauns paziņojums."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "Ir iesniegta recenzijas veidlapa par \"{$title}.\""
 

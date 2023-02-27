@@ -147,6 +147,12 @@ msgstr ""
 "<br />\n"
 "Σας ευχαριστούμε."
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 #, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Αίτημα αξιολόγησης άρθρου"
@@ -726,3 +732,12 @@ msgstr ""
 "<br />\n"
 "Επισκεφθείτε τον ιστότοπό μας για να διαβάσετε την <a href="
 "\"{$announcementUrl}\">πλήρη ανακοίνωση</a>."
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
+msgstr ""

@@ -66,6 +66,12 @@ msgstr "测试密码"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "测试 DOI 前缀"
 
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
+msgstr ""
+
+msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
+msgstr ""
+
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "DataCite 自动注册任务"
 

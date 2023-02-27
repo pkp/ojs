@@ -2112,6 +2112,9 @@ msgstr "توقيع المجلة على رسائل البريد الالكترو�
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "عنوان البريد الالكتروني لجهة الاتصال الرئيسية في المجلة"
 
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr ""
+
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "اسم نوع الدفع المالي"
 
@@ -2157,6 +2160,21 @@ msgstr "النطاق"
 #, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "نطاق عناوين IP للمصادقة على الاشتراكات"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr ""
+
+msgid "emailTemplate.variable.issueId"
+msgstr ""
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
 
 msgid "mailable.validateEmailContext.name"
 msgstr "التحقق من البريد الالكتروني (التسجيل في المجلة)"
@@ -2498,6 +2516,12 @@ msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
 "رسالة البريد الالكتروني هذه تُرسل إلى مشرفي المجلة عند استلام طلب تقديم جديد "
 "لم يتعين له محرر بعد."
+
+msgid "mailable.paymentRequest.name"
+msgstr ""
+
+msgid "mailable.paymentRequest.description"
+msgstr ""
 
 #~ msgid "doi.manager.settings.enableSubmissionDoi"
 #~ msgstr "المقالات"

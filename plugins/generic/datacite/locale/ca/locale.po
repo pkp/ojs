@@ -85,6 +85,12 @@ msgstr "Contrasenya de test"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Prefix DOI de test"
 
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
+msgstr ""
+
+msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
+msgstr ""
+
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Tasca de registre automàtic DataCite"
 

@@ -1759,11 +1759,9 @@ msgstr ""
 msgid "installer.overwriteConfigFileInstructions"
 msgstr ""
 
-#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 
-#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 
@@ -1896,6 +1894,9 @@ msgid "notification.type.issuePublished"
 msgstr ""
 
 msgid "notification.type.newAnnouncement"
+msgstr ""
+
+msgid "notification.type.openAccess"
 msgstr ""
 
 msgid "notification.type.reviewerFormComment"

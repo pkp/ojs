@@ -2186,6 +2186,9 @@ msgstr "E-mailový podpis časopisu pro automatické e-maily"
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr "E-mailová adresa hlavního kontaktu časopisu"
 
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr "Poštovní adresa časopisu"
+
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Název typu platby"
 
@@ -2227,6 +2230,23 @@ msgstr "Název domény platných IP adres pro toto předplatné"
 
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "Platné rozsahy IP pro toto předplatné"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr "URL na stránku, kde může autor provést platbu"
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr "URL adresa pokynů pro předkládání příspěvků"
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr "Odkaz na stránku se statistikami publikovaných článků"
+
+msgid "emailTemplate.variable.issueId"
+msgstr ""
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
+"Tento e-mail je každý měsíc automaticky zasílán redaktorům a správcům "
+"časopisů, aby jim poskytl přehled o stavu systému."
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Validace emailu (Registrace časopisu)"
@@ -2572,25 +2592,19 @@ msgstr ""
 "Tento e-mail je zasílán manažerům časopisů, když je podána nová příspěvek a "
 "nemá přiřazeny redaktory."
 
-msgid "mailable.lockssExistingArchive.name"
-msgstr "Požadavek na archiv"
-
-msgid "mailable.lockssNewArchive.name"
-msgstr "Požadavek na archiv (nový)"
-
 msgid "mailable.paymentRequest.name"
 msgstr "Žádost o platbu"
-
-msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr "URL adresa pokynů pro předkládání příspěvků"
 
 msgid "mailable.paymentRequest.description"
 msgstr ""
 "Tento automatický e-mail je zaslán autorovi s žádostí o zaplacení "
 "publikačního poplatku po přijetí jeho příspěvku."
 
-msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr "URL na stránku, kde může autor provést platbu"
+#~ msgid "mailable.lockssExistingArchive.name"
+#~ msgstr "Požadavek na archiv"
+
+#~ msgid "mailable.lockssNewArchive.name"
+#~ msgstr "Požadavek na archiv (nový)"
 
 #~ msgid "manager.setup.copyrightNotice"
 #~ msgstr "Oznámení o copyrightu"
@@ -2712,14 +2726,3 @@ msgstr "URL na stránku, kde může autor provést platbu"
 #~ msgstr ""
 #~ "Zatím nejsou žádní sekční editoři. Přidejte nejprve tuto roli minimálně "
 #~ "jednomu uživateli pomocí Správa > Nastavení > Uživatelé a role."
-
-msgid "emailTemplate.variable.context.mailingAddress"
-msgstr "Poštovní adresa časopisu"
-
-msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr "Odkaz na stránku se statistikami publikovaných článků"
-
-msgid "mailable.statisticsReportNotify.description"
-msgstr ""
-"Tento e-mail je každý měsíc automaticky zasílán redaktorům a správcům "
-"časopisů, aby jim poskytl přehled o stavu systému."

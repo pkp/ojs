@@ -139,6 +139,12 @@ msgstr ""
 "<br />\n"
 "Trân trọng."
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 #, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Mời review bài báo"
@@ -695,3 +701,12 @@ msgstr ""
 "<br />\n"
 "Ghé thăm trang web của chúng tôi để đọc <a href=\"{$announcementUrl}\">thông "
 "báo đầy đủ</a>."
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
+msgstr ""

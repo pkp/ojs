@@ -2301,6 +2301,9 @@ msgstr "En utgave har blitt publisert."
 msgid "notification.type.newAnnouncement"
 msgstr "Nytt oppslag."
 
+msgid "notification.type.openAccess"
+msgstr ""
+
 msgid "notification.type.reviewerFormComment"
 msgstr "Et skjema for fagfellevurdering har blitt sendt inn for «{$title}»."
 

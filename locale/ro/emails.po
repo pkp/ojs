@@ -140,6 +140,12 @@ msgstr ""
 "<br />\n"
 "Mulțumesc."
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 #, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Invitația pentru a evalua un articol"
@@ -696,6 +702,15 @@ msgstr ""
 "<br />\n"
 "Vizitați situl nostru pentru a citi anunțul <a href=\"{$announcementUrl}\"></"
 "a>."
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
+msgstr ""
 
 #~ msgid "mailable.subscriptionExpiredLast.description"
 #~ msgstr ""

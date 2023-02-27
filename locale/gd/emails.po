@@ -132,6 +132,12 @@ msgstr ""
 "<br />\n"
 "Mòran taing."
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 #, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Iarrtas airson lèirmheas artaigil"
@@ -721,3 +727,12 @@ msgstr ""
 "<br />\n"
 "Tadhail air an làrach-lìn againn is leugh <a href=\"{$announcementUrl}\">am "
 "fios-naidheachd slàn</a>."
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
+msgstr ""

@@ -133,6 +133,12 @@ msgstr ""
 "<br />\n"
 "Unaprijed hvala."
 
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
 #, fuzzy
 msgid "emails.reviewRequest.subject"
 msgstr "Zamolba za recenziju članka"
@@ -211,7 +217,6 @@ msgstr ""
 msgid "emails.reviewRequestSubsequent.subject"
 msgstr "Zahtjev za pregled članka"
 
-#, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
 msgstr ""
 
@@ -233,7 +238,6 @@ msgstr ""
 msgid "emails.reviewReinstate.subject"
 msgstr ""
 
-#, fuzzy
 msgid "emails.reviewReinstate.body"
 msgstr ""
 
@@ -517,7 +521,6 @@ msgstr ""
 msgid "emails.revisedVersionNotify.subject"
 msgstr ""
 
-#, fuzzy
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 
@@ -531,6 +534,15 @@ msgid "emails.announcement.subject"
 msgstr "{$title}"
 
 msgid "emails.announcement.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
 msgstr ""
 
 #~ msgid "emails.submissionComment.subject"
