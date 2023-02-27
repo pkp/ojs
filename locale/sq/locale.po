@@ -1,0 +1,309 @@
+# Rudin Dakli <rdakli@gmail.com>, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-02-22 04:18+0000\n"
+"Last-Translator: Rudin Dakli <rdakli@gmail.com>\n"
+"Language-Team: Albanian <http://translate.pkp.sfu.ca/projects/ojs/locale/sq/>"
+"\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "context.current"
+msgstr "Revista më e fundit:"
+
+msgid "navigation.categories"
+msgstr "Kategoritë"
+
+msgid "navigation.categories.browse"
+msgstr "Shfleto"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Kliko në ikonë për të plotësuar formularin e reçensës."
+
+msgid "navigation.current"
+msgstr "Më i fundit"
+
+msgid "navigation.otherJournals"
+msgstr "Revista të tjera"
+
+msgid "navigation.browseByIssue"
+msgstr "Sipas Numrit"
+
+msgid "navigation.browseByAuthor"
+msgstr "Sipas Autorit"
+
+msgid "navigation.infoForAuthors"
+msgstr "Për Autorët"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Për Bibliotekanët"
+
+msgid "doi.manager.settings.publications"
+msgstr "Artikujt"
+
+msgid "article.article"
+msgstr "Artikull"
+
+msgid "article.articles"
+msgstr "Artikujt"
+
+msgid "common.publication"
+msgstr "Artikull"
+
+msgid "common.publications"
+msgstr "Artikujt"
+
+msgid "article.submissionId"
+msgstr "ID e Punimit"
+
+msgid "article.title"
+msgstr "Titulli"
+
+msgid "article.authors"
+msgstr "Autorët"
+
+msgid "article.indexingInformation"
+msgstr "Informacion mbi Indeksimin"
+
+#, fuzzy
+msgid "article.metadata"
+msgstr "Metadata"
+
+msgid "article.journalSection"
+msgstr "Seksion i Revistës"
+
+msgid "article.file"
+msgstr "Skedar"
+
+msgid "article.suppFile"
+msgstr "Skedar shtesë"
+
+msgid "article.suppFiles"
+msgstr "Skedar(ë) shtesë"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Skedarë shtes."
+
+msgid "article.discipline"
+msgstr "Disiplinat dhe nën disiplinat akademike"
+
+msgid "article.subject"
+msgstr "Fjalëkyçet"
+
+msgid "article.coverage"
+msgstr "Mbulimi"
+
+msgid "article.language"
+msgstr "Gjuha"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.commentsToEditor"
+msgstr "Komentet e autorit"
+
+msgid "article.submission"
+msgstr "Punimi"
+
+msgid "article.submissions"
+msgstr "Punimet"
+
+msgid "article.details"
+msgstr "Detajet"
+
+msgid "article.abstract"
+msgstr "Abstrakti"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Akses i Hapur"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Akses i Kufizuar"
+
+msgid "article.comments.sectionDefault"
+msgstr "Paracaktuar"
+
+msgid "article.comments.disable"
+msgstr "Çaktivizo"
+
+msgid "article.comments.enable"
+msgstr "Aktivizo"
+
+msgid "article.return"
+msgstr "Ktheu tek Detajet e Artikullit"
+
+msgid "submission.search"
+msgstr "Kërko Artikull"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Dorëzo një Punim"
+
+msgid "search.results.orderBy.author"
+msgstr "Autori"
+
+msgid "search.results.orderBy.date"
+msgstr "Data e publikimit"
+
+msgid "search.results.orderBy.issue"
+msgstr "Numri"
+
+msgid "search.results.orderBy.journal"
+msgstr "Titulli i Revistës"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Rëndësia"
+
+msgid "search.results.orderDir.asc"
+msgstr "Ngjitës"
+
+msgid "search.results.orderDir.desc"
+msgstr "Zbritës"
+
+msgid "search.results.similarDocuments"
+msgstr "dokumente të ngjashëm"
+
+msgid "about.contact"
+msgstr "Kontakto"
+
+msgid "about.aboutContext"
+msgstr "Rreth Revistës"
+
+msgid "about.editorialTeam"
+msgstr "Redaksia"
+
+msgid "about.editorialTeam.biography"
+msgstr "Biografia"
+
+msgid "about.editorialPolicies"
+msgstr "Politikat Editoriale"
+
+msgid "about.focusAndScope"
+msgstr "Fokusi dhe Qëllimi"
+
+msgid "about.sectionPolicies"
+msgstr "Politikat e Seksioneve"
+
+msgid "about.submissions"
+msgstr "Punimet"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Hyr"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Regjistrohu"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Dorëzo një punim të ri"
+
+msgid "about.privacyStatement"
+msgstr "Deklarata e Privacisë"
+
+msgid "about.authorFees"
+msgstr "Tarifat e Autorit"
+
+msgid "about.openAccessPolicy"
+msgstr "Politika e Aksesit të Hapur"
+
+msgid "about.subscriptions"
+msgstr "Pajtimet"
+
+msgid "about.subscriptions.individual"
+msgstr "Pajtime Individuale"
+
+msgid "about.subscriptionsContact"
+msgstr "Kontakti për Pajtimet"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Emër"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Format"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Kohëzgjatja"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Kostoja"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Llojet e Pajtimeve"
+
+msgid "about.memberships"
+msgstr "Anëtarësimet"
+
+msgid "help.goToEditPage"
+msgstr "Modifiko {$sectionTitle}"
+
+msgid "donations.thankYou"
+msgstr "Faleminderit"
+
+#, fuzzy
+msgid "payment.loginRequired"
+msgstr "You must be logged in to make a payment."
+
+msgid "about.statistics"
+msgstr "Statistika"
+
+msgid "about.history"
+msgstr "Historia e Revistës"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} ose {$register} për të dorëzuar një punim."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} ose {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Dorëzo një punim të ri në <a href=\"{$url}\">{$name}</a> seksionin."
+
+msgid "about.authorGuidelines"
+msgstr "Udhëzime për Autorin"
+
+msgid "about.copyrightNotice"
+msgstr "Shënim i Copyright"
+
+msgid "about.publicationFrequency"
+msgstr "Frekuenca e Botimit"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "muaj(t) pasi një numër reviste është botuar."
+
+msgid "about.subscriptions.institutional"
+msgstr "Pajtime Institucionale"
+
+msgid "help.searchReturnResults"
+msgstr "Kthehu tek Rezultatet e Kërkimit"
+
+#, fuzzy
+msgid "donations.thankYouMessage"
+msgstr ""
+"Thank you for making a contribution.  Your contribution is much appreciated."
+
+#, fuzzy
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"Subscription or article purchase required to access item. To verify "
+"subscription, access previous purchase, or purchase article, log in to "
+"journal."
+
+msgid "user.register.privacyStatement"
+msgstr "Deklarata e Privacisë"
+
+msgid "section.abbreviation.example"
+msgstr "(Për shembull, Artikujt=ART)"
+
+msgid "comments.commentsOnArticle"
+msgstr "Komentet në këtë artikull"
+
+msgid "search.results.orderBy.article"
+msgstr "Titulli i Artikullit"
+
+msgid "reviewer.pendingReviews"
+msgstr "Artikuj që Presin Reçensën"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Skedarë për tu rishikuar"

@@ -1,15 +1,15 @@
-# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2021, 2022.
+# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2021, 2022, 2023.
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2022-12-25 12:02+0000\n"
+"PO-Revision-Date: 2023-02-23 08:14+0000\n"
 "Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
-"Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
-"tr_TR/>\n"
-"Language: tr_TR\n"
+"Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/manager/tr/>"
+"\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2655,3 +2655,31 @@ msgstr ""
 #~ "Henüz bölüm editörü atanmamış. Bölüm editörü atamak için öncelikle "
 #~ "Yönetim > Ayarlar > Kullanıcılar  &amp; Roller yolunu takip ederek bu "
 #~ "role az bir kullanıcı ekleyin."
+
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr "Derginin posta adresi"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr "Yazarın ödeme yapabileceği sayfanın URL'si"
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr "Makale gönderim rehberinin URL'si"
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr "Yayımlanan makalelerin istatistik rapor sayfasına bağlantı"
+
+msgid "mailable.paymentRequest.name"
+msgstr "Ödeme Talebi"
+
+msgid "mailable.paymentRequest.description"
+msgstr ""
+"Bu e-posta, aday makale kabul edildiğinde makale ücretinin ödenmesini talep "
+"etmek için yazara gönderilir."
+
+msgid "emailTemplate.variable.issueId"
+msgstr "Sayı ID"
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
+"Bu e-posta, sistem durumuna genel bir bakış sağlamak için editörlere ve "
+"dergi yöneticilerine aylık olarak otomatik gönderilir."
