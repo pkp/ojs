@@ -1,0 +1,42 @@
+# HKBU Library <libms@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-28 11:01+0000\n"
+"Last-Translator: HKBU Library <libms@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/blocks-subscription/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "plugins.block.subscription.displayName"
+msgstr "訂閱欄"
+
+msgid "plugins.block.subscription.description"
+msgstr "此插件支援在側邊欄的提供訂閱資訊。"
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "訂閱"
+
+msgid "plugins.block.subscription.expires"
+msgstr "過期"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr ""
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "從{$ip}取用內容"
+
+msgid "plugins.block.subscription.about"
+msgstr "訂閱"
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr "登入以讀取僅限訂閱讀者的內容。"
+
+msgid "plugins.block.subscription.subscriptionRequired"
+msgstr "需要訂閱以讀取部分內容。"
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "更多資訊"

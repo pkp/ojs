@@ -114,7 +114,7 @@ msgid "editor.issues.confirmDelete"
 msgstr "是否確認永遠刪除此期？"
 
 msgid "editor.issues.published"
-msgstr "已出版"
+msgstr "出版日期"
 
 msgid "editor.issues.unpublished"
 msgstr "未出版"

@@ -17,10 +17,10 @@ msgstr ""
 "html\" target=\"_new\">計數器</a>-報告網站活動。"
 
 msgid "plugins.reports.counter"
-msgstr "計數器統計"
+msgstr "計數器報告"
 
 msgid "plugins.reports.counter.release"
-msgstr "計數器版本"
+msgstr "計數器釋放"
 
 msgid "plugins.reports.counter.olderReports"
 msgstr ""
@@ -29,13 +29,13 @@ msgid "plugins.reports.counter.error.badParameters"
 msgstr "報告的參數無效。"
 
 msgid "plugins.reports.counter.error.badRequest"
-msgstr "報告請求無効。"
+msgstr "報告的要求無效。"
 
 msgid "plugins.reports.counter.error.noResults"
-msgstr "搜查不到此報告。"
+msgstr "查無此報告結果。"
 
 msgid "plugins.reports.counter.error.noXML"
-msgstr "結果無法被格式化為XML。"
+msgstr "結果未能採用XML格式。"
 
 msgid "plugins.reports.counter.1a.introduction"
 msgstr ""
@@ -47,7 +47,7 @@ msgid "plugins.reports.counter.1a.xml"
 msgstr ""
 
 msgid "plugins.reports.counter.1a.description"
-msgstr "計數器期刊報告1 (R3): 按月份及期刊文章全文申請"
+msgstr "JR1 (R3)期刊報告1 (R3)：按月份及期刊全文文章請求"
 
 msgid "plugins.reports.counter.1a.title"
 msgstr "期刊報告 1 (R3): 調閱全文文章的月份和期刊。"

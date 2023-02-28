@@ -1,0 +1,45 @@
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-30 09:01+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/importexport-pubmed/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "plugins.importexport.pubmed.displayName"
+msgstr "PubMed XML導出插件"
+
+msgid "plugins.importexport.pubmed.description"
+msgstr "由PubMed XML格式導出文章元資料用於檢索MEDLINE。"
+
+msgid "plugins.importexport.pubmed.export"
+msgstr "導出數據"
+
+msgid "plugins.importexport.pubmed.export.issues"
+msgstr "導出期號"
+
+msgid "plugins.importexport.pubmed.export.selectIssue"
+msgstr "選擇導出的一期。"
+
+msgid "plugins.importexport.pubmed.export.articles"
+msgstr "導出文章"
+
+msgid "plugins.importexport.pubmed.export.selectArticle"
+msgstr "選擇文章導出。"
+
+msgid "plugins.importexport.pubmed.cliUsage"
+msgstr ""
+
+msgid "plugins.importexport.pubmed.cliError"
+msgstr "錯誤："
+
+msgid "plugins.importexport.pubmed.export.error.issueNotFound"
+msgstr "未能找到符合指明的期號ID\"{$issueId}\"。"
+
+msgid "plugins.importexport.pubmed.export.error.articleNotFound"
+msgstr "未能找到符合指明的文章ID\"{$articleId}\"。"

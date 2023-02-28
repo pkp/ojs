@@ -1,0 +1,79 @@
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-28 10:01+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/importexport-users/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "用戶XML插件"
+
+msgid "plugins.importexport.users.description"
+msgstr "導入及導出用戶"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "導入用戶"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "用戶數據檔案"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr "發送包含用戶名稱及密碼的電郵給每一位導出用戶。"
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "即使失敗個案也繼續導出其他用戶。"
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "成功導入以下用戶至系統"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "導入時發生錯誤"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "確認這些都是您想導入至系統的用戶"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "警告"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "標示了未知期刊路徑\"{$journalPath}\"。"
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "導出用戶"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "按身份導出"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "全部導出"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "導出時發生錯誤"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"成功完成導入。未有重覆用戶名稱及電郵地址的用戶，與相應的用戶分組已一同導入。"
+
+msgid "plugins.importexport.users.results"
+msgstr "結果"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "請在「導入」下方上載一個檔案才可繼續。"

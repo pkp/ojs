@@ -1,0 +1,24 @@
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-26 10:01+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/generic-recommendByAuthor/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "plugins.generic.recommendByAuthor.displayName"
+msgstr "作者推薦文章"
+
+msgid "plugins.generic.recommendByAuthor.description"
+msgstr "此插件會在文章摘要頁面加添一個同一作者文章的列表。"
+
+msgid "plugins.generic.recommendByAuthor.heading"
+msgstr "同作者最多閱覽文章"
+
+msgid "plugins.generic.recommendByAuthor.noMetric"
+msgstr ""

@@ -1,0 +1,85 @@
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-09-29 03:01+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/importexport-native/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "plugins.importexport.native.displayName"
+msgstr "原始XML插件"
+
+msgid "plugins.importexport.native.description"
+msgstr "從OJS原始XML格式導入及導出文章和期號。"
+
+msgid "plugins.importexport.native.import"
+msgstr "導入"
+
+msgid "plugins.importexport.native.import.instructions"
+msgstr "上載XML檔案來導入"
+
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "選取文章導出"
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "導出文章"
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "導出期號"
+
+msgid "plugins.importexport.native.results"
+msgstr "導入結果"
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr "請在「導入」以下上載一個檔案再繼續。"
+
+msgid "plugins.importexport.native.importComplete"
+msgstr "導入完成及成功。以下項目已導入："
+
+msgid "plugins.importexport.native.cliUsage"
+msgstr ""
+
+msgid "plugins.importexport.native.error.unknownSection"
+msgstr "未知分類 {$param}"
+
+msgid "plugins.importexport.native.error.unknownUser"
+msgstr ""
+
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
+msgstr ""
+"在\"{$issueTitle}\" 一期此分類標題 \"{$section1Title}\" 及分類標題 \""
+"{$section2Title}\" 跟現有期刊不同分類相符。"
+
+msgid "plugins.importexport.native.import.error.sectionTitleMatch"
+msgstr ""
+"在\"{$issueTitle}\" 一期此分類標題 \"{$section1Title}\" "
+"跟現有期刊分類相符，但此分類另一標題跟另一現有期刊分類並不相符。"
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
+msgstr ""
+"在\"{$issueTitle}\"一期的分類簡稱\"{$section1Abbrev}\"與分類簡稱\""
+"{$section1Abbrev}\"跟現有期刊不同分類簡稱相符。"
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr ""
+"在\"{$issueTitle}\"一期的分類簡稱\"{$section1Abbrev}\" "
+"跟現有期刊分類簡稱相符，但此分類另一簡稱跟另一現有期刊分類簡稱並不相符。"
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr "沒有或多於一期跟所提供的一期認證\"{$issueIdentification}\"相符。"
+
+msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgstr ""
+"現有一期的id {$issueId}與所提供的一期認證\"{$issueIdentification}"
+"\"相符。此期不會被修改，但仍可添加文章。"
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgstr "文章\"{$articleTitle}\"欠缺期號認證部分。"
+
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr "文章\"{$articleTitle}\"已編配到其中一期，但未有出版日期。"

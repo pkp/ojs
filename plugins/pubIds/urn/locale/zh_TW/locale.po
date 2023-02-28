@@ -1,0 +1,212 @@
+# Katie Cheng <ckykatie@hkbu.edu.hk>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-08-11 10:51+0000\n"
+"Last-Translator: Katie Cheng <ckykatie@hkbu.edu.hk>\n"
+"Language-Team: Chinese (Traditional) <http://translate.pkp.sfu.ca/projects/"
+"ojs/pubIds-urn/zh_Hant/>\n"
+"Language: zh_Hant\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr ""
+
+msgid "plugins.pubIds.urn.description"
+msgstr "此插件讓你可以配置統一資源名稱予各卷、各文章及各校樣。"
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr "管理和使用OJS內的URN前，請先設定URN插件。"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "期刊內容"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "請選擇要配置URN的項目。"
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr "請選擇會配置統一資源名稱(URN)的出版項目："
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "卷"
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "文章"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "校樣"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "URN前綴"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr ""
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr ""
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "URN後綴"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr "URN的後綴可自訂，但如跟其他項目使用同樣的前綴，後綴必須是獨一無二。"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr ""
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr ""
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr ""
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr ""
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr ""
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "請輸入所有卷使用的URN的後綴樣式。"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
+msgstr "請輸入所有文章使用的URN的後綴樣式。"
+
+msgid ""
+"plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "請輸入所有校樣使用的URN的後綴樣式。"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "使用預設樣式。"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr ""
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr ""
+"請輸入一個獨立的URN後綴予每一個出版項目。你可以在每一項目的後設資料頁面找到額"
+"外的URN輸入位置。"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "檢查數字"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr "經檢查後數字會自動計算及添加至最後，即該URN的最後一個位。"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "名稱空間"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "選擇"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr "持久標識符的名稱空間均需要註冊（例如：在Deutsche Nationalbibliothek）。"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "分解器網址"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(e.g. https://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "請輪入分解器網址。"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "重新配置URN"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr ""
+"如你要改變你的URN配置，已配置的URN不會受到影響。儲存URN配置後，可使用此按鈕清"
+"除所有現存URN並以新配置取代原有的項目。"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "是否刪除原有的URN？"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "統一資源名稱(URN)"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "卷"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "文章"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "校樣"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "由於欠缺自訂的後綴，所以未能配置URN。"
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "由於當中包含未定義的樣式，所以未能配置URN。"
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr "現為URN的預覽。請點選方框以存儲配置URN的方式。"
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "已配置URN至{$pubObjectType}。"
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr "以下URN後綴已在其他出版項目使用。請輪入一個獨特的URN後綴予每一項目。"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "清除"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "是否確定刪除現有的URN？"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "清除卷項目的URN"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "是否確定刪除現有卷項目的URN？"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr "利用以下選項以清除所有預定予此卷項目（文章及校樣）的URN。"
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "添加剔選數目"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "配置URN{$pubId}至此{$pubObjectType}"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "由於欠缺自訂的後綴，所以未能配置URN。"
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr "由於當中包含未定義的樣式，所以未能配置URN{$pubId}。"
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "已配置URN{$pubId}。"
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr ""
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "URN開端必須為{$prefix}。"
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "配置"
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr ""
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr ""
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr ""
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr ""
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr ""
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr ""

@@ -7,7 +7,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 msgid "plugins.generic.htmlArticleGalley.displayName"
-msgstr ""
+msgstr "HTML文章校對樣本"
 
 msgid "plugins.generic.htmlArticleGalley.description"
-msgstr ""
+msgstr "此插件支援顯示HTML文章校對樣本。"

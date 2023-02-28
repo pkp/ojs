@@ -325,7 +325,7 @@ msgid "submissions.queuedReview"
 msgstr "評審中"
 
 msgid "submissions.published"
-msgstr "已出版"
+msgstr "出版日期"
 
 msgid "submissions.initial"
 msgstr "最初"
