@@ -20,7 +20,6 @@ switch ($op) {
 	case 'index':
 	case 'search':
 	case 'similarDocuments':
-	case 'authors':
 		define('HANDLER_CLASS', 'SearchHandler');
 		import('pages.search.SearchHandler');
 		break;
