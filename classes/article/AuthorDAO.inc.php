@@ -25,7 +25,7 @@ class AuthorDAO extends PKPAuthorDAO {
 	 * Authors will be sorted by (family, given). Note that if journalId is null,
 	 * alphabetized authors for all enabled journals are returned.
 	 * If authors have the same given names, first names and affiliations in all journal locales,
-	 * as well as country and email (otional), they are considered to be the same.
+	 * as well as country and email (optional), they are considered to be the same.
 	 * @param $journalId int Optional journal ID to restrict results to
 	 * @param $initial An initial a family name must begin with, "-" for authors with no family names
 	 * @param $rangeInfo Range information
