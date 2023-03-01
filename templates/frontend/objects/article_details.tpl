@@ -398,6 +398,17 @@
 							</div>
 						</section>
 					{/if}
+
+					{{if $publication->getData('workNumber')}}
+						<section class="sub_item">
+							<h2 class="label">
+								{translate key="submission.workNumber"}
+							</h2>
+							<div class="value">
+								{$publication->getData('workNumber')|escape}
+							</div>
+						</section>
+					{/if}
 				</div>
 			{/if}
 
