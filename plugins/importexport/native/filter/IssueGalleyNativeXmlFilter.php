@@ -15,7 +15,12 @@
 
 namespace APP\plugins\importexport\native\filter;
 
+use APP\core\Application;
 use APP\file\IssueFileManager;
+use APP\issue\IssueFileDAO;
+use APP\issue\IssueGalley;
+use DOMDocument;
+use DOMElement;
 use PKP\db\DAORegistry;
 
 class IssueGalleyNativeXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExportFilter
@@ -64,7 +69,9 @@ class IssueGalleyNativeXmlFilter extends \PKP\plugins\importexport\native\filter
 
         $rootNode = $doc->createElementNS($deployment->getNamespace(), 'issue_galleys');
         foreach ($issueGalleys as $issueGalley) {
-            $rootNode->appendChild($this->createIssueGalleyNode($doc, $issueGalley));
+            if ($issueGalleyNode = $this->createIssueGalleyNode($doc, $issueGalley)) {
+                $rootNode->appendChild($issueGalleyNode);
+            }
         }
 
         $doc->appendChild($rootNode);
@@ -79,59 +86,59 @@ class IssueGalleyNativeXmlFilter extends \PKP\plugins\importexport\native\filter
     //
     /**
      * Create and return an issueGalley node.
-     *
-     * @param \DOMDocument $doc
-     * @param IssueGalley $issueGalley
-     *
-     * @return \DOMElement
      */
-    public function createIssueGalleyNode($doc, $issueGalley)
+    public function createIssueGalleyNode(DOMDocument $doc, IssueGalley $issueGalley): ?DOMElement
     {
         // Create the root node and attributes
         $deployment = $this->getDeployment();
         $issueGalleyNode = $doc->createElementNS($deployment->getNamespace(), 'issue_galley');
         $issueGalleyNode->setAttribute('locale', $issueGalley->getLocale());
-        $issueGalleyNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'label', htmlspecialchars($issueGalley->getLabel(), ENT_COMPAT, 'UTF-8')));
+        $issueGalleyNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'label', htmlspecialchars($issueGalley->getLabel(), ENT_COMPAT, 'UTF-8')));
 
         $this->addIdentifiers($doc, $issueGalleyNode, $issueGalley);
 
-        $this->addFile($doc, $issueGalleyNode, $issueGalley);
+        if (!$this->addFile($doc, $issueGalleyNode, $issueGalley)) {
+            return null;
+        }
 
         return $issueGalleyNode;
     }
 
     /**
      * Add the issue file to its DOM element.
-     *
-     * @param \DOMDocument $doc
-     * @param \DOMElement $issueGalleyNode
-     * @param IssueGalley $issueGalley
      */
-    public function addFile($doc, $issueGalleyNode, $issueGalley)
+    public function addFile(DOMDocument $doc, DOMElement $issueGalleyNode, IssueGalley $issueGalley): bool
     {
         $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /** @var IssueFileDAO $issueFileDao */
         $issueFile = $issueFileDao->getById($issueGalley->getFileId());
 
-        if ($issueFile) {
-            $deployment = $this->getDeployment();
-            $issueFileNode = $doc->createElementNS($deployment->getNamespace(), 'issue_file');
-            $issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_name', htmlspecialchars($issueFile->getServerFileName(), ENT_COMPAT, 'UTF-8')));
-            $issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_type', htmlspecialchars($issueFile->getFileType(), ENT_COMPAT, 'UTF-8')));
-            $issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_size', $issueFile->getFileSize()));
-            $issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'content_type', htmlspecialchars($issueFile->getContentType(), ENT_COMPAT, 'UTF-8')));
-            $issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'original_file_name', htmlspecialchars($issueFile->getOriginalFileName(), ENT_COMPAT, 'UTF-8')));
-            $issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_uploaded', date('Y-m-d', strtotime($issueFile->getDateUploaded()))));
-            $issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_modified', date('Y-m-d', strtotime($issueFile->getDateModified()))));
-
-            $issueFileManager = new IssueFileManager($issueGalley->getIssueId());
-
-            $filePath = $issueFileManager->getFilesDir() . '/' . $issueFileManager->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName();
-            $embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
-            $embedNode->setAttribute('encoding', 'base64');
-            $issueFileNode->appendChild($embedNode);
-
-            $issueGalleyNode->appendChild($issueFileNode);
+        if (!$issueFile) {
+            return false;
         }
+
+        $issueFileManager = new IssueFileManager($issueGalley->getIssueId());
+        $filePath = $issueFileManager->getFilesDir() . '/' . $issueFileManager->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName();
+        $deployment = $this->getDeployment();
+        if (!file_exists($filePath)) {
+            $deployment->addWarning(Application::ASSOC_TYPE_ISSUE_GALLEY, $issueGalley->getId(), __('plugins.importexport.common.error.issueGalleyFileMissing', ['id' => $issueGalley->getId(), 'path' => $filePath]));
+            return false;
+        }
+
+        $issueFileNode = $doc->createElementNS($deployment->getNamespace(), 'issue_file');
+        $issueFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'file_name', htmlspecialchars($issueFile->getServerFileName(), ENT_COMPAT, 'UTF-8')));
+        $issueFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'file_type', htmlspecialchars($issueFile->getFileType(), ENT_COMPAT, 'UTF-8')));
+        $issueFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'file_size', $issueFile->getFileSize()));
+        $issueFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'content_type', htmlspecialchars($issueFile->getContentType(), ENT_COMPAT, 'UTF-8')));
+        $issueFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'original_file_name', htmlspecialchars($issueFile->getOriginalFileName(), ENT_COMPAT, 'UTF-8')));
+        $issueFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'date_uploaded', date('Y-m-d', strtotime($issueFile->getDateUploaded()))));
+        $issueFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'date_modified', date('Y-m-d', strtotime($issueFile->getDateModified()))));
+
+        $embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
+        $embedNode->setAttribute('encoding', 'base64');
+        $issueFileNode->appendChild($embedNode);
+
+        $issueGalleyNode->appendChild($issueFileNode);
+        return true;
     }
 
     /**

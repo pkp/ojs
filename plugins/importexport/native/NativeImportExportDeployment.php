@@ -16,6 +16,8 @@
 
 namespace APP\plugins\importexport\native;
 
+use APP\core\Application;
+
 class NativeImportExportDeployment extends \PKP\plugins\importexport\native\PKPNativeImportExportDeployment
 {
     public $_issue;
@@ -88,11 +90,11 @@ class NativeImportExportDeployment extends \PKP\plugins\importexport\native\PKPN
     protected function getObjectTypes()
     {
         return parent::getObjectTypes() + [
-            ASSOC_TYPE_JOURNAL => __('context.context'),
-            ASSOC_TYPE_SECTION => __('section.section'),
-            ASSOC_TYPE_ISSUE => __('issue.issue'),
-            ASSOC_TYPE_ISSUE_GALLEY => __('editor.issues.galley'),
-            ASSOC_TYPE_PUBLICATION => __('common.publication'),
+            Application::ASSOC_TYPE_JOURNAL => __('context.context'),
+            Application::ASSOC_TYPE_ISSUE => __('issue.issue'),
+            Application::ASSOC_TYPE_ISSUE_GALLEY => __('editor.issues.galley'),
+            Application::ASSOC_TYPE_PUBLICATION => __('common.publication'),
+            Application::ASSOC_TYPE_GALLEY => __('submission.galley'),
         ];
     }
 }

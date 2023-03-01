@@ -16,6 +16,7 @@
 namespace APP\plugins\importexport\native\filter;
 
 use APP\facades\Repo;
+use Exception;
 use PKP\db\DAORegistry;
 use PKP\plugins\importexport\PKPImportExportFilter;
 use PKP\plugins\PluginRegistry;
@@ -300,12 +301,12 @@ class IssueNativeXmlFilter extends \PKP\plugins\importexport\native\filter\Nativ
             }
             $sectionNode->setAttribute('ref', $section->getAbbrev($journal->getPrimaryLocale()));
             $sectionNode->setAttribute('seq', (int) $section->getSequence());
-            $sectionNode->setAttribute('editor_restricted', $section->getEditorRestricted());
-            $sectionNode->setAttribute('meta_indexed', $section->getMetaIndexed());
-            $sectionNode->setAttribute('meta_reviewed', $section->getMetaReviewed());
-            $sectionNode->setAttribute('abstracts_not_required', $section->getAbstractsNotRequired());
-            $sectionNode->setAttribute('hide_title', $section->getHideTitle());
-            $sectionNode->setAttribute('hide_author', $section->getHideAuthor());
+            $sectionNode->setAttribute('editor_restricted', (int) $section->getEditorRestricted());
+            $sectionNode->setAttribute('meta_indexed', (int) $section->getMetaIndexed());
+            $sectionNode->setAttribute('meta_reviewed', (int) $section->getMetaReviewed());
+            $sectionNode->setAttribute('abstracts_not_required', (int) $section->getAbstractsNotRequired());
+            $sectionNode->setAttribute('hide_title', (int) $section->getHideTitle());
+            $sectionNode->setAttribute('hide_author', (int) $section->getHideAuthor());
             $sectionNode->setAttribute('abstract_word_count', (int) $section->getAbstractWordCount());
 
             $this->createLocalizedNodes($doc, $sectionNode, 'abbrev', $section->getAbbrev(null));

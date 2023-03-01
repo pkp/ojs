@@ -15,8 +15,11 @@
 
 namespace APP\plugins\importexport\native\filter;
 
+use APP\core\Application;
 use APP\file\IssueFileManager;
 use APP\issue\Issue;
+use APP\issue\IssueGalley;
+use APP\issue\IssueGalleyDAO;
 use PKP\db\DAORegistry;
 
 class NativeXmlIssueGalleyFilter extends \PKP\plugins\importexport\native\filter\NativeImportFilter
@@ -74,7 +77,7 @@ class NativeXmlIssueGalleyFilter extends \PKP\plugins\importexport\native\filter
      *
      * @param DOMElement $node
      *
-     * @return IssueGalley
+     * @return ?IssueGalley
      */
     public function handleElement($node)
     {
@@ -138,6 +141,11 @@ class NativeXmlIssueGalleyFilter extends \PKP\plugins\importexport\native\filter
                         break;
                 }
             }
+        }
+
+        if (!$issueGalley->getFileId()) {
+            $deployment->addWarning(Application::ASSOC_TYPE_ISSUE_GALLEY, 0, __('plugins.importexport.common.error.import.issueGalleyFileMissing'));
+            return null;
         }
 
         $issueGalleyDao->insertObject($issueGalley);
