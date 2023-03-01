@@ -56,7 +56,9 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 
 		$rootNode = $doc->createElementNS($deployment->getNamespace(), 'issue_galleys');
 		foreach ($issueGalleys as $issueGalley) {
-			$rootNode->appendChild($this->createIssueGalleyNode($doc, $issueGalley));
+			if ($issueGalleyNode = $this->createIssueGalleyNode($doc, $issueGalley)) {
+				$rootNode->appendChild($issueGalleyNode);
+			}
 		}
 
 		$doc->appendChild($rootNode);
@@ -73,7 +75,7 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 	 * Create and return an issueGalley node.
 	 * @param $doc DOMDocument
 	 * @param $issueGalley IssueGalley
-	 * @return DOMElement
+	 * @return ?DOMElement
 	 */
 	function createIssueGalleyNode($doc, $issueGalley) {
 		// Create the root node and attributes
@@ -84,7 +86,9 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 
 		$this->addIdentifiers($doc, $issueGalleyNode, $issueGalley);
 
-		$this->addFile($doc, $issueGalleyNode, $issueGalley);
+		if (!$this->addFile($doc, $issueGalleyNode, $issueGalley)) {
+			return null;
+		}
 
 		return $issueGalleyNode;
 	}
@@ -100,7 +104,16 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 		$issueFile = $issueFileDao->getById($issueGalley->getFileId());
 
 		if ($issueFile) {
+			import('classes.file.IssueFileManager');
+			$issueFileManager = new IssueFileManager($issueGalley->getIssueId());
+
+			$filePath = $issueFileManager->getFilesDir() . '/' . $issueFileManager->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName();
 			$deployment = $this->getDeployment();
+			if (!file_exists($filePath)) {
+				$deployment->addWarning(ASSOC_TYPE_ISSUE_GALLEY, $issueGalley->getId(), __('plugins.importexport.common.error.issueGalleyFileMissing', ['id' => $issueGalley->getId(), 'path' => $filePath]));
+				return false;
+			}
+
 			$issueFileNode = $doc->createElementNS($deployment->getNamespace(), 'issue_file');
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_name', htmlspecialchars($issueFile->getServerFileName(), ENT_COMPAT, 'UTF-8')));
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_type', htmlspecialchars($issueFile->getFileType(), ENT_COMPAT, 'UTF-8')));
@@ -110,16 +123,15 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_uploaded', strftime('%Y-%m-%d', strtotime($issueFile->getDateUploaded()))));
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_modified', strftime('%Y-%m-%d', strtotime($issueFile->getDateModified()))));
 
-			import('classes.file.IssueFileManager');
-			$issueFileManager = new IssueFileManager($issueGalley->getIssueId());
 
-			$filePath = $issueFileManager->getFilesDir() . '/' . $issueFileManager->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName();
 			$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
 			$embedNode->setAttribute('encoding', 'base64');
 			$issueFileNode->appendChild($embedNode);
 
 			$issueGalleyNode->appendChild($issueFileNode);
+			return true;
 		}
+		return false;
 	}
 
 	/**
