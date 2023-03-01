@@ -118,12 +118,12 @@ class IssueGalleyNativeXmlFilter extends \PKP\plugins\importexport\native\filter
 
         $issueFileManager = new IssueFileManager($issueGalley->getIssueId());
         $filePath = $issueFileManager->getFilesDir() . '/' . $issueFileManager->contentTypeToPath($issueFile->getContentType()) . '/' . $issueFile->getServerFileName();
+        $deployment = $this->getDeployment();
         if (!file_exists($filePath)) {
-            $this->getDeployment()->addWarning(Application::ASSOC_TYPE_ISSUE_GALLEY, $issueGalley->getId(), __('plugins.importexport.common.error.issueGalleyFileMissing', ['id' => $issueGalley->getId(), 'path' => $filePath]));
+            $deployment->addWarning(Application::ASSOC_TYPE_ISSUE_GALLEY, $issueGalley->getId(), __('plugins.importexport.common.error.issueGalleyFileMissing', ['id' => $issueGalley->getId(), 'path' => $filePath]));
             return false;
         }
 
-        $deployment = $this->getDeployment();
         $issueFileNode = $doc->createElementNS($deployment->getNamespace(), 'issue_file');
         $issueFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'file_name', htmlspecialchars($issueFile->getServerFileName(), ENT_COMPAT, 'UTF-8')));
         $issueFileNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'file_type', htmlspecialchars($issueFile->getFileType(), ENT_COMPAT, 'UTF-8')));
