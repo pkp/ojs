@@ -13,12 +13,16 @@
  * @brief Plugin to recommend similar articles.
  */
 
+use APP\Services\IssueService;
+use APP\Services\QueryBuilders\SubmissionQueryBuilder;
+use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Database\Query\Builder;
+use Illuminate\Database\Query\JoinClause;
 
 import('lib.pkp.classes.plugins.GenericPlugin');
 
-define('RECOMMEND_BY_SIMILARITY_PLUGIN_COUNT', 10);
-
 class RecommendBySimilarityPlugin extends GenericPlugin {
+	const RECOMMEND_BY_SIMILARITY_PLUGIN_COUNT = 10;
 
 	//
 	// Implement template methods from Plugin.
@@ -28,7 +32,9 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 	 */
 	function register($category, $path, $mainContextId = null) {
 		$success = parent::register($category, $path, $mainContextId);
-		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return $success;
+		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) {
+			return $success;
+		}
 
 		if ($success && $this->getEnabled($mainContextId)) {
 			HookRegistry::register('Templates::Article::Footer::PageFooter', array($this, 'callbackTemplateArticlePageFooter'));
@@ -57,44 +63,85 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 	/**
 	 * @see templates/article/footer.tpl
 	 */
-	function callbackTemplateArticlePageFooter($hookName, $params) {
-		$smarty =& $params[1];
+	function callbackTemplateArticlePageFooter(string $hookName, $params) {
+		/** @var Smarty */
+		$smarty = $params[1];
 		$output =& $params[2];
 
 		// Identify similarity terms for the given article.
 		$displayedArticle = $smarty->getTemplateVars('article');
 		$articleId = $displayedArticle->getId();
 		import('classes.search.ArticleSearch');
+		import('classes.search.ArticleSearchIndex');
 		$articleSearch = new ArticleSearch();
-		$searchTerms = $articleSearch->getSimilarityTerms($articleId);
-		if (empty($searchTerms)) return false;
+		$keywords = (new ArticleSearchIndex())->filterKeywords($articleSearch->getSimilarityTerms($articleId));
+		$keywords = array_filter(array_unique($keywords), 'strlen');
+		if (!count($keywords)) {
+			return false;
+		}
 
-		// If we got similarity terms then execute a search with...
-		// ... request, journal and error messages, ...
 		$request = Application::get()->getRequest();
 		$router = $request->getRouter();
 		$journal = $router->getContext($request);
-		$error = null;
-		// ... search keywords ...
-		$query = implode(' ', $searchTerms);
-		$keywords = array(null => $query);
-		// ... and pagination.
 		$rangeInfo = Handler::getRangeInfo($request, 'articlesBySimilarity');
-		$rangeInfo->setCount(RECOMMEND_BY_SIMILARITY_PLUGIN_COUNT);
-		$smarty->assign(array(
-			'articlesBySimilarity' => $articleSearch->retrieveResults(
-					$request,
-					$journal,
-					$keywords,
-					$error,
-					null, null,
-					$rangeInfo,
-					array($articleId)
-			),
-			'articlesBySimilarityQuery' => $query,
-		));
+		$rangeInfo->setCount(static::RECOMMEND_BY_SIMILARITY_PLUGIN_COUNT);
+
+		/** @var Builder */
+		$queryBuilder = (new SubmissionQueryBuilder())
+			->filterByContext($journal->getId())
+			->filterByStatus(STATUS_PUBLISHED)
+			->getQuery();
+
+		$queryBuilder->where('s.submission_id', '<>', $articleId);
+
+		$keywordIdFields = [];
+		$orderByMatches = $orderByMatchCount = [];
+		foreach ($keywords as $i => $term) {
+			$alias = "k{$i}";
+			$keywordIdFields[] = "{$alias}.keyword_id";
+			$queryBuilder->leftJoin("submission_search_keyword_list AS {$alias}", function (JoinClause $join) use ($term, $alias) {
+				$join->where("{$alias}.keyword_text", '=', $term);
+			});
+			$orderBy = '(' . Capsule::table('submission_search_objects', 'o')
+				->join("submission_search_object_keywords AS o{$i}", "o{$i}.object_id", '=', 'o.object_id')
+				->whereColumn("{$alias}.keyword_id", '=', "o{$i}.keyword_id")
+				->whereColumn('s.submission_id', '=', 'o.submission_id')
+				->selectRaw('COUNT(0)')
+				->toSql() . ')';
+			$orderByMatchCount[] = $orderBy;
+			$orderByMatches[] = "CASE WHEN {$orderBy} = 0 THEN 1 ELSE 0 END";
+		}
+		// Clear any previous ORDER BY
+		$queryBuilder->orders = [];
+		$queryBuilder->orderBy(Capsule::raw(implode(' + ', $orderByMatches)))
+			->orderByDesc(Capsule::raw(implode(' + ', $orderByMatchCount)))
+			->whereExists(function (Builder $query) use ($keywordIdFields) {
+				$query->from('submission_search_objects', 'o')
+					->join('submission_search_object_keywords AS ok', 'o.object_id', '=', 'ok.object_id')
+					->whereIn('ok.keyword_id', array_map('\\Illuminate\\Database\\Capsule\\Manager::raw', $keywordIdFields))
+					->whereColumn('s.submission_id', '=', 'o.submission_id');
+			});
+
+		/** @var SubmissionDAO */
+		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
+		$result = $submissionDao->retrieveRange($sql = $queryBuilder->toSql(), $params = $queryBuilder->getBindings(), $rangeInfo);
+		$resultSet = new DAOResultFactory($result, $submissionDao, '_fromRow', [], $sql, $params, $rangeInfo);
+
+		$smarty->assign([
+			'articlesBySimilarity' => $resultSet,
+			'articlesBySimilarityQuery' => implode(' ', $keywords),
+			'journal' => $journal,
+			'plugin' => $this
+		]);
 		$output .= $smarty->fetch($this->getTemplateResource('articleFooter.tpl'));
 		return false;
 	}
-}
 
+	public function getIssue(int $issueId): ?Issue
+	{
+		static $cache = [];
+		/** @var IssueService */
+		$issueService = Services::get('issue');
+		return $cache[$issueId] ?? $cache[$issueId] = $issueService->get($issueId);
+	}
+}

@@ -9,24 +9,26 @@
  *}
 <div id="articlesBySimilarityList">
 	{if !$articlesBySimilarity->wasEmpty()}
-		<h3>{translate key="plugins.generic.recommendBySimilarity.heading"}</h3>
-
+		<h3>
+			<a name="articlesBySimilarity">{translate key="plugins.generic.recommendBySimilarity.heading"}</a>
+		</h3>
 		<ul>
-			{iterate from=articlesBySimilarity item=articleBySimilarity}
-				{assign var=submission value=$articleBySimilarity.publishedSubmission}
-				{assign var=article value=$articleBySimilarity.article}
-				{assign var=issue value=$articleBySimilarity.issue}
-				{assign var=journal value=$articleBySimilarity.journal}
+			{iterate from=articlesBySimilarity item=submission}
+				{assign var=publication value=$submission->getCurrentPublication()}
+				{assign var=issue value=$plugin->getIssue((int) $publication->getData('issueId'))}
+
 				<li>
-					{foreach from=$article->getAuthors() item=author}
+					{foreach from=$publication->getData('authors') item=author}
 						{$author->getFullName()|escape},
 					{/foreach}
 					<a href="{url journal=$journal->getPath() page="article" op="view" path=$submission->getBestId()}">
-						{$article->getLocalizedTitle()|strip_unsafe_html}
-					</a>,
+						{$submission->getLocalizedTitle()|strip_unsafe_html}
+					</a>
+					{if $issue},
 					<a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId()}">
 						{$journal->getLocalizedName()|escape}: {$issue->getIssueIdentification()|escape}
 					</a>
+					{/if}
 				</li>
 			{/iterate}
 		</ul>
