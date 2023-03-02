@@ -69,11 +69,6 @@ datetime_format_short = "Y-m-d h:i A"
 datetime_format_long = "F j, Y - h:i A"
 time_format = "h:i A"
 
-; Use URL parameters instead of CGI PATH_INFO. This is useful for broken server
-; setups that don't support the PATH_INFO environment variable.
-; WARNING: This option is DEPRECATED and will be removed in the future.
-disable_path_info = Off
-
 ; Use fopen(...) for URL-based reads. Modern versions of dspace
 ; will not accept requests using fopen, as it does not provide a
 ; User Agent, so this option is disabled by default. If this feature

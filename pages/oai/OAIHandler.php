@@ -39,7 +39,7 @@ class OAIHandler extends Handler
         PluginRegistry::loadCategory('oaiMetadataFormats', true);
 
         $oai = new JournalOAI(new OAIConfig($request->url(null, 'oai'), Config::getVar('oai', 'repository_id')));
-        if (!$request->getJournal() && $request->getRequestedJournalPath() != 'index') {
+        if (!$request->getJournal() && $request->getRouter()->getRequestedContextPath($request) != 'index') {
             $dispatcher = $request->getDispatcher();
             return $dispatcher->handle404();
         }
