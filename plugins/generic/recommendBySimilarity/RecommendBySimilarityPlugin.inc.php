@@ -62,6 +62,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 	//
 	/**
 	 * @see templates/article/footer.tpl
+	 * @todo Revert back to using the ArticleSearch::retrieveResults() once its performance is addressed
 	 */
 	function callbackTemplateArticlePageFooter(string $hookName, $params) {
 		/** @var Smarty */
