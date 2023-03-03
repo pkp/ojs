@@ -18,21 +18,6 @@ import './commands';
 
 require('cypress-failed-log');
 
-beforeEach(function() {
-	cy.abortEarly(this);
-});
-
 afterEach(function() {
-	cy.abortEarly(this);
 	cy.runQueueJobs();
-});
-
-before(() => {
-	if (Cypress.browser.isHeaded) {
-		// Reset the shouldSkip flag at the start of a run, so that it
-		//  doesn't carry over into subsequent runs.
-		// Do this only for headed runs because in headless runs,
-		//  the `before` hook is executed for each spec file.
-		cy.task('resetShouldSkipFlag');
-	}
 });
