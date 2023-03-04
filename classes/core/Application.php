@@ -69,26 +69,11 @@ class Application extends PKPApplication
     }
 
     /**
-     * Get the "context depth" of this application, i.e. the number of
-     * parts of the URL after index.php that represent the context of
-     * the current request (e.g. Journal [1], or Conference and
-     * Scheduled Conference [2]).
-     *
-     * @return int
+     * Get the name of the application context.
      */
-    public function getContextDepth()
+    public function getContextName(): string
     {
-        return 1;
-    }
-
-    /**
-     * Get the list of context elements.
-     *
-     * @return array
-     */
-    public function getContextList()
-    {
-        return ['journal'];
+        return 'journal';
     }
 
     /**
