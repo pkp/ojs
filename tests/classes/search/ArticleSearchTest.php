@@ -18,13 +18,13 @@
 namespace APP\tests\classes\search;
 
 use APP\core\Application;
+use APP\core\PageRouter;
 use APP\journal\Journal;
 use APP\journal\JournalDAO;
 use APP\search\ArticleSearch;
 use APP\search\ArticleSearchDAO;
 use Mockery;
 use Mockery\MockInterface;
-use PKP\core\PKPRouter;
 use PKP\db\DAORegistry;
 use PKP\plugins\Hook;
 use PKP\tests\PKPTestCase;
@@ -68,7 +68,7 @@ class ArticleSearchTest extends PKPTestCase
 
         $request = Application::get()->getRequest();
         if (is_null($request->getRouter())) {
-            $router = new PKPRouter();
+            $router = new PageRouter();
             $request->setRouter($router);
         }
     }
@@ -230,7 +230,7 @@ class ArticleSearchTest extends PKPTestCase
     private function registerMockArticleSearchDAO()
     {
         // Mock an ArticleSearchDAO.
-        $articleSearchDAO = $this->getMockBuilder(ArticleSearchDAO::class)
+        $articleSearchDao = $this->getMockBuilder(ArticleSearchDAO::class)
             ->onlyMethods(['getPhraseResults'])
             ->getMock();
 
@@ -245,12 +245,12 @@ class ArticleSearchTest extends PKPTestCase
         ];
 
         // Mock the getPhraseResults() method.
-        $articleSearchDAO->expects($this->any())
+        $articleSearchDao->expects($this->any())
             ->method('getPhraseResults')
             ->will($this->returnValue($searchResult));
 
         // Register the mock DAO.
-        DAORegistry::registerDAO('ArticleSearchDAO', $articleSearchDAO);
+        DAORegistry::registerDAO('ArticleSearchDAO', $articleSearchDao);
     }
 
 
@@ -261,7 +261,7 @@ class ArticleSearchTest extends PKPTestCase
     private function registerMockJournalDAO()
     {
         // Mock a JournalDAO.
-        $journalDAO = $this->getMockBuilder(JournalDAO::class)
+        $journalDao = $this->getMockBuilder(JournalDAO::class)
             ->onlyMethods(['getById'])
             ->getMock();
 
@@ -270,11 +270,11 @@ class ArticleSearchTest extends PKPTestCase
         $journal->setId(1);
 
         // Mock the getById() method.
-        $journalDAO->expects($this->any())
+        $journalDao->expects($this->any())
             ->method('getById')
             ->will($this->returnValue($journal));
 
         // Register the mock DAO.
-        DAORegistry::registerDAO('JournalDAO', $journalDAO);
+        DAORegistry::registerDAO('JournalDAO', $journalDao);
     }
 }
