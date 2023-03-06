@@ -1,13 +1,13 @@
 # José Carvalho <josekarvalho@gmail.com>, 2022.
 # Carla Marques <carla.marques@usdb.uminho.pt>, 2022, 2023.
-# José Carvalho <jcarvalho@keep.pt>, 2022.
+# José Carvalho <jcarvalho@keep.pt>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2023-02-10 15:53+0000\n"
-"Last-Translator: Carla Marques <carla.marques@usdb.uminho.pt>\n"
+"PO-Revision-Date: 2023-03-06 09:19+0000\n"
+"Last-Translator: José Carvalho <jcarvalho@keep.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/locale/pt_PT/>\n"
 "Language: pt_PT\n"
@@ -2322,7 +2322,7 @@ msgid "notification.type.newAnnouncement"
 msgstr "Foi publicada uma nova notícia."
 
 msgid "notification.type.openAccess"
-msgstr ""
+msgstr "Uma edição ficou em acesso aberto."
 
 msgid "notification.type.reviewerFormComment"
 msgstr "Um formulário de revisão sobre \"{$title}\" foi enviado."
