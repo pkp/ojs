@@ -3,7 +3,7 @@
 # Pencho Toncgev <ptonchev@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-02-28 14:40+0000\n"
+"PO-Revision-Date: 2023-03-06 18:33+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "bg/>\n"
@@ -2651,3 +2651,16 @@ msgstr ""
 
 #~ msgid "doi.manager.settings.enablePublicationDoi"
 #~ msgstr "Статии"
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"Изображението на корицата на броя {$id} не е експортирано, файлът му не е "
+"намерен в пътя „{$path}“."
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "Типография на брой не можа да бъде импортирана, файлът й липсва."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"Типография на брой {$id} не може да бъде експортирана, нейният файл не е "
+"намерен в пътя „{$path}“."
