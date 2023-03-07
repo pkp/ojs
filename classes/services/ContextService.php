@@ -18,12 +18,15 @@ namespace APP\services;
 use APP\article\ArticleTombstoneManager;
 use APP\core\Application;
 use APP\facades\Repo;
-
 use APP\file\PublicFileManager;
+use APP\subscription\IndividualSubscriptionDAO;
+use APP\subscription\InstitutionalSubscriptionDAO;
+use APP\subscription\SubscriptionTypeDAO;
 use PKP\config\Config;
 use PKP\db\DAORegistry;
 use PKP\file\TemporaryFileManager;
 use PKP\plugins\Hook;
+use PKP\submission\GenreDAO;
 
 class ContextService extends \PKP\services\PKPContextService
 {
@@ -145,7 +148,7 @@ class ContextService extends \PKP\services\PKPContextService
         $articleTombstoneManager = new ArticleTombstoneManager();
         $articleTombstoneManager->insertTombstonesByContext($context);
 
-        $genreDao = DAORegistry::getDAO('GenreDAO');
+        $genreDao = DAORegistry::getDAO('GenreDAO'); /** @var GenreDAO $genreDao */
         $genreDao->deleteByContextId($context->getId());
     }
 
@@ -166,12 +169,12 @@ class ContextService extends \PKP\services\PKPContextService
 
         Repo::issue()->deleteByContextId($context->getId());
 
-        $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
+        $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $subscriptionDao */
         $subscriptionDao->deleteByJournalId($context->getId());
-        $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
+        $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $subscriptionDao */
         $subscriptionDao->deleteByJournalId($context->getId());
 
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $subscriptionTypeDao->deleteByJournal($context->getId());
 
         Repo::submission()->deleteByContextId($context->getId());
