@@ -321,8 +321,8 @@ sendmail_path = "/usr/sbin/sendmail -bs"
 ; smtp_username = username
 ; smtp_password = password
 
-; Enable suppressing verification of SMTP certificate in PHPMailer
-; Note: this is not recommended per PHPMailer documentation
+; Enable suppressing SSL/TLS peer verification by SMTP transports
+; Note: this is not recommended for security reasons
 ; smtp_suppress_cert_check = On
 
 ; Allow envelope sender to be specified
