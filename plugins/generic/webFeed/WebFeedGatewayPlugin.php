@@ -163,7 +163,8 @@ class WebFeedGatewayPlugin extends GatewayPlugin
                     'includeIdentifiers' => $includeIdentifiers
                 ]
             )
-            ->display($this->parentPlugin->getTemplateResource("{$feedType}.tpl"), static::FEED_MIME_TYPE[$feedType]);
+            ->setHeaders(['content-type: ' . static::FEED_MIME_TYPE[$feedType] . '; charset=utf-8'])
+            ->display($this->parentPlugin->getTemplateResource("{$feedType}.tpl"));
         return true;
     }
 
