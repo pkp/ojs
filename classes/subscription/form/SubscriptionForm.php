@@ -76,7 +76,7 @@ class SubscriptionForm extends Form
         // Subscription type is provided
         $this->addCheck(new \PKP\form\validation\FormValidator($this, 'typeId', 'required', 'manager.subscriptions.form.typeIdRequired'));
         // Notify email flag is valid value
-        $this->addCheck(new \PKP\form\validation\FormValidatorInSet($this, 'notifyEmail', 'optional', 'manager.subscriptions.form.notifyEmailValid', ['on']));
+        $this->addCheck(new \PKP\form\validation\FormValidatorBoolean($this, 'notifyEmail', 'manager.subscriptions.form.notifyEmailValid'));
 
         $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
         $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
@@ -186,8 +186,8 @@ class SubscriptionForm extends Form
         }
 
         // If notify email is requested, ensure subscription contact name and email exist.
-        if ($this->_data['notifyEmail'] == 1) {
-            $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'notifyEmail', 'required', 'manager.subscriptions.form.subscriptionContactRequired', function () {
+        if ($this->getData('notifyEmail')) {
+            $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'notifyEmail', 'optional', 'manager.subscriptions.form.subscriptionContactRequired', function () {
                 $request = Application::get()->getRequest();
                 $journal = $request->getJournal();
                 $subscriptionName = $journal->getData('subscriptionName');
@@ -233,8 +233,8 @@ class SubscriptionForm extends Form
         $request = Application::get()->getRequest();
         $context = $request->getJournal();
         $user = Repo::user()->get($this->subscription->getUserId());
-        $subscriptionName = $context->getData('subscriptionName');
         $subscriptionEmail = $context->getData('subscriptionEmail');
+        $subscriptionName = $context->getData('subscriptionName');
 
         $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $subscriptionType = $subscriptionTypeDao->getById($this->subscription->getTypeId(), $context->getId());

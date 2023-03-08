@@ -19,6 +19,7 @@ use APP\core\Application;
 use APP\notification\NotificationManager;
 use APP\subscription\form\SubscriptionForm;
 use APP\subscription\IndividualSubscription;
+use Exception;
 use Illuminate\Support\Facades\Mail;
 use PKP\db\DAORegistry;
 use PKP\notification\PKPNotification;
