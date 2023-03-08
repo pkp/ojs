@@ -18,23 +18,11 @@ use PKP\form\Form;
 
 class WebFeedSettingsForm extends Form
 {
-    /** @var int Associated context ID */
-    private $_contextId;
-
-    /** @var WebFeedPlugin Web feed plugin */
-    private $_plugin;
-
     /**
      * Constructor
-     *
-     * @param WebFeedPlugin $plugin Web feed plugin
-     * @param int $contextId Context ID
      */
-    public function __construct($plugin, $contextId)
+    public function __construct(private WebFeedPlugin $plugin, private int $contextId)
     {
-        $this->_contextId = $contextId;
-        $this->_plugin = $plugin;
-
         parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
         $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
         $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
@@ -43,10 +31,10 @@ class WebFeedSettingsForm extends Form
     /**
      * Initialize form data.
      */
-    public function initData()
+    public function initData(): void
     {
-        $contextId = $this->_contextId;
-        $plugin = $this->_plugin;
+        $contextId = $this->contextId;
+        $plugin = $this->plugin;
 
         $this->setData('displayPage', $plugin->getSetting($contextId, 'displayPage'));
         $this->setData('displayItems', $plugin->getSetting($contextId, 'displayItems'));
@@ -56,7 +44,7 @@ class WebFeedSettingsForm extends Form
     /**
      * Assign form data to user-submitted data.
      */
-    public function readInputData()
+    public function readInputData(): void
     {
         $this->readUserVars(['displayPage', 'displayItems', 'recentItems']);
 
@@ -78,10 +66,10 @@ class WebFeedSettingsForm extends Form
      *
      * @param null|mixed $template
      */
-    public function fetch($request, $template = null, $display = false)
+    public function fetch($request, $template = null, $display = false): string
     {
         $templateMgr = TemplateManager::getManager($request);
-        $templateMgr->assign('pluginName', $this->_plugin->getName());
+        $templateMgr->assign('pluginName', $this->plugin->getName());
         return parent::fetch($request, $template, $display);
     }
 
@@ -90,8 +78,8 @@ class WebFeedSettingsForm extends Form
      */
     public function execute(...$functionArgs)
     {
-        $plugin = $this->_plugin;
-        $contextId = $this->_contextId;
+        $plugin = $this->plugin;
+        $contextId = $this->contextId;
 
         $plugin->updateSetting($contextId, 'displayPage', $this->getData('displayPage'));
         $plugin->updateSetting($contextId, 'displayItems', $this->getData('displayItems'));

@@ -17,25 +17,18 @@ use APP\facades\Repo;
 
 class WebFeedBlockPlugin extends \PKP\plugins\BlockPlugin
 {
-    /** @var WebFeedPlugin Parent plugin */
-    protected $_parentPlugin;
-
     /**
-     * @param WebFeedPlugin $parentPlugin
+     * Constructor
      */
-    public function __construct($parentPlugin)
+    public function __construct(protected WebFeedPlugin $parentPlugin)
     {
         parent::__construct();
-        $this->_parentPlugin = $parentPlugin;
     }
 
     /**
-     * Get the name of this plugin. The name must be unique within
-     * its category.
-     *
-     * @return string name of plugin
+     * Get the name of this plugin. The name must be unique within its category.
      */
-    public function getName()
+    public function getName(): string
     {
         return 'WebFeedBlockPlugin';
     }
@@ -43,7 +36,7 @@ class WebFeedBlockPlugin extends \PKP\plugins\BlockPlugin
     /**
      * Hide this plugin from the management interface (it's subsidiary)
      */
-    public function getHideManagement()
+    public function getHideManagement(): bool
     {
         return true;
     }
@@ -51,9 +44,8 @@ class WebFeedBlockPlugin extends \PKP\plugins\BlockPlugin
     /**
      * Get the display name of this plugin.
      *
-     * @return string
      */
-    public function getDisplayName()
+    public function getDisplayName(): string
     {
         return __('plugins.generic.webfeed.displayName');
     }
@@ -61,27 +53,25 @@ class WebFeedBlockPlugin extends \PKP\plugins\BlockPlugin
     /**
      * Get a description of the plugin.
      */
-    public function getDescription()
+    public function getDescription(): string
     {
         return __('plugins.generic.webfeed.description');
     }
 
     /**
      * Override the builtin to get the correct plugin path.
-     *
-     * @return string
      */
-    public function getPluginPath()
+    public function getPluginPath(): string
     {
-        return $this->_parentPlugin->getPluginPath();
+        return $this->parentPlugin->getPluginPath();
     }
 
     /**
      * @copydoc PKPPlugin::getTemplatePath
      */
-    public function getTemplatePath($inCore = false)
+    public function getTemplatePath($inCore = false): string
     {
-        return $this->_parentPlugin->getTemplatePath($inCore) . '/templates';
+        return $this->parentPlugin->getTemplatePath($inCore) . '/templates';
     }
 
     /**
@@ -89,10 +79,8 @@ class WebFeedBlockPlugin extends \PKP\plugins\BlockPlugin
      *
      * @param object $templateMgr
      * @param PKPRequest $request
-     *
-     * @return $string
      */
-    public function getContents($templateMgr, $request = null)
+    public function getContents($templateMgr, $request = null): string
     {
         $journal = $request->getJournal();
         if (Repo::issue()->getCurrent($journal->getId(), true)) {
