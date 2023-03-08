@@ -71,7 +71,9 @@
 
 				{* optional elements *}
 				{* <author/> *}
+				{if !empty($publication->getAuthorString($userGroups))}
 				<dc:creator>{$publication->getAuthorString($userGroups)|escape:"html"}</dc:creator>
+				{/if}
 
 				{foreach from=$item.identifiers item=identifier}
 					{foreach from=$identifier.values item=value}
