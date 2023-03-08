@@ -144,7 +144,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin
                 ->orderBy(Collector::ORDERBY_LAST_MODIFIED, Collector::ORDER_DIR_DESC)
                 ->getMany();
             $latestDate = $submissions->first()?->getData('lastModified');
-            $submissions = $submissions->map(fn (Submission $submission) => ['submission' => $submission, 'identifiers' => $this->_getIdentifiers($submission)]);
+            $submissions = $submissions->map(fn (Submission $submission) => ['submission' => $submission, 'identifiers' => $this->getIdentifiers($submission)]);
             $userGroups = Repo::userGroup()->getCollector()->filterByContextIds([$journal->getId()])->getMany();
         } else {
             $submissions = Repo::submission()->getInSections($issue->getId(), $journal->getId());
@@ -171,11 +171,13 @@ class WebFeedGatewayPlugin extends GatewayPlugin
 
     /**
      * Retrieves the identifiers assigned to a submission
+     *
+     * @return array<array{'type':string,'label':string,'values':string[]}>
      */
-    private function _getIdentifiers(Submission $submission): array
+    private function getIdentifiers(Submission $submission): array
     {
         $identifiers = [];
-        if ($section = $this->_getSection($submission->getSectionId())) {
+        if ($section = $this->getSection($submission->getSectionId())) {
             $identifiers[] = ['type' => 'section', 'label' => __('section.section'), 'values' => [$section->getLocalizedTitle()]];
         }
 
@@ -202,7 +204,7 @@ class WebFeedGatewayPlugin extends GatewayPlugin
     /**
      * Retrieves a section
      */
-    private function _getSection(?int $sectionId): ?Section
+    private function getSection(?int $sectionId): ?Section
     {
         static $sections = [];
         return $sectionId

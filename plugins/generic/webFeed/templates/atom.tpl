@@ -70,7 +70,7 @@
 					{if $includeIdentifiers}
 						{foreach from=$item.identifiers item=identifier}
 							{$identifier.label|strip|escape:"html"}: {', '|implode:$identifier.values|strip|escape:"html"}&lt;br /&gt;
-						{/foreach}{* categories *}
+						{/foreach}{* summary identifiers *}
 						&lt;br /&gt;
 					{/if}
 					{$publication->getLocalizedData('abstract')|strip|escape:"html"}
@@ -92,5 +92,5 @@
 			{* <source/> *}
 			<rights>{translate|escape key="submission.copyrightStatement" copyrightYear=$publication->getData('copyrightYear') copyrightHolder=$publication->getLocalizedData('copyrightHolder')}</rights>
 		</entry>
-	{/foreach}{* articles *}
+	{/foreach}{* submissions *}
 </feed>
