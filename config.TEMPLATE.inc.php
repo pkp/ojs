@@ -527,7 +527,7 @@ default_queue = "queue"
 ; sites. Instead, a worker daemon or cron job should be configured
 ; to process jobs off the application's main thread.
 ;
-; See: <link-to-documentation>
+; See: https://docs.pkp.sfu.ca/admin-guide/en/advanced-jobs
 ;
 job_runner = On
 
