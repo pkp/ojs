@@ -55,36 +55,39 @@
 			{assign var=publication value=$submission->getCurrentPublication()}
 			<item>
 				{* required elements *}
-				{* required elements *}
-				<title>{$submission->getLocalizedTitle()|strip|escape:"html"}</title>
+				<title>{$publication->getLocalizedTitle()|strip|escape:"html"}</title>
 				<link>{url page="article" op="view" path=$submission->getBestId()}</link>
-				<description>{$submission->getLocalizedAbstract()|strip|escape:"html"}</description>
+				{if $publication->getLocalizedData('abstract') || $includeIdentifiers}
+					<description>
+						{if $includeIdentifiers}
+							{foreach from=$item.identifiers item=identifier}
+								{$identifier.label|strip|escape:"html"}: {', '|implode:$identifier.values|strip|escape:"html"}&lt;br /&gt;
+							{/foreach}{* categories *}
+							&lt;br /&gt;
+						{/if}
+						{$publication->getLocalizedData('abstract')|strip|escape:"html"}
+					</description>
+				{/if}
 
 				{* optional elements *}
 				{* <author/> *}
-				<dc:creator>{$publication->getAuthorString()|escape:"html"}</dc:creator>
+				<dc:creator>{$publication->getAuthorString($userGroups)|escape:"html"}</dc:creator>
 
 				{foreach from=$item.identifiers item=identifier}
-					<category domain="https://pkp.sfu.ca/ops/category/{$identifier.type|strip|escape:"html"}">{$identifier.value|strip|escape:"html"}</category>
+					{foreach from=$identifier.values item=value}
+						<category domain="https://pkp.sfu.ca/ojs/category/{$identifier.type|strip|escape:"html"}">{$value|strip|escape:"html"}</category>
+					{/foreach}
 				{/foreach}{* categories *}
 				{* <comments/> *}
 				{* <source/> *}
 
 				<dc:rights>
-					{translate|escape key="submission.copyrightStatement" copyrightYear=$submission->getCopyrightYear() copyrightHolder=$submission->getLocalizedCopyrightHolder()}
-					{$submission->getLicenseURL()|escape}
+					{translate|escape key="submission.copyrightStatement" copyrightYear=$publication->getData('copyrightYear') copyrightHolder=$publication->getLocalizedData('copyrightHolder')}
+					{$publication->getData('licenseUrl')|escape}
 				</dc:rights>
-				{if $publication->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_OPEN && $submission->isCCLicense()}
-					<cc:license rdf:resource="{$submission->getLicenseURL()|escape}" />
-				{else}
-					<cc:license></cc:license>
-				{/if}
-
+				<cc:license {if $publication->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_OPEN && $publication->isCCLicense()}rdf:resource="{$publication->getData('licenseUrl')|escape}"{/if} />
 				<guid isPermaLink="true">{url page="article" op="view" path=$submission->getBestId()}</guid>
-				{if $submission->getDatePublished()}
-					{capture assign="datePublished"}{$submission->getDatePublished()|strtotime}{/capture}
-					<pubDate>{$smarty.const.DATE_RSS|date:$datePublished}</pubDate>
-				{/if}
+				<pubDate>{$publication->getData('datePublished')|date_format:$smarty.const.DATE_RSS}</pubDate>
 			</item>
 		{/foreach}{* articles *}
 	</channel>

@@ -71,53 +71,55 @@
 	<item rdf:about="{url page="article" op="view" path=$submission->getBestId()}">
 
 		{* required elements *}
-		<title>{$submission->getLocalizedTitle()|strip|escape:"html"}</title>
+		<title>{$publication->getLocalizedTitle()|strip|escape:"html"}</title>
 		<link>{url page="article" op="view" path=$submission->getBestId()}</link>
 
 		{* optional elements *}
-		{if $submission->getLocalizedAbstract()}
-			<description>{$submission->getLocalizedAbstract()|strip|escape:"html"}</description>
+		{if $publication->getLocalizedData('abstract') || $includeIdentifiers}
+			<description>
+				{if $includeIdentifiers}
+					{foreach from=$item.identifiers item=identifier}
+						{$identifier.label|strip|escape:"html"}: {', '|implode:$identifier.values|strip|escape:"html"}&lt;br /&gt;
+					{/foreach}{* categories *}
+					&lt;br /&gt;
+				{/if}
+				{$publication->getLocalizedData('abstract')|strip|escape:"html"}
+			</description>
 		{/if}
 
 		{foreach from=$item.identifiers item=identifier}
-			<dc:subject>
-				<rdf:Description>
-					<taxo:topic rdf:resource="https://pkp.sfu.ca/ops/category/{$identifier.type|strip|escape:"html"}" />
-					<rdf:value>{$identifier.value|strip|escape:"html"}</rdf:value>
-				</rdf:Description>
-			</dc:subject>
+			{foreach from=$identifier.values item=value}
+				<dc:subject>
+					<rdf:Description>
+						<taxo:topic rdf:resource="https://pkp.sfu.ca/ojs/category/{$identifier.type|strip|escape:"html"}" />
+						<rdf:value>{$value|strip|escape:"html"}</rdf:value>
+					</rdf:Description>
+				</dc:subject>
+			{/foreach}
 		{/foreach}{* categories *}
 
-		{foreach from=$submission->getCurrentPublication()->getData('authors') item=author name=authorList}
+		{foreach from=$publication->getData('authors') item=author name=authorList}
 			<dc:creator>{$author->getFullName(false)|strip|escape:"html"}</dc:creator>
 		{/foreach}
 
 		<dc:rights>
-			{translate|escape key="submission.copyrightStatement" copyrightYear=$submission->getCopyrightYear() copyrightHolder=$submission->getLocalizedCopyrightHolder()}
-			{$submission->getLicenseURL()|escape}
+			{translate|escape key="submission.copyrightStatement" copyrightYear=$publication->getData('copyrightYear') copyrightHolder=$publication->getLocalizedData('copyrightHolder')}
+			{$publication->getData('licenseUrl')|escape}
 		</dc:rights>
-		{if $publication->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_OPEN && $submission->isCCLicense()}
-			<cc:license rdf:resource="{$submission->getLicenseURL()|escape}" />
-		{else}
-			<cc:license></cc:license>
+		<cc:license {if $publication->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_OPEN && $publication->isCCLicense()}rdf:resource="{$publication->getData('licenseUrl')|escape}"{/if} />
+
+		<dc:date>{$publication->getData('datePublished')|date_format:"%Y-%m-%d"}</dc:date>
+		<prism:publicationDate>{$publication->getData('datePublished')|date_format:"%Y-%m-%d"}</prism:publicationDate>
+
+		{if $publication->getStartingPage()}
+			<prism:startingPage>{$publication->getStartingPage()|escape}</prism:startingPage>
+		{/if}
+		{if $publication->getEndingPage()}
+			<prism:endingPage>{$publication->getEndingPage()|escape}</prism:endingPage>
 		{/if}
 
-		{if $submission->getDatePublished()}
-			<dc:date>{$submission->getDatePublished()|date_format:"%Y-%m-%d"}</dc:date>
-			<prism:publicationDate>{$submission->getDatePublished()|date_format:"%Y-%m-%d"}</prism:publicationDate>
-		{/if}
-
-		{if $submission->getPages()}
-			{if $submission->getStartingPage()}
-				<prism:startingPage>{$submission->getStartingPage()|escape}</prism:startingPage>
-			{/if}
-			{if $submission->getEndingPage()}
-				<prism:endingPage>{$submission->getEndingPage()|escape}</prism:endingPage>
-			{/if}
-		{/if}
-
-		{if $submission->getStoredPubId('doi')}
-			<prism:doi>{$submission->getStoredPubId('doi')|escape}</prism:doi>
+		{if $publication->getDoi()}
+			<prism:doi>{$publication->getDoi()|escape}</prism:doi>
 		{/if}
 	</item>
 {/foreach}{* articles *}

@@ -97,28 +97,18 @@ class WebFeedPlugin extends GenericPlugin
         $displayPage = $this->getSetting($currentJournal->getId(), 'displayPage');
 
         // Define when the <link> elements should appear
-        $contexts = 'frontend';
-        if ($displayPage == 'homepage') {
-            $contexts = ['frontend-index', 'frontend-issue'];
-        } elseif ($displayPage == 'issue') {
-            $contexts = 'frontend-issue';
-        }
+        $contexts = match ($displayPage) {
+            'homepage' => ['frontend-index', 'frontend-issue'],
+            'issue' => 'frontend-issue',
+            default => 'frontend'
+        };
 
-        $templateManager->addHeader(
-            'webFeedAtom+xml',
-            '<link rel="alternate" type="application/atom+xml" href="' . $request->url(null, 'gateway', 'plugin', ['WebFeedGatewayPlugin', 'atom']) . '">',
-            ['contexts' => $contexts]
-        );
-        $templateManager->addHeader(
-            'webFeedRdf+xml',
-            '<link rel="alternate" type="application/rdf+xml" href="' . $request->url(null, 'gateway', 'plugin', ['WebFeedGatewayPlugin', 'rss']) . '">',
-            ['contexts' => $contexts]
-        );
-        $templateManager->addHeader(
-            'webFeedRss+xml',
-            '<link rel="alternate" type="application/rss+xml" href="' . $request->url(null, 'gateway', 'plugin', ['WebFeedGatewayPlugin', 'rss2']) . '">',
-            ['contexts' => $contexts]
-        );
+        $className = explode('/', WebFeedGatewayPlugin::class);
+        $className = end($className);
+        foreach (WebFeedGatewayPlugin::FEED_MIME_TYPE as $feedType => $mimeType) {
+            $url = $request->url(null, 'gateway', 'plugin', [$className, $feedType]);
+            $templateManager->addHeader("webFeedPlugin{$feedType}", "<link rel=\"alternate\" type=\"{$mimeType}\" href=\"{$url}\">", ['contexts' => $contexts]);
+        }
 
         return false;
     }

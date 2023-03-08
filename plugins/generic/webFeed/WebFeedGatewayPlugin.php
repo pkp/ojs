@@ -15,15 +15,27 @@
 namespace APP\plugins\generic\webFeed;
 
 use APP\facades\Repo;
+use APP\section\Section;
 use APP\submission\Collector;
+use APP\submission\Submission;
 use APP\template\TemplateManager;
 use Exception;
-use PKP\db\DAORegistry;
+use PKP\category\Category;
+use PKP\core\Registry;
 use PKP\plugins\GatewayPlugin;
-use PKP\submission\PKPSubmission;
 
 class WebFeedGatewayPlugin extends GatewayPlugin
 {
+    public const ATOM = 'atom';
+    public const RSS = 'rss';
+    public const RSS2 = 'rss2';
+
+    public const FEED_MIME_TYPE = [
+        self::ATOM => 'application/atom+xml',
+        self::RSS => 'application/rdf+xml',
+        self::RSS2 => 'application/rss+xml'
+    ];
+
     public const DEFAULT_RECENT_ITEMS = 30;
 
     /**
@@ -98,92 +110,102 @@ class WebFeedGatewayPlugin extends GatewayPlugin
             return false;
         }
 
+        if (!$this->parentPlugin->getEnabled($journal->getId())) {
+            return false;
+        }
+
         // Make sure there's a current issue for this journal
         $issue = Repo::issue()->getCurrent($journal->getId(), true);
         if (!$issue) {
             return false;
         }
 
-        if (!$this->parentPlugin->getEnabled($journal->getId())) {
-            return false;
-        }
-
         // Make sure the feed type is specified and valid
-        $type = array_shift($args);
-        $templateConfig = match ($type) {
-            'rss' => ['template' => 'rss.tpl', 'mimeType' => 'application/rdf+xml'],
-            'rss2' => ['template' => 'rss2.tpl', 'mimeType' => 'application/rss+xml'],
-            'atom' => ['template' => 'atom.tpl', 'mimeType' => 'application/atom+xml'],
-            default => throw new Exception('Invalid feed format')
-        };
+        $feedType = array_shift($args);
+        if (!in_array($feedType, array_keys(static::FEED_MIME_TYPE))) {
+            throw new Exception('Invalid feed format');
+        }
 
         // Get limit setting from web feeds plugin
         $displayItems = $this->parentPlugin->getSetting($journal->getId(), 'displayItems');
         $recentItems = (int) $this->parentPlugin->getSetting($journal->getId(), 'recentItems');
         if ($recentItems < 1) {
-            $recentItems = self::DEFAULT_RECENT_ITEMS;
+            $recentItems = static::DEFAULT_RECENT_ITEMS;
         }
+        $includeIdentifiers = (bool) $this->parentPlugin->getSetting($journal->getId(), 'includeIdentifiers');
 
         $submissions = [];
-        $sections = [];
         $latestDate = null;
-        if ($displayItems == 'recent' && $recentItems > 0) {
-            /** @var iterable<PKPSubmission> */
-            $submissionsIterator = Repo::submission()->getCollector()
+        if ($displayItems === 'recent') {
+            $submissions = Repo::submission()->getCollector()
                 ->filterByContextIds([$journal->getId()])
-                ->filterByStatus([PKPSubmission::STATUS_PUBLISHED])
+                ->filterByStatus([Submission::STATUS_PUBLISHED])
                 ->limit($recentItems)
-                ->orderBy(Collector::ORDERBY_DATE_PUBLISHED)
+                ->orderBy(Collector::ORDERBY_LAST_MODIFIED, Collector::ORDER_DIR_DESC)
                 ->getMany();
-            foreach ($submissionsIterator as $submission) {
-                $latestDate ??= $submission->getData('lastModified');
-                $identifiers = [];
-                $section = ($sectionId = $submission->getSectionId())
-                    ? $sections[$sectionId] ??= Repo::section()->get($sectionId)
-                    : null;
-                if ($section) {
-                    $identifiers[] = ['type' => 'section', 'value' => $section->getLocalizedTitle()];
-                }
-
-                $publication = $submission->getCurrentPublication();
-                $categoriesIterator = Repo::category()->getCollector()
-                    ->filterByPublicationIds([$publication->getId()])
-                    ->getMany();
-                /** @var Category */
-                foreach ($categoriesIterator as $category) {
-                    $identifiers[] = ['type' => 'category', 'value' => $category->getLocalizedTitle()];
-                }
-
-                foreach (['keywords', 'subjects', 'disciplines'] as $type) {
-                    $values = $publication->getLocalizedData($type) ?? [];
-                    foreach ($values as $value) {
-                        $identifiers[] = ['type' => $type, 'value' => $value];
-                    }
-                }
-
-                $submissions[] = [
-                    'submission' => $submission,
-                    'identifiers' => $identifiers
-                ];
-            }
+            $latestDate = $submissions->first()?->getData('lastModified');
+            $submissions = $submissions->map(fn (Submission $submission) => ['submission' => $submission, 'identifiers' => $this->_getIdentifiers($submission)]);
+            $userGroups = Repo::userGroup()->getCollector()->filterByContextIds([$journal->getId()])->getMany();
         } else {
             $submissions = Repo::submission()->getInSections($issue->getId(), $journal->getId());
         }
 
-        /** @var VersionDAO */
-        $versionDao = DAORegistry::getDAO('VersionDAO');
-        $version = $versionDao->getCurrentVersion();
-
-        $templateMgr = TemplateManager::getManager($request);
-        $templateMgr->assign([
-            'systemVersion' => $version->getVersionString(),
-            'submissions' => $submissions,
-            'journal' => $journal,
-            'issue' => $issue,
-            'latestDate' => $latestDate,
-            'feedUrl' => $request->getRequestUrl()
-        ]);
-        $templateMgr->display($this->parentPlugin->getTemplateResource($templateConfig['template']), $templateConfig['mimeType']);
+        TemplateManager::getManager($request)
+            ->assign(
+                [
+                    'systemVersion' => Registry::get('appVersion'),
+                    'submissions' => $submissions,
+                    'journal' => $journal,
+                    'issue' => $issue,
+                    'latestDate' => $latestDate,
+                    'feedUrl' => $request->getRequestUrl(),
+                    'userGroups' => $userGroups,
+                    'includeIdentifiers' => $includeIdentifiers
+                ]
+            )
+            ->display($this->parentPlugin->getTemplateResource("{$feedType}.tpl"), static::FEED_MIME_TYPE[$feedType]);
         return true;
+    }
+
+
+    /**
+     * Retrieves the identifiers assigned to a submission
+     */
+    private function _getIdentifiers(Submission $submission): array
+    {
+        $identifiers = [];
+        if ($section = $this->_getSection($submission->getSectionId())) {
+            $identifiers[] = ['type' => 'section', 'label' => __('section.section'), 'values' => [$section->getLocalizedTitle()]];
+        }
+
+        $publication = $submission->getCurrentPublication();
+        $categories = Repo::category()->getCollector()
+            ->filterByPublicationIds([$publication->getId()])
+            ->getMany()
+            ->map(fn (Category $category) => $category->getLocalizedTitle())
+            ->toArray();
+        if (count($categories)) {
+            $identifiers[] = ['type' => 'category', 'label' => __('category.category'), 'values' => $categories];
+        }
+
+        foreach (['keywords' => 'common.keywords', 'subjects' => 'common.subjects', 'disciplines' => 'search.discipline'] as $field => $label) {
+            $values = $publication->getLocalizedData($field) ?? [];
+            if (count($values)) {
+                $identifiers[] = ['type' => $field, 'label' => __($label), 'values' => $values];
+            }
+        }
+
+        return $identifiers;
+    }
+
+    /**
+     * Retrieves a section
+     */
+    private function _getSection(?int $sectionId): ?Section
+    {
+        static $sections = [];
+        return $sectionId
+            ? $sections[$sectionId] ??= Repo::section()->get($sectionId)
+            : null;
     }
 }
