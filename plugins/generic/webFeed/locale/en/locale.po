@@ -50,3 +50,6 @@ msgstr "RSS1 logo"
 
 msgid "plugins.generic.webfeed.rss2.altText"
 msgstr "RSS2 logo"
+
+msgid "plugins.generic.webfeed.blockTitle"
+msgstr "Latest articles"
