@@ -114,12 +114,6 @@ class WebFeedGatewayPlugin extends GatewayPlugin
             return false;
         }
 
-        // Make sure there's a current issue for this journal
-        $issue = Repo::issue()->getCurrent($journal->getId(), true);
-        if (!$issue) {
-            return false;
-        }
-
         // Make sure the feed type is specified and valid
         $feedType = array_shift($args);
         if (!in_array($feedType, array_keys(static::FEED_MIME_TYPE))) {
@@ -133,22 +127,27 @@ class WebFeedGatewayPlugin extends GatewayPlugin
             $recentItems = static::DEFAULT_RECENT_ITEMS;
         }
         $includeIdentifiers = (bool) $this->parentPlugin->getSetting($journal->getId(), 'includeIdentifiers');
+        $latestDate = null;
 
         $submissions = [];
-        $latestDate = null;
-        if ($displayItems === 'recent') {
-            $submissions = Repo::submission()->getCollector()
-                ->filterByContextIds([$journal->getId()])
-                ->filterByStatus([Submission::STATUS_PUBLISHED])
-                ->limit($recentItems)
-                ->orderBy(Collector::ORDERBY_LAST_MODIFIED, Collector::ORDER_DIR_DESC)
-                ->getMany();
-            $latestDate = $submissions->first()?->getData('lastModified');
-            $submissions = $submissions->map(fn (Submission $submission) => ['submission' => $submission, 'identifiers' => $this->getIdentifiers($submission)]);
-            $userGroups = Repo::userGroup()->getCollector()->filterByContextIds([$journal->getId()])->getMany();
-        } else {
-            $submissions = Repo::submission()->getInSections($issue->getId(), $journal->getId());
+        $submissions = Repo::submission()->getCollector()
+            ->filterByContextIds([$journal->getId()])
+            ->filterByStatus([Submission::STATUS_PUBLISHED])
+            ->limit($recentItems)
+            ->orderBy(Collector::ORDERBY_LAST_MODIFIED, Collector::ORDER_DIR_DESC);
+
+        // If the plugin is configured to display only the latest issue, so we filter by it
+        if ($displayItems === 'issue') {
+            $issue = Repo::issue()->getCurrent($journal->getId(), true);
+            $submissions->filterByIssueIds([$issue?->getId() ?? 0])
+                ->orderBy(Collector::ORDERBY_SEQUENCE, Collector::ORDER_DIR_ASC);
+            $latestDate = $issue?->getData('datePublished');
         }
+
+        $submissions = $submissions->getMany();
+        $latestDate ??= $submissions->first()?->getData('lastModified');
+        $submissions = $submissions->map(fn (Submission $submission) => ['submission' => $submission, 'identifiers' => $this->getIdentifiers($submission)]);
+        $userGroups = Repo::userGroup()->getCollector()->filterByContextIds([$journal->getId()])->getMany();
 
         TemplateManager::getManager($request)
             ->assign(
@@ -156,7 +155,6 @@ class WebFeedGatewayPlugin extends GatewayPlugin
                     'systemVersion' => Registry::get('appVersion'),
                     'submissions' => $submissions,
                     'journal' => $journal,
-                    'issue' => $issue,
                     'latestDate' => $latestDate,
                     'feedUrl' => $request->getRequestUrl(),
                     'userGroups' => $userGroups,
