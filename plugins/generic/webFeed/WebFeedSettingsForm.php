@@ -58,7 +58,7 @@ class WebFeedSettingsForm extends Form
      */
     public function readInputData()
     {
-        $this->readUserVars(['displayPage','displayItems','recentItems']);
+        $this->readUserVars(['displayPage', 'displayItems', 'recentItems']);
 
         // check that recent items value is a positive integer
         if ((int) $this->getData('recentItems') <= 0) {
