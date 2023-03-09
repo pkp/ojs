@@ -108,8 +108,8 @@
 		</dc:rights>
 		<cc:license {if $publication->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_OPEN && $publication->isCCLicense()}rdf:resource="{$publication->getData('licenseUrl')|escape}"{/if} />
 
-		<dc:date>{$publication->getData('datePublished')|date_format:"%Y-%m-%d"}</dc:date>
-		<prism:publicationDate>{$publication->getData('datePublished')|date_format:"%Y-%m-%d"}</prism:publicationDate>
+		<dc:date>{$publication->getData('datePublished')|date_format:"Y-m-d"}</dc:date>
+		<prism:publicationDate>{$publication->getData('datePublished')|date_format:"Y-m-d"}</prism:publicationDate>
 
 		{if $publication->getStartingPage()}
 			<prism:startingPage>{$publication->getStartingPage()|escape}</prism:startingPage>

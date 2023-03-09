@@ -14,7 +14,7 @@
 	<id>{url page="feed" op="feed"}</id>
 	<title>{$journal->getLocalizedName()|escape:"html"|strip}</title>
 
-	<updated>{$latestDate|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
+	<updated>{$latestDate|date_format:"Y-m-d\TH:i:sP"}</updated>
 
 	{* recommended elements *}
 	{if $journal->getData('contactName')}
@@ -50,7 +50,7 @@
 			{* required elements *}
 			<id>{url page="article" op="view" path=$submission->getBestId()}</id>
 			<title>{$publication->getLocalizedTitle()|strip|escape:"html"}</title>
-			<updated>{$publication->getData('lastModified')|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
+			<updated>{$publication->getData('lastModified')|date_format:"Y-m-d\TH:i:sP"}</updated>
 
 			{* recommended elements *}
 
@@ -87,7 +87,7 @@
 
 			{* <contributor/> *}
 
-			<published>{$publication->getData('datePublished')|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</published>
+			<published>{$publication->getData('datePublished')|date_format:"Y-m-d\TH:i:sP"}</published>
 
 			{* <source/> *}
 			<rights>{translate|escape key="submission.copyrightStatement" copyrightYear=$publication->getData('copyrightYear') copyrightHolder=$publication->getLocalizedData('copyrightHolder')}</rights>

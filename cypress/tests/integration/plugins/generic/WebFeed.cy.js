@@ -38,7 +38,7 @@ describe('Web Feed plugin tests', () => {
 		// Visit homepage
 		cy.wait(2000);
 
-		cy.visit('');
+		cy.visit('/');
 		const feeds = {
 			'atom': {mimeType: 'application/atom+xml'},
 			'rss': {mimeType: 'application/rdf+xml'},
@@ -67,7 +67,7 @@ describe('Web Feed plugin tests', () => {
 			expect($entries.length).to.equal(feedSize);
 			$entries.each((index, entry) => {
 				const $entry = cy.$$(entry);
-				const id = ($entry.find('id').text().match(/\d+$/) ?? []).pop();
+				const id = $entry.find('id').text().match(/\/(\d+)\/?$/)?.[1];
 				if (!id) {
 					return;
 				}
@@ -88,7 +88,7 @@ describe('Web Feed plugin tests', () => {
 			expect($entries.length).to.equal(feedSize);
 			$entries.each((index, entry) => {
 				const $entry = cy.$$(entry);
-				const id = ($entry.find('link').text().match(/\d+$/) ?? []).pop();
+				const id = $entry.find('id').text().match(/\/(\d+)\/?$/)?.[1];
 				if (!id) {
 					return;
 				}
@@ -109,7 +109,7 @@ describe('Web Feed plugin tests', () => {
 			expect($entries.length).to.equal(feedSize);
 			$entries.each((index, entry) => {
 				const $entry = cy.$$(entry);
-				const id = ($entry.find('link').text().match(/\d+$/) ?? []).pop();
+				const id = $entry.find('id').text().match(/\/(\d+)\/?$/)?.[1];
 				if (!id) {
 					return;
 				}
