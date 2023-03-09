@@ -122,24 +122,21 @@ class WebFeedGatewayPlugin extends GatewayPlugin
 
         // Get limit setting from web feeds plugin
         $displayItems = $this->parentPlugin->getSetting($journal->getId(), 'displayItems');
-        $recentItems = (int) $this->parentPlugin->getSetting($journal->getId(), 'recentItems');
-        if ($recentItems < 1) {
-            $recentItems = static::DEFAULT_RECENT_ITEMS;
-        }
+        $recentItems = abs((int) $this->parentPlugin->getSetting($journal->getId(), 'recentItems')) ?: static::DEFAULT_RECENT_ITEMS;
+
         $includeIdentifiers = (bool) $this->parentPlugin->getSetting($journal->getId(), 'includeIdentifiers');
         $latestDate = null;
-
-        $submissions = [];
         $submissions = Repo::submission()->getCollector()
             ->filterByContextIds([$journal->getId()])
             ->filterByStatus([Submission::STATUS_PUBLISHED])
             ->limit($recentItems)
             ->orderBy(Collector::ORDERBY_LAST_MODIFIED, Collector::ORDER_DIR_DESC);
 
-        // If the plugin is configured to display only the latest issue, so we filter by it
+        // If the plugin is configured to display only the latest issue, so we filter by it and apply the needed changes to the query
         if ($displayItems === 'issue') {
             $issue = Repo::issue()->getCurrent($journal->getId(), true);
             $submissions->filterByIssueIds([$issue?->getId() ?? 0])
+                ->limit(null)
                 ->orderBy(Collector::ORDERBY_SEQUENCE, Collector::ORDER_DIR_ASC);
             $latestDate = $issue?->getData('datePublished');
         }
