@@ -103,15 +103,8 @@ class CounterReportPlugin extends ReportPlugin
      */
     public function getReporter($report, $release)
     {
-        $reportClass = classes\CounterReport::COUNTER_CLASS_PREFIX . $report;
-        $reportClasspath = 'plugins.reports.counter.classes.reports.';
-        $reportPath = str_replace('.', '/', $reportClasspath);
-        if (file_exists($reportPath . $reportClass . self::COUNTER_CLASS_SUFFIX)) {
-            import($reportPath . $reportClass);
-            $reporter = new $reportClass($release);
-            return $reporter;
-        }
-        return false;
+        $reportClass = '\\APP\\plugins\\reports\\counter\\classes\\reports\\' . classes\CounterReport::COUNTER_CLASS_PREFIX . $report;
+        return class_exists($reportClass) ? new $reportClass($release) : false;
     }
 
     /**
