@@ -50,3 +50,9 @@ msgstr "RSS1 logo"
 
 msgid "plugins.generic.webfeed.rss2.altText"
 msgstr "RSS2 logo"
+
+msgid "plugins.generic.webfeed.blockTitle"
+msgstr "Latest articles"
+
+msgid "plugins.generic.webfeed.settings.includeIdentifiers"
+msgstr "Include identifiers (ISBN, keywords, categories, etc.) in the feed summary?"

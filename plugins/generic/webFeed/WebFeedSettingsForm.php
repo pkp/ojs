@@ -15,50 +15,43 @@ namespace APP\plugins\generic\webFeed;
 
 use APP\template\TemplateManager;
 use PKP\form\Form;
+use PKP\form\validation\FormValidator;
+use PKP\form\validation\FormValidatorCSRF;
+use PKP\form\validation\FormValidatorPost;
 
 class WebFeedSettingsForm extends Form
 {
-    /** @var int Associated context ID */
-    private $_contextId;
-
-    /** @var WebFeedPlugin Web feed plugin */
-    private $_plugin;
-
     /**
      * Constructor
-     *
-     * @param WebFeedPlugin $plugin Web feed plugin
-     * @param int $contextId Context ID
      */
-    public function __construct($plugin, $contextId)
+    public function __construct(private WebFeedPlugin $plugin, private int $contextId)
     {
-        $this->_contextId = $contextId;
-        $this->_plugin = $plugin;
-
         parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
-        $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
-        $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
+        $this->addCheck(new FormValidatorPost($this));
+        $this->addCheck(new FormValidatorCSRF($this));
     }
 
     /**
-     * Initialize form data.
+     * @copydoc Form::initData()
      */
-    public function initData()
+    public function initData(): void
     {
-        $contextId = $this->_contextId;
-        $plugin = $this->_plugin;
+        $contextId = $this->contextId;
+        $plugin = $this->plugin;
 
         $this->setData('displayPage', $plugin->getSetting($contextId, 'displayPage'));
         $this->setData('displayItems', $plugin->getSetting($contextId, 'displayItems'));
         $this->setData('recentItems', $plugin->getSetting($contextId, 'recentItems'));
+        $this->setData('includeIdentifiers', $plugin->getSetting($contextId, 'includeIdentifiers'));
+        parent::initData();
     }
 
     /**
-     * Assign form data to user-submitted data.
+     * @copydoc Form::readInputData()
      */
-    public function readInputData()
+    public function readInputData(): void
     {
-        $this->readUserVars(['displayPage','displayItems','recentItems']);
+        $this->readUserVars(['displayPage', 'displayItems', 'recentItems', 'includeIdentifiers']);
 
         // check that recent items value is a positive integer
         if ((int) $this->getData('recentItems') <= 0) {
@@ -67,21 +60,19 @@ class WebFeedSettingsForm extends Form
 
         // if recent items is selected, check that we have a value
         if ($this->getData('displayItems') == 'recent') {
-            $this->addCheck(new \PKP\form\validation\FormValidator($this, 'recentItems', 'required', 'plugins.generic.webfeed.settings.recentItemsRequired'));
+            $this->addCheck(new FormValidator($this, 'recentItems', 'required', 'plugins.generic.webfeed.settings.recentItemsRequired'));
         }
     }
 
     /**
-     * Fetch the form.
-     *
      * @copydoc Form::fetch()
      *
      * @param null|mixed $template
      */
-    public function fetch($request, $template = null, $display = false)
+    public function fetch($request, $template = null, $display = false): string
     {
         $templateMgr = TemplateManager::getManager($request);
-        $templateMgr->assign('pluginName', $this->_plugin->getName());
+        $templateMgr->assign('pluginName', $this->plugin->getName());
         return parent::fetch($request, $template, $display);
     }
 
@@ -90,12 +81,13 @@ class WebFeedSettingsForm extends Form
      */
     public function execute(...$functionArgs)
     {
-        $plugin = $this->_plugin;
-        $contextId = $this->_contextId;
+        $plugin = $this->plugin;
+        $contextId = $this->contextId;
 
-        $plugin->updateSetting($contextId, 'displayPage', $this->getData('displayPage'));
-        $plugin->updateSetting($contextId, 'displayItems', $this->getData('displayItems'));
-        $plugin->updateSetting($contextId, 'recentItems', $this->getData('recentItems'));
+        $plugin->updateSetting($contextId, 'displayPage', $this->getData('displayPage'), 'string');
+        $plugin->updateSetting($contextId, 'displayItems', $this->getData('displayItems'), 'string');
+        $plugin->updateSetting($contextId, 'recentItems', $this->getData('recentItems'), 'int');
+        $plugin->updateSetting($contextId, 'includeIdentifiers', $this->getData('includeIdentifiers'), 'bool');
 
         parent::execute(...$functionArgs);
     }

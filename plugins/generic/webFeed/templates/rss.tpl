@@ -14,7 +14,8 @@
 	xmlns="http://purl.org/rss/1.0/"
 	xmlns:dc="http://purl.org/dc/elements/1.1/"
 	xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/"
-	xmlns:cc="http://web.resource.org/cc/">
+	xmlns:cc="http://web.resource.org/cc/"
+	xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/">
 
 	<channel rdf:about="{url journal=$journal->getPath()}">
 		{* required elements *}
@@ -57,64 +58,70 @@
 
 		<items>
 			<rdf:Seq>
-			{foreach name=sections from=$publishedSubmissions item=section key=sectionId}
-				{foreach from=$section.articles item=article}
-					<rdf:li rdf:resource="{url page="article" op="view" path=$article->getBestId()}"/>
-				{/foreach}{* articles *}
-			{/foreach}{* sections *}
+			{foreach from=$submissions item=item}
+				<rdf:li rdf:resource="{url page="article" op="view" path=$item.submission->getBestId()}"/>
+			{/foreach}{* articles *}
 			</rdf:Seq>
 		</items>
 	</channel>
 
-{foreach name=sections from=$publishedSubmissions item=section key=sectionId}
-	{foreach from=$section.articles item=article}
-		{assign var=publication value=$article->getCurrentPublication()}
-		<item rdf:about="{url page="article" op="view" path=$article->getBestId()}">
+{foreach from=$submissions item=item}
+	{assign var=submission value=$item.submission}
+	{assign var=publication value=$submission->getCurrentPublication()}
+	<item rdf:about="{url page="article" op="view" path=$submission->getBestId()}">
 
-			{* required elements *}
-			<title>{$article->getLocalizedTitle()|strip|escape:"html"}</title>
-			<link>{url page="article" op="view" path=$article->getBestId()}</link>
+		{* required elements *}
+		<title>{$publication->getLocalizedTitle()|strip|escape:"html"}</title>
+		<link>{url page="article" op="view" path=$submission->getBestId()}</link>
 
-			{* optional elements *}
-			{if $article->getLocalizedAbstract()}
-				<description>{$article->getLocalizedAbstract()|strip|escape:"html"}</description>
-			{/if}
+		{* optional elements *}
+		{if $publication->getLocalizedData('abstract') || $includeIdentifiers}
+			<description>
+				{if $includeIdentifiers}
+					{foreach from=$item.identifiers item=identifier}
+						{$identifier.label|strip|escape:"html"}: {', '|implode:$identifier.values|strip|escape:"html"}&lt;br /&gt;
+					{/foreach}{* categories *}
+					&lt;br /&gt;
+				{/if}
+				{$publication->getLocalizedData('abstract')|strip|escape:"html"}
+			</description>
+		{/if}
 
-			{foreach from=$article->getCurrentPublication()->getData('authors') item=author name=authorList}
-				<dc:creator>{$author->getFullName(false)|strip|escape:"html"}</dc:creator>
+		{foreach from=$item.identifiers item=identifier}
+			{foreach from=$identifier.values item=value}
+				<dc:subject>
+					<rdf:Description>
+						<taxo:topic rdf:resource="https://pkp.sfu.ca/ojs/category/{$identifier.type|strip|escape:"html"}" />
+						<rdf:value>{$value|strip|escape:"html"}</rdf:value>
+					</rdf:Description>
+				</dc:subject>
 			{/foreach}
+		{/foreach}{* categories *}
 
-			<dc:rights>
-				{translate|escape key="submission.copyrightStatement" copyrightYear=$article->getCopyrightYear() copyrightHolder=$article->getLocalizedCopyrightHolder()}
-				{$article->getLicenseURL()|escape}
-			</dc:rights>
-			{if ($publication->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_OPEN || ($publication->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_ISSUE_DEFAULT && $issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_OPEN)) && $article->isCCLicense()}
-				<cc:license rdf:resource="{$article->getLicenseURL()|escape}" />
-			{else}
-				<cc:license></cc:license>
-			{/if}
+		{foreach from=$publication->getData('authors') item=author name=authorList}
+			<dc:creator>{$author->getFullName(false)|strip|escape:"html"}</dc:creator>
+		{/foreach}
 
-			{if $article->getDatePublished()}
-				<dc:date>{$article->getDatePublished()|date_format:"%Y-%m-%d"}</dc:date>
-				<prism:publicationDate>{$article->getDatePublished()|date_format:"%Y-%m-%d"}</prism:publicationDate>
-			{/if}
-			{if $issue->getVolume() && $issue->getShowVolume()}<prism:volume>{$issue->getVolume()|escape}</prism:volume>{/if}
-			{if $issue->getNumber() && $issue->getShowNumber()}<prism:number>{$issue->getNumber()|escape}</prism:number>{/if}
+		<dc:rights>
+			{translate|escape key="submission.copyrightStatement" copyrightYear=$publication->getData('copyrightYear') copyrightHolder=$publication->getLocalizedData('copyrightHolder')}
+			{$publication->getData('licenseUrl')|escape}
+		</dc:rights>
+		<cc:license {if $publication->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_OPEN && $publication->isCCLicense()}rdf:resource="{$publication->getData('licenseUrl')|escape}"{/if} />
 
-			{if $article->getPages()}
-				{if $article->getStartingPage()}
-					<prism:startingPage>{$article->getStartingPage()|escape}</prism:startingPage>
-				{/if}
-				{if $article->getEndingPage()}
-					<prism:endingPage>{$article->getEndingPage()|escape}</prism:endingPage>
-				{/if}
-			{/if}
+		<dc:date>{$publication->getData('datePublished')|date_format:"Y-m-d"}</dc:date>
+		<prism:publicationDate>{$publication->getData('datePublished')|date_format:"Y-m-d"}</prism:publicationDate>
 
-			{if $article->getStoredPubId('doi')}
-				<prism:doi>{$article->getStoredPubId('doi')|escape}</prism:doi>
-			{/if}
-		</item>
-	{/foreach}{* articles *}
-{/foreach}{* sections *}
+		{if $publication->getStartingPage()}
+			<prism:startingPage>{$publication->getStartingPage()|escape}</prism:startingPage>
+		{/if}
+		{if $publication->getEndingPage()}
+			<prism:endingPage>{$publication->getEndingPage()|escape}</prism:endingPage>
+		{/if}
+
+		{if $publication->getDoi()}
+			<prism:doi>{$publication->getDoi()|escape}</prism:doi>
+		{/if}
+	</item>
+{/foreach}{* articles *}
 
 </rdf:RDF>

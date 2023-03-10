@@ -1,36 +1,36 @@
-================================
-=== OJS Web Feeds Plugin
-=== Author: MJ Suhonos
-=== Contributions: Juan Alperin, Alf Eaton, Alec Smecher
-================================
+# OJS Web Feeds Plugin
 
-About
------
-This plugin for OJS provides a set of syndication feeds for the current issue in RSS1.0/RDF and Atom formats.  Feed links are embedded into the HTML header for the current issue and are available to all RSS/Atom-aware browsers and aggregators as per standard web specifications.
+> Author: MJ Suhonos
 
-License
--------
+> Contributions: Juan Alperin, Alf Eaton, Alec Smecher
+
+## About
+
+This plugin for OJS provides a set of syndication feeds for the current issue in RSS1.0/RDF and Atom formats. Feed links are embedded into the HTML header for the current issue and are available to all RSS/Atom-aware browsers and aggregators as per standard web specifications.
+
+## License
+
 This plugin is licensed under the GNU General Public License v3. See the file COPYING for the complete terms of this license.
 
-System Requirements
--------------------
+## System Requirements
+
 Same requirements as the OJS core.
 
-Installation
-------------
+## Installation
+
 The plugin is included with releases of OJS.
 
-Configuration
-------------
+## Configuration
+
 The plugin can be configured to display feed links on all journal pages, or only current issue pages.
 
-Known Issues
-------------
+## Known Issues
+
 - Improperly-formatted (non-RFC2822) email addresses within OJS articles or contact addresses may cause invalid feeds to be generated.
 - Articles with no abstract (eg. editorials) will create Atom warnings due to lack of entry:content or entry:summary elements
 - Multiple articles with the same publish date/time (eg. in an issue) may create an Atom warning
 
-Contact/Support
----------------
-See the PKP suport forum: https://forum.pkp.sfu.ca
+## Contact/Support
+
+See the PKP support forum: https://forum.pkp.sfu.ca
 Bugs: https://github.com/pkp/pkp-lib/issues

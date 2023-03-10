@@ -170,7 +170,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * get date published
      *
-     * @return date
+     * @return string
      */
     public function getDatePublished()
     {
@@ -180,7 +180,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * set date published
      *
-     * @param date $datePublished
+     * @param string $datePublished
      */
     public function setDatePublished($datePublished)
     {
@@ -190,7 +190,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * get date the users were last notified
      *
-     * @return date
+     * @return string
      */
     public function getDateNotified()
     {
@@ -200,7 +200,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * set date the users were last notified
      *
-     * @param date $dateNotified
+     * @param string $dateNotified
      */
     public function setDateNotified($dateNotified)
     {
@@ -210,7 +210,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * get date the issue was last modified
      *
-     * @return date
+     * @return string
      */
     public function getLastModified()
     {
@@ -220,7 +220,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * set date the issue was last modified
      *
-     * @param date $lastModified
+     * @param string $lastModified
      */
     public function setLastModified($lastModified)
     {
@@ -258,7 +258,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * get open access date
      *
-     * @return date
+     * @return string
      */
     public function getOpenAccessDate()
     {
@@ -268,7 +268,7 @@ class Issue extends \PKP\core\DataObject
     /**
      * set open access date
      *
-     * @param date $openAccessDate
+     * @param string $openAccessDate
      */
     public function setOpenAccessDate($openAccessDate)
     {

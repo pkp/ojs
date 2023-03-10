@@ -25,4 +25,12 @@
 		<name>displayItems</name>
 		<value>issue</value>
 	</setting>
+	<setting type="int">
+		<name>recentItems</name>
+		<value>30</value>
+	</setting>
+	<setting type="bool">
+		<name>includeIdentifiers</name>
+		<value>false</value>
+	</setting>
 </plugin_settings>

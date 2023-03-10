@@ -8,9 +8,9 @@
  * RSS 2 feed template
  *
  *}
-<?xml version="1.0" encoding="{$defaultCharset|escape}"?>
-<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://web.resource.org/cc/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
+		<atom:link href="{$feedUrl}" rel="self" type="application/rss+xml" />
 		{* required elements *}
 		<title>{$journal->getLocalizedName()|strip|escape:"html"}</title>
 		<link>{url journal=$journal->getPath()}</link>
@@ -40,54 +40,57 @@
 			<webMaster>{$journal->getData('supportEmail')|strip|escape:"html"}{if $journal->getData('contactName')} ({$journal->getData('supportName')|strip|escape:"html"}){/if}</webMaster>
 		{/if}
 
-		{if $issue->getDatePublished()}
-			{capture assign="datePublished"}{$issue->getDatePublished()|strtotime}{/capture}
-			<pubDate>{$smarty.const.DATE_RSS|date:$datePublished}</pubDate>
-		{/if}
+		<pubDate>{$latestDate|date_format:$smarty.const.DATE_RSS}</pubDate>
 
 		{* <lastBuildDate/> *}
 		{* <category/> *}
 		{* <creativeCommons:license/> *}
 
-		<generator>OJS {$ojsVersion|escape}</generator>
+		<generator>OJS {$systemVersion|escape}</generator>
 		<docs>http://blogs.law.harvard.edu/tech/rss</docs>
 		<ttl>60</ttl>
 
-		{foreach name=sections from=$publishedSubmissions item=section key=sectionId}
-			{foreach from=$section.articles item=article}
-				{assign var=publication value=$article->getCurrentPublication()}
-				<item>
-					{* required elements *}
-					<title>{$article->getLocalizedTitle()|strip|escape:"html"}</title>
-					<link>{url page="article" op="view" path=$article->getBestId()}</link>
-					<description>{$article->getLocalizedAbstract()|strip|escape:"html"}</description>
+		{foreach from=$submissions item=item}
+			{assign var=submission value=$item.submission}
+			{assign var=publication value=$submission->getCurrentPublication()}
+			<item>
+				{* required elements *}
+				<title>{$publication->getLocalizedTitle()|strip|escape:"html"}</title>
+				<link>{url page="article" op="view" path=$submission->getBestId()}</link>
+				{if $publication->getLocalizedData('abstract') || $includeIdentifiers}
+					<description>
+						{if $includeIdentifiers}
+							{foreach from=$item.identifiers item=identifier}
+								{$identifier.label|strip|escape:"html"}: {', '|implode:$identifier.values|strip|escape:"html"}&lt;br /&gt;
+							{/foreach}{* categories *}
+							&lt;br /&gt;
+						{/if}
+						{$publication->getLocalizedData('abstract')|strip|escape:"html"}
+					</description>
+				{/if}
 
-					{* optional elements *}
-					{* <author/> *}
-					{if !empty($article->getAuthorString(false))}
-						<dc:creator>{$article->getAuthorString(false)|escape:"html"}</dc:creator>
-					{/if}
-					{* <category/> *}
-					{* <comments/> *}
-					{* <source/> *}
+				{* optional elements *}
+				{* <author/> *}
+				{if !empty($publication->getAuthorString($userGroups))}
+				<dc:creator>{$publication->getAuthorString($userGroups)|escape:"html"}</dc:creator>
+				{/if}
 
-					<dc:rights>
-						{translate|escape key="submission.copyrightStatement" copyrightYear=$article->getCopyrightYear() copyrightHolder=$article->getLocalizedCopyrightHolder()}
-						{$article->getLicenseURL()|escape}
-					</dc:rights>
-					{if ($publication->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_OPEN || ($publication->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_ISSUE_DEFAULT && $issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_OPEN)) && $article->isCCLicense()}
-						<cc:license rdf:resource="{$article->getLicenseURL()|escape}" />
-					{else}
-						<cc:license></cc:license>
-					{/if}
+				{foreach from=$item.identifiers item=identifier}
+					{foreach from=$identifier.values item=value}
+						<category domain="https://pkp.sfu.ca/ojs/category/{$identifier.type|strip|escape:"html"}">{$value|strip|escape:"html"}</category>
+					{/foreach}
+				{/foreach}{* categories *}
+				{* <comments/> *}
+				{* <source/> *}
 
-					<guid isPermaLink="true">{url page="article" op="view" path=$article->getBestId()}</guid>
-					{if $article->getDatePublished()}
-						{capture assign="datePublished"}{$article->getDatePublished()|strtotime}{/capture}
-						<pubDate>{$smarty.const.DATE_RSS|date:$datePublished}</pubDate>
-					{/if}
-				</item>
-			{/foreach}{* articles *}
-		{/foreach}{* sections *}
+				<dc:rights>
+					{translate|escape key="submission.copyrightStatement" copyrightYear=$publication->getData('copyrightYear') copyrightHolder=$publication->getLocalizedData('copyrightHolder')}
+					{$publication->getData('licenseUrl')|escape}
+				</dc:rights>
+				<cc:license {if $publication->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_OPEN && $publication->isCCLicense()}rdf:resource="{$publication->getData('licenseUrl')|escape}"{/if} />
+				<guid isPermaLink="true">{url page="article" op="view" path=$submission->getBestId()}</guid>
+				<pubDate>{$publication->getData('datePublished')|date_format:$smarty.const.DATE_RSS}</pubDate>
+			</item>
+		{/foreach}{* articles *}
 	</channel>
 </rss>
