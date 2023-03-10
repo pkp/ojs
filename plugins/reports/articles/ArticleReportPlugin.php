@@ -147,7 +147,7 @@ class ArticleReportPlugin extends ReportPlugin
 
             // Load section title information
             $sectionId = $publication->getData('sectionId');
-            if (!isset($sectionTitles[$sectionId])) {
+            if ($sectionId && !isset($sectionTitles[$sectionId])) {
                 $section = Repo::section()->get($sectionId);
                 $sectionTitles[$sectionId] = $section->getLocalizedTitle();
             }
@@ -174,7 +174,7 @@ class ArticleReportPlugin extends ReportPlugin
                         html_entity_decode(strip_tags($author->getLocalizedData('biography'))),
                     ];
                 }, $publication->getData('authors')->toArray()),
-                'sectionTitle' => $sectionTitles[$sectionId],
+                'sectionTitle' => $sectionTitles[$sectionId] ?? '',
                 'language' => $publication->getData('locale'),
                 'coverage' => $publication->getLocalizedData('coverage'),
                 'rights' => $publication->getLocalizedData('rights'),
