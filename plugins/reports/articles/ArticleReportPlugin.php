@@ -205,14 +205,14 @@ class ArticleReportPlugin extends ReportPlugin
         $authorColumnCount = $editorColumnCount = $decisionColumnCount = 0;
         for ($a = 1; $a <= $maxAuthors; $a++) {
             $columns = array_merge($columns, $authorColumns = [
-                __('user.givenName') . ' (' . __('user.role.author') . " ${a})",
-                __('user.familyName') . ' (' . __('user.role.author') . " ${a})",
-                __('user.orcid') . ' (' . __('user.role.author') . " ${a})",
-                __('common.country') . ' (' . __('user.role.author') . " ${a})",
-                __('user.affiliation') . ' (' . __('user.role.author') . " ${a})",
-                __('user.email') . ' (' . __('user.role.author') . " ${a})",
-                __('user.url') . ' (' . __('user.role.author') . " ${a})",
-                __('user.biography') . ' (' . __('user.role.author') . " ${a})"
+                __('user.givenName') . ' (' . __('user.role.author') . " {$a})",
+                __('user.familyName') . ' (' . __('user.role.author') . " {$a})",
+                __('user.orcid') . ' (' . __('user.role.author') . " {$a})",
+                __('common.country') . ' (' . __('user.role.author') . " {$a})",
+                __('user.affiliation') . ' (' . __('user.role.author') . " {$a})",
+                __('user.email') . ' (' . __('user.role.author') . " {$a})",
+                __('user.url') . ' (' . __('user.role.author') . " {$a})",
+                __('user.biography') . ' (' . __('user.role.author') . " {$a})"
             ]);
             $authorColumnCount = count($authorColumns);
         }
@@ -238,16 +238,16 @@ class ArticleReportPlugin extends ReportPlugin
 
         for ($e = 1; $e <= $maxEditors; $e++) {
             $columns = array_merge($columns, $editorColumns = [
-                __('user.givenName') . ' (' . __('user.role.editor') . " ${e})",
-                __('user.familyName') . ' (' . __('user.role.editor') . " ${e})",
-                __('user.orcid') . ' (' . __('user.role.editor') . " ${e})",
-                __('user.email') . ' (' . __('user.role.editor') . " ${e})",
+                __('user.givenName') . ' (' . __('user.role.editor') . " {$e})",
+                __('user.familyName') . ' (' . __('user.role.editor') . " {$e})",
+                __('user.orcid') . ' (' . __('user.role.editor') . " {$e})",
+                __('user.email') . ' (' . __('user.role.editor') . " {$e})",
             ]);
             $editorColumnCount = count($editorColumns);
             for ($d = 1; $d <= $maxDecisions; $d++) {
                 $columns = array_merge($columns, $decisionColumns = [
-                    __('submission.editorDecision') . " ${d} " . ' (' . __('user.role.editor') . " ${e})",
-                    __('common.dateDecided') . " ${d} " . ' (' . __('user.role.editor') . " ${e})"
+                    __('submission.editorDecision') . " {$d} " . ' (' . __('user.role.editor') . " {$e})",
+                    __('common.dateDecided') . " {$d} " . ' (' . __('user.role.editor') . " {$e})"
                 ]);
                 $decisionColumnCount = count($decisionColumns);
             }
