@@ -70,8 +70,7 @@ class SubscriptionForm extends Form {
 		// Subscription type is provided
 		$this->addCheck(new FormValidator($this, 'typeId', 'required', 'manager.subscriptions.form.typeIdRequired'));
 		// Notify email flag is valid value
-		$this->addCheck(new FormValidatorInSet($this, 'notifyEmail', 'optional', 'manager.subscriptions.form.notifyEmailValid', array('1')));
-
+		$this->addCheck(new FormValidatorBoolean($this, 'notifyEmail', 'manager.subscriptions.form.notifyEmailValid'));
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
 	}
@@ -173,8 +172,8 @@ class SubscriptionForm extends Form {
 		}
 
 		// If notify email is requested, ensure subscription contact name and email exist.
-		if ($this->_data['notifyEmail'] == 1) {
-			$this->addCheck(new FormValidatorCustom($this, 'notifyEmail', 'required', 'manager.subscriptions.form.subscriptionContactRequired', function() {
+		if ($this->getData('notifyEmail')) {
+			$this->addCheck(new FormValidatorCustom($this, 'notifyEmail', 'optional', 'manager.subscriptions.form.subscriptionContactRequired', function() {
 				$request = Application::get()->getRequest();
 				$journal = $request->getJournal();
 				$subscriptionName = $journal->getData('subscriptionName');
@@ -221,7 +220,7 @@ class SubscriptionForm extends Form {
 
 		$request = Application::get()->getRequest();
 		$journal = $request->getJournal();
-		$journalName = $journal->getLocalizedTitle();
+		$journalName = $journal->getLocalizedName();
 		$user = $userDao->getById($this->subscription->getUserId());
 		$subscriptionType = $subscriptionTypeDao->getById($this->subscription->getTypeId());
 
@@ -241,18 +240,15 @@ class SubscriptionForm extends Form {
 		$subscriptionContactSignature .= "\n" . __('user.email') . ': ' . htmlspecialchars($subscriptionEmail);
 
 		import('lib.pkp.classes.mail.MailTemplate');
-		$mail = new MailTemplate($mailTemplateKey);
+		$mail = new MailTemplate($mailTemplateKey, $journal->getPrimaryLocale());
 		$mail->setReplyTo($subscriptionEmail, $subscriptionName);
 		$mail->addRecipient($user->getEmail(), $user->getFullName());
-		$mail->setSubject($mail->getSubject($journal->getPrimaryLocale()));
-		$mail->setBody($mail->getBody($journal->getPrimaryLocale()));
 		$mail->assignParams([
 			'subscriberName' => htmlspecialchars($user->getFullName()),
 			'journalName' => htmlspecialchars($journalName),
 			'subscriptionType' => htmlspecialchars($subscriptionType->getSummaryString()),
 			'username' => htmlspecialchars($user->getUsername()),
 			'subscriptionContactSignature' => nl2br($subscriptionContactSignature),
-
 		]);
 
 		return $mail;
