@@ -17,9 +17,9 @@ namespace APP\plugins\reports\articles;
 
 use APP\decision\Decision;
 use APP\facades\Repo;
-use APP\i18n\AppLocale;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
+use PKP\facades\Locale;
 use PKP\plugins\ReportPlugin;
 use PKP\security\Role;
 use PKP\submission\PKPSubmission;
@@ -179,11 +179,11 @@ class ArticleReportPlugin extends ReportPlugin
                 'coverage' => $publication->getLocalizedData('coverage'),
                 'rights' => $publication->getLocalizedData('rights'),
                 'source' => $publication->getLocalizedData('source'),
-                'subjects' => join(', ', $subjects[AppLocale::getLocale()] ?? $subjects[$submission->getLocale()] ?? []),
+                'subjects' => join(', ', $subjects[Locale::getLocale()] ?? $subjects[$submission->getLocale()] ?? []),
                 'type' => $publication->getLocalizedData('type'),
-                'disciplines' => join(', ', $disciplines[AppLocale::getLocale()] ?? $disciplines[$submission->getLocale()] ?? []),
-                'keywords' => join(', ', $keywords[AppLocale::getLocale()] ?? $keywords[$submission->getLocale()] ?? []),
-                'agencies' => join(', ', $agencies[AppLocale::getLocale()] ?? $agencies[$submission->getLocale()] ?? []),
+                'disciplines' => join(', ', $disciplines[Locale::getLocale()] ?? $disciplines[$submission->getLocale()] ?? []),
+                'keywords' => join(', ', $keywords[Locale::getLocale()] ?? $keywords[$submission->getLocale()] ?? []),
+                'agencies' => join(', ', $agencies[Locale::getLocale()] ?? $agencies[$submission->getLocale()] ?? []),
                 'status' => $submission->getStatus() == PKPSubmission::STATUS_QUEUED ? $this->getStageLabel($submission->getStageId()) : __($statusMap[$submission->getStatus()]),
                 'url' => $request->url(null, 'workflow', 'access', $submission->getId()),
                 'doi' => $submission->getStoredPubId('doi'),
