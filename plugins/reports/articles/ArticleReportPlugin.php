@@ -173,7 +173,7 @@ class ArticleReportPlugin extends ReportPlugin
                         $author->getData('url'),
                         html_entity_decode(strip_tags($author->getLocalizedData('biography'))),
                     ];
-                }, $publication->getData('authors')->toArray()),
+                }, $publication->getData('authors')->values()->toArray()),
                 'sectionTitle' => $sectionTitles[$sectionId] ?? '',
                 'language' => $publication->getData('locale'),
                 'coverage' => $publication->getLocalizedData('coverage'),
