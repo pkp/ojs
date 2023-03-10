@@ -14,10 +14,15 @@ namespace APP\plugins\reports\counter\classes\reports;
 
 use APP\core\Application;
 use APP\core\Services;
+use APP\plugins\reports\counter\classes\CounterReport;
 use APP\statistics\StatisticsHelper;
+use COUNTER\Identifier;
+use COUNTER\PerformanceCounter;
+use COUNTER\ReportItems;
+use Exception;
 use PKP\db\DAORegistry;
 
-class CounterReportJR1 extends \APP\plugins\reports\counter\classes\CounterReport
+class CounterReportJR1 extends CounterReport
 {
     /**
      * Get the report title
@@ -99,7 +104,7 @@ class CounterReportJR1 extends \APP\plugins\reports\counter\classes\CounterRepor
                     }
                 }
                 $lastPeriod = $rs->{StatisticsHelper::STATISTICS_DIMENSION_MONTH};
-                $counters[] = new COUNTER\PerformanceCounter($metricTypeKey, $rs->{StatisticsHelper::STATISTICS_METRIC});
+                $counters[] = new PerformanceCounter($metricTypeKey, $rs->{StatisticsHelper::STATISTICS_METRIC});
                 // Journal changes trigger a new ReportItem
                 if ($lastJournal != $rs->{StatisticsHelper::STATISTICS_DIMENSION_CONTEXT_ID}) {
                     if ($lastJournal != 0 && $metrics) {
@@ -152,16 +157,16 @@ class CounterReportJR1 extends \APP\plugins\reports\counter\classes\CounterRepor
         foreach (['print', 'online'] as $issnType) {
             if ($journal->getData($issnType . 'Issn')) {
                 try {
-                    $journalPubIds[] = new COUNTER\Identifier(ucfirst($issnType) . '_ISSN', $journal->getData($issnType . 'Issn'));
+                    $journalPubIds[] = new Identifier(ucfirst($issnType) . '_ISSN', $journal->getData($issnType . 'Issn'));
                 } catch (Exception $ex) {
                     // Just ignore it
                 }
             }
         }
-        $journalPubIds[] = new COUNTER\Identifier(COUNTER_LITERAL_PROPRIETARY, $journal->getPath());
+        $journalPubIds[] = new Identifier(COUNTER_LITERAL_PROPRIETARY, $journal->getPath());
         $reportItem = [];
         try {
-            $reportItem = new COUNTER\ReportItems(__('common.software'), $journalName, COUNTER_LITERAL_JOURNAL, $metrics, null, $journalPubIds);
+            $reportItem = new ReportItems(__('common.software'), $journalName, COUNTER_LITERAL_JOURNAL, $metrics, null, $journalPubIds);
         } catch (Exception $e) {
             $this->setError($e, COUNTER_EXCEPTION_ERROR | COUNTER_EXCEPTION_INTERNAL);
         }

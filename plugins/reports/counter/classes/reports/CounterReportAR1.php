@@ -15,12 +15,17 @@ namespace APP\plugins\reports\counter\classes\reports;
 use APP\core\Application;
 use App\core\Services;
 use APP\facades\Repo;
+use APP\plugins\reports\counter\classes\CounterReport;
 use APP\statistics\StatisticsHelper;
+use COUNTER\Identifier;
+use COUNTER\ParentItem;
+use COUNTER\PerformanceCounter;
+use COUNTER\ReportItems;
 use Exception;
 use PKP\db\DAORegistry;
 use PKP\plugins\PluginRegistry;
 
-class CounterReportAR1 extends \APP\plugins\reports\counter\classes\CounterReport
+class CounterReportAR1 extends CounterReport
 {
     /**
      * Get the report title
@@ -42,7 +47,7 @@ class CounterReportAR1 extends \APP\plugins\reports\counter\classes\CounterRepor
      *
      * @see ReportPlugin::getMetrics for more details
      *
-     * @return array \COUNTER\ReportItem
+     * @return array ReportItem
      */
     public function getReportItems($columns = [], $filters = [], $orderBy = [], $range = null)
     {
@@ -134,7 +139,7 @@ class CounterReportAR1 extends \APP\plugins\reports\counter\classes\CounterRepor
                         $metrics = [];
                     }
                 }
-                $metrics[] = $this->createMetricByMonth($rs->{StatisticsHelper::STATISTICS_DIMENSION_MONTH}, [new \COUNTER\PerformanceCounter('ft_total', $rs->{StatisticsHelper::STATISTICS_METRIC})]);
+                $metrics[] = $this->createMetricByMonth($rs->{StatisticsHelper::STATISTICS_DIMENSION_MONTH}, [new PerformanceCounter('ft_total', $rs->{StatisticsHelper::STATISTICS_METRIC})]);
                 $lastArticle = $rs->{StatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID};
             }
             // Capture the last unprocessed ItemPerformance and ReportItem entries, if applicable
@@ -153,12 +158,12 @@ class CounterReportAR1 extends \APP\plugins\reports\counter\classes\CounterRepor
     }
 
     /**
-     * Given a submissionId and an array of \COUNTER\Metrics, return a \COUNTER\ReportItems
+     * Given a submissionId and an array of Metrics, return a ReportItems
      *
      * @param int $submissionId
-     * @param array $metrics \COUNTER\Metric array
+     * @param array $metrics Metric array
      *
-     * @return mixed \COUNTER\ReportItems or false
+     * @return mixed ReportItems or false
      */
     private function _createReportItem($submissionId, $metrics)
     {
@@ -166,8 +171,8 @@ class CounterReportAR1 extends \APP\plugins\reports\counter\classes\CounterRepor
         if (!$article) {
             return false;
         }
-        $title = $article->getLocalizedTitle();
-        $journalId = $article->getContextId();
+        $title = $article->getCurrentPublication()->getLocalizedTitle();
+        $journalId = $article->getData('contextId');
         $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
         $journal = $journalDao->getById($journalId);
         if (!$journal) {
@@ -178,31 +183,31 @@ class CounterReportAR1 extends \APP\plugins\reports\counter\classes\CounterRepor
         foreach (['print', 'online'] as $issnType) {
             if ($journal->getData($issnType . 'Issn')) {
                 try {
-                    $journalPubIds[] = new \COUNTER\Identifier(ucfirst($issnType) . '_ISSN', $journal->getData($issnType . 'Issn'));
+                    $journalPubIds[] = new Identifier(ucfirst($issnType) . '_ISSN', $journal->getData($issnType . 'Issn'));
                 } catch (Exception $ex) {
                     // Just ignore it
                 }
             }
         }
-        $journalPubIds[] = new \COUNTER\Identifier(COUNTER_LITERAL_PROPRIETARY, $journal->getPath());
+        $journalPubIds[] = new Identifier(COUNTER_LITERAL_PROPRIETARY, $journal->getPath());
         $pubIdPlugins = PluginRegistry::loadCategory('pubIds', true, $journalId);
         $articlePubIds = [];
-        $articlePubIds[] = new \COUNTER\Identifier(COUNTER_LITERAL_PROPRIETARY, (string) $submissionId);
-        if ($doi = $article->getStoredPubId('doi')) {
+        $articlePubIds[] = new Identifier(COUNTER_LITERAL_PROPRIETARY, (string) $submissionId);
+        if ($doi = $article->getCurrentPublication()->getDoi()) {
             try {
-                $articlePubIds[] = new \COUNTER\Identifier(strtoupper('doi'), $doi);
+                $articlePubIds[] = new Identifier(strtoupper('doi'), $doi);
             } catch (Exception $ex) {
                 // Just ignore it
             }
         }
         $reportItem = [];
         try {
-            $reportItem = new \COUNTER\ReportItems(
+            $reportItem = new ReportItems(
                 __('common.software'),
                 $title,
                 COUNTER_LITERAL_ARTICLE,
                 $metrics,
-                new \COUNTER\ParentItem($journalName, COUNTER_LITERAL_JOURNAL, $journalPubIds),
+                new ParentItem($journalName, COUNTER_LITERAL_JOURNAL, $journalPubIds),
                 $articlePubIds
             );
         } catch (Exception $e) {
