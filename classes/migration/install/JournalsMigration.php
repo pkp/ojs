@@ -25,6 +25,7 @@ class JournalsMigration extends \PKP\migration\Migration
     {
         // Journals and basic journal settings.
         Schema::create('journals', function (Blueprint $table) {
+            $table->comment('A list of all journals in the installation of OJS.');
             $table->bigInteger('journal_id')->autoIncrement();
             $table->string('path', 32);
             $table->float('seq', 8, 2)->default(0)->comment('Used to order lists of journals');
@@ -36,6 +37,7 @@ class JournalsMigration extends \PKP\migration\Migration
 
         // Journal settings.
         Schema::create('journal_settings', function (Blueprint $table) {
+            $table->comment('More data about journals, including localized properties like policies.');
             $table->bigInteger('journal_id');
             $table->foreign('journal_id', 'journal_settings_journal_id')->references('journal_id')->on('journals')->onDelete('cascade');
             $table->index(['journal_id'], 'journal_settings_journal_id');

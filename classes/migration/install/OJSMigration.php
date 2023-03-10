@@ -26,6 +26,7 @@ class OJSMigration extends \PKP\migration\Migration
     {
         // Journal sections.
         Schema::create('sections', function (Blueprint $table) {
+            $table->comment('A list of all sections into which submissions can be organized, forming the table of contents.');
             $table->bigInteger('section_id')->autoIncrement();
 
             $table->bigInteger('journal_id');
@@ -49,6 +50,7 @@ class OJSMigration extends \PKP\migration\Migration
 
         // Section-specific settings
         Schema::create('section_settings', function (Blueprint $table) {
+            $table->comment('More data about sections, including localized properties like section titles.');
             $table->bigInteger('section_id');
             $table->foreign('section_id', 'section_settings_section_id')->references('section_id')->on('sections')->onDelete('cascade');
             $table->index(['section_id'], 'section_settings_section_id');
@@ -62,6 +64,7 @@ class OJSMigration extends \PKP\migration\Migration
 
         // Journal issues.
         Schema::create('issues', function (Blueprint $table) {
+            $table->comment('A list of all journal issues, with identifying information like year, number, volume, etc.');
             $table->bigInteger('issue_id')->autoIncrement();
 
             $table->bigInteger('journal_id');
@@ -94,6 +97,7 @@ class OJSMigration extends \PKP\migration\Migration
 
         // Locale-specific issue data
         Schema::create('issue_settings', function (Blueprint $table) {
+            $table->comment('More data about issues, including localized properties such as issue titles.');
             $table->bigInteger('issue_id');
             $table->foreign('issue_id', 'issue_settings_issue_id')->references('issue_id')->on('issues')->onDelete('cascade');
             $table->index(['issue_id'], 'issue_settings_issue_id');
@@ -114,6 +118,7 @@ class OJSMigration extends \PKP\migration\Migration
         }
 
         Schema::create('issue_files', function (Blueprint $table) {
+            $table->comment('Relationships between issues and issue files, such as cover images.');
             $table->bigInteger('file_id')->autoIncrement();
 
             $table->bigInteger('issue_id');
@@ -131,6 +136,7 @@ class OJSMigration extends \PKP\migration\Migration
 
         // Issue galleys.
         Schema::create('issue_galleys', function (Blueprint $table) {
+            $table->comment('Issue galleys are representations of the entire issue in a single file, such as a complete issue PDF.');
             $table->bigInteger('galley_id')->autoIncrement();
 
             $table->string('locale', 14)->nullable();
@@ -152,6 +158,7 @@ class OJSMigration extends \PKP\migration\Migration
 
         // Issue galley metadata.
         Schema::create('issue_galley_settings', function (Blueprint $table) {
+            $table->comment('More data about issue galleys, including localized content such as labels.');
             $table->bigInteger('galley_id');
             $table->foreign('galley_id', 'issue_galleys_settings_galley_id')->references('galley_id')->on('issue_galleys')->onDelete('cascade');
             $table->index(['galley_id'], 'issue_galley_settings_galley_id');
@@ -164,8 +171,8 @@ class OJSMigration extends \PKP\migration\Migration
             $table->unique(['galley_id', 'locale', 'setting_name'], 'issue_galley_settings_pkey');
         });
 
-        // Custom sequencing information for journal issues, when available
         Schema::create('custom_issue_orders', function (Blueprint $table) {
+            $table->comment('Ordering information for the issue list, when custom issue ordering is specified.');
             $table->bigInteger('issue_id');
             $table->foreign('issue_id', 'custom_issue_orders_issue_id')->references('issue_id')->on('issues')->onDelete('cascade');
             $table->index(['issue_id'], 'custom_issue_orders_issue_id');
@@ -179,8 +186,8 @@ class OJSMigration extends \PKP\migration\Migration
             $table->unique(['issue_id'], 'custom_issue_orders_pkey');
         });
 
-        // Custom sequencing information for journal sections by issue, when available.
         Schema::create('custom_section_orders', function (Blueprint $table) {
+            $table->comment('Ordering information for sections within issues, when issue-specific section ordering is specified.');
             $table->bigInteger('issue_id');
             $table->foreign('issue_id', 'custom_section_orders_issue_id')->references('issue_id')->on('issues')->onDelete('cascade');
             $table->index(['issue_id'], 'custom_section_orders_issue_id');
@@ -243,6 +250,7 @@ class OJSMigration extends \PKP\migration\Migration
         });
         // Publication galleys
         Schema::create('publication_galleys', function (Blueprint $table) {
+            $table->comment('Publication galleys are representations of a publication in a specific format, e.g. a PDF.');
             $table->bigInteger('galley_id')->autoIncrement();
             $table->string('locale', 14)->nullable();
 
@@ -270,6 +278,7 @@ class OJSMigration extends \PKP\migration\Migration
 
         // Galley metadata.
         Schema::create('publication_galley_settings', function (Blueprint $table) {
+            $table->comment('More data about publication galleys, including localized content such as labels.');
             $table->bigInteger('galley_id');
             $table->foreign('galley_id', 'publication_galley_settings_galley_id')->references('galley_id')->on('publication_galleys')->onDelete('cascade');
             $table->index(['galley_id'], 'publication_galley_settings_galley_id');
@@ -290,6 +299,7 @@ class OJSMigration extends \PKP\migration\Migration
 
         // Subscription types.
         Schema::create('subscription_types', function (Blueprint $table) {
+            $table->comment('Subscription types represent the kinds of subscriptions that a user or institution may have, such as an annual subscription or a discounted subscription.');
             $table->bigInteger('type_id')->autoIncrement();
 
             $table->bigInteger('journal_id');
@@ -308,6 +318,7 @@ class OJSMigration extends \PKP\migration\Migration
 
         // Locale-specific subscription type data
         Schema::create('subscription_type_settings', function (Blueprint $table) {
+            $table->comment('More data about subscription types, including localized properties such as names.');
             $table->bigInteger('type_id');
             $table->foreign('type_id', 'subscription_type_settings_type_id')->references('type_id')->on('subscription_types')->onDelete('cascade');
             $table->index(['type_id'], 'subscription_type_settings_type_id');
@@ -322,6 +333,7 @@ class OJSMigration extends \PKP\migration\Migration
 
         // Journal subscriptions.
         Schema::create('subscriptions', function (Blueprint $table) {
+            $table->comment('A list of subscriptions, both institutional and individual, for journals that use subscription-based publishing.');
             $table->bigInteger('subscription_id')->autoIncrement();
 
             $table->bigInteger('journal_id');
@@ -346,6 +358,7 @@ class OJSMigration extends \PKP\migration\Migration
 
         // Journal institutional subscriptions.
         Schema::create('institutional_subscriptions', function (Blueprint $table) {
+            $table->comment('A list of institutional subscriptions, linking a subscription with an institution.');
             $table->bigInteger('institutional_subscription_id')->autoIncrement();
 
             $table->bigInteger('subscription_id');
@@ -364,6 +377,7 @@ class OJSMigration extends \PKP\migration\Migration
 
         // Logs queued (unfulfilled) payments.
         Schema::create('queued_payments', function (Blueprint $table) {
+            $table->comment('Unfulfilled (queued) payments, i.e. payments that have not yet been completed via an online payment system.');
             $table->bigInteger('queued_payment_id')->autoIncrement();
             $table->datetime('date_created');
             $table->datetime('date_modified');
@@ -373,6 +387,7 @@ class OJSMigration extends \PKP\migration\Migration
 
         // Logs completed (fulfilled) payments.
         Schema::create('completed_payments', function (Blueprint $table) {
+            $table->comment('A list of completed (fulfilled) payments relating to a payment type such as a subscription payment.');
             $table->bigInteger('completed_payment_id')->autoIncrement();
             $table->datetime('timestamp');
             $table->bigInteger('payment_type');
