@@ -17,8 +17,11 @@ namespace APP\controllers\grid\articleGalleys;
 
 use APP\controllers\grid\articleGalleys\form\ArticleGalleyForm;
 use APP\controllers\tab\pubIds\form\PublicIdentifiersForm;
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\notification\NotificationManager;
+use APP\publication\Publication;
+use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\controllers\grid\feature\OrderGridItemsFeature;
 use PKP\controllers\grid\GridColumn;
@@ -37,8 +40,6 @@ use PKP\security\authorization\PublicationAccessPolicy;
 use PKP\security\authorization\WorkflowStageAccessPolicy;
 use PKP\security\Role;
 use PKP\submission\PKPSubmission;
-use APP\submission\Submission;
-use APP\publication\Publication;
 
 class ArticleGalleyGridHandler extends GridHandler
 {
@@ -72,7 +73,7 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function getSubmission()
     {
-        return $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+        return $this->getAuthorizedContextObject(Application::ASSOC_TYPE_SUBMISSION);
     }
 
     /**
@@ -82,7 +83,7 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function getPublication()
     {
-        return $this->getAuthorizedContextObject(ASSOC_TYPE_PUBLICATION);
+        return $this->getAuthorizedContextObject(Application::ASSOC_TYPE_PUBLICATION);
     }
 
     /**
@@ -92,7 +93,7 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function getGalley()
     {
-        return $this->getAuthorizedContextObject(ASSOC_TYPE_REPRESENTATION);
+        return $this->getAuthorizedContextObject(Application::ASSOC_TYPE_REPRESENTATION);
     }
 
 
@@ -331,7 +332,7 @@ class ArticleGalleyGridHandler extends GridHandler
         Repo::galley()->delete($galley);
 
         $notificationDao = DAORegistry::getDAO('NotificationDAO'); /** @var NotificationDAO $notificationDao */
-        $notificationDao->deleteByAssoc(ASSOC_TYPE_REPRESENTATION, $galley->getId());
+        $notificationDao->deleteByAssoc(Application::ASSOC_TYPE_REPRESENTATION, $galley->getId());
 
         if ($this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_EDITING ||
             $this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_PRODUCTION) {
@@ -340,7 +341,7 @@ class ArticleGalleyGridHandler extends GridHandler
                 $request,
                 [PKPNotification::NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER, PKPNotification::NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS],
                 null,
-                ASSOC_TYPE_SUBMISSION,
+                Application::ASSOC_TYPE_SUBMISSION,
                 $this->getSubmission()->getId()
             );
         }
@@ -429,7 +430,7 @@ class ArticleGalleyGridHandler extends GridHandler
                     $request,
                     [PKPNotification::NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER, PKPNotification::NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS],
                     null,
-                    ASSOC_TYPE_SUBMISSION,
+                    Application::ASSOC_TYPE_SUBMISSION,
                     $this->getSubmission()->getId()
                 );
             }
@@ -470,8 +471,8 @@ class ArticleGalleyGridHandler extends GridHandler
             Repo::user()->canUserAccessStage(
                 WORKFLOW_STAGE_ID_PRODUCTION,
                 PKPApplication::WORKFLOW_TYPE_EDITORIAL,
-                $this->getAuthorizedContextObject(ASSOC_TYPE_ACCESSIBLE_WORKFLOW_STAGES),
-                $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES)
+                $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ACCESSIBLE_WORKFLOW_STAGES),
+                $this->getAuthorizedContextObject(Application::ASSOC_TYPE_USER_ROLES)
             );
     }
 }

@@ -17,6 +17,7 @@
 
 namespace APP\oai\ojs;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use Illuminate\Support\Facades\DB;
 use PKP\db\DAORegistry;
@@ -131,7 +132,7 @@ class OAIDAO extends PKPOAIDAO
             array_push($sets, new OAISet(self::setSpec($journal), $title, ''));
 
             $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /** @var DataObjectTombstoneDAO $tombstoneDao */
-            $articleTombstoneSets = $tombstoneDao->getSets(ASSOC_TYPE_JOURNAL, $journal->getId());
+            $articleTombstoneSets = $tombstoneDao->getSets(Application::ASSOC_TYPE_JOURNAL, $journal->getId());
 
             $sections = Repo::section()->getCollector()->filterByContextIds([$journal->getId()])->getMany();
             foreach ($sections as $section) {
@@ -303,7 +304,7 @@ class OAIDAO extends PKPOAIDAO
                     ->when(isset($journalId), function ($query, $journalId) {
                         return $query->join('data_object_tombstone_oai_set_objects AS tsoj', function ($join) use ($journalId) {
                             $join->on('tsoj.tombstone_id', '=', 'dot.tombstone_id');
-                            $join->where('tsoj.assoc_type', '=', ASSOC_TYPE_JOURNAL);
+                            $join->where('tsoj.assoc_type', '=', Application::ASSOC_TYPE_JOURNAL);
                             $join->where('tsoj.assoc_id', '=', (int) $journalId);
                         })->addSelect(['tsoj.assoc_id']);
                     }, function ($query) {
@@ -312,7 +313,7 @@ class OAIDAO extends PKPOAIDAO
                     ->when(isset($sectionId), function ($query) use ($sectionId) {
                         return $query->join('data_object_tombstone_oai_set_objects AS tsos', function ($join) use ($sectionId) {
                             $join->on('tsos.tombstone_id', '=', 'dot.tombstone_id');
-                            $join->where('tsos.assoc_type', '=', ASSOC_TYPE_SECTION);
+                            $join->where('tsos.assoc_type', '=', Application::ASSOC_TYPE_SECTION);
                             $join->where('tsos.assoc_id', '=', (int) $sectionId);
                         })->addSelect(['tsos.assoc_id']);
                     }, function ($query) {

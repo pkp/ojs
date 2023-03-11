@@ -23,6 +23,7 @@
 
 namespace APP\journal;
 
+use APP\core\Application;
 use PKP\context\Context;
 
 use PKP\db\DAORegistry;
@@ -82,7 +83,7 @@ class Journal extends Context
      */
     public function getAssocType()
     {
-        return ASSOC_TYPE_JOURNAL;
+        return Application::ASSOC_TYPE_JOURNAL;
     }
 
     /**

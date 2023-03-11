@@ -62,7 +62,7 @@ class OJSPaymentManager extends PaymentManager
      * Create a queued payment.
      *
      * @param PKPRequest $request
-     * @param int $type PAYMENT_TYPE_...
+     * @param int $type OJSPaymentManager::PAYMENT_TYPE_...
      * @param int $userId ID of user responsible for payment
      * @param int $assocId ID of associated entity
      * @param float $amount Amount of currency $currencyCode

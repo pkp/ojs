@@ -15,6 +15,7 @@
 
 namespace APP\controllers\grid\pubIds;
 
+use APP\core\Application;
 use PKP\controllers\grid\feature\PagingFeature;
 use PKP\controllers\grid\feature\selectableItems\SelectableItemsFeature;
 use PKP\controllers\grid\GridColumn;
@@ -83,7 +84,7 @@ class PubIdExportIssuesListGridHandler extends GridHandler
         assert(isset($this->_plugin));
 
         // Fetch the authorized roles.
-        $authorizedRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
+        $authorizedRoles = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_USER_ROLES);
 
         // Grid columns.
         $cellProvider = new PubIdExportIssuesListGridCellProvider($this->_plugin, $authorizedRoles);

@@ -107,7 +107,7 @@ class IssueGalleyForm extends Form
             if (ctype_digit((string) $publicGalleyId)) {
                 $this->addError('publicGalleyId', __('editor.publicIdentificationNumericNotAllowed', ['publicIdentifier' => $publicGalleyId]));
                 $this->addErrorField('publicGalleyId');
-            } elseif ($journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicGalleyId, ASSOC_TYPE_ISSUE_GALLEY, $this->_issueGalley ? $this->_issueGalley->getId() : null, true)) {
+            } elseif ($journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicGalleyId, Application::ASSOC_TYPE_ISSUE_GALLEY, $this->_issueGalley ? $this->_issueGalley->getId() : null, true)) {
                 $this->addError('publicGalleyId', __('editor.publicIdentificationExistsForTheSameType', ['publicIdentifier' => $publicGalleyId]));
                 $this->addErrorField('publicGalleyId');
             }

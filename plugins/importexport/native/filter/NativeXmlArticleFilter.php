@@ -15,6 +15,7 @@
 
 namespace APP\plugins\importexport\native\filter;
 
+use APP\core\Application;
 use PKP\plugins\importexport\PKPImportExportFilter;
 
 class NativeXmlArticleFilter extends \PKP\plugins\importexport\native\filter\NativeXmlSubmissionFilter
@@ -50,7 +51,7 @@ class NativeXmlArticleFilter extends \PKP\plugins\importexport\native\filter\Nat
                 break;
             default:
                 $importClass = null; // Suppress scrutinizer warn
-                $deployment->addWarning(ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.common.error.unknownElement', ['param' => $elementName]));
+                $deployment->addWarning(Application::ASSOC_TYPE_SUBMISSION, $submission->getId(), __('plugins.importexport.common.error.unknownElement', ['param' => $elementName]));
         }
         // Caps on class name for consistency with imports, whose filter
         // group names are generated implicitly.

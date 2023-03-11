@@ -130,7 +130,7 @@ class Upgrade extends Installer
             ->leftJoin('submission_files as sf', 'sf.file_id', '=', 'ssf.file_id')
             ->leftJoin('submissions as s', 's.submission_id', '=', 'sf.submission_id')
             ->where('sf.file_stage', '=', SubmissionFile::SUBMISSION_FILE_SUBMISSION)
-            ->where('sf.assoc_type', '=', ASSOC_TYPE_REPRESENTATION)
+            ->where('sf.assoc_type', '=', Application::ASSOC_TYPE_REPRESENTATION)
             ->whereColumn('sf.revision', '=', 'ssf.revision')
             ->get();
 
@@ -420,7 +420,7 @@ class Upgrade extends Installer
     }
 
     /**
-    * Update assoc_id for assoc_type ASSOC_TYPE_SUBMISSION_FILE_COUNTER_OTHER = 531
+    * Update assoc_id for assoc_type Application::ASSOC_TYPE_SUBMISSION_FILE_COUNTER_OTHER = 531
     *
     * @return bool True indicates success.
     */

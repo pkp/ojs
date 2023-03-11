@@ -329,7 +329,7 @@ class ArticleReportPlugin extends ReportPlugin
     /**
      * Get decision message
      *
-     * @param int $decision SUBMISSION_EDITOR_DECISION_... or SUBMISSION_EDITOR_RECOMMEND_...
+     * @param int $decision Decision::*...
      *
      * @return string
      */

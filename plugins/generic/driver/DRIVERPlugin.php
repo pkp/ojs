@@ -13,6 +13,7 @@
 
 namespace APP\plugins\generic\driver;
 
+use APP\core\Application;
 use APP\facades\Repo;
 
 define('DRIVER_ACCESS_OPEN', 0);
@@ -127,7 +128,7 @@ class DRIVERPlugin extends GenericPlugin
     {
         $articleTombstone = & $params[0];
 
-        if ($this->isDRIVERArticle($articleTombstone->getOAISetObjectId(ASSOC_TYPE_JOURNAL), $articleTombstone->getDataObjectId())) {
+        if ($this->isDRIVERArticle($articleTombstone->getOAISetObjectId(Application::ASSOC_TYPE_JOURNAL), $articleTombstone->getDataObjectId())) {
             $dataObjectTombstoneSettingsDao = DAORegistry::getDAO('DataObjectTombstoneSettingsDAO'); /** @var DataObjectTombstoneSettingsDAO $dataObjectTombstoneSettingsDao */
             $dataObjectTombstoneSettingsDao->updateSetting($articleTombstone->getId(), 'driver', true, 'bool');
         }

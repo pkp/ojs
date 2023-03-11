@@ -16,6 +16,7 @@
 namespace APP\controllers\grid\issueGalleys;
 
 use APP\controllers\grid\issues\form\IssueGalleyForm;
+use APP\core\Application;
 use APP\file\IssueFileManager;
 use APP\security\authorization\OjsIssueGalleyRequiredPolicy;
 use APP\security\authorization\OjsIssueRequiredPolicy;
@@ -100,8 +101,8 @@ class IssueGalleyGridHandler extends GridHandler
      */
     public function getRequestArgs()
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-        $issueGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
+        $issueGalley = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE_GALLEY);
         $requestArgs = (array) parent::getRequestArgs();
         $requestArgs['issueId'] = $issue->getId();
         if ($issueGalley) {
@@ -188,7 +189,7 @@ class IssueGalleyGridHandler extends GridHandler
      */
     protected function getRowInstance()
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         return new IssueGalleyGridRow($issue->getId());
     }
 
@@ -218,8 +219,8 @@ class IssueGalleyGridHandler extends GridHandler
      */
     public function edit($args, $request)
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-        $issueGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
+        $issueGalley = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE_GALLEY);
 
         $issueGalleyForm = new IssueGalleyForm($request, $issue, $issueGalley);
         $issueGalleyForm->initData();
@@ -261,8 +262,8 @@ class IssueGalleyGridHandler extends GridHandler
      */
     public function download($args, $request)
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-        $issueGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
+        $issueGalley = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE_GALLEY);
         $issueFileManager = new IssueFileManager($issue->getId());
         return $issueFileManager->downloadById($issueGalley->getFileId());
     }
@@ -277,8 +278,8 @@ class IssueGalleyGridHandler extends GridHandler
      */
     public function update($args, $request)
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
-        $issueGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
+        $issueGalley = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE_GALLEY);
 
         $issueGalleyForm = new IssueGalleyForm($request, $issue, $issueGalley);
         $issueGalleyForm->readInputData();
@@ -299,7 +300,7 @@ class IssueGalleyGridHandler extends GridHandler
     public function delete($args, $request)
     {
         $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */
-        $issueGalley = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE_GALLEY);
+        $issueGalley = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE_GALLEY);
         if ($issueGalley && $request->checkCSRF()) {
             $issueGalleyDao->deleteObject($issueGalley);
             return DAO::getDataChangedEvent();
@@ -312,7 +313,7 @@ class IssueGalleyGridHandler extends GridHandler
      */
     protected function loadData($request, $filter)
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */
         return $issueGalleyDao->getByIssueId($issue->getId());
     }

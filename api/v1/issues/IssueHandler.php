@@ -16,6 +16,7 @@
 
 namespace APP\API\v1\issues;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\Collector;
 use APP\security\authorization\OjsIssueRequiredPolicy;
@@ -247,7 +248,7 @@ class IssueHandler extends APIHandler
     {
         $context = $this->getRequest()->getContext();
 
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
 
         if (!$issue) {
             return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');

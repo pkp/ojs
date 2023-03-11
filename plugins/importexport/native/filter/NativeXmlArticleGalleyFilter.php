@@ -15,6 +15,7 @@
 
 namespace APP\plugins\importexport\native\filter;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\submission\Submission;
 use DOMElement;
@@ -111,7 +112,7 @@ class NativeXmlArticleGalleyFilter extends \PKP\plugins\importexport\native\filt
             Repo::submissionFile()->edit(
                 $submissionFile,
                 [
-                    'assocType' => ASSOC_TYPE_REPRESENTATION,
+                    'assocType' => Application::ASSOC_TYPE_REPRESENTATION,
                     'assocId' => $representation->getId(),
                 ]
             );

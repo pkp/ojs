@@ -376,7 +376,7 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
                             $articleProofFileIds = Repo::submissionFile()
                                 ->getCollector()
                                 ->filterByAssoc(
-                                    ASSOC_TYPE_REPRESENTATION,
+                                    Application::ASSOC_TYPE_REPRESENTATION,
                                     [$representation->getId()]
                                 )->filterByFileStages([SubmissionFile::SUBMISSION_FILE_PROOF])
                                 ->getIds();

@@ -30,7 +30,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO
      * @param array $phrase
      * @param int|null $publishedFrom Optional start date
      * @param int|null $publishedTo Optional end date
-     * @param int|null $type ASSOC_TYPE_...
+     * @param int|null $type Application::ASSOC_TYPE_...
      * @param int $limit
      *
      * @return array of results (associative arrays)

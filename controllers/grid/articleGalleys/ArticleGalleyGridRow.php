@@ -15,6 +15,7 @@
 
 namespace APP\controllers\grid\articleGalleys;
 
+use APP\core\Application;
 use PKP\controllers\api\file\linkAction\AddFileLinkAction;
 use PKP\controllers\grid\GridRow;
 use PKP\linkAction\LinkAction;
@@ -75,13 +76,13 @@ class ArticleGalleyGridRow extends GridRow
                 'editGalley',
                 new AjaxModal(
                     $router->url($request, null, null, 'editGalley', null, $actionArgs),
-                    ($this->_isEditable)?__('submission.layout.editGalley'):__('submission.layout.viewGalley'),
+                    ($this->_isEditable) ? __('submission.layout.editGalley') : __('submission.layout.viewGalley'),
                     'modal_edit'
                 ),
-                ($this->_isEditable)?__('grid.action.edit'):__('grid.action.view'),
+                ($this->_isEditable) ? __('grid.action.edit') : __('grid.action.view'),
                 'edit'
             ));
-            
+
             if ($this->_isEditable) {
                 $galley = $this->getData();
                 if ($galley->getRemoteUrl() == '') {
@@ -91,7 +92,7 @@ class ArticleGalleyGridRow extends GridRow
                         WORKFLOW_STAGE_ID_PRODUCTION,
                         [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN, Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_ASSISTANT],
                         SubmissionFile::SUBMISSION_FILE_PROOF,
-                        ASSOC_TYPE_REPRESENTATION,
+                        Application::ASSOC_TYPE_REPRESENTATION,
                         $rowId,
                         null
                     ));

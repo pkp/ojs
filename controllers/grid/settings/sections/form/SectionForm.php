@@ -41,7 +41,7 @@ class SectionForm extends PKPSectionForm
         $this->addCheck(new \PKP\form\validation\FormValidatorLocale($this, 'title', 'required', 'manager.setup.form.section.nameRequired'));
         $this->addCheck(new \PKP\form\validation\FormValidatorLocale($this, 'abbrev', 'required', 'manager.sections.form.abbrevRequired'));
         $journal = $request->getJournal();
-        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'reviewFormId', 'optional', 'manager.sections.form.reviewFormId', [DAORegistry::getDAO('ReviewFormDAO'), 'reviewFormExists'], [ASSOC_TYPE_JOURNAL, $journal->getId()]));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'reviewFormId', 'optional', 'manager.sections.form.reviewFormId', [DAORegistry::getDAO('ReviewFormDAO'), 'reviewFormExists'], [Application::ASSOC_TYPE_JOURNAL, $journal->getId()]));
     }
 
     /**
@@ -114,7 +114,7 @@ class SectionForm extends PKPSectionForm
         $journal = $request->getJournal();
 
         $reviewFormDao = DAORegistry::getDAO('ReviewFormDAO'); /** @var ReviewFormDAO $reviewFormDao */
-        $reviewForms = $reviewFormDao->getActiveByAssocId(ASSOC_TYPE_JOURNAL, $journal->getId());
+        $reviewForms = $reviewFormDao->getActiveByAssocId(Application::ASSOC_TYPE_JOURNAL, $journal->getId());
         $reviewFormOptions = [];
         while ($reviewForm = $reviewForms->next()) {
             $reviewFormOptions[$reviewForm->getId()] = $reviewForm->getLocalizedTitle();

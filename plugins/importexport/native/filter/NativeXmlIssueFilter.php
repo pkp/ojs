@@ -15,6 +15,7 @@
 
 namespace APP\plugins\importexport\native\filter;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use PKP\plugins\importexport\PKPImportExportFilter;
 use PKP\plugins\PluginRegistry;
@@ -100,8 +101,8 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
                 Repo::issue()->updateCurrent($context->getId(), Repo::issue()->get($issueId));
             }
 
-            $deployment->addProcessedObjectId(ASSOC_TYPE_ISSUE, $issue->getId());
-            $deployment->addImportedRootEntity(ASSOC_TYPE_ISSUE, $issue);
+            $deployment->addProcessedObjectId(Application::ASSOC_TYPE_ISSUE, $issue->getId());
+            $deployment->addImportedRootEntity(Application::ASSOC_TYPE_ISSUE, $issue);
         }
         $deployment->setIssue($issue);
 
@@ -169,7 +170,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
                 case 'covers':
                     if (!$processOnlyChildren) {
                         $nativeFilterHelper = new NativeFilterHelper();
-                        $nativeFilterHelper->parseIssueCovers($this, $n, $issue, ASSOC_TYPE_ISSUE);
+                        $nativeFilterHelper->parseIssueCovers($this, $n, $issue, Application::ASSOC_TYPE_ISSUE);
                     }
                     break;
                 case 'issue_identification':
@@ -178,7 +179,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
                     }
                     break;
                 default:
-                    $deployment->addWarning(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.common.error.unknownElement', ['param' => $n->tagName]));
+                    $deployment->addWarning(Application::ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.common.error.unknownElement', ['param' => $n->tagName]));
             }
         }
     }
@@ -248,7 +249,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
                         $this->parseIssueGalley($n, $issue);
                         break;
                     default:
-                        $deployment->addWarning(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.common.error.unknownElement', ['param' => $n->tagName]));
+                        $deployment->addWarning(Application::ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.common.error.unknownElement', ['param' => $n->tagName]));
                 }
             }
         }
@@ -284,7 +285,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
                         $this->parseArticle($n, $issue);
                         break;
                     default:
-                        $deployment->addWarning(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.common.error.unknownElement', ['param' => $n->tagName]));
+                        $deployment->addWarning(Application::ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.common.error.unknownElement', ['param' => $n->tagName]));
                 }
             }
         }
@@ -320,7 +321,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
                         $this->parseSection($n);
                         break;
                     default:
-                        $deployment->addWarning(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.common.error.unknownElement', ['param' => $n->tagName]));
+                        $deployment->addWarning(Application::ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.common.error.unknownElement', ['param' => $n->tagName]));
                 }
             }
         }
@@ -390,10 +391,10 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
             $sectionId = Repo::section()->add($section);
             if (count($unknownNodes)) {
                 foreach ($unknownNodes as $tagName) {
-                    $deployment->addWarning(ASSOC_TYPE_SECTION, $sectionId, __('plugins.importexport.common.error.unknownElement', ['param' => $tagName]));
+                    $deployment->addWarning(Application::ASSOC_TYPE_SECTION, $sectionId, __('plugins.importexport.common.error.unknownElement', ['param' => $tagName]));
                 }
             }
-            $deployment->addProcessedObjectId(ASSOC_TYPE_SECTION, $sectionId);
+            $deployment->addProcessedObjectId(Application::ASSOC_TYPE_SECTION, $sectionId);
         }
     }
 
@@ -433,7 +434,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
                         break;
                     default:
                         if ($allowWarnings) {
-                            $deployment->addWarning(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.common.error.unknownElement', ['param' => $n->tagName]));
+                            $deployment->addWarning(Application::ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.common.error.unknownElement', ['param' => $n->tagName]));
                         }
                 }
             }
@@ -502,7 +503,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
 
             $foundIssues = $collector->getMany();
             foreach ($foundIssues as $issue) {
-                $deployment->addWarning(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.issueIdentificationDuplicate', ['issueId' => $issue->getId(), 'issueIdentification' => $n->ownerDocument->saveXML($n)]));
+                $deployment->addWarning(Application::ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.issueIdentificationDuplicate', ['issueId' => $issue->getId(), 'issueIdentification' => $n->ownerDocument->saveXML($n)]));
             }
         }
         return $issue;
@@ -534,18 +535,18 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
                 if ($foundSectionId) {
                     if ($foundSectionId != $sectionId) {
                         // Mismatching sections found.
-                        $deployment->addWarning(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.sectionTitleMismatch', ['section1Title' => $title, 'section2Title' => $foundSectionTitle, 'issueTitle' => $issue->getIssueIdentification()]));
+                        $deployment->addWarning(Application::ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.sectionTitleMismatch', ['section1Title' => $title, 'section2Title' => $foundSectionTitle, 'issueTitle' => $issue->getIssueIdentification()]));
                     }
                 } elseif ($index > 0) {
                     // the current title matches, but the prev titles didn't
-                    $deployment->addWarning(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.sectionTitleMatch', ['sectionTitle' => $title, 'issueTitle' => $issue->getIssueIdentification()]));
+                    $deployment->addWarning(Application::ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.sectionTitleMatch', ['sectionTitle' => $title, 'issueTitle' => $issue->getIssueIdentification()]));
                 }
                 $foundSectionId = $sectionId;
                 $foundSectionTitle = $title;
             } else {
                 if ($foundSectionId) {
                     // a prev title matched, but the current doesn't
-                    $deployment->addWarning(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.sectionTitleMatch', ['sectionTitle' => $foundSectionTitle, 'issueTitle' => $issue->getIssueIdentification()]));
+                    $deployment->addWarning(Application::ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.sectionTitleMatch', ['sectionTitle' => $foundSectionTitle, 'issueTitle' => $issue->getIssueIdentification()]));
                 }
             }
             $index++;
@@ -562,18 +563,18 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
                 if ($foundSectionId) {
                     if ($foundSectionId != $sectionId) {
                         // Mismatching sections found.
-                        $deployment->addWarning(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.sectionAbbrevMismatch', ['section1Abbrev' => $abbrev, 'section2Abbrev' => $foundSectionAbbrev, 'issueTitle' => $issue->getIssueIdentification()]));
+                        $deployment->addWarning(Application::ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.sectionAbbrevMismatch', ['section1Abbrev' => $abbrev, 'section2Abbrev' => $foundSectionAbbrev, 'issueTitle' => $issue->getIssueIdentification()]));
                     }
                 } elseif ($index > 0) {
                     // the current abbrev matches, but the prev abbrevs didn't
-                    $deployment->addWarning(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.sectionAbbrevMatch', ['sectionAbbrev' => $abbrev, 'issueTitle' => $issue->getIssueIdentification()]));
+                    $deployment->addWarning(Application::ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.sectionAbbrevMatch', ['sectionAbbrev' => $abbrev, 'issueTitle' => $issue->getIssueIdentification()]));
                 }
                 $foundSectionId = $sectionId;
                 $foundSectionAbbrev = $abbrev;
             } else {
                 if ($foundSectionId) {
                     // a prev abbrev matched, but the current doesn't
-                    $deployment->addWarning(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.sectionAbbrevMatch', ['sectionAbbrev' => $foundSectionAbbrev, 'issueTitle' => $issue->getIssueIdentification()]));
+                    $deployment->addWarning(Application::ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.native.import.error.sectionAbbrevMatch', ['sectionAbbrev' => $foundSectionAbbrev, 'issueTitle' => $issue->getIssueIdentification()]));
                 }
             }
             $index++;

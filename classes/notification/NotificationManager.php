@@ -106,7 +106,7 @@ class NotificationManager extends PKPNotificationManager
      */
     public function _getArticleTitle($notification)
     {
-        assert($notification->getAssocType() == ASSOC_TYPE_SUBMISSION);
+        assert($notification->getAssocType() == Application::ASSOC_TYPE_SUBMISSION);
         assert(is_numeric($notification->getAssocId()));
         $article = Repo::submission()->get($notification->getAssocId());
         if (!$article) {
@@ -177,7 +177,7 @@ class NotificationManager extends PKPNotificationManager
         switch ($notificationType) {
             case Notification::NOTIFICATION_TYPE_APPROVE_SUBMISSION:
             case Notification::NOTIFICATION_TYPE_VISIT_CATALOG:
-                assert($assocType == ASSOC_TYPE_SUBMISSION && is_numeric($assocId));
+                assert($assocType == Application::ASSOC_TYPE_SUBMISSION && is_numeric($assocId));
                 return new ApproveSubmissionNotificationManager($notificationType);
         }
         // Otherwise, fall back on parent class

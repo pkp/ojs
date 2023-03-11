@@ -15,6 +15,7 @@
 
 namespace APP\controllers\grid\settings\plugins;
 
+use APP\core\Application;
 use PKP\controllers\grid\plugins\PluginGridHandler;
 use PKP\controllers\grid\plugins\PluginGridRow;
 use PKP\security\authorization\ContextAccessPolicy;
@@ -45,7 +46,7 @@ class SettingsPluginGridHandler extends PluginGridHandler
     public function loadCategoryData($request, &$categoryDataElement, $filter = null)
     {
         $plugins = parent::loadCategoryData($request, $categoryDataElement, $filter);
-        $userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
+        $userRoles = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_USER_ROLES);
 
         $showSitePlugins = false;
         if (in_array(Role::ROLE_ID_SITE_ADMIN, $userRoles)) {
@@ -74,7 +75,7 @@ class SettingsPluginGridHandler extends PluginGridHandler
      */
     protected function getRowInstance()
     {
-        return new PluginGridRow($this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES));
+        return new PluginGridRow($this->getAuthorizedContextObject(Application::ASSOC_TYPE_USER_ROLES));
     }
 
     /**

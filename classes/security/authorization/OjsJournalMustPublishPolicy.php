@@ -14,6 +14,7 @@
 
 namespace APP\security\authorization;
 
+use APP\core\Application;
 use PKP\security\authorization\AuthorizationPolicy;
 use PKP\security\Role;
 
@@ -42,7 +43,7 @@ class OjsJournalMustPublishPolicy extends AuthorizationPolicy
         }
 
         // Certain roles are allowed to see unpublished content.
-        $userRoles = (array) $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
+        $userRoles = (array) $this->getAuthorizedContextObject(Application::ASSOC_TYPE_USER_ROLES);
         if (count(array_intersect(
             $userRoles,
             [
