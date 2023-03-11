@@ -24,6 +24,7 @@ use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\galley\Galley;
 use PKP\i18n\LocaleConversion;
+use PKP\submission\Genre;
 
 // Title types
 define('DATACITE_TITLETYPE_TRANSLATED', 'TranslatedTitle');
@@ -473,7 +474,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             case isset($galley):
                 if (!$galley->getRemoteURL()) {
                     $genre = $this->getDeployment()->getPlugin()->getCache()->get('genres', $galleyFile->getData('genreId'));
-                    if ($genre->getCategory() == GENRE_CATEGORY_DOCUMENT && !$genre->getSupplementary() && !$genre->getDependent()) {
+                    if ($genre->getCategory() == Genre::GENRE_CATEGORY_DOCUMENT && !$genre->getSupplementary() && !$genre->getDependent()) {
                         $resourceType = 'Article';
                     }
                 } else {
