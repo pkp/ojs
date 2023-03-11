@@ -16,8 +16,10 @@
 
 namespace APP\API\v1\_submissions;
 
+use APP\core\Application;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\submission\Collector;
+use PKP\db\DAORegistry;
 use PKP\security\authorization\SubmissionAccessPolicy;
 use PKP\security\Role;
 
@@ -79,7 +81,7 @@ class BackendSubmissionsHandler extends \PKP\API\v1\_submissions\PKPBackendSubmi
             return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
         }
 
-        $paymentManager = \Application::getPaymentManager($context);
+        $paymentManager = Application::getPaymentManager($context);
         $publicationFeeEnabled = $paymentManager->publicationEnabled();
         if (!$publicationFeeEnabled) {
             return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
@@ -93,7 +95,7 @@ class BackendSubmissionsHandler extends \PKP\API\v1\_submissions\PKPBackendSubmi
             ], 400);
         }
 
-        $completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */
+        $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */
         $publicationFeePayment = $completedPaymentDao->getByAssoc(null, OJSPaymentManager::PAYMENT_TYPE_PUBLICATION, $submission->getId());
 
         switch ($params['publicationFeeStatus']) {
@@ -132,7 +134,7 @@ class BackendSubmissionsHandler extends \PKP\API\v1\_submissions\PKPBackendSubmi
                 }
 
                 // Record a fulfilled payment.
-                $stageAssignmentDao = \DAORegistry::getDAO('StageAssignmentDAO'); /** @var StageAssignmentDAO $stageAssignmentDao */
+                $stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /** @var StageAssignmentDAO $stageAssignmentDao */
                 $submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleIds($submission->getId(), [Role::ROLE_ID_AUTHOR]);
                 $submitterAssignment = $submitterAssignments->next();
                 $queuedPayment = $paymentManager->createQueuedPayment(

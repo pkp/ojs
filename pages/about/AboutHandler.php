@@ -15,6 +15,7 @@
 
 namespace APP\pages\about;
 
+use APP\core\Application;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
 
@@ -34,7 +35,7 @@ class AboutHandler extends \PKP\pages\about\AboutContextHandler
         $subscriptionTypeDao = & DAORegistry::getDAO('SubscriptionTypeDAO');
 
         if ($journal) {
-            $paymentManager = \Application::getPaymentManager($journal);
+            $paymentManager = Application::getPaymentManager($journal);
             if (!($journal->getData('paymentsEnabled') && $paymentManager->isConfigured())) {
                 $request->redirect(null, 'index');
             }

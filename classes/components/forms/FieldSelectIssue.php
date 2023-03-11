@@ -14,6 +14,7 @@
 
 namespace APP\components\forms;
 
+use APP\core\Application;
 use PKP\components\forms\FieldSelect;
 
 class FieldSelectIssue extends FieldSelect
@@ -32,9 +33,9 @@ class FieldSelectIssue extends FieldSelect
         $config = parent::getConfig();
         $config['publicationStatus'] = $this->publicationStatus;
 
-        $issueUrlPlaceholder = \Application::get()->getRequest()->getDispatcher()->url(
-            \Application::get()->getRequest(),
-            \PKPApplication::ROUTE_PAGE,
+        $issueUrlPlaceholder = Application::get()->getRequest()->getDispatcher()->url(
+            Application::get()->getRequest(),
+            Application::ROUTE_PAGE,
             null,
             'issue',
             'view',

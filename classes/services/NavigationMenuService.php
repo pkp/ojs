@@ -108,7 +108,7 @@ class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
             case self::NMI_TYPE_MY_SUBSCRIPTIONS:
                 if ($context) {
                     $paymentManager = Application::getPaymentManager($context);
-                    $navigationMenuItem->setIsDisplayed(\Validation::isLoggedIn() && $context->getData('paymentsEnabled') && $paymentManager->isConfigured() && $context->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION);
+                    $navigationMenuItem->setIsDisplayed(Validation::isLoggedIn() && $context->getData('paymentsEnabled') && $paymentManager->isConfigured() && $context->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION);
                 }
                 break;
         }

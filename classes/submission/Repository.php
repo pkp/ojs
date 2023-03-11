@@ -139,7 +139,7 @@ class Repository extends \PKP\submission\Repository
     public function createDois(Submission $submission): array
     {
         /** @var JournalDAO $contextDao */
-        $contextDao = \DAORegistry::getDAO('JournalDAO');
+        $contextDao = DAORegistry::getDAO('JournalDAO');
         /** @var Context $context */
         $context = $contextDao->getById($submission->getData('contextId'));
 

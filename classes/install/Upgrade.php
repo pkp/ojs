@@ -16,6 +16,7 @@
 namespace APP\install;
 
 use APP\core\Application;
+use APP\core\Services;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\template\TemplateManager;
