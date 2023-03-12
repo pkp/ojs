@@ -33,6 +33,15 @@ define('COUNTER_LITERAL_PROPRIETARY', 'Proprietary');
 
 use APP\core\Application;
 use APP\statistics\StatisticsHelper;
+use COUNTER\Contact;
+use COUNTER\Customer;
+use COUNTER\DateRange;
+use COUNTER\Metric;
+use COUNTER\Report;
+use COUNTER\Reports;
+use COUNTER\Vendor;
+use DateTime;
+use Exception;
 use PKP\core\PKPString;
 
 class CounterReport
@@ -124,7 +133,7 @@ class CounterReport
      *
      * @see ReportPlugin::getMetrics for more details on parameters
      *
-     * @return array COUNTER\ReportItem array
+     * @return array ReportItem array
      */
     public function getReportItems($columns = [], $filters = [], $orderBy = [], $range = null)
     {
@@ -177,20 +186,20 @@ class CounterReport
     }
 
     /**
-     * Given a Year-Month period and array of COUNTER\PerformanceCounters, create a COUNTER\Metric
+     * Given a Year-Month period and array of PerformanceCounters, create a Metric
      *
      * @param string $period Date in the format Y-m-01 for month
-     * @param array $counters COUNTER\PerformanceCounter array
+     * @param array $counters PerformanceCounter array
      *
-     * @return COUNTER\Metric
+     * @return Metric
      */
     protected function createMetricByMonth($period, $counters)
     {
         $metric = [];
         try {
-            $metric = new COUNTER\Metric(
+            $metric = new Metric(
                 // Date range for JR1 is beginning of the month to end of the month
-                new COUNTER\DateRange(
+                new DateRange(
                     DateTime::createFromFormat('Y-m-d H:i:s', $period . ' 00:00:00'),
                     DateTime::createFromFormat('Y-m-d H:i:s', substr($period, 0, 8) . date('t', strtotime($period)) . ' 23:59:59')
                 ),
@@ -206,7 +215,7 @@ class CounterReport
     /**
      * Construct a Reports result containing the provided performance metrics
      *
-     * @param array $reportItems COUNTER\ReportItem
+     * @param array $reportItems ReportItem
      *
      * @return string xml
      */
@@ -221,18 +230,18 @@ class CounterReport
         }
         if (!$fatal) {
             try {
-                $report = new COUNTER\Reports(
-                    new COUNTER\Report(
+                $report = new Reports(
+                    new Report(
                         PKPString::generateUUID(),
                         $this->getRelease(),
                         $this->getCode(),
                         $this->getTitle(),
-                        new COUNTER\Customer(
+                        new Customer(
                             '0', // customer id is unused
                             $reportItems,
                             __('plugins.reports.counter.allCustomers')
                         ),
-                        new COUNTER\Vendor(
+                        new Vendor(
                             $this->getVendorID(),
                             $this->getVendorName(),
                             $this->getVendorContacts(),
@@ -274,7 +283,7 @@ class CounterReport
     /**
      * Get the Vendor Contacts
      *
-     * @return array() COUNTER\Contact
+     * @return array() Contact
      */
     public function getVendorContacts()
     {
@@ -294,7 +303,7 @@ class CounterReport
     /**
      * Get the Vendor Contacts
      *
-     * @return array COUNTER\Contact
+     * @return array Contact
      */
     public function getVendorLogoUrl()
     {
@@ -302,7 +311,7 @@ class CounterReport
     }
 
     /**
-     * Get the Vendor Componet by key
+     * Get the Vendor Component by key
      *
      * @param string $key
      */
@@ -336,7 +345,7 @@ class CounterReport
                         $contactName = $context->getContactName();
                         $contactEmail = $context->getContactEmail();
                     }
-                    $contact = new COUNTER\Contact($contactName, $contactEmail);
+                    $contact = new Contact($contactName, $contactEmail);
                 } catch (Exception $e) {
                     $this->setError($e);
                     $contact = [];
