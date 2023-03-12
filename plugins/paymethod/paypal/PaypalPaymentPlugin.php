@@ -173,7 +173,7 @@ class PaypalPaymentPlugin extends PaymethodPlugin
         try {
             $queuedPayment = $queuedPaymentDao->getById($queuedPaymentId = $request->getUserVar('queuedPaymentId'));
             if (!$queuedPayment) {
-                throw new \Exception("Invalid queued payment ID ${queuedPaymentId}!");
+                throw new \Exception("Invalid queued payment ID {$queuedPaymentId}!");
             }
 
             $gateway = Omnipay::create('PayPal_Rest');

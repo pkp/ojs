@@ -15,6 +15,7 @@
 
 namespace APP\pages\gateway;
 
+use APP\core\PageRouter;
 use APP\facades\Repo;
 use APP\handler\Handler;
 use APP\template\TemplateManager;
@@ -35,9 +36,11 @@ class GatewayHandler extends Handler
     public function __construct($request)
     {
         parent::__construct();
-        $op = $request->getRouter()->getRequestedOp($request);
+        /** @var PageRouter */
+        $router = $request->getRouter();
+        $op = $router->getRequestedOp($request);
         if ($op == 'plugin') {
-            $args = $request->getRouter()->getRequestedArgs($request);
+            $args = $router->getRequestedArgs($request);
             $pluginName = array_shift($args);
             $plugins = PluginRegistry::loadCategory('gateways');
             if (!isset($plugins[$pluginName])) {
@@ -72,7 +75,7 @@ class GatewayHandler extends Handler
         $this->validate();
         $this->setupTemplate($request);
 
-        $journal = $request->getJournal();
+        $journal = $request->getContext();
         $templateMgr = TemplateManager::getManager($request);
 
         if ($journal != null) {
@@ -137,7 +140,7 @@ class GatewayHandler extends Handler
         $this->validate();
         $this->setupTemplate($request);
 
-        $journal = $request->getJournal();
+        $journal = $request->getContext();
         $templateMgr = TemplateManager::getManager($request);
 
         if ($journal != null) {

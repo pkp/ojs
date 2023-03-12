@@ -20,6 +20,7 @@ use APP\file\IssueFileManager;
 use APP\issue\Issue;
 use APP\issue\IssueGalley;
 use APP\issue\IssueGalleyDAO;
+use APP\plugins\importexport\native\NativeImportExportDeployment;
 use PKP\db\DAORegistry;
 
 class NativeXmlIssueGalleyFilter extends \PKP\plugins\importexport\native\filter\NativeImportFilter
@@ -81,6 +82,7 @@ class NativeXmlIssueGalleyFilter extends \PKP\plugins\importexport\native\filter
      */
     public function handleElement($node)
     {
+        /** @var NativeImportExportDeployment */
         $deployment = $this->getDeployment();
         $context = $deployment->getContext();
         $issue = $deployment->getIssue();

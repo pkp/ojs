@@ -17,6 +17,7 @@ namespace APP\plugins\generic\datacite;
 use APP\core\Application;
 use APP\core\Services;
 use APP\facades\Repo;
+use APP\issue\Issue;
 use APP\plugins\generic\datacite\classes\DataciteSettings;
 use APP\plugins\IDoiRegistrationAgency;
 use Illuminate\Support\Collection;
@@ -152,7 +153,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
     }
 
     /**
-     * @param \APP\issue\Issue $issues
+     * @param Issue[] $issues
      *
      */
     public function depositIssues(array $issues, \PKP\context\Context $context): array
@@ -171,8 +172,8 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
     /**
      * Includes plugin in list of configurable registration agencies for DOI depositing functionality
      *
-     * @param $hookName string DoiSettingsForm::setEnabledRegistrationAgencies
-     * @param $args array [
+     * @param string $hookName DoiSettingsForm::setEnabledRegistrationAgencies
+     * @param array $args [
      * @option $enabledRegistrationAgencies array
      * ]
      */
@@ -237,7 +238,9 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         return null;
     }
 
-
+    /**
+     * @return DataciteExportPlugin
+     */
     private function _getExportPlugin()
     {
         if (empty($this->_exportPlugin)) {
@@ -270,7 +273,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
      * DOI was registered.
      *
      * @param string $hookName DoiListPanel::setConfig
-     * @param $args [
+     * @param array $args [
      *      @option $config array
      * ]
      */

@@ -17,6 +17,7 @@ namespace APP\plugins\importexport\native\filter;
 
 use APP\core\Application;
 use APP\facades\Repo;
+use APP\plugins\importexport\native\NativeImportExportDeployment;
 use PKP\plugins\importexport\PKPImportExportFilter;
 use PKP\plugins\PluginRegistry;
 
@@ -78,6 +79,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
      */
     public function handleElement($node)
     {
+        /** @var NativeImportExportDeployment */
         $deployment = $this->getDeployment();
         $context = $deployment->getContext();
 
@@ -518,6 +520,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
      */
     public function _sectionExist($importSection)
     {
+        /** @var NativeImportExportDeployment */
         $deployment = $this->getDeployment();
         $issue = $deployment->getIssue();
         // title and, optionally, abbrev contain information that can

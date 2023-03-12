@@ -327,7 +327,7 @@ class Issue extends \PKP\core\DataObject
      * Get stored public ID of the issue.
      *
      * This helper function is required by PKPPubIdPlugins.
-     * NB: To maintain backwards compatability, getDoi() is called from here
+     * NB: To maintain backwards compatibility, getDoi() is called from here
      *
      * @param string $pubIdType One of the NLM pub-id-type values or
      * 'other::something' if not part of the official NLM list
@@ -601,11 +601,11 @@ class Issue extends \PKP\core\DataObject
             }
 
             if ($opt == 'showVolume') {
-                $identification[] = "${volLabel} ${vol}";
+                $identification[] = "{$volLabel} {$vol}";
             } elseif ($opt == 'showNumber') {
-                $identification[] = "${numLabel} ${num}";
+                $identification[] = "{$numLabel} {$num}";
             } elseif ($opt == 'showYear') {
-                $identification[] = !empty($identification) ? "(${year})" : $year;
+                $identification[] = !empty($identification) ? "({$year})" : $year;
             } elseif ($opt == 'showTitle') {
                 if (!empty($title)) {
                     // Append a separator to the last key

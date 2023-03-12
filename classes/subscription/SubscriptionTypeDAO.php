@@ -282,6 +282,7 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
     {
         $subscriptionType = $this->getById($typeId, $journalId);
         if ($subscriptionType) {
+            /** @var InstitutionalSubscriptionDAO|IndividualSubscriptionDAO */
             $subscriptionDao = DAORegistry::getDAO($subscriptionType->getInstitutional() ? 'InstitutionalSubscriptionDAO' : 'IndividualSubscriptionDAO');
             $subscriptionDao->deleteById($typeId);
             $this->update('DELETE FROM subscription_types WHERE type_id = ?', [(int) $typeId]);

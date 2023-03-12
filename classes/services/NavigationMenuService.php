@@ -72,7 +72,7 @@ class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
     }
 
     /**
-     * Callback for display menu item functionallity
+     * Callback for display menu item functionality
      *
      * @param string $hookName
      * @param array $args of arguments passed

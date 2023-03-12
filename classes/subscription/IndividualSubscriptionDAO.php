@@ -429,7 +429,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
      * @param int $userId
      * @param int $journalId
      * @param int $check Check using either start date, end date, or both (default)
-     * @param date $checkDate (YYYY-MM-DD) Use this date instead of current date
+     * @param string $checkDate (YYYY-MM-DD) Use this date instead of current date
      *
      * @return bool
      */

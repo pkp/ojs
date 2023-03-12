@@ -16,30 +16,33 @@
 namespace APP\subscription\form;
 
 use APP\core\Application;
+use APP\core\Request;
 use APP\payment\ojs\OJSPaymentManager;
+use APP\subscription\IndividualSubscriptionDAO;
 use APP\subscription\Subscription;
+use APP\subscription\SubscriptionTypeDAO;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
 use PKP\form\Form;
 
 class UserIndividualSubscriptionForm extends Form
 {
-    /** @var PKPRequest */
+    /** @var Request */
     public $request;
 
-    /** @var userId int the user associated with the subscription */
+    /** @var int userId int the user associated with the subscription */
     public $userId;
 
-    /** @var subscription the subscription being purchased */
+    /** @var IndividualSubscription subscription the subscription being purchased */
     public $subscription;
 
-    /** @var subscriptionTypes Array subscription types */
+    /** @var array Subscription types */
     public $subscriptionTypes;
 
     /**
      * Constructor
      *
-     * @param PKPRequest $request
+     * @param Request $request
      * @param int $userId
      * @param int $subscriptionId
      */

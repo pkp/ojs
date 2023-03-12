@@ -98,7 +98,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin
     public function fetch($args, $request)
     {
         // Make sure we're within a Journal context
-        $journal = $request->getJournal();
+        $journal = $request->getContext();
         if (!$journal) {
             return false;
         }

@@ -53,6 +53,7 @@ class JournalOAI extends OAI
         $this->site = $request->getSite();
         $this->journal = $request->getJournal();
         $this->journalId = isset($this->journal) ? $this->journal->getId() : null;
+        /** @var OAIDAO */
         $this->dao = DAORegistry::getDAO('OAIDAO');
         $this->dao->setOAI($this);
     }

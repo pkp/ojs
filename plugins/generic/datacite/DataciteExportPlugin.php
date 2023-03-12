@@ -28,6 +28,7 @@ use PKP\doi\Doi;
 use PKP\file\FileManager;
 use PKP\file\TemporaryFileManager;
 use PKP\galley\Galley;
+use PKP\plugins\Plugin;
 use PKP\submission\Representation;
 
 // DataCite API
@@ -41,7 +42,7 @@ define('DATACITE_EXPORT_FILE_TAR', 0x02);
 
 class DataciteExportPlugin extends DOIPubIdExportPlugin
 {
-    protected IDoiRegistrationAgency $agencyPlugin;
+    protected IDoiRegistrationAgency|Plugin $agencyPlugin;
 
     public function __construct(IDoiRegistrationAgency $agencyPlugin)
     {
@@ -279,7 +280,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
                 $returnMessage = $e->getResponse()->getBody(true) . ' (' . $e->getResponse()->getStatusCode() . ' ' . $e->getResponse()->getReasonPhrase() . ')';
             }
             $this->updateDepositStatus($object, Doi::STATUS_ERROR);
-            return [['plugins.importexport.common.register.error.mdsError', "Registering DOI ${doi}: ${returnMessage}"]];
+            return [['plugins.importexport.common.register.error.mdsError', "Registering DOI {$doi}: {$returnMessage}"]];
         }
 
         // Mint a DOI.
@@ -290,7 +291,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
                 'headers' => [
                     'Content-Type' => 'text/plain;charset=UTF-8',
                 ],
-                'body' => "doi=${doi}\nurl=${url}",
+                'body' => "doi={$doi}\nurl={$url}",
             ]);
         } catch (\GuzzleHttp\Exception\RequestException $e) {
             $returnMessage = $e->getMessage();
@@ -298,7 +299,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
                 $returnMessage = $e->getResponse()->getBody(true) . ' (' . $e->getResponse()->getStatusCode() . ' ' . $e->getResponse()->getReasonPhrase() . ')';
             }
             $this->updateDepositStatus($object, Doi::STATUS_ERROR);
-            return [['plugins.importexport.common.register.error.mdsError', "Registering DOI ${doi}: ${returnMessage}"]];
+            return [['plugins.importexport.common.register.error.mdsError', "Registering DOI {$doi}: {$returnMessage}"]];
         }
         // Test mode submits entirely different DOI and URL so the status of that should not be stored in the database
         // for the real DOI
@@ -400,7 +401,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
                         foreach ($errors as $error) {
                             assert(is_array($error) && count($error) >= 1);
                             $errorMessage = __($error[0], ['param' => $error[1] ?? null]);
-                            echo "*** ${errorMessage}\n";
+                            echo "*** {$errorMessage}\n";
                         }
                     }
                     echo "\n";

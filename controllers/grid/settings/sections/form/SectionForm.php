@@ -20,6 +20,7 @@ use APP\facades\Repo;
 use APP\template\TemplateManager;
 use PKP\controllers\grid\settings\sections\form\PKPSectionForm;
 use PKP\db\DAORegistry;
+use PKP\reviewForm\ReviewFormDAO;
 
 class SectionForm extends PKPSectionForm
 {
@@ -111,7 +112,7 @@ class SectionForm extends PKPSectionForm
         $templateMgr = TemplateManager::getManager($request);
         $templateMgr->assign('sectionId', $this->getSectionId());
 
-        $journal = $request->getJournal();
+        $journal = $request->getContext();
 
         $reviewFormDao = DAORegistry::getDAO('ReviewFormDAO'); /** @var ReviewFormDAO $reviewFormDao */
         $reviewForms = $reviewFormDao->getActiveByAssocId(Application::ASSOC_TYPE_JOURNAL, $journal->getId());

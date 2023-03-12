@@ -16,6 +16,8 @@
 namespace APP\controllers\grid\pubIds;
 
 use APP\core\Application;
+use APP\plugins\PubIdPlugin;
+use APP\plugins\PubObjectsExportPlugin;
 use PKP\controllers\grid\feature\PagingFeature;
 use PKP\controllers\grid\feature\selectableItems\SelectableItemsFeature;
 use PKP\controllers\grid\GridColumn;
@@ -27,7 +29,7 @@ use PKP\security\Role;
 
 class PubIdExportIssuesListGridHandler extends GridHandler
 {
-    /** @var ImportExportPlugin */
+    /** @var PubObjectsExportPlugin */
     public $_plugin;
 
     /**
@@ -79,6 +81,7 @@ class PubIdExportIssuesListGridHandler extends GridHandler
         $this->_plugin = PluginRegistry::getPlugin($pluginCategory, $pluginPathName);
 
         // Otherwise, load the plugin as specified
+        /** @var PubIdPlugin */
         $this->_plugin ??= PluginRegistry::loadPlugin($pluginCategory, $pluginPathName);
 
         assert(isset($this->_plugin));

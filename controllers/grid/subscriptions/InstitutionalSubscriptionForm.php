@@ -20,6 +20,7 @@ use APP\facades\Repo;
 use APP\notification\NotificationManager;
 use APP\subscription\form\SubscriptionForm;
 use APP\subscription\InstitutionalSubscription;
+use APP\subscription\InstitutionalSubscriptionDAO;
 use APP\subscription\SubscriptionType;
 use APP\template\TemplateManager;
 use Exception;
@@ -51,6 +52,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
         $subscriptionInstitutionId = null;
 
         if (isset($subscriptionId)) {
+            /** @var InstitutionalSubscriptionDAO */
             $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
             if ($subscriptionDao->subscriptionExists($subscriptionId)) {
                 $this->subscription = $subscriptionDao->getById($subscriptionId);
@@ -128,12 +130,14 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
         parent::initData();
 
         if (isset($this->subscription)) {
+            /** @var InstitutionalSubscription */
+            $subscription = $this->subscription;
             $this->_data = array_merge(
                 $this->_data,
                 [
-                    'institutionMailingAddress' => $this->subscription->getInstitutionMailingAddress(),
-                    'domain' => $this->subscription->getDomain(),
-                    'institutionId' => $this->subscription->getInstitutionId(),
+                    'institutionMailingAddress' => $subscription->getInstitutionMailingAddress(),
+                    'domain' => $subscription->getDomain(),
+                    'institutionId' => $subscription->getInstitutionId(),
                 ]
             );
         }
@@ -186,13 +190,17 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
             $insert = true;
         }
 
+        /** @var InstitutionalSubscription */
+        $subscription = $this->subscription;
+
         parent::execute(...$functionArgs);
 
-        $this->subscription->setInstitutionId($this->getData('institutionId'));
-        $this->subscription->setInstitutionMailingAddress($this->getData('institutionMailingAddress'));
-        $this->subscription->setDomain($this->getData('domain'));
+        $subscription->setInstitutionId($this->getData('institutionId'));
+        $subscription->setInstitutionMailingAddress($this->getData('institutionMailingAddress'));
+        $subscription->setDomain($this->getData('domain'));
 
-        $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var InstitutionalSubscriptionDAO $institutionalSubscriptionDao */
+        /** @var InstitutionalSubscriptionDAO $institutionalSubscriptionDao */
+        $institutionalSubscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
         if ($insert) {
             $institutionalSubscriptionDao->insertObject($this->subscription);
         } else {

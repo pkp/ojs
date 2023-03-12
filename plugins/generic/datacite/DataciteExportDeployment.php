@@ -54,7 +54,7 @@ class DataciteExportDeployment
     // Deployment items for subclasses to override
     //
     /**
-     * Get the root lement name
+     * Get the root element name
      *
      * @return string
      */

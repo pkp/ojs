@@ -169,7 +169,7 @@ class Subscription extends \PKP\core\DataObject
     /**
      * Get subscription start date.
      *
-     * @return date (YYYY-MM-DD)
+     * @return string (YYYY-MM-DD)
      */
     public function getDateStart()
     {
@@ -179,7 +179,7 @@ class Subscription extends \PKP\core\DataObject
     /**
      * Set subscription start date.
      *
-     * @param date $dateStart (YYYY-MM-DD)
+     * @param string $dateStart (YYYY-MM-DD)
      */
     public function setDateStart($dateStart)
     {
@@ -189,7 +189,7 @@ class Subscription extends \PKP\core\DataObject
     /**
      * Get subscription end date.
      *
-     * @return date (YYYY-MM-DD)
+     * @return string (YYYY-MM-DD)
      */
     public function getDateEnd()
     {
@@ -199,7 +199,7 @@ class Subscription extends \PKP\core\DataObject
     /**
      * Set subscription end date.
      *
-     * @param date $dateEnd (YYYY-MM-DD)
+     * @param string $dateEnd (YYYY-MM-DD)
      */
     public function setDateEnd($dateEnd)
     {

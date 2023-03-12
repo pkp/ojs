@@ -22,6 +22,7 @@ use APP\issue\Collector;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use Illuminate\Support\LazyCollection;
+use PKP\core\APIResponse;
 use PKP\db\DAORegistry;
 use PKP\handler\APIHandler;
 use PKP\plugins\Hook;
@@ -29,6 +30,7 @@ use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\authorization\UserRolesRequiredPolicy;
 use PKP\security\Role;
+use Slim\Http\Request;
 
 class IssueHandler extends APIHandler
 {
@@ -97,11 +99,11 @@ class IssueHandler extends APIHandler
     /**
      * Get a collection of issues
      *
-     * @param \Psr\Http\Message\RequestInterface $slimRequest Slim request object
-     * @param \Psr\Http\Message\ResponseInterface $response object
+     * @param Request $slimRequest Slim request object
+     * @param APIResponse $response object
      * @param array $args arguments
      *
-     * @return Response
+     * @return APIResponse
      */
     public function getMany($slimRequest, $response, $args)
     {
@@ -209,11 +211,11 @@ class IssueHandler extends APIHandler
     /**
      * Get the current issue
      *
-     * @param \Psr\Http\Message\RequestInterface $slimRequest Slim request object
-     * @param \Psr\Http\Message\ResponseInterface $response object
+     * @param Request $slimRequest Slim request object
+     * @param APIResponse $response object
      * @param array $args arguments
      *
-     * @return Response
+     * @return APIResponse
      */
     public function getCurrent($slimRequest, $response, $args)
     {
@@ -238,11 +240,11 @@ class IssueHandler extends APIHandler
     /**
      * Get a single issue
      *
-     * @param \Psr\Http\Message\RequestInterface $slimRequest Slim request object
-     * @param \Psr\Http\Message\ResponseInterface $response object
+     * @param Request $slimRequest Slim request object
+     * @param APIResponse $response object
      * @param array $args arguments
      *
-     * @return Response
+     * @return APIResponse
      */
     public function get($slimRequest, $response, $args)
     {

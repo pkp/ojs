@@ -16,6 +16,7 @@
 namespace APP\pages\about;
 
 use APP\core\Application;
+use APP\subscription\SubscriptionTypeDAO;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
 
@@ -32,7 +33,8 @@ class AboutHandler extends \PKP\pages\about\AboutContextHandler
         $templateMgr = TemplateManager::getManager($request);
         $this->setupTemplate($request);
         $journal = $request->getJournal();
-        $subscriptionTypeDao = & DAORegistry::getDAO('SubscriptionTypeDAO');
+        /** @var SubscriptionTypeDAO */
+        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 
         if ($journal) {
             $paymentManager = Application::getPaymentManager($journal);

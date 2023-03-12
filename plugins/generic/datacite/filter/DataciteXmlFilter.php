@@ -18,6 +18,8 @@ use APP\core\Services;
 use APP\decision\Decision;
 use APP\facades\Repo;
 use APP\issue\Issue;
+use APP\plugins\generic\datacite\DataciteExportDeployment;
+use APP\plugins\generic\datacite\DataciteExportPlugin;
 use APP\submission\Submission;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
@@ -25,6 +27,7 @@ use PKP\facades\Locale;
 use PKP\galley\Galley;
 use PKP\i18n\LocaleConversion;
 use PKP\submission\Genre;
+use PKP\submission\GenreDAO;
 
 // Title types
 define('DATACITE_TITLETYPE_TRANSLATED', 'TranslatedTitle');
@@ -97,8 +100,10 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $doc = new \DOMDocument('1.0', 'utf-8');
         $doc->preserveWhiteSpace = false;
         $doc->formatOutput = true;
+        /** @var DataciteExportDeployment */
         $deployment = $this->getDeployment();
         $context = $deployment->getContext();
+        /** @var DataciteExportPlugin */
         $plugin = $deployment->getPlugin();
         $cache = $plugin->getCache();
 
@@ -129,7 +134,9 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             if ($cache->isCached('genres', $galleyFile->getData('genreId'))) {
                 $genre = $cache->get('genres', $galleyFile->getData('genreId'));
             } else {
-                $genre = DAORegistry::getDAO('GenreDAO')->getById($galleyFile->getData('genreId'));
+                /** @var GenreDAO */
+                $genreDao = DAORegistry::getDAO('GenreDAO');
+                $genre = $genreDao->getById($galleyFile->getData('genreId'));
                 if ($genre) {
                     $cache->add($genre, null);
                 }
@@ -262,6 +269,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
      */
     public function createRootNode($doc)
     {
+        /** @var DataciteExportDeployment */
         $deployment = $this->getDeployment();
         $rootNode = $doc->createElementNS($deployment->getNamespace(), $deployment->getRootElementName());
         $rootNode->setAttributeNS('http://www.w3.org/2000/xmlns/', 'xmlns:xsi', $deployment->getXmlSchemaInstance());
@@ -284,10 +292,13 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
      */
     public function createCreatorsNode($doc, $issue, $publication, $galley, $galleyFile, $publisher, $objectLocalePrecedence)
     {
+        /** @var DataciteExportDeployment */
         $deployment = $this->getDeployment();
+        /** @var DataciteExportPlugin */
+        $plugin = $deployment->getPlugin();
         $creators = [];
         switch (true) {
-            case (isset($galleyFile) && ($genre = $this->getDeployment()->getPlugin()->getCache()->get('genres', $galleyFile->getData('genreId'))) && $genre->getSupplementary()):
+            case (isset($galleyFile) && ($genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'))) && $genre->getSupplementary()):
                 // Check whether we have a supp file creator set...
                 $creator = $this->getPrimaryTranslation($galleyFile->getData('creator'), $objectLocalePrecedence);
                 if (!empty($creator)) {
@@ -333,11 +344,14 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
      */
     public function createTitlesNode($doc, $issue, $publication, $galley, $galleyFile, $objectLocalePrecedence)
     {
+        /** @var DataciteExportDeployment */
         $deployment = $this->getDeployment();
+        /** @var DataciteExportPlugin */
+        $plugin = $deployment->getPlugin();
         // Get an array of localized titles.
         $alternativeTitle = null;
         switch (true) {
-            case (isset($galleyFile) && ($genre = $this->getDeployment()->getPlugin()->getCache()->get('genres', $galleyFile->getData('genreId'))) && $genre->getSupplementary()):
+            case (isset($galleyFile) && ($genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'))) && $genre->getSupplementary()):
                 $titles = $galleyFile->getData('name');
                 break;
             case isset($publication):
@@ -384,11 +398,14 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
      */
     public function createDatesNode($doc, $issue, $article, $publication, $galley, $galleyFile, $publicationDate)
     {
+        /** @var DataciteExportDeployment */
         $deployment = $this->getDeployment();
+        /** @var DataciteExportPlugin */
+        $plugin = $deployment->getPlugin();
         $dates = [];
         switch (true) {
             case isset($galleyFile):
-                $genre = $this->getDeployment()->getPlugin()->getCache()->get('genres', $galleyFile->getData('genreId'));
+                $genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'));
                 if ($genre->getSupplementary()) {
                     // Created date (for supp files only): supp file date created.
                     $createdDate = $galleyFile->getData('dateCreated');
@@ -468,12 +485,15 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
      */
     public function createResourceTypeNode($doc, $issue, $article, $galley, $galleyFile)
     {
+        /** @var DataciteExportDeployment */
         $deployment = $this->getDeployment();
+        /** @var DataciteExportPlugin */
+        $plugin = $deployment->getPlugin();
         $resourceTypeNode = null;
         switch (true) {
             case isset($galley):
                 if (!$galley->getRemoteURL()) {
-                    $genre = $this->getDeployment()->getPlugin()->getCache()->get('genres', $galleyFile->getData('genreId'));
+                    $genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'));
                     if ($genre->getCategory() == Genre::GENRE_CATEGORY_DOCUMENT && !$genre->getSupplementary() && !$genre->getDependent()) {
                         $resourceType = 'Article';
                     }
@@ -690,11 +710,14 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
      */
     public function createDescriptionsNode($doc, $issue, $article, $publication, $galley, $galleyFile, $objectLocalePrecedence)
     {
+        /** @var DataciteExportDeployment */
         $deployment = $this->getDeployment();
+        /** @var DataciteExportPlugin */
+        $plugin = $deployment->getPlugin();
         $descriptions = [];
         switch (true) {
             case isset($galley):
-                $genre = $this->getDeployment()->getPlugin()->getCache()->get('genres', $galleyFile->getData('genreId'));
+                $genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'));
                 if ($genre->getSupplementary()) {
                     $suppFileDesc = $this->getPrimaryTranslation($galleyFile->getData('description'), $objectLocalePrecedence);
                     if (!empty($suppFileDesc)) {
@@ -888,7 +911,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         if (is_null($objectLocalePrecedence)) {
             $issueInfo = [];
             foreach ($context->getName(null) as $locale => $contextName) {
-                $issueInfo[$locale] = "${contextName}, ${issueIdentification}";
+                $issueInfo[$locale] = "{$contextName}, {$issueIdentification}";
             }
         } else {
             $issueInfo = $this->getPrimaryTranslation($context->getName(null), $objectLocalePrecedence);

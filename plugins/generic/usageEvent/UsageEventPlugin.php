@@ -74,7 +74,7 @@ class UsageEventPlugin extends \PKP\plugins\generic\usageEvent\PKPUsageEventPlug
 
                     // View requests with 1 argument might relate to journal
                     // or article. With more than 1 is related either with a
-                    // version of the submissin abstract page or
+                    // version of the submission abstract page or
                     // with other objects that we are not interested in or
                     // that are counted using a different hook.
                     // If the operation is 'view' and the arguments count > 1
@@ -147,7 +147,7 @@ class UsageEventPlugin extends \PKP\plugins\generic\usageEvent\PKPUsageEventPlug
                     $article = $hookArgs[0];
                     $galley = $hookArgs[1];
                     $submissionFileId = $hookArgs[2];
-                    // if file is not a gallay file (e.g. CSS or images), there is no usage event.
+                    // if file is not a galley file (e.g. CSS or images), there is no usage event.
                     if ($galley->getData('submissionFileId') != $submissionFileId) {
                         return false;
                     }

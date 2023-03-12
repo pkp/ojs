@@ -465,7 +465,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
      * @param string $IP
      * @param int $journalId
      * @param int $check Test using either start date, end date, or both (default)
-     * @param date $checkDate (YYYY-MM-DD) Use this date instead of current date
+     * @param string $checkDate (YYYY-MM-DD) Use this date instead of current date
      *
      * @return int|false Found subscription ID, or false for none.
      */
@@ -618,6 +618,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
      */
     public function _fromRow($row)
     {
+        /** @var InstitutionalSubscription */
         $institutionalSubscription = parent::_fromRow($row);
 
         $institutionalSubscription->setInstitutionId($row['institution_id']);

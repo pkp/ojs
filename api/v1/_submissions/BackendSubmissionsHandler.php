@@ -22,6 +22,7 @@ use APP\submission\Collector;
 use PKP\db\DAORegistry;
 use PKP\security\authorization\SubmissionAccessPolicy;
 use PKP\security\Role;
+use Slim\Http\Request;
 
 class BackendSubmissionsHandler extends \PKP\API\v1\_submissions\PKPBackendSubmissionsHandler
 {
@@ -65,7 +66,7 @@ class BackendSubmissionsHandler extends \PKP\API\v1\_submissions\PKPBackendSubmi
     /**
      * Change the status of submission payments.
      *
-     * @param \Psr\Http\Message\RequestInterface $slimRequest Slim request object
+     * @param Request $slimRequest Slim request object
      * @param Response $response object
      * @param array $args arguments
      *

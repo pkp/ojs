@@ -34,7 +34,7 @@ class DAO extends \PKP\section\DAO
     /** @copydoc EntityDAO::$settingsTable */
     public $settingsTable = 'section_settings';
 
-    /** @copydoc EntityDAO::$primarykeyColumn */
+    /** @copydoc EntityDAO::$primaryKeyColumn */
     public $primaryKeyColumn = 'section_id';
 
     /** @copydoc EntityDAO::$primaryTableColumns */

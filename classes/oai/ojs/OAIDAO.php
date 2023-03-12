@@ -19,8 +19,10 @@ namespace APP\oai\ojs;
 
 use APP\core\Application;
 use APP\facades\Repo;
+use APP\journal\JournalDAO;
 use Illuminate\Support\Facades\DB;
 use PKP\db\DAORegistry;
+use PKP\galley\DAO;
 use PKP\oai\OAISet;
 use PKP\oai\OAIUtils;
 use PKP\oai\PKPOAIDAO;
@@ -31,7 +33,9 @@ use PKP\submission\PKPSubmission;
 class OAIDAO extends PKPOAIDAO
 {
     // Helper DAOs
+    /** @var JournalDAO */
     public $journalDao;
+    /** @var DAO */
     public $galleyDao;
 
     public $journalCache;
@@ -208,7 +212,9 @@ class OAIDAO extends PKPOAIDAO
         $section = $this->getSection($row['section_id']);
         $articleId = $row['submission_id'];
 
-        $record->identifier = $this->oai->articleIdToIdentifier($articleId);
+        /** @var JournalOAI */
+        $oai = $this->oai;
+        $record->identifier = $oai->articleIdToIdentifier($articleId);
         $record->sets = [self::setSpec($journal, $section)];
 
         if ($isRecord) {

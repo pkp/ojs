@@ -19,6 +19,7 @@ use APP\facades\Repo;
 use PKP\controllers\api\file\linkAction\DownloadFileLinkAction;
 use PKP\controllers\grid\DataObjectGridCellProvider;
 use PKP\controllers\grid\GridHandler;
+use PKP\galley\Galley;
 
 class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider
 {
@@ -51,6 +52,7 @@ class ArticleGalleyGridCellProvider extends DataObjectGridCellProvider
      */
     public function getTemplateVarsFromRowColumn($row, $column)
     {
+        /** @var Galley */
         $element = $row->getData();
         $columnId = $column->getId();
         assert($element instanceof \PKP\core\DataObject && !empty($columnId));

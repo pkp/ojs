@@ -17,6 +17,7 @@ namespace APP\security\authorization;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\Issue;
+use Exception;
 use PKP\security\authorization\AuthorizationPolicy;
 use PKP\security\authorization\DataObjectRequiredPolicy;
 

@@ -18,6 +18,8 @@
 namespace APP\author;
 
 use APP\core\Application;
+use APP\journal\Journal;
+use APP\journal\JournalDAO;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\db\DAOResultFactory;
@@ -61,7 +63,9 @@ class DAO extends \PKP\author\DAO
 
         $supportedLocales = [];
         if ($journalId !== null) {
-            $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var \APP\journal\JournalDAO $journalDao */
+            /** @var JournalDAO */
+            $journalDao = DAORegistry::getDAO('JournalDAO');
+            /** @var Journal */
             $journal = $journalDao->getById($journalId);
             $supportedLocales = $journal->getSupportedLocales();
         } else {
@@ -77,24 +81,24 @@ class DAO extends \PKP\author\DAO
         foreach ($supportedLocales as $locale) {
             $localeStr = str_replace('@', '_', $locale);
             $sqlColumnsAuthorSettings .= ",
-                COALESCE(asg${index}.setting_value, ''), ' ',
-                COALESCE(asf${index}.setting_value, ''), ' ',
-                COALESCE(SUBSTRING(asa${index}.setting_value FROM 1 FOR 255), ''), ' '
+                COALESCE(asg{$index}.setting_value, ''), ' ',
+                COALESCE(asf{$index}.setting_value, ''), ' ',
+                COALESCE(SUBSTRING(asa{$index}.setting_value FROM 1 FOR 255), ''), ' '
             ";
             $sqlJoinAuthorSettings .= "
-                LEFT JOIN author_settings asg${index} ON (asg${index}.author_id  = aa.author_id AND asg${index}.setting_name = '" . Identity::IDENTITY_SETTING_GIVENNAME . "' AND asg${index}.locale = '${locale}')
-                LEFT JOIN author_settings asf${index} ON (asf${index}.author_id  = aa.author_id AND asf${index}.setting_name = '" . Identity::IDENTITY_SETTING_FAMILYNAME . "' AND asf${index}.locale = '${locale}')
-                LEFT JOIN author_settings asa${index} ON (asa${index}.author_id  = aa.author_id AND asa${index}.setting_name = 'affiliation' AND asa${index}.locale = '${locale}')
+                LEFT JOIN author_settings asg{$index} ON (asg{$index}.author_id  = aa.author_id AND asg{$index}.setting_name = '" . Identity::IDENTITY_SETTING_GIVENNAME . "' AND asg{$index}.locale = '{$locale}')
+                LEFT JOIN author_settings asf{$index} ON (asf{$index}.author_id  = aa.author_id AND asf{$index}.setting_name = '" . Identity::IDENTITY_SETTING_FAMILYNAME . "' AND asf{$index}.locale = '{$locale}')
+                LEFT JOIN author_settings asa{$index} ON (asa{$index}.author_id  = aa.author_id AND asa{$index}.setting_name = 'affiliation' AND asa{$index}.locale = '{$locale}')
             ";
             if (isset($initial)) {
                 if ($initial == '-') {
-                    $initialSql .= "(asf${index}.setting_value IS NULL OR asf${index}.setting_value = '')";
+                    $initialSql .= "(asf{$index}.setting_value IS NULL OR asf{$index}.setting_value = '')";
                     if ($index < $supportedLocalesCount - 1) {
                         $initialSql .= ' AND ';
                     }
                 } else {
                     $params[] = PKPString::strtolower($initial) . '%';
-                    $initialSql .= "LOWER(asf${index}.setting_value) LIKE LOWER(?)";
+                    $initialSql .= "LOWER(asf{$index}.setting_value) LIKE LOWER(?)";
                     if ($index < $supportedLocalesCount - 1) {
                         $initialSql .= ' OR ';
                     }

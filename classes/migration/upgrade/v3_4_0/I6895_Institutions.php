@@ -27,7 +27,7 @@ class I6895_Institutions extends Migration
     public function up(): void
     {
         // Requires that institution tables are already there
-        // Add the new column institution_id to the table insitutional_substriptions
+        // Add the new column institution_id to the table institutional_subscriptions
         Schema::table('institutional_subscriptions', function (Blueprint $table) {
             $table->bigInteger('institution_id');
         });

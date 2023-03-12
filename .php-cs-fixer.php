@@ -28,7 +28,7 @@ $finder = PhpCsFixer\Finder::create()
 $pluginsDir = __DIR__ . '/plugins';
 $files = scandir($pluginsDir);
 foreach ($files as $file) {
-    $categoryDir = "${pluginsDir}/${file}";
+    $categoryDir = "{$pluginsDir}/{$file}";
     if (!in_array($file, ['.', '..']) && is_dir($categoryDir)) {
         $pluginDirs = scandir($categoryDir);
         foreach ($pluginDirs as $pluginDir) {

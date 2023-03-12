@@ -16,6 +16,8 @@
 namespace APP\plugins\importexport\native\filter;
 
 use APP\facades\Repo;
+use APP\plugins\importexport\native\NativeImportExportDeployment;
+use APP\publication\Publication;
 
 class PublicationNativeXmlFilter extends \PKP\plugins\importexport\native\filter\PKPPublicationNativeXmlFilter
 {
@@ -57,6 +59,7 @@ class PublicationNativeXmlFilter extends \PKP\plugins\importexport\native\filter
      */
     public function createEntityNode($doc, $entity)
     {
+        /** @var NativeImportExportDeployment */
         $deployment = $this->getDeployment();
         $entityNode = parent::createEntityNode($doc, $entity);
 

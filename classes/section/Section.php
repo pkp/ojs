@@ -24,7 +24,7 @@ namespace APP\section;
 
 class Section extends \PKP\section\PKPSection
 {
-    /* Because abbrev is requied, there must be at least one abbrev. */
+    /* Because abbrev is required, there must be at least one abbrev. */
     public function getLocalizedAbbrev(): string
     {
         return $this->getLocalizedData('abbrev');

@@ -160,7 +160,7 @@ class Upgrade extends Installer
             $oldFileName = $submissionDir . '/' . $this->_fileStageToPath($row->file_stage) . '/' . $generatedOldFilename;
             $newFileName = $submissionDir . '/' . $this->_fileStageToPath($row->file_stage) . '/' . $generatedNewFilename;
             if (!Services::get('file')->fs->rename($oldFileName, $newFileName)) {
-                error_log("Unable to move \"${oldFileName}\" to \"${newFileName}\".");
+                error_log("Unable to move \"{$oldFileName}\" to \"{$newFileName}\".");
             }
             DB::table('submission_files')
                 ->where('file_id', '=', $row->file_id)
@@ -372,7 +372,7 @@ class Upgrade extends Installer
             $salutation = $row->salutation;
             $suffix = $row->suffix;
             foreach ($supportedLocales as $siteLocale) {
-                $preferredPublicName = ($salutation != '' ? "${salutation} " : '') . "${firstName} " . ($middleName != '' ? "${middleName} " : '') . $lastName . ($suffix != '' ? ", ${suffix}" : '');
+                $preferredPublicName = ($salutation != '' ? "{$salutation} " : '') . "{$firstName} " . ($middleName != '' ? "{$middleName} " : '') . $lastName . ($suffix != '' ? ", {$suffix}" : '');
                 DB::insert(
                     "INSERT INTO user_settings (user_id, locale, setting_name, setting_value, setting_type) VALUES (?, ?, 'preferredPublicName', ?, 'string')",
                     [(int) $userId, $siteLocale, $preferredPublicName]
@@ -405,7 +405,7 @@ class Upgrade extends Installer
             $journalId = $row->journal_id;
             $supportedLocales = $journalsSupportedLocales[$journalId];
             foreach ($supportedLocales as $locale) {
-                $preferredPublicName = "${firstName} " . ($middleName != '' ? "${middleName} " : '') . $lastName . ($suffix != '' ? ", ${suffix}" : '');
+                $preferredPublicName = "{$firstName} " . ($middleName != '' ? "{$middleName} " : '') . $lastName . ($suffix != '' ? ", {$suffix}" : '');
                 DB::insert(
                     "INSERT INTO author_settings (author_id, locale, setting_name, setting_value, setting_type) VALUES (?, ?, 'preferredPublicName', ?, 'string')",
                     [(int) $authorId, $locale, $preferredPublicName]

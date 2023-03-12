@@ -17,6 +17,7 @@ namespace APP\plugins\importexport\native\filter;
 
 use APP\core\Application;
 use APP\facades\Repo;
+use APP\plugins\importexport\native\NativeImportExportDeployment;
 use PKP\plugins\importexport\PKPImportExportFilter;
 
 class NativeXmlPublicationFilter extends \PKP\plugins\importexport\native\filter\NativeXmlPKPPublicationFilter
@@ -63,6 +64,7 @@ class NativeXmlPublicationFilter extends \PKP\plugins\importexport\native\filter
      */
     public function populateObject($publication, $node)
     {
+        /** @var NativeImportExportDeployment */
         $deployment = $this->getDeployment();
         $context = $deployment->getContext();
 
@@ -162,6 +164,7 @@ class NativeXmlPublicationFilter extends \PKP\plugins\importexport\native\filter
      */
     public function populatePublishedPublication($publication, $node)
     {
+        /** @var NativeImportExportDeployment */
         $deployment = $this->getDeployment();
 
         $context = $deployment->getContext();

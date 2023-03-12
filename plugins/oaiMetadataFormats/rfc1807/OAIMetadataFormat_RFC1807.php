@@ -97,7 +97,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
             $this->formatElement('author', $creators) .
             ($article->getDatePublished() ? $this->formatElement('date', $article->getDatePublished()) : '') .
             $this->formatElement('copyright', strip_tags($journal->getLocalizedData('licenseTerms'))) .
-            ($includeUrls ? $this->formatElement('other_access', "url:${url}") : '') .
+            ($includeUrls ? $this->formatElement('other_access', "url:{$url}") : '') .
             $this->formatElement('keyword', $subject) .
             $this->formatElement('period', $coverage) .
             $this->formatElement('monitoring', $article->getLocalizedSponsor()) .
@@ -117,7 +117,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
     {
         $response = '';
         foreach ((array) $value as $v) {
-            $response .= "\t<${name}>" . OAIUtils::prepOutput($v) . "</${name}>\n";
+            $response .= "\t<{$name}>" . OAIUtils::prepOutput($v) . "</{$name}>\n";
         }
         return $response;
     }

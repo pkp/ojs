@@ -15,8 +15,11 @@
 
 namespace APP\subscription\form;
 
+use APP\core\Application;
+use APP\core\Request;
 use APP\facades\Repo;
 use APP\payment\ojs\OJSPaymentManager;
+use APP\subscription\InstitutionalSubscriptionDAO;
 use APP\subscription\Subscription;
 use APP\template\TemplateManager;
 use PKP\core\PKPString;
@@ -27,22 +30,22 @@ use PKP\institution\Institution;
 
 class UserInstitutionalSubscriptionForm extends Form
 {
-    /** @var PKPRequest */
+    /** @var Request */
     public $request;
 
-    /** @var userId int the user associated with the subscription */
+    /** @var int userId the user associated with the subscription */
     public $userId;
 
-    /** @var subscription the subscription being purchased */
+    /** @var InstitutionalSubscription the subscription being purchased */
     public $subscription;
 
-    /** @var subscriptionTypes Array subscription types */
+    /** @var array subscription types */
     public $subscriptionTypes;
 
     /**
      * Constructor
      *
-     * @param PKPRequest $request
+     * @param Request $request
      * @param int $userId
      * @param int $subscriptionId
      */

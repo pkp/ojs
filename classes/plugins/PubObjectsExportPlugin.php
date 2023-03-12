@@ -36,6 +36,7 @@ use APP\notification\NotificationManager;
 use APP\template\TemplateManager;
 use PKP\context\Context;
 use PKP\core\JSONMessage;
+use PKP\core\PKPRequest;
 use PKP\db\DAORegistry;
 use PKP\db\SchemaDAO;
 use PKP\file\FileManager;
@@ -188,9 +189,9 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     /**
      * Gathers relevant pub objects and runs export action
      *
-     * @param $request
-     * @param $context
-     * @param $args array Optional args for passing in submissionIds from external API calls
+     * @param PKPRequest $request
+     * @param Context $context
+     * @param array $args Optional args for passing in submissionIds from external API calls
      */
     public function prepareAndExportPubObjects($request, $context, $args = [])
     {
@@ -900,7 +901,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     /**
      * Checks for export action type as set user var and as action passed from API call
      *
-     * @param $exportAction string Action to check for
+     * @param string $exportAction Action to check for
      *
      * @return bool
      */

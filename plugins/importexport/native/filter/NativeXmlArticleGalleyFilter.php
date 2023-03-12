@@ -76,6 +76,7 @@ class NativeXmlArticleGalleyFilter extends \PKP\plugins\importexport\native\filt
         assert($submissionFileRefNodes->length <= 1);
         $addSubmissionFile = false;
         if ($submissionFileRefNodes->length == 1) {
+            /** @var DOMElement */
             $fileNode = $submissionFileRefNodes->item(0);
             $newSubmissionFileId = $deployment->getSubmissionFileDBId($fileNode->getAttribute('id'));
             if ($newSubmissionFileId) {
