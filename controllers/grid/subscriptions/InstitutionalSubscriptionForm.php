@@ -22,6 +22,7 @@ use APP\subscription\form\SubscriptionForm;
 use APP\subscription\InstitutionalSubscription;
 use APP\subscription\SubscriptionType;
 use APP\template\TemplateManager;
+use Exception;
 use Illuminate\Support\Facades\Mail;
 use PKP\db\DAORegistry;
 use PKP\notification\PKPNotification;
