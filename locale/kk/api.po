@@ -52,7 +52,7 @@ msgstr "Сізге бұл журналды өшіруге рұқсат бері�
 msgid "api.contexts.404.contextNotFound"
 msgstr "Сіз сұраған журнал жүйеден табылмады."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "Сіз сұраған DOI бұл журналдың бөлігі емес."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

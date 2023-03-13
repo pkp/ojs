@@ -48,7 +48,7 @@ msgstr "您沒有權限刪除此期刊。"
 msgid "api.contexts.404.contextNotFound"
 msgstr "未能找到您所查詢的期刊。"
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "你查詢的DOI並不在此期刊。"
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

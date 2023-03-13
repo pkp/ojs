@@ -54,7 +54,7 @@ msgstr "ليست لديك صلاحية حذف هذه المجلة."
 msgid "api.contexts.404.contextNotFound"
 msgstr "تعذر العثور على المجلة التي طلبتها."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "مُعرف المكون الرقمي الذي طلبته ليس جزءًا من هذه المجلة."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

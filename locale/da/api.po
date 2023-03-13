@@ -54,7 +54,7 @@ msgstr "Du har ikke tilladelse til at slette dette tidsskrift."
 msgid "api.contexts.404.contextNotFound"
 msgstr "Det tidsskrift, du rekvirerede blev ikke fundet."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "Den DOI, du anmodede om, er ikke en del af dette tidsskrift."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

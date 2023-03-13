@@ -54,7 +54,7 @@ msgstr "Sie haben keine Berechtigung diese Zeitschrift zu löschen."
 msgid "api.contexts.404.contextNotFound"
 msgstr "Die Zeitschrift, nach der Sie suchen, wurde nicht gefunden."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "Die DOI, nach der Sie suchen, ist nicht Teil dieses Journals."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

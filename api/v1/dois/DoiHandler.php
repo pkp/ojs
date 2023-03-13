@@ -327,7 +327,7 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
         $context = $this->getRequest()->getContext();
         $doiPrefix = $context->getData(Context::SETTING_DOI_PREFIX);
         if (empty($doiPrefix)) {
-            return $response->withStatus(400)->withJsonError('api.dois.400.prefixRequired');
+            return $response->withStatus(403)->withJsonError('api.dois.403.prefixRequired');
         }
 
         $failedDoiActions = [];

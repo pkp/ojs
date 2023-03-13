@@ -54,7 +54,7 @@ msgstr "Nimate pravic za izbris te revije."
 msgid "api.contexts.404.contextNotFound"
 msgstr "Zahtevana revija ne obstaja."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "Zahtevani DOI ni del te revije."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

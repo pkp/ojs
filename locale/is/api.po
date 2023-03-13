@@ -50,7 +50,7 @@ msgstr "Þú hefur ekki heimild til að eyða þessu tímariti."
 msgid "api.contexts.404.contextNotFound"
 msgstr "Tímaritið sem þú baðst um finnst ekki."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr ""
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

@@ -56,7 +56,7 @@ msgstr "Nincs jogosultsága törölni ezt a folyóiratot."
 msgid "api.contexts.404.contextNotFound"
 msgstr "A folyóirat nem található."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr ""
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

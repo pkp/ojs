@@ -50,7 +50,7 @@ msgstr "Sizda ushbu jurnalni o'chirishga ruxsat yo'q."
 msgid "api.contexts.404.contextNotFound"
 msgstr "Siz so'ragan jurnal topilmadi."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "Siz soʻragan DOI ushbu jurnalning bir qismi emas."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

@@ -123,6 +123,6 @@ class BackendDoiHandler extends \PKP\API\v1\_dois\PKPBackendDoiHandler
         Repo::issue()->edit($issue, ['doiId' => $doi->getId()]);
         $issue = Repo::issue()->get($issue->getId());
 
-        return $response->withJson(Repo::issue()->getSchemaMap()->map($issue));
+        return $response->withJson(Repo::issue()->getSchemaMap()->map($issue), 200);
     }
 }

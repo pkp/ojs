@@ -54,7 +54,7 @@ msgstr "Você não tem permissão para excluir esta revista."
 msgid "api.contexts.404.contextNotFound"
 msgstr "A revista solicitada não foi encontrada."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "O DOI solicitado não faz parte desta revista."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

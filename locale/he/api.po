@@ -49,7 +49,7 @@ msgstr "אין לך הרשאה למחוק את כתב העת הזה."
 msgid "api.contexts.404.contextNotFound"
 msgstr "כתב העת שביקשת לא נמצא."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr ""
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

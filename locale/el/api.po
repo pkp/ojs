@@ -55,7 +55,7 @@ msgstr "Δεν έχετε άδεια να διαγράψετε αυτό το π�
 msgid "api.contexts.404.contextNotFound"
 msgstr "Το περιοδικό που ζητήσατε δεν βρέθηκε."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "Το DOI που ζητήσατε δεν ανήκει σ' αυτό το περιοδικό."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"
