@@ -1,12 +1,13 @@
 # Teodora Fildishevska <t.fildishevska@gmail.com>, 2022.
 # Jovan Jonovski <jonovski@hotmail.com>, 2022.
+# katerina spiroska <kspiroska07@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-09-27 23:01+0000\n"
-"Last-Translator: Jovan Jonovski <jonovski@hotmail.com>\n"
+"PO-Revision-Date: 2023-03-14 13:31+0000\n"
+"Last-Translator: katerina spiroska <kspiroska07@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/emails/"
-"mk_MK/>\n"
-"Language: mk_MK\n"
+"mk/>\n"
+"Language: mk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -48,7 +49,6 @@ msgstr ""
 "Ви благодарам,<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.userValidateContext.subject"
 msgstr "Потвредете го вашиот профил"
 
