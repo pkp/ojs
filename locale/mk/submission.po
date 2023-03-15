@@ -1,8 +1,9 @@
 # Mirko Spiroski <mspiroski@id-press.eu>, 2023.
+# Teodora Fildishevska <t.fildishevska@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-02-26 15:48+0000\n"
-"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
+"PO-Revision-Date: 2023-03-15 15:21+0000\n"
+"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/mk/>\n"
 "Language: mk\n"
@@ -194,13 +195,13 @@ msgstr ""
 
 msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
-"Сите барања за објавување се исполнети. Ова ќе биде објавено кога   "
+"Сите барања за објавување се исполнети. Ова ќе биде објавено кога "
 "број{$issue} ќе се објави. Дали сте сигурни дека сакате да го закажете ова "
 "за објавување?"
 
 msgid "publication.publish.confirmation.backIssue"
 msgstr ""
-"Сите барања за објавување се исполнети. Ова ќе биде објавено веднаш во број  "
+"Сите барања за објавување се исполнети. Ова ќе биде објавено веднаш во број "
 "{$issue}. Дали сте сигурни дека сакате да го објавите ова?"
 
 msgid "publication.publish.confirmation.datePublishedInPast"
@@ -211,7 +212,7 @@ msgstr ""
 
 msgid "publication.required.issue"
 msgstr ""
-"Објавувањето мора да биде доделено на конкретен  број  на списанието пред да "
+"Објавувањето мора да биде доделено на конкретен број на списанието пред да "
 "може да се објави."
 
 msgid "publication.publishedIn"
@@ -321,61 +322,92 @@ msgid "submission.queries.production"
 msgstr "Дискусија за продукција"
 
 msgid "editor.submission.decision.backToReview"
-msgstr ""
+msgstr "Назад кон ревизија"
 
 msgid "editor.submission.decision.backToReview.description"
 msgstr ""
+"Поништете ја одлуката да се прифати овој поднесок и вратете го назад во фаза "
+"на ревизија."
 
 msgid "editor.submission.decision.backToReview.log"
 msgstr ""
+"{$editorName} ја поништи одлуката да се прифати овој поднесок и го врати "
+"назад во фаза на ревизија."
 
 msgid "editor.submission.decision.backToReview.completed"
-msgstr ""
+msgstr "Вратен назад за ревизија"
 
 msgid "editor.submission.decision.backToReview.completed.description"
-msgstr ""
+msgstr "Поднесокот, {$title}, беше вратен во фаза на ревизија."
 
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
+"Испратете емаил до авторите за да ги известите дека нивниот поднесок беше "
+"вратен за ревизија. Објаснете зошто беше донесена оваа одлука и информирајте "
+"го авторот за ревизијата која треба да ја отпочне."
 
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
+"Испратете емаил до авторите за да ги известите дека нивниот поднесок ќе биде "
+"испратен за отворена рецензија. Доколку е можно, навестете им на авторите "
+"колку би траел процесот на отворена рецензија и кога да го очекуваат "
+"следното известување од уредниците. Овој емаил нема да биде испратен се "
+"додека одлуката не е внесена."
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
-msgstr ""
+msgstr "Изберете ги датотеките кои треба да се испратат во фазата на ревизија."
 
 msgid "doi.submission.issueMissing.publication"
 msgstr ""
+"Не можевме да создадеме DOI за поднесокот: {$pubObjectTitle}. Поднесокот "
+"мора да биде доделен во издание пред да може да се генерира DOI."
 
 msgid "doi.submission.issueMissing.representation"
 msgstr ""
+"Не можевме да создадеме DOI за {$pubObjectTitle} отисок за поднесокот: "
+"{$itemTitle}. Поднесокот мора да биде доделен во издание пред да може да се "
+"генерира DOI."
 
 msgid "doi.submission.incorrectContext"
 msgstr ""
+"Не можевме да создадеме DOI за поднесокот: {$pubObjectTitle}. Моментално не "
+"постои во списанието."
 
 msgid "submission.layout.viewGalley"
-msgstr ""
+msgstr "Прегледајте го отисокот"
 
 msgid "galley.cantEditPublished"
-msgstr ""
+msgstr "Овој отисок не може да се изменува бидејќи веќе е објавен."
 
 msgid "submission.copyright.description"
 msgstr ""
+"Ве молиме прочитајте и разберете ги условите за авторско право за поднесоци "
+"во ова списание."
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
+"Не можете да поднесувате во ова списание бидејќи уредниците мора да ги "
+"регистрираат авторите. Доколку сметате дека има грешка, ве молиме "
+"конатктирајте го/ја <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
+"Не можете да поднесувате во ова списание бидејќи поденсувањето во сите "
+"секции на ова списание е деактивирано или ограничено. Доколку сметате дека "
+"има грешка, ве молиме конатктирајте го/ја <a "
+"href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
+"{$contextName} не прима поднесоци во секцијата {$section}. Доколку ви е "
+"потребна помош при пронаоѓање на вашиот поднесок, ве молиме конатктирајте го/"
+"ја <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.sectionNotFound"
-msgstr ""
+msgstr "Не е пронајдена секцијата за овој поднесок."
 
 msgid "submission.sectionRestrictedToEditors"
-msgstr ""
+msgstr "Поднесувањето во оваа секција е дозволено само за уредниците."
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Потребен е барем еден автор."
