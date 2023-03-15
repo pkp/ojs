@@ -103,14 +103,18 @@ class ManualPaymentPlugin extends PaymethodPlugin
     }
 
     /**
-     * @copydoc PaymethodPlugin::saveSettings()
+     * @copydoc PaymethodPlugin::saveSettings
      */
-    public function saveSettings($params, $slimRequest, $request)
+    public function saveSettings(string $hookname, array $args)
     {
+        $slimRequest = $args[0];
+        $request = $args[1];
+        $updatedSettings = $args[3];
+
         $allParams = $slimRequest->getParsedBody();
         $manualInstructions = isset($allParams['manualInstructions']) ? (string) $allParams['manualInstructions'] : '';
         $this->updateSetting($request->getContext()->getId(), 'manualInstructions', $manualInstructions);
-        return [];
+        $updatedSettings->put('manualInstructions', $manualInstructions);
     }
 
     /**

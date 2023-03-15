@@ -116,10 +116,14 @@ class PaypalPaymentPlugin extends PaymethodPlugin
     }
 
     /**
-     * @copydoc PaymethodPlugin::saveSettings()
+     * @copydoc PaymethodPlugin::saveSettings
      */
-    public function saveSettings($params, $slimRequest, $request)
+    public function saveSettings(string $hookname, array $args)
     {
+        $slimRequest = $args[0];
+        $request = $args[1];
+        $updatedSettings = $args[3];
+
         $allParams = $slimRequest->getParsedBody();
         $saveParams = [];
         foreach ($allParams as $param => $val) {
@@ -137,8 +141,8 @@ class PaypalPaymentPlugin extends PaymethodPlugin
         $contextId = $request->getContext()->getId();
         foreach ($saveParams as $param => $val) {
             $this->updateSetting($contextId, $param, $val);
+            $updatedSettings->put($param, $val);
         }
-        return [];
     }
 
     /**
