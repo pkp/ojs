@@ -59,7 +59,7 @@ class SubscriptionBlockPlugin extends BlockPlugin
      */
     public function getContents($templateMgr, $request = null)
     {
-        $journal = $request->getJournal();
+        $journal = $request->getContext();
         if (!$journal) {
             return '';
         }

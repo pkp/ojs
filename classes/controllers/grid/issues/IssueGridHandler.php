@@ -24,6 +24,7 @@ use APP\controllers\grid\issues\form\IssueAccessForm;
 use APP\controllers\grid\issues\form\IssueForm;
 use APP\controllers\grid\pubIds\form\AssignPublicIdentifiersForm;
 use APP\controllers\tab\pubIds\form\PublicIdentifiersForm;
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\issue\Collector;
@@ -178,7 +179,7 @@ class IssueGridHandler extends GridHandler
      */
     public function editIssue($args, $request)
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $templateMgr = TemplateManager::getManager($request);
         if ($issue) {
             $templateMgr->assign('issueId', $issue->getId());
@@ -201,7 +202,7 @@ class IssueGridHandler extends GridHandler
      */
     public function editIssueData($args, $request)
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
 
         $issueForm = new IssueForm($issue);
         $issueForm->initData();
@@ -288,7 +289,7 @@ class IssueGridHandler extends GridHandler
      */
     public function updateIssue($args, $request)
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
 
         $issueForm = new IssueForm($issue);
         $issueForm->readInputData();
@@ -313,7 +314,7 @@ class IssueGridHandler extends GridHandler
      */
     public function access($args, $request)
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
 
         $issueAccessForm = new IssueAccessForm($issue);
         $issueAccessForm->initData();
@@ -330,7 +331,7 @@ class IssueGridHandler extends GridHandler
      */
     public function updateAccess($args, $request)
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
 
         $issueAccessForm = new IssueAccessForm($issue);
         $issueAccessForm->readInputData();
@@ -353,7 +354,7 @@ class IssueGridHandler extends GridHandler
      */
     public function deleteIssue($args, $request)
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         if (!$issue || !$request->checkCSRF()) {
             return new JSONMessage(false);
         }
@@ -408,7 +409,7 @@ class IssueGridHandler extends GridHandler
      */
     public function identifiers($args, $request)
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $form = new PublicIdentifiersForm($issue);
         $form->initData();
         return new JSONMessage(true, $form->fetch($request));
@@ -424,7 +425,7 @@ class IssueGridHandler extends GridHandler
      */
     public function updateIdentifiers($args, $request)
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $form = new PublicIdentifiersForm($issue);
         $form->readInputData();
         if ($form->validate()) {
@@ -449,7 +450,7 @@ class IssueGridHandler extends GridHandler
             return new JSONMessage(false);
         }
 
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $form = new PublicIdentifiersForm($issue);
         $form->clearPubId($request->getUserVar('pubIdPlugIn'));
         $json = new JSONMessage(true);
@@ -471,7 +472,7 @@ class IssueGridHandler extends GridHandler
             return new JSONMessage(false);
         }
 
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $form = new PublicIdentifiersForm($issue);
         $form->clearIssueObjectsPubIds($request->getUserVar('pubIdPlugIn'));
         return new JSONMessage(true);
@@ -488,7 +489,7 @@ class IssueGridHandler extends GridHandler
     public function issueToc($args, $request)
     {
         $templateMgr = TemplateManager::getManager($request);
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $templateMgr->assign('issue', $issue);
         return new JSONMessage(true, $templateMgr->fetch('controllers/grid/issues/issueToc.tpl'));
     }
@@ -503,7 +504,7 @@ class IssueGridHandler extends GridHandler
      */
     public function issueGalleys($args, $request)
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $templateMgr = TemplateManager::getManager($request);
         $dispatcher = $request->getDispatcher();
         return $templateMgr->fetchAjax(
@@ -528,7 +529,7 @@ class IssueGridHandler extends GridHandler
      */
     public function publishIssue($args, $request)
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $context = $request->getContext();
         $contextId = $context->getId();
         $wasPublished = $issue->getPublished();
@@ -657,7 +658,7 @@ class IssueGridHandler extends GridHandler
      */
     public function unpublishIssue($args, $request)
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $journal = $request->getJournal();
 
         if (!$request->checkCSRF()) {
@@ -710,7 +711,7 @@ class IssueGridHandler extends GridHandler
      */
     public function setCurrentIssue($args, $request)
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $journal = $request->getJournal();
 
         if (!$request->checkCSRF()) {

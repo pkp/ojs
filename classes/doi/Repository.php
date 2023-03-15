@@ -233,7 +233,7 @@ class Repository extends \PKP\doi\Repository
      * Gets all DOIs associated with an issue
      * NB: Assumes only enabled DOI types are allowed
      *
-     * @param $enabledDoiTypesOnly
+     * @param bool $enabledDoiTypesOnly
      *
      * @throws \Exception
      *
@@ -276,8 +276,9 @@ class Repository extends \PKP\doi\Repository
             if (!$agency) {
                 return;
             }
-
-            $issuesCollection = $this->dao->getAllDepositableIssueIds($context);
+            /** @var DAO */
+            $dao = $this->dao;
+            $issuesCollection = $dao->getAllDepositableIssueIds($context);
             $issueData = $issuesCollection->reduce(function ($carry, $item) {
                 $carry['issueIds'][] = $item->issue_id;
                 $carry['doiIds'][] = $item->doi_id;

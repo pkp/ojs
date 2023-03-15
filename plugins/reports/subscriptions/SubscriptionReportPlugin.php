@@ -69,7 +69,7 @@ class SubscriptionReportPlugin extends ReportPlugin
      */
     public function display($args, $request)
     {
-        $journal = $request->getJournal();
+        $journal = $request->getContext();
         $journalId = $journal->getId();
         $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         $individualSubscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $individualSubscriptionDao */

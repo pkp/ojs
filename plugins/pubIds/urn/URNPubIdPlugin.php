@@ -18,6 +18,7 @@ use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\issue\IssueGalley;
 use APP\plugins\PubIdPlugin;
+use APP\plugins\pubIds\urn\classes\form\FieldUrn;
 use APP\publication\Publication;
 use APP\template\TemplateManager;
 use PKP\galley\Galley;
@@ -268,7 +269,7 @@ class URNPubIdPlugin extends PubIdPlugin
      */
     public function isObjectTypeEnabled($pubObjectType, $contextId)
     {
-        return (bool) $this->getSetting($contextId, "enable${pubObjectType}URN");
+        return (bool) $this->getSetting($contextId, "enable{$pubObjectType}URN");
     }
 
     /**

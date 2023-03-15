@@ -16,6 +16,7 @@
 namespace APP\controllers\api\file;
 
 use APP\controllers\tab\pubIds\form\PublicIdentifiersForm;
+use APP\core\Application;
 use PKP\controllers\api\file\PKPManageFileApiHandler;
 use PKP\core\JSONMessage;
 use PKP\db\DAO;
@@ -45,7 +46,7 @@ class ManageFileApiHandler extends PKPManageFileApiHandler
      */
     public function identifiers($args, $request)
     {
-        $submissionFile = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION_FILE);
+        $submissionFile = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_SUBMISSION_FILE);
         $stageId = $request->getUserVar('stageId');
         $form = new PublicIdentifiersForm($submissionFile, $stageId);
         $form->initData();
@@ -62,7 +63,7 @@ class ManageFileApiHandler extends PKPManageFileApiHandler
      */
     public function updateIdentifiers($args, $request)
     {
-        $submissionFile = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION_FILE);
+        $submissionFile = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_SUBMISSION_FILE);
         $stageId = $request->getUserVar('stageId');
         $form = new PublicIdentifiersForm($submissionFile, $stageId);
         $form->readInputData();
@@ -88,7 +89,7 @@ class ManageFileApiHandler extends PKPManageFileApiHandler
             return new JSONMessage(false);
         }
 
-        $submissionFile = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION_FILE);
+        $submissionFile = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_SUBMISSION_FILE);
         $stageId = $request->getUserVar('stageId');
         $form = new PublicIdentifiersForm($submissionFile, $stageId);
         $form->clearPubId($request->getUserVar('pubIdPlugIn'));

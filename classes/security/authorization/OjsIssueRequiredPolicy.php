@@ -14,8 +14,10 @@
 
 namespace APP\security\authorization;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\Issue;
+use Exception;
 use PKP\security\authorization\AuthorizationPolicy;
 use PKP\security\authorization\DataObjectRequiredPolicy;
 
@@ -61,7 +63,7 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy
 
         // The issue must be published, or we must have pre-publication
         // access to it.
-        $userRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
+        $userRoles = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_USER_ROLES);
         if (!$issue->getPublished() && count(array_intersect(
             (array) $userRoles,
             [
@@ -75,7 +77,7 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy
         }
 
         // Save the issue to the authorization context.
-        $this->addAuthorizedContextObject(ASSOC_TYPE_ISSUE, $issue);
+        $this->addAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE, $issue);
         return AuthorizationPolicy::AUTHORIZATION_PERMIT;
     }
 

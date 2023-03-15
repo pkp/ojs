@@ -61,7 +61,8 @@ class UserHandler extends PKPUserHandler
         }
 
         if ($institutionalSubscriptionTypesExist) {
-            $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /* @var InstitutionalSubscriptionDAO $subscriptionDao */
+            /** @var InstitutionalSubscriptionDAO $subscriptionDao */
+            $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO');
             $userInstitutionalSubscriptions = $subscriptionDao->getByUserIdForJournal($user->getId(), $journal->getId())->toArray();
             $templateMgr->assign('userInstitutionalSubscriptions', $userInstitutionalSubscriptions);
             $institutions = [];
@@ -121,7 +122,7 @@ class UserHandler extends PKPUserHandler
     public function purchaseSubscription($args, $request)
     {
         $this->validate(null, $request);
-        $journal = $request->getJournal();
+        $journal = $request->getContext();
         if (empty($args) || !$journal || $journal->getData('publishingMode') != Journal::PUBLISHING_MODE_SUBSCRIPTION) {
             $request->redirect(null, 'index');
         }
@@ -202,7 +203,7 @@ class UserHandler extends PKPUserHandler
             $request->redirect(null, 'index');
         }
 
-        $journal = $request->getJournal();
+        $journal = $request->getContext();
         if (!$journal) {
             $request->redirect(null, 'index');
         }
@@ -305,7 +306,7 @@ class UserHandler extends PKPUserHandler
     public function completePurchaseSubscription($args, $request)
     {
         $this->validate(null, $request);
-        $journal = $request->getJournal();
+        $journal = $request->getContext();
         if (!$journal || count($args) != 2 || $journal->getData('publishingMode') != Journal::PUBLISHING_MODE_SUBSCRIPTION) {
             $request->redirect(null, 'index');
         }
@@ -358,7 +359,7 @@ class UserHandler extends PKPUserHandler
     public function payRenewSubscription($args, $request)
     {
         $this->validate(null, $request);
-        $journal = $request->getJournal();
+        $journal = $request->getContext();
         if (count($args) != 2 || !$journal || $journal->getData('publishingMode') != Journal::PUBLISHING_MODE_SUBSCRIPTION) {
             $request->redirect(null, 'index');
         }
@@ -421,7 +422,7 @@ class UserHandler extends PKPUserHandler
     {
         $this->validate(null, $request);
         $this->setupTemplate($request);
-        $journal = $request->getJournal();
+        $journal = $request->getContext();
         $user = $request->getUser();
 
         $paymentManager = Application::getPaymentManager($journal);

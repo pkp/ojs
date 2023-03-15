@@ -18,6 +18,7 @@
 namespace APP\controllers\grid\issues\form;
 
 use APP\core\Application;
+use APP\core\Request;
 use APP\file\IssueFileManager;
 use APP\template\TemplateManager;
 
@@ -35,6 +36,7 @@ class IssueGalleyForm extends Form
     /**
      * Constructor.
      *
+     * @param Request $request
      * @param Issue $issue
      * @param IssueGalley $issueGalley (optional)
      */
@@ -70,6 +72,7 @@ class IssueGalleyForm extends Form
     /**
      * @copydoc Form::fetch()
      *
+     * @param Request $request
      * @param null|mixed $template
      */
     public function fetch($request, $template = null, $display = false)
@@ -107,7 +110,7 @@ class IssueGalleyForm extends Form
             if (ctype_digit((string) $publicGalleyId)) {
                 $this->addError('publicGalleyId', __('editor.publicIdentificationNumericNotAllowed', ['publicIdentifier' => $publicGalleyId]));
                 $this->addErrorField('publicGalleyId');
-            } elseif ($journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicGalleyId, ASSOC_TYPE_ISSUE_GALLEY, $this->_issueGalley ? $this->_issueGalley->getId() : null, true)) {
+            } elseif ($journalDao->anyPubIdExists($journal->getId(), 'publisher-id', $publicGalleyId, Application::ASSOC_TYPE_ISSUE_GALLEY, $this->_issueGalley ? $this->_issueGalley->getId() : null, true)) {
                 $this->addError('publicGalleyId', __('editor.publicIdentificationExistsForTheSameType', ['publicIdentifier' => $publicGalleyId]));
                 $this->addErrorField('publicGalleyId');
             }

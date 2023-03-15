@@ -76,9 +76,9 @@ class SearchHandler extends Handler
 
         // Special case: publication date filters.
         foreach (['From', 'To'] as $fromTo) {
-            $month = $request->getUserVar("date${fromTo}Month");
-            $day = $request->getUserVar("date${fromTo}Day");
-            $year = $request->getUserVar("date${fromTo}Year");
+            $month = $request->getUserVar("date{$fromTo}Month");
+            $day = $request->getUserVar("date{$fromTo}Day");
+            $year = $request->getUserVar("date{$fromTo}Year");
             if (empty($year)) {
                 $date = null;
                 $hasEmptyFilters = true;
@@ -99,10 +99,10 @@ class SearchHandler extends Handler
                 $hasActiveFilters = true;
             }
             $templateMgr->assign([
-                "date${fromTo}Month" => $month,
-                "date${fromTo}Day" => $day,
-                "date${fromTo}Year" => $year,
-                "date${fromTo}" => $date
+                "date{$fromTo}Month" => $month,
+                "date{$fromTo}Day" => $day,
+                "date{$fromTo}Year" => $year,
+                "date{$fromTo}" => $date
             ]);
         }
 

@@ -15,7 +15,11 @@
 
 require(dirname(__FILE__) . '/bootstrap.php');
 
+use PKP\cliTool\CommandLineTool;
+use PKP\controlledVocab\ControlledVocabDAO;
+use PKP\controlledVocab\ControlledVocabEntryDAO;
 use PKP\db\DAORegistry;
+use PKP\user\InterestDAO;
 
 class ReviewerInterestsDeletionTool extends CommandLineTool
 {
@@ -69,6 +73,7 @@ class ReviewerInterestsDeletionTool extends CommandLineTool
                 break;
 
             case '--remove':
+                /** @var ControlledVocabEntryDAO */
                 $vocabEntryDao = DAORegistry::getDAO('ControlledVocabEntryDAO');
                 foreach ($orphans as $orphanVocab) {
                     $vocabEntryDao->deleteObject($orphanVocab);
@@ -90,8 +95,11 @@ class ReviewerInterestsDeletionTool extends CommandLineTool
      */
     protected function _getOrphanVocabInterests()
     {
+        /** @var InterestDAO */
         $interestDao = DAORegistry::getDAO('InterestDAO');
+        /** @var ControlledVocabDAO */
         $vocabDao = DAORegistry::getDAO('ControlledVocabDAO');
+        /** @var ControlledVocabEntryDAO */
         $vocabEntryDao = DAORegistry::getDAO('ControlledVocabEntryDAO');
 
         $interestVocab = $vocabDao->getBySymbolic(\PKP\user\InterestDAO::CONTROLLED_VOCAB_INTEREST);

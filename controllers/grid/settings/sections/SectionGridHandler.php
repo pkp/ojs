@@ -16,6 +16,7 @@
 namespace APP\controllers\grid\settings\sections;
 
 use APP\controllers\grid\settings\sections\form\SectionForm;
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\notification\NotificationManager;
 use PKP\context\SubEditorsDAO;
@@ -68,7 +69,7 @@ class SectionGridHandler extends SetupGridHandler
         $gridData = [];
         foreach ($sections as $section) {
             // Get the section editors data for the row
-            $users = $subEditorsDao->getBySubmissionGroupIds([$section->getId()], ASSOC_TYPE_SECTION, $journal->getId());
+            $users = $subEditorsDao->getBySubmissionGroupIds([$section->getId()], Application::ASSOC_TYPE_SECTION, $journal->getId());
             if ($users->isEmpty()) {
                 $editorsString = __('common.none');
             } else {

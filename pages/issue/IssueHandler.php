@@ -65,7 +65,7 @@ class IssueHandler extends Handler
         // Get the issue galley
         $galleyId = $args[1] ?? 0;
         if ($galleyId) {
-            $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+            $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
             $galleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $galleyDao */
             $journal = $request->getJournal();
             $galley = $galleyDao->getByBestId($galleyId, $issue->getId());
@@ -115,7 +115,7 @@ class IssueHandler extends Handler
      */
     public function view($args, $request)
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $this->setupTemplate($request);
         $templateMgr = TemplateManager::getManager($request);
         $journal = $request->getJournal();
@@ -189,7 +189,7 @@ class IssueHandler extends Handler
     public function download($args, $request)
     {
         if ($this->userCanViewGalley($request)) {
-            $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+            $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
             $galley = $this->getGalley();
 
             if (!Hook::call('IssueHandler::download', [&$issue, &$galley])) {
@@ -235,7 +235,7 @@ class IssueHandler extends Handler
         $journal = $request->getJournal();
         $user = $request->getUser();
         $userId = $user ? $user->getId() : 0;
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $galley = $this->getGalley();
 
         // If this is an editorial user who can view unpublished issue galleys,

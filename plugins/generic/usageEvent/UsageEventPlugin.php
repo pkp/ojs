@@ -15,6 +15,7 @@
 
 namespace APP\plugins\generic\usageEvent;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\submission\Submission;
 
@@ -73,7 +74,7 @@ class UsageEventPlugin extends \PKP\plugins\generic\usageEvent\PKPUsageEventPlug
 
                     // View requests with 1 argument might relate to journal
                     // or article. With more than 1 is related either with a
-                    // version of the submissin abstract page or
+                    // version of the submission abstract page or
                     // with other objects that we are not interested in or
                     // that are counted using a different hook.
                     // If the operation is 'view' and the arguments count > 1
@@ -99,20 +100,20 @@ class UsageEventPlugin extends \PKP\plugins\generic\usageEvent\PKPUsageEventPlug
 
                     if ($journal) {
                         $pubObject = $journal;
-                        $assocType = ASSOC_TYPE_JOURNAL;
+                        $assocType = Application::ASSOC_TYPE_JOURNAL;
                         $canonicalUrlOp = '';
                     }
 
                     if ($issue) {
                         $pubObject = $issue;
-                        $assocType = ASSOC_TYPE_ISSUE;
+                        $assocType = Application::ASSOC_TYPE_ISSUE;
                         $canonicalUrlParams = [$issue->getId()];
                         $idParams = ['s' . $issue->getId()];
                     }
 
                     if ($submission) {
                         $pubObject = $submission;
-                        $assocType = ASSOC_TYPE_SUBMISSION;
+                        $assocType = Application::ASSOC_TYPE_SUBMISSION;
                         $canonicalUrlParams = [$pubObject->getId()];
                         $idParams = ['m' . $pubObject->getId()];
                         if (isset($publicationId)) {
@@ -128,7 +129,7 @@ class UsageEventPlugin extends \PKP\plugins\generic\usageEvent\PKPUsageEventPlug
 
                     // Issue galley.
                 case 'IssueHandler::download':
-                    $assocType = ASSOC_TYPE_ISSUE_GALLEY;
+                    $assocType = Application::ASSOC_TYPE_ISSUE_GALLEY;
                     $issue = $hookArgs[0];
                     $galley = $hookArgs[1];
                     $canonicalUrlOp = 'download';
@@ -142,11 +143,11 @@ class UsageEventPlugin extends \PKP\plugins\generic\usageEvent\PKPUsageEventPlug
                 case 'ArticleHandler::download':
                 case 'HtmlArticleGalleyPlugin::articleDownload':
                 case 'LensGalleyPlugin::articleDownloadFinished':
-                    $assocType = ASSOC_TYPE_SUBMISSION_FILE;
+                    $assocType = Application::ASSOC_TYPE_SUBMISSION_FILE;
                     $article = $hookArgs[0];
                     $galley = $hookArgs[1];
                     $submissionFileId = $hookArgs[2];
-                    // if file is not a gallay file (e.g. CSS or images), there is no usage event.
+                    // if file is not a galley file (e.g. CSS or images), there is no usage event.
                     if ($galley->getData('submissionFileId') != $submissionFileId) {
                         return false;
                     }
@@ -171,9 +172,9 @@ class UsageEventPlugin extends \PKP\plugins\generic\usageEvent\PKPUsageEventPlug
     protected function getHtmlPageAssocTypes()
     {
         return [
-            ASSOC_TYPE_JOURNAL,
-            ASSOC_TYPE_ISSUE,
-            ASSOC_TYPE_SUBMISSION,
+            Application::ASSOC_TYPE_JOURNAL,
+            Application::ASSOC_TYPE_ISSUE,
+            Application::ASSOC_TYPE_SUBMISSION,
         ];
     }
 

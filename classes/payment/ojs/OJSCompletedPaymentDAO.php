@@ -158,7 +158,7 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
     }
 
     /**
-     * Look for a completed PAYMENT_TYPE_PURCHASE_ARTICLE payment matching the article ID
+     * Look for a completed OJSPaymentManager::PAYMENT_TYPE_PURCHASE_ARTICLE payment matching the article ID
      *
      * @param int? $userId
      * @param int $articleId
@@ -180,7 +180,7 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
     }
 
     /**
-     * Look for a completed PAYMENT_TYPE_PUBLICATION payment matching the user and article IDs
+     * Look for a completed OJSPaymentManager::PAYMENT_TYPE_PUBLICATION payment matching the user and article IDs
      *
      * @param int $userId
      * @param int $articleId

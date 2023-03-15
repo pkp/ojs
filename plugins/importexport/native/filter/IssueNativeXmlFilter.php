@@ -15,9 +15,13 @@
 
 namespace APP\plugins\importexport\native\filter;
 
+use APP\core\Application;
 use APP\facades\Repo;
+use APP\issue\Issue;
+use APP\plugins\importexport\native\NativeImportExportDeployment;
 use Exception;
 use PKP\db\DAORegistry;
+use PKP\plugins\importexport\native\filter\SubmissionNativeXmlFilter;
 use PKP\plugins\importexport\PKPImportExportFilter;
 use PKP\plugins\PluginRegistry;
 
@@ -96,6 +100,7 @@ class IssueNativeXmlFilter extends \PKP\plugins\importexport\native\filter\Nativ
     public function createIssueNode($doc, $issue)
     {
         // Create the root node and attributes
+        /** @var NativeImportExportDeployment */
         $deployment = $this->getDeployment();
         $deployment->setIssue($issue);
 
@@ -227,6 +232,7 @@ class IssueNativeXmlFilter extends \PKP\plugins\importexport\native\filter\Nativ
      */
     public function addArticles($doc, $issueNode, $issue)
     {
+        /** @var SubmissionNativeXmlFilter */
         $currentFilter = PKPImportExportFilter::getFilter('article=>native-xml', $this->getDeployment(), $this->opts);
         $currentFilter->setIncludeSubmissionsNode(true);
 
@@ -264,7 +270,7 @@ class IssueNativeXmlFilter extends \PKP\plugins\importexport\native\filter\Nativ
             $issueNode->appendChild($clone);
         } else {
             $deployment = $this->getDeployment();
-            $deployment->addError(ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.issueGalleys.exportFailed'));
+            $deployment->addError(Application::ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.issueGalleys.exportFailed'));
 
             throw new Exception(__('plugins.importexport.issueGalleys.exportFailed'));
         }

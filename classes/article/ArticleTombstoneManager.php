@@ -15,6 +15,7 @@
 
 namespace APP\article;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\oai\ojs\OAIDAO;
 use APP\submission\Submission;
@@ -42,8 +43,8 @@ class ArticleTombstoneManager
         $setSpec = OAIDAO::setSpec($journal, $section);
         $oaiIdentifier = 'oai:' . Config::getVar('oai', 'repository_id') . ':' . 'article/' . $article->getId();
         $OAISetObjectsIds = [
-            ASSOC_TYPE_JOURNAL => $journal->getId(),
-            ASSOC_TYPE_SECTION => $section->getId(),
+            Application::ASSOC_TYPE_JOURNAL => $journal->getId(),
+            Application::ASSOC_TYPE_SECTION => $section->getId(),
         ];
 
         $articleTombstone = $tombstoneDao->newDataObject();

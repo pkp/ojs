@@ -9,6 +9,7 @@ use APP\file\PublicFileManager;
 use APP\journal\JournalDAO;
 use APP\publication\Publication;
 use Illuminate\Support\Collection;
+use PKP\context\Context;
 use PKP\db\DAORegistry;
 use PKP\doi\exceptions\DoiException;
 use PKP\plugins\Hook;
@@ -305,7 +306,8 @@ class Repository
     public function createDoi(Issue $issue): array
     {
         /** @var JournalDAO $contextDao */
-        $contextDao = \DAORegistry::getDAO('JournalDAO');
+        $contextDao = DAORegistry::getDAO('JournalDAO');
+        /** @var Context */
         $context = $contextDao->getById($issue->getData('journalId'));
 
         $doiCreationFailures = [];

@@ -15,11 +15,14 @@
 
 require(dirname(__FILE__) . '/bootstrap.php');
 
+use PKP\cliTool\CommandLineTool;
+use PKP\plugins\ImportExportPlugin;
 use PKP\plugins\PluginRegistry;
 
 class importExport extends CommandLineTool
 {
     public $command;
+    /** @var ImportExportPlugin */
     public $plugin;
     public $parameters;
 
@@ -68,7 +71,7 @@ class importExport extends CommandLineTool
             $this->usage();
             return;
         }
-
+        /** @var ImportExportPlugin $plugin */
         return $plugin->executeCLI($this->scriptName, $this->parameters);
     }
 }

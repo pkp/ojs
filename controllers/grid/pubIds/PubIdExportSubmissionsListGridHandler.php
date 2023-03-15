@@ -16,6 +16,7 @@
 namespace APP\controllers\grid\pubIds;
 
 use APP\controllers\grid\submissions\ExportPublishedSubmissionsListGridHandler;
+use APP\core\Application;
 use APP\facades\Repo;
 use PKP\controllers\grid\GridColumn;
 
@@ -56,7 +57,7 @@ class PubIdExportSubmissionsListGridHandler extends ExportPublishedSubmissionsLi
     public function getGridCellProvider()
     {
         // Fetch the authorized roles.
-        $authorizedRoles = $this->getAuthorizedContextObject(ASSOC_TYPE_USER_ROLES);
+        $authorizedRoles = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_USER_ROLES);
         return new PubIdExportSubmissionsListGridCellProvider($this->_plugin, $authorizedRoles);
     }
 

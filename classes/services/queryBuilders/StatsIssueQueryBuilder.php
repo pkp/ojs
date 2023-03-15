@@ -25,7 +25,7 @@ use PKP\services\queryBuilders\PKPStatsQueryBuilder;
 
 class StatsIssueQueryBuilder extends PKPStatsQueryBuilder
 {
-    /** Include records for one of these object types: ASSOC_TYPE_ISSUE, ASSOC_TYPE_ISSUE_GALLEY */
+    /** Include records for one of these object types: Application::ASSOC_TYPE_ISSUE, Application::ASSOC_TYPE_ISSUE_GALLEY */
     protected array $assocTypes = [];
 
     /** Include records for these issues */

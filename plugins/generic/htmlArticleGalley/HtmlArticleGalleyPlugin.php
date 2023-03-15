@@ -246,7 +246,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
         // Perform variable replacement for journal, issue, site info
         $issue = Repo::issue()->getBySubmissionId($submissionId);
 
-        $journal = $request->getJournal();
+        $journal = $request->getContext();
         $site = $request->getSite();
 
         $paramArray = [

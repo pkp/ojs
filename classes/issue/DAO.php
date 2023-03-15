@@ -42,7 +42,7 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
     /** @copydoc EntityDAO::$settingsTable */
     public $settingsTable = 'issue_settings';
 
-    /** @copydoc EntityDAO::$primarykeyColumn */
+    /** @copydoc EntityDAO::$primaryKeyColumn */
     public $primaryKeyColumn = 'issue_id';
 
     /** @copydoc SchemaDAO::$primaryTableColumns */

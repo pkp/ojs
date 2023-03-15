@@ -38,5 +38,5 @@ class Notification extends PKPNotification
 
 if (!PKP_STRICT_MODE) {
     class_alias('\APP\notification\Notification', '\Notification');
-    define('NOTIFICATION_TYPE_PUBLISHED_ISSUE', \Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE);
+    define('NOTIFICATION_TYPE_PUBLISHED_ISSUE', Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE);
 }

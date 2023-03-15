@@ -8,7 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I7725_DecisionConstantsUpdate
- * @brief Editorial decision constant sync up accross all application
+ * @brief Editorial decision constant sync up across all application
  *
  * @see https://github.com/pkp/pkp-lib/issues/7725
  */

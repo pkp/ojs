@@ -16,10 +16,13 @@
 
 namespace APP\API\v1\_submissions;
 
+use APP\core\Application;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\submission\Collector;
+use PKP\db\DAORegistry;
 use PKP\security\authorization\SubmissionAccessPolicy;
 use PKP\security\Role;
+use Slim\Http\Request;
 
 class BackendSubmissionsHandler extends \PKP\API\v1\_submissions\PKPBackendSubmissionsHandler
 {
@@ -63,7 +66,7 @@ class BackendSubmissionsHandler extends \PKP\API\v1\_submissions\PKPBackendSubmi
     /**
      * Change the status of submission payments.
      *
-     * @param \Psr\Http\Message\RequestInterface $slimRequest Slim request object
+     * @param Request $slimRequest Slim request object
      * @param Response $response object
      * @param array $args arguments
      *
@@ -73,13 +76,13 @@ class BackendSubmissionsHandler extends \PKP\API\v1\_submissions\PKPBackendSubmi
     {
         $request = $this->getRequest();
         $context = $request->getContext();
-        $submission = $this->getAuthorizedContextObject(ASSOC_TYPE_SUBMISSION);
+        $submission = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_SUBMISSION);
 
         if (!$submission || !$context || $context->getId() != $submission->getContextId()) {
             return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
         }
 
-        $paymentManager = \Application::getPaymentManager($context);
+        $paymentManager = Application::getPaymentManager($context);
         $publicationFeeEnabled = $paymentManager->publicationEnabled();
         if (!$publicationFeeEnabled) {
             return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
@@ -93,7 +96,7 @@ class BackendSubmissionsHandler extends \PKP\API\v1\_submissions\PKPBackendSubmi
             ], 400);
         }
 
-        $completedPaymentDao = \DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */
+        $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */
         $publicationFeePayment = $completedPaymentDao->getByAssoc(null, OJSPaymentManager::PAYMENT_TYPE_PUBLICATION, $submission->getId());
 
         switch ($params['publicationFeeStatus']) {
@@ -132,7 +135,7 @@ class BackendSubmissionsHandler extends \PKP\API\v1\_submissions\PKPBackendSubmi
                 }
 
                 // Record a fulfilled payment.
-                $stageAssignmentDao = \DAORegistry::getDAO('StageAssignmentDAO'); /** @var StageAssignmentDAO $stageAssignmentDao */
+                $stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /** @var StageAssignmentDAO $stageAssignmentDao */
                 $submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleIds($submission->getId(), [Role::ROLE_ID_AUTHOR]);
                 $submitterAssignment = $submitterAssignments->next();
                 $queuedPayment = $paymentManager->createQueuedPayment(

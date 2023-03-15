@@ -22,7 +22,7 @@ use APP\subscription\Subscription;
 use PKP\db\DAORegistry;
 use PKP\plugins\Hook;
 use PKP\security\Role;
-
+use PKP\security\RoleDAO;
 use PKP\submission\PKPSubmission;
 
 class IssueAction
@@ -65,7 +65,8 @@ class IssueAction
      */
     public function allowedIssuePrePublicationAccess($journal, $user)
     {
-        $roleDao = DAORegistry::getDAO('RoleDAO'); /* @var $roleDao RoleDAO */
+        /** @var RoleDAO */
+        $roleDao = DAORegistry::getDAO('RoleDAO');
         if ($user && $journal) {
             $journalId = $journal->getId();
             $userId = $user->getId();

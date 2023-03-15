@@ -96,7 +96,7 @@ class SubscriptionPolicyForm extends Form
      */
     public function fetch($request, $template = null, $display = false)
     {
-        $paymentManager = Application::getPaymentManager($request->getJournal());
+        $paymentManager = Application::getPaymentManager($request->getContext());
         $templateMgr = TemplateManager::getManager();
         $templateMgr->assign([
             'validNumMonthsBeforeExpiry' => $this->validNumMonthsBeforeExpiry,

@@ -15,6 +15,7 @@
 
 namespace APP\controllers\grid\toc;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\submission\Submission;
@@ -85,7 +86,7 @@ class TocGridHandler extends CategoryGridHandler
             )
         );
 
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         if ($request->getJournal()->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION && $issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION) {
             // Article access status
             $this->addColumn(
@@ -122,7 +123,7 @@ class TocGridHandler extends CategoryGridHandler
      */
     public function getRequestArgs()
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         return array_merge(
             parent::getRequestArgs(),
             ['issueId' => $issue->getId()]
@@ -136,7 +137,7 @@ class TocGridHandler extends CategoryGridHandler
      */
     protected function getRowInstance()
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         return new TocGridRow($issue->getId());
     }
 
@@ -163,7 +164,7 @@ class TocGridHandler extends CategoryGridHandler
      */
     protected function loadData($request, $filter)
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $submissionsInSections = Repo::submission()->getInSections($issue->getId(), $request->getContext()->getId());
         foreach ($submissionsInSections as $sectionId => $articles) {
             foreach ($articles['articles'] as $article) {
@@ -190,7 +191,7 @@ class TocGridHandler extends CategoryGridHandler
         if ($object instanceof Submission) {
             return $object->getCurrentPublication()->getData('seq');
         } else { // section
-            $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+            $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
             $customOrdering = Repo::section()->getCustomSectionOrder($issue->getId(), $object->getId());
             if ($customOrdering === null) { // No custom ordering specified; use default section ordering
                 return $object->getSequence();
@@ -205,7 +206,7 @@ class TocGridHandler extends CategoryGridHandler
      */
     public function setDataElementSequence($request, $sectionId, $gridDataElement, $newSequence)
     {
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         Repo::section()->upsertCustomSectionOrder($issue->getId(), $sectionId, $newSequence);
     }
 
@@ -245,7 +246,7 @@ class TocGridHandler extends CategoryGridHandler
     {
         $journal = $request->getJournal();
         $submission = Repo::submission()->get((int) $request->getUserVar('articleId'));
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         if ($submission && $request->checkCSRF()) {
             foreach ($submission->getData('publications') as $publication) {
                 if ($publication->getData('issueId') === (int) $issue->getId()
@@ -283,7 +284,7 @@ class TocGridHandler extends CategoryGridHandler
     public function setAccessStatus($args, $request)
     {
         $articleId = (int) $request->getUserVar('articleId');
-        $issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
+        $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $submission = Repo::submission()->get($articleId);
         $publication = $submission ? $submission->getCurrentPublication() : null;
         if ($publication && $publication->getData('issueId') == $issue->getId() && $request->checkCSRF()) {

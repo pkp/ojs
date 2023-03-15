@@ -35,7 +35,7 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel
     {
         $config = parent::getConfig();
 
-        $request = \Application::get()->getRequest();
+        $request = Application::get()->getRequest();
         if ($request->getContext()) {
             $config['filters'][] = $this->getSectionFilters($this->includeActiveSectionFiltersOnly);
         }
@@ -44,7 +44,7 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel
             $issueAutosuggestField = new FieldSelectIssues('issueIds', [
                 'label' => __('issue.issues'),
                 'value' => [],
-                'apiUrl' => $request->getDispatcher()->url($request, \PKPApplication::ROUTE_API, $request->getContext()->getPath(), 'issues'),
+                'apiUrl' => $request->getDispatcher()->url($request, Application::ROUTE_API, $request->getContext()->getPath(), 'issues'),
             ]);
             $config['filters'][] = [
                 'filters' => [

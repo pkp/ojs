@@ -17,13 +17,14 @@
 
 namespace APP\controllers\grid\articleGalleys\form;
 
+use APP\core\Request;
 use APP\facades\Repo;
-use APP\template\TemplateManager;
+use APP\publication\Publication;
 
+use APP\submission\Submission;
+use APP\template\TemplateManager;
 use PKP\form\Form;
 use PKP\galley\Galley;
-use APP\submission\Submission;
-use APP\publication\Publication;
 
 class ArticleGalleyForm extends Form
 {
@@ -41,6 +42,7 @@ class ArticleGalleyForm extends Form
     /**
      * Constructor.
      *
+     * @param Request $request
      * @param Submission $submission
      * @param Publication $publication
      * @param Galley $articleGalley (optional)

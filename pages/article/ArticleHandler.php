@@ -35,6 +35,7 @@ use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\Validation;
 use PKP\submission\Genre;
+use PKP\submission\GenreDAO;
 use PKP\submission\PKPSubmission;
 use PKP\submissionFile\SubmissionFile;
 
@@ -469,7 +470,7 @@ class ArticleHandler extends Handler
                 $dependentFileIds = Repo::submissionFile()
                     ->getCollector()
                     ->filterByAssoc(
-                        ASSOC_TYPE_SUBMISSION_FILE,
+                        Application::ASSOC_TYPE_SUBMISSION_FILE,
                         [$this->galley->getData('submissionFileId')]
                     )
                     ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
@@ -491,9 +492,10 @@ class ArticleHandler extends Handler
 
                 $filename = Services::get('file')->formatFilename($submissionFile->getData('path'), $submissionFile->getLocalizedData('name'));
 
-                // if the file is a gallay file (i.e. not a dependent file e.g. CSS or images), fire an usage event.
+                // if the file is a galley file (i.e. not a dependent file e.g. CSS or images), fire an usage event.
                 if ($this->galley->getData('submissionFileId') == $this->submissionFileId) {
                     $assocType = Application::ASSOC_TYPE_SUBMISSION_FILE;
+                    /** @var GenreDAO */
                     $genreDao = DAORegistry::getDAO('GenreDAO');
                     $genre = $genreDao->getById($submissionFile->getData('genreId'));
                     // TO-DO: is this correct ?

@@ -50,8 +50,8 @@ class I7265_EditorialDecisions extends \PKP\migration\upgrade\v3_4_0\I7265_Edito
      * In 3.3 and earlier, the decision constants were global
      * and named:
      *
-     * SUBMISSION_EDITOR_DECISION_ACCEPT
-     * SUBMISSION_EDITOR_DECISION_REVERT_DECLINE
+     * Decision::ACCEPT
+     * Decision::REVERT_DECLINE
      */
     public function upNewDecisions()
     {

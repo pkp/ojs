@@ -19,6 +19,7 @@
 namespace APP\template;
 
 use APP\core\Application;
+use APP\core\PageRouter;
 use APP\file\PublicFileManager;
 use PKP\context\Context;
 use PKP\facades\Locale;
@@ -120,6 +121,7 @@ class TemplateManager extends PKPTemplateManager
             return;
         }
 
+        /** @var PageRouter */
         $router = $request->getRouter();
         $handler = $router->getHandler();
         $userRoles = (array) $handler->getAuthorizedContextObject(Application::ASSOC_TYPE_USER_ROLES);

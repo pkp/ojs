@@ -16,7 +16,9 @@
 namespace APP\plugins\paymethod\paypal;
 
 use APP\core\Application;
+use APP\core\Request;
 use APP\template\TemplateManager;
+use Omnipay\PayPal\Message\RestAuthorizeResponse;
 use PKP\form\Form;
 
 class PaypalPaymentForm extends Form
@@ -41,7 +43,7 @@ class PaypalPaymentForm extends Form
     /**
      * @copydoc Form::display()
      *
-     * @param null|mixed $request
+     * @param null|Request $request
      * @param null|mixed $template
      */
     public function display($request = null, $template = null)
@@ -62,6 +64,7 @@ class PaypalPaymentForm extends Form
                 'returnUrl' => $request->url(null, 'payment', 'plugin', [$this->_paypalPaymentPlugin->getName(), 'return'], ['queuedPaymentId' => $this->_queuedPayment->getId()]),
                 'cancelUrl' => $request->url(null, 'index'),
             ]);
+            /** @var RestAuthorizeResponse */
             $response = $transaction->send();
             if ($response->isRedirect()) {
                 $request->redirectUrl($response->getRedirectUrl());

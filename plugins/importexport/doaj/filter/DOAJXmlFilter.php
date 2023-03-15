@@ -16,11 +16,14 @@ namespace APP\plugins\importexport\doaj\filter;
 
 use APP\core\Application;
 use APP\facades\Repo;
+use APP\plugins\importexport\doaj\DOAJExportDeployment;
+use APP\plugins\importexport\doaj\DOAJExportPlugin;
 use APP\publication\Publication;
 use APP\submission\Submission;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\i18n\LocaleConversion;
+use PKP\submission\SubmissionKeywordDAO;
 
 class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExportFilter
 {
@@ -62,8 +65,10 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
         $doc = new \DOMDocument('1.0', 'utf-8');
         $doc->preserveWhiteSpace = false;
         $doc->formatOutput = true;
+        /** @var DOAJExportDeployment */
         $deployment = $this->getDeployment();
         $context = $deployment->getContext();
+        /** @var DOAJExportPlugin */
         $plugin = $deployment->getPlugin();
         $cache = $plugin->getCache();
 
@@ -197,6 +202,7 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
             $node->setAttribute('format', 'html');
             // Keywords
             $supportedLocales = $context->getSupportedFormLocales();
+            /** @var SubmissionKeywordDAO */
             $dao = DAORegistry::getDAO('SubmissionKeywordDAO');
             $articleKeywords = $dao->getKeywords($publication->getId(), $supportedLocales);
             if (array_key_exists($publication->getData('locale'), $articleKeywords)) {
@@ -227,6 +233,7 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
      */
     public function createRootNode($doc)
     {
+        /** @var DOAJExportDeployment */
         $deployment = $this->getDeployment();
         $rootNode = $doc->createElement($deployment->getRootElementName());
         $rootNode->setAttributeNS('http://www.w3.org/2000/xmlns/', 'xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance');

@@ -7,7 +7,7 @@
  * Copyright (c) 2000-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class PubIdExportRepresentationssListGridCellProvider
+ * @class PubIdExportRepresentationsListGridCellProvider
  * @ingroup controllers_grid_pubIds
  *
  * @brief Class for a cell provider that can retrieve labels from representations with pub ids

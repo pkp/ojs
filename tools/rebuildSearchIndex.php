@@ -15,6 +15,10 @@
 
 require(dirname(__FILE__) . '/bootstrap.php');
 
+use APP\core\Application;
+use APP\journal\JournalDAO;
+use PKP\cliTool\CommandLineTool;
+use PKP\config\Config;
 use PKP\db\DAORegistry;
 use PKP\plugins\Hook;
 
@@ -49,6 +53,7 @@ class rebuildSearchIndex extends CommandLineTool
         $journal = null;
         if (count($this->argv)) {
             $journalPath = array_shift($this->argv);
+            /** @var JournalDAO */
             $journalDao = DAORegistry::getDAO('JournalDAO');
             $journal = $journalDao->getByPath($journalPath);
             if (!$journal) {

@@ -15,6 +15,7 @@
 
 namespace APP\controllers\tab\pubIds\form;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\issue\IssueGalley;
@@ -77,7 +78,7 @@ class PublicIdentifiersForm extends PKPPublicIdentifiersForm
     public function getAssocType($pubObject)
     {
         if ($pubObject instanceof Issue) {
-            return ASSOC_TYPE_ISSUE;
+            return Application::ASSOC_TYPE_ISSUE;
         }
         return parent::getAssocType($pubObject);
     }
