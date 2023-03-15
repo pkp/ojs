@@ -1,17 +1,17 @@
 # Mirko Spiroski <mspiroski@id-press.eu>, 2021.
-# Teodora Fildishevska <t.fildishevska@gmail.com>, 2022.
+# Teodora Fildishevska <t.fildishevska@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-10 20:51+0000\n"
+"PO-Revision-Date: 2023-03-15 15:21+0000\n"
 "Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
-"mk_MK/>\n"
-"Language: mk_MK\n"
+"mk/>\n"
+"Language: mk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "manager.distribution.access"
 msgstr "Пристап"
@@ -51,9 +51,11 @@ msgstr ""
 "Назначете дигитални идентификатори на објекти (ДОИ) на написи, изданија и "
 "отисоци."
 
-#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Ве молиме, изберете ги предметите на кои треба да се доделат ДОИ."
+msgstr ""
+"Ве молиме, изберете ги предметите на кои треба да се доделат DOI. Повеќето "
+"списанија доделуваат DOI на трудови, но можеби би сакале да доделите DOI на "
+"сите објавени предмети."
 
 msgid "doi.manager.settings.doiSuffixLegacy"
 msgstr ""
@@ -559,10 +561,9 @@ msgstr "Идентификација на е-пошта"
 msgid "manager.setup.emailSignature"
 msgstr "Потпис"
 
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
-"Подготвените е-пошта што системот ги испраќа во име на списанието ќе го "
+"Подготвените емаили кои системот ги испраќа во име на списанието ќе го "
 "додадат следниов потпис на крајот."
 
 msgid "manager.setup.enableAnnouncements.enable"
@@ -1049,12 +1050,10 @@ msgstr "Пристап на рецензент"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Пристап со прегледник со еден клик"
 
-#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
-"На прегледувачите може да им се испрати безбедна врска во поканата за е-"
-"пошта, што ќе им овозможи пристап до прегледот без најавување. Пристапот до "
-"другите страници бара да се најават."
+"На рецензентите може да им се испрати безбедносен линк во емаил поканата, "
+"кој автоматски ќе ги најави кога ќе го кликнат."
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr "Вклучете безбедна врска во поканата за е-пошта до рецензентите."
@@ -1554,10 +1553,10 @@ msgid "manager.subscriptions.form.typeIdValid"
 msgstr "Изберете важечки тип на претплата."
 
 msgid "manager.subscriptions.form.institution"
-msgstr ""
+msgstr "Институција"
 
 msgid "manager.subscriptions.form.institutionIdValid"
-msgstr ""
+msgstr "Ве молиме одберете точна институција."
 
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Почетен датум"
@@ -1694,7 +1693,7 @@ msgstr ""
 "Тип на претплата мора да се создаде пред да се направат нови претплати."
 
 msgid "manager.subscriptions.form.institutionRequired"
-msgstr ""
+msgstr "Мора да се создаде институција пред да се направи нова претплата."
 
 msgid "manager.subscriptions.ipRange"
 msgstr "Опсег на IP"
@@ -2095,16 +2094,19 @@ msgstr ""
 "Испратете копија до примарниот контакт, идентификуван во Поставки за весник."
 
 msgid "stats.contextStats"
-msgstr ""
+msgstr "Статистика на списанието"
 
 msgid "stats.context.tooltip.text"
 msgstr ""
+"Број на посетители кои ја прегледуваат индексната страница на списанието."
 
 msgid "stats.context.tooltip.label"
-msgstr ""
+msgstr "За статистиката на списанието"
 
 msgid "stats.context.downloadReport.description"
 msgstr ""
+"Превземете CSV/Excel датотека која ќе ги содржи статистиките за користење на "
+"ова списание според следните параметри."
 
 msgid "stats.context.downloadReport.downloadContext.description"
 msgstr ""
@@ -2628,3 +2630,16 @@ msgstr ""
 
 #~ msgid "doi.manager.settings.enablePublicationDoi"
 #~ msgstr "Написи"
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "Не можевме да импортираме отисок на издание, датотеката недостасува."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"Не можевме да го експортираме отисокот на изданието {$id}, не беше "
+"пронајдена неговата датотека на \"{$path}\"."
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"Не можевме да ја експортираме насловната страна на изданието {$id}, не беше "
+"пронајдена неговата датотека на \"{$path}\"."
