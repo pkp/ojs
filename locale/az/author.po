@@ -1,9 +1,9 @@
-# Osman Durmaz <osmandurmaz@hotmail.de>, 2022.
+# Osman Durmaz <osmandurmaz@hotmail.de>, 2022, 2023.
 # Gadirova <leylakb@yahoo.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-27 09:01+0000\n"
-"Last-Translator: Gadirova <leylakb@yahoo.com>\n"
+"PO-Revision-Date: 2023-03-17 01:01+0000\n"
+"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "az/>\n"
 "Language: az\n"
@@ -14,293 +14,334 @@ msgstr ""
 "X-Generator: Weblate 4.13.1\n"
 
 msgid "author.submit"
-msgstr "Yeni məqalə göndər"
+msgstr "Yeni Göndərmə"
 
 msgid "author.track"
-msgstr "Aktiv məqalələr"
+msgstr "Aktiv Göndərmələr"
 
 msgid "author.competingInterests"
 msgstr ""
-"Maraqların toqquşması<a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">CI Policy</a>"
+"Mənfəət toqquşması <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">Rəhbəri</a>"
 
 msgid "author.submit.submitArticle"
-msgstr "Məqalə göndərin"
+msgstr "Məqalə göndər"
 
 msgid "author.submit.stepsToSubmit"
 msgstr "Göndərmək üçün beş addım"
 
 msgid "author.submit.startHereTitle"
-msgstr "Yeni məqalə göndər"
+msgstr "Yeni Məqalə Göndər"
 
 msgid "author.submit.startHereLink"
 msgstr ""
-"<a href=\"{$submitUrl}\" class=\"action\">Click here</a> beş addımlı "
-"təqdimetmə prosesinin birinci mərhələsinə keçin."
+"Beş addımda məqalə göndərməyin ilk addımı üçün <a href=\"{$submitUrl}\" "
+"class=\"action\">klikləyin</a>."
 
 msgid "author.submit.step1"
-msgstr "Addım 1. Təqdimatın Başlanması"
+msgstr "1-ci Addım: Göndərməyə Başlama"
 
 msgid "author.submit.step2"
-msgstr "Addım 2. Məqalənin yüklənməsi"
+msgstr "2-ci Addım: Göndərilən Faylları Yükləmə"
 
 msgid "author.submit.step3"
-msgstr "Addım 3. Məqalənin metadatanı daxil edin"
+msgstr "3-cü Addım: Göndərmə Üst Datasını Daxil Etmə"
 
 msgid "author.submit.step4"
-msgstr "Addım 4. Əlavə faylları yükləyin"
+msgstr "4-cü Addım: Əlavə Sənəd və Faylların Yüklənməsi"
 
 msgid "author.submit.step4a"
-msgstr "Addım 4a. Əlavə Fayl əlavə edin"
+msgstr "4.1-ci Addım: Əlavə Fayl Yükləmə"
 
 msgid "author.submit.step5"
-msgstr "Addım 5. Məqalənin təqdim olunmasının təsdiqi"
+msgstr "5-ci Addım: Göndərmə Təsdiqi"
 
 msgid "author.submit.start"
-msgstr "Başlamaq"
+msgstr "Başla"
 
 msgid "author.submit.upload"
-msgstr ""
+msgstr "Faylı Yüklə"
 
 msgid "author.submit.metadata"
-msgstr ""
+msgstr "Üstdata Daxil Et"
 
 msgid "author.submit.supplementaryFiles"
-msgstr ""
+msgstr "Əlavə Faylları Yüklə"
 
 msgid "author.submit.nextSteps"
-msgstr ""
+msgstr "Sonrakı Addım"
 
 msgid "author.submit.notAccepting"
-msgstr ""
+msgstr "Jurnal hazırda fayl qəbul etmir."
 
 msgid "author.submit.requestWaiver"
-msgstr ""
+msgstr "İmtina et"
 
 msgid "author.submit.qualifyForWaiver"
 msgstr ""
+"Zəhmət olmasa bu məqalə üçün Məqalə Göndərmə Ödənişindən imtina etməyi "
+"düşünün"
 
 msgid "author.submit.addReasonsForWaiver"
 msgstr ""
+"Ödənişdən imtina səbəbini bildirmək üçün aşağıdakı şərh qutusundan istifadə "
+"edin."
 
 msgid "author.submit.mustEnterWaiverReason"
-msgstr ""
+msgstr "Əgər imtina edirsinizsə verilən boşluqda bir səbəb qeyd etməlisiniz."
 
 msgid "author.submissions.queuedReviewSubsequent"
-msgstr ""
+msgstr "Dəyərləndirmə Prosesi: {$round}"
 
 msgid "author.submissions.queuedReviewRevisions"
-msgstr ""
+msgstr "Dəyərləndirmədə: Düzəliş tələbi"
 
 msgid "author.submissions.queuedEditingCopyedit"
-msgstr ""
+msgstr "Düzəlişdə: Səhifə tənzimləmə tələbi"
 
 msgid "author.submissions.queuedEditingProofread"
-msgstr ""
+msgstr "Düzəlişdə: Oxuma yoxlama tələbi"
 
 msgid "author.submissions.uploadCopyeditedVersion"
-msgstr ""
+msgstr "Səhifə redaktə versiyasını yükləyin"
 
 msgid "author.submissions.proofreadingCorrections"
-msgstr ""
+msgstr "Korrektor Təklifləri"
 
 msgid "author.submissions.confirmDelete"
-msgstr ""
+msgstr "Bitməmiş bu göndərməni silmək istədiyinizdən əminsinizmi?"
 
 msgid "author.submissions.viewStatus"
-msgstr ""
+msgstr "Statusa baxış"
 
 msgid "author.submissions.noSubmissions"
-msgstr ""
+msgstr "Göndərmə yoxdur."
 
 msgid "author.submit.journalSection"
-msgstr ""
+msgstr "Jurnal Bölümü"
 
 msgid "author.submit.journalSectionDescription"
 msgstr ""
 
 msgid "author.submit.verifyChecklist"
 msgstr ""
+"Davam etməzdən əvvəl müraciət nəzarət siyahısındakı hər bir elementin "
+"tamamlandığından əmin olmalısınız."
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
+"Davam etməzdən əvvəl müəllif hüququ ilə bağlı şərtləri qəbul etməlisiniz."
 
 msgid "submission.submit.coverNote"
-msgstr ""
+msgstr "Redaktor üçün qeydlər"
 
 msgid "author.submit.comments"
 msgstr ""
+"Redaktora çatdırmaq istədiyiniz qeydləri bu bölümə yaza bilərsiniz (məcburi "
+"deyil)"
 
 msgid "author.submit.form.localeRequired"
-msgstr ""
+msgstr "Zəhmət olmasa, fayl dilini seçin."
 
 msgid "author.submit.reorderInstructions"
-msgstr ""
+msgstr "Nəşrin üzərindəki müəlliflərin sırasını yenidən tənzimləyin."
 
 msgid "author.submit.reorder"
-msgstr ""
+msgstr "Müəllif adlarını yenidən sırala"
 
 msgid "author.submit.selectPrincipalContact"
-msgstr ""
+msgstr "Redaksiya ilə əlaqə üçün əsas əlaqə nömrəsi."
 
 msgid "author.submit.addAuthor"
-msgstr ""
+msgstr "Müəllif əlavə edin"
 
 msgid "author.submit.deleteAuthor"
-msgstr ""
+msgstr "Müəllifi silin"
 
 msgid "author.submit.submissionIndexingDescription"
 msgstr ""
+"Faylın indekslənməsi üçün açar sözləri daxil edin. Açar sözlər arasında "
+"nöqtəli vergül qoyun. (Məsələn: Açar söz 1; Açar söz 2)."
 
 msgid "author.submit.coverageInstructions"
 msgstr ""
+"Tədqiqat materialının coğrafi mövqeyi, xronoloji və ya tarixi həcm və / və "
+"ya xüsusiyyətləri."
 
 msgid "author.submit.languageInstructions"
 msgstr ""
 
 msgid "author.submit.form.authorRequired"
-msgstr ""
+msgstr "Ən az bir müəllif olmalıdır."
 
 msgid "author.submit.form.authorRequiredFields"
-msgstr ""
+msgstr "Hər bir müəllifin adı, soyadı və email ünvanlı lazımdır."
 
 msgid "author.submit.form.titleRequired"
-msgstr ""
+msgstr "Zəhmət olmasa məqalənizin adını daxil edin."
 
 msgid "author.submit.form.abstractRequired"
-msgstr ""
+msgstr "Zəhmət olmasa məqalənizin xülasəsini daxil edin."
 
 msgid "author.submit.form.wordCountAlert"
-msgstr ""
+msgstr "Bu qismin xülasəsi üçün maksimum kəlmə sayını keçdiniz."
 
 msgid "author.submit.submissionFile"
-msgstr ""
+msgstr "Fayl"
 
 msgid "author.submit.uploadSubmissionFile"
-msgstr ""
+msgstr "Faylını yükləyin"
 
 msgid "author.submit.replaceSubmissionFile"
-msgstr ""
+msgstr "Faylı dəyişdirin"
 
 msgid "author.submit.noSubmissionFile"
-msgstr ""
+msgstr "Fayl yüklənmədi."
 
 msgid "author.submit.noSubmissionConfirm"
-msgstr ""
+msgstr "Müraciət üçün bir fayl göndərmədən davam etmək istəyirsinizmi?"
 
 msgid "author.submit.supplementaryFilesInstructions"
 msgstr ""
+"Göndərmənin bu mərhələsi əsas fayla əlavə olaraq verilməli olan sənəd və "
+"faylların sistemə yüklənməsini təmin edir. <br /><br />İlk olaraq Jurnal “"
+"Nəşr Hüququ Transfer Formu” istəyirsə kompüterinizdəki yolu göstərdikdən "
+"sonra “Fayl Göndər” düyməsi vasitəsilə göndər. Sənədin detallarının daxil "
+"edilməsi üçün formu doldurun. <br /><br />Başqa əlavə sənədiniz yoxdursa “"
+"Qeyd et və Davam et” seçimi ilə sonrakı mərhələyə keçin.<br /><br />İkinci "
+"olaraq əgər varsa əsas Məqaləyə əlavə olaraq təqdim etmək istədiyiniz sənəd "
+"faylları yükləyin (Fayllar \"doc\", \"docx\", \"xls\", \"xlsx\", \"pdf\" "
+"kimi formatlarda ola bilər). Bu addımda yüklənəcək fayllar <br /><br />(a) "
+"araşdırma vasitələri, <br /><br />(b) data setləri, <br /><br />(c) "
+"tədqiqatçıların əldə edə bilməyəcəkləri mənbələr, <br /><br />(d) əsas "
+"mənbəyə kömək kimi təqdim edilməsi istənilən şəkil və cədvəllər və ya "
+"tədqiqatı dəstəkləyən çalışmalar."
 
 msgid "author.submit.supplementaryFiles.saveToUpload"
 msgstr ""
+"Yüklədiyiniz faylı yadda saxlamaq üçün klikləyin (daha sonra əlavə fayl "
+"yükləyə bilərsiniz)."
 
 msgid "author.submit.forgottenSubmitSuppFile"
 msgstr ""
+"Seçdiyiniz əlavə faylı yükləmədən davam etmək istədiyinizdən əminsinizmi?"
 
 msgid "author.submit.noSupplementaryFiles"
-msgstr ""
+msgstr "Bu göndərməyə əlavə fayl yüklənməyib."
 
 msgid "author.submit.backToSupplementaryFiles"
-msgstr ""
+msgstr "Əlavə fayllara geri qayıdın"
 
 msgid "author.submit.confirmDeleteSuppFile"
-msgstr ""
+msgstr "Bu əlavə faylı silmək istədiyinizdən əminsinizmi?"
 
 msgid "author.submit.uploadSuppFile"
-msgstr ""
+msgstr "Əlavə fayl yükləyin"
 
 msgid "author.submit.addSupplementaryFile"
-msgstr ""
+msgstr "Əlavə fayl əlavə edin"
 
 msgid "author.submit.editSupplementaryFile"
-msgstr ""
+msgstr "Əlavə faylı tənzimləyin"
 
 msgid "author.submit.supplementaryFileData"
-msgstr ""
+msgstr "Əlavə fayl üst datası"
 
 msgid "author.submit.supplementaryFileDataDescription"
 msgstr ""
+"Bu əlavə materialı indeksə əlavə etmək üçün yüklənən əlavə fayl üçün "
+"aşağıdakı üst dataları təmin edin."
 
 msgid "author.submit.supplementaryFileUpload"
-msgstr ""
+msgstr "Əlavə fayl"
 
 msgid "author.submit.suppFile.createrOrOwner"
-msgstr ""
+msgstr "Fayl sahibi"
 
 msgid "author.submit.suppFile.researchInstrument"
-msgstr ""
+msgstr "Tədqiqat vasitələri"
 
 msgid "author.submit.suppFile.researchMaterials"
-msgstr ""
+msgstr "Tədqiqat materialları"
 
 msgid "author.submit.suppFile.researchResults"
-msgstr ""
+msgstr "Tədqiqatın nəticələri"
 
 msgid "author.submit.suppFile.transcripts"
-msgstr ""
+msgstr "Kopya/Surət"
 
 msgid "author.submit.suppFile.dataAnalysis"
-msgstr ""
+msgstr "Data analizi"
 
 msgid "author.submit.suppFile.dataSet"
-msgstr ""
+msgstr "Data seti"
 
 msgid "author.submit.suppFile.sourceText"
-msgstr ""
+msgstr "Mənbə mətn"
 
 msgid "author.submit.suppFile.briefDescription"
-msgstr ""
+msgstr "Qısa açıqlama"
 
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
+"Anonim rəyçilikdən güzəştə getmədən faylı rəyçilərin görməsinə icazə verin ("
+"üst data xaric)."
 
 msgid "author.submit.suppFile.publisherDescription"
-msgstr ""
+msgstr "Sadəcə çap edilən materialda istifadə edin."
 
 msgid "author.submit.suppFile.dateDescription"
 msgstr ""
+"Zəhmət olmasa datanın toplandığı və vasitənin hazırlandığı tarixi qeyd edin."
 
 msgid "author.submit.suppFile.sourceDescription"
-msgstr ""
+msgstr "Tədqiqatın adı ya da mənşəi."
 
 msgid "author.submit.suppFile.specifyOtherType"
-msgstr ""
+msgstr "Fərqlidirsə qeyd edin"
 
 msgid "author.submit.suppFile.noFile"
-msgstr ""
+msgstr "Fayl yüklənmədi."
 
 msgid "author.submit.suppFile.form.titleRequired"
-msgstr ""
+msgstr "Zəhmət olmasa bu əlavə faylın adını daxil edin."
 
 msgid "author.submit.suppFile.form.subjectRequired"
-msgstr ""
+msgstr "Zəhmət olmasa bir mövzu daxil edin."
 
 msgid "author.submit.suppFile.form.descriptionRequired"
-msgstr ""
+msgstr "Zəhmət olmasa bir açıqlama daxil edin."
 
 msgid "author.suppFile.suppFilePublicIdentificationExists"
-msgstr ""
+msgstr "Açıq əlavə fayl identifikasiyası artıq mövcuddur."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
-msgstr ""
+msgstr "Açıq əlavə fayl təsviredici"
 
 msgid "author.submit.filesSummary"
-msgstr ""
+msgstr "Fayl xülasəsi"
 
 msgid "author.submit.finishSubmission"
-msgstr ""
+msgstr "Göndərməni tamamla"
 
 msgid "author.submit.submissionComplete"
 msgstr ""
+"Göndərmə tamamlandı. {$journalTitle} adlı jurnalımıza məqalə göndərdiyiniz "
+"üçün təşəkkür edirik. Məqalənizlə bağlı prosesi istifadəçi adı və şifrəsini "
+"daxil edərək izləyə bilərsiniz."
 
 msgid "author.article.uploadAuthorVersion"
-msgstr ""
+msgstr "Müəllif versiyasını yükləyin"
 
 msgid "author.article.copyeditedFile"
-msgstr ""
+msgstr "Səhifə dizaynı tamamlanmış fayl"
 
 msgid "author.article.authorRevisedFile"
-msgstr ""
+msgstr "Müəllif faylı"
 
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr ""
+"Bu jurnala məqalə göndərmək üçün qeydiyyatdan keçmək lazımdır. Qeydiyyatdan "
+"keçmiş istifadəçilər məqalələr və məqalələrlə bağlı dəyişikliklərdə "
+"redaktorların dəyişiklikləri izləməsini və müəlliflərlə əlaqə qurmasını "
+"təmin edir."
