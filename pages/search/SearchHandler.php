@@ -167,7 +167,7 @@ class SearchHandler extends Handler
             'authorUserGroups' => Repo::userGroup()->getCollector()
                 ->filterByRoleIds([\PKP\security\Role::ROLE_ID_AUTHOR])
                 ->filterByContextIds($searchFilters['searchJournal'] ? [$searchFilters['searchJournal']->getId()] : null)
-                ->getMany(),
+                ->getMany()->remember(),
             'searchResultOrderOptions' => $articleSearch->getResultSetOrderingOptions($request),
             'searchResultOrderDirOptions' => $articleSearch->getResultSetOrderingDirectionOptions(),
         ]);
