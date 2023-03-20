@@ -1,0 +1,78 @@
+# Osman Durmaz <osmandurmaz@hotmail.de>, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-03-17 01:01+0000\n"
+"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
+"Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/api/az/>"
+"\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "İstədiyiniz elan bu jurnalda yoxdur."
+
+msgid "api.emails.403.disabled"
+msgstr "Email bildiriş funksiyası bu jurnal üçün aktivləşdirilmədi."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "İstədiyiniz fayl (yazı) bu jurnalda deyil."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Bir faylın (yazının) jurnalını dəyişə bilməzsiniz."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Yayımlanmamış mövzulara baxma icazəniz yoxdur."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Sadəcə icazə verilən jurnallara baxa bilərsiniz."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Bu jurnala baxma səlahiyyətiniz yoxdur."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Jurnalın API-sinə və ya bütün sayt API-sinə sorğu göndərməsəniz, bu jurnala "
+"baxa və ya redaktə edə bilməzsiniz."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Bu jurnalı bütün sayt API-si ilə redaktə edə bilməzsiniz."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Bu jurnalı redaktə etmə səlahiyyətiniz yoxdur."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Bu jurnalı silmə səlahiyyətiniz yoxdur."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Bəzi elementlər üçün DOI alına bilmədi. Zəhmət olmasa xüsusi xəta "
+"mesajlarını bir-bir yoxlayın."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Bu email şablonunu başqa bir jurnala transfer etmə səlahiyyətiniz yoxdur."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Seçdiyiniz ödəmə metodu dəstəklənmir."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Axtardığınız nəşr bu jurnala aid deyil."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "İstədiyiniz DOI bu jurnalda deyil."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "Bu jurnal üçün heç bir DOI tənzimləməsi yaradılmayıb."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Axtardığınız nəşr bu fayla aid deyil."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Bu faylı dizayn mərhələsindəki bir fayl ilə əlaqələndirə bilməzsiniz."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Axtardığınız jurnal tapılmadı."

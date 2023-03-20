@@ -3,7 +3,7 @@
 # Pencho Toncgev <ptonchev@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-02-27 07:59+0000\n"
+"PO-Revision-Date: 2023-03-06 18:33+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "bg/>\n"
@@ -2215,9 +2215,8 @@ msgstr "URL адресът на началната страница на спи�
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Име на основния контакт на списанието"
 
-#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr "инициали на списанието"
+msgstr "Инициали на списанието"
 
 msgid "emailTemplate.variable.context.contextSignature"
 msgstr "Имейл подпис на списанието за автоматизирани имейли"
@@ -2259,21 +2258,17 @@ msgstr "Резюме на типа, името, продължителностт
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Информация за членството на абоната"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr "Име на институцията"
+msgstr "Име на абонираната институция"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr "Пощенски адрес на институцията"
+msgstr "Пощенски адрес на абонираната институция"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
-msgstr "Домейн"
+msgstr "Името на домейна на валидния IP адрес(и) за този абонамент"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr "IP диапазон за удостоверяване на абонамент"
+msgstr "Валиден IP диапазон за този абонамент"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
 msgstr "URL към страницата, където авторът може да извърши плащане"
@@ -2567,17 +2562,13 @@ msgid "mailable.subscriptionExpired.name"
 msgstr "Абонаментът е изтекъл"
 
 msgid "mailable.subscriptionExpired.description"
-msgstr ""
-"Този имейл уведомява абоната, че абонаментът му е изтекъл. Той предоставя "
-"URL адреса на списанието заедно с инструкции за достъп."
+msgstr "Този имейл уведомява абоната, че абонаментът му е изтекъл"
 
 msgid "mailable.subscriptionExpiredLast.name"
 msgstr "Последно изтекли абонаменти"
 
 msgid "mailable.subscriptionExpiredLast.description"
-msgstr ""
-"Този имейл уведомява абоната, че абонаментът му е изтекъл. Той предоставя "
-"URL адреса на списанието заедно с инструкции за достъп."
+msgstr "Този имейл уведомява повторно абоната, че абонаментът му е изтекъл"
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
 msgstr "Покупка на индивидуален (личен) абонамент"
@@ -2660,3 +2651,16 @@ msgstr ""
 
 #~ msgid "doi.manager.settings.enablePublicationDoi"
 #~ msgstr "Статии"
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"Изображението на корицата на броя {$id} не е експортирано, файлът му не е "
+"намерен в пътя „{$path}“."
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "Типография на брой не можа да бъде импортирана, файлът й липсва."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"Типография на брой {$id} не може да бъде експортирана, нейният файл не е "
+"намерен в пътя „{$path}“."

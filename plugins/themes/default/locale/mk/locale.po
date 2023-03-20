@@ -1,15 +1,16 @@
+# Teodora Fildishevska <t.fildishevska@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-01-28 09:51+0000\n"
-"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
-"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/themes-"
-"default/mk/>\n"
-"Language: mk_MK\n"
+"PO-Revision-Date: 2023-03-15 15:21+0000\n"
+"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/mk/>\n"
+"Language: mk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.default.name"
 msgstr "Предодредена тема"
@@ -30,7 +31,7 @@ msgstr ""
 
 msgid "plugins.themes.default.option.typography.notoSerif"
 msgstr ""
-"Noto Serif: Варијанта на сериф од  Google's дигитално-природните фонтови."
+"Noto Serif: Варијанта на сериф од дигитално-природните фонтови на Google."
 
 msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
 msgstr ""
@@ -50,7 +51,7 @@ msgstr "Lora: Широк-сет од serif фонт добар за читање
 
 msgid "plugins.themes.default.option.typography.lora_openSans"
 msgstr ""
-"Lora/Open Sans: Комплементарен пар од  serif наслови и sans-serif за "
+"Lora/Open Sans: Комплементарен пар од serif наслови и sans-serif фонт за "
 "текстови."
 
 msgid "plugins.themes.default.option.colour.label"
@@ -74,22 +75,22 @@ msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
 msgstr "Прикажи ја сликата од насловната страна како основа на насловот."
 
 msgid "plugins.themes.default.option.displayStats.label"
-msgstr ""
+msgstr "Опции за прикажување на статистиката за користење"
 
 msgid "plugins.themes.default.option.displayStats.none"
-msgstr ""
+msgstr "Не прикажувај статистика за користење на поднесоците на читателот."
 
 msgid "plugins.themes.default.option.displayStats.bar"
-msgstr ""
+msgstr "За приказ на статистиката на користење користи столбест дијаграм."
 
 msgid "plugins.themes.default.option.displayStats.line"
-msgstr ""
+msgstr "За приказ на статистиката на користење користи линиски графикон."
 
 msgid "plugins.themes.default.displayStats.monthInitials"
-msgstr ""
+msgstr "Јан Феб Мар Апр Мај Јун Јул Авг Сеп Окт Нов Дек"
 
 msgid "plugins.themes.default.displayStats.downloads"
-msgstr ""
+msgstr "Превземања"
 
 msgid "plugins.themes.default.displayStats.noStats"
-msgstr ""
+msgstr "Податоците за превземање не се сè уште достапни."

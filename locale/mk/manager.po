@@ -1,17 +1,18 @@
 # Mirko Spiroski <mspiroski@id-press.eu>, 2021.
-# Teodora Fildishevska <t.fildishevska@gmail.com>, 2022.
+# Teodora Fildishevska <t.fildishevska@gmail.com>, 2022, 2023.
+# Ana Vucurevic <ana.vucurevic97@yahoo.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-10 20:51+0000\n"
-"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"PO-Revision-Date: 2023-03-16 10:25+0000\n"
+"Last-Translator: Ana Vucurevic <ana.vucurevic97@yahoo.com>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
-"mk_MK/>\n"
-"Language: mk_MK\n"
+"mk/>\n"
+"Language: mk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "manager.distribution.access"
 msgstr "Пристап"
@@ -51,9 +52,11 @@ msgstr ""
 "Назначете дигитални идентификатори на објекти (ДОИ) на написи, изданија и "
 "отисоци."
 
-#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Ве молиме, изберете ги предметите на кои треба да се доделат ДОИ."
+msgstr ""
+"Ве молиме, изберете ги предметите на кои треба да се доделат DOI. Повеќето "
+"списанија доделуваат DOI на трудови, но можеби би сакале да доделите DOI на "
+"сите објавени предмети."
 
 msgid "doi.manager.settings.doiSuffixLegacy"
 msgstr ""
@@ -559,10 +562,9 @@ msgstr "Идентификација на е-пошта"
 msgid "manager.setup.emailSignature"
 msgstr "Потпис"
 
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
-"Подготвените е-пошта што системот ги испраќа во име на списанието ќе го "
+"Подготвените емаили кои системот ги испраќа во име на списанието ќе го "
 "додадат следниов потпис на крајот."
 
 msgid "manager.setup.enableAnnouncements.enable"
@@ -823,7 +825,7 @@ msgstr ""
 
 msgid "manager.setup.plnSettingsDescription"
 msgstr ""
-"Погледнете ги  <button>plugin settings</button> за да ги прифатите условите "
+"Погледнете ги <button>plugin settings</button> за да ги прифатите условите "
 "за употреба за PKP PN."
 
 msgid "manager.setup.plnPluginArchiving"
@@ -849,7 +851,7 @@ msgid "manager.setup.lockssLicenseDescription"
 msgstr ""
 "Лиценца за LOCKSS ќе се појави во За списанието под Архивирање:\n"
 "<a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target="
-"\"_blank\">LOCKSS License</a>"
+"\"_blank\">LOCKSS Лиценца</a>"
 
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "Опис на лиценцата за LOCKSS"
@@ -873,8 +875,9 @@ msgstr ""
 
 msgid "manager.setup.clockssLicenseDescription"
 msgstr ""
-"Лиценца за CLOCKSS  ќе се појави во За списанието под Архивирање:\n"
-"<a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS License</a>"
+"Лиценца за CLOCKSS ќе се појави во За списанието под Архивирање: <a href="
+"\"https://clockss.org\" target=\"_blank\">\n"
+"CLOCKSS Лиценца</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "Опис на лиценцата на CLOCKSS"
@@ -1049,12 +1052,10 @@ msgstr "Пристап на рецензент"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Пристап со прегледник со еден клик"
 
-#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
-"На прегледувачите може да им се испрати безбедна врска во поканата за е-"
-"пошта, што ќе им овозможи пристап до прегледот без најавување. Пристапот до "
-"другите страници бара да се најават."
+"На рецензентите може да им се испрати безбедносен линк во емаил поканата, "
+"кој автоматски ќе ги најави кога ќе го кликнат."
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr "Вклучете безбедна врска во поканата за е-пошта до рецензентите."
@@ -1554,10 +1555,10 @@ msgid "manager.subscriptions.form.typeIdValid"
 msgstr "Изберете важечки тип на претплата."
 
 msgid "manager.subscriptions.form.institution"
-msgstr ""
+msgstr "Институција"
 
 msgid "manager.subscriptions.form.institutionIdValid"
-msgstr ""
+msgstr "Ве молиме одберете точна институција."
 
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Почетен датум"
@@ -1694,7 +1695,7 @@ msgstr ""
 "Тип на претплата мора да се создаде пред да се направат нови претплати."
 
 msgid "manager.subscriptions.form.institutionRequired"
-msgstr ""
+msgstr "Мора да се создаде институција пред да се направи нова претплата."
 
 msgid "manager.subscriptions.ipRange"
 msgstr "Опсег на IP"
@@ -1720,7 +1721,7 @@ msgstr "Изберете корисник"
 msgid "manager.subscriptions.selectSubscriber.desc"
 msgstr ""
 "Привилегиите за пристап до претплата автоматски им се доделуваат на "
-"менаџерите на весникот, Уредниците, Уредниците на секциите, Уредниците на "
+"Менаџерите на Списанието, Уредниците, Уредниците на секциите, Уредниците на "
 "распоредот и Лекторите."
 
 msgid "manager.subscriptions.select"
@@ -2095,52 +2096,62 @@ msgstr ""
 "Испратете копија до примарниот контакт, идентификуван во Поставки за весник."
 
 msgid "stats.contextStats"
-msgstr ""
+msgstr "Статистика на списанието"
 
 msgid "stats.context.tooltip.text"
 msgstr ""
+"Број на посетители кои ја прегледуваат индексната страница на списанието."
 
 msgid "stats.context.tooltip.label"
-msgstr ""
+msgstr "За статистиката на списанието"
 
 msgid "stats.context.downloadReport.description"
 msgstr ""
+"Превземете CSV/Excel датотека која ќе ги содржи статистиките за користење на "
+"ова списание според следните параметри."
 
 msgid "stats.context.downloadReport.downloadContext.description"
-msgstr ""
+msgstr "Број на посетеност на индексирани страници на списанието."
 
 msgid "stats.context.downloadReport.downloadContext"
-msgstr ""
+msgstr "Преземи Списание"
 
 msgid "stats.issueStats"
-msgstr ""
+msgstr "Статистика на изданија"
 
 msgid "stats.issues.details"
-msgstr ""
+msgstr "Прегледи и Преземања"
 
 msgid "stats.issues.searchIssueDescription"
-msgstr ""
+msgstr "Пребарај наслов на издание, том и број"
 
 msgid "stats.issues.none"
 msgstr ""
+"Не се пронајдени изданија со користење на статистики што одговараат на овие "
+"параметри."
 
 msgid "stats.issues.downloadReport.description"
 msgstr ""
+"Преземете CSV/Excel табела со статистика за користење за изданија што "
+"одговараат на следните параметри."
 
 msgid "stats.issues.downloadReport.downloadIssues.description"
-msgstr ""
+msgstr "Број на TOC прегледи и преземање на печатарски табаци за секое издание."
 
 msgid "stats.issues.downloadReport.downloadIssues"
-msgstr ""
+msgstr "Преземи Изданија"
 
 msgid "stats.issues.countOfTotal"
-msgstr ""
+msgstr "{$count} од{$total} изданија"
 
 msgid "stats.issues.tooltip.label"
-msgstr ""
+msgstr "За статистиката на изданието"
 
 msgid "stats.issues.tooltip.text"
 msgstr ""
+"<strong>Views</strong>: Број на посетители кои ја гледаат содржината на "
+"изданието.<br><strong>Преземи</strong>: Број на преземања на печатарски "
+"табаци од изданието, доколку постојат."
 
 msgid "stats.publicationStats"
 msgstr "Статистика за статија"
@@ -2170,12 +2181,14 @@ msgstr "Датотеки"
 
 msgid "stats.publications.downloadReport.description"
 msgstr ""
+"Преземете CSV/Excel табела со статистика за користење на статии што "
+"одговараат на следните параметри."
 
 msgid "stats.publications.downloadReport.downloadSubmissions"
-msgstr ""
+msgstr "Преземи Статии"
 
 msgid "stats.publications.downloadReport.downloadSubmissions.description"
-msgstr ""
+msgstr "Број на прегледи на апстракти и преземени датотеки за секоја статија."
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
@@ -2186,7 +2199,7 @@ msgid ""
 "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled."
 "description"
 msgstr ""
-"Не е дефинирано главно лице за контакт за ова списание. Можете да внесете  "
+"Не е дефинирано главно лице за контакт за ова списание. Можете да внесете "
 "главно лице за контакт во <a href=\"{$url}\">поставки на списанието</a>."
 
 msgid "plugins.importexport.native.export.issues.results"
@@ -2208,7 +2221,7 @@ msgid "emailTemplate.variable.context.contactName"
 msgstr "Име на примарен контакт од списание"
 
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr ""
+msgstr "Иницијали на списанието"
 
 msgid "emailTemplate.variable.context.contextSignature"
 msgstr "Потпис од и-мејл на списание за автоматска пошта"
@@ -2217,7 +2230,7 @@ msgid "emailTemplate.variable.context.contactEmail"
 msgstr "И-мејл адреса од примарен контакт на списание"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "Емаил адресата на списанието"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Име на видот плаќање"
@@ -2232,49 +2245,51 @@ msgid "emailTemplate.variable.site.siteTitle"
 msgstr "Име на веб страница кога има хостирано повеќе од едно списание"
 
 msgid "emailTemplate.variable.subscription.subscriberDetails"
-msgstr ""
+msgstr "Името на претплатникот, афилијација, телефонски број и емаил адреса"
 
 msgid "emailTemplate.variable.subscription.subscriptionSignature"
-msgstr ""
+msgstr "Контакт информации на менаџерот на претплатата"
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
-msgstr ""
+msgstr "Линк до страницата за претплата"
 
 msgid "emailTemplate.variable.subscription.expiryDate"
-msgstr ""
+msgstr "Датум на доспев на претплатата"
 
 msgid "emailTemplate.variable.subscription.subscriptionType"
-msgstr ""
+msgstr "Резиме на типот на претплата, име, времетраење и цена"
 
 msgid "emailTemplate.variable.subscription.membership"
-msgstr ""
+msgstr "Информации за членство на претплатникот"
 
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr ""
+msgstr "Име на претплатничката институција"
 
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr ""
+msgstr "Емаил адресата на претплатничката институција"
 
 msgid "emailTemplate.variable.subscription.domain"
-msgstr ""
+msgstr "Име на домеинот од валидната ИП адреса(и) за поваа претплата"
 
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr ""
+msgstr "Валидни ИП рангови за оваа претплата"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "Линк до страницата каде што авторот може да ја изврши уплата"
 
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "Линк до препораки за поднесување"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "Линк до страницата за статистики за објавените статии"
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "Идентификациски број на издание"
 
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
+"Овој емаил автоматски се испраќа еднаш месечно до уредниците и менаџерите на "
+"списанијата за да им обезбеди преглед на системот."
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Валидирај и-меил (регистрација во списание)"
@@ -2312,7 +2327,7 @@ msgid "doi.manager.settings.enableRepresentationDoi"
 msgstr "Отисоци на труд"
 
 msgid "doi.manager.settings.galleysWithDescription"
-msgstr ""
+msgstr "Печатарски табак на статии, како објавен PDF"
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Префикс на ДОИ"
@@ -2322,11 +2337,18 @@ msgstr "Префиксот DOI е задолжителен и мора да би
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr ""
-"Користете ја шемата внесена подолу за да генерирате наставки на DOI. "
-"Користете %j за иницијали во списанието, %v за бројот на јачината на звукот, "
-"%i за бројот на изданието, %Y за годината, %a за ID на статијата OJS, %g за "
-"ID галеријата OJS, %f за ID на датотеката OJS , %p за бројот на страницата и "
-"%x за \"Прилагоден идентификатор\"."
+"Внесете персонализиран суфикс за секој тип на публикација. Персонализираната "
+"шема за суфикс може да користи симболи за генерирање на суфиксот:<br><br> "
+"<code>%j</code> Иницијали на Списанието<br> <code>%v</code> Том на "
+"Издание<br> <code>%i</code> Број на Издание<br> <code>%Y</code> Година на "
+"Издание<br> <code>%a</code> Идентификациски број на Статија<br> <code>%g</"
+"code> Идентификациски број на Печатарски Табак<br> <code>%f</code> "
+"Идентификациски број на Датотека<br> <code>%p</code> Број на Страница<br> "
+"<code>%x</code> Персонализиран Идентификатор<br><br> Имајте во предвид дека "
+"персонализираните обрасци на суфикси често доведуваат до проблеми со "
+"генерирање и депонирање на DOI. Кога користите персонализирана шема на "
+"суфикс, внимателно тестирајте дали уредниците можат да генерираат DOI и да "
+"ги депонираат во агенција за регистрација како Crossref. "
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
 msgstr ""
@@ -2468,7 +2490,9 @@ msgid "doi.editor.assignDoi.pattern"
 msgstr "ДОИ {$pubId} не може да се додели бидејќи содржи нерешена шема."
 
 msgid "doi.editor.assignDoi.assigned"
-msgstr "Назначен е ДОИ {$pubId}."
+msgstr ""
+"DOI {$pubId} е доделен. За да го уредите DOI, посетете ја <a href=\""
+"{$doiManagementLink}\">DOI Страница за Управување</a>."
 
 msgid "doi.editor.assignDoi.toBeAssigned"
 msgstr "ДОИ {$pubId} ќе биде доделен при објавувањето."
@@ -2511,12 +2535,15 @@ msgstr "ДОИ на издание"
 
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr ""
+"Овој емаил го известува авторот дека неговото поднесување е одбиено, пред "
+"фазата на рецензија, бидејќи поднесокот не ги исполнува условите за "
+"објавување во списанието."
 
 msgid "manager.institutions.noContext"
-msgstr ""
+msgstr "Списанието на оваа институција не е пронајдено."
 
 msgid "mailable.subscriptionNotify.name"
-msgstr ""
+msgstr "Известување за Претплата"
 
 msgid "mailable.subscriptionNotify.description"
 msgstr ""
@@ -2525,7 +2552,7 @@ msgstr ""
 "и насоките за пристап."
 
 msgid "mailable.subscriptionExpiresSoon.name"
-msgstr ""
+msgstr "Претплатата Доспева Наскоро"
 
 msgid "mailable.subscriptionExpiresSoon.description"
 msgstr ""
@@ -2534,7 +2561,7 @@ msgstr ""
 "истото."
 
 msgid "mailable.subscriptionExpired.name"
-msgstr ""
+msgstr "Претплатата е Доспеана"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
@@ -2542,7 +2569,7 @@ msgstr ""
 "обезбедува URL-адресата на списанието и насоки за пристап до истото."
 
 msgid "mailable.subscriptionExpiredLast.name"
-msgstr ""
+msgstr "Претплатат е Последно Доспеана"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
@@ -2550,7 +2577,7 @@ msgstr ""
 "обезбедува URL-адресата на списанието заедно со упатства за пристап."
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
-msgstr ""
+msgstr "Претплатете се Индивидуално"
 
 msgid "mailable.subscriptionPurchaseIndividual.description"
 msgstr ""
@@ -2559,7 +2586,7 @@ msgstr ""
 "линк за брз пристап до набавената претплата."
 
 msgid "mailable.subscriptionPurchaseInstitutional.name"
-msgstr ""
+msgstr "Претплатете се преку Институција"
 
 msgid "mailable.subscriptionPurchaseInstitutional.description"
 msgstr ""
@@ -2568,7 +2595,7 @@ msgstr ""
 "претплатата и линк за брз пристап до набавената претплата."
 
 msgid "mailable.subscriptionRenewIndividual.name"
-msgstr ""
+msgstr "Обновете Индивидуална Претплата"
 
 msgid "mailable.subscriptionRenewIndividual.description"
 msgstr ""
@@ -2577,7 +2604,7 @@ msgstr ""
 "за брз пристап до обновената претплата."
 
 msgid "mailable.subscriptionRenewInstitutional.name"
-msgstr ""
+msgstr "Обновете Институционална Претплата"
 
 msgid "mailable.subscriptionRenewInstitutional.description"
 msgstr ""
@@ -2586,7 +2613,7 @@ msgstr ""
 "и линк за брз пристап до обновената претплата."
 
 msgid "mailable.openAccessNotify.name"
-msgstr ""
+msgstr "Известување за Отворен Пристап"
 
 msgid "mailable.openAccessNotify.description"
 msgstr ""
@@ -2594,31 +2621,39 @@ msgstr ""
 "добијат известување по и-меил кога некое издание ќе има отворен пристап."
 
 msgid "mailable.issuePublishNotify.name"
-msgstr ""
+msgstr "Известување за Објавено Издание"
 
 msgid "mailable.issuePublishNotify.description"
 msgstr ""
+"Овој емаил е автоматски испратен до регистрирани корисници кога е објавено "
+"ново издание."
 
 msgid "manager.manageEmails.description"
-msgstr ""
+msgstr "Уредете ги пораките испратени во емаил од ова списанието."
 
 msgid "mailable.layoutComplete.name"
-msgstr ""
+msgstr "Завршени Печатарски Табаци"
 
 msgid "mailable.publicationVersionNotify.name"
-msgstr ""
+msgstr "Креирана е Нова Верзија"
 
 msgid "mailable.publicationVersionNotify.description"
 msgstr ""
+"Овој емаил автоматски ги известува доделените уредници кога ќе се креира "
+"нова верзија на поднесокот."
 
 msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
+"Овој емаил се испраќа до менаџерите на списанието кога ќе се поднесе нов "
+"поднесок и кога нема да се доделат уредници."
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "Барање за Наплата"
 
 msgid "mailable.paymentRequest.description"
 msgstr ""
+"Овој автоматизиран емаил е испратен до авторот за да се побара плаќање на "
+"таксата за објавување кога нивниот поднесок ќе биде прифатен."
 
 #~ msgid "plugins.importexport.common.error.unknownJournal"
 #~ msgstr "Наведената патека за списанија, \"{$journalPath}\", не постои."
@@ -2628,3 +2663,16 @@ msgstr ""
 
 #~ msgid "doi.manager.settings.enablePublicationDoi"
 #~ msgstr "Написи"
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "Не можевме да импортираме отисок на издание, датотеката недостасува."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"Не можевме да го експортираме отисокот на изданието {$id}, не беше "
+"пронајдена неговата датотека на \"{$path}\"."
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"Не можевме да ја експортираме насловната страна на изданието {$id}, не беше "
+"пронајдена неговата датотека на \"{$path}\"."

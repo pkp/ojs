@@ -19,7 +19,7 @@ msgid "context.current"
 msgstr "Revista më e fundit:"
 
 msgid "context.select"
-msgstr ""
+msgstr "Kalo tek një revistë tjetër:"
 
 msgid "navigation.categories"
 msgstr "Kategoritë"
@@ -31,10 +31,10 @@ msgid "reviewer.article.enterReviewForm"
 msgstr "Kliko në ikonë për të plotësuar formularin e reçensës."
 
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
-msgstr ""
+msgstr "Plotëso fushat e kërkuara."
 
 msgid "common.software"
-msgstr ""
+msgstr "Sistemi i Revistave të Hapura"
 
 msgid "common.confirmComplete"
 msgstr ""

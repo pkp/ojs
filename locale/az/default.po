@@ -1,0 +1,156 @@
+# Osman Durmaz <osmandurmaz@hotmail.de>, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-03-17 01:01+0000\n"
+"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
+"Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/default/"
+"az/>\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "section.default.title"
+msgstr "Məqalələr"
+
+msgid "section.default.abbrev"
+msgstr "MƏQ"
+
+msgid "section.default.policy"
+msgstr "Standart bölmə siyasəti"
+
+msgid "default.genres.article"
+msgstr "Məqalə mətni"
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>Bu jurnal saytındakı adlar və email adresləri bu jurnalın qeyd olunan "
+"məqsədləri üçün istifadə ediləcəkdir. Başqa məqsədlər və ya başqa bölümlər "
+"üçün istifadə edilməyəcəkdir. </p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"Bu jurnal açıq giriş təmin etmə politikasını mənimsəmişdir. Açıq giriş "
+"bilginin qlobal dəyişimini artıraraq insanlıq üçün faydalı nəticələr ortaya "
+"çıxarır."
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Rəyçi"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Rəyçilər"
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"Bu jurnal iştirakçı kitabxanaların mühafizə və restavrasiya məqsədilə "
+"paylanmış daimi arxivlər yaratmağa icazə vermək üçün LOCKSS sistemi istifadə "
+"edir. <a href=\"http://www.lockss.org/\"> LOCKSS sistemi haqqında daha çox "
+"məlumat əldə etmək istəyirsinizsə. </a>"
+
+msgid "default.groups.abbrev.manager"
+msgstr "DY"
+
+msgid "default.groups.abbrev.editor"
+msgstr "DE"
+
+msgid "default.groups.name.manager"
+msgstr "Jurnalın sahibi"
+
+msgid "default.groups.plural.manager"
+msgstr "Jurnalın sahibləri"
+
+msgid "default.groups.name.editor"
+msgstr "Jurnalın redaktoru"
+
+msgid "default.groups.plural.editor"
+msgstr "Jurnalın redaktorları"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Qonaq redaktor"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "ME"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Bölmə redaktoru"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Bölmə redaktorları"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "Böl.E"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Abunə Direktoru"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Abunə Direktorları"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "Abu.D"
+
+msgid "default.genres.researchInstrument"
+msgstr "Tədqiqat Vasitələri"
+
+msgid "default.genres.researchMaterials"
+msgstr "Tədqiqat Materialları"
+
+msgid "default.genres.researchResults"
+msgstr "Tədqiqat Nəticələri"
+
+msgid "default.genres.transcripts"
+msgstr "Surət"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Data Analizi"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
+
+msgid "default.genres.dataSet"
+msgstr "Data Dəsti"
+
+msgid "default.genres.sourceTexts"
+msgstr "Mənbə Mətnlər"
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"Oxucuların nəşr bildirişi xidmətində qeydiyyatdan keçmələri tövsiyə edilir. "
+"Jurnal əsas səhifəsinin üst hissəsində yer alan <a href=\""
+"{$indexUrl}/{$contextPath}/user/register\">Qeydiyyat</a> linki vasitəsilə bu "
+"əməliyyat həyata keçirilə bilər. Bu qeydiyyatla hər yeni nömrə nəşr/dərc "
+"edildiyində Mündəricat səhifəsi email vasitəsilə oxucuya çatdırılır. "
+"Jurnalın <a href=\"{$indexUrl}/{$contextPath}/about/submissions#"
+"privacyStatement\"> təhlükəsizlik qaydalarına baxın</a> Müəlliflərin kimlik/"
+"identifikasiya məlumatları və email adresləri heç bir şəkildə başqa "
+"məqsədlər üçün istifadə edilməyəcəkdir."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"Kitabxanalara bu açıq girişli jurnalı elektron jurnallar arasına almaları "
+"tövsiyə edilir. Açıq Jurnal Sistemləri ilə bağlı ətraflı məlumat <a href="
+"\"http://pkp.sfu.ca\">Public Knowledge Project</a> linkindən əldə edilə "
+"bilər."
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"Bu jurnal iştirakçı kitabxanalar arasında paylanmış bir arxivləşdirmə "
+"sistemi formalaşdırmaq üçün CLOCKSS sistemi istifadə edir və kitabxanaların, "
+"mühafizə və geri yükləmə məqsədilə Jurnalın daimi arxivini yaratmasına icazə "
+"verir. <a href=\"http://clockss.org/\">Daha çox...</a>"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Qonaq redaktorlar"
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"Jurnalımıza məqalə göndərməyi düşünürsünüzsə<a href=\""
+"{$indexUrl}/{$contextPath}/about\">Jurnal Haqqında</a> linki vasitəsilə "
+"Jurnal nəşr politikası və <a href=\"{$indexUrl}/{$contextPath}/about/"
+"submissions#authorGuidelines\">Müəllif Bələdçisi</a>'ni əldə edə bilərsiniz. "
+"Müəlliflər jurnala məqalə göndərməzdən etmədən əvvəl <a href=\""
+"{$indexUrl}/{$contextPath}/user/register\">register</a> üzv olmalıdırlar. "
+"Məqalə prosesi <a href=\"{$indexUrl}/{$contextPath}/login\">Üzv girişi</a> "
+"linki vasitəsilə 5 addımda həyata keçirilir."

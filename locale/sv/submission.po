@@ -1,15 +1,15 @@
-# Magnus Annemark <magnus.annemark@ub.lu.se>, 2022.
+# Magnus Annemark <magnus.annemark@ub.lu.se>, 2022, 2023.
 # Edvin Erdtman <edvin.erdtman@liu.se>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
-"PO-Revision-Date: 2022-10-27 09:01+0000\n"
-"Last-Translator: Edvin Erdtman <edvin.erdtman@liu.se>\n"
+"PO-Revision-Date: 2023-03-10 09:31+0000\n"
+"Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
-"sv_SE/>\n"
-"Language: sv_SE\n"
+"sv/>\n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -386,21 +386,32 @@ msgstr ""
 
 msgid "submission.copyright.description"
 msgstr ""
+"Läs igenom de upphovsrättsliga villkoren för bidrag till denna tidskrift."
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
+"Du har inte behörighet att skicka in bidrag till denna tidskrift, eftersom "
+"författare måste registreras av redaktionen. Om du misstänker att detta är "
+"felaktigt, kontakta <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
+"Tidskriften har stängt av eller begränsat möjligheten att skicka in bidrag. "
+"Om du misstänker att detta är felaktigt, kontakta <a "
+"href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
+"{$contextName} accepterar inte bidrag till sektionen {$section}. Om du "
+"behöver hjälp med att få tillbaka ditt bidrag, kontakta <a "
+"href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.sectionNotFound"
-msgstr ""
+msgstr "Sektionen som bidraget tillhör kunde inte hittas."
 
 msgid "submission.sectionRestrictedToEditors"
 msgstr ""
+"Endast redaktionell personal har behörighet att skicka in till denna sektion."
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Minst en författare krävs."

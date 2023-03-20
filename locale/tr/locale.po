@@ -2311,7 +2311,7 @@ msgid "notification.type.newAnnouncement"
 msgstr "Yeni duyuru oluşturuldu."
 
 msgid "notification.type.openAccess"
-msgstr ""
+msgstr "Bir sayı açık erişime açıldı."
 
 msgid "notification.type.reviewerFormComment"
 msgstr "\"{$title}\" başlıklı makale için değerlendirme formu gönderildi."
