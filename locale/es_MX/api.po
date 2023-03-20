@@ -1,0 +1,85 @@
+# Dago Salas <dago.salas@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-06-09 10:39+0000\n"
+"Last-Translator: Dago Salas <dago.salas@gmail.com>\n"
+"Language-Team: Spanish (Mexico) <http://translate.pkp.sfu.ca/projects/ojs/"
+"api/es_MX/>\n"
+"Language: es_MX\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "El aviso que ha solicitado no forma parte de esta revista."
+
+msgid "api.emails.403.disabled"
+msgstr ""
+"La funcionalidad de notificación por correo electrónico no se ha activado "
+"para esta revista."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "El envío que solicitó no está en esta revista."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "No puede cambiar la revista de un envío."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "No tiene permiso para ver los números no publicados."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Solo puede ver revistas que hayan sido habilitadas."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "No tiene permiso para ver esta revista."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"No puede ver o editar esta revista a menos que haga una solicitud al API de "
+"la revista o al API de todo el sitio."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "No puede editar esta revista desde la API de todo el sitio."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "No tiene permiso para editar esta revista."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "No tiene permiso para eliminar esta revista."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "No se encontró la revista solicitada."
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "El DOI que solicitó no forma parte de esta revista."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr ""
+"No se ha configurado ninguna agencia de registro DOI para esta revista."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Algunos artículos no se depositaron correctamente. Verifique los elementos "
+"individuales para ver sus mensajes de error específicos."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"No tiene permiso para mover esta plantilla de correo electrónico a otra "
+"revista."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "El método de pago que ha seleccionado no está soportado."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "La publicación que ha solicitado no forma parte de esta revista."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "La publicación que ha solicitado no forma parte de este envío."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Desde esta fase no puede asociar un archivo con una galerada."
+
+msgid "api.submission.400.inactiveSection"
+msgstr ""

@@ -1,0 +1,221 @@
+# Dago Salas <dago.salas@gmail.com>, 2022, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-02-11 21:48+0000\n"
+"Last-Translator: Dago Salas <dago.salas@gmail.com>\n"
+"Language-Team: Spanish (Mexico) <http://translate.pkp.sfu.ca/projects/ojs/"
+"default/es_MX/>\n"
+"Language: es_MX\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "section.default.title"
+msgstr "Artículos"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "section.default.policy"
+msgstr "Política por defecto de la sección"
+
+msgid "default.genres.article"
+msgstr "Texto del artículo"
+
+msgid "default.contextSettings.authorGuidelines"
+msgstr ""
+"<p>Se invita a los autores a realizar un envío a esta revista. Todas las "
+"presentaciones serán evaluadas por un editor para determinar si cumplen con "
+"los objetivos y el alcance de esta revista. Los que se consideren adecuados "
+"se enviarán a una revisión por pares antes de determinar si serán aceptados "
+"o rechazados.</p><p>Antes de enviar un envío, los autores son responsables "
+"de obtener el permiso para publicar cualquier material incluido con el "
+"envío. como fotos, documentos y conjuntos de datos. Todos los autores "
+"identificados en la presentación deben dar su consentimiento para ser "
+"identificados como autores. Cuando corresponda, la investigación debe ser "
+"aprobada por un comité de ética apropiado de acuerdo con los requisitos "
+"legales del país del estudio.</p><p>Un editor puede rechazar una "
+"presentación si no cumple con los estándares mínimos de calidad. Antes de "
+"enviarlo, asegúrese de que el diseño del estudio y el argumento de la "
+"investigación estén estructurados y articulados correctamente. El título "
+"debe ser conciso y el resumen debe poder sostenerse por sí solo. Esto "
+"aumentará la probabilidad de que los revisores acepten revisar el artículo. "
+"Cuando esté satisfecho de que su envío cumple con este estándar, siga la "
+"lista de verificación a continuación para preparar su envío.</p>"
+
+msgid "default.contextSettings.checklist"
+msgstr ""
+"<p>Todos los envíos deben cumplir con los siguientes requisitos.</"
+"p><ul><li>Este envío cumple con los requisitos descritos en las <a href=\""
+"{$submissionGuidelinesUrl}\">Directrices para autores</a>.</li><li>Este "
+"envío no ha sido publicado previamente, ni está ante otra revista para su "
+"consideración.</li><li>Todas las referencias han sido verificadas para ver "
+"si son precisas y completas.</li><li>Todas las tablas y figuras tienen han "
+"sido numerados y etiquetados.</li><li>Se ha obtenido permiso para publicar "
+"todas las fotos, conjuntos de datos y otro material proporcionado con este "
+"envío.</li></ul>"
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>Los nombres y las direcciones de correo electrónico introducidos en esta "
+"publicación se usarán exclusivamente para los fines establecidos en ella y "
+"no se proporcionarán a terceros o para su uso con otros fines.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"Esta revista ofrece acceso abierto inmediato a su contenido, basándose en el "
+"principio de que al poner la investigación a disposición del público de "
+"forma gratuita se favorece un mayor intercambio global de conocimientos."
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"Animamos a los lectores/as a registrarse en el servicio de notificación de "
+"la revista. Utilice el enlace <a href=\"{$indexUrl}/{$contextPath}/user/"
+"register\">Registarse</a> de la parte superior de la página de inicio de la "
+"revista. Como resultado del registro, el lector/a recibirá por correo "
+"electrónico la Tabla de contenidos de cada número publicado. Esta lista "
+"también permite que se le atribuya a la publicación un cierto nivel de apoyo "
+"o número de lectores/as. Consulte la <a href=\"{$indexUrl}/{$contextPath}/"
+"about/submissions#privacyStatement\">Declaración de privacidad de la "
+"revista</a>, que garantiza a los lectores/as que sus nombres y direcciones "
+"de correo electrónico no se usarán con otros fines."
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"¿Está interesado en publicar en la revista? Se recomienda revisar la página "
+"<a href=\"{$indexUrl}/{$contextPath}/about\">Acerca de </a> para consultar "
+"las políticas de sección, así como las <a href=\"{$indexUrl}/{$contextPath}/"
+"about/submissions#authorGuidelines\">Directrices del autor/a</a>. Los "
+"autores/as deben <a href=\"{$indexUrl}/{$contextPath}/user/register"
+"\">registrarse</a> en la revista antes de publicar o, si ya están "
+"registrados, pueden simplemente <a href=\"{$indexUrl}/index/login\">iniciar "
+"sesión</a> y comenzar el proceso de cinco pasos."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"Se recomienda a los investigadores/as bibliotecarios/as que incluyan esta "
+"revista en su catálogo electrónica. Asimismo, cabría destacar que el sistema "
+"de publicación de código abierto de esta revista es apto para bibliotecas "
+"con personal docente que desee editar sus propias revistas (ver <a href="
+"\"https://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"Esta revista utiliza el sistema LOCKSS para crear un sistema de archivos "
+"distribuido entre las bibliotecas participantes y permite a estas "
+"bibliotecas crear archivos permanentes con finalidades de preservación y "
+"restauración. <a href=\"https://wwwlockss.org\">Saber más...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"Esta revista utiliza el sistema CLOCKSS para crear un sistema de archivos "
+"distribuido entre las bibliotecas participantes y permite a estas "
+"bibliotecas crear archivos permanentes con finalidad de preservación y "
+"restauración. <a href=\"https://clockss.org/\">Saber más...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "Gestor/a de la revista"
+
+msgid "default.groups.plural.manager"
+msgstr "Gestores/as de la revista"
+
+msgid "default.groups.abbrev.manager"
+msgstr "GR"
+
+msgid "default.groups.name.editor"
+msgstr "Editor/a de la revista"
+
+msgid "default.groups.plural.editor"
+msgstr "Editores/as de la revista"
+
+msgid "default.groups.abbrev.editor"
+msgstr "ER"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Editor/a invitado/a"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Editores/as invitados/as"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "EI"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Editor/a de sección"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Editores/as de sección"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "ESec"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Gestor/a de suscripción"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Gestores/as de suscripción"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "GSus"
+
+msgid "default.genres.researchInstrument"
+msgstr "Instrumento de investigación"
+
+msgid "default.genres.researchMaterials"
+msgstr "Materiales de investigación"
+
+msgid "default.genres.researchResults"
+msgstr "Resultados de la investigación"
+
+msgid "default.genres.transcripts"
+msgstr "Transcripciones"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Análisis de datos"
+
+msgid "default.genres.dataSet"
+msgstr "Conjunto de datos"
+
+msgid "default.genres.sourceTexts"
+msgstr "Textos fuente"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Revisor/a"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Revisores/as"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
+
+#~ msgid "default.contextSettings.checklist.bibliographicRequirements"
+#~ msgstr ""
+#~ "El texto se adhiere a los requisitos estilísticos y bibliográficos "
+#~ "resumidos en las <a href=\"{$indexUrl}/{$contextPath}/about/"
+#~ "submissions#authorGuidelines\" target=\"_new\">Directrices del autor/a</"
+#~ "a>, que aparecen en Acerca de."
+
+#~ msgid "default.contextSettings.checklist.submissionAppearance"
+#~ msgstr ""
+#~ "El texto tiene interlineado sencillo; 12 puntos de tamaño de fuente; se "
+#~ "utiliza cursiva en lugar de subrayado (excepto en las direcciones URL); y "
+#~ "todas las ilustraciones, figuras y tablas se encuentran colocadas en los "
+#~ "lugares del texto apropiados, en vez de al final."
+
+#~ msgid "default.contextSettings.checklist.addressesLinked"
+#~ msgstr ""
+#~ "Siempre que sea posible, se han proporcionado las direcciones URL para "
+#~ "las referencias."
+
+#~ msgid "default.contextSettings.checklist.fileFormat"
+#~ msgstr ""
+#~ "El archivo de envío está en formato OpenOffice, Microsoft Word, RTF o "
+#~ "WordPerfect."
+
+#~ msgid "default.contextSettings.checklist.notPreviouslyPublished"
+#~ msgstr ""
+#~ "El envío no ha sido publicado previamente ni se ha sometido a "
+#~ "consideración por ninguna otra revista (o se ha proporcionado una "
+#~ "explicación al respecto en los Comentarios al editor/a)."

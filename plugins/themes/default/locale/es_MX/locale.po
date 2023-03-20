@@ -1,0 +1,93 @@
+# Dago Salas <dago.salas@gmail.com>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-11-16 02:02+0000\n"
+"Last-Translator: Dago Salas <dago.salas@gmail.com>\n"
+"Language-Team: Spanish (Mexico) <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/es_MX/>\n"
+"Language: es_MX\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.themes.default.name"
+msgstr "Tema predeterminado"
+
+msgid "plugins.themes.default.description"
+msgstr "Este tema implementa el diseño predeterminado."
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "Tipografía"
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "Escoge la combinación de fuentes que se ajusta a esta revista."
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr ""
+"Noto Sans: una fuente nativa digital diseñada por Google para una amplia "
+"compatibilidad con idiomas."
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr "Noto Serif: Una variante serif de la fuente nativa digital de Google."
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr "Noto Serif: Una variante serif de la fuente nativa digital de Google."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr ""
+"Noto Sans/Noto Serif: una combinación complementaria con encabezados sans-"
+"serif y cuerpo de texto serif."
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Lato: Una popular fuente sans-serif moderna."
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr "Lora: una fuente serif de amplio espectro, buena para leer en línea."
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr ""
+"Lora/Open Sans: una combinación complementaria con encabezados serif y "
+"cuerpo de texto sans-serif."
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "Color"
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "Elija un color para el encabezado."
+
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
+msgstr "Mostrar el resumen de la revista en la página de inicio."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
+msgstr "Imagen de fondo del encabezado"
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
+msgstr ""
+"Cuando se haya cargado una imagen de la página de inicio, muéstrela en el "
+"fondo del encabezado en lugar de su posición habitual en la página de inicio."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
+msgstr "Muestra la imagen de la página de inicio como fondo del encabezado."
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "Opciones de visualización de estadísticas de uso"
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr "No mostrar el gráfico de estadísticas de envíos para el lector."
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr "Use la gráfica de barras para mostrar las estadísticas de uso."
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr "Use la gráfica de líneas para mostrar las estadísticas de uso."
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "Ene Feb Mar Abr May Jun Jul Ago Sep Oct Nov Dic"
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "Descargas"
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "Los datos de descarga aún no están disponibles."
