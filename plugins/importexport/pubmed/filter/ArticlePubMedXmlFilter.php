@@ -28,18 +28,6 @@ use PKP\i18n\LocaleConversion;
 class ArticlePubMedXmlFilter extends PersistableFilter
 {
     //
-    // Implement template methods from PersistableFilter
-    //
-    /**
-     * @copydoc PersistableFilter::getClassName()
-     */
-    public function getClassName()
-    {
-        return (string) self::class;
-    }
-
-
-    //
     // Implement abstract methods from SubmissionPubMedXmlFilter
     //
     /**

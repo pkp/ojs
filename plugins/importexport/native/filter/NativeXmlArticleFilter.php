@@ -20,17 +20,6 @@ use PKP\plugins\importexport\PKPImportExportFilter;
 
 class NativeXmlArticleFilter extends \PKP\plugins\importexport\native\filter\NativeXmlSubmissionFilter
 {
-    //
-    // Implement template methods from PersistableFilter
-    //
-    /**
-     * @copydoc PersistableFilter::getClassName()
-     */
-    public function getClassName()
-    {
-        return (string) self::class;
-    }
-
     /**
      * Get the import filter for a given element.
      *
