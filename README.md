@@ -1,56 +1,31 @@
 # Open Journal Systems
 
-> Open Journal Systems (OJS) has been developed by the Public Knowledge Project. For general information about OJS and other open research systems, visit the [PKP web site][pkp].
-
 [![Build Status](https://travis-ci.org/pkp/ojs.svg?branch=main)](https://travis-ci.org/pkp/ojs)
 
-## Documentation
+Open Journal Systems (OJS) is open source software developed by the [Public Knowledge Project](https://pkp.sfu.ca/) to manage scholarly journals. [Learn More](https://pkp.sfu.ca/software/ojs/)
 
-You will find detailed guides in [docs](docs) folder.
+## Usage
 
-## Using Git development source
+Read one of these guides to get started using OJS:
 
-Checkout submodules and copy default configuration :
+- Read the [Admin Guide](https://docs.pkp.sfu.ca/admin-guide/) to learn how to install and configure the application from an official release package. Use this guide to deploy to production.
+- Read the [Getting Started](https://docs.pkp.sfu.ca/dev/documentation/en/getting-started) guide to learn how to install the application from this source repository. Use this guide for local development.
 
-    git submodule update --init --recursive
-    cp config.TEMPLATE.inc.php config.inc.php
+Visit our [Documentation Hub](https://docs.pkp.sfu.ca/) for user guides, tutorials, and technical documentation.
 
-Install or update dependencies via Composer (https://getcomposer.org/):
+## Bugs / Feature Requests
 
-    composer --working-dir=lib/pkp install
-    composer --working-dir=plugins/paymethod/paypal install
-    composer --working-dir=plugins/generic/citationStyleLanguage install
+> ⚠️ If you have found a security risk or vulnerability, please read our [security policy](SECURITY.md).
 
-Install or update dependencies via [NPM](https://www.npmjs.com/):
-
-    # install [nodejs](https://nodejs.org/en/) if you don't already have it
-    npm install
-    npm run build
-
-If your PHP version supports built-in development server :
-
-    php -S localhost:8000
-
-See the [Documentation Hub][doc-hub] for a more complete development guide.
-
-## Running Tests
-
-We recommend using [Travis](https://travis-ci.org/) for continuous-integration
-based testing. Review the Travis configuration file (`.travis.yml`) as a
-reference for running the test locally, should you choose to do so.
-
-The tests include an integration test suite that builds a data environment from
-scratch, including the installation process. (This is the `-b` flag to the test
-script `lib/pkp/tools/runAllTests.sh`; this is also executed in the Travis
-environment.)
-
-## Bugs / Issues
-
-See https://github.com/pkp/pkp-lib/#issues for information on reporting issues.
+All issues should be filed at the [pkp/pkp-lib](https://github.com/pkp/pkp-lib/issues/) repository. Feature requests can be made at our [Community Forum](https://forum.pkp.sfu.ca/). Learn more about how to [report a problem](https://docs.pkp.sfu.ca/dev/contributors/#report-a-problem).
 
 ## Community Code of Conduct
 
-This repository is one of PKP's community spaces and all activities here are guided by [PKP's Code of Conduct](https://pkp.sfu.ca/code-of-conduct/). Please review the Code and help us create a welcoming environment for all participants.
+This repository is a PKP community space. All activities here are governed by [PKP's Code of Conduct](https://pkp.sfu.ca/code-of-conduct/). Please review the Code and help us create a welcoming environment for all participants.
+
+## Contributions
+
+Read the [Contributor's Guide](https://docs.pkp.sfu.ca/dev/contributors/) to learn how to make a pull request. This document describes our code formatting guidelines as well as information about how we organize stable branches and submodules.
 
 ## License
 
@@ -62,9 +37,3 @@ of this license.
 Third parties are welcome to modify and redistribute OJS in entirety or parts
 according to the terms of this license. PKP also welcomes patches for
 improvements or bug fixes to the software.
-
-[pkp]: https://pkp.sfu.ca/
-[readme]: docs/README.md
-[doc-hub]: https://docs.pkp.sfu.ca/
-[php-unit]: https://phpunit.de/
-[gpl-licence]: docs/COPYING
