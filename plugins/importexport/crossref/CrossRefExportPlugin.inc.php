@@ -214,8 +214,8 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 				$exportXml = $this->exportXML(array($object), $filter, $context, $noValidation);
 				// Write the XML to a file.
 				// export file name example: crossref-20160723-160036-articles-1-1.xml
-				$objectsFileNamePart = $objectsFileNamePart . '-' . $object->getId();
-				$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
+				$objectFileNamePart = $objectsFileNamePart . '-' . $object->getId();
+				$exportFileName = $this->getExportFileName($this->getExportPath(), $objectFileNamePart, $context, '.xml');
 				$fileManager->writeFile($exportFileName, $exportXml);
 				// Deposit the XML file.
 				$result = $this->depositXML($object, $context, $exportFileName);
