@@ -23,7 +23,7 @@ PKP will then work to verify the vulnerability and assess the risk. This is typi
 
 When a fix is available, PKP will contact its user community privately via mailing list with details of the fix, and leave a window of typically 2 weeks for community members to patch or upgrade before public disclosure.
 
-PKP then discloses the vulnerability publicly by updating the Github issue entry with complete details and adding a notice about the vulnerability to the software download page (e.g. https://pkp.sfu.ca/ojs_download). At this point, a CVE and credit for the discovery may be added to the entry.
+PKP then discloses the vulnerability publicly by updating the Github issue entry with complete details and adding a notice about the vulnerability to the software download page (e.g. https://pkp.sfu.ca/software/ojs). At this point, a CVE and credit for the discovery may be added to the entry.
 
 Depending on the severity of the issue PKP may back-port fixes to releases that are beyond the formal software end-of-life.
 
