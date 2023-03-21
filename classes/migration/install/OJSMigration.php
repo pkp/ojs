@@ -51,6 +51,8 @@ class OJSMigration extends \PKP\migration\Migration
         // Section-specific settings
         Schema::create('section_settings', function (Blueprint $table) {
             $table->comment('More data about sections, including localized properties like section titles.');
+            $table->bigIncrements('section_setting_id');
+
             $table->bigInteger('section_id');
             $table->foreign('section_id', 'section_settings_section_id')->references('section_id')->on('sections')->onDelete('cascade');
             $table->index(['section_id'], 'section_settings_section_id');
@@ -98,6 +100,8 @@ class OJSMigration extends \PKP\migration\Migration
         // Locale-specific issue data
         Schema::create('issue_settings', function (Blueprint $table) {
             $table->comment('More data about issues, including localized properties such as issue titles.');
+            $table->bigIncrements('issue_setting_id');
+
             $table->bigInteger('issue_id');
             $table->foreign('issue_id', 'issue_settings_issue_id')->references('issue_id')->on('issues')->onDelete('cascade');
             $table->index(['issue_id'], 'issue_settings_issue_id');
@@ -159,6 +163,8 @@ class OJSMigration extends \PKP\migration\Migration
         // Issue galley metadata.
         Schema::create('issue_galley_settings', function (Blueprint $table) {
             $table->comment('More data about issue galleys, including localized content such as labels.');
+            $table->bigIncrements('issue_galley_setting_id');
+
             $table->bigInteger('galley_id');
             $table->foreign('galley_id', 'issue_galleys_settings_galley_id')->references('galley_id')->on('issue_galleys')->onDelete('cascade');
             $table->index(['galley_id'], 'issue_galley_settings_galley_id');
@@ -173,6 +179,8 @@ class OJSMigration extends \PKP\migration\Migration
 
         Schema::create('custom_issue_orders', function (Blueprint $table) {
             $table->comment('Ordering information for the issue list, when custom issue ordering is specified.');
+            $table->bigIncrements('custom_issue_order_id');
+
             $table->bigInteger('issue_id');
             $table->foreign('issue_id', 'custom_issue_orders_issue_id')->references('issue_id')->on('issues')->onDelete('cascade');
             $table->index(['issue_id'], 'custom_issue_orders_issue_id');
@@ -188,6 +196,8 @@ class OJSMigration extends \PKP\migration\Migration
 
         Schema::create('custom_section_orders', function (Blueprint $table) {
             $table->comment('Ordering information for sections within issues, when issue-specific section ordering is specified.');
+            $table->bigIncrements('custom_section_order_id');
+
             $table->bigInteger('issue_id');
             $table->foreign('issue_id', 'custom_section_orders_issue_id')->references('issue_id')->on('issues')->onDelete('cascade');
             $table->index(['issue_id'], 'custom_section_orders_issue_id');
@@ -279,6 +289,8 @@ class OJSMigration extends \PKP\migration\Migration
         // Galley metadata.
         Schema::create('publication_galley_settings', function (Blueprint $table) {
             $table->comment('More data about publication galleys, including localized content such as labels.');
+            $table->bigIncrements('publication_galley_setting_id');
+
             $table->bigInteger('galley_id');
             $table->foreign('galley_id', 'publication_galley_settings_galley_id')->references('galley_id')->on('publication_galleys')->onDelete('cascade');
             $table->index(['galley_id'], 'publication_galley_settings_galley_id');
@@ -319,6 +331,8 @@ class OJSMigration extends \PKP\migration\Migration
         // Locale-specific subscription type data
         Schema::create('subscription_type_settings', function (Blueprint $table) {
             $table->comment('More data about subscription types, including localized properties such as names.');
+            $table->bigIncrements('subscription_type_setting_id');
+
             $table->bigInteger('type_id');
             $table->foreign('type_id', 'subscription_type_settings_type_id')->references('type_id')->on('subscription_types')->onDelete('cascade');
             $table->index(['type_id'], 'subscription_type_settings_type_id');
