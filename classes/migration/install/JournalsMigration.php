@@ -49,7 +49,7 @@ class JournalsMigration extends \PKP\migration\Migration
             $table->mediumText('setting_value')->nullable();
             $table->string('setting_type', 6)->nullable();
 
-            $table->unique(['journal_id', 'locale', 'setting_name'], 'journal_settings_pkey');
+            $table->unique(['journal_id', 'locale', 'setting_name'], 'journal_settings_unique');
         });
     }
 
