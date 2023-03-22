@@ -22,18 +22,6 @@ use APP\publication\Publication;
 class PublicationNativeXmlFilter extends \PKP\plugins\importexport\native\filter\PKPPublicationNativeXmlFilter
 {
     //
-    // Implement template methods from PersistableFilter
-    //
-    /**
-     * @copydoc PersistableFilter::getClassName()
-     */
-    public function getClassName()
-    {
-        return (string) self::class;
-    }
-
-
-    //
     // Implement abstract methods from SubmissionNativeXmlFilter
     //
     /**

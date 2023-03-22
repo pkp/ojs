@@ -18,17 +18,6 @@ namespace APP\plugins\importexport\native\filter;
 class ArticleNativeXmlFilter extends \PKP\plugins\importexport\native\filter\SubmissionNativeXmlFilter
 {
     //
-    // Implement template methods from PersistableFilter
-    //
-    /**
-     * @copydoc PersistableFilter::getClassName()
-     */
-    public function getClassName()
-    {
-        return (string) self::class;
-    }
-
-    //
     // Submission conversion functions
     //
     /**

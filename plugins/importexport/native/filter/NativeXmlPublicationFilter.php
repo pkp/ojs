@@ -22,17 +22,6 @@ use PKP\plugins\importexport\PKPImportExportFilter;
 
 class NativeXmlPublicationFilter extends \PKP\plugins\importexport\native\filter\NativeXmlPKPPublicationFilter
 {
-    //
-    // Implement template methods from PersistableFilter
-    //
-    /**
-     * @copydoc PersistableFilter::getClassName()
-     */
-    public function getClassName()
-    {
-        return (string) self::class;
-    }
-
     /**
      * Handle an Article import.
      * The Article must have a valid section in order to be imported

@@ -46,18 +46,6 @@ class NativeXmlArticleGalleyFilter extends \PKP\plugins\importexport\native\filt
         return 'article_galley';
     }
 
-    //
-    // Implement template methods from PersistableFilter
-    //
-    /**
-     * @copydoc PersistableFilter::getClassName()
-     */
-    public function getClassName()
-    {
-        return (string) self::class;
-    }
-
-
     /**
      * Handle a submission element
      *

@@ -37,17 +37,6 @@ class NativeXmlIssueGalleyFilter extends \PKP\plugins\importexport\native\filter
     }
 
     //
-    // Implement template methods from PersistableFilter
-    //
-    /**
-     * @copydoc PersistableFilter::getClassName()
-     */
-    public function getClassName()
-    {
-        return (string) self::class;
-    }
-
-    //
     // Override methods in NativeImportFilter
     //
     /**

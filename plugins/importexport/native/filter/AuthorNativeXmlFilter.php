@@ -17,14 +17,4 @@ namespace APP\plugins\importexport\native\filter;
 
 class AuthorNativeXmlFilter extends \PKP\plugins\importexport\native\filter\PKPAuthorNativeXmlFilter
 {
-    //
-    // Implement template methods from PersistableFilter
-    //
-    /**
-     * @copydoc PersistableFilter::getClassName()
-     */
-    public function getClassName()
-    {
-        return (string) self::class;
-    }
 }
