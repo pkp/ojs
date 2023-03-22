@@ -61,7 +61,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->string('setting_name', 255);
             $table->mediumText('setting_value')->nullable();
 
-            $table->unique(['section_id', 'locale', 'setting_name'], 'section_settings_pkey');
+            $table->unique(['section_id', 'locale', 'setting_name'], 'section_settings_unique');
         });
 
         // Journal issues.
@@ -111,7 +111,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->mediumText('setting_value')->nullable();
             $table->string('setting_type', 6)->nullable();
 
-            $table->unique(['issue_id', 'locale', 'setting_name'], 'issue_settings_pkey');
+            $table->unique(['issue_id', 'locale', 'setting_name'], 'issue_settings_unique');
         });
         // Add partial index (DBMS-specific)
         switch (DB::getDriverName()) {
@@ -174,7 +174,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->mediumText('setting_value')->nullable();
             $table->string('setting_type', 6)->comment('(bool|int|float|string|object)');
 
-            $table->unique(['galley_id', 'locale', 'setting_name'], 'issue_galley_settings_pkey');
+            $table->unique(['galley_id', 'locale', 'setting_name'], 'issue_galley_settings_unique');
         });
 
         Schema::create('custom_issue_orders', function (Blueprint $table) {
@@ -191,7 +191,7 @@ class OJSMigration extends \PKP\migration\Migration
 
             $table->float('seq', 8, 2)->default(0);
 
-            $table->unique(['issue_id'], 'custom_issue_orders_pkey');
+            $table->unique(['issue_id'], 'custom_issue_orders_unique');
         });
 
         Schema::create('custom_section_orders', function (Blueprint $table) {
@@ -208,7 +208,7 @@ class OJSMigration extends \PKP\migration\Migration
 
             $table->float('seq', 8, 2)->default(0);
 
-            $table->unique(['issue_id', 'section_id'], 'custom_section_orders_pkey');
+            $table->unique(['issue_id', 'section_id'], 'custom_section_orders_unique');
         });
 
         // Publications
@@ -299,7 +299,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->string('setting_name', 255);
             $table->mediumText('setting_value')->nullable();
 
-            $table->unique(['galley_id', 'locale', 'setting_name'], 'publication_galley_settings_pkey');
+            $table->unique(['galley_id', 'locale', 'setting_name'], 'publication_galley_settings_unique');
         });
         // Add partial index (DBMS-specific)
         switch (DB::getDriverName()) {
@@ -342,7 +342,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->mediumText('setting_value')->nullable();
             $table->string('setting_type', 6);
 
-            $table->unique(['type_id', 'locale', 'setting_name'], 'subscription_type_settings_pkey');
+            $table->unique(['type_id', 'locale', 'setting_name'], 'subscription_type_settings_unique');
         });
 
         // Journal subscriptions.
