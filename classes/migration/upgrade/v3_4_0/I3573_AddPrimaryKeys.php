@@ -44,4 +44,18 @@ class I3573_AddPrimaryKeys extends \PKP\migration\upgrade\v3_4_0\I3573_AddPrimar
             'funder_award_settings' => 'funder_award_setting_id', // PLUGIN
         ]);
     }
+
+    public static function getIndexData(): array
+    {
+        return [
+            'journal_settings' => ['journal_settings_pkey', ['journal_id', 'locale', 'setting_name'], 'journal_settings_unique'],
+            'section_settings' => ['section_settings_pkey', ['section_id', 'locale', 'setting_name'], 'section_settings_unique'],
+            'issue_settings' => ['issue_settings_pkey', ['issue_id', 'locale', 'setting_name'], 'issue_settings_unique'],
+            'issue_galley_settings' => ['issue_galley_settings_pkey', ['galley_id', 'locale', 'setting_name'], 'issue_galley_settings_unique'],
+            'custom_issue_orders' => ['custom_issue_orders_pkey', ['issue_id'], 'custom_issue_orders_unique'],
+            'custom_section_orders' => ['custom_section_orders_pkey', ['issue_id', 'section_id'], 'custom_section_orders_unique'],
+            'publication_galley_settings' => ['publication_galley_settings_pkey', ['galley_id', 'locale', 'setting_name'], 'publication_galley_settings_unique'],
+            'subscription_type_settings' => ['subscription_type_settings_pkey', ['type_id', 'locale', 'setting_name'], 'subscription_type_settings_unique'],
+        ];
+    }
 }
