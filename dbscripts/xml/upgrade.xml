@@ -133,6 +133,7 @@
 
 	<upgrade minversion="3.1.0.0" maxversion="3.3.9.9">
 		<migration class="APP\migration\upgrade\v3_4_0\PreflightCheckMigration" fallback="3.3.9.9" />
+		<migration class="APP\migration\upgrade\v3_4_0\MergeLocalesMigration"/>
 		<migration class="APP\migration\upgrade\v3_4_0\I7129_IssueEntityDAORefactor" />
 		<migration class="APP\migration\upgrade\OJSv3_3_1_i6872_UrlPathMigration" />
 		<migration class="APP\migration\upgrade\v3_4_0\I6091_AddFilterNamespaces" />
@@ -194,7 +195,6 @@
 		<migration class="APP\migration\upgrade\v3_4_0\I7513_DoiSettings"/>
 		<migration class="PKP\migration\upgrade\v3_4_0\I7486_RenameUnconsideredColumnToConsidered"/>
 		<migration class="PKP\migration\upgrade\v3_4_0\I7486_RemoveItemViewsTable"/>
-		<migration class="APP\migration\upgrade\v3_4_0\MergeLocalesMigration"/>
 		<data file="dbscripts/xml/upgrade/3.4.0_preupdate_email_templates.xml" />
 		<note file="docs/release-notes/README-3.4.0" />
 	</upgrade>
