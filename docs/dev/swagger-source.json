@@ -42,6 +42,9 @@
 				"Contexts",
 				"Site",
 				"Announcements",
+				"DOIs",
+				"DOIs / Submissions",
+				"DOIs / Issues",
 				"Email Templates",
 				"Institutions",
 				"Mailables",
@@ -61,7 +64,7 @@
 		{
 			"name": "What's New in 3.4",
 			"x-traitTag": true,
-			"description": "The [3.4 Release Notebook](https://docs.pkp.sfu.ca/dev/release-notebooks/en/3.4-release-notebook) contains full details about breaking changes introduced in 3.4. The following breaking changes effect the REST API.\n\n- Major changes to the `/stats` endpoints. See reference below."
+			"description": "The [3.4 Release Notebook](https://docs.pkp.sfu.ca/dev/release-notebooks/en/3.4-release-notebook) contains full details about breaking changes introduced in 3.4. The following changes effect the REST API.\n\n- Use of the `apiToken` as a query parameter is deprecated. Use it in the `Authorization` header instead. See the \"Authentication\" section below.\n- Changes to request body to create a new submission.\n- Changes to the submission property, `submissionProgress`. It is now a string, not an integer.\n- Changes to the stats endpoints.\n- Changes to the endpoints to manage email templates.\n\nThe following new endpoints have been added.\n\n- New endpoint to save a submission for later.\n- New endpoint to submit a submissions.\n- New endpoints to manage a publication's contributors.\n- New endpoints to create and register DOIs.\n- New endpoints to record editorial decisions.\n- New endpoints to manage institutions."
 		},
 		{
 			"name": "Access",
@@ -126,6 +129,18 @@
 		{
 			"name": "Announcements",
 			"description": "Only admins and journal managers can access these endpoints."
+		},
+		{
+			"name": "DOIs",
+			"description": "Only admins and journal managers can access these endpoints."
+		},
+		{
+			"name": "DOIs / Submissions",
+			"description": "Only admins and journal managers can access these endpoints."
+		},
+		{
+			"name": "DOIs / Issues",
+			"description": "Only admins and journal managers can access these endpoints. These endpoints are only available when issues have been configured to receive DOIs in the DOI settings."
 		},
 		{
 			"name": "Email Templates",
@@ -547,19 +562,18 @@
 				"description": "See `/submissions/{submissionId}` for notes about submission properties.",
 				"parameters": [
 					{
-						"name": "status",
-						"description": "Filter results by one or more submission statuses. Must match the value of one of the `PKPSubmission::STATUS_QUEUED`, `PKPSubmission::STATUS_SCHEDULED`, `PKPSubmission::STATUS_PUBLISHED` or `PKPSubmission::STATUS_DECLINED` constants.",
+						"name": "assignedTo",
+						"description": "Filter results by those assigned to one or more user ids. All users except managers and admins are automatically restricted to assigned submissions and do not need to pass this parameter.",
 						"in": "query",
 						"required": false,
 						"type": "array",
 						"items": {
-							"type": "integer",
-							"enum": [1,3,4,5]
+							"type": "integer"
 						}
 					},
 					{
-						"name": "assignedTo",
-						"description": "Filter results by those assigned to one or more user ids. All users except managers and admins are automatically restricted to assigned submissions and do not need to pass this parameter.",
+						"name": "categoryIds",
+						"description": "Filter results by those assigned to one of these categories.",
 						"in": "query",
 						"required": false,
 						"type": "array",
@@ -574,6 +588,37 @@
 						"required": false,
 						"type": "integer",
 						"default": 20
+					},
+					{
+						"name": "daysInactive",
+						"description": "Filter the results by those which have not had activity for the last X days.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					},
+					{
+						"name": "isIncomplete",
+						"description": "Filter the results by those for which the author has not yet completed the submission process.",
+						"in": "query",
+						"required": false,
+						"type": "boolean"
+					},
+					{
+						"name": "isOverdue",
+						"description": "Filter the results by those for which a reviewer has missed a deadline.",
+						"in": "query",
+						"required": false,
+						"type": "boolean"
+					},
+					{
+						"name": "issueIds",
+						"description": "Filter the results by those with one or more publications assigned to an issue.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
 					},
 					{
 						"name": "offset",
@@ -611,25 +656,11 @@
 						]
 					},
 					{
-						"name": "isIncomplete",
-						"description": "Filter the results by those for which the author has not yet completed the submission process.",
+						"name": "searchPhrase",
+						"description": "Filter the results by a search phrase matched against the title and authors.",
 						"in": "query",
 						"required": false,
-						"type": "boolean"
-					},
-					{
-						"name": "isOverdue",
-						"description": "Filter the results by those for which a reviewer has missed a deadline.",
-						"in": "query",
-						"required": false,
-						"type": "boolean"
-					},
-					{
-						"name": "daysInactive",
-						"description": "Filter the results by those which have not had activity for the last X days.",
-						"in": "query",
-						"required": false,
-						"type": "integer"
+						"type": "string"
 					},
 					{
 						"name": "sectionIds",
@@ -642,21 +673,26 @@
 						}
 					},
 					{
-						"name": "issueIds",
-						"description": "Filter the results by those with one or more publications assigned to an issue.",
+						"name": "stageIds",
+						"description": "Filter results by those currently in one of these workflow stages. Expects one of the `WORKFLOW_STAGE_ID_*` constants.",
 						"in": "query",
 						"required": false,
 						"type": "array",
 						"items": {
-							"type": "integer"
+							"type": "integer",
+							"enum": [1,3,4,5]
 						}
 					},
 					{
-						"name": "searchPhrase",
-						"description": "Filter the results by a search phrase matched against the title and authors.",
+						"name": "status",
+						"description": "Filter results by one or more submission statuses. Must match the value of one of the `PKPSubmission::STATUS_QUEUED`, `PKPSubmission::STATUS_SCHEDULED`, `PKPSubmission::STATUS_PUBLISHED` or `PKPSubmission::STATUS_DECLINED` constants.",
 						"in": "query",
 						"required": false,
-						"type": "string"
+						"type": "array",
+						"items": {
+							"type": "integer",
+							"enum": [1,3,4,5]
+						}
 					}
 				],
 				"responses": {
@@ -837,6 +873,140 @@
 					"403": {
 						"x-summary": "Request Unauthorized",
 						"description": "You are not allowed to delete this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The submission could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/saveForLater": {
+			"put": {
+				"tags": [
+					"Submissions"
+				],
+				"summary": "Save a submission for later",
+				"description": "Sets the current step of the submission in the submission wizard and sends an email to the submitting author with a link to resume their submission. This API endpoint does not save any data about the submission. Use the regular `PUT` endpoints to save data for submissions, publications, files, and authors.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"step": {
+									"description": "The step of the submission wizard to open when the author resumes their submission.",
+									"type": "string",
+									"enum": [
+										"details",
+										"files",
+										"contributors",
+										"editors",
+										"review"
+									]
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The submission that was saved for later.",
+						"schema": {
+							"$ref": "#/definitions/Submission"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "This error indicates that you are not allowed to edit this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The submission could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/submit": {
+			"put": {
+				"tags": [
+					"Submissions"
+				],
+				"summary": "Submit a submission",
+				"description": "Submits a submission for editorial review. Any automated editorial assignments, comments for the editor, or other submission events will be triggered.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"_validateOnly": {
+									"description": "When `true`, the validation checks will be performed but the submission will not be submitted.",
+									"in": "query",
+									"required": false,
+									"type": "boolean"
+								},
+								"confirmCopyright": {
+									"description": "Pass `true` to indicate that the author has agreed to the copyright notice. An entry will be added to the submission's activity log to record the author's acceptance of the copyright agreement.",
+									"type": "boolean",
+									"required": "false"
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The submission that was saved for later. Or, if the `_validateOnly` query param is passed and no validation errors are found, the response body will be empty.",
+						"schema": {
+							"$ref": "#/definitions/Submission"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "Any validation errors that must be fixed before this submission can be submitted. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "This error indicates that you are not allowed to edit this submission.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -1601,7 +1771,7 @@
 						}
 					},
 					"403": {
-						"x-summary": "Publication invalid",
+						"x-summary": "Publication Invalid",
 						"description": "The requested publication is not part of the requested submission.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -1661,7 +1831,7 @@
 						}
 					},
 					"403": {
-						"x-summary": "Publication invalid",
+						"x-summary": "Publication Invalid",
 						"description": "The requested publication is not part of the requested submission. It could be also because the publication is not editable by the requested user",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
@@ -1708,15 +1878,15 @@
 						}
 					},
 					"403": {
-						"x-summary": "Publication invalid",
-						"description": "The requested publication is not part of the requested submission. It could be also because the publication is not editable by the requested user",
+						"x-summary": "Publication Invalid",
+						"description": "The requested publication is not part of the requested submission. Or you do not have permission to edit this publication.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
 					"404": {
 						"x-summary": "Request Not Found",
-						"description": "The requested submission or publication or author could not be found.",
+						"description": "The requested submission, publication or author could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -1794,7 +1964,6 @@
 					"Submissions / Publications / Contributors"
 				],
 				"summary": "Delete a contributor.",
-				"description": "Only journal managers and subeditors can make a request to this endpoint.",
 				"parameters": [
 					{
 						"name": "submissionId",
@@ -1849,6 +2018,7 @@
 					"Submissions / Publications / Contributors"
 				],
 				"summary": "Reorder publication's contributors",
+				"description": "Change the order of the contributor's as they are listed in the publication.",
 				"parameters": [
 					{
 						"name": "submissionId",
@@ -1865,12 +2035,17 @@
 						"type": "integer"
 					},
 					{
-						"description": "The 'sortedAuthors' param is an array containing the new order of the contributors for the given publication",
 						"in": "body",
 						"schema": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/Contributor"
+							"type": "object",
+							"properties": {
+								"sortedAuthors": {
+									"type": "array",
+									"description": "An array of contributor objects in the order they should be listed.",
+									"items": {
+										"$ref": "#/definitions/Contributor"
+									}
+								}
 							}
 						}
 					}
@@ -1878,9 +2053,12 @@
 				"responses": {
 					"200": {
 						"x-summary": "Success",
-						"description": "Details of the publication that it's contributors were just reordered.",
+						"description": "An array of contributor objects in the new order.",
 						"schema": {
-							"$ref": "#/definitions/Publication"
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Contributor"
+							}
 						}
 					},
 					"403": {
@@ -3012,6 +3190,1101 @@
 					"404": {
 						"x-summary": "Request Not Found",
 						"description": "The requested announcement could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/dois": {
+			"get": {
+				"tags": [
+					"DOIs"
+				],
+				"summary": "Get a list of DOIs.",
+				"parameters": [
+					{
+						"name": "status",
+						"description": "Filter results by one or more DOI statuses. Must match the value of one of the `Doi::STATUS_UNREGISTERED`, `Doi::STATUS_SUBMITTED`, `Doi::STATUS_REGISTERED`, `Doi::STATUS_ERROR`, `Doi::STATUS_STALE` constants.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer",
+							"enum": [1,2,3,4,5]
+						}
+					},
+					{
+						"name": "count",
+						"description": "How many results to return in a single request. Max is `100`.",
+						"in": "query",
+						"required": false,
+						"type": "integer",
+						"default": 30
+					},
+					{
+						"name": "offset",
+						"description": "Offset the results returned. Use this to receive subsequent pages of requests. A `count` of `10` and `offset` of `15` will return results `15` to `25`.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "List of requested DOIs",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"itemsMax": {
+									"type": "integer"
+								},
+								"items": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/Doi"
+									}
+								}
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to access DOIs for this journal, press or preprint server.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"DOIs"
+				],
+				"summary": "Create a new DOI.",
+				"parameters": [
+					{
+						"description": "Details about the DOI that should be created.",
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/DoiEditable"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Details of the DOI that was just added.",
+						"schema": {
+							"$ref": "#/definitions/Doi"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					}
+				}
+			}
+		},
+		"/dois/{doiId}": {
+			"get": {
+				"tags": [
+					"DOIs"
+				],
+				"summary": "Get a DOI by ID.",
+				"parameters": [
+					{
+						"name": "doiId",
+						"in": "path",
+						"description": "DOI ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The DOI details.",
+						"schema": {
+							"$ref": "#/definitions/Doi"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to access this DOI, or the DOI you requested is not part of this journal.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested DOI could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"DOIs"
+				],
+				"summary": "Edit a DOI.",
+				"description": "Modify the contents of a single DOI. When working with versioned content, if you'd like to modify the content of a DOI for a single version of a publication object, you need to include the `pubObjectType` and `pubObjectId` in the request body.",
+				"parameters": [
+					{
+						"name": "doiId",
+						"in": "path",
+						"description": "DOI ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"description": "The details about the DOI you want to edit. All params are optional. When a param is omitted, the existing value of that param will not be modified. Two exceptions are `pubObjectType` and `pubObjectId`. They are optional but if one is used, the other must also be used.",
+						"in": "body",
+						"schema": {
+							"allOf": [
+								{
+									"$ref": "#/definitions/DoiEditable"
+								},
+								{
+									"type": "object",
+									"properties": {
+										"pubObjectType": {
+											"type": "string",
+											"enum": ["publication", "representation", "issue"],
+											"description": "Publication object type to modify the DOI for."
+										},
+										"pubObjectId": {
+											"type": "integer",
+											"description": "ID of publication object you want ot modify the DOI for."
+										}
+									}
+								}
+							]
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The DOI that was just edited with the new values after the update has occurred.",
+						"schema": {
+							"$ref": "#/definitions/Doi"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "There was an error editing the DOI.\n\n|Error Code|Description|\n|---|---|\n|`api.dois.403.editItemOutOfContext`|You cannot edit an item's DOI that is not in this context.|\n|`api.dois.403.pubTypeNotRecognized`|The publication type was not recognized.|",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested DOI could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+
+				}
+			},
+			"delete": {
+				"tags": [
+					"DOIs"
+				],
+				"summary": "Delete a DOI.",
+				"description": "Delete a single DOI. When working with versioned content, if you'd like to delete a DOI for a single version of a publication object, you will need to include the `pubObjectType` and the corresponding `pubObjectId` in the request body.",
+				"parameters": [
+					{
+						"name": "doiId",
+						"in": "path",
+						"description": "DOI ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"description": "Body params are optional but must be used together.",
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"pubObjectType": {
+									"type": "string",
+									"enum": ["publication", "representation", "issue"],
+									"description": "Publication object type to modify the DOI for."
+								},
+								"pubObjectId": {
+									"type": "integer",
+									"description": "ID of publication object you want to modify the DOI for."
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Details of the deleted DOI.",
+						"schema": {
+							"$ref": "#/definitions/Doi"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "There was an error deleting the DOI.\n\n|Error Code|Description|\n|---|---|\n|`api.dois.403.editItemOutOfContext`|You cannot edit an item's DOI that is not in this context.|\n|`api.dois.403.pubTypeNotRecognized`|The publication type was not recognized.|",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested DOI could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/dois/depositAll": {
+			"put": {
+				"tags": [
+					"DOIs"
+				],
+				"summary": "Schedule all DOIs for deposit.",
+				"description": "Schedules all publication objects with DOIs enabled that are published and include DOIs for deposit with the configured registration agency. DOIs will be queued and handled by the Jobs system in the order in which they were added.",
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "An empty response body."
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to deposit DOIs in this context.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/dois/exports/{fileId}": {
+			"get": {
+				"tags": [
+					"DOIs"
+				],
+				"summary": "Download a DOI export.",
+				"description": "Download a DOI export file that has been compiled. See `/dois/submissions/export` and `/dois/issues/export`.",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "An empty response body."
+					},
+					"403": {
+						"x-summary": "Request unauthorized",
+						"description": "You are not authorized to access the requested file.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/dois/submissions/assignDois": {
+			"post": {
+				"tags": [
+					"DOIs / Submissions"
+				],
+				"summary": "Assign DOIs to Submissions.",
+				"description": "Assign DOIs to all publication objects of a submission, such as the publication and galleys. This will only assign DOIs to publication objects that have been enabled in the DOI settings.",
+				"parameters": [
+					{
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"ids": {
+									"type": "array",
+									"description": "Submission IDs",
+									"items": {
+										"type": "integer"
+									}
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"failedDoiActions": {
+									"type": "array",
+									"description": "A list of error messages. This will be empty if the response code is `200`.",
+									"items": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "One or more DOIs could not be assigned.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"failedDoiActions": {
+									"type": "array",
+									"description": "A list of error messages for any DOIs that could not be assigned.",
+									"items": {
+										"type": "string"
+									}
+								}
+							},
+							"example": {
+								"failedDoiActions": [
+									"Could not create a DOI for the following submission: Lorem Ipsum Dolor Sit Amet. The submission must be assigned to an issue before a DOI can be generated."
+								]
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to manage DOIs in this journal. Or no DOI prefix has been configured.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The submissions could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/dois/submissions/export": {
+			"put": {
+				"tags": [
+					"DOIs / Submissions"
+				],
+				"summary": "Export Submission DOIs.",
+				"description": "Export submission metadata in a format that can be deposited with the currently configured DOI registration agency. This returns a file id which can be downloaded through the API endpoint `/dois/exports/{fileId}`. See \"Download a DOI Export\" above.",
+				"parameters": [
+					{
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"ids": {
+									"type": "array",
+									"description": "Submission IDs",
+									"items": {
+										"type": "integer"
+									}
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "An object with the temporary file ID to download the exported data. See \"Download a DOI Export\" above.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"temporaryFileId": {
+									"type": "integer"
+								}
+							}
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The export could not be completed because of invalid request parameters or other required settings.\n\n|Error Code|Description|\n|---|---|\n|`api.dois.400.invalidPubObjectIncluded`|One or more invalid publication objects were included with the request.|\n|`api.dois.400.noRegistrationAgencyConfigured`|No DOI registration agency has been configured for this journal.|\n|`api.dois.400.xmlExportFailed`|An XML validation error occurred and the XML could not be exported.|",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to manage DOIs in this journal.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The export could not be completed because a submission or DOI could not be found with the corresponding ID.\n\n|Error Code|Description|\n|---|---|\n|`api.dois.404.noPubObjectIncluded`|No valid publication objects were included with the request.|\n|`api.dois.404.doiNotFound`|The DOI you requested was not found.|",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/dois/submissions/deposit": {
+			"put": {
+				"tags": [
+					"DOIs / Submissions"
+				],
+				"summary": "Deposit Submission DOIs.",
+				"description": "This will deposit the specified submission DOIs with the currently configured DOI registration agency.",
+				"parameters": [
+					{
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"ids": {
+									"type": "array",
+									"description": "Submission IDs",
+									"items": {
+										"type": "integer"
+									}
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "An empty response body."
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "There was an error when submitting the DOIs to the registration agency.\n\n|Error Code|Description|\n|---|---|\n|`api.dois.400.invalidPubObjectIncluded`|One or more invalid publication objects were included with the request.|\n|`api.dois.400.noRegistrationAgencyConfigured`|No DOI registration agency has been configured for this journal.|",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to manage DOIs in this journal.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The deposit could not be completed because a submission or DOI could not be found with the corresponding ID.\n\n|Error Code|Description|\n|---|---|\n|`api.dois.404.noPubObjectIncluded`|No valid publication objects were included with the request.|",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/dois/submissions/markRegistered": {
+			"put": {
+				"tags": [
+					"DOIs / Submissions"
+				],
+				"summary": "Mark Submission DOIs registered.",
+				"description": "This will mark the specified submission DOIs as registered. This can be done to indicate the items were deposited outside of OJS.",
+				"parameters": [
+					{
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"ids": {
+									"type": "array",
+									"description": "Submission IDs",
+									"items": {
+										"type": "integer"
+									}
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "An empty response body."
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "One or more DOIs could not be marked registered.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"failedDoiActions": {
+									"type": "array",
+									"description": "A list of error messages for any DOIs that could not be assigned.",
+									"items": {
+										"type": "string"
+									}
+								}
+							},
+							"example": {
+								"failedDoiActions": [
+									"Failed to mark the DOI registered for Lorem Ipsum Dolor Sit Amet. The submission must be published before the status can be updated."
+								]
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to manage DOIs in this journal.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "No valid publication objects were included with the request.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/dois/submissions/markUnregistered": {
+			"put": {
+				"tags": [
+					"DOIs / Submissions"
+				],
+				"summary": "Mark Submission DOIs unregistered.",
+				"description": "This will mark the specified submission DOIs as unregistered. This can be done to remove a DOI's previous registration status.",
+				"parameters": [
+					{
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"ids": {
+									"type": "array",
+									"description": "Submission IDs",
+									"items": {
+										"type": "integer"
+									}
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "An empty response body."
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "One or more DOIs could not be marked unregistered.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"failedDoiActions": {
+									"type": "array",
+									"description": "A list of error messages for any DOIs that could not be marked unregistered.",
+									"items": {
+										"type": "string"
+									}
+								}
+							},
+							"example": {
+								"failedDoiActions": [
+									"Could not create a DOI for the following submission: {$pubObjectTitle}. It does not exist in the current journal context."
+								]
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to manage DOIs in this journal.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "No valid publication objects were included with the request.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/dois/submissions/markStale": {
+			"put": {
+				"tags": [
+					"DOIs / Submissions"
+				],
+				"summary": "Mark Submission DOIs needs sync.",
+				"description": "This will mark the specified submission DOIs as needing to be resubmitted to the registration agency to update their metadata records.",
+				"parameters": [
+					{
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"ids": {
+									"type": "array",
+									"description": "Submission IDs",
+									"items": {
+										"type": "integer"
+									}
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "An empty response body."
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "One or more DOIs could not be marked registered.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"failedDoiActions": {
+									"type": "array",
+									"description": "A list of error messages for any DOIs that could not be marked stale.",
+									"items": {
+										"type": "string"
+									}
+								}
+							},
+							"example": {
+								"failedDoiActions": [
+									"Failed to mark the DOI needs sync for Lorem Ipsum Dolor Sit Amet. The DOI cannot be marked needs sync because they have not yet been registered or submitted."
+								]
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to manage DOIs in this journal.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "No valid publication objects were included with the request.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/dois/issues/assignDois": {
+			"post": {
+				"tags": [
+					"DOIs / Issues"
+				],
+				"summary": "Assign DOIs to Issues.",
+				"parameters": [
+					{
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"ids": {
+									"type": "array",
+									"description": "Issue IDs",
+									"items": {
+										"type": "integer"
+									}
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "List of error messages. This will be empty when the status is `200`.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"failedDoiActions": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							},
+							"example": {
+								"failedDoiActions": []
+							}
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "List of error messages for any issues for which the action failed.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"failedDoiActions": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							},
+							"example": {
+								"failedDoiActions": [
+									"Could not create a DOI for the following issue: Issue Title. It does not exist in the current journal context."
+								]
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to manage DOIs in this journal. Or a DOI prefix is required to generate DOIs.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The issue could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/dois/issues/export": {
+			"put": {
+				"tags": [
+					"DOIs / Issues"
+				],
+				"summary": "Export Issue DOIs.",
+				"description": "Export issue metadata in a format that can be deposited with the currently configured DOI registration agency. This returns a file id which can be downloaded through the API endpoint `/dois/exports/{fileId}`. See \"Download a DOI Export\" above.",
+				"parameters": [
+					{
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"ids": {
+									"type": "array",
+									"description": "Issue IDs",
+									"items": {
+										"type": "integer"
+									}
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "An object with the temporary file ID needed to download the exported data. See \"Download a DOI Export\" above.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"temporaryFileId": {
+									"type": "integer"
+								}
+							},
+							"example": {
+								"temporaryFileId": 1
+							}
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The export could not be completed because of invalid request parameters or other required settings.\n\n|Error Code|Description|\n|---|---|\n|`api.dois.400.invalidPubObjectIncluded`|One or more invalid publication objects were included with the request.|\n|`api.dois.400.noRegistrationAgencyConfigured`|No DOI registration agency has been configured for this journal.|\n|`api.dois.400.xmlExportFailed`|An XML validation error occurred and the XML could not be exported.|",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to manage DOIs in this journal.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The export could not be completed because an issue or DOI could not be found with the corresponding ID.\n\n|Error Code|Description|\n|---|---|\n|`api.dois.404.noPubObjectIncluded`|No valid publication objects were included with the request.|\n|`api.dois.404.doiNotFound`|The DOI you requested was not found.|",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/dois/issues/deposit": {
+			"put": {
+				"tags": [
+					"DOIs / Issues"
+				],
+				"summary": "Deposit Issue DOIs.",
+				"description": "This will deposit the specified issue DOIs with the currently configured DOI registration agency.",
+				"parameters": [
+					{
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"ids": {
+									"type": "array",
+									"description": "Issue IDs",
+									"items": {
+										"type": "integer"
+									}
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "An empty response body."
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "There was an error when submitting the DOIs to the registration agency.\n\n|Error Code|Description|\n|---|---|\n|`api.dois.400.invalidPubObjectIncluded`|One or more invalid publication objects were included with the request.|\n|`api.dois.400.noRegistrationAgencyConfigured`|No DOI registration agency has been configured for this journal.|\n|`api.dois.400.depositFailed`|Some items were not deposited successfully. Please check the individual items for their specific error messages.|",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to manage DOIs in this journal.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The deposit could not be completed because a submission or DOI could not be found with the corresponding ID.\n\n|Error Code|Description|\n|---|---|\n|`api.dois.404.noPubObjectIncluded`|No valid publication objects were included with the request.|",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/dois/issues/markRegistered": {
+			"put": {
+				"tags": [
+					"DOIs / Issues"
+				],
+				"summary": "Mark Issue DOIs registered.",
+				"description": "This will mark the specified issue DOIs as registered. This can be done to indicate the items were deposited outside of OJS.",
+				"parameters": [
+					{
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"ids": {
+									"type": "array",
+									"description": "Issue IDs",
+									"items": {
+										"type": "integer"
+									}
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "An empty response body."
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "List of error messages for any issues for which the action failed.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"failedDoiActions": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							},
+							"example": {
+								"failedDoiActions": [
+									"Failed to mark the DOI registered for Vol. 1, No. 2: Lorem Ipsum. The issue must be published before the status can be updated."
+								]
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to manage DOIs in this journal.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "No valid publication objects were included with the request.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/dois/issues/markUnregistered": {
+			"put": {
+				"tags": [
+					"DOIs / Issues"
+				],
+				"summary": "Mark Issue DOIs unregistered.",
+				"description": "This will mark the specified issue DOIs as unregistered. This can be done to remove a DOI's previous registration status.",
+				"parameters": [
+					{
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"ids": {
+									"type": "array",
+									"description": "Issue IDs",
+									"items": {
+										"type": "integer"
+									}
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "An empty response body."
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "List of error messages for any issues for which the action failed.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"failedDoiActions": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							},
+							"example": {
+								"failedDoiActions": [
+									"Could not create a DOI for the following issue: Vol. 1, No. 2: Lorem Ipsum. It does not exist in the current journal context."
+								]
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to manage DOIs in this journal.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "No valid publication objects were included with the request.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/dois/issues/markStale": {
+			"put": {
+				"tags": [
+					"DOIs / Issues"
+				],
+				"summary": "Mark Issue DOIs needs sync.",
+				"description": "This will mark the specified issue DOIs as needing to be resubmitted to the registration agency to update their metadata records.",
+				"parameters": [
+					{
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"ids": {
+									"type": "array",
+									"description": "Issue IDs",
+									"items": {
+										"type": "integer"
+									}
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "An empty response body."
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "List of error messages for any issues for which the action failed.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"failedDoiActions": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							},
+							"example": {
+								"failedDoiActions": [
+									"Failed to mark the DOI needs sync for Vol. 1, No. 2: Lorem Ipsum. The DOI cannot be marked needs sync because they have not yet been registered or submitted."
+								]
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to manage DOIs in this journal.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "No valid publication objects were included with the request.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}

@@ -7,7 +7,7 @@
 	"properties": {
 		"sectionId": {
 			"type": "integer",
-			"description": "The section this submission should be assigned to. This can only be passed when creating a new submission and the data is assigned to the first publication. Edit the publication to change the `sectionId`.",
+			"description": "The section this submission should be assigned to. This can only be passed when creating a new submission and the data is assigned to the first publication. After the submission is created, edit the publication to change the `sectionId`.",
 			"writeOnly": true
 		}
 	}
