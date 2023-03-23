@@ -51,7 +51,7 @@ msgstr "Non ten autorización para eliminar esta revista."
 msgid "api.contexts.404.contextNotFound"
 msgstr "A revista que solicitou non se atopou."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr ""
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

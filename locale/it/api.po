@@ -53,7 +53,7 @@ msgstr "Non hai i permessi per cancellare questa testata."
 msgid "api.contexts.404.contextNotFound"
 msgstr "La testata che hai richiesto non è stata trovata."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "Il DOI che hai richiesto non è in questa rivista."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

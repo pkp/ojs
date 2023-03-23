@@ -53,7 +53,7 @@ msgstr "Bu dergiyi silme yetkisine sahip değilsiniz."
 msgid "api.contexts.404.contextNotFound"
 msgstr "Sorguladığınız dergi bulunamadı."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "İstediğiniz DOI bu dergide değil."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

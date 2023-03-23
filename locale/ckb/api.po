@@ -48,7 +48,7 @@ msgstr "تۆ ڕێگەپێدانی سڕینەوەی ئەم گۆڤارەت نیی�
 msgid "api.contexts.404.contextNotFound"
 msgstr "ئەو گۆڤارەی کە تۆ بۆی گەڕایت نەدۆزرایەوە."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr ""
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

@@ -52,7 +52,7 @@ msgstr "No teniu permís per eliminar aquesta revista."
 msgid "api.contexts.404.contextNotFound"
 msgstr "No s'ha trobat la revista que heu sol·licitat."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "El DOI que heu sol·licitat no forma part d'aquesta revista."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

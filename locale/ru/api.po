@@ -55,7 +55,7 @@ msgstr "У вас нет прав на удаление этого журнал�
 msgid "api.contexts.404.contextNotFound"
 msgstr "Запрошенный вами журнал не найден."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "Запрошенный вами DOI не является частью этого журнала."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"
