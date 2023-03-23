@@ -1,12 +1,12 @@
 # Jean-Hugues Roy <roy.jean-hugues@uqam.ca>, 2021.
-# Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2022.
+# Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2022, 2023.
 # Jeanette Hatherill <jeanette.hatherill@uottawa.ca>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2022-11-10 16:02+0000\n"
+"PO-Revision-Date: 2023-03-24 07:05+0000\n"
 "Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-helene."
 "vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
@@ -89,12 +89,12 @@ msgstr ""
 msgid "editor.notifyUsers.allIndividualSubscribers"
 msgstr ""
 "Tous et toutes les abonnés-es individuels-elles ({$count} utilisateurs-"
-"trices )"
+"trices)"
 
 msgid "editor.notifyUsers.allInstitutionalSubscribers"
 msgstr ""
 "Tous et toutes les abonnés-es institutionnels-elles ({$count} utilisateurs-"
-"trices )"
+"trices)"
 
 msgid "editor.notifyUsers.inProgress"
 msgstr "Aviser les utilisateurs-trices..."
@@ -228,8 +228,8 @@ msgstr "Feuille de style"
 msgid "editor.issues.invalidStyleFormat"
 msgstr ""
 "Le format de la feuille de style n'est pas valide. Assurez-vous que le "
-"fichier soumis soit une CSS valide. (Noter que les feuilles de style "
-"commencant par des commentaires peuvent être rejetées.)"
+"fichier soumis soit une CSS valide. (Veuillez noter que les feuilles de "
+"style commencant par des commentaires peuvent être rejetées.)"
 
 msgid "editor.issues.removeStyleFile"
 msgstr "Supprimer la feuille de style ?"
