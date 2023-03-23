@@ -129,7 +129,7 @@ class BackendDoiHandler extends \PKP\API\v1\_dois\PKPBackendDoiHandler
             $context,
             $this->getUserGroups($context->getId()),
             $this->getGenres($context->getId())
-        ));
+        ), 200);
     }
 
     protected function getUserGroups(int $contextId): LazyCollection
