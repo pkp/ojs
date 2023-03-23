@@ -15,7 +15,7 @@ msgid "api.announcements.400.contextsNotMatched"
 msgstr "Tiu ĉi anonco ne apartenas al tiu ĉi ĵurnalo."
 
 msgid "api.emails.403.disabled"
-msgstr ""
+msgstr "La retpoŝtaj atentigoĵ ne estas ebligitaj por tiu ĉi ĵurnalo."
 
 msgid "api.submissions.400.wrongContext"
 msgstr ""
@@ -45,25 +45,25 @@ msgid "api.contexts.403.notAllowedDelete"
 msgstr ""
 
 msgid "api.contexts.404.contextNotFound"
-msgstr ""
+msgstr "La petita ĵurnalo ne estas trovita."
 
 msgid "api.dois.403.contextsNotMatched"
 msgstr ""
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"
-msgstr ""
+msgstr "Neniu DOI-registrejo estas agordita por tiu ĉi ĵurnalo."
 
 msgid "api.dois.400.depositFailed"
 msgstr ""
 
 msgid "api.emailTemplates.403.notAllowedChangeContext"
-msgstr ""
+msgstr "Vi ne havas permeson movi tiun ĉi retpoŝtan ŝablonon al alia ĵurnalo."
 
 msgid "api._payments.400.invalidPaymentMethod"
-msgstr ""
+msgstr "La pagmetodo, kiun vi elektis ne estas subtenata."
 
 msgid "api.publications.403.contextsDidNotMatch"
-msgstr ""
+msgstr "La publikaĵo, kiun vi petis ne estas parto de tiu ĉi ĵurnalo."
 
 msgid "api.publications.403.submissionsDidNotMatch"
 msgstr ""
@@ -73,3 +73,6 @@ msgstr ""
 
 msgid "api.submission.400.inactiveSection"
 msgstr ""
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "La DOI, kiun vi petis ne estas parto tiu ĉi ĵurnalo."
