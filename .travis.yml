@@ -107,4 +107,5 @@ after_script:
 
 after_failure:
   - sudo apt-get install sharutils
-  - tar cz cypress/screenshots | uuencode /dev/stdout
+  # Outputs only the oldest file found at the screenshots folder due to log limits
+  - find cypress/screenshots -type f -printf '%T+\t%p\n' | sort | head -n 1 | cut -f 2 | tar -czT - | uuencode /dev/stdout
