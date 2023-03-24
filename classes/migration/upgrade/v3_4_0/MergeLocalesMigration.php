@@ -59,13 +59,13 @@ class MergeLocalesMigration extends \PKP\migration\upgrade\v3_4_0\MergeLocalesMi
     public static function getSettingsTables(): Collection
     {
         return collect([
-            'issue_galley_settings' => 'galley_id',
-            'issue_settings' => 'issue_id',
-            'journal_settings' => 'journal_id',
-            'publication_galley_settings' => 'galley_id',
-            'section_settings' => 'section_id',
-            'static_page_settings' => 'static_page_id',
-            'subscription_type_settings' => 'type_id',
+            'issue_galley_settings' => ['galley_id', 'issue_galley_setting_id'],
+            'issue_settings' => ['issue_id', 'issue_setting_id'],
+            'journal_settings' => ['journal_id', 'journal_setting_id'],
+            'publication_galley_settings' => ['galley_id', 'publication_galley_setting_id'],
+            'section_settings' => ['section_id', 'section_setting_id'],
+            'static_page_settings' => ['static_page_id', 'static_page_setting_id'],
+            'subscription_type_settings' => ['type_id', 'subscription_type_setting_id'],
         ])->merge(parent::getSettingsTables());
     }
 }
