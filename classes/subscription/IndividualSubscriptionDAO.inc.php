@@ -237,12 +237,10 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	function deleteByJournalId($journalId) {
 		$result = $this->retrieve('SELECT subscription_id FROM subscriptions WHERE journal_id = ?', [(int) $journalId]);
 
-		$returner = true;
 		foreach ($result as $row) {
-			$returner = $this->deleteById($row->subscription_id);
-			if (!$returner) break;
+			$this->deleteById($row->subscription_id);
 		}
-		return $returner;
+		return true;
 	}
 
 	/**
@@ -253,12 +251,10 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	function deleteByUserId($userId) {
 		$result = $this->retrieve('SELECT subscription_id FROM subscriptions WHERE user_id = ?', [(int) $userId]);
 
-		$returner = true;
 		foreach ($result as $row) {
-			$returner = $this->deleteById($row->subscription_id);
-			if (!$returner) break;
+			$this->deleteById($row->subscription_id);
 		}
-		return $returner;
+		return true;
 	}
 
 	/**
@@ -270,12 +266,10 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	function deleteByUserIdForJournal($userId, $journalId) {
 		$result = $this->retrieve('SELECT subscription_id FROM subscriptions WHERE user_id = ? AND journal_id = ?', [(int) $userId, (int) $journalId]);
 
-		$returner = true;
 		foreach ($result as $row) {
-			$returner = $this->deleteById($row->subscription_id);
-			if (!$returner) break;
+			$this->deleteById($row->subscription_id);
 		}
-		return $returner;
+		return true;
 	}
 
 	/**
@@ -286,13 +280,11 @@ class IndividualSubscriptionDAO extends SubscriptionDAO {
 	function deleteByTypeId($subscriptionTypeId) {
 		$result = $this->retrieve('SELECT subscription_id FROM subscriptions WHERE type_id = ?', [(int) $subscriptionTypeId]);
 
-		$returner = true;
 		foreach ($result as $row) {
-			$returner = $this->deleteById($row->subscription_id);
-			if (!$returner) break;
+			$this->deleteById($row->subscription_id);
 		}
 
-		return $returner;
+		return true;
 	}
 
 	/**
