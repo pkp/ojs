@@ -133,6 +133,8 @@
 
 	<upgrade minversion="3.1.0.0" maxversion="3.3.9.9">
 		<migration class="APP\migration\upgrade\v3_4_0\PreflightCheckMigration" fallback="3.3.9.9" />
+		<migration class="PKP\migration\upgrade\v3_4_0\I8060_UpdateUserLocalesDefaultToEmptyArrayFromNull" />
+		<migration class="PKP\migration\upgrade\v3_4_0\I7245_UpdateUserLocaleStringToParsableJsonString" />
 		<migration class="APP\migration\upgrade\v3_4_0\MergeLocalesMigration"/>
 		<migration class="APP\migration\upgrade\v3_4_0\I7129_IssueEntityDAORefactor" />
 		<migration class="APP\migration\upgrade\OJSv3_3_1_i6872_UrlPathMigration" />
@@ -152,8 +154,6 @@
 		<migration class="PKP\migration\upgrade\v3_4_0\I7126_Galleys"/>
 		<migration class="APP\migration\upgrade\v3_4_0\I7190_RemoveOrphanFilters" />
 		<migration class="PKP\migration\upgrade\v3_4_0\I7190_UpdateFilters" />
-		<migration class="PKP\migration\upgrade\v3_4_0\I8060_UpdateUserLocalesDefaultToEmptyArrayFromNull" />
-		<migration class="PKP\migration\upgrade\v3_4_0\I7245_UpdateUserLocaleStringToParsableJsonString" />
 		<migration class="PKP\migration\upgrade\v3_4_0\I6895_CreateNewInstitutionsTables" />
 		<migration class="PKP\migration\upgrade\v3_4_0\I8073_RemoveNotesWithoutQueriesAndRelatedObjects" />
 		<migration class="APP\migration\upgrade\v3_4_0\I6895_Institutions" />
