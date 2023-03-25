@@ -563,7 +563,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     {
         $dateEnd = explode('-', $dateEnd);
 
-        $params = array_merge([$dateEnd[0], $dateEnd[1], dateEnd[2], (int) $journalId], $this->getInstitutionNameFetchParameters());
+        $params = array_merge([$dateEnd[0], $dateEnd[1], $dateEnd[2], (int) $journalId], $this->getInstitutionNameFetchParameters());
 
         $result = $this->retrieveRange(
             'SELECT	s.*, iss.*
