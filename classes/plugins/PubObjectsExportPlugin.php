@@ -34,6 +34,7 @@ use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\notification\NotificationManager;
 use APP\template\TemplateManager;
+use Exception;
 use PKP\context\Context;
 use PKP\core\JSONMessage;
 use PKP\core\PKPRequest;
@@ -913,6 +914,36 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
         }
 
         return false;
+    }
+
+    /**
+     * Get pub ID type
+     *
+     * @return string
+     */
+    public function getPubIdType()
+    {
+        throw new Exception('Not implemented');
+    }
+
+    /**
+     * Get pub ID display type
+     *
+     * @return string
+     */
+    public function getPubIdDisplayType()
+    {
+        throw new Exception('Not implemented');
+    }
+
+    /**
+     * Get pub ID display type
+     *
+     * @return string
+     */
+    public function getSettingsFormClassName()
+    {
+        throw new Exception('Not implemented');
     }
 }
 
