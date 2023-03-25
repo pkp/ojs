@@ -149,7 +149,7 @@ class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightChe
             // Clean orphaned subscription_type_settings entries
             $orphanedIds = DB::table('subscription_type_settings AS sts')->leftJoin('subscription_types AS st', 'sts.type_id', '=', 'st.type_id')->whereNull('st.type_id')->distinct()->pluck('sts.type_id');
             foreach ($orphanedIds as $typeId) {
-                DB::table('subscription_type_settings')->where('type_id', '=', $Id)->delete();
+                DB::table('subscription_type_settings')->where('type_id', '=', $typeId)->delete();
             }
 
             // Clean orphaned subscriptions entries by journal_id
