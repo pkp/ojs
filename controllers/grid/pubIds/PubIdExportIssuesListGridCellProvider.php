@@ -28,6 +28,8 @@ class PubIdExportIssuesListGridCellProvider extends DataObjectGridCellProvider
     /** @var ImportExportPlugin */
     public $_plugin;
 
+    public $_authorizedRoles;
+
     /**
      * Constructor
      *

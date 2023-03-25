@@ -20,7 +20,7 @@ require(dirname(__FILE__) . '/bootstrap.php');
 
 class SubmissionDeletionTool extends CommandLineTool
 {
-    public $articleIds;
+    public array $parameters;
 
     /**
      * Constructor.

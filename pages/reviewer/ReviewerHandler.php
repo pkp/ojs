@@ -31,9 +31,16 @@ use PKP\session\SessionManager;
 use PKP\submission\reviewAssignment\ReviewAssignment;
 use PKP\submission\reviewAssignment\ReviewAssignmentDAO;
 use PKP\submission\reviewer\form\ReviewerReviewForm;
+use PKP\user\User;
 
 class ReviewerHandler extends PKPReviewerHandler
 {
+    /** @var Submission */
+    public $submission;
+
+    /** @var User */
+    public $user;
+
     /**
      * Constructor
      */

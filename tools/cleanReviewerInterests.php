@@ -23,6 +23,8 @@ use PKP\user\InterestDAO;
 
 class ReviewerInterestsDeletionTool extends CommandLineTool
 {
+    public array $parameters;
+
     /**
      * Constructor.
      *
@@ -69,7 +71,7 @@ class ReviewerInterestsDeletionTool extends CommandLineTool
                     return $entry->getData(\PKP\user\InterestDAO::CONTROLLED_VOCAB_INTEREST);
                 }, $orphans);
                 echo "Below are the user interests that are not referenced by any user account.\n";
-                echo "\t" . join($interests, "\n\t") . "\n";
+                echo "\t" . join("\n\t", $interests) . "\n";
                 break;
 
             case '--remove':
