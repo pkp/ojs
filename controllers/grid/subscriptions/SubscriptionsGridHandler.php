@@ -15,6 +15,7 @@
 
 namespace APP\controllers\grid\subscriptions;
 
+use Exception;
 use PKP\controllers\grid\feature\PagingFeature;
 use PKP\controllers\grid\GridHandler;
 use PKP\db\DAO;
@@ -131,6 +132,19 @@ abstract class SubscriptionsGridHandler extends GridHandler
     //
     // Public grid actions.
     //
+    /**
+     * Edit an existing subscription.
+     *
+     * @param array $args
+     * @param PKPRequest $request
+     *
+     * @return JSONMessage JSON object
+     */
+    public function editSubscription($args, $request)
+    {
+        throw new Exception('Not implemented');
+    }
+
     /**
      * Add a new subscription.
      *
