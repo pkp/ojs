@@ -138,6 +138,3 @@ class PaymentsGridHandler extends GridHandler
         // FIXME
     }
 }
-
-?>
-

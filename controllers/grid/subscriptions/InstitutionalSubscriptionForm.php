@@ -44,7 +44,6 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
         parent::__construct('payments/institutionalSubscriptionForm.tpl', $subscriptionId);
 
         $subscriptionId = isset($subscriptionId) ? (int) $subscriptionId : null;
-        $userId = isset($userId) ? (int) $userId : null;
 
         $journal = $request->getJournal();
         $journalId = $journal->getId();

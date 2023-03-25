@@ -159,6 +159,3 @@ abstract class SubscriptionsGridHandler extends GridHandler
         return DAO::getDataChangedEvent($subscriptionId);
     }
 }
-
-?>
-
