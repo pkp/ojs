@@ -43,13 +43,13 @@ class PubObjectCache
         }
         if ($object instanceof Submission) {
             $this->_insertInternally($object, 'articles', $object->getId());
-            $this->_insertInternally($object, 'articlesByIssue', $object->getcurrentPublication()->getData('issueId'), $object->getId());
+            $this->_insertInternally($object, 'articlesByIssue', $object->getCurrentPublication()->getData('issueId'), $object->getId());
         }
         if ($object instanceof Galley) {
             assert($parent instanceof Submission);
             $this->_insertInternally($object, 'galleys', $object->getId());
             $this->_insertInternally($object, 'galleysByArticle', $object->getData('submissionId'), $object->getId());
-            $this->_insertInternally($object, 'galleysByIssue', $parent->getIssueId(), $object->getId());
+            $this->_insertInternally($object, 'galleysByIssue', $parent->getCurrentPublication()->getData('issueId'), $object->getId());
         }
         if ($object instanceof Genre) {
             $this->_insertInternally($object, 'genres', $object->getId());
