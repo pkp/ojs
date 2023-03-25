@@ -17,6 +17,7 @@
 namespace APP\API\v1\_dois;
 
 use APP\facades\Repo;
+use Illuminate\Support\LazyCollection;
 use PKP\core\APIResponse;
 use PKP\db\DAORegistry;
 use PKP\security\Role;
@@ -123,6 +124,25 @@ class BackendDoiHandler extends \PKP\API\v1\_dois\PKPBackendDoiHandler
         Repo::issue()->edit($issue, ['doiId' => $doi->getId()]);
         $issue = Repo::issue()->get($issue->getId());
 
-        return $response->withJson(Repo::issue()->getSchemaMap()->map($issue));
+        return $response->withJson(Repo::issue()->getSchemaMap()->map(
+            $issue,
+            $context,
+            $this->getUserGroups($context->getId()),
+            $this->getGenres($context->getId())
+        ));
+    }
+
+    protected function getUserGroups(int $contextId): LazyCollection
+    {
+        return Repo::userGroup()->getCollector()
+            ->filterByContextIds([$contextId])
+            ->getMany();
+    }
+
+    protected function getGenres(int $contextId): array
+    {
+        /** @var GenreDAO $genreDao */
+        $genreDao = DAORegistry::getDAO('GenreDAO');
+        return $genreDao->getByContextId($contextId)->toArray();
     }
 }
