@@ -27,6 +27,7 @@ use PKP\db\DAORegistry;
 use PKP\file\FileManager;
 use PKP\identity\Identity;
 use PKP\install\Installer;
+use PKP\plugins\PluginSettingsDAO;
 use PKP\security\Role;
 use PKP\submissionFile\SubmissionFile;
 
@@ -212,7 +213,74 @@ class Upgrade extends Installer
 
         $oldLocaleStringLength = 's:5';
 
-        $journalSettingsDao = new \PKP\db\DAO();
+        $journalSettingsDao = new class () extends \PKP\db\DAO {
+            /**
+             * Method for update journal setting
+             *
+             * @param int $journalId
+             * @param string $name
+             * @param string $type data type of the setting. If omitted, type will be guessed
+             * @param bool $isLocalized
+             */
+            public function updateSetting($journalId, $name, $value, $type = null, $isLocalized = false)
+            {
+                if (!$isLocalized) {
+                    $value = $this->convertToDB($value, $type);
+                    DB::table('journal_settings')->updateOrInsert(
+                        ['journal_id' => (int) $journalId, 'setting_name' => $name, 'locale' => ''],
+                        ['setting_value' => $value, 'setting_type' => $type]
+                    );
+                } else {
+                    if (is_array($value)) {
+                        foreach ($value as $locale => $localeValue) {
+                            $this->update('DELETE FROM journal_settings WHERE journal_id = ? AND setting_name = ? AND locale = ?', [(int) $journalId, $name, $locale]);
+                            if (empty($localeValue)) {
+                                continue;
+                            }
+                            $type = null;
+                            $this->update(
+                                'INSERT INTO journal_settings (journal_id, setting_name, setting_value, setting_type, locale) VALUES (?, ?, ?, ?, ?)',
+                                [$journalId, $name, $this->convertToDB($localeValue, $type), $type, $locale]
+                            );
+                        }
+                    }
+                }
+            }
+
+            /**
+             * Retrieve a context setting value.
+             *
+             * @param string $name
+             * @param string $locale optional
+             */
+            public function getSetting($journalId, $name, $locale = null)
+            {
+                $params = [(int) $journalId, $name];
+                if ($locale) {
+                    $params[] = $locale;
+                }
+                $result = $this->retrieve(
+                    'SELECT	setting_name, setting_value, setting_type, locale
+                    FROM journal_settings
+                    WHERE journal_id = ? AND
+                        setting_name = ?' .
+                        ($locale ? ' AND locale = ?' : ''),
+                    $params
+                );
+
+                $returner = [];
+                foreach ($result as $row) {
+                    $returner[$row->locale] = $this->convertFromDB($row->setting_value, $row->setting_type);
+                }
+                if (count($returner) == 1) {
+                    return array_shift($returner);
+                }
+                if (count($returner) == 0) {
+                    return false;
+                }
+                return $returner;
+            }
+        };
 
         // Check if the sr_SR is used, and if not do not run further
         $srExistResult = $journalSettingsDao->retrieve('SELECT COUNT(*) AS row_count FROM site WHERE installed_locales LIKE ?', ['%' . $oldLocale . '%']);
