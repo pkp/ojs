@@ -50,7 +50,7 @@ class JournalDAO extends ContextDAO
     /**
      * Create a new DataObject of the appropriate class
      *
-     * @return \PKP\core\DataObject
+     * @return Journal
      */
     public function newDataObject()
     {

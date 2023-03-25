@@ -438,8 +438,7 @@ class URNPubIdPlugin extends PubIdPlugin
             // Load the checkNumber.js file that is required for this field
             $this->addJavaScript(Application::get()->getRequest(), TemplateManager::getManager(Application::get()->getRequest()));
 
-            $this->import('classes.form.FieldUrn');
-            $form->addField(new \Plugins\Generic\URN\FieldUrn('pub-id::other::urn', [
+            $form->addField(new FieldUrn('pub-id::other::urn', [
                 'label' => __('plugins.pubIds.urn.displayName'),
                 'description' => __('plugins.pubIds.urn.editor.urn.description', ['prefix' => $prefix]),
                 'value' => $form->publication->getData('pub-id::other::urn'),

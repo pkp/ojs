@@ -18,6 +18,7 @@ use APP\core\Services;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\observers\events\UsageEvent;
+use APP\publication\Publication;
 use APP\template\TemplateManager;
 use PKP\plugins\Hook;
 use PKP\submissionFile\SubmissionFile;
@@ -36,7 +37,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
         }
         if ($this->getEnabled($mainContextId)) {
             Hook::add('ArticleHandler::view::galley', [$this, 'articleViewCallback'], Hook::SEQUENCE_LATE);
-            Hook::add('ArticleHandler::download', [$this, 'articleDownloadCallback'], HOOK_SEQUENCE_LATE);
+            Hook::add('ArticleHandler::download', [$this, 'articleDownloadCallback'], Hook::SEQUENCE_LATE);
         }
         return true;
     }
@@ -87,6 +88,8 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
         }
 
         $submissionFile = $galley->getFile();
+        /** @var ?Publication */
+        $galleyPublication = null;
         if ($submissionFile->getData('mimetype') === 'text/html') {
             foreach ($article->getData('publications') as $publication) {
                 if ($publication->getId() === $galley->getData('publicationId')) {
