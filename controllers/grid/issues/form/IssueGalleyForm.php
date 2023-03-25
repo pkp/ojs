@@ -176,7 +176,6 @@ class IssueGalleyForm extends Form
         $issueFileManager = new IssueFileManager($this->_issue->getId());
 
         $request = Application::get()->getRequest();
-        $journal = $request->getJournal();
         $user = $request->getUser();
 
         $issueGalley = $this->_issueGalley;
@@ -215,25 +214,7 @@ class IssueGalleyForm extends Form
             $issueGalley->setIssueId($this->_issue->getId());
             $issueGalley->setFileId($issueGalleyFile->getId());
             $issueGalley->setData('urlPath', $this->getData('urlPath'));
-
-            if ($this->getData('label') == null) {
-                // Generate initial label based on file type
-                if (isset($fileType)) {
-                    if (strstr($fileType, 'pdf')) {
-                        $issueGalley->setLabel('PDF');
-                    } elseif (strstr($fileType, 'postscript')) {
-                        $issueGalley->setLabel('PostScript');
-                    } elseif (strstr($fileType, 'xml')) {
-                        $issueGalley->setLabel('XML');
-                    }
-                }
-
-                if ($issueGalley->getLabel() == null) {
-                    $issueGalley->setLabel(__('common.untitled'));
-                }
-            } else {
-                $issueGalley->setLabel($this->getData('label'));
-            }
+            $issueGalley->setLabel($this->getData('label'));
             $issueGalley->setLocale($this->getData('galleyLocale'));
 
             $issueGalley->setStoredPubId('publisher-id', $this->getData('publicGalleyId'));
