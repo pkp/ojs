@@ -1,11 +1,12 @@
 # Huang Feilong <hfl@nominsang.org>, 2021.
+# 米白冰 <mibaibing@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2021-11-04 14:06+0000\n"
-"Last-Translator: Huang Feilong <hfl@nominsang.org>\n"
+"PO-Revision-Date: 2023-03-27 19:30+0000\n"
+"Last-Translator: 米白冰 <mibaibing@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/admin/zh_CN/>\n"
 "Language: zh_CN\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "admin.hostedContexts"
 msgstr "托管期刊"
@@ -150,14 +151,16 @@ msgid "admin.scheduledTask.reviewReminder"
 msgstr "评审提醒"
 
 msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
-msgstr ""
+msgstr "问题编号不是一个整数。"
 
+#, fuzzy
 msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
-msgstr ""
+msgstr "问题厨房的编号不是一个整数"
 
+#, fuzzy
 msgid ""
 "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
-msgstr ""
+msgstr "问题编号与he assoc 编号不匹配。"
 
 msgid "admin.settings.enableBulkEmails.description"
 msgstr ""
