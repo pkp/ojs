@@ -64,7 +64,7 @@
 		{
 			"name": "What's New in 3.4",
 			"x-traitTag": true,
-			"description": "The [3.4 Release Notebook](https://docs.pkp.sfu.ca/dev/release-notebooks/en/3.4-release-notebook) contains full details about breaking changes introduced in 3.4. The following changes effect the REST API.\n\n- Use of the `apiToken` as a query parameter is deprecated. Use it in the `Authorization` header instead. See the \"Authentication\" section below.\n- Changes to request body to create a new submission.\n- Changes to submission titles. They may now include HTML in the `fullTitle`, `title`, and `subtitle` properties.\n- Changes to the submission property, `submissionProgress`. It is now a string, not an integer.\n- Changes to the stats endpoints.\n- Changes to the endpoints to manage email templates.\n\nThe following new endpoints have been added.\n\n- New endpoint to save a submission for later.\n- New endpoint to submit a submissions.\n- New endpoints to manage a publication's contributors.\n- New endpoints to create and register DOIs.\n- New endpoints to record editorial decisions.\n- New endpoints to manage institutions."
+			"description": "<blockquote style=\"margin:2rem 0;padding:1rem;border:2px solid #0073A8;color: #002c40\">Read the <a href=\"https://docs.pkp.sfu.ca/dev/release-notebooks/en/3.4-release-notebook\">3.4 Release Notebook</a> to learn about all the changes introduced in 3.4.</blockquote>\n\nThe following changes were made to the REST API.\n\n- Use of the `apiToken` as a query parameter is deprecated. Use it in the `Authorization` header instead. See the \"Authentication\" section below.\n- Changes to request body to create a new submission.\n- Changes to submission titles. They may now include HTML in the `fullTitle`, `title`, and `subtitle` properties.\n- Changes to the submission property, `submissionProgress`. It is now a string, not an integer.\n- Changes to the stats endpoints.\n- Changes to the endpoints to manage email templates.\n\nThe following new endpoints have been added.\n\n- New endpoint to save a submission for later.\n- New endpoint to submit a submissions.\n- New endpoints to manage a publication's contributors.\n- New endpoints to create and register DOIs.\n- New endpoints to record editorial decisions.\n- New endpoints to manage institutions."
 		},
 		{
 			"name": "Access",
@@ -160,15 +160,15 @@
 		},
 		{
 			"name": "Stats / Contexts",
-			"description": "Only admins and journal managers can access these endpoints."
+			"description": "Only admins and journal managers can access these endpoints. Some of these endpoints can return results in CSV format. Where possible, send an `Accept: text/csv` header with the request to receive stats in CSV format."
 		},
 		{
 			"name": "Stats / Issues",
-			"description": "Only admins and journal managers can access these endpoints."
+			"description": "Only admins and journal managers can access these endpoints. Some of these endpoints can return results in CSV format. Where possible, send an `Accept: text/csv` header with the request to receive stats in CSV format."
 		},
 		{
 			"name": "Stats / Publications",
-			"description": "Only admins and journal managers can access these endpoints."
+			"description": "Only admins and journal managers can access these endpoints. Some of these endpoints can return results in CSV format. Where possible, send an `Accept: text/csv` header with the request to receive stats in CSV format."
 		},
 		{
 			"name": "Stats / Users",
@@ -176,9 +176,9 @@
 		},
 		{
 			"name": "Stats / Sushi",
-			"description": "Support automatic harvesting of COUNTER R5 reports via the COUNTER_SUSHI API at the path /stats/sushi.",
+			"description": "COUNTER R5 reports can be harvested via the COUNTER_SUSHI API at the path /stats/sushi. The specification is documented at the link below.",
 			"externalDocs": {
-				"description": "COUNTER_SUSHI API specification:",
+				"description": "COUNTER/SUSHI 5.0 API",
 				"url": "https://app.swaggerhub.com/apis/COUNTER/counter-sushi_5_0_api/"
 			}
 		},
@@ -527,13 +527,16 @@
 			"type": "object",
 			"properties": {
 				"date": {
-					"type": "string"
+					"type": "string",
+					"description": "A machine-readable date in the format `YYYY-MM-DD` or `YYYY-MM`."
 				},
 				"label": {
-					"type": "string"
+					"type": "string",
+					"description": "A human-readable format of the date, based on the context's configured date foramts."
 				},
 				"value": {
-					"type": "integer"
+					"type": "integer",
+					"description": "The total for this day or month."
 				}
 			}
 		},
@@ -5108,19 +5111,19 @@
 				"tags": [
 					"Stats / Contexts"
 				],
-				"summary": "Get a list of contexts sorted by the number of visitors to their homepage.",
+				"summary": "Get a list of contexts sorted by the number of visits to their homepage.",
 				"description": "Returns a list of journals, presses or preprint servers ordered by the number of visitors to their homepage. Only admins can access this endpoint.",
 				"parameters": [
 					{
 						"name": "dateStart",
-						"description": "Return stats for contexts after this date.",
+						"description": "Return stats for the number of visits after this date.",
 						"in": "query",
 						"required": false,
 						"type": "string"
 					},
 					{
 						"name": "dateEnd",
-						"description": "Return stats for contexts before this date.",
+						"description": "Return stats for the number of visits before this date.",
 						"in": "query",
 						"required": false,
 						"type": "string"
@@ -5173,11 +5176,29 @@
 				"responses": {
 					"200": {
 						"x-summary": "Success",
-						"description": "A list of contexts with their total stats during the requested period.",
-						"schema": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/ContextStats"
+						"description": "A list of contexts with the number of visits during the requested period.",
+						"headers": {
+							"X-Total-Count": {
+								"description": "Only included in `text/csv` responses. The total number of rows available for this request. Use this with the `count` and `offset` query params to fetch all records.",
+								"schema": {
+									"type": "integer"
+								}
+							}
+						},
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/ContextStats"
+									}
+								}
+							},
+							"text/csv": {
+								"schema": {
+									"type": "string"
+								},
+								"example": "ID,Title,Total\n1,Lorem Ipsum,100"
 							}
 						}
 					},
@@ -5261,10 +5282,20 @@
 					"200": {
 						"x-summary": "Success",
 						"description": "A list of days or months with the total stats for that day or month.",
-						"schema": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/TimelineInterval"
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/TimelineInterval"
+									}
+								}
+							},
+							"text/csv": {
+								"schema": {
+									"type": "string"
+								},
+								"example": "Date,Label,Total\n2023-03-04,\"March 4, 2023\",532\n2023-03-05,\"March 5, 2023\",351"
 							}
 						}
 					},
@@ -5326,8 +5357,18 @@
 					"200": {
 						"x-summary": "Success",
 						"description": "The total stats for the context during the period requested.",
-						"schema": {
-							"$ref": "#/definitions/ContextStats"
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/definitions/ContextStats"
+								}
+							},
+							"text/csv": {
+								"schema": {
+									"type": "string"
+								},
+								"example": "ID,Title,Total\n1,Lorem Ipsum,100"
+							}
 						}
 					},
 					"400": {
@@ -5400,10 +5441,20 @@
 					"200": {
 						"x-summary": "Success",
 						"description": "A list of days or months with the total stats for that day or month.",
-						"schema": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/TimelineInterval"
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/TimelineInterval"
+									}
+								}
+							},
+							"text/csv": {
+								"schema": {
+									"type": "string"
+								},
+								"example": "Date,Label,Total\n2023-03-04,\"March 4, 2023\",532\n2023-03-05,\"March 5, 2023\",351"
 							}
 						}
 					},
@@ -5502,10 +5553,20 @@
 					"200": {
 						"x-summary": "Success",
 						"description": "A list of issues with their total stats during the requested period.",
-						"schema": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/IssueStats"
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/IssueStats"
+									}
+								}
+							},
+							"text/csv": {
+								"schema": {
+									"type": "string"
+								},
+								"example": "ID,\"Issue Identification\",Total,Views,Downloads\n123,\"Vol. 1, No. 2: Special issue name\",823,612,211"
 							}
 						}
 					},
@@ -5599,10 +5660,20 @@
 					"200": {
 						"x-summary": "Success",
 						"description": "A list of days or months with the total stats for that day or month.",
-						"schema": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/TimelineInterval"
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/TimelineInterval"
+									}
+								}
+							},
+							"text/csv": {
+								"schema": {
+									"type": "string"
+								},
+								"example": "Date,Label,\n2023-01-02,\"January 2, 2023\",7341"
 							}
 						}
 					},
@@ -5664,8 +5735,18 @@
 					"200": {
 						"x-summary": "Success",
 						"description": "The total stats for the issue during the period requested.",
-						"schema": {
-							"$ref": "#/definitions/IssueStats"
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/definitions/IssueStats"
+								}
+							},
+							"text/csv": {
+								"schema": {
+									"type": "string"
+								},
+								"example": "ID,\"Issue Identification\",Total,Views,Downloads\n123,\"Vol. 1, No. 2: Special issue name\",823,612,211"
+							}
 						}
 					},
 					"400": {
@@ -5748,10 +5829,20 @@
 					"200": {
 						"x-summary": "Success",
 						"description": "A list of days or months with the total stats for that day or month.",
-						"schema": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/TimelineInterval"
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/TimelineInterval"
+									}
+								}
+							},
+							"text/csv": {
+								"schema": {
+									"type": "string"
+								},
+								"example": "Date,Label,\n2023-01-02,\"January 2, 2023\",7341"
 							}
 						}
 					},
@@ -5870,10 +5961,28 @@
 					"200": {
 						"x-summary": "Success",
 						"description": "A list of publications with the number of visits during the requested period.",
-						"schema": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/PublicationStats"
+						"headers": {
+							"X-Total-Count": {
+								"description": "Only included in `text/csv` responses. The total number of rows available for this request. Use this with the `count` and `offset` query params to fetch all records.",
+								"schema": {
+									"type": "integer"
+								}
+							}
+						},
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/PublicationStats"
+									}
+								}
+							},
+							"text/csv": {
+								"schema": {
+									"type": "string"
+								},
+								"example": "ID,Title,Total,Abstract Views,File Views,PDF,HTML,Other\n1,Lorem Ipsum,100,70,30,20,10,0"
 							}
 						}
 					},
@@ -5987,10 +6096,20 @@
 					"200": {
 						"x-summary": "Success",
 						"description": "A list of days or months with the total stats for that day or month.",
-						"schema": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/TimelineInterval"
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/TimelineInterval"
+									}
+								}
+							},
+							"text/csv": {
+								"schema": {
+									"type": "string"
+								},
+								"example": "Date,Label,\n2023-01-02,\"January 2, 2023\",7341"
 							}
 						}
 					},
@@ -6258,10 +6377,20 @@
 					"200": {
 						"x-summary": "Success",
 						"description": "A list of files with their total stats during the requested period.",
-						"schema": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/PublicationFileStats"
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/PublicationFileStats"
+									}
+								}
+							},
+							"text/csv": {
+								"schema": {
+									"type": "string"
+								},
+								"example": "\"Publication Id\",Title,\"File Id\",Filename,Type,\"File Views\"\n123,\"Lorem Ipsum\",456,lorem-ipsum-file.pdf,\"Primary File\",789"
 							}
 						}
 					},
@@ -6295,7 +6424,7 @@
 					"Stats / Publications"
 				],
 				"summary": "Get a list of countries ordered by the number of visits to publications.",
-				"description": "Returns a list of countries ordered by the number of visits to publications from each country. IP Geolocation is provided by [DB-IP](https://db-ip.com).",
+				"description": "Returns a list of countries ordered by the number of visits to publications from each country. This endpoint is only available when the context has been configured to collect geographical statistics.",
 				"parameters": [
 					{
 						"name": "dateStart",
@@ -6379,11 +6508,21 @@
 				"responses": {
 					"200": {
 						"x-summary": "Success",
-						"description": "A list of countries.",
-						"schema": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/PublicationCountryStats"
+						"description": "A list of countries with their total stats during the requested period.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/PublicationCountryStats"
+									}
+								}
+							},
+							"text/csv": {
+								"schema": {
+									"type": "string"
+								},
+								"example": "Country,Total,Unique\nCAN,456,321"
 							}
 						}
 					},
@@ -6417,7 +6556,7 @@
 					"Stats / Publications"
 				],
 				"summary": "Get a list of regions ordered by the number of visits to publications.",
-				"description": "Returns a list of regions ordered by the number of visits to publications from each country. IP Geolocation is provided by [DB-IP](https://db-ip.com).",
+				"description": "Returns a list of regions ordered by the number of visits to publications from each region. This endpoint is only available when the context has been configured to collect regional geographical statistics.",
 				"parameters": [
 					{
 						"name": "dateStart",
@@ -6501,11 +6640,21 @@
 				"responses": {
 					"200": {
 						"x-summary": "Success",
-						"description": "A list of regions.",
-						"schema": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/PublicationRegionStats"
+						"description": "A list of regions with their total stats during the requested period.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/PublicationRegionStats"
+									}
+								}
+							},
+							"text/csv": {
+								"schema": {
+									"type": "string"
+								},
+								"example": "Region,Country,Total,Unique\nCA-BC,CA,456,321"
 							}
 						}
 					},
@@ -6539,7 +6688,7 @@
 					"Stats / Publications"
 				],
 				"summary": "Get a list of cities ordered by the number of visits to publications.",
-				"description": "Returns a list of cities ordered by the number of visits to publications from each country. IP Geolocation is provided by [DB-IP](https://db-ip.com).",
+				"description": "Returns a list of cities ordered by the number of visits to publications from each city. This endpoint is only available when the context has been configured to collect city geographical statistics.",
 				"parameters": [
 					{
 						"name": "dateStart",
@@ -6623,11 +6772,21 @@
 				"responses": {
 					"200": {
 						"x-summary": "Success",
-						"description": "A list of cities.",
-						"schema": {
-							"type": "array",
-							"items": {
-								"$ref": "#/definitions/PublicationCityStats"
+						"description": "A list of cities with their total stats during the requested period.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/PublicationCityStats"
+									}
+								}
+							},
+							"text/csv": {
+								"schema": {
+									"type": "string"
+								},
+								"example": "City,Region,Country,Total,Unique\nCA-BC-Vancouver,CA-BC,CA,456,321"
 							}
 						}
 					},
@@ -6661,40 +6820,59 @@
 					"Stats / Users"
 				],
 				"summary": "Get user statistics.",
-				"description": "Returns a count of the number of user registrations broken down by roles.\n\nPlease note when using the `registeredBefore` and `registeredAfter` parameters that role counts reflect current user roles.\n\nA user who registered as an author in January, 2019 but was later appointed to subeditor will be counted as a subeditor when the registration date range includes January, 2019.",
+				"description": "Returns a count of the number of registered users by role. The `registeredBefore` and `registeredAfter` params reflect current user roles. A user who registered as an author in January, 2019 but was later appointed to subeditor will be counted as a subeditor when the registration date range includes January, 2019, even though they did not become a subeditor until a later date.",
 				"parameters": [
 					{
 						"name": "registeredAfter",
-						"description": "Return counts reflecting users who registered after this date.",
+						"description": "Include users who registered after this date.",
 						"in": "query",
 						"required": false,
 						"type": "string"
 					},
 					{
 						"name": "registeredBefore",
-						"description": "Return counts reflecting users who registered before this date.",
+						"description": "Include users who registered before this date.",
 						"in": "query",
 						"required": false,
 						"type": "string"
 					},
 					{
 						"name": "status",
-						"description": "Count `active` or `disabled` users. Default: `active`.",
+						"description": "Whether to include `active`, `disabled` or all users. Default: `active`.",
 						"in": "query",
 						"required": false,
 						"type": "string",
 						"default": "active",
 						"enum": [
 							"active",
-							"disabled"
+							"disabled",
+							"all"
 						]
 					}
 				],
 				"responses": {
 					"200": {
-						"description": "An object containing the requested stats. The `id` relects the `ROLE_ID_*` constant in the application.",
+						"x-summary": "Success",
+						"description": "The user registration stats broken down by role.",
 						"schema": {
 							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"id": {
+										"type": ["integer", "string"],
+										"description": "One of the `ROLE_ID_*` constants. Or `total` for users in all roles."
+									},
+									"name": {
+										"type": "string",
+										"description": "A user-facing name for the role."
+									},
+									"value":{
+										"type":  "integer",
+										"description": "The number of registered users in this role."
+									}
+								}
+							},
 							"example": [
 								{
 									"id": "total",
