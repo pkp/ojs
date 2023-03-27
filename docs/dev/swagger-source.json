@@ -322,6 +322,102 @@
 				"fr_CA": "Nom de fichier"
 			}
 		},
+		"Mailable": {
+			"type": "object",
+			"example": {
+				"_href": "https://example.org/publicknowledge/api/v1/mailables/DISCUSSION_NOTIFICATION_COPYEDITING",
+				"dataDescriptions": {
+					"journalName": "The journal's name",
+					"journalUrl": "The URL to the journal's homepage",
+					"...": "All prepared data"
+				},
+				"description": "This email is sent when a discussion is created or replied to in the copyediting stage.",
+				"emailTemplateKey": "DISCUSSION_NOTIFICATION_COPYEDITING",
+				"fromRoleIds": [
+					17,
+					4097,
+					65536
+				],
+				"groupIds": [
+					"copyediting"
+				],
+				"name": "Discussion (Copyediting)",
+				"supportsTemplates": true,
+				"toRoleIds": [
+					17,
+					4097,
+					65536
+				],
+				"emailTemplates": [
+					{
+						"_href": "https://example.org/publicknowledge/api/v1/emailTemplates/DISCUSSION_NOTIFICATION_COPYEDITING",
+						"alternateTo": null,
+						"body": {
+							"fr_CA": "Prière de saisir votre message.",
+							"en": "Please enter your message."
+						},
+						"contextId": null,
+						"id": null,
+						"key": "DISCUSSION_NOTIFICATION_COPYEDITING",
+						"name": {
+							"fr_CA": "",
+							"en": "Discussion (Copyediting)"
+						},
+						"subject": {
+							"fr_CA": "Un message à propos de la revue {$journalName}",
+							"en": "A message regarding {$journalName}"
+						}
+					},
+					{
+						"_href": "https://example.org/publicknowledge/api/v1/emailTemplates/COPYEDIT_REQUEST",
+						"alternateTo": "DISCUSSION_NOTIFICATION_COPYEDITING",
+						"body": {
+							"en": "<p>Dear {$recipientName},</p><p>A new submission is ready to be copyedited:</p><p><a href\"{$submissionUrl}\">{$submissionId} {$submissionTitle}</a><br />{$journalName}</p><p>Please follow these steps to complete this task:</p><ol><li>1. Click on the Submission URL below.</li><li>2. Open any files available under Draft Files and edit the files. Use the Copyediting Discussions area if you need to contact the editor(s) or author(s).</li><li>3. Save the copyedited file(s) and upload them to the Copyedited panel.</li><li>4. Use the Copyediting Discussions to notify the editor(s) that all files have been prepared, and that the Production process may begin.</li></ol><p>If you are unable to undertake this work at this time or have any questions, please contact me. Thank you for your contribution to this journal.</p><p>Kind regards,</p>{$signature}",
+							"fr_CA": "{$recipientName},<br />\n<br />\nJ'aimerais que vous effectuiez la révision du manuscrit intitulé « {$submissionTitle} » pour la revue {$journalName} à l'aide des étapes suivantes.<br />\n1. Cliquer sur l'URL de la soumission ci-dessous.<br />\n2. Ouvrir le(s) fichier(s) disponible(s) sous Fichiers des ébauches finales et effectuer votre révision, tout en ajoutant des discussions sur la révision, le cas échéant.<br />\n3. Enregistrer le(s) fichier(s) révisé(s) et le(s) téléverser dans la section Version(s) révisée(s).<br />\n4. Informer le,la rédacteur-trice que tous les fichiers ont été révisés et que l'étape de production peut débuter.<br />\n<br />\nURL de la revue {$journalName} : {$journalUrl}<br />\nURL de la soumission : {$submissionUrl}<br />\nNom d'utilisateur-trice : {$recipientUsername}"
+						},
+						"contextId": 1,
+						"id": 1,
+						"key": "COPYEDIT_REQUEST",
+						"name": {
+							"en": "Request Copyedit",
+							"fr_CA": ""
+						},
+						"subject": {
+							"en": "Submission {$submissionId} is ready to be copyedited for {$contextAcronym}",
+							"fr_CA": "Demande de révision d'une soumission"
+						}
+					}
+				]
+			}
+		},
+		"MailableSummary": {
+			"type": "object",
+			"example": {
+				"_href": "https://example.org/publicknowledge/api/v1/mailables/DISCUSSION_NOTIFICATION_COPYEDITING",
+				"dataDescriptions": {
+					"journalName": "The journal's name",
+					"journalUrl": "The URL to the journal's homepage",
+					"...": "All prepared data"
+				},
+				"description": "This email is sent when a discussion is created or replied to in the copyediting stage.",
+				"emailTemplateKey": "DISCUSSION_NOTIFICATION_COPYEDITING",
+				"fromRoleIds": [
+					17,
+					4097,
+					65536
+				],
+				"groupIds": [
+					"copyediting"
+				],
+				"name": "Discussion (Copyediting)",
+				"supportsTemplates": true,
+				"toRoleIds": [
+					17,
+					4097,
+					65536
+				]
+			}
+		},
 		"Publication": "publication",
 		"PublicationCityStats": {
 			"type": "object",
@@ -4395,6 +4491,13 @@
 						"schema": {
 							"$ref": "#/definitions/InvalidParametersResponse"
 						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to add an email template.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
 					}
 				}
 			}
@@ -4547,6 +4650,13 @@
 							"items": {
 								"type": "string"
 							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to reset all email templates.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
 						}
 					}
 				}
@@ -4807,7 +4917,7 @@
 						"schema": {
 							"type": "array",
 							"items": {
-								"type": "string"
+								"$ref": "#/definitions/MailableSummary"
 							}
 						}
 					},
@@ -4842,7 +4952,7 @@
 						"x-summary": "Success",
 						"description": "The mailable's fully qualified class name",
 						"schema": {
-							"type": "string"
+							"$ref": "#/definitions/Mailable"
 						}
 					},
 					"403": {
@@ -4855,66 +4965,6 @@
 					"404": {
 						"x-summary": "Request Not Found",
 						"description": "The requested mailable could not be found.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
-					}
-				}
-			}
-		},
-		"/mailables/{id}/emailTemplates": {
-			"put": {
-				"tags": [
-					"Mailables"
-				],
-				"summary": "Assign email templates",
-				"description": "Assign custom email templates to a `Mailable` class.",
-				"parameters": [
-					{
-						"name": "id",
-						"description": "The ID of the mailable derived from the fully-qualified class name, such as `PKP-mail-mailables-ReviewRequest`.",
-						"in": "path",
-						"required": true,
-						"type": "string"
-					},
-					{
-						"name": "templateKeys",
-						"description": "The `key`s of custom email templates.",
-						"in": "body",
-						"type": "array",
-						"items": {
-							"type": "string"
-						}
-					}
-				],
-				"responses": {
-					"200": {
-						"x-summary": "Success",
-						"description": "The list of assigned custom email templates.",
-						"schema": {
-							"type": "array",
-							"items": {
-								"type": "string"
-							}
-						}
-					},
-					"400": {
-						"x-summary": "Request Invalid",
-						"description": "No email template keys were sent with the request.",
-						"schema": {
-							"$ref": "#/definitions/InvalidParametersResponse"
-						}
-					},
-					"403": {
-						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to assign email templates to mailables.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
-					},
-					"404": {
-						"x-summary": "Request Not Found",
-						"description": "The requested mailable or email template(s) could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
