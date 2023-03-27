@@ -14,11 +14,13 @@
 namespace APP\plugins\paymethod\manual;
 
 use APP\core\Application;
+use APP\core\Request;
 use APP\facades\Repo;
 use APP\journal\Journal;
 use APP\plugins\paymethod\manual\mailables\ManualPaymentNotify;
 use APP\template\TemplateManager;
 use Exception;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Mail;
 use PKP\db\DAORegistry;
 use PKP\form\Form;
@@ -26,6 +28,7 @@ use PKP\install\Installer;
 use PKP\payment\QueuedPaymentDAO;
 use PKP\plugins\Hook;
 use PKP\plugins\PaymethodPlugin;
+use Slim\Http\Request as SlimRequest;
 
 class ManualPaymentPlugin extends PaymethodPlugin
 {
@@ -107,9 +110,9 @@ class ManualPaymentPlugin extends PaymethodPlugin
      */
     public function saveSettings(string $hookname, array $args)
     {
-        $slimRequest = $args[0];
-        $request = $args[1];
-        $updatedSettings = $args[3];
+        $slimRequest = $args[0]; /** @var SlimRequest $slimRequest */
+        $request = $args[1]; /** @var Request $request */
+        $updatedSettings = $args[3]; /** @var Collection $updatedSettings */
 
         $allParams = $slimRequest->getParsedBody();
         $manualInstructions = isset($allParams['manualInstructions']) ? (string) $allParams['manualInstructions'] : '';
