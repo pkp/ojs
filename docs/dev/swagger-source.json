@@ -5043,13 +5043,6 @@
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
-					},
-					"404": {
-						"x-summary": "Request Not Found",
-						"description": "The requested resource was not found. This should only occur if the API is requested without specifying the context.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
 					}
 				}
 			}
@@ -5092,13 +5085,6 @@
 					"403": {
 						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to access editorial statistics for this journal or press.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
-					},
-					"404": {
-						"x-summary": "Request Not Found",
-						"description": "The requested resource was not found. This should only occur if the API is requested without specifying the context.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -5215,13 +5201,6 @@
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
-					},
-					"404": {
-						"x-summary": "Request Not Found",
-						"description": "The requested resource was not found.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
 					}
 				}
 			}
@@ -5309,13 +5288,6 @@
 					"403": {
 						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
-					},
-					"404": {
-						"x-summary": "Request Not Found",
-						"description": "The requested resource was not found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -5583,13 +5555,6 @@
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
-					},
-					"404": {
-						"x-summary": "Request Not Found",
-						"description": "The requested resource was not found.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
 					}
 				}
 			}
@@ -5687,13 +5652,6 @@
 					"403": {
 						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to access statistics for this journal.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
-					},
-					"404": {
-						"x-summary": "Request Not Found",
-						"description": "The requested resource was not found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -5999,13 +5957,6 @@
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
-					},
-					"404": {
-						"x-summary": "Request Not Found",
-						"description": "The requested resource was not found.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
 					}
 				}
 			}
@@ -6123,13 +6074,6 @@
 					"403": {
 						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
-					},
-					"404": {
-						"x-summary": "Request Not Found",
-						"description": "The requested resource was not found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -6407,13 +6351,6 @@
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
-					},
-					"404": {
-						"x-summary": "Request Not Found",
-						"description": "The requested resource was not found.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
 					}
 				}
 			}
@@ -6536,13 +6473,6 @@
 					"403": {
 						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to access statistics for this journal, press or preprint server.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
-					},
-					"404": {
-						"x-summary": "Request Not Found",
-						"description": "The requested resource was not found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -6671,13 +6601,6 @@
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
-					},
-					"404": {
-						"x-summary": "Request Not Found",
-						"description": "The requested resource was not found.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
 					}
 				}
 			}
@@ -6803,13 +6726,6 @@
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
-					},
-					"404": {
-						"x-summary": "Request Not Found",
-						"description": "The requested resource was not found.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
 					}
 				}
 			}
@@ -6927,13 +6843,6 @@
 					"403": {
 						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to access user statistics for this journal or press.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
-					},
-					"404": {
-						"x-summary": "Request Not Found",
-						"description": "The requested resource was not found. This should only occur if the API is requested without specifying the context.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
