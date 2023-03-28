@@ -3,7 +3,7 @@
 	"info": {
 		"version": "3.4",
 		"title": "REST API - OJS",
-		"description": "<blockquote style=\"margin:2rem 0;padding:1rem;background:red;color:white;border:none\">The documentation for 3.4 is still being completed. Some of the information below may change before release.</blockquote>\n\nThis document describes how to interact with the REST API in [Open Journal Systems](https://pkp.sfu.ca/software/ojs). It is a technical document intended for software developers who wish to build applications to interact with OJS. This document only describes the REST API for OJS. However, similar REST APIs exist for [Open Monograph Press](https://pkp.sfu.ca/software/omp) and [Open Preprint Systems](https://pkp.sfu.ca/software/ops).\n\nView the [Developer Documentation Hub](https://docs.pkp.sfu.ca/dev) to view all documentation for these applications.",
+		"description": "This document describes how to interact with the REST API in [Open Journal Systems](https://pkp.sfu.ca/software/ojs). It is a technical document intended for software developers who wish to build applications to interact with OJS. This document only describes the REST API for OJS. However, similar REST APIs exist for [Open Monograph Press](https://pkp.sfu.ca/software/omp) and [Open Preprint Systems](https://pkp.sfu.ca/software/ops).\n\nView the [Developer Documentation Hub](https://docs.pkp.sfu.ca/dev) to view all documentation for these applications.",
 		"contact": {
 			"name": "Public Knowledge Project",
 			"url": "https://docs.pkp.sfu.ca"
