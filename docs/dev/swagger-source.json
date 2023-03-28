@@ -1481,6 +1481,92 @@
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested submission or file could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/files/{submissionFileId}/copy": {
+			"put": {
+				"tags": [
+					"Submissions / Files"
+				],
+				"summary": "Copy a submission file.",
+				"description": "Copy a submission file to a new file stage. This is usually used to promote a file from one stage to another. For example, a file in \"Revisions\" can be promoted to \"Files for Copyediting\" so that a copyeditor can begin working with it. Learn more about [File Stages](https://docs.pkp.sfu.ca/dev/documentation/en/submission-files#file-stages).",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "submissionFileId",
+						"in": "path",
+						"description": "Submission File ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "stageId",
+						"in": "query",
+						"description": "The workflow stage id of the file to be copied. For example, `WORKFLOW_STAGE_ID_PRODUCTION`.",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"required": ["toFileStage"],
+							"properties": {
+								"reviewRoundId": {
+									"type": "integer",
+									"description": "Optional. The ID of a review round to copy this file to. Only use this when you want to copy a file to a file stage in a particular review round. If omitted, the file will be copied to the latest review round."
+								},
+								"toFileStage": {
+									"type": "integer",
+									"description": "One of the `SubmissionFile::SUBMISSION_FILE_*` constants. Learn about [File Stages](https://docs.pkp.sfu.ca/dev/documentation/en/submission-files#file-stages)."
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The new submission file that was created.",
+						"schema": {
+							"$ref": "#/definitions/SubmissionFile"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "There was an error when uploading the file or the values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.\n\n| Error Code | Message |\n| --- | --- |\n| `api.submissionFiles.400.noFileStageId` | No parameter `toFileStage` was found in the request body. |\n| `api.submissionFiles.400.invalidFileStage` | The value of `toFileStage` does not match a known file stage. |\n| `api.submissionFiles.400.reviewRoundSubmissionNotMatch` | The `reviewRoundId` specified is not part of this submission. |\n| `api.submissionFiles.400.reviewRoundIdRequired` | No valid review round was found to copy this file to. |",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You are not allowed to copy the requested file.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested submission or file could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
 					}
 				}
 			}
