@@ -13,7 +13,7 @@
 namespace APP\plugins\reports\counter\classes\reports;
 
 use APP\core\Application;
-use App\core\Services;
+use APP\core\Services;
 use APP\facades\Repo;
 use APP\plugins\reports\counter\classes\CounterReport;
 use APP\statistics\StatisticsHelper;

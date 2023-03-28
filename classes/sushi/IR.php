@@ -182,7 +182,7 @@ class IR extends CounterR5Report
                     $this->yearsOfPublication = explode('|', $filter['Value']);
                     break;
                 case 'Item_Id':
-                    $this->itemIds = (int) $filter['Value'];
+                    $this->itemId = (int) $filter['Value'];
                     break;
             }
         }
@@ -291,7 +291,7 @@ class IR extends CounterR5Report
                         'Value' => $this->context->getData('printIssn'),
                     ];
                 }
-                $parentItem['Data_Type'] = $this->parentDataType;
+                $parentItem['Data_Type'] = self::PARENT_DATA_TYPE;
                 $item['Item_Parent'] = $parentItem;
             }
 

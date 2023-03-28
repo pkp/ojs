@@ -36,7 +36,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
         }
         if ($this->getEnabled($mainContextId)) {
             Hook::add('ArticleHandler::view::galley', [$this, 'articleViewCallback'], Hook::SEQUENCE_LATE);
-            Hook::add('ArticleHandler::download', [$this, 'articleDownloadCallback'], HOOK_SEQUENCE_LATE);
+            Hook::add('ArticleHandler::download', [$this, 'articleDownloadCallback'], Hook::SEQUENCE_LATE);
         }
         return true;
     }
@@ -88,6 +88,8 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
 
         $submissionFile = $galley->getFile();
         if ($submissionFile->getData('mimetype') === 'text/html') {
+            /** @var ?Publication */
+            $galleyPublication = null;
             foreach ($article->getData('publications') as $publication) {
                 if ($publication->getId() === $galley->getData('publicationId')) {
                     $galleyPublication = $publication;
