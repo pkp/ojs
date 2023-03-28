@@ -21,6 +21,11 @@ class StatsPublicationHandler extends \PKP\API\v1\stats\publications\PKPStatsPub
     /** @var string The name of the section ids query param for this application */
     public $sectionIdsQueryParam = 'sectionIds';
 
+    public function getSectionIdsQueryParam()
+    {
+        return $this->sectionIdsQueryParam;
+    }
+
     protected function getManyAllowedParams()
     {
         $params = parent::getManyAllowedParams();

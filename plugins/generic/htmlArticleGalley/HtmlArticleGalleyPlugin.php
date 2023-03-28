@@ -91,6 +91,8 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
         /** @var ?Publication */
         $galleyPublication = null;
         if ($submissionFile->getData('mimetype') === 'text/html') {
+            /** @var ?Publication */
+            $galleyPublication = null;
             foreach ($article->getData('publications') as $publication) {
                 if ($publication->getId() === $galley->getData('publicationId')) {
                     $galleyPublication = $publication;
