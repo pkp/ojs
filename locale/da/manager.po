@@ -1,16 +1,16 @@
 # Niels Erik Frederiksen <nef@kb.dk>, 2021.
-# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022.
+# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022, 2023.
 # Jesper B. Thestrup <jbt@kb.dk>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2022-12-15 09:02+0000\n"
+"PO-Revision-Date: 2023-03-28 17:13+0000\n"
 "Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
-"Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
-"da_DK/>\n"
-"Language: da_DK\n"
+"Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/manager/da/>"
+"\n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2204,9 +2204,8 @@ msgstr "URL til tidsskriftets hjemmeside"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Navnet på tidsskriftets primære kontaktperson"
 
-#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr "tidsskriftets initialer"
+msgstr "Tidsskriftets initialer"
 
 msgid "emailTemplate.variable.context.contextSignature"
 msgstr "Tidsskriftets e-mailsignatur til automatiserede e-mails"
@@ -2215,7 +2214,7 @@ msgid "emailTemplate.variable.context.contactEmail"
 msgstr "E-mail-adressen på tidsskriftets primære kontaktperson"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "Tidsskriftets postadresse"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Navnet på betalingstypen"
@@ -2248,36 +2247,34 @@ msgstr "En oversigt over abonnementets type, navn, varighed og pris"
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Oplysninger om abonnentens medlemskab"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr "Navnet på institutionen"
+msgstr "Navnet på den abonnerende institution"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr "Postadressen på institutionen"
+msgstr "Postadressen på den abonnerende institution"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
-msgstr "Domæne"
+msgstr "Domænenavnet på gyldige IP adresser for dette abonnement"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr "IP ranges for abonnements-autentificering"
+msgstr "Gyldige IP intervaller for dette abonnement"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "URL på siden hvor forfatteren kan foretage betaling"
 
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "URL på siden for retningslinjer for indsendelser"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "Link til siden med statistik om publicerede artikler"
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "Nummerets ID"
 
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
+"Denne e-mail sendes automatisk hver måned til redaktører og "
+"tidsskriftschefer for at give dem et overblik over systemets helbred."
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Validér E-mail (Tidsskriftsregistrering)"
@@ -2634,10 +2631,13 @@ msgstr ""
 "der ikke er blevet tildelt en redaktør."
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "Anmodning om betaling"
 
 msgid "mailable.paymentRequest.description"
 msgstr ""
+"Denne automatiske e-mail sendes til en forfatter for an anmode om betaling "
+"af publikationsgebyret, når vedkommendes indsendelse er blevet accepteret "
+"til publikation."
 
 #~ msgid "manager.setup.metadata.coverage"
 #~ msgstr "Dækning"
@@ -2683,3 +2683,18 @@ msgstr ""
 #~ msgstr ""
 #~ "Der er endnu ikke valgt sektionsredaktør. Tilføj denne rolle til mindst "
 #~ "én bruger via 'Brugere & roller'."
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr ""
+"Der kunne ikke importeres en publiceringsklar fil for nummeret, fordi filen "
+"mangler."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"Den publiceringsklare fil for nummeret {$id} kunne ikke eksporteres, da "
+"filen ikke blev fundet på stien \"{$path}\"."
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"Forsidebilledet på nummeret {$id} blev ikke eksporteret, da filen ikke blev "
+"fundet på stien \"{$path}\"."
