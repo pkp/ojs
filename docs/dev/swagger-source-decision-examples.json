@@ -1,0 +1,203 @@
+{
+    "APP\\decision\\types\\Accept": {
+        "actions": [
+            {
+                "type": "email",
+                "id": "notifyAuthors",
+                "canChangeRecipients": false
+            },
+            {
+                "type": "email",
+                "id": "notifyReviewers",
+                "canChangeRecipients": true
+            },
+            {
+                "type": "form",
+                "id": "payment",
+                "data": {
+                    "requestPayment": true
+                }
+            }
+        ]
+    },
+    "PKP\\decision\\types\\BackFromCopyediting": {
+        "actions": [
+            {
+                "type": "email",
+                "id": "notifyAuthors",
+                "canChangeRecipients": false
+            }
+        ]
+    },
+    "PKP\\decision\\types\\BackFromProduction": {
+        "actions": [
+            {
+                "type": "email",
+                "id": "notifyAuthors",
+                "canChangeRecipients": false
+            }
+        ]
+    },
+    "PKP\\decision\\types\\CancelReviewRound": {
+        "actions": [
+            {
+                "type": "email",
+                "id": "notifyAuthors",
+                "canChangeRecipients": false
+            },
+            {
+                "type": "email",
+                "id": "notifyReviewers",
+                "canChangeRecipients": true
+            }
+        ]
+    },
+    "PKP\\decision\\types\\Decline": {
+        "actions": [
+            {
+                "type": "email",
+                "id": "notifyAuthors",
+                "canChangeRecipients": false
+            },
+            {
+                "type": "email",
+                "id": "notifyReviewers",
+                "canChangeRecipients": true
+            }
+        ]
+    },
+    "PKP\\decision\\types\\InitialDecline": {
+        "actions": [
+            {
+                "type": "email",
+                "id": "notifyAuthors",
+                "canChangeRecipients": false
+            }
+        ]
+    },
+    "PKP\\decision\\types\\NewExternalReviewRound": {
+        "actions": [
+            {
+                "type": "email",
+                "id": "notifyAuthors",
+                "canChangeRecipients": false
+            }
+        ]
+    },
+    "PKP\\decision\\types\\RecommendAccept": {
+        "actions": [
+            {
+                "type": "email",
+                "id": "discussion",
+                "canChangeRecipients": false
+            }
+        ]
+    },
+    "PKP\\decision\\types\\RecommendDecline": {
+        "actions": [
+            {
+                "type": "email",
+                "id": "discussion",
+                "canChangeRecipients": false
+            }
+        ]
+    },
+    "PKP\\decision\\types\\RecommendResubmit": {
+        "actions": [
+            {
+                "type": "email",
+                "id": "discussion",
+                "canChangeRecipients": false
+            }
+        ]
+    },
+    "PKP\\decision\\types\\RecommendRevisions": {
+        "actions": [
+            {
+                "type": "email",
+                "id": "discussion",
+                "canChangeRecipients": false
+            }
+        ]
+    },
+    "PKP\\decision\\types\\RequestRevisions": {
+        "actions": [
+            {
+                "type": "email",
+                "id": "notifyAuthors",
+                "canChangeRecipients": false
+            },
+            {
+                "type": "email",
+                "id": "notifyReviewers",
+                "canChangeRecipients": true
+            }
+        ]
+    },
+    "PKP\\decision\\types\\Resubmit": {
+        "actions": [
+            {
+                "type": "email",
+                "id": "notifyAuthors",
+                "canChangeRecipients": false
+            },
+            {
+                "type": "email",
+                "id": "notifyReviewers",
+                "canChangeRecipients": true
+            }
+        ]
+    },
+    "PKP\\decision\\types\\RevertDecline": {
+        "actions": [
+            {
+                "type": "email",
+                "id": "notifyAuthors",
+                "canChangeRecipients": false
+            }
+        ]
+    },
+    "PKP\\decision\\types\\RevertInitialDecline": {
+        "actions": [
+            {
+                "type": "email",
+                "id": "notifyAuthors",
+                "canChangeRecipients": false
+            }
+        ]
+    },
+    "PKP\\decision\\types\\SendExternalReview": {
+        "actions": [
+            {
+                "type": "email",
+                "id": "notifyAuthors",
+                "canChangeRecipients": false
+            }
+        ]
+    },
+    "PKP\\decision\\types\\SendToProduction": {
+        "actions": [
+            {
+                "type": "email",
+                "id": "notifyAuthors",
+                "canChangeRecipients": false
+            }
+        ]
+    },
+    "APP\\decision\\types\\SkipExternalReview": {
+        "actions": [
+            {
+                "type": "email",
+                "id": "notifyAuthors",
+                "canChangeRecipients": false
+            },
+            {
+                "type": "form",
+                "id": "payment",
+                "data": {
+                    "requestPayment": true
+                }
+            }
+        ]
+    }
+}

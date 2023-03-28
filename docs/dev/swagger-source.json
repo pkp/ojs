@@ -33,6 +33,7 @@
 			"name": "Endpoints",
 			"tags": [
 				"Submissions",
+				"Submissions / Decisions",
 				"Submissions / Files",
 				"Submissions / Participants",
 				"Submissions / Publications",
@@ -98,6 +99,10 @@
 		},
 		{
 			"name": "Submissions"
+		},
+		{
+			"name": "Submissions / Decisions",
+			"description": "Use these endpoints to get or record editorial decisions on a submission. Editorial decisions include actions like accepting or declining a submission, sending a submission to the next stage, and requesting revisions. Editorial decisions can not be edited or deleted after they are recorded. Learn more about [Decisions](https://docs.pkp.sfu.ca/dev/documentation/en/decisions)."
 		},
 		{
 			"name": "Submissions / Files"
@@ -249,6 +254,16 @@
 					}
 				}
 			}
+		},
+		"Decision": "decision",
+		"DecisionAction": {
+			"a": "b",
+			"c": "d",
+			"actions": [
+				{
+					"$ref": "#/definitions/DecisionEmail"
+				}
+			]
 		},
 		"Doi": "doi",
 		"ErrorResponse": {
@@ -1106,6 +1121,105 @@
 					"403": {
 						"x-summary": "Request Unauthorized",
 						"description": "This error indicates that you are not allowed to edit this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The submission could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/decisions": {
+			"get": {
+				"tags": [
+					"Submissions / Decisions"
+				],
+				"summary": "Get decisions for a submission.",
+				"description": "Get the editorial decisions that have been recorded for this submission.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success.",
+						"description": "An array of the decisions recorded for this submission.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/DecisionSummary"
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view decisions for the requested submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The submission could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"Submissions / Decisions"
+				],
+				"summary": "Record a decision for a submission.",
+				"description": "Record a new editorial decision for this submission. This endpoint is configured to support customizable actions when recording a decision. Each decision supports pre-defined actions, but plugins can extend each decision to take additional actions or create new decisions.\n\nMost of the built-in decisions use one or more actions. View the \"Request samples\" for this endpoint to see which decisions use which actions. Most decisions use one or more of the following types:\n\n| Action | Description |\n| --- | --- |\n| Email | Details about the email message, recipients and attachments. If the example request body includes an empty `recipients` array, that means the decision does not allow the recipients to be modified. It is configured to always send to the same recipients. For example, most emails to notify authors will automatically be sent to the assigned authors and co-authors, depending on how the journal has configured their email notification settings. |\n| Form | A form payload that includes the action `id` and any input data from the form. |\n\nA custom decision is not restricted to these types. Any data can be sent through the `actions` property and handled on the server. Learn more about [Decisions](https://docs.pkp.sfu.ca/dev/documentation/en/decisions).",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/definitions/DecisionEditable"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"x-summary": "Success.",
+						"description": "The decision that was recorded.",
+						"schema": {
+							"$ref": "#/definitions/DecisionSummary"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view decisions for the requested submission.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
