@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SettingsHandler
+ *
  * @ingroup pages_management
  *
  * @brief Handle requests for settings pages.
@@ -53,6 +54,9 @@ class SettingsHandler extends ManagementHandler
     public function workflow($args, $request)
     {
         parent::workflow($args, $request);
+
+        $this->addReviewFormWorkflowSupport($request);
+
         TemplateManager::getManager($request)->display('management/workflow.tpl');
     }
 
@@ -71,12 +75,11 @@ class SettingsHandler extends ManagementHandler
         $router = $request->getRouter();
         $dispatcher = $request->getDispatcher();
 
-        $apiUrl = $dispatcher->url($request, PKPApplication::ROUTE_API, $context->getPath(), 'contexts/' . $context->getId());
+        $apiUrl = $this->getContextApiUrl($request);
         $lockssUrl = $router->url($request, $context->getPath(), 'gateway', 'lockss');
         $clockssUrl = $router->url($request, $context->getPath(), 'gateway', 'clockss');
 
-        $locales = $context->getSupportedFormLocaleNames();
-        $locales = array_map(fn (string $locale, string $name) => ['key' => $locale, 'label' => $name], array_keys($locales), $locales);
+        $locales = $this->getSupportedFormLocales($context);
 
         $accessForm = new \APP\components\forms\context\AccessForm($apiUrl, $locales, $context);
         $archivingLockssForm = new \APP\components\forms\context\ArchivingLockssForm($apiUrl, $locales, $context, $lockssUrl, $clockssUrl);
