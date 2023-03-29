@@ -142,7 +142,7 @@ class URNSettingsForm extends Form
     {
         $contextId = $this->_getContextId();
         $plugin = $this->_getPlugin();
-        foreach ($this->_getFormFields() as $fieldName => $fieldType) {
+        foreach ($this->getFormFields() as $fieldName => $fieldType) {
             $this->setData($fieldName, $plugin->getSetting($contextId, $fieldName));
         }
     }
@@ -152,7 +152,7 @@ class URNSettingsForm extends Form
      */
     public function readInputData()
     {
-        $this->readUserVars(array_keys($this->_getFormFields()));
+        $this->readUserVars(array_keys($this->getFormFields()));
     }
 
     /**
@@ -162,16 +162,13 @@ class URNSettingsForm extends Form
     {
         $contextId = $this->_getContextId();
         $plugin = $this->_getPlugin();
-        foreach ($this->_getFormFields() as $fieldName => $fieldType) {
+        foreach ($this->getFormFields() as $fieldName => $fieldType) {
             $plugin->updateSetting($contextId, $fieldName, $this->getData($fieldName), $fieldType);
         }
         parent::execute(...$functionArgs);
     }
 
-    //
-    // Private helper methods
-    //
-    public function _getFormFields()
+    public function getFormFields()
     {
         return [
             'enableIssueURN' => 'bool',
