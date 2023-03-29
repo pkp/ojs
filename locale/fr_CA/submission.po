@@ -1,10 +1,10 @@
-# Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2022.
+# Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2022-11-14 17:02+0000\n"
+"PO-Revision-Date: 2023-03-23 09:14+0000\n"
 "Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-helene."
 "vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
@@ -177,8 +177,8 @@ msgstr "Assigner à un numéro"
 
 msgid "publication.assignedToIssue"
 msgstr ""
-"Cet article a été assigné au <a href=\"{$issueUrl}\">{$issueName}</a>, mais "
-"sa publication n'a pas été programmée."
+"Cet article a été assigné au numéro <a href=\"{$issueUrl}\">{$issueName}</"
+"a>, mais sa publication n'a pas été programmée."
 
 msgid "publication.changeIssue"
 msgstr "Changer de numéro"

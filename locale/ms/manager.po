@@ -4,11 +4,10 @@
 # Mohamad Shabilullah <shabilhamid91@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-02-07 15:40+0000\n"
+"PO-Revision-Date: 2023-03-25 01:21+0000\n"
 "Last-Translator: Mohamad Shabilullah <shabilhamid91@gmail.com>\n"
-"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/manager/ms_MY/"
-">\n"
-"Language: ms_MY\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/ojs/manager/ms/>\n"
+"Language: ms\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -21,7 +20,7 @@ msgstr "Akses"
 msgid "manager.distribution.copyrightYearBasis.description"
 msgstr ""
 "Pilih cara tarikh hak cipta lalai dipilih untuk artikel. Lalai ini boleh "
-"ditindih mengikut kes demi kes. Jika anda \"terbitkan secara segara\", "
+"ditindih mengikut kes demi kes. Jika anda \"terbitkan semasa anda pergi\", "
 "jangan gunakan tarikh penerbitan keluaran itu."
 
 msgid "manager.distribution.copyrightYearBasis.issue"
@@ -2190,7 +2189,6 @@ msgstr "URL ke halaman utama jurnal"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Nama kenalan utama jurnal"
 
-#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr "Inisial jurnal"
 
@@ -2201,7 +2199,7 @@ msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Alamat e-mel kenalan utama jurnal"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "Alamat surat-menyurat jurnal"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Nama jenis pembayaran"
@@ -2233,36 +2231,34 @@ msgstr "Ringkasan jenis, nama, tempoh dan kos langganan"
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Maklumat tentang keahlian pelanggan"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr "Nama institusi"
+msgstr "Nama institusi yang melanggan"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr "Alamat surat menyurat institusi"
+msgstr "Alamat surat menyurat institusi yang melanggan"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
-msgstr "Domain"
+msgstr "Nama domain alamat IP yang sah untuk langganan ini"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr "Lingkungan IP untuk pengesahan langganan"
+msgstr "Julat IP yang sah untuk langganan ini"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "URL ke halaman tempat pengarang boleh membuat pembayaran"
 
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "URL ke garis panduan penyerahan"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "Pautan ke halaman statistik artikel yang diterbitkan"
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "ID isu"
 
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
+"E-mel ini dihantar secara automatik setiap bulan kepada editor dan pengurus "
+"jurnal untuk memberikan mereka gambaran keseluruhan kesihatan sistem."
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Sahkan E-mel (Pendaftaran Jurnal)"
@@ -2619,7 +2615,22 @@ msgstr ""
 "dan tiada editor diberikan."
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "Permintaan bayaran"
 
 msgid "mailable.paymentRequest.description"
 msgstr ""
+"E-mel automatik ini dihantar kepada pengarang untuk meminta pembayaran yuran "
+"penerbitan apabila penyerahan mereka diterima."
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "Galley isu tidak dapat diimport, failnya tiada."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"Galley isu {$id} tidak dapat dieksport, failnya tidak ditemui di laluan \""
+"{$path}\"."
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"Imej muka depan isu {$id} tidak dieksport, failnya tidak ditemui di laluan \""
+"{$path}\"."

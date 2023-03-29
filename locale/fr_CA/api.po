@@ -21,8 +21,8 @@ msgstr "L'annonce que vous avez demandée ne fait pas partie de cette revue."
 
 msgid "api.emails.403.disabled"
 msgstr ""
-"La fonction de notification par courrier électronique n'a pas été activée "
-"pour ce journal."
+"La fonction de notification par courriel n'a pas été activée pour cette "
+"revue."
 
 msgid "api.submissions.400.wrongContext"
 msgstr "La soumission que vous avez demandée n'est pas dans cette revue."
@@ -93,3 +93,6 @@ msgstr ""
 
 msgid "api.submission.400.inactiveSection"
 msgstr ""
+
+msgid "api.dois.400.contextsNotMatched"
+msgstr "Le DOI demandé ne fait pas partie de cette revue."
