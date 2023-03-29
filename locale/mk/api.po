@@ -52,7 +52,7 @@ msgstr "Немате дозвола да го бришете ова списан
 msgid "api.contexts.404.contextNotFound"
 msgstr "Бараното списание не е најдено."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "ДОИ бројот кој го побаравте не е дел од ова списание."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

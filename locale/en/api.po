@@ -49,7 +49,7 @@ msgstr "You do not have permission to delete this journal."
 msgid "api.contexts.404.contextNotFound"
 msgstr "The journal you requested was not found."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "The DOI you requested is not part of this journal."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

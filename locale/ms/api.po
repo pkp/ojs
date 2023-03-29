@@ -53,7 +53,7 @@ msgstr "Anda tidak mempunyai kebenaran untuk menghapuskan jurnal ini."
 msgid "api.contexts.404.contextNotFound"
 msgstr "Jurnal yang anda minta tidak dijumpai."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "DOI yang anda minta bukan sebahagian daripada jurnal ini."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

@@ -50,7 +50,7 @@ msgstr "არ გაქვთ ამ ჟურნალის წაშლი�
 msgid "api.contexts.404.contextNotFound"
 msgstr "მოთხოვნილი ჟურნალი ვერ მოიძებნა."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "თქვენ მიერ მოთხოვნილი DOI არ არის ამ ჟურნალის ნაწილი."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

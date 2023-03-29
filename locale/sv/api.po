@@ -55,7 +55,7 @@ msgstr "Du har inte tillåtelse att ta bort denna tidskrift."
 msgid "api.contexts.404.contextNotFound"
 msgstr "Tidskriften som du efterfrågade kunde inte hittas."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "Den efterfrågade DOI:n finns inte i denna tidskrift."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

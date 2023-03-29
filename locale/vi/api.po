@@ -50,7 +50,7 @@ msgstr "Bạn không có quyền xóa tạp chí này."
 msgid "api.contexts.404.contextNotFound"
 msgstr "Tạp chí bạn yêu cầu không được tìm thấy."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "DOI bạn yêu cầu không phải là một phần của tạp chí này."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

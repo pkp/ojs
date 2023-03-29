@@ -54,7 +54,7 @@ msgstr "Нямате права да изтриете това списание.
 msgid "api.contexts.404.contextNotFound"
 msgstr "Списанието, което търсите не е намерено."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "DOI, който поискахте, не е част от това списание."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

@@ -74,7 +74,7 @@ msgstr "आपके पास इस जर्नल को हटाने क
 msgid "api.contexts.404.contextNotFound"
 msgstr "आपके द्वारा अनुरोधित जर्नल नहीं मिली."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr ""
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

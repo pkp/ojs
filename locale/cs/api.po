@@ -52,7 +52,7 @@ msgstr "K odstranění tohoto časopisu nemáte oprávnění."
 msgid "api.contexts.404.contextNotFound"
 msgstr "Požadovaný časopis nebyl nalezen."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "Požadované DOI není součástí tohoto časopisu."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

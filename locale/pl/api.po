@@ -51,7 +51,7 @@ msgstr "Nie masz pozwolenia do usunięcia tego czasopisma."
 msgid "api.contexts.404.contextNotFound"
 msgstr "Nie znaleziono szukanego czasopisma."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "Żądane DOI nie należy do tego czasopisma."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

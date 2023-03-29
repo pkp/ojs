@@ -52,7 +52,7 @@ msgstr "Nu aveți permisiunea de a șterge acest jurnal."
 msgid "api.contexts.404.contextNotFound"
 msgstr "Jurnalul pe care l-ați solicitat nu a fost găsit."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "DOI-ul pe care l-ați solicitat nu face parte din această revistă."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

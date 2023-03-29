@@ -51,7 +51,7 @@ msgstr "U heeft geen rechten om dit tijdschrift te verwijderen."
 msgid "api.contexts.404.contextNotFound"
 msgstr "Het tijdschrift werd niet gevonden."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr ""
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

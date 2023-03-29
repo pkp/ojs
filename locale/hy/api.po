@@ -51,7 +51,7 @@ msgstr "Դուք չունեք այս ամսագիրը ջնջելու թույլ�
 msgid "api.contexts.404.contextNotFound"
 msgstr "Հարցված ամսագիրը չի գտնվել։"
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "Ձեր պահանջած DOI-ն այս ամսագրի մաս չէ:"
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"

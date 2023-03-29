@@ -62,7 +62,7 @@ msgstr "Seçdiyiniz ödəmə metodu dəstəklənmir."
 msgid "api.publications.403.contextsDidNotMatch"
 msgstr "Axtardığınız nəşr bu jurnala aid deyil."
 
-msgid "api.dois.400.contextsNotMatched"
+msgid "api.dois.403.contextsNotMatched"
 msgstr "İstədiyiniz DOI bu jurnalda deyil."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"
