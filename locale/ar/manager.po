@@ -1,15 +1,15 @@
-# M. Ali <vorteem@gmail.com>, 2021, 2022.
+# M. Ali <vorteem@gmail.com>, 2021, 2022, 2023.
 # Salam Al-Khammasi <salam.alshemmari@uokufa.edu.iq>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2022-12-17 15:15+0000\n"
+"PO-Revision-Date: 2023-03-31 18:43+0000\n"
 "Last-Translator: M. Ali <vorteem@gmail.com>\n"
-"Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/manager/"
-"ar_IQ/>\n"
-"Language: ar_IQ\n"
+"Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/manager/ar/>"
+"\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2102,7 +2102,6 @@ msgstr "الرابط المؤدي إلى الصفحة الرئيسية للمج�
 msgid "emailTemplate.variable.context.contactName"
 msgstr "اسم جهة الاتصال الرئيسية في المجلة"
 
-#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr "الحروف الأولى للمجلة"
 
@@ -2113,7 +2112,7 @@ msgid "emailTemplate.variable.context.contactEmail"
 msgstr "عنوان البريد الالكتروني لجهة الاتصال الرئيسية في المجلة"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "عنوان المراسلة للمجلة"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "اسم نوع الدفع المالي"
@@ -2145,36 +2144,34 @@ msgstr "موجز عن نوع الاشتراك، اسمه، مدته وكلفته
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "معلومات عن عضوية المشترك"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr "اسم المؤسسة"
+msgstr "اسم المؤسسة المشتركة"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr "عنوان المراسلة للمؤسسة"
+msgstr "عنوان المراسلة للمؤسسة المشتركة"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
-msgstr "النطاق"
+msgstr "اسم النطاق لعنوان IP الصحيحة لهذا الاشتراك"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr "نطاق عناوين IP للمصادقة على الاشتراكات"
+msgstr "نطاقات عناوين IP لهذا الاشتراك"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "عنوان رابط الصفحة التي يمكن عبرها للمؤلف إجراء الدفع المالي"
 
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "عنوان الرابط المؤدي إلى إرشادات التقديم"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "عنوان الرابط المؤدي إلى صفحة إحصائيات المقالات المنشورة"
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "مُعرَّف العدد"
 
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
+"هذا البريد الالكتروني يُرسل آليًا كل شهر إلى المحررين ومديري المجلات "
+"للإطلاعهم على صحة النظام."
 
 msgid "mailable.validateEmailContext.name"
 msgstr "التحقق من البريد الالكتروني (التسجيل في المجلة)"
@@ -2518,10 +2515,12 @@ msgstr ""
 "لم يتعين له محرر بعد."
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "إلتماس الدفع المالي"
 
 msgid "mailable.paymentRequest.description"
 msgstr ""
+"هذا البريد الالكتروني الآلي يُرسل إلى المؤلف ليلتمس منه تسديد رسم النشر عند "
+"قبول طلب تقديمه."
 
 #~ msgid "doi.manager.settings.enableSubmissionDoi"
 #~ msgstr "المقالات"
@@ -2539,3 +2538,16 @@ msgstr ""
 
 #~ msgid "doi.manager.settings.enablePublicationDoi"
 #~ msgstr "المقالات"
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "تعذر استيراد اللوح الطباعي للعدد لأن ملفه مفقود."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"تعذر تصدير اللوح الطباعي للعدد {$id}، تعذر العثور على ملفه في المسار \""
+"{$path}\"."
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"تعذر تصدير صورة الغلاف للعدد {$id}، تعذر العثور على ملفها في المسار \"{$path}"
+"\"."
