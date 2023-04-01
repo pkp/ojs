@@ -4,7 +4,7 @@ env:
     - secure=FTT6C4vhk88L1RKHmUnbTdXdTyjkhoAhtXwYGAvkrrTngU1uJMZeoFeHLqVf/uxQuNssOrEJsQWGrka5OEd1FAAxUuqTmytxRMuz9A6Z4qp5DiMIDyCB9WF5AdY1cb3XQw5GiPc2BWrmBxxRIKporkaND0UBRmyeHDvppjn0uME=
     - APPLICATION=ojs
 
-dist: bionic
+dist: focal
 os: linux
 language: php
 python:
@@ -28,7 +28,6 @@ addons:
 
 
 before_install:
-#  - if [ -n "$LIBONIG_INSTALL" ]; then sudo apt-get install libonig5; fi
   - ./tools/startSubmodulesTRAVIS.sh
   - npm i g -npm
   - ./lib/pkp/tools/travis/prepare-webserver.sh
@@ -54,10 +53,10 @@ jobs:
       - sudo apt-get remove --purge mariadb-server mariadb-client mariadb-common
     - env: TEST=mysql SAVE_BUILD=true
       php: 8.1.0
-#    - env: TEST=mysql LIBONIG_INSTALL=1
-#      php: 8.2.0
-#    - env: TEST=pgsql LIBONIG_INSTALL=1
-#      php: 8.2.0
+    - env: TEST=mysql
+      php: 8.2.0
+    - env: TEST=pgsql
+      php: 8.2.0
 
     - stage: validate
       name: "Validate and lint"
