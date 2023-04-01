@@ -59,6 +59,7 @@ jobs:
       php: 8.2.0
 
     - stage: validate
+      php: 8.0
       name: "Validate and lint"
       script:
       - |
