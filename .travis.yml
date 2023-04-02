@@ -49,9 +49,8 @@ jobs:
       php: 8.1.0
     - env: TEST=mariadb SAVE_BUILD=true
       php: 8.0
-      after_script:
-      - sudo service mariadb stop
-      - sudo apt-get remove --purge mariadb-server mariadb-client mariadb-common
+      addons:
+        mariadb: '10.3'
     - env: TEST=mysql SAVE_BUILD=true
       php: 8.1.0
     - env: TEST=mysql LIBONIG_INSTALL=1
