@@ -72,7 +72,7 @@ before_install:
 
       # Prepare the local codebase
       ./lib/pkp/tools/travis/install-composer-dependencies.sh
-      npm install && npm run build
+      NODE_OPTIONS=--openssl-legacy-provider npm install && NODE_OPTIONS=--openssl-legacy-provider npm run build
     else
       # Prepare for validation tests.
       npm install
