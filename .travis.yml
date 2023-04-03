@@ -16,29 +16,31 @@ matrix:
   - env: TEST=pgsql
     dist: bionic
     php: 7.3
-  - env: TEST=pgsql
+  - env: TEST=pgsql LEGACY_SSL=1
     php: 7.4
   - env:
     - TEST: pgsql
     - SAVE_BUILD: true
+      LEGACY_SSL: 1
     php: 8.0
-  - env: TEST=pgsql
+  - env: TEST=pgsql LEGACY_SSL=1
     php: 8.1
   # MySQL / various PHP
   - env: TEST=mysql
     dist: bionic
     php: 7.3
-  - env: TEST=mysql
+  - env: TEST=mysql LEGACY_SSL=1
     php: 7.4
   - env:
     - TEST: mysql
     - SAVE_BUILD: true
+    - LEGACY_SSL: 1
     php: 8.0
-  - env: TEST=mysql
+  - env: TEST=mysql LEGACY_SSL=1
     php: 8.1
-  - env: TEST=mysql LIBONIG_INSTALL=1
+  - env: TEST=mysql LIBONIG_INSTALL=1 LEGACY_SSL=1
     php: 8.2.0
-  - env: TEST=pgsql LIBONIG_INSTALL=1
+  - env: TEST=pgsql LIBONIG_INSTALL=1 LEGACY_SSL=1
     php: 8.2.0
 language: php
 python:
@@ -78,7 +80,7 @@ before_install:
 
       # Prepare the local codebase
       ./lib/pkp/tools/travis/install-composer-dependencies.sh
-      NODE_OPTIONS=--openssl-legacy-provider npm install && NODE_OPTIONS=--openssl-legacy-provider npm run build
+      if [ -n "$LEGACY_SSL" ]; then NODE_OPTIONS=--openssl-legacy-provider npm install && NODE_OPTIONS=--openssl-legacy-provider npm run build; else npm install && npm run build; fi
     else
       # Prepare for validation tests.
       npm install
