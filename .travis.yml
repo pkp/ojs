@@ -11,10 +11,8 @@ matrix:
   include:
   # Validation
   - env: TEST=validation
-    php: 7.3
+    php: 8.0
   # PostgreSQL / various PHP
-  - env: TEST=pgsql
-    php: 7.3
   - env: TEST=pgsql
     php: 7.4
   - env:
@@ -25,8 +23,6 @@ matrix:
     php: 8.1
   # MySQL / various PHP
   - env: TEST=mysql
-    php: 7.3
-  - env: TEST=mysql
     php: 7.4
   - env:
     - TEST: mysql
@@ -34,6 +30,10 @@ matrix:
     php: 8.0
   - env: TEST=mysql
     php: 8.1
+  - env: TEST=mysql LIBONIG_INSTALL=1
+    php: 8.2.0
+  - env: TEST=pgsql LIBONIG_INSTALL=1
+    php: 8.2.0
 language: php
 python:
   - 3.3 # Required by Javascript linter/builder
@@ -55,6 +55,8 @@ addons:
       - libu2f-udev
 
 before_install:
+  - if [ -n "$LIBONIG_INSTALL" ]; then sudo apt-get install libonig5; fi
+
   # Check out submodules (this script checks out developer forks if necessary)
   - ./tools/startSubmodulesTRAVIS.sh
 
