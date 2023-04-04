@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IssueGalleyForm
+ *
  * @ingroup issue_galley
  *
  * @see IssueGalley
@@ -189,11 +190,11 @@ class IssueGalleyForm extends Form
 
         if ($issueGalley) {
             // Update an existing galley
+            $oldFileId = null;
+
             if ($temporaryFile) {
-                // Galley has a file, delete it before uploading new one
-                if ($issueGalley->getFileId()) {
-                    $issueFileManager->deleteById($issueGalley->getFileId());
-                }
+                $oldFileId = $issueGalley->getFileId();
+
                 // Upload new file
                 $issueFile = $issueFileManager->fromTemporaryFile($temporaryFile);
                 $issueGalley->setFileId($issueFile->getId());
@@ -206,6 +207,11 @@ class IssueGalleyForm extends Form
 
             // Update galley in the db
             $issueGalleyDao->updateObject($issueGalley);
+
+            if ($oldFileId) {
+                // If the galley previously had a file, delete it
+                $issueFileManager->deleteById($oldFileId);
+            }
         } else {
             // Create a new galley
             $issueGalleyFile = $issueFileManager->fromTemporaryFile($temporaryFile);
