@@ -236,7 +236,7 @@ class URNPubIdPlugin extends PubIdPlugin {
 	 * @copydoc PKPPubIdPlugin::isObjectTypeEnabled()
 	 */
 	function isObjectTypeEnabled($pubObjectType, $contextId) {
-		return (boolean) $this->getSetting($contextId, "enable${pubObjectType}URN");
+		return (boolean) $this->getSetting($contextId, "enable{$pubObjectType}URN");
 	}
 
 	/**
