@@ -164,6 +164,100 @@ describe('Submission Wizard', function() {
         cy.get('.pkp_modal').should('not.exist');
     });
 
+    it('When a copyright notice is configured in the context, it appears in the review step of the submission wizard and I am unable to submit without checking its checkbox.', function() {
+        const api = new Api(Cypress.env('baseUrl') + '/index.php/publicknowledge/api/v1');
+        const title = 'Et malesuada fames ac turpis';
+        const copyrightNotice = {
+            en: 'Turpis massa tincidunt dui ut ornare.',
+            fr_CA: 'Vitae semper quis lectus nulla at.',
+        };
+
+        cy.login('dbarnes', null, 'publicknowledge');
+
+        cy.getCsrfToken()
+            .then(() => {
+                cy.request({
+                    url: api.contexts(1),
+                    method: 'PUT',
+                    headers: {
+                        'X-Csrf-Token': this.csrfToken
+                    },
+                    body: {copyrightNotice},
+                });
+            }).then(xhr => {
+                expect(xhr.status).to.eq(200);
+            });
+
+        cy.logout();
+
+        startSubmission(title, null, 'Reviews');
+        cy.contains('Submitting to the Reviews section in English');
+        cy.get('button:contains("Continue")').click();
+        cy.uploadSubmissionFiles([
+            {
+                'file': 'dummy.pdf',
+                'fileName': title + '.pdf',
+                'mimeType': 'application/pdf',
+                'genre': Cypress.env('defaultGenre')
+            }
+        ]);
+        cy.get('button:contains("Continue")').click();
+        cy.get('button:contains("Continue")').click();
+        cy.get('button:contains("Continue")').click();
+        cy.get('button:contains("Submit")').should('be.disabled');
+        cy.get('legend:contains("Copyright")')
+            .parent()
+            .then(($fieldset) => {
+                cy.wrap($fieldset)
+                    .find('blockquote')
+                    .contains(copyrightNotice.en);
+                cy.wrap($fieldset)
+                    .find('input')
+                    .check();
+                cy.get('button:contains("Submit")').should('be.enabled');
+            });
+
+        cy.changeLanguage('fr_CA');
+        cy.get('button:contains("Continue")').click();
+        cy.get('button:contains("Continue")').click();
+        cy.get('button:contains("Continue")').click();
+        cy.get('button:contains("Continue")').click();
+        cy.get('button:contains("Soumettre")').should('be.disabled');
+        cy.get('legend:contains("Droit d\'auteur")')
+            .parent()
+            .then(($fieldset) => {
+                cy.wrap($fieldset)
+                    .find('blockquote')
+                    .contains(copyrightNotice.fr_CA);
+                cy.wrap($fieldset)
+                    .find('input')
+                    .check();
+                cy.get('button:contains("Soumettre")').should('be.enabled');
+            });
+
+        // Remove copyright notice to reset test conditions
+        cy.logout();
+        cy.login('dbarnes', null, 'publicknowledge');
+        cy.getCsrfToken()
+            .then(() => {
+                cy.request({
+                    url: api.contexts(1),
+                    method: 'PUT',
+                    headers: {
+                        'X-Csrf-Token': this.csrfToken
+                    },
+                    body: {
+                        copyrightNotice: {
+                            en: '',
+                            fr_CA: ''
+                        }
+                    },
+                });
+            }).then(xhr => {
+                expect(xhr.status).to.eq(200);
+            });
+    });
+
     it('Enables all submission wizard fields for next tests', function() {
         const api = new Api(Cypress.env('baseUrl') + '/index.php/publicknowledge/api/v1');
 
