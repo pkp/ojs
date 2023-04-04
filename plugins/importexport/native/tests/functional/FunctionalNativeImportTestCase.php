@@ -68,9 +68,9 @@ class FunctionalNativeImportTest extends FunctionalImportExportBaseTestCase {
 		$articleId = null;
 		foreach ($daos as $objectType => $daoName) {
 			$dao = DAORegistry::getDAO($daoName);
-			$pubObject = call_user_func(array($dao, "get${objectType}ByPubId"), 'doi', $this->expectedDois[$objectType]);
+			$pubObject = call_user_func(array($dao, "get{$objectType}ByPubId"), 'doi', $this->expectedDois[$objectType]);
 			self::assertNotNull($pubObject, "Error while testing $objectType: object or DOI has not been imported.");
-			$pubObjectByURN = call_user_func(array($dao, "get${objectType}ByPubId"), 'other::urn', $this->expectedURNs[$objectType]);
+			$pubObjectByURN = call_user_func(array($dao, "get{$objectType}ByPubId"), 'other::urn', $this->expectedURNs[$objectType]);
 			self::assertNotNull($pubObjectByURN, "Error while testing $objectType: object or URN has not been imported.");
 			if ($objectType == 'Submission') {
 				$articleId = $pubObject->getId();
