@@ -75,6 +75,8 @@ describe('Submission Wizard', function() {
         cy.get('#participantsListPlaceholder li:contains("Minoti Inoue")');
         cy.get('#participantsListPlaceholder li:contains("Carlo Corino")');
         cy.get('#queryNotesGrid .gridCellContainer').contains(comments);
+
+        cy.logout();
     });
 
     it('As an author, I am unable to submit to a section when it is marked inactive or when it is configured so that only editors can submit to it', function() {
@@ -91,7 +93,7 @@ describe('Submission Wizard', function() {
                     .next('tr')
                     .find('a:contains("Edit")')
                     .click();
-                cy.wait(1000); // Let modal render. Fixes console error, maybe with TinyMCE init
+                cy.wait(1500); // Let modal render. Fixes console error, maybe with TinyMCE init
                 cy.get('label:contains("Items can only be submitted by Editors and Section Editors.")').click();
                 cy.get('.pkp_modal button:contains("Save")').click();
                 cy.get('.pkp_modal').should('not.exist');
@@ -132,7 +134,7 @@ describe('Submission Wizard', function() {
                         cy.wrap($actionsTr).find('a:contains("Edit")').click();
                     });
             });
-        cy.wait(1000); //  Let modal render. Fixes console error, maybe with TinyMCE init
+        cy.wait(1500); // Let modal render. Fixes console error, maybe with TinyMCE init
         cy.get('label:contains("Items can only be submitted by Editors and Section Editors.")').click();
         cy.get('.pkp_modal button:contains("Save")').click();
         cy.get('.pkp_modal').should('not.exist');
@@ -158,11 +160,13 @@ describe('Submission Wizard', function() {
                         cy.wrap($actionsTr).find('a:contains("Edit")').click();
                     });
             });
-        cy.wait(1000); //  Let modal render. Fixes console error, maybe with TinyMCE init
+        cy.wait(1500); // Let modal render. Fixes console error, maybe with TinyMCE init
         cy.get('label:contains("Items can only be submitted by Editors and Section Editors.")').click();
         cy.get('label:contains("Deactivate this section")').click();
         cy.get('.pkp_modal button:contains("Save")').click();
         cy.get('.pkp_modal').should('not.exist');
+
+        cy.logout();
     });
 
     it('When a copyright notice is configured in the context, it appears in the review step of the submission wizard and I am unable to submit without checking its checkbox.', function() {
@@ -333,6 +337,7 @@ describe('Submission Wizard', function() {
             });
 
         // Start submission in English and Articles section
+        cy.logout();
         startSubmission();
         cy.contains('Submitting to the Articles section in English');
 
@@ -433,6 +438,8 @@ describe('Submission Wizard', function() {
         cy.contains('The submission, ' + submission.title + ', will be submitted to Journal of Public Knowledge for editorial review.');
         cy.get('.modal__footer button:contains("Submit")').click();
         cy.get('h1:contains("Submission complete")');
+
+        cy.logout();
     });
 
     it('I can change the submission language to a different language from the language I am using the site, and the submission forms and validation checks are applied to the language of the submission', function() {
@@ -468,6 +475,7 @@ describe('Submission Wizard', function() {
             });
 
         // Start submission in English and Articles section
+        cy.logout();
         startSubmission();
 
         // Abstract required with word count limit
@@ -594,6 +602,8 @@ describe('Submission Wizard', function() {
         cy.contains('The submission, ' + submission.title.en + ', will be submitted to Journal of Public Knowledge for editorial review.');
         cy.get('.modal__footer button:contains("Submit")').click();
         cy.get('h1:contains("Submission complete")');
+
+        cy.logout();
     });
 
     it('Resets the submission wizard fields to more common configuration', function() {
