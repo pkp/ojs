@@ -59,6 +59,7 @@ describe('Submission Wizard', function() {
         // Add comments for the editor and submit
         cy.setTinyMceContent('commentsForTheEditors-commentsForTheEditors-control', comments);
         cy.get('button:contains("Continue")').click();
+        cy.contains(comments);
         cy.get('button:contains("Submit")').click();
         cy.contains('The submission, ' + title + ', will be submitted to Journal of Public Knowledge for editorial review.');
         cy.get('.modal__footer button:contains("Submit")').click();
