@@ -29,9 +29,9 @@ describe('Submission Wizard', function() {
         cy.login(username, null, 'publicknowledge');
 
         // Start submission in English and Articles section
-		cy.get('a:contains("New Submission")').first().click();
+        cy.get('a:contains("New Submission")').first().click();
         cy.get('label:contains("English")').click();
-		cy.setTinyMceContent('startSubmission-title-control', title);
+        cy.setTinyMceContent('startSubmission-title-control', title);
         cy.get('label:contains("' + section + '")').click();
         cy.get('label:contains("Yes, my submission meets all of these requirements.")').click();
         cy.get('button:contains("Begin Submission")').click();
@@ -57,7 +57,7 @@ describe('Submission Wizard', function() {
         cy.get('button:contains("Continue")').click();
 
         // Add comments for the editor and submit
-		cy.setTinyMceContent('commentsForTheEditors-commentsForTheEditors-control', comments);
+        cy.setTinyMceContent('commentsForTheEditors-commentsForTheEditors-control', comments);
         cy.get('button:contains("Continue")').click();
         cy.get('button:contains("Submit")').click();
         cy.contains('The submission, ' + title + ', will be submitted to Journal of Public Knowledge for editorial review.');
@@ -79,7 +79,7 @@ describe('Submission Wizard', function() {
     it('Sets up the submission wizard for the following tests', function() {
         const api = new Api(Cypress.env('baseUrl') + '/index.php/publicknowledge/api/v1');
 
-		cy.login('dbarnes', null, 'publicknowledge');
+        cy.login('dbarnes', null, 'publicknowledge');
 
         cy.getCsrfToken()
             .then(() => {
@@ -109,8 +109,8 @@ describe('Submission Wizard', function() {
             });
     });
 
-	it('Changes the language of a submission and tests submitting in a language other than the current UI locale', function() {
-		cy.login('ccorino', null, 'publicknowledge');
+    it('Changes the language of a submission and tests submitting in a language other than the current UI locale', function() {
+        cy.login('ccorino', null, 'publicknowledge');
 
         // Start submission in English and Articles section
         startSubmission();
@@ -133,10 +133,10 @@ describe('Submission Wizard', function() {
         // Forms load with French fields displayed instead of English
         cy.contains('Submitting to the Reviews section in French');
         cy.get('span.pkpFormLocales__locale:contains("French")');
-		cy.get('#titleAbstract-keywords-control-fr_CA').type('Transformation Sociale', {delay: 0});
-		cy.get('li:contains("Transformation Sociale")');
-		cy.get('#titleAbstract-keywords-control-fr_CA').type('{downarrow}{enter}', {delay: 0});
-		cy.setTinyMceContent('titleAbstract-abstract-control-fr_CA', submission.abstract.fr_CA);
+        cy.get('#titleAbstract-keywords-control-fr_CA').type('Transformation Sociale', {delay: 0});
+        cy.get('li:contains("Transformation Sociale")');
+        cy.get('#titleAbstract-keywords-control-fr_CA').type('{downarrow}{enter}', {delay: 0});
+        cy.setTinyMceContent('titleAbstract-abstract-control-fr_CA', submission.abstract.fr_CA);
 
         // No abstract requirements in Reviews section
         cy.get('label:contains("Abstract *")').should('not.exist');
@@ -229,9 +229,9 @@ describe('Submission Wizard', function() {
         cy.get('input[name="familyName-fr_CA"]').type('Carlo', {delay: 0});
         cy.get('.modal').find('button:contains("Save")').click();
         cy.get('.pkpSteps button:contains("For the Editors")').click();
-		cy.get('#forTheEditors-subjects-control-fr_CA').type('Sociologie française', {delay: 0});
-		cy.get('li:contains("Sociologie française")');
-		cy.get('#forTheEditors-subjects-control-fr_CA').type('{downarrow}{enter}', {delay: 0});
+        cy.get('#forTheEditors-subjects-control-fr_CA').type('Sociologie française', {delay: 0});
+        cy.get('li:contains("Sociologie française")');
+        cy.get('#forTheEditors-subjects-control-fr_CA').type('{downarrow}{enter}', {delay: 0});
         cy.get('.pkpSteps button:contains("Review")').click();
 
         // Should be able to submit!
@@ -279,7 +279,7 @@ describe('Submission Wizard', function() {
         // Still can't submit as author
         cy.logout();
         cy.login('ccorino', null, 'publicknowledge');
-		cy.get('a:contains("New Submission")').first().click();
+        cy.get('a:contains("New Submission")').first().click();
         cy.get('h1:contains("Not Allowed")');
 
         // Make Reviews not editor-restricted
