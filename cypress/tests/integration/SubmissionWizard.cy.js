@@ -37,7 +37,7 @@ describe('Submission Wizard', function() {
         cy.get('button:contains("Begin Submission")').click();
     }
 
-    it('Tests comments for the editor', function() {
+    it('The comments for the editor are converted to a discussion with all editors and authors assigned', function() {
 
         // Start submission, upload a file and go to For the Editors step
         const title = 'Duis aute irure dolor in reprehenderit in voluptate';
@@ -76,7 +76,95 @@ describe('Submission Wizard', function() {
         cy.get('#queryNotesGrid .gridCellContainer').contains(comments);
     });
 
-    it('Sets up the submission wizard for the following tests', function() {
+    it('As an author, I am unable to submit to a section when it is marked inactive or when it is configured so that only editors can submit to it', function() {
+
+        // Make all sections editor-restricted
+        cy.login('dbarnes', null, 'publicknowledge');
+        cy.get('.app__navGroup:contains("Settings") a:contains("Journal")').click();
+        cy.get('.pkpTabs__buttons button:contains("Sections")').click();
+        cy.get('#sectionsGridContainer a.show_extras')
+            .each(($showExtras) => {
+                cy.wrap($showExtras).click();
+                cy.wrap($showExtras)
+                    .parents('tr')
+                    .next('tr')
+                    .find('a:contains("Edit")')
+                    .click();
+                cy.wait(1000); // Let modal render. Fixes console error, maybe with TinyMCE init
+                cy.get('label:contains("Items can only be submitted by Editors and Section Editors.")').click();
+                cy.get('.pkp_modal button:contains("Save")').click();
+                cy.get('.pkp_modal').should('not.exist');
+            });
+
+        // Can't submit as author
+        cy.logout();
+        cy.login('ccorino', null, 'publicknowledge');
+        cy.get('a:contains("New Submission")').first().click();
+        cy.get('h1:contains("Not Allowed")');
+
+        // Make Articles inactive and leave Reviews editor-restricted
+        cy.logout();
+        cy.login('dbarnes', null, 'publicknowledge');
+        cy.get('.app__navGroup:contains("Settings") a:contains("Journal")').click();
+        cy.get('.pkpTabs__buttons button:contains("Sections")').click();
+        cy.get('#sectionsGridContainer tr:contains("Articles") input').check();
+        cy.get('.pkp_modal_confirmation button:contains("OK")').click();
+        cy.get('.pkpNotification:contains("Your changes have been saved")');
+
+        // Still can't submit as author
+        cy.logout();
+        cy.login('ccorino', null, 'publicknowledge');
+        cy.get('a:contains("New Submission")').first().click();
+        cy.get('h1:contains("Not Allowed")');
+
+        // Make Reviews not editor-restricted
+        cy.logout();
+        cy.login('dbarnes', null, 'publicknowledge');
+        cy.get('.app__navGroup:contains("Settings") a:contains("Journal")').click();
+        cy.get('.pkpTabs__buttons button:contains("Sections")').click();
+        cy.get('#sectionsGridContainer tr:contains("Reviews")')
+            .then(($tr) => {
+                cy.wrap($tr).find('a.show_extras').click();
+                cy.wrap($tr)
+                    .next('tr')
+                    .then(($actionsTr) => {
+                        cy.wrap($actionsTr).find('a:contains("Edit")').click();
+                    });
+            });
+        cy.wait(1000); //  Let modal render. Fixes console error, maybe with TinyMCE init
+        cy.get('label:contains("Items can only be submitted by Editors and Section Editors.")').click();
+        cy.get('.pkp_modal button:contains("Save")').click();
+        cy.get('.pkp_modal').should('not.exist');
+
+        // Can submit to only one section (no option to choose section)
+        cy.logout();
+        cy.login('ccorino', null, 'publicknowledge');
+        cy.get('a:contains("New Submission")').first().click();
+        cy.get('h1:contains("Make a Submission")');
+        cy.get('legend:contains("Section")').should('not.exist');
+
+        // Reactivate Articles section to restore test data conditions
+        cy.logout();
+        cy.login('dbarnes', null, 'publicknowledge');
+        cy.get('.app__navGroup:contains("Settings") a:contains("Journal")').click();
+        cy.get('.pkpTabs__buttons button:contains("Sections")').click();
+        cy.get('#sectionsGridContainer tr:contains("Articles")')
+            .then(($tr) => {
+                cy.wrap($tr).find('a.show_extras').click();
+                cy.wrap($tr)
+                    .next('tr')
+                    .then(($actionsTr) => {
+                        cy.wrap($actionsTr).find('a:contains("Edit")').click();
+                    });
+            });
+        cy.wait(1000); //  Let modal render. Fixes console error, maybe with TinyMCE init
+        cy.get('label:contains("Items can only be submitted by Editors and Section Editors.")').click();
+        cy.get('label:contains("Deactivate this section")').click();
+        cy.get('.pkp_modal button:contains("Save")').click();
+        cy.get('.pkp_modal').should('not.exist');
+    });
+
+    it('Enables all submission wizard fields for next tests', function() {
         const api = new Api(Cypress.env('baseUrl') + '/index.php/publicknowledge/api/v1');
 
         cy.login('dbarnes', null, 'publicknowledge');
@@ -109,7 +197,7 @@ describe('Submission Wizard', function() {
             });
     });
 
-    it('Changes the language of a submission and tests submitting in a language other than the current UI locale', function() {
+    it('I can change the submission language to a different language from the language I am using the site, and the submission forms and validation checks are applied to the language of the submission', function() {
         cy.login('ccorino', null, 'publicknowledge');
 
         // Start submission in English and Articles section
@@ -239,93 +327,5 @@ describe('Submission Wizard', function() {
         cy.contains('The submission, ' + submission.title.en + ', will be submitted to Journal of Public Knowledge for editorial review.');
         cy.get('.modal__footer button:contains("Submit")').click();
         cy.get('h1:contains("Submission complete")');
-    });
-
-    it('As an author, I am unable to submit to a section when it is marked inactive or when it is configured so that only editors can submit to it', function() {
-
-        // Make all sections editor-restricted
-        cy.login('dbarnes', null, 'publicknowledge');
-        cy.get('.app__navGroup:contains("Settings") a:contains("Journal")').click();
-        cy.get('.pkpTabs__buttons button:contains("Sections")').click();
-        cy.get('#sectionsGridContainer a.show_extras')
-            .each(($showExtras) => {
-                cy.wrap($showExtras).click();
-                cy.wrap($showExtras)
-                    .parents('tr')
-                    .next('tr')
-                    .find('a:contains("Edit")')
-                    .click();
-                cy.wait(1000); // Let modal render. Fixes console error, maybe with TinyMCE init
-                cy.get('label:contains("Items can only be submitted by Editors and Section Editors.")').click();
-                cy.get('.pkp_modal button:contains("Save")').click();
-                cy.get('.pkp_modal').should('not.exist');
-            });
-
-        // Can't submit as author
-        cy.logout();
-        cy.login('ccorino', null, 'publicknowledge');
-        cy.get('a:contains("New Submission")').first().click();
-        cy.get('h1:contains("Not Allowed")');
-
-        // Make Articles inactive and leave Reviews editor-restricted
-        cy.logout();
-        cy.login('dbarnes', null, 'publicknowledge');
-        cy.get('.app__navGroup:contains("Settings") a:contains("Journal")').click();
-        cy.get('.pkpTabs__buttons button:contains("Sections")').click();
-        cy.get('#sectionsGridContainer tr:contains("Articles") input').check();
-        cy.get('.pkp_modal_confirmation button:contains("OK")').click();
-        cy.get('.pkpNotification:contains("Your changes have been saved")');
-
-        // Still can't submit as author
-        cy.logout();
-        cy.login('ccorino', null, 'publicknowledge');
-        cy.get('a:contains("New Submission")').first().click();
-        cy.get('h1:contains("Not Allowed")');
-
-        // Make Reviews not editor-restricted
-        cy.logout();
-        cy.login('dbarnes', null, 'publicknowledge');
-        cy.get('.app__navGroup:contains("Settings") a:contains("Journal")').click();
-        cy.get('.pkpTabs__buttons button:contains("Sections")').click();
-        cy.get('#sectionsGridContainer tr:contains("Reviews")')
-            .then(($tr) => {
-                cy.wrap($tr).find('a.show_extras').click();
-                cy.wrap($tr)
-                    .next('tr')
-                    .then(($actionsTr) => {
-                        cy.wrap($actionsTr).find('a:contains("Edit")').click();
-                    });
-            });
-        cy.wait(1000); //  Let modal render. Fixes console error, maybe with TinyMCE init
-        cy.get('label:contains("Items can only be submitted by Editors and Section Editors.")').click();
-        cy.get('.pkp_modal button:contains("Save")').click();
-        cy.get('.pkp_modal').should('not.exist');
-
-        // Can submit to only one section (no option to choose section)
-        cy.logout();
-        cy.login('ccorino', null, 'publicknowledge');
-        cy.get('a:contains("New Submission")').first().click();
-        cy.get('h1:contains("Make a Submission")');
-        cy.get('legend:contains("Section")').should('not.exist');
-
-        // Reactivate Articles section to restore test data conditions
-        cy.logout();
-        cy.login('dbarnes', null, 'publicknowledge');
-        cy.get('.app__navGroup:contains("Settings") a:contains("Journal")').click();
-        cy.get('.pkpTabs__buttons button:contains("Sections")').click();
-        cy.get('#sectionsGridContainer tr:contains("Articles")')
-            .then(($tr) => {
-                cy.wrap($tr).find('a.show_extras').click();
-                cy.wrap($tr)
-                    .next('tr')
-                    .then(($actionsTr) => {
-                        cy.wrap($actionsTr).find('a:contains("Edit")').click();
-                    });
-            });
-        cy.wait(1000); //  Let modal render. Fixes console error, maybe with TinyMCE init
-        cy.get('label:contains("Items can only be submitted by Editors and Section Editors.")').click();
-        cy.get('label:contains("Deactivate this section")').click();
-        cy.get('.pkp_modal button:contains("Save")').click();
-        cy.get('.pkp_modal').should('not.exist');
     });
 })
