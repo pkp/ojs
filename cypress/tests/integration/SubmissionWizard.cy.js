@@ -258,11 +258,187 @@ describe('Submission Wizard', function() {
             });
     });
 
-    it('Enables all submission wizard fields for next tests', function() {
+    it('When I try to submit without required data, it throws a validation error. I can submit after clearing all visible validation errors.', function() {
+        const submission = {
+            abstract: 'In hac habitasse platea dictumst quisque.',
+            title: 'Massa tincidunt dui ut ornare lectus sit amet est',
+            keywords: 'Social Transformation',
+            citations: 'Massa tincidunt dui ut ornare lectus sit amet est',
+            metadata: {
+                autosuggest: {
+                    disciplines: 'Faucibus',
+                    languages: 'Ornare',
+                    subjects: 'Suspendisse',
+                    supportingAgencies: 'Porttitor',
+                },
+                string: {
+                    coverage: 'Lacus',
+                    rights: 'Aliquet',
+                    source: 'Condimentum',
+                    type: 'Tincidunt',
+                },
+                tinyMce: {
+                    dataAvailability: 'Viverra',
+                },
+            }
+        };
+
+        const detailFields = [
+            'Title',
+            'Keywords',
+            'Abstract',
+            'References',
+        ];
+
+        const forTheEditorFields = [
+            'Supporting Agencies',
+            'Coverage',
+            'Data Availability Statement',
+            'Disciplines',
+            'Languages',
+            'Rights',
+            'Source',
+            'Subjects',
+            'Type',
+        ];
+
+        // Require all submission wizard fields
         const api = new Api(Cypress.env('baseUrl') + '/index.php/publicknowledge/api/v1');
-
         cy.login('dbarnes', null, 'publicknowledge');
+        cy.getCsrfToken()
+            .then(() => {
+                cy.request({
+                    url: api.contexts(1),
+                    method: 'PUT',
+                    headers: {
+                        'X-Csrf-Token': this.csrfToken
+                    },
+                    body: {
+                        agencies: 'require',
+                        citations: 'require',
+                        coverage: 'require',
+                        dataAvailability: 'require',
+                        disciplines: 'require',
+                        keywords: 'require',
+                        languages: 'require',
+                        rights: 'require',
+                        source: 'require',
+                        subjects: 'require',
+                        type: 'require',
+                    },
+                });
+            }).then(xhr => {
+                expect(xhr.status).to.eq(200);
+            });
 
+        // Start submission in English and Articles section
+        startSubmission();
+        cy.contains('Submitting to the Articles section in English');
+
+        // Remove title and go to review
+        cy.setTinyMceContent('titleAbstract-title-control-en', '');
+        cy.get('button:contains("Continue")').click();
+        cy.get('button:contains("Continue")').click();
+        cy.get('button:contains("Continue")').click();
+        cy.get('button:contains("Continue")').click();
+
+        // Can't submit, check errors
+        cy.contains('There are one or more problems');
+        cy.get('button:contains("Submit")').should('be.disabled');
+        cy.contains('You must upload at least one Article Text file.');
+        cy.get('h3:contains("Details (English)")')
+            .then($h3 => {
+                detailFields.forEach(field => {
+                    cy.wrap($h3)
+                        .parents('.submissionWizard__reviewPanel')
+                        .find('h4:contains("' + field + '")')
+                        .parent()
+                        .contains('This field is required.');
+                });
+            });
+        cy.get('h3:contains("For the Editors (English)")')
+            .then($h3 => {
+                forTheEditorFields.forEach(field => {
+                    cy.wrap($h3)
+                        .parents('.submissionWizard__reviewPanel')
+                        .find('h4:contains("' + field + '")')
+                        .parent()
+                        .contains('This field is required.');
+                });
+            });
+
+        // Add missing data
+        cy.get('.pkpSteps button:contains("Details")').click();
+        cy.setTinyMceContent('titleAbstract-title-control-en', submission.title);
+        cy.setTinyMceContent('titleAbstract-abstract-control-en', submission.abstract);
+        cy.get('#titleAbstract-keywords-control-en').type(submission.keywords, {delay: 0});
+        cy.get('li:contains("' + submission.keywords + '")');
+        cy.get('#titleAbstract-keywords-control-en').type('{downarrow}{enter}', {delay: 0});
+        cy.get('#citations-citationsRaw-control').type(submission.citations);
+
+        cy.get('.pkpSteps button:contains("Upload Files")').click();
+        cy.uploadSubmissionFiles([
+            {
+                'file': 'dummy.pdf',
+                'fileName': submission.title + '.pdf',
+                'mimeType': 'application/pdf',
+                'genre': Cypress.env('defaultGenre')
+            }
+        ]);
+
+        cy.get('.pkpSteps button:contains("For the Editors")').click();
+        Object.keys(submission.metadata.autosuggest).forEach(field => {
+            cy.get('#forTheEditors-' + field + '-control-en').type(submission.metadata.autosuggest[field], {delay: 0});
+            cy.get('li:contains("' + submission.metadata.autosuggest[field] + '")');
+            cy.get('#forTheEditors-' + field + '-control-en').type('{downarrow}{enter}', {delay: 0});
+        });
+        Object.keys(submission.metadata.string).forEach(field => {
+            cy.get('#forTheEditors-' + field + '-control-en').type(submission.metadata.string[field]);
+        });
+        Object.keys(submission.metadata.tinyMce).forEach(field => {
+            cy.setTinyMceContent('forTheEditors-' + field + '-control-en', submission.metadata.tinyMce[field]);
+        });
+
+        // All errors should be gone and submit should be allowed.
+        cy.get('.pkpSteps button:contains("Review")').click();
+        cy.get('*:contains("There are one or more problems")').should('not.exist');
+        cy.get('button:contains("Submit")').should('be.enabled');
+        cy.get('*:contains("You must upload at least one Article Text file.")').should('not.exist');
+        cy.get('h3:contains("Details (English)")')
+            .then($h3 => {
+                detailFields.forEach(field => {
+                    cy.wrap($h3)
+                        .parents('.submissionWizard__reviewPanel')
+                        .find('h4:contains("' + field + '")')
+                        .parent()
+                        .find('*:contains("This field is required.")')
+                        .should('not.exist');
+                });
+            });
+        cy.get('h3:contains("For the Editors (English)")')
+            .then($h3 => {
+                forTheEditorFields.forEach(field => {
+                    cy.wrap($h3)
+                        .parents('.submissionWizard__reviewPanel')
+                        .find('h4:contains("' + field + '")')
+                        .parent()
+                        .find('*:contains("This field is required.")')
+                        .should('not.exist');
+                });
+            });
+
+        // Submit
+        cy.get('button:contains("Submit")').click();
+        cy.contains('The submission, ' + submission.title + ', will be submitted to Journal of Public Knowledge for editorial review.');
+        cy.get('.modal__footer button:contains("Submit")').click();
+        cy.get('h1:contains("Submission complete")');
+    });
+
+    it('I can change the submission language to a different language from the language I am using the site, and the submission forms and validation checks are applied to the language of the submission', function() {
+
+        // Enable all submission wizard fields
+        const api = new Api(Cypress.env('baseUrl') + '/index.php/publicknowledge/api/v1');
+        cy.login('dbarnes', null, 'publicknowledge');
         cy.getCsrfToken()
             .then(() => {
                 cy.request({
@@ -289,10 +465,6 @@ describe('Submission Wizard', function() {
             }).then(xhr => {
                 expect(xhr.status).to.eq(200);
             });
-    });
-
-    it('I can change the submission language to a different language from the language I am using the site, and the submission forms and validation checks are applied to the language of the submission', function() {
-        cy.login('ccorino', null, 'publicknowledge');
 
         // Start submission in English and Articles section
         startSubmission();
@@ -421,5 +593,38 @@ describe('Submission Wizard', function() {
         cy.contains('The submission, ' + submission.title.en + ', will be submitted to Journal of Public Knowledge for editorial review.');
         cy.get('.modal__footer button:contains("Submit")').click();
         cy.get('h1:contains("Submission complete")');
+    });
+
+    it('Resets the submission wizard fields to more common configuration', function() {
+
+        // Reset all submission wizard fields
+        const api = new Api(Cypress.env('baseUrl') + '/index.php/publicknowledge/api/v1');
+        cy.login('dbarnes', null, 'publicknowledge');
+        cy.getCsrfToken()
+            .then(() => {
+                cy.request({
+                    url: api.contexts(1),
+                    method: 'PUT',
+                    headers: {
+                        'X-Csrf-Token': this.csrfToken
+                    },
+                    body: {
+                        agencies: '0',
+                        citations: '0',
+                        coverage: '0',
+                        dataAvailability: '0',
+                        disciplines: '0',
+                        keywords: 'request',
+                        languages: '0',
+                        rights: '0',
+                        source: '0',
+                        subjects: '0',
+                        submitWithCategories: false,
+                        type: '0',
+                    },
+                });
+            }).then(xhr => {
+                expect(xhr.status).to.eq(200);
+            });
     });
 })
