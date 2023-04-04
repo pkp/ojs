@@ -1,12 +1,12 @@
 # Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
-# Tigran Zargaryan <tigran@flib.sci.am>, 2022.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-12-14 12:02+0000\n"
+"PO-Revision-Date: 2023-04-04 23:00+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
-"Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
-"hy_AM/>\n"
-"Language: hy_AM\n"
+"Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/manager/hy/"
+">\n"
+"Language: hy\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2225,7 +2225,6 @@ msgstr "Ամսագրի գլխավոր էջի URL-ը"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Ամսագրի հիմնական կոնտակտի անվանումը"
 
-#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr "Ամսագրի սկզբնատառերը"
 
@@ -2236,7 +2235,7 @@ msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Ամսագրի հիմնական կոնտակտի էլ. փոստի հասցեն"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "Ամսագրի փոստային հասցեն"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Վճարման տեսակի անվանումը"
@@ -2270,36 +2269,35 @@ msgstr "Բաժանորդագրության տեսակի, անվանման, տև�
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Տեղեկատվություն բաժանորդի անդամակցության մասին"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr "Հաստատության անվանումը"
+msgstr "Բաժանորդագրվող հաստատության անվանումը"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr "Հաստատության փոստային հասցեն"
+msgstr "Բաժանորդագրվող հաստատության փոստային հասցեն"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
-msgstr "Դոմեյն"
+msgstr "Այս բաժանորդագրության վավեր IP հասցե(ներ)ի տիրույթի անվանումը"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr "Բաժանորդագրության նույնականացման IP միջակայքերը"
+msgstr "Այս բաժանորդագրության համար վավեր IP միջակայքերը"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "URL այն էջի, որտեղ հեղինակը կարող է վճարում կատարել"
 
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "Ներկայացման ուղեցույցի URL"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "Հրապարակված հոդվածների վիճակագրության էջի հղումը"
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "Թողարկման ID"
 
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
+"Այս էլ. նամակն ամեն ամիս ինքնաշխատ կերպով ուղարկվում է խմբագիրներին և "
+"ամսագրի մենեջերներին՝ նրանց համակարգի առողջության վերաբերյալ ակնարկ "
+"տրամադրելու համար:"
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Վավերացնել էլ․ փոստը (ամսագրի գրանցում)"
@@ -2660,10 +2658,12 @@ msgstr ""
 "կատարվում, և չկան նշանակված խմբագիրներ:"
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "Վճարման հարցում"
 
 msgid "mailable.paymentRequest.description"
 msgstr ""
+"Այս ինքնաշխատ էլ. նամակն ուղարկվում է հեղինակին՝ խնդրելու վճարել "
+"հրատարակության վճարը, երբ հոդվածը ընդունվի:"
 
 #~ msgid "mailable.lockssExistingArchive.name"
 #~ msgstr "Արխիվային հարցում"
@@ -2709,3 +2709,16 @@ msgstr ""
 #~ "\t\tորոնման արդյունքները։ Խնդրում ենք որպես կանխադրված ընտրել կազմաձևված "
 #~ "չափորոշիչներից մեկը:\n"
 #~ "\t"
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "Չհաջողվեց ներմուծել թողարկման շարվածքը, դրա նիշքը բացակայում է."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"{$id} թողարկման շարվածքը հնարավոր չէ արտահանել, դրա նիշքը չի գտնվել \"{$path}"
+"\" ուղու վրա:"
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"{$id} թողարկման շապիկի պատկերը չի արտահանվել, դրա ֆայլը չի գտնվել \"{$path}\""
+" ուղու վրա."
