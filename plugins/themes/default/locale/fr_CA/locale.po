@@ -1,12 +1,12 @@
 # Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2022.
+# Pierre Lasou <pierre.lasou@bibl.ulaval.ca>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T06:56:50-07:00\n"
-"PO-Revision-Date: 2022-09-30 19:01+0000\n"
-"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-helene."
-"vezina@umontreal.ca>\n"
+"PO-Revision-Date: 2023-04-07 04:59+0000\n"
+"Last-Translator: Pierre Lasou <pierre.lasou@bibl.ulaval.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -81,16 +81,22 @@ msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
 msgstr "Afficher l'image de la page d'accueil comme arrière-plan de l'en-tête."
 
 msgid "plugins.themes.default.option.displayStats.label"
-msgstr ""
+msgstr "Options d'affichage des statistiques d'utilisation"
 
 msgid "plugins.themes.default.option.displayStats.none"
 msgstr ""
+"Ne pas afficher le tableau des statistiques d'utilisation des soumissions "
+"aux lecteurs."
 
 msgid "plugins.themes.default.option.displayStats.bar"
 msgstr ""
+"Utiliser le type de barre du graphique pour l'affichage des statistiques "
+"d'utilisation."
 
 msgid "plugins.themes.default.option.displayStats.line"
 msgstr ""
+"Utiliser le type de ligne du graphique pour l'affichage des statistiques "
+"d'utilisation."
 
 msgid "plugins.themes.default.displayStats.monthInitials"
 msgstr "Janv Fév Mars Avr Mai Juin Juil Août Sept Oct Noc Déc"
@@ -99,7 +105,7 @@ msgid "plugins.themes.default.displayStats.downloads"
 msgstr "Téléchargements"
 
 msgid "plugins.themes.default.displayStats.noStats"
-msgstr ""
+msgstr "Les données de téléchargement ne sont pas encore disponible."
 
 #~ msgid "plugins.themes.default.option.showDescriptionInJournalIndex.label"
 #~ msgstr "Description de la revue"
