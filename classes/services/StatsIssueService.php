@@ -59,7 +59,7 @@ class StatsIssueService
 
         Hook::call('StatsIssue::getCount::queryBuilder', [&$metricsQB, $args]);
 
-        return $metricsQB->getIssueIds()->get()->count();
+        return $metricsQB->getIssueIds()->safeCount();
     }
 
     /**
