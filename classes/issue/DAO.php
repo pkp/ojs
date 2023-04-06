@@ -446,24 +446,26 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
             $params[] = $pubIdSettingValue;
         }
 
+        $baseSql = '
+            FROM issues i
+            LEFT JOIN custom_issue_orders o ON (o.issue_id = i.issue_id)
+            ' . ($pubIdType != null ? ' LEFT JOIN issue_settings ist ON (i.issue_id = ist.issue_id)' : '')
+            . ($pubIdSettingName != null ? ' LEFT JOIN issue_settings iss ON (i.issue_id = iss.issue_id AND iss.setting_name = ?)' : '') . '
+            WHERE i.published = 1  AND i.journal_id = ?
+            ' . ($pubIdType != null ? ' AND ist.setting_name = ? AND ist.setting_value IS NOT NULL' : '')
+            . (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == EXPORT_STATUS_NOT_DEPOSITED) ? ' AND iss.setting_value IS NULL' : '')
+            . (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != EXPORT_STATUS_NOT_DEPOSITED) ? ' AND iss.setting_value = ?' : '')
+            . (($pubIdSettingName != null && is_null($pubIdSettingValue)) ? ' AND (iss.setting_value IS NULL OR iss.setting_value = \'\')' : '');
+
         $result = $this->deprecatedDao->retrieveRange(
-            $sql = 'SELECT i.*
-			FROM issues i
-				LEFT JOIN custom_issue_orders o ON (o.issue_id = i.issue_id)
-				' . ($pubIdType != null ? ' LEFT JOIN issue_settings ist ON (i.issue_id = ist.issue_id)' : '')
-                . ($pubIdSettingName != null ? ' LEFT JOIN issue_settings iss ON (i.issue_id = iss.issue_id AND iss.setting_name = ?)' : '') . '
-			WHERE
-				i.published = 1  AND i.journal_id = ?
-				' . ($pubIdType != null ? ' AND ist.setting_name = ? AND ist.setting_value IS NOT NULL' : '')
-                . (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == EXPORT_STATUS_NOT_DEPOSITED) ? ' AND iss.setting_value IS NULL' : '')
-                . (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != EXPORT_STATUS_NOT_DEPOSITED) ? ' AND iss.setting_value = ?' : '')
-                . (($pubIdSettingName != null && is_null($pubIdSettingValue)) ? ' AND (iss.setting_value IS NULL OR iss.setting_value = \'\')' : '')
-                . ' ORDER BY i.date_published DESC',
+            "SELECT i.*
+			{$baseSql}
+            ORDER BY i.date_published DESC",
             $params,
             $rangeInfo
         );
 
-        return new DAOResultFactory($result, $this, 'fromRow', [], $sql, $params, $rangeInfo);
+        return new DAOResultFactory($result, $this, 'fromRow', [], "SELECT 0 {$baseSql}", $params, $rangeInfo);
     }
 
     /**

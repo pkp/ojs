@@ -394,21 +394,24 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
     public function getByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null)
     {
         $params = array_merge($this->getFetchParameters(), [(int) $journalId]);
+        $baseSql = "
+            FROM subscriptions s
+            JOIN subscription_types st ON (s.type_id = st.type_id)
+            JOIN users u ON (s.user_id = u.user_id)
+            {$this->getFetchJoins()}
+            WHERE
+            st.institutional = 0
+            AND s.journal_id = ?
+            " . parent::_generateSearchSQL($status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params);
+
         $result = $this->retrieveRange(
-            $sql = 'SELECT s.*, ' . $this->getFetchColumns() . '
-                    FROM subscriptions s
-                        JOIN subscription_types st ON (s.type_id = st.type_id)
-                        JOIN users u ON (s.user_id = u.user_id)
-                        ' . $this->getFetchJoins() . '
-                    WHERE
-                        st.institutional = 0
-                        AND s.journal_id = ? ' .
-            parent::_generateSearchSQL($status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params) . ' ' .
-            'ORDER BY u.user_id, s.subscription_id',
+            "SELECT s.*, {$this->getFetchColumns()}
+            {$baseSql}
+            ORDER BY u.user_id, s.subscription_id",
             $params,
             $rangeInfo
         );
-        return new DAOResultFactory($result, $this, '_fromRow', [], $sql, $params, $rangeInfo); // Counted in subscription grid paging
+        return new DAOResultFactory($result, $this, '_fromRow', [], "SELECT 0 {$baseSql}", $params, $rangeInfo); // Counted in subscription grid paging
     }
 
     /**
