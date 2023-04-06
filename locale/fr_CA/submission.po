@@ -1,12 +1,12 @@
 # Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2022, 2023.
+# Pierre Lasou <pierre.lasou@bibl.ulaval.ca>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2023-03-23 09:14+0000\n"
-"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-helene."
-"vezina@umontreal.ca>\n"
+"PO-Revision-Date: 2023-04-07 04:59+0000\n"
+"Last-Translator: Pierre Lasou <pierre.lasou@bibl.ulaval.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -398,23 +398,41 @@ msgid "galley.cantEditPublished"
 msgstr ""
 "Ces épreuves ne peuvent pas être éditées car elles ont déjà été publiées."
 
+#, fuzzy
 msgid "submission.copyright.description"
 msgstr ""
+"Veuillez lire attentivement la politique sur le droit d'auteur de cette "
+"revue."
 
+#, fuzzy
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
+"Vous n'êtes pas autorisé à soumettre votre manuscrit à cette revue car les "
+"auteurs obtenir l'autorisation du personnel de la revue pour le faire. Si "
+"vous pensez que s'est une erreur, contactez <a "
+"href='mailto:{$email}'>{$name}</a>."
 
+#, fuzzy
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
+"Vous n'êtes pas autorisé à soumettre votre manuscrit à cette revue car les "
+"soumissions ont été désactivées. Si vous pensez que s'est une erreur, "
+"contactez <a href='mailto:{$email}'>{$name}</a>."
 
+#, fuzzy
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
+"{$contextName} n'accepte pas de soumission dans la rubrique {$section}. Si "
+"vous éprouvez des difficultés pour retrouver votre soumission, contactez <a "
+"href='mailto:{$email}'>{$name}</a>."
 
+#, fuzzy
 msgid "submission.sectionNotFound"
-msgstr ""
+msgstr "La rubrique de cette soumission n'a pu être retrouvée."
 
 msgid "submission.sectionRestrictedToEditors"
 msgstr ""
+"Seul le personnel de la revue est autorisé à soumettre dans cette rubrique."
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Au moins un-e auteur-e est requis-e."
