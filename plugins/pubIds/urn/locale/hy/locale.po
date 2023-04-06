@@ -1,17 +1,17 @@
 # Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
-# Tigran Zargaryan <tigran@flib.sci.am>, 2022.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-07-04 06:31+0000\n"
+"PO-Revision-Date: 2023-04-07 04:59+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
-"hy_AM/>\n"
-"Language: hy_AM\n"
+"hy/>\n"
+"Language: hy\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.pubIds.urn.displayName"
 msgstr "URN"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "plugins.pubIds.urn.manager.settings.description"
 msgstr ""
 "Խնդրում ենք կարգավորել URN հավելվածը, որպեսզի այն կարողանա կառավարել և "
-"օգտագործել URN-ները OJS-ում."
+"օգտագործել URN-ները OJS-ում:"
 
 msgid "plugins.pubIds.urn.manager.settings.urnObjects"
 msgstr "Ամսագրի բովանդակությունը"
