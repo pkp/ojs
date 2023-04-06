@@ -133,7 +133,7 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
     {
         return $query
             ->getQueryBuilder()
-            ->count();
+            ->safeCount();
     }
 
     /**
@@ -268,7 +268,7 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
     {
         $resultCount = DB::table('custom_issue_orders', 'o')
             ->where('o.journal_id', '=', $contextId)
-            ->count();
+            ->safeCount();
         return $resultCount != 0;
     }
 

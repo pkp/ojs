@@ -306,8 +306,8 @@ class Repository extends \PKP\doi\Repository
             Repo::doi()::TYPE_REPRESENTATION => Repo::galley()
                 ->getCollector()
                 ->filterByDoiIds([$doiId])
-                ->getIds()
-                ->count(),
+                ->getQueryBuilder()
+                ->safeCount() > 0,
             default => false,
         };
 
