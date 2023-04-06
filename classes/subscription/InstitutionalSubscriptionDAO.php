@@ -437,25 +437,29 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
             }
         }
 
+        $baseSql = "
+            FROM subscriptions s
+            JOIN subscription_types st ON (s.type_id = st.type_id)
+            JOIN users u ON (s.user_id = u.user_id)
+            JOIN institutional_subscriptions iss ON (s.subscription_id = iss.subscription_id)
+            {$institutionFetch}
+            {$ipRangeFetch}
+            {$this->getInstitutionNameFetchJoins()}
+            {$this->getFetchJoins()}
+            WHERE st.institutional = 1 AND s.journal_id = ?
+            {$searchSql}";
+
         $result = $this->retrieveRange(
-            $sql = 'SELECT DISTINCT s.*, iss.institution_id, iss.mailing_address, iss.domain,
-                ' . $this->getInstitutionNameFetchColumns() . ',
-                ' . $this->getFetchColumns() . '
-                FROM	subscriptions s
-                    JOIN subscription_types st ON (s.type_id = st.type_id)
-                    JOIN users u ON (s.user_id = u.user_id)
-                    JOIN institutional_subscriptions iss ON (s.subscription_id = iss.subscription_id)
-                    ' . $institutionFetch . '
-                    ' . $ipRangeFetch . '
-                    ' . $this->getInstitutionNameFetchJoins() . '
-                    ' . $this->getFetchJoins() . '
-                WHERE	st.institutional = 1 AND s.journal_id = ?
-                ' . $searchSql . ' ORDER BY institution_name ASC, s.subscription_id',
+            "SELECT DISTINCT s.*, iss.institution_id, iss.mailing_address, iss.domain,
+            {$this->getInstitutionNameFetchColumns()},
+            {$this->getFetchColumns()}
+            {$baseSql}
+            ORDER BY institution_name ASC, s.subscription_id",
             $params,
             $rangeInfo
         );
 
-        return new DAOResultFactory($result, $this, '_fromRow', [], $sql, $params, $rangeInfo); // Counted in subscription grid paging
+        return new DAOResultFactory($result, $this, '_fromRow', [], "SELECT 0 {$baseSql}", $params, $rangeInfo); // Counted in subscription grid paging
     }
 
     /**
