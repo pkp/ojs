@@ -1,19 +1,19 @@
-# Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>, 2021, 2022.
+# Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
-"PO-Revision-Date: 2022-07-15 11:33+0000\n"
+"PO-Revision-Date: 2023-04-07 08:35+0000\n"
 "Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/"
-"submission/id_ID/>\n"
-"Language: id_ID\n"
+"submission/id/>\n"
+"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "submission.submit.userGroup"
 msgstr "Serahkan dalam peran saya sebagai..."
@@ -373,28 +373,37 @@ msgstr ""
 "ditemukan pada jurnal ini."
 
 msgid "submission.layout.viewGalley"
-msgstr ""
+msgstr "Buka Galei"
 
 msgid "galley.cantEditPublished"
-msgstr ""
+msgstr "Galei ini tidak dapat diedit karena telah diterbitkan."
 
 msgid "submission.copyright.description"
-msgstr ""
+msgstr "Baca dan pahami syarat Hak Cipta naskah pada jurnal ini."
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
+"Anda tidak diperbolehkan mengirim nasakah ke jurnal ini karena penulis harus "
+"difatar terlebih dahulu oleh staf redaksi. Jika menurut anda ini keliru, "
+"silakan hubungi <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
+"Anda tidak diperbolehkan mengirim nasakah ke jurnal ini karena semua seksi "
+"penerimaan naskah telah ditutup atau dibatasi. Jika menurut anda ini terjadi "
+"kesalahan, silakan hubungi <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
+"{$contextName} tidak menerima naskah pada seksi {$section}. Jika perlu "
+"memperbaiki naskah Anda, silakan hubungi <a "
+"href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.sectionNotFound"
-msgstr ""
+msgstr "Seksi untuk naskah ini tidak ada."
 
 msgid "submission.sectionRestrictedToEditors"
-msgstr ""
+msgstr "Hanya staf redaksi yang bisa mengirim ke seksi ini."
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Dibutuhkan setidaknya satu penulis."
