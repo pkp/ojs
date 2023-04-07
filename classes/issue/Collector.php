@@ -33,6 +33,9 @@ class Collector implements CollectorInterface
     /** @var array|null Context ID or PKPApplication::CONTEXT_ID_ALL to get from all contexts */
     public ?array $contextIds = null;
 
+    /** @var array|null List of issue IDs to include */
+    public ?array $issueIds = null;
+
     /** @var array|null order and direction pairing for queries */
     public ?array $resultOrderings = null;
 
@@ -95,6 +98,17 @@ class Collector implements CollectorInterface
     public function filterByContextIds(?array $contextIds): self
     {
         $this->contextIds = $contextIds;
+        return $this;
+    }
+
+    /**
+     * Set issue ID filter
+     *
+     * @return $this
+     */
+    public function filterByIssueIds(?array $issueIds): self
+    {
+        $this->issueIds = $issueIds;
         return $this;
     }
 
@@ -338,7 +352,11 @@ class Collector implements CollectorInterface
             $q->whereIn('i.journal_id', $this->contextIds);
         }
 
-        // Published
+        // Issue IDs
+        $q->when($this->issueIds !== null, function (Builder $q) {
+            $q->whereIn('i.issue_id', $this->issueIds);
+        });
+
         $q->when($this->isPublished !== null, function (Builder $q) {
             $q->where('i.published', '=', $this->isPublished ? 1 : 0);
         });
