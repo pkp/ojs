@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
-"PO-Revision-Date: 2023-04-09 01:59+0000\n"
+"PO-Revision-Date: 2023-04-11 01:52+0000\n"
 "Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "id/>\n"
@@ -1255,7 +1255,7 @@ msgid "manager.subscriptionPolicies"
 msgstr "Kebijakan Langganan"
 
 msgid "manager.subscriptionPolicies.delayedOpenAccess"
-msgstr "Delayed Open Access"
+msgstr "Open Akses Ditunda"
 
 msgid ""
 "manager.subscriptionPolicies."
@@ -1670,8 +1670,8 @@ msgstr "Pilih Pengguna"
 
 msgid "manager.subscriptions.selectSubscriber.desc"
 msgstr ""
-"Hak istimewa akses langganan secara otomatis diberikan untuk manajer jurnal, "
-"editor, editor bagian, editor layout, copy editor, dan proofreader."
+"Hak istimewa akses langganan secara otomatis diberikan kepada Manajer "
+"Jurnal, Editor, Editor Bagian, Editor Layout, Copyeditor, dan Proofreader."
 
 msgid "manager.subscriptions.select"
 msgstr "Pilih"
@@ -1724,7 +1724,7 @@ msgid "manager.subscriptionTypes.edit"
 msgstr "Edit Tipe Langganan"
 
 msgid "manager.subscriptionTypes.editTitle"
-msgstr "Edit"
+msgstr "Sunting"
 
 msgid "manager.subscriptionTypes.form.cost"
 msgstr "Biaya"
@@ -1856,7 +1856,7 @@ msgstr ""
 "kategori."
 
 msgid "grid.category.path"
-msgstr "Path"
+msgstr "Lokasi"
 
 msgid "grid.action.addSection"
 msgstr "Tambah Bagian"
@@ -2008,7 +2008,7 @@ msgid "plugins.importexport.common.error.validation"
 msgstr "Tidak dapat mengubah objek yang dipilih."
 
 msgid "plugins.importexport.common.invalidXML"
-msgstr "Invalid XML:"
+msgstr "XML Tidak Valid:"
 
 msgid "plugins.importexport.common.export.error.outputFileNotWritable"
 msgstr "File output {$param} tidak writable."
@@ -2073,21 +2073,26 @@ msgstr "Tidak ditemukan edsi berisi statistik penggunaan sesuai parameter ini."
 
 msgid "stats.issues.downloadReport.description"
 msgstr ""
+"Unduh format CSV/Excel yang berisi statistik terbitan jurnal berdasarkan "
+"parameter berikut."
 
 msgid "stats.issues.downloadReport.downloadIssues.description"
 msgstr ""
+"Jumlah tayang DAFIS dan unduhan galei edisi untuk setiap edisi terbitan."
 
 msgid "stats.issues.downloadReport.downloadIssues"
-msgstr ""
+msgstr "Unduh Edisi Terbitas"
 
 msgid "stats.issues.countOfTotal"
-msgstr ""
+msgstr "{$count} dari {$total} edisi"
 
 msgid "stats.issues.tooltip.label"
-msgstr ""
+msgstr "Tentang statistik edisi terbitan"
 
 msgid "stats.issues.tooltip.text"
 msgstr ""
+"<strong>Penayangan</strong>: Jumlah pengunjung yang membuka daftar isi "
+"edisi.<br><strong>Unduhan</strong>: Jumlah unduhan galei edisi, jika ada."
 
 msgid "stats.publicationStats"
 msgstr "Statistik Artikel"
@@ -2117,12 +2122,14 @@ msgstr "File"
 
 msgid "stats.publications.downloadReport.description"
 msgstr ""
+"Unduh format CSV/Excel yang berisi statistik artikel berdasarkan parameter "
+"berikut."
 
 msgid "stats.publications.downloadReport.downloadSubmissions"
-msgstr ""
+msgstr "Unduhan Artikel"
 
 msgid "stats.publications.downloadReport.downloadSubmissions.description"
-msgstr ""
+msgstr "Jumlah tayangan abstrak dan unduhan file setiap artikel."
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
@@ -2154,7 +2161,7 @@ msgid "emailTemplate.variable.context.contactName"
 msgstr "Nama narahubung utama jurnal"
 
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr ""
+msgstr "Inisial jurnal"
 
 msgid "emailTemplate.variable.context.contextSignature"
 msgstr "Tanta tanfan email jurnal untuk email otomatis"
@@ -2163,7 +2170,7 @@ msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Alamat email narahubung utama jurnal"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "Alamat surat jurnal"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Nama jenis pembayaran"
@@ -2196,31 +2203,33 @@ msgid "emailTemplate.variable.subscription.membership"
 msgstr "Informasi tentang keanggotaan pelanggan"
 
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr ""
+msgstr "Nama institusi pelanggan"
 
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr ""
+msgstr "Alamat surat institusi pelanggan"
 
 msgid "emailTemplate.variable.subscription.domain"
-msgstr ""
+msgstr "Nama domain alamat IP valid untuk tipe langganan ini"
 
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr ""
+msgstr "Rentang IP valid untuk tipe langganan ini"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "URL ke halaman di mana penulis bisa melakukan pembayaran"
 
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "URL panduan mengirim naskah"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "Tautan halaman statistik artikel"
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "ID terbitan"
 
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
+"Email ini dikirim secara otomatis per bulan ke editor dan manajer jurnal "
+"untuk memberikan gambaran keadaan sistem jurnal."
 
 msgid "mailable.validateEmailContext.name"
 msgstr "validasi Email (Registrasi Jurnal)"
@@ -2465,16 +2474,16 @@ msgid "manager.institutions.noContext"
 msgstr "Jurnal institusi ini tidak ditemukan."
 
 msgid "mailable.subscriptionNotify.name"
-msgstr ""
+msgstr "Notifikasi berlangganan"
 
 msgid "mailable.subscriptionNotify.description"
 msgstr ""
 "Email ini memberitahu pembaca terdaftar bahwa Manajer telah membuat akses "
-"langganan untuk mereka.  Email ini memberikan URL jurnal beserta petunjuk "
+"langganan untuk mereka. Email ini memberikan URL jurnal beserta petunjuk "
 "aksesnya."
 
 msgid "mailable.subscriptionExpiresSoon.name"
-msgstr ""
+msgstr "Langganan Akan Segera Habis"
 
 msgid "mailable.subscriptionExpiresSoon.description"
 msgstr ""
@@ -2482,7 +2491,7 @@ msgstr ""
 "Email ini memberikan URL jurnal beserta petunjuk aksesnya."
 
 msgid "mailable.subscriptionExpired.name"
-msgstr ""
+msgstr "Langganan habis"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
@@ -2490,7 +2499,7 @@ msgstr ""
 "Email ini memberikan URL jurnal beserta petunjuk aksesnya."
 
 msgid "mailable.subscriptionExpiredLast.name"
-msgstr ""
+msgstr "Langganan habis terakhir"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
@@ -2498,45 +2507,45 @@ msgstr ""
 "Email ini memberikan URL jurnal beserta petunjuk aksesnya."
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
-msgstr ""
+msgstr "Beli Langganan Individu"
 
 msgid "mailable.subscriptionPurchaseIndividual.description"
 msgstr ""
 "Email ini memberitahu Manajer Langganan bahwa sebuah langganan individu "
-"telah dibeli online.  Email ini memberikan ringkasan informasi tentang "
+"telah dibeli online. Email ini memberikan ringkasan informasi tentang "
 "langganan tersebut beserta tautan untuk mengakses langganan yang dibeli."
 
 msgid "mailable.subscriptionPurchaseInstitutional.name"
-msgstr ""
+msgstr "Berlangganan Institusi"
 
 msgid "mailable.subscriptionPurchaseInstitutional.description"
 msgstr ""
 "Email ini memberitahu Manajer Langganan bahwa sebuah langganan institusi "
-"telah dibeli online.  Email ini memberikan ringkasan informasi tentang "
+"telah dibeli online. Email ini memberikan ringkasan informasi tentang "
 "langganan tersebut beserta tautan untuk mengakses langganan yang dibeli."
 
 msgid "mailable.subscriptionRenewIndividual.name"
-msgstr ""
+msgstr "Perbaharui Langganan Individu"
 
 msgid "mailable.subscriptionRenewIndividual.description"
 msgstr ""
 "Email ini memberitahu Manajer Langganan bahwa sebuah langganan individu "
-"telah diperbaharui online.  Email ini memberikan ringkasan informasi tentang "
+"telah diperbaharui online. Email ini memberikan ringkasan informasi tentang "
 "langganan tersebut beserta tautan untuk mengakses langganan yang "
 "diperbaharui."
 
 msgid "mailable.subscriptionRenewInstitutional.name"
-msgstr ""
+msgstr "Perbaharui Langganann Institusi"
 
 msgid "mailable.subscriptionRenewInstitutional.description"
 msgstr ""
 "Email ini memberitahu Manajer Langganan bahwa sebuah langganan institusi "
-"telah diperbaharui online.  Email ini memberikan ringkasan informasi tentang "
+"telah diperbaharui online. Email ini memberikan ringkasan informasi tentang "
 "langganan tersebut beserta tautan untuk mengakses langganan yang "
 "diperbaharui."
 
 msgid "mailable.openAccessNotify.name"
-msgstr ""
+msgstr "Notifikasi Akses Terbuka"
 
 msgid "mailable.openAccessNotify.description"
 msgstr ""
@@ -2544,31 +2553,39 @@ msgstr ""
 "email pemberitahuan saat suatu terbitan menjadi Open Access."
 
 msgid "mailable.issuePublishNotify.name"
-msgstr ""
+msgstr "Notifikasi Terbitan"
 
 msgid "mailable.issuePublishNotify.description"
 msgstr ""
+"Email ini dikirim secara otomatis pengguna terdaftar ketika eda edisi baru "
+"yang diterbitkan."
 
 msgid "manager.manageEmails.description"
-msgstr ""
+msgstr "Ubah isi pesan email yang dikirim dari jurnal ini."
 
 msgid "mailable.layoutComplete.name"
-msgstr ""
+msgstr "Galei Selesai"
 
 msgid "mailable.publicationVersionNotify.name"
-msgstr ""
+msgstr "Versi Baru Dibuat"
 
 msgid "mailable.publicationVersionNotify.description"
 msgstr ""
+"Email ini mengingatakan secara otomatis editor ketika versi baru naskah "
+"dibuat."
 
 msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
+"Email ini dikirim secara otomatis kepada manajer jurnal ketika ada naskah "
+"baru masuk dan belum ada editor yang ditugaskan."
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "Permintaan Pembayaran"
 
 msgid "mailable.paymentRequest.description"
 msgstr ""
+"Email ini dikirim secara otomatis kepada penulis untuk melakukan pembayaran "
+"biaya publikasi ketika naskahnya diterima."
 
 #~ msgid "manager.setup.metadata.coverage"
 #~ msgstr "Cakupan"
