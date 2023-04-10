@@ -2,13 +2,14 @@
 # Flavio Chaffin <flavio.chaffin@gmail.com>, 2021.
 # Diego José Macêdo <diegojmacedo@gmail.com>, 2021, 2022, 2023.
 # cicilia conceiçao de maria <ccmaria@uem.br>, 2022, 2023.
+# William Costa Rodrigues <webmaster@antsoft.com.br>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
 "PO-Revision-Date: 2023-04-11 01:52+0000\n"
-"Last-Translator: cicilia conceiçao de maria <ccmaria@uem.br>\n"
+"Last-Translator: William Costa Rodrigues <webmaster@antsoft.com.br>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -829,7 +830,7 @@ msgstr ""
 "uso da PKP PN."
 
 msgid "manager.setup.plnPluginArchiving"
-msgstr "Rede de Preservação PKP (PKP PN)"
+msgstr "Rede de Preservação (PKP)"
 
 msgid "manager.setup.plnPluginNotInstalled"
 msgstr ""
