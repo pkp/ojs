@@ -14,13 +14,13 @@
 namespace APP\issue;
 
 use APP\facades\Repo;
+use Exception;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\LazyCollection;
 use PKP\core\interfaces\CollectorInterface;
 use PKP\core\PKPApplication;
-use PKP\doi\Doi;
 use PKP\plugins\Hook;
 
 class Collector implements CollectorInterface
@@ -358,8 +358,10 @@ class Collector implements CollectorInterface
 
         // Context
         // Never permit a query without a context_id unless the PKPApplication::CONTEXT_ID_ALL wildcard
-        // has been explicitly set
-        if (!in_array(PKPApplication::CONTEXT_ID_ALL, $this->contextIds)) {
+        // has been set explicitly.
+        if (!isset($this->contextIds)) {
+            throw new Exception('Submissions can not be retrieved without a context id. Pass the CONTEXT_ID_ALL wildcard to get submissions from any context.');
+        } elseif (!in_array(PKPApplication::CONTEXT_ID_ALL, $this->contextIds)) {
             $q->whereIn('i.journal_id', $this->contextIds);
         }
 
