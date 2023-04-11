@@ -224,10 +224,10 @@ describe('Submission Wizard', function() {
             });
 
         cy.changeLanguage('fr_CA');
-        cy.get('button:contains("Continue")').click();
-        cy.get('button:contains("Continue")').click();
-        cy.get('button:contains("Continue")').click();
-        cy.get('button:contains("Continue")').click();
+        cy.get('button:contains("Continuer")').click();
+        cy.get('button:contains("Continuer")').click();
+        cy.get('button:contains("Continuer")').click();
+        cy.get('button:contains("Continuer")').click();
         cy.get('button:contains("Soumettre")').should('be.disabled');
         cy.get('legend:contains("Droit d\'auteur")')
             .parent()
@@ -408,6 +408,8 @@ describe('Submission Wizard', function() {
 
         // All errors should be gone and submit should be allowed.
         cy.get('.pkpSteps button:contains("Review")').click();
+        cy.get('.submissionWizard__loadingReview').contains('Checking your submission');
+        cy.get('.submissionWizard__loadingReview').contains('Checking your submission').should('not.exist');
         cy.get('*:contains("There are one or more problems")').should('not.exist');
         cy.get('button:contains("Submit")').should('be.enabled');
         cy.get('*:contains("You must upload at least one Article Text file.")').should('not.exist');
@@ -596,9 +598,11 @@ describe('Submission Wizard', function() {
         cy.get('#forTheEditors-subjects-control-fr_CA').type('Sociologie française', {delay: 0});
         cy.get('li:contains("Sociologie française")');
         cy.get('#forTheEditors-subjects-control-fr_CA').type('{downarrow}{enter}', {delay: 0});
-        cy.get('.pkpSteps button:contains("Review")').click();
 
         // Should be able to submit!
+        cy.get('.pkpSteps button:contains("Review")').click();
+        cy.get('.submissionWizard__loadingReview').contains('Checking your submission');
+        cy.get('.submissionWizard__loadingReview').contains('Checking your submission').should('not.exist');
         cy.get('button:contains("Submit")').click();
         cy.contains('The submission, ' + submission.title.en + ', will be submitted to Journal of Public Knowledge for editorial review.');
         cy.get('.modal__footer button:contains("Submit")').click();
