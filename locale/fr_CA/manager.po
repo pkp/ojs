@@ -1,13 +1,13 @@
 # Jean-Hugues Roy <roy.jean-hugues@uqam.ca>, 2021.
 # Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2022, 2023.
+# Pierre Lasou <pierre.lasou@bibl.ulaval.ca>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2023-03-23 09:14+0000\n"
-"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-helene."
-"vezina@umontreal.ca>\n"
+"PO-Revision-Date: 2023-04-11 16:21+0000\n"
+"Last-Translator: Pierre Lasou <pierre.lasou@bibl.ulaval.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -68,7 +68,7 @@ msgstr ""
 "%i.%a pour les articles<br />%j.v%vi%i.%a.g%g pour les épreuves."
 
 msgid "doi.manager.settings.doiCreationTime.copyedit"
-msgstr ""
+msgstr "À l'étape de révision du texte"
 
 msgid "manager.website.archiving"
 msgstr "Archivage"
@@ -856,8 +856,8 @@ msgstr ""
 
 msgid "manager.setup.plnSettingsDescription"
 msgstr ""
-"Cliquer sur le bouton  <button>Paramètres du plugiciel</button>  pour "
-"accepter les conditions d'utilisation de PKP PN."
+"Cliquer sur le bouton <button>Paramètres du plugiciel</button> pour accepter "
+"les conditions d'utilisation de PKP PN."
 
 msgid "manager.setup.plnPluginArchiving"
 msgstr "PKP Preservation Network (PN)"
@@ -1989,18 +1989,17 @@ msgid "settings.roles.gridDescription"
 msgstr ""
 "Les rôles sont attribués aux utilisateurs-trices de la revue afin de leur "
 "donner accès à différents niveaux d'autorisation et à différentes chaînes de "
-"travail associés à la revue. \n"
-"Il existe cinq niveaux d'autorisation : Les directeurs-trices de revue ont "
-"accès à tout ce qui se trouve dans un journal (tous les contenus et les "
-"paramètres) ; Les rédacteurs-trices ont un accès complet à tout le contenu "
-"assigné ; Les assistants de revue ont un accès limité aux seules soumissions "
-"qui leur ont été expressément attribuées par un-e rédacteur-trice ; Les "
-"évaluateurs-trices peuvent voir et interagir avec les soumissions qui leur "
-"ont été assignées pour évaluation ; Et les auteurs-es peuvent voir et "
-"interagir avec une quantité limitée d'information en lien avec leurs propres "
-"soumissions. En outre, il y a cinq étapes différentes  auxquelles les rôles "
-"peuvent avoir accès : soumission, évaluation interne, évaluation, révision "
-"et production."
+"travail associés à la revue. Il existe cinq niveaux d'autorisation : Les "
+"directeurs-trices de revue ont accès à tout ce qui se trouve dans un journal "
+"(tous les contenus et les paramètres) ; Les rédacteurs-trices ont un accès "
+"complet à tout le contenu assigné ; Les assistants de revue ont un accès "
+"limité aux seules soumissions qui leur ont été expressément attribuées par "
+"un-e rédacteur-trice ; Les évaluateurs-trices peuvent voir et interagir avec "
+"les soumissions qui leur ont été assignées pour évaluation ; Et les auteurs-"
+"es peuvent voir et interagir avec une quantité limitée d'information en lien "
+"avec leurs propres soumissions. En outre, il y a cinq étapes différentes "
+"auxquelles les rôles peuvent avoir accès : soumission, évaluation interne, "
+"évaluation, révision et production."
 
 msgid "manager.publication.library"
 msgstr "Bibliothèque de l'éditeur"
@@ -2083,8 +2082,8 @@ msgstr "Ce plugiciel n'est pas entièrement configuré."
 msgid "plugins.importexport.common.error.noDOIContentObjects"
 msgstr ""
 "Aucune publication n'est sélectionnée pour l'attribution d'un DOI dans le "
-"plugiciel  « DOI public identifier », conséquemment il n'aura pas de dépôt "
-"ou d'exportation depuis le plugiciel."
+"plugiciel « DOI public identifier », conséquemment il n'aura pas de dépôt ou "
+"d'exportation depuis le plugiciel."
 
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Mot de passe"
@@ -2166,52 +2165,72 @@ msgstr ""
 "paramètres de la revue."
 
 msgid "stats.contextStats"
-msgstr ""
+msgstr "Statistiques de la revue"
 
+#, fuzzy
 msgid "stats.context.tooltip.text"
-msgstr ""
+msgstr "Nombre de visiteurs ayant consulté la page d'accueil de la revue."
 
 msgid "stats.context.tooltip.label"
-msgstr ""
+msgstr "À propos des statistiques de la revue"
 
 msgid "stats.context.downloadReport.description"
 msgstr ""
+"Télécharger un CSV/Excel avec les statistiques d'utilisation pour cette "
+"revue correspondants aux paramètres suivants."
 
 msgid "stats.context.downloadReport.downloadContext.description"
-msgstr ""
+msgstr "Nombre de vues sur la page d'accueil de la revue."
 
+#, fuzzy
 msgid "stats.context.downloadReport.downloadContext"
-msgstr ""
+msgstr "Téléchargements"
 
+#, fuzzy
 msgid "stats.issueStats"
-msgstr ""
+msgstr "Statistiques du numéro"
 
 msgid "stats.issues.details"
-msgstr ""
+msgstr "Vues et téléchargements"
 
+#, fuzzy
 msgid "stats.issues.searchIssueDescription"
-msgstr ""
+msgstr "Recherche par titre du numéro, volume et numéro"
 
+#, fuzzy
 msgid "stats.issues.none"
 msgstr ""
+"Aucun numéro trouvé avec des statistiques d'utilisation correspondant aux "
+"paramètres sélectionnés."
 
 msgid "stats.issues.downloadReport.description"
 msgstr ""
+"Télécharger un fichier CSV/Excel avec les statistiques d'utilisation pour "
+"les numéros correspondants aux paramètres suivants."
 
+#, fuzzy
 msgid "stats.issues.downloadReport.downloadIssues.description"
 msgstr ""
+"Le nombre de vues sur la table des matières et le téléchargement des "
+"épreuves pour chaque numéro."
 
+#, fuzzy
 msgid "stats.issues.downloadReport.downloadIssues"
-msgstr ""
+msgstr "Téléchargement des numéros"
 
 msgid "stats.issues.countOfTotal"
-msgstr ""
+msgstr "{$count} de {$total} numéros"
 
+#, fuzzy
 msgid "stats.issues.tooltip.label"
-msgstr ""
+msgstr "À propos des statistiques de numéros"
 
+#, fuzzy
 msgid "stats.issues.tooltip.text"
 msgstr ""
+"<strong>Vues</strong>: nombre de visiteurs ayant consulté la table des "
+"matières.<br><strong>Téléchargements</strong>: nombre de téléchargements des "
+"épreuves du numéro."
 
 msgid "stats.publicationStats"
 msgstr "Statistiques de l'article"
@@ -2241,12 +2260,18 @@ msgstr "Fichiers"
 
 msgid "stats.publications.downloadReport.description"
 msgstr ""
+"Télécharger un fichier CSV/Excel avec les statistiques d'utilisation des "
+"articles correspondants aux paramètres suivants."
 
+#, fuzzy
 msgid "stats.publications.downloadReport.downloadSubmissions"
-msgstr ""
+msgstr "Téléchargements des articles"
 
+#, fuzzy
 msgid "stats.publications.downloadReport.downloadSubmissions.description"
 msgstr ""
+"Nombre de vues sur les résumés et le téléchargement de fichiers pour chaque "
+"article."
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
@@ -2258,8 +2283,8 @@ msgid ""
 "description"
 msgstr ""
 "Aucune personne-ressource principale n'a été définie pour cette revue. Vous "
-"pouvez saisir une personne-ressource principale dans les  <a href="
-"\"{$url}\">paramètres de la revue</a>."
+"pouvez saisir une personne-ressource principale dans les <a href=\"{$url}\""
+">paramètres de la revue</a>."
 
 msgid "plugins.importexport.native.export.issues.results"
 msgstr "Exporter les résultats des numéros"
@@ -2289,7 +2314,7 @@ msgid "emailTemplate.variable.context.contactEmail"
 msgstr "L'adresse de courriel du contact principal de la revue"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "L'adresse postale de la revue"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Le nom du mode de paiement"
@@ -2305,48 +2330,58 @@ msgstr "Nom du site pour l'installation de plus d'une revue"
 
 msgid "emailTemplate.variable.subscription.subscriberDetails"
 msgstr ""
+"Le nom, l'affiliation, le numéro de téléphone et l'adresse courriel de "
+"l'abonné-e"
 
 msgid "emailTemplate.variable.subscription.subscriptionSignature"
-msgstr ""
+msgstr "Coordonnées du responsable des abonnements"
 
+#, fuzzy
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
-msgstr ""
+msgstr "URL de la page d'abonnement"
 
 msgid "emailTemplate.variable.subscription.expiryDate"
-msgstr ""
+msgstr "Date d'échéance de l'abonnement"
 
 msgid "emailTemplate.variable.subscription.subscriptionType"
-msgstr ""
+msgstr "Résumé de l'abonnement (type, nom, durée, coût)"
 
 msgid "emailTemplate.variable.subscription.membership"
-msgstr ""
+msgstr "Informations sur l'adhésion de l'abonné-e"
 
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr ""
+msgstr "Nom de l'institution abonnée"
 
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr ""
+msgstr "L'adresse postale de l'institution abonnée"
 
 msgid "emailTemplate.variable.subscription.domain"
-msgstr ""
+msgstr "Nom de domaine des adresses IP valides pour cet abonnement"
 
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr ""
+msgstr "Les intervalles d'adresses IP valide pour cet abonnement"
 
+#, fuzzy
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "URL de la page où les auteurs peuvent faire les paiements"
 
+#, fuzzy
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "URL vers les directives de soumission"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "Lien vers la page des statistiques d'utilisation des articles publiés"
 
+#, fuzzy
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "Identifiant du numéro"
 
+#, fuzzy
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
+"Ce courriel est envoyé automatiquement chaque mois au personnel de rédaction "
+"(rédacteur-tirce, gestionnaire de la revue) afin de leur donner un aperçu de "
+"la santé du système."
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Validez l'adresse courriel (enregistrement de la revue)"
@@ -2383,8 +2418,9 @@ msgstr ""
 msgid "doi.manager.settings.enableRepresentationDoi"
 msgstr "Épreuves"
 
+#, fuzzy
 msgid "doi.manager.settings.galleysWithDescription"
-msgstr ""
+msgstr "Épreuves de l'article, comme les PDF publiés"
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Préfixe DOI"
@@ -2404,7 +2440,7 @@ msgstr ""
 "l'utilisation de modèles de suffixes personnalisés peut souvent entraîner "
 "des problèmes de génération et de dépôt de DOI. Lors de l'utilisation d'un "
 "modèle de suffixe personnalisé, tester soigneusement afin de vous assurez "
-"que les  rédacteur.trice.s puissent générer des DOI et les déposer auprès "
+"que les rédacteur.trice.s puissent générer des DOI et les déposer auprès "
 "d'un organisme d'enregistrement comme Crossref. "
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
@@ -2459,14 +2495,18 @@ msgstr ""
 "Êtes-vous certain-e de vouloir attribuer des DOIs à tous les objets publiés "
 "n'ayant pas de DOI attribués ?"
 
+#, fuzzy
 msgid "doi.manager.settings.registrationAgency"
-msgstr ""
+msgstr "Agence d'enregistrement"
 
+#, fuzzy
 msgid "doi.manager.settings.registrationAgency.description"
 msgstr ""
+"Sélectionnez l'agence d'enregistrement que vous souhaitez utiliser pour "
+"déposer les DOIs."
 
 msgid "doi.manager.settings.registrationAgency.none"
-msgstr ""
+msgstr "Aucune"
 
 msgid "doi.editor.doi"
 msgstr "DOI"
@@ -2550,11 +2590,12 @@ msgstr ""
 
 msgid "doi.editor.assignDoi.assigned"
 msgstr ""
-"Le DOI {$pubId} a été attribué. Pour modifier le DOI,  veuillez visiter la "
+"Le DOI {$pubId} a été attribué. Pour modifier le DOI, veuillez visiter la "
 "page de <a href=\"{$doiManagementLink}\">gestion des DOI</a>."
 
+#, fuzzy
 msgid "doi.editor.assignDoi.toBeAssigned"
-msgstr ""
+msgstr "Le DOI {$pubId} sera assigné au moment de la publication."
 
 msgid "doi.editor.missingPrefix"
 msgstr "Le DOI doit débuter par {$doiPrefix}."
@@ -2571,35 +2612,48 @@ msgstr "Épreuves : {$galleyLabel}"
 msgid "doi.editor.preview.objects"
 msgstr "Élément"
 
+#, fuzzy
 msgid "api.galley.403.publicationDidNotMatch"
-msgstr ""
+msgstr "L'épreuve que vous demandez ne fait pas partie de cette publication."
 
+#, fuzzy
 msgid "api.galley.403.canEditPublishedDoi"
-msgstr ""
+msgstr "Seuls les DOIs peuvent être édités une fois que l'épreuve a été publiée"
 
+#, fuzzy
 msgid "api.issue.400.invalidDoi"
-msgstr ""
+msgstr "Le DOI n'est pas valide"
 
+#, fuzzy
 msgid "api.issue.403.canEditPublishedDoi"
 msgstr ""
+"Seuls les DOIs peuvent être édités une fois que la publication a été publiée"
 
+#, fuzzy
 msgid "api.issue.404.issuesNotFound"
-msgstr ""
+msgstr "Les numéros demandés n'ont pu être trouvés"
 
+#, fuzzy
 msgid "doi.manager.submissionDois"
-msgstr ""
+msgstr "DOI de l'article"
 
+#, fuzzy
 msgid "doi.manager.issueDois"
-msgstr ""
+msgstr "DOI du numéro"
 
+#, fuzzy
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr ""
+"Ce courriel avertit l'auteur-trice que sa soumission est refusée, avant "
+"l'étape d'évaluation, car elle ne répond pas aux exigences de la revue."
 
+#, fuzzy
 msgid "manager.institutions.noContext"
-msgstr ""
+msgstr "L'institution de la revue n'a pu être trouvée."
 
+#, fuzzy
 msgid "mailable.subscriptionNotify.name"
-msgstr ""
+msgstr "Notification d'abonnement"
 
 msgid "mailable.subscriptionNotify.description"
 msgstr ""
@@ -2607,32 +2661,36 @@ msgstr ""
 "de la revue lui a créé un abonnement. Il fournit l'adresse URL de la revue "
 "ainsi que les instructions pour y accéder."
 
+#, fuzzy
 msgid "mailable.subscriptionExpiresSoon.name"
-msgstr ""
+msgstr "L'abonnement arrive bientôt à échéance"
 
 msgid "mailable.subscriptionExpiresSoon.description"
 msgstr ""
 "Ce courriel avise un-e abonné-e que son abonnement expirera sous peu. Il "
 "fournit l'adresse URL de la revue, ainsi que les instructions pour y accéder."
 
+#, fuzzy
 msgid "mailable.subscriptionExpired.name"
-msgstr ""
+msgstr "Abonnement échu"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
 "Ce courriel avise un-e abonné-e que son abonnement est expiré. Il fournit "
 "l'adresse URL de la revue, ainsi que les instructions pour y accéder."
 
+#, fuzzy
 msgid "mailable.subscriptionExpiredLast.name"
-msgstr ""
+msgstr "Abonnement échu en dernier"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
 "Ce courriel avise un-e abonné-e que son abonnement est expiré. Il donne "
 "l'adresse URL de la revue ainsi que les instructions pour y accéder."
 
+#, fuzzy
 msgid "mailable.subscriptionPurchaseIndividual.name"
-msgstr ""
+msgstr "Abonnement individuel"
 
 msgid "mailable.subscriptionPurchaseIndividual.description"
 msgstr ""
@@ -2640,8 +2698,9 @@ msgstr ""
 "individuel a été souscrit en ligne. Il fournit des renseignements sommaires "
 "sur l'abonnement et le lien pour accéder à l'abonnement souscrit."
 
+#, fuzzy
 msgid "mailable.subscriptionPurchaseInstitutional.name"
-msgstr ""
+msgstr "Abonnement institutionnel"
 
 msgid "mailable.subscriptionPurchaseInstitutional.description"
 msgstr ""
@@ -2649,8 +2708,9 @@ msgstr ""
 "institutionnel a été souscrit en ligne. Il fournit des renseignements "
 "sommaires sur l'abonnement et le lien pour accéder à l'abonnement souscrit."
 
+#, fuzzy
 msgid "mailable.subscriptionRenewIndividual.name"
-msgstr ""
+msgstr "Renouveler l'abonnement individuel"
 
 msgid "mailable.subscriptionRenewIndividual.description"
 msgstr ""
@@ -2658,8 +2718,9 @@ msgstr ""
 "individuel a été renouvelé en ligne. Il fournit des renseignements sommaires "
 "sur l'abonnement et le lien pour accéder à l'abonnement renouvelé."
 
+#, fuzzy
 msgid "mailable.subscriptionRenewInstitutional.name"
-msgstr ""
+msgstr "Renouveler l'abonnement institutionnel"
 
 msgid "mailable.subscriptionRenewInstitutional.description"
 msgstr ""
@@ -2667,8 +2728,9 @@ msgstr ""
 "institutionnel a été renouvelé en ligne. Il fournit des renseignements "
 "sommaires sur l'abonnement et le lien pour accéder à l'abonnement renouvelé."
 
+#, fuzzy
 msgid "mailable.openAccessNotify.name"
-msgstr ""
+msgstr "Notification de diffusion en libre accès"
 
 msgid "mailable.openAccessNotify.description"
 msgstr ""
@@ -2676,32 +2738,47 @@ msgstr ""
 "recevoir un avis par courriel quand un numéro devient disponible en libre "
 "accès."
 
+#, fuzzy
 msgid "mailable.issuePublishNotify.name"
-msgstr ""
+msgstr "Notification de numéro publié"
 
+#, fuzzy
 msgid "mailable.issuePublishNotify.description"
 msgstr ""
+"Ce courriel est envoyé automatiquement à tous les utilisateurs de la revue "
+"lorsqu'un nouveau numéro est publié."
 
 msgid "manager.manageEmails.description"
-msgstr ""
+msgstr "Modifier les messages courriels envoyés par cette revue."
 
+#, fuzzy
 msgid "mailable.layoutComplete.name"
-msgstr ""
+msgstr "Épreuves terminées"
 
 msgid "mailable.publicationVersionNotify.name"
-msgstr ""
+msgstr "Nouvelle version créée"
 
+#, fuzzy
 msgid "mailable.publicationVersionNotify.description"
 msgstr ""
+"Ce courriel est envoyé automatiquement aux rédacteurs-trices assignés-ées "
+"lorsqu'une nouvelle version de la soumission est créée."
 
+#, fuzzy
 msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
+"Ce courriel est envoyé aux gestionnaires de la revue lorsqu'une nouvelle "
+"soumission a été faite et qu'aucun-e rédacteur-trice n'a encore été "
+"assigné-ée."
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "Demande de paiement"
 
+#, fuzzy
 msgid "mailable.paymentRequest.description"
 msgstr ""
+"Ce courriel est envoyé automatiquement à l'auteur-trice afin de demander le "
+"paiement des frais de publication lorsque sa soumission a été acceptée."
 
 #~ msgid "manager.statistics.statistics.registeredUsers"
 #~ msgstr "Utilisateurs-trices inscrits-es"
@@ -2728,3 +2805,21 @@ msgstr ""
 #~ msgstr ""
 #~ "Affiner les résultats par type d'objet (revue, numéro, article, fichiers) "
 #~ "et/ou par un ou plusieurs identifiants (ID) d'objet."
+
+#, fuzzy
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr ""
+"Une épreuve du numéro n'a pu être importée car aucun fichier ne lui est "
+"associé."
+
+#, fuzzy
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"L'épreuve {$id} n'a pu être exportée, son fichier n'a pu être trouvé dans \""
+"{$path}\"."
+
+#, fuzzy
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"L'image de couverture du numéro {$id} n'a pas été exportée, son fichier n'a "
+"pu être trouvé dans \"{$path}\"."
