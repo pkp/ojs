@@ -763,7 +763,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
                     foreach ($result as $error) {
                         assert(is_array($error) && count($error) >= 1);
                         $errorMessage = __($error[0], ['param' => ($error[1] ?? null)]);
-                        echo "*** ${errorMessage}\n";
+                        echo "*** {$errorMessage}\n";
                     }
                     echo "\n";
                 } else {
