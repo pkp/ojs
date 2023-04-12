@@ -1,4 +1,5 @@
 var path = require('path');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
 	css: {
@@ -32,6 +33,16 @@ module.exports = {
 			hotUpdateChunkFilename: 'hot-updates/hot-update.js',
 			hotUpdateMainFilename: 'hot-updates/hot-update.json'
 		},
+		plugins: [
+			new CopyPlugin({
+				patterns: [
+					{
+						from: 'lib/ui-library/public/styles/tinymce',
+						to: '../lib/pkp/styles/tinymce'
+					}
+				]
+			})
+		],
 		resolve: {
 			alias: {
 				'@': path.resolve(__dirname, 'lib/ui-library/src')
