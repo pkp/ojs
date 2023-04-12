@@ -50,7 +50,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin
     }
 
     /**
-     * Hook handler which is responsible to add content to the article footer
+     * Builds the template with the recommended submissions or null if the linked submission has no keywords
      *
      * @see templates/article/footer.tpl
      */
@@ -71,6 +71,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin
         $rangeInfo = Handler::getRangeInfo($request, 'articlesBySimilarity');
         $rangeInfo->setCount(static::DEFAULT_RECOMMENDATION_COUNT);
 
+        // Prepares the collector to retrieve similar submissions
         $collector = Repo::submission()
             ->getCollector()
             ->excludeIds([$submissionId])
@@ -78,12 +79,16 @@ class RecommendBySimilarityPlugin extends GenericPlugin
             ->filterByStatus([Submission::STATUS_PUBLISHED])
             ->searchPhrase($searchPhrase);
 
+        $offset = ($rangeInfo->getPage() - 1) * $rangeInfo->getCount();
         $submissionCount = $collector->getCount();
+
         $submissions = $collector
             ->limit($rangeInfo->getCount())
-            ->offset($rangeInfo->getOffset())
+            ->offset($offset)
             ->orderBy(Collector::ORDERBY_SEARCH_RANKING)
             ->getMany();
+
+        // Load the linked issues
         $issues = Repo::issue()->getCollector()
             ->filterByContextIds([$context->getId()])
             ->filterByIssueIds(
@@ -93,15 +98,22 @@ class RecommendBySimilarityPlugin extends GenericPlugin
             )
             ->getMany();
 
+        $nextPage = $rangeInfo->getPage() * $rangeInfo->getCount() < $submissionCount
+            ? $request->url(path: $submissionId, params: ['articlesBySimilarityPage' => $rangeInfo->getPage() + 1])
+            : null;
+        $previousPage = $rangeInfo->getPage() > 1
+            ? $request->url(path: $submissionId, params: ['articlesBySimilarityPage' => $rangeInfo->getPage() - 1])
+            : null;
+
         $templateManager->assign('articlesBySimilarity', (object) [
             'submissions' => $submissions,
             'query' => $searchPhrase,
             'issues' => $issues,
-            'start' => $rangeInfo->getOffset() + 1,
-            'end' => $rangeInfo->getOffset() + $submissions->count(),
+            'start' => $offset + 1,
+            'end' => $offset + $submissions->count(),
             'total' => $submissionCount,
-            'nextUrl' => $rangeInfo->getPage() * $rangeInfo->getCount() < $submissionCount ? $request->url(params: ['articlesBySimilarity' => $rangeInfo->getPage() + 1]) : null,
-            'previousUrl' => $rangeInfo->getPage() > 1 ? $request->url(params: ['articlesBySimilarity' => $rangeInfo->getPage() - 1]) : null
+            'nextUrl' => $nextPage,
+            'previousUrl' => $previousPage
         ]);
 
         return $templateManager->fetch($this->getTemplateResource('articleFooter.tpl'));
