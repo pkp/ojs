@@ -15,99 +15,111 @@
 namespace APP\plugins\generic\recommendBySimilarity;
 
 use APP\core\Application;
+use APP\facades\Repo;
 use APP\handler\Handler;
 use APP\search\ArticleSearch;
+use APP\submission\Collector;
+use APP\submission\Submission;
+use APP\template\TemplateManager;
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
 
-define('RECOMMEND_BY_SIMILARITY_PLUGIN_COUNT', 10);
-
 class RecommendBySimilarityPlugin extends GenericPlugin
 {
-    //
-    // Implement template methods from Plugin.
-    //
+    private const DEFAULT_RECOMMENDATION_COUNT = 10;
+
     /**
      * @copydoc Plugin::register()
      *
      * @param null|mixed $mainContextId
      */
-    public function register($category, $path, $mainContextId = null)
+    public function register($category, $path, $mainContextId = null): bool
     {
-        $success = parent::register($category, $path, $mainContextId);
-        if (Application::isUnderMaintenance()) {
-            return $success;
+        if (!parent::register($category, $path, $mainContextId)) {
+            return false;
         }
 
-        if ($success && $this->getEnabled($mainContextId)) {
-            Hook::add('Templates::Article::Footer::PageFooter', $this->callbackTemplateArticlePageFooter(...));
+        if (!Application::isUnderMaintenance() && $this->getEnabled($mainContextId)) {
+            Hook::add('Templates::Article::Footer::PageFooter', function (string $hookName, array $params): bool {
+                $output = & $params[2];
+                $output .= $this->buildTemplate();
+                return Hook::CONTINUE;
+            });
         }
-        return $success;
+        return true;
     }
 
     /**
-     * @see Plugin::getDisplayName()
+     * Hook handler which is responsible to add content to the article footer
+     *
+     * @see templates/article/footer.tpl
      */
-    public function getDisplayName()
+    private function buildTemplate(): ?string
+    {
+        $templateManager = TemplateManager::getManager();
+        $submissionId = $templateManager->getTemplateVars('article')->getId();
+
+        // If there's no keywords, quit
+        if (!strlen($searchPhrase = implode(' ', (new ArticleSearch())->getSimilarityTerms($submissionId)))) {
+            return null;
+        }
+
+        $request = Application::get()->getRequest();
+        $router = $request->getRouter();
+        $context = $router->getContext($request);
+
+        $rangeInfo = Handler::getRangeInfo($request, 'articlesBySimilarity');
+        $rangeInfo->setCount(static::DEFAULT_RECOMMENDATION_COUNT);
+
+        $collector = Repo::submission()
+            ->getCollector()
+            ->excludeIds([$submissionId])
+            ->filterByContextIds([$context->getId()])
+            ->filterByStatus([Submission::STATUS_PUBLISHED])
+            ->searchPhrase($searchPhrase);
+
+        $submissionCount = $collector->getCount();
+        $submissions = $collector
+            ->limit($rangeInfo->getCount())
+            ->offset($rangeInfo->getOffset())
+            ->orderBy(Collector::ORDERBY_SEARCH_RANKING)
+            ->getMany();
+        $issues = Repo::issue()->getCollector()
+            ->filterByContextIds([$context->getId()])
+            ->filterByIssueIds(
+                $submissions->map(fn (Submission $submission) => $submission->getCurrentPublication()->getData('issueId'))
+                    ->unique()
+                    ->toArray()
+            )
+            ->getMany();
+
+        $templateManager->assign('articlesBySimilarity', (object) [
+            'submissions' => $submissions,
+            'query' => $searchPhrase,
+            'issues' => $issues,
+            'start' => $rangeInfo->getOffset() + 1,
+            'end' => $rangeInfo->getOffset() + $submissions->count(),
+            'total' => $submissionCount,
+            'nextUrl' => $rangeInfo->getPage() * $rangeInfo->getCount() < $submissionCount ? $request->url(params: ['articlesBySimilarity' => $rangeInfo->getPage() + 1]) : null,
+            'previousUrl' => $rangeInfo->getPage() > 1 ? $request->url(params: ['articlesBySimilarity' => $rangeInfo->getPage() - 1]) : null
+        ]);
+
+        return $templateManager->fetch($this->getTemplateResource('articleFooter.tpl'));
+    }
+
+    /**
+     * @copydoc Plugin::getDisplayName()
+     */
+    public function getDisplayName(): string
     {
         return __('plugins.generic.recommendBySimilarity.displayName');
     }
 
     /**
-     * @see Plugin::getDescription()
+     * @copydoc Plugin::getDescription()
      */
-    public function getDescription()
+    public function getDescription(): string
     {
         return __('plugins.generic.recommendBySimilarity.description');
-    }
-
-
-    //
-    // View level hook implementations.
-    //
-    /**
-     * @see templates/article/footer.tpl
-     */
-    public function callbackTemplateArticlePageFooter($hookName, $params)
-    {
-        $smarty = & $params[1];
-        $output = & $params[2];
-
-        // Identify similarity terms for the given article.
-        $displayedArticle = $smarty->getTemplateVars('article');
-        $articleId = $displayedArticle->getId();
-        $articleSearch = new ArticleSearch();
-        $searchTerms = $articleSearch->getSimilarityTerms($articleId);
-        if (empty($searchTerms)) {
-            return false;
-        }
-
-        // If we got similarity terms then execute a search with...
-        // ... request, journal and error messages, ...
-        $request = Application::get()->getRequest();
-        $router = $request->getRouter();
-        $journal = $router->getContext($request);
-        $error = null;
-        // ... search keywords ...
-        $query = implode(' ', $searchTerms);
-        $keywords = [null => $query];
-        // ... and pagination.
-        $rangeInfo = Handler::getRangeInfo($request, 'articlesBySimilarity');
-        $rangeInfo->setCount(RECOMMEND_BY_SIMILARITY_PLUGIN_COUNT);
-        $smarty->assign([
-            'articlesBySimilarity' => $articleSearch->retrieveResults(
-                $request,
-                $journal,
-                $keywords,
-                $error,
-                null,
-                null,
-                $rangeInfo,
-                [$articleId]
-            ),
-            'articlesBySimilarityQuery' => $query,
-        ]);
-        $output .= $smarty->fetch($this->getTemplateResource('articleFooter.tpl'));
-        return false;
     }
 }
