@@ -20,6 +20,7 @@ use APP\facades\Repo;
 use APP\journal\Journal;
 use APP\journal\JournalDAO;
 use APP\submission\Submission;
+use Exception;
 use PKP\config\Config;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
@@ -31,6 +32,8 @@ use PKP\submissionFile\SubmissionFile;
 
 class ArticleSearchIndex extends SubmissionSearchIndex
 {
+    private const MINIMUM_DATA_LENGTH = 80 * 1024;
+
     /**
      * @copydoc SubmissionSearchIndex::submissionMetadataChanged()
      */
@@ -112,24 +115,28 @@ class ArticleSearchIndex extends SubmissionSearchIndex
     public function submissionFileChanged($articleId, $type, $submissionFile)
     {
         // Check whether a search plug-in jumps in.
-        $hookResult = Hook::call(
-            'ArticleSearchIndex::submissionFileChanged',
-            [$articleId, $type, $submissionFile->getId()]
-        );
+        if (Hook::ABORT === Hook::call('ArticleSearchIndex::submissionFileChanged', [$articleId, $type, $submissionFile->getId()])) {
+            return;
+        }
 
-        // If no search plug-in is activated then fall back to the
-        // default database search implementation.
-        if ($hookResult === false || is_null($hookResult)) {
-            $parser = SearchFileParser::fromFile($submissionFile);
-            if (isset($parser) && $parser->open()) {
-                $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /** @var ArticleSearchDAO $searchDao */
-                $objectId = $searchDao->insertObject($articleId, $type, $submissionFile->getId());
+        // If no search plug-in is activated then fall back to the default database search implementation.
+        $parser = SearchFileParser::fromFile($submissionFile);
+        if (!$parser?->open()) {
+            error_log(new Exception("Unable to index the file \"{$parser->filePath}\""));
+            return;
+        }
+        try {
+            $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /** @var ArticleSearchDAO $searchDao */
+            $objectId = $searchDao->insertObject($articleId, $type, $submissionFile->getId());
 
-                while (($text = $parser->read()) !== false) {
-                    $this->_indexObjectKeywords($objectId, $text);
+            do {
+                for ($buffer = ''; ($chunk = $parser->read()) !== false && strlen($buffer .= $chunk) < static::MINIMUM_DATA_LENGTH;);
+                if (strlen($buffer)) {
+                    $this->_indexObjectKeywords($objectId, $buffer);
                 }
-                $parser->close();
-            }
+            } while ($chunk !== false);
+        } finally {
+            $parser->close();
         }
     }
 
