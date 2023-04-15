@@ -1,11 +1,12 @@
 # Pierre Couchet <pierre.couchet@gmail.com>, 2023.
+# Olivier Roueff <olivier.roueff@cnrs.fr>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:24+00:00\n"
 "PO-Revision-Date: 2023-04-15 10:22+0000\n"
-"Last-Translator: Pierre Couchet <pierre.couchet@gmail.com>\n"
+"Last-Translator: Olivier Roueff <olivier.roueff@cnrs.fr>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "fr_FR/>\n"
 "Language: fr_FR\n"
@@ -336,7 +337,7 @@ msgid "submission.queries.production"
 msgstr "Discussions sur la production"
 
 msgid "editor.submission.decision.backToReview"
-msgstr ""
+msgstr "Retour à l'évaluation"
 
 msgid "editor.submission.decision.backToReview.description"
 msgstr ""
