@@ -6,7 +6,7 @@
  * Copyright (c) 2003-2023 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class section
+ * @class Repository
  *
  * @brief A repository to find and manage sections.
  */

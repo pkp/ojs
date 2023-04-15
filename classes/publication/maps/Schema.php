@@ -6,7 +6,7 @@
  * Copyright (c) 2000-2020 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class publication
+ * @class Schema
  *
  * @brief Map publications to the properties defined in the publication schema
  */

@@ -7,7 +7,8 @@
  * Copyright (c) 2000-2022 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class IssuePublishedMailUsers
+ * @class IssuePublishedNotifyUsers
+ *
  * @ingroup jobs
  *
  * @brief Class to send emails when a new issue is published

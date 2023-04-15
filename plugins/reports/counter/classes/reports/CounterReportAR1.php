@@ -6,7 +6,8 @@
  * Copyright (c) 2014 University of Pittsburgh
  * Distributed under the GNU GPL v2 or later. For full terms see the file docs/COPYING.
  *
- * @class AR1
+ * @class CounterReportAR1
+ *
  * @brief Article Report 1
  */
 

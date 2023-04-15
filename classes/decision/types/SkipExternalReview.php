@@ -6,7 +6,7 @@
  * Copyright (c) 2000-2022 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class decision
+ * @class SkipExternalReview
  *
  * @brief Extend the skip review decision to handle APC payments.
  */

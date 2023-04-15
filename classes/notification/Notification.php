@@ -7,10 +7,12 @@
  * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class OJSNotification
+ * @class Notification
+ *
  * @ingroup notification
  *
  * @see NotificationDAO
+ *
  * @brief OJS subclass for Notifications (defines OJS-specific types).
  */
 

@@ -6,7 +6,7 @@
  * Copyright (c) 2000-2020 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class submissionFile
+ * @class Repository
  *
  * @brief A repository to find and manage submission files.
  */
@@ -77,7 +77,7 @@ class Repository extends BaseRepository
 
             event(
                 new SubmissionFileDeleted(
-                    (int)$submissionFile->getData('submissionId'), 
+                    (int)$submissionFile->getData('submissionId'),
                     (int)$submissionFile->getId()
                 )
             );

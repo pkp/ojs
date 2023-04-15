@@ -6,7 +6,7 @@
  * Copyright (c) 2000-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class publication
+ * @class Repository
  *
  * @brief Get publications and information about publications
  */
@@ -59,14 +59,12 @@ class Repository extends \PKP\publication\Repository
 
         // Only validate section settings for completed submissions
         if ($section && !$submission->getData('submissionProgress')) {
-
             // Require abstracts for new publications if the section requires them
             if (is_null($publication) && !$section->getData('abstractsNotRequired') && empty($props['abstract'])) {
                 $errors['abstract'][$primaryLocale] = [__('author.submit.form.abstractRequired')];
             }
 
             if (isset($props['abstract']) && empty($errors['abstract'])) {
-
                 // Require abstracts in the primary language if the section requires them
                 if (!$section->getData('abstractsNotRequired')) {
                     if (empty($props['abstract'][$primaryLocale])) {

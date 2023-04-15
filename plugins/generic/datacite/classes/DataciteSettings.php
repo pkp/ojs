@@ -7,7 +7,8 @@
  * Copyright (c) 2003-2023 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class DataciteSettingsForm
+ * @class DataciteSettings
+ *
  * @ingroup plugins_generic_datacite_classes
  *
  * @brief Setting management class to handle schema, fields, validation, etc. for Datacite plugin

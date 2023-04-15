@@ -7,7 +7,8 @@
  * Copyright (c) 2000-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class SubmissionsMigration
+ * @class OJSv3_3_0UpgradeMigration
+ *
  * @brief Describe database table structures.
  */
 

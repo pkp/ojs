@@ -7,7 +7,8 @@
  * Copyright (c) 2000-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class IssueGridHandler
+ * @class BackIssueGridHandler
+ *
  * @ingroup controllers_grid_issues
  *
  * @brief Handle issues grid requests.
