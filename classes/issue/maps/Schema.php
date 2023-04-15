@@ -1,4 +1,15 @@
 <?php
+/**
+ * @file classes/issue/maps/Schema.php
+ *
+ * Copyright (c) 2014-2023 Simon Fraser University
+ * Copyright (c) 2003-2023 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * @class Schema
+ *
+ * @brief Map sections to the properties defined in the issue schema
+ */
 
 namespace APP\issue\maps;
 
@@ -7,7 +18,6 @@ use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\issue\IssueGalleyDAO;
 use APP\journal\Journal;
-use Illuminate\Support\Collection;
 use Illuminate\Support\Enumerable;
 use Illuminate\Support\LazyCollection;
 use PKP\db\DAORegistry;

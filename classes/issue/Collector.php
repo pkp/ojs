@@ -1,4 +1,15 @@
 <?php
+/**
+ * @file classes/issue/Collector.php
+ *
+ * Copyright (c) 2014-2023 Simon Fraser University
+ * Copyright (c) 2000-2023 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * @class Collector
+ *
+ * @brief A helper class to configure a query Builder to get a collection of issues
+ */
 
 namespace APP\issue;
 
