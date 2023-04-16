@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I8151_ExtendSettingValues
+ *
  * @brief Describe upgrade/downgrade operations for extending TEXT columns to MEDIUMTEXT
  */
 

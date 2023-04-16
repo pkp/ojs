@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I6782_CleanOldMetrics
+ *
  * @brief Clean the old metrics:
  *  delete migrated entries with the metric type ojs::counter from the DB table metrics,
  *  move back the orphaned metrics from the temporary metrics_tmp,

@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class Dc11SchemaArticleAdapter
+ *
  * @ingroup plugins_metadata_dc11_filter
  *
  * @see Article

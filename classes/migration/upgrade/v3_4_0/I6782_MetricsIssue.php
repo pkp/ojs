@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I6782_MetricsIssue
+ *
  * @brief Migrate issue stats data from the old DB table metrics into the new DB table metrics_issue.
  */
 

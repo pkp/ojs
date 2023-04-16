@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class TemporaryItemInvestigationsDAO
+ *
  * @ingroup statistics
  *
  * @brief Operations for retrieving and adding unique item (submission) investigations (abstract, primary and supp file views).

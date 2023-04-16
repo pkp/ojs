@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ContextEmailVariable
+ *
  * @ingroup mail_variables
  *
  * @brief Represents journal-specific email template variables

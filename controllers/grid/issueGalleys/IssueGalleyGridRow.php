@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IssueGalleyGridRow
+ *
  * @ingroup issue_galley
  *
  * @brief Handle issue galley grid row requests.

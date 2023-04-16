@@ -1,13 +1,14 @@
 <?php
 
 /**
- * @file classes/migration/upgrade/v3_4_0/I7186_OpenAccessNotification.inc.php
+ * @file classes/migration/upgrade/v3_4_0/I7186_OpenAccessNotification.php
  *
  * Copyright (c) 2014-2023 Simon Fraser University
  * Copyright (c) 2000-2023 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I7186_OpenAccessNotification
+ *
  * @brief Migrate the user's open access subscription setting from OJS 2.4.8 to
  *   the notification subscriptions table.
  */

@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleReportPlugin
+ *
  * @ingroup plugins_reports_article
  *
  * @brief Article report plugin

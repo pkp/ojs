@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class OpenAccessMailUsers
+ *
  * @ingroup jobs
  *
  * @brief Class to send issue open access notification to userIds

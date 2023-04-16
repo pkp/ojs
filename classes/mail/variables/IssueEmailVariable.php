@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IssueEmailVariable
+ *
  * @ingroup mail_variables
  *
  * @brief Email template variables for an issue.

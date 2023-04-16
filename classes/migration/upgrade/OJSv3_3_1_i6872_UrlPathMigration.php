@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class OJSv3_3_1_i6872_UrlPathMigration
+ *
  * @brief A database migration that converts empty string url_paths to null.
  *
  * @see https://github.com/pkp/pkp-lib/issues/6872

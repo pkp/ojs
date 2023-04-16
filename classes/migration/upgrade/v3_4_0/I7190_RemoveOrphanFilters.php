@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I7190_RemoveOrphanFilters
+ *
  * @brief Remove old filters which have been left behind
  */
 

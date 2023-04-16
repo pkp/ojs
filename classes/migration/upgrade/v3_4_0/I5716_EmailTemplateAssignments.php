@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I5716_EmailTemplateAssignments
+ *
  * @brief Refactors relationship between Mailables and Email Templates
  */
 

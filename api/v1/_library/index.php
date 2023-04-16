@@ -11,6 +11,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @ingroup api_v1_library
+ *
  * @brief Handle API requests for the publisher and submission library files.
  */
 

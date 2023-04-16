@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SectionGridHandler
+ *
  * @ingroup controllers_grid_settings_section
  *
  * @brief Handle section grid requests.
@@ -327,7 +328,6 @@ class SectionGridHandler extends SetupGridHandler
      */
     public function activateSection($args, $request)
     {
-
         // Identify the current section
         $sectionId = (int) $request->getUserVar('sectionKey');
 

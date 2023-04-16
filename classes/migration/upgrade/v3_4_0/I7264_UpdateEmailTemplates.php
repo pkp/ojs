@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I7264_UpdateEmailTemplates
+ *
  * @brief Describe upgrade/downgrade operations for DB table email_templates.
  */
 

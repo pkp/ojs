@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class StatsEditorialQueryBuilder
+ *
  * @ingroup query_builders
  *
  * @brief Editorial statistics list query builder

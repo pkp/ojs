@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PaypalPaymentPlugin
+ *
  * @ingroup plugins_paymethod_paypal
  *
  * @brief Paypal payment plugin class

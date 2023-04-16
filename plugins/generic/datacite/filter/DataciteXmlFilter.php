@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DataciteXmlFilter
+ *
  * @brief Class that converts an Issue to a DataCite XML document.
  */
 

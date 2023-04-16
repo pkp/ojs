@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I6895_Institutions
+ *
  * @brief Migrate institution data from subscriptions into the new institution data model.
  */
 

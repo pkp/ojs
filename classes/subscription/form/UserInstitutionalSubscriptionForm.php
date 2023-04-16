@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class UserInstitutionalSubscriptionForm
+ *
  * @ingroup subscription
  *
  * @brief Form class for user purchase of institutional subscription.

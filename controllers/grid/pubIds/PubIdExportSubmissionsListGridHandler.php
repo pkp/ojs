@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PubIdExportSubmissionsListGridHandler
+ *
  * @ingroup controllers_grid_pubIds
  *
  * @brief Handle exportable submissions with pub ids list grid requests.

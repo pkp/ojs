@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I7128_SectionEntityDAORefactor
+ *
  * @brief Remove deprecated setting_type requirement after converting the section DAO to use new repository pattern
  */
 

@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I6091_AddFilterNamespaces
+ *
  * @brief Describe upgrade/downgrade operations for introducing namespaces to the built-in set of filters.
  */
 

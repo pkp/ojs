@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class UsageStatsLoader
+ *
  * @ingroup tasks
  *
  * @brief Scheduled task to extract transform and load usage statistics data into database.

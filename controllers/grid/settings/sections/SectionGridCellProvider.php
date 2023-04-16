@@ -7,6 +7,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SectionGridCellProvider
+ *
  * @ingroup controllers_grid_settings_sections
  *
 * @brief Grid cell provider for section grid

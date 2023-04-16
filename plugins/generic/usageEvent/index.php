@@ -12,6 +12,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @ingroup plugins_generic_usageEvent
+ *
  * @brief Wrapper for usage event plugin.
  *
  */

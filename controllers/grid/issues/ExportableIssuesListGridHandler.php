@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ExportableIssuesListGridHandler
+ *
  * @ingroup controllers_grid_issues
  *
  * @brief Handle exportable issues grid requests.

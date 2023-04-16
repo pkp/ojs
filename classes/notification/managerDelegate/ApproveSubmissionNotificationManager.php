@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ApproveSubmissionNotificationManager
+ *
  * @ingroup classes_notification_managerDelegate
  *
  * @brief Notification manager delegate that handles notifications related with

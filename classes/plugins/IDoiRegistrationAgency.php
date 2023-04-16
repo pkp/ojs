@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IDoiRegistrationAgency
+ *
  * @ingroup plugins
  *
  * @brief Interface that registration agency plugins must implement to support DOI registrations.

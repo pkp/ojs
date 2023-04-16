@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyGridHandler
+ *
  * @ingroup controllers_grid_articleGalleys
  *
  * @brief Handle article galley grid requests.

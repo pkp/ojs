@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class StatsIssueHandler
+ *
  * @ingroup api_v1_stats
  *
  * @brief Handle API requests for issue statistics.
@@ -372,7 +373,6 @@ class StatsIssueHandler extends APIHandler
                     }
                     $returnParams[$requestParam] = array_map('intval', $value);
                     break;
-
             }
         }
         return $returnParams;

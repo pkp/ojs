@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class TocGridCategoryRow
+ *
  * @ingroup controllers_grid_admin_systemInfo
  *
  * @brief System Info grid category row definition

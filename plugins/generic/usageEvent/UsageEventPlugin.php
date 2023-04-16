@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class UsageEventPlugin
+ *
  * @ingroup plugins_generic_usageEvent
  *
  * @brief Implement application specifics for generating usage events.

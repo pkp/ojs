@@ -1,18 +1,19 @@
 <?php
 
 /**
-* @file classes/sushi/PR.php
-*
-* Copyright (c) 2022 Simon Fraser University
-* Copyright (c) 2022 John Willinsky
-* Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
-*
-* @class PR
-* @ingroup sushi
-*
-* @brief COUNTER R5 SUSHI Platform Master Report (PR).
-*
-*/
+ * @file classes/sushi/PR.php
+ *
+ * Copyright (c) 2022 Simon Fraser University
+ * Copyright (c) 2022 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * @class PR
+ *
+ * @ingroup sushi
+ *
+ * @brief COUNTER R5 SUSHI Platform Master Report (PR).
+ *
+ */
 
 namespace APP\sushi;
 

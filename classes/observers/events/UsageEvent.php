@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class Usage
+ *
  * @ingroup observers_events
  *
  * @brief Adds issue tracking to the usage event data.

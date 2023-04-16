@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionsGridCellProvider
+ *
  * @ingroup controllers_grid_subscriptions
  *
  * @brief Class for a cell provider to display information about subscriptions

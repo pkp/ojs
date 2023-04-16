@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class NativeImportExportDeployment
+ *
  * @ingroup plugins_importexport_native
  *
  * @brief Class configuring the native import/export process to this

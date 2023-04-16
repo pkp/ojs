@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class BackendSubmissionsHandler
+ *
  * @ingroup api_v1_backend
  *
  * @brief Handle API requests for backend operations.

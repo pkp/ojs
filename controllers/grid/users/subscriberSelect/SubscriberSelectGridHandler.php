@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SubscriberSelectGridHandler
+ *
  * @ingroup controllers_grid_users_subscriberSelect
  *
  * @brief Handle subscriber selector grid requests.

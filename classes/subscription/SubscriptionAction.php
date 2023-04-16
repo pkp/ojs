@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionAction
+ *
  * @ingroup subscriptions
  *
  * Common actions for subscription management functions.

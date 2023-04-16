@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ReviewerGridHandler
+ *
  * @ingroup controllers_grid_users_reviewer
  *
  * @brief Handle reviewer grid requests.

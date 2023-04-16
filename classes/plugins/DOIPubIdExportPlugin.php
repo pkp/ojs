@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DOIPubIdExportPlugin
+ *
  * @ingroup plugins
  *
  * @brief Basis class for DOI XML metadata export plugins

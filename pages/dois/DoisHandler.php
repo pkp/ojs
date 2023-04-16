@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DoisHandler
+ *
  * @ingroup pages_doi
  *
  * @brief Handle requests for DOI management functions.

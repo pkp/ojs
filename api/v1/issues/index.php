@@ -12,6 +12,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @ingroup api_v1_issues
+ *
  * @brief Handle requests for issues API functions.
  *
  */

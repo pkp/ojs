@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IssueGalleyGridCellProvider
+ *
  * @ingroup issue_galley
  *
  * @brief Grid cell provider for the issue galleys grid

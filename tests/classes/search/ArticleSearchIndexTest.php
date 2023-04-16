@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleSearchIndexTest
+ *
  * @ingroup tests_classes_search
  *
  * @see ArticleSearchIndex

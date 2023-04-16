@@ -7,6 +7,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SendSubmissionAcknowledgement
+ *
  * @ingroup observers_listeners
  *
  * @brief Send an email acknowledgement to the submitting author when a new submission is submitted

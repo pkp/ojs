@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IssuePublishedNotify
+ *
  * @ingroup mail_mailables
  *
  * @brief Email is sent automatically to all registered users to notify about new published issue

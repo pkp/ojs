@@ -8,6 +8,7 @@
  * Distributed under The MIT License. For full terms see the file LICENSE.
  *
  * @class Datacite
+ *
  * @brief Plugin to let managers deposit DOIs and metadata to Datacite
  *
  */
@@ -174,6 +175,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
      *
      * @param string $hookName DoiSettingsForm::setEnabledRegistrationAgencies
      * @param array $args [
+     *
      * @option $enabledRegistrationAgencies array
      * ]
      */
@@ -274,6 +276,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
      *
      * @param string $hookName DoiListPanel::setConfig
      * @param array $args [
+     *
      *      @option $config array
      * ]
      */
@@ -290,6 +293,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
      *
      * @param string $hookName DoiSetupSettingsForm::getObjectTypes
      * @param array $args [
+     *
      *      @option array &$objectTypeOptions
      * ]
      */

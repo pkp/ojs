@@ -1,12 +1,13 @@
 <?php
 /**
- * @file classes/components/form/submission/ReconfigureSubmission.inc.php
+ * @file classes/components/form/submission/ReconfigureSubmission.php
  *
  * Copyright (c) 2014-2022 Simon Fraser University
  * Copyright (c) 2000-2022 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ReconfigureSubmission
+ *
  * @ingroup classes_controllers_form
  *
  * @brief A preset form for configuring the submission wizard, such as the

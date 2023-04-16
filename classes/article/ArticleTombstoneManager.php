@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleTombstoneManager
+ *
  * @ingroup article
  *
  * @brief Class defining basic operations for article tombstones.

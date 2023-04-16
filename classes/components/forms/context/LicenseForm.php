@@ -7,6 +7,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class LicenseForm
+ *
  * @ingroup classes_controllers_form
  *
  * @brief Add OJS-specific details to the license settings forms

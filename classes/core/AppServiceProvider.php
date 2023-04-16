@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class AppServiceProvider
+ *
  * @ingroup core
  *
  * @brief Resolves requests for application classes such as the request handler

@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class upgradeTool
+ *
  * @ingroup tools
  *
  * @brief CLI tool for upgrading OJS.

@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ReviewerInterestsDeletionTool
+ *
  * @ingroup tools
  *
  * @brief CLI tool to remove user interests that are not referenced by any user accounts.

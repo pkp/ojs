@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DoiHandler
+ *
  * @ingroup api_v1_dois
  *
  * @brief Handle API requests for DOI operations.

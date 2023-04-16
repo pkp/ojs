@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SubmissionHandler
+ *
  * @ingroup pages_submission
  *
  * @brief Handles page requests to the submission wizard

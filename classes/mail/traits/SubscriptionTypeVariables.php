@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionTypeVariables
+ *
  * @ingroup mail_traits
  *
  * @brief Mailable trait to set variables related to subscription type

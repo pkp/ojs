@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class RecommendByAuthorPlugin
+ *
  * @brief Plugin to recommend articles from the same author.
  */
 

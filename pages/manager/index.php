@@ -12,6 +12,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_manager
+ *
  * @brief Handle requests for journal management functions.
  *
  */

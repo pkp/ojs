@@ -7,6 +7,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class RequestPaymentDecisionForm
+ *
  * @ingroup classes_controllers_form
  *
  * @brief A form to request or waive an APC payment when making an editorial decision

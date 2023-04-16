@@ -1,18 +1,19 @@
 <?php
 
 /**
-* @file classes/sushi/TR_J3.php
-*
-* Copyright (c) 2022 Simon Fraser University
-* Copyright (c) 2022 John Willinsky
-* Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
-*
-* @class TR_J3
-* @ingroup sushi
-*
-* @brief COUNTER R5 SUSHI Journal Usage by Access Type Report (TR_J3_J3).
-*
-*/
+ * @file classes/sushi/TR_J3.php
+ *
+ * Copyright (c) 2022 Simon Fraser University
+ * Copyright (c) 2022 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * @class TR_J3
+ *
+ * @ingroup sushi
+ *
+ * @brief COUNTER R5 SUSHI Journal Usage by Access Type Report (TR_J3_J3).
+ *
+ */
 
 namespace APP\sushi;
 

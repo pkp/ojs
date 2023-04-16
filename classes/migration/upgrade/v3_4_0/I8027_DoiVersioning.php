@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I8027_DoiVersioning
+ *
  * @brief Add new DOI versioning context setting
  */
 

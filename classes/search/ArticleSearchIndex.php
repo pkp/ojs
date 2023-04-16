@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleSearchIndex
+ *
  * @ingroup search
  *
  * @brief Class to maintain the article search index.

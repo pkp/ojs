@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class rebuildSearchIndex
+ *
  * @ingroup tools
  *
  * @brief CLI tool to rebuild the article keyword search database.

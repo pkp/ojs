@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PubIdExportSubmissionsListGridCellProvider
+ *
  * @ingroup controllers_grid_pubIds
  *
  * @brief Class for a cell provider that can retrieve labels from submissions with pub ids

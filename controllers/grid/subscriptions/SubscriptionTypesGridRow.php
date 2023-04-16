@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionTypesGridRow
+ *
  * @ingroup controllers_grid_subscriptions
  *
  * @brief User grid row definition

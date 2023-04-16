@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionForm
+ *
  * @ingroup subscription
  *
  * @brief Base form class for subscription create/edits.

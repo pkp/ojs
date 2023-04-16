@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class TocGridCellProvider
+ *
  * @ingroup controllers_grid_toc
  *
  * @brief Grid cell provider for the TOC (Table of Contents) category grid

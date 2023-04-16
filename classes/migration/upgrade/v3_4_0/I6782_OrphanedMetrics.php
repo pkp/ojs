@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I6782_OrphanedMetrics
+ *
  * @brief Migrate metrics data from objects that do not exist any more and from assoc types that are not considered in the upgrade into the temporary table.
  * These entries will be copied back and stay in the table metrics_old, s. I6782_CleanOldMetrics.
  * Consider only metric_type ojs::counter here, because these entries will be removed during the upgrade.
