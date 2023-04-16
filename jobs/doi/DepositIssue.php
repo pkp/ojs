@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DepositIssue
+ *
  * @ingroup jobs
  *
  * @brief Job to deposit issue DOI and metadata to the configured registration agency

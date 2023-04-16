@@ -7,6 +7,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class GalleyQueryBuilder
+ *
  * @ingroup query_builders
  *
  * @brief Class for building database queries for galleys

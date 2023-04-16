@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I7129_IssueEntityDAORefactor
+ *
  * @brief Convert issue DAO to use new repository pattern
  */
 

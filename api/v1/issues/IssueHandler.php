@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IssueHandler
+ *
  * @ingroup api_v1_issues
  *
  * @brief Handle API requests for issues operations.
@@ -123,7 +124,6 @@ class IssueHandler extends APIHandler
         // Process query params to format incoming data as needed
         foreach ($slimRequest->getQueryParams() as $param => $val) {
             switch ($param) {
-
                 case 'orderBy':
                     if (in_array($val, [Collector::ORDERBY_DATE_PUBLISHED, Collector::ORDERBY_LAST_MODIFIED, Collector::ORDERBY_SEQUENCE])) {
                         $collector->orderBy($val);

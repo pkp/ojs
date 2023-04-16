@@ -7,6 +7,7 @@
  * Distributed under the GNU GPL v2 or later. For full terms see the file docs/COPYING.
  *
  * @class CounterReportJR1
+ *
  * @brief Journal Report 1
  */
 

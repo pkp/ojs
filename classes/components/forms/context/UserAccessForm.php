@@ -7,6 +7,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class UserAccessForm
+ *
  * @ingroup classes_controllers_form
  *
  * @brief Add OJS-specific fields to the users and roles access settings form.

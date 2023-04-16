@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleHandler
+ *
  * @ingroup pages_article
  *
  * @brief Handle requests for article functions.
@@ -359,7 +360,6 @@ class ArticleHandler extends Handler
                 return;
             }
         } else {
-
             // Ask robots not to index outdated versions
             if ($publication->getId() !== $article->getCurrentPublication()->getId()) {
                 $templateMgr->addHeader('noindex', '<meta name="robots" content="noindex">');
@@ -551,7 +551,6 @@ class ArticleHandler extends Handler
             // bypass all validation if subscription based on domain or ip is valid
             // or if the user is just requesting the abstract
             if ((!$isSubscribedDomain && $subscriptionRequired) && (isset($galleyId) && $galleyId)) {
-
                 // Subscription Access
                 $subscribedUser = $issueAction->subscribedUser($user, $context, $issue->getId(), $submission->getId());
 

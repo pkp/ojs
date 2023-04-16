@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I6782_RemovePlugins
+ *
  * @brief Remove the usageStats and views report plugin.
  *
  * This script has to be called after I6782_Metrics, i.e. after usageStats plugin settings were successfully migrated.

@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PublicIdentifiersForm
+ *
  * @ingroup controllers_tab_pubIds_form
  *
  * @brief Displays a pub ids form.

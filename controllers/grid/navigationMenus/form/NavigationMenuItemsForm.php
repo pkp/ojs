@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class NavigationMenuItemsForm
+ *
  * @ingroup controllers_grid_navigationMenus
  *
  * @brief Form for managers to create/edit navigationMenuItems.

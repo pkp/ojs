@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class LibraryFileManager
+ *
  * @ingroup file
  *
  * @brief Wrapper class for uploading files to a site/context' library directory.

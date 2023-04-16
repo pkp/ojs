@@ -7,6 +7,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class NativeFilterHelper
+ *
  * @ingroup plugins_importexport_native
  *
  * @brief Class that provides native import/export filter-related helper methods.

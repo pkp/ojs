@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyGridCellProvider
+ *
  * @ingroup controllers_grid_articleGalleys
  *
  * @brief Base class for a cell provider for article galleys.

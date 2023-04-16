@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DOAJExportDeployment
+ *
  * @brief Base class configuring the DOAJ export process to an
  * application's specifics.
  */

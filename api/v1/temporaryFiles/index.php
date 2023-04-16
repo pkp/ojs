@@ -11,6 +11,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @ingroup api_v1_temporaryFiles
+ *
  * @brief Handle API requests for temporary file uploading.
  */
 

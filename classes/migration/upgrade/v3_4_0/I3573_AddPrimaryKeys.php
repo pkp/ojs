@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I3573_AddPrimaryKeys.php
+ *
  * @brief Add primary keys to tables that do not have them, to better support database replication.
  *
  */

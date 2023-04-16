@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IssueGalleyNativeXmlFilter
+ *
  * @ingroup plugins_importexport_native
  *
  * @brief Base class that converts a set of issue galleys to a Native XML document

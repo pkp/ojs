@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IssueGridCellProvider
+ *
  * @ingroup controllers_grid_issues
  *
  * @brief Grid cell provider for the issue management grid

@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SubmissionEmailVariable
+ *
  * @ingroup mail_variables
  *
  * @brief Represents variables associated with a submission that can be assigned to a template

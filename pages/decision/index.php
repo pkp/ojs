@@ -12,6 +12,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @ingroup pages_decision
+ *
  * @brief Handle requests to take an editorial decision
  *
  */

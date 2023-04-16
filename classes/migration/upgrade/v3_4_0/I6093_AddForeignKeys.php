@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I6093_AddForeignKeys
+ *
  * @brief Describe upgrade/downgrade operations for introducing foreign key definitions to existing database relationships.
  */
 

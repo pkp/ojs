@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class StatsGeoQueryBuilder
+ *
  * @ingroup query_builders
  *
  * @brief Helper class to construct a query to fetch geographic stats records from the

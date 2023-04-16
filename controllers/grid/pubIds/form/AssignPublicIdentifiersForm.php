@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class AssignPublicIdentifiersForm
+ *
  * @ingroup controllers_grid_pubIds_form
  *
  * @brief Displays the assign pub id form.

@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SubscriptionTypeForm
+ *
  * @ingroup manager_form
  *
  * @brief Form for journal managers to create/edit subscription types.

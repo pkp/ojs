@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ManualPaymentNotify
+ *
  * @ingroup mail_mailables
  *
  * @brief Email is sent automatically to notify journal manager about new payment that needs to be processed

@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyGridRow
+ *
  * @ingroup controllers_grid_articleGalleys
  *
  * @brief Representation of an article galley grid row.

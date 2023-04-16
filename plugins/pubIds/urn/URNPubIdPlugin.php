@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class URNPubIdPlugin
+ *
  * @brief URN plugin class
  */
 
@@ -286,6 +287,7 @@ class URNPubIdPlugin extends PubIdPlugin
      * @param string $hookName <Object>::getProperties::summaryProperties or
      *  <Object>::getProperties::fullProperties
      * @param array $args [
+     *
      * 		@option $props array Existing properties
      * 		@option $object Submission|Issue|Galley
      * 		@option $args array Request args
@@ -305,6 +307,7 @@ class URNPubIdPlugin extends PubIdPlugin
      *
      * @param string $hookName <Object>::getProperties::values
      * @param array $args [
+     *
      * 		@option $values array Key/value store of property values
      * 		@option $object Submission|Issue|Galley
      * 		@option $props array Requested properties

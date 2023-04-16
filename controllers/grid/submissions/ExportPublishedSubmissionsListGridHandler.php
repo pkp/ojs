@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ExportPublishedSubmissionsListGridHandler
+ *
  * @ingroup controllers_grid_submissions
  *
  * @brief Handle exportable published submissions list grid requests.

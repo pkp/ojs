@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I7520_IssueGalleyLabelLength
+ *
  * @brief This migration increases the length of the issue galley label column in the database
  */
 

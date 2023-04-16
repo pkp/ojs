@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PaymentHandler
+ *
  * @ingroup pages_payment
  *
  * @brief Handle requests for payment functions.

@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleNativeXmlFilter
+ *
  * @ingroup plugins_importexport_native
  *
  * @brief Class that converts a Article to a Native XML document.

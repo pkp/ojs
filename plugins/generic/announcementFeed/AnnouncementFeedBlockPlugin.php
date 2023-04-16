@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class AnnouncementFeedBlockPlugin
+ *
  * @brief Class for block component of announcement feed plugin
  */
 

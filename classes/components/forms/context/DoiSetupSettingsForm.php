@@ -7,6 +7,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DoiSetupSettingsForm
+ *
  * @ingroup classes_controllers_form
  *
  * @brief A preset form for enabling and configuring DOI settings for a given context

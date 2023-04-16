@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class AuthorDashboardHandler
+ *
  * @ingroup pages_authorDashboard
  *
  * @brief Handle requests for the author dashboard.

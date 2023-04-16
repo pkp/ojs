@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I7796_UpdateCrossrefSchema
+ *
  * @brief Upgrade Crossref schema in filter_groups.
  */
 

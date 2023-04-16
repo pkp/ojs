@@ -7,6 +7,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class BackendPaymentsSettingsHandler
+ *
  * @ingroup api_v1_backend
  */
 

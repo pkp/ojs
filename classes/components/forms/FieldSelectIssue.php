@@ -7,6 +7,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class FieldSelectIssue
+ *
  * @ingroup classes_controllers_form
  *
  * @brief An extension of the FieldSelect for selecting an issue.

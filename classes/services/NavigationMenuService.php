@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class NavigationMenuService
+ *
  * @ingroup services
  *
  * @brief Helper class that encapsulates NavigationMenu business logic
@@ -114,7 +115,6 @@ class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
         }
 
         if ($navigationMenuItem->getIsDisplayed()) {
-
             // Set the URL
             switch ($menuItemType) {
                 case self::NMI_TYPE_CURRENT:

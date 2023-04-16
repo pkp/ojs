@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class Dc11Schema
+ *
  * @ingroup plugins_metadata_dc11_schema
  *
  * @see PKPDc11Schema

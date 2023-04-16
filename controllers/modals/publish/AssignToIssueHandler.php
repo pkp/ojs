@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class AssignToIssueHandler
+ *
  * @ingroup controllers_modals_publish
  *
  * @brief A handler to assign a publication to an issue before scheduling for

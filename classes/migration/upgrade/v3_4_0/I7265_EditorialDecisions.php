@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I7265_EditorialDecisions
+ *
  * @brief Database migrations for editorial decision refactor.
  */
 

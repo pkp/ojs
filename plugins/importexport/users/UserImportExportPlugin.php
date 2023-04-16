@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class UserImportExportPlugin
+ *
  * @ingroup plugins_importexport_user
  *
  * @brief User XML import/export plugin

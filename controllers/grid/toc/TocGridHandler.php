@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class TocGridHandler
+ *
  * @ingroup controllers_grid_toc
  *
  * @brief Handle TOC (table of contents) grid requests.

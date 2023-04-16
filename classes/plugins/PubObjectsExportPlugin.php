@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PubObjectsExportPlugin
+ *
  * @ingroup plugins
  *
  * @brief Basis class for XML metadata export plugins
@@ -715,7 +716,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
             default:
                 $this->usage($scriptName);
                 return;
-
         }
         if (empty($objects)) {
             echo __('plugins.importexport.common.cliError') . "\n";

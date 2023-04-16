@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormatPlugin_MARC21
+ *
  * @ingroup oai_format
  *
  * @see OAI

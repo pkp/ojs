@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class UserHandler
+ *
  * @ingroup api_v1_users
  *
  * @brief Handle API requests for user operations.

@@ -13,6 +13,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IssueGridHandler
+ *
  * @ingroup controllers_grid_issues
  *
  * @brief Handle issues grid requests.
@@ -600,7 +601,6 @@ class IssueGridHandler extends GridHandler
 
         // Send a notification to associated users if selected and context is publishing content online with OJS
         if ($request->getUserVar('sendIssueNotification') && $context->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE) {
-
             // Notify users
             /** @var NotificationSubscriptionSettingsDAO $notificationSubscriptionSettingsDao */
             $notificationSubscriptionSettingsDao = DAORegistry::getDAO('NotificationSubscriptionSettingsDAO');

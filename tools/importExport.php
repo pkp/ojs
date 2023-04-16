@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class importExport
+ *
  * @ingroup tools
  *
  * @brief CLI tool to perform import/export tasks

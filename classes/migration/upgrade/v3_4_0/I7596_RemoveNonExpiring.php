@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I7596_RemoveNonExpiring
+ *
  * @brief Remove the subscription non_expiring column if it exists.
  * By OJS 3.3.0-x the non-expiring state of the subscription was determined by
  * the NULL status of the duration column, but not all code had been updated to

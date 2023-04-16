@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class NativeImportExportPlugin
+ *
  * @ingroup plugins_importexport_native
  *
  * @brief Native XML import/export plugin

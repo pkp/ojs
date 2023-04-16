@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class TocGridRow
+ *
  * @ingroup controllers_grid_settings_issue
  *
  * @brief Handle issue grid row requests.

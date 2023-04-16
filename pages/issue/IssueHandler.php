@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IssueHandler
+ *
  * @ingroup pages_issue
  *
  * @brief Handle requests for issue functions.

@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyForm
+ *
  * @ingroup controllers_grid_articleGalleys_form
  *
  * @see Galley
@@ -172,7 +173,6 @@ class ArticleGalleyForm extends Form
         $articleGalley = $this->_articleGalley;
 
         if ($articleGalley) {
-
             // Update galley in the db
             $newData = [
                 'label' => $this->getData('label'),

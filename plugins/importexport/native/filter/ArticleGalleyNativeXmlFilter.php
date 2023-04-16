@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleGalleyNativeXmlFilter
+ *
  * @ingroup plugins_importexport_native
  *
  * @brief Class that converts an Galley to a Native XML document.

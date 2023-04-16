@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @ingroup plugins_importexport_native
+ *
  * @brief Wrapper for XML native import/export plugin.
  *
  */

@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class OpenAccessNotification
+ *
  * @ingroup tasks
  *
  * @brief Class to perform automated email notifications when an issue becomes open access.

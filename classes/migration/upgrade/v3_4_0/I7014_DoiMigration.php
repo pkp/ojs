@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I7014_DoiMigration
+ *
  * @brief Describe upgrade/downgrade operations for DB table dois.
  */
 

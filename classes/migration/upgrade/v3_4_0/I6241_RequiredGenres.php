@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class I6241_RequiredGenres
+ *
  * @brief Set a required file genre for this app.
  */
 

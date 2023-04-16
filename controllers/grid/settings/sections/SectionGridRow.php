@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SectionGridRow
+ *
  * @ingroup controllers_grid_settings_section
  *
  * @brief Handle section grid row requests.

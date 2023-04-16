@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DOAJSettingsForm
+ *
  * @brief Form for journal managers to setup DOAJ plugin
  */
 

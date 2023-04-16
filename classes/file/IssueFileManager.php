@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IssueFileManager
+ *
  * @ingroup file
  *
  * @brief Class defining operations for issue file management.
