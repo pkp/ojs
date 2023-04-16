@@ -16,14 +16,12 @@
 use APP\Services\IssueService;
 use APP\Services\QueryBuilders\SubmissionQueryBuilder;
 use Illuminate\Database\Capsule\Manager as Capsule;
-use Illuminate\Database\Capsule\Manager;
 use Illuminate\Database\Query\Builder;
-use Illuminate\Database\Query\JoinClause;
 
 import('lib.pkp.classes.plugins.GenericPlugin');
 
 class RecommendBySimilarityPlugin extends GenericPlugin {
-	private const RECOMMEND_BY_SIMILARITY_PLUGIN_COUNT = 10;
+	private const DEFAULT_RECOMMENDATION_COUNT = 10;
 
 	/**
 	 * @copydoc Plugin::register()
@@ -36,50 +34,49 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 		}
 
 		if ($success && $this->getEnabled($mainContextId)) {
-			HookRegistry::register('Templates::Article::Footer::PageFooter', array($this, 'callbackTemplateArticlePageFooter'));
+			HookRegistry::register('Templates::Article::Footer::PageFooter', function (string $hookName, array $params): bool {
+				$output = & $params[2];
+				$output .= $this->buildTemplate();
+				return false;
+			});
 		}
 		return $success;
 	}
 
 	/**
+	 * Builds the template with the recommended submissions or null if the linked submission has no keywords
 	 * @see templates/article/footer.tpl
-	 * @todo Revert back to using the ArticleSearch::retrieveResults() once its performance is addressed
 	 */
-	public function callbackTemplateArticlePageFooter(string $hookName, $params): bool
+	private function buildTemplate(): ?string
 	{
-		/** @var Smarty */
-		$smarty = $params[1];
-		$output =& $params[2];
-
-		$displayedArticle = $smarty->getTemplateVars('article');
-		$submissionId = $displayedArticle->getId();
+		$templateManager = TemplateManager::getManager();
+		$submissionId = $templateManager->getTemplateVars('article')->getId();
 
 		// If there's no keywords, quit
 		if (empty($keywords = $this->_getKeywords($submissionId))) {
-			return false;
+			return null;
 		}
 
 		$request = Application::get()->getRequest();
 		$router = $request->getRouter();
 		$context = $router->getContext($request);
 
+		$rangeInfo = Handler::getRangeInfo($request, 'articlesBySimilarity');
+		$rangeInfo->setCount(static::DEFAULT_RECOMMENDATION_COUNT);
+		$queryBuilder = $this->_getQueryBuilder($context, $submissionId, $keywords);
+
 		/** @var SubmissionDAO */
 		$submissionDao = DAORegistry::getDAO('SubmissionDAO');
-		$rangeInfo = Handler::getRangeInfo($request, 'articlesBySimilarity');
-		$rangeInfo->setCount(static::RECOMMEND_BY_SIMILARITY_PLUGIN_COUNT);
-		$queryBuilder = $this->_getQueryBuilder($context, $submissionId, $keywords);
 		$result = $submissionDao->retrieveRange($sql = $queryBuilder->toSql(), $params = $queryBuilder->getBindings(), $rangeInfo);
 		$resultSet = new DAOResultFactory($result, $submissionDao, '_fromRow', [], $sql, $params, $rangeInfo);
 
-		$smarty->assign([
-			'articlesBySimilarity' => $resultSet,
-			'articlesBySimilarityQuery' => implode(' ', $keywords),
-			'journal' => $context,
-			'plugin' => $this
-		]);
-
-		$output .= $smarty->fetch($this->getTemplateResource('articleFooter.tpl'));
-		return false;
+		return $templateManager
+			->assign('articlesBySimilarity', (object) [
+				'submissions' => $resultSet,
+				'query' => implode(' ', $keywords),
+				'plugin' => $this
+			])
+			->fetch($this->getTemplateResource('articleFooter.tpl'));
 	}
 
 	/**
@@ -87,49 +84,45 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 	 */
 	private function _getQueryBuilder(Context $context, int $submissionId, array $keywords): Builder
 	{
-		/** @var Builder */
-		$queryBuilder = (new SubmissionQueryBuilder())
+		return (new SubmissionQueryBuilder())
 			->filterByContext($context->getId())
 			->filterByStatus(STATUS_PUBLISHED)
-			->getQuery();
-
-		$keywordIdFields = $orderByMatches = $orderByMatchCount = [];
-		foreach ($keywords as $i => $term) {
-			// Adds one join for each keyword
-			$queryBuilder->leftJoin("submission_search_keyword_list AS k{$i}", function (JoinClause $join) use ($term, $i) {
-				$join->where("k{$i}.keyword_text", '=', $term);
-			});
-			// Base ORDER BY clause: retrieves the number of matches for the keyword
-			$orderBy = '(' . Capsule::table('submission_search_objects', 'o')
-				->join("submission_search_object_keywords AS o{$i}", "o{$i}.object_id", '=', 'o.object_id')
-				->whereColumn("k{$i}.keyword_id", '=', "o{$i}.keyword_id")
-				->whereColumn('s.submission_id', '=', 'o.submission_id')
-				->selectRaw('COUNT(0)')
-				->toSql() . ')';
-			// List of primary ORDER BY fields
-			$orderByMatches[] = "CASE WHEN {$orderBy} = 0 THEN 1 ELSE 0 END";
-			// List of secondary ORDER BY fields
-			$orderByMatchCount[] = $orderBy;
-			// Keeps track of all keyword IDs
-			$keywordIdFields[] = "k{$i}.keyword_id";
-		}
-
-		return $queryBuilder
+			->getQuery()
+			->where(function (Builder $q) use ($keywords) {
+				foreach ($keywords as $keyword) {
+					$q->orWhereExists(function (Builder $query) use ($keyword) {
+						$query
+							->from('submission_search_objects', 'sso')
+							->join('submission_search_object_keywords AS ssok', 'sso.object_id', '=', 'ssok.object_id')
+							->join('submission_search_keyword_list AS sskl', 'sskl.keyword_id', '=', 'ssok.keyword_id')
+							->where('sskl.keyword_text', '=', Capsule::raw('LOWER(?)'))->addBinding($keyword)
+							->whereColumn('s.submission_id', '=', 'sso.submission_id');
+					});
+				}
+			})
 			// Skips itself
 			->where('s.submission_id', '<>', $submissionId)
 			// Clears any previous ORDER BY from the query builder
 			->reorder()
-			// First order by the number of keywords found (rows that have all keywords will be placed higher)
-			->orderBy(Capsule::raw(implode('+', $orderByMatches)))
-			// Then order by the total number of matches
-			->orderByDesc(Capsule::raw(implode('+', $orderByMatchCount)))
-			// Only brings rows that have at least one matching keyword
-			->whereExists(function (Builder $query) use ($keywordIdFields) {
-				$query->from('submission_search_objects', 'o')
-					->join('submission_search_object_keywords AS ok', 'o.object_id', '=', 'ok.object_id')
-					->whereIn('ok.keyword_id', array_map([Manager::class, 'raw'], $keywordIdFields))
-					->whereColumn('s.submission_id', '=', 'o.submission_id');
-			});
+			// Order by the number of matches for all keywords
+			->orderBy(
+				$orderByMatchCount = Capsule::table('submission_search_objects', 'sso')
+					->join('submission_search_object_keywords AS ssok', 'ssok.object_id', '=', 'sso.object_id')
+					->join('submission_search_keyword_list AS sskl', 'sskl.keyword_id', '=', 'ssok.keyword_id')
+					->where(function (Builder $q) use ($keywords) {
+						foreach ($keywords as $keyword) {
+							$q->orWhere('sskl.keyword_text', '=', Capsule::raw('LOWER(?)'))->addBinding($keyword);
+						}
+					})
+					->whereColumn('s.submission_id', '=', 'sso.submission_id')
+					->selectRaw('COUNT(0)'),
+				'DESC'
+			)
+			// Order by the number of distinct matched keywords
+			->orderBy(
+				(clone $orderByMatchCount)->select(Capsule::raw('COUNT(DISTINCT sskl.keyword_id)')),
+				'DESC'
+			);
 	}
 
 	/**
@@ -158,7 +151,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @see Plugin::getDisplayName()
+	 * @copydoc Plugin::getDisplayName()
 	 */
 	public function getDisplayName(): string
 	{
@@ -166,7 +159,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @see Plugin::getDescription()
+	 * @copydoc Plugin::getDescription()
 	 */
 	public function getDescription(): string
 	{
