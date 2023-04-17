@@ -223,7 +223,7 @@ describe('Submission Wizard', function() {
                 cy.get('button:contains("Submit")').should('be.enabled');
             });
 
-        cy.changeLanguage('fr_CA');
+        cy.changeLanguage('Français');
         cy.get('button:contains("Continuer")').click();
         cy.get('button:contains("Continuer")').click();
         cy.get('button:contains("Continuer")').click();
