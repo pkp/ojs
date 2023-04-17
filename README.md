@@ -1,6 +1,6 @@
 # Open Journal Systems
 
-[![Build Status](https://travis-ci.org/pkp/ojs.svg?branch=main)](https://travis-ci.org/pkp/ojs)
+[![Build Status](https://app.travis-ci.com/pkp/ojs.svg?branch=main)](https://app.travis-ci.com/pkp/ojs)
 
 Open Journal Systems (OJS) is open source software developed by the [Public Knowledge Project](https://pkp.sfu.ca/) to manage scholarly journals. [Learn More](https://pkp.sfu.ca/software/ojs/)
 
