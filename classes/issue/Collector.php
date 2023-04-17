@@ -19,6 +19,7 @@ use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\LazyCollection;
+use InvalidArgumentException;
 use PKP\core\interfaces\CollectorInterface;
 use PKP\core\PKPApplication;
 use PKP\plugins\Hook;
@@ -106,7 +107,7 @@ class Collector implements CollectorInterface
      *
      * @return $this
      */
-    public function filterByContextIds(?array $contextIds): self
+    public function filterByContextIds(?array $contextIds): static
     {
         $this->contextIds = $contextIds;
         return $this;
@@ -117,7 +118,7 @@ class Collector implements CollectorInterface
      *
      * @return $this
      */
-    public function filterByIssueIds(?array $issueIds): self
+    public function filterByIssueIds(?array $issueIds): static
     {
         $this->issueIds = $issueIds;
         return $this;
@@ -128,80 +129,33 @@ class Collector implements CollectorInterface
      *
      * @return $this
      */
-    public function orderBy(string $orderByConstant): self
+    public function orderBy(string $orderByConstant): static
     {
-        switch ($orderByConstant) {
-            case self::ORDERBY_LAST_MODIFIED:
-                $this->resultOrderings = [
-                    [
-                        'orderBy' => 'i.last_modified',
-                        'direction' => self::ORDER_DIR_DESC
-                    ]
-                ];
-                break;
-            case self::ORDERBY_SEQUENCE:
-                $this->resultOrderings = [
-                    [
-                        'orderBy' => 'o.seq',
-                        'direction' => self::ORDER_DIR_ASC
-                    ]
-                ];
-                break;
-            case self::ORDERBY_PUBLISHED_ISSUES:
-                $this->resultOrderings = [
-                    [
-                        'orderBy' => 'o.seq',
-                        'direction' => self::ORDER_DIR_ASC
-                    ],
-                    [
-                        'orderBy' => 'currentIssue',
-                        'direction' => self::ORDER_DIR_DESC
-                    ],
-                    [
-                        'orderBy' => 'i.date_published',
-                        'direction' => self::ORDER_DIR_DESC
-                    ]
-                ];
-                break;
-            case self::ORDERBY_UNPUBLISHED_ISSUES:
-                $this->resultOrderings = [
-                    [
-                        'orderBy' => 'i.year',
-                        'direction' => self::ORDER_DIR_ASC
-                    ],
-                    [
-                        'orderBy' => 'i.volume',
-                        'direction' => self::ORDER_DIR_ASC
-                    ],
-                    [
-                        'orderBy' => 'i.number',
-                        'direction' => self::ORDER_DIR_ASC
-                    ]
-                ];
-                break;
-            case self::ORDERBY_SHELF:
-                $this->resultOrderings = [
-                    [
-                        'orderBy' => self::ORDER_CURRENT_ISSUE,
-                        'direction' => self::ORDER_DIR_DESC
-                    ],
-                    [
-                        'orderBy' => 'i.year',
-                        'direction' => self::ORDER_DIR_ASC
-                    ],
-                    [
-                        'orderBy' => 'i.volume',
-                        'direction' => self::ORDER_DIR_ASC
-                    ],
-                    [
-                        'orderBy' => 'i.number',
-                        'direction' => self::ORDER_DIR_ASC
-                    ]
-                ];
-                break;
-            default:
-                throw new \InvalidArgumentException('One of ORDERBY_* constants must be provided');
-        }
+        $this->resultOrderings = match ($orderByConstant) {
+            static::ORDERBY_LAST_MODIFIED => [
+                ['orderBy' => 'i.last_modified', 'direction' => static::ORDER_DIR_DESC]
+            ],
+            static::ORDERBY_SEQUENCE => [
+                ['orderBy' => 'o.seq', 'direction' => static::ORDER_DIR_ASC]
+            ],
+            static::ORDERBY_PUBLISHED_ISSUES => [
+                ['orderBy' => 'o.seq', 'direction' => static::ORDER_DIR_ASC],
+                ['orderBy' => 'currentIssue', 'direction' => static::ORDER_DIR_DESC],
+                ['orderBy' => 'i.date_published', 'direction' => static::ORDER_DIR_DESC]
+            ],
+            static::ORDERBY_UNPUBLISHED_ISSUES => [
+                ['orderBy' => 'i.year', 'direction' => static::ORDER_DIR_ASC],
+                ['orderBy' => 'i.volume', 'direction' => static::ORDER_DIR_ASC],
+                ['orderBy' => 'i.number', 'direction' => static::ORDER_DIR_ASC]
+            ],
+            static::ORDERBY_SHELF => [
+                ['orderBy' => static::ORDER_CURRENT_ISSUE, 'direction' => static::ORDER_DIR_DESC],
+                ['orderBy' => 'i.year', 'direction' => static::ORDER_DIR_ASC],
+                ['orderBy' => 'i.volume', 'direction' => static::ORDER_DIR_ASC],
+                ['orderBy' => 'i.number', 'direction' => static::ORDER_DIR_ASC]
+            ],
+            default => throw new InvalidArgumentException('One of ORDERBY_* constants must be provided')
+        };
         return $this;
     }
 
@@ -210,7 +164,7 @@ class Collector implements CollectorInterface
      *
      * @return $this
      */
-    public function filterByPublished(bool $isPublished): self
+    public function filterByPublished(bool $isPublished): static
     {
         $this->isPublished = $isPublished;
         return $this;
@@ -223,7 +177,7 @@ class Collector implements CollectorInterface
      *
      * @return $this
      */
-    public function filterByVolumes(?array $volumes): self
+    public function filterByVolumes(?array $volumes): static
     {
         $this->volumes = $volumes;
         return $this;
@@ -236,7 +190,7 @@ class Collector implements CollectorInterface
      *
      * @return $this
      */
-    public function filterByNumbers(?array $numbers): self
+    public function filterByNumbers(?array $numbers): static
     {
         $this->numbers = $numbers;
         return $this;
@@ -249,7 +203,7 @@ class Collector implements CollectorInterface
      *
      * @return $this
      */
-    public function filterByYears(?array $years): self
+    public function filterByYears(?array $years): static
     {
         $this->years = $years;
         return $this;
@@ -260,7 +214,7 @@ class Collector implements CollectorInterface
      *
      * @return $this
      */
-    public function filterByUrlPath(string $urlPath): self
+    public function filterByUrlPath(string $urlPath): static
     {
         $this->urlPath = $urlPath;
         return $this;
@@ -271,7 +225,7 @@ class Collector implements CollectorInterface
      *
      * @return $this
      */
-    public function filterByTitles(array $titles): self
+    public function filterByTitles(array $titles): static
     {
         $this->titles = $titles;
         return $this;
@@ -283,7 +237,7 @@ class Collector implements CollectorInterface
      * @param array|null $statuses One or more of DOI::STATUS_* constants
      *
      */
-    public function filterByDoiStatuses(?array $statuses): self
+    public function filterByDoiStatuses(?array $statuses): static
     {
         $this->doiStatuses = $statuses;
         return $this;
@@ -296,7 +250,7 @@ class Collector implements CollectorInterface
      *
      * @return $this
      */
-    public function filterByHasDois(?bool $hasDois, ?array $enabledDoiTypes = null): self
+    public function filterByHasDois(?bool $hasDois, ?array $enabledDoiTypes = null): static
     {
         $this->hasDois = $hasDois;
         $this->enabledDoiTypes = $enabledDoiTypes === null ? [Repo::doi()::TYPE_ISSUE] : $enabledDoiTypes;
@@ -308,7 +262,7 @@ class Collector implements CollectorInterface
      *
      * @return $this
      */
-    public function searchPhrase(?string $phrase): self
+    public function searchPhrase(?string $phrase): static
     {
         $this->searchPhrase = $phrase;
         return $this;
@@ -319,7 +273,7 @@ class Collector implements CollectorInterface
      *
      * @return $this
      */
-    public function limit(?int $count): self
+    public function limit(?int $count): static
     {
         $this->count = $count;
         return $this;
@@ -331,7 +285,7 @@ class Collector implements CollectorInterface
      *
      * @return $this
      */
-    public function offset(?int $offset): self
+    public function offset(?int $offset): static
     {
         $this->offset = $offset;
         return $this;
@@ -347,80 +301,71 @@ class Collector implements CollectorInterface
             ->leftJoin('custom_issue_orders as o', 'o.issue_id', '=', 'i.issue_id');
 
         // Issue titles (exact matches)
-        $q->when($this->titles !== null, function (Builder $q) {
-            $q->whereIn('i.issue_id', function (Builder $q) {
+        $q->when(
+            $this->titles !== null,
+            fn (Builder $q) =>
+            $q->whereIn(
+                'i.issue_id',
+                fn (Builder $q) =>
                 $q->select('issue_id')
                     ->from($this->dao->settingsTable)
                     ->where('setting_name', '=', 'title')
-                    ->whereIn('setting_value', $this->titles);
-            });
-        });
+                    ->whereIn('setting_value', $this->titles)
+            )
+        );
 
         // Context
         // Never permit a query without a context_id unless the PKPApplication::CONTEXT_ID_ALL wildcard
         // has been set explicitly.
         if (!isset($this->contextIds)) {
-            throw new Exception('Submissions can not be retrieved without a context id. Pass the CONTEXT_ID_ALL wildcard to get submissions from any context.');
+            throw new Exception('Submissions can not be retrieved without a context id. Pass the Application::CONTEXT_ID_ALL wildcard to get submissions from any context.');
         } elseif (!in_array(PKPApplication::CONTEXT_ID_ALL, $this->contextIds)) {
             $q->whereIn('i.journal_id', $this->contextIds);
         }
 
         // Issue IDs
-        $q->when($this->issueIds !== null, function (Builder $q) {
-            $q->whereIn('i.issue_id', $this->issueIds);
-        });
-
-        $q->when($this->isPublished !== null, function (Builder $q) {
-            $q->where('i.published', '=', $this->isPublished ? 1 : 0);
-        });
-
+        $q->when($this->issueIds !== null, fn (Builder $q) => $q->whereIn('i.issue_id', $this->issueIds));
+        // Published
+        $q->when($this->isPublished !== null, fn (Builder $q) => $q->where('i.published', '=', $this->isPublished ? 1 : 0));
         // Volumes
-        $q->when($this->volumes !== null, function (Builder $q) {
-            $q->whereIn('i.volume', $this->volumes);
-        });
-
+        $q->when($this->volumes !== null, fn (Builder $q) => $q->whereIn('i.volume', $this->volumes));
         // Numbers
-        $q->when($this->numbers !== null, function (Builder $q) {
-            $q->whereIn('i.number', $this->numbers);
-        });
-
+        $q->when($this->numbers !== null, fn (Builder $q) => $q->whereIn('i.number', $this->numbers));
         // Years
-        $q->when($this->years !== null, function (Builder $q) {
-            $q->whereIn('i.year', $this->years);
-        });
-
+        $q->when($this->years !== null, fn (Builder $q) => $q->whereIn('i.year', $this->years));
         // URL path
-        $q->when($this->urlPath !== null, function (Builder $q) {
-            $q->where('i.url_path', '=', $this->urlPath);
-        });
+        $q->when($this->urlPath !== null, fn (Builder $q) => $q->where('i.url_path', '=', $this->urlPath));
 
         // DOI statuses
-        $q->when($this->doiStatuses !== null, function (Builder $q) {
-            $q->whereIn('i.issue_id', function (Builder $q) {
+        $q->when(
+            $this->doiStatuses !== null,
+            fn (Builder $q) =>
+            $q->whereIn(
+                'i.issue_id',
+                fn (Builder $q) =>
                 $q->select('i.issue_id')
                     ->from('issues as i')
                     ->leftJoin('dois as d', 'd.doi_id', '=', 'i.doi_id')
-                    ->whereIn('d.status', $this->doiStatuses);
-            });
-        });
+                    ->whereIn('d.status', $this->doiStatuses)
+            )
+        );
 
         // By whether issue has DOI assigned
-        $q->when($this->hasDois !== null, function (Builder $q) {
-            $q->whereIn('i.issue_id', function (Builder $q) {
+        $q->when(
+            $this->hasDois !== null,
+            fn (Builder $q) =>
+            $q->whereIn(
+                'i.issue_id',
+                fn (Builder $q) =>
                 $q->select('current_i.issue_id')
                     ->from('issues', 'current_i')
-                    ->where(function (Builder $q) {
-                        $q->when(in_array(Repo::doi()::TYPE_ISSUE, $this->enabledDoiTypes), function (Builder $q) {
-                            $q->when($this->hasDois === true, function (Builder $q) {
-                                $q->whereNotNull('current_i.doi_id');
-                            });
-                            $q->when($this->hasDois === false, function (Builder $q) {
-                                $q->whereNull('current_i.doi_id');
-                            });
-                        });
-                    });
-            });
-        });
+                    ->when(
+                        in_array(Repo::doi()::TYPE_ISSUE, $this->enabledDoiTypes),
+                        fn (Builder $q) =>
+                        $this->hasDois ? $q->whereNotNull('current_i.doi_id') : $q->whereNull('current_i.doi_id')
+                    )
+            )
+        );
 
         // Search phrase
         if ($this->searchPhrase !== null) {
@@ -431,57 +376,57 @@ class Collector implements CollectorInterface
             // en this will match Vol. 1. No. 1 (2018) against:
             // i.volume = 1 AND i.number = 1 AND i.year = 2018
             $volume = '';
-            $number = '';
-            $year = '';
-            $volumeRegex = '/' . preg_quote(__('issue.vol')) . '\s\S/';
+            $volumeRegex = '/\b' . preg_quote(__('issue.vol'), '/') . '\s+(\d+)/';
             if (preg_match($volumeRegex, $searchPhrase, $matches)) {
-                $volume = trim(str_replace(__('issue.vol'), '', $matches[0]));
-                $searchPhrase = str_replace($matches[0], '', $searchPhrase);
+                [$found, $volume] = $matches;
+                $searchPhrase = str_replace($found, '', $searchPhrase);
             }
-            $numberRegex = '/' . preg_quote(__('issue.no')) . '\s\S/';
+            $number = '';
+            $numberRegex = '/\b' . preg_quote(__('issue.no'), '/') . '\s+(\S+)\b/';
             if (preg_match($numberRegex, $searchPhrase, $matches)) {
-                $number = trim(str_replace(__('issue.no'), '', $matches[0]));
-                $searchPhrase = str_replace($matches[0], '', $searchPhrase);
+                [$found, $number] = $matches;
+                $searchPhrase = str_replace($found, '', $searchPhrase);
             }
-            if (preg_match('/\(\d{4}\)\:?/', $searchPhrase, $matches)) {
-                $year = substr($matches[0], 1, 4);
-                $searchPhrase = str_replace($matches[0], '', $searchPhrase);
+            $year = '';
+            if (preg_match('/\((\d{4})\)/', $searchPhrase, $matches)) {
+                [$found, $year] = $matches;
+                $searchPhrase = str_replace($found, '', $searchPhrase);
             }
-            if ($volume !== '' || $number !== '' || $year !== '') {
-                $q->where(function ($q) use ($volume, $number, $year) {
-                    if ($volume) {
-                        $q->where('i.volume', '=', $volume);
-                    }
-                    if ($number) {
-                        $q->where('i.number', '=', $number);
-                    }
-                    if ($year) {
-                        $q->where('i.year', '=', $year);
-                    }
-                });
-            }
+            $q->when(
+                strlen($volume) || $number !== '' || $year !== '',
+                fn (Builder $q) => $q->where(
+                    fn (Builder $q) => $q
+                        ->when($volume !== '', fn (Builder $q) => $q->where('i.volume', '=', $volume))
+                        ->when($number !== '', fn (Builder $q) => $q->where('i.number', '=', $number))
+                        ->when($year !== '', fn (Builder $q) => $q->where('i.year', '=', $year))
+                )
+            );
 
-            $words = array_unique(explode(' ', $searchPhrase));
+            $words = array_filter(array_unique(explode(' ', $searchPhrase)), 'strlen');
             if (count($words)) {
+                $likePattern = DB::raw("CONCAT('%', LOWER(?), '%')");
                 foreach ($words as $word) {
-                    $likePattern = DB::raw("CONCAT('%', LOWER(?), '%')");
-                    $q->whereIn('i.issue_id', function (Builder $q) use ($likePattern, $word) {
-                        $q->select('iss_t.issue_id')
-                            ->from($this->dao->settingsTable, 'iss_t')
-                            ->where('iss_t.setting_name', '=', 'title')
-                            ->where(DB::raw('lower(iss_t.setting_value)'), 'LIKE', $likePattern)->addBinding($word);
-                    })
-                        ->orWhereIn('i.issue_id', function (Builder $q) use ($likePattern, $word) {
-                            $q->select('iss_d.issue_id')
-                                ->from($this->dao->settingsTable, 'iss_d')
-                                ->where('iss_d.setting_name', '=', 'name')
-                                ->where(DB::raw('lower(iss_d.setting_value)'), 'LIKE', $likePattern)->addBinding($word);
-                        });
-
-                    // Match any four-digit number to the year
-                    if (ctype_digit($word) && strlen($word) === 4) {
-                        $q->orWhere('i.year', '=', $word);
-                    }
+                    $q->where(
+                        fn (Builder $q) => $q
+                            ->whereIn(
+                                'i.issue_id',
+                                fn (Builder $q) =>
+                                $q->select('iss_t.issue_id')
+                                    ->from($this->dao->settingsTable, 'iss_t')
+                                    ->where('iss_t.setting_name', '=', 'title')
+                                    ->where(DB::raw('LOWER(iss_t.setting_value)'), 'LIKE', $likePattern)->addBinding($word)
+                            )
+                            ->orWhereIn(
+                                'i.issue_id',
+                                fn (Builder $q) =>
+                                $q->select('iss_d.issue_id')
+                                    ->from($this->dao->settingsTable, 'iss_d')
+                                    ->where('iss_d.setting_name', '=', 'name')
+                                    ->where(DB::raw('LOWER(iss_d.setting_value)'), 'LIKE', $likePattern)->addBinding($word)
+                            )
+                        // Match any four-digit number to the year
+                            ->when(ctype_digit($word) && strlen($word) === 4, fn (Builder $q) => $q->orWhere('i.year', '=', $word))
+                    );
                 }
             }
         }
@@ -489,7 +434,7 @@ class Collector implements CollectorInterface
         // Ordering for query-builder-based and legacy-based orderings
         $q->when($this->resultOrderings !== null, function (Builder $q) {
             foreach ($this->resultOrderings as $resultOrdering) {
-                if ($resultOrdering['orderBy'] == self::ORDER_CURRENT_ISSUE) {
+                if ($resultOrdering['orderBy'] === static::ORDER_CURRENT_ISSUE) {
                     // Custom query to order by current issue status from the journals table
                     $q->leftJoin('journals as j', 'j.current_issue_id', '=', 'i.issue_id')
                         ->orderByRaw('CASE WHEN j.current_issue_id IS NOT NULL then 1 else 0 END ' . $resultOrdering['direction']);
@@ -500,13 +445,8 @@ class Collector implements CollectorInterface
         });
 
         // Limit and offset results for pagination
-        $q->when($this->count !== null, function (Builder $q) {
-            $q->limit($this->count);
-        });
-
-        $q->when($this->offset !== null, function (Builder $q) {
-            $q->offset($this->offset);
-        });
+        $q->when($this->count !== null, fn (Builder $q) => $q->limit($this->count));
+        $q->when($this->offset !== null, fn (Builder $q) => $q->offset($this->offset));
 
         // Add app-specific query statements
         Hook::call('Issue::getMany::queryObject', [&$q, $this]);
