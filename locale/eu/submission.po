@@ -1,9 +1,10 @@
 # Josu Aramberri <josu.aramberri@gmail.com>, 2022.
 # Josu Acosta <josuacostacalvo@gmail.com>, 2023.
+# Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-04-17 21:43+0000\n"
-"Last-Translator: Josu Acosta <josuacostacalvo@gmail.com>\n"
+"PO-Revision-Date: 2023-04-18 21:55+0000\n"
+"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "eu/>\n"
 "Language: eu\n"
@@ -20,7 +21,7 @@ msgid "submission.upload.selectComponent"
 msgstr ""
 
 msgid "submission.title"
-msgstr ""
+msgstr "Artikuluaren izenburua"
 
 msgid "submission.title.tip"
 msgstr ""
@@ -29,13 +30,13 @@ msgid "submission.submit.newSubmissionMultiple"
 msgstr ""
 
 msgid "submission.submit.newSubmissionSingle"
-msgstr ""
+msgstr "Bidalketa berria"
 
 msgid "grid.action.workflow"
 msgstr ""
 
 msgid "submission.abstract.wordCount.description"
-msgstr ""
+msgstr "Laburpenak gehienez {$wordCount} hitz izan behar ditu."
 
 msgid "submission.submit.noContext"
 msgstr ""
@@ -50,7 +51,7 @@ msgid "grid.action.galleyInIssueEntry"
 msgstr ""
 
 msgid "grid.action.issueEntry"
-msgstr ""
+msgstr "Ikusi bidalketa honen metadatuak"
 
 msgid "submission.event.articleGalleyMadeAvailable"
 msgstr ""
@@ -62,7 +63,7 @@ msgid "submission.event.publicIdentifiers"
 msgstr ""
 
 msgid "grid.issueEntry.availableGalley.title"
-msgstr ""
+msgstr "Formatua onartzea"
 
 msgid "grid.issueEntry.availableGalley.removeMessage"
 msgstr ""
@@ -86,13 +87,15 @@ msgid "grid.action.pageProofApproved"
 msgstr ""
 
 msgid "submission.submit.titleAndSummary"
-msgstr ""
+msgstr "Izenburua eta laburpena"
 
 msgid "submission.submit.upload.description"
 msgstr ""
+"Igo bidalketa honi lotutako fitxategi guztiak, artikulua, multimedia, datu-"
+"sortak, artelanak, etab. barne."
 
 msgid "submission.pageProofs"
-msgstr ""
+msgstr "Proba-zuzenketa"
 
 msgid "workflow.review.externalReview"
 msgstr "Berrikuspena"
@@ -101,22 +104,22 @@ msgid "submission.event.issueMetadataUpdated"
 msgstr ""
 
 msgid "submission.upload.fileContents"
-msgstr ""
+msgstr "Artikuluaren osagaia"
 
 msgid "submission.complete"
-msgstr ""
+msgstr "Onartua"
 
 msgid "submission.incomplete"
-msgstr ""
+msgstr "Onarpenaren zain"
 
 msgid "submission.submit.submissionChecklist"
-msgstr ""
+msgstr "Bidalketarako egiaztatu beharrekoen zerrenda"
 
 msgid "submission.submit.privacyStatement"
-msgstr ""
+msgstr "Pribatutasun-adierazpena"
 
 msgid "submission.submit.contributorRole"
-msgstr ""
+msgstr "Kolaboratzailearen rola"
 
 msgid "submission.citationFormat.notFound"
 msgstr ""
@@ -124,8 +127,9 @@ msgstr ""
 msgid "submission.metadataDescription"
 msgstr ""
 
+#, fuzzy
 msgid "section.any"
-msgstr ""
+msgstr "Atal guztiak"
 
 msgid "submission.sectionOptions"
 msgstr ""
@@ -149,7 +153,7 @@ msgid "publication.assignedToIssue"
 msgstr ""
 
 msgid "publication.changeIssue"
-msgstr ""
+msgstr "Aldatu zenbakia"
 
 msgid "publication.datePublished.description"
 msgstr ""
@@ -186,27 +190,29 @@ msgstr ""
 
 msgid "publication.scheduledIn"
 msgstr ""
+"<a href=\"{$issueUrl}\">{$issueName}</a>. zenbakian argitaratzeko "
+"programatua."
 
 msgid "publication.unscheduledIn"
 msgstr "Hau ez da ale batean argitaratzeko programatu."
 
 msgid "publication.selectIssue"
-msgstr ""
+msgstr "Hautatu zenbaki bat argitalpena programatzeko"
 
 msgid "submission.publication"
 msgstr "Argitalpena"
 
 msgid "publication.status.published"
-msgstr ""
+msgstr "Argitaratua"
 
 msgid "submission.status.scheduled"
-msgstr ""
+msgstr "Programatua"
 
 msgid "publication.status.unscheduled"
 msgstr "Programatu gabe"
 
 msgid "submission.publications"
-msgstr ""
+msgstr "Argitalpenak"
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
@@ -218,10 +224,10 @@ msgid "publication.datePublished"
 msgstr "Argitaratze-data"
 
 msgid "publication.editDisabled"
-msgstr ""
+msgstr "Bertsio hau argitaratu da eta ezin da editatu."
 
 msgid "publication.event.published"
-msgstr ""
+msgstr "Bidalketa argitaratu da."
 
 msgid "publication.event.scheduled"
 msgstr ""
@@ -230,10 +236,10 @@ msgid "publication.event.unpublished"
 msgstr ""
 
 msgid "publication.event.versionPublished"
-msgstr ""
+msgstr "Bertsio berri bat argitaratu da."
 
 msgid "publication.event.versionScheduled"
-msgstr ""
+msgstr "Bertsio berri bat programatu da argitaratzeko."
 
 msgid "publication.event.versionUnpublished"
 msgstr ""
@@ -242,7 +248,7 @@ msgid "publication.invalidSubmission"
 msgstr ""
 
 msgid "publication.publish"
-msgstr ""
+msgstr "Argitaratu"
 
 msgid "publication.publish.requirements"
 msgstr ""
@@ -288,7 +294,7 @@ msgid "editor.submission.decision.backToReview.log"
 msgstr ""
 
 msgid "editor.submission.decision.backToReview.completed"
-msgstr ""
+msgstr "Ebaluatzeko birbidalia"
 
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr ""
@@ -319,6 +325,8 @@ msgstr ""
 
 msgid "submission.copyright.description"
 msgstr ""
+"Mesedez, irakurri eta ulertu aldizkari honetara lan bat bidaltzeko copyright-"
+"baldintzak."
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
@@ -339,13 +347,13 @@ msgid "submission.submit.form.authorRequired"
 msgstr ""
 
 msgid "submission.submit.form.titleRequired"
-msgstr ""
+msgstr "Mesedez, sartu zure artikuluaren izenburua."
 
 msgid "submission.submit.form.abstractRequired"
-msgstr ""
+msgstr "Mesedez, sartu zure artikuluaren laburpena."
 
 msgid "submission.submit.form.wordCountAlert"
 msgstr ""
 
 msgid "submission.submit.form.contributorRoleRequired"
-msgstr ""
+msgstr "Mesedez, sartu kolaboratzailearen rola."
