@@ -194,7 +194,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
                 $referredArticle = Repo::submission()->get($submissionId);
             }
             $fileUrl = $request->url(null, 'article', 'download', [$referredArticle->getBestId(), 'version', $galley->getData('publicationId'), $galley->getBestGalleyId(), $embeddableFile->getId(), $embeddableFile->getLocalizedData('name')], $params);
-            $pattern = preg_quote(rawurlencode($embeddableFile->getLocalizedData('name')));
+            $pattern = preg_quote(rawurlencode($embeddableFile->getLocalizedData('name')), '/');
 
             $contents = preg_replace(
                 '/([Ss][Rr][Cc]|[Hh][Rr][Ee][Ff]|[Dd][Aa][Tt][Aa])\s*=\s*"([^"]*' . $pattern . ')"/',
