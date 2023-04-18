@@ -1,14 +1,15 @@
 # Tormod Strømme <tormod.stromme@uib.no>, 2022.
+# Aysa Ekanger <aysa.ekanger@uit.no>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2022-09-08 12:50+0000\n"
-"Last-Translator: Tormod Strømme <tormod.stromme@uib.no>\n"
+"PO-Revision-Date: 2023-04-18 21:55+0000\n"
+"Last-Translator: Aysa Ekanger <aysa.ekanger@uit.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/nb_NO/>\n"
-"Language: nb_NO\n"
+"Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -99,7 +100,7 @@ msgid "common.queue.long.submissionsUnassigned"
 msgstr "Ikke tildelt"
 
 msgid "common.queue.short.submissionsUnassigned"
-msgstr "Ikke oppnevnt til fagfelle"
+msgstr "Ikke tildelt"
 
 msgid "common.queue.long.submissionsInEditing"
 msgstr "Innleveringer til språkvask"
@@ -335,6 +336,7 @@ msgstr "Publisert"
 msgid "submissions.initial"
 msgstr "Første"
 
+#, fuzzy
 msgid "submissions.proofread"
 msgstr "Korrekturlest"
 
@@ -350,8 +352,9 @@ msgstr "Fagfellevurderingsrunde"
 msgid "submissions.proof"
 msgstr "Korrektur"
 
+#, fuzzy
 msgid "submissions.editorDecision"
-msgstr "Redaktørens beslutning"
+msgstr "Redaktørens avgjørelse"
 
 msgid "submissions.editorRuling"
 msgstr "Redaktørens avgjørelse"
@@ -533,7 +536,7 @@ msgstr "Returner til detaljene om utgaven"
 
 msgid "doi.issue.incorrectContext"
 msgstr ""
-"Kunne ikke generere DOI til følgende nummer: {$itemTitle}. Nummeret "
+"Kunne ikke generere DOI til følgende utgave: {$itemTitle}. Utgaven "
 "eksisterer ikke i det valgte tidsskriftet."
 
 msgid "doi.issue.incorrectStaleStatus"
@@ -541,8 +544,8 @@ msgstr ""
 
 msgid "doi.issue.notPublished"
 msgstr ""
-"Mislyktes med å markere DOI som registrert for {$pubObjectTitle}. Nummeret "
-"må publiseres før status kan oppdateres."
+"Mislyktes med å markere DOI som registrert for {$pubObjectTitle}. Utgaven må "
+"publiseres før status kan oppdateres."
 
 msgid "subscriptionTypes.currency"
 msgstr "Valuta"
@@ -634,7 +637,7 @@ msgid "submission.event.author.authorRevision"
 msgstr "Forfatterens revidering innlevert"
 
 msgid "submission.event.general.authorRevision"
-msgstr "Forfatterens fil med redigeringer oppdatert"
+msgstr "Forfatterens fil med revideringer oppdatert"
 
 msgid "submission.event.editor.editorAssigned"
 msgstr "Redaktør oppnevnt"
@@ -2376,7 +2379,7 @@ msgid "user.profile.form.hideOtherContexts"
 msgstr "Gjem andre tidsskrift"
 
 msgid "article.view.interstitial"
-msgstr "Velg en artikkel for nedlasting."
+msgstr "Velg en artikkelfil for nedlasting."
 
 msgid "grid.catalogEntry.availableRepresentation.approved"
 msgstr "Godkjent"
