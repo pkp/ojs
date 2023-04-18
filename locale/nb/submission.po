@@ -1,11 +1,12 @@
 # Tormod Strømme <tormod.stromme@uib.no>, 2022, 2023.
+# Aysa Ekanger <aysa.ekanger@uit.no>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-01-24 13:02+0000\n"
-"Last-Translator: Tormod Strømme <tormod.stromme@uib.no>\n"
+"PO-Revision-Date: 2023-04-18 21:55+0000\n"
+"Last-Translator: Aysa Ekanger <aysa.ekanger@uit.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/nb_NO/>\n"
-"Language: nb_NO\n"
+"Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -64,7 +65,7 @@ msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "Artikkeloppsettet «{$galleyFormatName}» er gjort tilgjengelig."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "Artikkeloppsettet «{$galleyFormatName}» er utilgjenglig."
+msgstr "Artikkeloppsettet «{$galleyFormatName}» har blitt gjort utilgjengelig."
 
 msgid "submission.event.publicIdentifiers"
 msgstr "Den offentlige identifikatoren til innleveringen er oppdatert."
@@ -89,7 +90,7 @@ msgstr "Oppsettfiler"
 
 msgid "submission.proofReadingDescription"
 msgstr ""
-"Layoutredaktøren laster opp produksjonsklare filer som har blitt klargjort "
+"Layout-redaktøren laster opp produksjonsklare filer som har blitt klargjort "
 "for publisering her. Bruk <em>«Oppnevn sluttkontrollør»</em> for å la "
 "forfattere og andre korrekturlese oppsettet. Korrigerte filer lastes opp for "
 "godkjenning før publisering."
@@ -115,13 +116,13 @@ msgid "workflow.review.externalReview"
 msgstr "Fagfellevurdering"
 
 msgid "submission.event.issueMetadataUpdated"
-msgstr "Metadata for innleveringen ble oppdatert."
+msgstr "Utgave-metadata for innleveringen ble oppdatert."
 
 msgid "submission.upload.fileContents"
 msgstr "Artikkelkomponent"
 
 msgid "submission.complete"
-msgstr "Utført"
+msgstr "Godkjent"
 
 msgid "submission.incomplete"
 msgstr "Avventer godkjenning"
@@ -141,7 +142,7 @@ msgstr "Det forespurte referanseformatet kunne ikke hentes."
 msgid "submission.metadataDescription"
 msgstr ""
 "Disse spesifikasjonene er basert på metadatasettet Dublin Core, en "
-"internasjonal standard som bl.a. brukes til å beskrive tidsskriftinnhold."
+"internasjonal standard som bl.a. brukes til å beskrive tidsskriftsinnhold."
 
 msgid "section.any"
 msgstr "Alle seksjoner"
@@ -149,9 +150,11 @@ msgstr "Alle seksjoner"
 msgid "submission.sectionOptions"
 msgstr "Seksjonsinnstillinger"
 
+#, fuzzy
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} titler"
 
+#, fuzzy
 msgid "catalog.category.heading"
 msgstr "Alle objekter"
 
@@ -164,7 +167,7 @@ msgid "galley.publicationNotFound"
 msgstr "Publikasjonen til dette oppsettet ble ikke funnet."
 
 msgid "publication.assignToissue"
-msgstr "Legg til nummer"
+msgstr "Legg til utgave"
 
 msgid "publication.assignedToIssue"
 msgstr ""
@@ -172,11 +175,11 @@ msgstr ""
 "planlagt publisert."
 
 msgid "publication.changeIssue"
-msgstr "Endre nummer"
+msgstr "Endre utgave"
 
 msgid "publication.datePublished.description"
 msgstr ""
-"Publikasjonsdatoen blir satt automatisk når nummeret blir publisert. Ikke "
+"Publikasjonsdatoen blir satt automatisk når utgaven blir publisert. Ikke "
 "angi publikasjonsdato med mindre artikkelen har vært publisert tidligere et "
 "annet sted og du må oppgi første publiserte dato for artikkelen."
 
@@ -187,7 +190,7 @@ msgid "publication.inactiveSection"
 msgstr "{$section} (Inaktiv)"
 
 msgid "publication.invalidIssue"
-msgstr "Nummeret til denne publikasjonen ble ikke funnet."
+msgstr "Utgaven for denne publikasjonen ble ikke funnet."
 
 msgid "publication.publish.confirmation"
 msgstr ""
@@ -343,13 +346,13 @@ msgstr ""
 "fagfellevurderingssteget. Forklar bakgrunnen for denne beslutningen og "
 "informer forfatterne om hvilken ytterligere vurdering som skal gjennomføres."
 
-#, fuzzy
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Send en e-post til forfatterne om at manuskriptet vil bli sendt til "
 "fagfellevurdering. Gi om mulig forfatterne en indikasjon på hvor lang tid "
 "prosessen med fagfellevurdering kan ta og når de kan forvente å høre fra "
-"redaktørene igjen."
+"redaktørene igjen. Denne eposten blir sendt først etter at redaksjonens "
+"avgjørelse er registrert."
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Velg filer som skal sendes til fagfellevurderingssteget."
@@ -357,12 +360,12 @@ msgstr "Velg filer som skal sendes til fagfellevurderingssteget."
 msgid "doi.submission.issueMissing.publication"
 msgstr ""
 "Kunne ikke opprette en DOI til den følgende innlevering: {$pubObjectTitle}. "
-"Innleveringen må knyttes til et nummer før en DOI kan genereres."
+"Innleveringen må knyttes til en utgave før en DOI kan genereres."
 
 msgid "doi.submission.issueMissing.representation"
 msgstr ""
 "Kunne ikke opprette en DOI til {$pubObjectTitle} oppsett til følgende "
-"innlevering: {$itemTitle}. Innleveringen må knyttes til et nummer før en DOI "
+"innlevering: {$itemTitle}. Innleveringen må knyttes til en utgave før en DOI "
 "kan genereres."
 
 msgid "doi.submission.incorrectContext"
@@ -371,28 +374,45 @@ msgstr ""
 "eksisterer ikke i det nåværende tidsskriftet."
 
 msgid "submission.layout.viewGalley"
-msgstr ""
+msgstr "Vis oppsett"
 
+#, fuzzy
 msgid "galley.cantEditPublished"
 msgstr ""
+"Dette oppsettet kan ikke redigeres fordi det allerede har blitt publisert."
 
+#, fuzzy
 msgid "submission.copyright.description"
 msgstr ""
+"Vennligst les gjennom opphavsrettslige vilkår som gjelder innleveringer til "
+"dette tidsskriftet."
 
+#, fuzzy
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
+"Du har ikke lov til å sende innleveringer til dette tidsskriftet fordi "
+"forfattere må registreres av tidsskriftets redaksjon. Hvis du mener at dette "
+"er en feil, vennligst ta kontakt med <a href='mailto:{$email}'>{$name}</a>."
 
+#, fuzzy
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
+"Du har ikke lov til å levere et manuskript til dette tidsskriftet fordi "
+"innleveringer til alle seksjoner i dette tidsskriftet har blitt deaktivert "
+"eller begrenset. Hvis du mener at dette er en feil, vennligst ta kontakt "
+"med  <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
+"{$contextName} tar ikke imot innleveringer til seksjonen {$section}. Hvis du "
+"trenger hjelp med din innlevering, ta kontakt med <a "
+"href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.sectionNotFound"
-msgstr ""
+msgstr "Det var ikke mulig å finne seksjonen for denne innleveringen."
 
 msgid "submission.sectionRestrictedToEditors"
-msgstr ""
+msgstr "Kun redaksjonen kan sende inn manus til denne seksjonen."
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Skriv inn minst en forfatter."
