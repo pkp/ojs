@@ -37,30 +37,14 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
      */
     public function display($args, $request)
     {
-        parent::display($args, $request);
-        $context = $request->getContext();
         switch (array_shift($args)) {
             case 'index':
             case '':
                 $templateMgr = TemplateManager::getManager($request);
-                // Check for configuration errors:
-                $configurationErrors = $templateMgr->getTemplateVars('configurationErrors');
-                // missing DOI prefix
-                $doiPrefix = null;
-                $doisEnabled = $context->getData(Context::SETTING_ENABLE_DOIS);
-                if ($doisEnabled) {
-                    $doiPrefix = $context->getData(Context::SETTING_DOI_PREFIX);
-                    $templateMgr->assign([
-                        'exportArticles' => $context->isDoiTypeEnabled(Repo::doi()::TYPE_PUBLICATION),
-                        'exportIssues' => $context->isDoiTypeEnabled(Repo::doi()::TYPE_ISSUE),
-                        'exportRepresentations' => $context->isDoiTypeEnabled(Repo::doi()::TYPE_REPRESENTATION),
-                    ]);
-                }
-                if (empty($doiPrefix)) {
-                    $configurationErrors[] = DOI_EXPORT_CONFIG_ERROR_DOIPREFIX;
-                }
                 $templateMgr->display($this->getTemplateResource('index.tpl'));
                 break;
+            default:
+                parent::display($args, $request);
         }
     }
 
