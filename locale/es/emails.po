@@ -1,11 +1,12 @@
 # Marc Bria <marc.bria@gmail.com>, 2023.
+# Aitor Cuartango Berrendo <aitor.cuartango@ehu.eus>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:18-08:00\n"
-"PO-Revision-Date: 2023-04-12 16:29+0000\n"
-"Last-Translator: Marc Bria <marc.bria@gmail.com>\n"
+"PO-Revision-Date: 2023-04-20 10:37+0000\n"
+"Last-Translator: Aitor Cuartango Berrendo <aitor.cuartango@ehu.eus>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/emails/es/>"
 "\n"
 "Language: es\n"
@@ -50,11 +51,9 @@ msgstr ""
 "Gracias,<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.userValidateContext.subject"
-msgstr "Activación de cuenta"
+msgstr "Valide su cuenta"
 
-#, fuzzy
 msgid "emails.userValidateContext.body"
 msgstr ""
 "Estimado/a {$recipientName}<br />\n"
@@ -69,13 +68,23 @@ msgstr ""
 "{$contextSignature}"
 
 msgid "emails.userValidateSite.subject"
-msgstr ""
+msgstr "Valide su cuenta"
 
 msgid "emails.userValidateSite.body"
 msgstr ""
+"{$recipientName}<br />\n"
+"<br />\n"
+"Ha creado una cuenta en {$siteTitle}, pero antes de poder utilizarla, debe "
+"validar su email. Para hacerlo, simplemente haga clic en el siguiente enlace:"
+"<br />\n"
+"<br />\n"
+"{$activateUrl}<br />\n"
+"<br />\n"
+"Gracias,<br />\n"
+"{$siteSignature}"
 
 msgid "emails.reviewerRegister.subject"
-msgstr "Revisor para {$contextName}"
+msgstr "Registro como Revisor en {$contextName}"
 
 #, fuzzy
 msgid "emails.reviewerRegister.body"
