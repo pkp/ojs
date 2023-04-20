@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2023-04-20 10:37+0000\n"
+"PO-Revision-Date: 2023-04-21 08:42+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/manager/es/>"
 "\n"
@@ -1055,8 +1055,8 @@ msgstr "El plazo habitual establecido para las revisiones es de"
 
 msgid "manager.setup.reviewOptions.onQuality"
 msgstr ""
-"Los editores/as pueden calificar a los revisores/as en una escala de de "
-"cinco puntos después de cada revisión."
+"Los editores/as pueden calificar a los revisores/as en una escala de cinco "
+"puntos después de cada revisión."
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
 msgstr "Restringir el acceso al archivo"
@@ -1600,10 +1600,10 @@ msgid "manager.subscriptions.form.typeIdValid"
 msgstr "Seleccione un tipo de suscripción válida."
 
 msgid "manager.subscriptions.form.institution"
-msgstr ""
+msgstr "Institución"
 
 msgid "manager.subscriptions.form.institutionIdValid"
-msgstr ""
+msgstr "Seleccione una institución válida."
 
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Fecha de inicio"
@@ -1744,7 +1744,7 @@ msgstr ""
 "Se debe crear un tipo de suscripción antes de realizar nuevas suscripciones."
 
 msgid "manager.subscriptions.form.institutionRequired"
-msgstr ""
+msgstr "Se debe crear una institución antes de realizar una suscripción nueva."
 
 msgid "manager.subscriptions.ipRange"
 msgstr "Rango de IP"
@@ -2152,52 +2152,63 @@ msgstr ""
 "revista."
 
 msgid "stats.contextStats"
-msgstr ""
+msgstr "Estadísticas de la revista"
 
 msgid "stats.context.tooltip.text"
-msgstr ""
+msgstr "Número de visitantes que visualizan la página de inicio de la revista."
 
 msgid "stats.context.tooltip.label"
-msgstr ""
+msgstr "Acerca de las estadísticas de la revista"
 
 msgid "stats.context.downloadReport.description"
 msgstr ""
+"Descargar una hoja de cálculo CSV/Excel con las estadísticas de uso de esta "
+"revista que cumplan con los siguientes parámetros."
 
 msgid "stats.context.downloadReport.downloadContext.description"
-msgstr ""
+msgstr "El número de visualizaciones de la página de inicio de la revista."
 
 msgid "stats.context.downloadReport.downloadContext"
-msgstr ""
+msgstr "Descargar revista"
 
 msgid "stats.issueStats"
-msgstr ""
+msgstr "Estadísticas del número"
 
 msgid "stats.issues.details"
-msgstr ""
+msgstr "Visualizaciones y descargas"
 
 msgid "stats.issues.searchIssueDescription"
-msgstr ""
+msgstr "Buscar número y volumen y título del número"
 
 msgid "stats.issues.none"
 msgstr ""
+"No se encontró ningún número con estadísticas de uso que coincidan con estos "
+"parámetros."
 
 msgid "stats.issues.downloadReport.description"
 msgstr ""
+"Descargar una hoja de cálculo CSV/Excel con las estadísticas de uso de los "
+"números que coincidan con los parámetros siguientes."
 
 msgid "stats.issues.downloadReport.downloadIssues.description"
 msgstr ""
+"El número de visualizaciones del sumario y de descargas de las galeradas de "
+"cada número."
 
 msgid "stats.issues.downloadReport.downloadIssues"
-msgstr ""
+msgstr "Descargar números"
 
 msgid "stats.issues.countOfTotal"
-msgstr ""
+msgstr "{$count} de {$total} números"
 
 msgid "stats.issues.tooltip.label"
-msgstr ""
+msgstr "Acerca de las estadísticas de número"
 
 msgid "stats.issues.tooltip.text"
 msgstr ""
+"<strong>Visualizaciones</strong>: número de visitantes que visualizan el "
+"sumario del número.<br><strong>Descargas</strong>: número de descargas de la "
+"galerada del número, si la hay."
 
 msgid "stats.publicationStats"
 msgstr "Estadísticas del artículo"
@@ -2227,12 +2238,16 @@ msgstr "Archivos"
 
 msgid "stats.publications.downloadReport.description"
 msgstr ""
+"Descargar una hoja de cálculo CSV/Excel con las estadísticas de uso de "
+"artículos que coincidan con los parámetros siguientes."
 
 msgid "stats.publications.downloadReport.downloadSubmissions"
-msgstr ""
+msgstr "Descargar artículos"
 
 msgid "stats.publications.downloadReport.downloadSubmissions.description"
 msgstr ""
+"El número de visualizaciones del resumen y de descargas de archivo de cada "
+"artículo."
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
@@ -2265,7 +2280,7 @@ msgid "emailTemplate.variable.context.contactName"
 msgstr "El nombre del contacto principal de la revista"
 
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr ""
+msgstr "Las iniciales de la revista"
 
 msgid "emailTemplate.variable.context.contextSignature"
 msgstr "La firma para los correos electrónicos automatizados de la revista"
@@ -2275,7 +2290,7 @@ msgstr ""
 "La dirección de correo electrónico del contacto principal de la revista"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "La dirección postal de la revista"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "El nombre del tipo de pago"
@@ -2291,48 +2306,54 @@ msgstr "Nombre del sitio web cuando se aloja más de una revista"
 
 msgid "emailTemplate.variable.subscription.subscriberDetails"
 msgstr ""
+"El nombre, la filiación, el número de teléfono y el correo electrónico del "
+"suscriptor/a"
 
 msgid "emailTemplate.variable.subscription.subscriptionSignature"
-msgstr ""
+msgstr "Los detalles de contacto del administrador/a de la suscripción"
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
-msgstr ""
+msgstr "La URL de la página de suscripción"
 
 msgid "emailTemplate.variable.subscription.expiryDate"
-msgstr ""
+msgstr "La fecha de vencimiento de la suscripción"
 
 msgid "emailTemplate.variable.subscription.subscriptionType"
-msgstr ""
+msgstr "Un resumen del tipo, nombre, duración y coste de la suscripción"
 
 msgid "emailTemplate.variable.subscription.membership"
-msgstr ""
+msgstr "Información sobre la afiliación del suscriptor/a"
 
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr ""
+msgstr "El nombre de la institución suscriptora"
 
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr ""
+msgstr "El correo electrónico de la institución suscriptora"
 
 msgid "emailTemplate.variable.subscription.domain"
 msgstr ""
+"El nombre del dominio de la(s) dirección(es) IP válidas de esta suscripción"
 
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr ""
+msgstr "Los rangos de IP válidos de esta suscripción"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "URL de la página en que el autor/a puede hacer el pago"
 
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "URL de las directrices de envío"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "El enlace a la página de estadísticas de artículos publicados"
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "El ID del número"
 
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
+"Este correo electrónico se envía mensualmente a los editores/as y a los "
+"administradores/as de la revista para ofrecerles una visión general de la "
+"salud del sistema."
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Validar correo electrónico (registro en la revista)"
@@ -2356,7 +2377,7 @@ msgid "doi.readerDisplayName"
 msgstr "DOI"
 
 msgid "doi.manager.displayName"
-msgstr ""
+msgstr "DOI"
 
 msgid "doi.manager.settings.description"
 msgstr "Configure el módulo de DOI para poder administrar y usar DOIs en OJS:"
@@ -2370,7 +2391,7 @@ msgid "doi.manager.settings.enableRepresentationDoi"
 msgstr "Galeradas"
 
 msgid "doi.manager.settings.galleysWithDescription"
-msgstr ""
+msgstr "Galeradas del artículo, como por ejemplo un PDF publicado"
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Prefijo DOI"
@@ -2380,11 +2401,17 @@ msgstr "El prefijo DOI es obligatorio y sigue el formato 10.xxxx."
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr ""
-"Usa el patrón introducido abajo para generar sufijos DOI. Usa %j para "
-"iniciales de revista, %v para el número del volumen, %i para el número de la "
-"publicación, %Y para el año, %a para el ID del artículo de OJS, %g para la "
-"galerada de OJS, %f para el ID del archivo de OJS, %p para el número de "
-"página y %x para \"identificador personalizado\"."
+"Introduzca un patrón de sufijo personalizado para cada tipo de publicación. "
+"El patrón de sufijo personalizado puede utilizar los símbolos siguientes "
+"para generar un sufijo:<br><br> <code>%j</code> Iniciales de la revista<br> "
+"<code>%v</code> Volumen<br> <code>%i</code> Número<br> <code>%Y</code> "
+"Año<br> <code>%a</code> ID de artículo<br> <code>%g</code> ID de "
+"galerada<br> <code>%f</code> ID de archivo<br> <code>%p</code> Número de "
+"página<br> <code>%x</code> Identificador personalizado<br><br> Tenga en "
+"cuenta que el patrón de sufijo personalizado causa a menudo problemas a la "
+"hora de generar y depositar los DOI. Cuando utilice un patrón de sufijo "
+"personalizado compruebe minuciosamente que los editores/as pueden generar "
+"DOI y depositarlos en una agencia de registro como Crossref. "
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
 msgstr ""
@@ -2439,13 +2466,15 @@ msgstr ""
 "dispongan ya de uno?"
 
 msgid "doi.manager.settings.registrationAgency"
-msgstr ""
+msgstr "Agencia de registro"
 
 msgid "doi.manager.settings.registrationAgency.description"
 msgstr ""
+"Seleccione la agencia de registro que le gustaría utilizar cuando se "
+"depositen los DOI."
 
 msgid "doi.manager.settings.registrationAgency.none"
-msgstr ""
+msgstr "Ninguno"
 
 msgid "doi.editor.doi"
 msgstr "DOI"
@@ -2523,10 +2552,12 @@ msgstr ""
 "El DOI {$pubId} no puede ser asignado porque contiene un patrón irresoluble."
 
 msgid "doi.editor.assignDoi.assigned"
-msgstr "El DOI {$pubId} ha sido asignado."
+msgstr ""
+"Se ha asignado el DOI {$pubId}. Para editarlo visite la página de <a href=\""
+"{$doiManagementLink}\">Gestión del DOI</a>."
 
 msgid "doi.editor.assignDoi.toBeAssigned"
-msgstr ""
+msgstr "El DOI {$pubId} se asignará a la publicación."
 
 msgid "doi.editor.missingPrefix"
 msgstr "El DOI debe empezar con {$doiPrefix}."
@@ -2544,34 +2575,41 @@ msgid "doi.editor.preview.objects"
 msgstr "Elemento"
 
 msgid "api.galley.403.publicationDidNotMatch"
-msgstr ""
+msgstr "La galerada que ha solicitado no forma parte de esta publicación."
 
 msgid "api.galley.403.canEditPublishedDoi"
 msgstr ""
+"Solo se pueden editar los DOI después de que una galerada/publicación se "
+"haya publicado"
 
 msgid "api.issue.400.invalidDoi"
-msgstr ""
+msgstr "El DOI enviado no es válido"
 
 msgid "api.issue.403.canEditPublishedDoi"
 msgstr ""
+"Solo se pueden editar los DOI después de que una publicación se haya "
+"publicado"
 
 msgid "api.issue.404.issuesNotFound"
-msgstr ""
+msgstr "No se han encontrado los números solicitados"
 
 msgid "doi.manager.submissionDois"
-msgstr ""
+msgstr "DOI del artículo"
 
 msgid "doi.manager.issueDois"
-msgstr ""
+msgstr "DOI del número"
 
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr ""
+"Este correo electrónico notifica al autor/a que su envío ha sido rechazado "
+"antes de la fase de revisión, porque este no cumple los requisitos de "
+"publicación de la revista."
 
 msgid "manager.institutions.noContext"
-msgstr ""
+msgstr "No se pudo encontrar la revista de esta institución."
 
 msgid "mailable.subscriptionNotify.name"
-msgstr ""
+msgstr "Notificación de suscripción"
 
 msgid "mailable.subscriptionNotify.description"
 msgstr ""
@@ -2580,7 +2618,7 @@ msgstr ""
 "junto con instrucciones para acceder a ella."
 
 msgid "mailable.subscriptionExpiresSoon.name"
-msgstr ""
+msgstr "La suscripción caduca pronto"
 
 msgid "mailable.subscriptionExpiresSoon.description"
 msgstr ""
@@ -2589,7 +2627,7 @@ msgstr ""
 "instrucciones para acceder a la misma."
 
 msgid "mailable.subscriptionExpired.name"
-msgstr ""
+msgstr "Suscripción caducada"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
@@ -2598,7 +2636,7 @@ msgstr ""
 "instrucciones para acceder a la misma."
 
 msgid "mailable.subscriptionExpiredLast.name"
-msgstr ""
+msgstr "Última suscripción caducada"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
@@ -2607,7 +2645,7 @@ msgstr ""
 "instrucciones para acceder a la misma."
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
-msgstr ""
+msgstr "Adquirir suscripción individual"
 
 msgid "mailable.subscriptionPurchaseIndividual.description"
 msgstr ""
@@ -2617,7 +2655,7 @@ msgstr ""
 "suscripción adquirida."
 
 msgid "mailable.subscriptionPurchaseInstitutional.name"
-msgstr ""
+msgstr "Adquirir suscripción institucional"
 
 msgid "mailable.subscriptionPurchaseInstitutional.description"
 msgstr ""
@@ -2627,16 +2665,17 @@ msgstr ""
 "suscripción adquirida."
 
 msgid "mailable.subscriptionRenewIndividual.name"
-msgstr ""
+msgstr "Renovar suscripción individual"
 
 msgid "mailable.subscriptionRenewIndividual.description"
 msgstr ""
-"Este correo notifica al administrador/a de suscripciones que una suscripción "
-"individual se ha renovado en línea. Proporciona información resumida sobre "
-"la suscripción y  un enlace de acceso rápido a la suscripción renovada."
+"Este correo electrónico notifica al administrador/a de suscripciones que una "
+"suscripción individual se ha renovado en línea. Proporciona información "
+"resumida sobre la suscripción y un enlace de acceso rápido a la suscripción "
+"renovada."
 
 msgid "mailable.subscriptionRenewInstitutional.name"
-msgstr ""
+msgstr "Renovar suscripción institucional"
 
 msgid "mailable.subscriptionRenewInstitutional.description"
 msgstr ""
@@ -2646,7 +2685,7 @@ msgstr ""
 "renovada."
 
 msgid "mailable.openAccessNotify.name"
-msgstr ""
+msgstr "Notificación de acceso abierto"
 
 msgid "mailable.openAccessNotify.description"
 msgstr ""
@@ -2655,31 +2694,39 @@ msgstr ""
 "libre."
 
 msgid "mailable.issuePublishNotify.name"
-msgstr ""
+msgstr "Notificación de número publicado"
 
 msgid "mailable.issuePublishNotify.description"
 msgstr ""
+"Este correo electrónico se envía automáticamente a los usuarios/as "
+"registrados cuando se publica un número nuevo."
 
 msgid "manager.manageEmails.description"
-msgstr ""
+msgstr "Editar los mensajes enviados por correo electrónico desde la revista."
 
 msgid "mailable.layoutComplete.name"
-msgstr ""
+msgstr "Galeradas completas"
 
 msgid "mailable.publicationVersionNotify.name"
-msgstr ""
+msgstr "Nueva versión creada"
 
 msgid "mailable.publicationVersionNotify.description"
 msgstr ""
+"Este correo electrónico notifica automáticamente a los editores/as asignados "
+"que se ha creado una nueva versión del envío."
 
 msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
+"Este correo electrónico se envía a los gestores/as de la revista cuando se "
+"realiza un envío nuevo y no hay editores/as asignados."
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "Solicitud de pago"
 
 msgid "mailable.paymentRequest.description"
 msgstr ""
+"Este correo electrónico automático se envía al autor/a para solicitarle el "
+"pago de la tasa de publicación cuando su envío se acepta."
 
 #~ msgid "manager.setup.metadata.coverage"
 #~ msgstr "Cobertura"
@@ -2717,3 +2764,16 @@ msgstr ""
 
 #~ msgid "doi.manager.settings.enablePublicationDoi"
 #~ msgstr "Artículos"
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "No se pudo importar la galerada del número, falta el archivo."
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"La imagen de cubierta del número {$id} no fue exportada, el archivo no se "
+"encontró en la ruta \"{$path}\"."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"No se pudo importar la galerada del número {$id}, no se encontró el archivo "
+"en la ruta \"{$path}\"."
