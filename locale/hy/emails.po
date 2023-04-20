@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-04-07 04:59+0000\n"
+"PO-Revision-Date: 2023-04-20 10:06+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/emails/hy/>"
 "\n"
@@ -346,10 +346,10 @@ msgstr "Շարվածքները ամբողջական են"
 
 msgid "emails.layoutComplete.body"
 msgstr ""
-"<p>Հարգելի {$recipientName},<p><p>Շարվածքներն այժմ պատրաստվել են հետևյալ "
-"ներկայացման համար և պատրաստ են վերջնական գրախոսման:</p><p><a href=\""
-"{$submissionUrl}\">{ $submissionTitle}</a><br />{$contextName}</p><p>Եթե "
-"հարցեր ունեք, դիմեք ինձ:</p><p>Հարգանքներով,</p><p>{ $signature}</p>"
+"<p>Հարգելի {$recipientName},</p><p>Շարվածքները պատրաստվել են հետևյալ "
+"ներկայացման համար և պատրաստ են վերջնական վերանայման:</p><p><a href=\""
+"{$submissionUrl}\"> {$submissionTitle}</a><br />{$contextName}</p><p>Եթե "
+"հարցեր ունեք, դիմեք ինձ:</p><p>Հարգանքով,</p><p> {$signature}</p>"
 
 msgid "emails.emailLink.subject"
 msgstr "Հնարավոր հետաքրքրություն ներկայացնող հոդված"
