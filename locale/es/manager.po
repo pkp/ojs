@@ -1,20 +1,20 @@
-# Jordi LC <jordi.lacruz@uab.cat>, 2021, 2022.
+# Jordi LC <jordi.lacruz@uab.cat>, 2021, 2022, 2023.
 # Antonio <elguije.ag@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2022-07-02 03:43+0000\n"
+"PO-Revision-Date: 2023-04-20 10:06+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
-"Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
-"es_ES/>\n"
-"Language: es_ES\n"
+"Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/manager/es/>"
+"\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "manager.distribution.access"
 msgstr "Acceso"
@@ -51,7 +51,7 @@ msgstr ""
 "algunos o a todos sus contenidos."
 
 msgid "manager.setup.enableDois.description"
-msgstr ""
+msgstr "Permitir que se asignen DOI a las obras publicadas en esta revista."
 
 #, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
