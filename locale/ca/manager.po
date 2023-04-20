@@ -1,19 +1,19 @@
-# Jordi LC <jordi.lacruz@uab.cat>, 2021, 2022.
+# Jordi LC <jordi.lacruz@uab.cat>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
-"PO-Revision-Date: 2022-07-02 03:43+0000\n"
+"PO-Revision-Date: 2023-04-20 10:37+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
-"Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/manager/"
-"ca_ES/>\n"
-"Language: ca_ES\n"
+"Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/manager/ca/>"
+"\n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "manager.distribution.access"
 msgstr "Accés"
@@ -64,7 +64,7 @@ msgstr ""
 "%i.%a per a articles<br />%j.v%vi%i.%a.g%g per a galerades."
 
 msgid "doi.manager.settings.doiCreationTime.copyedit"
-msgstr "En arribar a la fase de correcció"
+msgstr "En arribar a la fase d'edició"
 
 msgid "manager.website.archiving"
 msgstr "Arxivant"
@@ -317,11 +317,10 @@ msgstr "Els editors/ores d'aquesta secció"
 msgid "manager.sections.confirmDelete"
 msgstr "Esteu segur/a que voleu eliminar aquesta secció de manera permanent?"
 
-#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr ""
-"Abans d'eliminar aquesta secció, heu de moure'n els articles publicats a "
-"altres seccions."
+"Abans d'eliminar aquesta secció heu de moure els articles enviats a ella a "
+"d'altres seccions."
 
 msgid "manager.sections.create"
 msgstr "Crea una secció"
