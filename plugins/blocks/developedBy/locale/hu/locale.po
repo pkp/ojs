@@ -1,14 +1,15 @@
 # Molnár Tamás <molnart@bibl.u-szeged.hu>, 2022.
+# Fülöp Tiffany <tiffany.fulop@ek.szte.hu>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13T21:07:39+00:00\n"
-"PO-Revision-Date: 2022-09-28 14:01+0000\n"
-"Last-Translator: Molnár Tamás <molnart@bibl.u-szeged.hu>\n"
+"PO-Revision-Date: 2023-04-21 08:42+0000\n"
+"Last-Translator: Fülöp Tiffany <tiffany.fulop@ek.szte.hu>\n"
 "Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/"
-"blocks-developedBy/hu_HU/>\n"
-"Language: hu_HU\n"
+"blocks-developedBy/hu/>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,10 +17,10 @@ msgstr ""
 "X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.block.developedBy.displayName"
-msgstr "\"Developed By\" Block"
+msgstr "\"Fejlesztette\" Blokk"
 
 msgid "plugins.block.developedBy.description"
-msgstr "Ez a plugin biztosítja a \"Developed By\" linket az oldalsávhoz."
+msgstr "Ez a bővítmény biztosítja a \"Fejlesztette\" linket az oldalsávhoz."
 
 msgid "plugins.block.developedBy.blockTitle"
 msgstr "Fejlesztette"
