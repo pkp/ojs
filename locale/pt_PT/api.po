@@ -1,12 +1,14 @@
 # Carla Marques <carla.marques@usdb.uminho.pt>, 2022.
 # José Carvalho <jcarvalho@keep.pt>, 2023.
+# Ricardo Otelo Santos Saraiva <ricardo.saraiva@usdb.uminho.pt>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2023-01-09 11:02+0000\n"
-"Last-Translator: José Carvalho <jcarvalho@keep.pt>\n"
+"PO-Revision-Date: 2023-04-22 12:49+0000\n"
+"Last-Translator: Ricardo Otelo Santos Saraiva <ricardo.saraiva@usdb.uminho."
+"pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/api/pt_PT/>\n"
 "Language: pt_PT\n"
@@ -17,14 +19,15 @@ msgstr ""
 "X-Generator: Weblate 4.13.1\n"
 
 msgid "api.announcements.400.contextsNotMatched"
-msgstr "A divulgação solicitada não faz parte desta revista."
+msgstr "A divulgação que solicitou não faz parte desta revista."
 
 msgid "api.emails.403.disabled"
 msgstr ""
-"O recurso de envio de e-mails em massa não foi ativado para esta revista."
+"A funcionalidade de envio de e-mails em massa não foi ativada para esta "
+"revista."
 
 msgid "api.submissions.400.wrongContext"
-msgstr "A submissão solicitada não está nesta revista."
+msgstr "A submissão que solicitou não está nesta revista."
 
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Não pode alterar a revista de uma submissão."
@@ -41,10 +44,10 @@ msgstr "Não tem permissões para visualizar esta revista."
 msgid "api.contexts.403.contextsDidNotMatch"
 msgstr ""
 "Não pode visualizar ou editar esta revista enquanto não enviar um pedido "
-"através da API da revista ou da API do portal."
+"através da API da revista ou da API do site."
 
 msgid "api.contexts.403.requiresContext"
-msgstr "Não pode editar esta revista através da API do portal."
+msgstr "Não pode editar esta revista através da API do site."
 
 msgid "api.contexts.403.notAllowedEdit"
 msgstr "Não tem permissões para editar esta revista."
@@ -53,10 +56,10 @@ msgid "api.contexts.403.notAllowedDelete"
 msgstr "Não tem permissões para eliminar esta revista."
 
 msgid "api.contexts.404.contextNotFound"
-msgstr "A revista que tentou aceder não foi encontrada."
+msgstr "A revista que solicitou não foi encontrada."
 
 msgid "api.dois.403.contextsNotMatched"
-msgstr "O DOI solicitado não faz parte desta revista."
+msgstr "O DOI que solicitou não faz parte desta revista."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"
 msgstr "Não existe uma agência de registo DOI configurada nesta revista."
@@ -64,24 +67,24 @@ msgstr "Não existe uma agência de registo DOI configurada nesta revista."
 msgid "api.dois.400.depositFailed"
 msgstr ""
 "Alguns itens não foram depositados com sucesso. Verifique os itens "
-"individualmente para ver as mensagens de erro específicas."
+"individualmente para ver as suas mensagens de erro específicas."
 
 msgid "api.emailTemplates.403.notAllowedChangeContext"
 msgstr ""
 "Não tem permissões para mover este modelo de e-mail para outra revista."
 
 msgid "api._payments.400.invalidPaymentMethod"
-msgstr "O método de pagamento selecionado não é suportado."
+msgstr "O método de pagamento que selecionou não é suportado."
 
 msgid "api.publications.403.contextsDidNotMatch"
-msgstr "A publicação solicitada não existe nesta revista."
+msgstr "A publicação que solicitou não faz parte desta revista."
 
 msgid "api.publications.403.submissionsDidNotMatch"
-msgstr "A publicação solicitada não se encontra nesta submissão."
+msgstr "A publicação que solicitou não faz parte desta submissão."
 
 msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr ""
-"Não é possível associar um ficheiro desta fase com um formato de publicação."
+"Não é possível associar um ficheiro nesta fase com um formato de publicação."
 
 msgid "api.submission.400.inactiveSection"
-msgstr "Esta secção não está a receber novas submissões."
+msgstr "Esta seção não está a receber novas submissões."
