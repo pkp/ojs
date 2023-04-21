@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2023-04-21 08:42+0000\n"
+"PO-Revision-Date: 2023-04-22 12:49+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/manager/cs/>\n"
 "Language: cs\n"
@@ -260,7 +260,7 @@ msgid "manager.people.showNoRole"
 msgstr "Zobrazit uživatele bez žádné role"
 
 msgid "manager.people.allUsers"
-msgstr "Všichni zapsaní uživatelé"
+msgstr "Všichni zaregistrovaní uživatelé"
 
 msgid "manager.people.confirmRemove"
 msgstr ""
@@ -299,7 +299,7 @@ msgstr ""
 "mezi časopisy."
 
 msgid "manager.sections.abstractsNotRequired"
-msgstr "Nepožadovat abstrakty"
+msgstr "Nevyžadovat abstrakty"
 
 msgid "manager.sections.assigned"
 msgstr "Editoři této sekce"
@@ -356,7 +356,7 @@ msgid "manager.sections.hideTocTitle"
 msgstr "Vypustit název této sekce z obsahu čísla."
 
 msgid "manager.sections.identifyType"
-msgstr "Pro účely sběru metadat označte každou položku v této sekci jako"
+msgstr "Označte položky zveřejněné v tomto oddíle jako"
 
 msgid "manager.sections.identifyTypeExamples"
 msgstr ""
@@ -403,7 +403,7 @@ msgid "manager.setup"
 msgstr "Nastavení"
 
 msgid "manager.setup.masthead"
-msgstr "Hlavní titulek"
+msgstr "Hlavička"
 
 msgid "manager.setup.editorialTeam"
 msgstr "Tým redaktorů"
@@ -555,7 +555,7 @@ msgstr ""
 "podpisem."
 
 msgid "manager.setup.enableAnnouncements.enable"
-msgstr "Umožnit manažerům časopisu přidávat oznámení časopisu"
+msgstr "Povolit oznámení"
 
 msgid "manager.setup.enableAnnouncements.description"
 msgstr ""
@@ -1484,7 +1484,7 @@ msgid "manager.subscriptions.dateEndSearch"
 msgstr "Konečné datum"
 
 msgid "manager.subscriptions.dateStart"
-msgstr "Začátek"
+msgstr "Zahájení"
 
 msgid "manager.subscriptions.dateStartSearch"
 msgstr "Počáteční datum"
