@@ -1,16 +1,17 @@
 # Bùi Văn Khôi <buivankhoi@gmail.com>, 2022.
+# Nguyen Xuan Giao <giaonxb@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-16 18:38+0000\n"
-"Last-Translator: Bùi Văn Khôi <buivankhoi@gmail.com>\n"
+"PO-Revision-Date: 2023-04-21 08:42+0000\n"
+"Last-Translator: Nguyen Xuan Giao <giaonxb@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
-"vi_VN/>\n"
-"Language: vi_VN\n"
+"vi/>\n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Tạp chí này không công bố nội dung online."
@@ -494,10 +495,10 @@ msgid "issue.number"
 msgstr "Số"
 
 msgid "issue.vol"
-msgstr "T."
+msgstr "Tập"
 
 msgid "issue.no"
-msgstr "S."
+msgstr "Số"
 
 msgid "issue.year"
 msgstr "Năm"
@@ -515,7 +516,7 @@ msgid "issue.coverPage.altText"
 msgstr "Trang bìa"
 
 msgid "issue.fullIssue"
-msgstr "Cả số"
+msgstr "Bìa và mục lục"
 
 msgid "issue.nonpdf.title"
 msgstr "Tải xuống Số"
@@ -528,12 +529,18 @@ msgstr "Trở lại Chi tiết Số"
 
 msgid "doi.issue.incorrectContext"
 msgstr ""
+"Không thể tạo DOI cho số sau: {$itemTitle}. Nó không tồn tại trong  tạp chí  "
+"này."
 
 msgid "doi.issue.incorrectStaleStatus"
 msgstr ""
+"Không thể đặt trạng thái DOI thành như cũ cho số sau: {$itemTitle}. DOI phải "
+"có trạng thái \"Đã đăng ký\" hoặc \"Đã gửi\"."
 
 msgid "doi.issue.notPublished"
 msgstr ""
+"Không thể đánh dấu DOI đã đăng ký cho {$pubObjectTitle}. Số phải được xuất "
+"bản trước khi trạng thái có thể được cập nhật."
 
 msgid "subscriptionTypes.currency"
 msgstr "Tiền tệ"
@@ -621,10 +628,10 @@ msgid "submission.event.general.articlePublished"
 msgstr "Bài báo Đã xuất bản"
 
 msgid "submission.event.author.authorRevision"
-msgstr "Bản sửa chữa của tác giả đã được gửi"
+msgstr "Tác giả đã gửi bản sửa chữa"
 
 msgid "submission.event.general.authorRevision"
-msgstr "Tập tin sửa chữa của tác giả đã được cập nhật"
+msgstr "Đã cập nhật tập tin sửa chữa của tác giả"
 
 msgid "submission.event.editor.editorAssigned"
 msgstr "Bài gửi được phân công cho biên tập viên"
@@ -636,7 +643,7 @@ msgid "submission.event.editor.editorDecision"
 msgstr "Quyết định của Ban biên tập đã được gửi"
 
 msgid "submission.event.editor.editorFile"
-msgstr "Cập nhật Tập tin của Biên tập viên"
+msgstr "Tập tin của Biên tập viên đã được cập nhật"
 
 msgid "submission.event.editor.submissionArchived"
 msgstr "Bài gửi đã được chuyển sang Lưu trữ"
@@ -645,10 +652,10 @@ msgid "submission.event.editor.submissionRestored"
 msgstr "Bài gửi đã được khôi phục từ Lưu trữ"
 
 msgid "submission.event.copyedit.copyeditorAssigned"
-msgstr "Biên tập viên bản thảo đã được phân công cho  bài gửi"
+msgstr "Bài gửi đã được giao cho Biên tập viên bản thảo"
 
 msgid "submission.event.copyedit.copyeditorUnassigned"
-msgstr "Biên tập viên bản thảo đã không được phân công cho bài gửi"
+msgstr "Biên tập viên bản thảo chưa được chỉ đinh cho bài gửi"
 
 msgid "submission.event.copyedit.copyeditInitiated"
 msgstr "Bắt đầu phân công Biên tập viên bản thảo"
@@ -660,10 +667,10 @@ msgid "submission.event.copyedit.copyeditInitialCompleted"
 msgstr "Biên tập bản thảo sơ bộ đã hoàn thành"
 
 msgid "submission.event.copyedit.copyeditFinalCompleted"
-msgstr "Biên tập Bản thảo cuối đã hoàn thành"
+msgstr "Đã hoàn thành Biên tập Bản thảo"
 
 msgid "submission.event.copyedit.copyeditSetFile"
-msgstr "Đã cập nhật Tập tin bản thảo biên tập"
+msgstr "Đã cập nhật Tập tin  biên tập bản thảo"
 
 msgid "submission.event.proofread.proofreaderAssigned"
 msgstr "Người hiệu đính đã được phân công"
@@ -675,7 +682,7 @@ msgid "submission.event.proofread.proofreadInitiated"
 msgstr "Đã khởi tạo Phân công Hiệu đính"
 
 msgid "submission.event.proofread.proofreadRevision"
-msgstr "Đã cập nhật Tệp sửa đổi Hiệu đính"
+msgstr "Đã cập nhật Tập tin hiệu đính"
 
 msgid "submission.event.proofread.proofreadCompleted"
 msgstr "Đã hoàn thành phân công hiệu đính"
