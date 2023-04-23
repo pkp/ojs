@@ -1,11 +1,13 @@
 # Pierre Lasou <pierre.lasou@bibl.ulaval.ca>, 2023.
+# Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-05T21:18:35+00:00\n"
-"PO-Revision-Date: 2023-04-11 16:21+0000\n"
-"Last-Translator: Pierre Lasou <pierre.lasou@bibl.ulaval.ca>\n"
+"PO-Revision-Date: 2023-04-24 00:11+0000\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-helene."
+"vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "paymethod-manual-emails/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -35,6 +37,5 @@ msgstr ""
 "Ce modèle de courriel est utilisé pour aviser un directeur de revue que le "
 "paiement manuel a été demandé."
 
-#, fuzzy
 msgid "emailTemplate.variable.manualPaymentPlugin.senderUsername"
 msgstr "Le nom d'utilisateur de la personne ayant fait le paiement"
