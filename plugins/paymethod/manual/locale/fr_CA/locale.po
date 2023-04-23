@@ -1,11 +1,13 @@
 # Pierre Lasou <pierre.lasou@bibl.ulaval.ca>, 2023.
+# Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T06:56:47-07:00\n"
-"PO-Revision-Date: 2023-04-11 16:21+0000\n"
-"Last-Translator: Pierre Lasou <pierre.lasou@bibl.ulaval.ca>\n"
+"PO-Revision-Date: 2023-04-24 00:11+0000\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-helene."
+"vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "paymethod-manual/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -44,9 +46,8 @@ msgstr "Titre"
 msgid "plugins.paymethod.manual.purchase.fee"
 msgstr "Frais"
 
-#, fuzzy
 msgid "plugins.paymethod.manual.manualPaymentNotify.name"
-msgstr "Notification de paiement manuel"
+msgstr "Avis de paiement manuel"
 
 #~ msgid "plugins.paymethod.manual.settings.instructions"
 #~ msgstr "Instructions"
