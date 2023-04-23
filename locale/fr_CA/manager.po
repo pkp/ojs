@@ -6,8 +6,9 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2023-04-11 16:21+0000\n"
-"Last-Translator: Pierre Lasou <pierre.lasou@bibl.ulaval.ca>\n"
+"PO-Revision-Date: 2023-04-24 00:11+0000\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-helene."
+"vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -320,7 +321,6 @@ msgid "manager.sections.confirmDelete"
 msgstr ""
 "Êtes-vous certain-e de vouloir définitivement supprimer cette rubrique ?"
 
-#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr ""
 "Pour pouvoir supprimer cette rubrique, vous devez d'abord déplacer les "
@@ -583,7 +583,6 @@ msgstr "Identification par courriel"
 msgid "manager.setup.emailSignature"
 msgstr "Signature"
 
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "La signature suivante sera ajoutée à la fin de chaque courriel prédéfini "
@@ -1088,13 +1087,11 @@ msgstr "Accès pour l'évaluateur-trice"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Activer l'accès en un clic pour l'évaluateur-trice."
 
-#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
-"Un lien sécurisé peut être envoyé aux évaluateurs-trices dans le courriel "
-"d'invitation, ce qui leur permettra d'accéder à l'évaluation sans avoir "
-"besoin de se connecter. L'accès à d'autres pages nécessite cependant de se "
-"connecter."
+"Un lien sécurisé peut être envoyé aux évaluateur.trice.s dans le courriel "
+"d'invitation, ce qui leur permettra d'accéder directement à l'évaluation en "
+"cliquant sur le lien sans avoir besoin de se connecter."
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr ""
@@ -2167,7 +2164,6 @@ msgstr ""
 msgid "stats.contextStats"
 msgstr "Statistiques de la revue"
 
-#, fuzzy
 msgid "stats.context.tooltip.text"
 msgstr "Nombre de visiteurs ayant consulté la page d'accueil de la revue."
 
@@ -2184,7 +2180,7 @@ msgstr "Nombre de vues sur la page d'accueil de la revue."
 
 #, fuzzy
 msgid "stats.context.downloadReport.downloadContext"
-msgstr "Téléchargements"
+msgstr "Téléchargement de la revue"
 
 #, fuzzy
 msgid "stats.issueStats"
@@ -2193,11 +2189,9 @@ msgstr "Statistiques du numéro"
 msgid "stats.issues.details"
 msgstr "Vues et téléchargements"
 
-#, fuzzy
 msgid "stats.issues.searchIssueDescription"
 msgstr "Recherche par titre du numéro, volume et numéro"
 
-#, fuzzy
 msgid "stats.issues.none"
 msgstr ""
 "Aucun numéro trouvé avec des statistiques d'utilisation correspondant aux "
@@ -2208,11 +2202,10 @@ msgstr ""
 "Télécharger un fichier CSV/Excel avec les statistiques d'utilisation pour "
 "les numéros correspondants aux paramètres suivants."
 
-#, fuzzy
 msgid "stats.issues.downloadReport.downloadIssues.description"
 msgstr ""
-"Le nombre de vues sur la table des matières et le téléchargement des "
-"épreuves pour chaque numéro."
+"Le nombre de vues de sommaires/table des matières et le nombre de "
+"téléchargements des épreuves pour chaque numéro."
 
 #, fuzzy
 msgid "stats.issues.downloadReport.downloadIssues"
@@ -2336,7 +2329,6 @@ msgstr ""
 msgid "emailTemplate.variable.subscription.subscriptionSignature"
 msgstr "Coordonnées du responsable des abonnements"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
 msgstr "URL de la page d'abonnement"
 
@@ -2376,11 +2368,10 @@ msgstr "Lien vers la page des statistiques d'utilisation des articles publiés"
 msgid "emailTemplate.variable.issueId"
 msgstr "Identifiant du numéro"
 
-#, fuzzy
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
 "Ce courriel est envoyé automatiquement chaque mois au personnel de rédaction "
-"(rédacteur-tirce, gestionnaire de la revue) afin de leur donner un aperçu de "
+"(rédacteur.trice, gestionnaire de la revue) afin de leur donner un aperçu de "
 "la santé du système."
 
 msgid "mailable.validateEmailContext.name"
@@ -2418,7 +2409,6 @@ msgstr ""
 msgid "doi.manager.settings.enableRepresentationDoi"
 msgstr "Épreuves"
 
-#, fuzzy
 msgid "doi.manager.settings.galleysWithDescription"
 msgstr "Épreuves de l'article, comme les PDF publiés"
 
@@ -2495,14 +2485,12 @@ msgstr ""
 "Êtes-vous certain-e de vouloir attribuer des DOIs à tous les objets publiés "
 "n'ayant pas de DOI attribués ?"
 
-#, fuzzy
 msgid "doi.manager.settings.registrationAgency"
 msgstr "Agence d'enregistrement"
 
-#, fuzzy
 msgid "doi.manager.settings.registrationAgency.description"
 msgstr ""
-"Sélectionnez l'agence d'enregistrement que vous souhaitez utiliser pour "
+"Sélectionner l'agence d'enregistrement que vous souhaitez utiliser pour "
 "déposer les DOIs."
 
 msgid "doi.manager.settings.registrationAgency.none"
@@ -2593,7 +2581,6 @@ msgstr ""
 "Le DOI {$pubId} a été attribué. Pour modifier le DOI, veuillez visiter la "
 "page de <a href=\"{$doiManagementLink}\">gestion des DOI</a>."
 
-#, fuzzy
 msgid "doi.editor.assignDoi.toBeAssigned"
 msgstr "Le DOI {$pubId} sera assigné au moment de la publication."
 
@@ -2612,24 +2599,20 @@ msgstr "Épreuves : {$galleyLabel}"
 msgid "doi.editor.preview.objects"
 msgstr "Élément"
 
-#, fuzzy
 msgid "api.galley.403.publicationDidNotMatch"
-msgstr "L'épreuve que vous demandez ne fait pas partie de cette publication."
+msgstr "Les épreuves que vous demandez ne font pas partie de cette publication."
 
-#, fuzzy
 msgid "api.galley.403.canEditPublishedDoi"
-msgstr "Seuls les DOIs peuvent être édités une fois que l'épreuve a été publiée"
-
-#, fuzzy
-msgid "api.issue.400.invalidDoi"
-msgstr "Le DOI n'est pas valide"
-
-#, fuzzy
-msgid "api.issue.403.canEditPublishedDoi"
 msgstr ""
-"Seuls les DOIs peuvent être édités une fois que la publication a été publiée"
+"Seuls les DOIs peuvent être édités une fois la publication/les épreuves "
+"publiés"
 
-#, fuzzy
+msgid "api.issue.400.invalidDoi"
+msgstr "Le DOI soumis n'est pas valide"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Seuls les DOIs peuvent être édités une fois la publication publiée"
+
 msgid "api.issue.404.issuesNotFound"
 msgstr "Les numéros demandés n'ont pu être trouvés"
 
@@ -2641,15 +2624,14 @@ msgstr "DOI de l'article"
 msgid "doi.manager.issueDois"
 msgstr "DOI du numéro"
 
-#, fuzzy
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr ""
-"Ce courriel avertit l'auteur-trice que sa soumission est refusée, avant "
-"l'étape d'évaluation, car elle ne répond pas aux exigences de la revue."
+"Ce courriel avertit l'auteur.e que sa soumission est refusée, avant l'étape "
+"d'évaluation, car elle ne répond pas aux exigences de publication de la "
+"revue."
 
-#, fuzzy
 msgid "manager.institutions.noContext"
-msgstr "L'institution de la revue n'a pu être trouvée."
+msgstr "L'établissement de la revue n'a pu être trouvé."
 
 #, fuzzy
 msgid "mailable.subscriptionNotify.name"
@@ -2688,9 +2670,8 @@ msgstr ""
 "Ce courriel avise un-e abonné-e que son abonnement est expiré. Il donne "
 "l'adresse URL de la revue ainsi que les instructions pour y accéder."
 
-#, fuzzy
 msgid "mailable.subscriptionPurchaseIndividual.name"
-msgstr "Abonnement individuel"
+msgstr "Acheter un abonnement individuel"
 
 msgid "mailable.subscriptionPurchaseIndividual.description"
 msgstr ""
@@ -2698,9 +2679,8 @@ msgstr ""
 "individuel a été souscrit en ligne. Il fournit des renseignements sommaires "
 "sur l'abonnement et le lien pour accéder à l'abonnement souscrit."
 
-#, fuzzy
 msgid "mailable.subscriptionPurchaseInstitutional.name"
-msgstr "Abonnement institutionnel"
+msgstr "Acheter un abonnement institutionnel"
 
 msgid "mailable.subscriptionPurchaseInstitutional.description"
 msgstr ""
@@ -2708,7 +2688,6 @@ msgstr ""
 "institutionnel a été souscrit en ligne. Il fournit des renseignements "
 "sommaires sur l'abonnement et le lien pour accéder à l'abonnement souscrit."
 
-#, fuzzy
 msgid "mailable.subscriptionRenewIndividual.name"
 msgstr "Renouveler l'abonnement individuel"
 
@@ -2718,7 +2697,6 @@ msgstr ""
 "individuel a été renouvelé en ligne. Il fournit des renseignements sommaires "
 "sur l'abonnement et le lien pour accéder à l'abonnement renouvelé."
 
-#, fuzzy
 msgid "mailable.subscriptionRenewInstitutional.name"
 msgstr "Renouveler l'abonnement institutionnel"
 
@@ -2738,46 +2716,40 @@ msgstr ""
 "recevoir un avis par courriel quand un numéro devient disponible en libre "
 "accès."
 
-#, fuzzy
 msgid "mailable.issuePublishNotify.name"
-msgstr "Notification de numéro publié"
+msgstr "Notification de numéro paru"
 
-#, fuzzy
 msgid "mailable.issuePublishNotify.description"
 msgstr ""
-"Ce courriel est envoyé automatiquement à tous les utilisateurs de la revue "
-"lorsqu'un nouveau numéro est publié."
+"Ce courriel est envoyé automatiquement à tous les utilisateur.trice.s de la "
+"revue lorsqu'un nouveau numéro est publié."
 
 msgid "manager.manageEmails.description"
 msgstr "Modifier les messages courriels envoyés par cette revue."
 
-#, fuzzy
 msgid "mailable.layoutComplete.name"
-msgstr "Épreuves terminées"
+msgstr "Épreuves complétées"
 
 msgid "mailable.publicationVersionNotify.name"
 msgstr "Nouvelle version créée"
 
-#, fuzzy
 msgid "mailable.publicationVersionNotify.description"
 msgstr ""
-"Ce courriel est envoyé automatiquement aux rédacteurs-trices assignés-ées "
+"Ce courriel est envoyé automatiquement aux rédacteur.trice.s assigné.e.s "
 "lorsqu'une nouvelle version de la soumission est créée."
 
-#, fuzzy
 msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
 "Ce courriel est envoyé aux gestionnaires de la revue lorsqu'une nouvelle "
-"soumission a été faite et qu'aucun-e rédacteur-trice n'a encore été "
-"assigné-ée."
+"soumission a été faite et qu'aucun.e rédacteur.trice n'a encore été assigné."
+"e."
 
 msgid "mailable.paymentRequest.name"
 msgstr "Demande de paiement"
 
-#, fuzzy
 msgid "mailable.paymentRequest.description"
 msgstr ""
-"Ce courriel est envoyé automatiquement à l'auteur-trice afin de demander le "
+"Ce courriel est envoyé automatiquement à l'auteur.e afin de demander le "
 "paiement des frais de publication lorsque sa soumission a été acceptée."
 
 #~ msgid "manager.statistics.statistics.registeredUsers"
@@ -2806,20 +2778,17 @@ msgstr ""
 #~ "Affiner les résultats par type d'objet (revue, numéro, article, fichiers) "
 #~ "et/ou par un ou plusieurs identifiants (ID) d'objet."
 
-#, fuzzy
 msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
 msgstr ""
-"Une épreuve du numéro n'a pu être importée car aucun fichier ne lui est "
-"associé."
+"Les épreuves du numéro n'ont pu être importées car les fichiers sont "
+"manquants."
 
-#, fuzzy
 msgid "plugins.importexport.common.error.issueGalleyFileMissing"
 msgstr ""
-"L'épreuve {$id} n'a pu être exportée, son fichier n'a pu être trouvé dans \""
-"{$path}\"."
+"Les épreuves {$id} n'ont pu être exportées du fait que les fichiers n'ont pu "
+"être trouvés dans \"{$path}\"."
 
-#, fuzzy
 msgid "plugins.importexport.common.error.issueCoverImageMissing"
 msgstr ""
-"L'image de couverture du numéro {$id} n'a pas été exportée, son fichier n'a "
-"pu être trouvé dans \"{$path}\"."
+"L'image de couverture du numéro {$id} n'a pas été exportée du fait que les "
+"fichiers n'ont pu être trouvés dans \"{$path}\"."
