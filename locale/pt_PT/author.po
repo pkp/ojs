@@ -1,11 +1,12 @@
 # Carla Marques <carla.marques@usdb.uminho.pt>, 2022.
+# Antónia Correia <antonia.correia@usdb.uminho.pt>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2022-07-08 01:54+0000\n"
-"Last-Translator: Carla Marques <carla.marques@usdb.uminho.pt>\n"
+"PO-Revision-Date: 2023-04-23 17:17+0000\n"
+"Last-Translator: Antónia Correia <antonia.correia@usdb.uminho.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/author/pt_PT/>\n"
 "Language: pt_PT\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "author.submit"
 msgstr "Nova submissão"
@@ -44,16 +45,16 @@ msgid "author.submit.step1"
 msgstr "Passo 1. Iniciar submissão"
 
 msgid "author.submit.step2"
-msgstr "Passo 2. Transferência do manuscrito"
+msgstr "Passo 2. Adicionar o manuscrito"
 
 msgid "author.submit.step3"
-msgstr "Passo 3. Metadados da submissão"
+msgstr "Passo 3. Preencher os metadados da submissão"
 
 msgid "author.submit.step4"
-msgstr "Passo 4. Transferência de documentos suplementares"
+msgstr "Passo 4. Adicionar os ficheiros suplementares"
 
 msgid "author.submit.step4a"
-msgstr "Passo 4a. Incluir documento suplementar"
+msgstr "Passo 4a. Adicionar documento suplementar"
 
 msgid "author.submit.step5"
 msgstr "Passo 5. Confirmação da submissão"
@@ -62,19 +63,19 @@ msgid "author.submit.start"
 msgstr "Início"
 
 msgid "author.submit.upload"
-msgstr "Transferência do manuscrito"
+msgstr "Adicionar o manuscrito"
 
 msgid "author.submit.metadata"
-msgstr "Inclusão de metadados"
+msgstr "Preencher metadados"
 
 msgid "author.submit.supplementaryFiles"
-msgstr "Transferência de documentos suplementares"
+msgstr "Adicionar ficheiros suplementares"
 
 msgid "author.submit.nextSteps"
 msgstr "Próximos Passos"
 
 msgid "author.submit.notAccepting"
-msgstr "Neste momento esta revista não aceita submissões."
+msgstr "Neste momento a revista não aceita submissões."
 
 msgid "author.submit.requestWaiver"
 msgstr "Solicitar isenção de taxas"
@@ -84,12 +85,11 @@ msgstr ""
 "Solicito consideração para isenção de Taxa de Submissão para este artigo"
 
 msgid "author.submit.addReasonsForWaiver"
-msgstr ""
-"Indique no campo de comentários abaixo a razão para a isenção de taxas."
+msgstr "Indique no campo de comentários abaixo a razão para a isenção de taxas."
 
 msgid "author.submit.mustEnterWaiverReason"
 msgstr ""
-"Indique a razão no espaço disponível, caso tenha solicitado isenção de taxa."
+"Caso tenha solicitado isenção de taxa, indique a razão no espaço disponível."
 
 msgid "author.submissions.queuedReviewSubsequent"
 msgstr "Em Revisão: Ronda {$round}"
