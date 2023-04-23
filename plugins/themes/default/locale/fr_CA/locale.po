@@ -1,12 +1,13 @@
-# Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2022.
+# Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2022, 2023.
 # Pierre Lasou <pierre.lasou@bibl.ulaval.ca>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T06:56:50-07:00\n"
-"PO-Revision-Date: 2023-04-07 04:59+0000\n"
-"Last-Translator: Pierre Lasou <pierre.lasou@bibl.ulaval.ca>\n"
+"PO-Revision-Date: 2023-04-24 00:11+0000\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-helene."
+"vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -90,7 +91,7 @@ msgstr ""
 
 msgid "plugins.themes.default.option.displayStats.bar"
 msgstr ""
-"Utiliser le type de barre du graphique pour l'affichage des statistiques "
+"Utiliser le type de graphique à barres pour afficher les statistiques "
 "d'utilisation."
 
 msgid "plugins.themes.default.option.displayStats.line"
@@ -99,7 +100,7 @@ msgstr ""
 "d'utilisation."
 
 msgid "plugins.themes.default.displayStats.monthInitials"
-msgstr "Janv Fév Mars Avr Mai Juin Juil Août Sept Oct Noc Déc"
+msgstr "Jan. Fév. Mar. Avr. Mai. Juin. Juil. Août Sep. Oct. Nov. Déc."
 
 msgid "plugins.themes.default.displayStats.downloads"
 msgstr "Téléchargements"
