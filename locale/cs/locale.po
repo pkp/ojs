@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2023-04-22 12:49+0000\n"
+"PO-Revision-Date: 2023-04-23 17:17+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/locale/cs/>\n"
 "Language: cs\n"
@@ -221,7 +221,7 @@ msgid "article.submissions"
 msgstr "Příspěvky"
 
 msgid "article.details"
-msgstr "Detaily"
+msgstr "Podrobnosti"
 
 msgid "article.abstract"
 msgstr "Abstrakt"
@@ -418,7 +418,7 @@ msgid "user.register.contextsPrompt"
 msgstr "Které časopisy na tomto webu byste si chtěli zaregistrovat?"
 
 msgid "user.register.otherContextRoles"
-msgstr "Požadovat následující role."
+msgstr "Požádat o následující role."
 
 msgid "user.register.noContextReviewerInterests"
 msgstr ""
@@ -753,10 +753,10 @@ msgid "search.results.orderBy.popularityAll"
 msgstr "Popularita (za celou dobu)"
 
 msgid "search.results.orderBy.popularityMonth"
-msgstr "Popularita (za měsíc)"
+msgstr "Popularita (Poslední měsíc)"
 
 msgid "search.results.orderBy.relevance"
-msgstr "Relevantnost"
+msgstr "Relevance"
 
 msgid "search.results.orderDir.asc"
 msgstr "Vzestupně"
@@ -1022,7 +1022,7 @@ msgid "submission.layout.galley.remotelyHostedContent"
 msgstr "Tato sazebnice bude dostupná na nové webové stránce."
 
 msgid "submission.layout.galley.remoteURL"
-msgstr "URL pro vzdáleně hostovaný obsah"
+msgstr "URL adresa vzdáleně hostovaného obsahu"
 
 msgid "reviewer.pendingReviews"
 msgstr "Články čekající na recenzi"
@@ -1547,7 +1547,7 @@ msgid "search.authorIndex"
 msgstr "Procházet index autorů"
 
 msgid "search.authorDetails"
-msgstr "Detaily autora"
+msgstr "Podrobnosti o autorovi"
 
 msgid "search.syntaxInstructions"
 msgstr ""
@@ -1923,7 +1923,7 @@ msgid "payment.subscription.expires"
 msgstr "Vyprší"
 
 msgid "installer.appInstallation"
-msgstr "OJS instalace"
+msgstr "Instalace OJS"
 
 msgid "installer.ojsUpgrade"
 msgstr "Aktualizace OJS"
@@ -2288,7 +2288,7 @@ msgid "notification.type.reviewerFormComment"
 msgstr "Byl vyplněn recenzní formulář k článku \"{$title}.\""
 
 msgid "notification.type.reviewing"
-msgstr "Události recenzního procesu"
+msgstr "Události týkající se recenzního řízení"
 
 msgid "notification.type.site"
 msgstr "Události stránek"
@@ -2297,13 +2297,13 @@ msgid "notification.type.submissionComment"
 msgstr "Editor vložil poznámku k článku \"{$title}.\""
 
 msgid "notification.type.submissions"
-msgstr "Události příspěvku"
+msgstr "Události týkající se příspěvku"
 
 msgid "notification.type.userComment"
 msgstr "Čtenář vložil poznámku k článku \"{$title}.\""
 
 msgid "notification.type.public"
-msgstr "Veřejné oznámení"
+msgstr "Veřejná oznámení"
 
 msgid "notification.savedIssueMetadata"
 msgstr "Metadata čísla byla uložena."
@@ -2348,7 +2348,7 @@ msgid "notification.type.approveSubmission"
 msgstr "Tento příspěvek čeká na schválení, než se objeví v čísle."
 
 msgid "notification.type.approveSubmissionTitle"
-msgstr "Očekává se schválení."
+msgstr "Čeká na schválení."
 
 msgid "user.profile.form.showOtherContexts"
 msgstr "Zaregistrovat se do dalších časopisů"
