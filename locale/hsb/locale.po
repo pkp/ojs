@@ -1,8 +1,198 @@
 # Weblate Admin <alec@smecher.bc.ca>, 2023.
+# Astrid Schmiedel <astrid.schmiedel@serbski-institut.de>, 2023.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-04-24 10:26+0000\n"
+"Last-Translator: Astrid Schmiedel <astrid.schmiedel@serbski-institut.de>\n"
+"Language-Team: Upper Sorbian <http://translate.pkp.sfu.ca/projects/ojs/"
+"locale/hsb/>\n"
 "Language: hsb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=4; plural=(n % 100 == 1) ? 0 : ((n % 100 == 2) ? 1 : "
+"((n % 100 == 3 || n % 100 == 4) ? 2 : 3));\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "context.current"
+msgstr "Aktualny časopis:"
+
+msgid "navigation.otherJournals"
+msgstr "Druhi časopisy"
+
+msgid "navigation.infoForAuthors"
+msgstr "Za awtorow/awtorki"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Za bibliotekarow/bibliotekarki"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Informacije za awtorow/awtorki"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Archiwy"
+
+msgid "common.queue.long.active"
+msgstr "Aktualni přinoški"
+
+msgid "common.queue.short.active"
+msgstr "Aktualny"
+
+msgid "common.queue.long.completed"
+msgstr "Archiw"
+
+msgid "common.queue.short.completed"
+msgstr "Archiw"
+
+msgid "section.section"
+msgstr "Rubrika"
+
+msgid "section.sections"
+msgstr "Rubrika"
+
+msgid "section.abbreviation"
+msgstr "Skrótšenka"
+
+msgid "article.article"
+msgstr "Nastawk"
+
+msgid "article.articles"
+msgstr "Nastawki"
+
+msgid "common.publication"
+msgstr "Nastawk"
+
+msgid "common.publications"
+msgstr "Nastawki"
+
+msgid "article.authors"
+msgstr "Awtorow/Awtorki"
+
+msgid "article.journalSection"
+msgstr "Rubrika"
+
+msgid "article.file"
+msgstr "Dataja"
+
+msgid "article.language"
+msgstr "Rěč"
+
+msgid "journal.currentIssue"
+msgstr "Aktualny zešiwk"
+
+msgid "context.contexts"
+msgstr "Časopisy"
+
+msgid "context.context"
+msgstr "Časopis"
+
+msgid "issue.vol"
+msgstr "zwj."
+
+msgid "issue.volume"
+msgstr "zwjazk"
+
+msgid "issue.toc"
+msgstr "Wobsah"
+
+msgid "issue.no"
+msgstr "čo."
+
+msgid "issue.number"
+msgstr "čisło"
+
+msgid "issue.title"
+msgstr "Titul"
+
+msgid "issue.issue"
+msgstr "zešiwk"
+
+msgid "issue.issues"
+msgstr "zešiwki"
+
+msgid "issue.year"
+msgstr "lěto"
+
+msgid "search.results.orderBy.author"
+msgstr "Awtor/ka"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Relewanca"
+
+msgid "submission.logType.article"
+msgstr "Nastawk"
+
+msgid "submission.logType.author"
+msgstr "Awtor/ka"
+
+msgid "submission.logType.editor"
+msgstr "Redaktor/ka"
+
+msgid "site.journalCurrent"
+msgstr "Aktualny časopis"
+
+msgid "current.current"
+msgstr "Aktualny zešiwk"
+
+msgid "current.noCurrentIssue"
+msgstr "Žadyn aktualny zešiwk"
+
+msgid "archive.archives"
+msgstr "Archiwy"
+
+msgid "archive.archivesPageNumber"
+msgstr "Archiwy - strona {$pageNumber}"
+
+msgid "about.statistics"
+msgstr "Statistiki"
+
+msgid "about.contact"
+msgstr "Kontakt"
+
+msgid "about.aboutContext"
+msgstr "Wo časopisu"
+
+msgid "about.editorialTeam"
+msgstr "Redakcija"
+
+msgid "about.editorialTeam.biography"
+msgstr "Biografija"
+
+msgid "about.focusAndScope"
+msgstr "Koncept"
+
+msgid "about.submissions"
+msgstr "Zapodaće přinoškow"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Nowy přinošk zapodać"
+
+msgid "about.authorGuidelines"
+msgstr "Směrnicy za awtorow/awtorki"
+
+msgid "navigation.categories"
+msgstr "Kategorije"
+
+msgid "navigation.current"
+msgstr "Aktualny zešiwk"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Informacije za bibliotekarow/bibliotekarki"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Archiwy"
+
+msgid "article.title"
+msgstr "Titul"
+
+msgid "article.subject"
+msgstr "Hesła"
+
+msgid "article.submission"
+msgstr "Přinošk"
+
+msgid "article.submissions"
+msgstr "Přinoški"
+
+msgid "submission.logType.review"
+msgstr "Posudźowanje"
