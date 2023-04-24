@@ -2,7 +2,7 @@
 # Aysa Ekanger <aysa.ekanger@uit.no>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-04-18 21:55+0000\n"
+"PO-Revision-Date: 2023-04-24 10:26+0000\n"
 "Last-Translator: Aysa Ekanger <aysa.ekanger@uit.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/nb_NO/>\n"
@@ -288,8 +288,8 @@ msgstr "En avvist innlevering kan ikke publiseres."
 
 msgid "publication.required.reviewStage"
 msgstr ""
-"Innleveringen må være under manusredigerings- eller produksjonstrinnet før "
-"den kan publiseres."
+"Innleveringen må være på Språkvask- eller Produksjonstrinnet før den kan "
+"publiseres."
 
 msgid "submission.license.description"
 msgstr ""
@@ -394,13 +394,12 @@ msgstr ""
 "forfattere må registreres av tidsskriftets redaksjon. Hvis du mener at dette "
 "er en feil, vennligst ta kontakt med <a href='mailto:{$email}'>{$name}</a>."
 
-#, fuzzy
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
 "Du har ikke lov til å levere et manuskript til dette tidsskriftet fordi "
 "innleveringer til alle seksjoner i dette tidsskriftet har blitt deaktivert "
-"eller begrenset. Hvis du mener at dette er en feil, vennligst ta kontakt "
-"med  <a href='mailto:{$email}'>{$name}</a>."
+"eller begrenset. Hvis du mener at dette er en feil, vennligst ta kontakt med "
+"<a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
