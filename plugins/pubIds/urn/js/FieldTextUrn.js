@@ -2,13 +2,13 @@
  * @defgroup plugins_pubIds_urn_js
  */
 /**
- * @file plugins/pubIds/urn/js/FieldUrn.js
+ * @file plugins/pubIds/urn/js/FieldTextUrn.js
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @brief A Vue.js component for a URN form field that adds a check number.
+ * @brief A Vue.js component for URN text form field, that is used for custom suffixes, and that considers adding a check number.
  */
 var template = pkp.Vue.compile('<div class="pkpFormField pkpFormField--text pkpFormField--urn" :class="classes">' +
 '			<form-field-label' +
@@ -39,6 +39,7 @@ var template = pkp.Vue.compile('<div class="pkpFormField pkpFormField--text pkpF
 '					:style="inputStyles"' +
 '				/>' +
 '				<button' +
+'					v-if="applyCheckNumber"' +
 '					class="pkpButton pkpFormField--urn__button"' +
 '					@click.prevent="addCheckNumber"' +
 '				>' +
@@ -53,8 +54,8 @@ var template = pkp.Vue.compile('<div class="pkpFormField pkpFormField--text pkpF
 '			</div>' +
 '		</div>');
 
-pkp.Vue.component('field-urn', {
-	name: 'FieldUrn',
+pkp.Vue.component('field-text-urn', {
+	name: 'FieldTextUrn',
 	extends: pkp.Vue.component('field-text'),
 	props: {
 		addCheckNumberLabel: {
@@ -63,6 +64,10 @@ pkp.Vue.component('field-urn', {
 		},
 		urnPrefix: {
 			type: String,
+			required: true
+		},
+		applyCheckNumber: {
+			type: Boolean,
 			required: true
 		}
 	},
