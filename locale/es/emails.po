@@ -1,12 +1,13 @@
 # Marc Bria <marc.bria@gmail.com>, 2023.
 # Aitor Cuartango Berrendo <aitor.cuartango@ehu.eus>, 2023.
+# pep sanso <pep.sanso@uab.cat>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:18-08:00\n"
-"PO-Revision-Date: 2023-04-21 08:42+0000\n"
-"Last-Translator: Aitor Cuartango Berrendo <aitor.cuartango@ehu.eus>\n"
+"PO-Revision-Date: 2023-04-25 14:36+0000\n"
+"Last-Translator: pep sanso <pep.sanso@uab.cat>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/emails/es/>"
 "\n"
 "Language: es\n"
@@ -142,8 +143,17 @@ msgstr ""
 "<br />\n"
 "Gracias."
 
+#, fuzzy
 msgid "emails.editorAssignReview.body"
 msgstr ""
+"<p>Apreciado/a {$recipientName},</p><p>Se le ha asignado el siguiente envío "
+"para que lo supervise durante el proceso de revisión por pares.</p><p><a "
+"href=\"{$submissionUrl}\">{$submissionTitle}</a><br "
+"/>{$authors}</p><p><b>Resumen</b></p>{$submissionAbstract}<p>Inicie sesión "
+"para <a href=\"{$submissionUrl}\">ver el envío</a> y asignar revisores "
+"cualificados. Puede asignar un revisor haciendo clic en \"Añadir revisor/a\""
+".</p><p>Le agredecemos su colaboración con la "
+"revista.</p><p>Atentamente,</p>{$signature}"
 
 msgid "emails.editorAssignProduction.body"
 msgstr ""
