@@ -1,15 +1,16 @@
 # Piotr Pielach <ppielach@gmail.com>, 2022.
 # rl <biuro@fimagis.pl>, 2022.
+# Dariusz Lis <Dariusz@Lis.PL>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-30T17:55:38+00:00\n"
-"PO-Revision-Date: 2022-09-16 08:38+0000\n"
-"Last-Translator: rl <biuro@fimagis.pl>\n"
+"PO-Revision-Date: 2023-04-25 19:32+0000\n"
+"Last-Translator: Dariusz Lis <Dariusz@Lis.PL>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
-"pl_PL/>\n"
-"Language: pl_PL\n"
+"pl/>\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -370,28 +371,39 @@ msgstr ""
 "istnieje w aktualnie wybranym tytule."
 
 msgid "submission.layout.viewGalley"
-msgstr ""
+msgstr "Podejrzyj wersję do publikacji"
 
 msgid "galley.cantEditPublished"
-msgstr ""
+msgstr "Tej wersji nie można edytować, ponieważ została już opublikowana."
 
 msgid "submission.copyright.description"
 msgstr ""
+"Prosimy o przeczytanie i zrozumienie warunków praw autorskich dotyczących "
+"zgłoszeń do tego czasopisma."
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
+"Nie możesz zgłaszać tekstów do tego czasopisma, ponieważ autorzy muszą być "
+"zarejestrowani przez redakcję. Jeśli uważasz, że masz do czynienia z błędem, "
+"skontaktuj się z <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
+"Nie możesz zgłaszać tekstów do jakichkolwiek sekcji tego czasopisma, "
+"ponieważ taką możliwość wyłączono lub ograniczono. Jeśli uważasz, że masz do "
+"czynienia z błędem, skontaktuj się z <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
+"Czasopismo {$contextName} nie przyjmuje zgłoszeń tekstów do sekcji {$section}"
+". Jeśli potrzebujesz pomocy przy zgłaszaniu, skontaktuj się z <a "
+"href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.sectionNotFound"
-msgstr ""
+msgstr "Nie znaleziono sekcji dla tego zgłoszenia."
 
 msgid "submission.sectionRestrictedToEditors"
-msgstr ""
+msgstr "Do tej sekcji zgłaszać mogą wyłącznie pracownicy redakcji."
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Przynajmniej jeden autor jest wymagany."
