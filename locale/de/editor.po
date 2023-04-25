@@ -1,19 +1,18 @@
-# Pia Piontkowitz <pia.piontkowitz@rub.de>, 2021.
+# Pia Piontkowitz <pia.piontkowitz@rub.de>, 2021, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2021-10-20 21:22+0000\n"
+"PO-Revision-Date: 2023-04-25 14:36+0000\n"
 "Last-Translator: Pia Piontkowitz <pia.piontkowitz@rub.de>\n"
-"Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/editor/de_DE/"
-">\n"
-"Language: de_DE\n"
+"Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/editor/de/>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "editor.home"
 msgstr "Startseite der Redakteurin/des Redakteurs"
@@ -447,7 +446,7 @@ msgstr ""
 "ist."
 
 msgid "editor.article.payment.requestPayment"
-msgstr ""
+msgstr "Zahlung anfordern"
 
 msgid "editor.article.removeCoverImageFileNotFound"
 msgstr ""
