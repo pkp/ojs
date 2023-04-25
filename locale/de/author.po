@@ -1,17 +1,18 @@
+# Pia Piontkowitz <pia.piontkowitz@rub.de>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2020-05-15 08:54+0000\n"
-"Last-Translator: Sebastian Wolf <bibliothekswelt@htmlwolf.de>\n"
+"PO-Revision-Date: 2023-04-25 14:36+0000\n"
+"Last-Translator: Pia Piontkowitz <pia.piontkowitz@rub.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/author/de/>\n"
-"Language: de_DE\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "author.submit"
 msgstr "Neuer Beitrag"
@@ -74,7 +75,9 @@ msgid "author.submit.requestWaiver"
 msgstr "Gebührenverzicht beantragen"
 
 msgid "author.submit.qualifyForWaiver"
-msgstr "Bitte ziehen Sie einen Verzicht auf die Einreichungsgebühr für diesen Artikel in Erwägung."
+msgstr ""
+"Bitte ziehen Sie einen Verzicht auf die Einreichungsgebühr für diesen "
+"Artikel in Erwägung"
 
 msgid "author.submit.addReasonsForWaiver"
 msgstr "Nutzen Sie bitte das nachfolgende Kommentarfeld, um zu erklären, warum von einer Gebühr abgesehen werden soll."
@@ -107,7 +110,7 @@ msgid "author.submissions.viewStatus"
 msgstr "Status anzeigen"
 
 msgid "author.submissions.noSubmissions"
-msgstr "Keine Eingaben"
+msgstr "Keine Einreichungen."
 
 msgid "author.submit.journalSection"
 msgstr "Zeitschriftenrubrik"
@@ -189,8 +192,8 @@ msgstr "Dieser optionale Schritt ermöglicht das Hinzufügen zusätzlicher Datei
 
 msgid "author.submit.supplementaryFiles.saveToUpload"
 msgstr ""
-"Klicken Sie \"Sichern\", um die Datei hochzuladen. (Danach können noch "
-"weitere Dateien hochgeladen werden.)"
+"Klicken Sie \"Sichern\", um die Datei hochzuladen (danach können noch "
+"weitere Dateien hochgeladen werden)."
 
 msgid "author.submit.forgottenSubmitSuppFile"
 msgstr "Sind Sie sicher, dass Sie fortfahren wollen, ohne die ausgewählte Zusatzdatei hochgeladen zu haben?"
