@@ -1,19 +1,19 @@
 # Jordi LC <jordi.lacruz@uab.cat>, 2021.
+# Marc Bria <marc.bria@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2021-08-04 12:04+0000\n"
-"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
-"Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/admin/es_ES/"
-">\n"
-"Language: es_ES\n"
+"PO-Revision-Date: 2023-04-26 10:30+0000\n"
+"Last-Translator: Marc Bria <marc.bria@gmail.com>\n"
+"Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/admin/es/>\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "admin.hostedContexts"
 msgstr "Revistas alojadas"
@@ -134,7 +134,7 @@ msgid "admin.journals.form.importPathRequired"
 msgstr "Se requiere la ruta de importación."
 
 msgid "admin.journals.importErrors"
-msgstr "No se pudo completar la importación correctamente"
+msgstr "La importación no se ha completado correctamente"
 
 msgid "admin.mergeUsers"
 msgstr "Fusionar usuarios/as"
@@ -180,11 +180,11 @@ msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
 msgstr "Issue ID no es un entero."
 
 msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
-msgstr "Issue galley ID no es un entero."
+msgstr "ID de galerada de número (Issue galley ID) no es un entero."
 
 msgid ""
 "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
-msgstr "Issue ID no coincide con assoc ID."
+msgstr "ID de número (Issue ID) no coincide con assoc ID."
 
 msgid "admin.settings.enableBulkEmails.description"
 msgstr ""
