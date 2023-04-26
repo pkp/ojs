@@ -1,15 +1,15 @@
-# Dariusz Lis <Dariusz@Lis.PL>, 2021.
+# Dariusz Lis <Dariusz@Lis.PL>, 2021, 2023.
 # rl <biuro@fimagis.pl>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-30T17:55:29+00:00\n"
-"PO-Revision-Date: 2022-09-16 10:38+0000\n"
-"Last-Translator: rl <biuro@fimagis.pl>\n"
-"Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/manager/"
-"pl_PL/>\n"
-"Language: pl_PL\n"
+"PO-Revision-Date: 2023-04-26 14:01+0000\n"
+"Last-Translator: Dariusz Lis <Dariusz@Lis.PL>\n"
+"Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/manager/pl/>"
+"\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -540,11 +540,10 @@ msgstr "Konfiguracja e-mail"
 msgid "manager.setup.emailSignature"
 msgstr "Podpis (stopka)"
 
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
-"Do wiadomości poczty elektronicznej wysyłanych na rzecz czasopisma dołączany "
-"będzie na końcu następujący podpis."
+"Następujący podpis dołączany będzie na końcu wiadomości e-mail wysyłanych na "
+"rzecz tego czasopisma."
 
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Włącz ogłoszenia"
@@ -794,7 +793,7 @@ msgstr ""
 "korzystania z PKP PN."
 
 msgid "manager.setup.plnPluginArchiving"
-msgstr "PKP Preservation Network (PN)"
+msgstr "Sieć zachowująca PKP (PKP PN)"
 
 msgid "manager.setup.plnPluginNotInstalled"
 msgstr ""
@@ -1661,9 +1660,8 @@ msgstr "Wybierz użytkownika"
 
 msgid "manager.subscriptions.selectSubscriber.desc"
 msgstr ""
-"Przywileje dostępu poprzez subskrypcje są automatycznie przydzielone "
-"menedżerom, redaktorom, redaktorom składu, redaktorom sekcji i korektorom "
-"współpracującym z czasopismem."
+"Uprawnienia dostępu do subskrypcji są automatycznie przyznawane "
+"zarządzającym czasopismem, jego redaktorom, korektorom i weryfikatorom."
 
 msgid "manager.subscriptions.select"
 msgstr "Wybierz"
@@ -2019,52 +2017,63 @@ msgstr ""
 "Wyślij kopię do głównej osoby kontaktowej wskazanej na stronie czasopisma."
 
 msgid "stats.contextStats"
-msgstr ""
+msgstr "Statystyki czasopisma"
 
 msgid "stats.context.tooltip.text"
-msgstr ""
+msgstr "Liczba odwiedzających przeglądających stronę indeksu czasopisma."
 
 msgid "stats.context.tooltip.label"
-msgstr ""
+msgstr "O statystykach czasopisma"
 
 msgid "stats.context.downloadReport.description"
 msgstr ""
+"Pobierz plik CSV lub arkusza kalkulacyjnego Excel ze statystykami "
+"użytkowania tego czasopisma pasującymi do następujących parametrów."
 
 msgid "stats.context.downloadReport.downloadContext.description"
-msgstr ""
+msgstr "Liczba odsłon indeksu czasopisma."
 
 msgid "stats.context.downloadReport.downloadContext"
-msgstr ""
+msgstr "Pobierz czasopismo"
 
 msgid "stats.issueStats"
-msgstr ""
+msgstr "Statystyki wydania"
 
 msgid "stats.issues.details"
-msgstr ""
+msgstr "Wyświetlenia i pobrania"
 
 msgid "stats.issues.searchIssueDescription"
-msgstr ""
+msgstr "Wyszukaj tytuł wydania, tom i numer"
 
 msgid "stats.issues.none"
 msgstr ""
+"Nie znaleziono wydań czasopisma ze statystykami użytkowania pasującymi do "
+"tych parametrów."
 
 msgid "stats.issues.downloadReport.description"
 msgstr ""
+"Pobierz plik CSV lub arkusza kalkulacyjnego Excel ze statystykami "
+"użytkowania wydań czasopisma pasującymi do następujących parametrów."
 
 msgid "stats.issues.downloadReport.downloadIssues.description"
 msgstr ""
+"Liczba wyświetleń spisu treści i pobrań ostatecznych treści dla każdego "
+"wydania."
 
 msgid "stats.issues.downloadReport.downloadIssues"
-msgstr ""
+msgstr "Pobierz wydania"
 
 msgid "stats.issues.countOfTotal"
-msgstr ""
+msgstr "{$count} z {$total} wydań"
 
 msgid "stats.issues.tooltip.label"
-msgstr ""
+msgstr "O statystykach wydania"
 
 msgid "stats.issues.tooltip.text"
 msgstr ""
+"<strong>Wyświetlenia</strong>: liczba użytkowników przeglądających spis "
+"treści danego wydania.<br><strong>Pobrania</strong>: liczba pobrań "
+"ostatecznej treści danego wydania, o ile taka istnieje."
 
 msgid "stats.publicationStats"
 msgstr "Statystyki artykułu"
@@ -2094,12 +2103,14 @@ msgstr "Pliki"
 
 msgid "stats.publications.downloadReport.description"
 msgstr ""
+"Pobierz plik CSV albo arkusza kalkulacyjnego Excel ze statystykami "
+"użytkowania dla artykułów, spełniających następujące parametry."
 
 msgid "stats.publications.downloadReport.downloadSubmissions"
-msgstr ""
+msgstr "Pobierz artykuły"
 
 msgid "stats.publications.downloadReport.downloadSubmissions.description"
-msgstr ""
+msgstr "Liczba wyświetleń abstraktów i pobrań plików dla każdego artykułu."
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
@@ -2117,7 +2128,7 @@ msgid "plugins.importexport.native.export.issues.results"
 msgstr "Wyniki eksportu wydań"
 
 msgid "plugins.importexport.issue.cli.display"
-msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+msgstr "\"{$issueId}\" -- \"{$issueIdentification}\""
 
 msgid "plugins.importexport.issueGalleys.exportFailed"
 msgstr "Proces nie mógł przetworzyć plików numeru"
@@ -2131,9 +2142,8 @@ msgstr "Adres URL strony czasopisma"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Nazwa głównego kontaktu"
 
-#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr "Inicjały czasopisma"
+msgstr "Inicjały tego czasopisma"
 
 msgid "emailTemplate.variable.context.contextSignature"
 msgstr "Sygnatura email czasopisma dla poczty systemowej"
@@ -2142,7 +2152,7 @@ msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Email głównego kontaktu"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "Adres pocztowy tego czasopisma"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Nazwa typu płatności"
@@ -2174,36 +2184,34 @@ msgstr "Podsumowanie nazwy, czasu, kosztu typu subskrypcji"
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Informacja o członkostwie subskrybenta"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr "Nazwa instytucji"
+msgstr "Nazwa instytucji subskrybującej"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr "Adres pocztowy instytucji"
+msgstr "Adres pocztowy instytucji subskrybującej"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
-msgstr "Domena"
+msgstr "Nazwa domeny prawidłowych adresów IP dla tej subskrypcji"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr "Zakres IP do autoryzacji subskrybentów"
+msgstr "Prawidłowe zakresy adresów IP dla tej subskrypcji"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "Adres URL strony, na której autor może dokonać płatności"
 
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "Adres URL strony ze wytycznymi dot. zgłoszeń"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "Odsyłacz do strony ze statystykami opublikowanych artykułów"
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "Identyfikator wydania"
 
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
+"Ta wiadomość e-mail jest automatycznie wysyłana co miesiąc do redaktorów i "
+"zarządzających czasopismem, aby zapewnić im przegląd stanu systemu."
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Aktywacja Email (Rejestracja w czasopiśmie)"
@@ -2524,25 +2532,31 @@ msgstr ""
 "publikowane jest nowe wydanie."
 
 msgid "manager.manageEmails.description"
-msgstr ""
+msgstr "Edytuj wiadomości e-mail wysyłane przez to czasopismo."
 
 msgid "mailable.layoutComplete.name"
-msgstr ""
+msgstr "Skompletowana ostateczna treść do publikacji"
 
 msgid "mailable.publicationVersionNotify.name"
-msgstr ""
+msgstr "Utworzono nową wersję"
 
 msgid "mailable.publicationVersionNotify.description"
 msgstr ""
+"Ta wiadomość e-mail automatycznie powiadamia przypisanych redaktorów o "
+"utworzeniu nowej wersji zgłoszenia."
 
 msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
+"Ta wiadomość e-mail jest wysyłana do zarządzających czasopismem po "
+"rejestracji nowego zgłoszenia i przy braku przypisania mu redaktora."
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "Żądanie zapłaty"
 
 msgid "mailable.paymentRequest.description"
 msgstr ""
+"Ta automatyczna wiadomość e-mail jest wysyłana do autora z prośbą o "
+"uiszczenie opłaty za publikację, gdy jego zgłoszenie zostanie zaakceptowane."
 
 #~ msgid "manager.payment.currency"
 #~ msgstr "Waluta"
@@ -2823,3 +2837,18 @@ msgstr ""
 
 #~ msgid "doi.manager.settings.enablePublicationDoi"
 #~ msgstr "Artykuły"
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"Obrazu okładki wydania {$id} nie wyeksportowano, bo zawierającego go pliku "
+"nie znaleziono w ścieżce \"{$path}\"."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"Ostatecznej treści wydania {$id} nie wyeksportowano, bo zawierającego ją "
+"pliku nie znaleziono w ścieżce „{$path}”."
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr ""
+"Nie można zaimportować ostatecznej treści wydania, bo brakuje pliku który ją "
+"zawiera."
