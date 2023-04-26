@@ -1,15 +1,15 @@
-# Pia Piontkowitz <pia.piontkowitz@rub.de>, 2021.
+# Pia Piontkowitz <pia.piontkowitz@rub.de>, 2021, 2023.
 # Andres Quast <quast@hbz-nrw.de>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2022-11-04 13:02+0000\n"
-"Last-Translator: Andres Quast <quast@hbz-nrw.de>\n"
+"PO-Revision-Date: 2023-04-26 14:01+0000\n"
+"Last-Translator: Pia Piontkowitz <pia.piontkowitz@rub.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/submission/"
-"de_DE/>\n"
-"Language: de_DE\n"
+"de/>\n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -172,7 +172,7 @@ msgstr "Einer Ausgabe zuordnen"
 
 msgid "publication.assignedToIssue"
 msgstr ""
-"Dieser Artikel wurde  <a href=\"{$issueUrl}\">{$issueName}</a> zugeordnet, "
+"Dieser Artikel wurde <a href=\"{$issueUrl}\">{$issueName}</a> zugeordnet, "
 "aber noch nicht zur Veröffentlichung vorgesehen."
 
 msgid "publication.changeIssue"
@@ -226,7 +226,7 @@ msgstr "Veröffentlicht in <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.scheduledIn"
 msgstr ""
-"Vorgesehen zur  Veröffentlichung in <a href=\"{$issueUrl}\">{$issueName}</a>."
+"Vorgesehen zur Veröffentlichung in <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.unscheduledIn"
 msgstr ""
@@ -307,8 +307,8 @@ msgstr ""
 
 msgid "submission.license.description"
 msgstr ""
-"Die Lizenz wird bei Veröffentlichung  automatisch auf <a "
-"href='{$licenseUrl}' target='_blank'>{$licenseName}</a> gesetzt."
+"Die Lizenz wird bei Veröffentlichung automatisch auf <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> gesetzt."
 
 msgid "submission.copyrightHolder.description"
 msgstr ""
@@ -339,57 +339,92 @@ msgstr "Zurück zur Begutachtung"
 
 msgid "editor.submission.decision.backToReview.description"
 msgstr ""
+"Annahmeentscheidung über diese Einreichung rückgängig machen und die "
+"Einreichung in die Begutachtung zurückschicken."
 
 msgid "editor.submission.decision.backToReview.log"
 msgstr ""
+"{$editorName} hat die Entscheidung, diese Einreichung zu akzeptieren, "
+"rückgängig gemacht und sie in die Begutachtung zurückgeschickt."
 
 msgid "editor.submission.decision.backToReview.completed"
-msgstr ""
+msgstr "In die Begutachtung zurückgeschickt"
 
 msgid "editor.submission.decision.backToReview.completed.description"
-msgstr ""
+msgstr "Die Einreichung {$title} wurde in die Begutachtung zurückgeschickt."
 
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
+"Eine E-Mail an die Autor/innen senden, um sie darüber zu informieren, dass "
+"ihre Einreichung in die Begutachtung zurückgeschickt wird. Erklären Sie, "
+"warum diese Entscheidung getroffen wurde und informieren Sie die Autor/"
+"innen, welche weiteren Begutachtungen unternommen werden."
 
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
+"Eine E-Mail an die Autor/innen senden, um sie darüber zu informieren, dass "
+"ihre Einreichung zum Peer Review geschickt wird. Sofern möglich, geben Sie "
+"den Autor/innen einen Hinweis darauf, wie lange das Peer Review-Verfahren "
+"dauern wird und wann sie von den Redakteur/innen eine Rückmeldung erwarten "
+"können. Diese E-Mail wird erst versandt, wenn die Entscheidung gespeichert "
+"wurde."
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
-msgstr ""
+msgstr "Dateien auswählen, die zur Begutachtung geschickt werden sollen."
 
 msgid "doi.submission.issueMissing.publication"
 msgstr ""
+"DOI für die Einreichung {$pubObjectTitle} konnte nicht kreiert werden. Die "
+"Einreichung muss einer Ausgabe zugewiesen sein, bevor eine DOI generiert "
+"werden kann."
 
 msgid "doi.submission.issueMissing.representation"
 msgstr ""
+"DOI für die {$pubObjectTitle} Fahne der Einreichung {$itemTitle} konnte "
+"nicht kreiert werden. Die Einreichung muss einer Ausgabe zugewiesen sein, "
+"bevor eine DOI generiert werden kann."
 
 msgid "doi.submission.incorrectContext"
 msgstr ""
+"DOI für die Einreichung {$pubObjectTitle} konnte nicht kreiert werden. Die "
+"Einreichung existiert im aktuellen Zeitschriftenkontext nicht."
 
 msgid "submission.layout.viewGalley"
-msgstr ""
+msgstr "Fahne ansehen"
 
 msgid "galley.cantEditPublished"
 msgstr ""
+"Diese Fahne kann nicht bearbeitet werden, da sie bereits veröffentlicht ist."
 
 msgid "submission.copyright.description"
 msgstr ""
+"Bitte lesen und verstehen Sie die Copyright-Bestimmungen für Einreichungen "
+"zu dieser Zeitschrift."
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
+"Sie können keine Beiträge in dieser Zeitschrift einreichen, da Autor/innen "
+"von der Redaktion registriert werden müssen. Wenn Sie glauben, dass dies ein "
+"Fehler ist, wenden Sie sich bitte an <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
+"Sie können keine Beiträge in dieser Zeitschrift einreichen, da Einreichungen "
+"für alle Rubriken dieser Zeitschrift deaktiviert oder restriktiert sind. "
+"Wenn Sie glauben, dass dies ein Fehler ist, wenden Sie sich bitte an <a "
+"href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
+"{$contextName} akzeptiert keine Einreichungen für die Rubrik {$section}. "
+"Wenn Sie Hilfe bei der Wiederherstellung Ihrer Einreichung benötigen, bitte "
+"kontaktieren Sie <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.sectionNotFound"
-msgstr ""
+msgstr "Die Rubrik für diese Einreichung konnte nicht gefunden werden."
 
 msgid "submission.sectionRestrictedToEditors"
-msgstr ""
+msgstr "Nur die Reaktion kann Beiträge in dieser Rubrik einreichen."
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Mindestens ein/e Autor/in muss angegeben werden."
