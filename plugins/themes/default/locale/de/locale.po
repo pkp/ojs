@@ -1,11 +1,12 @@
 # Jens Unkenholz <jens.unkenholz@uni-muenster.de>, 2023.
+# Pia Piontkowitz <pia.piontkowitz@rub.de>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T06:56:49-07:00\n"
-"PO-Revision-Date: 2023-04-04 23:00+0000\n"
-"Last-Translator: Jens Unkenholz <jens.unkenholz@uni-muenster.de>\n"
+"PO-Revision-Date: 2023-04-26 14:01+0000\n"
+"Last-Translator: Pia Piontkowitz <pia.piontkowitz@rub.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/de/>\n"
 "Language: de\n"
@@ -80,16 +81,16 @@ msgid "plugins.themes.default.option.displayStats.label"
 msgstr "Anzeigeoptionen für Nutzungsstatistiken"
 
 msgid "plugins.themes.default.option.displayStats.none"
-msgstr ""
+msgstr "Einreichungsstatistik nicht für Leser/innen anzeigen."
 
 msgid "plugins.themes.default.option.displayStats.bar"
 msgstr "Verwenden Sie ein Balkendiagramm zur Anzeige der Nutzerstatistiken."
 
 msgid "plugins.themes.default.option.displayStats.line"
-msgstr ""
+msgstr "Liniendiagramm zur Anzeige der Nutzerstatistiken verwenden."
 
 msgid "plugins.themes.default.displayStats.monthInitials"
-msgstr ""
+msgstr "Jan Feb Mär Apr Mai Jun Jul Aug Sep Okt Nov Dez"
 
 msgid "plugins.themes.default.displayStats.downloads"
 msgstr "Downloads"
