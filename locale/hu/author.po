@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13T21:04:23+00:00\n"
-"PO-Revision-Date: 2023-04-21 08:42+0000\n"
+"PO-Revision-Date: 2023-04-26 14:01+0000\n"
 "Last-Translator: Fülöp Tiffany <tiffany.fulop@ek.szte.hu>\n"
 "Language-Team: Hungarian <http://translate.pkp.sfu.ca/projects/ojs/author/hu/"
 ">\n"
@@ -25,10 +25,10 @@ msgstr "Aktív beküldések"
 msgid "author.competingInterests"
 msgstr ""
 "Összeférhetetlenség <a target=\"_new\" class=\"action\" href=\""
-"{$competingInterestGuidelinesUrl}\">Osszeférhetlenségi Irányelvek</a>"
+"{$competingInterestGuidelinesUrl}\">Összeférhetlenségi Irányelvek</a>"
 
 msgid "author.submit.submitArticle"
-msgstr "Egy cikk beküldése"
+msgstr "Cikk beküldése"
 
 msgid "author.submit.stepsToSubmit"
 msgstr "5 lépés a beküldéshez"
@@ -37,7 +37,9 @@ msgid "author.submit.startHereTitle"
 msgstr "Új beküldés megkezdése"
 
 msgid "author.submit.startHereLink"
-msgstr "<a href=\"{$submitUrl}\" class=\"action\">Kattintson ide</a>, hogy eljusson az 5 lépéses benyújtási folyamat első lépéséhez."
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">Kattintson ide</a>, hogy eljusson "
+"az 5 lépéses beküldési folyamat első lépéséhez."
 
 msgid "author.submit.step1"
 msgstr "1. lépés Beküldés megkezdése"
@@ -70,7 +72,7 @@ msgid "author.submit.supplementaryFiles"
 msgstr "Kiegészítő fájlok feltöltése"
 
 msgid "author.submit.nextSteps"
-msgstr "Következő lépés"
+msgstr "Következő lépések"
 
 msgid "author.submit.notAccepting"
 msgstr "Ez a folyóirat jelenleg nem fogad beküldéseket."
@@ -86,22 +88,22 @@ msgid "author.submit.addReasonsForWaiver"
 msgstr "Kérjük, a megjegyzés mezőbe indokolja a lemondást."
 
 msgid "author.submit.mustEnterWaiverReason"
-msgstr "Ha a kérelmező egyben a lemondó is, akkor indokolnia kell lemondást a megadott helyen."
+msgstr "Ha lemondást kér, a megadott helyen meg kell adnia az indoklást."
 
 msgid "author.submissions.queuedReviewSubsequent"
-msgstr "A szakmai lektorálási kör {$round}"
+msgstr "Szakmai lektorálási kör {$round}"
 
 msgid "author.submissions.queuedReviewRevisions"
 msgstr "Szakmai lektorálás alatt: Átnézés kérése"
 
 msgid "author.submissions.queuedEditingCopyedit"
-msgstr "Szerkesztésnél: Nyelvi lektorálás kérése"
+msgstr "Szerkesztésnél: Nyelvi szerkesztés kérése"
 
 msgid "author.submissions.queuedEditingProofread"
 msgstr "Szerkesztésnél: Korrektúra kérése"
 
 msgid "author.submissions.uploadCopyeditedVersion"
-msgstr "Beszerkesztett változat feltöltése"
+msgstr "Szerkesztett változat feltöltése"
 
 msgid "author.submissions.proofreadingCorrections"
 msgstr "Korrektúrázási javítások"
