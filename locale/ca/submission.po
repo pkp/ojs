@@ -1,19 +1,20 @@
 # Jordi LC <jordi.lacruz@uab.cat>, 2021, 2022.
+# pep sanso <pep.sanso@uab.cat>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
-"PO-Revision-Date: 2022-07-02 03:43+0000\n"
-"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"PO-Revision-Date: 2023-04-26 14:01+0000\n"
+"Last-Translator: pep sanso <pep.sanso@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/submission/"
-"ca_ES/>\n"
-"Language: ca_ES\n"
+"ca/>\n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "submission.submit.userGroup"
 msgstr "Enviar en el meu rol com a..."
@@ -377,29 +378,48 @@ msgstr ""
 "No s'ha pogut crear un DOI per a la següent tramesa: {$pubObjectTitle}. "
 "Aquesta no existeix en el context de la revista actual."
 
+#, fuzzy
 msgid "submission.layout.viewGalley"
-msgstr ""
+msgstr "Veure galerada"
 
+#, fuzzy
 msgid "galley.cantEditPublished"
-msgstr ""
+msgstr "Aquesta galerada no es pot editar perquè ja s'ha publicat."
 
+#, fuzzy
 msgid "submission.copyright.description"
 msgstr ""
+"Si us plau, llegeixi i comprengui els termes de drets d'autor per a les "
+"trameses a aquesta revista."
 
+#, fuzzy
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
+"No se li permet fer una tramesa a aquesta revista perquè els autors/ores han "
+"d'estar registrats pel personal editorial. Si creu que es tracta d'un error, "
+"comuniquis amb <a href='mailto:{$email}'>{$name}</a>."
 
+#, fuzzy
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
+"No pot fer una tramesa a aquesta revista perquè les trameses a totes les "
+"seccions d'aquesta revista s'han desactivat o restringit. Si creu que es "
+"tracta d'un error, comuniquis amb <a href='mailto:{$email}'>{$name}</a>."
 
+#, fuzzy
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
+"{$contextName} no accepta trameses a la secció {$section}. Si necessita "
+"ajuda per recuperar la seva tramesa, comuniquis amb <a "
+"href='mailto:{$email}'>{$name}</a>."
 
+#, fuzzy
 msgid "submission.sectionNotFound"
-msgstr ""
+msgstr "No s'ha trobat la secció per aquesta tramesa."
 
+#, fuzzy
 msgid "submission.sectionRestrictedToEditors"
-msgstr ""
+msgstr "Només el personal editorial pot fer una tramesa a aquesta secció."
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Es requereix un autor com a mínim."
