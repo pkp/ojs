@@ -1,12 +1,13 @@
 # Jordi LC <jordi.lacruz@uab.cat>, 2021.
 # Marc Bria <marc.bria@gmail.com>, 2023.
+# pep sanso <pep.sanso@uab.cat>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
 "PO-Revision-Date: 2023-04-26 10:30+0000\n"
-"Last-Translator: Marc Bria <marc.bria@gmail.com>\n"
+"Last-Translator: pep sanso <pep.sanso@uab.cat>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/admin/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -177,7 +178,7 @@ msgid "admin.scheduledTask.reviewReminder"
 msgstr "Recordatorio de revisión"
 
 msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
-msgstr "Issue ID no es un entero."
+msgstr "El ID del número (issue ID) no es un entero."
 
 msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
 msgstr "ID de galerada de número (Issue galley ID) no es un entero."
