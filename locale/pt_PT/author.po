@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2023-04-23 17:17+0000\n"
+"PO-Revision-Date: 2023-04-27 08:19+0000\n"
 "Last-Translator: Antónia Correia <antonia.correia@usdb.uminho.pt>\n"
 "Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
 "ojs/author/pt_PT/>\n"
@@ -45,16 +45,16 @@ msgid "author.submit.step1"
 msgstr "Passo 1. Iniciar submissão"
 
 msgid "author.submit.step2"
-msgstr "Passo 2. Adicionar o manuscrito"
+msgstr "Passo 2. Upload do manuscrito"
 
 msgid "author.submit.step3"
 msgstr "Passo 3. Preencher os metadados da submissão"
 
 msgid "author.submit.step4"
-msgstr "Passo 4. Adicionar os ficheiros suplementares"
+msgstr "Passo 4. Upload dos ficheiros suplementares"
 
 msgid "author.submit.step4a"
-msgstr "Passo 4a. Adicionar documento suplementar"
+msgstr "Passo 4a. Upload do documento suplementar"
 
 msgid "author.submit.step5"
 msgstr "Passo 5. Confirmação da submissão"
@@ -63,13 +63,13 @@ msgid "author.submit.start"
 msgstr "Início"
 
 msgid "author.submit.upload"
-msgstr "Adicionar o manuscrito"
+msgstr "Upload do manuscrito"
 
 msgid "author.submit.metadata"
 msgstr "Preencher metadados"
 
 msgid "author.submit.supplementaryFiles"
-msgstr "Adicionar ficheiros suplementares"
+msgstr "Upload de ficheiros suplementares"
 
 msgid "author.submit.nextSteps"
 msgstr "Próximos Passos"
@@ -104,7 +104,7 @@ msgid "author.submissions.queuedEditingProofread"
 msgstr "Em Edição: Leitura de provas solicitada"
 
 msgid "author.submissions.uploadCopyeditedVersion"
-msgstr "Transferir versão de Edição de Texto"
+msgstr "Upload da versão de Edição de Texto"
 
 msgid "author.submissions.proofreadingCorrections"
 msgstr "Correções da Leitura de Prova"
@@ -119,20 +119,23 @@ msgid "author.submissions.noSubmissions"
 msgstr "Nenhuma submissão."
 
 msgid "author.submit.journalSection"
-msgstr "Secção"
+msgstr "Secção de revista"
 
 msgid "author.submit.journalSectionDescription"
 msgstr "Escolha a secção apropriada para a submissão."
 
 msgid "author.submit.verifyChecklist"
-msgstr "Todas as condições devem ser cumpridas antes de poder continuar."
+msgstr ""
+"Antes de continuar, deve certificar-se que todos os pontos das condições da "
+"checklist de submissão estão cumpridos."
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
-"É obrigatório aceitar a Declaração de Direitos de Autor para continuar."
+"Tem que concordar com os termos da Declaração de Direitos de Autor antes de "
+"continuar."
 
 msgid "submission.submit.coverNote"
-msgstr "Comentários ao Editor"
+msgstr "Comentários para o Editor"
 
 msgid "author.submit.comments"
 msgstr "Insira o texto (opcional)"
@@ -142,14 +145,14 @@ msgstr "Selecione o idioma de submissão."
 
 msgid "author.submit.reorderInstructions"
 msgstr ""
-"Utilize as setas para alterar a ordem pela qual aparecerão os nomes dos "
-"autores na publicação."
+"Reordene os autores para que apareçam pela ordem em que serão listados na "
+"publicação."
 
 msgid "author.submit.reorder"
-msgstr "Reordenar nome do autor"
+msgstr "Reordene o nome do autor"
 
 msgid "author.submit.selectPrincipalContact"
-msgstr "Contacto principal para correspondência."
+msgstr "Contacto principal para correspondência editorial."
 
 msgid "author.submit.addAuthor"
 msgstr "Adicionar autor"
@@ -159,9 +162,8 @@ msgstr "Eliminar autor"
 
 msgid "author.submit.submissionIndexingDescription"
 msgstr ""
-"Insira os termos que descrevam da melhor maneira o conteúdo da submissão, "
-"segundo as categorias utilizadas pela revista e os exemplos oferecidos pelo "
-"editor. Separe os termos com ponto e vírgula (termo1; termo2; termo3)."
+"Forneça termos para indexar a submissão; separe os termos com um ponto e "
+"vírgula (termo1; termo2; termo3)."
 
 msgid "author.submit.coverageInstructions"
 msgstr ""
