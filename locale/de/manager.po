@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2023-04-26 10:05+0000\n"
+"PO-Revision-Date: 2023-04-26 14:01+0000\n"
 "Last-Translator: Pia Piontkowitz <pia.piontkowitz@rub.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/manager/de/>"
 "\n"
@@ -28,14 +28,10 @@ msgstr ""
 "Publikationsdatum der Ausgabe."
 
 msgid "manager.distribution.copyrightYearBasis.issue"
-msgstr ""
-"Ausgabe: das Standardjahr wird aus dem Veröffentlichungsdatum der Ausgabe "
-"abgeleitet"
+msgstr "Das Publikationsdatum der Ausgabe verwenden"
 
 msgid "manager.distribution.copyrightYearBasis.submission"
-msgstr ""
-"Artikel: das Standardjahr wird aus dem Veröffentlichungsjahr des Artikels "
-"abgeleitet, wie bei \"publish-as-you-go\"."
+msgstr "Das Publikationsdatum des Artikels verwenden"
 
 msgid "manager.distribution.publication"
 msgstr "Veröffentlichung"
@@ -97,7 +93,7 @@ msgstr "Formulare"
 msgid "manager.language.confirmDefaultSettingsOverwrite"
 msgstr ""
 "Dies wird alle Zeitschriften-Einstellungen, die Sie für diese "
-"Regionaleinstellung gewählt hatten, ersetzen."
+"Regionaleinstellung gewählt hatten, ersetzen"
 
 msgid "manager.languages.languageInstructions"
 msgstr ""
@@ -167,7 +163,7 @@ msgstr "Zahlungsoptionen"
 msgid "manager.payment.form.numeric"
 msgstr ""
 "Alle Kosten müssen durch positive Zahlenwerte ausgedrückt werden, "
-"Dezimalstellen sind möglich."
+"Dezimalstellen sind möglich"
 
 msgid "manager.payment.generalFees"
 msgstr "Allgemeine Gebühren"
@@ -289,7 +285,7 @@ msgid "manager.people.emailUsers.selectTemplate"
 msgstr "Eine Vorlage auswählen"
 
 msgid "manager.people.enrollExistingUser"
-msgstr "Eine/n bereits existierende/n Benutzer/in eintragen."
+msgstr "Eine/n bereits existierende/n Benutzer/in eintragen"
 
 msgid "manager.people.enrollSyncJournal"
 msgstr "Mit der Zeitschrift"
@@ -385,7 +381,7 @@ msgstr "Beiträge in dieser Rubrik kennzeichnen als"
 
 msgid "manager.sections.identifyTypeExamples"
 msgstr ""
-"(z.B. \"Begutachteter Artikel\", \"Nicht begutachteter Artikel\", \"Artikel "
+"(z.B. \"Begutachteter Artikel\", \"Nicht begutachteter Review\", \"Artikel "
 "auf Aufforderung\" usw.)"
 
 msgid "manager.sections.indexed"
@@ -407,10 +403,10 @@ msgid "manager.sections.reviewed"
 msgstr "Begutachtet (Peer Review)"
 
 msgid "manager.sections.submissionIndexing"
-msgstr "Wird nicht in den Index der Zeitschrift aufgenommen."
+msgstr "Wird nicht in den Index der Zeitschrift aufgenommen"
 
 msgid "manager.sections.submissionReview"
-msgstr "Es findet kein Peer Review statt."
+msgstr "Es findet kein Peer Review statt"
 
 msgid "manager.section.submissionsToThisSection"
 msgstr "Eingereichte Beiträge für diese Rubrik"
@@ -499,7 +495,7 @@ msgstr ""
 "Mitteilungsseite angezeigt werden."
 
 msgid "manager.setup.appearInAboutJournal"
-msgstr "(Erscheint unter \"Über uns\")"
+msgstr "(Erscheint unter \"Über uns\") "
 
 msgid "manager.setup.competingInterests.requireAuthors"
 msgstr ""
@@ -1197,7 +1193,7 @@ msgstr "Forschungsansatz, -methode oder -verfahren"
 msgid "manager.setup.typeProvideExamples"
 msgstr ""
 "Beispiele für im Fachgebiet relevante Forschungsansätze, -methoden oder -"
-"verfahren angeben."
+"verfahren angeben"
 
 msgid "manager.setup.uniqueIdentifier"
 msgstr "Eindeutige Kennung"
@@ -1743,7 +1739,7 @@ msgid "manager.subscriptions.notes"
 msgstr "Anmerkungen"
 
 msgid "manager.subscriptions.noneCreated"
-msgstr "Es wurde kein Abonnement erstellt."
+msgstr "Keine Abonnements"
 
 msgid "manager.subscriptions.selectContact"
 msgstr "Abonnement-Kontakt auswählen"
@@ -2149,7 +2145,7 @@ msgstr "Über Zeitschriften-Statistiken"
 msgid "stats.context.downloadReport.description"
 msgstr ""
 "Laden Sie eine CSV/Excel-Datei mit Nutzungsstatistiken für diese Zeitschrift "
-"herunter, die den folgenden Parametern entspricht."
+"herunter, die den folgenden Parametern entsprechen."
 
 msgid "stats.context.downloadReport.downloadContext.description"
 msgstr "Anzahl der Anzeigen der Zeitschriften-Startseite."
@@ -2178,11 +2174,11 @@ msgstr ""
 
 msgid "stats.issues.downloadReport.downloadIssues.description"
 msgstr ""
-"Anzahl der Inhaltsverzeichnis-Aufrufe und Ausgabefahnen-Downloads für "
-"einzelne Ausgaben."
+"Anzahl der Inhaltsverzeichnis-Aufrufe und Ausgabefahnen-Downloads für jede "
+"Ausgabe."
 
 msgid "stats.issues.downloadReport.downloadIssues"
-msgstr ""
+msgstr "Ausgaben herunterladen"
 
 msgid "stats.issues.countOfTotal"
 msgstr ""
@@ -2192,6 +2188,9 @@ msgstr ""
 
 msgid "stats.issues.tooltip.text"
 msgstr ""
+"<strong>Besuche</strong>: Anzahl der Besucher/innen des Inhaltsverzeichnis "
+"der Ausgabe.<br><strong>Downloads</strong>: Anzahl der Downloads der "
+"Ausgabenfahne (sofern eine existiert)."
 
 msgid "stats.publicationStats"
 msgstr "Artikelstatistik"
@@ -2221,12 +2220,14 @@ msgstr "Dateien"
 
 msgid "stats.publications.downloadReport.description"
 msgstr ""
+"Laden Sie eine CSV/Excel-Datei mit Nutzungsstatistiken für Artikel herunter, "
+"die den folgenden Parametern entspricht."
 
 msgid "stats.publications.downloadReport.downloadSubmissions"
-msgstr ""
+msgstr "Artikel herunterladen"
 
 msgid "stats.publications.downloadReport.downloadSubmissions.description"
-msgstr ""
+msgstr "Anzahl der Abstract-Besuche und Datei-Downloads für jeden Artikel."
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
@@ -2260,7 +2261,7 @@ msgid "emailTemplate.variable.context.contactName"
 msgstr "Der Name des Hauptkontakts der Zeitschrift"
 
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr ""
+msgstr "Zeitschriftenkürzel"
 
 msgid "emailTemplate.variable.context.contextSignature"
 msgstr "Die E-Mail-Signatur für automatische E-Mails der Zeitschrift"
@@ -2269,7 +2270,7 @@ msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Die E-Mail-Adresse des Hauptkontakts der Zeitschrift"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "Adresse der Zeitschrift"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Der Name der Bezahlungsart"
@@ -2284,49 +2285,52 @@ msgid "emailTemplate.variable.site.siteTitle"
 msgstr "Der Name der Website wenn mehr als eine Zeitschrift gehostet wird"
 
 msgid "emailTemplate.variable.subscription.subscriberDetails"
-msgstr ""
+msgstr "Abonnent/in-Name, -Affiliation, -Telefonnummer, und -E-Mail Adresse"
 
 msgid "emailTemplate.variable.subscription.subscriptionSignature"
-msgstr ""
+msgstr "Kontaktinformation des/der Abonnementverwalters/in"
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
-msgstr ""
+msgstr "URL zur Abonnement-Seite"
 
 msgid "emailTemplate.variable.subscription.expiryDate"
-msgstr ""
+msgstr "Datum, zu dem das Abonnement endet"
 
 msgid "emailTemplate.variable.subscription.subscriptionType"
-msgstr ""
+msgstr "Zusammenfassung des Typen, Namen, Laufzeit, und Kosten des Abonnements"
 
 msgid "emailTemplate.variable.subscription.membership"
-msgstr ""
+msgstr "Informationen über die Mitgliedschaft des/der Abonnenten/in"
 
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr ""
+msgstr "Name der abonnierenden Institution"
 
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr ""
+msgstr "Adresse der abonnierenden Institution"
 
 msgid "emailTemplate.variable.subscription.domain"
-msgstr ""
+msgstr "Domainname der gültigen IP-Adresse(n) für dieses Abonnement"
 
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr ""
+msgstr "Die gültigen IP ranges für dieses Abonnement"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "URL zu der Seite, auf der Autor/innen bezahlen können"
 
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "URL zu den Einreichungs-Guidelines"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "Link zur Statistikseite der veröffentlichten Artikel"
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "Ausgaben ID"
 
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
+"Diese E-Mail wird monatlich automatisch an Redakteur/innen und "
+"Zeitschriftenmanager/innen versandt, um ihnen einen Überblick über den "
+"Systemzustand zu geben."
 
 msgid "mailable.validateEmailContext.name"
 msgstr "E-Mail überprüfen (Zeitschrift Registrierung)"
@@ -2365,7 +2369,7 @@ msgid "doi.manager.settings.enableRepresentationDoi"
 msgstr "Fahnen"
 
 msgid "doi.manager.settings.galleysWithDescription"
-msgstr ""
+msgstr "Artikelfahnen, z.B. ein veröffentlichtes PDF"
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "DOI-Präfix"
@@ -2381,10 +2385,10 @@ msgstr ""
 "Jahrgangs, %i für die Nummer der Ausgabe, %Y für das Jahr, %a für die OJS-"
 "Artikel-ID, %g für die OJS-Fahnen-ID, %f für die OJS-Datei-ID, %p für die "
 "Seitenzahl und %x für die \"benutzerdefinierte Kennung\" (muss in Schritt "
-"4.3 der Zeitschrifteneinrichtung aktiviert werden)."
+"4.3 der Zeitschrifteneinrichtung aktiviert werden). "
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
-msgstr "vol%viss%ipp%p würde z.B. einen DOI 10.1234/vol3iss2pp230 erzeugen."
+msgstr "vol%viss%ipp%p würde z.B. einen DOI 10.1234/vol3iss2pp230 erzeugen"
 
 msgid "doi.manager.settings.doiSuffixPattern.issues"
 msgstr "für Ausgaben"
@@ -2576,12 +2580,15 @@ msgstr "Heft DOIs"
 
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr ""
+"Diese E-Mail benachrichtigt Autor/innen, dass ihre Einreichung vor der "
+"Begutachtung abgelehnt wird, da sie die Anforderungen für Veröffentlichungen "
+"in dieser Zeitschrift nicht erfüllt."
 
 msgid "manager.institutions.noContext"
-msgstr ""
+msgstr "Die Zeitschrift dieser Institution konnte nicht gefunden werden."
 
 msgid "mailable.subscriptionNotify.name"
-msgstr ""
+msgstr "Abonnementbenachrichtigung"
 
 msgid "mailable.subscriptionNotify.description"
 msgstr ""
@@ -2590,7 +2597,7 @@ msgstr ""
 "die URL der Zeitschrift und Zugriffsinformationen."
 
 msgid "mailable.subscriptionExpiresSoon.name"
-msgstr ""
+msgstr "Abonnement läuft bald aus"
 
 msgid "mailable.subscriptionExpiresSoon.description"
 msgstr ""
@@ -2599,7 +2606,7 @@ msgstr ""
 "Zugriffsinformationen."
 
 msgid "mailable.subscriptionExpired.name"
-msgstr ""
+msgstr "Abonnement abgelaufen"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
@@ -2608,7 +2615,7 @@ msgstr ""
 "Zugriffsinformationen."
 
 msgid "mailable.subscriptionExpiredLast.name"
-msgstr ""
+msgstr "Zuletzt abgelaufenes Abbonement"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
@@ -2617,7 +2624,7 @@ msgstr ""
 "Zugriffsinformationen."
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
-msgstr ""
+msgstr "Ein individuelles Abonnement kaufen"
 
 msgid "mailable.subscriptionPurchaseIndividual.description"
 msgstr ""
@@ -2627,7 +2634,7 @@ msgstr ""
 "das abgeschlossene Abonnement."
 
 msgid "mailable.subscriptionPurchaseInstitutional.name"
-msgstr ""
+msgstr "Ein institutionelles Abonnement kaufen"
 
 msgid "mailable.subscriptionPurchaseInstitutional.description"
 msgstr ""
@@ -2637,7 +2644,7 @@ msgstr ""
 "das abgeschlossene Abonnement."
 
 msgid "mailable.subscriptionRenewIndividual.name"
-msgstr ""
+msgstr "Individuelles Abonnement erneuern"
 
 msgid "mailable.subscriptionRenewIndividual.description"
 msgstr ""
@@ -2647,7 +2654,7 @@ msgstr ""
 "das erneuerte Abonnement."
 
 msgid "mailable.subscriptionRenewInstitutional.name"
-msgstr ""
+msgstr "Institutionelles Abonnement erneuern"
 
 msgid "mailable.subscriptionRenewInstitutional.description"
 msgstr ""
@@ -2657,7 +2664,7 @@ msgstr ""
 "das erneuerte Abonnement."
 
 msgid "mailable.openAccessNotify.name"
-msgstr ""
+msgstr "Open Access Benachrichtigung"
 
 msgid "mailable.openAccessNotify.description"
 msgstr ""
@@ -2665,31 +2672,41 @@ msgstr ""
 "haben, informiert zu werden, wenn eine Ausgabe frei verfügbar wird."
 
 msgid "mailable.issuePublishNotify.name"
-msgstr ""
+msgstr "Ausgabe veröffentlicht Benachrichtigung"
 
 msgid "mailable.issuePublishNotify.description"
 msgstr ""
+"Diese E-Mail wird automatisch an registrierte Nutzer/innen geschickt, wenn "
+"die neue Ausgabe veröffentlicht wird."
 
 msgid "manager.manageEmails.description"
 msgstr ""
+"Nachrichten bearbeiten, die in E-Mails von dieser Zeitschrift verschickt "
+"werden."
 
 msgid "mailable.layoutComplete.name"
-msgstr ""
+msgstr "Fahnen vollständig"
 
 msgid "mailable.publicationVersionNotify.name"
-msgstr ""
+msgstr "Neue Version kreiert"
 
 msgid "mailable.publicationVersionNotify.description"
 msgstr ""
+"Diese E-Mail benachrichtigt automatisch zugewiesene Redakteur/innen, wenn "
+"eine neue Version der Einreichung kreiert wird."
 
 msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
+"Diese E-Mail wird an Zeitschriftenmanager/innen geschickt, wenn ein neuer "
+"Beitrag eingereicht wurde und keine Redakteur/innen zugewiesen sind."
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "Zahlungsanfrage"
 
 msgid "mailable.paymentRequest.description"
 msgstr ""
+"Diese E-Mail wird automatisch an Autor/innen versandt wenn ihre Einreichung "
+"akzeptiert wird um die Zahlung der Publikationsgebühren anzufragen, ."
 
 #~ msgid "manager.setup.metadata.coverage"
 #~ msgstr "Themenbereich"
