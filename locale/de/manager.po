@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2023-04-26 09:58+0000\n"
+"PO-Revision-Date: 2023-04-26 10:05+0000\n"
 "Last-Translator: Jens Unkenholz <jens.unkenholz@uni-muenster.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/manager/de/>"
 "\n"
@@ -2138,13 +2138,13 @@ msgstr ""
 "Hauptkontakt senden."
 
 msgid "stats.contextStats"
-msgstr ""
+msgstr "Journal Statistiken"
 
 msgid "stats.context.tooltip.text"
-msgstr ""
+msgstr "Anzahl der Besucher/innen der Zeitschriften-Startseite."
 
 msgid "stats.context.tooltip.label"
-msgstr ""
+msgstr "Über Zeitschriften-Statistiken"
 
 msgid "stats.context.downloadReport.description"
 msgstr ""
@@ -2153,16 +2153,16 @@ msgid "stats.context.downloadReport.downloadContext.description"
 msgstr ""
 
 msgid "stats.context.downloadReport.downloadContext"
-msgstr ""
+msgstr "Download Journal"
 
 msgid "stats.issueStats"
-msgstr ""
+msgstr "Ausgabenstatistik"
 
 msgid "stats.issues.details"
-msgstr ""
+msgstr "Besuche und Downloads"
 
 msgid "stats.issues.searchIssueDescription"
-msgstr ""
+msgstr "Suchen nach Ausgabentitel, Band und Nummer"
 
 msgid "stats.issues.none"
 msgstr ""
@@ -2172,6 +2172,8 @@ msgstr ""
 
 msgid "stats.issues.downloadReport.downloadIssues.description"
 msgstr ""
+"Anzahl der Inhaltsverzeichnis-Aufrufe und Ausgabefahnen-Downloads für "
+"einzelne Ausgaben."
 
 msgid "stats.issues.downloadReport.downloadIssues"
 msgstr ""
