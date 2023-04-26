@@ -1,17 +1,18 @@
+# Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
-"PO-Revision-Date: 2021-03-08 12:03+0000\n"
-"Last-Translator: Aitor Renobales <aitor.renobales@ehu.eus>\n"
+"PO-Revision-Date: 2023-04-26 14:01+0000\n"
+"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/admin/eu/>\n"
-"Language: eu_ES\n"
+"Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "admin.hostedContexts"
 msgstr "Aldizkari ostatatuak"
@@ -104,19 +105,19 @@ msgid "admin.contexts.form.primaryLocaleNotSupported"
 msgstr ""
 
 msgid "admin.journals.enableJournalInstructions"
-msgstr "Gaitu aldizkari hau publikoki agertzeko gunean."
+msgstr "Gaitu aldizkari hau publikoki agertzeko gunean"
 
 msgid "admin.contexts.contextDescription"
 msgstr "Aldizkariaren azalpena"
 
 msgid "admin.journal.pathImportInstructions"
-msgstr "Lehendik dagoen aldizkariaren kokalekua edo berria (adib., \"ojs\")"
+msgstr "Lehendik dagoen aldizkariaren kokalekua edo berria (adib., \"ojs\")."
 
 msgid "admin.journals.importSubscriptions"
 msgstr "Inportatu harpidetzak"
 
 msgid "admin.journals.transcode"
-msgstr "Bihurtu artikuluen metadatuak ISO8859-1etik."
+msgstr "Bihurtu artikuluen metadatuak ISO8859-1etik"
 
 msgid "admin.journals.redirect"
 msgstr "Sortu kodea OJS1 URLak OJS 2 URLetara mapatzeko"
@@ -125,7 +126,7 @@ msgid "admin.journals.form.importPathRequired"
 msgstr "Inportatzeko bidea zehaztu behar da."
 
 msgid "admin.journals.importErrors"
-msgstr "Inportazioak huts egin du."
+msgstr "Inportazioak huts egin du"
 
 msgid "admin.mergeUsers"
 msgstr "Batu erabiltzaileak"
