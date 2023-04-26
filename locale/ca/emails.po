@@ -1,19 +1,20 @@
 # Jordi LC <jordi.lacruz@uab.cat>, 2022.
+# pep sanso <pep.sanso@uab.cat>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:18-08:00\n"
-"PO-Revision-Date: 2022-07-01 06:26+0000\n"
-"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
-"Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/emails/"
-"ca_ES/>\n"
-"Language: ca_ES\n"
+"PO-Revision-Date: 2023-04-26 14:01+0000\n"
+"Last-Translator: pep sanso <pep.sanso@uab.cat>\n"
+"Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/emails/ca/>"
+"\n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Confirmació per a la reinicialització de la contrasenya"
@@ -71,8 +72,19 @@ msgstr ""
 msgid "emails.userValidateSite.subject"
 msgstr "Valideu el vostre compte"
 
+#, fuzzy
 msgid "emails.userValidateSite.body"
 msgstr ""
+"{$recipientName}<br />\n"
+"<br />\n"
+"Heu creat un compte d'usuari/ària per a {$siteTitle}, però abans de poder-lo "
+"començar a utilitzar heu de validar el vostre compte de correu electrònic. "
+"Per fer-ho, seguiu l'enllaç següent:<br />\n"
+"<br />\n"
+"{$activateUrl}<br />\n"
+"<br />\n"
+"Gràcies,<br />\n"
+"{$siteSignature}"
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Registre com a revisor a {$contextName}"
@@ -102,7 +114,7 @@ msgstr ""
 
 #, fuzzy
 msgid "emails.issuePublishNotify.subject"
-msgstr "Hi ha un número nou disponible: {$issueIdentification}"
+msgstr "Hi ha un número nou disponible: {$issueIdentification} a {$contextName}"
 
 #, fuzzy
 msgid "emails.issuePublishNotify.body"
