@@ -1,15 +1,16 @@
+# Jordi LC <jordi.lacruz@uab.cat>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-06-12 22:00+0000\n"
+"PO-Revision-Date: 2023-04-28 14:09+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
-"Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/themes-"
-"default/ca_ES/>\n"
-"Language: ca_ES\n"
+"Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/ca/>\n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.default.name"
 msgstr "Tema predeterminat"
@@ -73,22 +74,22 @@ msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
 msgstr "Mostrar la imatge de la pàgina d'inici com a fons de la capçalera."
 
 msgid "plugins.themes.default.option.displayStats.label"
-msgstr ""
+msgstr "Opcions de visualització de les estadístiques d'ús"
 
 msgid "plugins.themes.default.option.displayStats.none"
-msgstr ""
+msgstr "No mostrar el gràfic d'estadístiques d'ús de tramesa al lector/a."
 
 msgid "plugins.themes.default.option.displayStats.bar"
-msgstr ""
+msgstr "Fer servir el gràfic de barres per mostrar les estadístiques d'ús."
 
 msgid "plugins.themes.default.option.displayStats.line"
-msgstr ""
+msgstr "Fer servir el gràfic de línies per mostrar les estadístiques d'ús."
 
 msgid "plugins.themes.default.displayStats.monthInitials"
-msgstr ""
+msgstr "Gen Febr Març Abr Maig Juny Jul Ag Set Oct Nov Des"
 
 msgid "plugins.themes.default.displayStats.downloads"
-msgstr ""
+msgstr "Descàrregues"
 
 msgid "plugins.themes.default.displayStats.noStats"
-msgstr ""
+msgstr "Les dades de descàrrega encara no estan disponibles."
