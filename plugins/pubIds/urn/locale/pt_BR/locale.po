@@ -1,11 +1,12 @@
 # Diego José Macêdo <diegojmacedo@gmail.com>, 2022.
+# Alex Mendonça <alex.mendonca@scielo.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:35-07:00\n"
-"PO-Revision-Date: 2022-08-05 21:04+0000\n"
-"Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
+"PO-Revision-Date: 2023-04-28 14:09+0000\n"
+"Last-Translator: Alex Mendonça <alex.mendonca@scielo.org>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "pubIds-urn/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -70,7 +71,7 @@ msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
 msgstr ""
 "Use o padrão digitado abaixo para gerar sufixos URN. Use %j para as iniciais "
 "da revista, %v para o número do volume, %i para o número da edição, %Y para "
-"o ano,  a para o ID do artigo do OJS, %g para o ID da composição final, %f "
+"o ano, %a para o ID do artigo do OJS, %g para o ID da composição final, %f "
 "para o ID do arquivo do OJS , %p para o número da página e %x para "
 "\"Identificador personalizado\"."
 
@@ -214,8 +215,7 @@ msgstr ""
 
 msgid "plugins.pubIds.urn.editor.assignURN.pattern"
 msgstr ""
-"O URN  {$pubId}  não pode ser atribuído porque contém um padrão não "
-"resolvido."
+"O URN {$pubId} não pode ser atribuído porque contém um padrão não resolvido."
 
 msgid "plugins.pubIds.urn.editor.assignURN.assigned"
 msgstr "O URN {$pubId} foi atribuído."
