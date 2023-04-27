@@ -532,16 +532,16 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
      * @see PubObjectsExportPlugin::addToSchema()
      *
      * @param string $hookName
+     * @param DAO $dao
+     * @param array $additionalFields
+     *
+     * @return false
      */
-    public function getAdditionalFieldNames($hookName, $args)
+    public function getAdditionalFieldNames($hookName, $dao, &$additionalFields)
     {
-        assert(count($args) == 2);
-        $additionalFields = & $args[1];
-        assert(is_array($additionalFields));
         foreach ($this->_getObjectAdditionalSettings() as $fieldName) {
             $additionalFields[] = $fieldName;
         }
-
         return false;
     }
 
