@@ -3,7 +3,7 @@
 # Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-04-27 08:19+0000\n"
+"PO-Revision-Date: 2023-04-28 14:09+0000\n"
 "Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "eu/>\n"
@@ -315,7 +315,7 @@ msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
-msgstr "Hautatu berrikuspen-fasera bidali behar diren fitxategiak."
+msgstr "Hautatu ebaluazio-fasera bidali behar diren fitxategiak."
 
 msgid "doi.submission.issueMissing.publication"
 msgstr ""
