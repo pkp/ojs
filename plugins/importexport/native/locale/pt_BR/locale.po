@@ -1,12 +1,13 @@
 # Felipe Geremia Nievinski <fgnievinski@gmail.com>, 2022.
 # Diego José Macêdo <diegojmacedo@gmail.com>, 2023.
+# Alex Mendonça <alex.mendonca@scielo.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:34-07:00\n"
-"PO-Revision-Date: 2023-02-02 21:32+0000\n"
-"Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
+"PO-Revision-Date: 2023-04-28 14:09+0000\n"
+"Last-Translator: Alex Mendonça <alex.mendonca@scielo.org>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-native/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -86,9 +87,9 @@ msgstr ""
 
 msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
 msgstr ""
-"O título da seção \"{$section1Title}\" e o título da seção  "
-"\"{$section2Title}\" da edição \"{$issueTitle}\" são compatíveis com edições "
-"diferentes existentes na revista."
+"O título da seção \"{$section1Title}\" e o título da seção \"{$section2Title}"
+"\" da edição \"{$issueTitle}\" são compatíveis com edições diferentes "
+"existentes na revista."
 
 msgid "plugins.importexport.native.import.error.sectionTitleMatch"
 msgstr ""
