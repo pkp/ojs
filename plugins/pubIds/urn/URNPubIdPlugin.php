@@ -23,7 +23,6 @@ use APP\plugins\pubIds\urn\classes\form\FieldTextUrn;
 use APP\publication\Publication;
 use APP\template\TemplateManager;
 use PKP\components\forms\FormComponent;
-use PKP\galley\Galley;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\RemoteActionConfirmationModal;
 use PKP\plugins\Hook;
@@ -42,16 +41,7 @@ class URNPubIdPlugin extends PubIdPlugin
             return $success;
         }
         if ($success && $this->getEnabled($mainContextId)) {
-            Hook::add('Publication::getProperties::summaryProperties', [$this, 'modifyObjectProperties']);
-            Hook::add('Publication::getProperties::fullProperties', [$this, 'modifyObjectProperties']);
-            Hook::add('Publication::getProperties::values', [$this, 'modifyObjectPropertyValues']);
             Hook::add('Publication::validate', [$this, 'validatePublicationUrn']);
-            Hook::add('Galley::getProperties::summaryProperties', [$this, 'modifyObjectProperties']);
-            Hook::add('Galley::getProperties::fullProperties', [$this, 'modifyObjectProperties']);
-            Hook::add('Galley::getProperties::values', [$this, 'modifyObjectPropertyValues']);
-            Hook::add('Issue::getProperties::summaryProperties', [$this, 'modifyObjectProperties']);
-            Hook::add('Issue::getProperties::fullProperties', [$this, 'modifyObjectProperties']);
-            Hook::add('Issue::getProperties::values', [$this, 'modifyObjectPropertyValues']);
             Hook::add('Form::config::before', [$this, 'addPublicationFormFields']);
             Hook::add('Form::config::before', [$this, 'addPublishFormNotice']);
             Hook::add('TemplateManager::display', [$this, 'loadUrnFieldComponent']);
@@ -253,7 +243,7 @@ class URNPubIdPlugin extends PubIdPlugin
     {
         return  [
             'Issue' => 'urnIssueSuffixPattern',
-            'Submission' => 'urnPublicationSuffixPattern',
+            'Publication' => 'urnPublicationSuffixPattern',
             'Representation' => 'urnRepresentationSuffixPattern',
         ];
     }
@@ -283,50 +273,15 @@ class URNPubIdPlugin extends PubIdPlugin
     }
 
     /**
-     * Add URN to submission, issue or galley properties
-     *
-     * @param string $hookName <Object>::getProperties::summaryProperties or
-     *  <Object>::getProperties::fullProperties
-     * @param array $args [
-     *
-     * 		@option $props array Existing properties
-     * 		@option $object Publication|Issue|Galley
-     * 		@option $args array Request args
-     * ]
+     * @copydoc PKPPubIdPlugin::getDAOs()
      */
-    public function modifyObjectProperties(string $hookName, array $args): void
+    public function getDAOs()
     {
-        $props = & $args[0];
-        $props[] = 'pub-id::other::urn';
-    }
-
-    /**
-     * Add URN submission, issue or galley values
-     *
-     * @param string $hookName <Object>::getProperties::values
-     * @param array $args [
-     *
-     * 		@option $values array Key/value store of property values
-     * 		@option $object Publication|Issue|Galley
-     * 		@option $props array Requested properties
-     * 		@option $args array Request args
-     * ]
-     */
-    public function modifyObjectPropertyValues(string $hookName, array $args): void
-    {
-        $values = & $args[0];
-        $object = $args[1];
-        $props = $args[2];
-
-        // URNs are already added to property values for Publications and Galleys
-        if ($object instanceof Publication || $object instanceof Galley) {
-            return;
-        }
-
-        if (in_array('pub-id::other::urn', $props)) {
-            $pubId = $this->getPubId($object);
-            $values['pub-id::other::urn'] = $pubId ? $pubId : null;
-        }
+        return  [
+            Repo::issue()->dao,
+            Repo::publication()->dao,
+            Application::getRepresentationDAO(),
+        ];
     }
 
     /**
