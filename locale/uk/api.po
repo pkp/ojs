@@ -1,11 +1,11 @@
 # IgorVeha <igor.veha@gmail.com>, 2022.
+# Petro Bilous <petrobilous@ukr.net>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-08-20 11:33+0000\n"
-"Last-Translator: IgorVeha <igor.veha@gmail.com>\n"
-"Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/ojs/api/uk_UA/"
-">\n"
-"Language: uk_UA\n"
+"PO-Revision-Date: 2023-04-28 14:09+0000\n"
+"Last-Translator: Petro Bilous <petrobilous@ukr.net>\n"
+"Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/ojs/api/uk/>\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -57,11 +57,10 @@ msgstr "Запитаний вами DOI не є частиною цього жу
 msgid "api.dois.400.noRegistrationAgencyConfigured"
 msgstr "Для цього журналу не налаштовано агентство реєстрації DOI."
 
-#, fuzzy
 msgid "api.dois.400.depositFailed"
 msgstr ""
-"Деякі предмети не були успішно депоновані. Будь ласка, перевірте окремі "
-"елементи на наявність в них конкретних повідомлень про помилки."
+"Деякі елементи не було успішно депоновано. Будь ласка, перевірте окремі "
+"елементи на наявність щодо них конкретних повідомлень про помилки."
 
 msgid "api.emailTemplates.403.notAllowedChangeContext"
 msgstr ""
@@ -81,4 +80,4 @@ msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr "Ви не можете асоціювати файл з цієї стадії файлу з гранкою."
 
 msgid "api.submission.400.inactiveSection"
-msgstr ""
+msgstr "Цей розділ більше не отримує подань."
