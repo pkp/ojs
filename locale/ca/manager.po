@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
-"PO-Revision-Date: 2023-04-20 10:37+0000\n"
+"PO-Revision-Date: 2023-04-28 14:09+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/manager/ca/>"
 "\n"
@@ -376,8 +376,8 @@ msgstr "Identifica els elements publicats en aquesta secció com a"
 
 msgid "manager.sections.identifyTypeExamples"
 msgstr ""
-"(Per exemple,  «Article avaluat per experts/ertes», «Ressenya de llibre "
-"sense revisió», «Comentari d'un lector», etc.)"
+"(Per exemple, \"Article avaluat per experts/ertes\", \"Ressenya de llibre "
+"sense revisió\", \"Comentari d'un convidat\", etc.)"
 
 msgid "manager.sections.indexed"
 msgstr "Elements indexats"
@@ -574,13 +574,10 @@ msgstr "Identificació per correu electrònic"
 msgid "manager.setup.emailSignature"
 msgstr "Signatura"
 
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
-"Les plantilles dels missatges de correu electrònic enviats pel sistema en "
-"nom de la revista tenen la signatura següent al final. Podeu editar el cos "
-"de la plantilla dels missatges de correu electrònic a la secció "
-"«Administració de la revista»."
+"Els correus electrònics enviats automàticament en nom de la revista tindran "
+"la següent signatura."
 
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Habilitar els avisos"
@@ -1077,15 +1074,10 @@ msgstr "Accés per als revisors/ores"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Accés per a revisors/ores en un clic"
 
-#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
-"<strong>Nota:</strong> La invitació per correu electrònic als revisors/ores "
-"conté un URL especial que dirigeix directament els revisors/ores convidats a "
-"la pàgina de revisió de la tramesa (amb accés a qualsevol altra pàgina que "
-"requereixi identificació). Per motius de seguretat, els editors/ores no "
-"poden modificar les adreces de correu electrònic ni afegir-ne als camps CC o "
-"CCO abans d’enviar les invitacions als revisors/ores."
+"Es pot enviar un enllaç segur als revisors/ores en el correu electrònic "
+"d'invitació, que els farà iniciar sessió automàticament quan el cliquin."
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr ""
@@ -1604,10 +1596,10 @@ msgid "manager.subscriptions.form.typeIdValid"
 msgstr "Seleccioneu un tipus de subscripció vàlid."
 
 msgid "manager.subscriptions.form.institution"
-msgstr ""
+msgstr "Institució"
 
 msgid "manager.subscriptions.form.institutionIdValid"
-msgstr ""
+msgstr "Seleccioneu una institució vàlida."
 
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Data d’inici"
@@ -1747,7 +1739,7 @@ msgstr ""
 "S'ha de crear un tipus de subscripció abans de poder fer noves subscripcions."
 
 msgid "manager.subscriptions.form.institutionRequired"
-msgstr ""
+msgstr "S'ha de crear una institució abans de fer una subscripció nova."
 
 msgid "manager.subscriptions.ipRange"
 msgstr "Interval IP"
@@ -2154,52 +2146,63 @@ msgstr ""
 "revista."
 
 msgid "stats.contextStats"
-msgstr ""
+msgstr "Estadístiques de la revista"
 
 msgid "stats.context.tooltip.text"
-msgstr ""
+msgstr "Nombre de visitants que visualitzen la pàgina d'inici de la revista."
 
 msgid "stats.context.tooltip.label"
-msgstr ""
+msgstr "Quant a les estadístiques de la revista"
 
 msgid "stats.context.downloadReport.description"
 msgstr ""
+"Descarregar un full de càlcul CSV/Excel amb les estadístiques d'ús d'aquesta "
+"revista que coincideixin amb els paràmetres següents."
 
 msgid "stats.context.downloadReport.downloadContext.description"
-msgstr ""
+msgstr "Nombre de visualitzacions de la pàgina d'inici de la revista."
 
 msgid "stats.context.downloadReport.downloadContext"
-msgstr ""
+msgstr "Descarregar revista"
 
 msgid "stats.issueStats"
-msgstr ""
+msgstr "Estadístiques del número"
 
 msgid "stats.issues.details"
-msgstr ""
+msgstr "Visualitzacions i descàrregues"
 
 msgid "stats.issues.searchIssueDescription"
-msgstr ""
+msgstr "Cercar per títol, volum i número"
 
 msgid "stats.issues.none"
 msgstr ""
+"No s'ha trobat cap número amb estadístiques d'ús que coincideixin amb "
+"aquests paràmetres."
 
 msgid "stats.issues.downloadReport.description"
 msgstr ""
+"Descarregar un full de càlcul CSV/Excel amb les estadístiques d'ús que "
+"coincideixin amb els paràmetres següents."
 
 msgid "stats.issues.downloadReport.downloadIssues.description"
 msgstr ""
+"Número de visualitzacions del sumari i de les descàrregues de les galerades "
+"de cada número."
 
 msgid "stats.issues.downloadReport.downloadIssues"
-msgstr ""
+msgstr "Descarregar números"
 
 msgid "stats.issues.countOfTotal"
-msgstr ""
+msgstr "{$count} de {$total} números"
 
 msgid "stats.issues.tooltip.label"
-msgstr ""
+msgstr "Quant a les estadístiques del número"
 
 msgid "stats.issues.tooltip.text"
 msgstr ""
+"<strong>Visualitzacions</strong>: número de visitants que visualitzen el "
+"sumari del número.<br><strong>Descàrregues</strong>: número de descàrregues "
+"de la galerada del número, si n'hi ha."
 
 msgid "stats.publicationStats"
 msgstr "Estadístiques de l'article"
@@ -2229,12 +2232,15 @@ msgstr "Arxius"
 
 msgid "stats.publications.downloadReport.description"
 msgstr ""
+"Descarregar un full de càlcul CSV/Excel amb les estadístiques d'ús dels "
+"articles que coincideixin amb els paràmetres següents."
 
 msgid "stats.publications.downloadReport.downloadSubmissions"
-msgstr ""
+msgstr "Descarregar articles"
 
 msgid "stats.publications.downloadReport.downloadSubmissions.description"
 msgstr ""
+"Número de visualitzacions del resum i descàrregues d'arxiu de cada article."
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
@@ -2267,7 +2273,7 @@ msgid "emailTemplate.variable.context.contactName"
 msgstr "El nom del contacte principal de la revista"
 
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr ""
+msgstr "Inicials de la revista"
 
 msgid "emailTemplate.variable.context.contextSignature"
 msgstr "La signatura per als correus electrònics automatitzats de la revista"
@@ -2276,7 +2282,7 @@ msgid "emailTemplate.variable.context.contactEmail"
 msgstr "L'adreça de correu electrònic del contacte principal de la revista"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "Adreça postal de la revista"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "El nom del tipus de pagament"
@@ -2310,31 +2316,33 @@ msgid "emailTemplate.variable.subscription.membership"
 msgstr "Informació sobre l'abonament del subscriptor/a"
 
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr ""
+msgstr "Nom de la institució subscriptora"
 
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr ""
+msgstr "Correu electrònic de la institució subscriptora"
 
 msgid "emailTemplate.variable.subscription.domain"
-msgstr ""
+msgstr "Nom del domini de les adreces IP vàlides d'aquesta subscripció"
 
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr ""
+msgstr "Rangs d'IP vàlids d'aquesta subscripció"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "URL de la pàgina en què l'autor/a pot fer el pagament"
 
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "URL de les directrius de tramesa"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "Enllaç a la pàgina d'estadístiques d'articles publicats"
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "ID del número"
 
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
+"Aquest correu electrònic s'envia mensualment a editors/ores i administradors/"
+"ores de la revista per oferir-los una visió general de la salut del sistema."
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Validar el correu electrònic (registre a la revista)"
@@ -2580,10 +2588,10 @@ msgstr ""
 "requisits de publicació de la revista."
 
 msgid "manager.institutions.noContext"
-msgstr ""
+msgstr "No s'ha pogut trobar la revista d'aquesta institució."
 
 msgid "mailable.subscriptionNotify.name"
-msgstr ""
+msgstr "Notificació de subscripció"
 
 msgid "mailable.subscriptionNotify.description"
 msgstr ""
@@ -2592,7 +2600,7 @@ msgstr ""
 "també instruccions per a accedir-hi."
 
 msgid "mailable.subscriptionExpiresSoon.name"
-msgstr ""
+msgstr "La subscripció caduca aviat"
 
 msgid "mailable.subscriptionExpiresSoon.description"
 msgstr ""
@@ -2601,7 +2609,7 @@ msgstr ""
 "instruccions per a accedir-hi."
 
 msgid "mailable.subscriptionExpired.name"
-msgstr ""
+msgstr "Subscripció caducada"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
@@ -2610,7 +2618,7 @@ msgstr ""
 "per a accedir-hi."
 
 msgid "mailable.subscriptionExpiredLast.name"
-msgstr ""
+msgstr "Última subscripció caducada"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
@@ -2619,7 +2627,7 @@ msgstr ""
 "per a accedir-hi."
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
-msgstr ""
+msgstr "Adquirir subscripció individual"
 
 msgid "mailable.subscriptionPurchaseIndividual.description"
 msgstr ""
@@ -2629,17 +2637,17 @@ msgstr ""
 "subscripció adquirida."
 
 msgid "mailable.subscriptionPurchaseInstitutional.name"
-msgstr ""
+msgstr "Adquirir subscripció institucional"
 
 msgid "mailable.subscriptionPurchaseInstitutional.description"
 msgstr ""
 "Aquest correu electrònic notifica a l'administrador/a de subscripcions que "
 "s'ha adquirit una subscripció institucional en línia. El correu proporciona "
-"un resum de la informació sobre la subscripció i un enllaç d'accés ràpid a  "
+"un resum de la informació sobre la subscripció i un enllaç d'accés ràpid a "
 "la subscripció adquirida."
 
 msgid "mailable.subscriptionRenewIndividual.name"
-msgstr ""
+msgstr "Renovar subscripció individual"
 
 msgid "mailable.subscriptionRenewIndividual.description"
 msgstr ""
@@ -2649,7 +2657,7 @@ msgstr ""
 "subscripció renovada."
 
 msgid "mailable.subscriptionRenewInstitutional.name"
-msgstr ""
+msgstr "Renovar subscripció institucional"
 
 msgid "mailable.subscriptionRenewInstitutional.description"
 msgstr ""
@@ -2659,7 +2667,7 @@ msgstr ""
 "subscripció renovada."
 
 msgid "mailable.openAccessNotify.name"
-msgstr ""
+msgstr "Notificació d'accés obert"
 
 msgid "mailable.openAccessNotify.description"
 msgstr ""
@@ -2668,31 +2676,39 @@ msgstr ""
 "format d'accés obert."
 
 msgid "mailable.issuePublishNotify.name"
-msgstr ""
+msgstr "Notificació de número publicat"
 
 msgid "mailable.issuePublishNotify.description"
 msgstr ""
+"Aquest correu electrònic s'envia automàticament als usuaris/àries registrats "
+"quan es publica un número nou."
 
 msgid "manager.manageEmails.description"
-msgstr ""
+msgstr "Editar els missatges enviats per correu electrònic des de la revista."
 
 msgid "mailable.layoutComplete.name"
-msgstr ""
+msgstr "Galerades completes"
 
 msgid "mailable.publicationVersionNotify.name"
-msgstr ""
+msgstr "Nova versió creada"
 
 msgid "mailable.publicationVersionNotify.description"
 msgstr ""
+"Aquest correu electrònic notifica automàticament als editors/ores que s'ha "
+"creat una versió nova de la tramesa."
 
 msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
+"Aquest correu electrònic s'envia als gestors/ores de la revista quan es fa "
+"una tramesa nova i no hi ha editors/ores assignats."
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "Sol·licitud de pagament"
 
 msgid "mailable.paymentRequest.description"
 msgstr ""
+"Aquest correu electrònic automàtic s'envia a l'autor/a per demanar-li el "
+"pagament de la taxa de publicació quan la seva tramesa s'accepta."
 
 #~ msgid "manager.setup.metadata.coverage"
 #~ msgstr "Cobertura"
@@ -2780,3 +2796,16 @@ msgstr ""
 
 #~ msgid "doi.manager.settings.enablePublicationDoi"
 #~ msgstr "Articles"
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "No s'ha pogut importar la galerada del número, en falta l'arxiu."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"No s'ha pogut exportar la galerada del número {$id}, no se n'ha pogut trobar "
+"l'arxiu en la ruta \"{$path}\"."
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"No s'ha exportat la imatge de coberta del número {$id}, no se n'ha trobat "
+"l'arxiu en la ruta \"{$path}\"."
