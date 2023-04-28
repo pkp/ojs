@@ -1,12 +1,12 @@
-# Jordi LC <jordi.lacruz@uab.cat>, 2022.
+# Jordi LC <jordi.lacruz@uab.cat>, 2022, 2023.
 # pep sanso <pep.sanso@uab.cat>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2023-04-26 14:01+0000\n"
-"Last-Translator: pep sanso <pep.sanso@uab.cat>\n"
+"PO-Revision-Date: 2023-04-28 14:09+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/admin/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
@@ -178,15 +178,12 @@ msgstr "Notificació d'accés obert"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Recordatori de revisió"
 
-#, fuzzy
 msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
 msgstr "ID del número (issue ID) no és un enter."
 
-#, fuzzy
 msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
 msgstr "ID de galerada de número (Issue galley ID) no és un enter."
 
-#, fuzzy
 msgid ""
 "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
 msgstr "ID de número (Issue ID) no coincideix amb assoc ID."
@@ -229,27 +226,25 @@ msgstr ""
 "Afegiu, editeu o elimineu revistes i gestioneu la configuració de tot el "
 "lloc."
 
-#, fuzzy
 msgid "admin.settings.statistics.geo.description"
 msgstr ""
-"Seleccioni el tipus d'estadístiques d'ús geogràfic que poden recopilar les "
+"Seleccioneu el tipus d'estadístiques d'ús geogràfic que poden recopilar les "
 "revistes d'aquest lloc. Unes estadístiques geogràfiques més detallades poden "
 "augmentar considerablement la grandària de la seva base de dades i, en "
-"alguns casos excepcionals, poden soscavar l'anonimat dels seus visitants. "
-"Cada revista pot configurar aquesta opció de manera diferent, però una "
-"revista mai pot recopilar registres més detallats que els que es configuren "
-"aquí. Per exemple, si el lloc només admet el país i la regió, la revista pot "
+"alguns casos excepcionals, poden soscavar l'anonimat dels visitants. Cada "
+"revista pot configurar aquesta opció de manera diferent, però una revista "
+"mai pot recopilar registres més detallats que els que es configurin aquí. "
+"Per exemple, si el lloc només admet el país i la regió, la revista pot "
 "seleccionar el país i la regió o només el país. La revista no podrà "
 "realitzar un seguiment del país, la regió i la ciutat."
 
-#, fuzzy
 msgid "admin.settings.statistics.institutions.description"
 msgstr ""
-"Habiliti les estadístiques institucionals si vol que les revistes d'aquest "
-"lloc puguin recopilar estadístiques d'ús per institució. Les revistes hauran "
-"d'agregar la institució i els seus rangs d'IP per utilitzar aquesta funció. "
-"Habilitar les estadístiques institucionals pot augmentar considerablement la "
-"grandària de la seva base de dades."
+"Habiliteu les estadístiques institucionals si voleu que les revistes "
+"d'aquest lloc puguin recopilar estadístiques d'ús per institució. Les "
+"revistes hauran d'afegir la institució i els seus rangs d'IP per utilitzar "
+"aquesta funció. Habilitar les estadístiques institucionals pot augmentar "
+"considerablement la grandària de la seva base de dades."
 
 #, fuzzy
 msgid "admin.settings.statistics.sushi.public.description"
