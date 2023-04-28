@@ -1,4 +1,4 @@
-# Jordi LC <jordi.lacruz@uab.cat>, 2022.
+# Jordi LC <jordi.lacruz@uab.cat>, 2022, 2023.
 # pep sanso <pep.sanso@uab.cat>, 2023.
 msgid ""
 msgstr ""
@@ -6,7 +6,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:18-08:00\n"
 "PO-Revision-Date: 2023-04-28 14:09+0000\n"
-"Last-Translator: pep sanso <pep.sanso@uab.cat>\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/emails/ca/>"
 "\n"
 "Language: ca\n"
@@ -189,9 +189,8 @@ msgstr ""
 "p><p>Gràcies per considerar aquesta sol·licitud. Apreciem molt la seva "
 "ajuda.</p><p>Atentament,</p>{$signature}"
 
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
-msgstr "Recordatori de sol·licitud de revisió d'un article"
+msgstr "Podreu fer-vos càrrec de la revisió?"
 
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
@@ -311,7 +310,7 @@ msgstr ""
 "gràcies i salutacions cordials,</p>{$contextSignature}"
 
 msgid "emails.editorDecisionAccept.subject"
-msgstr "La vostra tramesa ha estat acceptada a {$contextName}"
+msgstr "La vostra tramesa a {$contextName} ha estat acceptada"
 
 #, fuzzy
 msgid "emails.editorDecisionAccept.body"
