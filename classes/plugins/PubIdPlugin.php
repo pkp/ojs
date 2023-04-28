@@ -54,7 +54,8 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
     }
 
     /**
-     * Handles pubId assignment for any submission, galley, or issue pubIds
+     * Handles pubId assignment for any publication, galley, or issue pubIds
+     * (usen on the plugin setting page, called in the plugin manage function)
      */
     protected function assignPubIds($request, $context): JSONMessage
     {
@@ -62,7 +63,7 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
         $suffixGenerationStrategy = $this->getSetting($context->getId(), $suffixFieldName);
         if ($suffixGenerationStrategy != 'customId') {
             $issueEnabled = $this->isObjectTypeEnabled('Issue', $context->getId());
-            $submissionEnabled = $this->isObjectTypeEnabled('Publication', $context->getId());
+            $publicationEnabled = $this->isObjectTypeEnabled('Publication', $context->getId());
             $representationEnabled = $this->isObjectTypeEnabled('Representation', $context->getId());
             if ($issueEnabled) {
                 $issues = Repo::issue()->getCollector()
@@ -78,7 +79,7 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
                     }
                 }
             }
-            if ($submissionEnabled || $representationEnabled) {
+            if ($publicationEnabled || $representationEnabled) {
                 $representationDao = Application::getRepresentationDAO();
                 $submissions = Repo::submission()->getCollector()
                     ->filterByContextIds([$context->getId()])
@@ -87,7 +88,7 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
 
                 foreach ($submissions as $submission) {
                     $publications = $submission->getData('publications');
-                    if ($submissionEnabled) {
+                    if ($publicationEnabled) {
                         foreach ($publications as $publication) {
                             $publicationPubId = $publication->getStoredPubId($this->getPubIdType());
                             if (empty($publicationPubId)) {
@@ -134,7 +135,7 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
     public function getPubObjectTypes()
     {
         $pubObjectTypes = parent::getPubObjectTypes();
-        $pubObjectTypes['Issue'] = '\Issue'; // FIXME: Add namespacing
+        $pubObjectTypes['Issue'] = 'APP\issue\Issue';
         return $pubObjectTypes;
     }
 
@@ -156,7 +157,12 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
     }
 
     /**
-     * @copydoc PKPPubIdPlugin::getPubId()
+     * Get the public identifier.
+     *
+     * @param object $pubObject
+     * 	Publication, Representation, SubmissionFile, Issue
+     *
+     * @return string
      */
     public function getPubId($pubObject)
     {
@@ -174,7 +180,9 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
 
         // Initialize variables for publication objects.
         $issue = ($pubObjectType == 'Issue' ? $pubObject : null);
-        $submission = ($pubObjectType == 'Submission' ? $pubObject : null);
+        $submission = null;
+        // Publication is actually handled differently now, but keep it here however for now.
+        $publication = ($pubObjectType == 'Publication' ? $pubObject : null);
         $representation = ($pubObjectType == 'Representation' ? $pubObject : null);
         $submissionFile = ($pubObjectType == 'SubmissionFile' ? $pubObject : null);
 
@@ -346,10 +354,10 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
      */
     public function clearIssueObjectsPubIds($issue)
     {
-        $submissionPubIdEnabled = $this->isObjectTypeEnabled('Publication', $issue->getJournalId());
+        $publicationPubIdEnabled = $this->isObjectTypeEnabled('Publication', $issue->getJournalId());
         $representationPubIdEnabled = $this->isObjectTypeEnabled('Representation', $issue->getJournalId());
         $filePubIdEnabled = $this->isObjectTypeEnabled('SubmissionFile', $issue->getJournalId());
-        if (!$submissionPubIdEnabled && !$representationPubIdEnabled && !$filePubIdEnabled) {
+        if (!$publicationPubIdEnabled && !$representationPubIdEnabled && !$filePubIdEnabled) {
             return false;
         }
 
@@ -363,7 +371,7 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
 
         foreach ($submissionIds as $submissionId) {
             $submission = Repo::submission()->get($submissionId);
-            if ($submissionPubIdEnabled) { // Does this option have to be enabled here for?
+            if ($publicationPubIdEnabled) { // Does this option have to be enabled here for?
                 foreach ($submission->getData('publications') as $publication) {
                     Repo::publication()->dao->deletePubId($publication->getId(), $pubIdType);
                 }
