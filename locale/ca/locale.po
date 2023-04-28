@@ -1,12 +1,12 @@
-# Jordi LC <jordi.lacruz@uab.cat>, 2021, 2022.
+# Jordi LC <jordi.lacruz@uab.cat>, 2021, 2022, 2023.
 # pep sanso <pep.sanso@uab.cat>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:17+00:00\n"
-"PO-Revision-Date: 2023-04-28 14:09+0000\n"
-"Last-Translator: pep sanso <pep.sanso@uab.cat>\n"
+"PO-Revision-Date: 2023-04-29 14:49+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/locale/ca/>"
 "\n"
 "Language: ca\n"
@@ -533,13 +533,11 @@ msgstr ""
 "No s'ha pogut crear el DOI per al següent número: {$itemTitle}. No existeix "
 "en el context de la revista actual."
 
-#, fuzzy
 msgid "doi.issue.incorrectStaleStatus"
 msgstr ""
 "No s'ha pogut establir l'estat del DOI com a obsolet del número següent "
 "{$itemTitle}. El DOI ha de tenir l'estat \"Registrat\" o \"Enviat\"."
 
-#, fuzzy
 msgid "doi.issue.notPublished"
 msgstr ""
 "No s'ha pogut marcar el DOI registrat per a {$pubObjectTitle}. El número ha "
