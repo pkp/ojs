@@ -15,6 +15,7 @@
 namespace APP\plugins\generic\recommendBySimilarity;
 
 use APP\core\Application;
+use APP\handler\Handler;
 use APP\search\ArticleSearch;
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
