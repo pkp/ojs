@@ -1,14 +1,15 @@
 # IgorVeha <igor.veha@gmail.com>, 2022.
+# Petro Bilous <petrobilous@ukr.net>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:44+00:00\n"
-"PO-Revision-Date: 2022-08-20 11:32+0000\n"
-"Last-Translator: IgorVeha <igor.veha@gmail.com>\n"
+"PO-Revision-Date: 2023-04-29 14:49+0000\n"
+"Last-Translator: Petro Bilous <petrobilous@ukr.net>\n"
 "Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/ojs/"
-"importexport-native/uk_UA/>\n"
-"Language: uk_UA\n"
+"importexport-native/uk/>\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -17,10 +18,10 @@ msgstr ""
 "X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.importexport.native.displayName"
-msgstr "Модуль \"Власний XML\""
+msgstr "Плагін власного XML"
 
 msgid "plugins.importexport.native.description"
-msgstr "Імпортує та експортує статті та випуски у власний XML-формат OJS."
+msgstr "Імпортувати й експортувати статті та випуски у власний XML-формат OJS."
 
 msgid "plugins.importexport.native.import"
 msgstr "Імпорт"
@@ -29,7 +30,7 @@ msgid "plugins.importexport.native.import.instructions"
 msgstr "Завантажити файл з XMLдля імпорту"
 
 msgid "plugins.importexport.native.exportSubmissionsSelect"
-msgstr "Оберіть статті для експорту"
+msgstr "Виберіть статті для експорту"
 
 msgid "plugins.importexport.native.exportSubmissions"
 msgstr "Експортувати статті"
@@ -38,7 +39,7 @@ msgid "plugins.importexport.native.exportIssues"
 msgstr "Експортувати випуски"
 
 msgid "plugins.importexport.native.results"
-msgstr "Імпорт результатів"
+msgstr "Імпортувати результати"
 
 msgid "plugins.inportexport.native.uploadFile"
 msgstr "Будь ласка, завантажте файл у розділ \"Імпортувати\" щоб продовжити."
@@ -76,9 +77,10 @@ msgstr ""
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Невідомий розділ {$param}"
 
-#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
-msgstr "Вказаний користувач, \"{$userName}\", не існує."
+msgstr ""
+"Користувач повинен бути вказаний за допомогою параметра команди --user_name "
+"або -u."
 
 msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
 msgstr "Назва розділу \"{$section1Title}\" та назва розділу \"{$section2Title}\" у випуску \"{$issueTitle}\" співпадають з різними існуючими розідлами журналу."
