@@ -97,7 +97,7 @@ class ManualPaymentPlugin extends PaymethodPlugin
             'label' => __('plugins.paymethod.manual.displayName'),
             'showWhen' => 'paymentsEnabled',
         ])
-            ->addField(new \PKP\components\forms\FieldTextArea('manualInstructions', [
+            ->addField(new \PKP\components\forms\FieldTextarea('manualInstructions', [
                 'label' => __('plugins.paymethod.manual.settings'),
                 'value' => $this->getSetting($context->getId(), 'manualInstructions'),
                 'groupId' => 'manualPayment',

@@ -74,7 +74,7 @@ class DRIVERPlugin extends GenericPlugin
     public function sets($hookName, $params)
     {
         $sets = & $params[5];
-        array_push($sets, new \PKP\OAI\OAISet('driver', 'Open Access DRIVERset', ''));
+        array_push($sets, new \PKP\oai\OAISet('driver', 'Open Access DRIVERset', ''));
         return false;
     }
 
