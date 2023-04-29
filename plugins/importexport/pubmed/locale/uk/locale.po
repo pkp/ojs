@@ -1,36 +1,42 @@
+# Petro Bilous <petrobilous@ukr.net>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:46+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:05:46+00:00\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: \n"
+"PO-Revision-Date: 2023-04-29 14:49+0000\n"
+"Last-Translator: Petro Bilous <petrobilous@ukr.net>\n"
+"Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-pubmed/uk/>\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.importexport.pubmed.displayName"
-msgstr "Модуль експорту у PubMed XML"
+msgstr "Плагін експорту XML PubMed"
 
 msgid "plugins.importexport.pubmed.description"
-msgstr "Експорт метаданих статей у формат PubMed XML для індексації у MEDLINE."
+msgstr ""
+"Експортувати метадані статті у формат XML PubMed для індексації в MEDLINE."
 
 msgid "plugins.importexport.pubmed.export"
-msgstr "Експорт даних"
+msgstr "Експортувати дані"
 
 msgid "plugins.importexport.pubmed.export.issues"
-msgstr "Експорт випусків"
+msgstr "Експортувати випуски"
 
 msgid "plugins.importexport.pubmed.export.selectIssue"
-msgstr "Оберіть випуск для експорту."
+msgstr "Обрати випуск для експортування."
 
 msgid "plugins.importexport.pubmed.export.articles"
-msgstr "Експорт статей"
+msgstr "Експортувати статті"
 
 msgid "plugins.importexport.pubmed.export.selectArticle"
-msgstr "Оберіть статті для експорту."
+msgstr "Обрати статті для експортування."
 
 msgid "plugins.importexport.pubmed.cliUsage"
 msgstr ""
@@ -43,7 +49,7 @@ msgid "plugins.importexport.pubmed.cliError"
 msgstr "ПОМИЛКА:"
 
 msgid "plugins.importexport.pubmed.export.error.issueNotFound"
-msgstr "Не існує випуску з вказаним ідентифікатором \"{$issueId}\"."
+msgstr "Жоден випуск не збігається з указаним ID випуску \"{$issueId}\"."
 
 msgid "plugins.importexport.pubmed.export.error.articleNotFound"
-msgstr "Не існує статті з вказаним ідентифікатором \"{$articleId}\"."
+msgstr "Жодна стаття не відповідала вказаному ID статті \"{$articleId}\"."
