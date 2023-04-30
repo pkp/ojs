@@ -1,8 +1,129 @@
 # Jens Unkenholz <jens.unkenholz@uni-muenster.de>, 2023.
+# Pia Piontkowitz <pia.piontkowitz@rub.de>, 2023.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-05-01 18:49+0000\n"
+"Last-Translator: Pia Piontkowitz <pia.piontkowitz@rub.de>\n"
+"Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/emails/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "emails.passwordResetConfirm.subject"
+msgstr "Bestätigung der Passwortzurücksetzung"
+
+msgid "emails.userRegister.subject"
+msgstr "Registrierung bei der Zeitschrift"
+
+msgid "emails.userValidateSite.subject"
+msgstr "Account validieren"
+
+msgid "emails.reviewerRegister.subject"
+msgstr "Registrierung als Benutzer/in bei {$contextName}"
+
+msgid "emails.issuePublishNotify.subject"
+msgstr "Gerade veröffentlicht: {$issueIdentification} von {$contextName}"
+
+msgid "emails.editorAssign.subject"
+msgstr ""
+"Sie wurden als Redakteur/in von einer Einreichung bei {$contextName} "
+"zugewiesen"
+
+msgid "emails.reviewRequest.subject"
+msgstr "Einladung zur Begutachtung"
+
+msgid "emails.reviewResponseOverdueAuto.subject"
+msgstr "Können Sie den Beitrag für uns begutachten?"
+
+msgid "emails.reviewRequestSubsequent.subject"
+msgstr "Anfrage zur Begutachtung einer überarbeiteten Einreichung"
+
+msgid "emails.reviewReinstate.subject"
+msgstr "Können Sie weiterhin einen Beitrag für {$contextName} begutachten?"
+
+msgid "emails.reviewDecline.subject"
+msgstr "Nicht in der Lage zu begutachten"
+
+msgid "emails.reviewCancel.subject"
+msgstr "Anfrage zur Begutachtung zurückgezogen"
+
+msgid "emails.reviewRemind.subject"
+msgstr "Eine Erinnerung, Ihr Gutachten bitte abzuschließen"
+
+msgid "emails.reviewRemindAuto.subject"
+msgstr "Eine Erinnerung, Ihr Gutachten bitte abzuschließen"
+
+msgid "emails.editorDecisionAccept.subject"
+msgstr "Ihre Einreichung wurde bei {$contextName} angenommen"
+
+msgid "emails.editorDecisionSkipReview.subject"
+msgstr "Ihre Einreichung wurde in das Lektorat geschickt"
+
+msgid "emails.layoutRequest.subject"
+msgstr ""
+"Die Einreichung {$submissionId} ist bereit für die Produktion bei "
+"{$contextAcronym}"
+
+msgid "emails.layoutComplete.subject"
+msgstr "Fahnen vollständig"
+
+msgid "emails.emailLink.subject"
+msgstr "Möglicherweise interessanter Artikel"
+
+msgid "emails.subscriptionNotify.subject"
+msgstr "Benachrichtigung zu einem Abonnement"
+
+msgid "emails.subscriptionAfterExpiry.subject"
+msgstr "Abonnement abgelaufen"
+
+msgid "emails.subscriptionPurchaseIndl.subject"
+msgstr "Abonnementkauf: Individuell"
+
+msgid "emails.subscriptionPurchaseInstl.subject"
+msgstr "Abonnementkauf: Institutionell"
+
+msgid "emails.subscriptionRenewIndl.subject"
+msgstr "Abonnementerneuerung: Individuell"
+
+msgid "emails.subscriptionRenewInstl.subject"
+msgstr "Abonnementerneuerung: Institutionell"
+
+msgid "emails.citationEditorAuthorQuery.subject"
+msgstr "Zitationsbearbeitung"
+
+msgid "emails.revisedVersionNotify.subject"
+msgstr "Überarbeitete Version hochgeladen"
+
+msgid "emails.statisticsReportNotification.subject"
+msgstr "Redaktionelle Aktivitäten für {$month}, {$year}"
+
+msgid "emails.announcement.subject"
+msgstr "{$announcementTitle}"
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr "Benachrichtigung über eine Zahlungsanforderung"
+
+msgid "emails.paymentRequestNotification.footer"
+msgstr ""
+"<br><br>—<br>Dies ist eine automatisierte Nachricht von <a href=\""
+"{$contextUrl}\">{$contextName}</a>."
+
+msgid "emails.userValidateContext.subject"
+msgstr "Account validieren"
+
+msgid "emails.emailLink.description"
+msgstr ""
+"Diese E-Mail-Vorlage bietet registrierten Leser/innen die Möglichkeit, "
+"Informationen über einen Artikel an eine interessierte Person zu senden. Sie "
+"ist über die Reading Tools verfügbar und muss von dem/der "
+"Zeitschriftenmanager/in auf der Verwaltungsseite der Reading Tools aktiviert "
+"werden."
+
+msgid "emails.subscriptionBeforeExpiry.subject"
+msgstr "Benachrichtigung über das Ablaufen eines Abonnements"
+
+msgid "emails.subscriptionAfterExpiryLast.subject"
+msgstr "Abonnement abgelaufen - Letzte Erinnerung"
