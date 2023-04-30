@@ -1,14 +1,14 @@
-# Pavel Pisklakov <ppv1979@mail.ru>, 2021, 2022.
+# Pavel Pisklakov <ppv1979@mail.ru>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:31+00:00\n"
-"PO-Revision-Date: 2022-11-16 18:02+0000\n"
+"PO-Revision-Date: 2023-05-01 18:49+0000\n"
 "Last-Translator: Pavel Pisklakov <ppv1979@mail.ru>\n"
-"Language-Team: Russian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
-"ru_RU/>\n"
-"Language: ru_RU\n"
+"Language-Team: Russian <http://translate.pkp.sfu.ca/projects/ojs/manager/ru/>"
+"\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,6 +51,8 @@ msgstr ""
 
 msgid "manager.setup.enableDois.description"
 msgstr ""
+"Разрешить присваивать цифровые идентификаторы объектов (DOI) материалам, "
+"опубликованным в этом журнале."
 
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr ""
@@ -60,9 +62,11 @@ msgstr ""
 
 msgid "doi.manager.settings.doiSuffixLegacy"
 msgstr ""
+"Используйте шаблоны по умолчанию.<br />%j.v%vi%i для выпусков<br /"
+">%j.v%vi%i.%a для статей<br />%j.v%vi%i.%a.g%g для гранок."
 
 msgid "doi.manager.settings.doiCreationTime.copyedit"
-msgstr ""
+msgstr "По достижении этапа литературного редактирования"
 
 msgid "manager.website.archiving"
 msgstr "Архивирование"
@@ -560,11 +564,10 @@ msgstr "Идентификация в письме электронной поч
 msgid "manager.setup.emailSignature"
 msgstr "Подпись"
 
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
-"Подготовленные письма, отправляемые системой от имени журнала, будут "
-"содержать следующую подпись, добавленную в конце письма."
+"Письма, отправляемые автоматически от имени журнала, будут иметь следующую "
+"подпись."
 
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Включить объявления"
@@ -1134,7 +1137,7 @@ msgstr ""
 "авторы"
 
 msgid "manager.setup.submissionGuidelines"
-msgstr "Руководство по отправке материала"
+msgstr "Руководство по подаче материалов"
 
 msgid "manager.setup.submissions"
 msgstr "Отправка материалов"
@@ -1572,10 +1575,10 @@ msgid "manager.subscriptions.form.typeIdValid"
 msgstr "Пожалуйста, выберите правильный тип подписки."
 
 msgid "manager.subscriptions.form.institution"
-msgstr ""
+msgstr "Организация"
 
 msgid "manager.subscriptions.form.institutionIdValid"
-msgstr ""
+msgstr "Пожалуйста, выберите корректную организацию."
 
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Дата начала"
@@ -1715,6 +1718,7 @@ msgstr ""
 
 msgid "manager.subscriptions.form.institutionRequired"
 msgstr ""
+"Организация должна быть создана до того, как будут оформлены новые подписки."
 
 msgid "manager.subscriptions.ipRange"
 msgstr "Диапазон IP-адресов"
@@ -2113,52 +2117,63 @@ msgstr ""
 "Отправить копию основному контактному лицу, указанному в настройках журнала."
 
 msgid "stats.contextStats"
-msgstr ""
+msgstr "Статистика журнала"
 
 msgid "stats.context.tooltip.text"
-msgstr ""
+msgstr "Количество посетителей, просматривающих главную страницу журнала."
 
 msgid "stats.context.tooltip.label"
-msgstr ""
+msgstr "О статистике журнала"
 
 msgid "stats.context.downloadReport.description"
 msgstr ""
+"Скачать таблицу CSV/Excel со статистикой использования данного журнала, "
+"соответствующую следующим параметрам."
 
 msgid "stats.context.downloadReport.downloadContext.description"
-msgstr ""
+msgstr "Количество просмотров главной страницы журнала."
 
 msgid "stats.context.downloadReport.downloadContext"
-msgstr ""
+msgstr "Скачаиваний журнала"
 
 msgid "stats.issueStats"
-msgstr ""
+msgstr "Статистика выпуска"
 
 msgid "stats.issues.details"
-msgstr ""
+msgstr "Просмотры и скачивания"
 
 msgid "stats.issues.searchIssueDescription"
-msgstr ""
+msgstr "Искать название выпуска, том и номер"
 
 msgid "stats.issues.none"
 msgstr ""
+"Не найдены выпуски со статистикой использования, соответствующей этим "
+"параметрам."
 
 msgid "stats.issues.downloadReport.description"
 msgstr ""
+"Скачать таблицу CSV/Excel со статистикой использования для выпусков, "
+"соответствующих следующим параметрам."
 
 msgid "stats.issues.downloadReport.downloadIssues.description"
 msgstr ""
+"Количество просмотров страницы содержания и скачиваний гранок для каждого "
+"номера."
 
 msgid "stats.issues.downloadReport.downloadIssues"
-msgstr ""
+msgstr "Скачивания выпусков"
 
 msgid "stats.issues.countOfTotal"
-msgstr ""
+msgstr "{$count} из {$total} выпусков"
 
 msgid "stats.issues.tooltip.label"
-msgstr ""
+msgstr "О статистике выпуска"
 
 msgid "stats.issues.tooltip.text"
 msgstr ""
+"<strong>Просмотры</strong>: Количество посетителей, просмотревших оглавление "
+"выпуска.<br><strong>Скачивания</strong>: Количество скачиваний гранки "
+"выпуска, если таковая существует."
 
 msgid "stats.publicationStats"
 msgstr "Статистика по статьям"
@@ -2188,12 +2203,14 @@ msgstr "Файлы"
 
 msgid "stats.publications.downloadReport.description"
 msgstr ""
+"Скачать таблицу CSV/Excel со статистикой использования для статей, "
+"соответствующих следующим параметрам."
 
 msgid "stats.publications.downloadReport.downloadSubmissions"
-msgstr ""
+msgstr "Скачивания статей"
 
 msgid "stats.publications.downloadReport.downloadSubmissions.description"
-msgstr ""
+msgstr "Количество просмотров аннотации и скачиваний файлов для каждой статьи."
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
@@ -2226,7 +2243,7 @@ msgid "emailTemplate.variable.context.contactName"
 msgstr "Имя основного контактного лица журнала"
 
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr ""
+msgstr "Аббревиатура журнала"
 
 msgid "emailTemplate.variable.context.contextSignature"
 msgstr ""
@@ -2237,7 +2254,7 @@ msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Адрес электронной почты основного контактного лица журнала"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "Почтовый адрес журнала"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Название типа платежа"
@@ -2252,49 +2269,52 @@ msgid "emailTemplate.variable.site.siteTitle"
 msgstr "Название сайта, когда на нём размещается более одного журнала"
 
 msgid "emailTemplate.variable.subscription.subscriberDetails"
-msgstr ""
+msgstr "ФИО подписчика, организация, номер телефона и адрес электронной почты"
 
 msgid "emailTemplate.variable.subscription.subscriptionSignature"
-msgstr ""
+msgstr "Контактные данные менеджера подписки"
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
-msgstr ""
+msgstr "URL-адрес страницы подписки"
 
 msgid "emailTemplate.variable.subscription.expiryDate"
-msgstr ""
+msgstr "Дата окончания подписки"
 
 msgid "emailTemplate.variable.subscription.subscriptionType"
 msgstr ""
+"Краткая информация о типе подписки, названии, продолжительности и стоимости"
 
 msgid "emailTemplate.variable.subscription.membership"
-msgstr ""
+msgstr "Информация о членстве подписчика"
 
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr ""
+msgstr "Название подписавшейся организации"
 
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr ""
+msgstr "Почтовый адрес подписавшейся организации"
 
 msgid "emailTemplate.variable.subscription.domain"
-msgstr ""
+msgstr "Доменное имя действующего IP-адреса (адресов) для этой подписки"
 
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr ""
+msgstr "Действующие диапазоны IP-адресов для этой подписки"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "URL-адрес страницы, на которой автор может произвести оплату"
 
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "URL-адрес Руководства по подаче материалов"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "Ссылка на страницу статистики опубликованных статей"
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "ID выпуска"
 
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
+"Это письмо ежемесячно автоматически отправляется редакторам и управляющим "
+"журнала, предоставляя им обзор состояния системы."
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Проверка адреса почты (регистрация в журнале)"
@@ -2317,7 +2337,7 @@ msgid "doi.readerDisplayName"
 msgstr "DOI"
 
 msgid "doi.manager.displayName"
-msgstr ""
+msgstr "DOI"
 
 msgid "doi.manager.settings.description"
 msgstr ""
@@ -2333,7 +2353,7 @@ msgid "doi.manager.settings.enableRepresentationDoi"
 msgstr "Гранки"
 
 msgid "doi.manager.settings.galleysWithDescription"
-msgstr ""
+msgstr "Гранки статей, например, опубликованные в формате PDF"
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Префикс DOI"
@@ -2399,13 +2419,15 @@ msgstr ""
 "DOI не был назначен?"
 
 msgid "doi.manager.settings.registrationAgency"
-msgstr ""
+msgstr "Регистрационное агентство"
 
 msgid "doi.manager.settings.registrationAgency.description"
 msgstr ""
+"Пожалуйста, выберите регистрационное агентство, которое вы хотите "
+"использовать при депонировании DOI."
 
 msgid "doi.manager.settings.registrationAgency.none"
-msgstr ""
+msgstr "Нет"
 
 msgid "doi.editor.doi"
 msgstr "DOI"
@@ -2491,7 +2513,7 @@ msgstr ""
 "href=\"{$doiManagementLink}\">«Управление DOI</a>."
 
 msgid "doi.editor.assignDoi.toBeAssigned"
-msgstr ""
+msgstr "DOI {$pubId} будет присвоен при публикации."
 
 msgid "doi.editor.missingPrefix"
 msgstr "DOI должен начинаться с {$doiPrefix}."
@@ -2509,34 +2531,37 @@ msgid "doi.editor.preview.objects"
 msgstr "Элемент"
 
 msgid "api.galley.403.publicationDidNotMatch"
-msgstr ""
+msgstr "Запрошенная вами гранка не является частью данной публикации."
 
 msgid "api.galley.403.canEditPublishedDoi"
-msgstr ""
+msgstr "После публикации гранки/материала можно редактировать только DOI"
 
 msgid "api.issue.400.invalidDoi"
-msgstr ""
+msgstr "Представленный DOI недействителен"
 
 msgid "api.issue.403.canEditPublishedDoi"
-msgstr ""
+msgstr "После публикации можно редактировать только DOI"
 
 msgid "api.issue.404.issuesNotFound"
-msgstr ""
+msgstr "Запрошенные вами выпуски не найдены"
 
 msgid "doi.manager.submissionDois"
-msgstr ""
+msgstr "DOI статей"
 
 msgid "doi.manager.issueDois"
-msgstr ""
+msgstr "DOI выпусков"
 
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr ""
+"Это письмо уведомляет автора о том, что его материал отклонен до этапа "
+"рецензирования, поскольку он не соответствует требованиям для публикации в "
+"журнале."
 
 msgid "manager.institutions.noContext"
-msgstr ""
+msgstr "Журнал этой организации найти не удалось."
 
 msgid "mailable.subscriptionNotify.name"
-msgstr ""
+msgstr "Уведомление о подписке"
 
 msgid "mailable.subscriptionNotify.description"
 msgstr ""
@@ -2544,7 +2569,7 @@ msgstr ""
 "него подписку. В письме содержится URL журнала и инструкции по доступу."
 
 msgid "mailable.subscriptionExpiresSoon.name"
-msgstr ""
+msgstr "Подписка скоро заканчивается"
 
 msgid "mailable.subscriptionExpiresSoon.description"
 msgstr ""
@@ -2552,7 +2577,7 @@ msgstr ""
 "В письме содержится URL журнала и инструкции по доступу."
 
 msgid "mailable.subscriptionExpired.name"
-msgstr ""
+msgstr "Подписка закончилась"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
@@ -2560,7 +2585,7 @@ msgstr ""
 "письме содержится URL журнала и инструкции по доступу."
 
 msgid "mailable.subscriptionExpiredLast.name"
-msgstr ""
+msgstr "Подписка недавно закончилась"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
@@ -2568,7 +2593,7 @@ msgstr ""
 "письме содержится URL журнала и инструкции по доступу."
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
-msgstr ""
+msgstr "Приобрести индивидуальную подписку"
 
 msgid "mailable.subscriptionPurchaseIndividual.description"
 msgstr ""
@@ -2577,7 +2602,7 @@ msgstr ""
 "ссылка быстрого доступа к приобретенной подписке."
 
 msgid "mailable.subscriptionPurchaseInstitutional.name"
-msgstr ""
+msgstr "Приобрести подписку на организацию"
 
 msgid "mailable.subscriptionPurchaseInstitutional.description"
 msgstr ""
@@ -2586,7 +2611,7 @@ msgstr ""
 "ссылка быстрого доступа к приобретенной подписке."
 
 msgid "mailable.subscriptionRenewIndividual.name"
-msgstr ""
+msgstr "Продлить индивидуальную подписку"
 
 msgid "mailable.subscriptionRenewIndividual.description"
 msgstr ""
@@ -2595,7 +2620,7 @@ msgstr ""
 "ссылка быстрого доступа к продленной подписке."
 
 msgid "mailable.subscriptionRenewInstitutional.name"
-msgstr ""
+msgstr "Продлить подписку на организацию"
 
 msgid "mailable.subscriptionRenewInstitutional.description"
 msgstr ""
@@ -2604,7 +2629,7 @@ msgstr ""
 "ссылка быстрого доступа к продленной подписке."
 
 msgid "mailable.openAccessNotify.name"
-msgstr ""
+msgstr "Уведомление об открытом доступе"
 
 msgid "mailable.openAccessNotify.description"
 msgstr ""
@@ -2613,31 +2638,54 @@ msgstr ""
 "появился в открытом доступе."
 
 msgid "mailable.issuePublishNotify.name"
-msgstr ""
+msgstr "Уведомление о публикации выпуска"
 
 msgid "mailable.issuePublishNotify.description"
 msgstr ""
+"Это письмо автоматически отправляется зарегистрированным пользователям при "
+"публикации нового выпуска."
 
 msgid "manager.manageEmails.description"
 msgstr ""
+"Редактирование текстов сообщений, отправляемых в электронных письмах из "
+"этого журнала."
 
 msgid "mailable.layoutComplete.name"
-msgstr ""
+msgstr "Гранки готовы"
 
 msgid "mailable.publicationVersionNotify.name"
-msgstr ""
+msgstr "Создана новая версия"
 
 msgid "mailable.publicationVersionNotify.description"
 msgstr ""
+"Это письмо автоматически уведомляет назначенных редакторов при создании "
+"новой версии материала."
 
 msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
+"Это письмо отправляется управляющим журнала, когда в журнал подан новый "
+"материал и не назначены редакторы."
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "Запрос на оплату"
 
 msgid "mailable.paymentRequest.description"
 msgstr ""
+"Это электронное письмо автоматически отправляется автору с просьбой оплатить "
+"взнос за публикацию, когда его материал принят."
 
 #~ msgid "doi.manager.settings.enablePublicationDoi"
 #~ msgstr "Статьи"
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "Гранку выпуска не удалось импортировать, ее файл отсутствует."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"Гранку выпуска {$id} не удалось экспортировать, ее файл не найден по пути "
+"«{$path}»."
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"Изображение обложки выпуска {$id} не было экспортировано, его файл не был "
+"найден по пути «{$path}»."
