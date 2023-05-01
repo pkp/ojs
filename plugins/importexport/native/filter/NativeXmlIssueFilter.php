@@ -136,7 +136,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
             if (!$processOnlyChildren) {
                 // Not a localized element?  Check for a date.
                 $setterFunction = $dateSetterMappings[$n->tagName];
-                $issue->$setterFunction(strtotime($n->textContent));
+                $issue->$setterFunction($n->textContent);
             }
         } else {
             switch ($n->tagName) {
