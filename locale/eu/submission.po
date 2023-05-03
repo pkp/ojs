@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2023-05-03 14:12+0000\n"
-"Last-Translator: Josu Acosta <josuacostacalvo@gmail.com>\n"
+"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "eu/>\n"
 "Language: eu\n"
@@ -33,7 +33,7 @@ msgstr ""
 "usageguide/generic.shtml#type</a>"
 
 msgid "submission.submit.newSubmissionMultiple"
-msgstr ""
+msgstr "Hasi bidalketa berri bat hemen"
 
 msgid "submission.submit.newSubmissionSingle"
 msgstr "Bidalketa berria"
@@ -104,7 +104,7 @@ msgid "submission.pageProofs"
 msgstr "Proba-zuzenketa"
 
 msgid "workflow.review.externalReview"
-msgstr "Berrikuspena"
+msgstr "Ebaluazioa"
 
 msgid "submission.event.issueMetadataUpdated"
 msgstr ""
@@ -291,7 +291,7 @@ msgid "publication.version.details"
 msgstr ""
 
 msgid "submission.queries.production"
-msgstr ""
+msgstr "Ekoizpenari buruzko eztabaidak"
 
 msgid "editor.submission.decision.backToReview"
 msgstr ""
