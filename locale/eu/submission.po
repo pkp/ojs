@@ -3,8 +3,8 @@
 # Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-04-28 14:09+0000\n"
-"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
+"PO-Revision-Date: 2023-05-03 14:12+0000\n"
+"Last-Translator: Josu Acosta <josuacostacalvo@gmail.com>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "eu/>\n"
 "Language: eu\n"
@@ -15,10 +15,10 @@ msgstr ""
 "X-Generator: Weblate 4.13.1\n"
 
 msgid "submission.submit.userGroup"
-msgstr ""
+msgstr "Bidalketa egiteko rola…"
 
 msgid "submission.upload.selectComponent"
-msgstr "Hautatu artikuluaren osagaia"
+msgstr "Artikuluaren osagaia aukeratu"
 
 msgid "submission.title"
 msgstr "Artikuluaren izenburua"
@@ -54,7 +54,7 @@ msgid "submission.submit.whatNext.description"
 msgstr ""
 
 msgid "grid.action.galleyInIssueEntry"
-msgstr ""
+msgstr "Galerada alearen sarreran agertzen da"
 
 msgid "grid.action.issueEntry"
 msgstr "Ikusi bidalketa honen metadatuak"
@@ -66,7 +66,7 @@ msgid "submission.event.articleGalleyMadeUnavailable"
 msgstr ""
 
 msgid "submission.event.publicIdentifiers"
-msgstr ""
+msgstr "Bidalketaren identifikatzaile publikoak eguneratuta."
 
 msgid "grid.issueEntry.availableGalley.title"
 msgstr "Formatua onartzea"
@@ -227,7 +227,7 @@ msgstr ""
 "denean."
 
 msgid "publication.copyrightYearBasis.submissionDescription"
-msgstr ""
+msgstr "Copyright-urtea argitaratze-dataren arabera ezarriko da automatikoki."
 
 msgid "publication.datePublished"
 msgstr "Argitaratze-data"
