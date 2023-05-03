@@ -244,9 +244,9 @@ class Collector implements CollectorInterface
     }
 
     /**
-     * Limit results to submissions that do/don't have any DOIs assign to their sub objects
+     * Limit results to issues that do/don't have any DOIs assign to their sub objects
      *
-     * @param array|null $enabledDoiTypes TYPE_* constants to consider when checking submission has DOIs
+     * @param array|null $enabledDoiTypes TYPE_* constants to consider when checking issue has DOIs
      *
      * @return $this
      */
