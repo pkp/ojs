@@ -1,11 +1,12 @@
 # Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023.
+# Josu Acosta <josuacostacalvo@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
 "PO-Revision-Date: 2023-05-03 14:12+0000\n"
-"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
+"Last-Translator: Josu Acosta <josuacostacalvo@gmail.com>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/manager/eu/>"
 "\n"
 "Language: eu\n"
@@ -331,6 +332,8 @@ msgstr "Ataleko editoreak"
 
 msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
+"Atal batek, gutxienez, aktibo egon behar du. Bisitatu lan-fluxuaren "
+"ezarpenak aldizkari honetara egindako bidalketa guztiak desaktibatzeko."
 
 msgid "manager.sections.form.abbrevRequired"
 msgstr "Titulu laburtua eman behar zaio atalari."
