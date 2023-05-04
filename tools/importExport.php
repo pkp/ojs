@@ -63,16 +63,18 @@ class importExport extends CommandLineTool
                 echo "\t(None)\n";
             } else {
                 foreach ($plugins as $plugin) {
-                    echo "\t" . $plugin->getName() . "\n";
+                    if ($plugin->supportsCLI()) {
+                        echo "\t" . $plugin->getName() . "\n";
+                    }
                 }
             }
             return;
         }
-        if ($this->command == 'usage' || $this->command == 'help' || $this->command == '' || ($plugin = PluginRegistry::getPlugin('importexport', $this->command)) === null) {
+        /** @var ImportExportPlugin $plugin */
+        if ($this->command == 'usage' || $this->command == 'help' || $this->command == '' || ($plugin = PluginRegistry::getPlugin('importexport', $this->command)) === null || !$plugin->supportsCLI()) {
             $this->usage();
             return;
         }
-        /** @var ImportExportPlugin $plugin */
         return $plugin->executeCLI($this->scriptName, $this->parameters);
     }
 }
