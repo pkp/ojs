@@ -1,12 +1,13 @@
 # Viveka Svensson <viveka.svensson@lnu.se>, 2021, 2022.
 # Magnus Annemark <magnus.annemark@ub.lu.se>, 2022, 2023.
+# Ramana Fragola <ramana.fragola@kb.se>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
-"PO-Revision-Date: 2023-03-07 18:10+0000\n"
-"Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
+"PO-Revision-Date: 2023-05-05 11:49+0000\n"
+"Last-Translator: Ramana Fragola <ramana.fragola@kb.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/locale/sv/>"
 "\n"
 "Language: sv\n"
@@ -539,6 +540,8 @@ msgstr ""
 
 msgid "doi.issue.incorrectStaleStatus"
 msgstr ""
+"Det gick inte att ställa in DOI-statusen till inaktuell för följande numret: "
+"{$itemTitle}. DOI måste ha statusen \"Registered\" eller \"Submitted\"."
 
 msgid "doi.issue.notPublished"
 msgstr ""
@@ -2099,19 +2102,18 @@ msgstr ""
 "Innan du försöker använda systemet, öppna <tt>config.inc.php</tt> i en "
 "lämplig textredigerare och ersätt innehållet med texten nedan.</p>"
 
-#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>Installationen av OJS genomfördes utan problem.</p>\n"
 "<p><a href=\"{$loginUrl}\">Logga in </a> med det användarnamn och lösenord "
 "som du angivit på föregående sida för att börja använda systemet.</p>\n"
-"<p>För att följa och delta i PKP-communityt finns följande möjligheter:</p>\n"
+"<p>För att följa och delta i PKP-community finns följande möjligheter:</p>\n"
 "<ol>\n"
 "\t<li>Läs <a href=\"https://pkp.sfu.ca/category/news/\" target=\"_new\">PKP-"
 "bloggen</a> och följ <a href=\"https://pkp.sfu.ca/category/News/feed/\" "
 "target=\"_new\">RSS-flödet</a> för nyheter och uppdateringar.</li>\n"
-"\t<li>Besök <a href=\"https://forum.pkp.sfu.ca\" target=\"_new"
-"\">supportforumet</a> om du har frågor eller kommentarer.</li>\n"
+"\t<li>Besök <a href=\"https://forum.pkp.sfu.ca\" target=\"_new\""
+">supportforumet</a> om du har frågor eller kommentarer.</li>\n"
 "</ol>"
 
 msgid "installer.upgradeComplete"
@@ -2309,7 +2311,7 @@ msgid "notification.type.newAnnouncement"
 msgstr "Ett meddelande skickades ut."
 
 msgid "notification.type.openAccess"
-msgstr ""
+msgstr "Ett nummer har gjorts öppen tillgång."
 
 msgid "notification.type.reviewerFormComment"
 msgstr ""
