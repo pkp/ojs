@@ -1,8 +1,103 @@
 # Manolis Saldaris <omanos@gmail.com>, 2023.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-05-05 08:20+0000\n"
+"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
+"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/el/>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.themes.default.description"
+msgstr "Το παρόν είναι το πρότυπο θέμα."
+
+msgid "plugins.themes.default.name"
+msgstr "Πρότυπο Θέμα"
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "Τυπογραφεία"
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr ""
+"Επιλέξτε έναν συνδυασμό γραμματοσειρών που ταιριάζει σε αυτό το περιοδικό."
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr ""
+"Noto Sans: Μια ψηφιακή μητρική γραμματοσειρά σχεδιασμένη από την Google για "
+"εκτεταμένη γλωσσική υποστήριξη."
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr "Noto Serif: Μια παραλλαγή serif της ψηφιακής γραμματοσειράς της Google."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr ""
+"Noto Serif/Noto Sans: Συνδυασμός γραμματοσειρών με sans-serif επικεφαλίδες "
+"και serif κείμενο."
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr ""
+"Noto Serif/Noto Sans: Συνδυασμός γραμματοσειρών με serif επικεφαλίδες και "
+"sans-serif κείμενο."
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Lato: Μια δημοφιλής σύγχρονη γραμματοσειρά sans-serif."
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr ""
+"Lora: Μια γραμματοσειρά serif ευρείας διάταξης κατάλληλη για ανάγνωση στο "
+"διαδίκτυο."
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr ""
+"Lora/Open Sans: Συνδυασμός γραμματοσειρών με serif επικεφαλίδες και sans-"
+"serif κείμενο."
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "Χρώμα"
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "Επιλέξτε ένα χρώμα για την επικεφαλίδα."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
+msgstr "Εικόνα φόντου επικεφαλίδας"
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
+msgstr "Προβολή της εικόνας της αρχικής σελίδας ως φόντο της κεφαλίδας."
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "Επιλογές εμφάνισης στατιστικών χρήσης"
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr ""
+"Χρησιμοποιήστε τον τύπο ραβδογράμματος για την εμφάνιση στατιστικών "
+"στοιχείων χρήσης."
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr ""
+"Χρησιμοποιήστε τον τύπο του διαγράμματος γραμμών για την εμφάνιση "
+"στατιστικών στοιχείων χρήσης."
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "Ιαν Φεβ Μαρ Απρ Μαϊ Ιουν Ιουλ Αυγ Σεπ Οκτ Νοε Δεκ"
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "Λήψεις"
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "Η λήψη δεδομένων δεν είναι ακόμη διαθέσιμη."
+
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
+msgstr "Προβολή της περίληψης του περιοδικού στην αρχική σελίδα."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
+msgstr ""
+"Όταν έχει μεταφορτωθεί μια εικόνα της αρχικής σελίδας, να εμφανίζεται στο "
+"φόντο της κεφαλίδας αντί της συνήθους θέσης της στην αρχική σελίδα."
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr ""
+"Να μην εμφανίζονται στατιστικά στοιχεία χρήσης υποβολής για τον αναγνώστη."
