@@ -130,11 +130,18 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
      */
     public function getPublishedSubmissions($submissionIds, $context)
     {
+        $allSubmissionIds = Repo::submission()
+            ->getCollector()
+            ->filterByContextIds([$context->getId()])
+            ->filterByStatus([PKPSubmission::STATUS_PUBLISHED])
+            ->getIds()
+            ->toArray();
+        $validSubmissionIds = array_intersect($allSubmissionIds, $submissionIds);
         $submissions = array_map(function ($submissionId) {
             return Repo::submission()->get($submissionId);
-        }, $submissionIds);
+        }, $validSubmissionIds);
         return array_filter($submissions, function ($submission) {
-            return $submission->getData('status') === PKPSubmission::STATUS_PUBLISHED;
+            return $submission->getCurrentPublication()->getDoi() !== null;
         });
     }
 
@@ -148,34 +155,38 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
      */
     public function getPublishedIssues($issueIds, $context)
     {
-        $publishedIssues = [];
-        foreach ($issueIds as $issueId) {
-            $publishedIssue = Repo::issue()->get($issueId);
-            $publishedIssue = $publishedIssue->getJournalId() == $context->getId() ? $publishedIssue : null;
-            if ($publishedIssue && $publishedIssue->getStoredPubId('doi')) {
-                $publishedIssues[] = $publishedIssue;
-            }
-        }
-        return $publishedIssues;
+        return Repo::issue()
+            ->getCollector()
+            ->filterByContextIds([$context->getId()])
+            ->filterByIssueIds($issueIds)
+            ->filterByPublished(true)
+            ->filterByHasDois(true)
+            ->getMany()
+            ->toArray();
     }
 
     /**
      * Get article galleys with a DOI assigned from galley IDs.
      *
      * @param array $galleyIds
+     * @param Context $context
      *
      * @return array
      */
-    public function getArticleGalleys($galleyIds)
+    public function getArticleGalleys($galleyIds, $context)
     {
-        $galleys = [];
-        foreach ($galleyIds as $galleyId) {
-            $articleGalley = Repo::galley()->get((int) $galleyId);
-            if ($articleGalley && $articleGalley->getStoredPubId('doi')) {
-                $galleys[] = $articleGalley;
-            }
-        }
-        return $galleys;
+        $allGalleyIds = Repo::galley()
+            ->getCollector()
+            ->filterByContextIds([$context->getId()])
+            ->getIds()
+            ->toArray();
+        $validGalleyIds = array_intersect($allGalleyIds, $galleyIds);
+        $galleys = array_map(function ($galleyId) {
+            return Repo::galley()->get($galleyId);
+        }, $validGalleyIds);
+        return array_filter($galleys, function ($galley) {
+            return $galley->getDoi() !== null;
+        });
     }
 }
 

@@ -218,7 +218,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
             $filter = $this->getIssueFilter();
             $objectsFileNamePart = 'issues';
         } elseif (!empty($selectedRepresentations)) {
-            $objects = $this->getArticleGalleys($selectedRepresentations);
+            $objects = $this->getArticleGalleys($selectedRepresentations, $context);
             $filter = $this->getRepresentationFilter();
             $objectsFileNamePart = 'galleys';
         }
@@ -709,7 +709,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
                 $objectsFileNamePart = 'issues';
                 break;
             case 'galleys':
-                $objects = $this->getArticleGalleys($args);
+                $objects = $this->getArticleGalleys($args, $context);
                 $filter = $this->getRepresentationFilter();
                 $objectsFileNamePart = 'galleys';
                 break;
@@ -785,12 +785,16 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
      */
     public function getPublishedSubmissions($submissionIds, $context)
     {
-        $submissions = array_map(function ($submissionId) {
+        $allSubmissionIds = Repo::submission()
+            ->getCollector()
+            ->filterByContextIds([$context->getId()])
+            ->filterByStatus([PKPSubmission::STATUS_PUBLISHED])
+            ->getIds()
+            ->toArray();
+        $validSubmissionIds = array_intersect($allSubmissionIds, $submissionIds);
+        return array_map(function ($submissionId) {
             return Repo::submission()->get($submissionId);
-        }, $submissionIds);
-        return array_filter($submissions, function ($submission) {
-            return $submission->getData('status') === PKPSubmission::STATUS_PUBLISHED;
-        });
+        }, $validSubmissionIds);
     }
 
     /**
@@ -803,34 +807,34 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
      */
     public function getPublishedIssues($issueIds, $context)
     {
-        $publishedIssues = [];
-        foreach ($issueIds as $issueId) {
-            $publishedIssue = Repo::issue()->get($issueId);
-            $publishedIssue = $publishedIssue->getJournalId() == $context->getId() ? $publishedIssue : null;
-            if ($publishedIssue) {
-                $publishedIssues[] = $publishedIssue;
-            }
-        }
-        return $publishedIssues;
+        return Repo::issue()
+            ->getCollector()
+            ->filterByContextIds([$context->getId()])
+            ->filterByIssueIds($issueIds)
+            ->filterByPublished(true)
+            ->getMany()
+            ->toArray();
     }
 
     /**
      * Get article galleys from gallley IDs.
      *
      * @param array $galleyIds
+     * @param Context $context
      *
      * @return array
      */
-    public function getArticleGalleys($galleyIds)
+    public function getArticleGalleys($galleyIds, $context)
     {
-        $galleys = [];
-        foreach ($galleyIds as $galleyId) {
-            $articleGalley = Repo::galley()->get((int) $galleyId);
-            if ($articleGalley) {
-                $galleys[] = $articleGalley;
-            }
-        }
-        return $galleys;
+        $allGalleyIds = Repo::galley()
+            ->getCollector()
+            ->filterByContextIds([$context->getId()])
+            ->getIds()
+            ->toArray();
+        $validGalleyIds = array_intersect($allGalleyIds, $galleyIds);
+        return array_map(function ($galleyId) {
+            return Repo::submission()->get($galleyId);
+        }, $validGalleyIds);
     }
 
     /**
