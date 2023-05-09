@@ -2,10 +2,11 @@
 # Jovan Jonovski <jonovski@hotmail.com>, 2022.
 # katerina spiroska <kspiroska07@gmail.com>, 2023.
 # Ana Vucurevic <ana.vucurevic97@yahoo.com>, 2023.
+# Mirko Spiroski <mspiroski@id-press.eu>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-03-16 15:39+0000\n"
-"Last-Translator: Ana Vucurevic <ana.vucurevic97@yahoo.com>\n"
+"PO-Revision-Date: 2023-05-09 17:31+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "mk/>\n"
 "Language: mk\n"
@@ -352,7 +353,7 @@ msgstr "Печатарските табаци се завршени"
 
 msgid "emails.layoutComplete.body"
 msgstr ""
-"<p>Почитувани{$recipientName},<p><p>Печатарските табаци за поднесокот се "
+"<p>Почитуван {$recipientName},<p><p>Пробните отисоци за поднесокот се "
 "подготвени и спремни за финална рецензија.</p><p><a href=\"{$submissionUrl}\""
 ">{$submissionTitle}</a><br />{$contextName}</p><p>Доколку имате било какви "
 "прашања, Ве молиме да не исконтактирате.</p><p>Со "
