@@ -18,13 +18,13 @@ describe('Data suite tests', function() {
 		cy.get('.app__nav a').contains('Tools').click();
 		cy.get('a:contains("Native XML Plugin")').click();
 		cy.get('a:contains("Export Issues")').click();
-		cy.waitJQuery();
+		cy.waitJQuery({timeout:20000});
+
 		// Export first 2 issues
 		cy.get('input[name="selectedIssues[]"]:lt(2)').check();
-
 		cy.get('form#exportIssuesXmlForm button[type="submit"]').click();
-
 		cy.contains('The export completed successfully.', {timeout:20000});
+
 		cy.intercept({method: 'POST'}, (req) => {
 			req.redirect('/');
 		}).as('download');
@@ -48,7 +48,7 @@ describe('Data suite tests', function() {
 		// tab to load. Do not convert to cy.get('a').contains('Native XML Plugin')
 		cy.get('a:contains("Native XML Plugin")').click();
 
-		cy.wait(250);
+		cy.waitJQuery({timeout:20000});
 		const issueYear = new Date().getFullYear() + 1;
 		cy.readFile(downloadedIssuePath).then(fileContent => {
 			// Setup year in the future to avoid conflicts
@@ -57,9 +57,7 @@ describe('Data suite tests', function() {
 		});
 
 		cy.get('input[name="temporaryFileId"][value!=""]', {timeout:20000});
-
 		cy.get('form#importXmlForm button[type="submit"]').click();
-
 		cy.contains('The import completed successfully.', {timeout:20000});
 		cy.contains(`Vol. 1 No. 2 (${issueYear})`);
 		cy.contains(`Vol. 2 No. 1 (${issueYear})`);
