@@ -9,7 +9,7 @@
 
 describe('Data suite tests', function() {
 	const downloadedIssuePath = Cypress.config('downloadsFolder') + "/native-issue.xml";
-	it.skip('Exports an issue to XML', function() {
+	it('Exports an issue to XML', function() {
 		var username = 'admin';
 		cy.login(username, 'admin');
 
