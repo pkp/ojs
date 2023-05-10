@@ -1,5 +1,5 @@
 /**
- * @file cypress/tests/integration/Statistics.spec.js
+ * @file cypress/tests/integration/Statistics.cy.js
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky

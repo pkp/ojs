@@ -1,5 +1,5 @@
 /**
- * @file cypress/tests/integration/API.spec.js
+ * @file cypress/tests/integration/API.cy.js
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
@@ -24,7 +24,7 @@ describe('API tests', function() {
 		cy.get('a:contains("Edit Profile")').click();
 		cy.get('a[name="apiSettings"]').click();
 		cy.get("body").then($body => {
-			if ($body.find("button:contains(\"Delete\")").length > 0) {   
+			if ($body.find("button:contains(\"Delete\")").length > 0) {
 				cy.get('form[id="apiProfileForm"] button:contains("Delete")').click();
 				cy.waitJQuery();
 				cy.on('window:confirm', (text) => {
