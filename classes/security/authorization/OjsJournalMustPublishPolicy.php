@@ -7,6 +7,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class OjsJournalMustPublishPolicy
+ *
  * @ingroup security_authorization
  *
  * @brief Access policy to limit access to journals that do not publish online.

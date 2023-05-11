@@ -7,6 +7,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PublishForm
+ *
  * @ingroup classes_controllers_form
  *
  * @brief A preset form for confirming a publication's issue before publishing.
