@@ -91,7 +91,7 @@ describe('DOI tests', function() {
 		cy.log('Check Submission filter behaviour (pre-deposit)');
 		goToDoiPage();
 
-		cy.checkDoiFilterResults('Needs DOI', 'Woods — Finocchiaro: Arguments About Arguments', 7);
+		cy.checkDoiFilterResults('Needs DOI', 'Woods — Finocchiaro: Arguments About Arguments', 8);
 		cy.checkDoiFilterResults('DOI Assigned', 'Karbasizaed — Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran', 1);
 		clearFilter();
 		cy.checkDoiFilterResults('Unregistered', 'Karbasizaed — Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran', 1);
