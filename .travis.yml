@@ -26,8 +26,17 @@ addons:
       - libvulkan1
       - libu2f-udev
 
-
 before_install:
+  # MariaDB has conflicts with MySQL, given that Travis includes MySQL by default, we have to uninstall it before installing MariaDB
+  - |
+    if [[ "$TEST" == "mariadb" ]]; then
+      sudo apt-get remove --purge mysql-server mysql-client mysql-common mysql-server-core-* mysql-client-core-*
+      sudo apt-get autoremove -y
+      sudo apt-get autoclean
+      sudo rm -rf /var/lib/mysql/
+      sudo rm -rf /etc/mysql/
+      sudo apt-get install mariadb-server mariadb-client
+    fi
   - if [ -n "$LIBONIG_INSTALL" ]; then sudo apt-get install libonig5; fi
   - ./tools/startSubmodulesTRAVIS.sh
   - npm i g -npm
@@ -49,8 +58,6 @@ jobs:
       php: 8.1.0
     - env: TEST=mariadb SAVE_BUILD=true
       php: 8.0
-      addons:
-        mariadb: '10.3'
     - env: TEST=mysql SAVE_BUILD=true
       php: 8.1.0
     - env: TEST=mysql LIBONIG_INSTALL=1
