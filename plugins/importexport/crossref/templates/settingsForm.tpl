@@ -31,7 +31,7 @@
 		{/fbvFormSection}
 		{fbvFormSection}
 			<p class="pkp_help">{translate key="plugins.importexport.crossref.registrationIntro"}</p>
-			{fbvElement type="text" id="username" value=$username label="plugins.importexport.crossref.settings.form.username" maxlength="50" size=$fbvStyles.size.MEDIUM}
+			{fbvElement type="text" id="username" value=$username label="plugins.importexport.crossref.settings.form.username" maxlength="120" size=$fbvStyles.size.MEDIUM}
 			{fbvElement type="text" password="true" id="password" value=$password label="plugins.importexport.common.settings.form.password" maxLength="50" size=$fbvStyles.size.MEDIUM}
 			<span class="instruct">{translate key="plugins.importexport.common.settings.form.password.description"}</span><br/>
 		{/fbvFormSection}
