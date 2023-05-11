@@ -147,7 +147,7 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
         foreach ($this->getPubObjectTypes() as $type => $fqcn) {
             if ($type === 'Issue') {
                 $excludeTypeId = $type === $pubObjectType ? $excludeId : null;
-                if (Repo::issue()->dao->pubIdExists($type, $pubId, $excludeTypeId, $contextId)) {
+                if (Repo::issue()->dao->pubIdExists($this->getPubIdType(), $pubId, $excludeTypeId, $contextId)) {
                     return false;
                 }
             }
