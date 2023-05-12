@@ -188,6 +188,22 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
             return $galley->getDoi() !== null;
         });
     }
+
+    /**
+     * @copydoc ImportExportPlugin::executeCLI()
+     */
+    public function executeCLI($scriptName, &$args)
+    {
+        return;
+    }
+
+    /**
+     * @copydoc ImportExportPlugin::supportsCLI()
+     */
+    public function supportsCLI(): bool
+    {
+        return false;
+    }
 }
 
 if (!PKP_STRICT_MODE) {
