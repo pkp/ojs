@@ -1,5 +1,5 @@
 /**
- * @file cypress/tests/data/60-content/PdanielSubmission.spec.js
+ * @file cypress/tests/data/60-content/PdanielSubmission.cy.js
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky

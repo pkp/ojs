@@ -83,8 +83,8 @@
 									:value="item.id"
 									v-model="selectedSubmissions"
 								/>
-								<span 
-									class="listPanel__itemSubTitle" 
+								<span
+									class="listPanel__itemSubTitle"
 									v-html="localize(
 										item.publications.find(p => p.id == item.currentPublicationId).fullTitle,
 										item.publications.find(p => p.id == item.currentPublicationId).locale
@@ -107,7 +107,7 @@
 							{translate key="common.selectAll"}
 						</template>
 					</pkp-button>
-					<pkp-button @click="submit('#exportXmlForm')">
+					<pkp-button @click="submit('#exportXmlForm')" type="submit">
 						{translate key="plugins.importexport.native.exportSubmissions"}
 					</pkp-button>
 				{/fbvFormSection}

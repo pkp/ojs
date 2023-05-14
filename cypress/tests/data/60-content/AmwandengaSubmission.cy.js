@@ -1,5 +1,5 @@
 /**
- * @file cypress/tests/data/60-content/AmwandengaSubmission.spec.js
+ * @file cypress/tests/data/60-content/AmwandengaSubmission.cy.js
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2000-2021 John Willinsky
@@ -85,7 +85,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('#startSubmission-sectionId-error').contains('This field is required.');
 		cy.get('#startSubmission-locale-error').contains('This field is required.');
 		cy.get('#startSubmission-submissionRequirements-error').contains('This field is required.');
-		cy.get('#startSubmission-privacyConsent-error').contains('This field is required.');		
+		cy.get('#startSubmission-privacyConsent-error').contains('This field is required.');
 		cy.setTinyMceContent('startSubmission-title-control', submission.title);
 		cy.get('label:contains("Articles")').click();
 		cy.get('label:contains("English")').click();

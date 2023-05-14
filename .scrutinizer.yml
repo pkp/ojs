@@ -26,7 +26,7 @@ build:
   dependencies:
     before:
       - 'git submodule update --init --recursive'
-      - 'wget https://raw.githubusercontent.com/composer/getcomposer.org/317db84d632c1a99d8617019ad4b000026bf7d16/web/installer -O - -q | php -- --quiet'
+      - 'wget https://raw.githubusercontent.com/composer/getcomposer.org/76a7060ccb93902cd7576b67264ad91c8a2700e2/web/installer -O - -q | php -- --quiet'
       - 'php composer.phar --working-dir=lib/pkp install --no-dev'
       - 'php composer.phar --working-dir=plugins/paymethod/paypal install --no-dev'
       - 'php composer.phar --working-dir=plugins/generic/citationStyleLanguage install --no-dev'
