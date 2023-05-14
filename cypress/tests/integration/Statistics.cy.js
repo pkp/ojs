@@ -27,7 +27,9 @@ describe('Statistics Tests', function() {
 		cy.checkTable(
 			'Article Details',
 			'articles',
-			['Mwandenga', 'Karbasizaed']
+			['Mwandenga', 'Karbasizaed'],
+			4,
+			2
 		);
 		cy.checkFilters([
 			'Articles',
