@@ -111,7 +111,7 @@ class ArticleGalleyForm extends Form
     public function validate($callHooks = true)
     {
         // Validate the urlPath
-        if (strlen($this->getData('urlPath'))) {
+        if (strlen((string) $this->getData('urlPath'))) {
             if (ctype_digit((string) $this->getData('urlPath'))) {
                 $this->addError('urlPath', __('publication.urlPath.numberInvalid'));
                 $this->addErrorField('urlPath');
@@ -174,8 +174,8 @@ class ArticleGalleyForm extends Form
             'publicationId' => $this->_publication->getId(),
             'label' => $this->getData('label'),
             'locale' => $this->getData('locale'),
-            'urlPath' => strlen($urlPath = $this->getData('urlPath')) ? $urlPath : null,
-            'urlRemote' => strlen($urlRemote = $this->getData('urlRemote')) ? $urlRemote : null
+            'urlPath' => strlen($urlPath = (string) $this->getData('urlPath')) ? $urlPath : null,
+            'urlRemote' => strlen($urlRemote = (string) $this->getData('urlRemote')) ? $urlRemote : null
         ];
 
         if ($this->_articleGalley) {

@@ -128,7 +128,7 @@ class IssueForm extends Form
         }
 
         // Check if urlPath is already being used
-        if (strlen($this->getData('urlPath'))) {
+        if (strlen((string) $this->getData('urlPath'))) {
             if (ctype_digit((string) $this->getData('urlPath'))) {
                 $this->addError('urlPath', __('publication.urlPath.numberInvalid'));
                 $this->addErrorField('urlPath');
@@ -248,7 +248,7 @@ class IssueForm extends Form
         $issue->setShowNumber((int) $this->getData('showNumber'));
         $issue->setShowYear((int) $this->getData('showYear'));
         $issue->setShowTitle((int) $this->getData('showTitle'));
-        $issue->setData('urlPath', $this->getData('urlPath'));
+        $issue->setData('urlPath', strlen($urlPath = (string) $this->getData('urlPath')) ? $urlPath : null);
 
         // If it is a new issue, first insert it, then update the cover
         // because the cover name needs an issue id.
