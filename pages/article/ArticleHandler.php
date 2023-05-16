@@ -114,7 +114,7 @@ class ArticleHandler extends Handler
 
         // Get the submission that matches the requested urlPath
         $submission = ctype_digit((string) $urlPath)
-            ? Repo::submission()->get($urlPath, $request->getContext()->getId())
+            ? Repo::submission()->get((int) $urlPath, $request->getContext()->getId())
             : Repo::submission()->getByUrlPath($urlPath, $request->getContext()->getId());
 
         $user = $request->getUser();
