@@ -72,7 +72,7 @@ class DublinCoreMetaPlugin extends GenericPlugin
 
         $publication = $article->getCurrentPublication();
         $publicationLocale = $publication->getData('locale');
-        $articleBestId = $publication->getData('urlPath') ?? $article->getId();
+        $articleBestId = strlen($publication->getData('urlPath')) ? $publication->getData('urlPath') : $article->getId();
         $templateMgr = TemplateManager::getManager($request);
         $section = $templateMgr->getTemplateVars('section');
 

@@ -82,7 +82,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
             $issue->setJournalId($context->getId());
             $issue->setPublished($node->getAttribute('published'));
             $issue->setAccessStatus($node->getAttribute('access_status'));
-            $issue->setData('urlPath', $node->getAttribute('url_path'));
+            $issue->setData('urlPath', strlen($node->getAttribute('url_path')) ? $node->getAttribute('url_path') : null);
 
             $issueId = Repo::issue()->add($issue);
 

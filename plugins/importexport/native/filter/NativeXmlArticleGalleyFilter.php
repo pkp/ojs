@@ -57,7 +57,6 @@ class NativeXmlArticleGalleyFilter extends \PKP\plugins\importexport\native\filt
     public function handleElement($node)
     {
         $deployment = $this->getDeployment();
-        $context = $deployment->getContext();
         $submission = $deployment->getSubmission();
         assert($submission instanceof Submission);
 
