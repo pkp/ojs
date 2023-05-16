@@ -107,11 +107,11 @@
 			]
 		},
 		"originalStyleFileName": {
-		  "type": "string"
+			"type": "string"
 		},
-	  	"published": {
-		  "type": "boolean",
-		  "apiSummary": true
+		"published": {
+			"type": "boolean",
+			"apiSummary": true
 		},
 		"publishedUrl": {
 			"type": "string",
@@ -128,10 +128,10 @@
 			}
 		},
 		"showNumber": {
-		  "type": "boolean"
+			"type": "boolean"
 		},
 		"showTitle": {
-		  	"type": "boolean"
+			"type": "boolean"
 		},
 		"showVolume": {
 			"type": "boolean"

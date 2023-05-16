@@ -66,7 +66,7 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
         $doc->appendChild($rootNode);
 
         foreach ($pubObjects as $pubObject) { /** @var Submission $pubObject */
-            $publication = $pubObject->getCurrentPublication(); /** @var Publication $publication */
+            $publication = $pubObject->getCurrentPublication();
             $issueId = $publication->getData('issueId');
             if ($cache->isCached('issues', $issueId)) {
                 $issue = $cache->get('issues', $issueId);
