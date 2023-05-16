@@ -128,15 +128,13 @@ class IssueForm extends Form
         }
 
         // Check if urlPath is already being used
-        if ($this->getData('urlPath')) {
+        if (strlen($this->getData('urlPath'))) {
             if (ctype_digit((string) $this->getData('urlPath'))) {
                 $this->addError('urlPath', __('publication.urlPath.numberInvalid'));
                 $this->addErrorField('urlPath');
             } else {
                 $issue = Repo::issue()->getByBestId($this->getData('urlPath'), Application::get()->getRequest()->getContext()->getId());
-                if ($issue &&
-                    (!$this->issue || $this->issue->getId() !== $issue->getId())
-                ) {
+                if ($issue && $this->issue?->getId() !== $issue->getId()) {
                     $this->addError('urlPath', __('publication.urlPath.duplicate'));
                     $this->addErrorField('urlPath');
                 }
