@@ -57,9 +57,13 @@ class DOAJJsonFilter extends PKPImportExportFilter
         $plugin = $deployment->getPlugin();
         $cache = $plugin->getCache();
 
-        // Create the JSON string Article JSON example bibJson https://github.com/DOAJ/harvester/blob/9b59fddf2d01f7c918429d33b63ca0f1a6d3d0d0/service/tests/fixtures/article.py
+        // Create the JSON string
+        // Article JSON example bibJson https://github.com/DOAJ/harvester/blob/9b59fddf2d01f7c918429d33b63ca0f1a6d3d0d0/service/tests/fixtures/article.py
+        // S. also https://doaj.github.io/doaj-docs/master/data_models/IncomingAPIArticle
 
         $publication = $pubObject->getCurrentPublication();
+        $publicationLocale = $publication->getData('locale');
+
         $issueId = $publication->getData('issueId');
         if ($cache->isCached('issues', $issueId)) {
             $issue = $cache->get('issues', $issueId);
@@ -106,11 +110,11 @@ class DOAJJsonFilter extends PKPImportExportFilter
         }
 
         // Article title
-        $article['bibjson']['title'] = $publication?->getLocalizedTitle($publication->getData('locale')) ?? '';
+        $article['bibjson']['title'] = $publication?->getLocalizedTitle($publicationLocale) ?? '';
         // Identifiers
         $article['bibjson']['identifier'] = [];
         // DOI
-        $doi = $pubObject->getStoredPubId('doi');
+        $doi = $publication->getDoi();
         if (!empty($doi)) {
             $article['bibjson']['identifier'][] = ['type' => 'doi', 'id' => $doi];
         }
@@ -123,8 +127,8 @@ class DOAJJsonFilter extends PKPImportExportFilter
         }
         // Year and month from article's publication date
         $publicationDate = $this->formatDate($issue->getDatePublished());
-        if ($pubObject->getDatePublished()) {
-            $publicationDate = $this->formatDate($pubObject->getDatePublished());
+        if ($publication->getData('datePublished')) {
+            $publicationDate = $this->formatDate($publication->getData('datePublished'));
         }
         $yearMonth = explode('-', $publicationDate);
         $article['bibjson']['year'] = $yearMonth[0];
@@ -134,8 +138,8 @@ class DOAJJsonFilter extends PKPImportExportFilter
          * "page numbers" are; for example, some journals (eg. JMIR)
          * use the "e-location ID" as the "page numbers" in PubMed
          */
-        $startPage = $pubObject->getStartingPage();
-        $endPage = $pubObject->getEndingPage();
+        $startPage = $publication->getStartingPage();
+        $endPage = $publication->getEndingPage();
         if (isset($startPage) && $startPage !== '') {
             $article['bibjson']['start_page'] = $startPage;
             $article['bibjson']['end_page'] = $endPage;
@@ -148,32 +152,35 @@ class DOAJJsonFilter extends PKPImportExportFilter
             'type' => 'fulltext',
             'content_type' => 'html'
         ];
-        // Authors: name and affiliation
+        // Authors: name, affiliation and ORCID
         $articleAuthors = $publication->getData('authors');
         if ($articleAuthors->isNotEmpty()) {
             $article['bibjson']['author'] = [];
 
             foreach ($articleAuthors as $articleAuthor) {
                 $author = ['name' => $articleAuthor->getFullName(false)];
-                $affiliation = $articleAuthor->getAffiliation($pubObject->getLocale());
+                $affiliation = $articleAuthor->getAffiliation($publicationLocale);
                 if (!empty($affiliation)) {
                     $author['affiliation'] = $affiliation;
+                }
+                if ($orcid = $articleAuthor->getData('orcid')) {
+                    $author['orcid_id'] = $orcid;
                 }
                 $article['bibjson']['author'][] = $author;
             }
         }
 
         // Abstract
-        $abstract = $pubObject->getAbstract($pubObject->getLocale());
+        $abstract = $publication->getData('abstract', $publicationLocale);
         if (!empty($abstract)) {
             $article['bibjson']['abstract'] = PKPString::html2text($abstract);
         }
         // Keywords
         /** @var SubmissionKeywordDAO */
         $dao = DAORegistry::getDAO('SubmissionKeywordDAO');
-        $keywords = $dao->getKeywords($publication->getId(), [$pubObject->getLocale()]);
-        $allowedNoOfKeywords = array_slice($keywords[$pubObject->getLocale()] ?? [], 0, 6);
-        if (!empty($keywords[$pubObject->getLocale()])) {
+        $keywords = $dao->getKeywords($publication->getId(), [$publicationLocale]);
+        $allowedNoOfKeywords = array_slice($keywords[$publicationLocale] ?? [], 0, 6);
+        if (!empty($keywords[$publicationLocale])) {
             $article['bibjson']['keywords'] = $allowedNoOfKeywords;
         }
 
