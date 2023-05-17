@@ -117,16 +117,14 @@ class IssueGalleyForm extends Form
             }
         }
 
-        if ($this->getData('urlPath')) {
+        if (strlen((string) $this->getData('urlPath'))) {
             if (ctype_digit((string) $this->getData('urlPath'))) {
                 $this->addError('urlPath', __('publication.urlPath.numberInvalid'));
                 $this->addErrorField('urlPath');
             } else {
                 $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */
                 $issueGalley = $issueGalleyDao->getByBestId($this->getData('urlPath'), $this->_issue->getId());
-                if ($issueGalley &&
-                    (!$this->_issueGalley || $this->_issueGalley->getId() !== $issueGalley->getId())
-                ) {
+                if ($issueGalley && $this->_issueGalley?->getId() !== $issueGalley->getId()) {
                     $this->addError('urlPath', __('publication.urlPath.duplicate'));
                     $this->addErrorField('urlPath');
                 }
@@ -203,7 +201,7 @@ class IssueGalleyForm extends Form
             $issueGalley->setLabel($this->getData('label'));
             $issueGalley->setStoredPubId('publisher-id', $this->getData('publicGalleyId'));
             $issueGalley->setLocale($this->getData('galleyLocale'));
-            $issueGalley->setData('urlPath', $this->getData('urlPath'));
+            $issueGalley->setData('urlPath', strlen($urlPath = (string) $this->getData('urlPath')) ? $urlPath : null);
 
             // Update galley in the db
             $issueGalleyDao->updateObject($issueGalley);

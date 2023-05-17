@@ -449,7 +449,7 @@ class ArticleGalleyGridHandler extends GridHandler
         $json = parent::fetchRow($args, $request);
         if ($row = $this->getRequestedRow($request, $args)) {
             $galley = $row->getData();
-            if ($galley->getRemoteUrl() == '' && !$galley->getData('submissionFileId')) {
+            if (!$galley->getRemoteUrl() && !$galley->getData('submissionFileId')) {
                 $json->setEvent('uploadFile', $galley->getId());
             }
         }

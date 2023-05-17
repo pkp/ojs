@@ -111,13 +111,13 @@ class ArticleGalleyForm extends Form
     public function validate($callHooks = true)
     {
         // Validate the urlPath
-        if ($this->getData('urlPath')) {
+        if (strlen((string) $this->getData('urlPath'))) {
             if (ctype_digit((string) $this->getData('urlPath'))) {
                 $this->addError('urlPath', __('publication.urlPath.numberInvalid'));
                 $this->addErrorField('urlPath');
             } else {
                 $existingGalley = Repo::galley()->getByUrlPath((string) $this->getData('urlPath'), $this->_publication);
-                if ($existingGalley && (!$this->_articleGalley || $this->_articleGalley->getId() !== $existingGalley->getId())) {
+                if ($existingGalley && $this->_articleGalley?->getId() !== $existingGalley->getId()) {
                     $this->addError('urlPath', __('publication.urlPath.duplicate'));
                     $this->addErrorField('urlPath');
                 }
@@ -170,35 +170,25 @@ class ArticleGalleyForm extends Form
      */
     public function execute(...$functionArgs)
     {
-        $articleGalley = $this->_articleGalley;
+        $data = [
+            'publicationId' => $this->_publication->getId(),
+            'label' => $this->getData('label'),
+            'locale' => $this->getData('locale'),
+            'urlPath' => strlen($urlPath = (string) $this->getData('urlPath')) ? $urlPath : null,
+            'urlRemote' => strlen($urlRemote = (string) $this->getData('urlRemote')) ? $urlRemote : null
+        ];
 
-        if ($articleGalley) {
+        if ($this->_articleGalley) {
             // Update galley in the db
-            $newData = [
-                'label' => $this->getData('label'),
-                'locale' => $this->getData('locale'),
-                'urlPath' => $this->getData('urlPath'),
-                'urlRemote' => $this->getData('urlRemote')
-            ];
-            Repo::galley()->edit($articleGalley, $newData);
+            Repo::galley()->edit($this->_articleGalley, $data);
+            $articleGalleyId = $this->_articleGalley->getId();
         } else {
             // Create a new galley
-            $articleGalley = Repo::galley()->newDataObject([
-                'publicationId' => $this->_publication->getId(),
-                'label' => $this->getData('label'),
-                'locale' => $this->getData('locale'),
-                'urlPath' => $this->getData('urlPath'),
-                'urlRemote' => $this->getData('urlRemote')
-            ]);
-
-
-            $galleyId = Repo::galley()->add($articleGalley);
-            $articleGalley = Repo::galley()->get($galleyId);
-            $this->_articleGalley = $articleGalley;
+            $articleGalleyId = Repo::galley()->add(Repo::galley()->newDataObject($data));
         }
 
         parent::execute(...$functionArgs);
 
-        return $articleGalley;
+        return $this->_articleGalley = Repo::galley()->get($articleGalleyId);
     }
 }

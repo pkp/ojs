@@ -671,9 +671,7 @@ class Issue extends \PKP\core\DataObject
      */
     public function getBestIssueId()
     {
-        return $this->getData('urlPath')
-            ? $this->getData('urlPath')
-            : $this->getId();
+        return strlen($urlPath = (string) $this->getData('urlPath')) ? $urlPath : $this->getId();
     }
 
     /**

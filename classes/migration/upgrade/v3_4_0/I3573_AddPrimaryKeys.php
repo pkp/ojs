@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/migration/upgrade/v3_4_0/I3573_AddPrimaryKeys.php.php
+ * @file classes/migration/upgrade/v3_4_0/I3573_AddPrimaryKeys.php
  *
  * Copyright (c) 2014-2023 Simon Fraser University
  * Copyright (c) 2000-2023 John Willinsky

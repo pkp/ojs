@@ -18,7 +18,6 @@ use APP\facades\Repo;
 use APP\file\IssueFileManager;
 use APP\file\PublicFileManager;
 use APP\journal\JournalDAO;
-use APP\publication\Publication;
 use Illuminate\Support\Collection;
 use PKP\context\Context;
 use PKP\db\DAORegistry;
@@ -61,7 +60,7 @@ class Repository
     }
 
     /** @copydoc DAO::exists() */
-    public function exists(int $id, int $journalId = null): bool
+    public function exists(int $id, ?int $journalId = null): bool
     {
         return $this->dao->exists($id, $journalId);
     }
@@ -69,7 +68,7 @@ class Repository
     /** @copydoc DAO::get()
      * TODO: Function signature should stick with ID, but previous DAO expected $useCache = false as default
      */
-    public function get(int $id, int $journalId = null): ?Issue
+    public function get(int $id, ?int $journalId = null): ?Issue
     {
         // TODO: Caching as currently setup never properly caches objects and always fires a _cacheMiss()
 //        if ($useCache) {
@@ -246,16 +245,11 @@ class Repository
      */
     public function getBySubmissionId(int $submissionId): ?Issue
     {
-        $submission = Repo::submission()->get($submissionId);
-
-        $publication = $submission->getCurrentPublication(); /** @var Publication $publication */
-        if (is_null($publication)) {
-            return null;
-        }
-
-        $issueId = $publication->getData('issueId');
-
-        return $issueId != null ? $this->get($issueId) : null;
+        $issueId = Repo::submission()
+            ->get($submissionId)
+            ?->getCurrentPublication()
+            ?->getData('issueId');
+        return $issueId ? $this->get($issueId) : null;
     }
 
     /**
@@ -264,17 +258,12 @@ class Repository
      *
      * @param bool $useCache TODO: Carryover from IssueDAO—was not in use
      */
-    public function getByBestId(string $idOrUrlPath, int $contextId = null, bool $useCache = false): ?Issue
+    public function getByBestId(string $idOrUrlPath, ?int $contextId = null, bool $useCache = false): ?Issue
     {
         // Get the issue that matches the requested urlPath (if $idOrUrlPath is one)
-        $issue = $this->getByUrlPath($idOrUrlPath, $contextId);
-
-        if (!$issue && (is_int($idOrUrlPath) || ctype_digit($idOrUrlPath))) {
-            $issue = $this->get((int) $idOrUrlPath);
-            $issue = (isset($issue) && $issue->getJournalId() == $contextId) ? $issue : null;
-        }
-
-        return $issue ?? null;
+        return ctype_digit((string) $idOrUrlPath)
+            ? $this->get((int) $idOrUrlPath, $contextId)
+            : $this->getByUrlPath($idOrUrlPath, $contextId);
     }
 
     /**
@@ -284,10 +273,7 @@ class Repository
     public function getByUrlPath(string $urlPath, int $contextId): ?Issue
     {
         $issueId = $this->dao->getIdByUrlPath($urlPath, $contextId);
-
-        return $issueId
-            ? $this->get($issueId)
-            : null;
+        return $issueId ? $this->get($issueId) : null;
     }
 
     /**
