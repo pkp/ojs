@@ -2,7 +2,7 @@
 # Mathias Vitalis <mathias.vitalis@u-bordeaux.fr>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-05-17 08:19+0000\n"
+"PO-Revision-Date: 2023-05-17 14:42+0000\n"
 "Last-Translator: Mathias Vitalis <mathias.vitalis@u-bordeaux.fr>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/admin/fr/>\n"
 "Language: fr\n"
@@ -17,3 +17,239 @@ msgstr "Revues hébergées"
 
 msgid "admin.settings.redirect"
 msgstr "Redirection vers une revue"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Les requêtes envoyées au site principal seront redirigées vers ce journal. "
+"Cela peut être utile si le site n'héberge qu'une seule revue, par exemple."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Êtes-vous certain de vouloir désactiver cette langue ? Cela pourrait "
+"affecter toute revue utilisant actuellement cette langue."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+"Cette langue sera la langue par défaut de la plateforme et de toutes les "
+"revues hébergées."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Les langues sélectionnées peuvent être incomplètes."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Êtes-vous sûr de vouloir désinstaller cette langue ? Ceci affectera toute "
+"revue hébergée utilisant actuellement cette langue."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Sélectionner toute langue supplémentaire pour la prise en charge sur ce "
+"système. Les langues doivent être installées avant qu'elles ne puissent être "
+"utilisées par les revues hébergés. Voir la documentation d'OJS pour plus de "
+"renseignements sur la prise en charge de nouvelles langues."
+
+msgid "admin.systemConfiguration"
+msgstr "Configuration d'OJS"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Paramètres de configuration OJS depuis <tt>config.inc.php</tt>."
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Vous serez automatiquement inscrit comme gestionnaire de cette revue. Après "
+"avoir créé un nouveau journal, vous serez redirigé vers son assistant de "
+"configuration pour terminer la configuration initiale du journal."
+
+msgid "admin.journals.journalSettings"
+msgstr "Paramètres de la revue"
+
+msgid "admin.journals.noneCreated"
+msgstr "Aucune revue n'a été créée."
+
+msgid "admin.contexts.create"
+msgstr "Créer une revue"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Cela doit être un mot court ou un acronyme qui identifie la revue. L'URL de "
+"la revue sera {$sampleUrl}."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Un titre est obligatoire."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Un chemin est obligatoire."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Le chemin d'accès ne peut contenir que des caractères alphanumériques, des "
+"caractères _ ou tirets - , et doit commencer et finir par un caractère "
+"alphanumérique."
+
+msgid "admin.systemVersion"
+msgstr "Version d'OJS"
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Le chemin d'accès est déjà utilisé par une autre revue."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr ""
+"Le paramètre régional principal doit être l'un des paramètres régionaux pris "
+"en charge par la revue."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Permettre à cette revue d'apparaître publiquement sur le site"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Description de la revue"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+"Chemin d'accès au journal existant ou chemin à créer (par exemple, \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Importer des abonnements"
+
+#, fuzzy
+msgid "admin.journals.transcode"
+msgstr "Transcoder les métadonnées de l'article à partir de l'ISO8859-1"
+
+#, fuzzy
+msgid "admin.journals.redirect"
+msgstr "Générer le code pour mapper les URL OJS 1 aux URL OJS 2"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Le chemin d'import est requis."
+
+msgid "admin.journals.importErrors"
+msgstr "L'import a échoué"
+
+msgid "admin.mergeUsers"
+msgstr "Fusionner les utilisateurs"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Fusionner l'utilisateur"
+
+#, fuzzy
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Sélectionnez un utilisateur à qui attribuer les paramètres de l'utilisateur "
+"précédent, les affectations d'édition, etc."
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Sélectionnez un utilisateur (ou plusieurs) à fusionner avec un autre compte "
+"utilisateur (par exemple, lorsque quelqu'un a deux comptes utilisateur). Le "
+"ou les comptes sélectionnés en premier seront supprimés et toutes les "
+"soumissions, éditions, etc. seront attribués au deuxième compte."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Tous les utilisateurs inscrits"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Voulez-vous vraiment fusionner les {$oldAccountCount} compte(s) avec le "
+"compte ayant le nom d'utilisateur ou d'utilisatrice « {$newUsername} » ? Les "
+"{$oldAccountCount} compte(s) n'existeront plus par la suite. Cette action "
+"est irréversible."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Aucun utilisateur inscrit."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Rappel d'expiration de l'abonnement"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Notification Open Access"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Rappel d'évaluation"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr "L'identifiant de l'épreuve n'est pas un entier."
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "L'identifiant du numéro ne correspond à l'identifiant associé."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"Un gestionnaire de revue ne pourra pas envoyer d'e-mails en masse à l'un des "
+"rôles sélectionnés ci-dessous. Utilisez ce paramètre pour limiter les abus "
+"de la fonction de notification par e-mail. Par exemple, il peut être plus "
+"sûr de désactiver les e-mails en masse aux lecteurs, auteurs ou autres "
+"groupes d'utilisateurs qui n'ont pas consenti à recevoir de tels e-"
+"mails.<br><br>La fonction d'e-mail en masse peut être complètement "
+"désactivée pour cette revue dans <a href=\"{$siteSettingsUrl}\">Admin > "
+"Paramètres du site</a>."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"La fonctionnalité d'e-mails en masse a été désactivée pour ce journal. "
+"Activez cette fonctionnalité dans <a href=\"{$siteSettingsUrl}\">Admin > "
+"Paramètres du site</a>."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"Ajoutez, modifiez ou supprimez des revues de ce site et gérez les paramètres "
+"du site."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr "L'identifiant du numéro n'est pas un entier."
+
+#, fuzzy
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+"Activez les statistiques institutionnelles si vous souhaitez que les revues "
+"de ce site puissent collecter des statistiques d'utilisation par "
+"institution. Les revues devront ajouter l'institution et ses plages "
+"d'adresses IP afin d'utiliser cette fonctionnalité. L'activation des "
+"statistiques institutionnelles peut augmenter considérablement la taille de "
+"votre base de données."
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""
+"Rendre ou non les points de terminaison de l'API SUSHI accessibles au public "
+"pour toutes les revues de ce site. Si vous activez l'API publique, chaque "
+"journal peut remplacer ce paramètre pour rendre ses statistiques privées. "
+"Cependant, si vous désactivez l'API publique, les revues ne peuvent pas "
+"rendre leur propre API publique."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Sélectionnez les revues hébergées qui doivent être autorisées à envoyer des "
+"e-mails en masse. Lorsque cette fonctionnalité est activée, un gestionnaire "
+"de revue pourra envoyer un e-mail à tous les utilisateurs enregistrés auprès "
+"de son journal.<br><br>L'utilisation abusive de cette fonctionnalité pour "
+"envoyer des e-mails non sollicités peut enfreindre les lois anti-spam et "
+"peut entraîner la déclaration de votre serveur comme étant spammeur. "
+"Demandez des conseils techniques avant d'activer cette fonctionnalité et "
+"envisagez de consulter les responsables de revue pour vous assurer qu'elle "
+"est utilisée de manière appropriée.<br><br>D'autres restrictions sur cette "
+"fonctionnalité peuvent être activées pour chaque revue en allant dans "
+"l'assistant de configuration des <a href= \"{$hostedContextsUrl}\">Journaux "
+"hébergés</a>."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Sélectionnez tous les paramètres régionaux à prendre en charge sur le site. "
+"Les paramètres régionaux sélectionnés seront disponibles pour être utilisés "
+"par toutes les revues hébergées sur le site, et apparaîtront également dans "
+"un menu de sélection de langue pour apparaître sur chaque page du site (qui "
+"peut être remplacé sur les pages spécifiques à la revue). Si plusieurs "
+"paramètres régionaux ne sont pas sélectionnés, le menu de choix de langue "
+"n'apparaîtra pas et les paramètres de langue étendus ne seront pas "
+"disponibles pour les revues."
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+"Sélectionnez le type de statistiques géographiques d'utilisation pouvant "
+"être collectées par les revues sur ce site. Des statistiques géographiques "
+"plus détaillées peuvent augmenter considérablement la taille de votre base "
+"de données et, dans de rares cas, peuvent porter atteinte à l'anonymat de "
+"vos visiteurs. Chaque revue peut configurer ce paramètre différemment, mais "
+"une revue ne peut jamais collecter des enregistrements plus détaillés que ce "
+"qui est configuré ici. Par exemple, si le site ne prend en charge que le "
+"pays et la région, la revue peut sélectionner le pays et la région ou "
+"uniquement le pays. La revue ne pourra pas tracer le pays, la région et la "
+"ville."
