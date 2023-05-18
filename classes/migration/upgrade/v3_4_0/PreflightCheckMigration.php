@@ -14,8 +14,6 @@
 
 namespace APP\migration\upgrade\v3_4_0;
 
-use Illuminate\Database\MySqlConnection;
-use Illuminate\Database\PostgresConnection;
 use Illuminate\Support\Facades\DB;
 
 class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightCheckMigration
@@ -117,21 +115,15 @@ class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightChe
                 DB::table('custom_section_orders')->where('section_id', '=', $sectionId)->delete();
             }
 
-            // Clean orphaned publications entries by primary_contact_id
-            switch (true) {
-                case DB::connection() instanceof MySqlConnection:
-                    DB::statement('UPDATE publications p LEFT JOIN authors a ON (p.primary_contact_id = a.author_id) SET p.primary_contact_id = NULL WHERE a.author_id IS NULL');
-                    break;
-                case DB::connection() instanceof PostgresConnection:
-                    DB::statement('UPDATE publications SET primary_contact_id = NULL WHERE publication_id IN (SELECT p.publication_id FROM publications p LEFT JOIN authors a ON (p.primary_contact_id = a.author_id) WHERE a.author_id IS NULL AND p.primary_contact_id IS NOT NULL)');
-                    break;
-                default: throw new \Exception('Unknown database connection type!');
-            }
-
             // Clean orphaned publication_galleys entries by publication_id
             $orphanedIds = DB::table('publication_galleys AS pg')->leftJoin('publications AS p', 'pg.publication_id', '=', 'p.publication_id')->whereNull('p.publication_id')->distinct()->pluck('pg.publication_id');
             foreach ($orphanedIds as $publicationId) {
                 DB::table('publication_galleys')->where('publication_id', '=', $publicationId)->delete();
+            }
+            // Clean orphaned publication_galleys entries by submission_file_id
+            $orphanedIds = DB::table('publication_galleys AS pg')->leftJoin('submission_files AS s', 'pg.submission_file_id', '=', 's.submission_file_id')->whereNotNull('pg.submission_file_id')->whereNull('s.submission_file_id')->distinct()->pluck('pg.submission_file_id');
+            foreach ($orphanedIds as $submissionFileId) {
+                DB::table('publication_galleys')->where('submission_file_id', '=', $submissionFileId)->delete();
             }
 
             // Clean orphaned publication_galley_settings entries
@@ -186,6 +178,13 @@ class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightChe
             $orphanedIds = DB::table('completed_payments AS cp')->leftJoin('users AS u', 'u.user_id', '=', 'cp.user_id')->whereNull('u.user_id')->distinct()->pluck('cp.user_id');
             foreach ($orphanedIds as $userId) {
                 DB::table('completed_payments')->where('user_id', '=', $userId)->delete();
+            }
+
+            // Clean orphaned publications.section_id
+            $orphanedIds = DB::table('publications AS n')->leftJoin('sections AS s', 'n.section_id', '=', 's.section_id')->whereNotNull('n.section_id')->whereNull('s.section_id')->distinct()->pluck('n.section_id');
+            foreach ($orphanedIds as $sectionId) {
+                $this->_installer->log("Clearing section ID from publications with section ID {$sectionId}");
+                DB::table('publications')->where('section_id', '=', $sectionId)->update(['section_id' => null]);
             }
         } catch (\Exception $e) {
             if ($fallbackVersion = $this->setFallbackVersion()) {
