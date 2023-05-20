@@ -4,11 +4,11 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:18-08:00\n"
-"PO-Revision-Date: 2023-02-06 12:48+0000\n"
+"PO-Revision-Date: 2023-05-10 06:08+0000\n"
 "Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
-"Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/emails/"
-"tr_TR/>\n"
-"Language: tr_TR\n"
+"Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/emails/tr/>"
+"\n"
+"Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -105,9 +105,8 @@ msgstr ""
 "Saygılarımızla,<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.issuePublishNotify.subject"
-msgstr "Yeni sayı yayımlandı: {$issueIdentification}"
+msgstr "{$contextName}'nin {$issueIdentification} sayısı yayımlandı"
 
 #, fuzzy
 msgid "emails.issuePublishNotify.body"
@@ -222,9 +221,8 @@ msgstr ""
 "<br />\n"
 "Öz: {$submissionAbstract}"
 
-#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
-msgstr "Gözden geçirilmiş bir aday makaleye hakemlik daveti"
+msgstr "Düzeltilmiş aday makaleye hakemlik daveti"
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
@@ -274,7 +272,6 @@ msgstr ""
 "gelinen noktada değerlendirmeye gerek kalmamıştır. Şu ana dek size "
 "verdiğimiz zahmetlerden dolayı teşekkür ederiz."
 
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
 msgstr "{$contextName} için hakemlik yapabilir misiniz?"
 
@@ -303,7 +300,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Hatırlatma: Lütfen değerlendirme sürecini tamamlayınız"
 
@@ -331,7 +327,6 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
 msgstr "Otomatik hatırlatma: Lütfen değerlendirme sürecini tamamlayınız"
 
@@ -381,7 +376,6 @@ msgstr "Aday makaleniz son kopya düzenleme için gönderildi"
 msgid "emails.editorDecisionSkipReview.body"
 msgstr ""
 
-#, fuzzy
 msgid "emails.layoutRequest.subject"
 msgstr "{$submissionId} numaralı makale {$contextAcronym} için yayına hazır"
 
@@ -401,7 +395,6 @@ msgstr ""
 "<br />\n"
 "Katkılarınız için teşekkür ederiz."
 
-#, fuzzy
 msgid "emails.layoutComplete.subject"
 msgstr "Prova dizgi tamamlandı"
 
@@ -461,9 +454,8 @@ msgstr ""
 "<br />\n"
 "{$subscriptionSignature}"
 
-#, fuzzy
 msgid "emails.openAccessNotify.subject"
-msgstr "Sayı Açık Erişime Açıldı"
+msgstr "{$contextName}'nin {$issueIdentification} sayısı açık erişime açıldı"
 
 msgid "emails.openAccessNotify.body"
 msgstr ""
@@ -537,7 +529,6 @@ msgstr ""
 "<br />\n"
 "{$subscriptionSignature}"
 
-#, fuzzy
 msgid "emails.subscriptionPurchaseIndl.subject"
 msgstr "Abonelik Satın Alma: Bireysel"
 
@@ -716,13 +707,15 @@ msgstr ""
 "oku."
 
 msgid "emails.paymentRequestNotification.subject"
-msgstr ""
+msgstr "Ödeme Talebi Bildirimi"
 
 msgid "emails.paymentRequestNotification.body"
 msgstr ""
 
 msgid "emails.paymentRequestNotification.footer"
 msgstr ""
+"<br><br>—<br>Bu mesaj <a href=\"{$contextUrl}\">{$contextName}</a> için "
+"otomatik olarak gönderilmiştir."
 
 #~ msgid "emails.submissionComment.subject"
 #~ msgstr "Başvuru ile ilgili yeni yorum"

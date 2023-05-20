@@ -3,13 +3,14 @@
 # William Costa Rodrigues <webmaster@antsoft.com.br>, 2022, 2023.
 # cicilia conceiçao de maria <ccmaria@uem.br>, 2022.
 # Danilo Silva <profdanilocsilva@outlook.com>, 2023.
+# Daniel Caixeta <daniel.caixeta@inep.gov.br>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2023-04-15 17:17+0000\n"
-"Last-Translator: Danilo Silva <profdanilocsilva@outlook.com>\n"
+"PO-Revision-Date: 2023-05-16 01:57+0000\n"
+"Last-Translator: Daniel Caixeta <daniel.caixeta@inep.gov.br>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "emails/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -678,10 +679,9 @@ msgstr ""
 "{$submissionTitle}, para {$contextName}. Agora que sua submissão foi aceita, "
 "gostaríamos de solicitar o pagamento da taxa de publicação.</p><p>Esta taxa "
 "cobre os custos de produção de trazer sua submissão para publicação. Para "
-"efetuar o pagamento, visite <a href="
-"\"{$queuedPaymentUrl}\">{$queuedPaymentUrl}.</p><p>Se tiver alguma dúvida, "
-"consulte nosso <a href=\"{$submissionGuidelinesUrl}\"> Diretrizes de "
-"Submissão</a></p>"
+"efetuar o pagamento, visite <a href=\"{$queuedPaymentUrl}\""
+">{$queuedPaymentUrl}</a>.</p><p>Se tiver alguma dúvida, consulte nosso <a "
+"href=\"{$submissionGuidelinesUrl}\">Diretrizes de Submissão</a></p>"
 
 msgid "emails.paymentRequestNotification.footer"
 msgstr ""
