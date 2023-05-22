@@ -1,11 +1,12 @@
 # Tom Granroth <tom.granroth@tsv.fi>, 2023.
+# Antti-Jussi Nygård <ajnyga@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
 "PO-Revision-Date: 2023-05-22 19:28+0000\n"
-"Last-Translator: Tom Granroth <tom.granroth@tsv.fi>\n"
+"Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
 "Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "fi/>\n"
 "Language: fi\n"
@@ -369,18 +370,23 @@ msgstr ""
 
 msgid "doi.submission.incorrectContext"
 msgstr ""
+"Käsikirjoitukselle {$pubObjectTitle}ei voitu luoda DOI-tunnusta. "
+"Käsikirjoitusta ei ole olemassa tässä julkaisussa."
 
 msgid "submission.layout.viewGalley"
-msgstr ""
+msgstr "Näytä julkaistava tiedosto"
 
 msgid "galley.cantEditPublished"
-msgstr ""
+msgstr "Julkaistavaa tiedostoa ei voi muokata koska se on jo julkaistu."
 
 msgid "submission.copyright.description"
-msgstr ""
+msgstr "Lue ja sisäistä tämän julkaisun tekijänoikeusehdot käsikirjoituksille."
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
+"Et voi lähettää käsikirjoitusta tähän julkaisuun, koska vain toimituskunta "
+"voi rekisteröidä uusia kirjoittajia. Jos arvioit tämän olevan virhe, otathan "
+"yhteyttä <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
@@ -391,12 +397,15 @@ msgstr ""
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
+"{$contextName} ei vastaanota käsikirjoituksia osastoon {$section}. Jos "
+"tarvitset apua käsikirjoituksesi kanssa, ota yhteyttä <a "
+"href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.sectionNotFound"
 msgstr "Osastoa tälle käsikirjoitukselle ei löytynyt."
 
 msgid "submission.sectionRestrictedToEditors"
-msgstr ""
+msgstr "Vain toimituskunta voi julkaista tässä osastossa."
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Vähintään yksi kirjoittaja vaaditaan."
