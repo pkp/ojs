@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
-"PO-Revision-Date: 2023-05-22 19:28+0000\n"
+"PO-Revision-Date: 2023-05-23 05:34+0000\n"
 "Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
 "Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/manager/fi/>"
 "\n"
@@ -312,11 +312,10 @@ msgstr "Tämän osaston toimittajat"
 msgid "manager.sections.confirmDelete"
 msgstr "Haluatko varmasti poistaa tämän osaston pysyvästi?"
 
-#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr ""
-"Ennen kuin tämä osasto voidaan poistaa, sinun on siirrettävä kyseisessä "
-"osastossa julkaistut artikkelit muihin osastoihin."
+"Ennen kuin tämä osasto voidaan poistaa, siihen sisältyvät artikkelit on "
+"siirrettävä muihin osastoihin."
 
 msgid "manager.sections.create"
 msgstr "Luo osasto"
@@ -563,11 +562,10 @@ msgstr "Sähköpostitunnistautuminen"
 msgid "manager.setup.emailSignature"
 msgstr "Allekirjoitus"
 
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
-"Valmiisiin sähköposteihin, jotka järjestelmä lähettää julkaisun puolesta, "
-"lisätään seuraava allekirjoitus."
+"Valmiisiin sähköposteihin, jotka järjestelmä lähettää automaattisesti "
+"julkaisun puolesta, lisätään seuraava allekirjoitus."
 
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Ota ilmoitukset käyttöön"
@@ -1044,15 +1042,10 @@ msgstr ""
 "Ota käyttöön automaattisesti arvioijan sisäänkirjaavat linkit "
 "arviointipyynnöissä"
 
-#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
-"<strong>Huom.</strong> Arvioijille lähetettävässä sähköpostikutsussa on "
-"erityinen URL-osoite, jonka kautta arvioijat pääsevät suoraan "
-"käsikirjoituksen arviointisivulle (muille sivuille pääsy vaatii "
-"sisäänkirjautumista). Tietoturvasyistä tämän valinnan kohdalla toimittajat "
-"eivät voi muokata sähköpostiosoitteita tai lisätä kopioita tai piilokopioita "
-"ennen viestin lähettämistä."
+"Arvioijille voidaan lähettää sähköpostikutsussa suojattu linkki, jota "
+"seuratessa kirjautuu sisään automaattisesti."
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr "Lisää turvallinen linkki arvioijille lähtevään kutsuun."
@@ -1540,10 +1533,10 @@ msgid "manager.subscriptions.form.typeIdValid"
 msgstr "Valitse kelvollinen tilausvaihtoehto."
 
 msgid "manager.subscriptions.form.institution"
-msgstr ""
+msgstr "Instituutio"
 
 msgid "manager.subscriptions.form.institutionIdValid"
-msgstr ""
+msgstr "Valitse kelvollinen instituutio."
 
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Alkamispäivämäärä"
@@ -1679,7 +1672,7 @@ msgid "manager.subscriptions.form.typeRequired"
 msgstr "Tilausvaihtoehto pitää luoda ennen kuin uusia tilauksia voidaan tehdä."
 
 msgid "manager.subscriptions.form.institutionRequired"
-msgstr ""
+msgstr "Instituutio on luotava, ennen kuin uusia tilauksia voidaan tehdä."
 
 msgid "manager.subscriptions.ipRange"
 msgstr "IP-osoitealue"
@@ -2075,55 +2068,63 @@ msgstr ""
 "asetuksissa."
 
 msgid "stats.contextStats"
-msgstr ""
+msgstr "Julkaisun tilastot"
 
 msgid "stats.context.tooltip.text"
-msgstr ""
+msgstr "Lehden etusivun kävijöiden määrä."
 
 msgid "stats.context.tooltip.label"
-msgstr ""
+msgstr "Tietoa julkaisun tilastoista"
 
 msgid "stats.context.downloadReport.description"
 msgstr ""
+"Lataa CSV/Excel-taulukko tämän lehden käyttötilastoista, jotka vastaavat "
+"seuraavia valintoja."
 
 msgid "stats.context.downloadReport.downloadContext.description"
-msgstr ""
+msgstr "Julkaisun etusivun katselukertojen määrä."
 
 msgid "stats.context.downloadReport.downloadContext"
-msgstr ""
+msgstr "Lataa julkaisu"
 
 msgid "stats.issueStats"
-msgstr ""
+msgstr "Numeroiden tilastot"
 
 msgid "stats.issues.details"
-msgstr ""
+msgstr "Katselukerrat ja lataukset"
 
 msgid "stats.issues.searchIssueDescription"
-msgstr ""
+msgstr "Hae numeron otsikko, vuosikerta ja numero"
 
 msgid "stats.issues.none"
-msgstr ""
+msgstr "Näitä valintoja vastaavien numeroiden käyttötilastoja ei löytynyt."
 
 msgid "stats.issues.downloadReport.description"
 msgstr ""
+"Lataa valintojen mukainen CSV/Excel-taulukko numeroiden käyttötilastoista."
 
 msgid "stats.issues.downloadReport.downloadIssues.description"
 msgstr ""
+"Kunkin numeron sisällysluetteloiden katselukerrat ja koko numeron "
+"sisältävien tiedostojen latausten määrä."
 
 msgid "stats.issues.downloadReport.downloadIssues"
-msgstr ""
+msgstr "Lataa numeroita"
 
 msgid "stats.issues.countOfTotal"
-msgstr ""
+msgstr "{$count} / {$total} numeroa"
 
 msgid "stats.issues.tooltip.label"
-msgstr ""
+msgstr "Tietoa numeroiden tilastoista"
 
 msgid "stats.issues.tooltip.text"
 msgstr ""
+"<strong>Katselukerrat</strong>: Numeron sisällysluetteloa katsoneiden "
+"kävijöiden määrä.<br><strong>Lataukset</strong>: Koko numeron sisältävän "
+"tiedoston latausten määrä, jos sellainen on olemassa."
 
 msgid "stats.publicationStats"
-msgstr "Artikkelitilastot"
+msgstr "Artikkeleiden tilastot"
 
 msgid "stats.publications.details"
 msgstr "Artikkelin tiedot"
@@ -2148,12 +2149,15 @@ msgstr "Tiedostot"
 
 msgid "stats.publications.downloadReport.description"
 msgstr ""
+"Lataa CSV/Excel-taulukko, jossa on käyttötilastoja seuraaviin valintoihin "
+"sopivista artikkeleista."
 
 msgid "stats.publications.downloadReport.downloadSubmissions"
-msgstr ""
+msgstr "Lataa artikkelit"
 
 msgid "stats.publications.downloadReport.downloadSubmissions.description"
 msgstr ""
+"Kunkin artikkelin abstraktien katselukertojen ja tiedostojen latausten määrä."
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
@@ -2178,25 +2182,25 @@ msgid "plugins.importexport.issueGalleys.exportFailed"
 msgstr "Numeroiden julkaistavia tiedostoja ei voitu lukea"
 
 msgid "emailTemplate.variable.context.contextName"
-msgstr ""
+msgstr "Julkaisun nimi"
 
 msgid "emailTemplate.variable.context.contextUrl"
-msgstr ""
+msgstr "URL-osoite julkaisun kotisivulle"
 
 msgid "emailTemplate.variable.context.contactName"
-msgstr ""
+msgstr "Julkaisun ensisijaisen yhteyshenkilön nimi"
 
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr ""
+msgstr "Julkaisun alkukirjaimet"
 
 msgid "emailTemplate.variable.context.contextSignature"
-msgstr ""
+msgstr "Julkaisun allekirjoitus automaattisia sähköpostiviestejä varten"
 
 msgid "emailTemplate.variable.context.contactEmail"
-msgstr ""
+msgstr "Julkaisun ensisijaisen yhteyshenkilön sähköpostiosoite"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "Julkaisun postiosoite"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr ""
@@ -2624,3 +2628,15 @@ msgstr ""
 
 #~ msgid "doi.manager.settings.enablePublicationDoi"
 #~ msgstr "Artikkelit"
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "Numeron julkaistavaa tiedostoa ei voitu tuoda, koska tiedosto puuttuu."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"Numeron julkaistavaa tiedostoa {$id} ei voitu viedä, koska tiedostoa ei "
+"löytynyt polusta \"{$path}\"."
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"Numeron {$id} kansikuvaa ei viety, tiedostoa ei löytynyt polusta \"{$path}\"."
