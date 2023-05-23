@@ -647,23 +647,6 @@ msgstr ""
 "<br />\n"
 "Tilauksen URL: {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Viittausten muokkaus"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"Hyvä {$recipientName},<br />\n"
-"<br />\n"
-"Voisitteko ystävällisesti vahvistaa seuraavan artikkelissanne "
-"{$submissionTitle} olevan lähdeviitteen tai antaa oikean viittauksen:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"Kiitos!<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"Tekninen toimittaja, {$contextName}<br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Korjattu versio on ladattu"
 

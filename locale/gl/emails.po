@@ -637,23 +637,6 @@ msgstr ""
 "<br />\n"
 "URL da subscrición: {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Edición de citacións"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"Pregámoslle que verifique ou nos proporcione a citatación correcta para a "
-"seguinte referencia incluída no seu artigo, {$submissionTitle}?:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"Grazas!<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"Corrector/a, {$contextName}<br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Versión revisada cargada"
 

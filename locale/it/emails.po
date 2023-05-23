@@ -642,23 +642,6 @@ msgstr ""
 "Per vedere o modificare i dettagli, andare alla pagina: {$subscriptionUrl}"
 "<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Richiesta di verifica delle citazioni"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"Gentile {$recipientName},<br />\n"
-"<br />\n"
-"Ti chiedo la cortesia di verificare la correttezza delle citazioni contenute "
-"nell'articolo {$submissionTitle}:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"Grazie,<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"Copy-Editor, {$contextName}<br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Caricamento di versione revisionata"
 

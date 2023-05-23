@@ -664,23 +664,6 @@ msgstr ""
 "<br />\n"
 "Σύνδεσμος συνδρομής: {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Επεξεργασία παραπομπής"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"Θα σας παρακαλούσαμε να επιβεβαιώσετε ή να μας παρέχετε τα ακριβή στοιχεία "
-"για την παρακάτω παραπομπή του άρθρου σας, {$submissionTitle}:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"Σας ευχαριστούμε πολύ!<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"Επιμελητής Κειμένου, {$contextName}<br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Μεταφόρτωση αναθεωρημένης έκδοσης"
 

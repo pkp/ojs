@@ -592,23 +592,6 @@ msgstr ""
 "<br />\n"
 "订阅URL: {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "引文编辑"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"对于下面的在您文章里列出的参考文献，请您验证并提供给我们正确的引用, "
-"{$submissionTitle}:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"谢谢!<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"Copy-Editor, {$contextName}"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "修订版上传"
 

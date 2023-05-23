@@ -91,9 +91,6 @@ msgstr "Abonnementerneuerung: Individuell"
 msgid "emails.subscriptionRenewInstl.subject"
 msgstr "Abonnementerneuerung: Institutionell"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Zitationsbearbeitung"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Überarbeitete Version hochgeladen"
 

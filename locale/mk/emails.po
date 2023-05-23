@@ -593,23 +593,6 @@ msgstr ""
 "<br />\n"
 "URL-адреса на претплата: {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Уредување на цитат"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"{$recipientName},<br/>\n"
-"<br/>\n"
-"Ве молам доколку можете да го потврдите или да обезбедите адекватен цитат за "
-"следната референца во вашиот труд, {$submissionTitle}:<br />\n"
-"<br/>\n"
-"{$rawCitation}<br/>\n"
-"<br/>\n"
-"Благодарам!<br/>\n"
-"<br/>\n"
-"{$senderName}<br/>\n"
-"Уредник, {$contextName}<br/>\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Прикачена корегирана верзија"
 

@@ -661,23 +661,6 @@ msgstr ""
 "<br />\n"
 "Жазылым URL: {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Библиографиялық сілтемелерді өңдеу"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"Сәлем {$recipientName}!<br />\n"
-"<br />\n"
-"Бізге «{$submissionTitle}» мақаласынан келесі сілтеме бойынша дұрыс "
-"библиографиялық сілтемені тексеріңіз немесе жіберіңіз:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"Алдын ала рахмет!<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"«{$contextName}» журналының әдеби редакторы<br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Түзетілген нұсқасы жүктелді"
 

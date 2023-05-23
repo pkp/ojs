@@ -817,25 +817,6 @@ msgstr ""
 "<br />\n"
 "सदस्यता URL: {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "प्रशस्ति संपादन"
-
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"क्या आप कृपया अपने लेख, {$submissionTitle} से निम्न संदर्भ के लिए उचित उद्धरण के साथ हमें "
-"सत्यापित या प्रदान कर सकते हैं।:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"धन्यवाद!<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"कॉपी संपादक, {$contextName}<br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "संशोधित संस्करण अपलोड किया गया"
 

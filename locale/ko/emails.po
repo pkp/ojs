@@ -194,12 +194,6 @@ msgstr ""
 msgid "emails.subscriptionRenewInstl.body"
 msgstr ""
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr ""
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr ""
 

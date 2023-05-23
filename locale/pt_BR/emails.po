@@ -602,23 +602,6 @@ msgstr ""
 "<br />\n"
 "URL da Assinatura: {$subscriptionUrl} <br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Edição de citação"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"Prezado(a) {$recipientName}, <br />\n"
-"<br />\n"
-"Você poderia verificar ou fornecer a citação adequada para a seguinte "
-"referência do seu artigo, {$submitTitle}: <br />\n"
-"<br />\n"
-"{$rawCitation} <br />\n"
-"<br />\n"
-"Obrigado! <br />\n"
-"<br />\n"
-"{$senderName} <br />\n"
-"Editor de Texto, {$contextName} <br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Envio de versão atualizada"
 

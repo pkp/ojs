@@ -633,23 +633,6 @@ msgstr ""
 "<br />\n"
 "URL thuê bao: {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Chỉnh sửa trích dẫn"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"Kính gửi {$recipientName},<br />\n"
-"<br />\n"
-"Bạn có thể vui lòng xác minh hoặc cung cấp cho chúng tôi trích dẫn thích hợp "
-"cho tham khảo sau từ bài viết của bạn,{$submissionTitle}:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"Trân trọng<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"Copy-Editor, {$contextName}<br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Tải lên bản sửa chữa"
 

@@ -606,20 +606,6 @@ msgstr ""
 "<br />\n"
 "URL de l'abonnement : {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Modification des références bibliographiques"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"<p>Bonjour {$recipientName},</p>\n"
-"<p>Pourriez-vous vérifier ou nous fournir la référence bibliographique "
-"complète pour la référence suivante, provenant de votre article « "
-"{$submissionTitle} » :</p>\n"
-"<p>{$rawCitation}</p>\n"
-"<p>Merci!</p>\n"
-"<p>{$senderName}<br />\n"
-"Réviseur-e, revue {$contextName}</p>\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Version révisée téléversée"
 

@@ -626,23 +626,6 @@ msgstr ""
 "<br />\n"
 "Abonnement URL: {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Citatie redactie"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"Kunt u de juiste citatie van de volgende referentie uit uw artikel "
-"{$submissionTitle} verifiëren of verschaffen:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"Dank!<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"Tekstredacteur, {$contextName}<br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Herziene versie geladen"
 

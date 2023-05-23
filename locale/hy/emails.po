@@ -581,23 +581,6 @@ msgstr ""
 "<br />\n"
 "Բաժանորդագրության URL: {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Մեջբերումների խմբագրում"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"Կարող եք ստուգել կամ տրամադրել մեզ համապատասխան մեջբերում ձեր հոդվածից "
-"հետևյալ հղումների համար, {$submissionTitle}:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"Շնորհակալություն<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"Գրական խմբագիր, {$contextName}<br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Վերանայված տարբերակը վերբեռնվեց"
 

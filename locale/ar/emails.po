@@ -547,23 +547,6 @@ msgstr ""
 "<br />\n"
 "رابط الاشتراك: {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "تحرير إقتباس"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"لطفاً، هل بإمكانك التحقق من أو تزويدنا بالشكل الصحيح للاقتباس للمرجع المبين "
-"أدناه والمذكور في مؤلَّفك الموسوم {$submissionTitle}:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"مع الشكر!<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"المدقق، {$contextName}<br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "تم رفع نسخة منقحة"
 

@@ -609,23 +609,6 @@ msgstr ""
 "<br />\n"
 "آدرس اشتراک: <a href=\"{$subscriptionUrl}\">{$subscriptionUrl}</a>"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "ویرایش ارجاع"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"لطفا ارجاع صحیح برای رفرانس زیر از مقاله شما {$submissionTitle} را مشخص کنید "
-"و یا تایید نمائید:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"بت تشکر!<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"ویراستار, {$contextName}"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "آپلود نسخه اصلاح شده"
 

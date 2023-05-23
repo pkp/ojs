@@ -197,12 +197,6 @@ msgstr "訂閱更新：院校"
 msgid "emails.subscriptionRenewInstl.body"
 msgstr ""
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "引文編輯"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "已上載修正版本"
 

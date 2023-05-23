@@ -632,23 +632,6 @@ msgstr ""
 "<br />\n"
 "Adresa URL a abonamentului: {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Editarea citării"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"Vă rugăm să verificați sau să ne furnizați citarea corespunzătoare pentru "
-"următoarea referință din articolul dvs., {$submissionTitle}:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"Mulțumesc!<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"Editor de conținut, {$contextName}<br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Versiunea revizuită a fost încărcată"
 

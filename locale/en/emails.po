@@ -536,23 +536,6 @@ msgstr ""
 "Subscription URL: {$subscriptionUrl}<br />\n"
 ""
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Citation Editing"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"Could you please verify or provide us with the proper citation for the following reference from your article, {$submissionTitle}:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"Thanks!<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"Copy-Editor, {$contextName}<br />\n"
-""
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Revised Version Uploaded"
 

@@ -638,23 +638,6 @@ msgstr ""
 "<br />\n"
 "Abonelik URL: {$subscriptionUrl}\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Atıf Düzenleme"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"Sayın {$recipientName},<br />\n"
-"<br />\n"
-"{$submissionTitle} başlıklı makale için aşağıdaki atıfın doğruluğunu ve son "
-"düzenlemelesini sağlayınız:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"Teşekkürler!<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"Kopya Editör, {$contextName}\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Düzeltilmiş Sürüm Yüklendi"
 
