@@ -252,7 +252,7 @@ class IR extends CounterR5Report
         foreach ($resultsGroupedBySubmission as $submissionId => $submissionResults) {
             // Get the submission properties
             $submission = Repo::submission()->get($submissionId);
-            if (!$submission) {
+            if (!$submission || !$submission->getOriginalPublication()) {
                 break;
             }
             $currentPublication = $submission->getCurrentPublication();
