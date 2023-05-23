@@ -112,7 +112,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
             }
         }
 
-        $temporaryFileId = $exportPlugin->exportAsDownload($context, $items, 'articles', null, $xmlErrors);
+        $temporaryFileId = $exportPlugin->exportAsDownload($context, $items, null, $xmlErrors);
         return ['temporaryFileId' => $temporaryFileId, 'xmlErrors' => $xmlErrors];
     }
 
@@ -133,7 +133,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
             }
         }
 
-        $status = $exportPlugin->exportAndDeposit($context, $items, 'articles', $responseMessage);
+        $status = $exportPlugin->exportAndDeposit($context, $items, $responseMessage);
         return [
             'hasErrors' => !$status,
             'responseMessage' => $responseMessage
@@ -149,7 +149,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         $exportPlugin = $this->_getExportPlugin();
         $xmlErrors = [];
 
-        $temporaryFileId = $exportPlugin->exportAsDownload($context, $issues, 'issues', null, $xmlErrors);
+        $temporaryFileId = $exportPlugin->exportAsDownload($context, $issues, null, $xmlErrors);
         return ['temporaryFileId' => $temporaryFileId, 'xmlErrors' => $xmlErrors];
     }
 
@@ -163,7 +163,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         $responseMessage = '';
 
 
-        $status = $exportPlugin->exportAndDeposit($context, $issues, 'issues', $responseMessage);
+        $status = $exportPlugin->exportAndDeposit($context, $issues, $responseMessage);
         return [
             'hasErrors' => !$status,
             'responseMessage' => $responseMessage
