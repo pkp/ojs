@@ -115,66 +115,64 @@ msgid "emails.editorAssign.subject"
 msgstr ""
 "Sinut on osoitettu toimittajaksi käsikirjoitukseen julkaisussa {$contextName}"
 
-#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
-"Hyvä {$recipientName},<br />\n"
-"<br />\n"
-"Käsikirjoitus &quot;{$submissionTitle},&quot; julkaisuun {$contextName} on "
-"annettu toimitusprosessin ajaksi teidän vastuullenne osastotoimittajan "
-"roolissanne.<br />\n"
-"<br />\n"
-"Käsikirjoituksen URL: {$submissionUrl}<br />\n"
-"Käyttäjätunnus: {$recipientUsername}<br />\n"
-"<br />\n"
-"Ystävällisin terveisin."
+"<p>Hyvä {$recipientName},</p><p>Seuraava käsikirjoitus on osoitettu sinulle "
+"toimitustyötä varten.</p><p><a href=\"{$submissionUrl}\">{$submissionTitle}</"
+"a><br />{$authors}</p><p><b>Abstract</b></p>{$submissionAbstract}<p>Jos olet "
+"sitä mieltä, että käsikirjoitus on sopiva julkaisuun {$contextName}, lähetä "
+"käsikirjoitus eteenpäin arviointivaiheeseen valitsemalla \"Lähetä "
+"arvioitavaksi\" ja osoita sitten arvioijat valitsemalla \"Lisää arvioija\".</"
+"p><p>Jos käsikirjoitus ei mielestäsi sovi tähän julkaisuun, ole hyvä ja "
+"hylkää se.</p><p>Kiitos jo etukäteen.</p><p>Ystävällisin terveisin,</"
+"p>{$contextSignature}"
 
 msgid "emails.editorAssignReview.body"
 msgstr ""
+"<p>Hyvä {$recipientName},</p><p>Seuraava käsikirjoitus on osoitettu sinulle "
+"toimitustyötä varten.</p><p><a href=\"{$submissionUrl}\">{$submissionTitle}</"
+"a><br />{$authors}</p><p><b>Abstract</b></p>{$submissionAbstract}<p>Ole hyvä "
+"ja <a href=\"{$submissionUrl}\">kirjaudu sisään nähdäksesi käsikirjoituksen</"
+"a> ja osoita sille sopivat arvioijat. Voit osoittaa arvioijat valitsemalla "
+"\"Lisää arvioija\".</p><p>Kiitos jo etukäteen.</p><p>Ystävällisin terveisin,"
+"</p>{$signature}"
 
 msgid "emails.editorAssignProduction.body"
 msgstr ""
+"<p>Hyvä {$recipientName},</p><p>Seuraava käsikirjoitus on osoitettu sinulle "
+"tuotantovaiheen läpivientiä varten.</p><p><a href="
+"\"{$submissionUrl}\">{$submissionTitle}</a><br />{$authors}</"
+"p><p><b>Abstract</b></p>{$submissionAbstract}<p>Ole hyvä ja <a href="
+"\"{$submissionUrl}\">kirjaudu sisään nähdäksesi käsikirjoituksen</a>. Kun "
+"tuotantovalmiit tiedostot ovat käytettävissä, lataa ne kohtaan "
+"<strong>Julkaiseminen > Julkaistavat tiedostot</strong>. Ajoita "
+"käsikirjoitus julkaistavaksi valitasemalla <strong>Ajoita julkaistavaksi</"
+"strong> -painiketta.</p><p>Kiitos jo etukäteen.</p><p>Ystävällisin terveisin,"
+"</p>{$signature}"
 
-#, fuzzy
 msgid "emails.reviewRequest.subject"
-msgstr "Artikkelin arviointipyyntö"
+msgstr "Arviointipyyntö"
 
-#, fuzzy
 msgid "emails.reviewRequest.body"
 msgstr ""
-"Hyvä {$recipientName},<br />\n"
-"<br />\n"
-"Uskon, että olisitte sopiva arvioija käsikirjoitukselle &quot;"
-"{$submissionTitle}&quot;, joka on lähetetty {$contextName} -julkaisuun. "
-"Käsikirjoituksen tiivistelmä löytyy tämän viestin lopusta. Toivon, että "
-"harkitsette tähän meille tärkeään tehtävään ryhtymistä.<br />\n"
-"<br />\n"
-"Kirjautukaa julkaisun verkkosivustolle {$responseDueDate} mennessä "
-"ilmoittaaksenne haluatteko suorittaa arvioinnin vai ette. Teidän on "
-"kirjauduttava verkkosivustolle myös, jotta saatte pääsyn käsikirjoitukseen "
-"ja voitte tallentaa arviointinne ja suosituksenne. Sivusto on osoitteessa "
-"{$contextUrl}<br />\n"
-"<br />\n"
-"Arvioinnin määräpäivä on {$reviewDueDate}.<br />\n"
-"<br />\n"
-"Jos ette muista käyttäjätunnustanne ja salasanaanne julkaisun "
-"verkkosivustolle, klikatkaa seuraavaa linkkiä vaihtaaksenne salasanan "
-"(salasana ja käyttäjätunnus lähetetään teille sähköpostitse). "
-"{$passwordLostUrl}<br />\n"
-"<br />\n"
-"Käsikirjoituksen URL: {$reviewAssignmentUrl}<br />\n"
-"<br />\n"
-"Kiitos, että harkitsette arvioijaksi ryhtymistä.<br />\n"
-"<br />\n"
-"{$signature}<br />\n"
-"<br />\n"
-"&quot;{$submissionTitle}&quot;<br />\n"
-"<br />\n"
-"{$submissionAbstract}"
+"<p>Hyvä {$recipientName},</p><p>Uskon, että olisitte sopiva arvioija "
+"käsikirjoitukselle, joka on lähetetty {$contextName} -julkaisuun. "
+"Käsikirjoituksen otsikko ja tiivistelmä löytyy tämän viestin lopusta. "
+"Toivon, että harkitsette tähän meille tärkeään työhön ryhtymistä.</p><p>Jos "
+"pystytte arvioimaan tämän käsikirjoituksen, arvio on palautettava "
+"{$reviewDueDate} mennessä. Voitte tarkastella käsikirjoitusta, lisätä "
+"arviointitiedostoja ja lähettää arvion kirjautumalla julkaisun sivustolle ja "
+"seuraamalla alla olevan linkin takaa löytyviä ohjeita.</p><p><a href="
+"\"{$reviewAssignmentUrl}\">{$submissionTitle}</a></p><p><b>Abstrakti</b></"
+"p>{$submissionAbstract}<p>Olkaa hyvä ja <a href="
+"\"{$reviewAssignmentUrl}\">hyväksykää tai hylätkää</a> arviointipyyntö "
+"<b>{$responseDueDate}</b> mennessä.</p><p>Voitte ottaa minuun yhteyttä, jos "
+"teillä on kysyttävää käsikirjoituksesta tai arviointiprosessista.</p>Kiitos, "
+"että harkitsette tätä arviointipyyntöä.</p><p>Ystävällisin terveisin,</"
+"p>{$signature}"
 
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
-msgstr "Artikkelin arviointipyynnön muistutus"
+msgstr "Pystyttekö arvioimaan tämän käsikirjoituksen meille?"
 
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
@@ -212,9 +210,8 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
-msgstr "Artikkelin arviointipyyntö"
+msgstr "Korjatun käsikirjoituksen arviointipyyntö"
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
@@ -267,9 +264,8 @@ msgstr ""
 "<br />\n"
 "Mikäli teillä on kysyttävää, otattehan yhteyttä minuun."
 
-#, fuzzy
 msgid "emails.reviewReinstate.subject"
-msgstr "Arviointipyyntö uusittu"
+msgstr "Voitteko vielä arvioida julkaisulle {$contextName}?"
 
 #, fuzzy
 msgid "emails.reviewReinstate.body"
@@ -296,7 +292,6 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-#, fuzzy
 msgid "emails.reviewRemind.subject"
 msgstr "Muistutus käsikirjoituksen arvioinnista"
 
@@ -322,9 +317,8 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
-msgstr "Automaattinen muistutus käsikirjoituksen arvioinnista"
+msgstr "Muistutus käsikirjoituksen arvioinnista"
 
 #, fuzzy
 msgid "emails.reviewRemindAuto.body"
@@ -349,9 +343,8 @@ msgstr ""
 "<br />\n"
 "{$contextSignature}"
 
-#, fuzzy
 msgid "emails.editorDecisionAccept.subject"
-msgstr "Toimittajan päätös"
+msgstr "Käsikirjoituksesi on hyväksytty julkaisussa {$contextName}"
 
 #, fuzzy
 msgid "emails.editorDecisionAccept.body"
@@ -364,14 +357,13 @@ msgstr ""
 "Päätöksemme on: Käsikirjoitus on hyväksytty"
 
 msgid "emails.editorDecisionSkipReview.subject"
-msgstr ""
+msgstr "Käsikirjoituksesi on lähetetty tekniseen toimitukseen"
 
 msgid "emails.editorDecisionSkipReview.body"
 msgstr ""
 
-#, fuzzy
 msgid "emails.layoutRequest.subject"
-msgstr "Julkaistavia tiedostoja pyydetään"
+msgstr "Käsikirjoitus {$submissionId}/{$contextAcronym} on valmiina tuotantoon"
 
 #, fuzzy
 msgid "emails.layoutRequest.body"
@@ -396,7 +388,6 @@ msgstr ""
 "kysyttävää, otattehan minuun yhteyttä. Kiitos panoksestanne tämän julkaisun "
 "hyväksi."
 
-#, fuzzy
 msgid "emails.layoutComplete.subject"
 msgstr "Julkaistavat tiedostot valmiita"
 
@@ -458,9 +449,10 @@ msgstr ""
 "<br />\n"
 "{$subscriptionSignature}"
 
-#, fuzzy
 msgid "emails.openAccessNotify.subject"
-msgstr "Numero nyt avoimesti saatavilla"
+msgstr ""
+"Vapaasti luettavissa: {$issueIdentification} julkaisussa {$contextName} on "
+"nyt avoimesti saatavilla"
 
 msgid "emails.openAccessNotify.body"
 msgstr ""
@@ -696,13 +688,15 @@ msgstr ""
 "ilmoituksen</a>."
 
 msgid "emails.paymentRequestNotification.subject"
-msgstr ""
+msgstr "Ilmoitus maksupyynnöstä"
 
 msgid "emails.paymentRequestNotification.body"
 msgstr ""
 
 msgid "emails.paymentRequestNotification.footer"
 msgstr ""
+"<br><br>—<br>Tämä on automaattinen viesti, jonka lähettäjä on <a href="
+"\"{$contextUrl}\">{$contextName}</a>."
 
 msgid "emails.citationEditorAuthorQuery.subject"
 msgstr "Viittausten muokkaus"
