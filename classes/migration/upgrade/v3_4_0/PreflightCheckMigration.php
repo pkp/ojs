@@ -14,6 +14,9 @@
 
 namespace APP\migration\upgrade\v3_4_0;
 
+use Illuminate\Database\Query\Builder;
+use Illuminate\Support\Facades\DB;
+
 class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightCheckMigration
 {
     protected function getContextTable(): string
@@ -48,7 +51,27 @@ class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightChe
             $affectedRows = 0;
             // Depends directly on ~4 entities: primary_contact_id->authors.author_id doi_id->dois.doi_id(not found in previous version) section_id->sections.section_id submission_id->submissions.submission_id
             // Custom field (not found in at least one of the softwares)
-            $affectedRows += $this->cleanOptionalReference('publications', 'section_id', 'sections', 'section_id');
+
+            // Attempts to recover the field publications.section_id before discarding the entry
+            $rows = DB::table('publications AS p')
+                ->leftJoin('sections AS s', 's.section_id', '=', 'p.section_id')
+                ->join('submissions AS sub', 'sub.submission_id', '=', 'p.submission_id')
+                ->whereNull('s.section_id')
+                ->select('p.submission_id', 'p.publication_id', 'p.section_id')
+                ->selectSub(
+                    fn (Builder $q) => $q
+                        ->from('sections AS s')
+                        ->where('s.is_inactive', '=', 0)
+                        ->whereColumn('s.journal_id', '=', 'sub.context_id')
+                        ->selectRaw('MIN(s.section_id)'),
+                    'new_section_id'
+                )
+                ->get();
+            foreach ($rows as $row) {
+                $this->_installer->log("The publication ID ({$row->publication_id}) for the submission ID {$row->submission_id} is assigned to an invalid section ID \"{$row->section_id}\", its section will be updated to {$row->new_section_id}");
+                $affectedRows += DB::table('publications')->where('publication_id', '=', $row->publication_id)->update(['section_id' => $row->new_section_id]);
+            }
+            $affectedRows += $this->deleteOptionalReference('publications', 'section_id', 'sections', 'section_id');
             // Remaining cleanups are inherited
             return $affectedRows;
         });
