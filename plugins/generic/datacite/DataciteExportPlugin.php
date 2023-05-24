@@ -137,7 +137,6 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
     public function exportAndDeposit(
         Context $context,
         array $objects,
-        string $objectsFileNamePart,
         string &$responseMessage,
         ?bool $noValidation = null
     ): bool {
@@ -151,7 +150,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
             $exportXml = $this->exportXML($object, $filter, $context, $noValidation, $exportErrors);
             // Write the XML to a file.
             // export file name example: datacite-20160723-160036-articles-1-1.xml
-            $objectFileNamePart = $objectsFileNamePart . '-' . $object->getId();
+            $objectFileNamePart = $this->_getObjectFileNamePart($object);
             $exportFileName = $this->getExportFileName($this->getExportPath(), $objectFileNamePart, $context, '.xml');
             $fileManager->writeFile($exportFileName, $exportXml);
             // Deposit the XML file.
@@ -186,7 +185,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
      *
      * @throws Exception
      */
-    public function exportAsDownload(Context $context, array $objects, string $objectsFileNamePart, ?bool $noValidation = null, ?array &$outputErrors = null): ?int
+    public function exportAsDownload(Context $context, array $objects, ?bool $noValidation = null, ?array &$outputErrors = null): ?int
     {
         $fileManager = new TemporaryFileManager();
 
@@ -200,7 +199,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
                 $exportXml = $this->exportXML($object, $filter, $context, $noValidation, $outputErrors);
                 // Write the XML to a file.
                 // export file name example: datacite-20160723-160036-articles-1-1.xml
-                $objectFileNamePart = $objectsFileNamePart . '-' . $object->getId();
+                $objectFileNamePart = $this->_getObjectFileNamePart($object);
                 $exportFileName = $this->getExportFileName(
                     $this->getExportPath(),
                     $objectFileNamePart,
@@ -430,6 +429,23 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
             return $this->getIssueFilter();
         } elseif ($object instanceof Representation) {
             return $this->getRepresentationFilter();
+        } else {
+            return '';
+        }
+    }
+
+    /**
+     * @param Submission|Issue|Representation $object
+     *
+     */
+    private function _getObjectFileNamePart(DataObject $object): string
+    {
+        if ($object instanceof Submission) {
+            return 'articles-' . $object->getId();
+        } elseif ($object instanceof Issue) {
+            return 'issues-' . $object->getId();
+        } elseif ($object instanceof Representation) {
+            return 'galleys-' . $object->getId();
         } else {
             return '';
         }
