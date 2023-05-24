@@ -631,22 +631,6 @@ msgstr ""
 "<br />\n"
 "Előfizetés URL címe: {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Idézettség szerkesztés"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"Tisztelt {$recipientName}!<br />\n"
-"<br />\n"
-"Kérjük, adja meg a megfelelő idézettség információt, vagy igazolja annak "
-"helyességét a(z) {$submissionTitle} cikkben szereplő hivatkozásához:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"Köszönettel,<br />\n"
-"{$senderName}<br />\n"
-"Technikai szerkesztő, {$contextName}<br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Átdolgozott változat feltöltve"
 

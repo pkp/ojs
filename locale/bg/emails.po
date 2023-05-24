@@ -584,23 +584,6 @@ msgstr ""
 "<br />\n"
 "URL за абонамент: {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Редактиране на библиография"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"Бихте ли могли да проверите или да ни предоставите подходящия цитат за "
-"следната справка от вашата статия, {$submissionTitle}:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"Благодаря!<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"Стилов редактор на {$contextName}<br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Качена е коригирана версия"
 

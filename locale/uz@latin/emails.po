@@ -587,23 +587,6 @@ msgstr ""
 "<br/>\n"
 "Obuna URL: {$subscriptionUrl} <br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Iqtibosni tahrirlash"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"{$recipientName}, <br />\n"
-"<br/>\n"
-"Iltimos, {$submissionTitle} maqolangizdan quyidagi havolani tasdiqlang yoki "
-"bizga to'g'ri havola bering: <br />\n"
-"<br/>\n"
-"{$rawCitation} <br />\n"
-"<br/>\n"
-"Rahmat! <br />\n"
-"<br/>\n"
-"{$senderName} <br />\n"
-"Nusxa tahrirchisi, {$contextName} <br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Yangilangan versiya yuklandi"
 

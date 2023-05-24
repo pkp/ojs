@@ -571,23 +571,6 @@ msgstr ""
 "<br />\n"
 "URL předplatného: {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Zpracování citací"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"Vážený(á) {$recipientName},<br />\n"
-"<br />\n"
-"Můžete, prosím, ověřit, nebo potvrdit správnou citaci pro následující "
-"referenci z vašeho článku {$submissionTitle}:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"Děkuji!<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"Redaktor {$contextName}<br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Byla nahrána upravená verze"
 

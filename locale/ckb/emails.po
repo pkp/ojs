@@ -609,23 +609,6 @@ msgstr ""
 "<br />\n"
 "لینکی بەشداریکردن: {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "گۆڕانکاریی گوتراوەکان"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"ئایا دەتوانیت پشتڕاستی بکەیتەوە یان زانیاری دەربارەی گوتراوەکانی ئەم "
-"سەرچاوەیە بخەیتە بەردەست؟ {$submissionTitle}:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"سوپاس!<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"وردبین، {$contextName}<br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "وەشانی دوای پێداچونەوە بار کرا"
 

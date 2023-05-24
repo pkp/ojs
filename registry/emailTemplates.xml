@@ -66,7 +66,6 @@
 	<email key="DISCUSSION_NOTIFICATION_COPYEDITING" name="mailable.discussionCopyediting.name" subject="emails.discussion.subject" body="emails.discussion.body"/>
 	<email key="DISCUSSION_NOTIFICATION_PRODUCTION" name="mailable.discussionProduction.name" subject="emails.discussion.subject" body="emails.discussion.body"/>
 	<email key="COPYEDIT_REQUEST" name="mailable.copyeditRequest.name" alternateTo="DISCUSSION_NOTIFICATION_COPYEDITING" subject="emails.copyeditRequest.subject" body="emails.copyeditRequest.body"/>
-	<email key="CITATION_EDITOR_AUTHOR_QUERY" name="mailable.citationAuthorQuery.name" alternateTo="DISCUSSION_NOTIFICATION_COPYEDITING" subject="emails.citationEditorAuthorQuery.subject" body="emails.citationEditorAuthorQuery.body"/>
 	<email key="EDITOR_ASSIGN_SUBMISSION" name="mailable.editorAssignedManual.name" alternateTo="DISCUSSION_NOTIFICATION_SUBMISSION" subject="emails.editorAssign.subject" body="emails.editorAssign.body"/>
 	<email key="EDITOR_ASSIGN_REVIEW" name="mailable.editorAssignedManual.name" alternateTo="DISCUSSION_NOTIFICATION_REVIEW" subject="emails.editorAssign.subject" body="emails.editorAssignReview.body"/>
 	<email key="EDITOR_ASSIGN_PRODUCTION" name="mailable.editorAssignedManual.name" alternateTo="DISCUSSION_NOTIFICATION_PRODUCTION" subject="emails.editorAssign.subject" body="emails.editorAssignProduction.body"/>

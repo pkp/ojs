@@ -598,23 +598,6 @@ msgstr ""
 "<br />\n"
 "Subscription URL: {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Urejanje citiranja"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"Ali lahko prosim preverite in nam sporočite pravilne citate za spodnjaj "
-"referencirano literaturo v vašem prispevku, {$submissionTitle}:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"Hvala lepa!<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"Lektor, {$contextName}<br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Posodobljena verzija je naložena"
 

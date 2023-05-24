@@ -628,23 +628,6 @@ msgstr ""
 "<br />\n"
 "URL subskrypcji:{$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Redakcja bibliografii"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"Szanowna Pani/ Szanowny Panie,<br />\n"
-"<br />\n"
-"proszę o sprawdzenie lub uzupełnienie następujących opisów bibliograficznych "
-"w tekście \"{$submissionTitle}\":<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"Z wyrazami szacunku,<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"Korektor, „{$contextName}”<br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Poprawiona wersja przesłana do systemu"
 

@@ -570,23 +570,6 @@ msgstr ""
 "<br />\n"
 "Prenumerationens URL: {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Referensredigering"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"Vi skulle vara glada om du hade möjlighet att ge oss den korrekta citeringen "
-"för följande referens i din artikel {$submissionTitle}:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"Stort tack!<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"Manusredaktör, {$contextName}<br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Reviderad version uppladdad"
 

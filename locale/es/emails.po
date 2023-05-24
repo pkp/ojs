@@ -583,23 +583,6 @@ msgstr ""
 "<br />\n"
 "URL para gestionar la suscripción: {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Edición de citas"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"Por favor, ¿podría usted verificar o proporcionarnos la cita adecuada para "
-"la siguiente referencia de su artículo, {$submissionTitle}?:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"¡Gracias!<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"Corrector/a de estilo, {$contextName}<br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Versión revisada cargada"
 

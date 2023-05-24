@@ -584,23 +584,6 @@ msgstr ""
 "<br />\n"
 "Link til abonnement: {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Referenceredigering"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"Kære {$recipientName}<br />\n"
-"<br />\n"
-"Du bedes verificere eller sende os de korrekte oplysninger i forbindelse med "
-"følgende reference i din artikel {$submissionTitle}:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"På forhånd tak!<br />\n"
-"Mvh.<br />\n"
-"{$senderName}<br />\n"
-"Manuskriptredaktør, {$contextName}<br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Revideret udgave uploadet"
 

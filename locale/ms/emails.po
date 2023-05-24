@@ -585,23 +585,6 @@ msgstr ""
 "<br />\n"
 "URL Langganan: {$subscriptionUrl} <br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Penyuntingan Petikan"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"{$recipientName}, <br />\n"
-"<br />\n"
-"Bolehkah anda mengesahkan atau memberi kami petikan yang tepat untuk rujukan "
-"berikut dari artikel anda, {$submissionTitle}: <br />\n"
-"<br />\n"
-"{$rawCitation} <br />\n"
-"<br />\n"
-"Terima kasih! <br />\n"
-"<br />\n"
-"{$senderName} <br />\n"
-"Copy-Editor, {$contextName} <br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Versi Semakan Dimuat naik"
 

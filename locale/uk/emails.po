@@ -583,23 +583,6 @@ msgstr ""
 "<br />\n"
 "URL-адреса підписки: {$subscriptionUrl}<br />\n"
 
-msgid "emails.citationEditorAuthorQuery.subject"
-msgstr "Редагування посилання"
-
-msgid "emails.citationEditorAuthorQuery.body"
-msgstr ""
-"{$recipientName},<br />\n"
-"<br />\n"
-"Не могли б Ви надати нам коректний бібліографічний запис для наступного "
-"посилання з Вашої статті &quot;{$submissionTitle}&quot;:<br />\n"
-"<br />\n"
-"{$rawCitation}<br />\n"
-"<br />\n"
-"Дякую!<br />\n"
-"<br />\n"
-"{$senderName}<br />\n"
-"Літературний редактор видання &quot;{$contextName}&quot;<br />\n"
-
 msgid "emails.revisedVersionNotify.subject"
 msgstr "Перероблена версія вивантажена"
 
