@@ -211,6 +211,26 @@ class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightChe
             $affectedRows += $this->deleteRequiredReference('subscription_type_settings', 'type_id', 'subscription_types', 'type_id');
             return $affectedRows;
         });
+
+        // Support for the issueId setting
+        $this->addTableProcessor('publication_settings', function (): int {
+            $affectedRows = 0;
+            $rows = DB::table('publications AS p')
+                ->join('publication_settings AS ps', 'ps.publication_id', '=', 'p.publication_id')
+                ->leftJoin('issues AS i', DB::raw('CAST(i.issue_id AS CHAR(20))'), '=', 'ps.setting_value')
+                ->where('ps.setting_name', 'issueId')
+                ->whereNull('i.issue_id')
+                ->get(['p.submission_id', 'p.publication_id', 'ps.setting_value']);
+            foreach ($rows as $row) {
+                $this->_installer->log("The publication ID ({$row->publication_id}) for the submission ID {$row->submission_id} is assigned to an invalid issue ID \"{$row->setting_value}\", its value will be updated to NULL");
+                $affectedRows += DB::table('publication_settings')
+                    ->where('publication_id', '=', $row->publication_id)
+                    ->where('setting_name', 'issueId')
+                    ->where('setting_value', $row->setting_value)
+                    ->delete();
+            }
+            return $affectedRows;
+        });
     }
 
     protected function getEntityRelationships(): array
@@ -220,7 +240,8 @@ class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightChe
             'users' => ['submission_files', 'review_assignments', 'subscriptions', 'notifications', 'event_log', 'email_log', 'user_user_groups', 'user_settings', 'user_interests', 'temporary_files', 'submission_comments', 'subeditor_submission_group', 'stage_assignments', 'sessions', 'query_participants', 'notification_subscription_settings', 'notes', 'email_log_users', 'edit_decisions', 'completed_payments', 'access_keys'],
             'submissions' => ['submission_files', 'publications', 'review_rounds', 'review_assignments', 'submission_search_objects', 'library_files', 'submission_settings', 'submission_comments', 'stage_assignments', 'review_round_files', 'edit_decisions'],
             'submission_files' => ['submission_files', 'publication_galleys', 'submission_file_settings', 'submission_file_revisions', 'review_round_files', 'review_files'],
-            'issues' => [$this->getContextTable(), 'issue_galleys', 'issue_files', 'issue_settings', 'custom_section_orders', 'custom_issue_orders'],
+            // publication_settings dependency added manually
+            'issues' => [$this->getContextTable(), 'issue_galleys', 'issue_files', 'issue_settings', 'custom_section_orders', 'custom_issue_orders', 'publication_settings'],
             'user_groups' => ['authors', 'user_user_groups', 'user_group_stage', 'user_group_settings', 'subeditor_submission_group', 'stage_assignments'],
             'publications' => ['submissions', 'publication_galleys', 'authors', 'citations', 'publication_settings', 'publication_categories'],
             'publication_galleys' => ['publication_galley_settings'],
