@@ -31,154 +31,209 @@ class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightChe
         return 'journal_settings';
     }
 
-    public function up(): void
+    protected function buildOrphanedEntityProcessor(): void
     {
-        parent::up();
-        try {
-            issues: {
-                // Depends directly on ~2 entities: doi_id->dois.doi_id(not found in previous version) journal_id->journals.journal_id
-                // Dependent entities: ~8
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteRequiredReference('issues', $this->getContextKeyField(), $this->getContextTable(), $this->getContextKeyField());
-            }
+        parent::buildOrphanedEntityProcessor();
 
-            publications: {
-                // Depends directly on ~4 entities: primary_contact_id->authors.author_id doi_id->dois.doi_id(not found in previous version) section_id->sections.section_id submission_id->submissions.submission_id
-                // Dependent entities: ~6
-                // Custom field (not found in at least one of the softwares)
-                $this->cleanOptionalReference('publications', 'section_id', 'sections', 'section_id');
-                // Remaining cleanups are inherited
-            }
+        $this->addTableProcessor('issues', function (): int {
+            $affectedRows = 0;
+            // Depends directly on ~2 entities: doi_id->dois.doi_id(not found in previous version) journal_id->journals.journal_id
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteRequiredReference('issues', $this->getContextKeyField(), $this->getContextTable(), $this->getContextKeyField());
+            return $affectedRows;
+        });
 
-            publication_galleys: {
-                // Depends directly on ~3 entities: doi_id->dois.doi_id(not found in previous version) publication_id->publications.publication_id submission_file_id->submission_files.submission_file_id
-                // Dependent entities: ~5
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteRequiredReference('publication_galleys', 'publication_id', 'publications', 'publication_id');
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteOptionalReference('publication_galleys', 'submission_file_id', 'submission_files', 'submission_file_id');
-                // Deprecated/moved field (not found on previous software version)
-                // $this->deleteOptionalReference('publication_galleys', 'doi_id', 'dois', 'doi_id');
-            }
+        // Shared processor (there's another handler for this table at pkp-lib)
+        $this->addTableProcessor('publications', function (): int {
+            $affectedRows = 0;
+            // Depends directly on ~4 entities: primary_contact_id->authors.author_id doi_id->dois.doi_id(not found in previous version) section_id->sections.section_id submission_id->submissions.submission_id
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->cleanOptionalReference('publications', 'section_id', 'sections', 'section_id');
+            // Remaining cleanups are inherited
+            return $affectedRows;
+        });
 
-            issue_galleys: {
-                // Depends directly on ~2 entities: file_id->issue_files.file_id issue_id->issues.issue_id
-                // Dependent entities: ~3
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteRequiredReference('issue_galleys', 'issue_id', 'issues', 'issue_id');
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteRequiredReference('issue_galleys', 'file_id', 'issue_files', 'file_id');
-            }
+        $this->addTableProcessor('publication_galleys', function (): int {
+            $affectedRows = 0;
+            // Depends directly on ~3 entities: doi_id->dois.doi_id(not found in previous version) publication_id->publications.publication_id submission_file_id->submission_files.submission_file_id
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteRequiredReference('publication_galleys', 'publication_id', 'publications', 'publication_id');
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteOptionalReference('publication_galleys', 'submission_file_id', 'submission_files', 'submission_file_id');
+            return $affectedRows;
+        });
 
-            sections: {
-                // Depends directly on ~2 entities: journal_id->journals.journal_id review_form_id->review_forms.review_form_id
-                // Dependent entities: ~3
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteRequiredReference('sections', $this->getContextKeyField(), $this->getContextTable(), $this->getContextKeyField());
-                // Custom field (not found in at least one of the softwares)
-                $this->cleanOptionalReference('sections', 'review_form_id', 'review_forms', 'review_form_id');
-            }
+        $this->addTableProcessor('issue_galleys', function (): int {
+            $affectedRows = 0;
+            // Depends directly on ~2 entities: file_id->issue_files.file_id issue_id->issues.issue_id
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteRequiredReference('issue_galleys', 'issue_id', 'issues', 'issue_id');
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteRequiredReference('issue_galleys', 'file_id', 'issue_files', 'file_id');
+            return $affectedRows;
+        });
 
-            subscription_types: {
-                // Depends directly on ~1 entities: journal_id->journals.journal_id
-                // Dependent entities: ~2
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteRequiredReference('subscription_types', $this->getContextKeyField(), $this->getContextTable(), $this->getContextKeyField());
-            }
+        $this->addTableProcessor('sections', function (): int {
+            $affectedRows = 0;
+            // Depends directly on ~2 entities: journal_id->journals.journal_id review_form_id->review_forms.review_form_id
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteRequiredReference('sections', $this->getContextKeyField(), $this->getContextTable(), $this->getContextKeyField());
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->cleanOptionalReference('sections', 'review_form_id', 'review_forms', 'review_form_id');
+            return $affectedRows;
+        });
 
-            issue_files: {
-                // Depends directly on ~1 entities: issue_id->issues.issue_id
-                // Dependent entities: ~1
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteRequiredReference('issue_files', 'issue_id', 'issues', 'issue_id');
-            }
+        $this->addTableProcessor('subscription_types', function (): int {
+            $affectedRows = 0;
+            // Depends directly on ~1 entities: journal_id->journals.journal_id
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteRequiredReference('subscription_types', $this->getContextKeyField(), $this->getContextTable(), $this->getContextKeyField());
+            return $affectedRows;
+        });
 
-            subscriptions: {
-                // Depends directly on ~3 entities: journal_id->journals.journal_id type_id->subscription_types.type_id user_id->users.user_id
-                // Dependent entities: ~1
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteRequiredReference('subscriptions', 'user_id', 'users', 'user_id');
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteRequiredReference('subscriptions', 'type_id', 'subscription_types', 'type_id');
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteRequiredReference('subscriptions', $this->getContextKeyField(), $this->getContextTable(), $this->getContextKeyField());
-            }
+        $this->addTableProcessor('issue_files', function (): int {
+            $affectedRows = 0;
+            // Depends directly on ~1 entities: issue_id->issues.issue_id
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteRequiredReference('issue_files', 'issue_id', 'issues', 'issue_id');
+            return $affectedRows;
+        });
 
-            completed_payments: {
-                // Depends directly on ~2 entities: context_id->journals.journal_id user_id->users.user_id
-                // Dependent entities: ~0
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteRequiredReference('completed_payments', 'context_id', $this->getContextTable(), $this->getContextKeyField());
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteOptionalReference('completed_payments', 'user_id', 'users', 'user_id');
-            }
+        $this->addTableProcessor('subscriptions', function (): int {
+            $affectedRows = 0;
+            // Depends directly on ~3 entities: journal_id->journals.journal_id type_id->subscription_types.type_id user_id->users.user_id
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteRequiredReference('subscriptions', 'user_id', 'users', 'user_id');
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteRequiredReference('subscriptions', 'type_id', 'subscription_types', 'type_id');
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteRequiredReference('subscriptions', $this->getContextKeyField(), $this->getContextTable(), $this->getContextKeyField());
+            return $affectedRows;
+        });
 
-            custom_issue_orders: {
-                // Depends directly on ~2 entities: issue_id->issues.issue_id journal_id->journals.journal_id
-                // Dependent entities: ~0
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteRequiredReference('custom_issue_orders', $this->getContextKeyField(), $this->getContextTable(), $this->getContextKeyField());
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteRequiredReference('custom_issue_orders', 'issue_id', 'issues', 'issue_id');
-            }
+        $this->addTableProcessor('completed_payments', function (): int {
+            $affectedRows = 0;
+            // Depends directly on ~2 entities: context_id->journals.journal_id user_id->users.user_id
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteRequiredReference('completed_payments', 'context_id', $this->getContextTable(), $this->getContextKeyField());
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteOptionalReference('completed_payments', 'user_id', 'users', 'user_id');
+            return $affectedRows;
+        });
 
-            custom_section_orders: {
-                // Depends directly on ~2 entities: issue_id->issues.issue_id section_id->sections.section_id
-                // Dependent entities: ~0
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteRequiredReference('custom_section_orders', 'section_id', 'sections', 'section_id');
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteRequiredReference('custom_section_orders', 'issue_id', 'issues', 'issue_id');
-            }
+        $this->addTableProcessor('custom_issue_orders', function (): int {
+            $affectedRows = 0;
+            // Depends directly on ~2 entities: issue_id->issues.issue_id journal_id->journals.journal_id
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteRequiredReference('custom_issue_orders', $this->getContextKeyField(), $this->getContextTable(), $this->getContextKeyField());
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteRequiredReference('custom_issue_orders', 'issue_id', 'issues', 'issue_id');
+            return $affectedRows;
+        });
 
-            institutional_subscriptions: {
-                // Depends directly on ~2 entities: institution_id->institutions.institution_id(not found in previous version) subscription_id->subscriptions.subscription_id
-                // Dependent entities: ~0
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteRequiredReference('institutional_subscriptions', 'subscription_id', 'subscriptions', 'subscription_id');
-                // Deprecated/moved field (not found on previous software version)
-                // $this->deleteRequiredReference('institutional_subscriptions', 'institution_id', 'institutions', 'institution_id');
-            }
+        $this->addTableProcessor('custom_section_orders', function (): int {
+            $affectedRows = 0;
+            // Depends directly on ~2 entities: issue_id->issues.issue_id section_id->sections.section_id
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteRequiredReference('custom_section_orders', 'section_id', 'sections', 'section_id');
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteRequiredReference('custom_section_orders', 'issue_id', 'issues', 'issue_id');
+            return $affectedRows;
+        });
 
-            issue_galley_settings: {
-                // Depends directly on ~1 entities: galley_id->issue_galleys.galley_id
-                // Dependent entities: ~0
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteRequiredReference('issue_galley_settings', 'galley_id', 'issue_galleys', 'galley_id');
-            }
+        $this->addTableProcessor('institutional_subscriptions', function (): int {
+            $affectedRows = 0;
+            // Depends directly on ~2 entities: institution_id->institutions.institution_id(not found in previous version) subscription_id->subscriptions.subscription_id
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteRequiredReference('institutional_subscriptions', 'subscription_id', 'subscriptions', 'subscription_id');
+            return $affectedRows;
+        });
 
-            issue_settings: {
-                // Depends directly on ~1 entities: issue_id->issues.issue_id
-                // Dependent entities: ~0
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteRequiredReference('issue_settings', 'issue_id', 'issues', 'issue_id');
-            }
+        $this->addTableProcessor('issue_galley_settings', function (): int {
+            $affectedRows = 0;
+            // Depends directly on ~1 entities: galley_id->issue_galleys.galley_id
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteRequiredReference('issue_galley_settings', 'galley_id', 'issue_galleys', 'galley_id');
+            return $affectedRows;
+        });
 
-            publication_galley_settings: {
-                // Depends directly on ~1 entities: galley_id->publication_galleys.galley_id
-                // Dependent entities: ~0
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteRequiredReference('publication_galley_settings', 'galley_id', 'publication_galleys', 'galley_id');
-            }
+        $this->addTableProcessor('issue_settings', function (): int {
+            $affectedRows = 0;
+            // Depends directly on ~1 entities: issue_id->issues.issue_id
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteRequiredReference('issue_settings', 'issue_id', 'issues', 'issue_id');
+            return $affectedRows;
+        });
 
-            section_settings: {
-                // Depends directly on ~1 entities: section_id->sections.section_id
-                // Dependent entities: ~0
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteRequiredReference('section_settings', 'section_id', 'sections', 'section_id');
-            }
+        $this->addTableProcessor('publication_galley_settings', function (): int {
+            $affectedRows = 0;
+            // Depends directly on ~1 entities: galley_id->publication_galleys.galley_id
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteRequiredReference('publication_galley_settings', 'galley_id', 'publication_galleys', 'galley_id');
+            return $affectedRows;
+        });
 
-            subscription_type_settings: {
-                // Depends directly on ~1 entities: type_id->subscription_types.type_id
-                // Dependent entities: ~0
-                // Custom field (not found in at least one of the softwares)
-                $this->deleteRequiredReference('subscription_type_settings', 'type_id', 'subscription_types', 'type_id');
-            }
-        } catch (\Exception $e) {
-            if ($fallbackVersion = $this->setFallbackVersion()) {
-                $this->_installer->log("A pre-flight check failed. The software was successfully upgraded to {$fallbackVersion} but could not be upgraded further (to " . $this->_installer->newVersion->getVersionString() . '). Check and correct the error, then try again.');
-            }
-            throw $e;
-        }
+        $this->addTableProcessor('section_settings', function (): int {
+            $affectedRows = 0;
+            // Depends directly on ~1 entities: section_id->sections.section_id
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteRequiredReference('section_settings', 'section_id', 'sections', 'section_id');
+            return $affectedRows;
+        });
+
+        $this->addTableProcessor('subscription_type_settings', function (): int {
+            $affectedRows = 0;
+            // Depends directly on ~1 entities: type_id->subscription_types.type_id
+            // Custom field (not found in at least one of the softwares)
+            $affectedRows += $this->deleteRequiredReference('subscription_type_settings', 'type_id', 'subscription_types', 'type_id');
+            return $affectedRows;
+        });
+    }
+
+    protected function getEntityRelationships(): array
+    {
+        return [
+            $this->getContextTable() => ['submissions', 'issues', 'user_groups', 'sections', 'categories', 'subscription_types', 'navigation_menu_items', 'genres', 'filters', 'announcement_types', 'subscriptions', 'notifications', 'navigation_menus', 'library_files', 'email_templates', 'user_group_stage', 'subeditor_submission_group', 'plugin_settings', 'notification_subscription_settings', $this->getContextSettingsTable(), 'custom_issue_orders', 'completed_payments'],
+            'users' => ['submission_files', 'review_assignments', 'subscriptions', 'notifications', 'event_log', 'email_log', 'user_user_groups', 'user_settings', 'user_interests', 'temporary_files', 'submission_comments', 'subeditor_submission_group', 'stage_assignments', 'sessions', 'query_participants', 'notification_subscription_settings', 'notes', 'email_log_users', 'edit_decisions', 'completed_payments', 'access_keys'],
+            'submissions' => ['submission_files', 'publications', 'review_rounds', 'review_assignments', 'submission_search_objects', 'library_files', 'submission_settings', 'submission_comments', 'stage_assignments', 'review_round_files', 'edit_decisions'],
+            'submission_files' => ['submission_files', 'publication_galleys', 'submission_file_settings', 'submission_file_revisions', 'review_round_files', 'review_files'],
+            'issues' => [$this->getContextTable(), 'issue_galleys', 'issue_files', 'issue_settings', 'custom_section_orders', 'custom_issue_orders'],
+            'user_groups' => ['authors', 'user_user_groups', 'user_group_stage', 'user_group_settings', 'subeditor_submission_group', 'stage_assignments'],
+            'publications' => ['submissions', 'publication_galleys', 'authors', 'citations', 'publication_settings', 'publication_categories'],
+            'publication_galleys' => ['publication_galley_settings'],
+            'review_forms' => ['sections', 'review_form_elements', 'review_assignments', 'review_form_settings'],
+            'categories' => ['categories', 'publication_categories', 'category_settings'],
+            'issue_galleys' => ['issue_galley_settings'],
+            'sections' => ['publications', 'section_settings', 'custom_section_orders'],
+            'review_rounds' => ['review_assignments', 'review_round_files', 'edit_decisions'],
+            'navigation_menu_item_assignments' => ['navigation_menu_item_assignments', 'navigation_menu_item_assignment_settings'],
+            'authors' => ['publications', 'author_settings'],
+            'controlled_vocab_entries' => ['user_interests', 'controlled_vocab_entry_settings'],
+            'data_object_tombstones' => ['data_object_tombstone_settings', 'data_object_tombstone_oai_set_objects'],
+            'files' => ['submission_files', 'submission_file_revisions'],
+            'filters' => ['filters', 'filter_settings'],
+            'genres' => ['submission_files', 'genre_settings'],
+            'announcement_types' => ['announcements', 'announcement_type_settings'],
+            'navigation_menu_items' => ['navigation_menu_item_assignments', 'navigation_menu_item_settings'],
+            'review_assignments' => ['review_form_responses', 'review_files'],
+            'review_form_elements' => ['review_form_responses', 'review_form_element_settings'],
+            'subscription_types' => ['subscriptions', 'subscription_type_settings'],
+            'announcements' => ['announcement_settings'],
+            'queries' => ['query_participants'],
+            'navigation_menus' => ['navigation_menu_item_assignments'],
+            'notifications' => ['notification_settings'],
+            'filter_groups' => ['filters'],
+            'event_log' => ['event_log_settings'],
+            'email_templates' => ['email_templates_settings'],
+            'static_pages' => ['static_page_settings'],
+            'email_log' => ['email_log_users'],
+            'submission_search_keyword_list' => ['submission_search_object_keywords'],
+            'submission_search_objects' => ['submission_search_object_keywords'],
+            'controlled_vocabs' => ['controlled_vocab_entries'],
+            'library_files' => ['library_file_settings'],
+            'subscriptions' => ['institutional_subscriptions'],
+            'citations' => ['citation_settings'],
+            'issue_files' => ['issue_galleys']
+        ];
     }
 }
