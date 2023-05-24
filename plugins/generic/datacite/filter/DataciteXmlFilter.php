@@ -654,7 +654,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 // The galley represents the article.
                 $pages = $publication->getData('pages');
                 $path = $galleyFile->getData('path');
-                $size = Services::get('file')->fs->getSize($path);
+                $size = Services::get('file')->fs->fileSize($path);
                 $sizes[] = Services::get('file')->getNiceFileSize($size);
                 break;
             case isset($article):
