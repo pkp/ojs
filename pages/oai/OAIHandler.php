@@ -16,6 +16,7 @@
 
 namespace APP\pages\oai;
 
+use APP\core\Application;
 use APP\handler\Handler;
 use APP\oai\ojs\JournalOAI;
 use Firebase\JWT\Key;
@@ -42,7 +43,7 @@ class OAIHandler extends Handler
         PluginRegistry::loadCategory('oaiMetadataFormats', true);
 
         $oai = new JournalOAI(new OAIConfig($request->url(null, 'oai'), Config::getVar('oai', 'repository_id')));
-        if (!$request->getJournal() && $request->getRouter()->getRequestedContextPath($request) != 'index') {
+        if (!$request->getJournal() && $request->getRouter()->getRequestedContextPath($request) != Application::SITE_CONTEXT_PATH) {
             $dispatcher = $request->getDispatcher();
             return $dispatcher->handle404();
         }
