@@ -10,7 +10,7 @@
  *
  * @class I8933_EventLogLocalized.php
  *
- * @brief Adds a column to the event_log_settings table to store localized data such as a file name
+ * @brief Extends the event log migration with the correct table names for OJS.
  */
 
 namespace APP\migration\upgrade\v3_4_0;
