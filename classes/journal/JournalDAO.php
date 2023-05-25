@@ -148,15 +148,13 @@ class JournalDAO extends ContextDAO
      * Sets current_issue_id for context to null.
      * This is necessary because current_issue_id should explicitly be set to null rather than unset.
      *
-     * @param int $contextId
-     *
      * @return int
      */
-    public function removeCurrentIssue($contextId)
+    public function removeCurrentIssue(int $contextId)
     {
         return $this->update(
             "UPDATE {$this->tableName} SET current_issue_id = null WHERE {$this->primaryKeyColumn} = ?",
-            [(int) $contextId]
+            [$contextId]
         );
     }
 }

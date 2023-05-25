@@ -199,7 +199,7 @@ class IssueController extends PKPBaseController
         Hook::call('API::issues::params', [&$collector, $illuminateRequest]);
 
         // You must be a manager or site admin to access unpublished Issues
-        $isAdmin = $currentUser->hasRole([Role::ROLE_ID_MANAGER], $context->getId()) || $currentUser->hasRole([Role::ROLE_ID_SITE_ADMIN], \PKP\core\PKPApplication::SITE_CONTEXT_ID);
+        $isAdmin = $currentUser->isAdministrator($context->getId());
         if (isset($collector->isPublished) && !$collector->isPublished && !$isAdmin) {
             return response()->json([
                 'error' => __('api.submissions.403.unpublishedIssues'),
