@@ -50,7 +50,7 @@ class SectionGridCellProvider extends GridCellProvider
     {
         switch ($column->getId()) {
             case 'inactive':
-                $element = $row->getData(); /** @var \PKP\core\DataObject $element */
+                $element = $row->getData(); /** @var array $element */
 
                 $router = $request->getRouter();
 

@@ -16,16 +16,17 @@ namespace APP\plugins\generic\driver;
 
 use APP\core\Application;
 use APP\facades\Repo;
+use APP\journal\JournalDAO;
+use PKP\db\DAORegistry;
+use PKP\plugins\GenericPlugin;
+use PKP\plugins\Hook;
+use PKP\tombstone\DataObjectTombstoneSettingsDAO;
 
 define('DRIVER_ACCESS_OPEN', 0);
 define('DRIVER_ACCESS_CLOSED', 1);
 define('DRIVER_ACCESS_EMBARGOED', 2);
 define('DRIVER_ACCESS_DELAYED', 3);
 define('DRIVER_ACCESS_RESTRICTED', 4);
-
-use PKP\db\DAORegistry;
-use PKP\plugins\GenericPlugin;
-use PKP\plugins\Hook;
 
 class DRIVERPlugin extends GenericPlugin
 {

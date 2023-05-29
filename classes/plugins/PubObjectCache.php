@@ -17,7 +17,6 @@
 namespace APP\plugins;
 
 use APP\issue\Issue;
-
 use APP\submission\Submission;
 use PKP\galley\Galley;
 use PKP\submission\Genre;
@@ -34,7 +33,7 @@ class PubObjectCache
     /**
      * Add a publishing object to the cache.
      *
-     * @param Issue|Submission|Galley $object
+     * @param Issue|Submission|Galley|Genre $object
      * @param Submission|null $parent Only required when adding a galley.
      */
     public function add($object, $parent)

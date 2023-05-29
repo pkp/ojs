@@ -19,6 +19,7 @@ namespace APP\subscription\form;
 use APP\core\Application;
 use APP\core\Request;
 use APP\payment\ojs\OJSPaymentManager;
+use APP\subscription\IndividualSubscription;
 use APP\subscription\IndividualSubscriptionDAO;
 use APP\subscription\Subscription;
 use APP\subscription\SubscriptionTypeDAO;

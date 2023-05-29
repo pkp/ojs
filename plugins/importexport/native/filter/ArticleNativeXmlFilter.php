@@ -16,6 +16,9 @@
 
 namespace APP\plugins\importexport\native\filter;
 
+use APP\submission\Submission;
+use DOMElement;
+
 class ArticleNativeXmlFilter extends \PKP\plugins\importexport\native\filter\SubmissionNativeXmlFilter
 {
     //

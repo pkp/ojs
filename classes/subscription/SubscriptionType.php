@@ -172,7 +172,7 @@ class SubscriptionType extends \PKP\core\DataObject
     /**
      * Get subscription type currency abbreviated string.
      *
-     * @return int
+     * @return string
      */
     public function getCurrencyStringShort()
     {

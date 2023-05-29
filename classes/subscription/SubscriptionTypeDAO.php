@@ -21,9 +21,8 @@ namespace APP\subscription;
 use Illuminate\Support\Facades\DB;
 use PKP\db\DAORegistry;
 use PKP\db\DAOResultFactory;
-
+use PKP\db\DBResultRange;
 use PKP\facades\Locale;
-
 use PKP\plugins\Hook;
 
 class SubscriptionTypeDAO extends \PKP\db\DAO
@@ -44,7 +43,7 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
      * @param int $typeId
      * @param int $journalId optional
      *
-     * @return SubscriptionType
+     * @return ?SubscriptionType
      */
     public function getById($typeId, $journalId = null)
     {
@@ -315,9 +314,9 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
      * Retrieve subscription types matching a particular journal ID.
      *
      * @param int $journalId
-     * @param null|mixed $rangeInfo
+     * @param ?DBResultRange $rangeInfo
      *
-     * @return object DAOResultFactory containing matching SubscriptionTypes
+     * @return DAOResultFactory<SubscriptionType> Object containing matching SubscriptionTypes
      */
     public function getByJournalId($journalId, $rangeInfo = null)
     {
@@ -335,9 +334,9 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
      * @param int $journalId
      * @param bool $institutional
      * @param bool|null $disablePublicDisplay
-     * @param null|mixed $rangeInfo
+     * @param ?DBResultRange $rangeInfo
      *
-     * @return object DAOResultFactory containing matching SubscriptionTypes
+     * @return DAOResultFactory<SubscriptionType> Object containing matching SubscriptionTypes
      */
     public function getByInstitutional($journalId, $institutional = false, $disablePublicDisplay = null, $rangeInfo = null)
     {

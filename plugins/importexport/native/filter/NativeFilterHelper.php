@@ -21,6 +21,7 @@ use APP\issue\Issue;
 use DOMDocument;
 use DOMElement;
 use PKP\plugins\importexport\native\filter\NativeExportFilter;
+use PKP\plugins\importexport\native\filter\NativeImportFilter;
 
 class NativeFilterHelper extends \PKP\plugins\importexport\native\filter\PKPNativeFilterHelper
 {
@@ -31,7 +32,7 @@ class NativeFilterHelper extends \PKP\plugins\importexport\native\filter\PKPNati
      * @param \DOMDocument $doc
      * @param Issue $issue
      *
-     * @return \DOMElement
+     * @return DOMElement
      */
     public function createIssueIdentificationNode($filter, $doc, $issue)
     {
@@ -98,15 +99,15 @@ class NativeFilterHelper extends \PKP\plugins\importexport\native\filter\PKPNati
     /**
      * Parse out the object covers.
      *
-     * @param NativeExportFilter $filter
-     * @param \DOMElement $node
+     * @param NativeImportFilter $filter
+     * @param DOMElement $node
      * @param Issue $object
      */
     public function parseIssueCovers($filter, $node, $object)
     {
         $deployment = $filter->getDeployment();
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
-            if ($n instanceof \DOMElement) {
+            if ($n instanceof DOMElement) {
                 switch ($n->tagName) {
                     case 'cover':
                         $this->parseIssueCover($filter, $n, $object);
@@ -121,8 +122,8 @@ class NativeFilterHelper extends \PKP\plugins\importexport\native\filter\PKPNati
     /**
      * Parse out the cover and store it in the object.
      *
-     * @param NativeExportFilter $filter
-     * @param \DOMElement $node
+     * @param NativeImportFilter $filter
+     * @param DOMElement $node
      * @param Issue $object
      */
     public function parseIssueCover($filter, $node, $object)
@@ -134,7 +135,7 @@ class NativeFilterHelper extends \PKP\plugins\importexport\native\filter\PKPNati
             $locale = $context->getPrimaryLocale();
         }
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
-            if ($n instanceof \DOMElement) {
+            if ($n instanceof DOMElement) {
                 switch ($n->tagName) {
                     case 'cover_image': $object->setCoverImage($n->textContent, $locale);
                         break;

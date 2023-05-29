@@ -20,6 +20,9 @@
 namespace APP\core;
 
 use APP\facades\Repo;
+use APP\journal\JournalDAO;
+use APP\payment\ojs\OJSPaymentManager;
+use PKP\context\Context;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
@@ -161,15 +164,19 @@ class Application extends PKPApplication
     /**
      * Get the top-level context DAO.
      *
-     * @return ContextDAO
+     * @return JournalDAO
      */
     public static function getContextDAO()
     {
-        return DAORegistry::getDAO('JournalDAO');
+        /** @var JournalDAO */
+        $dao = DAORegistry::getDAO('JournalDAO');
+        return $dao;
     }
 
     /**
      * Get the representation DAO.
+     *
+     * @return \PKP\galley\DAO&RepresentationDAOInterface
      */
     public static function getRepresentationDAO(): RepresentationDAOInterface
     {
@@ -243,12 +250,12 @@ class Application extends PKPApplication
     /**
      * Get the payment manager.
      *
-     * @param Context $context
+     * @param \APP\journal\Journal $context
      *
      * @return OJSPaymentManager
      */
     public static function getPaymentManager($context)
     {
-        return new \APP\payment\ojs\OJSPaymentManager($context);
+        return new OJSPaymentManager($context);
     }
 }

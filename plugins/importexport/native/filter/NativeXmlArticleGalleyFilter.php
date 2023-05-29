@@ -52,7 +52,7 @@ class NativeXmlArticleGalleyFilter extends \PKP\plugins\importexport\native\filt
      *
      * @param DOMElement $node
      *
-     * @return array Array of Galley objects
+     * @return Galley Galley object
      */
     public function handleElement($node)
     {

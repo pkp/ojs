@@ -15,6 +15,7 @@
 namespace APP\plugins\pubIds\urn\classes\form;
 
 use APP\core\Application;
+use APP\plugins\pubIds\urn\URNPubIdPlugin;
 use APP\template\TemplateManager;
 use PKP\form\Form;
 use PKP\linkAction\LinkAction;

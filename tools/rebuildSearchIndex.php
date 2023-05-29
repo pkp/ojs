@@ -75,7 +75,7 @@ class rebuildSearchIndex extends CommandLineTool
      * Callback to patch the base URL which will be required
      * when constructing galley/supp file download URLs.
      *
-     * @see PKPRequest::getBaseUrl()
+     * @see \APP\core\Request::getBaseUrl()
      */
     public function callbackBaseUrl($hookName, $params)
     {

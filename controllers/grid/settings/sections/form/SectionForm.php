@@ -17,6 +17,7 @@
 namespace APP\controllers\grid\settings\sections\form;
 
 use APP\core\Application;
+use APP\core\Request;
 use APP\facades\Repo;
 use APP\template\TemplateManager;
 use PKP\controllers\grid\settings\sections\form\PKPSectionForm;

@@ -19,6 +19,7 @@ use APP\decision\Decision;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\journal\Journal;
+use APP\journal\JournalDAO;
 use APP\submission\Submission;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;

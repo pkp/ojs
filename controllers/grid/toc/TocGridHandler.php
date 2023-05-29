@@ -17,7 +17,9 @@
 namespace APP\controllers\grid\toc;
 
 use APP\core\Application;
+use APP\core\Request;
 use APP\facades\Repo;
+use APP\section\Section;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\submission\Submission;
 use PKP\controllers\grid\CategoryGridHandler;
@@ -239,7 +241,7 @@ class TocGridHandler extends CategoryGridHandler
      * Remove an article from the issue.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -278,7 +280,7 @@ class TocGridHandler extends CategoryGridHandler
      * Set access status on an article.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */

@@ -18,6 +18,7 @@ namespace APP\controllers\api\file;
 
 use APP\controllers\tab\pubIds\form\PublicIdentifiersForm;
 use APP\core\Application;
+use APP\core\Request;
 use PKP\controllers\api\file\PKPManageFileApiHandler;
 use PKP\core\JSONMessage;
 use PKP\db\DAO;
@@ -41,7 +42,7 @@ class ManageFileApiHandler extends PKPManageFileApiHandler
      * Edit proof submission file pub ids.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -58,7 +59,7 @@ class ManageFileApiHandler extends PKPManageFileApiHandler
      * Update proof submission file pub ids.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */

@@ -15,6 +15,7 @@
 
 namespace APP\components\forms\publication;
 
+use APP\payment\ojs\OJSCompletedPaymentDAO;
 use APP\payment\ojs\OJSPaymentManager;
 use PKP\components\forms\FieldRadioInput;
 use PKP\components\forms\FormComponent;
@@ -35,7 +36,7 @@ class SubmissionPaymentsForm extends FormComponent
      *
      * @param string $action URL to submit the form to
      * @param \APP\submission\Submission $submission The submission to inspect payment status of
-     * @param \PKP\context\Context $submissionContext The context of the submission
+     * @param \APP\journal\Journal $submissionContext The context of the submission
      */
     public function __construct($action, $submission, $submissionContext)
     {

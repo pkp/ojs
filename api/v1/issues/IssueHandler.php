@@ -31,6 +31,7 @@ use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\authorization\UserRolesRequiredPolicy;
 use PKP\security\Role;
+use PKP\submission\GenreDAO;
 use Slim\Http\Request;
 
 class IssueHandler extends APIHandler
@@ -114,7 +115,6 @@ class IssueHandler extends APIHandler
 
         $request = $this->getRequest();
         $currentUser = $request->getUser();
-        /** @var \PKP\context\Context $context */
         $context = $request->getContext();
 
         if (!$context) {

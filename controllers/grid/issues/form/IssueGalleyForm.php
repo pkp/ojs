@@ -21,9 +21,13 @@ namespace APP\controllers\grid\issues\form;
 use APP\core\Application;
 use APP\core\Request;
 use APP\file\IssueFileManager;
+use APP\issue\Issue;
+use APP\issue\IssueGalley;
+use APP\issue\IssueGalleyDAO;
+use APP\journal\JournalDAO;
 use APP\template\TemplateManager;
-
 use PKP\db\DAORegistry;
+use PKP\file\TemporaryFileDAO;
 use PKP\form\Form;
 
 class IssueGalleyForm extends Form

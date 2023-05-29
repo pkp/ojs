@@ -23,7 +23,12 @@ use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\plugins\ReportPlugin;
 use PKP\security\Role;
+use PKP\stageAssignment\StageAssignmentDAO;
 use PKP\submission\PKPSubmission;
+use PKP\submission\SubmissionAgencyDAO;
+use PKP\submission\SubmissionDisciplineDAO;
+use PKP\submission\SubmissionKeywordDAO;
+use PKP\submission\SubmissionSubjectDAO;
 
 class ArticleReportPlugin extends ReportPlugin
 {

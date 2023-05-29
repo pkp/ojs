@@ -16,6 +16,7 @@
 
 namespace APP\controllers\grid\subscriptions;
 
+use APP\core\Request;
 use APP\facades\Repo;
 use APP\notification\NotificationManager;
 use APP\subscription\InstitutionalSubscriptionDAO;
@@ -155,7 +156,7 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler
      * Edit an existing subscription.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -172,7 +173,7 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler
      * Update an existing subscription.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -198,7 +199,7 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler
      * Delete a subscription.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */

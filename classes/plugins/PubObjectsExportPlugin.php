@@ -16,6 +16,32 @@
 
 namespace APP\plugins;
 
+use APP\core\Application;
+use APP\core\Request;
+use APP\facades\Repo;
+use APP\issue\Issue;
+use APP\journal\Journal;
+use APP\journal\JournalDAO;
+use APP\notification\NotificationManager;
+use APP\submission\Submission;
+use APP\template\TemplateManager;
+use PKP\core\JSONMessage;
+use PKP\db\DAO;
+use PKP\db\DAORegistry;
+use PKP\db\SchemaDAO;
+use PKP\file\FileManager;
+use PKP\filter\FilterDAO;
+use PKP\galley\Galley;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\NullAction;
+use PKP\notification\PKPNotification;
+use PKP\plugins\Hook;
+use PKP\plugins\importexport\PKPImportExportDeployment;
+use PKP\plugins\ImportExportPlugin;
+use PKP\plugins\PluginRegistry;
+use PKP\submission\PKPSubmission;
+use PKP\user\User;
+
 // The statuses.
 define('EXPORT_STATUS_ANY', '');
 define('EXPORT_STATUS_NOT_DEPOSITED', 'notDeposited');
@@ -29,25 +55,6 @@ define('EXPORT_ACTION_DEPOSIT', 'deposit');
 
 // Configuration errors.
 define('EXPORT_CONFIG_ERROR_SETTINGS', 0x02);
-
-use APP\core\Application;
-use APP\facades\Repo;
-use APP\issue\Issue;
-use APP\notification\NotificationManager;
-use APP\template\TemplateManager;
-use PKP\context\Context;
-use PKP\core\JSONMessage;
-use PKP\core\PKPRequest;
-use PKP\db\DAORegistry;
-use PKP\db\SchemaDAO;
-use PKP\file\FileManager;
-use PKP\linkAction\LinkAction;
-use PKP\linkAction\request\NullAction;
-use PKP\notification\PKPNotification;
-use PKP\plugins\Hook;
-use PKP\plugins\ImportExportPlugin;
-use PKP\plugins\PluginRegistry;
-use PKP\submission\PKPSubmission;
 
 abstract class PubObjectsExportPlugin extends ImportExportPlugin
 {
@@ -188,8 +195,8 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     /**
      * Gathers relevant pub objects and runs export action
      *
-     * @param PKPRequest $request
-     * @param Context $context
+     * @param Request $request
+     * @param Journal $context
      * @param array $args Optional args for passing in submissionIds from external API calls
      */
     public function prepareAndExportPubObjects($request, $context, $args = [])
@@ -341,7 +348,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
      * This must be implemented in the subclasses, if the action is supported.
      *
      * @param mixed $objects Array of or single published submission, issue or galley
-     * @param Context $context
+     * @param Journal $context
      * @param string $filename Export XML filename
      *
      * @return bool|array Whether the XML document has been registered
@@ -352,7 +359,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
      * Get detailed message of the object status i.e. failure messages.
      * Parameters needed have to be in the request object.
      *
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return string Preformatted text that will be displayed in a div element in the modal
      */
@@ -422,7 +429,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     /**
      * Get actions.
      *
-     * @param Context $context
+     * @param Journal $context
      *
      * @return array
      */
@@ -461,7 +468,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
      *
      * @param mixed $objects Array of or single published submission, issue or galley
      * @param string $filter
-     * @param Context $context
+     * @param Journal $context
      * @param bool $noValidation If set to true no XML validation will be done
      * @param null|mixed $outputErrors
      *
@@ -497,7 +504,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     /**
      * Mark selected submissions or issues as registered.
      *
-     * @param Context $context
+     * @param Journal $context
      * @param array $objects Array of published submissions, issues or galleys
      */
     public function markRegistered($context, $objects)
@@ -599,7 +606,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     /**
      * Retrieve all unregistered articles.
      *
-     * @param Context $context
+     * @param Journal $context
      *
      * @return array
      */
@@ -621,7 +628,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     /**
      * Check whether we are in test mode.
      *
-     * @param Context $context
+     * @param Journal $context
      *
      * @return bool
      */
@@ -737,7 +744,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
      *
      * @param string $scriptName The name of the command-line script (displayed as usage info)
      * @param string $command (export or register)
-     * @param Context $context
+     * @param Journal $context
      * @param string $outputFile Path to the file where the exported XML should be saved
      * @param array $objects Objects to be exported or registered
      * @param string $filter Filter to use
@@ -779,7 +786,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
      * Get published submissions from submission IDs.
      *
      * @param array $submissionIds
-     * @param Context $context
+     * @param Journal $context
      *
      * @return array
      */
@@ -801,7 +808,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
      * Get published issues from issue IDs.
      *
      * @param array $issueIds
-     * @param Context $context
+     * @param Journal $context
      *
      * @return array
      */
@@ -820,7 +827,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
      * Get article galleys from gallley IDs.
      *
      * @param array $galleyIds
-     * @param Context $context
+     * @param Journal $context
      *
      * @return array
      */
@@ -860,7 +867,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     /**
      * Instantiate the export deployment.
      *
-     * @param Context $context
+     * @param Journal $context
      *
      * @return PKPImportExportDeployment
      */
@@ -874,7 +881,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     /**
      * Instantiate the settings form.
      *
-     * @param Context $context
+     * @param Journal $context
      *
      * @return \PKP\form\Form
      */

@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class OJSPaymentManager
+ *
  * @ingroup payment
  *
  * @see QueuedPayment
@@ -34,6 +35,8 @@ use PKP\db\DAORegistry;
 use PKP\payment\CompletedPayment;
 use PKP\payment\PaymentManager;
 use PKP\payment\QueuedPayment;
+use PKP\payment\QueuedPaymentDAO;
+use PKP\plugins\PaymethodPlugin;
 use PKP\plugins\PluginRegistry;
 
 class OJSPaymentManager extends PaymentManager
@@ -61,10 +64,10 @@ class OJSPaymentManager extends PaymentManager
     /**
      * Create a queued payment.
      *
-     * @param PKPRequest $request
+     * @param Request $request
      * @param int $type OJSPaymentManager::PAYMENT_TYPE_...
      * @param int $userId ID of user responsible for payment
-     * @param int $assocId ID of associated entity
+     * @param ?int $assocId ID of associated entity
      * @param float $amount Amount of currency $currencyCode
      * @param string $currencyCode optional ISO 4217 currency code
      *

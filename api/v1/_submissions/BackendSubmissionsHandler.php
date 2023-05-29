@@ -18,11 +18,14 @@
 namespace APP\API\v1\_submissions;
 
 use APP\core\Application;
+use APP\payment\ojs\OJSCompletedPaymentDAO;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\submission\Collector;
+use PKP\core\APIResponse;
 use PKP\db\DAORegistry;
 use PKP\security\authorization\SubmissionAccessPolicy;
 use PKP\security\Role;
+use PKP\stageAssignment\StageAssignmentDAO;
 use Slim\Http\Request;
 
 class BackendSubmissionsHandler extends \PKP\API\v1\_submissions\PKPBackendSubmissionsHandler
@@ -68,10 +71,10 @@ class BackendSubmissionsHandler extends \PKP\API\v1\_submissions\PKPBackendSubmi
      * Change the status of submission payments.
      *
      * @param Request $slimRequest Slim request object
-     * @param Response $response object
+     * @param APIResponse $response object
      * @param array $args arguments
      *
-     * @return Response
+     * @return APIResponse
      */
     public function payment($slimRequest, $response, $args)
     {

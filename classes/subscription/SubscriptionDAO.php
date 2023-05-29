@@ -21,6 +21,8 @@ namespace APP\subscription;
 use APP\core\Application;
 use APP\facades\Repo;
 use PKP\db\DAORegistry;
+use PKP\db\DAOResultFactory;
+use PKP\db\DBResultRange;
 use PKP\facades\Locale;
 use PKP\identity\Identity;
 use PKP\plugins\Hook;
@@ -165,9 +167,9 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
     /**
      * Retrieve all subscriptions.
      *
-     * @param null|mixed $rangeInfo
+     * @param ?DBResultRange $rangeInfo
      *
-     * @return object DAOResultFactory containing Subscriptions
+     * @return DAOResultFactory<Subscription> Object containing Subscriptions
      */
     abstract public function getAll($rangeInfo = null);
 
@@ -182,9 +184,9 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
      * @param int $dateField
      * @param string $dateFrom date to search from
      * @param string $dateTo date to search to
-     * @param null|mixed $rangeInfo
+     * @param ?DBResultRange $rangeInfo
      *
-     * @return object DAOResultFactory containing matching Subscriptions
+     * @return DAOResultFactory<Subscription> Object containing matching Subscriptions
      */
     abstract public function getByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null);
 
@@ -193,9 +195,9 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
      *
      * @param string $dateEnd (YYYY-MM-DD)
      * @param int $journalId
-     * @param null|mixed $rangeInfo
+     * @param ?DBResultRange $rangeInfo
      *
-     * @return object DAOResultFactory containing matching Subscriptions
+     * @return DAOResultFactory<Subscription> Object containing matching Subscriptions
      */
     abstract public function getByDateEnd($dateEnd, $journalId, $rangeInfo = null);
 
@@ -502,8 +504,6 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
      * if the subscription is expired, renew to current date + duration
      *
      * @param Subscription $subscription
-     *
-     * @return bool
      */
     public function _renewSubscription($subscription)
     {

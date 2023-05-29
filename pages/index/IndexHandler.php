@@ -18,6 +18,7 @@ namespace APP\pages\index;
 
 use APP\core\Application;
 use APP\facades\Repo;
+use APP\journal\JournalDAO;
 use APP\observers\events\UsageEvent;
 use APP\pages\issue\IssueHandler;
 use APP\template\TemplateManager;

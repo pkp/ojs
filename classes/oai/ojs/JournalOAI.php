@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class JournalOAI
+ *
  * @ingroup oai
  *
  * @see OAIDAO
@@ -20,12 +21,14 @@
 namespace APP\oai\ojs;
 
 use APP\core\Application;
+use APP\journal\Journal;
 use PKP\db\DAORegistry;
 use PKP\oai\OAI;
 use PKP\oai\OAIRepository;
 use PKP\oai\OAIResumptionToken;
-
 use PKP\plugins\Hook;
+use PKP\site\Site;
+use PKP\site\VersionDAO;
 
 class JournalOAI extends OAI
 {

@@ -24,7 +24,7 @@ class DOAJExportDeployment
     /** @var \PKP\context\Context The current import/export context */
     public $_context;
 
-    /** @var \PKP\plugin\Plugin The current import/export plugin */
+    /** @var \PKP\plugins\Plugin The current import/export plugin */
     public $_plugin;
 
     /**

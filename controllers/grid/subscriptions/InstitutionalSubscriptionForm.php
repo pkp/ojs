@@ -17,12 +17,14 @@
 namespace APP\controllers\grid\subscriptions;
 
 use APP\core\Application;
+use APP\core\Request;
 use APP\facades\Repo;
 use APP\notification\NotificationManager;
 use APP\subscription\form\SubscriptionForm;
 use APP\subscription\InstitutionalSubscription;
 use APP\subscription\InstitutionalSubscriptionDAO;
 use APP\subscription\SubscriptionType;
+use APP\subscription\SubscriptionTypeDAO;
 use APP\template\TemplateManager;
 use Exception;
 use Illuminate\Support\Facades\Mail;
@@ -37,7 +39,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
     /**
      * Constructor
      *
-     * @param PKPRequest $request
+     * @param Request $request
      * @param int $subscriptionId leave as default for new subscription
      */
     public function __construct($request, $subscriptionId = null)

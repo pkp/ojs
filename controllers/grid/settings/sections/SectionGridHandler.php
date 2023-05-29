@@ -18,6 +18,7 @@ namespace APP\controllers\grid\settings\sections;
 
 use APP\controllers\grid\settings\sections\form\SectionForm;
 use APP\core\Application;
+use APP\core\Request;
 use APP\facades\Repo;
 use APP\notification\NotificationManager;
 use PKP\context\SubEditorsDAO;
@@ -186,7 +187,7 @@ class SectionGridHandler extends SetupGridHandler
      * An action to add a new section
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      */
     public function addSection($args, $request)
     {
@@ -199,7 +200,7 @@ class SectionGridHandler extends SetupGridHandler
      * An action to edit a section
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return string Serialized JSON object
      * @return JSONMessage JSON object
@@ -218,7 +219,7 @@ class SectionGridHandler extends SetupGridHandler
      * Update a section
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -242,7 +243,7 @@ class SectionGridHandler extends SetupGridHandler
      * Delete a section
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -279,7 +280,7 @@ class SectionGridHandler extends SetupGridHandler
      * Deactivate a section.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -322,7 +323,7 @@ class SectionGridHandler extends SetupGridHandler
      * Activate a section.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */

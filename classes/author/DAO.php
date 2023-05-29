@@ -24,8 +24,8 @@ use APP\journal\JournalDAO;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\db\DAOResultFactory;
+use PKP\db\DBResultRange;
 use PKP\facades\Locale;
-
 use PKP\identity\Identity;
 use PKP\submission\PKPSubmission;
 
@@ -40,10 +40,10 @@ class DAO extends \PKP\author\DAO
      *
      * @param int $journalId Optional journal ID to restrict results to
      * @param string $initial An initial a family name must begin with, "-" for authors with no family names
-     * @param object $rangeInfo Range information
+     * @param ?DBResultRange $rangeInfo Range information
      * @param bool $includeEmail Whether or not to include the email in the select distinct
      *
-     * @return DAOResultFactory Authors ordered by last name, given name
+     * @return DAOResultFactory<Author> Authors ordered by last name, given name
      *
      * @deprecated 3.4.0.0
      *

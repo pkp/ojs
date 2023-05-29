@@ -16,6 +16,7 @@
 
 namespace APP\plugins\importexport\users;
 
+use APP\journal\JournalDAO;
 use PKP\db\DAORegistry;
 
 class UserImportExportPlugin extends \PKP\plugins\importexport\users\PKPUserImportExportPlugin

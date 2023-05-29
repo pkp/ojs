@@ -15,6 +15,7 @@
 namespace APP\plugins\importexport\doaj;
 
 use APP\core\Application;
+use APP\journal\JournalDAO;
 use PKP\plugins\PluginRegistry;
 use PKP\scheduledTask\ScheduledTask;
 use PKP\scheduledTask\ScheduledTaskHelper;

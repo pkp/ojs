@@ -16,6 +16,9 @@
 
 namespace APP\controllers\grid\subscriptions;
 
+use APP\core\Request;
+use APP\subscription\IndividualSubscriptionDAO;
+use APP\subscription\InstitutionalSubscriptionDAO;
 use PKP\controllers\grid\feature\PagingFeature;
 use PKP\controllers\grid\GridHandler;
 use PKP\db\DAO;
@@ -136,7 +139,7 @@ abstract class SubscriptionsGridHandler extends GridHandler
      * Add a new subscription.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      */
     public function addSubscription($args, $request)
     {
@@ -148,10 +151,11 @@ abstract class SubscriptionsGridHandler extends GridHandler
      * Renew a subscription.
      *
      * @param array $args first parameter is the ID of the subscription to renew
-     * @param PKPRequest $request
+     * @param Request $request
      */
     public function renewSubscription($args, $request)
     {
+        /** @var InstitutionalSubscriptionDAO|IndividualSubscriptionDAO */
         $subscriptionDao = DAORegistry::getDAO($request->getUserVar('institutional') ? 'InstitutionalSubscriptionDAO' : 'IndividualSubscriptionDAO');
         $subscriptionId = $request->getUserVar('rowId');
         if ($subscription = $subscriptionDao->getById($subscriptionId, $request->getJournal()->getId())) {

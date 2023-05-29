@@ -23,6 +23,7 @@ use PKP\core\PKPApplication;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\linkAction\request\RedirectAction;
+use PKP\plugins\ImportExportPlugin;
 
 class PubIdExportIssuesListGridCellProvider extends DataObjectGridCellProvider
 {

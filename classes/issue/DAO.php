@@ -26,8 +26,14 @@ use PKP\core\traits\EntityWithParent;
 use PKP\db\DAOResultFactory;
 use PKP\services\PKPSchemaService;
 
+/**
+ * @extends EntityDAO<Issue>
+ */
 class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
 {
+    /**
+     * @use EntityWithParent<Issue>
+     */
     use EntityWithParent;
 
     // TODO: Needs to be addressed with refactor of caching.
@@ -144,6 +150,7 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
     /**
      * Get a collection of issues matching the configured query
      *
+     * @return LazyCollection<int,Issue>
      */
     public function getMany(Collector $query): LazyCollection
     {
@@ -419,9 +426,9 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
      * @param string $pubIdSettingName optional
      * (e.g. crossref::registeredDoi)
      * @param string $pubIdSettingValue optional
-     * @param DBResultRange $rangeInfo optional
+     * @param ?\PKP\db\DBResultRange $rangeInfo optional
      *
-     * @return DAOResultFactory
+     * @return DAOResultFactory<Issue>
      */
     public function getExportable($contextId, $pubIdType = null, $pubIdSettingName = null, $pubIdSettingValue = null, $rangeInfo = null)
     {

@@ -17,6 +17,7 @@
 namespace APP\controllers\grid\issues;
 
 use APP\core\Application;
+use APP\issue\Issue;
 use PKP\controllers\grid\GridCellProvider;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;

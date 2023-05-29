@@ -16,19 +16,20 @@
 
 namespace APP\plugins;
 
+use APP\facades\Repo;
+use APP\issue\Issue;
+use APP\journal\Journal;
+use APP\submission\Submission;
+use APP\template\TemplateManager;
+use PKP\core\PKPString;
+use PKP\galley\Galley;
+use PKP\submission\PKPSubmission;
+
 // Configuration errors.
 define('DOI_EXPORT_CONFIG_ERROR_DOIPREFIX', 0x01);
 
 // The name of the setting used to save the registered DOI.
 define('DOI_EXPORT_REGISTERED_DOI', 'registeredDoi');
-
-use APP\facades\Repo;
-use APP\submission\Submission;
-use APP\template\TemplateManager;
-use PKP\context\Context;
-use PKP\core\PKPString;
-use PKP\doi\Doi;
-use PKP\submission\PKPSubmission;
 
 abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
 {
@@ -71,7 +72,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
     /**
      * Mark selected submissions or issues as registered.
      *
-     * @param Context $context
+     * @param Journal $context
      * @param array $objects Array of published submissions, issues or galleys
      */
     public function markRegistered($context, $objects)
@@ -93,7 +94,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
      * when several DOI registration plug-ins
      * are active at the same time.
      *
-     * @param Context $context
+     * @param Journal $context
      * @param Issue|Submission|Galley $object
      * @param string $testPrefix
      */
@@ -124,7 +125,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
      * Get published submissions with a DOI assigned from submission IDs.
      *
      * @param array $submissionIds
-     * @param Context $context
+     * @param Journal $context
      *
      * @return array
      */
@@ -149,7 +150,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
      * Get published issues with a DOI assigned from issue IDs.
      *
      * @param array $issueIds
-     * @param Context $context
+     * @param Journal $context
      *
      * @return array
      */
@@ -169,7 +170,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
      * Get article galleys with a DOI assigned from galley IDs.
      *
      * @param array $galleyIds
-     * @param Context $context
+     * @param Journal $context
      *
      * @return array
      */

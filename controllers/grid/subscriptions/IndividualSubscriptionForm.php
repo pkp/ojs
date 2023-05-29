@@ -17,9 +17,12 @@
 namespace APP\controllers\grid\subscriptions;
 
 use APP\core\Application;
+use APP\core\Request;
 use APP\notification\NotificationManager;
 use APP\subscription\form\SubscriptionForm;
 use APP\subscription\IndividualSubscription;
+use APP\subscription\IndividualSubscriptionDAO;
+use APP\subscription\SubscriptionTypeDAO;
 use Exception;
 use Illuminate\Support\Facades\Mail;
 use PKP\db\DAORegistry;
@@ -30,7 +33,7 @@ class IndividualSubscriptionForm extends SubscriptionForm
     /**
      * Constructor
      *
-     * @param PKPRequest $request
+     * @param Request $request
      * @param int $subscriptionId leave as default for new subscription
      */
     public function __construct($request, $subscriptionId = null)

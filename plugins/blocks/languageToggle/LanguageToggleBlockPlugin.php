@@ -64,7 +64,7 @@ class LanguageToggleBlockPlugin extends BlockPlugin
      * Get the HTML contents for this block.
      *
      * @param \APP\template\TemplateManager $templateMgr
-     * @param \PKP\core\PKPRequest $request
+     * @param \APP\core\Request $request
      */
     public function getContents($templateMgr, $request = null)
     {

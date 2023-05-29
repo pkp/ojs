@@ -18,13 +18,13 @@
 namespace APP\API\v1\dois;
 
 use APP\facades\Repo;
+use APP\issue\Issue;
 use APP\jobs\doi\DepositIssue;
 use PKP\context\Context;
 use PKP\core\APIResponse;
 use PKP\doi\Doi;
 use PKP\doi\exceptions\DoiException;
 use PKP\security\Role;
-
 use Slim\Http\Request as SlimRequest;
 use Slim\Http\Response;
 
@@ -86,7 +86,6 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
             return $response->withStatus(404)->withJsonError('api.dois.404.noPubObjectIncluded');
         }
 
-        /** @var Context $context */
         $context = $this->getRequest()->getContext();
 
         $validIds = Repo::issue()
@@ -135,7 +134,6 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
             return $response->withStatus(404)->withJsonError('api.dois.404.noPubObjectIncluded');
         }
 
-        /** @var Context $context */
         $context = $this->getRequest()->getContext();
 
         $validIds = Repo::issue()

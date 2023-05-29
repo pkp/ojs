@@ -34,7 +34,7 @@ class AssignToIssueForm extends FormComponent
      *
      * @param string $action URL to submit the form to
      * @param \APP\publication\Publication $publication The publication to change settings for
-     * @param \PKP\context\Context $publicationContext The context of the publication
+     * @param \APP\journal\Journal $publicationContext The context of the publication
      */
     public function __construct($action, $publication, $publicationContext)
     {

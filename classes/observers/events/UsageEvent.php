@@ -21,6 +21,7 @@ use APP\core\Application;
 use APP\issue\Issue;
 use APP\issue\IssueGalley;
 use APP\submission\Submission;
+use Exception;
 use PKP\context\Context;
 use PKP\submission\Representation;
 use PKP\submissionFile\SubmissionFile;

@@ -20,13 +20,13 @@
 namespace APP\search;
 
 use APP\core\Application;
+use APP\core\Request;
 use APP\core\Services;
 use APP\facades\Repo;
 use APP\issue\IssueAction;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\plugins\Hook;
-
 use PKP\search\SubmissionSearch;
 use PKP\submission\PKPSubmission;
 
@@ -245,7 +245,7 @@ class ArticleSearch extends SubmissionSearch
      * See SubmissionSearch::formatResults()
      *
      * @param array $results
-     * @param User $user optional (if availability information is desired)
+     * @param \PKP\user\User $user optional (if availability information is desired)
      *
      * @return array An array with the articles, published submissions,
      *  issue, journal, section and the issue availability.
@@ -333,7 +333,7 @@ class ArticleSearch extends SubmissionSearch
             $article = Repo::submission()->get($submissionId);
             if ($article->getData('status') === PKPSubmission::STATUS_PUBLISHED) {
                 // Retrieve keywords (if any).
-                $submissionSubjectDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /** @var SubmissionKeywordDAO $submissionSubjectDao */
+                $submissionSubjectDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /** @var \PKP\submission\SubmissionKeywordDAO $submissionSubjectDao */
                 $allSearchTerms = array_filter($submissionSubjectDao->getKeywords($article->getCurrentPublication()->getId(), [Locale::getLocale(), $article->getLocale(), Locale::getPrimaryLocale()]));
                 foreach ($allSearchTerms as $locale => $localeSearchTerms) {
                     $searchTerms += $localeSearchTerms;

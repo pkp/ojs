@@ -19,7 +19,6 @@ namespace APP\components\forms\context;
 use APP\journal\Journal;
 use PKP\components\forms\FieldOptions;
 use PKP\components\forms\FieldSelect;
-
 use PKP\components\forms\FormComponent;
 
 define('FORM_ACCESS', 'access');
@@ -39,7 +38,7 @@ class AccessForm extends FormComponent
      *
      * @param string $action URL to submit the form to
      * @param array $locales Supported locales
-     * @param Context $context Journal or Press to change settings for
+     * @param Journal $context Journal to change settings for
      */
     public function __construct($action, $locales, $context)
     {

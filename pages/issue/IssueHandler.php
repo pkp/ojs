@@ -22,7 +22,9 @@ use APP\file\IssueFileManager;
 use APP\handler\Handler;
 use APP\issue\Collector;
 use APP\issue\IssueAction;
+use APP\issue\IssueGalleyDAO;
 use APP\observers\events\UsageEvent;
+use APP\payment\ojs\OJSCompletedPaymentDAO;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
@@ -34,6 +36,7 @@ use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\Validation;
+use PKP\submission\GenreDAO;
 use PKP\submission\PKPSubmission;
 
 class IssueHandler extends Handler
@@ -142,7 +145,7 @@ class IssueHandler extends Handler
      * Display the issue archive listings
      *
      * @param array $args
-     * @param \PKP\core\PKPRequest $request
+     * @param \APP\core\Request $request
      */
     public function archive($args, $request)
     {

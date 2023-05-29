@@ -20,6 +20,7 @@
 namespace APP\notification;
 
 use APP\core\Application;
+use APP\core\Request;
 use APP\facades\Repo;
 use APP\notification\managerDelegate\ApproveSubmissionNotificationManager;
 use PKP\notification\PKPNotificationManager;
@@ -34,7 +35,7 @@ class NotificationManager extends PKPNotificationManager
     /**
      * Construct a URL for the notification based on its type and associated object
      *
-     * @param PKPRequest $request
+     * @param Request $request
      * @param Notification $notification
      *
      * @return string
@@ -57,7 +58,7 @@ class NotificationManager extends PKPNotificationManager
     /**
      * Construct the contents for the notification based on its type and associated object
      *
-     * @param PKPRequest $request
+     * @param Request $request
      * @param Notification $notification
      *
      * @return string

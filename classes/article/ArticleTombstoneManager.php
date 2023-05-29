@@ -21,7 +21,6 @@ use APP\facades\Repo;
 use APP\oai\ojs\OAIDAO;
 use APP\submission\Submission;
 use PKP\config\Config;
-
 use PKP\context\Context;
 use PKP\db\DAORegistry;
 use PKP\plugins\Hook;
@@ -37,7 +36,7 @@ class ArticleTombstoneManager
 
     public function insertArticleTombstone($article, $journal, $section)
     {
-        $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /** @var DataObjectTombstoneDAO $tombstoneDao */
+        $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /** @var \PKP\tombstone\DataObjectTombstoneDAO $tombstoneDao */
         // delete article tombstone -- to ensure that there aren't more than one tombstone for this article
         $tombstoneDao->deleteByDataObjectId($article->getId());
         // insert article tombstone
@@ -84,7 +83,7 @@ class ArticleTombstoneManager
      */
     public function deleteTombstonesByContextId(int $contextId)
     {
-        $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /** @var DataObjectTombstoneDAO $tombstoneDao */
+        $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /** @var \PKP\tombstone\DataObjectTombstoneDAO $tombstoneDao */
         $submissions = Repo::submission()->getCollector()
             ->filterByContextIds([$contextId])
             ->filterByStatus([Submission::STATUS_PUBLISHED])

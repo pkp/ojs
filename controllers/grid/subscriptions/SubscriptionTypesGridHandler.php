@@ -16,7 +16,9 @@
 
 namespace APP\controllers\grid\subscriptions;
 
+use APP\core\Request;
 use APP\notification\NotificationManager;
+use APP\subscription\SubscriptionTypeDAO;
 use PKP\controllers\grid\feature\PagingFeature;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
@@ -172,7 +174,7 @@ class SubscriptionTypesGridHandler extends GridHandler
      * Add a new subscription type.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      */
     public function addSubscriptionType($args, $request)
     {
@@ -184,7 +186,7 @@ class SubscriptionTypesGridHandler extends GridHandler
      * Edit an existing subscription type.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -200,7 +202,7 @@ class SubscriptionTypesGridHandler extends GridHandler
      * Update an existing subscription type.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */
@@ -226,7 +228,7 @@ class SubscriptionTypesGridHandler extends GridHandler
      * Delete a subscription type.
      *
      * @param array $args
-     * @param PKPRequest $request
+     * @param Request $request
      *
      * @return JSONMessage JSON object
      */

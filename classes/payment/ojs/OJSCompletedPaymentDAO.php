@@ -8,6 +8,7 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class OJSCompletedPaymentDAO
+ *
  * @ingroup payment
  *
  * @see OJSCompletedPayment, Payment
@@ -19,9 +20,9 @@
 namespace APP\payment\ojs;
 
 use Illuminate\Support\Facades\DB;
-
 use PKP\core\Core;
 use PKP\db\DAOResultFactory;
+use PKP\db\DBResultRange;
 use PKP\payment\CompletedPayment;
 
 class OJSCompletedPaymentDAO extends \PKP\db\DAO
@@ -194,7 +195,7 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
      * Retrieve an array of payments for a particular context ID.
      *
      * @param int $contextId
-     * @param null|mixed $rangeInfo
+     * @param ?DBResultRange $rangeInfo
      *
      * @return array Matching payments
      */
@@ -218,9 +219,9 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
      * Retrieve CompletedPayments by user ID
      *
      * @param int $userId User ID
-     * @param DBResultRange $rangeInfo Optional
+     * @param ?DBResultRange $rangeInfo Optional
      *
-     * @return object DAOResultFactory containing matching CompletedPayment objects
+     * @return DAOResultFactory<CompletedPayment> Object containing matching CompletedPayment objects
      */
     public function getByUserId($userId, $rangeInfo = null)
     {
