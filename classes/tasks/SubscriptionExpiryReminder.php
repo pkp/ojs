@@ -102,7 +102,7 @@ class SubscriptionExpiryReminder extends ScheduledTask
                 $this->sendReminder($journal, $subscription, new SubscriptionExpiresSoon(
                     $journal,
                     $subscription,
-                    $subscriptionTypeDao->getById($subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId()))
+                    $subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId())
                 ));
             }
 
@@ -110,7 +110,7 @@ class SubscriptionExpiryReminder extends ScheduledTask
                 $this->sendReminder($journal, $subscription, new SubscriptionExpiresSoon(
                     $journal,
                     $subscription,
-                    $subscriptionTypeDao->getById($subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId()))
+                    $subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId())
                 ));
             }
         }
@@ -133,7 +133,7 @@ class SubscriptionExpiryReminder extends ScheduledTask
                 $this->sendReminder($journal, $subscription, new SubscriptionExpiresSoon(
                     $journal,
                     $subscription,
-                    $subscriptionTypeDao->getById($subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId()))
+                    $subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId())
                 ));
             }
 
@@ -144,7 +144,7 @@ class SubscriptionExpiryReminder extends ScheduledTask
                     new SubscriptionExpiresSoon(
                         $journal,
                         $subscription,
-                        $subscriptionTypeDao->getById($subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId()))
+                        $subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId())
                     )
                 );
             }
@@ -174,7 +174,7 @@ class SubscriptionExpiryReminder extends ScheduledTask
                 $this->sendReminder($journal, $subscription, new SubscriptionExpiredLast(
                     $journal,
                     $subscription,
-                    $subscriptionTypeDao->getById($subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId()))
+                    $subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId())
                 ));
             }
 
@@ -182,7 +182,7 @@ class SubscriptionExpiryReminder extends ScheduledTask
                 $this->sendReminder($journal, $subscription, new SubscriptionExpiredLast(
                     $journal,
                     $subscription,
-                    $subscriptionTypeDao->getById($subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId()))
+                    $subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId())
                 ));
             }
         }
@@ -218,7 +218,7 @@ class SubscriptionExpiryReminder extends ScheduledTask
                 $this->sendReminder($journal, $subscription, new SubscriptionExpired(
                     $journal,
                     $subscription,
-                    $subscriptionTypeDao->getById($subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId()))
+                    $subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId())
                 ));
             }
 
@@ -226,7 +226,7 @@ class SubscriptionExpiryReminder extends ScheduledTask
                 $this->sendReminder($journal, $subscription, new SubscriptionExpired(
                     $journal,
                     $subscription,
-                    $subscriptionTypeDao->getById($subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId()))
+                    $subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId())
                 ));
             }
         }
