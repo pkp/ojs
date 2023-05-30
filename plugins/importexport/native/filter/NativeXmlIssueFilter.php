@@ -165,7 +165,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
                 case 'covers':
                     if (!$processOnlyChildren) {
                         $nativeFilterHelper = new NativeFilterHelper();
-                        $nativeFilterHelper->parseIssueCovers($this, $n, $issue, Application::ASSOC_TYPE_ISSUE);
+                        $nativeFilterHelper->parseIssueCovers($this, $n, $issue);
                     }
                     break;
                 case 'issue_identification':

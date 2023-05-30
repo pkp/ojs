@@ -126,7 +126,7 @@ class IssueHandler extends Handler
 
         if (($galley = $this->getGalley()) && $this->userCanViewGalley($request)) {
             if (!Hook::call('IssueHandler::view::galley', [&$request, &$issue, &$galley])) {
-                $request->redirect(null, null, 'download', [$issue->getBestIssueId($journal), $galley->getBestGalleyId($journal)]);
+                $request->redirect(null, null, 'download', [$issue->getBestIssueId($journal), $galley->getBestGalleyId()]);
             }
         } else {
             self::_setupIssueTemplate($request, $issue, $request->getUserVar('showToc') ? true : false);

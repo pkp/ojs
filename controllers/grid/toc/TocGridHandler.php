@@ -258,8 +258,7 @@ class TocGridHandler extends CategoryGridHandler
                     $publication = Repo::publication()->get($publication->getId());
                     Repo::publication()->edit(
                         $publication,
-                        ['seq' => ''],
-                        $request
+                        ['seq' => '']
                     );
                 }
             }

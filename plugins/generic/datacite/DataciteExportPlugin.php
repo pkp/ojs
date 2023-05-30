@@ -278,7 +278,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
         } catch (\GuzzleHttp\Exception\RequestException $e) {
             $returnMessage = $e->getMessage();
             if ($e->hasResponse()) {
-                $returnMessage = $e->getResponse()->getBody(true) . ' (' . $e->getResponse()->getStatusCode() . ' ' . $e->getResponse()->getReasonPhrase() . ')';
+                $returnMessage = $e->getResponse()->getBody() . ' (' . $e->getResponse()->getStatusCode() . ' ' . $e->getResponse()->getReasonPhrase() . ')';
             }
             $this->updateDepositStatus($object, Doi::STATUS_ERROR);
             return [['plugins.importexport.common.register.error.mdsError', "Registering DOI {$doi}: {$returnMessage}"]];
@@ -297,7 +297,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
         } catch (\GuzzleHttp\Exception\RequestException $e) {
             $returnMessage = $e->getMessage();
             if ($e->hasResponse()) {
-                $returnMessage = $e->getResponse()->getBody(true) . ' (' . $e->getResponse()->getStatusCode() . ' ' . $e->getResponse()->getReasonPhrase() . ')';
+                $returnMessage = $e->getResponse()->getBody() . ' (' . $e->getResponse()->getStatusCode() . ' ' . $e->getResponse()->getReasonPhrase() . ')';
             }
             $this->updateDepositStatus($object, Doi::STATUS_ERROR);
             return [['plugins.importexport.common.register.error.mdsError', "Registering DOI {$doi}: {$returnMessage}"]];

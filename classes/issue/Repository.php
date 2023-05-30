@@ -134,7 +134,7 @@ class Repository
         ValidatorFactory::allowedLocales($validator, $this->schemaService->getMultilingualProps($this->dao->schema), $allowedLocales);
 
         if ($validator->fails()) {
-            $errors = $this->schemaService->formatValidationErrors($validator->errors(), $this->schemaService->get($this->dao->schema), $allowedLocales);
+            $errors = $this->schemaService->formatValidationErrors($validator->errors());
         }
 
         Hook::call('Issue::validate', [&$errors, $object, $props, $allowedLocales, $primaryLocale]);
