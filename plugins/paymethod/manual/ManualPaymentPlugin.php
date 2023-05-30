@@ -201,8 +201,9 @@ class ManualPaymentPlugin extends PaymethodPlugin
                 ]);
                 $templateMgr->display('frontend/pages/message.tpl');
                 exit;
+            default:
+                throw new Exception("Invalid payment operation: {$op}");
         }
-        parent::handle($args, $request); // Don't know what to do with it
     }
 
     /**
