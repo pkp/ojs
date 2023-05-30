@@ -253,15 +253,15 @@ class IssueNativeXmlFilter extends \PKP\plugins\importexport\native\filter\Nativ
         $currentFilter = PKPImportExportFilter::getFilter('issuegalley=>native-xml', $this->getDeployment());
 
         $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */
-        $issue = $issueGalleyDao->getByIssueId($issue->getId());
-        $issueGalleysDoc = $currentFilter->execute($issue);
+        $issues = $issueGalleyDao->getByIssueId($issue->getId());
+        $issueGalleysDoc = $currentFilter->execute($issues);
 
         if ($issueGalleysDoc && $issueGalleysDoc->documentElement instanceof \DOMElement) {
             $clone = $doc->importNode($issueGalleysDoc->documentElement, true);
             $issueNode->appendChild($clone);
         } else {
             $deployment = $this->getDeployment();
-            $deployment->addError(Application::ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.issueGalleys.exportFailed'));
+            $deployment->addError(Application::ASSOC_TYPE_ISSUE, reset($issues)?->getId(), __('plugins.importexport.issueGalleys.exportFailed'));
 
             throw new Exception(__('plugins.importexport.issueGalleys.exportFailed'));
         }
