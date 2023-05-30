@@ -253,7 +253,7 @@ class CounterReport
                     )
                 );
             } catch (Exception $e) {
-                $this->setError($e, COUNTER_EXCEPTION_ERROR | COUNTER_EXCEPTION_INTERNAL);
+                $this->setError(new Exception($e->getMessage(), COUNTER_EXCEPTION_ERROR | COUNTER_EXCEPTION_INTERNAL, $e));
             }
             if (isset($report)) {
                 return (string) $report;

@@ -214,7 +214,7 @@ class CounterReportAR1 extends CounterReport
                 $articlePubIds
             );
         } catch (Exception $e) {
-            $this->setError($e, COUNTER_EXCEPTION_ERROR | COUNTER_EXCEPTION_INTERNAL);
+            $this->setError(new Exception($e->getMessage(), COUNTER_EXCEPTION_ERROR | COUNTER_EXCEPTION_INTERNAL, $e));
         }
         return $reportItem;
     }
