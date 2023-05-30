@@ -338,12 +338,12 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
         $reviewFormId = $node->getAttribute('review_form_id');
         $section->setReviewFormId($reviewFormId ? (int) $reviewFormId : null);
         $section->setSequence($node->getAttribute('seq'));
-        $section->setEditorRestricted($node->getAttribute('editor_restricted'));
-        $section->setMetaIndexed($node->getAttribute('meta_indexed'));
-        $section->setMetaReviewed($node->getAttribute('meta_reviewed'));
-        $section->setAbstractsNotRequired($node->getAttribute('abstracts_not_required'));
-        $section->setHideAuthor($node->getAttribute('hide_author'));
-        $section->setHideTitle($node->getAttribute('hide_title'));
+        $section->setEditorRestricted((bool) $node->getAttribute('editor_restricted'));
+        $section->setMetaIndexed((bool) $node->getAttribute('meta_indexed'));
+        $section->setMetaReviewed((bool) $node->getAttribute('meta_reviewed'));
+        $section->setAbstractsNotRequired((bool) $node->getAttribute('abstracts_not_required'));
+        $section->setHideAuthor((bool) $node->getAttribute('hide_author'));
+        $section->setHideTitle((bool) $node->getAttribute('hide_title'));
         $section->setAbstractWordCount($node->getAttribute('abstract_word_count'));
 
         $unknownNodes = [];
