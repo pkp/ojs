@@ -1049,7 +1049,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $toc = '';
         foreach ($submissions as $submissionInIssue) { /** @var Submission $submissionInIssue */
             $currentEntry = $this->getPrimaryTranslation(
-                $submissionInIssue->getCurrentPublication()?->getTitles() ?? '',
+                $submissionInIssue->getCurrentPublication()?->getTitles() ?? [],
                 $objectLocalePrecedence
             );
             assert(!empty($currentEntry));
