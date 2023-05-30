@@ -18,7 +18,6 @@
 
 namespace APP\controllers\grid\issues\form;
 
-use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\template\TemplateManager;
@@ -91,8 +90,6 @@ class IssueAccessForm extends Form
      */
     public function execute(...$functionArgs)
     {
-        $journal = Application::get()->getRequest()->getJournal();
-
         $this->_issue->setAccessStatus($this->getData('accessStatus') ? $this->getData('accessStatus') : Issue::ISSUE_ACCESS_OPEN);
         if ($openAccessDate = $this->getData('openAccessDate')) {
             $this->_issue->setOpenAccessDate($openAccessDate);

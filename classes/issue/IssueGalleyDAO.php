@@ -141,7 +141,7 @@ class IssueGalleyDAO extends \PKP\db\DAO
      *
      * @param int $issueId
      *
-     * @return array IssueGalleys
+     * @return array<int,IssueGalley> IssueGalleys
      */
     public function getByIssueId($issueId)
     {

@@ -219,7 +219,7 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
      */
     public function deleteCustomIssueOrdering(int $issueId)
     {
-        $q = DB::table('custom_issue_orders')
+        DB::table('custom_issue_orders')
             ->where('issue_id', '=', $issueId)
             ->delete();
     }

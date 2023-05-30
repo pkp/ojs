@@ -18,7 +18,6 @@
 
 namespace APP\subscription;
 
-use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 
 class SubscriptionType extends \PKP\core\DataObject
@@ -370,7 +369,6 @@ class SubscriptionType extends \PKP\core\DataObject
      */
     public function getSummaryString()
     {
-        $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         return $this->getLocalizedName() . ' - ' . $this->getDurationYearsMonths() . ' - ' . sprintf('%.2f', $this->getCost()) . ' ' . $this->getCurrencyStringShort();
     }
 }
