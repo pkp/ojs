@@ -247,7 +247,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
         }
 
         $templateMgr = TemplateManager::getManager($request);
-        $contents = $templateMgr->loadHtmlGalleyStyles($contents, $embeddableFiles);
+        $contents = $templateMgr->loadHtmlGalleyStyles($contents, $embeddableFiles->toArray());
 
         // Perform variable replacement for journal, issue, site info
         $issue = Repo::issue()->getBySubmissionId($submissionId);
