@@ -88,23 +88,20 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
 
         $context = $this->getRequest()->getContext();
 
-        $validIds = Repo::issue()
+        $issues = Repo::issue()
             ->getCollector()
             ->filterByContextIds([$context->getId()])
             ->filterByPublished(true)
-            ->getIds()
-            ->toArray();
+            ->getMany()
+            ->collect();
 
-        $invalidIds = array_diff($requestIds, $validIds);
-        if (count($invalidIds)) {
+        $hasInvalid = $issues->first(fn (Issue $issue) => !in_array($issue->getId(), $requestIds));
+
+        if ($hasInvalid) {
             return $response->withStatus(400)->withJsonError('api.dois.400.invalidPubObjectIncluded');
         }
 
-        /** @var Issue[] $issues */
-        $issues = [];
-        foreach ($requestIds as $id) {
-            $issues[] = Repo::issue()->get($id);
-        }
+        $issues = $issues->toArray();
 
         if (empty($issues[0])) {
             return $response->withStatus(404)->withJsonError('api.dois.404.doiNotFound');
