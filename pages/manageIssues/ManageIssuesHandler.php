@@ -66,6 +66,6 @@ class ManageIssuesHandler extends Handler
         $templateMgr->assign([
             'pageTitle' => __('editor.navigation.issues')
         ]);
-        return $templateMgr->display('manageIssues/issues.tpl');
+        $templateMgr->display('manageIssues/issues.tpl');
     }
 }

@@ -188,7 +188,7 @@ class DRIVERPlugin extends GenericPlugin
             return false;
         } else {
             $dataObjectTombstoneSettingsDao = DAORegistry::getDAO('DataObjectTombstoneSettingsDAO'); /** @var DataObjectTombstoneSettingsDAO $dataObjectTombstoneSettingsDao */
-            return $dataObjectTombstoneSettingsDao->getSetting($row['tombstone_id'], 'driver');
+            return (bool) $dataObjectTombstoneSettingsDao->getSetting($row['tombstone_id'], 'driver');
         }
     }
 

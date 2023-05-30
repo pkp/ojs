@@ -259,7 +259,7 @@ class CounterReport
                 return (string) $report;
             }
         }
-        return;
+        return null;
     }
 
     /**

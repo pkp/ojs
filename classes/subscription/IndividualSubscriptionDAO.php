@@ -501,7 +501,7 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
      */
     public function renewSubscription($individualSubscription)
     {
-        return $this->_renewSubscription($individualSubscription);
+        $this->_renewSubscription($individualSubscription);
     }
 }
 
