@@ -125,14 +125,16 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                     $cache->add($article, null);
                 }
             }
-            if ($cache->isCached('genres', $galleyFile->getData('genreId'))) {
-                $genre = $cache->get('genres', $galleyFile->getData('genreId'));
-            } else {
-                /** @var GenreDAO */
-                $genreDao = DAORegistry::getDAO('GenreDAO');
-                $genre = $genreDao->getById($galleyFile->getData('genreId'));
-                if ($genre) {
-                    $cache->add($genre, null);
+            if (isset($galleyFile)) {
+                if ($cache->isCached('genres', $galleyFile->getData('genreId'))) {
+                    $genre = $cache->get('genres', $galleyFile->getData('genreId'));
+                } else {
+                    /** @var GenreDAO */
+                    $genreDao = DAORegistry::getDAO('GenreDAO');
+                    $genre = $genreDao->getById($galleyFile->getData('genreId'));
+                    if ($genre) {
+                        $cache->add($genre, null);
+                    }
                 }
             }
         }
@@ -657,9 +659,11 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             case isset($galley):
                 // The galley represents the article.
                 $pages = $publication->getData('pages');
-                $path = $galleyFile->getData('path');
-                $size = Services::get('file')->fs->fileSize($path);
-                $sizes[] = Services::get('file')->getNiceFileSize($size);
+                if (isset($galleyFile)) {
+                    $path = $galleyFile->getData('path');
+                    $size = Services::get('file')->fs->fileSize($path);
+                    $sizes[] = Services::get('file')->getNiceFileSize($size);
+                }
                 break;
             case isset($article):
                 $pages = $publication->getData('pages');
@@ -711,11 +715,13 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $descriptions = [];
         switch (true) {
             case isset($galley):
-                $genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'));
-                if ($genre->getSupplementary()) {
-                    $suppFileDesc = $this->getPrimaryTranslation($galleyFile->getData('description'), $objectLocalePrecedence);
-                    if (!empty($suppFileDesc)) {
-                        $descriptions[DATACITE_DESCTYPE_OTHER] = $suppFileDesc;
+                if (!$galley->getRemoteURL()) {
+                    $genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'));
+                    if ($genre->getSupplementary()) {
+                        $suppFileDesc = $this->getPrimaryTranslation($galleyFile->getData('description'), $objectLocalePrecedence);
+                        if (!empty($suppFileDesc)) {
+                            $descriptions[DATACITE_DESCTYPE_OTHER] = $suppFileDesc;
+                        }
                     }
                 }
                 break;
