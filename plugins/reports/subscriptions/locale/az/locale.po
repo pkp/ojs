@@ -1,8 +1,27 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2023.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-06-01 09:27+0000\n"
+"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
+"Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-subscriptions/az/>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.reports.subscriptions.displayName"
+msgstr "Abunə Hesabatı"
+
+msgid "plugins.reports.subscriptions.description"
+msgstr ""
+"Bu qoşma CSV formatında abunəlik və abunəçi məlumat siyahısının daxil olduğu "
+"bir hesabat təmin edir."
+
+msgid "plugins.reports.subscriptions.institutionMailingAddress"
+msgstr "Təşkilat Yazışma Adresi"
+
+msgid "plugins.reports.subscriptions.ipRanges"
+msgstr "IP Aralığı"
