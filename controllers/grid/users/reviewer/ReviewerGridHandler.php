@@ -50,7 +50,7 @@ class ReviewerGridHandler extends PKPReviewerGridHandler
                 'eventType' => SUBMISSION_LOG_REVIEW_RECOMMENDATION_BY_PROXY,
                 'userId' => Validation::loggedInAs() ?? $user->getId(),
                 'message' => 'log.review.reviewRecommendationSetByProxy',
-                'isTranslated' => 0,
+                'isTranslated' => false,
                 'dateLogged' => Core::getCurrentDate(),
                 'round' => $reviewAssignment->getRound(),
                 'submissionId' => $submission->getId(),
