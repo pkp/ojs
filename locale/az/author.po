@@ -2,7 +2,7 @@
 # Gadirova <leylakb@yahoo.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-03-17 01:01+0000\n"
+"PO-Revision-Date: 2023-06-01 09:27+0000\n"
 "Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "az/>\n"
@@ -165,11 +165,13 @@ msgstr ""
 
 msgid "author.submit.coverageInstructions"
 msgstr ""
-"Tədqiqat materialının coğrafi mövqeyi, xronoloji və ya tarixi həcm və / və "
-"ya xüsusiyyətləri."
+"Tədqiqat materialının coğrafi mövqeyi, xronoloji və ya tarixi həcm və/və ya "
+"xüsusiyyətləri."
 
 msgid "author.submit.languageInstructions"
 msgstr ""
+"English=en; French=fr; Spanish=es. <a href=\"https://www.loc.gov/standards/"
+"iso639-2/php/code_list.php\" target=\"_blank\">Əlavə kodlar</a>."
 
 msgid "author.submit.form.authorRequired"
 msgstr "Ən az bir müəllif olmalıdır."
