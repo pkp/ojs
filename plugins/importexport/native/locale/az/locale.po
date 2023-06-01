@@ -1,8 +1,117 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2023.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-06-01 22:16+0000\n"
+"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
+"Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-native/az/>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.importexport.native.displayName"
+msgstr "Native XML qoşması"
+
+msgid "plugins.importexport.native.import"
+msgstr "İdxal edin"
+
+msgid "plugins.importexport.native.import.instructions"
+msgstr "İdxal ediləcək XML faylı yükləyin"
+
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "İxrac etmək üçün məqalələri seçin"
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "Məqalələri ixrac edin"
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "Nömrələri ixrac edin"
+
+msgid "plugins.importexport.native.results"
+msgstr "İdxal edin nəticə"
+
+msgid "plugins.importexport.native.importComplete"
+msgstr "İdxal etmə uğurla tamamlandı. Aşağıdakı elementlər idxal edildi:"
+
+msgid "plugins.importexport.native.error.unknownSection"
+msgstr "Naməlum bölmə {$param}"
+
+msgid "plugins.importexport.native.error.unknownUser"
+msgstr "Göstərilən istifadəçi \"{$userName}\" mövcud deyil."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
+msgstr ""
+"\"{$section1Title}\" bölmə adı və \"{$issueTitle}\" başlıqlı nömrə \""
+"{$section2Title}\" bölmə adı, mövcud fərqli jurnal bölmələri ilə uyuşdu."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMatch"
+msgstr ""
+"\"{$issueTitle}\" nömrəsindəki \"{$sectionTitle}\" bölmə başlığı, mövcud bir "
+"Jurnal bölməsi ilə uyğundur, ancaq bu bölmənin başqa bir başlığı, mövcud "
+"Jurnal bölməsinin başqa bir başlığı ilə uyğun gəlmir."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
+msgstr ""
+"\"{$section1Abbrev}\" bölməsinin qısa adı və \"{$issueTitle}\" nömrəsinin \""
+"{$section2Abbrev}\" bölməsinin qısa adı, fərqli mövcud Jurnal bölmələri ilə "
+"uyuşdu."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr ""
+"Nömrələrdən heç biri və ya birdən çox nömrə, göstərilən nömrə tərifi \""
+"{$issueIdentification}\" ilə uyğun gəlmir."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgstr "\"{$articleTitle}\" məqaləsi üçün nömrə tərifetmə elementi əskikdir."
+
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr ""
+"\"{$articleTitle}\" məqaləsi bir nömrə içində yer alır, ancaq nəşr tarixi "
+"yoxdur."
+
+msgid "plugins.importexport.native.description"
+msgstr ""
+"Məqalələri və nömrələri OJS-nin təbii XML formatına idxal və ixrac edin."
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr ""
+"Davam etmək üçün zəhmət olmasa \"İçə Transfer et\" altında bir fayl yükləyin."
+
+msgid "plugins.importexport.native.cliUsage"
+msgstr ""
+"İstifadə: {$scriptName} {$pluginName} [command] ...\n"
+"Əmrlər:\n"
+" import [xmlFileName] [journal_path] [user_name] ...\n"
+" export [xmlFileName] [journal_path] articles [articleId1] [articleId2] ...\n"
+" export [xmlFileName] [journal_path] article [articleId]\n"
+" export [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...\n"
+" export [xmlFileName] [journal_path] issue [issueId]\n"
+"\n"
+"XML sənədinin kökünə bağlı olaraq aşağıdakı kimi dataları qəbul etmək üçün "
+"əlavə parametrlər lazımdır.\n"
+"\n"
+"Kök düyün <article> və ya <articles> isə, əlavə parametlər lazımdır.\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]\n"
+" issue_id [issueId] section_id [sectionId]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [user_name]\n"
+" issue_id [issueId] section_name [name]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path]\n"
+" issue_id [issueId] section_abbrev [abbrev]\n"
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr ""
+"\"{$issueTitle}\" nömrəsindəki \"{$sectionAbbrev}\" bölmənin qısaltması, "
+"mövcud bir jurnalın bölməsi ilə uyğundur, ancaq bu bölmənin başqa bir "
+"qısaltması ilə uyğun gəlmir."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgstr ""
+"{$issueId} ID-si ilə mövcud nömrə, \"{$issueIdentification}\" ID-si ilə "
+"verilən nömrə məlumatı ilə uyuşur. Bu nömrə dəyişdirilməyəcək, ancaq "
+"məqalələr əlavə ediləcəkdir."
