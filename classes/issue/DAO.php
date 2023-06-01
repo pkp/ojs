@@ -371,7 +371,7 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
     {
         DB::table('issue_settings')->updateOrInsert(
             ['issue_id' => (int) $pubObjectId, 'locale' => '', 'setting_name' => 'pub-id::' . $pubIdType],
-            ['setting_type' => 'string', 'setting_value' => (string) $pubId]
+            ['setting_value' => (string) $pubId]
         );
         // TODO: Cache not implemented
         // $this->flushCache();
