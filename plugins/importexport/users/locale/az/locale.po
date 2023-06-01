@@ -1,8 +1,111 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2023.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-06-01 09:27+0000\n"
+"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
+"Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-users/az/>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "İstifadəçi XML qoşması"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr ""
+"Sistemə qeyd edilən hər istifadəçiyə istifadəçi adı və şifrələrini bir mesaj "
+"göndər."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Bir xəta baş verirsə digər istifadəçiləri yükləməyə davam edin."
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Data alınarkən xəta baş verdi"
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Naməlum bir Jurnal yolu \"{$journalPath}\"qeyd edildi."
+
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"İdxal etmə uğurla tamamlandı. İstifadə edilməyən istifadəçi adları və email "
+"adresiləri olan istifadəçilər, birlikdə gələn istifadəçi qrupları ilə "
+"birlikdə idxal edildi."
+
+msgid "plugins.importexport.users.results"
+msgstr "Nəticələr"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr ""
+"Davam etmək üçün zəhmət olmasa \"İçə Transfer et\" altında bir fayl yükləyin."
+
+msgid "plugins.importexport.users.description"
+msgstr "İstifadəçi məlumatlarının mübadiləsi üçün"
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "İstifadəçi məlumatlarını əlavə edin"
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "İstifadəçi data faylı"
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Aşağıdakı istifadəçilər sistemə uğurla əlavə edildi"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr ""
+"Bu istifadəçilərin sistemə əlavə edilməsini istədiyiniz istifadəçilər "
+"olduğunu təsdiqləyin"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Xəbərdarlıq"
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "İstifadəçi datalarını ixrac edin"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "İstifadəçiləri rollarına görə verin"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Hamısını verin"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Datalar verilməyə hazırlaşarkən xəta baş verdi"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"\"İstifadə: {$scriptName} {$pluginName} [əmr] ...\n"
+"Əmrlər:\n"
+" import [xmlFileName] [journal_path]\n"
+" export [xmlFileName] [journal_path]\n"
+" export [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Nümunələr:\n"
+" İstifadəçiləri myImportFile.xml faylından ixrac edin:\n"
+" {$scriptName} {$pluginName} myImportFile.xml myJournal-ı idxal edin\n"
+"\n"
+" Bütün istifadəçiləri myJournal-dan ixrac edin:\n"
+" {$scriptName} {$pluginName} myExportFile.xml myJournal-dan ixrac edin\n"
+"\n"
+" İstifadəçiləri ID-ləri ilə ixrac edin:\n"
+" {$scriptName} {$pluginName} myExportFile.xml myJournal 1 2 ixrac edin\n"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
+"Bu jurnala əlavə ediləcək istifadəçi məlumatlarını ehtiva edən data faylını "
+"seçin. Jurnal yardım səhifəsindən əlaqəli fayl strukturu ilə bağlı "
+"məlumatlara baxın. <br /><br />Qeyd: data alınarkən sistemdə qeydiyyatlı "
+"istifadəçi adı və ya email adresi ilə eyni olan istifadəçilər yenidən yadda "
+"saxlanılmaz, əgər bu istifadəçilərin əlavə rolları bəllidirsə, bu rollar "
+"qeydiyyatlı istifadəçiyə əlavə edilir."
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"{$importHash} ilə şifrəli şifrələr istifadə edilmir; OJS {$ojsHash} istifadə "
+"edəcək şəkildə konfiqurasiya edildi. Davam etsəniz, idxal edilən "
+"istifadəçilərin şifrələrini sıfırlamanız lazımdır."
