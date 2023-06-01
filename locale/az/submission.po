@@ -1,8 +1,369 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2023.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-06-01 09:27+0000\n"
+"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
+"Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/"
+"submission/az/>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "submission.submit.userGroup"
+msgstr "Kimi göndər ..."
+
+msgid "submission.upload.selectComponent"
+msgstr "Məqalə komponentini seçin"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Xülasə, {$wordCount} söz və ya daha az olmalıdır."
+
+msgid "submission.submit.noContext"
+msgstr "Məqalənin olduğu Jurnal tapılmadı."
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Məqaləniz Jurnal idarəçisinə bildirildi, sizə də qeydiyyatlarınızı "
+"təsdiqləmək üçün bir email göndərildi. Redaktor müraciəti incələdikdən sonra "
+"sizinlə əlaqə saxlayacaq."
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Məqalə dizgisi \"{$galleyFormatName}\" əlçatan edildi."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Məqalə dizgisi \"{$galleyFormatName}\" əlçatan olmaqdan çıxarıldı."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Məqalənin ümumi identifikatorları yeniləndi."
+
+msgid "grid.action.approveProof"
+msgstr "Dizgiyə daxil edilmək üçün bu korrektəni təsdiqləyin."
+
+msgid "submission.citationFormat.notFound"
+msgstr "Tələb edilən istinad formatı qəbul edilə bilmədi."
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Bu məqalə, <a href=\"{$issueUrl}\">{$issueName}</a>'ə təyin edildi, ancaq "
+"nəşri planlaşdırılmadı."
+
+msgid "publication.invalidSection"
+msgstr "Bu nəşrin bölməsi tapılmadı."
+
+msgid "publication.unscheduledIn"
+msgstr "Hələ bir nömrədə nəşr edilmək üçün planlaşdırılmadı."
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Müəllif hüquqları ili, bir nömrədə nəşr edildiyində avtomatik olaraq "
+"tənzimləndi."
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr "Müəllif hüquqları ili, nəşr tarixinə görə avtomatik olaraq tənzimləndi."
+
+msgid "publication.editDisabled"
+msgstr "Bu versiya nəşr edildi və redaktə edilə bilməz."
+
+msgid "publication.event.published"
+msgstr "Məqalə nəşr edildi."
+
+msgid "publication.invalidSubmission"
+msgstr "Bu nəşrin üçün məqalə tapılmadı."
+
+msgid "publication.publish"
+msgstr "Nəşr etmək"
+
+msgid "submission.copyrightOther.description"
+msgstr "Nəşr edilən məqalələrin müəllif hüququnu aşağıdakı qismə təyin edin."
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr "Qəbul qərarını ləğv edin və dəyərləndirmə mərhələsinə qayıdın."
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "{$title} başlıqlı namizəd məqalə dəyərləndirmə mərhələsinə qaytarıldı."
+
+msgid "submission.layout.viewGalley"
+msgstr "Dizgiye baxın"
+
+msgid "submission.complete"
+msgstr "Təsdiqlədi"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Məxfilik Bəyannaməsi"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} element"
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (Passiv)"
+
+msgid "submission.title.tip"
+msgstr ""
+"Məqalə növü ümumiyyətlə \"şəkil\", \"mətn\" və ya \"proqram\" və ya "
+"\"interaktiv\" daxil olmaqla digər çoxlu mühit növlərindən biridir. Zəhmət "
+"olmasa Məqalənizlə əlaqəli olanı seçin. Nümunələr bu adresdə tapıla bilər: "
+"<a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/"
+"usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/"
+"usageguide/generic.shtml#type</a>"
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Səhifə redaktoru, burada nəşr edilmək üzrə hazırlanmış formatlı faylları "
+"yükləyər. Nəşrdən əvvəl təsdiq üçün yüklənən düzəldilmiş fayllar ilə, "
+"dizgini test etmək üçün Müəllifləri və digər şəxsləri təyin etmək üçün "
+"<em>Təyinat Nəzarətçisi</em>ni istifadə edin."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Bu korrektə, dizgiyə daxil edilmək üçün təsdiqləndir."
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Məqalə, multimedia, data dəstləri, sənət əsəri vb. Daxil olmaqla bu məqalə "
+"ilə əlaqəli faylları yükləyin."
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Məqalənin üst dataları yeniləndi."
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Bu funksiyalar jurnal məzmununu tərif etmək üçün istifadə edilən beynəlxalq "
+"bir standart olan Dublin Core metadata dəstinə əsaslanır."
+
+msgid "galley.editPublishedDisabled"
+msgstr "Bu məqalə nəşr edildiyi üçün dizayn formatı redaktə edilə bilməz."
+
+msgid "galley.publicationNotFound"
+msgstr "Bu dizayn üçün nəşr tapılmadı."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Nömrə nəşr edildiyində nəşr tarixi avtomatik olaraq tənzimlənəcəkdir. Məqalə "
+"daha əvvəl başqa bir yerdə nəşr edilməyibsə və onu geri yükləməyiniz "
+"gərəkmədiyi müddətcə bir nəşr tarixi daxil etməyin."
+
+msgid "publication.invalidIssue"
+msgstr "Bu nəşrin nömrəsi tapılmadı."
+
+msgid "publication.required.issue"
+msgstr "Nəşr üçün bir nömrə təyin edilməlidir."
+
+msgid "publication.publishedIn"
+msgstr "<a href=\"{$issueUrl}\">{$issueName}</a> içində nəşr edildi."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"<a href=\"{$issueUrl}\">{$issueName}</a> içində nəşr edilmək üzrə "
+"planlaşdırıldı."
+
+msgid "section.any"
+msgstr "Hər hansı bir bölmə"
+
+msgid "submission.sectionOptions"
+msgstr "Bölmə seçimləri"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Bütün nəşr tələbləri yerinə yetirilib. Nəşr tarixi {$datePublished} olaraq "
+"planlaşdırıldığı üçün bu dərhal nəşr ediləcəkdir. Bunu nəşr etmək "
+"istədiyinizdən əminsinizmi?"
+
+msgid "publication.selectIssue"
+msgstr "Yayım üçün bir nömrə seçin və planlayın"
+
+msgid "submission.publication"
+msgstr "Nəşr"
+
+msgid "publication.status.published"
+msgstr "Nəşr edildi"
+
+msgid "submission.status.scheduled"
+msgstr "Proqramlaşdırılmışdır"
+
+msgid "publication.status.unscheduled"
+msgstr "Planlanmamışdır"
+
+msgid "submission.publications"
+msgstr "Nəşrlər"
+
+msgid "publication.datePublished"
+msgstr "Nəşr tarixi"
+
+msgid "submission.title"
+msgstr "Məqalə başlığı"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Yeni bir məqalə Göndər"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Yeni Məqalə"
+
+msgid "grid.action.workflow"
+msgstr "Məqalə prosesi axışı"
+
+msgid "submission.issueEntry"
+msgstr "Üst data"
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Nömrə məzmunda görünən dizgi"
+
+msgid "grid.action.issueEntry"
+msgstr "Bu Məqalənin metadatalarına baxın"
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Format təsdiqlənməsi"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Bu dizgiyə, oxucular tərəfindən <em>giriş edilə bilməz</em> .</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Bu dizgi, oxucular üçün <em>əlçatan olacaq</em> .</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Bu dizgini əlçatan edin"
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Başlıq və xülasə"
+
+msgid "submission.pageProofs"
+msgstr "Korrektə"
+
+msgid "workflow.review.externalReview"
+msgstr "Dəyərləndirin"
+
+msgid "submission.upload.fileContents"
+msgstr "Yüklənəsi fayl məzmunu"
+
+msgid "submission.incomplete"
+msgstr "Təsdiq gözləyir"
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Müəllif təsdiqləmə düymələri"
+
+msgid "submission.submit.contributorRole"
+msgstr "İştirakçının rolu"
+
+msgid "catalog.category.heading"
+msgstr "Bütün elementlər"
+
+msgid "publication.assignToissue"
+msgstr "Nömrəyə təyin edin"
+
+msgid "publication.changeIssue"
+msgstr "Nömrəni dəyişdirin"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Bütün nəşr tələbləri yerinə yetirilib. Bunu nəşr etmək istədiyinizdən "
+"əminsinizmi?"
+
+msgid "submission.galleyFiles"
+msgstr "Dizayn faylları"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Bütün nəşr tələbləri yerinə yetirilib. Bu, {$issue} nəşr edildiyində "
+"yayımlanacaqdır. Bunu yayımlamaq üzrə planlaşdırmaq istədiyinizdən "
+"əminsinizmi?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Bütün nəşr tələbləri yerinə yetirilib. Bu dərhal {$issue} jurnalında "
+"yayımlanacaqdır. Bunu nəşr etmək istədiyinizdən əminsinizmi?"
+
+msgid "publication.unpublish"
+msgstr "Nəşrdən çıxarın"
+
+msgid "publication.unpublish.confirm"
+msgstr "Bunun dərc olunmasını istəmədiyinizə əminsinizmi?"
+
+msgid "publication.unschedule.confirm"
+msgstr "Bunun yayımlanmaq üzrə planlaşdırılmasını istəmədiyinizə əminsinizmi?"
+
+msgid "publication.version.details"
+msgstr "{$version} versiyası üçün nəşr detalları"
+
+msgid "submission.queries.production"
+msgstr "Çap müzakirələri"
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Dəyərləndirməyə qayıdın"
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Dəyərləndirmə üçün qaytarın"
+
+msgid "publication.event.scheduled"
+msgstr "Məqalə yayım üçün planlaşdırıldı."
+
+msgid "publication.event.unpublished"
+msgstr "Məqalə nəşrdən çıxarıldı."
+
+msgid "publication.event.versionPublished"
+msgstr "Yeni bir versiya nəşr edildi."
+
+msgid "publication.event.versionScheduled"
+msgstr "Yeni bir versiyanın yayımlanacağı planlaşdırıldı."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Bir versiya nəşrdən çıxarıldı."
+
+msgid "publication.publish.requirements"
+msgstr ""
+"Bunun nəşr edilə bilməsi üçün aşağıdakı tələblərin yerinə yetirilməsi "
+"lazımdır."
+
+msgid "publication.required.declined"
+msgstr "Rədd edilən bir məqalə nəşr edilə bilməz."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Məqalənin nəşr edilə bilməsi üçün əvvəlcə Kopyalama və ya İstehsal "
+"mərhələlərində olması lazımdır."
+
+msgid "submission.license.description"
+msgstr ""
+"Lisenziya yayımlandığında avtomatik <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> olaraq tənzimlənəcəkdir."
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Müəllif hüququ, yayımlandığında {$copyright} adresinə avtomatik olaraq təyin "
+"ediləcəkdir."
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName}, namizəd məqalənin qəbul qərarını ləğv etdi və dəyərləndirmə "
+"mərhələsinə qaytardı."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Namizəd məqalənin dəyərləndirmə mərhələsinə qaytarıldığını bildirmək üçün "
+"müəlliflərə bir email göndər. Bu qərarın niyə verildiyini izah edin və "
+"yenidən dəyərləndirmə ediləcəyi xüsusunda müəllifə məlumat verin."
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"Müəlliflərə, bu namizəd məqalənin rəyçi dəyərləndirməsinə göndəriləcəyini "
+"bildirmək üçün bir email göndər. Mümkündürsə müəlliflərə, rəyçi "
+"dəyərləndirmə prosesinin nə qədər davam edə biləcəyini və redaktorlardan nə "
+"zaman xəbər almağı gözləmələri gərəkdiyi xüsusunda məlumat verin."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Dəyərləndirmə mərhələsinə göndərilməsi lazım olan faylları seçin."
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+"Məqalə üçün DOI yaradıla bilmədi: {$pubObjectTitle}. DOI yaradıla bilməsi "
+"üçün Məqalənin bir nömrəyə təyin edilməsi lazımdır."
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+"Məqalə dizgisi üçün DOI yaradıla bilmədi: {$itemTitle}. DOI yaradıla bilməsi "
+"üçün Məqalənin bir nömrəyə təyin edilməsi lazımdır."
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+"Məqalə üçün DOI yaradıla bilmədi: {$pubObjectTitle}. Məqalə bu jurnalda "
+"deyil."
