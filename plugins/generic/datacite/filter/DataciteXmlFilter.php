@@ -298,7 +298,11 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 // Check whether we have a supp file creator set...
                 $creator = $this->getPrimaryTranslation($galleyFile->getData('creator'), $objectLocalePrecedence);
                 if (!empty($creator)) {
-                    $creators[] = $creator;
+                    $creators[] = [
+                        'name' => $creator,
+                        'orcid' => null,
+                        'affiliation' => null
+                    ];
                     break;
                 }
                 // ...if not then go on by retrieving the publication
@@ -309,18 +313,38 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 $authors = $publication->getData('authors');
                 assert(!empty($authors));
                 foreach ($authors as $author) { /** @var Author $author */
-                    $creators[] = $author->getFullName(false, true);
+                    $creators[] = [
+                        'name' => $author->getFullName(false, true),
+                        'orcid' => $author->getOrcid(),
+                        'affiliation' => $author->getLocalizedData('affiliation', $publication->getData('locale'))
+                    ];
                 }
                 break;
             case isset($issue):
-                $creators[] = $publisher;
+                $creators[] = [
+                    'name' => $publisher,
+                    'orcid' => null,
+                    'affiliation' => null
+                ];
                 break;
         }
         assert(count($creators) >= 1);
         $creatorsNode = $doc->createElementNS($deployment->getNamespace(), 'creators');
         foreach ($creators as $creator) {
             $creatorNode = $doc->createElementNS($deployment->getNamespace(), 'creator');
-            $creatorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'creatorName', htmlspecialchars($creator, ENT_COMPAT, 'UTF-8')));
+            $creatorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'creatorName', htmlspecialchars($creator['name'], ENT_COMPAT, 'UTF-8')));
+            if ($creator['orcid']) {
+                $node = $doc->createElementNS($deployment->getNamespace(), 'nameIdentifier');
+                $node->appendChild($doc->createTextNode($creator['orcid']));
+                $node->setAttribute('schemeURI', 'http://orcid.org/');
+                $node->setAttribute('nameIdentifierScheme', 'ORCID');
+                $creatorNode->appendChild($node);
+            }
+            if ($creator['affiliation']) {
+                $node = $doc->createElementNS($deployment->getNamespace(), 'affiliation');
+                $node->appendChild($doc->createTextNode($creator['affiliation']));
+                $creatorNode->appendChild($node);
+            }
             $creatorsNode->appendChild($creatorNode);
         }
         return $creatorsNode;
