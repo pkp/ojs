@@ -1,8 +1,1259 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2023.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-06-01 22:17+0000\n"
+"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
+"Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/manager/"
+"az/>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "manager.distribution.access"
+msgstr "GiriŇü"
+
+msgid "manager.journalManagement"
+msgstr "Jurnal r…ôhb…ôrliyi"
+
+msgid "manager.payment.amount"
+msgstr "Miqdar"
+
+msgid "manager.payment.authorFees"
+msgstr "M√ľ…ôllif √∂d…ôniŇül…ôri"
+
+msgid "manager.payment.description"
+msgstr "A√ßńĪqlama/t…ôsvir"
+
+msgid "manager.payment.details"
+msgstr "Detallar"
+
+msgid "manager.payment.editSubscription"
+msgstr "Abun…ôliyi t…ônziml…ôyin"
+
+msgid "manager.payment.enable"
+msgstr "Aktivl…ôŇüdirin"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "√Ėd…ôniŇü variantlarńĪ"
+
+msgid "manager.payment.generalFees"
+msgstr "√úmumi haqqlar"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "Jurnal il…ô"
+
+msgid "manager.people.roleEnrollment"
+msgstr "{$role} qeydiyyat"
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "X√ľlas…ô m…ôcburi deyil"
+
+msgid "manager.sections.open"
+msgstr "M√ľraci…ôt a√ßńĪqdńĪr"
+
+msgid "manager.sections.policy"
+msgstr "B√∂lm…ô politikasńĪ"
+
+msgid "manager.sections.readingTools"
+msgstr "Oxuma vasit…ôl…ôri"
+
+msgid "manager.sections.reviewed"
+msgstr "R…ôy√ßinin d…ôy…ôrl…ôndirm…ôsind…ôn ke√ßmiŇü"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "M…ôzmun"
+
+msgid "manager.setup.generalInformation"
+msgstr "√úmumi m…ôlumat"
+
+msgid "manager.setup.itemsPerPage"
+msgstr "S…ôhif…ô baŇüńĪna g√∂st…ôril…ôc…ôk element"
+
+msgid "manager.setup.journalLayout"
+msgstr "Jurnal ara √ľz√ľ"
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS v…ô CLOCKSS"
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Abun…ôlik sonu"
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "HamńĪsńĪnńĪ bitirin"
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Qism…ôn sona √ßatdńĪrńĪn"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} ay"
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Abun…ôlik sona√ßatma x…ôb…ôrdalńĪńüńĪ"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Abun…ôlik m…ôlumatlarńĪ"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Referans n√∂mr…ôsi"
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Silin"
+
+msgid "manager.subscriptions.ipRange"
+msgstr "IP aralńĪńüńĪ"
+
+msgid "manager.subscriptions.membership"
+msgstr "√úzvl√ľk"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Referans n√∂mr…ôsi"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Miqdar"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Miqdar"
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Se√ßiml…ôr"
+
+msgid "stats.publicationStats"
+msgstr "M…ôqal…ô statistikalarńĪ"
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "DOI-l…ôri t…ôyin edin"
+
+msgid "doi.manager.issueDois"
+msgstr "N√∂mr…ô DOI-l…ôri"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "N√∂mr…ônin n…ôŇür tarixini iŇül…ôdin"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "M…ôqal…ônin n…ôŇür tarixini iŇül…ôdin"
+
+msgid "manager.distribution.publication"
+msgstr "N…ôŇür etm…ô"
+
+msgid "manager.distribution.publishingMode"
+msgstr "N…ôŇür etm…ô √ľsulu"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Son sur…ôt redakt…ô m…ôrh…ôl…ôsind…ôdir"
+
+msgid "manager.website.archiving"
+msgstr "Arxivl…ôŇüdirm…ô"
+
+msgid "manager.language.ui"
+msgstr "ńįstifad…ô√ßi interfeysi"
+
+msgid "manager.language.submissions"
+msgstr "Fayllar"
+
+msgid "manager.language.forms"
+msgstr "Formalar"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr ""
+"Proses, bu dil √ľ√ß√ľn etdiyiniz dil…ô xas jurnal t…ônziml…ôrini "
+"d…ôyiŇüdir…ôc…ôk"
+
+msgid "manager.managementPages"
+msgstr "ńįdar…ôetm…ô s…ôhif…ôl…ôri"
+
+msgid "manager.payment.action"
+msgstr "Proses"
+
+msgid "manager.payment.addPayment"
+msgstr "√Ėd…ôniŇü …ôlav…ô edin"
+
+msgid "manager.payment.form.numeric"
+msgstr ""
+"B√ľt√ľn m…ôbl…ôńü pozitiv r…ôq…ômsal d…ôy…ôrl…ôr Ňü…ôklind…ô olmalńĪdńĪr ("
+"onluq saylar q…ôbul edilir)"
+
+msgid "manager.payment.generalOptions"
+msgstr "√úmumi se√ßiml…ôr"
+
+msgid "manager.payment.noPayments"
+msgstr "√Ėd…ôm…ô yoxdur"
+
+msgid "manager.payment.notFound"
+msgstr "TapńĪlmadńĪ"
+
+msgid "manager.payment.options"
+msgstr "Se√ßiml…ôr"
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Bu abun…ôliyi silm…ôk ist…ôdiyiniz…ô …ôminsiniz?"
+
+msgid "manager.payment.options.fee"
+msgstr "√Ėd…ôniŇü"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "√Ėd…ôniŇü a√ßńĪqlamasńĪ/izahatńĪ"
+
+msgid "manager.payment.options.feeName"
+msgstr "√Ėd…ôniŇüin adńĪ"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "D…ôrn…ôk √úzvl√ľy√ľ"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "M…ôqal…ô v…ô n√∂mr…ôl…ôrd…ôki PDF fayllara sad…ôc…ô m…ôhdud giriŇü"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "M…ôqal…ô √ßalńĪŇüma haqqńĪ"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Madd…ô alńĪn"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "N√∂mr…ô alńĪn"
+
+msgid "manager.payment.options.text"
+msgstr "√Ėd…ôniŇü metodu t…ôsviri"
+
+msgid "manager.payment.paymentId"
+msgstr "√Ėd…ôniŇü n√∂mr…ôsi"
+
+msgid "manager.payment.paymentMethod"
+msgstr "√Ėd…ôniŇü √ľsulu"
+
+msgid "manager.payment.paymentMethods"
+msgstr "√Ėd…ôniŇü metodlarńĪ"
+
+msgid "manager.payment.paymentType"
+msgstr "√Ėd…ôniŇü n√∂v√ľ"
+
+msgid "manager.payment.readerFees"
+msgstr "Oxucu √∂d…ôniŇül…ôri"
+
+msgid "manager.payment.records"
+msgstr "Rekords"
+
+msgid "manager.paymentTypes"
+msgstr "√Ėd…ôniŇü n√∂vl…ôri"
+
+msgid "manager.payment.userName"
+msgstr "√Ėd…ôniŇü n√∂mr…ôsi"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Bu jurnalda qeydiyyatdan ke√ßmiŇü istifad…ô√ßil…ôr"
+
+msgid "manager.people.allJournals"
+msgstr "B√ľt√ľn jurnallar"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Bir jurnala saytdan bir istifad…ô√ßi qeyd edin"
+
+msgid "manager.people.showNoRole"
+msgstr "Rolu olmayan istifad…ô√ßil…ôri g√∂st…ôrin"
+
+msgid "manager.people.allUsers"
+msgstr "B√ľt√ľn qeydiyyatdan ke√ßmiŇü istifad…ô√ßil…ôr"
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Ňěablon se√ßin"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "M√∂vcud bir istifad…ô√ßini qeyd edin/yadda saxlayńĪn"
+
+msgid "manager.sections.assigned"
+msgstr "Bu hiss…ônin redaktorlarńĪ"
+
+msgid "manager.sections.confirmDelete"
+msgstr "Bu hiss…ôni qalńĪcńĪ olaraq silm…ôk ist…ôdiyiniz…ô …ôminsinizmi?"
+
+msgid "manager.sections.create"
+msgstr "B√∂lm…ô yaradńĪn"
+
+msgid "manager.sections.editors"
+msgstr "B√∂lm…ô redaktorlarńĪ"
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "B√∂lm…ô √ľ√ß√ľn qńĪsaldńĪlmńĪŇü bir baŇülńĪq m…ôcburidir."
+
+msgid "manager.sections.identifyType"
+msgstr ""
+"Bu b√∂lm…ôd…ô n…ôŇür edil…ôn elementl…ôrin t…ôyin edilm…ôsind…ô istifad…ô "
+"edil…ôc…ôk t…ôrif"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr ""
+"(M…ôs…ôl…ôn, \"r…ôy√ßilik D…ôy…ôrl…ôndirm…ôsind…ôn ke√ßmiŇü m…ôqal…ô\", \"r"
+"…ôy√ßilik d…ôy…ôrl…ôndirm…ôsind…ôn ke√ßm…ômiŇü kitab inc…ôl…ôm…ôsi\", \"√"
+"áańüńĪrńĪŇülńĪ yorum\", vb.)"
+
+msgid "manager.sections.indexed"
+msgstr "ńįndeksl…ônmiŇü"
+
+msgid "manager.sections.submissionIndexing"
+msgstr ""
+"Bu b√∂lm…ôd…ôki m…ôzmun JurnalńĪn indeksl…ôn…ôn m…ôzmununa daxil "
+"edilm…ôy…ôc…ôkdir"
+
+msgid "manager.sections.submissionReview"
+msgstr "R…ôy√ßi d…ôy…ôrl…ôndirm…ôsind…ôn ke√ßm…ôy…ôc…ôk"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "JurnalńĪn bu hiss…ôsin…ô m√ľraci…ôtl…ôr"
+
+msgid "manager.sections.unassigned"
+msgstr "T…ôyin edil…ô bil…ôc…ôk b√∂lm…ô redaktorlarńĪ"
+
+msgid "manager.sections.wordCount"
+msgstr "K…ôlm…ô sayńĪ"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Bu b√∂lm…ôd…ô x√ľlas…ô (abstract) √ľ√ß√ľn k…ôlm…ô sayńĪ (limitsiz: 0)"
+
+msgid "manager.setup"
+msgstr "Jurnal t…ônziml…ôri"
+
+msgid "manager.setup.masthead"
+msgstr "ńįdar…ô√ßi siyahńĪsńĪ"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Redaksiya hey…ôti"
+
+msgid "manager.setup.homepageContent"
+msgstr "Jurnal …ôsas s…ôhif…ô m…ôzmunu"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Jurnal stil faylńĪ"
+
+msgid "manager.setup.contextName"
+msgstr "JurnalńĪn adńĪ"
+
+msgid "manager.setup.pageHeader"
+msgstr "Jurnal s…ôhif…ô baŇülńĪńüńĪ"
+
+msgid "manager.setup.addAboutItem"
+msgstr "HaqqńĪnda elementi …ôlav…ô edin"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Yoxlama siyahńĪsńĪ elementi …ôlav…ô edin"
+
+msgid "manager.setup.addItem"
+msgstr "Element …ôlav…ô edin"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "\"Jurnal HaqqńĪnda\" s…ôhif…ôsind…ô g√∂r√ľn…ôc…ôk element …ôlav…ô edin"
+
+msgid "manager.setup.addNavItem"
+msgstr "Element …ôlav…ô edin"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Yeni data bazasńĪ linki …ôlav…ô edin"
+
+msgid "manager.setup.addSponsor"
+msgstr "Sponsor t…ôŇükilat …ôlav…ô edin"
+
+msgid "manager.setup.alternateHeader"
+msgstr "Alternativ baŇülńĪq"
+
+msgid "manager.setup.announcements"
+msgstr "Elanlar"
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "GiriŇü"
+
+msgid "manager.setup.history"
+msgstr "Jurnal ke√ßmiŇüi"
+
+msgid "manager.setup.currentIssue"
+msgstr "Son n√∂mr…ô"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "AddńĪm 5: G√∂r√ľn√ľŇü√ľ Ňü…ôxsil…ôŇüdirin"
+
+msgid "manager.setup.details"
+msgstr "Detallar"
+
+msgid "manager.setup.discipline"
+msgstr "Elm sah…ôl…ôri v…ô alt ixtisaslar"
+
+msgid "manager.setup.disciplineExamples"
+msgstr ""
+"(M…ôs. Tarix; T…ôhsil; Sosiologiya; Psixologiya; K√ľlt√ľr √ßalńĪŇümalarńĪ; "
+"H√ľquq)"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Bu jurnal √ľ√ß√ľn uyńüun elm sah…ô n√ľmun…ôl…ôri verin"
+
+msgid "manager.setup.editorDecision"
+msgstr "Redaktor q…ôrarńĪ"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Cavab verm…ôy…ôn email adresi"
+
+msgid "manager.setup.emails"
+msgstr "Email identifikasiyasńĪ"
+
+msgid "manager.setup.emailSignature"
+msgstr "ńįmza"
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "ElanlarńĪ aktivl…ôŇüdirin"
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Ana s…ôhif…ôd…ô g√∂st…ôrin"
+
+msgid "manager.setup.focusAndScope"
+msgstr "Fokus v…ô …ôhat…ô dair…ôsi"
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "√áalńĪŇümalarńĪnńĪ indeksl…ôm…ôk ist…ôy…ôn m√ľ…ôllifl…ôr √ľ√ß√ľn"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "AddńĪm 1: DetallarńĪ t…ônziml…ôm…ô"
+
+msgid "manager.setup.guidelines"
+msgstr "B…ôl…ôd√ßil…ôr"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "AddńĪm 3: M…ôqal…ô B…ôl…ôd√ßisi"
+
+msgid "manager.setup.identity"
+msgstr "Jurnal kimliyi"
+
+msgid "manager.setup.information"
+msgstr "M…ôlumat"
+
+msgid "manager.setup.information.forAuthors"
+msgstr "M√ľ…ôllifl…ôr √ľ√ß√ľn"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Kitabxanalar √ľ√ß√ľn"
+
+msgid "manager.setup.information.forReaders"
+msgstr "Oxucular √ľ√ß√ľn"
+
+msgid "manager.setup.initialIssue"
+msgstr "Birinci n√∂mr…ô"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr ""
+"Se√ßil…ôn formata uyńüun olaraq ADS il…ô n…ôŇür edil…ôc…ôk ilk n√∂mr…ônin, "
+"n√∂mr…ô, cild, il kimi x√ľsusiyy…ôtl…ôri:"
+
+msgid "manager.setup.institution"
+msgstr "Qurum"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Jurnal qńĪsaltmasńĪ"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Jurnal arxivl…ôŇüdirm…ô"
+
+msgid "manager.setup.contextSummary"
+msgstr "Jurnal x√ľlas…ôsi"
+
+msgid "manager.setup.contextAbout"
+msgstr "Jurnal haqqńĪnda"
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Jurnal ana s…ôhif…ô m…ôzmunu"
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Jurnal ana s…ôhif…ô baŇülńĪńüńĪ"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Jurnal ana s…ôhif…ô baŇülńĪńüńĪ"
+
+msgid "manager.setup.contextInitials"
+msgstr "JurnalńĪn baŇü h…ôrfl…ôri"
+
+msgid "manager.setup.journalLogo"
+msgstr "Jurnal loqotipi"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Jurnal loqotipi"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Jurnal s…ôhif…ô altlńĪńüńĪ"
+
+msgid "manager.setup.journalPolicies"
+msgstr "AddńĪm 2. Jurnal PolitikalarńĪ"
+
+msgid "manager.setup.journalSetup"
+msgstr "Jurnal konfiqurasiyasńĪ"
+
+msgid "manager.setup.journalTheme"
+msgstr "Jurnal temasńĪ"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Jurnal Ňü…ôkli (ki√ßik)"
+
+msgid "manager.setup.contextTitle"
+msgstr "Jurnal baŇülńĪńüńĪ"
+
+msgid "manager.setup.keyInfo"
+msgstr "∆Źsas m…ôlumat"
+
+msgid "manager.setup.labelName"
+msgstr "Etiket adńĪ"
+
+msgid "manager.setup.lists"
+msgstr "SiyahńĪlar"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "PKP PN qoŇümasńĪnńĪ aktivl…ôŇüdirin"
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP t…ôhl√ľk…ôsizlik Ňü…ôb…ôk…ôsi (PN)"
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"CLOCKSS lisenziyasńĪ Jurnal HaqqńĪnda b√∂lm…ôsind…ô, arxivl…ôŇüdirm…ô "
+"altńĪnda g√∂r√ľn…ôc…ôkdir: <a href=\"http://www.lockss.org/community/"
+"publishers-titles-gln/\" target=\"_blank\">LOCKSS LisansńĪ</a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "LOCKSS lisenziya t…ôsviri"
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"CLOCKSS lisenziyasńĪ Jurnal HaqqńĪnda b√∂lm…ôsind…ô, Arxivl…ôŇüdirm…ô "
+"altńĪnda g√∂r√ľn…ôc…ôkdir: <a href=\"https://clockss.org\" target=\"_blank\""
+">CLOCKSS LisansńĪ</a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "CLOCKSS Lisenziya T…ôsviri"
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.look"
+msgstr "G√∂r√ľn√ľŇü"
+
+msgid "manager.setup.management"
+msgstr "R…ôhb…ôrlik"
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "∆Źsas proses addńĪmlarńĪnńĪn idar…ô edilm…ôsi"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "ńįdar…ôetm…ô v…ô n…ôŇüriyyat konfiqurasiyasńĪ"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "AddńĪm 4: Jurnal r…ôhb…ôrliyi"
+
+msgid "manager.setup.navigationBar"
+msgstr "Y√∂nl…ôndirm…ô √ßubuńüu"
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr ""
+"URL/Link adresleri tam olmalńĪdńĪr (√Ėr. \"http://www.example.com\"), sayta "
+"nisbi link istifad…ô edilm…ôm…ôlidir (√Ėr. \"/manager/setup\")"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr ""
+"Etiket d…ôy…ôrl…ôri oxunacaq formatda olmalńĪ (M…ôs.\"Jurnal R…ôhb…ôrliyi\")"
+", yerlil…ôŇüdirm…ô a√ßarńĪ Ňü…ôklind…ô istifad…ô edilm…ôm…ôlidir (M…ôs. "
+"\"manager.setup\")"
+
+msgid "manager.setup.note"
+msgstr "Qeyd"
+
+msgid "manager.setup.numPageLinks"
+msgstr "S…ôhif…ô linkl…ôri"
+
+msgid "manager.setup.onlineIssn"
+msgstr "e-ISSN"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "S…ôhif…ô n√∂mr…ôsi t…ônzimi"
+
+msgid "manager.setup.policies"
+msgstr "Politikalar"
+
+msgid "manager.setup.printIssn"
+msgstr "ISSN"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Oxuma t…ôlimatńĪ"
+
+msgid "manager.setup.publicationSchedule"
+msgstr "N…ôŇür planlaŇüdńĪrmasńĪ"
+
+msgid "manager.setup.publicationScheduling"
+msgstr "N…ôŇür planlaŇüdńĪrmasńĪ"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Jurnal m…ôzmununun t…ôyin edilm…ôsi"
+
+msgid "manager.setup.publisher"
+msgstr "NaŇüir"
+
+msgid "manager.setup.referenceLinking"
+msgstr "ńįstinad linkl…ôm…ô"
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "D…ôy…ôrl…ôndirm…ô b…ôl…ôd√ßisi"
+
+msgid "manager.setup.reviewOptions"
+msgstr "D…ôy…ôrl…ôndirm…ô se√ßiml…ôri"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Avtomatik xatńĪrlatma emaill…ôri"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "r…ôy√ßinin d…ôy…ôrl…ôndirm…ôsini tamamlamaq √ľ√ß√ľn veril…ôn m√ľdd…ôt"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Fayl giriŇüini m…ôhdudlaŇüdńĪrńĪn"
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "r…ôy√ßi giriŇüi"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Bir klikl…ô r…ôy√ßi GiriŇüi"
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "r…ôy√ßi d…ôr…ôc…ôl…ôndirm…ô"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "r…ôy√ßi xatńĪrladńĪcńĪlarńĪ"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "D…ôy…ôrl…ôndirm…ô politikasńĪ"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "AxtarńĪŇü motoru indeksl…ôŇüdirm…ô"
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "B√∂lm…ô v…ô b√∂lm…ô redaktorlarńĪ"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr ""
+"(∆Źg…ôr b√∂lm…ô …ôlav…ô edilm…ôyibs…ô, m√ľraci…ôtl…ôr defolt olaraq "
+"M…ôqal…ôl…ôr b√∂lm…ôsin…ô g√∂nd…ôrilir.)"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Sayt giriŇüi"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "M…ôqal…ô m…ôzmununu g√∂st…ôrin"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Bir Jurnal veb saytńĪ √ľ√ß√ľn beŇü addńĪm"
+
+msgid "manager.setup.subjectExamples"
+msgstr ""
+"(M…ôs…ôl…ôn Fotosintez; Qara D…ôlikl…ôr, D√∂rd R…ôngli X…ôrit…ô Problemi; "
+"Bayes N…ôz…ôriyy…ôsi )"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "A√ßar s√∂zl…ôr"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr ""
+"M√ľ…ôllifl…ôr √ľ√ß√ľn a√ßar s√∂zl…ôr v…ô ya m√∂vzu baŇülńĪńüńĪ t…ôklifl…ôri "
+"verin"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "M…ôqal…ô b…ôl…ôd√ßisi"
+
+msgid "manager.setup.submissions"
+msgstr "M…ôqal…ôl…ôr/t…ôqdimatlar"
+
+msgid "manager.setup.enableOai"
+msgstr "OAI aktivl…ôŇüdirin"
+
+msgid "manager.setup.typeExamples"
+msgstr ""
+"(M…ôs. Tarixi araŇüdńĪrma; YarńĪm t…ôcr√ľbi; ∆Źd…ôbiyyat analizi; Anket/"
+"ńįnterv√ľ)"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "N√∂vl…ôr (metod / yanaŇüma)"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr ""
+"Bu sah…ô √ľ√ß√ľn araŇüdńĪrma n√∂vl…ôri, metodlarńĪ v…ô yanaŇümalarńĪ il…ô "
+"bańülńĪ n√ľmun…ôl…ôr verin"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Unikal t…ôsviriedici"
+
+msgid "manager.setup.useThumbnail"
+msgstr "Ki√ßik Ňü…ôkil"
+
+msgid "manager.setup.useImageTitle"
+msgstr "BaŇülńĪq Ňü…ôkli"
+
+msgid "manager.setup.userRegistration"
+msgstr "ńįstifad…ô√ßi qeydiyyatńĪ"
+
+msgid "manager.setup.useTextTitle"
+msgstr "BaŇülńĪq m…ôtni"
+
+msgid "manager.statistics.statistics"
+msgstr "Jurnal statistikasńĪ"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "M…ôqal…ô baxńĪŇü sayńĪ (sad…ôc…ô M√ľ…ôllifl…ôr √ľ√ß√ľn)"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Q…ôbul"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "R…ôdd"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Yenid…ôn G√∂nd…ôr"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "D…ôy…ôrl…ôndirm…ô m√ľdd…ôti"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "N…ôŇür…ô q…ôd…ôr ke√ß…ôn m√ľdd…ôt"
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "N…ôŇür olunan elementl…ôr"
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "N…ôŇür edilmiŇü n√∂mr…ôl…ôr"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "√úmumi m√ľraci…ôt sayńĪ"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "D…ôy…ôrl…ôndirm…ôd…ôn ke√ßdi"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Qeyd olunan oxucular"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "T…ôyinatlarńĪn sayńĪ"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "R…ôy√ßil…ôr"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Redaktor xalńĪ"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "D…ôy…ôrl…ôndirm…ôl…ôrin sayńĪ"
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Abun…ôl…ôr"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "M…ôqal…ô fayl endirm…ôl…ôri"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "M…ôqal…ô X√ľlas…ôsi S…ôhif…ô baxńĪŇülarńĪ"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "M…ôqal…ô x√ľlas…ôsi baxńĪŇülarńĪ v…ô endirm…ôl…ôri"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Jurnal ana s…ôhif…ô baxńĪŇülarńĪ"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "M√ľnd…ôricat s…ôhif…ôsi baxńĪŇülarńĪ"
+
+msgid "manager.subscriptionPolicies"
+msgstr "Abun…ôlik PolitikasńĪ"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "GecikmiŇü a√ßńĪq giriŇü"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} h…ôft…ô"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr ""
+"Abun…ôlik m√ľdd…ôtl…ôrinin baŇüa √ßatmasńĪndan sonra abun…ôl…ôri email il…ô "
+"m…ôlumatlandńĪrńĪn"
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "AŇüańüńĪdakńĪlardan birini se√ßin:"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Onlayn √∂d…ôniŇü bildiriŇül…ôri"
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Abun…ôlik t…ôl…ôb ed…ôn jurnallar √ľ√ß√ľn a√ßńĪq giriŇü poltikasńĪ"
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Abun…ô√ßi idar…ô√ßisi"
+
+msgid "manager.subscriptions"
+msgstr "Abun…ôlikl…ôr"
+
+msgid "manager.individualSubscriptions"
+msgstr "F…ôrdi abun…ô√ßil…ôr"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Korporativ abun…ô√ßil…ôr"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Bu abun…ôliyi yenil…ôm…ôk ist…ôdiyinizd…ôn …ôminsinizmi?"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Bu abun…ôliyi silm…ôk ist…ôdiyinizd…ôn …ôminsinizmi?"
+
+msgid "manager.subscriptions.summary"
+msgstr "Abun…ô x√ľlas…ôsi"
+
+msgid "manager.subscriptions.create"
+msgstr "Yeni bir abun…ô√ßi yaradńĪn"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Yaratmaq"
+
+msgid "manager.subscriptions.renew"
+msgstr "Yenil…ô"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "BaŇüa √ßatdńĪr"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Bitm…ô vaxtńĪ"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "BaŇülatma"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "BaŇülanńüńĪc tarixi"
+
+msgid "manager.subscriptions.domain"
+msgstr "Sah…ô (domain)"
+
+msgid "manager.subscriptions.edit"
+msgstr "Abun…ôliyi t…ônziml…ôyin"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "D√ľz…ôldin"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "V…ôziyy…ôt il…ô"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "HamńĪsńĪ"
+
+msgid "manager.subscriptions.form.status"
+msgstr "V…ôziyy…ôt"
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Abun…ôlik n√∂v√ľ"
+
+msgid "manager.subscriptions.form.institution"
+msgstr "Qurum"
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "BaŇülanńüńĪc tarixi"
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Bitm…ô vaxtńĪ"
+
+msgid "manager.subscriptions.form.userId"
+msgstr "ńįstifad…ô√ßi"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "∆Źlaq…ô"
+
+msgid "manager.subscriptions.form.membership"
+msgstr "√úzvl√ľk"
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Qeydl…ôr"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Sah…ô (domain)"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "T…ôŇükilat AdńĪ"
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Po√ßt √ľnvanńĪ"
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IP aralńĪńüńĪ"
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "& # 8226;"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "∆Źlav…ô edin"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Yadda saxlayńĪn v…ô yeni bir d…ôn…ô yaradńĪn"
+
+msgid "manager.subscriptions.notes"
+msgstr "Qeydl…ôr"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Abun…ô√ßil…ôr yoxdur"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Abun…ôlik …ôlaq…ôsi se√ßin"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "ńįstifad…ô√ßi se√ßin"
+
+msgid "manager.subscriptions.select"
+msgstr "Se√ßin"
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Abun…ôlik n√∂v√ľ"
+
+msgid "manager.subscriptions.user"
+msgstr "ńįstifad…ô√ßi"
+
+msgid "manager.subscriptions.contact"
+msgstr "∆Źlaq…ô saxlanacaq Ňü…ôxsin adńĪ"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "T…ôŇükilat adńĪ"
+
+msgid "manager.subscriptionTypes"
+msgstr "Abun…ôlik n√∂vl…ôri"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr ""
+"X…ôb…ôrdarlńĪq! Bu v…ô buna oxŇüar b√ľt√ľn abun…ôlikl…ôr silin…ôc…ôk. Davam "
+"etm…ôk v…ô bu abun…ôlik n√∂v√ľn√ľ silm…ôk ist…ôdiyinizd…ôn …ôminsinizmi?"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Abun…ôlikl…ôr"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "F…ôrdi"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Korporativ"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Yeni bir abun…ôlik n√∂v√ľ yaradńĪn"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "YaradńĪn"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Davam edin"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Abun…ô n√∂v√ľn√ľ redakt…ô edin"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Redakt…ô edin"
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Pul vahidi"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "T…ôsvir etm…ô"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Doldurulduqdan sonra"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "Ay (m…ôs…ôl…ôn, 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Qeyri-m√ľ…ôyy…ôn"
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Davam edin"
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Format"
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Abun…ôlikl…ôr"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "F…ôrdi (istifad…ô√ßi giriŇüi il…ô t…ôsdiql…ônir)"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr ""
+"Korporativ (istifad…ô√ßil…ôr sah…ô adńĪ v…ô ya IP adresi il…ô t…ôsdiql…ônir)"
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr ""
+"√úzvl√ľk m…ôlumatńĪ √ľ√ß√ľn abun…ôlik t…ôl…ôb olunur. <br />(M…ôs…ôl…ôn; "
+"d…ôrn…ôk, t…ôŇükilat, konsorsium, v.b.)"
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Yadda saxlayńĪn v…ô yeni bir d…ôn…ô yaradńĪn"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Abun…ôlik n√∂v√ľ adńĪ"
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Abun…ôlik n√∂v√ľ"
+
+msgid "manager.setup.categories"
+msgstr "Kateqoriyalar"
+
+msgid "grid.category.path"
+msgstr "Yol"
+
+msgid "grid.action.addSection"
+msgstr "B√∂lm…ô …ôlav…ô edin"
+
+msgid "manager.publication.library"
+msgstr "NaŇüir kitabxanasńĪ"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Yeni m…ôqal…ônin …ôsas m√ľ…ôllif haqqńĪ ili"
+
+msgid "manager.setup.resetPermissions"
+msgstr "M…ôqal…ô icaz…ôl…ôrini yenid…ôn qurun"
+
+msgid "grid.genres.title.short"
+msgstr "Komponentl…ôr"
+
+msgid "grid.genres.title"
+msgstr "M…ôqal…ô komponentl…ôri"
+
+msgid "plugins.importexport.common.settings"
+msgstr "T…ônziml…ôr"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "DOI qoŇümasńĪ t…ônziml…ôri"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "M…ôqal…ôl…ôr"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "N√∂mr…ôl…ôr"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Dizgil…ôr"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "QoŇüma t…ôl…ôbl…ôri qarŇüńĪlamadńĪ"
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Ňěifr…ô."
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "H…ôr hansńĪ bir n√∂mr…ô"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "H…ôr hansńĪ bir v…ôziyy…ôt"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "DepolanmayńĪb"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "ńįŇüar…ôl…ônmiŇü qeydiyyat"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Qeyd…ô alńĪnmńĪŇü"
+
+msgid "plugins.importexport.common.action"
+msgstr "H…ôr…ôk…ôt"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "ńįxrac"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "ńįŇüar…ôl…ônmiŇü qeydiyyat"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Qeydiyyat"
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "YanlńĪŇü XML:"
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Qeydiyyat uńüurlu!"
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Dońürulama uńüurlu!"
+
+msgid "stats.publications.details"
+msgstr "M…ôqal…ô t…ôf…ôrr√ľatlarńĪ"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Tarix…ô g√∂r…ô √ľmumi x√ľlas…ô baxńĪŇü"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Tarix…ô g√∂r…ô √ľmumi fayl baxńĪŇü sayńĪ"
+
+msgid "stats.publications.countOfTotal"
+msgstr "M…ôqal…ôl…ôr {$count} / {$total}"
+
+msgid "stats.publications.abstracts"
+msgstr "X√ľlas…ôl…ôr"
+
+msgid "stats.publications.galleys"
+msgstr "Fayllar"
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "N√∂mr…ô ixrac/√ß√∂l…ô transferetm…ô n…ôtic…ô"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "dizayn formatńĪ t…ôhlil edil…ô bilm…ôdi"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "JurnalńĪn adńĪ"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "JurnalńĪn ana s…ôhif…ôsinin URL-si"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "JurnalńĪn …ôsas …ôlaq…ô Ňü…ôxsinin adńĪ"
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr "Avtomatik emaill…ôr √ľ√ß√ľn JurnalńĪn email imzasńĪ"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "JurnalńĪn …ôsas …ôlaq…ô Ňü…ôxsinin email adresi"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "√Ėd…ôniŇü n√∂v√ľn√ľn adńĪ"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "√Ėd…ôniŇü m…ôbl…ôńüi"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "√Ėd…ôniŇü m…ôbl…ôńüinin pul vahidi, m…ôs; USD"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Bird…ôn √ßox jurnalńĪn yer aldńĪńüńĪ veb saytńĪnńĪn adńĪ"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "Abun…ô√ßinin adńĪ, …ôlaq…ôsi, telefon n√∂mr…ôsi v…ô email adresi"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Abun…ôlik idar…ô√ßisinin …ôlaq…ô m…ôlumatlarńĪ"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "Abun…ôlik s…ôhif…ôsinin URL-si"
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr "Abun…ôliyin baŇüa √ßatdńĪńüńĪ tarix"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Abun…ôliyin n√∂v√ľ, adńĪ, m√ľdd…ôti v…ô qiym…ôt x√ľlas…ôsi"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Abun…ô√ßinin √ľzvl√ľy√ľ haqqńĪnda m…ôlumat"
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Emaili t…ôsdiql…ôyin (Jurnal qeydiyyatńĪ √ľ√ß√ľn)"
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.manager.displayName"
+msgstr "DOI-l…ôr"
+
+msgid "doi.manager.settings.description"
+msgstr ""
+"Sistemd…ô DOI-l…ôri istifad…ô etm…ôk v…ô idar…ô ed…ô bilm…ôk √ľ√ß√ľn z…ôhm…"
+"ôt olmasa DOI …ôlav…ôsini konfiqurasiya edin:"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Dizayn formatlarńĪ"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr "M…ôqal…ô dizayn formatlarńĪ, PDF kimi"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "DOI √∂n Ňü…ôkil√ßisi"
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr ""
+"M…ôs…ôl…ôn; vol%viss%ipp%p kodlamasńĪ, 10.1234/vol3iss2pp230 kimi bir DOI "
+"yaradńĪla bil…ôr"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "N√∂mr…ôl…ôr √ľ√ß√ľn"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "M…ôqal…ôl…ôr √ľ√ß√ľn"
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "Qaleriyalar √ľ√ß√ľn"
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "DOI-l…ôri yenid…ôn t…ôyin edin"
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "M√∂vcud olan b√ľt√ľn DOI-l…ôri silm…ôk ist…ôdiyinizd…ôn …ôminsinizmi?"
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"DOI-l…ôri t…ôyin edilm…ômiŇü b√ľt√ľn n…ôŇür edilmiŇü elementl…ôr…ô DOI t…"
+"ôyin etm…ôk ist…ôdiyinizd…ôn …ôminsinizmi?"
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Qeydiyyat Agentliyi"
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "He√ß kim"
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "T…ôyin edin"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "N√∂mr…ô"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "M…ôqal…ô"
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "Qaleriya"
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "DOI t…ômizl…ôyin"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "M√∂vcud DOI-ni silm…ôk ist…ôdiyinizd…ôn …ôminsinizmi?"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "N√∂mr…ô obyektl…ôri DOI-l…ôrini t…ômizl…ôyin"
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "M√∂vcud olan element DOI-l…ôrini silm…ôk ist…ôdiyiniz…ô …ômisinizmi?"
+
+msgid "doi.editor.assignDoi"
+msgstr "Bu {$pubObjectType} √ľ√ß√ľn DOI {$pubId} t…ôyin edin"
+
+msgid "doi.editor.preview.galleys"
+msgstr "Dizgi: {$galleyLabel}"
+
+msgid "doi.editor.preview.objects"
+msgstr "Element"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr ""
+"Bir dizayn formatńĪ n…ôŇür edildikd…ôn sonra sad…ôc…ô DOI-l…ôr redakt…ô edil…"
+"ô bil…ôr"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "g√∂nd…ôril…ôn DOI etibarlńĪ deyil"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr ""
+"Bir n…ôŇür yayńĪmlandńĪqdan sonra sad…ôc…ô DOI-l…ôr redakt…ô edil…ô bil…ôr"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "ńįst…ôdiyiniz n√∂mr…ôl…ôr tapńĪlmadńĪ"
+
+msgid "doi.manager.submissionDois"
+msgstr "M…ôqal…ô DOI-l…ôri"
