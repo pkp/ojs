@@ -1,8 +1,202 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2023.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-06-01 22:17+0000\n"
+"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
+"Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/emails/"
+"az/>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "emails.passwordResetConfirm.subject"
+msgstr "Şifrə dəyişdirmə təsdiqi"
+
+msgid "emails.userValidateContext.body"
+msgstr ""
+"\"örmətli {$recipientName},<br />\n"
+"<br />\n"
+"{$contextName} adlı jurnalda bir hesab yaratdınız, ancaq Jurnal sistemini "
+"istifadə etməyə başlamazdan əvvəl email hesabınızı təsdiqləməniz lazımdır. "
+"Bunun üçün aşağıdakı linki izləməyiniz kifayətdir:<br />\n"
+"<br />\n"
+"{$activateUrl}<br />\n"
+"<br />\n"
+"Təşəkkürlər,<br />\n"
+"{$signature}"
+
+msgid "emails.userValidateSite.body"
+msgstr ""
+"{$recipientName}<br />\n"
+"<br />\n"
+"{$siteTitle} üçün yeni bir hesab yaratdınız, ancaq bunu istifadə etməyə "
+"başlamazdan əvvəl email hesabınızı təsdiqləməyiniz gərəklidir. Email "
+"hesabınızı təsdiqləmək üçün aşağıdakı linki izləməyiniz kifayətdir:<br />\n"
+"<br />\n"
+"{$activateUrl}<br />\n"
+"<br />\n"
+"Təşəkkürlər,<br />\n"
+"{$signature}"
+
+msgid "emails.issuePublishNotify.subject"
+msgstr "Yeni nömrə yayımlandı: {$issueIdentification}"
+
+msgid "emails.editorAssign.subject"
+msgstr "{$contextName} üçün bir namizəd məqaləyə redaktor olaraq təyin edildini"
+
+msgid "emails.reviewRequest.subject"
+msgstr "Rəyçilik dəvəti"
+
+msgid "emails.reviewResponseOverdueAuto.subject"
+msgstr "Rəyçilik tələbi xatırlatma"
+
+msgid "emails.layoutRequest.subject"
+msgstr "{$submissionId} nömrəli məqalə {$contextAcronym} üçün nəşrə hazırdır"
+
+msgid "emails.subscriptionBeforeExpiry.subject"
+msgstr "Abunəliyin başa çatma xəbərdarlığı"
+
+msgid "emails.subscriptionAfterExpiry.subject"
+msgstr "Abunəliyiniz başa çatdı"
+
+msgid "emails.subscriptionRenewIndl.subject"
+msgstr "Abunə yenilənməsi: Fərdi"
+
+msgid "emails.userRegister.subject"
+msgstr "Jurnal yeni istifadəçi qeydiyyatı"
+
+msgid "emails.userValidateContext.subject"
+msgstr "Hesabınızı təsdiqləyin"
+
+msgid "emails.userValidateSite.subject"
+msgstr "Hesabınızı təsdiqləyin"
+
+msgid "emails.reviewerRegister.subject"
+msgstr "{$contextName} ilə hakim kimi qeydiyyat"
+
+msgid "emails.reviewRequestSubsequent.subject"
+msgstr "Gözdən keçirilmiş/baxılmış bir namizəd məqaləyə rəyçilik dəvəti"
+
+msgid "emails.reviewCancel.subject"
+msgstr "Dəyərləndirmənin ləğvini tələb edirik"
+
+msgid "emails.reviewReinstate.subject"
+msgstr "{$contextName} üçün rəyçilik edə bilərsinizmi?"
+
+msgid "emails.reviewDecline.subject"
+msgstr "Dəyərləndirməyəcəm"
+
+msgid "emails.reviewRemind.subject"
+msgstr "Xatırlatma: Zəhmət olmasa dəyərləndirmə prosesini tamamlayın"
+
+msgid "emails.reviewRemindAuto.subject"
+msgstr "Avtomatik xatırlatma: Xahiş olunur dəyərləndirmə prosesini tamamlayı"
+
+msgid "emails.editorDecisionAccept.subject"
+msgstr "Namizəd məqaləniz {$contextName} üçün qəbul edildi"
+
+msgid "emails.editorDecisionAccept.body"
+msgstr ""
+"Hörmətli {$authors},<br />\n"
+" <br />\n"
+" {$contextName} üçün göndərdiyiniz &quot;{$submissionTitle}&quot; başlıqlı "
+"çalışmanızla əlaqəli dəyərləndirmə prosesi bitib və qərar qəbul edilib.<br />"
+"\n"
+" <br />\n"
+" Qərarımız: Nəşrə qəbul"
+
+msgid "emails.editorDecisionSkipReview.subject"
+msgstr "#YOX"
+
+msgid "emails.layoutComplete.subject"
+msgstr "Test dizayn tamamlandı"
+
+msgid "emails.emailLink.subject"
+msgstr "Diqqətinizi çəkə biləcək bir məqalə"
+
+msgid "emails.emailLink.body"
+msgstr ""
+"<br />\n"
+"  {$contextName} {$volume}. cild {$number}. Nömrəsində ({$year}) {$authors} "
+"tərəfindən yazılan <br />\n"
+"  &quot;{$submissionTitle}&quot; başlıqlı bir məqalə yayımlanıb.<br />\n"
+"  Bu çalışmanın sizi maraqlandıracağını ümid edirəm.\n"
+" ."
+
+msgid "emails.subscriptionNotify.subject"
+msgstr "Abunəlik məlumatlandırma"
+
+msgid "emails.subscriptionAfterExpiryLast.subject"
+msgstr "Abunəliyiniz bitdi - son xatırlatma"
+
+msgid "emails.subscriptionPurchaseIndl.subject"
+msgstr "Abunəlik alma: Fərdi"
+
+msgid "emails.subscriptionPurchaseInstl.subject"
+msgstr "Abunə alınması: Korporativ"
+
+msgid "emails.subscriptionRenewInstl.subject"
+msgstr "Abunəlik yenilənməsi: Korporativ"
+
+msgid "emails.revisedVersionNotify.subject"
+msgstr "Düzəldilmiş versiya yükləndi"
+
+msgid "emails.statisticsReportNotification.subject"
+msgstr "{$month} {$year} proses əməliyyatları"
+
+msgid "emails.announcement.subject"
+msgstr "{$announcementTitle}"
+
+msgid "emails.passwordResetConfirm.body"
+msgstr ""
+"{$siteTitle} saytındakı şifrənizi dəyişdirmə tələbinizi qəbul etdik.<br />\n"
+"<br />\n"
+"Bu tələb sizin məlumatınız xaricində baş verdiysə zəhmət olmasa mesajı "
+"diqqətə almayın; əvvəlki şifrənizi istifadə edə bilərsiniz. Əgər şifrənizi "
+"dəyişdirmək istəyirsinizsə aşağıdakı linki klikləyin.\n"
+"<br />\n"
+"Şifrə dəyişdirmək üçün: {$passwordResetUrl}<br />\n"
+"<br />\n"
+"{$signature}"
+
+msgid "emails.userRegister.body"
+msgstr ""
+"Hörmətli {$recipientName},<br />\n"
+"<br />\n"
+"{$contextName} adlı jurnala istifadəçi kimi qeydiyyatdan keçdiyiniz üçün "
+"təşəkkür edirik. Bu emailə Bu e-postaya, veb saytı vasitəsilə bu jurnalda "
+"edilən bütün proseslər üçün lazım olan istifadəçi adınızı və şifrənizi əlavə "
+"etdik. Bizimlə əlaqə quraraq Jurnalın istifadəçi siyahısından xaric "
+"edilməsini tələb edə bilərsiniz.<br />\n"
+"<br />\n"
+"İstifadəçi adı: {$recipientUsername}<br />\n"
+"Şifrə: {$password}<br />\n"
+"<br />\n"
+"Təşəkkürlər,<br />\n"
+"{$signature}"
+
+msgid "emails.issuePublishNotify.body"
+msgstr ""
+"<p>Hörmətli {$recipientName, </p><p>{$contextName} Jurnalının yeni nömrəsi "
+"yayımlandı. Yeni nömrəyə <a href=\"{$issueUrl}\">{$issueIdentification}</a> "
+"adresindən çata bilərsiniz.</p><p>Sizi Jurnalımızın mündəricat səhifəsini "
+"incələməyə, bəyəndiyiniz məqalələri oxumaya və dəyərli fikirlərinizi "
+"bölüşməyə dəvət edirik.</p><p>Jurnalımıza göstərdiyiniz maraqdan dolayı "
+"təşəkkür edirik.</p><p>Təşəkkürlər,<p/>{$signature}"
+
+msgid "emails.reviewerRegister.body"
+msgstr ""
+"<p>Hörmətli {$recipientName},</p><p>İxtisasınıza uyğun olaraq, adınızı "
+"{$contextName} üçün rəyçi data bazasına qeyd etdik. Bu sizi hər hansı bir iş "
+"üçün məcbur etməz; sadəcə dəyərləndirmək üçün sizə bir müraciət "
+"göndərməyimizi təmin edər. Dəyərləndirilməsi istənəcək məqalənin başlıq və "
+"xülasəsini görmə imkanı tanıyır. Dəvəti qəbul və ya rədd etmək sizin "
+"ixtiyarınızdadır. Əlavə olaraq, istədiyiniz zaman adınızın dəyərləndirmə "
+"siyahısından çıxarılmasını istəyə bilərsiniz. </p><p>Veb sayt vasitəsilə, "
+"Jurnal ilə əlaqəli bütün proseslər üçün istifadə edilən bir istifadəçi adı "
+"və şifrə təqdim edirik. Məsələn, bu şifrə ilə maraq sahələrinizi və "
+"profilinizi yeniləyə bilərsiniz.</p><p>İstifadəçi adı: {$recipientUsername}"
+"<br />Şifrə: {$password}</p><p>Hörmətlə,</p>{$signature}"
