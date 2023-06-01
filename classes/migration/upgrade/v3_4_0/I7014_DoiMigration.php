@@ -318,12 +318,14 @@ class I7014_DoiMigration extends PKPI7014_DoiMigration
             ->get();
         $contextsWithAutomaticDeposit->each(function ($item) {
             DB::table('journal_settings')
-                ->insert(
+                ->upsert(
                     [
                         'journal_id' => $item->journal_id,
                         'setting_name' => 'automaticDoiDeposit',
                         'setting_value' => 1
-                    ]
+                    ],
+                    ['journal_id', 'locale', 'setting_name'],
+                    ['setting_value']
                 );
         });
 
@@ -584,12 +586,14 @@ class I7014_DoiMigration extends PKPI7014_DoiMigration
             ->get();
         $contextsWithAutomaticDeposit->each(function ($item) {
             DB::table('journal_settings')
-                ->insert(
+                ->upsert(
                     [
                         'journal_id' => $item->journal_id,
                         'setting_name' => 'automaticDoiDeposit',
                         'setting_value' => 1
-                    ]
+                    ],
+                    ['journal_id', 'locale', 'setting_name'],
+                    ['setting_value']
                 );
         });
 
