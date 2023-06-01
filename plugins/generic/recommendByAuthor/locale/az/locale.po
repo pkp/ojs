@@ -1,8 +1,32 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2023.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-06-01 22:16+0000\n"
+"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
+"Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-recommendByAuthor/az/>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.generic.recommendByAuthor.displayName"
+msgstr "M√ľ…ôllifin dig…ôr m…ôqal…ôl…ôri"
+
+msgid "plugins.generic.recommendByAuthor.heading"
+msgstr "Eyni m√ľ…ôllif(lar)ńĪn jurnaldakńĪ …ôn √ßox oxunan m…ôqal…ôl…ôri"
+
+msgid "plugins.generic.recommendByAuthor.description"
+msgstr ""
+"Bu əlavə məqalə səhifəsinə eyni müəllif(lar)ın jurnaldakı digər "
+"məqalələrinin bir siyahısını əlavə edər."
+
+msgid "plugins.generic.recommendByAuthor.noMetric"
+msgstr ""
+"Xəbərdarlıq: Bu əlavə ən az bir statistika/hesabat əlavəsinin "
+"aktivləşdirilmiş olmasını tələb edir. Statistik əlavələriniz birdən çox "
+"metrik təqdim edirsə, zəhmət olmasa sayt idarəçisinin sayt tənzimləri "
+"səhifəsindən və Jurnal idarəçisinin tənzimlər səhifələrindən bir əsas metrik "
+"seçin."
