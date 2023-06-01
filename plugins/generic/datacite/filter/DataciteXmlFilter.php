@@ -622,7 +622,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                     ->getMany();
 
                 foreach ($submissions as $relatedArticle) {
-                    $doi = $relatedArticle->getDoi();
+                    $doi = $relatedArticle->getCurrentPublication()?->getDoi();
                     if (!empty($doi)) {
                         $relatedIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifier', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
                         $node->setAttribute('relatedIdentifierType', DATACITE_IDTYPE_DOI);
@@ -942,7 +942,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $toc = '';
         foreach ($submissions as $submissionInIssue) { /** @var Submission $submissionInIssue */
             $currentEntry = $this->getPrimaryTranslation(
-                $submissionInIssue->getCurrentPublication()?->getLocalizedTitle(null) ?? '',
+                $submissionInIssue->getCurrentPublication()?->getTitles() ?? '',
                 $objectLocalePrecedence
             );
             assert(!empty($currentEntry));
