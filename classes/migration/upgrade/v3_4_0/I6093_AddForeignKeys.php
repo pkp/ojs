@@ -14,8 +14,8 @@
 
 namespace APP\migration\upgrade\v3_4_0;
 
-use Exception;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 class I6093_AddForeignKeys extends \PKP\migration\upgrade\v3_4_0\I6093_AddForeignKeys
@@ -93,11 +93,9 @@ class I6093_AddForeignKeys extends \PKP\migration\upgrade\v3_4_0\I6093_AddForeig
             $table->index(['primary_contact_id'], 'publications_primary_contact_id');
         });
 
-        try {
-            // Attempt to drop the previous foreign key, which doesn't have the cascade rule
+        // Attempt to drop the previous foreign key, which doesn't have the cascade rule
+        if (DB::getDoctrineSchemaManager()->introspectTable('publication_galleys')->hasForeignKey('publication_galleys_submission_file_id_foreign')) {
             Schema::table('publication_galleys', fn (Blueprint $table) => $table->dropForeign('publication_galleys_submission_file_id_foreign'));
-        } catch (Exception) {
-            error_log('Failed to delete foreign key publication_galleys.publication_galleys_submission_file_id_foreign, perhaps your installation didn\'t have this constraint');
         }
 
         Schema::table('publication_galleys', function (Blueprint $table) {
