@@ -1,8 +1,50 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2023.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-06-01 22:17+0000\n"
+"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
+"Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-announcementFeed/az/>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "Elan vermə əlavəsi"
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Tənzimlər"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Bəsləmə linklərini bütün jurnal səhifələrində göstərin."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Göstəriləcək bəsləmə linki sayı"
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Atom loqotipi"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "RSS1 loqotipi"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "RSS2 loqotipi"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr ""
+"Bu əlavə jurnal elanları üçün RSS/Atom veb axını təchizatları istehsal edir."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr "Bəsləmə linklərini sadəcə ana səhifə və elan səhifəsində göstərin."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "Bəsləmə linklərini sadəcə elan səhifəsində göstərin."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "Ən son elanlar."
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "Zəhmət olmasa ən son elanlar üçün pozitiv bir tam say daxil edin."
