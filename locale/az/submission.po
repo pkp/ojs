@@ -1,7 +1,7 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-06-01 09:27+0000\n"
+"PO-Revision-Date: 2023-06-01 22:16+0000\n"
 "Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/az/>\n"
@@ -367,3 +367,11 @@ msgid "doi.submission.incorrectContext"
 msgstr ""
 "Məqalə üçün DOI yaradıla bilmədi: {$pubObjectTitle}. Məqalə bu jurnalda "
 "deyil."
+
+msgid "galley.cantEditPublished"
+msgstr "Bu dizgi artıq yayımlandığı üçün redaktə edilə bilməz."
+
+msgid "submission.copyright.description"
+msgstr ""
+"Zəhmət olmasa bu jurnalda dərc olunan materialların müəllif hüquqları "
+"şərtlərini oxuyun və anlayın."
