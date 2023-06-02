@@ -1,7 +1,7 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-06-01 22:16+0000\n"
+"PO-Revision-Date: 2023-06-02 20:47+0000\n"
 "Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/az/>\n"
@@ -375,3 +375,52 @@ msgid "submission.copyright.description"
 msgstr ""
 "Zəhmət olmasa bu jurnalda dərc olunan materialların müəllif hüquqları "
 "şərtlərini oxuyun və anlayın."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Zəhmət olmasa məqalənizin başlığını daxil edin."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Zəhmət olmasa qatqı edənin rolunu seçin."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Ən az bir müəllif lazımdır."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Zəhmət məqalənizin xülasəsini daxil edin."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Xülasəniz çox uzundur. Zəhmət olmasa bu bölmə üçün göstərilən kəlmə limitinə "
+"uyğun olaraq düzəldin."
+
+#, fuzzy
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+"Bu jurnala məqalələr göndərməyinizə icazə verilmir, çünki müəlliflər "
+"redaksiya tərəfindən qeydiyyata alınmalıdır. Bunun səhv olduğunu "
+"düşünürsənsə, xahiş edirəm <a href='mailto:{$email}'>{$name}</a>ilə əlaqə "
+"saxlayın."
+
+#, fuzzy
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+"Bu jurnala Material göndərməyinizə icazə verilmir, çünki həmin jurnalın "
+"bütün bölmələrinə material göndərmək əlil və ya məhdudlaşdırılmışdır. Bunun "
+"səhv olduğunu düşünürsənsə, xahiş edirəm <a href='mailto:{$email}'>{$name}</"
+"a>ilə əlaqə saxlayın."
+
+#, fuzzy
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+"{$contextName} {$bölmə} bölməsinə müraciətləri qəbul etmir. Müraciətinizi "
+"bərpa etmək üçün köməyə ehtiyacınız varsa, müraciət edin <a "
+"href='mailto:{$email}'>{$name}</a>."
+
+#, fuzzy
+msgid "submission.sectionNotFound"
+msgstr "Bu ərizə üçün bir bölmə tapa bilmədim."
+
+#, fuzzy
+msgid "submission.sectionRestrictedToEditors"
+msgstr ""
+"Yalnız redaksiya heyətinin bu hissəyə Material göndərməsinə icazə verilir."
