@@ -1,7 +1,7 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-06-02 22:43+0000\n"
+"PO-Revision-Date: 2023-06-02 22:49+0000\n"
 "Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/"
 "generic-recommendByAuthor/az/>\n"
@@ -13,10 +13,10 @@ msgstr ""
 "X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.generic.recommendByAuthor.displayName"
-msgstr "M√ľəllifin digər məqalələri"
+msgstr "Müəllifin digər məqalələri"
 
 msgid "plugins.generic.recommendByAuthor.heading"
-msgstr "Eyni m√ľəllif(lar)ın jurnaldakı ən çox oxunan məqalələri"
+msgstr "Eyni müəllif(lar)ın jurnaldakı ən çox oxunan məqalələri"
 
 msgid "plugins.generic.recommendByAuthor.description"
 msgstr ""
