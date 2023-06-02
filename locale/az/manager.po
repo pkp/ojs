@@ -1,7 +1,7 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-06-01 22:17+0000\n"
+"PO-Revision-Date: 2023-06-02 16:46+0000\n"
 "Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "az/>\n"
@@ -1257,3 +1257,37 @@ msgstr "ńįst…ôdiyiniz n√∂mr…ôl…ôr tapńĪlmadńĪ"
 
 msgid "doi.manager.submissionDois"
 msgstr "M…ôqal…ô DOI-l…ôri"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Bu məqalə üçün hesab edilən müəllif hüququ tarixinin necə təyin ediləcəyini "
+"seçin. Bu hesab edilən, vəziyyətə görə etibarsız ola bilər. Əgər məqalələri "
+"\"qəbul edildikcə nəşr edirsinizsə\", müəllif hüququ ili kimi nömrənin nəşr "
+"edilmə tarixini istifadə etməyin."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS jurnalın kontenti onlayn yayımlamaq üçün istifadə etməyəcək."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Jurnal açıq giriş olaraq təqdim edəcək."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Məqalələrə, nömrələrə və dizayn formatlarına Rəqəmsal Nəsnə Təyinedicilər "
+"(DOI`lər) təyin edin."
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Defolt qəliblərdən istifadə edin.<br />Nömrələr üçün %j.v%vi%i<br /"
+">Məqalələr üçün %j.v%vi%i.%a<br />dizayn formatları üçün%j.v%vi%i.%a.g%g."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr ""
+"Jurnal kontentin hamısına və ya bir hissəsinə giriş üçün abunəlik tələb "
+"edəcək."
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr ""
+"DOI-nin hansı maddələrə təyin olunacağını seçin. Əksər Jurnallar DOİ-leri "
+"məqalələrə təyin edir, lakin siz dərc edilmiş bütün məqalələrə DOI təyin edə "
+"bilərsiniz."
