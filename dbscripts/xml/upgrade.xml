@@ -199,6 +199,7 @@
 		<migration class="APP\migration\upgrade\v3_4_0\I8992_FixEmptyUrlPaths"/>
 		<migration class="APP\migration\upgrade\v3_4_0\I9040_DropSettingType"/>
 		<migration class="PKP\migration\upgrade\v3_4_0\I9039_DropDeprecatedFields"/>
+		<migration class="APP\migration\upgrade\v3_4_0\I8933_EventLogLocalized"/>
 		<note file="docs/release-notes/README-3.4.0" />
 	</upgrade>
 

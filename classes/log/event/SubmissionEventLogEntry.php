@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/log/SubmissionEventLogEntry.php
+ * @file classes/log/event/SubmissionEventLogEntry.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
@@ -11,14 +11,12 @@
  *
  * @ingroup log
  *
- * @see SubmissionEventLogDAO
- *
  * @brief Describes an entry in the submission history log.
  */
 
-namespace APP\log;
+namespace APP\log\event;
 
-use PKP\log\PKPSubmissionEventLogEntry;
+use PKP\log\event\PKPSubmissionEventLogEntry;
 
 // Log entry associative types. All types must be defined here
 

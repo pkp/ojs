@@ -19,7 +19,9 @@ namespace APP\controllers\grid\users\reviewer;
 use APP\core\Application;
 use APP\facades\Repo;
 use PKP\controllers\grid\users\reviewer\PKPReviewerGridHandler;
-use PKP\log\SubmissionLog;
+use PKP\core\Core;
+use PKP\core\PKPApplication;
+use PKP\security\Validation;
 
 class ReviewerGridHandler extends PKPReviewerGridHandler
 {
@@ -41,8 +43,22 @@ class ReviewerGridHandler extends PKPReviewerGridHandler
             $submission = $this->getSubmission();
             $reviewer = Repo::user()->get($reviewAssignment->getReviewerId(), true);
             $user = $request->getUser();
-            import('classes.log.SubmissionEventLogEntry'); // Constants
-            SubmissionLog::logEvent($request, $submission, SUBMISSION_LOG_REVIEW_RECOMMENDATION_BY_PROXY, 'log.review.reviewRecommendationSetByProxy', ['round' => $reviewAssignment->getRound(), 'submissionId' => $submission->getId(), 'editorName' => $user->getFullName(), 'reviewerName' => $reviewer->getFullName()]);
+
+            $eventLog = Repo::eventLog()->newDataObject([
+                'assocType' => PKPApplication::ASSOC_TYPE_SUBMISSION,
+                'assocId' => $submission->getId(),
+                'eventType' => SUBMISSION_LOG_REVIEW_RECOMMENDATION_BY_PROXY,
+                'userId' => Validation::loggedInAs() ?? $user->getId(),
+                'message' => 'log.review.reviewRecommendationSetByProxy',
+                'isTranslated' => false,
+                'dateLogged' => Core::getCurrentDate(),
+                'round' => $reviewAssignment->getRound(),
+                'submissionId' => $submission->getId(),
+                'editorName' => $user->getFullName(),
+                'reviewAssignmentId' => $reviewAssignment->getId(),
+                'reviewerName' => $reviewer->getFullName(),
+            ]);
+            Repo::eventLog()->add($eventLog);
         }
         return parent::reviewRead($args, $request);
     }
