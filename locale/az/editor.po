@@ -1,7 +1,7 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-06-01 22:17+0000\n"
+"PO-Revision-Date: 2023-06-02 20:47+0000\n"
 "Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "az/>\n"
@@ -480,3 +480,9 @@ msgstr ""
 "{$PublicIdentifier}' √ľmumi m√ľ…ôyy…ônedici eyni c√ľr baŇüqa bir element "
 "√ľ√ß√ľn zat…ôn istifad…ô edilir. Z…ôhm…ôt olmasa JurnalńĪnńĪz i√ß…ôrisind…"
 "ôki eyni c√ľr elementl…ôr √ľ√ß√ľn b…ônz…ôrsiz m√ľ…ôyy…ônedicil…ôr se√ßin"
+
+#, fuzzy
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"Bütün məqalələr redaktə növbəsinə qaytarılacaq və əlaqəli bütün fayllar "
+"həmişəlik silinəcəkdir.  Bu problemi həll etmək istədiyinizə əminsinizmi?"
