@@ -1,7 +1,7 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-06-02 16:46+0000\n"
+"PO-Revision-Date: 2023-06-02 20:47+0000\n"
 "Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "az/>\n"
@@ -1291,3 +1291,1407 @@ msgstr ""
 "DOI-nin hansı maddələrə təyin olunacağını seçin. Əksər Jurnallar DOİ-leri "
 "məqalələrə təyin edir, lakin siz dərc edilmiş bütün məqalələrə DOI təyin edə "
 "bilərsiniz."
+
+msgid "manager.files.note"
+msgstr ""
+"Qeyd: Fayl Brauzer jurnal il…ô …ôlaq…ôl…ôndirilmiŇü fayllar v…ô indeksl…ôrin "
+"birbaŇüa g√∂r√ľn…ôn v…ô idar…ô edil…ô bil…ôn olmasńĪnńĪ t…ômin ed…ôn, "
+"inkiŇüaf etmiŇü bir x√ľsusiyy…ôtdir."
+
+msgid "manager.languages.noneAvailable"
+msgstr ""
+"BańüńĪŇülayńĪn, istifad…ô edil…ô bilir bir …ôlav…ô dil yoxdur. Bu jurnalda "
+"…ôlav…ô bir dil istifad…ô etm…ôk ist…ôyirsinizs…ô sayt idar…ô√ßiniz il…ô "
+"…ôlaq…ô saxlayńĪn."
+
+msgid "manager.payment.authorFeesDescription"
+msgstr ""
+"M√ľ…ôllif √∂d…ôniŇül…ôrini aktivl…ôdirm…ôk √ľ√ß√ľn √∂d…ôniŇü miqdarńĪnńĪ "
+"aŇüańüńĪya daxil edin"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr ""
+"D…ôrn…ôk √ľzvl√ľy√ľ, Jurnal HaqqńĪnda s…ôhif…ôsind…ô Politikalar altńĪndadńĪr"
+
+msgid "manager.payment.currencymessage"
+msgstr ""
+"OJS hər hansı bir pul vahidi mübadilə etmə prosesini həyata keçirməz. "
+"Abunəlik ödənişlərini qəbul edirsinizsə, abunəlik pul vahidinin burada "
+"göstərilənlə uyuşduğuna əmin olmalısınız."
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr ""
+"Bu, abun…ôl…ôr √ľ√ß√ľn √∂d…ôniŇül…ôri aktivl…ôŇüdirir. N√∂vl…ôr, d…ôy…ôr, "
+"m√ľdd…ôt v…ô abun…ôlikl…ôr Jurnal (Abun…ôlik) idar…ô√ßisi t…ôr…ôfind…ôn idar…"
+"ô edilir"
+
+msgid "manager.payment.options.enablePayments"
+msgstr ""
+"Bu Jurnal √ľ√ß√ľn √∂d…ôniŇül…ôr aktivl…ôŇüdiril…ôc…ôk. ńįstifad…ô√ßil…ôrin "
+"√∂d…ôniŇü etm…ôk √ľ√ß√ľn daxil olmalarńĪ lazńĪm g…ôldiyini unutmayńĪn."
+
+msgid "manager.payment.paymentMethod.description"
+msgstr ""
+"Bu ekrandan aŇüańüńĪdakńĪ √Ėd…ôm…ô Metodu QoŇümalarńĪndan h…ôr hansńĪ birini "
+"ed…ô bil…ôrsiniz."
+
+msgid "manager.payment.readerFeesDescription"
+msgstr ""
+"Se√ßil…ôn se√ßiml…ôr, izahlarńĪ v…ô haqqlarńĪ (aŇüańüńĪda t…ônziml…ôn…ô "
+"bil…ôn) il…ô birlikd…ô Jurnal haqqńĪ b√∂lm…ôsind…ô Politikalar altńĪnda v…ô "
+"√∂d…ôm…ônin t…ôl…ôb edildiyi yerd…ô g√∂r√ľn…ôc…ôkdir."
+
+msgid "manager.people.confirmRemove"
+msgstr ""
+"Bu istifad…ô√ßini bu jurnaldan √ßńĪxarńĪn. Bu proses istifad…ô√ßinin bu "
+"jurnaldakńĪ b√ľt√ľn v…ôzif…ôl…ôrini l…ôńüv edin."
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr ""
+"∆Źvv…ôlki istifad…ô√ßinin m√ľ…ôllifliyi, redaktorluq t…ôyinatlarńĪ vb. "
+"X√ľsusiyy…ôtl…ôrin …ôlaq…ôl…ôndiril…ôc…ôyi bir istifad…ô√ßi se√ßin."
+
+msgid "manager.people.syncUserDescription"
+msgstr ""
+"Sinxron qeydiyyat m√ľ…ôyy…ôn Jurnalda m√ľ…ôyy…ôn rol formasńĪnda "
+"qeydiyyatdan ke√ßmiŇü b√ľt√ľn istifad…ô√ßil…ôri bu Jurnalda qeydiyyatdan "
+"ke√ßir…ôr. Bu funksiya m√ľŇüt…ôr…ôk istifad…ô√ßi qruplarńĪnńĪ (M…ôs…ôl…ôn; "
+"r…ôy√ßil…ôr) Jurnallar arasńĪnda sinxronlaŇüdńĪrar."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr ""
+"Bu b√∂lm…ôd…ô, n√∂mr…ônin m√ľnd…ôricat c…ôdv…ôlind…ô m√ľ…ôllif adlarńĪnńĪ "
+"g√∂st…ôrm…ô"
+
+msgid "manager.sections.noneCreated"
+msgstr "He√ß bir b√∂lm…ô yaradńĪlmadńĪ"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr ""
+"JurnalńĪn …ôsas s…ôhif…ôsinin defolt olaraq g…ôzinm…ô linkl…ôrind…ôn "
+"formalaŇüńĪr. ∆Źlav…ô ana s…ôhif…ô m…ôzmunu, g√∂st…ôril…ôn sńĪraya g√∂r…ô "
+"g√∂r√ľn…ôc…ôk olan aŇüańüńĪdakńĪ se√ßiml…ôrd…ôn biri v…ô ya hamńĪsńĪ istifad…"
+"ô edil…ôr…ôk …ôlav…ô edil…ô bil…ôr."
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr ""
+"Alternativ olaraq, baŇülńĪq v…ô loqo yerin…ô, baŇülńĪq HTML formatńĪnda "
+"hazńĪrlnaraq bu sah…ôy…ô …ôlav…ô edil…ô bil…ôr. LazńĪmlńĪ deyils…ô bu sah…"
+"ôni boŇü buraxńĪn."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(Jurnal haqqında səhifəsində göstəriləcək) "
+
+msgid "manager.setup.historyDescription"
+msgstr ""
+"Buraya yazńĪlan m…ôtn veb s…ôhif…ôsinin \"HaqqńĪnda\" Hiss…ôsind…ô g√∂r√ľn√"
+"ľr. Jurnal tarixi v…ô n…ôŇür hey…ôtin…ô istiqam…ôtl…ônmiŇü m…ôlumatlar "
+"verilir."
+
+msgid "manager.setup.details.description"
+msgstr "JurnalńĪn adńĪ, ISSN, …ôlaq…ô, sponsorlar v…ô axtarńĪŇü motorlarńĪ"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Son n√∂mr…ônin m√ľnd…ôricat b√∂lm…ôsini …ôlav…ô edin (varsa)"
+
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+"JurnalńĪn adńĪnńĪn hazńĪrlanmńĪŇü v…ô sistem t…ôr…ôfind…ôn g√∂nd…ôril…ôn "
+"emaill…ôr…ô …ôlav…ô edil…ôn imzadńĪr. HazńĪr email m…ôtnl…ôri Jurnal ńįdar…"
+"ôsi s…ôhif…ôsinin altńĪndadńĪr."
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Elanlar, oxuculara x…ôb…ôr v…ô ya f…ôaliyy…ôtl…ôri bildirm…ôk √ľ√ß√ľn "
+"yayńĪmlana bil…ôr. YayńĪmlanmńĪŇü elanlar, Elanlar s…ôhif…ôsind…ô baxńĪlńĪr."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "D…ôst…ôk email adresi t…ôl…ôb olunur."
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "D…ôst…ôk adńĪ t…ôl…ôb olunur."
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+"D…ôrhal v…ô ya sonradan a√ßńĪq giriŇü t…ôqdim ed…ôn Jurnallar √ľ√ß√ľn, n…"
+"ôŇür edil…ôn b√ľt√ľn √ßalńĪŇümalarla birlikd…ô uyńüun bir vaxtda Creative "
+"Commons lisenziyasńĪ …ôlav…ô edin."
+
+msgid "manager.setup.information.description"
+msgstr ""
+"Kitabxana√ßńĪlar, potensial m√ľ…ôllifl…ôr v…ô oxucular √ľ√ß√ľn lurnalńĪn "
+"qńĪsa a√ßńĪqlamasńĪ yan t…ôr…ôfd…ôki \"M…ôlumat\" qismind…ôdir."
+
+msgid "manager.setup.itemsDescription"
+msgstr ""
+"S…ôhif…ô √ľst√ľnd…ô formalaŇüan Y√∂nl…ôndirm…ô √ßubuńüuna baŇüqa madd…ôl…ôr "
+"…ôlav…ô edil…ô bil…ôr (GiriŇü s…ôhif…ôsi, HaqqńĪnda, ńįstifad…ô√ßi, "
+"ńįsitifad…ô√ßi Profili v.b.)"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr ""
+"JurnalńĪn baŇülńĪńüńĪnńĪn qrafik bir formatńĪ (M…ôs…ôl…ôn: jpg, png v…ô ya "
+"gif) v…ô Jurnal loqosu ana s…ôhif…ô √ľ√ß√ľn y√ľkl…ôn…ô bil…ôr. Y√ľkl…ôm…ô "
+"edildiyind…ô yazńĪ formatńĪndakńĪ baŇülńĪńüńĪn yeri alar."
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+"Bir Jurnal temasńĪ se√ßin v…ô sistem hiss…ôl…ôrini yerl…ôŇüdirin. Bir Jurnal "
+"formatńĪ eyni zamanda sistem moqyasńĪnda format v…ô tema formatńĪnńĪ (bir "
+"tema se√ßilmiŇüs…ô) etibarsńĪz etm…ôk √ľ√ß√ľn istifad…ô edil…ô bińĪ…ôr."
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr ""
+"Jurnal s…ôhif…ôl…ôrinin alt b√∂lm…ôsind…ô baxńĪlmasńĪnńĪ ist…ôdiyinz linkl…"
+"ôri HTML formatńĪnda bu sah…ôy…ô daxil edin (M…ôs…ôl…ôn; y√∂nl…ôndirm…ô, "
+"sayńüac, reklam v.b.) altlńĪq h…ôr s…ôhif…ôd…ô g√∂r√ľn…ôc…ôk."
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr ""
+"Jurnal siyahńĪsńĪnda istifad…ô edil…ô bil…ôn ki√ßik loqo v…ô ya JurnalńĪn "
+"t…ômsili"
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"Bir CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">NaŇüir Manifesti</a> "
+"s…ôhif…ôsi vasit…ôsil…ô iŇütirak√ßńĪ kitabxanalarda Jurnal m…ôzmununu "
+"depolamaq v…ô paylamaq √ľ√ß√ľn CLOCKSS t…ôtbiqini aktivl…ôŇüdirin."
+
+msgid "manager.setup.management.description"
+msgstr ""
+"GiriŇü v…ô t…ôhl√ľk…ôsizlik, n…ôŇür planlaŇüdńĪrma, elanlar, redakt…ô etm…ô, "
+"t…ôrtibat v…ô son oxuma."
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Ňě…ôkil faylńĪ y√ľkl…ônm…ôdi"
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Formatlama stili y√ľkl…ônm…ôdi"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+"<strong>Not:</strong> Avtomatik m√ľraci…ôt email g√∂nd…ôrm…ô se√ßimi "
+"baŇülanńüńĪcda passivl…ôŇüdirildi. A√ßmaq √ľ√ß√ľn <a class=\"action\" href=\""
+"{$preparedEmailsUrl}\">HazńĪr Email MesajlarńĪ</a> s…ôhif…ôsind…ô "
+"\"SUBMISSION_ACK\" olaraq m√ľ…ôyy…ônl…ôŇüdiril…ôn mesajńĪ aktivl…ôŇüdirin."
+
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+"G√∂st…ôril…ôc…ôk link sayńĪnńĪ bir siyahńĪdakńĪ sonrakńĪ s…ôhif…ôl…ôrl…ô "
+"m…ôhdudlaŇüdńĪrńĪn."
+
+msgid "manager.setup.policies.description"
+msgstr ""
+"Fokus, r…ôy√ßi d…ôy…ôrl…ôndirm…ôsi, b√∂lm…ôl…ôr, m…ôxfilik, t…ôhl√ľk…ôsizlik "
+"v…ô giriŇü elementl…ôri haqqńĪnda …ôlav…ô ed…ôr."
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr ""
+"ńįstifad…ô√ßil…ôrin a√ßńĪq giriŇü m…ôzmununa baxa bilm…ôl…ôri √ľ√ß√ľn "
+"istifad…ô√ßi qeydiyyatńĪ kimi daxil olmalarńĪ m…ôcburidir."
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr ""
+"<strong>Not:</strong> Bu funksiyanńĪn iŇül…ôy…ô bilm…ôsi √ľ√ß√ľn sayt idar…ô√"
+"ßisinin ADS quraŇüdńĪrma faylńĪnda <tt>scheduled_tasks</tt> se√ßimini "
+"aktivl…ôŇüdirm…ôsi lazńĪmdńĪr. Bu iŇü √ľ√ß√ľn serverd…ô d…ô t…ônziml…ôr etm…"
+"ôk lazńĪm g…ôl…ô bil…ôr v…ô h…ôr serverd…ô bu funksiya iŇül…ôm…ôy…ô bil…ôr. "
+"Daha …ôtraflńĪ m…ôlumat almaq √ľ√ß√ľn ADS b…ôl…ôd√ßil…ôrin…ô baxńĪn."
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr ""
+"Redaktorlar h…ôr d…ôf…ô bir r…ôy√ßi inc…ôl…ôm…ôsind…ôn sonra r…ôy√ßil…ôr "
+"√ľ√ß√ľn 1-5 bal arasńĪnda keyfiyy…ôt √∂l√ß√ľm√ľn…ô g√∂r…ô d…ôy…ôrl…ôndirm…ô "
+"edilm…ôlidir."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"r…ôy√ßil…ôr d…ôy…ôrl…ôndirm…ô t…ôl…ôbini q…ôbul ed…ôn…ô q…ôd…ôr M…ôqal…ô "
+"faylńĪna giriŇü ed…ô bilm…ôzl…ôr."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr ""
+"r…ôy√ßil…ôr…ô g√∂nd…ôril…ôn d…ôv…ôt emailin…ô t…ôhl√ľk…ôsiz bir Ňü…ôkild…ô "
+"giriŇü linki …ôlav…ô edin"
+
+msgid "manager.setup.submissions.description"
+msgstr ""
+"M√ľ…ôllif b…ôl…ôd√ßil…ôri, m√ľ…ôllif h√ľququ v…ô indeksl…ôm…ô (qeydiyyat "
+"daxil)"
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"M…ôqal…ô g√∂nd…ôrm…ôyi l…ôńüv et. M…ôqal…ô g√∂nd…ôrm…ôyi jurnalńĪn "
+"b√∂lm…ôl…ôrin…ô g√∂r…ô sńĪradan √ßńĪxarmaq √ľ√ß√ľn <a href=\"{$url}\">Jurnal "
+"b√∂lm…ôl…ôri</a> s…ôhif…ôsin…ô gedin."
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Jurnal hazńĪrda m…ôqal…ô q…ôbul etmir. ńįcaz…ô verm…ôk √ľ√ß√ľn iŇü axńĪŇüńĪ "
+"t…ônziml…ôrini ziyar…ôt edin."
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"√ú√ß√ľnc√ľ t…ôr…ôf indeksl…ôŇüdirm…ô xidm…ôtl…ôri √ľ√ß√ľn <a href=\"https"
+"://www.openarchives.org/\">Open Archives Initiative (OAI)</a> il…ô metadata "
+"t…ôqdim edin."
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr ""
+"M…ôqal…ôl…ôr v…ô n√∂mr…ôl…ôr, r…ôq…ômsal Obyekt T…ôsviretm…ô Sistemi (DOI) "
+"kimi bir qeydiyyat sistemi istifad…ô ed…ôr…ôk bir kimlik n√∂mr…ôsi v…ô ya "
+"s…ôtirl…ô etiketl…ôn…ô bil…ôr."
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr ""
+"Jurnal haqqńĪnda qismind…ô oxucularńĪn g√∂rm…ôsini ist…ôdikl…ôrinizi se√ßin"
+
+msgid "manager.statistics.statistics.note"
+msgstr ""
+"Qeyd: D…ôy…ôrl…ôndirm…ô n…ôtic…ôl…ôrinin hamńĪsńĪ %100 olmaya bil…ôr, √ß√"
+"ľnki h…ôl…ô d…ô d…ôy…ôrl…ôndirm…ôd…ô olanlar da var."
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr ""
+"Bu jurnalda r…ôy√ßi d…ôy…ôrl…ôndirm…ô statistikalarńĪnńĪn edilm…ôsini ist…"
+"ôdiyiniz b√∂lm…ôl…ôrini se√ßin."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Z…ôhm…ôt olmasa veril…ôn t…ôsdiq qutusunu istifad…ô edin"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr ""
+"Abun…ôliyin sona √ßatmasńĪndan sonra oxucularńĪn b√ľt√ľn abun…ô giriŇül…"
+"ôrini l…ôńüv edin."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr ""
+"Abun…ôlik m√ľdd…ôtl…ôrinin baŇüa √ßatmasńĪndan sonra abun…ôl…ôri email il…ô "
+"m…ôlumatlandńĪrńĪn"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"Bir f…ôrdi abun…ônin onlayn abun…ôlik almasńĪ halńĪnda Abun…ô ńįdar…ôsini "
+"m…ôlumatlandńĪrńĪn"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"Bir korporativ abun…ônin onlayn abun…ôlik almasńĪ halńĪnda Abun…ô ńįdar…ô√"
+"ßisini m…ôlumatlandńĪrńĪn (t√∂vsiy…ô edilir)."
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr ""
+"Jurnal HaqqńĪnda s…ôhif…ôsind…ô abun…ôlik haqqńĪnda m…ôlumat verm…ôk √ľ√ß√ľn "
+"g√∂st…ôril…ôc…ôkdir."
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Abun…ô statusu t…ôl…ôb olunur."
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Z…ôhm…ôt olmasa etibarlńĪ bir abun…ôlik statusu se√ßin."
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Abun…ôlik n√∂v√ľ t…ôl…ôb olunur."
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Z…ôhm…ôt olmasa etibarlńĪ bir abun…ôlik n√∂v√ľ se√ßin."
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Z…ôhm…ôt olmasa ke√ß…ôrli bir qurum se√ßin"
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Se√ßilmiŇü abun…ôlik n√∂vl…ôri √ľzvl√ľk m…ôlumatńĪ t…ôl…ôb edir."
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "T…ôŇükilat adńĪ t…ôl…ôb olunur."
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Z…ôhm…ôt olmasa etibarlńĪ bir sah…ô adńĪ daxil edin."
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Z…ôhm…ôt olmasa etibarlńĪ bir IP aralńĪńüńĪ daxil edin"
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr ""
+"Abun…ôlik n√∂v√ľ yeni bir istifad…ô√ßi qeydiyyatńĪndan …ôvv…ôl "
+"yaradńĪlmalńĪdńĪr."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "Yeni abun…ôlikl…ôr edilm…ôzd…ôn …ôvv…ôl bir qurum yaradńĪlmalńĪdńĪr."
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr ""
+"Abun…ôlik giriŇü s…ôlahiyy…ôti, Jurnal ńįdar…ô√ßisi, Redaktorlar, B√∂lm…ô "
+"RedaktorlarńĪ, T…ôrtibat√ßńĪlar, N…ôŇür RedaktorlarńĪ v…ô Korrektorlar √ľ√ß√"
+"ľn avtomatik olaraq verilir."
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Qeydiyyat uńüurla yaradńĪldńĪ."
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr ""
+"∆Źd…ôdi bir d…ôy…ôr daxil edin (M…ôs…ôl…ôn40 v…ô ya 40.00). \"$\" kimi "
+"simvollar istifad…ô etm…ôyin."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Miqdar pozitiv, …ôd…ôdi bir d…ôy…ôr olmalńĪdńĪr."
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Bir miqdar t…ôl…ôb olunur."
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Z…ôhm…ôt olmasa veril…ôn se√ßiml…ôri istifad…ô edin"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Z…ôhm…ôt olmasa veril…ôn se√ßiml…ôri istifad…ô edin"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Z…ôhm…ôt olmasa n…ôzar…ôt qutusunu istifad…ô edin"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr ""
+"Bu abun…ôlik n√∂v√ľn√ľ ictimaiyy…ôt…ô a√ßńĪq ya da g√∂r√ľn…ôn etm…ôyin. <br /"
+"> (M…ôs…ôl…ôn; Jurnal haqqńĪnda qismind…ô abun…ôlikl…ôrin altńĪnda)."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Bu link sad…ôc…ô bir ziyar…ôt√ßi daxil olduńüunda g√∂st…ôril…ôc…ôk"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr ""
+"M…ôqal…ô: defolt il, m…ôqal…ônin n…ôŇür edilm…ô tarixind…ôn etibar…ôn, "
+"\"olduńüu kimi n…ôŇür edin\" yazńĪsńĪnda olduńüu kimi alńĪnacaqdńĪr."
+
+msgid "grid.genres.description"
+msgstr ""
+"Bu komponentl…ôr fayl adlandńĪrma m…ôqs…ôdl…ôri √ľ√ß√ľn istifad…ô edilir v…ô "
+"fayl y√ľkl…ôm…ô √ľz…ôrin…ô a√ßńĪlan menyuda t…ôqdim edilir. ## g√∂st…ôril…ôn "
+"n√∂vl…ôr, istifad…ô√ßinin faylńĪ b√ľt√ľn M…ôqal…ô 99Z il…ô v…ô ya m√ľ…ôyy…ôn "
+"bir komponenti n√∂mr…ô il…ô …ôlaq…ôl…ôndirm…ôsin…ô icaz…ô verir (m…ôs. 02)."
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+"Bu …ôlav…ôni istifad…ô ed…ô bilm…ôk √ľ√ß√ľn z…ôhm…ôt olmasa \"√úmumi "
+"M√ľ…ôyy…ônl…ôŇüdirici/Public Identifier\" …ôlav…ô kateqoriyasńĪna gedin, DOI "
+"…ôlav…ôsini aktivl…ôŇüdirin v…ô konfiqurasiya edin v…ô orada etibarlńĪ bir "
+"DOI prefiksi qeyd edin."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "√áńĪxńĪŇü faylńĪ {$param} oxuna bil…ôn olmalńĪdńĪr."
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "DOI prefiksi, g√ľnd…ôlik √ľ√ß√ľn {$path} yolu …ôskikdir"
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "#YOK"
+
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr "#YOK"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "#YOK"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "#YOK"
+
+msgid "emailTemplate.variable.issueId"
+msgstr "#YOK"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"Bu email, yeni √ľzv qeydiyyatńĪnda email adresinin t…ôsdiql…ônm…ôsini t…ôl…"
+"ôb etdiyind…ô, jurnalda qeydiyyatdan ke√ßdikl…ôrind…ô avtomatik olaraq "
+"g√∂nd…ôrilir."
+
+msgid "doi.description"
+msgstr ""
+"Bu …ôlav…ô, r…ôq…ômsal Obyekt M√ľ…ôyy…ônedicil…ôrinin OJS-dakńĪ dizayn "
+"tablalarńĪ, m…ôqal…ôl…ôr v…ô n√∂mr…ôl…ôr…ô t…ôyin edilm…ôsini t…ômin edir."
+
+msgid "doi.manager.settings.explainDois"
+msgstr ""
+"Z…ôhm…ôt olmasa r…ôq…ômsal Obyekt M√ľ…ôyy…ônedici (DOI) t…ôyin edil…ôc…ôk n…"
+"ôŇür edilmiŇü obyektl…ôri se√ßin:"
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr ""
+"Z…ôhm…ôt olmasa n√∂mr…ôl…ôr √ľ√ß√ľn n√ľmun…ô/Ňüablon DOI son …ôlav…ôsi daxil "
+"edin"
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr ""
+"Z…ôhm…ôt olmasa m…ôqal…ôl…ôr √ľ√ß√ľn n√ľmun…ô/Ňüablon DOI son …ôlav…ôsi "
+"daxil edin"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"Z…ôhm…ôt DOI-l…ôri t…ôyin ed…ôrk…ôn istifad…ô etm…ôk ist…ôdiyiniz qeydiyyat "
+"platformasńĪnńĪ se√ßin"
+
+msgid "doi.editor.doi.description"
+msgstr "DOI {$prefix} prefiksi il…ô baŇülamalńĪdńĪr."
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "X√ľsusi son Ňü…ôkil√ßi …ôskik olduńüuna g√∂r…ô URN t…ôyin edil…ô bilmir"
+
+msgid "doi.editor.missingIssue"
+msgstr "Bu n…ôŇür bir n√∂mr…ôy…ô t…ôyin edilm…ôd…ôn DOI yarada bilm…ôzsiniz."
+
+msgid "doi.editor.patternNotResolved"
+msgstr ""
+"H…ôll edil…ô bilm…ôy…ôn bir Ňüablon ehtiva etdiyin…ô g√∂r…ô DOI t…ôyin edil…"
+"ô bilm…ôz."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr ""
+"DOI {$pubId}, h…ôll edilm…ômiŇü bir Ňüablon m…ôzmunundan t…ôyin edil…ô "
+"bilm…ôz"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Bu dizayn bu n…ôŇürin bir hiss…ôsi deyildir."
+
+msgid "manager.institutions.noContext"
+msgstr "Bu qurumun jurnalńĪ tapńĪlmadńĪ."
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "Abunə bildirişi"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr ""
+"Bu e-poçt qeydiyyatdan keçmiş oxucuya menecerin onlar üçün abunə yaratdığını "
+"bildirir. Giriş təlimatları ilə birlikdə jurnalın URL-sini təqdim edir."
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "Abunəliyin müddəti tezliklə başa çatır"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Abunə müddəti bitdi"
+
+#, fuzzy
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Abunəliyin son müddəti bitdi"
+
+#, fuzzy
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "İnstitusional Abunə alın"
+
+#, fuzzy
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Fərdi abunəliyinizi yeniləyin"
+
+#, fuzzy
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "İnstitusional abunəliyi bərpa edin"
+
+#, fuzzy
+msgid "mailable.openAccessNotify.name"
+msgstr "İctimai giriş bildirişi"
+
+#, fuzzy
+msgid "mailable.openAccessNotify.description"
+msgstr ""
+"Bu e-poçt, problem açıq giriş üçün əlçatan olduqda e-poçt bildirişi tələb "
+"edən qeydiyyatdan keçmiş oxuculara göndərilir."
+
+#, fuzzy
+msgid "mailable.issuePublishNotify.name"
+msgstr "Nəşr olunmuş buraxılış bildirişi"
+
+#, fuzzy
+msgid "manager.manageEmails.description"
+msgstr "Bu jurnaldan e-poçtla göndərilən mesajları redaktə edin."
+
+#, fuzzy
+msgid "mailable.layoutComplete.name"
+msgstr "Qalereyalar tamamlandı"
+
+#, fuzzy
+msgid "mailable.publicationVersionNotify.name"
+msgstr "Yeni versiya yaradıldı"
+
+#, fuzzy
+msgid "mailable.publicationVersionNotify.description"
+msgstr ""
+"Bu e-poçt, göndərilən materialın yeni bir versiyasının yaradılması barədə "
+"təyin olunmuş redaktorları avtomatik olaraq xəbərdar edir."
+
+#, fuzzy
+msgid "mailable.paymentRequest.name"
+msgstr "Ödəniş tələbi"
+
+#, fuzzy
+msgid "mailable.paymentRequest.description"
+msgstr ""
+"Bu avtomatik e-poçt müəllifə ərizəsi qəbul edildikdə nəşr haqqını ödəmək "
+"tələbi ilə göndərilir."
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Bu jurnal saytńĪ √ľ√ß√ľn defolt dil olacaq"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr ""
+"BaŇüqa bir istifad…ô√ßi hesabńĪ il…ô birl…ôŇüdirm…ôk √ľ√ß√ľn bir istifad…ô√"
+"ßi (v…ô ya istifad…ô√ßil…ôr) se√ßin (m…ôs. bir Ňü…ôxsin iki istifad…ô√ßi "
+"hesabńĪ varsa). ńįlk se√ßil…ôn istifad…ô√ßi(l…ôr) silin…ôc…ôk v…ô M…ôqal…ôl…"
+"ôr, t…ôyinatlar vb. x√ľsusiyy…ôtl…ôr ikinci se√ßil…ôn istifad…ô√ßi hesabńĪna "
+"transfer edil…ôc…ôkdir."
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"ADS d…ôst…ôkl…ôn…ôn dill…ôrd…ôn h…ôr hansńĪ biri il…ô istifad…ô edil…ô bil…"
+"ôr. ADS √ßoxdilli bir sistem quruluŇüuna sahibdir v…ô h…ôr s…ôhif…ôd…ô dill…"
+"ôr arasńĪnda ke√ßid ed…ô bilm…ô fuksiyasńĪ il…ô istifad…ô√ßil…ôrin ist…ôdikl…"
+"ôri dild…ô data daxil etm…ôsini t…ômin edir. <br /><br />ADS t…ôr…ôfind…ôn "
+"d…ôst…ôkl…ôn…ôn bir dil aŇüańüńĪdakńĪ siyahńĪda yoxdursa, sayt r…ôhb…ôrliyi "
+"ara √ľz√ľnd…ôn dili quraŇüdńĪrmaq/y√ľkl…ôm…ôk √ľ√ß√ľn sayt idar…ô√ßiniz…ô "
+"m√ľraci…ôt edin. Yeni bir dil d…ôst…ôyi …ôlav…ô etm…ôk √ľ√ß√ľn …ôlaq…ôdar t…"
+"ôlimatlar v…ô ADS s…ôn…ôdl…ôrin…ô baxńĪn."
+
+msgid "manager.sections.alertDelete"
+msgstr ""
+"Bu hiss…ôni silm…ôzd…ôn …ôvv…ôl, bu b√∂lm…ôd…ô n…ôŇür edilmiŇü m…ôqal…ôl…ôri "
+"dig…ôr b√∂lm…ôl…ôr…ô daŇüńĪmalńĪsńĪnńĪz."
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr ""
+"B√∂lm…ô redaktorlarńĪnńĪn m…ôqal…ôl…ôr…ô avtomatik olaraq t…ôyin edilm…ôsi "
+"√ľ√ß√ľn bu b√∂lm…ô bir b√∂lm…ô redaktoru …ôlav…ô edin. (Dig…ôr t…ôr…ôfd…ôn, "
+"bir m…ôqal…ô g…ôldikd…ôn sonra b√∂lm…ô redaktorlarńĪ manuel olaraq da t…ôyin "
+"edil…ô bil…ôr.) ∆Źg…ôr …ôlav…ô edildis…ô bi b√∂lm…ô redaktoru bu b√∂lm…ônin "
+"g…ônd…ôril…ôrini g√∂zd…ôn ke√ßirm…ôy…ô (r…ôy√ßilik) v…ô redakt…ô etm…ôy…ô "
+"(s…ôhif…ô nizamńĪ, t…ôrtibat v…ô t…ôshih) avtomtik olaraq t…ôyin edilir. "
+"B√∂lm…ô redaktorlarńĪ Jurnal r…ôhb…ôrliyi qismind…ôki rollar altńĪnda b√∂lm…"
+"ô redaktorlarńĪ klikl…ôn…ôr…ôk yaradńĪlńĪr."
+
+msgid "manager.sections.editorRestriction"
+msgstr ""
+"M…ôzmun sad…ôc…ô redaktorlar v…ô b√∂lm…ô redaktorlarńĪ t…ôr…ôfind…ôn "
+"g√∂nd…ôril…ô bil…ôr."
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"∆Źn az bir b√∂lm…ô aktiv olmalńĪdńĪr. Bu jurnala m…ôqal…ô g√∂nd…ôrm…ôyi l…"
+"ôńüv etm…ôk √ľ√ß√ľn iŇü axńĪŇüńĪ t…ônziml…ôrini ziyar…ôt edin."
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr ""
+"H…ôr bir b√∂lm…ô redaktoru t…ôyinatńĪnńĪn iŇüar…ôl…ônm…ôsi √ľ√ß√ľn …ôn az "
+"bir iŇüar…ô qutusu olduńüundan …ômin olun."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr ""
+"Z…ôhm…ôt olmasa etibarlńĪ bir d…ôy…ôrl…ôndirm…ô formu se√ßdiyinizd…ôn …ômin "
+"olun"
+
+msgid "manager.setup.competingInterests.requireAuthors"
+msgstr ""
+"M√ľ…ôllifl…ôrin m…ôqal…ô il…ô birlikd…ô m…ônf…ô…ôt m√ľnaqiŇü…ôsi bildiriŇüi "
+"faylńĪ g√∂nd…ôrm…ôl…ôri g…ôr…ôklidir."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "B√∂lm…ô √ľ√ß√ľn baŇülńĪq m…ôcburidir."
+
+msgid "manager.sections.hideTocTitle"
+msgstr ""
+"Bu b√∂lm…ônin baŇülńĪńüńĪnńĪ n√∂mr…ônin m√ľnd…ôricat c…ôdv…ôlind…ô "
+"g√∂st…ôrm…ô"
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "Elan s…ôhif…ôsind…ô g√∂st…ôril…ôc…ôk …ôlav…ô m…ôlumat daxil edin"
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr ""
+"M√ľ…ôllifl…ôrin d…ôy…ôrl…ôndirm…ôl…ôri il…ô birlikd…ô m…ônf…ô…ôt m√ľnaqiŇü…"
+"ôsi bildiriŇüi faylńĪ g√∂nd…ôrm…ôl…ôri g…ôr…ôklidir."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr ""
+"Jurnal ńįdar…ô√ßisi b√ľt√ľn istifad…ô√ßil…ôri, redaktor v…ô ya b√∂lm…ô "
+"redaktorlarńĪ sad…ôc…ô r…ôy√ßil…ôri yadda saxlaya bil…ôr"
+
+msgid "manager.setup.disciplineDescription"
+msgstr ""
+"∆Źg…ôr jurnal akademik sah…ôl…ôrin bir ne√ß…ôsini …ôhat…ô edir v…ô ya da "
+"m√ľ…ôllifl…ôr √ßalńĪŇümalarńĪnńĪ akademik sah…ôl…ôr…ô g√∂r…ô g√∂nd…ôrs…ôl…"
+"ôr, bu m√ľmk√ľnd√ľr."
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr ""
+"T…ôslim edilm…ôy…ôn emaill…ôr bu adres…ô bir x…ôta mesajńĪ kimi g√∂nd…ôril…ôr"
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"<strong>Not:</strong> Bu se√ßimi aktivl…ôŇüdirm…ôk √ľ√ß√ľn ADS konfiqurasiya "
+"faylńĪnda <code>allow_envelope_sender</code> se√ßimi aktiv olmalńĪdńĪr. Bu "
+"funksiyanńĪn istifad…ô edil…ô bilm…ôsi √ľ√ß√ľn server (b√ľt√ľn serverl…ôrd…ô "
+"iŇül…ôm…ôy…ô bil…ôr) t…ônziml…ôrind…ô d…ô d…ôyiŇüiklik edilm…ôsi lazńĪmdńĪr."
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Ana s…ôhif…ôd…ô g√∂st…ôril…ôc…ôk elan sayńĪ. He√ß g√∂st…ôrm…ôk "
+"ist…ômirsinizs…ô boŇü buraxa bil…ôrsiniz."
+
+msgid "manager.setup.enableUserRegistration"
+msgstr ""
+"Ziyar…ôt√ßil…ôr jurnalda istifad…ô√ßi olaraq qeydiyyatdan ke√ß…ô bil…ôr."
+
+msgid "manager.setup.focusAndScope.description"
+msgstr ""
+"M√ľ…ôllifl…ôr, oxucular v…ô kitabxana√ßńĪlara jurnalńĪn n…ôŇür ed…ôc…ôyi v…ô "
+"dig…ôr elementl…ôri a√ßńĪqlayńĪn"
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr ""
+"A√ßńĪq Jurnal Sisteml…ôri, d√ľnya miqyasńĪnda elektron t…ôdqiqat "
+"m…ônb…ôl…ôrin…ô √ßatma m…ôqs…ôdi il…ô standart formalaŇüdńĪran <a href="
+"\"https://www.openarchives.org/\" target=\"_blank\">A√ßńĪq Arxiv "
+"T…ôŇü…ôbb√ľs√ľ</a>n√ľn Metadata QarńĪŇüdńĪrma/harmanlama Protokolunu "
+"d…ôst…ôkl…ôyir. M√ľ…ôllifl…ôr m…ôqal…ô m√ľraci…ôtl…ôri √ľ√ß√ľn data t…ômin "
+"etm…ôk m…ôqs…ôdil…ô oxŇüar bir Ňüablon istifad…ô ed…ôc…ôkl…ôr. Jurnal idar…ô√"
+"ßisi indeksl…ôm…ô √ľ√ß√ľn v…ô m√∂vcud M√ľ…ôllifl…ôr …ôlaq…ôdar n√ľmun…ôl…ôrl…"
+"ô birlikd…ô indeksl…ônmiŇü √ßalńĪŇümalarńĪnńĪ tapmaq √ľ√ß√ľn n√∂qt…ôli "
+"verg√ľll…ô ayrńĪlmńĪŇü termin (M…ôs…ôl…ôn, termin1; termin2) "
+"kateqoriyalarńĪnńĪ se√ßm…ôlidir. GiriŇül…ôr \"m…ôs\" v…ô ya \"m…ôs…ôl…ôn\" "
+"istifad…ô edil…ôr…ôk n√ľmun…ôl…ôrd…ôki kimi edilm…ôlidir."
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "G√∂st…ôril…ôn ISSN etibarlńĪ deyil."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "∆Źsas …ôlaq…ô email adresi t…ôl…ôb olunur"
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "∆Źsas …ôlaq…ô adńĪ t…ôl…ôb olunur"
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "JurnalńĪn baŇü h…ôrfl…ôri t…ôl…ôb olunur"
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Jurnal adńĪ t…ôl…ôb olunur"
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "M…ôqal…ô baŇüńĪna t…ôyin edil…ôc…ôk r…ôy√ßi sayńĪ t…ôl…ôb olunur"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"BaŇüqa bir s…ôhif…ôd…ô, sonrakńĪ elementl…ôri g√∂st…ôrm…ôzd…ôn …ôvv…ôl "
+"siyahńĪda baxńĪlacaq element sayńĪ (m…ôs…ôl…ôn, M…ôqal…ôl…ôr, istifad…ô√ßil…"
+"ôr v…ô ya t…ônziml…ôm…ô t…ôyinatlarńĪ) m…ôhdudlaŇüdńĪrńĪn."
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"JurnalńĪnńĪz haqqńĪnda oxuculara, m√ľ…ôllifl…ôr…ô v…ô ya r…ôy√ßil…ôr…ô "
+"maraqlarńĪnńĪ √ß…ôk…ô bil…ôc…ôk h…ôr c√ľr m…ôlumatńĪ …ôlav…ô edin. Bu, a√"
+"ßńĪq giriŇü politikanńĪzńĪ, JurnalńĪn fokus v…ô …ôhat…ô dair…ôsini, m√ľ…"
+"ôllif h√ľququ bildiriŇüini, sponsorluq ifŇüasńĪnńĪ, JurnalńĪn tarixini, bir "
+"m…ôxfilik bildiriŇüini v…ô h…ôr hansńĪ bir LOCKSS v…ô ya CLOCKSS arxivl…ôm…ô "
+"sistemin…ô daxil edilm…ôsini …ôhat…ô ed…ô bil…ôr."
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr ""
+"GiriŇü s…ôhif…ôsi defolt y√∂nl…ôndirm…ô linkl…ôrind…ôn ibar…ôtdir. "
+"AŇüańüńĪdakńĪ se√ßiml…ôr istifad…ô edil…ôr…ôk, aŇüańüńĪdakńĪ sńĪra il…ô "
+"g√∂r√ľnm…ôk √ľ√ß√ľn giriŇü s…ôhif…ôsin…ô …ôlav…ô edil…ô bil…ôr. Son n√∂mr…ô "
+"y√∂nl…ôndirm…ô linkl…ôrind…ô \"Son N√∂mr…ô\" kimi davamlńĪ yer alar."
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Bu JurnalńĪn olduńüu √∂lk…ôni v…ô ya Jurnal ya da naŇüirin email adresinin "
+"olduńüu √∂lk…ôni se√ßin"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "JurnalńĪn konfiqurasiya t…ônziml…ôri yenil…ôndi."
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr ""
+"FormatlandńĪrma s…ôhif…ôsi √ľ√ß√ľn etibarsńĪz fayl formatńĪ. D…ôst…ôkl…ôr…ôn "
+"fayl formatńĪ .css dir"
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"JurnalńĪn qńĪsa bir a√ßńĪqlamasńĪnńĪ edin v…ô redaktorlarńĪ, idar…ô "
+"direktorlarńĪnńĪ v…ô redaksiya hey…ôtinizin dig…ôr √ľzvl…ôrini "
+"m√ľ…ôyy…ônl…ôŇüdirin."
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+"PKP T…ôhl√ľk…ôsizlik Ňě…ôb…ôk…ôsi (PN), bir ne√ß…ô …ôsas meyarńĪ "
+"qarŇüńĪlayan OJS JurnallarńĪ √ľ√ß√ľn pulsuz t…ôhl√ľk…ôsizlik xidm…ôti t…"
+"ôqdim edir."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"PKP PN istifad…ô Ňü…ôrtl…ôrini q…ôbul etm…ôk √ľ√ß√ľn <button>…ôlav…ô "
+"t…ônziml…ôri</button>n…ô baxńĪn"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"PKP T…ôhl√ľk…ôsizlik Ňě…ôb…ôk…ôsi (PN), bir ne√ß…ô …ôsas meyarńĪ t…ômin ed…"
+"ôn h…ôr hansńĪ bir OJS jurnalńĪ √ľ√ß√ľn pulsuz m√ľhafiz…ô xidm…ôti t…ôqdim "
+"edir. OJS 3 √ľ√ß√ľn PKP PN …ôlav…ôsi hazńĪrda inkiŇüaf etdirilir v…ô …ôlav…ô "
+"qaleriyasńĪnda yaxńĪn zamanda t…ôqdim edil…ôc…ôkdir."
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+"LOCKSS vasit…ôsil…ô iŇütirak√ßńĪ kitabxanalarda jurnal m…ôzmununu saxlamaq, "
+"paylamaq v…ô <a href=\"{$lockssUrl}\" target=\"_blank\">NaŇüir Manifesti</a> "
+"s…ôhif…ôsind…ô yer almaq √ľ√ß√ľn LOCKSS-u aktivl…ôŇüdirin. LOCKSS "
+"lisenziyasńĪ \"Jurnal HaqqńĪnda\" s…ôhif…ôsind…ô g√∂r√ľn…ôc…ôkdir."
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+"JurnalńĪn qeydiyyatda olduńüu v…ô saxlandńĪńüńĪ 6-10 kitabxana t…ôrif edin. "
+"M…ôs…ôl…ôn, redaktor v…ô ya n…ôŇüriyyat hey…ôti √ľzvl…ôri LOCKSS‚Äôde yer "
+"alan t…ôŇükilatlara m√ľraci…ôt edin. JurnalńĪn qeytiyyatlńĪ olduńüu v…ô gizl…"
+"ôndiyi 6-10 kitabxana m√ľ…ôyy…ôn edin. M…ôs…ôl…ôn, redaktor v…ô ya redaksiya "
+"hey…ôti √ľzvl…ôri LOCKSS-da olan quruluŇülara m√ľraci…ôt edin. <a href=\"http"
+"://lockss.org/lockss/Libraries\" target=\"_blank\">ńįŇütirak ed…ôn "
+"kitabxanalarńĪ buradan g√∂r…ô bil…ôrsiniz</a>. (i) M√ľraci…ôt ed…ôrk…ôn <a "
+"href=\"{$lockssExistingArchiveUrl}\" target=\"_blank\">LOCKSS-da v…ôzif…ôli "
+"kitabxanalar</a> v…ô ya (ii) <a href=\"{$lockssNewArchiveUrl}\" target="
+"\"_blank\">LOCKSS-da h…ôl…ôki yer almayan kitabxanalar</a> v…ô hazńĪr d…ôv…"
+"ôt yazńĪlarńĪ √ľ√ß√ľn klikl…ôyin."
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"<a href=\"https://clockss.org\" target=\"_blank\"> CLOCKSS Veb SaytńĪnńĪ</a> "
+"ziyar…ôt ed…ôr…ôk CLOCKSS xidm…ôtin…ô qoŇüulun."
+
+msgid "manager.setup.look.description"
+msgstr ""
+"Ana s…ôhif…ô baŇülńĪńüńĪ, m…ôzmun, Jurnal baŇülńĪńüńĪ, altlńĪq, y√∂nl…ôndirm…"
+"ô √ßubuńüu v…ô format s…ôhif…ôsi."
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Y√∂nl…ôndirm…ô √ßubuńüuna element …ôlav…ô edin v…ô ya √ßńĪxarńĪn"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"Korrekt…ô t…ôlimatńĪ korrekt…ô addńĪmńĪnda t…ôrtibat√ßńĪlara, m√ľ…ôllifl…ôr…"
+"ô v…ô f…ôsil redaktorlarńĪna a√ßńĪq olur. AŇüańüńĪda, Jurnal idar…ô√ßisi "
+"t…ôr…ôfind…ôn ist…ônildiyi zamand…ôyiŇüdiril…ô bil…ôc…ôk, …ôvv…ôlc…ôd…ôn "
+"m√ľ…ôyy…ôn edilmiŇü (HTMAL v…ô ya d√ľz m…ôtn) bir korrekt…ô verilib."
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"M…ôqal…ôl…ôr, √∂z m√ľnd…ôricatńĪ olan bir n√∂mr…ôd…ô birl…ôŇüdiril…ôr…ôk n…"
+"ôŇür edil…ô bil…ôr. ∆Źlav…ô olaraq hazńĪr olan m…ôqal…ô son n√∂mr…ônin m√ľnd…"
+"ôricatńĪna …ôlav…ô edil…ôr…ôk n…ôŇür edil…ô bil…ôr. Jurnal haqqńĪnda "
+"b√∂lm…ôsind…ô oxucularńĪnńĪza hansńĪ sistemin istifad…ô edildiyi v…ô hansńĪ "
+"tezlikd…ô yeni n√∂mr…ô n…ôŇür edildyini qeyd edin."
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr ""
+"ńįstifad…ô√ßil…ôrin Jurnal saytńĪna baxńĪla bilm…ôl…ôri √ľ√ß√ľn qeydiyyat "
+"kimi daxil olmalarńĪ m…ôcburidir."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr ""
+"<strong>Not:</strong> r…ôy√ßil…ôr…ô M…ôqal…ôl…ôrin email, r…ôy√ßil…ôrin d…ôv…"
+"ôt edildiyi d…ôy…ôrl…ôndirm…ô M…ôqal…ôsin…ô birbaŇüa gir…ô bilm…ôsi √ľ√ß√ľn "
+"x√ľsusi bir URL adresi ehtiva edir (daxil olunmasńĪ lazńĪm olan dig…ôr "
+"s…ôhif…ôl…ôrl…ô birlikd…ô). Bu se√ßim, t…ôhl√ľk…ôsizlik s…ôb…ôbil…ô "
+"redaktorlarńĪn CCs v…ô ya BCCs adresl…ôrini …ôlav…ô etm…ôl…ôrin…ô icaz…ô "
+"verin."
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"Google kimi axtarńĪŇü motorlarńĪnńĪn saytńĪ indeskl…ôŇüdirm…ôsin…ô k√∂m…"
+"ôklik edin. JurnalńĪnńĪzńĪn <a href=\"{$sitemapUrl}\" target=\"_blank\">site "
+"haritasńĪnńĪ</a> axtarńĪŇü indeksl…ôrin…ô y√ľkl…ôy…ô bil…ôrsiniz."
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"AxtarńĪŇü n…ôtic…ôl…ôrind…ô sadalanark…ôn axtarńĪŇü motorlarńĪnńĪn g√∂st…ôr…"
+"ô bil…ôc…ôyi n…ôtic…ôl…ôr haqqńĪnda qńĪsa bir a√ßńĪqlama (50-300 xarakter) "
+"daxil edin."
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "H…ômiŇü…ô dizayn linkini g√∂st…ôrin v…ô m…ôhdud giriŇüi qeyd edin."
+
+msgid "manager.setup.sectionsDescription"
+msgstr ""
+"Jurnal √ľ√ß√ľn √∂lm…ôl…ôr yaratmaq v…ô ya d…ôyiŇüdirm…ôk (M…ôsl…ôn; "
+"M…ôqal…ôl…ôr, Kitab D…ôy…ôrl…ôndirm…ôl…ôri, vb) √ľ√ß√ľn B√∂lm…ô "
+"R…ôhb…ôrliyin…ô gedin. <br /><br /> M√ľ…ôllifl…ôr jurnala M…ôqal…ô ed…ôrk…ôn "
+"se√ßim ed…ôc…ôkl…ôr..."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Jurnal redaktoru bunu redaksiya prosesi kimi g√∂r…ôc…ôkdir."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Jurnal b√∂lm…ôsi n…ôz…ôr…ô alńĪnacaq."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr ""
+"Bir redaksiya/d…ôy…ôrl…ôndirm…ô hey…ôti Jurnal t…ôr…ôfind…ôn istifad…ô "
+"edil…ôc…ôkdir."
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+"ADS proqramlaŇüdńĪrmasńĪ h…ôr Jurnal √ľ√ß√ľn statistikalarńĪ hesablayńĪr. \"D"
+"…ôy…ôrl…ôndirm…ô m√ľdd…ôti\" m√ľraci…ôt vaxtńĪndan son redaktor q…ôrarńĪ "
+"veril…ôn…ô q…ôd…ôr ke√ß…ôn g√ľn sayńĪdńĪr. \"N…ôŇüretm…ô m√ľdd…ôti\" is…ô "
+"m√ľraci…ôtd…ôn n…ôŇür…ô q…ôd…ôr ke√ß…ôn √ľmumi m√ľdd…ôtdir."
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr ""
+"Abun…ôliyin sona √ßatmasńĪndan sonra, oxucunun b√ľt√ľn abun…ôlik m…ôzmununa "
+"giriŇüi r…ôdd edil…ô bil…ôr ancaq abun…ôlik sonuna q…ôd…ôr n…ôŇür edil…ôn m…"
+"ôzmuna giriŇüi saxlana bil…ôr."
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr ""
+"OxucularńĪn son n…ôŇür edil…ôn abun…ôlik giriŇüini l…ôńüv edin ancaq abun…"
+"ôlik sonuna q…ôd…ôr n…ôŇür edil…ôn m…ôzmuna giriŇüini saxlayńĪn."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr ""
+"Abun…ôlik m√ľdd…ôti baŇüa √ßatmazdan …ôvv…ôl email il…ô m…ôlumatlandńĪrńĪn"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr ""
+"Abun…ôlik m√ľdd…ôti baŇüa √ßatmazdan …ôvv…ôl email il…ô m…ôlumatlandńĪrńĪn"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr ""
+"Avtomatik email xatńĪrladńĪcńĪlarńĪ (ADS t…ôr…ôfind…ôn hazńĪrlanmńĪŇü emaill…"
+"ôr Jurnal ńįdar…ô√ßisi t…ôr…ôfind…ôn formalaŇüdńĪrla bil…ôr) h…ôm …ôvv…ôl h…"
+"ôm d…ô bir abun…ôlik m√ľdd…ôti baŇüa √ßatdńĪqdan sonra abun…ôl…ôr g√∂nd…ôril…"
+"ô bil…ôr."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr ""
+"<strong>Not:</strong> Bu se√ßimin aktivl…ôŇüm…ôsi √ľ√ß√ľn, sayt idar…ô√"
+"ßisinin ADS t…ônzim faylńĪnda <tt>scheduled_tasks</tt> se√ßimini "
+"aktivl…ôŇüdirm…ôsi lazńĪmdńĪr. ∆Źlav…ô olaraq serverin d…ô b…ôzi "
+"funksiyalarńĪ d…ôst…ôkl…ôm…ôsi lazńĪmdńĪr (h…ôr zaman m√ľmk√ľn olmaya bil…ôr)"
+", …ôtraflńĪ m…ôlumat almaq √ľ√ß√ľn ADS s…ôn…ôdl…ôrin…ô baxńĪn."
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr ""
+"Sah…ôy…ô daxil olduqda HTML taglarńĪ istifad…ô ed…ô bilir (yazńĪ fontu, r…"
+"ôngi vb.), \"enter\" d√ľym…ôsi istifad…ôsi <tt>&lt;br&gt;</tt> olaraq "
+"d…ôyiŇüdiril…ôc…ôkdir; HTML redaktor Firefox il…ô d…ô iŇül…ôyir."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Z…ôhm…ôt olmasa abun…ôlik bitdiyind…ô ne√ß…ô ay sonra x…ôb…ôr verm…ôk ist…"
+"ôdiyinizi qeyd edin"
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Z…ôhm…ôt olmasa abun…ôlik bitdiyind…ô ne√ß…ô ay …ôvv…ôl x…ôb…ôr verm…ôk ist…"
+"ôdiyinizi qeyd edin"
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Z…ôhm…ôt olmasa abun…ôlik bitdiyind…ô ne√ß…ô h…ôft…ô sonra x…ôb…ôr verm…ôk "
+"ist…ôdiyinizi qeyd edin"
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Z…ôhm…ôt olmasa abun…ôlik bitdiyind…ô ne√ß…ô h…ôft…ô …ôvv…ôl x…ôb…ôr verm…ôk "
+"ist…ôdiyinizi qeyd edin"
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+"QeydiyyatlńĪ oxucularńĪn, a√ßńĪq giriŇü a√ßńĪldńĪńüńĪ zaman email il…ô "
+"Jurnal m…ôzmununu almalarńĪna icaz…ô verin"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"Bir f…ôrdi abun…ônin onlayn abun…ôlik yenil…ôm…ô etm…ôsi halńĪnda Abun…ô "
+"ńįdar…ô√ßisini m…ôlumatlandńĪrńĪn."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"Bir korporativ abun…ônin onlayn abun…ôlik yenil…ôm…ô etm…ôsi halńĪnda Abun…ô "
+"ńįdar…ô√ßisini m…ôlumatlandńĪrńĪn."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr ""
+"<strong>Not:</strong> Bu se√ßimin aktivl…ôŇüm…ôsi √ľ√ß√ľn, sayt idar…ô√"
+"ßisinin ADS t…ônzim faylńĪnda <tt>scheduled_tasks</tt> se√ß√ßimini "
+"aktivl…ôŇüdirm…ôsi lazńĪmdńĪr. ∆Źlav…ô olaraq serverin d…ô b…ôzi "
+"funksiyalarńĪ d…ôst…ôkl…ôm…ôsi lazńĪmdńĪr (h…ôr zaman m√ľmk√ľn olmaya bil…ôr)"
+", …ôtraflńĪ m…ôlumat almaq √ľ√ß√ľn ADS s…ôn…ôdl…ôrin…ô baxńĪn."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong>Not:</strong> Koorporativ abun…ôlikl…ôr onlayn olaraq alńĪndńĪńüńĪ "
+"zaman sah…ô adlarńĪ v…ô IP aralńĪńüńĪ √ľ√ß√ľn t…ôsdiq t…ôl…ôb olunur. Bu "
+"abun…ôlikl…ôrin aktivl…ôŇüdirilm…ôsinin Abun…ô ńįdar…ô√ßisi t…ôr…ôfind…ôn "
+"t…ôsdiql…ônm…ôsini t…ôl…ôb edir."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+"Avtomatik email bildiriŇül…ôri (ADS t…ôr…ôfind…ôn hazńĪrlanmńĪŇü emaill…ôr "
+"Jurnal idar…ô√ßil…ôri t…ôr…ôfind…ôn redakt…ô edil…ô bil…ôr) onlayn "
+"√∂d…ôniŇül…ôr tamamlandńĪqdan sonra Abun…ô ńįdar…ô√ßisin…ô g√∂nd…ôril…ô "
+"bil…ôr."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+"<strong>Not:</strong> Bu se√ßiml…ôri aktivl…ôŇüdirm…ôk √ľ√ß√ľn, Jurnal "
+"ńįdar…ô√ßisi, Oxucu Qiym…ôtl…ôri altńĪndakńĪ abun…ôlikl…ôri onlayn √∂d…ôm…ô "
+"modulu da daxil olmaqla aktivl…ôŇüdirm…ôlidir."
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr ""
+"Abun…ôlik t…ôl…ôb ed…ôn jurnallar \"gecikmiŇü a√ßńĪq giriŇü\" ya da \"M√ľ…"
+"ôllif Ňü…ôxsi arxivl…ôŇüdirm…ôsi\" kimi yazńĪnńĪ daha √ßox …ôld…ôetm…ô v…ô "
+"istinad etm…ôni t…ômin ed…ôc…ôk politikalar m√ľ…ôyy…ôn ed…ô bil…ôr. M√ľ…ôyy…"
+"ôn edil…ôn politika Jurnal HaqqńĪnda s…ôhif…ôsind…ô yer alacaqdńĪr."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+"Abun…ôlik n√∂vl…ôri v…ô qiym…ôti, abun…ôlik idar…ô√ßisinin adńĪ v…ô adresi "
+"il…ô birlikd…ô Jurnal haqqńĪnda s…ôhif…ôsin…ô √∂zl√ľy√ľnd…ôn yerl…"
+"ôŇüdirilir. AbunńĪlik il…ô bańülńĪ √∂d…ôm…ô formatńĪ, hesab n√∂mr…ôsi, "
+"inkiŇüaf ed…ôn √∂lk…ôl…ôr √ľ√ß√ľn x√ľsusi Ňü…ôrtl…ôr v…ô oxŇüar b√ľt√ľn "
+"…ôlav…ô m…ôlumatlarńĪ burada …ôlav…ô edil…ô bil…ôr."
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Z…ôhm…ôt olmasa etibarlńĪ bir email adresi daxil edin."
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Abun…ô baŇülama tarixi t…ôl…ôb olunur."
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Z…ôhm…ôt olmasa etibarlńĪ bir abun…ôlik baŇülanńüńĪc tarixi se√ßin."
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Abun…ôlik bitm…ô vaxtńĪ t…ôl…ôb olunur."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"Bu m√ľdd…ôti bitm…ôy…ôn bir abun…ôlik n√∂v√ľd√ľr; z…ôhm…ôt olmasa bir "
+"baŇülanńüńĪc tarixi qeyd etm…ôyin."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"Bu m√ľdd…ôti bitm…ôy…ôn bir abun…ôlik n√∂v√ľd√ľr; z…ôhm…ôt olmasa bir bitm…ô "
+"vaxtńĪ qeyd etm…ôyin."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Z…ôhm…ôt olmasa etibarlńĪ bir abun…ôlik bitm…ô tarixi se√ßin"
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr ""
+"Qeyd: AŇüańüńĪdakńĪ b√ľt√ľn d…ôyiŇüiklikl…ôr b√ľt√ľn sistemd…ôki "
+"istifad…ô√ßil…ôrin profilind…ô var."
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Bir istifad…ô√ßi t…ôl…ôb olunur."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Z…ôhm…ôt olmasa etibarlńĪ bir istifad…ô√ßi se√ßin"
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Z…ôhm…ôt olmasa etibarlńĪ bir √∂lk…ô se√ßin"
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr ""
+"ńįstifad…ô√ßi adńĪ v…ô abun…ôlik detallarńĪnńĪ bir email vasit…ôsil…ô "
+"istifad…ô√ßiy…ô g√∂nd…ôr"
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Z…ôhm…ôt olmasa veril…ôn t…ôsdiq qutularńĪnńĪ istifad…ô edin."
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr ""
+"Abun…ôlik ictimai birlik v…ô ya t…ôŇükilata aitdirs…ô v…ô …ôg…ôr abun…ôlik "
+"n√∂v√ľ lazńĪmdńĪrsa abun…ôlik n√∂v√ľn√ľ daxil edin. Abun…ôlik ictimai birlik "
+"v…ô ya t…ôŇükilata aiddirs…ô v…ô …ôg…ôr abun…ôlik n√∂v√ľ t…ôl…ôb olunursa "
+"abun…ôlik n√∂v√ľ daxil edin"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr ""
+"∆Źg…ôr bura bir sah…ô adńĪ (domain) daxil edilirs…ô, IP aralńĪńüńĪ daxil "
+"edilm…ôy…ô bil…ôr. <br /> EtibarlńĪ d…ôy…ôrl…ôr istifad…ô sah…ôsi "
+"adlarńĪdńĪr (M…ôs…ôl…ôn; lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Se√ßil…ôn abun…ôlik n√∂v√ľ abun…ôliyin t…ôsdiq edilm…ôsi √ľ√ß√ľn bir sah…ô "
+"v…ô/v…ô ya IP aralńĪńüńĪ t…ôl…ôb edilir."
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"∆Źg…ôr buraya bir IP aralńĪńüńĪ daxil edilirs…ô, sah…ô adńĪ daxil edilm…ôy…ô "
+"bil…ôr. <br />Bir IP aralńĪńüńĪ √ľ√ß√ľn etibarlńĪ d…ôy…ôrl…ôr: IP adresi (M…"
+"ôs. 142.58.103.1), IP aralńĪńüńĪ (M…ôs. 142.58.103.1 - 142.58.103.4), '*' "
+"iŇüar…ôsinin daxil olduńüu bir IP aralńĪńüńĪ (M…ôs. 142.58.103.*), v…ô ya "
+"bunlarńĪn ';' iŇüar…ôsi il…ô ayrńĪlmńĪŇü h…ôr hansńĪ bir konfiqurasiyasńĪ "
+"ola bil…ôr (M…ôs. 142.58.103.* - 142.58.107.* ; 142.58.108.1 ; 142.58.106.*)."
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr ""
+"Jurnal quruluŇüunda istifad…ô√ßiy…ô bir bildiriŇü email g√∂nd…ôrm…ôk "
+"m…ôqs…ôdil…ô, abun…ô Ňü…ôxs adńĪ v…ô email adresi qeyd edilm…ôlidir."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "ńįstifad…ô√ßi hazńĪrda bu d…ôriy…ô abun…ôdir."
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Pul vahidi t…ôl…ôb olunur."
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Z…ôhm…ôt olmasa bir pul vahidi se√ßin"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr ""
+"Ne√ß…ô ay m√ľdd…ôtin…ô abun…ô olacańüńĪnńĪzńĪ r…ôq…ôml…ô qeyd edin (M…ôs…ôl…"
+"ôn 12)."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "M√ľdd…ôt pozitiv, …ôd…ôdi bir d…ôy…ôr olmalńĪdńĪr."
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "M√ľdd…ôt t…ôl…ôb olunur"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Abun…ô n√∂v√ľn√ľn formatńĪnńĪn bilinm…ôsi t…ôl…ôb olunur"
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "EtibarlńĪ bir abun…ôlik n√∂v√ľ formatńĪ se√ßin"
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Z…ôhm…ôt olmasa veril…ôn √ßek qutularńĪnńĪ istifad…ô edin"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "H…ôl…ô d…ô bu adda bir abun…ôlik n√∂v√ľ var"
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Abun…ôlik n√∂v√ľn√ľn daxil edilm…ôsi t…ôl…ôb olunur"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "h…ôr hansńĪ bir abun…ôlik n√∂v√ľ yaradńĪlmadńĪ"
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Abun…ôlik n√∂v√ľ uńüurla yaradńĪldńĪ"
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "T…ôklif etdiyiniz abun…ôlikl…ôri a√ßńĪqlayan bir s…ôhif…ôy…ô link verin"
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr ""
+"Ziyar…ôt√ßinin m√∂vcud v…ô ke√ßmiŇü abun…ôlikl…ôrini a√ßńĪqlayan bir "
+"s…ôhif…ôy…ô link verin."
+
+msgid "manager.setup.categories.description"
+msgstr ""
+"YuxarńĪda sadalanan d…ôstd…ôn …ôn uyńüun kateqoriyalarńĪ se√ßin. Oxucular "
+"tamamlanmńĪŇü Jurnal d…ôstind…ôn kateqoriyalara g√∂r…ô g√∂zd…ôn ke√ßir…ô "
+"bil…ôc…ôkl…ôr."
+
+msgid "manager.setup.section.description"
+msgstr ""
+"Bir JurnalńĪn n…ôŇür edilmiŇü n√∂mr…ôl…ôrd…ôki m…ôqal…ôl…ôr, √ľmumiyy…ôtl…ô "
+"m√∂vzu v…ô ya m…ôzmun n√∂v√ľ (M…ôs. AraŇüdńĪrma m…ôqal…ôl…ôri, araŇüdńĪrma, "
+"vb.) t…ôr…ôfind…ôn B√∂lm…ôl…ôrd…ô redakt…ô edilir."
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+"Rollar jurnalda m√ľxt…ôlif icaz…ô s…ôviyy…ôl…ôrin…ô v…ô …ôlaq…ôli iŇü "
+"axńĪnlarńĪna giriŇü icaz…ôsi verilmiŇü istifad…ô√ßi qrupundakńĪ istifad…ô√ßi "
+"qruplarńĪdńĪr. BeŇü f…ôrqli icaz…ô s…ôviyy…ôsi var: Jurnal ńįdar…ô√ßil…ôri "
+"jurnaldakńĪ h…ôr Ňüey…ô daxil ola bil…ôr (b√ľt√ľn m…ôzmun v…ô t…ônziml…ôr); "
+"B√∂lm…ô redaktorlarńĪ t…ôyin olunmuŇü b√ľt√ľn m…ôzmuna tam giriŇü imkanńĪna "
+"malikdir; Jurnal k√∂m…ôk√ßil…ôrinin redaktor t…ôr…ôfind…ôn onlara a√ßńĪq "
+"Ňü…ôkild…ô verilmiŇü b√ľt√ľn t…ôqdimatlara giriŇüi m…ôhduddur; R…ôy√ßil…ôr "
+"baxńĪlmaq √ľ√ß√ľn t…ôyin olunduqlarńĪ t…ôqdimatlara baxa v…ô t…ôqdim ed…ô "
+"bil…ôrl…ôr; M√ľ…ôllifl…ôr √∂z yazńĪlarńĪ haqqńĪnda m…ôhdud sayda m…ôlumatńĪ "
+"g√∂r…ô v…ô onlarla …ôlaq…ô saxlaya bil…ôrl…ôr. ∆Źlav…ô olaraq, rollara, "
+"Daxili BaxńĪŇüa, N…ôz…ôrd…ôn ke√ßirm…ôy…ô, Redaksiyaya v…ô ńįstehsalata "
+"giriŇü veril…ô bil…ôn beŇü m√ľxt…ôlif s…ôviyy…ôli tapŇüńĪrńĪq var."
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr ""
+"N√∂mr…ô: defolt il, n√∂mr…ônin n…ôŇür edilm…ô tarixind…ôn etibar…ôn "
+"√ß…ôkil…ôc…ôkdir."
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr ""
+"B√ľt√ľn m…ôqal…ôl…ôr √ľ√ß√ľn icaz…ô datalarńĪnńĪ sńĪfńĪrlamaq ist…ôdiyinizd…"
+"ôn …ôminsinizmi? Bu …ôm…ôliyyat l…ôńüv edil…ô bilm…ôz."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"M√ľ…ôllif h√ľququ bildiriŇüi v…ô lisenziya m…ôlumatlarńĪ, n…ôŇür edil…ôn m…"
+"ôzmunlara daimi olaraq …ôlav…ô edil…ôc…ôk v…ô yeni M…ôqal…ôl…ôr…ô "
+"istiqam…ôtl…ônmiŇü politikalarńĪ d…ôyiŇüdir…ôr…ôk bu datalarńĪn "
+"d…ôyiŇüm…ôy…ôc…ôyind…ôn …ômin olun. N…ôŇür edilmiŇü m…ôzmunlara artńĪq …ôlav…"
+"ô edilmiŇü qeydiyyatlńĪ icaz…ôl…ôri sńĪfńĪrlamaq √ľ√ß√ľn aŇüańüńĪdakńĪ d√ľym…"
+"ôni istifad…ô edin."
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "M…ôqal…ô icaz…ôl…ôri uńüurla yenid…ôn quruldu."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "QoŇüma tam t…ônziml…ônm…ômiŇüdir."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr ""
+"DOI √úmumi M√ľ…ôyy…ônl…ôŇüdirici …ôlav…ôsind…ô DOI t…ôyinatńĪ √ľ√ß√ľn h…ôr "
+"hansńĪ bir n…ôŇür elementi se√ßilm…ôyib, buna g√∂r…ô d…ô bu …ôlav…ôd…ô he√ß "
+"bir depo v…ô ya ixracat ehtimalńĪ yoxdur."
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "#YOK"
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr "#YOK"
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr "#YOK"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr ""
+"Ňěifr…ônin d√ľz m…ôtn kimi, y…ôni Ňüifr…ôl…ônm…ômiŇü olaraq yadda "
+"saxlanacańüńĪnńĪ z…ôhm…ôt olmasa unutmayńĪn."
+
+msgid "plugins.importexport.common.validation"
+msgstr "ńįxrac v…ô qeydiyyat …ôm…ôliyyatńĪndan …ôvv…ôl XML-i t…ôsdiql…ôyin"
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "He√ß bir obyekt se√ßilm…ôdi."
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Se√ßilmiŇü obyektl…ôr √ßevril…ô bilm…ôdi."
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "√áńĪxńĪŇü faylńĪ {$param} yazńĪla bil…ôn olmalńĪdńĪr"
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr ""
+"Qeydiyyat uńüurlu deyil! DOI qeydiyyat serveri bir x…ôta verdi: '{$param}'."
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Dońürulama uńüursuzdur"
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Qeyd olunan obyektl…ôr tapńĪlmadńĪ."
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr ""
+"Jurnal t…ônziml…ôrind…ô t…ôsvir edil…ôn …ôsas Ňü…ôxs…ô bir kopya g√∂nd…ôr"
+
+msgid "stats.contextStats"
+msgstr "#YOK"
+
+msgid "stats.context.tooltip.text"
+msgstr "#YOK"
+
+msgid "stats.context.tooltip.label"
+msgstr "#YOK"
+
+msgid "stats.context.downloadReport.description"
+msgstr "#YOK"
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "#YOK"
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "#YOK"
+
+msgid "stats.issueStats"
+msgstr "#YOK"
+
+msgid "stats.issues.details"
+msgstr "#YOK"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "#YOK"
+
+msgid "stats.issues.none"
+msgstr "#YOK"
+
+msgid "stats.issues.downloadReport.description"
+msgstr "#YOK"
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr "#YOK"
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "#YOK"
+
+msgid "stats.issues.countOfTotal"
+msgstr "#YOK"
+
+msgid "stats.issues.tooltip.label"
+msgstr "#YOK"
+
+msgid "stats.issues.tooltip.text"
+msgstr "#YOK"
+
+msgid "stats.publications.none"
+msgstr ""
+"Bu t…ônziml…ôrl…ô uyńüun g…ôl…ôn istifad…ô statistikalarńĪna sahib m…ôqal…ô "
+"tapńĪlmadńĪ"
+
+msgid "stats.publications.downloadReport.description"
+msgstr "#YOK"
+
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr "#YOK"
+
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr "#YOK"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Bu JurnalńĪn …ôsas …ôlaq…ôdar Ňü…ôxsin…ô m…ôqal…ô q…ôbul emailinin bir n√ľsx…"
+"ôsini g√∂nd…ôr"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Bu Jurnal √ľ√ß√ľn …ôsas …ôlaq…ôdar Ňü…ôxs t…ôrif edilm…ôdi. <a href=\"{$url}"
+"\">Jurnal t…ônziml…ôrind…ô</a> …ôsas …ôlaq…ôdar Ňü…ôxsi daxil ed…ô "
+"bil…ôrsiniz."
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "#YOK"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "#YOK"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr "#YOK"
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr "#YOK"
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr "#YOK"
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr "#YOK"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "Doi prefiksi m…ôcburidir 10.xxxx formatńĪnda olmalńĪdńĪr."
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr ""
+"Z…ôhm…ôt olmasa dizayn tablalarńĪ √ľ√ß√ľn n√ľmun…ô/Ňüablon DOI son …ôlav…ôsi "
+"daxil edin"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr ""
+"DOI konfiqurasiyanńĪzńĪ d…ôyiŇüdirs…ôniz, …ôvv…ôlc…ôd…ôn t…ôyin edilmiŇü "
+"DOI-l…ôr bundan t…ôsirl…ônm…ôz. DOI konfiqurasiyasńĪ yadda saxlandńĪqdan "
+"sonra, m√∂vcud b√ľt√ľn DOI-l…ôri t…ômizl…ôm…ôk √ľ√ß√ľn bu d√ľym…ôni istifad…"
+"ô edin, bel…ôlikl…ô yeni t…ônziml…ôr m√∂vcud obyektl…ôrl…ô effektivl…ôŇüir."
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"DOI-l…ôri t…ôyin edilm…ômiŇü n…ôŇür edilmiŇü b√ľt√ľn Jurnal elementl…ôrin…ô "
+"DOI t…ôyin edin. Bu h…ôr…ôk…ôt, f…ôrdi sonŇü…ôkil√ßi/suffix konfiqurasiyasńĪ "
+"il…ô istifad…ô edilm…ôz. YuxarńĪda DOI konfiqurasiyasńĪnńĪ d…ôyiŇüdirdinizs…"
+"ô, z…ôhm…ôt olmasa bu …ôm…ôliyyatńĪ baŇülatmazdan …ôvv…ôl d…ôyiŇüiklikl…"
+"ôrinizi yadda saxlayńĪn. DOI-l…ôri t…ôyin etm…ôk, jurnaldakńĪ n…ôŇür "
+"edilmiŇü obyektl…ôrin sayńĪna g√∂r…ô uzun vaxt ala bil…ôr."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"DOI Ňüablonunun bir v…ô ya daha √ßox b√∂lm…ôsind…ô …ôskik data olduńüu √ľ√ß√"
+"ľn DOI yarada bilm…ôzsiniz. N…ôŇüri bir n√∂mr…ôy…ô t…ôyin etm…ôniz, naŇüir "
+"ID n√∂mr…ôsini t…ônziml…ôm…ôniz v…ô ya s…ôhif…ô n√∂mr…ôsini daxil etm…ôyini "
+"g…ôr…ôklidir."
+
+msgid "doi.editor.canBeAssigned"
+msgstr ""
+"G√∂rd√ľy√ľn√ľz Ňüey DOI-nin bir √∂n baxńĪŇüńĪdńĪr. DOI-ni t…ôyin etm…ôk √ľ√ß√"
+"ľn t…ôsdiq qutusunu se√ßin v…ô formu yadda saxlayńĪn."
+
+msgid "doi.editor.assigned"
+msgstr "DOI {$pubObjectType} elementin…ô t…ôyin edilmiŇüdir"
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Veril…ôn DOI son Ňü…ôkil√ßi n…ôŇür edilmiŇü baŇüqa bir element √ľ√ß√ľn zat…"
+"ôn istifad…ô edilir. H…ôr element √ľ√ß√ľn unikal bir DOI s…ôn Ňü…ôkil√ßisi "
+"daxil edin."
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"Bu n√∂mr…ô √ľ√ß√ľn hazńĪrda planlaŇüdńĪrńĪlmńĪŇü b√ľt√ľn elementl…ôr "
+"(m…ôqal…ôl…ôr v…ô dizayn tablalarńĪ) DOI-l…ôrini t…ômizl…ôm…ôk √ľ√ß√ľn "
+"aŇüańüńĪdakńĪ se√ßimi istifad…ô edin."
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "X√ľsusi son Ňü…ôkil√ßi …ôskik olduńüuna g√∂r…ô DOI t…ôyin edil…ô bilmir"
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr ""
+"DOI {$pubId} t…ôyin edildi. DOI-ni redakt…ô etm…ôk √ľ√ß√ľn <a href=\""
+"{$doiManagementLink}\">DOI ńįdar…ôsi s…ôhif…ôsini</a>ziyar…ôt edin."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI {$pubId} n…ôŇür edildiyind…ô t…ôyin edil…ôc…ôkdir"
+
+msgid "doi.editor.missingPrefix"
+msgstr "DOI {$doiPrefix} prefiksi il…ô baŇülamalńĪdńĪr."
+
+msgid "doi.editor.preview.publication"
+msgstr "Bu n…ôŇürin DOI n√∂mr…ôsi {$doi} olaraq t…ônziml…ôn…ôc…ôkdir"
+
+msgid "doi.editor.preview.publication.none"
+msgstr "Bu n…ôŇür √ľ√ß√ľn bir DOI n√∂mr…ôsi t…ôyin edilm…ôdi."
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"Bu email, m√ľ…ôllif…ô, d…ôy…ôrl…ôndirm…ô m…ôrh…ôl…ôsind…ôn …ôvv…ôl namiz…ôd "
+"m…ôqal…ônin jurnalda d…ôy…ôrl…ôndirm…ô ehtiyaclarńĪnńĪ qarŇüńĪlamadńĪńüńĪ "
+"√ľ√ß√ľn r…ôdd edildiyini x…ôb…ôr verir."
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr ""
+"DOI əlavələrini yaratmaq üçün aşağıda daxil edilən şablonu istifadə edin. "
+"Jurnal üçün %\", cild nömrəsi üçün %v, nömrə üçün %i, il üçün %Y, OJS məqalə "
+"ID-si üçün \"%a\", OJS dizayn tablası ID-si üçün %g, OJS fayl ID-si üçün %f, "
+"səhifə nömrəsi üçün %p ve \"Xüsusi tərifedici\" üçün %x  istifadə edin. "
+
+#, fuzzy
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Fərdi abunə alın"
+
+#, fuzzy
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr ""
+"Bu e-poçt abunə menecerinə fərdi abunəliyin onlayn satın alındığını "
+"bildirir. Abunə haqqında qısa məlumat və satın alınan abunəliyə tez daxil "
+"olmaq üçün bir keçid var."
+
+#, fuzzy
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr ""
+"Bu e-poçt abunə menecerinə institusional abunəliyin onlayn satın alındığını "
+"bildirir. Abunə haqqında qısa məlumat və satın alınan abunəliyə tez daxil "
+"olmaq üçün bir keçid var."
+
+#, fuzzy
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr ""
+"Bu e-poçt abunə menecerinə fərdi abunəliyin onlayn yeniləndiyini bildirir. "
+"Abunə haqqında qısa məlumat və yenilənmiş abunəliyə tez daxil olmaq üçün bir "
+"keçid var."
+
+#, fuzzy
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr ""
+"Bu e-poçt abunə menecerinə institusional abunəliyin onlayn yeniləndiyini "
+"bildirir. Abunə haqqında qısa məlumat və yenilənmiş abunəliyə tez daxil "
+"olmaq üçün bir keçid var."
+
+#, fuzzy
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+"Bu e-poçt Yeni buraxılış dərc edildikdə avtomatik olaraq qeydiyyatdan keçmiş "
+"istifadəçilərə göndərilir."
+
+#, fuzzy
+msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+"Bu e-poçt Yeni ərizə daxil olduqda və redaktorlar təyin edilmədikdə jurnal "
+"menecerlərinə göndərilir."
