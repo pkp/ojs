@@ -1,7 +1,7 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-06-02 20:47+0000\n"
+"PO-Revision-Date: 2023-06-02 22:43+0000\n"
 "Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "az/>\n"
@@ -23,18 +23,18 @@ msgstr "M…ôqal…ôni n√∂mr…ôd…ôn silin"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
 msgstr ""
-"T…ôrtibat redaktoru bu fayllarńĪ h…ôr dizayn √ľ√ß√ľn hazńĪrlayńĪr v…ô "
-"t…ôminetm…ô √ľ√ß√ľn <span class=\"pkp_help_title\">T…ôminetm…ô</span> a "
+"T…ôrtibat redaktoru bu fayllarńĪ h…ôr dizayn √ľç√ľn hazńĪrlayńĪr v…ô "
+"t…ôminetm…ô √ľç√ľn <span class=\"pkp_help_title\">T…ôminetm…ô</span> a "
 "y√ľkl…ôy…ôr"
 
 msgid "editor.submission.selectGalleyFiles"
-msgstr "Dizayn fayllarńĪnńĪ se√ßi"
+msgstr "Dizayn fayllarńĪnńĪ seçi"
 
 msgid "editor.article.coverImage"
-msgstr "√úzqabńĪńüńĪ Ňě…ôkili"
+msgstr "√úzqabńĪğńĪ Ňě…ôkili"
 
 msgid "editor.home"
-msgstr "Redaktor ∆Źsas S…ôhif…ô"
+msgstr "Redaktor Əsas S…ôhif…ô"
 
 msgid "editor.submissionsAndPublishing"
 msgstr "Fayllar v…ô N…ôŇür"
@@ -62,15 +62,15 @@ msgstr "M…ôn"
 
 msgid "editor.publicIdentificationExists"
 msgstr ""
-"Dig…ôr obyektl…ôr (n√∂mr…ô, m…ôqal…ô, dizayn v…ô ya …ôlav…ô fayl) √ľ√ß√ľn "
+"Dig…ôr obyektl…ôr (n√∂mr…ô, m…ôqal…ô, dizayn v…ô ya …ôlav…ô fayl) √ľç√ľn "
 "'{$publicIdentifier}' adlńĪ √ľmumi t…ôyinedici zat…ôn var. Z…ôhm…ôt olmasa "
-"JurnalńĪnńĪzdakńĪ unikal t…ôyinedicil…ôri se√ßin. ."
+"JurnalńĪnńĪzdakńĪ unikal t…ôyinedicil…ôri seçin. ."
 
 msgid "editor.submissionArchive.noSubmissions"
 msgstr "Arxivd…ô qeyd…ô alńĪnmńĪŇü bir fayl yoxdur."
 
 msgid "editor.notifyUsers"
-msgstr "ńįstifad…ô√ßil…ôri m…ôlumatlandńĪrńĪn"
+msgstr "İstifad…ôçil…ôri m…ôlumatlandńĪrńĪn"
 
 msgid "editor.notifyUsers.allReaders"
 msgstr "B√ľt√ľn oxucular ( {$count} n…ôf…ôrdir)"
@@ -80,8 +80,8 @@ msgstr "B√ľt√ľn m√ľ…ôllifl…ôr ( {$count} n…ôf…ôrdir)"
 
 msgid "editor.submissionArchive.saveChanges"
 msgstr ""
-"Arxivl…ôŇüdirilmiŇü fayllardakńĪ d…ôyiŇüiklikl…ôri qeyd et. Silinm…ôk √ľ√ß√"
-"ľn iŇüar…ôl…ôn…ôn qeydiyyatlńĪ yazńĪlar sistemd…ôn tamamil…ô silin…ôc…ôk"
+"Arxivl…ôŇüdirilmiŇü fayllardakńĪ d…ôyiŇüiklikl…ôri qeyd et. Silinm…ôk √ľç√ľn "
+"iŇüar…ôl…ôn…ôn qeydiyyatlńĪ yazńĪlar sistemd…ôn tamamil…ô silin…ôc…ôk"
 
 msgid "editor.submissionReview.confirmDecision"
 msgstr "Bu q…ôrarńĪ qeyd etm…ôk ist…ôdiyinizd…ôn …ôminsinizmi?"
@@ -89,35 +89,35 @@ msgstr "Bu q…ôrarńĪ qeyd etm…ôk ist…ôdiyinizd…ôn …ôminsinizmi?"
 msgid "editor.submissionReview.emailWillArchive"
 msgstr ""
 "Bu fayl M√ľ…ôllifi M…ôlumatlandńĪrńĪn email mesajńĪndan sonra arxivl…ôn…ôc…"
-"ôkdir. Arxivl…ôm…ôk √ľ√ß√ľn \"G√∂nd…ôr\" v…ô ya \"Email G√∂nd…ôrm…ôd…ôn\" "
-"se√ßiml…ôrind…ôn hansńĪnńĪn istifad…ô edildiyinin f…ôrqi yoxdur"
+"ôkdir. Arxivl…ôm…ôk √ľç√ľn \"G√∂nd…ôr\" v…ô ya \"Email G√∂nd…ôrm…ôd…ôn\" "
+"seçiml…ôrind…ôn hansńĪnńĪn istifad…ô edildiyinin f…ôrqi yoxdur"
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
 msgstr ""
 "M…ôqal…ôni n…ôŇür…ô g√∂nd…ôrm…ôzd…ôn …ôvv…ôl, q…ôrarńĪ m√ľ…ôllif…ô bildirm…"
-"ôk √ľ√ß√ľn M√ľ…ôllifi M…ôlumatlandńĪrńĪn linkind…ôn istifad…ô edin. Daha "
-"sonra n…ôŇür…ô g√∂nd…ôril…ôc…ôk versiyanńĪ se√ß…ôr…ôk Fayl G√∂nd…ôr se√"
-"ßimini klikl…ôyin"
+"ôk √ľç√ľn M√ľ…ôllifi M…ôlumatlandńĪrńĪn linkind…ôn istifad…ô edin. Daha "
+"sonra n…ôŇür…ô g√∂nd…ôril…ôc…ôk versiyanńĪ seç…ôr…ôk Fayl G√∂nd…ôr seçimini "
+"klikl…ôyin"
 
 msgid "editor.notifyUsers.allIndividualSubscribers"
-msgstr "B√ľt√ľn f…ôrdi abun…ô√ßil…ôr ( {$count} n…ôf…ôrdir)"
+msgstr "B√ľt√ľn f…ôrdi abun…ôçil…ôr ( {$count} n…ôf…ôrdir)"
 
 msgid "editor.notifyUsers.allInstitutionalSubscribers"
-msgstr "B√ľt√ľn korporativ abun…ô√ßil…ôr ( {$count} kofr√ľye)"
+msgstr "B√ľt√ľn korporativ abun…ôçil…ôr ( {$count} kofr√ľye)"
 
 msgid "editor.notifyUsers.inProgress"
-msgstr "ńįstifad…ô√ßil…ôr…ô m…ôlumat ver."
+msgstr "İstifad…ôçil…ôr…ô m…ôlumat ver."
 
 msgid "editor.usersNotified"
-msgstr "ńįstifad…ô√ßil…ôr m…ôlumatlandńĪrńĪldńĪ"
+msgstr "İstifad…ôçil…ôr m…ôlumatlandńĪrńĪldńĪ"
 
 msgid "editor.notifyUsers.allUsers"
-msgstr "Bu mesajńĪ b√ľt√ľn istifad…ô√ßil…ôr…ô g√∂nd…ôr ({$count} users)"
+msgstr "Bu mesajńĪ b√ľt√ľn istifad…ôçil…ôr…ô g√∂nd…ôr ({$count} users)"
 
 msgid "editor.notifyUsers.interestedUsers"
 msgstr ""
 "Bu mesajńĪ d…ôyiŇüiklikl…ôrd…ôn x…ôb…ôrdar olmaq ist…ôy…ôn b√ľt√ľn "
-"istifad…ô√ßil…ôr…ô g√∂nd…ôr ({$count} √ľzv)"
+"istifad…ôçil…ôr…ô g√∂nd…ôr ({$count} √ľzv)"
 
 msgid "editor.notifyUsers.includeToc"
 msgstr "Bu n√∂mr…ônin m√ľnd…ôricat siyahńĪsńĪnńĪ …ôlav…ô edin:"
@@ -129,7 +129,7 @@ msgid "editor.issues.createIssue"
 msgstr "N√∂mr…ô Yarat"
 
 msgid "editor.issues.editIssue"
-msgstr "N√∂mr…ô ńįdar…ôetm…ô: {$issueIdentification}"
+msgstr "N√∂mr…ô İdar…ôetm…ô: {$issueIdentification}"
 
 msgid "editor.issues.currentIssue"
 msgstr "HazńĪrkńĪ n√∂mr…ô"
@@ -138,7 +138,7 @@ msgid "editor.issues.numArticles"
 msgstr "Elementl…ôr"
 
 msgid "editor.issues.noArticles"
-msgstr "Bu n√∂mr…ô √ľ√ß√ľn se√ßilmiŇü element yoxdur. ."
+msgstr "Bu n√∂mr…ô √ľç√ľn seçilmiŇü element yoxdur. ."
 
 msgid "editor.issues.confirmDelete"
 msgstr "Bu n√∂mr…ôni daimi olaraq silm…ôk ist…ôdiyinizd…ôn …ôminsinizmi?"
@@ -159,18 +159,18 @@ msgid "editor.issues.numberRequired"
 msgstr "N√∂mr…ô t…ôl…ôb olunur v…ô m√ľsb…ôt, r…ôq…ômsal d…ôy…ôr olmalńĪdńĪr. ."
 
 msgid "editor.issues.yearRequired"
-msgstr "ńįl t…ôl…ôb olunur v…ô m√ľsb…ôt, r…ôq…ômsal d…ôy…ôr olmalńĪdńĪr"
+msgstr "İl t…ôl…ôb olunur v…ô m√ľsb…ôt, r…ôq…ômsal d…ôy…ôr olmalńĪdńĪr"
 
 msgid "editor.issues.issueIdentification"
 msgstr "N√∂mr…ô identifikasiyas"
 
 msgid "editor.issues.titleRequired"
-msgstr "Bu n√∂mr…ô √ľ√ß√ľn bir baŇülńĪq t…ôl…ôb olunur. ."
+msgstr "Bu n√∂mr…ô √ľç√ľn bir baŇülńĪq t…ôl…ôb olunur. ."
 
 msgid "editor.issues.issueIdentificationRequired"
 msgstr ""
 "N√∂mr…ô identifikasiyasńĪ lazńĪmdńĪr. Z…ôhm…ôt olmasa identifikasiyalardan "
-"en az birini se√ßin. ."
+"en az birini seçin. ."
 
 msgid "editor.issues.publicIssueIdentifier"
 msgstr "√úmumi n√∂mr…ô identifikasiyas"
@@ -182,13 +182,13 @@ msgid "editor.issues.accessStatus"
 msgstr "GiriŇü statusu"
 
 msgid "editor.issues.accessDate"
-msgstr "A√ßńĪq giriŇü tarixi"
+msgstr "AçńĪq giriŇü tarixi"
 
 msgid "editor.issues.enableOpenAccessDate"
-msgstr "T…ôxir…ô salńĪnmńĪŇü a√ßńĪq giriŇüi aktivl…ôŇüdirin."
+msgstr "T…ôxir…ô salńĪnmńĪŇü açńĪq giriŇüi aktivl…ôŇüdirin."
 
 msgid "editor.issues.coverPage"
-msgstr "√úzqabńĪńüńĪ Ňě…ôkili"
+msgstr "√úzqabńĪğńĪ Ňě…ôkili"
 
 msgid "editor.issues.coverPageInstructions"
 msgstr "(M√ľvafiq fayl formatlarńĪ: .gif, .jpg v…ô ya .png )"
@@ -203,50 +203,50 @@ msgid "editor.issues.proofed"
 msgstr "D√ľz…ôldilmiŇü"
 
 msgid "editor.issues.removeCoverPage"
-msgstr "√úzqabńĪńüńĪ Ňě…ôklini Sil?"
+msgstr "√úzqabńĪğńĪ Ňě…ôklini Sil?"
 
 msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
 msgstr ""
-"Silm…ôk ist…ôdiyiniz √ľzqabńĪńüńĪ Ňü…ôkli qrafiki baŇüqa bir jurnalńĪn n√∂mr…"
-"ôsi il…ô uyńüun g…ôlir. Z…ôhm…ôt olmasa dońüru n√∂mr…ôni se√ßdiyinizd…ôn …"
-"ômin olun v…ô t…ôkrar c…ôhd edin. ."
+"Silm…ôk ist…ôdiyiniz √ľzqabńĪğńĪ Ňü…ôkli qrafiki baŇüqa bir jurnalńĪn n√∂mr…"
+"ôsi il…ô uyğun g…ôlir. Z…ôhm…ôt olmasa doğru n√∂mr…ôni seçdiyinizd…ôn …ômin "
+"olun v…ô t…ôkrar c…ôhd edin. ."
 
 msgid "editor.issues.removeCoverImageFileNameMismatch"
 msgstr ""
-"Silm…ôk ist…ôdiyiniz √ľzqabńĪńüńĪ Ňü…ôkli il…ô uyńüunlaŇüma t…ômin edilm…"
-"ôdi. Z…ôhm…ôt olmasa s…ôhif…ôni yenil…ôyin v…ô yenid…ôn c…ôhd edin. ."
+"Silm…ôk ist…ôdiyiniz √ľzqabńĪğńĪ Ňü…ôkli il…ô uyğunlaŇüma t…ômin edilm…ôdi. "
+"Z…ôhm…ôt olmasa s…ôhif…ôni yenil…ôyin v…ô yenid…ôn c…ôhd edin. ."
 
 msgid "editor.issues.removeCoverImageFileNotFound"
 msgstr ""
-"Silm…ôk ist…ôdiyiniz √ľzqabńĪńüńĪ qrafiki tapńĪlmadńĪ. SilinmiŇü ola bil…ôr. "
+"Silm…ôk ist…ôdiyiniz √ľzqabńĪğńĪ qrafiki tapńĪlmadńĪ. SilinmiŇü ola bil…ôr. "
 "S…ôhif…ôni yenil…ôm…ôy…ô c…ôhd edin. ."
 
 msgid "editor.issues.invalidCoverImageFormat"
 msgstr ""
-"YanlńĪŇü √ľzqabńĪńüńĪ formatńĪ. Q…ôbul edil…ô bil…ôn formatlar: .gif, .jpg v…"
+"YanlńĪŇü √ľzqabńĪğńĪ formatńĪ. Q…ôbul edil…ô bil…ôn formatlar: .gif, .jpg v…"
 "ô ya .png. ."
 
 msgid "editor.issues.invalidStyleFormat"
 msgstr ""
-"YanlńĪŇü s…ôhif…ô stil faylńĪ. G√∂nd…ôrdiyiniz faylńĪn dońüru formatda "
-"olduńüundan …ômin olun (CSS). (Qeyd: ∆Źvv…ôlind…ô Ňü…ôrhl…ôr olan format "
+"YanlńĪŇü s…ôhif…ô stil faylńĪ. G√∂nd…ôrdiyiniz faylńĪn doğru formatda "
+"olduğundan …ômin olun (CSS). (Qeyd: Əvv…ôlind…ô Ňü…ôrhl…ôr olan format "
 "fayllarńĪ r…ôdd oluna bil…ôr.)"
 
 msgid "editor.issues.removeStyleFile"
 msgstr "S…ôhif…ô stilini sil?"
 
 msgid "editor.issues.coverPageCaption"
-msgstr "√úzqabńĪńüńĪ baŇülńĪńüńĪ"
+msgstr "√úzqabńĪğńĪ baŇülńĪğńĪ"
 
 msgid "editor.issues.showCoverPage"
 msgstr ""
-"Bu n√∂mr…ô √ľ√ß√ľn aŇüańüńĪdakńĪ elementl…ôr il…ô bir √ľzqabńĪńüńĪ yaradńĪn."
+"Bu n√∂mr…ô √ľç√ľn aŇüağńĪdakńĪ elementl…ôr il…ô bir √ľzqabńĪğńĪ yaradńĪn."
 
 msgid "editor.issues.coverPageDisplay"
 msgstr "G√∂st…ôr"
 
 msgid "editor.issues.openAccess"
-msgstr "A√ßńĪq giriŇü"
+msgstr "AçńĪq giriŇü"
 
 msgid "editor.issues.subscription"
 msgstr "Abun…ôlik"
@@ -258,7 +258,7 @@ msgid "editor.issues.access"
 msgstr "GiriŇü"
 
 msgid "editor.issues.cover"
-msgstr "√úzqabńĪńüńĪ"
+msgstr "√úzqabńĪğńĪ"
 
 msgid "editor.issues.resetIssueOrder"
 msgstr ""
@@ -292,10 +292,10 @@ msgid "editor.issues.unpublishIssue"
 msgstr "N…ôŇürd…ôn qaldńĪrńĪn"
 
 msgid "editor.issues.previewIssue"
-msgstr "N√∂mr…ô √ĖnbaxńĪŇü"
+msgstr "N√∂mr…ô ÖnbaxńĪŇü"
 
 msgid "editor.issues.preview"
-msgstr "(√ĖnbaxńĪŇü)"
+msgstr "(ÖnbaxńĪŇü)"
 
 msgid "editor.issues.confirmPublish"
 msgstr "Yeni n√∂mr…ôni yayńĪmlamaq ist…ôdiyiniz …ôminsinizmi?"
@@ -309,13 +309,13 @@ msgstr ""
 "…ôminsinizmi?"
 
 msgid "editor.issues.publicArticleIdExists"
-msgstr "AŇüańüńĪdakńĪ m…ôqal…ô √ľ√ß√ľn √úmumi N√∂mr…ô yadda saxlanńĪlmńĪr:"
+msgstr "AŇüağńĪdakńĪ m…ôqal…ô √ľç√ľn √úmumi N√∂mr…ô yadda saxlanńĪlmńĪr:"
 
 msgid "editor.issues.noLiveIssues"
 msgstr "YayńĪmlanan n√∂mr…ô yoxdur"
 
 msgid "editor.issues.open"
-msgstr "A√ßńĪn"
+msgstr "AçńĪn"
 
 msgid "editor.issues.pages"
 msgstr "S…ôhif…ôl…ôr"
@@ -333,7 +333,7 @@ msgid "editor.issues.issueGalleysDescription"
 msgstr "B√ľt√ľn m√∂vzu kontenti il…ô dizaynlarńĪ yayńĪmlayńĪn ."
 
 msgid "editor.issues.noneIssueGalleys"
-msgstr "He√ß bir n√∂mr…ô dizaynńĪ yayńĪmlanmayńĪb. ."
+msgstr "Heç bir n√∂mr…ô dizaynńĪ yayńĪmlanmayńĪb. ."
 
 msgid "editor.issues.galleyLabelRequired"
 msgstr "N√∂mr…ô dizayn etiketi t…ôl…ôb olunur. ."
@@ -369,7 +369,7 @@ msgid "grid.action.viewIssue"
 msgstr "BaxńĪŇü"
 
 msgid "grid.action.previewIssue"
-msgstr "√ĖnbaxńĪŇü"
+msgstr "ÖnbaxńĪŇü"
 
 msgid "grid.action.addIssueGalley"
 msgstr "N√∂mr…ô dizaynńĪ yaradńĪn"
@@ -378,7 +378,7 @@ msgid "grid.action.setCurrentIssue"
 msgstr "G√ľnc…ôl/cari n√∂mr…ôni m√ľ…ôyy…ônl…ôŇüdirin"
 
 msgid "editor.navigation.issueArchive"
-msgstr "∆Źvv…ôlki n√∂mr…ôl…ôr"
+msgstr "Əvv…ôlki n√∂mr…ôl…ôr"
 
 msgid "editor.article.designateReviewVersion"
 msgstr "Orijinal faylńĪ D…ôy…ôrl…ôndirm…ô versiyasńĪ kimi m√ľ…ôyy…ônl…ôŇüdirin."
@@ -432,7 +432,7 @@ msgid "editor.article.editMetadata"
 msgstr "Versiya √ľst datasńĪnńĪ yenil…ôyin"
 
 msgid "editor.article.scheduleForPublication"
-msgstr "D…ôrc edilm…ôk √ľ√ß√ľn planlanan n√∂mr…ô:"
+msgstr "D…ôrc edilm…ôk √ľç√ľn planlanan n√∂mr…ô:"
 
 msgid "editor.article.scheduleForPublication.toBeAssigned"
 msgstr "N…ôŇür planlaŇüdńĪrńĪlacaq"
@@ -440,10 +440,10 @@ msgstr "N…ôŇür planlaŇüdńĪrńĪlacaq"
 msgid "editor.article.payment.publicationFeeNotPaid"
 msgstr ""
 "N…ôŇür haqqńĪ √∂d…ônilm…ôdi. Elementin n…ôŇür planńĪna daxil edil…ô bilm…ôsi "
-"√ľ√ß√ľn m√ľ…ôllif…ô √∂d…ôniŇü ya da imtina m…ôlumatlandrńĪmasńĪ edin"
+"√ľç√ľn m√ľ…ôllif…ô √∂d…ôniŇü ya da imtina m…ôlumatlandrńĪmasńĪ edin"
 
 msgid "editor.article.payment.requestPayment"
-msgstr "√Ėd…ôniŇü t…ôl…ôb edi"
+msgstr "Öd…ôniŇü t…ôl…ôb edi"
 
 msgid "editor.article.removeCoverImageFileNotFound"
 msgstr ""
@@ -466,20 +466,20 @@ msgstr "N√∂mr…ô dizaynńĪnńĪ t…ônziml…ôyin"
 
 msgid "editor.submission.editorial.finalDraftDescription"
 msgstr ""
-"Bu siyahńĪdakńĪ son draft fayllar altńĪnda aŇüańüńĪda y√ľkl…ôndi copyedited "
-"versiyalarńĪ, bir s…ôhif…ô redaktoru t…ôr…ôfind…ôn √ßevrilir.<span class="
+"Bu siyahńĪdakńĪ son draft fayllar altńĪnda aŇüağńĪda y√ľkl…ôndi copyedited "
+"versiyalarńĪ, bir s…ôhif…ô redaktoru t…ôr…ôfind…ôn çevrilir.<span class="
 "\"pkp_help_title\">Copyediting</span>"
 
 msgid "editor.submission.proof.manageProofFilesDescription"
 msgstr ""
 "H…ôr hansńĪ bir m√ľraci…ôt m…ôrh…ôl…ôsind…ô y√ľkl…ônmiŇü olan b√ľt√ľn "
-"fayllar √ľ√ß√ľn aŇüańüńĪdakńĪ t…ôsdiq qutusunu klikl…ôy…ôr…ôk daxil edin."
+"fayllar √ľç√ľn aŇüağńĪdakńĪ t…ôsdiq qutusunu klikl…ôy…ôr…ôk daxil edin."
 
 msgid "editor.publicIdentificationExistsForTheSameType"
 msgstr ""
-"{$PublicIdentifier}' √ľmumi m√ľ…ôyy…ônedici eyni c√ľr baŇüqa bir element "
-"√ľ√ß√ľn zat…ôn istifad…ô edilir. Z…ôhm…ôt olmasa JurnalńĪnńĪz i√ß…ôrisind…"
-"ôki eyni c√ľr elementl…ôr √ľ√ß√ľn b…ônz…ôrsiz m√ľ…ôyy…ônedicil…ôr se√ßin"
+"{$PublicIdentifier}' √ľmumi m√ľ…ôyy…ônedici eyni c√ľr baŇüqa bir element √ľç√"
+"ľn zat…ôn istifad…ô edilir. Z…ôhm…ôt olmasa JurnalńĪnńĪz iç…ôrisind…ôki eyni "
+"c√ľr elementl…ôr √ľç√ľn b…ônz…ôrsiz m√ľ…ôyy…ônedicil…ôr seçin"
 
 #, fuzzy
 msgid "editor.issues.confirmIssueDelete"
