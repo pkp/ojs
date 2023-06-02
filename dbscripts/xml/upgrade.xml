@@ -136,7 +136,6 @@
 		<migration class="PKP\migration\upgrade\v3_4_0\I8060_UpdateUserLocalesDefaultToEmptyArrayFromNull" />
 		<migration class="PKP\migration\upgrade\v3_4_0\I7245_UpdateUserLocaleStringToParsableJsonString" />
 		<migration class="APP\migration\upgrade\v3_4_0\I7129_IssueEntityDAORefactor" />
-		<migration class="APP\migration\upgrade\OJSv3_3_1_i6872_UrlPathMigration" />
 		<migration class="APP\migration\upgrade\v3_4_0\I6091_AddFilterNamespaces" />
 		<migration class="APP\migration\upgrade\v3_4_0\I3573_AddPrimaryKeys" />
 		<migration class="APP\migration\upgrade\v3_4_0\I6093_AddForeignKeys" />
