@@ -1,7 +1,7 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-06-01 22:16+0000\n"
+"PO-Revision-Date: 2023-06-02 22:43+0000\n"
 "Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/az/>\n"
@@ -69,7 +69,7 @@ msgid "plugins.themes.default.option.displayStats.none"
 msgstr "Məqalə istifadəçi statistikaları qrafikasını oxuculara göstərməyin."
 
 msgid "plugins.themes.default.option.displayStats.bar"
-msgstr "İstifadə statistikalarını göstərmək üçün sütun qrafiki istifadə edin."
+msgstr "İstifadə statistikalarńĪnńĪ göstərmək üçün sütun qrafiki istifadə edin."
 
 msgid "plugins.themes.default.option.displayStats.line"
 msgstr "İstifadə statistikalarını göstərmək üçün cizgi qrafiki istifadə edin."
