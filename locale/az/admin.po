@@ -2,8 +2,8 @@
 # Gadirova <leylakb@yahoo.com>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-04-16 23:48+0000\n"
-"Last-Translator: Gadirova <leylakb@yahoo.com>\n"
+"PO-Revision-Date: 2023-06-02 22:43+0000\n"
+"Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/admin/"
 "az/>\n"
 "Language: az\n"
@@ -115,7 +115,7 @@ msgid "admin.journals.importSubscriptions"
 msgstr "Abunəlikləri idxal edin"
 
 msgid "admin.journals.transcode"
-msgstr "Məqalənin üst datasını ISO8859-1`dən dəyişdirin"
+msgstr "Məqalənin üst datasını ISO8859-1’dən dəyişdirin"
 
 msgid "admin.journals.redirect"
 msgstr ""
