@@ -1,7 +1,7 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-06-02 20:47+0000\n"
+"PO-Revision-Date: 2023-06-02 22:43+0000\n"
 "Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "az/>\n"
@@ -170,27 +170,27 @@ msgstr ""
 "</ol>"
 
 msgid "copyeditor.article.fileToCopyedit"
-msgstr "S/D-y…ô fayl"
+msgstr "S/D-yə fayl"
 
 msgid "copyeditor.article.copyeditorFile"
-msgstr "S…ôhif…ô redaktoru faylı"
+msgstr "Səhifə redaktoru faylı"
 
 msgid "copyeditor.article.copyeditorFinalFile"
-msgstr "S…ôhif…ô redaktoru son faylı"
+msgstr "Səhifə redaktoru son faylı"
 
 msgid "proofreader.noProofreadingAssignments"
-msgstr "Korrektor t…ôyinatı edilm…ôyib"
+msgstr "Korrektor təyinatı edilməyib"
 
 msgid "submission.copyedit.finalCopyedit"
-msgstr "Son s…ôhif…ô t…ôrtibatı"
+msgstr "Son səhifə tərtibatı"
 
 msgid "submission.copyedit.instructions"
-msgstr "S…ôhif…ô t…ôrtibatı t…ôlimatı"
+msgstr "Səhifə tərtibatı təlimatı"
 
 msgid "submission.layout.noLayoutFile"
 msgstr ""
-"Heç biri (T…ôl…ôb gönd…ôrm…ôzd…ôn …ôvv…ôl sonra kopya t…ônziml…ôm…ô "
-"versiyasını t…ôrtibat versiyası kimi yükl…ô)"
+"Heç biri (Tələb göndərməzdən əvvəl sonra kopya tənzimləmə versiyasını "
+"tərtibat versiyası kimi yüklə)"
 
 msgid "submission.comments.forEditor"
 msgstr "Redaktor üçün"
@@ -199,7 +199,7 @@ msgid "user.subscriptions.form.institutionMailingAddress"
 msgstr "Fayl adresi"
 
 msgid "user.subscriptions.form.domain"
-msgstr "Sah…ô"
+msgstr "Sahə"
 
 msgid "user.subscriptions.form.ipRange"
 msgstr "IP aralığı"
@@ -211,10 +211,10 @@ msgid "about.subscriptionTypes.name"
 msgstr "Ad"
 
 msgid "payment.membership.renewMembership"
-msgstr "F…ôrdi abun…ô yenil…ônm…ôsi"
+msgstr "Fərdi abunə yenilənməsi"
 
 msgid "payment.subscription.purchase"
-msgstr "Abun…ôlik alın"
+msgstr "Abunəlik alın"
 
 msgid "payment.membership.ends"
 msgstr "Sona çatır"
@@ -223,16 +223,16 @@ msgid "payment.subscription.expires"
 msgstr "Başa çatır"
 
 msgid "installer.installApplication"
-msgstr "Açıq Jurnal sisteml…ôrini qur"
+msgstr "Açıq Jurnal sistemlərini qur"
 
 msgid "navigation.subscriptions"
-msgstr "Abun…ôlikl…ôr"
+msgstr "Abunəliklər"
 
 msgid "catalog.sortBy"
-msgstr "M…ôqal…ôl…ôri sırala"
+msgstr "Məqalələri sırala"
 
 msgid "editor.issues.futureIssues"
-msgstr "G…ôl…ôc…ôk nömr…ôl…ôr"
+msgstr "Gələcək nömrələr"
 
 msgid "context.current"
 msgstr "Cari jurnal:"
@@ -588,179 +588,179 @@ msgid "reviewer.competingInterests"
 msgstr "Maraqların ziddiyyəti"
 
 msgid "reviewer.article.selectRecommendation.byEditor"
-msgstr "Gözd…ôn keçirm…ô t…ôklifini inc…ôl…ôyin v…ô ya t…ônziml…ôyin"
+msgstr "Gözdən keçirmə təklifini incələyin və ya tənzimləyin"
 
 msgid "submission.copyedit.selectCopyeditor"
-msgstr "S…ôhif…ô redaktoru t…ôyin edin"
+msgstr "Səhifə redaktoru təyin edin"
 
 msgid "submission.copyedit.useFile"
-msgstr "Fayl istifad…ô edin"
+msgstr "Fayl istifadə edin"
 
 msgid "submission.logType.article"
-msgstr "M…ôqal…ô"
+msgstr "Məqalə"
 
 msgid "submission.logType.editor"
 msgstr "Redaktor"
 
 msgid "submission.logType.layout"
-msgstr "T…ôrtibat"
+msgstr "Tərtibat"
 
 msgid "submission.logType.proofread"
 msgstr "Dizayn kontrolu"
 
 msgid "submission.logType.copyedit"
-msgstr "S…ôhif…ô t…ôrtibatı"
+msgstr "Səhifə tərtibatı"
 
 msgid "user.register.noJournals"
-msgstr "Bu saytda qeydiyyatdan keç…ô bil…ôc…ôyiniz bir Jurnal yoxdur"
+msgstr "Bu saytda qeydiyyatdan keçə biləcəyiniz bir Jurnal yoxdur"
 
 msgid "submission.proofreadingComments"
-msgstr "Korrektor ş…ôrhl…ôri"
+msgstr "Korrektor şərhləri"
 
 msgid "user.register.privacyStatement"
-msgstr "M…ôxfilik bildirişi"
+msgstr "Məxfilik bildirişi"
 
 msgid "user.register.form.passwordLengthTooShort"
-msgstr "Daxil etdiyiniz şifr…ô kifay…ôt q…ôd…ôr uzun deyil."
+msgstr "Daxil etdiyiniz şifrə kifayət qədər uzun deyil."
 
 msgid "submission.logType.author"
-msgstr "Mü…ôllif"
+msgstr "Müəllif"
 
 msgid "submission.comments.editorAuthorCorrespondence"
-msgstr "Redaktor / Mü…ôllif …ôlaq…ôsi"
+msgstr "Redaktor / Müəllif əlaqəsi"
 
 msgid "submission.logType.review"
-msgstr "Fikirl…ôrinizi yazmaq üçün simvolu klikl…ôyin"
+msgstr "Fikirlərinizi yazmaq üçün simvolu klikləyin"
 
 msgid "submission.comments.canShareWithAuthor"
-msgstr "Mü…ôllif v…ô redaktor üçün"
+msgstr "Müəllif və redaktor üçün"
 
 msgid "submission.comments.cannotShareWithAuthor"
 msgstr "Redaktor üçün"
 
 msgid "submission.comments.forAuthorEditor"
-msgstr "Mü…ôllif v…ô redaktor üçün"
+msgstr "Müəllif və redaktor üçün"
 
 msgid "user.register.selectContext"
-msgstr "Qeydiyyatdan keçm…ôk üçün bir Jurnal seçin:"
+msgstr "Qeydiyyatdan keçmək üçün bir Jurnal seçin:"
 
 msgid "submission.proofread.corrections"
-msgstr "Korrektor tövsiy…ôl…ôri"
+msgstr "Korrektor tövsiyələri"
 
 msgid "submission.comments.saveAndEmailEditor"
-msgstr "Yadda saxla v…ô redaktora email gönd…ôr"
+msgstr "Yadda saxla və redaktora email göndər"
 
 msgid "submission.comments.saveAndEmailAuthor"
-msgstr "Yadda saxla v…ô mü…ôllif…ô email gönd…ôr"
+msgstr "Yadda saxla və müəllifə email göndər"
 
 msgid "submission.layout.referenceLinking"
 msgstr "İstinad bağlama"
 
 msgid "user.subscriptions.mySubscriptions"
-msgstr "Abun…ôlikl…ôri"
+msgstr "Abunəlikləri"
 
 msgid "user.subscriptions.subscriptionStatus"
-msgstr "Abun…ôlik statusu"
+msgstr "Abunəlik statusu"
 
 msgid "user.register.form.emailConsentAllContexts"
 msgstr ""
-"B…ôli, qeyd etdiyim bütün jurnallar üçün yeni n…ôşrl…ôr v…ô elanlardan x…ôb…"
-"ôrdar olmaq ist…ôyir…ôm"
+"Bəli, qeyd etdiyim bütün jurnallar üçün yeni nəşrlər və elanlardan xəbərdar "
+"olmaq istəyirəm"
 
 msgid "user.register.form.missingContextConsent"
 msgstr ""
-"Qeydiyyatdan keçdiyiniz bütün jurnallar üçün m…ôxfilik bildirişini q…ôbul "
-"etm…ôlisiniz"
+"Qeydiyyatdan keçdiyiniz bütün jurnallar üçün məxfilik bildirişini qəbul "
+"etməlisiniz"
 
 msgid "user.subscriptions.status"
 msgstr "Status"
 
 msgid "user.subscriptions.status.needsApprovalDescription"
-msgstr "Abun…ôlik aktivl…ôşdirilm…ôzd…ôn …ôvv…ôl gözd…ôn keçirilm…ôlidi"
+msgstr "Abunəlik aktivləşdirilməzdən əvvəl gözdən keçirilməlidi"
 
 msgid "user.subscriptions.individualSubscriptions"
-msgstr "F…ôrdi abun…ôlik"
+msgstr "Fərdi abunəlik"
 
 msgid "user.subscriptions.institutionalSubscriptions"
-msgstr "Korporativ abun…ôlik"
+msgstr "Korporativ abunəlik"
 
 msgid "user.subscriptions.renew"
-msgstr "Yenil…ô"
+msgstr "Yenilə"
 
 msgid "user.subscriptions.purchase"
 msgstr "Almaq"
 
 msgid "user.subscriptions.expires"
-msgstr "Bitm…ô tarixi: {$date}"
+msgstr "Bitmə tarixi: {$date}"
 
 msgid "user.subscriptions.expired"
 msgstr "Son tarix: {$date}"
 
 msgid "user.subscriptions.viewSubscriptionTypes"
-msgstr "Mövcud abun…ô növl…ôrin…ô baxın"
+msgstr "Mövcud abunə növlərinə baxın"
 
 msgid "user.subscriptions.form.typeId"
-msgstr "Abun…ôlik növü"
+msgstr "Abunəlik növü"
 
 msgid "user.subscriptions.form.ipRangeItem"
 msgstr "& # 8226;"
 
 msgid "user.subscriptions.form.institutionName"
-msgstr "T…ôşkilat ad"
+msgstr "Təşkilat ad"
 
 msgid "user.subscriptions.form.deleteIpRange"
 msgstr "Sil"
 
 msgid "user.subscriptions.form.addIpRange"
-msgstr "Əlav…ô et"
+msgstr "Əlavə et"
 
 msgid "article.nonpdf.title"
-msgstr "M…ôqal…ô endirin"
+msgstr "Məqalə endirin"
 
 msgid "search.allJournals"
 msgstr "Bütün Jurnallar"
 
 msgid "search.authorIndex"
-msgstr "Mü…ôllif indeksi"
+msgstr "Müəllif indeksi"
 
 msgid "search.withinJournal"
-msgstr "İçind…ô"
+msgstr "İçində"
 
 msgid "site.journalRegister"
 msgstr "Qeydiyyat"
 
 msgid "site.noJournals"
-msgstr "İstifad…ô edil…ô bil…ôn Jurnal yoxdur."
+msgstr "İstifadə edilə bilən Jurnal yoxdur."
 
 msgid "current.current"
-msgstr "Son nömr…ô"
+msgstr "Son nömrə"
 
 msgid "current.noCurrentIssue"
-msgstr "Günc…ôl nömr…ô yoxdur"
+msgstr "Güncəl nömrə yoxdur"
 
 msgid "archive.archives"
 msgstr "Arxiv"
 
 msgid "archive.archivesPageNumber"
-msgstr "Arxivl…ôr - S…ôhif…ô: {$pageNumber}"
+msgstr "Arxivlər - Səhifə: {$pageNumber}"
 
 msgid "about.statistics"
 msgstr "Statistikalar"
 
 msgid "about.contact"
-msgstr "Əlaq…ô"
+msgstr "Əlaqə"
 
 msgid "about.history"
 msgstr "Jurnal tarixi"
 
 msgid "about.editorialTeam"
-msgstr "Redaksiya hey…ôti"
+msgstr "Redaksiya heyəti"
 
 msgid "about.focusAndScope"
-msgstr "Fokus v…ô …ôhat…ô dair…ôsi"
+msgstr "Fokus və əhatə dairəsi"
 
 msgid "about.editorialPolicies"
-msgstr "N…ôşr siyas…ôti"
+msgstr "Nəşr siyasəti"
 
 msgid "about.submissions"
 msgstr "Fayllar"
@@ -772,194 +772,193 @@ msgid "about.onlineSubmissions.register"
 msgstr "Qeydiyyat"
 
 msgid "about.onlineSubmissions.submissionActions"
-msgstr "{$newSubmission} v…ô ya {$viewSubmissions}"
+msgstr "{$newSubmission} və ya {$viewSubmissions}"
 
 msgid "about.submissionPreparationChecklist"
-msgstr "Müraci…ôt n…ôzar…ôt siyahısı"
+msgstr "Müraciət nəzarət siyahısı"
 
 msgid "about.authorGuidelines"
-msgstr "Mü…ôllif b…ôl…ôdçisi"
+msgstr "Müəllif bələdçisi"
 
 msgid "about.onlineSubmissions.newSubmission"
-msgstr "Yeni bir m…ôqal…ô gönd…ôrin"
+msgstr "Yeni bir məqalə göndərin"
 
 msgid "about.onlineSubmissions.viewSubmissions"
-msgstr "Gözl…ôy…ôn m…ôqal…ôl…ôriniz…ô baxın"
+msgstr "Gözləyən məqalələrinizə baxın"
 
 msgid "about.onlineSubmissions.registrationRequired"
-msgstr "Bir m…ôqal…ô gönd…ôrm…ôk üçün {$login} v…ô ya {$register} edin"
+msgstr "Bir məqalə göndərmək üçün {$login} və ya {$register} edin"
 
 msgid "about.privacyStatement"
-msgstr "M…ôxfilik B…ôyannam…ôsi"
+msgstr "Məxfilik Bəyannaməsi"
 
 msgid "about.peerReviewProcess"
-msgstr "D…ôy…ôrl…ôndirm…ô prosesi"
+msgstr "Dəyərləndirmə prosesi"
 
 msgid "about.subscriptions"
-msgstr "Abun…ôlik"
+msgstr "Abunəlik"
 
 msgid "about.subscriptions.individual"
-msgstr "F…ôrdi abun…ôlik"
+msgstr "Fərdi abunəlik"
 
 msgid "about.publicationFrequency"
 msgstr "Yayımın tezliyi"
 
 msgid "about.archiving"
-msgstr "Arxivl…ôşdirm…ô"
+msgstr "Arxivləşdirmə"
 
 msgid "about.subscriptions.institutional"
-msgstr "Korporativ abun…ôlik"
+msgstr "Korporativ abunəlik"
 
 msgid "about.subscriptionsContact"
-msgstr "Abun…ôlik …ôlaq…ôsi"
+msgstr "Abunəlik əlaqəsi"
 
 msgid "about.subscriptionTypes.format"
 msgstr "Format"
 
 msgid "about.subscriptionTypes.cost"
-msgstr "Qiym…ôt"
+msgstr "Qiymət"
 
 msgid "about.aboutThisPublishingSystem.altText"
-msgstr "ADS redaksiya v…ô yayımlama prosesi"
+msgstr "ADS redaksiya və yayımlama prosesi"
 
 msgid "about.subscriptionTypes.duration"
-msgstr "Müdd…ôt"
+msgstr "Müddət"
 
 msgid "about.availableSubscriptionTypes"
-msgstr "Abun…ôlik növl…ôri"
+msgstr "Abunəlik növləri"
 
 msgid "about.aboutThisPublishingSystem"
-msgstr "Jurnal İdar…ôetm…ô Sistemi haqqında. ."
+msgstr "Jurnal İdarəetmə Sistemi haqqında."
 
 msgid "about.memberships"
-msgstr "Üzvlükl…ôr"
+msgstr "Üzvlüklər"
 
 msgid "help.ojsHelpAbbrev"
 msgstr "ADS Yardımı"
 
 msgid "donations.thankYou"
-msgstr "T…ôş…ôkkürl…ôr"
+msgstr "Təşəkkürlər"
 
 msgid "help.goToEditPage"
-msgstr "{$sectionTitle} bölm…ôsini düzl…ôdin"
+msgstr "{$sectionTitle} bölməsini düzlədin"
 
 msgid "payment.loginRequired"
-msgstr "Öd…ôniş ed…ô bilm…ôk üçün daxil olmanız t…ôl…ôb olunur."
+msgstr "Ödəniş edə bilmək üçün daxil olmanız tələb olunur."
 
 msgid "payment.type.membership"
-msgstr "F…ôrdi abun…ô qiym…ôti"
+msgstr "Fərdi abunə qiyməti"
 
 msgid "payment.type.subscription"
-msgstr "Abun…ôlik qiym…ôti"
+msgstr "Abunəlik qiyməti"
 
 msgid "payment.unpaid"
-msgstr "Öd…ônm…ôyib"
+msgstr "Ödənməyib"
 
 msgid "payment.alreadyPaid"
-msgstr "Öd…ônib"
+msgstr "Ödənib"
 
 msgid "payment.paid"
-msgstr "Öd…ôniş"
+msgstr "Ödəniş"
 
 msgid "payment.type.submission"
-msgstr "M…ôqal…ô öd…ônişl…ôri"
+msgstr "Məqalə ödənişləri"
 
 msgid "payment.type.publication"
-msgstr "N…ôşr öd…ônişl…ôri"
+msgstr "Nəşr ödənişləri"
 
 msgid "payment.type.purchaseArticle"
-msgstr "M…ôqal…ô öd…ônişi"
+msgstr "Məqalə ödənişi"
 
 msgid "payment.type.purchaseIssue"
-msgstr "N…ôşr öd…ônişi"
+msgstr "Nəşr ödənişi"
 
 msgid "payment.authorFees"
-msgstr "Mü…ôllif öd…ônişl…ôri"
+msgstr "Müəllif ödənişləri"
 
 msgid "payment.waive"
 msgstr "İmtina et"
 
 msgid "payment.payNow"
-msgstr "İndi öd…ô"
+msgstr "İndi ödə"
 
 msgid "payment.subscription.renew"
-msgstr "Abun…ô yenil…ôm…ô"
+msgstr "Abunə yeniləmə"
 
 msgid "installer.ojsUpgrade"
-msgstr "OJS t…ôkmill…ôşdirm…ô"
+msgstr "OJS təkmilləşdirmə"
 
 msgid "metadata.pkp.peerReviewed"
-msgstr "D…ôy…ôrl…ôndirm…ôd…ôn keçmiş m…ôqal…ô"
+msgstr "Dəyərləndirmədən keçmiş məqalə"
 
 msgid "installer.allowFileUploads"
 msgstr ""
-"Serveriniz fayl yükl…ôm…ôl…ôr…ô icaz…ô verir: "
-"<strong>{$allowFileUploads}</strong>"
+"Serveriniz fayl yükləmələrə icazə verir: <strong>{$allowFileUploads}</strong>"
 
 msgid "payment.requestPublicationFee"
-msgstr "N…ôşr öd…ônişi: ( {$feeAmount}"
+msgstr "Nəşr ödənişi: ( {$feeAmount}"
 
 msgid "installer.maxFileUploadSize"
 msgstr ""
-"Serverinizin icaz…ô verdiyi …ôn böyük fayl ölçüsü: "
+"Serverinizin icazə verdiyi ən böyük fayl ölçüsü: "
 "<strong>{$maxFileUploadSize}</strong>"
 
 msgid "payment.submission.paySubmission"
-msgstr "M…ôqal…ô üçün öd…ôniş"
+msgstr "Məqalə üçün ödəniş"
 
 msgid "payment.publication.payPublication"
-msgstr "N…ôşr üçün öd…ôniş"
+msgstr "Nəşr üçün ödəniş"
 
 msgid "payment.type.donation"
-msgstr "İan…ôl…ôr"
+msgstr "İanələr"
 
 msgid "payment.donation.makeDonation"
-msgstr "İan…ô edin"
+msgstr "İanə edin"
 
 msgid "notification.type.editing"
-msgstr "T…ônziml…ôm…ô v…ôziyy…ôtl…ôri"
+msgstr "Tənzimləmə vəziyyətləri"
 
 msgid "notification.type.reviewing"
-msgstr "D…ôy…ôrl…ôndirm…ô v…ôziyy…ôtl…ôri"
+msgstr "Dəyərləndirmə vəziyyətləri"
 
 msgid "notification.type.site"
-msgstr "Sayt v…ôziyy…ôtl…ôri"
+msgstr "Sayt vəziyyətləri"
 
 msgid "notification.type.submissions"
-msgstr "M…ôqal…ô v…ôziyy…ôtl…ôri"
+msgstr "Məqalə vəziyyətləri"
 
 msgid "grid.catalogEntry.availableRepresentation.approved"
-msgstr "T…ôsdiql…ôdi"
+msgstr "Təsdiqlədi"
 
 msgid "grid.catalogEntry.approvedRepresentation.title"
-msgstr "S…ôtir t…ôsdiql…ônm…ôsi"
+msgstr "Sətir təsdiqlənməsi"
 
 msgid "search.cli.rebuildIndex.indexing"
-msgstr "\"{$journalName}\" indeksl…ônir"
+msgstr "\"{$journalName}\" indekslənir"
 
 msgid "grid.action.createContext"
 msgstr "Yeni bir jurnal yaradın"
 
 msgid "user.profile.form.showOtherContexts"
-msgstr "Dig…ôr jurnallarda qeydiyyatdan keçin."
+msgstr "Digər jurnallarda qeydiyyatdan keçin."
 
 msgid "notification.type.submissionComment"
-msgstr "\"{$title}\" başlıqlı m…ôqal…ô haqqında bir redaktor ş…ôrt etdi."
+msgstr "\"{$title}\" başlıqlı məqalə haqqında bir redaktor şərt etdi."
 
 msgid "notification.type.userComment"
-msgstr "\"{$title}\" başlıqlı m…ôqal…ô haqqında bir oxucu ş…ôrh etdi."
+msgstr "\"{$title}\" başlıqlı məqalə haqqında bir oxucu şərh etdi."
 
 msgid "editor.navigation.issues"
-msgstr "Nömr…ôl…ôr"
+msgstr "Nömrələr"
 
 msgid "grid.catalogEntry.availableRepresentation.notApproved"
-msgstr "T…ôsdiq gözl…ônilir"
+msgstr "Təsdiq gözlənilir"
 
 msgid "user.authorization.invalidIssue"
-msgstr "Etibarsız nömr…ô t…ôl…ôb edildi."
+msgstr "Etibarsız nömrə tələb edildi."
 
 msgid "editor.issues.backIssues"
-msgstr "Əvv…ôlki nömr…ôl…ôr"
+msgstr "Əvvəlki nömrələr"
 
 msgid "notification.type.public"
 msgstr "Ümumi elanlar"
@@ -1128,78 +1127,77 @@ msgid "reviewer.article.decision.resubmitElsewhere"
 msgstr "Dərc olunmaması daha uyğundur"
 
 msgid "submission.copyedit.editorsCopyedit"
-msgstr "Redaktorun s…ôhif…ô t…ôrtibatı"
+msgstr "Redaktorun səhifə tərtibatı"
 
 msgid "submission.copyedit.copyeditVersion"
 msgstr "S / D versiyası"
 
 msgid "reviewer.article.confirmDecision"
 msgstr ""
-"Q…ôrarınızı yadda saxladıqdan sonra bu d…ôy…ôrl…ôndirm…ôd…ô başqa bir d…"
-"ôyişiklik ed…ô bilm…ôzsiniz! Davam etm…ôk ist…ôyirsinizmi?"
+"Qərarınızı yadda saxladıqdan sonra bu dəyərləndirmədə başqa bir dəyişiklik "
+"edə bilməzsiniz! Davam etmək istəyirsinizmi?"
 
 msgid "submission.copyedit.copyeditComments"
-msgstr "S…ôhif…ô t…ôrtibatı ş…ôrhl…ôri"
+msgstr "Səhifə tərtibatı şərhləri"
 
 msgid "submission.copyedit.editorAuthorReview"
-msgstr "Mü…ôllif s…ôhif…ô t…ôrtibatı"
+msgstr "Müəllif səhifə tərtibatı"
 
 msgid "submission.copyedit.initialCopyedit"
-msgstr "Başlanğıc s…ôhif…ô t…ôrtibatı"
+msgstr "Başlanğıc səhifə tərtibatı"
 
 msgid "submission.review.mustUploadFileForReview"
-msgstr ""
-"D…ôy…ôrl…ôndirm…ô versiyası hazırlanmamış t…ôl…ôb emaili gönd…ôril…ô bilm…ôz"
+msgstr "Dəyərləndirmə versiyası hazırlanmamış tələb emaili göndərilə bilməz"
 
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "Yerli dizayn kimliyi artıq var"
 
 msgid "submission.layout.instructions"
-msgstr "T…ôrtibat t…ôlimatı"
+msgstr "Tərtibat təlimatı"
 
 msgid "submission.proofread.instructions"
-msgstr "Korrektor t…ôlimatı"
+msgstr "Korrektor təlimatı"
 
 msgid "submission.layout.assignLayoutEditor"
-msgstr "T…ôrtibatçı t…ôyin edin"
+msgstr "Tərtibatçı təyin edin"
 
 msgid "submission.comments.copyeditComments"
-msgstr "S…ôhif…ô t…ôrtibatı ş…ôrhl…ôri"
+msgstr "Səhifə tərtibatı şərhləri"
 
 msgid "user.register.form.privacyConsentThisContext"
 msgstr ""
-"B…ôli, jurnalın<a href=\"{$privacyUrl}\" target=\"_blank\">m…ôxfilik "
-"anlaşmasını</a> q…ôbul edir…ôm"
+"Bəli, jurnalın<a href=\"{$privacyUrl}\" target=\"_blank\">məxfilik "
+"anlaşmasını</a> qəbul edirəm"
 
 msgid "user.register.form.missingSiteConsent"
-msgstr "Bu saytın m…ôxfilik bildirişini q…ôbul etm…ôlisiniz"
+msgstr "Bu saytın məxfilik bildirişini qəbul etməlisiniz"
 
 msgid "user.register.readerDescription"
-msgstr "Jurnalın nömr…ôsi n…ôşr edildiyind…ô email il…ô x…ôb…ôr veril…ôc…ôk."
+msgstr "Jurnalın nömrəsi nəşr edildiyində email ilə xəbər veriləcək."
 
 msgid "user.register.authorDescription"
-msgstr "Hazırlanmış yazılar jurnala gönd…ôril…ô bil…ôr"
+msgstr "Hazırlanmış yazılar jurnala göndərilə bilər"
 
 msgid "user.subscriptions.status.needsInformationDescription"
-msgstr "Abun…ôlik aktiv edilm…ôzd…ôn …ôvv…ôl …ôlav…ô m…ôlumata ehtiyac vardı"
+msgstr "Abunəlik aktiv edilməzdən əvvəl əlavə məlumata ehtiyac vardı"
 
 msgid "user.subscriptions.purchaseNewSubscription"
-msgstr "Yeni abun…ôliyi başladın"
+msgstr "Yeni abunəliyi başladın"
 
 msgid "user.subscriptions.purchaseIndividualSubscription"
-msgstr "F…ôrdi abun…ôliyi başladın"
+msgstr "Fərdi abunəliyi başladın"
 
 msgid "user.subscriptions.purchaseInstitutionalSubscription"
-msgstr "Korporativ abun…ôliyi başladın"
+msgstr "Korporativ abunəliyi başladın"
 
 msgid "user.subscriptions.form.institutionNameRequired"
-msgstr "T…ôşkilat adı t…ôl…ôb olunur."
+msgstr "Təşkilat adı tələb olunur."
 
 msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
-msgstr "Onlayn öd…ôniş başladıldı ancaq l…ôğv edilm…ôdi ya da tamamlanmadı"
+msgstr "Onlayn ödəniş başladıldı ancaq ləğv edilmədi ya da tamamlanmadı"
 
 msgid "user.subscriptions.status.awaitingManualPaymentDescription"
-msgstr "Əll…ô öd…ôniş başladıldı ancaq h…ôl…ô alınmadı"
+msgstr "Əllə ödəniş başladıldı ancaq hələ alınmadı"
 
 msgid "site.journalsHosted"
 msgstr "Bu saytdakı Jurnallar"
@@ -1208,102 +1206,101 @@ msgid "site.journalView"
 msgstr "Jurnala baxın"
 
 msgid "about.aboutContext"
-msgstr "Jurnal haqqınd"
+msgstr "Jurnal haqqında"
 
 msgid "user.subscriptions.form.domainValid"
-msgstr "Z…ôhm…ôt olmasa etibarlı bir sah…ô adı daxil edin."
+msgstr "Zəhmət olmasa etibarlı bir sahə adı daxil edin."
 
 msgid "user.subscriptions.form.ipRangeValid"
-msgstr "Z…ôhm…ôt olmasa etibarlı bir IP adresi daxil edin."
+msgstr "Zəhmət olmasa etibarlı bir IP adresi daxil edin."
 
 msgid "search.searchFor"
-msgstr "M…ôqal…ôl…ôrd…ô axtarın"
+msgstr "Məqalələrdə axtarın"
 
 msgid "article.download"
 msgstr "Bu PDF faylını endirin"
 
 msgid "article.pdf.title"
-msgstr "Daşına bil…ôn s…ôn…ôd formatı (PDF)"
+msgstr "Daşına bilən sənəd formatı (PDF)"
 
 msgid "search.authorDetails"
-msgstr "Mü…ôllif t…ôf…ôrrüatları"
+msgstr "Müəllif təfərrüatları"
 
 msgid "user.subscriptions.form.ipRangeInstructions"
 msgstr ""
-"Buraya IP aralıqları giril…ôrs…ô, t…ôsir sah…ôsi ist…ôy…ô bağlıdır.<br /"
-">Etibarlı d…ôy…ôrl…ôr arasında bir IP adresi (m…ôs. 142.58.103.1), IP "
-"aralığı (m…ôs. 142.58.103.1 - 142.58.103.4), '*' joker xarakterli IP aralığı "
-"(m…ôs. 142.58. *. *) V…ô CIDR-ın daxil olduğu bir IP aralığı (m…ôs. 142.58."
-"100.0/24)"
+"Buraya IP aralıqları girilərsə, təsir sahəsi istəyə bağlıdır.<br />Etibarlı "
+"dəyərlər arasında bir IP adresi (məs. 142.58.103.1), IP aralığı (məs. "
+"142.58.103.1 - 142.58.103.4), '*' joker xarakterli IP aralığı (məs. 142.58. *"
+". *) Və CIDR-ın daxil olduğu bir IP aralığı (məs. 142.58.100.0/24)"
 
 msgid "archive.browse"
-msgstr "Əvv…ôlki nömr…ôl…ôr…ô baxın"
+msgstr "Əvvəlki nömrələrə baxın"
 
 msgid "about.sectionPolicies"
-msgstr "Bölm…ô politikası"
+msgstr "Bölmə politikası"
 
 msgid "about.aboutSoftware"
-msgstr "Açıq Jurnal sisteml…ôri haqqında"
+msgstr "Açıq Jurnal sistemləri haqqında"
 
 msgid "about.openAccessPolicy"
 msgstr "Açıq giriş politikası"
 
 msgid "about.delayedOpenAccessDescription1"
-msgstr "Bu Jurnalın m…ôzmunu"
+msgstr "Bu Jurnalın məzmunu"
 
 msgid "about.delayedOpenAccess"
 msgstr "Gecikmiş açıq giriş"
 
 msgid "about.copyrightNotice"
-msgstr "Mü…ôllif hüquqları t…ônziml…ônm…ôsi"
+msgstr "Müəllif hüquqları tənzimlənməsi"
 
 msgid "about.authorFees"
-msgstr "Mü…ôllif qonorarı"
+msgstr "Müəllif qonorarı"
 
 msgid "about.authorFeesMessage"
-msgstr "Bu Jurnal aşağıdakı mü…ôllif öd…ônişini t…ôtbiq edir"
+msgstr "Bu Jurnal aşağıdakı müəllif ödənişini tətbiq edir"
 
 msgid "help.ojsHelp"
-msgstr "Açıq Jurnal Sisteml…ôri Yardımı"
+msgstr "Açıq Jurnal Sistemləri Yardımı"
 
 msgid "help.searchReturnResults"
-msgstr "Axtarış n…ôtic…ôl…ôrin…ô qayıdın"
+msgstr "Axtarış nəticələrinə qayıdın"
 
 msgid "payment.membership.buyMembership"
-msgstr "F…ôrdi abun…ôlik alın"
+msgstr "Fərdi abunəlik alın"
 
 msgid "user.profile.form.hideOtherContexts"
-msgstr "Dig…ôr jurnalları gizl…ôdin"
+msgstr "Digər jurnalları gizlədin"
 
 msgid "installer.appInstallation"
 msgstr "OJS quraşdırılması"
 
 msgid "notification.type.editorDecisionComment"
-msgstr "\"{$title}\" başlıqlı m…ôqal…ô haqqında redaktor ş…ôrh etdi"
+msgstr "\"{$title}\" başlıqlı məqalə haqqında redaktor şərh etdi"
 
 msgid "notification.type.galleyModified"
-msgstr "\" {$title} \" başlıqlı m…ôqal…ô yenil…ôndi"
+msgstr "\" {$title} \" başlıqlı məqalə yeniləndi"
 
 msgid "payment.waived"
-msgstr "Öd…ônişd…ôn azaddır"
+msgstr "Ödənişdən azaddır"
 
 msgid "payment.paymentReceived"
-msgstr "Öd…ôniş alındı"
+msgstr "Ödəniş alındı"
 
 msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
-msgstr "<p>Bu dizaynın t…ôsdiqini l…ôğv edin.</p>"
+msgstr "<p>Bu dizaynın təsdiqini ləğv edin.</p>"
 
 msgid "payment.requestPublicationFee.notEnabled"
-msgstr "Yayım öd…ônişi aktiv deyil."
+msgstr "Yayım ödənişi aktiv deyil."
 
 msgid "payment.publication.publicationPaid"
-msgstr "N…ôşr haqqı öd…ônildi"
+msgstr "Nəşr haqqı ödənildi"
 
 msgid "payment.type.fastTrack"
-msgstr "Sür…ôtl…ôndirilmiş baxış öd…ônişi"
+msgstr "Sürətləndirilmiş baxış ödənişi"
 
 msgid "payment.paymentSent"
-msgstr "Öd…ôniş artıq gönd…ôrilib"
+msgstr "Ödəniş artıq göndərilib"
 
 msgid "navigation.infoForAuthors"
 msgstr "Müəlliflər üçün"
@@ -1315,13 +1312,13 @@ msgid "navigation.infoForLibrarians"
 msgstr "Kitabxanaçılar üçün"
 
 msgid "archive.issueUnavailable"
-msgstr "Nömr…ô …ôlçatan deyil"
+msgstr "Nömrə əlçatan deyil"
 
 msgid "user.role.journalAssistant"
 msgstr "Jurnal köməkçisi"
 
 msgid "about.onlineSubmissions.submitToSection"
-msgstr "<a href=\"{$url}\">{$name}</a> bölm…ôsi üçün M…ôqal…ô Gönd…ôr"
+msgstr "<a href=\"{$url}\">{$name}</a> bölməsi üçün Məqalə Göndər"
 
 msgid "submission.reviewersVersion"
 msgstr "Rəyçi qeydləri olan fayl versiyası"
@@ -1343,8 +1340,8 @@ msgstr "Rəyçi etirazları & ləğvlər"
 
 msgid "reviewer.article.enterReviewA"
 msgstr ""
-"M…ôqal…ô il…ô bağlı fikir v…ô ş…ôrhl…ôrinizi redaktora gönd…ôrm…ôk üçün "
-"işar…ôy…ô klikl…ôyin"
+"Məqalə ilə bağlı fikir və şərhlərinizi redaktora göndərmək üçün işarəyə "
+"klikləyin"
 
 msgid "reviewer.article.reviewersAnnotatedVersionDescription"
 msgstr ""
@@ -1353,54 +1350,54 @@ msgstr ""
 
 msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
 msgstr ""
-"D…ôy…ôrl…ôndirm…ô s…ôhif…ôsi, Redaktor q…ôrarında s…ôhif…ô t…ôrtibatı üçün "
-"fayl seçil…ôn…ô q…ôd…ôr t…ôl…ôb emaili gönd…ôril…ô bilm…ôz"
+"Dəyərləndirmə səhifəsi, Redaktor qərarında səhifə tərtibatı üçün fayl "
+"seçilənə qədər tələb emaili göndərilə bilməz"
 
 msgid "user.register.registrationDisabled"
-msgstr "Bu Jurnal hazırda istifad…ôçi qeydiyyatlarını q…ôbul etmir"
+msgstr "Bu Jurnal hazırda istifadəçi qeydiyyatlarını qəbul etmir"
 
 msgid "user.register.reviewerDescriptionNoInterests"
-msgstr "Jurnala gönd…ôril…ôn m…ôqal…ôl…ôr…ô r…ôyçi olmağa hazırdır."
+msgstr "Jurnala göndərilən məqalələrə rəyçi olmağa hazırdır."
 
 msgid "user.register.reviewerInterests"
 msgstr ""
-"Maraq/ixtisas sah…ôl…ôriniz (İxtisas sah…ôsi terminl…ôrini açılan menyudan "
+"Maraq/ixtisas sahələriniz (İxtisas sahəsi terminlərini açılan menyudan "
 "seçin):"
 
 msgid "user.subscriptions.statusDescription"
 msgstr "Açıqlama"
 
 msgid "user.subscriptions.form.subscriptionExists"
-msgstr "Bu istifad…ôçi hesabı hazırda f…ôrdi abun…ôdir."
+msgstr "Bu istifadəçi hesabı hazırda fərdi abunədir."
 
 msgid "user.subscriptions.form.typeIdValid"
-msgstr "Z…ôhm…ôt olmasa etibarlı bir abun…ôlik növü seçin"
+msgstr "Zəhmət olmasa etibarlı bir abunəlik növü seçin"
 
 msgid "current.noCurrentIssueDesc"
-msgstr "Bu jurnal h…ôl…ô heç bir nömr…ô yayımlamadı."
+msgstr "Bu jurnal hələ heç bir nömrə yayımlamadı."
 
 msgid "user.subscriptions.form.membershipInstructions"
-msgstr "Seçil…ôn abun…ôlik növü üçün üzvlük m…ôlumatları t…ôl…ôb olunur"
+msgstr "Seçilən abunəlik növü üçün üzvlük məlumatları tələb olunur"
 
 msgid "about.delayedOpenAccessDescription2"
-msgstr "Ay sonra açıq giriş formatında …ôlçatan olacaq."
+msgstr "Ay sonra açıq giriş formatında əlçatan olacaq."
 
 msgid "payment.loginRequired.forIssue"
 msgstr ""
-"Element…ô çatmaq üçün abun…ô olmaq v…ô ya almaq lazımdır. Abun…ôliyi t…ôsdiq "
-"etm…ôk, …ôvv…ôlki alma …ôm…ôliyyatına çatmaq v…ô ya alma sayına çatmaq üçün "
+"Elementə çatmaq üçün abunə olmaq və ya almaq lazımdır. Abunəliyi təsdiq "
+"etmək, əvvəlki alma əməliyyatına çatmaq və ya alma sayına çatmaq üçün "
 "jurnala daxil olun"
 
 msgid "payment.loginRequired.forDonation"
-msgstr "İan…ô etm…ôk üçün oturum açmanız t…ôl…ôb olunur."
+msgstr "İanə etmək üçün oturum açmanız tələb olunur."
 
 msgid "grid.catalogEntry.approvedRepresentation.message"
-msgstr "<p>N…ôşr üçün bu dizaynı t…ôsdiql…ôyin</p>"
+msgstr "<p>Nəşr üçün bu dizaynı təsdiqləyin</p>"
 
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr ""
-"Yanlış s…ôhif…ô t…ôrtibatçı gönd…ôrm…ôsi v…ô ya s…ôhif…ô t…ôrtibatçısı "
-"gönd…ôrm…ô t…ôl…ôbi yoxdur"
+"Yanlış səhifə tərtibatçı göndərməsi və ya səhifə tərtibatçısı göndərmə "
+"tələbi yoxdur"
 
 msgid "context.select"
 msgstr "Başqa bir jurnal seçin:"
@@ -1421,37 +1418,36 @@ msgid "submission.event.layout.layoutInitiated"
 msgstr "Tərtibatçı təyinatı başladıldı"
 
 msgid "submission.layout.replaceLayoutEditor"
-msgstr "T…ôrtibatçını d…ôyişdirin"
+msgstr "Tərtibatçını dəyişdirin"
 
 msgid "submission.layout.layoutComments"
-msgstr "T…ôrtibatçı ş…ôrhl…ôri"
+msgstr "Tərtibatçı şərhləri"
 
 msgid "user.register.openAccessNotificationDescription"
-msgstr "Jurnalın açıq giriş…ô veril…ôn nömr…ôsi email il…ô x…ôb…ôr veril…ôc…ôk."
+msgstr "Jurnalın açıq girişə verilən nömrəsi email ilə xəbər veriləcək."
 
 msgid "about.aboutOJSSite"
 msgstr ""
-"Bu sayt açıq m…ônd…ô kodlu bir Jurnal hazırlama v…ô yayımlama proqramı olan "
-"Açıq Jurnal Sisteml…ôri (Open Journal Systems) proqramı {$ojsVersion} "
-"versiyasını istifad…ô edir. ADS olaraq qısaldılan bu proqram <a href=\"http"
-"://pkp.sfu.ca/\">Public Knowledge Project</a> t…ôr…ôfind…ôn inkişaf "
-"etdirilmişdir v…ô (GNU General Public License) lisenziyası il…ô pulsuz "
-"paylanır"
+"Bu sayt açıq məndə kodlu bir Jurnal hazırlama və yayımlama proqramı olan "
+"Açıq Jurnal Sistemləri (Open Journal Systems) proqramı {$ojsVersion} "
+"versiyasını istifadə edir. ADS olaraq qısaldılan bu proqram <a href=\"http"
+"://pkp.sfu.ca/\">Public Knowledge Project</a> tərəfindən inkişaf "
+"etdirilmişdir və (GNU General Public License) lisenziyası ilə pulsuz paylanır"
 
 msgid "installer.upgradeApplication"
-msgstr "Açıq Jurnal sisteml…ôrini t…ôkmill…ôşdirin"
+msgstr "Açıq Jurnal sistemlərini təkmilləşdirin"
 
 msgid "payment.loginRequired.forArticle"
 msgstr ""
-"Abun…ô olmaq v…ô ya m…ôqal…ô almaq üçün giriş elementi t…ôl…ôb olunur. Abun…"
-"ôliyi t…ôsdiql…ôm…ôk üçün daha …ôvv…ôl alma v…ô ya m…ôqal…ô alışındakı "
-"Jurnal oturumunu açın."
+"Abunə olmaq və ya məqalə almaq üçün giriş elementi tələb olunur. Abunəliyi "
+"təsdiqləmək üçün daha əvvəl alma və ya məqalə alışındakı Jurnal oturumunu "
+"açın."
 
 msgid "payment.type.publication.required"
-msgstr "Öd…ôniş yayım haqqı üçündür. ."
+msgstr "Ödəniş yayım haqqı üçündür. ."
 
 msgid "notification.type.reviewerFormComment"
-msgstr "\"{$title}\" başlıqlı m…ôqal…ô üçün d…ôy…ôrl…ôndirm…ô formu gönd…ôrildi"
+msgstr "\"{$title}\" başlıqlı məqalə üçün dəyərləndirmə formu göndərildi"
 
 msgid "navigation.otherJournals"
 msgstr "Digər Jurnallar"
@@ -1701,35 +1697,32 @@ msgstr ""
 "bütün seçimlərə sahib olacaqdırlar. ."
 
 msgid "search.browseAuthorIndex"
-msgstr "Mü…ôllif indeksi"
+msgstr "Müəllif indeksi"
 
 msgid "about.editorialTeam.biography"
-msgstr "T…ôrcümeyi-hal"
+msgstr "Tərcümeyi-hal"
 
 msgid "submission.copyedit.mustUploadFileForCopyedit"
-msgstr ""
-"Fayl s…ôhif…ô t…ôrtibatı üçün yükl…ônm…ômiş t…ôl…ôb emaili gönd…ôril…ô "
-"bilm…ôz"
+msgstr "Fayl səhifə tərtibatı üçün yüklənməmiş tələb emaili göndərilə bilməz"
 
 msgid "reviewer.article.uploadFile"
 msgstr ""
-"İst…ôkd…ôn asılı olaraq, redaktoru v…ô/v…ô ya mü…ôllifi m…ôlumatlandırmaq "
-"üçün r…ôyl…ôrinizi, düz…ôlişl…ôrinizi ehtiva ed…ôn fayl/faylları yükl…ôy…ô "
-"bil…ôrsiniz"
+"İstəkdən asılı olaraq, redaktoru və/və ya müəllifi məlumatlandırmaq üçün "
+"rəylərinizi, düzəlişlərinizi ehtiva edən fayl/faylları yükləyə bilərsiniz"
 
 msgid "user.subscriptions.form.membershipRequired"
-msgstr "Seçilmiş abun…ôlik növl…ôri üzvlük m…ôlumatı t…ôl…ôb edir."
+msgstr "Seçilmiş abunəlik növləri üzvlük məlumatı tələb edir."
 
 msgid "user.register.reviewerDescription"
 msgstr ""
-"jurnala gönd…ôril…ôn m…ôqal…ôl…ôr…ô r…ôyçi olma arzusu. Əlaq…ôli sah…ôl…"
-"ôrinizi t…ôrif edin (müst…ôqil sah…ôl…ôr v…ô araşdırma metodları)"
+"jurnala göndərilən məqalələrə rəyçi olma arzusu. Əlaqəli sahələrinizi tərif "
+"edin (müstəqil sahələr və araşdırma metodları)"
 
 msgid "article.pluginMissing"
 msgstr ""
-"<p>Veb brauzerinizd…ô bir PDF oxucu qoşması yüklüdürs…ô (m…ôs…ôl…ôn, <a href="
+"<p>Veb brauzerinizdə bir PDF oxucu qoşması yüklüdürsə (məsələn, <a href="
 "\"https://get.adobe.com/reader/\">Adobe Acrobat Reader</a>'ın son bir "
-"versiyası varsa) seçdiyiniz PDF faylı yükl…ôn…ôr.</p>"
+"versiyası varsa) seçdiyiniz PDF faylı yüklənər.</p>"
 
 msgid "reviewer.article.enterReviewForm"
 msgstr "Dəyərləndirmə formunu doldurmaq üçün işarəyə kliklərin."
@@ -1760,16 +1753,16 @@ msgstr "Müraciət təyinatı edilməyib."
 
 msgid "installer.updatingInstructions"
 msgstr ""
-"Mövcud bir ADS quraşdırmasını t…ôkmill…ôşdirirsinizs…ô, davam etm…ôk üçün "
-"bura <a href=\"{$upgradeUrl}\">klikl…ôyin</a>. ."
+"Mövcud bir ADS quraşdırmasını təkmilləşdirirsinizsə, davam etmək üçün bura "
+"<a href=\"{$upgradeUrl}\">klikləyin</a>. ."
 
 msgid "navigation.browseByAuthor"
 msgstr "Müəlliflərə görə"
 
 msgid "payment.notFound"
 msgstr ""
-"Bir öd…ôniş t…ôl…ôb edildi, ancaq t…ôl…ôb müdd…ôti başa çatdı. Detallar üçün "
-"Jurnal İdar…ôçisin…ô müraci…ôt edin"
+"Bir ödəniş tələb edildi, ancaq tələb müddəti başa çatdı. Detallar üçün "
+"Jurnal İdarəçisinə müraciət edin"
 
 msgid "sectionEditor.review.enrollReviewer"
 msgstr "Üzvü rəyçi kimi qeyd et"
@@ -1791,40 +1784,40 @@ msgstr ""
 
 msgid "user.subscriptions.form.domainInstructions"
 msgstr ""
-"Bura bir sah…ô adı yazılacaqsa IP aralığı ist…ôy…ô bağlıdır. <br />Etibarlı "
-"sah…ô adları (m…ôs. kutuphane.dogus.edu.tr)"
+"Bura bir sahə adı yazılacaqsa IP aralığı istəyə bağlıdır. <br />Etibarlı "
+"sahə adları (məs. kutuphane.dogus.edu.tr)"
 
 msgid "submission.event.copyedit.copyeditInitialCompleted"
 msgstr "Başlanğıc səhifə tənzimi tamamlandı"
 
 msgid "reviewer.article.mustSelectDecision"
 msgstr ""
-"Müraci…ôtin q…ôbulu il…ô bağlı bir t…ôklif verm…ôdiniz. Prosesin "
-"tamamlanması üçün bir t…ôklif verm…ôniz lazımdır. ."
+"Müraciətin qəbulu ilə bağlı bir təklif vermədiniz. Prosesin tamamlanması "
+"üçün bir təklif verməniz lazımdır. ."
 
 msgid "user.subscriptions.form.domainIPRangeRequired"
 msgstr ""
-"Seçil…ôn abun…ôlik növü, abun…ôlik kimlik t…ôsdiqi üçün bir t…ôsir sah…ôsi "
-"v…ô/v…ô ya bir IP aralığı t…ôl…ôb edir"
+"Seçilən abunəlik növü, abunəlik kimlik təsdiqi üçün bir təsir sahəsi və/və "
+"ya bir IP aralığı tələb edir"
 
 msgid "about.aboutOJSJournal"
 msgstr ""
-"Bu jurnal açıq m…ônb…ô kodlu bir Jurnal idar…ô proqramı olan Açıq Jurnal "
-"Sisteml…ôri (Open Journal Systems) {$ojsVersion} versiyasını istifad…ô edir. "
+"Bu jurnal açıq mənbə kodlu bir Jurnal idarə proqramı olan Açıq Jurnal "
+"Sistemləri (Open Journal Systems) {$ojsVersion} versiyasını istifadə edir. "
 "ADS kimi qısaldılan bu proqram <a href=\"http://pkp.sfu.ca/\">Public "
-"Knowledge Project</a> t…ôr…ôfind…ôn inkişaf etdirilmişdir ve (GNU General "
-"Public License) lisenziyası il…ô pulsuz paylanır. Jurnal v…ô namiz…ôd "
-"m…ôqal…ôl…ôriniz il…ô bağlı suallarını üçün z…ôhm…ôt olmazsa birbaşa <a href="
-"\"{$contactUrl}\">Jurnal il…ô …ôlaq…ô</a> saxlayın"
+"Knowledge Project</a> tərəfindən inkişaf etdirilmişdir ve (GNU General "
+"Public License) lisenziyası ilə pulsuz paylanır. Jurnal və namizəd "
+"məqalələriniz ilə bağlı suallarını üçün zəhmət olmazsa birbaşa <a href=\""
+"{$contactUrl}\">Jurnal ilə əlaqə</a> saxlayın"
 
 msgid "about.submissionPreparationChecklist.description"
 msgstr ""
-"Müraci…ôt prosesind…ô mü…ôllifl…ôr müraci…ôtl…ôrinin aşağıdakı siyahıdakı "
-"bütün madd…ôl…ôr…ô uyğunluğuna n…ôzar…ôt etm…ôlidirl…ôr, bu b…ôl…ôdçiy…ô "
-"uyğun olmayan müraci…ôtl…ôr mü…ôllifl…ôr…ô geri qaytarılır. ."
+"Müraciət prosesində müəlliflər müraciətlərinin aşağıdakı siyahıdakı bütün "
+"maddələrə uyğunluğuna nəzarət etməlidirlər, bu bələdçiyə uyğun olmayan "
+"müraciətlər müəlliflərə geri qaytarılır. ."
 
 msgid "site.journalCurrent"
-msgstr "Son nömr…ô"
+msgstr "Son nömrə"
 
 msgid "issue.noIssues"
 msgstr "Nömrə yoxdur"
@@ -1852,8 +1845,8 @@ msgstr "{$issueName} nömrəsində yayımlanacaq."
 
 msgid "submission.comments.blindCcReviewers"
 msgstr ""
-"Redaktor q…ôrarı gönd…ôrildikd…ô r…ôyçil…ôr…ô gönd…ôrm…ôk üçün adsız bir sur…"
-"ôti (BCC) t…ônziml…ôm…ôk üçün formalaşdırın"
+"Redaktor qərarı göndərildikdə rəyçilərə göndərmək üçün adsız bir surəti (BCC)"
+" tənzimləmək üçün formalaşdırın"
 
 msgid "journal.viewAllIssues"
 msgstr "Bütün nömrələri göstərin"
@@ -1863,24 +1856,24 @@ msgstr "Müəllif düzəlişləri göndərildi"
 
 msgid "reviewer.article.selectRecommendation"
 msgstr ""
-"Altdakı q…ôrar seçiml…ôrinin aktiv olması üçün dördüncü addımdakı prosesin "
-"tamamlanması lazımdır. D…ôy…ôrl…ôndirm…ônin redaktora forvard edil…ô bilm…"
-"ôsi üçün \"r…ôyçi Q…ôrarı\" qutusundakı seçiml…ôrd…ôn uğun olanının seçilm…"
-"ôsi v…ô qeyd edilm…ôsi lazımdır"
+"Altdakı qərar seçimlərinin aktiv olması üçün dördüncü addımdakı prosesin "
+"tamamlanması lazımdır. Dəyərləndirmənin redaktora forvard edilə bilməsi üçün "
+"\"rəyçi Qərarı\" qutusundakı seçimlərdən uğun olanının seçilməsi və qeyd "
+"edilməsi lazımdır"
 
 msgid "user.subscriptions.statusInformation"
 msgstr ""
-"Aktiv v…ô müdd…ôti bitmiş abun…ôlikl…ôri sona çatma tarixi il…ô birlikd…ô "
-"aşağıda görüntül…ônir. Buna …ôlav…ô olaraq, aşağıdakı v…ôziyy…ôt m…"
-"ôlumatları h…ôr abun…ôlik il…ô birlikd…ô g…ôl…ô bil…ôr"
+"Aktiv və müddəti bitmiş abunəlikləri sona çatma tarixi ilə birlikdə aşağıda "
+"görüntülənir. Buna əlavə olaraq, aşağıdakı vəziyyət məlumatları hər abunəlik "
+"ilə birlikdə gələ bilər"
 
 msgid "article.nonpdf.note"
 msgstr ""
-"Seçdiyiniz fayl avtomatik olaraq endirilm…ôy…ô başlanacaqdır. Əg…ôr endirm…ô "
-"avtomatik olaraq başlamazsa aşağıdakı linki klikl…ôyin. Bu faylın görün…ô "
-"bilm…ôsi üçün xüsusi bir görüntül…ôyici v…ô ya link…ô ehtiyac ola bil…ôr. "
-"<br /><br />Əg…ôr m…ôqal…ô avtomatik olaraq endirilm…ôzs…ô <a href=\"{$url}\""
-">bura klikl…ôyin</a>. ."
+"Seçdiyiniz fayl avtomatik olaraq endirilməyə başlanacaqdır. Əgər endirmə "
+"avtomatik olaraq başlamazsa aşağıdakı linki klikləyin. Bu faylın görünə "
+"bilməsi üçün xüsusi bir görüntüləyici və ya linkə ehtiyac ola bilər. <br /"
+"><br />Əgər məqalə avtomatik olaraq endirilməzsə <a href=\"{$url}\">bura "
+"klikləyin</a>. ."
 
 msgid "user.subscriptions.form.membership"
 msgstr "Üzvlük"
@@ -1995,7 +1988,7 @@ msgid "payment.alreadyPaidMessage"
 msgstr ""
 "Məqalə prosesini tamamlamaq üçün ödəməni jurnala göndərmisinizsə bu qutunu "
 "seçin. Məqalə, ödəmə gələnə qədər incələnməyəcəkdir. Ödəmə təlimatılarını "
-"görmək üçün yuxarıdakı Ödəmə`ni klikləyin."
+"görmək üçün yuxarıdakı Ödəmə’ni klikləyin."
 
 msgid "installer.preInstallationInstructions"
 msgstr ""
@@ -2071,7 +2064,7 @@ msgstr ""
 "sürücüsündə olan faylı tapmanıza kömək edəcək Gözat/Browse'a klikləyin. </li>"
 "\n"
 "<li>Müraciət faylınızın yerini təyin edib işarələyin.</li>\n"
-"<li>Fayl seçimi pəncərəsində Aç/Open`ə klikləyin, bu proses fayl yolunu "
+"<li>Fayl seçimi pəncərəsində Aç/Open’ə klikləyin, bu proses fayl yolunu "
 "səhifə üzərinə yerləşdirəcəkdir. </li>\n"
 "<li>Fayl Göndər düyməsini klikləyin, faylı öz kompüterinizdən Jurnalın "
 "saytına yükləyin, faylınızın adı Jurnal qaydalarına uyğun olaraq "
