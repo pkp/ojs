@@ -1,7 +1,7 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-06-02 16:07+0000\n"
+"PO-Revision-Date: 2023-06-02 20:47+0000\n"
 "Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "az/>\n"
@@ -2252,3 +2252,195 @@ msgid "log.review.reviewerUnassigned"
 msgstr ""
 "{$reviewerName} {$submissionId} nömrəli məqaləni dəyərləndirmə vəzifəsindən "
 "çıxdı({$round}. Dəyərləndirmə turu)."
+
+msgid "log.review.resubmit"
+msgstr "{$submissionId} nömrəli məqalə yenidən dəyərləndirilməyə təqdim olundu."
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+"{$reviewerName} {$submissionId} nömrəli məqalənin {$round}. turdakı "
+"dəyərləndirməsində məqaləni rədd etdi."
+
+msgid "log.review.reviewAccepted"
+msgstr ""
+"{$reviewerName} {$submissionId} nömrəli məqalənin {$round}. Turdakı "
+"dəyərləndirməsində məqaləni qəbul etdi."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName} {$submissionId} ilə tərif edilən müraciətin {$round} nömrəli "
+"dəyərləndirməsini {$reviewerName} adına qəbul etdi."
+
+msgid "log.review.reviewerFile"
+msgstr "Bir rəyçi dəyərləndirmə faylı yüklənib."
+
+msgid "log.editor.decision"
+msgstr ""
+"{$submissionId} məqaləsi üçün {$editorName} tərəfindən redaktor qərarı "
+"({$decision}) kimi qeyd edib."
+
+msgid "log.editor.recommendation"
+msgstr ""
+"{$submissionId} üçün bir redaktor tövsiyəsi ({$decision}), {$editorName} "
+"tərəfindən qeyd edildi."
+
+msgid "log.copyedit.initiate"
+msgstr ""
+"{$submissionId} ilə müəyyən olunmuş müraciətin səhifə tərtibatı "
+"{$copyeditorName} tərəfindən qəbul edilib."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Əvvəlcədən müəyyən edilmiş səhifə tərtibatı faylı seçilib."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+"{$copyeditorName} {$submissionId} ilə müəyyən edilmiş müraciətin son səhifə "
+"tərtibatını tamamlayıb."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr ""
+"{$copyeditorName} {$submissionId} ilə müəyyən edilmiş müraciətin səhifə "
+"tərtibatı üçün təyin edilib."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "Müraciət faylının səhifə tərtibatı versiyası sistemə göndərilib."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr ""
+"{$editorName} {$submissionId} ilə müəyyən edilmiş müraciətin tərtibatçısı "
+"kimi təyin edilib."
+
+msgid "log.layout.layoutEditComplete"
+msgstr ""
+"{$editorName} {$submissionId} ilə müəyyən edilmiş müraciətin tərtibatını "
+"tamamlayıb."
+
+msgid "log.editor.metadataModified"
+msgstr "{$editorName} bu məqalənin meta datasını dəyişdirib."
+
+msgid "log.editor.editorFile"
+msgstr "Müraciət faylının redaktor versiyası sistemə göndərilib."
+
+msgid "log.editor.archived"
+msgstr "{$submissionId} nömrəli məqalə arxivləşdirildi."
+
+msgid "log.editor.restored"
+msgstr "{$submissionId} nömrəli məqalə növbəyə alındı."
+
+msgid "log.proofread.assign"
+msgstr ""
+"{$assignerName} {$submissionId} nömrəli məqalə üçün korrektor kimi "
+"{$proofreaderName} tövsiyə edilir."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} {$submissionId} nömrəli məqalə nəşr üçün göndərildi."
+
+msgid "log.imported"
+msgstr "{$userName} {$submissionId} nömrəli məqaləni sistemə yüklədi."
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Yeni bir məqalə, \"{$title}\" göndərildi."
+
+msgid "notification.type.issuePublished"
+msgstr "Yeni nömrə dərc edilmişdir."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Yeni elan yaradıldı."
+
+msgid "notification.type.openAccess"
+msgstr "Nömrə açıq girişə verildi."
+
+msgid "notification.savedIssueMetadata"
+msgstr "Nömrə üst dataları yadda saxlandı."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Redaktorun təyin edilməsi gərəkən yeni bir məqalə göndərildi."
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+"İştirakçılar siyahısındakı Təyinat linkini istifadə edərək bir istifadəçi "
+"yaratmaq üçün bir istifadəçi təyin edin."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Çaplar gözləyir."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "Giriş rədd edildi. Bu məqaləyə nəşr redaktoru kimi təyin edilməmisiniz."
+
+msgid "user.authorization.noContext"
+msgstr "Tələbinizə uyğun gələn bir jurnal tapılmadı."
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Əldə etməyə cəhd etdiyiniz məqalə siz aid bir bölmənin hissəsi deyil."
+
+msgid "notification.type.approveSubmission"
+msgstr "Bu məqalənin nömrədə görünməsi üçün təsdiq tələb olunur."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Gözlənilən təsdiq."
+
+msgid "article.view.interstitial"
+msgstr "Zəhmət olmasa endirmək üçün bir məqalə faylı seçin."
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "Bu axtarış tətbiqi, jurnal başına təkrar indekslənməsinə icazə verməz."
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "Verilen gündəlik yolu \"{$journalPath}\" bu Jurnal üçün həll edilmədi."
+
+msgid "log.editor.submissionExpedited"
+msgstr ""
+"{$editorName}, {$submissionId} məqaləsi üçün tənzimləmə prosesini bitirdi."
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Bu kateqoriyadakı məqalələri necə sıralayacağınızı seçin."
+
+msgid "log.review.reviewerRated"
+msgstr ""
+"{$reviewerName}, {$submissionId} nömrəli məqalə üçün {$round}. tur "
+"deyərləndirməsi ilə dərəcələndirildi."
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"{$reviewerName} adlı rəyçiyə {$submissionId} nömrəli məqalənin {$round}. "
+"Turdakı dəyərləndirməsi üçün son tarix {$dueDate} olaraq müəyyənləşdirildi."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+"{$reviewerName} adlı rəyçiyə {$submissionId} nömrəli məqalənin {$round}. "
+"turdakı dəyərləndirməsi üçün təklif göndərildi."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"Redaktor {$editorName}, {$submissionId} nömrəli məqalənin {$round}. turdakı "
+"dəyərləndirməsi üçün {$reviewerName} adlı rəyçini tövsiyə etdi."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName} istifadəçi adlı {$reviewerName} adlı rəyçi {$submissionId} "
+"nömrəli məqalənin {$round}. tur dəyərləndirmə tələbini rədd etdi."
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"Redaktor, {$userName}, {$submissionId} ilə müəyyənləşdirilmiş müraciətin "
+"{$round} nömrəli dəyərləndirməsi nəticəsində {$reviewerName} adına bir "
+"dəyərləndirmə faylı yükləndi."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+"{$copyeditorName} {$submissionId} ilə müəyyən edilmiş müraciətin ilk səhifə "
+"tərtibatını tamamlayıb."
+
+msgid "log.copyedit.authorFile"
+msgstr ""
+"Müraciət faylının müəllif səhifə tərtibatı versiyası müəllif tərəfindən "
+"sistemə göndərilib."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr ""
+"{$editorName} {$submissionId} ilə müəyyən edilmiş müraciətin "
+"tərtibatçılığından azad edilib."
+
+msgid "log.editor.editorAssigned"
+msgstr ""
+"{$editorName} {$submissionId} nömrəli məqalə üçün redaktor təyin edilib."
