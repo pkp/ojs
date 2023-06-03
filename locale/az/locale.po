@@ -1,7 +1,7 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-06-02 22:43+0000\n"
+"PO-Revision-Date: 2023-06-03 08:24+0000\n"
 "Last-Translator: Osman Durmaz <osmandurmaz@hotmail.de>\n"
 "Language-Team: Azerbaijani <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "az/>\n"
@@ -703,7 +703,7 @@ msgid "user.subscriptions.form.typeId"
 msgstr "Abunəlik növü"
 
 msgid "user.subscriptions.form.ipRangeItem"
-msgstr "& # 8226;"
+msgstr "&#8226;"
 
 msgid "user.subscriptions.form.institutionName"
 msgstr "Təşkilat ad"
@@ -1130,7 +1130,7 @@ msgid "submission.copyedit.editorsCopyedit"
 msgstr "Redaktorun səhifə tərtibatı"
 
 msgid "submission.copyedit.copyeditVersion"
-msgstr "S / D versiyası"
+msgstr "S/D versiyası"
 
 msgid "reviewer.article.confirmDecision"
 msgstr ""
@@ -1231,7 +1231,7 @@ msgstr ""
 "Buraya IP aralıqları girilərsə, təsir sahəsi istəyə bağlıdır.<br />Etibarlı "
 "dəyərlər arasında bir IP adresi (məs. 142.58.103.1), IP aralığı (məs. "
 "142.58.103.1 - 142.58.103.4), '*' joker xarakterli IP aralığı (məs. 142.58. *"
-". *) Və CIDR-ın daxil olduğu bir IP aralığı (məs. 142.58.100.0/24)"
+". *) Və CIDR-ın daxil olduğu bir IP aralığı (məs. 142.58.100.0/24)."
 
 msgid "archive.browse"
 msgstr "Əvvəlki nömrələrə baxın"
