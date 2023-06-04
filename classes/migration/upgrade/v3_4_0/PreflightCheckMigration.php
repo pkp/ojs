@@ -15,7 +15,9 @@
 namespace APP\migration\upgrade\v3_4_0;
 
 use Illuminate\Database\Query\Builder;
+use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
 
 class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightCheckMigration
 {
@@ -279,5 +281,13 @@ class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightChe
             'citations' => ['citation_settings'],
             'issue_files' => ['issue_galleys']
         ];
+    }
+
+    protected function dropForeignKeys(): void
+    {
+        parent::dropForeignKeys();
+        if (DB::getDoctrineSchemaManager()->introspectTable('publication_galleys')->hasForeignKey('publication_galleys_submission_file_id_foreign')) {
+            Schema::table('publication_galleys', fn (Blueprint $table) => $table->dropForeign('publication_galleys_submission_file_id_foreign'));
+        }
     }
 }
