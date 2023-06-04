@@ -74,5 +74,5 @@ class SubmissionEventLogEntry extends PKPSubmissionEventLogEntry
 }
 
 if (!PKP_STRICT_MODE) {
-    class_alias('\APP\log\SubmissionEventLogEntry', '\SubmissionEventLogEntry');
+    class_alias('\APP\log\event\SubmissionEventLogEntry', '\SubmissionEventLogEntry');
 }
