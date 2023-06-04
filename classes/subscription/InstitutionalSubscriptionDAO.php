@@ -594,7 +594,7 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
      */
     public function renewSubscription($institutionalSubscription)
     {
-        return $this->_renewSubscription($institutionalSubscription);
+        $this->_renewSubscription($institutionalSubscription);
     }
 
     /**

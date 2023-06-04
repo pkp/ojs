@@ -171,7 +171,7 @@ class CounterReportJR1 extends CounterReport
         try {
             $reportItem = new ReportItems(__('common.software'), $journalName, COUNTER_LITERAL_JOURNAL, $metrics, null, $journalPubIds);
         } catch (Exception $e) {
-            $this->setError($e, COUNTER_EXCEPTION_ERROR | COUNTER_EXCEPTION_INTERNAL);
+            $this->setError(new Exception($e->getMessage(), COUNTER_EXCEPTION_ERROR | COUNTER_EXCEPTION_INTERNAL, $e));
         }
         return $reportItem;
     }

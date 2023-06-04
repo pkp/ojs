@@ -165,7 +165,7 @@ class SubscriptionType extends \PKP\core\DataObject
     public function getCurrencyString()
     {
         $currency = Locale::getCurrencies()->getByLetterCode($this->getData('currencyCodeAlpha'));
-        return $currency ? $currency->getLocalName() : 'subscriptionTypes.currency';
+        return $currency?->getLocalName() ?? 'subscriptionTypes.currency';
     }
 
     /**
@@ -176,7 +176,7 @@ class SubscriptionType extends \PKP\core\DataObject
     public function getCurrencyStringShort()
     {
         $currency = Locale::getCurrencies()->getByLetterCode($this->getData('currencyCodeAlpha'));
-        return $currency ? $currency->getLetterCode() : 'subscriptionTypes.currency';
+        return $currency?->getLetterCode() ?? 'subscriptionTypes.currency';
     }
 
     /**
