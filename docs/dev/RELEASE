@@ -11,6 +11,7 @@ OJS release:
     dbscripts/xml/install.xml
     dbscripts/xml/upgrade.xml
     package.json (and package-lock.json, using `npm install`)
+    lib/ui-library/package.json (and lib/ui-library/package-lock.json, using `npm install`)
 
     Commands that may be helpful in determining what bugs have been closed
     since the last release (whose tag is specified in place of <last-tag>:
@@ -80,3 +81,14 @@ file and commit it to the new stable branch.
     https://pkp.sfu.ca/ojs/RELEASE-<VERSION>
     https://pkp.sfu.ca/ojs/UPGRADE-<VERSION>
     https://pkp.sfu.ca/ojs/dtds
+
+7. If this is a major release, update the Release Notebook to include the release
+    date. Example:
+
+    OJS, OMP and OPS version 3.4 was released on DD, Month, YYYY.
+
+8. When a stable branch is created for a major release, update the Admin Guide
+    with a permalink to the sample XML import file that points to the file in
+    the stable branch. Example:
+
+    https://github.com/pkp/pkp-docs/blob/325461a5b7dcefc1477f18a25ca84027e38b302a/admin-guide/en/data-import-and-export.md?plain=1#L39-L42
