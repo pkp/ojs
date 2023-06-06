@@ -308,7 +308,8 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                     $creators[] = [
                         'name' => $creator,
                         'orcid' => null,
-                        'affiliation' => null
+                        'affiliation' => null,
+                        'ror' => null
                     ];
                     break;
                 }
@@ -323,7 +324,8 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                     $creators[] = [
                         'name' => $author->getFullName(false, true),
                         'orcid' => $author->getOrcid(),
-                        'affiliation' => $author->getLocalizedData('affiliation', $publication->getData('locale'))
+                        'affiliation' => $author->getLocalizedData('affiliation', $publication->getData('locale')),
+                        'ror' => $author->getData('rorId') ?? null
                     ];
                 }
                 break;
@@ -331,7 +333,8 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 $creators[] = [
                     'name' => $publisher,
                     'orcid' => null,
-                    'affiliation' => null
+                    'affiliation' => null,
+                    'ror' => null
                 ];
                 break;
         }
@@ -349,6 +352,11 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             }
             if ($creator['affiliation']) {
                 $node = $doc->createElementNS($deployment->getNamespace(), 'affiliation');
+                if ($creator['ror']) {
+                    $node->setAttribute('affiliationIdentifier', $creator['ror']);
+                    $node->setAttribute('affiliationIdentifierScheme', 'ROR');
+                    $node->setAttribute('schemeURI', 'https://ror.org');
+                }
                 $node->appendChild($doc->createTextNode($creator['affiliation']));
                 $creatorNode->appendChild($node);
             }
