@@ -120,10 +120,10 @@ class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightChe
             // Clean orphaned publications entries by primary_contact_id
             switch (true) {
                 case DB::connection() instanceof MySqlConnection:
-                    DB::statement('UPDATE publications p LEFT JOIN users u ON (p.primary_contact_id = u.user_id) SET p.primary_contact_id = NULL WHERE u.user_id IS NULL');
+                    DB::statement('UPDATE publications p LEFT JOIN authors a ON (p.primary_contact_id = a.author_id) SET p.primary_contact_id = NULL WHERE a.author_id IS NULL');
                     break;
                 case DB::connection() instanceof PostgresConnection:
-                    DB::statement('UPDATE publications SET primary_contact_id = NULL WHERE publication_id IN (SELECT publication_id FROM publications p LEFT JOIN users u ON (p.primary_contact_id = u.user_id) WHERE u.user_id IS NULL AND p.primary_contact_id IS NOT NULL)');
+                    DB::statement('UPDATE publications SET primary_contact_id = NULL WHERE publication_id IN (SELECT publication_id FROM publications p LEFT JOIN authors a ON (p.primary_contact_id = a.author_id) WHERE a.author_id IS NULL AND p.primary_contact_id IS NOT NULL)');
                     break;
                 default: throw new \Exception('Unknown database connection type!');
             }
