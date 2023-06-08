@@ -123,7 +123,7 @@ class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightChe
                     DB::statement('UPDATE publications p LEFT JOIN authors a ON (p.primary_contact_id = a.author_id) SET p.primary_contact_id = NULL WHERE a.author_id IS NULL');
                     break;
                 case DB::connection() instanceof PostgresConnection:
-                    DB::statement('UPDATE publications SET primary_contact_id = NULL WHERE publication_id IN (SELECT publication_id FROM publications p LEFT JOIN authors a ON (p.primary_contact_id = a.author_id) WHERE a.author_id IS NULL AND p.primary_contact_id IS NOT NULL)');
+                    DB::statement('UPDATE publications SET primary_contact_id = NULL WHERE publication_id IN (SELECT p.publication_id FROM publications p LEFT JOIN authors a ON (p.primary_contact_id = a.author_id) WHERE a.author_id IS NULL AND p.primary_contact_id IS NOT NULL)');
                     break;
                 default: throw new \Exception('Unknown database connection type!');
             }
