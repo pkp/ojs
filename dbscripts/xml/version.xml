@@ -15,7 +15,7 @@
 	<type>core</type>
 	<release>3.4.0.0</release>
 	<tag>3_4_0-0</tag>
-	<date>2023-03-29</date>
+	<date>2023-06-09</date>
 	<info>https://pkp.sfu.ca/ojs/</info>
-	<package>https://pkp.sfu.ca/ojs/download/ojs-3.4.0rc2.tar.gz</package>
+	<package>https://pkp.sfu.ca/ojs/download/ojs-3.4.0.tar.gz</package>
 </version>
