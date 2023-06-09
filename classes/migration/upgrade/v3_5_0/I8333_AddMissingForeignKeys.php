@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/migration/upgrade/v3_4_0/I8333_AddMissingForeignKeys.php
+ * @file classes/migration/upgrade/v3_5_0/I8333_AddMissingForeignKeys.php
  *
  * Copyright (c) 2023 Simon Fraser University
  * Copyright (c) 2023 John Willinsky
@@ -12,9 +12,9 @@
  * @brief Upgrade/downgrade operations for introducing foreign key definitions to existing database relationships.
  */
 
-namespace APP\migration\upgrade\v3_4_0;
+namespace APP\migration\upgrade\v3_5_0;
 
-class I8333_AddMissingForeignKeys extends \PKP\migration\upgrade\v3_4_0\I8333_AddMissingForeignKeys
+class I8333_AddMissingForeignKeys extends \PKP\migration\upgrade\v3_5_0\I8333_AddMissingForeignKeys
 {
     protected function getContextTable(): string
     {

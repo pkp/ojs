@@ -93,7 +93,6 @@
 		<migration class="PKP\migration\upgrade\v3_4_0\I9039_DropDeprecatedFields"/>
 		<migration class="APP\migration\upgrade\v3_4_0\I8933_EventLogLocalized"/>
 		<migration class="APP\migration\upgrade\v3_4_0\I7470_FixDeprecatedFileStage"/>
-		<migration class="APP\migration\upgrade\v3_4_0\I8333_AddMissingForeignKeys" />
 		<note file="docs/release-notes/README-3.4.0" />
 	</upgrade>
 
@@ -134,7 +133,7 @@
 		<migration class="PKP\migration\upgrade\v3_5_0\I9566_SessionUpgrade"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I9809_ReviewCancelDate"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I9860_EditorialMastheadNavMenuItem"/>
-		<migration class="PKP\migration\upgrade\v3_5_0\I8826_AddMissingForeignKeys" />
+		<migration class="APP\migration\upgrade\v3_5_0\I8333_AddMissingForeignKeys" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
