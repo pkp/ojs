@@ -1,12 +1,8 @@
-OJS 3.4.0rc2 Release Notes
-Git tag: 3_4_0rc2
+OJS 3.4.0 Release Notes
+Git tag: 3_4_0-0
 
-Release date: March 29, 2023
+Release date: June 9, 2023
 ============================
-
-=========================================================================
-THIS IS A PRE-RELEASE VERSION OF OJS AND NOT INTENDED FOR PRODUCTION USE.
-=========================================================================
 
 Configuration Changes
 ---------------------
@@ -48,6 +44,257 @@ New config.inc.php section for queues is added, with the following parameters:
 
 New Features
 ------------
+    #8490 #8484: Improved MariaDB testing and support
+    #8478: Improve GoogleScholarPlugin
+    #8474: Improve the content of REVIEW_COMPLETE and REVIEW_EDITED templates 
+    #8437: Add descriptive comments to database tables/columns
+    #8406: Improve DublinCoreMetaPlugin
+    #8403: Consider submissions with no contributors
+    #8369: Consider new DOI implementation in other parts of the code
+    #8351: Store a copy of the agreed copyright notice in a submission's activity log
+    #7265: Improve workflow for making an editorial decision
+    #7191: Improve submission wizard accessibility and usability
+    #2676: Track and report on institutional subscriber usage
+    #8328: CSV for stats API timeline functions
+    #8306: Enhance the queue failed jobs functionality. 
+    #6781: Support COUNTER Release 5
+    #6782: Improve usage statistics handling in the background/code
+    #7392: Ensure Site Administrators have "global" access within journals
+    #7391: Ensure that Managers can control enrolments within their journal
+    #6062: CrossRef and DOI UI/UX quality of life improvements
+    #orcidProfile/181: Support reviewer credit with ORCiD
+    #2564: Support HTML markup in submission titles
+    #4622: Implement a third-party library for a queuing tasks
+    #4343: Use jobs to send new issue published email notifications
+    #5716: Refactor email templates to better support discovery, reuse and documentation
+    #5730: Improve subject and body of the default email templates
+    #6093: Setup foreign key constraints
+    #6091: Enable all classes to be autoloaded
+    #6328: Migrate locale file loading to standard toolset
+    #5678: Introduce code formatter to enforce code style
+    #8290: Inclusion of Data Availability Statement as submission metadata
+    #8258: Add more context and documentation to Crossref setup/credentials 
+    #8250: Improve help text for statistics settings forms
+    #8240: Consider parent object ID in DAO exists and get functions
+    #8310: Discourage DOI assignment for items other than submissions
+    #8239: Update Cypress to support end-to-end testing
+    #8210: Standardize locale code handling
+    #8157: Extend all setting_value columns in settings table to mediumText
+    #8155: Allow Mailables to use custom email templates through API 
+    #8127: Allow embedding a footer to certain emails
+    #8117: Refactor email sending code in plugins and convert to Mailables
+    #8093 #8092 #7129 #7128 #7127 #7126 #7125 #7124: Add improved Repository patterns
+    #8083: Improve HookRegistry hook calling conventions
+    #8051: Improve the default submission checklist
+    #8044: Allow queued jobs to be processed by workers
+    #8043: Run more than one job per request
+    #8040: Update unit tests
+    #8020: Use queued jobs for all DOI deposits
+    #7933: Update DOI suffix generator based on ISO standard best practices
+    #7901: Exclude duplicated IDs from deleted records in OAI interface
+    #7863: Add API endpoint to get a submission's editorial decisions
+    #7796: Update supported Crossref Schema across pkp-lib
+    #7581: Consider replace Swift Mailer with Symfony Mailer
+    #7356: New email templates notifying authors that their submission is being sent to review
+    #7353: Fix queries for MySQL ONLY_FULL_GROUP_BY mode; reduce dependence on GROUP BY
+    #7352: Add translations of language names to locale install list
+    #7318: Integrate statistics Custom Report Generator with article statistics UI
+    #7286: Convert all configurable emails to Mailables
+    #7285: Investigate how to handle cases where sendmail executable can not be invoked
+    #7258: Handle email template localization more gracefully
+    #7171: Add an interface for viewing processing queue status
+    #7141: Consider integration of Laravel Mail Service
+    #7112: A preview of metadata and uploaded files at step 4 of submission
+    #7105: Allow queued jobs to be processed by a cron job
+    #7014: Bring DOIs into the core application and refactor to support deposit status
+    #6941: Notify reviewers when a submission they reviewed has been accepted or rejected
+    #6895: IP location and institution service
+    #6685: OPS should support tombstones for deleted content
+    #6241: Add an option to make a submission file mandatory
+    #6222: Embed discussion content into the notification message body  
+    #6126: Send a weekly email to editors of pending tasks
+    #6099: Add a "country" field to journal setup
+    #6077: Reduce dependency on `exec`
+    #5798: Make it possible to move a submission back into review
+    #5717: Improvements to email selection, draft, preview and send during workflow
+    #5048: Add direct "Unsubscribe" link to notification emails
+    #4789: Permit declined reviews to be reinitiated
+    #4246: Add option to select "Reviewers from this submission previous review rounds" in Round 2
+    #3585: Allow a review round to be canceled after it has been created
+    #3525: Select language when using email templates
+    #2890: Allow editors to "back out" of the review, copyediting or production stages
+    #743: Add recipient control on email forms
 
 Bug Fixes
 ---------
+    #9040: Entities using the "schema" pattern don't need the setting_type field
+    #9039: Remove deprecated fields
+    #8733: Warnings at the FileCache class
+    #8696: When searching for a user, the results might be not visible in the interface
+    #8689: Multi journal installation cause translation keys added to roles instead of translations
+    #8679: Chapter landing pages preview not possible
+    #8635: One-click review access URL not supported in automated reminder emails
+    #8629: Add usage stats display options to the themes
+    #8625: Access to the chapter landing page is not logged correctly
+    #8591: Read-only CSS is applied in autosuggest fields in submission wizard
+    #8518: Update npm packages
+    #8503: Use more permanent URL in mailing list signup after install
+    #8492: File attachments don't show names in fallback locales in Composer
+    #8448: Issue galleys do not use their original filenames when downloaded
+    #8432: Search index recreation with shutdown function on Apache causes stopwords.txt file not found error
+    #8423: Make use of EDITOR_ASSIGN email template more consistent
+    #8421: LOCKSS email templates are not associated with a mailable
+    #8409: Restructure the implementation of queue jobs related files/classes to match current class file structure
+    #8379: Remove reply to link from DISCUSSION_NOTIFICATION email template body
+    #8374: Investigate schedule tasks to make sure execution completion return bool
+    #8370: ID not aligned correctly in submissions list
+    #8363: Submission search index not updating after deleting a submission
+    #8348: Missing email template variables in emails related to a new submission
+    #8344: Author country is not validated in the REST API
+    #8263: Current and default values are not being displayed correctly in form fields (as per appearance theme form) 
+    #8231: Consider valid spacial characters in DOI suffix
+    #8223: Update API Key related cypress test
+    #8219: Native Import/Export plugin - Security Issue regarding file download 
+    #8176: Remove LDAP plugin and auth plugin category
+    #8170: Upgrade sokil/php-isocodes to fix warnings
+    #8166: The dc oai metadata format plugin for OJS has duplicated localization
+    #8160: Flaky test failing most of OMP builds
+    #8158: Replace abandoned Stringy package
+    #8143: SubmissionFile's corresponding File not deleted when a new Note process is cancelled  
+    #8091: Consider new templates for automatic notification emails and remove redundant
+    #8060: User locales set to NULL on user registration
+    #8014: Document new usage stats implementation
+    #7995: Warning when accessing the properties of a schema's field
+    #7989: Show REVIEW_REQUEST_SUBSEQUENT email only if reviewer is assigned a second time
+    #7958: 3.3.0 installs a locale column in the publications table that should have been removed
+    #7927: Native Import/Export: Better error message for missing UserGroup
+    #7917: Native Import Export - Remove primary_contact from chapter authors
+    #7871: Remove country from language selection in the UI
+    #7831: Review use of events and hooks for consistency
+    #7815: Review and update Composer dependencies before 3.4 testing
+    #7814: Back issues show date format syntax (Y-m-d) instead of date
+    #7812: Submission files will be deleted when deleting submission file pub ids
+    #7806: Some email variables do not have a description
+    #7805: OJS 3.4 download .tar.gz files results in wrong file extension for downloaded file
+    #7777: Incorrect dates in publications stats intervals
+    #7772: Issues filter doesn't show active filter in submissions list
+    #7761: Psy\sh() debugger not working
+    #7760: Submission file API does not return genre information
+    #7748: Files for promotion can exceed container width
+    #7744: Ensure email template variables are properly filtered
+    #7743: Improve UI to add variable data to emails
+    #7742: Allow user to go to submissions list after recording editorial decision
+    #7725: Sync the values of editorial decision constants across all applications
+    #7715: Automated Review Reminder not sent when the Reviewer already got an automated Request Reminder
+    #7693: Expand DOI test coverage and consolidate common code into pkp-lib
+    #7691: Include Date Published for Articles in Statistics Reports (Views, Articles, Custom)
+    #7690: Add PHP8.1 testing to Travis environment
+    #7687: Consolidate DOI settings migrations into pkp-lib where possible
+    #7673: Remove locale requirement in upgrade XML when installing new email templates
+    #7665: The DataCite Export plugin misrepresents page numbers of journal articles
+    #7624: Replace strftime() as it's deprecate in PHP 8.1 
+    #7608: Add test to check DC metadata tags on article landing page
+    #7592: Refactor review assignments emails
+    #7537: Sync PKP repository for TextEditorExtras and make release
+    #7525: All DOI endpoints that perform actions should be PUT methods
+    #7520: Increase issue galley label length to match publication galley labels
+    #7519: Document new DOI endpoints in the API documentation
+    #7516: Remove the DOI preview table from the publishing preview
+    #7486: Allow editors other than the assigned editor to confirm a review and thank the reviewer
+    #7479: User::getContactSignature() should be removed
+    #7451: Information Disclosure via Forget Password
+    #7426: Clarify field description for Preferred Public Name
+    #7399: Remove 3.0.x upgrade scripts
+    #7395: Delete OneClick email templates
+    #7384: ViewReport: provide PDF, HTML, Other stats instead of stats for each artilce galley
+    #7380: Add CSRF check to user profile image deletion
+    #7379: users with userId of 1 cannot be merged
+    #7366: Investigate potential UI/UX problems generating API keys
+    #7346: Object properties are not converted to the correct type in API requests
+    #7340: Debug option for emails
+    #7333: Remove PressSettingsDAO/JournalSettingsDAO/ServerSettingsDAO
+    #7332: Fix subscription searches
+    #7325: EntityDAO input sanitization does not allow nullable int columns
+    #7297: Add test that uses the API key
+    #7292: Publication not published if new version created and is assigned to a new issue
+    #7264: Rename email template variables
+    #7260: Separate email templates for site and context registration
+    #7259: Perform email template validation when it's saved
+    #7254: All entity collections should use IDs as keys
+    #7249: Email duplication during user registration by changing lowercase to uppercase
+    #7245: users.locales incorrect serialization
+    #7244: Password Change form overwrites user input on failed change
+    #7225: Review use of {$principalContactSignature} in email templates
+    #7189: Disabling reinstate reviewer email template has no effect
+    #7187: Drag and Drop fails on dependent files
+    #7101: Make the journal health report (STATISTICS_REPORT_NOTIFICATION) respect the template enabled/disabled flag
+    #7077: Hover/focus states misaligned in default theme navigation menu
+    #7074: Include discussion emails in activity log
+    #7050: Remove unused issue import test files
+    #7034: Import/Export plugin - remove get_class dependency for filter retrieval 
+    #7009: GoogleScholarPlugin.inc.php still references removed SupplementaryFile class
+    #7002: "usage" command missing from native import/export CLI
+    #6983: On password change, invalidate other sessions
+    #6969: Forms shouldn't submit data from FieldHTML form fields
+    #6963: Improve OAI performance
+    #6945: UsageStats rejects a whole logfile, even with only one malformed line
+    #6927: Quicksubmit cover image preview is broken
+    #6925: Set default user for CLI tool
+    #6921: Show exception error message when a plugin migration fails
+    #6918: Aria-labelledby on galley links must include galley label 
+    #6917: Increase contrast of required indicator in login/registration forms
+    #6915: Register Laravel service providers to allow use of global functions
+    #6904: REVIEW_REQUEST_REMIND_AUTO & REVIEW_REMIND_AUTO
+    #6882: Unnecessary path part in search URLs 
+    #6874: remove commercial URL from config.TEMPLATE.inc.php
+    #6850: Move creator (author) management tools to API and new form structures
+    #6849: Tool to convert old and apache log files into new format 
+    #6839: Import/Export plugin - SubmissionFiles lose doi data on import
+    #6831: Update gettext dependency to 5.x
+    #6826: Migrate TinyMCE to 5.x
+    #6809: Add submissions filter by category
+    #6777: Slow query in issueDao getNumArticles
+    #6758: Submission email attachments from 2.x not presented in 3.x
+    #6545: Remove use of fileId when referring to submissionFileId
+    #6539: Optionally require reCaptcha during the login
+    #6490: Native Import/Export Plugin - Several Changes
+    #6432: Email templates offer first alphabetically available installed language even if language is not active
+    #6306: Add an option to enable/disable categories in submission workflow
+    #6272: Re-add submission acknowledgement email recipient controls in Settings
+    #6160: Submission process confusion with Corresponding Contact and Privacy Consent 
+    #6039: Difficulty to edit fields in other languages
+    #6006: DOI/Crossref Cypress Tests
+    #5998: A stalled request to plugins.xml can block subsequent http requests
+    #5960: Native Import/export: Unexpected error when importing
+    #5948: Write integration tests for unpublishing an issue
+    #5850: Audit forms for RTL language compatibility
+    #5739: Different Contributor roles like translators are not taken into account when displaying and exporting metadata
+    #5625: Remove unnecessary Application::getPluginSettingsContextColumnName() method
+    #5196: CSS Pseudo selectors creating a duplicated link announcement on screenreaders
+    #5195: Remove current issue link from the cover image on the homepage
+    #5194: Add role="form" to all forms in default theme
+    #5192: Remove unnecessary aria-labels
+    #4900: Assign participant form list issue
+    #4734: [Sprint/UIUX] New Submission Step 1 - General UIUX interface considerations
+    #4732: [Sprint/UIUX] New Submission Step 1 - Consider confirming all required fields with one button
+    #4569: URLs are often double-escaped in smarty templates
+    #4507: Do not automatically send editor decision emails to all co-authors
+    #4457: Allow journal editors to be automatically assigned to submissions in a section
+    #4301: ThemePlugin::isColourDark() returns true if color string is null
+    #4240: Remove unvalidated new accounts after expiry
+    #4235: Improve OAI-PMH set spec compliance
+    #4076: Test suite passes despite failures in plugins tests
+    #4073: mergeUsers does not update user_id in all relevant tables in the database
+    #4059: No email sent to author when article goes to external review
+    #4056: Change the default DOI suffix patterns so that they support future changes in OJS
+    #3899: Prevent deletion of active genres/components
+    #3646: When publishing new issue, PUBLISH_NOTIFY template not used
+    #3396: Consider renaming Submission List "Archives" to "Archived"
+    #3391: pkp-lib/classes/xslt/XMLTypeDescription.inc.php Doesn't work when behind HTTP proxy
+    #3351: Add integrity checks before upgrade process
+    #3253: Glossary of e-mail variables
+    #3227: Add submission ID to email subject for all submission-related emails
+    #3193: [OJS] Allow prepared email templates to be selectively available for discussions and participant assignment
+    #3187: [OJS] Author can not see Editor decision if article get declined without peer-review
+    #2524: OJS shouldn't notify all contributors when an editorial decision is made
+
