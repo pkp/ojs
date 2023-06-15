@@ -53,11 +53,11 @@ jobs:
   include:
     - stage: test
       env: TEST=pgsql SAVE_BUILD=true
-      php: 8.0
+      php: 8.1.0
     - env: TEST=pgsql
       php: 8.1.0
     - env: TEST=mariadb SAVE_BUILD=true
-      php: 8.0
+      php: 8.1.0
     - env: TEST=mysql SAVE_BUILD=true
       php: 8.1.0
     - env: TEST=mysql LIBONIG_INSTALL=1
@@ -66,7 +66,7 @@ jobs:
       php: 8.2.0
 
     - stage: validate
-      php: 8.0
+      php: 8.1.0
       name: "Validate and lint"
       script:
       - |
@@ -80,7 +80,7 @@ jobs:
 
     - stage: upgrade
       env: DATASET_BRANCH=stable-3_3_0 TEST=mysql
-      php: 8.0
+      php: 8.1.0
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
@@ -94,7 +94,7 @@ jobs:
         - php tools/upgrade.php upgrade
 
     - env: DATASET_BRANCH=stable-3_2_1 TEST=mysql
-      php: 8.0
+      php: 8.1.0
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
@@ -108,7 +108,7 @@ jobs:
         - php tools/upgrade.php upgrade
 
     - env: DATASET_BRANCH=stable-3_2_0 TEST=mysql
-      php: 8.0
+      php: 8.1.0
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
@@ -122,7 +122,7 @@ jobs:
         - php tools/upgrade.php upgrade
 
     - env: DATASET_BRANCH=3.1.2 TEST=mysql
-      php: 8.0
+      php: 8.1.0
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
@@ -136,7 +136,7 @@ jobs:
         - php tools/upgrade.php upgrade
 
     - env: DATASET_BRANCH=3.1.1-2 TEST=mysql
-      php: 8.0
+      php: 8.1.0
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
@@ -150,7 +150,7 @@ jobs:
         - php tools/upgrade.php upgrade
 
     - env: DATASET_BRANCH=3.1.0 TEST=mysql
-      php: 8.0
+      php: 8.1.0
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
@@ -164,7 +164,7 @@ jobs:
         - php tools/upgrade.php upgrade
 
     - env: DATASET_BRANCH=stable-3_3_0 TEST=pgsql
-      php: 8.0
+      php: 8.1.0
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
@@ -178,7 +178,7 @@ jobs:
         - php tools/upgrade.php upgrade
 
     - env: DATASET_BRANCH=stable-3_2_1 TEST=pgsql
-      php: 8.0
+      php: 8.1.0
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
@@ -192,7 +192,7 @@ jobs:
         - php tools/upgrade.php upgrade
 
     - env: DATASET_BRANCH=stable-3_2_0 TEST=pgsql
-      php: 8.0
+      php: 8.1.0
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
@@ -206,7 +206,7 @@ jobs:
         - php tools/upgrade.php upgrade
 
     - env: DATASET_BRANCH=3.1.0 TEST=pgsql
-      php: 8.0
+      php: 8.1.0
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
         - git clone https://github.com/pkp/datasets
