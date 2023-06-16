@@ -1,7 +1,7 @@
 OJS 3.4.0 Release Notes
-Git tag: 3_4_0-0
+Git tag: 3_4_0-1
 
-Release date: June 9, 2023
+Release date: June 16, 2023
 ============================
 
 Configuration Changes
@@ -41,6 +41,17 @@ New config.inc.php section for queues is added, with the following parameters:
 - The setting general.session_samesite (default value: Lax) has been added to control the "SameSite" setting for the session cookie.
 
 - The setting security.force_ssl, when enabled, will also set the "Secure" flag for the session cookie.
+
+3.3.0-1 build
+-------------
+    #9102: Review Reports not generate
+    #9084: HTML should be stripped from submission titles when used in email titles
+    #9097: Invalid DOI plugin settings for context_id 0 cause database error on upgrade
+    #9094: 3.4.0-0 Backend Page for managing catalog not loading
+    #9098: MyISAM/InnoDB engine check does not properly present list of affected tables
+    #9091: ROLE_ID_ASSISTANT const has wrong value
+    #9072: Update event log variable names in locale messages submission.event.*
+    #8967: Crossref Reference Linking Plugin for OJS 3.4
 
 New Features
 ------------
