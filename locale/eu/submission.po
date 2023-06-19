@@ -3,8 +3,8 @@
 # Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-06-19 09:57+0000\n"
-"Last-Translator: Josu Acosta <josuacostacalvo@gmail.com>\n"
+"PO-Revision-Date: 2023-06-19 14:25+0000\n"
+"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "eu/>\n"
 "Language: eu\n"
@@ -48,7 +48,7 @@ msgid "submission.abstract.wordCount.description"
 msgstr "Laburpenak {$wordCount} hitz edo gutxiago izan behar ditu."
 
 msgid "submission.submit.noContext"
-msgstr "Ezin da aurkitu bidalketa honen aldizkaria."
+msgstr "Ezin da aurkitu bidalketa honi lotutako aldizkaria."
 
 msgid "submission.issueEntry"
 msgstr "Metadatuak"
