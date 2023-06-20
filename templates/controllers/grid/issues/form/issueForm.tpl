@@ -43,14 +43,14 @@
 
 	{if $issuePublished}
 		{fbvFormArea id="datePublishedArea" title="editor.issues.datePublished"}
-			{fbvFormSection}
+			{fbvFormSection list=true}
 				{if $issuePublished}
-					{fbvElement type="text" id="datePublished" value=$datePublished size=$fbvStyles.size.SMALL class="datepicker"}
+					{fbvElement type="text" id="datePublished" value=$datePublished inline=true size=$fbvStyles.size.SMALL class="datepicker"}
+					{fbvElement type="checkbox" label="editor.issues.resetPublicationDatePublished" id="resetPublicationDatePublished" inline=true value=1}
 				{/if}
 			{/fbvFormSection}
 		{/fbvFormArea}
 	{/if}
-
 
 	{fbvFormArea id="identificationArea" title="editor.issues.identification"}
 		{fbvFormSection}
