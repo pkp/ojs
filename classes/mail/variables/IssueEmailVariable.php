@@ -17,6 +17,7 @@
 namespace APP\mail\variables;
 
 use APP\core\Application;
+use APP\facades\Repo;
 use APP\issue\Issue;
 use PKP\mail\Mailable;
 use PKP\mail\variables\Variable;
@@ -26,6 +27,7 @@ class IssueEmailVariable extends Variable
     public const ISSUE_ID = 'issueId';
     public const ISSUE_IDENTIFICATION = 'issueIdentification';
     public const ISSUE_URL = 'issueUrl';
+    public const ISSUE_TOC = 'issueToc';
 
     protected Issue $issue;
 
@@ -43,6 +45,7 @@ class IssueEmailVariable extends Variable
             static::ISSUE_ID => __('emailTemplate.variable.issueId'),
             static::ISSUE_IDENTIFICATION => __('emailTemplate.variable.issue.issueIdentification'),
             static::ISSUE_URL => __('emailTemplate.variable.issue.issuePublishedUrl'),
+            static::ISSUE_TOC => __('emailTemplate.variable.issue.issueTableOfContent'),
         ];
     }
 
@@ -53,6 +56,7 @@ class IssueEmailVariable extends Variable
             static::ISSUE_ID => $this->issue->getId(),
             static::ISSUE_IDENTIFICATION => htmlspecialchars($this->issue->getIssueIdentification()),
             static::ISSUE_URL => $this->getIssueUrl(),
+            static::ISSUE_TOC => $this->getIssueToc(),
         ];
     }
 
@@ -66,5 +70,34 @@ class IssueEmailVariable extends Variable
             'view',
             $this->issue->getBestIssueId()
         );
+    }
+
+    protected function getIssueToc(): string
+    {
+        $request = Application::get()->getRequest();
+
+        $submissions = Repo::submission()->getCollector()
+            ->filterByContextIds([$this->getContext()->getId()])
+            ->filterByIssueIds([$this->issue->getId()])
+            ->getMany();
+
+        if($submissions->count() <= 0) {
+            return '';
+        }
+
+        $list = $submissions->map(function ($submission) use ($request) {
+            $publication = $submission->getCurrentPublication();
+            $url = $request->getDispatcher()->url(
+                $request,
+                Application::ROUTE_PAGE,
+                $this->getContext()->getPath(),
+                'article',
+                'view',
+                $publication->getData('urlPath') ?? $submission->getId()
+            );
+            return '<li><a href="' . $url . '">' . $publication->getLocalizedFullTitle(null, 'html') . '</a></li>';
+        });
+
+        return '<ol>' . $list->implode('') . '</ol>';
     }
 }
