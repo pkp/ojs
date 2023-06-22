@@ -36,12 +36,12 @@ class TocGridCellProvider extends GridCellProvider
      */
     public function getTemplateVarsFromRowColumn($row, $column)
     {
-        $element = $row->getData();
+        $element = $row->getData(); /** @var \APP\submission\Submission $element */
         $columnId = $column->getId();
         assert(!empty($columnId));
         switch ($columnId) {
             case 'title':
-                return ['label' => $element->getLocalizedTitle()];
+                return ['label' => $element->getCurrentPublication()->getLocalizedTitle(null, 'html')];
             case 'access':
                 return ['selected' => $element->getCurrentPublication()->getData('accessStatus') == Submission::ARTICLE_ACCESS_OPEN];
             default: assert(false);
