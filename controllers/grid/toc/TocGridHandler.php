@@ -67,6 +67,7 @@ class TocGridHandler extends CategoryGridHandler
     /**
      * @copydoc CategoryGridHandler::initialize()
      *
+     * @param \APP\core\Request $request
      * @param null|mixed $args
      */
     public function initialize($request, $args = null)
@@ -85,7 +86,8 @@ class TocGridHandler extends CategoryGridHandler
                 'article.title',
                 null,
                 null,
-                $tocGridCellProvider
+                $tocGridCellProvider,
+                ['html' => true]
             )
         );
 
