@@ -10,7 +10,7 @@
 <record
 	xmlns="http://www.loc.gov/MARC21/slim"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+	xsi:schemaLocation="http://www.loc.gov/MARC21/slim https://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
 	<leader>     nmb a2200000Iu 4500</leader>
 	{if $article->getDatePublished()}
 		<controlfield tag="008">"{$article->getDatePublished()|strtotime|date_format:"%y%m%d %Y"}                        eng  "</controlfield>

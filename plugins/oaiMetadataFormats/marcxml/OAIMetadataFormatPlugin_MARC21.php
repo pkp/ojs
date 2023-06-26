@@ -55,7 +55,7 @@ class OAIMetadataFormatPlugin_MARC21 extends OAIMetadataFormatPlugin
 
     public static function getSchema()
     {
-        return 'http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd';
+        return 'https://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd';
     }
 
     public static function getNamespace()
