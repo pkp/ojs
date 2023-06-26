@@ -18,11 +18,15 @@ namespace APP\pages\oai;
 
 use APP\handler\Handler;
 use APP\oai\ojs\JournalOAI;
+
 use Firebase\JWT\JWT;
+
+use Firebase\JWT\Key;
 use PKP\config\Config;
 use PKP\oai\OAIConfig;
 use PKP\plugins\PluginRegistry;
 use PKP\session\SessionManager;
+use stdClass;
 
 // Disable initializing the session
 SessionManager::disable();
@@ -66,7 +70,10 @@ class OAIHandler extends Handler
         if ($header = array_search('Authorization', array_flip(getallheaders()))) {
             [$bearer, $jwt] = explode(' ', $header);
             if (strcasecmp($bearer, 'Bearer') == 0) {
-                $apiToken = JWT::decode($jwt, Config::getVar('security', 'api_key_secret', ''), ['HS256']);
+                $headers = new stdClass();
+                $secret = Config::getVar('security', 'api_key_secret', '');
+                $apiToken = ((array)JWT::decode($jwt, new Key($secret, 'HS256'), $headers))[0]; /** @var string $apiToken */
+
                 // Compatibility with old API keys
                 // https://github.com/pkp/pkp-lib/issues/6462
                 if (substr($apiToken, 0, 2) === '""') {
