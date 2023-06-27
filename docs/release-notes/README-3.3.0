@@ -1,7 +1,7 @@
 OJS 3.3.0 Release Notes
-Git tag: 3_3_0-14
+Git tag: 3_3_0-15
 
-Release date: February 3, 2023
+Release date: June 27, 2023
 ==============================
 
 Configuration Changes
@@ -29,6 +29,35 @@ configuration parameters.
   - email.smtp_oauth_refreshtoken
 - The setting general.session_samesite (default value: Lax) has been added to control the "SameSite" setting for the session cookie.
 - The setting security.force_ssl, when enabled, will also set the "Secure" flag for the session cookie.
+
+3.3.0-15 Build
+--------------
+	#7432: Break tags are visible in sent emails when editorial signature variable is added to templates
+	#9112: Use https URL for Marc21 schema
+	#8936: editorialContactName being set to author in stage notify form
+	#9068: Consider ROR in DataCite affiliation element
+	#8865: Cosider affiliation element in DataCite XML export
+	#4903: [OJS] datacite export, contributors ORCID iDs not in metadata
+	#9057: OMP MonographSearchIndex missing hooks
+	#9046: "Download all" link does not work on some server environments
+	#6293: Generated URN does not contain check number
+	#8462: DOAJ plugin missing ORCID iD in JSON request to DOAJ API
+	#8987: Adapt DOAJ API base URLs
+	#8705: Crossref username character limit too low
+	#8932: [OMP] Error when retrieving languages from the API
+	#8607: No licenseUrl elements found for issues when using Native XML export
+	#8794: Fatal error when creating institutional subscription with PHP 8.1.16
+	#8811: URN plugin setting form: failed ajax, invalid json
+	#8815: Installed plugins section headers spill across right border
+	#6596: Subscription Notification emails are never sent out
+	#8758: [OMP] Edit Chapter not showing content in tab Identifiers
+	#8714: DAOResultFactory::getCount() may get called N times
+	#8697: User search at stage participant assignment performing as case sensitive search for PostgreSQL
+	#7183: googleSearch report a lot of slowpages linking to author's search
+	#8663: Native XML plugin fails to export submissions with language metadata under PHP 8
+	#8693: Submission keywords not truncated to column length during indexing
+	#8657: Permit newer dependencies in citationStyleLanguage plugin to resolve PHP warnings
+	#8631: Error when upgrading a large installation to OJS 3.3.0 under PostgreSQL
 
 3.3.0-14 Build
 --------------
