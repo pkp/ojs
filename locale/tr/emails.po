@@ -27,7 +27,7 @@ msgstr ""
 "aşağıdaki bağlantıyı tıklayınız.\n"
 "<br />\n"
 "<br />\n"
-"Şifre değiştirmek için: {$lostPasswordUrl}<br />\n"
+"Şifre değiştirmek için: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

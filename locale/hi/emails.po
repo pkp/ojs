@@ -25,7 +25,7 @@ msgstr ""
 "परिवर्तित नहीं किया जाएगा। यदि आप अपना पासवर्ड रीसेट करना चाहते हैं, तो नीचे दिए गए "
 "URL पर क्लिक करें.<br />\n"
 "<br />\n"
-"Reset my password: {$lostPasswordUrl}<br />\n"
+"Reset my password: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

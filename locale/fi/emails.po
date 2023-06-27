@@ -26,7 +26,7 @@ msgstr ""
 "Jos ette tehnyt tätä pyyntöä, voitte jättää tämän sähköpostin huomiotta. Jos "
 "haluatte vaihtaa salasanan, klikatkaa alla olevaa linkkiä.<br />\n"
 "<br />\n"
-"Vaihda salasana: {$lostPasswordUrl}<br />\n"
+"Vaihda salasana: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

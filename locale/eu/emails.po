@@ -27,7 +27,7 @@ msgstr ""
 "pasahitza ez da aldatuko. Pasahitza berrezartzea nahi baduzu, egin klik "
 "beheko URLan.<br />\n"
 "<br />\n"
-"Berrezarri nire pasahitza: {$lostPasswordUrl}<br />\n"
+"Berrezarri nire pasahitza: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

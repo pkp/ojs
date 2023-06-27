@@ -30,7 +30,7 @@ msgstr ""
 "présent message, votre mot de passe restera le même. Si vous souhaitez "
 "réinitialiser votre mot de passe, cliquer sur l'URL ci-dessous.<br />\n"
 "<br />\n"
-"Réinitialisation de mon mot de passe : {$lostPasswordUrl}<br />\n"
+"Réinitialisation de mon mot de passe : {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

@@ -26,7 +26,7 @@ msgstr ""
 "wordt niet veranderd. Als u uw wachtwoord wilt herstellen , klik dan op de "
 "url hieronder.<br />\n"
 "<br />\n"
-"Herstel mijn wachtwoord: {$lostPasswordUrl}<br />\n"
+"Herstel mijn wachtwoord: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

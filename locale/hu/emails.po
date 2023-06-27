@@ -29,7 +29,7 @@ msgstr ""
 "levelünket és jelszava nem módosul. Ha szeretné visszaállítani jelszavát, "
 "kattintson az alábbi linkre.<br />\n"
 "<br />\n"
-"Jelszavam visszaállítása: {$lostPasswordUrl}<br />\n"
+"Jelszavam visszaállítása: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

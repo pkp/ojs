@@ -24,7 +24,7 @@ msgstr ""
 "của bạn sẽ không bị thay đổi. Nếu bạn muốn đặt lại mật khẩu của mình, nhấp "
 "vào URL bên dưới.<br />\n"
 "<br />\n"
-"Đặt lại mật khẩu của tôi: {$lostPasswordUrl}<br />\n"
+"Đặt lại mật khẩu của tôi: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

@@ -29,7 +29,7 @@ msgstr ""
 "ditt, kan du ignorere denne e-posten. Hvis du ønsker nytt passord, klikk på "
 "lenken nedenfor.<br />\n"
 "<br />\n"
-"Forny passordet: {$lostPasswordUrl}<br />\n"
+"Forny passordet: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

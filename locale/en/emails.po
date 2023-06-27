@@ -26,7 +26,7 @@ msgstr ""
 "<br />\n"
 "If you did not make this request, please ignore this email and your password will not be changed. If you wish to reset your password, click on the below URL.<br />\n"
 "<br />\n"
-"Reset my password: {$lostPasswordUrl}<br />\n"
+"Reset my password: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

@@ -24,7 +24,7 @@ msgstr ""
 "няма да бъде променена. Ако искате да зададете нова парола, щракнете върху "
 "URL адреса по -долу. <br />\n"
 "<br />\n"
-"Нулиране (reset) на паролата ми : {$lostPasswordUrl}<br />\n"
+"Нулиране (reset) на паролата ми : {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 
