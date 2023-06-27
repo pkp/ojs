@@ -24,7 +24,7 @@ msgstr ""
 "如果您没有提出这个请求，请忽略这封电子邮件，同时您的密码将会保持不变。如果您"
 "希望要重置您的密码，请按下面的链接。<br />\n"
 "<br />\n"
-"重置我的密码： {$lostPasswordUrl}<br />\n"
+"重置我的密码： {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

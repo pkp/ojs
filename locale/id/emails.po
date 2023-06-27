@@ -27,7 +27,7 @@ msgstr ""
 "sandi Anda tidak akan diubah. Jika Anda memang ingin melakukan reset sandi, "
 "klik tautan berikut ini.<br />\n"
 "<br />\n"
-"Reset sandi saya: {$lostPasswordUrl}<br />\n"
+"Reset sandi saya: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

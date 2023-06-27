@@ -32,7 +32,7 @@ msgstr ""
 "será alterada. Se você deseja redefinir sua senha, clique na URL abaixo.<br /"
 ">\n"
 "<br />\n"
-"Redefinir minha senha: {$lostPasswordUrl}<br />\n"
+"Redefinir minha senha: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

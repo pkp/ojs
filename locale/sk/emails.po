@@ -23,7 +23,7 @@ msgstr ""
 "nebude zmenené. Ak chcete svoje heslo resetovať, kliknite na URL adresu "
 "nižšie.<br />\n"
 "<br />\n"
-"Resetovať moje heslo: {$lostPasswordUrl}<br />\n"
+"Resetovať moje heslo: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

@@ -26,7 +26,7 @@ msgstr ""
 "réinitialiser votre mot de passe, cliquer sur l'URL et un nouveau mot de "
 "passe vous sera envoyé par courriel sous peu.<br />\n"
 "<br />\n"
-"Réinitialisation du mot de passe : {$lostPasswordUrl}<br />\n"
+"Réinitialisation du mot de passe : {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

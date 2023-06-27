@@ -24,7 +24,7 @@ msgstr ""
 "facal-faire agad atharrachadh. Ma tha thu airson am facal-faire agad ath-"
 "shuidheachadh, briog air an URL gu h-ìosal.<br />\n"
 "<br />\n"
-"Ath-shuidhich am facal-faire agam: {$lostPasswordUrl}<br />\n"
+"Ath-shuidhich am facal-faire agam: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

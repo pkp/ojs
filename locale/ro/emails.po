@@ -25,7 +25,7 @@ msgstr ""
 "nu va fi modificată. Dacă doriți să vă resetați parola, faceți clic pe "
 "adresa URL de mai jos.<br />\n"
 "<br />\n"
-"Resetează parola: {$lostPasswordUrl}<br />\n"
+"Resetează parola: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

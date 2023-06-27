@@ -24,7 +24,7 @@ msgstr ""
 "contrasinal non cambiará. Se quere cambiar o seu contrasinal, faga clic en "
 "URL.<br />\n"
 "<br />\n"
-"Cambiar o meu contrasinal: {$lostPasswordUrl}<br />\n"
+"Cambiar o meu contrasinal: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

@@ -28,7 +28,7 @@ msgstr ""
 "promijeniti lozinku, molimo vas da kliknete na dolje priloženu poveznicu."
 "<br />\n"
 "<br />\n"
-"Promjena lozinke: {$lostPasswordUrl}<br />\n"
+"Promjena lozinke: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

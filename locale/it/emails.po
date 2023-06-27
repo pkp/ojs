@@ -30,7 +30,7 @@ msgstr ""
 "Se invece hai fatto tu la richiesta e desideri generare una nuova password, "
 "clicca sul link qui sotto.<br />\n"
 "<br />\n"
-"Reset password: {$lostPasswordUrl}<br />\n"
+"Reset password: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

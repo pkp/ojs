@@ -23,7 +23,7 @@ msgstr ""
 "تێپەڕەوشەتان بگۆڕن تكايە كرتە لەسەر بەستەرەكەى خوارەوە بكەن.\n"
 "<br />\n"
 "<br />\n"
-"بۆ گۆڕينى وشەى نهێنى: {$lostPasswordUrl}<br />\n"
+"بۆ گۆڕينى وشەى نهێنى: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

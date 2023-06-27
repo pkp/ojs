@@ -28,7 +28,7 @@ msgstr ""
 "electrònic i no es canviarà la vostra contrasenya. Si voleu reinicialitzar "
 "la contrasenya, feu clic a l'URL següent.<br />\n"
 "<br />\n"
-"Reinicialització de la meva contrasenya: {$lostPasswordUrl}<br />\n"
+"Reinicialització de la meva contrasenya: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 
