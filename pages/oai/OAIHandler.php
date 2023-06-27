@@ -18,9 +18,9 @@ namespace APP\pages\oai;
 
 use APP\handler\Handler;
 use APP\oai\ojs\JournalOAI;
-use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 use PKP\config\Config;
+use PKP\core\PKPJwt as JWT;
 use PKP\oai\OAIConfig;
 use PKP\plugins\PluginRegistry;
 use PKP\session\SessionManager;
