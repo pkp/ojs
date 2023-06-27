@@ -29,6 +29,7 @@ use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
 use PKP\citation\CitationDAO;
 use PKP\config\Config;
 use PKP\core\PKPApplication;
@@ -41,6 +42,7 @@ use PKP\submission\Genre;
 use PKP\submission\GenreDAO;
 use PKP\submission\PKPSubmission;
 use PKP\submissionFile\SubmissionFile;
+use stdClass;
 
 class ArticleHandler extends Handler
 {
@@ -82,7 +84,8 @@ class ArticleHandler extends Handler
                     return $templateMgr->display('frontend/pages/message.tpl');
                 }
                 try {
-                    $apiToken = JWT::decode($jwt, $secret, ['HS256']);
+                    $headers = new stdClass();
+                    $apiToken = ((array)JWT::decode($jwt, new Key($secret, 'HS256'), $headers))[0]; /** @var string $apiToken */
                     // Compatibility with old API keys
                     // https://github.com/pkp/pkp-lib/issues/6462
                     if (substr($apiToken, 0, 2) === '""') {
@@ -164,8 +167,8 @@ class ArticleHandler extends Handler
                     $this->galley = $galley;
                     break;
 
-                // In some cases, a URL to a galley may use the ID when it should use
-                // the urlPath. Redirect to the galley's correct URL.
+                    // In some cases, a URL to a galley may use the ID when it should use
+                    // the urlPath. Redirect to the galley's correct URL.
                 } elseif (ctype_digit($galleyId) && $galley->getId() == $galleyId) {
                     $request->redirect(null, $request->getRequestedPage(), $request->getRequestedOp(), [$submission->getBestId(), $galley->getBestGalleyId()]);
                 }
