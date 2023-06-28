@@ -41,7 +41,7 @@ class I6895_Institutions extends Migration
             ->get();
 
         foreach ($institutionalSubscriptions as $institutionalSubscription) {
-            $institutionId = DB::table('institutions')->insertGetId(['context_id' => $institutionalSubscription->journal_id]);
+            $institutionId = DB::table('institutions')->insertGetId(['context_id' => $institutionalSubscription->journal_id], 'institution_id');
             if ($institutionId) {
                 DB::table('institution_settings')->insert(['institution_id' => $institutionId, 'setting_name' => 'name', 'setting_value' => $institutionalSubscription->institution_name, 'locale' => $institutionalSubscription->primary_locale]);
 
