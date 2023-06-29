@@ -21,6 +21,5 @@ switch ($op) {
     case 'index':
     case 'search':
     case 'similarDocuments':
-        define('HANDLER_CLASS', 'APP\pages\search\SearchHandler');
-        break;
+        return new APP\pages\search\SearchHandler();
 }

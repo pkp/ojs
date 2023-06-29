@@ -18,6 +18,5 @@
 
 switch ($op) {
     case 'index':
-        define('HANDLER_CLASS', 'APP\pages\dois\DoisHandler');
-        break;
+        return new APP\pages\dois\DoisHandler();
 }

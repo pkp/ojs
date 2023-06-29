@@ -22,6 +22,5 @@ switch ($op) {
     case 'lockss':
     case 'clockss':
     case 'plugin':
-        define('HANDLER_CLASS', 'APP\pages\gateway\GatewayHandler');
-        break;
+        return new APP\pages\gateway\GatewayHandler($request);
 }

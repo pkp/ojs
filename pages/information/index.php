@@ -24,6 +24,5 @@ switch ($op) {
     case 'librarians':
     case 'competingInterestGuidelines':
     case 'sampleCopyrightWording':
-        define('HANDLER_CLASS', 'APP\pages\information\InformationHandler');
-        break;
+        return new APP\pages\information\InformationHandler();
 }
