@@ -31,8 +31,7 @@ switch ($op) {
     case 'payRenewSubscription':
     case 'payMembership':
     case 'getInterests':
-        define('HANDLER_CLASS', 'APP\pages\user\UserHandler');
-        break;
+        return new APP\pages\user\UserHandler();
     default:
-        require_once('lib/pkp/pages/user/index.php');
+        return require_once('lib/pkp/pages/user/index.php');
 }

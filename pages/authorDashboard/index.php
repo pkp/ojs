@@ -25,5 +25,5 @@ switch ($op) {
     case 'submission':
     case 'readSubmissionEmail':
     case 'reviewRoundInfo':
-        define('HANDLER_CLASS', 'APP\pages\authorDashboard\AuthorDashboardHandler');
+        return new APP\pages\authorDashboard\AuthorDashboardHandler();
 }

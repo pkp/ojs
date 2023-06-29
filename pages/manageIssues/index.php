@@ -23,6 +23,5 @@ switch ($op) {
     //
     case 'index':
     case 'issuesTabs':
-        define('HANDLER_CLASS', 'APP\pages\manageIssues\ManageIssuesHandler');
-        break;
+        return new APP\pages\manageIssues\ManageIssuesHandler();
 }

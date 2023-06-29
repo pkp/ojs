@@ -17,4 +17,4 @@
  *
  */
 
-define('HANDLER_CLASS', 'PKP\pages\decision\DecisionHandler');
+return new PKP\pages\decision\DecisionHandler();

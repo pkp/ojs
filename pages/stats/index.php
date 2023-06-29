@@ -17,4 +17,4 @@
  *
  */
 
-define('HANDLER_CLASS', 'APP\pages\stats\StatsHandler');
+return new APP\pages\stats\StatsHandler();

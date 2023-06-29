@@ -22,6 +22,5 @@ switch ($op) {
     case 'archive':
     case 'view':
     case 'download':
-        define('HANDLER_CLASS', 'APP\pages\issue\IssueHandler');
-        break;
+        return new APP\pages\issue\IssueHandler();
 }

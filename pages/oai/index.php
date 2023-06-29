@@ -19,6 +19,5 @@
 
 switch ($op) {
     case 'index':
-        define('HANDLER_CLASS', 'APP\pages\oai\OAIHandler');
-        break;
+        return new APP\pages\oai\OAIHandler();
 }

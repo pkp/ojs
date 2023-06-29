@@ -19,6 +19,5 @@
 
 switch ($op) {
     case 'index':
-        define('HANDLER_CLASS', 'APP\pages\sitemap\SitemapHandler');
-        break;
+        return new APP\pages\sitemap\SitemapHandler();
 }

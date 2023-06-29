@@ -27,6 +27,5 @@ switch ($op) {
     case 'saveStep':
     case 'showDeclineReview':
     case 'saveDeclineReview':
-        define('HANDLER_CLASS', 'APP\pages\reviewer\ReviewerHandler');
-        break;
+        return new APP\pages\reviewer\ReviewerHandler();
 }
