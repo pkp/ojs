@@ -1,11 +1,12 @@
 # Simon Mathdoc <karacaca38@outlook.fr>, 2021.
+# Stefan Schneider <mail@stefan-schneider.at>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:24+00:00\n"
-"PO-Revision-Date: 2021-10-22 04:23+0000\n"
-"Last-Translator: Simon Mathdoc <karacaca38@outlook.fr>\n"
+"PO-Revision-Date: 2023-06-26 16:25+0000\n"
+"Last-Translator: Stefan Schneider <mail@stefan-schneider.at>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/locale/fr_FR/"
 ">\n"
 "Language: fr_FR\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Cette revue ne publie pas en ligne son contenu."
@@ -303,7 +304,7 @@ msgid "submission.authorVersion"
 msgstr "Version de l'auteur"
 
 msgid "submission.copyediting"
-msgstr "Révision"
+msgstr "Édition"
 
 msgid "submission.copyedit"
 msgstr "Réviser"
@@ -360,7 +361,7 @@ msgid "submission.eventLog"
 msgstr "Registre d'événements"
 
 msgid "submissions.copyeditComplete"
-msgstr "Révision terminée"
+msgstr "Édition terminée"
 
 msgid "submissions.layoutComplete"
 msgstr "Mise en page terminée"
@@ -658,16 +659,16 @@ msgid "submission.event.copyedit.copyeditorUnassigned"
 msgstr "Réviseur non assigné à une soumission"
 
 msgid "submission.event.copyedit.copyeditInitiated"
-msgstr "Révision entamée"
+msgstr "Édition entamée"
 
 msgid "submission.event.copyedit.copyeditRevision"
 msgstr "Fichier de révision du réviseur mis à jour"
 
 msgid "submission.event.copyedit.copyeditInitialCompleted"
-msgstr "Révision initiale terminée"
+msgstr "Édition initiale terminée"
 
 msgid "submission.event.copyedit.copyeditFinalCompleted"
-msgstr "Révision finale terminée"
+msgstr "Édition finale terminée"
 
 msgid "submission.event.copyedit.copyeditSetFile"
 msgstr "Fichier de révision mis à jour"
@@ -858,7 +859,7 @@ msgstr ""
 msgid "manager.setup.basicEditorialStepsDescription"
 msgstr ""
 "Étapes : Soumission en attente &gt; Soumission en évaluation &gt; Soumission "
-"en révision &gt; Table des matières.<br /><br />"
+"en édition &gt; Table des matières.<br /><br />"
 
 msgid "manager.setup.referenceLinkingDescription"
 msgstr ""
@@ -1245,15 +1246,15 @@ msgstr ""
 msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
 msgstr ""
 "Le courriel de demande ne peut être envoyé avant qu'un fichier ne soit "
-"sélectionné pour révision dans Décision du rédacteur, Page d'évaluation."
+"sélectionné pour édition dans Décision du rédacteur, Page d'évaluation."
 
 msgid "submission.copyedit.mustUploadFileForCopyedit"
 msgstr ""
 "Le courriel de demande ne peut être envoyé avant que le fichier soit "
-"transféré pour révision."
+"transféré pour édition."
 
 msgid "submission.copyedit.initialCopyedit"
-msgstr "Révision initiale"
+msgstr "Édition initiale"
 
 msgid "submission.copyedit.editorsCopyedit"
 msgstr "Révision du rédacteur"
@@ -1262,7 +1263,7 @@ msgid "submission.copyedit.editorAuthorReview"
 msgstr "Révision de l'auteur"
 
 msgid "submission.copyedit.finalCopyedit"
-msgstr "Révision finale"
+msgstr "Édition finale"
 
 msgid "submission.copyedit.copyeditVersion"
 msgstr "Version R"
@@ -1274,10 +1275,10 @@ msgid "submission.copyedit.useFile"
 msgstr "Utiliser le fichier"
 
 msgid "submission.copyedit.copyeditComments"
-msgstr "Commentaires de révision"
+msgstr "Commentaires d'édition"
 
 msgid "submission.copyedit.instructions"
-msgstr "Instructions de révision"
+msgstr "Instructions d'édition"
 
 msgid "submission.layout.noLayoutFile"
 msgstr ""
@@ -1324,7 +1325,7 @@ msgid "submission.logType.review"
 msgstr "Évaluation"
 
 msgid "submission.logType.copyedit"
-msgstr "Révision"
+msgstr "Édition"
 
 msgid "submission.logType.layout"
 msgstr "Mise en page"
@@ -1336,7 +1337,7 @@ msgid "submission.comments.editorAuthorCorrespondence"
 msgstr "Correspondance rédacteur/auteur"
 
 msgid "submission.comments.copyeditComments"
-msgstr "Commentaires de révision"
+msgstr "Commentaires d'édition"
 
 msgid "submission.comments.viewableDescription"
 msgstr ""
@@ -2269,26 +2270,25 @@ msgstr ""
 
 msgid "log.copyedit.initiate"
 msgstr ""
-"La révision de la soumission {$submissionId} a été entamée par "
+"L'édition de la soumission {$submissionId} a été entamée par "
 "{$copyeditorName}."
 
 msgid "log.copyedit.copyeditFileSet"
-msgstr "Le fichier de révision par défaut a été sélectionné."
+msgstr "Le fichier d'édition par défaut a été sélectionné."
 
 msgid "log.copyedit.initialEditComplete"
 msgstr ""
-"{$copyeditorName} a terminé la révision initiale de la soumission "
+"{$copyeditorName} a terminé l'édition initiale de la soumission "
 "{$submissionId}."
 
 msgid "log.copyedit.finalEditComplete"
 msgstr ""
-"{$copyeditorName} a terminé la révision finale de la soumission "
+"{$copyeditorName} a terminé l'édition finale de la soumission "
 "{$submissionId}."
 
 msgid "log.copyedit.copyeditorAssigned"
 msgstr ""
-"{$copyeditorName} a été assigné à la révision de la soumission "
-"{$submissionId}."
+"{$copyeditorName} a été assigné à l'édition de la soumission {$submissionId}."
 
 msgid "log.copyedit.copyeditorFile"
 msgstr "Une version révisée du fichier de la soumission a été téléchargée."
@@ -2345,7 +2345,7 @@ msgid "metadata.pkp.peerReviewed"
 msgstr "Article évalué par les pairs"
 
 msgid "notification.type.editing"
-msgstr "Événements de révision"
+msgstr "Événements d'édition"
 
 msgid "notification.type.submissionSubmitted"
 msgstr "Un nouvel article, \"{$title},\" a été soumis."
