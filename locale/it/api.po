@@ -1,14 +1,14 @@
 # Stefano Bolelli Gallevi <stefano.bolelli@unimi.it>, 2022.
+# Stefan Schneider <mail@stefan-schneider.at>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
-"PO-Revision-Date: 2022-10-18 10:39+0000\n"
-"Last-Translator: Stefano Bolelli Gallevi <stefano.bolelli@unimi.it>\n"
-"Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/api/it_IT/"
-">\n"
-"Language: it_IT\n"
+"PO-Revision-Date: 2023-06-19 15:18+0000\n"
+"Last-Translator: Stefan Schneider <mail@stefan-schneider.at>\n"
+"Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/api/it/>\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -25,7 +25,7 @@ msgid "api.submissions.400.wrongContext"
 msgstr "La proposta che hai richiesto non è in questa rivista."
 
 msgid "api.submissions.403.cantChangeContext"
-msgstr "Non è possibile cambiare la testata di sottomissione."
+msgstr "Non è possibile cambiare la rivista di una proposta di pubblicazione."
 
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Non hai il permesso si vedere i fascicoli non pubblicati."
@@ -34,24 +34,24 @@ msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "E' possibile visualizzare solamente testate abilitate."
 
 msgid "api.contexts.403.notAllowed"
-msgstr "Non hai i permessi per visualizzare questa testata."
+msgstr "Non hai i permessi per visualizzare questa rivista."
 
 msgid "api.contexts.403.contextsDidNotMatch"
 msgstr ""
-"Per visualizzare o modificare questa testata è necessario inviare una "
-"richiesta via api o site-wide API."
+"Per visualizzare o modificare questa rivista è necessario inviare una "
+"richiesta all'API della rivista o del sito."
 
 msgid "api.contexts.403.requiresContext"
-msgstr "Non è possibile modificare questa testata con site-wide API."
+msgstr "Non è possibile modificare questa rivista con l'API del sito."
 
 msgid "api.contexts.403.notAllowedEdit"
-msgstr "Non hai il permesso per modificare questa testata."
+msgstr "Non hai il permesso per modificare questa rivista."
 
 msgid "api.contexts.403.notAllowedDelete"
-msgstr "Non hai i permessi per cancellare questa testata."
+msgstr "Non hai i permessi per cancellare questa rivista."
 
 msgid "api.contexts.404.contextNotFound"
-msgstr "La testata che hai richiesto non è stata trovata."
+msgstr "La rivista che hai richiesto non è stata trovata."
 
 msgid "api.dois.403.contextsNotMatched"
 msgstr "Il DOI che hai richiesto non è in questa rivista."
@@ -68,14 +68,14 @@ msgstr ""
 
 msgid "api.emailTemplates.403.notAllowedChangeContext"
 msgstr ""
-"Non hai i permessi necessari per trasferire questo template di posta ad "
-"un'altra testata."
+"Non hai i permessi necessari per trasferire questo modello di posta "
+"elettronica ad un'altra rivista."
 
 msgid "api._payments.400.invalidPaymentMethod"
-msgstr "Il metodo di pagamento selezionato non è supportato da questa testata."
+msgstr "Il metodo di pagamento selezionato non è supportato da questa rivista."
 
 msgid "api.publications.403.contextsDidNotMatch"
-msgstr "La pubblicazione che hai richiesto non è parte di questa testata."
+msgstr "La pubblicazione che hai richiesto non fa parte di questa rivista."
 
 msgid "api.publications.403.submissionsDidNotMatch"
 msgstr "La pubblicazione che hai richiesto non è parte di questo articolo."
