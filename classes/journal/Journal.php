@@ -27,50 +27,12 @@ namespace APP\journal;
 use APP\core\Application;
 use PKP\context\Context;
 use PKP\db\DAORegistry;
-use PKP\facades\Locale;
 
 class Journal extends Context
 {
     public const PUBLISHING_MODE_OPEN = 0;
     public const PUBLISHING_MODE_SUBSCRIPTION = 1;
     public const PUBLISHING_MODE_NONE = 2;
-
-    /**
-     * Get "localized" journal page title (if applicable).
-     *
-     * @return string|null
-     *
-     * @deprecated 3.3.0, use getLocalizedData() instead
-     */
-    public function getLocalizedPageHeaderTitle()
-    {
-        $titleArray = $this->getData('name');
-
-        foreach ([Locale::getLocale(), Locale::getPrimaryLocale()] as $locale) {
-            if (isset($titleArray[$locale])) {
-                return $titleArray[$locale];
-            }
-        }
-        return null;
-    }
-
-    /**
-     * Get "localized" journal page logo (if applicable).
-     *
-     * @return array|null
-     *
-     * @deprecated 3.3.0, use getLocalizedData() instead
-     */
-    public function getLocalizedPageHeaderLogo()
-    {
-        $logoArray = $this->getData('pageHeaderLogoImage');
-        foreach ([Locale::getLocale(), Locale::getPrimaryLocale()] as $locale) {
-            if (isset($logoArray[$locale])) {
-                return $logoArray[$locale];
-            }
-        }
-        return null;
-    }
 
     //
     // Get/set methods
