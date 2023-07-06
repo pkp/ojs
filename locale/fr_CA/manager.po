@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2023-04-24 00:11+0000\n"
+"PO-Revision-Date: 2023-07-07 19:58+0000\n"
 "Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-helene."
 "vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
@@ -2182,7 +2182,6 @@ msgstr "Nombre de vues sur la page d'accueil de la revue."
 msgid "stats.context.downloadReport.downloadContext"
 msgstr "Téléchargement de la revue"
 
-#, fuzzy
 msgid "stats.issueStats"
 msgstr "Statistiques du numéro"
 
@@ -2207,23 +2206,20 @@ msgstr ""
 "Le nombre de vues de sommaires/table des matières et le nombre de "
 "téléchargements des épreuves pour chaque numéro."
 
-#, fuzzy
 msgid "stats.issues.downloadReport.downloadIssues"
 msgstr "Téléchargement des numéros"
 
 msgid "stats.issues.countOfTotal"
 msgstr "{$count} de {$total} numéros"
 
-#, fuzzy
 msgid "stats.issues.tooltip.label"
 msgstr "À propos des statistiques de numéros"
 
-#, fuzzy
 msgid "stats.issues.tooltip.text"
 msgstr ""
 "<strong>Vues</strong>: nombre de visiteurs ayant consulté la table des "
 "matières.<br><strong>Téléchargements</strong>: nombre de téléchargements des "
-"épreuves du numéro."
+"épreuves du numéro, si existantes."
 
 msgid "stats.publicationStats"
 msgstr "Statistiques de l'article"
@@ -2353,13 +2349,11 @@ msgstr "Nom de domaine des adresses IP valides pour cet abonnement"
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "Les intervalles d'adresses IP valide pour cet abonnement"
 
-#, fuzzy
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr "URL de la page où les auteurs peuvent faire les paiements"
+msgstr "URL de la page où les auteur.e.s peuvent faire les paiements"
 
-#, fuzzy
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr "URL vers les directives de soumission"
+msgstr "URL des directives de soumission"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
 msgstr "Lien vers la page des statistiques d'utilisation des articles publiés"
