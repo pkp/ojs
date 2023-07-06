@@ -93,13 +93,30 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		$journalArticleNode = $doc->createElementNS($deployment->getNamespace(), 'journal_article');
 		$journalArticleNode->setAttribute('publication_type', 'full_text');
 		$journalArticleNode->setAttribute('metadata_distribution_opts', 'any');
+		$journalArticleNode->setAttribute('language', PKPLocale::getIso1FromLocale($locale));
 
 
 		// title
-		$titlesNode = $doc->createElementNS($deployment->getNamespace(), 'titles');
-		$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars($publication->getData('title', $locale), ENT_COMPAT, 'UTF-8')));
-		if ($subtitle = $publication->getData('subtitle', $locale)) $titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'subtitle', htmlspecialchars($subtitle, ENT_COMPAT, 'UTF-8')));
-		$journalArticleNode->appendChild($titlesNode);
+		$titleLanguages = array_keys($publication->getTitles());
+		// Crossref 4.3.6 limits to 20 titles maximum, ensure the primary locale is first
+		$primaryLanguageIndex = array_search($locale, $titleLanguages);
+		if ($primaryLanguageIndex) {
+			unset($titleLanguages[$primaryLanguageIndex]);
+			array_unshift($titleLanguages, $locale);
+		}
+		$languageCounter = 1;
+		foreach ($titleLanguages as $lang) {
+			$titlesNode = $doc->createElementNS($deployment->getNamespace(), 'titles');
+			$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars($publication->getLocalizedTitle($lang))));
+			if ($subtitle = htmlspecialchars($publication->getData('subtitle', $lang))) {
+				$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'subtitle', $subtitle));
+			}
+			$journalArticleNode->appendChild($titlesNode);
+			$languageCounter++;
+			if ($languageCounter > 20) {
+				break;
+			}
+		}
 
 		// contributors
 		$authors = $publication->getData('authors');
@@ -162,10 +179,25 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		}
 
 		// abstract
-		if ($abstract = $publication->getData('abstract', $locale)) {
+		$abstractLanguages = array_keys($publication->getData('abstract'));
+		// Crossref 4.3.6 limits to 10 abstracts maximum, ensure the primary locale is first
+		$primaryLanguageIndex = array_search($locale, $abstractLanguages);
+		if ($primaryLanguageIndex) {
+			unset($abstractLanguages[$primaryLanguageIndex]);
+			array_unshift($abstractLanguages, $locale);
+		}
+		$languageCounter = 1;
+		foreach ($abstractLanguages as $lang) {
 			$abstractNode = $doc->createElementNS($deployment->getJATSNamespace(), 'jats:abstract');
+			$abstractNode->setAttributeNS($deployment->getXMLNamespace(), 'xml:lang', PKPLocale::getIso1FromLocale($lang));
+			$abstract = $publication->getData('abstract', $lang);
 			$abstractNode->appendChild($node = $doc->createElementNS($deployment->getJATSNamespace(), 'jats:p', htmlspecialchars(html_entity_decode(strip_tags($abstract), ENT_COMPAT, 'UTF-8'), ENT_COMPAT, 'UTF-8')));
 			$journalArticleNode->appendChild($abstractNode);
+
+			$languageCounter++;
+			if ($languageCounter > 10) {
+				break;
+			}
 		}
 
 		// publication date
