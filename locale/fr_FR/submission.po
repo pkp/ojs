@@ -1,12 +1,13 @@
 # Pierre Couchet <pierre.couchet@gmail.com>, 2023.
 # Olivier Roueff <olivier.roueff@cnrs.fr>, 2023.
+# Stefan Schneider <mail@stefan-schneider.at>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:24+00:00\n"
-"PO-Revision-Date: 2023-04-15 17:17+0000\n"
-"Last-Translator: Pierre Couchet <pierre.couchet@gmail.com>\n"
+"PO-Revision-Date: 2023-07-07 19:58+0000\n"
+"Last-Translator: Stefan Schneider <mail@stefan-schneider.at>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "fr_FR/>\n"
 "Language: fr_FR\n"
@@ -302,8 +303,8 @@ msgstr "Une soumission refusée ne peut pas être publiée."
 
 msgid "publication.required.reviewStage"
 msgstr ""
-"La soumission doit être à l'étape de révision ou de production avant de "
-"pouvoir être publiée."
+"La soumission doit passer par l'étape d'édition ou de production avant "
+"d'être publiée."
 
 msgid "submission.license.description"
 msgstr ""
