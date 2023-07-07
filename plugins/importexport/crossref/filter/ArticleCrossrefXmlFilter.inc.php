@@ -107,9 +107,9 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		$languageCounter = 1;
 		foreach ($titleLanguages as $lang) {
 			$titlesNode = $doc->createElementNS($deployment->getNamespace(), 'titles');
-			$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars($publication->getLocalizedTitle($lang))));
-			if ($subtitle = htmlspecialchars($publication->getData('subtitle', $lang))) {
-				$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'subtitle', $subtitle));
+			$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars($publication->getData('title', $lang), ENT_COMPAT, 'UTF-8')));
+			if ($subtitle = $publication->getData('subtitle', $lang)) {
+				$titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'subtitle', htmlspecialchars($subtitle, ENT_COMPAT, 'UTF-8')));
 			}
 			$journalArticleNode->appendChild($titlesNode);
 			$languageCounter++;
@@ -188,15 +188,16 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		}
 		$languageCounter = 1;
 		foreach ($abstractLanguages as $lang) {
-			$abstractNode = $doc->createElementNS($deployment->getJATSNamespace(), 'jats:abstract');
-			$abstractNode->setAttributeNS($deployment->getXMLNamespace(), 'xml:lang', PKPLocale::getIso1FromLocale($lang));
-			$abstract = $publication->getData('abstract', $lang);
-			$abstractNode->appendChild($node = $doc->createElementNS($deployment->getJATSNamespace(), 'jats:p', htmlspecialchars(html_entity_decode(strip_tags($abstract), ENT_COMPAT, 'UTF-8'), ENT_COMPAT, 'UTF-8')));
-			$journalArticleNode->appendChild($abstractNode);
+			if ($abstract = $publication->getData('abstract', $lang)) {
+				$abstractNode = $doc->createElementNS($deployment->getJATSNamespace(), 'jats:abstract');
+				$abstractNode->setAttributeNS($deployment->getXMLNamespace(), 'xml:lang', PKPLocale::getIso1FromLocale($lang));
+				$abstractNode->appendChild($node = $doc->createElementNS($deployment->getJATSNamespace(), 'jats:p', htmlspecialchars(html_entity_decode(strip_tags($abstract), ENT_COMPAT, 'UTF-8'), ENT_COMPAT, 'UTF-8')));
+				$journalArticleNode->appendChild($abstractNode);
 
-			$languageCounter++;
-			if ($languageCounter > 10) {
-				break;
+				$languageCounter++;
+				if ($languageCounter > 10) {
+					break;
+				}
 			}
 		}
 
