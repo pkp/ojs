@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:24+00:00\n"
-"PO-Revision-Date: 2023-06-26 16:25+0000\n"
+"PO-Revision-Date: 2023-07-07 19:58+0000\n"
 "Last-Translator: Stefan Schneider <mail@stefan-schneider.at>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/locale/fr_FR/"
 ">\n"
@@ -103,10 +103,10 @@ msgid "common.queue.short.submissionsUnassigned"
 msgstr "Non assignées"
 
 msgid "common.queue.long.submissionsInEditing"
-msgstr "Soumissions en cours de révision"
+msgstr "Soumissions en cours d'édition"
 
 msgid "common.queue.short.submissionsInEditing"
-msgstr "En révision"
+msgstr "En édition"
 
 msgid "common.queue.long.submissionsInReview"
 msgstr "Soumissions en cours d'évaluation"
@@ -262,7 +262,7 @@ msgid "article.return"
 msgstr "Retourner aux informations sur l'article"
 
 msgid "submission.submissionEditing"
-msgstr "Révision de la soumission"
+msgstr "Édition de la soumission"
 
 msgid "submission.changeSection"
 msgstr "Changer pour"
@@ -653,16 +653,16 @@ msgid "submission.event.editor.submissionRestored"
 msgstr "Soumission récupérée à partir des archives"
 
 msgid "submission.event.copyedit.copyeditorAssigned"
-msgstr "Réviseur assigné à une soumission"
+msgstr "Éditeur assigné à une soumission"
 
 msgid "submission.event.copyedit.copyeditorUnassigned"
-msgstr "Réviseur non assigné à une soumission"
+msgstr "Éditeur non assigné à une soumission"
 
 msgid "submission.event.copyedit.copyeditInitiated"
 msgstr "Édition entamée"
 
 msgid "submission.event.copyedit.copyeditRevision"
-msgstr "Fichier de révision du réviseur mis à jour"
+msgstr "Fichier de révision de l'éditeur mis à jour"
 
 msgid "submission.event.copyedit.copyeditInitialCompleted"
 msgstr "Édition initiale terminée"
@@ -671,7 +671,7 @@ msgid "submission.event.copyedit.copyeditFinalCompleted"
 msgstr "Édition finale terminée"
 
 msgid "submission.event.copyedit.copyeditSetFile"
-msgstr "Fichier de révision mis à jour"
+msgstr "Fichier d'édition mis à jour"
 
 msgid "submission.event.proofread.proofreaderAssigned"
 msgstr "Correcteur d'épreuves assigné à la soumission"
@@ -949,7 +949,7 @@ msgstr "Aucune soumission assignée."
 
 msgid "sectionEditor.copyedit.confirmRenotify"
 msgstr ""
-"Notifier de nouveau ce réviseur redémarrera la tâche qui lui a été assignée. "
+"Notifier de nouveau cet éditeur redémarrera la tâche qui lui a été assignée. "
 "Êtes-vous certain de vouloir le faire ?"
 
 msgid "sectionEditor.author.confirmRenotify"
@@ -1210,10 +1210,10 @@ msgid "copyeditor.article.fileToCopyedit"
 msgstr "Fichier à réviser"
 
 msgid "copyeditor.article.copyeditorFile"
-msgstr "Fichier du réviseur"
+msgstr "Fichier de l'éditeur"
 
 msgid "copyeditor.article.copyeditorFinalFile"
-msgstr "Fichier du réviseur"
+msgstr "Fichier de l'éditeur"
 
 msgid "proofreader.noProofreadingAssignments"
 msgstr "Aucune assignation de correction d'épreuves"
@@ -1257,10 +1257,10 @@ msgid "submission.copyedit.initialCopyedit"
 msgstr "Édition initiale"
 
 msgid "submission.copyedit.editorsCopyedit"
-msgstr "Révision du rédacteur"
+msgstr "Édition du rédacteur"
 
 msgid "submission.copyedit.editorAuthorReview"
-msgstr "Révision de l'auteur"
+msgstr "Édition de l'auteur"
 
 msgid "submission.copyedit.finalCopyedit"
 msgstr "Édition finale"
@@ -1269,7 +1269,7 @@ msgid "submission.copyedit.copyeditVersion"
 msgstr "Version R"
 
 msgid "submission.copyedit.selectCopyeditor"
-msgstr "Assigner un réviseur"
+msgstr "Assigner un éditeur"
 
 msgid "submission.copyedit.useFile"
 msgstr "Utiliser le fichier"
@@ -1282,7 +1282,7 @@ msgstr "Instructions d'édition"
 
 msgid "submission.layout.noLayoutFile"
 msgstr ""
-"Aucun (Transférez la version de révision finale comme version de mise en "
+"Aucun (Téléversez la version de révision finale comme version de mise en "
 "page avant d'envoyer une demande)"
 
 msgid "submission.layout.galleyPublicIdentificationExists"
@@ -2404,8 +2404,7 @@ msgid "notification.type.awaitingRepresentations"
 msgstr "Épreuves en attente."
 
 msgid "user.authorization.copyeditorAssignmentMissing"
-msgstr ""
-"Accès refusé ! Vous n'avez pas été nommé rédacteur/réviseur de cet article."
+msgstr "Accès refusé ! Vous n'avez pas été nommé éditeur de cet article."
 
 msgid "user.authorization.noContext"
 msgstr "Aucune revue dans ce contexte !"
