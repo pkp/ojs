@@ -50,7 +50,7 @@ class SubscriptionsGridCellProvider extends GridCellProvider
                         $institution = Repo::institution()->get($subscription->getInstitutionId());
                         return ['label' => $institution->getLocalizedName()];
                 }
-                throw new Exception('Invalid column name!');
+                throw new \Exception('Invalid column name!');
             case 'email':
                 assert($subscription instanceof IndividualSubscription);
                 return ['label' => $subscription->getUserEmail()];
