@@ -2,13 +2,14 @@
 # Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2022, 2023.
 # Pierre Lasou <pierre.lasou@bibl.ulaval.ca>, 2023.
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
+# Nicolas Dickner <dickner.nicolas@uqam.ca>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2023-07-07 19:58+0000\n"
-"Last-Translator: Stefan Schneider <mail@stefan-schneider.at>\n"
+"PO-Revision-Date: 2023-07-10 17:53+0000\n"
+"Last-Translator: Nicolas Dickner <dickner.nicolas@uqam.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -1999,7 +2000,7 @@ msgstr ""
 "évaluation, révision et production."
 
 msgid "manager.publication.library"
-msgstr "Bibliothèque de l'éditeur"
+msgstr "Bibliothèque éditoriale"
 
 msgid "manager.setup.copyrightYearBasis"
 msgstr "Baser l'année de mention de droit d'auteur du nouvel article sur"
