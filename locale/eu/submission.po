@@ -3,8 +3,8 @@
 # Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-07-10 14:54+0000\n"
-"Last-Translator: Josu Acosta <josuacostacalvo@gmail.com>\n"
+"PO-Revision-Date: 2023-07-10 14:55+0000\n"
+"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "eu/>\n"
 "Language: eu\n"
@@ -55,8 +55,9 @@ msgstr "Metadatuak"
 
 msgid "submission.submit.whatNext.description"
 msgstr ""
-"Aldizkariak zure bidalketaren berri jaso du, eta baieztapena bidali zaizu "
-"posta elektronikoz, erregistratuta gera dadin."
+"Aldizkariak zure bidalketaren berri jaso du, eta posta elektronikoaren bidez "
+"egiaztatze mezu bat bidaliko dizu, artxiba dezazun. Editoreak bidalketa "
+"berrikusi ondoren, zurekin harremanetan jarriko dira."
 
 msgid "grid.action.galleyInIssueEntry"
 msgstr "Galerada alearen sarreran agertzen da"
