@@ -51,7 +51,7 @@ class IssueGridCellProvider extends GridCellProvider
     {
         if ($column->getId() == 'identification') {
             $issue = $row->getData();
-            assert(is_a($issue, 'Issue'));
+            assert($issue instanceof Issue);
             $router = $request->getRouter();
             return [
                 new LinkAction(
@@ -82,7 +82,7 @@ class IssueGridCellProvider extends GridCellProvider
     {
         $issue = $row->getData(); /** @var Issue $issue */
         $columnId = $column->getId();
-        assert(is_a($issue, 'Issue'));
+        assert($issue instanceof Issue);
         assert(!empty($columnId));
         switch ($columnId) {
             case 'identification':

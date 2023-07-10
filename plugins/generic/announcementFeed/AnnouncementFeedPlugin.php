@@ -17,6 +17,7 @@ namespace APP\plugins\generic\announcementFeed;
 use APP\core\Application;
 use APP\template\TemplateManager;
 use PKP\core\JSONMessage;
+use PKP\core\PKPPageRouter;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\plugins\GenericPlugin;
@@ -74,7 +75,7 @@ class AnnouncementFeedPlugin extends GenericPlugin
     public function callbackAddLinks($hookName, $args)
     {
         $request = Application::get()->getRequest();
-        if ($this->getEnabled() && is_a($request->getRouter(), 'PKPPageRouter')) {
+        if ($this->getEnabled() && $request->getRouter() instanceof PKPPageRouter) {
             $templateManager = $args[0];
             $currentJournal = $templateManager->getTemplateVars('currentJournal');
             $announcementsEnabled = $currentJournal ? $currentJournal->getData('enableAnnouncements') : false;

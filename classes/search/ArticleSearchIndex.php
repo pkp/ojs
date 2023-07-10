@@ -20,7 +20,6 @@ use APP\facades\Repo;
 use APP\journal\Journal;
 use APP\journal\JournalDAO;
 use APP\submission\Submission;
-use PKP\config\Config;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
 use PKP\plugins\Hook;
@@ -246,17 +245,6 @@ class ArticleSearchIndex extends SubmissionSearchIndex
     }
 
     /**
-     * @copydoc SubmissionSearchIndex::submissionChangesFinished()
-     */
-    public function articleChangesFinished()
-    {
-        if (Config::getVar('debug', 'deprecation_warnings')) {
-            trigger_error('Deprecated call to articleChangesFinished. Use submissionChangesFinished instead.');
-        }
-        $this->submissionChangesFinished();
-    }
-
-    /**
      * Rebuild the search index for one or all journals.
      *
      * @param bool $log Whether to display status information
@@ -281,7 +269,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
         if ($hookResult === false || is_null($hookResult)) {
             // Check that no journal was given as we do
             // not support journal-specific re-indexing.
-            if (is_a($journal, 'Journal')) {
+            if ($journal instanceof Journal) {
                 exit(__('search.cli.rebuildIndex.indexingByJournalNotSupported') . "\n");
             }
 

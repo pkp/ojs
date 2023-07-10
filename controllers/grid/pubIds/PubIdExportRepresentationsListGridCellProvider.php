@@ -21,6 +21,7 @@ use APP\facades\Repo;
 use PKP\controllers\grid\DataObjectGridCellProvider;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\PKPApplication;
+use PKP\galley\Galley;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 use PKP\linkAction\request\RedirectAction;
@@ -61,7 +62,7 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
     {
         $galley = $row->getData();
         $columnId = $column->getId();
-        assert(is_a($galley, 'Galley') && !empty($columnId));
+        assert($galley instanceof Galley && !empty($columnId));
 
         $publication = Repo::publication()->get($galley->getData('publicationId'));
         $submission = Repo::submission()->get($publication->getData('submissionId'));
@@ -133,7 +134,7 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
     {
         $submissionGalley = $row->getData();
         $columnId = $column->getId();
-        assert(is_a($submissionGalley, 'Galley') && !empty($columnId));
+        assert($submissionGalley instanceof Galley && !empty($columnId));
 
         switch ($columnId) {
             case 'id':

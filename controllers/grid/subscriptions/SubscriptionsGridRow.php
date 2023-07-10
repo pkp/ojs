@@ -16,6 +16,8 @@
 
 namespace APP\controllers\grid\subscriptions;
 
+use APP\subscription\IndividualSubscription;
+use APP\subscription\InstitutionalSubscription;
 use PKP\controllers\grid\GridRow;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
@@ -37,7 +39,7 @@ class SubscriptionsGridRow extends GridRow
 
         // Is this a new row or an existing row?
         $element = & $this->getData();
-        assert(is_a($element, 'IndividualSubscription') || is_a($element, 'InstitutionalSubscription'));
+        assert($element instanceof IndividualSubscription || $element instanceof InstitutionalSubscription);
 
         $rowId = $this->getId();
 
@@ -76,7 +78,7 @@ class SubscriptionsGridRow extends GridRow
                             'renewSubscription',
                             null,
                             array_merge($actionArgs, [
-                                'institutional' => is_a($element, 'InstitutionalSubscription') ? 1 : 0
+                                'institutional' => $element instanceof InstitutionalSubscription ? 1 : 0
                             ])
                         ),
                         'modal_delete'

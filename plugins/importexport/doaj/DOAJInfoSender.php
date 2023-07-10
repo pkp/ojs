@@ -34,7 +34,7 @@ class DOAJInfoSender extends ScheduledTask
         $plugin = PluginRegistry::getPlugin('importexport', 'DOAJExportPlugin'); /** @var DOAJExportPlugin $plugin */
         $this->_plugin = $plugin;
 
-        if (is_a($plugin, 'DOAJExportPlugin')) {
+        if ($plugin instanceof DOAJExportPlugin) {
             $plugin->addLocaleData();
         }
 

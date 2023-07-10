@@ -17,6 +17,7 @@
 namespace APP\controllers\grid\issues;
 
 use APP\facades\Repo;
+use APP\issue\Issue;
 use PKP\controllers\grid\GridRow;
 use PKP\core\PKPApplication;
 use PKP\linkAction\LinkAction;
@@ -42,7 +43,7 @@ class IssueGridRow extends GridRow
         $issueId = $this->getId();
         if (!empty($issueId) && is_numeric($issueId)) {
             $issue = $this->getData();
-            assert(is_a($issue, 'Issue'));
+            assert($issue instanceof Issue);
             $router = $request->getRouter();
 
             $this->addAction(

@@ -16,8 +16,10 @@
 
 namespace APP\controllers\grid\issueGalleys;
 
+use APP\issue\IssueGalley;
 use PKP\controllers\grid\GridCellProvider;
 use PKP\controllers\grid\GridColumn;
+
 use PKP\facades\Locale;
 
 class IssueGalleyGridCellProvider extends GridCellProvider
@@ -35,7 +37,7 @@ class IssueGalleyGridCellProvider extends GridCellProvider
     {
         $issueGalley = $row->getData();
         $columnId = $column->getId();
-        assert(is_a($issueGalley, 'IssueGalley'));
+        assert($issueGalley instanceof IssueGalley);
         assert(!empty($columnId));
 
         switch ($columnId) {

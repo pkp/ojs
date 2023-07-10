@@ -17,6 +17,8 @@
 namespace APP\controllers\grid\subscriptions;
 
 use APP\facades\Repo;
+use APP\subscription\IndividualSubscription;
+use APP\subscription\InstitutionalSubscription;
 use PKP\controllers\grid\GridCellProvider;
 use PKP\controllers\grid\GridColumn;
 
@@ -41,17 +43,16 @@ class SubscriptionsGridCellProvider extends GridCellProvider
 
         switch ($column->getId()) {
             case 'name':
-                switch (1) {
-                    case is_a($subscription, 'IndividualSubscription'):
+                switch (true) {
+                    case $subscription instanceof IndividualSubscription:
                         return ['label' => $subscription->getUserFullName()];
-                    case is_a($subscription, 'InstitutionalSubscription'):
+                    case $subscription instanceof InstitutionalSubscription:
                         $institution = Repo::institution()->get($subscription->getInstitutionId());
                         return ['label' => $institution->getLocalizedName()];
                 }
-                assert(false);
-                break;
+                throw new Exception('Invalid column name!');
             case 'email':
-                assert(is_a($subscription, 'IndividualSubscription'));
+                assert($subscription instanceof IndividualSubscription);
                 return ['label' => $subscription->getUserEmail()];
             case 'subscriptionType':
                 return ['label' => $subscription->getSubscriptionTypeName()];

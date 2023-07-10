@@ -16,6 +16,7 @@
 
 namespace APP\controllers\grid\subscriptions;
 
+use APP\subscription\SubscriptionType;
 use PKP\controllers\grid\GridRow;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
@@ -37,7 +38,7 @@ class SubscriptionTypesGridRow extends GridRow
 
         // Is this a new row or an existing row?
         $element = & $this->getData();
-        assert(is_a($element, 'SubscriptionType'));
+        assert($element instanceof SubscriptionType);
 
         $rowId = $this->getId();
         if (!empty($rowId) && is_numeric($rowId)) {
