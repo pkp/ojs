@@ -558,3 +558,6 @@ job_runner_max_memory = 80
 ; Remove failed jobs from the database after the following number of days.
 ; Remove this setting to leave failed jobs in the database.
 delete_failed_jobs_after = 180
+
+[invitations]
+expiration_days = 3
