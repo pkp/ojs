@@ -221,7 +221,7 @@ class IssueDAO extends DAO implements PKPPubIdPluginDAO {
 	 * @return Issue object
 	 */
 	function getByBestId($issueId, $contextId = null, $useCache = false) {
-		$params = [$issueId];
+		$params = [(string) $issueId];
 		if ($contextId) $params[] = (int) $contextId;
 
 		$result = $this->retrieve(
