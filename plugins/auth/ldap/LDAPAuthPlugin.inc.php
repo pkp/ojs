@@ -358,12 +358,12 @@ class LDAPAuthPlugin extends AuthPlugin {
 			case 'md5':
 				return '{MD5}' . base64_encode(pack('H*', md5($password)));
 			case 'smd5':
-				$salt = pack('C*', random_int(), random_int(), random_int(), random_int(), random_int(), random_int());
+				$salt = pack('C*', random_int(0, PHP_INT_MAX), random_int(0, PHP_INT_MAX), random_int(0, PHP_INT_MAX), random_int(0, PHP_INT_MAX), random_int(0, PHP_INT_MAX), random_int(0, PHP_INT_MAX));
 				return '{SMD5}' . base64_encode(pack('H*', md5($password . $salt)) . $salt);
 			case 'sha':
 				return '{SHA}' . base64_encode(pack('H*', sha1($password))); // Note: sha1 requres PHP >= 4.3.0
 			case 'ssha':
-				$salt = pack('C*', random_int(), random_int(), random_int(), random_int(), random_int(), random_int());
+				$salt = pack('C*', random_int(0, PHP_INT_MAX), random_int(0, PHP_INT_MAX), random_int(0, PHP_INT_MAX), random_int(0, PHP_INT_MAX), random_int(0, PHP_INT_MAX), random_int(0, PHP_INT_MAX));
 				return '{SSHA}' . base64_encode(pack('H*', sha1($password . $salt)) . $salt);
 			case 'crypt':
 				return '{CRYPT}' . crypt($password);
