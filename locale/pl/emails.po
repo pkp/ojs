@@ -27,7 +27,7 @@ msgstr ""
 "hasło nie zostanie zmienione. Jeżeli jednak chcesz zresetować hasło, to "
 "kliknij poniższy odsyłacz.<br />\n"
 "<br />\n"
-"Zresetuj moje hasło: {$lostPasswordUrl}<br />\n"
+"Zresetuj moje hasło: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

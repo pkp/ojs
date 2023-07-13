@@ -27,7 +27,7 @@ msgstr ""
 "Caso não tenha feito este pedido, ignore este e-mail e a sua senha não será "
 "alterada. Se deseja atualizar a sua senha, clique no seguinte link.<br/>\n"
 "<br />\n"
-"Atualizar senha: {$lostPasswordUrl}<br />\n"
+"Atualizar senha: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

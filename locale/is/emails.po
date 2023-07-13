@@ -24,7 +24,7 @@ msgstr ""
 "lykilorðinu verður ekki breytt.  Ef þú óskar eftir að breyta lykilorði þínu "
 "smelltu þá á vefslóðina hér fyrir neðan.<br />\n"
 "<br />\n"
-"Breyta lykilorði: {$url}<br />\n"
+"Breyta lykilorði: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 

@@ -26,7 +26,7 @@ msgstr ""
 "laluan anda tidak akan diubah. Sekiranya anda ingin menetapkan semula kata "
 "laluan anda, klik pada URL di bawah. <br />\n"
 "<br />\n"
-"Tetapkan semula kata laluan saya: {$lostPasswordUrl} <br />\n"
+"Tetapkan semula kata laluan saya: {$passwordResetUrl} <br />\n"
 "<br />\n"
 "{$siteContactName}"
 
