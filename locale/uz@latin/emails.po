@@ -26,7 +26,7 @@ msgstr ""
 "e'tiborsiz qoldiring va parolingiz o'zgarmaydi. Agar siz parolni qayta "
 "tiklamoqchi bo'lsangiz, pastdagi URL manzilini bosing. <br />\n"
 "<br/>\n"
-"Parolni tiklash: {$lostPasswordUrl} <br />\n"
+"Parolni tiklash: {$passwordResetUrl} <br />\n"
 "<br/>\n"
 "{$siteContactName}"
 

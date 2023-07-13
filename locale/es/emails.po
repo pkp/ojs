@@ -30,7 +30,7 @@ msgstr ""
 "cambiará. Si desea cambiar su contraseña pinche en el enlace que le "
 "mostramos a continuación.<br />\n"
 "<br />\n"
-"Cambiar mi contraseña: {$lostPasswordUrl}<br />\n"
+"Cambiar mi contraseña: {$passwordResetUrl}<br />\n"
 "<br />\n"
 "{$siteContactName}"
 
