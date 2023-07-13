@@ -83,7 +83,7 @@ class ArticleSearchIndexTest extends PKPTestCase
     public function testUpdateFileIndexViaPluginHook()
     {
         // Diverting to the search plugin hook.
-        Hook::add('ArticleSearchIndex::submissionFileChanged', [$this, 'callbackUpdateFileIndex']);
+        Hook::add('ArticleSearchIndex::submissionFileChanged', $this->callbackUpdateFileIndex(...));
 
         // Simulate updating an article file via hook.
         $submissionFile = new SubmissionFile();
@@ -122,7 +122,7 @@ class ArticleSearchIndexTest extends PKPTestCase
     public function testDeleteTextIndexViaPluginHook()
     {
         // Diverting to the search plugin hook.
-        Hook::add('ArticleSearchIndex::submissionFileDeleted', [$this, 'callbackDeleteTextIndex']);
+        Hook::add('ArticleSearchIndex::submissionFileDeleted', $this->callbackDeleteTextIndex(...));
 
         // The search DAO should not be called.
         $this->registerMockArticleSearchDAO($this->never(), $this->never());
@@ -166,7 +166,7 @@ class ArticleSearchIndexTest extends PKPTestCase
     public function testRebuildIndexViaPluginHook()
     {
         // Diverting to the search plugin hook.
-        Hook::add('ArticleSearchIndex::rebuildIndex', [$this, 'callbackRebuildIndex']);
+        Hook::add('ArticleSearchIndex::rebuildIndex', $this->callbackRebuildIndex(...));
 
         // Test log output.
         $this->expectOutputString('Some log message from the plug-in.');
@@ -216,7 +216,7 @@ class ArticleSearchIndexTest extends PKPTestCase
     public function testIndexArticleMetadataViaPluginHook()
     {
         // Diverting to the search plugin hook.
-        Hook::add('ArticleSearchIndex::articleMetadataChanged', [$this, 'callbackIndexArticleMetadata']);
+        Hook::add('ArticleSearchIndex::articleMetadataChanged', $this->callbackIndexArticleMetadata(...));
 
         // Simulate indexing via hook.
         $article = new Submission();
@@ -253,7 +253,7 @@ class ArticleSearchIndexTest extends PKPTestCase
     public function testIndexSubmissionFilesViaPluginHook()
     {
         // Diverting to the search plugin hook.
-        Hook::add('ArticleSearchIndex::submissionFilesChanged', [$this, 'callbackIndexSubmissionFiles']);
+        Hook::add('ArticleSearchIndex::submissionFilesChanged', $this->callbackIndexSubmissionFiles(...));
         // The file DAOs should not be called.
         $this->registerFileDAOs(false);
 

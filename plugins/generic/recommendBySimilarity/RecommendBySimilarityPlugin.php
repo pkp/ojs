@@ -40,7 +40,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin
         }
 
         if ($success && $this->getEnabled($mainContextId)) {
-            Hook::add('Templates::Article::Footer::PageFooter', [$this, 'callbackTemplateArticlePageFooter']);
+            Hook::add('Templates::Article::Footer::PageFooter', $this->callbackTemplateArticlePageFooter(...));
         }
         return $success;
     }

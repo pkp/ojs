@@ -37,7 +37,7 @@ class AnnouncementFeedPlugin extends GenericPlugin
             return false;
         }
         if ($this->getEnabled($mainContextId)) {
-            Hook::add('TemplateManager::display', [$this, 'callbackAddLinks']);
+            Hook::add('TemplateManager::display', $this->callbackAddLinks(...));
             PluginRegistry::register('blocks', new AnnouncementFeedBlockPlugin($this), $this->getPluginPath());
             PluginRegistry::register('gateways', new AnnouncementFeedGatewayPlugin($this), $this->getPluginPath());
         }
@@ -151,7 +151,7 @@ class AnnouncementFeedPlugin extends GenericPlugin
             case 'settings':
                 $context = $request->getContext();
                 $templateMgr = TemplateManager::getManager($request);
-                $templateMgr->registerPlugin('function', 'plugin_url', [$this, 'smartyPluginUrl']);
+                $templateMgr->registerPlugin('function', 'plugin_url', $this->smartyPluginUrl(...));
 
                 $form = new AnnouncementFeedSettingsForm($this, $context->getId());
 

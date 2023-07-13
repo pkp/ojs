@@ -21,7 +21,6 @@ use APP\issue\Issue;
 use APP\plugins\PubIdPlugin;
 use APP\plugins\pubIds\urn\classes\form\FieldPubIdUrn;
 use APP\plugins\pubIds\urn\classes\form\FieldTextUrn;
-use APP\publication\Publication;
 use APP\template\TemplateManager;
 use PKP\components\forms\FormComponent;
 use PKP\components\forms\publication\PKPPublicationIdentifiersForm;
@@ -43,10 +42,10 @@ class URNPubIdPlugin extends PubIdPlugin
             return $success;
         }
         if ($success && $this->getEnabled($mainContextId)) {
-            Hook::add('Publication::validate', [$this, 'validatePublicationUrn']);
-            Hook::add('Form::config::before', [$this, 'addPublicationFormFields']);
-            Hook::add('Form::config::before', [$this, 'addPublishFormNotice']);
-            Hook::add('TemplateManager::display', [$this, 'loadUrnFieldComponent']);
+            Hook::add('Publication::validate', $this->validatePublicationUrn(...));
+            Hook::add('Form::config::before', $this->addPublicationFormFields(...));
+            Hook::add('Form::config::before', $this->addPublishFormNotice(...));
+            Hook::add('TemplateManager::display', $this->loadUrnFieldComponent(...));
         }
         return $success;
     }
@@ -384,8 +383,8 @@ class URNPubIdPlugin extends PubIdPlugin
             }
             $form->addField(new FieldPubIdUrn('pub-id::other::urn', $fieldData));
 
-        // Otherwise add a field for manual entry that includes a button to generate
-        // the check number
+            // Otherwise add a field for manual entry that includes a button to generate
+            // the check number
         } else {
             $form->addField(new FieldTextUrn('pub-id::other::urn', [
                 'label' => __('plugins.pubIds.urn.displayName'),
@@ -414,7 +413,7 @@ class URNPubIdPlugin extends PubIdPlugin
         if (!$publicationUrnEnabled && !$galleyUrnEnabled) {
             return;
 
-        // Use a simplified view when only assigning to the publication
+            // Use a simplified view when only assigning to the publication
         } elseif (!$galleyUrnEnabled) {
             if ($form->publication->getData('pub-id::other::urn')) {
                 $msg = __('plugins.pubIds.urn.editor.preview.publication', ['urn' => $form->publication->getData('pub-id::other::urn')]);
@@ -427,7 +426,7 @@ class URNPubIdPlugin extends PubIdPlugin
             ]));
             return;
 
-        // Show a table if more than one URN is going to be created
+            // Show a table if more than one URN is going to be created
         } else {
             $urnTableRows = [];
             if ($publicationUrnEnabled) {

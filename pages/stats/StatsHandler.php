@@ -39,7 +39,7 @@ class StatsHandler extends PKPStatsHandler
             [Role::ROLE_ID_SITE_ADMIN, Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR],
             ['issues']
         );
-        Hook::add('TemplateManager::display', [$this, 'addSectionFilters']);
+        Hook::add('TemplateManager::display', $this->addSectionFilters(...));
     }
 
     /**

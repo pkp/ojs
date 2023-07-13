@@ -67,9 +67,9 @@ class ManualPaymentPlugin extends PaymethodPlugin
     {
         if (parent::register($category, $path, $mainContextId)) {
             $this->addLocaleData();
-            Hook::add('Form::config::before', [$this, 'addSettings']);
-            Hook::add('Mailer::Mailables', [$this, 'addMailable']);
-            Hook::add('Installer::postInstall', [$this, 'updateSchema']);
+            Hook::add('Form::config::before', $this->addSettings(...));
+            Hook::add('Mailer::Mailables', $this->addMailable(...));
+            Hook::add('Installer::postInstall', $this->updateSchema(...));
             return true;
         }
         return false;
