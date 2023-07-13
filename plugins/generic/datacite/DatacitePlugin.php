@@ -273,9 +273,9 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
     {
         PluginRegistry::register('importexport', new DataciteExportPlugin($this), $this->getPluginPath());
 
-        Hook::add('DoiSettingsForm::setEnabledRegistrationAgencies', [$this, 'addAsRegistrationAgencyOption']);
-        Hook::add('DoiSetupSettingsForm::getObjectTypes', [$this, 'addAllowedObjectTypes']);
-        Hook::add('DoiListPanel::setConfig', [$this, 'addRegistrationAgencyName']);
+        Hook::add('DoiSettingsForm::setEnabledRegistrationAgencies', $this->addAsRegistrationAgencyOption(...));
+        Hook::add('DoiSetupSettingsForm::getObjectTypes', $this->addAllowedObjectTypes(...));
+        Hook::add('DoiListPanel::setConfig', $this->addRegistrationAgencyName(...));
     }
 
     /**

@@ -113,7 +113,7 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
         }
         if (!isset($this->caches[$cacheId])) {
             $cacheManager = CacheManager::getManager();
-            $this->caches[$cacheId] = $cacheManager->getObjectCache('issues', $cacheId, [$this, '_cacheMiss']);
+            $this->caches[$cacheId] = $cacheManager->getObjectCache('issues', $cacheId, $this->_cacheMiss(...));
         }
         return $this->caches[$cacheId];
     }

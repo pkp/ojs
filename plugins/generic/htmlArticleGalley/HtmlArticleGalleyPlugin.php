@@ -37,8 +37,8 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
             return false;
         }
         if ($this->getEnabled($mainContextId)) {
-            Hook::add('ArticleHandler::view::galley', [$this, 'articleViewCallback'], Hook::SEQUENCE_LATE);
-            Hook::add('ArticleHandler::download', [$this, 'articleDownloadCallback'], Hook::SEQUENCE_LATE);
+            Hook::add('ArticleHandler::view::galley', $this->articleViewCallback(...), Hook::SEQUENCE_LATE);
+            Hook::add('ArticleHandler::download', $this->articleDownloadCallback(...), Hook::SEQUENCE_LATE);
         }
         return true;
     }
@@ -239,7 +239,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
         // Perform replacement for ojs://... URLs
         $contents = preg_replace_callback(
             '/(<[^<>]*")[Oo][Jj][Ss]:\/\/([^"]+)("[^<>]*>)/',
-            [$this, '_handleOjsUrl'],
+            $this->_handleOjsUrl(...),
             $contents
         );
         if ($contents === null) {

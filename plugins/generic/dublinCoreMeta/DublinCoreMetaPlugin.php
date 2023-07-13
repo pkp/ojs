@@ -30,7 +30,7 @@ class DublinCoreMetaPlugin extends GenericPlugin
     {
         if (parent::register($category, $path, $mainContextId)) {
             if ($this->getEnabled($mainContextId)) {
-                Hook::add('ArticleHandler::view', [&$this, 'articleView']);
+                Hook::add('ArticleHandler::view', $this->articleView(...));
             }
             return true;
         }

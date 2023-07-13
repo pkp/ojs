@@ -34,8 +34,8 @@ class NavigationMenuService extends \PKP\services\PKPNavigationMenuService
      */
     public function __construct()
     {
-        Hook::add('NavigationMenus::itemTypes', [$this, 'getMenuItemTypesCallback']);
-        Hook::add('NavigationMenus::displaySettings', [$this, 'getDisplayStatusCallback']);
+        Hook::add('NavigationMenus::itemTypes', $this->getMenuItemTypesCallback(...));
+        Hook::add('NavigationMenus::displaySettings', $this->getDisplayStatusCallback(...));
     }
 
     /**

@@ -139,7 +139,7 @@ class ArticleSearchTest extends PKPTestCase
     public function testRetrieveResultsViaPluginHook()
     {
         // Diverting a search to the search plugin hook.
-        Hook::add('SubmissionSearch::retrieveResults', [$this, 'callbackRetrieveResults']);
+        Hook::add('SubmissionSearch::retrieveResults', $this->callbackRetrieveResults(...));
 
         $testCases = [
             [null => 'query'], // Simple Search - "All"

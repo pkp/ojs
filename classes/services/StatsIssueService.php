@@ -102,11 +102,11 @@ class StatsIssueService
         $metricsByType = $metricsQB->get()->toArray();
 
         $tocViews = $issueGalleyViews = 0;
-        $tocRecord = array_filter($metricsByType, [$this, 'filterRecordTOC']);
+        $tocRecord = array_filter($metricsByType, $this->filterRecordTOC(...));
         if (!empty($tocRecord)) {
             $tocViews = (int) current($tocRecord)->metric;
         }
-        $issueGalleyRecord = array_filter($metricsByType, [$this, 'filterRecordIssueGalley']);
+        $issueGalleyRecord = array_filter($metricsByType, $this->filterRecordIssueGalley(...));
         if (!empty($issueGalleyRecord)) {
             $issueGalleyViews = current($issueGalleyRecord)->metric;
         }

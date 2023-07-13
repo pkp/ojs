@@ -63,7 +63,7 @@ class PaypalPaymentPlugin extends PaymethodPlugin
     {
         if (parent::register($category, $path, $mainContextId)) {
             $this->addLocaleData();
-            Hook::add('Form::config::before', [$this, 'addSettings']);
+            Hook::add('Form::config::before', $this->addSettings(...));
             return true;
         }
         return false;
