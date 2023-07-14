@@ -100,7 +100,7 @@ class DataciteSettings extends \PKP\doi\RegistrationAgencySettings
             ]),
             new FieldText('testDOIPrefix', [
                 'label' => __('plugins.importexport.datacite.settings.form.testDOIPrefix'),
-                'value' => (bool) $this->agencyPlugin->getSetting($context->getId(), 'testDOIPrefix'),
+                'value' => $this->agencyPlugin->getSetting($context->getId(), 'testDOIPrefix'),
             ]),
         ];
     }
