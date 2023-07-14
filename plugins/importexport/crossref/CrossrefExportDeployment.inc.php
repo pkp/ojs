@@ -24,6 +24,7 @@ define('CROSSREF_XSI_SCHEMAVERSION' , '4.3.6');
 define('CROSSREF_XSI_SCHEMALOCATION' , 'https://www.crossref.org/schemas/crossref4.3.6.xsd');
 define('CROSSREF_XMLNS_JATS' , 'http://www.ncbi.nlm.nih.gov/JATS1');
 define('CROSSREF_XMLNS_AI' , 'http://www.crossref.org/AccessIndicators.xsd');
+define('CROSSREF_XMLNS_XML', 'http://www.w3.org/XML/1998/namespace');
 
 class CrossrefExportDeployment {
 	/** @var Context The current import/export context */
@@ -106,6 +107,16 @@ class CrossrefExportDeployment {
 	 */
 	function getAINamespace() {
 		return CROSSREF_XMLNS_AI;
+	}
+
+	/**
+	 * Get the XML namespace URN
+	 *
+	 * @return string
+	 */
+	function getXMLNamespace()
+	{
+		return CROSSREF_XMLNS_XML;
 	}
 
 	/**
