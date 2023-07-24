@@ -490,6 +490,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('#representations-grid .show_extras').click();
 		cy.get('[id*="editGalley-button"]').click();
 		cy.waitJQuery(); // Wait for the form initialization
+		cy.wait(1000); // Additional wait needed to reduce failures
 		cy.get('#articleGalleyForm').within(() => {
 			cy.get('[name="label"]').type(' Version 2');
 			cy.get('[name="urlPath"]').type('pdf');

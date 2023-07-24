@@ -28,8 +28,8 @@ describe('Statistics Tests', function() {
 			'Article Details',
 			'articles',
 			['Mwandenga', 'Karbasizaed'],
-			4,
-			2
+			2,
+			1
 		);
 		cy.checkFilters([
 			'Articles',

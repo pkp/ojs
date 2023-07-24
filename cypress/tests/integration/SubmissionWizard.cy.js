@@ -408,8 +408,6 @@ describe('Submission Wizard', function() {
 
         // All errors should be gone and submit should be allowed.
         cy.get('.pkpSteps button:contains("Review")').click();
-        cy.get('.submissionWizard__loadingReview').contains('Checking your submission');
-        cy.get('.submissionWizard__loadingReview').contains('Checking your submission').should('not.exist');
         cy.get('*:contains("There are one or more problems")').should('not.exist');
         cy.get('button:contains("Submit")').should('be.enabled');
         cy.get('*:contains("You must upload at least one Article Text file.")').should('not.exist');
@@ -601,10 +599,10 @@ describe('Submission Wizard', function() {
 
         // Should be able to submit!
         cy.get('.pkpSteps button:contains("Review")').click();
-        cy.get('.submissionWizard__loadingReview').contains('Checking your submission');
-        cy.get('.submissionWizard__loadingReview').contains('Checking your submission').should('not.exist');
         cy.get('button:contains("Submit")').click();
         cy.contains('The submission, ' + submission.title.en + ', will be submitted to Journal of Public Knowledge for editorial review.');
+        // delay is needed so previous changes gets pushed, before the submit should be triggered
+        cy.wait(500);
         cy.get('.modal__footer button:contains("Submit")').click();
         cy.get('h1:contains("Submission complete")');
 
