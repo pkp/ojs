@@ -290,10 +290,10 @@ class OAIDAO extends PKPOAIDAO
                 return $query->where('p.section_id', '=', (int) $sectionId);
             })
             ->when($from, function ($query, $from) {
-                return $query->where('GREATEST(a.last_modified, i.last_modified, p.last_modified)', '>=', $from);
+                return $query->whereDate(DB::raw('GREATEST(a.last_modified, i.last_modified, p.last_modified)'), '>=', \DateTime::createFromFormat('U', $from));
             })
             ->when($until, function ($query, $until) {
-                return $query->where('GREATEST(a.last_modified, i.last_modified, p.last_modified)', '<=', $until);
+                return $query->whereDate(DB::raw('GREATEST(a.last_modified, i.last_modified, p.last_modified)'), '<=', \DateTime::createFromFormat('U', $until));
             })
             ->when($submissionId, function ($query, $submissionId) {
                 return $query->where('a.submission_id', '=', (int) $submissionId);
