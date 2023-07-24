@@ -18,7 +18,7 @@ describe('Data suite tests', function() {
 		// Edit Articles section to add section editors
 		cy.get('div#sections a[class=show_extras]').click();
 		cy.get('a[id^=component-grid-settings-sections-sectiongrid-row-1-editSection-button-]').click();
-		cy.waitJQuery(); // Avoid occasional failure due to form init taking time
+		cy.wait(1000); // Avoid occasional failure due to form init taking time, waitJQuery is not sufficient
 		cy.get('input[id^="wordCount-"]').type('500');
 		cy.get('label').contains('Daniel Barnes').click();
 		cy.get('label').contains('David Buskins').click();
@@ -27,7 +27,7 @@ describe('Data suite tests', function() {
 
 		// Create a Reviews section
 		cy.get('a[id^=component-grid-settings-sections-sectiongrid-addSection-button-]').click();
-		cy.waitJQuery(); // Avoid occasional failure due to form init taking time
+		cy.wait(1000); // Avoid occasional failure due to form init taking time, waitJQuery is not sufficient
 		cy.get('input[id^="title-en-"]').type('Reviews', {delay: 0});
 		cy.get('input[id^="abbrev-en-"]').type('REV', {delay: 0});
 		cy.get('input[id^="identifyType-en-"]').type('Review Article', {delay: 0});
