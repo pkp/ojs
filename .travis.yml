@@ -77,6 +77,19 @@ jobs:
         npm run lint
 
     - stage: upgrade
+      env: DATASET_BRANCH=stable-3_4_0 TEST=mysql
+      php: 8.1.0
+      script:
+        - source ./lib/pkp/tools/travis/prepare-tests.sh
+        - git clone https://github.com/pkp/datasets
+        - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
+        - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
+        - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
+        - ./datasets/tools/dbclient.sh < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
+        - php tools/upgrade.php check
+        - php tools/upgrade.php upgrade
+
+    - stage: upgrade
       env: DATASET_BRANCH=stable-3_3_0 TEST=mysql
       php: 8.1.0
       script:
@@ -119,7 +132,8 @@ jobs:
         - php tools/upgrade.php check
         - php tools/upgrade.php upgrade
 
-    - env: DATASET_BRANCH=3.1.2 TEST=mysql
+    - stage: upgrade
+      env: DATASET_BRANCH=stable-3_4_0 TEST=pgsql
       php: 8.1.0
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
@@ -127,36 +141,6 @@ jobs:
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
         - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
-        - patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
-        - patch -p1 < datasets/upgrade/3_4_0-update-locale.diff
-        - ./datasets/tools/dbclient.sh < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
-        - php tools/upgrade.php check
-        - php tools/upgrade.php upgrade
-
-    - env: DATASET_BRANCH=3.1.1-2 TEST=mysql
-      php: 8.1.0
-      script:
-        - source ./lib/pkp/tools/travis/prepare-tests.sh
-        - git clone https://github.com/pkp/datasets
-        - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
-        - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
-        - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
-        - patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
-        - patch -p1 < datasets/upgrade/3_4_0-update-locale.diff
-        - ./datasets/tools/dbclient.sh < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
-        - php tools/upgrade.php check
-        - php tools/upgrade.php upgrade
-
-    - env: DATASET_BRANCH=3.1.0 TEST=mysql
-      php: 8.1.0
-      script:
-        - source ./lib/pkp/tools/travis/prepare-tests.sh
-        - git clone https://github.com/pkp/datasets
-        - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
-        - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
-        - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
-        - patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
-        - patch -p1 < datasets/upgrade/3_4_0-update-locale.diff
         - ./datasets/tools/dbclient.sh < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
         - php tools/upgrade.php check
         - php tools/upgrade.php upgrade
@@ -190,20 +174,6 @@ jobs:
         - php tools/upgrade.php upgrade
 
     - env: DATASET_BRANCH=stable-3_2_0 TEST=pgsql
-      php: 8.1.0
-      script:
-        - source ./lib/pkp/tools/travis/prepare-tests.sh
-        - git clone https://github.com/pkp/datasets
-        - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
-        - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
-        - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
-        - patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
-        - patch -p1 < datasets/upgrade/3_4_0-update-locale.diff
-        - ./datasets/tools/dbclient.sh --quiet < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
-        - php tools/upgrade.php check
-        - php tools/upgrade.php upgrade
-
-    - env: DATASET_BRANCH=3.1.0 TEST=pgsql
       php: 8.1.0
       script:
         - source ./lib/pkp/tools/travis/prepare-tests.sh
