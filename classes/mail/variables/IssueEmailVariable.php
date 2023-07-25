@@ -19,6 +19,11 @@ namespace APP\mail\variables;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\Issue;
+use APP\submission\Submission;
+use APP\template\TemplateManager;
+use PKP\core\PKPString;
+use PKP\db\DAORegistry;
+use PKP\facades\Locale;
 use PKP\mail\Mailable;
 use PKP\mail\variables\Variable;
 
@@ -75,29 +80,68 @@ class IssueEmailVariable extends Variable
     protected function getIssueToc(): string
     {
         $request = Application::get()->getRequest();
+        $templateMgr = TemplateManager::getManager($request);
 
-        $submissions = Repo::submission()->getCollector()
-            ->filterByContextIds([$this->getContext()->getId()])
+        $templateMgr->assign([
+            'issueIdentification' => $this->issue->getIssueIdentification(),
+            'issueTitle' => $this->issue->getLocalizedTitle(),
+            'issueSeries' => $this->issue->getIssueIdentification(['showTitle' => true]),
+            'currentContext' => $this->getContext(),
+            'currentJournal' => $this->getContext(),
+        ]);
+
+        $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */
+
+        $genreDao = DAORegistry::getDAO('GenreDAO'); /** @var GenreDAO $genreDao */
+        $primaryGenres = $genreDao->getPrimaryByContextId($this->getContext()->getId())->toArray();
+        $primaryGenreIds = array_map(function ($genre) {
+            return $genre->getId();
+        }, $primaryGenres);
+
+        $issueSubmissions = Repo::submission()->getCollector()
+            ->filterByContextIds([$this->issue->getJournalId()])
             ->filterByIssueIds([$this->issue->getId()])
+            ->filterByStatus([Submission::STATUS_PUBLISHED])
+            ->orderBy(\APP\submission\Collector::ORDERBY_SEQUENCE, \APP\submission\Collector::ORDER_DIR_ASC)
             ->getMany();
 
-        if($submissions->count() <= 0) {
-            return '';
+        $sections = Repo::section()->getByIssueId($this->issue->getId());
+        $issueSubmissionsInSection = [];
+
+        foreach ($sections as $section) {
+            $issueSubmissionsInSection[$section->getId()] = [
+                'title' => $section->getHideTitle() ? null : $section->getLocalizedTitle(),
+                'hideAuthor' => $section->getHideAuthor(),
+                'articles' => [],
+            ];
         }
 
-        $list = $submissions->map(function ($submission) use ($request) {
-            $publication = $submission->getCurrentPublication();
-            $url = $request->getDispatcher()->url(
-                $request,
-                Application::ROUTE_PAGE,
-                $this->getContext()->getPath(),
-                'article',
-                'view',
-                $publication->getData('urlPath') ?? $submission->getId()
-            );
-            return '<li><a href="' . $url . '">' . $publication->getLocalizedFullTitle(null, 'html') . '</a></li>';
-        });
+        foreach ($issueSubmissions as $submission) {
+            if (!$sectionId = $submission->getCurrentPublication()->getData('sectionId')) {
+                continue;
+            }
+            $issueSubmissionsInSection[$sectionId]['articles'][] = $submission;
+        }
 
-        return '<ol>' . $list->implode('') . '</ol>';
+        $authorUserGroups = Repo::userGroup()->getCollector()
+            ->filterByRoleIds([\PKP\security\Role::ROLE_ID_AUTHOR])
+            ->filterByContextIds([$this->getContext()->getId()])
+            ->getMany();
+
+        $templateMgr->assign([
+            'issueIdentification' => $this->issue->getIssueIdentification(),
+            'issueTitle' => $this->issue->getLocalizedTitle(),
+            'issueSeries' => $this->issue->getIssueIdentification(['showTitle' => true]),
+            'currentContext' => $this->getContext(),
+            'currentJournal' => $this->getContext(),
+            'issue' => $this->issue,
+            'issueGalleys' => $issueGalleyDao->getByIssueId($this->issue->getId()),
+            'publishedSubmissions' => $issueSubmissionsInSection,
+            'primaryGenreIds' => $primaryGenreIds,
+            'authorUserGroups' => $authorUserGroups,
+            'locale' => Locale::getLocale(),
+        ]);
+
+        return PKPString::stripUnsafeHtml($templateMgr->fetch('frontend/objects/issue_toc.tpl'));
     }
 }
