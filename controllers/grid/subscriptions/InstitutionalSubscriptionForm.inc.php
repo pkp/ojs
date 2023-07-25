@@ -79,7 +79,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 					'institutionName' => $this->subscription->getInstitutionName(),
 					'institutionMailingAddress' => $this->subscription->getInstitutionMailingAddress(),
 					'domain' => $this->subscription->getDomain(),
-					'ipRanges' => join($this->subscription->getIPRanges(), "\r\n"),
+					'ipRanges' => join("\r\n", $this->subscription->getIPRanges()),
 				)
 			);
 		}
