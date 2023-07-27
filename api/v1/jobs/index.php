@@ -17,4 +17,4 @@
  *
  */
 
-return new \PKP\API\v1\jobs\PKPJobHandler();
+return new \PKP\core\PKPApiRoutingHandler(new \PKP\API\v1\jobs\PKPJobController());
