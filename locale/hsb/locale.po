@@ -2,7 +2,7 @@
 # Astrid Schmiedel <astrid.schmiedel@serbski-institut.de>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-06-16 16:02+0000\n"
+"PO-Revision-Date: 2023-07-10 14:45+0000\n"
 "Last-Translator: Astrid Schmiedel <astrid.schmiedel@serbski-institut.de>\n"
 "Language-Team: Upper Sorbian <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/hsb/>\n"
@@ -196,3 +196,13 @@ msgstr "Přinoški"
 
 msgid "submission.logType.review"
 msgstr "Posudźowanje"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Pruwowanska lisćina za zapodaće přinoškow"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"Při zapodaću tekstow prosymy wo to, zo byšće na zakładźe tuteje "
+"pruwowanskeje lisćiny přezjednosć swojeho přinoška dypk po dypku z podatymi "
+"směrnicami přirunali. Hdyž směrnicy spjelnjene njejsu, móža so přinoški "
+"awtorkam/awtoram wróćić."
