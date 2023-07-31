@@ -559,6 +559,8 @@ job_runner_max_memory = 80
 ; Remove this setting to leave failed jobs in the database.
 delete_failed_jobs_after = 180
 
+[invitations]
+expiration_days = 3
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ; New Features Settings ;
@@ -567,3 +569,4 @@ delete_failed_jobs_after = 180
 [features]
 
 enable_new_submission_listing = Off
+
