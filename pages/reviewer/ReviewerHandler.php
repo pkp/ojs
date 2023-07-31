@@ -18,7 +18,9 @@ namespace APP\pages\reviewer;
 
 use APP\submission\reviewer\form\ReviewerReviewStep3Form;
 use APP\submission\Submission;
+use PKP\core\PKPApplication;
 use PKP\core\PKPRequest;
+use PKP\pages\invitation\PKPInvitationHandler;
 use PKP\pages\reviewer\PKPReviewerHandler;
 use PKP\security\authorization\SubmissionAccessPolicy;
 use PKP\security\Role;
@@ -54,12 +56,33 @@ class ReviewerHandler extends PKPReviewerHandler
      */
     public function authorize($request, &$args, $roleAssignments)
     {
+        $context = $request->getContext();
+        if ($context->getData('reviewerAccessKeysEnabled')) {
+            $accessKeyCode = $request->getUserVar('key');
+            if ($accessKeyCode) {
+                $url = $request->getDispatcher()->url(
+                    $request,
+                    PKPApplication::ROUTE_PAGE,
+                    $request->getContext()->getPath(),
+                    PKPInvitationHandler::REPLY_PAGE,
+                    PKPInvitationHandler::REPLY_OP_ACCEPT,
+                    null,
+                    [
+                        'key' => $accessKeyCode,
+                    ]
+                );
+
+                header('HTTP/1.1 301 Moved Permanently');
+                $request->redirectUrl($url);
+                return true;
+            }
+        }
+
         $this->addPolicy(new SubmissionAccessPolicy(
             $request,
             $args,
             $roleAssignments
         ));
-
 
         return parent::authorize($request, $args, $roleAssignments);
     }
