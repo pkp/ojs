@@ -17,12 +17,15 @@
 namespace APP\pages\issue;
 
 use APP\core\Application;
+use APP\core\Request;
 use APP\facades\Repo;
 use APP\file\IssueFileManager;
 use APP\handler\Handler;
 use APP\issue\Collector;
+use APP\issue\Issue;
 use APP\issue\IssueAction;
 use APP\issue\IssueGalleyDAO;
+use APP\journal\Journal;
 use APP\observers\events\UsageEvent;
 use APP\payment\ojs\OJSCompletedPaymentDAO;
 use APP\payment\ojs\OJSPaymentManager;
@@ -129,7 +132,7 @@ class IssueHandler extends Handler
                 $request->redirect(null, null, 'download', [$issue->getBestIssueId($journal), $galley->getBestGalleyId()]);
             }
         } else {
-            self::_setupIssueTemplate($request, $issue, $request->getUserVar('showToc') ? true : false);
+            self::_setupIssueTemplate($request, $issue, $journal, $request->getUserVar('showToc') ? true : false);
             $templateMgr->assign('issueId', $issue->getBestIssueId());
 
             // consider public identifiers
@@ -237,7 +240,7 @@ class IssueHandler extends Handler
         $issueAction = new IssueAction();
 
         $journal = $request->getJournal();
-        $user = $request->getUser();
+        $user = $request->getUser(); /** @var \PKP\user\User $user */
         $userId = $user ? $user->getId() : 0;
         $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $galley = $this->getGalley();
@@ -311,15 +314,17 @@ class IssueHandler extends Handler
      * frontend/objects/issue_toc.tpl to function properly (i.e. current issue
      * and view issue).
      *
-     * @param object $issue The issue to display
-     * @param bool $showToc iff false and a custom cover page exists,
-     * 	the cover page will be displayed. Otherwise table of contents
-     * 	will be displayed.
+     * @param \APP\core\Request         $request                    The core request object
+     * @param \APP\issue\Issue          $issue                      The issue to display
+     * @param \APP\journal\Journal|null $journal                    The journal associated with the request
+     * @param bool                      $showToc                    If false and a custom cover page exists,
+     * 	                                                            the cover page will be displayed. Otherwise table of contents
+     * 	                                                            will be displayed.
+     * @param bool                      $withSubscriptionDetails    Should include the subscription related information into the template
      */
-    public static function _setupIssueTemplate($request, $issue, $showToc = false)
+    public static function _setupIssueTemplate(Request $request, Issue $issue, Journal $journal = null, $showToc = false, $withSubscriptionDetails = true)
     {
-        $journal = $request->getJournal();
-        $user = $request->getUser();
+        $journal ??= $request->getJournal();
         $templateMgr = TemplateManager::getManager($request);
 
         // Determine pre-publication access
@@ -329,6 +334,9 @@ class IssueHandler extends Handler
             'issueIdentification' => $issue->getIssueIdentification(),
             'issueTitle' => $issue->getLocalizedTitle(),
             'issueSeries' => $issue->getIssueIdentification(['showTitle' => false]),
+            'currentContext' => $journal,
+            'currentJournal' => $journal,
+            'includeIssuePublishDate' => true,
         ]);
 
         $locale = Locale::getLocale();
@@ -384,6 +392,10 @@ class IssueHandler extends Handler
         ]);
 
         // Subscription Access
+        $user = $request->getUser();
+        if (!$withSubscriptionDetails || !$user) {
+            return;
+        }
         $issueAction = new IssueAction();
         $subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
         $subscribedUser = $issueAction->subscribedUser($user, $journal);

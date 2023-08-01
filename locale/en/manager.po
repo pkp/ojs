@@ -1872,6 +1872,9 @@ msgstr "The link to the published articles statistics page"
 msgid "emailTemplate.variable.issueId"
 msgstr "The issue ID"
 
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr "The issue table of contents such as list of all associated submissions."
+
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
 "This email is automatically sent monthly to editors and journal managers to "
