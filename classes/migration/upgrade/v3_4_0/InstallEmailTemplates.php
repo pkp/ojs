@@ -38,6 +38,8 @@ class InstallEmailTemplates extends \PKP\migration\upgrade\v3_4_0\InstallEmailTe
             'SUBMISSION_NEEDS_EDITOR',
             'PAYMENT_REQUEST_NOTIFICATION',
             'VERSION_CREATED',
+            'REVIEW_COMPLETE',
+            'REVIEW_EDIT',
         ];
     }
 
