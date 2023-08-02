@@ -183,9 +183,11 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter {
 				}
 			}
 		}
-		$articleLanguage = $article->getLanguage();
-		if (empty($locales) && !empty($articleLanguage)) {
-			$dc11Description->addStatement('dc:language', strip_tags($articleLanguage));
+		$articleLanguages = $article->getLanguage();
+		if (empty($locales) && isset($articleLanguages[$article->getLocale()])) {
+			foreach ($articleLanguages[$article->getLocale()] as $language) {
+				$dc11Description->addStatement('dc:language', $language);
+			}
 		}
 
 		// Relation
