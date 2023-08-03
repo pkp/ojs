@@ -29,6 +29,7 @@
 	<migration class="PKP\migration\install\NotesMigration" />
 	<migration class="PKP\migration\install\RolesAndUserGroupsMigration" />
 	<migration class="PKP\migration\install\SubmissionsMigration" />
+	<migration class="PKP\migration\install\InvitationsMigration" />
 	<migration class="PKP\migration\install\ReviewFormsMigration" />
 	<migration class="PKP\migration\install\SubmissionFilesMigration" />
 	<migration class="PKP\migration\install\ScheduledTasksMigration" />
