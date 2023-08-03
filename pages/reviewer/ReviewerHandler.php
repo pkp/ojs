@@ -16,6 +16,7 @@
 
 namespace APP\pages\reviewer;
 
+use APP\facades\Repo;
 use APP\submission\reviewer\form\ReviewerReviewStep3Form;
 use APP\submission\Submission;
 use PKP\core\PKPApplication;
@@ -60,21 +61,27 @@ class ReviewerHandler extends PKPReviewerHandler
         if ($context->getData('reviewerAccessKeysEnabled')) {
             $accessKeyCode = $request->getUserVar('key');
             if ($accessKeyCode) {
-                $url = $request->getDispatcher()->url(
-                    $request,
-                    PKPApplication::ROUTE_PAGE,
-                    $request->getContext()->getPath(),
-                    PKPInvitationHandler::REPLY_PAGE,
-                    PKPInvitationHandler::REPLY_OP_ACCEPT,
-                    null,
-                    [
-                        'key' => $accessKeyCode,
-                    ]
-                );
+                $keyHash = md5($accessKeyCode);
 
-                header('HTTP/1.1 301 Moved Permanently');
-                $request->redirectUrl($url);
-                return true;
+                $invitation = Repo::invitation()->getBOByKeyHash($keyHash);
+
+                if (isset($invitation)) {
+                    $invitation->acceptHandle();
+                }
+                // $url = $request->getDispatcher()->url(
+                //     $request,
+                //     PKPApplication::ROUTE_PAGE,
+                //     $request->getContext()->getPath(),
+                //     PKPInvitationHandler::REPLY_PAGE,
+                //     PKPInvitationHandler::REPLY_OP_ACCEPT,
+                //     null,
+                //     [
+                //         'key' => $accessKeyCode,
+                //     ]
+                // );
+
+                // header('HTTP/1.1 301 Moved Permanently');
+                // $request->redirectUrl($url);
             }
         }
 
