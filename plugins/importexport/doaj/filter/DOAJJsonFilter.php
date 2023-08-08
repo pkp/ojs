@@ -158,7 +158,7 @@ class DOAJJsonFilter extends PKPImportExportFilter
             $article['bibjson']['author'] = [];
 
             foreach ($articleAuthors as $articleAuthor) {
-                $author = ['name' => $articleAuthor->getFullName(false)];
+                $author = ['name' => $articleAuthor->getFullName(false, false, $publicationLocale)];
                 $affiliation = $articleAuthor->getAffiliation($publicationLocale);
                 if (!empty($affiliation)) {
                     $author['affiliation'] = $affiliation;

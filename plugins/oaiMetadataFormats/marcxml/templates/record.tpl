@@ -42,7 +42,7 @@
 	{assign var=authors value=$article->getCurrentPublication()->getData('authors')}
 	{foreach from=$authors item=author}
 		<datafield tag="{if $authors|@count==1}100{else}720{/if}" ind1="1" ind2=" ">
-			<subfield code="a">{$author->getFullName(false, true)|escape}</subfield>
+			<subfield code="a">{$author->getFullName(false, true, $journal->getPrimaryLocale())|escape}</subfield>
 			{assign var=affiliation value=$author->getAffiliation($journal->getPrimaryLocale())}
 			{if $affiliation}<subfield code="u">{$affiliation|escape}</subfield>{/if}
 			{if $author->getUrl()}<subfield code="0">{$author->getUrl()|escape}</subfield>{/if}
