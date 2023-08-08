@@ -97,7 +97,7 @@ class DublinCoreMetaPlugin extends GenericPlugin
 
         $authors = $publication->getData('authors');
         foreach ($authors as $i => $author) {
-            $templateMgr->addHeader('dublinCoreAuthor' . $i++, '<meta name="DC.Creator.PersonalName" content="' . htmlspecialchars($author->getFullName(false)) . '"/>');
+            $templateMgr->addHeader('dublinCoreAuthor' . $i++, '<meta name="DC.Creator.PersonalName" content="' . htmlspecialchars($author->getFullName(false, false, $publicationLocale)) . '"/>');
         }
 
         if ($datePublished = $publication->getData('datePublished')) {
