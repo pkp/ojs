@@ -14,7 +14,7 @@
  * @brief CLI tool to rebuild the article keyword search database.
  */
 
-require(dirname(__FILE__) . '/bootstrap.php');
+require dirname(__FILE__) . '/bootstrap.php';
 
 use APP\core\Application;
 use APP\journal\JournalDAO;
@@ -28,7 +28,7 @@ class rebuildSearchIndex extends CommandLineTool
     /**
      * Print command usage information.
      */
-    public function usage()
+    public function usage(): void
     {
         echo "Script to rebuild article search index\n"
             . "Usage: {$this->scriptName} [options] [journal_path]\n\n"
@@ -42,11 +42,11 @@ class rebuildSearchIndex extends CommandLineTool
     /**
      * Rebuild the search index for all articles in all journals.
      */
-    public function execute()
+    public function execute(): void
     {
         // Check whether we have (optional) switches.
         $switches = [];
-        while (count($this->argv) && substr($this->argv[0], 0, 1) == '-') {
+        while (count($this->argv) && substr($this->argv[0], 0, 1) === '-') {
             $switches[] = array_shift($this->argv);
         }
 
@@ -77,11 +77,11 @@ class rebuildSearchIndex extends CommandLineTool
      *
      * @see \APP\core\Request::getBaseUrl()
      */
-    public function callbackBaseUrl($hookName, $params)
+    public function callbackBaseUrl(string $hookName, array $params): bool
     {
         $baseUrl = & $params[0];
         $baseUrl = Config::getVar('general', 'base_url');
-        return true;
+        return Hook::ABORT;
     }
 }
 
