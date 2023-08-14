@@ -96,7 +96,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
 
         $this->addLocaleData();
 
-        Hook::add('AcronPlugin::parseCronTab', $this->callbackParseCronTab(...));
+        Hook::add('AcronPlugin::parseCronTab', [$this, 'callbackParseCronTab']);
         foreach ($this->_getDAOs() as $dao) {
             if ($dao instanceof SchemaDAO) {
                 Hook::add('Schema::get::' . $dao->schemaName, $this->addToSchema(...));

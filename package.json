@@ -20,6 +20,7 @@
     "tinymce": "^5.10.0",
     "v-tooltip": "^2.0.3",
     "vue": "^2.6.12",
+    "vue-announcer": "^1.0.6",
     "vue-autosuggest": "^2.2.0",
     "vue-chartjs": "^3.5.1",
     "vue-color": "^2.7.1",
