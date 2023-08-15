@@ -2474,3 +2474,36 @@ msgstr "Escolher como ordenar os artigos desta categoria."
 
 #~ msgid "category.category"
 #~ msgstr "Categorias"
+
+msgid "exercises.announcements"
+msgstr "Anúncios"
+
+msgid "exercises.users"
+msgstr "Usuários"
+
+msgid "exercises.exercises"
+msgstr "Exercícios"
+
+msgid "exercises.announcementsExample"
+msgstr "Este é um Exemplo de Anúncio"
+
+msgid "exercises.usersExample"
+msgstr "Este é um Exemplo de Usuário"
+
+msgid "exercises.exercisesIndex"
+msgstr "Lista de Exercícios"
+
+msgid "exercises.announcements.id"
+msgstr "ID"
+
+msgid "exercises.announcements.title"
+msgstr "Título"
+
+msgid "exercises.announcements.creationDate"
+msgstr "Data de Criação"
+
+msgid "exercises.announcements.link"
+msgstr "Link"
+
+msgid "exercises.announcements.keyword"
+msgstr "Palavra-chave"

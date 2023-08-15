@@ -1642,6 +1642,39 @@ msgstr ""
 "about the software</a>. Please contact the site directly with questions "
 "about its journals and submissions to its journals."
 
+msgid "exercises.announcements"
+msgstr "Announcements"
+
+msgid "exercises.users"
+msgstr "Users"
+
+msgid "exercises.exercises"
+msgstr "Exercises"
+
+msgid "exercises.announcementsExample"
+msgstr "This is an Announcement Example"
+
+msgid "exercises.usersExample"
+msgstr "This is an User Example"
+
+msgid "exercises.exercisesIndex"
+msgstr "Exercises List"
+
+msgid "exercises.announcements.id"
+msgstr "ID"
+
+msgid "exercises.announcements.title"
+msgstr "Title"
+
+msgid "exercises.announcements.creationDate"
+msgstr "Creation Date"
+
+msgid "exercises.announcements.link"
+msgstr "Link"
+
+msgid "exercises.announcements.keyword"
+msgstr "Keyword"
+
 msgid "help.ojsHelp"
 msgstr "Open Journal Systems Help"
 
