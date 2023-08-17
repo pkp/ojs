@@ -244,7 +244,7 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
     {
         $deployment = $this->getDeployment();
         $authorNode = $doc->createElement('author');
-        $authorNode->appendChild($node = $doc->createElement('name', htmlspecialchars($author->getFullName(false), ENT_COMPAT, 'UTF-8')));
+        $authorNode->appendChild($node = $doc->createElement('name', htmlspecialchars($author->getFullName(false, false, $publication->getData('locale')), ENT_COMPAT, 'UTF-8')));
         if (in_array($author->getAffiliation($publication->getData('locale')), $affilList) && !empty($affilList[0])) {
             $authorNode->appendChild($node = $doc->createElement('affiliationId', htmlspecialchars(current(array_keys($affilList, $author->getAffiliation($publication->getData('locale')))), ENT_COMPAT, 'UTF-8')));
         }
