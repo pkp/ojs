@@ -15,6 +15,7 @@
 namespace APP\migration\install;
 
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema as Schema;
 
 class MetricsMigration extends \PKP\migration\Migration
@@ -28,7 +29,7 @@ class MetricsMigration extends \PKP\migration\Migration
             $table->comment('Daily statistics for views of the homepage.');
             $table->bigIncrements('metrics_context_id');
 
-            $table->string('load_id', 255);
+            $table->string('load_id', 50);
             $table->index(['load_id'], 'metrics_context_load_id');
 
             $table->bigInteger('context_id');
@@ -42,7 +43,7 @@ class MetricsMigration extends \PKP\migration\Migration
         Schema::create('metrics_submission', function (Blueprint $table) {
             $table->comment('Daily statistics for views and downloads of published submissions and galleys.');
             $table->bigIncrements('metrics_submission_id');
-            $table->string('load_id', 255);
+            $table->string('load_id', 50);
             $table->index(['load_id'], 'ms_load_id');
 
             $table->bigInteger('context_id');
@@ -73,7 +74,7 @@ class MetricsMigration extends \PKP\migration\Migration
             $table->comment('Daily statistics for views and downloads of published issues.');
             $table->bigIncrements('metrics_issue_id');
 
-            $table->string('load_id', 255);
+            $table->string('load_id', 50);
             $table->index(['load_id'], 'metrics_issue_load_id');
 
             $table->bigInteger('context_id');
@@ -98,7 +99,7 @@ class MetricsMigration extends \PKP\migration\Migration
             $table->comment('Daily statistics matching the COUNTER R5 protocol for views and downloads of published submissions and galleys.');
             $table->bigIncrements('metrics_counter_submission_daily_id');
 
-            $table->string('load_id', 255);
+            $table->string('load_id', 50);
             $table->index(['load_id'], 'msd_load_id');
 
             $table->bigInteger('context_id');
@@ -144,7 +145,7 @@ class MetricsMigration extends \PKP\migration\Migration
         Schema::create('metrics_counter_submission_institution_daily', function (Blueprint $table) {
             $table->comment('Daily statistics matching the COUNTER R5 protocol for views and downloads from institutions.');
             $table->bigIncrements('metrics_counter_submission_institution_daily_id');
-            $table->string('load_id', 255);
+            $table->string('load_id', 50);
             $table->index(['load_id'], 'msid_load_id');
 
             $table->bigInteger('context_id');
@@ -199,7 +200,7 @@ class MetricsMigration extends \PKP\migration\Migration
             $table->comment('Daily statistics by country, region and city for views and downloads of published submissions and galleys.');
             $table->bigIncrements('metrics_submission_geo_daily_id');
 
-            $table->string('load_id', 255);
+            $table->string('load_id', 50);
             $table->index(['load_id'], 'msgd_load_id');
 
             $table->bigInteger('context_id');
@@ -218,7 +219,14 @@ class MetricsMigration extends \PKP\migration\Migration
             $table->integer('metric_unique');
 
             $table->index(['context_id', 'submission_id'], 'msgd_context_id_submission_id');
-            $table->unique(['load_id', 'context_id', 'submission_id', 'country', 'region', 'city', 'date'], 'msgd_uc_load_context_submission_c_r_c_date');
+            switch (DB::getDriverName()) {
+                case 'mysql':
+                    $table->unique([DB::raw('load_id, context_id, submission_id, country, region, city(100), date')], 'msgd_uc_load_context_submission_c_r_c_date');
+                    break;
+                case 'pgsql':
+                    $table->unique(['load_id', 'context_id', 'submission_id', 'country', 'region', 'city', 'date'], 'msgd_uc_load_context_submission_c_r_c_date');
+                    break;
+            }
         });
 
         Schema::create('metrics_submission_geo_monthly', function (Blueprint $table) {
@@ -241,7 +249,14 @@ class MetricsMigration extends \PKP\migration\Migration
             $table->integer('metric_unique');
 
             $table->index(['context_id', 'submission_id'], 'msgm_context_id_submission_id');
-            $table->unique(['context_id', 'submission_id', 'country', 'region', 'city', 'month'], 'msgm_uc_context_submission_c_r_c_month');
+            switch (DB::getDriverName()) {
+                case 'mysql':
+                    $table->unique([DB::raw('context_id, submission_id, country, region, city(100), month')], 'msgm_uc_context_submission_c_r_c_month');
+                    break;
+                case 'pgsql':
+                    $table->unique(['context_id', 'submission_id', 'country', 'region', 'city', 'month'], 'msgm_uc_context_submission_c_r_c_month');
+                    break;
+            }
         });
 
         // Usage stats total item temporary records
@@ -284,7 +299,7 @@ class MetricsMigration extends \PKP\migration\Migration
             $table->string('country', 2)->default('');
             $table->string('region', 3)->default('');
             $table->string('city', 255)->default('');
-            $table->string('load_id', 255);
+            $table->string('load_id', 50);
         });
 
         // Usage stats unique item investigations temporary records
@@ -320,7 +335,7 @@ class MetricsMigration extends \PKP\migration\Migration
             $table->string('country', 2)->default('');
             $table->string('region', 3)->default('');
             $table->string('city', 255)->default('');
-            $table->string('load_id', 255);
+            $table->string('load_id', 50);
         });
 
         // Usage stats unique item requests temporary records
@@ -355,7 +370,7 @@ class MetricsMigration extends \PKP\migration\Migration
             $table->string('country', 2)->default('');
             $table->string('region', 3)->default('');
             $table->string('city', 255)->default('');
-            $table->string('load_id', 255);
+            $table->string('load_id', 50);
         });
 
         // Usage stats institution temporary records
@@ -364,7 +379,7 @@ class MetricsMigration extends \PKP\migration\Migration
             $table->comment('Temporary stats for views and downloads from institutions based on visitor log records. Data in this table is provisional. See the metrics_* tables for compiled stats.');
             $table->bigIncrements('usage_stats_temp_institution_id');
 
-            $table->string('load_id', 255);
+            $table->string('load_id', 50);
             $table->bigInteger('line_number');
 
             $table->bigInteger('institution_id');
