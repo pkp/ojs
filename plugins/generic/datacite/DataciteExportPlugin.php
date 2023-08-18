@@ -318,6 +318,9 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
     public function updateDepositStatus(DataObject $object, string $status)
     {
         assert($object instanceof Submission || $object instanceof Issue || $object instanceof Representation);
+        if ($object instanceof Submission) {
+            $object = $object->getCurrentPublication();
+        }
         $doiObject = $object->getData('doiObject');
         $editParams = [
             'status' => $status
