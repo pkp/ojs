@@ -1,8 +1,49 @@
 # Kamdin Parsakia <kamdinparsakia@iranmehr.ac.ir>, 2023.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-08-24 21:58+0000\n"
+"Last-Translator: Kamdin Parsakia <kamdinparsakia@iranmehr.ac.ir>\n"
+"Language-Team: Persian <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-announcementFeed/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "افزونه اطلاعیه"
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "تنظیمات"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "پیوندهای فید را در تمامی صفحات مجله نمایش بده."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr "پیوندهای فید را فقط در صفحه اصلی و اطلاعیه نمایش بده."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "پیوندهای فید را فقط در صفحه اطلاعیه نشان بده."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "فیدها را محدود کن به"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "آخرین اطلاعیه‌ها."
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "لطفاً یک عدد مثبت برای اطلاعیه‌های اخیر وارد کنید."
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "لوگوی Atom"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "لوگوی RSS1"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "لوگوی RSS2"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr "این افزونه فیدهای وب RSS/Atom را برای اطلاعیه های مجله تولید می‌کند."
