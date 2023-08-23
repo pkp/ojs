@@ -71,4 +71,8 @@
 		<descr>Send automated email to registered readers that have requested to be notified when an issue becomes open access.</descr>
 		<frequency hour="0"/>
 	</task>
+	<task class="PKP\task\RemoveExpiredInvitations">
+		<descr>Remove expired Invitations daily</descr>
+		<frequency day="1"/>
+	</task>
 </scheduled_tasks>
