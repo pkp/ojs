@@ -96,6 +96,8 @@
 				:close-label="__('common.close')"
 				name="selectRevisionDecision"
 				title="Revisions"
+				:open="isModalOpenedSelectRevisionDecision"
+				@close="isModalOpenedSelectRevisionDecision = false"
 			>
 				<pkp-form v-bind="components.{$smarty.const.FORM_SELECT_REVISION_DECISION}" @set="set" @success="goToRevisionDecision" />
 			</modal>
@@ -105,6 +107,8 @@
 				:close-label="__('common.close')"
 				name="selectRevisionRecommendation"
 				title="Revisions"
+				:open="isModalOpenedSelectRevisionRecommendation"
+				@close="isModalOpenedSelectRevisionRecommendation = false"
 			>
 				<pkp-form v-bind="components.{$smarty.const.FORM_SELECT_REVISION_RECOMMENDATION}" @set="set" @success="goToRevisionDecision" />
 			</modal>
