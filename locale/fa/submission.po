@@ -1,15 +1,19 @@
+# Kamdin Parsakia <kamdinparsakia@iranmehr.ac.ir>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:22+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:22+00:00\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: fa_IR\n"
+"PO-Revision-Date: 2023-08-24 21:58+0000\n"
+"Last-Translator: Kamdin Parsakia <kamdinparsakia@iranmehr.ac.ir>\n"
+"Language-Team: Persian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
+"fa/>\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "submission.submit.userGroup"
 msgstr "ثبت مقاله به عنوان ..."
@@ -22,48 +26,46 @@ msgstr "عنوان مقاله"
 
 msgid "submission.title.tip"
 msgstr ""
-"نوع داده ارسالی معمولاً متن، تصویر و یا محتوای چند رسانه ای مانند نرم‌افزار "
-"است. لطفاً نوع داده ای که بیشترین ارتباط را با محتوای شما دارد را انتخاب "
-"کنید. می توانید مثالهایی را در لینک زیر مشاهده کنید:   <a target=\"_blank\" "
-"href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic."
-"shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic."
-"shtml#type</a>"
+"لطفاً فایلی که بیشترین ارتباط را با محتوای ارسالی شما دارد را انتخاب کنید. "
+"می توانید مثال‌هایی را در لینک زیر مشاهده کنید:   <a target=\"_blank\" href="
+"\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\""
+">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "آغاز ارسال مقاله در"
 
 msgid "submission.submit.newSubmissionSingle"
-msgstr "ارسال جدید"
+msgstr "ارسال مقاله جدید"
 
 msgid "grid.action.workflow"
 msgstr "گردش کار مقاله ارسالی"
 
 msgid "submission.abstract.wordCount.description"
-msgstr ""
+msgstr "چکیده باید ‏‏{$wordCount} کلمه یا کمتر باشد."
 
 msgid "submission.submit.noContext"
-msgstr ""
+msgstr "مقاله ارسالی شما یافت نشد."
 
 msgid "submission.issueEntry"
 msgstr "فراداده"
 
 msgid "submission.submit.whatNext.description"
 msgstr ""
-"مجله مقاله ارسالی شما را دریافت کرد، و یک  تاییدیه از طریق پست الکترونیکی "
+"مجله مقاله ارسالی شما را دریافت کرد، و یک تاییدیه از طریق پست الکترونیکی "
 "برای شما ارسال شد. پس از بررسی مقاله ارسال شده توسط سردبیر، به شما از طریق "
 "ایمیل اطلاع داده خواهد شد."
 
 msgid "grid.action.galleyInIssueEntry"
-msgstr "کلیشه چاپی شماره آماده شد."
+msgstr "نسخه نهایی در شماره ثبت شد"
 
 msgid "grid.action.issueEntry"
 msgstr "مشاهده فراداده‌های این مقاله ارسال شده"
 
 msgid "submission.event.articleGalleyMadeAvailable"
-msgstr "کلیشه چاپی \"{$galleyFormatName}\" مقاله در دسترس است"
+msgstr "نسخه نهایی \"{$galleyFormatName}\" در دسترس است."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "کلیشه چاپی \"{$galleyFormatName}\" مقاله در دسترس نیست"
+msgstr "نسخه نهایی \"{$galleyFormatName}\" در دسترس نیست."
 
 msgid "submission.event.publicIdentifiers"
 msgstr "شناسه عمومی مقاله ارسال شده به روز رسانی شد."
@@ -90,10 +92,10 @@ msgstr ""
 "آماده چاپ تایید نماید."
 
 msgid "grid.action.approveProof"
-msgstr "نسخه بازبینی نهایی را تأیید کنید تا وارد کلیشه چاپی شود"
+msgstr "نسخه بازبینی نهایی را تأیید کنید تا وارد مرحله چاپ نهایی شود."
 
 msgid "grid.action.pageProofApproved"
-msgstr "مقاله تأیید نهایی و در کلیشه چاپی گنجانده شد"
+msgstr "مقاله تأیید نهایی و در نسخه نهایی گنجانده شد."
 
 msgid "submission.submit.titleAndSummary"
 msgstr "عنوان و چکیده"
@@ -110,7 +112,7 @@ msgid "workflow.review.externalReview"
 msgstr "داوری"
 
 msgid "submission.event.issueMetadataUpdated"
-msgstr "فراداده شماره مجله این مقاله به روز شد"
+msgstr "فراداده شماره مجله این مقاله به روز شد."
 
 msgid "submission.upload.fileContents"
 msgstr "هر جزء مقاله را به طور جداگانه انتخاب و آپلود نمایید"
@@ -132,7 +134,7 @@ msgid "submission.submit.contributorRole"
 msgstr "نقش پدیدآورنده"
 
 msgid "submission.citationFormat.notFound"
-msgstr "فرمت درخواستی ارجاع قابل بازیابی نیست"
+msgstr "فرمت درخواستی ارجاع قابل بازیابی نیست."
 
 msgid "submission.metadataDescription"
 msgstr ""
@@ -143,220 +145,269 @@ msgid "section.any"
 msgstr "هر بخشی"
 
 msgid "submission.sectionOptions"
-msgstr ""
+msgstr "گزینه‌های بخش"
 
 msgid "catalog.browseTitles"
-msgstr ""
+msgstr "{$numTitles} آیتم"
 
 msgid "catalog.category.heading"
-msgstr ""
+msgstr "همه آیتم‌ها"
 
 msgid "galley.editPublishedDisabled"
 msgstr ""
+"از آنجا که این مقاله در حال حاضر منتشر شده است نسخه نهایی آن قابل ویرایش "
+"نیست."
 
 msgid "galley.publicationNotFound"
-msgstr ""
+msgstr "انتشار برای این نسخه نهایی یافت نشد."
 
 msgid "publication.assignToissue"
-msgstr ""
+msgstr "قرار دادن در شماره"
 
 msgid "publication.assignedToIssue"
 msgstr ""
+"این مقاله در شماره <a href=\"{$issueUrl}\">{$issueName}</a> قرار داده شده "
+"اما برای انتشار زمان‌بندی نشده است."
 
 msgid "publication.changeIssue"
-msgstr ""
+msgstr "تغییر شماره"
 
 msgid "publication.datePublished.description"
 msgstr ""
+"تاریخ انتشار به طور خودکار مطابق زمان انتشار شماره تنظیم خواهد شد. فقط در "
+"صورتی تاریخ انتشار را وارد کنید که مقاله قبلاً در جایی دیگر منتشر شده و نیاز "
+"دارید که تاریخ آن را در گذشته تنظیم کنید."
 
 msgid "publication.invalidSection"
-msgstr ""
+msgstr "بخش مورد نظر برای این انتشار یافت نشد."
 
 msgid "publication.inactiveSection"
-msgstr ""
+msgstr "{$section} (غیرفعال)"
 
 msgid "publication.invalidIssue"
-msgstr ""
+msgstr "شماره انتشار این مقاله یافت نشد."
 
 msgid "publication.publish.confirmation"
 msgstr ""
+"همه پیشنیازهای انتشار رعایت شده است. آیا مطمئنید که می‌خواهید این مقاله "
+"منتشر شود؟"
 
 msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
+"همه پیشنیازهای انتشار رعایت شده است. این مقاله همزمان با انتشار شماره "
+"{$issue} منتشر خواهد شد. آیا مطمئن هستید که می‌خواهید مقاله طبق این زمان‌"
+"بندی منتشر شود؟"
 
 msgid "publication.publish.confirmation.backIssue"
 msgstr ""
+"همه پیشنیازهای انتشار رعایت شده است. این مقاله فوراً در شماره {$issue} چاپ "
+"خواهد شد. آیا اطمینان دارید که می‌خواهید این مقاله منتشر شود؟"
 
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
+"همه پیشنیازهای انتشار رعایت شده است. از آنجا که تاریخ انتشار این مقاله در "
+"تاریخ {$datePublished} تنظیم شده این مقاله فوراً چاپ خواهد شد. آیا مطمئن "
+"هستید که می‌خواهید این مقاله را منتشر کنید؟"
 
 msgid "publication.required.issue"
-msgstr ""
+msgstr "این مقاله باید قبل از انتشار در یک شماره قرار گیرد."
 
 msgid "publication.publishedIn"
-msgstr ""
+msgstr "منتشر شده در <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.scheduledIn"
 msgstr ""
+"برنامه‌ریزی شده برای انتشار در <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.unscheduledIn"
-msgstr ""
+msgstr "این مقاله برای انتشار در هیچ شماره‌ای زمان‌بندی نشده است."
 
 msgid "publication.selectIssue"
-msgstr ""
+msgstr "یک شماره برای زمان‌بندی جهت انتشار انتخاب نمایید"
 
 msgid "submission.publication"
 msgstr "انتشار"
 
 msgid "publication.status.published"
-msgstr ""
+msgstr "منتشر شده"
 
 msgid "submission.status.scheduled"
-msgstr ""
+msgstr "زمان‌بندی شده"
 
 msgid "publication.status.unscheduled"
-msgstr ""
+msgstr "زمان‌بندی نشده"
 
 msgid "submission.publications"
-msgstr ""
+msgstr "انتشارها"
 
 msgid "publication.copyrightYearBasis.issueDescription"
-msgstr ""
+msgstr "سال کپی رایت به طور خودکار بر اساس زمان انتشار در شماره تنظیم خواهد شد."
 
 msgid "publication.copyrightYearBasis.submissionDescription"
-msgstr ""
+msgstr "سال کپی رایت به طور خودکار بر اساس تاریخ انتشار تنظیم خواهد شد."
 
 msgid "publication.datePublished"
-msgstr ""
+msgstr "تاریخ منتشر شده"
 
 msgid "publication.editDisabled"
-msgstr ""
+msgstr "این نسخه منتشر شده و نمی‌تواند ویرایش شود."
 
 msgid "publication.event.published"
-msgstr ""
+msgstr "مقاله ارسال شده منتشر شده."
 
 msgid "publication.event.scheduled"
-msgstr ""
+msgstr "مقاله ارسال شده برای انتشار زمان‌بندی شده."
 
 msgid "publication.event.unpublished"
-msgstr ""
+msgstr "مقاله ارسال شده منتشر نشده."
 
 msgid "publication.event.versionPublished"
-msgstr ""
+msgstr "نسخه جدید منتشر شده."
 
 msgid "publication.event.versionScheduled"
-msgstr ""
+msgstr "نسخه جدید برای انتشار زمان‌بندی شده."
 
 msgid "publication.event.versionUnpublished"
-msgstr ""
+msgstr "نسخه جدید برای انتشار حذف گردیده."
 
 msgid "publication.invalidSubmission"
-msgstr ""
+msgstr "مقاله ثبت شده برای این انتشار یافت نشد."
 
 msgid "publication.publish"
-msgstr ""
+msgstr "انتشار"
 
 msgid "publication.publish.requirements"
-msgstr ""
+msgstr "پیشنیازهای ذیل باید پیش از انتشار رعایت شود."
 
 msgid "publication.required.declined"
-msgstr ""
+msgstr "مقاله ارسالی رد شده نمی‌تواند منتشر شد."
 
 msgid "publication.required.reviewStage"
-msgstr ""
+msgstr "مقاله ثبت شده پیش از انتشار باید در مرحله ویراستاری یا نشر قرار گیرد."
 
 msgid "submission.license.description"
 msgstr ""
+"گواهینامه هنگام انتشار به طور خودکار روی <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> تنظیم خواهد شد."
 
 msgid "submission.copyrightHolder.description"
-msgstr ""
+msgstr "حق نشر هنگام انتشار به طور خودکار به {$copyright} اختصاص داده خواهد شد."
 
 msgid "submission.copyrightOther.description"
-msgstr ""
+msgstr "حق نشر را برای ارسال های منتشر شده به طرف زیر اختصاص بده."
 
 msgid "publication.unpublish"
-msgstr ""
+msgstr "عدم انتشار"
 
 msgid "publication.unpublish.confirm"
-msgstr ""
+msgstr "آیا مطمئن هستید که نمی‌خواهید این مقاله منتشر شود؟"
 
 msgid "publication.unschedule.confirm"
-msgstr ""
+msgstr "آیا مطمئن هستید که نمی‌خواهید این مقاله برای انتشار زمان‌بندی شود؟"
 
 msgid "publication.version.details"
-msgstr ""
+msgstr "جزئیات انتشار برای نسخه {$version}"
 
 msgid "submission.queries.production"
 msgstr "گفتگوی انتشار"
 
 msgid "editor.submission.decision.backToReview"
-msgstr ""
+msgstr "بازگشت به داوری"
 
 msgid "editor.submission.decision.backToReview.description"
 msgstr ""
+"تصمیم‌گیری برای پذیرش این مقاله ارسالی را پس گرفته و به مرحله داوری ارسال کن."
 
 msgid "editor.submission.decision.backToReview.log"
 msgstr ""
+"{$editorName} تصمیم‌گیری برای پذیرش این مقاله را برگرداند و به مرحله داوری "
+"ارسال نمود."
 
 msgid "editor.submission.decision.backToReview.completed"
-msgstr ""
+msgstr "جهت داوری برگشت خورده"
 
 msgid "editor.submission.decision.backToReview.completed.description"
-msgstr ""
+msgstr "مقاله ارسالی با عنوان \"{$title}\" به مرحله داوری بازگردانده شد."
 
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
+"برای نویسندگان ایمیل ارسال کنید تا به آنها اطلاع داده شود که مقاله ارسالی آن‌"
+"ها به مرحله داوری بازگردانده می‌شود. توضیح دهید که چرا این تصمیم گرفته شده "
+"است و به نویسنده اطلاع دهید که متعاقباً داوری چگونه انجام خواهد شد."
 
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
+"برای نویسندگان ایمیل ارسال کنید تا به آنها اطلاع داده شود که مقاله ارسالی آن‌"
+"ها برای داوری همتا ارسال خواهد شد. در صورت امکان به نویسندگان توضیحاتی در "
+"مورد مدت زمانی که ممکن است داوری به طول انجام شود و این که چه زمانی باید "
+"انتظار دریافت نتیجه باشند ارائه شود. این ایمیل تا زمانی که تصمیم‌گیری نهایی "
+"نشده ارسال نخواهد شد."
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
-msgstr ""
+msgstr "فایل‌هایی که باید به مرحله داوری ارسال شود را انتخاب نمایید."
 
 msgid "doi.submission.issueMissing.publication"
 msgstr ""
+"قادر به ایجاد DOI برای این مقاله ارسالی نشد: {$pubObjectTitle}. پیش از آنکه "
+"بتوان برای مقاله ارسالی DOI تولید کرد باید در یک شماره قرار گیرد."
 
 msgid "doi.submission.issueMissing.representation"
 msgstr ""
+"قادر به تولید DOI برای نسخه نهایی {$pubObjectTitle} برای مقاله ثبت شده زیر "
+"نشد: {$itemTitle}. برای تولید DOI باید مقاله ثبت شده در یک شماره قرار گیرد."
 
 msgid "doi.submission.incorrectContext"
 msgstr ""
+"قادر به ایجاد DOI برای این مقاله ارسالی نشد: {$pubObjectTitle}. چنین مقاله‌"
+"ای در این مجله وجود ندارد."
 
 msgid "submission.layout.viewGalley"
-msgstr ""
+msgstr "مشاهده نسخه نهایی"
 
 msgid "galley.cantEditPublished"
-msgstr ""
+msgstr "این نسخه نهایی نمی‌تواند ویرایش شود چرا که در حال حاضر منتشر شده است."
 
 msgid "submission.copyright.description"
 msgstr ""
+"لطفاً قوانین حق نشر را برای ثبت مقاله در این مجله با دقت مطالعه فرمایید."
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
+"شما مجاز به ارسال مقاله در این مجله نیستید زیرا نویسندگان باید توسط هیئت "
+"تحریره ثبت نام شوند. در صورتی که فکر می‌کنید اشتباهی رخ داده لطفاً با <a "
+"href='mailto:{$email}'>{$name}</a> تماس برقرار کنید."
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
+"شما مجاز به ارسال مقاله در این مجله نیستید زیرا ارسال مقاله به همه بخش‌های "
+"این مجله غیرفعال یا محدود شده است. در صورتی که فکر می‌کنید اشتباهی رخ داده "
+"لطفاً با <a href='mailto:{$email}'>{$name}</a> تماس برقرار کنید."
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
+"{$contextName} مقاله‌ای جهت ارسال در بخش {$section} نمی‌پذیرد. اگر به کمک "
+"نیاز دارید می‌توانید با <a href='mailto:{$email}'>{$name}</a> تماس برقرار "
+"کنید."
 
 msgid "submission.sectionNotFound"
-msgstr ""
+msgstr "بخش مورد نظر برای ارسال مقاله یافت نشد."
 
 msgid "submission.sectionRestrictedToEditors"
-msgstr ""
+msgstr "فقط اعضای هیئت تحریریه مجاز به ثبت مقاله در این بخش هستند."
 
 msgid "submission.submit.form.authorRequired"
-msgstr "تعریف حداقل یک نویسنده الزامی است"
+msgstr "حداقل یک نویسنده مورد نیاز است."
 
 msgid "submission.submit.form.titleRequired"
-msgstr "لطفاً عنوان مقاله خود را وارد کنید"
+msgstr "لطفاً عنوان مقاله خود را وارد کنید."
 
 msgid "submission.submit.form.abstractRequired"
-msgstr "لطفاً چکیده مقاله خود را وارد کنید"
+msgstr "لطفاً چکیده مقاله خود را وارد کنید."
 
 msgid "submission.submit.form.wordCountAlert"
 msgstr ""
+"چکیده شما بسیار طولانی است. لطفاً آن را بر اساس محدودیت تعیین شده برای تعداد "
+"لغات چکیده کوتاه نمایید."
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "لطفا نقش مشارکت کننده را انتخاب کنید."
