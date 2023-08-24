@@ -42,10 +42,17 @@
 
 	<{$heading} class="title">
 		<a id="article-{$article->getId()}" {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if}>
-			{$publication->getLocalizedTitle(null, 'html')|strip_unsafe_html}
-			{assign var=localizedSubtitle value=$publication->getLocalizedSubtitle(null, 'html')|strip_unsafe_html}
-			{if $localizedSubtitle}
-				<span class="subtitle">{$localizedSubtitle}</span>
+			{if $currentContext}
+				{$publication->getLocalizedTitle(null, 'html')|strip_unsafe_html}
+				{assign var=localizedSubtitle value=$publication->getLocalizedSubtitle(null, 'html')|strip_unsafe_html}
+				{if $localizedSubtitle}
+					<span class="subtitle">{$localizedSubtitle}</span>
+				{/if}
+			{else}
+				{$publication->getLocalizedFullTitle(null, 'html')|strip_unsafe_html}
+				<span class="subtitle">
+					{$journal->getLocalizedName()|escape}
+				</span>
 			{/if}
 		</a>
 	</{$heading}>
