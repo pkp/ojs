@@ -1,8 +1,8 @@
 OJS 3.4.0 Release Notes
-Git tag: 3_4_0-1
+Git tag: 3_4_0-2
 
-Release date: June 16, 2023
-============================
+Release date: August 24, 2023
+=============================
 
 Configuration Changes
 ---------------------
@@ -42,7 +42,49 @@ New config.inc.php section for queues is added, with the following parameters:
 
 - The setting security.force_ssl, when enabled, will also set the "Secure" flag for the session cookie.
 
-3.3.0-1 build
+3.4.0-2 build
+-------------
+    #9247: Fatal error: Uncaught TypeError when opening Activity
+    #9246: Improve support for CC and BCC fields in the new decision email step UI
+    #9236: DataCite updateDepositStatus does not work
+    #9231: Use smaller data types for load_id and city in the metrics tables
+    #9227: Incorrect (encrypted) password sent to the user after the user was added by Admin/Journal Manager
+    #9222: Exception when listing jobs
+    #9217: Missing E-mail Template SUBMISSION_SAVED_FOR_LATER after upgrade from 3.3.0-1
+    #9210: OMP 3.4.0 Sitemap does not respect chapter landing page setting
+    #9195: Add controlling configuration to queue jobs
+    #9194: Record reviewer recommendation by proxy causes fatal error
+    #9184: Author names do not localize in reader front end
+    #9183: OAI interface reports errors when date ranges are specified
+    #9180: Update to cypress 12, reduce flakiness on M1
+    #9171: Undefined array key "user" in pkp/classes/proxy/ProxyParser.php on line 57
+    #9168: PHP fatal error when assigning editors to new submissions
+    #9166: Submission checklist migration sometimes presents an error on upgrade
+    #9161: Wrong type cast for testDOIPrefix in DataciteSettings form
+    #9153: Sending email to a reviewer results in a fatal error
+    #9152: Locale migration does not take into account plugin_settings table
+    #9150: Error on User Import Uncaught BadMethodCallException...
+    #9149: Job configuration not included in OMP template configuration file
+    #9148: Recommend decision email form doesn't respect to, cc and bcc fields
+    #9145: Authors may have trouble initiating discussions
+    #9142: One-click review request access keys not being generated/sent
+    #9139: PHP error with array_intersect on null 
+    #9136: Missing uniqueSiteId on new installations
+    #9134: (OMP 3.4.0-1) Error when changing Cover Image Max Width & Height
+    #9126: Multilingual Metadata in Crossref
+    #9123: Doi migration script failing to return doi_id
+    #9121: Unsupported assoc_type in the event log: 515
+    #9119: zh_Hant is not considered a valid locale code
+    #9111: Wrong variable name in PASSWORD_RESET_CONFIRM email template
+    #9109: REVIEW_COMPLETE email template seems to be not installed
+    #9089: Make easier to create custom Vue component in plugin
+    #9045: Inability to Properly Add and Display New Fields in PKPMetadataForm
+    #8980: Form heading much shorter than needed
+    #8854: Discussions: mail attached files alongside the content
+    #8288: Announcements placed on homepage may include announcements from other contexts
+    #7052: Can't access all contexts from dropdown when exceeds viewport height
+
+3.4.0-1 build
 -------------
     #9102: Review Reports not generate
     #9084: HTML should be stripped from submission titles when used in email titles
