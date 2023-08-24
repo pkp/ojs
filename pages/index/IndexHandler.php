@@ -64,6 +64,7 @@ class IndexHandler extends PKPIndexHandler
             'highlights' => $this->getHighlights($journal),
         ]);
 
+        $this->_setupAnnouncements($journal ?? $request->getSite(), $templateMgr);
         if ($journal) {
             // Assign header and content for home page
             $templateMgr->assign([
@@ -78,8 +79,6 @@ class IndexHandler extends PKPIndexHandler
                 // The current issue TOC/cover page should be displayed below the custom home page.
                 IssueHandler::_setupIssueTemplate($request, $issue);
             }
-
-            $this->_setupAnnouncements($journal, $templateMgr);
 
             $templateMgr->display('frontend/pages/indexJournal.tpl');
             event(new UsageEvent(Application::ASSOC_TYPE_JOURNAL, $journal));
