@@ -72,6 +72,20 @@
 				{block name=searchAuthors}
 					<input type="text" id="authors" name="authors" value="{$authors|escape}">
 				{/block}
+
+				{if $searchableContexts}
+					<label class="label label_contexts" for="searchJournal">
+						{translate key="search.journal"}
+					</label>
+					<select name="searchJournal" id="searchJournal">
+						<option></option>
+						{foreach from=$searchableContexts item="searchableContext"}
+							<option value="{$searchableContext->id}" {if $searchJournal == $searchableContext->id}selected{/if}>
+								{$searchableContext->name}
+							</option>
+						{/foreach}
+					</select>
+				{/if}
 			</div>
 			{call_hook name="Templates::Search::SearchResults::AdditionalFilters"}
 		</fieldset>

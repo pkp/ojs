@@ -1415,6 +1415,9 @@ msgstr "Search articles for"
 msgid "search.withinJournal"
 msgstr "Within"
 
+msgid "search.journal"
+msgstr "By Journal"
+
 msgid "search.allJournals"
 msgstr "All Journals"
 

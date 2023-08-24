@@ -16,6 +16,7 @@
 
 namespace APP\pages\search;
 
+use APP\core\Services;
 use APP\facades\Repo;
 use APP\handler\Handler;
 use APP\search\ArticleSearch;
@@ -26,6 +27,10 @@ class SearchHandler extends Handler
 {
     /**
      * @copydoc PKPHandler::authorize()
+     *
+     * @param mixed $request
+     * @param mixed $args
+     * @param mixed $roleAssignments
      */
     public function authorize($request, &$args, $roleAssignments)
     {
@@ -173,6 +178,12 @@ class SearchHandler extends Handler
             'searchResultOrderDirOptions' => $articleSearch->getResultSetOrderingDirectionOptions(),
         ]);
 
+        if (!$request->getContext()) {
+            $templateMgr->assign([
+                'searchableContexts' => $this->getSearchableContexts(),
+            ]);
+        }
+
         $templateMgr->display('frontend/pages/search.tpl');
     }
 
@@ -221,5 +232,13 @@ class SearchHandler extends Handler
         if (!$journal || !$journal->getData('restrictSiteAccess')) {
             $templateMgr->setCacheability(TemplateManager::CACHEABILITY_PUBLIC);
         }
+    }
+
+    protected function getSearchableContexts(): array
+    {
+        $contextService = Services::get('context');
+        return $contextService->getManySummary([
+            'isEnabled' => true,
+        ]);
     }
 }
