@@ -27,6 +27,7 @@ use PKP\plugins\Hook;
 class RecommendBySimilarityPlugin extends GenericPlugin
 {
     private const DEFAULT_RECOMMENDATION_COUNT = 10;
+    private const MAX_SEARCH_KEYWORDS = 20;
 
     /**
      * @copydoc Plugin::register()
@@ -77,7 +78,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin
             ->excludeIds([$submissionId])
             ->filterByContextIds([$context->getId()])
             ->filterByStatus([Submission::STATUS_PUBLISHED])
-            ->searchPhrase($searchPhrase);
+            ->searchPhrase($searchPhrase, static::MAX_SEARCH_KEYWORDS);
 
         $offset = ($rangeInfo->getPage() - 1) * $rangeInfo->getCount();
         $submissionCount = $collector->getCount();
