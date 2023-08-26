@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:22+00:00\n"
-"PO-Revision-Date: 2023-08-26 06:48+0000\n"
+"PO-Revision-Date: 2023-08-27 22:58+0000\n"
 "Last-Translator: Kamdin Parsakia <kamdinparsakia@iranmehr.ac.ir>\n"
 "Language-Team: Persian <http://translate.pkp.sfu.ca/projects/ojs/manager/fa/>"
 "\n"
@@ -377,16 +377,16 @@ msgid "manager.sections.wordCount"
 msgstr "تعداد لغت"
 
 msgid "manager.sections.wordCountInstructions"
-msgstr "حداکثر تعداد کلمات برای این نوع مقاله (صفر تا بدون سقف)"
+msgstr "حداکثر تعداد کلمات برای این مقالات این بخش (صفر تا بدون سقف)"
 
 msgid "manager.setup"
-msgstr "نصب"
+msgstr "تنظیمات مجله"
 
 msgid "manager.setup.masthead"
 msgstr "سربرگ"
 
 msgid "manager.setup.editorialTeam"
-msgstr ""
+msgstr "هیئت تحریریه"
 
 msgid "manager.setup.homepageContent"
 msgstr "محتوای صفحه اصلی مجله"
@@ -410,16 +410,16 @@ msgid "manager.setup.aboutItemContent"
 msgstr "محتوا"
 
 msgid "manager.setup.addAboutItem"
-msgstr "افزودن یک مورد در بخش درباره"
+msgstr "افزودن آیتم در بخش درباره"
 
 msgid "manager.setup.addChecklistItem"
 msgstr "افزودن یک مورد به چک‌لیست"
 
 msgid "manager.setup.addItem"
-msgstr "افزودن مورد"
+msgstr "افزودن آیتم"
 
 msgid "manager.setup.addItemtoAboutJournal"
-msgstr "افزودن یک مورد به موارد درباره مجله"
+msgstr "افزودن یک آیتم به قسمت درباره مجله"
 
 msgid "manager.setup.addNavItem"
 msgstr "افزودن مورد"
@@ -428,7 +428,7 @@ msgid "manager.setup.addReviewerDatabaseLink"
 msgstr "افزودن لینک بانک اطلاعاتی جدید"
 
 msgid "manager.setup.addSponsor"
-msgstr "افزودن سازمان حمایت کننده"
+msgstr "افزودن اسپانسر"
 
 msgid "manager.setup.alternateHeader"
 msgstr "سرتیتر جایگزین"
@@ -442,24 +442,25 @@ msgid "manager.setup.announcements"
 msgstr "اطلاعیه‌ها"
 
 msgid "manager.setup.announcementsIntroduction"
-msgstr ""
+msgstr "مقدمه"
 
 msgid "manager.setup.announcementsIntroduction.description"
 msgstr ""
-"اطلاعات تکمیلی را که می‌باید در معرض دید خوانندگان  در صفحه اطلاعیه‌ها قرار "
+"اطلاعات تکمیلی را که می‌بایست در معرض دید خوانندگان در صفحه اطلاعیه‌ها قرار "
 "گیرد وارد کنید."
 
 msgid "manager.setup.appearInAboutJournal"
-msgstr "(در قسمت درباره مجله نمایش داده می‌شود)"
+msgstr "(در قسمت درباره مجله نمایش داده می‌شود) "
 
 msgid "manager.setup.competingInterests.requireAuthors"
 msgstr ""
-"لازم است که نویسنده ارسال کننده مقاله بیانیه تضاد منافع در رابطه با مقاله "
-"خود را اعلام کند."
+"لازم است که نویسنده ارسال کننده مقاله بیانیه تعارض منافع در رابطه با مقاله "
+"خود را ارسال کند."
 
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
-"لازم است داوران بیانیه تضاد منافع برای مقاله‌ای که داوری می‌کنند را اعلام کنند."
+"لازم است داوران بیانیه تعارض منافع برای مقاله‌ای که داوری می‌کنند را ارسال "
+"کنند."
 
 msgid "manager.setup.history"
 msgstr "تاریخچه مجله"
