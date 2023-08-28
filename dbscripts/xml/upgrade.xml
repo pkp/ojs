@@ -222,6 +222,10 @@
 		<migration class="PKP\migration\upgrade\v3_5_0\I9262_Highlights"/>
 	</upgrade>
 
+	<upgrade minversion="3.1.0.0" maxversion="3.4.9.9">
+		<migration class="PKP\migration\upgrade\v3_5_0\I9253_SiteAnnouncements"/>
+	</upgrade>
+
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
 </install>
