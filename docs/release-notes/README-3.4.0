@@ -1,7 +1,7 @@
 OJS 3.4.0 Release Notes
-Git tag: 3_4_0-2
+Git tag: 3_4_0-3
 
-Release date: August 24, 2023
+Release date: August 28, 2023
 =============================
 
 Configuration Changes
@@ -41,6 +41,10 @@ New config.inc.php section for queues is added, with the following parameters:
 - The setting general.session_samesite (default value: Lax) has been added to control the "SameSite" setting for the session cookie.
 
 - The setting security.force_ssl, when enabled, will also set the "Secure" flag for the session cookie.
+
+3.4.0-3 build
+-------------
+    #9264: Type of APP\jobs\statistics\CompileUsageStatsFromTemporaryRecords::$tries must be int
 
 3.4.0-2 build
 -------------
