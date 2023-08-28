@@ -41,7 +41,7 @@
 						@set="set"
 					>
 
-						<template v-slot:item="{ldelim}item{rdelim}">
+						<template #item="{ldelim}item{rdelim}">
 							<div class="listPanel__itemSummary">
 								<label>
 									<input

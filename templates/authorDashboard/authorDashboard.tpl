@@ -15,7 +15,7 @@
 			<h1 class="pkpWorkflow__identification">
 				{include file="workflow/submissionIdentification.tpl"}
 			</h1>
-			<template slot="actions">
+			<template #actions>
 				<pkp-button
 					v-if="uploadFileUrl"
 					ref="uploadFileButton"
