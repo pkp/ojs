@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:22+00:00\n"
-"PO-Revision-Date: 2023-08-29 15:00+0000\n"
+"PO-Revision-Date: 2023-08-30 16:29+0000\n"
 "Last-Translator: Kamdin Parsakia <kamdinparsakia@iranmehr.ac.ir>\n"
 "Language-Team: Persian <http://translate.pkp.sfu.ca/projects/ojs/manager/fa/>"
 "\n"
@@ -588,40 +588,40 @@ msgid "manager.setup.form.journalTitleRequired"
 msgstr "عنوان مجله لازم است."
 
 msgid "manager.setup.form.numReviewersPerSubmission"
-msgstr "تعداد داور برای هر مورد ارسال شده لازم است"
+msgstr "تعداد داوران هر مقاله ارسالی لازم است."
 
 msgid "manager.setup.form.supportEmailRequired"
-msgstr "ایمیل حمایت کننده لازم است"
+msgstr "ایمیل پیشتیبانی لازم است."
 
 msgid "manager.setup.form.supportNameRequired"
-msgstr "نام حمایت کننده لازم است"
+msgstr "نام پشتیبانی لازم است."
 
 msgid "manager.setup.generalInformation"
 msgstr "اطلاعات عمومی"
 
 msgid "manager.setup.gettingDownTheDetails"
-msgstr "محله 1: وارد کردن جزئیات"
+msgstr "گام اول: وارد کردن جزئیات"
 
 msgid "manager.setup.guidelines"
-msgstr "دستورالعمل"
+msgstr "دستورالعمل‌ها"
 
 msgid "manager.setup.guidingSubmissions"
-msgstr "مرحله 3: ارسال مقاله"
+msgstr "گام سوم: ارسال مقاله"
 
 msgid "manager.setup.identity"
-msgstr ""
+msgstr "مشخصات مجله"
 
 msgid "manager.setup.includeCreativeCommons"
 msgstr ""
-"افزودن مجوز Creative Commons  به تمامی مقالات انتشاری برای مجلاتی که دسترسی "
-"آزاد فوری یا تأخیری دارند."
+"افزودن مجوز Creative Commons به تمامی مقالات برای مجلاتی که دسترسی آزاد فوری "
+"یا با تأخیر دارند."
 
 msgid "manager.setup.information"
 msgstr "اطلاعات"
 
 msgid "manager.setup.information.description"
 msgstr ""
-"توصیف مختصر مجله برای کتابخانه‌ها ، نویسندگان و خوانندگان که در قسمت اطلاعات "
+"توضیحات مختصر مجله برای کتابداران، نویسندگان و خوانندگان که در قسمت اطلاعات "
 "نوار حاشیه صفحات ظاهر می‌شود."
 
 msgid "manager.setup.information.forAuthors"
@@ -651,10 +651,12 @@ msgstr ""
 "می‌شوند."
 
 msgid "manager.setup.itemsPerPage"
-msgstr "تعداد موارد در هر صفحه"
+msgstr "تعداد آیتم‌های هر صفحه"
 
 msgid "manager.setup.itemsPerPage.description"
 msgstr ""
+"تعیین محدودیت برای تعداد آیتم‌ها (برای مثال، مقالات ارسالی، کاربران و غیره) "
+"جهت نمایش در فهرست قبل از این که آیتم‌های پیشین در یک صفحه دیگر ظاهر شوند."
 
 msgid "manager.setup.journalAbbreviation"
 msgstr "نام اختصاری مجله"
@@ -671,39 +673,39 @@ msgstr "درباره مجله"
 msgid "manager.setup.contextAbout.description"
 msgstr ""
 "وارد کردن اطلاعاتی درباره مجله که ممکن است مورد علاقه‌ی خوانندگان و داوران "
-"باشد. اطلاعات می‌تواند شامل سیاست‌های دسترسی آزاد ، زمینه مطالعاتی مجله، حق "
-"نشر، حامیان مجله، پیشینه‌ی مجله؛ بیانیه حفظ حریمی شخصی و ... باشد."
+"باشد. اطلاعات می‌تواند شامل سیاست‌های دسترسی آزاد، زمینه مطالعاتی مجله، حق "
+"نشر، حامیان مجله، پیشینه‌ی مجله، بیانیه حفظ حریمی شخصی و ... باشد."
 
 msgid "manager.setup.journalHomepageContent"
 msgstr "محتوای صفحه اصلی مجله"
 
 msgid "manager.setup.journalHomepageContentDescription"
 msgstr ""
-"به صورت پیش‌فرض محتوی صفحه اصلی شامل لینک‌های گشت‌وگذار می‌باشد. برای افزودن "
-"محتویات دیگر به صفحه خانگی می‌توانید گزینه‌های زیر را بکار ببرید که به ترتیب "
-"ظاهر می‌شود. توجه داشته باشید که شماره جاری مجله همیشه از منوی گشت‌وگذار قابل "
-"انتخاب است."
+"به صورت پیش‌فرض محتوای صفحه اصلی شامل لینک‌های گشت‌وگذار می‌باشد. برای "
+"افزودن محتویات دیگر به صفحه خانگی می‌توانید گزینه‌های زیر را بکار ببرید که "
+"به ترتیب ظاهر می‌شود. توجه داشته باشید که شماره جاری مجله همیشه از منوی گشت‌"
+"وگذار قابل انتخاب است."
 
 msgid "manager.setup.journalHomepageHeader"
-msgstr "سرتیتر صفحه اصلی مجله"
+msgstr "هدر صفحه اصلی مجله"
 
 msgid "manager.setup.journalHomepageHeader.altText"
-msgstr "سرتیتر صفحه اصلی مجله"
+msgstr "هدر صفحه اصلی مجله"
 
 msgid "manager.setup.journalHomepageHeaderDescription"
 msgstr ""
-"یک نسخه گرافیکی از عنوان و لوگو مجله (به‌صورت یک فایلgif، png یا jpg). می‌توان "
-"برای نمایش در صفحه اصلی آپلود کرد که جایگزین نسخه متنی می‌شود. در غیر این "
-"صورت نسخه متنی نمایش داده می‌شود."
+"می‌توان یک نسخه گرافیکی از عنوان و لوگو مجله (به‌صورت یک فایل gif، png یا "
+"jpg) برای نمایش در صفحه اصلی آپلود کرد که جایگزین نسخه متنی می‌شود. در غیر "
+"این صورت نسخه متنی نمایش داده می‌شود."
 
 msgid "manager.setup.contextInitials"
 msgstr "حروف اول مجله"
 
 msgid "manager.setup.selectCountry"
-msgstr ""
+msgstr "کشوری که مجله (یا ناشر) در آن قرار دارد را مشخص کنید."
 
 msgid "manager.setup.journalLayout"
-msgstr "طرح‌بندی مجله"
+msgstr "لایه مجله"
 
 msgid "manager.setup.journalLayoutDescription"
 msgstr ""
@@ -717,23 +719,23 @@ msgid "manager.setup.journalLogo.altText"
 msgstr "لوگوی مجله"
 
 msgid "manager.setup.journalPageFooter"
-msgstr "پاورقی صفحات مجله"
+msgstr "فوتر صفحات مجله"
 
 msgid "manager.setup.journalPageFooterDescription"
 msgstr ""
-"این قسمت مربوط به پاورقی صفحات مجله است. برای تغییر یا به‌روزرسانی آن ، متن "
-"HTML دلخواه خود را در جعبه متن زیر وارد کنید. به عنوان مثال می‌توانید یک منوی "
+"این قسمت مربوط به فوتر صفحات مجله است. برای تغییر یا به‌روزرسانی آن، متن "
+"HTML دلخواه خود را در باکس زیر وارد کنید. به عنوان مثال می‌توانید یک منوی "
 "گشت‌وگذار دیگر، یک شمارشگر بازدیدکننده‌ها و غیره در این قسمت وارد کرد. این "
-"پاورقی در تمام صفحات ظاهر می‌شود."
+"فوتر در تمام صفحات ظاهر می‌شود."
 
 msgid "manager.setup.journalPolicies"
-msgstr "مرحله 2: سیاست‌های مجله"
+msgstr "گام دوم: سیاست‌های مجله"
 
 msgid "manager.setup.journalSetup"
-msgstr "نصب مجله"
+msgstr "تنظیمات پایه مجله"
 
 msgid "manager.setup.journalSetupUpdated"
-msgstr "نصب مجله به‌روزرسانی شد"
+msgstr "تنظیمات پایه مجله به‌روزرسانی شد."
 
 msgid "manager.setup.journalStyleSheetInvalid"
 msgstr "فرمت استایل شیت مجله نامناسب است. فرمت قابل قبول .css است."
@@ -745,34 +747,37 @@ msgid "manager.setup.journalThumbnail"
 msgstr "تصویر کوچک (بندانگشتی) مجله"
 
 msgid "manager.setup.journalThumbnail.description"
-msgstr "یک لوگوی کوچک از مجله برای نمایش در لیست مجلات"
+msgstr "یک لوگوی کوچک از مجله برای نمایش در فهرست مجلات."
 
 msgid "manager.setup.contextTitle"
 msgstr "عنوان مجله"
 
 msgid "manager.setup.keyInfo"
-msgstr ""
+msgstr "اطلاعات کلیدی"
 
 msgid "manager.setup.keyInfo.description"
-msgstr ""
+msgstr "توضیحی کوتاه در مورد مجله، هیئت تحیریریه و سایر کادر مجله ارائه دهید."
 
 msgid "manager.setup.labelName"
 msgstr "نام برچسب"
 
 msgid "manager.setup.lists"
-msgstr "لیست‌ها"
+msgstr "فهرست‌ها"
 
 msgid "manager.setup.plnPluginEnable"
-msgstr ""
+msgstr "فعالسازی افزونه PKP PN"
 
 msgid "manager.setup.plnDescription"
 msgstr ""
+"شبکه نگهداری PKP (PN) خدمات نگهداری رایگان برای تمامی مجلاتی که از سامانه "
+"OJS استفاده می‌کنند و دارای معیارهای اولیه هستند را فراهم می‌کند."
 
 msgid "manager.setup.plnSettingsDescription"
 msgstr ""
+"مشاهده <button>تنظیمات افزونه</button> برای پذیرش قوانین استفاده از PKP PN."
 
 msgid "manager.setup.plnPluginArchiving"
-msgstr ""
+msgstr "شبکه نگهداری PKP (PN)"
 
 msgid "manager.setup.plnPluginNotInstalled"
 msgstr ""
