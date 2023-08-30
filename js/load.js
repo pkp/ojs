@@ -9,7 +9,7 @@
  *  using the `@` symbol are aliased to `lib/ui-library/src`.
  */
 import PkpLoad from '../lib/pkp/js/load.js';
-
+import '@/styles/_global.less';
 // Import controllers used by OJS
 import Container from '@/components/Container/Container.vue';
 import Page from '@/components/Container/Page.vue';
@@ -65,7 +65,3 @@ window.pkp = Object.assign(PkpLoad, {
 		SubmissionsPage,
 	},
 });
-
-// Required by the URN plugin
-window.pkp.Vue.component('field-text', FieldText);
-window.pkp.Vue.component('field-pub-id', FieldPubId);
