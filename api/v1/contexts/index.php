@@ -15,4 +15,5 @@
  * @brief Handle API requests for contexts (journals/presses).
  */
 
-return new \APP\API\v1\contexts\ContextHandler();
+// return new \APP\API\v1\contexts\ContextHandler(); FIXME#7698: will be removed once merged pkp/pkp-lib#7698
+return new \PKP\core\PKPApiRoutingHandler(new \PKP\API\v1\contexts\PKPContextController());

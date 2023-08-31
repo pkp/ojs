@@ -11,6 +11,8 @@
  * @ingroup api_v1_contexts
  *
  * @brief Handle API requests for contexts (journals/presses).
+ *
+ * FIXME#7698: will be removed once merged pkp/pkp-lib#7698
  */
 
 namespace APP\API\v1\contexts;
