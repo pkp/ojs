@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:22+00:00\n"
-"PO-Revision-Date: 2023-09-03 16:39+0000\n"
+"PO-Revision-Date: 2023-09-05 01:17+0000\n"
 "Last-Translator: Kamdin Parsakia <kamdinparsakia@iranmehr.ac.ir>\n"
 "Language-Team: Persian <http://translate.pkp.sfu.ca/projects/ojs/manager/fa/>"
 "\n"
@@ -2141,39 +2141,43 @@ msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "محدوده IP معتبر برای این اشتراک"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "لینک URL به صفحه پرداخت"
 
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "لینک URL صفحه راهنمای ارسال مقاله"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "لینک به صفحه آمار مقالات منتشر شده"
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "شناسه (ID) شماره"
 
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
+"این ایمیل به طور خودکار و به صورت ماهانه برای دبیران و مدیران مجله جهت اطلاع "
+"رسانی درباره وضعیت سلامت مجله ارسال می‌شود."
 
 msgid "mailable.validateEmailContext.name"
-msgstr ""
+msgstr "تأیید ایمیل (ثبت نام مجله)"
 
 msgid "mailable.validateEmailContext.description"
 msgstr ""
+"این ایمیل به طور خودکار به کاربر جدید هنگام ثبت نام در مجله و به منظور تأیید "
+"آدرس ایمیل ارسال شده است."
 
 msgid "doi.displayName"
 msgstr "DOI"
 
 msgid "doi.description"
 msgstr ""
-"این افزونه امکان اضافه کردن شناسه برای مقالات، شماره ها و کلیشه های چاپی را "
+"این افزونه امکان اضافه کردن DOI برای مقالات، شماره ها و کلیشه‌های چاپی را "
 "فراهم می سازد."
 
 msgid "doi.readerDisplayName"
-msgstr "DOI:"
+msgstr "DOI"
 
 msgid "doi.manager.displayName"
-msgstr ""
+msgstr "DOIها"
 
 msgid "doi.manager.settings.description"
 msgstr "برای استفاده و مدیریت شناسه DOI لطفاً تنظیمات آن را پیکربندی نمایید:"
@@ -2184,48 +2188,48 @@ msgstr ""
 "کنید:"
 
 msgid "doi.manager.settings.enableRepresentationDoi"
-msgstr "کلیشه های چاپی"
+msgstr "نمایه‌های مقاله"
 
 msgid "doi.manager.settings.galleysWithDescription"
-msgstr ""
+msgstr "نمایه‌های مقاله، مثل PDF منتشر شده"
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "پیشوند DOI"
 
 msgid "doi.manager.settings.doiPrefixPattern"
-msgstr "شناسه DOI باید به فرمت 10.xxxx باشد."
+msgstr "پیشوند شناسه DOI الزامی است و باید به فرمت 10.xxxx باشد."
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr ""
 "برای تولید پسوندهای DOI از الگوی زیر استفاده کنید. %j برای مجله، %v برای "
-"دوره، %i برای شماره، %Y برای سال، %a برای شناسه مقاله، %g برای شناسه کلیشه "
-"چاپی، %f برای شناسه فایل، %p برای شماره صفحه و %x برای شناسه سفارشی"
+"دوره، %i برای شماره، %Y برای سال، %a برای شناسه مقاله، %g برای نمایه چاپی، "
+"%f برای شناسه فایل، %p برای شماره صفحه و %x برای شناسه سفارشی "
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
 msgstr ""
-"برای مثال از الگوی, vol%viss%ipp%p شناسه DOI هایی به صورت 10.1234/"
-"vol3iss2pp230 تولید می شود."
+"برای مثال از الگوی, vol%viss%ipp%p یک شناسه DOI به صورت 10.1234/"
+"vol3iss2pp230 تولید می‌شود."
 
 msgid "doi.manager.settings.doiSuffixPattern.issues"
-msgstr "برای شماره ها"
+msgstr "برای شماره‌ها"
 
 msgid "doi.manager.settings.doiSuffixPattern.submissions"
 msgstr "برای مقالات"
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
-msgstr "برای کلیشه های چاپی"
+msgstr "برای نمایه‌های چاپی"
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
-msgstr "لطفاً الگوی پسوند شناسه DOI برای شماره ها را وارد کنید"
+msgstr "لطفاً الگوی پسوند شناسه DOI برای شماره‌ها را وارد کنید."
 
 msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
-msgstr "لطفاً الگوی پسوند شناسه DOI برای مقالات را وارد کنید"
+msgstr "لطفاً الگوی پسوند شناسه DOI برای مقالات را وارد کنید."
 
 msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
-msgstr "لطفاً الگوی پسوند شناسه DOI برای کلیشه های چاپی را وارد کنید"
+msgstr "لطفاً الگوی پسوند شناسه DOI برای نمایه‌های چاپی را وارد کنید."
 
 msgid "doi.manager.settings.doiReassign"
-msgstr "اختصاص مجدد شناسه هاس DOI"
+msgstr "اختصاص مجدد شناسه‌های DOI"
 
 msgid "doi.manager.settings.doiReassign.description"
 msgstr ""
@@ -2235,7 +2239,7 @@ msgstr ""
 "موجود نیز اعمال شود."
 
 msgid "doi.manager.settings.doiReassign.confirm"
-msgstr "آیا مطمئنید که می خواهید تمامی شناسه های DOI موجود را حذف کنید؟"
+msgstr "آیا مطمئنید که می‌خواهید تمامی شناسه‌های DOI موجود را حذف کنید؟"
 
 msgid "doi.manager.settings.doiAssignJournalWide"
 msgstr "اختصاص DOI"
@@ -2250,26 +2254,26 @@ msgstr ""
 
 msgid "doi.manager.settings.doiAssignJournalWide.confirm"
 msgstr ""
-"آیا مطمئنید که می‌خواهید به تمامی مقالات و داده‌های منتشر شده‌ای که DOI دریافت "
-"نکرده‌اند این شناسه را اختصاص دهید."
+"آیا مطمئنید که می‌خواهید به تمامی مقالات و داده‌های منتشر شده‌ای که DOI "
+"دریافت نکرده‌اند این شناسه را اختصاص دهید؟"
 
 msgid "doi.manager.settings.registrationAgency"
-msgstr ""
+msgstr "نمایندگی ثبت"
 
 msgid "doi.manager.settings.registrationAgency.description"
-msgstr ""
+msgstr "لطفاً نمایندگی ثبت شناسه DOI خود را انتخاب کنید."
 
 msgid "doi.manager.settings.registrationAgency.none"
-msgstr ""
+msgstr "هیچ"
 
 msgid "doi.editor.doi"
 msgstr "DOI"
 
 msgid "doi.editor.doi.description"
-msgstr ""
+msgstr "شناسه DOI باید با پیشوند {$prefix} شروع شود."
 
 msgid "doi.editor.doi.assignDoi"
-msgstr ""
+msgstr "اختصاص"
 
 msgid "doi.editor.doiObjectTypeIssue"
 msgstr "شماره"
@@ -2278,16 +2282,20 @@ msgid "doi.editor.doiObjectTypeSubmission"
 msgstr "مقاله"
 
 msgid "doi.editor.doiObjectTypeRepresentation"
-msgstr "کلیشه چاپی"
+msgstr "نمایه چاپی"
 
 msgid "doi.editor.customSuffixMissing"
-msgstr "به دلیل عدم تعریف پسوند، اختصاص شناسه DOI  قابل انجام نیست."
+msgstr "به دلیل عدم تعریف پسوند، اختصاص شناسه DOI قابل انجام نیست."
 
 msgid "doi.editor.missingIssue"
 msgstr ""
+"تا وقتی که این مقاله در یک شماره قرار نگرفته باشد نمی‌توانید شناسه DOI تولید "
+"کنید."
 
 msgid "doi.editor.missingParts"
 msgstr ""
+"به دلیل ناقص بودن اطلاعات نمی‌توانید شناسه DOI تولید کنید. لطفاً از این که "
+"مقاله در یک شماره قرار دارد و شماره صفحات آن مشخص شده باشد اطمینان حاصل کنید."
 
 msgid "doi.editor.patternNotResolved"
 msgstr "به دلیل وجود یک الگوی نامعتبر، اختصاص شناسه DOI قابل انجام نیست."
@@ -2315,81 +2323,82 @@ msgid "doi.editor.clearIssueObjectsDoi"
 msgstr "پاک کردن شناسه DOI شماره"
 
 msgid "doi.editor.clearIssueObjectsDoi.confirm"
-msgstr "آیا مطمئنید که می خواهید تمامی شناسه های DOI این شماره را حذف نمایید؟"
+msgstr "آیا مطمئنید که می‌خواهید تمامی شناسه های DOI این بخش را حذف نمایید؟"
 
 msgid "doi.editor.clearIssueObjectsDoi.description"
 msgstr ""
-"برای پاک کردن شناسه DOI تمامی موارد (مقالات و کلیشه های چاپی) این شماره، از "
+"برای پاک کردن شناسه DOI تمامی موارد (مقالات و نمایه‌های چاپی) این شماره، از "
 "گزینه زیر استفاده نمایید."
 
 msgid "doi.editor.assignDoi"
 msgstr "اختصاص شناسه {$pubId} به {$pubObjectType}"
 
 msgid "doi.editor.assignDoi.emptySuffix"
-msgstr "به دلیل عدم تعریف پسوند، اختصاص شناسه DOI  قابل انجام نیست."
+msgstr "به دلیل عدم تعریف پسوند، اختصاص شناسه DOI قابل انجام نیست."
 
 msgid "doi.editor.assignDoi.pattern"
 msgstr "به دلیل وجود یک الگوی نامعتبر، اختصاص شناسه {$pubId} قابل انجام نیست."
 
 msgid "doi.editor.assignDoi.assigned"
-msgstr "شنایه {$pubId} اختصاص داده شد."
+msgstr "شناسه {$pubId} اختصاص داده شد."
 
 msgid "doi.editor.assignDoi.toBeAssigned"
-msgstr ""
+msgstr "شناسه DOI {$pubId} به مقاله اختصاص داده خواهد شد."
 
 msgid "doi.editor.missingPrefix"
-msgstr ""
+msgstr "شناسه DOI باید با پیشوند {$doiPrefix} شروع شود."
 
 msgid "doi.editor.preview.publication"
-msgstr ""
+msgstr "شناسه DOI برای این مقاله به شکل {$doi} خواهد بود."
 
 msgid "doi.editor.preview.publication.none"
-msgstr ""
+msgstr "هیچ شناسه DOIای به این مقاله اختصاص داده نشده است."
 
 msgid "doi.editor.preview.galleys"
-msgstr ""
+msgstr "نمایه چاپی: {$galleyLabel}"
 
 msgid "doi.editor.preview.objects"
-msgstr ""
+msgstr "مورد"
 
 msgid "api.galley.403.publicationDidNotMatch"
-msgstr ""
+msgstr "نمایه چاپی درخواست شده به این مقاله مربوط نیست."
 
 msgid "api.galley.403.canEditPublishedDoi"
-msgstr ""
+msgstr "فقط شناسه‌های DOI می‌توانند بعد از انتشار مقاله ویرایش شوند"
 
 msgid "api.issue.400.invalidDoi"
-msgstr ""
+msgstr "شناسه DOI ثبت شده معتبر نیست"
 
 msgid "api.issue.403.canEditPublishedDoi"
-msgstr ""
+msgstr "فقط شناسه‌های DOI می‌توانند پس از انتشار مقاله ویرایش شوند"
 
 msgid "api.issue.404.issuesNotFound"
-msgstr ""
+msgstr "شماره‌هایی که درخواست کردید یافت نشد"
 
 msgid "doi.manager.submissionDois"
-msgstr ""
+msgstr "شناسه‌های DOI مقاله"
 
 msgid "doi.manager.issueDois"
-msgstr ""
+msgstr "شناسه‌های DOI شماره"
 
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr ""
+"این ایمیل به نویسنده اطلاع می‌دهد که مقاله ارسالی ایشان به علت عدم رعایت "
+"پیشنیازهای انتشار مقاله در این مجله، قبل از مرحله داوری رد شده است."
 
 msgid "manager.institutions.noContext"
-msgstr ""
+msgstr "این نهاد مجله پیدا نشد."
 
 msgid "mailable.subscriptionNotify.name"
-msgstr ""
+msgstr "اطلاع رسانی اشتراک"
 
 msgid "mailable.subscriptionNotify.description"
 msgstr ""
-"This email notifies a registered reader that the Manager has created a "
-"subscription for them. It provides the journal's URL along with instructions "
-"for access."
+"این ایمیل به خواننده ثبت نام شده اطلاع می‌دهد که مدیریت یک اشتراک برای ایشان "
+"ساخته و می‌تواند از طریق وبسایت مجله برای دسترسی به آن اقدام نماید."
 
 msgid "mailable.subscriptionExpiresSoon.name"
-msgstr ""
+msgstr "اشتراک به زودی منقضی می‌شود"
 
 msgid "mailable.subscriptionExpiresSoon.description"
 msgstr ""
@@ -2397,7 +2406,7 @@ msgstr ""
 "It provides the journal's URL along with instructions for access."
 
 msgid "mailable.subscriptionExpired.name"
-msgstr ""
+msgstr "اشتراک منقضی شد"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
@@ -2405,7 +2414,7 @@ msgstr ""
 "provides the journal's URL along with instructions for access."
 
 msgid "mailable.subscriptionExpiredLast.name"
-msgstr ""
+msgstr "اشتراک منقضی شده"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
@@ -2413,63 +2422,79 @@ msgstr ""
 "provides the journal's URL along with instructions for access."
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
-msgstr ""
+msgstr "سفارش اشتراک شخصی"
 
 msgid "mailable.subscriptionPurchaseIndividual.description"
 msgstr ""
+"این ایمیل به مدیریت اشتراک اطلاع می‌دهد که یک اشتراک شخصی به صورت آنلاین "
+"سفارش داده شده است و حاوی اطلاعاتی در مورد اشتراک و جزئیات سفارش است."
 
 msgid "mailable.subscriptionPurchaseInstitutional.name"
-msgstr ""
+msgstr "سفارش اشتراک سازمانی"
 
 msgid "mailable.subscriptionPurchaseInstitutional.description"
 msgstr ""
+"این ایمیل به مدیریت اشتراک اطلاع می‌دهد که یک اشتراک سازمانی به صورت آنلاین "
+"سفارش داده شده است و حاوی اطلاعاتی در مورد اشتراک و جزئیات سفارش است."
 
 msgid "mailable.subscriptionRenewIndividual.name"
-msgstr ""
+msgstr "تمدید اشتراک شخصی"
 
 msgid "mailable.subscriptionRenewIndividual.description"
 msgstr ""
+"این ایمیل به مدیریت اشتراک اطلاع می‌دهد که یک اشتراک شخصی به صورت آنلاین "
+"تمدید شده است و حاوی اطلاعاتی در مورد جزئیات اشتراک تمدید شده است."
 
 msgid "mailable.subscriptionRenewInstitutional.name"
-msgstr ""
+msgstr "تمدید اشتراک سازمانی"
 
 msgid "mailable.subscriptionRenewInstitutional.description"
 msgstr ""
+"این ایمیل به مدیریت اشتراک اطلاع می‌دهد که یک اشتراک سازمانی به صورت آنلاین "
+"تمدید شده است و حاوی اطلاعاتی در مورد جزئیات اشتراک تمدید شده است."
 
 msgid "mailable.openAccessNotify.name"
-msgstr ""
+msgstr "اطلاع رسانی دسترسی باز"
 
 msgid "mailable.openAccessNotify.description"
 msgstr ""
-"This email is sent to registered readers who have requested to receive a "
-"notification email when an issue becomes open access."
+"این ایمیل به خوانندگان ثبت نام شده که درخواست دریافت ایمیل اطلاع‌رسانی در "
+"مورد باز شدن دسترسی یک شماره داده بودند ارسال شد."
 
 msgid "mailable.issuePublishNotify.name"
-msgstr ""
+msgstr "اطلاع رسانی شماره منتشر شده"
 
 msgid "mailable.issuePublishNotify.description"
 msgstr ""
+"این ایمیل به طور خودکار به کاربران برای اطلاع رسانی انتشار شماره جدید ارسال "
+"شد."
 
 msgid "manager.manageEmails.description"
-msgstr ""
+msgstr "ویرایش پیام‌های ارسالی ایمیل‌های مجله."
 
 msgid "mailable.layoutComplete.name"
-msgstr ""
+msgstr "نمایه‌ای چاپی کامل"
 
 msgid "mailable.publicationVersionNotify.name"
-msgstr ""
+msgstr "نسخه جدید ساخته شد"
 
 msgid "mailable.publicationVersionNotify.description"
 msgstr ""
+"این ایمیل به طور خودکار به دبیران تعیین شده ایجاد نسخه جدید مقاله ارسالی را "
+"اطلاع می‌دهد."
 
 msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
+"این ایمیل به مدیران مجله ارسال شده تا به آن‌ها اطلاع دهد که دبیری برای مقاله "
+"ارسالی جدید تعیین نشده است."
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "درخواست پرداخت"
 
 msgid "mailable.paymentRequest.description"
 msgstr ""
+"این ایمیل به طور خودکار به نویسنده برای اطلاع رسانی هزینه‌های چاپ پس از "
+"پذیرش مقاله ارسال شده."
 
 #~ msgid "manager.setup.masthead.description"
 #~ msgstr "لیست دبیران، مدیران و سایر افرادی که با این مجله همکاری می‌کنند."
