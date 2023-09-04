@@ -59,7 +59,8 @@
 	},
 	"postcss": {
 		"plugins": {
-			"autoprefixer": {}
+			"autoprefixer": {},
+			"tailwindcss": {}
 		}
 	},
 	"browserslist": [

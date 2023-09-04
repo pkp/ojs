@@ -9,7 +9,6 @@
  *  using the `@` symbol are aliased to `lib/ui-library/src`.
  */
 import PkpLoad from '../lib/pkp/js/load.js';
-import '@/styles/_global.less';
 // Import controllers used by OJS
 import Container from '@/components/Container/Container.vue';
 import Page from '@/components/Container/Page.vue';
@@ -34,9 +33,8 @@ import FailedJobsPage from '@/components/Container/FailedJobsPage.vue';
 import FailedJobDetailsPage from '@/components/Container/FailedJobDetailsPage.vue';
 import SubmissionsPage from '@/components/Container/SubmissionsPage.vue';
 
-// Required by the URN plugin
-import FieldText from '@/components/Form/fields/FieldText.vue';
-import FieldPubId from '@/components/Form/fields/FieldPubId.vue';
+// styles
+import '@/styles/_global.less';
 
 // Expose Vue, the registry and controllers in a global var
 window.pkp = Object.assign(PkpLoad, {

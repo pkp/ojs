@@ -41,7 +41,7 @@
 				element="a"
 				:href="submission.urlPublished"
 			>
-				{{ __('common.view') }}
+				{{ t('common.view') }}
 			</pkp-button>
 			<pkp-button
 				v-else-if="submission.status !== getConstant('STATUS_PUBLISHED') && submission.stageId >= getConstant('WORKFLOW_STAGE_ID_EDITING')"
@@ -93,7 +93,7 @@
 
 			{* Modal to select one of the revision decisions *}
 			<modal
-				:close-label="__('common.close')"
+				:close-label="t('common.close')"
 				name="selectRevisionDecision"
 				title="Revisions"
 				:open="isModalOpenedSelectRevisionDecision"
@@ -104,7 +104,7 @@
 
 			{* Modal to select one of the revision recommendations *}
 			<modal
-				:close-label="__('common.close')"
+				:close-label="t('common.close')"
 				name="selectRevisionRecommendation"
 				title="Revisions"
 				:open="isModalOpenedSelectRevisionRecommendation"
