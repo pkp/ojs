@@ -93,7 +93,7 @@
 								</span>
 							</label>
 							<pkp-button element="a" :href="item.urlWorkflow" style="margin-left: auto;">
-								{{ __('common.view') }}
+								{{ t('common.view') }}
 							</pkp-button>
 						</div>
 					</template>
