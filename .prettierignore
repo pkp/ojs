@@ -1,0 +1,2 @@
+cypress/tests/**/*
+lib/pkp/cypress/**/*

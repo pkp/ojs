@@ -33,6 +33,7 @@ describe('Data suite tests', function() {
 			'affiliation': 'Alexandria University',
 			'country': 'Egypt',
 		});
+		cy.pause();
 
 		cy.getCsrfToken();
 		cy.window()
