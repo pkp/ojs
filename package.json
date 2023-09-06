@@ -5,7 +5,7 @@
 	"author": "Public Knowledge Project",
 	"private": true,
 	"scripts": {
-		"dev": "NODE_ENV=development vite build --watch",
+		"dev": "vite build --watch --mode development",
 		"build": "vite build",
 		"lint": "vue-cli-service lint js/load.js lib/pkp/js/load.js lib/pkp/js/usage-stats-chart.js lib/pkp/js/classes/VueRegistry.js",
 		"fix": "vue-cli-service lint js/load.js lib/pkp/js/load.js lib/pkp/js/usage-stats-chart.js lib/pkp/js/classes/VueRegistry.js && php lib/pkp/lib/vendor/bin/php-cs-fixer fix --config .php-cs-fixer.php --allow-risky=yes",
