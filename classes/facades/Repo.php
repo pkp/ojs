@@ -25,6 +25,7 @@ use APP\submissionFile\Repository as SubmissionFileRepository;
 use APP\user\Repository as UserRepository;
 use PKP\facades\Repo as BaseRepo;
 use PKP\galley\Repository as GalleyRepository;
+use PKP\highlight\Repository as HighlightRepository;
 
 class Repo extends BaseRepo
 {
@@ -41,6 +42,11 @@ class Repo extends BaseRepo
     public static function galley(): GalleyRepository
     {
         return app(GalleyRepository::class);
+    }
+
+    public static function highlight(): HighlightRepository
+    {
+        return app(HighlightRepository::class);
     }
 
     public static function issue(): IssueRepository
