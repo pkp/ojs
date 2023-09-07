@@ -46,7 +46,7 @@ class IssueGridCellProvider extends GridCellProvider {
 					'edit',
 					new AjaxModal(
 						$router->url($request, null, null, 'editIssue', null, array('issueId' => $issue->getId())),
-						__('editor.issues.editIssue', array('issueIdentification' => $issue->getIssueIdentification())),
+						__('editor.issues.editIssue', array('issueIdentification' => htmlspecialchars($issue->getIssueIdentification()))),
 						'modal_edit',
 						true
 					),
