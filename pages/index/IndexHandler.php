@@ -60,6 +60,10 @@ class IndexHandler extends PKPIndexHandler
         $this->setupTemplate($request);
         $router = $request->getRouter();
         $templateMgr = TemplateManager::getManager($request);
+        $templateMgr->assign([
+            'highlights' => $this->getHighlights($journal),
+        ]);
+
         if ($journal) {
             // Assign header and content for home page
             $templateMgr->assign([
