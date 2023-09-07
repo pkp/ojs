@@ -40,6 +40,8 @@
 		"cypress-failed-log": "^2.7.0",
 		"cypress-file-upload": "^5.0.8",
 		"cypress-wait-until": "^1.7.1",
+		"eslint": "^8.48.0",
+		"eslint-plugin-vue": "^9.17.0",
 		"google-closure-compiler-java": "^20200719.0.0",
 		"husky": "^8.0.3",
 		"less": "^4.2.0",
