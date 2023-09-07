@@ -12,7 +12,7 @@
 		"prepare": "husky install"
 	},
 	"dependencies": {
-		"@headlessui/vue": "^1.7.15",
+		"@headlessui/vue": "^1.7.16",
 		"@lk77/vue3-color": "^3.0.6",
 		"@tinymce/tinymce-vue": "^5.1.1",
 		"@vue-a11y/announcer": "^3.1.5",
