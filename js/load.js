@@ -35,7 +35,6 @@ import SubmissionsPage from '@/components/Container/SubmissionsPage.vue';
 
 // styles
 import '@/styles/_global.less';
-
 // Expose Vue, the registry and controllers in a global var
 window.pkp = Object.assign(PkpLoad, {
 	controllers: {
