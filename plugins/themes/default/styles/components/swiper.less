@@ -1,0 +1,93 @@
+// Swiper.js
+.highlights {
+    margin-top: -@base;
+    margin-left: -@double;
+    margin-right: -@double;
+    background: @bg-shade;
+}
+
+.swiper {
+    --swiper-theme-color: @bg-base;
+    --swiper-navigation-size: @triple;
+    --swiper-navigation-sides-offset: @half;
+}
+
+.swiper-wrapper {
+    margin: 0;
+    padding: 0 0 @quadruple;
+    list-style: none;
+}
+
+.swiper-slide-content {
+    padding-left: @triple;
+    padding-right: @triple;
+}
+
+// Extra class to override .pkp_structure_main h3
+.swiper .swiper-slide-title {
+    margin-top: @double;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background: transparent;
+    border: none;
+    color: @lift;
+
+    &:focus-visible {
+        outline: 2px solid @lift;
+        outline-offset: @half;
+    }
+}
+
+.swiper-slide-image {
+    width: 100vw;
+    max-height: 50vh;
+    object-fit: cover;
+}
+
+@media (min-width: @screen-phone) {
+
+    .highlights {
+        margin-top: -@double;
+        margin-left: -@triple;
+        margin-right: -@triple;
+    }
+
+    .swiper-slide-content {
+        padding-left: @quadruple;
+        padding-right: @quadruple;
+    }
+}
+
+@media (min-width: @screen-tablet) {
+
+    .highlights {
+        margin-top: -@double;
+        margin-left: -@double;
+        margin-right: -@double;
+    }
+
+    // Extra class to override library styles
+    .swiper-slide.-has-image {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .swiper-slide-content {
+        padding-inline-start: @triple;
+    }
+}
+
+@media (min-width: @screen-desktop) {
+
+    .highlights {
+        margin-top: -(@base * 7);
+        margin-left: -@triple;
+        margin-right: -@triple;
+    }
+
+    .pkp_structure_content.has_sidebar .highlights {
+        margin-top: -@triple;
+    }
+}

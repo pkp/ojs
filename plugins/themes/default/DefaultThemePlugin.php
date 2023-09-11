@@ -208,6 +208,11 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
         $this->addScript('bsUtil', 'js/lib/bootstrap/util.js');
         $this->addScript('bsDropdown', 'js/lib/bootstrap/dropdown.js');
 
+        // Load Swiper for carousel
+        $this->addScript('swiper', 'js/lib/swiper/swiper-bundle' . $min . '.js');
+        $this->addStyle('swiper', 'js/lib/swiper/swiper-bundle' . $min . '.css');
+        $this->addScript('swiper-i18n', $this->getSwiperI18n(), ['inline' => true]);
+
         // Load custom JavaScript for this theme
         $this->addScript('default', 'js/main.js');
 
@@ -255,6 +260,17 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
     public function getDescription()
     {
         return __('plugins.themes.default.description');
+    }
+
+    /**
+     * Get the locale strings for the swiper carousel
+     */
+    public function getSwiperI18n(): string
+    {
+        return 'var pkpDefaultThemeI18N = ' . json_encode([
+            'nextSlide' => __('plugins.themes.default.nextSlide'),
+            'prevSlide' => __('plugins.themes.default.prevSlide'),
+        ]);
     }
 }
 
