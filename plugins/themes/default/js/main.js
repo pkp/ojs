@@ -97,4 +97,20 @@
 	reviewerInterestsToggle();
 	$('#reviewerOptinGroup input').on('click', reviewerInterestsToggle);
 
+	var swiper = new Swiper('.swiper', {
+		ally: {
+			prevSlideMessage: pkpDefaultThemeI18N.prevSlide,
+			nextSlideMessage: pkpDefaultThemeI18N.nextSlide,
+		},
+		autoHeight: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			type: 'bullets',
+		}
+	});
+
 })(jQuery);

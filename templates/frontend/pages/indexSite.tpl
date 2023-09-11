@@ -12,6 +12,10 @@
 
 <div class="page_index_site">
 
+	{if $highlights->count()}
+		{include file="frontend/components/highlights.tpl" highlights=$highlights}
+	{/if}
+
 	{if $about}
 		<div class="about_site">
 			{$about}

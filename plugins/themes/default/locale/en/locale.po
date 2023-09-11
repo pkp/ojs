@@ -92,3 +92,9 @@ msgstr "Downloads"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Download data is not yet available."
+
+msgid "plugins.themes.default.nextSlide"
+msgstr "Next slide"
+
+msgid "plugins.themes.default.prevSlide"
+msgstr "Previous slide"
