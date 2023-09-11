@@ -45,6 +45,7 @@
 	<migration class="PKP\migration\install\MetadataMigration" />
 	<migration class="PKP\migration\install\AnnouncementsMigration" />
 	<migration class="PKP\migration\install\CategoriesMigration" />
+	<migration class="PKP\migration\install\HighlightsMigration" />
 	<migration class="APP\migration\install\MetricsMigration" />
 
 	<!-- Other install tasks -->
