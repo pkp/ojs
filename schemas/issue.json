@@ -1,6 +1,12 @@
 {
 	"title": "Issue",
 	"description": "An issue.",
+	"required": [
+		"contextName",
+		"onlineIssn",
+		"printIssn",
+		"sectionId"
+	],
 	"properties": {
 		"_href": {
 			"type": "string",
@@ -16,6 +22,14 @@
 			"items": {
 				"$ref": "#/definitions/SubmissionSummary"
 			}
+		},
+		"contextName": {
+			"type": "string",
+			"multilingual": true,
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
 		},
 		"coverImage": {
 			"type": "string",
@@ -100,6 +114,13 @@
 			"type": "string",
 			"apiSummary": true
 		},
+		"onlineIssn": {
+			"type": "string",
+			"validation": [
+				"nullable",
+				"issn"
+			]
+		},
 		"openAccessDate": {
 			"type": "string",
 			"validation": [
@@ -108,6 +129,13 @@
 		},
 		"originalStyleFileName": {
 			"type": "string"
+		},
+		"printIssn": {
+			"type": "string",
+			"validation": [
+				"nullable",
+				"issn"
+			]
 		},
 		"published": {
 			"type": "boolean",
