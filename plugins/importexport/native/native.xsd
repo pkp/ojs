@@ -50,6 +50,8 @@
 						<element maxOccurs="1" minOccurs="0" name="pages" type="string" />
 						<element ref="pkp:covers" minOccurs="0" maxOccurs="1" />
 						<element maxOccurs="1" minOccurs="0" name="issueId" type="int" />
+						<element maxOccurs="1" minOccurs="0" name="onlineIssn" type="string" />
+						<element maxOccurs="1" minOccurs="0" name="printIssn" type="string" />
 					</sequence>
 					<attribute name="section_ref" type="string" use="required" />
 					<attribute name="seq" type="int" />
@@ -93,6 +95,9 @@
 			<element name="date_notified" type="date" minOccurs="0" maxOccurs="1" />
 			<element name="last_modified" type="date" minOccurs="0" maxOccurs="1" />
 			<element name="open_access_date" type="date" minOccurs="0" maxOccurs="1" />
+			<element name="pkp:contextName" maxOccurs="unbounded" minOccurs="1" />
+			<element maxOccurs="1" minOccurs="0" name="onlineIssn" type="string" />
+			<element maxOccurs="1" minOccurs="0" name="printIssn" type="string" />
 			<!-- sub elements -->
 			<element ref="pkp:sections" minOccurs="0" maxOccurs="1" />
 			<element ref="pkp:covers" minOccurs="0" maxOccurs="1" />
