@@ -58,7 +58,7 @@ class SubscriptionBlockPlugin extends BlockPlugin
      * @param \APP\template\TemplateManager $templateMgr
      * @param \APP\core\Request $request
      *
-     * @return $string
+     * @return string
      */
     public function getContents($templateMgr, $request = null)
     {

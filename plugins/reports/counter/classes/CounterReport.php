@@ -73,7 +73,7 @@ class CounterReport
     /**
      * Get the COUNTER Release
      *
-     * @return $string
+     * @return string
      */
     public function getRelease()
     {
@@ -83,7 +83,7 @@ class CounterReport
     /**
      * Get the report code
      *
-     * @return $string
+     * @return string
      */
     public function getCode()
     {
@@ -117,7 +117,7 @@ class CounterReport
      * Abstract method must be implemented in the child class
      * Get the report title
      *
-     * @return $string
+     * @return string
      */
     public function getTitle()
     {
@@ -265,7 +265,7 @@ class CounterReport
     /**
      * Get the Vendor Id
      *
-     * @return $string
+     * @return string
      */
     public function getVendorId()
     {
@@ -275,7 +275,7 @@ class CounterReport
     /**
      * Get the Vendor Name
      *
-     * @return $string
+     * @return string
      */
     public function getVendorName()
     {

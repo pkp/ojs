@@ -30,7 +30,7 @@ class CounterReportJR1 extends CounterReport
     /**
      * Get the report title
      *
-     * @return $string
+     * @return string
      */
     public function getTitle()
     {

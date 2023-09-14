@@ -55,7 +55,7 @@ class IssueGalley extends IssueFile
     /**
      * Get the localized value of the galley label.
      *
-     * @return $string
+     * @return string
      */
     public function getGalleyLabel()
     {
