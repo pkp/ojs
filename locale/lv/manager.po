@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-09-13 12:51+0000\n"
+"PO-Revision-Date: 2023-09-14 19:02+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/lv/>"
 "\n"
@@ -2171,9 +2171,8 @@ msgstr "Žurnāla mājaslapas URL"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Žurnāla galvenās kontaktpersonas vārds un uzvārds"
 
-#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr "žurnāla iniciāļi"
+msgstr "Žurnāla abreviatūra"
 
 msgid "emailTemplate.variable.context.contextSignature"
 msgstr "Žurnāla e-pasta paraksts automātiskajiem e-pastiem"
@@ -2182,7 +2181,7 @@ msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Žurnāla galvenās kontaktpersonas e-pasta adrese"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "Žurnāla pasta adrese"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Maksājuma veida nosaukums"
@@ -2214,36 +2213,34 @@ msgstr "Kopsavilkums par abonementa veidu, nosaukumu, ilgumu un izmaksām"
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Informācija par abonenta dalību"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr "Iestādes nosaukums"
+msgstr "Abonējošās iestādes nosaukums"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr "Iestādes pasta adrese"
+msgstr "Abonējošās iestādes pasta adrese"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
-msgstr "Domēns"
+msgstr "Šī abonementa derīgās(-o) IP adreses(-u) domēna vārds"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "IP diapazoni abonēšanas autentificēšanai"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "URL uz vietni, kurā autors var veikt maksājumu"
 
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "Iesniegšanas vadlīniju URL adrese"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "Saite uz publicēto rakstu statistikas lapu"
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "Numura ID"
 
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
+"Šis e-pasts katru mēnesi tiek automātiski nosūtīts redaktoriem un žurnālu "
+"pārvaldniekiem, lai sniegtu pārskatu par sistēmas stāvokli."
 
 msgid "mailable.validateEmailContext.name"
 msgstr "E-pasta apstiprināšana (žurnāla reģistrācija)"
@@ -2566,25 +2563,31 @@ msgstr ""
 "publicēts jauns izdevums."
 
 msgid "manager.manageEmails.description"
-msgstr ""
+msgstr "No šī žurnāla nosūtīto e-pasta ziņojumu rediģēšana."
 
 msgid "mailable.layoutComplete.name"
-msgstr ""
+msgstr "Saliktņi gatavi"
 
 msgid "mailable.publicationVersionNotify.name"
-msgstr ""
+msgstr "Izveidota jauna versija"
 
 msgid "mailable.publicationVersionNotify.description"
 msgstr ""
+"Šis e-pasta ziņojums automātiski informē piešķirtos redaktorus par jaunas "
+"iesniegtā materiāla versijas izveidošanu."
 
 msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
+"Šis e-pasts tiek nosūtīts žurnālu pārvaldniekiem, kad ir iesniegts jauns "
+"iesniegtais materiāls un tam nav piešķirti redaktori."
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "Maksājuma pieprasījums"
 
 msgid "mailable.paymentRequest.description"
 msgstr ""
+"Šis automātiskais e-pasts tiek nosūtīts autoram, lai pieprasītu samaksāt "
+"publicēšanas maksu pēc iesniegtā darba pieņemšanas."
 
 #~ msgid "manager.setup.submissionPreparationChecklistDescription"
 #~ msgstr ""
@@ -2600,3 +2603,13 @@ msgstr ""
 
 msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
 msgstr "Izdevuma saliktni nav iespējams importēt, trūkst datnes."
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"Izdevuma {$id} vāka attēlu nav iespējams eksportēt, nav atrodama datne ceļā "
+"\"{$path}\"."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"Izdevuma saliktni {$id} nav iespējams eksportēt, nav atrodama datne ceļā \""
+"{$path}\"."
