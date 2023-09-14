@@ -1,8 +1,25 @@
 # Ieva Tiltina <pastala@gmail.com>, 2023.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-09-14 19:02+0000\n"
+"Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
+"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-articles/lv/>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
+"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.reports.articles.displayName"
+msgstr "Rakstu pārskats"
+
+msgid "plugins.reports.articles.description"
+msgstr ""
+"Šis spraudnis nodrošina atskaiti CSV formātā, kurā ir saraksts ar rakstiem "
+"un informāciju par tiem."
+
+msgid "plugins.reports.articles.nodecision"
+msgstr "Nav lēmuma"
