@@ -10,7 +10,7 @@
  * @uses $issue Issue The issue
  *}
 {if $issue->getShowTitle()}
-{assign var=issueTitle value=$issue->getLocalizedTitle()}
+{assign var=issueTitle value=$issue->getLocalizedTitle()|escape}
 {/if}
 {assign var=issueSeries value=$issue->getIssueSeries()}
 {assign var=issueCover value=$issue->getLocalizedCoverImageUrl()}
