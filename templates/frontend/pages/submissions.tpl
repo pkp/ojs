@@ -16,7 +16,7 @@
                 {if $isUserLoggedIn}
                     {capture assign="sectionSubmissionUrl"}{url page="submission" sectionId=$section->getId()}{/capture}
                     <p>
-                        {translate key="about.onlineSubmissions.submitToSection" name=$section->getLocalizedTitle() url=$sectionSubmissionUrl}
+                        {translate key="about.onlineSubmissions.submitToSection" name=$section->getLocalizedTitle()|escape url=$sectionSubmissionUrl}
                     </p>
                 {/if}
             </div>
