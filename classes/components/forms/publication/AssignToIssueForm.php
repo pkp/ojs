@@ -53,7 +53,7 @@ class AssignToIssueForm extends FormComponent
             foreach ($unpublishedIssues as $issue) {
                 $issueOptions[] = [
                     'value' => (int) $issue->getId(),
-                    'label' => $issue->getIssueIdentification(),
+                    'label' => htmlspecialchars($issue->getIssueIdentification()),
                 ];
             }
         }
@@ -68,7 +68,7 @@ class AssignToIssueForm extends FormComponent
             foreach ($publishedIssues as $issue) {
                 $issueOptions[] = [
                     'value' => (int) $issue->getId(),
-                    'label' => $issue->getIssueIdentification(),
+                    'label' => htmlspecialchars($issue->getIssueIdentification()),
                 ];
             }
         }
