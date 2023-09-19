@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-09-19 08:43+0000\n"
+"PO-Revision-Date: 2023-09-20 11:06+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/editor/lv/>"
 "\n"
@@ -271,7 +271,7 @@ msgstr "Visi iestāžu abonenti ({$count} lietotāji)"
 msgid "editor.notifyUsers.allUsers"
 msgstr ""
 "Nosūtīt šo ziņojumu visiem lietotājiem, kas saistīti ar šo žurnālu ({$count} "
-"users)"
+"lietotāji)"
 
 msgid "editor.issues.default"
 msgstr "Noklusējuma"
@@ -279,10 +279,209 @@ msgstr "Noklusējuma"
 msgid "editor.notifyUsers.interestedUsers"
 msgstr ""
 "Nosūtīt šo ziņojumu lietotājiem, kas saistīti ar šo žurnālu un norādījuši, "
-"ka vēlas saņemt atjauninājumus ({$count} users)"
+"ka vēlas saņemt atjauninājumus ({$count} lietotāji)"
 
 msgid "editor.issues.unpublishIssue"
 msgstr "Atcelt izdevuma publicēšanu"
 
 msgid "editor.issues.previewIssue"
 msgstr "Izdevuma priekšskatījums"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Vai tiešām vēlaties atcelt jau publicētā numura publicēšanu?"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Vai esat pārliecināts, ka vēlaties iestatīt šo izdevumu kā jaunāko?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Nav iespējams saglabāt raksta publisko id:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Nav tiešraides izdevumu"
+
+msgid "editor.issues.open"
+msgstr "Atvērt"
+
+msgid "editor.issues.pages"
+msgstr "Lappuses"
+
+msgid "editor.issues.galley"
+msgstr "Izdevuma saliktnis"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Skatīt izdevuma saliktni"
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Nav publicēts neviens izdevuma saliktnis."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Nepieciešams izdevuma saliktņa marķējums."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Publiskā izdevuma saliktņa identifikācija jau pastāv."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Atgriezties pie izdevuma saliktņiem"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Vai tiešām vēlaties izdzēst šo izdevuma saliktni?"
+
+msgid "editor.issues.identifiers"
+msgstr "Identifikatori"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Nākotnes izdevumi"
+
+msgid "grid.action.addGalley"
+msgstr "Pievienot saliktni"
+
+msgid "grid.action.publish"
+msgstr "Publicēt izdevumu"
+
+msgid "grid.action.addIssue"
+msgstr "Izveidot izdevumu"
+
+msgid "grid.action.viewIssue"
+msgstr "Skatīt"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Izveidot izdevuma saliktni"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Iestatīt jaunāko izdevumu"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Noteikt oriģinālo datni kā versiju recenzēšanai"
+
+msgid "editor.article.decision"
+msgstr "Lēmums"
+
+msgid "editor.submissions.showBy"
+msgstr "Rādīt atbilstoši"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Iesniegt MM-DD"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Aktīvie redakcijas uzdevumi"
+
+msgid "editor.submissions.invite"
+msgstr "Uzaicināt"
+
+msgid "editor.submissions.accept"
+msgstr "Pieņemt"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Jaunākais"
+
+msgid "editor.submissions.averageTime"
+msgstr "Nedēļas"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Piešķirts redaktoram"
+
+msgid "editor.submissions.inSection"
+msgstr "Sadaļā"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Rādīt plānoto publicēšanu"
+
+msgid "editor.article.publishVersion"
+msgstr "Publicēt versiju"
+
+msgid "editor.article.viewMetadata"
+msgstr "Skatīt versijas metadatus"
+
+msgid "editor.article.editMetadata"
+msgstr "Rediģēt versijas metadatus"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Ieplānot publicēšanai"
+
+msgid "editor.article.payment.requestPayment"
+msgstr "Pieprasīt maksājumu"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"Vāka attēlu, kuru pieprasījāt dzēst, neizdevās atrast. Iespējams, tas jau ir "
+"izdzēsts. Mēģiniet atkārtoti ielādēt lapu."
+
+msgid "grid.action.removeArticle"
+msgstr "Dzēst rakstu no izdevuma"
+
+msgid "editor.article.remove"
+msgstr "Noņemt"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Piekļuves datums nav derīgs."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Rediģēt izdevuma saliktni"
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Atlasīt saliktņa datnes"
+
+msgid "editor.article.coverImage"
+msgstr "Vāka attēls"
+
+msgid "editor.issues.galleys"
+msgstr "Izdevuma saliktņi"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Tiks piešķirts"
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"Publiskais identifikators '{$publicIdentifier}' jau pastāv citam tāda paša "
+"tipa objektam. Lūdzu, izvēlieties unikālus identifikatorus tā paša tipa "
+"objektiem savā žurnālā."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"Visas datnes, kas ir augšupielādētas jebkurā iesniegšanas posmā, var "
+"pievienot korektūras sarakstam, zemāk atzīmējot izvēles rūtiņu \"Iekļaut\" "
+"un noklikšķinot uz \"Meklēt\": tiks uzskaitītas visas pieejamās datnes un "
+"tās varēs izvēlēties iekļaušanai."
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Publicēt saliktņus ar pilnu numura saturu."
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"Nav veikta samaksa par publikāciju. Lai ieplānotu publicēšanu, informēt "
+"autoru par nodevas samaksu vai atteikšanos no samaksas."
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"Maketētājs sagatavo šīs datnes katram saliktnim un pēc tam augšupielādē tos "
+"korektūrai attiecīgajā sadaļā <span class=\"pkp_help_title\""
+">Korektūras</span>."
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"Vai esat pārliecināts, ka vēlaties noņemt šo rakstu no izdevuma? Raksts būs "
+"pieejams iekļaušanai citā numurā."
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"Šajā sarakstā iekļautās darba gala versijas teksta redaktors pārveido "
+"rediģētās versijās, ko augšupielādē sadaļā <span class=\"pkp_help_title\""
+">Teksta rediģēšana</span>."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Nepieciešama izdevuma saliktņa lokalizācija."
+
+msgid "grid.action.previewIssue"
+msgstr "Priekšskatījums"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Vecākie izdevumi"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Nav iesniegtu materiālu"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Pēdējais pabeigtais"
+
+msgid "issues.submissions.issueIds"
+msgstr "Piešķirts izdevumam"
