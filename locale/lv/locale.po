@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-09-14 19:02+0000\n"
+"PO-Revision-Date: 2023-09-19 08:43+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/locale/lv/>"
 "\n"
@@ -91,7 +91,7 @@ msgid "navigation.skip.about"
 msgstr "Pāriet uz sadaļu par žurnālu"
 
 msgid "navigation.skip.issue"
-msgstr "Pāriet uz jaunāko izdevumu"
+msgstr "Pāriet uz jaunāko numuru"
 
 msgid "common.queue.long.submissionsUnassigned"
 msgstr "Nav piešķirts"
@@ -277,7 +277,7 @@ msgid "submission.editorReview"
 msgstr "Redaktora pārskats"
 
 msgid "submission.notifyAuthor"
-msgstr "Paziņot autoram"
+msgstr "Paziņojums autoram"
 
 msgid "submission.notifyEditor"
 msgstr "Paziņot redaktoram"
@@ -370,7 +370,7 @@ msgid "submission.search"
 msgstr "Rakstu meklēšana"
 
 msgid "journal.currentIssue"
-msgstr "Jaunākais izdevums"
+msgstr "Jaunākais numurs"
 
 msgid "context.contexts"
 msgstr "Žurnāli"
