@@ -1,8 +1,288 @@
 # Ieva Tiltina <pastala@gmail.com>, 2023.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-09-19 08:43+0000\n"
+"Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
+"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/editor/lv/>"
+"\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
+"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "editor.home"
+msgstr "Redaktora sākumlapa"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Iesniegtie materiāli un publicēšana"
+
+msgid "editor.submissionQueue"
+msgstr "Iesniegto materiālu rinda"
+
+msgid "editor.submissionArchive"
+msgstr "Iesniegto materiālu arhīvs"
+
+msgid "editor.publishing"
+msgstr "Publicēšana"
+
+msgid "editor.publishedIssues"
+msgstr "Publicētie izdevumi"
+
+msgid "editor.allSections"
+msgstr "Visas sadaļas"
+
+msgid "editor.allEditors"
+msgstr "Visi redaktori"
+
+msgid "editor.me"
+msgstr "Es"
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Arhīvā nav iesniegtu materiālu."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"Saglabāt izmaiņas arhivētajos materiālos? Iesniegtie materiāli, kas atzīmēti "
+"dzēšanai, tiks neatgriezeniski dzēsti no sistēmas."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Vai esat pārliecināts, ka vēlaties ierakstīt šo lēmumu?"
+
+msgid "editor.notifyUsers"
+msgstr "Paziņot lietotājiem"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Visi publicētie autori ({$count} lietotāji)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Visi individuālie abonenti ({$count} lietotāji)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Lietotāju informēšana..."
+
+msgid "editor.usersNotified"
+msgstr "Informētie lietotāji"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Pievienot satura rādītāju no šī izdevuma:"
+
+msgid "editor.editorAdministration"
+msgstr "Redaktora administrēšana"
+
+msgid "editor.issues.createIssue"
+msgstr "Izveidot izdevumu"
+
+msgid "editor.issues.editIssue"
+msgstr "Izdevuma pārvaldība: {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "Jaunākais numurs"
+
+msgid "editor.issues.numArticles"
+msgstr "Vienības"
+
+msgid "editor.issues.noArticles"
+msgstr "Šobrīd šajā numurā nav ieplānots neviens materiāls."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Vai tiešām vēlaties neatgriezeniski dzēst šo numuru?"
+
+msgid "editor.issues.published"
+msgstr "Publicēts"
+
+msgid "editor.issues.unpublished"
+msgstr "Nepublicēts"
+
+msgid "editor.issues.datePublished"
+msgstr "Publicēšanas datums"
+
+msgid "editor.issues.numberRequired"
+msgstr "Numurs ir obligāts, un tam jābūt pozitīvai skaitliskai vērtībai."
+
+msgid "editor.issues.titleRequired"
+msgstr "Izdevumam ir nepieciešams nosaukums."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr ""
+"Nepieciešams identificēt izdevumu. Lūdzu, izvēlieties vismaz vienu no "
+"izdevuma identifikācijas iespējām."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Izdevuma identificēšana"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Publiskais izdevuma identifikators"
+
+msgid "editor.issues.description"
+msgstr "Apraksts"
+
+msgid "editor.issues.accessStatus"
+msgstr "Piekļuves statuss"
+
+msgid "editor.issues.accessDate"
+msgstr "Atvērtās pieejas datums"
+
+msgid "editor.issues.coverPage"
+msgstr "Vāka attēls"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Pieļaujamie formāti: .gif, .jpg vai .png)"
+
+msgid "editor.issues.uploaded"
+msgstr "Augšupielādēts"
+
+msgid "editor.issues.remove"
+msgstr "Noņemt"
+
+msgid "editor.issues.proofed"
+msgstr "Pārbaudīts"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Noņemt titullapas attēlu?"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"Vāka attēls, kuru pieprasījāt dzēst, neatbilst šī numura vāka attēlam. "
+"Lūdzu, ielādējiet lapu no jauna un mēģiniet vēlreiz."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+"Nederīgs sākumlapas attēla formāts. Pieņemamie formāti ir .gif, .jpg vai ."
+"png."
+
+msgid "editor.issues.styleFile"
+msgstr "Stilu lapas"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"Nederīgs stilu lapas formāts. Pārliecinieties, ka iesniegtais CSS fails ir "
+"ar pareizu sintaksi. (Ņemiet vērā, ka stilu lapas ar komentāriem sākumā var "
+"tikt noraidītas.)"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Noņemt stilu lapu?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Vāka virsraksts"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Izveidojiet šī izdevuma vāku ar šādiem elementiem."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Rādīt"
+
+msgid "editor.issues.openAccess"
+msgstr "Atvērtā piekļuve"
+
+msgid "editor.issues.subscription"
+msgstr "Abonēšana"
+
+msgid "editor.issues.identification"
+msgstr "Identifikācija"
+
+msgid "editor.issues.access"
+msgstr "Piekļuve"
+
+msgid "editor.issues.cover"
+msgstr "Vāks"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"Šajā izdevumā tiek izmantota pielāgota sadaļu kārtošana. <a href=\"{$url}\" "
+"class=\"action\">Atiestatīt noklusējuma iestatījumus</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Izdevuma dati"
+
+msgid "editor.issues.saveChanges"
+msgstr "Saglabāt satura rādītāja izmaiņas?"
+
+msgid "editor.issues.order"
+msgstr "Kārtošana"
+
+msgid "editor.issues.publicId"
+msgstr "Publiskais Id"
+
+msgid "editor.issues.publishIssue"
+msgstr "Publicēt izdevumu"
+
+msgid "editor.issues.preview"
+msgstr "Priekšskatījums"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Vai tiešām vēlaties publicēt jauno numuru?"
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"Publiskais identifikators '{$publicIdentifier}' jau eksistē citam objektam ("
+"izdevumam, rakstam, saliktnim vai datnei). Lūdzu, izvēlieties unikālus "
+"identifikatorus savā žurnālā."
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"Šis materiāls tiks arhivēts pēc tam, kad būs nosūtīts \"Paziņojums autoram\" "
+"vai nospiesta poga \"Izlaist e-pastu\"."
+
+msgid "editor.issues.yearRequired"
+msgstr "Gads ir obligāts, un tam jābūt pozitīvai skaitliskai vērtībai."
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Iespējot atlikto atvērto piekļuvi"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Pirms materiāla nosūtīšanas uz rediģēšanu izmantojiet saiti \"Paziņot "
+"autoram\", lai informētu autoru par lēmumu un izvēlētos nosūtāmo versiju."
+
+msgid "editor.issues.volumeRequired"
+msgstr "Sējuma numurs ir obligāts, un tam jābūt pozitīvai skaitliskai vērtībai."
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"Vāka attēls, kuru pieprasījāt dzēst, atbilst cita žurnāla numuram. Lūdzu, "
+"pārliecinieties, ka strādājat ar pareizo žurnālu, izmantojat pareizo "
+"izdevuma ID, un mēģiniet vēlreiz."
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"Visi raksti tiks atgriezti rediģēšanas rindā, un visi saistītie faili tiks "
+"neatgriezeniski dzēsti.  Vai esat pārliecināts, ka vēlaties noņemt šo "
+"izdevumu?"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Visi lasītāji ({$count} lietotāji)"
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"Vāka attēlu, kuru pieprasījāt dzēst, neizdevās atrast. Iespējams, tas jau ir "
+"izdzēsts. Mēģiniet atkārtoti ielādēt lapu."
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"Šajā žurnālā tiek izmantota pielāgota izdevumu kārtošana. <a href=\"{$url}\" "
+"class=\"action\">Atiestatīt noklusējuma iestatījumus</a>"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Visi iestāžu abonenti ({$count} lietotāji)"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+"Nosūtīt šo ziņojumu visiem lietotājiem, kas saistīti ar šo žurnālu ({$count} "
+"users)"
+
+msgid "editor.issues.default"
+msgstr "Noklusējuma"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"Nosūtīt šo ziņojumu lietotājiem, kas saistīti ar šo žurnālu un norādījuši, "
+"ka vēlas saņemt atjauninājumus ({$count} users)"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Atcelt izdevuma publicēšanu"
+
+msgid "editor.issues.previewIssue"
+msgstr "Izdevuma priekšskatījums"
