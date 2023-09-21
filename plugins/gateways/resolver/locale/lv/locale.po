@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-09-20 11:06+0000\n"
+"PO-Revision-Date: 2023-09-22 12:06+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/"
 "gateways-resolver/lv/>\n"
@@ -18,7 +18,7 @@ msgstr "Risinātāja spraudnis"
 
 msgid "plugins.gateways.resolver.description"
 msgstr ""
-"Šis spraudnis atrisina jautājumus un rakstus, pamatojoties uz citēšanas "
+"Šis spraudnis uzrāda laidienus un rakstus, pamatojoties uz citēšanas "
 "informāciju."
 
 msgid "plugins.gateways.resolver.errors.errorMessage"
