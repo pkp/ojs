@@ -2,7 +2,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-09-15 21:01+0000\n"
+"PO-Revision-Date: 2023-09-22 12:06+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/admin/lv/>\n"
 "Language: lv\n"
@@ -26,9 +26,8 @@ msgstr ""
 
 msgid "admin.languages.confirmDisable"
 msgstr ""
-"Vai esat pārliecināts, ka vēlaties atspējot šo lokalizāciju? Tas var "
-"ietekmēt visus izvietotos žurnālus, kuros pašlaik tiek izmantota šī "
-"lokalizācija."
+"Vai tiešām vēlaties atspējot šo lokalizāciju? Tas var ietekmēt visus "
+"izvietotos žurnālus, kuros pašlaik tiek izmantota šī lokalizācija."
 
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr "Šī būs vietnes un jebkuru izvietoto žurnālu noklusējuma valoda."
@@ -151,9 +150,9 @@ msgstr "Visi reģistrētie lietotāji"
 
 msgid "admin.mergeUsers.confirm"
 msgstr ""
-"Vai esat pārliecināts, ka atlasītos {$oldAccountCount} kontus vēlaties "
-"apvienot kontā ar lietotājvārdu \"{$newUsername}\"? Pēc tam izvēlētie "
-"{$oldAccountCount} konti vairs nepastāvēs. Šī darbība nav atgriezeniska."
+"Vai tiešām atlasītos {$oldAccountCount} kontus vēlaties apvienot kontā ar "
+"lietotājvārdu \"{$newUsername}\"? Pēc tam izvēlētie {$oldAccountCount} konti "
+"vairs nepastāvēs. Šī darbība nav atgriezeniska."
 
 msgid "admin.mergeUsers.noneEnrolled"
 msgstr "Nav reģistrēto lietotāju."
@@ -168,14 +167,14 @@ msgid "admin.scheduledTask.reviewReminder"
 msgstr "Recenzēšanas atgādinājums"
 
 msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
-msgstr "Izdevuma ID nav vesels skaitlis."
+msgstr "Laidiena ID nav vesels skaitlis."
 
 msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
-msgstr "Izdevuma saliktņa ID nav vesels skaitlis."
+msgstr "Laidiena saliktņa ID nav vesels skaitlis."
 
 msgid ""
 "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
-msgstr "Izdevuma ID nesakrīt ar saistīto ID."
+msgstr "Laidiena ID nesakrīt ar saistīto ID."
 
 msgid "admin.settings.enableBulkEmails.description"
 msgstr ""
