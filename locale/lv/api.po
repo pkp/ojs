@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-09-20 11:06+0000\n"
+"PO-Revision-Date: 2023-09-22 12:06+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/api/lv/>\n"
 "Language: lv\n"
@@ -22,7 +22,7 @@ msgid "api.submissions.400.wrongContext"
 msgstr "Jūsu pieprasītais materiāls nav iekļauts šajā žurnālā."
 
 msgid "api.submissions.403.unpublishedIssues"
-msgstr "Jums nav tiesību skatīt nepublicētus izdevumus."
+msgstr "Jums nav tiesību skatīt nepublicētus laidienus."
 
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Varat skatīt tikai tos žurnālus, kas ir iespējoti."
@@ -61,7 +61,7 @@ msgid "api.publications.403.submissionsDidNotMatch"
 msgstr "Jūsu pieprasītā publikācija nav iekļauta šajā iesniegtajā materiālā."
 
 msgid "api.submissionFiles.400.badRepresentationAssocType"
-msgstr "Jūs nevarat saistīt datni šajā etapā ar saliktni."
+msgstr "Jūs nevarat saistīt datni šajā posmā ar saliktni."
 
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Jūs nevarat mainīt žurnālu, kurā ir iesniegts materiāls."
