@@ -17,5 +17,4 @@
  *
  */
 
-// return new \APP\API\v1\users\UserHandler();
-return new \PKP\core\PKPApiRoutingHandler(new \PKP\API\v1\users\UserController());
+return new \PKP\core\PKPApiRoutingHandler(new \PKP\API\v1\users\PKPUserController());

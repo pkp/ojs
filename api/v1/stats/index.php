@@ -29,7 +29,6 @@ if (strpos($requestPath, '/stats/publications')) {
 } elseif (strpos($requestPath, '/stats/issues')) {
     return new \APP\API\v1\stats\issues\StatsIssueHandler();
 } elseif (strpos($requestPath, '/stats/contexts')) {
-    // return new \PKP\API\v1\stats\contexts\PKPStatsContextHandler(); FIXME#7698: will be removed once merged pkp/pkp-lib#7698
     return new \PKP\core\PKPApiRoutingHandler(new \PKP\API\v1\stats\contexts\PKPStatsContextController());
 } elseif (strpos($requestPath, '/stats/sushi')) {
     return new \APP\API\v1\stats\sushi\StatsSushiHandler();
