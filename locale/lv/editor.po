@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-09-20 11:06+0000\n"
+"PO-Revision-Date: 2023-09-22 12:06+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/editor/lv/>"
 "\n"
@@ -29,7 +29,7 @@ msgid "editor.publishing"
 msgstr "Publicēšana"
 
 msgid "editor.publishedIssues"
-msgstr "Publicētie izdevumi"
+msgstr "Publicētie laidieni"
 
 msgid "editor.allSections"
 msgstr "Visas sadaļas"
@@ -49,7 +49,7 @@ msgstr ""
 "dzēšanai, tiks neatgriezeniski dzēsti no sistēmas."
 
 msgid "editor.submissionReview.confirmDecision"
-msgstr "Vai esat pārliecināts, ka vēlaties ierakstīt šo lēmumu?"
+msgstr "Vai tiešām vēlaties ierakstīt šo lēmumu?"
 
 msgid "editor.notifyUsers"
 msgstr "Paziņot lietotājiem"
@@ -67,28 +67,28 @@ msgid "editor.usersNotified"
 msgstr "Informētie lietotāji"
 
 msgid "editor.notifyUsers.includeToc"
-msgstr "Pievienot satura rādītāju no šī izdevuma:"
+msgstr "Pievienot satura rādītāju no šī laidiena:"
 
 msgid "editor.editorAdministration"
 msgstr "Redaktora administrēšana"
 
 msgid "editor.issues.createIssue"
-msgstr "Izveidot izdevumu"
+msgstr "Izveidot laidienu"
 
 msgid "editor.issues.editIssue"
-msgstr "Izdevuma pārvaldība: {$issueIdentification}"
+msgstr "Laidiena pārvaldība: {$issueIdentification}"
 
 msgid "editor.issues.currentIssue"
-msgstr "Jaunākais numurs"
+msgstr "Kārtējais laidiens"
 
 msgid "editor.issues.numArticles"
 msgstr "Vienības"
 
 msgid "editor.issues.noArticles"
-msgstr "Šobrīd šajā numurā nav ieplānots neviens materiāls."
+msgstr "Šobrīd šajā laidienā nav ieplānots neviens materiāls."
 
 msgid "editor.issues.confirmDelete"
-msgstr "Vai tiešām vēlaties neatgriezeniski dzēst šo numuru?"
+msgstr "Vai tiešām vēlaties neatgriezeniski dzēst šo laidienu?"
 
 msgid "editor.issues.published"
 msgstr "Publicēts"
@@ -103,18 +103,18 @@ msgid "editor.issues.numberRequired"
 msgstr "Numurs ir obligāts, un tam jābūt pozitīvai skaitliskai vērtībai."
 
 msgid "editor.issues.titleRequired"
-msgstr "Izdevumam ir nepieciešams nosaukums."
+msgstr "Laidienam nepieciešams nosaukums."
 
 msgid "editor.issues.issueIdentificationRequired"
 msgstr ""
-"Nepieciešams identificēt izdevumu. Lūdzu, izvēlieties vismaz vienu no "
-"izdevuma identifikācijas iespējām."
+"Nepieciešams identificēt laidienu. Lūdzu, izvēlieties vismaz vienu no "
+"laidiena identifikācijas iespējām."
 
 msgid "editor.issues.issueIdentification"
-msgstr "Izdevuma identificēšana"
+msgstr "Laidiena identificēšana"
 
 msgid "editor.issues.publicIssueIdentifier"
-msgstr "Publiskais izdevuma identifikators"
+msgstr "Publiskais laidiena identifikators"
 
 msgid "editor.issues.description"
 msgstr "Apraksts"
@@ -145,7 +145,7 @@ msgstr "Noņemt titullapas attēlu?"
 
 msgid "editor.issues.removeCoverImageFileNameMismatch"
 msgstr ""
-"Vāka attēls, kuru pieprasījāt dzēst, neatbilst šī numura vāka attēlam. "
+"Vāka attēls, kuru pieprasījāt dzēst, neatbilst šī laidiena vāka attēlam. "
 "Lūdzu, ielādējiet lapu no jauna un mēģiniet vēlreiz."
 
 msgid "editor.issues.invalidCoverImageFormat"
@@ -169,7 +169,7 @@ msgid "editor.issues.coverPageCaption"
 msgstr "Vāka virsraksts"
 
 msgid "editor.issues.showCoverPage"
-msgstr "Izveidojiet šī izdevuma vāku ar šādiem elementiem."
+msgstr "Izveidojiet šī laidiena vāku ar šādiem elementiem."
 
 msgid "editor.issues.coverPageDisplay"
 msgstr "Rādīt"
@@ -191,11 +191,11 @@ msgstr "Vāks"
 
 msgid "editor.issues.resetSectionOrder"
 msgstr ""
-"Šajā izdevumā tiek izmantota pielāgota sadaļu kārtošana. <a href=\"{$url}\" "
+"Šajā laidienā tiek izmantota pielāgota sadaļu kārtošana. <a href=\"{$url}\" "
 "class=\"action\">Atiestatīt noklusējuma iestatījumus</a>"
 
 msgid "editor.issues.issueData"
-msgstr "Izdevuma dati"
+msgstr "Laidiena dati"
 
 msgid "editor.issues.saveChanges"
 msgstr "Saglabāt satura rādītāja izmaiņas?"
@@ -207,18 +207,18 @@ msgid "editor.issues.publicId"
 msgstr "Publiskais Id"
 
 msgid "editor.issues.publishIssue"
-msgstr "Publicēt izdevumu"
+msgstr "Publicēt laidienu"
 
 msgid "editor.issues.preview"
 msgstr "Priekšskatījums"
 
 msgid "editor.issues.confirmPublish"
-msgstr "Vai tiešām vēlaties publicēt jauno numuru?"
+msgstr "Vai tiešām vēlaties publicēt jauno laidienu?"
 
 msgid "editor.publicIdentificationExists"
 msgstr ""
 "Publiskais identifikators '{$publicIdentifier}' jau eksistē citam objektam ("
-"izdevumam, rakstam, saliktnim vai datnei). Lūdzu, izvēlieties unikālus "
+"laidienam, rakstam, saliktnim vai datnei). Lūdzu, izvēlieties unikālus "
 "identifikatorus savā žurnālā."
 
 msgid "editor.submissionReview.emailWillArchive"
@@ -242,15 +242,14 @@ msgstr "Sējuma numurs ir obligāts, un tam jābūt pozitīvai skaitliskai vērt
 
 msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
 msgstr ""
-"Vāka attēls, kuru pieprasījāt dzēst, atbilst cita žurnāla numuram. Lūdzu, "
+"Vāka attēls, kuru pieprasījāt dzēst, atbilst cita žurnāla laidienam. Lūdzu, "
 "pārliecinieties, ka strādājat ar pareizo žurnālu, izmantojat pareizo "
-"izdevuma ID, un mēģiniet vēlreiz."
+"laidiena ID, un mēģiniet vēlreiz."
 
 msgid "editor.issues.confirmIssueDelete"
 msgstr ""
-"Visi raksti tiks atgriezti rediģēšanas rindā, un visi saistītie faili tiks "
-"neatgriezeniski dzēsti.  Vai esat pārliecināts, ka vēlaties noņemt šo "
-"izdevumu?"
+"Visi raksti tiks atgriezti rediģēšanas rindā, un visas saistītās datnes tiks "
+"neatgriezeniski dzēstas. Vai tiešām vēlaties noņemt šo laidienu?"
 
 msgid "editor.notifyUsers.allReaders"
 msgstr "Visi lasītāji ({$count} lietotāji)"
@@ -262,7 +261,7 @@ msgstr ""
 
 msgid "editor.issues.resetIssueOrder"
 msgstr ""
-"Šajā žurnālā tiek izmantota pielāgota izdevumu kārtošana. <a href=\"{$url}\" "
+"Šajā žurnālā tiek izmantota pielāgota laidienu kārtošana. <a href=\"{$url}\" "
 "class=\"action\">Atiestatīt noklusējuma iestatījumus</a>"
 
 msgid "editor.notifyUsers.allInstitutionalSubscribers"
@@ -282,22 +281,22 @@ msgstr ""
 "ka vēlas saņemt atjauninājumus ({$count} lietotāji)"
 
 msgid "editor.issues.unpublishIssue"
-msgstr "Atcelt izdevuma publicēšanu"
+msgstr "Atcelt laidiena publicēšanu"
 
 msgid "editor.issues.previewIssue"
-msgstr "Izdevuma priekšskatījums"
+msgstr "Laidiena priekšskatījums"
 
 msgid "editor.issues.confirmUnpublish"
-msgstr "Vai tiešām vēlaties atcelt jau publicētā numura publicēšanu?"
+msgstr "Vai tiešām vēlaties atcelt jau publicētā laidiena publicēšanu?"
 
 msgid "editor.issues.confirmSetCurrentIssue"
-msgstr "Vai esat pārliecināts, ka vēlaties iestatīt šo izdevumu kā jaunāko?"
+msgstr "Vai tiešām vēlaties iestatīt šo laidienu kā jaunāko?"
 
 msgid "editor.issues.publicArticleIdExists"
 msgstr "Nav iespējams saglabāt raksta publisko id:"
 
 msgid "editor.issues.noLiveIssues"
-msgstr "Nav tiešraides izdevumu"
+msgstr "Nav tiešraides laidienu"
 
 msgid "editor.issues.open"
 msgstr "Atvērt"
@@ -306,49 +305,49 @@ msgid "editor.issues.pages"
 msgstr "Lappuses"
 
 msgid "editor.issues.galley"
-msgstr "Izdevuma saliktnis"
+msgstr "Laidiena saliktnis"
 
 msgid "editor.issues.viewingGalley"
-msgstr "Skatīt izdevuma saliktni"
+msgstr "Skatīt laidiena saliktni"
 
 msgid "editor.issues.noneIssueGalleys"
-msgstr "Nav publicēts neviens izdevuma saliktnis."
+msgstr "Nav publicēts neviens laidiena saliktnis."
 
 msgid "editor.issues.galleyLabelRequired"
-msgstr "Nepieciešams izdevuma saliktņa marķējums."
+msgstr "Nepieciešamas laidiena saliktņa iezīme."
 
 msgid "editor.issues.galleyPublicIdentificationExists"
-msgstr "Publiskā izdevuma saliktņa identifikācija jau pastāv."
+msgstr "Publiskā laidiena saliktņa identifikācija jau pastāv."
 
 msgid "editor.issues.backToIssueGalleys"
-msgstr "Atgriezties pie izdevuma saliktņiem"
+msgstr "Atgriezties pie laidiena saliktņiem"
 
 msgid "editor.issues.confirmDeleteGalley"
-msgstr "Vai tiešām vēlaties izdzēst šo izdevuma saliktni?"
+msgstr "Vai tiešām vēlaties izdzēst šo laidiena saliktni?"
 
 msgid "editor.issues.identifiers"
 msgstr "Identifikatori"
 
 msgid "editor.navigation.futureIssues"
-msgstr "Nākotnes izdevumi"
+msgstr "Nākotnes laidieni"
 
 msgid "grid.action.addGalley"
 msgstr "Pievienot saliktni"
 
 msgid "grid.action.publish"
-msgstr "Publicēt izdevumu"
+msgstr "Publicēt laidienu"
 
 msgid "grid.action.addIssue"
-msgstr "Izveidot izdevumu"
+msgstr "Izveidot laidienu"
 
 msgid "grid.action.viewIssue"
 msgstr "Skatīt"
 
 msgid "grid.action.addIssueGalley"
-msgstr "Izveidot izdevuma saliktni"
+msgstr "Izveidot laidiena saliktni"
 
 msgid "grid.action.setCurrentIssue"
-msgstr "Iestatīt jaunāko izdevumu"
+msgstr "Iestatīt jaunāko laidienu"
 
 msgid "editor.article.designateReviewVersion"
 msgstr "Noteikt oriģinālo datni kā versiju recenzēšanai"
@@ -407,7 +406,7 @@ msgstr ""
 "izdzēsts. Mēģiniet atkārtoti ielādēt lapu."
 
 msgid "grid.action.removeArticle"
-msgstr "Dzēst rakstu no izdevuma"
+msgstr "Dzēst rakstu no laidiena"
 
 msgid "editor.article.remove"
 msgstr "Noņemt"
@@ -416,7 +415,7 @@ msgid "editor.issues.invalidAccessDate"
 msgstr "Piekļuves datums nav derīgs."
 
 msgid "editor.issues.editIssueGalley"
-msgstr "Rediģēt izdevuma saliktni"
+msgstr "Rediģēt laidiena saliktni"
 
 msgid "editor.submission.selectGalleyFiles"
 msgstr "Atlasīt saliktņa datnes"
@@ -425,7 +424,7 @@ msgid "editor.article.coverImage"
 msgstr "Vāka attēls"
 
 msgid "editor.issues.galleys"
-msgstr "Izdevuma saliktņi"
+msgstr "Laidiena saliktņi"
 
 msgid "editor.article.scheduleForPublication.toBeAssigned"
 msgstr "Tiks piešķirts"
@@ -444,7 +443,7 @@ msgstr ""
 "tās varēs izvēlēties iekļaušanai."
 
 msgid "editor.issues.issueGalleysDescription"
-msgstr "Publicēt saliktņus ar pilnu numura saturu."
+msgstr "Publicēt saliktņus ar pilnu laidiena saturu."
 
 msgid "editor.article.payment.publicationFeeNotPaid"
 msgstr ""
@@ -459,8 +458,8 @@ msgstr ""
 
 msgid "editor.article.remove.confirm"
 msgstr ""
-"Vai esat pārliecināts, ka vēlaties noņemt šo rakstu no izdevuma? Raksts būs "
-"pieejams iekļaušanai citā numurā."
+"Vai tiešām vēlaties noņemt šo rakstu no laidiena? Raksts būs pieejams "
+"iekļaušanai citā laidienā."
 
 msgid "editor.submission.editorial.finalDraftDescription"
 msgstr ""
@@ -469,13 +468,13 @@ msgstr ""
 ">Teksta rediģēšana</span>."
 
 msgid "editor.issues.galleyLocaleRequired"
-msgstr "Nepieciešama izdevuma saliktņa lokalizācija."
+msgstr "Nepieciešama laidiena saliktņa lokalizācija."
 
 msgid "grid.action.previewIssue"
 msgstr "Priekšskatījums"
 
 msgid "editor.navigation.issueArchive"
-msgstr "Vecākie izdevumi"
+msgstr "Vecākie laidieni"
 
 msgid "editor.submissions.noSubmissions"
 msgstr "Nav iesniegtu materiālu"
@@ -484,4 +483,4 @@ msgid "editor.submissions.lastCompleted"
 msgstr "Pēdējais pabeigtais"
 
 msgid "issues.submissions.issueIds"
-msgstr "Piešķirts izdevumam"
+msgstr "Piešķirts laidienam"
