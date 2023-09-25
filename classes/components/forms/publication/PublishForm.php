@@ -62,9 +62,9 @@ class PublishForm extends FormComponent
                 $issue = Repo::issue()->get($publication->getData('issueId'));
                 if ($issue) {
                     if ($issue->getData('published')) {
-                        $msg = __('publication.publish.confirmation.backIssue', ['issue' => $issue->getIssueIdentification()]);
+                        $msg = __('publication.publish.confirmation.backIssue', ['issue' => htmlspecialchars($issue->getIssueIdentification())]);
                     } else {
-                        $msg = __('publication.publish.confirmation.futureIssue', ['issue' => $issue->getIssueIdentification()]);
+                        $msg = __('publication.publish.confirmation.futureIssue', ['issue' => htmlspecialchars($issue->getIssueIdentification())]);
                         $submitLabel = __('editor.submission.schedulePublication');
                     }
                 }

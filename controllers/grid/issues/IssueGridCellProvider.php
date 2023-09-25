@@ -62,7 +62,7 @@ class IssueGridCellProvider extends GridCellProvider
                         'modal_edit',
                         true
                     ),
-                    htmlspecialchars($issue->getIssueIdentification())
+                    $issue->getIssueIdentification()
                 )
             ];
         }

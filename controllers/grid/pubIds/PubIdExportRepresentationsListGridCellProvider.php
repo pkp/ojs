@@ -99,7 +99,7 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
                             $dispatcher->url($request, PKPApplication::ROUTE_COMPONENT, null, 'grid.issues.BackIssueGridHandler', 'editIssue', null, ['issueId' => $issue->getId()]),
                             __('plugins.importexport.common.settings.DOIPluginSettings')
                         ),
-                        htmlspecialchars($issue->getIssueIdentification()),
+                        $issue->getIssueIdentification(),
                         null
                     )
                 ];
