@@ -219,7 +219,7 @@
 										class="pkpStats__itemLink"
 										target="_blank"
 									>
-										<span class="pkpStats__itemTitle" v-html="row.issue.identification"></span>
+										<span class="pkpStats__itemTitle">{{ row.issue.identification }}</span>
 									</a>
 								</template>
 							</table-cell>
