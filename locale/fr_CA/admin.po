@@ -257,3 +257,6 @@ msgstr ""
 "activez l'API publique, chaque revue pourra remplacer ce paramètre pour "
 "rendre ses statistiques privées. Cependant, si vous désactivez l'API "
 "publique, les revues ne pourront pas rendre leur propre API publique."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Utiliser le site comme la plateforme pour toutes les revues."

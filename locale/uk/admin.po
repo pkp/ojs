@@ -247,3 +247,6 @@ msgstr ""
 #~ msgid "admin.contexts.confirmDelete"
 #~ msgstr ""
 #~ "Ви впевнені, що бажаєте назавжди видалити цей журнал і весь його зміст?"
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Використовувати вебсайт як платформу для всіх журналів."

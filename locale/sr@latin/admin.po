@@ -195,3 +195,6 @@ msgstr ""
 #~ msgid "admin.contexts.confirmDelete"
 #~ msgstr ""
 #~ "Da li ste sigurni da želite trajno obrisati ovaj časopis i njeov sadržaj?"
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr ""

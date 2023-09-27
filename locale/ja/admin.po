@@ -233,3 +233,6 @@ msgstr ""
 
 #~ msgid "admin.settings.appearance.success"
 #~ msgstr "外観設定が正常に変更されました。"
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr ""

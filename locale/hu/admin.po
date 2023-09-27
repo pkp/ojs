@@ -324,3 +324,6 @@ msgstr ""
 #~ "\">Automatikusan hozzáadásra kerül ehhez a folyóirathoz, mint folyóirat "
 #~ "menedzser. Miután létrehoz egy új folyóiratot, átkerül annak beállítási "
 #~ "oldalára, hogy befejezze a folyóirat beállításait."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr ""

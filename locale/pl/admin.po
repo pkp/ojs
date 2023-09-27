@@ -269,3 +269,6 @@ msgstr ""
 
 #~ msgid "admin.settings.appearance.success"
 #~ msgstr "Ustawienia wyglądu strony zostały pomyślnie zaktualizowane."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Użyj witryny jako platformy dla wszystkich czasopism."

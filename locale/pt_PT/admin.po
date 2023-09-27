@@ -248,3 +248,6 @@ msgstr ""
 #~ msgid "admin.contexts.confirmDelete"
 #~ msgstr ""
 #~ "Deseja realmente eliminar permanentemente esta revista e o seu conteúdo?"
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Use o site como plataforma para todas as revistas."

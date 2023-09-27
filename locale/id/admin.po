@@ -256,3 +256,6 @@ msgstr ""
 #~ "\t\thasil pencarian. Silakan pilih salah satu jenis metrik sebagai "
 #~ "bawaan.\n"
 #~ "\t"
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr ""

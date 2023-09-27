@@ -256,3 +256,6 @@ msgstr ""
 
 #~ msgid "admin.settings.appearance.success"
 #~ msgstr "Nastavení vzhledu webu byla úspěšně aktualizována."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Použijte tento web jako platformu pro všechny časopisy."

@@ -254,3 +254,6 @@ msgstr ""
 #~ "Verrai automaticamente inserito come manager di questa rivista. Dopo aver "
 #~ "creato una nuova rivista sarai ridiretto ail setup wizard, per completare "
 #~ "il setup iniziale."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Indica il sito come piattaforma per tutte le riviste."

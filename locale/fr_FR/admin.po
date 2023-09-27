@@ -298,3 +298,7 @@ msgstr ""
 
 #~ msgid "admin.categories.nameRequired"
 #~ msgstr "Un nom de catégorie est requis."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr ""
+"Utiliser ce site comme plateforme pour toutes les revues, tous les éditeurs "

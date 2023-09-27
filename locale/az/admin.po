@@ -238,3 +238,6 @@ msgstr ""
 "etmək və ya etməmək. İctimai API-ni aktivləşdirsəniz, hər bir jurnal öz "
 "statistikasını şəxsi etmək üçün bu parametri ləğv edə bilər. Bununla belə, "
 "ictimai API-ni söndürsəniz, jurnallar öz API-lərini ictimai edə bilməzlər."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Saytı bütün jurnallar üçün platforma kimi istifadə edin."

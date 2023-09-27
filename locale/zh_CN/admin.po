@@ -197,3 +197,6 @@ msgstr ""
 
 #~ msgid "admin.contexts.confirmDelete"
 #~ msgstr "您确定要永久删除此期刊和其所有内容?"
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr ""

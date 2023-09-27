@@ -242,3 +242,6 @@ msgstr ""
 
 #~ msgid "admin.settings.info.success"
 #~ msgstr "Thông tin trang web đã được cập nhật thành công."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr ""

@@ -240,3 +240,6 @@ msgstr ""
 "julkaisuissa. Jos otat julkisen API:n käyttöön, kukin julkaisu voi ohittaa "
 "tämän asetuksen tehdäkseen tilastonsa yksityisiksi. Jos kuitenkin poistat "
 "julkisen API:n käytöstä, julkaisut eivät voi tehdä omasta API:sta julkista."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Käytä sivustoa kaikkien julkaisukanavien alustana."

@@ -279,3 +279,6 @@ msgstr ""
 #~ "\t\tՈրոնման արդյունքները. Խնդրում ենք որպես կանխադրված ընտրել կազմաձևված "
 #~ "չափորոշիչներից մեկը:\n"
 #~ "\t"
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Օգտագործեք կայքը որպես հարթակ բոլոր ամսագրերի համար:"

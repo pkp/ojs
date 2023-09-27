@@ -254,3 +254,6 @@ msgstr ""
 
 #~ msgid "admin.contexts.form.create.success"
 #~ msgstr "{$name} har skapats."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Använd siten som plattform för alla tidskrifter."

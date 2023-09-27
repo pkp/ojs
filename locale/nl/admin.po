@@ -207,3 +207,6 @@ msgstr ""
 
 #~ msgid "admin.settings.info.success"
 #~ msgstr "De website-informatie is bijgewerkt."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr ""

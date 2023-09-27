@@ -173,3 +173,6 @@ msgstr ""
 
 msgid "admin.settings.statistics.sushi.public.description"
 msgstr ""
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr ""

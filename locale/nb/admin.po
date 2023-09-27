@@ -277,3 +277,6 @@ msgstr ""
 
 #~ msgid "admin.settings.info.success"
 #~ msgstr "Nettstedsinformasjonen er oppdatert."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Bruk nettsiden som plattform for alle tidsskrifter."
