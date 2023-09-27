@@ -1,80 +1,98 @@
-# Ieva Tiltina <pastala@gmail.com>, 2022.
+# Ieva Tiltina <pastala@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2023-09-14 19:02+0000\n"
+"Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
+"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/lv/>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
+"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.default.name"
-msgstr ""
+msgstr "Noklusējuma tēma"
 
 msgid "plugins.themes.default.description"
-msgstr ""
+msgstr "Šī tēma izmanto noklusējuma tēmu."
 
 msgid "plugins.themes.default.option.typography.label"
-msgstr ""
+msgstr "Burtveidoli"
 
 msgid "plugins.themes.default.option.typography.description"
-msgstr ""
+msgstr "Izvēlieties šim žurnālam piemērotu šriftu kombināciju."
 
 msgid "plugins.themes.default.option.typography.notoSans"
 msgstr ""
+"Noto Sans: Google izstrādāts digitālais natīvais šrifts, kas nodrošina plašu "
+"valodu atbalstu."
 
 msgid "plugins.themes.default.option.typography.notoSerif"
-msgstr ""
+msgstr "Noto Serif: Google izstrādātā digitālā natīvā fonta serifa variants."
 
 msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
 msgstr ""
+"Noto Serif/Noto Sans: Papildinošs salikums ar serifa virsrakstiem un "
+"bezserifa pamattekstu."
 
 msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
 msgstr ""
+"Noto Sans/Noto Serif: papildinošs salikums ar bezserifa virsrakstiem un "
+"serifa pamattekstu."
 
 msgid "plugins.themes.default.option.typography.lato"
-msgstr ""
+msgstr "Lato: populārs mūsdienīgs bezserifa šrifts."
 
 msgid "plugins.themes.default.option.typography.lora"
 msgstr ""
+"Lora: Serifa šrifts ar plašu rakstzīmju virkni, piemērots lasīšanai "
+"tiešsaistē."
 
 msgid "plugins.themes.default.option.typography.lora_openSans"
 msgstr ""
+"Lora/Open Sans: papildinošs salikums ar serifa virsrakstiem un bezserifa "
+"pamattekstu."
 
 msgid "plugins.themes.default.option.colour.label"
-msgstr ""
+msgstr "Krāsa"
 
 msgid "plugins.themes.default.option.colour.description"
-msgstr ""
+msgstr "Izvēlēties galvenes krāsu."
 
 msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
-msgstr ""
+msgstr "Rādīt žurnāla kopsavilkumu sākumlapā."
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
-msgstr ""
+msgstr "Galvenes fona attēls"
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
 msgstr ""
+"Augšupielādēto sākumlapas attēlu rādīt galvenes fonā, nevis parastajā vietā "
+"sākumlapā."
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
-msgstr ""
+msgstr "Rādīt sākumlapas attēlu kā galvenes fonu."
 
 msgid "plugins.themes.default.option.displayStats.label"
-msgstr ""
+msgstr "Lietošanas statistikas attēlošanas opcijas"
 
 msgid "plugins.themes.default.option.displayStats.none"
-msgstr ""
+msgstr "Nerādīt lasītājam iesniegšanas statistikas diagrammu."
 
 msgid "plugins.themes.default.option.displayStats.bar"
-msgstr ""
+msgstr "Izmantot stabiņu diagrammu, lai parādītu lietošanas statistiku."
 
 msgid "plugins.themes.default.option.displayStats.line"
-msgstr ""
+msgstr "Izmantot līniju diagrammu, lai parādītu lietošanas statistiku."
 
 msgid "plugins.themes.default.displayStats.monthInitials"
-msgstr ""
+msgstr "janv. febr. marts apr. maijs jūn. jūl. aug. sept. okt. nov. dec."
 
 msgid "plugins.themes.default.displayStats.downloads"
-msgstr ""
+msgstr "Lejupielādes"
 
 msgid "plugins.themes.default.displayStats.noStats"
-msgstr ""
+msgstr "Lejupielādes dati vēl nav pieejami."
