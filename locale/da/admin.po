@@ -240,3 +240,6 @@ msgstr ""
 "ethvert tidsskrift tilsidesætte denne indstilling for at gøre deres "
 "statistik privat. Men hvis du deaktiverer den offentlige API, kan udgivere "
 "ikke gøre deres egen API offentlig."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Brug hjemmesiden som platform til alle tidsskrifterne."

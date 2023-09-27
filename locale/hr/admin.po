@@ -233,3 +233,6 @@ msgstr ""
 
 #~ msgid "admin.settings.config.success"
 #~ msgstr "Postavke konfiguracije časopisa uspješno su spremljene."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Koristite stranicu kao platformu za sve časopise."

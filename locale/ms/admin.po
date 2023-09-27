@@ -242,3 +242,6 @@ msgstr ""
 "jurnal boleh mengatasi tetapan ini untuk menjadikan statistik mereka "
 "peribadi. Walau bagaimanapun, jika anda melumpuhkan API awam, jurnal tidak "
 "boleh menjadikan API mereka sendiri awam."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr ""

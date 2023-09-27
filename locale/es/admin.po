@@ -257,3 +257,7 @@ msgstr ""
 #~ msgstr ""
 #~ "¿Está seguro/a de que desea eliminar esta revista y todos sus contenidos "
 #~ "de forma permanente?"
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr ""
+"Usar este sitio como plataforma para todas las revistas/editoriales/"

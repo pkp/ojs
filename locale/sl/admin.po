@@ -292,3 +292,6 @@ msgstr ""
 #~ "vrstni red najbolj branih člankov ali vrstni red iskalnih rezultatof. "
 #~ "Prosimo izberite eno od konfiguriranih metrik kot privzeto.\n"
 #~ "\t"
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Uporabi strežnik kot platformo za vse revije."

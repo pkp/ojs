@@ -235,3 +235,6 @@ msgstr ""
 "žurnāliem šajā vietnē. Ja iespējota API publiskošana, katrs žurnāls var "
 "mainīt šo iestatījumu, lai padarītu savu statistiku privātu. Tomēr, ja "
 "publisko API atspējo, žurnāli nevar padarīt savu API publiski pieejamu."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr ""

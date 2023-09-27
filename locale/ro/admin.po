@@ -270,3 +270,6 @@ msgstr ""
 
 #~ msgid "admin.settings.appearance.success"
 #~ msgstr "Setările pentru aspectul site-ului au fost actualizate cu succes."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr ""

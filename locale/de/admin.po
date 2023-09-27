@@ -255,3 +255,6 @@ msgstr ""
 "ihre Statistiken privat zu machen. Wenn Sie jedoch die öffentliche API "
 "deaktivieren, können die Zeitschriften ihre eigene API nicht öffentlich "
 "machen."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Website als Plattform für alle Zeitschriften verwenden."

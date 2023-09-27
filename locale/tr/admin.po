@@ -241,3 +241,6 @@ msgstr ""
 "istatistiklerini gizli yapmak için bu ayarı geçersiz kılabilir. Ancak, genel "
 "API'yi devre dışı bırakırsanız, dergiler kendi API'lerini herkese açık hale "
 "getiremez."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr ""
