@@ -1,0 +1,79 @@
+# Kamdin Parsakia <kamdinparsakia@iranmehr.ac.ir>, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-09-05 01:17+0000\n"
+"Last-Translator: Kamdin Parsakia <kamdinparsakia@iranmehr.ac.ir>\n"
+"Language-Team: Persian <http://translate.pkp.sfu.ca/projects/ojs/api/fa/>\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "api.submissions.400.wrongContext"
+msgstr "مقاله ارسالی درخواستی شما در این مجله وجود ندارد."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "نمی‌توانید مجله مقاله ارسالی را تغییر دهید."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "شما اجازه مشاهده شماره‌های منتشر نشده را ندارید."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "شما اجازه مشاهده این مجله را ندارید."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "شما نمی‌توانید این مجله را از این طریق ویرایش کنید."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "شما اجازه ویرایش این مجله را ندارید."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "شما اجازه حذف کردن این مجله را ندارید."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "مجله درخواستی یافت نشد."
+
+msgid "api.dois.403.contextsNotMatched"
+msgstr "شناسه DOI درخواستی به این مجله تعلق ندارد."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "هیچ نمایندگی DOI برای این مجله تعیین نشده است."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"برخی آیتم‌ها با موفقیت ذخیره نشدند. لطفاً هر یک از موارد را با توجه به پیام‌"
+"های خطای مربوط به آن بررسی کنید."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "شما اجاره انتقال این قالب ایمیل به مجله دیگری را ندارید."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "نحوه پرداخت انتخاب شده پشتیبانی نمی‌شود."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "مقاله درخواستی به این مجله تعلق ندارد."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "مورد درخواستی به این مقاله ارسالی تعلق ندارد."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "شما نمی‌توانید فایلی از این مرحله را با یک نمایه چاپی مرتبط کنید."
+
+msgid "api.submission.400.inactiveSection"
+msgstr "این بخش دیگر مقاله دریافت نمی‌کند."
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "اطلاعیه درخواستی متعلق به این مجله نیست."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"شما تنها از طریق درخواست به دارنده وبسایت یا مجله می‌توانید این مجله را "
+"مشاهده یا ویرایش نمایید."
+
+msgid "api.emails.403.disabled"
+msgstr "امکان اطلاع رسانی از طریق ایمیل برای این مجله فعال نشده است."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "شما تنها می‌توانید مجلات فعال را مشاهده کنید."

@@ -1,0 +1,28 @@
+# Ieva Tiltina <pastala@gmail.com>, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-09-19 08:43+0000\n"
+"Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
+"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-subscriptions/lv/>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
+"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.reports.subscriptions.displayName"
+msgstr "Pārskats par abonementiem"
+
+msgid "plugins.reports.subscriptions.description"
+msgstr ""
+"Šis spraudnis īsteno pārskatu CSV fomātā, kas satur abonementu sarakstu un "
+"informāciju par tiem."
+
+msgid "plugins.reports.subscriptions.institutionMailingAddress"
+msgstr "Iestādes pasta adrese"
+
+msgid "plugins.reports.subscriptions.ipRanges"
+msgstr "IP diapazoni"

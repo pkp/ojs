@@ -1,11 +1,11 @@
-# Ieva Tiltina <pastala@gmail.com>, 2022.
+# Ieva Tiltina <pastala@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-11-14 08:02+0000\n"
+"PO-Revision-Date: 2023-09-22 12:06+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
-"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
-"lv_LV/>\n"
-"Language: lv_LV\n"
+"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/lv/>"
+"\n"
+"Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,12 +19,11 @@ msgstr "Piekļuve"
 msgid "manager.distribution.copyrightYearBasis.description"
 msgstr ""
 "Izvēlieties, kā rakstam tiek atlasīts noklusējuma autortiesību datums. Šo "
-"noklusējumu var ignorēt katrā gadījumā atsevišķi. Ja publicējat, "
-"nebāzējoties izdevuma numurā (\"publish as you go\"), neizmantojiet izdevuma "
-"publicēšanas datumu."
+"noklusējumu iespējams ignorēt katrā gadījumā atsevišķi. Ja publicējat ārpus "
+"laidiena (\"publish as you go\"), neizmantojiet laidiena publicēšanas datumu."
 
 msgid "manager.distribution.copyrightYearBasis.issue"
-msgstr "Izmantojiet numura publicēšanas datumu"
+msgstr "Izmantojiet laidiena publicēšanas datumu"
 
 msgid "manager.distribution.copyrightYearBasis.submission"
 msgstr "Izmantojiet raksta publicēšanas datumu"
@@ -56,11 +55,11 @@ msgstr ""
 
 msgid "doi.manager.settings.doiSuffixLegacy"
 msgstr ""
-"Izmantot noklusējuma šablonus.<br />%j.v%vi%i numuriem<br />%j.v%vi%i.%a "
+"Izmantot noklusējuma šablonus.<br />%j.v%vi%i laidieniem<br />%j.v%vi%i.%a "
 "rakstiem<br />%j.v%vi%i.%a.g%g saliktņiem."
 
 msgid "doi.manager.settings.doiCreationTime.copyedit"
-msgstr "Teksta rediģēšanas posmā"
+msgstr "Pēc literārās rediģēšanas posma sasniegšanas"
 
 msgid "manager.website.archiving"
 msgstr "Arhivēšana"
@@ -174,7 +173,7 @@ msgstr ""
 "abonementus pārvalda žurnāla (abonementu) pārvaldnieks."
 
 msgid "subscriptionManager.subscription.confirmRemove"
-msgstr "Vai esat pārliecināts, ka vēlaties dzēst šo abonementu?"
+msgstr "Vai tiešām vēlaties dzēst šo abonementu?"
 
 msgid "manager.payment.options.enablePayments"
 msgstr ""
@@ -194,7 +193,7 @@ msgid "manager.payment.options.membershipFee"
 msgstr "Dalība asociācijā"
 
 msgid "manager.payment.options.onlypdf"
-msgstr "Numuru un rakstu PDF versijām tikai ierobežota piekļuve"
+msgstr "Laidienu un rakstu PDF versijām tikai ierobežota piekļuve"
 
 msgid "manager.payment.options.publicationFee"
 msgstr "Rakstu apstrādes maksa"
@@ -203,7 +202,7 @@ msgid "manager.payment.options.purchaseArticleFee"
 msgstr "Iegādāties rakstu"
 
 msgid "manager.payment.options.purchaseIssueFee"
-msgstr "Iegādāties žurnāla numuru"
+msgstr "Iegādāties laidienu"
 
 msgid "manager.payment.options.text"
 msgstr "Maksājuma veida apraksts"
@@ -315,8 +314,8 @@ msgstr ""
 "automātiski piešķirti Sadaļas redaktoram. (Citādi Sadaļas redaktorus var "
 "piešķirt manuāli pēc manuskripta saņemšanas.) Sadaļas redaktoram pēc "
 "pievienošanas var automātiski piešķirt iespēju pārraudzīt šajā sadaļā "
-"iesniegto darbu RECENZĒŠANU (zinātnisko recenzēšana) un/vai REDIĢĒŠANU "
-"(teksta liteārā rediģēšana, maketēšana un korektūra). Sadaļas redaktorus "
+"iesniegto darbu RECENZĒŠANU (zinātnisko recenzēšana) un/vai REDIĢĒŠANU ("
+"teksta literārā rediģēšana, maketēšana un korektūra). Sadaļas redaktorus "
 "izveido, žurnāla pārvaldības sadaļā Roles (Lomas) noklikšķinot uz Section "
 "Editors (Sadaļas redaktori)."
 
@@ -328,7 +327,7 @@ msgstr "Sadaļas redaktori"
 
 msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
-"Vismaz vienai sadaļai jābūt aktīvai. Apmeklējiet darba plūsmas iestatījumus, "
+"Vismaz vienai sadaļai jābūt aktīvai. Apmeklējiet darbplūsmas iestatījumus, "
 "lai atspējotu visus iesniegumus šim žurnālam."
 
 msgid "manager.sections.form.abbrevRequired"
@@ -346,10 +345,10 @@ msgid "manager.sections.form.titleRequired"
 msgstr "Sadaļai ir nepieciešams nosaukums."
 
 msgid "manager.sections.hideTocAuthor"
-msgstr "Neiekļaut autoru vārdus no izdevumu satura rādītājiem sadaļu vienībās."
+msgstr "Neiekļaut sadaļu vienībās autoru vārdus no laidienu satura rādītājiem."
 
 msgid "manager.sections.hideTocTitle"
-msgstr "Neiekļaut šīs sadaļas virsrakstu izdevumu satura rādītājos."
+msgstr "Neiekļaut laidienu satura rādītājos šīs sadaļas virsrakstu."
 
 msgid "manager.sections.identifyType"
 msgstr "Identificēt šajā sadaļā publicētos elementus kā a(n)"
@@ -487,7 +486,7 @@ msgstr ""
 "žurnāla publicēšanas vēsturi saistītos elementos."
 
 msgid "manager.setup.currentIssue"
-msgstr "Jaunākais numurs"
+msgstr "Kārtējais laidiens"
 
 msgid "manager.setup.customizingTheLook"
 msgstr "5. solis. Izskata pielāgošana"
@@ -520,7 +519,7 @@ msgid "manager.setup.disciplineProvideExamples"
 msgstr "Sniedziet šim žurnālam atbilstošu akadēmisko nozaru piemērus"
 
 msgid "manager.setup.displayCurrentIssue"
-msgstr "Pievienojiet jaunākā numura satura rādītāju (ja iespējams)."
+msgstr "Pievienojiet jaunākā laidiena satura rādītāju (ja iespējams)."
 
 msgid "manager.setup.editorDecision"
 msgstr "Redaktora lēmums"
@@ -653,12 +652,12 @@ msgid "manager.setup.information.forReaders"
 msgstr "Lasītājiem"
 
 msgid "manager.setup.initialIssue"
-msgstr "Pirmreizējs izdevums"
+msgstr "Sākotnējais laidiens"
 
 msgid "manager.setup.initialIssueDescription"
 msgstr ""
-"Atkarībā no izvēlētā formāta norādiet OJS publicējamā pirmā izdevuma numuru, "
-"sējumu un/vai gadu:"
+"Atkarībā no izvēlētā formāta norādiet OJS publicējamā pirmā izdevuma "
+"laidienu, sējumu un/vai gadu:"
 
 msgid "manager.setup.institution"
 msgstr "Institūcija"
@@ -704,8 +703,8 @@ msgid "manager.setup.journalHomepageContentDescription"
 msgstr ""
 "Pēc noklusējuma mājaslapu veido navigācijas saites. Papildu sākumlapas "
 "saturu var pievienot, izmantojot vienu vai visas turpmāk norādītās opcijas, "
-"kas tiks parādītas norādītajā secībā. Ņemiet vērā, ka pašreizējais izdevums "
-"vienmēr ir pieejams, izmantojot saiti Current (Jaunākais) navigācijas joslā."
+"kas tiks parādītas norādītajā secībā. Ņemiet vērā, ka kārtējais laidiens "
+"vienmēr ir pieejams, izmantojot saiti Current (Kārtējais) navigācijas joslā."
 
 msgid "manager.setup.journalHomepageHeader"
 msgstr "Žurnāla mājaslapas galvene"
@@ -784,7 +783,7 @@ msgstr ""
 "redaktorus un citus redakcijas komandas locekļus."
 
 msgid "manager.setup.labelName"
-msgstr "Marķējuma vārds"
+msgstr "Iezīmes vārds"
 
 msgid "manager.setup.lists"
 msgstr "Saraksti"
@@ -879,7 +878,7 @@ msgstr ""
 "un korektūra."
 
 msgid "manager.setup.managementOfBasicEditorialSteps"
-msgstr "Pamata redakcijas posmu pārvaldība"
+msgstr "Pamata redakcijas soļu pārvaldība"
 
 msgid "manager.setup.managingPublishingSetup"
 msgstr "Pārvaldības un publicēšanas iestatīšana"
@@ -900,7 +899,7 @@ msgstr ""
 
 msgid "manager.setup.navItemIsLiteral"
 msgstr ""
-"Marķējuma vērtība ir burtiska virkne (piemēram, \"Journal Setup\"), nevis "
+"Iezīmes vērtība ir burtiska virkne (piemēram, \"Journal Setup\"), nevis "
 "lokalizācijas ziņojuma atslēga (piemēram, \"manager.setup\")"
 
 msgid "manager.setup.noImageFileUploaded"
@@ -956,11 +955,11 @@ msgstr "Publicēšanas grafiks"
 
 msgid "manager.setup.publicationScheduleDescription"
 msgstr ""
-"Žurnāla materiālus var publicēt kopīgi, kā daļu no izdevuma ar savu satura "
-"rādītāju. Var arī publicēt atsevišķus materiālus, tiklīdz tie ir gatavi, "
-"pievienojot tos \"pašreizējā\" sējuma satura rādītājam. Sadaļā Par žurnālu "
-"sniedziet lasītājiem paziņojumu par sistēmu, ko izmantos šis žurnāls, un "
-"paredzamo publicēšanas biežumu."
+"Žurnāla materiālus var publicēt kopīgi, kā daļu no laidiena ar atsevišķu "
+"satura rādītāju. Var arī publicēt atsevišķus materiālus, tiklīdz tie ir "
+"gatavi, pievienojot tos \"pašreizējā\" sējuma satura rādītājam. Sadaļā \"Par "
+"žurnālu\" sniedziet lasītājiem paziņojumu par sistēmu, ko izmantos šis "
+"žurnāls, un paredzamo publicēšanas biežumu."
 
 msgid "manager.setup.publicationScheduling"
 msgstr "Publikāciju plānošana"
@@ -1111,7 +1110,7 @@ msgstr ""
 
 msgid "manager.setup.disableSubmissions.notAccepting"
 msgstr ""
-"Šis žurnāls pašlaik nepieņem manuskriptus. Apmeklējiet darba plūsmas "
+"Šis žurnāls pašlaik nepieņem manuskriptus. Apmeklējiet darbplūsmas "
 "iestatījumus, lai atļautu manuskriptu iesniegšanu."
 
 msgid "manager.setup.enableOai"
@@ -1140,7 +1139,7 @@ msgstr "Unikālais identifikators"
 
 msgid "manager.setup.uniqueIdentifierDescription"
 msgstr ""
-"Rakstus un izdevumus var marķēt ar identifikācijas numuru vai virkni, "
+"Rakstus un laidienus var marķēt ar identifikācijas numuru vai virkni, "
 "izmantojot reģistrācijas sistēmu, piemēram, digitālo objektu identifikatoru "
 "sistēmu (DOI)."
 
@@ -1201,7 +1200,7 @@ msgstr ""
 "joprojām tiek apstrādāti."
 
 msgid "manager.statistics.statistics.numIssues"
-msgstr "Publicētie numuri"
+msgstr "Publicētie laidieni"
 
 msgid "manager.statistics.statistics.numSubmissions"
 msgstr "Kopējais iesniegto darbu skaits"
@@ -1244,7 +1243,7 @@ msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
 msgstr "Žurnāla galvenās lapas skatījumi"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
-msgstr "Izdevuma satura lapas skatījumi"
+msgstr "Laidiena satura lapas skatījumi"
 
 msgid "manager.subscriptionPolicies"
 msgstr "Abonēšanas noteikumi"
@@ -1353,7 +1352,7 @@ msgstr ""
 msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
 msgstr ""
 "Reģistrētiem lasītājiem būs iespēja saņemt satura rādītāju pa e-pastu, kad "
-"izdevums būs publicēts atvērtā piekļuvē."
+"laidiens būs publicēts atvērtā piekļuvē."
 
 msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
 msgstr ""
@@ -1677,7 +1676,7 @@ msgstr "Atlasiet lietotāju"
 msgid "manager.subscriptions.selectSubscriber.desc"
 msgstr ""
 "Abonēšanas piekļuves tiesības automātiski tiek piešķirtas žurnāla "
-"pārvaldniekiem, redaktoriem, sadaļu redaktoriem, maketētājiem, teksta "
+"pārvaldniekiem, redaktoriem, sadaļu redaktoriem, maketētājiem, literārajiem "
 "redaktoriem un korektoriem."
 
 msgid "manager.subscriptions.select"
@@ -1704,7 +1703,7 @@ msgstr "Abonēšanas veidi"
 msgid "manager.subscriptionTypes.confirmDelete"
 msgstr ""
 "Brīdinājums! Visi abonementi ar šo abonēšanas veidu arī tiks dzēsti. Vai "
-"esat pārliecināts, ka vēlaties turpināt un dzēst šo abonēšanas veidu?"
+"tiešām vēlaties turpināt un dzēst šo abonēšanas veidu?"
 
 msgid "manager.subscriptionTypes.cost"
 msgstr "Izmaksas"
@@ -1900,16 +1899,15 @@ msgstr ""
 "kā \"public-as-you-go\" gadījumā."
 
 msgid "manager.setup.copyrightYearBasis.issue"
-msgstr ""
-"Izdevums: noklusējuma gads tiks skaitīts no izdevuma publicēšanas datuma."
+msgstr "Laidiens: noklusējuma gads tiks ņemts no izdevuma publicēšanas datuma."
 
 msgid "manager.setup.resetPermissions"
 msgstr "Atiestatīt raksta tiesības"
 
 msgid "manager.setup.resetPermissions.confirm"
 msgstr ""
-"Vai esat pārliecināts, ka vēlaties atiestatīt visu rakstu tiesību datus? Šo "
-"darbību nevar atcelt."
+"Vai tiešām vēlaties atiestatīt visu rakstu tiesību datus? Šo darbību nevar "
+"atcelt."
 
 msgid "manager.setup.resetPermissions.description"
 msgstr ""
@@ -1948,7 +1946,7 @@ msgid "plugins.importexport.common.export.articles"
 msgstr "Raksti"
 
 msgid "plugins.importexport.common.export.issues"
-msgstr "Numuri"
+msgstr "Laidieni"
 
 msgid "plugins.importexport.common.export.representations"
 msgstr "Saliktņi"
@@ -1980,7 +1978,7 @@ msgstr ""
 "netiks šifrēta."
 
 msgid "plugins.importexport.common.filter.issue"
-msgstr "Jebkurš izdevums"
+msgstr "Jebkurš laidiens"
 
 msgid "plugins.importexport.common.status.any"
 msgstr "Jebkurš statuss"
@@ -2069,40 +2067,40 @@ msgid "stats.context.downloadReport.downloadContext"
 msgstr "Lejupielādēt žurnālu"
 
 msgid "stats.issueStats"
-msgstr "Izdevuma statistika"
+msgstr "Laidiena statistika"
 
 msgid "stats.issues.details"
 msgstr "Skatījumi un lejupielādes"
 
 msgid "stats.issues.searchIssueDescription"
-msgstr "Meklēt izdevuma nosaukumu, sējumu un numuru"
+msgstr "Meklēt laidiena nosaukumu, sējumu un numuru"
 
 msgid "stats.issues.none"
 msgstr ""
-"Netika konstatētas problēmas ar lietošanas statistiku, kas atbilstu šiem "
-"parametriem."
+"Netika atrasta laidienu, kas atbilstu šiem parametriem, lietošanas "
+"statistika."
 
 msgid "stats.issues.downloadReport.description"
 msgstr ""
 "Lejupielādējiet CSV/Excel izklājlapu ar izmantošanas statistiku par "
-"jautājumiem, kas atbilst šādiem parametriem."
+"laidieniem, kas atbilst šādiem parametriem."
 
 msgid "stats.issues.downloadReport.downloadIssues.description"
-msgstr "Katra numura TOC skatījumu un izdevuma saliktņa lejupielādes skaits."
+msgstr "Katra laidiena TOC skatījumu un laidiena saliktņa lejupielādes skaits."
 
 msgid "stats.issues.downloadReport.downloadIssues"
-msgstr "Lejupielādēt izdevumus"
+msgstr "Lejupielādēt laidienus"
 
 msgid "stats.issues.countOfTotal"
-msgstr "{$count} no {$total} izdevumiem"
+msgstr "{$count} no {$total} laidieniem"
 
 msgid "stats.issues.tooltip.label"
-msgstr "Par izdevuma statistiku"
+msgstr "Par laidiena statistiku"
 
 msgid "stats.issues.tooltip.text"
 msgstr ""
-"<strong>Skatījumi</strong>: Apmeklētāju skaits, kas skatījuši izdevuma "
-"satura rādītāju.<br><strong>lejupielādes</strong>: Izdevuma saliktņa "
+"<strong>Skatījumi</strong>: Apmeklētāju skaits, kas skatījuši laidiena "
+"satura rādītāju.<br><strong>lejupielādes</strong>: Laidiena saliktņa "
 "lejupielādes skaits, ja tāds ir."
 
 msgid "stats.publicationStats"
@@ -2154,13 +2152,13 @@ msgstr ""
 "kontaktpersonu <a href=\"{$url}\">žurnāla iestatījumos</a>."
 
 msgid "plugins.importexport.native.export.issues.results"
-msgstr "Izdevumu eksporta rezultāti"
+msgstr "Laidienu eksporta rezultāti"
 
 msgid "plugins.importexport.issue.cli.display"
 msgstr "\"{$issueId}\" – \"{$issueIdentification}\""
 
 msgid "plugins.importexport.issueGalleys.exportFailed"
-msgstr "Procesam neizdevās parsēt izdevuma saliktņus"
+msgstr "Procesam neizdevās parsēt laidiena saliktņus"
 
 msgid "emailTemplate.variable.context.contextName"
 msgstr "Žurnāla nosaukums"
@@ -2171,9 +2169,8 @@ msgstr "Žurnāla mājaslapas URL"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Žurnāla galvenās kontaktpersonas vārds un uzvārds"
 
-#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr "žurnāla iniciāļi"
+msgstr "Žurnāla abreviatūra"
 
 msgid "emailTemplate.variable.context.contextSignature"
 msgstr "Žurnāla e-pasta paraksts automātiskajiem e-pastiem"
@@ -2182,7 +2179,7 @@ msgid "emailTemplate.variable.context.contactEmail"
 msgstr "Žurnāla galvenās kontaktpersonas e-pasta adrese"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "Žurnāla pasta adrese"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Maksājuma veida nosaukums"
@@ -2214,36 +2211,34 @@ msgstr "Kopsavilkums par abonementa veidu, nosaukumu, ilgumu un izmaksām"
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Informācija par abonenta dalību"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr "Iestādes nosaukums"
+msgstr "Abonējošās iestādes nosaukums"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr "Iestādes pasta adrese"
+msgstr "Abonējošās iestādes pasta adrese"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
-msgstr "Domēns"
+msgstr "Šī abonementa derīgās(-o) IP adreses(-u) domēna vārds"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "IP diapazoni abonēšanas autentificēšanai"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "URL uz vietni, kurā autors var veikt maksājumu"
 
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "Iesniegšanas vadlīniju URL adrese"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "Saite uz publicēto rakstu statistikas lapu"
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "Laidiena ID"
 
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
+"Šis e-pasts katru mēnesi tiek automātiski nosūtīts redaktoriem un žurnālu "
+"pārvaldniekiem, lai sniegtu pārskatu par sistēmas stāvokli."
 
 msgid "mailable.validateEmailContext.name"
 msgstr "E-pasta apstiprināšana (žurnāla reģistrācija)"
@@ -2259,7 +2254,7 @@ msgstr "DOI"
 msgid "doi.description"
 msgstr ""
 "Šis spraudnis OJS sistēmā ļauj piešķirt digitālo objektu identifikatorus "
-"žurnālu numuriem, rakstiem un saliktņiem."
+"žurnālu laidieniem, rakstiem un saliktņiem."
 
 msgid "doi.readerDisplayName"
 msgstr "DOI"
@@ -2292,20 +2287,20 @@ msgid "doi.manager.settings.doiSuffixPattern"
 msgstr ""
 "Ievadiet pielāgotu sufiksa formu katram publikācijas veidam. Pielāgotā "
 "sufiksa veidnē var izmantot šādus simbolus, lai ģenerētu sufiksu:<br><br> "
-"<code>%j</code> Žurnāla iniciāļi<br> <code>%v</code> Izdevuma sējums<br> "
-"<code>%i</code> Izdevuma numurs<br> <code>%Y</code> Izdevuma gads<br> <code>"
-"%a</code> Raksta ID<br> <code>%g</code> Saliktņa ID<br> <code>%f</code> "
-"Datnes ID<br> <code>%p</code>Lapas numurs<br> <code>%x</code> Pielāgots "
-"identifikators<br><br> Jāievēro, ka pielāgotie sufiksu modeļi bieži rada "
-"problēmas ar DOI ģenerēšanu un deponēšanu. Ja izmantojat pielāgotu sufiksa "
-"modeli, rūpīgi pārbaudiet, vai redaktori var ģenerēt DOI un deponēt tos "
-"reģistrācijas aģentūrā, piemēram, Crossref. "
+"<code>%j</code> Žurnāla iniciāļi<br> <code>%v</code> Laidiena sējums<br> "
+"<code>%i</code> Laidiena numurs<br> <code>%Y</code> Laidiena gads<br> "
+"<code>%a</code> Raksta ID<br> <code>%g</code> Saliktņa ID<br> <code>%f</"
+"code> Datnes ID<br> <code>%p</code>Lapas numurs<br> <code>%x</code> "
+"Pielāgots identifikators<br><br> Jāievēro, ka pielāgotie sufiksu modeļi "
+"bieži rada problēmas ar DOI ģenerēšanu un deponēšanu. Ja izmantojat "
+"pielāgotu sufiksa modeli, rūpīgi pārbaudiet, vai redaktori var ģenerēt DOI "
+"un deponēt tos reģistrācijas aģentūrā, piemēram, Crossref. "
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
 msgstr "Piemēram, vol%viss%ipp%p izveidos tādu DOI kā 10.1234/vol3iss2pp230"
 
 msgid "doi.manager.settings.doiSuffixPattern.issues"
-msgstr "izdevumiem"
+msgstr "laidieniem"
 
 msgid "doi.manager.settings.doiSuffixPattern.submissions"
 msgstr "rakstiem"
@@ -2314,7 +2309,7 @@ msgid "doi.manager.settings.doiSuffixPattern.representations"
 msgstr "saliktņiem"
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
-msgstr "Lūdzu, ievadiet DOI sufiksa modeli izdevumiem."
+msgstr "Lūdzu, ievadiet DOI sufiksa modeli laidieniem."
 
 msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
 msgstr "Lūdzu, ievadiet DOI sufiksa modeli rakstiem."
@@ -2332,7 +2327,7 @@ msgstr ""
 "un jaunie iestatījumi stātos spēkā esošajiem objektiem."
 
 msgid "doi.manager.settings.doiReassign.confirm"
-msgstr "Vai esat pārliecināts, ka vēlaties dzēst visus esošos DOI?"
+msgstr "Vai tiešām vēlaties dzēst visus esošos DOI?"
 
 msgid "doi.manager.settings.doiAssignJournalWide"
 msgstr "Piešķirt DOI"
@@ -2347,8 +2342,8 @@ msgstr ""
 
 msgid "doi.manager.settings.doiAssignJournalWide.confirm"
 msgstr ""
-"Vai esat pārliecināts, ka vēlaties piešķirt DOI visiem publicētajiem "
-"objektiem, kuriem nav piešķirts DOI?"
+"Vai tiešām vēlaties piešķirt DOI visiem publicētajiem objektiem, kuriem nav "
+"piešķirts DOI?"
 
 msgid "doi.manager.settings.registrationAgency"
 msgstr "Reģistrācijas aģentūra"
@@ -2371,7 +2366,7 @@ msgid "doi.editor.doi.assignDoi"
 msgstr "Piešķirt"
 
 msgid "doi.editor.doiObjectTypeIssue"
-msgstr "izdevums"
+msgstr "laidiens"
 
 msgid "doi.editor.doiObjectTypeSubmission"
 msgstr "raksts"
@@ -2383,12 +2378,12 @@ msgid "doi.editor.customSuffixMissing"
 msgstr "DOI nevar piešķirt, jo trūkst pielāgotā sufiksa."
 
 msgid "doi.editor.missingIssue"
-msgstr "Jūs nevarat ģenerēt DOI, kamēr šī publikācija nav piešķirta izdevumam."
+msgstr "Jūs nevarat ģenerēt DOI, kamēr šī publikācija nav piešķirta laidienam."
 
 msgid "doi.editor.missingParts"
 msgstr ""
 "Jūs nevarat ģenerēt DOI, jo vienā vai vairākās DOI modeļa daļās trūkst datu. "
-"Iespējams, jums būs jāpiešķir publikācija izdevumam, jānosaka izdevēja ID "
+"Iespējams, jums būs jāpiešķir publikācija laidienam, jānosaka izdevēja ID "
 "vai jāievada lappušu numuri."
 
 msgid "doi.editor.patternNotResolved"
@@ -2411,18 +2406,18 @@ msgid "doi.editor.clearObjectsDoi"
 msgstr "Notīrīt"
 
 msgid "doi.editor.clearObjectsDoi.confirm"
-msgstr "Vai esat pārliecināts, ka vēlaties dzēst esošo DOI?"
+msgstr "Vai tiešām vēlaties dzēst esošo DOI?"
 
 msgid "doi.editor.clearIssueObjectsDoi"
-msgstr "Notīrīt izdevuma objektu DOI"
+msgstr "Notīrīt laidiena objektu DOI"
 
 msgid "doi.editor.clearIssueObjectsDoi.confirm"
-msgstr "Vai esat pārliecināts, ka vēlaties dzēst esošos izdevuma objektu DOI?"
+msgstr "Vai tiešām vēlaties dzēst esošos laidiena objektu DOI?"
 
 msgid "doi.editor.clearIssueObjectsDoi.description"
 msgstr ""
 "Izmantojiet šādu opciju, lai dzēstu DOI visiem objektiem (rakstiem un "
-"saliktņiem), kas pašlaik plānoti šim izdevumam."
+"saliktņiem), kas pašlaik plānoti šim laidienam."
 
 msgid "doi.editor.assignDoi"
 msgstr "Piešķirt DOI {$pubId} šim {$pubObjectType}"
@@ -2469,13 +2464,13 @@ msgid "api.issue.403.canEditPublishedDoi"
 msgstr "Pēc publikācijas publicēšanas var rediģēt tikai DOI"
 
 msgid "api.issue.404.issuesNotFound"
-msgstr "Jūsu pieprasītie izdevumi netika atrasti"
+msgstr "Jūsu pieprasītie laidieni netika atrasti"
 
 msgid "doi.manager.submissionDois"
 msgstr "Rakstu DOI"
 
 msgid "doi.manager.issueDois"
-msgstr "Izdevumu DOI"
+msgstr "Laidienu DOI"
 
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr ""
@@ -2555,36 +2550,42 @@ msgstr "Paziņojums par atvērto piekļuvi"
 msgid "mailable.openAccessNotify.description"
 msgstr ""
 "Šis e-pasts tiek nosūtīts reģistrētiem lasītājiem, kuri ir pieprasījuši "
-"saņemt paziņojumu e-pastu, kad izdevums kļūst brīvpieejams."
+"saņemt paziņojumu e-pastu, kad laidiens nonāk atvērtā piekļuvē."
 
 msgid "mailable.issuePublishNotify.name"
-msgstr "Paziņojums par izdevuma publicēšanu"
+msgstr "Paziņojums par laidiena publicēšanu"
 
 msgid "mailable.issuePublishNotify.description"
 msgstr ""
 "Šis e-pasts tiek automātiski nosūtīts reģistrētajiem lietotājiem, kad tiek "
-"publicēts jauns izdevums."
+"publicēts jauns laidiens."
 
 msgid "manager.manageEmails.description"
-msgstr ""
+msgstr "No šī žurnāla nosūtīto e-pasta ziņojumu rediģēšana."
 
 msgid "mailable.layoutComplete.name"
-msgstr ""
+msgstr "Saliktņi gatavi"
 
 msgid "mailable.publicationVersionNotify.name"
-msgstr ""
+msgstr "Izveidota jauna versija"
 
 msgid "mailable.publicationVersionNotify.description"
 msgstr ""
+"Šis e-pasta ziņojums automātiski informē piešķirtos redaktorus par jaunas "
+"iesniegtā materiāla versijas izveidošanu."
 
 msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
+"Šis e-pasts tiek nosūtīts žurnālu pārvaldniekiem, kad ir iesniegts jauns "
+"iesniegtais materiāls un tam nav piešķirti redaktori."
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "Maksājuma pieprasījums"
 
 msgid "mailable.paymentRequest.description"
 msgstr ""
+"Šis automātiskais e-pasts tiek nosūtīts autoram, lai pieprasītu samaksāt "
+"publicēšanas maksu pēc iesniegtā darba pieņemšanas."
 
 #~ msgid "manager.setup.submissionPreparationChecklistDescription"
 #~ msgstr ""
@@ -2597,3 +2598,16 @@ msgstr ""
 
 #~ msgid "manager.setup.submissionPreparationChecklist"
 #~ msgstr "Kontrolsaraksts iesniedzamā materiāla sagatavošanai"
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "Laidiena saliktni nav iespējams importēt, trūkst datnes."
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"Laidiena {$id} vāka attēlu nav iespējams eksportēt, nav atrodama datne ceļā "
+"\"{$path}\"."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"Laidiena saliktni {$id} nav iespējams eksportēt, nav atrodama datne ceļā \""
+"{$path}\"."

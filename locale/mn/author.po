@@ -1,15 +1,16 @@
+# Gantulga <cybermon@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-25 10:19+0000\n"
+"PO-Revision-Date: 2023-08-25 17:18+0000\n"
 "Last-Translator: Gantulga <cybermon@gmail.com>\n"
-"Language-Team: Mongolian <http://translate.pkp.sfu.ca/projects/ojs/author/"
-"mn_MN/>\n"
-"Language: mn_MN\n"
+"Language-Team: Mongolian <http://translate.pkp.sfu.ca/projects/ojs/author/mn/"
+">\n"
+"Language: mn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "author.submit"
 msgstr "Шинэ бүтээл илгээх"
@@ -35,37 +36,37 @@ msgid "author.submit.startHereLink"
 msgstr ""
 
 msgid "author.submit.step1"
-msgstr ""
+msgstr "Алхам 1. Бүтээл оруулах эхлэх"
 
 msgid "author.submit.step2"
-msgstr ""
+msgstr "Алхам 2. Бүтээлийн файл оруулах"
 
 msgid "author.submit.step3"
-msgstr ""
+msgstr "Алхам 3. Бүтээлийн метадата оруулах"
 
 msgid "author.submit.step4"
-msgstr ""
+msgstr "Алхам 4. Нэмэлт файлуудыг оруулах"
 
 msgid "author.submit.step4a"
-msgstr ""
+msgstr "Алхам 4а. Нэмэлт файл оруулах"
 
 msgid "author.submit.step5"
-msgstr ""
+msgstr "Адхам 5. Оруулсан бүтээлийг баталгаажуулах"
 
 msgid "author.submit.start"
-msgstr ""
+msgstr "Эхлэх"
 
 msgid "author.submit.upload"
-msgstr ""
+msgstr "Илгээх файл оруулах"
 
 msgid "author.submit.metadata"
-msgstr ""
+msgstr "Метадата оруулах"
 
 msgid "author.submit.supplementaryFiles"
-msgstr ""
+msgstr "Нэмэлт файлуудыг оруулах"
 
 msgid "author.submit.nextSteps"
-msgstr ""
+msgstr "Дараагийн алхамууд"
 
 msgid "author.submit.notAccepting"
 msgstr ""
@@ -140,10 +141,10 @@ msgid "author.submit.selectPrincipalContact"
 msgstr ""
 
 msgid "author.submit.addAuthor"
-msgstr ""
+msgstr "Зохиогч нэмэх"
 
 msgid "author.submit.deleteAuthor"
-msgstr ""
+msgstr "Зохиогч устгах"
 
 msgid "author.submit.submissionIndexingDescription"
 msgstr ""

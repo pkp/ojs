@@ -1,84 +1,94 @@
+# Kamdin Parsakia <kamdinparsakia@iranmehr.ac.ir>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:18+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:18+00:00\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: \n"
+"PO-Revision-Date: 2023-09-08 21:58+0000\n"
+"Last-Translator: Kamdin Parsakia <kamdinparsakia@iranmehr.ac.ir>\n"
+"Language-Team: Persian <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/fa/>\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "plugins.themes.default.name"
-msgstr "پوشته پیش‌فرض"
+msgstr "پوسته پیش‌فرض"
 
 msgid "plugins.themes.default.description"
-msgstr "پوسته پیش‌فرض"
+msgstr "اعمال قالب پیش‌فرض."
 
 msgid "plugins.themes.default.option.typography.label"
 msgstr "فونت سایت"
 
 msgid "plugins.themes.default.option.typography.description"
-msgstr "انتخاب فونت برای مجله"
+msgstr "ترکیب فونت مناسبی برای مجله خود انتخاب نمایید."
 
 msgid "plugins.themes.default.option.typography.notoSans"
-msgstr "notoSans"
+msgstr "Noto Sans"
 
 msgid "plugins.themes.default.option.typography.notoSerif"
-msgstr "notoSerif"
+msgstr "Noto Serif"
 
 msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
-msgstr "notoSerif_notoSans"
+msgstr ""
+"Noto Serif/Noto Sans: اعمال فونت serif برای تیترها و فونت sans-serif برای "
+"متن."
 
 msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
-msgstr "notoSans_notoSerif"
+msgstr ""
+"Noto Serif/Noto Sans: اعمال فونت sans-serif برای تیترها و فونت sans برای متن."
 
 msgid "plugins.themes.default.option.typography.lato"
-msgstr "lato"
+msgstr "Lato"
 
 msgid "plugins.themes.default.option.typography.lora"
-msgstr "lora"
+msgstr "Lora"
 
 msgid "plugins.themes.default.option.typography.lora_openSans"
-msgstr "lora_openSans"
+msgstr ""
+"Lora/Open Sans: اعمال فونت serif برای تیترها و فونت sans-serif برای متن."
 
 msgid "plugins.themes.default.option.colour.label"
 msgstr "رنگ"
 
 msgid "plugins.themes.default.option.colour.description"
-msgstr "انتخاب یک رنگ برای فضای بالای سایت"
+msgstr "انتخاب یک رنگ برای فضای بالای سایت (هدر)"
 
 msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
-msgstr ""
+msgstr "نمایش توضیحات خلاصه مجله در صفحه اصلی."
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
-msgstr ""
+msgstr "تصویر پس‌زمینه هدر"
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
 msgstr ""
+"اگر تصویری برای صفحه اصلی آپلود شده است، آن را به جای جایگاه اصلی‌اش در صفحه "
+"خانگی، در پس‌زمینه هدر نمایش بده."
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
-msgstr ""
+msgstr "نمایش تصویر صفحه اصلی به عنوان پس‌زمینه هدر."
 
 msgid "plugins.themes.default.option.displayStats.label"
-msgstr ""
+msgstr "گزینه‌های نمایش آمار استفاده"
 
 msgid "plugins.themes.default.option.displayStats.none"
-msgstr ""
+msgstr "عدم نمایش نمودار آمار استفاده مقالات ارسالی برای خواننده."
 
 msgid "plugins.themes.default.option.displayStats.bar"
-msgstr ""
+msgstr "استفاده از نمودار مستطیلی برای نمایش آمار استفاده."
 
 msgid "plugins.themes.default.option.displayStats.line"
-msgstr ""
+msgstr "استفاده از نمودار خطی برای نمایش آمار استفاده."
 
 msgid "plugins.themes.default.displayStats.monthInitials"
-msgstr ""
+msgstr "دی بهمن اسفند فروردین اردیبهشت خرداد تیر مرداد شهریور مهر آبان آذر"
 
 msgid "plugins.themes.default.displayStats.downloads"
-msgstr ""
+msgstr "دانلودها"
 
 msgid "plugins.themes.default.displayStats.noStats"
-msgstr ""
+msgstr "دسترسی به دانلود اطلاعات مقدور نیست."
