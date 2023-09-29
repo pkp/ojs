@@ -6,6 +6,8 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * Section form under journal management.
+ *
+ * @hook Templates::Manager::Sections::SectionForm::AdditionalMetadata [[sectionId], $templateMgr, $output]
  *}
 
 <script type="text/javascript">

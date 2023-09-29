@@ -6,6 +6,8 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * Form for creation and modification of an issue
+ *
+ * @hook Templates::Editor::Issues::IssueData::AdditionalMetadata []
  *}
 
 {help file="issue-management" section="edit-issue-data" class="pkp_help_tab"}
