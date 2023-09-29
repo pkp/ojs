@@ -6,6 +6,8 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * Display the workflow tab structure.
+ *
+ * @hook Template::Workflow::Publication []
  *}
 {extends file="layouts/backend.tpl"}
 

@@ -15,6 +15,8 @@
  * @uses $hideGalleys bool Hide the article galleys for this article?
  * @uses $primaryGenreIds array List of file genre ids for primary file types
  * @uses $heading string HTML heading element, default: h2
+ *
+ * @hook Templates::Issue::Issue::Article []
  *}
 {assign var=publication value=$article->getCurrentPublication()}
 

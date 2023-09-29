@@ -6,6 +6,8 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @brief OJS-specific tabs for the distribution settings page
+ *
+ * @hook Template::Settings::distribution::archiving []
  *}
 
 <tab id="access" label="{translate key="manager.distribution.access"}">

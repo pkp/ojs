@@ -64,6 +64,10 @@
  * @uses $licenseUrl string URL to license. Only assigned if license should be
  *   included with published submissions.
  * @uses $ccLicenseBadge string An image and text with details about the license
+ *
+ * @hook Templates::Article::Main []
+ * @hook Templates::Article::Details::Reference []
+ * @hook Templates::Article::Details []
  *}
  {if !$heading}
  	{assign var="heading" value="h3"}
