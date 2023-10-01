@@ -116,8 +116,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
         // If no search plug-in is activated then fall back to the default database search implementation.
         $parser = SearchFileParser::fromFile($submissionFile);
         if (!$parser) {
-            error_log("Skipped indexation: No suitable parser for the submission file \"{$submissionFile->getData('path')}\"");
-            return;
+            throw new Exception("Skipped indexation: No suitable parser for the submission file \"{$submissionFile->getData('path')}\"");
         }
         try {
             $parser->open();
@@ -134,7 +133,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
                 $parser->close();
             }
         } catch (Throwable $e) {
-            error_log(new Exception("Indexation failed for the file: \"{$submissionFile->getData('path')}\"", 0, $e));
+            throw new Exception("Indexation failed for the file: \"{$submissionFile->getData('path')}\"", 0, $e);
         }
     }
 
@@ -177,8 +176,13 @@ class ArticleSearchIndex extends SubmissionSearchIndex
                 ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_PROOF])
                 ->getMany();
 
+            $exceptions = [];
             foreach ($submissionFiles as $submissionFile) {
-                $this->submissionFileChanged($article->getId(), SubmissionSearch::SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile);
+                try {
+                    $this->submissionFileChanged($article->getId(), SubmissionSearch::SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile);
+                } catch (Throwable $e) {
+                    $exceptions[] = $e;
+                }
                 $dependentFiles = Repo::submissionFile()->getCollector()
                     ->filterByAssoc(
                         PKPApplication::ASSOC_TYPE_SUBMISSION_FILE,
@@ -190,12 +194,16 @@ class ArticleSearchIndex extends SubmissionSearchIndex
                     ->getMany();
 
                 foreach ($dependentFiles as $dependentFile) {
-                    $this->submissionFileChanged(
-                        $article->getId(),
-                        SubmissionSearch::SUBMISSION_SEARCH_SUPPLEMENTARY_FILE,
-                        $dependentFile
-                    );
+                    try {
+                        $this->submissionFileChanged($article->getId(), SubmissionSearch::SUBMISSION_SEARCH_SUPPLEMENTARY_FILE, $dependentFile);
+                    } catch (Throwable $e) {
+                        $exceptions[] = $e;
+                    }
                 }
+            }
+            if (count($exceptions)) {
+                $errorMessage = implode("\n\n", $exceptions);
+                throw new Exception("The following errors happened while indexing the submission ID {$article->getId()}:\n{$errorMessage}");
             }
         }
     }
