@@ -35,13 +35,13 @@
 			</badge>
 			{include file="workflow/submissionIdentification.tpl"}
 		</h1>
-		<template slot="actions">
+		<template #actions>
 			<pkp-button
 				v-if="submission.status === getConstant('STATUS_PUBLISHED')"
 				element="a"
 				:href="submission.urlPublished"
 			>
-				{{ __('common.view') }}
+				{{ t('common.view') }}
 			</pkp-button>
 			<pkp-button
 				v-else-if="submission.status !== getConstant('STATUS_PUBLISHED') && submission.stageId >= getConstant('WORKFLOW_STAGE_ID_EDITING')"
@@ -93,18 +93,22 @@
 
 			{* Modal to select one of the revision decisions *}
 			<modal
-				:close-label="__('common.close')"
+				:close-label="t('common.close')"
 				name="selectRevisionDecision"
 				title="Revisions"
+				:open="isModalOpenedSelectRevisionDecision"
+				@close="isModalOpenedSelectRevisionDecision = false"
 			>
 				<pkp-form v-bind="components.{$smarty.const.FORM_SELECT_REVISION_DECISION}" @set="set" @success="goToRevisionDecision" />
 			</modal>
 
 			{* Modal to select one of the revision recommendations *}
 			<modal
-				:close-label="__('common.close')"
+				:close-label="t('common.close')"
 				name="selectRevisionRecommendation"
 				title="Revisions"
+				:open="isModalOpenedSelectRevisionRecommendation"
+				@close="isModalOpenedSelectRevisionRecommendation = false"
 			>
 				<pkp-form v-bind="components.{$smarty.const.FORM_SELECT_REVISION_RECOMMENDATION}" @set="set" @success="goToRevisionDecision" />
 			</modal>
@@ -147,7 +151,7 @@
 							</dropdown>
 						</span>
 						{if $canPublish}
-							<template slot="actions">
+							<template #actions>
 								<pkp-button
 									v-if="workingPublication.status !== getConstant('STATUS_PUBLISHED') && submission.stageId >= getConstant('WORKFLOW_STAGE_ID_EDITING')"
 									element="a"

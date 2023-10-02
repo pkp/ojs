@@ -1,104 +1,69 @@
-{
+{  
   "name": "OJS3",
   "description": "Open Journal Systems (OJS) is a journal management and publishing system that has been developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research.",
   "version": "3.5.0",
   "author": "Public Knowledge Project",
   "private": true,
   "scripts": {
-    "dev": "vue-cli-service build --no-clean --watch",
-    "build": "vue-cli-service build --no-clean",
-    "lint": "vue-cli-service lint js/load.js lib/pkp/js/load.js lib/pkp/js/usage-stats-chart.js lib/pkp/js/classes/VueRegistry.js",
-    "fix": "vue-cli-service lint js/load.js lib/pkp/js/load.js lib/pkp/js/usage-stats-chart.js lib/pkp/js/classes/VueRegistry.js && php lib/pkp/lib/vendor/bin/php-cs-fixer fix --config .php-cs-fixer.php --allow-risky=yes"
+    "dev": "vite build --watch --mode development",
+    "build": "vite build",
+    "lint": "eslint --fix ./js/load.js ./lib/pkp/js/load.js ./lib/pkp/js/usage-stats-chart.js ./lib/pkp/js/classes/VueRegistry.js",
+    "format": "prettier --write ./js/load.js ./lib/pkp/js/load.js ./lib/pkp/js/usage-stats-chart.js ./lib/pkp/js/classes/VueRegistry.js",
+    "php-fix": "php lib/pkp/lib/vendor/bin/php-cs-fixer fix --config .php-cs-fixer.php --allow-risky=yes",
+    "prepare": "husky install"
   },
   "dependencies": {
-    "@tinymce/tinymce-vue": "^3",
-    "chart.js": "^2.9.4",
+    "@headlessui/vue": "^1.7.16",
+    "@lk77/vue3-color": "^3.0.6",
+    "@tinymce/tinymce-vue": "^5.1.1",
+    "@vue-a11y/announcer": "^3.1.5",
+    "chart.js": "^4.3.3",
     "clone-deep": "^4.0.1",
     "debounce": "^1.2.0",
-    "element-resize-event": "^3.0.3",
-    "moment": "^2.29.2",
-    "tinymce": "^5.10.0",
-    "v-tooltip": "^2.0.3",
-    "vue": "^2.6.12",
-    "vue-announcer": "^1.0.6",
-    "vue-autosuggest": "^2.2.0",
-    "vue-chartjs": "^3.5.1",
-    "vue-color": "^2.7.1",
-    "vue-js-modal": "^1.3.35",
-    "vue-scrollto": "^2.20.0",
-    "vue2-dropzone": "^3.6.0",
-    "vuedraggable": "^2.24.3"
+    "dropzone-vue3": "^1.0.2",
+    "element-resize-event": "^3.0.6",
+    "floating-vue": "^2.0.0-beta.24",
+    "moment": "^2.29.4",
+    "tiny-emitter": "^2.1.0",
+    "tinymce": "^5.10.7",
+    "uuid": "^9.0.0",
+    "vue": "^3.3.4",
+    "vue-chartjs": "^5.2.0",
+    "vue-draggable-plus": "^0.2.4",
+    "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
-    "@babel/eslint-parser": "^7.12.16",
-    "@vue/cli-plugin-babel": "^5.0.0",
-    "@vue/cli-plugin-eslint": "^5.0.0",
-    "@vue/cli-service": "^5.0.0",
-    "@vue/eslint-config-prettier": "^7.0.0",
+    "@rushstack/eslint-patch": "^1.3.3",
+    "@vitejs/plugin-vue": "^4.3.4",
+    "@vue/eslint-config-prettier": "^8.0.0",
+    "autoprefixer": "^10.4.14",
     "cypress": "^12.17.1",
     "cypress-failed-log": "^2.7.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-wait-until": "^1.7.1",
-    "eslint": "^7.32.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "^8.0.3",
+    "eslint": "^8.48.0",
+    "eslint-plugin-vue": "^9.17.0",
     "google-closure-compiler-java": "^20200719.0.0",
-    "husky": "^4.3.8",
-    "less": "^4.0.0",
-    "less-loader": "^8.0.0",
-    "lint-staged": "^11.0.1",
-    "vue-template-compiler": "^2.6.14"
+    "husky": "^8.0.3",
+    "less": "^4.2.0",
+    "lint-staged": "^14.0.1",
+    "postcss": "^8.4.27",
+    "prettier": "^3.0.2",
+    "rollup-plugin-copy": "^3.4.0",
+    "tailwindcss": "^3.3.3"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "@vue/prettier"
-    ],
-    "globals": {
-      "$": true,
-      "pkp": true
-    },
-    "rules": {
-      "prettier/prettier": [
-        "warn",
-        {
-          "bracketSpacing": false,
-          "singleQuote": true,
-          "useTabs": true,
-          "htmlWhitespaceSensitivity": "ignore"
-        }
-      ],
-      "no-unused-vars": [
-        "error",
-        {
-          "args": "none"
-        }
-      ],
-      "vue/multi-word-component-names": "off"
-    },
-    "parserOptions": {
-      "parser": "@babel/eslint-parser"
-    }
+  "prettier": {
+    "$schema": "https://json.schemastore.org/prettierrc",
+    "bracketSpacing": false,
+    "singleQuote": true,
+    "useTabs": true,
+    "htmlWhitespaceSensitivity": "ignore",
+    "proseWrap": "never"
   },
   "postcss": {
     "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "ie >= 10"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+      "autoprefixer": {},
+      "tailwindcss": {}
     }
   },
   "lint-staged": {

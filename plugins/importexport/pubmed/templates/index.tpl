@@ -41,7 +41,7 @@
 						@set="set"
 					>
 
-						<template v-slot:item="{ldelim}item{rdelim}">
+						<template #item="{ldelim}item{rdelim}">
 							<div class="listPanel__itemSummary">
 								<label>
 									<input
@@ -60,7 +60,7 @@
 									</span>
 								</label>
 								<pkp-button element="a" :href="item.urlWorkflow" style="margin-left: auto;">
-									{{ __('common.view') }}
+									{{ t('common.view') }}
 								</pkp-button>
 							</div>
 						</template>

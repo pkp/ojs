@@ -337,11 +337,11 @@ describe('Data suite: Amwandenga', function() {
 
 		cy.get('#contributors button').contains('Add Contributor').click();
 
-		cy.get('#contributors [name="givenName-en"]').type('Nicolas', {delay: 0});
-		cy.get('#contributors [name="familyName-en"]').type('Riouf', {delay: 0});
-		cy.get('#contributors [name="email"]').type('nriouf@mailinator.com', {delay: 0});
-		cy.get('#contributors [name="country"]').select('South Africa');
-		cy.get('#contributors button').contains('Save').click();
+		cy.get('.modal [name="givenName-en"]').type('Nicolas', {delay: 0});
+		cy.get('.modal [name="familyName-en"]').type('Riouf', {delay: 0});
+		cy.get('.modal [name="email"]').type('nriouf@mailinator.com', {delay: 0});
+		cy.get('.modal [name="country"]').select('South Africa');
+		cy.get('.modal button').contains('Save').click();
 		cy.wait(500);
 		cy.get('#contributors div').contains('Nicolas Riouf');
 
@@ -478,8 +478,8 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('#contributors-button').click();
 
 		cy.get('#contributors div').contains('Alan Mwandenga').parent().parent().find('button').contains('Edit').click();
-		cy.get('#contributors [name="familyName-en"]').type(' Version 2', {delay: 0});
-		cy.get('#contributors button').contains('Save').click();
+		cy.get('.modal [name="familyName-en"]').type(' Version 2', {delay: 0});
+		cy.get('.modal button').contains('Save').click();
 		// cy.get('#contributors button').contains('Save').should("not.be.visible");
 		cy.wait(1500); // Wait for the grid to reload
 		cy.get('#contributors div').contains('Alan Mwandenga Version 2');
