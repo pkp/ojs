@@ -167,44 +167,45 @@ class ArticleSearchIndex extends SubmissionSearchIndex
             [$article]
         );
 
-        // If no search plug-in is activated then fall back to the
-        // default database search implementation.
-        if ($hookResult === false || is_null($hookResult)) {
-            $submissionFiles = Repo::submissionFile()
-                ->getCollector()
+        // If a search plug-in is activated then skip the default database search implementation.
+        if ($hookResult !== Hook::CONTINUE && !is_null($hookResult)) {
+            return;
+        }
+
+        $submissionFiles = Repo::submissionFile()
+            ->getCollector()
+            ->filterBySubmissionIds([$article->getId()])
+            ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_PROOF])
+            ->getMany();
+
+        $exceptions = [];
+        foreach ($submissionFiles as $submissionFile) {
+            try {
+                $this->submissionFileChanged($article->getId(), SubmissionSearch::SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile);
+            } catch (Throwable $e) {
+                $exceptions[] = $e;
+            }
+            $dependentFiles = Repo::submissionFile()->getCollector()
+                ->filterByAssoc(
+                    PKPApplication::ASSOC_TYPE_SUBMISSION_FILE,
+                    [$submissionFile->getId()]
+                )
                 ->filterBySubmissionIds([$article->getId()])
-                ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_PROOF])
+                ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
+                ->includeDependentFiles()
                 ->getMany();
 
-            $exceptions = [];
-            foreach ($submissionFiles as $submissionFile) {
+            foreach ($dependentFiles as $dependentFile) {
                 try {
-                    $this->submissionFileChanged($article->getId(), SubmissionSearch::SUBMISSION_SEARCH_GALLEY_FILE, $submissionFile);
+                    $this->submissionFileChanged($article->getId(), SubmissionSearch::SUBMISSION_SEARCH_SUPPLEMENTARY_FILE, $dependentFile);
                 } catch (Throwable $e) {
                     $exceptions[] = $e;
                 }
-                $dependentFiles = Repo::submissionFile()->getCollector()
-                    ->filterByAssoc(
-                        PKPApplication::ASSOC_TYPE_SUBMISSION_FILE,
-                        [$submissionFile->getId()]
-                    )
-                    ->filterBySubmissionIds([$article->getId()])
-                    ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
-                    ->includeDependentFiles()
-                    ->getMany();
-
-                foreach ($dependentFiles as $dependentFile) {
-                    try {
-                        $this->submissionFileChanged($article->getId(), SubmissionSearch::SUBMISSION_SEARCH_SUPPLEMENTARY_FILE, $dependentFile);
-                    } catch (Throwable $e) {
-                        $exceptions[] = $e;
-                    }
-                }
             }
-            if (count($exceptions)) {
-                $errorMessage = implode("\n\n", $exceptions);
-                throw new Exception("The following errors happened while indexing the submission ID {$article->getId()}:\n{$errorMessage}");
-            }
+        }
+        if (count($exceptions)) {
+            $errorMessage = implode("\n\n", $exceptions);
+            throw new Exception("The following errors happened while indexing the submission ID {$article->getId()}:\n{$errorMessage}");
         }
     }
 
@@ -228,12 +229,13 @@ class ArticleSearchIndex extends SubmissionSearchIndex
             [$articleId, $type, $assocId]
         );
 
-        // If no search plug-in is activated then fall back to the
-        // default database search implementation.
-        if ($hookResult === false || is_null($hookResult)) {
-            $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /** @var ArticleSearchDAO $searchDao */
-            return $searchDao->deleteSubmissionKeywords($articleId, $type, $assocId);
+        // If a search plug-in is activated then skip the default database search implementation.
+        if ($hookResult !== Hook::CONTINUE && !is_null($hookResult)) {
+            return;
         }
+
+        $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /** @var ArticleSearchDAO $searchDao */
+        return $searchDao->deleteSubmissionKeywords($articleId, $type, $assocId);
     }
 
     /**
@@ -299,53 +301,54 @@ class ArticleSearchIndex extends SubmissionSearchIndex
             [$log, $journal, $switches]
         );
 
-        // If no search plug-in is activated then fall back to the
-        // default database search implementation.
-        if ($hookResult === false || is_null($hookResult)) {
-            // Check that no journal was given as we do
-            // not support journal-specific re-indexing.
-            if ($journal instanceof Journal) {
-                exit(__('search.cli.rebuildIndex.indexingByJournalNotSupported') . "\n");
-            }
+        // If a search plug-in is activated then skip the default database search implementation.
+        if ($hookResult !== Hook::CONTINUE && !is_null($hookResult)) {
+            return;
+        }
 
-            // Clear index
+        // Check that no journal was given as we do
+        // not support journal-specific re-indexing.
+        if (is_a($journal, 'Journal')) {
+            exit(__('search.cli.rebuildIndex.indexingByJournalNotSupported') . "\n");
+        }
+
+        // Clear index
+        if ($log) {
+            echo __('search.cli.rebuildIndex.clearingIndex') . ' ... ';
+        }
+        $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /** @var ArticleSearchDAO $searchDao */
+        $searchDao->clearIndex();
+        if ($log) {
+            echo __('search.cli.rebuildIndex.done') . "\n";
+        }
+
+        // Build index
+        $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
+
+        $journals = $journalDao->getAll();
+        while ($journal = $journals->next()) {
+            $numIndexed = 0;
+
             if ($log) {
-                echo __('search.cli.rebuildIndex.clearingIndex') . ' ... ';
+                echo __('search.cli.rebuildIndex.indexing', ['journalName' => $journal->getLocalizedName()]) . ' ... ';
             }
-            $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /** @var ArticleSearchDAO $searchDao */
-            $searchDao->clearIndex();
+
+            $submissions = Repo::submission()
+                ->getCollector()
+                ->filterByContextIds([$journal->getId()])
+                ->getMany();
+
+            foreach ($submissions as $submission) {
+                if (!$submission->getSubmissionProgress()) { // Submission has been submitted
+                    $this->submissionMetadataChanged($submission);
+                    $this->submissionFilesChanged($submission);
+                    $numIndexed++;
+                }
+            }
+            $this->submissionChangesFinished();
+
             if ($log) {
-                echo __('search.cli.rebuildIndex.done') . "\n";
-            }
-
-            // Build index
-            $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
-
-            $journals = $journalDao->getAll();
-            while ($journal = $journals->next()) {
-                $numIndexed = 0;
-
-                if ($log) {
-                    echo __('search.cli.rebuildIndex.indexing', ['journalName' => $journal->getLocalizedName()]) . ' ... ';
-                }
-
-                $submissions = Repo::submission()
-                    ->getCollector()
-                    ->filterByContextIds([$journal->getId()])
-                    ->getMany();
-
-                foreach ($submissions as $submission) {
-                    if (!$submission->getSubmissionProgress()) { // Submission has been submitted
-                        $this->submissionMetadataChanged($submission);
-                        $this->submissionFilesChanged($submission);
-                        $numIndexed++;
-                    }
-                }
-                $this->submissionChangesFinished();
-
-                if ($log) {
-                    echo __('search.cli.rebuildIndex.result', ['numIndexed' => $numIndexed]) . "\n";
-                }
+                echo __('search.cli.rebuildIndex.result', ['numIndexed' => $numIndexed]) . "\n";
             }
         }
     }
