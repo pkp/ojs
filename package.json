@@ -29,7 +29,7 @@
     "uuid": "^9.0.0",
     "vue": "^3.3.4",
     "vue-chartjs": "^5.2.0",
-    "vue-draggable-plus": "^0.2.4",
+    "vue-draggable-plus": "^0.2.6",
     "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
