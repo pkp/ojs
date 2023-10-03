@@ -33,7 +33,7 @@ $finder = PhpCsFixer\Finder::create()
         return $folders;
     })());
 
-$rules = include './lib/pkp/.php_cs_rules';
+$rules = include  __DIR__ . '/lib/pkp/.php_cs_rules';
 $config = new PhpCsFixer\Config();
 return $config->setRules($rules)
     ->setFinder($finder);

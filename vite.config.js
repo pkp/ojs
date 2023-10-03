@@ -2,6 +2,7 @@ import {defineConfig} from 'vite';
 import Vue from '@vitejs/plugin-vue';
 import path from 'path';
 import copy from 'rollup-plugin-copy';
+import i18nExtractKeys from './lib/pkp/tools/i18nExtractKeys.vite.js';
 
 export default defineConfig(({mode}) => {
 	// its very unclear how the plugin-vue is handling inProduction option
@@ -10,6 +11,16 @@ export default defineConfig(({mode}) => {
 	process.env.NODE_ENV = mode;
 	return {
 		plugins: [
+			i18nExtractKeys({
+				// existing in tpl files, to be replaced in future
+				extraKeys: [
+					'common.view',
+					'common.close',
+					'common.editItem',
+					'stats.descriptionForStat',
+					'common.commaListSeparator',
+				],
+			}),
 			Vue({
 				isProduction: mode === 'production',
 				template: {
