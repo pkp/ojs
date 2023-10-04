@@ -23,7 +23,7 @@ function extractRegexPlugin({regex, extraKeys, fileOutput}) {
 		},
 		buildEnd() {
 			for (const key of extraKeys) {
-				uniqueKeys.add(key);
+				uniqueKeys.add[key];
 			}
 
 			if (uniqueKeys.size) {
