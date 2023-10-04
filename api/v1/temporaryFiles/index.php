@@ -15,4 +15,4 @@
  * @brief Handle API requests for temporary file uploading.
  */
 
-return new \PKP\API\v1\temporaryFiles\PKPTemporaryFilesHandler();
+return new \PKP\core\PKPApiRoutingHandler(new \PKP\API\v1\temporaryFiles\PKPTemporaryFilesController());

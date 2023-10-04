@@ -15,4 +15,4 @@
  * @brief Handle API requests for DOI operations.
  */
 
-return new \APP\API\v1\dois\DoiHandler();
+return new \PKP\core\PKPApiRoutingHandler(new \APP\API\v1\dois\DoiController());

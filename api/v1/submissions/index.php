@@ -17,8 +17,9 @@
  *
  */
 $urlParts = explode('/', trim($_SERVER['PATH_INFO'], '/'));
+
 if (count($urlParts) >= 6 && $urlParts[5] == 'files') {
-    return new \PKP\API\v1\submissions\PKPSubmissionFileHandler();
+    return new \PKP\core\PKPApiRoutingHandler(new \PKP\API\v1\submissions\PKPSubmissionFileController());
 } else {
-    return new \APP\API\v1\submissions\SubmissionHandler();
+    return new \PKP\core\PKPApiRoutingHandler(new \APP\API\v1\submissions\SubmissionController());
 }

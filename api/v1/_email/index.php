@@ -17,4 +17,4 @@
  *
  */
 
-return new \PKP\API\v1\_email\PKPEmailHandler();
+return new \PKP\core\PKPApiRoutingHandler(new \PKP\API\v1\_email\PKPEmailController());

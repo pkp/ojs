@@ -1,17 +1,17 @@
 <?php
 
 /**
- * @file api/v1/stats/StatsIssueHandler.php
+ * @file api/v1/stats/StatsIssueController.php
  *
- * Copyright (c) 2022 Simon Fraser University
- * Copyright (c) 2022 John Willinsky
+ * Copyright (c) 2023 Simon Fraser University
+ * Copyright (c) 2023 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class StatsIssueHandler
+ * @class StatsIssueController
  *
  * @ingroup api_v1_stats
  *
- * @brief Handle API requests for issue statistics.
+ * @brief Controller class to handle API requests for issue statistics.
  *
  */
 
@@ -19,77 +19,94 @@ namespace APP\API\v1\stats\issues;
 
 use APP\core\Application;
 use APP\core\Services;
+
 use APP\facades\Repo;
+
 use APP\security\authorization\OjsIssueRequiredPolicy;
+
 use APP\statistics\StatisticsHelper;
-use PKP\core\APIResponse;
-use PKP\handler\APIHandler;
+
+use Illuminate\Http\JsonResponse;
+
+use Illuminate\Http\Request;
+
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Route;
+use PKP\core\PKPBaseController;
+use PKP\core\PKPRequest;
 use PKP\plugins\Hook;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\authorization\PolicySet;
 use PKP\security\authorization\RoleBasedHandlerOperationPolicy;
 use PKP\security\authorization\UserRolesRequiredPolicy;
 use PKP\security\Role;
-use Slim\Http\Request as SlimHttpRequest;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
-class StatsIssueHandler extends APIHandler
+class StatsIssueController extends PKPBaseController
 {
     /**
-     * Constructor
+     * @copydoc \PKP\core\PKPBaseController::getHandlerPath()
      */
-    public function __construct()
+    public function getHandlerPath(): string
     {
-        $this->_handlerPath = 'stats/issues';
-        $roles = [Role::ROLE_ID_SITE_ADMIN, Role::ROLE_ID_MANAGER /*, Role::ROLE_ID_SUB_EDITOR */];
-        $this->_endpoints = [
-            'GET' => [
-                [
-                    'pattern' => $this->getEndpointPattern(),
-                    'handler' => [$this, 'getMany'],
-                    'roles' => $roles
-                ],
-                [
-                    'pattern' => $this->getEndpointPattern() . '/timeline',
-                    'handler' => [$this, 'getManyTimeline'],
-                    'roles' => $roles
-                ],
-                [
-                    'pattern' => $this->getEndpointPattern() . '/{issueId:\d+}',
-                    'handler' => [$this, 'get'],
-                    'roles' => $roles
-                ],
-                [
-                    'pattern' => $this->getEndpointPattern() . '/{issueId:\d+}/timeline',
-                    'handler' => [$this, 'getTimeline'],
-                    'roles' => $roles
-                ],
-            ],
-        ];
-        parent::__construct();
+        return 'stats/issues';
     }
 
     /**
-     * @copydoc PKPHandler::authorize()
+     * @copydoc \PKP\core\PKPBaseController::getRouteGroupMiddleware()
      */
-    public function authorize($request, &$args, $roleAssignments)
+    public function getRouteGroupMiddleware(): array
     {
-        $routeName = null;
-        $slimRequest = $this->getSlimRequest();
+        return [
+            'has.user',
+            'has.context',
+            self::roleAuthorizer([
+                Role::ROLE_ID_SITE_ADMIN,
+                Role::ROLE_ID_MANAGER,
+            ]),
+        ];
+    }
 
+    /**
+     * @copydoc \PKP\core\PKPBaseController::getGroupRoutes()
+     */
+    public function getGroupRoutes(): void
+    {
+        Route::get('timeline', $this->getManyTimeline(...))
+            ->name('stats.issue.getManyTimeline');
+
+        Route::get('{issueId}', $this->get(...))
+            ->name('stats.issue.getIssue')
+            ->whereNumber('issueId');
+
+        Route::get('{issueId}/timeline', $this->getTimeline(...))
+            ->name('stats.issue.getTimeline')
+            ->whereNumber('issueId');
+
+        Route::get('', $this->getMany(...))
+            ->name('stats.issue.getMany');
+    }
+
+    /**
+     * @copydoc \PKP\core\PKPBaseController::authorize()
+     */
+    public function authorize(PKPRequest $request, array &$args, array $roleAssignments): bool
+    {
         $this->addPolicy(new UserRolesRequiredPolicy($request), true);
 
         $this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
 
         $rolePolicy = new PolicySet(PolicySet::COMBINING_PERMIT_OVERRIDES);
+
         foreach ($roleAssignments as $role => $operations) {
             $rolePolicy->addPolicy(new RoleBasedHandlerOperationPolicy($request, $role, $operations));
         }
+
         $this->addPolicy($rolePolicy);
 
-        if (!is_null($slimRequest) && ($route = $slimRequest->getAttribute('route'))) {
-            $routeName = $route->getName();
-        }
-        if (in_array($routeName, ['get', 'getGalley', 'getToc'])) {
+        $illuminateRequest = $args[0]; /** @var \Illuminate\Http\Request $illuminateRequest */
+
+        if (in_array(static::getRouteActionName($illuminateRequest), ['get', 'getGalley', 'getToc'])) {
             $this->addPolicy(new OjsIssueRequiredPolicy($request, $args));
         }
 
@@ -101,10 +118,10 @@ class StatsIssueHandler extends APIHandler
      *
      * Returns total views by toc and all galleys.
      */
-    public function getMany(SlimHttpRequest $slimRequest, APIResponse $response, array $args): APIResponse
+    public function getMany(Request $illuminateRequest): StreamedResponse|JsonResponse
     {
         $request = $this->getRequest();
-        $responseCSV = str_contains($slimRequest->getHeaderLine('Accept'), APIResponse::RESPONSE_CSV) ? true : false;
+        $responseCSV = str_contains($illuminateRequest->headers->get('Accept'), 'text/csv') ? true : false;
 
         $defaultParams = [
             'count' => 30,
@@ -112,7 +129,7 @@ class StatsIssueHandler extends APIHandler
             'orderDirection' => StatisticsHelper::STATISTICS_ORDER_DESC,
         ];
 
-        $requestParams = array_merge($defaultParams, $slimRequest->getQueryParams());
+        $requestParams = array_merge($defaultParams, $illuminateRequest->query());
 
         $allowedParams = $this->_processAllowedParams($requestParams, [
             'dateStart',
@@ -124,17 +141,19 @@ class StatsIssueHandler extends APIHandler
             'issueIds',
         ]);
 
-        Hook::call('API::stats::issues::params', [&$allowedParams, $slimRequest]);
+        Hook::call('API::stats::issues::params', [&$allowedParams, $illuminateRequest]);
 
         $allowedParams['contextIds'] = [$request->getContext()->getId()];
 
         $result = $this->_validateStatDates($allowedParams);
         if ($result !== true) {
-            return $response->withStatus(400)->withJsonError($result);
+            return response()->json(['error' => $result], Response::HTTP_BAD_REQUEST);
         }
 
         if (!in_array($allowedParams['orderDirection'], [StatisticsHelper::STATISTICS_ORDER_ASC, StatisticsHelper::STATISTICS_ORDER_DESC])) {
-            return $response->withStatus(400)->withJsonError('api.stats.400.invalidOrderDirection');
+            return response()->json([
+                'error' => __('api.stats.400.invalidOrderDirection'),
+            ], Response::HTTP_BAD_REQUEST);
         }
 
         // Identify issues which should be included in the results when a searchPhrase is passed
@@ -145,18 +164,18 @@ class StatsIssueHandler extends APIHandler
             if (empty($allowedParams['issueIds'])) {
                 $csvColumnNames = $this->_getIssueReportColumnNames();
                 if ($responseCSV) {
-                    return $response->withCSV([], $csvColumnNames, 0);
+                    return response()->withCSV([], $csvColumnNames, 0);
                 } else {
-                    return $response->withJson([
+                    return response()->json([
                         'items' => [],
                         'itemsMax' => 0,
-                    ], 200);
+                    ], Response::HTTP_OK);
                 }
             }
         }
 
         // Get a list (count number) of top issues by total (toc + galley) views
-        $statsService = Services::get('issueStats');
+        $statsService = Services::get('issueStats'); /** @var \APP\services\StatsIssueService $statsService */
         $totalMetrics = $statsService->getTotals($allowedParams);
 
         // Get the stats for each issue
@@ -177,12 +196,12 @@ class StatsIssueHandler extends APIHandler
         $itemsMax = $statsService->getCount($allowedParams);
         $csvColumnNames = $this->_getIssueReportColumnNames();
         if ($responseCSV) {
-            return $response->withCSV($items, $csvColumnNames, $itemsMax);
+            return response()->withCSV($items, $csvColumnNames, $itemsMax);
         } else {
-            return $response->withJson([
+            return response()->json([
                 'items' => $items,
                 'itemsMax' => $itemsMax,
-            ], 200);
+            ], Response::HTTP_OK);
         }
     }
 
@@ -190,9 +209,9 @@ class StatsIssueHandler extends APIHandler
      * Get the total TOC or issue galley views for a set of issues
      * in a timeline broken down by month or day
      */
-    public function getManyTimeline(SlimHttpRequest $slimRequest, APIResponse $response, array $args): APIResponse
+    public function getManyTimeline(Request $illuminateRequest): StreamedResponse|JsonResponse
     {
-        $responseCSV = str_contains($slimRequest->getHeaderLine('Accept'), APIResponse::RESPONSE_CSV) ? true : false;
+        $responseCSV = str_contains($illuminateRequest->headers->get('Accept'), 'text/csv') ? true : false;
 
         $request = $this->getRequest();
 
@@ -200,7 +219,7 @@ class StatsIssueHandler extends APIHandler
             'timelineInterval' => StatisticsHelper::STATISTICS_DIMENSION_MONTH,
         ];
 
-        $requestParams = array_merge($defaultParams, $slimRequest->getQueryParams());
+        $requestParams = array_merge($defaultParams, $illuminateRequest->getQueryParams());
 
         $allowedParams = $this->_processAllowedParams($requestParams, [
             'dateStart',
@@ -210,15 +229,17 @@ class StatsIssueHandler extends APIHandler
             'type'
         ]);
 
-        Hook::call('API::stats::issues::timeline::params', [&$allowedParams, $slimRequest]);
+        Hook::call('API::stats::issues::timeline::params', [&$allowedParams, $illuminateRequest]);
 
         if (!$this->isValidTimelineInterval($allowedParams['timelineInterval'])) {
-            return $response->withStatus(400)->withJsonError('api.stats.400.wrongTimelineInterval');
+            return response()->json([
+                'error' => __('api.stats.400.wrongTimelineInterval'),
+            ], Response::HTTP_BAD_REQUEST);
         }
 
         $result = $this->_validateStatDates($allowedParams);
         if ($result !== true) {
-            return $response->withStatus(400)->withJsonError($result);
+            return response()->json(['error' => $result], Response::HTTP_BAD_REQUEST);
         }
 
         $allowedParams['contextIds'] = [$request->getContext()->getId()];
@@ -226,6 +247,8 @@ class StatsIssueHandler extends APIHandler
         if (array_key_exists('type', $allowedParams) && $allowedParams['type'] == 'files') {
             $allowedParams['assocTypes'] = [Application::ASSOC_TYPE_ISSUE_GALLEY];
         };
+
+        $statsService = Services::get('issueStats'); /** @var \APP\services\StatsIssueService $statsService */
 
         // Identify issues which should be included in the results when a searchPhrase is passed
         if (!empty($allowedParams['searchPhrase'])) {
@@ -235,61 +258,62 @@ class StatsIssueHandler extends APIHandler
             if (empty($allowedParams['issueIds'])) {
                 $dateStart = empty($allowedParams['dateStart']) ? StatisticsHelper::STATISTICS_EARLIEST_DATE : $allowedParams['dateStart'];
                 $dateEnd = empty($allowedParams['dateEnd']) ? date('Ymd', strtotime('yesterday')) : $allowedParams['dateEnd'];
-                $emptyTimeline = Services::get('issueStats')->getEmptyTimelineIntervals($dateStart, $dateEnd, $allowedParams['timelineInterval']);
+                $emptyTimeline = $statsService->getEmptyTimelineIntervals($dateStart, $dateEnd, $allowedParams['timelineInterval']);
                 if ($responseCSV) {
-                    $csvColumnNames = Services::get('issueStats')->getTimelineReportColumnNames();
-                    return $response->withCSV($emptyTimeline, $csvColumnNames, 0);
+                    $csvColumnNames = $statsService->getTimelineReportColumnNames();
+                    return response()->withCSV($emptyTimeline, $csvColumnNames, 0);
                 }
-                return $response->withJson($emptyTimeline, 200);
+                return response()->json($emptyTimeline, Response::HTTP_OK);
             }
         }
 
-        $data = Services::get('issueStats')->getTimeline($allowedParams['timelineInterval'], $allowedParams);
+        $data = $statsService->getTimeline($allowedParams['timelineInterval'], $allowedParams);
         if ($responseCSV) {
-            $csvColumnNames = Services::get('issueStats')->getTimelineReportColumnNames();
-            return $response->withCSV($data, $csvColumnNames, count($data));
+            $csvColumnNames = $statsService->getTimelineReportColumnNames();
+            return response()->withCSV($data, $csvColumnNames, count($data));
         }
-        return $response->withJson($data, 200);
+
+        return response()->json($data, Response::HTTP_OK);
     }
 
     /**
      * Get a single issue's usage statistics
      */
-    public function get(SlimHttpRequest $slimRequest, APIResponse $response, array $args): APIResponse
+    public function get(Request $illuminateRequest): JsonResponse
     {
         $request = $this->getRequest();
 
         $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
 
-        $allowedParams = $this->_processAllowedParams($slimRequest->getQueryParams(), [
+        $allowedParams = $this->_processAllowedParams($illuminateRequest->query(), [
             'dateStart',
             'dateEnd',
         ]);
 
-        Hook::call('API::stats::issue::params', [&$allowedParams, $slimRequest]);
+        Hook::call('API::stats::issue::params', [&$allowedParams, $illuminateRequest]);
 
         $result = $this->_validateStatDates($allowedParams);
         if ($result !== true) {
-            return $response->withStatus(400)->withJsonError($result);
+            return response()->json(['error' => $result], Response::HTTP_BAD_REQUEST);
         }
 
-        $statsService = Services::get('issueStats');
+        $statsService = Services::get('issueStats'); /** @var \APP\services\StatsIssueService $statsService */
         $dateStart = array_key_exists('dateStart', $allowedParams) ? $allowedParams['dateStart'] : null;
         $dateEnd = array_key_exists('dateEnd', $allowedParams) ? $allowedParams['dateEnd'] : null;
         $metricsByType = $statsService->getTotalsByType($issue->getId(), $request->getContext()->getId(), $dateStart, $dateEnd);
 
-        return $response->withJson([
+        return response()->json([
             'tocViews' => $metricsByType['toc'],
             'issueGalleyViews' => $metricsByType['galley'],
             'issue' => Repo::issue()->getSchemaMap()->mapToStats($issue),
-        ], 200);
+        ], Response::HTTP_OK);
     }
 
     /**
      * Get the total TOC or issue galley views for an issue broken down by
      * month or day
      */
-    public function getTimeline(SlimHttpRequest $slimRequest, APIResponse $response, array $args): APIResponse
+    public function getTimeline(Request $illuminateRequest): JsonResponse
     {
         $request = $this->getRequest();
 
@@ -299,7 +323,7 @@ class StatsIssueHandler extends APIHandler
             'timelineInterval' => StatisticsHelper::STATISTICS_DIMENSION_MONTH,
         ];
 
-        $requestParams = array_merge($defaultParams, $slimRequest->getQueryParams());
+        $requestParams = array_merge($defaultParams, $illuminateRequest->query());
 
         $allowedParams = $this->_processAllowedParams($requestParams, [
             'dateStart',
@@ -308,7 +332,7 @@ class StatsIssueHandler extends APIHandler
             'type'
         ]);
 
-        Hook::call('API::stats::issue::timeline::params', [&$allowedParams, $slimRequest]);
+        Hook::call('API::stats::issue::timeline::params', [&$allowedParams, $illuminateRequest]);
 
         $allowedParams['contextIds'] = [$request->getContext()->getId()];
         $allowedParams['issueIds'] = [$issue->getId()];
@@ -318,17 +342,19 @@ class StatsIssueHandler extends APIHandler
         };
 
         if (!$this->isValidTimelineInterval($allowedParams['timelineInterval'])) {
-            return $response->withStatus(400)->withJsonError('api.stats.400.wrongTimelineInterval');
+            return response()->json([
+                'error' => __('api.stats.400.wrongTimelineInterval'),
+            ], Response::HTTP_BAD_REQUEST);
         }
 
         $result = $this->_validateStatDates($allowedParams);
         if ($result !== true) {
-            return $response->withStatus(400)->withJsonError($result);
+            return response()->json(['error' => $result], Response::HTTP_BAD_REQUEST);
         }
 
-        $statsService = Services::get('issueStats');
+        $statsService = Services::get('issueStats'); /** @var \APP\services\StatsIssueService $statsService */
         $data = $statsService->getTimeline($allowedParams['timelineInterval'], $allowedParams);
-        return $response->withJson($data, 200);
+        return response()->json($data, Response::HTTP_OK);
     }
 
     /**

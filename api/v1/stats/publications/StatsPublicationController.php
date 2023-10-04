@@ -1,23 +1,23 @@
 <?php
 
 /**
- * @file api/v1/stats/publications/StatsPublicationHandler.php
+ * @file api/v1/stats/publications/StatsPublicationController.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2023 Simon Fraser University
+ * Copyright (c) 2023 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class StatsPublicationHandler
+ * @class StatsPublicationController
  *
  * @ingroup api_v1_stats
  *
- * @brief Handle API requests for publication statistics.
+ * @brief Controller class to handle API requests for publication statistics.
  *
  */
 
 namespace APP\API\v1\stats\publications;
 
-class StatsPublicationHandler extends \PKP\API\v1\stats\publications\PKPStatsPublicationHandler
+class StatsPublicationController extends \PKP\API\v1\stats\publications\PKPStatsPublicationController
 {
     /** @var string The name of the section ids query param for this application */
     public $sectionIdsQueryParam = 'sectionIds';
@@ -27,14 +27,14 @@ class StatsPublicationHandler extends \PKP\API\v1\stats\publications\PKPStatsPub
         return $this->sectionIdsQueryParam;
     }
 
-    protected function getManyAllowedParams()
+    protected function getManyAllowedParams(): array
     {
         $params = parent::getManyAllowedParams();
         $params[] = 'issueIds';
         return $params;
     }
 
-    protected function getManyTimelineAllowedParams()
+    protected function getManyTimelineAllowedParams(): array
     {
         $params = parent::getManyTimelineAllowedParams();
         $params[] = 'issueIds';

@@ -17,4 +17,4 @@
  *
  */
 
-return new \APP\API\v1\_payments\BackendPaymentsSettingsHandler();
+return new \PKP\core\PKPApiRoutingHandler(new \PKP\API\v1\_payments\PKPBackendPaymentsSettingsController());

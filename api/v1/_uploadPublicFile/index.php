@@ -15,4 +15,4 @@
  * @brief Handle API requests for uploadPublicFile.
  */
 
-return new \PKP\API\v1\_uploadPublicFile\PKPUploadPublicFileHandler();
+return new \PKP\core\PKPApiRoutingHandler(new \PKP\API\v1\_uploadPublicFile\PKPUploadPublicFileController());

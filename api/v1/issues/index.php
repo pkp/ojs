@@ -17,4 +17,4 @@
  *
  */
 
-return new \APP\API\v1\issues\IssueHandler();
+return new \PKP\core\PKPApiRoutingHandler(new \APP\API\v1\issues\IssueController());
