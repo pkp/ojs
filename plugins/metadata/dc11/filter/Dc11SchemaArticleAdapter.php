@@ -193,12 +193,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
                     $dc11Description->addStatement('dc:language', LocaleConversion::getIso3FromLocale($locale));
                 }
             }
-        }
-        $articleLanguages = $article->getLanguage();
-        if (empty($locales) && isset($articleLanguages[$article->getLocale()])) {
-            foreach ($articleLanguages[$article->getLocale()] as $language) {
-                $dc11Description->addStatement('dc:language', $language);
-            }
+            $dc11Description->addStatement('dc:language', $article->geData('locale'));
         }
 
         // Relation

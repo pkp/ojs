@@ -273,7 +273,6 @@ describe('Submission Wizard', function() {
             metadata: {
                 autosuggest: {
                     disciplines: 'Faucibus',
-                    languages: 'Ornare',
                     subjects: 'Suspendisse',
                     supportingAgencies: 'Porttitor',
                 },
@@ -301,7 +300,6 @@ describe('Submission Wizard', function() {
             'Coverage',
             'Data Availability Statement',
             'Disciplines',
-            'Languages',
             'Rights',
             'Source',
             'Subjects',
@@ -326,7 +324,6 @@ describe('Submission Wizard', function() {
                         dataAvailability: 'require',
                         disciplines: 'require',
                         keywords: 'require',
-                        languages: 'require',
                         rights: 'require',
                         source: 'require',
                         subjects: 'require',
@@ -463,7 +460,6 @@ describe('Submission Wizard', function() {
                         dataAvailability: 'request',
                         disciplines: 'request',
                         keywords: 'require',
-                        languages: 'request',
                         rights: 'request',
                         source: 'request',
                         subjects: 'require',
@@ -531,7 +527,6 @@ describe('Submission Wizard', function() {
         const metadata = {
             subjects: "Subjects",
             disciplines: "Disciplines",
-            languages: "Languages",
             supportingAgencies: "Supporting Agencies",
             coverage: "Coverage",
             rights: "Rights",
@@ -629,7 +624,6 @@ describe('Submission Wizard', function() {
                         dataAvailability: '0',
                         disciplines: '0',
                         keywords: 'request',
-                        languages: '0',
                         rights: '0',
                         source: '0',
                         subjects: '0',
