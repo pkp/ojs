@@ -24,6 +24,7 @@ use Exception;
 
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
+use PKP\jobs\submissions\UpdateSubmissionSearchJob;
 use PKP\plugins\Hook;
 use PKP\search\SearchFileParser;
 use PKP\search\SubmissionSearch;
@@ -43,12 +44,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
     public function submissionMetadataChanged($submission)
     {
         // Check whether a search plug-in jumps in.
-        $hookResult = Hook::call(
-            'ArticleSearchIndex::articleMetadataChanged',
-            [$submission]
-        );
-
-        if (!empty($hookResult)) {
+        if (Hook::ABORT === Hook::call('ArticleSearchIndex::articleMetadataChanged', [$submission])) {
             return;
         }
 
@@ -161,14 +157,8 @@ class ArticleSearchIndex extends SubmissionSearchIndex
      */
     public function submissionFilesChanged($article)
     {
-        // Check whether a search plug-in jumps in.
-        $hookResult = Hook::call(
-            'ArticleSearchIndex::submissionFilesChanged',
-            [$article]
-        );
-
         // If a search plug-in is activated then skip the default database search implementation.
-        if ($hookResult !== Hook::CONTINUE && !is_null($hookResult)) {
+        if (Hook::ABORT === Hook::call('ArticleSearchIndex::submissionFilesChanged', [$article])) {
             return;
         }
 
@@ -223,14 +213,8 @@ class ArticleSearchIndex extends SubmissionSearchIndex
      */
     public function submissionFileDeleted($articleId, $type = null, $assocId = null)
     {
-        // Check whether a search plug-in jumps in.
-        $hookResult = Hook::call(
-            'ArticleSearchIndex::submissionFileDeleted',
-            [$articleId, $type, $assocId]
-        );
-
         // If a search plug-in is activated then skip the default database search implementation.
-        if ($hookResult !== Hook::CONTINUE && !is_null($hookResult)) {
+        if (Hook::ABORT === Hook::call('ArticleSearchIndex::submissionFileDeleted', [$articleId, $type, $assocId])) {
             return;
         }
 
@@ -295,14 +279,8 @@ class ArticleSearchIndex extends SubmissionSearchIndex
      */
     public function rebuildIndex($log = false, $journal = null, $switches = [])
     {
-        // Check whether a search plug-in jumps in.
-        $hookResult = Hook::call(
-            'ArticleSearchIndex::rebuildIndex',
-            [$log, $journal, $switches]
-        );
-
         // If a search plug-in is activated then skip the default database search implementation.
-        if ($hookResult !== Hook::CONTINUE && !is_null($hookResult)) {
+        if (Hook::ABORT === Hook::call('ArticleSearchIndex::rebuildIndex', [$log, $journal, $switches])) {
             return;
         }
 
@@ -325,8 +303,8 @@ class ArticleSearchIndex extends SubmissionSearchIndex
         // Build index
         $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
 
-        $journals = $journalDao->getAll();
-        while ($journal = $journals->next()) {
+        $journals = $journalDao->getAll()->toIterator();
+        foreach ($journals as $journal) {
             $numIndexed = 0;
 
             if ($log) {
@@ -339,13 +317,9 @@ class ArticleSearchIndex extends SubmissionSearchIndex
                 ->getMany();
 
             foreach ($submissions as $submission) {
-                if (!$submission->getSubmissionProgress()) { // Submission has been submitted
-                    $this->submissionMetadataChanged($submission);
-                    $this->submissionFilesChanged($submission);
-                    $numIndexed++;
-                }
+                dispatch(new UpdateSubmissionSearchJob($submission->getId()));
+                ++$numIndexed;
             }
-            $this->submissionChangesFinished();
 
             if ($log) {
                 echo __('search.cli.rebuildIndex.result', ['numIndexed' => $numIndexed]) . "\n";
