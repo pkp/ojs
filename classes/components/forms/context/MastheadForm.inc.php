@@ -39,6 +39,11 @@ class MastheadForm extends PKPMastheadForm {
 				'groupId' => 'publishing',
 				'value' => $context->getData('publisherInstitution'),
 			]))
+			->addField(new FieldText('publisherUrl', [
+				'label' => __('common.url'),
+				'groupId' => 'publishing',
+				'value' => $context->getData('publisherUrl'),
+			]))
 			->addField(new FieldText('onlineIssn', [
 				'label' => __('manager.setup.onlineIssn'),
 				'size' => 'small',

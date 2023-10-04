@@ -226,6 +226,13 @@
 				"nullable"
 			]
 		},
+		"publisherUrl": {
+			"type": "string",
+			"validation": [
+				"nullable",
+				"url"
+			]
+		},
 		"publishingMode": {
 			"type": "integer",
 			"validation": [
