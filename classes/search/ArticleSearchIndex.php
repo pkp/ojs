@@ -112,7 +112,8 @@ class ArticleSearchIndex extends SubmissionSearchIndex
         // If no search plug-in is activated then fall back to the default database search implementation.
         $parser = SearchFileParser::fromFile($submissionFile);
         if (!$parser) {
-            throw new Exception("Skipped indexation: No suitable parser for the submission file \"{$submissionFile->getData('path')}\"");
+            error_log("Skipped indexation: No suitable parser for the submission file \"{$submissionFile->getData('path')}\"");
+            return;
         }
         try {
             $parser->open();
