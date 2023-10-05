@@ -172,13 +172,13 @@ class BackendSubmissionsController extends \PKP\API\v1\_submissions\PKPBackendSu
 
         if (isset($queryParams['issueIds'])) {
             $collector->filterByIssueIds(
-                array_map('intval', $this->paramToArray($queryParams['issueIds']))
+                array_map('intval', paramToArray($queryParams['issueIds']))
             );
         }
 
         if (isset($queryParams['sectionIds'])) {
             $collector->filterBySectionIds(
-                array_map('intval', $this->paramToArray($queryParams['sectionIds']))
+                array_map('intval', paramToArray($queryParams['sectionIds']))
             );
         }
 
