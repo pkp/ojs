@@ -19,17 +19,11 @@ namespace APP\API\v1\stats\issues;
 
 use APP\core\Application;
 use APP\core\Services;
-
 use APP\facades\Repo;
-
 use APP\security\authorization\OjsIssueRequiredPolicy;
-
 use APP\statistics\StatisticsHelper;
-
 use Illuminate\Http\JsonResponse;
-
 use Illuminate\Http\Request;
-
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
 use PKP\core\PKPBaseController;
