@@ -213,7 +213,7 @@ class StatsIssueController extends PKPBaseController
             'timelineInterval' => StatisticsHelper::STATISTICS_DIMENSION_MONTH,
         ];
 
-        $requestParams = array_merge($defaultParams, $illuminateRequest->getQueryParams());
+        $requestParams = array_merge($defaultParams, $illuminateRequest->query());
 
         $allowedParams = $this->_processAllowedParams($requestParams, [
             'dateStart',
