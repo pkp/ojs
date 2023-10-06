@@ -23,6 +23,7 @@ use APP\facades\Repo;
 use APP\handler\Handler;
 use APP\issue\IssueAction;
 use APP\observers\events\UsageEvent;
+use APP\orcid\OrcidManager;
 use APP\payment\ojs\OJSCompletedPaymentDAO;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
@@ -307,6 +308,7 @@ class ArticleHandler extends Handler
             'copyrightYear' => $publication->getData('copyrightYear'),
             'pubIdPlugins' => PluginRegistry::loadCategory('pubIds', true),
             'keywords' => $publication->getData('keywords'),
+            'orcidIcon' => OrcidManager::getIcon(),
         ]);
 
         // Fetch and assign the galley to the template
