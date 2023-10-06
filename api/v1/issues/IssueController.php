@@ -185,7 +185,7 @@ class IssueController extends PKPBaseController
                     $collector->searchPhrase($val);
                     break;
                 case 'doiStatus':
-                    $collector->filterByDoiStatuses(array_map('intval', $this->paramToArray($val)));
+                    $collector->filterByDoiStatuses(array_map('intval', paramToArray($val)));
                     break;
                 case 'hasDois':
                     $collector->filterByHasDois((bool) $val, $context->getEnabledDoiTypes());
