@@ -12,6 +12,7 @@ import PkpLoad from '../lib/pkp/js/load.js';
 
 // Import controllers used by OJS
 import Container from '@/components/Container/Container.vue';
+import AdvancedSearchReviewerContainer from '@/components/Container/AdvancedSearchReviewerContainer.vue';
 import Page from '@/components/Container/Page.vue';
 import AccessPage from '@/components/Container/AccessPage.vue';
 import AddContextContainer from '@/components/Container/AddContextContainer.vue';
@@ -43,6 +44,7 @@ window.pkp = Object.assign(PkpLoad, {
 		AccessPage,
 		AddContextContainer,
 		AdminPage,
+		AdvancedSearchReviewerContainer,
 		Container,
 		DoiPage,
 		DecisionPage,
