@@ -1,4 +1,4 @@
-{  
+{
   "name": "OJS3",
   "description": "Open Journal Systems (OJS) is a journal management and publishing system that has been developed by the Public Knowledge Project through its federally funded efforts to expand and improve access to research.",
   "version": "3.5.0",
@@ -10,7 +10,8 @@
     "lint": "eslint --fix ./js/load.js ./lib/pkp/js/load.js ./lib/pkp/js/usage-stats-chart.js ./lib/pkp/js/classes/VueRegistry.js",
     "format": "prettier --write ./js/load.js ./lib/pkp/js/load.js ./lib/pkp/js/usage-stats-chart.js ./lib/pkp/js/classes/VueRegistry.js",
     "php-fix": "php lib/pkp/lib/vendor/bin/php-cs-fixer fix --config .php-cs-fixer.php --allow-risky=yes",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postinstall": "copyfiles -f node_modules/swiper/swiper-bundle*.{js,css} plugins/themes/default/js/lib/swiper"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.16",
@@ -19,11 +20,13 @@
     "@vue-a11y/announcer": "^3.1.5",
     "chart.js": "^4.3.3",
     "clone-deep": "^4.0.1",
+    "copyfiles": "^2.4.1",
     "debounce": "^1.2.0",
     "dropzone-vue3": "^1.0.2",
     "element-resize-event": "^3.0.6",
     "floating-vue": "^2.0.0-beta.24",
     "moment": "^2.29.4",
+    "swiper": "^10.3.1",
     "tiny-emitter": "^2.1.0",
     "tinymce": "^5.10.7",
     "uuid": "^9.0.0",
