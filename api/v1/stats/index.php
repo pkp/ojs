@@ -7,8 +7,8 @@
 /**
  * @file api/v1/stats/index.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2023 Simon Fraser University
+ * Copyright (c) 2023 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @ingroup api_v1_stats
@@ -22,17 +22,17 @@ use APP\core\Application;
 $requestPath = Application::get()->getRequest()->getRequestPath();
 
 if (strpos($requestPath, '/stats/publications')) {
-    return new \PKP\core\PKPApiRoutingHandler(new \APP\API\v1\stats\publications\StatsPublicationController());
+    return new \PKP\handler\APIHandler(new \APP\API\v1\stats\publications\StatsPublicationController());
 } elseif (strpos($requestPath, '/stats/editorial')) {
-    return new \PKP\core\PKPApiRoutingHandler(new \APP\API\v1\stats\editorial\StatsEditorialController());
+    return new \PKP\handler\APIHandler(new \APP\API\v1\stats\editorial\StatsEditorialController());
 } elseif (strpos($requestPath, '/stats/users')) {
-    return new \PKP\core\PKPApiRoutingHandler(new \PKP\API\v1\stats\users\PKPStatsUserController());
+    return new \PKP\handler\APIHandler(new \PKP\API\v1\stats\users\PKPStatsUserController());
 } elseif (strpos($requestPath, '/stats/issues')) {
-    return new \PKP\core\PKPApiRoutingHandler(new \APP\API\v1\stats\issues\StatsIssueController());
+    return new \PKP\handler\APIHandler(new \APP\API\v1\stats\issues\StatsIssueController());
 } elseif (strpos($requestPath, '/stats/contexts')) {
-    return new \PKP\core\PKPApiRoutingHandler(new \PKP\API\v1\stats\contexts\PKPStatsContextController());
+    return new \PKP\handler\APIHandler(new \PKP\API\v1\stats\contexts\PKPStatsContextController());
 } elseif (strpos($requestPath, '/stats/sushi')) {
-    return new \PKP\core\PKPApiRoutingHandler(new \APP\API\v1\stats\sushi\StatsSushiController());
+    return new \PKP\handler\APIHandler(new \APP\API\v1\stats\sushi\StatsSushiController());
 } else {
     response()->json([
         'error' => 'api.404.endpointNotFound',
