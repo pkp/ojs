@@ -55,6 +55,7 @@ class PaymentTypesForm extends Form
         $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'membershipFee', 'optional', 'manager.payment.form.numeric', function ($membershipFee) {
             return is_numeric($membershipFee) && $membershipFee >= 0;
         }));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
     }
 
     /**
