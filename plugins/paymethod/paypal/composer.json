@@ -1,12 +1,16 @@
 {
 	"require": {
-		"symfony/event-dispatcher" : "~2.7",
-		"omnipay/paypal": "~3.0",
-		"guzzlehttp/guzzle": "^7.0"
+		"symfony/event-dispatcher" : "^6.0",
+		"omnipay/paypal": "^3.0",
+		"guzzlehttp/guzzle": "^7.0",
+		"php-http/guzzle7-adapter": "^1.0"
 	},
 	"config": {
 		"platform": {
-			"php": "7.3.0"
+			"php": "8.1.0"
+		},
+		"allow-plugins": {
+			"php-http/discovery": true
 		}
 	}
 }

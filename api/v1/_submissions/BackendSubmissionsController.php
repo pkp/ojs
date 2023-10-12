@@ -1,13 +1,13 @@
 <?php
 
 /**
- * @file api/v1/_submissions/BackendSubmissionsHandler.php
+ * @file api/v1/_submissions/BackendSubmissionsController.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class BackendSubmissionsHandler
+ * @class BackendSubmissionsController
  *
  * @ingroup api_v1_backend
  *
@@ -21,46 +21,46 @@ use APP\core\Application;
 use APP\payment\ojs\OJSCompletedPaymentDAO;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\submission\Collector;
-use PKP\core\APIResponse;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Route;
+use PKP\core\PKPRequest;
 use PKP\db\DAORegistry;
 use PKP\security\authorization\SubmissionAccessPolicy;
 use PKP\security\Role;
 use PKP\stageAssignment\StageAssignmentDAO;
-use Slim\Http\Request;
 
-class BackendSubmissionsHandler extends \PKP\API\v1\_submissions\PKPBackendSubmissionsHandler
+class BackendSubmissionsController extends \PKP\API\v1\_submissions\PKPBackendSubmissionsController
 {
     /**
-     * Constructor
+     * @copydoc \PKP\core\PKPBaseController::getGroupRoutes()
      */
-    public function __construct()
+    public function getGroupRoutes(): void
     {
-        $this->_endpoints = array_merge_recursive($this->_endpoints, [
-            'PUT' => [
-                [
-                    'pattern' => '/{contextPath}/api/{version}/_submissions/{submissionId:\d+}/payment',
-                    'handler' => [$this, 'payment'],
-                    'roles' => [
-                        Role::ROLE_ID_SUB_EDITOR,
-                        Role::ROLE_ID_MANAGER,
-                        Role::ROLE_ID_SITE_ADMIN,
-                        Role::ROLE_ID_ASSISTANT,
-                    ],
-                ],
-            ],
-        ]);
+        parent::getGroupRoutes();
 
-        parent::__construct();
+        Route::put('{submissionId}/payment', $this->payment(...))
+            ->name('_submission.payment')
+            ->middleware([
+                self::roleAuthorizer([
+                    Role::ROLE_ID_SUB_EDITOR,
+                    Role::ROLE_ID_MANAGER,
+                    Role::ROLE_ID_SITE_ADMIN,
+                    Role::ROLE_ID_ASSISTANT,
+                ]),
+            ])
+            ->whereNumber('submissionId');
     }
 
     /**
-     * @copydoc PKPHandler::authorize()
+     * @copydoc \PKP\core\PKPBaseController::authorize()
      */
-    public function authorize($request, &$args, $roleAssignments)
+    public function authorize(PKPRequest $request, array &$args, array $roleAssignments): bool
     {
-        $routeName = $this->getSlimRequest()->getAttribute('route')->getName();
+        $illuminateRequest = $args[0]; /** @var \Illuminate\Http\Request $illuminateRequest */
 
-        if ($routeName === 'payment') {
+        if (static::getRouteActionName($illuminateRequest) === 'payment') {
             $this->addPolicy(new SubmissionAccessPolicy($request, $args, $roleAssignments));
         }
 
@@ -69,35 +69,33 @@ class BackendSubmissionsHandler extends \PKP\API\v1\_submissions\PKPBackendSubmi
 
     /**
      * Change the status of submission payments.
-     *
-     * @param Request $slimRequest Slim request object
-     * @param APIResponse $response object
-     * @param array $args arguments
-     *
-     * @return APIResponse
      */
-    public function payment($slimRequest, $response, $args)
+    public function payment(Request $illuminateRequest): JsonResponse
     {
         $request = $this->getRequest();
         $context = $request->getContext();
         $submission = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_SUBMISSION);
 
         if (!$submission || !$context || $context->getId() != $submission->getContextId()) {
-            return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
+            return response()->json([
+                'error' => __('api.404.resourceNotFound')
+            ], Response::HTTP_NOT_FOUND);
         }
 
         $paymentManager = Application::getPaymentManager($context);
         $publicationFeeEnabled = $paymentManager->publicationEnabled();
         if (!$publicationFeeEnabled) {
-            return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
+            return response()->json([
+                'error' => __('api.404.resourceNotFound')
+            ], Response::HTTP_NOT_FOUND);
         }
 
-        $params = $slimRequest->getParsedBody();
+        $params = $illuminateRequest->input();
 
         if (empty($params['publicationFeeStatus'])) {
-            return $response->withJson([
+            return response()->json([
                 'publicationFeeStatus' => [__('validator.required')],
-            ], 400);
+            ], Response::HTTP_BAD_REQUEST);
         }
 
         $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */
@@ -159,12 +157,12 @@ class BackendSubmissionsHandler extends \PKP\API\v1\_submissions\PKPBackendSubmi
                 }
                 break;
             default:
-                return $response->withJson([
+                return response()->json([
                     'publicationFeeStatus' => [__('validator.required')],
-                ], 400);
+                ], Response::HTTP_BAD_REQUEST);
         }
 
-        return $response->withJson(true);
+        return response()->json([], Response::HTTP_OK);
     }
 
     /** @copydoc PKPSubmissionHandler::getSubmissionCollector() */
@@ -174,13 +172,13 @@ class BackendSubmissionsHandler extends \PKP\API\v1\_submissions\PKPBackendSubmi
 
         if (isset($queryParams['issueIds'])) {
             $collector->filterByIssueIds(
-                array_map('intval', $this->paramToArray($queryParams['issueIds']))
+                array_map('intval', paramToArray($queryParams['issueIds']))
             );
         }
 
         if (isset($queryParams['sectionIds'])) {
             $collector->filterBySectionIds(
-                array_map('intval', $this->paramToArray($queryParams['sectionIds']))
+                array_map('intval', paramToArray($queryParams['sectionIds']))
             );
         }
 

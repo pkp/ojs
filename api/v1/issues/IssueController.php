@@ -1,17 +1,17 @@
 <?php
 
 /**
- * @file api/v1/issues/IssueHandler.php
+ * @file api/v1/issues/IssueController.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2023 Simon Fraser University
+ * Copyright (c) 2023 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class IssueHandler
+ * @class IssueController
  *
  * @ingroup api_v1_issues
  *
- * @brief Handle API requests for issues operations.
+ * @brief Controller class to handle API requests for issues operations.
  *
  */
 
@@ -22,19 +22,22 @@ use APP\facades\Repo;
 use APP\issue\Collector;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\LazyCollection;
-use PKP\core\APIResponse;
+use PKP\core\PKPBaseController;
+use PKP\core\PKPRequest;
 use PKP\db\DAORegistry;
-use PKP\handler\APIHandler;
 use PKP\plugins\Hook;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\authorization\UserRolesRequiredPolicy;
 use PKP\security\Role;
 use PKP\submission\GenreDAO;
-use Slim\Http\Request;
 
-class IssueHandler extends APIHandler
+class IssueController extends PKPBaseController
 {
     /** @var int The default number of issues to return in one request */
     public const DEFAULT_COUNT = 20;
@@ -43,71 +46,70 @@ class IssueHandler extends APIHandler
     public const MAX_COUNT = 100;
 
     /**
-     * Constructor
+     * @copydoc \PKP\core\PKPBaseController::getHandlerPath()
      */
-    public function __construct()
+    public function getHandlerPath(): string
     {
-        $this->_handlerPath = 'issues';
-        $roles = [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_ASSISTANT, Role::ROLE_ID_REVIEWER, Role::ROLE_ID_AUTHOR];
-        $this->_endpoints = [
-            'GET' => [
-                [
-                    'pattern' => $this->getEndpointPattern(),
-                    'handler' => [$this, 'getMany'],
-                    'roles' => $roles
-                ],
-                [
-                    'pattern' => $this->getEndpointPattern() . '/current',
-                    'handler' => [$this, 'getCurrent'],
-                    'roles' => $roles
-                ],
-                [
-                    'pattern' => $this->getEndpointPattern() . '/{issueId:\d+}',
-                    'handler' => [$this, 'get'],
-                    'roles' => $roles
-                ],
-            ]
-        ];
-        parent::__construct();
+        return 'issues';
     }
 
-    //
-    // Implement methods from PKPHandler
-    //
-    public function authorize($request, &$args, $roleAssignments)
+    /**
+     * @copydoc \PKP\core\PKPBaseController::getRouteGroupMiddleware()
+     */
+    public function getRouteGroupMiddleware(): array
     {
-        $routeName = null;
-        $slimRequest = $this->getSlimRequest();
+        return [
+            'has.user',
+            'has.context',
+            self::roleAuthorizer([
+                Role::ROLE_ID_MANAGER,
+                Role::ROLE_ID_SUB_EDITOR,
+                Role::ROLE_ID_ASSISTANT,
+                Role::ROLE_ID_REVIEWER,
+                Role::ROLE_ID_AUTHOR,
+            ]),
+        ];
+    }
 
-        if (!is_null($slimRequest) && ($route = $slimRequest->getAttribute('route'))) {
-            $routeName = $route->getName();
-        }
+    /**
+     * @copydoc \PKP\core\PKPBaseController::getGroupRoutes()
+     */
+    public function getGroupRoutes(): void
+    {
+        Route::get('', $this->getMany(...))
+            ->name('issue.getMany');
 
+        Route::get('current', $this->getCurrent(...))
+            ->name('issue.current');
+
+        Route::get('{issueId}', $this->get(...))
+            ->name('issue.getIssue')
+            ->whereNumber('issueId');
+    }
+
+    /**
+     * @copydoc \PKP\core\PKPBaseController::authorize()
+     */
+    public function authorize(PKPRequest $request, array &$args, array $roleAssignments): bool
+    {
         $this->addPolicy(new UserRolesRequiredPolicy($request), true);
         $this->addPolicy(new ContextRequiredPolicy($request));
         $this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
         $this->addPolicy(new OjsJournalMustPublishPolicy($request));
 
-        if ($routeName === 'get') {
+        $illuminateRequest = $args[0]; /** @var \Illuminate\Http\Request $illuminateRequest */
+
+        if (static::getRouteActionName($illuminateRequest) === 'get') {
             $this->addPolicy(new OjsIssueRequiredPolicy($request, $args));
         }
 
         return parent::authorize($request, $args, $roleAssignments);
     }
 
-    //
-    // Public handler methods
-    //
     /**
      * Get a collection of issues
-     *
-     * @param Request $slimRequest Slim request object
-     * @param APIResponse $response object
-     * @param array $args arguments
-     *
-     * @return APIResponse
      */
-    public function getMany($slimRequest, $response, $args)
+    public function getMany(Request $illuminateRequest): JsonResponse
     {
         $collector = Repo::issue()->getCollector()
             ->limit(self::DEFAULT_COUNT)
@@ -118,11 +120,13 @@ class IssueHandler extends APIHandler
         $context = $request->getContext();
 
         if (!$context) {
-            return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
+            return response()->json([
+                'error' => __('api.404.resourceNotFound'),
+            ], Response::HTTP_NOT_FOUND);
         }
 
         // Process query params to format incoming data as needed
-        foreach ($slimRequest->getQueryParams() as $param => $val) {
+        foreach ($illuminateRequest->query() as $param => $val) {
             switch ($param) {
                 case 'orderBy':
                     if (in_array($val, [Collector::ORDERBY_DATE_PUBLISHED, Collector::ORDERBY_LAST_MODIFIED, Collector::ORDERBY_SEQUENCE])) {
@@ -181,7 +185,7 @@ class IssueHandler extends APIHandler
                     $collector->searchPhrase($val);
                     break;
                 case 'doiStatus':
-                    $collector->filterByDoiStatuses(array_map('intval', $this->paramToArray($val)));
+                    $collector->filterByDoiStatuses(array_map('intval', paramToArray($val)));
                     break;
                 case 'hasDois':
                     $collector->filterByHasDois((bool) $val, $context->getEnabledDoiTypes());
@@ -190,41 +194,39 @@ class IssueHandler extends APIHandler
 
         $collector->filterByContextIds([$context->getId()]);
 
-        Hook::call('API::issues::params', [&$collector, $slimRequest]);
+        Hook::call('API::issues::params', [&$collector, $illuminateRequest]);
 
         // You must be a manager or site admin to access unpublished Issues
         $isAdmin = $currentUser->hasRole([Role::ROLE_ID_MANAGER], $context->getId()) || $currentUser->hasRole([Role::ROLE_ID_SITE_ADMIN], \PKP\core\PKPApplication::CONTEXT_SITE);
         if (isset($collector->isPublished) && !$collector->isPublished && !$isAdmin) {
-            return $response->withStatus(403)->withJsonError('api.submissions.403.unpublishedIssues');
+            return response()->json([
+                'error' => __('api.submissions.403.unpublishedIssues'),
+            ], Response::HTTP_FORBIDDEN);
         } elseif (!$isAdmin) {
             $collector->filterByPublished(true);
         }
 
         $issues = $collector->getMany();
 
-        return $response->withJson([
+        return response()->json([
             'items' => Repo::issue()->getSchemaMap()->summarizeMany($issues, $context)->values(),
             'itemsMax' => $collector->limit(null)->offset(null)->getCount(),
-        ], 200);
+        ], Response::HTTP_OK);
     }
 
     /**
      * Get the current issue
-     *
-     * @param Request $slimRequest Slim request object
-     * @param APIResponse $response object
-     * @param array $args arguments
-     *
-     * @return APIResponse
      */
-    public function getCurrent($slimRequest, $response, $args)
+    public function getCurrent(Request $illuminateRequest): JsonResponse
     {
         $context = $this->getRequest()->getContext();
 
         $issue = Repo::issue()->getCurrent($context->getId());
 
         if (!$issue) {
-            return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
+            return response()->json([
+                'error' => __('api.404.resourceNotFound'),
+            ], Response::HTTP_NOT_FOUND);
         }
 
         $data = Repo::issue()->getSchemaMap()->map(
@@ -234,26 +236,22 @@ class IssueHandler extends APIHandler
             $this->getGenres($context->getId())
         );
 
-        return $response->withJson($data, 200);
+        return response()->json($data, Response::HTTP_OK);
     }
 
     /**
      * Get a single issue
-     *
-     * @param Request $slimRequest Slim request object
-     * @param APIResponse $response object
-     * @param array $args arguments
-     *
-     * @return APIResponse
      */
-    public function get($slimRequest, $response, $args)
+    public function get(Request $illuminateRequest): JsonResponse
     {
         $context = $this->getRequest()->getContext();
 
         $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
 
         if (!$issue) {
-            return $response->withStatus(404)->withJsonError('api.404.resourceNotFound');
+            return response()->json([
+                'error' => __('api.404.resourceNotFound'),
+            ], Response::HTTP_NOT_FOUND);
         }
 
         $data = Repo::issue()->getSchemaMap()->map(
@@ -263,7 +261,7 @@ class IssueHandler extends APIHandler
             $this->getGenres($context->getId())
         );
 
-        return $response->withJson($data, 200);
+        return response()->json($data, Response::HTTP_OK);
     }
 
     protected function getUserGroups(int $contextId): LazyCollection
@@ -275,8 +273,7 @@ class IssueHandler extends APIHandler
 
     protected function getGenres(int $contextId): array
     {
-        /** @var GenreDAO $genreDao */
-        $genreDao = DAORegistry::getDAO('GenreDAO');
+        $genreDao = DAORegistry::getDAO('GenreDAO'); /** @var GenreDAO $genreDao */
         return $genreDao->getByContextId($contextId)->toArray();
     }
 }

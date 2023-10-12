@@ -1,13 +1,13 @@
 <?php
 
 /**
- * @file api/v1/dois/DoiHandler.php
+ * @file api/v1/dois/DoiController.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2023 Simon Fraser University
+ * Copyright (c) 2023 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class DoiHandler
+ * @class DoiController
  *
  * @ingroup api_v1_dois
  *
@@ -20,70 +20,53 @@ namespace APP\API\v1\dois;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\jobs\doi\DepositIssue;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Route;
 use PKP\context\Context;
-use PKP\core\APIResponse;
 use PKP\doi\Doi;
 use PKP\doi\exceptions\DoiException;
-use PKP\security\Role;
-use Slim\Http\Request as SlimRequest;
-use Slim\Http\Response;
 
-class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
+class DoiController extends \PKP\API\v1\dois\PKPDoiController
 {
     /**
-     * Constructor
+     * @copydoc \PKP\core\PKPBaseController::getGroupRoutes()
      */
-    public function __construct()
+    public function getGroupRoutes(): void
     {
-        $this->_handlerPath = 'dois';
-        $this->_endpoints = array_merge_recursive($this->_endpoints, [
-            'POST' => [
-                [
-                    'pattern' => $this->getEndpointPattern() . '/issues/assignDois',
-                    'handler' => [$this, 'assignIssueDois'],
-                    'roles' => [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN]
-                ]
-            ],
-            'PUT' => [
-                [
-                    'pattern' => $this->getEndpointPattern() . '/issues/export',
-                    'handler' => [$this, 'exportIssues'],
-                    'roles' => [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
-                ],
-                [
-                    'pattern' => $this->getEndpointPattern() . '/issues/deposit',
-                    'handler' => [$this, 'depositIssues'],
-                    'roles' => [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
-                ],
-                [
-                    'pattern' => $this->getEndpointPattern() . '/issues/markRegistered',
-                    'handler' => [$this, 'markIssuesRegistered'],
-                    'roles' => [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
-                ],
-                [
-                    'pattern' => $this->getEndpointPattern() . '/issues/markUnregistered',
-                    'handler' => [$this, 'markIssuesUnregistered'],
-                    'roles' => [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
-                ],
-                [
-                    'pattern' => $this->getEndpointPattern() . '/issues/markStale',
-                    'handler' => [$this, 'markIssuesStale'],
-                    'roles' => [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN],
-                ],
-            ],
-        ]);
-        parent::__construct();
+        parent::getGroupRoutes();
+        
+        Route::post('issues/assignDois', $this->assignIssueDois(...))
+            ->name('doi.issues.assignDois');
+
+        Route::put('issues/export', $this->exportIssues(...))
+            ->name('doi.issues.export');
+
+        Route::put('issues/deposit', $this->depositIssues(...))
+            ->name('doi.issues.deposite');
+
+        Route::put('issues/markRegistered', $this->markIssuesRegistered(...))
+            ->name('doi.issues.markRegistered');
+
+        Route::put('issues/markUnregistered', $this->markIssuesUnregistered(...))
+            ->name('doi.issues.markUnregistered');
+
+        Route::put('issues/markStale', $this->markIssuesStale(...))
+            ->name('doi.issues.markStale');
     }
 
     /**
      * Export XML for configured DOI registration agency
      */
-    public function exportIssues(SlimRequest $slimRequest, APIResponse $response, array $args): Response
+    public function exportIssues(Request $illuminateRequest): JsonResponse
     {
         // Retrieve and validate issues
-        $requestIds = $slimRequest->getParsedBody()['ids'] ?? [];
+        $requestIds = $illuminateRequest->input()['ids'] ?? [];
         if (!count($requestIds)) {
-            return $response->withStatus(404)->withJsonError('api.dois.404.noPubObjectIncluded');
+            return response()->json([
+                'error' => __('api.dois.404.noPubObjectIncluded')
+            ], Response::HTTP_NOT_FOUND);
         }
 
         $context = $this->getRequest()->getContext();
@@ -97,7 +80,9 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
 
         $invalidIds = array_diff($requestIds, $validIds);
         if (count($invalidIds)) {
-            return $response->withStatus(400)->withJsonError('api.dois.400.invalidPubObjectIncluded');
+            return response()->json([
+                'error' => __('api.dois.400.invalidPubObjectIncluded')
+            ], Response::HTTP_BAD_REQUEST);
         }
 
         /** @var Issue[] $issues */
@@ -107,31 +92,42 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
         }
 
         if (empty($issues[0])) {
-            return $response->withStatus(404)->withJsonError('api.dois.404.doiNotFound');
+            return response()->json([
+                'error' => __('api.dois.404.doiNotFound')
+            ], Response::HTTP_NOT_FOUND);
         }
 
         $agency = $context->getConfiguredDoiAgency();
         if ($agency === null) {
-            return $response->withStatus(400)->withJsonError('api.dois.400.noRegistrationAgencyConfigured');
+            return response()->json([
+                'error' => __('api.dois.400.noRegistrationAgencyConfigured')
+            ], Response::HTTP_BAD_REQUEST);
         }
 
         // Invoke IDoiRegistrationAgency::exportIssues
         $responseData = $agency->exportIssues($issues, $context);
         if (!empty($responseData['xmlErrors'])) {
-            return $response->withStatus(400)->withJsonError('api.dois.400.xmlExportFailed');
+            return response()->json([
+                'error' => __('api.dois.400.xmlExportFailed')
+            ], Response::HTTP_BAD_REQUEST);
         }
-        return $response->withJson(['temporaryFileId' => $responseData['temporaryFileId']], 200);
+
+        return response()->json([
+            'temporaryFileId' => $responseData['temporaryFileId']
+        ], Response::HTTP_OK);
     }
 
     /**
      * Deposit XML for configured DOI registration agency
      */
-    public function depositIssues(SlimRequest $slimRequest, APIResponse $response, array $args): Response
+    public function depositIssues(Request $illuminateRequest): JsonResponse
     {
         // Retrieve and validate issues
-        $requestIds = $slimRequest->getParsedBody()['ids'] ?? [];
+        $requestIds = $illuminateRequest->input()['ids'] ?? [];
         if (!count($requestIds)) {
-            return $response->withStatus(404)->withJsonError('api.dois.404.noPubObjectIncluded');
+            return response()->json([
+                'error' => __('api.dois.404.noPubObjectIncluded')
+            ], Response::HTTP_NOT_FOUND);
         }
 
         $context = $this->getRequest()->getContext();
@@ -145,12 +141,16 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
 
         $invalidIds = array_diff($requestIds, $validIds);
         if (count($invalidIds)) {
-            return $response->withStatus(400)->withJsonError('api.dois.400.invalidPubObjectIncluded');
+            return response()->json([
+                'error' => __('api.dois.400.invalidPubObjectIncluded')
+            ], Response::HTTP_BAD_REQUEST);
         }
 
         $agency = $context->getConfiguredDoiAgency();
         if ($agency === null) {
-            return $response->withStatus(400)->withJsonError('api.dois.400.noRegistrationAgencyConfigured');
+            return response()->json([
+                'error' => __('api.dois.400.noRegistrationAgencyConfigured')
+            ], Response::HTTP_BAD_REQUEST);
         }
 
         $doisToUpdate = [];
@@ -160,18 +160,20 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
         }
         Repo::doi()->markSubmitted($doisToUpdate);
 
-        return $response->withStatus(200);
+        return response()->json([], Response::HTTP_OK);
     }
 
     /**
      * Mark submission DOIs as registered with a DOI registration agency.
      */
-    public function markIssuesRegistered(SlimRequest $slimRequest, APIResponse $response, array $args): Response
+    public function markIssuesRegistered(Request $illuminateRequest): JsonResponse
     {
         // Retrieve issues
-        $requestIds = $slimRequest->getParsedBody()['ids'] ?? [];
+        $requestIds = $illuminateRequest->input()['ids'] ?? [];
         if (!count($requestIds)) {
-            return $response->withStatus(404)->withJsonError('api.dois.404.noPubObjectIncluded');
+            return response()->json([
+                'error' => __('api.dois.404.noPubObjectIncluded')
+            ], Response::HTTP_NOT_FOUND);
         }
 
         $context = $this->getRequest()->getContext();
@@ -190,17 +192,12 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
                 return new DoiException(DoiException::ISSUE_NOT_PUBLISHED, $issueTitle, $issueTitle);
             }, $invalidIds);
 
-            return $response->withJson(
-                [
-                    'failedDoiActions' => array_map(
-                        function (DoiException $item) {
-                            return $item->getMessage();
-                        },
-                        $failedDoiActions
-                    )
-                ],
-                400
-            );
+            return response()->json(['failedDoiActions' => array_map(
+                function (DoiException $item) {
+                    return $item->getMessage();
+                },
+                $failedDoiActions
+            )], Response::HTTP_BAD_REQUEST);
         }
 
         foreach ($requestIds as $id) {
@@ -210,18 +207,20 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
             }
         }
 
-        return $response->withStatus(200);
+        return response()->json([], Response::HTTP_OK);
     }
 
     /**
      * Mark issues DOIs as no longer registered with a DOI registration agency.
      */
-    public function markIssuesUnregistered(SlimRequest $slimRequest, APIResponse $response, array $args): Response
+    public function markIssuesUnregistered(Request $illuminateRequest): JsonResponse
     {
         // Retrieve issues
-        $requestIds = $slimRequest->getParsedBody()['ids'] ?? [];
+        $requestIds = $illuminateRequest->input()['ids'] ?? [];
         if (!count($requestIds)) {
-            return $response->withStatus(404)->withJsonError('api.dois.404.noPubObjectIncluded');
+            return response()->json([
+                'error' => __('api.dois.404.noPubObjectIncluded')
+            ], Response::HTTP_NOT_FOUND);
         }
 
         $context = $this->getRequest()->getContext();
@@ -239,17 +238,12 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
                 return new DoiException(DoiException::INCORRECT_ISSUE_CONTEXT, $issueTitle, $issueTitle);
             }, $invalidIds);
 
-            return $response->withJson(
-                [
-                    'failedDoiActions' => array_map(
-                        function (DoiException $item) {
-                            return $item->getMessage();
-                        },
-                        $failedDoiActions
-                    )
-                ],
-                400
-            );
+            return response()->json(['failedDoiActions' => array_map(
+                function (DoiException $item) {
+                    return $item->getMessage();
+                },
+                $failedDoiActions
+            )], Response::HTTP_BAD_REQUEST);
         }
 
         foreach ($requestIds as $id) {
@@ -259,18 +253,20 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
             }
         }
 
-        return $response->withStatus(200);
+        return response()->json([], Response::HTTP_OK);
     }
 
     /**
      * Mark submission DOIs as stale, indicating a need to be resubmitted to registration agency with updated metadata.
      */
-    public function markIssuesStale(SlimRequest $slimRequest, APIResponse $response, array $args): Response
+    public function markIssuesStale(Request $illuminateRequest): JsonResponse
     {
         // Retrieve issues
-        $requestIds = $slimRequest->getParsedBody()['ids'] ?? [];
+        $requestIds = $illuminateRequest->input()['ids'] ?? [];
         if (!count($requestIds)) {
-            return $response->withStatus(404)->withJsonError('api.dois.404.noPubObjectIncluded');
+            return response()->json([
+                'error' => __('api.dois.404.noPubObjectIncluded')
+            ], Response::HTTP_NOT_FOUND);
         }
 
         $context = $this->getRequest()->getContext();
@@ -291,17 +287,12 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
                 return new DoiException(DoiException::INCORRECT_STALE_STATUS, $issueTitle, $issueTitle);
             }, $invalidIds);
 
-            return $response->withJson(
-                [
-                    'failedDoiActions' => array_map(
-                        function (DoiException $item) {
-                            return $item->getMessage();
-                        },
-                        $failedDoiActions
-                    )
-                ],
-                400
-            );
+            return response()->json(['failedDoiActions' => array_map(
+                function (DoiException $item) {
+                    return $item->getMessage();
+                },
+                $failedDoiActions
+            )], Response::HTTP_BAD_REQUEST);
         }
 
         foreach ($requestIds as $id) {
@@ -309,24 +300,28 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
             Repo::doi()->markStale($doiIds);
         }
 
-        return $response->withStatus(200);
+        return response()->json([], Response::HTTP_OK);
     }
 
     /**
      * Assign DOIs to issue
      */
-    public function assignIssueDois(SlimRequest $slimRequest, APIResponse $response, array $args): Response
+    public function assignIssueDois(Request $illuminateRequest): JsonResponse
     {
         // Retrieve issues
-        $ids = $slimRequest->getParsedBody()['ids'] ?? [];
+        $ids = $illuminateRequest->input()['ids'] ?? [];
         if (!count($ids)) {
-            return $response->withStatus(404)->withJsonError('api.issue.404.issuesNotFound');
+            return response()->json([
+                'error' => __('api.issue.404.issuesNotFound'),
+            ], Response::HTTP_NOT_FOUND);
         }
 
         $context = $this->getRequest()->getContext();
         $doiPrefix = $context->getData(Context::SETTING_DOI_PREFIX);
         if (empty($doiPrefix)) {
-            return $response->withStatus(403)->withJsonError('api.dois.403.prefixRequired');
+            return response()->json([
+                'error' => __('api.dois.403.prefixRequired'),
+            ], Response::HTTP_FORBIDDEN);
         }
 
         $failedDoiActions = [];
@@ -341,20 +336,17 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
         }
 
         if (!empty($failedDoiActions)) {
-            return $response->withJson(
-                [
-                    'failedDoiActions' => array_map(
-                        function (DoiException $item) {
-                            return $item->getMessage();
-                        },
-                        $failedDoiActions
-                    )
-                ],
-                400
-            );
+            return response()->json(['failedDoiActions' => array_map(
+                function (DoiException $item) {
+                    return $item->getMessage();
+                },
+                $failedDoiActions
+            )], Response::HTTP_BAD_REQUEST);
         }
 
-        return $response->withJson(['failedDoiActions' => $failedDoiActions], 200);
+        return response()->json([
+            'failedDoiActions' => $failedDoiActions
+        ], Response::HTTP_OK);
     }
 
     /**
