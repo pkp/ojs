@@ -1,12 +1,13 @@
 # Pia Piontkowitz <pia.piontkowitz@rub.de>, 2021, 2022, 2023.
 # Felix Henn <shenn@ub.uni-koeln.de>, 2022.
+# Martin Brändle <martin.braendle@uzh.ch>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2023-04-26 14:01+0000\n"
-"Last-Translator: Pia Piontkowitz <pia.piontkowitz@rub.de>\n"
+"PO-Revision-Date: 2023-10-12 19:30+0000\n"
+"Last-Translator: Martin Brändle <martin.braendle@uzh.ch>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/locale/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -2413,8 +2414,8 @@ msgstr ""
 
 msgid "notification.type.assignProductionUser"
 msgstr ""
-"Nutzen Sie den Hinzufügen-Link in der Teilnehmer/innen-Liste, um eine/n "
-"Nutzer/in zum Erzeugen von Fahnen einzutragen."
+"Nutzen Sie die Schaltfläche Zuweisen in der Teilnehmer/innen-Liste, um eine/"
+"n Nutzer/in zum Erzeugen von Fahnen einzutragen."
 
 msgid "notification.type.awaitingRepresentations"
 msgstr "Warte auf Fahnen."
