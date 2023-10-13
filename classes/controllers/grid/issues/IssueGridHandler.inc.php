@@ -451,7 +451,10 @@ class IssueGridHandler extends GridHandler {
 			}
 			// Assign pub ids
 			$assignPublicIdentifiersForm->readInputData();
-			if ($assignPublicIdentifiersForm->validate()) $assignPublicIdentifiersForm->execute();
+			if (!$assignPublicIdentifiersForm->validate()) {
+				return new JSONMessage(true, $assignPublicIdentifiersForm->fetch($request));
+			}
+			$assignPublicIdentifiersForm->execute();
 		}
 
 		$issue->setCurrent(1);
