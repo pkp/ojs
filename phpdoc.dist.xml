@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdocumentor
+        configVersion="3"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="https://www.phpdoc.org"
+>
+    <title>Open Journal Systems</title>
+    <paths>
+        <output>docs/dev/build</output>
+    </paths>
+    <version number="latest">
+        <api>
+            <default-package-name>APP</default-package-name>
+            <source dsn=".">
+                <path>.</path>
+            </source>
+            <ignore>
+                <path>**/tests</path>
+                <path>**/vendor</path>
+                <path>cache</path>
+            </ignore>
+            <include-source>true</include-source>
+            <output>api</output>
+        </api>
+        <guide>
+            <source dsn=".">
+                <path>docs/dev/guide</path>
+            </source>
+        </guide>
+    </version>
+    <setting name="guides.enabled" value="true"/>
+</phpdocumentor>
