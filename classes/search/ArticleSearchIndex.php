@@ -242,7 +242,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
     /**
      * @copydoc SubmissionSearchIndex::submissionChangesFinished()
      *
-     * @hook ArticleSearchIndex::articleChangesFinished
+     * @hook ArticleSearchIndex::articleChangesFinished []
      */
     public function submissionChangesFinished()
     {
