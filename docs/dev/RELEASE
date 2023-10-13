@@ -37,6 +37,7 @@ OJS release:
 2. Update release documentation:
 
     docs/release-notes/README-<VERSION>
+    php lib/pkp/tools/getHooks.php -r > docs/dev/guide/hooks.rst
 
 
 3. After committing any pending modifications, tag the release in git (both the
