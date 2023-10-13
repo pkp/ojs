@@ -111,6 +111,8 @@ class StatsIssueController extends PKPBaseController
      * Get usage stats for a set of issues
      *
      * Returns total views by toc and all galleys.
+     *
+     * @hook API::stats::issues::params [[&$allowedParams, $illuminateRequest]]
      */
     public function getMany(Request $illuminateRequest): StreamedResponse|JsonResponse
     {
@@ -202,6 +204,8 @@ class StatsIssueController extends PKPBaseController
     /**
      * Get the total TOC or issue galley views for a set of issues
      * in a timeline broken down by month or day
+     *
+     * @hook API::stats::issues::timeline::params [[&$allowedParams, $illuminateRequest]]
      */
     public function getManyTimeline(Request $illuminateRequest): StreamedResponse|JsonResponse
     {
@@ -272,6 +276,8 @@ class StatsIssueController extends PKPBaseController
 
     /**
      * Get a single issue's usage statistics
+     *
+     * @hook API::stats::issue::params [[&$allowedParams, $illuminateRequest]]
      */
     public function get(Request $illuminateRequest): JsonResponse
     {
@@ -306,6 +312,8 @@ class StatsIssueController extends PKPBaseController
     /**
      * Get the total TOC or issue galley views for an issue broken down by
      * month or day
+     *
+     * @hook API::stats::issue::timeline::params [[&$allowedParams, $illuminateRequest]]
      */
     public function getTimeline(Request $illuminateRequest): JsonResponse
     {

@@ -208,6 +208,8 @@ class IssueForm extends Form
 
     /**
      * Save issue settings.
+     *
+     * @hook issueform::execute [[$this, $issue]]
      */
     public function execute(...$functionArgs)
     {

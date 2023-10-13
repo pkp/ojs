@@ -22,7 +22,6 @@ namespace APP\core;
 use APP\facades\Repo;
 use APP\journal\JournalDAO;
 use APP\payment\ojs\OJSPaymentManager;
-use PKP\context\Context;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;

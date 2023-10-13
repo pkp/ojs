@@ -62,6 +62,8 @@ class NotificationManager extends PKPNotificationManager
      * @param Notification $notification
      *
      * @return string
+     *
+     * @hook NotificationManager::getNotificationMessage [[&$notification, &$message]]
      */
     public function getNotificationMessage($request, $notification)
     {

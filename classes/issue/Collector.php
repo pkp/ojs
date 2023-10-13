@@ -301,6 +301,8 @@ class Collector implements CollectorInterface
 
     /**
      * @inheritDoc
+     *
+     * @hook Issue::getMany::queryObject [[&$q, $this]]
      */
     public function getQueryBuilder(): Builder
     {

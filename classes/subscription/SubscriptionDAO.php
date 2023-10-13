@@ -394,6 +394,8 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
      * Generator function to create object.
      *
      * @return Subscription
+     *
+     * @hook SubscriptionDAO::_fromRow [[&$subscription, &$row]]
      */
     abstract public function newDataObject();
 
@@ -403,6 +405,8 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
      * @param array $row
      *
      * @return Subscription
+     *
+     * @hook SubscriptionDAO::_fromRow [[&$subscription, &$row]]
      */
     public function _fromRow($row)
     {

@@ -528,6 +528,8 @@ class IssueGridHandler extends GridHandler
      *
      * @param array $args
      * @param Request $request
+     *
+     * @hook IssueGridHandler::publishIssue [[&$issue]]
      */
     public function publishIssue($args, $request)
     {
@@ -659,6 +661,8 @@ class IssueGridHandler extends GridHandler
      *
      * @param array $args
      * @param Request $request
+     *
+     * @hook IssueGridHandler::unpublishIssue [[&$issue]]
      */
     public function unpublishIssue($args, $request)
     {

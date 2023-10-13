@@ -232,6 +232,8 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
      * @param array $row
      *
      * @return IndividualSubscription
+     *
+     * @hook IndividualSubscriptionDAO::_fromRow [[&$individualSubscription, &$row]]
      */
     public function _fromRow($row)
     {

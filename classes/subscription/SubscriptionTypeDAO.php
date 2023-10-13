@@ -159,6 +159,8 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
      * @param array $row
      *
      * @return SubscriptionType
+     *
+     * @hook SubscriptionTypeDAO::_fromRow [[&$subscriptionType, &$row]]
      */
     public function _fromRow($row)
     {

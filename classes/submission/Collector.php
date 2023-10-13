@@ -15,7 +15,6 @@ namespace APP\submission;
 
 use APP\facades\Repo;
 use Illuminate\Database\Query\Builder;
-use PKP\doi\Doi;
 
 class Collector extends \PKP\submission\Collector
 {

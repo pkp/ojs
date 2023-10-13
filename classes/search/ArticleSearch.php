@@ -319,6 +319,8 @@ class ArticleSearch extends SubmissionSearch
      *
      * @return null|array An array of string keywords or null
      * if some kind of error occurred.
+     *
+     * @hook ArticleSearch::getSimilarityTerms [[$submissionId, &$searchTerms]]
      */
     public function getSimilarityTerms($submissionId)
     {
@@ -361,6 +363,8 @@ class ArticleSearch extends SubmissionSearch
 
     /**
      * See SubmissionSearch::getResultSetOrderingOptions()
+     *
+     * @hook SubmissionSearch::getResultSetOrderingOptions [[$context, &$resultSetOrderingOptions]]
      */
     public function getResultSetOrderingOptions($request)
     {

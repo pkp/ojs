@@ -122,6 +122,9 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
      *
      * @param string $hookName
      * @param array $args
+     *
+     * @hook HtmlArticleGalleyPlugin::articleDownload [[$article, &$galley, &$fileId]]
+     * @hook HtmlArticleGalleyPlugin::articleDownloadFinished [[&$returner]]
      */
     public function articleDownloadCallback($hookName, $args)
     {

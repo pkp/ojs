@@ -41,6 +41,8 @@ class IssueAction
      * @param \APP\journal\Journal $journal
      *
      * @return bool
+     *
+     * @hook IssueAction::subscriptionRequired [[&$journal, &$issue, &$result]]
      */
     public function subscriptionRequired($issue, $journal)
     {
@@ -99,6 +101,8 @@ class IssueAction
      * @param int $articleId Article ID (optional)
      *
      * @return bool
+     *
+     * @hook IssueAction::subscribedUser [[&$user, &$journal, &$issueId, &$articleId, &$result]]
      */
     public function subscribedUser($user, $journal, $issueId = null, $articleId = null)
     {
@@ -144,6 +148,8 @@ class IssueAction
      * @param int $articleId Article ID (optional)
      *
      * @return bool
+     *
+     * @hook IssueAction::subscribedDomain [[&$request, &$journal, &$issueId, &$articleId, &$result]]
      */
     public function subscribedDomain($request, $journal, $issueId = null, $articleId = null)
     {

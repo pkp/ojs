@@ -46,6 +46,8 @@ class StatsIssueService
 
     /**
      * Get a count of all issues with stats that match the request arguments
+     *
+     * @hook StatsIssue::getCount::queryBuilder [[&$metricsQB, $args]]
      */
     public function getCount(array $args): int
     {
@@ -62,6 +64,8 @@ class StatsIssueService
 
     /**
      * Get the issues with total stats that match the request arguments
+     *
+     * @hook StatsIssue::getTotals::queryBuilder [[&$metricsQB, $args]]
      */
     public function getTotals(array $args): array
     {
@@ -82,6 +86,8 @@ class StatsIssueService
     /**
      * Get metrics by type (toc, issue galley) for an issue
      * Assumes that the issue ID is provided in parameters
+     *
+     * @hook StatsIssue::getTotalsByType::queryBuilder [[&$metricsQB, $args]]
      */
     public function getTotalsByType(int $issueId, int $contextId, ?string $dateStart, ?string $dateEnd): array
     {
@@ -134,6 +140,8 @@ class StatsIssueService
 
     /**
      * Get a QueryBuilder object with the passed args
+     *
+     * @hook StatsIssue::queryBuilder [[&$statsQB, $args]]
      */
     public function getQueryBuilder(array $args = []): StatsIssueQueryBuilder
     {

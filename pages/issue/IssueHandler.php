@@ -119,6 +119,8 @@ class IssueHandler extends Handler
      *
      * @param array $args
      * @param \APP\core\Request $request
+     *
+     * @hook IssueHandler::view::galley [[&$request, &$issue, &$galley]]
      */
     public function view($args, $request)
     {
@@ -192,6 +194,8 @@ class IssueHandler extends Handler
      *
      * @param array $args ($issueId, $galleyId)
      * @param \APP\core\Request $request
+     *
+     * @hook IssueHandler::download [[&$issue, &$galley]]
      */
     public function download($args, $request)
     {

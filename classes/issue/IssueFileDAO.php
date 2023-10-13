@@ -88,6 +88,8 @@ class IssueFileDAO extends DAO
      * @param array $row
      *
      * @return IssueFile
+     *
+     * @hook IssueFileDAO::_returnIssueFileFromRow [[&$issueFile, &$row]]
      */
     public function _fromRow($row)
     {
