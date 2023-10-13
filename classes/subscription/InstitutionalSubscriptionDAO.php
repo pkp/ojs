@@ -613,6 +613,8 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
      * @param array $row
      *
      * @return InstitutionalSubscription
+     *
+     * @hook InstitutionalSubscriptionDAO::_fromRow [[&$institutionalSubscription, &$row]]
      */
     public function _fromRow($row)
     {

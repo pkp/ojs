@@ -26,6 +26,8 @@ class SitemapHandler extends PKPSitemapHandler
 {
     /**
      * @copydoc PKPSitemapHandler_createContextSitemap()
+     *
+     * @hook SitemapHandler::createJournalSitemap [[&$doc]]
      */
     public function _createContextSitemap($request)
     {

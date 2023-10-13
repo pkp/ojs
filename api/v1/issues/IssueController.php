@@ -108,6 +108,8 @@ class IssueController extends PKPBaseController
 
     /**
      * Get a collection of issues
+     *
+     * @hook API::issues::params [[&$collector, $illuminateRequest]]
      */
     public function getMany(Request $illuminateRequest): JsonResponse
     {

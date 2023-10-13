@@ -87,6 +87,8 @@ class IssueAccessForm extends Form
      * @copydoc Form::execute()
      *
      * @return int Issue ID for created/updated issue
+     *
+     * @hook IssueAccessForm::execute [[$this, $this->_issue]]
      */
     public function execute(...$functionArgs)
     {

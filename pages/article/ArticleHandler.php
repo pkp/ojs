@@ -207,6 +207,9 @@ class ArticleHandler extends Handler
      *
      * @param array $args
      * @param \APP\core\Request $request
+     *
+     * @hook ArticleHandler::view [[&$request, &$issue, &$article, $publication]]
+     * @hook ArticleHandler::view::galley [[&$request, &$issue, &$this->galley, &$article, $publication]]
      */
     public function view($args, $request)
     {
@@ -447,6 +450,9 @@ class ArticleHandler extends Handler
      *
      * @param array $args
      * @param \APP\core\Request $request
+     *
+     * @hook ArticleHandler::download [[$this->article, &$this->galley, &$this->submissionFileId]]
+     * @hook FileManager::downloadFileFinished [[&$returner]]
      */
     public function download($args, $request)
     {

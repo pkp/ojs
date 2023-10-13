@@ -36,7 +36,7 @@ class DoiController extends \PKP\API\v1\dois\PKPDoiController
     public function getGroupRoutes(): void
     {
         parent::getGroupRoutes();
-        
+
         Route::post('issues/assignDois', $this->assignIssueDois(...))
             ->name('doi.issues.assignDois');
 

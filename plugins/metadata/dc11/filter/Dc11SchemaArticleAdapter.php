@@ -61,6 +61,8 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
      * @param Submission $article
      *
      * @return MetadataDescription
+     *
+     * @hook Dc11SchemaArticleAdapter::extractMetadataFromDataObject [[$this, $article, $journal, $issue, &$dc11Description]]
      */
     public function &extractMetadataFromDataObject(&$article)
     {

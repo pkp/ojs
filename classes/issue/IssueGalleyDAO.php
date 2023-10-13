@@ -30,6 +30,8 @@ class IssueGalleyDAO extends \PKP\db\DAO
      * @param int $issueId optional
      *
      * @return IssueGalley
+     *
+     * @hook IssueGalleyDAO::getById [[&$galleyId, &$issueId, &$returner]]
      */
     public function getById($galleyId, $issueId = null)
     {
@@ -105,6 +107,8 @@ class IssueGalleyDAO extends \PKP\db\DAO
      * @param int $issueId
      *
      * @return IssueGalley
+     *
+     * @hook IssueGalleyDAO::getByPubId [[&$pubIdType, &$pubId, &$issueId, &$returner]]
      */
     public function getByPubId($pubIdType, $pubId, $issueId)
     {
@@ -142,6 +146,8 @@ class IssueGalleyDAO extends \PKP\db\DAO
      * @param int $issueId
      *
      * @return array<int,IssueGalley> IssueGalleys
+     *
+     * @hook IssueGalleyDAO::getGalleysByIssue [[&$galleys, &$issueId]]
      */
     public function getByIssueId($issueId)
     {
@@ -258,6 +264,8 @@ class IssueGalleyDAO extends \PKP\db\DAO
      * @param array $row
      *
      * @return IssueGalley
+     *
+     * @hook IssueGalleyDAO::_fromRow [[&$galley, &$row]]
      */
     public function _fromRow($row)
     {
@@ -291,6 +299,8 @@ class IssueGalleyDAO extends \PKP\db\DAO
      * Insert a new IssueGalley.
      *
      * @param IssueGalley $galley
+     *
+     * @hook IssueGalleyDAO::insertObject [[&$galley, $galley->getId()]]
      */
     public function insertObject($galley)
     {
@@ -364,6 +374,8 @@ class IssueGalleyDAO extends \PKP\db\DAO
      *
      * @param int $galleyId
      * @param int $issueId optional
+     *
+     * @hook IssueGalleyDAO::deleteById [[&$galleyId, &$issueId]]
      */
     public function deleteById($galleyId, $issueId = null)
     {

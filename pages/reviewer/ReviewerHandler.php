@@ -53,9 +53,6 @@ class ReviewerHandler extends PKPReviewerHandler
     /**
      * @copydoc PKPHandler::authorize()
      *
-     * @param mixed $request
-     * @param mixed $args
-     * @param mixed $roleAssignments
      */
     public function authorize($request, &$args, $roleAssignments)
     {

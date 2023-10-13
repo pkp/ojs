@@ -32,6 +32,8 @@ class ArticleSearchIndex extends SubmissionSearchIndex
 {
     /**
      * @copydoc SubmissionSearchIndex::submissionMetadataChanged()
+     *
+     * @hook ArticleSearchIndex::articleMetadataChanged [[$submission]]
      */
     public function submissionMetadataChanged($submission)
     {
@@ -96,6 +98,8 @@ class ArticleSearchIndex extends SubmissionSearchIndex
      * @param int $articleId
      * @param int $type
      * @param SubmissionFile $submissionFile
+     *
+     * @hook ArticleSearchIndex::submissionFileChanged [[$articleId, $type, $submissionFile->getId()]]
      */
     public function submissionFileChanged($articleId, $type, $submissionFile)
     {
@@ -140,6 +144,8 @@ class ArticleSearchIndex extends SubmissionSearchIndex
      * comments.
      *
      * @param Submission $article
+     *
+     * @hook ArticleSearchIndex::submissionFilesChanged [[$article]]
      */
     public function submissionFilesChanged($article)
     {
@@ -190,6 +196,8 @@ class ArticleSearchIndex extends SubmissionSearchIndex
      * @param int $articleId
      * @param int $type optional
      * @param int $assocId optional
+     *
+     * @hook ArticleSearchIndex::submissionFileDeleted [[$articleId, $type, $assocId]]
      */
     public function submissionFileDeleted($articleId, $type = null, $assocId = null)
     {
@@ -215,6 +223,8 @@ class ArticleSearchIndex extends SubmissionSearchIndex
      * comments.
      *
      * @param int $articleId
+     *
+     * @hook ArticleSearchIndex::articleDeleted [[$articleId]]
      */
     public function articleDeleted($articleId)
     {
@@ -231,6 +241,8 @@ class ArticleSearchIndex extends SubmissionSearchIndex
 
     /**
      * @copydoc SubmissionSearchIndex::submissionChangesFinished()
+     *
+     * @hook ArticleSearchIndex::articleChangesFinished
      */
     public function submissionChangesFinished()
     {
@@ -255,6 +267,8 @@ class ArticleSearchIndex extends SubmissionSearchIndex
      *  implementation does not support journal-specific re-indexing
      *  as index data is not partitioned by journal.
      * @param array $switches Optional index administration switches.
+     *
+     * @hook ArticleSearchIndex::rebuildIndex [[$log, $journal, $switches]]
      */
     public function rebuildIndex($log = false, $journal = null, $switches = [])
     {

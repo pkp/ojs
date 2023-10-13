@@ -19,7 +19,6 @@ use APP\file\IssueFileManager;
 use APP\file\PublicFileManager;
 use APP\journal\JournalDAO;
 use Illuminate\Support\Collection;
-use PKP\context\Context;
 use PKP\db\DAORegistry;
 use PKP\doi\exceptions\DoiException;
 use PKP\plugins\Hook;
@@ -71,14 +70,14 @@ class Repository
     public function get(int $id, ?int $journalId = null): ?Issue
     {
         // TODO: Caching as currently setup never properly caches objects and always fires a _cacheMiss()
-//        if ($useCache) {
-//            $cache = $this->dao->_getCache('issues');
-//            $returner = $cache->get($id);
-//            if ($returner && $contextId != null && $contextId != $returner->getJournalId()) {
-//                $returner = null;
-//            }
-//            return $returner;
-//        }
+        //        if ($useCache) {
+        //            $cache = $this->dao->_getCache('issues');
+        //            $returner = $cache->get($id);
+        //            if ($returner && $contextId != null && $contextId != $returner->getJournalId()) {
+        //                $returner = null;
+        //            }
+        //            return $returner;
+        //        }
 
         return $this->dao->get($id, $journalId);
     }
@@ -110,6 +109,8 @@ class Repository
      * @throws \Exception
      *
      * @return array A key/value array with validation errors. Empty if no errors
+     *
+     * @hook Issue::validate [[&$errors, $object, $props, $allowedLocales, $primaryLocale]]
      */
     public function validate(?Issue $object, array $props, array $allowedLocales, string $primaryLocale): array
     {

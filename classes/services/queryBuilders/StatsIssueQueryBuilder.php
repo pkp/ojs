@@ -96,6 +96,8 @@ class StatsIssueQueryBuilder extends PKPStatsQueryBuilder
 
     /**
      * @copydoc PKPStatsQueryBuilder::_getObject()
+     *
+     * @hook StatsIssue::queryObject [[&$q, $this]]
      */
     protected function _getObject(): Builder
     {
