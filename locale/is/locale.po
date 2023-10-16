@@ -2,7 +2,7 @@
 # Haukur Arnthorsson <haukura@haukura.is>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-10-07 03:44+0000\n"
+"PO-Revision-Date: 2023-10-16 13:22+0000\n"
 "Last-Translator: Haukur Arnthorsson <haukura@haukura.is>\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/locale/is/"
 ">\n"
@@ -495,7 +495,7 @@ msgid "issue.number"
 msgstr "Númer"
 
 msgid "issue.vol"
-msgstr "Tbl."
+msgstr "Árg."
 
 msgid "issue.no"
 msgstr "Nr."
