@@ -27,8 +27,8 @@ use APP\submission\Submission;
 use Mockery;
 use Mockery\MockInterface;
 use PHPUnit\Framework\MockObject\MockObject;
-use PKP\core\ArrayItemIterator;
 use PKP\db\DAORegistry;
+use PKP\db\DAOResultFactory;
 use PKP\plugins\Hook;
 use PKP\submissionFile\Collector as SubmissionFileCollector;
 use PKP\submissionFile\SubmissionFile;
@@ -411,10 +411,15 @@ class ArticleSearchIndexTest extends PKPTestCase
             ->getMock();
 
         // Mock an empty result set.
-        $journals = [];
-        $journalsIterator = new ArrayItemIterator($journals);
+        $journalsIterator = $this->getMockBuilder(DAOResultFactory::class)
+            ->disableOriginalConstructor()
+            ->onlyMethods(['toIterator'])
+            ->getMock();
+        $journalsIterator
+            ->method('toIterator')
+            ->will($this->returnValue([]));
 
-        // Mock the getById() method.
+        // Mock the getAll() method.
         $journalDao->expects($this->any())
             ->method('getAll')
             ->will($this->returnValue($journalsIterator));
