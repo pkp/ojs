@@ -182,6 +182,7 @@ class PubMedExportPlugin extends ImportExportPlugin
     public function exportIssues($issueIds, $context, $user)
     {
         $filterDao = DAORegistry::getDAO('FilterDAO'); /** @var FilterDAO $filterDao */
+        /** @var \APP\plugins\importexport\pubmed\filter\ArticlePubMedXmlFilter[] $pubmedExportFilters */
         $pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
         assert(count($pubmedExportFilters) == 1); // Assert only a single serialization filter
         $exportFilter = array_shift($pubmedExportFilters);
@@ -192,7 +193,8 @@ class PubMedExportPlugin extends ImportExportPlugin
             ->getMany();
 
         libxml_use_internal_errors(true);
-        $submissionXml = $exportFilter->execute($submissions->toArray(), true);
+        $input = $submissions->toArray();
+        $submissionXml = $exportFilter->execute($input, true);
         $xml = $submissionXml->saveXml();
         $errors = array_filter(libxml_get_errors(), function ($a) {
             return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
