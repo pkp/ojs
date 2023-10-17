@@ -25,6 +25,7 @@ use APP\journal\JournalDAO;
 use APP\notification\NotificationManager;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
+use PKP\core\EntityDAO;
 use PKP\core\JSONMessage;
 use PKP\db\DAO;
 use PKP\db\DAORegistry;
@@ -100,6 +101,8 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
         foreach ($this->_getDAOs() as $dao) {
             if ($dao instanceof SchemaDAO) {
                 Hook::add('Schema::get::' . $dao->schemaName, [$this, 'addToSchema']);
+            } elseif ($dao instanceof EntityDAO) {
+                Hook::add('Schema::get::' . $dao->schema, [$this, 'addToSchema']);
             } else {
                 Hook::add(strtolower_codesafe(get_class($dao)) . '::getAdditionalFieldNames', [&$this, 'getAdditionalFieldNames']);
             }
