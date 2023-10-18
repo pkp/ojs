@@ -383,7 +383,7 @@ class I7014_DoiMigration extends PKPI7014_DoiMigration
                 $status = Doi::STATUS_ERROR;
                 $registrationAgency = null;
                 if (in_array($item['datacite::status'], ['found', 'registered', 'markedRegistered'])) {
-                    if ($item['datacite::status'] === 'regisetered') {
+                    if ($item['datacite::status'] === 'registered') {
                         $registrationAgency = 'DataciteExportPlugin';
                     }
                     $status = Doi::STATUS_REGISTERED;
