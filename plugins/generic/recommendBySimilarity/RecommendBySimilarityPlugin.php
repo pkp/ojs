@@ -42,8 +42,9 @@ class RecommendBySimilarityPlugin extends GenericPlugin
 
         if (!Application::isUnderMaintenance() && $this->getEnabled($mainContextId)) {
             Hook::add('Templates::Article::Footer::PageFooter', function (string $hookName, array $params): bool {
+                $smarty = & $params[1];
                 $output = & $params[2];
-                $output .= $this->buildTemplate();
+                $output .= $this->buildTemplate($smarty);
                 return Hook::CONTINUE;
             });
         }
@@ -55,9 +56,9 @@ class RecommendBySimilarityPlugin extends GenericPlugin
      *
      * @see templates/article/footer.tpl
      */
-    private function buildTemplate(): ?string
+    private function buildTemplate($smarty): ?string
     {
-        $templateManager = TemplateManager::getManager();
+        $templateManager = TemplateManager::getManager($smarty);
         $submissionId = $templateManager->getTemplateVars('article')->getId();
 
         // If there's no keywords, quit
