@@ -92,7 +92,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
         }
 
         if (Application::isUnderMaintenance()) {
-            return false;
+            return true;
         }
 
         $this->addLocaleData();
