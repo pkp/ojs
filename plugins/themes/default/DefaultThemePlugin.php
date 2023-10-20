@@ -179,12 +179,9 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
 
         // Get homepage image and use as header background if useAsHeader is true
         $context = Application::get()->getRequest()->getContext();
-        if ($context && $this->getOption('useHomepageImageAsHeader')) {
+        if ($context && $this->getOption('useHomepageImageAsHeader') && ($homepageImage = $context->getLocalizedData('homepageImage'))) {
             $publicFileManager = new PublicFileManager();
             $publicFilesDir = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($context->getId());
-
-            $homepageImage = $context->getLocalizedData('homepageImage');
-
             $homepageImageUrl = $publicFilesDir . '/' . $homepageImage['uploadName'];
 
             $this->addStyle(
