@@ -42,6 +42,10 @@ New config.inc.php section for queues is added, with the following parameters:
 
 - The setting security.force_ssl, when enabled, will also set the "Secure" flag for the session cookie.
 
+New config.inc.php parameters added for emails:
+    - default (default value: sendmail), being the default mailer driver to be used for email delivery
+    - sendmail_path (default value: "/usr/sbin/sendmail -bs"), being the path to the sendmail program on the server
+
 New Features
 ------------
     #8490 #8484: Improved MariaDB testing and support
