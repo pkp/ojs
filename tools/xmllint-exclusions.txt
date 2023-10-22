@@ -12,3 +12,4 @@
 ./node_modules
 ./lib/ui-library/node_modules
 ./cypress/fixtures/export-issues.xml
+./phpdoc.dist.xml
