@@ -128,7 +128,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin
         }
 
         // Get limit setting, if any
-        $collector = Repo::announcement()->getCollector()->filterByContextIds([$journal->getId()]);
+        $collector = Repo::announcement()->getCollector()->filterByContextIds([$journal->getId()])->filterByActive();
         $recentItems = (int) $this->_parentPlugin->getSetting($journal->getId(), 'recentItems');
         if ($recentItems > 0) {
             $collector->limit($recentItems);
