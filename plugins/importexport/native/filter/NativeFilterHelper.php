@@ -137,13 +137,36 @@ class NativeFilterHelper extends \PKP\plugins\importexport\native\filter\PKPNati
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
             if ($n instanceof DOMElement) {
                 switch ($n->tagName) {
-                    case 'cover_image': $object->setCoverImage($n->textContent, $locale);
+                    case 'cover_image':
+                        $object->setCoverImage(
+                            preg_replace(
+                                "/[^a-z0-9\.\-]+/",
+                                '',
+                                str_replace(
+                                    [' ', '_', ':'],
+                                    '-',
+                                    strtolower($n->textContent)
+                                )
+                            ),
+                            $locale
+                        );
                         break;
-                    case 'cover_image_alt_text': $object->setCoverImageAltText($n->textContent, $locale);
+                    case 'cover_image_alt_text':
+                        $object->setCoverImageAltText($n->textContent, $locale);
                         break;
                     case 'embed':
+                        if (!$object->getCoverImage($locale)) {
+                            $deployment->addWarning(Application::ASSOC_TYPE_ISSUE, $object->getId(), __('plugins.importexport.common.error.coverImageNameUnspecified'));
+                            break;
+                        }
                         $publicFileManager = new PublicFileManager();
                         $filePath = $publicFileManager->getContextFilesPath($context->getId()) . '/' . $object->getCoverImage($locale);
+                        $allowedFileTypes = ['gif', 'jpg', 'png', 'webp'];
+                        $extension = pathinfo(strtolower($filePath), PATHINFO_EXTENSION);
+                        if (!in_array($extension, $allowedFileTypes)) {
+                            $deployment->addWarning(Application::ASSOC_TYPE_ISSUE, $object->getId(), __('plugins.importexport.common.error.invalidFileExtension'));
+                            break;
+                        }
                         file_put_contents($filePath, base64_decode($n->textContent));
                         break;
                     default:
