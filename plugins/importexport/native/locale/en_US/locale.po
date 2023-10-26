@@ -71,6 +71,12 @@ msgstr ""
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Unknown section {$param}"
 
+msgid "plugins.importexport.common.error.invalidFileExtension"
+msgstr "A cover image with an invalid file extension was specified."
+
+msgid "plugins.importexport.common.error.coverImageNameUnspecified"
+msgstr "A cover image was embedded without specifying a name."
+
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "The specified user, \"{$userName}\", does not exist."
 
