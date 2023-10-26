@@ -221,7 +221,7 @@ class IssueForm extends Form
             $issue = $this->issue;
         } else {
             $issue = Repo::issue()->newDataObject();
-            $this->issue =& $issue;
+            $this->issue = $issue;
             switch ($journal->getData('publishingMode')) {
                 case \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION:
                 case \APP\journal\Journal::PUBLISHING_MODE_NONE:
