@@ -213,8 +213,6 @@ class IssueForm extends Form
      */
     public function execute(...$functionArgs)
     {
-        parent::execute(...$functionArgs);
-
         $request = Application::get()->getRequest();
         $journal = $request->getJournal();
 
@@ -223,6 +221,7 @@ class IssueForm extends Form
             $issue = $this->issue;
         } else {
             $issue = Repo::issue()->newDataObject();
+            $this->issue = $issue;
             switch ($journal->getData('publishingMode')) {
                 case \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION:
                 case \APP\journal\Journal::PUBLISHING_MODE_NONE:
@@ -278,7 +277,7 @@ class IssueForm extends Form
 
         $issue->setCoverImageAltText($this->getData('coverImageAltText'), $locale);
 
-        Hook::call('issueform::execute', [$this, $issue]);
+        parent::execute(...$functionArgs);
 
         Repo::issue()->edit($issue, []);
     }
