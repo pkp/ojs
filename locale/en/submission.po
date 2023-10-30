@@ -477,3 +477,12 @@ msgstr "Pending"
 
 msgid "submission.dashboard.view.reviewerAssignmentsFinished"
 msgstr "Completed / Declined"
+
+msgid "submission.dashboard.view.reviewAssignments.all"
+msgstr "All assignments"
+
+msgid "submission.dashboard.view.reviewAssignments.pending"
+msgstr "Pending"
+
+msgid "submission.dashboard.view.reviewAssignments.archived"
+msgstr "Completed / Declined"
