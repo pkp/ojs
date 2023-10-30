@@ -1,18 +1,19 @@
 # Ruslan Shodmonov <belovedspy1209@gmail.com>, 2021.
 # OBIDJON ABDULLOYEV <obidjon1987@mail.ru>, 2022.
 # Mironshoh Sattorov <s.mironshoh23@gmail.com>, 2022.
+# Темирбулатович <diac.96@mail.ru>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-04-08 01:00+0000\n"
-"Last-Translator: Mironshoh Sattorov <s.mironshoh23@gmail.com>\n"
-"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/locale/"
-"uz_UZ@latin/>\n"
-"Language: uz_UZ@latin\n"
+"PO-Revision-Date: 2023-10-22 04:09+0000\n"
+"Last-Translator: Темирбулатович <diac.96@mail.ru>\n"
+"Language-Team: Uzbek (latin) <http://translate.pkp.sfu.ca/projects/ojs/"
+"locale/uz_Latn/>\n"
+"Language: uz@latin\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.13.1\n"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Bu jurnal o'z tarkibini Internetda chiqarmaydi."
@@ -482,8 +483,9 @@ msgstr "Jurnal yordamchilari"
 msgid "issue.issue"
 msgstr "Nashr"
 
+#, fuzzy
 msgid "issue.issues"
-msgstr "Muammolar"
+msgstr "Nashrlar"
 
 msgid "issue.title"
 msgstr "Sarlavha"
@@ -506,8 +508,9 @@ msgstr "Nomeri"
 msgid "issue.year"
 msgstr "Yil"
 
+#, fuzzy
 msgid "issue.noIssues"
-msgstr "Muammo yo'q"
+msgstr "Nashr yo'q"
 
 msgid "issue.toc"
 msgstr "Mundarija"
@@ -519,16 +522,16 @@ msgid "issue.coverPage.altText"
 msgstr "Muqova sahifasi"
 
 msgid "issue.fullIssue"
-msgstr "To'liq son"
+msgstr "To'liq nashr"
 
 msgid "issue.nonpdf.title"
-msgstr "Yuklab olish muammosi"
+msgstr "Nashrni yuklab olish"
 
 msgid "issue.viewIssue"
-msgstr "Muammoni ko'rish"
+msgstr "Nashrni ko'rish"
 
 msgid "issue.return"
-msgstr "Muammo tafsilotlariga qaytish"
+msgstr "Nashrning tafsilotlariga qaytish"
 
 msgid "doi.issue.incorrectContext"
 msgstr ""

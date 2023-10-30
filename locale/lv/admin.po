@@ -2,7 +2,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-09-22 12:06+0000\n"
+"PO-Revision-Date: 2023-10-24 15:17+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/admin/lv/>\n"
 "Language: lv\n"
@@ -237,4 +237,4 @@ msgstr ""
 "publisko API atspējo, žurnāli nevar padarīt savu API publiski pieejamu."
 
 msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
-msgstr ""
+msgstr "Izmantot vietni kā platformu visiem žurnāliem."
