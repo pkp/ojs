@@ -51,6 +51,7 @@
   "doi.manager.versions.countStatement",
   "doi.manager.versions.modalTitle",
   "doi.manager.versions.view",
+  "editor.submission.daysInStage",
   "editor.submission.search",
   "editor.submission.viewSummary",
   "editor.submissionArchive.confirmDelete",
