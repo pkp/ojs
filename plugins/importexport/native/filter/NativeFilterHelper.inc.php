@@ -87,7 +87,7 @@ class NativeFilterHelper {
 				$coversNode->appendChild($coverNode);
 			}
 		}
-		return $coversNode->firstChild ? $coversNode : null;
+		return $coversNode && $coversNode->firstChild ? $coversNode : null;
 	}
 
 	/**
@@ -122,7 +122,7 @@ class NativeFilterHelper {
 				$coversNode->appendChild($coverNode);
 			}
 		}
-		return $coversNode->firstChild ? $coversNode : null;
+		return $coversNode && $coversNode->firstChild ? $coversNode : null;
 	}
 
 	/**
