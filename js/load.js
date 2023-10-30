@@ -13,6 +13,7 @@ import PkpLoad from '../lib/pkp/js/load.js';
 import Container from '@/components/Container/Container.vue';
 import AdvancedSearchReviewerContainer from '@/components/Container/AdvancedSearchReviewerContainer.vue';
 import Page from '@/components/Container/Page.vue';
+import PageOJS from '@/components/Container/PageOJS.vue';
 import AccessPage from '@/components/Container/AccessPage.vue';
 import AddContextContainer from '@/components/Container/AddContextContainer.vue';
 import AdminPage from '@/components/Container/AdminPage.vue';
@@ -32,7 +33,7 @@ import WorkflowPage from '@/components/Container/WorkflowPageOJS.vue';
 import JobsPage from '@/components/Container/JobsPage.vue';
 import FailedJobsPage from '@/components/Container/FailedJobsPage.vue';
 import FailedJobDetailsPage from '@/components/Container/FailedJobDetailsPage.vue';
-import SubmissionsPage from '@/components/Container/SubmissionsPage.vue';
+import SubmissionsPage from '@/pages/submissions/SubmissionsPage.vue';
 
 // styles
 import '@/styles/_global.less';
@@ -52,6 +53,7 @@ window.pkp = Object.assign(PkpLoad, window.pkp || {}, {
 		FailedJobsPage,
 		FailedJobDetailsPage,
 		Page,
+		PageOJS,
 		SettingsPage,
 		StartSubmissionPage,
 		StatsEditorialPage,
