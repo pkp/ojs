@@ -22,7 +22,7 @@ class FieldTextUrn extends FieldText {
 	/** @var string The urnPrefix from the urn plugin sttings */
 	public $urnPrefix = '';
 
-	public bool $applyCheckNumber = false;
+	public $applyCheckNumber = false;
 
 	/**
 	 * @copydoc Field::getConfig()

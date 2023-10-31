@@ -21,7 +21,7 @@ class FieldPubIdUrn extends FieldPubId
     /** @copydoc Field::$component */
     public $component = 'field-pub-id-urn';
 
-    public bool $applyCheckNumber = false;
+    public $applyCheckNumber = false;
 
     /**
      * @copydoc Field::getConfig()
