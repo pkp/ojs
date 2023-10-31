@@ -2,7 +2,6 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
-			// this is useful for vscode being able to resolve that alias
 			"@/components/*": ["lib/ui-library/src/components/*"]
 		}
 	},
