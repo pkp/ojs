@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-09-13 12:51+0000\n"
+"PO-Revision-Date: 2023-11-02 07:38+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/default/lv/>"
 "\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
 "19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "section.default.title"
 msgstr "Raksti"
@@ -147,7 +147,7 @@ msgid "default.groups.plural.sectionEditor"
 msgstr "Sadaļas redaktori"
 
 msgid "default.groups.abbrev.sectionEditor"
-msgstr "SecE"
+msgstr "SekcR"
 
 msgid "default.groups.name.subscriptionManager"
 msgstr "Abonēšanas pārzinis"
@@ -156,7 +156,7 @@ msgid "default.groups.plural.subscriptionManager"
 msgstr "Abonēšanas pārziņi"
 
 msgid "default.groups.abbrev.subscriptionManager"
-msgstr "SubM"
+msgstr "AbP"
 
 msgid "default.genres.researchInstrument"
 msgstr "Pētniecības instruments"
