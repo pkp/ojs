@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-10-31 19:39+0000\n"
+"PO-Revision-Date: 2023-11-02 07:38+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/lv/>"
 "\n"
@@ -339,7 +339,7 @@ msgstr ""
 "vismaz viena izvēles rūtiņa."
 
 msgid "manager.sections.form.reviewFormId"
-msgstr "Lūdzu, pārliecinieties, ka esat izvēlējies derīgu recenzijas veidlapu."
+msgstr "Lūdzu, pārliecinieties, ka esat izvēlējies derīgu recenzenta formu."
 
 msgid "manager.sections.form.titleRequired"
 msgstr "Sadaļai ir nepieciešams nosaukums."
@@ -983,7 +983,7 @@ msgstr ""
 "Lietotājiem jābūt reģistrētiem un jāpieslēdzas, lai skatītu žurnāla vietni."
 
 msgid "manager.setup.reviewGuidelines"
-msgstr "Recenzēšanas vadlīnijas"
+msgstr "Vadlīnijas recenzēšanai"
 
 msgid "manager.setup.reviewOptions"
 msgstr "Recenzēšanas iespējas"
@@ -2392,7 +2392,7 @@ msgstr "DOI nevar piešķirt, jo tajā ir neatrisināms modelis."
 msgid "doi.editor.canBeAssigned"
 msgstr ""
 "Tas, ko redzat, ir DOI priekšskatījums. Atlasiet izvēles rūtiņu un "
-"saglabājiet veidlapu, lai piešķirtu DOI."
+"saglabājiet formu, lai piešķirtu DOI."
 
 msgid "doi.editor.assigned"
 msgstr "DOI tiek piešķirts šim {$pubObjectType}."
