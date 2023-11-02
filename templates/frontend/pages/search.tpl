@@ -81,7 +81,7 @@
 						<option></option>
 						{foreach from=$searchableContexts item="searchableContext"}
 							<option value="{$searchableContext->id}" {if $searchJournal == $searchableContext->id}selected{/if}>
-								{$searchableContext->name}
+								{$searchableContext->name|escape}
 							</option>
 						{/foreach}
 					</select>
