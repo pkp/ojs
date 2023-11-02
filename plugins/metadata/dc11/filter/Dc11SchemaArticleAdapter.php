@@ -30,7 +30,6 @@ use APP\plugins\PubIdPlugin;
 use APP\submission\Submission;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
-use PKP\i18n\LocaleConversion;
 use PKP\metadata\MetadataDataObjectAdapter;
 use PKP\metadata\MetadataDescription;
 use PKP\plugins\Hook;
@@ -184,17 +183,12 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         }
 
         // Language
-        $locales = [];
-        if ($article instanceof Submission) {
-            foreach ($galleys as $galley) {
-                $locale = $galley->getLocale();
-                if (!is_null($locale) && !in_array($locale, $locales)) {
-                    $locales[] = $locale;
-                    $dc11Description->addStatement('dc:language', LocaleConversion::getIso3FromLocale($locale));
-                }
-            }
-            $dc11Description->addStatement('dc:language', $article->geData('locale'));
-        }
+        collect($galleys)
+            ->map(fn ($g) => $g->getData('locale'))
+            ->push($publication->getData('locale'))
+            ->filter()
+            ->unique()
+            ->each(fn ($l) => $dc11Description->addStatement('dc:language', $l));
 
         // Relation
         // full text URLs

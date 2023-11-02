@@ -152,6 +152,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->will($this->returnValue(98));
         $galley->setId(98);
         $galley->setData('doiObject', $galleyDoiObject);
+        $galley->setData('locale', 'en');
 
         $galleys = [$galley];
 
