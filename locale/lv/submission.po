@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-10-31 19:39+0000\n"
+"PO-Revision-Date: 2023-11-02 15:29+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "lv/>\n"
@@ -35,7 +35,7 @@ msgid "submission.issueEntry"
 msgstr "Metadati"
 
 msgid "grid.action.galleyInIssueEntry"
-msgstr "Saliktnis parādās laidiena ierakstā"
+msgstr "Saliktnis parādās žurnāla numura ierakstā"
 
 msgid "grid.action.issueEntry"
 msgstr "Skatīt šī iesniegtā materiāla metadatus"
@@ -74,7 +74,7 @@ msgid "workflow.review.externalReview"
 msgstr "Recenzēšana"
 
 msgid "submission.event.issueMetadataUpdated"
-msgstr "Atjaunoti materiāla metadati attiecībā uz laidienu."
+msgstr "Atjaunoti materiāla metadati attiecībā uz žurnāla numuru."
 
 msgid "submission.upload.fileContents"
 msgstr "Raksta sastāvdaļa"
@@ -111,10 +111,10 @@ msgid "galley.publicationNotFound"
 msgstr "Šī saliktņa publikāciju neizdevās atrast."
 
 msgid "publication.assignToissue"
-msgstr "Piešķirts laidienam"
+msgstr "Piešķirt žurnāla numuram"
 
 msgid "publication.changeIssue"
-msgstr "Mainīt laidienu"
+msgstr "Mainīt žurnāla numuru"
 
 msgid "publication.invalidSection"
 msgstr "Šīs publikācijas sadaļu neizdevās atrast."
@@ -123,7 +123,7 @@ msgid "publication.inactiveSection"
 msgstr "{$section} (Neaktīvs)"
 
 msgid "publication.invalidIssue"
-msgstr "Šīs publikācijas laidienu neizdevās atrast."
+msgstr "Šīs publikācijas izdevumu neizdevās atrast."
 
 msgid "publication.publish.confirmation"
 msgstr ""
@@ -141,16 +141,16 @@ msgstr ""
 "to publicēt?"
 
 msgid "publication.required.issue"
-msgstr "Pirms publikācijas publicēšanas tai ir jāpiešķir laidiens."
+msgstr "Pirms publikācijas publicēšanas tai ir jāpiešķir žurnāla numurs."
 
 msgid "publication.publishedIn"
 msgstr "Publicēts <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.unscheduledIn"
-msgstr "To nav plānots publicēt kādā no laidieniem."
+msgstr "To nav plānots publicēt kādā no žurnāla numuriem."
 
 msgid "publication.selectIssue"
-msgstr "Izvēlieties laidienu, lai ieplānotu publicēšanu"
+msgstr "Izvēlieties žurnāla numuru, lai ieplānotu publicēšanu"
 
 msgid "submission.publication"
 msgstr "Publicēšana"
@@ -243,7 +243,7 @@ msgstr "Atlasīt datnes, kas jānosūta uz recenzēšanas posmu."
 msgid "doi.submission.issueMissing.publication"
 msgstr ""
 "Nevar izveidot DOI šādam materiālam: {$pubObjectTitle}. Lai varētu ģenerēt "
-"DOI, materiāls ir jāpiešķir laidienam."
+"DOI, materiāls ir jāpiešķir žurnāla numuram."
 
 msgid "doi.submission.incorrectContext"
 msgstr ""
@@ -336,7 +336,7 @@ msgstr ""
 msgid "doi.submission.issueMissing.representation"
 msgstr ""
 "Nevar izveidot DOI materiāla {$itemTitle} {$pubObjectTitle} saliktnim. Lai "
-"varētu ģenerēt DOI, materiāls ir jāpiešķir laidienam."
+"varētu ģenerēt DOI, materiāls ir jāpiešķir žurnāla numuram."
 
 msgid "submission.abstract.wordCount.description"
 msgstr "Kopsavilkumam jābūt {$wordCount} vārdus garam vai īsākam."
@@ -382,8 +382,8 @@ msgstr "Plānots publicēt <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
-"Autortiesību gads tiks iestatīts automātiski, kad tas tiks publicēts "
-"laidienā."
+"Autortiesību gads tiks iestatīts automātiski, kad tas tiks publicēts žurnāla "
+"numurā."
 
 msgid "publication.publish.requirements"
 msgstr "Pirms publicēšanas ir jāizpilda šādas prasības."
