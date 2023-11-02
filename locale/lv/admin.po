@@ -2,7 +2,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-10-24 15:17+0000\n"
+"PO-Revision-Date: 2023-11-02 15:29+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/admin/lv/>\n"
 "Language: lv\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
 "19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "admin.hostedContexts"
 msgstr "Izvietotie žurnāli"
@@ -167,14 +167,14 @@ msgid "admin.scheduledTask.reviewReminder"
 msgstr "Recenzēšanas atgādinājums"
 
 msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
-msgstr "Laidiena ID nav vesels skaitlis."
+msgstr "Žurnāla numura ID nav vesels skaitlis."
 
 msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
-msgstr "Laidiena saliktņa ID nav vesels skaitlis."
+msgstr "Žurnāla numura saliktņa ID nav vesels skaitlis."
 
 msgid ""
 "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
-msgstr "Laidiena ID nesakrīt ar saistīto ID."
+msgstr "Žurnāla numura ID nesakrīt ar saistīto ID."
 
 msgid "admin.settings.enableBulkEmails.description"
 msgstr ""
