@@ -72,7 +72,7 @@
 
 				{if $searchableContexts}
 					<label class="label label_contexts" for="searchJournal">
-						{translate key="search.journal"}
+						{translate key="context.context"}
 					</label>
 					<select name="searchJournal" id="searchJournal">
 						<option></option>
