@@ -106,7 +106,13 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 					$this->_toJSON($row, $tableName, ['plugin_name', 'context_id', 'setting_name'], 'setting_value');
 				});
 			} else {
-				Capsule::table($tableName)->where('setting_type', 'object')->get()->each(function ($row) use ($tableName) {
+				try {
+					$settings = Capsule::table($tableName)->where('setting_type', 'object')->get();
+				} catch (Exception $e) {
+					error_log("Failed to migrate the settings entity \"{$tableName}\"\n" . $e);
+					continue;
+				}
+				$settings->each(function ($row) use ($tableName) {
 					$this->_toJSON($row, $tableName, ['setting_name', 'locale'], 'setting_value');
 				});
 			}
