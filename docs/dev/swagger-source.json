@@ -38,6 +38,7 @@
 				"Submissions / Participants",
 				"Submissions / Publications",
 				"Submissions / Publications / Contributors",
+				"Submissions / DashboardViews",
 				"Issues",
 				"Users",
 				"Contexts",
@@ -115,6 +116,9 @@
 		},
 		{
 			"name": "Submissions / Publications / Contributors"
+		},
+		{
+			"name": "Submissions / DashboardViews"
 		},
 		{
 			"name": "Issues"
@@ -7342,6 +7346,108 @@
 					"200": {
 						"x-summary": "Success",
 						"description": "List of submissions."
+					}
+				}
+			}
+		},
+		"/_submissions/assigned": {
+			"get": {
+				"tags": [
+					"Submissions"
+				],
+				"summary": "Get a list of submissions assigned  to a user",
+				"parameters": [
+					{
+						"description": "Accepts most parameters supported by the public `/submissions` endpoint."
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "List of submissions."
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The context could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/_submissions/reviews": {
+			"get": {
+				"tags": [
+					"Submissions"
+				],
+				"summary": "Get a list of submissions in a review stage",
+				"parameters": [
+					{
+						"name": "needsReviewers",
+						"description": "Filter results by submissions which need reviewers to be assigned",
+						"in": "query",
+						"required": false,
+						"type": "boolean"
+					},
+					{
+						"name": "awaitingReviews",
+						"description": "Filter results by those awaiting reply from reviewers",
+						"in": "query",
+						"required": false,
+						"type": "boolean"
+					},
+					{
+						"name": "reviewsSubmitted",
+						"description": "Filter results by those where reviews were submitted by reviewers",
+						"in": "query",
+						"required": false,
+						"type": "boolean"
+					},
+					{
+						"name": "reviewsOverdue",
+						"description": "Filter results by those with one or more overdue review assignment",
+						"in": "query",
+						"required": false,
+						"type": "boolean"
+					},
+					{
+						"name": "revisionsRequested",
+						"description": "Filter results by those in the review stage where file revision is requested from the author",
+						"in": "query",
+						"required": false,
+						"type": "boolean"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "List of submissions."
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The context could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/_submissions/viewsCount": {
+			"get": {
+				"tags": [
+					"Submissions / DashboardViews"
+				],
+				"summary": "Get a collection of views count",
+				"description": "This endpoint delivers the count of submissions and review assignments for all views available to the user",
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "List of dashboard views name (key) and count (value) pairs.",
+						"schema": {
+							"type": "object"
+						}
 					}
 				}
 			}
