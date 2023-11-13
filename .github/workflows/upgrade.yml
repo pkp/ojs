@@ -1,0 +1,116 @@
+name: upgrade
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: '0 1 1 * *'
+
+
+jobs:
+  install:
+    name: ${{matrix.pkp-application}}(VERSION=${{matrix.test-upgrade}}(DB=${{matrix.dbs}};)
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php-versions: [ '8.1','8.2' ]
+        dbs: [ 'pgsql', 'mysql' ]
+        pkp-application: [ '${{ github.event.repository.name }}' ]
+        test-upgrade: [ 'stable-3_4_0','stable-3_3_0','stable-3_2_1','stable-3_2_0' ]
+        pkp-branch: [ '${{ github.head_ref || github.ref_name }}' ]
+    env:
+      APPLICATION: '${{ github.event.repository.name }}'
+      DBTYPE: ${{matrix.dbs  == 'pgsql' && 'PostgreSQL' || 'MySQLi'}}
+      DBUSERNAME: ojs-ci
+      DBPASSWORD: ojs-ci
+      DBNAME: ojs-ci
+      DBHOST: 127.0.0.1
+      FILESDIR: files
+      TEST: ${{matrix.dbs}}
+
+    steps:
+      - name: Install   ${{matrix.dbs}} server
+        if: ${{matrix.dbs == 'pgsql'}}
+        run: |
+          sudo apt install postgresql postgresql-contrib
+          sudo dpkg-reconfigure locales
+          sudo sed -i 's\peer\trust\g' /etc/postgresql/14/main/pg_hba.conf
+          sudo sed -i 's\scram-sha-256\trust\g' /etc/postgresql/14/main/pg_hba.conf
+
+      - name: Install   ${{matrix.dbs}} server
+        if: ${{matrix.dbs == 'mysql'}}
+        run: |
+          sudo apt install -q -y mysql-server mysql-client
+          sudo service mysql start
+          sudo mysqladmin -u root -p'root' password ''
+
+      - name: Install PKP Application
+        run: |
+          git clone -b ${{matrix.pkp-branch}} https://github.com/${{github.repository}} ~/${{matrix.pkp-application}}
+          cd ~/${{matrix.pkp-application}}
+          git submodule update --init --recursive
+
+      - name: Setup PHP, extensions and composer
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{matrix.php-versions}}
+          extensions: bcmath, bz2, common, cli, curl, fpm, gd, intl, mbstring, mysql,mysqlnd, mysqli, opcache, pdo_mysql,  pgsql, json,soap, xml, zip
+          coverage: xdebug
+        env:
+          update: true
+
+      - name: Install Composer Dependencies
+        run: |
+          cd ~/${{matrix.pkp-application}}
+          lib/pkp/tools/travis/install-composer-dependencies.sh
+          npm i g -npm && npm i @vue/cli-service && npm i cypress && npm install && npm run build
+
+      - name: Start  ${{matrix.dbs}} server
+        run: |
+          cd ~/${{matrix.pkp-application}}
+          ./lib/pkp/tools/travis/prepare-webserver.sh
+          ./lib/pkp/tools/travis/prepare-tests.sh
+
+
+      - name: Create folders
+        run: |
+          mkdir --parents ${FILESDIR}
+          mkdir --parents public
+
+      - name: upgrade from ${{matrix.test-upgrade}}  for  ${{matrix.dbs}}
+        if: ${{(matrix.php-versions == '8.2')  && (matrix.test-upgrade =='stable-3_4-0')}}
+        run: |
+          cd ~/${{matrix.pkp-application}}
+          echo
+          git clone https://github.com/pkp/datasets
+          cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
+          cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
+          cp  datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
+          ./datasets/tools/dbclient.sh < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
+          php tools/upgrade.php check
+          php tools/upgrade.php upgrade
+        env:
+          DATASET_BRANCH: ${{matrix.test-upgrade}}
+          TEST: ${{matrix.dbs}}
+
+
+      - name: upgrade from ${{matrix.test-upgrade}}  for  ${{matrix.dbs}}
+        if: matrix.php-versions == '8.1'  && contains('["stable-3_2_0","stable-3_2_1","stable-3_3_0"]', matrix.test-upgrade)
+        run: |
+          cd ~/${{matrix.pkp-application}}
+          git clone https://github.com/pkp/datasets
+          cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/files/* files/
+          cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
+          cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
+          patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
+          patch -p1 < datasets/upgrade/3_4_0-update-locale.diff
+          ./datasets/tools/dbclient.sh < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
+          php tools/upgrade.php check
+          php tools/upgrade.php upgrade
+        env:
+          DATASET_BRANCH: ${{matrix.test-upgrade}}
+          TEST: ${{matrix.dbs}}

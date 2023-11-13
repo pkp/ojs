@@ -1,0 +1,131 @@
+name: validate
+on:
+  push:
+    branches:
+      - '**'
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: '0 1 1 * *'
+env:
+  APPLICATION: '${{ github.event.repository.name }}'
+  DBUSERNAME: ojs-ci
+  DBPASSWORD: ojs-ci
+  DBNAME: ojs-ci
+  DBHOST: 127.0.0.1
+  DATABASEDUMP: database.sql.gz
+  FILESDIR: files
+  FILESDUMP: files.tar.gz
+  CYPRESS_BASE_URL: http://127.0.0.1:8000
+  CYPRESS_DBNAME: ojs-ci
+  CYPRESS_DBUSERNAME: ojs-ci
+  CYPRESS_DBPASSWORD: ojs-ci
+  CYPRESS_DBHOST: 127.0.0.1
+  CYPRESS_FILESDIR: files
+
+jobs:
+  install:
+    name: ${{matrix.pkp-application}}(BRANCH=${{matrix.pkp-branch}} ;PHP=${{matrix.php-versions}}; DB=${{matrix.dbs}})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php-versions: [ '8.1','8.2' ]
+        dbs: [ 'pgsql']
+        pkp-application: ['${{ github.event.repository.name }}' ]
+        pkp-branch: [ '${{ github.head_ref || github.ref_name }}' ]
+    env:
+      DBTYPE: ${{matrix.dbs == 'pgsql' && 'PostgreSQL' || 'MySQLi'}}
+      CYPRESS_DBTYPE: ${{matrix.dbs=='pgsql' && 'PostgreSQL' || 'MySQLi'}}
+      TEST: ${{matrix.dbs}}
+
+    steps:
+      - name: install postgres server
+        if: ${{matrix.dbs == 'pgsql'}}
+        run: |
+          sudo apt install postgresql postgresql-contrib
+          sudo dpkg-reconfigure locales
+          sudo sed -i -E 's\peer|scram-sha-256\trust\g' /etc/postgresql/14/main/pg_hba.conf
+
+      - name: Install server
+        if: ${{matrix.dbs == 'mysql'}}
+        run: |
+          sudo apt install -q -y mysql-server mysql-client
+          sudo service mysql start
+          sudo mysqladmin -u root -p'root' password ''
+
+      - name: Install mariadb  server
+        if: ${{matrix.dbs == 'mariadb'}}
+        uses: ankane/setup-mariadb@v1
+        with:
+          mariadb-version: "10.11"
+
+      - name: Install ${{matrix.pkp-application}}
+        run: |
+          git clone -b ${{matrix.pkp-branch}} https://github.com/${{github.repository}} ~/${{matrix.pkp-application}}
+          cd ~/${{matrix.pkp-application}}
+          git submodule update --init --recursive
+      - name: Setup PHP, extensions and composer
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{matrix.php-versions}}
+          extensions: bcmath, bz2, common, cli, curl, fpm, gd, intl, mbstring, mysql,mysqlnd, mysqli, opcache, pdo_mysql, pgsql, json,soap, xml, zip
+          coverage: xdebug
+        env:
+          update: true
+
+      - name: Install composer dependencies
+        run: |
+          cd ~/${{matrix.pkp-application}}
+          lib/pkp/tools/travis/install-composer-dependencies.sh
+          npm i g -npm && npm i @vue/cli-service && npm i cypress && npm install && npm run build
+
+      - name: Create additional directories
+        run: |
+          mkdir -p $HOME/bin
+
+      - name: Install validation tools
+        run: |
+          set -e
+          sudo pip install six
+          sudo pip install https://github.com/google/closure-linter/zipball/master
+          wget "https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/jslint4java/jslint4java-2.0.2-dist.zip"
+          unzip jslint4java-2.0.2-dist.zip
+          mv jslint4java-2.0.2/jslint4java-2.0.2.jar ~/bin/jslint4java.jar
+
+      - name: Run XML validation
+        run: |
+          cd ~/${{matrix.pkp-application}}
+          ./lib/pkp/tools/travis/validate-xml.sh
+
+      - name: Run Javascript/JSON validation
+        run: |
+          cd ~/${{matrix.pkp-application}}
+          ./lib/pkp/tools/buildjs.sh -n
+          ./lib/pkp/tools/travis/validate-json.sh
+
+      - name: Run linting
+        run: |
+          cd ~/${{matrix.pkp-application}}
+          npm run lint
+
+      - name: Run Documentation validation
+        run: |
+          cd ~/${{matrix.pkp-application}}
+          # Look for help filenames referred to in templates and check that they all exist (in English)
+          ERRORS=0
+          for filename in `find . -name \*.tpl -exec sed -n -e "s/.*{help[^}]file=\"\([^\"#]\+\)[#\"].*/\1/p" "{}" ";"`; do
+           if [ ! -f docs/manual/en/$filename.md ]; then
+             echo "Help file \"$filename.md\" referred to in template does not exist!"
+             ERRORS=1
+            fi
+          done
+          if [ $ERRORS -ne 0 ]; then
+            exit -1
+          fi
+          # Generate a quick report of the differences between the files listed in templates and the available files.
+          find . -name \*.tpl -exec sed -n -e "s/.*{help[^}]file=\"\([^\"]\+\)\".*/\1/p" "{}" ";" | sort | uniq > /tmp/template-help-references.txt
+          cat docs/manual/en/SUMMARY.md | sed -n -e "s/.*(\([^)]\+\))/\1/p" | sort | uniq > /tmp/help-files.txt
+          echo "Unreferenced help files:"
+          diff /tmp/template-help-references.txt /tmp/help-files.txt | grep -e "^>"
