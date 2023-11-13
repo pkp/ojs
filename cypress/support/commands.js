@@ -38,7 +38,7 @@ Cypress.Commands.add('checkViewableGalley', (galleyTitle) => {
 });
 
 Cypress.Commands.add('createSubmissionWithApi', (data, csrfToken) => {
-	const api = new Api(Cypress.env('baseUrl') + '/index.php/publicknowledge/api/v1');
+	const api = new Api(Cypress.config('baseUrl') + '/index.php/publicknowledge/api/v1');
 
 	return cy.beginSubmissionWithApi(api, data, csrfToken)
 		.putMetadataWithApi(data, csrfToken)

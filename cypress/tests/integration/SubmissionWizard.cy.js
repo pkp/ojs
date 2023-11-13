@@ -171,7 +171,7 @@ describe('Submission Wizard', function() {
     });
 
     it('When a copyright notice is configured in the context, it appears in the review step of the submission wizard and I am unable to submit without checking its checkbox.', function() {
-        const api = new Api(Cypress.env('baseUrl') + '/index.php/publicknowledge/api/v1');
+        const api = new Api(Cypress.config('baseUrl') + '/index.php/publicknowledge/api/v1');
         const title = 'Et malesuada fames ac turpis';
         const copyrightNotice = {
             en: 'Turpis massa tincidunt dui ut ornare.',
@@ -309,7 +309,7 @@ describe('Submission Wizard', function() {
         ];
 
         // Require all submission wizard fields
-        const api = new Api(Cypress.env('baseUrl') + '/index.php/publicknowledge/api/v1');
+        const api = new Api(Cypress.config('baseUrl') + '/index.php/publicknowledge/api/v1');
         cy.login('dbarnes', null, 'publicknowledge');
         cy.getCsrfToken()
             .then(() => {
@@ -446,7 +446,7 @@ describe('Submission Wizard', function() {
     it('I can change the submission language to a different language from the language I am using the site, and the submission forms and validation checks are applied to the language of the submission', function() {
 
         // Enable all submission wizard fields
-        const api = new Api(Cypress.env('baseUrl') + '/index.php/publicknowledge/api/v1');
+        const api = new Api(Cypress.config('baseUrl') + '/index.php/publicknowledge/api/v1');
         cy.login('dbarnes', null, 'publicknowledge');
         cy.getCsrfToken()
             .then(() => {
@@ -612,7 +612,7 @@ describe('Submission Wizard', function() {
     it('Resets the submission wizard fields to more common configuration', function() {
 
         // Reset all submission wizard fields
-        const api = new Api(Cypress.env('baseUrl') + '/index.php/publicknowledge/api/v1');
+        const api = new Api(Cypress.config('baseUrl') + '/index.php/publicknowledge/api/v1');
         cy.login('dbarnes', null, 'publicknowledge');
         cy.getCsrfToken()
             .then(() => {
