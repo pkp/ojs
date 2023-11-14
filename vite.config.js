@@ -19,6 +19,8 @@ export default defineConfig(({mode}) => {
 					'common.editItem',
 					'stats.descriptionForStat',
 					'common.commaListSeparator',
+					// use directly via pkp.localeKeys
+					'form.dataHasChanged',
 				],
 			}),
 			Vue({
