@@ -12,9 +12,10 @@ module.exports = {
 			blur: 'rgba(0,0,0,0.5)',
 		},
 		textColor: {
-			'color-base': '#222222',
-			'color-on-light': '#01354F',
-			'color-light': '#777777',
+			dark: '#222222',
+			'on-light': '#01354F',
+			light: '#777777',
+			lightest: '#FFFFFF',
 		},
 		borderColor: {
 			dark: '#696969',
@@ -26,6 +27,7 @@ module.exports = {
 		},
 		boxShadow: {
 			DEFAULT: '0 0 4px rgba(0, 0, 0, 0.5);',
+			down: '',
 		},
 		colors: {
 			primary: '#006798',
@@ -54,113 +56,113 @@ module.exports = {
 			sans: ['"Noto Sans"', ...defaultTheme.fontFamily.sans],
 		},
 		fontSize: {
-			'2xs-normal': [
-				'0.625rem',
+			'xs-normal': [
+				'0.625rem' /** 10px */,
 				{
 					lineHeight: '0.75rem',
 					fontWeight: '400',
 				},
 			],
-			'xs-light': [
-				'0.6875rem',
+			'sm-light': [
+				'0.6875rem' /** 11px */,
 				{
 					lineHeight: '0.875rem',
 					fontWeight: '300',
 				},
 			],
-			'xs-normal': [
-				'0.6875rem',
+			'sm-normal': [
+				'0.6875rem' /** 11px */,
 				{
 					lineHeight: '0.875rem',
 					fontWeight: '400',
 				},
 			],
-			'sm-normal': [
-				'0.75rem',
+			'base-normal': [
+				'0.75rem' /** 12px */,
 				{
 					lineHeight: '1rem',
 					fontWeight: '400',
 				},
 			],
-			'base-normal': [
-				'0.875rem',
+			'lg-normal': [
+				'0.875rem' /** 14px */,
 				{
 					lineHeight: '1.25rem',
 					fontWeight: '400',
 				},
 			],
-			'base-medium': [
-				'0.875rem',
+			'lg-medium': [
+				'0.875rem' /** 14px */,
 				{
 					lineHeight: '1.25rem',
 					fontWeight: '500',
 				},
 			],
-			'base-semibold': [
-				'0.875rem',
+			'lg-semibold': [
+				'0.875rem' /** 14px */,
 				{
 					lineHeight: '1.25rem',
 					fontWeight: '600',
 				},
 			],
-			'base-bold': [
-				'0.875rem',
+			'lg-bold': [
+				'0.875rem' /** 14px */,
 				{
 					lineHeight: '1.25rem',
 					fontWeight: '700',
 				},
 			],
-			'lg-medium': [
-				'1rem',
+			'xl-medium': [
+				'1rem' /** 16px */,
 				{
 					lineHeight: '1.5rem',
 					fontWeight: '500',
 				},
 			],
-			'lg-bold': [
-				'1rem',
+			'xl-bold': [
+				'1rem' /** 16px */,
 				{
 					lineHeight: '1.5rem',
 					fontWeight: '700',
 				},
 			],
-			'xl-bold': [
-				'1.125rem',
+			'2xl-bold': [
+				'1.125rem' /** 18px */,
 				{
 					lineHeight: '1.75rem',
 					fontWeight: '700',
 				},
 			],
-			'2xl-normal': [
-				'1.25rem',
+			'3xl-normal': [
+				'1.25rem' /** 20px */,
 				{
 					lineHeight: '1.75rem',
 					fontWeight: '400',
 				},
 			],
-			'2xl-medium': [
-				'1.25rem',
+			'3xl-medium': [
+				'1.25rem' /** 20px */,
 				{
 					lineHeight: '1.75rem',
 					fontWeight: '500',
 				},
 			],
-			'2xl-bold': [
-				'1.25rem',
+			'3xl-bold': [
+				'1.25rem' /** 20px */,
 				{
 					lineHeight: '1.75rem',
 					fontWeight: '700',
 				},
 			],
-			'3xl-bold': [
-				'1.5rem',
+			'4xl-bold': [
+				'1.5rem' /** 24px */,
 				{
 					lineHeight: '2rem',
 					fontWeight: '700',
 				},
 			],
-			'4xl-bold': [
-				'2.25rem',
+			'5xl-bold': [
+				'2.25rem' /** 36px */,
 				{
 					lineHeight: '2.5rem',
 					fontWeight: '700',
