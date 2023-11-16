@@ -1105,6 +1105,18 @@ msgstr "Notations de l'évaluateur-trice"
 msgid "manager.setup.reviewOptions.reviewerReminders"
 msgstr "Rappels à l'évaluateur-trice"
 
+msgid "manager.setup.reviewOptions.occurrencesForInvite"
+msgstr "Nombre d'occurrences pour le rappel des demandes d'évaluations"
+
+msgid "manager.setup.reviewOptions.occurrencesForInvite.description"
+msgstr "Laisser le champ vide pour ne pas limiter le nombre d'occurrences"
+
+msgid "manager.setup.reviewOptions.occurrencesForSubmit"
+msgstr "Nombre d'occurrences pour le rappel des délais d'échéances"
+
+msgid "manager.setup.reviewOptions.occurrencesForSubmit.description"
+msgstr "Laisser le champ vide pour ne pas limiter le nombre d'occurrences"
+
 msgid "manager.setup.reviewPolicy"
 msgstr "Politique d'évaluation"
 
