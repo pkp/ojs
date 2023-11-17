@@ -2,7 +2,7 @@
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-04-04 23:00+0000\n"
+"PO-Revision-Date: 2023-11-03 21:30+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/locale/hy/>"
 "\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Այս ամսագիրը չի հրապարակում իր բովանդակությունը առցանց:"
@@ -1681,7 +1681,7 @@ msgid "about.submissions"
 msgstr "Ներկայացումներ"
 
 msgid "about.onlineSubmissions.login"
-msgstr "Մուտք"
+msgstr "Մուտք գործել"
 
 msgid "about.onlineSubmissions.register"
 msgstr "Գրանցվել"

@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-10-28 15:06+0000\n"
+"PO-Revision-Date: 2023-11-02 15:29+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/locale/lv/>"
 "\n"
@@ -11,13 +11,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
 "19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Šī žurnāla saturs netiek publicēts tiešsaistē."
 
 msgid "context.current"
-msgstr "Kārtējais žurnāls:"
+msgstr "Jaunākais žurnāls:"
 
 msgid "context.select"
 msgstr "Pārslēgties uz citu žurnālu:"
@@ -29,7 +29,7 @@ msgid "navigation.categories.browse"
 msgstr "Pārlūkot"
 
 msgid "reviewer.article.enterReviewForm"
-msgstr "Noklikšķiniet uz ikonas, lai aizpildītu recenzijas veidlapu."
+msgstr "Noklikšķiniet uz ikonas, lai aizpildītu recenzijas formu."
 
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
 msgstr "Lūdzu, aizpildiet obligātos laukus."
@@ -61,13 +61,13 @@ msgid "navigation.journalHelp"
 msgstr "Žurnāla palīdzība"
 
 msgid "navigation.current"
-msgstr "Kārtējais"
+msgstr "Jaunākais"
 
 msgid "navigation.otherJournals"
 msgstr "Citi žurnāli"
 
 msgid "navigation.browseByIssue"
-msgstr "Pēc laidiena"
+msgstr "Pēc žurnāla numura"
 
 msgid "navigation.browseByAuthor"
 msgstr "Pēc autora"
@@ -91,7 +91,7 @@ msgid "navigation.skip.about"
 msgstr "Pāriet uz sadaļu par žurnālu"
 
 msgid "navigation.skip.issue"
-msgstr "Pāriet uz kārtējo laidienu"
+msgstr "Pāriet uz jaunāko žurnāla numuru"
 
 msgid "common.queue.long.submissionsUnassigned"
 msgstr "Nav piešķirts"
@@ -295,7 +295,7 @@ msgid "submission.editorVersion"
 msgstr "Redaktora versija"
 
 msgid "submission.authorsRevisedVersion"
-msgstr "Autora pārskatītā datnes versija"
+msgstr "Autora labotā datnes versija"
 
 msgid "submission.authorVersion"
 msgstr "Autora versija"
@@ -370,7 +370,7 @@ msgid "submission.search"
 msgstr "Rakstu meklēšana"
 
 msgid "journal.currentIssue"
-msgstr "Kārtējais laidiens"
+msgstr "Jaunākais žurnāla numurs"
 
 msgid "context.contexts"
 msgstr "Žurnāli"
@@ -385,7 +385,7 @@ msgid "journal.issn"
 msgstr "ISSN"
 
 msgid "journal.viewAllIssues"
-msgstr "Skatīt visus laidienus"
+msgstr "Skatīt visus žurnāla numurus"
 
 msgid "user.authorization.representationNotFound"
 msgstr "Pieprasītais saliktnis nav atrasts."
@@ -477,10 +477,10 @@ msgid "user.role.journalAssistants"
 msgstr "Žurnāla palīgi"
 
 msgid "issue.issue"
-msgstr "Laidiens"
+msgstr "Žurnāla numurs"
 
 msgid "issue.issues"
-msgstr "Laidieni"
+msgstr "Žurnāla numuri"
 
 msgid "issue.title"
 msgstr "Nosaukums"
@@ -504,7 +504,7 @@ msgid "issue.year"
 msgstr "Gads"
 
 msgid "issue.noIssues"
-msgstr "Nav laidienu"
+msgstr "Nav žurnāla numuru"
 
 msgid "issue.toc"
 msgstr "Saturs"
@@ -516,31 +516,31 @@ msgid "issue.coverPage.altText"
 msgstr "Titullapa"
 
 msgid "issue.fullIssue"
-msgstr "Pilns laidiens"
+msgstr "Pilns žurnāla numurs"
 
 msgid "issue.nonpdf.title"
-msgstr "Laidiena lejupielāde"
+msgstr "Žurnāla numura lejupielāde"
 
 msgid "issue.viewIssue"
-msgstr "Skatīt laidienu"
+msgstr "Skatīt žurnāla numuru"
 
 msgid "issue.return"
-msgstr "Atgriezties pie laidiena informācijas"
+msgstr "Atgriezties pie žurnāla numura informācijas"
 
 msgid "doi.issue.incorrectContext"
 msgstr ""
-"Nevar izveidot DOI šādam laidienam: {$itemTitle}. Tas nepastāv pašreizējā "
+"Nevar izveidot DOI šādam žurnāla numuram: {$itemTitle}. Tas nepastāv jaunākā "
 "žurnāla kontekstā."
 
 msgid "doi.issue.incorrectStaleStatus"
 msgstr ""
-"Nevarēja iestatīt DOI statusu uz neaktīvu laidienam {$itemTitle}. DOI "
+"Nevarēja iestatīt DOI statusu uz neaktīvu žurnāla numuram {$itemTitle}. DOI "
 "statusam jābūt \"Reģistrēts\" vai \"Iesniegts\"."
 
 msgid "doi.issue.notPublished"
 msgstr ""
 "Neizdevās atzīmēt DOI, kas reģistrēts {$pubObjectTitle}. Pirms statusa "
-"atjaunināšanas laidiens ir jāpublicē."
+"atjaunināšanas žurnāla numurs ir jāpublicē."
 
 msgid "subscriptionTypes.currency"
 msgstr "Valūta"
@@ -619,10 +619,10 @@ msgid "submission.event.submissionSubmitted"
 msgstr "Raksts iesniegts"
 
 msgid "submission.event.general.issueScheduled"
-msgstr "Materiāls nosūtīts uz laidiena plānošanas rindu"
+msgstr "Materiāls nosūtīts uz žurnāla numura plānošanas rindu"
 
 msgid "submission.event.general.issueAssigned"
-msgstr "Materiāls piešķirts laidienam"
+msgstr "Materiāls piešķirts žurnāla numuram"
 
 msgid "submission.event.general.articlePublished"
 msgstr "Raksts publicēts"
@@ -741,7 +741,7 @@ msgid "search.results.orderBy.date"
 msgstr "Publicēšanas datums"
 
 msgid "search.results.orderBy.issue"
-msgstr "Laidiens"
+msgstr "Žurnāla numurs"
 
 msgid "search.results.orderBy.journal"
 msgstr "Žurnāla nosaukums"
@@ -852,7 +852,7 @@ msgid "manager.setup.basicEditorialStepsDescription"
 msgstr ""
 "Soļi: Iesniegto materiālu rinda &gt; Iesniegto materiālu recenzēšana &gt; "
 "Iesniegto materiālu rediģēšana &gt; Satura rādītājs. <br /><br />\n"
-"Izvēlieties modeli šo rediģēšanas procesa aspektu apstrādei. (Lai ieceltu "
+"Izvēlieties modeli šo redakcionālā procesa aspektu apstrādei. (Lai ieceltu "
 "atbildīgo redaktoru un sadaļu redaktorus, apmeklējiet sadaļu Redaktori "
 "žurnāla pārvaldībā.)"
 
@@ -901,7 +901,7 @@ msgstr ""
 "\t\t\t<li class=\"highlightNoDecision\">Visi recenzenti ir iesnieguši savus "
 "komentārus, bet lēmums nav reģistrēts</li>\n"
 "\t\t\t<li class=\"highlightRevisedCopyUploaded\">Autors ir augšupielādējis "
-"pārskatītu manuskriptu</li>\n"
+"labotu manuskriptu</li>\n"
 "\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">Recenzents ir "
 "nokavējis recenzēšanas uzaicinājuma apstiprināšanu</li>\n"
 "\t\t\t<li class=\"highlightReviewerCompletionOverdue\">Recenzents ir "
@@ -931,10 +931,10 @@ msgstr ""
 "</ol>"
 
 msgid "sectionEditor.activeEditorialAssignments"
-msgstr "Aktīvie redaktoru piešķīrumi"
+msgstr "Aktīvie redakcionālie piešķīrumi"
 
 msgid "sectionEditor.completedEditorialAssignments"
-msgstr "Pabeigtie redaktoru piešķīrumi"
+msgstr "Pabeigtie redakcionālie piešķīrumi"
 
 msgid "sectionEditor.noneAssigned"
 msgstr "Nav piešķirts neviens iesniegtais materiāls."
@@ -963,7 +963,7 @@ msgid "sectionEditor.regrets.breadcrumb"
 msgstr "Nožēla"
 
 msgid "sectionEditor.regrets.title"
-msgstr "#{$submissionId} Recenzenta nožēla, atcelšana un iepriekšējās kārtas"
+msgstr "#{$submissionId} Recenzenta atteikumi, atcelšana un iepriekšējās kārtas"
 
 msgid "sectionEditor.regrets"
 msgstr "Nožēla"
@@ -993,13 +993,13 @@ msgid "sectionEditor.review.createReviewer"
 msgstr "Izveidot jaunu recenzentu"
 
 msgid "layoutEditor.activeEditorialAssignments"
-msgstr "Aktīvie redakcijas piešķīrumi"
+msgstr "Aktīvie redakcionālie piešķīrumi"
 
 msgid "layoutEditor.completedEditorialAssignments"
-msgstr "Pabeigtie redakcijas piešķīrumi"
+msgstr "Pabeigtie redakcionālie piešķīrumi"
 
 msgid "layoutEditor.noActiveAssignments"
-msgstr "Nav aktīvu redakcijas piešķīrumu."
+msgstr "Nav aktīvu redakcionālu piešķīrumu."
 
 msgid "layoutEditor.layoutEditingAssignments"
 msgstr "Maketēšanas piešķīrumi"
@@ -1045,8 +1045,8 @@ msgstr "Nav iespējams veikt recenzēšanu"
 
 msgid "reviewer.article.restrictedFileAccess"
 msgstr ""
-"Iesniegtais materiāls būs pieejams, ja un kad recenzents piekritīs veikt "
-"pārskatīšanu"
+"Iesniegtais materiāls būs pieejams tikai tad, ja recenzents piekritīs veikt "
+"recenzēšanu"
 
 msgid "reviewer.article.submissionEditor"
 msgstr "Iesniegto materiālu redaktors"
@@ -1126,18 +1126,18 @@ msgid "reviewer.article.reviewSteps"
 msgstr "Recenzēšanas soļi"
 
 msgid "reviewer.article.reviewerGuidelines"
-msgstr "Recenzēšanas vadlīnijas"
+msgstr "Vadlīnijas recenzentiem"
 
 msgid "reviewer.article.reviewGuidelinesDescription"
 msgstr ""
-"Recenzēšanas vadlīnijās recenzentiem tiks sniegti kritēriji, pēc kuriem tie "
-"varēs novērtēt iesniegtā materiāla piemērotību publicēšanai žurnālā, un "
-"tajās var iekļaut īpašus norādījumus, kā sagatavot efektīvu un noderīgu "
-"recenziju. Veicot recenzēšanu, recenzentiem tiek piedāvāti divi atvērti "
-"teksta lauki - pirmais \"autoram un redaktoram\" un otrais \"redaktoram\". "
-"Žurnāla pārvaldnieks var arī izveidot recenziju veidlapu sadaļā \"Recenziju "
-"veidlapas\". Visos gadījumos redaktoriem būs iespēja iekļaut recenzijas "
-"sarakstē ar autoru."
+"Vadlīnijās recenzentiem tiks sniegti kritēriji, pēc kuriem tie varēs "
+"novērtēt iesniegtā materiāla piemērotību publicēšanai žurnālā, un tajās var "
+"iekļaut īpašus norādījumus, kā sagatavot efektīvu un noderīgu recenziju. "
+"Veicot recenzēšanu, recenzentiem tiek piedāvāti divi atvērti teksta lauki - "
+"pirmais \"autoram un redaktoram\" un otrais \"redaktoram\". Žurnāla "
+"pārvaldnieks var arī izveidot recenzenta formu sadaļā \"Recenzenta forma\". "
+"Visos gadījumos redaktoriem būs iespēja iekļaut recenzijas sarakstē ar "
+"autoru."
 
 msgid "reviewer.article.notifyEditorA"
 msgstr "Paziņot iesniegtā materiāla redaktoram"
@@ -1146,8 +1146,7 @@ msgid "reviewer.article.notifyEditorB"
 msgstr "par to, vai veiksiet recenzēšanu."
 
 msgid "reviewer.article.consultGuidelines"
-msgstr ""
-"Ja gatavojaties veikt recenzēšanu, iepazīstieties ar recenzēšanas vadlīnijām."
+msgstr "Ja gatavojaties veikt recenzēšanu, skatiet Vadlīnijas recenzentiem."
 
 msgid "reviewer.article.downloadSubmission"
 msgstr ""
@@ -1365,10 +1364,10 @@ msgid "user.register.form.passwordLengthTooShort"
 msgstr "Ievadītā parole nav pietiekami gara."
 
 msgid "user.register.readerDescription"
-msgstr "Paziņots e-pastā par žurnāla laidiena publicēšanu."
+msgstr "Paziņots e-pastā par žurnāla numura publicēšanu."
 
 msgid "user.register.openAccessNotificationDescription"
-msgstr "Paziņots e-pastā par žurnāla laidienu atvērtā pieejā."
+msgstr "Paziņots e-pastā par žurnāla numuru atvērtā pieejā."
 
 msgid "user.register.authorDescription"
 msgstr "Var iesniegt materiālus žurnālam."
@@ -1600,19 +1599,19 @@ msgid "site.journalRegister"
 msgstr "Reģistrēties"
 
 msgid "site.journalCurrent"
-msgstr "Kārtējais laidiens"
+msgstr "Jaunākais žurnāla numurs"
 
 msgid "site.noJournals"
 msgstr "Nav pieejamu žurnālu."
 
 msgid "current.current"
-msgstr "Kārtējais"
+msgstr "Jaunākais"
 
 msgid "current.noCurrentIssue"
-msgstr "Nav jaunāko laidienu"
+msgstr "Nav jaunāko žurnāla numuru"
 
 msgid "current.noCurrentIssueDesc"
-msgstr "Šis žurnāls nav publicējis nevienu laidienu."
+msgstr "Šis žurnāls nav publicējis nevienu numuru."
 
 msgid "archive.archives"
 msgstr "Arhīvi"
@@ -1621,10 +1620,10 @@ msgid "archive.archivesPageNumber"
 msgstr "Arhīvi - {$pageNumber} lapa"
 
 msgid "archive.browse"
-msgstr "Pārlūkot vecākos laidienus"
+msgstr "Pārlūkot vecākos žurnāla numurus"
 
 msgid "archive.issueUnavailable"
-msgstr "Laidiens nav pieejams"
+msgstr "Žurnāla numurs nav pieejams"
 
 msgid "about.statistics"
 msgstr "Statistika"
@@ -1717,7 +1716,7 @@ msgid "about.delayedOpenAccessDescription1"
 msgstr "Šī žurnāla saturs būs pieejams atvērtās piekļuves formātā"
 
 msgid "about.delayedOpenAccessDescription2"
-msgstr "mēnešus pēc laidiena publicēšanas."
+msgstr "mēnešus pēc žurnāla numura publicēšanas."
 
 msgid "about.archiving"
 msgstr "Arhivēšana"
@@ -1758,7 +1757,7 @@ msgstr ""
 "PKP."
 
 msgid "about.aboutThisPublishingSystem.altText"
-msgstr "OJS rediģēšanas un publicēšanas process"
+msgstr "OJS redakcionālais un publicēšanas process"
 
 msgid "about.aboutSoftware"
 msgstr "Par Open Journal Systems"
@@ -1811,9 +1810,9 @@ msgstr ""
 
 msgid "payment.loginRequired.forIssue"
 msgstr ""
-"Lai piekļūtu šim produktam, ir nepieciešams abonements vai laidiena iegāde. "
-"Lai pārbaudītu abonementu, piekļūtu iepriekšējam pirkumam vai iegādātos "
-"laidienu, autorizējieties žurnālā."
+"Lai piekļūtu šim produktam, ir nepieciešams abonements vai žurnāla numura "
+"iegāde. Lai pārbaudītu abonementu, piekļūtu iepriekšējam pirkumam vai "
+"iegādātos žurnāla numuru, autorizējieties žurnālā."
 
 msgid "payment.loginRequired.forDonation"
 msgstr "Lai veiktu ziedojumu, jums ir jāpiereģistrējas."
@@ -1862,7 +1861,7 @@ msgid "payment.type.publication.required"
 msgstr "Jāsamaksā maksa par publikāciju ."
 
 msgid "payment.type.fastTrack"
-msgstr "Ātrā pārskatīšanas maksa"
+msgstr "Maksa par paātrinātu izskatīšanu"
 
 msgid "payment.type.membership"
 msgstr "Individuālā dalības maksa"
@@ -1871,7 +1870,7 @@ msgid "payment.type.purchaseArticle"
 msgstr "Pirkuma maksa par rakstu"
 
 msgid "payment.type.purchaseIssue"
-msgstr "Pirkuma maksa par laidienu"
+msgstr "Pirkuma maksa par žurnāla numuru"
 
 msgid "payment.type.subscription"
 msgstr "Abonēšanas maksa"
@@ -2126,8 +2125,7 @@ msgstr ""
 
 msgid "log.author.documentRevised"
 msgstr ""
-"{$authorName} pārskatīja rakstu {$submissionId}. Jaunais faila ID ir "
-"{$fileId}."
+"{$authorName} laboja rakstu {$submissionId}. Jaunais faila ID ir {$fileId}."
 
 msgid "log.review.reviewerUnassigned"
 msgstr ""
@@ -2160,27 +2158,27 @@ msgstr ""
 "ieteikumu iesniegtā materiāla {$submissionId} {$round} recenzēšanas kārtai."
 
 msgid "log.review.resubmit"
-msgstr "Materiāls {$submissionId} ir atkārtoti iesniegts pārskatīšanai."
+msgstr "Materiāls {$submissionId} ir atkārtoti iesniegts recenzēšanai."
 
 msgid "log.review.reviewDeclined"
 msgstr ""
-"{$reviewerName} ir atteicies no materiāla {$submissionId} {$round}. kārtas "
-"pārskatīšanas."
+"{$reviewerName} ir atteicies no materiāla {$submissionId} recenzēšanas "
+"{$round}. kārtā."
 
 msgid "log.review.reviewAccepted"
 msgstr ""
-"{$reviewerName} ir akceptējis materiāla {$submissionId} {$round}. kārtas "
-"pārskatīšanu."
+"{$reviewerName} ir akceptējis materiāla {$submissionId} recenzēšanu {$round}"
+". kārtā."
 
 msgid "log.review.reviewDeclinedByProxy"
 msgstr ""
-"{$userName} ir atteicies no materiāla {$submissionId} {$round}. kārtas "
-"pārskatīšanas {$reviewerName} vārdā."
+"{$userName} ir atteicies no materiāla {$submissionId} recenzēšanas {$round}. "
+"kārtā {$reviewerName} vārdā."
 
 msgid "log.review.reviewAcceptedByProxy"
 msgstr ""
 "{$userName} ir akceptējis materiāla {$submissionId} {$round}. kārtas "
-"pārskatīšanu {$reviewerName} vārdā."
+"recenzēšanu {$reviewerName} vārdā."
 
 msgid "log.review.reviewFileByProxy"
 msgstr ""
@@ -2282,16 +2280,16 @@ msgid "notification.type.galleyModified"
 msgstr "Ir pārveidots \"{$title}.\" saliktnis"
 
 msgid "notification.type.issuePublished"
-msgstr "Laidiens ir publicēts."
+msgstr "Žurnāla numurs ir publicēts."
 
 msgid "notification.type.newAnnouncement"
 msgstr "Ir izveidots jauns paziņojums."
 
 msgid "notification.type.openAccess"
-msgstr "Laidiens ir atvērtā piekļuvē."
+msgstr "Žurnāla numurs ir atvērtā piekļuvē."
 
 msgid "notification.type.reviewerFormComment"
-msgstr "Ir iesniegta recenzijas veidlapa par \"{$title}.\""
+msgstr "Ir iesniegta recenzenta forma par \"{$title}.\""
 
 msgid "notification.type.reviewing"
 msgstr "Recenzēšanas notikumi"
@@ -2312,7 +2310,7 @@ msgid "notification.type.public"
 msgstr "Publiskie paziņojumi"
 
 msgid "notification.savedIssueMetadata"
-msgstr "Laidiena publicēšanas metadati saglabāti."
+msgstr "Žurnāla numura publicēšanas metadati saglabāti."
 
 msgid "notification.type.editorAssignmentTask"
 msgstr "Ir iesniegts jauns raksts, kuram jāpiešķir redaktors."
@@ -2336,7 +2334,7 @@ msgid "user.authorization.sectionAssignment"
 msgstr "Jūs mēģināt piekļūt rakstam, kas nav no jūsu sadaļas."
 
 msgid "user.authorization.invalidIssue"
-msgstr "Pieprasīts nederīgs laidiens!"
+msgstr "Pieprasīts nederīgs žurnāla numurs!"
 
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr ""
@@ -2347,12 +2345,12 @@ msgid "grid.action.createContext"
 msgstr "Izveidot jaunu žurnālu"
 
 msgid "editor.navigation.issues"
-msgstr "Laidieni"
+msgstr "Žurnāla numuri"
 
 msgid "notification.type.approveSubmission"
 msgstr ""
-"Šis materiāls pašlaik gaida apstiprinājumu, lai tiktu publicēts šajā "
-"laidienā."
+"Šis materiāls pašlaik gaida apstiprinājumu, lai tiktu publicēts šajā žurnāla "
+"numurā."
 
 msgid "notification.type.approveSubmissionTitle"
 msgstr "Tiek gaidīts apstiprinājums."
@@ -2393,10 +2391,10 @@ msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "Norādīto žurnāla ceļu “{$journalPath}” nevarēja atrisināt uz žurnālu."
 
 msgid "editor.issues.backIssues"
-msgstr "Iepriekšējie laidieni"
+msgstr "Iepriekšējie žurnāla numuri"
 
 msgid "editor.issues.futureIssues"
-msgstr "Turpmākie laidieni"
+msgstr "Turpmākie žurnāla numuri"
 
 msgid "navigation.subscriptions"
 msgstr "Abonementi"
