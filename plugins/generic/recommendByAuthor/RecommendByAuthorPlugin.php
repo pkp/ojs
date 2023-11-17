@@ -120,11 +120,11 @@ class RecommendByAuthorPlugin extends GenericPlugin
             'submissionIds' => $results,
             'assocTypes' => [Application::ASSOC_TYPE_SUBMISSION, Application::ASSOC_TYPE_SUBMISSION_FILE]
         ];
-        $statsReport = Services::get('publicationStats')->getTotals($filters);
 
         $orderedResults = [];
         if ($results) {
             // pkp/pkp-lib#9512: Check $results above, as an empty list of submissionIds is treated as no filter at all.
+            $statsReport = Services::get('publicationStats')->getTotals($filters);
             foreach ($statsReport as $reportRow) {
                 $orderedResults[] = $reportRow->{StatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID};
             }
