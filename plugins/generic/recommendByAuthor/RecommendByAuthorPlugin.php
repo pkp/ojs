@@ -123,8 +123,11 @@ class RecommendByAuthorPlugin extends GenericPlugin
         $statsReport = Services::get('publicationStats')->getTotals($filters);
 
         $orderedResults = [];
-        foreach ($statsReport as $reportRow) {
-            $orderedResults[] = $reportRow->{StatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID};
+        if ($results) {
+            // pkp/pkp-lib#9512: Check $results above, as an empty list of submissionIds is treated as no filter at all.
+            foreach ($statsReport as $reportRow) {
+                $orderedResults[] = $reportRow->{StatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID};
+            }
         }
         // Make sure we even get results that have no statistics (yet) and that
         // we get them in some consistent order for paging.
