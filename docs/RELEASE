@@ -1,8 +1,8 @@
 OJS 3.3.0 Release Notes
-Git tag: 3_3_0-15
+Git tag: 3_3_0-16
 
-Release date: June 27, 2023
-==============================
+Release date: November 17, 2023
+===============================
 
 Configuration Changes
 ---------------------
@@ -29,6 +29,46 @@ configuration parameters.
   - email.smtp_oauth_refreshtoken
 - The setting general.session_samesite (default value: Lax) has been added to control the "SameSite" setting for the session cookie.
 - The setting security.force_ssl, when enabled, will also set the "Secure" flag for the session cookie.
+
+3.3.0-16 Build
+--------------
+	#7470: Fair Copy files not migrated when upgrading from OJS 2 to 3
+	#8710: Performance issues at the plugin "Recommend By Similarity"
+	#9126: Multilingual Metadata in Crossref
+	#9132: Logic Error in SQL query invalidates editorial statistics
+	#9138: PHP mt_rand function should not be used for secrets
+	#9144: An issue's TOC can be wrongfully pulled from another issue if the url path partially matches
+	#9160: Call to getLocale() on NULL in NativeXmlPKPAuthorFilter.inc.php
+	#9169: Password reset process does not provide username to user
+	#9182: OJS 3.3.0 (php 8) - error editing institutional subscription
+	#9205: dc:languages OAI data not properly sourced from submission language metadata
+	#9275: Unable to create a new publication through submission API
+	#9277: Submission title not properly escaped when opening information center from submission list
+	#9283: Issue title incorrectly escaped in issue edit grid
+	#9301: Remove user email address confirmation from password reset message
+	#9304: Properly escape special characters in statistics area
+	#9305: Special characters in section names not escaped in About > Submissions
+	#9306: Properly escape context name when presenting in form field
+	#9315: Disallow SVGs
+	#9319: PubMed plugin includes author email in affiliation element
+	#9326: Existing sessions not invalidated when user account is disabled
+	#9376: Add CSRF check on navigation menu item deletion
+	#9383: Add publisher URL field
+	#9386: [A11Y] Missing label on Google reCaptcha form triggering accessibility non-compliance issue
+	#9395: Missing call to parent::validate() in AddParticipantForm.inc.php
+	#9396: Missing HTML / special character escaping in modal title for query edit action
+	#9397: Enable strict RFC compliant redirects for Guzzle
+	#9405: Categories aren't saved for new submissions in OMP
+	#9406: Missing CSRF check on AssignPublicIdentifiersForm
+	#9407: Missing CSRF check in payment types form
+	#9409: Missing CSRF check in reviewRead function
+	#9410: CSRF checks missing in cancel and reinstate reviewer forms
+	#9411: Escape reviewer name in reviewer selection modal
+	#9450: PHP Fatal error:  Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array
+	#9458: Usage Stats plugin has wrong link to privacy statement
+	#9464: Sanitize cover image filename in native import
+	#9503: [A11Y] Add information about required fields with asterisks in forms
+	#9504: [A11Y] Very low contrast ratio between asterisk (required fields) and background color
 
 3.3.0-15 Build
 --------------
