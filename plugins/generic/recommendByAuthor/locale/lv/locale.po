@@ -1,0 +1,32 @@
+# Ieva Tiltina <pastala@gmail.com>, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-11-02 07:38+0000\n"
+"Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
+"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-recommendByAuthor/lv/>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
+"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.generic.recommendByAuthor.displayName"
+msgstr "Ieteicamie raksti pēc autora"
+
+msgid "plugins.generic.recommendByAuthor.heading"
+msgstr "Visvairāk lasītie šī autora (autoru) raksti"
+
+msgid "plugins.generic.recommendByAuthor.description"
+msgstr ""
+"Šis spraudnis ievieto viena un tā paša autora rakstu sarakstu raksta "
+"kopsavilkuma lapā."
+
+msgid "plugins.generic.recommendByAuthor.noMetric"
+msgstr ""
+"Novērojums: Šis spraudnis prasa, lai būtu ieslēgts vismaz viens statistikas/"
+"ziņojumu spraudnis. Ja jūsu statistikas spraudņi nodrošina vairāk nekā vienu "
+"metriku, lūdzu, izvēlieties arī galveno metriku administratora vietnes "
+"iestatījumu lapā un/vai žurnāla pārvaldnieka iestatījumu lapās."

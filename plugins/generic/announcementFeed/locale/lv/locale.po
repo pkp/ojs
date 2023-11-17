@@ -1,0 +1,52 @@
+# Ieva Tiltina <pastala@gmail.com>, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-11-02 07:38+0000\n"
+"Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
+"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-announcementFeed/lv/>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
+"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Iestatījumi"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "Paziņojumu plūsmas spraudnis"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Rādīt barotnes saites visās žurnāla lapās."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "Rādīt barotnes saites tikai paziņojumu lapā."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr "Rādīt barotnes saites tikai sākumlapā un paziņojumu lapā."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Ierobežot barotni līdz"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "jaunākie paziņojumi."
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Atom logotips"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "RSS1 logotips"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "RSS2 logotips"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr ""
+"Šis spraudnis veido RSS/Atom tīmekļa sindikācijas plūsmas žurnālu "
+"paziņojumiem."
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "Lūdzu, ievadiet pozitīvu veselu skaitli jaunākajiem paziņojumiem."

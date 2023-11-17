@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-09-22 12:06+0000\n"
+"PO-Revision-Date: 2023-11-02 15:29+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/api/lv/>\n"
 "Language: lv\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
 "19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "Jūsu pieprasītais sludinājums nav iekļauts šajā žurnālā."
@@ -22,7 +22,7 @@ msgid "api.submissions.400.wrongContext"
 msgstr "Jūsu pieprasītais materiāls nav iekļauts šajā žurnālā."
 
 msgid "api.submissions.403.unpublishedIssues"
-msgstr "Jums nav tiesību skatīt nepublicētus laidienus."
+msgstr "Jums nav tiesību skatīt nepublicētus žurnāla numurus."
 
 msgid "api.contexts.403.requestedDisabledContexts"
 msgstr "Varat skatīt tikai tos žurnālus, kas ir iespējoti."
