@@ -1,8 +1,8 @@
 OJS 3.4.0 Release Notes
-Git tag: 3_4_0-3
+Git tag: 3_4_0-4
 
-Release date: August 28, 2023
-=============================
+Release date: November 17, 2023
+===============================
 
 Configuration Changes
 ---------------------
@@ -45,6 +45,60 @@ New config.inc.php section for queues is added, with the following parameters:
 New config.inc.php parameters added for emails:
      - default (default value: sendmail), being the default mailer driver to be used for email delivery
      - sendmail_path (default value: "/usr/sbin/sendmail -bs"), being the path to the sendmail program on the server
+
+3.4.0-4 build
+-------------
+    #8025: Context name can not be localized correctly in a job
+    #8871: Add ability to login via Email
+    #8915: Improve the search indexer
+    #9226: Announcement feed plugin incorrect sorting
+    #9253: Add site-level announcements to OJS
+    #9256: Add filter to search by journal to site-level searching in OJS
+    #9262: Add the ability to show features on the homepage for OJS
+    #9266: OJS 3.4.0.1 / 3.4.0.3 error tools/install.php
+    #9277: Submission title not properly escaped when opening information center from submission list
+    #9278: Use ISO639-2b instead of ISO639-3 for locale conversion
+    #9282: [OJS 3.4.0-3] Upgrade error, DOI related
+    #9283: Issue title incorrectly escaped in issue edit grid
+    #9298: Not possible to edit a publication from a CLI tool
+    #9301: Remove user email address confirmation from password reset message
+    #9304: Properly escape special characters in statistics area
+    #9305: Special characters in section names not escaped in About > Submissions
+    #9306: Properly escape context name when presenting in form field
+    #9310: OJS 3.4 Editorial Activity: "Accept and Skip Review" does not mark article as "Accepted"
+    #9315: Disallow SVGs
+    #9319: PubMed plugin includes author email in affiliation element
+    #9322: Escape user group name in Statistics > Users > Export
+    #9325: Link action button unescape presents XSS risk
+    #9326: Existing sessions not invalidated when user account is disabled
+    #9327: Escape issue title in statistics
+    #9335: One-click reviewer access causes fatal error
+    #9364: Translation performance improvement
+    #9376: Add CSRF check on navigation menu item deletion
+    #9382: Display users’ roles in OJS user list
+    #9383: Add publisher URL field
+    #9384: installPluginVerion.php script fails for some importexport plugins in OJS 3.4
+    #9386: [A11Y] Missing label on Google reCaptcha form triggering accessibility non-compliance issue
+    #9391: DOAJ plugin does not store deposit status in OJS 3.4
+    #9395: Missing call to parent::validate() in AddParticipantForm.inc.php
+    #9396: Missing HTML / special character escaping in modal title for query edit action
+    #9397: Enable strict RFC compliant redirects for Guzzle
+    #9401: Inline CSS styles ignored in htmlGalley context
+    #9406: Missing CSRF check on AssignPublicIdentifiersForm
+    #9407: Missing CSRF check in payment types form
+    #9409: Missing CSRF check in reviewRead function
+    #9410: CSRF checks missing in cancel and reinstate reviewer forms
+    #9411: Escape reviewer name in reviewer selection modal
+    #9415: Fatal error when uploading .mht file
+    #9433: Missing variable on SubmissionAcknowledgement mailable
+    #9438: Add new email config to the release notes
+    #9444: Fatal error when setting the body of a mailable with null
+    #9449: [OJS] issueform::execute hook without $issue attached to $form
+    #9464: Sanitize cover image filename in native import
+    #9483: Search navigation menu item not displayed at site level
+    #9503: [A11Y] Add information about required fields with asterisks in forms
+    #9512: Bug in recommendByAuthor plugin - it returns whole statistics data instead of recommended articles in some cases
+
 
 3.4.0-3 build
 -------------
