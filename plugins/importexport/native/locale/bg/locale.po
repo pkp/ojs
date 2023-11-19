@@ -1,16 +1,16 @@
-# Cyril Kamburov <cc@intermedia.bg>, 2021, 2022.
+# Cyril Kamburov <cc@intermedia.bg>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-31 08:02+0000\n"
+"PO-Revision-Date: 2023-11-20 03:17+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/"
-"importexport-native/bg_BG/>\n"
-"Language: bg_BG\n"
+"importexport-native/bg/>\n"
+"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.importexport.native.displayName"
 msgstr "Плъгин за собствен XML формат"
@@ -124,3 +124,9 @@ msgstr ""
 msgid "plugins.importexport.native.import.error.publishedDateMissing"
 msgstr ""
 "Статията \"{$articleTitle}\" се съдържа в броя, но няма дата на публикуване."
+
+msgid "plugins.importexport.common.error.invalidFileExtension"
+msgstr "Посочено е изображение на корицата с невалидно файлово разширение."
+
+msgid "plugins.importexport.common.error.coverImageNameUnspecified"
+msgstr "Изображението на корицата беше вградено без посочване на име."
