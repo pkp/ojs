@@ -189,7 +189,7 @@ class ArticleSearch extends SubmissionSearch {
 				while ($context = $contexts->next()) {
 					if (in_array(
 						$request->getUserVar('journalTitle'),
-						(array) $context->getTitle(null)
+						(array) $context->getName(null)
 					)) break;
 				}
 			}
