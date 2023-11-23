@@ -73,7 +73,9 @@
   "postcss": {
     "plugins": {
       "autoprefixer": {},
-      "tailwindcss": {}
+      "tailwindcss": {
+        "config": "./lib/ui-library/tailwind.config.js" 
+      }
     }
   },
   "lint-staged": {
