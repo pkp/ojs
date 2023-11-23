@@ -1,8 +1,9 @@
 # Huw Robert Grange <huw.r.grange@uit.no>, 2023.
+# Aysa Ekanger <aysa.ekanger@uit.no>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-11-15 10:38+0000\n"
-"Last-Translator: Huw Robert Grange <huw.r.grange@uit.no>\n"
+"PO-Revision-Date: 2023-11-23 13:08+0000\n"
+"Last-Translator: Aysa Ekanger <aysa.ekanger@uit.no>\n"
 "Language-Team: Sami (Northern) <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/se/>\n"
 "Language: se\n"
@@ -32,3 +33,9 @@ msgstr "Čoavddasánit"
 
 msgid "article.submissions"
 msgstr "Boahtán čállosat"
+
+msgid "navigation.current"
+msgstr "Ođđasemos"
+
+msgid "navigation.infoForAuthors"
+msgstr "Čálliide"
