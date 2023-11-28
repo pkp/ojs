@@ -111,7 +111,6 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $publication->setData('abstract', 'article-abstract', 'en');
         $publication->setData('sponsor', 'article-sponsor', 'en');
         $publication->setData('doiObject', $publicationDoiObject);
-        $publication->setData('languages', ['en' => ['en']]);
         $publication->setData('copyrightHolder', 'article-copyright');
         $publication->setData('copyrightYear', 'year');
         $publication->setData('authors', collect([$author]));
@@ -153,6 +152,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->will($this->returnValue(98));
         $galley->setId(98);
         $galley->setData('doiObject', $galleyDoiObject);
+        $galley->setData('locale', 'en');
 
         $galleys = [$galley];
 
