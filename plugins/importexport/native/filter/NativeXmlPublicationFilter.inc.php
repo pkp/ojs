@@ -140,7 +140,7 @@ class NativeXmlPublicationFilter extends NativeXmlPKPPublicationFilter {
 		assert(isset($importFilter)); // There should be a filter
 
 		$importFilter->setDeployment($this->getDeployment());
-		$articleGalleyDoc = new DOMDocument();
+		$articleGalleyDoc = new DOMDocument('1.0', 'utf-8');
 		$articleGalleyDoc->appendChild($articleGalleyDoc->importNode($n, true));
 		return $importFilter->execute($articleGalleyDoc);
 	}

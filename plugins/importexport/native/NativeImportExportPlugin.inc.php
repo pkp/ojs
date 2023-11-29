@@ -136,7 +136,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$filter = 'native-xml=>issue';
 				// is this articles import:
 				$xmlString = file_get_contents($temporaryFilePath);
-				$document = new DOMDocument();
+				$document = new DOMDocument('1.0', 'utf-8');
 				$document->loadXml($xmlString);
 				if (in_array($document->documentElement->tagName, array('article', 'articles'))) {
 					$filter = 'native-xml=>article';
@@ -394,7 +394,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$filter = 'native-xml=>issue';
 				// is this articles import:
 				$xmlString = file_get_contents($xmlFile);
-				$document = new DOMDocument();
+				$document = new DOMDocument('1.0', 'utf-8');
 				$document->loadXml($xmlString);
 				if (in_array($document->documentElement->tagName, array('article', 'articles'))) {
 					$filter = 'native-xml=>article';

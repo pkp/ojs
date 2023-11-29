@@ -307,7 +307,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 				$eResponseBody = $e->getResponse()->getBody(true);
 				$eStatusCode = $e->getResponse()->getStatusCode();
 				if ($eStatusCode == CROSSREF_API_DEPOSIT_ERROR_FROM_CROSSREF) {
-					$xmlDoc = new DOMDocument();
+					$xmlDoc = new DOMDocument('1.0', 'utf-8');
 					$xmlDoc->loadXML($eResponseBody);
 					$batchIdNode = $xmlDoc->getElementsByTagName('batch_id')->item(0);
 					$msg = $xmlDoc->getElementsByTagName('msg')->item(0)->nodeValue;
@@ -324,7 +324,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 		}
 
 		// Get DOMDocument from the response XML string
-		$xmlDoc = new DOMDocument();
+		$xmlDoc = new DOMDocument('1.0', 'utf-8');
 		$xmlDoc->loadXML($response->getBody());
 		$batchIdNode = $xmlDoc->getElementsByTagName('batch_id')->item(0);
 

@@ -219,7 +219,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 		assert(count($importFilters)==1); // Assert only a single unserialization filter
 		$importFilter = array_shift($importFilters);
 		$importFilter->setDeployment($this->getDeployment());
-		$issueGalleyDoc = new DOMDocument();
+		$issueGalleyDoc = new DOMDocument('1.0', 'utf-8');
 		$issueGalleyDoc->appendChild($issueGalleyDoc->importNode($n, true));
 		return $importFilter->execute($issueGalleyDoc);
 	}
@@ -255,7 +255,7 @@ class NativeXmlIssueFilter extends NativeImportFilter {
 		assert(count($importFilters)==1); // Assert only a single unserialization filter
 		$importFilter = array_shift($importFilters);
 		$importFilter->setDeployment($this->getDeployment());
-		$articleDoc = new DOMDocument();
+		$articleDoc = new DOMDocument('1.0', 'utf-8');
 		$articleDoc->appendChild($articleDoc->importNode($n, true));
 		return $importFilter->execute($articleDoc);
 	}
