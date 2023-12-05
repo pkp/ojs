@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-12-05 19:46+0000\n"
+"PO-Revision-Date: 2023-12-06 00:54+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
 "lv/>\n"
@@ -150,3 +150,94 @@ msgstr "Nosaukumu telpa"
 
 msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
 msgstr "Izvēlēties"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "URN nav iespējams piešķirt, jo trūkst pielāgotā sufiksa."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "URN nevar piešķirt, jo tas satur neatrisinātu modeli."
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Dotais URN sufikss jau tiek izmantots citam publicētajam vienumam. Lūdzu, "
+"ievadiet unikālu URN sufiksu katram vienumam."
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "Notīrīt žurnāla numuru objektu URN"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr ""
+"Izmantojiet šādu opciju, lai notīrītu URN visiem žurnāla numuriem (rakstiem "
+"un saliktņiem), kas pašlaik plānoti šim izdevumam."
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr ""
+"Jūs nevarat ģenerēt URN, kamēr šī publikācija nav piešķirta žurnāla numuram."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"Jūs nevarat ģenerēt URN, jo trūkst datu vienai vai vairākām URN parauga "
+"daļām. Iespējams, jums būs jāpiešķir publikācija žurnāla numuram, jāiestata "
+"izdevēja ID vai jāievada lappušu numuri."
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "rakstam"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "saliktnim"
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr ""
+"Tas, ko redzat, ir URN priekšskatījums. Atlasiet izvēles rūtiņu un "
+"saglabājiet veidlapu, lai piešķirtu URN."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "URN tiek piešķirts šim {$pubObjectType}."
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "Notīrīt"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Vai tiešām vēlaties dzēst esošo URN?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "Vai tiešām vēlaties dzēst esošos žurnāla numuru objektu URN?"
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Pievienot pārbaudes numuru"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "Piešķirt URN {$pubId} šim {$pubObjectType}"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "URN nav iespējams piešķirt, jo trūkst pielāgotā sufiksa."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr "URN {$pubId} nevar piešķirt, jo tas satur neatrisinātu modeli."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "URN {$pubId} ir piešķirts."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Nav norādīts pārbaudes numurs."
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "URN jāsākas ar {$prefix}."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Piešķirt"
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "URN jāsākas ar {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "Šīs publikācijas URN būs {$urn}."
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "Šai publikācijai nav piešķirts URN."
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Saliktnis: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Vienība"
