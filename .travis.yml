@@ -192,7 +192,8 @@ script:
   - ./lib/pkp/tools/travis/run-tests.sh
 
 after_failure:
-  - tail -n 500 error.log
+  - head -n 100 error.log
+  - tail -n 400 error.log
   - sudo apt-get install sharutils
   # Outputs only the oldest file found at the screenshots folder due to log limits
   - find cypress/screenshots -type f -printf '%T+\t%p\n' | sort | head -n 1 | cut -f 2 | tar -cz -T - | uuencode /dev/stdout
