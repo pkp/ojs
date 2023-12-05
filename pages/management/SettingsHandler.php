@@ -119,7 +119,7 @@ class SettingsHandler extends ManagementHandler
                 'enablePluginUrl' => $pnEnablePluginUrl,
                 'disablePluginUrl' => $pnDisablePluginUrl,
                 'settingsUrl' => $pnSettingsUrl,
-                'csrfToken' => $request->getSession()->getCSRFToken(),
+                'csrfToken' => $request->getSession()->token(),
                 'groupId' => 'default',
                 'enablePluginSuccess' => __('common.pluginEnabled', ['pluginName' => __('manager.setup.plnPluginArchiving')]),
                 'disablePluginSuccess' => __('common.pluginDisabled', ['pluginName' => __('manager.setup.plnPluginArchiving')]),

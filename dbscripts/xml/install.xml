@@ -19,6 +19,7 @@
 
 	<!-- PKP schema components -->
 	<migration class="PKP\migration\install\CommonMigration" />
+	<migration class="PKP\migration\install\SessionsMigration" />
 	<migration class="PKP\migration\install\GenresMigration" />
 	<migration class="PKP\migration\install\ControlledVocabMigration" />
 	<migration class="PKP\migration\install\FailedJobsMigration" />
