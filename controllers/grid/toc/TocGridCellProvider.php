@@ -68,7 +68,7 @@ class TocGridCellProvider extends GridCellProvider
                                 [
                                     'articleId' => $article->getId(),
                                     'status' => ($article->getCurrentPublication()->getData('accessStatus') == Submission::ARTICLE_ACCESS_OPEN) ? Submission::ARTICLE_ACCESS_ISSUE_DEFAULT : Submission::ARTICLE_ACCESS_OPEN,
-                                    'csrfToken' => $request->getSession()->getCSRFToken(),
+                                    'csrfToken' => $request->getSession()->token(),
                                 ],
                                 $row->getRequestArgs()
                             )

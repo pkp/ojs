@@ -44,7 +44,7 @@ class TemplateManager extends PKPTemplateManager
             'brandImage' => 'templates/images/ojs_brand.png',
         ]);
 
-        if (!SessionManager::isDisabled()) {
+        if (!defined('SESSION_DISABLE_INIT')) {
             /**
              * Kludge to make sure no code that tries to connect to
              * the database is executed (e.g., when loading
