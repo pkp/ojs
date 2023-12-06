@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-11-02 15:29+0000\n"
+"PO-Revision-Date: 2023-12-07 13:39+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/lv/>"
 "\n"
@@ -407,7 +407,7 @@ msgid "manager.setup.editorialTeam"
 msgstr "Redkolēģija"
 
 msgid "manager.setup.homepageContent"
-msgstr "Žurnāla mājaslapas saturs"
+msgstr "Žurnāla sākumlapas saturs"
 
 msgid "manager.setup.homepageContentDescription"
 msgstr ""
