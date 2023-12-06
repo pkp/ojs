@@ -25,6 +25,7 @@ use APP\submissionFile\Repository as SubmissionFileRepository;
 use APP\user\Repository as UserRepository;
 use PKP\facades\Repo as BaseRepo;
 use PKP\galley\Repository as GalleyRepository;
+use PKP\jats\Repository as JatsRepository;
 use PKP\submission\reviewAssignment\Repository as ReviewAssignmentRepository;
 
 class Repo extends BaseRepo
@@ -82,5 +83,10 @@ class Repo extends BaseRepo
     public static function reviewAssignment(): ReviewAssignmentRepository
     {
         return app(ReviewAssignmentRepository::class);
+    }
+
+    public static function jats(): JatsRepository
+    {
+        return app(JatsRepository::class);
     }
 }
