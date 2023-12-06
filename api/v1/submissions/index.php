@@ -20,6 +20,8 @@ $urlParts = explode('/', trim($_SERVER['PATH_INFO'], '/'));
 
 if (count($urlParts) >= 6 && $urlParts[5] == 'files') {
     return new \PKP\handler\APIHandler(new \PKP\API\v1\submissions\PKPSubmissionFileController());
+} elseif (in_array('jats', $urlParts)) {
+    return new \PKP\handler\APIHandler(new \PKP\API\v1\jats\PKPJatsController());
 } else {
     return new \PKP\handler\APIHandler(new \APP\API\v1\submissions\SubmissionController());
 }

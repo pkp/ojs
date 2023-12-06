@@ -227,6 +227,15 @@
 								<pkp-form v-bind="components.{$smarty.const.FORM_PUBLICATION_IDENTIFIERS}" @set="set" />
 							</tab>
 						{/if}
+						<tab id="jats" label="{translate key="publication.jats"}">
+							<jats-list-panel
+								v-bind="components.jats"
+								class="pkpWorkflow__jats"
+								@set="set"
+								:publication="workingPublication"
+								:publication-api-url="submissionApiUrl + '/publications/' + workingPublication.id"
+							></jats-list-panel>
+						</tab>
 						{if $canAccessProduction}
 							<tab id="galleys" label="{translate key="submission.layout.galleys"}">
 								<div id="representations-grid" ref="representations">
