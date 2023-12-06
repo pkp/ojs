@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-11-02 07:38+0000\n"
+"PO-Revision-Date: 2023-12-07 13:39+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/"
 "generic-announcementFeed/lv/>\n"
@@ -26,7 +26,7 @@ msgid "plugins.generic.announcementfeed.settings.announcement"
 msgstr "Rādīt barotnes saites tikai paziņojumu lapā."
 
 msgid "plugins.generic.announcementfeed.settings.homepage"
-msgstr "Rādīt barotnes saites tikai sākumlapā un paziņojumu lapā."
+msgstr "Rādīt barotnes saites sākumlapā un paziņojumu lapā."
 
 msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
 msgstr "Ierobežot barotni līdz"
