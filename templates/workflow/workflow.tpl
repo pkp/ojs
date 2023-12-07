@@ -228,13 +228,13 @@
 							</tab>
 						{/if}
 						<tab id="jats" label="{translate key="publication.jats"}">
-							<jats-list-panel
+							<pkp-publication-jats
 								v-bind="components.jats"
 								class="pkpWorkflow__jats"
 								@set="set"
 								:publication="workingPublication"
 								:publication-api-url="submissionApiUrl + '/publications/' + workingPublication.id"
-							></jats-list-panel>
+							></pkp-publication-jats>
 						</tab>
 						{if $canAccessProduction}
 							<tab id="galleys" label="{translate key="submission.layout.galleys"}">
