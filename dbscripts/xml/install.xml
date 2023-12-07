@@ -47,7 +47,7 @@
 	<migration class="PKP\migration\install\CategoriesMigration" />
 	<migration class="PKP\migration\install\HighlightsMigration" />
 	<migration class="APP\migration\install\MetricsMigration" />
-    <migration class="PKP\migration\install\UserPrivateNotesMigration" />
+	<migration class="PKP\migration\install\UserPrivateNotesMigration" />
 
 	<!-- Other install tasks -->
 	<code function="createData"/>
