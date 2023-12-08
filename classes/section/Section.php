@@ -31,7 +31,7 @@ class Section extends \PKP\section\PKPSection
         return $this->getLocalizedData('abbrev');
     }
 
-    public function getAbbrev(?string $locale): string|array
+    public function getAbbrev(?string $locale): string|array|null
     {
         return $this->getData('abbrev', $locale);
     }
