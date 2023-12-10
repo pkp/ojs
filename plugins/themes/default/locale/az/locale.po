@@ -95,3 +95,7 @@ msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
 msgstr ""
 "Bir ana səhifə şəkli yükləndiyində, ana səhifədəki normal başlıq yerinə "
 "başlığın arxa planında baxın."
+
+#, fuzzy
+msgid "plugins.themes.default.titleSubtitleSeparator"
+msgstr " &mdash; "

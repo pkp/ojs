@@ -94,3 +94,7 @@ msgstr "Превземања"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Податоците за превземање не се сè уште достапни."
+
+#, fuzzy
+msgid "plugins.themes.default.titleSubtitleSeparator"
+msgstr " &mdash; "

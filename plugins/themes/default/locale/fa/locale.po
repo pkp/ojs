@@ -92,3 +92,7 @@ msgstr "دانلودها"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "دسترسی به دانلود اطلاعات مقدور نیست."
+
+#, fuzzy
+msgid "plugins.themes.default.titleSubtitleSeparator"
+msgstr " &mdash; "

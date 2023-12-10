@@ -100,3 +100,7 @@ msgstr "Ներբեռնումներ"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Ներբեռնման տվյալները դեռ հասանելի չեն:"
+
+#, fuzzy
+msgid "plugins.themes.default.titleSubtitleSeparator"
+msgstr " &mdash; "

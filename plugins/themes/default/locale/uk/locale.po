@@ -104,3 +104,7 @@ msgstr "Завантажити"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Дані для завантаження поки недоступні."
+
+#, fuzzy
+msgid "plugins.themes.default.titleSubtitleSeparator"
+msgstr " &mdash; "

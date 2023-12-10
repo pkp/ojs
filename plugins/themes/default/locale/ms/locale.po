@@ -94,3 +94,7 @@ msgstr "Muat turun"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Muat turun data belum tersedia."
+
+#, fuzzy
+msgid "plugins.themes.default.titleSubtitleSeparator"
+msgstr " &mdash; "

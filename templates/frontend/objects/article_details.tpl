@@ -64,6 +64,7 @@
  * @uses $licenseUrl string URL to license. Only assigned if license should be
  *   included with published submissions.
  * @uses $ccLicenseBadge string An image and text with details about the license
+ * @uses $pubLocaleData array Array of formatted publication multilingual metadata
  *
  * @hook Templates::Article::Main []
  * @hook Templates::Article::Details::Reference []
@@ -91,13 +92,12 @@
 		</div>
 	{/if}
 
-	<h1 class="page_title">
-		{$publication->getLocalizedTitle(null, 'html')|strip_unsafe_html}
+	<h1 class="page_title" lang="{$pubLocaleData.titleLocale|replace:"_":"-"}">
+		{$pubLocaleData.title.text[$pubLocaleData.titleLocale]|strip_unsafe_html}
 	</h1>
-
-	{if $publication->getLocalizedData('subtitle')}
-		<h2 class="subtitle">
-			{$publication->getLocalizedSubTitle(null, 'html')|strip_unsafe_html}
+	{if isset($pubLocaleData.subtitle.text[$pubLocaleData.titleLocale])}
+		<h2 class="subtitle" lang="{$pubLocaleData.titleLocale|replace:"_":"-"}">
+			{$pubLocaleData.subtitle.text[$pubLocaleData.titleLocale]|strip_unsafe_html}
 		</h2>
 	{/if}
 
@@ -160,31 +160,35 @@
 				</section>
 			{/if}
 
+			{* Default view or multilingual view *}
+			{if !isset($activeTheme->getOption('showMultilingualMetadata'))}
+				{* Keywords *}
+				{if !empty($publication->getLocalizedData('keywords'))}
+					<section class="item keywords">
+						<h2 class="label">
+							{capture assign=translatedKeywords}{translate key="article.subject"}{/capture}
+							{translate key="semicolon" label=$translatedKeywords}
+						</h2>
+						<span class="value">
+							{foreach name="keywords" from=$publication->getLocalizedData('keywords') item="keyword"}
+								{$keyword|escape}{if !$smarty.foreach.keywords.last}{translate key="common.commaListSeparator"}{/if}
+							{/foreach}
+						</span>
+					</section>
+				{/if}
+	
+				{* Abstract *}
+				{if $publication->getLocalizedData('abstract')}
+					<section class="item abstract">
+							<h2 class="label">{translate key="article.abstract"}</h2>
+							{$publication->getLocalizedData('abstract')|strip_unsafe_html}
+					</section>
+				{/if}
 
-			{* Keywords *}
-			{if !empty($publication->getLocalizedData('keywords'))}
-			<section class="item keywords">
-				<h2 class="label">
-					{capture assign=translatedKeywords}{translate key="article.subject"}{/capture}
-					{translate key="semicolon" label=$translatedKeywords}
-				</h2>
-				<span class="value">
-					{foreach name="keywords" from=$publication->getLocalizedData('keywords') item="keyword"}
-						{$keyword|escape}{if !$smarty.foreach.keywords.last}{translate key="common.commaListSeparator"}{/if}
-					{/foreach}
-				</span>
-			</section>
+				{call_hook name="Templates::Article::Main"}
+			{else}
+				{include file="frontend/objects/article_multilingual_metadata.tpl" pubLocaleData=$pubLocaleData}
 			{/if}
-
-			{* Abstract *}
-			{if $publication->getLocalizedData('abstract')}
-				<section class="item abstract">
-					<h2 class="label">{translate key="article.abstract"}</h2>
-					{$publication->getLocalizedData('abstract')|strip_unsafe_html}
-				</section>
-			{/if}
-
-			{call_hook name="Templates::Article::Main"}
 
 			{* Usage statistics chart*}
 			{if $activeTheme->getOption('displayStats') != 'none'}

@@ -110,3 +110,7 @@ msgstr "Les données de téléchargement ne sont pas encore disponible."
 
 #~ msgid "plugins.themes.default.option.showDescriptionInJournalIndex.label"
 #~ msgstr "Description de la revue"
+
+#, fuzzy
+msgid "plugins.themes.default.titleSubtitleSeparator"
+msgstr " &mdash; "

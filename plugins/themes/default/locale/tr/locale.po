@@ -98,3 +98,7 @@ msgstr "İndirmeler"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "İndirme verisi henüz mevcut değil."
+
+#, fuzzy
+msgid "plugins.themes.default.titleSubtitleSeparator"
+msgstr " &mdash; "

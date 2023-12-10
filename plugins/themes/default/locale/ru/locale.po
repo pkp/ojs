@@ -98,3 +98,7 @@ msgstr "Скачивания"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Данные по скачиваниям пока не доступны."
+
+#, fuzzy
+msgid "plugins.themes.default.titleSubtitleSeparator"
+msgstr " &mdash; "
