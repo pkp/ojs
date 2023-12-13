@@ -51,7 +51,7 @@ class IssueGalleyNativeXmlFilter extends \PKP\plugins\importexport\native\filter
     public function &process(&$issueGalleys)
     {
         // Create the XML document
-        $doc = new DOMDocument('1.0');
+        $doc = new DOMDocument('1.0', 'utf-8');
         $doc->preserveWhiteSpace = false;
         $doc->formatOutput = true;
         $deployment = $this->getDeployment();

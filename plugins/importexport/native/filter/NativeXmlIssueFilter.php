@@ -259,7 +259,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
     public function parseIssueGalley($n, $issue)
     {
         $currentFilter = PKPImportExportFilter::getFilter('native-xml=>IssueGalley', $this->getDeployment());
-        $issueGalleyDoc = new \DOMDocument();
+        $issueGalleyDoc = new \DOMDocument('1.0', 'utf-8');
         $issueGalleyDoc->appendChild($issueGalleyDoc->importNode($n, true));
         return $currentFilter->execute($issueGalleyDoc);
     }
@@ -295,7 +295,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
     public function parseArticle($n, $issue)
     {
         $currentFilter = PKPImportExportFilter::getFilter('native-xml=>article', $this->getDeployment());
-        $articleDoc = new \DOMDocument();
+        $articleDoc = new \DOMDocument('1.0', 'utf-8');
         $articleDoc->appendChild($articleDoc->importNode($n, true));
         return $currentFilter->execute($articleDoc);
     }
