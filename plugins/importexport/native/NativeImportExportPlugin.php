@@ -107,7 +107,7 @@ class NativeImportExportPlugin extends \PKP\plugins\importexport\native\PKPNativ
         $filter = 'native-xml=>issue';
         // is this articles import:
         $xmlString = file_get_contents($xmlFile);
-        $document = new \DOMDocument();
+        $document = new \DOMDocument('1.0', 'utf-8');
         $document->loadXml($xmlString);
         if (in_array($document->documentElement->tagName, ['article', 'articles'])) {
             $filter = 'native-xml=>article';
