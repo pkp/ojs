@@ -489,11 +489,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Προς εμφάνιση στη σελίδα «Σχετικά με το περιοδικό»)"
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Απαιτείται από τους Συγγραφείς να καταθέτουν Δήλωση Αντικρουόμενων "
-"Συμφερόντων μαζί με την υποβολή."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Απαιτείται από τους Αξιολογητές να καταθέτουν Δήλωση Αντικρουόμενων "

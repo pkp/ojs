@@ -448,11 +448,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(در قسمت درباره مجله نمایش داده می‌شود)"
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"لازم است که نویسنده ارسال کننده مقاله بیانیه تضاد منافع در رابطه با مقاله "
-"خود را اعلام کند."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "لازم است داوران بیانیه تضاد منافع برای مقاله‌ای که داوری می‌کنند را اعلام کنند."

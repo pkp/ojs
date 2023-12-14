@@ -438,11 +438,6 @@ msgstr "Settu inn þær upplýsingar sem þú vilt að birtist á tilkynningasí
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Sem á að birtast í \"Um tímaritið\") "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Biðja höfunda sem senda inn efni að skrá um leið yfirlýsingu vegna "
-"hagsmunaárekstra."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Biðja ritrýna að skrá yfirlýsingu vegna hagsmunaárekstra með hverri rtirýni "

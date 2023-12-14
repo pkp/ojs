@@ -462,11 +462,6 @@ msgstr "Duyuru sayfasında gösterilecek ek bilgi gir."
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Dergi Hakkında sayfasında gösterilecek) "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Yazarların gönderileriyle birlikte bir Çıkar Çatışması bildirimi dosyası "
-"göndermeleri gereklidir."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Yazarların değerlendirmeleriyle birlikte bir Çıkar Çatışması bildirimi "

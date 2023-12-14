@@ -472,11 +472,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Vises under Om tidsskriftet) "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Kræv, at forfattere, der fremsender et manuskript, skal indsende en "
-"erklæring om konkurrerende interesser sammen med deres manuskript."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Kræv, at bedømmere skal indsende en erklæring om konkurrerende interesser "
