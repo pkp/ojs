@@ -458,11 +458,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Aldizkariari buruz orrian agertzeko)"
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Eskatu lana bidaltzen duten egileei Interes-gatazkari buruzko deklarazio bat "
-"erants dezatela bidalketan."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Eskatu Ebaluatzaileei Interes-gatazkari buruzko deklarazio bat erants "

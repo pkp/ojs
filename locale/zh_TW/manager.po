@@ -411,10 +411,6 @@ msgstr "輪入任何你想在公告頁面出現的資訊。"
 msgid "manager.setup.appearInAboutJournal"
 msgstr "（將出現在關於期刊頁面） "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"要求提交作者投稿時，同時提供一個利益衝突（Competing Interest, 簡稱CI）聲明。"
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "要求審稿員提交每個評審時提供一個利益衝突（Competing Interest, 簡稱CI）聲明。"

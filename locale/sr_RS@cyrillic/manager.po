@@ -459,11 +459,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Да се прикаже у \"О часопису\")"
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Захтевајте од аутора да у току пријаве чланка потврде изјаву о Конфликту "
-"интереса."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Захтевајте од рецензената да потврде изјаву о Конфликту интереса  за сваку "

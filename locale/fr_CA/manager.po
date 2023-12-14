@@ -489,11 +489,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(À paraître dans « À propos » de la revue) "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Les auteurs-es soumissionnaires doivent déposer une déclaration de conflits "
-"d'intérêts avec leur soumission."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Les évaluateurs-trices doivent déposer une déclaration de conflits "

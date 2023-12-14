@@ -447,10 +447,6 @@ msgstr "أدخل أي معلومات إضافية ينبغي عرضها للقر
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(لتظهر في \"عن المجلة\") "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"يتطلب تقديم المؤلفين لبيان المصالح المتضاربة (CI) مع طلبات النشر الخاصة بهم."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "يتطلب من المحكمين تقديم بيان المصالح المتضاربة (CI) مع كل تحكيم مناظر يقوموم "

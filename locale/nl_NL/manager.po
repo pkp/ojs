@@ -470,11 +470,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Om op te nemen in Over dit Tijdschrift) "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Verplicht auteurs een verklaring omtrent  strijdige belangen in te dienen "
-"met hun inzending."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Verplicht reviewers een verklaring inzake strijdige belangen in te dienen "

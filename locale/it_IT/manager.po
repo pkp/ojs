@@ -479,11 +479,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(compare nella sezione \"Informazioni sulla rivista\") "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Richiedi agli autori di inviare una dichiarazione di assenza di conflitto di "
-"interessi durante l'invio della proposta."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Richiedi ai revisori di allegare una dichiarazione di assenza di conflitto "

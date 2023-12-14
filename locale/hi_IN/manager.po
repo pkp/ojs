@@ -590,12 +590,6 @@ msgstr "(जर्नल के बारे में प्रकट करन
 
 # (pofilter) brackets: Added '(', ')'
 # (pofilter) endpunc: Different punctuation at the end
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"अपने जमा करने के साथ एक प्रतियोगी ब्याज (CI) बयान दर्ज करने के लिए लेखकों को प्रस्तुत करने "
-"की आवश्यकता है।"
-
-# (pofilter) endpunc: Different punctuation at the end
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "समीक्षकों को अपने द्वारा प्रस्तुत प्रत्येक सहकर्मी समीक्षा के साथ एक सीआई बयान दर्ज करने की "
