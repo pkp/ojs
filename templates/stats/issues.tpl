@@ -214,7 +214,7 @@
 								:row="row"
 								:tabindex="!rowIndex && !columnIndex ? 0 : -1"
 							>
-								<template v-if="column.name === 'title'">
+								<template #default v-if="column.name === 'title'">
 									<a
 										:href="row.issue.publishedUrl"
 										class="pkpStats__itemLink"
