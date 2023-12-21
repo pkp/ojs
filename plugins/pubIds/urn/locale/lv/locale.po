@@ -1,0 +1,243 @@
+# Ieva Tiltina <pastala@gmail.com>, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-12-06 00:54+0000\n"
+"Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
+"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
+"lv/>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
+"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr ""
+"Lūdzu, konfigurējiet URN spraudni, lai OJS varētu pārvaldīt un izmantot URN:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "Žurnāla saturs"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "Lūdzu, izvēlieties objektus, kuriem jāpiešķir URN."
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "Žurnāla numuri"
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "Raksti"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "Saliktņi"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "URN prefikss"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "URN sufikss"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr ""
+"URN sufikss var būt jebkādā formā, bet tam jābūt unikālam starp visiem "
+"publicēšanas objektiem ar vienu un to pašu URN prefiksu:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "žurnāla numuriem"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
+msgstr "Lūdzu, ievadiet URN sufiksa modeli rakstiem."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "Izmantot noklusējuma modeļus."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "Pārbaudes numurs"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr ""
+"Pārbaudes numurs tiks automātiski aprēķināts un pievienots beigās kā URN "
+"pēdējais cipars."
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "Atrisinātāja URL"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(piemēram, https://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "Lūdzu, ievadiet atrisinātāja URL."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "Piešķirt URN no jauna"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "Vai tiešām vēlaties dzēst visus esošos URN?"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr ""
+"Lūdzu, atlasiet publicēšanas objektus, kuriem tiks piešķirti vienotie "
+"resursu nosaukumi (URN):"
+
+msgid "plugins.pubIds.urn.description"
+msgstr ""
+"Šis spraudnis ļauj piešķirt URN (Uniform Resource Names – vienotie resursu "
+"nosaukumi) žurnālu numuriem, rakstiem un saliktņiem OJS."
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr "URN prefiksa veidnei jābūt formātā \"urn:\"&lt;NID&gt;\":\"&lt;NSS&gt;."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr "Piemēram, vol%viss%ipp%p varētu izveidot URN sufiksu \"vol3iss2pp230\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr ""
+"URN prefikss ir fiksētā, nekad nemainīgā URN daļa (piemēram, \"urn"
+":nbn:de:0000-\")."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr ""
+"Izmantojiet paraugu, lai ģenerētu URN sufiksus. Izmantojiet %j žurnāla "
+"iniciāļiem, %v - sējuma numuram, %i - žurnāla numuram, %Y - gadam, %a - OJS "
+"raksta ID, %g - OJS spraudņa ID, %f - OJS datnes ID, %p - lappuses numuram "
+"un %x - \"pielāgotajam identifikatoram\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "rakstiem"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr ""
+"Pastāvīgā identifikatora nosaukumu telpa, kas parasti nepieciešama "
+"reģistrācijai (piemēram, Deutsche Nationalbibliothek)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "saliktņiem"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr ""
+"Ja mainīsiet URN konfigurāciju, tas neietekmēs jau piešķirtos URN. Kad URN "
+"konfigurācija ir saglabāta, izmantojiet šo pogu, lai dzēstu visus esošos "
+"URN, lai jaunie iestatījumi stātos spēkā ar esošajiem objektiem."
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "Lūdzu, ievadiet URN sufiksa modeli žurnāla numuriem."
+
+msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "Lūdzu, ievadiet URN sufiksa modeli saliktņiem."
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "žurnāla numuram"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i žurnāla numuriem<br />%j.v%vi%i.%a rakstiem<br />%j.v%vi%i.%a.g%g "
+"saliktņiem."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr ""
+"Ievadiet individuālu URN sufiksu katram publicētajam vienumam. Papildu URN "
+"ievades lauku atradīsiet katra objekta metadatu lapā."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "Nosaukumu telpa"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "Izvēlēties"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "URN nav iespējams piešķirt, jo trūkst pielāgotā sufiksa."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "URN nevar piešķirt, jo tas satur neatrisinātu modeli."
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Dotais URN sufikss jau tiek izmantots citam publicētajam vienumam. Lūdzu, "
+"ievadiet unikālu URN sufiksu katram vienumam."
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "Notīrīt žurnāla numuru objektu URN"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr ""
+"Izmantojiet šādu opciju, lai notīrītu URN visiem žurnāla numuriem (rakstiem "
+"un saliktņiem), kas pašlaik plānoti šim izdevumam."
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr ""
+"Jūs nevarat ģenerēt URN, kamēr šī publikācija nav piešķirta žurnāla numuram."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"Jūs nevarat ģenerēt URN, jo trūkst datu vienai vai vairākām URN parauga "
+"daļām. Iespējams, jums būs jāpiešķir publikācija žurnāla numuram, jāiestata "
+"izdevēja ID vai jāievada lappušu numuri."
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "rakstam"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "saliktnim"
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr ""
+"Tas, ko redzat, ir URN priekšskatījums. Atlasiet izvēles rūtiņu un "
+"saglabājiet veidlapu, lai piešķirtu URN."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "URN tiek piešķirts šim {$pubObjectType}."
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "Notīrīt"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Vai tiešām vēlaties dzēst esošo URN?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "Vai tiešām vēlaties dzēst esošos žurnāla numuru objektu URN?"
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Pievienot pārbaudes numuru"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "Piešķirt URN {$pubId} šim {$pubObjectType}"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "URN nav iespējams piešķirt, jo trūkst pielāgotā sufiksa."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr "URN {$pubId} nevar piešķirt, jo tas satur neatrisinātu modeli."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "URN {$pubId} ir piešķirts."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Nav norādīts pārbaudes numurs."
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "URN jāsākas ar {$prefix}."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Piešķirt"
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "URN jāsākas ar {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "Šīs publikācijas URN būs {$urn}."
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "Šai publikācijai nav piešķirts URN."
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Saliktnis: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Vienība"
