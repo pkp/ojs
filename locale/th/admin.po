@@ -1,0 +1,28 @@
+# Kittiphun Ruttanakorn <kittiphun.rut@mcu.ac.th>, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-12-17 14:17+0000\n"
+"Last-Translator: Kittiphun Ruttanakorn <kittiphun.rut@mcu.ac.th>\n"
+"Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/admin/th/>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "admin.hostedContexts"
+msgstr "วารสารเจ้าภาพ"
+
+msgid "admin.settings.redirect"
+msgstr "การเปลี่ยนเส้นทางวารสาร"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"คำขอไปยังเว็บไซต์หลักจะถูกเปลี่ยนเส้นทางไปยังวารสารนี้ "
+"ซึ่งอาจเป็นประโยชน์หากไซต์โฮสต์วารสารเพียงฉบับเดียว เป็นต้น"
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"คุณแน่ใจหรือไม่ว่าต้องการปิดใช้งานภาษานี้ "
+"ซึ่งอาจส่งผลต่อวารสารที่โฮสต์ซึ่งใช้สถานที่ในปัจจุบัน"
