@@ -20,6 +20,7 @@
 namespace APP\statistics;
 
 use APP\core\Application;
+use DateTimeImmutable;
 use Illuminate\Support\Facades\DB;
 use PKP\statistics\PKPTemporaryTotalsDAO;
 
@@ -44,8 +45,8 @@ class TemporaryTotalsDAO extends PKPTemporaryTotalsDAO
      */
     public function compileIssueMetrics(string $loadId): void
     {
-        $date = substr($loadId, -12, 8);
-        DB::table('metrics_issue')->where('load_id', '=', $loadId)->orWhere('date', '=', DB::raw("DATE({$date})"))->delete();
+        $date = DateTimeImmutable::createFromFormat('Ymd', substr($loadId, -12, 8));
+        DB::table('metrics_issue')->where('load_id', '=', $loadId)->orWhereDate('date', '=', $date)->delete();
 
         $selectIssueMetrics = DB::table($this->table)
             ->select(DB::raw('load_id, context_id, issue_id, DATE(date) as date, count(*) as metric'))
