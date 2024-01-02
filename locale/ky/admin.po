@@ -1,3 +1,108 @@
 # Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2024-01-02 18:44+0000\n"
+"Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
+"Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/admin/ky/>\n"
+"Language: ky\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Бул тилди чын эле өчүргүңүз келеби? Бул учурда аны колдонуп жаткан бардык "
+"жайгаштырылган журналдарга таасир этиши мүмкүн."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Белгиленген тилдерди колдоо толук эмес болушу мүмкүн."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Бул тилди чын эле алып салгыңыз келеби? Бул учурда аны колдонуп жаткан "
+"бардык жайгаштырылган журналдарга таасир этиши мүмкүн."
+
+msgid "admin.systemVersion"
+msgstr "OJS версиясы"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS конфигурациясынын параметрлери <tt>config.inc.php</tt>."
+
+msgid "admin.contexts.create"
+msgstr "Журнал түзүү"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Бул журналды аныктаган бир кыска сөз же аббревиатура болушу керек. Журналдын "
+"URL дареги {$sampleUrl} болот."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "аты талап кылынат."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Жол талап кылынат."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Сиз көрсөткөн жол мурунтан эле башка журнал тарабынан колдонулуп жатат."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr ""
+"Негизги тил журнал тарабынан колдоого алынган тилдердин бири болушу керек."
+
+msgid "admin.contexts.contextDescription"
+msgstr "Журналдын сүрөттөмөсү"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Жазылууларды импорттоо"
+
+msgid "admin.settings.redirect"
+msgstr "Журналды кайра багыттоо"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Сайттын башкы бети бул журналдын башкы бети болот. Бул, мисалы, сайтта бир "
+"гана журнал болсо, пайдалуу."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Бул сайт жана анда жайгашкан бардык журналдар үчүн демейки тил болот."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Сайттагы колдоо үчүн бардык тилдерди тандаңыз. Тандалган тилдер бул сайтта "
+"жайгашкан бардык журналдар үчүн жеткиликтүү болот, ошондой эле сайттын ар "
+"бир бетиндеги тил тандоо менюсунда пайда болот (бул жөндөө белгилүү бир "
+"журналдын беттеринде өзгөртүлүшү мүмкүн). Эгерде бир гана тил тандалган "
+"болсо, тилдерди которуу менюсу көрсөтүлбөйт жана журналдар үчүн кошумча тил "
+"жөндөөлөрү жеткиликтүү болбойт."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Бул тутумга алардын колдоосун орнотуу үчүн кошумча тилдерди тандаңыз. Тилдер "
+"хостинг журналдарында колдонулаардан мурун орнотулушу керек. Жаңы тилдерге "
+"колдоону кантип кошуу керектиги жөнүндө маалымат алуу үчүн OJS документтерин "
+"караңыз."
+
+msgid "admin.systemConfiguration"
+msgstr "OJS конфигурациясы"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Сиз автоматтык түрдө бул журналдын менеджери катары жазыласыз. Жаңы журналды "
+"түзгөндөн кийин, сиз журналды баштапкы орнотууну аяктоо үчүн Журналды "
+"орнотуу устасына багытталасыз."
+
+msgid "admin.journals.noneCreated"
+msgstr "Эч кандай журнал түзүлгөн эмес."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Жол тамгаларды, сандарды жана _ жана - белгилерин гана камтышы мүмкүн. Жол "
+"тамга же сан менен башталып, бүтүшү керек."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Бул журналды сайттын баарына көрсөтүүнү иштетиңиз"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Учурдагы журнал жолу же түзүү үчүн жаңы жол (мисалы, \"ojs\")."
