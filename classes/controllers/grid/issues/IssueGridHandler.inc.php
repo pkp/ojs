@@ -457,6 +457,10 @@ class IssueGridHandler extends GridHandler {
 			$assignPublicIdentifiersForm->execute();
 		}
 
+		if (!$request->checkCSRF()) {
+			return new JSONMessage(false);
+		}
+
 		$issue->setCurrent(1);
 		$issue->setPublished(1);
 		$issue->setDatePublished(Core::getCurrentDate());
