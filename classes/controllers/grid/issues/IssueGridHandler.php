@@ -554,6 +554,10 @@ class IssueGridHandler extends GridHandler
             Repo::issue()->createDoi($issue);
         }
 
+        if (!$request->checkCSRF()) {
+            return new JSONMessage(false);
+        }
+
         $issue->setPublished(1);
         $issue->setDatePublished(Core::getCurrentDate());
 
