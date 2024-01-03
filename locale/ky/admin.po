@@ -1,7 +1,7 @@
 # Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-02 18:59+0000\n"
+"PO-Revision-Date: 2024-01-03 21:35+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/admin/ky/>\n"
 "Language: ky\n"
@@ -182,7 +182,6 @@ msgstr ""
 msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
 msgstr "Сайтты бардык журналдар үчүн платформа катары колдонуңуз."
 
-#, fuzzy
 msgid "admin.journals.journalSettings"
 msgstr "Настройки журнала"
 
