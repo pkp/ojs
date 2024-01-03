@@ -22,11 +22,6 @@ msgstr "طلب نشر جديد"
 msgid "author.track"
 msgstr "طلب نشر قيد المعالجة"
 
-msgid "author.competingInterests"
-msgstr ""
-"المصالح التنافسية <a target=\"_new\" class=\"action\" href=\""
-"{$competingInterestGuidelinesUrl}\">سياسة المصالح التنافسية</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "قدم مقالاً"
 

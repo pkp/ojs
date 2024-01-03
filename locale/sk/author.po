@@ -17,12 +17,6 @@ msgstr "Nový príspevok"
 msgid "author.track"
 msgstr "Aktívne príspevky"
 
-msgid "author.competingInterests"
-msgstr ""
-"Konflikt záujmov <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">Pravidlá upravujúce konflikt záujmov</"
-"a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Odoslať článok"
 

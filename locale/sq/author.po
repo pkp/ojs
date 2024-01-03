@@ -13,9 +13,6 @@ msgstr ""
 msgid "author.track"
 msgstr ""
 
-msgid "author.competingInterests"
-msgstr ""
-
 msgid "author.submit.submitArticle"
 msgstr ""
 

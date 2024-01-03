@@ -22,11 +22,6 @@ msgstr "新稿件"
 msgid "author.track"
 msgstr "待处理稿件"
 
-msgid "author.competingInterests"
-msgstr ""
-"利益冲突 <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">CI 政策</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "提交文章"
 

@@ -483,11 +483,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Да се появи в \"За списанието\") "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Изисквайте подаването на авторите да подадат декларация за конкурентни "
-"интереси (CI) с тяхното подаване на материали."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Изисквайте от рецензентите да подадат декларация за конкурентни интереси "

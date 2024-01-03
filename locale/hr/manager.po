@@ -470,11 +470,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Pojavljuje se u \"o časopisu\") "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Zahtijevaj od autora da prilikom prijave svog rukopisa ispune izjavu o "
-"sukobu interesa."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Zahtijevaj od recenzenata da prilikom izrade svake recenzije ispune izjavu o "

@@ -18,11 +18,6 @@ msgstr "Нов поднесок"
 msgid "author.track"
 msgstr "Активен поднесок"
 
-msgid "author.competingInterests"
-msgstr ""
-"Конфликт на интереси <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">Пoлитика на КИ</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Поднеси труд"
 

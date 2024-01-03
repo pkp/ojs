@@ -20,9 +20,6 @@ msgstr "Neuer Beitrag"
 msgid "author.track"
 msgstr "Beiträge im Begutachtungsverfahren"
 
-msgid "author.competingInterests"
-msgstr "<a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Richtlinie</a> für Interessenkonflikte"
-
 msgid "author.submit.submitArticle"
 msgstr "Einen Artikel einreichen"
 

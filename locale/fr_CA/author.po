@@ -23,11 +23,6 @@ msgstr "Nouvelle soumission"
 msgid "author.track"
 msgstr "Soumissions actives"
 
-msgid "author.competingInterests"
-msgstr ""
-"Intérêts divergents <a target=\"_new\" class=\"action\" href=\""
-"{$competingInterestGuidelinesUrl}\">Politique d'intérêts divergents</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Soumettre un article"
 

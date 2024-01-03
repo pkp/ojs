@@ -473,11 +473,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(з'явіцца ў раздзеле «Пра часопіс») "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Патрабаваць ад аўтараў падаваць Дэкларацыю аб канфлікце інтарэсаў разам з "
-"адпраўляемым матэрыялам."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Патрабаваць ад рэцэнзентаў падаваць Дэкларацыю аб канфлікце інтарэсаў з "

@@ -497,11 +497,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Erscheint unter \"Über uns\") "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Verlangen Sie von Autor/innen, die einen Beitrag einreichen wollen, "
-"zusätzlich eine Erklärung zu möglicherweise bestehenden Interessenkonflikten."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Verlangen Sie von Gutachter/innen zusammen mit jeder Begutachtung eine "

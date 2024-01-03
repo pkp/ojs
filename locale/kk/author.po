@@ -19,11 +19,6 @@ msgstr "Жаңа мақала"
 msgid "author.track"
 msgstr "Редакцияға жіберілген немесе жоспарланған мақалалар"
 
-msgid "author.competingInterests"
-msgstr ""
-"<a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">Мүдделер қақтығысы туралы ереже</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Мақаланы рдакцияға жіберу"
 

@@ -482,11 +482,6 @@ msgstr "E'lonlar sahifasida paydo bo'lishni istagan ma'lumotlarni kiriting."
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Jurnal haqida) "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Mualliflardan raqobatbardosh qiziqish (CI) to'g'risidagi bayonotni taqdim "
-"etishni talab qiling."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Taqdimotchilardan har bir tengdosh tekshiruvi bilan CI bayonotini "

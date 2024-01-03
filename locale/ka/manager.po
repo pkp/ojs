@@ -472,11 +472,6 @@ msgstr "შეიტანეთ ინფორმაცია, რომელ
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(გამოჩნდება განყოფილებაში „ჟურნალის შესახებ“) "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"ავტორებისაგან ინტერესთა კონფლიქტის დეკლარაციის წარმოდგენა, გამოგზავნილ "
-"მასალასთან ერთად."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "რეცენზენტებისაგან ინტერესთა კონფლიქტის დეკლარაციის წარმოდგენა, გამოგზავნილ "

@@ -19,11 +19,6 @@ msgstr "Ново изпращане на материал"
 msgid "author.track"
 msgstr "Активни материали"
 
-msgid "author.competingInterests"
-msgstr ""
-"Конфликт на интереси <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">Правила за конфликт на интереси</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Изпрати Статия"
 

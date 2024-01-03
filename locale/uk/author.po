@@ -22,9 +22,6 @@ msgstr "Нове подання"
 msgid "author.track"
 msgstr "Активні подання"
 
-msgid "author.competingInterests"
-msgstr "<a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Політика</a> щодо конфлікту інтересів"
-
 msgid "author.submit.submitArticle"
 msgstr "Подати статтю"
 

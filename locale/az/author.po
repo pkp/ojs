@@ -19,11 +19,6 @@ msgstr "Yeni Göndərmə"
 msgid "author.track"
 msgstr "Aktiv Göndərmələr"
 
-msgid "author.competingInterests"
-msgstr ""
-"Mənfəət toqquşması <a target=\"_new\" class=\"action\" href=\""
-"{$competingInterestGuidelinesUrl}\">Rəhbəri</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Məqalə göndər"
 

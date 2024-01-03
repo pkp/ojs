@@ -18,11 +18,6 @@ msgstr "نیا مقالہ ارسال کریں"
 msgid "author.track"
 msgstr "ارشال شدہ مقالات"
 
-msgid "author.competingInterests"
-msgstr ""
-"تقابلی مفادات <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">تقابلی مفادات پالیسی</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "مقالہ ارسال کریں"
 

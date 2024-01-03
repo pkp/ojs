@@ -21,11 +21,6 @@ msgstr "Tramesa nova"
 msgid "author.track"
 msgstr "Trameses actives"
 
-msgid "author.competingInterests"
-msgstr ""
-"Conflicte d'interessos <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">Política CI</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Tramet un article"
 

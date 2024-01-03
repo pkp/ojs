@@ -20,11 +20,6 @@ msgstr "Bidalketa berria"
 msgid "author.track"
 msgstr "Bidalketa aktiboak"
 
-msgid "author.competingInterests"
-msgstr ""
-"Interes-gatazka <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">Interes-gatazketako politika</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Bidali artikulu bat"
 

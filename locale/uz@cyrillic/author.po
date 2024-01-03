@@ -18,9 +18,6 @@ msgstr "Янги ариза юбориш"
 msgid "author.track"
 msgstr "Фаол мақолалар"
 
-msgid "author.competingInterests"
-msgstr "Рақобатли манфаатлар"
-
 msgid "author.submit.submitArticle"
 msgstr "Мақола юборинг"
 

@@ -19,11 +19,6 @@ msgstr "ახალი მასალა"
 msgid "author.track"
 msgstr "აქტიური შენატანები"
 
-msgid "author.competingInterests"
-msgstr ""
-"ინტერესთა კონფლიქტი <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">ინტერესთა კონფლიქტის წესები</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "სტატიის გაგზავნა"
 

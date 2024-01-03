@@ -20,11 +20,6 @@ msgstr "Nieuwe inzending"
 msgid "author.track"
 msgstr "Actieve inzendingen"
 
-msgid "author.competingInterests"
-msgstr ""
-"Strijdigheid van belangen <a target=\"_new\" class=\"action\" href=\""
-"{$competingInterestGuidelinesUrl}\">SB beleid</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Stuur een artikel in"
 

@@ -22,9 +22,6 @@ msgstr "Nov prispevek"
 msgid "author.track"
 msgstr "Aktivni prispevki"
 
-msgid "author.competingInterests"
-msgstr "Konflikt interesov <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">Politika konflikta interesov</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Oddaj prispevek"
 

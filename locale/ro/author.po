@@ -19,11 +19,6 @@ msgstr "Înregistrare nouă de manuscris"
 msgid "author.track"
 msgstr "Procese de înregistrare manuscrise active"
 
-msgid "author.competingInterests"
-msgstr ""
-"Interese concurente <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">Politica de concurență</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Înregistrați un manuscris"
 

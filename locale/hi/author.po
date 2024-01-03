@@ -24,12 +24,6 @@ msgstr "सक्रिय सबमिशन"
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startcaps: Different capitalization at the start
 # (pofilter) xmltags: Added XML tags
-msgid "author.competingInterests"
-msgstr ""
-"Competing&nbsp;interests <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>"
-
-# (pofilter) simplecaps: Different capitalization
 msgid "author.submit.submitArticle"
 msgstr "लेख प्रस्तुत करें"
 

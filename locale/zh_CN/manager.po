@@ -428,9 +428,6 @@ msgstr "输入希望在公告页面上要让读者看到的任何信息。"
 msgid "manager.setup.appearInAboutJournal"
 msgstr "（将在「期刊介绍」中出现） "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr "要求投稿作者提供一个利益冲突（CI）的文字声明。"
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr "要求审稿人在每次提交同行评议的审稿的时候，提交一个利益冲突（CI）声明。"
 

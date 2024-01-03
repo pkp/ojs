@@ -473,11 +473,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Kommer att visas under Om tidskriften) "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Författare måste skicka in en intressekonfliktsförklaring i samband med att "
-"bidraget skickas in."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Granskare måste skicka med en intressekonfliktsförklaring i samband med "

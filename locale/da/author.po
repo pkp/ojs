@@ -20,11 +20,6 @@ msgstr "Ny indsendelse"
 msgid "author.track"
 msgstr "Aktive indsendelser"
 
-msgid "author.competingInterests"
-msgstr ""
-"Konkurrerende interesser <a target=\"_new\" class=\"action\" href=\""
-"{$competingInterestGuidelinesUrl}\">CI Policy</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Fremsend en artikel"
 

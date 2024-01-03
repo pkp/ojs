@@ -465,11 +465,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Pojavlja se na strani O reviji) "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Zahtevaj od avtorjev izjavo o konfliktu interesov med procesom oddaje "
-"prispevka."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Zahtevaj od recenzentov izjavo o konfliktu interesov pri vsaki opravljeni "

@@ -18,12 +18,6 @@ msgstr "Tagradh ùr"
 msgid "author.track"
 msgstr "Tagraidhean gnìomhach"
 
-msgid "author.competingInterests"
-msgstr ""
-"<a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">Poileasaidh CI</a> a thaibh còmhstri "
-"ùidhean"
-
 msgid "author.submit.submitArticle"
 msgstr "Cuir artaigeal"
 

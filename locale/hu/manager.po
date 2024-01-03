@@ -482,11 +482,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Megjelenés az Információk részben) "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"A cikket beadó szerzők felszólítása az összeférhetetlenségi nyilatkozat "
-"benyújtására."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "A szakmai lektorok felszólítása, hogy minden egyes lektori vélemén mellé "

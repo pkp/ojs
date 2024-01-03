@@ -19,11 +19,6 @@ msgstr "Նոր ներկայացում"
 msgid "author.track"
 msgstr "Ակտիվ ներկայացում"
 
-msgid "author.competingInterests"
-msgstr ""
-"Մրցակցող շահեր <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">CI Քաղաքականություն</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Ներկայացրեք հոդված"
 

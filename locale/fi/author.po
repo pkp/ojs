@@ -20,11 +20,6 @@ msgstr "Uusi käsikirjoitus"
 msgid "author.track"
 msgstr "Aktiiviset käsikirjoitukset"
 
-msgid "author.competingInterests"
-msgstr ""
-"Sidonnaisuudet <a target=\"_new\" class=\"action\" href=\""
-"{$competingInterestGuidelinesUrl}\">Sidonnaisuuksien ilmoittaminen</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Lähetä artikkeli"
 
