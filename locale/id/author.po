@@ -21,11 +21,6 @@ msgstr "Kirim Naskah Baru"
 msgid "author.track"
 msgstr "Naskah Aktif"
 
-msgid "author.competingInterests"
-msgstr ""
-"Konflik kepentingan <a target=\"_new\" class=\"action\" href=\""
-"{$competingInterestGuidelinesUrl}\">Kebijakan Konflik Kepentingan</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Kirim Naskah"
 

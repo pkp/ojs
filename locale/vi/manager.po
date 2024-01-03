@@ -474,10 +474,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Để xuất hiện trong Giới thiệu về Tạp chí) "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Yêu cầu tác giả gửi một tuyên bố xung đột lợi ích (CI) với bài gửi của họ."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Yêu cầu Người phản biện nộp báo cáo độ tin cậy (CI statement) với mỗi đánh "

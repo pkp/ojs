@@ -22,11 +22,6 @@ msgstr "Νέα υποβολή"
 msgid "author.track"
 msgstr "Ενεργές υποβολές"
 
-msgid "author.competingInterests"
-msgstr ""
-"Αντικρουόμενα συμφέροντα <a target=\"_new\" class=\"action\" href=\""
-"{$competingInterestGuidelinesUrl}\">Πολιτική Αντικρουόμενων Συμφερόντων</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Υποβολή άρθρου"
 

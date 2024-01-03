@@ -479,11 +479,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Untuk ditampilkan di Tentang Jurnal) "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Mengharuskan Penulis untuk memberikan pernyataan Konflik Kepentingan dalam "
-"naskah mereka."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Mengharuskan Reviewer untuk memberikan pernyataan Konflik Kepentingan dalam "

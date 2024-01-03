@@ -23,12 +23,6 @@ msgstr "Ny innlevering"
 msgid "author.track"
 msgstr "Aktive innleveringer"
 
-msgid "author.competingInterests"
-msgstr ""
-"Interessekonflikter <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">«Retningslinjer for erklæring om "
-"interessekonflikter»</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Send inn en artikkel"
 

@@ -478,11 +478,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Para inclusão na secção Sobre a Revista) "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Exigir aos Autores o registo de Conflito de Interesses (CI) juntamente com a "
-"submissão."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Exigir aos revisores o registo de Conflito de Interesses em cada revisão "

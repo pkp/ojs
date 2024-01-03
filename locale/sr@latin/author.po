@@ -17,11 +17,6 @@ msgstr "Nova predaja članka"
 msgid "author.track"
 msgstr "Aktivne predaje članka"
 
-msgid "author.competingInterests"
-msgstr ""
-"Sukob interesа <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">TI&nbsp;Pravila</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Predaj članak"
 

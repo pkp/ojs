@@ -470,11 +470,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(появится в разделе «О журнале») "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Требовать от авторов представлять Декларацию о конфликте интересов вместе с "
-"отправляемым материалом."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Требовать от рецензентов представлять Декларацию о конфликте интересов с "

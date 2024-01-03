@@ -480,11 +480,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(կհայտնվի \"Ամսագրի մասին\" բաժնում) "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Ներկայացնող Հեղինակներից պահանջեք տրամադրել Շահերի բախման (CI) "
-"հայտարարությունը իրենց առաքած նյութերի հետ միասին:"
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Գրապոսներից պահանջեք ներկայացնել CI հայտարարություն իրենց կողմից ներկայացված "

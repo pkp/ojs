@@ -21,11 +21,6 @@ msgstr "Nova Submissão"
 msgid "author.track"
 msgstr "Submissões Ativas"
 
-msgid "author.competingInterests"
-msgstr ""
-"Conflitos de interesses <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">Política de Conflito de Interesses</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Submeter Artigo"
 

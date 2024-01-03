@@ -21,11 +21,6 @@ msgstr "Nuevo envío"
 msgid "author.track"
 msgstr "Envíos activos"
 
-msgid "author.competingInterests"
-msgstr ""
-"Conflicto de intereses <a target=\"_new\" class=\"action\" "
-"href=\"{$competingInterestGuidelinesUrl}\">CI Policy</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Enviar un artículo"
 

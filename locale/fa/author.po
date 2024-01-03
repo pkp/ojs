@@ -17,11 +17,6 @@ msgstr "مقاله ارسالی جدید"
 msgid "author.track"
 msgstr "مقالات ارسال شده فعال"
 
-msgid "author.competingInterests"
-msgstr ""
-"<a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">سیاست</a> تضاد&nbsp;منافع "
-
 msgid "author.submit.submitArticle"
 msgstr "ارسال مقاله"
 

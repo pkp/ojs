@@ -22,11 +22,6 @@ msgstr "Yeni Gönderi"
 msgid "author.track"
 msgstr "Aktif Gönderiler"
 
-msgid "author.competingInterests"
-msgstr ""
-"Çıkar Çatışması <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">Rehberi</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Makale Gönder"
 

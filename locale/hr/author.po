@@ -21,11 +21,6 @@ msgstr "Novo podnošenje članka"
 msgid "author.track"
 msgstr "Aktivne prijave"
 
-msgid "author.competingInterests"
-msgstr ""
-"Sukob interesa <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">politika</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Predajte članak"
 

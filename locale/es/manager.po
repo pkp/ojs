@@ -494,11 +494,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Aparecerá en la sección \"Acerca de la revista\") "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Pedir a los autores/as que adjunten una declaración de conflicto de "
-"intereses a su envío."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Pedir a los revisores/as que adjunten una declaración de conflicto de "

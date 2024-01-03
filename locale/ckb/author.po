@@ -17,12 +17,6 @@ msgstr "داواکاری بڵاوکردنەوەی نوێ"
 msgid "author.track"
 msgstr "چالاککردنی توێژینەوە نێردراوەکان"
 
-msgid "author.competingInterests"
-msgstr ""
-"<a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">سیاسەتی بەڕێوەبردن</a> "
-"بەرژەوەندییەکان&nbsp;پێشبڕکێ"
-
 msgid "author.submit.submitArticle"
 msgstr "توێژینەوەیەک پێشکەش بکە"
 

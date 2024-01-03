@@ -472,11 +472,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(K zobrazení v části O časopisu) "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Požadovat od autorů, aby spolu s příspěvkem zaslali soubor s prohlášením o "
-"střetu zájmů."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Požadovat od recenzentů, aby s každým svým posudkem zasílali soubor s "

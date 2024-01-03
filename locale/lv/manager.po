@@ -468,11 +468,6 @@ msgstr "Ievadiet jebkuru informāciju, ko vēlētos parādīt paziņojumu lapā.
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Tiks publicēts sadaļā Par žurnālu) "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Prasība autoriem kopā ar manuskriptu iesniegt apliecinājumu par interešu "
-"konflikta neesamību."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Prasība recenzentiem kopā ar recenziju iesniegt apliecinājumu par interešu "

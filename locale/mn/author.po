@@ -18,11 +18,6 @@ msgstr "Шинэ бүтээл илгээх"
 msgid "author.track"
 msgstr "Идэвхтэй бүтээлүүд"
 
-msgid "author.competingInterests"
-msgstr ""
-"Өрсөлдөх сонирхолууд <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">ӨС- Бодлого</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Бүтээлээ илгээх"
 

@@ -18,11 +18,6 @@ msgstr "Yangi yuborish"
 msgid "author.track"
 msgstr "Faol yuborishlar"
 
-msgid "author.competingInterests"
-msgstr ""
-"Raqobatdosh manfaatlar <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidlinesUrl}\"> CI siyosati </a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Maqola yuboring"
 

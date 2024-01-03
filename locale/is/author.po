@@ -18,11 +18,6 @@ msgstr "Ný innsending"
 msgid "author.track"
 msgstr "Virkar innsendingar"
 
-msgid "author.competingInterests"
-msgstr ""
-"Hagsmunaárekstrar <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">Stefna um hagsmunaárekstra</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Senda inn grein"
 

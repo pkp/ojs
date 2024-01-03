@@ -22,11 +22,6 @@ msgstr "Nuova proposta"
 msgid "author.track"
 msgstr "Proposte attive"
 
-msgid "author.competingInterests"
-msgstr ""
-"Policy sul <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">Conflitto d'interessi</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Proponi un articolo"
 

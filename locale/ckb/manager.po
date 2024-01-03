@@ -459,11 +459,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(بۆ ئەوەی لە دەربارەی گۆڤار)دا دەربکەوێت. "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"داوا لە توێژەرە پێشکەشکراوەکان بکە بۆ ئەوەی (CI) لەگەڵ پێشکەشکردنەکانیان "
-"داخل بکەن."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "داوا لە هەڵسەنگێنەران بکە بۆ ئەوەی زانیاریی CI لەگەڵ هەر هەڵسەنگاندنێکدا "

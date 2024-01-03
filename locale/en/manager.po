@@ -401,9 +401,6 @@ msgstr "Enter any information you would like to appear on your announcements pag
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(To appear in About the Journal) "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr "Require submitting Authors to file a Competing Interest (CI) statement with their submission."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr "Require Reviewers to file a CI statement with each peer review they submit."
 

@@ -466,9 +466,6 @@ msgstr "Wprowadź informację która ukazywałaby się na stronie ogłoszeń."
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Widoczne na stronie O czasopiśmie) "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr "Wymagaj od autorów oświadczenia o zbieżności zainteresowań."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr "Wymagaj od recenzentów oświadczenia o zbieżności zainteresowań."
 

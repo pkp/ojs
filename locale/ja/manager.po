@@ -452,10 +452,6 @@ msgstr "アナウンスページに表示したい情報を入力してくださ
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(ジャーナルについてに掲載されます。) "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"投稿する著者に、投稿時に競合する利益（CI）に関する声明を提出するよう求める。"
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "査読者が提出する各ピアレビューにCIステートメントを提出することを義務付ける。"

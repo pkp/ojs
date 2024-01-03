@@ -22,11 +22,6 @@ msgstr "Nytt bidrag"
 msgid "author.track"
 msgstr "Aktuella bidrag"
 
-msgid "author.competingInterests"
-msgstr ""
-"Konkurrerande intressen: <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">Policy</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Skicka in en artikel"
 

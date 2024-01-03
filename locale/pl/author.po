@@ -23,11 +23,6 @@ msgstr "Nowe zgłoszenie"
 msgid "author.track"
 msgstr "Aktywne zgłoszenia"
 
-msgid "author.competingInterests"
-msgstr ""
-"<a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">Konflikt interesów</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Zgłoś artykuł"
 

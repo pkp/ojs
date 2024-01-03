@@ -19,11 +19,6 @@ msgstr "Penyerahan Baharu"
 msgid "author.track"
 msgstr "Penyerahan Aktif"
 
-msgid "author.competingInterests"
-msgstr ""
-"Konflik kepentingan <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\"> Polisi CI </a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Serah Artikel"
 

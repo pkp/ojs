@@ -1834,11 +1834,6 @@ msgstr ""
 msgid "manager.sections.form.reviewFormId"
 msgstr "Zəhmət olmasa etibarlı bir dəyərləndirmə formu seçdiyinizdən əmin olun"
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Müəlliflərin məqalə ilə birlikdə mənfəət münaqişəsi bildirişi faylı "
-"göndərmələri gərəklidir."
-
 msgid "manager.sections.form.titleRequired"
 msgstr "Bölmə üçün başlıq məcburidir."
 

@@ -484,11 +484,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(показувати на сторінці \"Про журнал\") "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Вимагати від авторів декларувати відсутність конфлікту інтересів щодо "
-"поданих матеріалів."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Вимагати від рецензентів декларувати відсутність конфлікту інтересів щодо "

@@ -476,11 +476,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Să apară în Despre Jurnal) "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Solicitați autorilor care înregistrează manuscrise să depună o declarație de "
-"interes (CI) odată cu transmiterea lor."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Solicitați evaluatorilor să depună o declarație de interes  la fiecare "

@@ -19,11 +19,6 @@ msgstr "Gửi bài mới"
 msgid "author.track"
 msgstr "Các bài gửi đang xử lý"
 
-msgid "author.competingInterests"
-msgstr ""
-"Lợi ích cạnh tranh (CI) <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">Chính sách Lợi ích cạnh tranh</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Gửi bài"
 

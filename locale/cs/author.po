@@ -20,11 +20,6 @@ msgstr "Nový příspěvek"
 msgid "author.track"
 msgstr "Aktivní příspěvky"
 
-msgid "author.competingInterests"
-msgstr ""
-"Střet zájmů <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">Pravidla upravující střet zájmů</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Odeslat článek"
 

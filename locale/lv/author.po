@@ -19,11 +19,6 @@ msgstr "Jauna materiāla iesniegšana"
 msgid "author.track"
 msgstr "Aktuāli iesniegtie materiāli"
 
-msgid "author.competingInterests"
-msgstr ""
-"Interešu konflikta <a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">IK Politika</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "Iesniegt rakstu"
 

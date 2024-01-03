@@ -482,11 +482,6 @@ msgstr ""
 msgid "manager.setup.appearInAboutJournal"
 msgstr "(Да се појави во За весникот) "
 
-msgid "manager.setup.competingInterests.requireAuthors"
-msgstr ""
-"Потребно е да ги доставите авторите да поднесат изјава за натпреварувачки "
-"интерес (КИ) со нивно поднесување."
-
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
 "Потребно од рецензентите да поднесат изјава за КИ со секој рецензент што ќе "

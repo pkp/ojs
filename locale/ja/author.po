@@ -17,11 +17,6 @@ msgstr "新規投稿"
 msgid "author.track"
 msgstr "投稿物一覧"
 
-msgid "author.competingInterests"
-msgstr ""
-"利害の競合<a target=\"_new\" class=\"action\" href="
-"\"{$competingInterestGuidelinesUrl}\">CIポリシー</a>"
-
 msgid "author.submit.submitArticle"
 msgstr "論文の投稿"
 
