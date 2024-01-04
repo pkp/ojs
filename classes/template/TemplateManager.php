@@ -24,7 +24,6 @@ use APP\file\PublicFileManager;
 use PKP\facades\Locale;
 use PKP\i18n\LocaleMetadata;
 use PKP\security\Role;
-use PKP\session\SessionManager;
 use PKP\site\Site;
 use PKP\template\PKPTemplateManager;
 
@@ -114,7 +113,7 @@ class TemplateManager extends PKPTemplateManager
         parent::setupBackendPage();
 
         $request = Application::get()->getRequest();
-        if (SessionManager::isDisabled()
+        if (defined('SESSION_DISABLE_INIT')
                 || !$request->getContext()
                 || !$request->getUser()) {
             return;
