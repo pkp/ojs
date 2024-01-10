@@ -1,3 +1,76 @@
 # Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2024-01-10 09:39+0000\n"
+"Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
+"Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/editor/ky/>\n"
+"Language: ky\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Материалдар жана жарыялоо"
+
+msgid "editor.submissionArchive"
+msgstr "Материалдардын архиви"
+
+msgid "editor.publishing"
+msgstr "Басылма"
+
+msgid "editor.publishedIssues"
+msgstr "Жарыяланган сандар"
+
+msgid "editor.allSections"
+msgstr "Бардык бөлүмдөр"
+
+msgid "editor.allEditors"
+msgstr "Бардык редакторлор"
+
+msgid "editor.me"
+msgstr "мен"
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Архивде материалдар жок."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Чын эле бул чечимди жазгыңыз келеби?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"Бул материал \"Авторго кабарлоо\" электрондук каты жөнөтүлгөндөн кийин же "
+"\"Электрондук почтаны жөнөтпөө\" баскычы басылгандан кийин архивделет."
+
+msgid "editor.notifyUsers"
+msgstr "Колдонуучуларга кабарлоо"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Бардык окурмандар ({$count} колдонуучулар)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Жарыяланган бардык авторлор ({$count} колдонуучу)"
+
+msgid "editor.home"
+msgstr "Редактордун башкы бети"
+
+msgid "editor.submissionQueue"
+msgstr "Материалдар кезеги"
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"\"{$publicIdentifier}\" жалпы идентификатору мурунтан эле башка объект үчүн "
+"колдонулууда (маселе, макала, галлея же кошумча файл). Журналыңыздан "
+"уникалдуу идентификаторлорду тандаңыз."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"Материалдар архивине өзгөртүүлөр сакталсынбы? Жок кылуу үчүн белгиленген "
+"мазмун тутумдан биротоло өчүрүлөт."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Карап чыгууга тапшыраардан мурун, авторго чечим тууралуу кабарлоо үчүн "
+"\"Авторго кабарлоо\" шилтемесин колдонуңуз жана тапшыргыңыз келген версияны "
+"тандаңыз."
