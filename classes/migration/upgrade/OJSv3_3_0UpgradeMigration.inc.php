@@ -107,7 +107,7 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 				});
 			} else {
 				try {
-					$settings = Capsule::table($tableName)->where('setting_type', 'object')->get();
+					$settings = Capsule::table($tableName, 's')->where('setting_type', 'object')->get(['setting_name', 'setting_value', 's.*']);
 				} catch (Exception $e) {
 					error_log("Failed to migrate the settings entity \"{$tableName}\"\n" . $e);
 					continue;
