@@ -63,7 +63,7 @@ describe('Submission Wizard', function() {
         cy.contains(comments);
         cy.get('button:contains("Submit")').click();
         cy.contains('The submission, ' + title + ', will be submitted to Journal of Public Knowledge for editorial review.');
-        cy.get('.modal__footer button:contains("Submit")').click();
+        cy.get('div[role="dialog"] button:contains("Submit")').click();
         cy.get('h1:contains("Submission complete")');
 
         // View submission discussion and check participants
@@ -434,7 +434,7 @@ describe('Submission Wizard', function() {
         // Submit
         cy.get('button:contains("Submit")').click();
         cy.contains('The submission, ' + submission.title + ', will be submitted to Journal of Public Knowledge for editorial review.');
-        cy.get('.modal__footer button:contains("Submit")').click();
+        cy.get('div[role="dialog"] button:contains("Submit")').click();
         cy.get('h1:contains("Submission complete")');
 
         cy.logout();
@@ -598,7 +598,7 @@ describe('Submission Wizard', function() {
         cy.contains('The submission, ' + submission.title.en + ', will be submitted to Journal of Public Knowledge for editorial review.');
         // delay is needed so previous changes gets pushed, before the submit should be triggered
         cy.wait(500);
-        cy.get('.modal__footer button:contains("Submit")').click();
+        cy.get('div[role="dialog"] button:contains("Submit")').click();
         cy.get('h1:contains("Submission complete")');
 
         cy.logout();
