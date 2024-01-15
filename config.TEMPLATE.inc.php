@@ -558,3 +558,30 @@ job_runner_max_memory = 80
 ; Remove failed jobs from the database after the following number of days.
 ; Remove this setting to leave failed jobs in the database.
 delete_failed_jobs_after = 180
+
+
+;;;;;;;;;;;;;;;;;;;;
+; Sandbox Settings ;
+;;;;;;;;;;;;;;;;;;;;
+
+[sandbox]
+
+; Enable the sandbox mode for email
+; Uncomment the following line to disable email sending
+; email = Off
+
+; Enable the sandbox mode for crossref
+; Uncomment the following line to disable crossref deposite
+; crossref = Off
+
+; Enable the sandbox mode for datacite
+; Uncomment the following line to disable datacite deposite
+; datacite = Off
+
+; Enable the sandbox mode for orcid profile
+; Uncomment the following line to disable orcid profile feature
+; orcid = Off
+
+; Enable the sandbox mode for paypal payment method
+; Uncomment the following line to disable paypal payment method
+; paypal = Off

@@ -22,6 +22,7 @@ use APP\issue\Issue;
 use APP\plugins\generic\datacite\classes\DataciteSettings;
 use APP\plugins\IDoiRegistrationAgency;
 use Illuminate\Support\Collection;
+use PKP\config\Config;
 use PKP\context\Context;
 use PKP\doi\RegistrationAgencySettings;
 use PKP\plugins\GenericPlugin;
@@ -59,6 +60,11 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
     {
         $success = parent::register($category, $path, $mainContextId);
         if ($success) {
+            // Datacite functionality is set to sandbox mode and will not run the features of plugin
+            if (!Config::getVar('sandbox', 'datacite', true)) {
+                return false;
+            }
+
             // If the system isn't installed, or is performing an upgrade, don't
             // register hooks. This will prevent DB access attempts before the
             // schema is installed.
