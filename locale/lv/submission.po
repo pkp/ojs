@@ -1,7 +1,7 @@
-# Ieva Tiltina <pastala@gmail.com>, 2023.
+# Ieva Tiltina <pastala@gmail.com>, 2023, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-12-08 10:09+0000\n"
+"PO-Revision-Date: 2024-01-15 18:09+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "lv/>\n"
@@ -20,7 +20,7 @@ msgid "submission.upload.selectComponent"
 msgstr "Izvēlēties raksta sastāvdaļu"
 
 msgid "submission.title"
-msgstr "Raksta nosaukums"
+msgstr "Raksta virsraksts"
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "Sākt jaunu materiāla iesniegšanu"
@@ -65,7 +65,7 @@ msgid "grid.action.pageProofApproved"
 msgstr "Šī korektūra apstiprināta iekļaušanai saliktnī."
 
 msgid "submission.submit.titleAndSummary"
-msgstr "Nosaukums un kopsavilkums"
+msgstr "Virsraksts un kopsavilkums"
 
 msgid "submission.pageProofs"
 msgstr "Korektūra"
@@ -286,7 +286,7 @@ msgid "submission.submit.form.authorRequired"
 msgstr "Nepieciešams vismaz viens autors."
 
 msgid "submission.submit.form.titleRequired"
-msgstr "Lūdzu, ievadiet sava raksta nosaukumu."
+msgstr "Lūdzu, ievadiet sava raksta virsrakstu."
 
 msgid "submission.submit.form.abstractRequired"
 msgstr "Lūdzu, ievadiet sava raksta kopsavilkumu."
