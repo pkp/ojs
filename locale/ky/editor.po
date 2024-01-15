@@ -1,7 +1,7 @@
 # Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-10 14:20+0000\n"
+"PO-Revision-Date: 2024-01-15 18:09+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/editor/ky/>\n"
 "Language: ky\n"
@@ -348,3 +348,21 @@ msgstr "Жалпы сан сап идентификатору мурунтан �
 
 msgid "grid.action.publish"
 msgstr "Чыгарылышты жарыялоо"
+
+msgid "grid.action.viewIssue"
+msgstr "Көрсөтүү"
+
+msgid "grid.action.previewIssue"
+msgstr "Алдын ала көрүү"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Журналдын чыгарылыш санын тузүү"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Учурдагы чыгарууну коюу"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Түпнуска файлды карап чыгуу версиясы катары белгилеңиз"
+
+msgid "editor.article.decision"
+msgstr "Чечим"
