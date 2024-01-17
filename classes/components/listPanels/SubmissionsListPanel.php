@@ -113,12 +113,12 @@ class SubmissionsListPanel extends PKPSubmissionsListPanel
             $autosuggestField = new FieldAutosuggestPreset('sectionIds', [
                 'label' => __('section.sections'),
                 'value' => [],
-                'options' => array_map(function ($section) {
+                'options' => array_values(array_map(function ($section) {
                     return [
                         'value' => (int) $section['id'],
                         'label' => $section['title'],
                     ];
-                }, $sections),
+                }, $sections)),
             ]);
             return [
                 'filters' => [
