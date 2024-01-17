@@ -30,7 +30,7 @@ class I6895_Institutions extends Migration
         // Requires that institution tables are already there
         // Add the new column institution_id to the table institutional_subscriptions
         Schema::table('institutional_subscriptions', function (Blueprint $table) {
-            $table->bigInteger('institution_id');
+            $table->bigInteger('institution_id')->default(0);
         });
 
         // pkp/pkp-lib#6895 Migrate all institutions from institutional subscriptions into new databases
@@ -73,6 +73,8 @@ class I6895_Institutions extends Migration
             $table->foreign('institution_id')->references('institution_id')->on('institutions')->onDelete('cascade');
             $table->index(['institution_id'], 'institutional_subscriptions_institution_id');
         });
+
+        DB::statement('ALTER TABLE institutional_subscriptions ALTER COLUMN institution_id DROP DEFAULT');
     }
 
     /**
