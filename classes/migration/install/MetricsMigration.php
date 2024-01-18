@@ -269,7 +269,7 @@ class MetricsMigration extends \PKP\migration\Migration
             $table->bigIncrements('usage_stats_temp_total_id');
 
             $table->dateTime('date', $precision = 0);
-            $table->string('ip', 255);
+            $table->string('ip', 64);
             $table->string('user_agent', 255);
             $table->bigInteger('line_number');
             $table->string('canonical_url', 255);
@@ -304,6 +304,8 @@ class MetricsMigration extends \PKP\migration\Migration
             $table->string('region', 3)->default('');
             $table->string('city', 255)->default('');
             $table->string('load_id', 50);
+
+            $table->index(['load_id', 'context_id', 'ip'], 'ust_load_id_context_id_ip');
         });
 
         // Usage stats unique item investigations temporary records
@@ -314,7 +316,7 @@ class MetricsMigration extends \PKP\migration\Migration
             $table->bigIncrements('usage_stats_temp_unique_item_id');
 
             $table->dateTime('date', $precision = 0);
-            $table->string('ip', 255);
+            $table->string('ip', 64);
             $table->string('user_agent', 255);
             $table->bigInteger('line_number');
 
@@ -340,6 +342,8 @@ class MetricsMigration extends \PKP\migration\Migration
             $table->string('region', 3)->default('');
             $table->string('city', 255)->default('');
             $table->string('load_id', 50);
+
+            $table->index(['load_id', 'context_id', 'ip'], 'usii_load_id_context_id_ip');
         });
 
         // Usage stats unique item requests temporary records
@@ -349,7 +353,7 @@ class MetricsMigration extends \PKP\migration\Migration
             $table->comment('Temporary stats on unique views based on visitor log records. Data in this table is provisional. See the metrics_* tables for compiled stats.');
             $table->bigIncrements('usage_stats_temp_item_id');
             $table->dateTime('date', $precision = 0);
-            $table->string('ip', 255);
+            $table->string('ip', 64);
             $table->string('user_agent', 255);
             $table->bigInteger('line_number');
 
@@ -375,6 +379,8 @@ class MetricsMigration extends \PKP\migration\Migration
             $table->string('region', 3)->default('');
             $table->string('city', 255)->default('');
             $table->string('load_id', 50);
+
+            $table->index(['load_id', 'context_id', 'ip'], 'usir_load_id_context_id_ip');
         });
 
         // Usage stats institution temporary records
