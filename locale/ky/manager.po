@@ -1,7 +1,7 @@
 # Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-10 09:39+0000\n"
+"PO-Revision-Date: 2024-01-20 03:39+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/manager/ky/>"
 "\n"
@@ -448,3 +448,125 @@ msgstr ""
 "Журналдын башкы бети демейки боюнча навигациялык шилтемелерден турат. Башкы "
 "беттеги кошумча мазмунду төмөнкү опциялардын бирин же бир нечесин колдонуу "
 "менен кошууга болот, алар көрсөтүлгөн тартипте бетте пайда болот."
+
+msgid "manager.setup.editorDecision"
+msgstr "Редактордун чечими"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr ""
+"Электрондук почтаны жеткирүү менен көйгөйлөр болсо, бул дарекке ката "
+"билдирүү жөнөтүлөт."
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"Ката дарегине жеткирилбеген электрондук каттарды жөнөтүү үчүн сайттын "
+"администратору сайттын конфигурация файлында <code>allow_envelope_sender</"
+"code> параметрин иштетиши керек. Сизге серверди конфигурациялоо керек болушу "
+"мүмкүн; бул конфигурациянын сүрөттөлүшү OJS документтеринде берилген."
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Окурмандарга журналдын жаңылыктары жана окуялары жөнүндө маалымат берүү үчүн "
+"кулактандырууларды жарыялоого болот. Жарыяланган жарнактар \"Жарыялар\" "
+"бетинде пайда болот."
+
+msgid "manager.setup.addSponsor"
+msgstr "Демөөрчү уюмду кошуу"
+
+msgid "manager.setup.alternateHeader"
+msgstr "Альтернативдик аталыш"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr ""
+"Же болбосо, аталыштын жана логотиптин ордуна, төмөнкү текст талаасына "
+"аталыштын HTML версиясын киргизсе болот. Кошумча аталышты каалабасаңыз, "
+"текст талаасын бош калтырыңыз."
+
+msgid "manager.setup.announcements"
+msgstr "жарнамалар"
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "сүрөттөмө"
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "Жарыялар бетинде пайда боло турган бардык маалыматты киргизиңиз."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(\"Журнал жөнүндө\" бөлүмүндө пайда болот) "
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr ""
+"Авторлор өз сын-пикирлери менен кызыкчылыктардын кагылышы жөнүндө декларация "
+"файлын тапшырышы керек."
+
+msgid "manager.setup.history"
+msgstr "Журналдын тарыхы"
+
+msgid "manager.setup.historyDescription"
+msgstr ""
+"Бул текст веб-сайттын \"Журнал жөнүндө\" бөлүмүндө пайда болот жана "
+"журналдын аталыштарына, редакциялык курамына жана журналдын басылма тарыхына "
+"байланыштуу башка маалыматтардын өзгөрүшүн сүрөттөө үчүн колдонулушу мүмкүн."
+
+msgid "manager.setup.currentIssue"
+msgstr "Акыркы сан/акыркы чыгарылыш"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "5-кадам: Сырткы көрүнүштү ыңгайлаштыруу"
+
+msgid "manager.setup.details"
+msgstr "Деталдары/толук маалымат"
+
+msgid "manager.setup.details.description"
+msgstr "Журналдын аты, ISSN, байланыштар, демөөрчүлөр жана издөө системалары."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr ""
+"Журнал менеджери бардык колдонуучуларды журналга киргизет. Редакторлор же "
+"бөлүм редакторлору рецензенттер үчүн аккаунттарды каттай алышат."
+
+msgid "manager.setup.discipline"
+msgstr "Академиялык дисциплиналар жана дисциплиналар бөлүмдөрү"
+
+msgid "manager.setup.disciplineDescription"
+msgstr ""
+"Журнал бир дисциплинанын чегинен ашса жана/же авторлор дисциплиналар аралык "
+"материалдарды тапшырганда пайдалуу."
+
+msgid "manager.setup.disciplineExamples"
+msgstr ""
+"(Мисалы: Тарых; Билим берүү; Социология; Психология; Маданият таануу; Укук)"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Бул журнал үчүн тиешелүү окуу дисциплиналарынын мисалдарын келтириңиз"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Учурдагы чыгарылыш үчүн мазмунду кошуңуз (эгерде бар болсо)."
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Каталар үчүн дарек"
+
+msgid "manager.setup.emails"
+msgstr "Электрондук почтадагы идентификация"
+
+msgid "manager.setup.emailSignature"
+msgstr "кол коюу"
+
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+"Журналдын атынан автоматтык түрдө жөнөтүлгөн электрондук каттарда төмөнкү "
+"кол коюлат."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Жарыяларды  активдештирүү"
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Башкы бетте көрсөтүү"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Негизги бетте канча жарнама көрсөтүү керек. Башкы беттеги жарнамаларды "
+"көрсөткүңүз келбесе, бул талааны бош калтырыңыз."
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Коноктор журналга каттоо эсебин каттай алышат."
