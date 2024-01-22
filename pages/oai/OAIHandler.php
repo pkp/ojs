@@ -23,11 +23,12 @@ use PKP\config\Config;
 use PKP\core\PKPJwt as JWT;
 use PKP\oai\OAIConfig;
 use PKP\plugins\PluginRegistry;
-use PKP\session\SessionManager;
 use stdClass;
 
 // Disable initializing the session
-SessionManager::disable();
+if (!defined('SESSION_DISABLE_INIT')) {
+    define('SESSION_DISABLE_INIT', true);
+}
 
 class OAIHandler extends Handler
 {
