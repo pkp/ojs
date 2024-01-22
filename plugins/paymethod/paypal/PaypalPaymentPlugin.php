@@ -66,8 +66,8 @@ class PaypalPaymentPlugin extends PaymethodPlugin
             return false;
         }
 
-        // paypal functionality is set to sandbox mode and will not run the features of plugin
-        if (!Config::getVar('sandbox', 'paypal', true)) {
+        // Application is set to sandbox mode and will not run the features of plugin
+        if (Config::getVar('general', 'sandbox', false)) {
             return false;
         }
 

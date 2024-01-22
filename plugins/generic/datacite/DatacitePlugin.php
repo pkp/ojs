@@ -60,8 +60,8 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
     {
         $success = parent::register($category, $path, $mainContextId);
         if ($success) {
-            // Datacite functionality is set to sandbox mode and will not run the features of plugin
-            if (!Config::getVar('sandbox', 'datacite', true)) {
+            // Application is set to sandbox mode and will not run the features of plugin
+            if (Config::getVar('general', 'sandbox', false)) {
                 return false;
             }
 

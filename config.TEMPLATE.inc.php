@@ -134,6 +134,10 @@ sitewide_privacy_statement = Off
 ; 0, unvalidated accounts will never be removed. Use this setting to automatically remove bot registrations.
 user_validation_period = 28
 
+; Turn sandbox mode to On in order to prevent the software from interacting with outside systems.
+; Use this for development or testing purposes.
+sandbox = Off
+
 
 ;;;;;;;;;;;;;;;;;;;;;
 ; Database Settings ;
@@ -558,30 +562,3 @@ job_runner_max_memory = 80
 ; Remove failed jobs from the database after the following number of days.
 ; Remove this setting to leave failed jobs in the database.
 delete_failed_jobs_after = 180
-
-
-;;;;;;;;;;;;;;;;;;;;
-; Sandbox Settings ;
-;;;;;;;;;;;;;;;;;;;;
-
-[sandbox]
-
-; Enable the sandbox mode for email
-; Uncomment the following line to disable email sending
-; email = Off
-
-; Enable the sandbox mode for crossref
-; Uncomment the following line to disable crossref deposite
-; crossref = Off
-
-; Enable the sandbox mode for datacite
-; Uncomment the following line to disable datacite deposite
-; datacite = Off
-
-; Enable the sandbox mode for orcid profile
-; Uncomment the following line to disable orcid profile feature
-; orcid = Off
-
-; Enable the sandbox mode for paypal payment method
-; Uncomment the following line to disable paypal payment method
-; paypal = Off
