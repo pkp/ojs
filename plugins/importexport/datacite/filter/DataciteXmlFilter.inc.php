@@ -703,7 +703,10 @@ class DataciteXmlFilter extends NativeExportFilter {
 		/** @var DataciteExportDeployment */
 		$deployment = $this->getDeployment();
 		$context = $deployment->getContext();
-		$request = Application::get()->getRequest();
+
+		$application = Application::get();
+		$request = $application->getRequest();
+		$dispatcher = $application->getDispatcher();
 
 		$relatedItemsNode = null;
 		if (isset($article)) {
@@ -720,7 +723,7 @@ class DataciteXmlFilter extends NativeExportFilter {
 				$relatedItemIdentifierNode = $doc->createElementNS($deployment->getNamespace(), 'relatedItemIdentifier', $context->getData('printIssn'));
 				$relatedItemIdentifierNode->setAttribute('relatedItemIdentifierType', DATACITE_IDTYPE_ISSN);
 			} else {
-				$contextUrl = $request->getDispatcher()->url(
+				$contextUrl = $dispatcher->url(
 					$request,
 					ROUTE_PAGE,
 					$context->getPath()
