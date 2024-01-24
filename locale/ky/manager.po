@@ -1,7 +1,7 @@
 # Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-20 03:39+0000\n"
+"PO-Revision-Date: 2024-01-24 22:30+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/manager/ky/>"
 "\n"
@@ -570,3 +570,158 @@ msgstr ""
 
 msgid "manager.setup.enableUserRegistration"
 msgstr "Коноктор журналга каттоо эсебин каттай алышат."
+
+msgid "manager.setup.initialIssueDescription"
+msgstr ""
+"Сиз тандаган форматка жараша AJS аркылуу жарыялана турган биринчи "
+"чыгарылыштын чыгарылышын, көлөмүн жана/же жылын көрсөтүңүз:"
+
+msgid "manager.setup.itemsDescription"
+msgstr ""
+"Чабыттоо тилкесинин элементтери барактын жогору жагында пайда болгон "
+"учурдагы топтомго (Башкы бет, жөнүндө, Колдонуучу баракчасы ж.б.) кошулушу "
+"мүмкүн."
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Тизмеде көрсөтүлгөн нерселердин санын (мисалы, окуялар, колдонуучулар же "
+"түзөтүү жумуштары) чектеңиз. Кийинки бетте төмөнкү нерселер көрсөтүлөт."
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Окурмандар, авторлор же рецензенттер үчүн кызыктуу болушу мүмкүн болгон "
+"журнал тууралуу маалыматты бул жерге киргизиңиз. Аларга ачык кирүү "
+"саясаттары, журналдын көз карашы, автордук укук шарттары, демөөрчүлүк "
+"маалыматы, журналдын тарыхы, купуялык билдирүүлөрү жана LOCKSS же CLOCKSS "
+"архивдик тутумуна кошуу камтышы мүмкүн."
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr ""
+"Журналдын башкы бети демейки боюнча навигациялык шилтемелерден турат. Башкы "
+"беттеги кошумча мазмунду төмөнкү опциялардын бирин же бир нечесин колдонуу "
+"менен кошууга болот, алар көрсөтүлгөн тартипте бетте пайда болот. Учурдагы "
+"чыгарылыш ар дайым навигация тилкесиндеги Учурдагы чыгарылыш шилтемесинен "
+"жеткиликтүү экенин эске алыңыз."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Журнал концепциясы"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr ""
+"Журнал жарыялай турган макалалардын жана башка материалдардын спектрин "
+"авторлор, окурмандар жана китепканалар үчүн сүрөттөп бериңиз."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Авторлордун эмгектерин индексациялоо үчүн"
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "Туура эмес ISSN көрсөтүлгөн."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "Байланыш берүүчү адамдын электрондук почта дареги талап кылынат."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Байланышуучунун аты-жөнү талап кылынат."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Журналдын аталышынын аббревиатурасы талап кылынат."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Журналдын аталышы милдеттүү түрдө көрсөтүлөт."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Бир материал үчүн рецензенттердин саны талап кылынат."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr ""
+"Техникалык колдоо көрсөткөн адамдын электрондук почта дареги талап кылынат."
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr ""
+"Техникалык колдоо көрсөткөн адамдын электрондук почта дареги талап кылынат."
+
+msgid "manager.setup.generalInformation"
+msgstr "жалпы маалымат"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "1-кадам: Каттоо маалыматтары"
+
+msgid "manager.setup.guidelines"
+msgstr "башкаруу"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "3-кадам. Материалдарды тапшыруу"
+
+msgid "manager.setup.identity"
+msgstr "Журналдын идентификациясы"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+"Дароо же убакыттын өтүшү менен ачык кирүүнү камсыз кылган журналдардагы "
+"бардык жарыяланган иштер үчүн ылайыктуу убакта Creative Commons лицензиясын "
+"кошуңуз."
+
+msgid "manager.setup.information"
+msgstr "маалымат"
+
+msgid "manager.setup.information.description"
+msgstr ""
+"Китепканалар, потенциалдуу авторлор жана окурмандар үчүн журналдын кыскача "
+"сүрөттөлүшү. Сүрөттөмөлөр \"Маалымат\" блогу кошулганда сайттын каптал "
+"тилкесинде жеткиликтүү болот."
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Авторлор үчүн"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Китепканалар үчүн"
+
+msgid "manager.setup.information.forReaders"
+msgstr "Окурмандар үчүн"
+
+msgid "manager.setup.initialIssue"
+msgstr "Биринчи чыгарылыш"
+
+msgid "manager.setup.institution"
+msgstr "уюм"
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Барактагы элементтер"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Журналдын аталышынын кыскартылышы"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Журналды архивдөө"
+
+msgid "manager.setup.contextSummary"
+msgstr "Журналдын корутундусу"
+
+msgid "manager.setup.contextAbout"
+msgstr "Журнал тууралуу"
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Журналдын башкы бетинин мазмуну"
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Журналдын башкы бетинин аталышы"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Журналдын башкы бетинин аталышы"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr ""
+"Журналдын аталышынын жана логотипинин графикалык версиясын (.gif, .jpg же ."
+"png файлы катары) башкы бетке жүктөсө болот. Бул версия демейки боюнча "
+"көрсөтүлгөн текст версиясын алмаштырат."
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr ""
+"OJS <a href=\"http://www.openarchives.org/\" target=\"_blank\">Açık Archives "
+"Initiative</a> метадайындарды чогултуу протоколун колдойт, ал электрондук "
+"изилдөөлөргө жакшы индекстелген мүмкүнчүлүктү камсыз кылуу үчүн стандартка "
+"айланып баратат. дүйнө жүзү боюнча ресурстар. Авторлор өз материалдары "
+"жөнүндө метадайындарды берүү үчүн окшош шаблонду колдонушат. Журналдын "
+"менеджери индекстөө үчүн категорияларды тандап алышы керек жана авторлорго "
+"алардын ишин индексациялоого жардам берүү үчүн тиешелүү мисалдарды бериши "
+"керек."
