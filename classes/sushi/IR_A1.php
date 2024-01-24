@@ -60,7 +60,8 @@ class IR_A1 extends IR
             'customer_id',
             'begin_date',
             'end_date',
-            'platform'
+            'platform',
+            '_', // for ajax requests
         ];
     }
 
@@ -134,5 +135,11 @@ class IR_A1 extends IR
             ],
         ];
         parent::setAttributes($predefinedAttributes);
+    }
+
+    /** Get report specific form fields */
+    public static function getReportSettingsFormFields(): array
+    {
+        return parent::getCommonReportSettingsFormFields();
     }
 }

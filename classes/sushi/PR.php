@@ -18,6 +18,8 @@
 namespace APP\sushi;
 
 use APP\core\Services;
+use Illuminate\Support\Collection;
+use PKP\components\forms\FieldOptions;
 use PKP\statistics\PKPStatisticsHelper;
 use PKP\sushi\CounterR5Report;
 
@@ -72,7 +74,8 @@ class PR extends CounterR5Report
             'data_type',
             'access_method',
             'attributes_to_show',
-            'granularity'
+            'granularity',
+            '_', // for ajax requests
         ];
     }
 
@@ -124,10 +127,8 @@ class PR extends CounterR5Report
         ];
     }
 
-    /**
-     * Get report items
-     */
-    public function getReportItems(): array
+    /** Get DB query results for the report */
+    protected function getQueryResults(): Collection
     {
         $params['contextIds'] = [$this->context->getId()];
         $params['institutionId'] = $this->customerId;
@@ -159,6 +160,13 @@ class PR extends CounterR5Report
                 'Data' => __('sushi.exception.3030', ['beginDate' => $this->beginDate, 'endDate' => $this->endDate])
             ]);
         }
+        return $results;
+    }
+
+    /** Get report items */
+    public function getReportItems(): array
+    {
+        $results = $this->getQueryResults();
 
         // There is only one platform, so there will be only one report item
         $item['Platform'] = $this->platformName;
@@ -207,5 +215,116 @@ class PR extends CounterR5Report
         $item['Performance'] = $performances;
         $items = [$item];
         return $items;
+    }
+
+    /** Get TSV report column names */
+    public function getTSVColumnNames(): array
+    {
+        $columnRow = ['Platform'];
+        if (in_array('Data_Type', $this->attributesToShow)) {
+            array_push($columnRow, 'Data_Type');
+        }
+        if (in_array('Access_Method', $this->attributesToShow)) {
+            array_push($columnRow, 'Access_Method');
+        }
+        array_push($columnRow, 'Metric_Type', 'Reporting_Period_Total');
+        if ($this->granularity == 'Month') {
+            $period = $this->getMonthlyDatePeriod();
+            foreach ($period as $dt) {
+                array_push($columnRow, $dt->format('M-Y'));
+            }
+        }
+        return [$columnRow];
+    }
+
+    /** Get TSV report rows */
+    public function getTSVReportItems(): array
+    {
+        $results = $this->getQueryResults();
+
+        // get total numbers for every metric type
+        $metricsTotal['Total_Item_Investigations'] = $results->pluck('metric_investigations')->sum();
+        $metricsTotal['Unique_Item_Investigations'] = $results->pluck('metric_investigations_unique')->sum();
+        $metricsTotal['Total_Item_Requests'] = $results->pluck('metric_requests')->sum();
+        $metricsTotal['Unique_Item_Requests'] = $results->pluck('metric_requests_unique')->sum();
+
+        $resultRows = [];
+        // filter here by requested metric types
+        foreach ($this->metricTypes as $metricType) {
+            // if the total numbers for the given metric type > 0
+            if ($metricsTotal[$metricType] > 0) {
+                // construct the result row
+                $resultRow = [];
+                array_push($resultRow, $this->platformName); // Platform
+                if (in_array('Data_Type', $this->attributesToShow)) {
+                    array_push($resultRow, self::DATA_TYPE); // Data_Type
+                }
+                if (in_array('Access_Method', $this->attributesToShow)) {
+                    array_push($resultRow, self::ACCESS_METHOD); // Access_Method
+                }
+                array_push($resultRow, $metricType); // Metric_Type
+                array_push($resultRow, $metricsTotal[$metricType]); // Reporting_Period_Total
+                if ($this->granularity == 'Month') { // metrics for each month in the given period
+                    $period = $this->getMonthlyDatePeriod();
+                    foreach ($period as $dt) {
+                        $month = $dt->format('Ym');
+                        $result = $results->firstWhere('month', '=', $month);
+                        if ($result === null) {
+                            array_push($resultRow, '0');
+                        } else {
+                            $metrics['Total_Item_Investigations'] = $result->metric_investigations;
+                            $metrics['Unique_Item_Investigations'] = $result->metric_investigations_unique;
+                            $metrics['Total_Item_Requests'] = $result->metric_requests;
+                            $metrics['Unique_Item_Requests'] = $result->metric_requests_unique;
+                            array_push($resultRow, $metrics[$metricType]);
+                        }
+                    }
+                }
+                $resultRows[] = $resultRow;
+            }
+        }
+
+        return $resultRows;
+    }
+
+    /** Get report specific form fields */
+    public static function getReportSettingsFormFields(): array
+    {
+        $formFields = parent::getCommonReportSettingsFormFields();
+
+        $metricTypes = ['Total_Item_Investigations', 'Unique_Item_Investigations', 'Total_Item_Requests', 'Unique_Item_Requests'];
+        $metricTypeOptions = [];
+        foreach ($metricTypes as $metricType) {
+            $metricTypeOptions[] = ['value' => $metricType, 'label' => $metricType];
+        }
+        $formFields[] = new FieldOptions('metric_type', [
+            'label' => __('manager.statistics.counterR5Report.settings.metricType'),
+            'options' => $metricTypeOptions,
+            'value' => $metricTypes,
+            'groupId' => 'default',
+        ]);
+
+        $attributesToShow = ['Data_Type', 'Access_Method'];
+        $attributesToShowOptions = [];
+        foreach ($attributesToShow as $attributeToShow) {
+            $attributesToShowOptions[] = ['value' => $attributeToShow, 'label' => $attributeToShow];
+        }
+        $formFields[] = new FieldOptions('attributes_to_show', [
+            'label' => __('manager.statistics.counterR5Report.settings.attributesToShow'),
+            'options' => $attributesToShowOptions,
+            'value' => [],
+            'groupId' => 'default',
+        ]);
+
+        $formFields[] = new FieldOptions('granularity', [
+            'label' => __('manager.statistics.counterR5Report.settings.excludeMonthlyDetails'),
+            'options' => [
+                ['value' => true, 'label' => __('manager.statistics.counterR5Report.settings.excludeMonthlyDetails')],
+            ],
+            'value' => false,
+            'groupId' => 'default',
+        ]);
+
+        return $formFields;
     }
 }
