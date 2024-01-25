@@ -221,14 +221,11 @@
 		<migration class="PKP\migration\upgrade\v3_4_0\I9627_AddUsageStatsTemporaryTablesIndexes"/>
 	</upgrade>
 
-	<upgrade minversion="3.4.0.0" maxversion="3.4.9.9">
+	<upgrade minversion="3.1.0.0" maxversion="3.4.9.9">
 		<migration class="PKP\migration\upgrade\v3_5_0\I9197_MigrateAccessKeys"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I9253_SiteAnnouncements"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I9262_Highlights"/>
 		<migration class="APP\migration\upgrade\v3_5_0\I9475_RecoverLayoutFiles"/>
-	</upgrade>
-
-	<upgrade minversion="3.1.0.0" maxversion="3.4.9.9">
-		<migration class="PKP\migration\upgrade\v3_5_0\I9253_SiteAnnouncements"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I9462_UserUserGroups"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I9552_UserGroupsMasthead"/>
 	</upgrade>
