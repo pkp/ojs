@@ -1,12 +1,13 @@
 # Fulvio Delle Donne <fulviodelledonne@libero.it>, 2022, 2023.
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
+# Leonardo Mancini <leonardo.mancini@unito.it>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
-"PO-Revision-Date: 2023-12-23 12:36+0000\n"
-"Last-Translator: Fulvio Delle Donne <fulviodelledonne@libero.it>\n"
+"PO-Revision-Date: 2024-01-25 23:49+0000\n"
+"Last-Translator: Leonardo Mancini <leonardo.mancini@unito.it>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/locale/it/>"
 "\n"
 "Language: it\n"
@@ -55,7 +56,7 @@ msgid "common.homePageHeader.altText"
 msgstr "Intestazione della pagina di inizio"
 
 msgid "common.journalHomepageImage.altText"
-msgstr "Immagine della homepae della rivista"
+msgstr "Immagine della homepage della rivista"
 
 msgid "doi.manager.settings.publications"
 msgstr "Articoli"
@@ -280,10 +281,10 @@ msgid "submission.editorReview"
 msgstr "Revisione dell'editor"
 
 msgid "submission.notifyAuthor"
-msgstr "Notifica gli autori"
+msgstr "Invia una notifica all'autore"
 
 msgid "submission.notifyEditor"
-msgstr "Notifica all'editor"
+msgstr "Invia una notifica all'editor"
 
 msgid "submission.editorAuthorRecord"
 msgstr "Registro delle email Editor/Autore"
@@ -2308,7 +2309,7 @@ msgid "log.editor.archived"
 msgstr "La proposta {$submissionId} è stata archiviata."
 
 msgid "log.editor.restored"
-msgstr "La proposta {$submissionId} è stata reinserita nella coda."
+msgstr "La proposta {$submissionId} è stata nuovamente inserita nella coda."
 
 msgid "log.editor.editorAssigned"
 msgstr ""
@@ -2326,7 +2327,7 @@ msgid "log.imported"
 msgstr "{$userName} ha importato un articolo{$submissionId}."
 
 msgid "metadata.pkp.peerReviewed"
-msgstr "Articolo Peer-reviewed"
+msgstr "Articolo peer-reviewed"
 
 msgid "notification.type.editing"
 msgstr "Eventi di modifica"
@@ -2339,7 +2340,7 @@ msgstr ""
 "La decisione dell'editor su \"{$title}\" ha ricevuto un nuovo commento."
 
 msgid "notification.type.galleyModified"
-msgstr "E' stata modificata la bozza di \"{$title}.\""
+msgstr "È stata modificata la bozza di \"{$title}.\""
 
 msgid "notification.type.issuePublished"
 msgstr "È stato pubblicato un nuovo fascicolo."
@@ -2376,11 +2377,11 @@ msgstr "Metadati del fascicolo salvati."
 
 msgid "notification.type.editorAssignmentTask"
 msgstr ""
-"È necessario assegnare un editor ad una nuova proposta che è stata ricevuta."
+"È necessario assegnare un editor a una nuova proposta che è stata ricevuta."
 
 msgid "notification.type.assignProductionUser"
 msgstr ""
-"Per assegnare ad un utente la possibilità di creare gabbie usa il link "
+"Per assegnare a un utente la possibilità di creare gabbie usa il link "
 "Assegna nella lista di partecipanti."
 
 msgid "notification.type.awaitingRepresentations"
@@ -2390,7 +2391,7 @@ msgid "user.authorization.copyeditorAssignmentMissing"
 msgstr "Accesso negato! Non hai l'incarico di copyeditor per quest'articolo."
 
 msgid "user.authorization.noContext"
-msgstr "Nessuna rivista nel contesto."
+msgstr "Non è stata trovata alcuna rivista che corrisponda alla tua richiesta."
 
 msgid "user.authorization.sectionAssignment"
 msgstr ""
@@ -2445,7 +2446,7 @@ msgstr "Indicizzazione di \"{$journalName}\""
 
 msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
 msgstr ""
-"Questa implementazione della ricerca non permette una renidicizzazione per "
+"Questa implementazione della ricerca non permette una re-indicizzazione per "
 "rivista."
 
 msgid "search.cli.rebuildIndex.unknownJournal"
@@ -2464,7 +2465,8 @@ msgstr "Abbonamenti"
 
 msgid "log.editor.submissionExpedited"
 msgstr ""
-"{$editorName} ha preso in mano le modifiche per l'articolo {$submissionId}."
+"{$editorName} ha accettato il processo di editing  per l'articolo "
+"{$submissionId}."
 
 msgid "catalog.sortBy"
 msgstr "Sequenza articoli"
