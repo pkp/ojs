@@ -55,6 +55,7 @@ export default defineConfig(({mode}) => {
 			sourcemap: mode === 'development' ? 'inline' : false,
 			target: ['chrome66', 'edge79', 'firefox67', 'safari12'],
 			emptyOutDir: false,
+			cssCodeSplit: false,
 			rollupOptions: {
 				input: {
 					build: './js/load.js',
