@@ -1,7 +1,7 @@
 # Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-24 22:30+0000\n"
+"PO-Revision-Date: 2024-01-25 23:49+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/manager/ky/>"
 "\n"
@@ -725,3 +725,38 @@ msgstr ""
 "менеджери индекстөө үчүн категорияларды тандап алышы керек жана авторлорго "
 "алардын ишин индексациялоого жардам берүү үчүн тиешелүү мисалдарды бериши "
 "керек."
+
+msgid "manager.setup.management.description"
+msgstr ""
+"Мүмкүнчүлүк жана коопсуздук, пландаштыруу, кулактандыруулар, адабий "
+"редакциялоо, макет жана текшерүү."
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Жарыялоо процессин башкаруу жана ыңгайлаштыруу"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+"<strong>Эскертүү:</strong> Учурда журналга материал тапшырууну ырастаган "
+"электрондук кат жөнөтүү өчүрүлгөн. Бул функцияны колдонуу үчүн \"Электрондук "
+"почталар\" бөлүмүндөгү \"Ырастоо жөнөтүү\" электрондук почтасын иштетиңиз."
+
+msgid "manager.setup.numPageLinks.description"
+msgstr "Тизмедеги кийинки беттерде көрсөтүлгөн шилтемелердин санын чектеңиз."
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Редакциялык процесстин негизги кадамдарын башкаруу"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "4-кадам: Журналды башкаруу"
+
+msgid "manager.setup.navigationBar"
+msgstr "Навигациялык тилке"
+
+msgid "manager.setup.note"
+msgstr "Эскертүү"
+
+msgid "manager.setup.numPageLinks"
+msgstr ""
+"<strong>Эскертүү:</strong> Учурда журналга материал тапшырууну ырастаган "
+"электрондук кат жөнөтүү өчүрүлгөн. Бул функцияны колдонуу үчүн \"Электрондук "
+"почталар\" бөлүмүндөгү \"Ырастоо жөнөтүү\" электрондук почтасын иштетиңиз."
