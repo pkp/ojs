@@ -19,6 +19,13 @@ use APP\file\PublicFileManager;
 use PKP\config\Config;
 use PKP\session\SessionManager;
 
+use APP\facades\Repo;
+use APP\issue\Collector;
+use APP\services\NavigationMenuService;
+use PKP\plugins\ThemePlugin;
+use PKP\plugins\Hook;
+
+
 class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
 {
     /**
@@ -210,6 +217,9 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
 
         // Add navigation menu areas for this theme
         $this->addMenuArea(['primary', 'user']);
+
+
+		Hook::add('TemplateManager::display', array($this, 'checkCurrentPage'));
     }
 
     /**
@@ -253,6 +263,57 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
     {
         return __('plugins.themes.default.description');
     }
+
+	/**
+	 * @param $hookname string
+	 * @param $args array
+	 */
+	public function checkCurrentPage($hookname, $args) {
+		$templateMgr = $args[0];
+		// TODO check the issue with multiple calls of the hook on settings/website
+		if (!isset($templateMgr->registered_plugins["function"]["default_item_active"])) {
+			$templateMgr->registerPlugin('function', 'default_item_active', array($this, 'isActiveItem'));
+		}
+
+	}
+
+	/**
+	 * @param $params array
+	 * @param $smarty Smarty_Internal_Template
+	 * @return string
+	 */
+	public function isActiveItem($params, $smarty) {
+
+		$navigationMenuItem = $params['item'];
+		$emptyMarker = '';
+		$activeMarker = ' active';
+		
+		// Get URL of the current page
+		$request = $this->getRequest();
+		$currentUrl = $request->getCompleteUrl();
+		$currentPage = $request->getRequestedPage();
+
+		// Do not add an active marker if it's a dropdown menu
+		if ($navigationMenuItem->getIsChildVisible()) return $emptyMarker;
+
+		// Retrieve URL and its components for a menu item
+		$itemUrl = $navigationMenuItem->getUrl();
+       
+		// Check whether menu item points to the current page
+		$context = $request->getContext();
+		if ($context) {
+			$currentIssue = Repo::issue()->getCurrent($context->getId());
+			if ($navigationMenuItem->getType() === NavigationMenuService::NMI_TYPE_CURRENT) {
+				$issue = $smarty->getTemplateVars('issue');
+				if ($issue && ($issue->getId() === $currentIssue->getId()) && $currentPage == "issue") return $activeMarker;
+			}
+		}
+
+		if ($currentUrl === $itemUrl) return $activeMarker;
+
+		return $emptyMarker;
+	}
+
 }
 
 if (!PKP_STRICT_MODE) {
