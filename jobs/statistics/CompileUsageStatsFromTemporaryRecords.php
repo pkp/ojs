@@ -94,9 +94,9 @@ class CompileUsageStatsFromTemporaryRecords extends BaseJob
         $temporaryItemInvestigationsDao = DAORegistry::getDAO('TemporaryItemInvestigationsDAO'); /** @var TemporaryItemInvestigationsDAO $temporaryItemInvestigationsDao */
         $temporaryItemRequestsDao = DAORegistry::getDAO('TemporaryItemRequestsDAO'); /** @var TemporaryItemRequestsDAO $temporaryItemRequestsDao */
 
-        $temporaryTotalsDao->removeDoubleClicks(StatisticsHelper::COUNTER_DOUBLE_CLICK_TIME_FILTER_SECONDS);
-        $temporaryItemInvestigationsDao->compileUniqueClicks();
-        $temporaryItemRequestsDao->compileUniqueClicks();
+        $temporaryTotalsDao->removeDoubleClicks($this->loadId, StatisticsHelper::COUNTER_DOUBLE_CLICK_TIME_FILTER_SECONDS);
+        $temporaryItemInvestigationsDao->compileUniqueClicks($this->loadId);
+        $temporaryItemRequestsDao->compileUniqueClicks($this->loadId);
 
         $temporaryTotalsDao->compileContextMetrics($this->loadId);
         $temporaryTotalsDao->compileIssueMetrics($this->loadId);
