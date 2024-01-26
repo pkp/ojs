@@ -117,7 +117,7 @@
 
 	a {
 		display: inline-block;
-		padding: 0.125rem 0;
+		padding: 0.86rem 0;
 		color: @text-bg-base;
 		text-decoration: none;
 
@@ -127,6 +127,18 @@
 			text-decoration: underline;
 		}
 	}
+	@media (max-width: @screen-desktop) {
+
+		.active {
+			background-color: @bg-base-border-color;
+			
+		}
+		.active a {
+			font-weight: bold;
+			
+		}
+	}
+
 
 	#siteNav {
 		position: absolute;
@@ -358,6 +370,19 @@
 			}
 		}
 
+		// Visualy highlighting the current menu item
+		> li.active {
+			> a {
+				//background: @primary-lift;
+				border-color: @text-bg-base;
+				outline: 0;
+			}
+				&:hover {
+					color: @bg-base;
+					border-color: red;
+				}			
+		}
+
 		// Reproduce positioning of dropdown menu from Popper.js
 		> li:hover ul {
 			position: absolute;
@@ -377,7 +402,8 @@
 		}
 
 		.dropdown-menu a:focus,
-		.dropdown-menu a:hover {
+		.dropdown-menu a:hover,
+		.dropdown-menu li.active a {
 			border-color: @primary;
 		}
 
