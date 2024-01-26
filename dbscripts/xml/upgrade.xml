@@ -212,9 +212,12 @@
 		<migration class="PKP\migration\upgrade\v3_4_0\I7249_UpdateUsersUniqueIndex"/>
 	</upgrade>
 
-	<upgrade minversion="3.1.0.0" maxversion="3.4.0.9">
+	<upgrade minversion="3.1.0.0" maxversion="3.4.0.1">
 		<migration class="PKP\migration\upgrade\v3_4_0\I9136_MigrateUniqueSiteId"/>
 		<migration class="APP\migration\upgrade\v3_4_0\I9231_FixMetricsIndexes"/>
+	</upgrade>
+
+	<upgrade minversion="3.1.0.0" maxversion="3.4.0.4">
 		<migration class="PKP\migration\upgrade\v3_4_0\I9627_AddUsageStatsTemporaryTablesIndexes"/>
 	</upgrade>
 
