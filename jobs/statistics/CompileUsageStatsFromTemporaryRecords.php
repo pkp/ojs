@@ -12,6 +12,8 @@
  * @ingroup jobs
  *
  * @brief Compile the temporary usage stats and store them in the metrics table.
+ *
+ * @deprecated 3.4.0.5
  */
 
 namespace APP\jobs\statistics;
