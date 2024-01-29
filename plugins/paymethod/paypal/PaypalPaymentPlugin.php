@@ -66,11 +66,6 @@ class PaypalPaymentPlugin extends PaymethodPlugin
             return false;
         }
 
-        // Application is set to sandbox mode and will not run the features of plugin
-        if (Config::getVar('general', 'sandbox', false)) {
-            return false;
-        }
-
         $this->addLocaleData();
         Hook::add('Form::config::before', [$this, 'addSettings']);
         return true;
@@ -183,6 +178,12 @@ class PaypalPaymentPlugin extends PaymethodPlugin
      */
     public function handle($args, $request)
     {
+        // Application is set to sandbox mode and will not run the features of plugin
+        if (Config::getVar('general', 'sandbox', false)) {
+            error_log('Application is set to sandbox mode and no payment will be done via paypal');
+            return;
+        }
+
         $journal = $request->getJournal();
         $queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO'); /** @var \PKP\payment\QueuedPaymentDAO $queuedPaymentDao */
         try {

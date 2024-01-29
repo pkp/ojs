@@ -242,6 +242,12 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
      */
     public function depositXML($object, $context, $filename)
     {
+        // Application is set to sandbox mode and will not run the features of plugin
+        if (Config::getVar('general', 'sandbox', false)) {
+            error_log('Application is set to sandbox mode and datacite will not do any deposition');
+            return [[__('common.sandbox')]];
+        }
+
         $request = Application::get()->getRequest();
         // Get the DOI and the URL for the object.
         $doi = $object->getStoredPubId('doi');
