@@ -22,6 +22,7 @@ use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\journal\JournalDAO;
 use APP\template\TemplateManager;
+use Illuminate\Database\PostgresConnection;
 use Illuminate\Support\Facades\DB;
 use PKP\config\Config;
 use PKP\core\Core;
@@ -33,7 +34,6 @@ use PKP\navigationMenu\NavigationMenuItemDAO;
 use PKP\plugins\PluginSettingsDAO;
 use PKP\security\Role;
 use PKP\site\SiteDAO;
-use PKP\stageAssignment\StageAssignmentDAO;
 use PKP\submissionFile\SubmissionFile;
 
 class Upgrade extends Installer
@@ -580,8 +580,6 @@ class Upgrade extends Installer
      */
     public function changeUserRolesAndStageAssignmentsForStagePermitSubmissionEdit()
     {
-        $stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /** @var StageAssignmentDAO $stageAssignmentDao */
-
         $roles = Repo::userGroup()::NOT_CHANGE_METADATA_EDIT_PERMISSION_ROLES;
         $roleString = '(' . implode(',', $roles) . ')';
 
@@ -589,19 +587,10 @@ class Upgrade extends Installer
             ->whereIn('role_id', $roles)
             ->update(['permit_metadata_edit' => 1]);
 
-        switch (Config::getVar('database', 'driver')) {
-            case 'mysql':
-            case 'mysqli':
-                $stageAssignmentDao->update('UPDATE stage_assignments sa JOIN user_groups ug on sa.user_group_id = ug.user_group_id SET sa.can_change_metadata = 1 WHERE ug.role_id IN ' . $roleString);
-                break;
-            case 'postgres':
-            case 'postgres64':
-            case 'postgres7':
-            case 'postgres8':
-            case 'postgres9':
-                $stageAssignmentDao->update('UPDATE stage_assignments sa SET can_change_metadata=1 FROM user_groups ug WHERE sa.user_group_id = ug.user_group_id AND ug.role_id IN ' . $roleString);
-                break;
-            default: fatalError('Unknown database type!');
+        if (DB::connection() instanceof PostgresConnection) {
+            DB::statement('UPDATE stage_assignments sa SET can_change_metadata=1 FROM user_groups ug WHERE sa.user_group_id = ug.user_group_id AND ug.role_id IN ' . $roleString);
+        } else {
+            DB::statement('UPDATE stage_assignments sa JOIN user_groups ug on sa.user_group_id = ug.user_group_id SET sa.can_change_metadata = 1 WHERE ug.role_id IN ' . $roleString);
         }
 
         return true;

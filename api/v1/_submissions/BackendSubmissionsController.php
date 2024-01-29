@@ -29,7 +29,7 @@ use PKP\core\PKPRequest;
 use PKP\db\DAORegistry;
 use PKP\security\authorization\SubmissionAccessPolicy;
 use PKP\security\Role;
-use PKP\stageAssignment\StageAssignmentDAO;
+use PKP\stageAssignment\StageAssignmentModel;
 
 class BackendSubmissionsController extends \PKP\API\v1\_submissions\PKPBackendSubmissionsController
 {
@@ -137,13 +137,15 @@ class BackendSubmissionsController extends \PKP\API\v1\_submissions\PKPBackendSu
                 }
 
                 // Record a fulfilled payment.
-                $stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /** @var StageAssignmentDAO $stageAssignmentDao */
-                $submitterAssignments = $stageAssignmentDao->getBySubmissionAndRoleIds($submission->getId(), [Role::ROLE_ID_AUTHOR]);
-                $submitterAssignment = $submitterAssignments->next();
+                // Replaces StageAssignmentDAO::getBySubmissionAndRoleIds
+                $submitterAssignment = StageAssignmentModel::withSubmissionId($submission->getId())
+                    ->withRoleIds([Role::ROLE_ID_AUTHOR])
+                    ->first();
+
                 $queuedPayment = $paymentManager->createQueuedPayment(
                     $request,
                     OJSPaymentManager::PAYMENT_TYPE_PUBLICATION,
-                    $submitterAssignment->getUserId(),
+                    $submitterAssignment->userId,
                     $submission->getId(),
                     $context->getSetting('publicationFee'),
                     $context->getSetting('currency')
