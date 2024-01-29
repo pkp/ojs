@@ -16,38 +16,39 @@
 
 namespace APP\tasks;
 
-use APP\core\Application;
-use Exception;
+use APP\jobs\statistics\CompileCounterSubmissionDailyMetrics;
+use APP\jobs\statistics\CompileCounterSubmissionInstitutionDailyMetrics;
+use APP\jobs\statistics\CompileIssueMetrics;
+use APP\jobs\statistics\CompileSubmissionGeoDailyMetrics;
+use APP\jobs\statistics\CompileUniqueInvestigations;
+use APP\jobs\statistics\CompileUniqueRequests;
+use APP\jobs\statistics\DeleteUsageStatsTemporaryRecords;
+use APP\jobs\statistics\ProcessUsageStatsLogFile;
+use PKP\jobs\statistics\ArchiveUsageStatsLogFile;
+use PKP\jobs\statistics\CompileContextMetrics;
+use PKP\jobs\statistics\CompileSubmissionMetrics;
+use PKP\jobs\statistics\RemoveDoubleClicks;
+use PKP\site\Site;
 use PKP\task\PKPUsageStatsLoader;
 
 class UsageStatsLoader extends PKPUsageStatsLoader
 {
-    /**
-     * @copydoc PKPUsageStatsLoader::getValidAssocTypes()
-     */
-    protected function getValidAssocTypes(): array
+    protected function getFileJobs(string $filePath, Site $site): array
     {
+        $loadId = basename($filePath);
         return [
-            Application::ASSOC_TYPE_SUBMISSION_FILE,
-            Application::ASSOC_TYPE_SUBMISSION_FILE_COUNTER_OTHER,
-            Application::ASSOC_TYPE_SUBMISSION,
-            Application::ASSOC_TYPE_ISSUE_GALLEY,
-            Application::ASSOC_TYPE_ISSUE,
-            Application::ASSOC_TYPE_JOURNAL,
+            new ProcessUsageStatsLogFile($filePath, $loadId),
+            new RemoveDoubleClicks($loadId),
+            new CompileUniqueInvestigations($loadId),
+            new CompileUniqueRequests($loadId),
+            new CompileContextMetrics($loadId),
+            new CompileIssueMetrics($loadId),
+            new CompileSubmissionMetrics($loadId),
+            new CompileSubmissionGeoDailyMetrics($loadId),
+            new CompileCounterSubmissionDailyMetrics($loadId),
+            new CompileCounterSubmissionInstitutionDailyMetrics($loadId),
+            new DeleteUsageStatsTemporaryRecords($loadId),
+            new ArchiveUsageStatsLogFile($loadId, $site),
         ];
-    }
-
-    /**
-     * @copydoc PKPUsageStatsLoader::isLogEntryValid()
-     */
-    protected function isLogEntryValid(object $entry): void
-    {
-        parent::isLogEntryValid($entry);
-        if (!empty($entry->issueId) && !is_int($entry->issueId)) {
-            throw new Exception(__('admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId'));
-        }
-        if (!empty($entry->issueGalleyId) && !is_int($entry->issueGalleyId)) {
-            throw new Exception(__('admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId'));
-        }
     }
 }
