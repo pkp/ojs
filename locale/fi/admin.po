@@ -170,10 +170,10 @@ msgstr "Open Access -ilmoitus"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Muistutus arvioinnista"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "Numeron ID-tunnus ei ole kokonaisluku."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "Numeron julkaistavan tiedoston ID ei ole kokonaisluku."
 
 msgid ""

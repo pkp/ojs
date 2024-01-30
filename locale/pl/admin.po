@@ -180,10 +180,10 @@ msgstr "Powiadomienie o otwartym dostępie"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Przypomnienie o recenzji"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "ID wydania nie jest daną integer."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "ID pliku wydania nie jest daną Integer."
 
 msgid ""

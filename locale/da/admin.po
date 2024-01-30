@@ -168,10 +168,10 @@ msgstr "Open Access meddelelse"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Påmindelse om bedømmelse"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "Nummerets ID er ikke et heltal."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "Nummerets publiceringsversions ID er ikke et heltal."
 
 msgid ""

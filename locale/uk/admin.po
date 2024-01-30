@@ -171,10 +171,10 @@ msgstr "Повідомлення про відкритий доступ"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Нагадування рецензенту"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "ID випуску не є цілим числом."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "ID гранки не є цілим числом."
 
 msgid ""

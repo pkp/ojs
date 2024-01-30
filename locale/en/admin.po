@@ -164,10 +164,10 @@ msgstr "Open Access Notification"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Review Reminder"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "Issue ID is not an integer."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "Issue galley ID is not an integer."
 
 msgid ""

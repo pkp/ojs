@@ -167,10 +167,10 @@ msgstr "Open Access уведомление"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Подсещане на рецензент за преглед"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "Идентификаторът на броя не е цяло число."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "Идентификаторът на типографията не е цяло число."
 
 msgid ""

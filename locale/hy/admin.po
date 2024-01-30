@@ -166,10 +166,10 @@ msgstr "Ազատ մուտքի ծանուցում"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Գրախոսման հիշեցում"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "Թողարկման ID-ն ամբողջ թիվ չէ:"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "Թողարկման շարվածքի ID-ն ամբողջ թիվ չէ:"
 
 msgid ""

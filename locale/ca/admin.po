@@ -178,10 +178,10 @@ msgstr "Notificació d'accés obert"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Recordatori de revisió"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "ID del número (issue ID) no és un enter."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "ID de galerada de número (Issue galley ID) no és un enter."
 
 msgid ""

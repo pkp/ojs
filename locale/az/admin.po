@@ -168,10 +168,10 @@ msgstr "Açıq Giriş Bildirişi"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Dəyərləndirmə Xatırladıcısı"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "Nömrə tam ədəd deyil."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "Nömrə düzümü ID rəqəmi tam ədəd deyil."
 
 msgid ""
