@@ -180,10 +180,10 @@ msgstr "Open-Access-Benachrichtigung"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Erinnerung an Gutachten"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "Ausgaben ID ist keine ganze Zahl."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "Ausgabenfahnen ID ist keine ganze Zahl."
 
 msgid ""

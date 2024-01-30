@@ -173,10 +173,10 @@ msgstr "Upozornění na otevřený přístup (Open Access)"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Připomínka recenze"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "ID čísla není celé číslo."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "ID sazebnice čísla není celé číslo."
 
 msgid ""

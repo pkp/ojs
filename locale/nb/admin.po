@@ -174,10 +174,10 @@ msgstr "Melding om Open Access"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Påminnelse om fagfellevurdering"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "Nummerets ID er ikke et heltall."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "Nummerets oppsett ID er ikke et heltall."
 
 msgid ""

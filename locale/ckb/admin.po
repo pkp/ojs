@@ -161,10 +161,10 @@ msgstr "ئاگادارکردنەوەی ئەکسێسی کراوە"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "بەبیرهێنانەوەی هەڵسەنگاندن"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr ""
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr ""
 
 msgid ""

@@ -169,10 +169,10 @@ msgstr "Obavijest o otvorenom pristupu"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Podsjetnik za recenziju"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr ""
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr ""
 
 msgid ""

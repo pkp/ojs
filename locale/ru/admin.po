@@ -172,10 +172,10 @@ msgstr "Уведомление об открытом доступе"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Напоминание рецензенту"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "ID выпуска не является целым числом."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "ID гранки выпуска не является целым числом."
 
 msgid ""

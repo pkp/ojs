@@ -150,11 +150,11 @@ msgstr "开放获取提醒"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "评审提醒"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "问题编号不是一个整数。"
 
 #, fuzzy
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "问题厨房的编号不是一个整数"
 
 #, fuzzy

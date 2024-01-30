@@ -167,10 +167,10 @@ msgstr "Pemberitahuan Akses Terbuka"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Pengingat Review"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "ID edisi bukan integer."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "ID galei edisi bukan integer."
 
 msgid ""

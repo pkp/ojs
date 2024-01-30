@@ -171,14 +171,14 @@ msgstr "Open Access Bildirishnomasi"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Taqriz Eslatmasi"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "Nashr ID-si butun son emas."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "Nashr galley ID-si butun son emas."
 
 msgid ""
-"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+"admin.job.processLogFile.invalidLogEntry.issueAssocTypeNoMatch"
 msgstr "Nashr ID-si assoc ID bilan mos emas."
 
 msgid "admin.settings.enableBulkEmails.description"

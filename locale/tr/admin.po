@@ -169,10 +169,10 @@ msgstr "Açık Erişim Bildirimi"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Değerlendirme Hatırlatıcısı"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "Sayı numarası bir tamsayı değil."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "Sayı dizgisi ID numarası bir tamsayı değil."
 
 msgid ""

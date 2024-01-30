@@ -167,10 +167,10 @@ msgstr "Kirish haqidagi bildirishnoma"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Eslatmani ko'rib chiqish"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "Muammo identifikatori butun son emas."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "Raqamlar qatorining ID raqami butun son emas."
 
 msgid ""
