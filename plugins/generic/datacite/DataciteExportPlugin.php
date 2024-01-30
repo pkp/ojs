@@ -245,7 +245,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
         // Application is set to sandbox mode and will not run the features of plugin
         if (Config::getVar('general', 'sandbox', false)) {
             error_log('Application is set to sandbox mode and datacite will not do any deposition');
-            return [[__('common.sandbox')]];
+            return false;
         }
 
         $request = Application::get()->getRequest();
