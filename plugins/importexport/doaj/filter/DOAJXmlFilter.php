@@ -173,7 +173,7 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
                 }
             }
             // Abstract
-            $articleAbstracts = (array) $publication->getData('abstract');
+            $articleAbstracts = $publication->getData('abstract') ?: [];
             if (array_key_exists($publication->getData('locale'), $articleAbstracts)) {
                 $abstractInArticleLocale = $articleAbstracts[$publication->getData('locale')];
                 unset($articleAbstracts[$publication->getData('locale')]);
