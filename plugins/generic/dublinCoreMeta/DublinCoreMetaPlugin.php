@@ -111,7 +111,7 @@ class DublinCoreMetaPlugin extends GenericPlugin
             $templateMgr->addHeader('dublinCoreDateModified', '<meta name="DC.Date.modified" scheme="ISO8601" content="' . date('Y-m-d', strtotime($dateModified)) . '"/>');
         }
 
-        $abstracts = $publication->getData('abstract');
+        $abstracts = $publication->getData('abstract') ?: [];
         foreach ($abstracts as $locale => $abstract) {
             if ($abstract != '') {
                 $templateMgr->addHeader('dublinCoreAbstract' . $locale, '<meta name="DC.Description" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars(strip_tags($abstract)) . '"/>');
