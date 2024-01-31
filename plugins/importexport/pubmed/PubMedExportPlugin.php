@@ -14,10 +14,11 @@
 
 namespace APP\plugins\importexport\pubmed;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\journal\JournalDAO;
-use APP\search\ArticleSearch;
 use APP\template\TemplateManager;
+use Exception;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
 use PKP\file\FileManager;
@@ -229,14 +230,15 @@ class PubMedExportPlugin extends ImportExportPlugin
             return;
         }
 
+        $user = Application::get()->getRequest()->getUser();
+
         if ($xmlFile != '') {
             switch (array_shift($args)) {
                 case 'articles':
-                    $articleSearch = new ArticleSearch();
-                    $results = $articleSearch->formatResults($args);
-                    if (!$this->exportArticles($results, $xmlFile)) {
-                        echo __('plugins.importexport.pubmed.cliError') . "\n";
-                        echo __('plugins.importexport.pubmed.export.error.couldNotWrite', ['fileName' => $xmlFile]) . "\n\n";
+                    try {
+                        file_put_contents($xmlFile, $this->exportSubmissions($args, $journal, $user));
+                    } catch (Exception $e) {
+                        echo $e->getMessage() . "\n\n";
                     }
                     return;
                 case 'issue':
@@ -248,9 +250,10 @@ class PubMedExportPlugin extends ImportExportPlugin
                         return;
                     }
                     $issues = [$issue];
-                    if (!$this->exportIssues($journal, $issues, $xmlFile)) {
-                        echo __('plugins.importexport.pubmed.cliError') . "\n";
-                        echo __('plugins.importexport.pubmed.export.error.couldNotWrite', ['fileName' => $xmlFile]) . "\n\n";
+                    try {
+                        file_put_contents($xmlFile, $this->exportIssues($issues, $journal, $user));
+                    } catch (Exception $e) {
+                        echo $e->getMessage() . "\n\n";
                     }
                     return;
             }
