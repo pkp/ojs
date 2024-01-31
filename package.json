@@ -23,6 +23,7 @@
     "clone-deep": "^4.0.1",
     "copyfiles": "^2.4.1",
     "debounce": "^1.2.0",
+    "dompurify": "^3.0.8",
     "dropzone-vue3": "^1.0.2",
     "element-resize-event": "^3.0.6",
     "floating-vue": "^2.0.0-beta.24",
