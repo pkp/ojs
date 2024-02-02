@@ -1,0 +1,128 @@
+# Ieva Tiltina <pastala@gmail.com>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-01-30 11:06+0000\n"
+"Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
+"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-native/lv/>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
+"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.importexport.native.import"
+msgstr "Importēt"
+
+msgid "plugins.importexport.native.import.instructions"
+msgstr "Augšupielādēt XML failu, lai importētu"
+
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "Atlasīt eksportējamos rakstus"
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "Eksportēt rakstus"
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "Eksportēt žurnāla numurus"
+
+msgid "plugins.importexport.native.results"
+msgstr "Importēt rezultātus"
+
+msgid "plugins.importexport.native.importComplete"
+msgstr "Imports ir pabeigts veiksmīgi. Tika importēti šādi elementi:"
+
+msgid "plugins.importexport.native.error.unknownSection"
+msgstr "Nezināma sadaļa {$param}"
+
+msgid "plugins.importexport.common.error.invalidFileExtension"
+msgstr "Ir norādīts vāka attēls ar nederīgu faila paplašinājumu."
+
+msgid "plugins.importexport.common.error.coverImageNameUnspecified"
+msgstr "Tika ievietots vāka attēls, nenorādot nosaukumu."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
+msgstr ""
+"\"{$section1Abbrev}\" un \"{$section2Abbrev}\" izdevuma \"{$issueTitle}\" "
+"sadaļas saīsinājums \"{$section1Abbrev}\" atbilda dažādām esošajām žurnāla "
+"sadaļām."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr ""
+"Dotajam numura identifikatoram \"{$issueIdentification}\" neatbilst neviens "
+"vai atbilst vairāk nekā viens numurs."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgstr "Rakstam \"{$articleTitle}\" trūkst izdevuma identifikācijas elementa."
+
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr ""
+"Raksts \"{$articleTitle}\" ir iekļauts izdevumā, bet tam nav publicēšanas "
+"datuma."
+
+msgid "plugins.importexport.native.displayName"
+msgstr "Natīvais XML spraudnis"
+
+msgid "plugins.importexport.native.description"
+msgstr "Rakstu un numuru importēšana un eksportēšana OJS natīvajā XML formātā."
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr "Lai turpinātu, lūdzu, augšupielādējiet failu sadaļā \"Importēt\"."
+
+msgid "plugins.importexport.native.cliUsage"
+msgstr ""
+"Izmantošana: {$scriptName} {$pluginName} [command] ...\n"
+"Komandas:\n"
+"\timport [xmlFileName] [journal_path] [--user_name] ...\n"
+"\texport [xmlFileName] [journal_path] articles [articleId1] [articleId2] ..."
+"\n"
+"\texport [xmlFileName] [journal_path] article [articleId]\n"
+"\texport [xmlFileName] [journal_path] issues [issueId1] [issueId2] ...\n"
+"\texport [xmlFileName] [journal_path] issue [issueId]\n"
+"\n"
+"Datu importēšanai atkarībā no XML dokumenta saknes mezgla ir nepieciešami \n"
+"šādi papildu parametri.\n"
+"\n"
+"Ja saknes mezgls ir <article> vai <articles>, ir nepieciešami papildu "
+"parametri.\n"
+"Tiek pieņemti šādi formāti:\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [--user_name]"
+"\n"
+"\tissue_id [issueId] section_id [sectionId]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [--user_name]"
+"\n"
+"\tissue_id [issueId] section_name [name]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path]\n"
+"\tissue_id [issueId] section_abbrev [abbrev]\n"
+
+msgid "plugins.importexport.native.error.unknownUser"
+msgstr "Lietotājs jānorāda, izmantojot komandas parametru --user_name vai -u."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
+msgstr ""
+"Sadaļas nosaukums \"{$section1Title}\" un sadaļas nosaukums \""
+"{$section2Title}\" izdevumā \"{$issueTitle}\" atbilda dažādām esošajām "
+"žurnāla sadaļām."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMatch"
+msgstr ""
+"Sadaļas nosaukums \"{$sectionTitle}\" izdevumā \"{$issueTitle}\" atbilst "
+"esošai žurnāla sadaļai, bet šīs sadaļas nosaukums nesakrīt ar cita žurnāla "
+"sadaļas nosaukumu."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr ""
+"Sadaļas saīsinājums \"{$sectionAbbrev}\" izdevumā \"{$issueTitle}\" atbilst "
+"esošai žurnāla sadaļai, bet šīs sadaļas saīsinājums neatbilst citam esošas "
+"žurnāla sadaļas saīsinājumam."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgstr ""
+"Esošais numurs ar id {$issueId} atbilst dotajam numura identifikatoram \""
+"{$issueIdentification}\". Šis numurs netiks mainīts, bet raksti tiks "
+"pievienoti ."

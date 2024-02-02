@@ -1,0 +1,240 @@
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-01-03 21:35+0000\n"
+"Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
+"Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/admin/ky/>\n"
+"Language: ky\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Бул тилди чын эле өчүргүңүз келеби? Бул учурда аны колдонуп жаткан бардык "
+"жайгаштырылган журналдарга таасир этиши мүмкүн."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Белгиленген тилдерди колдоо толук эмес болушу мүмкүн."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Бул тилди чын эле алып салгыңыз келеби? Бул учурда аны колдонуп жаткан "
+"бардык жайгаштырылган журналдарга таасир этиши мүмкүн."
+
+msgid "admin.systemVersion"
+msgstr "OJS версиясы"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS конфигурациясынын параметрлери <tt>config.inc.php</tt>."
+
+msgid "admin.contexts.create"
+msgstr "Журнал түзүү"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Бул журналды аныктаган бир кыска сөз же аббревиатура болушу керек. Журналдын "
+"URL дареги {$sampleUrl} болот."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "аты талап кылынат."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Жол талап кылынат."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Сиз көрсөткөн жол мурунтан эле башка журнал тарабынан колдонулуп жатат."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr ""
+"Негизги тил журнал тарабынан колдоого алынган тилдердин бири болушу керек."
+
+msgid "admin.contexts.contextDescription"
+msgstr "Журналдын сүрөттөмөсү"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Жазылууларды импорттоо"
+
+msgid "admin.settings.redirect"
+msgstr "Журналды кайра багыттоо"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Сайттын башкы бети бул журналдын башкы бети болот. Бул, мисалы, сайтта бир "
+"гана журнал болсо, пайдалуу."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Бул сайт жана анда жайгашкан бардык журналдар үчүн демейки тил болот."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Сайттагы колдоо үчүн бардык тилдерди тандаңыз. Тандалган тилдер бул сайтта "
+"жайгашкан бардык журналдар үчүн жеткиликтүү болот, ошондой эле сайттын ар "
+"бир бетиндеги тил тандоо менюсунда пайда болот (бул жөндөө белгилүү бир "
+"журналдын беттеринде өзгөртүлүшү мүмкүн). Эгерде бир гана тил тандалган "
+"болсо, тилдерди которуу менюсу көрсөтүлбөйт жана журналдар үчүн кошумча тил "
+"жөндөөлөрү жеткиликтүү болбойт."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Бул тутумга алардын колдоосун орнотуу үчүн кошумча тилдерди тандаңыз. Тилдер "
+"хостинг журналдарында колдонулаардан мурун орнотулушу керек. Жаңы тилдерге "
+"колдоону кантип кошуу керектиги жөнүндө маалымат алуу үчүн OJS документтерин "
+"караңыз."
+
+msgid "admin.systemConfiguration"
+msgstr "OJS конфигурациясы"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Сиз автоматтык түрдө бул журналдын менеджери катары жазыласыз. Жаңы журналды "
+"түзгөндөн кийин, сиз журналды баштапкы орнотууну аяктоо үчүн Журналды "
+"орнотуу устасына багытталасыз."
+
+msgid "admin.journals.noneCreated"
+msgstr "Эч кандай журнал түзүлгөн эмес."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Жол тамгаларды, сандарды жана _ жана - белгилерин гана камтышы мүмкүн. Жол "
+"тамга же сан менен башталып, бүтүшү керек."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Бул журналды сайттын баарына көрсөтүүнү иштетиңиз"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Учурдагы журнал жолу же түзүү үчүн жаңы жол (мисалы, \"ojs\")."
+
+msgid "admin.hostedContexts"
+msgstr "Сайттагы журналдар"
+
+msgid "admin.journals.transcode"
+msgstr "ISO8859-1ден макаланын метадайындарын кайра коддоо"
+
+msgid "admin.journals.redirect"
+msgstr "OJS 1 даректерин OJS 2 даректерине өзгөртүү үчүн кодду түзүңүз"
+
+msgid "admin.journals.importErrors"
+msgstr "Импорттолбой калды"
+
+msgid "admin.mergeUsers"
+msgstr "Колдонуучулардын ассоциациясы"
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Бардык жазылган колдонуучулар"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Тандалган {$oldAccountCount} каттоо эсептерин \"{$newUsername}\" колдонуучу "
+"аты менен чын эле бириктиргиңиз келеби? Тандалган {$oldAccountCount} "
+"аккаунттары андан соң иштебей калат. Бул аракетти артка кайтаруу мүмкүн эмес."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Катталган колдонуучулар жок."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Жазылуунун аякташын эстеткич"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Коомдук жеткиликтүүлүк эскертүүсү"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Рецензенттин эскертүүсү"
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgstr "Чыгарылган ID бүтүн сан эмес."
+
+msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgstr "Маселе галлея ID бүтүн сан эмес."
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "Маселе ID аны менен байланышкан ID дал келбейт."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"Бул журнал үчүн жапырт электрондук почта функциясы өчүрүлгөн. Бул функцияны "
+"<a href=\"{$siteSettingsUrl}\">Администрация > Сайттын жөндөөлөрү</a> "
+"бөлүмүнөн иштетиңиз."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"Бул сайттан журналдарды кошуп, түзөтүп жана жок кылып, жалпы сайттын "
+"жөндөөлөрүн башкарыңыз."
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+"Бул сайттагы журналдар мекеме боюнча колдонуу статистикасын чогулта алышын "
+"кааласаңыз, институттук статистиканы кошуңуз. Бул функцияны колдонуу үчүн "
+"журналдар мекемени жана анын IP даректеринин диапазондорун кошуусу керек. "
+"Институционалдык статистиканы кошкондо, маалымат базасынын көлөмүн кыйла "
+"көбөйтүүгө болот."
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""
+"SUSHI API акыркы чекиттерин бул сайттагы бардык журналдар үчүн жалпыга ачык "
+"кылуу керекпи. Эгер сиз коомдук API иштетсеңиз, ар бир журнал бул жөндөөнү "
+"жокко чыгарып, анын статистикасын купуя кыла алат. Бирок, эгерде сиз коомдук "
+"APIди өчүрсөңүз, журналдар өздөрүнүн API'лерин жалпыга ачык кыла алышпайт."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Сайтты бардык журналдар үчүн платформа катары колдонуңуз."
+
+msgid "admin.journals.journalSettings"
+msgstr "Настройки журнала"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Импорт жолу талап кылынат."
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Бириктирүү"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Мурунку колдонуучунун авторлугу, редакциялык тапшырмалары ж.б. өткөрүлө "
+"турган колдонуучуну тандаңыз."
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Башка колдонуучу каттоо эсебине кошулуу үчүн колдонуучуну (же бир нечесин) "
+"тандаңыз (мисалы, кимдир бирөө эки аккаунтка ээ болгондо). Биринчи тандалган "
+"аккаунт(тар) жок кылынат жана бардык байланышкан макалалар, редакциялык "
+"тапшырмалар жана башкалар экинчи аккаунтка тиркелет."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Жаппай электрондук кат жөнөтүүгө уруксат берүү үчүн журналдарды тандаңыз. "
+"Бул функция иштетилгенде, журнал башкаргыч журналда катталган бардык "
+"колдонуучуларга электрондук каттарды жөнөтө алат.<br><br>Бул функцияны спам "
+"электрондук почтасын жөнөтүү үчүн колдонуу кээ бир өлкөлөрдө спамга каршы "
+"мыйзамдарды бузуу болушу мүмкүн жана сервериңизден келген каттар спам катары "
+"бөгөттөлүшү мүмкүн. Бул функцияны иштетүүдөн мурун анын максаттуу колдонулуп "
+"жатканын текшерүү үчүн журналдын башкаруучулары менен кеңешиңиз.<br><br>Бул "
+"функциянын башка чектөөлөрүн <a href=\"\"теги жөндөө устасын колдонуу менен "
+"ар бир журналдын негизинде иштетүүгө болот. {$hostedContextsUrl}\" тизмеси >"
+"\"Сайттагы журналдар\"</a>."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"Журнал менеджери төмөндө тандалган ролдордун бирине да жапырт электрондук "
+"каттарды жөнөтө албайт. Бул жөндөөнү электрондук почта эскертмесинин "
+"өзгөчөлүгүн кыянаттык менен пайдаланууну чектөө үчүн колдонуңуз. Мисалы, "
+"мындай электрондук каттарды алууга макулдук бербеген окурмандарга, "
+"авторлорго же колдонуучулардын башка чоң топторуна жапырт каттарды өчүрүү "
+"коопсузраак болушу мүмкүн.<br><br>Жаңыр электрондук почта функциясын бул "
+"журналда толугу менен өчүрүп койсо болот. <a href= бөлүм. \""
+"{$siteSettingsUrl}\">Администрация > Сайттын жөндөөлөрү</a>."
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+"Бул сайттагы журналдар чогулта турган колдонуучунун географиялык "
+"статистикасынын түрүн тандаңыз. Көбүрөөк географиялык статистика сиздин "
+"маалымат базаңыздын көлөмүн бир топ көбөйтөт жана сейрек учурларда "
+"конокторуңуздун анонимдүүлүгүн бузушу мүмкүн. Ар бир журнал бул жөндөөнү "
+"өзүнчө конфигурациялай алат, бирок журнал эч качан бул жерде "
+"конфигурациялангандан көбүрөөк деталдуу жазууларды чогулта албайт. Мисалы, "
+"эгер сайт өлкө менен аймакты гана колдосо, журнал өлкө менен аймакты же бир "
+"гана өлкөнү тандай алат. Журнал өлкөнү, аймакты жана шаарды көзөмөлдөй "
+"албайт."

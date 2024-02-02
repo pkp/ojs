@@ -1,0 +1,341 @@
+# Milutin Markovic <admin@fcjk.me>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-01-24 22:30+0000\n"
+"Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
+"Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/author/"
+"cnr/>\n"
+"Language: cnr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "author.track"
+msgstr "Aktivni članak"
+
+msgid "author.submit.submitArticle"
+msgstr "Podnesi članak"
+
+msgid "author.submit.step4a"
+msgstr "Korak 4a. Dodaj dopunski fajl"
+
+msgid "author.submit.start"
+msgstr "Početak"
+
+msgid "author.submit.metadata"
+msgstr "Unesi metapodatke"
+
+msgid "author.submit.nextSteps"
+msgstr "Sljedeći koraci"
+
+msgid "author.submit.notAccepting"
+msgstr "Ovaj časopis trenutno ne prihvata prijave."
+
+msgid "author.submit.requestWaiver"
+msgstr "Zahtjev za odustajanje"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr ""
+"Molimo navedite ispod u okviru za komentare razloge za odustajanje od "
+"naknade."
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "Uređivanje u toku: Lektura zatražena"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Dodaj lektorisanu verziju"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Ispravke korektora"
+
+msgid "author.submissions.viewStatus"
+msgstr "Pogledajte status"
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr ""
+"Da biste nastavili s prijavom, morate potvrditi uslove u vezi s autorskim "
+"pravima."
+
+msgid "author.submit.comments"
+msgstr "Unesite tekst (neobavezno)"
+
+msgid "author.submit.addAuthor"
+msgstr "Dodaj autora"
+
+msgid "author.submit.deleteAuthor"
+msgstr "Izbriši autora"
+
+msgid "author.submit.form.localeRequired"
+msgstr ""
+"Odaberite jezik za podnošenja člankaOdaberite jezik za podnošenja članka."
+
+msgid "author.submit.reorderInstructions"
+msgstr ""
+"Promijenite redoslijed autora u redoslijedu kojim će biti navedeni u "
+"publikaciji."
+
+msgid "author.submit.reorder"
+msgstr "Promijeni redosljed autorovog imena"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Glavni kontakt za komunikaciju sa uredništvom."
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+"Bosanski=bs; Engleski=en; Francuski=fr; Španski=es. <a href=\"http://www.loc."
+"gov/standards/iso639-2/langcodes.html\" target=\"_blank\">Dodatni kôdovi</a>."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Najmanje jedan autor je obavezan."
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Zamijeni prijavni fajl"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Podnesi prijavni fajl"
+
+msgid "author.submit.submissionFile"
+msgstr "Prijavni fajl"
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr ""
+"Jeste li sigurni da želite nastaviti bez priloženog prijavnog fajla sa "
+"tekstom?"
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr ""
+"Jeste li sigurni da želite nastaviti bez dodavanja dopunskog fajla koji ste "
+"odabrali?"
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Natrag na dopunske fajlove"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Jeste li sigurni da želite obrisati ovaj dopunski fajl?"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Dodaj dopunski fajl"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Uredi dopunski fajl"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Metapodaci dopunskog fajla"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Istraživački instrument"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Istraživački materijali"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Istraživački rezultati"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Analiza podataka"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Baza podataka"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Kratki opis"
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Koristite samo sa službeno objavljenim materijalima."
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Ime istraživanja ili drugi izvor građe."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Navedite drugo"
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Molimo unesite naslov dopunskog fajla."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Molimo unesite predmet."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Identifikator javnog dopunskog fajla"
+
+msgid "author.submit.filesSummary"
+msgstr "Sažetak fajla"
+
+msgid "author.submit.finishSubmission"
+msgstr "Dovrši prijavu"
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Dodajte autorsku verziju"
+
+msgid "author.article.copyeditedFile"
+msgstr "Lektorisani fajl"
+
+msgid "author.article.authorRevisedFile"
+msgstr "Fajl autora"
+
+msgid "author.submit"
+msgstr "Novo podnošenje članka"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Pet koraka za podnošenje"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr ""
+"Unesi pojmove koji adekvatno opisuju sadržaj članka. Razdvoji pojmove tačka-"
+"zarezom (pojam1; pojam2; pojam3)."
+
+msgid "author.submit.startHereTitle"
+msgstr "Započni novu prijavu članka"
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">Klikni ovđe</a> da pređete na prvi "
+"od pet koraka postupka podnošenja."
+
+msgid "author.submit.coverageInstructions"
+msgstr ""
+"Odnosi se na geografsku rasprostranjenost lokacije, hronološki ili "
+"istorijski opseg , i/ili osobine istraživačkih uzoraka."
+
+msgid "author.submit.step1"
+msgstr "Korak 1. Započni s prijavom"
+
+msgid "author.submit.step2"
+msgstr "Korak 2. Podnošenje članka"
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "Ime, prezime i adresa e-pošte svakog autora je obavezna."
+
+msgid "author.submit.step3"
+msgstr "Korak 3. Unesi metapodatke članka"
+
+msgid "author.submit.form.titleRequired"
+msgstr "Molimo unesite naslov vašeg članka."
+
+msgid "author.submit.step4"
+msgstr "Korak 4. Podnesi dopunske fajlove"
+
+msgid "author.submit.step5"
+msgstr "Korak 5. Potvrdi prijavu novog članka"
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Molimo unesite sažetak vašeg članka."
+
+msgid "author.submit.upload"
+msgstr "Podnošenje članka"
+
+msgid "author.submit.form.wordCountAlert"
+msgstr ""
+"Prekoračili ste ograničenje za maksimalan broj riječi za sažetak u ovoj "
+"rubrici."
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Podnesi dopunske fajlove"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Prijavni fajl nije priložen."
+
+msgid "author.submit.qualifyForWaiver"
+msgstr ""
+"Molimo razmislite o odustajanju od naknade za podnošenje prijave za ovaj "
+"članak"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr ""
+"Ovaj neobavezan korak omogućava dodati Dopunske fajlove u ovoj prijavi. "
+"Fajlovi, koji mogu biti u bilo kojem formatu, mogu uključiti (a) "
+"istraživačke instrumente, (b) setove podataka koji su u skladu s etičkim "
+"pravilima naučnog istraživanja, (c) izvore koji na drugi način ne bi bili "
+"dostupni čitaocima, (d) brojeve i tabele koji se nisu mogli integrisati u "
+"sam tekst ili druge materijale koji daju podršku radu."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr ""
+"Klikni Sačuvaj kako bi priložili fajl (potom se može priložiti još dopunskih "
+"fajlova)."
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Nema priloženog fajla."
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Dopunski fajlovi nisu dodati ovoj prijavi."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Molimo unesite opis."
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Učitaj dopunski fajl"
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "Javna dopunska identifikacija fajla već postoji."
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr ""
+"Da bi se indeksirao dodatni materijal, upišite sljedeće metapodakte za "
+"priloženi dopunski fajl."
+
+msgid "author.submit.submissionComplete"
+msgstr ""
+"Prijava priloga je uspješno završena. Hvala Vam na interesovanju za "
+"objavljivanje u časopisu {$journalTitle}."
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Dopunski fajl"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr ""
+"Za prijavu priloga u časopis potreban vam je korisnički nalog. To omogućuva "
+"našim urednicima da prate vašu prijavu, kontaktiraju vas u vezi s promjenama "
+"u recenzentskom, uređivačkom postupku, ili u vezi s dodatnim informacija "
+"koje budu potrebne."
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Autor (ili vlasnik) fajla"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Transkripti"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Izvorni tekst"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr ""
+"Učini fajl (bez metapodataka) dostupnim recenzentima, budući da neće "
+"ugroziti anonimnost recenzije."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Datum prikupljanja podataka ili izrade instrumenta."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr ""
+"Ako tražite zahtijev za odustajanje od naknade, morate unijeti razlog u "
+"prikazanom prostoru."
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "U recenziji: Potrebne revizije"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "Uređivanje u toku: Korektura zatražena"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Jeste li sigurni da želite obrisati ovu nedovršenu prijavu?"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Nema prijava."
+
+msgid "author.submit.journalSection"
+msgstr "Rubrika časopisa"
+
+msgid "author.submit.verifyChecklist"
+msgstr ""
+"Morate provjeriti jesu li sve stavke na prijavnoj listi zadovoljene prije "
+"nastavka."
+
+msgid "submission.submit.coverNote"
+msgstr "Komentari uredniku"
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "U recenziji krug {$round}"

@@ -1,7 +1,7 @@
-# Ieva Tiltina <pastala@gmail.com>, 2022, 2023.
+# Ieva Tiltina <pastala@gmail.com>, 2022, 2023, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-12-08 10:09+0000\n"
+"PO-Revision-Date: 2024-01-15 18:09+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/locale/lv/>"
 "\n"
@@ -139,7 +139,7 @@ msgid "section.sections"
 msgstr "Sadaļas"
 
 msgid "section.title"
-msgstr "Sadaļas nosaukums"
+msgstr "Sadaļas virsraksts"
 
 msgid "section.abbreviation"
 msgstr "Saīsinājums"
@@ -166,7 +166,7 @@ msgid "article.submissionId"
 msgstr "Iesniegtā materiāla ID"
 
 msgid "article.title"
-msgstr "Nosaukums"
+msgstr "Virsraksts"
 
 msgid "article.authors"
 msgstr "Autori"
@@ -483,7 +483,7 @@ msgid "issue.issues"
 msgstr "Žurnāla numuri"
 
 msgid "issue.title"
-msgstr "Nosaukums"
+msgstr "Virsraksts"
 
 msgid "issue.viewIssueIdentification"
 msgstr "Skatīt {$identification}"
@@ -2167,8 +2167,8 @@ msgstr ""
 
 msgid "log.review.reviewAccepted"
 msgstr ""
-"{$reviewerName} ir akceptējis materiāla {$submissionId} recenzēšanu {$round}"
-". kārtā."
+"{$reviewerName} ir pieņēmis materiāla {$submissionId} recenzēšanu {$round}. "
+"kārtā."
 
 msgid "log.review.reviewDeclinedByProxy"
 msgstr ""
@@ -2177,7 +2177,7 @@ msgstr ""
 
 msgid "log.review.reviewAcceptedByProxy"
 msgstr ""
-"{$userName} ir akceptējis materiāla {$submissionId} {$round}. kārtas "
+"{$userName} ir pieņēmis materiāla {$submissionId} {$round}. kārtas "
 "recenzēšanu {$reviewerName} vārdā."
 
 msgid "log.review.reviewFileByProxy"

@@ -1,0 +1,762 @@
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-01-25 23:49+0000\n"
+"Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
+"Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/manager/ky/>"
+"\n"
+"Language: ky\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "manager.distribution.access"
+msgstr "Мүмкүнчүлүк"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Макалага автордук укуктун демейки күнүн кантип аныктоону тандаңыз. Бул "
+"демейки маани ар бир учурда өзгөртүлүшү мүмкүн. Эгерде сиз макалаларды "
+"жылдыргыч негизде жарыялап жатсаңыз, анда чыгарылыштын жарыяланган күнүн "
+"колдонбоңуз."
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Чыгарылган күнүн колдонуңуз"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Макаланын жарыяланган күнүн колдонуңуз"
+
+msgid "manager.distribution.publication"
+msgstr "Басылма"
+
+msgid "manager.distribution.publishingMode"
+msgstr "Жарыялоо режими"
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "ААК журналдын мазмунун онлайн жарыялоо үчүн колдонулбайт."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "Журнал анын мазмунуна ачык кирүү мүмкүнчүлүгүн берет."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "Журнал анын айрым же бардык мазмунуна кирүү үчүн жазылууну талап кылат."
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Демейки калыптарды колдонуңуз.<br />Маселелер үчүн%j.v%vi%i<br /"
+">%j.v%vi%i.%a макалалар үчүн<br />%j.v%vi%i.%a.g%g үчүн."
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "Адабий монтаж стадиясына жеткенде"
+
+msgid "manager.website.archiving"
+msgstr "Архивдөө"
+
+msgid "manager.files.note"
+msgstr ""
+"Көңүл буруңуз: Файл менеджери бул журналга байланышкан файлдарды жана "
+"каталогдорду түздөн-түз көрүү жана башкаруу мүмкүнчүлүгүн берген кошумча "
+"функция."
+
+msgid "manager.journalManagement"
+msgstr "Журналды башкаруу"
+
+msgid "manager.language.ui"
+msgstr "Колдонуучу интерфейси"
+
+msgid "manager.language.submissions"
+msgstr "Берилген материалдар"
+
+msgid "manager.language.forms"
+msgstr "формалары"
+
+msgid "manager.languages.noneAvailable"
+msgstr ""
+"Кечиресиз, кошумча тилдер жеткиликтүү эмес. Бул журналга кошумча тилдерди "
+"кошкуңуз келсе, сайтыңыздын администраторуна кайрылыңыз."
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Бул тил журнал сайты үчүн демейки тил болот."
+
+msgid "manager.managementPages"
+msgstr "Башкаруу баракчалары"
+
+msgid "manager.payment.action"
+msgstr "Иш-аракет"
+
+msgid "manager.payment.addPayment"
+msgstr "Төлөм кошуу"
+
+msgid "manager.payment.authorFees"
+msgstr "Автордук төлөмдөр"
+
+msgid "manager.payment.description"
+msgstr "сүрөттөмө"
+
+msgid "manager.payment.details"
+msgstr "майда-чүйдөсүнө чейин"
+
+msgid "manager.payment.editSubscription"
+msgstr "Жазылууну түзөтүү"
+
+msgid "manager.payment.enable"
+msgstr "күйгүзүү"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Төлөө параметрлери"
+
+msgid "manager.payment.form.numeric"
+msgstr "Бардык баалар оң сандар болушу керек (бөлчөк маанилерди колдонсо болот)"
+
+msgid "manager.payment.generalFees"
+msgstr "Жалпы төлөмдөр"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr ""
+"Ссылка «Ассоциированное членство» появится на странице «О журнале» в разделе "
+"«Правила»."
+
+msgid "manager.payment.generalOptions"
+msgstr "Жалпы параметрлер"
+
+msgid "manager.payment.noPayments"
+msgstr "Төлөмдөр жок"
+
+msgid "manager.payment.notFound"
+msgstr "Табылган жок"
+
+msgid "manager.payment.options"
+msgstr "Параметрлер"
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Бул жазылууну чын эле жок кылгыңыз келеби?"
+
+msgid "manager.payment.options.fee"
+msgstr "төлөм"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Төлөмдүн сүрөттөлүшү"
+
+msgid "manager.payment.options.feeName"
+msgstr "Төлөмдүн аты"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Ассоциацияланган мүчөлүк"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Маселелердин жана макалалардын PDF версияларына гана кирүүнү чектөө"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Макаланы иштетүү акысы"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Макала сатып алуу"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Сатып алуу маселеси"
+
+msgid "manager.payment.options.text"
+msgstr "Төлөм ыкмасынын сүрөттөлүшү"
+
+msgid "manager.payment.paymentId"
+msgstr "Төлөм идентификатору"
+
+msgid "manager.payment.paymentMethod"
+msgstr "Төлөө ыкмасы"
+
+msgid "manager.payment.paymentMethods"
+msgstr "Төлөм ыкмалары"
+
+msgid "manager.payment.paymentType"
+msgstr "Төлөм түрү"
+
+msgid "manager.payment.readerFees"
+msgstr "Окурмандардын төлөмдөрү"
+
+msgid "manager.payment.records"
+msgstr "жазуулар"
+
+msgid "manager.paymentTypes"
+msgstr "Төлөмдөрдүн түрлөрү"
+
+msgid "manager.payment.userName"
+msgstr "Төлөм идентификатору"
+
+msgid "manager.people.allJournals"
+msgstr "Бардык журналдар"
+
+msgid "manager.people.showNoRole"
+msgstr "Ролсуз колдонуучуларды көрсөтүү"
+
+msgid "manager.people.allUsers"
+msgstr "Бардык жазылган колдонуучулар"
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Шаблон тандаңыз"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Учурдагы колдонуучуну каттаңыз"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "Журнал менен"
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr ""
+"Мурунку колдонуучулардын авторлугу, алардын редакциялык тапшырмалары ж.б. "
+"өткөрүлө турган колдонуучуну тандаңыз."
+
+msgid "manager.people.roleEnrollment"
+msgstr "\"{$role}\" ролун дайындоо"
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Аннотацияларды талап кылбаңыз"
+
+msgid "manager.sections.assigned"
+msgstr "Бул бөлүмдүн редакторлору"
+
+msgid "manager.sections.confirmDelete"
+msgstr "Бул бөлүмдү чын эле биротоло жок кылгыңыз келеби?"
+
+msgid "manager.sections.alertDelete"
+msgstr ""
+"Бул бөлүмдү өчүрүүдөн мурун ага жайгаштырылган макалаларды башка бөлүмдөргө "
+"жылдыруу керек."
+
+msgid "manager.sections.create"
+msgstr "Бөлүм түзүү"
+
+msgid "manager.sections.editorRestriction"
+msgstr ""
+"Макалалар редакторлор жана бөлүм редакторлору тарабынан гана берилиши мүмкүн."
+
+msgid "manager.sections.editors"
+msgstr "Бөлүмдөрдүн редакторлору"
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Жок дегенде бир бөлүм активдүү болушу керек. Бул журналга тапшырууну өчүрүү "
+"үчүн жумуш процессиңиздин жөндөөлөрүнө өтүңүз."
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Бөлүмдүн аталышынын аббревиатурасы талап кылынат"
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr ""
+"Ар бир бөлүм редакторунун тапшырмасы үчүн жок дегенде бир кутуча "
+"белгиленгенин текшериңиз."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Сураныч, туура кароо формасын тандаганыңызды текшериңиз."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Бөлүмдүн аталышы талап кылынат."
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Бул бөлүмдүн аталышын релиздердин мазмунунан алып салыңыз."
+
+msgid "manager.sections.identifyType"
+msgstr "Бул бөлүмдө жарыяланган материалдарды деп белгилеңиз"
+
+msgid "manager.sections.indexed"
+msgstr "Индекстелген"
+
+msgid "manager.sections.noneCreated"
+msgstr "Бөлүмдөр түзүлгөн жок."
+
+msgid "manager.sections.open"
+msgstr "Тапшыруу үчүн ачык"
+
+msgid "manager.sections.policy"
+msgstr "Бөлүмдүн эрежелери"
+
+msgid "manager.sections.readingTools"
+msgstr "Окуучу куралдары"
+
+msgid "manager.sections.reviewed"
+msgstr "Рецензияланган"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Журналды индекстөөдө эсепке алынбайт"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Журналдын ушул бөлүмунө жиберилген материалдар"
+
+msgid "manager.sections.wordCount"
+msgstr "Сөздөрдүн саны"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Бул бөлүм үчүн рефераттагы сөздөрдүн санын чектөө (0 - чек жок)"
+
+msgid "manager.setup"
+msgstr "Журналды жөндөө"
+
+msgid "manager.setup.masthead"
+msgstr "Чыгаруу"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Редакция"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Журналдын стилдер барагы"
+
+msgid "manager.setup.contextName"
+msgstr "Журналдын аталышы"
+
+msgid "manager.setup.pageHeader"
+msgstr "Журнал бетинин баш аты"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "мазмун"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Журнал боюнча маалымат кошуу"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Текшерүү тизмесине бир нерсе кошуу"
+
+msgid "manager.setup.addItem"
+msgstr "Элемент кошуу"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "\"Журнал жөнүндө\" деген бетине элемент кошуу"
+
+msgid "manager.setup.addNavItem"
+msgstr "Элемент кошуу"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Жаңы маалымат базасынын шилтемесин кошуңуз"
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"Бул журналда жарыяланган материалга санарип объектинин идентификаторлорун "
+"(DOI) дайындоого уруксат бериңиз."
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr ""
+"Сураныч, DOIдер дайындала турган объекттерди тандаңыз. Көпчүлүк журналдар "
+"макалаларга DOI дайындайт, бирок сиз бардык жарыяланган материалдарга DOI "
+"ыйгаргыңыз келиши мүмкүн."
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr ""
+"Бул сиз ошол тил үчүн жасаган бардык тилге тиешелүү журнал жөндөөлөрүн "
+"алмаштырат"
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"OJS тутум тарабынан колдоого алынган каалаган тилде колдонуучуларга "
+"жеткиликтүү болушу мүмкүн. Ошол эле учурда, ААК көп тилдүү система катары "
+"иштей алат, бул колдонуучуларга ар бир беттеги тилдердин ортосунда "
+"которуштурууга жана бир нече кошумча тилдерде белгилүү маалыматтарды "
+"киргизүүгө мүмкүндүк берет.<br /><br />Эгер колдоого алынган ААК төмөндө "
+"тизмеленбесе, сайттын администраторунан тилди сайттын башкаруу интерфейсинен "
+"орнотууну сураныңыз. Жаңы тилдерге колдоо кошуу боюнча нускамаларды OJS "
+"документтеринен караңыз."
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr ""
+"Бул жазылуунун түрлөрүн, баасын жана узактыгын журналдын жазылуу менеджери "
+"башкарган Жазылуулар бөлүмүндө төлөмдөрдү ишке ашырат."
+
+msgid "manager.payment.options.enablePayments"
+msgstr ""
+"Бул журнал үчүн төлөмдөр камтылат. Төлөмдөрдү жүргүзүү үчүн колдонуучулар "
+"сайтка өздөрүнүн аккаунту менен кириши керек экенин эске алыңыз."
+
+msgid "manager.payment.paymentMethod.description"
+msgstr ""
+"Бул барактан сиз төмөнкү төлөм методдорунун каалаган модулдарын "
+"конфигурациялай аласыз."
+
+msgid "manager.payment.readerFeesDescription"
+msgstr ""
+"Тандалган опциялар, алардын сүрөттөмөлөрү жана баалары менен бирге (төмөндө "
+"өзгөртүлүшү мүмкүн) Эрежелер бөлүмүндөгү Жөнүндө бетинде, ошондой эле төлөм "
+"талап кылынган бардык жерлерде пайда болот."
+
+msgid "manager.payment.amount"
+msgstr "Сумма"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Бул журналга жазылган колдонуучулар"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr "Автордук төлөмдөрдү кошуу үчүн төмөндөгү төлөм суммаларын киргизиңиз."
+
+msgid "manager.people.allSiteUsers"
+msgstr "Бул журналга бул сайттан колдонуучуну жазыңыз"
+
+msgid "manager.people.confirmRemove"
+msgstr ""
+"Бул колдонуучуну бул журналдан өчүрүшүм керекпи? Бул аракет бул колдонуучуга "
+"бул журналда дайындалган бардык ролдорду жокко чыгарат."
+
+msgid "manager.payment.currencymessage"
+msgstr ""
+"ААК валютаны конвертациялоону жүргүзбөйт. Эгер сиз жазылуулар үчүн "
+"төлөмдөрдү кабыл алсаңыз, жазылуу төлөмүңүздүн валютасы бул жерде "
+"көрсөтүлгөн валютага дал келишин текшериңиз."
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr ""
+"Башка колдонуучу каттоо эсебине кошулуу үчүн колдонуучуну (же бир нечесин) "
+"тандаңыз (мисалы, кимдир бирөө эки аккаунтка ээ болгондо). Биринчи тандалган "
+"аккаунт(тар) жок кылынат жана бардык байланышкан мазмун, редакциялык "
+"тапшырмалар ж.б.у.с. экинчи эсепке тиркелет."
+
+msgid "manager.people.syncUserDescription"
+msgstr ""
+"Дайындоо синхрондоштуруу белгилүү бир журналда белгилүү бир ролго "
+"дайындалган бардык колдонуучуларды ошол журналдагы ошол эле ролго жазат. Бул "
+"функция журналдардын ортосунда колдонуучулардын жалпы топтомун (мисалы, "
+"рецензенттерди) синхрондоштурууга мүмкүндүк берет."
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr ""
+"Макалалар бөлүм редакторуна автоматтык түрдө дайындалышы үчүн бул бөлүмгө "
+"бөлүм редакторун кошуңуз. (Же болбосо, бөлүм редакторлору материал "
+"алынгандан кийин кол менен дайындалышы мүмкүн). Эгерде бөлүмдүн редактору "
+"дайындалса, анда ал автоматтык түрдө бул бөлүмгө жөнөтүлгөн материалдардын "
+"\"РЕВЕРСИЯ\" процессин жана/же \"РЕДАКЦИЯЛЫК\" процессин (адабий "
+"редакциялоо, макет жана корректорлук) башкарууга дайындалышы мүмкүн. "
+"Бөлүмдүн редакторлору Журналды башкаруу бөлүмүндөгү Ролдор рубрикасынын "
+"астындагы Бөлүмдүн редакторлору шилтемесин басуу аркылуу түзүлөт."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr ""
+"Бул бөлүмдөгү материалдардын авторлорунун аты-жөнү сандардын мазмунунан "
+"алынып салынсын."
+
+msgid "manager.sections.submissionReview"
+msgstr "Каралбайт"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr ""
+"(Мисалы, «Рецензияланган макала», «Китепке сереп салуу», «Адистин "
+"комментарийи» ж.б.)"
+
+msgid "manager.sections.unassigned"
+msgstr "Жеткиликтүү бөлүм редакторлору"
+
+msgid "manager.setup.homepageContent"
+msgstr "Журналдын башкы бетинин мазмуну"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr ""
+"Журналдын башкы бети демейки боюнча навигациялык шилтемелерден турат. Башкы "
+"беттеги кошумча мазмунду төмөнкү опциялардын бирин же бир нечесин колдонуу "
+"менен кошууга болот, алар көрсөтүлгөн тартипте бетте пайда болот."
+
+msgid "manager.setup.editorDecision"
+msgstr "Редактордун чечими"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr ""
+"Электрондук почтаны жеткирүү менен көйгөйлөр болсо, бул дарекке ката "
+"билдирүү жөнөтүлөт."
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"Ката дарегине жеткирилбеген электрондук каттарды жөнөтүү үчүн сайттын "
+"администратору сайттын конфигурация файлында <code>allow_envelope_sender</"
+"code> параметрин иштетиши керек. Сизге серверди конфигурациялоо керек болушу "
+"мүмкүн; бул конфигурациянын сүрөттөлүшү OJS документтеринде берилген."
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Окурмандарга журналдын жаңылыктары жана окуялары жөнүндө маалымат берүү үчүн "
+"кулактандырууларды жарыялоого болот. Жарыяланган жарнактар \"Жарыялар\" "
+"бетинде пайда болот."
+
+msgid "manager.setup.addSponsor"
+msgstr "Демөөрчү уюмду кошуу"
+
+msgid "manager.setup.alternateHeader"
+msgstr "Альтернативдик аталыш"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr ""
+"Же болбосо, аталыштын жана логотиптин ордуна, төмөнкү текст талаасына "
+"аталыштын HTML версиясын киргизсе болот. Кошумча аталышты каалабасаңыз, "
+"текст талаасын бош калтырыңыз."
+
+msgid "manager.setup.announcements"
+msgstr "жарнамалар"
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "сүрөттөмө"
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "Жарыялар бетинде пайда боло турган бардык маалыматты киргизиңиз."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(\"Журнал жөнүндө\" бөлүмүндө пайда болот) "
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr ""
+"Авторлор өз сын-пикирлери менен кызыкчылыктардын кагылышы жөнүндө декларация "
+"файлын тапшырышы керек."
+
+msgid "manager.setup.history"
+msgstr "Журналдын тарыхы"
+
+msgid "manager.setup.historyDescription"
+msgstr ""
+"Бул текст веб-сайттын \"Журнал жөнүндө\" бөлүмүндө пайда болот жана "
+"журналдын аталыштарына, редакциялык курамына жана журналдын басылма тарыхына "
+"байланыштуу башка маалыматтардын өзгөрүшүн сүрөттөө үчүн колдонулушу мүмкүн."
+
+msgid "manager.setup.currentIssue"
+msgstr "Акыркы сан/акыркы чыгарылыш"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "5-кадам: Сырткы көрүнүштү ыңгайлаштыруу"
+
+msgid "manager.setup.details"
+msgstr "Деталдары/толук маалымат"
+
+msgid "manager.setup.details.description"
+msgstr "Журналдын аты, ISSN, байланыштар, демөөрчүлөр жана издөө системалары."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr ""
+"Журнал менеджери бардык колдонуучуларды журналга киргизет. Редакторлор же "
+"бөлүм редакторлору рецензенттер үчүн аккаунттарды каттай алышат."
+
+msgid "manager.setup.discipline"
+msgstr "Академиялык дисциплиналар жана дисциплиналар бөлүмдөрү"
+
+msgid "manager.setup.disciplineDescription"
+msgstr ""
+"Журнал бир дисциплинанын чегинен ашса жана/же авторлор дисциплиналар аралык "
+"материалдарды тапшырганда пайдалуу."
+
+msgid "manager.setup.disciplineExamples"
+msgstr ""
+"(Мисалы: Тарых; Билим берүү; Социология; Психология; Маданият таануу; Укук)"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Бул журнал үчүн тиешелүү окуу дисциплиналарынын мисалдарын келтириңиз"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Учурдагы чыгарылыш үчүн мазмунду кошуңуз (эгерде бар болсо)."
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Каталар үчүн дарек"
+
+msgid "manager.setup.emails"
+msgstr "Электрондук почтадагы идентификация"
+
+msgid "manager.setup.emailSignature"
+msgstr "кол коюу"
+
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+"Журналдын атынан автоматтык түрдө жөнөтүлгөн электрондук каттарда төмөнкү "
+"кол коюлат."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Жарыяларды  активдештирүү"
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Башкы бетте көрсөтүү"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Негизги бетте канча жарнама көрсөтүү керек. Башкы беттеги жарнамаларды "
+"көрсөткүңүз келбесе, бул талааны бош калтырыңыз."
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Коноктор журналга каттоо эсебин каттай алышат."
+
+msgid "manager.setup.initialIssueDescription"
+msgstr ""
+"Сиз тандаган форматка жараша AJS аркылуу жарыялана турган биринчи "
+"чыгарылыштын чыгарылышын, көлөмүн жана/же жылын көрсөтүңүз:"
+
+msgid "manager.setup.itemsDescription"
+msgstr ""
+"Чабыттоо тилкесинин элементтери барактын жогору жагында пайда болгон "
+"учурдагы топтомго (Башкы бет, жөнүндө, Колдонуучу баракчасы ж.б.) кошулушу "
+"мүмкүн."
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Тизмеде көрсөтүлгөн нерселердин санын (мисалы, окуялар, колдонуучулар же "
+"түзөтүү жумуштары) чектеңиз. Кийинки бетте төмөнкү нерселер көрсөтүлөт."
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Окурмандар, авторлор же рецензенттер үчүн кызыктуу болушу мүмкүн болгон "
+"журнал тууралуу маалыматты бул жерге киргизиңиз. Аларга ачык кирүү "
+"саясаттары, журналдын көз карашы, автордук укук шарттары, демөөрчүлүк "
+"маалыматы, журналдын тарыхы, купуялык билдирүүлөрү жана LOCKSS же CLOCKSS "
+"архивдик тутумуна кошуу камтышы мүмкүн."
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr ""
+"Журналдын башкы бети демейки боюнча навигациялык шилтемелерден турат. Башкы "
+"беттеги кошумча мазмунду төмөнкү опциялардын бирин же бир нечесин колдонуу "
+"менен кошууга болот, алар көрсөтүлгөн тартипте бетте пайда болот. Учурдагы "
+"чыгарылыш ар дайым навигация тилкесиндеги Учурдагы чыгарылыш шилтемесинен "
+"жеткиликтүү экенин эске алыңыз."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Журнал концепциясы"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr ""
+"Журнал жарыялай турган макалалардын жана башка материалдардын спектрин "
+"авторлор, окурмандар жана китепканалар үчүн сүрөттөп бериңиз."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Авторлордун эмгектерин индексациялоо үчүн"
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "Туура эмес ISSN көрсөтүлгөн."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "Байланыш берүүчү адамдын электрондук почта дареги талап кылынат."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Байланышуучунун аты-жөнү талап кылынат."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Журналдын аталышынын аббревиатурасы талап кылынат."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Журналдын аталышы милдеттүү түрдө көрсөтүлөт."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Бир материал үчүн рецензенттердин саны талап кылынат."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr ""
+"Техникалык колдоо көрсөткөн адамдын электрондук почта дареги талап кылынат."
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr ""
+"Техникалык колдоо көрсөткөн адамдын электрондук почта дареги талап кылынат."
+
+msgid "manager.setup.generalInformation"
+msgstr "жалпы маалымат"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "1-кадам: Каттоо маалыматтары"
+
+msgid "manager.setup.guidelines"
+msgstr "башкаруу"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "3-кадам. Материалдарды тапшыруу"
+
+msgid "manager.setup.identity"
+msgstr "Журналдын идентификациясы"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+"Дароо же убакыттын өтүшү менен ачык кирүүнү камсыз кылган журналдардагы "
+"бардык жарыяланган иштер үчүн ылайыктуу убакта Creative Commons лицензиясын "
+"кошуңуз."
+
+msgid "manager.setup.information"
+msgstr "маалымат"
+
+msgid "manager.setup.information.description"
+msgstr ""
+"Китепканалар, потенциалдуу авторлор жана окурмандар үчүн журналдын кыскача "
+"сүрөттөлүшү. Сүрөттөмөлөр \"Маалымат\" блогу кошулганда сайттын каптал "
+"тилкесинде жеткиликтүү болот."
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Авторлор үчүн"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Китепканалар үчүн"
+
+msgid "manager.setup.information.forReaders"
+msgstr "Окурмандар үчүн"
+
+msgid "manager.setup.initialIssue"
+msgstr "Биринчи чыгарылыш"
+
+msgid "manager.setup.institution"
+msgstr "уюм"
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Барактагы элементтер"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Журналдын аталышынын кыскартылышы"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Журналды архивдөө"
+
+msgid "manager.setup.contextSummary"
+msgstr "Журналдын корутундусу"
+
+msgid "manager.setup.contextAbout"
+msgstr "Журнал тууралуу"
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Журналдын башкы бетинин мазмуну"
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Журналдын башкы бетинин аталышы"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Журналдын башкы бетинин аталышы"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr ""
+"Журналдын аталышынын жана логотипинин графикалык версиясын (.gif, .jpg же ."
+"png файлы катары) башкы бетке жүктөсө болот. Бул версия демейки боюнча "
+"көрсөтүлгөн текст версиясын алмаштырат."
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr ""
+"OJS <a href=\"http://www.openarchives.org/\" target=\"_blank\">Açık Archives "
+"Initiative</a> метадайындарды чогултуу протоколун колдойт, ал электрондук "
+"изилдөөлөргө жакшы индекстелген мүмкүнчүлүктү камсыз кылуу үчүн стандартка "
+"айланып баратат. дүйнө жүзү боюнча ресурстар. Авторлор өз материалдары "
+"жөнүндө метадайындарды берүү үчүн окшош шаблонду колдонушат. Журналдын "
+"менеджери индекстөө үчүн категорияларды тандап алышы керек жана авторлорго "
+"алардын ишин индексациялоого жардам берүү үчүн тиешелүү мисалдарды бериши "
+"керек."
+
+msgid "manager.setup.management.description"
+msgstr ""
+"Мүмкүнчүлүк жана коопсуздук, пландаштыруу, кулактандыруулар, адабий "
+"редакциялоо, макет жана текшерүү."
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Жарыялоо процессин башкаруу жана ыңгайлаштыруу"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+"<strong>Эскертүү:</strong> Учурда журналга материал тапшырууну ырастаган "
+"электрондук кат жөнөтүү өчүрүлгөн. Бул функцияны колдонуу үчүн \"Электрондук "
+"почталар\" бөлүмүндөгү \"Ырастоо жөнөтүү\" электрондук почтасын иштетиңиз."
+
+msgid "manager.setup.numPageLinks.description"
+msgstr "Тизмедеги кийинки беттерде көрсөтүлгөн шилтемелердин санын чектеңиз."
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Редакциялык процесстин негизги кадамдарын башкаруу"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "4-кадам: Журналды башкаруу"
+
+msgid "manager.setup.navigationBar"
+msgstr "Навигациялык тилке"
+
+msgid "manager.setup.note"
+msgstr "Эскертүү"
+
+msgid "manager.setup.numPageLinks"
+msgstr ""
+"<strong>Эскертүү:</strong> Учурда журналга материал тапшырууну ырастаган "
+"электрондук кат жөнөтүү өчүрүлгөн. Бул функцияны колдонуу үчүн \"Электрондук "
+"почталар\" бөлүмүндөгү \"Ырастоо жөнөтүү\" электрондук почтасын иштетиңиз."

@@ -1,0 +1,368 @@
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-01-15 18:09+0000\n"
+"Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
+"Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/editor/ky/>\n"
+"Language: ky\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Материалдар жана жарыялоо"
+
+msgid "editor.submissionArchive"
+msgstr "Материалдардын архиви"
+
+msgid "editor.publishing"
+msgstr "Басылма"
+
+msgid "editor.publishedIssues"
+msgstr "Жарыяланган сандар"
+
+msgid "editor.allSections"
+msgstr "Бардык бөлүмдөр"
+
+msgid "editor.allEditors"
+msgstr "Бардык редакторлор"
+
+msgid "editor.me"
+msgstr "мен"
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Архивде материалдар жок."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Чын эле бул чечимди жазгыңыз келеби?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"Бул материал \"Авторго кабарлоо\" электрондук каты жөнөтүлгөндөн кийин же "
+"\"Электрондук почтаны жөнөтпөө\" баскычы басылгандан кийин архивделет."
+
+msgid "editor.notifyUsers"
+msgstr "Колдонуучуларга кабарлоо"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Бардык окурмандар ({$count} колдонуучулар)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Жарыяланган бардык авторлор ({$count} колдонуучу)"
+
+msgid "editor.home"
+msgstr "Редактордун башкы бети"
+
+msgid "editor.submissionQueue"
+msgstr "Материалдар кезеги"
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"\"{$publicIdentifier}\" жалпы идентификатору мурунтан эле башка объект үчүн "
+"колдонулууда (маселе, макала, галлея же кошумча файл). Журналыңыздан "
+"уникалдуу идентификаторлорду тандаңыз."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"Материалдар архивине өзгөртүүлөр сакталсынбы? Жок кылуу үчүн белгиленген "
+"мазмун тутумдан биротоло өчүрүлөт."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Карап чыгууга тапшыраардан мурун, авторго чечим тууралуу кабарлоо үчүн "
+"\"Авторго кабарлоо\" шилтемесин колдонуңуз жана тапшыргыңыз келген версияны "
+"тандаңыз."
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Бардык жеке жазылуучулар ({$count} колдонуучу)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Бардык абоненттик мекемелер ({$count} колдонуучу)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Колдонуучуларга эскертмелер жөнөтүлөт..."
+
+msgid "editor.usersNotified"
+msgstr "Колдонуучулар кабарланат"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+"Бул билдирүүнү ушул журналга байланышкан бардык колдонуучуларга жөнөтүү "
+"({$count} колдонуучу)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"Бул билдирүүнү бул журналга байланышы бар, алар билдирүүлөрдү алууну "
+"каалаган колдонуучуларга жөнөтүңүз ({$count} колдонуучу)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Бул чыгарылыштагы мазмунду камтуу:"
+
+msgid "editor.editorAdministration"
+msgstr "Редактор: Администрация"
+
+msgid "editor.issues.createIssue"
+msgstr "Маселе түзүү"
+
+msgid "editor.issues.editIssue"
+msgstr "Маселени башкаруу: {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "Учурдагы чыгарылыш саны"
+
+msgid "editor.issues.numArticles"
+msgstr "Материалдардын саны"
+
+msgid "editor.issues.noArticles"
+msgstr "Учурда бул чыгарылыш үчүн пландалган мазмун жок."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Бул эпизодду чын эле биротоло жок кылгыңыз келеби?"
+
+msgid "editor.issues.published"
+msgstr "Жарыяланган"
+
+msgid "editor.issues.unpublished"
+msgstr "Жарыяланган эмес"
+
+msgid "editor.issues.datePublished"
+msgstr "Жарыяланган датасы"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Көлөмдүн саны талап кылынат жана оң сан болушу керек."
+
+msgid "editor.issues.numberRequired"
+msgstr "Чыгарылган номер талап кылынат жана оң сан болушу керек."
+
+msgid "editor.issues.yearRequired"
+msgstr "Жылдын саны талап кылынат жана оң сан болушу керек."
+
+msgid "editor.issues.titleRequired"
+msgstr "Чыгаруунун аталышы талап кылынат."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr ""
+"Чыгарылышты идентификациялоо керек. Кеминде бир чыгарылышты аныктоо опциясын "
+"тандаңыз."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Идентификациялоону чыгаруу"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Жалпы санды аныктоочу"
+
+msgid "editor.issues.accessStatus"
+msgstr "Кирүү статусу"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Кечиктирилген ачык кирүүнү иштетүү"
+
+msgid "editor.issues.coverPage"
+msgstr "Мукабадагы сүрөт"
+
+msgid "editor.issues.uploaded"
+msgstr "Жүктөлдү"
+
+msgid "editor.issues.remove"
+msgstr "Өчүрүү"
+
+msgid "editor.issues.proofed"
+msgstr "Текшерилди"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Мукаба сүрөтү өчүрүлсүнбү?"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"Сиз алып салгыңыз келген мукаба сүрөтү бул маселенин мукаба сүрөтүнө дал "
+"келбейт. Баракты кайра жүктөп, кайра аракет кылыңыз."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+"Мукаба сүрөтүнүн форматы туура эмес. Кабыл алынган форматтар .gif, .jpg же ."
+"png."
+
+msgid "editor.issues.styleFile"
+msgstr "Стиль баракчасы"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Стил таблицасы жок кылынсынбы?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Мукабадагы жазуу"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Бул маселенин капкагын төмөнкү элементтер менен түзүңүз."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Көрсөтүү"
+
+msgid "editor.issues.openAccess"
+msgstr "Ачык кирүү"
+
+msgid "editor.issues.subscription"
+msgstr "Жазылуу"
+
+msgid "editor.issues.identification"
+msgstr "Идентификация"
+
+msgid "editor.issues.access"
+msgstr "Кирүү"
+
+msgid "editor.issues.cover"
+msgstr "Мукаба"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"Бул журнал стандарттуу эмес чыгарылышты сорттоо ыкмасын колдонот. <a href=\""
+"{$url}\" class=\"action\">Демейки сорттоого кайтуу</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"Бул журнал стандарттуу эмес бөлүмдөрдүн сортторун колдонот. <a href=\"{$url}"
+"\" class=\"action\">Демейки сорттоого кайтуу</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Маалыматтарды чыгаруу"
+
+msgid "editor.issues.saveChanges"
+msgstr "Мазмунга өзгөртүүлөр сакталсынбы?"
+
+msgid "editor.issues.default"
+msgstr "Демейки"
+
+msgid "editor.issues.order"
+msgstr "Сорттоо"
+
+msgid "editor.issues.publicId"
+msgstr "Ачык ID"
+
+msgid "editor.issues.publishIssue"
+msgstr "Чыгарылышты жарыялоо"
+
+msgid "editor.issues.previewIssue"
+msgstr "Чыгарууну алдын ала көрүү"
+
+msgid "editor.issues.preview"
+msgstr "Алдын ала көрүү"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Бул жарыяланган санды жарыялоону чын эле алып салгыңыз келеби?"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Чын эле бул чыгарылышты учурдагы  катары койгуңуз келеби?"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Жарыяланган чыгарылыш жок"
+
+msgid "editor.issues.open"
+msgstr "Ачуу"
+
+msgid "editor.issues.galleys"
+msgstr "cан саптары"
+
+msgid "editor.issues.galley"
+msgstr "Сан саптары"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Галлеяларын кароо"
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Эч кандай чыгарылыш басылган жок."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Сандарды иреттөө теги талап кылынат."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Сандарды терүү тили талап кылынат."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Сан саптарына кайтуу"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Бул сан сабын чын эле жок кылгыңыз келеби?"
+
+msgid "editor.issues.identifiers"
+msgstr "Идентификаторлор"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Келечектеги чыгарылыштар"
+
+msgid "grid.action.addGalley"
+msgstr "Сапка тиркеңиз"
+
+msgid "grid.action.addIssue"
+msgstr "Жаңы чыгаруу"
+
+msgid "editor.issues.description"
+msgstr "Сүрөттөмө"
+
+msgid "editor.issues.accessDate"
+msgstr "Жалпыга жеткиликтүү датасы"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Уруксат берилген форматтар: .gif, .jpg, же .png)"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"Сиз алып салууга аракет кылып жаткан мукаба сүрөтү журналдын башка санынан "
+"алынган. Туура журнал идентификаторун колдонуп, туура журнал менен иштеп "
+"жатканыңызды текшерип, кайра аракет кылыңыз."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"Сиз жок кылгыңыз келген мукаба сүрөтү табылган жок. Ал мурунтан эле жок "
+"кылынган болушу мүмкүн. Баракты кайра жүктөп көрүңүз."
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"Стилдер барагынын форматы жараксыз. Сиз тапшырган файл синтаксистик жактан "
+"туура CSS экенин текшериңиз. (Стиль таблицасынын башындагы комментарийлер "
+"системанын аны кабыл алуудан баш тартуусуна алып келиши мүмкүн экенин эске "
+"алыңыз.)"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"Бардык макалалар түзөтүү кезегине кайтарылат жана бардык байланышкан файлдар "
+"биротоло жок кылынат. Бул чыгарууну чын эле алып салгыңыз келеби?"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Жарыялоону алып салуу"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Чын эле жаңы санын чыгаргыңыз келеби?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Мен макаланын коомдук идентификаторун сактай албайм:"
+
+msgid "editor.issues.pages"
+msgstr "Барактар"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Чыгарманын толук мазмуну менен галереяларды жарыялоо."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Жалпы сан сап идентификатору мурунтан эле бар."
+
+msgid "grid.action.publish"
+msgstr "Чыгарылышты жарыялоо"
+
+msgid "grid.action.viewIssue"
+msgstr "Көрсөтүү"
+
+msgid "grid.action.previewIssue"
+msgstr "Алдын ала көрүү"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Журналдын чыгарылыш санын тузүү"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Учурдагы чыгарууну коюу"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Түпнуска файлды карап чыгуу версиясы катары белгилеңиз"
+
+msgid "editor.article.decision"
+msgstr "Чечим"

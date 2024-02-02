@@ -1,7 +1,7 @@
-# Ieva Tiltina <pastala@gmail.com>, 2022, 2023.
+# Ieva Tiltina <pastala@gmail.com>, 2022, 2023, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-12-08 10:09+0000\n"
+"PO-Revision-Date: 2024-01-23 11:39+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/lv/>"
 "\n"
@@ -343,7 +343,7 @@ msgid "manager.sections.form.reviewFormId"
 msgstr "Lūdzu, pārliecinieties, ka esat izvēlējies derīgu recenzijas veidlapu."
 
 msgid "manager.sections.form.titleRequired"
-msgstr "Sadaļai ir nepieciešams nosaukums."
+msgstr "Sadaļai ir nepieciešams virsraksts."
 
 msgid "manager.sections.hideTocAuthor"
 msgstr ""
@@ -453,7 +453,7 @@ msgstr "Alternatīvā galvene"
 
 msgid "manager.setup.alternateHeaderDescription"
 msgstr ""
-"Nosaukuma un logotipa vietā teksta lodziņā zemāk var ievietot galvenes HTML "
+"Virsraksta un logotipa vietā teksta lodziņā zemāk var ievietot galvenes HTML "
 "versiju. Ja tas nav nepieciešams, atstājiet teksta lodziņu tukšu."
 
 msgid "manager.setup.announcements"
@@ -1154,7 +1154,7 @@ msgid "manager.setup.userRegistration"
 msgstr "Lietotāja reģistrācija"
 
 msgid "manager.setup.useTextTitle"
-msgstr "Nosaukuma teksts"
+msgstr "Virsraksta teksts"
 
 msgid "manager.statistics.statistics"
 msgstr "Žurnāla statistika"
@@ -1163,7 +1163,7 @@ msgid "manager.statistics.statistics.articleViews"
 msgstr "Raksta skatījumu skaits (tikai autoriem)"
 
 msgid "manager.statistics.statistics.count.accept"
-msgstr "Akceptēšana"
+msgstr "PIeņemts"
 
 msgid "manager.statistics.statistics.count.decline"
 msgstr "Noraidīšana"
@@ -1850,7 +1850,7 @@ msgstr ""
 "abonementi."
 
 msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
-msgstr "Šī saite tiks rādīta tikai tad, ja apmeklētājs ir autorizējies."
+msgstr "Šī saite tiks rādīta tikai tad, ja apmeklētājs ir pieteicies sistēmā."
 
 msgid "manager.setup.categories"
 msgstr "Kategorijas"
@@ -2072,7 +2072,7 @@ msgid "stats.issues.details"
 msgstr "Skatījumi un lejupielādes"
 
 msgid "stats.issues.searchIssueDescription"
-msgstr "Meklēt izdevuma nosaukumu, sējumu un numuru"
+msgstr "Meklēt izdevuma virsrakstu, sējumu un numuru"
 
 msgid "stats.issues.none"
 msgstr ""
