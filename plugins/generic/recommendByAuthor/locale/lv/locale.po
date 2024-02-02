@@ -1,7 +1,7 @@
-# Ieva Tiltina <pastala@gmail.com>, 2023.
+# Ieva Tiltina <pastala@gmail.com>, 2023, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-11-02 07:38+0000\n"
+"PO-Revision-Date: 2024-01-23 11:39+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/"
 "generic-recommendByAuthor/lv/>\n"
@@ -27,6 +27,6 @@ msgstr ""
 msgid "plugins.generic.recommendByAuthor.noMetric"
 msgstr ""
 "Novērojums: Šis spraudnis prasa, lai būtu ieslēgts vismaz viens statistikas/"
-"ziņojumu spraudnis. Ja jūsu statistikas spraudņi nodrošina vairāk nekā vienu "
+"pārskatu spraudnis. Ja jūsu statistikas spraudņi nodrošina vairāk nekā vienu "
 "metriku, lūdzu, izvēlieties arī galveno metriku administratora vietnes "
 "iestatījumu lapā un/vai žurnāla pārvaldnieka iestatījumu lapās."

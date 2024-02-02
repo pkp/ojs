@@ -1,12 +1,12 @@
 # Niels Erik Frederiksen <nef@kb.dk>, 2021.
-# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022, 2023.
+# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022, 2023, 2024.
 # Jesper B. Thestrup <jbt@kb.dk>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2023-11-17 01:14+0000\n"
+"PO-Revision-Date: 2024-01-26 12:13+0000\n"
 "Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/manager/da/>"
 "\n"
@@ -572,12 +572,12 @@ msgstr ""
 "nyheder og begivenheder. Publicerede meddelelser vises på siden Meddelelser."
 
 msgid "manager.setup.numAnnouncementsHomepage"
-msgstr "Vis på hjemmeside"
+msgstr "Vis på forsiden"
 
 msgid "manager.setup.numAnnouncementsHomepage.description"
 msgstr ""
-"Hvor mange meddelelser skal der vises på hjemmesiden. Lad dette være tomt "
-"hvis du ikke ønsker at vise nogen."
+"Antal meddelelser der skal vises på forsiden. Lad feltet være tomt, hvis der "
+"ikke skal vises nogen."
 
 msgid "manager.setup.enableUserRegistration"
 msgstr "Brugere kan lade sig registrere hos tidsskriftet."
@@ -978,11 +978,11 @@ msgstr "Publiceringsplan"
 
 msgid "manager.setup.publicationScheduleDescription"
 msgstr ""
-"Tidsskriftsartikler kan publiceres kollektivt, som en del af en udgave med "
+"Tidsskriftsartikler kan publiceres kollektivt, som en del af et nummer med "
 "egen indholdsfortegnelse. Individuelle artikler kan også publiceres så "
 "snart, de er klar, ved at føje dem til det \"aktuelle\" nummers "
-"indholdsfortegnelse. Oplys læserne, under Om tidsskriftet, om det system, "
-"som dette tidsskrift vil bruge, og om tidsskriftets forventede "
+"indholdsfortegnelse. Oplys læserne, under \"Om tidsskriftet\", om det "
+"system, som dette tidsskrift vil bruge, og om tidsskriftets forventede "
 "publiceringshyppighed."
 
 msgid "manager.setup.publicationScheduling"

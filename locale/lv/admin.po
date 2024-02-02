@@ -1,8 +1,8 @@
 # Gints Buda <gints.buda@gmail.com>, 2022.
-# Ieva Tiltina <pastala@gmail.com>, 2022, 2023.
+# Ieva Tiltina <pastala@gmail.com>, 2022, 2023, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-11-02 15:29+0000\n"
+"PO-Revision-Date: 2024-01-15 18:09+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/admin/lv/>\n"
 "Language: lv\n"
@@ -86,7 +86,7 @@ msgstr ""
 "URL būs {$sampleUrl}."
 
 msgid "admin.contexts.form.titleRequired"
-msgstr "Nepieciešams nosaukums."
+msgstr "Nepieciešams virsraksts."
 
 msgid "admin.contexts.form.pathRequired"
 msgstr "Nepieciešams ceļš."

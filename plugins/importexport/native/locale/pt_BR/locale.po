@@ -1,13 +1,13 @@
 # Felipe Geremia Nievinski <fgnievinski@gmail.com>, 2022.
-# Diego José Macêdo <diegojmacedo@gmail.com>, 2023.
+# Diego José Macêdo <diegojmacedo@gmail.com>, 2023, 2024.
 # Alex Mendonça <alex.mendonca@scielo.org>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:34-07:00\n"
-"PO-Revision-Date: 2023-04-28 14:09+0000\n"
-"Last-Translator: Alex Mendonça <alex.mendonca@scielo.org>\n"
+"PO-Revision-Date: 2024-01-31 21:18+0000\n"
+"Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-native/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.importexport.native.displayName"
 msgstr "Plugin XML Nativo"
@@ -132,3 +132,9 @@ msgstr ""
 
 #~ msgid "plugins.importexport.native.export"
 #~ msgstr "Exportar"
+
+msgid "plugins.importexport.common.error.coverImageNameUnspecified"
+msgstr "Uma imagem de capa foi incorporada sem especificar um nome."
+
+msgid "plugins.importexport.common.error.invalidFileExtension"
+msgstr "O destaque solicitado não foi encontrado."

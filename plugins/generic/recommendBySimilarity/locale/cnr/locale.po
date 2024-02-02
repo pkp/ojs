@@ -1,0 +1,30 @@
+# Milutin Markovic <admin@fcjk.me>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-01-24 22:30+0000\n"
+"Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
+"Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-recommendBySimilarity/cnr/>\n"
+"Language: cnr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.generic.recommendBySimilarity.displayName"
+msgstr "Preporučeni slični članci"
+
+msgid "plugins.generic.recommendBySimilarity.description"
+msgstr ""
+"Ovaj dodatak dodaje popis sličnih članaka na stranicu sa sažetkom članka."
+
+msgid "plugins.generic.recommendBySimilarity.heading"
+msgstr "Slični članci"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
+msgstr "Takođe možete {$advancedSearchLink} za ovaj članak."
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearch"
+msgstr "započnite naprednu pretragu po sličnosti"

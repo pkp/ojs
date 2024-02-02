@@ -1,0 +1,108 @@
+# Ieva Tiltina <pastala@gmail.com>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-01-30 11:06+0000\n"
+"Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
+"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-users/lv/>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
+"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Lietotāja datu fails"
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Turpināt importēt citus lietotājus, ja rodas kļūme."
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Importēšanas laikā radās kļūdas"
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Eksportēt lietotājus"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Lietotāji – XML spraudnis"
+
+msgid "plugins.importexport.users.description"
+msgstr "Importēt un eksportēt lietotājus"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Izmantošana: {$scriptName} {$pluginName} [command] ...\n"
+"Komandas:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Piemēri:\n"
+"\tImportēt lietotājus uz myJournal no myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tEksportēt visus lietotājus no myJournal:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tEksportēt lietotājus, kas norādīti pēc to ID:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Importēt lietotājus"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
+"Atlasiet XML datu failu, kurā ir lietotāja informācija, ko importēt šajā "
+"žurnālā. Sīkāku informāciju par šī faila formātu skatiet žurnāla palīdzības "
+"sadaļā.<br /><br />Ņemiet vērā, ka, ja importētajā failā ir sistēmā jau "
+"esoši lietotājvārdi vai e-pasta adreses, šo lietotāju dati netiks importēti "
+"un visas jaunās lomas, kas tiks izveidotas, tiks piešķirtas esošajiem "
+"lietotājiem."
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr ""
+"Nosūtīt paziņojuma e-pastu ar lietotāja lietotājvārdu un paroli katram "
+"importētajam lietotājam."
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Sistēmā tika veiksmīgi importēti šādi lietotāji"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Apstipriniet, ka tie ir lietotāji, kurus vēlaties importēt sistēmā"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Brīdinājums"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"Nevar izmantot paroles, kas šifrētas ar {$importHash}; OJS ir konfigurēts "
+"izmantot {$ojsHash}. Ja turpināsiet, jums būs jāatjauno importēto lietotāju "
+"paroles."
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Ir norādīts nezināms žurnāla ceļš \"{$journalPath}\"."
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Eksportēt pēc lomas"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Eksportēt visu"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Eksportēšanas laikā radušās kļūdas"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"mports ir pabeigts veiksmīgi. Ir importēti lietotāji ar lietotājvārdiem un e-"
+"pasta adresēm, kas vēl netiek izmantoti, kā arī pievienotās lietotāju grupas."
+
+msgid "plugins.importexport.users.results"
+msgstr "Rezultāti"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Lai turpinātu, lūdzu, augšupielādējiet failu sadaļā \"Importēt\"."
