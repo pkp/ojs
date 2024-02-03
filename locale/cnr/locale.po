@@ -1,3 +1,130 @@
 # Milutin Markovic <admin@fcjk.me>, 2024.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2024-02-03 19:00+0000\n"
+"Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
+"Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/locale/"
+"cnr/>\n"
+"Language: cnr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "context.select"
+msgstr "Odaberi drugi časopis:"
+
+msgid "navigation.categories"
+msgstr "Kategorije"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Ispunite obavezana polja."
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "common.payment"
+msgstr "Plaćanje"
+
+msgid "common.payments"
+msgstr "Plaćanja"
+
+msgid "common.homePageHeader.altText"
+msgstr "Zaglavlje naslovne strane"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Slika naslovne strane časopisa"
+
+msgid "doi.manager.settings.publications"
+msgstr "Članci"
+
+msgid "navigation.journalHelp"
+msgstr "Pomoć"
+
+msgid "navigation.current"
+msgstr "Najnoviji broj"
+
+msgid "navigation.otherJournals"
+msgstr "Ostali časopisi"
+
+msgid "navigation.browseByIssue"
+msgstr "Po broju časopisa"
+
+msgid "navigation.browseByAuthor"
+msgstr "Po autoru"
+
+msgid "navigation.infoForAuthors"
+msgstr "Za autore"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Smjernice o sukobu interesa"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Informacije za autore"
+
+msgid "navigation.skip.about"
+msgstr "Preskoči do informacija o časopisu"
+
+msgid "navigation.skip.issue"
+msgstr "Preskoči do najnovijeg broja"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Nedodijeljeno"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Nedodijeljeno"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Uređuje se"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Prijave u fazi uređivanja"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Recenzira se"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Arhiva"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Arhiva"
+
+msgid "common.queue.long.active"
+msgstr "Aktivne"
+
+msgid "common.queue.short.active"
+msgstr "Aktivno"
+
+msgid "common.queue.long.completed"
+msgstr "Arhiva"
+
+msgid "common.queue.short.completed"
+msgstr "Arhiva"
+
+msgid "context.current"
+msgstr "Trenutni časopis:"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Informacije za bibliotekare"
+
+msgid "navigation.categories.browse"
+msgstr "Pregledaj"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Prijave u fazi recenzije"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Kliknite na ikonicu i ispunite obrazac za recencziju."
+
+msgid "common.confirmComplete"
+msgstr ""
+"Jeste li sigurni da želite označiti ovaj zadatak kao završen? Po donošenju "
+"ove odluke nećete moći unositi daljnje izmjene."
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Sadržaj ovog časopisa nije dostupan online."
+
+msgid "navigation.infoForLibrarians"
+msgstr "Za bibliotekare"
