@@ -1,7 +1,7 @@
 # Milutin Markovic <admin@fcjk.me>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-02-03 19:00+0000\n"
+"PO-Revision-Date: 2024-02-03 20:48+0000\n"
 "Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
 "Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "cnr/>\n"
@@ -128,3 +128,150 @@ msgstr "Sadržaj ovog časopisa nije dostupan online."
 
 msgid "navigation.infoForLibrarians"
 msgstr "Za bibliotekare"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Dodijeljeni urednici"
+
+msgid "section.section"
+msgstr "Rubrika"
+
+msgid "section.sections"
+msgstr "Rubrike časopisa"
+
+msgid "section.title"
+msgstr "Naslov rubrike"
+
+msgid "section.abbreviation"
+msgstr "Skraćenica"
+
+msgid "section.abbreviation.example"
+msgstr "(Npr. Članci=ČLA)"
+
+msgid "section.policy"
+msgstr "Pravila rubrike"
+
+msgid "article.article"
+msgstr "Članak"
+
+msgid "article.articles"
+msgstr "Članci"
+
+msgid "common.publication"
+msgstr "Članak"
+
+msgid "article.submissionId"
+msgstr "ID prijave članka"
+
+msgid "article.title"
+msgstr "Naslov"
+
+msgid "article.authors"
+msgstr "Autori"
+
+msgid "article.metadata"
+msgstr "Metapodaci"
+
+msgid "article.journalSection"
+msgstr "Rubrika časopisa"
+
+msgid "article.file"
+msgstr "Fajl"
+
+msgid "article.suppFile"
+msgstr "Dodatni fajl"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Dopunski fajl"
+
+msgid "article.discipline"
+msgstr "Akademska diciplina i poddiscipline"
+
+msgid "article.subject"
+msgstr "Ključne riječi"
+
+msgid "article.coverage"
+msgstr "Pokrivenost"
+
+msgid "article.type"
+msgstr "Tip, metod ili pristup"
+
+msgid "article.language"
+msgstr "Jezik"
+
+msgid "article.commentsToEditor"
+msgstr "Komentari autora"
+
+msgid "article.submission"
+msgstr "Prijava"
+
+msgid "article.submissions"
+msgstr "Prijave"
+
+msgid "article.details"
+msgstr "Detalji"
+
+msgid "article.abstract"
+msgstr "Sažetak"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Otvoren pristup"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Ograničen pristup"
+
+msgid "article.comments.sectionDefault"
+msgstr "Standardno"
+
+msgid "article.comments.disable"
+msgstr "Onemogući"
+
+msgid "article.comments.enable"
+msgstr "Omogući"
+
+msgid "article.fontSize"
+msgstr "Veličine fonta"
+
+msgid "article.fontSize.small.altText"
+msgstr "Mali"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Srednji"
+
+msgid "article.fontSize.large.altText"
+msgstr "Veliki"
+
+msgid "submission.changeSection"
+msgstr "Promjena u"
+
+msgid "submission.sent"
+msgstr "Poslato"
+
+msgid "submission.editorDecision"
+msgstr "Odluka urednika"
+
+msgid "submission.round"
+msgstr "Krug{$round}"
+
+msgid "submission.editorReview"
+msgstr "Recenzija urednika"
+
+msgid "submission.notifyAuthor"
+msgstr "Obavijesti autora"
+
+msgid "common.publications"
+msgstr "Članci"
+
+msgid "article.indexingInformation"
+msgstr "Informacije o indeksiranju"
+
+msgid "article.suppFiles"
+msgstr "Dodatni fajl(ovi)"
+
+msgid "article.coverPage.altText"
+msgstr "Naslovna strana"
+
+msgid "article.return"
+msgstr "Povratak na detalje članka"
+
+msgid "submission.submissionEditing"
+msgstr "Uređivanje prijave"
