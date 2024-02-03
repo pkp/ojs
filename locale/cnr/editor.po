@@ -1,3 +1,296 @@
 # Milutin Markovic <admin@fcjk.me>, 2024.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2024-02-03 20:48+0000\n"
+"Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
+"Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/editor/"
+"cnr/>\n"
+"Language: cnr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "editor.home"
+msgstr "Urednička strana"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Prijave i objavljivanja"
+
+msgid "editor.submissionQueue"
+msgstr "Red čekanja prijave"
+
+msgid "editor.submissionArchive"
+msgstr "Arhiva prijava"
+
+msgid "editor.publishing"
+msgstr "Objavljivanje"
+
+msgid "editor.publishedIssues"
+msgstr "Objavljeni brojevi"
+
+msgid "editor.allSections"
+msgstr "Sve rubrike"
+
+msgid "editor.allEditors"
+msgstr "Svi urednici"
+
+msgid "editor.me"
+msgstr "Ја"
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"Ovaj javni identifikator '{$publicIdentifier}' već postoji za drugi objekt ("
+"izdanje, članak, korekturna kopija ili dopunska datoteka). Odaberite "
+"jedinstvene identifikatore vašeg časopisa."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Nema prijava u arhivi."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Da li želite da zapišete ovu odluku?"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Prije slanja prijave na lekturu iskoristite link \"Obavijesti autora\" da "
+"biste ga obavijestili o odluci i definisali koju verziju rada poslati."
+
+msgid "editor.notifyUsers"
+msgstr "Obavijesti autora"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Svi čitaoci ({$count} korisnika)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Svi objavljeni autori ({$count} korisnika)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Svi institucionalni pretplatnici ({$count} korisnika)"
+
+msgid "editor.usersNotified"
+msgstr "Korisnici su obaviješteni"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Obaviještavam korisnike..."
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+"Pošalji ovu poruku svim korisnicima koji imaju veze sa ovim časopisom "
+"({$count} korisnika)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Uključi i sadržaj iz ovog broja:"
+
+#, fuzzy
+msgid "editor.editorAdministration"
+msgstr "Urednička administracija"
+
+#, fuzzy
+msgid "editor.issues.createIssue"
+msgstr "Kreiraj broj časopisa"
+
+#, fuzzy
+msgid "editor.issues.editIssue"
+msgstr "Uređivanje broja: {$issueIdentification}"
+
+#, fuzzy
+msgid "editor.issues.currentIssue"
+msgstr "Najnoviji broj"
+
+#, fuzzy
+msgid "editor.issues.numArticles"
+msgstr "Stavke"
+
+#, fuzzy
+msgid "editor.issues.noArticles"
+msgstr "Nema stavki koje su predviđene za ovaj broj."
+
+#, fuzzy
+msgid "editor.issues.confirmDelete"
+msgstr "Da li ste sigurni da trajno želite da obrišete ovaj broj?"
+
+#, fuzzy
+msgid "editor.issues.published"
+msgstr "Objavljeno"
+
+#, fuzzy
+msgid "editor.issues.unpublished"
+msgstr "Neobjavljeno"
+
+#, fuzzy
+msgid "editor.issues.datePublished"
+msgstr "Datum objavljivanja"
+
+#, fuzzy
+msgid "editor.issues.numberRequired"
+msgstr "Broj je obavezan i mora biti pozitivan broj."
+
+#, fuzzy
+msgid "editor.issues.titleRequired"
+msgstr "Naslov je obavezan."
+
+#, fuzzy
+msgid "editor.issues.issueIdentificationRequired"
+msgstr "Identifikacija broja je obavezna. Izaberite barem jedan identifikator."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Identifikacija broja"
+
+#, fuzzy
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Javni identifikator"
+
+#, fuzzy
+msgid "editor.issues.description"
+msgstr "Opis"
+
+#, fuzzy
+msgid "editor.issues.accessStatus"
+msgstr "Pristupni status"
+
+#, fuzzy
+msgid "editor.issues.accessDate"
+msgstr "Datum otvorenog pristupa"
+
+#, fuzzy
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Omogući odloženi otvoreni pristup"
+
+#, fuzzy
+msgid "editor.issues.coverPage"
+msgstr "Slika naslovnice"
+
+#, fuzzy
+msgid "editor.issues.uploaded"
+msgstr "Dodato"
+
+#, fuzzy
+msgid "editor.issues.remove"
+msgstr "Ukloni"
+
+#, fuzzy
+msgid "editor.issues.proofed"
+msgstr "Odobreno"
+
+#, fuzzy
+msgid "editor.issues.removeCoverPage"
+msgstr "Ukloni naslovnicu?"
+
+#, fuzzy
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"Nije bilo moguće pronaći naslovnu sliku koju želite obrisati. Slika je možda "
+"već obrisana. Pokušajte ponovno učitati stranicu."
+
+#, fuzzy
+msgid "editor.issues.styleFile"
+msgstr "Stranica stila"
+
+#, fuzzy
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"Neispravan stylesheet format. Fajl mora biti ispravan CSS. (Imajte na umu da "
+"fajlovi sa komentarim na početku mogu biti odbijeni.)"
+
+#, fuzzy
+msgid "editor.issues.removeStyleFile"
+msgstr "Ukloni stranicu stila?"
+
+#, fuzzy
+msgid "editor.issues.coverPageCaption"
+msgstr "Naslov naslovnice"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Napravite naslovnicu za ovaj broj sa sljedećim elementima."
+
+#, fuzzy
+msgid "editor.issues.coverPageDisplay"
+msgstr "Prikaz"
+
+#, fuzzy
+msgid "editor.issues.openAccess"
+msgstr "Otvoren pristup"
+
+#, fuzzy
+msgid "editor.issues.subscription"
+msgstr "Pretplata"
+
+#, fuzzy
+msgid "editor.issues.identification"
+msgstr "Identifikacija"
+
+#, fuzzy
+msgid "editor.issues.access"
+msgstr "Pristup"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"Ovaj časopis koristi prilagođen način redoslijeda brojeva.<a href=\"{$url}\" "
+"class=\"action\">Vrati na početno</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"Ovaj broj ima prilagođen način poretka sekcija/rubrika.<a href=\"{$url}\" "
+"class=\"action\">Vrati na početno</a>"
+
+#, fuzzy
+msgid "editor.issues.issueData"
+msgstr "Podaci o broju"
+
+#, fuzzy
+msgid "editor.issues.default"
+msgstr "Početno"
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"Sačuvaj izmene u arhiviranim prijavama? Prijave koje su označene za brisanje "
+"će biti trajno obrisane."
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"Ova će prijava biti arhivirana nakon što se o ishodu imejlom obavijesti "
+"autora ili se odabere opcija \"preskoči imejl\"."
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"Svi članci će biti vraćeni u red redakciju i svi pridruženi fajlovi će biti "
+"obrisani. Da li ste sigurni da želite obrisati ovaj broj?"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Svi individualni pretplatnici ({$count} korisnika)"
+
+#, fuzzy
+msgid "editor.issues.saveChanges"
+msgstr "Sačuvajte izmene u sadržaju"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"Pošalji ovu poruku svim korisnicima koji su naveli da žele da primaju "
+"obaviještenja o promjenama ({$count} korisnika)"
+
+#, fuzzy
+msgid "editor.issues.volumeRequired"
+msgstr "Sveska/vol. je obavezna i mora biti pozitivan broj."
+
+#, fuzzy
+msgid "editor.issues.yearRequired"
+msgstr "Godina je obavezna i mora biti pozitivan broj."
+
+#, fuzzy
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Podržani formati: .gif, .jpg, ili .png )"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"Slika naslovne stran koju želite obrisati ne odgovara naslovnoj slici ovog "
+"broja. Ponovo učitajte stranu i pokušajte ponovo."
+
+#, fuzzy
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "Neispravna vrsta fajla slike. Dozvoljeni formati su .gif, .jpg i .png."
+
+#, fuzzy
+msgid "editor.issues.cover"
+msgstr "Naslovnica"
