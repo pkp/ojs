@@ -66,8 +66,8 @@ class ArticlePubMedXmlFilter extends PersistableFilter
         $rootNode = $doc->createElement('ArticleSet');
         foreach ($submissions as $submission) {
             // Fetch associated objects
-            if ($journal?->getId() !== $submission->getContextId()) {
-                $journal = $journalDao->getById($submission->getContextId());
+            if ($journal?->getId() !== $submission->getData('contextId')) {
+                $journal = $journalDao->getById($submission->getData('contextId'));
             }
             $issue = Repo::issue()->getBySubmissionId($submission->getId());
             $issue = $issue?->getJournalId() === $journal->getId() ? $issue : null;
@@ -118,7 +118,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
 
             // History
             $historyNode = $doc->createElement('History');
-            $historyNode->appendChild($this->generatePubDateDom($doc, $submission->getDateSubmitted(), 'received'));
+            $historyNode->appendChild($this->generatePubDateDom($doc, $submission->getData('dateSubmitted'), 'received'));
 
             $editorDecision = Repo::decision()->getCollector()
                 ->filterBySubmissionIds([$submission->getId()])

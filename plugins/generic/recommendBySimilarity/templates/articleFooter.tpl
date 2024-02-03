@@ -22,7 +22,7 @@
 						{$author->getFullName()|escape},
 					{/foreach}
 					<a href="{url journal=$currentContext->getPath() page="article" op="view" path=$submission->getBestId()}">
-						{$submission->getLocalizedTitle()|strip_unsafe_html}
+						{$publication->getLocalizedFullTitle(null, 'html')|strip_unsafe_html}
 					</a>
 					{if $issue},
 					<a href="{url journal=$currentContext->getPath() page="issue" op="view" path=$issue->getBestIssueId()}">

@@ -152,7 +152,6 @@ class ResolverPlugin extends GatewayPlugin
                             $request->redirect(null, 'article', 'view', $submission->getBestId());
                         }
                     }
-                    unset($submission);
                 }
                 break;
         }

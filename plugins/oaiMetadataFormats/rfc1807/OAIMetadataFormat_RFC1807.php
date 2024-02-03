@@ -33,11 +33,11 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
      */
     public function toXml($record, $format = null)
     {
-        $article = & $record->getData('article');
-        $journal = & $record->getData('journal');
-        $section = & $record->getData('section');
-        $issue = & $record->getData('issue');
-        $galleys = & $record->getData('galleys');
+        $article = &$record->getData('article');
+        $journal = &$record->getData('journal');
+        $section = &$record->getData('section');
+        $issue = &$record->getData('issue');
+        $galleys = &$record->getData('galleys');
 
         $publication = $article->getCurrentPublication();
 
@@ -93,7 +93,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
             $this->formatElement('entry', $record->datestamp) .
             $this->formatElement('organization', $publisher) .
             $this->formatElement('organization', $source) .
-            $this->formatElement('title', $article->getLocalizedTitle()) .
+            $this->formatElement('title', $publication->getLocalizedTitle()) .
             $this->formatElement('type', $section->getLocalizedIdentifyType()) .
 
             $this->formatElement('author', $creators) .
@@ -104,7 +104,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
             $this->formatElement('period', $coverage) .
             $this->formatElement('monitoring', $article->getLocalizedSponsor()) .
             $this->formatElement('language', $article->getData('locale')) .
-            $this->formatElement('abstract', strip_tags($article->getLocalizedAbstract())) .
+            $this->formatElement('abstract', strip_tags($publication->getLocalizedData('abstract'))) .
             "</rfc1807>\n";
 
         return $response;

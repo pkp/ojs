@@ -21,12 +21,14 @@
 					{assign var=article value=$articleBySameAuthor.article}
 					{assign var=issue value=$articleBySameAuthor.issue}
 					{assign var=journal value=$articleBySameAuthor.journal}
+					{assign var=publication value=$article->getCurrentPublication()}
 					<li>
 						{foreach from=$article->getCurrentPublication()->getData('authors') item=author}
 							{$author->getFullName()|escape},
 						{/foreach}
-						<a href="{url journal=$journal->getPath() page="article" op="view" path=$submission->getBestId()}">
-							{$article->getLocalizedTitle()|strip_unsafe_html}
+						<a href="{url journal=$journal->getPath() page="article" op="view" path=$submission->g
+etBestId()}">
+							{$publication->getLocalizedFullTitle(null, 'html')|strip_unsafe_html}
 						</a>,
 						<a href="{url journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId()}">
 							{$journal->getLocalizedName()|escape}: {$issue->getIssueIdentification()|escape}

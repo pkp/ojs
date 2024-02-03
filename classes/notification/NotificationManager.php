@@ -117,7 +117,7 @@ class NotificationManager extends PKPNotificationManager
         if (!$article) {
             return null;
         }
-        return $article->getLocalizedTitle();
+        return $article->getCurrentPublication()->getLocalizedFullTitle();
     }
 
     /**

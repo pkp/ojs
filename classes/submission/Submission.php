@@ -124,41 +124,6 @@ class Submission extends PKPSubmission
     }
 
     /**
-     * @see PKPSubmission::getBestId()
-     * @deprecated 3.2.0.0
-     *
-     * @return string
-     */
-    public function getBestArticleId()
-    {
-        return parent::getBestId();
-    }
-
-    /**
-     * Get ID of journal.
-     *
-     * @deprecated 3.2.0.0
-     *
-     * @return int
-     */
-    public function getJournalId()
-    {
-        return $this->getData('contextId');
-    }
-
-    /**
-     * Set ID of journal.
-     *
-     * @deprecated 3.2.0.0
-     *
-     * @param int $journalId
-     */
-    public function setJournalId($journalId)
-    {
-        return $this->setData('contextId', $journalId);
-    }
-
-    /**
      * Get ID of article's section.
      *
      * @return int
@@ -170,19 +135,6 @@ class Submission extends PKPSubmission
             return 0;
         }
         return $publication->getData('sectionId');
-    }
-
-    /**
-     * Set ID of article's section.
-     *
-     * @param int $sectionId
-     */
-    public function setSectionId($sectionId)
-    {
-        $publication = $this->getCurrentPublication();
-        if ($publication) {
-            $publication->setData('sectionId', $sectionId);
-        }
     }
 
     /**
@@ -207,44 +159,6 @@ class Submission extends PKPSubmission
         );
 
         return $this->getData('galleys');
-    }
-
-    /**
-     * Get the localized galleys for an article.
-     *
-     * @return array Galley
-     *
-     * @deprecated 3.2.0.0
-     */
-    public function getLocalizedGalleys()
-    {
-        $allGalleys = $this->getGalleys();
-        $galleys = [];
-        foreach ([Locale::getLocale(), Locale::getPrimaryLocale()] as $tryLocale) {
-            foreach (array_keys($allGalleys) as $key) {
-                if ($allGalleys[$key]->getLocale() == $tryLocale) {
-                    $galleys[] = $allGalleys[$key];
-                }
-            }
-        }
-
-        return $galleys;
-    }
-
-    /**
-     * Return option selection indicating if author should be hidden in issue ToC.
-     *
-     * @return int AUTHOR_TOC_...
-     *
-     * @deprecated 3.2.0.0
-     */
-    public function getHideAuthor()
-    {
-        $publication = $this->getCurrentPublication();
-        if (!$publication) {
-            return 0;
-        }
-        return $publication->getData('hideAuthor');
     }
 }
 
