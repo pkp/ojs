@@ -163,8 +163,9 @@ class IssueAction
             if (!$result && $journal->getData('subscriptionExpiryPartial')) {
                 if (isset($articleId)) {
                     $submission = Repo::submission()->get($articleId);
+                    $publication = $submission->getCurrentPublication();
                     if ($submission->getData('status') === PKPSubmission::STATUS_PUBLISHED) {
-                        $result = $subscriptionDao->isValidInstitutionalSubscription($request->getRemoteDomain(), $request->getRemoteAddr(), $journal->getId(), Subscription::SUBSCRIPTION_DATE_END, $submission->getDatePublished());
+                        $result = $subscriptionDao->isValidInstitutionalSubscription($request->getRemoteDomain(), $request->getRemoteAddr(), $journal->getId(), Subscription::SUBSCRIPTION_DATE_END, $publication->getData('datePublished'));
                     }
                 } elseif (isset($issueId)) {
                     $issue = Repo::issue()->get($issueId);

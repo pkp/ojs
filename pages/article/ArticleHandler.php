@@ -132,9 +132,8 @@ class ArticleHandler extends Handler
         // If the urlPath does not match the urlPath of the current
         // publication, redirect to the current URL
         $currentUrlPath = $submission->getBestId();
-        if ($currentUrlPath && $currentUrlPath != $urlPath) {
-            $newArgs = array_merge([$currentUrlPath], $args);
-            $request->redirect(null, $request->getRequestedPage(), $request->getRequestedOp(), $newArgs);
+        if ($currentUrlPath != $urlPath) {
+            $request->redirect(null, $request->getRequestedPage(), $request->getRequestedOp(), [$currentUrlPath, ...$args]);
         }
 
         $this->article = $submission;
@@ -167,8 +166,8 @@ class ArticleHandler extends Handler
                     $this->galley = $galley;
                     break;
 
-                    // In some cases, a URL to a galley may use the ID when it should use
-                    // the urlPath. Redirect to the galley's correct URL.
+                // In some cases, a URL to a galley may use the ID when it should use
+                // the urlPath. Redirect to the galley's correct URL.
                 } elseif (ctype_digit($galleyId) && $galley->getId() == $galleyId) {
                     $request->redirect(null, $request->getRequestedPage(), $request->getRequestedOp(), [$submission->getBestId(), $galley->getBestGalleyId()]);
                 }
@@ -319,7 +318,7 @@ class ArticleHandler extends Handler
             // No galley: Prepare the article landing page.
 
             // Ask robots not to index outdated versions and point to the canonical url for the latest version
-            if ($publication->getId() !== $article->getCurrentPublication()->getId()) {
+            if ($publication->getId() != $article->getData('currentPublicationId')) {
                 $templateMgr->addHeader('noindex', '<meta name="robots" content="noindex">');
                 $url = $request->getDispatcher()->url($request, PKPApplication::ROUTE_PAGE, null, 'article', 'view', $article->getBestId());
                 $templateMgr->addHeader('canonical', '<link rel="canonical" href="' . $url . '">');
@@ -370,7 +369,7 @@ class ArticleHandler extends Handler
 
             // Galley: Prepare the galley file download.
             if (!Hook::call('ArticleHandler::view::galley', [&$request, &$issue, &$this->galley, &$article, $publication])) {
-                if ($this->publication->getId() !== $this->article->getCurrentPublication()->getId()) {
+                if ($this->publication->getId() != $this->article->getData('currentPublicationId')) {
                     $redirectPath = [
                         $article->getBestId(),
                         'version',
@@ -545,7 +544,7 @@ class ArticleHandler extends Handler
         }
 
         // Make sure the reader has rights to view the article/issue.
-        if ($issue && $issue->getPublished() && $submission->getStatus() == PKPSubmission::STATUS_PUBLISHED) {
+        if ($issue && $issue->getPublished() && $submission->getData('status') == PKPSubmission::STATUS_PUBLISHED) {
             $subscriptionRequired = $issueAction->subscriptionRequired($issue, $context);
             $isSubscribedDomain = $issueAction->subscribedDomain($request, $context, $issue->getId(), $submission->getId());
 

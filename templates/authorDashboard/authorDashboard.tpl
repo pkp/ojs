@@ -40,7 +40,7 @@
 
 				{assign var=selectedTabIndex value=0}
 				{foreach from=$workflowStages item=stage}
-					{if $stage.id < $submission->getStageId()}
+					{if $stage.id < $submission->getData('stageId')}
 						{assign var=selectedTabIndex value=$selectedTabIndex+1}
 					{/if}
 				{/foreach}

@@ -83,7 +83,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
                     )
                 ];
             case 'issue':
-                $contextId = $submission->getContextId();
+                $contextId = $submission->getData('contextId');
                 $issueId = $submission->getCurrentPublication()->getData('issueId');
                 $issue = Repo::issue()->get($issueId);
                 $issue = $issue->getJournalId() == $contextId ? $issue : null;

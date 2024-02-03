@@ -99,7 +99,7 @@ class OJSPaymentManager extends PaymentManager
                 break;
             case self::PAYMENT_TYPE_PUBLICATION:
                 $submission = Repo::submission()->get($assocId);
-                if ($submission->getSubmissionProgress()) {
+                if ($submission->getData('submissionProgress')) {
                     $payment->setRequestUrl($dispatcher->url($request, Application::ROUTE_PAGE, null, 'submission', null, null, ['id' => $assocId]));
                 } else {
                     $payment->setRequestUrl($dispatcher->url($request, Application::ROUTE_PAGE, null, 'authorDashboard', 'submission', $submission->getId()));

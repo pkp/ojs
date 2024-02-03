@@ -81,7 +81,7 @@ class NativeXmlArticleGalleyFilter extends \PKP\plugins\importexport\native\filt
                         // Labels are not localized in OJS Galleys, but we use the <name locale="....">...</name> structure.
                         $locale = $n->getAttribute('locale');
                         if (empty($locale)) {
-                            $locale = $submission->getLocale();
+                            $locale = $submission->getData('locale');
                         }
                         $representation->setLabel($n->textContent);
                         $representation->setLocale($locale);

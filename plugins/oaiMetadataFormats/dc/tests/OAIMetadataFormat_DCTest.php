@@ -118,10 +118,10 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         // Article
         /** @var Submission|MockObject */
         $article = $this->getMockBuilder(Submission::class)
-            ->onlyMethods(['getBestId', 'getCurrentPublication'])
+            ->onlyMethods(['getId', 'getCurrentPublication'])
             ->getMock();
         $article->expects($this->any())
-            ->method('getBestId')
+            ->method('getId')
             ->will($this->returnValue(9));
         $article->setData('locale', 'en');
         $article->setId(9);

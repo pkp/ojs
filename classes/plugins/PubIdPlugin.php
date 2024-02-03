@@ -324,8 +324,8 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
             // %a - article id
             $pubIdSuffix = preg_replace('/%a/', $submission->getId(), $pubIdSuffix);
             // %p - page number
-            if ($submission->getPages()) {
-                $pubIdSuffix = preg_replace('/%p/', $submission->getPages(), $pubIdSuffix);
+            if ($pages = $submission->getCurrentPublication()->getData('pages')) {
+                $pubIdSuffix = preg_replace('/%p/', $pages, $pubIdSuffix);
             }
         }
 

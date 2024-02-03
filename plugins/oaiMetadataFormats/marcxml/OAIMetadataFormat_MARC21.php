@@ -40,6 +40,7 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat
         $templateMgr->assign([
             'journal' => $journal,
             'article' => $article,
+            'publication' => $article->getCurrentPublication(),
             'issue' => $record->getData('issue'),
             'section' => $record->getData('section')
         ]);
@@ -51,8 +52,8 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat
 
         $templateMgr->assign([
             'subject' => isset($subjects[$journal->getPrimaryLocale()]) ? $subjects[$journal->getPrimaryLocale()] : '',
-            'abstract' => PKPString::html2text($article->getAbstract($article->getLocale())),
-            'language' => LocaleConversion::get3LetterIsoFromLocale($article->getLocale())
+            'abstract' => PKPString::html2text($article->getAbstract($article->getData('locale'))),
+            'language' => LocaleConversion::get3LetterIsoFromLocale($article->getData('locale'))
         ]);
 
         $plugin = PluginRegistry::getPlugin('oaiMetadataFormats', 'OAIFormatPlugin_MARC21');

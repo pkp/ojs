@@ -79,10 +79,10 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
      */
     public function articleViewCallback($hookName, $args)
     {
-        $request = & $args[0];
-        $issue = & $args[1];
-        $galley = & $args[2];
-        $article = & $args[3];
+        $request = &$args[0];
+        $issue = &$args[1];
+        $galley = &$args[2];
+        $article = &$args[3];
 
         if (!$galley) {
             return false;
@@ -128,9 +128,9 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
      */
     public function articleDownloadCallback($hookName, $args)
     {
-        $article = & $args[0];
-        $galley = & $args[1];
-        $fileId = & $args[2];
+        $article = &$args[0];
+        $galley = &$args[1];
+        $fileId = &$args[2];
         $request = Application::get()->getRequest();
 
         if (!$galley) {

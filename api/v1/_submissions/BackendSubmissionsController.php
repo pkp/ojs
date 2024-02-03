@@ -76,7 +76,7 @@ class BackendSubmissionsController extends \PKP\API\v1\_submissions\PKPBackendSu
         $context = $request->getContext();
         $submission = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_SUBMISSION);
 
-        if (!$submission || !$context || $context->getId() != $submission->getContextId()) {
+        if (!$submission || !$context || $context->getId() != $submission->getData('contextId')) {
             return response()->json([
                 'error' => __('api.404.resourceNotFound')
             ], Response::HTTP_NOT_FOUND);

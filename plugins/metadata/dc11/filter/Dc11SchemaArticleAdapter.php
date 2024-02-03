@@ -65,8 +65,6 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
      */
     public function &extractMetadataFromDataObject(&$article)
     {
-        assert($article instanceof Submission);
-
         // Retrieve data that belongs to the article.
         // FIXME: Retrieve this data from the respective entity DAOs rather than
         // from the OAIDAO once we've migrated all OAI providers to the
@@ -78,16 +76,12 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         $journal = $oaiDao->getJournal($article->getData('contextId'));
         $section = $oaiDao->getSection($article->getSectionId());
         $publication = $article->getCurrentPublication();
-        if ($article instanceof Submission) { /** @var Submission $article */
-            $issue = $oaiDao->getIssue($publication->getData('issueId'));
-        } else {
-            $issue = null;
-        }
+        $issue = $oaiDao->getIssue($publication->getData('issueId'));
 
         $dc11Description = $this->instantiateMetadataDescription();
 
         // Title
-        $this->_addLocalizedElements($dc11Description, 'dc:title', $article->getFullTitle(null));
+        $this->_addLocalizedElements($dc11Description, 'dc:title', $publication->getFullTitles());
 
         // Creator
         foreach ($publication->getData('authors') as $author) {
@@ -105,7 +99,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         $this->_addLocalizedElements($dc11Description, 'dc:subject', $subjects);
 
         // Description
-        $this->_addLocalizedElements($dc11Description, 'dc:description', $article->getAbstract(null));
+        $this->_addLocalizedElements($dc11Description, 'dc:description', $publication->getData('abstract'));
 
         // Publisher
         $publisherInstitution = $journal->getData('publisherInstitution');
@@ -117,7 +111,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         $this->_addLocalizedElements($dc11Description, 'dc:publisher', $publishers);
 
         // Contributor
-        $contributors = (array) $article->getSponsor(null);
+        $contributors = (array) $publication->getData('sponsor');
         foreach ($contributors as $locale => $contributor) {
             $contributors[$locale] = array_map('trim', explode(';', $contributor));
         }
@@ -125,12 +119,10 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
 
 
         // Date
-        if ($article instanceof Submission) {
-            if ($article->getDatePublished()) {
-                $dc11Description->addStatement('dc:date', date('Y-m-d', strtotime($article->getDatePublished())));
-            } elseif (isset($issue) && $issue->getDatePublished()) {
-                $dc11Description->addStatement('dc:date', date('Y-m-d', strtotime($issue->getDatePublished())));
-            }
+        if ($datePublished = $publication->getData('datePublished')) {
+            $dc11Description->addStatement('dc:date', date('Y-m-d', strtotime($datePublished)));
+        } elseif (isset($issue) && $issue->getDatePublished()) {
+            $dc11Description->addStatement('dc:date', date('Y-m-d', strtotime($issue->getDatePublished())));
         }
 
         // Type
@@ -139,7 +131,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         $types = $section->getIdentifyType(null);
         $types = array_merge_recursive(
             empty($types) ? [Locale::getLocale() => __('metadata.pkp.peerReviewed')] : $types,
-            (array) $article->getType(null)
+            (array) $publication->getData('type')
         );
         $this->_addLocalizedElements($dc11Description, 'dc:type', $types);
         $driverVersion = 'info:eu-repo/semantics/publishedVersion';
@@ -158,20 +150,18 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         $issueAction = new IssueAction();
         $request = Application::get()->getRequest();
         $includeUrls = $journal->getSetting('publishingMode') != Journal::PUBLISHING_MODE_NONE || $issueAction->subscribedUser($request->getUser(), $journal, null, $article->getId());
-        if ($article instanceof Submission && $includeUrls) {
+        if ($includeUrls) {
             $dc11Description->addStatement('dc:identifier', $request->url($journal->getPath(), 'article', 'view', [$article->getBestId()]));
         }
 
         // Source (journal title, issue id and pages)
         $sources = $journal->getName(null);
-        $pages = $article->getPages();
+        $pages = $publication->getData('pages');
         if (!empty($pages)) {
             $pages = '; ' . $pages;
         }
         foreach ($sources as $locale => $source) {
-            if ($article instanceof Submission) {
-                $sources[$locale] .= '; ' . $issue->getIssueIdentification([], $locale);
-            }
+            $sources[$locale] .= '; ' . $issue->getIssueIdentification([], $locale);
             $sources[$locale] .= $pages;
         }
         $this->_addLocalizedElements($dc11Description, 'dc:source', $sources);
@@ -219,15 +209,15 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         }
 
         // Coverage
-        $this->_addLocalizedElements($dc11Description, 'dc:coverage', (array) $article->getCoverage(null));
+        $this->_addLocalizedElements($dc11Description, 'dc:coverage', (array) $publication->getData('coverage'));
 
         // Rights: Add both copyright statement and license
-        $copyrightHolder = $article->getLocalizedCopyrightHolder();
-        $copyrightYear = $article->getCopyrightYear();
+        $copyrightHolder = $publication->getLocalizedData('copyrightHolder');
+        $copyrightYear = $publication->getData('copyrightYear');
         if (!empty($copyrightHolder) && !empty($copyrightYear)) {
             $dc11Description->addStatement('dc:rights', __('submission.copyrightStatement', ['copyrightHolder' => $copyrightHolder, 'copyrightYear' => $copyrightYear]));
         }
-        if ($licenseUrl = $article->getLicenseURL()) {
+        if ($licenseUrl = $publication->getData('licenseUrl')) {
             $dc11Description->addStatement('dc:rights', $licenseUrl);
         }
 

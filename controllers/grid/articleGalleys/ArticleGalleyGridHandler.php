@@ -337,8 +337,8 @@ class ArticleGalleyGridHandler extends GridHandler
         $notificationDao = DAORegistry::getDAO('NotificationDAO'); /** @var NotificationDAO $notificationDao */
         $notificationDao->deleteByAssoc(Application::ASSOC_TYPE_REPRESENTATION, $galley->getId());
 
-        if ($this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_EDITING ||
-            $this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_PRODUCTION) {
+        if ($this->getSubmission()->getData('stageId') == WORKFLOW_STAGE_ID_EDITING ||
+            $this->getSubmission()->getData('stageId') == WORKFLOW_STAGE_ID_PRODUCTION) {
             $notificationMgr = new NotificationManager();
             $notificationMgr->updateNotification(
                 $request,
@@ -426,8 +426,8 @@ class ArticleGalleyGridHandler extends GridHandler
         if ($galleyForm->validate()) {
             $galley = $galleyForm->execute();
 
-            if ($this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_EDITING ||
-                $this->getSubmission()->getStageId() == WORKFLOW_STAGE_ID_PRODUCTION) {
+            if ($this->getSubmission()->getData('stageId') == WORKFLOW_STAGE_ID_EDITING ||
+                $this->getSubmission()->getData('stageId') == WORKFLOW_STAGE_ID_PRODUCTION) {
                 $notificationMgr = new NotificationManager();
                 $notificationMgr->updateNotification(
                     $request,
