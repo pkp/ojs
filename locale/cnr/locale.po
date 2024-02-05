@@ -1,7 +1,7 @@
 # Milutin Markovic <admin@fcjk.me>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-02-03 20:48+0000\n"
+"PO-Revision-Date: 2024-02-06 07:29+0000\n"
 "Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
 "Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "cnr/>\n"
@@ -275,3 +275,327 @@ msgstr "Povratak na detalje članka"
 
 msgid "submission.submissionEditing"
 msgstr "Uređivanje prijave"
+
+msgid "article.sectionEditor"
+msgstr "US"
+
+msgid "submission.notifyEditor"
+msgstr "Obavještavanje urednika"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Dosadašnja prepiska"
+
+msgid "submission.reviewersVersion"
+msgstr "Recenzentova verzija fajla"
+
+msgid "submission.editorVersion"
+msgstr "Urednikova verzija"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Autorova pregledana verzija fajla"
+
+msgid "submission.authorVersion"
+msgstr "Autorova verzija"
+
+msgid "submission.copyediting"
+msgstr "Lektura"
+
+msgid "submission.copyedit"
+msgstr "Lektura"
+
+msgid "submission.proofreading"
+msgstr "Korektura"
+
+msgid "submission.scheduledIn"
+msgstr "U planu objavljivanja za {$issueName}."
+
+msgid "submissions.step1"
+msgstr "1. korak"
+
+msgid "submissions.step3"
+msgstr "3. korak"
+
+msgid "submissions.queuedReview"
+msgstr "U recenziji"
+
+msgid "submissions.published"
+msgstr "Objavljeno"
+
+msgid "submissions.initial"
+msgstr "Prvobitno"
+
+msgid "submissions.proofread"
+msgstr "Korigovanje"
+
+msgid "submissions.initialProof"
+msgstr "Inicijalna korektura"
+
+msgid "submissions.postAuthor"
+msgstr "Post-autor"
+
+msgid "submissions.proof"
+msgstr "Korektura"
+
+msgid "submissions.editorDecision"
+msgstr "Odluka urednika"
+
+msgid "submissions.editorRuling"
+msgstr "Odluka urednika"
+
+msgid "submission.eventLog"
+msgstr "Zapis događaja"
+
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+msgid "submissions.layoutComplete"
+msgstr "Prelom dovršen"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Korigovano"
+
+msgid "submission.search"
+msgstr "Pretraživanje članaka"
+
+msgid "context.contexts"
+msgstr "Časopisi"
+
+msgid "journal.path"
+msgstr "Putanja"
+
+msgid "context.context"
+msgstr "Časopis"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "journal.viewAllIssues"
+msgstr "Pogledaj sve brojeve"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Uključi i korisnike bez uloga u ovom časopisu."
+
+msgid "user.profile.profileImage"
+msgstr "Slika profila"
+
+msgid "user.showAllJournals"
+msgstr "Prikaži moje časopise"
+
+msgid "user.registerForOtherJournals"
+msgstr "Registracija za ostale časopise"
+
+msgid "user.reviewerPrompt"
+msgstr ""
+"Da li biste željeli da budete recenzent radova koji se objavljuju u ovom "
+"časopisu?"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Da, zahtijevam ulogu {$userGroup}."
+
+msgid "user.register.contextsPrompt"
+msgstr "Za koje časopise na ovom sajtu želite da se registrujete?"
+
+msgid "user.register.otherContextRoles"
+msgstr "Zahtijevaj sledeće uloge."
+
+msgid "user.manageMySubscriptions"
+msgstr "Upravljanje mojim pretplatama"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"Vaš korisnički nalog trenutno nije povezan ni sa jednom ulogom u ovom "
+"časopisu. Molimo odaberite jedno od sljedećeg:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Prijavite članak"
+
+msgid "user.noRoles.regReviewer"
+msgstr "Registrujte se kao recenzent"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr ""
+"Registracija kao recenzent: Registracija recenzenata trenutno je onemogućena."
+
+msgid "user.role.manager"
+msgstr "Glavni urednik"
+
+msgid "user.role.subEditor"
+msgstr "Urednik rubrike"
+
+msgid "user.role.subscriptionManager"
+msgstr "Menadžer pretplata"
+
+msgid "user.role.managers"
+msgstr "Glavni urednici"
+
+msgid "user.role.subEditors"
+msgstr "Urednici rubrika"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Menadžeri pretplata"
+
+msgid "user.role.journalAssistant"
+msgstr "Asistent časopisa"
+
+msgid "user.role.journalAssistants"
+msgstr "Asistenti časopisa"
+
+msgid "issue.issue"
+msgstr "Broj časopisa"
+
+msgid "issue.issues"
+msgstr "Brojevi časopisa"
+
+msgid "issue.title"
+msgstr "Naslov"
+
+msgid "issue.number"
+msgstr "Broj"
+
+msgid "issue.no"
+msgstr "Br."
+
+msgid "issue.year"
+msgstr "Godina"
+
+msgid "issue.noIssues"
+msgstr "Nema brojeva"
+
+msgid "issue.toc"
+msgstr "Sadržaj"
+
+msgid "issue.abstract"
+msgstr "Sažetak"
+
+msgid "issue.coverPage.altText"
+msgstr "Slika naslovnice broja"
+
+msgid "issue.fullIssue"
+msgstr "Kompletno izdanje"
+
+msgid "issue.nonpdf.title"
+msgstr "Preuzmi izdanje"
+
+msgid "issue.viewIssue"
+msgstr "Pogledaj izdanje"
+
+msgid "issue.return"
+msgstr "Vrati se na detalje broja"
+
+msgid "subscriptionTypes.year"
+msgstr "godina"
+
+msgid "subscriptionTypes.years"
+msgstr "godine"
+
+msgid "subscriptionTypes.month"
+msgstr "mjesec"
+
+msgid "subscriptionTypes.months"
+msgstr "mjeseci"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Ne ističe"
+
+msgid "subscriptionTypes.format"
+msgstr "Format"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Na internetu"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Štampano"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Štampano i na internetu"
+
+msgid "subscriptions.inactive"
+msgstr "Neaktivno"
+
+msgid "subscriptions.status"
+msgstr "Status"
+
+msgid "subscriptions.status.active"
+msgstr "Aktivno"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Potrebno odobrenje"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Čeka se ručno plaćanje"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Čeka se plaćanje internetom"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Nemate aktivnu pretplatu."
+
+msgid "subscriptions.status.other"
+msgstr "Drugo, pogledaj napomene"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>Napomena:</strong> Institucionalna pretplata kupljena preko "
+"interneta zahtevaju odobravanje domena i IP opsega prije aktiviranja "
+"pretplate."
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Podnošenje događaja"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Članak prijavljen"
+
+msgid "submission.scheduling"
+msgstr "Raspoređivanje"
+
+msgid "submissions.reviewRound"
+msgstr "Krug recenzije"
+
+msgid "submissions.copyeditComplete"
+msgstr "Lektura dovršena"
+
+msgid "journal.currentIssue"
+msgstr "Najnoviji broj"
+
+msgid "submission.postReviewVersion"
+msgstr "Recenzirana verzija fajla"
+
+msgid "user.authorization.representationNotFound"
+msgstr "Zahtjevana galerija ne može biti pronađena."
+
+msgid "issue.viewIssueIdentification"
+msgstr "Pogledaj {$identification}"
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Da, želim biti kontaktiran vezano uz recenziranje radova u ovom časopisu."
+
+msgid "subscriptionTypes.currency"
+msgstr "Valuta"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Ukoliko ste zahtijevali da postanete recenzent časopisa, molimo Vas da "
+"unesete vaše oblasti interesovanja."
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Potrebna informacija"
+
+msgid "user.myJournals"
+msgstr "Moji časopisi"
+
+msgid "subscriptions.individualDescription"
+msgstr "Individualne pretplate zahtijevaju prijavu za pristup sadržaju."
+
+msgid "user.noRoles.chooseJournal"
+msgstr ""
+"Vaš korisnički nalog trenutno nije povezan ni sa jednim časopisom. Molimo "
+"odaberite časopis:"
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"Institucionalne pretplate ne zahtijevaju prijavljivanje. Korisnički domen "
+"ili IP adresa se koristi kao potvrda za pristup sadržaju pretplate."
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Prijava članka: Registracija autora trenutno je onemogućena."
