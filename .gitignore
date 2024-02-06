@@ -5,6 +5,7 @@ temp
 /plugins/paymethod/paypal/vendor/
 .htaccess
 .project
+.vscode
 .buildpath
 .settings
 .DS_Store
