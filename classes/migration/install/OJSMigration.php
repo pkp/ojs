@@ -449,8 +449,6 @@ class OJSMigration extends \PKP\migration\Migration
         Schema::drop('issue_galleys');
         Schema::drop('issue_settings');
         Schema::drop('issues');
-        Schema::drop('doi_settings');
-        Schema::drop('dois');
         Schema::drop('section_settings');
         Schema::drop('sections');
     }
