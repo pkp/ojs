@@ -136,7 +136,6 @@ user_validation_period = 28
 
 ; Turn sandbox mode to On in order to prevent the software from interacting with outside systems.
 ; Use this for development or testing purposes.
-: Affected services are email, datacite, crossref, orcid and paypal payment
 sandbox = Off
 
 
