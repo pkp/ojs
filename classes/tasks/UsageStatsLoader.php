@@ -35,20 +35,20 @@ class UsageStatsLoader extends PKPUsageStatsLoader
 {
     protected function getFileJobs(string $filePath, Site $site): array
     {
-        $loadId = basename($filePath);
+        $logFileName = basename($filePath);
         return [
-            new ProcessUsageStatsLogFile($filePath, $loadId),
-            new RemoveDoubleClicks($loadId),
-            new CompileUniqueInvestigations($loadId),
-            new CompileUniqueRequests($loadId),
-            new CompileContextMetrics($loadId),
-            new CompileIssueMetrics($loadId),
-            new CompileSubmissionMetrics($loadId),
-            new CompileSubmissionGeoDailyMetrics($loadId),
-            new CompileCounterSubmissionDailyMetrics($loadId),
-            new CompileCounterSubmissionInstitutionDailyMetrics($loadId),
-            new DeleteUsageStatsTemporaryRecords($loadId),
-            new ArchiveUsageStatsLogFile($loadId, $site),
+            new ProcessUsageStatsLogFile($filePath, $logFileName),
+            new RemoveDoubleClicks($logFileName),
+            new CompileUniqueInvestigations($logFileName),
+            new CompileUniqueRequests($logFileName),
+            new CompileContextMetrics($logFileName),
+            new CompileIssueMetrics($logFileName),
+            new CompileSubmissionMetrics($logFileName),
+            new CompileSubmissionGeoDailyMetrics($logFileName),
+            new CompileCounterSubmissionDailyMetrics($logFileName),
+            new CompileCounterSubmissionInstitutionDailyMetrics($logFileName),
+            new DeleteUsageStatsTemporaryRecords($logFileName),
+            new ArchiveUsageStatsLogFile($logFileName, $site),
         ];
     }
 }
