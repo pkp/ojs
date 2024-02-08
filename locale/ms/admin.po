@@ -172,10 +172,10 @@ msgstr "Pemberitahuan Akses Terbuka"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Peringatan Ulasan"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "ID bukan integer."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "ID galley bukan integer."
 
 msgid ""

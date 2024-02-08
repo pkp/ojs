@@ -171,10 +171,10 @@ msgstr "Notifica Open Access"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Sollecito per il revisore"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "L'ID del fascicolo non è un numero intero."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "L'ID della gabbia di fascicolo non è un numero intero."
 
 msgid ""

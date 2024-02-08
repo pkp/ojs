@@ -167,10 +167,10 @@ msgstr "Нотификација за Отворен пристап"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Потсетување на рецензентот"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "Идентификацискиот број не е цел број."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "Идентификацискиот број на прегледот не е цел број."
 
 msgid ""

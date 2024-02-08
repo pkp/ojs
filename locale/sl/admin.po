@@ -167,10 +167,10 @@ msgstr "Obvestilo o prostem dostopu"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Opomnik za recenzijo"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "ID številke ni naravno število."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "ID preloma številke ni naravno število."
 
 msgid ""

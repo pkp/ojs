@@ -166,10 +166,10 @@ msgstr "Paziņojums par atvērto piekļuvi"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Recenzēšanas atgādinājums"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "Žurnāla numura ID nav vesels skaitlis."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "Žurnāla numura saliktņa ID nav vesels skaitlis."
 
 msgid ""

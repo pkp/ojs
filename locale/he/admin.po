@@ -157,10 +157,10 @@ msgstr "הודעת גישה פתוחה"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "תזכורת סקירה"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr ""
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr ""
 
 msgid ""

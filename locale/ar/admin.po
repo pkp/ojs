@@ -169,10 +169,10 @@ msgstr "إشعارات الوصول المفتوح"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "منبه التحكيم"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "الرمز التعريفي للعدد ليس عددًا صحيحًا."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "الرمز التعريفي للوح الطباعي ليس عددًا صحيحًا."
 
 msgid ""

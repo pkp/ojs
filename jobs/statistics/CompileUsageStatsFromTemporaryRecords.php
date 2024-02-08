@@ -12,6 +12,8 @@
  * @ingroup jobs
  *
  * @brief Compile the temporary usage stats and store them in the metrics table.
+ *
+ * @deprecated 3.4.0.5
  */
 
 namespace APP\jobs\statistics;
@@ -34,17 +36,13 @@ class CompileUsageStatsFromTemporaryRecords extends BaseJob
     public $tries = 1;
 
     /**
-     * The load ID = usage stats log file name
-     */
-    protected string $loadId;
-
-    /**
      * Create a new job instance.
+     *
+     * @param string $loadId Usage stats log file name
      */
-    public function __construct(string $loadId)
+    public function __construct(protected string $loadId)
     {
         parent::__construct();
-        $this->loadId = $loadId;
     }
 
     /**
