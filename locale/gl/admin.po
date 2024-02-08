@@ -169,10 +169,10 @@ msgstr "Notificación de acceso aberto"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Recordatorio de revisión"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "O ID do número non é un enteiro."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "O ID da galerada do número non é un enteiro."
 
 msgid ""

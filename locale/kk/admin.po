@@ -164,10 +164,10 @@ msgstr "Access хабарламасын ашыңыз"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Шолу туралы еске салу"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr ""
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr ""
 
 msgid ""

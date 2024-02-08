@@ -172,10 +172,10 @@ msgstr "Notificação de Acesso Aberto"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "Lembrete de revisão"
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "O ID da edição não é um número inteiro."
 
-msgid "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueGalleyId"
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
 msgstr "O ID da composição final da edição não é um número inteiro."
 
 msgid ""
