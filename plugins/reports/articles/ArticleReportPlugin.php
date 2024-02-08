@@ -18,7 +18,6 @@ namespace APP\plugins\reports\articles;
 
 use APP\decision\Decision;
 use APP\facades\Repo;
-use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\plugins\ReportPlugin;
@@ -77,7 +76,7 @@ class ArticleReportPlugin extends ReportPlugin
     public function display($args, $request)
     {
         $context = $request->getContext();
-        $acronym = PKPString::regexp_replace('/[^A-Za-z0-9 ]/', '', $context->getLocalizedAcronym());
+        $acronym = preg_replace('/[^A-Za-z0-9 ]/', '', $context->getLocalizedAcronym());
 
         // Prepare for UTF8-encoded CSV output.
         header('content-type: text/comma-separated-values');

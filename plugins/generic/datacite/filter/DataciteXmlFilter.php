@@ -179,7 +179,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         if ($plugin->isTestMode($context)) {
             $testDOIPrefix = $plugin->getSetting($context->getId(), 'testDOIPrefix');
             assert(!empty($testDOIPrefix));
-            $doi = PKPString::regexp_replace('#^[^/]+/#', $testDOIPrefix . '/', $doi);
+            $doi = preg_replace('#^[^/]+/#', $testDOIPrefix . '/', $doi);
         }
         $rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'identifier', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
         $node->setAttribute('identifierType', DATACITE_IDTYPE_DOI);
