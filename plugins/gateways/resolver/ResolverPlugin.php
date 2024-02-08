@@ -19,7 +19,6 @@ use APP\facades\Repo;
 use APP\issue\Collector;
 use APP\journal\JournalDAO;
 use APP\template\TemplateManager;
-use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\plugins\GatewayPlugin;
 
@@ -140,13 +139,13 @@ class ResolverPlugin extends GatewayPlugin
                 foreach ($submissions as $submission) {
                     // Look for the correct page in the list of articles.
                     $matches = null;
-                    if (PKPString::regexp_match_get('/^[Pp][Pp]?[.]?[ ]?(\d+)$/', $submission->getPages(), $matches)) {
+                    if (preg_match('/^[Pp][Pp]?[.]?[ ]?(\d+)$/u', $submission->getPages(), $matches)) {
                         $matchedPage = $matches[1];
                         if ($page == $matchedPage) {
                             $request->redirect(null, 'article', 'view', $submission->getBestId());
                         }
                     }
-                    if (PKPString::regexp_match_get('/^[Pp][Pp]?[.]?[ ]?(\d+)[ ]?-[ ]?([Pp][Pp]?[.]?[ ]?)?(\d+)$/', $submission->getPages(), $matches)) {
+                    if (preg_match('/^[Pp][Pp]?[.]?[ ]?(\d+)[ ]?-[ ]?([Pp][Pp]?[.]?[ ]?)?(\d+)$/u', $submission->getPages(), $matches)) {
                         $matchedPageFrom = $matches[1];
                         $matchedPageTo = $matches[3];
                         if ($page >= $matchedPageFrom && ($page < $matchedPageTo || ($page == $matchedPageTo && $matchedPageFrom = $matchedPageTo))) {
