@@ -22,7 +22,7 @@ var template = pkp.Vue.compile('<div class="pkpFormField pkpFormField--text pkpF
 '			<div' +
 '				v-if="isPrimaryLocale && description"' +
 '				class="pkpFormField__description"' +
-'				v-html="description"' +
+'				v-strip-unsafe-html="description"' +
 '				:id="describedByDescriptionId"' +
 '			/>' +
 '			<div class="pkpFormField__control" :class="controlClasses">' +
