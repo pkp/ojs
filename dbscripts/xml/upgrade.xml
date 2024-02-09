@@ -123,6 +123,8 @@
 		<migration class="PKP\migration\upgrade\v3_5_0\I9552_UserGroupsMasthead"/>
 		<migration class="APP\migration\upgrade\v3_5_0\I9425_SeparateUIAndSubmissionLocales"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I9709_UserUserGroupsMasthead"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I9566_UserRememberToken"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I9566_SessionUpgrade"/>
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
