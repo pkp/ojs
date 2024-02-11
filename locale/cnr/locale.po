@@ -1,7 +1,7 @@
 # Milutin Markovic <admin@fcjk.me>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-02-06 07:29+0000\n"
+"PO-Revision-Date: 2024-02-11 14:03+0000\n"
 "Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
 "Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "cnr/>\n"
@@ -599,3 +599,548 @@ msgstr ""
 
 msgid "user.noRoles.submitArticleRegClosed"
 msgstr "Prijava članka: Registracija autora trenutno je onemogućena."
+
+msgid "issue.volume"
+msgstr "Volume"
+
+#, fuzzy
+msgid "issue.vol"
+msgstr "Vol."
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Prijava je stavljena u red čekanja u rasporedu časopisa"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Prijava je dodijeljena broju časopisa"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Članak objavljen"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Prijavljena je autorova revizija"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Autorov revizijski fajl je ažuriran"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Uredniku je dodijeljena prijava"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Uredniku je uklonjena prijava"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Evidentirana je urednička odluka"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Ažuriran je urednikov fajl"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Prijava je poslana u arhivu"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Prijava je povučena iz arhive"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Lektoru je dodijeljena prijava"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Lektoru je povučena prijava"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Pokrenuta je dodjela lekture"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Lektorisani fajl lektora je ažuriran"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Početna lektura je gotova"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Završna lektura je gotova"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Fajl lekture je ažuriran"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Korektoru je dodijeljena prijava"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Korektoru je povučena prijava"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Dodjela korekture je gotova"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Grafičkom uredniku je povučen prilog"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Ažurirani prelomi"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Završena je dodjela uređivanja preloma"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Pokrenuta je dodjela uređivanja preloma"
+
+msgid "search.results.similarDocuments"
+msgstr "sličnа dokumentа"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Upravljanje pretplatama"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Individualne pretplate"
+
+msgid "reader.subscribersOnly"
+msgstr "Samo za pretplatnike"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"Samo pretplatnici mogu pristupiti ovom sadržaju. Za potvrdu pretplatničkog "
+"statusa, prijavite se u sistem."
+
+msgid "reader.openAccess"
+msgstr "Otvoren pristup"
+
+msgid "reader.subscriptionAccess"
+msgstr "Pretplatnički pristup"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Pretplatnički ili otvoren pristup"
+
+msgid "comments.commentsOnArticle"
+msgstr "Komentari na ovaj članak"
+
+msgid "comments.authenticated"
+msgstr "od <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "search.results.orderBy.author"
+msgstr "Autor"
+
+msgid "search.results.orderBy.article"
+msgstr "Naslov članka"
+
+msgid "search.results.orderBy.issue"
+msgstr "Broj"
+
+msgid "search.results.orderBy.journal"
+msgstr "Naslov časopisa"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Popularnost (poslednji mjesec)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Relevantnost"
+
+msgid "search.results.orderDir.asc"
+msgstr "Uzlazno"
+
+msgid "search.results.orderDir.desc"
+msgstr "Silazno"
+
+msgid "search.results.orderBy"
+msgstr "Poređaj rezultate po"
+
+msgid "search.results.orderBy.date"
+msgstr "Datum objavljivanja"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Tipovi pretplata"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Dodaci preloma članka"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"Dodaci preloma časopisa dodaju podršku za prikaz različitih vrsta dokumenata "
+"kao preloma članka."
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+"Autorizacijski dodaci omogućuju Open Journal Sistemu da vrši provjeru "
+"vjerodostojnosti korisničkih pristupa putem spoljašnjih sistema kao što je "
+"LDAP."
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Koraci: Red čekanja prijave > Recenzija prijave> Uređivanje prijave > Red "
+"čekanja pri određivanju rokova > Sadržaja.<br /><br />\n"
+"Odaberite model za korištenje ovih aspekata lektorskoga postupka. (Da biste "
+"odredili glavnog urednika i urednika rubrika, odite na Urednici u Uređivački "
+"postupci.)"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Da li želite da onemogućite ovog korisnika? Ovo će spriječiti korisnika da "
+"se prijavi u sistem.\n"
+"Opciono možete proslijediti korisniku razlog zašto ste mu onemogućili nalog."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Izvinite, nemate administrativnih prava nad ovim korisnikom. To može biti "
+"zbog:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>Korisnik je administrator sranice</li>\n"
+"\t\t\t<li> Korisnik je aktivan u časopisima kojima vi ne upravljate</li>\n"
+"\t\t</ul>\n"
+"\tOvaj zadatak mora biti izvršen od administratora stranice.\n"
+"\t"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Aktivna urednička zaduženja"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Dovršena urednička zaduženja"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Nema dodijeljenih prijava."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"Obavještavanje ovog lektora će ponovno pokrenuti njegovu dodjelu. Jeste li "
+"sigurni da to želite?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"Obavještavanje ovog autora će ponovno pokrenuti njegovu dodjelu. Jeste li "
+"sigurni da to želite?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"Obavještavanje ovog korektora će ponovno pokrenuti njegovu dodjelu. Jeste li "
+"sigurni da to želite?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Izvinjenje"
+
+msgid "sectionEditor.regrets.title"
+msgstr ""
+"#{$submissionId} recenzentovo izvinjenje, otkazivanja i prethodni krugovi"
+
+msgid "sectionEditor.regrets"
+msgstr "Izvinjenja"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Pregled odbijenih, otkazanih i prethodnih recenzija"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Stručna recenzija, {$round}. krug"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Urednikova odluka, {$round}. krug"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Recenzentova izvinjenja i otkazivanja"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Izvinjenje"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Kreiraj novog recenzenta"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Aktivna zaduženja grafičkog urednika"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Dovršena zaduženja grafičkog urednika"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Nema aktivnih zaduženja."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Zaduženja grafičkog uređivanja"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Postavite format preloma"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Zamijeni fajl"
+
+msgid "submission.layout.imageInvalid"
+msgstr "Neispravni format slike. Sistem prihvata .gif, .jpg ili .png formate."
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Ovaj će prelom biti dostupan na zasebnoj web stranici."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "URL za sadržaj na udaljenom serveru"
+
+msgid "reviewer.completedReviews"
+msgstr "Završeno"
+
+msgid "reviewer.averageQuality"
+msgstr "Ocjena"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Fajl za recenziju"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Obavijestite urednika"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Izradit ću recenziju"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Nisam u mogućnosti izraditi recenziju"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Prijavu uređuje"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Ovđe ukucajte komentare za recenziju"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Urednički unos recenzije"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Pošaljite podśetnik"
+
+msgid "reviewer.article.automatic"
+msgstr "(Automatski)"
+
+msgid "reviewer.article.recommendation"
+msgstr "Preporuka"
+
+msgid "reviewer.article.submitReview"
+msgstr "Predajte recenziju uredniku"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Komentari"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Dostavljeni fajlovi"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Verziju je postavio recenzent"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Urednički zahtev"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Vaš odgovor"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Recenzija predata"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Rok za recenzije"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Objaviti bez izmjena"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Objaviti uz predložene izmjene"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Vratiti na recenziju"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Predložiti za objavljivanje drugdje"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Tekst nije za objavljivanje"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Pogledajte komentare"
+
+msgid "reviewer.article.schedule"
+msgstr "Napravite raspored"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Vremenski okvir recenzije"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Indeksiranje \"{$journalName}\""
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Odaberite kako želite rasporediti članke u ovoj kategoriji."
+
+msgid "catalog.sortBy"
+msgstr "Redoslijed članaka"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} je preuzeo/la postupak uređivanja članka {$submissionId}."
+
+msgid "navigation.subscriptions"
+msgstr "Pretplate"
+
+msgid "editor.issues.futureIssues"
+msgstr "Budući brojevi"
+
+msgid "editor.issues.backIssues"
+msgstr "Prethodni brojevi"
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr ""
+"Data putanja časopisa \"{$journalPath}\" nije mogla da se spoji sa časopisom."
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Pokrenuta je dodjela korekcije"
+
+msgid "plugins.categories.generic.description"
+msgstr ""
+"Generički dodaci služe proširivanju funkcionalnosti OJS-a na mnoge načine "
+"koji nisu podržani dodacima u drugim katerogijama."
+
+msgid "reader.purchasePrice"
+msgstr "({$price} {$currency} )"
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr "Ova primjena pretrage ne dozvoljava ponovno indeksiranje po časopisu."
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Korigovan fajl korektora je ažuriran"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Popularnost (sve vreme)"
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Predložene Creative Commons odredbe o autorskim pravima</h3>\n"
+"<h4>1. Prijedlog za časopise koji omogućuju otvoren pristup</h4>\n"
+"Autori koji objavljuju u ovom časopisu pristaju na sljedeće uslove:\n"
+"<ol type=\"a\">\n"
+"\t<li>Autori zadržavaju autorska prava i pružaju časopisu pravo prvog "
+"objavljivanja rada i licenciraju ga <a target=\"_new\" href=\"http"
+"://creativecommons.org/licenses/by/3.0/hr/\">Creative Commons imenovanje "
+"licencom</a> koja omogućava drugima da dijele rad uz uslov navođenja "
+"autorstva i izvornog objavljivanja u ovom časopisu.</li>\n"
+"\t<li>Autori mogu izraditi zasebne, ugovorne aranžmane za ne-ekskluzivnu "
+"distribuciju rada objavljenog u časopisu (npr. postavljanje u "
+"institucionalni repozitorij ili objavljivanje u knjizi), uz navođenje da je "
+"rad izvorno objavljen u ovom časopisu. </li>\n"
+"\t<li>Autorima je dozvoljeno i potiču se da postave objavljeni rad on-line ("
+"npr. u institucionalnom repozitoriju ili na svojim mrežnim stranicama) prije "
+"i tijekom postupka prijave, s obzirom da takav postupak može voditi "
+"produktivnoj razmjeni ideja, te ranijoj i većoj citiranosti objavljenog rada "
+"(usp. <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio."
+"html\">The Effect of Open Access</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. Prijedlog za časopise koji omogućuju odgođeni otvoren pristup</h4>\n"
+"Autori koji objavljuju u ovom časopisu pristaju na sljedeće uslove:\n"
+"<ol type=\"a\">\n"
+"\t<li>Autori zadržavaju autorska prava i pružaju časopisu pravo prvog "
+"objavljivanja, pri čemu će rad [NAVEDITE VREMENSKI PERIOD] po objavljivanju "
+"biti podložan licenci  <a target=\"_new\" href=\"http://creativecommons.org/"
+"licenses/by/3.0/hr/\">Creative Commons imenovanje </a> koja omogućava "
+"drugima da dijele rad uz uvijet navođenja autorstva i izvornog objavljivanja "
+"u ovom časopisu.</li>\n"
+" <li>Autori mogu izraditi zasebne, ugovorne aranžmane za ne-ekskluzivnu "
+"distribuciju rada objavljenog u časopisu (npr. postavljanje u "
+"institucionalni repozitorij ili objavljivanje u knjizi), uz navođenje da je "
+"rad izvorno objavljen u ovom časopisu. </li>\n"
+" <li>Autorima je dozvoljeno i potiču se da postave objavljeni rad on-line ("
+"npr. u institucionalnom repozitoriju ili na svojim mrežnim stranicama) prije "
+"i tijekom postupka prijave, s obzirom da takav postupak može voditi "
+"produktivnoj razmjeni ideja, te ranijoj i većoj citiranosti objavljenog rada "
+"(usp. <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio."
+"html\">The Effect of Open Access</a>).</li>\n"
+"</ol>"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Prilog je dodjeljen grafičkom uredniku"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>NAPOMENA!</h4>\n"
+"<p>Sistem ne može automatski obaviti prepisivanje preko konfiguracijonog "
+"fajla. Kako biste primjenili konfiguracijske izmjene morate otvoriti "
+"fajl<tt>config.inc.php</tt> u prikladnom uređivaču teksta i zamijeniti "
+"njegov sadržaj sa sadržajem teksta u polju ispod.</p>"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Institucionalne pretplate"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Kako bi čitaoci lakše pristupili mrežno dostupnim prečicama referenci "
+"koje navode autori priloga objavljenih u časopisu, moguće je učiniti "
+"sledeće:</p>\n"
+"<ol>\n"
+"\t<li><strong>Dodati alate za čitanje</strong><p>Glavni urednik može dodati "
+"\"Traženje referenci\" alatima za čitanje koji su pridruženi objavljenim "
+"prilozima. Ovo omogućava čitaocima da zalijepe naslov reference i potraže ih "
+"u određenim bazama.</p></li>\n"
+"\t<li><strong>Uključiti linkoveu popis literature</strong><p>Grafički "
+"urednik može dodati aktivne linkove u reference čiji se sadržaj može pronaći "
+"na mreži. Pri tome se treba voditi sledećim preporukama (koje se mogu "
+"uređivati).</p></li>\n"
+"</ol>"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Označene stavke ukazuju na radnje koje urednik mora poduzeti, označene "
+"kako slijedi:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">Recenzent je dodijeljen ali "
+"nije obaviješten e-mailom</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">Svi recenzenti su dostavili svoje "
+"komentare, ali odluka nije zabilježena</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">Autor je postavio "
+"revidirani rukopis</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">Recenzent nije u "
+"roku potvrdio poziv na recenziranje članka</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">Recenzent nije u roku "
+"obavio recenziju</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>\"Rok\" se popunjava kada recenzent prihvati poziv na recenziranje; "
+"prikazuje broj tjedana do krajnjeg datuma postavljanja recenzije ili (-) "
+"neđelju koliko je prešao/la rok.</li>\n"
+"</ol>"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Označene stavke ukazuju na radnje koje urednik mora poduzeti, označene "
+"kako slijedi:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Potrebne su radnje na nivou "
+"lektoriranja</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">Potrebne su radnje na nivou "
+"dizajna</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">Potrebne su radnje na nivou "
+"korekture</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"Obavještavanje ovog grafičkog urednika će ponovno pokrenuti njegovu dodjelu. "
+"Jeste li sigurni da to želite?"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Rezultat"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Dodijeli postojećeg korisnika kao recenzenta"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Dodajte dopunski fajl"
+
+msgid "reviewer.pendingReviews"
+msgstr "Članci čija je recenzija u toku"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr ""
+"Tekst prijave će biti na raspolaganju kada i ako recenzent prihvati ponudu "
+"izrade recenzije"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(Ako želite obilježiti fajl za urednika, spremite ga na vaš hard disk i "
+"koristite Pregled/Slanje.)"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Prilog koji je potrebno recenzirati"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Koraci recenzije"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Smjernice za recenzente"
