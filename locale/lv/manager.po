@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022, 2023, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-23 11:39+0000\n"
+"PO-Revision-Date: 2024-02-13 13:39+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/manager/lv/>"
 "\n"
@@ -791,7 +791,7 @@ msgstr "Iespējot PKP PN spraudni"
 
 msgid "manager.setup.plnDescription"
 msgstr ""
-"PKP Uzturēšanas tīkls (Preservation Network - PN) sniedz bezmaksas "
+"PKP Uzturēšanas tīkls (Preservation Network – PN) sniedz bezmaksas "
 "glabāšanas pakalpojumus jebkuram OJS žurnālam, kas atbilst pamatkritērijiem."
 
 msgid "manager.setup.plnSettingsDescription"
@@ -800,11 +800,11 @@ msgstr ""
 "lietošanas noteikumiem."
 
 msgid "manager.setup.plnPluginArchiving"
-msgstr "PKP Uzturēšanas tīkls (Preservation Network - PN)"
+msgstr "PKP Uzturēšanas tīkls (Preservation Network – PN)"
 
 msgid "manager.setup.plnPluginNotInstalled"
 msgstr ""
-"PKP Uzturēšanas tīkls (PN - Preservation network) sniedz bezmaksas "
+"PKP Uzturēšanas tīkls (PN – Preservation network) sniedz bezmaksas "
 "uzturēšanas pakalpojumus jebkuram OJS žurnālam, kas atbilst vairākiem "
 "pamatkritērijiem. Lai arhivētu savu žurnālu PN, lūdziet administratoram "
 "instalēt PKP|PN spraudni no spraudņu galerijas."
@@ -1044,7 +1044,7 @@ msgstr ""
 
 msgid "manager.setup.searchDescription.description"
 msgstr ""
-"Sniedziet īsu žurnāla aprakstu (50-300 rakstzīmju), ko meklētājprogrammas "
+"Sniedziet īsu žurnāla aprakstu (50–300 rakstzīmju), ko meklētājprogrammas "
 "var parādīt, iekļaujot žurnālu meklēšanas rezultātos."
 
 msgid "manager.setup.sectionsAndSectionEditors"
@@ -1081,7 +1081,7 @@ msgstr "Pieci soļi žurnāla tīmekļa vietnes izveidei"
 
 msgid "manager.setup.subjectExamples"
 msgstr ""
-"(piem., fotosintēze; melnie caurumi; četru krāsu kartes problēma; Beiesa "
+"(piem., fotosintēze; melnie caurumi; četru krāsu kartes problēma; Beijesa "
 "teorēma)"
 
 msgid "manager.setup.subjectKeywordTopic"
