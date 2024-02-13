@@ -88,7 +88,7 @@ class ArticleGalleyGridRow extends GridRow
 
             if ($this->_isEditable) {
                 $galley = $this->getData();
-                if (!$galley->getRemoteUrl()) {
+                if (!$galley->getData('urlRemote')) {
                     $this->addAction(new AddFileLinkAction(
                         $request,
                         $this->getSubmission()->getId(),
