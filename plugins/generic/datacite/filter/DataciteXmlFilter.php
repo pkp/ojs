@@ -527,7 +527,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $resourceTypeNode = null;
         switch (true) {
             case isset($galley):
-                if (!$galley->getRemoteURL()) {
+                if (!$galley->getData('urlRemote')) {
                     $genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'));
                     if ($genre->getCategory() == Genre::GENRE_CATEGORY_DOCUMENT && !$genre->getSupplementary() && !$genre->getDependent()) {
                         $resourceType = 'Article';
@@ -747,7 +747,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $descriptions = [];
         switch (true) {
             case isset($galley):
-                if (!$galley->getRemoteURL()) {
+                if (!$galley->getData('urlRemote')) {
                     $genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'));
                     if ($genre->getSupplementary()) {
                         $suppFileDesc = $this->getPrimaryTranslation($galleyFile->getData('description'), $objectLocalePrecedence);

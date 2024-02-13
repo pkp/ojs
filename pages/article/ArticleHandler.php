@@ -271,7 +271,7 @@ class ArticleHandler extends Handler
             }, $supplementaryGenres);
 
             foreach ($galleys as $galley) {
-                $remoteUrl = $galley->getRemoteURL();
+                $remoteUrl = $galley->getData('urlRemote');
                 $file = Repo::submissionFile()->get((int) $galley->getData('submissionFileId'));
                 if (!$remoteUrl && !$file) {
                     continue;
@@ -310,8 +310,8 @@ class ArticleHandler extends Handler
         ]);
 
         // Fetch and assign the galley to the template
-        if ($this->galley && $this->galley->getRemoteURL()) {
-            $request->redirectUrl($this->galley->getRemoteURL());
+        if ($this->galley && $this->galley->getData('urlRemote')) {
+            $request->redirectUrl($this->galley->getData('urlRemote'));
         }
 
         if (empty($this->galley)) {
@@ -458,8 +458,8 @@ class ArticleHandler extends Handler
         if (!isset($this->galley)) {
             $request->getDispatcher()->handle404();
         }
-        if ($this->galley->getRemoteURL()) {
-            $request->redirectUrl($this->galley->getRemoteURL());
+        if ($this->galley->getData('urlRemote')) {
+            $request->redirectUrl($this->galley->getData('urlRemote'));
         } elseif ($this->userCanViewGalley($request, $this->article->getId(), $this->galley->getId())) {
             if (!$this->submissionFileId) {
                 $this->submissionFileId = $this->galley->getData('submissionFileId');
