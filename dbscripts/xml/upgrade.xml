@@ -14,122 +14,14 @@
 <install version="3.5.0.0">
 	<code function="checkPhpVersion" />
 
-	<upgrade minversion="2.0.0.0" maxversion="3.0.9.9">
+	<upgrade minversion="2.0.0.0" maxversion="3.2.9.9">
 		<!-- OJS < 3.1.0 upgrade unsupported -->
 		<code function="abort" message="installer.unsupportedUpgradeError" />
-	</upgrade>
-
-	<upgrade minversion="3.1.0.0" maxversion="3.1.0.9">
-		<data file="dbscripts/xml/upgrade/3.1.1_preupdate_citations.xml" condition="return $installer->columnExists('citations', 'assoc_type');" />
-	</upgrade>
-
-	<upgrade minversion="3.1.0.0" maxversion="3.1.1.9">
-		<data file="dbscripts/xml/upgrade/3.1.2_preupdate_user_author_names.xml" condition="return $installer->columnExists('users', 'first_name');" />
-	</upgrade>
-
-	<upgrade minversion="3.1.0.0" maxversion="3.1.9.9">
-		<code function="migrateSubmissionCoverImages" />
-		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_email_templates.xml" />
-		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_versioning_articleGalleySettings.xml" condition="return $installer->tableExists('article_galley_settings');"/>
-		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_versioning.xml" />
-		<data file="dbscripts/xml/upgrade/3.2.0_preupdate_last_activity.xml" />
-	</upgrade>
-
-	<upgrade minversion="3.1.0.0" maxversion="3.1.9.9">
-		<!-- Old schema syncs: These are deprecated! -->
-		<schema file="lib/pkp/xml/schema/common.xml" />
-		<schema file="lib/pkp/xml/schema/log.xml" />
-		<schema file="lib/pkp/xml/schema/announcements.xml" />
-		<schema file="lib/pkp/xml/schema/scheduledTasks.xml" />
-		<schema file="lib/pkp/xml/schema/temporaryFiles.xml" />
-		<schema file="lib/pkp/xml/schema/metadata.xml" />
-		<schema file="lib/pkp/xml/schema/reviews.xml" />
-		<schema file="lib/pkp/xml/schema/reviewForms.xml" />
-		<schema file="lib/pkp/xml/schema/controlledVocab.xml" />
-		<schema file="lib/pkp/xml/schema/submissions.xml" />
-		<schema file="lib/pkp/xml/schema/submissionFiles.xml" />
-		<schema file="lib/pkp/xml/schema/categories.xml" />
-		<schema file="lib/pkp/xml/schema/notes.xml" />
-		<schema file="lib/pkp/xml/schema/genres.xml" />
-		<schema file="lib/pkp/xml/schema/tombstone.xml" />
-		<schema file="lib/pkp/xml/schema/rolesAndUserGroups.xml" />
-		<schema file="lib/pkp/xml/schema/metrics.xml" />
-		<schema file="lib/pkp/xml/schema/libraryFiles.xml" />
-		<schema file="lib/pkp/xml/schema/navigationMenus.xml" />
-		<schema file="dbscripts/xml/ojs_schema.xml" />
 	</upgrade>
 
 	<!-- Install default NavigationMenus -->
 	<code function="installDefaultNavigationMenus" />
 	<code function="migrateStaticPagesToNavigationMenuItems" />
-
-	<upgrade minversion="3.1.0.0" maxversion="3.1.1.9">
-		<code function="migrateSRLocale" />
-	</upgrade>
-
-	<upgrade minversion="3.1.0.0" maxversion="3.1.9.9">
-		<!-- migrateUserAndAuthorNames should be after migrateSRLocale -->
-		<code function="migrateUserAndAuthorNames" condition="return $installer->tableExists('users_tmp');" />
-	</upgrade>
-
-	<upgrade minversion="3.1.0.0" maxversion="3.1.0.9">
-		<data file="dbscripts/xml/upgrade/3.1.1_update.xml" />
-		<code function="updateSuppFileMetrics" />
-		<code function="installEmailTemplate" key="REVISED_VERSION_NOTIFY" locales="ar_IQ,da_DK,en_US,es_ES,fa_IR,fi_FI,fr_CA,fr_FR,id_ID,pt_PT,ru_RU,sv_SE" />
-		<code function="clearDataCache" />
-	</upgrade>
-
-	<upgrade minversion="3.1.0.0" maxversion="3.1.0.9">
-		<code function="repairSuppFilesFilestage" />
-		<code function="fixAuthorGroup" /><!-- Run again after previous invalid fix (#3289) -->
-	</upgrade>
-
-	<upgrade minversion="3.1.0.0" maxversion="3.1.0.9">
-		<note file="docs/release-notes/README-3.1.1" />
-	</upgrade>
-
-	<upgrade minversion="3.1.0.0" maxversion="3.1.1.9">
-		<data file="dbscripts/xml/upgrade/3.1.2_update.xml" />
-		<note file="docs/release-notes/README-3.1.2" />
-	</upgrade>
-
-	<upgrade minversion="3.1.0.0" maxversion="3.1.1.4">
-		<data file="dbscripts/xml/upgrade/event_log_oneclickuserid.xml" />
-	</upgrade>
-
-	<upgrade minversion="3.1.0.0" maxversion="3.1.9.9">
-		<data file="dbscripts/xml/upgrade/3.2.0_stylesheet.xml" />
-		<data file="dbscripts/xml/upgrade/3.2.0_archiving_settings.xml" />
-		<data file="dbscripts/xml/upgrade/3.2.0_update.xml" />
-		<data file="dbscripts/xml/upgrade/3.2.0_navigation_menu_items_locale_change.xml" />
-		<code function="migrateSiteLocales" />
-		<code function="migrateSidebarBlocks" />
-		<code function="migrateSiteStylesheet" />
-		<code function="migrateMetadataSettings" />
-		<code function="createLicenseTerms" />
-		<code function="installEmailTemplate" key="REVIEW_REINSTATE" locales="en_US" />
-		<code function="changeUserRolesAndStageAssignmentsForStagePermitSubmissionEdit" />
-		<data file="dbscripts/xml/upgrade/3.2.0_versioning.xml" />
-		<data file="dbscripts/xml/upgrade/3.2.0_versioning_submissionCategories.xml" condition="return $installer->tableExists('submission_categories');" />
-		<data file="dbscripts/xml/upgrade/3.2.0_last_activity.xml" />
-		<data file="dbscripts/xml/upgrade/3.2.0_url_path.xml" />
-		<code function="setStatsEmailSettings" />
-		<code function="fixLibraryFiles" />
-		<code function="installEmailTemplate" key="STATISTICS_REPORT_NOTIFICATION" locales="ar_IQ,ca_ES,cs_CZ,da_DK,de_DE,en_US,es_ES,fi_FI,fr_CA,hi_IN,hu_HU,id_ID,it_IT,ku_IQ,pt_BR,pt_PT,ru_RU,sl_SI,sv_SE,tr_TR,vi_VN,zh_CN" />
-		<note file="docs/release-notes/README-3.2.0" />
-	</upgrade>
-
-	<upgrade minversion="3.1.0.0" maxversion="3.2.0.9">
-		<data file="dbscripts/xml/upgrade/3.2.1_update.xml" />
-		<code function="installEmailTemplate" key="ANNOUNCEMENT" locales="ca_ES,cs_CZ,ar_IQ,da_DK,en_US,es_ES,fr_CA,id_ID,it_IT,pt_BR,pt_PT,ru_RU,sl_SI,sv_SE,tr_TR,vi_VN,zh_CN" />
-		<migration class="PKP\migration\upgrade\PKPv3_2_1SubeditorCategoriesMigration" />
-		<note file="docs/release-notes/README-3.2.1" />
-	</upgrade>
-
-	<upgrade minversion="3.1.0.0" maxversion="3.2.9.9">
-		<migration class="APP\migration\upgrade\OJSv3_3_0UpgradeMigration" />
-		<note file="docs/release-notes/README-3.3.0" />
-	</upgrade>
 
 	<upgrade minversion="3.1.0.0" maxversion="3.3.9.9">
 		<migration class="APP\migration\upgrade\v3_4_0\PreflightCheckMigration" fallback="3.3.9.9" />
@@ -202,10 +94,6 @@
 		<migration class="APP\migration\upgrade\v3_4_0\I8933_EventLogLocalized"/>
 		<migration class="APP\migration\upgrade\v3_4_0\I7470_FixDeprecatedFileStage"/>
 		<note file="docs/release-notes/README-3.4.0" />
-	</upgrade>
-
-	<upgrade minversion="3.1.0.0" maxversion="3.2.9.9">
-		<migration class="PKP\migration\upgrade\v3_4_0\I7249_UpdateUsersUniqueIndex_v3_1"/>
 	</upgrade>
 
 	<upgrade minversion="3.3.0.0" maxversion="3.3.9.9">
