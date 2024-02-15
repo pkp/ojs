@@ -147,9 +147,9 @@ sandbox = Off
 
 driver = mysqli
 host = localhost
-username = ojs
-password = ojs
-name = ojs
+username = ojs-ci
+password = ojs-ci
+name = ojs-ci
 
 ; Set the non-standard port and/or socket, if used
 ; port = 3306
