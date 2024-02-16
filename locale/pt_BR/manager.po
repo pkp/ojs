@@ -413,9 +413,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Configuração"
 
-msgid "manager.setup.masthead"
-msgstr "Expediente"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Equipe Editorial"
 

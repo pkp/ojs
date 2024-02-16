@@ -404,9 +404,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Tidskriftsinställningar"
 
-msgid "manager.setup.masthead"
-msgstr "Redaktionsruta"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Redaktion"
 

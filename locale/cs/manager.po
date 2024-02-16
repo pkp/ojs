@@ -402,9 +402,6 @@ msgstr "Omezit počet slov abstraktu pro tuto sekci na (0 pro žádný limit)"
 msgid "manager.setup"
 msgstr "Nastavení"
 
-msgid "manager.setup.masthead"
-msgstr "Hlavička"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Tým redaktorů"
 

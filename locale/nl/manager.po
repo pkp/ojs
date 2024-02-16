@@ -403,9 +403,6 @@ msgstr "Begrens aantal woorden voor deze sectie (0 voor ongelimiteerd)"
 msgid "manager.setup"
 msgstr "Instellen"
 
-msgid "manager.setup.masthead"
-msgstr "Impressum"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Redactie"
 

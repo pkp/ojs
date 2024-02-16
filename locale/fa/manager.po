@@ -382,9 +382,6 @@ msgstr "حداکثر تعداد کلمات برای این مقالات این �
 msgid "manager.setup"
 msgstr "تنظیمات مجله"
 
-msgid "manager.setup.masthead"
-msgstr "سربرگ"
-
 msgid "manager.setup.editorialTeam"
 msgstr "هیئت تحریریه"
 

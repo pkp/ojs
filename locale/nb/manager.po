@@ -415,9 +415,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Tidsskriftets innstillinger"
 
-msgid "manager.setup.masthead"
-msgstr "Kolofon"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Redaksjon"
 

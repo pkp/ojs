@@ -412,9 +412,6 @@ msgstr "Begræns ordantal for resumé i denne sektion (0 for ingen grænse)"
 msgid "manager.setup"
 msgstr "Tidsskriftskonfiguration"
 
-msgid "manager.setup.masthead"
-msgstr "Kolofon"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Redaktionsgruppe"
 

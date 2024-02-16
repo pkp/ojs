@@ -356,9 +356,6 @@ msgstr "此分類的摘要字數限制（如無限制則為零）"
 msgid "manager.setup"
 msgstr "期刊設定"
 
-msgid "manager.setup.masthead"
-msgstr "出版資訊欄"
-
 msgid "manager.setup.editorialTeam"
 msgstr "編輯委員會"
 

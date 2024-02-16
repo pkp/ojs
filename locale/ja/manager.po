@@ -383,9 +383,6 @@ msgstr "このセクションのアブストラクトの単語数の制限（制
 msgid "manager.setup"
 msgstr "ジャーナル設定"
 
-msgid "manager.setup.masthead"
-msgstr "マストヘッド"
-
 msgid "manager.setup.editorialTeam"
 msgstr "編集委員会"
 

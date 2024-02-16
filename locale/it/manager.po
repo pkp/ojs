@@ -417,9 +417,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Setup"
 
-msgid "manager.setup.masthead"
-msgstr "Titolo"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Comitato di redazione"
 

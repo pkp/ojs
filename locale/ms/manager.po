@@ -405,9 +405,6 @@ msgstr "Hadkan jumlah perkataan abstrak untuk bahagian ini (0 tanpa had)"
 msgid "manager.setup"
 msgstr "Tetapan Jurnal"
 
-msgid "manager.setup.masthead"
-msgstr "Tajuk"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Kumpulan Editorial"
 

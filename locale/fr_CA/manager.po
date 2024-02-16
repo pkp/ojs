@@ -428,9 +428,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Configuration de la revue"
 
-msgid "manager.setup.masthead"
-msgstr "Bloc générique"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Comité éditorial"
 

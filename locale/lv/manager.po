@@ -400,9 +400,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Žurnāla uzstādījumi"
 
-msgid "manager.setup.masthead"
-msgstr "Galvenā lapa"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Redkolēģija"
 
