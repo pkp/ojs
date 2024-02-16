@@ -1,7 +1,7 @@
 # Milutin Markovic <admin@fcjk.me>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-02-15 15:39+0000\n"
+"PO-Revision-Date: 2024-02-17 13:39+0000\n"
 "Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
 "Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "cnr/>\n"
@@ -45,3 +45,6 @@ msgstr ""
 "vrijednost može se kasnije urediti i u svakom zasebnom članku. Ako "
 "objavljujete \"članak po članak\", nemojte koristiti datum objavljivanja "
 "broja."
+
+msgid "manager.website.archiving"
+msgstr "Arhiviranje"
