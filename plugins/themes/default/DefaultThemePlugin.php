@@ -17,7 +17,6 @@ namespace APP\plugins\themes\default;
 use APP\core\Application;
 use APP\file\PublicFileManager;
 use PKP\config\Config;
-use PKP\session\SessionManager;
 
 class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
 {
@@ -26,7 +25,7 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
      */
     public function isActive()
     {
-        if (SessionManager::isDisabled()) {
+        if (defined('SESSION_DISABLE_INIT')) {
             return true;
         }
         return parent::isActive();
