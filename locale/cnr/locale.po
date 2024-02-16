@@ -1,7 +1,7 @@
 # Milutin Markovic <admin@fcjk.me>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-02-11 14:03+0000\n"
+"PO-Revision-Date: 2024-02-17 13:39+0000\n"
 "Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
 "Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "cnr/>\n"
@@ -104,7 +104,7 @@ msgid "common.queue.short.completed"
 msgstr "Arhiva"
 
 msgid "context.current"
-msgstr "Trenutni časopis:"
+msgstr "Najnoviji časopis:"
 
 msgid "navigation.infoForLibrarians.long"
 msgstr "Informacije za bibliotekare"
@@ -1144,3 +1144,108 @@ msgstr "Koraci recenzije"
 
 msgid "reviewer.article.reviewerGuidelines"
 msgstr "Smjernice za recenzente"
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Obavijesti urednika"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "da li ćete preuzeti recenziju ovog priloga."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr ""
+"Ukoliko ste pristali na izradu recenzije, molimo Vas da konsultujete "
+"Smernice za recenzente koje se nalaze pri dnu stranice."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr "Kliknite na ime fajla kako biste preuzeli rukopis ove prijave."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"Molimo Vas da se izjasnite da li imate sukoba interesa vezanih uz ovo "
+"istraživanje (vidi <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">smernice o sukobu interesa</a>)."
+
+msgid "reviewer.competingInterests"
+msgstr "Sukob interesa"
+
+msgid "reviewer.article.enterReviewA"
+msgstr ""
+"Kliknite na ikonicu da biste unijeli ili kopirali tekst Vaše recenzije vezan "
+"za ovaj rad."
+
+msgid "reviewer.article.uploadFile"
+msgstr "Takođe, možete priložiti i fajl za urednika i/ili autora."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Podesi ili izmijeni preporuku recenzenta."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr ""
+"Nema odabrane preporuke. Da biste predali fajl ili recenziju morate odabrati "
+"preporuku."
+
+msgid "submission.logType.article"
+msgstr "Članak"
+
+msgid "submission.logType.author"
+msgstr "Autor"
+
+msgid "submission.logType.editor"
+msgstr "Urednik"
+
+msgid "submission.logType.review"
+msgstr "Tekst recenzije"
+
+#, fuzzy
+msgid "submission.logType.copyedit"
+msgstr "Lektura"
+
+msgid "submission.logType.layout"
+msgstr "Prelom"
+
+msgid "submission.logType.proofread"
+msgstr "Korektura"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Još nije izašao niti jedan broj ovoga časopisa."
+
+msgid "archive.archives"
+msgstr "Arhiva izdanjа"
+
+msgid "archive.archivesPageNumber"
+msgstr "Arhiva - Stranica {$pageNumber}"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Prijavite novi rad u rubrici <a href=\"{$url}\">{$name}</a>."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Prijavi novi rad"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"Uputstva za recenzente će obezbediti potrebne smjernice za odlučivanje da li "
+"je rad pogodan za objavljivanje u časopisu kao i posebne instrukcije kako "
+"efikasno pripremiti rad za objavljivanje. Recenzentima su date dvije "
+"mogućnosti, prva \"za autora i urednika\" i druga \"za urednika\". Takođe, "
+"urednik časopisa može da napravi forme za recenzije eksperata u okviru formi "
+"recenzija. U svakom slučaju, urenici mogu da obezbijede korespodenciju "
+"recenzenata i autora."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"Odaberite preporuku iz menija. Preporuku možete odabrati tek nakon što ste "
+"priložili tekst recenzije ili fajl sa recenzijom. Time završavate postupak "
+"recenzije i više ne možete dopunjavati recenziju."
+
+msgid "submission.copyedit.instructions"
+msgstr "Uputstva za lekturu"
+
+msgid "current.current"
+msgstr "Najnoviji"
+
+msgid "current.noCurrentIssue"
+msgstr "Trenutno nema broja časopisa"
+
+#, fuzzy
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} or {$register} to make a submission."
