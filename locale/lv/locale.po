@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022, 2023, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-02-17 13:39+0000\n"
+"PO-Revision-Date: 2024-02-19 14:37+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/locale/lv/>"
 "\n"
@@ -35,7 +35,7 @@ msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
 msgstr "Lūdzu, aizpildiet obligātos laukus."
 
 msgid "common.software"
-msgstr "Atvērtā žurnālu sistēma (Open Journal Systems)"
+msgstr "Open Journal Systems"
 
 msgid "common.confirmComplete"
 msgstr ""
