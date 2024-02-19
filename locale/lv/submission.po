@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2023, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-15 18:09+0000\n"
+"PO-Revision-Date: 2024-02-19 14:37+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "lv/>\n"
@@ -26,7 +26,7 @@ msgid "submission.submit.newSubmissionMultiple"
 msgstr "Sākt jaunu materiāla iesniegšanu"
 
 msgid "submission.submit.newSubmissionSingle"
-msgstr "Jauns iesniegtais materiāls"
+msgstr "Jauna materiāla iesniegšana"
 
 msgid "submission.submit.noContext"
 msgstr "Šī iesniegtā materiāla žurnālu neizdevās atrast."
