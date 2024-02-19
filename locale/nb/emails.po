@@ -2,13 +2,14 @@
 # Eirik Hanssen <eirikh@oslomet.no>, 2022.
 # Tormod Strømme <tormod.stromme@uib.no>, 2022.
 # Aysa Ekanger <aysa.ekanger@uit.no>, 2024.
+# Johanna Skaug <johanna.skaug@ub.uio.no>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:17-08:00\n"
 "PO-Revision-Date: 2024-02-19 14:37+0000\n"
-"Last-Translator: Aysa Ekanger <aysa.ekanger@uit.no>\n"
+"Last-Translator: Johanna Skaug <johanna.skaug@ub.uio.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "emails/nb_NO/>\n"
 "Language: nb\n"
@@ -630,13 +631,23 @@ msgstr ""
 "kunngjøringen</a>."
 
 msgid "emails.paymentRequestNotification.subject"
-msgstr ""
+msgstr "Melding om betalingsforespørsel"
 
 msgid "emails.paymentRequestNotification.body"
 msgstr ""
+"<p>Kjære{$recipientName},</p><p>Vi gratulerer deg med at din innlevering, "
+"{$submissionTitle}, har blitt akseptert for publisering i {$contextName}. Nå "
+"som innleveringen har blitt akseptert, ber vi deg betale "
+"publiseringsavgiften.</p><p> Denne avgiften dekker produksjonskostnadene i "
+"forbindelse med publisering av innleveringen. For å betale, gå til <a href=\""
+"{$queuedPaymentUrl}\">{$queuedPaymentUrl}</a>.</p><p>Hvis du har spørsmål, "
+"se våre <a href=\"{$submissionGuidelinesUrl}\">Retningslinjer for "
+"innleveringer</a></p>"
 
 msgid "emails.paymentRequestNotification.footer"
 msgstr ""
+"<br><br>—<br>Dette er en automatisk generert beskjed fra <a href=\""
+"{$contextUrl}\">{$contextName}</a>."
 
 #~ msgid "emails.lockssExistingArchive.subject"
 #~ msgstr "Anmodning om arkivering av {$contextName}"
