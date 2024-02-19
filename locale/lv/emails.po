@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2023, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-02-15 15:39+0000\n"
+"PO-Revision-Date: 2024-02-19 14:37+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/emails/lv/>"
 "\n"
@@ -580,7 +580,7 @@ msgstr ""
 "<a href=\"{$contextUrl}\">{$contextName}</a>."
 
 msgid "emails.statisticsReportNotification.subject"
-msgstr "Redakcionālā aktivitāte {$month}, {$year}"
+msgstr "Redakcijas darbība {$month}, {$year}"
 
 msgid "emails.announcement.subject"
 msgstr "{$announcementTitle}"
