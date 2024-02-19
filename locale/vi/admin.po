@@ -3,8 +3,8 @@
 # Thuan Huynh <verypro.vn@gmail.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-02-19 04:25+0000\n"
-"Last-Translator: Thuan Huynh <verypro.vn@gmail.com>\n"
+"PO-Revision-Date: 2024-02-19 11:07+0000\n"
+"Last-Translator: Đoàn Dự <doandu2520@yopmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/admin/vi/"
 ">\n"
 "Language: vi\n"
@@ -260,4 +260,4 @@ msgstr "Sử dụng site như nền tảng cho mọi tạp chí."
 
 msgid ""
 "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
-msgstr "Số ID không khớp với ID liên kết của ông/bà ấy."
+msgstr "ID số tạp chí không khớp với ID liên kết"
