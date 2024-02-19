@@ -1,16 +1,17 @@
 # Bùi Văn Khôi <buivankhoi@gmail.com>, 2022.
+# Thuan Huynh <verypro.vn@gmail.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-16 18:38+0000\n"
-"Last-Translator: Bùi Văn Khôi <buivankhoi@gmail.com>\n"
+"PO-Revision-Date: 2024-02-19 04:25+0000\n"
+"Last-Translator: Thuan Huynh <verypro.vn@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/"
-"submission/vi_VN/>\n"
-"Language: vi_VN\n"
+"submission/vi/>\n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "submission.submit.userGroup"
 msgstr "Gửi trong vai trò như là ..."
@@ -315,61 +316,90 @@ msgid "submission.queries.production"
 msgstr "Thảo luận về sản xuất"
 
 msgid "editor.submission.decision.backToReview"
-msgstr ""
+msgstr "Quay lại đánh giá"
 
 msgid "editor.submission.decision.backToReview.description"
 msgstr ""
+"Hủy bỏ quyết định chấp nhận nội dung gửi này và gửi nó trở lại giai đoạn xem "
+"xét."
 
 msgid "editor.submission.decision.backToReview.log"
 msgstr ""
+"{$editorName} đã hủy bỏ quyết định chấp nhận nội dung gửi này và gửi nó trở "
+"lại giai đoạn xem xét."
 
 msgid "editor.submission.decision.backToReview.completed"
-msgstr ""
+msgstr "Gửi lại để xem xét"
 
 msgid "editor.submission.decision.backToReview.completed.description"
-msgstr ""
+msgstr "Bài gửi {$title} đã được gửi trở lại giai đoạn xem xét."
 
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
+"Gửi email cho các tác giả để cho họ biết rằng bài nộp của họ đang được gửi "
+"trở lại giai đoạn xem xét. Giải thích lý do tại sao quyết định này được đưa "
+"ra và thông báo cho tác giả về những gì sẽ được thực hiện xem xét thêm."
 
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
+"Gửi email cho các tác giả để cho họ biết rằng bài nộp này sẽ được gửi để "
+"bình duyệt. Nếu có thể, hãy cho tác giả biết một số thông tin về quá trình "
+"bình duyệt có thể kéo dài bao lâu và khi nào họ sẽ nhận được phản hồi từ các "
+"biên tập viên. Email này sẽ không được gửi cho đến khi quyết định được ghi "
+"lại."
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
-msgstr ""
+msgstr "Chọn các tập tin sẽ được gửi đến giai đoạn xem xét."
 
 msgid "doi.submission.issueMissing.publication"
 msgstr ""
+"Không thể tạo DOI cho lần gửi sau: {$pubObjectTitle}. Việc gửi phải được chỉ "
+"định cho một vấn đề trước khi có thể tạo DOI."
 
 msgid "doi.submission.issueMissing.representation"
 msgstr ""
+"Không thể tạo DOI cho {$pubObjectTitle} cho bài gửi sau: {$itemTitle}. Việc "
+"gửi phải được chỉ định cho một vấn đề trước khi có thể tạo DOI."
 
 msgid "doi.submission.incorrectContext"
 msgstr ""
+"Không thể tạo DOI cho lần gửi sau: {$pubObjectTitle}. Nó không tồn tại trong "
+"tạp chí hiện tại."
 
 msgid "submission.layout.viewGalley"
-msgstr ""
+msgstr "Xem phòng trưng bày"
 
 msgid "galley.cantEditPublished"
-msgstr ""
+msgstr "Không thể chỉnh sửa phòng trưng bày này vì nó đã được xuất bản."
 
 msgid "submission.copyright.description"
 msgstr ""
+"Vui lòng đọc và hiểu các điều khoản về bản quyền đối với các bài gửi tới tạp "
+"chí này."
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
+"Bạn không được phép gửi bài cho tạp chí này vì tác giả phải được ban biên "
+"tập đăng ký. Nếu bạn cho rằng đây là lỗi, vui lòng liên hệ <a "
+"href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
+"Bạn không được phép gửi bài cho tạp chí này vì việc gửi bài cho tất cả các "
+"phần của tạp chí này đã bị ngừng hoạt động hoặc bị hạn chế. Nếu bạn cho rằng "
+"đây là lỗi, vui lòng liên hệ <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
+"{$contextName} không chấp nhận nội dung gửi tới phần {$section}. Nếu bạn cần "
+"trợ giúp khôi phục nội dung gửi của mình, vui lòng liên hệ <a "
+"href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.sectionNotFound"
-msgstr ""
+msgstr "Không thể tìm thấy phần dành cho bài nộp này."
 
 msgid "submission.sectionRestrictedToEditors"
-msgstr ""
+msgstr "Chỉ có nhân viên biên tập mới được phép gửi đến phần này."
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Ít nhất một tác giả được yêu cầu."
