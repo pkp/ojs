@@ -50,6 +50,11 @@ session_lifetime = 30
 ; To set the "Secure" attribute for the cookie see the setting force_ssl at the [security] group
 session_samesite = Lax
 
+; Enable this if you want to enable cookie encryption
+; The length of cookie encryption key lenght must be 16
+; Note that updating or removing cookie encryption key will result in logout from all devices
+; session_cookie_enctyption_key = ''
+
 ; Enable support for running scheduled tasks
 ; Set this to On if you have set up the scheduled tasks script to
 ; execute periodically
