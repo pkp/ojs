@@ -1,7 +1,7 @@
 # Milutin Markovic <admin@fcjk.me>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-02-17 13:39+0000\n"
+"PO-Revision-Date: 2024-02-20 15:39+0000\n"
 "Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
 "Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "cnr/>\n"
@@ -1249,3 +1249,12 @@ msgstr "Trenutno nema broja časopisa"
 #, fuzzy
 msgid "about.onlineSubmissions.registrationRequired"
 msgstr "{$login} or {$register} to make a submission."
+
+msgid "user.register.privacyStatement"
+msgstr "Izjava o privatnosti"
+
+msgid "about.aboutContext"
+msgstr "O časopisu"
+
+msgid "about.privacyStatement"
+msgstr "Izjava o privatnosti"
