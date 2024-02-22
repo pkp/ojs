@@ -1,21 +1,21 @@
 # Tormod Strømme <tormod.stromme@uib.no>, 2022.
 # Eirik Hanssen <eirikhanssen79@gmail.com>, 2022.
-# Aysa Ekanger <aysa.ekanger@uit.no>, 2023.
+# Aysa Ekanger <aysa.ekanger@uit.no>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2023-01-24 13:28+0000\n"
+"PO-Revision-Date: 2024-02-19 14:37+0000\n"
 "Last-Translator: Aysa Ekanger <aysa.ekanger@uit.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "author/nb_NO/>\n"
-"Language: nb_NO\n"
+"Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "author.submit"
 msgstr "Ny innlevering"
@@ -121,11 +121,10 @@ msgstr ""
 "Velg en passende seksjon (se «Seksjoner» og «Retningslinjer» i <a href="
 "\"{$aboutUrl}\">«Om»</a> tidsskriftet)."
 
-#, fuzzy
 msgid "author.submit.verifyChecklist"
 msgstr ""
 "Før du går videre må du sørge for at din innlevering tilfredsstiller alle "
-"punktene i sjekklisten for klargjøring av innleveringer."
+"punktene i sjekklisten."
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""

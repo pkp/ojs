@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2022, 2023, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-15 18:09+0000\n"
+"PO-Revision-Date: 2024-02-19 14:37+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/author/lv/>"
 "\n"
@@ -55,7 +55,7 @@ msgid "author.submit.start"
 msgstr "Sākt"
 
 msgid "author.submit.upload"
-msgstr "Iesniedzamā materiāla augšupielāde"
+msgstr "Materiāla augšupielāde"
 
 msgid "author.submit.metadata"
 msgstr "Metadatu ievadīšana"
@@ -185,7 +185,7 @@ msgid "author.submit.submissionFile"
 msgstr "Iesniedzamā materiāla datne"
 
 msgid "author.submit.uploadSubmissionFile"
-msgstr "Augšupielādēt iesniedzamā materiāla datni"
+msgstr "Augšupielādēt materiāla datni"
 
 msgid "author.submit.replaceSubmissionFile"
 msgstr "Aizstāt iesniedzamā materiāla datni"

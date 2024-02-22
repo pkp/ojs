@@ -1,7 +1,7 @@
-# Ieva Tiltina <pastala@gmail.com>, 2023.
+# Ieva Tiltina <pastala@gmail.com>, 2023, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-12-06 00:54+0000\n"
+"PO-Revision-Date: 2024-02-13 13:39+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
 "lv/>\n"
@@ -105,9 +105,9 @@ msgstr ""
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
 msgstr ""
 "Izmantojiet paraugu, lai ģenerētu URN sufiksus. Izmantojiet %j žurnāla "
-"iniciāļiem, %v - sējuma numuram, %i - žurnāla numuram, %Y - gadam, %a - OJS "
-"raksta ID, %g - OJS spraudņa ID, %f - OJS datnes ID, %p - lappuses numuram "
-"un %x - \"pielāgotajam identifikatoram\"."
+"iniciāļiem, %v – sējuma numuram, %i – žurnāla numuram, %Y – gadam, %a – OJS "
+"raksta ID, %g – OJS spraudņa ID, %f – OJS datnes ID, %p – lappuses numuram "
+"un %x – \"pielāgotajam identifikatoram\"."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
 msgstr "rakstiem"
