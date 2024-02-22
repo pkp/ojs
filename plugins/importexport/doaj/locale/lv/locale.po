@@ -1,0 +1,60 @@
+# Ieva Tiltina <pastala@gmail.com>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-02-19 11:07+0000\n"
+"Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
+"Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-doaj/lv/>\n"
+"Language: lv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 0 || n % 100 >= 11 && n % 100 <= "
+"19) ? 0 : ((n % 10 == 1 && n % 100 != 11) ? 1 : 2);\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "Eksportēt žurnālu DOAJ."
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "Sazināties ar DOAJ par iekļaušanu"
+
+msgid "plugins.importexport.doaj.registrationIntro"
+msgstr ""
+"Ja vēlaties reģistrēt rakstus no OJS, lūdzu, ievadiet savu DOAJ API atslēgu. "
+"Pretējā gadījumā jūs joprojām varēsiet eksportēt DOAJ XML formātā, bet jūs "
+"nevarēsiet reģistrēt savus rakstus DOAJ no OJS."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "DOAJ API atslēga"
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "API atslēgu atradīsiet savā DOAJ lietotāja lapā."
+
+msgid ""
+"plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr ""
+"OJS automātiski nodos rakstus DOAJ. Lūdzu, ņemiet vērā, ka pēc publicēšanas "
+"šī apstrāde var aizņemt neilgu laiku (piemēram, atkarībā no jūsu cronjob "
+"konfigurācijas). Jūs varat pārbaudīt, vai ir reģistrēti visi nereģistrētie "
+"raksti."
+
+msgid "plugins.importexport.doaj.settings.form.testMode.description"
+msgstr ""
+"Reģistrācijas veikšanai izmantojiet DOAJ testa API (testēšanas vidi). Lūdzu, "
+"neaizmirstiet atcelt šo opciju produkcijai."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "DOAJ automātiskās reģistrācijas uzdevums"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr "Noguldījums neizdevās! DOAJ API atgrieza kļūdu: '{$param}'."
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"Izmantošana:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles "
+"objectId1 [objectId2] ...\n"
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "DOAJ eksportēšanas spraudnis"

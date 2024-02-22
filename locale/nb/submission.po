@@ -1,10 +1,10 @@
 # Tormod Strømme <tormod.stromme@uib.no>, 2022, 2023.
-# Aysa Ekanger <aysa.ekanger@uit.no>, 2023.
+# Aysa Ekanger <aysa.ekanger@uit.no>, 2023, 2024.
 # Johanna Skaug <johanna.skaug@ub.uio.no>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-05 12:39+0000\n"
-"Last-Translator: Johanna Skaug <johanna.skaug@ub.uio.no>\n"
+"PO-Revision-Date: 2024-02-19 14:37+0000\n"
+"Last-Translator: Aysa Ekanger <aysa.ekanger@uit.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/nb_NO/>\n"
 "Language: nb\n"
@@ -376,18 +376,15 @@ msgstr ""
 msgid "submission.layout.viewGalley"
 msgstr "Vis oppsett"
 
-#, fuzzy
 msgid "galley.cantEditPublished"
 msgstr ""
 "Dette oppsettet kan ikke redigeres fordi det allerede har blitt publisert."
 
-#, fuzzy
 msgid "submission.copyright.description"
 msgstr ""
 "Vennligst les gjennom opphavsrettslige vilkår som gjelder innleveringer til "
 "dette tidsskriftet."
 
-#, fuzzy
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
 "Du har ikke lov til å sende innleveringer til dette tidsskriftet fordi "
