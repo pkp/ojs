@@ -39,8 +39,11 @@ describe('Data suite tests', function() {
 		cy.get('#metadata-keywords-control-en_US').type('pr', {delay: 0});
 		cy.wait(500);
 		cy.get('li').contains('Professional Development').click({force: true});
+		cy.wait(500);
 		cy.get('#metadata-keywords-control-en_US').type('socia', {delay: 0});
+		cy.wait(500);
 		cy.contains('Social Transformation');
+		cy.wait(500);
 		cy.get('#metadata-keywords-control-en_US').type('l{downarrow}{downarrow}{enter}', {delay: 0});
 		cy.get('#metadata button').contains('Save').click();
 		cy.get('#metadata [role="status"]').contains('Saved');
