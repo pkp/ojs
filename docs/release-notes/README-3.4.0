@@ -1,7 +1,7 @@
 OJS 3.4.0 Release Notes
-Git tag: 3_4_0-4
+Git tag: 3_4_0-5
 
-Release date: November 17, 2023
+Release date: February 23, 2024
 ===============================
 
 Configuration Changes
@@ -46,6 +46,50 @@ New config.inc.php parameters added for emails:
      - default (default value: sendmail), being the default mailer driver to be used for email delivery
      - sendmail_path (default value: "/usr/sbin/sendmail -bs"), being the path to the sendmail program on the server
 
+3.4.0-5 Build
+-------------
+    #6627: Allow users to unsubscribe from emails sent using the notify tool
+    #7470: Fair Copy files not migrated when upgrading from OJS 2 to 3
+    #8248: Tab Separated Values reporting for COUNTER R5
+    #9066: [OJS] CLI for the PubMedExportPlugin plugin is broken
+    #9131: Typo in ReviewAssignmentFileWritePolicy which permits managers file access when assigned to a submission
+    #9296: Implement sandbox mode
+    #9302: Internal PHP locale fails to be defined under Windows and others
+    #9381: Limit reviewers' statistics to a journal in multi-journals OJS instance
+    #9400: Display competing Interests in OJS once a reviewer accepts an invitation
+    #9421: Review html escaping strategy on vue.js codebase in stable-3_3_0 and stable-3_4_0
+    #9476: Data loss at review rounds after migrating from OJS 2.x to +3.3
+    #9487: Upgrade to 3.3.x can be interrupted due to non-conforming *_settings tables
+    #9500: Hook `Template::SubmissionWizard::Section::Review ` not inside `submissionWizard__reviewPanel`
+    #9518: [ OJS ] Error in I5716_EmailTemplateAssignments upgrading from 3.3.0-8 to 3.4.0-3
+    #9535: PHP Fatal error:  Uncaught ValueError: DOMDocument::loadXML(): Argument #1 ($source) must not be empty in
+    #9541: Fatal error when adding reviewer
+    #9546: "xmlEscapeEntities: char out of range" error when exporting issues through the Native XML plugin
+    #9557: PHP Fatal error:  Uncaught TypeError: PKP\section\PKPSection::getTitle()
+    #9561: Fatal error filtering unassigned submissions by keyword
+    #9574: Add support for author's competing interests statement
+    #9582: CompileUsageStatsFromTemporaryRecords fails on PostgreSQL due to non-existing function (OJS 3.4.0.4)
+    #9590: OJS 3.4 - Removing journal is not updating the list automatically
+    #9592: False "save" confirmation leads to keyword loss
+    #9594: Missing CSRF check in issue publication
+    #9607: Selecting an email template in Discussions uses the template name as subject, rather than its actual subject.
+    #9617: Adding a new not null column in PostgreSQL leads to an error if the table contains entries
+    #9624: Fix section filter autocomplete
+    #9625: Native XML plugin not escaping data properly
+    #9627: SQL in removeDoubleClicks needs improvement
+    #9632: Opening category in OPS/OMP causes 500
+    #9637: Migrations can be re-executed at OJS 3.4
+    #9650: Resolve template injection with context name
+    #9664: Use jobs chain for usage stats log files processing
+    #9665: Indexation, for search purposes, might fail silently
+    #9679: Allow processing of the log files from the last month
+    #9682: Address the execution of scheduled tasks and jobs
+    #9686: The arguments for the jobs.php are not working
+    #9731: Remove the min/max length for login Username/Email
+    #9742: Add missing functionality to gracefully restart queue worker
+    #9759: Additional file validation causes error
+    #9762: Deadlock happening often at the statistics' jobs
+
 3.4.0-4 build
 -------------
     #8025: Context name can not be localized correctly in a job
@@ -58,7 +102,7 @@ New config.inc.php parameters added for emails:
     #9266: OJS 3.4.0.1 / 3.4.0.3 error tools/install.php
     #9277: Submission title not properly escaped when opening information center from submission list
     #9278: Use ISO639-2b instead of ISO639-3 for locale conversion
-    #9282: [OJS 3.4.0-3] Upgrade error, DOI related
+    #9282: Upgrade error, DOI related
     #9283: Issue title incorrectly escaped in issue edit grid
     #9298: Not possible to edit a publication from a CLI tool
     #9301: Remove user email address confirmation from password reset message
@@ -93,12 +137,11 @@ New config.inc.php parameters added for emails:
     #9433: Missing variable on SubmissionAcknowledgement mailable
     #9438: Add new email config to the release notes
     #9444: Fatal error when setting the body of a mailable with null
-    #9449: [OJS] issueform::execute hook without $issue attached to $form
+    #9449: issueform::execute hook without $issue attached to $form
     #9464: Sanitize cover image filename in native import
     #9483: Search navigation menu item not displayed at site level
     #9503: [A11Y] Add information about required fields with asterisks in forms
     #9512: Bug in recommendByAuthor plugin - it returns whole statistics data instead of recommended articles in some cases
-
 
 3.4.0-3 build
 -------------
