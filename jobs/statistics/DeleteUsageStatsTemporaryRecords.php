@@ -26,11 +26,6 @@ use PKP\statistics\TemporaryInstitutionsDAO;
 class DeleteUsageStatsTemporaryRecords extends BaseJob
 {
     /**
-     * The number of times the job may be attempted.
-     */
-    public $tries = 1;
-
-    /**
      * Create a new job instance.
      *
      * @param string $loadId Usage stats log file name
