@@ -1,7 +1,7 @@
 OJS 3.3.0 Release Notes
-Git tag: 3_3_0-16
+Git tag: 3_3_0-17
 
-Release date: November 17, 2023
+Release date: February 23, 2024
 ===============================
 
 Configuration Changes
@@ -29,6 +29,28 @@ configuration parameters.
   - email.smtp_oauth_refreshtoken
 - The setting general.session_samesite (default value: Lax) has been added to control the "SameSite" setting for the session cookie.
 - The setting security.force_ssl, when enabled, will also set the "Secure" flag for the session cookie.
+
+3.3.0-17 Build
+--------------
+	#9131: Typo in ReviewAssignmentFileWritePolicy which permits managers file access when assigned to a submission
+	#9302: Internal PHP locale fails to be defined under Windows and others
+	#9307: OJS 3.3 Fatal Error on PHP 8
+	#9421: Review html escaping strategy on vue.js codebase in stable-3_3_0 and stable-3_4_0
+	#9476: Data loss at review rounds after migrating from OJS 2.x to +3.3
+	#9487: Upgrade to 3.3.x can be interrupted due to non-conforming *_settings tables
+	#9524: Backport ArticleSearch getTitle() bug fix to OJS 3.3.0 stable
+	#9535: PHP Fatal error:  Uncaught ValueError: DOMDocument::loadXML(): Argument #1 ($source) must not be empty in
+	#9546: "xmlEscapeEntities: char out of range" error when exporting issues through the Native XML plugin
+	#9574: Add support for author's competing interests statement
+	#9586: [OMP] PHP8 Incompatibility when navigating through the sidebar categories
+	#9594: Missing CSRF check in issue publication
+	#9623: Plugin DataCite-Export: Registration of article DOIs fails
+	#9625: Native XML plugin not escaping data properly
+	#9643: Fatal error on latest PHP 8.x releases
+	#9650: Resolve template injection with context name
+	#9665: Indexation, for search purposes, might fail silently
+	#9721: Locales not loading for Statistics Tab for the role "section editor"
+	#9752: Fix misleading French copyright statement translation
 
 3.3.0-16 Build
 --------------

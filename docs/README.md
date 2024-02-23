@@ -2,8 +2,8 @@
 	=== Open Journal Systems
 	=== The Public Knowledge Project
 	=== Version: 3.3.0
-	=== GIT tag: 3_3_0-16
-	=== Release date: November 17, 2023
+	=== GIT tag: 3_3_0-17
+	=== Release date: February 23, 2024
 	====================================
 
 
