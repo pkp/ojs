@@ -1,12 +1,13 @@
 # Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023.
 # Josu Acosta <josuacostacalvo@gmail.com>, 2023.
+# Informatikaria <informatikaria@ueu.eus>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2023-05-03 14:12+0000\n"
-"Last-Translator: Josu Acosta <josuacostacalvo@gmail.com>\n"
+"PO-Revision-Date: 2024-02-29 11:39+0000\n"
+"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/manager/eu/>"
 "\n"
 "Language: eu\n"
@@ -14,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "manager.distribution.access"
 msgstr "Sarbidea"
@@ -403,7 +404,7 @@ msgid "manager.setup"
 msgstr "Konfigurazioa"
 
 msgid "manager.setup.masthead"
-msgstr ""
+msgstr "Portada"
 
 msgid "manager.setup.editorialTeam"
 msgstr ""
