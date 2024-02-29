@@ -1,0 +1,19 @@
+OJS 3.5.0 Release Notes
+Git tag: 3_5_0-0
+
+Release date: 
+============================
+
+Configuration Changes
+---------------------
+
+See config.TEMPLATE.inc.php for a description and examples of all supported
+configuration parameters.
+
+New config.inc.php parameters added for general:
+    - session_cookie_enctyption_key (default value: ''), allow cookie encryption when set
+
+New Features
+------------
+    #9566 : Convert session and cookie management to Laravel
+
