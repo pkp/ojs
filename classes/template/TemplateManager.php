@@ -21,6 +21,7 @@ namespace APP\template;
 use APP\core\Application;
 use APP\core\PageRouter;
 use APP\file\PublicFileManager;
+use PKP\core\PKPSessionGuard;
 use PKP\facades\Locale;
 use PKP\i18n\LocaleMetadata;
 use PKP\security\Role;
@@ -43,7 +44,7 @@ class TemplateManager extends PKPTemplateManager
             'brandImage' => 'templates/images/ojs_brand.png',
         ]);
 
-        if (!defined('SESSION_DISABLE_INIT')) {
+        if (!PKPSessionGuard::isSessionDisable()) {
             /**
              * Kludge to make sure no code that tries to connect to
              * the database is executed (e.g., when loading
@@ -113,9 +114,10 @@ class TemplateManager extends PKPTemplateManager
         parent::setupBackendPage();
 
         $request = Application::get()->getRequest();
-        if (defined('SESSION_DISABLE_INIT')
-                || !$request->getContext()
-                || !$request->getUser()) {
+        if (PKPSessionGuard::isSessionDisable() ||
+            !$request->getContext() ||
+            !$request->getUser()) {
+
             return;
         }
 
