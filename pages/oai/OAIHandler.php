@@ -21,14 +21,13 @@ use APP\oai\ojs\JournalOAI;
 use Firebase\JWT\Key;
 use PKP\config\Config;
 use PKP\core\PKPJwt as JWT;
+use PKP\core\PKPSessionGuard;
 use PKP\oai\OAIConfig;
 use PKP\plugins\PluginRegistry;
 use stdClass;
 
 // Disable initializing the session
-if (!defined('SESSION_DISABLE_INIT')) {
-    define('SESSION_DISABLE_INIT', true);
-}
+PKPSessionGuard::disableSession();
 
 class OAIHandler extends Handler
 {
