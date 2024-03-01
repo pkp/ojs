@@ -1,16 +1,16 @@
-# Jordi LC <jordi.lacruz@uab.cat>, 2021.
+# Jordi LC <jordi.lacruz@uab.cat>, 2021, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-03 09:36+0000\n"
+"PO-Revision-Date: 2024-03-02 04:51+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/"
-"importexport-native/ca_ES/>\n"
-"Language: ca_ES\n"
+"importexport-native/ca/>\n"
+"Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.importexport.native.displayName"
 msgstr "Mòdul XML nadiu"
@@ -76,9 +76,10 @@ msgstr ""
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Secció desconeguda {$param}"
 
-#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
-msgstr "L'usuari/ària especificat (\"{$userName}\") no existeix."
+msgstr ""
+"S'ha de proporcionar un usuari/ària mitjançant el paràmetre d'ordre --"
+"user_name o -u."
 
 msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
 msgstr ""
@@ -126,3 +127,10 @@ msgid "plugins.importexport.native.import.error.publishedDateMissing"
 msgstr ""
 "L'article \"{$articleTitle}\" està inclòs en un número, però no té data de "
 "publicació."
+
+msgid "plugins.importexport.common.error.invalidFileExtension"
+msgstr ""
+"S'ha especificat una imatge de portada amb una extensió d'arxiu invàlida."
+
+msgid "plugins.importexport.common.error.coverImageNameUnspecified"
+msgstr "S'ha incrustat una imatge de portada sense especificar-ne el nom."
