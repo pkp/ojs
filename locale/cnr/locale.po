@@ -1,7 +1,7 @@
 # Milutin Markovic <admin@fcjk.me>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-03-01 03:34+0000\n"
+"PO-Revision-Date: 2024-03-02 04:51+0000\n"
 "Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
 "Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "cnr/>\n"
@@ -1769,3 +1769,110 @@ msgstr ""
 "npr. <i>soci*</i> pronaći će dokumente koji sadrže \"sociološka\" ili "
 "\"socijalna\".</li>\n"
 "</ul>"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "Proces uređivanja i izdavanja u OJS-u"
+
+msgid "about.aboutSoftware"
+msgstr "O Open Journal Sistemu"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS pomoć"
+
+msgid "help.searchReturnResults"
+msgstr "Povratak na rezultat pretraživanja"
+
+msgid "help.goToEditPage"
+msgstr "Uredi {$sectionTitle}"
+
+msgid "donations.thankYou"
+msgstr "Hvala Vam!"
+
+msgid "payment.loginRequired"
+msgstr "Da biste izvršili uplatu, morate se prvo prijaviti u časopis."
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"Da bi pristupili ovoj stavki potrebna je pretplata ili da kupite izdanje. "
+"Prijavite se u časopis da bi verifikovali pretplatu, pristupili prethodnim "
+"kupovinama ili kupili izdanje."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Da biste uplatili donaciju, morate se prvo prijaviti u časopis."
+
+msgid "payment.paid"
+msgstr "Uplaćeno"
+
+msgid "payment.unpaid"
+msgstr "Neplaćeno"
+
+msgid "payment.waived"
+msgstr "Odrečeno"
+
+msgid "payment.payNow"
+msgstr "Uplatite sada"
+
+msgid "payment.waive"
+msgstr "Izuzeće"
+
+msgid "payment.alreadyPaid"
+msgstr "Već plaćeno"
+
+msgid "payment.paymentReceived"
+msgstr "Uplata primljena"
+
+msgid "payment.paymentSent"
+msgstr "Uplata je već poslata"
+
+msgid "payment.authorFees"
+msgstr "Naknade za autora"
+
+msgid "payment.type.submission"
+msgstr "Cijena prijave članka"
+
+msgid "payment.type.publication"
+msgstr "Cijena objavljivanja članka"
+
+msgid "payment.type.publication.required"
+msgstr "Naknada za objavljivanje dospijeva na plaćanje."
+
+msgid "payment.type.fastTrack"
+msgstr "Cijena ubrzanog recenzijskog postupka"
+
+msgid "payment.type.membership"
+msgstr "Iznos individualne članarine"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Cijena pristupa pojedinom članku"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Cijena nabavke izdanja"
+
+msgid "payment.type.subscription"
+msgstr "Iznos pretplate"
+
+msgid "payment.type.donation"
+msgstr "Donacije"
+
+msgid "payment.requestPublicationFee"
+msgstr "Zatraži naknadu za objavljivanje ({$feeAmount})"
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"Odaberite ovu opciju kako biste završili postupak prijave priloga ukoliko "
+"ste već izvršili svoju uplatu. Prijava neće biti recenzirana dok uplata nije "
+"izvršena. Odaberite UPLATITE SADA kako biste pristupili uputstvima za uplatu."
+
+msgid "help.ojsHelp"
+msgstr "Pomoć za korištenje OJS-a"
+
+msgid "donations.thankYouMessage"
+msgstr ""
+"Hvala Vam na uplati. Ona predstavlja značajan materijalni i simbolički "
+"doprinos našem časopisu."
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"Pristup ovom članku zahtijeva pretplatu ili se naplaćuje po pristupu. Molimo "
+"vas prijavite se u časopis kako biste potvrdili svoj pretplatnički status "
+"ili izvršili uplatu."
