@@ -1,11 +1,11 @@
-# Jordi LC <jordi.lacruz@uab.cat>, 2022, 2023.
+# Jordi LC <jordi.lacruz@uab.cat>, 2022, 2023, 2024.
 # pep sanso <pep.sanso@uab.cat>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2023-04-29 14:49+0000\n"
+"PO-Revision-Date: 2024-03-02 04:51+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/ojs/admin/ca/>\n"
 "Language: ca\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "admin.hostedContexts"
 msgstr "Revistes allotjades"
@@ -258,3 +258,6 @@ msgstr ""
 #~ msgstr ""
 #~ "Esteu segurs que voleu suprimir aquesta revista i els seus continguts de "
 #~ "manera permanent?"
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Utilitzar el lloc com a plataforma per a totes les revistes."
