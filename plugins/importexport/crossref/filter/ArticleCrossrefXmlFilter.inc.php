@@ -179,7 +179,7 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 		}
 
 		// abstract
-		$abstractLanguages = array_keys($publication->getData('abstract'));
+		$abstractLanguages = array_keys((array) $publication->getData('abstract'));
 		// Crossref 4.3.6 limits to 10 abstracts maximum, ensure the primary locale is first
 		$primaryLanguageIndex = array_search($locale, $abstractLanguages);
 		if ($primaryLanguageIndex) {
