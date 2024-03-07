@@ -73,11 +73,11 @@ class PublishForm extends FormComponent
             // be published immediately regardless of the issue assignment
             if ($publication->getData('datePublished') && $publication->getData('datePublished') <= Core::getCurrentDate()) {
                 $timestamp = strtotime($publication->getData('datePublished'));
-                $dateFormatLong = PKPString::convertStrftimeFormat($submissionContext->getLocalizedDateFormatLong());
+                $dateFormatLong = $submissionContext->getLocalizedDateFormatLong();
                 $msg = __(
                     'publication.publish.confirmation.datePublishedInPast',
                     [
-                        'datePublished' => date($dateFormatLong, $timestamp),
+                        'datePublished' => PKPString::getLocalizedDate($timestamp, $dateFormatLong),
                     ]
                 );
                 $submitLabel = __('publication.publish');
