@@ -36,7 +36,8 @@ class IssueGridCellProvider extends GridCellProvider
     public function __construct()
     {
         parent::__construct();
-        $this->dateFormatShort = PKPString::convertStrftimeFormat(Application::get()->getRequest()->getContext()->getLocalizedDateFormatShort());
+
+        $this->dateFormatShort = Application::get()->getRequest()->getContext()->getLocalizedDateFormatShort();
     }
 
     /**
@@ -89,10 +90,7 @@ class IssueGridCellProvider extends GridCellProvider
                 return ['label' => '']; // Title returned as action
             case 'published':
                 $datePublished = $issue->getDatePublished();
-                if ($datePublished) {
-                    $datePublished = strtotime($datePublished);
-                }
-                return ['label' => $datePublished ? date($this->dateFormatShort, $datePublished) : ''];
+                return ['label' => $datePublished ? PKPString::getLocalizedDate($datePublished, $this->dateFormatShort) : ''];
             case 'numArticles':
                 return ['label' => $issue->getNumArticles()];
             default: assert(false);
