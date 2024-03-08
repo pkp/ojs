@@ -19,7 +19,6 @@
     "element-resize-event": "^3.0.3",
     "moment": "^2.29.2",
     "tinymce": "^5.10.0",
-    "underscore": "^1.13.6",
     "v-tooltip": "^2.0.3",
     "vue": "^2.6.12",
     "vue-autosuggest": "^2.2.0",
