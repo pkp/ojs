@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
-"PO-Revision-Date: 2024-03-09 14:39+0000\n"
+"PO-Revision-Date: 2024-03-10 02:03+0000\n"
 "Last-Translator: Leonardo Mancini <leonardo.mancini@unito.it>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/author/it/>"
 "\n"
@@ -21,13 +21,13 @@ msgid "author.submit"
 msgstr "Nuova proposta"
 
 msgid "author.track"
-msgstr "Proposte attive"
+msgstr "Proposte editoriali attive"
 
 msgid "author.submit.submitArticle"
 msgstr "Proporre un articolo"
 
 msgid "author.submit.stepsToSubmit"
-msgstr "I cinque passaggi per la proposta"
+msgstr "Cinque passaggi per l'invio di una proposta"
 
 msgid "author.submit.startHereTitle"
 msgstr "Invio di una nuova proposta"
@@ -71,7 +71,7 @@ msgid "author.submit.nextSteps"
 msgstr "Passi successivi"
 
 msgid "author.submit.notAccepting"
-msgstr "In questo momento la rivista non accetta nessuna proposta."
+msgstr "La rivista non accetta attualmente proposte editoriali."
 
 msgid "author.submit.requestWaiver"
 msgstr "Richiedi un'esenzione"
@@ -175,7 +175,7 @@ msgstr ""
 "a>."
 
 msgid "author.submit.form.authorRequired"
-msgstr "Inserire almeno un autore / un'autrice."
+msgstr "È richiesto almeno un autore."
 
 msgid "author.submit.form.authorRequiredFields"
 msgstr "Inserire nome, cognome e indirizzo email di ciascun autore/rice."
