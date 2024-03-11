@@ -27,6 +27,11 @@
 					{translate key="common.upload.addFile"}
 				</pkp-button>
 				<pkp-button
+					:disabled="true"
+				>
+					{{ changeLangButtonLabel }}
+				</pkp-button>
+				<pkp-button
 					@click="openLibrary"
 				>
 					{translate key="editor.submissionLibrary"}
