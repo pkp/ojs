@@ -30,7 +30,7 @@ class JournalsMigration extends \PKP\migration\Migration
             $table->bigInteger('journal_id')->autoIncrement();
             $table->string('path', 32);
             $table->float('seq', 8, 2)->default(0)->comment('Used to order lists of journals');
-            $table->string('primary_locale', 14);
+            $table->string('primary_locale', 28);
             $table->smallInteger('enabled')->default(1)->comment('Controls whether or not the journal is considered "live" and will appear on the website. (Note that disabled journals may still be accessible, but only if the user knows the URL.)');
             $table->unique(['path'], 'journals_path');
             $table->bigInteger('current_issue_id')->nullable()->default(null);
@@ -45,7 +45,7 @@ class JournalsMigration extends \PKP\migration\Migration
             $table->foreign('journal_id', 'journal_settings_journal_id')->references('journal_id')->on('journals')->onDelete('cascade');
             $table->index(['journal_id'], 'journal_settings_journal_id');
 
-            $table->string('locale', 14)->default('');
+            $table->string('locale', 28)->default('');
             $table->string('setting_name', 255);
             $table->mediumText('setting_value')->nullable();
 

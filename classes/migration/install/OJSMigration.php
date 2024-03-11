@@ -58,7 +58,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->foreign('section_id', 'section_settings_section_id')->references('section_id')->on('sections')->onDelete('cascade');
             $table->index(['section_id'], 'section_settings_section_id');
 
-            $table->string('locale', 14)->default('');
+            $table->string('locale', 28)->default('');
             $table->string('setting_name', 255);
             $table->mediumText('setting_value')->nullable();
 
@@ -107,7 +107,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->foreign('issue_id', 'issue_settings_issue_id')->references('issue_id')->on('issues')->onDelete('cascade');
             $table->index(['issue_id'], 'issue_settings_issue_id');
 
-            $table->string('locale', 14)->default('');
+            $table->string('locale', 28)->default('');
             $table->string('setting_name', 255);
             $table->mediumText('setting_value')->nullable();
 
@@ -143,7 +143,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->comment('Issue galleys are representations of the entire issue in a single file, such as a complete issue PDF.');
             $table->bigInteger('galley_id')->autoIncrement();
 
-            $table->string('locale', 14)->nullable();
+            $table->string('locale', 28)->nullable();
 
             $table->bigInteger('issue_id');
             $table->foreign('issue_id', 'issue_galleys_issue_id')->references('issue_id')->on('issues')->onDelete('cascade');
@@ -169,7 +169,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->foreign('galley_id', 'issue_galleys_settings_galley_id')->references('galley_id')->on('issue_galleys')->onDelete('cascade');
             $table->index(['galley_id'], 'issue_galley_settings_galley_id');
 
-            $table->string('locale', 14)->default('');
+            $table->string('locale', 28)->default('');
             $table->string('setting_name', 255);
             $table->mediumText('setting_value')->nullable();
             $table->string('setting_type', 6)->comment('(bool|int|float|string|object)');
@@ -262,7 +262,7 @@ class OJSMigration extends \PKP\migration\Migration
         Schema::create('publication_galleys', function (Blueprint $table) {
             $table->comment('Publication galleys are representations of a publication in a specific format, e.g. a PDF.');
             $table->bigInteger('galley_id')->autoIncrement();
-            $table->string('locale', 14)->nullable();
+            $table->string('locale', 28)->nullable();
 
             $table->bigInteger('publication_id');
             $table->foreign('publication_id', 'publication_galleys_publication_id')->references('publication_id')->on('publications')->onDelete('cascade');
@@ -295,7 +295,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->foreign('galley_id', 'publication_galley_settings_galley_id')->references('galley_id')->on('publication_galleys')->onDelete('cascade');
             $table->index(['galley_id'], 'publication_galley_settings_galley_id');
 
-            $table->string('locale', 14)->default('');
+            $table->string('locale', 28)->default('');
             $table->string('setting_name', 255);
             $table->mediumText('setting_value')->nullable();
 
@@ -337,7 +337,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->foreign('type_id', 'subscription_type_settings_type_id')->references('type_id')->on('subscription_types')->onDelete('cascade');
             $table->index(['type_id'], 'subscription_type_settings_type_id');
 
-            $table->string('locale', 14)->default('');
+            $table->string('locale', 28)->default('');
             $table->string('setting_name', 255);
             $table->mediumText('setting_value')->nullable();
             $table->string('setting_type', 6);

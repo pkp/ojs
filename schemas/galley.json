@@ -48,7 +48,7 @@
 			"description": "The primary locale of this galley.",
 			"apiSummary": true,
 			"validation": [
-				"regex:/^([a-z]{2})((_[A-Z]{2})?)(@[a-z]{0,})?$/"
+				"regex:/^([A-Za-z]{2,4})(?<sc>[_-]([A-Za-z]{4,5}|[0-9]{4}))?([_-]([A-Za-z]{2}|[0-9]{3}))?(@[a-z]{2,30}(?&sc)?)?$/"
 			]
 		},
 		"label": {

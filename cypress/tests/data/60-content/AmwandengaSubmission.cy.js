@@ -224,7 +224,7 @@ describe('Data suite: Amwandenga', function() {
 			.find('h4').contains('Keywords').siblings('.submissionWizard__reviewPanel__item__value').contains('None provided')
 			.parents('.submissionWizard__reviewPanel')
 			.find('h4').contains('Abstract').siblings('.submissionWizard__reviewPanel__item__value').contains(submission.abstract);
-		cy.get('h3').contains('Details (French)')
+		cy.get('h3').contains('Details (French (Canada))')
 			.parents('.submissionWizard__reviewPanel')
 			.find('h4').contains('Title').siblings('.submissionWizard__reviewPanel__item__value').contains('None provided')
 			.parents('.submissionWizard__reviewPanel')
@@ -234,7 +234,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('h3').contains('For the Editors (English)')
 			.parents('.submissionWizard__reviewPanel')
 			.find('h4').contains('Comments for the Editor').siblings('.submissionWizard__reviewPanel__item__value').contains('None');
-		cy.get('h3').contains('For the Editors (French)') // FIXME: Should be French
+		cy.get('h3').contains('For the Editors (French (Canada))')
 
 		// Save for later
 		cy.get('button').contains('Save for Later').click();
