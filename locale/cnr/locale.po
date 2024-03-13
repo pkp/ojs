@@ -1,7 +1,7 @@
 # Milutin Markovic <admin@fcjk.me>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-03-02 04:51+0000\n"
+"PO-Revision-Date: 2024-03-14 15:17+0000\n"
 "Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
 "Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "cnr/>\n"
@@ -1876,3 +1876,426 @@ msgstr ""
 "Pristup ovom članku zahtijeva pretplatu ili se naplaćuje po pristupu. Molimo "
 "vas prijavite se u časopis kako biste potvrdili svoj pretplatnički status "
 "ili izvršili uplatu."
+
+msgid "payment.notFound"
+msgstr ""
+"Zatraženo je plaćanje, ali zahtjev je istekao. Za više detalja kontaktirajte "
+"glavnog urednika."
+
+msgid "payment.donation.makeDonation"
+msgstr "Uplatite donaciju"
+
+msgid "payment.submission.paySubmission"
+msgstr "Uplatite naknadu za prijavu članka"
+
+msgid "payment.publication.payPublication"
+msgstr "Uplatite naknadu za objavljivanje"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Naknada za objavljivanje uplaćena"
+
+msgid "payment.membership.buyMembership"
+msgstr "Kupite individualno članstvo"
+
+msgid "payment.membership.renewMembership"
+msgstr "Obnovite individualno članstvo"
+
+msgid "payment.membership.ends"
+msgstr "Član do"
+
+msgid "payment.subscription.purchase"
+msgstr "Kupi pretplatu"
+
+msgid "payment.subscription.renew"
+msgstr "Obnovite pretplatu"
+
+msgid "payment.subscription.expires"
+msgstr "Ističe"
+
+msgid "installer.appInstallation"
+msgstr "OJS instalacija"
+
+msgid "installer.ojsUpgrade"
+msgstr "OJS nadogradnja"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"Za kompletnu Unicode (UTF-8) podršku, odaberite UTF-8 za postavku skupa svih "
+"znakova. Uzmite u obzir da ova podrška trenutno zahteva MySQL >= 4.1.1 ili "
+"PostgreSQL >= 7.1 server baza podataka. Takođe, uzmite u obzir da potpuna "
+"Unicode podrška zahtijeva PHP >= 4.3.0 izrađen s podrškom za <a href=\"http"
+"://www.php.net/mbstring\" target=\"_blank\">mbstring</a> biblioteku ("
+"uobičajeno omogućeno u većini aktuelnih PHP instalacija). Možete imati "
+"problema ukoliko koristite proširene skupove znakova ako vaš server ne "
+"podržava ove zahteve.\n"
+"<br /><br />\n"
+"Vaš server trenutno podržava mbstring: <strong>{$supportsMBString}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr ""
+"Vaš server podržava postavljanje datoteka: "
+"<strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"Vaš server trenutno podržava postavljanje maksimalnu veličinu datoteke: "
+"<strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr ""
+"Primarni jezik za korišćenje u ovom sistemu. Molimo pogledajte OJS "
+"dokumentaciju ako ste zaintersovani za podršku za jezike koji nisu izlistani "
+"ovđe."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+"OJS za čuvanje podataka zahteva pristup SQL bazi. Pregledajte gore navedene "
+"sistemske zahteve za popis baza koje OJS podržava. U niže priloženim poljima "
+"navedite parametre koji će se koristiti za povezivanje s bazom."
+
+msgid "installer.installApplication"
+msgstr "Instaliraj OJS"
+
+msgid "installer.upgradeApplication"
+msgstr "Nadogradi OJS"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+"<strong>Upozorenje:<strong> Ako instalacija nije uspjela djelimično prilikom "
+"instalacije baze podataka mora ćete izbrisati vašu OJS bazu podataka ili "
+"tabele baze podataka prije ponovnog pokušaja instalacije baze podataka."
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"Dostupna je nova verzija OJS! Trenutno koristite OJS {$currentVersion}. "
+"Najnovija verzija ОЈС је {$latestVersion}. Posljednja verzija OJS "
+"{$latestVersion}. Pośetite <a href=\"http://pkp.sfu.ca/ojs_download\" target="
+"\"_new\">ovu stranu</a>da preuzmete posljednju verziju i da nađete uputstvo "
+"za nadogradnju."
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"Dostupna je nova verzija OJS! Trenutno koristite OJS {$currentVersion}. "
+"Posljednja verzija OJS je {$latestVersion}. Obratite se vašem administratoru "
+"sajta ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\""
+">{$siteAdminEmail}</a>) i obavijestite ga o novom izdanju. Više informacija "
+"možete naći <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\""
+">ovđe</a>."
+
+msgid "log.author.documentRevised"
+msgstr ""
+"{$authorName} je revidirao svoj prilog {$submissionId}. ID novog fajla je "
+"{$fileId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr ""
+"{$reviewerName} je povučen(a) iz recenzentskog postupka priloga "
+"{$submissionId} u {$round}. krugu recenzije."
+
+msgid "log.review.reviewInitiated"
+msgstr ""
+"Recenzent {$reviewerName} je pokrenuo {$round}. krug recenzije priloga "
+"{$submissionId}."
+
+msgid "log.review.reviewerRated"
+msgstr ""
+"{$reviewerName} je ocijenjen za {$round}. krug recenzije priloga "
+"{$submissionId}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"Krajnji rok za {$round}. krug recenzije za prilog {$submissionId} za "
+"recenzenta {$reviewerName} je izmijenjen na {$dueDate}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+"Recenzent {$reviewerName} je postavio preporuku za {$round}. krug recenzije "
+"priloga {$submissionId}."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"{$editorName} je unio u ime recenzenta {$reviewerName} preporuku za {$round}"
+". krug recenzije za prilog {$submissionId}."
+
+msgid "log.review.resubmit"
+msgstr "Prilog {$submissionId} je iznova predat za recenziju."
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+"{$reviewerName} je odbio izradu {$round}. kruga recenzije za prilog "
+"{$submissionId}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName} je odbio/la {$round} recenziju priloga {$submissionId} u ime "
+"{$reviewerName}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName} je prihvatio {$round}. krug recenzije za prilog {$submissionId} "
+"u ime {$reviewerName}."
+
+msgid "log.review.reviewerFile"
+msgstr "Recenzent je poslao fajl."
+
+msgid "log.editor.decision"
+msgstr ""
+"{$editorName} je evidentirao uredničku odluku ({$decision}) za članak "
+"{$submissionId}."
+
+msgid "log.editor.recommendation"
+msgstr ""
+"Preporuku urednika ({$decision}) za članak {$submissionId} zapisao je "
+"{$editorName}."
+
+msgid "log.copyedit.initiate"
+msgstr "{$copyeditorName} je započeo lekturu priloga {$submissionId}."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Verzija teksta za lekturu je odabrana."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr "{$copyeditorName} je završio početnu lekturu priloga {$submissionId}."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "{$copyeditorName} je dodijeljena lektura priloga {$submissionId}."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "Inicijalna lektura priloga je sačuvana."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} je završio uređivanje preloma za prilog {$submissionId}."
+
+msgid "log.copyedit.authorFile"
+msgstr "Autorska revizija lekture je sačuvana."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr ""
+"{$editorName} je dodijeljen kao grafički urednik za prilog {$submissionId}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr ""
+"{$editorName} je razriješen uloge grafičkog urednika za prilog "
+"{$submissionId}."
+
+msgid "log.editor.metadataModified"
+msgstr "{$editorName} je modifikovao metapodatke ovog priloga."
+
+msgid "log.editor.editorFile"
+msgstr "Sačuvana je urednička verzija teksta priloga."
+
+msgid "log.editor.archived"
+msgstr "Prijava {$submissionId} je arhivirana."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} je dodijeljen kao urednik prloga {$submissionId}."
+
+msgid "log.proofread.assign"
+msgstr ""
+"Korektura priloga {$submissionId} dodijeljena je {$proofreaderName} od "
+"strane {$assignerName} je dodijelio."
+
+msgid "log.imported"
+msgstr "{$userName} je unio članak {$submissionId}."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Stručno recenziran članak"
+
+msgid "notification.type.editing"
+msgstr "Uređivanje događaja"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Novi članak, \"{$title},\" je prijavljen."
+
+msgid "notification.type.editorDecisionComment"
+msgstr "Postavljen je komentar na urednikovu odluku za \"{$title}\"."
+
+msgid "notification.type.galleyModified"
+msgstr "Fajl za prikaz je izmijenjen za \"{$title}\"."
+
+msgid "notification.type.reviewing"
+msgstr "Pregledanje događaja"
+
+msgid "notification.type.site"
+msgstr "Događaji na sajtu"
+
+msgid "notification.type.submissionComment"
+msgstr "Urednik je komentarisao \"{$title}\"."
+
+msgid "notification.type.submissions"
+msgstr "Događaji u dijelu za predaje"
+
+msgid "notification.type.userComment"
+msgstr "Čitalac je komentarisao \"{$title}\""
+
+msgid "notification.type.public"
+msgstr "Javne objave"
+
+msgid "notification.savedIssueMetadata"
+msgstr "Sačuvani metapodaci izdanja broja."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Novi člnak je prijavljen za kojeg mora biti određen urednik."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Čekanje preloma."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "Pristup nije dozvoljen! Nijeste dodati kao lektor za ovaj članak."
+
+msgid "user.authorization.noContext"
+msgstr "Nema časopisa u kontekstu."
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Pokušavate da pristupite članku koji nije u vašoj sekciji."
+
+msgid "user.authorization.invalidIssue"
+msgstr "Zahtevali ste nevažeći broj!"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "Neispravna lektorska predaja ili predaja nije zahijtevana!"
+
+msgid "grid.action.createContext"
+msgstr "Kreiraj novi časopis"
+
+msgid "editor.navigation.issues"
+msgstr "Brojevi"
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Čekanje odobrenja."
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Registracija u drugim časopisima"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Sakrij ostale časopise"
+
+msgid "article.view.interstitial"
+msgstr "Odaberite fajl članka za preuzimanje."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Odobreno"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Čeka se odobrenje"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Odobrenje preloma"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Odobri ovaj prelom za objavljivanje.</p>"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>Predinstalacijski koraci</h4>\n"
+"<p>1. Sledeći fajlovi i direktoriji  (i njihovi sadržaji) trebaju biti "
+"upisivi:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> je upisiv (optional): {$writable_config}</li>\n"
+"\t<li><tt>public/</tt> je upisiv: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> je upisiv: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> je upisiv: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> je upisiv: {$writable_templates_compile}</li>"
+"\n"
+"\t<li><tt>cache/_db</tt> je upisiv: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. Dirtektorij koji će sadržvati fajlove postavljene na server mora biti "
+"kreiran i upisiv (viđi \"podešavanja fajlova\" ispod).</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>OJS verzija {$version}</h4>\n"
+"\n"
+"<p>Hvala Vam za preuzimanje Public Knowledge Projecta, <strong>Open Journal "
+"Systems</strong>. Prije postupka, molimo pročitajte <a href=\"{$baseUrl}/"
+"docs/README.md\">README</a> i <a href=\"{$baseUrl}/docs/UPGRADE.md\""
+">UPGRADE</a> datoteke uključene s ovim softverom. Za više informacija o "
+"Public Knowledge Project-u i njegovim softverskim projektima, molimo "
+"posjetite <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">PKP mrežnu "
+"stranicu</a>. Ako imate prijavu o grešci ili tražite tehničku podršku za "
+"OJS, pogledajte <a href=\"http://forum.pkp.sfu.ca\">forum podrške</a> ili "
+"posjetite PKP-ov online <a href=\"https://github.com/pkp/pkp-lib#issues\" "
+"target=\"_blank\">sustav prijave pogrešaka</a>. Iako je forum podrške "
+"preferirana metoda kontakta, također možete timu poslati e-poštu na <a href="
+"\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"\n"
+"<p><strong>Vrlo je preporučljivo</strong> da napravite sigurnosnu kopiju "
+"vaše baze podataka, direktorija s datotekama i OJS instalacijskog "
+"direktorija prije nastavka.</p>\n"
+"<p>Ako imate pokrenut <a href=\"http://www.php.net/features.safe-mode\" "
+"target=\"_blank\">PHP sigurnosni mod</a>, molimo osigurajte da je "
+"max_execution_time direktiva u vašoj php.ini konfiguracijskoj datoteci "
+"postavljena na visok limit. Ako je taj ili bilo koji drugi vremenski limit ("
+"npr. Apachejeva \"timeout\" direktiva) dosegnut i postupak nadogradnje "
+"prekinut, bit će potrebna ručna intervencija.</p>"
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+"Unesite puno ime putanje prema postojećem direktorijumu đe će se čuvati "
+"poslati fajlovi. Taj direktorijum ne bi smio biti direktno dostupan preko "
+"mreže. <strong>Molimo osigurajte da taj direktorijum postoji i da se može "
+"pisati po njemu prije instalacije.</strong> Imena Windows putanji moraju "
+"koristiti kose crte unaprijed, npr. \"C:/mojicasopisi/fajlovi\"."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>VAŽNO!</h4>\n"
+"<p>Instalacioni program ne može automatski pisati preko konfiguracionog "
+"fajla. Prije pokušanja korištenja sistema, molimo otvorite <tt>config.inc."
+"php</tt> u odgovarajućem uređivaču teksta i zamijenite njegov sadržaj sa "
+"sadržajem teksta koji se nalazi u polju ispod.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>Instalacija OJS-a je uspešno završena.</p>\n"
+"<p>Da biste započeli sa korišćenjem sistema, <a href=\"{$loginUrl}\""
+">prijavite se</a>sa Vašim korisničkim imenom i lozinkom navedenim na prošloj "
+"stranici.</p>\n"
+"<p>Ako želite da primate vijesti i nadogradnje, <strong>molimo da se "
+"registrujete na <a href=\"http://pkp.sfu.ca/ojs/register\" target=\"_new\""
+">http://pkp.sfu.ca/ojs/register</a>.</strong> Ako imate pitanja ili "
+"komentare, pośetite <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\""
+">forum podrške</a>.</p>"
+
+msgid "log.review.reviewAccepted"
+msgstr ""
+"{$reviewerName} je prihvatio izradu {$round}. kruga recenzije za prilog "
+"{$submissionId}."
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"Urednik {$userName} je u ime recenzenta {$reviewerName} priložio fajl sa "
+"recenzijom za {$round}. krug recenzije priloga {$submissionId}."
+
+msgid "notification.type.approveSubmission"
+msgstr "Prijava trenutno čeka odobrenje prije nego se pojavi u broju."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr "{$copyeditorName} je završio konačnu lekturu priloga {$submissionId}."
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Ukloni odobrenje ovog preloma.</p>"
+
+msgid "log.editor.restored"
+msgstr "Prijava {$submissionId} je vraćena u uređivački postupak."
+
+msgid "log.proofread.complete"
+msgstr ""
+"{$proofreaderName} je postavio prilog {$submissionId} u raspored za "
+"izdavanje."
+
+msgid "notification.type.issuePublished"
+msgstr "Izdanje je objavljeno."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Novo obavještenje je napisano."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Obrazac za recenziju je poslata za \"{$title}\"."
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+"Dodijeli korisnika da kreira probne kopije koristeći Dodaj link u listi "
+"Učesnika."
