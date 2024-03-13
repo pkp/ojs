@@ -561,7 +561,11 @@ class IssueGridHandler extends GridHandler
         }
 
         $issue->setPublished(1);
-        $issue->setDatePublished(Core::getCurrentDate());
+
+        // If no datePublished was given, use current date
+        if (!$issue->getData('datePublished')) {
+            $issue->setDatePublished(Core::getCurrentDate());
+        }
 
         // If subscriptions with delayed open access are enabled then
         // update open access date according to open access delay policy
