@@ -1,12 +1,13 @@
 # Lucia Steele <lucia.steele@aboutscience.eu>, 2021.
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
+# Leonardo Mancini <leonardo.mancini@unito.it>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
-"PO-Revision-Date: 2023-06-21 13:49+0000\n"
-"Last-Translator: Stefan Schneider <mail@stefan-schneider.at>\n"
+"PO-Revision-Date: 2024-03-10 02:03+0000\n"
+"Last-Translator: Leonardo Mancini <leonardo.mancini@unito.it>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/editor/it/>"
 "\n"
 "Language: it\n"
@@ -14,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "editor.home"
 msgstr "Cruscotto dell'editor"
@@ -435,7 +436,7 @@ msgstr ""
 "la pubblicazione dell'articolo."
 
 msgid "editor.article.payment.requestPayment"
-msgstr ""
+msgstr "Richiesta di pagamento"
 
 msgid "editor.article.removeCoverImageFileNotFound"
 msgstr ""

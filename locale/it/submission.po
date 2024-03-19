@@ -1,12 +1,13 @@
 # Lucia Steele <lucia.steele@aboutscience.eu>, 2022.
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
+# Leonardo Mancini <leonardo.mancini@unito.it>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2023-06-19 15:18+0000\n"
-"Last-Translator: Stefan Schneider <mail@stefan-schneider.at>\n"
+"PO-Revision-Date: 2024-03-10 02:03+0000\n"
+"Last-Translator: Leonardo Mancini <leonardo.mancini@unito.it>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "it/>\n"
 "Language: it\n"
@@ -14,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "submission.submit.userGroup"
 msgstr "Invia usando il mio ruolo come ..."
@@ -385,28 +386,41 @@ msgstr ""
 "{$pubObjectTitle}. Non esiste nel sito della rivista."
 
 msgid "submission.layout.viewGalley"
-msgstr ""
+msgstr "Visualizza il file"
 
 msgid "galley.cantEditPublished"
-msgstr ""
+msgstr "Questo file non può essere modificato perché è già stato pubblicato."
 
 msgid "submission.copyright.description"
 msgstr ""
+"Si prega di leggere e accettare i termini di copyright per la presentazione "
+"di contributi a questa rivista."
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
+"Non si è autorizzati all'invio di proposte editoriali a questa rivista "
+"occorre essere prima registrati dalla Redazione. Se si ritiene che si tratti "
+"di un errore, contattare <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
+"Non è possibile inviare una proposta a questa rivista perché l'invio a tutte "
+"le sezioni sono state disattivate o limitate. Se si ritiene che si tratti di "
+"un errore, contattare <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
+"{$contextName} non accetta proposte per la sezione {$section}. In caso di "
+"necessità di aiuto per il recupero della proposta editoriale, contattare <a "
+"href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.sectionNotFound"
-msgstr ""
+msgstr "Non è stato possibile trovare la sezione relativa a questa proposta."
 
 msgid "submission.sectionRestrictedToEditors"
 msgstr ""
+"Solo i membri del gruppo editoriale sono autorizzati a presentare proposte "
+"in questa sezione."
 
 msgid "submission.submit.form.authorRequired"
 msgstr "E' necessario indicare almeno un autore."

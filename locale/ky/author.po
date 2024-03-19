@@ -1,0 +1,316 @@
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-02-28 05:39+0000\n"
+"Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
+"Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/author/ky/>\n"
+"Language: ky\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "author.submit"
+msgstr "Жаңы материал"
+
+msgid "author.submit.submitArticle"
+msgstr "Макала тапшырыңыз"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Тапшыруу үчүн беш кадам"
+
+msgid "author.submit.startHereTitle"
+msgstr "Жаңы материалды жөнөтө баштаңыз"
+
+msgid "author.submit.step1"
+msgstr "1-кадам. Жөнөтүп баштаңыз"
+
+msgid "author.submit.step2"
+msgstr "2-кадам. Материалды жүктөө"
+
+msgid "author.submit.step3"
+msgstr "Кадам 3. Материалдык метадайындарды киргизиңиз"
+
+msgid "author.submit.step4a"
+msgstr "Кадам 4a. Кошумча файл кошуу"
+
+msgid "author.submit.step5"
+msgstr "Кадам 5. Материалды жөнөтүүнү ырастоо"
+
+msgid "author.submit.start"
+msgstr "Баштоо"
+
+msgid "author.submit.upload"
+msgstr "Материал жүктөлүүдө"
+
+msgid "author.submit.metadata"
+msgstr "Метаберилиштер киргизилүүдө"
+
+msgid "author.submit.nextSteps"
+msgstr "Кийинки кадамдар"
+
+msgid "author.submit.notAccepting"
+msgstr "Бул журнал учурда билдирмелерди кабыл албайт."
+
+msgid "author.submit.requestWaiver"
+msgstr "Төлөмдү жокко чыгаруу өтүнүчү"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr ""
+"Эгер сиз жеткирүү акысынан баш тартууну талап кылсаңыз, тиешелүү талаада "
+"себебин көрсөтүшүңүз керек."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "Каралган: ({$round}-тур)"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "Каралып жатат: Өзгөртүүлөр талап кылынат"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "Редакция: Адабий редакция керек"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Текшерилген версиясын жүктөп алыңыз"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Коррекциялоо учурундагы оңдоолор"
+
+msgid "author.submissions.viewStatus"
+msgstr "Статусун көрсөтүү"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Материалдар жөнөтүлгөн жок."
+
+msgid "author.submit.journalSection"
+msgstr "Журнал бөлүмү"
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr ""
+"Улантуу үчүн автордук укукту өткөрүп берүү шарттарын кабыл алышыңыз керек."
+
+msgid "submission.submit.coverNote"
+msgstr "Редактор үчүн комментарийлер"
+
+msgid "author.submit.comments"
+msgstr "Текстти киргизиңиз (милдеттүү эмес)"
+
+msgid "author.submit.form.localeRequired"
+msgstr "Сураныч, сиз жөнөтүп жаткан материалдын тилин тандаңыз."
+
+msgid "author.submit.reorder"
+msgstr "Автордун атын жылдыруу"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Редакциялар менен кат алышуу үчүн башкы автор."
+
+msgid "author.submit.addAuthor"
+msgstr "Авторду кошуу"
+
+msgid "author.submit.deleteAuthor"
+msgstr "Авторду өчүрүү"
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+"English=en; French=fr; Spanish=es; Орусча=ру. <a href=\"https://www.loc.gov/"
+"standards/iso639-2/php/code_list.php\" target=\"_blank\">Кошумча коддор</a>."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Жок дегенде бир автор талап кылынат."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Макалаңыздын аталышын киргизиңиз."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Макалаңыздын аннотациясын киргизиңиз."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "Сиз бул бөлүмдөгү реферат үчүн максималдуу сөз чегинен ашып кеттиңиз."
+
+msgid "author.submit.submissionFile"
+msgstr "Жүктөлгөн файл"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Жөнөтүү үчүн файлды жүктөп бериңиз"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Жөнөтүлүп жаткан файл жүктөлгөн жок."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr ""
+"Файлды жүктөп алуу үчүн \"Сактоо\" баскычын басыңыз (андан кийин башка "
+"файлдарды жүктөп алсаңыз болот)."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "Сиз тандаган кошумча файлды жүктөп албай эле улантууну каалайсызбы?"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Бул материалга кошумча файлдар кошулган жок."
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Кошумча файлдарга кайтуу"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Бул кошумча файлды чын эле жок кылгыңыз келеби?"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Кошумча файлды жүктөп алыңыз"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Кошумча файл кошуу"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Кошумча файлды түзөтүңүз"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Кошумча файл метадайындары"
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Кошумча файл"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Файлдын жаратуучусу (же ээси)"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Изилдөө куралы"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Изилдөө материалдары"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Изилдөө натыйжалары"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Транскрипттер"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Маалыматтарды талдоо"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Берилиштер топтому"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Түпнуска текст"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Кыскача сүрөттөмө"
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Расмий жарыяланган материалдар үчүн гана колдонуңуз."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Маалыматтарды чогултуу же аспапты түзүү датасы."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Сураныч, тема киргизиңиз."
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "Ачык кошумча файл идентификациясы мурунтан эле бар."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Коомдук кошумча файл идентификатору"
+
+msgid "author.submit.filesSummary"
+msgstr "Файл маалыматы"
+
+msgid "author.track"
+msgstr "Активдүү материалдар"
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"Тапшыруу процессиндеги беш кадамдын биринчисине өтүү үчүн <a href=\""
+"{$submitUrl}\" class=\"action\">бул жерди басыңыз</a>."
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr ""
+"Бул материалды индекстөө үчүн ачкыч сөздөрдү көрсөтүңүз; Ачкыч сөздөрдү "
+"чекиттүү үтүр менен бөлүңүз (word1; word2; word3)."
+
+msgid "author.submit.step4"
+msgstr "4-кадам: Кошумча файлдарды жүктөп алыңыз"
+
+msgid "author.submit.coverageInstructions"
+msgstr ""
+"Изилдөөңүздүн геомейкиндиктик, хронологиялык же тарыхый чөйрөсүн жана/же "
+"изилдөө сайтынын мүнөздөмөлөрүн сүрөттөп бериңиз."
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Кошумча файлдарды жүктөп алыңыз"
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr ""
+"Ар бир автор үчүн сиз аты-жөнүн, фамилиясын жана электрондук почта дарегин "
+"киргизишиңиз керек."
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "Сураныч, бул макала үчүн тапшыруу акысынан баш тартууну карап көрүңүз"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Жөнөтүү үчүн файлды алмаштырыңыз"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr ""
+"Сураныч, төлөмдөн эмне үчүн баш тартуунун себептерин көрсөтүү үчүн төмөнкү "
+"комментарий кутучасын колдонуңуз."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "Тапшыруу файлын жүктөп албай эле улантууну каалайсызбы?"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "Редакцияга: Корректовка керек"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr ""
+"Бул кадам милдеттүү эмес жана сиздин кадрларыңызга кошумча файлдарды кошууга "
+"мүмкүндүк берет. Бул файлдар каалаган форматта болушу мүмкүн жана (а) "
+"изилдөө жүргүзүү үчүн колдонулган программаларды, (б) изилдөө этикасынын "
+"кабыл алынган эрежелерине ылайык түзүлгөн маалымат топтомдорун, (в) "
+"окурмандар үчүн жеткиликтүү болбогон булактарды, (г) тексттин өзүнө "
+"киргизүүгө мүмкүн болбогон сүрөттөр жана таблицалар, же чыгармага баалуулук "
+"берген башка материалдар."
+
+msgid "author.submissions.confirmDelete"
+msgstr "Бул толук эмес тапшырууну чын эле жок кылгыңыз келеби?"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr ""
+"Кошумча материалды индекстөө үчүн, жүктөлүп алынган кошумча файл үчүн "
+"төмөнкү метадайындарды бериңиз."
+
+msgid "author.submit.verifyChecklist"
+msgstr ""
+"Улантуу үчүн, тапшыруу текшерүү тизмесиндеги бардык пункттар толтурулганын "
+"текшеришиңиз керек."
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr ""
+"Файлды кароочуларга бериңиз (метадайындарсыз), анткени ал анонимдүү кароонун "
+"талаптарын бузбайт."
+
+msgid "author.submit.reorderInstructions"
+msgstr ""
+"Авторлордун аты-жөнү басылмада көрсөтүлүшү керек болгон тартипте кайра "
+"жайгаштырылсын."
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Изилдөөнүн аталышы же башка материал булактары."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Башкасын белгиле"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Жүктөлүп алынган файлдар жок."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Сураныч, бул кошумча файлдын атын киргизиңиз."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Сураныч, сүрөттөмө киргизиңиз."
+
+msgid "author.submit.finishSubmission"
+msgstr "Жөнөтүү аяктады"
+
+msgid "author.submit.submissionComplete"
+msgstr ""
+"Материал жөнөтүлдү. “{$journalTitle}” журналына жарыялоого кызыкканыңыз үчүн "
+"рахмат."
