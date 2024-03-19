@@ -1,7 +1,7 @@
 # Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-03 21:35+0000\n"
+"PO-Revision-Date: 2024-03-04 11:43+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/"
 "paymethod-manual/ky/>\n"
@@ -25,3 +25,21 @@ msgstr "Төлөмдү кол менен киргизүү"
 
 msgid "plugins.paymethod.manual.settings"
 msgstr "Төлөмдү кол менен киргизүү боюнча нускамалар"
+
+msgid "plugins.paymethod.manual.paymentNotification"
+msgstr "Төлөм билдирүүсү"
+
+msgid "plugins.paymethod.manual.sendNotificationOfPayment"
+msgstr "Төлөм билдирүүсүн жөнөтүү"
+
+msgid "plugins.paymethod.manual.notificationSent"
+msgstr "Төлөм билдирүү жөнөтүлдү"
+
+msgid "plugins.paymethod.manual.purchase.title"
+msgstr "аты"
+
+msgid "plugins.paymethod.manual.purchase.fee"
+msgstr "Сум"
+
+msgid "plugins.paymethod.manual.manualPaymentNotify.name"
+msgstr "Төлөмдү кол менен киргизүү жөнүндө кабарлаңыз"

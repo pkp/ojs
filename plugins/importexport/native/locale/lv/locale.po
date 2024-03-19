@@ -1,7 +1,7 @@
 # Ieva Tiltina <pastala@gmail.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-30 11:06+0000\n"
+"PO-Revision-Date: 2024-02-23 14:59+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-native/lv/>\n"
@@ -17,7 +17,7 @@ msgid "plugins.importexport.native.import"
 msgstr "Importēt"
 
 msgid "plugins.importexport.native.import.instructions"
-msgstr "Augšupielādēt XML failu, lai importētu"
+msgstr "Augšupielādēt XML datni importam"
 
 msgid "plugins.importexport.native.exportSubmissionsSelect"
 msgstr "Atlasīt eksportējamos rakstus"
@@ -69,7 +69,7 @@ msgid "plugins.importexport.native.description"
 msgstr "Rakstu un numuru importēšana un eksportēšana OJS natīvajā XML formātā."
 
 msgid "plugins.inportexport.native.uploadFile"
-msgstr "Lai turpinātu, lūdzu, augšupielādējiet failu sadaļā \"Importēt\"."
+msgstr "Lai turpinātu, lūdzu, augšupielādējiet datni sadaļā \"Importēt\"."
 
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""

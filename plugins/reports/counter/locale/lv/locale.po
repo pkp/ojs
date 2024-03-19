@@ -1,7 +1,7 @@
-# Ieva Tiltina <pastala@gmail.com>, 2023.
+# Ieva Tiltina <pastala@gmail.com>, 2023, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-12-07 13:39+0000\n"
+"PO-Revision-Date: 2024-02-23 14:59+0000\n"
 "Last-Translator: Ieva Tiltina <pastala@gmail.com>\n"
 "Language-Team: Latvian <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-counter/lv/>\n"
@@ -14,25 +14,25 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.reports.counter"
-msgstr "COUNTER atskaites"
+msgstr "COUNTER pārskati"
 
 msgid "plugins.reports.counter.error.badRequest"
-msgstr "Ziņojuma pieprasījums ir nederīgs."
+msgstr "Pārskata pieprasījums ir nederīgs."
 
 msgid "plugins.reports.counter.error.noResults"
-msgstr "Šim ziņojumam rezultāti netika atrasti."
+msgstr "Šim pārskatam rezultāti netika atrasti."
 
 msgid "plugins.reports.counter.1a.name"
-msgstr "COUNTER ziņojums JR1 (R3)"
+msgstr "COUNTER pārskats JR1 (R3)"
 
 msgid "plugins.reports.counter.allCustomers"
 msgstr "Visi klienti"
 
 msgid "plugins.reports.counter.ar1.title"
-msgstr "Raksta ziņojums Nr. 1"
+msgstr "Raksta pārskats 1"
 
 msgid "plugins.reports.counter.jr1.title"
-msgstr "Žurnāla ziņojums Nr. 1"
+msgstr "Žurnāla pārskats 1"
 
 msgid "plugins.reports.counter.description"
 msgstr ""
@@ -45,12 +45,12 @@ msgid "plugins.reports.counter.release"
 msgstr "COUNTER laidiens"
 
 msgid "plugins.reports.counter.error.badParameters"
-msgstr "Ziņojuma parametri nebija derīgi."
+msgstr "Pārskata parametri nebija derīgi."
 
 msgid "plugins.reports.counter.error.noXML"
 msgstr "Rezultātus nevarēja formatēt kā XML."
 
 msgid "plugins.reports.counter.1a.description"
 msgstr ""
-"COUNTER Journal Report 1 (R3): Pilna teksta rakstu pieprasījumi pēc mēneša "
+"COUNTER žurnāla pārskats 1 (R3): Pilna teksta rakstu pieprasījumi pēc mēneša "
 "un žurnāla"
