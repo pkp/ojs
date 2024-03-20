@@ -411,9 +411,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Поставки за весник"
 
-msgid "manager.setup.masthead"
-msgstr "Мајстор"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Уреднички тим"
 

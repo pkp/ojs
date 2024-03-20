@@ -361,9 +361,6 @@ msgstr "限制本栏目的字符数(0为不限制)"
 msgid "manager.setup"
 msgstr "配置"
 
-msgid "manager.setup.masthead"
-msgstr "刊头"
-
 msgid "manager.setup.editorialTeam"
 msgstr "编辑团队"
 

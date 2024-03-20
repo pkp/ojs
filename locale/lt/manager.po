@@ -319,9 +319,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr ""
 
-msgid "manager.setup.masthead"
-msgstr ""
-
 msgid "manager.setup.editorialTeam"
 msgstr ""
 

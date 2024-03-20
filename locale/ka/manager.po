@@ -403,9 +403,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "ჟურნალის პარამეტრები"
 
-msgid "manager.setup.masthead"
-msgstr "გამომავალი მონაცემები"
-
 msgid "manager.setup.editorialTeam"
 msgstr "რედაქცია"
 

@@ -400,9 +400,6 @@ msgstr "Осы бөлім үшін аннотациядағы сөздердің
 msgid "manager.setup"
 msgstr "Журнал баптаулары"
 
-msgid "manager.setup.masthead"
-msgstr "Шығыс деректер"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Редакция"
 

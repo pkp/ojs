@@ -396,9 +396,6 @@ msgstr "Omeji število besed v izvlečku v tej rubriki na (0 za neomejeno)"
 msgid "manager.setup"
 msgstr "Nastavitve"
 
-msgid "manager.setup.masthead"
-msgstr "Kolofon"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Uredništvo"
 

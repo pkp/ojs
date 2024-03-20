@@ -398,9 +398,6 @@ msgstr "Obmedziť počet slov abstraktu pre túto sekciu (0 pre žiadny limit)"
 msgid "manager.setup"
 msgstr "Nastavenia"
 
-msgid "manager.setup.masthead"
-msgstr "Hlavný titulok"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Tím redaktorov"
 

@@ -410,9 +410,6 @@ msgstr "Rajaa tämän osaston abstraktien sanamäärät (0 ei rajoitusta)"
 msgid "manager.setup"
 msgstr "Julkaisun asetukset"
 
-msgid "manager.setup.masthead"
-msgstr "Tunnuslaatikko"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Toimituskunta"
 

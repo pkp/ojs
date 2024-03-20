@@ -497,9 +497,6 @@ msgstr "इस सेक्शन के लिए सीमित सार श
 msgid "manager.setup"
 msgstr "जर्नल सेटिंग्स"
 
-msgid "manager.setup.masthead"
-msgstr "मास्टहेड"
-
 # (pofilter) simplecaps: Different capitalization
 msgid "manager.setup.editorialTeam"
 msgstr "संपादकीय टीम"

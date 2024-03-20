@@ -405,9 +405,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Cài đặt tạp chí"
 
-msgid "manager.setup.masthead"
-msgstr "Tiêu đề"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Ban biên tập"
 

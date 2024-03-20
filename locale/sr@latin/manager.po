@@ -396,9 +396,6 @@ msgstr "Ograniči broj reči za apstrakt za ovu sekciju (0 za bez ograničenja)"
 msgid "manager.setup"
 msgstr "Podešavanja časopisa"
 
-msgid "manager.setup.masthead"
-msgstr "Uprava"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Časopis uređuju"
 

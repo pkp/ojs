@@ -411,9 +411,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Настройки за списание"
 
-msgid "manager.setup.masthead"
-msgstr "Входни данни"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Редакторски екип"
 

@@ -406,9 +406,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Setări jurnal"
 
-msgid "manager.setup.masthead"
-msgstr "Masthead"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Echipa editorială"
 

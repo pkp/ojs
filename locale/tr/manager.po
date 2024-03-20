@@ -401,9 +401,6 @@ msgstr "Bu bölümde öz (abstract) için kelime sayısı (limitsiz: 0)"
 msgid "manager.setup"
 msgstr "Dergi Ayarları"
 
-msgid "manager.setup.masthead"
-msgstr "Yönetici Listesi"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Editör Kurulları"
 

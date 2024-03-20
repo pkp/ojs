@@ -425,9 +425,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Setup"
 
-msgid "manager.setup.masthead"
-msgstr "Impressum"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Redaktion"
 

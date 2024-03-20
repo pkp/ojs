@@ -388,9 +388,6 @@ msgstr "قيد عدد كلمات الملخص في هذا القسم (الصفر
 msgid "manager.setup"
 msgstr "التهيئة"
 
-msgid "manager.setup.masthead"
-msgstr "طاقم المجلة"
-
 msgid "manager.setup.editorialTeam"
 msgstr "هيئة التحرير"
 

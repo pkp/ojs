@@ -308,9 +308,6 @@ msgstr "Bu bölmədə xülasə (abstract) üçün kəlmə sayı (limitsiz: 0)"
 msgid "manager.setup"
 msgstr "Jurnal tənzimləri"
 
-msgid "manager.setup.masthead"
-msgstr "İdarəçi siyahısı"
-
 msgid "manager.setup.editorialTeam"
 msgstr "Redaksiya heyəti"
 
