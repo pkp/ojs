@@ -1,0 +1,17 @@
+on: [push, pull_request]
+name: ojs
+jobs:
+  ojs:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        database: ['pgsql','mysql','mariadb']
+        php-version: [ '8.1','8.2']
+
+    name: ojs
+    steps:
+      - uses: xmlFlow/pkp-github-actions@v1
+        with:
+          upgrade_test: 'stable-3_3_0,stable-3_4_0'
+          node_version: 20
