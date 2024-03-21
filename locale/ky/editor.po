@@ -1,7 +1,7 @@
 # Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-15 18:09+0000\n"
+"PO-Revision-Date: 2024-03-21 09:51+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/editor/ky/>\n"
 "Language: ky\n"
@@ -252,7 +252,7 @@ msgid "editor.issues.confirmUnpublish"
 msgstr "Бул жарыяланган санды жарыялоону чын эле алып салгыңыз келеби?"
 
 msgid "editor.issues.confirmSetCurrentIssue"
-msgstr "Чын эле бул чыгарылышты учурдагы  катары койгуңуз келеби?"
+msgstr "Чын эле бул чыгарылышты учурдагы катары койгуңуз келеби?"
 
 msgid "editor.issues.noLiveIssues"
 msgstr "Жарыяланган чыгарылыш жок"
