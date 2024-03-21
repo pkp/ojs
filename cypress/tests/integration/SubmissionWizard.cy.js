@@ -479,20 +479,20 @@ describe('Submission Wizard', function() {
         cy.get('label:contains("Abstract *")');
         cy.contains('Word Count: 0/500');
 
-        // Change submission language to French and section to Reviews
+        // Change submission language to French (Canada) and section to Reviews
         cy.contains('Submitting to the Articles section in English');
         cy.get('button:contains("Change")').click();
         cy.get('h2:contains("Change Submission Settings")')
             .parents('.modal')
             .within(() => {
-                cy.get('label:contains("French")').click();
+                cy.get('label:contains("French (Canada)")').click();
                 cy.get('label:contains("Reviews")').click();
                 cy.get('button:contains("Save")').click();
             });
 
-        // Forms load with French fields displayed instead of English
-        cy.contains('Submitting to the Reviews section in French');
-        cy.get('span.pkpFormLocales__locale:contains("French")');
+        // Forms load with French (Canada) fields displayed instead of English
+        cy.contains('Submitting to the Reviews section in French (Canada)');
+        cy.get('span.pkpFormLocales__locale:contains("French (Canada)")');
         cy.get('#titleAbstract-keywords-control-fr_CA').type('Transformation Sociale', {delay: 0});
         cy.get('li:contains("Transformation Sociale")');
         cy.get('#titleAbstract-keywords-control-fr_CA').type('{downarrow}{enter}', {delay: 0});
@@ -502,7 +502,7 @@ describe('Submission Wizard', function() {
         cy.get('label:contains("Abstract *")').should('not.exist');
         cy.get('*:contains("Word Count: 0/500")').should('not.exist');
 
-        // Show English fields alongside French fields
+        // Show English fields alongside French (Canada) fields
         cy.get('.pkpStep:contains("Submission Details") button.pkpFormLocales__locale:contains("English")').click();
         cy.get('label:contains("Title in English")');
         cy.get('label:contains("Keywords in English")');
@@ -523,7 +523,7 @@ describe('Submission Wizard', function() {
         cy.get('button:contains("Continue")').click();
         cy.get('button:contains("Continue")').click();
 
-        // Check metadata form shows in French only at first
+        // Check metadata form shows in French (Canada) only at first
         const metadata = {
             subjects: "Subjects",
             disciplines: "Disciplines",
@@ -539,7 +539,7 @@ describe('Submission Wizard', function() {
             cy.get('label:contains("' + metadata[prop] + ' in English")').should('not.be.visible');
         });
 
-        // Show English fields alongside French fields
+        // Show English fields alongside French (Canada) fields
         cy.get('.pkpStep:contains("For the Editors") button.pkpFormLocales__locale:contains("English")').click();
         Object.keys(metadata).forEach((prop) => {
             cy.get('label:contains("' + metadata[prop] + ' in English")');
@@ -551,13 +551,13 @@ describe('Submission Wizard', function() {
         // Errors in review
         cy.get('button:contains("Continue")').click();
         cy.contains('There are one or more problems');
-        cy.get('h3:contains("Details (French)")')
+        cy.get('h3:contains("Details (French (Canada))")')
             .parents('.submissionWizard__reviewPanel')
             .find('h4:contains("Title")')
             .parent()
             .contains('This field is required.');
-        cy.contains('The given name is missing in French for one or more of the contributors.');
-        cy.get('h3:contains("For the Editors (French)")')
+        cy.contains('The given name is missing in French (Canada) for one or more of the contributors.');
+        cy.get('h3:contains("For the Editors (French (Canada))")')
             .parents('.submissionWizard__reviewPanel')
             .find('h4:contains("Subjects")')
             .parent()

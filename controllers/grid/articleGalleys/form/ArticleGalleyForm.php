@@ -62,17 +62,15 @@ class ArticleGalleyForm extends Form
         $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
 
         // Ensure a locale is provided and valid
-        $journal = $request->getJournal();
+        $locales = $submission->getPublicationLanguages($request->getJournal()->getSupportedSubmissionMetadataLocales(), $articleGalley?->getLanguages());
         $this->addCheck(
-            new \PKP\form\validation\FormValidator(
+            new \PKP\form\validation\FormValidatorCustom(
                 $this,
                 'locale',
                 'required',
-                'editor.issues.galleyLocaleRequired'
-            ),
-            function ($locale) use ($journal) {
-                return in_array($locale, $journal->getSupportedSubmissionLocaleNames());
-            }
+                'editor.issues.galleyLocaleRequired',
+                fn ($locale) => in_array($locale, $locales)
+            )
         );
     }
 
@@ -93,9 +91,12 @@ class ArticleGalleyForm extends Form
                 'supportsDependentFiles' => $articleGalleyFile ? Repo::submissionFile()->supportsDependentFiles($articleGalleyFile) : null,
             ]);
         }
-        $context = $request->getContext();
+
+        $supportedLocales = $request->getContext()->getSupportedSubmissionMetadataLocaleNames() + $this->_submission->getPublicationLanguageNames() + ($this->_articleGalley?->getLanguageNames() ?? []);
+        ksort($supportedLocales);
+
         $templateMgr->assign([
-            'supportedLocales' => $context->getSupportedSubmissionLocaleNames(),
+            'supportedLocales' => $supportedLocales,
             'submissionId' => $this->_submission->getId(),
             'publicationId' => $this->_publication->getId(),
             'formDisabled' => !$this->_isEditable

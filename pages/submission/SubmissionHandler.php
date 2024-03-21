@@ -94,7 +94,7 @@ class SubmissionHandler extends PKPSubmissionHandler
                 'submission.wizard.submittingToSectionInLanguage',
                 [
                     'section' => $section->getLocalizedTitle(),
-                    'language' => Locale::getMetadata($submission->getData('locale'))->getDisplayName(),
+                    'language' => Locale::getSubmissionLocaleDisplayNames([$submission->getData('locale')])[$submission->getData('locale')],
                 ]
             );
         } elseif ($sectionCount) {
@@ -108,7 +108,7 @@ class SubmissionHandler extends PKPSubmissionHandler
             return __(
                 'submission.wizard.submittingInLanguage',
                 [
-                    'language' => Locale::getMetadata($submission->getData('locale'))->getDisplayName(),
+                    'language' => Locale::getSubmissionLocaleDisplayNames([$submission->getData('locale')])[$submission->getData('locale')],
                 ]
             );
         }

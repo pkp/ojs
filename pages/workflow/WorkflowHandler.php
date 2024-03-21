@@ -85,10 +85,14 @@ class WorkflowHandler extends PKPWorkflowHandler
             $submissionContext = Services::get('context')->get($submission->getData('contextId'));
         }
 
-        $locales = $submissionContext->getSupportedSubmissionLocaleNames();
-        $locales = array_map(fn (string $locale, string $name) => ['key' => $locale, 'label' => $name], array_keys($locales), $locales);
-
         $latestPublication = $submission->getLatestPublication();
+
+        $submissionLocale = $submission->getData('locale');
+        $locales = collect($submissionContext->getSupportedSubmissionMetadataLocaleNames() + $submission->getPublicationLanguageNames())
+            ->map(fn (string $name, string $locale) => ['key' => $locale, 'label' => $name])
+            ->sortBy('key')
+            ->values()
+            ->toArray();
 
         $latestPublicationApiUrl = $request->getDispatcher()->url($request, Application::ROUTE_API, $submissionContext->getPath(), 'submissions/' . $submission->getId() . '/publications/' . $latestPublication->getId());
         $temporaryFileApiUrl = $request->getDispatcher()->url($request, Application::ROUTE_API, $submissionContext->getPath(), 'temporaryFiles');
@@ -113,7 +117,7 @@ class WorkflowHandler extends PKPWorkflowHandler
         ]);
 
         $components = $templateMgr->getState('components');
-        $components[FORM_ISSUE_ENTRY] = $issueEntryForm->getConfig();
+        $components[FORM_ISSUE_ENTRY] = $this->getLocalizedForm($issueEntryForm, $submissionLocale, $locales);
 
         $canEditPublication = Repo::submission()->canEditPublication($submission->getId(), $request->getUser()->getId());
 

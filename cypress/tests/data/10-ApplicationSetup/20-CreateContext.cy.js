@@ -70,8 +70,13 @@ describe('Data suite tests', function() {
 		cy.get('#appearance [role="status"]').contains('Saved');
 
 		cy.get('button[id="languages-button"]').click();
-		cy.get('input[id^=select-cell-fr_CA-submissionLocale]').click();
-		cy.contains('Locale settings saved.');
+		cy.get('input[id^="select-cell-fr_CA-formLocale"]').click();
+		cy.get('a[id^=component-grid-settings-languages-submissionlanguagegrid-addLanguageModal-button]').click();
+		cy.get('#locale-fr_CA').should('exist').click();
+		cy.get('#addLanguageForm button[name="submitFormButton"]').click();
+		cy.contains('Submission locales updated.').should('exist');
+		cy.get('input[id^="select-cell-fr_CA-submissionLocale"]').click();
+		cy.get('input[id^="select-cell-fr_CA-submissionMetadataLocale"]').should('be.checked');
 
 		cy.get('button[id="indexing-button"]').click();
 		cy.get('input[name="searchDescription-en"]').type(Cypress.env('contextDescriptions')['en'], {delay: 0});

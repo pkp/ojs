@@ -40,9 +40,7 @@ class Repository extends \PKP\publication\Repository
     public function validate($publication, array $props, Submission $submission, Context $context): array
     {
         $errors = parent::validate($publication, $props, $submission, $context);
-
-        $allowedLocales = $context->getSupportedSubmissionLocales();
-        $primaryLocale = $submission->getData('locale');
+        $submissionLocale = $submission->getData('locale');
 
         // Ensure that the specified section exists
         $section = null;
@@ -62,21 +60,22 @@ class Repository extends \PKP\publication\Repository
         if ($section && !$submission->getData('submissionProgress')) {
             // Require abstracts for new publications if the section requires them
             if (is_null($publication) && !$section->getData('abstractsNotRequired') && empty($props['abstract'])) {
-                $errors['abstract'][$primaryLocale] = [__('author.submit.form.abstractRequired')];
+                $errors['abstract'][$submissionLocale] = [__('author.submit.form.abstractRequired')];
             }
 
             if (isset($props['abstract']) && empty($errors['abstract'])) {
                 // Require abstracts in the primary language if the section requires them
                 if (!$section->getData('abstractsNotRequired')) {
-                    if (empty($props['abstract'][$primaryLocale])) {
+                    if (empty($props['abstract'][$submissionLocale])) {
                         if (!isset($errors['abstract'])) {
                             $errors['abstract'] = [];
                         };
-                        $errors['abstract'][$primaryLocale] = [__('author.submit.form.abstractRequired')];
+                        $errors['abstract'][$submissionLocale] = [__('author.submit.form.abstractRequired')];
                     }
                 }
 
                 // Check the word count on abstracts
+                $allowedLocales = $submission->getPublicationLanguages($context->getSupportedSubmissionMetadataLocales());
                 foreach ($allowedLocales as $localeKey) {
                     if (empty($props['abstract'][$localeKey])) {
                         continue;

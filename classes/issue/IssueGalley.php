@@ -60,8 +60,8 @@ class IssueGalley extends IssueFile
     public function getGalleyLabel()
     {
         $label = $this->getLabel();
-        if ($this->getLocale() != Locale::getLocale()) {
-            $label .= ' (' . Locale::getMetadata($this->getLocale())->getDisplayName() . ')';
+        if (($locale = $this->getLocale()) && $locale !== Locale::getLocale()) {
+            $label .= ' (' . Locale::getSubmissionLocaleDisplayNames([$locale])[$locale] . ')';
         }
         return $label;
     }
