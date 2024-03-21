@@ -16,7 +16,7 @@ msgstr ""
 "X-Generator: Weblate 4.13.1\n"
 
 msgid "user.authorization.journalDoesNotPublish"
-msgstr ""
+msgstr "Dit tijdschrift publiceert zijn inhoud niet online."
 
 msgid "context.current"
 msgstr "Huidig tijdschrift:"
@@ -57,7 +57,7 @@ msgid "common.journalHomepageImage.altText"
 msgstr "Tijdschrift homepage afbeelding"
 
 msgid "doi.manager.settings.publications"
-msgstr ""
+msgstr "Artikelen"
 
 msgid "navigation.journalHelp"
 msgstr "Tijdschrift help"
@@ -390,7 +390,7 @@ msgid "journal.viewAllIssues"
 msgstr "Bekijk alle nummers"
 
 msgid "user.authorization.representationNotFound"
-msgstr ""
+msgstr "De gevraagde drukproef kon niet gevonden worden."
 
 msgid "user.noRoles.selectUsersWithoutRoles"
 msgstr "Neem gebruikers op zonder rol voor dit tijdschrift."
@@ -531,9 +531,14 @@ msgstr "Terug naar details over het nummer"
 
 msgid "doi.issue.incorrectContext"
 msgstr ""
+"Kon geen DOI aanmaken voor het volgende nummer: {$itemTitle}. Het bestaat "
+"niet binnen de huidige tijdschriftcontext."
 
 msgid "doi.issue.incorrectStaleStatus"
 msgstr ""
+"Kon de DOI-status niet naar 'synchronisatie nodig' zetten voor het volgende "
+"nummer: {$itemTitle}. De DOI moet 'geregistreerd' of 'ingediend' als status "
+"hebben."
 
 msgid "doi.issue.notPublished"
 msgstr ""
@@ -2439,3 +2444,7 @@ msgstr "Artikels sorteren op"
 
 msgid "catalog.sortBy.categoryDescription"
 msgstr "Kies hoe artikels in deze categorie worden geordend."
+
+msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
+msgstr ""
+"Deze zoekmachine ondersteunt geen herindexering per afzonderlijk tijdschrift."
