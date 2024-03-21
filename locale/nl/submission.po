@@ -1,19 +1,20 @@
 # Hans Spijker <hans.spijker@huygens.knaw.nl>, 2021.
+# Kay <kay.pepping@huygens.knaw.nl>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:29+00:00\n"
-"PO-Revision-Date: 2021-07-02 12:29+0000\n"
-"Last-Translator: Hans Spijker <hans.spijker@huygens.knaw.nl>\n"
+"PO-Revision-Date: 2024-03-21 21:01+0000\n"
+"Last-Translator: Kay <kay.pepping@huygens.knaw.nl>\n"
 "Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/submission/nl/"
 ">\n"
-"Language: nl_NL\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "submission.submit.userGroup"
 msgstr "Stuur in als..."
@@ -172,9 +173,11 @@ msgstr "Toewijzen aan nummer"
 
 msgid "publication.assignedToIssue"
 msgstr ""
+"Dit is toegewezen aan <a href=\"{$issueUrl}\">{$issueName}</a> maar is nog "
+"niet ingeplanned voor publicatie."
 
 msgid "publication.changeIssue"
-msgstr ""
+msgstr "Wijzig nummer"
 
 msgid "publication.datePublished.description"
 msgstr ""
@@ -186,7 +189,7 @@ msgid "publication.invalidSection"
 msgstr "De sectie voor deze publicatie is niet gevonden."
 
 msgid "publication.inactiveSection"
-msgstr ""
+msgstr "{$section} (Inactief)"
 
 msgid "publication.invalidIssue"
 msgstr "Het nummer voor deze publicatie is niet gevonden."
@@ -234,142 +237,186 @@ msgid "submission.publication"
 msgstr "Publicatie"
 
 msgid "publication.status.published"
-msgstr ""
+msgstr "Gepubliceerd"
 
 msgid "submission.status.scheduled"
-msgstr ""
+msgstr "Ingeplanned"
 
 msgid "publication.status.unscheduled"
-msgstr ""
+msgstr "Niet ingeplanned"
 
 msgid "submission.publications"
-msgstr ""
+msgstr "Publicaties"
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
+"Het copyrightjaar zal automatisch aangepast worden wanneer dit in een nummer "
+"gepubliceerd wordt."
 
 msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr ""
+"Het copyrightjaar zal automatisch aangepast worden op basis van de "
+"publicatiedatum."
 
 msgid "publication.datePublished"
-msgstr ""
+msgstr "Datum van publicatie"
 
 msgid "publication.editDisabled"
-msgstr ""
+msgstr "Deze versie is gepubliceerd en kan niet worden aangepast."
 
 msgid "publication.event.published"
-msgstr ""
+msgstr "Deze inzending is gepubliceerd."
 
 msgid "publication.event.scheduled"
-msgstr ""
+msgstr "Deze inzending is ingeplanned voor publicatie."
 
 msgid "publication.event.unpublished"
-msgstr ""
+msgstr "Deze inzending is ongepubliceerd."
 
 msgid "publication.event.versionPublished"
-msgstr ""
+msgstr "Een nieuwe versie is gepubliceerd."
 
 msgid "publication.event.versionScheduled"
-msgstr ""
+msgstr "Een nieuwe versie is ingeplanned voor publicatie."
 
 msgid "publication.event.versionUnpublished"
-msgstr ""
+msgstr "Een versie is verwijderd van publicatie."
 
 msgid "publication.invalidSubmission"
-msgstr ""
+msgstr "De inzending voor deze publicatie kon niet worden gevonden."
 
 msgid "publication.publish"
-msgstr ""
+msgstr "Publiceer"
 
 msgid "publication.publish.requirements"
 msgstr ""
+"Aan de volgende vereisten moet voldaan worden voordat dit gepubliceerd kan "
+"worden."
 
 msgid "publication.required.declined"
-msgstr ""
+msgstr "Een afgewezen inzending kan niet worden gepubliceerd."
 
 msgid "publication.required.reviewStage"
 msgstr ""
+"Een inzending moet in de tekstredactie of productiefase zijn voordat deze "
+"gepubliceerd kan worden."
 
 msgid "submission.license.description"
 msgstr ""
+"De licentie zal automatisch op <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> gezet worden bij publicatie."
 
 msgid "submission.copyrightHolder.description"
 msgstr ""
+"Copyright zal bij publicatie automatisch toegewezen worden aan {$copyright}."
 
 msgid "submission.copyrightOther.description"
 msgstr ""
+"Wijs copyright voor gepubliceerde inzendingen aan de volgende partij toe."
 
 msgid "publication.unpublish"
-msgstr ""
+msgstr "Depubliceer"
 
 msgid "publication.unpublish.confirm"
-msgstr ""
+msgstr "Weet U zeker dat dit niet gepubliceerd moet worden?"
 
 msgid "publication.unschedule.confirm"
-msgstr ""
+msgstr "Weet U zeker dat U dit niet voor publicatie in wilt plannen?"
 
 msgid "publication.version.details"
-msgstr ""
+msgstr "Publicatiedetails voor versie {$version}"
 
 msgid "submission.queries.production"
 msgstr "Productie-discussies"
 
 msgid "editor.submission.decision.backToReview"
-msgstr ""
+msgstr "Terug naar Review"
 
 msgid "editor.submission.decision.backToReview.description"
 msgstr ""
+"Draai de beslissing om deze inzening te accepteren terug en stuur deze terug "
+"naar de reviewfase."
 
 msgid "editor.submission.decision.backToReview.log"
 msgstr ""
+"{$editorName} draaide de beslissing om deze inzending te accepteren terug en "
+"zond het terug naar de reviewfase."
 
 msgid "editor.submission.decision.backToReview.completed"
-msgstr ""
+msgstr "Stuur terug naar Review"
 
 msgid "editor.submission.decision.backToReview.completed.description"
-msgstr ""
+msgstr "De inzending, {$title}, is teruggestuurd naar de reviewfase."
 
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
+"Stuur een mail naar de auteurs om hen te laten weten dat hun inzending "
+"teruggezonden is naar de reviewfase. Leg uit waarom deze beslissing gemaakt "
+"was en informeer de auteurs of verdere reviewstappen genomen zullen worden."
 
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
+"Stuur een e-mail naar de auteurs om hen te laten weten dat deze inzending "
+"zal worden doorgestuurd voor peer review. Geef indien mogelijk de auteurs "
+"een indicatie van hoe lang het peer review proces zou kunnen duren en "
+"wanneer ze weer van de redacteuren kunnen verwachten te horen. Deze e-mail "
+"wordt pas verzonden nadat de beslissing is vastgelegd."
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
-msgstr ""
+msgstr "Selecteer bestanden die doorgestuurd moeten worden naar de reviewfase."
 
 msgid "doi.submission.issueMissing.publication"
 msgstr ""
+"Kon geen DOI aanmaken voor de volgende inzending: {$pubObjectTitle}. De "
+"inzending moet toegewezen zijn aan een nummer voordat een DOI gegenereerd "
+"kan worden."
 
 msgid "doi.submission.issueMissing.representation"
 msgstr ""
+"Kon geen DOI aanmaken voor de {$pubObjectTitle} drukproef van de volgende "
+"inzending: {$itemTitle}. De inzending moet aan een nummer toegewezen worden "
+"voordat een DOI gegenereerd kan worden."
 
 msgid "doi.submission.incorrectContext"
 msgstr ""
+"Kon geen DOI aanmaken voor de volgende inzending: {$pubObjectTitle}. Deze "
+"bestaat niet binnen de huidige tijdschriftcontext."
 
 msgid "submission.layout.viewGalley"
-msgstr ""
+msgstr "Bekijk drukproef"
 
 msgid "galley.cantEditPublished"
 msgstr ""
+"Deze drukproef kon niet worden aangepast omdat deze reeds is gepubliceerd."
 
 msgid "submission.copyright.description"
 msgstr ""
+"Lees en begrijp alstublieft de copyrightvoorwaarden voor inzendingen aan dit "
+"tijdschrift."
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
+"U kunt geen inzending maken bij dit tijdschrift omdat auteurs door de "
+"tijdschriftredactie moeten worden geregistreerd. Als U denkt dat dit een "
+"fout is, neem dan contact op met <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
+"U kunt geen inzending maken aan dit tijdschrift omdat inzendingen voor alle "
+"onderdelen van dit tijdschrift inactief of beperkt zijn. Als U denkt dat dit "
+"een fout is, neem dan contact op met <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
+"{$contextName} accepteert geen inzendingen voor de sectie {$section}. Als U "
+"hulp nodig heeft bij het terughalen van uw inzending, neem dan contact op "
+"met <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.sectionNotFound"
-msgstr ""
+msgstr "De sectie voor deze inzending kon niet worden gevonden."
 
 msgid "submission.sectionRestrictedToEditors"
-msgstr ""
+msgstr "Alleen de redactie mag een inzending maken voor deze sectie."
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Er is minimaal één auteur vereist."
@@ -382,8 +429,8 @@ msgstr "Vul de samenvatting van uw artikel in."
 
 msgid "submission.submit.form.wordCountAlert"
 msgstr ""
-"De samenvatting is te lang. Verkort het tot de maximumlengte voor dit "
-"onderdeel."
+"De samenvatting is te lang. Verkort het tot de maximumlengte voor deze "
+"sectie."
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Selecteer de rol van de bijdrager."
