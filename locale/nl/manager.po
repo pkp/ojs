@@ -1,18 +1,19 @@
 # Dorien van Rheenen <d.van.rheenen@rug.nl>, 2023.
+# Kay <kay.pepping@huygens.knaw.nl>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2023-04-11 16:21+0000\n"
-"Last-Translator: Dorien van Rheenen <d.van.rheenen@rug.nl>\n"
+"PO-Revision-Date: 2024-03-21 21:01+0000\n"
+"Last-Translator: Kay <kay.pepping@huygens.knaw.nl>\n"
 "Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/manager/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "manager.distribution.access"
 msgstr "Toegang"
@@ -51,6 +52,8 @@ msgstr ""
 
 msgid "manager.setup.enableDois.description"
 msgstr ""
+"Sta het toewijzen van Digital Object Identifiers (DOIs) aan werk dat in dit "
+"tijdschrift gepubliceerd is toe."
 
 #, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
@@ -58,9 +61,11 @@ msgstr "Kies de objecten waar DOI's aan toegekend moeten worden."
 
 msgid "doi.manager.settings.doiSuffixLegacy"
 msgstr ""
+"Gebruik standaardpatronen.<br />%j.v%vi%i voor nummers<br />%j.v%vi%i.%a "
+"voor artikelen<br />%j.v%vi%i.%a.g%g voor drukproeven."
 
 msgid "doi.manager.settings.doiCreationTime.copyedit"
-msgstr ""
+msgstr "Bij het bereiken van de tekstredactiefase"
 
 msgid "manager.website.archiving"
 msgstr "Archivering"
@@ -333,6 +338,9 @@ msgstr "Sectieredacteurs"
 
 msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
+"Ten minste een tijdschriftsectie moet actief zijn. Bezoek de "
+"redactieprocesinstellingen om alle inzendingen aan dit tijdschrift uit te "
+"schakelen."
 
 msgid "manager.sections.form.abbrevRequired"
 msgstr "Een korte titel voor de sectie is verplicht"
@@ -737,6 +745,8 @@ msgstr "Tijdschrift-initialen"
 
 msgid "manager.setup.selectCountry"
 msgstr ""
+"Selecteer het land waar dit tijdschrift zich bevindt, of het land van het "
+"postadres van het tijdschrift of de uitgever."
 
 msgid "manager.setup.journalLayout"
 msgstr "Opmaak van het tijdschrift"
@@ -1132,6 +1142,9 @@ msgstr "Auteursrichtlijnen, copyright, and indexering (inclusief registratie)."
 
 msgid "manager.setup.disableSubmissions.description"
 msgstr ""
+"Schakel het maken van nieuwe inzendingen uit. Inzendingen kunnen voor "
+"individuele tijdschriftsecties uitgezet worden op de <a href=\"{$url}\""
+">tijdschriftsecties</a> instellingen pagina."
 
 msgid "manager.setup.disableSubmissions.notAccepting"
 msgstr ""
