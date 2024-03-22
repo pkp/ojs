@@ -97,3 +97,7 @@ msgstr "Downloads"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Download-Daten sind nocht nicht verfügbar."
+
+#, fuzzy
+msgid "plugins.themes.default.titleSubtitleSeparator"
+msgstr " &mdash; "

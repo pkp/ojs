@@ -94,3 +94,7 @@ msgstr "Unduhan"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Data unduhan tidak tersedia."
+
+#, fuzzy
+msgid "plugins.themes.default.titleSubtitleSeparator"
+msgstr " &mdash; "

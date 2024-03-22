@@ -94,3 +94,7 @@ msgstr "Prenosi"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Podatki o prenosih še niso na voljo."
+
+#, fuzzy
+msgid "plugins.themes.default.titleSubtitleSeparator"
+msgstr " &mdash; "

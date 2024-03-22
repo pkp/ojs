@@ -96,3 +96,7 @@ msgstr "Nedlastinger"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Nedlastingsdata er foreløpig ikke tilgjengelig."
+
+#, fuzzy
+msgid "plugins.themes.default.titleSubtitleSeparator"
+msgstr " &mdash; "

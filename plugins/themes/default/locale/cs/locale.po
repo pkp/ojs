@@ -96,3 +96,7 @@ msgstr "Stažení"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Údaje o počtu stažení nejsou zatím k dispozici."
+
+#, fuzzy
+msgid "plugins.themes.default.titleSubtitleSeparator"
+msgstr " &mdash; "

@@ -87,3 +87,7 @@ msgstr "التنزيلات"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "تنزيل البيانات ليس متاحًا بعد."
+
+#, fuzzy
+msgid "plugins.themes.default.titleSubtitleSeparator"
+msgstr " &mdash; "

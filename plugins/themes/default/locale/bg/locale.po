@@ -101,3 +101,7 @@ msgstr "Сваляния"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Данните за свалянията все още не са налични."
+
+#, fuzzy
+msgid "plugins.themes.default.titleSubtitleSeparator"
+msgstr " &mdash; "

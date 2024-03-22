@@ -96,3 +96,7 @@ msgstr "Lejupielādes"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Lejupielādes dati vēl nav pieejami."
+
+#, fuzzy
+msgid "plugins.themes.default.titleSubtitleSeparator"
+msgstr " &mdash; "

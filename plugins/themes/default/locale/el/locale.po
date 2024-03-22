@@ -101,3 +101,7 @@ msgstr ""
 msgid "plugins.themes.default.option.displayStats.none"
 msgstr ""
 "Να μην εμφανίζονται στατιστικά στοιχεία χρήσης υποβολής για τον αναγνώστη."
+
+#, fuzzy
+msgid "plugins.themes.default.titleSubtitleSeparator"
+msgstr " &mdash; "

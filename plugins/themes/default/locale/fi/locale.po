@@ -97,3 +97,7 @@ msgstr "Lataukset"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Lataustiedot eivät ole vielä saatavilla."
+
+#, fuzzy
+msgid "plugins.themes.default.titleSubtitleSeparator"
+msgstr " &mdash; "

@@ -98,3 +98,15 @@ msgstr "Next slide"
 
 msgid "plugins.themes.default.prevSlide"
 msgstr "Previous slide"
+
+msgid "plugins.themes.default.option.metadata.label"
+msgstr "Show article metadata on the article landing page"
+
+msgid "plugins.themes.default.option.metadata.description"
+msgstr "Select the article metadata to show in other languages."
+
+msgid "plugins.themes.default.submissionMetadataInLanguage"
+msgstr "Article Metadata in English"
+
+msgid "plugins.themes.default.titleSubtitleSeparator"
+msgstr " &mdash; "

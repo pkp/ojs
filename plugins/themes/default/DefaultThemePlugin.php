@@ -124,6 +124,26 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
             'default' => 'none',
         ]);
 
+        $this->addOption('showMultilingualMetadata', 'FieldOptions', [
+            'label' => __('plugins.themes.default.option.metadata.label'),
+            'description' => __('plugins.themes.default.option.metadata.description'),
+            'options' => [
+                [
+                    'value' => 'title',
+                    'label' => __('submission.title'),
+                ],
+                [
+                    'value' => 'keywords',
+                    'label' => __('common.keywords'),
+                ],
+                [
+                    'value' => 'abstract',
+                    'label' => __('common.abstract'),
+                ],
+            ],
+            'default' => [],
+        ]);
+
 
         // Load primary stylesheet
         $this->addStyle('stylesheet', 'styles/index.less');

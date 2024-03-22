@@ -98,3 +98,7 @@ msgstr "Yuklashlar"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Yuklab olish maʼlumotlari hali mavjud emas."
+
+#, fuzzy
+msgid "plugins.themes.default.titleSubtitleSeparator"
+msgstr " &mdash; "
