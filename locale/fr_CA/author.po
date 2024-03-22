@@ -1,12 +1,13 @@
 # Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2022.
+# "Marie-Hélène Vézina [UdeMontréal]" <marie-helene.vezina@umontreal.ca>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2022-07-05 09:31+0000\n"
-"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-"
-"helene.vezina@umontreal.ca>\n"
+"PO-Revision-Date: 2024-03-23 09:35+0000\n"
+"Last-Translator: \"Marie-Hélène Vézina [UdeMontréal]\" <marie-helene."
+"vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "author/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -14,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 # localization file for fr_CA. Last revision 2019-10-22T10:41:52 by Marie-Hélène Vézina, Bibliothèques, Université de Montréal.
 msgid "author.submit"
@@ -255,9 +256,10 @@ msgstr "Texte source"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Brève description"
 
-#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
-msgstr "Présenter le fichier aux évaluateurs-trices (sans métadonnées), de façon à ne pas compromettre l'évaluation anonyme."
+msgstr ""
+"Présenter le fichier aux évaluateurs-trices (sans métadonnées), de façon à "
+"ne pas compromettre l'évaluation anonyme."
 
 msgid "author.submit.suppFile.publisherDescription"
 msgstr "Utiliser uniquement avec des documents officiellement publiés."
