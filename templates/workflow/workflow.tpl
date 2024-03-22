@@ -60,6 +60,34 @@
 					<pkp-form class="pkpWorkflow__submissionPaymentsForm" v-bind="components.{$smarty.const.FORM_SUBMISSION_PAYMENTS}" @set="set">
 				</dropdown>
 			{/if}
+			<pkp-button
+				:disabled="!canChangeLang || publicationList.length > 1 || submission.status === getConstant('STATUS_PUBLISHED')"
+				@click="isModalOpenedChangeSubmissionLanguage = true"
+			>
+				{{ changeLangButtonLabel }}
+			</pkp-button>
+			{* Modal to change submission language and metadata *}
+			<modal
+				:close-label="t('common.close')"
+				name="changeLangModal"
+				title="{translate key="submission.list.changeLangTitle"}"
+				:open="isModalOpenedChangeSubmissionLanguage"
+				@close="isModalOpenedChangeSubmissionLanguage = false"
+			>
+				<div id="changeSubmissionLanguage">
+					<change-submission-language
+						:contributors="workingPublication.authors"
+						:contributors-api-url="submissionApiUrl + '/publications/' + workingPublication.id + '/contributors'"
+						:cslmform="components.{$smarty.const.FORM_CHANGE_SUBMISSION_LANGUAGE_METADATA}"
+						:submission-api-url="submissionApiUrl"
+						:submission-locale="submission.locale"
+						@set="set"
+						@updated:contributors="setContributors"
+						@updated:form="updateChangesSubmissionLanguage"
+					>
+					</change-submission-language>
+				</div>
+			</modal>
 			{if $canAccessEditorialHistory}
 				<pkp-button
 					ref="activityButton"
@@ -197,6 +225,12 @@
 						class="pkpPublication__versionPublished"
 					>
 						{translate key="publication.editDisabled"}
+					</div>
+					<div
+						v-if="workingPublication.status !== getConstant('STATUS_PUBLISHED') && !submissionSupportedLocales.includes(submission.locale)"
+						class="pkpSubmission__localeNotSupported"
+					>
+						{translate key="submission.localeNotSupported" subLocale=$changeLangButtonLabel}
 					</div>
 					<tabs class="pkpPublication__tabs" :is-side-tabs="true" :track-history="true" :label="currentPublicationTabsLabel">
 						<tab id="titleAbstract" label="{translate key="publication.titleAbstract"}">
