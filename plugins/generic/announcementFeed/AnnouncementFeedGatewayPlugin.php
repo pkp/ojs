@@ -137,7 +137,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin
 
         // Get date of most recent announcement
         $lastDateUpdated = $this->_parentPlugin->getSetting($journal->getId(), 'dateUpdated');
-        if (empty($announcements)) {
+        if ($announcements->isEmpty()) {
             if (empty($lastDateUpdated)) {
                 $dateUpdated = Core::getCurrentDate();
                 $this->_parentPlugin->updateSetting($journal->getId(), 'dateUpdated', $dateUpdated, 'string');
