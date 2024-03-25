@@ -821,7 +821,8 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 $contextUrl = $request->getDispatcher()->url(
                     $request,
                     Application::ROUTE_PAGE,
-                    $context->getPath()
+                    $context->getPath(),
+                    urlLocaleForPage: ''
                 );
                 $relatedItemIdentifierNode = $doc->createElementNS($deployment->getNamespace(), 'relatedItemIdentifier', $contextUrl);
                 $relatedItemIdentifierNode->setAttribute('relatedItemIdentifierType', DATACITE_IDTYPE_URL);

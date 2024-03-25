@@ -23,7 +23,6 @@ switch ($op) {
     //
     case 'index':
     case 'subscriptions':
-    case 'setLocale':
     case 'authorizationDenied':
     case 'purchaseSubscription':
     case 'payPurchaseSubscription':

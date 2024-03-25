@@ -187,7 +187,7 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
             }
             // FullText URL
             $request = Application::get()->getRequest();
-            $recordNode->appendChild($node = $doc->createElement('fullTextUrl', htmlspecialchars($request->url(null, 'article', 'view', $pubObject->getId()), ENT_COMPAT, 'UTF-8')));
+            $recordNode->appendChild($node = $doc->createElement('fullTextUrl', htmlspecialchars($request->getDispatcher()->url($request, Application::ROUTE_PAGE, null, 'article', 'view', $pubObject->getId(), urlLocaleForPage: ''), ENT_COMPAT, 'UTF-8')));
             $node->setAttribute('format', 'html');
             // Keywords
             $supportedLocales = $context->getSupportedFormLocales();
