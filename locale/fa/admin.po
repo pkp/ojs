@@ -1,20 +1,20 @@
 # Hamid Reza Khoddami <dr_hrkhoddami@yahoo.com>, 2022.
 # Ebrahim Rasti Borazjani Faghat <e.rasti.b@gmail.com>, 2023.
+# Naqibullah Asadi Karkin <website.manager@knu.edu.af>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2023-01-21 10:02+0000\n"
-"Last-Translator: Ebrahim Rasti Borazjani Faghat <e.rasti.b@gmail.com>\n"
-"Language-Team: Persian <http://translate.pkp.sfu.ca/projects/ojs/admin/fa_IR/"
-">\n"
-"Language: fa_IR\n"
+"PO-Revision-Date: 2024-03-26 14:05+0000\n"
+"Last-Translator: Naqibullah Asadi Karkin <website.manager@knu.edu.af>\n"
+"Language-Team: Persian <http://translate.pkp.sfu.ca/projects/ojs/admin/fa/>\n"
+"Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "admin.hostedContexts"
 msgstr "مجلات میزبان"
@@ -30,10 +30,10 @@ msgstr ""
 msgid "admin.languages.confirmDisable"
 msgstr ""
 "آیا از غیرفعال کردن این زبان مطمئن هستید؟ این اقدام ممکن است بر مجلاتی که از "
-"این زبان استفاده می‌کنند تأثیر بگذارد!"
+"این زبان استفاده می‌کنند تأثیر بگذارد."
 
 msgid "admin.languages.primaryLocaleInstructions"
-msgstr "این زبان، زبان پیش‌فرض سایت و مجلات آن خواهد بود."
+msgstr "این زبان پیش‌فرض سایت و مجلات آن خواهد بود."
 
 msgid "admin.languages.supportedLocalesInstructions"
 msgstr ""
@@ -49,7 +49,7 @@ msgstr "زبان‌های مشخص شده ممکن است ناکامل باشن�
 msgid "admin.languages.confirmUninstall"
 msgstr ""
 "آیا می‌خواهید این زبان را حذف کنید؟ این کار ممکن است بر روی مجلات سایت که از "
-"این زبان‌ها استفاده می‌کنند تأثیر بگذارد"
+"این زبان‌ها استفاده می‌کنند تأثیر بگذارد."
 
 msgid "admin.languages.installNewLocalesInstructions"
 msgstr ""
@@ -64,7 +64,7 @@ msgid "admin.systemConfiguration"
 msgstr "پیکره‌بندی OJS"
 
 msgid "admin.systemConfigurationDescription"
-msgstr "تنظیمات پیکره‌بندی OJS بر گرفته شده از فایل config.inc.php"
+msgstr "تنظیمات پیکره‌بندی OJS بر گرفته شده از فایل <tt>config.inc.php</tt>."
 
 msgid "admin.journals.createInstructions"
 msgstr ""
@@ -75,25 +75,29 @@ msgid "admin.journals.journalSettings"
 msgstr "تنظیمات مجله"
 
 msgid "admin.journals.noneCreated"
-msgstr "هیچ مجله‌ای تعریف نشده است"
+msgstr "هیچ مجله‌ای تعریف نشده است."
 
 msgid "admin.contexts.create"
 msgstr "مجله جدید"
 
 msgid "admin.journals.urlWillBe"
-msgstr "آدرس اینترنتی مجله این خواهد بود: {$sampleUrl}"
+msgstr ""
+"این باید یک کلمه کوتاه یا مخفف باشد که مجله را مشخص کند. آدرس اینترنتی مجله "
+"این خواهد بود: {$sampleUrl}."
 
 msgid "admin.contexts.form.titleRequired"
-msgstr "وارد کردن عنوان ضروری است"
+msgstr "وارد کردن عنوان ضروری است."
 
 msgid "admin.contexts.form.pathRequired"
-msgstr "وارد کردن مسیر الزامی است"
+msgstr "وارد کردن مسیر الزامی است."
 
 msgid "admin.contexts.form.pathAlphaNumeric"
-msgstr "مسیر فقط می‌تواند شامل کاراکترهای حروف و عدد باشد"
+msgstr ""
+"مسیر فقط می‌تواند شامل حروف، اعداد و کاراکترها باشد. باید با یک حرف یا عدد "
+"شروع و پایان یابد."
 
 msgid "admin.contexts.form.pathExists"
-msgstr "مسیر انتخاب شده قبلاً توسط یک مجله دیگر انتخاب شده است"
+msgstr "مسیر انتخاب شده قبلاً توسط یک مجله دیگر انتخاب شده است."
 
 msgid "admin.contexts.form.primaryLocaleNotSupported"
 msgstr "locale اولیه باید یکی از locale های پشتیبانی شده مجله باشد."
@@ -105,7 +109,7 @@ msgid "admin.contexts.contextDescription"
 msgstr "توصیف مجله"
 
 msgid "admin.journal.pathImportInstructions"
-msgstr "مسیر موجود یا مسیری که باید ایجاد شود (مانند: ojs)"
+msgstr "مسیر موجود یا مسیری که باید ایجاد شود (مانند: ojs)."
 
 msgid "admin.journals.importSubscriptions"
 msgstr "درون‌ریزی اشتراک‌ها"
@@ -120,7 +124,7 @@ msgid "admin.journals.form.importPathRequired"
 msgstr "مشخص کردن مسیر درون‌ریزی الزامی است."
 
 msgid "admin.journals.importErrors"
-msgstr "درون‌ریزی با خطا مواجه شد."
+msgstr "درون‌ریزی با خطا مواجه شد"
 
 msgid "admin.mergeUsers"
 msgstr "ادغام کاربران"
@@ -131,13 +135,13 @@ msgstr "ادغام کاربر"
 msgid "admin.mergeUsers.into.description"
 msgstr ""
 "کاربری را که مسئولیت‌ها و انتساب‌های کاربر قبلی باید به آن نسبت داده شود را "
-"انتخاب نمایید"
+"انتخاب نمایید."
 
 msgid "admin.mergeUsers.from.description"
 msgstr ""
 "کاربری را برای ادغام با حساب کاربر دیگر انتخاب کنید (مثال وقتی که شخصی دو "
 "حساب کاربری دارد ) حسابی که در ابتدا انتخاب شده پاک می‌شود و مقالات ارسالی, "
-"انتساب‌ها و غیره مربوط به آن حساب به حساب کاربری دوم نسبت داده می‌شود"
+"انتساب‌ها و غیره مربوط به آن حساب به حساب کاربری دوم نسبت داده می‌شود."
 
 msgid "admin.mergeUsers.allUsers"
 msgstr "تمام کاربران دارای نقش"
@@ -149,7 +153,7 @@ msgstr ""
 "\"{$oldAccountCount}\" دیگر وجود نخواهد داشت . این عملیات قابل بازگشت نیست."
 
 msgid "admin.mergeUsers.noneEnrolled"
-msgstr "کاربران بدون نقش"
+msgstr "کاربران بدون نقش."
 
 msgid "admin.scheduledTask.subscriptionExpiryReminder"
 msgstr "یادآوری اتمام اشتراک"
@@ -195,8 +199,8 @@ msgstr ""
 
 msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
 msgstr ""
-"ویژگی ایمیل انبوه برای این مجله غیرفعال شده است. این ویژگی را در  <a href="
-"\"{$siteSettingsUrl}\">مدیریت> تنظیمات سایت</a> فعال کنید."
+"ویژگی ایمیل انبوه برای این مجله غیرفعال شده است. این ویژگی را در <a href=\""
+"{$siteSettingsUrl}\">مدیریت> تنظیمات سایت</a> فعال کنید."
 
 msgid "admin.siteManagement.description"
 msgstr ""
@@ -216,9 +220,17 @@ msgstr ""
 
 msgid "admin.settings.statistics.institutions.description"
 msgstr ""
+"اگر می‌خواهید مجلات موجود در این سایت بتوانند آمار استفاده را بر اساس موسسه "
+"جمع‌آوری کنند، آمار سازمانی را فعال کنید. مجلات برای استفاده از این ویژگی "
+"باید موسسه و محدوده IP خود را اضافه کنند. فعال کردن آمار سازمانی ممکن است "
+"اندازه پایگاه داده شما را به میزان قابل توجهی افزایش دهد."
 
 msgid "admin.settings.statistics.sushi.public.description"
 msgstr ""
+"اینکه آیا باید نقاط پایانی SUSHI API برای همه مجلات موجود در این سایت در "
+"دسترس عموم قرار گیرد یا خیر. اگر API عمومی را فعال کنید، هر مجله ممکن است "
+"این تنظیم را لغو کند تا آمار خود را خصوصی کند. با این حال، اگر API عمومی را "
+"غیرفعال کنید، مجلات نمی توانند API خود را عمومی کنند."
 
 #~ msgid "admin.settings.usePaging"
 #~ msgstr ""
@@ -233,3 +245,6 @@ msgstr ""
 
 #~ msgid "admin.settings.appearance.success"
 #~ msgstr "به‌روزرسانی تنظیمات ظاهر وبسایت انجام شده است."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "از سایت به عنوان بستری برای همه مجلات استفاده کنید."
