@@ -23,7 +23,7 @@ msgid "plugins.generic.recommendBySimilarity.heading"
 msgstr "Artigos similares"
 
 msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
-msgstr "Tamén pode {advancedSearchLink} para este artigo."
+msgstr "Tamén pode {$advancedSearchLink} para este artigo."
 
 msgid "plugins.generic.recommendBySimilarity.advancedSearch"
 msgstr "Iniciar unha busca avanzada por similitude"
