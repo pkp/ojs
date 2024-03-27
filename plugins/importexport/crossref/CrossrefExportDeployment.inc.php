@@ -18,10 +18,10 @@
  */
 
 // XML attributes
-define('CROSSREF_XMLNS' , 'http://www.crossref.org/schema/4.3.6');
+define('CROSSREF_XMLNS' , 'http://www.crossref.org/schema/5.3.1');
 define('CROSSREF_XMLNS_XSI' , 'http://www.w3.org/2001/XMLSchema-instance');
-define('CROSSREF_XSI_SCHEMAVERSION' , '4.3.6');
-define('CROSSREF_XSI_SCHEMALOCATION' , 'https://www.crossref.org/schemas/crossref4.3.6.xsd');
+define('CROSSREF_XSI_SCHEMAVERSION' , '5.3.1');
+define('CROSSREF_XSI_SCHEMALOCATION' , 'https://www.crossref.org/schemas/crossref5.3.1.xsd');
 define('CROSSREF_XMLNS_JATS' , 'http://www.ncbi.nlm.nih.gov/JATS1');
 define('CROSSREF_XMLNS_AI' , 'http://www.crossref.org/AccessIndicators.xsd');
 define('CROSSREF_XMLNS_XML', 'http://www.w3.org/XML/1998/namespace');

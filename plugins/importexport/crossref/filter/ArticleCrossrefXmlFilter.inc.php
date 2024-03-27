@@ -92,7 +92,6 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 
 		$journalArticleNode = $doc->createElementNS($deployment->getNamespace(), 'journal_article');
 		$journalArticleNode->setAttribute('publication_type', 'full_text');
-		$journalArticleNode->setAttribute('metadata_distribution_opts', 'any');
 		$journalArticleNode->setAttribute('language', PKPLocale::getIso1FromLocale($locale));
 
 
