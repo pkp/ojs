@@ -32,7 +32,7 @@
     "pinia": "^2.1.7",
     "swiper": "^10.3.1",
     "tiny-emitter": "^2.1.0",
-    "tinymce": "^5.10.9",
+    "tinymce": "^7.0.0",
     "uuid": "^9.0.0",
     "vue": "^3.3.8",
     "vue-chartjs": "^5.2.0",
