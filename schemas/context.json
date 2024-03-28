@@ -377,6 +377,64 @@
 		  	"type": "boolean",
 		  	"default": false,
 		  	"description": "Whether each publication version should receive a unique DOI"
+		},
+		"orcidEnabled": {
+			"type": "boolean",
+			"default": false,
+			"description": "Whether ORCID functionality is enabled",
+			"validation": [
+				"nullable"
+			]
+		},
+		"orcidApiType": {
+			"type": "string",
+			"validation": [
+				"nullable",
+				"in:publicProduction,publicSandbox,memberProduction,memberSandbox"
+			]
+		},
+		"orcidClientId": {
+			"type": "string",
+			"default": "",
+			"validation": [
+				"nullable"
+			]
+		},
+		"orcidClientSecret": {
+			"type": "string",
+			"default": "",
+			"validation": [
+				"nullable"
+			]
+		},
+		"orcidSendMailToAuthorsOnPublication":{
+			"type": "boolean",
+			"default": false
+		},
+		"orcidLogLevel": {
+			"type": "string",
+			"default": "ERROR",
+			"validation": [
+				"in:ERROR,ALL"
+			]
+		},
+		"orcidIsSandBox": {
+			"type": "boolean",
+			"default": false
+		},
+		"orcidCountry": {
+			"type": "string",
+			"default": "",
+			"validation": [
+				"nullable"
+			]
+		},
+		"orcidCity": {
+			"type": "string",
+			"default": "",
+			"validation": [
+				"nullable"
+			]
 		}
 	}
 }
