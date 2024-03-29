@@ -115,9 +115,10 @@
 		<migration class="PKP\migration\upgrade\v3_5_0\I9253_SiteAnnouncements"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I9262_Highlights"/>
 		<migration class="APP\migration\upgrade\v3_5_0\I9475_RecoverLayoutFiles"/>
-		<migration class="PKP\migration\upgrade\v3_5_0\I9462_UserUserGroups"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I9462_UserUserGroupsStartEndDate"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I9552_UserGroupsMasthead"/>
 		<migration class="APP\migration\upgrade\v3_5_0\I9425_SeparateUIAndSubmissionLocales"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I9709_UserUserGroupsMasthead"/>
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
