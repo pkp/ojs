@@ -86,6 +86,7 @@ jobs:
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
         - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
         - ./datasets/tools/dbclient.sh < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
+        - source ./lib/pkp/tools/travis/migration/v3_4_0/prepare-logs.sh
         - php tools/upgrade.php check
         - php tools/upgrade.php upgrade
 
@@ -101,6 +102,7 @@ jobs:
         - patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
         - patch -p1 < datasets/upgrade/3_4_0-update-locale.diff
         - ./datasets/tools/dbclient.sh < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
+        - source ./lib/pkp/tools/travis/migration/v3_4_0/prepare-logs.sh
         - php tools/upgrade.php check
         - php tools/upgrade.php upgrade
 
@@ -114,6 +116,7 @@ jobs:
         - cp -r datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/public/* public/
         - cp datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/config.inc.php .
         - ./datasets/tools/dbclient.sh < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
+        - source ./lib/pkp/tools/travis/migration/v3_4_0/prepare-logs.sh
         - php tools/upgrade.php check
         - php tools/upgrade.php upgrade
 
@@ -128,6 +131,7 @@ jobs:
         - patch -p1 < datasets/upgrade/3_4_0-add-email-config.diff
         - patch -p1 < datasets/upgrade/3_4_0-update-locale.diff
         - ./datasets/tools/dbclient.sh --quiet < datasets/${APPLICATION}/${DATASET_BRANCH}/${TEST}/database.sql
+        - source ./lib/pkp/tools/travis/migration/v3_4_0/prepare-logs.sh
         - php tools/upgrade.php check
         - php tools/upgrade.php upgrade
 
