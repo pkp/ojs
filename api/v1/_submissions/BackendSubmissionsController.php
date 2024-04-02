@@ -138,7 +138,7 @@ class BackendSubmissionsController extends \PKP\API\v1\_submissions\PKPBackendSu
 
                 // Record a fulfilled payment.
                 // Replaces StageAssignmentDAO::getBySubmissionAndRoleIds
-                $submitterAssignment = StageAssignment::withSubmissionId($submission->getId())
+                $submitterAssignment = StageAssignment::withSubmissionIds([$submission->getId()])
                     ->withRoleIds([Role::ROLE_ID_AUTHOR])
                     ->first();
 

@@ -127,7 +127,7 @@ class ArticleReportPlugin extends ReportPlugin
 
             // Load editor and decision information
             // Replaces StageAssignmentDAO::getBySubmissionAndStageId
-            $stageAssignments = StageAssignment::withSubmissionId($submission->getId())
+            $stageAssignments = StageAssignment::withSubmissionIds([$submission->getId()])
                 ->get();
 
             $editors = $editorsById = [];
