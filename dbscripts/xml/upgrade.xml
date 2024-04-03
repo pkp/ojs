@@ -82,7 +82,7 @@
 		<!-- migrateUserAndAuthorNames should be after migrateSRLocale -->
 		<code function="migrateUserAndAuthorNames" condition="return $installer->tableExists('users_tmp');" />
 	</upgrade>
-	
+
 	<upgrade minversion="2.4.0.0" maxversion="3.1.9.9">
 		<code function="migrateSubmissionCoverImages" />
 	</upgrade>
@@ -206,6 +206,10 @@
 		<migration class="lib.pkp.classes.migration.upgrade.PKPv3_3_0UpgradeMigration" />
 		<migration class="classes.migration.upgrade.OJSv3_3_0UpgradeMigration" />
 		<note file="docs/release-notes/README-3.3.0" />
+	</upgrade>
+
+	<upgrade minversion="3.0.0.0" maxversion="3.3.0.17">
+		<migration class="classes.migration.upgrade.I9525_CrossrefSchemaUpdate" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->

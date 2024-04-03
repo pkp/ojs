@@ -92,7 +92,6 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 
 		$journalArticleNode = $doc->createElementNS($deployment->getNamespace(), 'journal_article');
 		$journalArticleNode->setAttribute('publication_type', 'full_text');
-		$journalArticleNode->setAttribute('metadata_distribution_opts', 'any');
 		$journalArticleNode->setAttribute('language', PKPLocale::getIso1FromLocale($locale));
 
 
@@ -171,6 +170,28 @@ class ArticleCrossrefXmlFilter extends IssueCrossrefXmlFilter {
 				} else {
 					$personNameNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'surname', htmlspecialchars(ucfirst($givenNames[$locale]), ENT_COMPAT, 'UTF-8')));
 				}
+
+				// Affiliation/ROR
+				$affiliation = $author->getData('affiliation', $locale);
+				if ($affiliation) {
+					$affiliationsNode = $doc->createElementNS($deployment->getNamespace(), 'affiliations');
+
+					$institutionNode = $doc->createElementNS($deployment->getNamespace(), 'institution');
+
+					$institutionNameNode = $doc->createElementNS($deployment->getNamespace(), 'institution_name', htmlspecialchars($affiliation, ENT_COMPAT, 'UTF-8'));
+					$institutionNode->appendChild($institutionNameNode);
+
+					$rorId = $author->getData('rorId');
+					if ($rorId) {
+						$institutionIdNode = $doc->createElementNS($deployment->getNamespace(), 'institution_id', $rorId);
+						$institutionIdNode->setAttribute('type', 'ror');
+						$institutionNode->appendChild($institutionIdNode);
+					}
+
+					$affiliationsNode->appendChild($institutionNode);
+					$personNameNode->appendChild($affiliationsNode);
+				}
+
 
 				$contributorsNode->appendChild($personNameNode);
 				$isFirst = false;
