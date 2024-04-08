@@ -41,7 +41,7 @@ describe('Subscription tests', function() {
 		cy.get('.app__nav a:contains("Issues")').first().click();
 		cy.get('button:contains("Back Issues")').click();
 		cy.get('a:contains("Vol. 1 No. 2 (2014)")').click();
-		cy.get('div.pkp_modal_panel a:contains("Access")').click();
+		cy.get('[role="dialog"] a:contains("Access")').click();
 		cy.get('select#accessStatus').select('Subscription');
 		cy.get('form#issueAccessForm button:contains("Save")').click();
 		cy.get('div:contains("Your changes have been saved.")');

@@ -551,7 +551,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.contains('The stage assignment has been changed.');
 		cy.waitJQuery();
 		cy.clickStageParticipantButton('Stephanie Berardo', 'Login As');
-		cy.get('.pkpModalConfirmButton').contains('OK').click();
+		cy.get('button').contains('OK').click();
 		cy.get('#publication-button').click();
 		cy.get('.pkpPublication .pkpHeader__actions button:contains("Publish")').should('not.exist');
 		cy.get('.pkpPublication .pkpHeader__actions button:contains("Create Version")').should('not.exist');
@@ -570,7 +570,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.contains('The stage assignment has been changed.');
 		cy.waitJQuery();
 		cy.clickStageParticipantButton('Stephanie Berardo', 'Login As');
-		cy.get('.pkpModalConfirmButton').contains('OK').click();
+		cy.get('button').contains('OK').click();
 		cy.get('#publication-button').click();
 		cy.get('#titleAbstract button').contains('Save').should('be.disabled');
 	});

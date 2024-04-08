@@ -1,3 +1,6 @@
 cypress/tests/**/*
 lib/pkp/cypress/**/*
+lib/pkp/js/classes/**/*
+lib/pkp/js/controllers/**/*
+
 package.json
