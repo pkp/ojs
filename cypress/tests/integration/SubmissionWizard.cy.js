@@ -96,8 +96,8 @@ describe('Submission Wizard', function() {
                     .click();
                 cy.wait(1500); // Let modal render. Fixes console error, maybe with TinyMCE init
                 cy.get('label:contains("Items can only be submitted by Editors and Section Editors.")').click();
-                cy.get('.pkp_modal button:contains("Save")').click();
-                cy.get('.pkp_modal').should('not.exist');
+                cy.get('[role="dialog"] button:contains("Save")').click();
+                cy.get('[role="dialog"]').should('not.exist');
             });
 
         // Can't submit as author
@@ -112,7 +112,7 @@ describe('Submission Wizard', function() {
         cy.get('.app__navGroup:contains("Settings") a:contains("Journal")').click();
         cy.get('.pkpTabs__buttons button:contains("Sections")').click();
         cy.get('#sectionsGridContainer tr:contains("Articles") input').check();
-        cy.get('.pkp_modal_confirmation button:contains("OK")').click();
+        cy.get('[role="dialog"] button:contains("OK")').click();
         cy.get('.pkpNotification:contains("Your changes have been saved")');
 
         // Still can't submit as author
@@ -137,8 +137,8 @@ describe('Submission Wizard', function() {
             });
         cy.wait(1500); // Let modal render. Fixes console error, maybe with TinyMCE init
         cy.get('label:contains("Items can only be submitted by Editors and Section Editors.")').click();
-        cy.get('.pkp_modal button:contains("Save")').click();
-        cy.get('.pkp_modal').should('not.exist');
+        cy.get('[role="dialog"] button:contains("Save")').click();
+        cy.get('[role="dialog"]').should('not.exist');
 
         // Can submit to only one section (no option to choose section)
         cy.logout();
@@ -164,8 +164,8 @@ describe('Submission Wizard', function() {
         cy.wait(1500); // Let modal render. Fixes console error, maybe with TinyMCE init
         cy.get('label:contains("Items can only be submitted by Editors and Section Editors.")').click();
         cy.get('label:contains("Deactivate this section")').click();
-        cy.get('.pkp_modal button:contains("Save")').click();
-        cy.get('.pkp_modal').should('not.exist');
+        cy.get('[role="dialog"] button:contains("Save")').click();
+        cy.get('[role="dialog"]').should('not.exist');
 
         cy.logout();
     });
