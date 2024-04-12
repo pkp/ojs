@@ -1,7 +1,7 @@
 # Milutin Markovic <admin@fcjk.me>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-03-28 16:54+0000\n"
+"PO-Revision-Date: 2024-04-12 15:20+0000\n"
 "Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
 "Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "cnr/>\n"
@@ -309,3 +309,132 @@ msgstr ""
 
 msgid "manager.sections.create"
 msgstr "Kreiraj rubriku"
+
+msgid "manager.sections.editorRestriction"
+msgstr "Samo Urednici i Urednici rubrike mogu prijaviti članke."
+
+msgid "manager.sections.editors"
+msgstr "Urednici rubrika"
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Barem jedna sekcija mora biti aktivna. Posjetite postavke toka rada da biste "
+"onemogućili sve podnesene članke u ovaj časopis."
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Neophodan je skraćeni naziv za ovu rubriku"
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Molimo odaberite valjani recenzijski obrazac."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Naslov je obavezan za ovu rubriku."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "Izostavi imena autora iz članaka u sekciji iz sadržaja ovog broja."
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Izostavi naslov ove sekcije/rubrike iz sadržaja ovog broja."
+
+msgid "manager.sections.identifyType"
+msgstr "Identifikuj stavke objavljene u ovoj sekciji kao"
+
+msgid "manager.sections.indexed"
+msgstr "Indeksirano"
+
+msgid "manager.sections.noneCreated"
+msgstr "Nema kreiranih sekcija/rubrika."
+
+msgid "manager.sections.open"
+msgstr "Otvoreno za prijave"
+
+msgid "manager.sections.policy"
+msgstr "Pravila rubrike"
+
+msgid "manager.sections.readingTools"
+msgstr "Alati za čitanje"
+
+msgid "manager.sections.reviewed"
+msgstr "Recenzijski postupak"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Neće biti uključeno u indeksiranje časopisa"
+
+msgid "manager.sections.submissionReview"
+msgstr "Ne prolaze kroz recenzijski postupak"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Prijavljeni članci za ovu sekciju časopisa"
+
+msgid "manager.sections.wordCount"
+msgstr "Broj riječi"
+
+msgid "manager.setup"
+msgstr "Podešavanja časopisa"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Urednički odbor"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Style sheet časopisa"
+
+msgid "manager.setup.contextName"
+msgstr "Naziv časopisa"
+
+msgid "manager.setup.pageHeader"
+msgstr "Zaglavlje stranice časopisa"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Sadržaj"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Dodaj stavku \"O časopisu\""
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Dodaj stavku \"Kontrolna lista\""
+
+msgid "manager.setup.addItem"
+msgstr "Dodaj stavku"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Dodaj stavku koja će se pojaviti u \"O časopisu\""
+
+msgid "manager.setup.addNavItem"
+msgstr "Dodaj stavke"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Dodaj novu vezu ka bazi podataka"
+
+msgid "manager.setup.addSponsor"
+msgstr "Dodaj organizaciju podrške"
+
+msgid "manager.setup.alternateHeader"
+msgstr "Alternativno zaglavlje"
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr ""
+"Provjerite da li je označena barem jedna markacija za označavanje za svaki "
+"zadatаk urednika rubrike."
+
+msgid "manager.sections.unassigned"
+msgstr "Dostupni urednici rubrika"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr ""
+"(Na primjer, \"Stručno recenziran članak\", \"Ne recenziran prikaz knjige\", "
+"\"Pozvan komentar\", itd.)"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Ograničite broj riječi za sažetak za ovu sekciju (0 za beskonačno)"
+
+msgid "manager.setup.masthead"
+msgstr "Uprava"
+
+msgid "manager.setup.homepageContent"
+msgstr "Sadržaj početne strane časopisa"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr ""
+"Početna strana časopisa se sastoji od navigacionih veza u početnoj verziji. "
+"Dodatni sadržaj može biti kreiran koristeći jednu od sledećih mogućnosti i "
+"takav sadržaj će se pojaviti prema pokazanom redosledu."
