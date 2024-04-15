@@ -1,7 +1,7 @@
 # Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-03-21 13:31+0000\n"
+"PO-Revision-Date: 2024-04-15 17:38+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/locale/ky/>\n"
 "Language: ky\n"
@@ -97,3 +97,72 @@ msgstr "Китепканалар үчүн"
 
 msgid "common.queue.short.submissionsUnassigned"
 msgstr "Жаңы"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Редакциялоо процессиндеги материалдар"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Редакцияда"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Карап чыгууда"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Архивдер"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Архивдер"
+
+msgid "common.queue.long.active"
+msgstr "Жумушта"
+
+msgid "common.queue.short.active"
+msgstr "Жумушта"
+
+msgid "common.queue.long.completed"
+msgstr "Архив"
+
+msgid "common.queue.short.completed"
+msgstr "Архив"
+
+msgid "section.sections"
+msgstr "Журнал бөлүмдөрү"
+
+msgid "section.section"
+msgstr "бөлүм"
+
+msgid "section.title"
+msgstr "Бөлүмдүн аталышы"
+
+msgid "section.abbreviation"
+msgstr "Аббревиатура"
+
+msgid "section.abbreviation.example"
+msgstr "(Мисалы, макалалар=MAK)"
+
+msgid "section.policy"
+msgstr "Бөлүмдүн эрежелери"
+
+msgid "article.article"
+msgstr "Макала"
+
+msgid "article.articles"
+msgstr "Макалалар"
+
+msgid "common.publication"
+msgstr "Макала"
+
+msgid "common.publications"
+msgstr "Макалалар"
+
+msgid "article.title"
+msgstr "аты"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Каралып жаткан материалдар"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Белгиленген редакторлор"
+
+msgid "article.submissionId"
+msgstr "Материал ID"
