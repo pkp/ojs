@@ -16,6 +16,7 @@ namespace APP\plugins\generic\dublinCoreMeta;
 
 use APP\facades\Repo;
 use APP\template\TemplateManager;
+use PKP\core\PKPApplication;
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
 
@@ -143,7 +144,7 @@ class DublinCoreMetaPlugin extends GenericPlugin
             }
         }
 
-        $templateMgr->addHeader('dublinCoreUri', '<meta name="DC.Identifier.URI" content="' . $request->url(null, 'article', 'view', [$articleBestId]) . '"/>');
+        $templateMgr->addHeader('dublinCoreUri', '<meta name="DC.Identifier.URI" content="' . $request->getDispatcher()->url($request, PKPApplication::ROUTE_PAGE, null, 'article', 'view', [$articleBestId], urlLocaleForPage: '') . '"/>');
 
         $templateMgr->addHeader('dublinCoreLanguage', '<meta name="DC.Language" scheme="ISO639-1" content="' . substr($publicationLocale, 0, 2) . '"/>');
 
@@ -166,7 +167,7 @@ class DublinCoreMetaPlugin extends GenericPlugin
                 $templateMgr->addHeader('dublinCoreVolume', '<meta name="DC.Source.Volume" content="' . htmlspecialchars($issue->getVolume()) . '"/>');
             }
         }
-        $templateMgr->addHeader('dublinCoreSourceUri', '<meta name="DC.Source.URI" content="' . $request->url($journal->getPath()) . '"/>');
+        $templateMgr->addHeader('dublinCoreSourceUri', '<meta name="DC.Source.URI" content="' . $request->getDispatcher()->url($request, PKPApplication::ROUTE_PAGE, null, $journal->getPath(), urlLocaleForPage: '') . '"/>');
 
         if ($subjects = $publication->getData('subjects')) {
             foreach ($subjects as $locale => $localeSubjects) {

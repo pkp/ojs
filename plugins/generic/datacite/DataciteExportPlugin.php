@@ -410,13 +410,13 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
         $url = null;
         switch (true) {
             case $object instanceof Issue:
-                $url = $dispatcher->url($request, PKPApplication::ROUTE_PAGE, $context->getPath(), 'issue', 'view', $object->getBestIssueId(), null, null, true);
+                $url = $dispatcher->url($request, PKPApplication::ROUTE_PAGE, $context->getPath(), 'issue', 'view', $object->getBestIssueId(), null, null, true, '');
                 break;
             case $object instanceof Submission:
-                $url = $dispatcher->url($request, PKPApplication::ROUTE_PAGE, $context->getPath(), 'article', 'view', $object->getBestId(), null, null, true);
+                $url = $dispatcher->url($request, PKPApplication::ROUTE_PAGE, $context->getPath(), 'article', 'view', $object->getBestId(), null, null, true, '');
                 break;
             case $object instanceof Galley:
-                $url = $dispatcher->url($request, PKPApplication::ROUTE_PAGE, $context->getPath(), 'article', 'view', [$article->getBestId(), $object->getBestGalleyId()], null, null, true);
+                $url = $dispatcher->url($request, PKPApplication::ROUTE_PAGE, $context->getPath(), 'article', 'view', [$article->getBestId(), $object->getBestGalleyId()], null, null, true, '');
                 break;
         }
         if ($this->isTestMode($context)) {

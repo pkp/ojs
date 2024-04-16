@@ -166,7 +166,11 @@ class PubMedExportPlugin extends ImportExportPlugin
             return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
         });
         if (!empty($errors)) {
-            $this->displayXMLValidationErrors($errors, $xml);
+            try {
+                $this->displayXMLValidationErrors($errors, $xml);
+            } catch (Exception $e) {
+                error_log($e->getMessage());
+            }
         }
         return $xml;
     }
