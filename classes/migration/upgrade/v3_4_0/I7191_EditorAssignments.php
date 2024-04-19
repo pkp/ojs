@@ -9,14 +9,25 @@
  *
  * @class I7191_EditorAssignments
  *
- * @brief Update the subeditor_submission_group table to accomodate new editor assignment settings
+ * @brief Update the subeditor_submission_group table to accommodate new editor assignment settings
  */
 
 namespace APP\migration\upgrade\v3_4_0;
 
 class I7191_EditorAssignments extends \PKP\migration\upgrade\v3_4_0\I7191_EditorAssignments
 {
-    protected string $sectionDb = 'sections';
-    protected string $sectionIdColumn = 'section_id';
-    protected string $contextColumn = 'journal_id';
+    protected function getSectionTable(): string
+    {
+        return 'sections';
+    }
+
+    protected function getSectionId(): string
+    {
+        return 'section_id';
+    }
+
+    protected function getContextId(): string
+    {
+        return 'journal_id';
+    }
 }
