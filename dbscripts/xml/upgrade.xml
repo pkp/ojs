@@ -223,7 +223,11 @@
 	</upgrade>
 
 	<upgrade minversion="3.1.0.0" maxversion="3.4.0.5">
-		<migration class="PKP\migration\upgrade\v3_4_0\I9830_FixEmptyUserLocales" />
+		<migration class="PKP\migration\upgrade\v3_4_0\I9830_FixEmptyUserLocales"/>
+	</upgrade>
+
+	<upgrade minversion="3.4.0.0" maxversion="3.4.9.9">
+		<migration class="APP\migration\upgrade\v3_4_0\I9813_QuickSubmitSubmissionProgressType"/>
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
