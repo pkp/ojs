@@ -125,6 +125,7 @@
 		<migration class="PKP\migration\upgrade\v3_5_0\I9709_UserUserGroupsMasthead"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I9566_UserRememberToken"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I9566_SessionUpgrade"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I9809_ReviewCancelDate"/>
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
