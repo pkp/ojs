@@ -22,7 +22,7 @@ use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\plugins\ReportPlugin;
 use PKP\security\Role;
-use PKP\stageAssignment\StageAssignmentDAO;
+use PKP\stageAssignment\StageAssignment;
 use PKP\submission\PKPSubmission;
 use PKP\submission\SubmissionAgencyDAO;
 use PKP\submission\SubmissionDisciplineDAO;
@@ -85,7 +85,6 @@ class ArticleReportPlugin extends ReportPlugin
         // Add BOM (byte order mark) to fix UTF-8 in Excel
         fprintf($fp, chr(0xEF) . chr(0xBB) . chr(0xBF));
 
-        $stageAssignmentDao = DAORegistry::getDAO('StageAssignmentDAO'); /** @var StageAssignmentDAO $stageAssignmentDao */
         $submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /** @var SubmissionKeywordDAO $submissionKeywordDao */
         $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /** @var SubmissionSubjectDAO $submissionSubjectDao */
         $submissionDisciplineDao = DAORegistry::getDAO('SubmissionDisciplineDAO'); /** @var SubmissionDisciplineDAO $submissionDisciplineDao */
@@ -127,11 +126,14 @@ class ArticleReportPlugin extends ReportPlugin
             }
 
             // Load editor and decision information
-            $stageAssignmentsFactory = $stageAssignmentDao->getBySubmissionAndStageId($submission->getId());
+            // Replaces StageAssignmentDAO::getBySubmissionAndStageId
+            $stageAssignments = StageAssignment::withSubmissionIds([$submission->getId()])
+                ->get();
+
             $editors = $editorsById = [];
-            while ($stageAssignment = $stageAssignmentsFactory->next()) {
-                $userId = $stageAssignment->getUserId();
-                if (!in_array($stageAssignment->getUserGroupId(), $editorUserGroupIds)) {
+            foreach ($stageAssignments as $stageAssignment) {
+                $userId = $stageAssignment->userId;
+                if (!in_array($stageAssignment->userGroupId, $editorUserGroupIds)) {
                     continue;
                 }
                 if (isset($editors[$userId])) {
