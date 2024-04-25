@@ -21,6 +21,7 @@ use APP\search\ArticleSearch;
 use APP\submission\Collector;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
+use PKP\core\PKPApplication;
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
 
@@ -100,10 +101,10 @@ class RecommendBySimilarityPlugin extends GenericPlugin
             ->getMany();
 
         $nextPage = $rangeInfo->getPage() * $rangeInfo->getCount() < $submissionCount
-            ? $request->url(path: $submissionId, params: ['articlesBySimilarityPage' => $rangeInfo->getPage() + 1])
+            ? $request->getDispatcher()->url($request, PKPApplication::ROUTE_PAGE, path: $submissionId, params: ['articlesBySimilarityPage' => $rangeInfo->getPage() + 1], urlLocaleForPage: '')
             : null;
         $previousPage = $rangeInfo->getPage() > 1
-            ? $request->url(path: $submissionId, params: ['articlesBySimilarityPage' => $rangeInfo->getPage() - 1])
+            ? $request->getDispatcher()->url($request, PKPApplication::ROUTE_PAGE, path: $submissionId, params: ['articlesBySimilarityPage' => $rangeInfo->getPage() - 1], urlLocaleForPage: '')
             : null;
 
         $templateManager->assign('articlesBySimilarity', (object) [

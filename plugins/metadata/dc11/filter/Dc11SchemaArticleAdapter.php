@@ -28,6 +28,7 @@ use APP\journal\Journal;
 use APP\oai\ojs\OAIDAO;
 use APP\plugins\PubIdPlugin;
 use APP\submission\Submission;
+use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\metadata\MetadataDataObjectAdapter;
@@ -151,7 +152,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         $request = Application::get()->getRequest();
         $includeUrls = $journal->getSetting('publishingMode') != Journal::PUBLISHING_MODE_NONE || $issueAction->subscribedUser($request->getUser(), $journal, null, $article->getId());
         if ($includeUrls) {
-            $dc11Description->addStatement('dc:identifier', $request->url($journal->getPath(), 'article', 'view', [$article->getBestId()]));
+            $dc11Description->addStatement('dc:identifier', $request->getDispatcher()->url($request, PKPApplication::ROUTE_PAGE, null, 'article', 'view', [$article->getBestId()], urlLocaleForPage: ''));
         }
 
         // Source (journal title, issue id and pages)
@@ -184,7 +185,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         // full text URLs
         if ($includeUrls) {
             foreach ($galleys as $galley) {
-                $relation = $request->url($journal->getPath(), 'article', 'view', [$article->getBestId(), $galley->getBestGalleyId()]);
+                $relation = $request->getDispatcher()->url($request, PKPApplication::ROUTE_PAGE, null, 'article', 'view', [$article->getBestId(), $galley->getBestGalleyId()], urlLocaleForPage: '');
                 $dc11Description->addStatement('dc:relation', $relation);
             }
         }

@@ -37,6 +37,7 @@ use APP\submission\Submission;
 use Illuminate\Support\LazyCollection;
 use PHPUnit\Framework\MockObject\MockObject;
 use PKP\author\Repository as AuthorRepository;
+use PKP\core\Dispatcher;
 use PKP\core\Registry;
 use PKP\db\DAORegistry;
 use PKP\doi\Doi;
@@ -213,13 +214,25 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->method('url')
             ->will($this->returnCallback(fn ($request, $newContext = null, $handler = null, $op = null, $path = null) => $handler . '-' . $op . '-' . implode('-', $path)));
 
+        // Dispatcher
+        /** @var Dispatcher|MockObject */
+        $dispatcher = $this->getMockBuilder(Dispatcher::class)
+        ->onlyMethods(['url'])
+        ->getMock();
+        $dispatcher->expects($this->any())
+            ->method('url')
+            ->will($this->returnCallback(fn ($request, $shortcut, $newContext = null, $handler = null, $op = null, $path = null) => $handler . '-' . $op . '-' . implode('-', $path)));
+
         // Request
         $requestMock = $this->getMockBuilder(Request::class)
-            ->onlyMethods(['getRouter'])
+            ->onlyMethods(['getRouter', 'getDispatcher'])
             ->getMock();
         $requestMock->expects($this->any())
             ->method('getRouter')
             ->will($this->returnValue($router));
+        $requestMock->expects($this->any())
+            ->method('getDispatcher')
+            ->will($this->returnValue($dispatcher));
         Registry::set('request', $requestMock);
 
         //

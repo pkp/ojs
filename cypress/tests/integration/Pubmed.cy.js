@@ -18,7 +18,7 @@ describe('Pubmed tests', function () {
 		.then((win) => {
 			const csrfToken = win.pkp.currentUser.csrfToken;
 			cy.request({
-					url: '/index.php/publicknowledge/management/importexport/plugin/PubMedExportPlugin/exportSubmissions',
+					url: '/index.php/publicknowledge/en/management/importexport/plugin/PubMedExportPlugin/exportSubmissions',
 					method: 'POST',
 					headers: {
 						'X-Csrf-Token': csrfToken
