@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2024-03-23 09:35+0000\n"
+"PO-Revision-Date: 2024-04-27 05:12+0000\n"
 "Last-Translator: \"Marie-Hélène Vézina [UdeMontréal]\" <marie-helene."
 "vezina@umontreal.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
@@ -2177,9 +2177,8 @@ msgstr ""
 msgid "stats.context.downloadReport.downloadContext.description"
 msgstr "Nombre de vues sur la page d'accueil de la revue."
 
-#, fuzzy
 msgid "stats.context.downloadReport.downloadContext"
-msgstr "Téléchargement de la revue"
+msgstr "Téléchargements de la revue"
 
 msgid "stats.issueStats"
 msgstr "Statistiques du numéro"
@@ -2251,9 +2250,8 @@ msgstr ""
 "Télécharger un fichier CSV/Excel avec les statistiques d'utilisation des "
 "articles correspondants aux paramètres suivants."
 
-#, fuzzy
 msgid "stats.publications.downloadReport.downloadSubmissions"
-msgstr "Téléchargements des articles"
+msgstr "Téléchargements d'articles"
 
 msgid "stats.publications.downloadReport.downloadSubmissions.description"
 msgstr ""
@@ -2610,7 +2608,7 @@ msgstr "Les numéros demandés n'ont pu être trouvés"
 
 #, fuzzy
 msgid "doi.manager.submissionDois"
-msgstr "DOI de l'article"
+msgstr "DOIs d'article"
 
 #, fuzzy
 msgid "doi.manager.issueDois"
