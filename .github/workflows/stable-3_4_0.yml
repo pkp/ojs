@@ -1,0 +1,46 @@
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      ['stable-3_4_0']
+
+name: ojs
+jobs:
+  ojs:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - php-version: 8.1
+            validate: 'validate'
+          - php-version: 8.1
+            database: pgsql
+            test: 'test'
+          - php-version: 8.1
+            database: mariadb
+            test: 'test'
+          - php-version: 8.1
+            database: mysql
+            test: 'test'
+            upgrade: 'upgrade'
+            upgrade_test: '3.1.0,3.1.1-2,3.1.2,stable-3_2_0,stable-3_2_1,stable-3_3_0'
+          - php-version: 8.2
+            database: mysql
+            test: 'test'
+          - php-version: 8.2
+            database: pgsql
+            test: 'test'
+
+
+
+    name: ojs
+    steps:
+      - uses: pkp/pkp-github-actions@v1
+        with:
+          node_version: 16
+          dataset_branch: 'stable-3_4_0'
+          DATASETS_ACCESS_KEY:  ${{secrets.DATASETS_ACCESS_KEY}}
+          DEBUG_IN_TMATE: false
