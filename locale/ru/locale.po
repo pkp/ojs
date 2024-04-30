@@ -2444,9 +2444,6 @@ msgstr "<p>Отменить одобрение этой гранки.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Индексирование «{$journalName}»"
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "Эта реализация поиска не разрешает пожурнальную переиндексацию."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "По данному пути к журналу «{$journalPath}» не удается найти журнал."
 

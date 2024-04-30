@@ -2482,10 +2482,6 @@ msgstr "<p>Freigabe dieser Fahne entfernen.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Indiziere \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr ""
-"Diese Implementierung der Suche erlaubt keine Neuindizierung pro Journal."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "Der angegebene Pfad \"{$journalPath}\" führt zu keiner Zeitschrift."
 

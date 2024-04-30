@@ -2380,9 +2380,6 @@ msgstr "<p>Cancelar a aceptación desta galerada.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Indexando \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "A implementación da busca non permite a reindexación por revista."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr ""
 "A ruta proporcionada \"{$journalPath}\" non conduce a ningunha revista."

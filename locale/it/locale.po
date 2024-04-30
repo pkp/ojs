@@ -2457,11 +2457,6 @@ msgstr "<p>Rimuovi approvazione di questa gabbia.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Indicizzazione di \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr ""
-"Questa implementazione della ricerca non permette una re-indicizzazione per "
-"rivista."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr ""
 "Questo puntatore, \"{$journalPath}\", non riesce a identificare una rivista "

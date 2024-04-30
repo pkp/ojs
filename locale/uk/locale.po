@@ -2420,9 +2420,6 @@ msgstr "<p>Скасувати схвалення цієї гранки.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Індексування \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "Ця реалізація пошуку не дозволяє пожурнальную переіндексацію."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr ""
 "Не вдається знайти журнал за заданим шляхом до журналу \"{$journalPath}\"."

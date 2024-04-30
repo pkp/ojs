@@ -2420,9 +2420,6 @@ msgstr "<p>Remover aprovação deste ficheiro para publicação.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Indexação \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "A execução da pesquisa não permite a re-indexação por revista."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr ""
 "O caminho fornecido \"{$journalPath}\" não pôde ser usado nesta revista."

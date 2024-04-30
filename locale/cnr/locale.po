@@ -985,9 +985,6 @@ msgstr ""
 msgid "reader.purchasePrice"
 msgstr "({$price} {$currency} )"
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "Ova primjena pretrage ne dozvoljava ponovno indeksiranje po časopisu."
-
 msgid "submission.event.proofread.proofreadRevision"
 msgstr "Korigovan fajl korektora je ažuriran"
 

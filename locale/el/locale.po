@@ -2490,10 +2490,6 @@ msgstr "<p>Αποσύρετε την έγκριση για αυτό το τυπ�
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Ευρετηρίαση του \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr ""
-"Αυτή η εφαρμογή αναζήτησης δεν επιτρέπει επανα-ευρετηρίαση ανά περιοδικό."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr ""
 "Η συγκεκριμένη διαδρομή περιοδικού \"{$journalPath}\" δε μπορεί να καταλήξει "

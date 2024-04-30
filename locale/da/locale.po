@@ -2421,10 +2421,6 @@ msgstr "<p>Fjern godkendelse fra denne publiceringsversion.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Indeksering af \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr ""
-"Denne søgning tillader ikke en re-indeksering af hver enkelt tidsskrift."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr ""
 "Den angivne tidsskriftssti \"{$journalPath}\" leder ikke frem til et "

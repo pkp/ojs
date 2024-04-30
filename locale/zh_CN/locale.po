@@ -2197,9 +2197,6 @@ msgstr "<p>删除该校样的批准。</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "正在索引“ {$journalName}”"
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "此搜索实现不允许按期刊重新索引。"
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "给定的期刊路径“ {$journalPath}”无法解析到期刊。"
 

@@ -2554,9 +2554,6 @@ msgstr "<p> इस गैली का अनुमोदन हटाएँ। 
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "अनुक्रमण \"{$ journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "यह खोज कार्यान्वयन प्रति-पत्रिका पुन: अनुक्रमण की अनुमति नहीं देता है।"
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr ""
 "दिए गए जर्नल पथ \"{$ journalPath}\" को किसी जर्नल से हल नहीं किया जा सकता है।"

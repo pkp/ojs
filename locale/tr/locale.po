@@ -2403,9 +2403,6 @@ msgstr "<p>Bu dizginin onayını kaldır.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "\"{$journalName}\" indeksleniyor"
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "Bu arama uygulaması, dergi başına yeniden indekslenmesine izin vermez."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "Verilen günlük yolu \"{$journalPath}\" bu dergi için çözülemedi."
 

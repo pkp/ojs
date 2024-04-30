@@ -2526,11 +2526,6 @@ msgstr "<p>Thoir an t-aonta air falbh on ghailearaidh seo.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Ag inneacsadh “{$journalName}”"
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr ""
-"Chan eil an gleus luirg seo a’ ceadachadh ath inneacsadh iris-leabhar air "
-"iris-leabhar."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr ""
 "Cha robh an t-slighe “{$journalPath}” a thugadh seachad a’ dol gu iris-"

@@ -2458,11 +2458,6 @@ msgstr "<p>Премахване на одобрението на тази тип
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Индексиране на \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr ""
-"Тази реализация на търсене не позволява повторно индексиране за всяко "
-"списание."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr ""
 "Даденият път на списанието \"{$journalPath}\" не може да бъде разрешен или "

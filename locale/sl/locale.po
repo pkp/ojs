@@ -2360,10 +2360,6 @@ msgstr "<p>Umaknite odobritev tega preloma.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Indeksiranje \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr ""
-"Ta implementacija iskanja ne dovoljuje re-indeksiranja po posamezni reviji."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "Podana pot \"{$journalPath}\" ne vodi do nobene revije."
 

@@ -2199,9 +2199,6 @@ msgstr "<p>Fjarlægja samþykki á þessu galley.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Lyklun \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "Uppsetning á þessari leit leyfir ekki endurlykklun per tímarit."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "Uppgefin slóð fyrir tímarit \"{$journalPath}\" sýnir ekkert tímarit."
 
