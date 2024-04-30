@@ -41,8 +41,6 @@ class I6093_AddForeignKeys extends \PKP\migration\upgrade\v3_4_0\I6093_AddForeig
 
         Schema::table('sections', function (Blueprint $table) {
             $table->foreign('review_form_id', 'sections_review_form_id')->references('review_form_id')->on('review_forms')->onDelete('set null');
-            $table->index(['review_form_id'], 'sections_review_form_id');
-
             $table->foreign('journal_id', 'sections_journal_id')->references('journal_id')->on('journals')->onDelete('cascade');
         });
 
