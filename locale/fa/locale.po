@@ -2285,10 +2285,6 @@ msgstr "<p>عدم تأیید این کلیشه چاپی </p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "نمایه‌سازی \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr ""
-"در سامانه جستجو این وب‌سایت نمایه‌سازی دوباره به ازای هر مجله امکانپدیر نمیباشد"
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "آدرس \"{$journalPath}\" به عنوان آدرس مجله معتبر نمی باشد"
 

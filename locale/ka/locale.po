@@ -2406,9 +2406,6 @@ msgstr "<p>ამ სვეტის გამოქვეყნების დ
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "ინდექსირება \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "ძიების ეს ფორმა არ იძლევა ჟურნალის ინდექსირების საშუალებას."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr ""
 "ჟურნალის ამ მდებარეობით \"{$journalPath}\" ვერ ხერხდება ჟურნალის ნახვა."

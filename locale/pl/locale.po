@@ -2386,11 +2386,6 @@ msgstr "<p>Cofnij zatwierdzenie dla tych plików.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Indeksowanie \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr ""
-"Wybrana implementacja silnika wyszukiwarki nie pozwala na ponowne "
-"indeksowanie na poziomie jednego czasopisma."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "Podana ścieżka \"{$journalPath}\" nie odnosi się do czasopisma."
 

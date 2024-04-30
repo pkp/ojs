@@ -2422,11 +2422,6 @@ msgstr "<p> Bu oshxonaning roziligini olib tashlang. </p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "\"{$ JournalName}\" indekslanmoqda"
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr ""
-"Ushbu qidiruv amaliyoti har bir jurnal uchun qayta indekslashga ruxsat "
-"bermaydi."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr ""
 "Berilgan \"{$ journalPath}\" jurnal yo'lini jurnalga hal qilib bo'lmadi."

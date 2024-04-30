@@ -2442,9 +2442,6 @@ msgstr "<p>Eliminați aprobarea pentru acest conținut.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Indexarea \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "Această implementare de căutare nu permite re-indexarea jurnalului."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr ""
 "Calea de jurnal dată \"{$journalPath}\"nu a putut fi rezolvată pentru un "

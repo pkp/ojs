@@ -2434,9 +2434,6 @@ msgstr "<p>Revogar aprovação dessa composição final.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Indexando \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "Esta implementação de busca não permite reindexação por revista."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "O caminho da revista \"{$journalPath}\" não é válido."
 

@@ -2419,9 +2419,6 @@ msgstr "<p>Հեռացնել այս շարվածքի հաստատումը:</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Ինդեքսավորում է \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "Այս որոնման իրականացումը թույլ չի տալիս ըստ ամսագրի վերաինդեքսավորում:"
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "\"{$journalPath}\" ամսագրի տրված ուղին չի կարող լուծվել ամսագրի համար:"
 

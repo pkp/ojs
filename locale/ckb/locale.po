@@ -2354,9 +2354,6 @@ msgstr "<p>قبوڵکردنی ئەم تابلۆیە لا ببە.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "ناوەرۆکی \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "ئەم گەڕانە ڕێگە بە دوبارە پێنوێنیکردن نادات بە گوێرەی گۆڤار."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "ئەم ڕێچکەیەی گۆڤار \"{$journalPath}\"بەردەست نییە."
 

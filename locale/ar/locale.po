@@ -2320,9 +2320,6 @@ msgstr "<p>إلغاء الموافقة على هذا اللوح الطباعي.<
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "فهرسة \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "تطبيق هذا البحث لا يسمح بإعادة الفهرسة على مستوى المجلة الواحدة."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "إن مسار المجلة \"{$journalPath}\" تعذر الوصول منه إليها."
 

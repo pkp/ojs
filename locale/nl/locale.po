@@ -2416,10 +2416,6 @@ msgstr "<p>Maak goedkeuring van deze proef ongedaan.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Indexering van \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr ""
-"Deze zoekmachine ondersteunt geen herindexering per afzonderlijk tijdschrift."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr ""
 "Er kon geen tijdschrift worden gevonden voor het opgegeven pad "

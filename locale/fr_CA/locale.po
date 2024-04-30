@@ -2485,10 +2485,6 @@ msgstr "<p>Retirer l'approbation de ces épreuves.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Indexation de « {$journalName} »"
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr ""
-"Cette implémentation de recherche ne permet pas la réindexation par revue."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr ""
 "Le chemin d'accès spécifié, soit « {$journalPath} », ne mène à aucune revue."

@@ -1999,9 +1999,6 @@ msgstr "<p>移除此校對樣本的核准。</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "加入「{$journalName}」至索引"
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "此搜尋不允許逐本期刊重新加入索引。"
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "提供的期刊路徑\"{$journalPath}\"未能引導至一期刊。"
 

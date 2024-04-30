@@ -2399,9 +2399,6 @@ msgstr "<p>Gjør om godkjenningen av oppsettet.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Indekserer {$journalName}"
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "Denne typen søk tillater ikke ny indeksering for hvert tidsskrift."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "Tidsskriftstien «{$journalPath}» kunne ikke knyttes til et tidsskrift."
 

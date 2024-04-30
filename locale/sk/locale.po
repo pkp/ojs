@@ -2391,11 +2391,6 @@ msgstr "<p>Odobratie schválenia tejto sadzobnice.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Indexácia \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr ""
-"Táto implementácia vyhľadávania neumožňuje opakované indexovanie podľa "
-"časopisov."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr ""
 "Nastavená cesta k časopisu  \"{$journalPath}\" nemožno priradiť k časopisu."

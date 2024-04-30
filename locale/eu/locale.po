@@ -2432,11 +2432,6 @@ msgstr "<p>Ezeztatu galerada honen onarpena.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "\"{$journalName}\" indexatzen"
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr ""
-"Bilaketa-inplementazio honek ez du onartzen aldizkariaren araberako "
-"berrindexatzea."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "\"{$journalPath}\" sarbideak ez darama inongo aldizkaritara."
 

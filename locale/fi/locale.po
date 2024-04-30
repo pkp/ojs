@@ -2416,9 +2416,6 @@ msgstr "<p>Poista tämän julkaistavan tiedoston hyväksyntä.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Indeksointi \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "Tämä haun toteutus ei salli julkaisukohtaista uudelleenindeksointia."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "Annettu julkaisupolku \"{$journalPath}\" ei johtanut julkaisuun."
 

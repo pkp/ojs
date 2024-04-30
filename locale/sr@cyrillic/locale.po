@@ -2383,9 +2383,6 @@ msgstr "<p>Уклони одобрење за ову пробну копију.<
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Индексирам \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "Ова примена претраге не дозвољава поновно индексирање по часопису."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr ""
 "Дата путања часописа \"{$journalPath}\" није могла да се споји са часописом."

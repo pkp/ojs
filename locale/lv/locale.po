@@ -2382,11 +2382,6 @@ msgstr "<p>Noņemt šī saliktņa apstiprinājumu.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "\"{$journalName}\" indeksēšana"
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr ""
-"Šī meklēšanas implementācija neļauj veikt katra žurnāla atkārtotu "
-"indeksēšanu."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "Norādīto žurnāla ceļu “{$journalPath}” nevarēja atrisināt uz žurnālu."
 

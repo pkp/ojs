@@ -2409,10 +2409,6 @@ msgstr "<p>Ukloni odobrenje ovog prijeloma.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Indeksiranje \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr ""
-"Ova provedba pretraživanja ne dozvoljava ponovno indeksiranje po časopisu."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "Nije moguće razriješiti putanju \"{$journalPath}\" na časopis."
 

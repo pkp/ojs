@@ -2348,9 +2348,6 @@ msgstr "<p>このゲラの承認を削除する。</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "『{$journalName}』インデックス中"
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "この検索の実装では、雑誌ごとの再インデックス化はできません。"
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "指定された雑誌パス「{$ journalPath}」を雑誌に定められませんでした。"
 

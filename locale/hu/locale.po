@@ -2422,10 +2422,6 @@ msgstr "<p>Jóváhagyás eltávolítása ennél a kefelenyomatnál.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "\"{$journalName}\" folyóirat indexelése"
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr ""
-"A keresés végrehajtása nem teszi lehetővé a folyóiratonkénti újraindexelést."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr ""
 "A megadott folyóirat elérési útvonal \"{$journalPath}\" nem meghatározott a "

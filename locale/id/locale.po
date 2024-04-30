@@ -2362,9 +2362,6 @@ msgstr "<p>Cabut persetujuan untuk galley ini.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Mengindeks \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "Pencarian ini tidak memungkinkan pengindeksan ulang per jurnal."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr ""
 "Path jurnal yang diberikan \"{$journalPath}\" tidak mengarah ke jurnal "

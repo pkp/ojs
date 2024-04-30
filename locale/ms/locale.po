@@ -2401,10 +2401,6 @@ msgstr "<p> Buang kelulusan galley ini. </p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Pengindeksan \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr ""
-"Pelaksanaan carian ini tidak membenarkan pengindeksan semula setiap jurnal."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr ""
 "Laluan URL jurnal yang diberikan \"{$journalPath}\" tidak mengarah ke mana-"

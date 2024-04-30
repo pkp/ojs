@@ -2154,9 +2154,6 @@ msgstr "<p>Remove approval of this galley.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Indexing \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr "This search implementation does not allow per-journal re-indexing."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr "The given journal path \"{$journalPath}\" could not be resolved to a journal."
 

@@ -2411,10 +2411,6 @@ msgstr "<p>Xóa phê duyệt của bản in này.</p>"
 msgid "search.cli.rebuildIndex.indexing"
 msgstr "Lập chỉ mục \"{$journalName}\""
 
-msgid "search.cli.rebuildIndex.indexingByJournalNotSupported"
-msgstr ""
-"Việc thực hiện tìm kiếm này không cho phép lập chỉ mục lại trên mỗi tạp chí."
-
 msgid "search.cli.rebuildIndex.unknownJournal"
 msgstr ""
 "Đường dẫn tạp chí đã cho \"{$journalPath}\" không thể được tạo thành một tạp "
