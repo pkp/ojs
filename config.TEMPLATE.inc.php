@@ -24,6 +24,12 @@
 
 [general]
 
+[general]
+
+; An application specific key that is required for the app to run
+; Internally this is used for any encryption (specifically cookie encryption if enabled)
+app_key = 
+
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
 installed = Off
@@ -254,6 +260,14 @@ filename_revision_match = 70
 ;;;;;;;;;;;;;;;;;;;;;
 
 [security]
+
+; Specific cipher algorithm used to generate app key and encryption purpose
+; Valid and available algorithms are `aes-128-cbc`, `aes-256-cbc`, `aes-128-gcm` and `aes-256-gcm`
+; cipher = 'aes-256-cbc'
+
+; Define should the cookie at user's end need to be encrypted
+; Enabling/Disbaling will force all user to re-login
+; cookie_encryption = On
 
 ; Force SSL connections site-wide and also sets the "Secure" flag for session cookies
 ; See https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#secure
