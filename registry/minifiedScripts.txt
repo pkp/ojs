@@ -75,6 +75,7 @@ lib/pkp/js/controllers/modal/RemoteActionConfirmationModalHandler.js
 lib/pkp/js/controllers/modal/ButtonConfirmationModalHandler.js
 lib/pkp/js/controllers/modal/JsEventConfirmationModalHandler.js
 lib/pkp/js/controllers/modal/AjaxModalHandler.js
+lib/pkp/js/controllers/modal/VueModalHandler.js
 lib/pkp/js/controllers/modal/WizardModalHandler.js
 lib/pkp/js/controllers/linkAction/LinkActionHandler.js
 lib/pkp/js/controllers/wizard/WizardHandler.js
