@@ -138,6 +138,7 @@ class TemplateManager extends PKPTemplateManager
                 'name' => __('editor.navigation.issues'),
                 'url' => $router->url($request, null, 'manageIssues'),
                 'isCurrent' => $request->getRequestedPage() === 'manageIssues',
+                'icon' => 'Issues'
             ];
             $index = false;
             if(Config::getVar('features', 'enable_new_submission_listing')) {
