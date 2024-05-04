@@ -64,7 +64,7 @@ class ReviewerHandler extends PKPReviewerHandler
                     ->getByMD5Key($accessKeyCode);
 
                 if (isset($invitation)) {
-                    $invitation->acceptHandle();
+                    $invitation->acceptHandle($request);
                 }
             }
         }
