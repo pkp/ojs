@@ -406,9 +406,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Setări jurnal"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Echipa editorială"
-
 msgid "manager.setup.homepageContent"
 msgstr "Conținutul paginii de pornire a jurnalului"
 

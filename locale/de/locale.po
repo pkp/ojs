@@ -1710,12 +1710,6 @@ msgstr "Über die Zeitschrift"
 msgid "about.history"
 msgstr "Zeitschriften-Geschichte"
 
-msgid "about.editorialTeam"
-msgstr "Redaktion"
-
-msgid "about.editorialTeam.biography"
-msgstr "Biografie"
-
 msgid "about.editorialPolicies"
 msgstr "Zeitschriftenrichtlinien und Publikationsprozess"
 

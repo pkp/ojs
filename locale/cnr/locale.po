@@ -1601,12 +1601,6 @@ msgstr "Kontakt"
 msgid "about.history"
 msgstr "Istorija časopisa"
 
-msgid "about.editorialTeam"
-msgstr "Časopis uređuju"
-
-msgid "about.editorialTeam.biography"
-msgstr "Biografija"
-
 msgid "about.editorialPolicies"
 msgstr "Uređivačka politika"
 

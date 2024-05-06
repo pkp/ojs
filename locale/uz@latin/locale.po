@@ -1656,12 +1656,6 @@ msgstr "Jurnal haqida"
 msgid "about.history"
 msgstr "Jurnal tarixi"
 
-msgid "about.editorialTeam"
-msgstr "Tahririyat jamoasi"
-
-msgid "about.editorialTeam.biography"
-msgstr "Biografiya"
-
 msgid "about.editorialPolicies"
 msgstr "Tahririyat siyosati"
 

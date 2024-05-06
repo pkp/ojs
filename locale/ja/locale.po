@@ -1598,12 +1598,6 @@ msgstr "本誌について"
 msgid "about.history"
 msgstr "雑誌の歴史"
 
-msgid "about.editorialTeam"
-msgstr "編集委員会"
-
-msgid "about.editorialTeam.biography"
-msgstr "人物紹介"
-
 msgid "about.editorialPolicies"
 msgstr "編集ポリシー"
 

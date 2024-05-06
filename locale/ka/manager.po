@@ -403,9 +403,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "ჟურნალის პარამეტრები"
 
-msgid "manager.setup.editorialTeam"
-msgstr "რედაქცია"
-
 msgid "manager.setup.homepageContent"
 msgstr "ჟურნალის მთავარი გვერდის შიგთავსი"
 

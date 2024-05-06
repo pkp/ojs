@@ -395,9 +395,6 @@ msgstr "Ограничи број речи за апстракт за ову с�
 msgid "manager.setup"
 msgstr "Подешавања часописа"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Часопис уређују"
-
 msgid "manager.setup.homepageContent"
 msgstr "Садржај почетне стране часописа"
 

@@ -413,9 +413,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Configuração"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Equipe Editorial"
-
 msgid "manager.setup.homepageContent"
 msgstr "Página Inicial da Revista"
 

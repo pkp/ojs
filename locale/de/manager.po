@@ -425,9 +425,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Setup"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Redaktion"
-
 msgid "manager.setup.homepageContent"
 msgstr "Inhalte der Zeitschriften-Homepage"
 

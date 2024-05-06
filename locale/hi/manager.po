@@ -498,10 +498,6 @@ msgid "manager.setup"
 msgstr "जर्नल सेटिंग्स"
 
 # (pofilter) simplecaps: Different capitalization
-msgid "manager.setup.editorialTeam"
-msgstr "संपादकीय टीम"
-
-# (pofilter) simplecaps: Different capitalization
 msgid "manager.setup.homepageContent"
 msgstr "जर्नल मुखपृष्ठ सामग्री"
 

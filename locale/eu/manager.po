@@ -403,9 +403,6 @@ msgstr "Mugatu atal honetako laburpenen hitz kopurua (0 mugarik ez jartzeko):"
 msgid "manager.setup"
 msgstr "Konfigurazioa"
 
-msgid "manager.setup.editorialTeam"
-msgstr ""
-
 msgid "manager.setup.homepageContent"
 msgstr ""
 

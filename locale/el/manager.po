@@ -418,9 +418,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Ρυθμίσεις περιοδικού"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Συντακτική ομάδα"
-
 msgid "manager.setup.homepageContent"
 msgstr "Περιεχόμενο αρχικής σελίδας περιοδικού"
 
@@ -2610,11 +2607,6 @@ msgstr ""
 
 #~ msgid "manager.payments"
 #~ msgstr "Πληρωμές"
-
-#~ msgid "manager.setup.editorialTeam.description"
-#~ msgstr ""
-#~ "Κατάλογος Επιμελητών, Διαχειριστικών Διευθυντών, και άλλων ατόμων που "
-#~ "σχετίζονται με το περιοδικό."
 
 #~ msgid "manager.setup.layout"
 #~ msgstr "Διάταξη περιοδικού"

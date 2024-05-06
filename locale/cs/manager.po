@@ -402,9 +402,6 @@ msgstr "Omezit počet slov abstraktu pro tuto sekci na (0 pro žádný limit)"
 msgid "manager.setup"
 msgstr "Nastavení"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Tým redaktorů"
-
 msgid "manager.setup.homepageContent"
 msgstr "Obsah domovské stránky časopisu"
 
@@ -2621,11 +2618,6 @@ msgstr ""
 
 #~ msgid "manager.setup.porticoTitle"
 #~ msgstr "Portico"
-
-#~ msgid "manager.setup.editorialTeam.description"
-#~ msgstr ""
-#~ "Seznam redaktorů, vedoucích správců a ostatních osobností spojených s "
-#~ "tímto časopisem."
 
 #~ msgid "manager.setup.userAccess.success"
 #~ msgstr ""

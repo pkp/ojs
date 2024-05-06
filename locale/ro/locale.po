@@ -1661,12 +1661,6 @@ msgstr "Despre revistă"
 msgid "about.history"
 msgstr "Istoricul revistei"
 
-msgid "about.editorialTeam"
-msgstr "Colectiv editorial"
-
-msgid "about.editorialTeam.biography"
-msgstr "Biografie"
-
 msgid "about.editorialPolicies"
 msgstr "Politici editoriale"
 

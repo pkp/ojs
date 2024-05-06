@@ -1680,12 +1680,6 @@ msgstr "За списанието"
 msgid "about.history"
 msgstr "История на списанието"
 
-msgid "about.editorialTeam"
-msgstr "Редакционен екип"
-
-msgid "about.editorialTeam.biography"
-msgstr "Биография"
-
 msgid "about.editorialPolicies"
 msgstr "Редакционна политика"
 

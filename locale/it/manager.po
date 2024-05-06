@@ -417,9 +417,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Setup"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Comitato di redazione"
-
 msgid "manager.setup.homepageContent"
 msgstr "Contenuto Homepage rivista"
 
@@ -2700,11 +2697,6 @@ msgstr ""
 
 #~ msgid "manager.setup.porticoTitle"
 #~ msgstr "Portico"
-
-#~ msgid "manager.setup.editorialTeam.description"
-#~ msgstr ""
-#~ "Elenca editori, direttori, responsabili e altri individui associati con "
-#~ "la rivista."
 
 #~ msgid "doi.manager.settings.enableSubmissionDoi"
 #~ msgstr "Articoli"

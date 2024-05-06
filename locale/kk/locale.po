@@ -1636,12 +1636,6 @@ msgstr "Журнал туралы"
 msgid "about.history"
 msgstr "Журналдың шығу тарихы"
 
-msgid "about.editorialTeam"
-msgstr "Редакция қызметкерлері"
-
-msgid "about.editorialTeam.biography"
-msgstr "Өмірбаян"
-
 msgid "about.editorialPolicies"
 msgstr "Редакциялық саясат"
 

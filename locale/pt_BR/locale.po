@@ -1671,12 +1671,6 @@ msgstr "Sobre a Revista"
 msgid "about.history"
 msgstr "Histórico do periódico"
 
-msgid "about.editorialTeam"
-msgstr "Corpo Editorial"
-
-msgid "about.editorialTeam.biography"
-msgstr "Biografia"
-
 msgid "about.editorialPolicies"
 msgstr "Políticas Editoriais"
 

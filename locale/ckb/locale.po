@@ -1610,12 +1610,6 @@ msgstr "دەربارەی گۆڤارەکە"
 msgid "about.history"
 msgstr "مێژوی گۆڤارەکە"
 
-msgid "about.editorialTeam"
-msgstr "دەستەی سەرنوسەران"
-
-msgid "about.editorialTeam.biography"
-msgstr "ژیاننامە"
-
 msgid "about.editorialPolicies"
 msgstr "سیاسەتەکانی گۆڤار"
 

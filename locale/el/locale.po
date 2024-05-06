@@ -1692,12 +1692,6 @@ msgstr "Σχετικά με το περιοδικό"
 msgid "about.history"
 msgstr "Ιστορικό περιοδικού"
 
-msgid "about.editorialTeam"
-msgstr "Συντακτική ομάδα"
-
-msgid "about.editorialTeam.biography"
-msgstr "Βιογραφικό"
-
 msgid "about.editorialPolicies"
 msgstr "Πολιτικές Σύνταξης"
 

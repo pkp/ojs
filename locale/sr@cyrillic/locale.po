@@ -1616,12 +1616,6 @@ msgstr "О часопису"
 msgid "about.history"
 msgstr "Историја часописа"
 
-msgid "about.editorialTeam"
-msgstr "Часопис уређују"
-
-msgid "about.editorialTeam.biography"
-msgstr "Биографија"
-
 msgid "about.editorialPolicies"
 msgstr "Уређивачка политика"
 

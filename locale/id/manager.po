@@ -409,9 +409,6 @@ msgstr "Batasi jumlah kata abstrak untuk bagian ini (0 jika tidak ada batasan)"
 msgid "manager.setup"
 msgstr "Pengaturan Jurnal"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Dewan Editor"
-
 msgid "manager.setup.homepageContent"
 msgstr "Konten Beranda Jurnal"
 

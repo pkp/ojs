@@ -400,9 +400,6 @@ msgstr "Осы бөлім үшін аннотациядағы сөздердің
 msgid "manager.setup"
 msgstr "Журнал баптаулары"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Редакция"
-
 msgid "manager.setup.homepageContent"
 msgstr "Журналдың негізгі бетінің мазмұны"
 

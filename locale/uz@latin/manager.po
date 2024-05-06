@@ -413,9 +413,6 @@ msgstr "Bu bo'lim uchun mavhum so'zlar sonini cheklash (cheklovsiz 0)"
 msgid "manager.setup"
 msgstr "Jurnal sozlamalari"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Tahririyat jamoasi"
-
 msgid "manager.setup.homepageContent"
 msgstr "Jurnal bosh sahifasining tarkibi"
 

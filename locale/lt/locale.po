@@ -1398,12 +1398,6 @@ msgstr ""
 msgid "about.history"
 msgstr ""
 
-msgid "about.editorialTeam"
-msgstr ""
-
-msgid "about.editorialTeam.biography"
-msgstr ""
-
 msgid "about.editorialPolicies"
 msgstr ""
 

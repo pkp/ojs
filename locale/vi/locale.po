@@ -1645,12 +1645,6 @@ msgstr "Giới thiệu về Tạp chí"
 msgid "about.history"
 msgstr "Lịch sử Tạp chí"
 
-msgid "about.editorialTeam"
-msgstr "Ban biên tập"
-
-msgid "about.editorialTeam.biography"
-msgstr "Tiểu sử"
-
 msgid "about.editorialPolicies"
 msgstr "Chính sách biên tập"
 
