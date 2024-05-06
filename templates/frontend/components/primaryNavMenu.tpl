@@ -47,13 +47,6 @@
 						{translate key="common.editorialMasthead"}
 					</a>
 				</li>
-				{if $currentJournal->getLocalizedData('editorialTeam')}
-					<li>
-						<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="about" op="editorialTeam"}">
-							{translate key="about.editorialTeam"}
-						</a>
-					</li>
-				{/if}
 				<li>
 					<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="about" op="submissions"}">
 						{translate key="about.submissions"}
