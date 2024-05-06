@@ -1,7 +1,7 @@
 # Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-03 21:35+0000\n"
+"PO-Revision-Date: 2024-03-26 14:05+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/admin/ky/>\n"
 "Language: ky\n"
@@ -238,3 +238,9 @@ msgstr ""
 "эгер сайт өлкө менен аймакты гана колдосо, журнал өлкө менен аймакты же бир "
 "гана өлкөнү тандай алат. Журнал өлкөнү, аймакты жана шаарды көзөмөлдөй "
 "албайт."
+
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
+msgstr "Сан саптын ID номери бүтүн сан эмес."
+
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
+msgstr "Чыгарылган ID бүтүн сан эмес."

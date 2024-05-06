@@ -1,18 +1,19 @@
 # Dorien van Rheenen <d.van.rheenen@rug.nl>, 2023.
+# Kay <kay.pepping@huygens.knaw.nl>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2023-04-11 16:21+0000\n"
-"Last-Translator: Dorien van Rheenen <d.van.rheenen@rug.nl>\n"
+"PO-Revision-Date: 2024-03-28 10:44+0000\n"
+"Last-Translator: Kay <kay.pepping@huygens.knaw.nl>\n"
 "Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/author/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "author.submit"
 msgstr "Nieuwe inzending"
@@ -245,9 +246,10 @@ msgstr "Brontekst"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Korte beschrijving"
 
-#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
-msgstr "Geef het bestand aan reviewers (zonder metadata), aangezien dat de blinde review niet compromitteert."
+msgstr ""
+"Geef het bestand aan reviewers (zonder metadata), aangezien dat de blinde "
+"review niet compromitteert."
 
 msgid "author.submit.suppFile.publisherDescription"
 msgstr "Alleen gebruiken bij formeel gepubliceerd materiaal."

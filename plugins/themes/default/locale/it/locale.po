@@ -1,12 +1,13 @@
 # Stefano Bolelli Gallevi <stefano.bolelli@unimi.it>, 2022.
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
+# Leonardo Mancini <leonardo.mancini@unito.it>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:18+00:00\n"
-"PO-Revision-Date: 2023-06-21 13:49+0000\n"
-"Last-Translator: Stefan Schneider <mail@stefan-schneider.at>\n"
+"PO-Revision-Date: 2024-03-28 16:54+0000\n"
+"Last-Translator: Leonardo Mancini <leonardo.mancini@unito.it>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/it/>\n"
 "Language: it\n"
@@ -14,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.themes.default.name"
 msgstr "Tema di default"
@@ -50,7 +51,7 @@ msgid "plugins.themes.default.option.typography.lato"
 msgstr "Lato: un popolare font sans-serif."
 
 msgid "plugins.themes.default.option.typography.lora"
-msgstr "Lora: Un vasto font serif  buono per leggere online."
+msgstr "Lora: un carattere serif ampio, ottimo per la lettura online."
 
 msgid "plugins.themes.default.option.typography.lora_openSans"
 msgstr ""

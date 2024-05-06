@@ -1,0 +1,95 @@
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-04-15 17:38+0000\n"
+"Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
+"Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/ky/>\n"
+"Language: ky\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.themes.default.name"
+msgstr "\"Демейки тема\" модулу"
+
+msgid "plugins.themes.default.description"
+msgstr "Демейки терисин ишке ашырат."
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "Типография"
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "Бул журналга ылайыктуу шрифт айкалышын тандаңыз."
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr ""
+"Noto Sans: Кеңири тилдерди колдоо үчүн Google тарабынан түзүлгөн дисплей "
+"шрифти."
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr "Noto Serif: Google'дун экран шрифтинин серифтик версиясы."
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr ""
+"Noto Serif/Noto Sans: серифтин аталыштары жана sans serif негизги тексти бар "
+"кошумча түгөй."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr ""
+"Noto Sans/Noto Serif: sans serif аталыштары жана серифтин тексти менен "
+"толуктоочу түгөй."
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Лато: популярдуу заманбап гротеск."
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr "Лора: кең сериф, экранда окууга оңой."
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr ""
+"Lora/Open Sans: сериф аталыштары жана sans serif негизги тексти менен "
+"толуктоочу түгөй."
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "Түс"
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "Баш аты үчүн түс тандаңыз."
+
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
+msgstr "Негизги бетинде журнал тууралуу кыскача маалыматты көрсөтүңүз."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
+msgstr "Башкы фон сүрөтү"
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
+msgstr ""
+"Башкы беттин сүрөтү жүктөлгөндөн кийин, аны башкы беттеги кадимки ордуна "
+"эмес, баш фон катары көрсөтүңүз."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
+msgstr "Башкы беттин сүрөтүн баш фон катары көрсөтүү."
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "Колдонуу статистикасын көрсөтүү жөндөөлөрү"
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr "Окурманга материалды колдонуу статистикасынын диаграммасын көрсөтпөңүз."
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr "Колдонуу статистикасын көрсөтүү үчүн тилке диаграммасын колдонуңуз."
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr "Колдонуу статистикасын көрсөтүү үчүн сызык диаграммасын колдонуңуз."
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "Янв Фев Мар Апр Май Июн Июл Авг Сен Окт Ноя Дек"
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "Жүктөлүп алынгандар"
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "Жүктөө дайындары азырынча жеткиликтүү эмес."

@@ -1,18 +1,19 @@
 # Dorien van Rheenen <d.van.rheenen@rug.nl>, 2023.
+# Kay <kay.pepping@huygens.knaw.nl>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2023-04-11 16:21+0000\n"
-"Last-Translator: Dorien van Rheenen <d.van.rheenen@rug.nl>\n"
+"PO-Revision-Date: 2024-03-21 21:01+0000\n"
+"Last-Translator: Kay <kay.pepping@huygens.knaw.nl>\n"
 "Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/admin/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "admin.hostedContexts"
 msgstr "Tijdschriften"
@@ -103,6 +104,7 @@ msgstr "Het opgegeven pad is al in gebruik voor een ander tijdschrift."
 
 msgid "admin.contexts.form.primaryLocaleNotSupported"
 msgstr ""
+"De primaire taal moet een van de ondersteunde talen van het tijdschrift zijn."
 
 msgid "admin.journals.enableJournalInstructions"
 msgstr "Toon dit tijdschrift op de site"
@@ -169,14 +171,14 @@ msgid "admin.scheduledTask.reviewReminder"
 msgstr "Review herinnering"
 
 msgid "admin.job.processLogFile.invalidLogEntry.issueId"
-msgstr ""
+msgstr "Nummer ID is geen geheel getal."
 
 msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
-msgstr ""
+msgstr "Nummer drukproef ID is geen geheel getal."
 
 msgid ""
 "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
-msgstr ""
+msgstr "Nummer ID komt niet overeen met het assoc ID."
 
 msgid "admin.settings.enableBulkEmails.description"
 msgstr ""
@@ -209,4 +211,4 @@ msgstr ""
 #~ msgstr "De website-informatie is bijgewerkt."
 
 msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
-msgstr ""
+msgstr "Gebruik de site als het plaform voor alle tijdschriften."
