@@ -1641,12 +1641,6 @@ msgstr "O časopise"
 msgid "about.history"
 msgstr "História časopisu"
 
-msgid "about.editorialTeam"
-msgstr "Editorský tým"
-
-msgid "about.editorialTeam.biography"
-msgstr "Životopis"
-
 msgid "about.editorialPolicies"
 msgstr "Edičné pravidlá"
 

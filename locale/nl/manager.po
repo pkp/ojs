@@ -410,9 +410,6 @@ msgstr "Begrens aantal woorden voor deze sectie (0 voor ongelimiteerd)"
 msgid "manager.setup"
 msgstr "Instellen"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Redactie"
-
 msgid "manager.setup.homepageContent"
 msgstr "Inhoud van de homepage van het tijdschrift"
 

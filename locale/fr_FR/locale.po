@@ -1683,12 +1683,6 @@ msgstr "À propos de cette revue"
 msgid "about.history"
 msgstr "Historique de la revue"
 
-msgid "about.editorialTeam"
-msgstr "Comité éditorial"
-
-msgid "about.editorialTeam.biography"
-msgstr "Biographie"
-
 msgid "about.editorialPolicies"
 msgstr "Politiques éditoriales"
 

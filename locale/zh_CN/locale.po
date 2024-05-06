@@ -1534,12 +1534,6 @@ msgstr "关于期刊"
 msgid "about.history"
 msgstr "期刊历史"
 
-msgid "about.editorialTeam"
-msgstr "编辑团队"
-
-msgid "about.editorialTeam.biography"
-msgstr "简介"
-
 msgid "about.editorialPolicies"
 msgstr "编辑政策"
 

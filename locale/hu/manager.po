@@ -411,9 +411,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Folyóirat beállítások"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Szerkesztőség"
-
 msgid "manager.setup.homepageContent"
 msgstr "Folyóirat főoldal tartalom"
 
@@ -2878,11 +2875,6 @@ msgstr ""
 
 #~ msgid "manager.subscriptions.form.dateRemindedAfter"
 #~ msgstr "Lejárat utáni emlékeztető küldése"
-
-#~ msgid "manager.setup.editorialTeam.description"
-#~ msgstr ""
-#~ "Lista a szerkesztőkről, ügyvezetőkről és egyéb személyekről akik a "
-#~ "folyóirathoz köthetők."
 
 #~ msgid "stats.publishedSubmissions.details"
 #~ msgstr "Cikk részletek"

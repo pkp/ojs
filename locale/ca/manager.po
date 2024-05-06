@@ -420,9 +420,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Configuració"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Equip editorial"
-
 msgid "manager.setup.homepageContent"
 msgstr "Contingut de la pàgina d'inici de la revista"
 

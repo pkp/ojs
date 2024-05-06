@@ -338,9 +338,6 @@ msgstr "Limit abstract word counts for this section (0 for no limit)"
 msgid "manager.setup"
 msgstr "Journal Settings"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Editorial Team"
-
 msgid "manager.setup.homepageContent"
 msgstr "Journal Homepage Content"
 

@@ -1597,12 +1597,6 @@ msgstr "عن المجلة"
 msgid "about.history"
 msgstr "تأريخ المجلة"
 
-msgid "about.editorialTeam"
-msgstr "هيئة التحرير"
-
-msgid "about.editorialTeam.biography"
-msgstr "السيرة"
-
 msgid "about.editorialPolicies"
 msgstr "سياسات التحرير"
 

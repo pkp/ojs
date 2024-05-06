@@ -399,9 +399,6 @@ msgstr "Ogranicz liczbę słów abstraktu dla tego działu (0 = bez limitu)"
 msgid "manager.setup"
 msgstr "Konfiguracja"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Zespół redakcyjny"
-
 msgid "manager.setup.homepageContent"
 msgstr "Zawartość strony głównej czasopisma"
 

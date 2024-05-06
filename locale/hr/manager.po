@@ -400,9 +400,6 @@ msgstr "Ograničite broj riječi za sažetak u ovom odjeljku (0 za beskonačno)"
 msgid "manager.setup"
 msgstr "Uređivanje postavki časopisa"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Urednički odbor"
-
 msgid "manager.setup.homepageContent"
 msgstr "Sadržaj početne stranice časopisa"
 

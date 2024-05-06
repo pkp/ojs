@@ -1658,12 +1658,6 @@ msgstr "Om tidskriften"
 msgid "about.history"
 msgstr "Tidskriftens historia"
 
-msgid "about.editorialTeam"
-msgstr "Redaktion"
-
-msgid "about.editorialTeam.biography"
-msgstr "Biografi"
-
 msgid "about.editorialPolicies"
 msgstr "Redaktionella policyer"
 

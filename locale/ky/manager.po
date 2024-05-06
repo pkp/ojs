@@ -292,9 +292,6 @@ msgstr "Бул бөлүм үчүн рефераттагы сөздөрдүн с�
 msgid "manager.setup"
 msgstr "Журналды жөндөө"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Редакция"
-
 msgid "manager.setup.useStyleSheet"
 msgstr "Журналдын стилдер барагы"
 

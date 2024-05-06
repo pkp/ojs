@@ -409,9 +409,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Ամսագրի կարգավորումներ"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Խմբագրական կազմ"
-
 msgid "manager.setup.homepageContent"
 msgstr "Ամսագրի գլխավոր էջի բովանդակությունը"
 

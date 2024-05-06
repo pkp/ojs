@@ -1648,12 +1648,6 @@ msgstr "Információk"
 msgid "about.history"
 msgstr "A folyóirat története"
 
-msgid "about.editorialTeam"
-msgstr "Szerkesztőbizottság"
-
-msgid "about.editorialTeam.biography"
-msgstr "Életrajz"
-
 msgid "about.editorialPolicies"
 msgstr "Szerkesztői politikák"
 
