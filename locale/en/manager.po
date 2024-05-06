@@ -642,6 +642,9 @@ msgstr "A small logo or representation of the journal that can be used in lists 
 msgid "manager.setup.contextTitle"
 msgstr "Journal title"
 
+msgid "manager.setup.editorialMasthead.description"
+msgstr "Please provide the editorial history of your journal, including the full name, affiliation, and start and end dates of each editor."
+
 msgid "manager.setup.labelName"
 msgstr "Label name"
 
