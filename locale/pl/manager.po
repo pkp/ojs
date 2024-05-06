@@ -1,12 +1,12 @@
 # Dariusz Lis <Dariusz@Lis.PL>, 2021, 2023.
-# rl <biuro@fimagis.pl>, 2022.
+# rl <biuro@fimagis.pl>, 2022, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-30T17:55:29+00:00\n"
-"PO-Revision-Date: 2023-04-26 14:01+0000\n"
-"Last-Translator: Dariusz Lis <Dariusz@Lis.PL>\n"
+"PO-Revision-Date: 2024-04-19 14:16+0000\n"
+"Last-Translator: rl <biuro@fimagis.pl>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/manager/pl/>"
 "\n"
 "Language: pl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "manager.distribution.access"
 msgstr "Dostęp"
@@ -484,7 +484,7 @@ msgid "manager.setup.customizingTheLook"
 msgstr "Krok 5. Dostosuj wygląd"
 
 msgid "manager.setup.details"
-msgstr "Informacje podstawowe"
+msgstr "Szczegóły"
 
 msgid "manager.setup.details.description"
 msgstr ""
@@ -605,7 +605,7 @@ msgid "manager.setup.form.supportNameRequired"
 msgstr "Nazwa osoby wspierającej jest wymagana."
 
 msgid "manager.setup.generalInformation"
-msgstr "Informacje podstawowe"
+msgstr "Informacje ogólne"
 
 msgid "manager.setup.gettingDownTheDetails"
 msgstr "Krok 1. Szczegóły"
@@ -790,7 +790,7 @@ msgstr ""
 "korzystania z PKP PN."
 
 msgid "manager.setup.plnPluginArchiving"
-msgstr "Sieć zachowująca PKP (PKP PN)"
+msgstr "Sieć archiwizująca PKP (PN)"
 
 msgid "manager.setup.plnPluginNotInstalled"
 msgstr ""
@@ -1970,7 +1970,7 @@ msgid "plugins.importexport.common.action.markRegistered"
 msgstr "Oznacz jako zarejestrowane"
 
 msgid "plugins.importexport.common.action.register"
-msgstr "Zarejestrowane"
+msgstr "Zarejestruj"
 
 msgid "plugins.importexport.common.validation"
 msgstr "Sprawdź XML przed eksportem i rejestracją."
