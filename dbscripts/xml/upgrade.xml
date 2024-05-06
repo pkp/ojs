@@ -131,6 +131,7 @@
 		<migration class="PKP\migration\upgrade\v3_5_0\I9566_SessionUpgrade"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I9809_ReviewCancelDate"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I9860_EditorialMastheadNavMenuItem"/>
+		<migration class="APP\migration\upgrade\v3_5_0\I9937_EditorialTeamToEditorialHistory"/>
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
