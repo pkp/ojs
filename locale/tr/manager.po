@@ -770,14 +770,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Dergi başlığı"
 
-msgid "manager.setup.keyInfo"
-msgstr "Temel Bilgi"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Derginizin kısa bir açıklamasını yapın ve editörleri, yönetim direktörlerini "
-"ve editör ekibinizin diğer üyelerini belirleyin."
-
 msgid "manager.setup.labelName"
 msgstr "Etiket adı"
 

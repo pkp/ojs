@@ -808,14 +808,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Título de la revista"
 
-msgid "manager.setup.keyInfo"
-msgstr "Información clave"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Proporcione una breve descripción de su revista e identifique a los editores/"
-"as, directores/as de gestión y otros miembros de su equipo editorial."
-
 msgid "manager.setup.labelName"
 msgstr "Nombre de la etiqueta"
 

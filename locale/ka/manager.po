@@ -781,14 +781,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "ჟურნალის სათაური"
 
-msgid "manager.setup.keyInfo"
-msgstr "საკვანძო ინფორმაცია"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"მიუთითეთ თქვენი ჟურნალის მოკლე აღწერა და განსაზღვრეთ რედაქტორები, მმართველი "
-"დირექტორები და თქვენი სარედაქციო ჯგუფის სხვა წევრები."
-
 msgid "manager.setup.labelName"
 msgstr "იარლიყის სახელი"
 

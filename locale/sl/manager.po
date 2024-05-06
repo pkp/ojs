@@ -763,14 +763,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Naslov revije"
 
-msgid "manager.setup.keyInfo"
-msgstr "Ključne informacije"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Vnesite kratek opis revije in naštejte urednike, odgovorne urednike in "
-"ostale člane uredniškega odbora."
-
 msgid "manager.setup.labelName"
 msgstr "Ime oznake"
 

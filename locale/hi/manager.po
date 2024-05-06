@@ -977,17 +977,6 @@ msgid "manager.setup.contextTitle"
 msgstr "जर्नल का शीर्षक"
 
 # (pofilter) simplecaps: Different capitalization
-msgid "manager.setup.keyInfo"
-msgstr "महत्वपूर्ण जानकारी"
-
-# (pofilter) endpunc: Different punctuation at the end
-# (pofilter) simplecaps: Different capitalization
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"अपनी जर्नल का संक्षिप्त विवरण प्रदान करें और संपादकों, प्रबंध निदेशकों और अपनी संपादकीय "
-"टीम के अन्य सदस्यों की पहचान करें।"
-
-# (pofilter) simplecaps: Different capitalization
 msgid "manager.setup.labelName"
 msgstr "लेबल का नाम"
 

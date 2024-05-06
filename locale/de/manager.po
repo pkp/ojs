@@ -814,14 +814,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Titel der Zeitschrift"
 
-msgid "manager.setup.keyInfo"
-msgstr "Schlüsselinformation"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Geben Sie eine kurze Beschreibung Ihrer Zeitschrift ein und benennen Sie "
-"Redakteure, Direktoren und andere Mitglieder Ihres Redaktionsteams."
-
 msgid "manager.setup.labelName"
 msgstr "Seitenbenennung"
 

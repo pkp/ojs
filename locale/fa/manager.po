@@ -744,12 +744,6 @@ msgstr "یک لوگوی کوچک از مجله برای نمایش در فهرس
 msgid "manager.setup.contextTitle"
 msgstr "عنوان مجله"
 
-msgid "manager.setup.keyInfo"
-msgstr "اطلاعات کلیدی"
-
-msgid "manager.setup.keyInfo.description"
-msgstr "توضیحی کوتاه در مورد مجله، هیئت تحیریریه و سایر کادر مجله ارائه دهید."
-
 msgid "manager.setup.labelName"
 msgstr "نام برچسب"
 

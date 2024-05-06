@@ -746,14 +746,6 @@ msgstr "ジャーナルのリストに使用できる、ジャーナルの小さ
 msgid "manager.setup.contextTitle"
 msgstr "ジャーナルタイトル"
 
-msgid "manager.setup.keyInfo"
-msgstr "重要な情報"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"ジャーナルの簡単な説明と、エディター、マネージング・ディレクター、その他の編"
-"集チームのメンバーを記入してください。"
-
 msgid "manager.setup.labelName"
 msgstr "ラベル名"
 

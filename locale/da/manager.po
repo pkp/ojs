@@ -789,14 +789,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Titel på tidsskrift"
 
-msgid "manager.setup.keyInfo"
-msgstr "Nøgleinformation"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Giv en kort beskrivelse af dit tidsskrift og identificer redaktører, "
-"tidsskriftschefer og andre medlemmer af din redaktion."
-
 msgid "manager.setup.labelName"
 msgstr "Etiketnavn"
 

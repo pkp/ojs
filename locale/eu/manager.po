@@ -768,12 +768,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Aldizkariaren titulua"
 
-msgid "manager.setup.keyInfo"
-msgstr ""
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-
 msgid "manager.setup.labelName"
 msgstr "Etiketa-izena"
 

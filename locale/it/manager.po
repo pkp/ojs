@@ -797,14 +797,6 @@ msgstr "Un piccolo logo da usare negli indici di riviste."
 msgid "manager.setup.contextTitle"
 msgstr "Titolo della rivista"
 
-msgid "manager.setup.keyInfo"
-msgstr "Informazioni chiave"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Inserire una descrizione della rivista e identifica i redattori, i direttori "
-"responsabili e gli altri membri del comitato di redazione."
-
 msgid "manager.setup.labelName"
 msgstr "Nome dell'etichetta"
 

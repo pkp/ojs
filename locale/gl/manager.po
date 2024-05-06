@@ -791,14 +791,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Título da revista"
 
-msgid "manager.setup.keyInfo"
-msgstr "Información chave"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Ofrece unha breve descrición da tua publicación e identifica editores/as, "
-"directores/as xerentes e outros membros do equipo editorial."
-
 msgid "manager.setup.labelName"
 msgstr "Nome da etiqueta"
 

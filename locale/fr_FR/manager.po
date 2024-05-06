@@ -812,15 +812,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Titre de la revue"
 
-msgid "manager.setup.keyInfo"
-msgstr "Renseignements de base"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Fournir une brève description de votre revue et présenter les rédacteurs et "
-"rédactrices, directeurs et directrices ainsi que les autres membres de votre "
-"équipe éditoriale."
-
 msgid "manager.setup.labelName"
 msgstr "Nom de l'étiquette"
 

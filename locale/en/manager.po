@@ -645,12 +645,6 @@ msgstr "A small logo or representation of the journal that can be used in lists 
 msgid "manager.setup.contextTitle"
 msgstr "Journal title"
 
-msgid "manager.setup.keyInfo"
-msgstr "Key Information"
-
-msgid "manager.setup.keyInfo.description"
-msgstr "Provide a short description of your journal and identify editors, managing directors and other members of your editorial team."
-
 msgid "manager.setup.labelName"
 msgstr "Label name"
 

@@ -794,14 +794,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Jurnal nomi"
 
-msgid "manager.setup.keyInfo"
-msgstr "Asosiy ma'lumotlar"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Jurnalingizning qisqacha tavsifini bering va muharrirlarni, boshqaruvchi "
-"direktorlarni va tahririyat guruhining boshqa a'zolarini aniqlang."
-
 msgid "manager.setup.labelName"
 msgstr "Yorliq nomi"
 

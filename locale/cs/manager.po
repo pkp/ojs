@@ -775,14 +775,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Název časopisu"
 
-msgid "manager.setup.keyInfo"
-msgstr "Klíčová informace"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Uveďte krátký popis vašeho deníku a identifikujte editory, manažery a další "
-"členy vašeho redakčního týmu."
-
 msgid "manager.setup.labelName"
 msgstr "Název popisku"
 
