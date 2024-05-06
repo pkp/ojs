@@ -734,14 +734,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Titill tímarits"
 
-msgid "manager.setup.keyInfo"
-msgstr "Lykilupplýsingar"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Skráðu stutta lýsingu á tímaritinu og einnig hverjir eru ritstjórar, "
-"framkvæmdastjórar og aðrir í ritstjórnarteyminu."
-
 msgid "manager.setup.labelName"
 msgstr "Titill merkimiða"
 

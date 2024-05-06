@@ -763,12 +763,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Naslov časopisa"
 
-msgid "manager.setup.keyInfo"
-msgstr ""
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-
 msgid "manager.setup.labelName"
 msgstr "Ime etikete"
 

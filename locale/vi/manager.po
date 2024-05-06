@@ -778,14 +778,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Tên tạp chí"
 
-msgid "manager.setup.keyInfo"
-msgstr "Thông tin quan trọng"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Cung cấp một mô tả ngắn về tạp chí của bạn và xác định các biên tập viên, "
-"quản lý và các thành viên khác trong ban biên tập của bạn."
-
 msgid "manager.setup.labelName"
 msgstr "Tên nhãn"
 

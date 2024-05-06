@@ -789,14 +789,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Folyóirat címe"
 
-msgid "manager.setup.keyInfo"
-msgstr "Kulcs információ"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Mutassa be röviden a folyóiratát, a szerkesztőket és a szerkesztői csapat "
-"többi tagját."
-
 msgid "manager.setup.labelName"
 msgstr "Címke neve"
 

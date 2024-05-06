@@ -701,12 +701,6 @@ msgstr "可以在期刊列表中使用的代表期刊的图示或小徽标。"
 msgid "manager.setup.contextTitle"
 msgstr "期刊名称"
 
-msgid "manager.setup.keyInfo"
-msgstr "关键信息"
-
-msgid "manager.setup.keyInfo.description"
-msgstr "提供您的期刊的简短说明，并确定编辑，执行董事和编辑团队的其他成员。"
-
 msgid "manager.setup.labelName"
 msgstr "标签名"
 

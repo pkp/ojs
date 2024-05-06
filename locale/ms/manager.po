@@ -781,14 +781,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Tajuk jurnal"
 
-msgid "manager.setup.keyInfo"
-msgstr "Maklumat Utama"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Berikan butiran ringkas mengenai jurnal anda dan kenal pasti editor, "
-"pengarah urusan dan ahli pasukan editorial anda yang lain."
-
 msgid "manager.setup.labelName"
 msgstr "Nama label"
 

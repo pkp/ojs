@@ -795,14 +795,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Tijdschrifttitel"
 
-msgid "manager.setup.keyInfo"
-msgstr "Belangrijke informatie"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Geef een korte beschrijving van het tijdschrift en een overzicht van "
-"redacteurs, hoofdredacteurs en andere medewerkers aan dit tijdschrift."
-
 msgid "manager.setup.labelName"
 msgstr "Label naam"
 

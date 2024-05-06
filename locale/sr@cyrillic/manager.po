@@ -761,12 +761,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Наслов часописа"
 
-msgid "manager.setup.keyInfo"
-msgstr ""
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-
 msgid "manager.setup.labelName"
 msgstr "Име етикете"
 

@@ -786,12 +786,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Julkaisun nimi"
 
-msgid "manager.setup.keyInfo"
-msgstr "Avaintiedot"
-
-msgid "manager.setup.keyInfo.description"
-msgstr "Anna julkaisun lyhyt kuvaus ja esittele toimituskunnan jäsenet."
-
 msgid "manager.setup.labelName"
 msgstr "Selitteen nimi"
 

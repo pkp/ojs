@@ -793,14 +793,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Наслов на весник"
 
-msgid "manager.setup.keyInfo"
-msgstr "Клучни информации"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Обезбедете краток опис на вашето списание и идентификувајте ги уредниците, "
-"управните директори и другите членови на вашиот уреднички тим."
-
 msgid "manager.setup.labelName"
 msgstr "Име на етикета"
 

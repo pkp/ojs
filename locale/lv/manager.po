@@ -769,14 +769,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Žurnāla nosaukums"
 
-msgid "manager.setup.keyInfo"
-msgstr "Galvenā informācija"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Sniedziet īsu sava žurnāla aprakstu un norādiet redaktorus, atbildīgos "
-"redaktorus un citus redakcijas kolēģijas locekļus."
-
 msgid "manager.setup.labelName"
 msgstr "Iezīmes vārds"
 

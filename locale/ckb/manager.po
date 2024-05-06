@@ -760,12 +760,6 @@ msgstr "لۆگۆیەکی بچوک کە دەبیتە ناسێنەری گۆڤار�
 msgid "manager.setup.contextTitle"
 msgstr "ناونیشانی گۆڤار"
 
-msgid "manager.setup.keyInfo"
-msgstr "زانیارییە سەرەکییەکان"
-
-msgid "manager.setup.keyInfo.description"
-msgstr "کورتەیەک دەربارەی گۆڤارەکە و سەرنوسەر و بەڕێوەبەرەکانی بنوسە."
-
 msgid "manager.setup.labelName"
 msgstr "ناوە ناسێنەرەکە"
 

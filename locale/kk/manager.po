@@ -780,14 +780,6 @@ msgstr ""
 msgid "manager.setup.contextTitle"
 msgstr "Название журнала"
 
-msgid "manager.setup.keyInfo"
-msgstr "Ключевая информация"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Введите краткое описание журнала и укажите редакторов, управляющих и других "
-"членов редколлегии."
-
 msgid "manager.setup.labelName"
 msgstr "Название метки"
 
