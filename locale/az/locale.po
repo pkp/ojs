@@ -753,9 +753,6 @@ msgstr "Əlaqə"
 msgid "about.history"
 msgstr "Jurnal tarixi"
 
-msgid "about.editorialTeam"
-msgstr "Redaksiya heyəti"
-
 msgid "about.focusAndScope"
 msgstr "Fokus və əhatə dairəsi"
 
@@ -1698,9 +1695,6 @@ msgstr ""
 
 msgid "search.browseAuthorIndex"
 msgstr "Müəllif indeksi"
-
-msgid "about.editorialTeam.biography"
-msgstr "Tərcümeyi-hal"
 
 msgid "submission.copyedit.mustUploadFileForCopyedit"
 msgstr "Fayl səhifə tərtibatı üçün yüklənməmiş tələb emaili göndərilə bilməz"

@@ -411,9 +411,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Налаштування журналу"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Редакційний штат"
-
 msgid "manager.setup.homepageContent"
 msgstr "Вміст головної сторінки журналу"
 
@@ -790,14 +787,6 @@ msgstr ""
 
 msgid "manager.setup.contextTitle"
 msgstr "Назва журналу"
-
-msgid "manager.setup.keyInfo"
-msgstr "Ключова інформація"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Надайте короткий опис вашого журналу і вкажіть редакторів, керуючих "
-"директорів та інших членів вашої редакційної команди."
 
 msgid "manager.setup.labelName"
 msgstr "Назва елементу"

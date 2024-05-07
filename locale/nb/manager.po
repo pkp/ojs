@@ -415,9 +415,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Tidsskriftets innstillinger"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Redaksjon"
-
 msgid "manager.setup.homepageContent"
 msgstr "Hjemmesidens innhold"
 
@@ -792,14 +789,6 @@ msgstr ""
 
 msgid "manager.setup.contextTitle"
 msgstr "Tidsskrifttittel"
-
-msgid "manager.setup.keyInfo"
-msgstr "Nøkkelinformasjon"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Gi en kort beskrivelse av tidsskriftet ditt og identifiser redaktører, "
-"tidsskriftsansvarlige og andre medlemmer av redaksjonen din."
 
 msgid "manager.setup.labelName"
 msgstr "Etikettnavn"
@@ -2608,11 +2597,6 @@ msgstr ""
 #~ "Redaksjonslederen skal opprette redaksjonstitler, og legge til brukere "
 #~ "under hver tittel."
 
-#~ msgid "manager.groups.enableBoard.description"
-#~ msgstr ""
-#~ "Til visning i <a href=\"{$aboutEditorialTeamUrl}\">Redaksjon</a> i Om "
-#~ "tidsskriftet:"
-
 #~ msgid "manager.groups.noneCreated"
 #~ msgstr "Ingen redaksjonelle stillinger er opprettet."
 
@@ -2957,14 +2941,6 @@ msgstr ""
 
 #~ msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks2"
 #~ msgstr "uke(r) før abonnementet utløper."
-
-#~ msgid "manager.groups.context.editorialTeam"
-#~ msgstr ""
-#~ "Vis tittelen under 'Redaksjon' i 'Personer'-avdelingen i 'Om'-"
-#~ "tidsskriftet (f.eks. redaktør)"
-
-#~ msgid "manager.groups.context.editorialTeam.short"
-#~ msgstr "Redaksjon"
 
 #~ msgid "manager.groups.context.people"
 #~ msgstr ""

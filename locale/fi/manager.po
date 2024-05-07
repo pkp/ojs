@@ -410,9 +410,6 @@ msgstr "Rajaa tämän osaston abstraktien sanamäärät (0 ei rajoitusta)"
 msgid "manager.setup"
 msgstr "Julkaisun asetukset"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Toimituskunta"
-
 msgid "manager.setup.homepageContent"
 msgstr "Julkaisun etusivun sisältö"
 
@@ -785,12 +782,6 @@ msgstr ""
 
 msgid "manager.setup.contextTitle"
 msgstr "Julkaisun nimi"
-
-msgid "manager.setup.keyInfo"
-msgstr "Avaintiedot"
-
-msgid "manager.setup.keyInfo.description"
-msgstr "Anna julkaisun lyhyt kuvaus ja esittele toimituskunnan jäsenet."
 
 msgid "manager.setup.labelName"
 msgstr "Selitteen nimi"

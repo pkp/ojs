@@ -1711,12 +1711,6 @@ msgstr "Mun iris-leabhar"
 msgid "about.history"
 msgstr "Eachdraidh an iris-leabhair"
 
-msgid "about.editorialTeam"
-msgstr "An sgioba deasachaidh"
-
-msgid "about.editorialTeam.biography"
-msgstr "Beatha-eachdraidh"
-
 msgid "about.editorialPolicies"
 msgstr "Poileasaidhean deasachaidh"
 

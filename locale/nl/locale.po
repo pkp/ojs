@@ -1660,12 +1660,6 @@ msgstr "Over dit tijdschrift"
 msgid "about.history"
 msgstr "Geschiedenis van het tijdschrift"
 
-msgid "about.editorialTeam"
-msgstr "Redactie"
-
-msgid "about.editorialTeam.biography"
-msgstr "Biografie"
-
 msgid "about.editorialPolicies"
 msgstr "Redactioneel beleid"
 

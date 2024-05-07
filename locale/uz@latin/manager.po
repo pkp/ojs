@@ -413,9 +413,6 @@ msgstr "Bu bo'lim uchun mavhum so'zlar sonini cheklash (cheklovsiz 0)"
 msgid "manager.setup"
 msgstr "Jurnal sozlamalari"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Tahririyat jamoasi"
-
 msgid "manager.setup.homepageContent"
 msgstr "Jurnal bosh sahifasining tarkibi"
 
@@ -793,14 +790,6 @@ msgstr ""
 
 msgid "manager.setup.contextTitle"
 msgstr "Jurnal nomi"
-
-msgid "manager.setup.keyInfo"
-msgstr "Asosiy ma'lumotlar"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Jurnalingizning qisqacha tavsifini bering va muharrirlarni, boshqaruvchi "
-"direktorlarni va tahririyat guruhining boshqa a'zolarini aniqlang."
 
 msgid "manager.setup.labelName"
 msgstr "Yorliq nomi"

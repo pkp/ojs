@@ -420,9 +420,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Configuration"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Comité de rédaction"
-
 msgid "manager.setup.homepageContent"
 msgstr "Contenu de la page d'accueil de la revue"
 
@@ -811,15 +808,6 @@ msgstr ""
 
 msgid "manager.setup.contextTitle"
 msgstr "Titre de la revue"
-
-msgid "manager.setup.keyInfo"
-msgstr "Renseignements de base"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Fournir une brève description de votre revue et présenter les rédacteurs et "
-"rédactrices, directeurs et directrices ainsi que les autres membres de votre "
-"équipe éditoriale."
 
 msgid "manager.setup.labelName"
 msgstr "Nom de l'étiquette"
@@ -2770,11 +2758,6 @@ msgstr ""
 
 #~ msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths2"
 #~ msgstr "mois avant la date d'échéance de l'abonnement."
-
-#~ msgid "manager.setup.editorialTeam.description"
-#~ msgstr ""
-#~ "Liste des rédacteurs, responsables éditoriaux et autres associés avec la "
-#~ "revue."
 
 #~ msgid "manager.setup.userAccess.success"
 #~ msgstr ""

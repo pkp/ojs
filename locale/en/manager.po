@@ -338,9 +338,6 @@ msgstr "Limit abstract word counts for this section (0 for no limit)"
 msgid "manager.setup"
 msgstr "Journal Settings"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Editorial Team"
-
 msgid "manager.setup.homepageContent"
 msgstr "Journal Homepage Content"
 
@@ -645,11 +642,8 @@ msgstr "A small logo or representation of the journal that can be used in lists 
 msgid "manager.setup.contextTitle"
 msgstr "Journal title"
 
-msgid "manager.setup.keyInfo"
-msgstr "Key Information"
-
-msgid "manager.setup.keyInfo.description"
-msgstr "Provide a short description of your journal and identify editors, managing directors and other members of your editorial team."
+msgid "manager.setup.editorialMasthead.description"
+msgstr "Please provide the editorial history of your journal, including the full name, affiliation, and start and end dates of each editor."
 
 msgid "manager.setup.labelName"
 msgstr "Label name"

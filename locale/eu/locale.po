@@ -1666,12 +1666,6 @@ msgstr "Aldizkariari buruz"
 msgid "about.history"
 msgstr "Aldizkariaren historia"
 
-msgid "about.editorialTeam"
-msgstr "Talde editoriala"
-
-msgid "about.editorialTeam.biography"
-msgstr "Biografia"
-
 msgid "about.editorialPolicies"
 msgstr "Politika editorialak"
 

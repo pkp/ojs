@@ -1644,12 +1644,6 @@ msgstr "Mengenai Jurnal"
 msgid "about.history"
 msgstr "Sejarah Jurnal"
 
-msgid "about.editorialTeam"
-msgstr "Kumpulan Editorial"
-
-msgid "about.editorialTeam.biography"
-msgstr "Biografi"
-
 msgid "about.editorialPolicies"
 msgstr "Polisi Editorial"
 

@@ -1593,12 +1593,6 @@ msgstr "درباره‌ی مجله"
 msgid "about.history"
 msgstr "تاریخچه مجله"
 
-msgid "about.editorialTeam"
-msgstr "تیم سردبیری"
-
-msgid "about.editorialTeam.biography"
-msgstr "بیوگرافی"
-
 msgid "about.editorialPolicies"
 msgstr "سیاست‌های تیم سردبیری"
 
