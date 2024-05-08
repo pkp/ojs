@@ -2,21 +2,22 @@
 # Tormod Strømme <tormod.stromme@uib.no>, 2022.
 # Eirik Hanssen <eirikhanssen79@gmail.com>, 2022.
 # FRITT, University of Oslo Library <fritt-info@journals.uio.no>, 2022.
+# Johanna Skaug <johanna.skaug@ub.uio.no>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2022-10-18 22:01+0000\n"
-"Last-Translator: Eirik Hanssen <eirikhanssen79@gmail.com>\n"
+"PO-Revision-Date: 2024-05-08 13:34+0000\n"
+"Last-Translator: Johanna Skaug <johanna.skaug@ub.uio.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/nb_NO/>\n"
-"Language: nb_NO\n"
+"Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "manager.distribution.access"
 msgstr "Tilgang"
@@ -2145,7 +2146,7 @@ msgstr "Antall sammendragsvisninger og filnedlastinger for hver artikkel."
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
 "Send en kopi av bekreftelses-eposten i forbindelse med innlevering til dette "
-"tidsskriftets kontakteperson."
+"tidsskriftets kontaktperson."
 
 msgid ""
 "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled."
@@ -2573,8 +2574,9 @@ msgstr ""
 "Denne e-posten sendes automatisk til registrerte brukere når et nytt nummer "
 "publiseres."
 
+#, fuzzy
 msgid "manager.manageEmails.description"
-msgstr ""
+msgstr "Rediger beskjedene som sendes som e-post fra dette tidsskriftet."
 
 msgid "mailable.layoutComplete.name"
 msgstr ""
