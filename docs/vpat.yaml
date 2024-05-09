@@ -1,0 +1,2206 @@
+title: OJS Default Theme Accessibility Conformance Report
+product:
+  name: OJS Default Theme
+  version: OJS 3.3.0-17
+  description: ''
+author:
+  name: Israel Cefrin
+  company_name: 'Public Knowledge Project, Simon Fraser University'
+  address: ''
+  email: icefrin@sfu.ca
+  phone: ''
+  website: 'http://pkp.sfu.ca/'
+vendor:
+  name: Kevin Stranack
+  company_name: 'Public Knowledge Project, Simon Fraser University'
+  address: ''
+  email: kevin_stranack@sfu.ca
+  phone: ''
+  website: 'http://pkp.sfu.ca/'
+report_date: 5/6/2024
+last_modified_date: 5/8/2024
+version: 5
+notes: >-
+  The OJS Default Theme audit found many barriers, and most of these have been
+  eliminated. However, the theme will be constantly updated, and new barriers
+  may unknowingly be created. If you encounter barriers, or need accommodations,
+  please report them to us via the PKP web contact form -
+  https://pkp.sfu.ca/contact-us/.
+evaluation_methods_used: >-
+  ### Reviewer’s Testing Technologies
+
+
+  * Mac OS Sierra 10.12.6 Firefox and Chrome
+
+  * PC Windows 10 Firefox and Chrome
+
+  * A minimum of 10 different accessibility related apps, plugins, extensions
+  and
+
+  online checking software were used in both Chrome and Firefox on PC and Mac.
+
+  * Manual testing was completed, and this included different assistive
+  technologies.
+
+
+
+  ### Third Party Testers Testing Technologies
+
+  * Screen Reader
+
+  JAWS version 2019.1907.42 on Internet Explorer 8.1 on Windows 10 with PacMate
+  20 Braille Display
+
+  * Screen Reader
+
+  NVDA 2019.1.1 on Google Chrome on Windows 8.1
+
+  * Screen Reader
+
+  Narrator on Microsoft Edge 44.17763.0.1 on Windows 10 Pro 10.0.17763
+
+  * Screen Reader
+
+  JAWS version 2019.1907.42 on Microsoft Edge 44.17763.0.1 on Windows
+
+  Surface Tablet
+
+  * Screen Reader
+
+  JAWS version: 2018.1811.3 on Google Chrome version: 73.0.3683.103 on
+
+  Windows 10 Pro 10.0.17763
+
+  * Screen Reader
+
+  NVDA version: 2019.1.1 on Google Chrome version: 73.0.3683.103 on Windows
+
+  10 Pro 10.0.17763
+
+  * Screen Reader
+
+  VoiceOver on Safari 12.1 on OS 12.2 iPhone
+
+  * Screen Reader
+
+  VoiceOver on Safari 12.1 on Mac Mini High Sierra Version 10.13.6
+
+  * Screen Reader with Braille Device
+
+  iPad Pro 12.9 inch on iOS 12.4.1 VoiceOver with 40 Cell Focus 40 Blue Braille
+
+  Display
+
+  * Screen Reader
+
+  JAWS version 2019.1907.42 on Google Chrome on Windows
+
+  * Version 77.0.3865.75 64-bit on Mac OS Sierra (v10.12.6).
+
+  * Browser Magnification
+
+  Firefox Quantum Version 69.0 on Mac OS Sierra (v10.12.6).
+
+  * Voice Recognition Software
+
+  Dragon Naturally Speaking Premium 13 on Windows 10
+legal_disclaimer: >-
+  To the maximum extent permitted by applicable law, in no event will Simon
+  Fraser University or any of its affiliates, or any of their respective
+  governors, directors, employees, or agents, be liable for the failure of any
+  content on applications implementing this theme to meet these accessibility
+  standards, to the extent that such content was submitted or uploaded by a
+  third party.
+repository: 'https://github.com/pkp/ojs'
+feedback: 'https://pkp.sfu.ca/contact-us/'
+license: CC-BY-4.0
+related_openacrs: []
+catalog: 2.4-edition-wcag-2.1-en
+chapters:
+  success_criteria_level_a:
+    notes: ''
+    disabled: false
+    criteria:
+      - num: 1.1.1
+        components:
+          - name: web
+            adherence:
+              level: partially-supports
+              notes: >
+                There is a Google reCaptcha embedded function to prevent or
+                mitigate spammer registering influx. We acknowledge the lack of
+                full support for accessibility to this feature since we rely on
+                the functionality of a third-party vendor, i.e. Google. This
+                plugin is optional and it is disabled by default. 
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.2.1
+        components:
+          - name: web
+            adherence:
+              level: not-applicable
+              notes: >-
+                It relies on the content that authors, editors, or journal
+                managers will upload to the journal. 
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.2.2
+        components:
+          - name: web
+            adherence:
+              level: not-applicable
+              notes: >-
+                It relies on the content that authors, editors, or journal
+                managers will upload to the journal. 
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.2.3
+        components:
+          - name: web
+            adherence:
+              level: not-applicable
+              notes: >-
+                It relies on the content that authors, editors, or journal
+                managers will upload to the journal. 
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.3.1
+        components:
+          - name: web
+            adherence:
+              level: partially-supports
+              notes: >-
+                The theme uses ARIA landmarks to identify regions of a page. It
+                misses only the footer region element although it presents an
+                alternative to reach the footer content.
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.3.2
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.3.3
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: >-
+                Buttons and breadcrumbs provide alternative and complementary
+                text to screen reader users.
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.4.1
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.4.2
+        components:
+          - name: web
+            adherence:
+              level: not-applicable
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.1.1
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: The interface is fully operable using the keyboard only.
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.1.2
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: >-
+                There are no modal or alert traps in the Default Theme. It might
+                be possible that some third-party plugins do not comply with
+                this criteria though.
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.1.4
+        components:
+          - name: web
+            adherence:
+              level: not-applicable
+              notes: There are not keyboard shortcuts implemented for the theme.
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.2.1
+        components:
+          - name: web
+            adherence:
+              level: not-applicable
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.2.2
+        components:
+          - name: web
+            adherence:
+              level: not-applicable
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.3.1
+        components:
+          - name: web
+            adherence:
+              level: not-applicable
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.4.1
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: >-
+                Skipping links are the very first focusable by keyboard elements
+                on the interface.
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.4.2
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: >-
+                As long as Journal Managers keep the titles meaningful it will
+                be reflected on the content. 
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.4.3
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.4.4
+        components:
+          - name: web
+            adherence:
+              level: not-applicable
+              notes: >-
+                It relies on the content that authors, editors, or journal
+                managers will upload to the journal. 
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.5.1
+        components:
+          - name: web
+            adherence:
+              level: not-applicable
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.5.2
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: >-
+                There are no "Down-Event", which means  that the down-event of
+                the pointer is not used to execute any part of the function;
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.5.3
+        components:
+          - name: web
+            adherence:
+              level: not-applicable
+              notes: >-
+                It relies on the content that authors, editors, or journal
+                managers will upload to the journal. 
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.5.4
+        components:
+          - name: web
+            adherence:
+              level: not-applicable
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 3.1.1
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: >-
+                The Default Theme is ready to work with 68 different languages
+                and their writing systems
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 3.2.1
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 3.2.2
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 3.3.1
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: >-
+                Register, login, and reset password forms provide users with
+                clear messages of error after submitting. The errors are
+                displayed on the top of the form.
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 3.3.2
+        components:
+          - name: web
+            adherence:
+              level: partially-supports
+              notes: >-
+                All forms provide previous instructions on how to use them. The
+                search form is still pending on adding the instructions.
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 4.1.1
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 4.1.2
+        components:
+          - name: web
+            adherence:
+              level: not-applicable
+              notes: >-
+                There are no user interface components developed or scripted
+                other than the native HTML elements.
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+  success_criteria_level_aa:
+    notes: ''
+    disabled: false
+    criteria:
+      - num: 1.2.4
+        components:
+          - name: web
+            adherence:
+              level: not-applicable
+              notes: >-
+                It relies on the content that authors, editors, or journal
+                managers will upload to the journal. 
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.2.5
+        components:
+          - name: web
+            adherence:
+              level: not-applicable
+              notes: >-
+                It relies on the content that authors, editors, or journal
+                managers will upload to the journal. 
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.3.4
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: >-
+                The Default Theme provides full support to portrait and
+                landscape orientation to different screen sizes.
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.3.5
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.4.3
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: >-
+                Most of elements present a minimum contrast Ratio of 4.57:1 that
+                complies to WCA 2.1 AA. The asterisk "*" element in input files
+                that denotes "required input" has now the color contrast and the
+                font size to comply to this criteria. The remediation can be
+                seen from this Issue in Github:
+                https://github.com/pkp/pkp-lib/issues/9504
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.4.4
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.4.5
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: >-
+                Buttons for galley files contain both icons and text label
+                related to the files they are  linked to.
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.4.10
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: >-
+                The Default Theme enables small screen users to read content in
+                both orientation : landscape or portrait, without requiring
+                horizontal scrolling. 
+
+                It also relies on content, especially images that editors may
+                upload. As long as they respect the maximum width it will be
+                compliant to this criteria.
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.4.11
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: >-
+                A contrast ratio of 6.18:1 is provided to the icons utilized in
+                buttons (PDF, XML, HTML galleys) and search. This number relies
+                on the color of the theme out-of-box. Journal managers can
+                adjust or customize the colors of the interface. That action may
+                change the contrast ratio and turn the interface non-compliant.
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.4.12
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.4.13
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: >-
+                Main menu items are "hoverable". It means that when the pointer
+                hovers a menu item with child menu, it will trigger the
+                additional content. Also, the pointer can be moved over the
+                additional content without the additional content disappearing.
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.4.5
+        components:
+          - name: web
+            adherence:
+              level: partially-supports
+              notes: >-
+                The system itself provides a sitemap in XML under the path:
+                [domain]index.php/[journalPath]/sitemap.
+
+                Also, all issues provide a table of contents for every published
+                article. Finally, journal managers can create static pages
+                listing links to any page as needed. 
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.4.6
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: >-
+                It also relies on the content title that authors, editors, or
+                journal managers will upload to the journal. 
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.4.7
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 3.1.2
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: >-
+                In the latest release, this was added to the article HTML
+                implementation, which includes support for multi-locale title
+                fields.
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 3.2.3
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: >-
+                All menus are presented in the same visual position, and tab
+                order.
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 3.2.4
+        components:
+          - name: web
+            adherence:
+              level: not-applicable
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 3.3.3
+        components:
+          - name: web
+            adherence:
+              level: supports
+              notes: >-
+                Registering and login forms provide error suggestions after
+                submission.
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 3.3.4
+        components:
+          - name: web
+            adherence:
+              level: not-applicable
+              notes: >-
+                There are no financial data transaction on the public reader
+                interface.
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 4.1.3
+        components:
+          - name: web
+            adherence:
+              level: not-applicable
+              notes: There is not status messages in the non-authenticated sections.
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+  success_criteria_level_aaa:
+    notes: ''
+    disabled: true
+    criteria:
+      - num: 1.2.6
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.2.7
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.2.8
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.2.9
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.3.6
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.4.6
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.4.7
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.4.8
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 1.4.9
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.1.3
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.2.3
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.2.4
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.2.5
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.2.6
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.3.2
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.3.3
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.4.8
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.4.9
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.4.10
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.5.5
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 2.5.6
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 3.1.3
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 3.1.4
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 3.1.5
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 3.1.6
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 3.2.5
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 3.3.5
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+      - num: 3.3.6
+        components:
+          - name: web
+            adherence:
+              level: ''
+              notes: ''
+          - name: electronic-docs
+            adherence:
+              level: ''
+              notes: ''
+          - name: software
+            adherence:
+              level: ''
+              notes: ''
+          - name: authoring-tool
+            adherence:
+              level: ''
+              notes: ''
+  functional_performance_criteria:
+    notes: ''
+    disabled: false
+    criteria:
+      - num: '302.1'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '302.2'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '302.3'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '302.4'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '302.5'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '302.6'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '302.7'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '302.8'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '302.9'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+  hardware:
+    notes: ''
+    disabled: false
+    criteria:
+      - num: 402.2.1
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 402.2.2
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 402.2.3
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 402.2.4
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 402.2.5
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 402.3.1
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 402.3.2
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '402.4'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '402.5'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '403.1'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '404.1'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '405.1'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '406.1'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '407.2'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 407.3.1
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 407.3.2
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 407.3.3
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '407.4'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '407.5'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '407.6'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '407.7'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 407.8.1
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 407.8.1.1
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 407.8.1.2
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 407.8.2
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 407.8.2.1
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 407.8.2.2
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 407.8.3
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 407.8.3.1
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 407.8.3.2
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 407.8.3.2.1
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 407.8.3.2.2
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '408.2'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '408.3'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '409.1'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '410.1'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '411.1'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 412.2.1
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 412.2.2
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 412.3.1
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 412.3.2
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '412.4'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '412.5'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '412.6'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '412.7'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 412.8.1
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 412.8.2
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 412.8.3
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 412.8.4
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 413.1.1
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 413.1.2
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 414.1.1
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 414.1.2
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 415.1.1
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 415.1.2
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+  software:
+    notes: ''
+    disabled: false
+    criteria:
+      - num: 502.2.1
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 502.2.2
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 502.3.1
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 502.3.2
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 502.3.3
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 502.3.4
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 502.3.5
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 502.3.6
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 502.3.7
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 502.3.8
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 502.3.9
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 502.3.10
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 502.3.11
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 502.3.12
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 502.3.13
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 502.3.14
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '502.4'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '503.2'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '503.3'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 503.4.1
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 503.4.2
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '504.2'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 504.2.1
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: 504.2.2
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '504.3'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '504.4'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+  support_documentation_and_services:
+    notes: ''
+    disabled: false
+    criteria:
+      - num: '602.2'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '602.3'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '602.4'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '603.2'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
+      - num: '603.3'
+        components:
+          - name: none
+            adherence:
+              level: ''
+              notes: ''
