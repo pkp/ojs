@@ -105,6 +105,10 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 				Capsule::table($tableName)->where('setting_type', 'object')->get()->each(function ($row) use ($tableName) {
 					$this->_toJSON($row, $tableName, ['plugin_name', 'context_id', 'setting_name'], 'setting_value');
 				});
+			} elseif ($tableName == 'review_form_element_settings') {
+				Capsule::table('review_form_element_settings')->where('setting_type', 'object')->get()->each(function ($row) {
+					$this->_toJSON($row, 'review_form_element_settings', ['setting_name', 'locale', 'review_form_element_id'], 'setting_value');
+				});
 			} else {
 				try {
 					$settings = Capsule::table($tableName, 's')->where('setting_type', 'object')->get(['setting_name', 'setting_value', 's.*']);
