@@ -1,11 +1,12 @@
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
+# Germán Huélamo Bautista <germanhuelamo@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
-"PO-Revision-Date: 2023-07-07 19:58+0000\n"
-"Last-Translator: Stefan Schneider <mail@stefan-schneider.at>\n"
+"PO-Revision-Date: 2024-05-10 23:21+0000\n"
+"Last-Translator: Germán Huélamo Bautista <germanhuelamo@gmail.com>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/author/fr_FR/"
 ">\n"
 "Language: fr_FR\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "author.submit"
 msgstr "Nouvelle soumission"
@@ -289,11 +290,10 @@ msgstr "Texte source"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Brève description"
 
-#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
-"Présenter le fichier aux rapporteurs (sans métadonnées), de façon à ne pas "
-"compromettre l'évaluation anonyme."
+"Présenter le fichier aux évaluateur·rice·s (sans métadonnées), afin de ne "
+"pas compromettre l'anonymat de l'évaluation."
 
 msgid "author.submit.suppFile.publisherDescription"
 msgstr "Utiliser uniquement avec des documents officiellement publiés."
