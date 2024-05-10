@@ -1,13 +1,14 @@
 # Simon Mathdoc <karacaca38@outlook.fr>, 2021.
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
 # Germán Huélamo Bautista <germanhuelamo@gmail.com>, 2024.
+# Pierre Couchet <pierre.couchet@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:24+00:00\n"
 "PO-Revision-Date: 2024-05-10 23:21+0000\n"
-"Last-Translator: Germán Huélamo Bautista <germanhuelamo@gmail.com>\n"
+"Last-Translator: Pierre Couchet <pierre.couchet@gmail.com>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/locale/fr_FR/"
 ">\n"
 "Language: fr_FR\n"
@@ -2411,7 +2412,7 @@ msgid "user.authorization.copyeditorAssignmentMissing"
 msgstr "Accès refusé ! Vous n'avez pas été nommé éditeur de cet article."
 
 msgid "user.authorization.noContext"
-msgstr "Aucune revue dans ce contexte !"
+msgstr "Aucune revue ne correspond à votre requête."
 
 msgid "user.authorization.sectionAssignment"
 msgstr ""
