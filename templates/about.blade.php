@@ -1,0 +1,1 @@
+Hello World - from /lib/pkp/templates
