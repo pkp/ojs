@@ -1,11 +1,11 @@
-# Jordi LC <jordi.lacruz@uab.cat>, 2021, 2023.
+# Jordi LC <jordi.lacruz@uab.cat>, 2021, 2023, 2024.
 # Marc Bria <marc.bria@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2023-07-24 19:32+0000\n"
+"PO-Revision-Date: 2024-05-03 13:49+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/locale/es/>"
 "\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Esta revista no publica sus contenidos en línea."
@@ -2372,8 +2372,8 @@ msgstr ""
 
 msgid "notification.type.assignProductionUser"
 msgstr ""
-"Asigne un usuario/a para crear galeradas mediante el enlace Añadir de la "
-"lista de participantes."
+"Asigne la persona encargada de la maquetación mediante la opción \"Asignar\" "
+"del panel de participantes."
 
 msgid "notification.type.awaitingRepresentations"
 msgstr "Esperando galeradas."

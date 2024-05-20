@@ -1,7 +1,7 @@
 # Milutin Markovic <admin@fcjk.me>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-03-14 15:17+0000\n"
+"PO-Revision-Date: 2024-04-12 15:20+0000\n"
 "Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
 "Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "cnr/>\n"
@@ -63,3 +63,378 @@ msgstr "Za autore"
 
 msgid "manager.setup.information.forLibrarians"
 msgstr "Za bibliotekare"
+
+msgid "manager.journalManagement"
+msgstr "Upravljanje časopisom"
+
+msgid "manager.language.ui"
+msgstr "UI"
+
+msgid "manager.language.submissions"
+msgstr "Prijavljeni članci"
+
+msgid "manager.language.forms"
+msgstr "Obrasci"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr "Ovo će zamijeniti sva podešavanja časopisa specifična za odabrani jezik"
+
+msgid "manager.languages.noneAvailable"
+msgstr ""
+"Žao nam je. Nema dodatnih jezika na raspolaganju. Kontaktirajte vašeg "
+"administratora ako želite da koristitie druge jezike u ovom časopisu."
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Ovo će biti standardni jezik za stranicu časopisa."
+
+msgid "manager.payment.action"
+msgstr "Akcija"
+
+msgid "manager.payment.addPayment"
+msgstr "Dodaj plaćanje"
+
+msgid "manager.payment.authorFees"
+msgstr "Naknade za autora"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr ""
+"Odabrane opcije sa njihovim opisima i naknadama (koje mogu biti izmenjene "
+"ispod) će se pojaviti u Korak 1 procesu prijave članka i u O časopisu i "
+"Prijave dijelu kao i u djelovima đe je plaćanje naknada naznačeno."
+
+msgid "manager.payment.details"
+msgstr "Detalji"
+
+msgid "manager.payment.enable"
+msgstr "Omogući"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Opcije naplate"
+
+msgid "manager.payment.form.numeric"
+msgstr ""
+"Svi iznosi moraju biti pozitivne numeričke vrijednosti (decimalni brojevi su "
+"dozvoljeni)"
+
+msgid "manager.payment.generalFees"
+msgstr "Opšte naknade"
+
+msgid "manager.payment.generalOptions"
+msgstr "Opšte opcije"
+
+msgid "manager.payment.noPayments"
+msgstr "Bez uplata"
+
+msgid "manager.payment.notFound"
+msgstr "Nije pronađeno"
+
+msgid "manager.payment.options"
+msgstr "Opcije"
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Jeste li sigurni da želite obrisati ovu pretplatu?"
+
+msgid "manager.payment.options.enablePayments"
+msgstr ""
+"Kliknite ovđe da uključite modul Plaćanja. Morate konfigurisati podešavanja "
+"za plaćanja kompletiranjem obrasca ispod. Korisnici će morati da se prijave "
+"u sistem da bi izvršili plaćanje."
+
+msgid "manager.payment.options.fee"
+msgstr "Iznos"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Opis"
+
+msgid "manager.payment.options.feeName"
+msgstr "Naziv"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Članstvo u organizaciji"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "Ograniči pristup samo na PDF verzije članaka"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Naknada za objavljivanje članka"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Kupi članak"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Kupi izdanje"
+
+msgid "manager.payment.options.text"
+msgstr "Opis metoda plaćanja"
+
+msgid "manager.payment.paymentId"
+msgstr "ID plaćanja"
+
+msgid "manager.payment.paymentMethod"
+msgstr "Metod plaćanja"
+
+msgid "manager.payment.paymentType"
+msgstr "Tip plaćanja"
+
+msgid "manager.payment.readerFees"
+msgstr "Naknada za čitaoce"
+
+msgid "manager.payment.records"
+msgstr "Arhiv naplata"
+
+msgid "manager.paymentTypes"
+msgstr "Načini plaćanja"
+
+msgid "manager.payment.userName"
+msgstr "ID Plaćanja"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Korisnici upisani u časopis"
+
+msgid "manager.people.allJournals"
+msgstr "Svi časopisi"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Upiši korisnika sa ovog sajta u ovaj časopis"
+
+msgid "manager.people.showNoRole"
+msgstr "Prikaži korisnike bez uloge"
+
+msgid "manager.files.note"
+msgstr ""
+"Napomena: Pregledač fajlova je dodatak koji omogućava direktno upravljanje "
+"svim fajlovima i direktorijima koji su vezani za časopis."
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"OJS je dostupan korisnicima u bilo kojem od mnoštva podržanih jezika. OJS "
+"može funkcionisati i kao multilingvalni sistem koji omogućava korisnicima da "
+"lako izaberu bilo koji od uključenih jezika pritiskom na dugme. OJS "
+"omogućava da se razni podaci unesu na više jezika. <br /><br/> Ako neki od "
+"jezika nije izlistan u izboru jezika zamolite administratora da instalira "
+"taj jezik. Pogledajte u OJS dokumentaciji kako se dodaje podrška za druge "
+"jezike."
+
+msgid "manager.managementPages"
+msgstr "Upravljačke stranice"
+
+msgid "manager.payment.amount"
+msgstr "Iznos"
+
+msgid "manager.payment.currencymessage"
+msgstr ""
+"OJS ne izvršava konverzije valuta. Ako primate plaćanja pretplata morate "
+"obezbijediti da valuta pretplate odgovara ovoj koja je određena ovđe."
+
+msgid "manager.payment.description"
+msgstr "Opis"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr ""
+"Možete konfigurisati bilo koji od Dodataka za metod plaćanja na ovom ekranu."
+
+msgid "manager.payment.paymentMethods"
+msgstr "Način uplate"
+
+msgid "manager.payment.editSubscription"
+msgstr "Uredi pretplatu"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr ""
+"Članstvo u Udruženju pojavit će se na stranici O časopisu ispod rubrike "
+"\"uređivačka politika\"."
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr ""
+"Ovo će aktivirati naplate u modulu pretplata, đe administrator pretplate "
+"određuje tipove, iznose i trajanje pretplata te održava listu pretplatnika."
+
+msgid "manager.payment.readerFeesDescription"
+msgstr ""
+"Odabrane opcije sa njihovim opisima i naknadama (koje mogu biti izmijenjene "
+"ispod) će se pojaviti u stranici O časopisu i Uređivačka politika kao i u "
+"djelovima đe je plaćanje naknada neophodno."
+
+msgid "manager.people.allUsers"
+msgstr "Svi upisani korisnici"
+
+msgid "manager.people.confirmRemove"
+msgstr ""
+"Uklonite korisnika iz ovog časopisa? Ovim postupkom ćete ukloniti korisnika "
+"iz svih uloga u ovom časopisu."
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Odaberi šablon"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Upiši postojećeg korisnika"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "Sa časopisom"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr ""
+"Odaberi korisnika (ili nekoliko korisnika) da ih spojite u jedan nalog (npr. "
+"kad neko koristi dva naloga). Nalog(zi) koje odaberete će najprije biti "
+"obrisani a prijavljeni članci, zadaci, dodjele zadataka i sl. će biti "
+"dodijeljeni drugom nalogu."
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr ""
+"Odaberite korisnika kojem želite da dodijelite autorstva, zadatke itd. "
+"prethodnog korisnika."
+
+msgid "manager.people.roleEnrollment"
+msgstr "{$role} Upis"
+
+msgid "manager.people.syncUserDescription"
+msgstr ""
+"Sinhronizacija upisanih korisnika će upisati sve korisnike koji su upisani u "
+"jedan časopis u drugi časopis. Ova funkcija omogućava da grupa korisnika ("
+"npr. recenzenti) može biti sinhronizovana između časopisa."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "Nije potreban apstrakt"
+
+msgid "manager.sections.assigned"
+msgstr "Urednici ove sekcije"
+
+msgid "manager.sections.confirmDelete"
+msgstr "Da li ste sigurni da želite trajno da obrišete ovu rubriku?"
+
+msgid "manager.sections.alertDelete"
+msgstr ""
+"Prije nego obrišete ovu rubriku morate sve članke koji su u njoj prmjestiti "
+"u druge rubrike."
+
+msgid "manager.sections.create"
+msgstr "Kreiraj rubriku"
+
+msgid "manager.sections.editorRestriction"
+msgstr "Samo Urednici i Urednici rubrike mogu prijaviti članke."
+
+msgid "manager.sections.editors"
+msgstr "Urednici rubrika"
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Barem jedna sekcija mora biti aktivna. Posjetite postavke toka rada da biste "
+"onemogućili sve podnesene članke u ovaj časopis."
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Neophodan je skraćeni naziv za ovu rubriku"
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "Molimo odaberite valjani recenzijski obrazac."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Naslov je obavezan za ovu rubriku."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "Izostavi imena autora iz članaka u sekciji iz sadržaja ovog broja."
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Izostavi naslov ove sekcije/rubrike iz sadržaja ovog broja."
+
+msgid "manager.sections.identifyType"
+msgstr "Identifikuj stavke objavljene u ovoj sekciji kao"
+
+msgid "manager.sections.indexed"
+msgstr "Indeksirano"
+
+msgid "manager.sections.noneCreated"
+msgstr "Nema kreiranih sekcija/rubrika."
+
+msgid "manager.sections.open"
+msgstr "Otvoreno za prijave"
+
+msgid "manager.sections.policy"
+msgstr "Pravila rubrike"
+
+msgid "manager.sections.readingTools"
+msgstr "Alati za čitanje"
+
+msgid "manager.sections.reviewed"
+msgstr "Recenzijski postupak"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "Neće biti uključeno u indeksiranje časopisa"
+
+msgid "manager.sections.submissionReview"
+msgstr "Ne prolaze kroz recenzijski postupak"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Prijavljeni članci za ovu sekciju časopisa"
+
+msgid "manager.sections.wordCount"
+msgstr "Broj riječi"
+
+msgid "manager.setup"
+msgstr "Podešavanja časopisa"
+
+msgid "manager.setup.editorialTeam"
+msgstr "Urednički odbor"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Style sheet časopisa"
+
+msgid "manager.setup.contextName"
+msgstr "Naziv časopisa"
+
+msgid "manager.setup.pageHeader"
+msgstr "Zaglavlje stranice časopisa"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Sadržaj"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Dodaj stavku \"O časopisu\""
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Dodaj stavku \"Kontrolna lista\""
+
+msgid "manager.setup.addItem"
+msgstr "Dodaj stavku"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Dodaj stavku koja će se pojaviti u \"O časopisu\""
+
+msgid "manager.setup.addNavItem"
+msgstr "Dodaj stavke"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Dodaj novu vezu ka bazi podataka"
+
+msgid "manager.setup.addSponsor"
+msgstr "Dodaj organizaciju podrške"
+
+msgid "manager.setup.alternateHeader"
+msgstr "Alternativno zaglavlje"
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr ""
+"Provjerite da li je označena barem jedna markacija za označavanje za svaki "
+"zadatаk urednika rubrike."
+
+msgid "manager.sections.unassigned"
+msgstr "Dostupni urednici rubrika"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr ""
+"(Na primjer, \"Stručno recenziran članak\", \"Ne recenziran prikaz knjige\", "
+"\"Pozvan komentar\", itd.)"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "Ograničite broj riječi za sažetak za ovu sekciju (0 za beskonačno)"
+
+msgid "manager.setup.masthead"
+msgstr "Uprava"
+
+msgid "manager.setup.homepageContent"
+msgstr "Sadržaj početne strane časopisa"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr ""
+"Početna strana časopisa se sastoji od navigacionih veza u početnoj verziji. "
+"Dodatni sadržaj može biti kreiran koristeći jednu od sledećih mogućnosti i "
+"takav sadržaj će se pojaviti prema pokazanom redosledu."

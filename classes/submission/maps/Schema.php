@@ -15,6 +15,7 @@ namespace APP\submission\maps;
 
 use APP\core\Application;
 use APP\submission\Submission;
+use PKP\submission\PKPSubmission;
 
 class Schema extends \PKP\submission\maps\Schema
 {
@@ -36,6 +37,11 @@ class Schema extends \PKP\submission\maps\Schema
             );
         }
 
+        if (in_array('scheduledIn', $props)) {
+            $output['scheduledIn'] = $submission->getData('status') == PKPSubmission::STATUS_SCHEDULED ?
+                $submission->getCurrentPublication()->getData('issueId') : null;
+        }
+
         $locales = $this->context->getSupportedSubmissionMetadataLocales();
 
         if (!in_array($primaryLocale = $submission->getData('locale'), $locales)) {
@@ -47,5 +53,12 @@ class Schema extends \PKP\submission\maps\Schema
         ksort($output);
 
         return $this->withExtensions($output, $submission);
+    }
+
+    protected function appSpecificProps(): array
+    {
+        return [
+            'scheduledIn',
+        ];
     }
 }

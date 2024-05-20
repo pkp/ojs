@@ -1,0 +1,168 @@
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-04-15 17:38+0000\n"
+"Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
+"Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/locale/ky/>\n"
+"Language: ky\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "context.current"
+msgstr "Учурдагы журнал:"
+
+msgid "context.select"
+msgstr "Башка журналга которулуу:"
+
+msgid "navigation.categories"
+msgstr "Категориялар"
+
+msgid "navigation.categories.browse"
+msgstr "карап чыгуу"
+
+msgid "common.software"
+msgstr "Ачык журнал системалары"
+
+msgid "common.payment"
+msgstr "Төлөм"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Журналдын башкы бетинин сүрөтү"
+
+msgid "doi.manager.settings.publications"
+msgstr "Макалалар"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr ""
+"Кызыкчылыктардын кагылышуусу жөнүндө декларацияны толтуруу боюнча көрсөтмөлөр"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Авторлор үчүн маалымат"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Китепканалар үчүн маалымат"
+
+msgid "navigation.skip.about"
+msgstr "Журнал маалыматына түз өтүңүз"
+
+msgid "navigation.skip.issue"
+msgstr "Түз эле учурдагы маселеге өтүңүз"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Дайындалган эмес"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Бул журнал өзүнүн мазмунун онлайн жарыялабайт."
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Карап чыгуу формасын толтуруу үчүн белгини басыңыз."
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Сураныч, талап кылынган талааларды толтуруңуз."
+
+msgid "common.confirmComplete"
+msgstr ""
+"Чын эле бул тапшырманы аяктады деп белгилегиңиз келеби? Андан кийин сиз "
+"өзгөртүү киргизе албайсыз."
+
+msgid "common.payments"
+msgstr "Төлөмдөр"
+
+msgid "common.homePageHeader.altText"
+msgstr "Башкы беттин аталышы"
+
+msgid "navigation.journalHelp"
+msgstr "Жардам"
+
+msgid "navigation.otherJournals"
+msgstr "Башка журналдар"
+
+msgid "navigation.current"
+msgstr "Акыркы чыгарылыш"
+
+msgid "navigation.browseByIssue"
+msgstr "Чыгармалар боюнча"
+
+msgid "navigation.browseByAuthor"
+msgstr "Авторлор тарабынан"
+
+msgid "navigation.infoForAuthors"
+msgstr "Авторлор үчүн"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Китепканалар үчүн"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Жаңы"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Редакциялоо процессиндеги материалдар"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Редакцияда"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Карап чыгууда"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Архивдер"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Архивдер"
+
+msgid "common.queue.long.active"
+msgstr "Жумушта"
+
+msgid "common.queue.short.active"
+msgstr "Жумушта"
+
+msgid "common.queue.long.completed"
+msgstr "Архив"
+
+msgid "common.queue.short.completed"
+msgstr "Архив"
+
+msgid "section.sections"
+msgstr "Журнал бөлүмдөрү"
+
+msgid "section.section"
+msgstr "бөлүм"
+
+msgid "section.title"
+msgstr "Бөлүмдүн аталышы"
+
+msgid "section.abbreviation"
+msgstr "Аббревиатура"
+
+msgid "section.abbreviation.example"
+msgstr "(Мисалы, макалалар=MAK)"
+
+msgid "section.policy"
+msgstr "Бөлүмдүн эрежелери"
+
+msgid "article.article"
+msgstr "Макала"
+
+msgid "article.articles"
+msgstr "Макалалар"
+
+msgid "common.publication"
+msgstr "Макала"
+
+msgid "common.publications"
+msgstr "Макалалар"
+
+msgid "article.title"
+msgstr "аты"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Каралып жаткан материалдар"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Белгиленген редакторлор"
+
+msgid "article.submissionId"
+msgstr "Материал ID"

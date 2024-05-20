@@ -44,7 +44,7 @@ class DoiController extends \PKP\API\v1\dois\PKPDoiController
             ->name('doi.issues.export');
 
         Route::put('issues/deposit', $this->depositIssues(...))
-            ->name('doi.issues.deposite');
+            ->name('doi.issues.deposit');
 
         Route::put('issues/markRegistered', $this->markIssuesRegistered(...))
             ->name('doi.issues.markRegistered');

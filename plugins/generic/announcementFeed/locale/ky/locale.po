@@ -1,0 +1,50 @@
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-03-26 14:05+0000\n"
+"Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
+"Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-announcementFeed/ky/>\n"
+"Language: ky\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "Модул \"Жарнамалар каналы\""
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Орнотуулар"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Бардык журнал беттеринде канал шилтемелерин көрсөтүү."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "акыркы жарыялар."
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Atom логотиби"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "RSS1 логотиби"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "RSS2 логотиби"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr "Бул плагин журнал жарыялары үчүн RSS/Atom веб каналдарын чыгарат."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr ""
+"Түзмөк шилтемелерин башкы бетте жана кулактандыруу бетинде гана көрсөтүү."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "Түрмөк шилтемелерин кулактандыруу бетинде гана көрсөтүү."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Тамакты чектөө"
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "Сураныч, акыркы жарыялар үчүн оң бүтүн санды киргизиңиз."
