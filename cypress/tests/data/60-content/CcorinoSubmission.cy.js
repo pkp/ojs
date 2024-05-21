@@ -64,7 +64,7 @@ describe('Data suite: Ccorino', function() {
 		cy.get('li').contains('Professional Development').click({force: true});
 		cy.get('#metadata-keywords-control-en').type('socia', {delay: 0});
 		cy.contains('Social Transformation');
-		cy.get('#metadata-keywords-control-en').type('l{downArrow}{enter}');
+		cy.get('#metadata-keywords-control-en').type('l{downArrow}{enter}', {delay: 50});
 		cy.get('#metadata button').contains('Save').click();
 		cy.get('#metadata [role="status"]').contains('Saved');
 		cy.get('#metadata-keywords-selected-en').contains('Professional Development');
