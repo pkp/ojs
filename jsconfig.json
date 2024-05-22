@@ -5,5 +5,5 @@
 			"@/*": ["lib/ui-library/src/*"]
 		}
 	},
-	"include": ["lib/ui-library/src/**/*", "lib/pkp/js/**/*.js"]
+	"include": ["lib/ui-library/src/**/*", "lib/pkp/js/**/*.js", "js/controllers/**/*.js", "js/load.js"]
 }
