@@ -57,7 +57,7 @@ class StatsIssueService
 
         Hook::call('StatsIssue::getCount::queryBuilder', [&$metricsQB, $args]);
 
-        return $metricsQB->getIssueIds()->safeCount();
+        return $metricsQB->getIssueIds()->getCountForPagination();
     }
 
     /**
