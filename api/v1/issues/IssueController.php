@@ -212,7 +212,7 @@ class IssueController extends PKPBaseController
 
         return response()->json([
             'items' => Repo::issue()->getSchemaMap()->summarizeMany($issues, $context)->values(),
-            'itemsMax' => $collector->limit(null)->offset(null)->getCount(),
+            'itemsMax' => $collector->getCount(),
         ], Response::HTTP_OK);
     }
 
