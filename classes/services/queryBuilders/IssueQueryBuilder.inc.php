@@ -202,7 +202,7 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface {
 	public function getCount() {
 		return $this
 			->getQuery()
-			->safeCount();
+			->getCountForPagination();
 	}
 
 	/**
