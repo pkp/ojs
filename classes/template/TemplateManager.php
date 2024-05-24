@@ -175,6 +175,7 @@ class TemplateManager extends PKPTemplateManager
                 'name' => __('common.payments'),
                 'url' => $router->url($request, null, 'payments'),
                 'isCurrent' => $request->getRequestedPage() === 'payments',
+                'icon' => 'Payment'
             ];
 
             $index = array_search('settings', array_keys($menu));
@@ -191,6 +192,7 @@ class TemplateManager extends PKPTemplateManager
                 'name' => __('institution.institutions'),
                 'url' => $router->url($request, null, 'management', 'settings', ['institutions']),
                 'isCurrent' => $request->getRequestedPage() === 'management' && in_array('institutions', $request->getRequestedArgs()),
+                'icon' => 'Institutes'
             ];
             $paymentsIndex = array_search('payments', array_keys($menu));
             $menu = array_slice($menu, 0, $paymentsIndex, true) +
