@@ -14,9 +14,9 @@
 namespace APP\submission;
 
 use APP\plugins\PubObjectsExportPlugin;
-use DB;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Database\Query\JoinClause;
+use Illuminate\Support\Facades\DB;
 use PKP\db\DAOResultFactory;
 use PKP\db\DBResultRange;
 use PKP\identity\Identity;

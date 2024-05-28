@@ -19,8 +19,8 @@
 namespace APP\subscription;
 
 use APP\core\Application;
-use DB;
 use Illuminate\Database\Query\JoinClause;
+use Illuminate\Support\Facades\DB;
 use PKP\core\Core;
 use PKP\db\DAOResultFactory;
 use PKP\db\DBResultRange;
