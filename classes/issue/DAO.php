@@ -16,6 +16,7 @@
 namespace APP\issue;
 
 use APP\facades\Repo;
+use APP\plugins\PubObjectsExportPlugin;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\LazyCollection;
@@ -441,8 +442,7 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
             $params[] = 'pub-id::' . $pubIdType;
         }
 
-        import('classes.plugins.PubObjectsExportPlugin'); // Constants
-        if ($pubIdSettingName && $pubIdSettingValue && $pubIdSettingValue != EXPORT_STATUS_NOT_DEPOSITED) {
+        if ($pubIdSettingName && $pubIdSettingValue && $pubIdSettingValue != PubObjectsExportPlugin::EXPORT_STATUS_NOT_DEPOSITED) {
             $params[] = $pubIdSettingValue;
         }
 
@@ -453,8 +453,8 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
             . ($pubIdSettingName != null ? ' LEFT JOIN issue_settings iss ON (i.issue_id = iss.issue_id AND iss.setting_name = ?)' : '') . '
             WHERE i.published = 1  AND i.journal_id = ?
             ' . ($pubIdType != null ? ' AND ist.setting_name = ? AND ist.setting_value IS NOT NULL' : '')
-            . (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == EXPORT_STATUS_NOT_DEPOSITED) ? ' AND iss.setting_value IS NULL' : '')
-            . (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != EXPORT_STATUS_NOT_DEPOSITED) ? ' AND iss.setting_value = ?' : '')
+            . (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == PubObjectsExportPlugin::EXPORT_STATUS_NOT_DEPOSITED) ? ' AND iss.setting_value IS NULL' : '')
+            . (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != PubObjectsExportPlugin::EXPORT_STATUS_NOT_DEPOSITED) ? ' AND iss.setting_value = ?' : '')
             . (($pubIdSettingName != null && is_null($pubIdSettingValue)) ? ' AND (iss.setting_value IS NULL OR iss.setting_value = \'\')' : '');
 
         $result = $this->deprecatedDao->retrieveRange(
