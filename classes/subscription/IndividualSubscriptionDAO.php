@@ -18,9 +18,14 @@
 
 namespace APP\subscription;
 
+use APP\core\Application;
+use DB;
+use Illuminate\Database\Query\JoinClause;
 use PKP\core\Core;
 use PKP\db\DAOResultFactory;
 use PKP\db\DBResultRange;
+use PKP\facades\Locale;
+use PKP\identity\Identity;
 use PKP\plugins\Hook;
 
 class IndividualSubscriptionDAO extends SubscriptionDAO
@@ -391,25 +396,55 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
      */
     public function getByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null)
     {
-        $params = array_merge($this->getFetchParameters(), [(int) $journalId]);
-        $baseSql = "
-            FROM subscriptions s
-            JOIN subscription_types st ON (s.type_id = st.type_id)
-            JOIN users u ON (s.user_id = u.user_id)
-            {$this->getFetchJoins()}
-            WHERE
-            st.institutional = 0
-            AND s.journal_id = ?
-            " . parent::_generateSearchSQL($status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params);
+        $locale = Locale::getLocale();
+        // the users register for the site, thus
+        // the site primary locale should be the default locale
+        $site = Application::get()->getRequest()->getSite();
+        $primaryLocale = $site->getPrimaryLocale();
+        $q = DB::table('subscriptions', 's')
+            ->join('subscription_types AS st', 's.type_id', '=', 'st.type_id')
+            ->join('users AS u', 's.user_id', '=', 'u.user_id')
+            ->leftJoin(
+                'user_settings AS ugl',
+                fn (JoinClause $j) =>
+                $j->on('u.user_id', '=', 'ugl.user_id')
+                    ->where('ugl.setting_name', '=', Identity::IDENTITY_SETTING_GIVENNAME)
+                    ->where('ugl.locale', '=', $locale)
+            )
+            ->leftJoin(
+                'user_settings AS ugpl',
+                fn (JoinClause $j) =>
+                $j->on('u.user_id', '=', 'ugpl.user_id')
+                    ->where('ugpl.setting_name', '=', Identity::IDENTITY_SETTING_GIVENNAME)
+                    ->where('ugpl.locale', '=', $primaryLocale)
+            )
+            ->leftJoin(
+                'user_settings AS ufl',
+                fn (JoinClause $j) =>
+                $j->on('u.user_id', '=', 'ufl.user_id')
+                    ->where('ufl.setting_name', '=', Identity::IDENTITY_SETTING_FAMILYNAME)
+                    ->where('ufl.locale', '=', $locale)
+            )
+            ->leftJoin(
+                'user_settings AS ufpl',
+                fn (JoinClause $j) =>
+                $j->on('u.user_id', '=', 'ufpl.user_id')
+                    ->where('ufpl.setting_name', '=', Identity::IDENTITY_SETTING_FAMILYNAME)
+                    ->where('ufpl.locale', '=', $primaryLocale)
+            )
+            ->where('st.institutional', '=', 0)
+            ->where('s.journal_id', '=', $journalId)
+            ->orderBy('u.user_id')
+            ->orderBy('s.subscription_id')
+            ->select(
+                's.*',
+                DB::raw('COALESCE(ugl.setting_value, ugpl.setting_value) AS user_given'),
+                DB::raw("CASE WHEN ugl.setting_value <> '' THEN ufl.setting_value ELSE ufpl.setting_value END AS user_family")
+            );
+        $this->applySearchFilters($q, $status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params);
 
-        $result = $this->retrieveRange(
-            "SELECT s.*, {$this->getFetchColumns()}
-            {$baseSql}
-            ORDER BY u.user_id, s.subscription_id",
-            $params,
-            $rangeInfo
-        );
-        return new DAOResultFactory($result, $this, '_fromRow', [], "SELECT 0 {$baseSql}", $params, $rangeInfo); // Counted in subscription grid paging
+        $result = $this->retrieveRange($q, [], $rangeInfo);
+        return new DAOResultFactory($result, $this, '_fromRow', [], $q, [], $rangeInfo); // Counted in subscription grid paging
     }
 
     /**
