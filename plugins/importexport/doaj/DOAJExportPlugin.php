@@ -89,9 +89,9 @@ class DOAJExportPlugin extends PubObjectsExportPlugin
      */
     public function getExportActions($context)
     {
-        $actions = [EXPORT_ACTION_EXPORT, EXPORT_ACTION_MARKREGISTERED ];
+        $actions = [PubObjectsExportPlugin::EXPORT_ACTION_EXPORT, PubObjectsExportPlugin::EXPORT_ACTION_MARKREGISTERED ];
         if ($this->getSetting($context->getId(), 'apiKey')) {
-            array_unshift($actions, EXPORT_ACTION_DEPOSIT);
+            array_unshift($actions, PubObjectsExportPlugin::EXPORT_ACTION_DEPOSIT);
         }
         return $actions;
     }
@@ -141,7 +141,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin
             return [['plugins.importexport.doaj.register.error.mdsError', $status . ' - ' . $response->getBody()]];
         }
         // Deposit was received; set the status
-        $objects->setData($this->getDepositStatusSettingName(), EXPORT_STATUS_REGISTERED);
+        $objects->setData($this->getDepositStatusSettingName(), PubObjectsExportPlugin::EXPORT_STATUS_REGISTERED);
         $this->updateObject($objects);
         return true;
     }
@@ -155,7 +155,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin
     {
         $context = $request->getContext();
         $path = ['plugin', $this->getName()];
-        if ($request->getUserVar(EXPORT_ACTION_DEPOSIT)) {
+        if ($request->getUserVar(PubObjectsExportPlugin::EXPORT_ACTION_DEPOSIT)) {
             assert($filter != null);
             // Set filter for JSON
             $filter = 'article=>doaj-json';
