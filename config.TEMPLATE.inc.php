@@ -266,7 +266,7 @@ filename_revision_match = 70
 ; cipher = 'aes-256-cbc'
 
 ; Define should the cookie at user's end need to be encrypted
-; Enabling/Disbaling will force all user to re-login
+; Enabling/Disabling will force all user to re-login
 ; cookie_encryption = On
 
 ; Force SSL connections site-wide and also sets the "Secure" flag for session cookies
