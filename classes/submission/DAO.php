@@ -14,6 +14,9 @@
 namespace APP\submission;
 
 use APP\plugins\PubObjectsExportPlugin;
+use DB;
+use Illuminate\Database\Query\Builder;
+use Illuminate\Database\Query\JoinClause;
 use PKP\db\DAOResultFactory;
 use PKP\db\DBResultRange;
 use PKP\identity\Identity;
@@ -43,69 +46,68 @@ class DAO extends \PKP\submission\DAO
      *
      * @return DAOResultFactory<Submission>
      */
-    public function getExportable(
-        $contextId,
-        $pubIdType = null,
-        $title = null,
-        $author = null,
-        $issueId = null,
-        $pubIdSettingName = null,
-        $pubIdSettingValue = null,
-        $rangeInfo = null
-    ) {
-        $params = [];
-        if ($pubIdSettingName) {
-            $params[] = $pubIdSettingName;
-        }
-        $params[] = Submission::STATUS_PUBLISHED;
-        $params[] = $contextId;
-        if ($pubIdType) {
-            $params[] = 'pub-id::' . $pubIdType;
-        }
-        if ($title) {
-            $params[] = 'title';
-            $params[] = '%' . $title . '%';
-        }
-        if ($author) {
-            $params[] = $author;
-            $params[] = $author;
-        }
-        if ($issueId) {
-            $params[] = $issueId;
-        }
-        if ($pubIdSettingName && $pubIdSettingValue && $pubIdSettingValue != PubObjectsExportPlugin::EXPORT_STATUS_NOT_DEPOSITED) {
-            $params[] = $pubIdSettingValue;
-        }
+    public function getExportable($contextId, $pubIdType = null, $title = null, $author = null, $issueId = null, $pubIdSettingName = null, $pubIdSettingValue = null, $rangeInfo = null)
+    {
+        $q = DB::table('submissions', 's')
+            ->leftJoin('publications AS p', 's.current_publication_id', '=', 'p.publication_id')
+            ->leftJoin('publication_settings AS ps', 'p.publication_id', '=', 'ps.publication_id')
+            ->when(
+                $issueId,
+                fn (Builder $q) => $q->leftJoin(
+                    'publication_settings AS psi',
+                    fn (JoinClause $j) => $j->on('p.publication_id', '=', 'psi.publication_id')
+                        ->where('psi.setting_name', '=', 'issueId')
+                        ->where('psi.locale', '=', '')
+                )
+            )
+            ->when($pubIdType != null, fn (Builder $q) => $q->leftJoin('publication_settings AS pspidt', 'p.publication_id', '=', 'pspidt.publication_id'))
+            ->when($title != null, fn (Builder $q) => $q->leftJoin('publication_settings AS pst', 'p.publication_id', '=', 'pst.publication_id'))
+            ->when(
+                $author != null,
+                fn (Builder $q) => $q->leftJoin('authors AS au', 'p.publication_id', '=', 'au.publication_id')
+                    ->leftJoin(
+                        'author_settings AS asgs',
+                        fn (JoinClause $j) => $j->on('asgs.author_id', '=', 'au.author_id')
+                            ->where('asgs.setting_name', '=', Identity::IDENTITY_SETTING_GIVENNAME)
+                    )
+                    ->leftJoin(
+                        'author_settings AS asfs',
+                        fn (JoinClause $j) => $j->on('asfs.author_id', '=', 'au.author_id')
+                            ->where('asfs.setting_name', '=', Identity::IDENTITY_SETTING_FAMILYNAME)
+                    )
+            )
+            ->when(
+                $pubIdSettingName,
+                fn (Builder $q) => $q->leftJoin(
+                    'submission_settings AS pss',
+                    fn (JoinClause $j) => $j->on('s.submission_id', '=', 'pss.submission_id')
+                        ->where('pss.setting_name', '=', $pubIdSettingName)
+                )
+            )
+            ->where('s.status', '=', Submission::STATUS_PUBLISHED)
+            ->where('s.context_id', '=', $contextId)
+            ->when($pubIdType != null, fn (Builder $q) => $q->where('pspidt.setting_name', '=', "pub-id::{$pubIdType}")->whereNotNull('pspidt.setting_value'))
+            ->when($title != null, fn (Builder $q) => $q->where('pst.setting_name', '=', 'title')->where('pst.setting_value', 'LIKE', "%{$title}%"))
+            ->when($author != null, fn (Builder $q) => $q->where(fn (Builder $q) => $q->whereRaw("CONCAT(COALESCE(asgs.setting_value, ''), ' ', COALESCE(asfs.setting_value, ''))", 'LIKE', $author)))
+            ->when($issueId != null, fn (Builder $q) => $q->where('psi.setting_value', '=', $issueId))
+            ->when(
+                $pubIdSettingName,
+                fn (Builder $q) => $q->when(
+                    $pubIdSettingValue === null,
+                    fn (Builder $q) => $q->whereRaw("COALESCE(pss.setting_value, '') = ''"),
+                    fn (Builder $q) => $q->when(
+                        $pubIdSettingValue != PubObjectsExportPlugin::EXPORT_STATUS_NOT_DEPOSITED,
+                        fn (Builder $q) => $q->where('pss.setting_value', '=', $pubIdSettingValue),
+                        fn (Builder $q) => $q->whereNull('pss.setting_value')
+                    )
+                )
+            )
+            ->groupBy('s.submission_id')
+            ->orderByRaw('MAX(p.date_published) DESC')
+            ->orderByDesc('s.submission_id')
+            ->select('s.*');
 
-        $baseSql = '
-            FROM submissions s
-            LEFT JOIN publications p ON s.current_publication_id = p.publication_id
-            LEFT JOIN publication_settings ps ON p.publication_id = ps.publication_id'
-            . ($issueId ? ' LEFT JOIN publication_settings psi ON p.publication_id = psi.publication_id AND psi.setting_name = \'issueId\' AND psi.locale = \'\'' : '')
-            . ($pubIdType != null ? ' LEFT JOIN publication_settings pspidt ON (p.publication_id = pspidt.publication_id)' : '')
-            . ($title != null ? ' LEFT JOIN publication_settings pst ON (p.publication_id = pst.publication_id)' : '')
-            . ($author != null ? ' LEFT JOIN authors au ON (p.publication_id = au.publication_id)
-                    LEFT JOIN author_settings asgs ON (asgs.author_id = au.author_id AND asgs.setting_name = \'' . Identity::IDENTITY_SETTING_GIVENNAME . '\')
-                    LEFT JOIN author_settings asfs ON (asfs.author_id = au.author_id AND asfs.setting_name = \'' . Identity::IDENTITY_SETTING_FAMILYNAME . '\')
-                ' : '')
-            . ($pubIdSettingName != null ? ' LEFT JOIN submission_settings pss ON (s.submission_id = pss.submission_id AND pss.setting_name = ?)' : '')
-        . ' WHERE	s.status = ?
-            AND s.context_id = ?'
-            . ($pubIdType != null ? ' AND pspidt.setting_name = ? AND pspidt.setting_value IS NOT NULL' : '')
-            . ($title != null ? ' AND (pst.setting_name = ? AND pst.setting_value LIKE ?)' : '')
-            . ($author != null ? ' AND (asgs.setting_value LIKE ? OR asfs.setting_value LIKE ?)' : '')
-            . ($issueId != null ? ' AND psi.setting_value = ?' : '')
-            . (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == PubObjectsExportPlugin::EXPORT_STATUS_NOT_DEPOSITED) ? ' AND pss.setting_value IS NULL' : '')
-            . (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != PubObjectsExportPlugin::EXPORT_STATUS_NOT_DEPOSITED) ? ' AND pss.setting_value = ?' : '')
-            . (($pubIdSettingName != null && is_null($pubIdSettingValue)) ? ' AND (pss.setting_value IS NULL OR pss.setting_value = \'\')' : '');
-
-        $rows = $this->deprecatedDao->retrieveRange(
-            "SELECT s.* {$baseSql}
-            GROUP BY s.submission_id
-            ORDER BY MAX(p.date_published) DESC, s.submission_id DESC",
-            $params,
-            $rangeInfo
-        );
-        return new DAOResultFactory($rows, $this, 'fromRow', [], "SELECT 0 {$baseSql}", $params, $rangeInfo);
+        $rows = $this->deprecatedDao->retrieveRange($q, [], $rangeInfo);
+        return new DAOResultFactory($rows, $this, 'fromRow', [], $q, [], $rangeInfo);
     }
 }
