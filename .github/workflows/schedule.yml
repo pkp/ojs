@@ -1,9 +1,10 @@
 on:
   schedule:
-    - cron: '5 5  * * *'
+    - cron: '5 5 * * *'
 name: schedule
 jobs:
   ojs-main:
+    if: github.repository == 'pkp/ojs'
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -11,26 +12,21 @@ jobs:
         include:
           - php-version: 8.1
             validate: 'validate'
-          - php-version: 8.1
             database: pgsql
             test: 'test'
             SAVE_BUILD: 'save_build'
           - php-version: 8.1
+            validate: 'validate'
             database: mariadb
             test: 'test'
             SAVE_BUILD: 'save_build'
           - php-version: 8.1
+            validate: 'validate'
             database: mysql
             test: 'test'
             SAVE_BUILD: 'save_build'
             upgrade: 'upgrade'
             upgrade_test: 'stable-3_3_0,stable-3_4_0'
-          - php-version: 8.2
-            database: mysql
-            test: 'test'
-          - php-version: 8.2
-            database: pgsql
-            test: 'test'
 
     name: ojs
     steps:
@@ -41,6 +37,7 @@ jobs:
           DATASETS_ACCESS_KEY:  ${{secrets.DATASETS_ACCESS_KEY}}
           DEBUG_IN_TMATE: false
   ojs-stable-3_4_0:
+    if: github.repository == 'pkp/ojs'
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -48,7 +45,6 @@ jobs:
         include:
           - php-version: 8.1
             validate: 'validate'
-          - php-version: 8.1
             database: pgsql
             test: 'test'
             SAVE_BUILD: 'save_build'
@@ -57,17 +53,13 @@ jobs:
             test: 'test'
             SAVE_BUILD: 'save_build'
           - php-version: 8.1
+            validate: 'validate'
             database: mysql
             test: 'test'
             SAVE_BUILD: 'save_build'
             upgrade: 'upgrade'
             upgrade_test: '3.1.0,3.1.1-2,3.1.2,stable-3_2_0,stable-3_2_1,stable-3_3_0'
-          - php-version: 8.2
-            database: mysql
-            test: 'test'
-          - php-version: 8.2
-            database: pgsql
-            test: 'test'
+
 
     name: ojs-stable-3_4_0
     steps:

@@ -2,8 +2,8 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
-			"@/components/*": ["lib/ui-library/src/components/*"]
+			"@/*": ["lib/ui-library/src/*"]
 		}
 	},
-	"exclude": ["node_modules"]
+	"include": ["lib/ui-library/src/**/*", "lib/pkp/js/**/*.js", "js/controllers/**/*.js", "js/load.js"]
 }
