@@ -19,10 +19,13 @@
 namespace APP\subscription;
 
 use APP\core\Application;
+use Illuminate\Database\Query\JoinClause;
+use Illuminate\Support\Facades\DB;
 use PKP\core\Core;
 use PKP\db\DAOResultFactory;
 use PKP\db\DBResultRange;
 use PKP\facades\Locale;
+use PKP\identity\Identity;
 use PKP\plugins\Hook;
 
 class InstitutionalSubscriptionDAO extends SubscriptionDAO
@@ -390,72 +393,100 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
      */
     public function getByJournalId($journalId, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, $rangeInfo = null)
     {
-        $params = array_merge($this->getInstitutionNameFetchParameters(), $this->getFetchParameters(), [(int) $journalId]);
-        $institutionFetch = $ipRangeFetch = '';
-        $searchSql = $this->_generateSearchSQL($status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params);
+        $locale = Locale::getLocale();
+        $request = Application::get()->getRequest();
+        $journal = $request->getContext();
+        $journalPrimaryLocale = $journal->getPrimaryLocale();
+        $site = $request->getSite();
+        $sitePrimaryLocale = $site->getPrimaryLocale();
+
+        $q = DB::table('subscriptions', 's')
+            ->join('subscription_types AS st', 's.type_id', '=', 'st.type_id')
+            ->join('users AS u', 's.user_id', '=', 'u.user_id')
+            ->join('institutional_subscriptions AS iss', 's.subscription_id', '=', 'iss.subscription_id')
+            ->leftJoin(
+                'institution_settings AS isal',
+                fn (JoinClause $j) =>
+                $j->on('isal.institution_id', '=', 'iss.institution_id')
+                    ->where('isal.setting_name', '=', 'name')
+                    ->where('isal.locale', '=', $locale)
+            )
+            ->leftJoin(
+                'institution_settings AS isapl',
+                fn (JoinClause $j) =>
+                $j->on('isapl.institution_id', '=', 'iss.institution_id')
+                    ->where('isapl.setting_name', '=', 'name')
+                    ->where('isapl.locale', '=', $journalPrimaryLocale)
+            )
+            ->leftJoin(
+                'user_settings AS ugl',
+                fn (JoinClause $j) =>
+                $j->on('u.user_id', '=', 'ugl.user_id')
+                    ->where('ugl.setting_name', '=', Identity::IDENTITY_SETTING_GIVENNAME)
+                    ->where('ugl.locale', '=', $locale)
+            )
+            ->leftJoin(
+                'user_settings AS ugpl',
+                fn (JoinClause $j) =>
+                $j->on('u.user_id', '=', 'ugpl.user_id')
+                    ->where('ugpl.setting_name', '=', Identity::IDENTITY_SETTING_GIVENNAME)
+                    ->where('ugpl.locale', '=', $sitePrimaryLocale)
+            )
+            ->leftJoin(
+                'user_settings AS ufl',
+                fn (JoinClause $j) =>
+                $j->on('u.user_id', '=', 'ufl.user_id')
+                    ->where('ufl.setting_name', '=', Identity::IDENTITY_SETTING_FAMILYNAME)
+                    ->where('ufl.locale', '=', $locale)
+            )
+            ->leftJoin(
+                'user_settings AS ufpl',
+                fn (JoinClause $j) =>
+                $j->on('u.user_id', '=', 'ufpl.user_id')
+                    ->where('ufpl.setting_name', '=', Identity::IDENTITY_SETTING_FAMILYNAME)
+                    ->where('ufpl.locale', '=', $sitePrimaryLocale)
+            )
+            ->where('st.institutional', '=', 1)
+            ->where('s.journal_id', '=', $journalId)
+            ->orderBy('institution_name')
+            ->orderBy('s.subscription_id')
+            ->select(
+                's.*',
+                'iss.institution_id',
+                'iss.mailing_address',
+                'iss.domain',
+                DB::raw('COALESCE(isal.setting_value, isapl.setting_value) AS institution_name'),
+                DB::raw('COALESCE(ugl.setting_value, ugpl.setting_value) AS user_given'),
+                DB::raw("CASE WHEN ugl.setting_value <> '' THEN ufl.setting_value ELSE ufpl.setting_value END AS user_family")
+            )
+            ->distinct();
 
         if (!empty($search)) {
-            switch ($searchField) {
-                case self::SUBSCRIPTION_INSTITUTION_NAME:
-                    if ($searchMatch === 'is') {
-                        $searchSql = ' AND LOWER(insl.setting_value) = LOWER(?)';
-                    } elseif ($searchMatch === 'contains') {
-                        $searchSql = ' AND LOWER(insl.setting_value) LIKE LOWER(?)';
-                        $search = '%' . $search . '%';
-                    } else { // $searchMatch === 'startsWith'
-                        $searchSql = ' AND LOWER(insl) LIKE LOWER(?)';
-                        $search = $search . '%';
-                    }
-                    $institutionFetch = 'JOIN institution_settings insl ON (insl.institution_id = iss.institution_id AND insl.setting_name = \'name\')';
-                    $params[] = $search;
-                    break;
-                case self::SUBSCRIPTION_DOMAIN:
-                    if ($searchMatch === 'is') {
-                        $searchSql = ' AND LOWER(iss.domain) = LOWER(?)';
-                    } elseif ($searchMatch === 'contains') {
-                        $searchSql = ' AND LOWER(iss.domain) LIKE LOWER(?)';
-                        $search = '%' . $search . '%';
-                    } else { // $searchMatch === 'startsWith'
-                        $searchSql = ' AND LOWER(iss.domain) LIKE LOWER(?)';
-                        $search = $search . '%';
-                    }
-                    $params[] = $search;
-                    break;
-                case self::SUBSCRIPTION_IP_RANGE:
-                    if ($searchMatch === 'inip') {
-                        $searchSql = ' AND LOWER(inip.ip_string) = LOWER(?)';
-                    } elseif ($searchMatch === 'contains') {
-                        $searchSql = ' AND LOWER(inip.ip_string) LIKE LOWER(?)';
-                        $search = '%' . $search . '%';
-                    } else { // $searchMatch === 'startsWith'
-                        $searchSql = ' AND LOWER(inip.ip_string) LIKE LOWER(?)';
-                        $search = $search . '%';
-                    }
-                    $ipRangeFetch = ' JOIN institution_ip inip ON (inip.institution_id = iss.institution_id)';
-                    $params[] = $search;
-                    break;
+            $field = match ($searchField) {
+                self::SUBSCRIPTION_INSTITUTION_NAME => 'insl.setting_value',
+                self::SUBSCRIPTION_DOMAIN => 'iss.domain',
+                self::SUBSCRIPTION_IP_RANGE => 'inip.ip_string',
+                default => null
+            };
+            match ($searchField) {
+                self::SUBSCRIPTION_INSTITUTION_NAME => $q->join('institution_settings AS insl', fn (JoinClause $j) => $j->on('insl.institution_id', '=', 'iss.institution_id')->where('insl.setting_name', '=', 'name')),
+                self::SUBSCRIPTION_IP_RANGE => $q->join('institution_ip AS inip', 'inip.institution_id', '=', 'iss.institution_id'),
+                default => null
+            };
+            if ($field) {
+                match ($searchMatch) {
+                    'is' => $q->whereRaw("LOWER({$field}) = LOWER(?)", [$search]),
+                    'contains' => $q->whereRaw("LOWER({$field}) LIKE LOWER(?)", ["%{$search}%"]),
+                    //startsWith
+                    default => $q->whereRaw("LOWER({$field}) = LOWER(?)", ["{$search}%"])
+                };
             }
         }
 
-        $result = $this->retrieveRange(
-            $sql = 'SELECT DISTINCT s.*, iss.institution_id, iss.mailing_address, iss.domain,
-                ' . $this->getInstitutionNameFetchColumns() . ',
-                ' . $this->getFetchColumns() . '
-                FROM	subscriptions s
-                    JOIN subscription_types st ON (s.type_id = st.type_id)
-                    JOIN users u ON (s.user_id = u.user_id)
-                    JOIN institutional_subscriptions iss ON (s.subscription_id = iss.subscription_id)
-                    ' . $institutionFetch . '
-                    ' . $ipRangeFetch . '
-                    ' . $this->getInstitutionNameFetchJoins() . '
-                    ' . $this->getFetchJoins() . '
-                WHERE	st.institutional = 1 AND s.journal_id = ?
-                ' . $searchSql . ' ORDER BY institution_name ASC, s.subscription_id',
-            $params,
-            $rangeInfo
-        );
+        $this->applySearchFilters($q, $status, $searchField, $searchMatch, $search, $dateField, $dateFrom, $dateTo, $params);
 
-        return new DAOResultFactory($result, $this, '_fromRow', [], $sql, $params, $rangeInfo); // Counted in subscription grid paging
+        $result = $this->retrieveRange($q, [], $rangeInfo);
+        return new DAOResultFactory($result, $this, '_fromRow', [], $q, [], $rangeInfo); // Counted in subscription grid paging
     }
 
     /**

@@ -19,6 +19,7 @@ namespace APP\controllers\grid\submissions;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\Collector;
+use APP\plugins\PubObjectsExportPlugin;
 use PKP\controllers\grid\feature\PagingFeature;
 use PKP\controllers\grid\feature\selectableItems\SelectableItemsFeature;
 use PKP\controllers\grid\GridColumn;
@@ -299,7 +300,7 @@ class ExportPublishedSubmissionsListGridHandler extends GridHandler
         } else {
             $issueId = null;
         }
-        if (isset($filter['statusId']) && $filter['statusId'] != EXPORT_STATUS_ANY) {
+        if (isset($filter['statusId']) && $filter['statusId'] != PubObjectsExportPlugin::EXPORT_STATUS_ANY) {
             $statusId = $filter['statusId'];
         } else {
             $statusId = null;

@@ -37,7 +37,7 @@
 			{if !$allowExport}
 				<div class="pkp_notification" id="dataciteConfigurationErrors">
 					{foreach from=$configurationErrors item=configurationError}
-						{if $configurationError == $smarty.const.EXPORT_CONFIG_ERROR_SETTINGS}
+						{if $configurationError == \APP\plugins\PubObjectsExportPlugin::EXPORT_CONFIG_ERROR_SETTINGS}
 							{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=doajConfigurationErrors notificationStyleClass="notifyWarning" notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents="plugins.importexport.common.error.pluginNotConfigured"|translate}
 						{/if}
 					{/foreach}

@@ -16,6 +16,9 @@
 namespace APP\issue;
 
 use APP\facades\Repo;
+use APP\plugins\PubObjectsExportPlugin;
+use Illuminate\Database\Query\Builder;
+use Illuminate\Database\Query\JoinClause;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\LazyCollection;
@@ -133,7 +136,7 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
     {
         return $query
             ->getQueryBuilder()
-            ->count();
+            ->getCountForPagination();
     }
 
     /**
@@ -266,10 +269,9 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
      */
     public function customIssueOrderingExists(int $contextId): bool
     {
-        $resultCount = DB::table('custom_issue_orders', 'o')
+        return DB::table('custom_issue_orders', 'o')
             ->where('o.journal_id', '=', $contextId)
-            ->count();
-        return $resultCount != 0;
+            ->getCountForPagination() > 0;
     }
 
     /**
@@ -432,38 +434,30 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
      */
     public function getExportable($contextId, $pubIdType = null, $pubIdSettingName = null, $pubIdSettingValue = null, $rangeInfo = null)
     {
-        $params = [];
-        if ($pubIdSettingName) {
-            $params[] = $pubIdSettingName;
-        }
-        $params[] = (int) $contextId;
-        if ($pubIdType) {
-            $params[] = 'pub-id::' . $pubIdType;
-        }
+        $q = DB::table('issues', 'i')
+            ->leftJoin('custom_issue_orders AS o', 'o.issue_id', '=', 'i.issue_id')
+            ->when($pubIdType != null, fn (Builder $q) => $q->leftJoin('issue_settings AS ist', 'i.issue_id', '=', 'ist.issue_id'))
+            ->when($pubIdSettingName, fn (Builder $q) => $q->leftJoin('issue_settings AS iss', fn (JoinClause $j) => $j->on('i.issue_id', '=', 'iss.issue_id')->where('iss.setting_name', '=', $pubIdSettingName)))
+            ->where('i.published', '=', 1)
+            ->where('i.journal_id', '=', $contextId)
+            ->when($pubIdType != null, fn (Builder $q) => $q->where('ist.setting_name', '=', "pub-id::{$pubIdType}")->whereNotNull('ist.setting_value'))
+            ->when(
+                $pubIdSettingName,
+                fn (Builder $q) => $q->when(
+                    $pubIdSettingValue === null,
+                    fn (Builder $q) => $q->whereRaw("COALESCE(iss.setting_value, '') = ''"),
+                    fn (Builder $q) => $q->when(
+                        $pubIdSettingValue != PubObjectsExportPlugin::EXPORT_STATUS_NOT_DEPOSITED,
+                        fn (Builder $q) => $q->where('iss.setting_value', '=', $pubIdSettingValue),
+                        fn (Builder $q) => $q->whereNull('iss.setting_value')
+                    )
+                )
+            )
+            ->orderByDesc('i.date_published')
+            ->select('i.*');
 
-        import('classes.plugins.PubObjectsExportPlugin'); // Constants
-        if ($pubIdSettingName && $pubIdSettingValue && $pubIdSettingValue != EXPORT_STATUS_NOT_DEPOSITED) {
-            $params[] = $pubIdSettingValue;
-        }
-
-        $result = $this->deprecatedDao->retrieveRange(
-            $sql = 'SELECT i.*
-			FROM issues i
-				LEFT JOIN custom_issue_orders o ON (o.issue_id = i.issue_id)
-				' . ($pubIdType != null ? ' LEFT JOIN issue_settings ist ON (i.issue_id = ist.issue_id)' : '')
-                . ($pubIdSettingName != null ? ' LEFT JOIN issue_settings iss ON (i.issue_id = iss.issue_id AND iss.setting_name = ?)' : '') . '
-			WHERE
-				i.published = 1  AND i.journal_id = ?
-				' . ($pubIdType != null ? ' AND ist.setting_name = ? AND ist.setting_value IS NOT NULL' : '')
-                . (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue == EXPORT_STATUS_NOT_DEPOSITED) ? ' AND iss.setting_value IS NULL' : '')
-                . (($pubIdSettingName != null && $pubIdSettingValue != null && $pubIdSettingValue != EXPORT_STATUS_NOT_DEPOSITED) ? ' AND iss.setting_value = ?' : '')
-                . (($pubIdSettingName != null && is_null($pubIdSettingValue)) ? ' AND (iss.setting_value IS NULL OR iss.setting_value = \'\')' : '')
-                . ' ORDER BY i.date_published DESC',
-            $params,
-            $rangeInfo
-        );
-
-        return new DAOResultFactory($result, $this, 'fromRow', [], $sql, $params, $rangeInfo);
+        $result = $this->deprecatedDao->retrieveRange($q, [], $rangeInfo);
+        return new DAOResultFactory($result, $this, 'fromRow', [], $q, [], $rangeInfo);
     }
 
     /**
