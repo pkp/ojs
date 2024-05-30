@@ -90,46 +90,52 @@ class AuthorDAO extends PKPAuthorDAO {
 			$initialSql .= ')';
 		}
 
+		$baseSql = '
+			FROM authors a
+			JOIN user_groups ug ON (a.user_group_id = ug.user_group_id)
+			JOIN publications p ON (p.publication_id = a.publication_id)
+			JOIN submissions s ON (s.current_publication_id = p.publication_id)
+			LEFT JOIN author_settings agl ON (a.author_id = agl.author_id AND agl.setting_name = ? AND agl.locale = ?)
+			LEFT JOIN author_settings agpl ON (a.author_id = agpl.author_id AND agpl.setting_name = ? AND agpl.locale = s.locale)
+			LEFT JOIN author_settings afl ON (a.author_id = afl.author_id AND afl.setting_name = ? AND afl.locale = ?)
+			LEFT JOIN author_settings afpl ON (a.author_id = afpl.author_id AND afpl.setting_name = ? AND afpl.locale = s.locale)
+			JOIN (
+				SELECT
+				MIN(aa.author_id) as author_id,
+				CONCAT(
+				' . ($includeEmail ? 'aa.email, \' \', ' : '') . '
+				ac.setting_value,
+				\' \'
+				' . $sqlColumnsAuthorSettings . '
+				) as names
+				FROM authors aa
+				JOIN publications pp ON (pp.publication_id = aa.publication_id)
+				LEFT JOIN publication_settings ppss ON (ppss.publication_id = pp.publication_id)
+				JOIN submissions ss ON (ss.submission_id = pp.submission_id AND ss.current_publication_id = pp.publication_id AND ss.status = ' . STATUS_PUBLISHED . ')
+				JOIN journals j ON (ss.context_id = j.journal_id)
+				JOIN issues i ON (ppss.setting_name = ? AND ppss.setting_value = CAST(i.issue_id AS CHAR(20)) AND i.published = 1)
+				LEFT JOIN author_settings ac ON (ac.author_id = aa.author_id AND ac.setting_name = \'country\')
+				' . $sqlJoinAuthorSettings . '
+				WHERE j.enabled = 1
+				' . (isset($journalId) ? ' AND j.journal_id = ?' : '')
+				. $initialSql . '
+				GROUP BY names
+			) as t1 ON (t1.author_id = a.author_id)
+		';
+
 		$result = $this->retrieveRange(
-			$sql = 'SELECT a.*, ug.show_title, s.locale,
+			"SELECT
+				a.*, ug.show_title, s.locale,
 				COALESCE(agl.setting_value, agpl.setting_value) AS author_given,
-				CASE WHEN agl.setting_value <> \'\' THEN afl.setting_value ELSE afpl.setting_value END AS author_family
-			FROM	authors a
-				JOIN user_groups ug ON (a.user_group_id = ug.user_group_id)
-				JOIN publications p ON (p.publication_id = a.publication_id)
-				JOIN submissions s ON (s.current_publication_id = p.publication_id)
-				LEFT JOIN author_settings agl ON (a.author_id = agl.author_id AND agl.setting_name = ? AND agl.locale = ?)
-				LEFT JOIN author_settings agpl ON (a.author_id = agpl.author_id AND agpl.setting_name = ? AND agpl.locale = s.locale)
-				LEFT JOIN author_settings afl ON (a.author_id = afl.author_id AND afl.setting_name = ? AND afl.locale = ?)
-				LEFT JOIN author_settings afpl ON (a.author_id = afpl.author_id AND afpl.setting_name = ? AND afpl.locale = s.locale)
-				JOIN (
-					SELECT
-					MIN(aa.author_id) as author_id,
-					CONCAT(
-					' . ($includeEmail ? 'aa.email, \' \', ' : '') . '
-					ac.setting_value,
-					\' \'
-					' . $sqlColumnsAuthorSettings . '
-					) as names
-					FROM authors aa
-					JOIN publications pp ON (pp.publication_id = aa.publication_id)
-					LEFT JOIN publication_settings ppss ON (ppss.publication_id = pp.publication_id)
-					JOIN submissions ss ON (ss.submission_id = pp.submission_id AND ss.current_publication_id = pp.publication_id AND ss.status = ' . STATUS_PUBLISHED . ')
-					JOIN journals j ON (ss.context_id = j.journal_id)
-					JOIN issues i ON (ppss.setting_name = ? AND ppss.setting_value = CAST(i.issue_id AS CHAR(20)) AND i.published = 1)
-					LEFT JOIN author_settings ac ON (ac.author_id = aa.author_id AND ac.setting_name = \'country\')
-					' . $sqlJoinAuthorSettings . '
-					WHERE j.enabled = 1
-					' . (isset($journalId) ? ' AND j.journal_id = ?' : '')
-					. $initialSql . '
-					GROUP BY names
-				) as t1 ON (t1.author_id = a.author_id)
-				ORDER BY author_family, author_given',
+				CASE WHEN agl.setting_value <> '' THEN afl.setting_value ELSE afpl.setting_value END AS author_family
+			{$baseSql}
+			ORDER BY
+				author_family, author_given",
 			$params,
 			$rangeInfo
 		);
 
-		return new DAOResultFactory($result, $this, '_fromRow', [], $sql, $params, $rangeInfo);
+		return new DAOResultFactory($result, $this, '_fromRow', [], "SELECT 0 {$baseSql}", $params, $rangeInfo);
 	}
 }
 

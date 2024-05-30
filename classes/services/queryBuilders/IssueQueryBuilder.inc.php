@@ -202,9 +202,7 @@ class IssueQueryBuilder implements EntityQueryBuilderInterface {
 	public function getCount() {
 		return $this
 			->getQuery()
-			->select('i.issue_id')
-			->get()
-			->count();
+			->getCountForPagination();
 	}
 
 	/**

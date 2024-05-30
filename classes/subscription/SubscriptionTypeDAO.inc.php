@@ -266,11 +266,14 @@ class SubscriptionTypeDAO extends DAO {
 	 * @return object DAOResultFactory containing matching SubscriptionTypes
 	 */
 	function getByJournalId($journalId, $rangeInfo = null) {
+		$baseSql = '
+			FROM subscription_types WHERE journal_id = ?
+		';
 		$result = $this->retrieveRange(
-			$sql = 'SELECT * FROM subscription_types WHERE journal_id = ? ORDER BY seq',
+			"SELECT * {$baseSql} ORDER BY seq",
 			$params = [(int) $journalId],
 			$rangeInfo);
-		return new DAOResultFactory($result, $this, '_fromRow', [], $sql, $params, $rangeInfo); // Counted in subscription type grid paging
+		return new DAOResultFactory($result, $this, '_fromRow', [], "SELECT 0 {$baseSql}", $params, $rangeInfo); // Counted in subscription type grid paging
 	}
 
 	/**
