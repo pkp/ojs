@@ -78,7 +78,7 @@
 		</datafield>
 	{/foreach}
 	<datafield tag="856" ind1="4" ind2="0">
-		<subfield code="u">{url router=\PKP\core\PKPApplication::ROUTE_PAGE journal=$journal->getPath() page="article" op="view" path=$article->getBestId()|escape urlLocaleForPage=""}</subfield>
+		<subfield code="u">{url router=PKP\core\PKPApplication::ROUTE_PAGE journal=$journal->getPath() page="article" op="view" path=$article->getBestId()|escape urlLocaleForPage=""}</subfield>
 	</datafield>
 
 	<datafield tag="786" ind1="0" ind2=" ">

@@ -56,7 +56,7 @@
 				{$issue->getIssueIdentification()|strip_unsafe_html}
 			</div>
 			{include file="frontend/objects/issue_toc.tpl" heading="h3"}
-			<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="issue" op="archive"}" class="read_more">
+			<a href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page="issue" op="archive"}" class="read_more">
 				{translate key="journal.viewAllIssues"}
 			</a>
 		</section>
