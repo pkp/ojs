@@ -43,25 +43,19 @@ use PKP\plugins\PluginRegistry;
 use PKP\submission\PKPSubmission;
 use PKP\user\User;
 
-// The statuses.
-define('EXPORT_STATUS_ANY', '');
-define('EXPORT_STATUS_NOT_DEPOSITED', 'notDeposited');
-define('EXPORT_STATUS_MARKEDREGISTERED', 'markedRegistered');
-define('EXPORT_STATUS_REGISTERED', 'registered');
-
-// The actions.
-define('EXPORT_ACTION_EXPORT', 'export');
-define('EXPORT_ACTION_MARKREGISTERED', 'markRegistered');
-define('EXPORT_ACTION_DEPOSIT', 'deposit');
-
-// Configuration errors.
-define('EXPORT_CONFIG_ERROR_SETTINGS', 0x02);
-
 abstract class PubObjectsExportPlugin extends ImportExportPlugin
 {
+    // The statuses
+    public const EXPORT_STATUS_ANY = '';
+    public const EXPORT_STATUS_NOT_DEPOSITED = 'notDeposited';
+    public const EXPORT_STATUS_MARKEDREGISTERED = 'markedRegistered';
+    public const EXPORT_STATUS_REGISTERED = 'registered';
+    // The actions
     public const EXPORT_ACTION_EXPORT = 'export';
     public const EXPORT_ACTION_MARKREGISTERED = 'markRegistered';
     public const EXPORT_ACTION_DEPOSIT = 'deposit';
+    // Configuration errors.
+    public const EXPORT_CONFIG_ERROR_SETTINGS = 2;
 
     /** @var PubObjectCache */
     public $_cache;
@@ -169,7 +163,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
                     }
                     $pluginSetting = $this->getSetting($context->getId(), $fieldName);
                     if (empty($pluginSetting)) {
-                        $configurationErrors[] = EXPORT_CONFIG_ERROR_SETTINGS;
+                        $configurationErrors[] = PubObjectsExportPlugin::EXPORT_CONFIG_ERROR_SETTINGS;
                         break;
                     }
                 }
@@ -252,7 +246,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     {
         $context = $request->getContext();
         $path = ['plugin', $this->getName()];
-        if ($this->_checkForExportAction(EXPORT_ACTION_EXPORT)) {
+        if ($this->_checkForExportAction(PubObjectsExportPlugin::EXPORT_ACTION_EXPORT)) {
             assert($filter != null);
 
             $onlyValidateExport = ($request->getUserVar('onlyValidateExport')) ? true : false;
@@ -288,7 +282,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
                 $fileManager->downloadByPath($exportFileName);
                 $fileManager->deleteByPath($exportFileName);
             }
-        } elseif ($this->_checkForExportAction(EXPORT_ACTION_DEPOSIT)) {
+        } elseif ($this->_checkForExportAction(PubObjectsExportPlugin::EXPORT_ACTION_DEPOSIT)) {
             assert($filter != null);
             // Get the XML
             $exportXml = $this->exportXML($objects, $filter, $context, $noValidation);
@@ -325,7 +319,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
                 // redirect back to the right tab
                 $request->redirect(null, null, null, $path, null, $tab);
             }
-        } elseif ($this->_checkForExportAction(EXPORT_ACTION_MARKREGISTERED)) {
+        } elseif ($this->_checkForExportAction(PubObjectsExportPlugin::EXPORT_ACTION_MARKREGISTERED)) {
             $this->markRegistered($context, $objects);
             if ($shouldRedirect) {
                 // redirect back to the right tab
@@ -409,10 +403,10 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     public function getStatusNames()
     {
         return [
-            EXPORT_STATUS_ANY => __('plugins.importexport.common.status.any'),
-            EXPORT_STATUS_NOT_DEPOSITED => __('plugins.importexport.common.status.notDeposited'),
-            EXPORT_STATUS_MARKEDREGISTERED => __('plugins.importexport.common.status.markedRegistered'),
-            EXPORT_STATUS_REGISTERED => __('plugins.importexport.common.status.registered'),
+            PubObjectsExportPlugin::EXPORT_STATUS_ANY => __('plugins.importexport.common.status.any'),
+            PubObjectsExportPlugin::EXPORT_STATUS_NOT_DEPOSITED => __('plugins.importexport.common.status.notDeposited'),
+            PubObjectsExportPlugin::EXPORT_STATUS_MARKEDREGISTERED => __('plugins.importexport.common.status.markedRegistered'),
+            PubObjectsExportPlugin::EXPORT_STATUS_REGISTERED => __('plugins.importexport.common.status.registered'),
         ];
     }
 
@@ -438,9 +432,9 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
      */
     public function getExportActions($context)
     {
-        $actions = [EXPORT_ACTION_EXPORT, EXPORT_ACTION_MARKREGISTERED];
+        $actions = [PubObjectsExportPlugin::EXPORT_ACTION_EXPORT, PubObjectsExportPlugin::EXPORT_ACTION_MARKREGISTERED];
         if ($this->getSetting($context->getId(), 'username') && $this->getSetting($context->getId(), 'password')) {
-            array_unshift($actions, EXPORT_ACTION_DEPOSIT);
+            array_unshift($actions, PubObjectsExportPlugin::EXPORT_ACTION_DEPOSIT);
         }
         return $actions;
     }
@@ -453,9 +447,9 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     public function getExportActionNames()
     {
         return [
-            EXPORT_ACTION_DEPOSIT => __('plugins.importexport.common.action.register'),
-            EXPORT_ACTION_EXPORT => __('plugins.importexport.common.action.export'),
-            EXPORT_ACTION_MARKREGISTERED => __('plugins.importexport.common.action.markRegistered'),
+            PubObjectsExportPlugin::EXPORT_ACTION_DEPOSIT => __('plugins.importexport.common.action.register'),
+            PubObjectsExportPlugin::EXPORT_ACTION_EXPORT => __('plugins.importexport.common.action.export'),
+            PubObjectsExportPlugin::EXPORT_ACTION_MARKREGISTERED => __('plugins.importexport.common.action.markRegistered'),
         ];
     }
 
@@ -513,7 +507,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     public function markRegistered($context, $objects)
     {
         foreach ($objects as $object) {
-            $object->setData($this->getDepositStatusSettingName(), EXPORT_STATUS_MARKEDREGISTERED);
+            $object->setData($this->getDepositStatusSettingName(), PubObjectsExportPlugin::EXPORT_STATUS_MARKEDREGISTERED);
             $this->updateObject($object);
         }
     }
@@ -567,7 +561,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
      */
     public function addToSchema($hookName, $params)
     {
-        $schema = & $params[0];
+        $schema = &$params[0];
         foreach ($this->_getObjectAdditionalSettings() as $fieldName) {
             $schema->properties->{$fieldName} = (object) [
                 'type' => 'string',
@@ -594,7 +588,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
      */
     public function callbackParseCronTab($hookName, $args)
     {
-        $taskFilesPath = & $args[0];
+        $taskFilesPath = &$args[0];
 
         $scheduledTasksPath = "{$this->getPluginPath()}/scheduledTasks.xml";
 
@@ -623,7 +617,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
             null,
             null,
             $this->getDepositStatusSettingName(),
-            EXPORT_STATUS_NOT_DEPOSITED,
+            PubObjectsExportPlugin::EXPORT_STATUS_NOT_DEPOSITED,
             null
         );
         return $articles->toArray();
@@ -932,4 +926,17 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
 
 if (!PKP_STRICT_MODE) {
     class_alias('\APP\plugins\PubObjectsExportPlugin', '\PubObjectsExportPlugin');
+
+    foreach ([
+        'EXPORT_STATUS_ANY',
+        'EXPORT_STATUS_NOT_DEPOSITED',
+        'EXPORT_STATUS_MARKEDREGISTERED',
+        'EXPORT_STATUS_REGISTERED',
+        'EXPORT_ACTION_EXPORT',
+        'EXPORT_ACTION_MARKREGISTERED',
+        'EXPORT_ACTION_DEPOSIT',
+        'EXPORT_CONFIG_ERROR_SETTINGS',
+    ] as $constantName) {
+        define($constantName, constant('\PubObjectsExportPlugin::' . $constantName));
+    }
 }

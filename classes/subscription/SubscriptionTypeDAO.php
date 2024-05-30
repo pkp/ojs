@@ -322,12 +322,12 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
      */
     public function getByJournalId($journalId, $rangeInfo = null)
     {
-        $result = $this->retrieveRange(
-            $sql = 'SELECT * FROM subscription_types WHERE journal_id = ? ORDER BY seq',
-            $params = [(int) $journalId],
-            $rangeInfo
-        );
-        return new DAOResultFactory($result, $this, '_fromRow', [], $sql, $params, $rangeInfo); // Counted in subscription type grid paging
+        $q = DB::table('subscription_types', 'st')
+            ->where('journal_id', '=', $journalId)
+            ->orderBy('st.seq')
+            ->select('st.*');
+        $result = $this->retrieveRange($q, [], $rangeInfo);
+        return new DAOResultFactory($result, $this, '_fromRow', [], $q, [], $rangeInfo); // Counted in subscription type grid paging
     }
 
     /**

@@ -137,7 +137,7 @@ class SubscriberSelectGridHandler extends GridHandler
 
         $users = $userCollector->getMany();
 
-        $totalCount = $userCollector->limit(null)->offset(null)->getCount();
+        $totalCount = $userCollector->getCount();
         return new \PKP\core\VirtualArrayIterator(iterator_to_array($users, true), $totalCount, $rangeInfo->getPage(), $rangeInfo->getCount());
     }
 
