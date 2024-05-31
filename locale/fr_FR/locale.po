@@ -2,13 +2,14 @@
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
 # Germán Huélamo Bautista <germanhuelamo@gmail.com>, 2024.
 # Pierre Couchet <pierre.couchet@gmail.com>, 2024.
+# Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:24+00:00\n"
-"PO-Revision-Date: 2024-05-10 23:21+0000\n"
-"Last-Translator: Pierre Couchet <pierre.couchet@gmail.com>\n"
+"PO-Revision-Date: 2024-05-31 14:10+0000\n"
+"Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/locale/fr_FR/"
 ">\n"
 "Language: fr_FR\n"
@@ -1929,7 +1930,7 @@ msgid "payment.requestPublicationFee"
 msgstr "Prix de publication  ({$feeAmount})"
 
 msgid "payment.requestPublicationFee.notEnabled"
-msgstr "Aucun frais de publication n'est appliqué."
+msgstr "Frais d'abonnement désactivé."
 
 msgid "payment.notFound"
 msgstr ""
