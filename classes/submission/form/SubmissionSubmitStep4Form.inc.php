@@ -38,39 +38,17 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form {
 		$submission = $this->submission;
 		// Send author notification email
 		import('classes.mail.ArticleMailTemplate');
-		$mail = new ArticleMailTemplate($submission, 'SUBMISSION_ACK', null, null, false);
-		$authorMail = new ArticleMailTemplate($submission, 'SUBMISSION_ACK_NOT_USER', null, null, false);
-
 		$request = Application::get()->getRequest();
 		$context = $request->getContext();
 		$router = $request->getRouter();
+		$user = $request->getUser();
+
+		$mail = new ArticleMailTemplate($submission, 'SUBMISSION_ACK', null, null, false);
 		if ($mail->isEnabled()) {
 			// submission ack emails should be from the contact.
 			$mail->setFrom($this->context->getData('contactEmail'), $this->context->getData('contactName'));
-			$authorMail->setFrom($this->context->getData('contactEmail'), $this->context->getData('contactName'));
-
-			$user = $request->getUser();
-			$primaryAuthor = $submission->getPrimaryAuthor();
-			if (!isset($primaryAuthor)) {
-				$authors = $submission->getAuthors();
-				$primaryAuthor = $authors[0];
-			}
 			$mail->addRecipient($user->getEmail(), $user->getFullName());
 
-			if ($user->getEmail() != $primaryAuthor->getEmail()) {
-				$authorMail->addRecipient($primaryAuthor->getEmail(), $primaryAuthor->getFullName());
-			}
-
-			$assignedAuthors = $submission->getAuthors();
-
-			foreach ($assignedAuthors as $author) {
-				$authorEmail = $author->getEmail();
-				// only add the author email if they have not already been added as the primary author
-				// or user creating the submission.
-				if ($authorEmail != $primaryAuthor->getEmail() && $authorEmail != $user->getEmail()) {
-					$authorMail->addRecipient($author->getEmail(), $author->getFullName());
-				}
-			}
 			$mail->bccAssignedSubEditors($submission->getId(), WORKFLOW_STAGE_ID_SUBMISSION);
 
 			$mail->assignParams([
@@ -80,24 +58,46 @@ class SubmissionSubmitStep4Form extends PKPSubmissionSubmitStep4Form {
 				'submissionUrl' => $router->url($request, null, 'authorDashboard', 'submission', $submission->getId()),
 			]);
 
-			$authorMail->assignParams([
-				'submitterName' => htmlspecialchars($user->getFullName()),
-				'editorialContactSignature' => htmlspecialchars($context->getData('contactName')),
-			]);
-
 			if (!$mail->send($request)) {
 				import('classes.notification.NotificationManager');
 				$notificationMgr = new NotificationManager();
 				$notificationMgr->createTrivialNotification($request->getUser()->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('email.compose.error')));
 			}
+		}
 
-			$recipients = $authorMail->getRecipients();
-			if (!empty($recipients)) {
-				if (!$authorMail->send($request)) {
-					import('classes.notification.NotificationManager');
-					$notificationMgr = new NotificationManager();
-					$notificationMgr->createTrivialNotification($request->getUser()->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('email.compose.error')));
+		$authorMail = new ArticleMailTemplate($submission, 'SUBMISSION_ACK_NOT_USER', null, null, false);
+		if ($authorMail->isEnabled()) {
+			$authorMail->setFrom($this->context->getData('contactEmail'), $this->context->getData('contactName'));
+
+			$primaryAuthor = $submission->getPrimaryAuthor();
+			if (!isset($primaryAuthor)) {
+				$authors = $submission->getAuthors();
+				$primaryAuthor = $authors[0];
+			}
+
+			if ($user->getEmail() != $primaryAuthor->getEmail()) {
+				$authorMail->addRecipient($primaryAuthor->getEmail(), $primaryAuthor->getFullName());
+			}
+
+			$assignedAuthors = $submission->getAuthors();
+			foreach ($assignedAuthors as $author) {
+				$authorEmail = $author->getEmail();
+				// only add the author email if they have not already been added as the primary author
+				// or user creating the submission.
+				if ($authorEmail != $primaryAuthor->getEmail() && $authorEmail != $user->getEmail()) {
+					$authorMail->addRecipient($author->getEmail(), $author->getFullName());
 				}
+			}
+
+			$authorMail->assignParams([
+				'submitterName' => htmlspecialchars($user->getFullName()),
+				'editorialContactSignature' => htmlspecialchars($context->getData('contactName')),
+			]);
+
+			if (!empty($authorMail->getRecipients()) && !$authorMail->send($request)) {
+				import('classes.notification.NotificationManager');
+				$notificationMgr = new NotificationManager();
+				$notificationMgr->createTrivialNotification($request->getUser()->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('email.compose.error')));
 			}
 		}
 
