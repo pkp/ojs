@@ -152,7 +152,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm {
 		// Send notification email
 		if ($this->getData('notifyEmail')) {
 			$mail = $this->_prepareNotificationEmail('SUBSCRIPTION_NOTIFY');
-			if (!$mail->send()) {
+			if ($mail->isEnabled() && !$mail->send()) {
 				import('classes.notification.NotificationManager');
 				$notificationMgr = new NotificationManager();
 				$request = Application::get()->getRequest();

@@ -73,7 +73,9 @@ class SubscriptionExpiryReminder extends ScheduledTask {
 			'username' => htmlspecialchars($user->getUsername()),
 			'subscriptionContactSignature' => nl2br($subscriptionContactSignature)
 		]);
-		$mail->send();
+		if ($mail->isEnabled()) {
+			$mail->send();
+		}
 	}
 
 	/**
