@@ -16,6 +16,6 @@
  * @brief Handle API requests for invitations.
  */
 
-use PKP\API\v1\invitations\PKPInvitationController;
+use PKP\API\v1\invitations\InvitationController;
 
-return new \PKP\handler\APIHandler(new PKPInvitationController());
+return new \PKP\handler\APIHandler(new InvitationController());
