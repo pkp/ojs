@@ -61,7 +61,7 @@ class ReviewerHandler extends PKPReviewerHandler
             $accessKeyCode = $request->getUserVar('key');
             if ($accessKeyCode) {
                 $invitation = Repo::invitation()
-                    ->getByMD5Key($accessKeyCode);
+                    ->getByKey($accessKeyCode);
 
                 if (isset($invitation)) {
                     $invitation->acceptHandle($request);
