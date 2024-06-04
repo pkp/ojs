@@ -140,6 +140,9 @@ class Collector implements CollectorInterface
     public function orderBy(string $orderByConstant): static
     {
         $this->resultOrderings = match ($orderByConstant) {
+            static::ORDERBY_DATE_PUBLISHED => [
+                ['orderBy' => 'i.date_published', 'direction' => static::ORDER_DIR_DESC]
+            ],
             static::ORDERBY_LAST_MODIFIED => [
                 ['orderBy' => 'i.last_modified', 'direction' => static::ORDER_DIR_DESC]
             ],
