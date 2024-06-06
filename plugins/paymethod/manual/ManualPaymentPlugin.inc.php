@@ -156,7 +156,9 @@ class ManualPaymentPlugin extends PaymethodPlugin {
 					'itemCost' => htmlspecialchars($queuedPayment->getAmount()),
 					'itemCurrencyCode' => $queuedPayment->getCurrencyCode()
 				));
-				$mail->send();
+				if ($mail->isEnabled()) {
+					$mail->send();
+				}
 
 				$templateMgr->assign(array(
 					'currentUrl' => $request->url(null, null, 'payment', 'plugin', array('notify', $queuedPaymentId)),

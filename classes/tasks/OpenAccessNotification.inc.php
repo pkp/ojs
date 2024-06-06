@@ -67,7 +67,9 @@ class OpenAccessNotification extends ScheduledTask {
 			while ($user = $users->next()) {
 				$email->addBcc($user->getEmail(), $user->getFullName());
 			}
-			$email->send();
+			if ($email->isEnabled()) {
+				$email->send();
+			}
 		}
 	}
 
