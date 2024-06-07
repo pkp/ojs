@@ -11,7 +11,7 @@ See config.TEMPLATE.inc.php for a description and examples of all supported
 configuration parameters.
 
 New config.inc.php parameters added for general:
-    - app_key (default value: ''), application specific key will used internally for encryption/decryption
+    - app_key (default value: ''), application specific key will used internally for encryption/decryption. This will be automatically added at upgrade.
 
 New config.inc.php parameters added for security:
     - cipher (default value: ''), cipher algorithm used to generate app key and encryption purpose
