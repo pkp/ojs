@@ -1625,12 +1625,6 @@ msgstr "O reviji"
 msgid "about.history"
 msgstr "Zgodovina revije"
 
-msgid "about.editorialTeam"
-msgstr "Uredništvo"
-
-msgid "about.editorialTeam.biography"
-msgstr "Biografija"
-
 msgid "about.editorialPolicies"
 msgstr "Uredniška politika"
 

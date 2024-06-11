@@ -411,9 +411,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Настройки за списание"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Редакторски екип"
-
 msgid "manager.setup.homepageContent"
 msgstr "Съдържание на заглавната страница на списанието"
 
@@ -793,14 +790,6 @@ msgstr ""
 
 msgid "manager.setup.contextTitle"
 msgstr "Заглавие на списанието"
-
-msgid "manager.setup.keyInfo"
-msgstr "Ключова информация"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Предоставете кратко описание на вашето списание и посочете редактори, "
-"управляващи директори и други членове на вашия редакторски екип."
 
 msgid "manager.setup.labelName"
 msgstr "Име на етикета"

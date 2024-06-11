@@ -420,9 +420,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Configuració"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Equip editorial"
-
 msgid "manager.setup.homepageContent"
 msgstr "Contingut de la pàgina d'inici de la revista"
 
@@ -809,14 +806,6 @@ msgstr ""
 
 msgid "manager.setup.contextTitle"
 msgstr "Títol de la revista"
-
-msgid "manager.setup.keyInfo"
-msgstr "Informació clau"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Proporcioneu una breu descripció de la revista i identifiqueu els editors/"
-"es, els directors/es administratius i altres membres de l'equip editorial."
 
 msgid "manager.setup.labelName"
 msgstr "Nom de l’etiqueta"

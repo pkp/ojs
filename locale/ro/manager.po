@@ -406,9 +406,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Setări jurnal"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Echipa editorială"
-
 msgid "manager.setup.homepageContent"
 msgstr "Conținutul paginii de pornire a jurnalului"
 
@@ -785,14 +782,6 @@ msgstr ""
 
 msgid "manager.setup.contextTitle"
 msgstr "Titlul jurnalului"
-
-msgid "manager.setup.keyInfo"
-msgstr "Informație cheie"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Oferiți o scurtă descriere a jurnalului dvs. și identificați editorii, "
-"directorii manageri și alți membri ai echipei dvs. de redacție."
 
 msgid "manager.setup.labelName"
 msgstr "Numele etichetei"

@@ -1644,12 +1644,6 @@ msgstr "O czasopiśmie"
 msgid "about.history"
 msgstr "Historia czasopisma"
 
-msgid "about.editorialTeam"
-msgstr "Zespół redakcyjny"
-
-msgid "about.editorialTeam.biography"
-msgstr "Biogram"
-
 msgid "about.editorialPolicies"
 msgstr "Zasady"
 

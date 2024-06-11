@@ -412,9 +412,6 @@ msgstr "Begræns ordantal for resumé i denne sektion (0 for ingen grænse)"
 msgid "manager.setup"
 msgstr "Tidsskriftskonfiguration"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Redaktionsgruppe"
-
 msgid "manager.setup.homepageContent"
 msgstr "Indhold på tidsskriftshjemmeside"
 
@@ -788,14 +785,6 @@ msgstr ""
 
 msgid "manager.setup.contextTitle"
 msgstr "Titel på tidsskrift"
-
-msgid "manager.setup.keyInfo"
-msgstr "Nøgleinformation"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Giv en kort beskrivelse af dit tidsskrift og identificer redaktører, "
-"tidsskriftschefer og andre medlemmer af din redaktion."
 
 msgid "manager.setup.labelName"
 msgstr "Etiketnavn"

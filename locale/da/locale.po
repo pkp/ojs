@@ -1661,12 +1661,6 @@ msgstr "Om tidsskriftet"
 msgid "about.history"
 msgstr "Tidsskriftshistorik"
 
-msgid "about.editorialTeam"
-msgstr "Redaktionsgruppe"
-
-msgid "about.editorialTeam.biography"
-msgstr "Biografi"
-
 msgid "about.editorialPolicies"
 msgstr "Redaktionelle politikker"
 

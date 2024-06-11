@@ -1506,12 +1506,6 @@ msgstr "About the Journal"
 msgid "about.history"
 msgstr "Journal History"
 
-msgid "about.editorialTeam"
-msgstr "Editorial Team"
-
-msgid "about.editorialTeam.biography"
-msgstr "Biography"
-
 msgid "about.editorialPolicies"
 msgstr "Editorial Policies"
 

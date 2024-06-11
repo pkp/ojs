@@ -413,9 +413,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Настройки журнала"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Редакция"
-
 msgid "manager.setup.homepageContent"
 msgstr "Контент главной страницы журнала"
 
@@ -796,14 +793,6 @@ msgstr ""
 
 msgid "manager.setup.contextTitle"
 msgstr "Название журнала"
-
-msgid "manager.setup.keyInfo"
-msgstr "Ключевая информация"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Введите краткое описание журнала и укажите редакторов, управляющих и других "
-"членов редколлегии."
 
 msgid "manager.setup.labelName"
 msgstr "Название метки"

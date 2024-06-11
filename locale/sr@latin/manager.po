@@ -396,9 +396,6 @@ msgstr "Ograniči broj reči za apstrakt za ovu sekciju (0 za bez ograničenja)"
 msgid "manager.setup"
 msgstr "Podešavanja časopisa"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Časopis uređuju"
-
 msgid "manager.setup.homepageContent"
 msgstr "Sadržaj početne strane časopisa"
 
@@ -762,12 +759,6 @@ msgstr ""
 
 msgid "manager.setup.contextTitle"
 msgstr "Naslov časopisa"
-
-msgid "manager.setup.keyInfo"
-msgstr ""
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
 
 msgid "manager.setup.labelName"
 msgstr "Ime etikete"

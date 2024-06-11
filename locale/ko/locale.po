@@ -1457,12 +1457,6 @@ msgstr "학술지 소개"
 msgid "about.history"
 msgstr "학술지 이력"
 
-msgid "about.editorialTeam"
-msgstr "편집위원회"
-
-msgid "about.editorialTeam.biography"
-msgstr ""
-
 msgid "about.editorialPolicies"
 msgstr "편집 규정"
 

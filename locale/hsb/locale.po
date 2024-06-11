@@ -152,12 +152,6 @@ msgstr "Kontakt"
 msgid "about.aboutContext"
 msgstr "Wo časopisu"
 
-msgid "about.editorialTeam"
-msgstr "Redakcija"
-
-msgid "about.editorialTeam.biography"
-msgstr "Biografija"
-
 msgid "about.focusAndScope"
 msgstr "Koncept"
 

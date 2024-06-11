@@ -1423,12 +1423,6 @@ msgstr "關於期刊"
 msgid "about.history"
 msgstr "期刊歷史"
 
-msgid "about.editorialTeam"
-msgstr "編輯委員會"
-
-msgid "about.editorialTeam.biography"
-msgstr "發展史"
-
 msgid "about.editorialPolicies"
 msgstr "編輯政策"
 

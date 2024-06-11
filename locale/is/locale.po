@@ -1586,12 +1586,6 @@ msgstr "Um tímaritið"
 msgid "about.history"
 msgstr "Saga tímaritsins"
 
-msgid "about.editorialTeam"
-msgstr "Ritstjórnarteymi"
-
-msgid "about.editorialTeam.biography"
-msgstr "Ágrip (bio)"
-
 msgid "about.editorialPolicies"
 msgstr "Ritstjórnarstefna"
 

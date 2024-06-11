@@ -1649,12 +1649,6 @@ msgstr "Om tidsskriftet"
 msgid "about.history"
 msgstr "Tidsskriftets historie"
 
-msgid "about.editorialTeam"
-msgstr "Redaksjon"
-
-msgid "about.editorialTeam.biography"
-msgstr "Biografi"
-
 msgid "about.editorialPolicies"
 msgstr "Redaksjonelle retningslinjer"
 

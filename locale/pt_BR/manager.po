@@ -413,9 +413,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Configuração"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Equipe Editorial"
-
 msgid "manager.setup.homepageContent"
 msgstr "Página Inicial da Revista"
 
@@ -791,14 +788,6 @@ msgstr ""
 
 msgid "manager.setup.contextTitle"
 msgstr "Título"
-
-msgid "manager.setup.keyInfo"
-msgstr "Informação chave"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Forneça uma breve descrição da sua revista e identifique editores, diretores "
-"administrativos e outros membros da sua equipe editorial."
 
 msgid "manager.setup.labelName"
 msgstr "Rótulo"

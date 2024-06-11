@@ -1393,12 +1393,6 @@ msgstr "Rreth Revistës"
 msgid "about.history"
 msgstr "Historia e Revistës"
 
-msgid "about.editorialTeam"
-msgstr "Redaksia"
-
-msgid "about.editorialTeam.biography"
-msgstr "Biografia"
-
 msgid "about.editorialPolicies"
 msgstr "Politikat Editoriale"
 

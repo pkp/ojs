@@ -326,9 +326,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr ""
 
-msgid "manager.setup.editorialTeam"
-msgstr ""
-
 msgid "manager.setup.homepageContent"
 msgstr ""
 
@@ -624,12 +621,6 @@ msgid "manager.setup.journalThumbnail.description"
 msgstr ""
 
 msgid "manager.setup.contextTitle"
-msgstr ""
-
-msgid "manager.setup.keyInfo"
-msgstr ""
-
-msgid "manager.setup.keyInfo.description"
 msgstr ""
 
 msgid "manager.setup.labelName"

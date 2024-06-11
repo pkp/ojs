@@ -403,9 +403,6 @@ msgstr "Mugatu atal honetako laburpenen hitz kopurua (0 mugarik ez jartzeko):"
 msgid "manager.setup"
 msgstr "Konfigurazioa"
 
-msgid "manager.setup.editorialTeam"
-msgstr ""
-
 msgid "manager.setup.homepageContent"
 msgstr ""
 
@@ -767,12 +764,6 @@ msgstr ""
 
 msgid "manager.setup.contextTitle"
 msgstr "Aldizkariaren titulua"
-
-msgid "manager.setup.keyInfo"
-msgstr ""
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
 
 msgid "manager.setup.labelName"
 msgstr "Etiketa-izena"

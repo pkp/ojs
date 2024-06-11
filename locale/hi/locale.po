@@ -1807,12 +1807,6 @@ msgstr "जर्नल के बारे में"
 msgid "about.history"
 msgstr "जर्नल इतिहास"
 
-msgid "about.editorialTeam"
-msgstr "संपादकीय टीम"
-
-msgid "about.editorialTeam.biography"
-msgstr "जीवनी"
-
 msgid "about.editorialPolicies"
 msgstr "संपादकीय नीतियां"
 
