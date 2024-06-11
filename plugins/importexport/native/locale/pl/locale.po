@@ -1,12 +1,13 @@
 # rl <biuro@fimagis.pl>, 2022.
 # Dariusz Lis <Dariusz@Lis.PL>, 2023.
+# Jarek <j.wagner@kmti.uz.zgora.pl>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-30T17:56:56+00:00\n"
-"PO-Revision-Date: 2023-04-26 14:01+0000\n"
-"Last-Translator: Dariusz Lis <Dariusz@Lis.PL>\n"
+"PO-Revision-Date: 2024-05-17 14:59+0000\n"
+"Last-Translator: Jarek <j.wagner@kmti.uz.zgora.pl>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-native/pl/>\n"
 "Language: pl\n"
@@ -15,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.importexport.native.displayName"
 msgstr "Wtyczka natywnego XML"
@@ -80,9 +81,10 @@ msgstr ""
 msgid "plugins.importexport.native.error.unknownSection"
 msgstr "Nieznany dział {$param}"
 
-#, fuzzy
 msgid "plugins.importexport.native.error.unknownUser"
-msgstr "Określony użytkownik nie istnieje: \"{$userName}\"."
+msgstr ""
+"Należy wprowadzić użytkownika, używając parametru polecenia --username lub "
+"-u."
 
 msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
 msgstr "Tytuł działu \"{$section1Title}\" oraz tytuł działu \"{$section2Title}\" w numerze \"{$issueTitle}\" połączyły się z różnymi istniejącymi działami w czasopiśmie."
@@ -107,3 +109,9 @@ msgstr "Brakuje elementu identyfikatora w artykule \"{$articleTitle}\"."
 
 msgid "plugins.importexport.native.import.error.publishedDateMissing"
 msgstr "Artykuł \"{$articleTitle}\" jest umieszczony w numerze, ale nie posiada daty publikacji."
+
+msgid "plugins.importexport.common.error.invalidFileExtension"
+msgstr "Obraz okładki został określony z nieprawidłowym rozszerzeniem pliku."
+
+msgid "plugins.importexport.common.error.coverImageNameUnspecified"
+msgstr "Obraz okładki został osadzony bez określenia nazwy."

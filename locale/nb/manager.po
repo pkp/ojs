@@ -2,21 +2,23 @@
 # Tormod Strømme <tormod.stromme@uib.no>, 2022.
 # Eirik Hanssen <eirikhanssen79@gmail.com>, 2022.
 # FRITT, University of Oslo Library <fritt-info@journals.uio.no>, 2022.
+# Johanna Skaug <johanna.skaug@ub.uio.no>, 2024.
+# "My L. Bjørnflaten" <myl@uio.no>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2022-10-18 22:01+0000\n"
-"Last-Translator: Eirik Hanssen <eirikhanssen79@gmail.com>\n"
+"PO-Revision-Date: 2024-05-14 06:11+0000\n"
+"Last-Translator: Johanna Skaug <johanna.skaug@ub.uio.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/nb_NO/>\n"
-"Language: nb_NO\n"
+"Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "manager.distribution.access"
 msgstr "Tilgang"
@@ -2067,7 +2069,7 @@ msgstr ""
 "på følgende parametere."
 
 msgid "stats.context.downloadReport.downloadContext.description"
-msgstr ""
+msgstr "Antall visninger av tidsskriftets forside."
 
 msgid "stats.context.downloadReport.downloadContext"
 msgstr ""
@@ -2076,7 +2078,7 @@ msgid "stats.issueStats"
 msgstr ""
 
 msgid "stats.issues.details"
-msgstr ""
+msgstr "Visninger og nedlastinger"
 
 msgid "stats.issues.searchIssueDescription"
 msgstr ""
@@ -2084,23 +2086,33 @@ msgstr ""
 msgid "stats.issues.none"
 msgstr ""
 
+#, fuzzy
 msgid "stats.issues.downloadReport.description"
 msgstr ""
+"Last ned CSV/Excel-tabell med bruksstatistikk for denne utgivelsen som "
+"treffer følgende parametre."
 
+#, fuzzy
 msgid "stats.issues.downloadReport.downloadIssues.description"
 msgstr ""
+"Antall visninger av innholdsfortegnelser og nedlastninger av "
+"publiseringsversjoner for hver utgivelse."
 
 msgid "stats.issues.downloadReport.downloadIssues"
 msgstr ""
 
 msgid "stats.issues.countOfTotal"
-msgstr ""
+msgstr "{$count} av {$total} nummer"
 
 msgid "stats.issues.tooltip.label"
 msgstr ""
 
+#, fuzzy
 msgid "stats.issues.tooltip.text"
 msgstr ""
+"<strong>Visninger</strong>: Antall besøkende til utgivelsens "
+"innholdsfortegnelse.<br><strong>Nedlastninger</strong>: Antall nedlastninger "
+"av utgivelsens publiseringsversjon, hvis en sådan finnes."
 
 msgid "stats.publicationStats"
 msgstr "Artikkelstatistikk"
@@ -2142,7 +2154,7 @@ msgstr "Antall sammendragsvisninger og filnedlastinger for hver artikkel."
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
 "Send en kopi av bekreftelses-eposten i forbindelse med innlevering til dette "
-"tidsskriftets kontakteperson."
+"tidsskriftets kontaktperson."
 
 msgid ""
 "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled."
@@ -2570,8 +2582,9 @@ msgstr ""
 "Denne e-posten sendes automatisk til registrerte brukere når et nytt nummer "
 "publiseres."
 
+#, fuzzy
 msgid "manager.manageEmails.description"
-msgstr ""
+msgstr "Rediger beskjedene som sendes som e-post fra dette tidsskriftet."
 
 msgid "mailable.layoutComplete.name"
 msgstr ""

@@ -1,17 +1,18 @@
 # Nguyen Xuan Giao <giaonxb@gmail.com>, 2021.
 # Bùi Văn Khôi <buivankhoi@gmail.com>, 2022.
+# dat a <tetra.dragon197@gmail.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-16 18:38+0000\n"
-"Last-Translator: Bùi Văn Khôi <buivankhoi@gmail.com>\n"
+"PO-Revision-Date: 2024-05-21 01:41+0000\n"
+"Last-Translator: dat a <tetra.dragon197@gmail.com>\n"
 "Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/author/"
-"vi_VN/>\n"
-"Language: vi_VN\n"
+"vi/>\n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "author.submit"
 msgstr "Gửi bài mới"
@@ -30,7 +31,7 @@ msgstr "Bắt đầu một bài gửi mới"
 
 msgid "author.submit.startHereLink"
 msgstr ""
-"<a href=\"{$submitUrl}\" class=\"action\">Click here</a> để đi đến bước một "
+"<a href=\"{$submitUrl}\" class=\"action\">Bấm vào đây</a> để đi đến bước một "
 "trong quy trình gửi bài năm bước."
 
 msgid "author.submit.step1"
@@ -83,7 +84,7 @@ msgstr ""
 "Nếu bạn đang xin miễn, bạn phải nhập một lý do vào chỗ trống được cung cấp."
 
 msgid "author.submissions.queuedReviewSubsequent"
-msgstr "Phản biện Vòng  {$round}"
+msgstr "Phản biện Vòng {$round}"
 
 msgid "author.submissions.queuedReviewRevisions"
 msgstr "Đang phản biện: Yêu cầu sửa chữa"

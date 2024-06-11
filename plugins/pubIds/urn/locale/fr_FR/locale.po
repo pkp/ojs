@@ -1,8 +1,9 @@
 # Simon Mathdoc <karacaca38@outlook.fr>, 2021.
+# Germán Huélamo Bautista <germanhuelamo@gmail.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-22 04:23+0000\n"
-"Last-Translator: Simon Mathdoc <karacaca38@outlook.fr>\n"
+"PO-Revision-Date: 2024-05-10 23:21+0000\n"
+"Last-Translator: Germán Huélamo Bautista <germanhuelamo@gmail.com>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
 "fr_FR/>\n"
 "Language: fr_FR\n"
@@ -10,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.pubIds.urn.displayName"
 msgstr "URN"
@@ -54,163 +55,203 @@ msgstr ""
 
 msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
 msgstr ""
+"Le préfixe URN doit se présenter sous la forme \"urn:\"&lt;NID&gt;\":\""
+"&lt;NSS&gt;."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
-msgstr ""
+msgstr "Suffixe URN"
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
 msgstr ""
+"Un suffixe URN peut prendre n'importe quelle forme, mais doit être unique "
+"parmi tous les objets de publication auxquels le même préfixe URN a été "
+"attribué :"
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
 msgstr ""
+"Utilisez le modèle saisi ci-dessous pour générer des suffixes URN. Utilisez "
+"%j pour les initiales de la revue, %v pour le volume, %i pour le numéro, %Y "
+"pour l'année, %a pour l'identifiant OJS de l'article, %g pour l'identifiant "
+"OJS de l'épreuve, %f pour l'identifiant OJS du fichier, %p pour le numéro de "
+"page et %x pour « Custom Identifier » (identifiant personnalisé)."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
 msgstr ""
+"Par exemple, vol%viss%ipp%p permet de créer le suffixe URN « ol3iss2pp230 »."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
-msgstr ""
+msgstr "pour les numéros"
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
-msgstr ""
+msgstr "pour les articles"
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
-msgstr ""
+msgstr "pour les épreuves"
 
 msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
-msgstr ""
+msgstr "Veuillez indiquer le modèle de suffixe URN pour les numéros."
 
 msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
-msgstr ""
+msgstr "Veuillez indiquer le modèle de suffixe URN pour les articles."
 
 msgid ""
 "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
-msgstr ""
+msgstr "Veuillez indiquer le modèle de suffixe URN pour les épreuves."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
-msgstr ""
+msgstr "Utiliser les modèles par défaut."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
 msgstr ""
+"%j.v%vi%i pour les numéros<br />%j.v%vi%i.%a pour les articles<br /"
+">%j.v%vi%i.%a.g%g pour les épreuves."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
 msgstr ""
+"Saisissez un suffixe URN individuel pour chaque élément publié. Vous "
+"trouverez un champ supplémentaire de saisie URN sur la page de métadonnées "
+"de chaque élément."
 
 msgid "plugins.pubIds.urn.manager.settings.checkNo"
-msgstr ""
+msgstr "Numéro de vérification"
 
 msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
 msgstr ""
+"Le numéro de vérification sera automatiquement calculé et ajouté à la fin, "
+"comme dernier chiffre de l'URN."
 
 msgid "plugins.pubIds.urn.manager.settings.namespace"
-msgstr ""
+msgstr "Espace de noms (Namespace)"
 
 msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
-msgstr ""
+msgstr "Choisir"
 
 msgid "plugins.pubIds.urn.manager.settings.namespace.description"
 msgstr ""
+"L'espace de noms de l'identifiant pérenne généralement nécessaire pour "
+"l'enregistrement (p. ex. à la Deutsche Nationalbibliothek)."
 
 msgid "plugins.pubIds.urn.manager.settings.urnResolver"
-msgstr ""
+msgstr "Résolveur d'URL"
 
 msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
-msgstr ""
+msgstr "(p. ex. https://nbn-resolving.de/)"
 
 msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
-msgstr ""
+msgstr "Veuillez saisir l'URL du résolveur."
 
 msgid "plugins.pubIds.urn.manager.settings.urnReassign"
-msgstr ""
+msgstr "Réassigner les URNs"
 
 msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
 msgstr ""
+"Si vous modifiez votre configuration URN, les URN déjà attribués ne seront "
+"pas affectés. Une fois la configuration URN enregistrée, utilisez ce bouton "
+"pour effacer tous les URNs existants afin que les nouveaux paramètres "
+"s'appliquent à tous les objets existants."
 
 msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
-msgstr ""
+msgstr "Voulez-vous vraiment supprimer tous les URNs existants ?"
 
 msgid "plugins.pubIds.urn.editor.urn"
-msgstr ""
+msgstr "URN"
 
 msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
-msgstr ""
+msgstr "numéro"
 
 msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
-msgstr ""
+msgstr "article"
 
 msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
-msgstr ""
+msgstr "épreuve"
 
 msgid "plugins.pubIds.urn.editor.customSuffixMissing"
 msgstr ""
+"L'URN ne peut pas être attribué car le suffixe personnalisé est manquant."
 
 msgid "plugins.pubIds.urn.editor.patternNotResolved"
-msgstr ""
+msgstr "L'URN ne peut pas être attribué car il contient un modèle non résolu."
 
 msgid "plugins.pubIds.urn.editor.canBeAssigned"
 msgstr ""
+"Vous voyez un aperçu de l'URN. Cochez la case et enregistrez le formulaire "
+"pour attribuer l'URN."
 
 msgid "plugins.pubIds.urn.editor.assigned"
-msgstr ""
+msgstr "L'URN est attribué à ce/cette {$pubObjectType}."
 
 msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
 msgstr ""
+"Le suffixe URN attribué est déjà utilisé pour un autre élément publié. "
+"Veuillez saisir un suffixe URN unique pour chaque élément."
 
 msgid "plugins.pubIds.urn.editor.clearObjectsURN"
-msgstr ""
+msgstr "Supprimer"
 
 msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
-msgstr ""
+msgstr "Voulez-vous vraiment supprimer l'URN existant ?"
 
 msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
-msgstr ""
+msgstr "Supprimer les URNs des éléments du numéro"
 
 msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
-msgstr ""
+msgstr "Voulez-vous vraiment supprimer les URNs des éléments du numéro ?"
 
 msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
 msgstr ""
+"Utilisez l'option suivante pour effacer les URN de tous les objets (articles "
+"et épreuves) actuellement programmés pour ce numéro."
 
 msgid "plugins.pubIds.urn.editor.addCheckNo"
-msgstr ""
+msgstr "Ajouter un numéro de contrôle"
 
 msgid "plugins.pubIds.urn.editor.assignURN"
-msgstr ""
+msgstr "Attribuer l'URN {$pubId} à ce/cette {$pubObjectType}"
 
 msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
 msgstr ""
+"L'URN ne peut pas être attribué car le suffixe personnalisé est manquant."
 
 msgid "plugins.pubIds.urn.editor.assignURN.pattern"
 msgstr ""
+"L'URN {$pubId} ne peut pas être attribué parce qu'il contient un modèle non "
+"résolu."
 
 msgid "plugins.pubIds.urn.editor.assignURN.assigned"
-msgstr ""
+msgstr "L'URN {$pubId} a été attribué."
 
 msgid "plugins.pubIds.urn.form.checkNoRequired"
-msgstr ""
+msgstr "Le numéro de contrôle est manquant."
 
 msgid "plugins.pubIds.urn.editor.urn.description"
-msgstr ""
+msgstr "L'URN doit commencer par {$prefix}."
 
 msgid "plugins.pubIds.urn.editor.urn.assignUrn"
-msgstr ""
+msgstr "Attribuer"
 
 msgid "plugins.pubIds.urn.editor.missingIssue"
 msgstr ""
+"Vous ne pouvez pas générer un URN tant que cette publication n'a pas été "
+"attribuée à un numéro."
 
 msgid "plugins.pubIds.urn.editor.missingParts"
 msgstr ""
+"Vous ne pouvez pas générer un URN car il manque des éléments dans une ou "
+"plusieurs parties du modèle URN . Il faut peut-être attribuer cette "
+"publication à un numéro, définir un identifiant d'éditeur ou saisir des "
+"numéros de pages."
 
 msgid "plugins.pubIds.urn.editor.missingPrefix"
-msgstr ""
+msgstr "L'URN doit commencer par {$urnPrefix}."
 
 msgid "plugins.pubIds.urn.editor.preview.publication"
-msgstr ""
+msgstr "L'URN de cette publication sera {$urn}."
 
 msgid "plugins.pubIds.urn.editor.preview.publication.none"
-msgstr ""
+msgstr "Aucun URN n'a été attribué à cette publication."
 
 msgid "plugins.pubIds.urn.editor.preview.galleys"
-msgstr ""
+msgstr "Épreuve : {$galleyLabel}"
 
 msgid "plugins.pubIds.urn.editor.preview.objects"
-msgstr ""
+msgstr "Élément"

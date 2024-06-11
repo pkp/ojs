@@ -1,16 +1,17 @@
 # Bùi Văn Khôi <buivankhoi@gmail.com>, 2022.
+# dat a <tetra.dragon197@gmail.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-16 18:38+0000\n"
-"Last-Translator: Bùi Văn Khôi <buivankhoi@gmail.com>\n"
-"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/api/"
-"vi_VN/>\n"
-"Language: vi_VN\n"
+"PO-Revision-Date: 2024-05-21 03:53+0000\n"
+"Last-Translator: dat a <tetra.dragon197@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/ojs/api/vi/>"
+"\n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "Thông báo bạn yêu cầu không phải là một phần của tạp chí này."
@@ -19,7 +20,7 @@ msgid "api.emails.403.disabled"
 msgstr "Tính năng thông báo qua email chưa được kích hoạt cho tạp chí này."
 
 msgid "api.submissions.400.wrongContext"
-msgstr ""
+msgstr "Bài nộp bạn yêu cầu không có trong tạp chí này."
 
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Bạn không thể thay đổi tạp chí của một bài nộp."
@@ -77,4 +78,4 @@ msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr "Bạn không thể liên kết một file từ file stage này với một dàn trang."
 
 msgid "api.submission.400.inactiveSection"
-msgstr ""
+msgstr "Phần này không còn nhận được bài gửi nữa."
