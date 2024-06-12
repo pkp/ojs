@@ -1,16 +1,17 @@
 # TAKASHI IMAGIRE <imagire@gmail.com>, 2021.
+# Bjorn-Ole Kamm <pkp_trans@b-ok.de>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-12-12 11:16+0000\n"
-"Last-Translator: TAKASHI IMAGIRE <imagire@gmail.com>\n"
-"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
-"ja_JP/>\n"
-"Language: ja_JP\n"
+"PO-Revision-Date: 2024-06-13 00:08+0000\n"
+"Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
+"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/locale/ja/>"
+"\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "本誌はオンラインでの公開はしていません。"
@@ -53,7 +54,7 @@ msgid "common.journalHomepageImage.altText"
 msgstr "雑誌ホームページ画像"
 
 msgid "doi.manager.settings.publications"
-msgstr ""
+msgstr "論文"
 
 msgid "navigation.journalHelp"
 msgstr "ヘルプ"
