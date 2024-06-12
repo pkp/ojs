@@ -124,4 +124,16 @@ class JournalDAO extends ContextDAO {
 		}
 		return false;
 	}
+
+	/**
+	 * Determines the seq value to be assigned to a new Journal entry.
+	 * @return int The next sequence value for a new journal entry.
+	 */
+	public function getNextSeqValue()
+	{
+		$result = $this->retrieve('SELECT seq FROM journals ORDER BY seq DESC LIMIT 1;');
+
+		return $result->current()->seq ? $result->current()->seq + 1 : 1;
+	}
+
 }
