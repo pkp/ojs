@@ -50,10 +50,8 @@ class Journal extends Context
 
     /**
      * @copydoc \PKP\core\DataObject::getDAO()
-     *
-     * @return JournalDAO
      */
-    public function getDAO()
+    public function getDAO(): JournalDAO
     {
         return DAORegistry::getDAO('JournalDAO');
     }
