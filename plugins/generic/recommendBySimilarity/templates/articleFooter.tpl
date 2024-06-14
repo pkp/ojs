@@ -21,11 +21,11 @@
 					{foreach from=$publication->getData('authors') item=author}
 						{$author->getFullName()|escape},
 					{/foreach}
-					<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE journal=$currentContext->getPath() page="article" op="view" path=$submission->getBestId() urlLocaleForPage=""}">
+					<a href="{url router=PKP\core\PKPApplication::ROUTE_PAGE journal=$currentContext->getPath() page="article" op="view" path=$submission->getBestId() urlLocaleForPage=""}">
 						{$publication->getLocalizedFullTitle(null, 'html')|strip_unsafe_html}
 					</a>
 					{if $issue},
-					<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE journal=$currentContext->getPath() page="issue" op="view" path=$issue->getBestIssueId() urlLocaleForPage=""}">
+					<a href="{url router=PKP\core\PKPApplication::ROUTE_PAGE journal=$currentContext->getPath() page="issue" op="view" path=$issue->getBestIssueId() urlLocaleForPage=""}">
 						{$currentContext->getLocalizedName()|escape}: {$issue->getIssueIdentification()|escape}
 					</a>
 					{/if}

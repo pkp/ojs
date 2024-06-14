@@ -69,7 +69,7 @@
 		</varfield>
 	{/foreach}
 	<varfield id="856" i1="4" i2="0">
-		<subfield label="u">{url router=\PKP\core\PKPApplication::ROUTE_PAGE journal=$journal->getPath() page="article" op="view" path=$article->getBestId()|escape urlLocaleForPage=""}</subfield>
+		<subfield label="u">{url router=PKP\core\PKPApplication::ROUTE_PAGE journal=$journal->getPath() page="article" op="view" path=$article->getBestId()|escape urlLocaleForPage=""}</subfield>
 	</varfield>
 
 	<varfield id="786" i1="0" i2=" ">

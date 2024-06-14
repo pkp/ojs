@@ -37,14 +37,14 @@
 			{if !$allowExport}
 				<div class="pkp_notification" id="dataciteConfigurationErrors">
 					{foreach from=$configurationErrors item=configurationError}
-						{if $configurationError == $smarty.const.EXPORT_CONFIG_ERROR_SETTINGS}
+						{if $configurationError == \APP\plugins\PubObjectsExportPlugin::EXPORT_CONFIG_ERROR_SETTINGS}
 							{include file="controllers/notification/inPlaceNotificationContent.tpl" notificationId=doajConfigurationErrors notificationStyleClass="notifyWarning" notificationTitle="plugins.importexport.common.missingRequirements"|translate notificationContents="plugins.importexport.common.error.pluginNotConfigured"|translate}
 						{/if}
 					{/foreach}
 				</div>
 			{/if}
 			<p><a href="http://www.doaj.org/application/new" target="_blank">{translate key="plugins.importexport.doaj.export.contact"}</a></p>
-			{capture assign=doajSettingsGridUrl}{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT component="grid.settings.plugins.settingsPluginGridHandler" op="manage" plugin="DOAJExportPlugin" category="importexport" verb="index" escape=false}{/capture}
+			{capture assign=doajSettingsGridUrl}{url router=PKP\core\PKPApplication::ROUTE_COMPONENT component="grid.settings.plugins.settingsPluginGridHandler" op="manage" plugin="DOAJExportPlugin" category="importexport" verb="index" escape=false}{/capture}
 			{load_url_in_div id="doajSettingsGridContainer" url=$doajSettingsGridUrl}
 		</div>
 		{if $allowExport}
@@ -59,7 +59,7 @@
 					{csrf}
 					<input type="hidden" name="tab" value="exportSubmissions-tab" />
 					{fbvFormArea id="submissionsXmlForm"}
-						{capture assign=submissionsListGridUrl}{url router=\PKP\core\PKPApplication::ROUTE_COMPONENT component="grid.submissions.ExportPublishedSubmissionsListGridHandler" op="fetchGrid" plugin="doaj" category="importexport" escape=false}{/capture}
+						{capture assign=submissionsListGridUrl}{url router=PKP\core\PKPApplication::ROUTE_COMPONENT component="grid.submissions.ExportPublishedSubmissionsListGridHandler" op="fetchGrid" plugin="doaj" category="importexport" escape=false}{/capture}
 						{load_url_in_div id="submissionsListGridContainer" url=$submissionsListGridUrl}
 						{fbvFormSection list="true"}
 							{fbvElement type="checkbox" id="validation" label="plugins.importexport.common.validation" checked=$validation|default:true}

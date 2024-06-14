@@ -60,12 +60,11 @@ class ReviewerHandler extends PKPReviewerHandler
         if ($context->getData('reviewerAccessKeysEnabled')) {
             $accessKeyCode = $request->getUserVar('key');
             if ($accessKeyCode) {
-                $keyHash = md5($accessKeyCode);
-
-                $invitation = Repo::invitation()->getBOByKeyHash($keyHash);
+                $invitation = Repo::invitation()
+                    ->getByKey($accessKeyCode);
 
                 if (isset($invitation)) {
-                    $invitation->acceptHandle();
+                    $invitation->acceptHandle($request);
                 }
             }
         }

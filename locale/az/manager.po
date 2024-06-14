@@ -308,9 +308,6 @@ msgstr "Bu bölmədə xülasə (abstract) üçün kəlmə sayı (limitsiz: 0)"
 msgid "manager.setup"
 msgstr "Jurnal tənzimləri"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Redaksiya heyəti"
-
 msgid "manager.setup.homepageContent"
 msgstr "Jurnal əsas səhifə məzmunu"
 
@@ -481,9 +478,6 @@ msgstr "Jurnal şəkli (kiçik)"
 
 msgid "manager.setup.contextTitle"
 msgstr "Jurnal başlığı"
-
-msgid "manager.setup.keyInfo"
-msgstr "Əsas məlumat"
 
 msgid "manager.setup.labelName"
 msgstr "Etiket adı"
@@ -1941,11 +1935,6 @@ msgid "manager.setup.journalStyleSheetInvalid"
 msgstr ""
 "Formatlandırma səhifəsi üçün etibarsız fayl formatı. Dəstəklərən fayl "
 "formatı .css dir"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Jurnalın qısa bir açıqlamasını edin və redaktorları, idarə direktorlarını və "
-"redaksiya heyətinizin digər üzvlərini müəyyənləşdirin."
 
 msgid "manager.setup.plnDescription"
 msgstr ""

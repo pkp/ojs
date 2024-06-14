@@ -399,9 +399,6 @@ msgstr "Ogranicz liczbę słów abstraktu dla tego działu (0 = bez limitu)"
 msgid "manager.setup"
 msgstr "Konfiguracja"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Zespół redakcyjny"
-
 msgid "manager.setup.homepageContent"
 msgstr "Zawartość strony głównej czasopisma"
 
@@ -757,14 +754,6 @@ msgstr ""
 
 msgid "manager.setup.contextTitle"
 msgstr "Tytuł czasopisma"
-
-msgid "manager.setup.keyInfo"
-msgstr "Kluczowe informacje"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Dostarcz krótki opis Twojego czasopisma i określ redaktorów, dyrektorów "
-"zarządzających i innych członków Twojego zespołu wydawniczego."
 
 msgid "manager.setup.labelName"
 msgstr "Etykieta"

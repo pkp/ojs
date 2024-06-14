@@ -26,10 +26,10 @@
 						{foreach from=$article->getCurrentPublication()->getData('authors') item=author}
 							{$author->getFullName()|escape},
 						{/foreach}
-						<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE journal=$journal->getPath() page="article" op="view" path=$submission->getBestId() urlLocaleForPage=""}">
+						<a href="{url router=PKP\core\PKPApplication::ROUTE_PAGE journal=$journal->getPath() page="article" op="view" path=$submission->getBestId() urlLocaleForPage=""}">
 							{$publication->getLocalizedFullTitle(null, 'html')|strip_unsafe_html}
 						</a>,
-						<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId() urlLocaleForPage=""}">
+						<a href="{url router=PKP\core\PKPApplication::ROUTE_PAGE journal=$journal->getPath() page="issue" op="view" path=$issue->getBestIssueId() urlLocaleForPage=""}">
 							{$journal->getLocalizedName()|escape}: {$issue->getIssueIdentification()|escape}
 						</a>
 					</li>

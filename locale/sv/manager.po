@@ -404,9 +404,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Tidskriftsinställningar"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Redaktion"
-
 msgid "manager.setup.homepageContent"
 msgstr "Innehåll på tidskriftens förstasida"
 
@@ -772,14 +769,6 @@ msgstr "En liten logotyp för tidskriften som kan användas i tidskriftslistan."
 
 msgid "manager.setup.contextTitle"
 msgstr "Tidskriftens titel"
-
-msgid "manager.setup.keyInfo"
-msgstr "Översiktsinformation"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"En kort beskrivning av din tidskrift samt information om redaktörer, "
-"tidskriftsansvariga och andra medlemmar av din redaktion."
 
 msgid "manager.setup.labelName"
 msgstr "Etikettsnamn"

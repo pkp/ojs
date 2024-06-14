@@ -18,12 +18,11 @@
 
 namespace APP\subscription;
 
-use APP\core\Application;
 use APP\facades\Repo;
+use Illuminate\Database\Query\Builder;
 use PKP\db\DAORegistry;
 use PKP\db\DAOResultFactory;
 use PKP\db\DBResultRange;
-use PKP\facades\Locale;
 use PKP\identity\Identity;
 use PKP\plugins\Hook;
 
@@ -222,172 +221,44 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
      * @param null|mixed $dateFrom
      * @param null|mixed $dateTo
      * @param null|mixed $params
-     *
-     * @return string
      */
-    protected function _generateSearchSQL($status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, &$params = null)
+    protected function applySearchFilters(Builder $query, $status = null, $searchField = null, $searchMatch = null, $search = null, $dateField = null, $dateFrom = null, $dateTo = null, &$params = null)
     {
-        $searchSql = '';
         $userDao = Repo::user()->dao;
         if (!empty($search)) {
-            switch ($searchField) {
-                case Identity::IDENTITY_SETTING_GIVENNAME:
-                    if ($searchMatch === 'is') {
-                        $searchSql = ' AND LOWER(COALESCE(ugl.setting_value,ugpl.setting_value)) = LOWER(?)';
-                    } elseif ($searchMatch === 'contains') {
-                        $searchSql = ' AND LOWER(COALESCE(ugl.setting_value,ugpl.setting_value)) LIKE LOWER(?)';
-                        $search = '%' . $search . '%';
-                    } else { // $searchMatch === 'startsWith'
-                        $searchSql = ' AND LOWER(COALESCE(ugl,ugpl)) LIKE LOWER(?)';
-                        $search = $search . '%';
-                    }
-                    $params[] = $search;
-                    break;
-                case Identity::IDENTITY_SETTING_FAMILYNAME:
-                    if ($searchMatch === 'is') {
-                        $searchSql = ' AND LOWER(COALESCE(ufl.setting_value,ufpl.setting_value)) = LOWER(?)';
-                    } elseif ($searchMatch === 'contains') {
-                        $searchSql = ' AND LOWER(COALESCE(ufl.setting_value,ufpl.setting_value)) LIKE LOWER(?)';
-                        $search = '%' . $search . '%';
-                    } else { // $searchMatch === 'startsWith'
-                        $searchSql = ' AND LOWER(COALESCE(ufl.setting_value,ufpl.setting_value)) LIKE LOWER(?)';
-                        $search = $search . '%';
-                    }
-                    $params[] = $search;
-                    break;
-                case $userDao::USER_FIELD_USERNAME:
-                    if ($searchMatch === 'is') {
-                        $searchSql = ' AND LOWER(u.username) = LOWER(?)';
-                    } elseif ($searchMatch === 'contains') {
-                        $searchSql = ' AND LOWER(u.username) LIKE LOWER(?)';
-                        $search = '%' . $search . '%';
-                    } else { // $searchMatch === 'startsWith'
-                        $searchSql = ' AND LOWER(u.username) LIKE LOWER(?)';
-                        $search = $search . '%';
-                    }
-                    $params[] = $search;
-                    break;
-                case $userDao::USER_FIELD_EMAIL:
-                    if ($searchMatch === 'is') {
-                        $searchSql = ' AND LOWER(u.email) = LOWER(?)';
-                    } elseif ($searchMatch === 'contains') {
-                        $searchSql = ' AND LOWER(u.email) LIKE LOWER(?)';
-                        $search = '%' . $search . '%';
-                    } else { // $searchMatch === 'startsWith'
-                        $searchSql = ' AND LOWER(u.email) LIKE LOWER(?)';
-                        $search = $search . '%';
-                    }
-                    $params[] = $search;
-                    break;
-                case self::SUBSCRIPTION_MEMBERSHIP:
-                    if ($searchMatch === 'is') {
-                        $searchSql = ' AND LOWER(s.membership) = LOWER(?)';
-                    } elseif ($searchMatch === 'contains') {
-                        $searchSql = ' AND LOWER(s.membership) LIKE LOWER(?)';
-                        $search = '%' . $search . '%';
-                    } else { // $searchMatch === 'startsWith'
-                        $searchSql = ' AND LOWER(s.membership) LIKE LOWER(?)';
-                        $search = $search . '%';
-                    }
-                    $params[] = $search;
-                    break;
-                case self::SUBSCRIPTION_REFERENCE_NUMBER:
-                    if ($searchMatch === 'is') {
-                        $searchSql = ' AND LOWER(s.reference_number) = LOWER(?)';
-                    } elseif ($searchMatch === 'contains') {
-                        $searchSql = ' AND LOWER(s.reference_number) LIKE LOWER(?)';
-                        $search = '%' . $search . '%';
-                    } else { // $searchMatch === 'startsWith'
-                        $searchSql = ' AND LOWER(s.reference_number) LIKE LOWER(?)';
-                        $search = $search . '%';
-                    }
-                    $params[] = $search;
-                    break;
-                case self::SUBSCRIPTION_NOTES:
-                    if ($searchMatch === 'is') {
-                        $searchSql = ' AND LOWER(s.notes) = LOWER(?)';
-                    } elseif ($searchMatch === 'contains') {
-                        $searchSql = ' AND LOWER(s.notes) LIKE LOWER(?)';
-                        $search = '%' . $search . '%';
-                    } else { // $searchMatch === 'startsWith'
-                        $searchSql = ' AND LOWER(s.notes) LIKE LOWER(?)';
-                        $search = $search . '%';
-                    }
-                    $params[] = $search;
-                    break;
+            $field = match ($searchField) {
+                Identity::IDENTITY_SETTING_GIVENNAME => 'COALESCE(ugl.setting_value, ugpl.setting_value)',
+                Identity::IDENTITY_SETTING_FAMILYNAME => 'COALESCE(ufl.setting_value, ufpl.setting_value)',
+                $userDao::USER_FIELD_USERNAME => 'u.username',
+                $userDao::USER_FIELD_EMAIL => 'u.email',
+                static::SUBSCRIPTION_MEMBERSHIP => 's.membership',
+                static::SUBSCRIPTION_REFERENCE_NUMBER => 's.reference_number',
+                static::SUBSCRIPTION_NOTES => 's.notes',
+                default => null
+            };
+            if ($field) {
+                match ($searchMatch) {
+                    'is' => $query->whereRaw("LOWER({$field}) = LOWER(?)", [$search]),
+                    'contains' => $query->whereRaw("LOWER({$field}) LIKE LOWER(?)", ["%{$search}%"]),
+                    //startsWith
+                    default => $query->whereRaw("LOWER({$field}) = LOWER(?)", ["{$search}%"])
+                };
             }
         }
 
-        if (!empty($dateFrom) || !empty($dateTo)) {
-            switch ($dateField) {
-                case Subscription::SUBSCRIPTION_DATE_START:
-                    if (!empty($dateFrom)) {
-                        $searchSql .= ' AND s.date_start >= ' . $this->datetimeToDB($dateFrom);
-                    }
-                    if (!empty($dateTo)) {
-                        $searchSql .= ' AND s.date_start <= ' . $this->datetimeToDB($dateTo);
-                    }
-                    break;
-                case Subscription::SUBSCRIPTION_DATE_END:
-                    if (!empty($dateFrom)) {
-                        $searchSql .= ' AND s.date_end >= ' . $this->datetimeToDB($dateFrom);
-                    }
-                    if (!empty($dateTo)) {
-                        $searchSql .= ' AND s.date_end <= ' . $this->datetimeToDB($dateTo);
-                    }
-                    break;
+        if ($dateField) {
+            $field = match ($dateField) {
+                Subscription::SUBSCRIPTION_DATE_START => 's.date_start',
+                Subscription::SUBSCRIPTION_DATE_END => 's.date_end',
+                default => null
+            };
+            if ($field) {
+                $query->when(!empty($dateFrom), fn (Builder $q) => $q->where($field, '>=', $this->datetimeToDB($dateFrom)))
+                    ->when(!empty($dateTo), fn (Builder $q) => $q->where($field, '<=', $this->datetimeToDB($dateTo)));
             }
         }
 
-        if (!empty($status)) {
-            $searchSql .= ' AND s.status = ' . (int) $status;
-        }
-
-        return $searchSql;
-    }
-
-    /**
-     * Return a list of extra parameters to bind to the user fetch queries.
-     *
-     * @return array
-     */
-    public function getFetchParameters()
-    {
-        $locale = Locale::getLocale();
-        // the users register for the site, thus
-        // the site primary locale should be the default locale
-        $site = Application::get()->getRequest()->getSite();
-        $primaryLocale = $site->getPrimaryLocale();
-        return [
-            Identity::IDENTITY_SETTING_GIVENNAME, $locale,
-            Identity::IDENTITY_SETTING_GIVENNAME, $primaryLocale,
-            Identity::IDENTITY_SETTING_FAMILYNAME, $locale,
-            Identity::IDENTITY_SETTING_FAMILYNAME, $primaryLocale,
-        ];
-    }
-
-    /**
-     * Return a SQL snippet of extra columns to fetch during user fetch queries.
-     *
-     * @return string
-     */
-    public function getFetchColumns()
-    {
-        return 'COALESCE(ugl.setting_value, ugpl.setting_value) AS user_given,
-            CASE WHEN ugl.setting_value <> \'\' THEN ufl.setting_value ELSE ufpl.setting_value END AS user_family';
-    }
-
-    /**
-     * Return a SQL snippet of extra joins to include during user fetch queries.
-     *
-     * @return string
-     */
-    public function getFetchJoins()
-    {
-        return 'LEFT JOIN user_settings ugl ON (u.user_id = ugl.user_id AND ugl.setting_name = ? AND ugl.locale = ?)
-            LEFT JOIN user_settings ugpl ON (u.user_id = ugpl.user_id AND ugpl.setting_name = ? AND ugpl.locale = ?)
-            LEFT JOIN user_settings ufl ON (u.user_id = ufl.user_id AND ufl.setting_name = ? AND ufl.locale = ?)
-            LEFT JOIN user_settings ufpl ON (u.user_id = ufpl.user_id AND ufpl.setting_name = ? AND ufpl.locale = ?)';
+        $query->when(!empty($status), fn (Builder $q) => $q->where('s.status', '=', $status));
     }
 
     /**
@@ -441,9 +312,9 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
         $this->update(
             sprintf(
                 'INSERT INTO subscriptions
-				(journal_id, user_id, type_id, date_start, date_end, status, membership, reference_number, notes)
-				VALUES
-				(?, ?, ?, %s, %s, ?, ?, ?, ?)',
+                (journal_id, user_id, type_id, date_start, date_end, status, membership, reference_number, notes)
+                VALUES
+                (?, ?, ?, %s, %s, ?, ?, ?, ?)',
                 $dateStart !== null ? $this->dateToDB($dateStart) : 'null',
                 $dateEnd !== null ? $this->datetimeToDB($dateEnd) : 'null'
             ),
@@ -476,17 +347,17 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
         $this->update(
             sprintf(
                 'UPDATE subscriptions
-				SET
-					journal_id = ?,
-					user_id = ?,
-					type_id = ?,
-					date_start = %s,
-					date_end = %s,
-					status = ?,
-					membership = ?,
-					reference_number = ?,
-					notes = ?
-				WHERE subscription_id = ?',
+                SET
+                    journal_id = ?,
+                    user_id = ?,
+                    type_id = ?,
+                    date_start = %s,
+                    date_end = %s,
+                    status = ?,
+                    membership = ?,
+                    reference_number = ?,
+                    notes = ?
+                WHERE subscription_id = ?',
                 $dateStart !== null ? $this->dateToDB($dateStart) : 'null',
                 $dateEnd !== null ? $this->datetimeToDB($dateEnd) : 'null'
             ),

@@ -400,9 +400,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Наладкі часопіса"
 
-msgid "manager.setup.editorialTeam"
-msgstr ""
-
 msgid "manager.setup.homepageContent"
 msgstr "Кантэнт галоўнай старонкі часопіса"
 
@@ -776,12 +773,6 @@ msgstr ""
 
 msgid "manager.setup.contextTitle"
 msgstr "Назва часопіса"
-
-msgid "manager.setup.keyInfo"
-msgstr ""
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
 
 msgid "manager.setup.labelName"
 msgstr "Назва меткі"

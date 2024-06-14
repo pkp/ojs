@@ -401,9 +401,6 @@ msgstr "Bu bölümde öz (abstract) için kelime sayısı (limitsiz: 0)"
 msgid "manager.setup"
 msgstr "Dergi Ayarları"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Editör Kurulları"
-
 msgid "manager.setup.homepageContent"
 msgstr "Dergi Ana Sayfa İçeriği"
 
@@ -769,14 +766,6 @@ msgstr ""
 
 msgid "manager.setup.contextTitle"
 msgstr "Dergi başlığı"
-
-msgid "manager.setup.keyInfo"
-msgstr "Temel Bilgi"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Derginizin kısa bir açıklamasını yapın ve editörleri, yönetim direktörlerini "
-"ve editör ekibinizin diğer üyelerini belirleyin."
 
 msgid "manager.setup.labelName"
 msgstr "Etiket adı"
@@ -2605,10 +2594,6 @@ msgstr ""
 
 #~ msgid "manager.statistics.statistics.registeredUsers"
 #~ msgstr "Kayıtlı kullanıcılar:"
-
-#~ msgid "manager.setup.editorialTeam.description"
-#~ msgstr ""
-#~ "Yöneticiler, editörler ve dergiyle ilişkili diğer kişileri listeleyin."
 
 #~ msgid "manager.setup.layout"
 #~ msgstr "Dergi Düzeni"

@@ -409,9 +409,6 @@ msgstr ""
 msgid "manager.setup"
 msgstr "Ամսագրի կարգավորումներ"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Խմբագրական կազմ"
-
 msgid "manager.setup.homepageContent"
 msgstr "Ամսագրի գլխավոր էջի բովանդակությունը"
 
@@ -787,14 +784,6 @@ msgstr ""
 
 msgid "manager.setup.contextTitle"
 msgstr "Ամսագրի անվանումը"
-
-msgid "manager.setup.keyInfo"
-msgstr "Հիմնական տեղեկատվություն"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Տրամադրեք ձեր ամսագրի կարճ նկարագրությունը և բացահայտեք խմբագիրներին, "
-"գործադիր տնօրեններին և ձեր խմբագրական թիմի այլ անդամներին:"
 
 msgid "manager.setup.labelName"
 msgstr "Պիտակի անվանումը"

@@ -1637,12 +1637,6 @@ msgstr "ჟურნალის შესახებ"
 msgid "about.history"
 msgstr "ჟურნალის ისტორია"
 
-msgid "about.editorialTeam"
-msgstr "რედაქცია"
-
-msgid "about.editorialTeam.biography"
-msgstr "ბიოგრაფია"
-
 msgid "about.editorialPolicies"
 msgstr "გამომცემლობის პოლიტიკა"
 

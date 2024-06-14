@@ -383,9 +383,6 @@ msgstr "このセクションのアブストラクトの単語数の制限（制
 msgid "manager.setup"
 msgstr "ジャーナル設定"
 
-msgid "manager.setup.editorialTeam"
-msgstr "編集委員会"
-
 msgid "manager.setup.homepageContent"
 msgstr "ジャーナルのホームページのコンテンツ"
 
@@ -745,14 +742,6 @@ msgstr "ジャーナルのリストに使用できる、ジャーナルの小さ
 
 msgid "manager.setup.contextTitle"
 msgstr "ジャーナルタイトル"
-
-msgid "manager.setup.keyInfo"
-msgstr "重要な情報"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"ジャーナルの簡単な説明と、エディター、マネージング・ディレクター、その他の編"
-"集チームのメンバーを記入してください。"
 
 msgid "manager.setup.labelName"
 msgstr "ラベル名"

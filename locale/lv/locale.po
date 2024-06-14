@@ -1637,12 +1637,6 @@ msgstr "Par žurnālu"
 msgid "about.history"
 msgstr "Žurnāla vēsture"
 
-msgid "about.editorialTeam"
-msgstr "Redkolēģija"
-
-msgid "about.editorialTeam.biography"
-msgstr "Biogrāfija"
-
 msgid "about.editorialPolicies"
 msgstr "Redakcijas politika"
 

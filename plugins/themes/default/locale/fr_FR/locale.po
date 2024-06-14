@@ -1,15 +1,16 @@
+# Germán Huélamo Bautista <germanhuelamo@gmail.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-08-21 14:48+0000\n"
-"Last-Translator: Paul Heckler <paul.d.heckler@gmail.com>\n"
-"Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/themes-"
-"default/fr/>\n"
-"Language: fr\n"
+"PO-Revision-Date: 2024-05-10 23:21+0000\n"
+"Last-Translator: Germán Huélamo Bautista <germanhuelamo@gmail.com>\n"
+"Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/fr_FR/>\n"
+"Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.themes.default.name"
 msgstr "Thème par défaut"
@@ -76,22 +77,26 @@ msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
 msgstr "Afficher l'image de la page d'accueil comme arrière-plan de l'en-tête."
 
 msgid "plugins.themes.default.option.displayStats.label"
-msgstr ""
+msgstr "Options d'affichage des statistiques d'utilisation"
 
 msgid "plugins.themes.default.option.displayStats.none"
 msgstr ""
+"Ne pas afficher aux lecteur·rice·s le tableau des statistiques d'utilisation "
+"des soumissions."
 
 msgid "plugins.themes.default.option.displayStats.bar"
 msgstr ""
+"Utiliser un graphique à barres pour afficher les statistiques d'utilisation."
 
 msgid "plugins.themes.default.option.displayStats.line"
 msgstr ""
+"Utiliser un graphique linéaire pour afficher les statistiques d'utilisation."
 
 msgid "plugins.themes.default.displayStats.monthInitials"
-msgstr ""
+msgstr "Janv. Févr. Mars Avr. Mai Juin Juill. Août Sept. Oct. Nov. Déc."
 
 msgid "plugins.themes.default.displayStats.downloads"
-msgstr ""
+msgstr "Téléchargements"
 
 msgid "plugins.themes.default.displayStats.noStats"
-msgstr ""
+msgstr "Les données relatives au téléchargement ne sont pas encore disponibles."

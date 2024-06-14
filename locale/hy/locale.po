@@ -1662,12 +1662,6 @@ msgstr "Ամսագրի մասին"
 msgid "about.history"
 msgstr "Ամսագրի պատմություն"
 
-msgid "about.editorialTeam"
-msgstr "Խմբագրական կազմ"
-
-msgid "about.editorialTeam.biography"
-msgstr "Կենսագրություն"
-
 msgid "about.editorialPolicies"
 msgstr "Խմբագրական քաղաքականություն"
 

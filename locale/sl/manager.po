@@ -396,9 +396,6 @@ msgstr "Omeji število besed v izvlečku v tej rubriki na (0 za neomejeno)"
 msgid "manager.setup"
 msgstr "Nastavitve"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Uredništvo"
-
 msgid "manager.setup.homepageContent"
 msgstr "Vsebina domače strani revije"
 
@@ -762,14 +759,6 @@ msgstr ""
 
 msgid "manager.setup.contextTitle"
 msgstr "Naslov revije"
-
-msgid "manager.setup.keyInfo"
-msgstr "Ključne informacije"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Vnesite kratek opis revije in naštejte urednike, odgovorne urednike in "
-"ostale člane uredniškega odbora."
 
 msgid "manager.setup.labelName"
 msgstr "Ime oznake"
@@ -2566,11 +2555,6 @@ msgid "mailable.paymentRequest.description"
 msgstr ""
 "This automated email is sent to the author to request payment of the "
 "publication fee when their submission is accepted."
-
-#~ msgid "manager.setup.editorialTeam.description"
-#~ msgstr ""
-#~ "Naštejte urednike, odgovorne urednike in ostale posameznike, ki "
-#~ "sodelujejo pri reviji."
 
 #~ msgid "manager.setup.layout"
 #~ msgstr "Izgled revije"

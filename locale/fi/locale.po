@@ -1661,12 +1661,6 @@ msgstr "Tietoa julkaisusta"
 msgid "about.history"
 msgstr "Julkaisun historiaa"
 
-msgid "about.editorialTeam"
-msgstr "Toimituskunta"
-
-msgid "about.editorialTeam.biography"
-msgstr "Biografia"
-
 msgid "about.editorialPolicies"
 msgstr "Toimitukselliset käytännöt"
 

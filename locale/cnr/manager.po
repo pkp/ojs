@@ -372,9 +372,6 @@ msgstr "Broj riječi"
 msgid "manager.setup"
 msgstr "Podešavanja časopisa"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Urednički odbor"
-
 msgid "manager.setup.useStyleSheet"
 msgstr "Style sheet časopisa"
 

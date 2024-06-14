@@ -1663,12 +1663,6 @@ msgstr "Про журнал"
 msgid "about.history"
 msgstr "Історія журналу"
 
-msgid "about.editorialTeam"
-msgstr "Редакційний штат"
-
-msgid "about.editorialTeam.biography"
-msgstr "Біографія"
-
 msgid "about.editorialPolicies"
 msgstr "Редакційна політика"
 

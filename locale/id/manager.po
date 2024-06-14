@@ -409,9 +409,6 @@ msgstr "Batasi jumlah kata abstrak untuk bagian ini (0 jika tidak ada batasan)"
 msgid "manager.setup"
 msgstr "Pengaturan Jurnal"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Dewan Editor"
-
 msgid "manager.setup.homepageContent"
 msgstr "Konten Beranda Jurnal"
 
@@ -777,14 +774,6 @@ msgstr ""
 
 msgid "manager.setup.contextTitle"
 msgstr "Nama Jurnal"
-
-msgid "manager.setup.keyInfo"
-msgstr "Informasi Kunci"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Tuliskan gambaran singkat tentng jurnal Anda dan sebutkan editor, direktur "
-"pelaksana dan anggota tim redaksi lainnya."
 
 msgid "manager.setup.labelName"
 msgstr "Nama Label"

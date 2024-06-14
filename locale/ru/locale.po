@@ -1673,12 +1673,6 @@ msgstr "О журнале"
 msgid "about.history"
 msgstr "История журнала"
 
-msgid "about.editorialTeam"
-msgstr "Редакция"
-
-msgid "about.editorialTeam.biography"
-msgstr "Биография"
-
 msgid "about.editorialPolicies"
 msgstr "Редакционная политика"
 

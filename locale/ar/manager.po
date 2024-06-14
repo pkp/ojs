@@ -388,9 +388,6 @@ msgstr "قيد عدد كلمات الملخص في هذا القسم (الصفر
 msgid "manager.setup"
 msgstr "التهيئة"
 
-msgid "manager.setup.editorialTeam"
-msgstr "هيئة التحرير"
-
 msgid "manager.setup.homepageContent"
 msgstr "محتوى الصفحة الرئيسية للمجلة"
 
@@ -751,14 +748,6 @@ msgstr "شعار صغير أو ما يمثل المجلة بالإمكان اس�
 
 msgid "manager.setup.contextTitle"
 msgstr "عنوان المجلة"
-
-msgid "manager.setup.keyInfo"
-msgstr "المعلومات الأساسية"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"أعط وصفاً موجزاً عن المجلة مع التعريف بطاقمها من محررين ومدراء وغيرهم من "
-"المساهمين في أعمال التحرير."
 
 msgid "manager.setup.labelName"
 msgstr "اسم الملصق"

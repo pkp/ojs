@@ -18,6 +18,7 @@ namespace APP\controllers\grid\pubIds;
 
 use APP\core\Application;
 use APP\facades\Repo;
+use APP\plugins\PubObjectsExportPlugin;
 use PKP\controllers\grid\DataObjectGridCellProvider;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\PKPApplication;
@@ -159,7 +160,7 @@ class PubIdExportRepresentationsListGridCellProvider extends DataObjectGridCellP
                         $label = $statusNames[$status];
                     }
                 } else {
-                    $label = $statusNames[EXPORT_STATUS_NOT_DEPOSITED];
+                    $label = $statusNames[PubObjectsExportPlugin::EXPORT_STATUS_NOT_DEPOSITED];
                 }
                 return ['label' => $label];
         }

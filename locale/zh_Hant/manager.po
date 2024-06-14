@@ -356,9 +356,6 @@ msgstr "此分類的摘要字數限制（如無限制則為零）"
 msgid "manager.setup"
 msgstr "期刊設定"
 
-msgid "manager.setup.editorialTeam"
-msgstr "編輯委員會"
-
 msgid "manager.setup.homepageContent"
 msgstr "期刊主頁內容"
 
@@ -683,12 +680,6 @@ msgstr "放置在眾期刊列表的一個小型標誌或其他可代表期刊圖
 
 msgid "manager.setup.contextTitle"
 msgstr "期刊名稱"
-
-msgid "manager.setup.keyInfo"
-msgstr "重要資訊"
-
-msgid "manager.setup.keyInfo.description"
-msgstr "請提供一個簡短的期刊描述及選用編輯、管理人和其他編輯團隊的成員。"
 
 msgid "manager.setup.labelName"
 msgstr "標籤名稱"

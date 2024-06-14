@@ -398,9 +398,6 @@ msgstr "Obmedziť počet slov abstraktu pre túto sekciu (0 pre žiadny limit)"
 msgid "manager.setup"
 msgstr "Nastavenia"
 
-msgid "manager.setup.editorialTeam"
-msgstr "Tím redaktorov"
-
 msgid "manager.setup.homepageContent"
 msgstr "Obsah domovskej stránky časopisu"
 
@@ -774,14 +771,6 @@ msgstr ""
 
 msgid "manager.setup.contextTitle"
 msgstr "Názov časopisu"
-
-msgid "manager.setup.keyInfo"
-msgstr "Kľúčová informácia"
-
-msgid "manager.setup.keyInfo.description"
-msgstr ""
-"Uveďte krátky opis vášho denníka a identifikujte editorov, manažérov a "
-"ďalších členov vášho redakčného tímu."
 
 msgid "manager.setup.labelName"
 msgstr "Názov popisku"

@@ -1641,12 +1641,6 @@ msgstr "Dergi Hakkında"
 msgid "about.history"
 msgstr "Dergi Tarihçesi"
 
-msgid "about.editorialTeam"
-msgstr "Editör Kurulu"
-
-msgid "about.editorialTeam.biography"
-msgstr "Özgeçmiş"
-
 msgid "about.editorialPolicies"
 msgstr "Yayın Politikası"
 
