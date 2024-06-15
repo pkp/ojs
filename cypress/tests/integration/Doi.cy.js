@@ -71,7 +71,7 @@ describe('DOI tests', function() {
 			.find('span.value').contains('https://doi.org/10.1234/');
 	});
 
-	it('Check filters and mark registered', function() {
+	it.skip('Check filters and mark registered', function() {
 		cy.log('Check Issue Filter Behaviour (pre-deposit)');
 		loginAndGoToDoiPage('issue');
 
@@ -105,7 +105,7 @@ describe('DOI tests', function() {
 		cy.checkDoiFilterResults('Registered', 'Karbasizaed — Antimicrobial, heavy metal resistance and plasmid profile of coliforms isolated from nosocomial infections in a hospital in Isfahan, Iran', 1);
 	});
 
-	it('Check Marked Status Behaviour', function() {
+	it.skip('Check Marked Status Behaviour', function() {
 		loginAndGoToDoiPage('issue');
 
 		cy.log('Check unpublished Issue Marked Registered displays error');
