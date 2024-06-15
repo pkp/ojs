@@ -89,10 +89,8 @@ class SubscriptionTypeForm extends Form
 
     /**
      * Get a list of localized field names for this form
-     *
-     * @return array
      */
-    public function getLocaleFieldNames()
+    public function getLocaleFieldNames(): array
     {
         $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO'); /** @var SubscriptionTypeDAO $subscriptionTypeDao */
         return $subscriptionTypeDao->getLocaleFieldNames();

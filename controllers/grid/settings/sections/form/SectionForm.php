@@ -138,10 +138,8 @@ class SectionForm extends PKPSectionForm
 
     /**
      * Get the names of fields for which localized data is allowed.
-     *
-     * @return array
      */
-    public function getLocaleFieldNames()
+    public function getLocaleFieldNames(): array
     {
         return ['title', 'policy', 'abbrev', 'identifyType'];
     }

@@ -185,10 +185,8 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
 
     /**
      * Get the list of field names for which localized data is used.
-     *
-     * @return array
      */
-    public function getLocaleFieldNames()
+    public function getLocaleFieldNames(): array
     {
         return ['name', 'description'];
     }
