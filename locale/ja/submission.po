@@ -2,7 +2,7 @@
 # Bjorn-Ole Kamm <pkp_trans@b-ok.de>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-06-16 06:56+0000\n"
+"PO-Revision-Date: 2024-06-16 07:02+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ja/>\n"
@@ -330,7 +330,7 @@ msgstr ""
 "されません。"
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
-msgstr ""
+msgstr "査読段階に送るファイルを選択してください。"
 
 msgid "doi.submission.issueMissing.publication"
 msgstr ""
