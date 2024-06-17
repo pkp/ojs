@@ -2,7 +2,7 @@
 # Bjorn-Ole Kamm <pkp_trans@b-ok.de>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-06-16 06:28+0000\n"
+"PO-Revision-Date: 2024-06-17 01:47+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/editor/ja/>"
 "\n"
@@ -121,7 +121,7 @@ msgid "editor.issues.confirmDelete"
 msgstr "この巻号を完全に削除してもよいですか。"
 
 msgid "editor.issues.published"
-msgstr "出版済"
+msgstr "発行済"
 
 msgid "editor.issues.unpublished"
 msgstr "未出版"
