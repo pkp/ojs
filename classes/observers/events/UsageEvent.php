@@ -34,11 +34,11 @@ class UsageEvent extends \PKP\observers\events\UsageEvent
     public function __construct(
         int $assocType,
         Context $context,
-        Submission $submission = null,
-        Representation $galley = null,
-        SubmissionFile $submissionFile = null,
-        Issue $issue = null,
-        IssueGalley $issueGalley = null
+        ?Submission $submission = null,
+        ?Representation $galley = null,
+        ?SubmissionFile $submissionFile = null,
+        ?Issue $issue = null,
+        ?IssueGalley $issueGalley = null
     ) {
         $this->issue = $issue;
         $this->issueGalley = $issueGalley;
