@@ -326,7 +326,7 @@ class IssueHandler extends Handler
      * 	                                                            will be displayed.
      * @param bool                      $withSubscriptionDetails    Should include the subscription related information into the template
      */
-    public static function _setupIssueTemplate(Request $request, Issue $issue, Journal $journal = null, $showToc = false, $withSubscriptionDetails = true)
+    public static function _setupIssueTemplate(Request $request, Issue $issue, ?Journal $journal = null, $showToc = false, $withSubscriptionDetails = true)
     {
         $journal ??= $request->getJournal();
         $templateMgr = TemplateManager::getManager($request);
