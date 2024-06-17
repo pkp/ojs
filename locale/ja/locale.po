@@ -2,7 +2,7 @@
 # Bjorn-Ole Kamm <pkp_trans@b-ok.de>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-06-16 06:28+0000\n"
+"PO-Revision-Date: 2024-06-17 01:47+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/locale/ja/>"
 "\n"
@@ -324,7 +324,7 @@ msgid "submissions.step3"
 msgstr "ステップ 3"
 
 msgid "submissions.queuedReview"
-msgstr "査読作業待ち"
+msgstr "査読中"
 
 msgid "submissions.published"
 msgstr "出版済"
@@ -363,7 +363,7 @@ msgid "submissions.layoutComplete"
 msgstr "レイアウト済み"
 
 msgid "submissions.proofreadingComplete"
-msgstr "校正済み"
+msgstr "校正済"
 
 msgid "submission.search"
 msgstr "論文検索"
