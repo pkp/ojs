@@ -433,7 +433,7 @@ class IssueGridHandler extends GridHandler {
 	 * @param $args array
 	 * @param $request Request
 	 */
-function publishIssue($args, $request) {
+	function publishIssue($args, $request) {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$context = $request->getContext();
 		$contextId = $context->getId();
