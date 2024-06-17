@@ -115,8 +115,11 @@
 	</upgrade>
 
 	<upgrade minversion="3.4.0.0" maxversion="3.4.0.5">
-		<migration class="APP\migration\upgrade\v3_4_0\I9813_QuickSubmitSubmissionProgressType"/>
 		<migration class="PKP\migration\upgrade\v3_4_0\I8592_SiteNotificationSubscriptions"/>
+	</upgrade>
+
+	<upgrade minversion="3.4.0.0" maxversion="3.4.9.9">
+		<migration class="APP\migration\upgrade\v3_4_0\I9813_QuickSubmitSubmissionProgressType"/>
 	</upgrade>
 
 	<upgrade minversion="3.1.0.0" maxversion="3.4.9.9">
