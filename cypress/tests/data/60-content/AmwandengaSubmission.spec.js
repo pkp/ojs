@@ -252,7 +252,7 @@ describe('Data suite tests', function() {
 		cy.get('#contributors-grid #component-grid-users-author-authorgrid-row-3 .show_extras').click();
 		cy.get('#component-grid-users-author-authorgrid-row-3-control-row [id*="editAuthor-button"]').click();
 		cy.wait(1500); // Wait for the form to settle
-		cy.get('[name="familyName[en_US]"]').type(' Version 2', {delay: 0});
+		cy.get('[name="familyName[en_US]"]').type(' Version 2', {delay: 5});
 		cy.get('[id^="submitFormButton"]').contains('Save').click();
 		cy.contains('Author edited.');
 		cy.wait(1500); // Wait for the grid to reload
@@ -263,7 +263,9 @@ describe('Data suite tests', function() {
 		cy.contains('Add galley');
 		cy.get('#representations-grid .show_extras').click();
 		cy.get('[id*="editGalley-button"]').click();
+		cy.wait(1500);
 		cy.get('#editArticleGalleyMetadataTabs [name="label"]').type(' Version 2');
+		cy.wait(1500);
 		cy.get('#editArticleGalleyMetadataTabs [name="urlPath"]').type('pdf');
 		cy.get('#articleGalleyForm button').contains('Save').click();
 		cy.wait(1500);

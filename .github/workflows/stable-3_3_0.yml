@@ -1,0 +1,57 @@
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      ['stable-3_3_0']
+name: ojs
+jobs:
+  ojs:
+    runs-on: ubuntu-20.04
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - php-version: 8.0
+            validate: 'validate'
+          - php-version: 7.3
+            database: pgsql
+            test: 'test'
+          - php-version: 7.3
+            database: mysql
+            test: 'test'
+          - php-version: 7.4
+            database: pgsql
+            test: 'test'
+          - php-version: 7.4
+            database: mysql
+            test: 'test'
+          - php-version: 8.0
+            database: mysql
+            test: 'test'
+          - php-version: 8.0
+            database: pgsql
+            test: 'test'
+          - php-version: 8.1
+            database: mysql
+            test: 'test'
+          - php-version: 8.1
+            database: pgsql
+            test: 'test'
+          - php-version: 8.2
+            database: mysql
+            test: 'test'
+          - php-version: 8.2
+            database: pgsql
+            test: 'test'
+
+
+    name: ojs
+    steps:
+      - uses: pkp/pkp-github-actions@v1
+        with:
+          node_version: 12
+          dataset_branch: 'stable-3_3_0'
+          DATASETS_ACCESS_KEY:  ${{secrets.DATASETS_ACCESS_KEY}}
+          DEBUG_IN_TMATE:  false
