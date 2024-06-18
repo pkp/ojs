@@ -13,7 +13,9 @@
 
 namespace APP\issue;
 
+use APP\core\Application;
 use APP\facades\Repo;
+use Exception;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
@@ -325,8 +327,14 @@ class Collector implements CollectorInterface
             )
         );
 
-        // Context
-        $q->when($this->contextIds !== null, fn (Builder $q) => $q->whereIn('i.journal_id', $this->contextIds));
+        // Context: Never permit a query without a context_id unless the Application::SITE_CONTEXT_ID_ALL wildcard has been set explicitly.
+        if (!isset($this->contextIds)) {
+            throw new Exception('Issues cannot be retrieved without a context id. Pass the Application::SITE_CONTEXT_ID_ALL wildcard to get issues from any context.');
+        }
+
+        if (!in_array(Application::CONTEXT_ID_ALL, $this->contextIds)) {
+            $q->whereIn('i.journal_id', $this->contextIds);
+        }
         // Issue IDs
         $q->when($this->issueIds !== null, fn (Builder $q) => $q->whereIn('i.issue_id', $this->issueIds));
         // Published
