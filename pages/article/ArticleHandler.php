@@ -34,6 +34,7 @@ use PKP\config\Config;
 use PKP\core\PKPApplication;
 use PKP\core\PKPJwt as JWT;
 use PKP\db\DAORegistry;
+use PKP\orcid\OrcidManager;
 use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\ContextRequiredPolicy;
@@ -307,6 +308,7 @@ class ArticleHandler extends Handler
             'copyrightYear' => $publication->getData('copyrightYear'),
             'pubIdPlugins' => PluginRegistry::loadCategory('pubIds', true),
             'keywords' => $publication->getData('keywords'),
+            'orcidIcon' => OrcidManager::getIcon(),
         ]);
 
         // Fetch and assign the galley to the template
