@@ -2,7 +2,7 @@
 # Bjorn-Ole Kamm <pkp_trans@b-ok.de>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-06-16 06:28+0000\n"
+"PO-Revision-Date: 2024-06-18 07:15+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/manager/ja/"
 ">\n"
@@ -1154,9 +1154,8 @@ msgid "manager.statistics.statistics.makePublic"
 msgstr "ジャーナルについてで読者に公開される項目を確認します。"
 
 msgid "manager.statistics.statistics.note"
-msgstr ""
-"注: 再提出されたアイテムが受理されたか、辞退されたか、またはまだ処理中である"
-"ため、査読付き投稿の割合は100％にならないことがあります。"
+msgstr "注: 再提出された投稿が採用されたか、不採用されたか、またはまだ処理中であるた"
+"め、査読付き投稿の割合は100％にならないことがあります。"
 
 msgid "manager.statistics.statistics.numIssues"
 msgstr "発行された巻・号"
