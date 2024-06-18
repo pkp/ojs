@@ -37,7 +37,7 @@ import WorkflowPage from '@/components/Container/WorkflowPageOJS.vue';
 import JobsPage from '@/components/Container/JobsPage.vue';
 import FailedJobsPage from '@/components/Container/FailedJobsPage.vue';
 import FailedJobDetailsPage from '@/components/Container/FailedJobDetailsPage.vue';
-import SubmissionsPage from '@/pages/submissions/SubmissionsPage.vue';
+import DashboardPage from '@/pages/dashboard/DashboardPage.vue';
 
 // Expose Vue, the registry and controllers in a global var
 window.pkp = Object.assign(PkpLoad, window.pkp || {}, {
@@ -65,6 +65,6 @@ window.pkp = Object.assign(PkpLoad, window.pkp || {}, {
 		StatsUsersPage,
 		SubmissionWizardPage,
 		WorkflowPage,
-		SubmissionsPage,
+		DashboardPage,
 	},
 });

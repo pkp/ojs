@@ -21,6 +21,7 @@ namespace APP\template;
 use APP\core\Application;
 use APP\core\PageRouter;
 use APP\file\PublicFileManager;
+use PKP\config\Config;
 use PKP\core\PKPSessionGuard;
 use PKP\facades\Locale;
 use PKP\i18n\LocaleMetadata;
@@ -135,7 +136,14 @@ class TemplateManager extends PKPTemplateManager
                 'url' => $router->url($request, null, 'manageIssues'),
                 'isCurrent' => $request->getRequestedPage() === 'manageIssues',
             ];
-            $index = array_search('submissions', array_keys($menu));
+            $index = false;
+            if(Config::getVar('features', 'enable_new_submission_listing')) {
+                $index = array_search('dashboards', array_keys($menu));
+            } else {
+                $index = array_search('submissions', array_keys($menu));
+            }
+
+
             if ($index === false || count($menu) <= $index + 1) {
                 $menu['issues'] = $issuesLink;
             } else {
