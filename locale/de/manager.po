@@ -1,13 +1,14 @@
 # Pia Piontkowitz <pia.piontkowitz@rub.de>, 2021, 2022, 2023.
 # Felix Henn <shenn@ub.uni-koeln.de>, 2022.
 # Jens Unkenholz <jens.unkenholz@uni-muenster.de>, 2023.
+# Martin Brändle <martin.braendle@uzh.ch>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2023-04-26 14:01+0000\n"
-"Last-Translator: Jens Unkenholz <jens.unkenholz@uni-muenster.de>\n"
+"PO-Revision-Date: 2024-06-18 14:49+0000\n"
+"Last-Translator: Martin Brändle <martin.braendle@uzh.ch>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/manager/de/>"
 "\n"
 "Language: de\n"
@@ -15,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "manager.distribution.access"
 msgstr "Zugriff"
@@ -2373,14 +2374,14 @@ msgid "doi.manager.settings.doiPrefixPattern"
 msgstr ""
 "Der DOI-Präfix ist verpflichtend und muss im Format 10.xxxx angegeben werden."
 
+#, fuzzy
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr ""
 "Verwenden Sie das unten angegebene Muster, um DOI-Suffixe zu erzeugen. "
 "Nutzen Sie %j für die Initialen der Zeitschrift, %v für die Nummer des "
 "Jahrgangs, %i für die Nummer der Ausgabe, %Y für das Jahr, %a für die OJS-"
 "Artikel-ID, %g für die OJS-Fahnen-ID, %f für die OJS-Datei-ID, %p für die "
-"Seitenzahl und %x für die \"benutzerdefinierte Kennung\" (muss in Schritt "
-"4.3 der Zeitschrifteneinrichtung aktiviert werden). "
+"Seitenzahl und %x für die \"benutzerdefinierte Kennung\". "
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
 msgstr "vol%viss%ipp%p würde z.B. einen DOI 10.1234/vol3iss2pp230 erzeugen"
