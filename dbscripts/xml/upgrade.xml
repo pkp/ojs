@@ -226,7 +226,13 @@
 		<migration class="PKP\migration\upgrade\v3_4_0\I9830_FixEmptyUserLocales"/>
 	</upgrade>
 
+	<upgrade minversion="3.4.0.0" maxversion="3.4.0.5">
+		<!-- Only new 3.4 installations need this fix -->
+		<migration class="PKP\migration\upgrade\v3_4_0\I8592_SiteNotificationSubscriptions"/>
+	</upgrade>
+
 	<upgrade minversion="3.4.0.0" maxversion="3.4.9.9">
+		<!-- Needs to be re-executed on every minor upgrade, the user might still be using an outdated plugin -->
 		<migration class="APP\migration\upgrade\v3_4_0\I9813_QuickSubmitSubmissionProgressType"/>
 	</upgrade>
 

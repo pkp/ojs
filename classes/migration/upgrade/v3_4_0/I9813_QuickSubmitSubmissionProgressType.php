@@ -31,7 +31,7 @@ class I9813_QuickSubmitSubmissionProgressType extends \PKP\migration\Migration
             return;
         }
         if ($installedQuickSubmitPluginVersion->compare($thresholdVersion) === 0) {
-            $this->_installer->log('WARNING: You are using an old version of the QuickSubmit plugin, that is not supported any more. Please upgrade the QuickSubmit plugin via plugin gallery immediatelly after this upgrade.');
+            $this->_installer->log('WARNING: You are using an old version of the QuickSubmit plugin, that is not supported anymore. Please upgrade the QuickSubmit plugin via plugin gallery immediately after this upgrade.');
         }
 
         foreach ($this->getStepMap() as $oldValue => $newValue) {
