@@ -1,16 +1,17 @@
 # TAKASHI IMAGIRE <imagire@gmail.com>, 2021.
+# Bjorn-Ole Kamm <pkp_trans@b-ok.de>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-12-10 18:54+0000\n"
-"Last-Translator: TAKASHI IMAGIRE <imagire@gmail.com>\n"
+"PO-Revision-Date: 2024-06-17 01:47+0000\n"
+"Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
 "Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/submission/"
-"ja_JP/>\n"
-"Language: ja_JP\n"
+"ja/>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "submission.submit.userGroup"
 msgstr "...の役割として提出"
@@ -86,7 +87,7 @@ msgstr "ゲラファイル"
 msgid "submission.proofReadingDescription"
 msgstr ""
 "レイアウト編集者は、出版のために準備された制作準備済みのファイルをここにアッ"
-"プロードします。「監査役の任命」を使用して、出版前に承認のためにアップロード"
+"プロードします。「監査役の指定」を使用して、出版前に承認のためにアップロード"
 "された改訂済みのファイルを使って、著者やその他の人がゲラ刷りの校正を行うよう"
 "に指定します。"
 
@@ -159,7 +160,7 @@ msgid "galley.publicationNotFound"
 msgstr "このゲラ刷りの出版物は見つかりませんでした。"
 
 msgid "publication.assignToissue"
-msgstr "巻号に割り当てる"
+msgstr "巻号を指定"
 
 msgid "publication.assignedToIssue"
 msgstr ""
@@ -203,7 +204,7 @@ msgstr ""
 "ら、すぐに掲載されます。これを公開してもよろしいですか？"
 
 msgid "publication.required.issue"
-msgstr "発行される前に、その巻号に割り当てられる必要があります。"
+msgstr "発行される前に、対象巻号を指定する必要があります。"
 
 msgid "publication.publishedIn"
 msgstr "<a href=\"{$issueUrl}\">{$issueName}</a>で公開されました。"
@@ -221,7 +222,7 @@ msgid "submission.publication"
 msgstr "公開"
 
 msgid "publication.status.published"
-msgstr "公開済み"
+msgstr "発行済"
 
 msgid "submission.status.scheduled"
 msgstr "予約済み"
@@ -304,61 +305,82 @@ msgid "submission.queries.production"
 msgstr "制作ディスカッション"
 
 msgid "editor.submission.decision.backToReview"
-msgstr ""
+msgstr "査読に戻す"
 
 msgid "editor.submission.decision.backToReview.description"
-msgstr ""
+msgstr "この投稿を採用するという決定を元に戻し、査読段階に戻します。"
 
 msgid "editor.submission.decision.backToReview.log"
-msgstr ""
+msgstr "{$editorName} "
+"はこの投稿を採用するという決定を元に戻し、査読段階に戻しました。"
 
 msgid "editor.submission.decision.backToReview.completed"
-msgstr ""
+msgstr "査読に戻した"
 
 msgid "editor.submission.decision.backToReview.completed.description"
-msgstr ""
+msgstr "投稿「{$title}」は査読段階に戻されました。"
 
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
+"著者にメールを送信して、投稿が査読段階に戻されることを知らせます。この決定が"
+"下された理由を説明し、今後どのような査読が行われるかを著者に知らせます。"
 
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
+"著者にメールを送信して、この投稿が査読に送られることを知らせます。可能であれ"
+"ば、査読プロセスにどのくらいの時間がかかるか、編集者から次に連絡が来るのはい"
+"つ頃になるかを著者に知らせてください。このメールは、決定が記録されるまで送信"
+"されません。"
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
-msgstr ""
+msgstr "査読段階に送るファイルを選択してください。"
 
 msgid "doi.submission.issueMissing.publication"
 msgstr ""
+"下記の投稿の DOI を作成できませんでした: {$pubObjectTitle}。DOI "
+"を生成するには、投稿の巻号を指定する必要があります。"
 
 msgid "doi.submission.issueMissing.representation"
 msgstr ""
+"下記の投稿「{$pubObjectTitle}」のゲラに DOI を作成できませんでした: "
+"{$itemTitle}。DOI を生成するには、投稿の巻号を指定する必要があります。"
 
 msgid "doi.submission.incorrectContext"
-msgstr ""
+msgstr "下記の投稿の DOI を作成できませんでした: "
+"{$pubObjectTitle}。現在の雑誌コンテキストには存在しません。"
 
 msgid "submission.layout.viewGalley"
-msgstr ""
+msgstr "ゲラ表示"
 
 msgid "galley.cantEditPublished"
-msgstr ""
+msgstr "このゲラはすでに公開されているため編集できません。"
 
 msgid "submission.copyright.description"
-msgstr ""
+msgstr "本誌に投稿する際の著作権条件を読んで理解してください。"
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
+"著者は編集スタッフによって登録される必要があるため、本誌に投稿することはでき"
+"ません。これが誤りであると思われる場合は、<a href='mailto:{$email}'>{$name}</"
+"a> までご連絡ください。"
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
+"本誌のすべてのセクションへの投稿が非アクティブ化または制限されているため、本"
+"誌に投稿することはできません。これが誤りであると思われる場合は、<a "
+"href='mailto:{$email}'>{$name}</a> までご連絡ください。"
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
+"『{$contextName}』は、{$section} セクションへの投稿を受け付けていません。投稿"
+"の回復についてサポートが必要な場合は、<a href='mailto:{$email}'>{$name}</a> "
+"までお問い合わせください。"
 
 msgid "submission.sectionNotFound"
-msgstr ""
+msgstr "この投稿のセクションが見つかりませんでした。"
 
 msgid "submission.sectionRestrictedToEditors"
-msgstr ""
+msgstr "このセクションに投稿できるのは編集スタッフのみです。"
 
 msgid "submission.submit.form.authorRequired"
 msgstr "著者は最低1名必要です。"

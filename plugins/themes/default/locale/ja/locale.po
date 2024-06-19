@@ -1,15 +1,16 @@
+# Bjorn-Ole Kamm <pkp_trans@b-ok.de>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-01-04 11:25+0000\n"
+"PO-Revision-Date: 2024-06-17 01:35+0000\n"
 "Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
-"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/themes-"
-"default/ja_JP/>\n"
-"Language: ja_JP\n"
+"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/ja/>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.themes.default.name"
 msgstr "デフォルトのテーマ"
@@ -73,22 +74,22 @@ msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
 msgstr "ホームページの画像をヘッダーの背景として表示します。"
 
 msgid "plugins.themes.default.option.displayStats.label"
-msgstr ""
+msgstr "使用統計表示オプション"
 
 msgid "plugins.themes.default.option.displayStats.none"
-msgstr ""
+msgstr "読者に投稿使用統計チャートを表示しません。"
 
 msgid "plugins.themes.default.option.displayStats.bar"
-msgstr ""
+msgstr "使用統計の表示には、グラフのバータイプを使用します。"
 
 msgid "plugins.themes.default.option.displayStats.line"
-msgstr ""
+msgstr "使用統計の表示には、グラフのラインタイプを使用します。"
 
 msgid "plugins.themes.default.displayStats.monthInitials"
-msgstr ""
+msgstr "1月 2月 3月 4月 5月 6月 7月 8月 9月 10月 11月 12月"
 
 msgid "plugins.themes.default.displayStats.downloads"
-msgstr ""
+msgstr "ダウンロード数"
 
 msgid "plugins.themes.default.displayStats.noStats"
-msgstr ""
+msgstr "ダウンロードデータはまだ表示できません。"

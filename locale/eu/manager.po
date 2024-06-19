@@ -1,13 +1,13 @@
 # Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023.
-# Josu Acosta <josuacostacalvo@gmail.com>, 2023.
+# Josu Acosta <josuacostacalvo@gmail.com>, 2023, 2024.
 # Informatikaria <informatikaria@ueu.eus>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2024-02-29 11:39+0000\n"
-"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
+"PO-Revision-Date: 2024-06-12 18:32+0000\n"
+"Last-Translator: Josu Acosta <josuacostacalvo@gmail.com>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/manager/eu/>"
 "\n"
 "Language: eu\n"
@@ -2053,7 +2053,7 @@ msgid "stats.publications.countOfTotal"
 msgstr ""
 
 msgid "stats.publications.abstracts"
-msgstr ""
+msgstr "Laburpena"
 
 msgid "stats.publications.galleys"
 msgstr ""

@@ -214,10 +214,8 @@ class IssueGalleyDAO extends \PKP\db\DAO
 
     /**
      * Get the list of fields for which data is localized.
-     *
-     * @return array
      */
-    public function getLocaleFieldNames()
+    public function getLocaleFieldNames(): array
     {
         return [];
     }
@@ -225,10 +223,8 @@ class IssueGalleyDAO extends \PKP\db\DAO
     /**
      * Get a list of additional fields that do not have
      * dedicated accessors.
-     *
-     * @return array
      */
-    public function getAdditionalFieldNames()
+    public function getAdditionalFieldNames(): array
     {
         $additionalFields = parent::getAdditionalFieldNames();
         // FIXME: Move this to a PID plug-in.

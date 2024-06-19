@@ -148,10 +148,8 @@ class SubscriptionPolicyForm extends Form
 
     /**
      * Get the names of the fields for which localized settings are used
-     *
-     * @return array
      */
-    public function getLocaleFieldNames()
+    public function getLocaleFieldNames(): array
     {
         return ['subscriptionAdditionalInformation'];
     }
