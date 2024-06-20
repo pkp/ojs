@@ -1,12 +1,13 @@
 # Simon Mathdoc <karacaca38@outlook.fr>, 2021.
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
+# Rodolphe Lemétayer <rlemetayer@protonmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:24+00:00\n"
-"PO-Revision-Date: 2023-07-07 19:58+0000\n"
-"Last-Translator: Stefan Schneider <mail@stefan-schneider.at>\n"
+"PO-Revision-Date: 2024-06-20 20:27+0000\n"
+"Last-Translator: Rodolphe Lemétayer <rlemetayer@protonmail.com>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "fr_FR/>\n"
 "Language: fr_FR\n"
@@ -14,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "manager.distribution.access"
 msgstr "Accès"
@@ -51,16 +52,22 @@ msgstr ""
 
 msgid "manager.setup.enableDois.description"
 msgstr ""
+"Autoriser des Digital Object Identifiers (DOIs) à être assignés aux travaux "
+"publiés dans cette revue."
 
-#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Veuillez choisir les objets auxquels les DOI doivent être attribués."
+msgstr ""
+"Veuillez choisir les objets auxquels les DOI doivent être attribués. La "
+"plupart des revues attribuent des DOis aux articles, mais vous pouvez "
+"souhaiter attribuer des DOIs à tous les contenus publiés."
 
 msgid "doi.manager.settings.doiSuffixLegacy"
 msgstr ""
+"Utiliser les modèles par défaut.<br />%j.v%vi%i pour les numéros<br /"
+">%j.v%vi%i.%a pour les articles<br />%j.v%vi%i.%a.g%g pour les épreuves."
 
 msgid "doi.manager.settings.doiCreationTime.copyedit"
-msgstr ""
+msgstr "À l'étape de révision du texte"
 
 msgid "manager.website.archiving"
 msgstr "Archivage"
@@ -314,11 +321,10 @@ msgstr "Rédacteurs de cette rubrique"
 msgid "manager.sections.confirmDelete"
 msgstr "Êtes-vous sûr de vouloir définitivement supprimer cette section ?"
 
-#, fuzzy
 msgid "manager.sections.alertDelete"
 msgstr ""
-"Pour supprimer cette section, déplacez les articles qui la composent dans "
-"d'autres sections."
+"Pour pouvoir supprimer cette rubrique, vous devez d'abord déplacer les "
+"articles qui y sont publiés dans d'autres rubriques."
 
 msgid "manager.sections.create"
 msgstr "Créer une rubrique"
@@ -569,12 +575,10 @@ msgstr "Identification par courriel"
 msgid "manager.setup.emailSignature"
 msgstr "Signature"
 
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
-"La signature suivante sera ajoutée à la fin de chaque courriel préparé et "
-"envoyé par le système, au nom de la revue. Le corps des courriels préparés "
-"sont disponibles pour modification sous Gestion de la revue."
+"La signature suivante sera ajoutée à la fin de chaque courriel prédéfini "
+"envoyé par le système au nom de la revue."
 
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Activer les annonces"
@@ -1075,15 +1079,11 @@ msgstr "Accès pour le rapporteur"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "Activer l'accès en un clic pour le rapporteur"
 
-#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
-"<strong>Note :</strong> Le courriel d'invitation destiné aux rapporteurs "
-"contient une URL qui les mène directement à la page d'évaluation de la "
-"soumission. L'accès à toute autre page requiert de se connecter. Pour des "
-"raisons de sécurité, les rédacteurs ne peuvent pas modifier les adresses de "
-"courriel, ni ajouter des CC ou CCI avant d'envoyer une invitation aux "
-"rapporteurs."
+"Un lien sécurisé peut être envoyé aux évaluateur.trice.s dans le courriel "
+"d'invitation, ce qui leur permettra de s’identifier automatiquement en "
+"cliquant sur le lien."
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr ""
@@ -1596,10 +1596,10 @@ msgid "manager.subscriptions.form.typeIdValid"
 msgstr "Veuillez sélectionner un type d'abonnement valide."
 
 msgid "manager.subscriptions.form.institution"
-msgstr ""
+msgstr "Établissement"
 
 msgid "manager.subscriptions.form.institutionIdValid"
-msgstr ""
+msgstr "Veuillez sélectionner un établissement valide."
 
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Date de début"
@@ -1742,6 +1742,8 @@ msgstr ""
 
 msgid "manager.subscriptions.form.institutionRequired"
 msgstr ""
+"Un établissement doit être créé avant que de nouveaux abonnements puissent "
+"être effectués."
 
 msgid "manager.subscriptions.ipRange"
 msgstr "Intervalles d'adresses IP"
@@ -2147,19 +2149,21 @@ msgstr ""
 "revue."
 
 msgid "stats.contextStats"
-msgstr ""
+msgstr "Statistiques de la revue"
 
 msgid "stats.context.tooltip.text"
-msgstr ""
+msgstr "Nombre de visiteurs ayant consulté la page d'accueil de la revue."
 
 msgid "stats.context.tooltip.label"
-msgstr ""
+msgstr "À propos des statistiques de la revue"
 
 msgid "stats.context.downloadReport.description"
 msgstr ""
+"Télécharger un CSV/Excel avec les statistiques d'utilisation pour cette "
+"revue correspondants aux paramètres suivants."
 
 msgid "stats.context.downloadReport.downloadContext.description"
-msgstr ""
+msgstr "Nombre de vues sur la page d'accueil de la revue."
 
 msgid "stats.context.downloadReport.downloadContext"
 msgstr ""
@@ -2818,3 +2822,17 @@ msgstr ""
 
 #~ msgid "doi.manager.settings.enablePublicationDoi"
 #~ msgstr "Articles"
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"L'image de couverture du numéro {$id} n'a pas été exportée du fait que les "
+"fichiers n'ont pu être trouvés dans \"{$path}\"."
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr ""
+"Une épreuve du numéro n'a pu être importée car son fichier est manquant."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"L’épreuve du numéro {$id} n'a pas pu être exportée du fait que son fichier "
+"n'a pu être trouvé dans \"{$path}\"."
