@@ -1,20 +1,13 @@
 <?php
-/**
- * @defgroup issue_galley Issue Galleys
- * Issue galleys allow for the representation of an entire journal issue with
- * a single file, typically a PDF.
- */
 
 /**
  * @file classes/issue/IssueGalley.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2024 Simon Fraser University
+ * Copyright (c) 2003-2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IssueGalley
- *
- * @ingroup issue_galley
  *
  * @see IssueGalleyDAO
  *
@@ -28,16 +21,13 @@ use PKP\facades\Locale;
 
 class IssueGalley extends IssueFile
 {
-    /** @var IssueFile */
-    public $_issueFile;
+    public ?IssueFile $_issueFile;
 
 
     /**
      * Check if galley is a PDF galley.
-     *
-     * @return bool
      */
-    public function isPdfGalley()
+    public function isPdfGalley(): bool
     {
         switch ($this->getFileType()) {
             case 'application/pdf':
@@ -54,10 +44,8 @@ class IssueGalley extends IssueFile
     //
     /**
      * Get the localized value of the galley label.
-     *
-     * @return string
      */
-    public function getGalleyLabel()
+    public function getGalleyLabel(): string
     {
         $label = $this->getLabel();
         if (($locale = $this->getLocale()) && $locale !== Locale::getLocale()) {
@@ -68,94 +56,76 @@ class IssueGalley extends IssueFile
 
     /**
      * Get label/title.
-     *
-     * @return string
      */
-    public function getLabel()
+    public function getLabel(): string
     {
         return $this->getData('label');
     }
 
     /**
      * Set label/title.
-     *
-     * @param string $label
      */
-    public function setLabel($label)
+    public function setLabel(string $label): void
     {
-        return $this->setData('label', $label);
+        $this->setData('label', $label);
     }
 
     /**
      * Get locale.
-     *
-     * @return string
      */
-    public function getLocale()
+    public function getLocale(): string
     {
         return $this->getData('locale');
     }
 
     /**
      * Set locale.
-     *
-     * @param string $locale
      */
-    public function setLocale($locale)
+    public function setLocale(string $locale): void
     {
-        return $this->setData('locale', $locale);
+        $this->setData('locale', $locale);
     }
 
     /**
      * Get sequence order.
-     *
-     * @return float
      */
-    public function getSequence()
+    public function getSequence(): ?float
     {
         return $this->getData('sequence');
     }
 
     /**
      * Set sequence order.
-     *
-     * @param float $sequence
      */
-    public function setSequence($sequence)
+    public function setSequence(float $sequence): void
     {
-        return $this->setData('sequence', $sequence);
+        $this->setData('sequence', $sequence);
     }
 
     /**
      * Get file ID.
-     *
-     * @return int
      */
-    public function getFileId()
+    public function getFileId(): int
     {
         return $this->getData('fileId');
     }
 
     /**
      * Set file ID.
-     *
-     * @param int $fileId
      */
-    public function setFileId($fileId)
+    public function setFileId(int $fileId): void
     {
-        return $this->setData('fileId', $fileId);
+        $this->setData('fileId', $fileId);
     }
 
     /**
      * Get stored public ID of the galley.
      *
-     * @param string $pubIdType One of the NLM pub-id-type values or
+     * @param $pubIdType One of the NLM pub-id-type values or
      * 'other::something' if not part of the official NLM list
      * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-     *
-     * @return string
      */
-    public function getStoredPubId($pubIdType)
+    public function getStoredPubId(string $pubIdType): null|int|string
     {
         return $this->getData('pub-id::' . $pubIdType);
     }
@@ -168,28 +138,24 @@ class IssueGalley extends IssueFile
      * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
      * @param string $pubId
      */
-    public function setStoredPubId($pubIdType, $pubId)
+    public function setStoredPubId(string $pubIdType, null|int|string $pubId): void
     {
-        return $this->setData('pub-id::' . $pubIdType, $pubId);
+        $this->setData('pub-id::' . $pubIdType, $pubId);
     }
 
     /**
      * Return the "best" issue galley ID -- If a urlPath is set,
      * use it; otherwise use the internal article Id.
-     *
-     * @return string
      */
-    public function getBestGalleyId()
+    public function getBestGalleyId(): string|int
     {
         return strlen($urlPath = (string) $this->getData('urlPath')) ? $urlPath : $this->getId();
     }
 
     /**
      * Get the file corresponding to this galley.
-     *
-     * @return IssueFile
      */
-    public function getFile()
+    public function getFile(): ?IssueFile
     {
         if (!isset($this->_issueFile)) {
             $issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /** @var IssueFileDAO $issueFileDao */

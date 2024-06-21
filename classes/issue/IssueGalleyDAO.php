@@ -3,13 +3,11 @@
 /**
  * @file classes/issue/IssueGalleyDAO.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2024 Simon Fraser University
+ * Copyright (c) 2003-2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IssueGalleyDAO
- *
- * @ingroup issue_galley
  *
  * @see IssueGalley
  *
@@ -26,18 +24,13 @@ class IssueGalleyDAO extends \PKP\db\DAO
     /**
      * Retrieve a galley by ID.
      *
-     * @param int $galleyId
-     * @param int $issueId optional
-     *
-     * @return IssueGalley
-     *
      * @hook IssueGalleyDAO::getById [[&$galleyId, &$issueId, &$returner]]
      */
-    public function getById($galleyId, $issueId = null)
+    public function getById(int $galleyId, ?int $issueId = null): ?IssueGalley
     {
-        $params = [(int) $galleyId];
+        $params = [$galleyId];
         if ($issueId !== null) {
-            $params[] = (int) $issueId;
+            $params[] = $issueId;
         }
         $result = $this->retrieve(
             'SELECT
@@ -72,13 +65,8 @@ class IssueGalleyDAO extends \PKP\db\DAO
      * @param string $pubIdType One of the NLM pub-id-type values or
      * 'other::something' if not part of the official NLM list
      * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-     * @param string $pubId
-     * @param int $galleyId An ID to be excluded from the search.
-     * @param int $journalId
-     *
-     * @return bool
      */
-    public function pubIdExists($pubIdType, $pubId, $galleyId, $journalId)
+    public function pubIdExists(string $pubIdType, string $pubId, int $excludeGalleyId, int $journalId): bool
     {
         $result = $this->retrieve(
             'SELECT COUNT(*) AS row_count
@@ -89,8 +77,8 @@ class IssueGalleyDAO extends \PKP\db\DAO
             [
                 'pub-id::' . $pubIdType,
                 $pubId,
-                (int) $galleyId,
-                (int) $journalId
+                $excludeGalleyId,
+                $journalId
             ]
         );
         $row = $result->current();
@@ -103,14 +91,10 @@ class IssueGalleyDAO extends \PKP\db\DAO
      * @param string $pubIdType One of the NLM pub-id-type values or
      * 'other::something' if not part of the official NLM list
      * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
-     * @param string $pubId
-     * @param int $issueId
-     *
-     * @return IssueGalley
      *
      * @hook IssueGalleyDAO::getByPubId [[&$pubIdType, &$pubId, &$issueId, &$returner]]
      */
-    public function getByPubId($pubIdType, $pubId, $issueId)
+    public function getByPubId(string $pubIdType, string $pubId, int $issueId): ?IssueGalley
     {
         $result = $this->retrieve(
             'SELECT
@@ -141,15 +125,11 @@ class IssueGalleyDAO extends \PKP\db\DAO
     }
 
     /**
-     * Retrieve all galleys for an issue.
-     *
-     * @param int $issueId
-     *
-     * @return array<int,IssueGalley> IssueGalleys
+     * Retrieve an associative array of galleys for an issue by issue ID.
      *
      * @hook IssueGalleyDAO::getGalleysByIssue [[&$galleys, &$issueId]]
      */
-    public function getByIssueId($issueId)
+    public function getByIssueId(int $issueId): array
     {
         $result = $this->retrieve(
             'SELECT
@@ -164,7 +144,7 @@ class IssueGalleyDAO extends \PKP\db\DAO
 			FROM issue_galleys g
 				LEFT JOIN issue_files f ON (g.file_id = f.file_id)
 			WHERE g.issue_id = ? ORDER BY g.seq',
-            [(int) $issueId]
+            [$issueId]
         );
 
         $galleys = [];
@@ -180,12 +160,9 @@ class IssueGalleyDAO extends \PKP\db\DAO
      * Retrieve issue galley by urlPath or, failing that,
      * internal galley ID; urlPath takes precedence.
      *
-     * @param string $galleyId
-     * @param int $issueId
-     *
      * @return IssueGalley object
      */
-    public function getByBestId($galleyId, $issueId)
+    public function getByBestId(int|string $galleyId, int $issueId)
     {
         $result = $this->retrieve(
             'SELECT
@@ -201,15 +178,14 @@ class IssueGalleyDAO extends \PKP\db\DAO
 				LEFT JOIN issue_files f ON (g.file_id = f.file_id)
 			WHERE	g.url_path = ? AND
 				g.issue_id = ?',
-            [
-                $galleyId,
-                (int) $issueId,
-            ]
+            [$galleyId, $issueId]
         );
         if ($row = $result->current()) {
             return $this->_fromRow((array) $row);
+        } elseif (($galleyId = filter_var($galleyId, FILTER_VALIDATE_INT)) !== false) {
+            return $this->getById($galleyId, $issueId);
         }
-        return $this->getById($galleyId, $issueId);
+        return null;
     }
 
     /**
@@ -234,10 +210,8 @@ class IssueGalleyDAO extends \PKP\db\DAO
 
     /**
      * Update the localized fields for this galley.
-     *
-     * @param IssueGalley $galley
      */
-    public function updateLocaleFields($galley)
+    public function updateLocaleFields(IssueGalley $galley): void
     {
         $this->updateDataObjectSettings('issue_galley_settings', $galley, [
             'galley_id' => $galley->getId()
@@ -246,10 +220,8 @@ class IssueGalleyDAO extends \PKP\db\DAO
 
     /**
      * Construct a new issue galley.
-     *
-     * @return IssueGalley
      */
-    public function newDataObject()
+    public function newDataObject(): IssueGalley
     {
         return new IssueGalley();
     }
@@ -257,13 +229,9 @@ class IssueGalleyDAO extends \PKP\db\DAO
     /**
      * Internal function to return an IssueGalley object from a row.
      *
-     * @param array $row
-     *
-     * @return IssueGalley
-     *
      * @hook IssueGalleyDAO::_fromRow [[&$galley, &$row]]
      */
-    public function _fromRow($row)
+    public function _fromRow(array $row): IssueGalley
     {
         $galley = $this->newDataObject();
 
@@ -294,11 +262,9 @@ class IssueGalleyDAO extends \PKP\db\DAO
     /**
      * Insert a new IssueGalley.
      *
-     * @param IssueGalley $galley
-     *
      * @hook IssueGalleyDAO::insertObject [[&$galley, $galley->getId()]]
      */
-    public function insertObject($galley)
+    public function insertObject(IssueGalley $galley): int
     {
         $this->update(
             'INSERT INTO issue_galleys
@@ -311,8 +277,8 @@ class IssueGalleyDAO extends \PKP\db\DAO
 				VALUES
 				(?, ?, ?, ?, ?, ?)',
             [
-                (int) $galley->getIssueId(),
-                (int) $galley->getFileId(),
+                $galley->getIssueId(),
+                $galley->getFileId(),
                 $galley->getLabel(),
                 $galley->getLocale(),
                 $galley->getSequence() == null ? $this->getNextGalleySequence($galley->getIssueId()) : $galley->getSequence(),
@@ -329,10 +295,8 @@ class IssueGalleyDAO extends \PKP\db\DAO
 
     /**
      * Update an existing IssueGalley.
-     *
-     * @param IssueGalley $galley
      */
-    public function updateObject($galley)
+    public function updateObject(IssueGalley $galley): void
     {
         $this->update(
             'UPDATE issue_galleys
@@ -344,12 +308,12 @@ class IssueGalleyDAO extends \PKP\db\DAO
 					url_path = ?
 				WHERE galley_id = ?',
             [
-                (int) $galley->getFileId(),
+                $galley->getFileId(),
                 $galley->getLabel(),
                 $galley->getLocale(),
                 $galley->getSequence(),
                 $galley->getData('urlPath'),
-                (int) $galley->getId()
+                $galley->getId()
             ]
         );
         $this->updateLocaleFields($galley);
@@ -357,27 +321,22 @@ class IssueGalleyDAO extends \PKP\db\DAO
 
     /**
      * Delete an IssueGalley.
-     *
-     * @param IssueGalley $galley
      */
-    public function deleteObject($galley)
+    public function deleteObject(IssueGalley $galley): void
     {
-        return $this->deleteById($galley->getId(), $galley->getIssueId());
+        $this->deleteById($galley->getId(), $galley->getIssueId());
     }
 
     /**
      * Delete a galley by ID.
      *
-     * @param int $galleyId
-     * @param int $issueId optional
-     *
      * @hook IssueGalleyDAO::deleteById [[&$galleyId, &$issueId]]
      */
-    public function deleteById($galleyId, $issueId = null)
+    public function deleteById(int $galleyId, ?int $issueId = null): void
     {
         Hook::call('IssueGalleyDAO::deleteById', [&$galleyId, &$issueId]);
 
-        if (isset($issueId)) {
+        if ($issueId !== null) {
             // Delete the file
             $issueGalley = $this->getById($galleyId);
             $issueFileManager = new IssueFileManager($issueId);
@@ -385,16 +344,16 @@ class IssueGalleyDAO extends \PKP\db\DAO
 
             $affectedRows = $this->update(
                 'DELETE FROM issue_galleys WHERE galley_id = ? AND issue_id = ?',
-                [(int) $galleyId, (int) $issueId]
+                [$galleyId, $issueId]
             );
         } else {
             $affectedRows = $this->update(
                 'DELETE FROM issue_galleys WHERE galley_id = ?',
-                [(int) $galleyId]
+                [$galleyId]
             );
         }
         if ($affectedRows) {
-            $this->update('DELETE FROM issue_galley_settings WHERE galley_id = ?', [(int) $galleyId]);
+            $this->update('DELETE FROM issue_galley_settings WHERE galley_id = ?', [$galleyId]);
         }
     }
 
@@ -402,9 +361,8 @@ class IssueGalleyDAO extends \PKP\db\DAO
      * Delete galleys by issue.
      * NOTE that this will not delete issue_file entities or the respective files.
      *
-     * @param int $issueId
      */
-    public function deleteByIssueId($issueId)
+    public function deleteByIssueId(int $issueId): void
     {
         $galleys = $this->getByIssueId($issueId);
         foreach ($galleys as $galley) {
@@ -414,12 +372,10 @@ class IssueGalleyDAO extends \PKP\db\DAO
 
     /**
      * Sequentially renumber galleys for an issue in their sequence order.
-     *
-     * @param int $issueId
      */
-    public function resequence($issueId)
+    public function resequence(int $issueId): void
     {
-        $result = $this->retrieve('SELECT galley_id FROM issue_galleys WHERE issue_id = ? ORDER BY seq', [(int) $issueId]);
+        $result = $this->retrieve('SELECT galley_id FROM issue_galleys WHERE issue_id = ? ORDER BY seq', [$issueId]);
         for ($i = 1; $row = $result->current(); $i++) {
             $this->update('UPDATE issue_galleys SET seq = ? WHERE galley_id = ?', [$i, $row->galley_id]);
             $result->next();
@@ -428,14 +384,10 @@ class IssueGalleyDAO extends \PKP\db\DAO
 
     /**
      * Get the the next sequence number for an issue's galleys (i.e., current max + 1).
-     *
-     * @param int $issueId
-     *
-     * @return int
      */
-    public function getNextGalleySequence($issueId)
+    public function getNextGalleySequence(int $issueId): int
     {
-        $result = $this->retrieve('SELECT COALESCE(MAX(seq), 0) + 1 AS next_sequence FROM issue_galleys WHERE issue_id = ?', [(int) $issueId]);
+        $result = $this->retrieve('SELECT COALESCE(MAX(seq), 0) + 1 AS next_sequence FROM issue_galleys WHERE issue_id = ?', [$issueId]);
         $row = $result->current();
         return $row->next_sequence;
     }
