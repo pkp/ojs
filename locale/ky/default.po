@@ -1,7 +1,7 @@
 # Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-10 09:39+0000\n"
+"PO-Revision-Date: 2024-06-21 18:39+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/default/ky/>"
 "\n"
@@ -184,3 +184,11 @@ msgstr ""
 "даректери ушул журнал белгилеген максаттар үчүн гана колдонулат жана башка "
 "максаттар үчүн колдонулбайт же башка адамга же юридикалык жактарга "
 "берилбейт.</p>"
+
+#, fuzzy
+msgid "default.groups.abbrev.manager"
+msgstr "УпрЖ"
+
+#, fuzzy
+msgid "default.groups.abbrev.guestEditor"
+msgstr "ПРед"
