@@ -33,11 +33,11 @@
 {/if}
 
 {* Get path for URL *}
-{if $parent instanceOf \APP\issue\Issue}
+{if $parent instanceOf APP\issue\Issue}
 	{assign var="page" value="issue"}
 	{assign var="parentId" value=$parent->getBestIssueId()}
 	{assign var="path" value=$parentId|to_array:$galley->getBestGalleyId()}
-{else}{* \APP\submission\Submission *}
+{else}{* APP\submission\Submission *}
 	{assign var="page" value="article"}
 	{if $publication}
 		{if $publication->getId() !== $parent->getData('currentPublicationId')}

@@ -85,7 +85,7 @@
 	<ul>
 		{foreach from=$content item=contentItem}
 			<li>
-				{if $contentItem instanceof \APP\submission\Submission}
+				{if $contentItem instanceof APP\submission\Submission}
 					{$contentItem->getLocalizedTitle()|strip_unsafe_html}</li>
 				{else}
 					{$contentItem->getIssueIdentification()|escape}

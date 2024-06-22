@@ -21,6 +21,7 @@ namespace APP\template;
 use APP\core\Application;
 use APP\core\PageRouter;
 use APP\file\PublicFileManager;
+use APP\journal\Journal;
 use PKP\config\Config;
 use PKP\core\PKPSessionGuard;
 use PKP\facades\Locale;
@@ -59,6 +60,8 @@ class TemplateManager extends PKPTemplateManager
             $siteFilesDir = $request->getBaseUrl() . '/' . $publicFileManager->getSiteFilesPath();
             $this->assign('sitePublicFilesDir', $siteFilesDir);
             $this->assign('publicFilesDir', $siteFilesDir); // May be overridden by journal
+
+            $this->registerClass(Journal::class, Journal::class);
 
             if ($site->getData('styleSheet')) {
                 $this->addStyleSheet(
