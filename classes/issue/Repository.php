@@ -64,21 +64,11 @@ class Repository
         return $this->dao->exists($id, $journalId);
     }
 
-    /** @copydoc DAO::get()
-     * TODO: Function signature should stick with ID, but previous DAO expected $useCache = false as default
+    /**
+     * @copydoc DAO::get()
      */
     public function get(int $id, ?int $journalId = null): ?Issue
     {
-        // TODO: Caching as currently setup never properly caches objects and always fires a _cacheMiss()
-        //        if ($useCache) {
-        //            $cache = $this->dao->_getCache('issues');
-        //            $returner = $cache->get($id);
-        //            if ($returner && $contextId != null && $contextId != $returner->getJournalId()) {
-        //                $returner = null;
-        //            }
-        //            return $returner;
-        //        }
-
         return $this->dao->get($id, $journalId);
     }
 
@@ -201,17 +191,9 @@ class Repository
 
     /**
      * Retrieve current issue
-     *
-     * @param bool $useCache TODO: Not currently implemented. Adding to preserved desired cache usage in future
      */
-    public function getCurrent(int $contextId, bool $useCache = false): ?Issue
+    public function getCurrent(int $contextId): ?Issue
     {
-        // TODO: Caching as currently setup never properly caches objects and always fires a _cacheMiss()
-        //	    if ($useCache) {
-        //	        $cache = $this->dao->_getCache('current');
-        //	        return $cache->get($contextId);
-        //        }
-
         /** @var JournalDAO $journalDao */
         $journalDao = DAORegistry::getDAO('JournalDAO');
 
@@ -256,10 +238,8 @@ class Repository
     /**
      * Retrieve Issue by "best" issue id -- url path if it exists,
      * falling back on the internal issue ID otherwise.
-     *
-     * @param bool $useCache TODO: Carryover from IssueDAO—was not in use
      */
-    public function getByBestId(string $idOrUrlPath, ?int $contextId = null, bool $useCache = false): ?Issue
+    public function getByBestId(string $idOrUrlPath, ?int $contextId = null): ?Issue
     {
         // Get the issue that matches the requested urlPath (if $idOrUrlPath is one)
         return ctype_digit((string) $idOrUrlPath)
