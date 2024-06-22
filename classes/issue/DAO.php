@@ -22,8 +22,6 @@ use Illuminate\Database\Query\JoinClause;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\LazyCollection;
-use PKP\cache\CacheManager;
-use PKP\cache\GenericCache;
 use PKP\core\EntityDAO;
 use PKP\core\traits\EntityWithParent;
 use PKP\db\DAOResultFactory;
@@ -38,9 +36,6 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
      * @use EntityWithParent<Issue>
      */
     use EntityWithParent;
-
-    // TODO: Needs to be addressed with refactor of caching.
-    public $caches;
 
     /** @copydoc EntityDAO::$schema */
     public $schema = PKPSchemaService::SCHEMA_ISSUE;
@@ -83,42 +78,6 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
     public function getParentColumn(): string
     {
         return 'journal_id';
-    }
-
-    /**
-     * Handle a cache miss.
-     *
-     * TODO: Caching not currently working as expected
-     *
-     */
-    public function _cacheMiss(GenericCache $cache, int $id): ?Issue
-    {
-        if ($cache->getCacheId() === 'current') {
-            $issue = Repo::issue()->getCurrent($id);
-        } else {
-            $issue = Repo::issue()->getByBestId($id, null, false);
-        }
-        $cache->setCache($id, $issue);
-        return $issue;
-    }
-
-    /**
-     * Get an issue cache by cache ID
-     *
-     * TODO: Not currently working as expected. Not used throughout current class
-     *
-     * @return mixed|object|\PKP\cache\APCCache|\PKP\cache\FileCache|GenericCache|\PKP\cache\MemcacheCache|\PKP\cache\XCacheCache
-     */
-    public function _getCache(string $cacheId)
-    {
-        if (!isset($this->caches)) {
-            $this->caches = [];
-        }
-        if (!isset($this->caches[$cacheId])) {
-            $cacheManager = CacheManager::getManager();
-            $this->caches[$cacheId] = $cacheManager->getObjectCache('issues', $cacheId, $this->_cacheMiss(...));
-        }
-        return $this->caches[$cacheId];
     }
 
     /**
@@ -205,7 +164,6 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
         $issue->stampModified();
         parent::_update($issue);
         $this->resequenceCustomIssueOrders($issue->getData('journalId'));
-        // TODO: Flush cache
     }
 
     /** @copydoc EntityDAO::_delete() */
@@ -213,7 +171,6 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
     {
         parent::_delete($issue);
         $this->resequenceCustomIssueOrders($issue->getData('journalId'));
-        // TODO: Flush cache
     }
 
     /**
@@ -375,8 +332,6 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
             ['issue_id' => (int) $pubObjectId, 'locale' => '', 'setting_name' => 'pub-id::' . $pubIdType],
             ['setting_value' => (string) $pubId]
         );
-        // TODO: Cache not implemented
-        // $this->flushCache();
     }
 
     /**
@@ -393,8 +348,6 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
                 (int)$pubObjectId
             ]
         );
-        // TODO: Cache not implemented
-        // $this->flushCache();
     }
 
     /**
@@ -414,8 +367,6 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
                 ]
             );
         }
-        // TODO: Cache not implemented
-        // $this->flushCache();
     }
 
     /**
@@ -458,17 +409,6 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
 
         $result = $this->deprecatedDao->retrieveRange($q, [], $rangeInfo);
         return new DAOResultFactory($result, $this, 'fromRow', [], $q, [], $rangeInfo);
-    }
-
-    /**
-     * Flush the issue cache.
-     *
-     * TODO: Not currently in use. _getCache always results in cache miss.
-     */
-    public function flushCache()
-    {
-        $this->_getCache('issues')->flush();
-        $this->_getCache('current')->flush();
     }
 
     /**
