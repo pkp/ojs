@@ -25,9 +25,8 @@ class ArticleSearch extends SubmissionSearch {
 		// Calculate a well-ordered (unique) score.
 		$resultCount = count($unorderedResults);
 		$i = 0;
-		foreach ($unorderedResults as $submissionId => &$data) {
-			// Reference is necessary to permit modification
-			$data['score'] = ($resultCount * $data['count']) + $i++;
+		foreach ($unorderedResults as $submissionId => $data) {
+			$data[$submissionId]['score'] = ($resultCount * $data['count']) + $i++;
 		}
 
 		// If we got a primary sort order then apply it and use score as secondary
