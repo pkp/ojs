@@ -41,9 +41,8 @@ class ArticleSearch extends SubmissionSearch
         $resultCount = count($unorderedResults);
         $i = 0;
         $contextIds = [];
-        foreach ($unorderedResults as $submissionId => &$data) {
-            // Reference is necessary to permit modification
-            $data['score'] = ($resultCount * $data['count']) + $i++;
+        foreach ($unorderedResults as $submissionId => $data) {
+            $unorderedResults[$submissionId]['score'] = ($resultCount * $data['count']) + $i++;
             $contextIds[] = $data['journal_id'];
         }
 
