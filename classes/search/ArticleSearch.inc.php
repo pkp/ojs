@@ -211,7 +211,7 @@ class ArticleSearch extends SubmissionSearch {
 		$indexFieldMap[SUBMISSION_SEARCH_INDEX_TERMS] = 'indexTerms';
 		$keywords = array();
 		if (isset($searchFilters['query'])) {
-			$keywords[null] = $searchFilters['query'];
+			$keywords[''] = $searchFilters['query'];
 		}
 		foreach($indexFieldMap as $bitmap => $searchField) {
 			if (isset($searchFilters[$searchField]) && !empty($searchFilters[$searchField])) {
