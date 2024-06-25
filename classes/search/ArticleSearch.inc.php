@@ -26,7 +26,7 @@ class ArticleSearch extends SubmissionSearch {
 		$resultCount = count($unorderedResults);
 		$i = 0;
 		foreach ($unorderedResults as $submissionId => $data) {
-			$data[$submissionId]['score'] = ($resultCount * $data['count']) + $i++;
+			$unorderedResults[$submissionId]['score'] = ($resultCount * $data['count']) + $i++;
 		}
 
 		// If we got a primary sort order then apply it and use score as secondary
