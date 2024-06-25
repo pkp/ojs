@@ -1,10 +1,6 @@
 {
 	"title": "Section",
 	"description": "A journal or server section, or press series.",
-	"required": [
-		"contextId",
-		"title"
-	],
 	"properties": {
 		"abbrev": {
 			"type": "string",
