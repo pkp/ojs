@@ -132,7 +132,7 @@ describe('Data suite: Amwandenga', function() {
 			'genre': Cypress.env('defaultGenre')
 		}]);
 		cy.get('.listPanel__item:contains("delete-this-file.pdf")').find('button').contains('Remove').click();
-		cy.get('.modal__panel:contains("Are you sure you want to remove this file?")').find('button').contains('Yes').click();
+		cy.get('div[role=dialog]:contains("Are you sure you want to remove this file?")').find('button').contains('Yes').click();
 		cy.get('.listPanel__item:contains("delete-this-file.pdf")').should('not.exist');
 
 		cy.get('.submissionWizard__footer button').contains('Continue').click();
@@ -143,7 +143,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('h2').contains('Contributors');
 		cy.get('.listPanel__item:contains("Alan Mwandenga")');
 		cy.get('button').contains('Add Contributor').click();
-		cy.get('.modal__panel:contains("Add Contributor")').find('button').contains('Save').click();
+		cy.get('div[role=dialog]:contains("Add Contributor")').find('button').contains('Save').click();
 		cy.get('#contributor-givenName-error-en').contains('This field is required.');
 		cy.get('#contributor-email-error').contains('This field is required.');
 		cy.get('#contributor-country-error').contains('This field is required.');
@@ -151,37 +151,37 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('.pkpFormField:contains("Family Name")').find('input[name*="-en"]').type(submission.authors[0].familyName);
 		cy.get('.pkpFormField:contains("Country")').find('select').select(submission.authors[0].country)
 		cy.get('.pkpFormField:contains("Email")').find('input').type('notanemail');
-		cy.get('.modal__panel:contains("Add Contributor")').find('button').contains('Save').click();
+		cy.get('div[role=dialog]:contains("Add Contributor")').find('button').contains('Save').click();
 		cy.get('#contributor-email-error').contains('This is not a valid email address.');
 		cy.get('.pkpFormField:contains("Email")').find('input').type(submission.authors[0].email);
-		cy.get('.modal__panel:contains("Add Contributor")').find('button').contains('Save').click();
+		cy.get('div[role=dialog]:contains("Add Contributor")').find('button').contains('Save').click();
 		cy.wait(3000);
 		cy.get('button').contains('Order').click();
 		cy.wait(3000);
 		cy.get('button:contains("Decrease position of Alan Mwandenga")').click();
 		cy.get('button').contains('Save Order').click();
 		cy.get('button:contains("Preview")').click(); // Will only appear after order is saved
-		cy.get('.modal__panel:contains("List of Contributors")').find('tr:contains("Abbreviated")').contains('Mansour et al.');
-		cy.get('.modal__panel:contains("List of Contributors")').find('tr:contains("Publication Lists")').contains('Amina Mansour, Alan Mwandenga (Author)');
-		cy.get('.modal__panel:contains("List of Contributors")').find('tr:contains("Full")').contains('Amina Mansour, Alan Mwandenga (Author)');
-		cy.get('.modal__panel:contains("List of Contributors")').find('.modal__closeButton').click();
+		cy.get('div[role=dialog]:contains("List of Contributors")').find('tr:contains("Abbreviated")').contains('Mansour et al.');
+		cy.get('div[role=dialog]:contains("List of Contributors")').find('tr:contains("Publication Lists")').contains('Amina Mansour, Alan Mwandenga (Author)');
+		cy.get('div[role=dialog]:contains("List of Contributors")').find('tr:contains("Full")').contains('Amina Mansour, Alan Mwandenga (Author)');
+		cy.get('div[role=dialog]:contains("List of Contributors")').find('button:contains("Close")').click();
 		cy.get('.listPanel:contains("Contributors")').find('button').contains('Order').click();
 		cy.get('button:contains("Increase position of Alan Mwandenga")').click();
 		cy.get('.listPanel:contains("Contributors")').find('button').contains('Save Order').click();
 		cy.get('.listPanel:contains("Contributors") button:contains("Preview")').click(); // Will only appear after order is saved
-		cy.get('.modal__panel:contains("List of Contributors")').find('tr:contains("Abbreviated")').contains('Mwandenga et al.');
-		cy.get('.modal__panel:contains("List of Contributors")').find('tr:contains("Publication Lists")').contains('Alan Mwandenga, Amina Mansour (Author)');
-		cy.get('.modal__panel:contains("List of Contributors")').find('tr:contains("Full")').contains('Alan Mwandenga, Amina Mansour (Author)');
-		cy.get('.modal__panel:contains("List of Contributors")').find('.modal__closeButton').click();
+		cy.get('div[role=dialog]:contains("List of Contributors")').find('tr:contains("Abbreviated")').contains('Mwandenga et al.');
+		cy.get('div[role=dialog]:contains("List of Contributors")').find('tr:contains("Publication Lists")').contains('Alan Mwandenga, Amina Mansour (Author)');
+		cy.get('div[role=dialog]:contains("List of Contributors")').find('tr:contains("Full")').contains('Alan Mwandenga, Amina Mansour (Author)');
+		cy.get('div[role=dialog]:contains("List of Contributors")').find('button:contains("Close")').click();
 
 		// Delete a contributor
 		cy.get('.listPanel:contains("Contributors")').find('button').contains('Add Contributor').click();
 		cy.get('.pkpFormField:contains("Given Name")').find('input[name*="-en"]').type('Fake Author Name');
 		cy.get('.pkpFormField:contains("Email")').find('input').type('delete@mailinator.com');
 		cy.get('.pkpFormField:contains("Country")').find('select').select('Barbados');
-		cy.get('.modal__panel:contains("Add Contributor")').find('button').contains('Save').click();
+		cy.get('div[role=dialog]:contains("Add Contributor")').find('button').contains('Save').click();
 		cy.get('.listPanel__item:contains("Fake Author Name")').find('button').contains('Delete').click();
-		cy.get('.modal__panel:contains("Are you sure you want to remove Fake Author Name as a contributor?")').find('button').contains('Delete Contributor').click();
+		cy.get('div[role=dialog]:contains("Are you sure you want to remove Fake Author Name as a contributor?")').find('button').contains('Delete Contributor').click();
 		cy.get('.listPanel__item:contains("Fake Author Name")').should('not.exist');
 
 		cy.get('.submissionWizard__footer button').contains('Continue').click();
@@ -247,7 +247,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.contains('Make a Submission: Review');
 		cy.get('button:contains("Submit")').click();
 		const message = 'The submission, ' + submission.title + ', will be submitted to ' + Cypress.env('contextTitles').en + ' for editorial review';
-		cy.get('.modal__panel:contains("' + message + '")').find('button').contains('Submit').click();
+		cy.get('div[role=dialog]:contains("' + message + '")').find('button').contains('Submit').click();
 		cy.contains('Submission complete');
 		cy.get('a').contains('Create a new submission');
 		cy.get('a').contains('Return to your dashboard');
@@ -339,11 +339,11 @@ describe('Data suite: Amwandenga', function() {
 
 		cy.get('#contributors button').contains('Add Contributor').click();
 
-		cy.get('.modal [name="givenName-en"]').type('Nicolas', {delay: 0});
-		cy.get('.modal [name="familyName-en"]').type('Riouf', {delay: 0});
-		cy.get('.modal [name="email"]').type('nriouf@mailinator.com', {delay: 0});
-		cy.get('.modal [name="country"]').select('South Africa');
-		cy.get('.modal button').contains('Save').click();
+		cy.get('div[role="dialog"] [name="givenName-en"]').type('Nicolas', {delay: 0});
+		cy.get('div[role="dialog"] [name="familyName-en"]').type('Riouf', {delay: 0});
+		cy.get('div[role="dialog"] [name="email"]').type('nriouf@mailinator.com', {delay: 0});
+		cy.get('div[role="dialog"] [name="country"]').select('South Africa');
+		cy.get('div[role="dialog"] button').contains('Save').click();
 		cy.wait(500);
 		cy.get('#contributors div').contains('Nicolas Riouf');
 
@@ -426,7 +426,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('#publication-button').click();
 		cy.get('button').contains('Unpublish').click();
 		cy.contains('Are you sure you don\'t want this to be published?');
-		cy.get('.modal__panel button').contains('Unpublish').click();
+		cy.get('div[role=dialog] button').contains('Unpublish').click();
 		cy.wait(1000);
 		cy.visit('/index.php/publicknowledge/issue/current');
 		cy.contains('Signalling Theory Dividends').should('not.exist');
@@ -455,7 +455,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('#titleAbstract button').contains('Save').should('be.disabled');
 		cy.get('#publication button').contains('Create New Version').click();
 		cy.contains('Are you sure you want to create a new version?');
-		cy.get('.modal__panel:contains("Create New Version")').get('button').contains('Yes').click();
+		cy.get('div[role=dialog]:contains("Create New Version")').get('button').contains('Yes').click();
 		cy.wait(3000);
 
 		// Toggle between versions
@@ -480,8 +480,8 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('#contributors-button').click();
 
 		cy.get('#contributors div').contains('Alan Mwandenga').parent().parent().find('button').contains('Edit').click();
-		cy.get('.modal [name="familyName-en"]').type(' Version 2', {delay: 0});
-		cy.get('.modal button').contains('Save').click();
+		cy.get('div[role="dialog"] [name="familyName-en"]').type(' Version 2', {delay: 0});
+		cy.get('div[role="dialog"] button').contains('Save').click();
 		// cy.get('#contributors button').contains('Save').should("not.be.visible");
 		cy.wait(1500); // Wait for the grid to reload
 		cy.get('#contributors div').contains('Alan Mwandenga Version 2');
@@ -534,7 +534,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('#publication-button').click();
 		cy.get('button').contains('Unpublish').click();
 		cy.contains('Are you sure you don\'t want this to be published?');
-		cy.get('.modal__panel button').contains('Unpublish').click();
+		cy.get('div[role=dialog] button').contains('Unpublish').click();
 		cy.wait(1000);
 		cy.get('.pkpWorkflow__header a').contains('View').click();
 		cy.contains('The Signalling Theory Dividends Version 2').should('not.exist');

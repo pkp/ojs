@@ -482,8 +482,8 @@ describe('Submission Wizard', function() {
         // Change submission language to French (Canada) and section to Reviews
         cy.contains('Submitting to the Articles section in English');
         cy.get('button:contains("Change")').click();
-        cy.get('h2:contains("Change Submission Settings")')
-            .parents('.modal')
+        cy.get('h1:contains("Change Submission Settings")')
+            .parents('[role=dialog]')
             .within(() => {
                 cy.get('label:contains("French (Canada)")').click();
                 cy.get('label:contains("Reviews")').click();
@@ -586,7 +586,7 @@ describe('Submission Wizard', function() {
             .click();
         cy.get('input[name="givenName-fr_CA"]').type('Carlo', {delay: 0});
         cy.get('input[name="familyName-fr_CA"]').type('Carlo', {delay: 0});
-        cy.get('.modal').find('button:contains("Save")').click();
+        cy.get('[role=dialog]').find('button:contains("Save")').click();
         cy.get('.pkpSteps button:contains("For the Editors")').click();
         cy.get('#forTheEditors-subjects-control-fr_CA').type('Sociologie française', {delay: 0});
         cy.get('li:contains("Sociologie française")');
