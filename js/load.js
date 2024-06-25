@@ -44,7 +44,6 @@ window.pkp = Object.assign(PkpLoad, window.pkp || {}, {
 	controllers: {
 		AccessPage,
 		AddContextContainer,
-		AdvancedSearchReviewerContainer,
 		AdminPage,
 		AdvancedSearchReviewerContainer,
 		Container,
