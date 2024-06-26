@@ -88,7 +88,7 @@ class DAO extends \PKP\submission\DAO
             ->where('s.context_id', '=', $contextId)
             ->when($pubIdType != null, fn (Builder $q) => $q->where('pspidt.setting_name', '=', "pub-id::{$pubIdType}")->whereNotNull('pspidt.setting_value'))
             ->when($title != null, fn (Builder $q) => $q->where('pst.setting_name', '=', 'title')->where('pst.setting_value', 'LIKE', "%{$title}%"))
-            ->when($author != null, fn (Builder $q) => $q->where(fn (Builder $q) => $q->whereRaw("CONCAT(COALESCE(asgs.setting_value, ''), ' ', COALESCE(asfs.setting_value, ''))", 'LIKE', $author)))
+            ->when($author != null, fn (Builder $q) => $q->whereRaw("CONCAT(COALESCE(asgs.setting_value, ''), ' ', COALESCE(asfs.setting_value, '')) LIKE ?", [$author]))
             ->when($issueId != null, fn (Builder $q) => $q->where('psi.setting_value', '=', $issueId))
             ->when(
                 $pubIdSettingName,
