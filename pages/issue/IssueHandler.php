@@ -103,7 +103,7 @@ class IssueHandler extends Handler
         $issue = Repo::issue()->getCurrent($journal->getId(), true);
 
         if ($issue != null) {
-            $request->redirect(null, 'issue', 'view', $issue->getBestIssueId());
+            $request->redirect(null, 'issue', 'view', [$issue->getBestIssueId()]);
         }
 
         $this->setupTemplate($request);

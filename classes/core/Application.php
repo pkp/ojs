@@ -9,8 +9,6 @@
  *
  * @class Application
  *
- * @ingroup core
- *
  * @see PKPApplication
  *
  * @brief Class describing this application.
@@ -37,8 +35,6 @@ class Application extends PKPApplication
     public const ASSOC_TYPE_ISSUE = 0x0000103;
     public const ASSOC_TYPE_ISSUE_GALLEY = 0x0000105;
 
-    public const CONTEXT_JOURNAL = 1; // not used?
-
     public const REQUIRES_XSL = false;
 
     /**
@@ -55,7 +51,6 @@ class Application extends PKPApplication
                 'ASSOC_TYPE_JOURNAL',
                 'ASSOC_TYPE_ISSUE',
                 'ASSOC_TYPE_ISSUE_GALLEY',
-                'CONTEXT_JOURNAL',
             ] as $constantName) {
                 if (!defined($constantName)) {
                     define($constantName, constant('self::' . $constantName));

@@ -9,8 +9,6 @@
  *
  * @class Request
  *
- * @ingroup core
- *
  * @brief @verbatim Class providing operations associated with HTTP requests.
  * Requests are assumed to be in the format http://host.tld/index.php/<journal_id>/<page_name>/<operation_name>/<arguments...>
  * <journal_id> is assumed to be "index" for top-level site requests. @endverbatim
@@ -39,38 +37,5 @@ class Request extends PKPRequest
     public function getContext(): ?Journal
     {
         return parent::getContext();
-    }
-
-    /**
-     * Deprecated
-     *
-     * @see PKPPageRouter::url()
-     *
-     * @param null|mixed $journalPath
-     * @param null|mixed $page
-     * @param null|mixed $op
-     * @param null|mixed $path
-     * @param null|mixed $params
-     * @param null|mixed $anchor
-     */
-    public function url(
-        $journalPath = null,
-        $page = null,
-        $op = null,
-        $path = null,
-        $params = null,
-        $anchor = null,
-        $escape = false
-    ) {
-        return $this->_delegateToRouter(
-            'url',
-            $journalPath,
-            $page,
-            $op,
-            $path,
-            $params,
-            $anchor,
-            $escape
-        );
     }
 }
