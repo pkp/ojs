@@ -12,13 +12,15 @@
  * @ingroup tools
  *
  * @brief CLI tool to execute a set of scheduled tasks.
+ *
+ * @deprecated 3.5.0    use the command line tool `lib/pkp/tools/scheduler.php run` to set
+ *                      in the crontab to run schedule tasks.
  */
 
 require(dirname(__FILE__) . '/bootstrap.php');
 
-class runScheduledTasks extends \PKP\cliTool\ScheduledTaskTool
-{
-}
+// We need to push the appropriate option to the command line tool and in this case
+// as we intend to run the schedule tasks, it's `run`
+array_push($argv, 'run');
 
-$tool = new runScheduledTasks($argv ?? []);
-$tool->execute();
+require(BASE_SYS_DIR . '/lib/pkp/tools/scheduler.php');

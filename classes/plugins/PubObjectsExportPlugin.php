@@ -23,6 +23,8 @@ use APP\issue\Issue;
 use APP\journal\Journal;
 use APP\journal\JournalDAO;
 use APP\notification\NotificationManager;
+use APP\plugins\importexport\doaj\DOAJInfoSender;
+use APP\scheduler\Scheduler;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\core\EntityDAO;
@@ -39,11 +41,12 @@ use PKP\notification\Notification;
 use PKP\plugins\Hook;
 use PKP\plugins\importexport\PKPImportExportDeployment;
 use PKP\plugins\ImportExportPlugin;
+use PKP\plugins\interfaces\HasTaskScheduler;
 use PKP\plugins\PluginRegistry;
 use PKP\submission\PKPSubmission;
 use PKP\user\User;
 
-abstract class PubObjectsExportPlugin extends ImportExportPlugin
+abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasTaskScheduler
 {
     // The statuses
     public const EXPORT_STATUS_ANY = '';
@@ -90,6 +93,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
         }
 
         $this->addLocaleData();
+        $this->registerSchedules();
 
         Hook::add('AcronPlugin::parseCronTab', [$this, 'callbackParseCronTab']);
         foreach ($this->_getDAOs() as $dao) {
@@ -598,6 +602,22 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
 
         $taskFilesPath[] = $scheduledTasksPath;
         return false;
+    }
+
+    public function registerSchedules(?Scheduler $scheduler = null): void
+    {
+        $scheduler ??= app()->get(Scheduler::class); /** @var \APP\scheduler\Scheduler $scheduler */
+
+        $scheduler
+            ->addSchedule(new DOAJInfoSender())
+            ->everyMinute()
+            ->name(DOAJInfoSender::class)
+            ->withoutOverlapping()
+            ->then(function () {
+                /** @var \PKP\scheduledTask\ScheduledTaskDAO $scheduledTaskDao */
+                $scheduledTaskDao = DAORegistry::getDAO('ScheduledTaskDAO');
+                $scheduledTaskDao->updateLastRunTime(DOAJInfoSender::class);
+            });
     }
 
     /**
