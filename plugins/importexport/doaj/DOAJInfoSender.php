@@ -31,7 +31,7 @@ class DOAJInfoSender extends ScheduledTask
     public function __construct(array $args = [])
     {
         // This following line causing app to crash and return GATEWAY Error
-        // PluginRegistry::loadCategory("importexport");
+        // PluginRegistry::loadCategory("importexport"); // Need fixing
 
         $plugin = PluginRegistry::getPlugin('importexport', 'DOAJExportPlugin'); /** @var DOAJExportPlugin $plugin */
         $this->_plugin = $plugin;
@@ -46,7 +46,7 @@ class DOAJInfoSender extends ScheduledTask
     /**
      * @copydoc ScheduledTask::getName()
      */
-    public function getName()
+    public function getName(): string
     {
         return __('plugins.importexport.doaj.senderTask.name');
     }
@@ -54,7 +54,7 @@ class DOAJInfoSender extends ScheduledTask
     /**
      * @copydoc ScheduledTask::executeActions()
      */
-    public function executeActions()
+    public function executeActions(): bool
     {
         if (!$this->_plugin) {
             return false;
@@ -73,6 +73,7 @@ class DOAJInfoSender extends ScheduledTask
                 $this->_registerObjects($unregisteredArticles, 'article=>doaj-json', $journal, 'articles');
             }
         }
+
         return true;
     }
 
