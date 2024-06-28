@@ -404,15 +404,15 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $titlesNode = $doc->createElementNS($deployment->getNamespace(), 'titles');
         // Start with the primary object locale.
         $primaryTitle = array_shift($titles);
-        $titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars(PKPString::html2text($primaryTitle), ENT_COMPAT, 'UTF-8')));
+        $titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars($primaryTitle, ENT_COMPAT, 'UTF-8')));
         // Then let the translated titles follow.
         foreach ($titles as $locale => $title) {
-            $titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars(PKPString::html2text($title), ENT_COMPAT, 'UTF-8')));
+            $titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars($title, ENT_COMPAT, 'UTF-8')));
             $node->setAttribute('titleType', DATACITE_TITLETYPE_TRANSLATED);
         }
         // And finally the alternative title.
         if (!empty($alternativeTitle)) {
-            $titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars(PKPString::html2text($alternativeTitle), ENT_COMPAT, 'UTF-8')));
+            $titlesNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'title', htmlspecialchars($alternativeTitle, ENT_COMPAT, 'UTF-8')));
             $node->setAttribute('titleType', DATACITE_TITLETYPE_ALTERNATIVE);
         }
         return $titlesNode;
@@ -1057,7 +1057,8 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $toc = '';
         foreach ($submissions as $submissionInIssue) { /** @var Submission $submissionInIssue */
             $currentEntry = $this->getPrimaryTranslation(
-                $submissionInIssue->getCurrentPublication()?->getTitles() ?? [],
+                // get html format because later PKPString::html2text will be applied
+                $submissionInIssue->getCurrentPublication()?->getTitles('html') ?? [],
                 $objectLocalePrecedence
             );
             assert(!empty($currentEntry));
