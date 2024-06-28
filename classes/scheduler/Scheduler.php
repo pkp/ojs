@@ -2,19 +2,15 @@
 
 namespace APP\scheduler;
 
-use APP\core\Application;
 use APP\tasks\OpenAccessNotification;
 use APP\tasks\SubscriptionExpiryReminder;
 use APP\tasks\UsageStatsLoader;
-use PKP\plugins\PluginRegistry;
 use PKP\scheduledTask\PKPScheduler;
 
 class Scheduler extends PKPScheduler
 {
     public function registerSchedules(): void
     {
-        parent::registerSchedules();
-
         $this
             ->schedule
             ->call(fn () => (new SubscriptionExpiryReminder())->execute())
@@ -39,7 +35,6 @@ class Scheduler extends PKPScheduler
             ->withoutOverlapping()
             ->then(fn () => $this->scheduledTaskDao->updateLastRunTime(OpenAccessNotification::class));
 
-        // ray(Application::get()->getEnabledProducts());
-        // ray(PluginRegistry::getAllPlugins());
+        parent::registerSchedules();
     }
 }

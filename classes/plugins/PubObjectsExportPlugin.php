@@ -95,7 +95,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
         $this->addLocaleData();
         $this->registerSchedules();
 
-        Hook::add('AcronPlugin::parseCronTab', [$this, 'callbackParseCronTab']);
         foreach ($this->_getDAOs() as $dao) {
             if ($dao instanceof SchemaDAO) {
                 Hook::add('Schema::get::' . $dao->schemaName, $this->addToSchema(...));
@@ -585,23 +584,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
     protected function _getObjectAdditionalSettings()
     {
         return [$this->getDepositStatusSettingName()];
-    }
-
-    /**
-     * @copydoc AcronPlugin::parseCronTab()
-     */
-    public function callbackParseCronTab($hookName, $args)
-    {
-        $taskFilesPath = &$args[0];
-
-        $scheduledTasksPath = "{$this->getPluginPath()}/scheduledTasks.xml";
-
-        if (!file_exists($scheduledTasksPath)) {
-            return false;
-        }
-
-        $taskFilesPath[] = $scheduledTasksPath;
-        return false;
     }
 
     public function registerSchedules(?Scheduler $scheduler = null): void
