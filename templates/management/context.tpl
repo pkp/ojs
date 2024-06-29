@@ -30,14 +30,14 @@
 		<tab id="masthead" label="{translate key="manager.setup.masthead"}">
 			{help file="settings/journal-settings" class="pkp_help_tab"}
 			<pkp-form
-				v-bind="components.{$smarty.const.FORM_MASTHEAD}"
+				v-bind="components.{PKP\components\forms\context\PKPMastheadForm::FORM_MASTHEAD}"
 				@set="set"
 			/>
 		</tab>
 		<tab id="contact" label="{translate key="about.contact"}">
 			{help file="settings/journal-settings" section="contact" class="pkp_help_tab"}
 			<pkp-form
-				v-bind="components.{$smarty.const.FORM_CONTACT}"
+				v-bind="components.{PKP\components\forms\context\PKPContactForm::FORM_CONTACT}"
 				@set="set"
 			/>
 		</tab>

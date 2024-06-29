@@ -23,12 +23,12 @@ use PKP\components\forms\FormComponent;
 use PKP\core\Core;
 use PKP\core\PKPString;
 
-define('FORM_PUBLISH', 'publish');
-
 class PublishForm extends FormComponent
 {
+    public const FORM_PUBLISH = 'publish';
+
     /** @copydoc FormComponent::$id */
-    public $id = FORM_PUBLISH;
+    public $id = self::FORM_PUBLISH;
 
     /** @copydoc FormComponent::$method */
     public $method = 'PUT';

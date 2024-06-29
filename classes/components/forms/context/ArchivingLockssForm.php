@@ -19,14 +19,10 @@ use APP\journal\Journal;
 use PKP\components\forms\FieldOptions;
 use PKP\components\forms\FormComponent;
 
-define('FORM_ARCHIVING_LOCKSS', 'archivingLockss');
-
 class ArchivingLockssForm extends FormComponent
 {
-    /** @copydoc FormComponent::$id */
-    public $id = FORM_ARCHIVING_LOCKSS;
-
-    /** @copydoc FormComponent::$method */
+    public const FORM_ARCHIVING_LOCKSS = 'archivingLockss';
+    public $id = self::FORM_ARCHIVING_LOCKSS;
     public $method = 'PUT';
 
     /**

@@ -34,7 +34,7 @@ class Schema extends \PKP\submission\maps\Schema
                 $this->context->getPath(),
                 'article',
                 'view',
-                $submission->getBestId()
+                [$submission->getBestId()]
             );
         }
 

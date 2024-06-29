@@ -11,7 +11,7 @@
 
 {assign var="uuid" value=""|uniqid|escape}
 <div id="assign-{$uuid}" class="pkpWorkflow__publishModal">
-	<pkp-form v-bind="components.{$smarty.const.FORM_ASSIGN_TO_ISSUE}" @set="set" />
+	<pkp-form v-bind="components.{APP\components\forms\publication\AssignToIssueForm::FORM_ASSIGN_TO_ISSUE}" @set="set" />
 	<script type="text/javascript">
 		pkp.registry.init('assign-{$uuid}', 'Container', {$assignData|json_encode});
 	</script>

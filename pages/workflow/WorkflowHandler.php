@@ -16,6 +16,7 @@
 
 namespace APP\pages\workflow;
 
+use APP\components\forms\publication\PublishForm;
 use APP\core\Application;
 use APP\core\Services;
 use APP\decision\types\Accept;
@@ -109,15 +110,15 @@ class WorkflowHandler extends PKPWorkflowHandler
             $sectionWordLimits[$section->getId()] = (int) $section->getAbstractWordCount() ?? 0;
         }
 
-        class_exists(\APP\components\forms\publication\AssignToIssueForm::class); // Force define of FORM_ASSIGN_TO_ISSUE
         $templateMgr->setConstants([
-            'FORM_ASSIGN_TO_ISSUE' => FORM_ASSIGN_TO_ISSUE,
-            'FORM_ISSUE_ENTRY' => FORM_ISSUE_ENTRY,
-            'FORM_PUBLISH' => FORM_PUBLISH,
+            'FORM_ASSIGN_TO_ISSUE' => \APP\components\forms\publication\AssignToIssueForm::FORM_ASSIGN_TO_ISSUE,
+            'FORM_ISSUE_ENTRY' => $issueEntryForm::FORM_ISSUE_ENTRY,
+            'FORM_PUBLISH' => PublishForm::FORM_PUBLISH,
         ]);
 
         $components = $templateMgr->getState('components');
-        $components[FORM_ISSUE_ENTRY] = $this->getLocalizedForm($issueEntryForm, $submissionLocale, $locales);
+        $components[$issueEntryForm::FORM_ISSUE_ENTRY] = $this->getLocalizedForm($issueEntryForm, $submissionLocale, $locales);
+        $templateMgr->registerClass($issueEntryForm::class, $issueEntryForm::class); // FORM_ISSUE_ENTRY
 
         $canEditPublication = Repo::submission()->canEditPublication($submission->getId(), $request->getUser()->getId());
 
@@ -141,19 +142,19 @@ class WorkflowHandler extends PKPWorkflowHandler
                 $submission,
                 $request->getContext()
             );
-            $components[FORM_SUBMISSION_PAYMENTS] = $submissionPaymentsForm->getConfig();
+            $components[$submissionPaymentsForm::FORM_SUBMISSION_PAYMENTS] = $submissionPaymentsForm->getConfig();
             $templateMgr->setConstants([
-                'FORM_SUBMISSION_PAYMENTS' => FORM_SUBMISSION_PAYMENTS,
+                'FORM_SUBMISSION_PAYMENTS' => $submissionPaymentsForm::FORM_SUBMISSION_PAYMENTS,
             ]);
         }
 
         // Add the word limit to the existing title/abstract form
-        if (!empty($components[FORM_TITLE_ABSTRACT]) &&
+        if (!empty($components[TitleAbstractForm::FORM_TITLE_ABSTRACT]) &&
                 array_key_exists($submission->getLatestPublication()->getData('sectionId'), $sectionWordLimits)) {
             $limit = (int) $sectionWordLimits[$submission->getLatestPublication()->getData('sectionId')];
-            foreach ($components[FORM_TITLE_ABSTRACT]['fields'] as $key => $field) {
+            foreach ($components[TitleAbstractForm::FORM_TITLE_ABSTRACT]['fields'] as $key => $field) {
                 if ($field['name'] === 'abstract') {
-                    $components[FORM_TITLE_ABSTRACT]['fields'][$key]['wordLimit'] = $limit;
+                    $components[TitleAbstractForm::FORM_TITLE_ABSTRACT]['fields'][$key]['wordLimit'] = $limit;
                     break;
                 }
             }
@@ -173,7 +174,7 @@ class WorkflowHandler extends PKPWorkflowHandler
         );
 
         $publicationFormIds = $templateMgr->getState('publicationFormIds');
-        $publicationFormIds[] = FORM_ISSUE_ENTRY;
+        $publicationFormIds[] = $issueEntryForm::FORM_ISSUE_ENTRY;
 
         $templateMgr->setState([
             'assignToIssueUrl' => $assignToIssueUrl,

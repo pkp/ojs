@@ -24,14 +24,10 @@ use PKP\components\forms\FieldText;
 use PKP\components\forms\FieldUploadImage;
 use PKP\components\forms\FormComponent;
 
-define('FORM_ISSUE_ENTRY', 'issueEntry');
-
 class IssueEntryForm extends FormComponent
 {
-    /** @copydoc FormComponent::$id */
-    public $id = FORM_ISSUE_ENTRY;
-
-    /** @copydoc FormComponent::$method */
+    public const FORM_ISSUE_ENTRY = 'issueEntry';
+    public $id = self::FORM_ISSUE_ENTRY;
     public $method = 'PUT';
 
     /**

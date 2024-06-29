@@ -167,8 +167,8 @@ class ArticleHandler extends Handler
                     $this->galley = $galley;
                     break;
 
-                // In some cases, a URL to a galley may use the ID when it should use
-                // the urlPath. Redirect to the galley's correct URL.
+                    // In some cases, a URL to a galley may use the ID when it should use
+                    // the urlPath. Redirect to the galley's correct URL.
                 } elseif (ctype_digit($galleyId) && $galley->getId() == $galleyId) {
                     $request->redirect(null, $request->getRequestedPage(), $request->getRequestedOp(), [$submission->getBestId(), $galley->getBestGalleyId()]);
                 }
@@ -322,7 +322,7 @@ class ArticleHandler extends Handler
             // Ask robots not to index outdated versions and point to the canonical url for the latest version
             if ($publication->getId() != $article->getData('currentPublicationId')) {
                 $templateMgr->addHeader('noindex', '<meta name="robots" content="noindex">');
-                $url = $request->getDispatcher()->url($request, PKPApplication::ROUTE_PAGE, null, 'article', 'view', $article->getBestId());
+                $url = $request->getDispatcher()->url($request, PKPApplication::ROUTE_PAGE, null, 'article', 'view', [$article->getBestId()]);
                 $templateMgr->addHeader('canonical', '<link rel="canonical" href="' . $url . '">');
             }
 

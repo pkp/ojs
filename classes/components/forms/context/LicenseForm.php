@@ -20,10 +20,6 @@ use PKP\components\forms\FieldOptions;
 
 class LicenseForm extends PKPLicenseForm
 {
-    /** @copydoc FormComponent::$id */
-    public $id = FORM_LICENSE;
-
-    /** @copydoc FormComponent::$method */
     public $method = 'PUT';
 
     /**

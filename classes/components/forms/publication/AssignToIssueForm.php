@@ -23,10 +23,8 @@ define('FORM_ASSIGN_TO_ISSUE', 'assignToIssue');
 
 class AssignToIssueForm extends FormComponent
 {
-    /** @copydoc FormComponent::$id */
-    public $id = FORM_ASSIGN_TO_ISSUE;
-
-    /** @copydoc FormComponent::$method */
+    public const FORM_ASSIGN_TO_ISSUE = 'assignToIssue';
+    public $id = self::FORM_ASSIGN_TO_ISSUE;
     public $method = 'PUT';
 
     /**

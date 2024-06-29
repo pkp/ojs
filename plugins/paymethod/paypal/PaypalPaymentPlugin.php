@@ -21,6 +21,7 @@ use APP\core\Request;
 use APP\template\TemplateManager;
 use Illuminate\Support\Collection;
 use Omnipay\Omnipay;
+use PKP\components\forms\context\PKPPaymentSettingsForm;
 use PKP\config\Config;
 use PKP\db\DAORegistry;
 use PKP\plugins\Hook;
@@ -78,8 +79,7 @@ class PaypalPaymentPlugin extends PaymethodPlugin
      */
     public function addSettings($hookName, $form)
     {
-        import('lib.pkp.classes.components.forms.context.PKPPaymentSettingsForm'); // Load constant
-        if ($form->id !== FORM_PAYMENT_SETTINGS) {
+        if ($form->id !== PKPPaymentSettingsForm::FORM_PAYMENT_SETTINGS) {
             return;
         }
 

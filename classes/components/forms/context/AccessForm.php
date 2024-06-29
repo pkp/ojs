@@ -21,16 +21,13 @@ use PKP\components\forms\FieldOptions;
 use PKP\components\forms\FieldSelect;
 use PKP\components\forms\FormComponent;
 
-define('FORM_ACCESS', 'access');
 define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MIN', '1');
 define('SUBSCRIPTION_OPEN_ACCESS_DELAY_MAX', '60');
 
 class AccessForm extends FormComponent
 {
-    /** @copydoc FormComponent::$id */
-    public $id = FORM_ACCESS;
-
-    /** @copydoc FormComponent::$method */
+    public const FORM_ACCESS = 'access';
+    public $id = self::FORM_ACCESS;
     public $method = 'PUT';
 
     /**

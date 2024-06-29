@@ -23,6 +23,7 @@ use APP\template\TemplateManager;
 use Exception;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Mail;
+use PKP\components\forms\context\PKPPaymentSettingsForm;
 use PKP\components\forms\FormComponent;
 use PKP\db\DAORegistry;
 use PKP\form\Form;
@@ -82,8 +83,7 @@ class ManualPaymentPlugin extends PaymethodPlugin
      */
     public function addSettings($hookName, $form)
     {
-        import('lib.pkp.classes.components.forms.context.PKPPaymentSettingsForm'); // Load constant
-        if ($form->id !== FORM_PAYMENT_SETTINGS) {
+        if ($form->id !== PKPPaymentSettingsForm::FORM_PAYMENT_SETTINGS) {
             return;
         }
 

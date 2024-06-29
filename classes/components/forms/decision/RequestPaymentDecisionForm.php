@@ -19,14 +19,10 @@ use PKP\components\forms\FieldOptions;
 use PKP\components\forms\FormComponent;
 use PKP\context\Context;
 
-define('FORM_REQUEST_PAYMENT_DECISION', 'requestPaymentDecision');
-
 class RequestPaymentDecisionForm extends FormComponent
 {
-    /** @copydoc FormComponent::$id */
-    public $id = FORM_REQUEST_PAYMENT_DECISION;
-
-    /** @copydoc FormComponent::$action */
+    public const FORM_REQUEST_PAYMENT_DECISION = 'requestPaymentDecision';
+    public $id = self::FORM_REQUEST_PAYMENT_DECISION;
     public $action = FormComponent::ACTION_EMIT;
 
     /**

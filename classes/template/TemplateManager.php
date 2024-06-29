@@ -159,7 +159,7 @@ class TemplateManager extends PKPTemplateManager
         if (count(array_intersect([Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN, Role::ROLE_ID_SUB_EDITOR], $userRoles))) {
             $statsIssuesLink = [
                 'name' => __('editor.navigation.issues'),
-                'url' => $router->url($request, null, 'stats', 'issues', 'issues'),
+                'url' => $router->url($request, null, 'stats', 'issues', ['issues']),
                 'isCurrent' => $router->getRequestedPage($request) === 'stats' && $router->getRequestedOp($request) === 'issues',
             ];
             $statsPublicationsIndex = array_search('publications', array_keys($menu['statistics']));
@@ -188,8 +188,8 @@ class TemplateManager extends PKPTemplateManager
             // add institutions menu if needed
             $institutionsLink = [
                 'name' => __('institution.institutions'),
-                'url' => $router->url($request, null, 'management', 'settings', 'institutions'),
-                'isCurrent' => $request->getRequestedPage() === 'management' && in_array('institutions', (array) $request->getRequestedArgs()),
+                'url' => $router->url($request, null, 'management', 'settings', ['institutions']),
+                'isCurrent' => $request->getRequestedPage() === 'management' && in_array('institutions', $request->getRequestedArgs()),
             ];
             $paymentsIndex = array_search('payments', array_keys($menu));
             $menu = array_slice($menu, 0, $paymentsIndex, true) +

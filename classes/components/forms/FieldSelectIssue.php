@@ -40,7 +40,7 @@ class FieldSelectIssue extends FieldSelect
             null,
             'issue',
             'view',
-            '__issueId__'
+            ['__issueId__']
         );
 
         $config['assignLabel'] = __('publication.assignToissue');

@@ -21,14 +21,10 @@ use PKP\components\forms\FieldRadioInput;
 use PKP\components\forms\FormComponent;
 use PKP\db\DAORegistry;
 
-define('FORM_SUBMISSION_PAYMENTS', 'submissionPayments');
-
 class SubmissionPaymentsForm extends FormComponent
 {
-    /** @copydoc FormComponent::$id */
-    public $id = FORM_SUBMISSION_PAYMENTS;
-
-    /** @copydoc FormComponent::$method */
+    public const FORM_SUBMISSION_PAYMENTS = 'submissionPayments';
+    public $id = self::FORM_SUBMISSION_PAYMENTS;
     public $method = 'PUT';
 
     /**

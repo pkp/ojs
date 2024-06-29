@@ -173,7 +173,7 @@ class Schema extends \PKP\core\maps\Schema
                         $this->context->getPath(),
                         'issue',
                         'view',
-                        $issue->getId()
+                        [$issue->getId()]
                     );
                     break;
                 case 'sections':
