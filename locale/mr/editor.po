@@ -1,3 +1,504 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2024.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2024-06-30 20:08+0000\n"
+"Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
+"Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/editor/mr/>"
+"\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "editor.home"
+msgstr "संपादकाचे मुखपृष्ठ"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "सादरीकरण आणि प्रकाशन"
+
+msgid "editor.submissionQueue"
+msgstr "सादरीकरण प्रतीक्षावली"
+
+msgid "editor.submissionArchive"
+msgstr "सादरीकरण संग्रह"
+
+msgid "editor.publishedIssues"
+msgstr "प्रकाशित अंक"
+
+msgid "editor.allSections"
+msgstr "सर्व विभाग"
+
+msgid "editor.allEditors"
+msgstr "सर्व संपादक"
+
+#, fuzzy
+msgid "editor.me"
+msgstr "माझ्याकरता"
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "संग्रहात सादरीकरणे नाहीत."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "तुमची खात्री आहे का की तुम्ही हा निर्णय नोंदवू इच्छिता?"
+
+msgid "editor.notifyUsers"
+msgstr "वापरकर्त्यांना कळवा"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "सगळे वाचक, एकूण ({$count})"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "प्रकाशित लेखाचे सगळे लेखक, एकूण ({$count})"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "सगळे वैयक्तिक सदस्य, एकूण ({$count})"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "वापरकर्त्यांना कळवण्यात येत आहे..."
+
+msgid "editor.usersNotified"
+msgstr "वापरकर्त्यांना कळवण्यात आले आहे"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "या अंकाची अनुक्रमणिका समाविष्ट करा :"
+
+msgid "editor.editorAdministration"
+msgstr "संपादकाचा कारभार"
+
+msgid "editor.issues.createIssue"
+msgstr "अंकाची निर्मिती करा"
+
+msgid "editor.issues.editIssue"
+msgstr "अंकाचे व्यवस्थापन : {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "ताजा अंक"
+
+#, fuzzy
+msgid "editor.issues.numArticles"
+msgstr "एकूण लेख"
+
+msgid "editor.issues.noArticles"
+msgstr "या अंकासाठी आतापावेतो एकही लेख निश्चित केलेला नाही."
+
+msgid "editor.issues.published"
+msgstr "प्रसिद्ध झाला"
+
+msgid "editor.issues.unpublished"
+msgstr "अप्रकाशित"
+
+msgid "editor.issues.datePublished"
+msgstr "प्रकाशन दिनांक"
+
+msgid "editor.issues.numberRequired"
+msgstr ""
+"अंक क्रमांक आवश्यक आहे आणि तो आकड्यात, धनात्मक संख्येत असणे बंधनकारक आहे."
+
+msgid "editor.issues.yearRequired"
+msgstr ""
+"प्रकाशन वर्ष आवश्यक आहे आणि ते आकड्यात, धनात्मक संख्येत असणे बंधनकारक आहे."
+
+msgid "editor.issues.issueIdentification"
+msgstr "अंक निर्धारण"
+
+#, fuzzy
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "अंक ओळखचिन्ह"
+
+msgid "editor.issues.description"
+msgstr "वर्णन"
+
+msgid "editor.issues.accessDate"
+msgstr "मुक्त उपलब्धता दिनांक"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "विलंबित मुक्त उपलब्धता सिद्ध करा"
+
+msgid "editor.issues.coverPage"
+msgstr "मुखपृष्ठ प्रतिमा"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(स्वीकारार्ह प्रारूपे : .gif, .jpg, or .png)"
+
+msgid "editor.issues.uploaded"
+msgstr "संक्रमित (अपलोड) केले"
+
+msgid "editor.issues.remove"
+msgstr "काढून टाका"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "मुखपृष्ठ प्रतिमा काढून टाकायची?"
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"तुम्ही काढून टाकण्याची विनंती केलेली मुखपृष्ठ प्रतिमा सापडली नाही. कदाचित ती "
+"यापूर्वीच काढून टाकली गेली असेल. पृष्ठ रिलोड करण्याचा प्रयत्न करा."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+"अग्राह्य मुखपृष्ठ प्रारूप. फक्त .gif, .jpg किंवा .png स्वीकृत प्रारूपे आहेत."
+
+msgid "editor.issues.styleFile"
+msgstr "स्टाइलशीट"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "स्टाईलशीट काढून टाकायची का?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "मलपृष्ठावरील (कव्हर) मथळा नोंदवा"
+
+msgid "editor.issues.showCoverPage"
+msgstr "खालील घटकांसह या अंकासाठी एक मलपृष्ठ (कव्हर) तयार करा."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "प्रदर्शित करा"
+
+msgid "editor.issues.openAccess"
+msgstr "मुक्त वापर"
+
+msgid "editor.issues.identification"
+msgstr "ओळख"
+
+msgid "editor.issues.cover"
+msgstr "मलपृष्ठ (कव्हर)"
+
+#, fuzzy
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"या नियतकालिकाचा अंकक्रम विशिष्ट गरजेनुसार बदलण्याची सोय आहे. <a href=\"{$url}"
+"\" class=\"action\">नैसर्गिक अंक क्रमावर रिसेट करा</a>"
+
+#, fuzzy
+msgid "editor.issues.issueData"
+msgstr "अंकाची माहिती"
+
+msgid "editor.issues.saveChanges"
+msgstr "अनुक्रमणिकेमधले बदल 'सेव्ह' करायचे?"
+
+#, fuzzy
+msgid "editor.issues.default"
+msgstr "नैसर्गिक"
+
+msgid "editor.issues.order"
+msgstr "अनुक्रम"
+
+#, fuzzy
+msgid "editor.issues.publicId"
+msgstr "सार्वजनिक ओळख (Public Id)"
+
+msgid "editor.issues.accessStatus"
+msgstr "उपलब्धता स्थिती"
+
+msgid "editor.issues.access"
+msgstr "उपलब्धता"
+
+msgid "editor.issues.publishIssue"
+msgstr "अंकाचे प्रकाशन करा"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "अंक अप्रकाशित करा"
+
+msgid "editor.issues.previewIssue"
+msgstr "अंकाचे पूर्वावलोकन करा"
+
+msgid "editor.issues.preview"
+msgstr "पूर्वावलोकन करा"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "तुमची खात्री आहे का की तुम्ही हा प्रकाशित अंक अप्रकाशित करू इच्छिता?"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "कोणतेही अंक उपलब्ध नाहीत"
+
+#, fuzzy
+msgid "editor.issues.open"
+msgstr "अनावृत्त"
+
+msgid "editor.issues.pages"
+msgstr "पृष्ठे"
+
+msgid "editor.issues.galley"
+msgstr "अंकाचे कच्चे मुद्रित"
+
+msgid "editor.issues.viewingGalley"
+msgstr "अंकाच्या कच्च्या मुद्रिताचे अवलोकन"
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "अंकाच्या कच्च्या मुद्रितांचे प्रकाशन झालेले नाही."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "अंकाच्या कच्च्या मुद्रिताची स्थाननिश्चिती (locale) करायला हवी."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "कच्च्या मुद्रितांचे पुनरावलोकन"
+
+#, fuzzy
+msgid "editor.issues.identifiers"
+msgstr "ओळख (Identifiers)"
+
+msgid "editor.navigation.futureIssues"
+msgstr "आगामी अंक"
+
+msgid "grid.action.addGalley"
+msgstr "कच्चे मुद्रित संकलित करा"
+
+msgid "grid.action.publish"
+msgstr "अंकाचे प्रकाशन करा"
+
+msgid "grid.action.addIssue"
+msgstr "अंकाची निर्मिती करा"
+
+msgid "grid.action.viewIssue"
+msgstr "अवलोकन करा"
+
+msgid "grid.action.previewIssue"
+msgstr "पूर्वावलोकन करा"
+
+msgid "grid.action.addIssueGalley"
+msgstr "कच्चे मुद्रित निर्माण करा"
+
+msgid "editor.navigation.issueArchive"
+msgstr "पूर्वीचे अंक"
+
+msgid "editor.article.decision"
+msgstr "निर्णय"
+
+#, fuzzy
+msgid "editor.submissions.showBy"
+msgstr "दाखवण्याचा क्रम"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "सादर करा MM-DD"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "सक्रिय कार्यभार"
+
+msgid "editor.submissions.invite"
+msgstr "आमंत्रित करा"
+
+msgid "editor.submissions.accept"
+msgstr "स्वीकारा"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "अनिर्णित सादरीकरणे नाहीत"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "अलीकडची"
+
+msgid "editor.submissions.averageTime"
+msgstr "आठवडे"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "शेवटचे पूर्ण झालेले"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "लेखाची सार्वजनिक ओळख (Public id) सेव्ह होत नाही :"
+
+msgid "issues.submissions.issueIds"
+msgstr "अंकासाठी मुक्रर केले"
+
+msgid "editor.submissions.inSection"
+msgstr "या विभागात"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "आगामी प्रकाशन दाखवा"
+
+#, fuzzy
+msgid "editor.article.publishVersion"
+msgstr "अंतिम स्वरूप प्रकाशित करा"
+
+msgid "editor.article.viewMetadata"
+msgstr "स्वरूपाचा मेटाडेटा पाहा"
+
+msgid "editor.article.editMetadata"
+msgstr "स्वरूपाच्या मेटाडेटात फेरफार करा"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "प्रकाशनात अनुसूचित"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "अनियुक्त"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"प्रकाशन शुल्क भरलेले नाही. प्रकाशनासाठी लेखन अनुसूचित करण्यासाठी लेखकाला शुल्"
+"क भरण्यासाठी सूचित करा किंवा शुल्क सूट द्या."
+
+msgid "editor.article.payment.requestPayment"
+msgstr "रक्कम भरण्यासाठी विनंती करा"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"तुम्ही काढून टाकण्याची विनंती केलेली मुखपृष्ठ प्रतिमा सापडली नाही. कदाचित ती "
+"यापूर्वीच काढून टाकली गेली असेल. पृष्ठ रिलोड करण्याचा प्रयत्न करा."
+
+msgid "grid.action.removeArticle"
+msgstr "अंकातून लेख काढून टाका"
+
+msgid "editor.article.remove"
+msgstr "काढून टाका"
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"तुमची खात्री आहे का की हा लेख तुम्ही अंकातून काढून टाकू इच्छिता? लेख दुसऱ्या "
+"अंकात अनुसूचित करण्यासाठी उपलब्ध असेल."
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "उपलब्धता दिनांक अग्राह्य आहे."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "अंकाच्या कच्च्या मुद्रितात फेरफार करा"
+
+#, fuzzy
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"प्रत्येक कच्च्या मुद्रितासाठी या फाईल्स मांडणी करणारा (layout) संपादक तयार "
+"करतो आणि नंतर मुद्रित लेखन तपासण्यासाठी (प्रूफरीडिंग) योग्य <span class="
+"\"pkp_help_title\">Proofs</span> वर संक्रमित (अपलोड) करतो."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "कच्ची मुद्रिते निवडा"
+
+#, fuzzy
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"'{$publicIdentifier}' या चिन्हाची ओळख दुसऱ्या बाबीसाठी (ऑब्जेक्ट) "
+"यापूर्वीपासूनच अस्तित्वात आहे. तुमच्या नियतकालिकांतर्गत आगळ्या चिन्हाचा वापर "
+"करा."
+
+msgid "editor.article.coverImage"
+msgstr "मुखपृष्ठप्रतिमा"
+
+msgid "editor.publishing"
+msgstr "प्रकाशन"
+
+#, fuzzy
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"'{$publicIdentifier}' या चिन्हाच्या ओळखीने दुसरा अंक, लेख, कच्चे मुद्रित अथवा"
+" फाईल यापूर्वीपासूनच अस्तित्वात आहे. तुमच्या नियतकालिकांतर्गत आगळ्या चिन्हाचा"
+" वापर करा."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"सादरीकरण संग्रहात केलेले बदल सुरक्षित (सेव्ह) करायचे? वगळण्यासाठी चिन्हांकित "
+"केलेले लेखन संचातून कायमचे वगळले जाईल."
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"सादर केलेले लेखन लेखकाला ई-मेलने कळवल्यानंतर किंवा 'ई-मेल पाठवू नका' बटन "
+"दाबल्यावर संग्रहित केले जाईल."
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "सगळे संस्था सदस्य, एकूण ({$count})"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+"या नियतकालिकाशी संबंधित सर्व वापरकर्त्यांना हा संदेश पाठवा, ({$count} "
+"वापरकर्ते)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"ज्यांनी अद्ययावत माहिती मिळवण्याची इच्छा व्यक्त केली आहे अशा या नियतकालिकाशी "
+"जोडलेल्या वापरकर्त्यांना हा संदेश पाठवा, ({$count} वापरकर्ते)"
+
+msgid "editor.issues.confirmDelete"
+msgstr "तुम्ही हा अंक कायमचा वगळायचे ठरवलेले नक्की ना?"
+
+msgid "editor.issues.volumeRequired"
+msgstr ""
+"खंड क्रमांक आवश्यक आहे आणि तो आकड्यात, धनात्मक संख्येत असणे बंधनकारक आहे."
+
+msgid "editor.issues.titleRequired"
+msgstr "अंकासाठी शीर्षक आवश्यक आहे."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr ""
+"अंकाचे निर्धारण करणे आवश्यक आहे. कृपया किमान एक अंक निर्धारण पर्याय निवडा."
+
+msgid "editor.issues.proofed"
+msgstr "मुद्रित शोधन पूर्ण झाले"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"तुम्ही मुखपृष्ठ प्रतिमा काढून टाकण्याची केलेली विनंती दुसर्‍याच "
+"नियतकालिकासंबंधी आहे. कृपया तुम्ही तुमच्याच नियतकालिकासंबंधी काम करीत आहात, "
+"तसेच योग्य अंक संकेत वापरत आहात याची खात्री करा आणि पुन्हा प्रयत्न करा."
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"सर्व लेख संपादन रांगेत परतवले जातील आणि सर्व संबंधित फाईल्स कायमच्या काढून "
+"टाकल्या जातील. तुम्ही नक्की हा अंक काढून टाकू इच्छिता ना?"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"तुम्ही मुखपृष्ठ प्रतिमा काढून टाकण्याची केलेली विनंती या अंकाच्या मुखपृष्ठ "
+"प्रतिमेशी जुळत नाही. कृपया पृष्ठ रिलोड करून पुन्हा प्रयत्न करा."
+
+#, fuzzy
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"या नियतकालिकाचा विभागांचा क्रम विशिष्ट गरजेनुसार बदलण्याची सोय आहे. <a href="
+"\"{$url}\" class=\"action\">नैसर्गिक विभाग क्रमावर रिसेट करा</a>"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"अग्राह्य स्टाइलशीट प्रारूप. सादर केलेली फाईल ग्राह्य CSS असल्याची खात्री करा"
+". (सुरुवातीला टिप्पण्यां असलेल्या स्टाईलशीट नाकारल्या जाऊ शकतात ही बाब लक्षा"
+"त घ्या.)"
+
+msgid "editor.issues.confirmPublish"
+msgstr "तुमची खात्री आहे का की तुम्ही नवीन अंक प्रकाशित करू इच्छिता?"
+
+msgid "editor.issues.subscription"
+msgstr "वर्गणी"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "तुमची खात्री आहे का की तुम्ही तयार केलेला अंक ताजा असणार आहे?"
+
+msgid "editor.issues.galleys"
+msgstr "अंकाची कच्ची मुद्रिते"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "संपूर्ण अंकाच्या मजकुरासकट कच्च्या मुद्रितांचे प्रकाशन करा."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "अंकाच्या कच्च्या मुद्रिताला लेबल हवे."
+
+#, fuzzy
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr ""
+"अंकाच्या कच्च्या मुद्रिताला सार्वजनिक ओळख (Public id) यापूर्वीच दिलेली आहे."
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr ""
+"तुमची खात्री आहे का की तुम्ही या अंकाचे कच्चे मुद्रित काढून टाकू इच्छिता?"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "ताज्या अंकाची मांडणी करा"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "मूळ फाईलला समीक्षापूर्व स्वरूप म्हणून निर्देशित करा"
+
+msgid "editor.submissions.assignedTo"
+msgstr "संपादकाच्या कार्यवाहीसाठी पाठवले"
+
+#, fuzzy
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"या सूचीतील अंतिम मसुदा फाईल्स कॉपीएडिटरद्वारे अचूकता तपासलेल्या (Copyedit) "
+"आवृत्त्यांमध्ये रूपांतरित केल्या जातात, <span class=\"pkp_help_title\""
+">कॉपीएडिटिंग</span> अंतर्गत अपलोड केल्या आहेत."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"सादर केलेल्या आणि कोणत्याही टप्प्यावर पोहोचलेल्या फाईल्स मुद्रण दोष शुद्धी "
+"(प्रूफरीडिंग) सूचीमध्ये चेकबॉक्स चेक करून समाविष्ट करता येतात. 'शोधा' वर क्लि"
+"क करून सर्व उपलब्ध फाईल्स सूचीबद्ध केल्या जातील आणि समावेशासाठी निवडता येतील."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"सादर केलेल्या लेखनाची अचूकता तपासण्यासाठी (Copyediting) पाठवण्यापूर्वी योग्य "
+"फाईलची निवड करा आणि 'लेखकाला कळवा' हा दुवा (लिंक) वापरून निर्णय कळवा."
