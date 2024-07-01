@@ -46,7 +46,7 @@ class DAO extends \PKP\submission\DAO
      *
      * @return DAOResultFactory<Submission>
      */
-    public function getExportable($contextId, $pubIdType = null, $title = null, $author = null, $issueId = null, $pubIdSettingName = null, $pubIdSettingValue = null, $rangeInfo = null)
+    public function getExportable(int $contextId, $pubIdType = null, $title = null, $author = null, $issueId = null, $pubIdSettingName = null, $pubIdSettingValue = null, $rangeInfo = null)
     {
         $q = DB::table('submissions', 's')
             ->leftJoin('publications AS p', 's.current_publication_id', '=', 'p.publication_id')

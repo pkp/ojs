@@ -19,6 +19,7 @@
 
 namespace APP\payment\ojs;
 
+use APP\core\Application;
 use Illuminate\Support\Facades\DB;
 use PKP\core\Core;
 use PKP\db\DAOResultFactory;
@@ -30,20 +31,19 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
     /**
      * Retrieve a CompletedPayment by its ID.
      *
-     * @param int $completedPaymentId
      * @param int $contextId optional
      *
      * @return CompletedPayment
      */
-    public function getById($completedPaymentId, $contextId = null)
+    public function getById(int $completedPaymentId, int $contextId = Application::SITE_CONTEXT_ID_ALL)
     {
-        $params = [(int) $completedPaymentId];
-        if ($contextId) {
-            $params[] = (int) $contextId;
+        $params = [$completedPaymentId];
+        if ($contextId !== Application::SITE_CONTEXT_ID_ALL) {
+            $params[] = $contextId;
         }
 
         $result = $this->retrieve(
-            'SELECT * FROM completed_payments WHERE completed_payment_id = ?' . ($contextId ? ' AND context_id = ?' : ''),
+            'SELECT * FROM completed_payments WHERE completed_payment_id = ?' . ($contextId !== Application::SITE_CONTEXT_ID_ALL ? ' AND context_id = ?' : ''),
             $params
         );
         $row = $result->current();
@@ -194,16 +194,15 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
     /**
      * Retrieve an array of payments for a particular context ID.
      *
-     * @param int $contextId
      * @param ?DBResultRange $rangeInfo
      *
      * @return array Matching payments
      */
-    public function getByContextId($contextId, $rangeInfo = null)
+    public function getByContextId(int $contextId, $rangeInfo = null)
     {
         $result = $this->retrieveRange(
             'SELECT * FROM completed_payments WHERE context_id = ? ORDER BY timestamp DESC',
-            [(int) $contextId],
+            [$contextId],
             $rangeInfo
         );
 

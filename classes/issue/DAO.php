@@ -213,7 +213,7 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
                     ],
                     [
                         'issue_id' => $item->issue_id,
-                        'journal_id' => (int) $contextId,
+                        'journal_id' => $contextId,
                         'seq' => $newSeq
                     ],
                 );
@@ -238,8 +238,8 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
     public function getCustomIssueOrder(int $contextId, int $issueId): ?int
     {
         $results = DB::table('custom_issue_orders')
-            ->where('journal_id', '=', (int) $contextId)
-            ->where('issue_id', '=', (int) $issueId);
+            ->where('journal_id', '=', $contextId)
+            ->where('issue_id', '=', $issueId);
 
         $row = $results->first();
         return $row ? (int) $row->seq : null;
@@ -374,7 +374,7 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
      *
      * From legacy IssueDAO
      *
-     * @param int $contextId optional
+     * @param int $contextId
      * @param string $pubIdType
      * @param string $pubIdSettingName optional
      * (e.g. crossref::registeredDoi)
@@ -390,7 +390,7 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
             ->when($pubIdType != null, fn (Builder $q) => $q->leftJoin('issue_settings AS ist', 'i.issue_id', '=', 'ist.issue_id'))
             ->when($pubIdSettingName, fn (Builder $q) => $q->leftJoin('issue_settings AS iss', fn (JoinClause $j) => $j->on('i.issue_id', '=', 'iss.issue_id')->where('iss.setting_name', '=', $pubIdSettingName)))
             ->where('i.published', '=', 1)
-            ->where('i.journal_id', '=', $contextId)
+            ->where('i.journal_id', '=', (int) $contextId)
             ->when($pubIdType != null, fn (Builder $q) => $q->where('ist.setting_name', '=', "pub-id::{$pubIdType}")->whereNotNull('ist.setting_value'))
             ->when(
                 $pubIdSettingName,

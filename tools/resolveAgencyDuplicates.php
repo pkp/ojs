@@ -8,8 +8,8 @@ require(dirname(__FILE__) . '/bootstrap.php');
 
 class resolveAgencyDuplicates extends \PKP\cliTool\CommandLineTool
 {
-    private string|null $command = null;
-    private string|null $agency_name = null;
+    private ?string $command = null;
+    private ?string $agency_name = null;
     private bool $forceFlag = false;
     /**
      * List of potential agencies to choose from along with related fields for resolution.
