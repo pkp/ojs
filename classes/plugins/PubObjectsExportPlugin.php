@@ -594,12 +594,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
             ->addSchedule(new DOAJInfoSender())
             ->everyMinute()
             ->name(DOAJInfoSender::class)
-            ->withoutOverlapping()
-            ->then(function () {
-                /** @var \PKP\scheduledTask\ScheduledTaskDAO $scheduledTaskDao */
-                $scheduledTaskDao = DAORegistry::getDAO('ScheduledTaskDAO');
-                $scheduledTaskDao->updateLastRunTime(DOAJInfoSender::class);
-            });
+            ->withoutOverlapping();
     }
 
     /**
