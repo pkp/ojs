@@ -9,10 +9,7 @@
 	"properties": {
 		"submissionFileId": {
 			"type": "integer",
-			"apiSummary": true,
-			"validation": [
-				"nullable"
-			]
+			"apiSummary": true
 		},
 		"doiObject": {
 			"type": "object",

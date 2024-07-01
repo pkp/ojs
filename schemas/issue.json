@@ -20,11 +20,17 @@
 		"coverImage": {
 			"type": "string",
 			"multilingual": true,
+			"validation": [
+				"nullable"
+			],
 			"apiSummary": true
 		},
 		"coverImageAltText": {
 			"type": "string",
 			"multilingual": true,
+			"validation": [
+				"nullable"
+			],
 			"apiSummary": true
 		},
 		"coverImageUrl": {
@@ -33,6 +39,7 @@
 			"apiSummary": true,
 			"readOnly": true,
 			"validation": [
+				"nullable",
 				"url"
 			]
 		},
@@ -52,6 +59,9 @@
 		"description": {
 			"type": "string",
 			"multilingual": true,
+			"validation": [
+				"nullable"
+			],
 			"apiSummary": true
 		},
 		"doiObject": {
@@ -145,6 +155,9 @@
 		"title": {
 			"type": "string",
 			"multilingual": true,
+			"validation": [
+				"nullable"
+			],
 			"apiSummary": true
 		},
 		"urlPath": {
