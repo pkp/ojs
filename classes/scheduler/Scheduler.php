@@ -16,24 +16,21 @@ class Scheduler extends PKPScheduler
             ->call(fn () => (new SubscriptionExpiryReminder())->execute())
             ->daily()
             ->name(SubscriptionExpiryReminder::class)
-            ->withoutOverlapping()
-            ->then(fn () => $this->scheduledTaskDao->updateLastRunTime(SubscriptionExpiryReminder::class));
+            ->withoutOverlapping();
 
         $this
             ->schedule
             ->call(fn () => (new UsageStatsLoader([]))->execute())
             ->daily()
             ->name(UsageStatsLoader::class)
-            ->withoutOverlapping()
-            ->then(fn () => $this->scheduledTaskDao->updateLastRunTime(UsageStatsLoader::class));
+            ->withoutOverlapping();
 
         $this
             ->schedule
             ->call(fn () => (new OpenAccessNotification())->execute())
             ->hourly()
             ->name(OpenAccessNotification::class)
-            ->withoutOverlapping()
-            ->then(fn () => $this->scheduledTaskDao->updateLastRunTime(OpenAccessNotification::class));
+            ->withoutOverlapping();
 
         parent::registerSchedules();
     }
