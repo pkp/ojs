@@ -11,9 +11,15 @@ See config.TEMPLATE.inc.php for a description and examples of all supported
 configuration parameters.
 
 New config.inc.php parameters added for general:
-    - session_cookie_enctyption_key (default value: ''), allow cookie encryption when set
+    - app_key (default value: ''), application specific key will used internally for encryption/decryption. This will be automatically added at upgrade.
+
+New config.inc.php parameters added for security:
+    - cipher (default value: ''), cipher algorithm used to generate app key and encryption purpose
+    - cookie_encryption (default value: ''), allow cookie encryption when set
+
 
 New Features
 ------------
     #9566 : Convert session and cookie management to Laravel
+    #9895 : Introduce APP KEY feature of Laravel
 
