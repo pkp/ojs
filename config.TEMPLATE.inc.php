@@ -575,6 +575,36 @@ job_runner_max_memory = 80
 ; Remove this setting to leave failed jobs in the database.
 delete_failed_jobs_after = 180
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Schedule Task Settings ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[schedule]
+
+; Whether or not to turn on the built-in schedule task runner
+;
+; When enabled, schedule tasks will be processed at the end of each web
+; request to the application.
+;
+; Use of the built-in schedule task runner is highly discouraged for high-volume 
+; sites. Instead, system's crontab should be configured to run every minutes as 
+; * * * * * cd /path-to-your-project && php lib/pkp/tools/scheduler.php run >> /dev/null 2>&1
+;
+; See: <link-to-documentation>
+;
+task_runner = On
+
+; How often should be built in schedule task runner should run schedule tasks at the
+; end of web request life cycle defined the seconds.
+; 
+; This configuration will only have impact for build in task runner, not to the system
+; crontab configuration. 
+;
+; The default value set to 60 seconds and it is recommened not to to set any value less
+; that it to avoid making possibility of application beign slow.
+;
+task_runner_interval = 60
+
 [invitations]
 expiration_days = 3
 
