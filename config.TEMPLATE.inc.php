@@ -54,11 +54,6 @@ session_lifetime = 30
 ; To set the "Secure" attribute for the cookie see the setting force_ssl at the [security] group
 session_samesite = Lax
 
-; Enable support for running scheduled tasks
-; Set this to On if you have set up the scheduled tasks script to
-; execute periodically
-scheduled_tasks = Off
-
 ; Site time zone
 ; Please refer to https://www.php.net/timezones for a full list of supported
 ; time zones.
@@ -591,7 +586,6 @@ delete_failed_jobs_after = 180
 ; * * * * * cd /path-to-your-project && php lib/pkp/tools/scheduler.php run >> /dev/null 2>&1
 ;
 ; See: <link-to-documentation>
-;
 task_runner = On
 
 ; How often should be built in schedule task runner should run schedule tasks at the
@@ -602,8 +596,11 @@ task_runner = On
 ;
 ; The default value set to 60 seconds and it is recommened not to to set any value less
 ; that it to avoid making possibility of application beign slow.
-;
 task_runner_interval = 60
+
+; This allow to sent the schedule task result notification mail only when there is an
+; error has occurred.
+scheduled_tasks_report_error_only = On
 
 [invitations]
 expiration_days = 3

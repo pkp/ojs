@@ -19,7 +19,6 @@ namespace APP\subscription\form;
 use APP\core\Application;
 use APP\journal\JournalDAO;
 use APP\template\TemplateManager;
-use PKP\config\Config;
 use PKP\db\DAORegistry;
 use PKP\form\Form;
 
@@ -105,7 +104,6 @@ class SubscriptionPolicyForm extends Form
             'validNumWeeksBeforeExpiry' => $this->validNumWeeksBeforeExpiry,
             'validNumMonthsAfterExpiry' => $this->validNumMonthsAfterExpiry,
             'validNumWeeksAfterExpiry' => $this->validNumWeeksAfterExpiry,
-            'scheduledTasksEnabled' => (bool) Config::getVar('general', 'scheduled_tasks'),
             'paymentsEnabled' => $paymentManager->isConfigured(),
         ]);
 
