@@ -31,7 +31,7 @@ class DOAJInfoSender extends ScheduledTask
     public function __construct(array $args = [])
     {
         // This following line causing app to crash and return GATEWAY Error
-        // PluginRegistry::loadCategory("importexport"); // Need fixing
+        PluginRegistry::loadCategory('importexport'); // Need fixing
 
         $plugin = PluginRegistry::getPlugin('importexport', 'DOAJExportPlugin'); /** @var DOAJExportPlugin $plugin */
         $this->_plugin = $plugin;
