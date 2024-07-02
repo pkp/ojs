@@ -23,6 +23,8 @@ use APP\issue\Issue;
 use APP\journal\Journal;
 use APP\journal\JournalDAO;
 use APP\notification\NotificationManager;
+use APP\plugins\importexport\doaj\DOAJInfoSender;
+use APP\scheduler\Scheduler;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\core\EntityDAO;
@@ -39,11 +41,12 @@ use PKP\notification\PKPNotification;
 use PKP\plugins\Hook;
 use PKP\plugins\importexport\PKPImportExportDeployment;
 use PKP\plugins\ImportExportPlugin;
+use PKP\plugins\interfaces\HasTaskScheduler;
 use PKP\plugins\PluginRegistry;
 use PKP\submission\PKPSubmission;
 use PKP\user\User;
 
-abstract class PubObjectsExportPlugin extends ImportExportPlugin
+abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasTaskScheduler
 {
     // The statuses
     public const EXPORT_STATUS_ANY = '';
@@ -91,7 +94,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
 
         $this->addLocaleData();
 
-        Hook::add('AcronPlugin::parseCronTab', [$this, 'callbackParseCronTab']);
         foreach ($this->_getDAOs() as $dao) {
             if ($dao instanceof SchemaDAO) {
                 Hook::add('Schema::get::' . $dao->schemaName, $this->addToSchema(...));
@@ -583,21 +585,15 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
         return [$this->getDepositStatusSettingName()];
     }
 
-    /**
-     * @copydoc AcronPlugin::parseCronTab()
-     */
-    public function callbackParseCronTab($hookName, $args)
+    public function registerSchedules(?Scheduler $scheduler = null): void
     {
-        $taskFilesPath = &$args[0];
+        $scheduler ??= app()->get(Scheduler::class); /** @var \APP\scheduler\Scheduler $scheduler */
 
-        $scheduledTasksPath = "{$this->getPluginPath()}/scheduledTasks.xml";
-
-        if (!file_exists($scheduledTasksPath)) {
-            return false;
-        }
-
-        $taskFilesPath[] = $scheduledTasksPath;
-        return false;
+        $scheduler
+            ->addSchedule(new DOAJInfoSender())
+            ->everyMinute()
+            ->name(DOAJInfoSender::class)
+            ->withoutOverlapping();
     }
 
     /**

@@ -28,9 +28,10 @@ class DOAJInfoSender extends ScheduledTask
     /**
      * Constructor.
      */
-    public function __construct($args)
+    public function __construct(array $args = [])
     {
         PluginRegistry::loadCategory('importexport');
+
         $plugin = PluginRegistry::getPlugin('importexport', 'DOAJExportPlugin'); /** @var DOAJExportPlugin $plugin */
         $this->_plugin = $plugin;
 
@@ -44,7 +45,7 @@ class DOAJInfoSender extends ScheduledTask
     /**
      * @copydoc ScheduledTask::getName()
      */
-    public function getName()
+    public function getName(): string
     {
         return __('plugins.importexport.doaj.senderTask.name');
     }
@@ -52,7 +53,7 @@ class DOAJInfoSender extends ScheduledTask
     /**
      * @copydoc ScheduledTask::executeActions()
      */
-    public function executeActions()
+    public function executeActions(): bool
     {
         if (!$this->_plugin) {
             return false;
@@ -71,6 +72,7 @@ class DOAJInfoSender extends ScheduledTask
                 $this->_registerObjects($unregisteredArticles, 'article=>doaj-json', $journal, 'articles');
             }
         }
+
         return true;
     }
 
