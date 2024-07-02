@@ -215,6 +215,7 @@
   "grid.action.saveOrdering",
   "grid.action.sort",
   "help.help",
+  "invitation.orcid.acceptInvitation.message",
   "invitation.orcid.message",
   "invitation.role.addRole.button",
   "invitation.role.dateEnd",
@@ -223,6 +224,7 @@
   "invitation.role.removeRole.button",
   "invitation.role.selectRole",
   "invitation.wizard.completeSteps",
+  "invitation.wizard.errors",
   "issue.issue",
   "issue.issues",
   "list.collapseAll",
@@ -389,6 +391,7 @@
   "todo",
   "user.email",
   "user.orcid",
+  "user.password",
   "user.username",
   "validator.required"
 ]
