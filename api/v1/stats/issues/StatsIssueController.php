@@ -160,7 +160,7 @@ class StatsIssueController extends PKPBaseController
             if (empty($allowedParams['issueIds'])) {
                 $csvColumnNames = $this->_getIssueReportColumnNames();
                 if ($responseCSV) {
-                    return response()->withCSV([], $csvColumnNames, 0);
+                    return response()->withFile([], $csvColumnNames, 0);
                 } else {
                     return response()->json([
                         'items' => [],
@@ -192,7 +192,7 @@ class StatsIssueController extends PKPBaseController
         $itemsMax = $statsService->getCount($allowedParams);
         $csvColumnNames = $this->_getIssueReportColumnNames();
         if ($responseCSV) {
-            return response()->withCSV($items, $csvColumnNames, $itemsMax);
+            return response()->withFile($items, $csvColumnNames, $itemsMax);
         } else {
             return response()->json([
                 'items' => $items,
@@ -259,7 +259,7 @@ class StatsIssueController extends PKPBaseController
                 $emptyTimeline = $statsService->getEmptyTimelineIntervals($dateStart, $dateEnd, $allowedParams['timelineInterval']);
                 if ($responseCSV) {
                     $csvColumnNames = $statsService->getTimelineReportColumnNames();
-                    return response()->withCSV($emptyTimeline, $csvColumnNames, 0);
+                    return response()->withFile($emptyTimeline, $csvColumnNames, 0);
                 }
                 return response()->json($emptyTimeline, Response::HTTP_OK);
             }
@@ -268,7 +268,7 @@ class StatsIssueController extends PKPBaseController
         $data = $statsService->getTimeline($allowedParams['timelineInterval'], $allowedParams);
         if ($responseCSV) {
             $csvColumnNames = $statsService->getTimelineReportColumnNames();
-            return response()->withCSV($data, $csvColumnNames, count($data));
+            return response()->withFile($data, $csvColumnNames, count($data));
         }
 
         return response()->json($data, Response::HTTP_OK);
