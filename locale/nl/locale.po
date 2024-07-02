@@ -1,12 +1,13 @@
 # Hans Spijker <hans.spijker@huygens.knaw.nl>, 2021.
 # Kay Pepping <openjournalsnl@gmail.com>, 2023, 2024.
+# Pia Spriensma <p.j.huizinga@rug.nl>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
 "PO-Revision-Date: 2024-07-02 14:47+0000\n"
-"Last-Translator: Kay Pepping <openjournalsnl@gmail.com>\n"
+"Last-Translator: Pia Spriensma <p.j.huizinga@rug.nl>\n"
 "Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/locale/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -315,7 +316,7 @@ msgid "submission.scheduling"
 msgstr "Inplannen"
 
 msgid "submission.scheduledIn"
-msgstr "Ingepland voor publicatie in  {$issueName}."
+msgstr "Ingepland voor publicatie in {$issueName}."
 
 msgid "submission.scheduledIn.tba"
 msgstr "(TBA)"
@@ -1792,9 +1793,9 @@ msgstr ""
 "Dit tijdschrift gebruikt Open Journal Systems {$ojsVersion}, open source "
 "software voor het beheren en publiceren van een tijdschrift, ondersteund en "
 "gratis geleverd door het <a href=\"http://pkp.sfu.ca/\">Public Knowledge "
-"Project</a> onder de GNU General Public License.  <a href="
-"\"{$contactUrl}\">Contacteer het tijdschrift</a> met vragen over het "
-"tijdschrift en de inzendingen."
+"Project</a> onder de GNU General Public License. <a href=\"{$contactUrl}\""
+">Contacteer het tijdschrift</a> met vragen over het tijdschrift en de "
+"inzendingen."
 
 msgid "about.aboutOJSSite"
 msgstr ""
