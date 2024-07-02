@@ -1,19 +1,19 @@
 # Hans Spijker <hans.spijker@huygens.knaw.nl>, 2021.
-# Kay Pepping <openjournalsnl@gmail.com>, 2023.
+# Kay Pepping <openjournalsnl@gmail.com>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2023-02-01 17:33+0000\n"
+"PO-Revision-Date: 2024-07-02 14:47+0000\n"
 "Last-Translator: Kay Pepping <openjournalsnl@gmail.com>\n"
 "Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/locale/nl/>\n"
-"Language: nl_NL\n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Dit tijdschrift publiceert zijn inhoud niet online."
@@ -604,7 +604,7 @@ msgstr "Overige, zie opmerkingen"
 
 msgid "subscriptions.individualDescription"
 msgstr ""
-"Bij individuele abonnementen is inloggen nodig om teogang te krijgen tot de "
+"Bij individuele abonnementen is inloggen nodig om toegang te krijgen tot de "
 "inhoud."
 
 msgid "subscriptions.institutionalDescription"
