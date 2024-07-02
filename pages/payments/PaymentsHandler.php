@@ -22,7 +22,6 @@ use APP\notification\NotificationManager;
 use APP\subscription\form\PaymentTypesForm;
 use APP\subscription\form\SubscriptionPolicyForm;
 use APP\template\TemplateManager;
-use PKP\config\Config;
 use PKP\core\JSONMessage;
 use PKP\core\PKPApplication;
 use PKP\security\authorization\PKPSiteAccessPolicy;
@@ -141,10 +140,6 @@ class PaymentsHandler extends Handler
         $this->setupTemplate($request);
 
         $templateMgr = TemplateManager::getManager($request);
-
-        if (Config::getVar('general', 'scheduled_tasks')) {
-            $templateMgr->assign('scheduledTasksEnabled', true);
-        }
 
         $paymentManager = Application::getPaymentManager($request->getJournal());
         $templateMgr->assign('acceptSubscriptionPayments', $paymentManager->isConfigured());

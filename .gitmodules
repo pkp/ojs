@@ -47,6 +47,9 @@
 [submodule "plugins/generic/crossref"]
 	path = plugins/generic/crossref
 	url = https://github.com/pkp/crossref-ojs
+[submodule "plugins/generic/acron"]
+	path = plugins/generic/acron
+	url = https://github.com/pkp/acron
 [submodule "plugins/generic/webFeed"]
 	path = plugins/generic/webFeed
 	url = https://github.com/pkp/webFeed.git
