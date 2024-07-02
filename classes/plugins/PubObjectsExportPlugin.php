@@ -93,7 +93,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
         }
 
         $this->addLocaleData();
-        $this->registerSchedules();
 
         foreach ($this->_getDAOs() as $dao) {
             if ($dao instanceof SchemaDAO) {
