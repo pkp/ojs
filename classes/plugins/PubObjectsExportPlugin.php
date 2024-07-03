@@ -585,6 +585,9 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
         return [$this->getDepositStatusSettingName()];
     }
 
+    /**
+     * @copydoc \PKP\plugins\interfaces\HasTaskScheduler::registerSchedules()
+     */
     public function registerSchedules(?Scheduler $scheduler = null): void
     {
         $scheduler ??= app()->get(Scheduler::class); /** @var \APP\scheduler\Scheduler $scheduler */
