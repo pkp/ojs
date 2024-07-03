@@ -331,10 +331,10 @@ class OAIDAO extends PKPOAIDAO
                             ->orWhere('dot.set_spec', 'like', $set . ':%');
                     })
                     ->when($from, function ($query, $from) {
-                        return $query->where('dot.date_deleted', '>=', \DateTime::createFromFormat('U', $from));
+                        return $query->whereDate('dot.date_deleted', '>=', \DateTime::createFromFormat('U', $from));
                     })
                     ->when($until, function ($query, $until) {
-                        return $query->where('dot.date_deleted', '<=', \DateTime::createFromFormat('U', $until));
+                        return $query->whereDate('dot.date_deleted', '<=', \DateTime::createFromFormat('U', $until));
                     })
                     ->when($submissionId, function ($query, $submissionId) {
                         return $query->where('dot.data_object_id', '=', (int) $submissionId);
