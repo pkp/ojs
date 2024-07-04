@@ -98,7 +98,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
             } elseif ($dao instanceof EntityDAO) {
                 Hook::add('Schema::get::' . $dao->schema, $this->addToSchema(...));
             } else {
-                Hook::add(strtolower_codesafe(get_class($dao)) . '::getAdditionalFieldNames', $this->getAdditionalFieldNames(...));
+                Hook::add(strtolower(get_class($dao)) . '::getAdditionalFieldNames', $this->getAdditionalFieldNames(...));
             }
         }
         return true;

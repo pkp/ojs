@@ -277,7 +277,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
         }
         $urlParts = explode('/', $url);
         if (isset($urlParts[0])) {
-            switch (strtolower_codesafe($urlParts[0])) {
+            switch (strtolower($urlParts[0])) {
                 case 'journal':
                     $url = $request->url(
                         $urlParts[1] ?? $request->getRouter()->getRequestedContextPath($request),
