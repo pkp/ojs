@@ -72,8 +72,9 @@
 		<subfield label="u">{url router=PKP\core\PKPApplication::ROUTE_PAGE journal=$journal->getPath() page="article" op="view" path=$article->getBestId()|escape urlLocaleForPage=""}</subfield>
 	</varfield>
 
-	<varfield id="786" i1="0" i2=" ">
-		<subfield label="n">{$journal->getName($journal->getPrimaryLocale())|escape}; {$issue->getIssueIdentification()|escape}</subfield>
+	<varfield id="773" i1="0" i2=" ">
+		<subfield label="t">{$journal->getName($journal->getPrimaryLocale())|escape};</subfield>
+	        <subfield label="g">{$issue->getIssueIdentification()|escape}</subfield>
 	</varfield>
 
 	<varfield id="546" i1=" " i2=" ">
