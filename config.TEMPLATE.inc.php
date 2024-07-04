@@ -24,8 +24,6 @@
 
 [general]
 
-[general]
-
 ; An application specific key that is required for the app to run
 ; Internally this is used for any encryption (specifically cookie encryption if enabled)
 app_key = 
