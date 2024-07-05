@@ -86,10 +86,10 @@ class OJSPaymentManager extends PaymentManager
 
         switch ($type) {
             case self::PAYMENT_TYPE_PURCHASE_ARTICLE:
-                $payment->setRequestUrl($dispatcher->url($request, Application::ROUTE_PAGE, null, 'article', 'view', $assocId));
+                $payment->setRequestUrl($dispatcher->url($request, Application::ROUTE_PAGE, null, 'article', 'view', [$assocId]));
                 break;
             case self::PAYMENT_TYPE_PURCHASE_ISSUE:
-                $payment->setRequestUrl($dispatcher->url($request, Application::ROUTE_PAGE, null, 'issue', 'view', $assocId));
+                $payment->setRequestUrl($dispatcher->url($request, Application::ROUTE_PAGE, null, 'issue', 'view', [$assocId]));
                 break;
             case self::PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
                 $payment->setRequestUrl($dispatcher->url($request, Application::ROUTE_PAGE, null, 'issue', 'current'));
@@ -102,7 +102,7 @@ class OJSPaymentManager extends PaymentManager
                 if ($submission->getData('submissionProgress')) {
                     $payment->setRequestUrl($dispatcher->url($request, Application::ROUTE_PAGE, null, 'submission', null, null, ['id' => $assocId]));
                 } else {
-                    $payment->setRequestUrl($dispatcher->url($request, Application::ROUTE_PAGE, null, 'authorDashboard', 'submission', $submission->getId()));
+                    $payment->setRequestUrl($dispatcher->url($request, Application::ROUTE_PAGE, null, 'authorDashboard', 'submission', [$submission->getId()]));
                 }
                 break;
             case self::PAYMENT_TYPE_MEMBERSHIP: // Deprecated

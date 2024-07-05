@@ -54,7 +54,7 @@ class OrcidReview
             $this->context->getPath(),
             'article',
             'view',
-            $this->submission->getId(),
+            [$this->submission->getId()],
             urlLocaleForPage: '',
         );
 

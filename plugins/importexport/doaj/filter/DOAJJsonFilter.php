@@ -148,7 +148,7 @@ class DOAJJsonFilter extends PKPImportExportFilter
         $request = Application::get()->getRequest();
         $article['bibjson']['link'] = [];
         $article['bibjson']['link'][] = [
-            'url' => $request->getDispatcher()->url($request, Application::ROUTE_PAGE, $context->getPath(), 'article', 'view', $pubObject->getId(), urlLocaleForPage: ''),
+            'url' => $request->getDispatcher()->url($request, Application::ROUTE_PAGE, $context->getPath(), 'article', 'view', [$pubObject->getId()], urlLocaleForPage: ''),
             'type' => 'fulltext',
             'content_type' => 'html'
         ];

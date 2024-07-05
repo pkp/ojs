@@ -69,7 +69,7 @@ class IssueEmailVariable extends Variable
             $this->getContext()->getPath(),
             'issue',
             'view',
-            $this->issue->getBestIssueId()
+            [$this->issue->getBestIssueId()]
         );
     }
 
