@@ -1,7 +1,7 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-07-03 23:25+0000\n"
+"PO-Revision-Date: 2024-07-06 12:25+0000\n"
 "Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
 "Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/author/mr/>"
 "\n"
@@ -40,7 +40,7 @@ msgid "author.submit.start"
 msgstr "आरंभ करा"
 
 msgid "author.submit.metadata"
-msgstr "माहितीची (मेटाडेटा) नोंद करा"
+msgstr "प्राथमिक माहितीची (मेटाडेटा) नोंद करा"
 
 msgid "author.submit.nextSteps"
 msgstr "पुढील टप्पे"
