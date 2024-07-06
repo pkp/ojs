@@ -116,12 +116,10 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
 
     /**
      * Delete a completed payment.
-     *
-     * @param int $completedPaymentId
      */
-    public function deleteById($completedPaymentId)
+    public function deleteById(int $completedPaymentId): int
     {
-        DB::table('completed_payments')
+        return DB::table('completed_payments')
             ->where('completed_payment_id', '=', $completedPaymentId)
             ->delete();
     }

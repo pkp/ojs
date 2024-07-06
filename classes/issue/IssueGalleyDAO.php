@@ -332,7 +332,7 @@ class IssueGalleyDAO extends \PKP\db\DAO
      *
      * @hook IssueGalleyDAO::deleteById [[&$galleyId, &$issueId]]
      */
-    public function deleteById(int $galleyId, ?int $issueId = null): void
+    public function deleteById(int $galleyId, ?int $issueId = null): int
     {
         Hook::call('IssueGalleyDAO::deleteById', [&$galleyId, &$issueId]);
 
@@ -355,6 +355,7 @@ class IssueGalleyDAO extends \PKP\db\DAO
         if ($affectedRows) {
             $this->update('DELETE FROM issue_galley_settings WHERE galley_id = ?', [$galleyId]);
         }
+        return $affectedRows;
     }
 
     /**

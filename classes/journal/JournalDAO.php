@@ -79,12 +79,11 @@ class JournalDAO extends ContextDAO
     /**
      * Delete the public IDs of all publishing objects in a journal.
      *
-     * @param int $journalId
-     * @param string $pubIdType One of the NLM pub-id-type values or
+     * @param $pubIdType One of the NLM pub-id-type values or
      * 'other::something' if not part of the official NLM list
      * (see <http://dtd.nlm.nih.gov/publishing/tag-library/n-4zh0.html>).
      */
-    public function deleteAllPubIds($journalId, $pubIdType)
+    public function deleteAllPubIds(int $journalId, string $pubIdType): int
     {
         Repo::galley()->dao->deleteAllPubIds($journalId, $pubIdType);
         Repo::submissionFile()->dao->deleteAllPubIds($journalId, $pubIdType);

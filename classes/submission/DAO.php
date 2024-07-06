@@ -27,10 +27,10 @@ class DAO extends \PKP\submission\DAO
     /**
      * @copydoc \PKP\core\EntityDAO::deleteById()
      */
-    public function deleteById(int $id)
+    public function deleteById(int $id): int
     {
         event(new SubmissionDeleted($id));
-        parent::deleteById($id);
+        return parent::deleteById($id);
     }
 
     /**

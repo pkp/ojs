@@ -19,7 +19,6 @@
 namespace APP\subscription;
 
 use Illuminate\Support\Facades\DB;
-use PKP\db\DAORegistry;
 use PKP\db\DAOResultFactory;
 use PKP\db\DBResultRange;
 use PKP\facades\Locale;
@@ -274,20 +273,18 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
     /**
      * Delete a subscription type by ID. Note that all subscriptions with this
      * type ID are also deleted.
-     *
-     * @param int $typeId Subscription type ID
-     * @param int $journalId Optional journal ID
      */
-    public function deleteById($typeId, $journalId = null)
+    public function deleteById(int $typeId, ?int $journalId = null): int
     {
         $subscriptionType = $this->getById($typeId, $journalId);
-        if ($subscriptionType) {
-            /** @var InstitutionalSubscriptionDAO|IndividualSubscriptionDAO */
-            $subscriptionDao = DAORegistry::getDAO($subscriptionType->getInstitutional() ? 'InstitutionalSubscriptionDAO' : 'IndividualSubscriptionDAO');
-            $subscriptionDao->deleteById($typeId);
-            $this->update('DELETE FROM subscription_types WHERE type_id = ?', [(int) $typeId]);
-            $this->update('DELETE FROM subscription_type_settings WHERE type_id = ?', [(int) $typeId]);
+        if (!$subscriptionType) {
+            return 0;
         }
+
+        // Allow subscription_types to cascade to subscriptions, institutional_subscriptions, subscription_type_settings, ...
+        return DB::table('subscription_types')
+            ->where('type_id', '=', $typeId)
+            ->delete();
     }
 
     /**

@@ -272,17 +272,13 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
 
     /**
      * Delete an individual subscription by subscription ID.
-     *
-     * @param int $subscriptionId
-     * @param int $journalId
      */
-    public function deleteById($subscriptionId, $journalId = null)
+    public function deleteById(int $subscriptionId, ?int $journalId = null): int
     {
-        $params = [(int) $subscriptionId];
-        if ($journalId) {
-            $params[] = (int) $journalId;
-        }
-        $this->update('DELETE FROM subscriptions WHERE subscription_id = ?' . ($journalId ? ' AND journal_id = ?' : ''), $params);
+        return DB::table('subscriptions')
+            ->where('subscription_id', '=', $subscriptionId)
+            ->when($journalId !== null, fn ($q) => $q->where('journal_id', '=', $journalId))
+            ->delete();
     }
 
     /**

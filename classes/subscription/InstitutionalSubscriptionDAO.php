@@ -285,18 +285,17 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
 
     /**
      * Delete an institutional subscription by subscription ID.
-     *
-     * @param int $subscriptionId
-     * @param null|mixed $journalId
      */
-    public function deleteById($subscriptionId, $journalId = null)
+    public function deleteById(int $subscriptionId, ?int $journalId = null): int
     {
         if (!$this->subscriptionExists($subscriptionId, $journalId)) {
-            return;
+            return 0;
         }
 
-        $this->update('DELETE FROM subscriptions WHERE subscription_id = ?', [(int) $subscriptionId]);
-        $this->update('DELETE FROM institutional_subscriptions WHERE subscription_id = ?', [(int) $subscriptionId]);
+        // Let subscriptions delete cascade to institutional_subscriptions
+        return DB::table('subscriptions')
+            ->where('subscription_id', '=', $subscriptionId)
+            ->delete();
     }
 
     /**

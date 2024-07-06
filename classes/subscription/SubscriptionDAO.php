@@ -130,11 +130,8 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
 
     /**
      * Delete subscription by subscription ID.
-     *
-     * @param int $subscriptionId Subscription ID
-     * @param int $journalId Journal ID
      */
-    abstract public function deleteById($subscriptionId, $journalId);
+    abstract public function deleteById(int $subscriptionId, ?int $journalId): int;
 
     /**
      * Delete subscriptions by journal ID.

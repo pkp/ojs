@@ -303,22 +303,15 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
      *
      * From legacy IssueDAO
      */
-    public function pubIdExists($pubIdType, $pubId, $excludePubObjectId, $contextId)
+    public function pubIdExists(string $pubIdType, string $pubId, int $excludePubObjectId, int $contextId): bool
     {
-        $result = $this->deprecatedDao->retrieve(
-            'SELECT COUNT(*) AS row_count
-			FROM issue_settings ist
-				INNER JOIN issues i ON ist.issue_id = i.issue_id
-			WHERE ist.setting_name = ? AND ist.setting_value = ? AND i.issue_id <> ? AND i.journal_id = ?',
-            [
-                'pub-id::' . $pubIdType,
-                $pubId,
-                (int) $excludePubObjectId,
-                (int) $contextId
-            ]
-        );
-        $row = $result->current();
-        return $row && $row->row_count;
+        return DB::table('issue_settings AS ist')
+            ->join('issues AS i', 'ist.issue_id', '=', 'i.issue_id')
+            ->where('ist.setting_name', '=', "pub-id::{$pubIdType}")
+            ->where('ist.setting_value', '<>', $pubId)
+            ->where('i.issue_id', '<>', $excludePubObjectId)
+            ->where('i.journal_id', '=', $contextId)
+            ->count() > 0;
     }
 
     /**
@@ -339,34 +332,25 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
      *
      * From legacy IssueDAO
      */
-    public function deletePubId($pubObjectId, $pubIdType)
+    public function deletePubId(int $pubObjectId, string $pubIdType): int
     {
-        $this->deprecatedDao->update(
-            'DELETE FROM issue_settings WHERE setting_name = ? AND issue_id = ?',
-            [
-                'pub-id::' . $pubIdType,
-                (int)$pubObjectId
-            ]
-        );
+        return DB::table('issue_settings')
+            ->where('setting_name', '=', "pub-id::{$pubIdType}")
+            ->where('issue_id', '=', $pubObjectId)
+            ->delete();
     }
 
     /**
      * @copydoc PKPPubIdPluginDAO::deleteAllPubIds()
-     *
-     * From legacy IssueDAO
      */
-    public function deleteAllPubIds($contextId, $pubIdType)
+    public function deleteAllPubIds(int $contextId, string $pubIdType): int
     {
+        $affectedRows = 0;
         $issues = Repo::issue()->getCollector()->filterByContextIds([$contextId])->getMany();
         foreach ($issues as $issue) {
-            $this->deprecatedDao->update(
-                'DELETE FROM issue_settings WHERE setting_name = ? AND issue_id = ?',
-                [
-                    'pub-id::' . $pubIdType,
-                    (int)$issue->getId()
-                ]
-            );
+            $affectedRows += $this->deletePubId($issue->getId(), $pubIdType);
         }
+        return $affectedRows;
     }
 
     /**

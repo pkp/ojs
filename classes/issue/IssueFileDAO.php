@@ -18,44 +18,35 @@
 
 namespace APP\issue;
 
+use Illuminate\Support\Facades\DB;
 use PKP\db\DAO;
 use PKP\plugins\Hook;
 
 class IssueFileDAO extends DAO
 {
     /** @var array MIME types that can be displayed inline in a browser */
-    public $_inlineableTypes = null;
-
+    public ?array $_inlineableTypes = null;
 
     /**
      * Get inlineable file types.
-     *
-     * @return array
      */
-    public function getInlineableTypes()
+    public function getInlineableTypes(): ?array
     {
         return $this->_inlineableTypes;
     }
 
     /**
      * Set inlineable file types.
-     *
-     * @param array $inlineableTypes
      */
-    public function setInlineableTypes($inlineableTypes)
+    public function setInlineableTypes(array $inlineableTypes): void
     {
         $this->_inlineableTypes = $inlineableTypes;
     }
 
     /**
      * Retrieve an issue file by ID.
-     *
-     * @param int $fileId
-     * @param int $issueId optional
-     *
-     * @return IssueFile
      */
-    public function getById($fileId, $issueId = null)
+    public function getById(int $fileId, ?int $issueId = null): ?IssueFile
     {
         $params = [(int) $fileId];
         if ($issueId) {
@@ -74,10 +65,8 @@ class IssueFileDAO extends DAO
 
     /**
      * Construct a new IssueFile data object.
-     *
-     * @return IssueFile
      */
-    public function newDataObject()
+    public function newDataObject(): IssueFile
     {
         return new IssueFile();
     }
@@ -85,13 +74,9 @@ class IssueFileDAO extends DAO
     /**
      * Internal function to return an IssueFile object from a row.
      *
-     * @param array $row
-     *
-     * @return IssueFile
-     *
      * @hook IssueFileDAO::_returnIssueFileFromRow [[&$issueFile, &$row]]
      */
-    public function _fromRow($row)
+    public function _fromRow(array $row): IssueFile
     {
         $issueFile = $this->newDataObject();
         $issueFile->setId($row['file_id']);
@@ -109,12 +94,8 @@ class IssueFileDAO extends DAO
 
     /**
      * Insert a new IssueFile.
-     *
-     * @param IssueFile $issueFile
-     *
-     * @return int
      */
-    public function insertObject($issueFile)
+    public function insertObject(IssueFile $issueFile): int
     {
         $this->update(
             sprintf(
@@ -149,7 +130,7 @@ class IssueFileDAO extends DAO
     /**
      * Update an existing issue file.
      */
-    public function updateObject($issueFile)
+    public function updateObject(IssueFile $issueFile)
     {
         $this->update(
             sprintf(
@@ -184,27 +165,29 @@ class IssueFileDAO extends DAO
     /**
      * Delete an issue file.
      */
-    public function deleteObject($issueFile)
+    public function deleteObject(IssueFile $issueFile): int
     {
-        $this->deleteById($issueFile->getId());
+        return $this->deleteById($issueFile->getId());
     }
 
     /**
      * Delete an issue file by ID.
      */
-    public function deleteById($fileId)
+    public function deleteById(int $fileId): int
     {
-        $this->update('DELETE FROM issue_files WHERE file_id = ?', [(int) $fileId]);
+        return DB::table('issue_files')
+            ->where('file_id', '=', $fileId)
+            ->delete();
     }
 
     /**
      * Delete all issue files for an issue.
-     *
-     * @param int $issueId
      */
-    public function deleteByIssueId($issueId)
+    public function deleteByIssueId(int $issueId): int
     {
-        $this->update('DELETE FROM issue_files WHERE issue_id = ?', [(int) $issueId]);
+        return DB::table('issue_files')
+            ->where('issue_id', '=', $issueId)
+            ->delete();
     }
 }
 
