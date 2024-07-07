@@ -1,7 +1,7 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-07-06 12:25+0000\n"
+"PO-Revision-Date: 2024-07-07 14:04+0000\n"
 "Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
 "Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/author/mr/>"
 "\n"
@@ -49,7 +49,7 @@ msgid "author.submit.requestWaiver"
 msgstr "सूट देण्याची विनंती"
 
 msgid "author.submissions.queuedReviewSubsequent"
-msgstr "समीक्षेच्या ( {$round} ) टप्प्यावर"
+msgstr "समीक्षेच्या टप्प्यावर : ( {$round} )"
 
 msgid "author.submissions.queuedReviewRevisions"
 msgstr "समीक्षेच्या टप्प्यावर : सुधारणा आवश्यक आहेत"
