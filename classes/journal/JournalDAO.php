@@ -85,10 +85,10 @@ class JournalDAO extends ContextDAO
      */
     public function deleteAllPubIds(int $journalId, string $pubIdType): int
     {
-        Repo::galley()->dao->deleteAllPubIds($journalId, $pubIdType);
-        Repo::submissionFile()->dao->deleteAllPubIds($journalId, $pubIdType);
-        Repo::issue()->dao->deleteAllPubIds($journalId, $pubIdType);
-        Repo::publication()->dao->deleteAllPubIds($journalId, $pubIdType);
+        return Repo::galley()->dao->deleteAllPubIds($journalId, $pubIdType)
+            + Repo::submissionFile()->dao->deleteAllPubIds($journalId, $pubIdType)
+            + Repo::issue()->dao->deleteAllPubIds($journalId, $pubIdType)
+            + Repo::publication()->dao->deleteAllPubIds($journalId, $pubIdType);
     }
 
     /**
