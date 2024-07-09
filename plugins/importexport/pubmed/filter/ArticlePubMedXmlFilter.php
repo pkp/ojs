@@ -216,6 +216,12 @@ class ArticlePubMedXmlFilter extends PersistableFilter
             $authorElement->appendChild($doc->createElement('LastName'))->appendChild($doc->createTextNode(ucfirst($author->getLocalizedFamilyName())));
         }
         $authorElement->appendChild($doc->createElement('Affiliation'))->appendChild($doc->createTextNode($author->getLocalizedAffiliation()));
+        $orcidId = $author->getData('orcid');
+        if ($orcidId) {
+            $orcidNode = $authorElement->appendChild($doc->createElement('Identifier'));
+            $orcidNode->setAttribute('Source', 'ORCID');
+            $orcidNode->appendChild($doc->createTextNode($orcidId));
+        }
 
         return $authorElement;
     }
