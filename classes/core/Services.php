@@ -3,32 +3,22 @@
 /**
  * @file classes/core/Services.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2014-2024 Simon Fraser University
+ * Copyright (c) 2000-2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class Services
  *
- * @ingroup core
- *
- * @see Core
- *
  * @brief Pimple Dependency Injection Container.
+ *
+ * @deprecated 3.5.0 Consider using {@see app()->get('SERVICE_NAME')}
+ * @see app()->get('SERVICE_NAME')
  */
 
 namespace APP\core;
 
-use APP\services\OJSServiceProvider;
-
 class Services extends \PKP\core\PKPServices
 {
-    /**
-     * container initialization
-     */
-    protected function init()
-    {
-        $this->container->register(new OJSServiceProvider());
-    }
 }
 
 if (!PKP_STRICT_MODE) {
