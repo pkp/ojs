@@ -2050,9 +2050,6 @@ msgstr "Duid aan als geregistreerd"
 msgid "plugins.importexport.common.action.register"
 msgstr "Registreer"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Valideer XML alvorens te exporteren en registreren."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Geen objecten geselecteerd."
 

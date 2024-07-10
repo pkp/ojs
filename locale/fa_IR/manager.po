@@ -1916,9 +1916,6 @@ msgstr "به عنوان ثبت شده علامت گزاری شده است."
 msgid "plugins.importexport.common.action.register"
 msgstr "ثبت‌نام"
 
-msgid "plugins.importexport.common.validation"
-msgstr "اعتبار سنجی  XML را قبل از برون دهی"
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "داده ای انتخاب نشده است."
 

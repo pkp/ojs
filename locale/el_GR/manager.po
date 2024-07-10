@@ -2116,9 +2116,6 @@ msgstr "Σήμανση ως ευρετηριασμένο"
 msgid "plugins.importexport.common.action.register"
 msgstr "Ευρετηρίαση"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Επικυρώστε το XML πριν από την εξαγωγή και την ευρετηρίαση."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Δεν έχουν επιλεγεί αντικείμενα."
 

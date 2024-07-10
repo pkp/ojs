@@ -1962,9 +1962,6 @@ msgstr "مؤشر أنه مسجل"
 msgid "plugins.importexport.common.action.register"
 msgstr "تسجيل"
 
-msgid "plugins.importexport.common.validation"
-msgstr "تحقق من نصوص XML قبل التصدير والتسجيل."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "لم يتم إختيار أي مكون."
 
