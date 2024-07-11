@@ -21,7 +21,6 @@ namespace APP\search;
 
 use APP\core\Application;
 use APP\core\Request;
-use APP\core\Services;
 use APP\facades\Repo;
 use APP\issue\IssueAction;
 use PKP\db\DAORegistry;
@@ -71,7 +70,7 @@ class ArticleSearch extends SubmissionSearch
                 $filter['dateStart'] = $oneMonthAgo;
                 $filter['dateEnd'] = $today;
             }
-            $rawReport = Services::get('publicationStats')->getTotals($filter);
+            $rawReport = app()->get('publicationStats')->getTotals($filter);
             foreach ($rawReport as $row) {
                 $unorderedResults[$row->submission_id]['metric'] = $row->metric;
             }

@@ -18,7 +18,6 @@ namespace APP\pages\stats;
 
 use APP\core\Application;
 use APP\core\Request;
-use APP\core\Services;
 use APP\facades\Repo;
 use APP\template\TemplateManager;
 use PKP\core\PKPApplication;
@@ -62,7 +61,7 @@ class StatsHandler extends PKPStatsHandler
         $dateEnd = date('Y-m-d', strtotime('yesterday'));
         $count = 30;
 
-        $timeline = Services::get('issueStats')->getTimeline(PKPStatisticsHelper::STATISTICS_DIMENSION_DAY, [
+        $timeline = app()->get('issueStats')->getTimeline(PKPStatisticsHelper::STATISTICS_DIMENSION_DAY, [
             'assocTypes' => [Application::ASSOC_TYPE_ISSUE],
             'contextIds' => [$context->getId()],
             'count' => $count,

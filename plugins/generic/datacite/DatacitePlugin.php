@@ -16,7 +16,6 @@
 namespace APP\plugins\generic\datacite;
 
 use APP\core\Application;
-use APP\core\Services;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\plugins\generic\datacite\classes\DataciteSettings;
@@ -203,7 +202,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         $settingsObject = $this->getSettingsObject();
 
         /** @var PKPSchemaService $schemaService */
-        $schemaService = Services::get('schema');
+        $schemaService = app()->get('schema');
         $requiredProps = $schemaService->getRequiredProps($settingsObject::class);
 
         foreach ($requiredProps as $requiredProp) {

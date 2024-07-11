@@ -17,7 +17,6 @@
 
 namespace APP\sushi;
 
-use APP\core\Services;
 use PKP\statistics\PKPStatisticsHelper;
 use PKP\sushi\CounterR5Report;
 
@@ -135,7 +134,7 @@ class PR extends CounterR5Report
         $params['dateEnd'] = $this->endDate;
         // do not consider metric_type filter now, but for display
 
-        $statsService = Services::get('sushiStats');
+        $statsService = app()->get('sushiStats');
         $metricsQB = $statsService->getQueryBuilder($params);
         $groupBy = [];
         // consider granularity=Month to group the metrics by month

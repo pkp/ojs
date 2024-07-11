@@ -24,7 +24,6 @@
 
 namespace APP\submission;
 
-use APP\core\Services;
 use APP\facades\Repo;
 use APP\publication\Publication;
 use PKP\facades\Locale;
@@ -56,7 +55,7 @@ class Submission extends PKPSubmission
      */
     public function _getContextLicenseFieldValue($locale, $field, $publication = null)
     {
-        $context = Services::get('context')->get($this->getData('contextId'));
+        $context = app()->get('context')->get($this->getData('contextId'));
         $fieldValue = null; // Scrutinizer
         switch ($field) {
             case self::PERMISSIONS_FIELD_LICENSE_URL:

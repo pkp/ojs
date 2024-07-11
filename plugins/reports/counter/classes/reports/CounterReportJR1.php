@@ -14,7 +14,6 @@
 namespace APP\plugins\reports\counter\classes\reports;
 
 use APP\core\Application;
-use APP\core\Services;
 use APP\journal\JournalDAO;
 use APP\plugins\reports\counter\classes\CounterReport;
 use APP\statistics\StatisticsHelper;
@@ -82,7 +81,7 @@ class CounterReportJR1 extends CounterReport
             $this->setError(new Exception(__('plugins.reports.counter.exception.filter'), COUNTER_EXCEPTION_WARNING | COUNTER_EXCEPTION_BAD_FILTERS));
         }
         // TODO: range
-        $results = Services::get('publicationStats')->getQueryBuilder($validFilters)
+        $results = app()->get('publicationStats')->getQueryBuilder($validFilters)
             ->getSum($defaultColumns)
             // Ordering must be by Journal (ReportItem), and by Month (ItemPerformance) for JR1
             ->orderBy(StatisticsHelper::STATISTICS_DIMENSION_CONTEXT_ID, StatisticsHelper::STATISTICS_ORDER_DESC)

@@ -14,7 +14,6 @@
 namespace APP\plugins\reports\counter\classes\reports;
 
 use APP\core\Application;
-use APP\core\Services;
 use APP\facades\Repo;
 use APP\journal\JournalDAO;
 use APP\plugins\reports\counter\classes\CounterReport;
@@ -118,7 +117,7 @@ class CounterReportAR1 extends CounterReport
             }
         }
         // TODO: range
-        $results = Services::get('publicationStats')
+        $results = app()->get('publicationStats')
             ->getQueryBuilder($validFilters)
             ->getSum($defaultColumns)
             ->orderBy(StatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID, StatisticsHelper::STATISTICS_ORDER_DESC)

@@ -14,7 +14,6 @@
 namespace APP\submission;
 
 use APP\article\ArticleTombstoneManager;
-use APP\core\Services;
 use APP\facades\Repo;
 use APP\journal\JournalDAO;
 use APP\section\Section;
@@ -120,7 +119,7 @@ class Repository extends \PKP\submission\Repository
             if ($requestContext && $requestContext->getId() === $submission->getData('contextId')) {
                 $context = $requestContext;
             } else {
-                $context = Services::get('context')->get($submission->getData('contextId'));
+                $context = app()->get('context')->get($submission->getData('contextId'));
             }
             $articleTombstoneManager = new ArticleTombstoneManager();
             if (!$section) {

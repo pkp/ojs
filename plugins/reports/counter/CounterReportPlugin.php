@@ -15,7 +15,6 @@
 namespace APP\plugins\reports\counter;
 
 use APP\core\Application;
-use APP\core\Services;
 use APP\notification\NotificationManager;
 use APP\statistics\StatisticsHelper;
 use APP\template\TemplateManager;
@@ -220,7 +219,7 @@ class CounterReportPlugin extends ReportPlugin
             'contextIds' => [Application::get()->getRequest()->getContext()->getId()],
             'assocTypes' => [Application::ASSOC_TYPE_SUBMISSION_FILE]
         ];
-        $metricsQB = Services::get('publicationStats')->getQueryBuilder($filters);
+        $metricsQB = app()->get('publicationStats')->getQueryBuilder($filters);
         $metricsQB = $metricsQB->getSum([StatisticsHelper::STATISTICS_DIMENSION_YEAR]);
         $metricsQB->orderBy(StatisticsHelper::STATISTICS_DIMENSION_YEAR, StatisticsHelper::STATISTICS_ORDER_ASC);
         $results = $metricsQB->get()->toArray();

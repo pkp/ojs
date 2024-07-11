@@ -15,7 +15,6 @@
 namespace APP\plugins\generic\htmlArticleGalley;
 
 use APP\core\Application;
-use APP\core\Services;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\observers\events\UsageEvent;
@@ -165,7 +164,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
     {
         $submissionFile = $galley->getFile();
         $submissionId = $submissionFile->getData('submissionId');
-        $contents = Services::get('file')->fs->read($submissionFile->getData('path'));
+        $contents = app()->get('file')->fs->read($submissionFile->getData('path'));
 
         // Replace media file references
         $embeddableFiles = Repo::submissionFile()
