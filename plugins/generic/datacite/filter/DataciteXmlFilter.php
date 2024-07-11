@@ -16,7 +16,6 @@ namespace APP\plugins\generic\datacite\filter;
 
 use APP\author\Author;
 use APP\core\Application;
-use APP\core\Services;
 use APP\decision\Decision;
 use APP\facades\Repo;
 use APP\issue\Issue;
@@ -699,8 +698,8 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 // The galley represents the article.
                 if (isset($galleyFile)) {
                     $path = $galleyFile->getData('path');
-                    $size = Services::get('file')->fs->fileSize($path);
-                    $sizes[] = Services::get('file')->getNiceFileSize($size);
+                    $size = app()->get('file')->fs->fileSize($path);
+                    $sizes[] = app()->get('file')->getNiceFileSize($size);
                 }
                 break;
             case isset($issue):

@@ -14,7 +14,6 @@
 namespace APP\publication;
 
 use APP\core\Application;
-use APP\core\Services;
 use APP\facades\Repo;
 use APP\payment\ojs\OJSCompletedPaymentDAO;
 use APP\payment\ojs\OJSPaymentManager;
@@ -115,7 +114,7 @@ class Repository extends \PKP\publication\Repository
         // If submission fees are enabled, check that they're fulfilled
         $context = Application::get()->getRequest()->getContext();
         if (!$context || $context->getId() !== $submission->getData('contextId')) {
-            $context = Services::get('context')->get($submission->getData('contextId'));
+            $context = app()->get('context')->get($submission->getData('contextId'));
         }
         $paymentManager = Application::getPaymentManager($context);
         $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */

@@ -18,7 +18,6 @@
 namespace APP\API\v1\stats\issues;
 
 use APP\core\Application;
-use APP\core\Services;
 use APP\facades\Repo;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\statistics\StatisticsHelper;
@@ -171,7 +170,7 @@ class StatsIssueController extends PKPBaseController
         }
 
         // Get a list (count number) of top issues by total (toc + galley) views
-        $statsService = Services::get('issueStats'); /** @var \APP\services\StatsIssueService $statsService */
+        $statsService = app()->get('issueStats'); /** @var \APP\services\StatsIssueService $statsService */
         $totalMetrics = $statsService->getTotals($allowedParams);
 
         // Get the stats for each issue
@@ -246,7 +245,7 @@ class StatsIssueController extends PKPBaseController
             $allowedParams['assocTypes'] = [Application::ASSOC_TYPE_ISSUE_GALLEY];
         };
 
-        $statsService = Services::get('issueStats'); /** @var \APP\services\StatsIssueService $statsService */
+        $statsService = app()->get('issueStats'); /** @var \APP\services\StatsIssueService $statsService */
 
         // Identify issues which should be included in the results when a searchPhrase is passed
         if (!empty($allowedParams['searchPhrase'])) {
@@ -297,7 +296,7 @@ class StatsIssueController extends PKPBaseController
             return response()->json(['error' => $result], Response::HTTP_BAD_REQUEST);
         }
 
-        $statsService = Services::get('issueStats'); /** @var \APP\services\StatsIssueService $statsService */
+        $statsService = app()->get('issueStats'); /** @var \APP\services\StatsIssueService $statsService */
         $dateStart = array_key_exists('dateStart', $allowedParams) ? $allowedParams['dateStart'] : null;
         $dateEnd = array_key_exists('dateEnd', $allowedParams) ? $allowedParams['dateEnd'] : null;
         $metricsByType = $statsService->getTotalsByType($issue->getId(), $request->getContext()->getId(), $dateStart, $dateEnd);
@@ -354,7 +353,7 @@ class StatsIssueController extends PKPBaseController
             return response()->json(['error' => $result], Response::HTTP_BAD_REQUEST);
         }
 
-        $statsService = Services::get('issueStats'); /** @var \APP\services\StatsIssueService $statsService */
+        $statsService = app()->get('issueStats'); /** @var \APP\services\StatsIssueService $statsService */
         $data = $statsService->getTimeline($allowedParams['timelineInterval'], $allowedParams);
         return response()->json($data, Response::HTTP_OK);
     }

@@ -16,7 +16,6 @@ namespace APP\plugins\generic\recommendByAuthor;
 
 use APP\author\Author;
 use APP\core\Application;
-use APP\core\Services;
 use APP\facades\Repo;
 use APP\handler\Handler;
 use APP\search\ArticleSearch;
@@ -124,7 +123,7 @@ class RecommendByAuthorPlugin extends GenericPlugin
         $orderedResults = [];
         if ($results) {
             // pkp/pkp-lib#9512: Check $results above, as an empty list of submissionIds is treated as no filter at all.
-            $statsReport = Services::get('publicationStats')->getTotals($filters);
+            $statsReport = app()->get('publicationStats')->getTotals($filters);
             foreach ($statsReport as $reportRow) {
                 $orderedResults[] = $reportRow->{StatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID};
             }

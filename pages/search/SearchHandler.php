@@ -16,7 +16,6 @@
 
 namespace APP\pages\search;
 
-use APP\core\Services;
 use APP\facades\Repo;
 use APP\handler\Handler;
 use APP\search\ArticleSearch;
@@ -28,9 +27,6 @@ class SearchHandler extends Handler
     /**
      * @copydoc PKPHandler::authorize()
      *
-     * @param mixed $request
-     * @param mixed $args
-     * @param mixed $roleAssignments
      */
     public function authorize($request, &$args, $roleAssignments)
     {
@@ -236,7 +232,7 @@ class SearchHandler extends Handler
 
     protected function getSearchableContexts(): array
     {
-        $contextService = Services::get('context');
+        $contextService = app()->get('context');
         return $contextService->getManySummary([
             'isEnabled' => true,
         ]);

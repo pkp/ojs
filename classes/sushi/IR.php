@@ -17,7 +17,6 @@
 
 namespace APP\sushi;
 
-use APP\core\Services;
 use APP\facades\Repo;
 use PKP\statistics\PKPStatisticsHelper;
 use PKP\sushi\CounterR5Report;
@@ -219,7 +218,7 @@ class IR extends CounterR5Report
         }
         // do not consider metric_type filter now, but for display
 
-        $statsService = Services::get('sushiStats');
+        $statsService = app()->get('sushiStats');
         $metricsQB = $statsService->getQueryBuilder($params);
         // consider attributes to group the metrics by
         $groupBy = ['m.' . PKPStatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID];
