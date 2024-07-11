@@ -1,12 +1,13 @@
 # Dorien van Rheenen <d.van.rheenen@rug.nl>, 2023.
 # Kay <kay.pepping@huygens.knaw.nl>, 2024.
+# Pia Spriensma <p.j.huizinga@rug.nl>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2024-03-28 10:44+0000\n"
-"Last-Translator: Kay <kay.pepping@huygens.knaw.nl>\n"
+"PO-Revision-Date: 2024-07-02 14:47+0000\n"
+"Last-Translator: Pia Spriensma <p.j.huizinga@rug.nl>\n"
 "Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/emails/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -100,9 +101,8 @@ msgstr ""
 "Dank u,<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.issuePublishNotify.subject"
-msgstr "Nieuw nummer gepubliceerd"
+msgstr "Nieuw nummer gepubliceerd: {$issueIdentification} van {$contextName}"
 
 msgid "emails.issuePublishNotify.body"
 msgstr ""
