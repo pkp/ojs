@@ -211,7 +211,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
             $selectedIssues = (array) $args['issueIds'];
         }
         if (empty($selectedSubmissions) && empty($selectedIssues) && empty($selectedRepresentations)) {
-            fatalError(__('plugins.importexport.common.error.noObjectsSelected'));
+            throw new \Exception(__('plugins.importexport.common.error.noObjectsSelected'));
         }
         if (!empty($selectedSubmissions)) {
             $objects = $this->getPublishedSubmissions($selectedSubmissions, $context);

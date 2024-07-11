@@ -261,8 +261,7 @@ class OJSPaymentManager extends PaymentManager
                         $institutional = false;
                     }
                     if (!$subscription || $subscription->getUserId() != $queuedPayment->getUserId() || $subscription->getJournalId() != $queuedPayment->getContextId()) {
-                        fatalError('Subscription integrity checks fail!');
-                        return false;
+                        throw new \Exception('Subscription integrity checks fail!');
                     }
                     $subscriptionType = $subscriptionTypeDao->getById($subscription->getTypeId(), $journal->getId());
                     // Update subscription end date now that payment is completed

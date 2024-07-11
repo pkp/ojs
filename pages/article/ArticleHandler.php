@@ -245,7 +245,7 @@ class ArticleHandler extends Handler
         ]);
 
         if ($this->galley && !$this->userCanViewGalley($request, $article->getId(), $this->galley->getId())) {
-            fatalError('Cannot view galley.');
+            throw new \Exception('Cannot view galley.');
         }
 
         $templateMgr->assign([
