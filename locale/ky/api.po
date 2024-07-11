@@ -1,7 +1,7 @@
 # Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-04-15 17:38+0000\n"
+"PO-Revision-Date: 2024-06-21 18:39+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/api/ky/>\n"
 "Language: ky\n"
@@ -13,3 +13,67 @@ msgstr ""
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "Сиз сураган жарнак бул журналдын бир бөлүгү эмес."
+
+msgid "api.emails.403.disabled"
+msgstr "Бул журнал үчүн электрондук почта билдирүүсү иштетилген эмес."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "Сиз сураган материал бул журналда жок."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Сиз материалдын журналын өзгөртө албайсыз."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Жарыяланбаган маселелерди көрүүгө уруксатыңыз жок."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Сиз бөлүшүлгөн журналдарды гана көрө аласыз."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Бул журналды көрүүгө уруксатыңыз жок."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Бул журналды log API же жалпы сайт API'сине сурамсыз көрүп же түзөтө "
+"албайсыз."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Бул журналды сайттын API аркылуу түзөтө албайсыз."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Бул журналды түзөтүүгө уруксатыңыз жок."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Бул журналды жок кылууга уруксатыңыз жок."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Сиз сураган журнал табылган жок."
+
+msgid "api.dois.403.contextsNotMatched"
+msgstr "Сиз сураган DOI бул журналдын бир бөлүгү эмес."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "Бул журнал үчүн конфигурацияланган DOI каттоо агенттиги жок."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Кээ бир нерселердин эскроосу ишке ашкан жок. Ката билдирүүлөрү үчүн жеке "
+"элементтерди текшериңиз."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "Бул каттын үлгүсүн башка журналга жылдырууга уруксатыңыз жок."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Сиз тандаган төлөм ыкмасы колдоого алынбайт."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Сиз сураган басылма бул журналдын бир бөлүгү эмес."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Сиз сураган басылма бул материалдын бир бөлүгү эмес."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Бул этаптагы файлды галлеяга байланыштыра албайсыз."
+
+msgid "api.submission.400.inactiveSection"
+msgstr "Бул бөлүм мындан ары тапшырыктарды кабыл албайт."

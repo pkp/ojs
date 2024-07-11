@@ -1,12 +1,13 @@
 # Hans Spijker <hans.spijker@huygens.knaw.nl>, 2021.
 # Kay <kay.pepping@huygens.knaw.nl>, 2024.
+# Pia Spriensma <p.j.huizinga@rug.nl>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:29+00:00\n"
-"PO-Revision-Date: 2024-03-21 21:01+0000\n"
-"Last-Translator: Kay <kay.pepping@huygens.knaw.nl>\n"
+"PO-Revision-Date: 2024-07-02 14:47+0000\n"
+"Last-Translator: Pia Spriensma <p.j.huizinga@rug.nl>\n"
 "Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/submission/nl/"
 ">\n"
 "Language: nl\n"
@@ -174,7 +175,7 @@ msgstr "Toewijzen aan nummer"
 msgid "publication.assignedToIssue"
 msgstr ""
 "Dit is toegewezen aan <a href=\"{$issueUrl}\">{$issueName}</a> maar is nog "
-"niet ingeplanned voor publicatie."
+"niet ingepland voor publicatie."
 
 msgid "publication.changeIssue"
 msgstr "Wijzig nummer"
@@ -240,10 +241,10 @@ msgid "publication.status.published"
 msgstr "Gepubliceerd"
 
 msgid "submission.status.scheduled"
-msgstr "Ingeplanned"
+msgstr "Ingepland"
 
 msgid "publication.status.unscheduled"
-msgstr "Niet ingeplanned"
+msgstr "Niet ingepland"
 
 msgid "submission.publications"
 msgstr "Publicaties"
@@ -268,7 +269,7 @@ msgid "publication.event.published"
 msgstr "Deze inzending is gepubliceerd."
 
 msgid "publication.event.scheduled"
-msgstr "Deze inzending is ingeplanned voor publicatie."
+msgstr "Deze inzending is ingepland voor publicatie."
 
 msgid "publication.event.unpublished"
 msgstr "Deze inzending is ongepubliceerd."
@@ -277,7 +278,7 @@ msgid "publication.event.versionPublished"
 msgstr "Een nieuwe versie is gepubliceerd."
 
 msgid "publication.event.versionScheduled"
-msgstr "Een nieuwe versie is ingeplanned voor publicatie."
+msgstr "Een nieuwe versie is ingepland voor publicatie."
 
 msgid "publication.event.versionUnpublished"
 msgstr "Een versie is verwijderd van publicatie."

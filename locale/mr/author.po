@@ -1,0 +1,332 @@
+# Murari P Tapaswi <tapaswimurari@gmail.com>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-07-07 14:04+0000\n"
+"Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
+"Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/author/mr/>"
+"\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "author.submit"
+msgstr "नवे सादरीकरण"
+
+msgid "author.track"
+msgstr "अनिर्णित सादरीकरणे"
+
+msgid "author.submit.submitArticle"
+msgstr "लेख सादर करा"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "सादरीकरणाचे पाच टप्पे"
+
+msgid "author.submit.startHereTitle"
+msgstr "नवे लेखन सादर करा"
+
+msgid "author.submit.step1"
+msgstr "पहिला टप्पा : सादरीकरण प्रक्रियारंभ"
+
+msgid "author.submit.step2"
+msgstr "दुसरा टप्पा : लेखनाची फाईल संक्रमित (अपलोड) करा"
+
+msgid "author.submit.step4"
+msgstr "चौथा टप्पा : पूरक माहितीच्या फाईल्स संक्रमित (अपलोड) करण्याबाबत"
+
+msgid "author.submit.start"
+msgstr "आरंभ करा"
+
+msgid "author.submit.metadata"
+msgstr "प्राथमिक माहितीची (मेटाडेटा) नोंद करा"
+
+msgid "author.submit.nextSteps"
+msgstr "पुढील टप्पे"
+
+msgid "author.submit.requestWaiver"
+msgstr "सूट देण्याची विनंती"
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "समीक्षेच्या टप्प्यावर : ( {$round} )"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "समीक्षेच्या टप्प्यावर : सुधारणा आवश्यक आहेत"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "संपादनाच्या टप्प्यावर : सुसंगतता आणि अचूकता तपासण्याची विनंती केली आहे"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "अचूकता तपासलेले लेखन संक्रमित (अपलोड) करा"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "मुद्रण दोष शुद्धी"
+
+msgid "author.submissions.viewStatus"
+msgstr "सद्यस्थितीचे अवलोकन"
+
+msgid "author.submit.journalSection"
+msgstr "नियतकालिकातले प्रभाग"
+
+msgid "submission.submit.coverNote"
+msgstr "संपादकासाठी टिप्पण्या"
+
+msgid "author.submit.comments"
+msgstr "मजकूराची नोंद करा (ऐच्छिक)"
+
+msgid "author.submit.form.localeRequired"
+msgstr "सादरीकरणासाठी भाषेची निवड करा."
+
+msgid "author.submit.reorderInstructions"
+msgstr ""
+"प्रकाशित लेखात लेखकांच्या क्रमात बदल हवा असेल तर त्यांची नावे पुनःक्रमित करा."
+
+msgid "author.submit.reorder"
+msgstr "लेखकाच्या नावाचे घटक पुनःक्रमित करा"
+
+msgid "author.submit.addAuthor"
+msgstr "लेखकाची भर घाला"
+
+msgid "author.submit.step4a"
+msgstr "चौथा टप्पा (भाग अ) : पूरक माहितीची फाईल जोडा"
+
+msgid "author.submissions.noSubmissions"
+msgstr "अनिर्णित सादरीकरणे नाहीत."
+
+msgid "author.submit.upload"
+msgstr "लेखनाची फाईल संक्रमित (अपलोड) करा"
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+"मराठी=mr; इंग्रजी=en; हिन्दी=hi. <a href=\"https://www.loc.gov/standards/"
+"iso639-2/php/code_list.php\" target=\"_blank\">अतिरिक्त भाषा चिन्हे</a>."
+
+msgid "author.submit.form.authorRequired"
+msgstr "किमान एका लेखकाचे नाव आवश्यक आहे."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "प्रत्येक लेखकाचे नाव, आडनाव आणि ई-मेल पत्ता आवश्यक आहे."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "कृपया तुमच्या लेखाचा गोषवारा दाखल करा."
+
+msgid "author.submit.submissionFile"
+msgstr "सादरीकरणाची फाईल"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "सादरीकरणाची फाईल संक्रमित (अपलोड) करा"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "सादरीकरणाची फाईल बदला"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "सादरीकरणाची फाईल संक्रमित (अपलोड) केलेली नाही."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr ""
+"प्रत्येक फाईल संक्रमित (अपलोड) केल्यानंतर 'सेव्ह' बटणावर क्लिक करा (यानंतरच "
+"पुढील फाईल संक्रमित करता येईल)."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr ""
+"तुमची खात्री आहे का की तुम्ही निवडलेली पूरक फाईल संक्रमित (अपलोड) न करता "
+"तुम्ही पुढे जाऊ इच्छिता?"
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "पूरक फाईल्सचे पुनरावलोकन"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "तुम्हाला ही पूरक फाईल वगळण्याची नक्की इच्छा आहे ना?"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "पूरक फाईल संक्रमित (अपलोड) करा"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "पूरक फाईल संपादित करा"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "पूरक फाईलबाबतच्या माहितीची (मेटाडेटा) नोंद"
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "पूरक फाईल"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "पूरक फाईलचा निर्माता (किंवा मालक)"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "संशोधन साधने"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "संशोधन साहित्य"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "संशोधन निष्पत्ती"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "डेटा विश्लेषण"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "डेटा संच"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "स्त्रोत मजकूर"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "संक्षिप्त वर्णन"
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "रितसर प्रकाशित झालेल्या साहित्याचाच केवळ वापर करावा."
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "पूरक फाईलची भर घाला"
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "अभ्यासाचे नाव किंवा मूळ विचारस्रोत."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "इतर निर्देश"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "एकही फाईल संक्रमित (अपलोड) केलेली नाही."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "पूरक फाईलच्या शीर्षकाची नोंद करा."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "विषयाची नोंद करा."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "त्यासंबंधीच्या वर्णनाची नोंद करा."
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "पूरक फाईल इंटरनेटवर उपलब्ध आहे."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "इंटरनेटवर उपलब्ध असलेल्या पूरक फाईलचा पत्ता"
+
+msgid "author.submit.filesSummary"
+msgstr "फाईलचा सारांश"
+
+msgid "author.submit.finishSubmission"
+msgstr "सादरीकरण संपवा"
+
+msgid "author.submit.submissionComplete"
+msgstr ""
+"सादरीकरण पूर्ण झाले. {$journalTitle} या नियतकालिकामध्ये प्रकाशित करण्याविषयी "
+"आपण दाखवलेल्या स्वारस्याबद्दल धन्यवाद."
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "लेखनाच्या लेखकाची आवृत्ती संक्रमित (अपलोड) करा"
+
+msgid "author.article.copyeditedFile"
+msgstr "अचूकता तपासलेली फाईल"
+
+msgid "author.article.authorRevisedFile"
+msgstr "लेखकाची फाईल"
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "सादरीकरणाची फाईल संक्रमित (अपलोड) न करता तुम्हाला पुढे जायचे आहे का?"
+
+msgid "author.submit.step3"
+msgstr ""
+"तिसरा टप्पा : सादर केलेल्या लेखनासंबंधीच्या माहितीची (मेटाडेटा) नोंद करा"
+
+msgid "author.submit.step5"
+msgstr "पाचवा टप्पा : लेखन सादर झाल्याची खात्री करा"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr ""
+"हा ऐच्छिक टप्पा सादर केलेल्या लेखनासोबत पूरक फाईल्स (असल्यास) जोडण्याकरता आहे"
+". कोणत्याही स्वरूपातल्या या फाईल्सद्वारा (अ) संशोधन साधनांसंबंधीची माहिती, "
+"(आ) डेटा (विदा) संच - ज्यांच्यामुळे संशोधनाचे पुनरावलोकन करणे सुलभ होते, (इ) "
+"असे स्रोत जे अन्यथा वाचकांसाठी अनुपलब्ध असतील, (ई) आकृत्या आणि तक्ते - जे मू"
+"ळ मजकुरात समाविष्ट करणे अवघड आहेत किंवा इतर साहित्य ज्यायोगे आपण सादर "
+"केलेल्या लेखनातील मजकुरात भर घालू शकता, त्यातील सत्यता सिद्ध करू शकता, त्याती"
+"ल निष्कर्षांना, निरीक्षणांना पुष्टी देऊ शकता."
+
+msgid "author.submit.supplementaryFiles"
+msgstr "पूरक फाईल्स संक्रमित (अपलोड) करा"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "सादरीकरणासोबत कोणत्याही पूरक फाईल्स जोडलेल्या नाहीत."
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr ""
+"पूरक फाईलची निर्देशसूची बनवण्यासाठी संक्रमित (अपलोड) केलेल्या फाईलसंबंधीच्या "
+"माहितीची (मेटाडेटा) नोंद खालीलप्रमाणे करा."
+
+msgid "author.submit.notAccepting"
+msgstr "या नियतकालिकाने नवे लेखन स्वीकारणे काही काळापुरते स्थगित केले आहे."
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "शुल्कातून सूट मिळवण्यासाठी कारणांची नोंद खालील चौकटीमध्ये करा."
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "प्रतिलेख (ट्रान्स्क्रिप्ट)"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr ""
+"जर तुम्ही शुल्कातून सूट मिळवण्यासाठी विनंती करीत असाल तर त्याच्या कारणांची "
+"नोंद चौकटीमध्ये करणे अनिवार्य आहे."
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "संपादनाच्या टप्प्यावर : मुद्रित लेखन तपासण्याची विनंती केली आहे"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr ""
+"प्राथमिक माहिती (मेटाडेटा) शिवाय फाईल सादर केल्यामुळे अनामिक समीक्षकांकडून "
+"कुठलाही पक्षपात संभवत नाही."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "माहिती संकलित केल्याची अथवा उपकरण निर्मितीची तारीख."
+
+msgid "author.submissions.confirmDelete"
+msgstr "तुमची खात्री आहे का की तुम्ही ही सादरीकरण प्रक्रिया रद्द करू इच्छिता?"
+
+msgid "author.submit.verifyChecklist"
+msgstr ""
+"यादीतील सगळ्या आवश्यकतांच्या पूर्ततेची खात्री सादरीकरणापूर्वी करणे आवश्यक "
+"आहे."
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr ""
+"या नियतकालिकामध्ये लेखन सादर करण्यासाठी वापरकर्ता खाते उघडणे आवश्यक आहे. याचा"
+" उपयोग आमच्या संपादकांना तुम्ही सादर केलेल्या लेखनाचा मागोवा घ्यायला आणि "
+"त्याच्या प्रगतीची नोंद ठेवायला, तसेच तुमच्याकडून अतिरिक्त माहिती आवश्यक "
+"असल्यास तुमच्याशी संपर्क साधायला केला जातो."
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr ""
+"सुरुवात करण्यापूर्वी स्वामित्वाधिकारासंबंधीच्या (कॉपीराईट) अटींशी आपली सहमती "
+"आवश्यक आहे."
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"सादरीकरण प्रक्रियेच्या पाच टप्प्यांपैकी पहिल्या टप्प्यावर जाण्यासाठी <a href="
+"\"{$submitUrl}\" class=\"action\">येथे क्लिक करा</a>."
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "संपादकीय पत्रव्यवहारासाठी संपर्क लेखकाचे नाव."
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "या लेखनाठी भराव्या लागणार्‍या शुल्कातून सूट देण्याचा कृपया विचार व्हावा"
+
+msgid "author.submit.deleteAuthor"
+msgstr "लेखक वगळा"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr ""
+"विषयसूचीसाठी सादर केलेल्या लेखनासंबंधी दोन शब्दांमध्ये अर्धविराम देत सूचक "
+"शब्दांची नोंद करा (जसे - सूचक शब्द-१; सूचक शब्द-२; सूचक शब्द-३)."
+
+msgid "author.submit.coverageInstructions"
+msgstr ""
+"संशोधन विशिष्ट ठिकाणासंबंधीचे, कालासंबंधीचे किंवा ऐतिहासिक व्याप्तीचे "
+"आणि/अथवा वैशिष्ट्यपूर्ण संशोधन नमुने वापरले असल्यास त्याची नोंद करा."
+
+msgid "author.submit.form.titleRequired"
+msgstr "कृपया तुमच्या लेखाच्या शीर्षकाची नोंद करा."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "तुम्ही या ठिकाणी गोषवार्‍याची नोंद करताना कमाल शब्दमर्यादा ओलांडली आहे."

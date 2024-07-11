@@ -1,7 +1,7 @@
 # Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-25 23:49+0000\n"
+"PO-Revision-Date: 2024-06-21 18:39+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/manager/ky/>"
 "\n"
@@ -754,3 +754,68 @@ msgstr ""
 "<strong>Эскертүү:</strong> Учурда журналга материал тапшырууну ырастаган "
 "электрондук кат жөнөтүү өчүрүлгөн. Бул функцияны колдонуу үчүн \"Электрондук "
 "почталар\" бөлүмүндөгү \"Ырастоо жөнөтүү\" электрондук почтасын иштетиңиз."
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Журнал жайгашкан өлкөнү же журналдын же басып чыгаруучунун почта дареги "
+"жайгашкан өлкөнү тандаңыз."
+
+msgid "manager.setup.journalLayout"
+msgstr "Журналдын макети"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+"Бул жерден журналдын темасын жана макетинин компоненттерин тандаңыз. "
+"Журналдын стилдер барагы да сайтка жүктөлүшү мүмкүн жана системанын стилдер "
+"таблицаларында жана теманын стилдер барагында (эгер тема тандалган болсо) "
+"көрсөтүлгөн стилди жокко чыгаруу үчүн колдонулушу мүмкүн."
+
+msgid "manager.setup.journalLogo"
+msgstr "Журналдын логотиби"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Журналдын логотиби"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Журнал бетинин төмөнкү колонтитулдары"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr ""
+"Бул сиздин журналыңыздын төмөнкү колонтитулу. Колонтитулуңузду өзгөртүү же "
+"жаңыртуу үчүн төмөнкү текст кутучасына HTML кодун чаптаңыз. Мисалы, төмөнкү "
+"колонтитулда башка навигация тилкеси, спиннер ж.б. болушу мүмкүн. Бул "
+"колонтитул ар бир баракта көрсөтүлөт."
+
+msgid "manager.setup.journalPolicies"
+msgstr "2-кадам. Журналдын эрежелери"
+
+msgid "manager.setup.journalSetup"
+msgstr "Журнал орнотуулары"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Таржымал жөндөөңүз жаңыртылды."
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr ""
+"Журналдын стилдер барагынын форматы туура эмес. .css форматына уруксат "
+"берилген."
+
+msgid "manager.setup.journalTheme"
+msgstr "Журналдын темасы"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Журналдын эскизи"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr ""
+"Журналдын тизмесинде колдонула турган кичинекей логотип же журналдын "
+"мукабасы."
+
+msgid "manager.setup.contextTitle"
+msgstr "Журналдын аты"
+
+msgid "manager.setup.keyInfo"
+msgstr "Негизги маалымат"
+
+msgid "manager.setup.contextInitials"
+msgstr "Журналдын аталышынын аббревиатурасы"

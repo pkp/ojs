@@ -1,0 +1,43 @@
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-06-21 18:39+0000\n"
+"Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
+"Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/"
+"blocks-subscription/ky/>\n"
+"Language: ky\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.block.subscription.displayName"
+msgstr "\"Жазылууну\" бөгөттөө"
+
+msgid "plugins.block.subscription.description"
+msgstr "Бул модул каптал тилкеге жазылуу маалыматын кошот."
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "Жазылуу"
+
+msgid "plugins.block.subscription.expires"
+msgstr "жарамдык датасы"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr "Кирүү мүмкүнчүлүгүн берген: {$institutionName}"
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "IP даректен кирүү: {$ip}"
+
+msgid "plugins.block.subscription.about"
+msgstr "Жазылуулар"
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr "Абоненттик ресурстарга кирүү үчүн кириңиз."
+
+msgid "plugins.block.subscription.subscriptionRequired"
+msgstr "Кээ бир ресурстарга кирүү үчүн жазылуу талап кылынат."
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "Көбүрөөк билүү үчүн"
