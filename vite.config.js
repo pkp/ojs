@@ -38,6 +38,22 @@ export default defineConfig(({mode}) => {
 						src: 'lib/ui-library/public/styles/tinymce/*',
 						dest: 'lib/pkp/styles/tinymce',
 					},
+					{
+						src: 'node_modules/jquery/dist/*',
+						dest: 'js/build/jquery',
+					},
+					{
+						src: 'node_modules/jquery-ui/dist/**/*.js',
+						dest: 'js/build/jquery-ui',
+					},
+					{
+						src: 'node_modules/jquery-validation/dist/*',
+						dest: 'js/build/jquery-validation',
+					},
+					{
+						src: 'node_modules/chart.js/dist/**/*.umd.js',
+						dest: 'js/build/chart.js',
+					},
 				],
 				// run the copy task after writing the bundle
 				hook: 'writeBundle',
