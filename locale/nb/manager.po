@@ -1999,9 +1999,6 @@ msgstr "Merk registrert"
 msgid "plugins.importexport.common.action.register"
 msgstr "Registrer"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Valider XML før eksport og registrering."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Ingen objekt valgt."
 

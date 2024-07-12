@@ -1971,9 +1971,6 @@ msgstr "Označi kot registriran"
 msgid "plugins.importexport.common.action.register"
 msgstr "Registriraj"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Preveri XML datoteko pred izvozom in registracijo."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Noben objekt ni izbran."
 

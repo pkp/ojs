@@ -2354,9 +2354,6 @@ msgstr ""
 "Şifrənin düz mətn kimi, yəni şifrələnməmiş olaraq yadda saxlanacağını zəhmət "
 "olmasa unutmayın."
 
-msgid "plugins.importexport.common.validation"
-msgstr "İxrac və qeydiyyat əməliyyatından əvvəl XML-i təsdiqləyin"
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Heç bir obyekt seçilmədi."
 

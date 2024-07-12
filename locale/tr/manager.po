@@ -1993,9 +1993,6 @@ msgstr "İşaretli kayıt"
 msgid "plugins.importexport.common.action.register"
 msgstr "Kayıt"
 
-msgid "plugins.importexport.common.validation"
-msgstr "İhraç ve kayıt işleminden önce XML'i doğrulayın."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Hiçbir nesne seçilmedi."
 

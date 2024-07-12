@@ -1839,9 +1839,6 @@ msgstr "Merkja sem skráð"
 msgid "plugins.importexport.common.action.register"
 msgstr "Skrá"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Staðfestu XML áður en það er flutt út og skráð."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Ekkert valið."
 

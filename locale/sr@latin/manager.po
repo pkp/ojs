@@ -1936,9 +1936,6 @@ msgstr "Označi registrovane"
 msgid "plugins.importexport.common.action.register"
 msgstr "Registracija"
 
-msgid "plugins.importexport.common.validation"
-msgstr ""
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Nema odabranih objekata."
 

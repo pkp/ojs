@@ -1765,9 +1765,6 @@ msgstr "紀錄已註冊"
 msgid "plugins.importexport.common.action.register"
 msgstr "註冊"
 
-msgid "plugins.importexport.common.validation"
-msgstr "導出及註冊前確認XML。"
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "無已選項目。"
 

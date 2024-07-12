@@ -1995,9 +1995,6 @@ msgstr "Markera som registrerad"
 msgid "plugins.importexport.common.action.register"
 msgstr "Registrera"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Validera XML före export och registrering."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Inga objekt har valts."
 

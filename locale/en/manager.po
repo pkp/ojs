@@ -1650,9 +1650,6 @@ msgstr "Mark registered"
 msgid "plugins.importexport.common.action.register"
 msgstr "Register"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Validate XML before the export and registration."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "No objects selected."
 
