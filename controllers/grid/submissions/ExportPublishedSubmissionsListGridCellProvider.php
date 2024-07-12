@@ -80,7 +80,7 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
                         new RedirectAction(
                             Repo::submission()->getWorkflowUrlByUserRoles($submission)
                         ),
-                        htmlspecialchars($title)
+                        $title
                     )
                 ];
             case 'issue':
