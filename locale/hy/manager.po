@@ -2052,9 +2052,6 @@ msgstr "Նշեք գրանցված"
 msgid "plugins.importexport.common.action.register"
 msgstr "Գրանցել"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Վավերացրեք XML-ը մինչև արտահանումը և գրանցումը:"
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Ընտրված օբյեկտներ չկան:"
 

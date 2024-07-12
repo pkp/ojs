@@ -1945,9 +1945,6 @@ msgstr "Означи регистроване"
 msgid "plugins.importexport.common.action.register"
 msgstr "Регистрација"
 
-msgid "plugins.importexport.common.validation"
-msgstr ""
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Нема одабраних објеката."
 

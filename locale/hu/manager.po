@@ -2024,9 +2024,6 @@ msgstr "Regisztráltnak jelölve"
 msgid "plugins.importexport.common.action.register"
 msgstr "Regisztráció"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Érvényesítse az XML-t mielőtt exportálja és regisztrálja."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Nincs kiválasztva objektum."
 

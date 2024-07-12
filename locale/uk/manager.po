@@ -2056,9 +2056,6 @@ msgstr "Відмітити зареєстрованим"
 msgid "plugins.importexport.common.action.register"
 msgstr "Зареєструвати"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Перевіряти XML перед експортом та реєстрацією."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Немає обраних об'єктів."
 

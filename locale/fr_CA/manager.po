@@ -2116,9 +2116,6 @@ msgstr "Marquer comme enregistré"
 msgid "plugins.importexport.common.action.register"
 msgstr "Enregistrer"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Valider le XML avant l'exportation et l'enregistrement."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Aucun objet sélectionné."
 

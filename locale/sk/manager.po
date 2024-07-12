@@ -2018,9 +2018,6 @@ msgstr "Označiť registrované"
 msgid "plugins.importexport.common.action.register"
 msgstr "Registrácia"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Validujte XML pred exportom a registráciou."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Neboli vybrané žiadne objekty."
 

@@ -2562,10 +2562,6 @@ msgstr "रजिस्टर करें"
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
-msgid "plugins.importexport.common.validation"
-msgstr "निर्यात और पंजीकरण से पहले XML सत्यापित करें।"
-
-# (pofilter) endpunc: Different punctuation at the end
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "कोई ऑब्जेक्ट नहीं चुना गया।"
 
