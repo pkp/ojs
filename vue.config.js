@@ -39,7 +39,31 @@ module.exports = {
 					{
 						from: 'lib/ui-library/public/styles/tinymce',
 						to: '../lib/pkp/styles/tinymce'
-					}
+					},
+
+					// copy jquery and jquery-ui from node_modules to lib/pkp composer's vendor dir
+					{
+						from: 'node_modules/jquery/dist/',
+						to: '../lib/pkp/lib/vendor/components/jquery/',
+					},
+					{
+						from: 'node_modules/jquery-ui/dist/**/*.js',
+						to: '../lib/pkp/lib/vendor/components/jqueryui/[name][ext]',
+					},
+
+					// copy jquery-validation and Chart.js from node_modules to lib/pkp/js/lib
+					{
+						from: 'node_modules/jquery-validation/dist/',
+						to: '../lib/pkp/js/lib/jquery/plugins/validate/',
+					},
+					{
+						from: 'node_modules/chart.js/dist/Chart.js',
+						to: '../lib/pkp/js/lib/[name][ext]',
+					},
+					{
+						from: 'node_modules/chart.js/dist/Chart.min.js',
+						to: '../lib/pkp/js/lib/[name][ext]',
+					},
 				]
 			})
 		],
