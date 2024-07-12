@@ -172,7 +172,7 @@ class DefaultThemePlugin extends ThemePlugin {
 		// Load jQuery from a CDN or, if CDNs are disabled, from a local copy.
 		$min = Config::getVar('general', 'enable_minified') ? '.min' : '';
 		$jquery = $request->getBaseUrl() . '/lib/pkp/lib/vendor/components/jquery/jquery' . $min . '.js';
-		$jqueryUI = $request->getBaseUrl() . '/lib/pkp/lib/vendor/jquery/ui/dist/jquery-ui' . $min . '.js';
+		$jqueryUI = $request->getBaseUrl() . '/lib/pkp/lib/vendor/components/jqueryui/jquery-ui' . $min . '.js';
 		// Use an empty `baseUrl` argument to prevent the theme from looking for
 		// the files within the theme directory
 		$this->addScript('jQuery', $jquery, array('baseUrl' => ''));
