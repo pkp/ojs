@@ -24,8 +24,12 @@ New config.inc.php section for schedule task named schedule is added, with the f
 
 - The setting general.scheduled_tasks has been removed. It was supposed to control the schedule tasks but had no impact.
 
+New config.inc.php parameters added for queues:
+    - schedule_job_process (default value: On), control the process of queue jobs via task scheduler
+
+
 New Features
 ------------
     #9566 : Convert session and cookie management to Laravel
     #9895 : Introduce APP KEY feature of Laravel
-
+    #9823: Improve job runner configuration/execution
