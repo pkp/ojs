@@ -1840,9 +1840,6 @@ msgstr "标记为注册"
 msgid "plugins.importexport.common.action.register"
 msgstr "注册"
 
-msgid "plugins.importexport.common.validation"
-msgstr "在导出和注册之前验证XML。"
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "未选择。"
 

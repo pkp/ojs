@@ -2012,9 +2012,6 @@ msgstr "Đánh dấu đã đăng ký"
 msgid "plugins.importexport.common.action.register"
 msgstr "Đăng ký"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Xác thực XML trước khi xuất và đăng ký."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Không có đối tượng được chọn."
 

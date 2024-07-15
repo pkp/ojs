@@ -2015,9 +2015,6 @@ msgstr "Tandai terdaftar"
 msgid "plugins.importexport.common.action.register"
 msgstr "Daftar"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Validasi XML sebelum proses ekspor dan registrasi."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Tidak ada objek yang dipilih."
 

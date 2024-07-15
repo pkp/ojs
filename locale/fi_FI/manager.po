@@ -2042,9 +2042,6 @@ msgstr "Merkitse rekisteröidyt"
 msgid "plugins.importexport.common.action.register"
 msgstr "Rekisteröi"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Validoi XML ennen vientiä ja rekisteröintiä."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Yhtään kohdetta ei ole valittu."
 

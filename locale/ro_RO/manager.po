@@ -2063,9 +2063,6 @@ msgstr "Marcă înregistrată"
 msgid "plugins.importexport.common.action.register"
 msgstr "Înregistrare"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Validarea XML înainte de exportare și înregistrare."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Nici un obiect selectat."
 

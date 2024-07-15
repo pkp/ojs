@@ -1985,9 +1985,6 @@ msgstr "Oznacz jako zarejestrowane"
 msgid "plugins.importexport.common.action.register"
 msgstr "Zarejestrowane"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Sprawdź XML przed eksportem i rejestracją."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Nie zaznaczono obiektów."
 
