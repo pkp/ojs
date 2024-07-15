@@ -2046,9 +2046,6 @@ msgstr "Segna come registrato"
 msgid "plugins.importexport.common.action.register"
 msgstr "Registrazione"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Valida l'XML prima dell'esportazione e della registrazione."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Nessun oggetto selezionato."
 

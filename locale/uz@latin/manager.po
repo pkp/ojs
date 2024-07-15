@@ -2041,9 +2041,6 @@ msgstr "Mark ro'yxatdan o'tgan"
 msgid "plugins.importexport.common.action.register"
 msgstr "Ro'yxatdan o'tish"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Eksport va ro'yxatdan o'tishdan oldin XML -ni tasdiqlang."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Hech qanday ob'ekt tanlanmagan."
 

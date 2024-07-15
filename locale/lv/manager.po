@@ -1989,9 +1989,6 @@ msgstr "Reģistrēta atzīme"
 msgid "plugins.importexport.common.action.register"
 msgstr "Reģistrēties"
 
-msgid "plugins.importexport.common.validation"
-msgstr "XML validācija pirms eksportēšanas un reģistrācijas."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Objekti nav atlasīti."
 

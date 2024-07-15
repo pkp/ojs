@@ -2055,9 +2055,6 @@ msgstr "Отметить как зарегистрированный"
 msgid "plugins.importexport.common.action.register"
 msgstr "Зарегистрировать"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Проверять XML перед экспортом и регистрацией."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Нет выбранных объектов."
 

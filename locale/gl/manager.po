@@ -2053,9 +2053,6 @@ msgstr "Marcar como rexistrado"
 msgid "plugins.importexport.common.action.register"
 msgstr "Rexistrarse"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Validar o XML antes da exportación e rexistro."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Non hai obxectos seleccionados."
 
