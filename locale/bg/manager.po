@@ -2042,9 +2042,6 @@ msgstr "Маркирай като регистриран"
 msgid "plugins.importexport.common.action.register"
 msgstr "Регистриране"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Проверете XML преди експортирането и регистрацията."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Не са избрани обекти."
 

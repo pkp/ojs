@@ -1921,9 +1921,6 @@ msgstr "マークが登録されました"
 msgid "plugins.importexport.common.action.register"
 msgstr "登録"
 
-msgid "plugins.importexport.common.validation"
-msgstr "エクスポートや登録の前にXMLを検証します。"
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "選択されたオブジェクトはありません。"
 

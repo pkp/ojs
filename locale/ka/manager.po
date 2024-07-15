@@ -2028,9 +2028,6 @@ msgstr "მონიშნულია, როგორც დარეგის
 msgid "plugins.importexport.common.action.register"
 msgstr "რეგისტრაცია"
 
-msgid "plugins.importexport.common.validation"
-msgstr "დაადასტურეთ XML ექსპორტამდე და რეგისტრაციამდე."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "ობიექტი არ არის არჩეული."
 

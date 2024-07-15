@@ -1648,9 +1648,6 @@ msgstr ""
 msgid "plugins.importexport.common.action.register"
 msgstr ""
 
-msgid "plugins.importexport.common.validation"
-msgstr ""
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr ""
 

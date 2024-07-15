@@ -2097,9 +2097,6 @@ msgstr "Marcar com a registrats"
 msgid "plugins.importexport.common.action.register"
 msgstr "Registra"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Validar el XML abans de l'exportació i el registre."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Cap objecte seleccionat."
 

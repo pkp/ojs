@@ -2030,9 +2030,6 @@ msgstr "Markér registreret"
 msgid "plugins.importexport.common.action.register"
 msgstr "Registrér"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Godkend XML før eksport og registrering."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Der er ikke valgt element."
 

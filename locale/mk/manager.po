@@ -2048,9 +2048,6 @@ msgstr "Означи регистриран"
 msgid "plugins.importexport.common.action.register"
 msgstr "Регистрирај се"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Потврдете го XML пред извозот и регистрацијата."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Не се избрани објекти."
 

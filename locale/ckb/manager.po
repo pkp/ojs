@@ -1964,9 +1964,6 @@ msgstr "وەک تۆمارکراو دیاری کراوە"
 msgid "plugins.importexport.common.action.register"
 msgstr "تۆمارکردن"
 
-msgid "plugins.importexport.common.validation"
-msgstr "وردبینی لە XML بکە پێش هەناردەکردن و تۆمارکردن."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "هیچ شتێک دیاری نەکراوە."
 

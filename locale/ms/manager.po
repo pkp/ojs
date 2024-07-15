@@ -2019,9 +2019,6 @@ msgstr "Tanda didaftarkan"
 msgid "plugins.importexport.common.action.register"
 msgstr "Daftar"
 
-msgid "plugins.importexport.common.validation"
-msgstr "Sahkan XML sebelum eksport dan pendaftaran."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Tiada objek yang dipilih."
 
