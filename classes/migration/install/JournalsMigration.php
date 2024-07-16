@@ -29,7 +29,7 @@ class JournalsMigration extends \PKP\migration\Migration
             $table->comment('A list of all journals in the installation of OJS.');
             $table->bigInteger('journal_id')->autoIncrement();
             $table->string('path', 32);
-            $table->float('seq', 8, 2)->default(0)->comment('Used to order lists of journals');
+            $table->float('seq', 53)->default(0)->comment('Used to order lists of journals');
             $table->string('primary_locale', 28);
             $table->smallInteger('enabled')->default(1)->comment('Controls whether or not the journal is considered "live" and will appear on the website. (Note that disabled journals may still be accessible, but only if the user knows the URL.)');
             $table->unique(['path'], 'journals_path');
