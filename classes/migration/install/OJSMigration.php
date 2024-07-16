@@ -38,7 +38,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->foreign('review_form_id', 'sections_review_form_id')->references('review_form_id')->on('review_forms')->onDelete('set null');
             $table->index(['review_form_id'], 'sections_review_form_id');
 
-            $table->float('seq', 8, 2)->default(0);
+            $table->float('seq', 53)->default(0);
             $table->smallInteger('editor_restricted')->default(0);
             $table->smallInteger('meta_indexed')->default(0);
             $table->smallInteger('meta_reviewed')->default(1);
@@ -154,7 +154,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->index(['file_id'], 'issue_galleys_file_id');
 
             $table->string('label', 255)->nullable();
-            $table->float('seq', 8, 2)->default(0);
+            $table->float('seq', 53)->default(0);
             $table->string('url_path', 64)->nullable();
 
             $table->index(['url_path'], 'issue_galleys_url_path');
@@ -189,7 +189,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->foreign('journal_id', 'custom_issue_orders_journal_id')->references('journal_id')->on('journals')->onDelete('cascade');
             $table->index(['journal_id'], 'custom_issue_orders_journal_id');
 
-            $table->float('seq', 8, 2)->default(0);
+            $table->float('seq', 53)->default(0);
 
             $table->unique(['issue_id'], 'custom_issue_orders_unique');
         });
@@ -206,7 +206,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->foreign('section_id', 'custom_section_orders_section_id')->references('section_id')->on('sections')->onDelete('cascade');
             $table->index(['section_id'], 'custom_section_orders_section_id');
 
-            $table->float('seq', 8, 2)->default(0);
+            $table->float('seq', 53)->default(0);
 
             $table->unique(['issue_id', 'section_id'], 'custom_section_orders_unique');
         });
@@ -228,7 +228,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->foreign('section_id', 'publications_section_id')->references('section_id')->on('sections')->onDelete('set null');
             $table->index(['section_id'], 'publications_section_id');
 
-            $table->float('seq', 8, 2)->default(0);
+            $table->float('seq', 53)->default(0);
 
             $table->bigInteger('submission_id');
             $table->foreign('submission_id', 'publications_submission_id')->references('submission_id')->on('submissions')->onDelete('cascade');
@@ -274,7 +274,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->foreign('submission_file_id')->references('submission_file_id')->on('submission_files');
             $table->index(['submission_file_id'], 'publication_galleys_submission_file_id');
 
-            $table->float('seq', 8, 2)->default(0);
+            $table->float('seq', 53)->default(0);
             $table->string('remote_url', 2047)->nullable();
             $table->smallInteger('is_approved')->default(0);
             $table->string('url_path', 64)->nullable();
@@ -318,14 +318,14 @@ class OJSMigration extends \PKP\migration\Migration
             $table->foreign('journal_id', 'subscription_types_journal_id')->references('journal_id')->on('journals')->onDelete('cascade');
             $table->index(['journal_id'], 'subscription_types_journal_id');
 
-            $table->float('cost', 8, 2);
+            $table->float('cost', 53);
             $table->string('currency_code_alpha', 3);
             $table->smallInteger('duration')->nullable();
             $table->smallInteger('format');
             $table->smallInteger('institutional')->default(0);
             $table->smallInteger('membership')->default(0);
             $table->smallInteger('disable_public_display');
-            $table->float('seq', 8, 2);
+            $table->float('seq', 53);
         });
 
         // Locale-specific subscription type data
@@ -415,7 +415,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->index(['user_id'], 'completed_payments_user_id');
 
             $table->bigInteger('assoc_id')->nullable();
-            $table->float('amount', 8, 2);
+            $table->float('amount', 53);
             $table->string('currency_code_alpha', 3)->nullable();
             $table->string('payment_method_plugin_name', 80)->nullable();
         });
