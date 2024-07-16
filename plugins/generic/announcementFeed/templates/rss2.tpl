@@ -22,10 +22,9 @@
 		<description>{$description|strip|escape:"html"}</description>
 
 		{* optional elements *}
-		{if $journal->getPrimaryLocale()}
-			<language>{$journal->getPrimaryLocale()|replace:'_':'-'|strip|escape:"html"}</language>
-		{/if}
-		{capture assign="dateUpdated"}{$dateUpdated|strtotime}{/capture}
+		<language>{$language|escape}</language>
+
+	{capture assign="dateUpdated"}{$dateUpdated|strtotime}{/capture}
 		<pubDate>{$smarty.const.DATE_RSS|date:$dateUpdated}</pubDate>
 		<generator>OJS {$ojsVersion|escape}</generator>
 		<docs>http://blogs.law.harvard.edu/tech/rss</docs>

@@ -27,9 +27,7 @@
 		<description>{$description|strip|escape:"html"}</description>
 
 		{* optional elements *}
-		{if $journal->getPrimaryLocale()}
-		<dc:language>{$journal->getPrimaryLocale()|replace:'_':'-'|strip|escape:"html"}</dc:language>
-		{/if}
+		<dc:language>{$language|escape}</dc:language>
 
 		<items>
 			{foreach from=$announcements item=announcement}
