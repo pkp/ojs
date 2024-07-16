@@ -1,9 +1,10 @@
 # Huw Robert Grange <huw.r.grange@uit.no>, 2023.
 # Aysa Ekanger <aysa.ekanger@uit.no>, 2024.
+# Sara Ellen Gaup <sara.e.gaup@uit.no>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-07-12 12:16+0000\n"
-"Last-Translator: Aysa Ekanger <aysa.ekanger@uit.no>\n"
+"PO-Revision-Date: 2024-07-16 14:18+0000\n"
+"Last-Translator: Sara Ellen Gaup <sara.e.gaup@uit.no>\n"
 "Language-Team: Sami (Northern) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/se/>\n"
 "Language: se\n"
@@ -18,3 +19,6 @@ msgstr "Doaimmahus"
 
 msgid "manager.setup.subjectKeywordTopic"
 msgstr "Čoavddasánit"
+
+msgid "manager.setup.contextAbout"
+msgstr "Áigečállaga birra"
