@@ -3,13 +3,11 @@
 /**
  * @file classes/notification/managerDelegate/ApproveSubmissionNotificationManager.php
  *
- * Copyright (c) 2016-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2016-2024 Simon Fraser University
+ * Copyright (c) 2003-2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ApproveSubmissionNotificationManager
- *
- * @ingroup classes_notification_managerDelegate
  *
  * @brief Notification manager delegate that handles notifications related with
  * submission approval process.
@@ -17,6 +15,7 @@
 
 namespace APP\notification\managerDelegate;
 
+use PKP\core\PKPRequest;
 use PKP\notification\managerDelegate\PKPApproveSubmissionNotificationManager;
 use PKP\notification\PKPNotification;
 
@@ -25,7 +24,7 @@ class ApproveSubmissionNotificationManager extends PKPApproveSubmissionNotificat
     /**
      * @copydoc PKPNotificationOperationManager::getNotificationTitle()
      */
-    public function getNotificationTitle($notification)
+    public function getNotificationTitle(PKPNotification $notification)
     {
         switch ($notification->getType()) {
             case PKPNotification::NOTIFICATION_TYPE_APPROVE_SUBMISSION:
@@ -37,16 +36,13 @@ class ApproveSubmissionNotificationManager extends PKPApproveSubmissionNotificat
     /**
      * @copydoc PKPNotificationOperationManager::getNotificationMessage()
      */
-    public function getNotificationMessage($request, $notification)
+    public function getNotificationMessage(PKPRequest $request, PKPNotification $notification): ?string
     {
-        switch ($notification->getType()) {
-            case PKPNotification::NOTIFICATION_TYPE_FORMAT_NEEDS_APPROVED_SUBMISSION:
-                return __('notification.type.formatNeedsApprovedSubmission');
-            case PKPNotification::NOTIFICATION_TYPE_APPROVE_SUBMISSION:
-                return __('notification.type.approveSubmission');
-        }
-
-        return parent::getNotificationMessage($request, $notification);
+        return match($notification->getType()) {
+            PKPNotification::NOTIFICATION_TYPE_FORMAT_NEEDS_APPROVED_SUBMISSION => __('notification.type.formatNeedsApprovedSubmission'),
+            PKPNotification::NOTIFICATION_TYPE_APPROVE_SUBMISSION => __('notification.type.approveSubmission'),
+            default => parent::getNotificationMessage($request, $notification)
+        };
     }
 }
 
