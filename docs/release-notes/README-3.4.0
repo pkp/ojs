@@ -1,8 +1,8 @@
 OJS 3.4.0 Release Notes
-Git tag: 3_4_0-5
+Git tag: 3_4_0-6
 
-Release date: February 23, 2024
-===============================
+Release date: July 19, 2024
+===========================
 
 Configuration Changes
 ---------------------
@@ -45,6 +45,56 @@ New config.inc.php section for queues is added, with the following parameters:
 New config.inc.php parameters added for emails:
      - default (default value: sendmail), being the default mailer driver to be used for email delivery
      - sendmail_path (default value: "/usr/sbin/sendmail -bs"), being the path to the sendmail program on the server
+
+3.4.0-6 Build
+-------------
+    #6186: Can't use multilingual values in theme options
+    #8365: Remove disable_path_info URL generation mode
+    #8592: Accessing user notification settings from the site throws a fatal error
+    #8683: Deprecated warnings in logs from Slim 3.* and PHP 8.1
+    #8700: Slowness at the "user & roles" page
+    #9759: Additional file validation causes error
+    #9773: Submission title/subtitle html text quirk
+    #9777: Missing values in frontend download stats graph
+    #9789: System Information displays SMTP password as plain text.
+    #9797: [OJS] New submissions "Do not send an email" configuration not functionnal
+    #9806: CSS might be cached with invalid URLs
+    #9810: Error while upgrading to OJS 3.4 if the journal's URL/domain has been changed
+    #9813: Improve Editorial Activity calculations
+    #9824: Fatal error at site-wide announcements
+    #9828: Fatal error at announcement feed plugin
+    #9830: The users.locales migration is generating invalid data
+    #9832: Enrolling an existing user as reviewer is broken
+    #9833: Log files might be skipped by the statistics processing after migrating to OJS 3.4
+    #9834: Statistics processing is stalled
+    #9837: you can access to worflow process even if a submission is incomplete
+    #9845: Sitemap index namespace URL shouldn't contain https
+    #9851: Data loss at I7191_EditorAssignments migration
+    #9864: Add participant RecommendOnly checkbox does not respect selected UserGroup value for recommendOnly as it's default value
+    #9867: PKP-LIB: Hook call author validate errors param missing &-reference
+    #9872: Fatal error at Recommend by similarity plugin
+    #9946: Do not remove numbers from the beginning of each citation
+    #9953: Custom review form possible responses get garbled on upgrade form 3.2.1-x to 3.3.0-x
+    #9959: Crossref export xml validation error: & in title not escaped
+    #9966: Issue titles double-escaped
+    #9979: Scheduled task cannot open log file
+    #10017: Fatal error changing site primary locale
+    #10019: Activity Log not updating for metadata changes
+    #10036: Error on the Plugin Gallery Page when the PKP Site is Down
+    #10051: Incorrect handling of HTML entity code &amp; in OJS email subject
+    #10061: Highlights feature shouldn't be displayed if it's not enabled
+    #10101: Fatal error when removing a journal
+    #10111: Some items at the search result page are sorted wrong
+    #10132: [OMP] Add option to disable validation in Onix export plugin
+    #10135: Add HTML decoding in getLocalizedTitle and getLocalizedSubTitle in PKPPublication
+    #10154: Firefox does not correctly save named files
+    #10155: OJS 3.4.0.5 on postgres fatal error in query regarding tombstones
+    #10159: generate test download metrics
+    #10162: Error Message Persisting During Final Step of Submission Process Despite Deletion and Restoration of Default Components in Components Set-up
+    #10174: Add ORCID ID to the PubMed export plugin
+    #10175: Filter "Assigned to Editor" in Submission list return Editors of all journals
+    #10180: Limit "permission level" when creating a new role as a Journal Manager
+    #10209: Locale with variants prevent submission wizard to load
 
 3.4.0-5 Build
 -------------
