@@ -1,8 +1,8 @@
 OJS 3.3.0 Release Notes
-Git tag: 3_3_0-16
+Git tag: 3_3_0-18
 
-Release date: November 17, 2023
-===============================
+Release date: July 19, 2024
+===========================
 
 Configuration Changes
 ---------------------
@@ -29,6 +29,75 @@ configuration parameters.
   - email.smtp_oauth_refreshtoken
 - The setting general.session_samesite (default value: Lax) has been added to control the "SameSite" setting for the session cookie.
 - The setting security.force_ssl, when enabled, will also set the "Secure" flag for the session cookie.
+
+3.3.0-18 Build
+--------------
+	#6186: Can't use multilingual values in theme options
+	#8700: Slowness at the "user & roles" page
+	#9131: Typo in ReviewAssignmentFileWritePolicy which permits managers file access when assigned to a submission
+	#9302: Internal PHP locale fails to be defined under Windows and others
+	#9307: OJS 3.3 Fatal Error on PHP 8
+	#9421: Review html escaping strategy on vue.js codebase in stable-3_3_0 and stable-3_4_0
+	#9476: Data loss at review rounds after migrating from OJS 2.x to +3.3
+	#9487: Upgrade to 3.3.x can be interrupted due to non-conforming *_settings tables
+	#9524: Backport ArticleSearch getTitle() bug fix to OJS 3.3.0 stable
+	#9535: PHP Fatal error:  Uncaught ValueError: DOMDocument::loadXML(): Argument #1 ($source) must not be empty in
+	#9546: "xmlEscapeEntities: char out of range" error when exporting issues through the Native XML plugin
+	#9574: Add support for author's competing interests statement
+	#9586: [OMP] PHP8 Incompatibility when navigating through the sidebar categories
+	#9592: False "save" confirmation leads to keyword loss
+	#9594: Missing CSRF check in issue publication
+	#9623: Plugin DataCite-Export: Registration of article DOIs fails
+	#9625: Native XML plugin not escaping data properly
+	#9643: Fatal error on latest PHP 8.x releases
+	#9650: Resolve template injection with context name
+	#9665: Indexation, for search purposes, might fail silently
+	#9721: Locales not loading for Statistics Tab for the role "section editor"
+	#9752: Fix misleading French copyright statement translation
+	#9767: Offline App: Creating the PHP Fatal error
+	#9775: CrossRef export fails with PHP8.2 when submission has no abstract
+	#9789: System Information displays SMTP password as plain text.
+	#9806: CSS might be cached with invalid URLs
+	#9837: you can access to worflow process even if a submission is incomplete
+	#9845: Sitemap index namespace URL shouldn't contain https
+	#9849: Unable to create new autor's checklist-items when ALL former items are deleted
+	#9946: Do not remove numbers from the beginning of each citation
+	#9953: Custom review form possible responses get garbled on upgrade form 3.2.1-x to 3.3.0-x
+	#9979: Scheduled task cannot open log file
+	#10004: Email is sent even though its template is disabled
+	#10019: Activity Log not updating for metadata changes
+	#10029: Fatal error when searching for users that have no role in the journal
+	#10034: Role assignment checkboxes behave unpredictably in some PHP environments
+	#10051: Incorrect handling of HTML entity code &amp; in OJS email subject
+	#10111: Some items at the search result page are sorted wrong
+	#10132: [OMP] Add option to disable validation in Onix export plugin
+	#10154: Firefox does not correctly save named files
+	#10174: Add ORCID ID to the PubMed export plugin
+	#10179: Filter user group IDs for current context in user forms
+	#10180: Limit "permission level" when creating a new role as a Journal Manager
+	#10186: Port tool to move locale keys to 3.3 branch
+
+3.3.0-17 Build
+--------------
+	#9131: Typo in ReviewAssignmentFileWritePolicy which permits managers file access when assigned to a submission
+	#9302: Internal PHP locale fails to be defined under Windows and others
+	#9307: OJS 3.3 Fatal Error on PHP 8
+	#9421: Review html escaping strategy on vue.js codebase in stable-3_3_0 and stable-3_4_0
+	#9476: Data loss at review rounds after migrating from OJS 2.x to +3.3
+	#9487: Upgrade to 3.3.x can be interrupted due to non-conforming *_settings tables
+	#9524: Backport ArticleSearch getTitle() bug fix to OJS 3.3.0 stable
+	#9535: PHP Fatal error:  Uncaught ValueError: DOMDocument::loadXML(): Argument #1 ($source) must not be empty in
+	#9546: "xmlEscapeEntities: char out of range" error when exporting issues through the Native XML plugin
+	#9574: Add support for author's competing interests statement
+	#9586: [OMP] PHP8 Incompatibility when navigating through the sidebar categories
+	#9594: Missing CSRF check in issue publication
+	#9623: Plugin DataCite-Export: Registration of article DOIs fails
+	#9625: Native XML plugin not escaping data properly
+	#9643: Fatal error on latest PHP 8.x releases
+	#9650: Resolve template injection with context name
+	#9665: Indexation, for search purposes, might fail silently
+	#9721: Locales not loading for Statistics Tab for the role "section editor"
+	#9752: Fix misleading French copyright statement translation
 
 3.3.0-16 Build
 --------------
