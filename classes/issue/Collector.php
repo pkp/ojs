@@ -332,7 +332,7 @@ class Collector implements CollectorInterface
             throw new Exception('Issues cannot be retrieved without a context id. Pass the Application::SITE_CONTEXT_ID_ALL wildcard to get issues from any context.');
         }
 
-        if (!in_array(Application::CONTEXT_ID_ALL, $this->contextIds)) {
+        if (!in_array(Application::SITE_CONTEXT_ID_ALL, $this->contextIds)) {
             $q->whereIn('i.journal_id', $this->contextIds);
         }
         // Issue IDs
