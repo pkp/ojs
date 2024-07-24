@@ -26,11 +26,10 @@ class ApproveSubmissionNotificationManager extends PKPApproveSubmissionNotificat
      */
     public function getNotificationTitle(PKPNotification $notification)
     {
-        switch ($notification->getType()) {
-            case PKPNotification::NOTIFICATION_TYPE_APPROVE_SUBMISSION:
-            case PKPNotification::NOTIFICATION_TYPE_FORMAT_NEEDS_APPROVED_SUBMISSION:
-                return __('notification.type.approveSubmissionTitle');
-        }
+        return match($notification->getType()) {
+            PKPNotification::NOTIFICATION_TYPE_APPROVE_SUBMISSION,
+            PKPNotification::NOTIFICATION_TYPE_FORMAT_NEEDS_APPROVED_SUBMISSION => __('notification.type.approveSubmissionTitle')
+        };
     }
 
     /**
