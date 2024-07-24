@@ -234,7 +234,7 @@ class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightChe
             $affectedRows = 0;
             $rows = DB::table('publications AS p')
                 ->join('publication_settings AS ps', 'ps.publication_id', '=', 'p.publication_id')
-                ->leftJoin('issues AS i', DB::raw('CAST(i.issue_id AS CHAR(20))'), '=', 'ps.setting_value')
+                ->leftJoin('issues AS i', 'ps.setting_value', '=', DB::raw('CAST(i.issue_id AS CHAR(20))'))
                 ->where('ps.setting_name', 'issueId')
                 ->whereNull('i.issue_id')
                 ->get(['p.submission_id', 'p.publication_id', 'ps.setting_value']);
