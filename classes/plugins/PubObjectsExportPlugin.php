@@ -24,7 +24,6 @@ use APP\journal\Journal;
 use APP\journal\JournalDAO;
 use APP\notification\NotificationManager;
 use APP\plugins\importexport\doaj\DOAJInfoSender;
-use APP\scheduler\Scheduler;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\core\EntityDAO;
@@ -43,6 +42,7 @@ use PKP\plugins\importexport\PKPImportExportDeployment;
 use PKP\plugins\ImportExportPlugin;
 use PKP\plugins\interfaces\HasTaskScheduler;
 use PKP\plugins\PluginRegistry;
+use PKP\scheduledTask\PKPScheduler;
 use PKP\submission\PKPSubmission;
 use PKP\user\User;
 
@@ -588,10 +588,8 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
     /**
      * @copydoc \PKP\plugins\interfaces\HasTaskScheduler::registerSchedules()
      */
-    public function registerSchedules(?Scheduler $scheduler = null): void
+    public function registerSchedules(PKPScheduler $scheduler): void
     {
-        $scheduler ??= app()->get(Scheduler::class); /** @var \APP\scheduler\Scheduler $scheduler */
-
         $scheduler
             ->addSchedule(new DOAJInfoSender())
             ->everyMinute()

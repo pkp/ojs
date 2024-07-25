@@ -582,24 +582,26 @@ delete_failed_jobs_after = 180
 ; request to the application.
 ;
 ; Use of the built-in schedule task runner is highly discouraged for high-volume 
-; sites. Instead, system's crontab should be configured to run every minutes as 
-; * * * * * cd /path-to-your-project && php lib/pkp/tools/scheduler.php run >> /dev/null 2>&1
+; sites. Use your operational system's task scheduler instead, and configure 
+; it to run the task scheduler every minute.
+; Sample for the *nix crontab
+; * * * * * php lib/pkp/tools/scheduler.php run >> /dev/null 2>&1
 ;
 ; See: <link-to-documentation>
 task_runner = On
 
-; How often should be built in schedule task runner should run schedule tasks at the
-; end of web request life cycle defined the seconds.
+; How often should the built-in schedule task runner run scheduled tasks at the
+; end of web request life cycle (value defined the seconds).
 ; 
-; This configuration will only have impact for build in task runner, not to the system
-; crontab configuration. 
+; This configuration will only have effect for the build-it task runner, it doesn't apply
+; to the system crontab configuration. 
 ;
-; The default value set to 60 seconds and it is recommened not to to set any value less
-; that it to avoid making possibility of application beign slow.
+; The default value is set to 60 seconds, a value smaller than that might affect the
+; application performance negatively.
 task_runner_interval = 60
 
-; This allow to sent the schedule task result notification mail only when there is an
-; error has occurred.
+; When enabled, an email with the scheduled task result will be sent only when an error
+; has occurred. Otherwise, all tasks will generate a notification.
 scheduled_tasks_report_error_only = On
 
 [invitations]

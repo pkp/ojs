@@ -3,13 +3,13 @@
 /**
  * @file classes/scheduler/Scheduler.php
  *
- * Copyright (c) 2014-2024 Simon Fraser University
- * Copyright (c) 2003-2024 John Willinsky
+ * Copyright (c) 2024 Simon Fraser University
+ * Copyright (c) 2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class Scheduler
  *
- * @brief Core Scheduler to register schedule tasks
+ * @brief Core scheduler class, responsible to register scheduled tasks specific for the application
  */
 
 namespace APP\scheduler;
@@ -26,6 +26,8 @@ class Scheduler extends PKPScheduler
      */
     public function registerSchedules(): void
     {
+        parent::registerSchedules();
+
         $this
             ->schedule
             ->call(fn () => (new SubscriptionExpiryReminder())->execute())
@@ -46,7 +48,5 @@ class Scheduler extends PKPScheduler
             ->hourly()
             ->name(OpenAccessNotification::class)
             ->withoutOverlapping();
-
-        parent::registerSchedules();
     }
 }
