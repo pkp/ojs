@@ -22,7 +22,7 @@ use APP\notification\NotificationManager;
 use Exception;
 use Illuminate\Support\Facades\Mail;
 use PKP\mail\Mailable;
-use PKP\notification\PKPNotification;
+use PKP\notification\Notification;
 
 class SubscriptionAction
 {
@@ -59,7 +59,7 @@ class SubscriptionAction
             $notificationMgr = new NotificationManager();
             $notificationMgr->createTrivialNotification(
                 $request->getUser()->getId(),
-                PKPNotification::NOTIFICATION_TYPE_ERROR,
+                Notification::NOTIFICATION_TYPE_ERROR,
                 ['contents' => __('email.compose.error')]
             );
             error_log($e->getMessage());

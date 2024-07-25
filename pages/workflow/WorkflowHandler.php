@@ -41,7 +41,7 @@ use PKP\decision\types\RevertDecline;
 use PKP\decision\types\RevertInitialDecline;
 use PKP\decision\types\SendExternalReview;
 use PKP\decision\types\SendToProduction;
-use PKP\notification\PKPNotification;
+use PKP\notification\Notification;
 use PKP\pages\workflow\PKPWorkflowHandler;
 use PKP\plugins\Hook;
 use PKP\security\Role;
@@ -201,13 +201,13 @@ class WorkflowHandler extends PKPWorkflowHandler
     {
         switch ($stageId) {
             case WORKFLOW_STAGE_ID_SUBMISSION:
-                return PKPNotification::NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_SUBMISSION;
+                return Notification::NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_SUBMISSION;
             case WORKFLOW_STAGE_ID_EXTERNAL_REVIEW:
-                return PKPNotification::NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_EXTERNAL_REVIEW;
+                return Notification::NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_EXTERNAL_REVIEW;
             case WORKFLOW_STAGE_ID_EDITING:
-                return PKPNotification::NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_EDITING;
+                return Notification::NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_EDITING;
             case WORKFLOW_STAGE_ID_PRODUCTION:
-                return PKPNotification::NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_PRODUCTION;
+                return Notification::NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_PRODUCTION;
         }
         return null;
     }

@@ -19,7 +19,7 @@ use APP\core\Services;
 use APP\notification\NotificationManager;
 use APP\statistics\StatisticsHelper;
 use APP\template\TemplateManager;
-use PKP\notification\PKPNotification;
+use PKP\notification\Notification;
 use PKP\plugins\ReportPlugin;
 
 class CounterReportPlugin extends ReportPlugin
@@ -181,7 +181,7 @@ class CounterReportPlugin extends ReportPlugin
                     }
                     $user = $request->getUser();
                     $notificationManager = new NotificationManager();
-                    $notificationManager->createTrivialNotification($user->getId(), PKPNotification::NOTIFICATION_TYPE_ERROR, ['contents' => $errormessage]);
+                    $notificationManager->createTrivialNotification($user->getId(), Notification::NOTIFICATION_TYPE_ERROR, ['contents' => $errormessage]);
             }
         }
         $templateManager = TemplateManager::getManager();

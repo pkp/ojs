@@ -49,7 +49,6 @@ use PKP\facades\Locale;
 use PKP\file\TemporaryFileManager;
 use PKP\mail\Mailer;
 use PKP\notification\NotificationSubscriptionSettingsDAO;
-use PKP\notification\PKPNotification;
 use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\ContextAccessPolicy;
@@ -634,7 +633,7 @@ class IssueGridHandler extends GridHandler
             $userIdsToNotify = $userIdsToNotify->diff($userIdsToMail);
 
             $jobs = [];
-            foreach ($userIdsToNotify->chunk(PKPNotification::NOTIFICATION_CHUNK_SIZE_LIMIT) as $notifyUserIds) {
+            foreach ($userIdsToNotify->chunk(Notification::NOTIFICATION_CHUNK_SIZE_LIMIT) as $notifyUserIds) {
                 $jobs[] = new IssuePublishedNotifyUsers(
                     $notifyUserIds,
                     $contextId,

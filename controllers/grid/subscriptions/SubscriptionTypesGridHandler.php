@@ -27,7 +27,7 @@ use PKP\db\DAO;
 use PKP\db\DAORegistry;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
-use PKP\notification\PKPNotification;
+use PKP\notification\Notification;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\Role;
 
@@ -216,7 +216,7 @@ class SubscriptionTypesGridHandler extends GridHandler
         if ($subscriptionTypeForm->validate()) {
             $subscriptionTypeForm->execute();
             $notificationManager = new NotificationManager();
-            $notificationManager->createTrivialNotification($request->getUser()->getId(), PKPNotification::NOTIFICATION_TYPE_SUCCESS);
+            $notificationManager->createTrivialNotification($request->getUser()->getId(), Notification::NOTIFICATION_TYPE_SUCCESS);
             // Prepare the grid row data.
             return DAO::getDataChangedEvent($subscriptionTypeId);
         } else {

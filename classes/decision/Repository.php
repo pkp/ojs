@@ -15,7 +15,6 @@ namespace APP\decision;
 
 use APP\decision\types\Accept;
 use APP\decision\types\SkipExternalReview;
-use APP\notification\Notification;
 use Illuminate\Database\Eloquent\Collection;
 use PKP\decision\types\BackFromCopyediting;
 use PKP\decision\types\BackFromProduction;
@@ -33,6 +32,7 @@ use PKP\decision\types\RevertDecline;
 use PKP\decision\types\RevertInitialDecline;
 use PKP\decision\types\SendExternalReview;
 use PKP\decision\types\SendToProduction;
+use PKP\notification\Notification;
 use PKP\plugins\Hook;
 
 class Repository extends \PKP\decision\Repository

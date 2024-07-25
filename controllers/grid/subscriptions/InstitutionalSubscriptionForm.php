@@ -29,7 +29,7 @@ use APP\template\TemplateManager;
 use Exception;
 use Illuminate\Support\Facades\Mail;
 use PKP\db\DAORegistry;
-use PKP\notification\PKPNotification;
+use PKP\notification\Notification;
 
 class InstitutionalSubscriptionForm extends SubscriptionForm
 {
@@ -217,7 +217,7 @@ class InstitutionalSubscriptionForm extends SubscriptionForm
             } catch (Exception $e) {
                 $notificationMgr = new NotificationManager();
                 $request = Application::get()->getRequest();
-                $notificationMgr->createTrivialNotification($request->getUser()->getId(), PKPNotification::NOTIFICATION_TYPE_ERROR, ['contents' => __('email.compose.error')]);
+                $notificationMgr->createTrivialNotification($request->getUser()->getId(), Notification::NOTIFICATION_TYPE_ERROR, ['contents' => __('email.compose.error')]);
                 error_log($e->getMessage());
             }
         }

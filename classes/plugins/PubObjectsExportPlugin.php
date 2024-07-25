@@ -35,7 +35,7 @@ use PKP\filter\FilterDAO;
 use PKP\galley\Galley;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\NullAction;
-use PKP\notification\PKPNotification;
+use PKP\notification\Notification;
 use PKP\plugins\Hook;
 use PKP\plugins\importexport\PKPImportExportDeployment;
 use PKP\plugins\ImportExportPlugin;
@@ -120,7 +120,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
                 $form->readInputData();
                 if ($form->validate()) {
                     $form->execute();
-                    $notificationManager->createTrivialNotification($user->getId(), PKPNotification::NOTIFICATION_TYPE_SUCCESS);
+                    $notificationManager->createTrivialNotification($user->getId(), Notification::NOTIFICATION_TYPE_SUCCESS);
                     return new JSONMessage(true);
                 } else {
                     return new JSONMessage(true, $form->fetch($request));
@@ -262,13 +262,13 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
                     $this->_sendNotification(
                         $request->getUser(),
                         'plugins.importexport.common.validation.success',
-                        PKPNotification::NOTIFICATION_TYPE_SUCCESS
+                        Notification::NOTIFICATION_TYPE_SUCCESS
                     );
                 } else {
                     $this->_sendNotification(
                         $request->getUser(),
                         'plugins.importexport.common.validation.fail',
-                        PKPNotification::NOTIFICATION_TYPE_ERROR
+                        Notification::NOTIFICATION_TYPE_ERROR
                     );
                 }
 
@@ -298,7 +298,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
                 $this->_sendNotification(
                     $request->getUser(),
                     $this->getDepositSuccessNotificationMessageKey(),
-                    PKPNotification::NOTIFICATION_TYPE_SUCCESS
+                    Notification::NOTIFICATION_TYPE_SUCCESS
                 );
             } else {
                 if (is_array($result)) {
@@ -307,7 +307,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
                         $this->_sendNotification(
                             $request->getUser(),
                             $error[0],
-                            PKPNotification::NOTIFICATION_TYPE_ERROR,
+                            Notification::NOTIFICATION_TYPE_ERROR,
                             ($error[1] ?? null)
                         );
                     }

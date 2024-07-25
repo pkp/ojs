@@ -17,7 +17,6 @@
 namespace APP\controllers\tab\workflow;
 
 use APP\core\Application;
-use APP\notification\Notification;
 use APP\template\TemplateManager;
 use PKP\controllers\tab\workflow\PKPWorkflowTabHandler;
 use PKP\core\PKPApplication;
@@ -25,7 +24,7 @@ use PKP\decision\DecisionType;
 use PKP\decision\types\NewExternalReviewRound;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
-use PKP\notification\PKPNotification;
+use PKP\notification\Notification;
 
 class WorkflowTabHandler extends PKPWorkflowTabHandler
 {
@@ -74,9 +73,9 @@ class WorkflowTabHandler extends PKPWorkflowTabHandler
     {
         return [
             Notification::NOTIFICATION_LEVEL_NORMAL => [
-                PKPNotification::NOTIFICATION_TYPE_VISIT_CATALOG => [Application::ASSOC_TYPE_SUBMISSION, $submissionId],
-                PKPNotification::NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER => [Application::ASSOC_TYPE_SUBMISSION, $submissionId],
-                PKPNotification::NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS => [Application::ASSOC_TYPE_SUBMISSION, $submissionId],
+                Notification::NOTIFICATION_TYPE_VISIT_CATALOG => [Application::ASSOC_TYPE_SUBMISSION, $submissionId],
+                Notification::NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER => [Application::ASSOC_TYPE_SUBMISSION, $submissionId],
+                Notification::NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS => [Application::ASSOC_TYPE_SUBMISSION, $submissionId],
             ],
             Notification::NOTIFICATION_LEVEL_TRIVIAL => []
         ];

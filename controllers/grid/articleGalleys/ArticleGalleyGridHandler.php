@@ -31,12 +31,10 @@ use PKP\controllers\grid\GridHandler;
 use PKP\core\JSONMessage;
 use PKP\core\PKPApplication;
 use PKP\db\DAO;
-use PKP\db\DAORegistry;
 use PKP\galley\Galley;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
-use PKP\notification\NotificationDAO;
-use PKP\notification\PKPNotification;
+use PKP\notification\Notification;
 use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\internal\RepresentationRequiredPolicy;
 use PKP\security\authorization\PublicationAccessPolicy;
@@ -342,15 +340,14 @@ class ArticleGalleyGridHandler extends GridHandler
         }
         Repo::galley()->delete($galley);
 
-        $notificationDao = DAORegistry::getDAO('NotificationDAO'); /** @var NotificationDAO $notificationDao */
-        $notificationDao->deleteByAssoc(Application::ASSOC_TYPE_REPRESENTATION, $galley->getId());
+        Notification::withAssoc(Application::ASSOC_TYPE_REPRESENTATION, $galley->getId())->delete();
 
         if ($this->getSubmission()->getData('stageId') == WORKFLOW_STAGE_ID_EDITING ||
             $this->getSubmission()->getData('stageId') == WORKFLOW_STAGE_ID_PRODUCTION) {
             $notificationMgr = new NotificationManager();
             $notificationMgr->updateNotification(
                 $request,
-                [PKPNotification::NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER, PKPNotification::NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS],
+                [Notification::NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER, Notification::NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS],
                 null,
                 Application::ASSOC_TYPE_SUBMISSION,
                 $this->getSubmission()->getId()
@@ -439,7 +436,7 @@ class ArticleGalleyGridHandler extends GridHandler
                 $notificationMgr = new NotificationManager();
                 $notificationMgr->updateNotification(
                     $request,
-                    [PKPNotification::NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER, PKPNotification::NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS],
+                    [Notification::NOTIFICATION_TYPE_ASSIGN_PRODUCTIONUSER, Notification::NOTIFICATION_TYPE_AWAITING_REPRESENTATIONS],
                     null,
                     Application::ASSOC_TYPE_SUBMISSION,
                     $this->getSubmission()->getId()

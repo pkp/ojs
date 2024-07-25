@@ -30,7 +30,7 @@ use PKP\db\DAO;
 use PKP\db\DAORegistry;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
-use PKP\notification\PKPNotification;
+use PKP\notification\Notification;
 use PKP\security\Role;
 
 class SectionGridHandler extends SetupGridHandler
@@ -312,7 +312,7 @@ class SectionGridHandler extends SetupGridHandler
             // Create the notification.
             $notificationMgr = new NotificationManager();
             $user = $request->getUser();
-            $notificationMgr->createTrivialNotification($user->getId(), PKPNotification::NOTIFICATION_TYPE_ERROR, ['contents' => __('manager.sections.confirmDeactivateSection.error')]);
+            $notificationMgr->createTrivialNotification($user->getId(), Notification::NOTIFICATION_TYPE_ERROR, ['contents' => __('manager.sections.confirmDeactivateSection.error')]);
             return DAO::getDataChangedEvent($sectionId);
         }
 

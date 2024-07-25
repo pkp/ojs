@@ -9,7 +9,6 @@
  *
  * @class NotificationManager
  *
- * @see NotificationDAO
  * @see Notification
  *
  * @brief Class for Notification Manager.
@@ -20,9 +19,10 @@ namespace APP\notification;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\notification\managerDelegate\ApproveSubmissionNotificationManager;
+use APP\notification\Notification as AppNotification;
 use PKP\core\PKPRequest;
+use PKP\notification\Notification;
 use PKP\notification\NotificationManagerDelegate;
-use PKP\notification\PKPNotification;
 use PKP\notification\PKPNotificationManager;
 use PKP\plugins\Hook;
 
@@ -35,15 +35,15 @@ class NotificationManager extends PKPNotificationManager
     /**
      * Construct a URL for the notification based on its type and associated object
      */
-    public function getNotificationUrl(PKPRequest $request, PKPNotification $notification): ?string
+    public function getNotificationUrl(PKPRequest $request, Notification $notification): ?string
     {
         $router = $request->getRouter();
         $dispatcher = $router->getDispatcher();
         $contextDao = Application::getContextDAO();
-        $context = $contextDao->getById($notification->getContextId());
+        $context = $contextDao->getById($notification->contextId);
 
-        switch ($notification->getType()) {
-            case Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE:
+        switch ($notification->type) {
+            case AppNotification::NOTIFICATION_TYPE_PUBLISHED_ISSUE:
                 return $dispatcher->url($request, Application::ROUTE_PAGE, $context->getPath(), 'issue', 'current');
             default:
                 return parent::getNotificationUrl($request, $notification);
@@ -55,24 +55,24 @@ class NotificationManager extends PKPNotificationManager
      *
      * @hook NotificationManager::getNotificationMessage [[&$notification, &$message]]
      */
-    public function getNotificationMessage(PKPRequest $request, PKPNotification $notification): ?string
+    public function getNotificationMessage(PKPRequest $request, Notification $notification): ?string
     {
         // Allow hooks to override default behavior
         $message = null;
         Hook::call('NotificationManager::getNotificationMessage', [&$notification, &$message]);
-        return $message ?? match($notification->getType()) {
+        return $message ?? match($notification->type) {
 
-            Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE => __('notification.type.issuePublished'),
-            Notification::NOTIFICATION_TYPE_BOOK_REQUESTED => __('plugins.generic.booksForReview.notification.bookRequested'),
-            Notification::NOTIFICATION_TYPE_BOOK_CREATED => __('plugins.generic.booksForReview.notification.bookCreated'),
-            Notification::NOTIFICATION_TYPE_BOOK_UPDATED => __('plugins.generic.booksForReview.notification.bookUpdated'),
-            Notification::NOTIFICATION_TYPE_BOOK_DELETED => __('plugins.generic.booksForReview.notification.bookDeleted'),
-            Notification::NOTIFICATION_TYPE_BOOK_MAILED => __('plugins.generic.booksForReview.notification.bookMailed'),
-            Notification::NOTIFICATION_TYPE_BOOK_SETTINGS_SAVED => __('plugins.generic.booksForReview.notification.settingsSaved'),
-            Notification::NOTIFICATION_TYPE_BOOK_SUBMISSION_ASSIGNED => __('plugins.generic.booksForReview.notification.submissionAssigned'),
-            Notification::NOTIFICATION_TYPE_BOOK_AUTHOR_ASSIGNED => __('plugins.generic.booksForReview.notification.authorAssigned'),
-            Notification::NOTIFICATION_TYPE_BOOK_AUTHOR_DENIED => __('plugins.generic.booksForReview.notification.authorDenied'),
-            Notification::NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED => __('plugins.generic.booksForReview.notification.authorRemoved'),
+            AppNotification::NOTIFICATION_TYPE_PUBLISHED_ISSUE => __('notification.type.issuePublished'),
+            AppNotification::NOTIFICATION_TYPE_BOOK_REQUESTED => __('plugins.generic.booksForReview.notification.bookRequested'),
+            AppNotification::NOTIFICATION_TYPE_BOOK_CREATED => __('plugins.generic.booksForReview.notification.bookCreated'),
+            AppNotification::NOTIFICATION_TYPE_BOOK_UPDATED => __('plugins.generic.booksForReview.notification.bookUpdated'),
+            AppNotification::NOTIFICATION_TYPE_BOOK_DELETED => __('plugins.generic.booksForReview.notification.bookDeleted'),
+            AppNotification::NOTIFICATION_TYPE_BOOK_MAILED => __('plugins.generic.booksForReview.notification.bookMailed'),
+            AppNotification::NOTIFICATION_TYPE_BOOK_SETTINGS_SAVED => __('plugins.generic.booksForReview.notification.settingsSaved'),
+            AppNotification::NOTIFICATION_TYPE_BOOK_SUBMISSION_ASSIGNED => __('plugins.generic.booksForReview.notification.submissionAssigned'),
+            AppNotification::NOTIFICATION_TYPE_BOOK_AUTHOR_ASSIGNED => __('plugins.generic.booksForReview.notification.authorAssigned'),
+            AppNotification::NOTIFICATION_TYPE_BOOK_AUTHOR_DENIED => __('plugins.generic.booksForReview.notification.authorDenied'),
+            AppNotification::NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED => __('plugins.generic.booksForReview.notification.authorRemoved'),
             default => parent::getNotificationMessage($request, $notification),
         };
     }
@@ -80,31 +80,31 @@ class NotificationManager extends PKPNotificationManager
     /**
      * Helper function to get an article title from a notification's associated object
      */
-    public function _getArticleTitle(PKPNotification $notification): ?string
+    public function _getArticleTitle(Notification $notification): ?string
     {
-        if($notification->getAssocType() != Application::ASSOC_TYPE_SUBMISSION) {
+        if($notification->assocType != Application::ASSOC_TYPE_SUBMISSION) {
             throw new \Exception('Unexpected assoc type!');
         }
-        $article = Repo::submission()->get($notification->getAssocId());
+        $article = Repo::submission()->get($notification->assocId);
         return $article?->getCurrentPublication()?->getLocalizedFullTitle();
     }
 
     /**
      * get notification style class
      */
-    public function getStyleClass(PKPNotification $notification): string
+    public function getStyleClass(Notification $notification): string
     {
-        return match($notification->getType()) {
-            Notification::NOTIFICATION_TYPE_BOOK_REQUESTED,
-            Notification::NOTIFICATION_TYPE_BOOK_CREATED,
-            Notification::NOTIFICATION_TYPE_BOOK_UPDATED,
-            Notification::NOTIFICATION_TYPE_BOOK_DELETED,
-            Notification::NOTIFICATION_TYPE_BOOK_MAILED,
-            Notification::NOTIFICATION_TYPE_BOOK_SETTINGS_SAVED,
-            Notification::NOTIFICATION_TYPE_BOOK_SUBMISSION_ASSIGNED,
-            Notification::NOTIFICATION_TYPE_BOOK_AUTHOR_ASSIGNED,
-            Notification::NOTIFICATION_TYPE_BOOK_AUTHOR_DENIED,
-            Notification::NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED => 'notifySuccess',
+        return match($notification->type) {
+            AppNotification::NOTIFICATION_TYPE_BOOK_REQUESTED,
+            AppNotification::NOTIFICATION_TYPE_BOOK_CREATED,
+            AppNotification::NOTIFICATION_TYPE_BOOK_UPDATED,
+            AppNotification::NOTIFICATION_TYPE_BOOK_DELETED,
+            AppNotification::NOTIFICATION_TYPE_BOOK_MAILED,
+            AppNotification::NOTIFICATION_TYPE_BOOK_SETTINGS_SAVED,
+            AppNotification::NOTIFICATION_TYPE_BOOK_SUBMISSION_ASSIGNED,
+            AppNotification::NOTIFICATION_TYPE_BOOK_AUTHOR_ASSIGNED,
+            AppNotification::NOTIFICATION_TYPE_BOOK_AUTHOR_DENIED,
+            AppNotification::NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED => 'notifySuccess',
             default => parent::getStyleClass($notification),
         };
     }
@@ -112,21 +112,21 @@ class NotificationManager extends PKPNotificationManager
     /**
      * Return a CSS class containing the icon of this notification type
      */
-    public function getIconClass(PKPNotification $notification): string
+    public function getIconClass(Notification $notification): string
     {
-        return match ($notification->getType()) {
-            Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE => 'notifyIconPublished',
-            Notification::NOTIFICATION_TYPE_NEW_ANNOUNCEMENT => 'notifyIconNewAnnouncement',
-            Notification::NOTIFICATION_TYPE_BOOK_REQUESTED,
-            Notification::NOTIFICATION_TYPE_BOOK_CREATED,
-            Notification::NOTIFICATION_TYPE_BOOK_UPDATED,
-            Notification::NOTIFICATION_TYPE_BOOK_DELETED,
-            Notification::NOTIFICATION_TYPE_BOOK_MAILED,
-            Notification::NOTIFICATION_TYPE_BOOK_SETTINGS_SAVED,
-            Notification::NOTIFICATION_TYPE_BOOK_SUBMISSION_ASSIGNED,
-            Notification::NOTIFICATION_TYPE_BOOK_AUTHOR_ASSIGNED,
-            Notification::NOTIFICATION_TYPE_BOOK_AUTHOR_DENIED,
-            Notification::NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED => 'notifyIconSuccess',
+        return match ($notification->type) {
+            AppNotification::NOTIFICATION_TYPE_PUBLISHED_ISSUE => 'notifyIconPublished',
+            AppNotification::NOTIFICATION_TYPE_NEW_ANNOUNCEMENT => 'notifyIconNewAnnouncement',
+            AppNotification::NOTIFICATION_TYPE_BOOK_REQUESTED,
+            AppNotification::NOTIFICATION_TYPE_BOOK_CREATED,
+            AppNotification::NOTIFICATION_TYPE_BOOK_UPDATED,
+            AppNotification::NOTIFICATION_TYPE_BOOK_DELETED,
+            AppNotification::NOTIFICATION_TYPE_BOOK_MAILED,
+            AppNotification::NOTIFICATION_TYPE_BOOK_SETTINGS_SAVED,
+            AppNotification::NOTIFICATION_TYPE_BOOK_SUBMISSION_ASSIGNED,
+            AppNotification::NOTIFICATION_TYPE_BOOK_AUTHOR_ASSIGNED,
+            AppNotification::NOTIFICATION_TYPE_BOOK_AUTHOR_DENIED,
+            AppNotification::NOTIFICATION_TYPE_BOOK_AUTHOR_REMOVED => 'notifyIconSuccess',
             default => parent::getIconClass($notification)
         };
     }
@@ -154,12 +154,12 @@ class NotificationManager extends PKPNotificationManager
     public function getNotificationSettingsMap(): array
     {
         return array_merge(parent::getNotificationSettingsMap(), [
-            Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE => [
+            AppNotification::NOTIFICATION_TYPE_PUBLISHED_ISSUE => [
                 'settingName' => 'notificationPublishedIssue',
                 'emailSettingName' => 'emailNotificationPublishedIssue',
                 'settingKey' => 'notification.type.issuePublished',
             ],
-            Notification::NOTIFICATION_TYPE_OPEN_ACCESS => [
+            AppNotification::NOTIFICATION_TYPE_OPEN_ACCESS => [
                 'settingName' => 'notificationOpenAccess',
                 'emailSettingName' => 'emailNotificationOpenAccess',
                 'settingKey' => 'notification.type.openAccess',

@@ -17,7 +17,6 @@ use APP\components\forms\decision\RequestPaymentDecisionForm;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\mail\mailables\PaymentRequest;
-use APP\notification\Notification;
 use APP\notification\NotificationManager;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\submission\Submission;
@@ -25,6 +24,7 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\Validator;
 use PKP\context\Context;
 use PKP\decision\steps\Form;
+use PKP\notification\Notification;
 use PKP\user\User;
 
 trait RequestPayment

@@ -26,7 +26,7 @@ use PKP\core\JSONMessage;
 use PKP\db\DAO;
 use PKP\db\DAORegistry;
 use PKP\identity\Identity;
-use PKP\notification\PKPNotification;
+use PKP\notification\Notification;
 
 class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler
 {
@@ -187,7 +187,7 @@ class InstitutionalSubscriptionsGridHandler extends SubscriptionsGridHandler
         if ($subscriptionForm->validate()) {
             $subscriptionForm->execute();
             $notificationManager = new NotificationManager();
-            $notificationManager->createTrivialNotification($request->getUser()->getId(), PKPNotification::NOTIFICATION_TYPE_SUCCESS);
+            $notificationManager->createTrivialNotification($request->getUser()->getId(), Notification::NOTIFICATION_TYPE_SUCCESS);
             // Prepare the grid row data.
             return DAO::getDataChangedEvent($subscriptionId);
         } else {

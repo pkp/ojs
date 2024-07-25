@@ -19,7 +19,7 @@ use APP\plugins\PubObjectsExportPlugin;
 use APP\template\TemplateManager;
 use PKP\db\DAORegistry;
 use PKP\filter\FilterDAO;
-use PKP\notification\PKPNotification;
+use PKP\notification\Notification;
 
 define('DOAJ_XSD_URL', 'https://www.doaj.org/schemas/doajArticles.xsd');
 define('DOAJ_API_DEPOSIT_OK', 201);
@@ -174,7 +174,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin
                 $this->_sendNotification(
                     $request->getUser(),
                     $this->getDepositSuccessNotificationMessageKey(),
-                    PKPNotification::NOTIFICATION_TYPE_SUCCESS
+                    Notification::NOTIFICATION_TYPE_SUCCESS
                 );
             } else {
                 foreach ($resultErrors as $errors) {
@@ -183,7 +183,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin
                         $this->_sendNotification(
                             $request->getUser(),
                             $error[0],
-                            PKPNotification::NOTIFICATION_TYPE_ERROR,
+                            Notification::NOTIFICATION_TYPE_ERROR,
                             ($error[1] ?? null)
                         );
                     }
