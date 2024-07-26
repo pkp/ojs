@@ -36,7 +36,7 @@ class I9813_QuickSubmitSubmissionProgressType extends \PKP\migration\Migration
 
         foreach ($this->getStepMap() as $oldValue => $newValue) {
             DB::table('submissions')
-                ->where('submission_progress', $oldValue)
+                ->where('submission_progress', (string) $oldValue)
                 ->update([
                     'submission_progress' => $newValue,
                 ]);
