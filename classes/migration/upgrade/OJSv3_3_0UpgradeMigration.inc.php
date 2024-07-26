@@ -162,17 +162,20 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 		if (is_array($oldValue) && $this->_isNumerical($oldValue)) $oldValue = array_values($oldValue);
 		$newValue = json_encode($oldValue, JSON_UNESCAPED_UNICODE); // don't convert utf-8 characters to unicode escaped code
 
-		$id = array_key_first((array)$row); // get first/primary key column
+		// Ensure ID fields are included on the filter to avoid updating similar rows
+		foreach (array_keys($row) as $column) {
+			if (substr($column, -3, '_id')) {
+				$searchBy[] = $column;
+			}
+		}
 
-		// Remove empty filters
-		$searchBy = array_filter($searchBy, function ($item) use ($row) {
-			if (empty($row->{$item})) return false;
-			return true;
-		});
-
-		$queryBuilder = Capsule::table($tableName)->where($id, $row->{$id});
-		foreach ($searchBy as $key => $column) {
-			$queryBuilder = $queryBuilder->where($column, $row->{$column});
+		$queryBuilder = Capsule::table($tableName);
+		foreach (array_unique($searchBy) as $column) {
+			if ($row->{$column} !== null) {
+				$queryBuilder->where($column, $row->{$column});
+			} else {
+				$queryBuilder->whereNull($column);
+			}
 		}
 		$queryBuilder->update([$valueToConvert => $newValue]);
 	}
