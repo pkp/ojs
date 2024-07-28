@@ -131,6 +131,10 @@
 		<note file="docs/release-notes/README-3.3.0" />
 	</upgrade>
 
+	<upgrade minversion="3.3.0.16" maxversion="3.4.0.7">
+		<migration class="PKP\migration\upgrade\v3_4_0\I10249_FixProfileImageDataLoss" />
+	</upgrade>
+
 	<upgrade minversion="3.1.0.0" maxversion="3.3.9.9">
 		<migration class="APP\migration\upgrade\v3_4_0\PreflightCheckMigration" fallback="3.3.9.9" />
 		<migration class="PKP\migration\upgrade\v3_4_0\I8060_UpdateUserLocalesDefaultToEmptyArrayFromNull" />
