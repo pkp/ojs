@@ -26,6 +26,7 @@ use APP\search\ArticleSearchIndex;
 use APP\submission\Submission;
 use Mockery;
 use Mockery\MockInterface;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PKP\db\DAORegistry;
 use PKP\db\DAOResultFactory;
@@ -34,6 +35,7 @@ use PKP\submissionFile\Collector as SubmissionFileCollector;
 use PKP\submissionFile\SubmissionFile;
 use PKP\tests\PKPTestCase;
 
+#[CoversClass(ArticleSearchIndex::class)]
 class ArticleSearchIndexTest extends PKPTestCase
 {
     //
@@ -77,9 +79,7 @@ class ArticleSearchIndexTest extends PKPTestCase
     //
     // Unit tests
     //
-    /**
-     * @covers ArticleSearchIndex
-     */
+
     public function testUpdateFileIndexViaPluginHook()
     {
         // Diverting to the search plugin hook.
@@ -100,9 +100,6 @@ class ArticleSearchIndexTest extends PKPTestCase
         Hook::clear('ArticleSearchIndex::submissionFileChanged');
     }
 
-    /**
-     * @covers ArticleSearchIndex
-     */
     public function testDeleteTextIndex()
     {
         // Prepare the mock environment for this test.
@@ -116,9 +113,6 @@ class ArticleSearchIndexTest extends PKPTestCase
         $articleSearchIndex->submissionFileDeleted(0);
     }
 
-    /**
-     * @covers ArticleSearchIndex
-     */
     public function testDeleteTextIndexViaPluginHook()
     {
         // Diverting to the search plugin hook.
@@ -140,9 +134,6 @@ class ArticleSearchIndexTest extends PKPTestCase
         Hook::clear('ArticleSearchIndex::submissionFileDeleted');
     }
 
-    /**
-     * @covers ArticleSearchIndex
-     */
     public function testRebuildIndex()
     {
         // Prepare the mock environment for this test.
@@ -160,9 +151,6 @@ class ArticleSearchIndexTest extends PKPTestCase
         $articleSearchIndex->rebuildIndex(true);
     }
 
-    /**
-     * @covers ArticleSearchIndex
-     */
     public function testRebuildIndexViaPluginHook()
     {
         // Diverting to the search plugin hook.
@@ -180,9 +168,6 @@ class ArticleSearchIndexTest extends PKPTestCase
         Hook::clear('ArticleSearchIndex::rebuildIndex');
     }
 
-    /**
-     * @covers ArticleSearchIndex
-     */
     public function testIndexArticleMetadata()
     {
         // Make sure that no hook is being called.
@@ -203,16 +188,13 @@ class ArticleSearchIndexTest extends PKPTestCase
             ->getMock();
         $article->expects($this->any())
             ->method('getCurrentPublication')
-            ->will($this->returnValue($publication));
+            ->willReturn($publication);
 
         // Test indexing an article with a mock environment.
         $articleSearchIndex = $this->getMockArticleSearchIndex($this->atLeastOnce());
         $articleSearchIndex->submissionMetadataChanged($article);
     }
 
-    /**
-     * @covers ArticleSearchIndex
-     */
     public function testIndexArticleMetadataViaPluginHook()
     {
         // Diverting to the search plugin hook.
@@ -231,9 +213,6 @@ class ArticleSearchIndexTest extends PKPTestCase
         Hook::clear('ArticleSearchIndex::articleMetadataChanged');
     }
 
-    /**
-     * @covers ArticleSearchIndex
-     */
     public function testIndexSubmissionFiles()
     {
         // Make sure that no hook is being called.
@@ -247,9 +226,6 @@ class ArticleSearchIndexTest extends PKPTestCase
         $this->assertTrue(true);
     }
 
-    /**
-     * @covers ArticleSearchIndex
-     */
     public function testIndexSubmissionFilesViaPluginHook()
     {
         // Diverting to the search plugin hook.
@@ -388,12 +364,12 @@ class ArticleSearchIndexTest extends PKPTestCase
         // Test the clearIndex() method.
         $articleSearchDao->expects($clearIndexExpected)
             ->method('clearIndex')
-            ->will($this->returnValue(null));
+            ->willReturn(null);
 
         // Test the deleteSubmissionKeywords() method.
         $articleSearchDao->expects($deleteArticleExpected)
             ->method('deleteSubmissionKeywords')
-            ->will($this->returnValue(null));
+            ->willReturn(null);
 
         // Register the mock DAO.
         DAORegistry::registerDAO('ArticleSearchDAO', $articleSearchDao);
@@ -417,12 +393,12 @@ class ArticleSearchIndexTest extends PKPTestCase
             ->getMock();
         $journalsIterator
             ->method('toIterator')
-            ->will($this->returnValue([]));
+            ->willReturn([]);
 
         // Mock the getAll() method.
         $journalDao->expects($this->any())
             ->method('getAll')
-            ->will($this->returnValue($journalsIterator));
+            ->willReturn($journalsIterator);
 
         // Register the mock DAO.
         DAORegistry::registerDAO('JournalDAO', $journalDao);
@@ -460,7 +436,7 @@ class ArticleSearchIndexTest extends PKPTestCase
         // Check for _updateTextIndex() calls.
         $articleSearchIndex->expects($expectedCall)
             ->method('_updateTextIndex')
-            ->will($this->returnValue(null));
+            ->willReturn(null);
         return $articleSearchIndex;
     }
 }
