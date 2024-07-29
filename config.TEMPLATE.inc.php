@@ -591,7 +591,7 @@ delete_failed_jobs_after = 180
 task_runner = On
 
 ; How often should the built-in schedule task runner run scheduled tasks at the
-; end of web request life cycle (value defined the seconds).
+; end of web request life cycle (value defined in seconds).
 ; 
 ; This configuration will only have effect for the build-it task runner, it doesn't apply
 ; to the system crontab configuration. 
