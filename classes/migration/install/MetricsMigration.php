@@ -221,6 +221,7 @@ class MetricsMigration extends \PKP\migration\Migration
             $table->index(['context_id', 'submission_id'], 'msgd_context_id_submission_id');
             switch (DB::getDriverName()) {
                 case 'mysql':
+                case 'mariadb':
                     // See "Create a database table" here: https://db-ip.com/db/format/ip-to-city-lite/csv.html
                     // where city is defined as varchar(80)
                     $table->unique([DB::raw('load_id, context_id, submission_id, country, region, city(80), date')], 'msgd_uc_load_context_submission_c_r_c_date');
@@ -253,6 +254,7 @@ class MetricsMigration extends \PKP\migration\Migration
             $table->index(['context_id', 'submission_id'], 'msgm_context_id_submission_id');
             switch (DB::getDriverName()) {
                 case 'mysql':
+                case 'mariadb':
                     // See "Create a database table" here: https://db-ip.com/db/format/ip-to-city-lite/csv.html
                     // where city is defined as varchar(80)
                     $table->unique([DB::raw('context_id, submission_id, country, region, city(80), month')], 'msgm_uc_context_submission_c_r_c_month');
