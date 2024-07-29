@@ -54,6 +54,7 @@ class I9231_FixMetricsIndexes extends Migration
             $table->dropUnique('msgd_uc_load_context_submission_c_r_c_date');
             switch (DB::getDriverName()) {
                 case 'mysql':
+                case 'mariadb':
                     $table->unique([DB::raw('load_id, context_id, submission_id, country, region, city(80), date')], 'msgd_uc_load_context_submission_c_r_c_date');
                     break;
                 case 'pgsql':
@@ -65,6 +66,7 @@ class I9231_FixMetricsIndexes extends Migration
             $table->dropUnique('msgm_uc_context_submission_c_r_c_month');
             switch (DB::getDriverName()) {
                 case 'mysql':
+                case 'mariadb':
                     $table->unique([DB::raw('context_id, submission_id, country, region, city(80), month')], 'msgm_uc_context_submission_c_r_c_month');
                     break;
                 case 'pgsql':

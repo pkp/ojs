@@ -23,6 +23,7 @@ class I7901_Duplicate_OAI_IDs extends \PKP\migration\Migration
     {
         switch (DB::getDriverName()) {
             case 'mysql':
+            case 'mariadb':
                 DB::unprepared(
                     "DELETE dot
                     FROM data_object_tombstones dot
