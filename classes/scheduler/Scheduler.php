@@ -18,6 +18,9 @@ use APP\tasks\OpenAccessNotification;
 use APP\tasks\SubscriptionExpiryReminder;
 use APP\tasks\UsageStatsLoader;
 use PKP\scheduledTask\PKPScheduler;
+use PKP\task\DepositDois;
+use PKP\task\EditorialReminders;
+use PKP\task\ReviewReminder;
 
 class Scheduler extends PKPScheduler
 {
@@ -27,6 +30,27 @@ class Scheduler extends PKPScheduler
     public function registerSchedules(): void
     {
         parent::registerSchedules();
+
+        $this
+            ->schedule
+            ->call(fn () => (new ReviewReminder())->execute())
+            ->hourly()
+            ->name(ReviewReminder::class)
+            ->withoutOverlapping();
+
+        $this
+            ->schedule
+            ->call(fn () => (new DepositDois())->execute())
+            ->hourly()
+            ->name(DepositDois::class)
+            ->withoutOverlapping();
+
+        $this
+            ->schedule
+            ->call(fn () => (new EditorialReminders())->execute())
+            ->daily()
+            ->name(EditorialReminders::class)
+            ->withoutOverlapping();
 
         $this
             ->schedule
