@@ -1,7 +1,7 @@
 # Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-07-30 06:57+0000\n"
+"PO-Revision-Date: 2024-07-30 07:06+0000\n"
 "Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
 "Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/manager/th/>\n"
 "Language: th\n"
@@ -1095,3 +1095,107 @@ msgid "manager.setup.enableOai.description"
 msgstr ""
 "ให้ข้อมูลเมตาแก่บริการจัดทําดัชนีของบุคคลที่สามผ่าน <a href=\"https://www."
 "openarchives.org/\">Open Archives Initiative</a>"
+
+msgid "manager.setup.useThumbnail"
+msgstr "ภาพขนาดย่อ"
+
+msgid "manager.setup.useTextTitle"
+msgstr "ชื่อเรื่อง"
+
+msgid "manager.statistics.statistics"
+msgstr "สถิติวารสาร"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "ยอมรับ"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "ปฏิเสธ"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "วันที่จะตรวจสอบ"
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "ประเด็นที่เผยแพร่"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "การส่งทั้งหมด"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Peer ตรวจสอบแล้ว"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "ผู้อ่านที่ลงทะเบียน"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "เลขที่ ได้รับมอบหมาย"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "คะแนนบรรณาธิการ"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr ""
+"เลือกส่วนสําหรับการคํานวณสถิติที่ผ่านการตรวจสอบโดยผู้ทรงคุณวุฒิของวารสารนี้"
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "การสมัครสมาชิก"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "ดาวน์โหลดไฟล์บทความ"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "การดูหน้าบทคัดย่อบทความ"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "บทความบทคัดย่อหน้าดูและดาวน์โหลด"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "ตัวระบุที่ไม่ซ้ํา"
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "วารสารจะใช้กองบรรณาธิการ/คณะกรรมการพิจารณา"
+
+msgid "manager.setup.useImageTitle"
+msgstr "ชื่อเรื่อง รูปภาพ"
+
+msgid "manager.setup.userRegistration"
+msgstr "การลงทะเบียนผู้ใช้"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "จํานวนการดูบทความ (สําหรับผู้เขียนเท่านั้น)"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "ส่งอีกครั้ง"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "วันที่จะตีพิมพ์"
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "รายการที่เผยแพร่"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "ตรวจสอบรายการที่จะให้บริการแก่ผู้อ่านใน About the Journal"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "ผู้ตรวจสอบ"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "ลําดับที่ของรีวิว"
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+"OJS คํานวณสถิติต่อไปนี้สําหรับแต่ละวารสาร \"วันที่จะตรวจสอบ\" "
+"คํานวณจากวันที่ส่ง (หรือการกําหนดเวอร์ชันตรวจสอบ) "
+"ไปจนถึงการตัดสินใจของบรรณาธิการเบื้องต้น ในขณะที่ \"วันที่จะเผยแพร่\" "
+"วัดสําหรับการส่งที่ได้รับการยอมรับจากการอัปโหลดครั้งแรกไปยังการตีพิมพ์"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr ""
+"บทความและประเด็นต่างๆ สามารถติดแท็กด้วยหมายเลขประจําตัวหรือสตริง "
+"โดยใช้ระบบการลงทะเบียน เช่น Digital Object Identifier System (DOI)"
+
+msgid "manager.statistics.statistics.note"
+msgstr ""
+"หมายเหตุ: "
+"เปอร์เซ็นต์สําหรับการส่งที่ได้รับการตรวจสอบโดยผู้ทรงคุณวุฒิอาจรวมกันได้ไม่เกิ"
+"น 100% เนื่องจากรายการที่ส่งใหม่ได้รับการยอมรับ ปฏิเสธ "
+"หรือยังอยู่ในระหว่างดําเนินการ"
