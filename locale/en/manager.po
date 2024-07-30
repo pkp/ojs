@@ -813,9 +813,6 @@ msgstr "Review Options"
 msgid "manager.setup.reviewOptions.automatedReminders"
 msgstr "Automated Email Reminders"
 
-msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
-msgstr "To send automated email reminders, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required as indicated in the OJS documentation."
-
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "Weeks allowed to complete the review"
 
@@ -1074,9 +1071,6 @@ msgstr "Subscription Expiry Reminders"
 msgid "manager.subscriptionPolicies.expiryRemindersDescription"
 msgstr "Automated email reminders (available for editing by Journal Managers in OJS's Emails) can be sent to subscribers both before and after a subscription has expired."
 
-msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
-msgstr "<strong>Note:</strong> To activate these options, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation."
-
 msgid "manager.subscriptionPolicies.expirySelectOne"
 msgstr "Select one of the following:"
 
@@ -1097,9 +1091,6 @@ msgstr "Please select a valid value for the number of weeks before subscription 
 
 msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
 msgstr "Registered readers will have the option of receiving the table of contents by email when an issue becomes open access."
-
-msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
-msgstr "<strong>Note:</strong> To activate this option, the site administrator must enable the <tt>scheduled_tasks</tt> option in the OJS configuration file. Additional server configuration may be required to support this functionality (which may not be possible on all servers), as indicated in the OJS documentation."
 
 msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
 msgstr "Online Payment Notifications"
