@@ -208,7 +208,7 @@
 		<note file="docs/release-notes/README-3.3.0" />
 	</upgrade>
 
-	<upgrade minversion="3.3.0.16" maxversion="3.3.0.19">
+	<upgrade minversion="3.3.0.16" maxversion="3.3.0.18">
 		<migration class="lib.pkp.classes.migration.upgrade.I10249_FixProfileImageDataLoss" />
 	</upgrade>
 

@@ -167,7 +167,7 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 		$primaryKeys = [];
 		try {
 			$primaryKeys = $tableDetails->getPrimaryKeyColumns();
-		} catch(Exception $e) {
+		} catch (Exception $e) {
 			foreach ($tableDetails->getIndexes() as $index) {
 					if($index->isPrimary() || $index->isUnique()) {
 						$primaryKeys = $index->getColumns();
