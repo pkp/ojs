@@ -177,7 +177,7 @@ class OJSv3_3_0UpgradeMigration extends Migration {
 		}
 
 		if (!count($primaryKeys)) {
-			foreach (array_keys($row) as $column) {
+			foreach (array_keys(get_object_vars($row)) as $column) {
 				if (substr($column, -3, '_id')) {
 					$primaryKeys[] = $column;
 				}
