@@ -41,14 +41,10 @@
 
 	{fbvFormSection label="manager.subscriptionPolicies.expiryReminders"}
 		<p>{translate key="manager.subscriptionPolicies.expiryRemindersDescription"}</p>
-		{fbvElement type="select" id="numMonthsBeforeSubscriptionExpiryReminder" name="numMonthsBeforeSubscriptionExpiryReminder" selected=$numMonthsBeforeSubscriptionExpiryReminder from=$validNumMonthsBeforeExpiry label="manager.subscriptionPolicies.expiryReminderBeforeMonths" disabled=$scheduledTasksEnabled|compare:0 size=$fbvStyles.size.MEDIUM translate=false inline=true}
-		{fbvElement type="select" id="numWeeksBeforeSubscriptionExpiryReminder" name="numWeeksBeforeSubscriptionExpiryReminder" selected=$numWeeksBeforeSubscriptionExpiryReminder from=$validNumWeeksBeforeExpiry label="manager.subscriptionPolicies.expiryReminderBeforeWeeks" disabled=$scheduledTasksEnabled|compare:0 size=$fbvStyles.size.MEDIUM translate=false inline=true}
-		{fbvElement type="select" id="numMonthsAfterSubscriptionExpiryReminder" name="numMonthsAfterSubscriptionExpiryReminder" selected=$numMonthsAfterSubscriptionExpiryReminder from=$validNumMonthsAfterExpiry label="manager.subscriptionPolicies.expiryReminderAfterMonths" disabled=$scheduledTasksEnabled|compare:0 size=$fbvStyles.size.MEDIUM translate=false inline=true}
-		{fbvElement type="select" id="numWeeksAfterSubscriptionExpiryReminder" name="numWeeksAfterSubscriptionExpiryReminder" selected=$numWeeksAfterSubscriptionExpiryReminder from=$validNumWeeksAfterExpiry label="manager.subscriptionPolicies.expiryReminderAfterWeeks" disabled=$scheduledTasksEnabled|compare:0 size=$fbvStyles.size.MEDIUM translate=false inline=true}
-
-		{if !$scheduledTasksEnabled}
-			<span>{translate key="manager.subscriptionPolicies.expiryRemindersDisabled"}</span>
-		{/if}
+		{fbvElement type="select" id="numMonthsBeforeSubscriptionExpiryReminder" name="numMonthsBeforeSubscriptionExpiryReminder" selected=$numMonthsBeforeSubscriptionExpiryReminder from=$validNumMonthsBeforeExpiry label="manager.subscriptionPolicies.expiryReminderBeforeMonths" size=$fbvStyles.size.MEDIUM translate=false inline=true}
+		{fbvElement type="select" id="numWeeksBeforeSubscriptionExpiryReminder" name="numWeeksBeforeSubscriptionExpiryReminder" selected=$numWeeksBeforeSubscriptionExpiryReminder from=$validNumWeeksBeforeExpiry label="manager.subscriptionPolicies.expiryReminderBeforeWeeks" size=$fbvStyles.size.MEDIUM translate=false inline=true}
+		{fbvElement type="select" id="numMonthsAfterSubscriptionExpiryReminder" name="numMonthsAfterSubscriptionExpiryReminder" selected=$numMonthsAfterSubscriptionExpiryReminder from=$validNumMonthsAfterExpiry label="manager.subscriptionPolicies.expiryReminderAfterMonths" size=$fbvStyles.size.MEDIUM translate=false inline=true}
+		{fbvElement type="select" id="numWeeksAfterSubscriptionExpiryReminder" name="numWeeksAfterSubscriptionExpiryReminder" selected=$numWeeksAfterSubscriptionExpiryReminder from=$validNumWeeksAfterExpiry label="manager.subscriptionPolicies.expiryReminderAfterWeeks" size=$fbvStyles.size.MEDIUM translate=false inline=true}
 	{/fbvFormSection}
 
 	{fbvFormSection label="manager.subscriptionPolicies.onlinePaymentNotifications" list=true}
@@ -67,7 +63,7 @@
 		{/if}
 	{/fbvFormSection}
 	{fbvFormSection label="manager.subscriptionPolicies.openAccessOptions" list=true}
-		{fbvElement type="checkbox" id="enableOpenAccessNotification" name="enableOpenAccessNotification" value=1 checked=$enableOpenAccessNotification label="manager.subscriptionPolicies.openAccessNotificationDescription" disabled=$scheduledTasksEnabled|compare:0}
+		{fbvElement type="checkbox" id="enableOpenAccessNotification" name="enableOpenAccessNotification" value=1 checked=$enableOpenAccessNotification label="manager.subscriptionPolicies.openAccessNotificationDescription"}
 	{/fbvFormSection}
 
 	{fbvFormButtons hideCancel=true submitText="common.save"}

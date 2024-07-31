@@ -54,11 +54,6 @@ session_lifetime = 30
 ; To set the "Secure" attribute for the cookie see the setting force_ssl at the [security] group
 session_samesite = Lax
 
-; Enable support for running scheduled tasks
-; Set this to On if you have set up the scheduled tasks script to
-; execute periodically
-scheduled_tasks = Off
-
 ; Site time zone
 ; Please refer to https://www.php.net/timezones for a full list of supported
 ; time zones.
@@ -574,6 +569,40 @@ job_runner_max_memory = 80
 ; Remove failed jobs from the database after the following number of days.
 ; Remove this setting to leave failed jobs in the database.
 delete_failed_jobs_after = 180
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Schedule Task Settings ;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+[schedule]
+
+; Whether or not to turn on the built-in schedule task runner
+;
+; When enabled, schedule tasks will be processed at the end of each web
+; request to the application.
+;
+; Use of the built-in schedule task runner is highly discouraged for high-volume 
+; sites. Use your operational system's task scheduler instead, and configure 
+; it to run the task scheduler every minute.
+; Sample for the *nix crontab
+; * * * * * php lib/pkp/tools/scheduler.php run >> /dev/null 2>&1
+;
+; See: <link-to-documentation>
+task_runner = On
+
+; How often should the built-in schedule task runner run scheduled tasks at the
+; end of web request life cycle (value defined in seconds).
+; 
+; This configuration will only have effect for the build-it task runner, it doesn't apply
+; to the system crontab configuration. 
+;
+; The default value is set to 60 seconds, a value smaller than that might affect the
+; application performance negatively.
+task_runner_interval = 60
+
+; When enabled, an email with the scheduled task result will be sent only when an error
+; has occurred. Otherwise, all tasks will generate a notification.
+scheduled_tasks_report_error_only = On
 
 [invitations]
 expiration_days = 3

@@ -17,6 +17,12 @@ New config.inc.php parameters added for security:
     - cipher (default value: ''), cipher algorithm used to generate app key and encryption purpose
     - cookie_encryption (default value: ''), allow cookie encryption when set
 
+New config.inc.php section for schedule task named schedule is added, with the following parameters:
+    - task_runner (default value: On), Whether or not to run the schedule tasks through web based task runner
+    - task_runner_interval (default value: 60), How often should the built-in web based task runner run scheduled tasks in seconds
+    - scheduled_tasks_report_error_only (default value: On), Whether or not schedule task execution failure details will be sent via mail
+
+- The setting general.scheduled_tasks has been removed. It was supposed to control the schedule tasks but had no impact.
 
 New Features
 ------------
