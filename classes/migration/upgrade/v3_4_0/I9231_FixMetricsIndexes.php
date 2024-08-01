@@ -52,27 +52,21 @@ class I9231_FixMetricsIndexes extends Migration
         // and create new ones using city column prefix for MySQL
         Schema::table('metrics_submission_geo_daily', function (Blueprint $table) {
             $table->dropUnique('msgd_uc_load_context_submission_c_r_c_date');
-            switch (DB::getDriverName()) {
-                case 'mysql':
-                case 'mariadb':
-                    $table->unique([DB::raw('load_id, context_id, submission_id, country, region, city(80), date')], 'msgd_uc_load_context_submission_c_r_c_date');
-                    break;
-                case 'pgsql':
-                    $table->unique(['load_id', 'context_id', 'submission_id', 'country', 'region', 'city', 'date'], 'msgd_uc_load_context_submission_c_r_c_date');
-                    break;
-            }
+            match (DB::getDriverName()) {
+                'mysql', 'mariadb' =>
+                    $table->unique([DB::raw('load_id, context_id, submission_id, country, region, city(80), date')], 'msgd_uc_load_context_submission_c_r_c_date'),
+                'pgsql' =>
+                    $table->unique(['load_id', 'context_id', 'submission_id', 'country', 'region', 'city', 'date'], 'msgd_uc_load_context_submission_c_r_c_date'),
+            };
         });
         Schema::table('metrics_submission_geo_monthly', function (Blueprint $table) {
             $table->dropUnique('msgm_uc_context_submission_c_r_c_month');
-            switch (DB::getDriverName()) {
-                case 'mysql':
-                case 'mariadb':
-                    $table->unique([DB::raw('context_id, submission_id, country, region, city(80), month')], 'msgm_uc_context_submission_c_r_c_month');
-                    break;
-                case 'pgsql':
-                    $table->unique(['context_id', 'submission_id', 'country', 'region', 'city', 'month'], 'msgm_uc_context_submission_c_r_c_month');
-                    break;
-            }
+            match (DB::getDriverName()) {
+                'mysql', 'mariadb' =>
+                    $table->unique([DB::raw('context_id, submission_id, country, region, city(80), month')], 'msgm_uc_context_submission_c_r_c_month'),
+                'pgsql' =>
+                    $table->unique(['context_id', 'submission_id', 'country', 'region', 'city', 'month'], 'msgm_uc_context_submission_c_r_c_month'),
+            };
         });
     }
 

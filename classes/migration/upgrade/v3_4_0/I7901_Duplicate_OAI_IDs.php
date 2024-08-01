@@ -21,9 +21,8 @@ class I7901_Duplicate_OAI_IDs extends \PKP\migration\Migration
      */
     public function up(): void
     {
-        switch (DB::getDriverName()) {
-            case 'mysql':
-            case 'mariadb':
+        match (DB::getDriverName()) {
+            'mysql', 'mariadb' =>
                 DB::unprepared(
                     "DELETE dot
                     FROM data_object_tombstones dot
@@ -33,9 +32,8 @@ class I7901_Duplicate_OAI_IDs extends \PKP\migration\Migration
                     JOIN publication_settings psissue ON (psissue.publication_id = p.publication_id AND psissue.setting_name='issueId' AND psissue.locale='')
                     JOIN issues i ON (CAST(i.issue_id AS CHAR(20)) = psissue.setting_value)
                     WHERE i.published = 1 AND j.enabled = 1 AND p.status = 3"
-                );
-                break;
-            case 'pgsql':
+                ),
+            'pgsql' =>
                 DB::unprepared(
                     "DELETE FROM data_object_tombstones dot
                     USING submissions s, journals j, publications p, publication_settings psissue, issues i
@@ -45,9 +43,8 @@ class I7901_Duplicate_OAI_IDs extends \PKP\migration\Migration
                     AND psissue.publication_id = p.publication_id
                     AND psissue.setting_name='issueId' AND psissue.locale='' AND (CAST(i.issue_id AS CHAR(20)) = psissue.setting_value)
                     AND i.published = 1 AND j.enabled = 1 AND p.status = 3"
-                );
-                break;
-        }
+                )
+        };
     }
 
     /**
