@@ -32,4 +32,4 @@ New Features
 ------------
     #9566 : Convert session and cookie management to Laravel
     #9895 : Introduce APP KEY feature of Laravel
-    #9823: Improve job runner configuration/execution
+    #9823 : Improve job runner configuration/execution

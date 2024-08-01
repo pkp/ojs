@@ -566,9 +566,9 @@ job_runner_max_execution_time = 30
 ; memory_limit the server has configured for PHP.
 job_runner_max_memory = 80
 
-; Allow queue jobs to be processed via schedula task.
-; Note that when scheduler ruuning in web request mode and if the job_runner is set
-; it will not process jobs via schedule task as both mechanism same method.
+; Allow queue jobs to be processed via schedule task.
+; Note that when scheduler running in web request mode and if the job_runner is enabled
+; it will not process jobs via schedule task as both approach use same mechanism.
 ; schedule_job_process = On
 
 ; Remove failed jobs from the database after the following number of days.
