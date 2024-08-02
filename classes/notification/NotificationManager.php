@@ -55,7 +55,7 @@ class NotificationManager extends PKPNotificationManager
      *
      * @hook NotificationManager::getNotificationMessage [[&$notification, &$message]]
      */
-    public function getNotificationMessage(PKPRequest $request, Notification $notification): ?string
+    public function getNotificationMessage(PKPRequest $request, Notification $notification): string|array|null
     {
         // Allow hooks to override default behavior
         $message = null;

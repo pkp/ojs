@@ -35,7 +35,7 @@ class ApproveSubmissionNotificationManager extends PKPApproveSubmissionNotificat
     /**
      * @copydoc PKPNotificationOperationManager::getNotificationMessage()
      */
-    public function getNotificationMessage(PKPRequest $request, Notification $notification): ?string
+    public function getNotificationMessage(PKPRequest $request, Notification $notification): string|array|null
     {
         return match($notification->type) {
             Notification::NOTIFICATION_TYPE_FORMAT_NEEDS_APPROVED_SUBMISSION => __('notification.type.formatNeedsApprovedSubmission'),
