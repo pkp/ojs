@@ -27,7 +27,7 @@ use PKP\config\Config;
 use PKP\db\DAORegistry;
 use PKP\file\TemporaryFileManager;
 use PKP\plugins\Hook;
-use PKP\submission\GenreDAO;
+use PKP\submission\genre\Genre;
 
 class ContextService extends \PKP\services\PKPContextService
 {
@@ -151,9 +151,7 @@ class ContextService extends \PKP\services\PKPContextService
         // Create tombstones for all published submissions
         $articleTombstoneManager = new ArticleTombstoneManager();
         $articleTombstoneManager->insertTombstonesByContext($context);
-        /** @var GenreDAO */
-        $genreDao = DAORegistry::getDAO('GenreDAO');
-        $genreDao->deleteByContextId($context->getId());
+        Genre::where('context_id', $context->getId())->delete();
     }
 
     /**
@@ -201,7 +199,7 @@ class ContextService extends \PKP\services\PKPContextService
      */
     public function validateContext($hookName, $args)
     {
-        $errors = & $args[0];
+        $errors = &$args[0];
         $props = $args[2];
         $allowedLocales = $args[3];
 
