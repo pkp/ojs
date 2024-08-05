@@ -27,7 +27,9 @@ class CompileCounterSubmissionInstitutionDailyMetricsTest extends PKPTestCase
     /**
      * base64_encoded serializion from OJS 3.4.0
      */
-    protected string $serializedJobData = 'Tzo2NzoiQVBQXGpvYnNcc3RhdGlzdGljc1xDb21waWxlQ291bnRlclN1Ym1pc3Npb25JbnN0aXR1dGlvbkRhaWx5TWV0cmljcyI6Mzp7czo5OiIAKgBsb2FkSWQiO3M6MjU6InVzYWdlX2V2ZW50c18yMDI0MDEzMC5sb2ciO3M6MTA6ImNvbm5lY3Rpb24iO3M6ODoiZGF0YWJhc2UiO3M6NToicXVldWUiO3M6NToicXVldWUiO30=';
+    protected string $serializedJobData = <<<END
+    O:67:"APP\\jobs\\statistics\\CompileCounterSubmissionInstitutionDailyMetrics":3:{s:9:"\0*\0loadId";s:25:"usage_events_20240130.log";s:10:"connection";s:8:"database";s:5:"queue";s:5:"queue";}
+    END;
 
     /**
      * Test job is a proper instance
@@ -36,7 +38,7 @@ class CompileCounterSubmissionInstitutionDailyMetricsTest extends PKPTestCase
     {
         $this->assertInstanceOf(
             CompileCounterSubmissionInstitutionDailyMetrics::class,
-            unserialize(base64_decode($this->serializedJobData))
+            unserialize($this->serializedJobData)
         );
     }
 
@@ -46,7 +48,7 @@ class CompileCounterSubmissionInstitutionDailyMetricsTest extends PKPTestCase
     public function testRunSerializedJob()
     {
         /** @var CompileCounterSubmissionInstitutionDailyMetrics $compileCounterSubmissionInstitutionDailyMetricsJob */
-        $compileCounterSubmissionInstitutionDailyMetricsJob = unserialize(base64_decode($this->serializedJobData));
+        $compileCounterSubmissionInstitutionDailyMetricsJob = unserialize($this->serializedJobData);
 
         $temporaryTotalsDAOMock = Mockery::mock(\APP\statistics\TemporaryTotalsDAO::class)
             ->makePartial()

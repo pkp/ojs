@@ -30,7 +30,9 @@ class ProcessUsageStatsLogFileTest extends PKPTestCase
     /**
      * base64_encoded serializion from OJS 3.4.0
      */
-    protected string $serializedJobData = 'Tzo0NDoiQVBQXGpvYnNcc3RhdGlzdGljc1xQcm9jZXNzVXNhZ2VTdGF0c0xvZ0ZpbGUiOjM6e3M6OToiACoAbG9hZElkIjtzOjI1OiJ1c2FnZV9ldmVudHNfMjAyNDAxMzAubG9nIjtzOjEwOiJjb25uZWN0aW9uIjtzOjg6ImRhdGFiYXNlIjtzOjU6InF1ZXVlIjtzOjU6InF1ZXVlIjt9';
+    protected string $serializedJobData = <<<END
+    O:44:"APP\\jobs\\statistics\\ProcessUsageStatsLogFile":3:{s:9:"\0*\0loadId";s:25:"usage_events_20240130.log";s:10:"connection";s:8:"database";s:5:"queue";s:5:"queue";}
+    END;
 
     /**
      * Content example from OJS 3.4.0
@@ -44,7 +46,7 @@ class ProcessUsageStatsLogFileTest extends PKPTestCase
     {
         $this->assertInstanceOf(
             ProcessUsageStatsLogFile::class,
-            unserialize(base64_decode($this->serializedJobData))
+            unserialize($this->serializedJobData)
         );
     }
 
@@ -54,7 +56,7 @@ class ProcessUsageStatsLogFileTest extends PKPTestCase
     public function testRunSerializedJob()
     {
         /** @var ProcessUsageStatsLogFile $processUsageStatsLogFileJob */
-        $processUsageStatsLogFileJob = unserialize(base64_decode($this->serializedJobData));
+        $processUsageStatsLogFileJob = unserialize($this->serializedJobData);
 
         // we need to create a dummy file if not existed as to avoid mocking PHP's built in functions
         $dummyFile = $this->createDummyFileIfNeeded($processUsageStatsLogFileJob, 'loadId');

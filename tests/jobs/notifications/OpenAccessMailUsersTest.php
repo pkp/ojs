@@ -29,7 +29,9 @@ class OpenAccessMailUsersTest extends PKPTestCase
     /**
      * base64_encoded serializion from OJS 3.4.0
      */
-    protected string $serializedJobData = 'Tzo0MjoiQVBQXGpvYnNcbm90aWZpY2F0aW9uc1xPcGVuQWNjZXNzTWFpbFVzZXJzIjo2OntzOjEwOiIAKgB1c2VySWRzIjtPOjI5OiJJbGx1bWluYXRlXFN1cHBvcnRcQ29sbGVjdGlvbiI6Mjp7czo4OiIAKgBpdGVtcyI7YToyOntpOjA7aToxO2k6MTtpOjI7fXM6Mjg6IgAqAGVzY2FwZVdoZW5DYXN0aW5nVG9TdHJpbmciO2I6MDt9czoxMjoiACoAY29udGV4dElkIjtpOjE7czoxMDoiACoAaXNzdWVJZCI7aToxO3M6MTA6ImNvbm5lY3Rpb24iO3M6ODoiZGF0YWJhc2UiO3M6NToicXVldWUiO3M6NToicXVldWUiO3M6NzoiYmF0Y2hJZCI7czozNjoiOWMxYzQ1MDItNTI2MS00YjRhLTk2NWMtMjU2Y2QwZWFhYWE0Ijt9';
+    protected string $serializedJobData = <<<END
+    O:42:"APP\\jobs\\notifications\\OpenAccessMailUsers":6:{s:10:"\0*\0userIds";O:29:"Illuminate\\Support\\Collection":2:{s:8:"\0*\0items";a:2:{i:0;i:1;i:1;i:2;}s:28:"\0*\0escapeWhenCastingToString";b:0;}s:12:"\0*\0contextId";i:1;s:10:"\0*\0issueId";i:1;s:10:"connection";s:8:"database";s:5:"queue";s:5:"queue";s:7:"batchId";s:36:"9c1c4502-5261-4b4a-965c-256cd0eaaaa4";}
+    END;
 
     /**
      * Test job is a proper instance
@@ -38,7 +40,7 @@ class OpenAccessMailUsersTest extends PKPTestCase
     {
         $this->assertInstanceOf(
             OpenAccessMailUsers::class,
-            unserialize(base64_decode($this->serializedJobData))
+            unserialize($this->serializedJobData)
         );
     }
 
@@ -53,7 +55,7 @@ class OpenAccessMailUsersTest extends PKPTestCase
         $this->mockRequest();
 
         /** @var OpenAccessMailUsers $openAccessMailUsersJob */
-        $openAccessMailUsersJob = unserialize(base64_decode($this->serializedJobData));
+        $openAccessMailUsersJob = unserialize($this->serializedJobData);
 
         $journalDAOMock = Mockery::mock(\APP\journal\JournalDAO::class)
             ->makePartial()
