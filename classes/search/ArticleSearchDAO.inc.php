@@ -45,11 +45,11 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 				$sqlWhere .= ' AND o0.object_id = o'.$i.'.object_id AND o0.pos+'.$i.' = o'.$i.'.pos';
 			}
 		}
-	
-		if (!empty($type) && $type == SUBMISSION_SEARCH_AUTHOR) {
+
+		if (!empty($type)) {
 			$sqlWhere .= ' AND o.type = ?';
 			$params[] = $type;
-		}
+		  }
 	
 		if (!empty($publishedFrom)) {
 			$sqlWhere .= ' AND p.date_published >= ?';
