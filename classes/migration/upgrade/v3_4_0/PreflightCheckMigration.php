@@ -19,10 +19,13 @@ use Illuminate\Database\Query\Builder;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use PKP\core\traits\HasForeignKey;
 use Throwable;
 
 class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightCheckMigration
 {
+    use HasForeignKey;
+
     public function up(): void
     {
         parent::up();
@@ -301,7 +304,7 @@ class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightChe
     protected function dropForeignKeys(): void
     {
         parent::dropForeignKeys();
-        if (DB::getDoctrineSchemaManager()->introspectTable('publication_galleys')->hasForeignKey('publication_galleys_submission_file_id_foreign')) {
+        if ($this->hasForeignKey('publication_galleys', 'publication_galleys_submission_file_id_foreign')) {
             Schema::table('publication_galleys', fn (Blueprint $table) => $table->dropForeign('publication_galleys_submission_file_id_foreign'));
         }
     }
