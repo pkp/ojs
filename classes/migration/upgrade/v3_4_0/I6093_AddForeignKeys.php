@@ -15,11 +15,13 @@
 namespace APP\migration\upgrade\v3_4_0;
 
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use PKP\core\traits\HasForeignKey;
 
 class I6093_AddForeignKeys extends \PKP\migration\upgrade\v3_4_0\I6093_AddForeignKeys
 {
+    use HasForeignKey;
+
     protected function getContextTable(): string
     {
         return 'journals';
@@ -92,7 +94,7 @@ class I6093_AddForeignKeys extends \PKP\migration\upgrade\v3_4_0\I6093_AddForeig
         });
 
         // Attempt to drop the previous foreign key, which doesn't have the cascade rule
-        if (DB::getDoctrineSchemaManager()->introspectTable('publication_galleys')->hasForeignKey('publication_galleys_submission_file_id_foreign')) {
+        if ($this->hasForeignKey('publication_galleys', 'publication_galleys_submission_file_id_foreign')) {
             Schema::table('publication_galleys', fn (Blueprint $table) => $table->dropForeign('publication_galleys_submission_file_id_foreign'));
         }
 
