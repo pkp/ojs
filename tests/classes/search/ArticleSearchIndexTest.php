@@ -24,6 +24,7 @@ use APP\publication\Publication;
 use APP\search\ArticleSearchDAO;
 use APP\search\ArticleSearchIndex;
 use APP\submission\Submission;
+use ArrayIterator;
 use Mockery;
 use Mockery\MockInterface;
 use PHPUnit\Framework\Attributes\CoversClass;
@@ -144,7 +145,12 @@ class ArticleSearchIndexTest extends PKPTestCase
         Hook::clear('ArticleSearchIndex::rebuildIndex');
 
         // Test log output.
-        $this->expectOutputString(__('search.cli.rebuildIndex.clearingIndex') . ' ... ' . __('search.cli.rebuildIndex.done') . "\n");
+        $this->expectOutputString(
+            __('search.cli.rebuildIndex.clearingIndex')
+                . ' ... '
+                . __('search.cli.rebuildIndex.done')
+                . "\n"
+        );
 
         // Test rebuilding the index with a mock database back-end.
         $articleSearchIndex = Application::getSubmissionSearchIndex();
@@ -393,7 +399,7 @@ class ArticleSearchIndexTest extends PKPTestCase
             ->getMock();
         $journalsIterator
             ->method('toIterator')
-            ->willReturn([]);
+            ->willReturn(new ArrayIterator());
 
         // Mock the getAll() method.
         $journalDao->expects($this->any())
