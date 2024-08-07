@@ -163,6 +163,8 @@ class PubMedExportPlugin extends ImportExportPlugin {
 		$submissionsIterator = Services::get('submission')->getMany([
 			'contextId' => $context->getId(),
 			'issueIds' => $issueIds,
+			'orderBy' => 'seq',
+			'orderDirection' => 'ASC',
 		]);
 		libxml_use_internal_errors(true);
 		$submissionXml = $exportFilter->execute(iterator_to_array($submissionsIterator), true);
