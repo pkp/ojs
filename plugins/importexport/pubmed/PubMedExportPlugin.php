@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/pubmed/PubMedExportPlugin.php
  *
- * Copyright (c) 2014-2022 Simon Fraser University
- * Copyright (c) 2003-2022 John Willinsky
+ * Copyright (c) 2014-2024 Simon Fraser University
+ * Copyright (c) 2003-2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PubMedExportPlugin
@@ -191,14 +191,22 @@ class PubMedExportPlugin extends ImportExportPlugin
         $pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
         assert(count($pubmedExportFilters) == 1); // Assert only a single serialization filter
         $exportFilter = array_shift($pubmedExportFilters);
-        $submissions = Repo::submission()
-            ->getCollector()
-            ->filterByContextIds([$context->getId()])
-            ->filterByIssueIds($issueIds)
-            ->getMany();
+        $input = [];
+
+        foreach ($issueIds as $issueId) {
+            $sections = Repo::section()->getByIssueId($issueId);
+            foreach ($sections as $section) {
+                $submissionsInSections = [];
+                $submissionsInSections[] = Repo::submission()->getInSections($issueId, $context->getId());
+                foreach ($submissionsInSections as $articles) {
+                    foreach ($articles[$section->getId()]['articles'] as $article) {
+                        $input[] = $article;
+                    }
+                }
+            }
+        }
 
         libxml_use_internal_errors(true);
-        $input = $submissions->toArray();
         $submissionXml = $exportFilter->execute($input, true);
         $xml = $submissionXml->saveXml();
         $errors = array_filter(libxml_get_errors(), function ($a) {
