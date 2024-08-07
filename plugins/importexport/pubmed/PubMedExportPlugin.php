@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/pubmed/PubMedExportPlugin.php
  *
- * Copyright (c) 2014-2022 Simon Fraser University
- * Copyright (c) 2003-2022 John Willinsky
+ * Copyright (c) 2014-2024 Simon Fraser University
+ * Copyright (c) 2003-2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PubMedExportPlugin
@@ -17,6 +17,7 @@ namespace APP\plugins\importexport\pubmed;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\journal\JournalDAO;
+use APP\submission\Collector;
 use APP\template\TemplateManager;
 use Exception;
 use PKP\core\PKPApplication;
@@ -195,6 +196,7 @@ class PubMedExportPlugin extends ImportExportPlugin
             ->getCollector()
             ->filterByContextIds([$context->getId()])
             ->filterByIssueIds($issueIds)
+            ->orderBy(Collector::ORDERBY_SEQUENCE, Collector::ORDER_DIR_ASC)
             ->getMany();
 
         libxml_use_internal_errors(true);
