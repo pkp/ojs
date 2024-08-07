@@ -68,6 +68,7 @@
 		<migration class="PKP\migration\upgrade\v3_4_0\I2890_AddSetNullForOnDeleteToReviewRoundIdForeign"/>
 		<migration class="APP\migration\upgrade\v3_4_0\I7901_Duplicate_OAI_IDs"/>
 		<migration class="PKP\migration\upgrade\v3_4_0\I7366_UpdateUserAPIKeySettings"/>
+		<migration class="PKP\migration\upgrade\v3_4_0\I7463_LocaleColumn"/>
 		<migration class="PKP\migration\upgrade\v3_4_0\I8093_UpdateUserGroupRelationTablesFK"/>
 		<migration class="APP\migration\upgrade\v3_4_0\I7725_DecisionConstantsUpdate"/>
 		<migration class="PKP\migration\upgrade\v3_4_0\I4789_AddReviewerRequestResentColumns"/>
