@@ -18,6 +18,7 @@ namespace APP\install;
 
 use APP\core\Application;
 use APP\template\TemplateManager;
+use Illuminate\Support\Facades\Schema;
 use PKP\db\DAORegistry;
 use PKP\install\Installer;
 use PKP\navigationMenu\NavigationMenuItemDAO;
@@ -90,7 +91,7 @@ class Upgrade extends Installer
      */
     public function migrateStaticPagesToNavigationMenuItems()
     {
-        if ($this->tableExists('static_pages')) {
+        if (Schema::hasTable('static_pages')) {
             $contextDao = Application::getContextDAO();
             $navigationMenuItemDao = DAORegistry::getDAO('NavigationMenuItemDAO'); /** @var NavigationMenuItemDAO $navigationMenuItemDao */
 

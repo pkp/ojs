@@ -35,6 +35,7 @@ use APP\publication\Publication;
 use APP\section\Section;
 use APP\submission\Submission;
 use Illuminate\Support\LazyCollection;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PKP\author\Repository as AuthorRepository;
 use PKP\core\Dispatcher;
@@ -48,6 +49,8 @@ use PKP\submission\SubmissionKeywordDAO;
 use PKP\submission\SubmissionSubjectDAO;
 use PKP\tests\PKPTestCase;
 
+#[CoversClass(OAIMetadataFormat_DC::class)]
+#[CoversClass(\APP\plugins\metadata\dc11\filter\Dc11SchemaArticleAdapter::class)]
 class OAIMetadataFormat_DCTest extends PKPTestCase
 {
     /**
@@ -74,10 +77,6 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         return [...parent::getMockedContainerKeys(), GalleyCollector::class, AuthorRepository::class];
     }
 
-    /**
-     * @covers OAIMetadataFormat_DC
-     * @covers \APP\plugins\metadata\dc11\filter\Dc11SchemaArticleAdapter
-     */
     public function testToXml()
     {
         //
@@ -123,14 +122,14 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->getMock();
         $article->expects($this->any())
             ->method('getId')
-            ->will($this->returnValue(9));
+            ->willReturn(9);
         $article->setData('locale', 'en');
         $article->setId(9);
         $article->setData('contextId', $journalId);
         $author->setSubmissionId($article->getId());
         $article->expects($this->any())
             ->method('getCurrentPublication')
-            ->will($this->returnValue($publication));
+            ->willReturn($publication);
 
         /** @var Doi|MockObject */
         $galleyDoiObject = $this->getMockBuilder(Doi::class)
@@ -147,10 +146,10 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->getMock();
         $galley->expects(self::any())
             ->method('getFileType')
-            ->will($this->returnValue('galley-filetype'));
+            ->willReturn('galley-filetype');
         $galley->expects(self::any())
             ->method('getBestGalleyId')
-            ->will($this->returnValue(98));
+            ->willReturn(98);
         $galley->setId(98);
         $galley->setData('doiObject', $galleyDoiObject);
         $galley->setData('locale', 'en');
@@ -165,7 +164,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $journal->expects($this->any())
             ->method('getSetting')
             ->with('publishingMode')
-            ->will($this->returnValue(Journal::PUBLISHING_MODE_OPEN));
+            ->willReturn(Journal::PUBLISHING_MODE_OPEN);
         $journal->setName('journal-title', 'en');
         $journal->setData('publisherInstitution', 'journal-publisher');
         $journal->setPrimaryLocale('en');
@@ -192,7 +191,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->getMock();
         $issue->expects($this->any())
             ->method('getIssueIdentification')
-            ->will($this->returnValue('issue-identification'));
+            ->willReturn('issue-identification');
         $issue->setId(96);
         $issue->setDatePublished('2010-11-05');
         $issue->setData('doiObject', $issueDoiObject);
@@ -217,8 +216,8 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         // Dispatcher
         /** @var Dispatcher|MockObject */
         $dispatcher = $this->getMockBuilder(Dispatcher::class)
-        ->onlyMethods(['url'])
-        ->getMock();
+            ->onlyMethods(['url'])
+            ->getMock();
         $dispatcher->expects($this->any())
             ->method('url')
             ->will($this->returnCallback(fn ($request, $shortcut, $newContext = null, $handler = null, $op = null, $path = null) => $handler . '-' . $op . '-' . implode('-', $path)));
@@ -229,10 +228,10 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->getMock();
         $requestMock->expects($this->any())
             ->method('getRouter')
-            ->will($this->returnValue($router));
+            ->willReturn($router);
         $requestMock->expects($this->any())
             ->method('getDispatcher')
-            ->will($this->returnValue($dispatcher));
+            ->willReturn($dispatcher);
         Registry::set('request', $requestMock);
 
         //
@@ -245,13 +244,13 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->getMock();
         $oaiDao->expects($this->any())
             ->method('getJournal')
-            ->will($this->returnValue($journal));
+            ->willReturn($journal);
         $oaiDao->expects($this->any())
             ->method('getSection')
-            ->will($this->returnValue($section));
+            ->willReturn($section);
         $oaiDao->expects($this->any())
             ->method('getIssue')
-            ->will($this->returnValue($issue));
+            ->willReturn($issue);
         DAORegistry::registerDAO('OAIDAO', $oaiDao);
 
         /** @var GalleyCollector|MockObject */
@@ -261,7 +260,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->getMock();
         $mockGalleyCollector->expects($this->any())
             ->method('getMany')
-            ->will($this->returnValue(LazyCollection::wrap($galleys)));
+            ->willReturn(LazyCollection::wrap($galleys));
         app()->instance(GalleyCollector::class, $mockGalleyCollector);
 
         // Mocked DAO to return the subjects
@@ -270,7 +269,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->getMock();
         $submissionSubjectDao->expects($this->any())
             ->method('getSubjects')
-            ->will($this->returnValue(['en' => ['article-subject', 'article-subject-class']]));
+            ->willReturn(['en' => ['article-subject', 'article-subject-class']]);
         DAORegistry::registerDAO('SubmissionSubjectDAO', $submissionSubjectDao);
 
         // Mocked DAO to return the keywords
@@ -279,7 +278,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->getMock();
         $submissionKeywordDao->expects($this->any())
             ->method('getKeywords')
-            ->will($this->returnValue(['en' => ['article-keyword']]));
+            ->willReturn(['en' => ['article-keyword']]);
         DAORegistry::registerDAO('SubmissionKeywordDAO', $submissionKeywordDao);
 
 

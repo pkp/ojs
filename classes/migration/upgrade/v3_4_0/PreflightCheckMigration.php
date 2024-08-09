@@ -301,7 +301,7 @@ class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightChe
     protected function dropForeignKeys(): void
     {
         parent::dropForeignKeys();
-        if (DB::getDoctrineSchemaManager()->introspectTable('publication_galleys')->hasForeignKey('publication_galleys_submission_file_id_foreign')) {
+        if ($this->hasForeignKey('publication_galleys', 'publication_galleys_submission_file_id_foreign')) {
             Schema::table('publication_galleys', fn (Blueprint $table) => $table->dropForeign('publication_galleys_submission_file_id_foreign'));
         }
     }

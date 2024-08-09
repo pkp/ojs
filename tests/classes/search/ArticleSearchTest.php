@@ -26,10 +26,12 @@ use APP\search\ArticleSearch;
 use APP\search\ArticleSearchDAO;
 use Mockery;
 use Mockery\MockInterface;
+use PHPUnit\Framework\Attributes\CoversClass;
 use PKP\db\DAORegistry;
 use PKP\plugins\Hook;
 use PKP\tests\PKPTestCase;
 
+#[CoversClass(ArticleSearch::class)]
 class ArticleSearchTest extends PKPTestCase
 {
     private const SUBMISSION_SEARCH_TEST_DEFAULT_ARTICLE = 1;
@@ -87,9 +89,7 @@ class ArticleSearchTest extends PKPTestCase
     //
     // Unit tests
     //
-    /**
-     * @covers ArticleSearch
-     */
+
     public function testRetrieveResults()
     {
         // Make sure that no hook is being called.
@@ -133,9 +133,6 @@ class ArticleSearchTest extends PKPTestCase
         self::assertTrue($searchResult->eof());
     }
 
-    /**
-     * @covers ArticleSearch
-     */
     public function testRetrieveResultsViaPluginHook()
     {
         // Diverting a search to the search plugin hook.
@@ -248,7 +245,7 @@ class ArticleSearchTest extends PKPTestCase
         // Mock the getPhraseResults() method.
         $articleSearchDao->expects($this->any())
             ->method('getPhraseResults')
-            ->will($this->returnValue($searchResult));
+            ->willReturn($searchResult);
 
         // Register the mock DAO.
         DAORegistry::registerDAO('ArticleSearchDAO', $articleSearchDao);
@@ -273,7 +270,7 @@ class ArticleSearchTest extends PKPTestCase
         // Mock the getById() method.
         $journalDao->expects($this->any())
             ->method('getById')
-            ->will($this->returnValue($journal));
+            ->willReturn($journal);
 
         // Register the mock DAO.
         DAORegistry::registerDAO('JournalDAO', $journalDao);
