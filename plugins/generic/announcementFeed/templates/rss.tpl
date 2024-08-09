@@ -28,7 +28,7 @@
 
 		{* optional elements *}
 		{if $journal->getPrimaryLocale()}
-		<dc:language>{$journal->getPrimaryLocale()|replace:'_':'-'|strip|escape:"html"}</dc:language>
+		<dc:language>{$language|escape}</dc:language>
 		{/if}
 
 		<items>
