@@ -16,12 +16,9 @@ namespace APP\migration\upgrade\v3_4_0;
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use PKP\core\traits\HasForeignKey;
 
 class I6093_AddForeignKeys extends \PKP\migration\upgrade\v3_4_0\I6093_AddForeignKeys
 {
-    use HasForeignKey;
-
     protected function getContextTable(): string
     {
         return 'journals';
