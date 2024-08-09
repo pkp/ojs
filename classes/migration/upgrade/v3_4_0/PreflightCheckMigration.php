@@ -19,13 +19,10 @@ use Illuminate\Database\Query\Builder;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
-use PKP\core\traits\HasForeignKey;
 use Throwable;
 
 class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightCheckMigration
 {
-    use HasForeignKey;
-
     public function up(): void
     {
         parent::up();
