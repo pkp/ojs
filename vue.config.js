@@ -1,5 +1,4 @@
 var path = require('path');
-const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	css: {
@@ -35,25 +34,6 @@ module.exports = {
 			hotUpdateChunkFilename: 'hot-updates/hot-update.js',
 			hotUpdateMainFilename: 'hot-updates/hot-update.json'
 		},
-		plugins: [
-			new CopyPlugin([
-				// copy jquery and jquery-ui from node_modules to lib/pkp composer's vendor dir
-				{
-					from: 'node_modules/jquery/dist/',
-					to: '../lib/pkp/lib/vendor/components/jquery/',
-				},
-				{
-					from: 'node_modules/jquery-ui/dist/*.js',
-					to: '../lib/pkp/lib/vendor/components/jqueryui/[name].[ext]',
-				},
-
-				// copy jquery-validation from node_modules to lib/pkp/js/lib
-				{
-					from: 'node_modules/jquery-validation/dist/',
-					to: '../lib/pkp/js/lib/jquery/plugins/validate/',
-				},
-			])
-		],
 		resolve: {
 			alias: {
 				'@': path.resolve(__dirname, 'lib/ui-library/src')
