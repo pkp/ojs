@@ -90,8 +90,22 @@ class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightChe
             }
             $affectedRows += $this->deleteOptionalReference('publications', 'section_id', 'sections', 'section_id');
             // Remaining cleanups are inherited
+            $rows = DB::table('publications AS p')
+                ->leftJoin('issues AS i', 'p.issue_id', '=', 'i.issue_id')
+                ->whereNull('i.issue_id')
+                ->whereNotNull('p.issue_id')  // Ensure we're only looking at non-null issue_ids
+                ->select('p.submission_id', 'p.publication_id', 'p.issue_id')
+                ->get();
+
+            foreach ($rows as $row) {
+                $this->_installer->log("The publication ID ({$row->publication_id}) for the submission ID {$row->submission_id} is assigned to an invalid issue ID \"{$row->issue_id}\", its issue_id will be set to NULL.");
+                $affectedRows += DB::table('publications')
+                    ->where('publication_id', '=', $row->publication_id)
+                    ->update(['issue_id' => null]);  // Reset invalid issue_id to null
+            }
             return $affectedRows;
         });
+
 
         $this->addTableProcessor('publication_galleys', function (): int {
             $affectedRows = 0;
@@ -229,25 +243,6 @@ class PreflightCheckMigration extends \PKP\migration\upgrade\v3_4_0\PreflightChe
             return $affectedRows;
         });
 
-        // Support for the issueId setting
-        $this->addTableProcessor('publication_settings', function (): int {
-            $affectedRows = 0;
-            $rows = DB::table('publications AS p')
-                ->join('publication_settings AS ps', 'ps.publication_id', '=', 'p.publication_id')
-                ->leftJoin('issues AS i', 'ps.setting_value', '=', DB::raw('CAST(i.issue_id AS CHAR(20))'))
-                ->where('ps.setting_name', 'issueId')
-                ->whereNull('i.issue_id')
-                ->get(['p.submission_id', 'p.publication_id', 'ps.setting_value']);
-            foreach ($rows as $row) {
-                $this->_installer->log("The publication ID ({$row->publication_id}) for the submission ID {$row->submission_id} is assigned to an invalid issue ID \"{$row->setting_value}\", its value will be updated to NULL");
-                $affectedRows += DB::table('publication_settings')
-                    ->where('publication_id', '=', $row->publication_id)
-                    ->where('setting_name', 'issueId')
-                    ->where('setting_value', $row->setting_value)
-                    ->delete();
-            }
-            return $affectedRows;
-        });
     }
 
     protected function getEntityRelationships(): array

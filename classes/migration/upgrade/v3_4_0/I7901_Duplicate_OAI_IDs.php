@@ -24,27 +24,27 @@ class I7901_Duplicate_OAI_IDs extends \PKP\migration\Migration
         match (DB::getDriverName()) {
             'mysql', 'mariadb' =>
                 DB::unprepared(
-                    "DELETE dot
+                    'DELETE dot
                     FROM data_object_tombstones dot
                     JOIN submissions s ON (dot.data_object_id = s.submission_id)
                     JOIN journals j ON (j.journal_id = s.context_id)
                     JOIN publications p ON (s.current_publication_id = p.publication_id)
-                    JOIN publication_settings psissue ON (psissue.publication_id = p.publication_id AND psissue.setting_name='issueId' AND psissue.locale='')
-                    JOIN issues i ON (CAST(i.issue_id AS CHAR(20)) = psissue.setting_value)
-                    WHERE i.published = 1 AND j.enabled = 1 AND p.status = 3"
-                ),
-            'pgsql' =>
+                    JOIN issues i ON (i.issue_id = p.issue_id)
+                    WHERE i.published = 1 AND j.enabled = 1 AND p.status = 3'
+                );
+                break;
+            case 'pgsql':
                 DB::unprepared(
-                    "DELETE FROM data_object_tombstones dot
-                    USING submissions s, journals j, publications p, publication_settings psissue, issues i
+                    'DELETE FROM data_object_tombstones dot
+                    USING submissions s, journals j, publications p, issues i
                     WHERE dot.data_object_id = s.submission_id
                     AND j.journal_id = s.context_id
                     AND s.current_publication_id = p.publication_id
-                    AND psissue.publication_id = p.publication_id
-                    AND psissue.setting_name='issueId' AND psissue.locale='' AND (CAST(i.issue_id AS CHAR(20)) = psissue.setting_value)
-                    AND i.published = 1 AND j.enabled = 1 AND p.status = 3"
-                )
-        };
+                    AND i.issue_id = p.issue_id
+                    AND i.published = 1 AND j.enabled = 1 AND p.status = 3'
+                );
+                break;
+        }
     }
 
     /**

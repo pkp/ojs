@@ -45,11 +45,11 @@ class StatsGeoQueryBuilder extends PKPStatsGeoQueryBuilder
     protected function _getAppSpecificQuery(Builder &$q): void
     {
         if (!empty($this->issueIds)) {
-            $issueSubmissionIds = DB::table('publications as p')->select('p.submission_id')->distinct()
-                ->from('publications as p')
-                ->leftJoin('publication_settings as ps', 'ps.setting_name', '=', DB::raw('\'issueId\''))
+            $issueSubmissionIds = DB::table('publications as p')
+                ->select('p.submission_id')
+                ->distinct()
                 ->where('p.status', Submission::STATUS_PUBLISHED)
-                ->whereIn('ps.setting_value', $this->issueIds);
+                ->whereIn('p.issue_id', $this->issueIds);
             $q->joinSub($issueSubmissionIds, 'is', function ($join) {
                 $join->on('metrics_submission_geo_monthly.' . PKPStatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID, '=', 'is.submission_id');
             });

@@ -59,9 +59,7 @@ class Collector extends \PKP\submission\Collector
             $q->whereIn('s.submission_id', function ($query) {
                 $query->select('issue_p.submission_id')
                     ->from('publications AS issue_p')
-                    ->join('publication_settings as issue_ps', 'issue_p.publication_id', '=', 'issue_ps.publication_id')
-                    ->where('issue_ps.setting_name', '=', 'issueId')
-                    ->whereIn('issue_ps.setting_value', array_map(strval(...), $this->issueIds));
+                    ->whereIn('issue_p.issue_id', $this->issueIds);
             });
         }
 
@@ -76,6 +74,7 @@ class Collector extends \PKP\submission\Collector
 
         return $q;
     }
+
 
     /**
      * Add APP-specific filtering methods for submission sub objects DOI statuses
