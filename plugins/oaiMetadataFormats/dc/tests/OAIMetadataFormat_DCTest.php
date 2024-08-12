@@ -211,7 +211,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $router->setApplication($application);
         $router->expects($this->any())
             ->method('url')
-            ->will($this->returnCallback(fn ($request, $newContext = null, $handler = null, $op = null, $path = null) => $handler . '-' . $op . '-' . implode('-', $path)));
+            ->willReturnCallback(fn ($request, $newContext = null, $handler = null, $op = null, $path = null) => $handler . '-' . $op . '-' . implode('-', $path));
 
         // Dispatcher
         /** @var Dispatcher|MockObject */
@@ -220,7 +220,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->getMock();
         $dispatcher->expects($this->any())
             ->method('url')
-            ->will($this->returnCallback(fn ($request, $shortcut, $newContext = null, $handler = null, $op = null, $path = null) => $handler . '-' . $op . '-' . implode('-', $path)));
+            ->willReturnCallback(fn ($request, $shortcut, $newContext = null, $handler = null, $op = null, $path = null) => $handler . '-' . $op . '-' . implode('-', $path));
 
         // Request
         $requestMock = $this->getMockBuilder(Request::class)
