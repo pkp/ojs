@@ -45,7 +45,7 @@ class CompileUniqueInvestigationsTest extends PKPTestCase
     /**
      * Ensure that a serialized job can be unserialized and executed
      */
-    public function testRunSerializedJob()
+    public function testRunSerializedJob(): void
     {
         /** @var CompileUniqueInvestigations $compileUniqueInvestigationsJob */
         $compileUniqueInvestigationsJob = unserialize($this->serializedJobData);

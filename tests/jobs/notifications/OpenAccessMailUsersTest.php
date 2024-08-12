@@ -47,7 +47,7 @@ class OpenAccessMailUsersTest extends PKPTestCase
     /**
      * Ensure that a serialized job can be unserialized and executed
      */
-    public function testRunSerializedJob()
+    public function testRunSerializedJob(): void
     {
         $this->mockMail();
 

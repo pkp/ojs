@@ -46,7 +46,7 @@ class DepositIssueTest extends PKPTestCase
     /**
      * Ensure that a serialized job can be unserialized and executed
      */
-    public function testRunSerializedJob()
+    public function testRunSerializedJob(): void
     {
         // need to mock request so that a valid context information is set and can be retrived
         $this->mockRequest();
