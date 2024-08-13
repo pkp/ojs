@@ -1,0 +1,1201 @@
+# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-07-30 07:06+0000\n"
+"Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
+"Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/manager/th/>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr ""
+"อีเมลที่ไม่สามารถจัดส่งได้จะส่งผลให้เกิดข้อความแสดงข้อผิดพลาดไปยังที่อยู่นี้"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr "โลโก้ขนาดเล็กหรือการเป็นตัวแทนของวารสารที่สามารถใช้ในรายการวารสารได้"
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+"PKP Preservation Network (PN) ให้บริการเก็บรักษาวารสาร OJS ใดๆ "
+"ที่ตรงตามเกณฑ์พื้นฐานบางประการฟรี"
+
+msgid "manager.setup.management.description"
+msgstr ""
+"การเข้าถึงและความปลอดภัย การกําหนดเวลา การประกาศ การคัดลอก เค้าโครง "
+"และการพิสูจน์อักษร"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr "ผู้ใช้จะต้องลงทะเบียนและเข้าสู่ระบบเพื่อดูเนื้อหาการเข้าถึงแบบเปิด"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"ผู้ตรวจสอบจะไม่ได้รับอนุญาตให้เข้าถึงไฟล์ที่ส่งจนกว่าพวกเขาจะตกลงที่จะตรวจสอบ"
+
+msgid "manager.setup.emailSignature"
+msgstr "ลายเซ็น"
+
+msgid "manager.setup.contextTitle"
+msgstr "ชื่อวารสาร"
+
+msgid "manager.setup.labelName"
+msgstr "ชื่อป้ายกํากับ"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "ขั้นตอนที่ 4 การจัดการวารสาร"
+
+msgid "manager.setup.lists"
+msgstr "รายการ"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "เปิดใช้งานปลั๊กอิน PKP PN"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "เพิ่มหรือลบรายการแถบนําทางเพิ่มเติม"
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "ไม่มีการอัปโหลดสไตล์ชีต"
+
+msgid "manager.setup.note"
+msgstr "หมายเหตุ"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "ตัวเลือกหมายเลขหน้า"
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr "ผู้ใช้จะต้องลงทะเบียนและเข้าสู่ระบบเพื่อดูเว็บไซต์วารสาร"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "สัปดาห์ที่อนุญาตให้ดําเนินการตรวจสอบให้เสร็จสิ้น"
+
+msgid "manager.setup.emailSignature.description"
+msgstr "อีเมลที่ส่งโดยอัตโนมัติในนามของวารสารจะมีการเพิ่มลายเซ็นดังต่อไปนี้"
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "เปิดใช้งานประกาศ"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr "จํานวนประกาศที่จะแสดงบนหน้าแรก ปล่อยว่างไว้เพื่อไม่แสดง"
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "ผู้เยี่ยมชมสามารถลงทะเบียนบัญชีผู้ใช้กับวารสารได้"
+
+msgid "manager.setup.focusAndScope"
+msgstr "จุดเน้นและขอบเขต"
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"ดูการตั้งค่า <button>plugin</button> เพื่อยอมรับข้อกําหนดการใช้งานสําหรับ "
+"PKP PN"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "รวมลิงก์ที่ปลอดภัยไว้ในคําเชิญทางอีเมลถึงผู้ตรวจสอบ"
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "การให้คะแนนของผู้ตรวจสอบ"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "การแจ้งเตือนผู้ตรวจสอบ"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "ค้นหา การจัดทําดัชนี"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr "(หากไม่มีการเพิ่มส่วนรายการจะถูกส่งไปยังส่วนบทความตามค่าเริ่มต้น)"
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "บรรณาธิการวารสารที่จะดูผ่านกระบวนการบรรณาธิการ"
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "ส่วนวารสารที่จะพิจารณารายการ"
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "แสดงลิงก์ห้องครัวเสมอและระบุการเข้าถึงแบบจํากัด"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "ห้าขั้นตอนสู่เว็บไซต์วารสาร"
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr ""
+"กําหนดให้ผู้ตรวจสอบยื่นคําชี้แจง CI "
+"พร้อมกับการตรวจสอบโดยผู้ทรงคุณวุฒิแต่ละครั้งที่พวกเขาส่ง"
+
+msgid "manager.setup.history"
+msgstr "ประวัติวารสาร"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "ขั้นตอนที่ 5 การปรับแต่งรูปลักษณ์"
+
+msgid "manager.setup.details.description"
+msgstr "ชื่อวารสาร ISSN ผู้ติดต่อ ผู้สนับสนุน และเครื่องมือค้นหา"
+
+msgid "manager.setup.subjectExamples"
+msgstr "(เช่น การสังเคราะห์ด้วยแสง; หลุมดํา; ปัญหาแผนที่สี่สี; ทฤษฎีเบย์)"
+
+msgid "manager.setup.discipline"
+msgstr "วินัยทางวิชาการและสาขาย่อย"
+
+msgid "manager.setup.printIssn"
+msgstr "พิมพ์ ISSN"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr ""
+"บรรณาธิการจะให้คะแนนผู้ตรวจสอบในระดับคุณภาพห้าจุดหลังจากการตรวจสอบแต่ละครั้ง"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "ให้ตัวอย่างคําหลักหรือหัวข้อเพื่อเป็นแนวทางสําหรับผู้เขียน"
+
+msgid "manager.setup.submissions.description"
+msgstr "แนวปฏิบัติของผู้เขียน ลิขสิทธิ์ และการจัดทําดัชนี (รวมถึงการจดทะเบียน)"
+
+msgid "manager.setup.look.description"
+msgstr ""
+"ส่วนหัวของหน้าแรก เนื้อหา ส่วนหัวของวารสาร ส่วนท้าย แถบการนําทาง และสไตล์ชีต"
+
+msgid "manager.setup.submissions"
+msgstr "การส่ง"
+
+msgid "manager.setup.referenceLinking"
+msgstr "การเชื่อมโยงอ้างอิง"
+
+msgid "manager.setup.disciplineDescription"
+msgstr ""
+"มีประโยชน์เมื่อวารสารข้ามขอบเขตทางวินัยและ/หรือผู้เขียนส่งรายการสหสาขาวิชาชีพ"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "ให้ตัวอย่างสาขาวิชาวิชาการที่เกี่ยวข้องสําหรับวารสารนี้"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr ""
+"อธิบายให้ผู้เขียน ผู้อ่าน และบรรณารักษ์ทราบถึงบทความและรายการอื่นๆ "
+"ที่วารสารจะตีพิมพ์"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "เพิ่มสารบัญสําหรับฉบับปัจจุบัน (ถ้ามี)"
+
+msgid "manager.setup.journalLayout"
+msgstr "เค้าโครงวารสาร"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "โลโก้วารสาร"
+
+msgid "manager.setup.editorDecision"
+msgstr "การตัดสินใจของบรรณาธิการ"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "ขั้นตอนที่ 1 ลงรายละเอียด"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "ส่วนท้ายหน้าวารสาร"
+
+msgid "manager.setup.journalPolicies"
+msgstr "ขั้นตอนที่ 2 นโยบายวารสาร"
+
+msgid "manager.setup.journalSetup"
+msgstr "การตั้งค่าวารสาร"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "การตั้งค่าบันทึกประจําวันของคุณได้รับการอัปเดตแล้ว"
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "รูปแบบสไตล์ชีตวารสารไม่ถูกต้อง รูปแบบที่ยอมรับคือ.css"
+
+msgid "manager.setup.journalTheme"
+msgstr "ธีมวารสาร"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "ภาพขนาดย่อของวารสาร"
+
+msgid "manager.setup.enableOai"
+msgstr "เปิดใช้งาน OAI"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "ประเภท (วิธีการ/แนวทาง)"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "ใช้วันที่ตีพิมพ์ของฉบับ"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "ใช้วันที่ตีพิมพ์บทความ"
+
+msgid "manager.distribution.publication"
+msgstr "สิ่งตีพิมพ์"
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "เมื่อถึงขั้นตอนการคัดลอก"
+
+msgid "manager.website.archiving"
+msgstr "การเก็บถาวร"
+
+msgid "manager.journalManagement"
+msgstr "การจัดการวารสาร"
+
+msgid "manager.language.ui"
+msgstr "UI"
+
+msgid "manager.language.submissions"
+msgstr "การส่ง"
+
+msgid "manager.language.forms"
+msgstr "แบบฟอร์ม"
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "โปรดตรวจสอบให้แน่ใจว่าคุณได้เลือกแบบฟอร์มการตรวจสอบที่ถูกต้อง"
+
+msgid "manager.sections.indexed"
+msgstr "จัดทําดัชนี"
+
+msgid "manager.sections.noneCreated"
+msgstr "ไม่มีการสร้างส่วนใดๆ"
+
+msgid "manager.sections.open"
+msgstr "เปิดการส่ง"
+
+msgid "manager.sections.readingTools"
+msgstr "เครื่องมือการอ่าน"
+
+msgid "manager.sections.reviewed"
+msgstr "‘Peer Reviewed’"
+
+msgid "manager.sections.wordCount"
+msgstr "จํานวนคํา"
+
+msgid "manager.setup"
+msgstr "การตั้งค่าวารสาร"
+
+msgid "manager.setup.editorialTeam"
+msgstr "ทีมบรรณาธิการ"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "สไตล์ชีตวารสาร"
+
+msgid "manager.setup.contextName"
+msgstr "ชื่อวารสาร"
+
+msgid "manager.setup.pageHeader"
+msgstr "ส่วนหัวของสมุดรายวัน"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "เพิ่มรายการตรวจสอบ"
+
+msgid "manager.setup.addNavItem"
+msgstr "เพิ่มรายการ"
+
+msgid "manager.setup.addSponsor"
+msgstr "เพิ่มองค์กรที่สนับสนุน"
+
+msgid "manager.setup.alternateHeader"
+msgstr "ส่วนหัวสํารอง"
+
+msgid "manager.setup.announcements"
+msgstr "ประกาศ"
+
+msgid "manager.setup.currentIssue"
+msgstr "ประเด็นปัจจุบัน"
+
+msgid "manager.setup.details"
+msgstr "รายละเอียด"
+
+msgid "manager.setup.disciplineExamples"
+msgstr ""
+"(เช่น ประวัติศาสตร์; การศึกษา; สังคมวิทยา; จิตวิทยา; วัฒนธรรมศึกษา; กฎหมาย)"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "ที่อยู่ตีกลับ"
+
+msgid "manager.setup.emails"
+msgstr "การระบุอีเมล"
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "แสดงบนหน้าแรก"
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "เพื่อให้ผู้เขียนจัดทําดัชนีผลงานของตน"
+
+msgid "manager.setup.typeExamples"
+msgstr ""
+"(เช่น การสอบถามทางประวัติศาสตร์ กึ่งทดลอง การวิเคราะห์วรรณกรรม "
+"การสํารวจ/สัมภาษณ์)"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr "ให้ตัวอย่างประเภทการวิจัย วิธีการ และแนวทางที่เกี่ยวข้องสําหรับสาขานี้"
+
+msgid "manager.setup.publicationScheduling"
+msgstr "กําหนดการตีพิมพ์"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "การระบุเนื้อหาวารสาร"
+
+msgid "manager.setup.publisher"
+msgstr "สํานักพิมพ์"
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "แนวทางการตรวจสอบ"
+
+msgid "manager.setup.reviewOptions"
+msgstr "ตัวเลือกการตรวจสอบ"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "การแจ้งเตือนทางอีเมลอัตโนมัติ"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "จํากัดการเข้าถึงไฟล์"
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "การเข้าถึงผู้ตรวจสอบ"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "การเข้าถึงผู้ตรวจสอบด้วยคลิกเดียว"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "นโยบายการตรวจสอบ"
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "ส่วนและบรรณาธิการส่วน"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "การเข้าถึงไซต์"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "ดูเนื้อหาบทความ"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "คําหลัก"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "แนวทางการส่ง"
+
+msgid "manager.sections.confirmDelete"
+msgstr "คุณแน่ใจหรือว่าต้องการลบส่วนนี้อย่างถาวร?"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr ""
+"สิ่งนี้จะแทนที่การตั้งค่าบันทึกประจําตําแหน่งเฉพาะที่คุณมีสําหรับสถานที่นี้"
+
+msgid "manager.sections.editorRestriction"
+msgstr "รายการสามารถส่งได้โดยบรรณาธิการและบรรณาธิการส่วนเท่านั้น"
+
+msgid "manager.sections.editors"
+msgstr "บรรณาธิการส่วน"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "จํากัดการเข้าถึงปัญหาและบทความเวอร์ชัน PDF เท่านั้น"
+
+msgid "manager.payment.paymentId"
+msgstr "รหัสการชําระเงิน"
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "จําเป็นต้องมีชื่อย่อสําหรับส่วนนี้"
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr "ป้อนข้อมูลใด ๆ ที่คุณต้องการให้ปรากฏในหน้าประกาศของคุณ"
+
+msgid "manager.sections.form.titleRequired"
+msgstr "จําเป็นต้องมีชื่อเรื่องสําหรับส่วนนี้"
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(เพื่อปรากฏใน About the Journal) "
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "ละเว้นชื่อผู้เขียนสําหรับรายการส่วนจากสารบัญประเด็น"
+
+msgid "manager.sections.hideTocTitle"
+msgstr "ละเว้นชื่อของส่วนนี้จากสารบัญประเด็น"
+
+msgid "manager.sections.identifyType"
+msgstr "ระบุรายการที่เผยแพร่ในส่วนนี้เป็น a(n)"
+
+msgid "manager.sections.policy"
+msgstr "นโยบายมาตรา"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "จะไม่รวมอยู่ในการจัดทําดัชนีของวารสาร"
+
+msgid "manager.sections.submissionReview"
+msgstr "จะไม่ได้รับการตรวจสอบโดยเพื่อน"
+
+msgid "manager.distribution.access"
+msgstr "เข้าถึง"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "การส่งข้อมูลในส่วนนี้ของวารสาร"
+
+msgid "manager.distribution.publishingMode"
+msgstr "โหมดการเผยแพร่"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr ""
+"ป้อนจํานวนค่าธรรมเนียมด้านล่างเพื่อเปิดใช้งานค่าธรรมเนียมการดําเนินการของผู้เ"
+"ขียน"
+
+msgid "manager.sections.unassigned"
+msgstr "ตัวแก้ไขส่วนที่มี"
+
+msgid "manager.payment.generalOptions"
+msgstr "ตัวเลือกทั่วไป"
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "OJS จะไม่ถูกใช้เพื่อเผยแพร่เนื้อหาของวารสารทางออนไลน์"
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "วารสารจะให้การเข้าถึงเนื้อหาอย่างเปิดเผย"
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "วารสารจะต้องมีการสมัครสมาชิกเพื่อเข้าถึงเนื้อหาบางส่วนหรือทั้งหมด"
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"อนุญาตให้กําหนด Digital Object Identifiers (DOIs) "
+"ให้กับงานที่ตีพิมพ์ในวารสารนี้"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr "สมาชิกสมาคมจะปรากฏในเกี่ยวกับวารสารภายใต้นโยบาย"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr "คุณสามารถกําหนดค่าปลั๊กอินวิธีการชําระเงินใด ๆ ต่อไปนี้จากหน้าจอนี้"
+
+msgid "manager.sections.alertDelete"
+msgstr "ก่อนที่จะสามารถลบส่วนนี้ได้ คุณต้องย้ายบทความที่ส่งไปยังส่วนอื่นก่อน"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "จํากัดจํานวนคํานามธรรมสําหรับส่วนนี้ (0 สําหรับไม่จํากัด)"
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"ใช้รูปแบบเริ่มต้น <br />%j.v%vi%i สําหรับปัญหา<br />%j.v%vi%i.%a สําหรั"
+"บบทความ<br />%j.v%vi%i.%a.g%g สําหรับ galleys"
+
+#, fuzzy
+msgid "manager.setup.masthead"
+msgstr "Masthead"
+
+msgid "manager.people.allSiteUsers"
+msgstr "ลงทะเบียนผู้ใช้จากไซต์นี้ในวารสารนี้"
+
+msgid "manager.people.showNoRole"
+msgstr "แสดงผู้ใช้ที่ไม่มีบทบาท"
+
+msgid "manager.setup.homepageContent"
+msgstr "เนื้อหาหน้าแรกของวารสาร"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "เนื้อหา"
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "ไม่ต้องการบทคัดย่อ"
+
+msgid "manager.setup.addAboutItem"
+msgstr "เพิ่มเกี่ยวกับรายการ"
+
+msgid "manager.setup.addItem"
+msgstr "เพิ่มรายการ"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "เพิ่มรายการที่จะปรากฏใน \"เกี่ยวกับวารสาร\""
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "เพิ่มลิงก์ฐานข้อมูลใหม่"
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "บทนํา"
+
+msgid "manager.payment.records"
+msgstr "บันทึก"
+
+msgid "manager.paymentTypes"
+msgstr "ประเภทการชําระเงิน"
+
+msgid "manager.payment.userName"
+msgstr "รหัสการชําระเงิน"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "ผู้ใช้ที่ลงทะเบียนในวารสารนี้"
+
+msgid "manager.people.allJournals"
+msgstr "วารสารทั้งหมด"
+
+msgid "manager.people.allUsers"
+msgstr "ผู้ใช้ที่ลงทะเบียนทั้งหมด"
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "เลือกเทมเพลต"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "ลงทะเบียนผู้ใช้ปัจจุบัน"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "พร้อมวารสาร"
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr ""
+"เลือกผู้ใช้ที่จะระบุแหล่งที่มาของการเขียน การแก้ไขการมอบหมายงาน ฯลฯ "
+"ของผู้ใช้คนก่อน"
+
+msgid "manager.people.roleEnrollment"
+msgstr "{$role} การลงทะเบียน"
+
+msgid "manager.sections.assigned"
+msgstr "บรรณาธิการของส่วนนี้"
+
+msgid "manager.sections.create"
+msgstr "สร้างส่วน"
+
+msgid "manager.setup.numPageLinks"
+msgstr "ลิงก์หน้า"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr "จํากัดจํานวนลิงก์ที่จะแสดงไปยังหน้าถัดไปในรายการ"
+
+msgid "manager.setup.onlineIssn"
+msgstr "ISSN ออนไลน์"
+
+msgid "manager.setup.policies"
+msgstr "นโยบาย"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "คําแนะนําในการพิสูจน์อักษร"
+
+msgid "manager.setup.publicationSchedule"
+msgstr "กําหนดการตีพิมพ์"
+
+msgid "manager.setup.contextInitials"
+msgstr "ชื่อย่อวารสาร"
+
+msgid "manager.setup.journalLogo"
+msgstr "โลโก้วารสาร"
+
+msgid "manager.setup.keyInfo"
+msgstr "ข้อมูลสําคัญ"
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "เครือข่ายการอนุรักษ์ PKP (PN)"
+
+msgid "manager.setup.otherLockss"
+msgstr "ล็อคและนาฬิกา"
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"ใบอนุญาต LOCKSS จะปรากฏใน About Journal under Archiving: <a href=\"http://www"
+".lockss.org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS "
+"License</a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "คําอธิบายใบอนุญาต LOCKSS"
+
+msgid "manager.setup.lockssTitle"
+msgstr "ล็อค"
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"เปิดใช้งาน CLOCKSS "
+"เพื่อจัดเก็บและแจกจ่ายเนื้อหาวารสารที่ห้องสมุดที่เข้าร่วมผ่านทางหน้า CLOCKSS "
+"<a href=\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "คําอธิบายใบอนุญาต CLOCKSS"
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"ลงทะเบียนเพื่อรับบริการ CLOCKSS โดยไปที่ <a href=\"https://clockss.org\" "
+"target=\"_blank\">the CLOCKSS website</a>"
+
+msgid "manager.setup.clockssTitle"
+msgstr "นาฬิกา"
+
+msgid "manager.setup.look"
+msgstr "รูปลักษณ์"
+
+msgid "manager.setup.management"
+msgstr "การจัดการ"
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"ใบอนุญาต CLOCKSS จะปรากฏใน About Journal under Archiving: <a href=\"https"
+"://clockss.org\" target=\"_blank\">CLOCKSS License</a>"
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "การจัดการขั้นตอนบรรณาธิการขั้นพื้นฐาน"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "การตั้งค่าการจัดการและการเผยแพร่"
+
+msgid "manager.setup.navigationBar"
+msgstr "แถบนําทาง"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr ""
+"ค่าป้ายกํากับเป็นสตริงตามตัวอักษร (เช่น \"การตั้งค่าวารสาร\") "
+"แทนที่จะเป็นคีย์ข้อความการแปล (เช่น \"manager.setup\")"
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "ไม่มีการอัปโหลดไฟล์ภาพ"
+
+msgid "manager.languages.noneAvailable"
+msgstr ""
+"ขออภัย ไม่มีภาษาเพิ่มเติม "
+"ติดต่อผู้ดูแลไซต์ของคุณหากคุณต้องการใช้ภาษาเพิ่มเติมกับวารสารนี้"
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "นี่จะเป็นภาษาเริ่มต้นสําหรับเว็บไซต์วารสาร"
+
+msgid "manager.managementPages"
+msgstr "หน้าการจัดการ"
+
+msgid "manager.payment.action"
+msgstr "Action"
+
+msgid "manager.payment.addPayment"
+msgstr "เพิ่มการชําระเงิน"
+
+msgid "manager.payment.amount"
+msgstr "จํานวนเงิน"
+
+msgid "manager.payment.authorFees"
+msgstr "ค่าธรรมเนียมผู้เขียน"
+
+msgid "manager.payment.description"
+msgstr "คําอธิบาย"
+
+msgid "manager.payment.details"
+msgstr "รายละเอียด"
+
+msgid "manager.payment.editSubscription"
+msgstr "แก้ไขการสมัครสมาชิก"
+
+msgid "manager.payment.enable"
+msgstr "เปิดใช้งาน"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "ตัวเลือกการชําระค่าธรรมเนียม"
+
+msgid "manager.payment.form.numeric"
+msgstr "ค่าใช้จ่ายทั้งหมดต้องเป็นค่าตัวเลขบวก (อนุญาตให้ใช้จุดทศนิยมได้)"
+
+msgid "manager.payment.generalFees"
+msgstr "ค่าธรรมเนียมทั่วไป"
+
+msgid "manager.payment.noPayments"
+msgstr "No Payments"
+
+msgid "manager.payment.notFound"
+msgstr "ไม่พบ"
+
+msgid "manager.payment.options"
+msgstr "ตัวเลือก"
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบการสมัครสมาชิกนี้?"
+
+msgid "manager.payment.options.enablePayments"
+msgstr ""
+"การชําระเงินจะถูกเปิดใช้งานสําหรับวารสารนี้ "
+"โปรดทราบว่าผู้ใช้จะต้องเข้าสู่ระบบเพื่อทําการชําระเงิน"
+
+msgid "manager.payment.options.fee"
+msgstr "ค่าธรรมเนียม"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "คําอธิบายค่าธรรมเนียม"
+
+msgid "manager.payment.options.feeName"
+msgstr "ชื่อค่าธรรมเนียม"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "สมาชิกสมาคม"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "ค่าธรรมเนียมการประมวลผลบทความ"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "ซื้อบทความ"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "ปัญหาการซื้อ"
+
+msgid "manager.payment.options.text"
+msgstr "คําอธิบายวิธีการชําระเงิน"
+
+msgid "manager.payment.paymentMethod"
+msgstr "วิธีการชําระเงิน"
+
+msgid "manager.payment.paymentMethods"
+msgstr "วิธีการชําระค่าธรรมเนียม"
+
+msgid "manager.payment.paymentType"
+msgstr "ประเภทการชําระเงิน"
+
+msgid "manager.payment.readerFees"
+msgstr "ค่าธรรมเนียมผู้อ่าน"
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "ISSN ที่ระบุไม่ถูกต้อง"
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "จําเป็นต้องมีอีเมลติดต่อหลัก"
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "จําเป็นต้องมีชื่อผู้ติดต่อหลัก"
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "จําเป็นต้องมีชื่อย่อวารสาร"
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "จําเป็นต้องมีชื่อวารสาร"
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "จําเป็นต้องมีจํานวนผู้วิจารณ์ต่อการส่ง"
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "จําเป็นต้องมีอีเมลสนับสนุน"
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "ชื่อสนับสนุนเป็นสิ่งจําเป็น"
+
+msgid "manager.setup.generalInformation"
+msgstr "ข้อมูลทั่วไป"
+
+msgid "manager.setup.guidelines"
+msgstr "แนวทางปฏิบัติ"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "ขั้นตอนที่ 3 การส่งคําแนะนํา"
+
+msgid "manager.setup.identity"
+msgstr "อัตลักษณ์วารสาร"
+
+msgid "manager.setup.information"
+msgstr "ข้อมูล"
+
+msgid "manager.setup.information.forAuthors"
+msgstr "สําหรับนักเขียน"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "สําหรับบรรณารักษ์"
+
+msgid "manager.setup.information.forReaders"
+msgstr "สําหรับผู้อ่าน"
+
+msgid "manager.setup.initialIssue"
+msgstr "ประเด็นเบื้องต้น"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr ""
+"ขึ้นอยู่กับรูปแบบที่เลือกระบุปัญหาปริมาณและ/หรือปีของฉบับแรกที่จะเผยแพร่กับ "
+"OJS:"
+
+msgid "manager.setup.institution"
+msgstr "สถาบัน"
+
+msgid "manager.setup.itemsPerPage"
+msgstr "รายการต่อหน้า"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "ตัวย่อวารสาร"
+
+msgid "manager.setup.journalArchiving"
+msgstr "การเก็บถาวรวารสาร"
+
+msgid "manager.setup.contextSummary"
+msgstr "สรุปวารสาร"
+
+msgid "manager.setup.contextAbout"
+msgstr "เกี่ยวกับวารสาร"
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "เนื้อหาหน้าแรกของวารสาร"
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "ส่วนหัวของหน้าแรกของวารสาร"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "ส่วนหัวของหน้าแรกของวารสาร"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"เลือกวิธีการเลือกวันที่ลิขสิทธิ์เริ่มต้นสําหรับบทความ "
+"ค่าเริ่มต้นนี้สามารถแทนที่ได้เป็นรายกรณี หากคุณ \"เผยแพร่ตามที่คุณไป\" "
+"อย่าใช้วันที่ตีพิมพ์ของฉบับนั้น"
+
+msgid "manager.people.confirmRemove"
+msgstr ""
+"ลบผู้ใช้นี้ออกจากบันทึกนี้หรือไม่? "
+"การดําเนินการนี้จะยกเลิกการลงทะเบียนผู้ใช้จากทุกบทบาทภายในวารสารนี้"
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr ""
+"เลือกรายการที่จะกําหนด DOI วารสารส่วนใหญ่กําหนด DOI ให้กับบทความ "
+"แต่คุณอาจต้องการกําหนด DOI ให้กับรายการที่ตีพิมพ์ทั้งหมด"
+
+msgid "manager.files.note"
+msgstr ""
+"หมายเหตุ: Files Browser เป็นคุณสมบัติขั้นสูงที่ช่วยให้สามารถดูและจัดการไฟล์แล"
+"ะไดเร็กทอรีที่เกี่ยวข้องกับวารสารได้โดยตรง"
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"OJS สามารถให้บริการแก่ผู้ใช้ในภาษาที่รองรับหลายภาษา นอกจากนี้ OJS "
+"ยังสามารถทํางานเป็นระบบหลายภาษาได้ "
+"ทําให้ผู้ใช้สามารถสลับระหว่างภาษาในแต่ละหน้าได้ "
+"และอนุญาตให้ป้อนข้อมูลบางอย่างในภาษาเพิ่มเติมได้หลายภาษา<br /><br/>หากภาษาที่"
+" OJS รองรับไม่อยู่ในรายการด้านล่าง "
+"ขอให้ผู้ดูแลระบบไซต์ของคุณติดตั้งภาษาจากอินเทอร์เฟซการดูแลระบบไซต์ "
+"สําหรับคําแนะนําในการเพิ่มการรองรับภาษาใหม่ โปรดดูเอกสาร OJS"
+
+msgid "manager.payment.currencymessage"
+msgstr ""
+"OJS ไม่มีการแปลงสกุลเงินใดๆ  หากยอมรับการชําระเงินสําหรับการสมัครสมาชิก คุณต้"
+"องตรวจสอบให้แน่ใจว่าสกุลเงินในการสมัครสมาชิกตรงกับสกุลเงินที่ระบุไว้ที่นี่"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr ""
+"การดําเนินการนี้จะเปิดใช้งานการชําระเงินสําหรับการสมัครสมาชิก โดยที่ประเภท "
+"ต้นทุน ระยะเวลา และการสมัครสมาชิกได้รับการจัดการโดยผู้จัดการวารสาร "
+"(การสมัครสมาชิก)"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr ""
+"ตัวเลือกที่เลือก พร้อมด้วยคําอธิบายและค่าธรรมเนียม "
+"(ซึ่งสามารถแก้ไขได้ด้านล่าง) จะปรากฏในเกี่ยวกับวารสารภายใต้นโยบาย "
+"รวมถึงจุดที่จําเป็นต้องชําระเงิน"
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr ""
+"เลือกผู้ใช้ (หรือหลายคน) เพื่อรวมเข้ากับบัญชีผู้ใช้อื่น (เช่น "
+"เมื่อมีคนมีบัญชีผู้ใช้สองบัญชี) บัญชีที่เลือกก่อนจะถูกลบ และการส่ง "
+"การมอบหมาย ฯลฯ จะถือเป็นบัญชีที่สอง"
+
+msgid "manager.people.syncUserDescription"
+msgstr ""
+"การซิงโครไนซ์การลงทะเบียนจะลงทะเบียนผู้ใช้ทั้งหมดที่ลงทะเบียนในบทบาทที่ระบุใน"
+"วารสารที่ระบุให้มีบทบาทเดียวกันในวารสารนี้ ฟังก์ชันนี้ช่วยให้ชุดผู้ใช้ทั่วไป "
+"(เช่น ผู้ตรวจสอบ) สามารถซิงโครไนซ์ระหว่างวารสารได้"
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr ""
+"เพิ่มตัวแก้ไขส่วนในส่วนนี้เพื่อให้การส่งผลงานถูกกําหนดให้กับตัวแก้ไขส่วนโดยอั"
+"ตโนมัติ (มิฉะนั้น สามารถกําหนด Section Editor ด้วยตนเองได้ "
+"หลังจากส่งเข้ามาแล้ว) หากเพิ่มเข้าไป "
+"ตัวแก้ไขส่วนสามารถถูกกําหนดโดยอัตโนมัติเพื่อดูแลการตรวจสอบ "
+"(การตรวจสอบโดยผู้ทรงคุณวุฒิ) และ/หรือการแก้ไข (การแก้ไขสําเนา เค้าโครง "
+"และการพิสูจน์อักษร) ของการส่งไปยังส่วนนี้ บรรณาธิการส่วนถูกสร้างขึ้นโดยการคลิ"
+"กบรรณาธิการส่วนภายใต้บทบาทในการจัดการวารสาร"
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"ต้องมีการใช้งานอย่างน้อยหนึ่งส่วน "
+"เยี่ยมชมการตั้งค่าเวิร์กโฟลว์เพื่อปิดการใช้งานการส่งทั้งหมดไปยังวารสารนี้"
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr ""
+"โปรดตรวจสอบให้แน่ใจว่ามีการตรวจสอบช่องทําเครื่องหมายอย่างน้อยหนึ่งช่องสําหรับ"
+"การกําหนดตัวแก้ไขแต่ละส่วน"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr ""
+"(เช่น \"บทความที่ผ่านการตรวจสอบโดยผู้ทรงคุณวุฒิ\", \"บทว"
+"ิจารณ์หนังสือที่ไม่อ้างอิง\", \"ความเห็นที่ได้รับเชิญ\" ฯลฯ)"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr ""
+"หน้าแรกของวารสารประกอบด้วยลิงก์การนําทางตามค่าเริ่มต้น เนื้อหาหน้าแรกเพิ่มเติ"
+"มสามารถผนวกได้โดยใช้ตัวเลือกต่อไปนี้อย่างใดอย่างหนึ่งหรือทั้งหมด "
+"ซึ่งจะปรากฏตามลําดับที่แสดง"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr ""
+"อีกทางหนึ่ง แทนที่จะใช้ชื่อและโลโก้ สามารถแทรกส่วนหัวเวอร์ชัน HTML "
+"ลงในกล่องข้อความด้านล่างได้ เว้นกล่องข้อความว่างไว้หากไม่จําเป็น"
+
+msgid "manager.setup.historyDescription"
+msgstr ""
+"ข้อความนี้จะปรากฏในส่วน \"เกี่ยวกับ\" ของเว็บไซต์วารสาร "
+"และสามารถใช้เพื่ออธิบายการเปลี่ยนแปลงชื่อเรื่อง กองบรรณาธิการ และรายการอื่นๆ "
+"ที่เกี่ยวข้องกับประวัติการตีพิมพ์ของวารสาร"
+
+msgid "manager.setup.disableUserRegistration"
+msgstr ""
+"Journal Manager จะลงทะเบียนบัญชีผู้ใช้ทั้งหมด "
+"บรรณาธิการหรือบรรณาธิการส่วนอาจลงทะเบียนบัญชีผู้ใช้สําหรับผู้ตรวจสอบ"
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"ในการส่งอีเมลที่ไม่สามารถจัดส่งไปยังที่อยู่ตีกลับ "
+"ผู้ดูแลระบบไซต์จะต้องเปิดใช้งานตัวเลือก <code>allow_envelope_sender</code> "
+"ในไฟล์การกําหนดค่าไซต์ อาจจําเป็นต้องมีการกําหนดค่าเซิร์ฟเวอร์ ตามที่ระบุไว้"
+"ในเอกสาร OJS"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"อาจมีการเผยแพร่ประกาศเพื่อแจ้งให้ผู้อ่านทราบข่าวสารและกิจกรรมในวารสาร "
+"ประกาศที่เผยแพร่จะปรากฏในหน้าประกาศ"
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr ""
+"OJS ปฏิบัติตาม <a href=\"https://www.openarchives.org/\" target=\"_blank\""
+">Open Archives Initiative</a> Protocol for Metadata Harvesting ซึ่งเป็นมาตรฐา"
+"นที่เกิดขึ้นใหม่สําหรับการให้การเข้าถึงทรัพยากรการวิจัยอิเล็กทรอนิกส์ที่มีการ"
+"จัดทําดัชนีอย่างดีในระดับโลก "
+"ผู้เขียนจะใช้เทมเพลตที่คล้ายกันเพื่อจัดเตรียมข้อมูลเมตาสําหรับการส่ง ผู้จัดกา"
+"รวารสารควรเลือกหมวดหมู่สําหรับการจัดทําดัชนีและนําเสนอผู้เขียนพร้อมตัวอย่างที"
+"่เกี่ยวข้องเพื่อช่วยในการจัดทําดัชนีงานของตน"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+"สําหรับวารสารที่เสนอการเข้าถึงแบบเปิดทันทีหรือล่าช้า ให้รวมใบอนุญาต Creative "
+"Commons กับผลงานตีพิมพ์ทั้งหมดในเวลาที่เหมาะสม"
+
+msgid "manager.setup.information.description"
+msgstr ""
+"คําอธิบายโดยย่อของวารสารสําหรับบรรณารักษ์และผู้สนใจเป็นผู้เขียนและผู้อ่าน "
+"สิ่งเหล่านี้มีให้ใช้งานในแถบด้านข้างของไซต์เมื่อมีการเพิ่มบล็อกข้อมูล"
+
+msgid "manager.setup.itemsDescription"
+msgstr ""
+"รายการแถบนําทางสามารถเพิ่มลงในชุดปัจจุบัน (หน้าแรก เกี่ยวกับ หน้าแรกของผู้ใช้"
+" ฯลฯ) ที่ปรากฏที่ด้านบนของหน้า"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"จํากัดจํานวนรายการ (เช่น การส่ง ผู้ใช้ หรือการแก้ไขการมอบหมาย) "
+"เพื่อแสดงในรายการก่อนที่จะแสดงรายการถัดไปในหน้าอื่น"
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"รวมข้อมูลใดๆ เกี่ยวกับวารสารของคุณซึ่งอาจเป็นที่สนใจของผู้อ่าน ผู้เขียน "
+"หรือผู้วิจารณ์ ซึ่งอาจรวมถึงนโยบายการเข้าถึงแบบเปิดของคุณ จุดเน้"
+"นและขอบเขตของวารสาร ประกาศเกี่ยวกับลิขสิทธิ์ การเปิดเผยการสนับสนุน "
+"ประวัติความเป็นมาของวารสาร คําชี้แจงความเป็นส่วนตัว และการรวมไว้ในระบบการเก็"
+"บถาวร LOCKSS หรือ CLOCKSS"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr ""
+"ตามค่าเริ่มต้น หน้าแรกประกอบด้วยลิงก์การนําทาง "
+"เนื้อหาหน้าแรกเพิ่มเติมสามารถต่อท้ายได้โดยใช้ตัวเลือกต่อไปนี้หนึ่งหรือทั้"
+"งหมด ซึ่งจะปรากฏตามลําดับที่แสดง "
+"โปรดทราบว่าปัญหาปัจจุบันสามารถเข้าถึงได้ผ่านลิงก์ปัจจุบันในแถบนําทางเสมอ"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr ""
+"สามารถอัปโหลดชื่อและโลโก้ของวารสารเวอร์ชันกราฟิก (เป็นไฟล์ .gif, .jpg หรือ ."
+"png) สําหรับหน้าแรกได้ ซึ่งจะแทนที่เวอร์ชันข้อความที่ปรากฏเป็นอย่างอื่น"
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"เลือกประเทศที่วารสารนี้ตั้งอยู่ "
+"หรือประเทศที่อยู่ทางไปรษณีย์ของวารสารหรือผู้จัดพิมพ์"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+"เลือกธีมวารสารและเลือกส่วนประกอบเค้าโครงที่นี่ อาจอัปโหลดสไตล์ชีตวารสาร "
+"ซึ่งสามารถใช้เพื่อแทนที่ข้อมูลสไตล์ในสไตล์ชีตและสไตล์ชีตธีมทั้งระบบ "
+"(หากเลือกธีม)"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr ""
+"นี่คือส่วนท้ายของบันทึกของคุณ หากต้องการเปลี่ยนหรืออัปเดตส่วนท้าย ให้วางโค้ด "
+"HTML ในกล่องข้อความด้านล่าง ตัวอย่างอาจเป็นแถบนําทางอื่น ตัวนับ ฯลฯ "
+"ส่วนท้ายนี้จะปรากฏในทุกหน้า"
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"ให้คําอธิบายสั้นๆ เกี่ยวกับวารสารของคุณและระบุบรรณาธิการ กรรมการผู้จัดการ "
+"และสมาชิกคนอื่นๆ ในทีมบรรณาธิการของคุณ"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"PKP Preservation Network (PN) ให้บริการเก็บรักษาวารสาร OJS ใดๆ "
+"ที่ตรงตามเกณฑ์พื้นฐานบางประการฟรี หากต้องการเก็บถาวรบันทึกประจําวันของคุณใน "
+"PN โปรดขอให้ผู้ดูแลระบบติดตั้งปลั๊กอิน PKP|PN จาก Plugin Gallery"
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+"เปิดใช้งาน LOCKSS "
+"เพื่อจัดเก็บและแจกจ่ายเนื้อหาวารสารที่ห้องสมุดที่เข้าร่วมผ่านทางหน้า LOCKSS "
+"<a href=\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a>"
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+"ระบุห้องสมุด 6-10 แห่งที่จะลงทะเบียนและแคชวารสาร ตัวอย่างเช่น "
+"หันไปหาสถาบันที่บรรณาธิการหรือสมาชิกคณะกรรมการทํางาน และ/หรือสถาบันที่เข้าร่"
+"วมใน LOCKSS อยู่แล้ว ดู <a href=\"https://www.lockss.org/join-lockss/partner-"
+"communities\" target=\"_blank\">the LOCKSS community</a>"
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr ""
+"URL เป็น URL แบบสัมบูรณ์ (เช่น \"http://www.example.com\") "
+"แทนที่จะเป็นเส้นทางที่สัมพันธ์กับไซต์ (เช่น \"/ผู้จัดการ/การตั้งค่า\")"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+"<strong>หมายเหตุ:</strong> ขณะนี้อีเมลตอบรับการส่งถูกปิดใช้งาน "
+"หากต้องการใช้คุณสมบัตินี้ ให้เปิดใช้งานอีเมล \"Submission Ack\" ในอีเมล"
+
+msgid "manager.setup.policies.description"
+msgstr ""
+"โฟกัส การตรวจสอบโดยผู้ทรงคุณวุฒิ ส่วนต่างๆ ความเป็นส่วนตัว ความปลอดภัย "
+"และเพิ่มเติมเกี่ยวกับรายการต่างๆ"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"คําแนะนําในการพิสูจน์อักษรจะมีให้สําหรับผู้พิสูจน์อักษร ผู้เขียน "
+"บรรณาธิการเค้าโครง และบรรณาธิการส่วนในขั้นตอนการแก้ไขการส่ง "
+"ด้านล่างนี้คือชุดคําสั่งเริ่มต้นใน HTML ซึ่งสามารถแก้ไขหรือแทนที่ด้วย "
+"Journal Manager ได้ทุกจุด (ใน HTML หรือข้อความธรรมดา)"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"รายการวารสารสามารถตีพิมพ์ร่วมกันได้ โดยเป็นส่วนหนึ่งของประเด็นที่มีสารบั"
+"ญของตนเอง อีกทางหนึ่ง สามารถเผยแพร่แต่ละรายการได้ทันทีที่พร้อม "
+"โดยเพิ่มลงในสารบัญของเล่ม \"ปัจจุบัน\" ให้คําชี้แจงเกี่ยวกับระบบที่วารสารนี้จ"
+"ะใช้และความถี่ในการตีพิมพ์ที่คาดหวังแก่ผู้อ่านใน About the Journal"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr ""
+"หากต้องการส่งการแจ้งเตือนทางอีเมลอัตโนมัติ "
+"ผู้ดูแลระบบไซต์จะต้องเปิดใช้งานตัวเลือก <tt>scheduled_tasks</tt> "
+"ในไฟล์การกําหนดค่า OJS "
+"อาจจําเป็นต้องมีการกําหนดค่าเซิร์ฟเวอร์เพิ่มเติมตามที่ระบุไว้ในเอกสาร OJS"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr ""
+"ผู้ตรวจสอบสามารถส่งลิงก์ที่ปลอดภัยในคําเชิญทางอีเมล "
+"ซึ่งจะเข้าสู่ระบบโดยอัตโนมัติเมื่อคลิกลิงก์"
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"ช่วยให้เครื่องมือค้นหาเช่น Google ค้นพบและแสดงไซต์ของคุณ ขอแนะนําให้ส่ง <a "
+"href=\"{$sitemapUrl}\" target=\"_blank\">sitemap</a>"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"ให้คําอธิบายโดยย่อ (50-300 ตัวอักษร) "
+"ของวารสารซึ่งเครื่องมือค้นหาสามารถแสดงได้เมื่อแสดงรายการวารสารในผลการค้นหา"
+
+msgid "manager.setup.sectionsDescription"
+msgstr ""
+"หากต้องการสร้างหรือแก้ไขส่วนต่างๆ สําหรับวารสาร (เช่น บทความ บทวิจารณ์หนังสื"
+"อ ฯลฯ) ให้ไปที่ Section Management.<br /><br />Authors "
+"ในการส่งรายการไปยังวารสารจะกําหนด"
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"ป้องกันไม่ให้ผู้ใช้ส่งบทความใหม่ลงในวารสาร "
+"สามารถปิดใช้งานการส่งสําหรับส่วนวารสารแต่ละส่วนในหน้าการตั้งค่า <a href=\""
+"{$url}\">journal sections</a>"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"วารสารนี้ไม่รับการส่งผลงานในขณะนี้ "
+"เยี่ยมชมการตั้งค่าเวิร์กโฟลว์เพื่ออนุญาตการส่ง"
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"ให้ข้อมูลเมตาแก่บริการจัดทําดัชนีของบุคคลที่สามผ่าน <a href=\"https://www."
+"openarchives.org/\">Open Archives Initiative</a>"
+
+msgid "manager.setup.useThumbnail"
+msgstr "ภาพขนาดย่อ"
+
+msgid "manager.setup.useTextTitle"
+msgstr "ชื่อเรื่อง"
+
+msgid "manager.statistics.statistics"
+msgstr "สถิติวารสาร"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "ยอมรับ"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "ปฏิเสธ"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "วันที่จะตรวจสอบ"
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "ประเด็นที่เผยแพร่"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "การส่งทั้งหมด"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Peer ตรวจสอบแล้ว"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "ผู้อ่านที่ลงทะเบียน"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "เลขที่ ได้รับมอบหมาย"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "คะแนนบรรณาธิการ"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr ""
+"เลือกส่วนสําหรับการคํานวณสถิติที่ผ่านการตรวจสอบโดยผู้ทรงคุณวุฒิของวารสารนี้"
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "การสมัครสมาชิก"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "ดาวน์โหลดไฟล์บทความ"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "การดูหน้าบทคัดย่อบทความ"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "บทความบทคัดย่อหน้าดูและดาวน์โหลด"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "ตัวระบุที่ไม่ซ้ํา"
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "วารสารจะใช้กองบรรณาธิการ/คณะกรรมการพิจารณา"
+
+msgid "manager.setup.useImageTitle"
+msgstr "ชื่อเรื่อง รูปภาพ"
+
+msgid "manager.setup.userRegistration"
+msgstr "การลงทะเบียนผู้ใช้"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "จํานวนการดูบทความ (สําหรับผู้เขียนเท่านั้น)"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "ส่งอีกครั้ง"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "วันที่จะตีพิมพ์"
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "รายการที่เผยแพร่"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr "ตรวจสอบรายการที่จะให้บริการแก่ผู้อ่านใน About the Journal"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "ผู้ตรวจสอบ"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "ลําดับที่ของรีวิว"
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+"OJS คํานวณสถิติต่อไปนี้สําหรับแต่ละวารสาร \"วันที่จะตรวจสอบ\" "
+"คํานวณจากวันที่ส่ง (หรือการกําหนดเวอร์ชันตรวจสอบ) "
+"ไปจนถึงการตัดสินใจของบรรณาธิการเบื้องต้น ในขณะที่ \"วันที่จะเผยแพร่\" "
+"วัดสําหรับการส่งที่ได้รับการยอมรับจากการอัปโหลดครั้งแรกไปยังการตีพิมพ์"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr ""
+"บทความและประเด็นต่างๆ สามารถติดแท็กด้วยหมายเลขประจําตัวหรือสตริง "
+"โดยใช้ระบบการลงทะเบียน เช่น Digital Object Identifier System (DOI)"
+
+msgid "manager.statistics.statistics.note"
+msgstr ""
+"หมายเหตุ: "
+"เปอร์เซ็นต์สําหรับการส่งที่ได้รับการตรวจสอบโดยผู้ทรงคุณวุฒิอาจรวมกันได้ไม่เกิ"
+"น 100% เนื่องจากรายการที่ส่งใหม่ได้รับการยอมรับ ปฏิเสธ "
+"หรือยังอยู่ในระหว่างดําเนินการ"

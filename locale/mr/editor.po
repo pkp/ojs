@@ -1,7 +1,7 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-07-06 12:25+0000\n"
+"PO-Revision-Date: 2024-07-24 10:40+0000\n"
 "Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
 "Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/editor/mr/>"
 "\n"
@@ -74,7 +74,7 @@ msgid "editor.issues.editIssue"
 msgstr "अंकाचे व्यवस्थापन : {$issueIdentification}"
 
 msgid "editor.issues.currentIssue"
-msgstr "सद्यकालीन अंक"
+msgstr "वर्तमान अंक"
 
 #, fuzzy
 msgid "editor.issues.numArticles"
@@ -327,7 +327,7 @@ msgstr ""
 "क भरण्यासाठी सूचित करा किंवा शुल्क सूट द्या."
 
 msgid "editor.article.payment.requestPayment"
-msgstr "रक्कम भरण्यासाठी विनंती करा"
+msgstr "शुल्क भरण्याबाबत विनंती"
 
 msgid "editor.article.removeCoverImageFileNotFound"
 msgstr ""
@@ -456,7 +456,7 @@ msgid "editor.issues.subscription"
 msgstr "वर्गणी"
 
 msgid "editor.issues.confirmSetCurrentIssue"
-msgstr "तुम्ही तयार केलेला अंक खात्रीने सद्यकालीन असणार आहे?"
+msgstr "तुम्ही तयार केलेला अंक खात्रीने वर्तमान असणार आहे ना?"
 
 msgid "editor.issues.galleys"
 msgstr "अंकाची कच्ची मुद्रिते"
@@ -477,7 +477,7 @@ msgstr ""
 "तुमची खात्री आहे का की तुम्ही या अंकाचे कच्चे मुद्रित काढून टाकू इच्छिता?"
 
 msgid "grid.action.setCurrentIssue"
-msgstr "सद्यकालीन अंकाची मांडणी करा"
+msgstr "वर्तमान अंकाची मांडणी करा"
 
 msgid "editor.article.designateReviewVersion"
 msgstr "मूळ फाईलला समीक्षापूर्व स्वरूप म्हणून निर्देशित करा"

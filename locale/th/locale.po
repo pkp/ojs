@@ -1,0 +1,96 @@
+# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-07-30 06:57+0000\n"
+"Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
+"Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/locale/th/>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "วารสารนี้ไม่ได้เผยแพร่เนื้อหาทางออนไลน์"
+
+msgid "context.current"
+msgstr "วารสารปัจจุบัน:"
+
+msgid "context.select"
+msgstr "สลับไปยัง another journal:"
+
+msgid "navigation.categories"
+msgstr "ประเภท"
+
+msgid "navigation.categories.browse"
+msgstr "เรียกดู"
+
+msgid "common.software"
+msgstr "ระบบวารสารแบบเปิด"
+
+msgid "common.payments"
+msgstr "การชําระเงิน"
+
+msgid "navigation.journalHelp"
+msgstr "ความช่วยเหลือวารสาร"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "คลิกที่ไอคอนเพื่อกรอกแบบฟอร์มรีวิว"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "กรุณากรอกข้อมูลในช่องที่จําเป็น"
+
+msgid "common.confirmComplete"
+msgstr ""
+"คุณแน่ใจหรือว่าต้องการทําเครื่องหมายงานนี้เสร็จสมบูรณ์? "
+"คุณอาจไม่สามารถทําการเปลี่ยนแปลงได้ในภายหลัง"
+
+msgid "common.payment"
+msgstr "การชําระเงิน"
+
+msgid "common.homePageHeader.altText"
+msgstr "ส่วนหัวของหน้าแรก"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "รูปภาพหน้าแรกของวารสาร"
+
+msgid "doi.manager.settings.publications"
+msgstr "บทความ"
+
+msgid "navigation.current"
+msgstr "ปัจจุบัน"
+
+msgid "navigation.otherJournals"
+msgstr "วารสารอื่นๆ"
+
+msgid "navigation.browseByIssue"
+msgstr "ตามฉบับ"
+
+msgid "navigation.browseByAuthor"
+msgstr "โดยผู้เขียน"
+
+msgid "navigation.infoForAuthors"
+msgstr "สําหรับนักเขียน"
+
+msgid "navigation.infoForLibrarians"
+msgstr "สําหรับบรรณารักษ์"
+
+#, fuzzy
+msgid "navigation.competingInterestGuidelines"
+msgstr "แนวทางผลประโยชน์ที่แข่งขันกัน"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "ข้อมูลสําหรับผู้เขียน"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "ข้อมูลสําหรับบรรณารักษ์"
+
+msgid "navigation.skip.about"
+msgstr "ข้ามไปที่เกี่ยวกับวารสาร"
+
+msgid "navigation.skip.issue"
+msgstr "ข้ามไปยังปัญหาปัจจุบัน"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "ไม่ได้รับมอบหมาย"

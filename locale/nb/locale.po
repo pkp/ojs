@@ -1,11 +1,11 @@
 # Tormod Strømme <tormod.stromme@uib.no>, 2022.
-# Aysa Ekanger <aysa.ekanger@uit.no>, 2023.
+# Aysa Ekanger <aysa.ekanger@uit.no>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2023-04-18 21:55+0000\n"
+"PO-Revision-Date: 2024-07-18 13:40+0000\n"
 "Last-Translator: Aysa Ekanger <aysa.ekanger@uit.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/nb_NO/>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Tidsskriftets innhold publiseres ikke på nett."
@@ -539,8 +539,11 @@ msgstr ""
 "Kunne ikke generere DOI til følgende utgave: {$itemTitle}. Utgaven "
 "eksisterer ikke i det valgte tidsskriftet."
 
+#, fuzzy
 msgid "doi.issue.incorrectStaleStatus"
 msgstr ""
+"Kunne ikke sette DOI-status til foreldet (\"stale\") for følgende utgave: "
+"{$itemTitle}. DOIen må ha status som registrert eller deponert."
 
 msgid "doi.issue.notPublished"
 msgstr ""
@@ -2305,7 +2308,7 @@ msgid "notification.type.newAnnouncement"
 msgstr "Nytt oppslag."
 
 msgid "notification.type.openAccess"
-msgstr ""
+msgstr "En utgave har blitt gjort åpent tilgjengelig."
 
 msgid "notification.type.reviewerFormComment"
 msgstr "Et skjema for fagfellevurdering har blitt sendt inn for «{$title}»."
