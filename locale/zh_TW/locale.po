@@ -1774,12 +1774,6 @@ msgstr ""
 msgid "installer.upgradeComplete"
 msgstr ""
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"現有新版本的OJS可供應用！您現正使用OJS版本{$currentVersion}。最新的版本為"
-"{$currentVersion}。請到<a href=\"https://pkp.sfu.ca/ojs_download\" "
-"target=\"_new\">此頁面</a>下載最新版本及查看升級指引。"
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 "現有新版本的OJS可供應用！您現正使用OJS版本{$currentVersion}。最新的版本為"

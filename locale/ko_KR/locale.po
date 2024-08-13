@@ -1718,9 +1718,6 @@ msgstr ""
 msgid "installer.upgradeComplete"
 msgstr ""
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 

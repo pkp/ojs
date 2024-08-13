@@ -2065,13 +2065,6 @@ msgstr ""
 "تعليقات، لطفاً، أنقر <a href=\"http://forum.pkp.sfu.ca\" target=\"_new"
 "\">منتدى الدعم</a>.</p>"
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"تم إطلاق نسخة جديدة من نظام المجلات المفتوحة! أنت حالياً تستعمل النسخة "
-"{$currentVersion} منه. النسخة ذات الإصدار الأحدث هي OJS {$latestVersion}. "
-"لطفاً، قم بزيارة <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new"
-"\">هذه الصفحة</a> لتنزيل النسخة الأحدث والعثور على تعليمات الترقية."
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 "تم إطلاق نسخة جديدة من نظام المجلات المفتوحة! أنت حالياً تستعمل النسخة "

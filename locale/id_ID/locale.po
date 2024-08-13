@@ -2102,13 +2102,6 @@ msgstr ""
 "pertanyaan atau komentar, silakan kunjungi <a href=\"http://forum.pkp.sfu.ca"
 "\" target=\"_new\">forum dukungan</a>.</p>"
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"Ada versi baru OJS! Anda saat ini menggunakan OJS {$currentVersion}. Versi "
-"terbaru adalah OJS {$latestVersion}. Silakan kunjungi <a href=\"http://pkp."
-"sfu.ca/ojs_download\" target=\"_new\">laman ini</a> untuk mengunduh versi "
-"terbaru dan membaca instruksi upgrade-nya."
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 "Ada versi baru OJS! Anda saat ini menggunakan OJS {$currentVersion}. Versi "

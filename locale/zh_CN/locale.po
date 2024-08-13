@@ -1955,12 +1955,6 @@ msgstr ""
 "strong> 如果您有问题或建议，请访问<a href=\"http://forum.pkp.sfu.ca\" target="
 "\"_new\">支持讨论区</a>.</p>"
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"有新版本的OJS可用。您目前使用OJS版本{$currentVersion}. 最新的版本为OJS "
-"{$latestVersion}. 请访问<a href=\"http://pkp.sfu.ca/ojs_download\" target="
-"\"_new\"页面 </a> 下载最新的版本并找到升级说明。"
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 "有新版本的OJS可用。您目前使用OJS版本{$currentVersion}.最新的版本为OJS "

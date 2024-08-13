@@ -2142,13 +2142,6 @@ msgstr ""
 "Jos sinulla on kysymyksiä tai kommentteja, käy <a href=\"http://forum.pkp."
 "sfu.ca\" target=\"_new\">tukifoorumi-sivulla</a>.</p>"
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"OJS:stä on saatavilla uusi versio! Käytät tällä hetkellä versiota OJS "
-"{$currentVersion}. Viimeisin versio on OJS {$latestVersion}. Lataa uusin "
-"versio ja tutustu päivitysohjeisiin <a href=\"http://pkp.sfu.ca/ojs_download"
-"\" target=\"_new\">täällä</a>."
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 "OJS:stä on saatavilla uusi versio! Käytät tällä hetkellä versiota OJS "
