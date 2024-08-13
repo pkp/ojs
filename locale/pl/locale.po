@@ -2106,13 +2106,6 @@ msgstr ""
 "otrzymywać powiadomienia dotyczące bezpieczeństwa oraz aktualizacje "
 "dotyczące nadchodzących wydań, nowych wtyczek i planowanych funkcji.</p>"
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"Nowa wersja OJS jest dostępna! W tej chwili używasz OJS w wersji "
-"{$currentVersion}. Najnowszą wersją jest {$latestVersion}. Przejdź <a href="
-"\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">na stronę </a> w celu "
-"pobrania najnowszej wersji."
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 "Dostępna jest nowa wersja OJS! Aktualnie korzystasz z wersji OJS "

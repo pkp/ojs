@@ -2151,13 +2151,6 @@ msgstr ""
 "receber avisos de segurança e atualizações sobre os próximos lançamentos, "
 "novos plugins e recursos planejados.</p>"
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"Uma nova versão do sistema está disponível! Sua versão atual é OJS "
-"{$currentVersion}. A versão mais recente é OJS {$latestVersion}. Acesse <a "
-"href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">esta página</a> para "
-"baixar a nova versão e para instruções sobre atualização."
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 "Uma nova versão do sistema está disponível! Sua versão atual é OJS "

@@ -2118,13 +2118,6 @@ msgstr ""
 "href=\"http://forum.pkp.sfu.ca\" target=\"_new\">მხარდაჭერის ფორუმი </a>. </"
 "p>"
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"ხელმისაწვდომია OJS-ის ახალი ვერსია! თქვენ ამჟამად იყენებთ OJS-ს "
-"{$currentVersion} ვერსიას. უახლესი ვერსია არის OJS {$latestVersion}. გთხოვთ, "
-"ეწვიოთ <a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">ამ გვერდს,"
-"</a> რომ ჩამოტვირთოთ უახლესი ვერსია და იპოვოთ განახლების ინსტრუქციები."
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 "ხელმისაწვდომია OJS-ის ახალი ვერსია! თქვენ ამჟამად იყენებთ OJS-ს "

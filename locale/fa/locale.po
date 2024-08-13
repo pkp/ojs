@@ -2039,13 +2039,6 @@ msgstr ""
 "ثبت‌نام کنید.</strong>  چنانچه سؤال و یا نظری دارید لطفاً از  <a href=\"http://"
 "forum.pkp.sfu.ca\" target=\"_new\"> انجمن پشتیبانی </a> دیدن نمایید.</p>"
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"نسخه جدیدی از OJS در دسترس است. شما در حال استفاده از نسخه {$currentVersion} "
-"هستید در حالی که آخرین نسخه موجود، نسخه {$latestVersion} است. لطفاً به <a "
-"href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">این صفحه</a> مراجعه "
-"کرده، آخرین نسخه را دانلود نمونه و دستورالعمل‌های به‌روزرسانی را مطالعه کنید."
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 "نسخه جدیدی از OJS در دسترس است. شما در حال استفاده از نسخه {$currentVersion} "

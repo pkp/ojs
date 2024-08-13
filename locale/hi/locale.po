@@ -2273,13 +2273,6 @@ msgstr ""
 "प्रश्न या टिप्पणी है, तो कृपया <a href = \"http://forum.pkp.sfu.ca\" लक्ष्य = पर "
 "जाएं। \"_new\"> समर्थन मंच </a>। </ p>"
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"OJS का एक नया संस्करण उपलब्ध है! आप वर्तमान में OJS {$ currentVersion} का उपयोग कर "
-"रहे हैं। सबसे हालिया संस्करण OJS {$ latestVersion} है। हाल के संस्करण को डाउनलोड करने "
-"और अपग्रेड निर्देश खोजने के लिए कृपया <a href=\"http://pkp.sfu.ca/ojs_download\" "
-"target=\"_new\"> इस पृष्ठ </a> पर जाएं।"
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 "OJS का एक नया संस्करण उपलब्ध है! आप वर्तमान में OJS {$ currentVersion} का उपयोग कर "

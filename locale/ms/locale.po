@@ -2115,13 +2115,6 @@ msgstr ""
 "menerima notis keselamatan dan kemas kini tentang keluaran akan datang, "
 "pemalam baharu dan ciri yang dirancang.</p>"
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"Terdapat versi baru OJS yang tersedia! Anda kini menggunakan OJS "
-"{$currentVersion}. Versi terbaru ialah OJS {$latestVersion}. Sila kunjungi "
-"<a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\"> halaman ini </a> "
-"untuk memuat turun versi terbaru dan dapatkan arahan naik taraf."
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 "Terdapat versi baru OJS yang tersedia! Anda kini menggunakan OJS "

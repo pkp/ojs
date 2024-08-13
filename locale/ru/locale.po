@@ -2148,13 +2148,6 @@ msgstr ""
 "получать уведомления о безопасности, а также обновления о предстоящих "
 "релизах, новых модулях и запланированных функциях.</p>"
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"Доступна новая версия OJS! Сейчас вы пользуетесь OJS {$currentVersion}. "
-"Самая последняя версия — OJS {$latestVersion}. Пожалуйста, зайдите на <a "
-"href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">эту страницу</a>, "
-"чтобы скачать самую последнюю версию и получить инструкции по обновлению."
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 "Доступна новая версия OJS! Сейчас вы пользуетесь OJS {$currentVersion}. "

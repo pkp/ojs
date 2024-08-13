@@ -2101,13 +2101,6 @@ msgstr ""
 "saņemtu drošības paziņojumus un atjauninājumus par gaidāmajiem laidieniem, "
 "jauniem spraudņiem un plānotajām funkcijām.</p>"
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"Ir pieejama jauna OJS versija! Pašlaik jūs izmantojat OJS {$currentVersion}. "
-"Jaunākā versija ir OJS {$latestVersion}. Lūdzu, apmeklējiet <a href=\"http://"
-"pkp.sfu.ca/ojs_download\" target=\"_new\">šo lapu</a>, lai lejupielādētu "
-"jaunāko versiju un atrastu atjaunināšanas norādījumus."
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 "Ir pieejama jauna OJS versija! Pašlaik jūs izmantojat OJS {$currentVersion}. "

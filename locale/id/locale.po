@@ -2083,13 +2083,6 @@ msgstr ""
 "mendapatkan pemberitahuan keamanan, dan pembaruan tentang rilis berikutnya, "
 "plugin baru, dan fitur-fitur yang direncanakan.</p>"
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"Ada versi baru OJS! Anda saat ini menggunakan OJS {$currentVersion}. Versi "
-"terbaru adalah OJS {$latestVersion}. Silakan kunjungi <a href=\"https://pkp."
-"sfu.ca/ojs_download\" target=\"_new\">laman ini</a> untuk mengunduh versi "
-"terbaru dan membaca instruksi upgrade-nya."
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 "Ada versi baru OJS! Anda saat ini menggunakan OJS {$currentVersion}. Versi "
