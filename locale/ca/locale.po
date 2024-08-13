@@ -2124,13 +2124,6 @@ msgstr ""
 "per a rebre avisos de seguretat i novetats sobre futurs llançaments, nous "
 "mòduls i característiques previstes.</p>"
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"Hi ha una nova versió de l'OJS disponible. Actualment feu servir l'OJS "
-"{$currentVersion}. La versió més recent és OJS {$latestVersion}. Visiteu <a "
-"href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">aquesta pàgina</a> "
-"per descarregar la versió més recent i obtenir instruccions d'actualització."
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 "Hi ha una nova versió de l'OJS disponible. Actualment feu servir l'OJS "

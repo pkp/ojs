@@ -2126,13 +2126,6 @@ msgstr ""
 "xét, vui lòng truy cập <a href=\"http://forum.pkp.sfu.ca\" target=\"_new"
 "\">support forum</a>.</p>"
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"Có một phiên bản mới của OJS! Bạn hiện đang sử dụng OJS {$currentVersion}. "
-"Phiên bản gần đây nhất là OJS {$latestVersion}. Vui lòng truy cập <a href="
-"\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">this page</a> để tải "
-"xuống phiên bản mới nhất và tìm hướng dẫn nâng cấp."
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 "Có một phiên bản mới của OJS! Bạn hiện đang sử dụng OJS {$currentVersion}. "

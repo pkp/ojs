@@ -2125,13 +2125,6 @@ msgstr ""
 "du har spørsmål eller kommentarer, besøk <a href=\"http://forum.pkp.sfu.ca\" "
 "target=\"_new\">støtteforumet</a>.</p>"
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"En ny versjon av OJS er tilgengelig. Du bruker for tiden OJS "
-"{$currentVersion}. Den nyeste versjonen av OJS er {$latestVersion}. Besøk <a "
-"href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">denne siden</a> for "
-"å laste ned den nyeste versjonen og for å finne instruksjon for oppgradering."
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 "En ny versjon av OJS er tilgjengelig. Du bruker for tiden OJS "

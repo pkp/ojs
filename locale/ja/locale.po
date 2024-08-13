@@ -2075,13 +2075,6 @@ msgstr ""
 "://pkp.sfu.ca/developer-newsletter\" target=\"_new\""
 ">開発者ニュースレター</a>にサインアップしてください。</p>"
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"OJSの新しいバージョンが利用できます。現在、OJS {$currentVersion} を使用してい"
-"ます。最新のバージョンは OJS {$latestVersion} です。<a href=\"http://pkp.sfu."
-"ca/ojs_download\" target=\"_new\">このページ</a>をご覧になり、最新バージョン"
-"のダウンロードやアップグレード方法をご確認ください。"
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 "OJSの新しいバージョンが利用できます。現在、OJS {$currentVersion} を使用してい"

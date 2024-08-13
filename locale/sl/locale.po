@@ -2088,13 +2088,6 @@ msgstr ""
 "ali komentarje, prosimo obiščite <a href=\"http://forum.pkp.sfu.ca\" target="
 "\"_new\">forum za pomoč</a>.</p>"
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"Na voljo je nova verzija OJS! Trenutno uporabljate verzijo "
-"{$currentVersion}. Zadnja verzija OJS je {$latestVersion}. Obiščite <a href="
-"\"https://pkp.sfu.ca/ojs_download\" target=\"_new\">to stran</a>, da "
-"prenesete zadnjo verzijo in navodila za nadgradnjo."
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 "Na voljo je nova verzija OJS! Trenutno uporabljate verzijo "

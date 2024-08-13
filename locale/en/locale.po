@@ -1925,13 +1925,6 @@ msgstr ""
 "sign up to our <a href=\"https://pkp.sfu.ca/developer-newsletter\" target=\"_new\">developer newsletter</a> "
 "to receive security notices, and updates on upcoming releases, new plugins, and planned features.</p>"
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"There is a new version of OJS available! You are currently using OJS "
-"{$currentVersion}. The most recent version is OJS {$latestVersion}. Please "
-"visit <a href=\"https://pkp.sfu.ca/ojs_download\" target=\"_new\">this "
-"page</a> to download the most recent version and find upgrade instructions."
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 "There is a new version of OJS available! You are currently using OJS "

@@ -2152,13 +2152,6 @@ msgstr ""
 "Galderarik edo oharrik egin nahi baduzu, bisitatu <a href=\"http://forum.pkp."
 "sfu.ca\" target=\"_new\">laguntza teknikoko foroa</a>.</p>"
 
-msgid "site.upgradeAvailable.admin"
-msgstr ""
-"OJSren bertsio berri bat dago eskuragarri! Gaur egun OJS {$currentVersion} "
-"erabiltzen ari zara. Azken bertsioa OJS {$latestVersion} da. Mesedez, zoaz "
-"<a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">this page</a> "
-"orrira azken bertsioa jaisteko eta eguneratzeko argibideak aurkitzeko."
-
 msgid "site.upgradeAvailable.manager"
 msgstr ""
 "OJSren bertsio berri bat dago eskuragarri! Une honetan OJS {$currentVersion} "
