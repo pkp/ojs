@@ -24,7 +24,7 @@ use PKP\plugins\ReportPlugin;
 use PKP\security\Role;
 use PKP\stageAssignment\StageAssignment;
 use PKP\submission\PKPSubmission;
-use PKP\submission\SubmissionAgencyDAO;
+use PKP\submission\SubmissionAgencyVocab;
 use PKP\submission\SubmissionDisciplineDAO;
 use PKP\submission\SubmissionKeywordDAO;
 use PKP\submission\SubmissionSubjectDAO;
@@ -89,7 +89,6 @@ class ArticleReportPlugin extends ReportPlugin
         $submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /** @var SubmissionKeywordDAO $submissionKeywordDao */
         $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /** @var SubmissionSubjectDAO $submissionSubjectDao */
         $submissionDisciplineDao = DAORegistry::getDAO('SubmissionDisciplineDAO'); /** @var SubmissionDisciplineDAO $submissionDisciplineDao */
-        $submissionAgencyDao = DAORegistry::getDAO('SubmissionAgencyDAO'); /** @var SubmissionAgencyDAO $submissionAgencyDao */
 
         $userGroups = UserGroup::withContextIds([$context->getId()])
             ->get()
@@ -162,7 +161,7 @@ class ArticleReportPlugin extends ReportPlugin
             $subjects = $submissionSubjectDao->getSubjects($submission->getCurrentPublication()->getId());
             $disciplines = $submissionDisciplineDao->getDisciplines($submission->getCurrentPublication()->getId());
             $keywords = $submissionKeywordDao->getKeywords($submission->getCurrentPublication()->getId());
-            $agencies = $submissionAgencyDao->getAgencies($submission->getCurrentPublication()->getId());
+            $agencies = SubmissionAgencyVocab::getAgencies($submission->getCurrentPublication()->getId());
 
             // Store the submission results
             $results[] = [
