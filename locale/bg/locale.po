@@ -1,8 +1,8 @@
-# Cyril Kamburov <cc@intermedia.bg>, 2021, 2022, 2023.
+# Cyril Kamburov <cc@intermedia.bg>, 2021, 2022, 2023, 2024.
 # Albena Vassileva <albena.ava@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-02-27 07:59+0000\n"
+"PO-Revision-Date: 2024-08-17 11:41+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/locale/bg/"
 ">\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Това списание не публикува съдържанието си онлайн."
@@ -456,16 +456,16 @@ msgstr ""
 "деактивирана."
 
 msgid "user.role.manager"
-msgstr "Раководител (мединжър) на списанието"
+msgstr "Ръководител (мениджър) на списанието"
 
 msgid "user.role.subEditor"
 msgstr "Редактор на раздела (секцията)"
 
 msgid "user.role.subscriptionManager"
-msgstr "Отговорник за абонаментите"
+msgstr "Мениджър на абонаментите"
 
 msgid "user.role.managers"
-msgstr "Раководители на списанието"
+msgstr "Ръководители на списанието"
 
 msgid "user.role.subEditors"
 msgstr "Редактори на раздели"
@@ -1776,7 +1776,7 @@ msgid "about.subscriptions.institutional"
 msgstr "Институционални абонаменти"
 
 msgid "about.subscriptionsContact"
-msgstr "Отговорник за абонаментите"
+msgstr "Контакт за абонаментите"
 
 msgid "about.subscriptionTypes.name"
 msgstr "Име"
