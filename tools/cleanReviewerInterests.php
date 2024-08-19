@@ -3,8 +3,8 @@
 /**
  * @file tools/cleanReviewerInterests.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2024 Simon Fraser University
+ * Copyright (c) 2003-2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ReviewerInterestsDeletionTool
@@ -17,10 +17,10 @@
 require(dirname(__FILE__) . '/bootstrap.php');
 
 use PKP\cliTool\CommandLineTool;
-use PKP\controlledVocab\ControlledVocabDAO;
+use PKP\controlledVocab\ControlledVocab;
 use PKP\controlledVocab\ControlledVocabEntryDAO;
 use PKP\db\DAORegistry;
-use PKP\user\InterestDAO;
+use PKP\user\UserInterest;
 
 class ReviewerInterestsDeletionTool extends CommandLineTool
 {
@@ -57,7 +57,7 @@ class ReviewerInterestsDeletionTool extends CommandLineTool
     /**
      * Remove user interests that are not referenced by any user account
      */
-    public function execute()
+    public function execute(): void
     {
         $orphans = $this->_getOrphanVocabInterests();
         if (!count($orphans)) {
@@ -69,7 +69,7 @@ class ReviewerInterestsDeletionTool extends CommandLineTool
         switch ($command) {
             case '--show':
                 $interests = array_map(function ($entry) {
-                    return $entry->getData(InterestDAO::CONTROLLED_VOCAB_INTEREST);
+                    return $entry->getData(UserInterest::CONTROLLED_VOCAB_INTEREST);
                 }, $orphans);
                 echo "Below are the user interests that are not referenced by any user account.\n";
                 echo "\t" . join("\n\t", $interests) . "\n";
@@ -96,33 +96,23 @@ class ReviewerInterestsDeletionTool extends CommandLineTool
      *
      * @return array array of ControlledVocabEntry object
      */
-    protected function _getOrphanVocabInterests()
+    protected function _getOrphanVocabInterests(): array
     {
-        /** @var InterestDAO */
-        $interestDao = DAORegistry::getDAO('InterestDAO');
-        /** @var ControlledVocabDAO */
-        $vocabDao = DAORegistry::getDAO('ControlledVocabDAO');
-        /** @var ControlledVocabEntryDAO */
+        /** @var ControlledVocabEntryDAO $vocabEntryDao */
         $vocabEntryDao = DAORegistry::getDAO('ControlledVocabEntryDAO');
-
-        $interestVocab = $vocabDao->getBySymbolic(InterestDAO::CONTROLLED_VOCAB_INTEREST);
-        $vocabEntryIterator = $vocabEntryDao->getByControlledVocabId($interestVocab->getId());
+        $interestVocab = ControlledVocab::withSymbolic(UserInterest::CONTROLLED_VOCAB_INTEREST)
+            ->withAssoc(0, 0)
+            ->first();
+        $vocabEntryIterator = $vocabEntryDao->getByControlledVocabId($interestVocab->id);
         $vocabEntryList = $vocabEntryIterator->toArray();
 
         // list of vocab interests in db
-        $allInterestVocabIds = array_map(
-            function ($entry) {
-                return $entry->getId();
-            },
-            $vocabEntryList
-        );
+        $allInterestVocabIds = array_map(fn ($entry) => $entry->getId(), $vocabEntryList);
 
         // list of vocabs associated to users
-        $interests = $interestDao->getAllInterests();
+        $interests = UserInterest::getAllInterests();
         $userInterestVocabIds = array_map(
-            function ($interest) {
-                return $interest->getId();
-            },
+            fn ($interest) => $interest->getId(),
             $interests->toArray()
         );
 

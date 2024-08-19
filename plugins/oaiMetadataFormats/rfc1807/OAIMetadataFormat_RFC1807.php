@@ -26,8 +26,8 @@ use APP\submission\Submission;
 use PKP\db\DAORegistry;
 use PKP\oai\OAIMetadataFormat;
 use PKP\oai\OAIUtils;
-use PKP\submission\SubmissionKeywordDAO;
-use PKP\submission\SubmissionSubjectDAO;
+use PKP\submission\SubmissionKeywordVocab;
+use PKP\submission\SubmissionSubjectVocab;
 
 class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
 {
