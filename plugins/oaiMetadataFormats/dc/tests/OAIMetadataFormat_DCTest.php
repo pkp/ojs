@@ -45,8 +45,6 @@ use PKP\doi\Doi;
 use PKP\galley\Collector as GalleyCollector;
 use PKP\galley\Galley;
 use PKP\oai\OAIRecord;
-use PKP\submission\SubmissionKeywordDAO;
-use PKP\submission\SubmissionSubjectDAO;
 use PKP\tests\PKPTestCase;
 
 #[CoversClass(OAIMetadataFormat_DC::class)]
@@ -58,7 +56,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
      */
     protected function getMockedDAOs(): array
     {
-        return [...parent::getMockedDAOs(), 'OAIDAO', 'SubmissionSubjectDAO', 'SubmissionKeywordDAO'];
+        return [...parent::getMockedDAOs(), 'OAIDAO'];
     }
 
     /**
@@ -262,25 +260,6 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->method('getMany')
             ->willReturn(LazyCollection::wrap($galleys));
         app()->instance(GalleyCollector::class, $mockGalleyCollector);
-
-        // Mocked DAO to return the subjects
-        $submissionSubjectDao = $this->getMockBuilder(SubmissionSubjectDAO::class)
-            ->onlyMethods(['getSubjects'])
-            ->getMock();
-        $submissionSubjectDao->expects($this->any())
-            ->method('getSubjects')
-            ->willReturn(['en' => ['article-subject', 'article-subject-class']]);
-        DAORegistry::registerDAO('SubmissionSubjectDAO', $submissionSubjectDao);
-
-        // Mocked DAO to return the keywords
-        $submissionKeywordDao = $this->getMockBuilder(SubmissionKeywordDAO::class)
-            ->onlyMethods(['getKeywords'])
-            ->getMock();
-        $submissionKeywordDao->expects($this->any())
-            ->method('getKeywords')
-            ->willReturn(['en' => ['article-keyword']]);
-        DAORegistry::registerDAO('SubmissionKeywordDAO', $submissionKeywordDao);
-
 
         //
         // Test
