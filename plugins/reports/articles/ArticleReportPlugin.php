@@ -18,7 +18,6 @@ namespace APP\plugins\reports\articles;
 
 use APP\decision\Decision;
 use APP\facades\Repo;
-use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\plugins\ReportPlugin;
 use PKP\security\Role;
@@ -158,9 +157,9 @@ class ArticleReportPlugin extends ReportPlugin
                 $sectionTitles[$sectionId] = $section->getLocalizedTitle();
             }
 
-            $subjects = $submissionSubjectDao->getSubjects($submission->getCurrentPublication()->getId());
-            $disciplines = $submissionDisciplineDao->getDisciplines($submission->getCurrentPublication()->getId());
-            $keywords = $submissionKeywordDao->getKeywords($submission->getCurrentPublication()->getId());
+            $subjects = SubmissionSubjectVocab::getSubjects($submission->getCurrentPublication()->getId());
+            $disciplines = SubmissionDisciplineVocab::getDisciplines($submission->getCurrentPublication()->getId());
+            $keywords = SubmissionKeywordVocab::getKeywords($submission->getCurrentPublication()->getId());
             $agencies = SubmissionAgencyVocab::getAgencies($submission->getCurrentPublication()->getId());
 
             // Store the submission results

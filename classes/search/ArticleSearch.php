@@ -200,7 +200,7 @@ class ArticleSearch extends SubmissionSearch
                 $context = $contextDao->getById($searchFilters['searchJournal']);
             } elseif (array_key_exists('journalTitle', $request->getUserVars())) {
                 $contexts = $contextDao->getAll(true);
-                while ($context = $contexts->next()) {
+                while ($context = $contexts->next()) { /** @var \PKP\context\Context $context */
                     if (in_array(
                         $request->getUserVar('journalTitle'),
                         (array) $context->getName(null)
@@ -334,8 +334,7 @@ class ArticleSearch extends SubmissionSearch
             $article = Repo::submission()->get($submissionId);
             if ($article->getData('status') === PKPSubmission::STATUS_PUBLISHED) {
                 // Retrieve keywords (if any).
-                $submissionSubjectDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /** @var \PKP\submission\SubmissionKeywordDAO $submissionSubjectDao */
-                $allSearchTerms = array_filter($submissionSubjectDao->getKeywords($article->getCurrentPublication()->getId(), [Locale::getLocale(), $article->getData('locale'), Locale::getPrimaryLocale()]));
+                $allSearchTerms = array_filter(SubmissionKeywordVocab::getKeywords($article->getCurrentPublication()->getId(), [Locale::getLocale(), $article->getData('locale'), Locale::getPrimaryLocale()]));
                 foreach ($allSearchTerms as $locale => $localeSearchTerms) {
                     $searchTerms += $localeSearchTerms;
                 }
