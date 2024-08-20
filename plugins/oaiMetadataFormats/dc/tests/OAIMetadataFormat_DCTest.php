@@ -35,9 +35,11 @@ use APP\publication\Publication;
 use APP\section\Section;
 use APP\submission\Submission;
 use Illuminate\Support\LazyCollection;
+use Mockery;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PKP\author\Repository as AuthorRepository;
+use PKP\controlledVocab\Repository as ControlledVocabRepository;
 use PKP\core\Dispatcher;
 use PKP\core\Registry;
 use PKP\db\DAORegistry;
@@ -77,6 +79,19 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
 
     public function testToXml()
     {
+        $controlledVocabRepoMock = Mockery::mock(ControlledVocabRepository::class)
+            ->makePartial()
+            ->shouldReceive('getBySymbolic')
+            ->twice()
+            ->withAnyArgs()
+            ->andReturn(
+                ['en' => ['article-keyword']],
+                ['en' => ['article-subject', 'article-subject-class']]
+            )
+            ->getMock();
+
+        app()->instance(ControlledVocabRepository::class, $controlledVocabRepoMock);
+
         //
         // Create test data.
         //
@@ -100,6 +115,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $publication = $this->getMockBuilder(Publication::class)
             ->onlyMethods([])
             ->getMock();
+        $publication->setData('id', 0);
         $publication->setData('issueId', 96);
         $publication->setData('pages', 15);
         $publication->setData('type', 'art-type', 'en');
@@ -165,6 +181,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->willReturn(Journal::PUBLISHING_MODE_OPEN);
         $journal->setName('journal-title', 'en');
         $journal->setData('publisherInstitution', 'journal-publisher');
+        $journal->setData('supportedFormLocales', []);
         $journal->setPrimaryLocale('en');
         $journal->setPath('journal-path');
         $journal->setData('onlineIssn', 'onlineIssn');
