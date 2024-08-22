@@ -33,9 +33,7 @@ $finder = PhpCsFixer\Finder::create()
         return $folders;
     })());
 
-$rules = include  __DIR__ . '/lib/pkp/.php_cs_rules';
-require(__DIR__ . '/lib/pkp/classes/dev/fixers/bootstrap.php');
+$rules = include './lib/pkp/.php_cs_rules';
 $config = new PhpCsFixer\Config();
 return $config->setRules($rules)
-    ->registerCustomFixers(new PKP\dev\fixers\Fixers())
     ->setFinder($finder);

@@ -26,10 +26,10 @@
 
 ; Set this to On once the system has been installed
 ; (This is generally done automatically by the installer)
-installed = Off
+installed = On
 
 ; The canonical URL to the OJS installation (excluding the trailing slash)
-base_url = "https://pkp.sfu.ca/ojs"
+base_url = "https://journals.exab-development.com"
 
 ; Enable strict mode. This will more aggressively cause errors/warnings when
 ; deprecated behaviour exists in the codebase.
@@ -60,7 +60,7 @@ scheduled_tasks = Off
 ; time zones.
 ; I.e.: "Europe/Amsterdam"
 ; time_zone="Europe/Amsterdam"
-time_zone = "UTC"
+time_zone = Africa/Johannesburg
 
 ; Short and long date formats
 date_format_short = "Y-m-d"
@@ -90,14 +90,14 @@ allow_url_fopen = Off
 ; Generate RESTful URLs using mod_rewrite.  This requires the
 ; rewrite directive to be enabled in your .htaccess or httpd.conf.
 ; See FAQ for more details.
-restful_urls = Off
+restful_urls = On
 
 ; Restrict the list of allowed hosts to prevent HOST header injection.
 ; See docs/README.md for more details. The list should be JSON-formatted.
 ; An empty string indicates that all hosts should be trusted (not recommended!)
 ; Example:
 ; allowed_hosts = '["myjournal.tld", "anotherjournal.tld", "mylibrary.tld"]'
-allowed_hosts = ''
+allowed_hosts = "[\"3.6.44.54\", "journals.exab-development.com"]"
 
 ; Allow the X_FORWARDED_FOR header to override the REMOTE_ADDR as the source IP
 ; Set this to "On" if you are behind a reverse proxy and you control the X_FORWARDED_FOR
@@ -112,7 +112,7 @@ trust_x_forwarded_for = Off
 citation_checking_max_processes = 3
 
 ; Display a message on the site admin and journal manager user home pages if there is an upgrade available
-show_upgrade_warning = On
+show_upgrade_warning = off
 
 ; Set the following parameter to off if you want to work with the uncompiled (non-minified) JavaScript
 ; source for debugging or if you are working off a development branch without compiled JavaScript.
@@ -147,8 +147,8 @@ sandbox = Off
 
 driver = mysqli
 host = localhost
-username = ojs
-password = ojs
+username = muaz
+password = "El$hik@"
 name = ojs
 
 ; Set the non-standard port and/or socket, if used
@@ -218,7 +218,7 @@ connection_charset = utf8
 ; Complete path to directory to store uploaded files
 ; (This directory should not be directly web-accessible)
 ; Windows users should use forward slashes
-files_dir = files
+files_dir = /var/www/html/ojs/ojs/ojs-files
 
 ; Path to the directory to store public uploaded files
 ; (This directory should be web-accessible and the specified path
@@ -302,23 +302,23 @@ allowed_title_html = "b,i,u,sup,sub"
 
 ; Default method to send emails
 ; Available options: sendmail, smtp, log, phpmailer
-default = sendmail
+default = smtp
 
 ; Path to the sendmail, -bs argument is for using SMTP protocol
-sendmail_path = "/usr/sbin/sendmail -bs"
+;sendmail_path = "/usr/sbin/sendmail -bs"
 
 ; Use SMTP for sending mail instead of mail()
-; smtp = On
+smtp = On
 
 ; SMTP server settings
-; smtp_server = mail.example.com
-; smtp_port = 25
+smtp_server = smtp-mail.outlook.com
+smtp_port = 587
 
 ; Enable SMTP authentication
 ; Supported smtp_auth: ssl, tls (see PHPMailer SMTPSecure)
-; smtp_auth = ssl
-; smtp_username = username
-; smtp_password = password
+smtp_auth = starttls
+smtp_username = kawladev@outlook.com
+smtp_password = Mhmoudmoh3
 
 ; Enable suppressing SSL/TLS peer verification by SMTP transports
 ; Note: this is not recommended for security reasons
@@ -326,15 +326,15 @@ sendmail_path = "/usr/sbin/sendmail -bs"
 
 ; Allow envelope sender to be specified
 ; (may not be possible with some server configurations)
-; allow_envelope_sender = Off
+ allow_envelope_sender = On
 
 ; Default envelope sender to use if none is specified elsewhere
-; default_envelope_sender = my_address@my_host.com
+ default_envelope_sender = test@journals.exab-development.com
 
 ; Force the default envelope sender (if present)
 ; This is useful if setting up a site-wide no-reply address
 ; The reply-to field will be set with the reply-to or from address.
-; force_default_envelope_sender = Off
+ force_default_envelope_sender = On
 
 ; Force a DMARC compliant from header (RFC5322.From)
 ; If any of your users have email addresses in domains not under your control
@@ -344,7 +344,7 @@ sendmail_path = "/usr/sbin/sendmail -bs"
 ; from field wil be rewritten with the default_envelope_sender.
 ; To use this you must set force_default_enveloper_sender = On and
 ; default_envelope_sender must be set to a valid address in a domain you own.
-; force_dmarc_compliant_from = Off
+ force_dmarc_compliant_from = On
 
 ; The display name to use with a DMARC compliant from header
 ; By default the DMARC compliant from will have an empty name but this can
@@ -354,7 +354,7 @@ sendmail_path = "/usr/sbin/sendmail -bs"
 ; dmarc_compliant_from_displayname = '%n via %s'
 
 ; If enabled, email addresses must be validated before login is possible.
-require_validation = Off
+require_validation = On
 
 ; Maximum number of days before an unvalidated account expires and is deleted
 validation_timeout = 14
@@ -405,7 +405,7 @@ oai = On
 
 ; OAI Repository identifier. This setting forms part of OAI-PMH record IDs.
 ; Changing this setting may affect existing clients and is not recommended.
-repository_id = ojs.pkp.sfu.ca
+repository_id = "ojs2.3.6.44.54:8000"
 
 ; Maximum number of records per request to serve via OAI
 oai_max_records = 100
@@ -430,13 +430,13 @@ page_links = 10
 [captcha]
 
 ; Whether or not to enable ReCaptcha
-recaptcha = off
+recaptcha = On
 
 ; Public key for reCaptcha (see http://www.google.com/recaptcha)
-recaptcha_public_key = your_public_key
+recaptcha_public_key = 6LeayysqAAAAADpok_RtGauEM0Fww4Z-3C7BEImu
 
 ; Private key for reCaptcha (see http://www.google.com/recaptcha)
-recaptcha_private_key = your_private_key
+recaptcha_private_key = 6LeayysqAAAAAOc5TrEbYmSLVwVVAZt82WERgUYz
 
 ; Whether or not to use Captcha on user registration
 captcha_on_register = on
@@ -562,3 +562,6 @@ job_runner_max_memory = 80
 ; Remove failed jobs from the database after the following number of days.
 ; Remove this setting to leave failed jobs in the database.
 delete_failed_jobs_after = 180
+
+[features]
+site_announcements = On

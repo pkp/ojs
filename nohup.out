@@ -1,0 +1,586 @@
+[Sun Aug 18 08:00:47 2024] PHP Warning:  Module "bz2" is already loaded in Unknown on line 0
+[Sun Aug 18 08:00:47 2024] PHP Warning:  Module "curl" is already loaded in Unknown on line 0
+[Sun Aug 18 08:00:47 2024] PHP Warning:  Module "exif" is already loaded in Unknown on line 0
+[Sun Aug 18 08:00:47 2024] PHP Warning:  Module "FFI" is already loaded in Unknown on line 0
+[Sun Aug 18 08:00:47 2024] PHP Warning:  Module "fileinfo" is already loaded in Unknown on line 0
+[Sun Aug 18 08:00:47 2024] PHP Warning:  Module "ftp" is already loaded in Unknown on line 0
+[Sun Aug 18 08:00:47 2024] PHP Warning:  Module "gd" is already loaded in Unknown on line 0
+[Sun Aug 18 08:00:47 2024] PHP Warning:  Module "gettext" is already loaded in Unknown on line 0
+[Sun Aug 18 08:00:47 2024] PHP Warning:  Module "intl" is already loaded in Unknown on line 0
+[Sun Aug 18 08:00:47 2024] PHP Warning:  Module "mbstring" is already loaded in Unknown on line 0
+[Sun Aug 18 08:00:47 2024] PHP 8.1.2-1ubuntu2.18 Development Server (http://172.26.5.11:8000) started
+[Sun Aug 18 08:51:26 2024] 154.213.184.18:40154 Accepted
+[Sun Aug 18 08:51:27 2024] Server host "example.com" not allowed!
+[Sun Aug 18 08:51:27 2024] ojs2: 400 Bad Request
+[Sun Aug 18 08:51:27 2024] 154.213.184.18:40154 [400]: CONNECT example.com:443
+[Sun Aug 18 08:51:27 2024] 154.213.184.18:40154 Closing
+[Sun Aug 18 08:59:48 2024] 216.218.206.125:53153 Accepted
+[Sun Aug 18 08:59:48 2024] PHP Fatal error:  Uncaught Exception: Mailer driver isn't specified in the application's config in /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php:317
+Stack trace:
+#0 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php(268): PKP\core\PKPContainer::getDefaultMailer()
+#1 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php(117): PKP\core\PKPContainer->loadConfiguration()
+#2 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPApplication.php(228): PKP\core\PKPContainer->registerConfiguredProviders()
+#3 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPApplication.php(200): PKP\core\PKPApplication->initializeLaravelContainer()
+#4 /var/www/html/ojs/ojs/classes/core/Application.php(50): PKP\core\PKPApplication->__construct()
+#5 /var/www/html/ojs/ojs/lib/pkp/includes/bootstrap.php(37): APP\core\Application->__construct()
+#6 /var/www/html/ojs/ojs/index.php(18): require_once('...')
+#7 {main}
+  thrown in /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php on line 317
+[Sun Aug 18 08:59:48 2024] 216.218.206.125:53153 [500]: GET / - Uncaught Exception: Mailer driver isn't specified in the application's config in /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php:317
+Stack trace:
+#0 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php(268): PKP\core\PKPContainer::getDefaultMailer()
+#1 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php(117): PKP\core\PKPContainer->loadConfiguration()
+#2 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPApplication.php(228): PKP\core\PKPContainer->registerConfiguredProviders()
+#3 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPApplication.php(200): PKP\core\PKPApplication->initializeLaravelContainer()
+#4 /var/www/html/ojs/ojs/classes/core/Application.php(50): PKP\core\PKPApplication->__construct()
+#5 /var/www/html/ojs/ojs/lib/pkp/includes/bootstrap.php(37): APP\core\Application->__construct()
+#6 /var/www/html/ojs/ojs/index.php(18): require_once('...')
+#7 {main}
+  thrown in /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php on line 317
+[Sun Aug 18 08:59:48 2024] 216.218.206.125:53153 Closing
+[Sun Aug 18 09:00:28 2024] 216.218.206.101:33095 Accepted
+[Sun Aug 18 09:00:28 2024] 216.218.206.101:33095 [200]: GET /favicon.ico
+[Sun Aug 18 09:00:28 2024] 216.218.206.101:33095 Closing
+[Sun Aug 18 09:00:51 2024] 216.218.206.121:44969 Accepted
+[Sun Aug 18 09:00:51 2024] PHP Fatal error:  Uncaught Exception: Mailer driver isn't specified in the application's config in /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php:317
+Stack trace:
+#0 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php(268): PKP\core\PKPContainer::getDefaultMailer()
+#1 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php(117): PKP\core\PKPContainer->loadConfiguration()
+#2 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPApplication.php(228): PKP\core\PKPContainer->registerConfiguredProviders()
+#3 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPApplication.php(200): PKP\core\PKPApplication->initializeLaravelContainer()
+#4 /var/www/html/ojs/ojs/classes/core/Application.php(50): PKP\core\PKPApplication->__construct()
+#5 /var/www/html/ojs/ojs/lib/pkp/includes/bootstrap.php(37): APP\core\Application->__construct()
+#6 /var/www/html/ojs/ojs/index.php(18): require_once('...')
+#7 {main}
+  thrown in /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php on line 317
+[Sun Aug 18 09:00:51 2024] 216.218.206.121:44969 [500]: GET http://api.ipify.org/?format=json - Uncaught Exception: Mailer driver isn't specified in the application's config in /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php:317
+Stack trace:
+#0 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php(268): PKP\core\PKPContainer::getDefaultMailer()
+#1 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php(117): PKP\core\PKPContainer->loadConfiguration()
+#2 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPApplication.php(228): PKP\core\PKPContainer->registerConfiguredProviders()
+#3 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPApplication.php(200): PKP\core\PKPApplication->initializeLaravelContainer()
+#4 /var/www/html/ojs/ojs/classes/core/Application.php(50): PKP\core\PKPApplication->__construct()
+#5 /var/www/html/ojs/ojs/lib/pkp/includes/bootstrap.php(37): APP\core\Application->__construct()
+#6 /var/www/html/ojs/ojs/index.php(18): require_once('...')
+#7 {main}
+  thrown in /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php on line 317
+[Sun Aug 18 09:00:51 2024] 216.218.206.121:44969 Closing
+[Sun Aug 18 09:01:14 2024] 216.218.206.125:60585 Accepted
+[Sun Aug 18 09:01:14 2024] PHP Fatal error:  Uncaught Exception: Mailer driver isn't specified in the application's config in /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php:317
+Stack trace:
+#0 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php(268): PKP\core\PKPContainer::getDefaultMailer()
+#1 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php(117): PKP\core\PKPContainer->loadConfiguration()
+#2 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPApplication.php(228): PKP\core\PKPContainer->registerConfiguredProviders()
+#3 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPApplication.php(200): PKP\core\PKPApplication->initializeLaravelContainer()
+#4 /var/www/html/ojs/ojs/classes/core/Application.php(50): PKP\core\PKPApplication->__construct()
+#5 /var/www/html/ojs/ojs/lib/pkp/includes/bootstrap.php(37): APP\core\Application->__construct()
+#6 /var/www/html/ojs/ojs/index.php(18): require_once('...')
+#7 {main}
+  thrown in /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php on line 317
+[Sun Aug 18 09:01:14 2024] 216.218.206.125:60585 [500]: CONNECT www.shadowserver.org:443 - Uncaught Exception: Mailer driver isn't specified in the application's config in /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php:317
+Stack trace:
+#0 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php(268): PKP\core\PKPContainer::getDefaultMailer()
+#1 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php(117): PKP\core\PKPContainer->loadConfiguration()
+#2 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPApplication.php(228): PKP\core\PKPContainer->registerConfiguredProviders()
+#3 /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPApplication.php(200): PKP\core\PKPApplication->initializeLaravelContainer()
+#4 /var/www/html/ojs/ojs/classes/core/Application.php(50): PKP\core\PKPApplication->__construct()
+#5 /var/www/html/ojs/ojs/lib/pkp/includes/bootstrap.php(37): APP\core\Application->__construct()
+#6 /var/www/html/ojs/ojs/index.php(18): require_once('...')
+#7 {main}
+  thrown in /var/www/html/ojs/ojs/lib/pkp/classes/core/PKPContainer.php on line 317
+[Sun Aug 18 09:01:14 2024] 216.218.206.125:60585 Closing
+[Sun Aug 18 09:38:04 2024] 167.94.138.39:50280 Accepted
+[Sun Aug 18 09:38:07 2024] 167.94.138.39:50280 Invalid request (Connection reset by peer)
+[Sun Aug 18 09:38:07 2024] 167.94.138.39:50280 Closing
+[Sun Aug 18 09:38:07 2024] 167.94.138.39:50294 Accepted
+[Sun Aug 18 09:38:10 2024] 167.94.138.39:50294 [302]: GET /
+[Sun Aug 18 09:38:10 2024] 167.94.138.39:50294 Closing
+[Sun Aug 18 09:38:14 2024] 167.94.138.39:49250 Accepted
+[Sun Aug 18 09:38:14 2024] 167.94.138.39:49250 [302]: GET /
+[Sun Aug 18 09:38:14 2024] 167.94.138.39:49250 Closing
+[Sun Aug 18 09:38:14 2024] 167.94.138.39:49262 Accepted
+[Sun Aug 18 09:38:14 2024] 167.94.138.39:49262 Invalid request (Malformed HTTP request)
+[Sun Aug 18 09:38:14 2024] 167.94.138.39:49262 Closing
+[Sun Aug 18 09:38:18 2024] 167.94.138.39:49276 Accepted
+[Sun Aug 18 09:38:18 2024] There was a problem reading the Geo database at /var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb. Error: The file "/var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb" does not exist or is not readable.
+[Sun Aug 18 09:38:18 2024] 167.94.138.39:49276 [200]: GET /kaael
+[Sun Aug 18 09:38:18 2024] 167.94.138.39:49276 Closing
+[Sun Aug 18 09:38:19 2024] 167.94.138.39:49292 Accepted
+[Sun Aug 18 09:38:19 2024] 167.94.138.39:49292 [200]: GET /favicon.ico
+[Sun Aug 18 09:38:19 2024] 167.94.138.39:49292 Closing
+[Sun Aug 18 09:38:20 2024] 167.94.138.39:49308 Accepted
+[Sun Aug 18 09:38:20 2024] 167.94.138.39:49308 Invalid request (Malformed HTTP request)
+[Sun Aug 18 09:38:20 2024] 167.94.138.39:49308 Closing
+[Sun Aug 18 09:38:20 2024] 167.94.138.39:49324 Accepted
+[Sun Aug 18 09:38:20 2024] 167.94.138.39:49324 [302]: GET /
+[Sun Aug 18 09:38:20 2024] 167.94.138.39:49324 Closing
+[Sun Aug 18 10:07:03 2024] 212.62.100.189:52498 Accepted
+[Sun Aug 18 10:08:16 2024] 212.62.100.189:52498 Closed without sending a request; it was probably just an unused speculative preconnection
+[Sun Aug 18 10:08:16 2024] 212.62.100.189:52498 Closing
+[Sun Aug 18 10:08:17 2024] 212.62.100.189:52532 Accepted
+[Sun Aug 18 10:09:17 2024] 212.62.100.189:52532 Closed without sending a request; it was probably just an unused speculative preconnection
+[Sun Aug 18 10:09:17 2024] 212.62.100.189:52532 Closing
+[Sun Aug 18 10:09:48 2024] 212.62.100.189:52550 Accepted
+[Sun Aug 18 10:10:48 2024] 212.62.100.189:52550 Closed without sending a request; it was probably just an unused speculative preconnection
+[Sun Aug 18 10:10:48 2024] 212.62.100.189:52550 Closing
+[Sun Aug 18 11:15:05 2024] 45.58.184.133:36946 Accepted
+[Sun Aug 18 11:15:05 2024] 45.58.184.133:36946 Invalid request (Unsupported SSL request)
+[Sun Aug 18 11:15:05 2024] 45.58.184.133:36946 Closing
+[Sun Aug 18 11:15:06 2024] 45.58.184.133:36962 Accepted
+[Sun Aug 18 11:15:06 2024] 45.58.184.133:36962 Invalid request (Unsupported SSL request)
+[Sun Aug 18 11:15:06 2024] 45.58.184.133:36962 Closing
+[Sun Aug 18 11:15:06 2024] 45.58.184.133:36964 Accepted
+[Sun Aug 18 11:15:06 2024] 45.58.184.133:36964 [302]: GET /
+[Sun Aug 18 11:15:06 2024] 45.58.184.133:36964 Closing
+[Sun Aug 18 11:15:07 2024] 45.58.184.133:36968 Accepted
+[Sun Aug 18 11:15:07 2024] There was a problem reading the Geo database at /var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb. Error: The file "/var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb" does not exist or is not readable.
+[Sun Aug 18 11:15:07 2024] 45.58.184.133:36968 [200]: GET /kaael
+[Sun Aug 18 11:15:07 2024] 45.58.184.133:36968 Closing
+[Sun Aug 18 11:15:08 2024] 45.58.184.133:36974 Accepted
+[Sun Aug 18 11:15:08 2024] ojs2: 404 Not Found
+[Sun Aug 18 11:15:08 2024] 45.58.184.133:36974 [404]: GET /login
+[Sun Aug 18 11:15:08 2024] 45.58.184.133:36974 Closing
+[Sun Aug 18 12:03:52 2024] 104.152.52.30:36344 Accepted
+[Sun Aug 18 12:03:52 2024] 104.152.52.30:36344 Invalid request (Connection reset by peer)
+[Sun Aug 18 12:03:52 2024] 104.152.52.30:36344 Closing
+[Sun Aug 18 12:03:54 2024] 104.152.52.30:36360 Accepted
+[Sun Aug 18 12:04:05 2024] 104.152.52.30:36360 Closed without sending a request; it was probably just an unused speculative preconnection
+[Sun Aug 18 12:04:05 2024] 104.152.52.30:36360 Closing
+[Sun Aug 18 12:04:05 2024] 104.152.52.30:55366 Accepted
+[Sun Aug 18 12:04:05 2024] Server host "172.26.5.11" not allowed!
+[Sun Aug 18 12:04:05 2024] ojs2: 400 Bad Request
+[Sun Aug 18 12:04:05 2024] 104.152.52.30:55366 [400]: GET /
+[Sun Aug 18 12:04:05 2024] 104.152.52.30:55366 Closing
+[Sun Aug 18 12:04:06 2024] 104.152.52.30:55378 Accepted
+[Sun Aug 18 12:04:06 2024] 104.152.52.30:55378 [404]: GET /nice%20ports%2C/Tri%6Eity.txt%2ebak - No such file or directory
+[Sun Aug 18 12:04:06 2024] 104.152.52.30:55378 Closing
+[Sun Aug 18 12:04:07 2024] 104.152.52.30:55390 Accepted
+[Sun Aug 18 12:04:07 2024] 104.152.52.30:55400 Accepted
+[Sun Aug 18 12:04:07 2024] 104.152.52.30:55408 Accepted
+[Sun Aug 18 12:04:07 2024] ojs2: 404 Not Found
+[Sun Aug 18 12:04:07 2024] 104.152.52.30:55390 [404]: GET /nmaplowercheck1723982647
+[Sun Aug 18 12:04:07 2024] 104.152.52.30:55390 Closing
+[Sun Aug 18 12:04:07 2024] ojs2: 404 Not Found
+[Sun Aug 18 12:04:07 2024] 104.152.52.30:55400 [404]: POST /sdk
+[Sun Aug 18 12:04:07 2024] 104.152.52.30:55400 Closing
+[Sun Aug 18 12:04:07 2024] Server host "172.26.5.11" not allowed!
+[Sun Aug 18 12:04:07 2024] ojs2: 400 Bad Request
+[Sun Aug 18 12:04:07 2024] 104.152.52.30:55408 [400]: GET /
+[Sun Aug 18 12:04:07 2024] 104.152.52.30:55408 Closing
+[Sun Aug 18 12:04:08 2024] 104.152.52.30:55412 Accepted
+[Sun Aug 18 12:04:08 2024] ojs2: 404 Not Found
+[Sun Aug 18 12:04:08 2024] 104.152.52.30:55412 [404]: GET /evox/about
+[Sun Aug 18 12:04:08 2024] 104.152.52.30:55412 Closing
+[Sun Aug 18 12:04:08 2024] 104.152.52.30:55426 Accepted
+[Sun Aug 18 12:04:08 2024] ojs2: 404 Not Found
+[Sun Aug 18 12:04:08 2024] 104.152.52.30:55426 [404]: GET /HNAP1
+[Sun Aug 18 12:04:08 2024] 104.152.52.30:55426 Closing
+[Sun Aug 18 12:04:09 2024] 104.152.52.30:55436 Accepted
+[Sun Aug 18 12:04:09 2024] Server host "172.26.5.11" not allowed!
+[Sun Aug 18 12:04:09 2024] ojs2: 400 Bad Request
+[Sun Aug 18 12:04:09 2024] 104.152.52.30:55436 [400]: GET /
+[Sun Aug 18 12:04:09 2024] 104.152.52.30:55436 Closing
+[Sun Aug 18 12:04:09 2024] 104.152.52.30:55448 Accepted
+[Sun Aug 18 12:04:09 2024] Server host "ec2-3-6-44-54.ap-south-1.compute.amazonaws.com" not allowed!
+[Sun Aug 18 12:04:09 2024] ojs2: 400 Bad Request
+[Sun Aug 18 12:04:09 2024] 104.152.52.30:55448 [400]: GET /
+[Sun Aug 18 12:04:09 2024] 104.152.52.30:55448 Closing
+[Sun Aug 18 12:41:02 2024] 154.213.184.18:51872 Accepted
+[Sun Aug 18 12:41:02 2024] Server host "example.com" not allowed!
+[Sun Aug 18 12:41:02 2024] ojs2: 400 Bad Request
+[Sun Aug 18 12:41:02 2024] 154.213.184.18:51872 [400]: CONNECT example.com:443
+[Sun Aug 18 12:41:02 2024] 154.213.184.18:51872 Closing
+[Sun Aug 18 13:09:35 2024] 162.142.125.202:57994 Accepted
+[Sun Aug 18 13:09:38 2024] 162.142.125.202:57994 Invalid request (Connection reset by peer)
+[Sun Aug 18 13:09:38 2024] 162.142.125.202:57994 Closing
+[Sun Aug 18 13:09:38 2024] 162.142.125.202:33636 Accepted
+[Sun Aug 18 13:09:42 2024] 162.142.125.202:33636 [302]: GET /
+[Sun Aug 18 13:09:42 2024] 162.142.125.202:33636 Closing
+[Sun Aug 18 13:09:45 2024] 162.142.125.202:33646 Accepted
+[Sun Aug 18 13:09:45 2024] 162.142.125.202:33646 [302]: GET /
+[Sun Aug 18 13:09:45 2024] 162.142.125.202:33646 Closing
+[Sun Aug 18 13:09:46 2024] 162.142.125.202:33656 Accepted
+[Sun Aug 18 13:09:46 2024] 162.142.125.202:33656 Invalid request (Malformed HTTP request)
+[Sun Aug 18 13:09:46 2024] 162.142.125.202:33656 Closing
+[Sun Aug 18 13:09:50 2024] 162.142.125.202:52550 Accepted
+[Sun Aug 18 13:09:50 2024] There was a problem reading the Geo database at /var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb. Error: The file "/var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb" does not exist or is not readable.
+[Sun Aug 18 13:09:50 2024] 162.142.125.202:52550 [200]: GET /kaael
+[Sun Aug 18 13:09:50 2024] 162.142.125.202:52550 Closing
+[Sun Aug 18 13:09:51 2024] 162.142.125.202:52572 Accepted
+[Sun Aug 18 13:09:51 2024] 162.142.125.202:52572 [200]: GET /favicon.ico
+[Sun Aug 18 13:09:51 2024] 162.142.125.202:52572 Closing
+[Sun Aug 18 13:09:53 2024] 162.142.125.202:52622 Accepted
+[Sun Aug 18 13:09:53 2024] 162.142.125.202:52622 Invalid request (Malformed HTTP request)
+[Sun Aug 18 13:09:53 2024] 162.142.125.202:52622 Closing
+[Sun Aug 18 13:09:53 2024] 162.142.125.202:52628 Accepted
+[Sun Aug 18 13:09:53 2024] 162.142.125.202:52628 [302]: GET /
+[Sun Aug 18 13:09:53 2024] 162.142.125.202:52628 Closing
+[Sun Aug 18 13:36:48 2024] 140.246.102.184:46350 Accepted
+[Sun Aug 18 13:36:48 2024] 140.246.102.184:46350 [404]: GET /.env - No such file or directory
+[Sun Aug 18 13:36:48 2024] 140.246.102.184:46350 Closing
+[Sun Aug 18 14:21:36 2024] 198.235.24.201:61744 Accepted
+[Sun Aug 18 14:21:36 2024] 198.235.24.201:61744 [302]: GET /
+[Sun Aug 18 14:21:36 2024] 198.235.24.201:61744 Closing
+[Sun Aug 18 14:58:16 2024] 199.45.155.90:56070 Accepted
+[Sun Aug 18 14:58:19 2024] 199.45.155.90:56070 Invalid request (Connection reset by peer)
+[Sun Aug 18 14:58:19 2024] 199.45.155.90:56070 Closing
+[Sun Aug 18 14:58:19 2024] 199.45.155.90:58312 Accepted
+[Sun Aug 18 14:58:23 2024] 199.45.155.90:58312 [302]: GET /
+[Sun Aug 18 14:58:23 2024] 199.45.155.90:58312 Closing
+[Sun Aug 18 14:58:28 2024] 199.45.155.90:38624 Accepted
+[Sun Aug 18 14:58:29 2024] 199.45.155.90:38624 [302]: GET /
+[Sun Aug 18 14:58:29 2024] 199.45.155.90:38624 Closing
+[Sun Aug 18 14:58:30 2024] 199.45.155.90:38656 Accepted
+[Sun Aug 18 14:58:30 2024] 199.45.155.90:38656 Invalid request (Malformed HTTP request)
+[Sun Aug 18 14:58:30 2024] 199.45.155.90:38656 Closing
+[Sun Aug 18 14:58:37 2024] 199.45.155.90:38670 Accepted
+[Sun Aug 18 14:58:38 2024] There was a problem reading the Geo database at /var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb. Error: The file "/var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb" does not exist or is not readable.
+[Sun Aug 18 14:58:38 2024] 199.45.155.90:38670 [200]: GET /kaael
+[Sun Aug 18 14:58:38 2024] 199.45.155.90:38670 Closing
+[Sun Aug 18 14:58:38 2024] 199.45.155.90:53962 Accepted
+[Sun Aug 18 14:58:39 2024] 199.45.155.90:53962 [200]: GET /favicon.ico
+[Sun Aug 18 14:58:39 2024] 199.45.155.90:53962 Closing
+[Sun Aug 18 14:58:39 2024] 199.45.155.90:53974 Accepted
+[Sun Aug 18 14:58:40 2024] 199.45.155.90:53974 Invalid request (Malformed HTTP request)
+[Sun Aug 18 14:58:40 2024] 199.45.155.90:53974 Closing
+[Sun Aug 18 14:58:40 2024] 199.45.155.90:53988 Accepted
+[Sun Aug 18 14:58:41 2024] 199.45.155.90:53988 [302]: GET /
+[Sun Aug 18 14:58:41 2024] 199.45.155.90:53988 Closing
+[Sun Aug 18 15:24:55 2024] 104.152.52.208:54682 Accepted
+[Sun Aug 18 15:25:26 2024] 104.152.52.208:54682 Invalid request (Connection reset by peer)
+[Sun Aug 18 15:25:26 2024] 104.152.52.208:54682 Closing
+[Sun Aug 18 16:40:00 2024] 40.78.88.66:36506 Accepted
+[Sun Aug 18 16:40:10 2024] 40.78.88.66:36506 Invalid request (Unexpected EOF)
+[Sun Aug 18 16:40:10 2024] 40.78.88.66:36506 Closing
+[Sun Aug 18 16:52:38 2024] 154.213.184.18:44770 Accepted
+[Sun Aug 18 16:52:38 2024] Server host "example.com" not allowed!
+[Sun Aug 18 16:52:38 2024] ojs2: 400 Bad Request
+[Sun Aug 18 16:52:38 2024] 154.213.184.18:44770 [400]: CONNECT example.com:443
+[Sun Aug 18 16:52:38 2024] 154.213.184.18:44770 Closing
+[Sun Aug 18 17:52:16 2024] 185.167.96.138:43552 Accepted
+[Sun Aug 18 17:52:16 2024] 185.167.96.138:43552 Invalid request (Unsupported SSL request)
+[Sun Aug 18 17:52:16 2024] 185.167.96.138:43552 Closing
+[Sun Aug 18 19:25:10 2024] 172.206.140.63:49166 Accepted
+[Sun Aug 18 19:25:10 2024] 172.206.140.63:49166 Invalid request (Unsupported SSL request)
+[Sun Aug 18 19:25:10 2024] 172.206.140.63:49166 Closing
+[Sun Aug 18 19:27:55 2024] 45.241.5.165:59939 Accepted
+[Sun Aug 18 19:27:55 2024] 45.241.5.165:59939 [200]: GET /favicon.ico
+[Sun Aug 18 19:27:55 2024] 45.241.5.165:59939 Closing
+[Sun Aug 18 19:29:50 2024] 45.241.5.165:60234 Accepted
+[Sun Aug 18 19:29:50 2024] 45.241.5.165:60234 [200]: GET /favicon.ico
+[Sun Aug 18 19:29:50 2024] 45.241.5.165:60234 Closing
+[Sun Aug 18 19:42:38 2024] 185.139.228.190:43224 Accepted
+[Sun Aug 18 19:42:38 2024] 185.139.228.190:43224 Invalid request (Unsupported SSL request)
+[Sun Aug 18 19:42:38 2024] 185.139.228.190:43224 Closing
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:60554 Accepted
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:36693 Accepted
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:60554 [200]: GET /assets/css/bootstrap.min.css
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:36693 [200]: GET /assets/css/owl.carousel.css
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:36693 Closing
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:36697 Accepted
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:36697 [200]: GET /assets/css/media.css
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:36697 Closing
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:60560 Accepted
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:60558 Accepted
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:60558 [200]: GET /assets/css/custom.css
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:36695 Accepted
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:60560 [200]: GET /assets/css/owl.theme.default.css
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:60558 Closing
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:60560 Closing
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:36695 [200]: GET /assets/img/Logo.png
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:36695 Closing
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:60554 Closing
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:36699 Accepted
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:36699 [200]: GET /assets/js/jquery.min.js
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:60562 Accepted
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:60562 [200]: GET /assets/js/bootstrap.bundle.min.js
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:60564 Accepted
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:60564 [200]: GET /assets/js/owl.carousel.js
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:36701 Accepted
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:36701 [200]: GET /assets/js/custom.js
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:36701 Closing
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:60562 Closing
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:60564 Closing
+[Sun Aug 18 19:55:19 2024] 176.45.138.195:36699 Closing
+[Sun Aug 18 19:55:20 2024] 176.45.138.195:36703 Accepted
+[Sun Aug 18 19:55:20 2024] 176.45.138.195:36703 [200]: GET /assets/css/Almarai-Regular.woff2
+[Sun Aug 18 19:55:20 2024] 176.45.138.195:36703 Closing
+[Sun Aug 18 19:55:20 2024] 176.45.138.195:60566 Accepted
+[Sun Aug 18 19:55:20 2024] 176.45.138.195:60566 [200]: GET /assets/css/Almarai-Bold.woff2
+[Sun Aug 18 19:55:20 2024] 176.45.138.195:60566 Closing
+[Sun Aug 18 19:55:20 2024] 176.45.138.195:36705 Accepted
+[Sun Aug 18 19:55:20 2024] 176.45.138.195:36705 [200]: GET /assets/css/Almarai-ExtraBold.woff2
+[Sun Aug 18 19:55:20 2024] 176.45.138.195:36705 Closing
+[Sun Aug 18 19:55:20 2024] 176.45.138.195:60568 Accepted
+[Sun Aug 18 19:55:20 2024] 176.45.138.195:60568 [200]: GET /assets/img/articlehead.jpg
+[Sun Aug 18 19:55:20 2024] 176.45.138.195:60568 Closing
+[Sun Aug 18 19:55:20 2024] 176.45.138.195:36707 Accepted
+[Sun Aug 18 19:55:20 2024] 176.45.138.195:36707 [200]: GET /favicon.ico
+[Sun Aug 18 19:55:20 2024] 176.45.138.195:36707 Closing
+[Sun Aug 18 19:55:35 2024] 176.45.138.195:60582 Accepted
+[Sun Aug 18 19:55:36 2024] There was a problem reading the Geo database at /var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb. Error: The file "/var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb" does not exist or is not readable.
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60582 [200]: GET /index.php/kaael/index
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60582 Closing
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36721 Accepted
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36721 [200]: GET /assets/css/bootstrap.min.css
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60586 Accepted
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60586 [200]: GET /assets/css/owl.carousel.css
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60586 Closing
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36723 Accepted
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60588 Accepted
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36723 [200]: GET /assets/css/owl.theme.default.css
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36723 Closing
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36727 Accepted
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60588 [200]: GET /assets/css/custom.css
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60588 Closing
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36725 Accepted
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36725 [200]: GET /assets/css/media.css
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36725 Closing
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36727 [200]: GET /assets/js/jquery.min.js
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36721 Closing
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36729 Accepted
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36729 [200]: GET /assets/img/Logo.png
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36729 Closing
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36727 Closing
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36731 Accepted
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60592 Accepted
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36731 [200]: GET /assets/img/1.png
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60594 Accepted
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36731 Closing
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60592 [200]: GET /assets/img/image%201.png
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60594 [200]: GET /assets/js/bootstrap.bundle.min.js
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60594 Closing
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60596 Accepted
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36733 Accepted
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60596 [200]: GET /assets/js/owl.carousel.js
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36733 [404]: GET /assets/img/no-15%201.png - No such file or directory
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36733 Closing
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36735 Accepted
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36735 [200]: GET /assets/css/Almarai-Regular.woff2
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36735 Closing
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60596 Closing
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60592 Closing
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60598 Accepted
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60598 [200]: GET /assets/css/Almarai-Bold.woff2
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60598 Closing
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36737 Accepted
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36737 [200]: GET /assets/css/Almarai-ExtraBold.woff2
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36737 Closing
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60600 Accepted
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60600 [200]: GET /assets/js/custom.js
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60600 Closing
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36739 Accepted
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36739 [200]: GET /assets/img/fi_9847019.png
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36739 Closing
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60602 Accepted
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36741 Accepted
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60602 [200]: GET /public/journals/1/cover_issue_1_ar.png
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36741 [200]: GET /assets/img/3.png
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:36741 Closing
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60604 Accepted
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60604 [200]: GET /assets/img/Vector.png
+[Sun Aug 18 19:55:36 2024] 176.45.138.195:60604 Closing
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:60606 Accepted
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:60606 [200]: GET /public/journals/1/submission_1_1_coverImage_en.png
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:36743 Accepted
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:36743 [200]: GET /public/journals/1/submission_8_11_coverImage_ar.jpg
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:36745 Accepted
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:36745 [200]: GET /public/journals/1/submission_4_4_coverImage_en.png
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:60602 Closing
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:60606 Closing
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:60608 Accepted
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:36745 Closing
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:60608 [200]: GET /public/journals/1/submission_6_6_coverImage_en.png
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:36747 Accepted
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:36747 [200]: GET /public/journals/1/submission_7_7_coverImage_en.png
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:60608 Closing
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:36747 Closing
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:60610 Accepted
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:60610 [200]: GET /public/journals/1/submission_9_12_coverImage_en.png
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:36743 Closing
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:36749 Accepted
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:36749 [200]: GET /public/journals/1/submission_2_10_coverImage_en.png
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:36751 Accepted
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:36751 [200]: GET /assets/img/5.png
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:60610 Closing
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:36753 Accepted
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:60614 Accepted
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:36753 [404]: GET /assets/img/bk.mp4 - No such file or directory
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:36753 Closing
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:60614 [200]: GET /assets/img/Rectangle%20148008.png
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:36751 Closing
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:36749 Closing
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:60616 Accepted
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:60616 [200]: GET /assets/img/4.png
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:60616 Closing
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:36755 Accepted
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:36755 [200]: GET /assets/img/6.png
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:60614 Closing
+[Sun Aug 18 19:55:37 2024] 176.45.138.195:36755 Closing
+[Sun Aug 18 20:31:21 2024] 165.154.138.34:48340 Accepted
+[Sun Aug 18 20:31:21 2024] 165.154.138.34:48340 Invalid request (Unsupported SSL request)
+[Sun Aug 18 20:31:21 2024] 165.154.138.34:48340 Closing
+[Sun Aug 18 20:31:21 2024] 165.154.138.34:48344 Accepted
+[Sun Aug 18 20:31:31 2024] 165.154.138.34:48344 Closed without sending a request; it was probably just an unused speculative preconnection
+[Sun Aug 18 20:31:31 2024] 165.154.138.34:48344 Closing
+[Sun Aug 18 20:31:31 2024] 165.154.138.34:38790 Accepted
+[Sun Aug 18 20:31:31 2024] 165.154.138.34:38790 [302]: GET /
+[Sun Aug 18 20:31:31 2024] 165.154.138.34:38790 Closing
+[Sun Aug 18 20:31:32 2024] 165.154.138.34:38796 Accepted
+[Sun Aug 18 20:31:32 2024] There was a problem reading the Geo database at /var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb. Error: The file "/var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb" does not exist or is not readable.
+[Sun Aug 18 20:31:32 2024] 165.154.138.34:38796 [200]: GET /kaael
+[Sun Aug 18 20:31:32 2024] 165.154.138.34:38796 Closing
+[Sun Aug 18 20:31:33 2024] 165.154.138.34:38812 Accepted
+[Sun Aug 18 20:31:33 2024] 165.154.138.34:38812 [200]: GET /favicon.ico
+[Sun Aug 18 20:31:33 2024] 165.154.138.34:38812 Closing
+[Sun Aug 18 20:31:33 2024] 165.154.138.34:38822 Accepted
+[Sun Aug 18 20:31:33 2024] 165.154.138.34:38822 [200]: GET /robots.txt
+[Sun Aug 18 20:31:33 2024] 165.154.138.34:38822 Closing
+[Sun Aug 18 20:31:33 2024] 165.154.138.34:38838 Accepted
+[Sun Aug 18 20:31:33 2024] 165.154.138.34:38838 [404]: GET /sitemap.xml - No such file or directory
+[Sun Aug 18 20:31:33 2024] 165.154.138.34:38838 Closing
+[Sun Aug 18 20:31:33 2024] 165.154.138.34:38858 Accepted
+[Sun Aug 18 20:31:33 2024] 165.154.138.34:38858 [200]: GET /assets/js/bootstrap.bundle.min.js
+[Sun Aug 18 20:31:33 2024] 165.154.138.34:38862 Accepted
+[Sun Aug 18 20:31:33 2024] 165.154.138.34:38862 [200]: GET /assets/js/owl.carousel.js
+[Sun Aug 18 20:31:33 2024] 165.154.138.34:38848 Accepted
+[Sun Aug 18 20:31:33 2024] 165.154.138.34:38848 [200]: GET /assets/js/jquery.min.js
+[Sun Aug 18 20:31:33 2024] 165.154.138.34:38850 Accepted
+[Sun Aug 18 20:31:33 2024] 165.154.138.34:38850 [200]: GET /assets/js/custom.js
+[Sun Aug 18 20:31:33 2024] 165.154.138.34:38850 Closing
+[Sun Aug 18 20:31:34 2024] 165.154.138.34:38858 Closing
+[Sun Aug 18 20:31:34 2024] 165.154.138.34:38862 Closing
+[Sun Aug 18 20:31:34 2024] 165.154.138.34:38848 Closing
+[Sun Aug 18 20:31:34 2024] 165.154.138.34:38872 Accepted
+[Sun Aug 18 20:31:34 2024] 165.154.138.34:38872 [404]: GET /config.json - No such file or directory
+[Sun Aug 18 20:31:34 2024] 165.154.138.34:38872 Closing
+[Sun Aug 18 20:57:23 2024] 154.213.184.18:54844 Accepted
+[Sun Aug 18 20:57:23 2024] Server host "example.com" not allowed!
+[Sun Aug 18 20:57:23 2024] ojs2: 400 Bad Request
+[Sun Aug 18 20:57:23 2024] 154.213.184.18:54844 [400]: CONNECT example.com:443
+[Sun Aug 18 20:57:23 2024] 154.213.184.18:54844 Closing
+[Sun Aug 18 21:53:56 2024] 205.210.31.64:63794 Accepted
+[Sun Aug 18 21:53:56 2024] 205.210.31.64:63794 [302]: GET /
+[Sun Aug 18 21:53:56 2024] 205.210.31.64:63794 Closing
+[Sun Aug 18 21:53:56 2024] 205.210.31.64:63810 Accepted
+[Sun Aug 18 21:53:56 2024] There was a problem reading the Geo database at /var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb. Error: The file "/var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb" does not exist or is not readable.
+[Sun Aug 18 21:53:56 2024] 205.210.31.64:63810 [200]: GET /kaael
+[Sun Aug 18 21:53:56 2024] 205.210.31.64:63810 Closing
+[Sun Aug 18 22:18:30 2024] 199.45.155.70:35870 Accepted
+[Sun Aug 18 22:18:33 2024] 199.45.155.70:35870 Invalid request (Connection reset by peer)
+[Sun Aug 18 22:18:33 2024] 199.45.155.70:35870 Closing
+[Sun Aug 18 22:18:33 2024] 199.45.155.70:33884 Accepted
+[Sun Aug 18 22:18:36 2024] 199.45.155.70:33884 [302]: GET /
+[Sun Aug 18 22:18:36 2024] 199.45.155.70:33884 Closing
+[Sun Aug 18 22:18:42 2024] 199.45.155.70:34342 Accepted
+[Sun Aug 18 22:18:42 2024] 199.45.155.70:34342 [302]: GET /
+[Sun Aug 18 22:18:42 2024] 199.45.155.70:34342 Closing
+[Sun Aug 18 22:18:42 2024] 199.45.155.70:34350 Accepted
+[Sun Aug 18 22:18:42 2024] 199.45.155.70:34350 Invalid request (Malformed HTTP request)
+[Sun Aug 18 22:18:42 2024] 199.45.155.70:34350 Closing
+[Sun Aug 18 22:18:45 2024] 199.45.155.70:34390 Accepted
+[Sun Aug 18 22:18:46 2024] There was a problem reading the Geo database at /var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb. Error: The file "/var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb" does not exist or is not readable.
+[Sun Aug 18 22:18:46 2024] 199.45.155.70:34390 [200]: GET /kaael
+[Sun Aug 18 22:18:46 2024] 199.45.155.70:34390 Closing
+[Sun Aug 18 22:18:46 2024] 199.45.155.70:34398 Accepted
+[Sun Aug 18 22:18:46 2024] 199.45.155.70:34398 [200]: GET /favicon.ico
+[Sun Aug 18 22:18:46 2024] 199.45.155.70:34398 Closing
+[Sun Aug 18 22:18:46 2024] 199.45.155.70:34402 Accepted
+[Sun Aug 18 22:18:47 2024] 199.45.155.70:34402 Invalid request (Malformed HTTP request)
+[Sun Aug 18 22:18:47 2024] 199.45.155.70:34402 Closing
+[Sun Aug 18 22:18:47 2024] 199.45.155.70:34404 Accepted
+[Sun Aug 18 22:18:47 2024] 199.45.155.70:34404 [302]: GET /
+[Sun Aug 18 22:18:47 2024] 199.45.155.70:34404 Closing
+[Sun Aug 18 23:45:36 2024] 87.236.176.196:49791 Accepted
+[Sun Aug 18 23:45:39 2024] 87.236.176.196:49791 [302]: GET /
+[Sun Aug 18 23:45:39 2024] 87.236.176.196:49791 Closing
+[Sun Aug 18 23:45:39 2024] 87.236.176.196:45351 Accepted
+[Sun Aug 18 23:45:39 2024] There was a problem reading the Geo database at /var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb. Error: The file "/var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb" does not exist or is not readable.
+[Sun Aug 18 23:45:39 2024] 87.236.176.196:45351 [200]: GET /kaael
+[Sun Aug 18 23:45:39 2024] 87.236.176.196:45351 Closing
+[Mon Aug 19 01:00:21 2024] 154.213.184.18:43476 Accepted
+[Mon Aug 19 01:00:21 2024] Server host "example.com" not allowed!
+[Mon Aug 19 01:00:21 2024] ojs2: 400 Bad Request
+[Mon Aug 19 01:00:21 2024] 154.213.184.18:43476 [400]: CONNECT example.com:443
+[Mon Aug 19 01:00:21 2024] 154.213.184.18:43476 Closing
+[Mon Aug 19 03:22:59 2024] 198.235.24.152:64310 Accepted
+[Mon Aug 19 03:22:59 2024] 198.235.24.152:64310 [302]: GET /
+[Mon Aug 19 03:22:59 2024] 198.235.24.152:64310 Closing
+[Mon Aug 19 05:05:52 2024] 154.213.184.18:48558 Accepted
+[Mon Aug 19 05:05:52 2024] Server host "example.com" not allowed!
+[Mon Aug 19 05:05:52 2024] ojs2: 400 Bad Request
+[Mon Aug 19 05:05:52 2024] 154.213.184.18:48558 [400]: CONNECT example.com:443
+[Mon Aug 19 05:05:52 2024] 154.213.184.18:48558 Closing
+[Mon Aug 19 05:06:50 2024] 80.66.75.115:64825 Accepted
+[Mon Aug 19 05:06:52 2024] 80.66.75.115:64825 Invalid request (Malformed HTTP request)
+[Mon Aug 19 05:06:52 2024] 80.66.75.115:64825 Closing
+[Mon Aug 19 07:58:25 2024] 142.93.210.135:43532 Accepted
+[Mon Aug 19 07:58:25 2024] 142.93.210.135:43532 Invalid request (Unsupported SSL request)
+[Mon Aug 19 07:58:25 2024] 142.93.210.135:43532 Closing
+[Mon Aug 19 07:58:25 2024] 142.93.210.135:43548 Accepted
+[Mon Aug 19 07:58:25 2024] 142.93.210.135:43548 Invalid request (Unsupported SSL request)
+[Mon Aug 19 07:58:25 2024] 142.93.210.135:43548 Closing
+[Mon Aug 19 07:58:25 2024] 142.93.210.135:43562 Accepted
+[Mon Aug 19 07:58:25 2024] 142.93.210.135:43562 [302]: GET /
+[Mon Aug 19 07:58:25 2024] 142.93.210.135:43562 Closing
+[Mon Aug 19 07:58:25 2024] 142.93.210.135:43574 Accepted
+[Mon Aug 19 07:58:26 2024] There was a problem reading the Geo database at /var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb. Error: The file "/var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb" does not exist or is not readable.
+[Mon Aug 19 07:58:26 2024] 142.93.210.135:43574 [200]: GET /kaael
+[Mon Aug 19 07:58:26 2024] 142.93.210.135:43574 Closing
+[Mon Aug 19 07:58:26 2024] 142.93.210.135:43584 Accepted
+[Mon Aug 19 07:58:26 2024] ojs2: 404 Not Found
+[Mon Aug 19 07:58:26 2024] 142.93.210.135:43584 [404]: GET /login
+[Mon Aug 19 07:58:26 2024] 142.93.210.135:43584 Closing
+[Mon Aug 19 08:21:01 2024] 211.19.66.186:51566 Accepted
+[Mon Aug 19 08:21:01 2024] Server host "127.0.0.1" not allowed!
+[Mon Aug 19 08:21:01 2024] ojs2: 400 Bad Request
+[Mon Aug 19 08:21:01 2024] 211.19.66.186:51566 [400]: GET /
+[Mon Aug 19 08:21:01 2024] 211.19.66.186:51566 Closing
+[Mon Aug 19 08:54:55 2024] 205.210.31.154:58842 Accepted
+[Mon Aug 19 08:54:55 2024] 205.210.31.154:58842 [302]: GET /
+[Mon Aug 19 08:54:55 2024] 205.210.31.154:58842 Closing
+[Mon Aug 19 08:54:56 2024] 205.210.31.154:58846 Accepted
+[Mon Aug 19 08:54:56 2024] There was a problem reading the Geo database at /var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb. Error: The file "/var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb" does not exist or is not readable.
+[Mon Aug 19 08:54:56 2024] 205.210.31.154:58846 [200]: GET /kaael
+[Mon Aug 19 08:54:56 2024] 205.210.31.154:58846 Closing
+[Mon Aug 19 09:06:36 2024] 154.213.184.18:40360 Accepted
+[Mon Aug 19 09:06:36 2024] Server host "example.com" not allowed!
+[Mon Aug 19 09:06:36 2024] ojs2: 400 Bad Request
+[Mon Aug 19 09:06:36 2024] 154.213.184.18:40360 [400]: CONNECT example.com:443
+[Mon Aug 19 09:06:36 2024] 154.213.184.18:40360 Closing
+[Mon Aug 19 09:20:34 2024] 71.6.158.166:50362 Accepted
+[Mon Aug 19 09:20:34 2024] 71.6.158.166:50362 Invalid request (Unsupported SSL request)
+[Mon Aug 19 09:20:34 2024] 71.6.158.166:50362 Closing
+[Mon Aug 19 10:23:59 2024] 49.36.187.209:13285 Accepted
+[Mon Aug 19 10:23:59 2024] 49.36.187.209:13285 Closed without sending a request; it was probably just an unused speculative preconnection
+[Mon Aug 19 10:23:59 2024] 49.36.187.209:13285 Closing
+[Mon Aug 19 10:39:29 2024] 184.105.139.120:33335 Accepted
+[Mon Aug 19 10:39:29 2024] 184.105.139.120:33335 [302]: GET /
+[Mon Aug 19 10:39:29 2024] 184.105.139.120:33335 Closing
+[Mon Aug 19 10:39:50 2024] 184.105.139.108:52577 Accepted
+[Mon Aug 19 10:39:50 2024] 184.105.139.108:52577 [302]: GET /
+[Mon Aug 19 10:39:50 2024] 184.105.139.108:52577 Closing
+[Mon Aug 19 10:39:50 2024] 184.105.139.76:4021 Accepted
+[Mon Aug 19 10:39:51 2024] There was a problem reading the Geo database at /var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb. Error: The file "/var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb" does not exist or is not readable.
+[Mon Aug 19 10:39:51 2024] 184.105.139.76:4021 [200]: GET /kaael
+[Mon Aug 19 10:39:51 2024] 184.105.139.76:4021 Closing
+[Mon Aug 19 10:39:59 2024] 184.105.139.76:5827 Accepted
+[Mon Aug 19 10:39:59 2024] 184.105.139.76:5827 [200]: GET /favicon.ico
+[Mon Aug 19 10:39:59 2024] 184.105.139.76:5827 Closing
+[Mon Aug 19 10:40:20 2024] 184.105.139.120:15027 Accepted
+[Mon Aug 19 10:40:20 2024] Server host "api.ipify.org" not allowed!
+[Mon Aug 19 10:40:20 2024] ojs2: 400 Bad Request
+[Mon Aug 19 10:40:20 2024] 184.105.139.120:15027 [400]: GET http://api.ipify.org/?format=json
+[Mon Aug 19 10:40:20 2024] 184.105.139.120:15027 Closing
+[Mon Aug 19 10:40:43 2024] 184.105.139.88:44627 Accepted
+[Mon Aug 19 10:40:43 2024] Server host "www.shadowserver.org" not allowed!
+[Mon Aug 19 10:40:43 2024] ojs2: 400 Bad Request
+[Mon Aug 19 10:40:43 2024] 184.105.139.88:44627 [400]: CONNECT www.shadowserver.org:443
+[Mon Aug 19 10:40:43 2024] 184.105.139.88:44627 Closing
+[Mon Aug 19 11:09:47 2024] 45.156.128.61:33652 Accepted
+[Mon Aug 19 11:09:47 2024] 45.156.128.61:33652 [302]: GET /
+[Mon Aug 19 11:09:47 2024] 45.156.128.61:33652 Closing
+[Mon Aug 19 11:09:48 2024] 45.156.128.61:33654 Accepted
+[Mon Aug 19 11:09:48 2024] There was a problem reading the Geo database at /var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb. Error: The file "/var/www/html/ojs/ojs/ojs-files/usageStats/IPGeoDB.mmdb" does not exist or is not readable.
+[Mon Aug 19 11:09:48 2024] 45.156.128.61:33654 [200]: GET /kaael
+[Mon Aug 19 11:09:48 2024] 45.156.128.61:33654 Closing
