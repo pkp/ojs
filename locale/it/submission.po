@@ -1,13 +1,14 @@
 # Lucia Steele <lucia.steele@aboutscience.eu>, 2022.
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
 # Leonardo Mancini <leonardo.mancini@unito.it>, 2024.
+# Martina Marafioti <martina.marafioti3@unibo.it>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2024-03-10 02:03+0000\n"
-"Last-Translator: Leonardo Mancini <leonardo.mancini@unito.it>\n"
+"PO-Revision-Date: 2024-08-22 19:56+0000\n"
+"Last-Translator: Martina Marafioti <martina.marafioti3@unibo.it>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "it/>\n"
 "Language: it\n"
@@ -274,7 +275,7 @@ msgid "publication.event.published"
 msgstr "Questo articolo è stato pubblicato."
 
 msgid "publication.event.scheduled"
-msgstr "Questo articolo è stato assegnato ad una uscita."
+msgstr "Questo articolo è stato assegnato a una uscita."
 
 msgid "publication.event.unpublished"
 msgstr "Questo articolo è stato rimosso da un'uscita."
@@ -298,11 +299,11 @@ msgid "publication.publish.requirements"
 msgstr "Prima della pubblicazione confermare i seguenti requisiti."
 
 msgid "publication.required.declined"
-msgstr "Un'articolo rigettato non puo' essere pubblicato."
+msgstr "Un articolo rigettato non può essere pubblicato."
 
 msgid "publication.required.reviewStage"
 msgstr ""
-"Per essere pubblicato un'articolo deve essere nella fase di copy-editing o "
+"Per essere pubblicato un articolo deve essere nella fase di copy-editing o "
 "produzione."
 
 msgid "submission.license.description"
