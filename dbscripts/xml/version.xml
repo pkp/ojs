@@ -3,8 +3,8 @@
 <!--
   * dbscripts/xml/version.xml
   *
-  * Copyright (c) 2014-2022 Simon Fraser University
-  * Copyright (c) 2003-2022 John Willinsky
+  * Copyright (c) 2014-2024 Simon Fraser University
+  * Copyright (c) 2003-2024 John Willinsky
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
   * OJS version information.
@@ -13,9 +13,9 @@
 <version>
 	<application>ojs2</application>
 	<type>core</type>
-	<release>3.3.0.18</release>
-	<tag>3_3_0-18</tag>
-	<date>2024-07-19</date>
+	<release>3.3.0.19</release>
+	<tag>3_3_0-19</tag>
+	<date>2024-08-23</date>
 	<info>http://pkp.sfu.ca/ojs/</info>
-	<package>http://pkp.sfu.ca/ojs/download/ojs-3.3.0-18.tar.gz</package>
+	<package>http://pkp.sfu.ca/ojs/download/ojs-3.3.0-19.tar.gz</package>
 </version>

@@ -1,7 +1,7 @@
 OJS 3.3.0 Release Notes
-Git tag: 3_3_0-18
+Git tag: 3_3_0-19
 
-Release date: July 19, 2024
+Release date: August 23, 2024
 ===========================
 
 Configuration Changes
@@ -29,6 +29,14 @@ configuration parameters.
   - email.smtp_oauth_refreshtoken
 - The setting general.session_samesite (default value: Lax) has been added to control the "SameSite" setting for the session cookie.
 - The setting security.force_ssl, when enabled, will also set the "Secure" flag for the session cookie.
+
+3.3.0-19 Build
+--------------
+	#6055: Category selection not reloaded when submission step 1 form doesn't validate
+	#9812: The plugin gallery isn't visible at the site settings
+	#10277: Contributors in browse lists are required to send mail in editorial decision
+	#10249: Limited data loss at settings tables when migrating from a version smaller than 3.3.0
+	#10213: Hide or remove provider's secrets in the administration "system info" page
 
 3.3.0-18 Build
 --------------
