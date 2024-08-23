@@ -355,7 +355,7 @@ class OJSPaymentManager extends PaymentManager
             }
         }
         $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */
-        $completedPayment = $this->createCompletedPayment($queuedPayment, $payMethodPluginName, $request->getUser()->getId());
+        $completedPayment = $this->createCompletedPayment($queuedPayment, $payMethodPluginName, $queuedPayment->getUserId());
         $completedPaymentDao->insertObject($completedPayment);
 
         $queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO'); /** @var QueuedPaymentDAO $queuedPaymentDao */
