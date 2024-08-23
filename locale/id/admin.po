@@ -1,10 +1,10 @@
-# Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>, 2022, 2023.
+# Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:25+00:00\n"
-"PO-Revision-Date: 2023-04-07 08:35+0000\n"
+"PO-Revision-Date: 2024-08-22 05:19+0000\n"
 "Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/admin/id/"
 ">\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "admin.hostedContexts"
 msgstr "Jurnal yang Dikelola"
@@ -258,4 +258,4 @@ msgstr ""
 #~ "\t"
 
 msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
-msgstr ""
+msgstr "Jadikan website sebagai flatform semua jurnal."
