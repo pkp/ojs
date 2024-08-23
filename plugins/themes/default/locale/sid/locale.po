@@ -1,0 +1,32 @@
+# Frew Legese <frew.legese@gmail.com>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-08-14 16:53+0000\n"
+"Last-Translator: Frew Legese <frew.legese@gmail.com>\n"
+"Language-Team: Sidamo <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/sid/>\n"
+"Language: sid\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "Fidallate seera"
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "Dana"
+
+msgid "plugins.themes.default.name"
+msgstr "Qaraa Seesa"
+
+msgid "plugins.themes.default.description"
+msgstr "Tini Seeso qara seesa loosiissanno."
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "Kunni borreessammera seeyitaata Fontete gambooshshe doori."
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr ""
+"Noto Sans: Dijitaale rumuxxitino fonte afuu kaa'lora Google qineessitinoti."
