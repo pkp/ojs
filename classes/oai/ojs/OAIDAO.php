@@ -272,7 +272,6 @@ class OAIDAO extends PKPOAIDAO
             ])
             ->join('publications AS p', 'a.current_publication_id', '=', 'p.publication_id')
             ->join('issues AS i', 'i.issue_id', '=', 'p.issue_id')
-            ->join('issues AS i', DB::raw('CAST(i.issue_id AS CHAR(20))'), '=', 'psissue.setting_value')
             ->join('sections AS s', 's.section_id', '=', 'p.section_id')
             ->join('journals AS j', 'j.journal_id', '=', 'a.context_id')
             ->where('i.published', '=', 1)

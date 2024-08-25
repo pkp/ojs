@@ -243,7 +243,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->index(['doi_id'], 'publications_doi_id');
 
             $table->bigInteger('issue_id')->nullable();
-            $table->foreign('issue_id')->references('issue_id')->on('issues')->onDelete('set null');
+            $table->foreign('issue_id')->references('issue_id')->on('issues')->nullOnDelete();
             $table->index(['issue_id'], 'publications_issue_id_index');
 
             $table->index(['url_path'], 'publications_url_path');
