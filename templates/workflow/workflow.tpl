@@ -187,18 +187,6 @@
 							</template>
 						{/if}
 					</pkp-header>
-					<div
-						v-if="workingPublication.status === getConstant('STATUS_PUBLISHED')"
-						class="pkpPublication__versionPublished"
-					>
-						{translate key="publication.editDisabled"}
-					</div>
-					<div
-						v-if="workingPublication.status !== getConstant('STATUS_PUBLISHED') && !submissionSupportedLocales.includes(submission.locale)"
-						class="pkpSubmission__localeNotSupported"
-					>
-						{translate key="submission.localeNotSupported" language="{{ currentSubmissionLanguageLabel }}"}
-					</div>
 					<tabs class="pkpPublication__tabs" :is-side-tabs="true" :track-history="true" :label="currentPublicationTabsLabel">
 						<tab id="titleAbstract" label="{translate key="publication.titleAbstract"}">
 							<pkp-form v-bind="components.{PKP\components\forms\publication\TitleAbstractForm::FORM_TITLE_ABSTRACT}" @set="set" />
