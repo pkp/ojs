@@ -16,11 +16,12 @@
 
 require(dirname(__FILE__) . '/bootstrap.php');
 
+use APP\facades\Repo;
 use PKP\cliTool\CommandLineTool;
 use PKP\controlledVocab\ControlledVocab;
 use PKP\controlledVocab\ControlledVocabEntryDAO;
 use PKP\db\DAORegistry;
-use PKP\user\UserInterest;
+use PKP\user\interest\UserInterest;
 
 class ReviewerInterestsDeletionTool extends CommandLineTool
 {
@@ -110,7 +111,7 @@ class ReviewerInterestsDeletionTool extends CommandLineTool
         $allInterestVocabIds = array_map(fn ($entry) => $entry->getId(), $vocabEntryList);
 
         // list of vocabs associated to users
-        $interests = UserInterest::getAllInterests();
+        $interests = Repo::userInterest()->getAllInterests();
         $userInterestVocabIds = array_map(
             fn ($interest) => $interest->getId(),
             $interests->toArray()
