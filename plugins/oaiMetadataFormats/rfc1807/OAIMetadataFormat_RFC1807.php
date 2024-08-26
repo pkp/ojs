@@ -18,16 +18,14 @@ namespace APP\plugins\oaiMetadataFormats\rfc1807;
 
 use APP\core\Application;
 use APP\issue\Issue;
-use APP\issue\IssueAction;
 use APP\journal\Journal;
 use APP\publication\Publication;
-use APP\section\Section;
 use APP\submission\Submission;
-use PKP\db\DAORegistry;
+use APP\facades\Repo;
+use APP\issue\IssueAction;
+use PKP\controlledVocab\ControlledVocab;
 use PKP\oai\OAIMetadataFormat;
 use PKP\oai\OAIUtils;
-use PKP\submission\SubmissionKeywordVocab;
-use PKP\submission\SubmissionSubjectVocab;
 
 class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
 {
@@ -79,15 +77,19 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
 
         $supportedLocales = $journal->getSupportedFormLocales();
 
-        /** @var SubmissionKeywordDAO $submissionKeywordDao */
-        $submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO');
-
-        /** @var SubmissionSubjectDAO $submissionSubjectDao */
-        $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO');
-
         $subjects = array_merge_recursive(
-            (array) $submissionKeywordDao->getKeywords($publication->getId(), $supportedLocales),
-            (array) $submissionSubjectDao->getSubjects($publication->getId(), $supportedLocales)
+            Repo::controlledVocab()->getBySymbolic(
+                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
+                Application::ASSOC_TYPE_PUBLICATION,
+                $publication->getId(),
+                $supportedLocales
+            ),
+            Repo::controlledVocab()->getBySymbolic(
+                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_SUBJECT,
+                Application::ASSOC_TYPE_PUBLICATION,
+                $article->getCurrentPublication()->getId(),
+                $supportedLocales
+            )
         );
         $subject = $subjects[$journal->getPrimaryLocale()] ?? '';
 
