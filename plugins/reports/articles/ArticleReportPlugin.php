@@ -16,17 +16,15 @@
 
 namespace APP\plugins\reports\articles;
 
+use APP\core\Application;
 use APP\decision\Decision;
 use APP\facades\Repo;
+use PKP\controlledVocab\ControlledVocab;
 use PKP\facades\Locale;
 use PKP\plugins\ReportPlugin;
 use PKP\security\Role;
 use PKP\stageAssignment\StageAssignment;
 use PKP\submission\PKPSubmission;
-use PKP\submission\SubmissionAgencyVocab;
-use PKP\submission\SubmissionDisciplineVocab;
-use PKP\submission\SubmissionKeywordVocab;
-use PKP\submission\SubmissionSubjectVocab;
 
 class ArticleReportPlugin extends ReportPlugin
 {
@@ -153,10 +151,29 @@ class ArticleReportPlugin extends ReportPlugin
                 $sectionTitles[$sectionId] = $section->getLocalizedTitle();
             }
 
-            $subjects = SubmissionSubjectVocab::getSubjects($submission->getCurrentPublication()->getId());
-            $disciplines = SubmissionDisciplineVocab::getDisciplines($submission->getCurrentPublication()->getId());
-            $keywords = SubmissionKeywordVocab::getKeywords($submission->getCurrentPublication()->getId());
-            $agencies = SubmissionAgencyVocab::getAgencies($submission->getCurrentPublication()->getId());
+            $subjects = Repo::controlledVocab()->getBySymbolic(
+                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_SUBJECT,
+                Application::ASSOC_TYPE_PUBLICATION,
+                $submission->getCurrentPublication()->getId()
+            );
+
+            $disciplines = Repo::controlledVocab()->getBySymbolic(
+                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_DISCIPLINE,
+                Application::ASSOC_TYPE_PUBLICATION,
+                $submission->getCurrentPublication()->getId()
+            );
+
+            $keywords = Repo::controlledVocab()->getBySymbolic(
+                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
+                Application::ASSOC_TYPE_PUBLICATION,
+                $submission->getCurrentPublication()->getId()
+            );
+
+            $agencies = Repo::controlledVocab()->getBySymbolic(
+                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_AGENCY,
+                Application::ASSOC_TYPE_PUBLICATION,
+                $submission->getCurrentPublication()->getId()
+            );
 
             // Store the submission results
             $results[] = [

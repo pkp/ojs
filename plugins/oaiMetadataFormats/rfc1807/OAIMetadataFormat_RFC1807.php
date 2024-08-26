@@ -17,11 +17,11 @@
 namespace APP\plugins\oaiMetadataFormats\rfc1807;
 
 use APP\core\Application;
+use APP\facades\Repo;
 use APP\issue\IssueAction;
+use PKP\controlledVocab\ControlledVocab;
 use PKP\oai\OAIMetadataFormat;
 use PKP\oai\OAIUtils;
-use PKP\submission\SubmissionKeywordVocab;
-use PKP\submission\SubmissionSubjectVocab;
 
 class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
 {
@@ -68,8 +68,18 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
         // Subject
         $supportedLocales = $journal->getSupportedFormLocales();
         $subjects = array_merge_recursive(
-            SubmissionKeywordVocab::getKeywords($publication->getId(), $supportedLocales),
-            SubmissionSubjectVocab::getSubjects($article->getCurrentPublication()->getId(), $supportedLocales)
+            Repo::controlledVocab()->getBySymbolic(
+                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
+                Application::ASSOC_TYPE_PUBLICATION,
+                $publication->getId(),
+                $supportedLocales
+            ),
+            Repo::controlledVocab()->getBySymbolic(
+                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_SUBJECT,
+                Application::ASSOC_TYPE_PUBLICATION,
+                $article->getCurrentPublication()->getId(),
+                $supportedLocales
+            )
         );
         $subject = $subjects[$journal->getPrimaryLocale()] ?? '';
 
