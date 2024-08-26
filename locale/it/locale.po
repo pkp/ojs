@@ -3,13 +3,14 @@
 # Leonardo Mancini <leonardo.mancini@unito.it>, 2024.
 # Marco Urso <urso.marco+weblate@gmail.com>, 2024.
 # Gabriele Raimondi <gabriele.raimondi5@unibo.it>, 2024.
+# Martina Marafioti <martina.marafioti3@unibo.it>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
 "PO-Revision-Date: 2024-08-26 13:24+0000\n"
-"Last-Translator: Gabriele Raimondi <gabriele.raimondi5@unibo.it>\n"
+"Last-Translator: Martina Marafioti <martina.marafioti3@unibo.it>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/locale/it/>"
 "\n"
 "Language: it\n"
@@ -2373,7 +2374,7 @@ msgid "notification.type.site"
 msgstr "Eventi del sito"
 
 msgid "notification.type.submissionComment"
-msgstr "Un editor ha commentato  \"{$title}.\""
+msgstr "Un editor ha commentato \"{$title}.\""
 
 msgid "notification.type.submissions"
 msgstr "Eventi legati alle proposte"
