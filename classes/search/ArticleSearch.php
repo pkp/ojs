@@ -23,12 +23,12 @@ use APP\core\Application;
 use APP\core\Request;
 use APP\facades\Repo;
 use APP\issue\IssueAction;
+use PKP\controlledVocab\ControlledVocab;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\plugins\Hook;
 use PKP\search\SubmissionSearch;
 use PKP\submission\PKPSubmission;
-use PKP\submission\SubmissionKeywordVocab;
 
 class ArticleSearch extends SubmissionSearch
 {
@@ -334,7 +334,14 @@ class ArticleSearch extends SubmissionSearch
             $article = Repo::submission()->get($submissionId);
             if ($article->getData('status') === PKPSubmission::STATUS_PUBLISHED) {
                 // Retrieve keywords (if any).
-                $allSearchTerms = array_filter(SubmissionKeywordVocab::getKeywords($article->getCurrentPublication()->getId(), [Locale::getLocale(), $article->getData('locale'), Locale::getPrimaryLocale()]));
+                $allSearchTerms = array_filter(
+                    Repo::controlledVocab()->getBySymbolic(
+                        ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
+                        Application::ASSOC_TYPE_PUBLICATION,
+                        $article->getCurrentPublication()->getId(),
+                        [Locale::getLocale(), $article->getData('locale'), Locale::getPrimaryLocale()]
+                    )
+                );
                 foreach ($allSearchTerms as $locale => $localeSearchTerms) {
                     $searchTerms += $localeSearchTerms;
                 }
