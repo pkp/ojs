@@ -99,7 +99,7 @@ class IssuePublishedNotifyUsers extends BaseJob
         Issue $issue,
         User $recipient,
         EmailTemplate $template,
-        Notification $notification
+        Notification|\PKP\notification\Notification $notification
     ): IssuePublishedNotify {
         $mailable = new IssuePublishedNotify($context, $issue);
         $mailable
