@@ -46,7 +46,7 @@ class GatewayHandler extends Handler
             $pluginName = array_shift($args);
             $plugins = PluginRegistry::loadCategory('gateways');
             if (!isset($plugins[$pluginName])) {
-                $request->getDispatcher()->handle404();
+                throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
             }
             $this->plugin = $plugins[$pluginName];
             foreach ($this->plugin->getPolicies($request) as $policy) {

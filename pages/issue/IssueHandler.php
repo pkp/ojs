@@ -179,7 +179,7 @@ class IssueHandler extends Handler
         $prevPage = $showingStart > 1 ? $page - 1 : null;
 
         if (!count($issues) && $offset) {
-            $this->getDispatcher()->handle404();
+            throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
         }
 
         $templateMgr->assign([

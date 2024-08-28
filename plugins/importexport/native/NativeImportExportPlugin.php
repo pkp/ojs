@@ -55,8 +55,7 @@ class NativeImportExportPlugin extends \PKP\plugins\importexport\native\PKPNativ
 
                 return $this->getExportTemplateResult($deployment, $templateMgr, 'issues');
             default:
-                $dispatcher = $request->getDispatcher();
-                $dispatcher->handle404();
+                throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
         }
     }
 

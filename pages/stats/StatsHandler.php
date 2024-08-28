@@ -51,7 +51,7 @@ class StatsHandler extends PKPStatsHandler
         $context = $request->getContext();
 
         if (!$context) {
-            $dispatcher->handle404();
+            throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
         }
 
         $templateMgr = TemplateManager::getManager($request);

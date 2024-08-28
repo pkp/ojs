@@ -103,7 +103,7 @@ class PaymentsHandler extends Handler
                     )
                 );
         }
-        $dispatcher->handle404();
+        throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
     }
 
     /**

@@ -127,7 +127,7 @@ class ArticleHandler extends Handler
 
         // Serve 404 if no submission available OR submission is unpublished and no user is logged in OR submission is unpublished and we have a user logged in but the user does not have access to preview
         if (!$submission || ($submission->getData('status') !== PKPSubmission::STATUS_PUBLISHED && !$user) || ($submission->getData('status') !== PKPSubmission::STATUS_PUBLISHED && $user && !Repo::submission()->canPreview($user, $submission))) {
-            $request->getDispatcher()->handle404();
+            throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
         }
 
         // If the urlPath does not match the urlPath of the current
@@ -149,7 +149,7 @@ class ArticleHandler extends Handler
                 }
             }
             if (!$this->publication) {
-                $request->getDispatcher()->handle404();
+                throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
             }
         } else {
             $this->publication = $this->article->getCurrentPublication();
@@ -157,7 +157,7 @@ class ArticleHandler extends Handler
         }
 
         if ($this->publication->getData('status') !== PKPSubmission::STATUS_PUBLISHED && !Repo::submission()->canPreview($user, $submission)) {
-            $request->getDispatcher()->handle404();
+            throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
         }
 
         if ($galleyId && in_array($request->getRequestedOp(), ['view', 'download'])) {
@@ -185,7 +185,7 @@ class ArticleHandler extends Handler
                         }
                     }
                 }
-                $request->getDispatcher()->handle404();
+                throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
             }
 
             // Store the file id if it exists
@@ -419,8 +419,7 @@ class ArticleHandler extends Handler
         $articleId = $args[0] ?? 0;
         $article = Repo::submission()->get($articleId);
         if (!$article) {
-            $dispatcher = $request->getDispatcher();
-            $dispatcher->handle404();
+            throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
         }
         $suppId = $args[1] ?? 0;
 
@@ -444,8 +443,7 @@ class ArticleHandler extends Handler
                 }
             }
         }
-        $dispatcher = $request->getDispatcher();
-        $dispatcher->handle404();
+        throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
     }
 
     /**
@@ -460,7 +458,7 @@ class ArticleHandler extends Handler
     public function download($args, $request)
     {
         if (!isset($this->galley)) {
-            $request->getDispatcher()->handle404();
+            throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
         }
         if ($this->galley->getData('urlRemote')) {
             $request->redirectUrl($this->galley->getData('urlRemote'));
@@ -471,7 +469,7 @@ class ArticleHandler extends Handler
 
             // If no file ID could be determined, treat it as a 404.
             if (!$this->submissionFileId) {
-                $request->getDispatcher()->handle404();
+                throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
             }
 
             // If the file ID is not the galley's file ID, ensure it is a dependent file, or else 404.
@@ -488,7 +486,7 @@ class ArticleHandler extends Handler
                     ->toArray();
 
                 if (!in_array($this->submissionFileId, $dependentFileIds)) {
-                    $request->getDispatcher()->handle404();
+                    throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
                 }
             }
 
@@ -496,7 +494,7 @@ class ArticleHandler extends Handler
                 $submissionFile = Repo::submissionFile()->get($this->submissionFileId);
 
                 if (!app()->get('file')->fs->has($submissionFile->getData('path'))) {
-                    $request->getDispatcher()->handle404();
+                    throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
                 }
 
                 $filename = app()->get('file')->formatFilename($submissionFile->getData('path'), $submissionFile->getLocalizedData('name'));
