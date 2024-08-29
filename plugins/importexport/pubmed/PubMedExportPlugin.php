@@ -195,13 +195,11 @@ class PubMedExportPlugin extends ImportExportPlugin
 
         foreach ($issueIds as $issueId) {
             $sections = Repo::section()->getByIssueId($issueId);
+            $submissionsInSections = [];
+            $submissionsInSections[] = Repo::submission()->getInSections($issueId, $context->getId());
             foreach ($sections as $section) {
-                $submissionsInSections = [];
-                $submissionsInSections[] = Repo::submission()->getInSections($issueId, $context->getId());
                 foreach ($submissionsInSections as $articles) {
-                    foreach ($articles[$section->getId()]['articles'] as $article) {
-                        $input[] = $article;
-                    }
+                    $input = array_merge($input, $articles[$section->getId()]['articles']);
                 }
             }
         }
