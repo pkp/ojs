@@ -82,6 +82,8 @@ class IssuePublishedNotifyUsersTest extends PKPTestCase
 
         app()->instance(EmailTemplateRepository::class, $emailTemplateRepoMock);
 
-        $this->assertNull($issuePublishedNotifyUsersJob->handle());
+        $issuePublishedNotifyUsersJob->handle();
+
+        $this->expectNotToPerformAssertions();
     }
 }
