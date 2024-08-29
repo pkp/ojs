@@ -59,6 +59,8 @@ class CompileUniqueInvestigationsTest extends PKPTestCase
 
         DAORegistry::registerDAO('TemporaryItemInvestigationsDAO', $temporaryItemInvestigationsDAOMock);
 
-        $this->assertNull($compileUniqueInvestigationsJob->handle());
+        $compileUniqueInvestigationsJob->handle();
+
+        $this->expectNotToPerformAssertions();
     }
 }

@@ -81,6 +81,8 @@ class CompileCounterSubmissionInstitutionDailyMetricsTest extends PKPTestCase
         DAORegistry::registerDAO('TemporaryItemRequestsDAO', $temporaryItemRequestsDAOMock);
 
 
-        $this->assertNull($compileCounterSubmissionInstitutionDailyMetricsJob->handle());
+        $compileCounterSubmissionInstitutionDailyMetricsJob->handle();
+
+        $this->expectNotToPerformAssertions();
     }
 }

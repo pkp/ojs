@@ -89,6 +89,8 @@ class DeleteUsageStatsTemporaryRecordsTest extends PKPTestCase
 
         DAORegistry::registerDAO('TemporaryInstitutionsDAO', $temporaryInstitutionsDAOMock);
 
-        $this->assertNull($deleteUsageStatsTemporaryRecordsJob->handle());
+        $deleteUsageStatsTemporaryRecordsJob->handle();
+
+        $this->expectNotToPerformAssertions();
     }
 }

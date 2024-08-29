@@ -70,6 +70,8 @@ class CompileSubmissionGeoDailyMetricsTest extends PKPTestCase
 
         DAORegistry::registerDAO('TemporaryItemInvestigationsDAO', $temporaryItemInvestigationsDAOMock);
 
-        $this->assertNull($compileSubmissionGeoDailyMetricsJob->handle());
+        $compileSubmissionGeoDailyMetricsJob->handle();
+
+        $this->expectNotToPerformAssertions();
     }
 }

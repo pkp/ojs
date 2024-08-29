@@ -104,11 +104,13 @@ class ProcessUsageStatsLogFileTest extends PKPTestCase
 
         DAORegistry::registerDAO('TemporaryInstitutionsDAO', $temporaryInstitutionsDAOMock);
 
-        $this->assertNull($processUsageStatsLogFileJob->handle());
+        $processUsageStatsLogFileJob->handle();
 
         if ($dummyFile) {
             unlink($dummyFile);
         }
+
+        $this->expectNotToPerformAssertions();
     }
 
     /**

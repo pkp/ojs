@@ -102,6 +102,8 @@ class OpenAccessMailUsersTest extends PKPTestCase
 
         app()->instance(EmailTemplateRepository::class, $emailTemplateRepoMock);
 
-        $this->assertNull($openAccessMailUsersJob->handle());
+        $openAccessMailUsersJob->handle();
+
+        $this->expectNotToPerformAssertions();
     }
 }
