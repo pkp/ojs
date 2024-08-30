@@ -160,12 +160,19 @@ class PubMedExportPlugin extends ImportExportPlugin {
 		$pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
 		assert(count($pubmedExportFilters) == 1); // Assert only a single serialization filter
 		$exportFilter = array_shift($pubmedExportFilters);
-		$submissionsIterator = Services::get('submission')->getMany([
-			'contextId' => $context->getId(),
-			'issueIds' => $issueIds,
-		]);
+
+		$input = [];
+		$sectionDao = DAORegistry::getDAO('SectionDAO');
+		foreach ($issueIds as $issueId) {
+			$sections = $sectionDao->getByIssueId($issueId);
+			$submissionsInSections = Services::get('submission')->getInSections($issueId, $context->getId());
+			foreach ($sections as $section) {
+				$input = array_merge($input, $submissionsInSections[$section->getId()]['articles']);
+			}
+		}
+
 		libxml_use_internal_errors(true);
-		$submissionXml = $exportFilter->execute(iterator_to_array($submissionsIterator), true);
+		$submissionXml = $exportFilter->execute($input, true);
 		$xml = $submissionXml->saveXml();
 		$errors = array_filter(libxml_get_errors(), function($a) {
 			return $a->level == LIBXML_ERR_ERROR || $a->level == LIBXML_ERR_FATAL;
