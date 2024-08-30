@@ -165,12 +165,9 @@ class PubMedExportPlugin extends ImportExportPlugin {
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
 		foreach ($issueIds as $issueId) {
 			$sections = $sectionDao->getByIssueId($issueId);
-			$submissionsInSections = [];
-			$submissionsInSections[] = Services::get('submission')->getInSections($issueId, $context->getId());
+			$submissionsInSections = Services::get('submission')->getInSections($issueId, $context->getId());
 			foreach ($sections as $section) {
-				foreach ($submissionsInSections as $articles) {
-					$input = array_merge($input, $articles[$section->getId()]['articles']);
-				}
+				$input = array_merge($input, $submissionsInSections[$section->getId()]['articles']);
 			}
 		}
 
