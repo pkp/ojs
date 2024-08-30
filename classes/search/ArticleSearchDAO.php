@@ -92,8 +92,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO
             FROM
                 submissions s
                 JOIN publications p ON (p.publication_id = s.current_publication_id)
-                JOIN publication_settings ps ON (ps.publication_id = p.publication_id AND ps.setting_name=\'issueId\' AND ps.locale=\'\')
-                JOIN issues i ON (CAST(i.issue_id AS CHAR(20)) = ps.setting_value AND i.journal_id = s.context_id)
+                JOIN issues i ON (i.issue_id = p.issue_id)
                 JOIN submission_search_objects o ON (s.submission_id = o.submission_id)
                 JOIN journals j ON j.journal_id = s.context_id
                 LEFT JOIN journal_settings js ON j.journal_id = js.journal_id AND js.setting_name = \'publishingMode\'

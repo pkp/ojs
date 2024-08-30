@@ -120,6 +120,8 @@ class OAIDAO extends PKPOAIDAO
      * @param int $total
      *
      * @return array OAISet
+     *
+     * @hook OAIDAO::getJournalSets [[$this, $journalId, $offset, $limit, $total, &$sets]]
      */
     public function &getJournalSets($journalId, $offset, $limit, &$total)
     {
@@ -269,12 +271,7 @@ class OAIDAO extends PKPOAIDAO
                 's.section_id AS section_id',
             ])
             ->join('publications AS p', 'a.current_publication_id', '=', 'p.publication_id')
-            ->join('publication_settings AS psissue', function ($join) {
-                $join->on('psissue.publication_id', '=', 'p.publication_id');
-                $join->where('psissue.setting_name', '=', DB::raw('\'issueId\''));
-                $join->where('psissue.locale', '=', DB::raw('\'\''));
-            })
-            ->join('issues AS i', DB::raw('CAST(i.issue_id AS CHAR(20))'), '=', 'psissue.setting_value')
+            ->join('issues AS i', 'i.issue_id', '=', 'p.issue_id')
             ->join('sections AS s', 's.section_id', '=', 'p.section_id')
             ->join('journals AS j', 'j.journal_id', '=', 'a.context_id')
             ->where('i.published', '=', 1)
