@@ -34,9 +34,9 @@ import StatsIssuesPage from '@/components/Container/StatsIssuesPage.vue';
 import StatsUsersPage from '@/components/Container/StatsUsersPage.vue';
 import SubmissionWizardPage from '@/components/Container/SubmissionWizardPage.vue';
 import WorkflowPage from '@/components/Container/WorkflowPageOJS.vue';
-import JobsPage from '@/components/Container/JobsPage.vue';
-import FailedJobsPage from '@/components/Container/FailedJobsPage.vue';
-import FailedJobDetailsPage from '@/components/Container/FailedJobDetailsPage.vue';
+import JobsPage from '@/pages/jobs/JobsPage.vue';
+import FailedJobsPage from '@/pages/jobs/FailedJobsPage.vue';
+import FailedJobDetailsPage from '@/pages/jobs/FailedJobDetailsPage.vue';
 import DashboardPage from '@/pages/dashboard/DashboardPage.vue';
 
 // Expose Vue, the registry and controllers in a global var
