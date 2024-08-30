@@ -230,10 +230,6 @@ public_user_dir_size = 5000
 ; Permissions mask for created files and directories
 umask = 0022
 
-; The minimum percentage similarity between filenames that should be considered
-; a possible revision
-filename_revision_match = 70
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Fileinfo (MIME) Settings ;
@@ -521,8 +517,3 @@ deprecation_warnings = Off
 
 ; Log web service request information for debugging
 log_web_service_info = Off
-
-; declare a cainfo path if a certificate other than PHP's default should be used for curl calls.
-; This setting overrides the 'curl.cainfo' parameter of the php.ini configuration file.
-[curl]
-; cainfo = ""
