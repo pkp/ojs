@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Weblate 3.9.1\n"
 
 msgid "user.authorization.journalDoesNotPublish"
-msgstr ""
+msgstr "Esta revista no publica su contenido en línea"
 
 msgid "context.current"
 msgstr "Revista actual:"
@@ -1920,7 +1920,8 @@ msgid "installer.ojsUpgrade"
 msgstr "Actualización de OJS"
 
 msgid "installer.updatingInstructions"
-msgstr ""
+msgstr "Si estás actualizando una instalación de OJS ya existente, haz <a href="
+"\"{$upgradeUrl}\">clic aquí</a> para continuar"
 
 #, fuzzy
 msgid "installer.installationInstructions"
