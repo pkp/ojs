@@ -101,6 +101,8 @@ class SubmissionController extends \PKP\API\v1\submissions\PKPSubmissionControll
         $publicFileManager = new PublicFileManager();
         $baseUrl = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($context->getId());
 
+        // This form provides Issue details for a submission's publication.
+        // This includes fields to change the Issue and section that the submission the publication is linked to, cover image, page and publication date details.
         $issueEntryForm = new IssueEntryForm(
             $publicationApiUrl,
             $locales,
@@ -131,7 +133,7 @@ class SubmissionController extends \PKP\API\v1\submissions\PKPSubmissionControll
 
         if (!$paymentManager->publicationEnabled()) {
             return response()->json([
-                'error' => __('api.publications.403.noEnabledPaymentMethods'),
+                'error' => __('api.publications.403.paymentFeesNotEnabled'),
             ], Response::HTTP_FORBIDDEN);
         }
 

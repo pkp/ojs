@@ -76,8 +76,8 @@ msgstr "The publication that you requested is not part of this submission."
 msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr "You can not associated a file from this file stage with a galley."
 
-msgid "api.publications.403.noEnabledPaymentMethods"
-msgstr "Submission payments form is unavailable as there are no enabled payment methods."
+msgid "api.publications.403.paymentFeesNotEnabled"
+msgstr "Submission payments form is unavailable as publication payment fees are not enabled."
 
 msgid "api.submission.400.inactiveSection"
 msgstr "This section is no longer receiving submissions."
