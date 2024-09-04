@@ -146,8 +146,8 @@
 						labelled-by="issueDetailTableLabel"
 						@sort="setOrderBy"
 					>
-						<pkp-table-header>
-							<pkp-table-column
+						<table-header>
+							<table-column
 								v-for="column in tableColumns"
 								:key="column.name"
 								:id="column.name"
@@ -165,11 +165,11 @@
 								<template v-else>
 									{{ column.label }}
 								</template>
-							</pkp-table-column>
-						</pkp-table-header>
-						<pkp-table-body>
-							<pkp-table-row v-for="(row) in items" :key="row.key">
-								<pkp-table-cell>
+							</table-column>
+						</table-header>
+						<table-body>
+							<table-row v-for="(row) in items" :key="row.key">
+								<table-cell>
 									<a
 										:href="row.issue.publishedUrl"
 										class="pkpStats__itemLink"
@@ -177,14 +177,14 @@
 									>
 										<span class="pkpStats__itemTitle">{{ row.issue.identification }}</span>
 									</a>
-								</pkp-table-cell>
-								<pkp-table-cell>{{ row.tocViews }}</pkp-table-cell>
-								<pkp-table-cell>{{ row.issueGalleyViews }}</pkp-table-cell>
-								<pkp-table-cell>{{ row.totalViews }}</pkp-table-cell>
-							</pkp-table-row>
+								</table-cell>
+								<table-cell>{{ row.tocViews }}</table-cell>
+								<table-cell>{{ row.issueGalleyViews }}</table-cell>
+								<table-cell>{{ row.totalViews }}</table-cell>
+							</table-row>
 							<template #no-content v-if="!items.length">
-								<pkp-table-row class="pkpStats__noRecords">
-									<pkp-table-cell :colspan="tableColumns.length" class="!py-8 !px-4 !text-center">
+								<table-row class="pkpStats__noRecords">
+									<table-cell :colspan="tableColumns.length" class="!py-8 !px-4 !text-center">
 										<template v-if="isLoadingItems">
 											<spinner></spinner>
 											{translate key="common.loading"}
@@ -192,10 +192,10 @@
 										<template v-else>
 											{translate key="stats.issues.none"}
 										</template>
-									</pkp-table-cell>
-								</pkp-table-row>
+									</table-cell>
+								</table-row>
 							</template>
-						</pkp-table-body>
+						</table-body>
 					</pkp-table>
 					<pagination
 						v-if="lastPage > 1"
