@@ -183,17 +183,12 @@
 								<table-cell>{{ row.totalViews }}</table-cell>
 							</table-row>
 							<template #no-content v-if="!items.length">
-								<table-row class="pkpStats__noRecords">
-									<table-cell :colspan="tableColumns.length" class="!py-8 !px-4 !text-center">
-										<template v-if="isLoadingItems">
-											<spinner></spinner>
-											{translate key="common.loading"}
-										</template>
-										<template v-else>
-											{translate key="stats.issues.none"}
-										</template>
-									</table-cell>
-								</table-row>
+								<template v-if="isLoadingItems">
+									{translate key="common.loading"}
+								</template>
+								<template v-else>
+									{translate key="stats.issues.none"}
+								</template>
 							</template>
 						</table-body>
 					</pkp-table>
