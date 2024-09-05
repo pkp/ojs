@@ -111,7 +111,7 @@
 				</div>
 				<div class="pkpStats__panel" role="region" aria-live="polite">
 					<pkp-header>
-						<h2>
+						<h2 id="issueDetailTableLabel">
 							{translate key="stats.issues.details"}
 							<tooltip
 								tooltip="{translate key="stats.issues.tooltip.text"}"
@@ -144,30 +144,32 @@
 					</pkp-header>
 					<pkp-table
 						labelled-by="issueDetailTableLabel"
-						:class="tableClasses"
-						:columns="tableColumns"
-						:rows="items"
-						:order-by="orderBy"
-						:order-direction="orderDirection"
-						@order-by="setOrderBy"
+						@sort="setOrderBy"
 					>
-						<template #thead-title>
-							<search
-								class="pkpStats__titleSearch"
-								:search-phrase="searchPhrase"
-								search-label="{translate key="stats.issues.searchIssueDescription"}"
-								@search-phrase-changed="setSearchPhrase"
-							></search>
-						</template>
-						<template #default="{ row, rowIndex }">
-							<table-cell
-								v-for="(column, columnIndex) in tableColumns"
+						<table-header>
+							<table-column
+								v-for="column in tableColumns"
 								:key="column.name"
-								:column="column"
-								:row="row"
-								:tabindex="!rowIndex && !columnIndex ? 0 : -1"
+								:id="column.name"
+								:allows-sorting="column.name === 'total'"
 							>
-								<template #default v-if="column.name === 'title'">
+								<template v-if="column.name === 'title'">
+									{{ column.label }}
+									<search
+										class="pkpStats__titleSearch"
+										:search-phrase="searchPhrase"
+										search-label="{translate key="stats.issues.searchIssueDescription"}"
+										@search-phrase-changed="setSearchPhrase"
+									></search>
+								</template>
+								<template v-else>
+									{{ column.label }}
+								</template>
+							</table-column>
+						</table-header>
+						<table-body>
+							<table-row v-for="(row) in items" :key="row.key">
+								<table-cell>
 									<a
 										:href="row.issue.publishedUrl"
 										class="pkpStats__itemLink"
@@ -175,19 +177,21 @@
 									>
 										<span class="pkpStats__itemTitle">{{ row.issue.identification }}</span>
 									</a>
+								</table-cell>
+								<table-cell>{{ row.tocViews }}</table-cell>
+								<table-cell>{{ row.issueGalleyViews }}</table-cell>
+								<table-cell>{{ row.totalViews }}</table-cell>
+							</table-row>
+							<template #no-content v-if="!items.length">
+								<template v-if="isLoadingItems">
+									{translate key="common.loading"}
 								</template>
-							</table-cell>
-						</template>
+								<template v-else>
+									{translate key="stats.issues.none"}
+								</template>
+							</template>
+						</table-body>
 					</pkp-table>
-					<div v-if="!items.length" class="pkpStats__noRecords">
-						<template v-if="isLoadingItems">
-							<spinner></spinner>
-							{translate key="common.loading"}
-						</template>
-						<template v-else>
-							{translate key="stats.issues.none"}
-						</template>
-					</div>
 					<pagination
 						v-if="lastPage > 1"
 						id="issueDetailTablePagination"
