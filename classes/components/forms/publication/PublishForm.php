@@ -22,6 +22,7 @@ use PKP\components\forms\FieldHTML;
 use PKP\components\forms\FormComponent;
 use PKP\core\Core;
 use PKP\core\PKPString;
+use PKP\facades\Locale;
 
 class PublishForm extends FormComponent
 {
@@ -72,12 +73,13 @@ class PublishForm extends FormComponent
             // If a publication date has already been set and the date has passed this will
             // be published immediately regardless of the issue assignment
             if ($publication->getData('datePublished') && $publication->getData('datePublished') <= Core::getCurrentDate()) {
-                $timestamp = strtotime($publication->getData('datePublished'));
                 $dateFormatLong = PKPString::convertStrftimeFormat($submissionContext->getLocalizedDateFormatLong());
                 $msg = __(
                     'publication.publish.confirmation.datePublishedInPast',
                     [
-                        'datePublished' => date($dateFormatLong, $timestamp),
+                        'datePublished' => (new \Carbon\Carbon($publication->getData('datePublished')))
+                            ->locale(Locale::getLocale())
+                            ->translatedFormat($dateFormatLong),
                     ]
                 );
                 $submitLabel = __('publication.publish');

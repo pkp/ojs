@@ -22,6 +22,7 @@ use PKP\controllers\grid\GridCellProvider;
 use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
 use PKP\core\PKPString;
+use PKP\facades\Locale;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
 
@@ -89,10 +90,7 @@ class IssueGridCellProvider extends GridCellProvider
                 return ['label' => '']; // Title returned as action
             case 'published':
                 $datePublished = $issue->getDatePublished();
-                if ($datePublished) {
-                    $datePublished = strtotime($datePublished);
-                }
-                return ['label' => $datePublished ? date($this->dateFormatShort, $datePublished) : ''];
+                return ['label' => $datePublished ? (new \Carbon\Carbon($datePublished))->locale(Locale::getLocale())->translatedFormat($this->dateFormatShort) : ''];
             case 'numArticles':
                 return ['label' => $issue->getNumArticles()];
             default: assert(false);
