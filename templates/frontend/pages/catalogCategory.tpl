@@ -22,7 +22,7 @@
 <div class="page page_catalog_category">
 
 	{* Breadcrumb *}
-	{include file="frontend/components/breadcrumbs_catalog.tpl" type="category" parent=$parentCategory currentTitle=$category->getLocalizedTitle()|escape}
+	{include file="frontend/components/breadcrumbs_catalog.tpl" type="category" parent=$parentCategory currentTitle=$category->getLocalizedTitle()}
 	<h1>
 		{$category->getLocalizedTitle()|escape}
 	</h1>
