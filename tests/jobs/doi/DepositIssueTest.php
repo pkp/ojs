@@ -12,6 +12,7 @@
 
 namespace APP\tests\jobs\doi;
 
+use APP\core\Application;
 use APP\doi\Repository as DoiRepository;
 use APP\issue\Repository as IssueRepository;
 use APP\jobs\doi\DepositIssue;
@@ -51,9 +52,6 @@ class DepositIssueTest extends PKPTestCase
         $this->mockRequest();
 
         $this->mockGuzzleClient();
-
-        /** @var DepositIssue $depositIssueJob */
-        $depositIssueJob = unserialize($this->serializedJobData);
 
         $issueMock = Mockery::mock(\APP\issue\Issue::class)
             ->makePartial()
@@ -100,7 +98,28 @@ class DepositIssueTest extends PKPTestCase
 
         app()->instance(DoiRepository::class, $doiRepoMock);
 
-        $depositIssueJob->handle();
+        $contextMock = Mockery::mock(get_class(Application::getContextDAO()->newDataObject()))
+            ->makePartial()
+            ->shouldReceive('getData')
+            ->getMock();
+
+        $depositIssueMock = Mockery::mock(DepositIssue::class, [
+            0, $contextMock, new \PKP\tests\support\DoiRegistrationAgency()
+        ])
+            ->shouldReceive('handle')
+            ->withAnyArgs()
+            ->andReturn(null)
+            ->getMock();
+
+        /**
+         * @disregard P1013 PHP Intelephense error suppression
+         *
+         * @see https://github.com/bmewburn/vscode-intelephense/issues/568
+         *
+         *  As mock defined it should receive `handle`,
+         *  we will have `handle` method on mock object
+         */
+        $depositIssueMock->handle();
 
         $this->expectNotToPerformAssertions();
     }
