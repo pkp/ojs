@@ -98,27 +98,18 @@ class DepositIssueTest extends PKPTestCase
 
         app()->instance(DoiRepository::class, $doiRepoMock);
 
+        /** @var \PKP\context\Context $contextMock */
         $contextMock = Mockery::mock(get_class(Application::getContextDAO()->newDataObject()))
             ->makePartial()
             ->shouldReceive('getData')
             ->getMock();
 
-        $depositIssueMock = Mockery::mock(DepositIssue::class, [
-            0, $contextMock, new \PKP\tests\support\DoiRegistrationAgency()
-        ])
-            ->shouldReceive('handle')
-            ->withAnyArgs()
-            ->andReturn(null)
-            ->getMock();
+        $depositIssueMock = new DepositIssue(
+            0,
+            $contextMock,
+            new \PKP\tests\support\DoiRegistrationAgency()
+        );
 
-        /**
-         * @disregard P1013 PHP Intelephense error suppression
-         *
-         * @see https://github.com/bmewburn/vscode-intelephense/issues/568
-         *
-         *  As mock defined it should receive `handle`,
-         *  we will have `handle` method on mock object
-         */
         $depositIssueMock->handle();
 
         $this->expectNotToPerformAssertions();
