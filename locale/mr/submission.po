@@ -1,3 +1,434 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2024.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2024-09-09 16:00+0000\n"
+"Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
+"Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/submission/"
+"mr/>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "submission.title"
+msgstr "लेखाचे शिर्षक"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "नवीन सादरीकरण"
+
+msgid "grid.action.workflow"
+msgstr "सादरीकरणाचा कार्यप्रवाह (वर्कफ्लो)"
+
+msgid "submission.submit.noContext"
+msgstr "या सादरीकरणाचे नियतकालिक सापडत नाही."
+
+msgid "submission.issueEntry"
+msgstr "प्राथमिक माहिती (मेटाडेटा)"
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "अंकाच्या नोंदीमध्ये कच्चे मुद्रित (गॅली) दिसत आहे"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "लेखाचे कच्चे मुद्रित (गॅली) \"{$galleyFormatName}\" उपलब्ध केले आहे."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "सादरीकरणाचे पब्लिक आयडेंटिफायर अद्ययावत केले."
+
+msgid "grid.action.availableArticleGalley"
+msgstr "हे कच्चे मुद्रित (गॅली) उपलब्ध करा"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>हे कच्चे मुद्रित (गॅली) वाचकांसाठी <em>उपलब्ध केले जाईल<em>. </p>"
+
+msgid "submission.galleyFiles"
+msgstr "कच्च्या मुद्रितांच्या (गॅली) फाईल्स"
+
+msgid "grid.action.approveProof"
+msgstr ""
+"हे मुद्रण दोष शोधन झालेले (प्रूफरीड) स्वरूप कच्च्या मुद्रिता (गॅली) मध्ये "
+"समावेश करण्यासाठी मंजूर करा."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "शीर्षक आणि गोषवारा"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"लेख, बहुमाध्यम प्रकार, डेटा संच, कलाकृती इत्यादीसह या सादरीकरणाशी संबंधित "
+"सगळ्या फाईल्स संक्रमित (अपलोड) करा."
+
+msgid "workflow.review.externalReview"
+msgstr "समीक्षण"
+
+msgid "submission.upload.fileContents"
+msgstr "लेखाचे घटक"
+
+msgid "submission.complete"
+msgstr "स्वीकृत"
+
+msgid "submission.incomplete"
+msgstr "स्वीकृतीच्या प्रतिक्षेत"
+
+msgid "submission.submit.submissionChecklist"
+msgstr "सादरीकरणादरम्यान करावयाच्या कामांची यादी (चेकलिस्ट)"
+
+msgid "submission.submit.privacyStatement"
+msgstr "गोपनीयता विधान"
+
+msgid "submission.submit.contributorRole"
+msgstr "सहभागी लेखकाचे योगदान"
+
+msgid "section.any"
+msgstr "कोणताही विभाग"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} लेख"
+
+msgid "catalog.category.heading"
+msgstr "सगळे लेख"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"हे <a href=\"{$issueUrl}\">{$issueName}</a> साठी निश्चित केले आहे परंतु ते "
+"प्रकाशनासाठी अनुसूचीत (शेड्यूल) केलेले नाही."
+
+msgid "publication.changeIssue"
+msgstr "अंक बदला"
+
+msgid "publication.invalidSection"
+msgstr "या प्रकाशनासाठी योग्य असा विभाग नाही."
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"प्रकाशनासंबंधी सर्व बाबींची पूर्तता झाली आहे. हा लगेच {$issue} मध्ये प्रकाशि"
+"त केला जाईल. तुम्ही खात्रीने हा प्रकाशित करू इच्छिता ना?"
+
+msgid "publication.required.issue"
+msgstr "लेखन प्रकाशित होण्यापूर्वी एखाद्या अंकासाठी ते निश्चित करणे आवश्यक आहे."
+
+msgid "publication.unscheduledIn"
+msgstr "हा कुठल्याही अंकात प्रकाशनासाठी अनुसूचीत (शेड्यूल) केलेला नाही."
+
+msgid "submission.publication"
+msgstr "प्रकाशन"
+
+msgid "publication.status.published"
+msgstr "प्रकाशित"
+
+msgid "submission.status.scheduled"
+msgstr "अनुसूचीत केले (शेड्यूल्ड)"
+
+msgid "publication.status.unscheduled"
+msgstr "अनुसूचीत (शेड्यूल) केला गेला नाही"
+
+msgid "submission.publications"
+msgstr "प्रकाशने"
+
+msgid "publication.datePublished"
+msgstr "प्रकाशन दिनांक"
+
+msgid "publication.editDisabled"
+msgstr "या प्रारूपाचे प्रकाशन झाले आहे आणि त्याचे संपादन आता शक्य नाही."
+
+msgid "publication.event.published"
+msgstr "सादरीकरणाचे प्रकाशन झाले आहे."
+
+msgid "publication.event.scheduled"
+msgstr "सादरीकरण प्रकाशनासाठी अनुसूचीत केले (शेड्यूल्ड) गेले होते."
+
+msgid "publication.event.versionPublished"
+msgstr "नवी आवृत्ती प्रकाशित झाली होती."
+
+msgid "publication.event.versionUnpublished"
+msgstr "प्रकाशनातून ही आवृत्ती हटवली गेली."
+
+msgid "publication.publish"
+msgstr "प्रकाशित करा"
+
+msgid "publication.publish.requirements"
+msgstr "हे प्रकाशित करण्यापूर्वी खालील बाबींची पूर्तता करणे आवश्यक आहे."
+
+msgid "submission.license.description"
+msgstr ""
+"याचे प्रकाशन झाल्यावर परवाना आपोआप <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> वर निश्चित (सेट) केला जाईल."
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"याचे प्रकाशन झाल्यावर {$copyright} ला स्वामित्वाधिकार (कॉपीराइट) आपोआप नियुक्"
+"त केला जाईल."
+
+msgid "publication.unpublish"
+msgstr "अप्रकाशित करा"
+
+msgid "publication.unpublish.confirm"
+msgstr "तुम्ही प्रकाशित करू इच्छित नाही हे खात्रीपूर्वक सांगता ना?"
+
+msgid "publication.version.details"
+msgstr "आवृत्ती {$version} साठी प्रकाशनाचा तपशील"
+
+msgid "submission.queries.production"
+msgstr "प्रकाशनासंबंधी विचारविनिमय"
+
+msgid "editor.submission.decision.backToReview"
+msgstr "पुनर्समीक्षणासाठी"
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "समीक्षणाच्या टप्प्यावर परतवले"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "सादरीकरण {$title}, समीक्षणाच्या टप्प्यावर परत पाठवले गेले."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "समीक्षणाच्या टप्प्यावर पाठवायच्या फाईल्सची निवड करा."
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+"खालील सादरीकरणाच्या {$pubObjectTitle} कच्च्या मुद्रिताला (गॅली) DOI देता आला "
+"नाही: {$itemTitle}. DOI देण्यापूर्वी सादरीकरण एखाद्या अंकात प्रकाशनासाठी "
+"निश्चित करणे आवश्यक आहे."
+
+msgid "submission.layout.viewGalley"
+msgstr "कच्चे मुद्रित (गॅली) पहा"
+
+msgid "submission.sectionNotFound"
+msgstr "या सादरीकरणासाठी या नियतकालिकात योग्य विभाग नाही."
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr "केवळ संपादकीय कर्मचारीवृंदाला या विभागात लेखन सादर करायची परवानगी आहे."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "किमान एक लेखक हवा."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "कृपया तुमच्या लेखाचे शीर्षक नोंदवा."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "कृपया तुमच्या लेखाचा गोषवारा दाखल करा."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "कृपया योगदानकर्त्याची भूमिका निवडा."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "स्वरूपाला अनुमोदन"
+
+msgid "submission.submit.userGroup"
+msgstr "या भूमिकेतून सादर करतो..."
+
+msgid "submission.upload.selectComponent"
+msgstr "लेखाच्या घटकाची निवड"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr ""
+"<p>हे कच्चे मुद्रित (गॅली) वाचकांसाठी <em>यापुढे उपलब्ध केले जाणार "
+"नाही</em>.</p>"
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"लेआउट संपादक येथे प्रकाशनासाठी तयार केलेल्या प्रकाशनयोग्य फाईल्स संक्रमित "
+"(अपलोड) करतो. प्रकाशनाच्या अगोदर सुधारून संक्रमित (अपलोड) केलेल्या कच्च्या "
+"मुद्रिताच्या (गॅली) फाईल्समधील लेखक आणि इतरांतर्फे मुद्रण दोष शोधण्यासाठी "
+"(प्रूफरीड) <em>ऑडिटर नेमा<em>."
+
+msgid "submission.title.tip"
+msgstr ""
+"सादरीकरणाचा प्रकार सहसा 'प्रतिमा (इमेज)', 'मजकूर (टेक्स्ट)' किंवा इतर बहुमाध्"
+"यम प्रकारांपैकी एक जसे 'आज्ञावली (सॉफ्टवेअर)' किंवा 'देवाणघेवाणीचा "
+"(इंटरएक्टिव्ह)' असाही असू शकतो. कृपया तुमच्या सादरीकरणासाठी सर्वात योग्य असा "
+"एक प्रकार निवडा. यासंबंधीची उदाहरणे <a target=\"_blank\" href=\"http"
+"://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\""
+">http://dublincore.org/documents/  2001/04/12/usageguide/generic.shtml#type</"
+"a> येथे आढळतील"
+
+msgid "submission.pageProofs"
+msgstr "मुद्रण दोष शोधन (प्रूफरीड)"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "यामध्ये नवीन सादरीकरणाची सुरूवात करा"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "सादरीकरणाची प्राथमिक माहिती (मेटाडेटा) अंकासाठी अद्ययावत (अपडेट) केली."
+
+msgid "submission.abstract.wordCount.description"
+msgstr "गोषवारा {$wordCount} किंवा त्याहून कमी शब्दांत असणे आवश्यक आहे."
+
+msgid "submission.citationFormat.notFound"
+msgstr "अपेक्षित उद्धरण स्वरूप सापडत नाही."
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"नियतकालिकाला तुमच्या सादरीकरणाबद्दल सूचित केले गेले आहे आणि तुम्हाला त्याची "
+"पोहोच ई-मेलने दिली गेली आहे. लवकरच संपादकाने सादरीकरणाचे समीक्षण केले की, ते "
+"तुमच्याशी संपर्क साधतील."
+
+msgid "grid.action.issueEntry"
+msgstr "या सादरीकरणाची प्राथमिक माहिती (मेटाडेटा) पहा"
+
+msgid "submission.metadataDescription"
+msgstr ""
+"ही वैशिष्ट्ये नियतकालिकाच्या मजकूराचे वर्णन करण्यासाठी आंतरराष्ट्रीय मानकावर "
+"(डब्लिन कोर मेटाडेटा सेट) आधारित आहेत."
+
+msgid "submission.sectionOptions"
+msgstr "विभागाची निवड"
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"या प्रकाशनाची कच्ची मुद्रिते (गॅली) संपादित केली जाऊ शकत नाहीत कारण ते अगो"
+"दरच प्रकाशित झाले आहे."
+
+msgid "galley.publicationNotFound"
+msgstr "या कच्च्या मुद्रिताचे (गॅली) प्रकाशन मिळत नाही."
+
+msgid "publication.assignToissue"
+msgstr "या अंकासाठी निश्चित करा"
+
+msgid "publication.datePublished.description"
+msgstr ""
+"अंक प्रकाशित झाल्यावर प्रकाशनाची तारीख आपोआप निश्चित केली जाईल. अपवादात्मक "
+"परिस्थितीशिवाय, जसे लेख पूर्वी इतरत्र प्रकाशित झालेला आणि तुम्हाला तो मागील "
+"तारखेवर दाखवणे आवश्यक असल्यास, लेखावर प्रकाशनाच्या तारखेची नोंद करू नका."
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (निष्क्रिय)"
+
+msgid "publication.invalidIssue"
+msgstr "या प्रकाशनासाठी योग्य असा अंक नाही."
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"प्रकाशनासंबंधी सर्व बाबींची पूर्तता झाली आहे. तुम्ही खात्रीपूर्वक हा प्रकाशि"
+"त करू इच्छिता ना?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"प्रकाशनासंबंधी सर्व बाबींची पूर्तता झाली आहे. हा {$issue} अंक प्रकाशित झाल्या"
+"वर याचे प्रकाशन होईल. तुम्ही खात्रीने हा प्रकाशनासाठी अनुसूचीत (शेड्यूल) करू "
+"इच्छिता ना?"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"प्रकाशनासंबंधी सर्व बाबींची पूर्तता झाली आहे. हा लगेच प्रकाशित केले जाईल का"
+"रण प्रकाशनाची तारीख {$datePublished} वर सेट केली आहे. तुम्ही खात्रीने हा "
+"प्रकाशित करू इच्छिता ना?"
+
+msgid "publication.publishedIn"
+msgstr "<a href=\"{$issueUrl}\">{$issueName}</a> मध्ये प्रकाशित."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"<a href=\"{$issueUrl}\">{$issueName}</a> मध्ये प्रकाशनासाठी अनुसूचीत "
+"(शेड्यूल) केले आहे."
+
+msgid "publication.selectIssue"
+msgstr "प्रकाशनासाठी अनुसूचीत (शेड्यूल) करण्यासाठी अंकाची निवड करा"
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"जेव्हा हा एखाद्या अंकात प्रकाशित होईल तेव्हा त्याचे स्वामित्वाधिकार "
+"(कॉपीराईट) वर्ष स्वनियंत्रितपणे निश्चित (सेट) केले जाईल."
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"प्रकाशनाच्या तारखेनुसार स्वामित्वाधिकार (कॉपीराईट) वर्ष स्वनियंत्रितपणे "
+"निश्चित (सेट) केले जाईल."
+
+msgid "publication.event.unpublished"
+msgstr "सादरीकरण अप्रकाशित होते."
+
+msgid "publication.event.versionScheduled"
+msgstr "नवी आवृत्ती प्रकाशित करण्यासाठी अनुसूचीत केली (शेड्यूल्ड) गेली होती."
+
+msgid "publication.invalidSubmission"
+msgstr "प्रकाशनासाठी हे सादरीकरण उपलब्ध नाही."
+
+msgid "publication.required.declined"
+msgstr "नाकारलेले सादरीकरण प्रकाशित केले जात नाही."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"सादरीकरण प्रकाशित होण्यापूर्वी सुसंगतता आणि अचूकता तपासणी (कॉपी एडिटिंग) तसे"
+"च प्रकाशनाच्या इतर टप्प्यांतून जाणे आवश्यक आहे."
+
+msgid "submission.copyrightOther.description"
+msgstr ""
+"प्रकाशन झालेल्या सादरीकरणाचा स्वामित्वाधिकार (कॉपीराइट) खाली नमूद केलेल्यांना"
+" द्यावा."
+
+msgid "publication.unschedule.confirm"
+msgstr "तुम्ही खात्रीने हा प्रकाशनासाठी अनुसूचीत (शेड्यूल) करू इच्छित नाही ना?"
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"हे सादरीकरण स्वीकारण्याचा निर्णय फिरवून ते पुनर्समीक्षणाच्या टप्प्यावर पाठवा."
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} ने हे सादरीकरण स्वीकारण्याचा निर्णय फिरवून ते पुनर्समीक्षणाच्या"
+" टप्प्यावर पाठवले."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"लेखकांना ई-मेलने त्यांचे सादरीकरण समीक्षणाच्या टप्प्यावर परत पाठवले जात आहे "
+"हे कळवा. हा निर्णय का घेतला गेला ते स्पष्ट करा आणि पुनर्समीक्षणादरम्यान कशाची"
+" छाननी केली जाईल याची लेखकांना माहिती द्या."
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"हे सादरीकरण तज्ज्ञ समीक्षणासाठी पाठवले जाईल हे लेखकांना ई-मेलने कळवा. शक्य "
+"असल्यास, लेखकांना तज्ज्ञ समीक्षण प्रक्रियेला किती वेळ लागू शकतो आणि त्यांना "
+"संपादकांतर्फे पुढील संपर्क कधी साधला जाईल याची कल्पना द्या. असा ई-मेल "
+"पाठवायचा की नाही याचा निर्णय नोंदला गेल्याशिवाय तो पाठवला जाणार नाही."
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+"खालील सादरीकरणाला DOI देता आला नाही: {$pubObjectTitle}. DOI देण्यासाठी सादरी"
+"करण एखाद्या अंकात प्रकाशनासाठी निश्चित करणे आवश्यक आहे."
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+"खालील सादरीकरणाला DOI देता आला नाही: {$pubObjectTitle}. प्रस्तुत नियतकालिकाशी"
+" ते जोडलेले नाही."
+
+msgid "galley.cantEditPublished"
+msgstr ""
+"या कच्च्या मुद्रिताचे (गॅली) संपादन करणे अशक्य आहे कारण ते यापूर्वीच प्रकाशि"
+"त झाले आहे."
+
+msgid "submission.copyright.description"
+msgstr ""
+"या नियतकालिकात केलेल्या सादरीकरणाच्या स्वामित्वाधिकारासंबंधीच्या (कॉपीराइट) "
+"अटी वाचा आणि समजून घ्या."
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+"संपादकीय कर्मचारीवृंदाकडून लेखकाची नोंदणी झाल्याशिवाय आपल्याला या नियतकालिका"
+"त सादरीकरण करता येणार नाही. ही त्रुटी आहे असे तुम्हाला वाटत असल्यास, कृपया "
+"<a href='mailto:{$email}'>{$name}</a> यांच्याशी संपर्क साधा."
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+"या नियतकालिकात सर्वच विभागांत सादरीकरणाला मज्जाव केला गेला किंवा मर्यादा "
+"आणल्या असल्याने तुम्हाला यात सादरीकरण करता येणार नाही. ही त्रुटी आहे असे "
+"तुम्हाला वाटत असल्यास, कृपया <a href='mailto:{$email}'>{$name}</a> यांच्याशी "
+"संपर्क साधा."
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+"{$contextName} {$section} विभागातील सादरीकरण स्वीकारत नाही. तुमचे सादरीकरण "
+"परत मिळवण्यासाठी तुम्हाला मदत हवी असल्यास, कृपया <a "
+"href='mailto:{$email}'>{$name}</a> यांच्याशी संपर्क साधा."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"लेखाचा गोषवारा शब्द मर्यादेबाहेर जात आहे. कृपया या विभागासाठी नमूद केलेल्या "
+"शब्दांची मर्यादा पाळा."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "लेखाचे कच्चे मुद्रित (गॅली) \"{$galleyFormatName}\" अनुपलब्ध केले आहे."
+
+msgid "grid.action.pageProofApproved"
+msgstr ""
+"हे मुद्रण दोष शोधन झालेले (प्रूफरीड) स्वरूप कच्च्या मुद्रिता (गॅली) मध्ये "
+"समावेश करण्यासाठी मान्यता देण्यात आली आहे."
