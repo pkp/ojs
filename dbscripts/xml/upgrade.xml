@@ -139,6 +139,7 @@
 		<migration class="APP\migration\upgrade\v3_5_0\I9475_RecoverLayoutFiles"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I9462_UserUserGroupsStartEndDate"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I9552_UserGroupsMasthead"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I5504_UserGroupsSettings"/>
 		<migration class="APP\migration\upgrade\v3_5_0\I9425_SeparateUIAndSubmissionLocales"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I9709_UserUserGroupsMasthead"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I9566_UserRememberToken"/>

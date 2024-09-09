@@ -14,8 +14,8 @@
 
 <groups>
 	<!-- Managerial Role -->
-	<group roleId="0x00000010" name="default.groups.name.manager" plural="default.groups.plural.manager" abbrev="default.groups.abbrev.manager" permitMetadataEdit="true" />
-	<group roleId="0x00000010" stages="1,3,4,5" name="default.groups.name.editor" plural="default.groups.plural.editor" abbrev="default.groups.abbrev.editor" permitMetadataEdit="true" masthead="true" />
+	<group roleId="0x00000010" name="default.groups.name.manager" plural="default.groups.plural.manager" abbrev="default.groups.abbrev.manager" permitMetadataEdit="true" permitSettings="true" />
+	<group roleId="0x00000010" stages="1,3,4,5" name="default.groups.name.editor" plural="default.groups.plural.editor" abbrev="default.groups.abbrev.editor" permitMetadataEdit="true" masthead="true" permitSettings="true" />
 	<group roleId="0x00000010" stages="4,5" name="default.groups.name.productionEditor" plural="default.groups.plural.productionEditor" abbrev="default.groups.abbrev.productionEditor" permitMetadataEdit="true" />
 
 	<!--  Section Editor Role -->
