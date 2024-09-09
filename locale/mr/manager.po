@@ -1,3 +1,1431 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2024.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2024-09-09 16:00+0000\n"
+"Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
+"Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/manager/mr/>"
+"\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"लेखासाठी सर्वसाधारण (डिफॉल्ट) स्वामित्वधिकाराची (कॉपीराईट) तारीख निवडण्याचा "
+"पर्याय ठरवा. ही नैसर्गिकरित्या दिलेली तारीख विशिष्ट परिस्थितीत बदलता येऊ शकते"
+". तुम्ही लेख स्वीकारल्यानंतर लगेच प्रकाशित (publish as you go) करण्याचे धोरण "
+"अवलंबत असल्यास, अंकाच्या प्रकाशनाची तारीख वापरू नका."
+
+msgid "manager.distribution.publishingMode.none"
+msgstr ""
+"OJS चा वापर नियतकालिकाचा मजकूर ऑनलाइन प्रकाशित करण्यासाठी केला जाणार नाही."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr "नियतकालिकाचा निवडक किंवा सर्व मजकूर वाचण्याकरता सदस्यता आवश्यक असेल."
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr ""
+"कोणत्या प्रकारच्या लेखनाला DOI दिला जाईल ते ठरवा. नियतकालिके सर्वसाधारणपणे "
+"फक्त लेखांनाच DOI देतात, परंतु तुम्ही प्रकाशित केलेल्या सर्व लेखनाला DOI देऊ "
+"शकता."
+
+msgid "manager.files.note"
+msgstr ""
+"टीप : नियतकालिकाशी संबंधित फाईल्स आणि डिरेक्टरी थेट पाहण्यासाठी आणि "
+"हाताळण्यासाठी 'फाइल्स ब्राउझर' ही एक प्रगत सोय आहे."
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr ""
+"हे तुमच्या या लोकॅलसाठी कोणत्याही लोकॅल-विशिष्ट नियतकालिकाच्या सेटिंग्जची "
+"जागा घेईल"
+
+msgid "manager.setup.information.description"
+msgstr ""
+"ग्रंथपाल आणि संभाव्य लेखक आणि वाचकांसाठी नियतकालिकाचे संक्षिप्त वर्णन. ही "
+"माहिती उपलब्ध असल्यास संकेतस्थळाच्या साईडबारमधून उपलब्ध केली जाते."
+
+msgid "manager.setup.itemsDescription"
+msgstr ""
+"पृष्ठाच्या शीर्षस्थानी दिसणार्‍या नेव्हिगेशन बारमधून वेगवेगळी माहिती वर्तमान "
+"सेटमध्ये (मुख्यपृष्ठ, आमच्याबद्दल, वापरकर्ता मुख्यपृष्ठ इ.) जोडली जाऊ शकते."
+
+msgid "manager.setup.contextAbout"
+msgstr "नियतकालिकाविषयी"
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"OJS अनेक भाषांमधून कोणत्याही वापरकर्त्यांना उपलब्ध करून दिले जाऊ शकते. तसेच, "
+"OJS बहुभाषिक प्रणाली म्हणून कार्य करू शकते, वापरकर्त्यांना प्रत्येक पृष्ठावरी"
+"ल भाषांमध्ये टॉगल करण्याची क्षमता प्रदान करते आणि विशिष्ट डेटा अनेक अतिरिक्त "
+"भाषांमध्ये प्रविष्ट करण्याची परवानगी देते.<br /><br/>OJS आधारित भाषांपैकी "
+"एखादी भाषा खालील यादीत दिसत नसल्यास, आपल्या संकेतस्थळाच्या प्रशासकास "
+"अ‍ॅडमिनिस्ट्रेशन इंटरफेसमधून ती भाषा स्थापित करण्यास सांगा. इतर भाषांमधून "
+"OJS चा वापर करायचा असेल तर त्याच्या माहितीसाठी, कृपया त्यासंबंधीचे OJS प्रले"
+"खन (documentation) वाचा."
+
+msgid "manager.payment.currencymessage"
+msgstr ""
+"OJS मध्ये चलन रूपांतरणाची सोय नाही. सदस्यतेसाठी शुल्क स्वीकारत असल्यास, "
+"सदस्यता चलन येथे नमूद केलेल्या चलनाशी जुळणारे आहे याची तुम्ही खात्री करा."
+
+msgid "manager.payment.form.numeric"
+msgstr "सगळ्या संख्या अंकीय मूल्यात असणे आवश्यक आहे (दशांश बिंदूंना अनुमती आहे)"
+
+msgid "manager.payment.notFound"
+msgstr "सापडले नाही"
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr ""
+"हे सदस्यतेसाठी देयके कार्यान्वित करेल, जेथे त्याचे प्रकार, मूल्य, कालावधी आणि"
+" सदस्यता नियतकालिकाच्या (सदस्यता) व्यवस्थापकाद्वारे ठरवले जाते."
+
+msgid "manager.payment.options.enablePayments"
+msgstr ""
+"या नियतकालिकासाठी देयके कार्यान्वित केली जातील. रक्कमेचा भरणा करण्यासाठी "
+"वापरकर्त्यांना लॉग-इन करणे आवश्यक आहे याची नोंद घ्या."
+
+msgid "manager.payment.paymentMethod"
+msgstr "शुल्क प्रदान करण्याची पद्धत"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr ""
+"तुम्ही या स्क्रीनवरून खालीलपैकी कोणतेही शुल्क प्रदान करण्याच्या पद्धतीचे "
+"प्लग-इन कॉन्फिगर करू शकता."
+
+msgid "manager.payment.readerFeesDescription"
+msgstr ""
+"निवडलेले पर्याय, त्यांचे वर्णन आणि शुल्कासह (जे खाली संपादित केले जाऊ शकतात) "
+"<i>धोरण > 'नियतकालिकाविषयी'</i> पानावर, तसेच ज्याठिकाणी रक्कम भरणा करणे आवश्"
+"यक असेल त्या ठिकाणी दिसून येईल."
+
+msgid "manager.people.showNoRole"
+msgstr "कोणतीही भूमिका नसलेले वापरकर्ते दाखवा"
+
+msgid "manager.people.confirmRemove"
+msgstr ""
+"या नियतकालिकाच्या वापरकर्त्याला हटवायचे? ही क्रिया या नियतकालिकामधील त्याच्या"
+" सर्व भूमिकांसाठी या वापरकर्त्याची नोंदणी रद्द करेल."
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr ""
+"दुसऱ्या वापरकर्ता खात्यात विलीन करण्यासाठी एक (किंवा अनेक) वापरकर्ता निवडा "
+"(उदा. एखाद्याकडे दोन वापरकर्ता खाती असल्यास). प्रथम निवडलेले खाते हटवले जाईल "
+"आणि सादरीकरण, कामासाठी नेमणूक इ.चे श्रेय दुसऱ्या खात्याला दिले जाईल."
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr ""
+"पूर्वीच्या वापरकर्त्यांच्या खात्यातले लेखकत्व, संपादनासाठी नेमणूक इ.चे श्रेय "
+"हस्तांतरित करण्यासाठी योग्य असे वापरकर्ता खाते निवडा."
+
+msgid "manager.people.syncUserDescription"
+msgstr ""
+"नावनोंदणीची जुळवणी (सिंक्रोनाइझेशन) करताना निर्दिष्ट नियतकालिकामधील निर्दिष्"
+"ट भूमिकेत नोंदणी केलेल्या सर्व वापरकर्त्यांची या नियतकालिकामधील समान भूमिकेत "
+"नोंदणी होते. हे कार्य वापरकर्त्यांचा एक सामायिक संच (उदा. समीक्षक) "
+"नियतकालिकांमध्ये समक्रमित करू देते."
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"तुमच्या नियतकालिकाबद्दल वाचक, लेखक किंवा समीक्षकांना स्वारस्य असलेली योग्य "
+"त्या माहितीचा समावेश करा. यामध्ये तुमचे मुक्त उपलब्धता धोरण, नियतकालिकाचे "
+"लक्ष्य आणि व्याप्ती, स्वामित्वाधिकारासंबंधी (कॉपीराईट) सूचना, पुरस्कर्त्याबद्"
+"दल माहिती, नियतकालिकाचा इतिहास, गोपनीयता विधान आणि LOCKSS किंवा CLOCKSS "
+"प्रणालींमध्ये संग्रहण धोरण याचा समावेश असू शकतो."
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr ""
+"नियतकालिकाच्या मुख्यापृष्ठावरुन संकेतस्थळाच्या सर्वसाधारणपणे विविध भागांमध्ये"
+" परस्पर पोहोचण्याकरता (नेव्हिगेशन) जोडण्या (लिंक्स) असतात. खालीलपैकी एक किंवा"
+" सर्व पर्याय वापरून अतिरिक्त मुख्यपृष्ठ मजकूरही अन्य आशयाला जोडण्यासाठी "
+"वापरला जाऊ शकतो, जो दर्शविलेल्या क्रमाने दिसेल. वर्तमान अंक हा नेहमीच "
+"नेव्हिगेशन बारमधून  लिंकद्वारा जोडला जातो याची नोंद घ्या."
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr ""
+"नियतकालिकाच्या शीर्षकाचे आणि परिचय चिन्हाचे (लोगो) ग्राफिक प्रारूप (.gif, ."
+"jpg किंवा .png फाईलद्वारे) मुख्यपृष्ठासाठी संक्रमित (अपलोड) केली जाऊ शकते, जे"
+" अन्यथा साध्या मजकूराची जागा घेईल."
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"हे नियतकालिकाचे प्रकाशन कोणत्या देशातून होते तो किंवा नियतकालिक/प्रकाशकाच्या "
+"पत्रव्यवहाराच्या पत्त्याचा देश निवडा."
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr ""
+"विभाग संपादकाला सादरीकरणे आपोआप नियुक्त करण्यासाठी या विभागावर विभाग "
+"संपादकाची नेमणूक करा. (अन्यथा, सादरीकरणे आल्यानंतर, त्याकरता विभाग "
+"संपादकाच्या नियुक्तीचे निर्णय घेतले जाऊ शकतात.) अशा नेमणूकीमुळे विभाग संपादक "
+"समीक्षण (तज्ज्ञ समीक्षण) आणि/किंवा या विभागातल्या सादरीकरणांच्या विविध संपा"
+"दन प्रक्रियांवरही (कॉपीएडिटिंग, लेआउट आणि प्रूफरीडिंग) देखरेख ठेऊ शकतो. "
+"<i>नियतकालिकाचे व्यवस्थापन > भूमिका</i> अंतर्गत विभाग संपादकांवर क्लिक करून "
+"विभाग संपादकाची नेमणूक केली जाते."
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+"नियतकालिकाचे स्वरूप (थीम) आणि मांडणीचे (लेआउट) घटक येथे निवडा. नियतकालिकासाठी"
+" स्टाइलशीट संक्रमित (अपलोड) केल्यास, जर एखादी थीम निवडली असेल तर त्याला ते "
+"वरचढ (ओव्हरराइड) करण्यासाठी वापरता येतात."
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr ""
+"प्रत्येक विभाग संपादकाला काम सोपवण्यासाठी किमान एक चेकबॉक्स चेक केला आहे याची"
+" कृपया खात्री करा."
+
+msgid "manager.sections.hideTocTitle"
+msgstr "अंकाच्या अनुक्रमणिकेमधून या विभागाचे शीर्षक वगळा."
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr ""
+"ही तुमच्या नियतकालिकाच्या पृष्ठावरील तळटीप आहे. तळटीप बदलण्यासाठी किंवा "
+"अद्ययावत (अपडेट) करण्यासाठी, खालील मजकूरासाठी असलेल्या चौकटीत "
+"(टेक्स्टबॉक्समध्ये) HTML कोड पेस्ट करा. यात वेगळे नेव्हिगेशन बार, गणक "
+"(काउंटर) इत्यादी असू शकतात. ही तळटीप प्रत्येक पृष्ठावर दिसेल."
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr ""
+"(उदाहरणार्थ, \"तज्ज्ञ-समीक्षण केलेला लेख\", \"समीक्षणाविना ग्रंथ परिचय\", "
+"\"आमंत्रित भाष्य\", इ.)"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr ""
+"नियतकालिकाच्या यादीमध्ये वापरण्यासाठी नियतकालिकाचे एक लहान परिचय चिन्ह (लोगो)"
+" किंवा इतर प्रातिनिधिक चिन्ह."
+
+msgid "manager.sections.submissionIndexing"
+msgstr "नियतकालिकाच्या सूचीमध्ये समाविष्ट केले जाणार नाही"
+
+msgid "manager.setup.keyInfo.description"
+msgstr ""
+"तुमच्या नियतकालिकाचे संक्षिप्त वर्णन तसेच संपादक, व्यवस्थापकीय संचालक आणि "
+"संपादकीय मंडळाच्या इतर सदस्यांची माहिती द्या."
+
+msgid "manager.sections.wordCountInstructions"
+msgstr "या विभागासाठी गोषवार्‍याची शब्द संख्या मर्यादित करा (अमर्यादेसाठी 0)"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr ""
+"नियतकालिकाच्या मुख्यापृष्ठावरुन संकेतस्थळाच्या सर्वसाधारणपणे विविध भागांमध्ये"
+" परस्पर पोहोचण्याकरता (नेव्हिगेशन) जोडण्या (लिंक्स) असतात. खालीलपैकी एक किंवा"
+" सर्व पर्याय वापरून अतिरिक्त मुख्यपृष्ठ मजकूरही अन्य आशयाला जोडण्यासाठी "
+"वापरला जाऊ शकतो, जो दर्शविलेल्या क्रमाने दिसेल."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"PKP PN साठी वापरण्याच्या अटी स्वीकारण्यासाठी <button>प्लग-इन सेटिंग्ज</"
+"button> पहा."
+
+msgid "manager.setup.addNavItem"
+msgstr "कलमाला जोड द्या"
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr ""
+"तुम्हाला तुमच्या निवेदन पृष्ठावर प्रदर्शित करायच्या योग्य अशा माहितीची नोंद "
+"करा."
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"PKP प्रिझर्वेशन नेटवर्क (PN) काही मूलभूत निकष पूर्ण करणाऱ्या कोणत्याही OJS "
+"वापरणार्‍या नियतकालिकासाठी मोफत जतन सेवा प्रदान करते. तुमचे नियतकालिक PN "
+"मध्ये संग्रहित करण्यासाठी, तुमच्या प्रशासकाला प्लग-इन गॅलरीमधून PKP|PN प्लग-"
+"इन इंस्टॉल करण्यास सांगा."
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr ""
+"समीक्षकांनी सादर केलेल्या प्रत्येक तज्ज्ञ समीक्षणासोबत CI स्टेटमेंट दाखल करणे"
+" आवश्यक आहे."
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+"LOCKSS सहभागी लायब्ररींद्वारे नियतकालिकाचा मजकूर संचयित आणि वितरित करण्यासाठी"
+" <a href=\"{$lockssUrl}\" target=\"_blank\">प्रकाशकाचे प्रकटीकरण</a> या "
+"पृष्ठावर LOCKSS सक्रिय करा."
+
+msgid "manager.setup.historyDescription"
+msgstr ""
+"हा मजकूर नियतकालिकाच्या संकेतस्थळावरील \"बद्दल (About)\" विभागात दिसेल. याचा "
+"वापर नियतकालिकाचे नाव, संपादक मंडळ आणि नियतकालिकाच्या प्रकाशन इतिहासाशी "
+"संबंधित इतर बाबींमधील बदलांचे वर्णन करण्यासाठी वापरला जाऊ शकतो."
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+"नियतकालिकाची नोंदणी आणि कॅश करणार्‍या 6-10 लायब्रर्‍या शोधा. उदाहरणार्थ, जेथे"
+" संपादक किंवा मंडळाचे सदस्य नोकरी करतात आणि/किंवा आधीच LOCKSS मध्ये सहभागी "
+"झालेल्या संस्था. <a href=\"https://www.lockss.org/join-lockss/partner-"
+"communities\" target=\"_blank\">LOCKSS समुदाय</a> पहा."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr ""
+"नियतकालिकाचा व्यवस्थापक सर्व वापरकर्ता खात्यांची नोंदणी करेल. संपादक किंवा "
+"विभाग संपादक समीक्षकांसाठीची वापरकर्ता खाती नोंदवू शकतात."
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"CLOCKSS सहभागी लायब्ररींद्वारे नियतकालिकाचा मजकूर संचयित आणि वितरित "
+"करण्यासाठी <a href=\"{$clockssUrl}\" target=\"_blank\">प्रकाशकाचे प्रकटीकरण</"
+"a> या पृष्ठावर CLOCKSS सक्रिय करा."
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "या नियतकालिकासाठी संबंधित शैक्षणिक ज्ञानशाखांची उदाहरणे द्या"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr ""
+"न पोहोचलेल्या ई-मेलबद्दल या पत्त्यावर त्रुटी संदेश (error message) येईल."
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"न पोहोचलेल्या ई-मेल्स चुकीच्या पत्त्यावर (बाऊन्स ॲड्रेसवर) पाठवण्यासाठी, "
+"संकेतस्थळाच्या व्यवस्थापकाने (ॲडमिनिस्ट्रेटर) साइट कॉन्फिगरेशन फाईलमध्ये "
+"<code>allow_envelope_sender</code> पर्याय सक्षम करणे आवश्यक आहे. OJS "
+"दस्तऐवजीकरणात सूचित केल्याप्रमाणे सर्व्हर कॉन्फिगरेशन आवश्यक असू शकते."
+
+msgid "manager.setup.look.description"
+msgstr ""
+"मुख्यपृष्ठ शीर्षलेख, मजकूर, नियतकालिकाचा शीर्षलेख (हेडर), तळटीप (फुटर), "
+"नेव्हिगेशन बार आणि शैली पत्रक (स्टाईल शीट)."
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"नियतकालिकासंबंधी बातम्या आणि कार्यक्रमांत स्वारस्य असलेल्या वाचकांना माहिती "
+"देण्यासाठी निवेदने प्रकाशित केली जाऊ शकतात. निवेदन पृष्ठावरही प्रकाशित "
+"निवेदने प्रसिद्ध होतील."
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "मूलभूत संपादकीय टप्प्यांचे व्यवस्थापन"
+
+msgid "manager.setup.navigationBar"
+msgstr "नेव्हिगेशन बार (पृष्ठ निर्देश पट्टी)"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr ""
+"लेखक, वाचक आणि ग्रंथपालांना नियतकालिक प्रकाशित करणार असलेल्या लेखांचा परीघ "
+"आणि इतर लेखनाची माहिती द्या."
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr ""
+"URL परिपूर्ण हवा (जसे, \"http://www.example.com\") केवळ संकेतस्थळाशी संबंधित "
+"स्थानमार्गाची नोंद (path) असू नये (उदा. \"/manager/setup\")"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr ""
+"लेबल अर्थपूर्ण शब्दांनी किंवा त्यांच्या समुच्चयाने बनलेले असावे (उदा. \"न"
+"ियतकालिकाचे नियोजन\") ते संदेशात्मक असू नये (उदा. \"व्यवस्थापक.नियोजन\")"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+"<strong>टीप :</strong> ई-मेलने सादरीकरणाची आपोआप पोच देण्याची सोय सध्या "
+"निष्क्रिय (disable) केलेली आहे. हे वैशिष्ट्य वापरण्यासाठी, ई-मेलमध्ये \"सादरी"
+"करण पोच\" ई-मेल सक्रिय करा."
+
+msgid "manager.setup.policies.description"
+msgstr ""
+"लक्ष्य, तज्ज्ञ समीक्षण, विभाग, गोपनीयता, सुरक्षा आणि अतिरिक्त जोडण्यांविषयी."
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"मुद्रित शोधन (प्रूफरीडिंग) सूचना प्रूफरीडर, लेखक, लेआउट संपादक आणि विभाग "
+"संपादकांना सादरीकरण संपादन टप्प्यावर उपलब्ध करून दिल्या जातील. सर्वसाधारण "
+"(डिफॉल्ट) सूचनांचा संच HTML प्रारूपात खाली पहायला मिळेल, हा नियतकालिकाच्या "
+"व्यवस्थापकाद्वारे केव्हाही (HTML किंवा साध्या मजकुरात) संपादित किंवा बदलला जा"
+"ऊ शकतो."
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr ""
+"OJS <a href=\"https://www.openarchives.org/\" target=\"_blank\">ओपन आर्काइव्"
+"ह इनिशिएटिव्ह</a> प्रोटोकॉलचे पालन करते. इलेक्ट्रॉनिक संशोधन संसाधनांतल्या "
+"प्राथमिक माहितीची उचल (मेटाडेटा हार्वेस्टिंगसाठी) त्यावरील सूची सहजतेने उपलब्"
+"ध करून देण्यासाठी या जागतिक स्तरावरील उदयोन्मुख मानकाचा वापर केला जातो. लेखक "
+"त्यांच्या सादरीकरणाबद्दल प्राथमिक माहिती (मेटाडेटा) प्रदान करण्यासाठी हाच "
+"नमुना (टेम्पलेट) वापरतील. नियतकालिकाच्या व्यवस्थापकाने लेखकांना त्यांच्या "
+"लेखनाचे योग्य असे प्रवर्ग निवडून सूचीकरण करण्यासाठी सोदाहरण मदत केली पाहिजे."
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"नियतकालिकात प्रसिद्ध केले जाणारे लेखन अंक स्वरूपात त्याच्या अनुक्रमणिकेसह "
+"प्रकाशित करणे शक्य आहे. शिवाय प्रत्येक लेख जसजसा प्रसिद्धीसाठी तयार होतो "
+"तेव्हाही त्याचा अंतर्भाव लगेच वर्तमान खंडात करुन, आणि खंडाच्या अनुक्रमणिकेत "
+"नोंदवून लगेच प्रकाशित करता येण्याचीही पर्यायी सोय आहे. 'नियतकालिकाविषयी' या "
+"पृष्ठावर प्रकाशनाच्या वेळापत्रकाबद्दल किंवा पर्यायी धोरणाची माहिती वाचकांना "
+"द्या."
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "आधारासाठी नाव आवश्यक आहे."
+
+msgid "manager.setup.publicIdentifier"
+msgstr "नियतकालिकातील लेखनाला खूणेने (आयडेंटिफायर) ओळख देणे"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "टप्पा 3. सादरीकरणांसाठी मार्गदर्शन"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr ""
+"वापरकर्ते नोंदणीकृत असणे आणि मुक्त उपलब्ध लेखन वाचण्यासाठी त्यांनी लॉग-इन "
+"करणे आवश्यक आहे."
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+"साहित्य तत्काळ किंवा विलंबाने मुक्त उपलब्ध करणाऱ्या नियतकालिकांनी, योग्य वेळी"
+" सर्व प्रकाशित लेखांसाठी क्रिएटिव्ह कॉमन्स परवाना समाविष्ट करावा."
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "समीक्षणासाठी मार्गदर्शक तत्त्वे / मार्गदर्शक तत्त्वांचा आढावा"
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr ""
+"स्वनियंत्रित ई-मेल स्मरणपत्रे पाठवण्यासाठी, संकेतस्थळाच्या अ‍ॅडमिनने OJS "
+"कॉन्फिगरेशन फाईलमधील <tt>scheduled_tasks</tt> पर्याय सक्रिय करणे आवश्यक आहे. "
+"OJS दस्तऐवजात सूचित केल्यानुसार अतिरिक्त सर्व्हर कॉन्फिगरेशन आवश्यक असू शकते."
+
+msgid "manager.setup.submissions.description"
+msgstr ""
+"लेखकांसाठी मार्गदर्शक तत्त्वे, स्वामित्वधिकार (कॉपीराईट) आणि सूचीकरण "
+"(नोंदणीसह)."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"सादरीकरणाचे समीक्षण करण्याच्या सहमतीशिवाय समीक्षकांना सादरीकरणाची फाईल पहाता "
+"येणार नाही."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"नियतकालिकामध्ये नवीन लेख सादर करण्यापासून वापरकर्त्यांना प्रतिबंधित करा. "
+"सेटिंग्ज पृष्ठावरील नियतकालिकाच्या विशिष्ट विभागासाठी <a href=\"{$url}\""
+">नियतकालिकाचे विभाग</a> येथून सादरीकरण करणे रोखले (disable) जाऊ शकते."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr ""
+"समीक्षकांना ई-मेल आमंत्रणात एक सुरक्षित दुवा (लिंक) पाठवला जाऊ शकतो, ज्यावर "
+"त्यांनी क्लिक केल्यावर त्यांना परस्पर लॉग-इन केले जाईल."
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"गुगलसारख्या शोध इंजिनांना तुमचे संकेतस्थळ शोधण्यास आणि त्यावरील माहिती प्रदा"
+"न करण्यास मदत करा. तुम्हाला तुमचे <a href=\"{$sitemapUrl}\" target=\"_blank\""
+">संकेतस्थळ आराखडा (साइटमॅप)</a> सादर करण्यासाठी प्रोत्साहित केले जात आहे."
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"<a href=\"https://www.openarchives.org/\">Open Archives Initiative</a> द्वारे"
+" त्रयस्थ सूची सेवांना प्राथमिक माहिती (मेटाडेटा) प्रदान करा."
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"नियतकालिकाचे संक्षिप्त वर्णन (50-300 अक्षरात) प्रदान करा ज्याचा उपयोग शोध "
+"इंजिने शोधनिष्कर्षांमध्ये नियतकालिक सूचीबद्ध करताना प्रदर्शित करू शकतील."
+
+msgid "manager.setup.typeProvideExamples"
+msgstr ""
+"या विषयासाठी संबंधित संशोधन प्रकार, पद्धती आणि दृष्टिकोनांची उदाहरणे द्या"
+
+msgid "manager.setup.sectionsDescription"
+msgstr ""
+"नियतकालिकासाठी विभाग तयार करण्यासाठी किंवा बदल करण्यासाठी (उदा., लेख, पुस्तक "
+"परिचय इ.), विभाग व्यवस्थापनावर जा.<br/><br/>नियतकालिकामध्ये सादरीकरण करणारे "
+"लेखक योग्य विभागाची निवड करतील."
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr ""
+"डिजिटल ऑब्जेक्ट आयडेंटिफायर (DOI) प्रणालीसारखी नोंदणी प्रणाली वापरून लेख आणि "
+"अंक ओळख क्रमांक किंवा सूत्राने (स्ट्रिंग) बद्ध (टॅग) केले जाऊ शकतात."
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "नियतकालिकाच्या संकेतस्थळासाठी पाच टप्पे"
+
+msgid "manager.setup.subjectExamples"
+msgstr ""
+"(उदा., संत साहित्य; ग्रामीण साहित्य; प्रकाशसंश्लेषण; कृष्णविवर; बायेसियन "
+"सिद्धांत)"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "समीक्षण पूर्ण करण्यासाठी शिल्लक दिवस"
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+"OJS प्रत्येक नियतकालिकासाठी खालील आकडेवारीची गणना करते. \"समीक्षण करण्याच्या "
+"दिवसांची\" गणना सादरीकरण केल्याच्या तारखेपासून (किंवा पुनर्समीक्षण आवृत्ती सा"
+"दर केल्यापासून) संपादकाच्या प्रारंभिक निर्णयापर्यंत केली जाते, तर \"प्रकाशित "
+"करण्याचे दिवस\" स्वीकारलेले मूळ सादरीकरण संक्रमित (अपलोड) केलेल्या दिवसापासू"
+"न ते त्याच्या प्रकाशनापर्यंत मोजले जातात."
+
+msgid "manager.statistics.statistics.note"
+msgstr ""
+"टीप : तज्ज्ञ समीक्षण केलेल्या सादरीकरणांची टक्केवारी 100% पर्यंत पोहोचू शकत "
+"नाही, कारण पुनर्समीक्षण आवृत्ती सादर केलेले लेख एकतर स्वीकारले गेले आहेत, "
+"नाकारले गेले आहेत किंवा अद्याप प्रक्रियेत आहेत."
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr ""
+"या नियतकालिकाच्या तज्ज्ञ समीक्षण केलेल्या आकडेवारीची गणना करण्यासाठी "
+"विभागांची निवड करा."
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr ""
+"लेखाच्या गोषवार्‍याच्या पानाला भेट देणार्‍यांची संख्या आणि उतरवून घेतलेले "
+"(डाउनलोड्स) लेख"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "विलंबित मुक्त उपलब्धता"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr ""
+"सदस्यता कालबाह्य झाल्यानंतर, वाचकांना सदस्यतेमुळे उपलब्ध असलेला सर्व मजकूर "
+"वाचण्यासाठी प्रतिबंध केला जाऊ शकतो किंवा सदस्यता समाप्तीच्या तारखेपूर्वी "
+"प्रकाशित झालेला मजकूर कायमस्वरूपी उपलब्ध ठेवला जाऊ शकतो."
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr ""
+"वाचकांना अलीकडे प्रकाशित झालेला आणि सदस्यांनाच खुला असलेला मजकूर अनुपलब्ध "
+"केला जातो, परंतु सदस्यता समाप्ती तारखेपूर्वी प्रकाशित झालेला मजकूर उपलब्ध "
+"असतो."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "सदस्यता कालबाह्य झाल्यानंतर सदस्यांना ई-मेलद्वारे सूचित करा."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "सदस्यता कालबाह्य होण्यापूर्वी सदस्यांना ई-मेलद्वारे सूचित करा."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr ""
+"सदस्यांना सदस्यता कालबाह्य होण्यापूर्वी आणि नंतर, दोन्ही वेळा, स्वनियंत्रित "
+"ई-मेल स्मरणपत्रे (OJS च्या ई-मेलमध्ये नियतकालिकाच्या व्यवस्थापकांद्वारे "
+"संपादनासाठी उपलब्ध) पाठवली जाऊ शकतात."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr ""
+"<strong>टीप :</strong> हे पर्याय सक्रिय करण्यासाठी, संकेतस्थळाच्या प्रशासकाने"
+" OJS कॉन्फिगरेशन फाईलमधील <tt>scheduled_tasks</tt> पर्याय सक्रिय करणे आवश्यक "
+"आहे. या कामाला पुष्टी देण्यासाठी अतिरिक्त सर्व्हर कॉन्फिगरेशनची आवश्यकता (जी "
+"सर्व सर्व्हरवर नसू शकते) असू शकते हे OJS दस्तऐवजीकरणात सूचित केले आहे."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong>टीप :</strong> सदस्यता व्यवस्थापकाद्वारे ऑनलाइन रक्कमेचा भरणा "
+"केलेल्या संस्था सदस्यतांना प्रदान केलेल्या डोमेन आणि IP श्रेणींची खात्री करु"
+"न सदस्यता सक्रिय करणे आवश्यक आहे."
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr ""
+"वर्गणी भरल्यावर मजकूर उपलब्ध करणारी नियतकालिके त्यांच्या प्रकाशित मजकूरासाठी "
+"\"विलंबित मुक्त उपलब्धता\" प्रदान करू शकतात, तसेच लेखकाला (अधिकाधिक "
+"वाचकसंख्या आणि लेखांना उद्धरणे मिळवण्यासाठी) स्व-संग्रहणाची (self-archiving) "
+"परवानगी देऊ शकतात."
+
+msgid "manager.distribution.access"
+msgstr "उपलब्धता"
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "अंकाच्या प्रकाशनाची तारीख वापरा"
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "लेखाच्या प्रकाशनाची तारीख वापरा"
+
+msgid "manager.distribution.publication"
+msgstr "प्रकाशन"
+
+msgid "manager.distribution.publishingMode"
+msgstr "प्रकाशनाची पद्धत / प्रकाशनाचा प्रकार"
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "नियतकालिकाचा मजकूर मुक्तपणे उपलब्ध असेल."
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+"या नियतकालिकामध्ये प्रकाशित केलेल्या लेखनासाठी डिजिटल ऑब्जेक्ट आयडेंटिफायर्स "
+"(DOIs) ने ओळख देण्याची अनुमती द्या."
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"सर्वसाधारण (डिफॉल्ट) प्रारूप वापरा. <br />%j.v%vi%i अंकांसाठी<br /"
+">%j.v%vi%i.%a लेखांसाठी<br />%j.v%vi%i.%a.g%g कच्च्या मुद्रितांसाठी "
+"(galleys)."
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "कॉपी संपादनाच्या टप्प्यावर पोहोचल्यावर"
+
+msgid "manager.website.archiving"
+msgstr "संग्रहण"
+
+msgid "manager.journalManagement"
+msgstr "नियतकालिकाचे व्यवस्थापन"
+
+#, fuzzy
+msgid "manager.language.ui"
+msgstr "UI"
+
+msgid "manager.language.submissions"
+msgstr "सादरीकरणे"
+
+msgid "manager.language.forms"
+msgstr "फॉर्म्स"
+
+msgid "manager.languages.noneAvailable"
+msgstr ""
+"क्षमस्व, कोणत्याही अतिरिक्त भाषा उपलब्ध नाहीत. तुम्हाला या नियतकालिकासाठी "
+"अतिरिक्त भाषा वापरायची असल्यास तुमच्या संकेतस्थळ प्रशासकाशी (अ‍ॅडमिन) संपर्क "
+"साधा."
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "नियतकालिकाच्या संकेतस्थळासाठी ही सर्वसाधारण (डिफॉल्ट) भाषा असेल."
+
+msgid "manager.managementPages"
+msgstr "व्यवस्थापन पृष्ठे"
+
+msgid "manager.payment.action"
+msgstr "कार्यवाही"
+
+msgid "manager.payment.addPayment"
+msgstr "शुल्क भरणा समाविष्ट करा"
+
+msgid "manager.payment.amount"
+msgstr "रक्कम"
+
+msgid "manager.payment.authorFees"
+msgstr "लेखक शुल्क"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr ""
+"लेखक प्रक्रिया शुल्क सक्रिय करण्यासाठी खाली शुल्काच्या रक्कमांची नोंद करा."
+
+msgid "manager.payment.description"
+msgstr "प्रकार"
+
+msgid "manager.payment.details"
+msgstr "विवरण"
+
+msgid "manager.payment.editSubscription"
+msgstr "सदस्यता वर्गणी संपादित करा"
+
+msgid "manager.payment.enable"
+msgstr "सक्रिय करा"
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "शुल्क भरण्याचे पर्याय"
+
+msgid "manager.payment.generalFees"
+msgstr "सर्वसाधारण फी"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr ""
+"संस्था सदस्यत्वाच्या धोरणाविषयीची माहिती <i>धोरणे > नियतकालिकाविषयी</i> मध्ये"
+" दिसेल."
+
+msgid "manager.payment.generalOptions"
+msgstr "सर्वसाधारण पर्याय"
+
+msgid "manager.payment.noPayments"
+msgstr "कोणतेही शुल्क प्रदान करणे नाही"
+
+msgid "manager.payment.options"
+msgstr "पर्याय"
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "तुम्ही खात्रीपूर्वक ही सदस्यता हटवू इच्छिता ना?"
+
+msgid "manager.payment.options.fee"
+msgstr "फी"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "फी चे प्रकार"
+
+msgid "manager.payment.options.feeName"
+msgstr "फी चे नाव"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "संस्था सदस्यत्व"
+
+msgid "manager.payment.options.onlypdf"
+msgstr "अंक आणि लेखांची केवळ PDF प्रारूपे उपलब्ध करा"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "लेख प्रक्रिया शुल्क"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "लेख खरेदी करा"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "अंक खरेदी करा"
+
+msgid "manager.payment.options.text"
+msgstr "शुल्क भरण्याच्या पद्धतीची माहिती"
+
+msgid "manager.payment.paymentId"
+msgstr "शुल्क प्रदान करण्यासाठी आयडी"
+
+msgid "manager.payment.paymentMethods"
+msgstr "शुल्क प्रदान करण्याच्या पद्धती"
+
+msgid "manager.payment.paymentType"
+msgstr "शुल्क प्रदान करण्याचा प्रकार"
+
+msgid "manager.payment.readerFees"
+msgstr "वाचक शुल्क"
+
+msgid "manager.payment.records"
+msgstr "(रक्कम भरल्याच्या) नोंदी"
+
+msgid "manager.paymentTypes"
+msgstr "शुल्क प्रदान करण्याचे प्रकार"
+
+msgid "manager.payment.userName"
+msgstr "रक्कम प्रदान करण्यासाठी आयडी"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "या नियतकालिकाचे नोंदणीकृत वापरकर्ते"
+
+msgid "manager.people.allJournals"
+msgstr "सगळी नियतकालिके"
+
+msgid "manager.people.allSiteUsers"
+msgstr "या नियतकालिकासाठी या संकेतस्थळावरून वापरकर्त्याची नोंदणी करा"
+
+msgid "manager.people.allUsers"
+msgstr "नोंदणी केलेले सगळे वापरकर्ते"
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "मसुदा निवडा"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "अस्तित्वात असलेल्या वापरकर्त्याची नोंदणी करा"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "नियतकालिकासाठी"
+
+msgid "manager.people.roleEnrollment"
+msgstr "{$role} नावनोंदणी"
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "गोषवार्‍याची गरज नाही"
+
+msgid "manager.sections.assigned"
+msgstr "या विभागाचे संपादक"
+
+msgid "manager.sections.confirmDelete"
+msgstr "तुम्ही हा विभाग खात्रीपूर्वक कायमचा हटवू इच्छिता ना?"
+
+msgid "manager.sections.alertDelete"
+msgstr ""
+"हा विभाग हटवण्यापूर्वी, त्यावर सादर केलेले लेख तुम्ही इतर विभागांमध्ये हलवणे "
+"आवश्यक आहे."
+
+msgid "manager.sections.create"
+msgstr "विभाग निर्माण करा"
+
+msgid "manager.sections.editorRestriction"
+msgstr "लेखनाला फक्त संपादक आणि विभाग संपादकांद्वारे सुपूर्द केले जाऊ शकते."
+
+msgid "manager.sections.editors"
+msgstr "विभाग संपादक"
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"किमान एक विभाग सक्रिय असणे आवश्यक आहे. या नियतकालिकात सादरीकरणांचा स्वीकार "
+"थांबवण्यासाठी कार्यप्रवाहाच्या घडणीला ('वर्कफ्लो सेटिंग्जला') भेट द्या."
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "विभागाच्या शीर्षकाचे संक्षिप्त रूप आवश्यक आहे"
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "तुम्ही योग्य असा समीक्षण फॉर्म निवडला आहे याची कृपया खात्री करा."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "विभागासाठी शीर्षक आवश्यक आहे."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr "अंकाच्या अनुक्रमणिकेमधून विभागातल्या लेखनांच्या लेखकांची नावे वगळा."
+
+msgid "manager.sections.identifyType"
+msgstr "या विभागात प्रकाशित लेखन a(n) या स्वरूपातून ओळखा"
+
+msgid "manager.sections.indexed"
+msgstr "अनुक्रमित"
+
+msgid "manager.sections.noneCreated"
+msgstr "विभाग निर्माण केलेले नाहीत."
+
+msgid "manager.sections.open"
+msgstr "मुक्त सादरीकरणे"
+
+msgid "manager.sections.policy"
+msgstr "विभागाचे धोरण"
+
+msgid "manager.sections.readingTools"
+msgstr "वाचन साधने"
+
+msgid "manager.sections.reviewed"
+msgstr "तज्ज्ञ-समीक्षण केलेला"
+
+msgid "manager.sections.submissionReview"
+msgstr "तज्ज्ञ समीक्षण केले जाणार नाही"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "नियतकालिकाच्या या विभागात केलेली सादरीकरणे"
+
+msgid "manager.sections.unassigned"
+msgstr "उपलब्ध विभाग संपादक"
+
+msgid "manager.sections.wordCount"
+msgstr "शब्द संख्या"
+
+msgid "manager.setup"
+msgstr "नियतकालिकाचे सेटिंग्ज"
+
+msgid "manager.setup.masthead"
+msgstr "शीर्ष (मास्टहेड)"
+
+msgid "manager.setup.editorialTeam"
+msgstr "संपादक मंडळ"
+
+msgid "manager.setup.homepageContent"
+msgstr "नियतकालिकाच्या मुख्यपृष्ठावरील मजकूर"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "नियतकालिकाचे शैली पत्रक (स्टाईल शीट)"
+
+msgid "manager.setup.contextName"
+msgstr "नियतकालिकाचे नाव"
+
+msgid "manager.setup.pageHeader"
+msgstr "नियतकालिकाच्या पानांवरचा शीर्षलेख (हेडर)"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "मजकूर"
+
+msgid "manager.setup.addAboutItem"
+msgstr "(आमच्या) बद्दल (About) चे कलम जोडा"
+
+msgid "manager.setup.addChecklistItem"
+msgstr "पर्यायांच्या यादीचे (चेकलिस्ट) कलम जोडा"
+
+msgid "manager.setup.addItem"
+msgstr "कलम जोडा"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "\"नियतकालिकाविषयी\" मध्ये दिसण्यासाठी कलम जोडा"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "नवीन डेटाबेस दुवा (लिंक) जोडा"
+
+msgid "manager.setup.addSponsor"
+msgstr "प्रायोजक संस्थेचे नाव जोडा"
+
+msgid "manager.setup.alternateHeader"
+msgstr "पर्यायी शीर्षलेख (हेडर)"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr ""
+"शीर्षक आणि परिचय चिन्हाऐवजी (लोगो), शीर्षलेखाचे HTML प्रारूप खालील मजकूरासाठी"
+" असलेल्या चौकटीमध्ये (बॉक्स) समाविष्ट करण्याचा पर्याय आहे. पर्याय नको असल्या"
+"स चौकट रिक्त ठेवा."
+
+msgid "manager.setup.announcements"
+msgstr "निवेदने"
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "प्रस्तावना"
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "('नियतकालिकाविषयी' मध्ये दिसण्यासाठी) "
+
+msgid "manager.setup.history"
+msgstr "नियतकालिकाचा पूर्वेतिहास"
+
+msgid "manager.setup.currentIssue"
+msgstr "वर्तमान अंक"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "टप्पा 5. वापरकर्तानुकूल स्वरूप बदल"
+
+msgid "manager.setup.details"
+msgstr "तपशील"
+
+msgid "manager.setup.details.description"
+msgstr "नियतकालिकाचे नाव, ISSN, संपर्क, प्रायोजक आणि शोध इंजिनचे नाव."
+
+msgid "manager.setup.discipline"
+msgstr "शैक्षणिक ज्ञानशाखा आणि उपशाखा"
+
+msgid "manager.setup.disciplineDescription"
+msgstr ""
+"जेव्हा नियतकालिक ज्ञानशाखेच्या सीमा ओलांडते आणि/किंवा लेखक बहुशाखीय लेखन सा"
+"दर करतात तेव्हा उपयुक्त."
+
+msgid "manager.setup.disciplineExamples"
+msgstr ""
+"(उदा., इतिहास; शिक्षण; समाजशास्त्र; मानसशास्त्र; सांस्कृतिक अभ्यास; कायदा)"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "वर्तमान अंकाला (उपलब्ध असल्यास) अनुक्रमणिका जोडा."
+
+msgid "manager.setup.editorDecision"
+msgstr "संपादकाचा निर्णय"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "चुकीचा पत्ता"
+
+msgid "manager.setup.emails"
+msgstr "ई-मेल ओळख"
+
+msgid "manager.setup.emailSignature"
+msgstr "ई-मेल स्वाक्षरी"
+
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+"नियतकालिकाच्या वतीने आपोआप पाठवल्या जाणाऱ्या ई-मेल्समध्ये खालील स्वाक्षरी "
+"जोडली जाईल."
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "निवेदन प्रक्रिया सक्रिय करा"
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "मुख्यपृष्ठावर प्रदर्शित करा"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"मुख्यपृष्ठावर किती निवेदने प्रदर्शित करायची आहेत? काहीही न प्रदर्शित "
+"करण्यासाठी हे रिक्त ठेवा."
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "नियतकालिकाला भेट देणारे (visitors) वापरकर्ता खाते नोंदणी करू शकतात."
+
+msgid "manager.setup.focusAndScope"
+msgstr "लक्ष्य आणि व्याप्ती"
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "लेखकांना त्यांचे लिखाण सूचीबद्ध करण्यासाठी"
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "नमूद केलेला ISSN वैध नाही."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "प्रमुख संपर्क लेखकाचा ई-मेल आवश्यक आहे."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "प्रमुख संपर्क लेखकाचे नाव आवश्यक आहे."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "नियतकालिकाच्या नावाची आद्याक्षरे आवश्यक आहेत."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "नियतकालिकाचे नाव (शीर्षक) आवश्यक आहे."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "प्रत्येक सादरीकरणासाठी समीक्षकांची संख्या आवश्यक आहे."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "आधारासाठी ई-मेल आवश्यक आहे."
+
+msgid "manager.setup.generalInformation"
+msgstr "सर्वसाधारण माहिती"
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "टप्पा 1. तपशील मिळवणे"
+
+msgid "manager.setup.guidelines"
+msgstr "मार्गदर्शक सूचना"
+
+msgid "manager.setup.identity"
+msgstr "नियतकालिकाची ओळख"
+
+msgid "manager.setup.information"
+msgstr "माहिती"
+
+msgid "manager.setup.information.forAuthors"
+msgstr "लेखकांसाठी"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "ग्रंथपालांसाठी"
+
+msgid "manager.setup.information.forReaders"
+msgstr "वाचकांसाठी"
+
+msgid "manager.setup.initialIssue"
+msgstr "सुरुवातीचा अंक"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr ""
+"निवडलेल्या स्वरूपाच्या आधारावर, OJS वर प्रकाशित होणाऱ्या पहिल्या अंकाचा अंक, "
+"खंड आणि/किंवा वर्ष ओळखा:"
+
+msgid "manager.setup.institution"
+msgstr "संस्था"
+
+msgid "manager.setup.itemsPerPage"
+msgstr "प्रत्येक पानावरचे मुद्दे"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"अन्य पृष्ठावर पुढील माहिती दाखवण्यापूर्वी यादीमध्ये किती कलमे (उदाहरणार्थ, "
+"सादरीकरण, वापरकर्ते किंवा संपादन कार्ये) असावीत यावर मर्यादा घाला."
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "नियतकालिकाचा संक्षेप"
+
+msgid "manager.setup.journalArchiving"
+msgstr "नियतकालिकाचे संग्रहण"
+
+msgid "manager.setup.contextSummary"
+msgstr "नियतकालिकाचा सारांश"
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "नियतकालिकाच्या मुख्यपृष्ठावरील मजकूर"
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "नियतकालिकाच्या मुख्यपृष्ठावरील शीर्षलेख (हेडर)"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "नियतकालिकाच्या मुख्यपृष्ठावरील शीर्षलेख (हेडर)"
+
+msgid "manager.setup.contextInitials"
+msgstr "नियतकालिकाच्या नावाची आद्याक्षरे"
+
+msgid "manager.setup.journalLayout"
+msgstr "नियतकालिकाची मांडणी (लेआउट)"
+
+msgid "manager.setup.journalLogo"
+msgstr "नियतकालिकाचे परिचय चिन्ह (लोगो)"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "नियतकालिकाचे परिचय चिन्ह (लोगो)"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "नियतकालिकाच्या पृष्ठावरील तळटीप"
+
+msgid "manager.setup.journalPolicies"
+msgstr "टप्पा 2. नियतकालिकाची धोरणे"
+
+msgid "manager.setup.journalSetup"
+msgstr "नियतकालिकाचे नियोजन आणि मांडणी (सेटअप)"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "नियतकालिकाचे नियोजन आणि मांडणी (सेटअप) अद्ययावत (अपडेट) केली गेली आहे."
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr ""
+"नियतकालिकाचे शैली पत्रक (स्टाईल शीट) स्वरूप अप्रमाण! स्वीकृत स्वरूप .css आहे."
+
+msgid "manager.setup.journalTheme"
+msgstr "नियतकालिकाचे मुख्य विषय (थीम)"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "नियतकालिकाची लघुप्रतिमा"
+
+msgid "manager.setup.contextTitle"
+msgstr "नियतकालिकाचे नाव (शीर्षक)"
+
+msgid "manager.setup.keyInfo"
+msgstr "मूलभूत माहिती"
+
+msgid "manager.setup.labelName"
+msgstr "लेबलचे नाव"
+
+msgid "manager.setup.lists"
+msgstr "याद्या"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "PKP PN प्लग-इन सक्रिय करा"
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+"PKP प्रिझर्वेशन नेटवर्क (PN) मूलभूत निकष पूर्ण करणाऱ्या कोणत्याही OJS "
+"वापरणार्‍या नियतकालिकासाठी मोफत जतन सेवा प्रदान करते."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP प्रिझर्वेशन नेटवर्क (PN)"
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS आणि CLOCKSS"
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"नियतकालिकाविषयीच्या पानावर संग्रहणाच्या परिच्छेदात LOCKSS परवाना दिसेल: <a "
+"href=\"http://www.lockss.org/community/publishers-titles-gln/\" target="
+"\"_blank\">LOCKSS परवाना</a>"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "LOCKSS परवान्याचे वर्णन"
+
+#, fuzzy
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"नियतकालिकाविषयीच्या पानावर संग्रहणाच्या परिच्छेदात CLOCKSS परवाना दिसेल: <a "
+"href=\"http://www.clockss.org/community/publishers-titles-gln/\" target="
+"\"_blank\">CLOCKSS परवाना</a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "CLOCKSS परवान्याचे वर्णन"
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"<a href=\"https://clockss.org\" target=\"_blank\">CLOCKSS संकेतस्थळाला</a> भे"
+"ट देऊन CLOCKSS सेवेसाठी नोंदणी (साइन-अप) करा."
+
+#, fuzzy
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.look"
+msgstr "दृष्य"
+
+msgid "manager.setup.management"
+msgstr "व्यवस्थापन"
+
+msgid "manager.setup.management.description"
+msgstr ""
+"उपलब्धता आणि सुरक्षितता, अंकांचे क्रमयोजन (शेड्यूलिंग), निवेदने, सुसंगतता आणि"
+" अचूकता तपासणी (कॉपी एडिटिंग), मुद्रित संपादन (लेआउट) आणि मुद्रित लेखन तपासणी"
+" (प्रूफरीडिंग)."
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "व्यवस्थापन आणि प्रकाशनाचे नियोजन (सेटअप)"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "टप्पा 4. नियतकालिकाचे व्यवस्थापन"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "नेव्हिगेशन बारमध्ये अतिरिक्त जोडण्या अंतर्भूत करा किंवा हटवा."
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "प्रतिमा फाईल संक्रमित (अपलोड) केलेली नाही."
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "शैली पत्रक (स्टाईल शीट) संक्रमित (अपलोड) केलेले नाही."
+
+msgid "manager.setup.note"
+msgstr "टीप"
+
+msgid "manager.setup.numPageLinks"
+msgstr "पृष्ठांचे दुवे (लिंक्स)"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+"पुढील पृष्ठे प्रदर्शित करण्यासाठी यादीतील दुव्यांची (लिंक्स) संख्या मर्यादित "
+"करा."
+
+msgid "manager.setup.onlineIssn"
+msgstr "ऑनलाइन आवृत्तीचा ISSN"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "पृष्ठ क्रमांकाचे पर्याय"
+
+msgid "manager.setup.policies"
+msgstr "धोरणे"
+
+msgid "manager.setup.printIssn"
+msgstr "छापील आवृत्तीचा ISSN"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "मुद्रित शोधन (प्रूफिंग) सूचना"
+
+msgid "manager.setup.publicationSchedule"
+msgstr "प्रकाशन वेळापत्रक"
+
+msgid "manager.setup.publicationScheduling"
+msgstr "प्रकाशनाचे वेळापत्रक तयार करणे"
+
+msgid "manager.setup.publisher"
+msgstr "प्रकाशक"
+
+msgid "manager.setup.referenceLinking"
+msgstr "संदर्भ जोडणी"
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr ""
+"वापरकर्ते नोंदणीकृत असणे आणि नियतकालिकाच्या संकेतस्थळावरील मजकूर पहाण्यासाठी "
+"त्यांनी लॉग-इन करणे आवश्यक आहे."
+
+msgid "manager.setup.reviewOptions"
+msgstr "पर्यायांचा आढावा घेणे"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "स्वनियंत्रित ई-मेल स्मरणपत्रे"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "समीक्षण पूर्ण करण्यासाठी दिलेली मुदत (आठवड्यात)"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr ""
+"प्रत्येक समीक्षणानंतर संपादक समीक्षकाचे पाच-बिंदू (पॉइंट) गुणपट्टीवर मूल्यां"
+"कन करतील."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "फाईलची उपलब्धता प्रतिबंधित करा"
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "समीक्षकांना फाईल पहाण्याची संधी"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "एका क्लिकवर समीक्षकांना फाईल पहाण्याची संधी"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr ""
+"ई-मेलने पाठवलेल्या आमंत्रणात समीक्षकांसाठी एक सुरक्षित दुवा (लिंक) समाविष्ट "
+"करा."
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "समीक्षकाचे मूल्यांकन"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "समीक्षकांसाठी स्मरणपत्रे"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "समीक्षण धोरण"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "शोधसूची"
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "विभाग आणि विभाग संपादक"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr ""
+"(नियतकालिक आशयानुसार विभागलेले नसल्यास, सगळे लेखन आपोआप लेख विभागात सादर केले"
+" जाते.)"
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "नियतकालिकाचे संपादक जे संपादकीय प्रक्रियेद्वारे ते पाहतील."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "ते लेखन नियतकालिकाच्या योग्य विभागासाठी विचारात घेतले जाईल."
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "नेहमीच गॅलीला दुव्याने (लिंक) जोडा आणि प्रतिबंधित उपलब्धता सूचित करा."
+
+msgid "manager.setup.siteAccess.view"
+msgstr "संकेतस्थळ प्रवेश"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "लेखाचा मजकूर पहा"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "शोधशब्द"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "लेखकांसाठी मार्गदर्शक म्हणून शोधशब्द किंवा विषयांची उदाहरणे द्या"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "सादरीकरणासाठी मार्गदर्शक तत्त्वे"
+
+msgid "manager.setup.submissions"
+msgstr "सादरीकरणे"
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"हे नियतकालिक सध्या सादरीकरणे स्वीकारत नाही. सादरीकरणांना अनुमती देण्यासाठी "
+"कार्यप्रवाहाच्या घडणीला (वर्कफ्लो सेटिंग्जला) भेट द्या."
+
+msgid "manager.setup.enableOai"
+msgstr "OAI सक्रिय करा"
+
+msgid "manager.setup.typeExamples"
+msgstr ""
+"(उदा., ऐतिहासिक तपास; अर्ध-प्रायोगिक; साहित्यिक विश्लेषण; सर्वेक्षण/मुलाखत)"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "प्रकार (पद्धत/दृष्टिकोन)"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "एकमेव आयडेंटिफायर"
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "नियतकालिकाचे संपादकीय/समीक्षक मंडळ कार्यरत असेल."
+
+msgid "manager.setup.useThumbnail"
+msgstr "लघुप्रतिमा"
+
+msgid "manager.setup.useImageTitle"
+msgstr "शिर्षक प्रतिमा"
+
+msgid "manager.setup.userRegistration"
+msgstr "वापरकर्त्याची नोंदणी"
+
+msgid "manager.setup.useTextTitle"
+msgstr "शीर्षकाचा मजकूर"
+
+msgid "manager.statistics.statistics"
+msgstr "नियतकालिकाची सांख्यिकीय माहिती"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "लेखाला भेट देणार्‍यांची संख्या (केवळ लेखकांसाठी)"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "स्वीकृत"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "अस्वीकृत"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "पुनर्सादरीकरणासाठी"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "प्रकाशनासाठी शिल्लक दिवस"
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "प्रकाशित लेख"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr ""
+"नियतकालिकाविषयी' च्या पानावर वाचकांना उपलब्ध करायच्या लेखांची माहिती तपासा."
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "प्रकाशित अंक"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "एकूण सादरीकरणे"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "तज्ज्ञ समीक्षकांनी समीक्षण केलेले (लेख)"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "नोंदणीकृत वाचक"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "समीक्षणासाठी दिलेले"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "एकूण समीक्षक"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "संपादकाची गुणसंख्या"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "एकूण समीक्षणे"
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "सदस्यता"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "उतरवून घेतलेल्या (डाउनलोड केलेल्या) लेखांच्या फाईल्स"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "लेखाच्या गोषवार्‍याच्या पानाला भेट देणार्‍यांची संख्या"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "नियतकालिकाच्या मुख्यपृष्ठाला भेट देणार्‍यांची संख्या"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "अंकाच्या अनुक्रमणिकेला भेट देणार्‍यांची संख्या"
+
+msgid "manager.subscriptionPolicies"
+msgstr "सदस्यता धोरणे"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "कृपया दिलेला पर्याय (चेकबॉक्स) निवडा."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "सदस्यता समाप्ती"
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "पूर्णपणे कालबाह्य"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr ""
+"सदस्यता कालबाह्य झाल्यानंतर, वाचकांना सदस्यतेमुळे उपलब्ध असलेला सर्व मजकूर "
+"वाचण्यासाठी प्रतिबंध केला जातो."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "अंशत: कालबाह्य"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} महिने"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} आठवडे"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "सदस्यता कालबाह्य झाल्यानंतर सदस्यांना ई-मेलद्वारे सूचित करा"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "सदस्यता कालबाह्य होण्यापूर्वी सदस्यांना ई-मेलद्वारे सूचित करा."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "सदस्यता कालबाह्य होत असल्याची स्मरणपत्रे"
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "खालीलपैकी एक पर्याय निवडा :"
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr ""
+"HTML मजकूराच्या वैविध्यासाठी फॉन्ट आकार, रंग, इत्यादीचा वापर होऊ शकतो, \"र"
+"िटर्न\" की चा वापर पुढील मजकूर नव्या ओळीत मांडण्यासाठी (<tt>&lt;br&gt;</tt>) "
+"केला जातो; HTML मध्ये संपादित केलेला मजकूर फायरफॉक्स ब्राउझरवर उत्तम कार्य "
+"करतो."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"सदस्यता कालबाह्य झाल्यानंतर किती महिने स्मरणपत्र पाठवायचे त्या संख्येची कृपया"
+" निवड करा."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"सदस्यता कालबाह्य होण्यापूर्वी किती महिने स्मरणपत्र पाठवायचे त्या संख्येची "
+"कृपया निवड करा."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"सदस्यता कालबाह्य झाल्यानंतर किती आठवडे स्मरणपत्र पाठवायचे त्या संख्येची कृपया"
+" निवड करा."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"सदस्यता कालबाह्य होण्यापूर्वी किती आठवडे स्मरणपत्र पाठवायचे त्या संख्येची "
+"कृपया निवड करा."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+"जेव्हा एखादा अंक मुक्त उपलब्ध होतो तेव्हा नोंदणीकृत वाचकांना ई-मेलद्वारे "
+"अनुक्रमणिका प्राप्त करण्याचा पर्याय असेल."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr ""
+"<strong>टीप :</strong> हे पर्याय सक्रिय करण्यासाठी, संकेतस्थळाच्या प्रशासकाने"
+" OJS कॉन्फिगरेशन फाईलमधील <tt>scheduled_tasks</tt> पर्याय सक्रिय करणे आवश्यक "
+"आहे. या कामाला पुष्टी देण्यासाठी अतिरिक्त सर्व्हर कॉन्फिगरेशनची आवश्यकता (जी "
+"सर्व सर्व्हरवर नसू शकते) असल्याचे OJS दस्तऐवजीकरणात सूचित केले आहे."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "शुल्क ऑनलाईन पद्धतीने भरण्यासाठी सूचना"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+"स्वनियंत्रित ई-मेल सूचना (OJS च्या ई-मेलमध्ये नियतकालिकाच्या व्यवस्थापकाला "
+"संपादनासाठी उपलब्ध) सदस्यतेसाठी ऑनलाइन पद्धतीने शुल्क भरून झाल्यावर सदस्यत्व "
+"व्यवस्थापकाला पाठवल्या जाऊ शकतात."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"वैयक्तिक सदस्यत्वाच्या रक्कमेच्या ऑनलाइन भरण्यानंतर सदस्यत्व व्यवस्थापकाला "
+"ई-मेलद्वारे सूचित करा."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"संस्था सदस्यत्वाच्या रक्कमेच्या ऑनलाइन भरण्यानंतर सदस्यत्व व्यवस्थापकाला "
+"ई-मेलद्वारे सूचित करा (शिफारस)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"वैयक्तिक सदस्यत्वाच्या रक्कमेच्या ऑनलाइन नूतनीकरणानंतर सदस्यत्व व्यवस्थापकाला"
+" ई-मेलद्वारे सूचित करा."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"संस्था सदस्यत्वाच्या ऑनलाइन नूतनीकरणानंतर सदस्यत्व व्यवस्थापकाला ई-मेलद्वारे "
+"सूचित करा."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+"<strong>टीप :</strong> वाचकाच्या फी अंतर्गत हे पर्याय सक्रिय करण्यासाठी, "
+"नियतकालिकाच्या व्यवस्थापकाने ऑनलाइन पेमेंट मॉड्यूल, सदस्यतेसाठी ऑनलाइन शुल्क "
+"स्वीकार सक्षम करणे आवश्यक आहे."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr ""
+"वर्गणी भरल्यावर मजकूर उपलब्ध करणार्‍या नियतकालिकांसाठी मुक्त उपलब्धता पर्याय"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "सदस्यता/वर्गणीबाबत माहिती"
