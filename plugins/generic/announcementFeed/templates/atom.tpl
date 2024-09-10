@@ -36,21 +36,21 @@
 {foreach from=$announcements item=announcement}
 	<entry>
 		{* required elements *}
-		<id>{url page="announcement" op="view" path=$announcement->getId()}</id>
-		<title>{$announcement->getLocalizedTitleFull()|strip|escape:"html"}</title>
-		<updated>{$announcement->getDatetimePosted()|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
+		<id>{url page="announcement" op="view" path=$announcement->getKey()}</id>
+		<title>{$announcement->getLocalizedData('fullTitle')|strip|escape:"html"}</title>
+		<updated>{$announcement->getAttribute('datePosted')|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
 	  	<author>
 			<name>{$journal->getLocalizedName()|strip|escape:"html"}</name>
         </author>
-		<link rel="alternate" href="{url page="announcement" op="view" path=$announcement->getId()}" />
-        {if $announcement->getLocalizedDescription()}
-		<summary type="html" xml:base="{url page="announcement" op="view" path=$announcement->getId()}">{$announcement->getLocalizedDescription()|strip|escape:"html"}</summary>
+		<link rel="alternate" href="{url page="announcement" op="view" path=$announcement->getKey()}" />
+        {if $announcement->getLocalizedData('description')}
+		<summary type="html" xml:base="{url page="announcement" op="view" path=$announcement->getKey()}">{$announcement->getLocalizedData('description')|strip|escape:"html"}</summary>
         {/if}
 
 		{* optional elements *}
 		{* <category/> *}
 		{* <contributor/> *}
-		<published>{$announcement->getDatetimePosted()|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</published>
+		<published>{$announcement->getAttribute('datePosted')|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</published>
 		{* <source/> *}
 		{* <rights/> *}
 	</entry>
