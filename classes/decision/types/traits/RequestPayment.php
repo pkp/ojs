@@ -49,7 +49,7 @@ trait RequestPayment
      */
     protected function validatePaymentAction(array $action, string $actionErrorKey, Validator $validator, Context $context)
     {
-        $paymentManager = Application::getPaymentManager($context);
+        $paymentManager = Application::get()->getPaymentManager($context);
         if (!$paymentManager->publicationEnabled()) {
             $validator->errors()->add($actionErrorKey . '.requestPayment', __('payment.requestPublicationFee.notEnabled'));
         } elseif (!isset($action['requestPayment'])) {
@@ -62,7 +62,7 @@ trait RequestPayment
      */
     protected function requestPayment(Submission $submission, User $editor, Context $context)
     {
-        $paymentManager = Application::getPaymentManager($context);
+        $paymentManager = Application::get()->getPaymentManager($context);
         $queuedPayment = $paymentManager->createQueuedPayment(
             Application::get()->getRequest(),
             OJSPaymentManager::PAYMENT_TYPE_PUBLICATION,

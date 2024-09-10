@@ -372,7 +372,3 @@ class ArticleSearchIndex extends SubmissionSearchIndex
         return $flattenedArray;
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\search\ArticleSearchIndex', '\ArticleSearchIndex');
-}

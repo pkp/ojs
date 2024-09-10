@@ -64,7 +64,7 @@ class SkipExternalReview extends PKPSkipExternalReview
         $steps = parent::getSteps($submission, $context, $editor, $reviewRound);
 
         // Request payment if configured
-        $paymentManager = Application::getPaymentManager($context);
+        $paymentManager = Application::get()->getPaymentManager($context);
         if ($paymentManager->publicationEnabled()) {
             $steps->addStep($this->getPaymentForm($context), true);
         }

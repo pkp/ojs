@@ -121,7 +121,3 @@ class ArticleSearchDAO extends SubmissionSearchDAO
         return $returner;
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\search\ArticleSearchDAO', '\ArticleSearchDAO');
-}

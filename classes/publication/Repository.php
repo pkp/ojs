@@ -116,7 +116,7 @@ class Repository extends \PKP\publication\Repository
         if (!$context || $context->getId() !== $submission->getData('contextId')) {
             $context = app()->get('context')->get($submission->getData('contextId'));
         }
-        $paymentManager = Application::getPaymentManager($context);
+        $paymentManager = Application::get()->getPaymentManager($context);
         $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */
         $publicationFeeEnabled = $paymentManager->publicationEnabled();
         $publicationFeePayment = $completedPaymentDao->getByAssoc(null, OJSPaymentManager::PAYMENT_TYPE_PUBLICATION, $submission->getId());

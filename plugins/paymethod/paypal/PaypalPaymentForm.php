@@ -61,7 +61,7 @@ class PaypalPaymentForm extends Form
 
         try {
             $journal = $request->getJournal();
-            $paymentManager = Application::getPaymentManager($journal);
+            $paymentManager = Application::get()->getPaymentManager($journal);
             $gateway = \Omnipay\Omnipay::create('PayPal_Rest');
             $gateway->initialize([
                 'clientId' => $this->_paypalPaymentPlugin->getSetting($journal->getId(), 'clientId'),

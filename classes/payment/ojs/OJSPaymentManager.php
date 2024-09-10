@@ -413,20 +413,3 @@ class OJSPaymentManager extends PaymentManager
         }
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\payment\ojs\OJSPaymentManager', '\OJSPaymentManager');
-    foreach ([
-        'PAYMENT_TYPE_MEMBERSHIP',
-        'PAYMENT_TYPE_RENEW_SUBSCRIPTION',
-        'PAYMENT_TYPE_PURCHASE_ARTICLE',
-        'PAYMENT_TYPE_DONATION',
-        'PAYMENT_TYPE_SUBMISSION',
-        'PAYMENT_TYPE_FASTTRACK',
-        'PAYMENT_TYPE_PUBLICATION',
-        'PAYMENT_TYPE_PURCHASE_SUBSCRIPTION',
-        'PAYMENT_TYPE_PURCHASE_ISSUE',
-    ] as $constantName) {
-        define($constantName, constant('\OJSPaymentManager::' . $constantName));
-    }
-}

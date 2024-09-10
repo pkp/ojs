@@ -141,7 +141,7 @@ class PaymentsHandler extends Handler
 
         $templateMgr = TemplateManager::getManager($request);
 
-        $paymentManager = Application::getPaymentManager($request->getJournal());
+        $paymentManager = Application::get()->getPaymentManager($request->getJournal());
         $templateMgr->assign('acceptSubscriptionPayments', $paymentManager->isConfigured());
 
         $subscriptionPolicyForm = new SubscriptionPolicyForm();

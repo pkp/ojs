@@ -272,7 +272,7 @@ class IssueHandler extends Handler
                 $subscribedUser = $issueAction->subscribedUser($user, $journal, $issue->getId());
                 if (!$subscribedUser) {
                     // Check if payments are enabled,
-                    $paymentManager = Application::getPaymentManager($journal);
+                    $paymentManager = Application::get()->getPaymentManager($journal);
 
                     if ($paymentManager->purchaseIssueEnabled() || $paymentManager->membershipEnabled()) {
                         // If only pdf files are being restricted, then approve all non-pdf galleys
@@ -435,7 +435,7 @@ class IssueHandler extends Handler
                 ($user && $completedPaymentDao->hasPaidPurchaseIssue($user->getId(), $issue->getId()))
         ]);
 
-        $paymentManager = Application::getPaymentManager($journal);
+        $paymentManager = Application::get()->getPaymentManager($journal);
         if ($paymentManager->onlyPdfEnabled()) {
             $templateMgr->assign('restrictOnlyPdf', true);
         }

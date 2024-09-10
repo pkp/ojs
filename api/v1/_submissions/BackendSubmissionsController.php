@@ -82,7 +82,7 @@ class BackendSubmissionsController extends \PKP\API\v1\_submissions\PKPBackendSu
             ], Response::HTTP_NOT_FOUND);
         }
 
-        $paymentManager = Application::getPaymentManager($context);
+        $paymentManager = Application::get()->getPaymentManager($context);
         $publicationFeeEnabled = $paymentManager->publicationEnabled();
         if (!$publicationFeeEnabled) {
             return response()->json([

@@ -98,7 +98,7 @@ class SubscriptionBlockPlugin extends BlockPlugin
             }
         }
 
-        $paymentManager = Application::getPaymentManager($journal);
+        $paymentManager = Application::get()->getPaymentManager($journal);
 
         if (isset($individualSubscription) || isset($institutionalSubscription)) {
             $templateMgr->assign('acceptSubscriptionPayments', $paymentManager->isConfigured());

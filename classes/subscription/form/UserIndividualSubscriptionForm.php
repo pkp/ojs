@@ -177,7 +177,7 @@ class UserIndividualSubscriptionForm extends Form
             $subscription = $this->subscription;
         }
 
-        $paymentManager = Application::getPaymentManager($journal);
+        $paymentManager = Application::get()->getPaymentManager($journal);
         $paymentPlugin = $paymentManager->getPaymentPlugin();
 
         if ($paymentPlugin->getName() == 'ManualPayment') {

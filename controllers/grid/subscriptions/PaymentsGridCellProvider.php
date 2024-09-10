@@ -60,7 +60,7 @@ class PaymentsGridCellProvider extends GridCellProvider
                 $user = Repo::user()->get($payment->getUserId(), true);
                 return ['label' => $user ? $user->getFullName() : __('common.user.nonexistent')]; // If no $user, returns "[Nonexistent user]" to avoid null user
             case 'type':
-                $paymentManager = Application::getPaymentManager($this->_request->getJournal());
+                $paymentManager = Application::get()->getPaymentManager($this->_request->getJournal());
                 return ['label' => $paymentManager->getPaymentName($payment)];
             case 'amount':
                 return ['label' => $payment->getAmount() . ' ' . $payment->getCurrencyCode()];

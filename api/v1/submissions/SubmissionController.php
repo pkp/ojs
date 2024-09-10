@@ -129,7 +129,7 @@ class SubmissionController extends \PKP\API\v1\submissions\PKPSubmissionControll
 
         $submission = $data['submission']; /** @var Submission $submission */
         $context = $data['context']; /** @var Context $context*/
-        $paymentManager = Application::getPaymentManager($context);
+        $paymentManager = Application::get()->getPaymentManager($context);
 
         if (!$paymentManager->publicationEnabled()) {
             return response()->json([

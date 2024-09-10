@@ -60,7 +60,7 @@ class PaymentHandler extends Handler
             Validation::redirectLogin();
         }
 
-        $paymentManager = Application::getPaymentManager($request->getContext());
+        $paymentManager = Application::get()->getPaymentManager($request->getContext());
         $templateMgr = TemplateManager::getManager($request);
         $queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO'); /** @var QueuedPaymentDAO $queuedPaymentDao */
         $queuedPayment = $queuedPaymentDao->getById($queuedPaymentId = array_shift($args));

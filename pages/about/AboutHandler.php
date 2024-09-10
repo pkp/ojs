@@ -38,7 +38,7 @@ class AboutHandler extends \PKP\pages\about\AboutContextHandler
         $subscriptionTypeDao = DAORegistry::getDAO('SubscriptionTypeDAO');
 
         if ($journal) {
-            $paymentManager = Application::getPaymentManager($journal);
+            $paymentManager = Application::get()->getPaymentManager($journal);
             if (!($journal->getData('paymentsEnabled') && $paymentManager->isConfigured())) {
                 $request->redirect(null, 'index');
             }

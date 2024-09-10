@@ -77,7 +77,7 @@ class UserHandler extends PKPUserHandler
             $templateMgr->assign('institutions', $institutions);
         }
 
-        $paymentManager = Application::getPaymentManager($journal);
+        $paymentManager = Application::get()->getPaymentManager($journal);
 
         $this->setupTemplate($request);
 
@@ -131,7 +131,7 @@ class UserHandler extends PKPUserHandler
             $request->redirect(null, 'index');
         }
 
-        $paymentManager = Application::getPaymentManager($journal);
+        $paymentManager = Application::get()->getPaymentManager($journal);
         $acceptSubscriptionPayments = $paymentManager->isConfigured();
         if (!$acceptSubscriptionPayments) {
             $request->redirect(null, 'index');
@@ -215,7 +215,7 @@ class UserHandler extends PKPUserHandler
             $request->redirect(null, 'index');
         }
 
-        $paymentManager = Application::getPaymentManager($journal);
+        $paymentManager = Application::get()->getPaymentManager($journal);
         $acceptSubscriptionPayments = $paymentManager->isConfigured();
         if (!$acceptSubscriptionPayments) {
             $request->redirect(null, 'index');
@@ -315,7 +315,7 @@ class UserHandler extends PKPUserHandler
             $request->redirect(null, 'index');
         }
 
-        $paymentManager = Application::getPaymentManager($journal);
+        $paymentManager = Application::get()->getPaymentManager($journal);
         $acceptSubscriptionPayments = $paymentManager->isConfigured();
         if (!$acceptSubscriptionPayments) {
             $request->redirect(null, 'index');
@@ -368,7 +368,7 @@ class UserHandler extends PKPUserHandler
             $request->redirect(null, 'index');
         }
 
-        $paymentManager = Application::getPaymentManager($journal);
+        $paymentManager = Application::get()->getPaymentManager($journal);
         $acceptSubscriptionPayments = $paymentManager->isConfigured();
         if (!$acceptSubscriptionPayments) {
             $request->redirect(null, 'index');
@@ -429,7 +429,7 @@ class UserHandler extends PKPUserHandler
         $journal = $request->getContext();
         $user = $request->getUser();
 
-        $paymentManager = Application::getPaymentManager($journal);
+        $paymentManager = Application::get()->getPaymentManager($journal);
 
         $queuedPayment = $paymentManager->createQueuedPayment($request, OJSPaymentManager::PAYMENT_TYPE_MEMBERSHIP, $user->getId(), null, $journal->getData('membershipFee'));
         $paymentManager->queuePayment($queuedPayment);
