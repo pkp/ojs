@@ -1,7 +1,7 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-07-24 10:40+0000\n"
+"PO-Revision-Date: 2024-09-11 05:40+0000\n"
 "Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
 "Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/editor/mr/>"
 "\n"
@@ -327,7 +327,7 @@ msgstr ""
 "क भरण्यासाठी सूचित करा किंवा शुल्क सूट द्या."
 
 msgid "editor.article.payment.requestPayment"
-msgstr "शुल्क भरण्याबाबत विनंती"
+msgstr "शुल्क भरण्याबाबत विनंती करा"
 
 msgid "editor.article.removeCoverImageFileNotFound"
 msgstr ""
