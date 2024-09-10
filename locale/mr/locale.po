@@ -1,3 +1,876 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2024.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2024-09-11 05:40+0000\n"
+"Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
+"Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/locale/mr/>"
+"\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "context.select"
+msgstr "इतर नियतकलिकांकडे वळा :"
+
+msgid "navigation.current"
+msgstr "वर्तमान"
+
+msgid "section.title"
+msgstr "विभागाचे शिर्षक"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "समीक्षणाचा फॉर्म भरण्यासाठी चित्रचिन्हावर (आयकॉन) क्लिक करा."
+
+msgid "navigation.infoForLibrarians"
+msgstr "ग्रंथपालांकरता"
+
+msgid "article.articles"
+msgstr "अनेक लेख"
+
+msgid "common.confirmComplete"
+msgstr ""
+"तुम्ही हातावरचे काम पूर्ण झाले म्हणून खात्रीपूर्वक म्हणू शकता? नंतर यात "
+"तुम्ही बदल करू शकणार नाही."
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "ग्रंथपालांसाठी सूचना"
+
+msgid "article.indexingInformation"
+msgstr "सूचीकरणासाठी सूचना"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "न सोपवलेली / सोपवण्याच्या प्रतिक्षेतली"
+
+msgid "article.suppFiles"
+msgstr "पूरक फाईल्स"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "संपादनप्रक्रियेमध्ये असलेली सादरीकरणे"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "संग्रहित"
+
+msgid "article.type"
+msgstr "प्रकार, पद्धत अथवा दृष्टीकोन"
+
+msgid "article.coverPage.altText"
+msgstr "मुखपृष्ठ प्रतिमा"
+
+msgid "article.comments.disable"
+msgstr "निष्क्रिय"
+
+msgid "article.return"
+msgstr "लेखाच्या तपशीलाकडे परत वळा"
+
+msgid "submission.editorReview"
+msgstr "संपादकातर्फे समीक्षण"
+
+msgid "submission.editorAuthorRecord"
+msgstr "संपादकाच्या/लेखकाच्या ई-मेलची नोंद"
+
+msgid "submission.editorVersion"
+msgstr "संपादकीय संस्कार झाल्यानंतरची फाईल"
+
+msgid "submission.copyediting"
+msgstr "सुसंगतता आणि अचूकता तपासणी करणे"
+
+msgid "submission.scheduledIn"
+msgstr "{$issueName} मध्ये प्रकाशनासाठी अनुसूचित (शेड्यूल) केले."
+
+msgid "submissions.queuedReview"
+msgstr "समीक्षणाच्या टप्प्यात"
+
+msgid "submissions.initialProof"
+msgstr "प्रारंभिक मुद्रित लेखन"
+
+msgid "submissions.editorDecision"
+msgstr "संपादकाचा निर्णय"
+
+msgid "user.showAllJournals"
+msgstr "माझ्या आवडीची नियतकालिके दाखवा"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"तुम्ही नियतकालिकांसाठी समीक्षकाची भूमिका बजावण्याची इच्छा व्यक्त केली असल्या"
+"स, कृपया तुमच्या अभिरूचीचे विषय नोंदवा."
+
+msgid "submissions.layoutComplete"
+msgstr "कच्ची मुद्रिते संपादित झालेले"
+
+msgid "user.registerForOtherJournals"
+msgstr "इतर नियतकालिकांसाठी नोंदणी करा"
+
+msgid "context.context"
+msgstr "नियतकालिक"
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"होय, या नियतकालिकाला आलेल्या सादरीकरणांचे समीक्षण करण्यासाठी माझ्याशी संपर्क "
+"साधा."
+
+msgid "user.authorization.representationNotFound"
+msgstr "कच्चे मुद्रित (गॅली) सापडले नाही."
+
+msgid "user.noRoles.chooseJournal"
+msgstr ""
+"तुमचे खाते सध्या कोणत्याही नियतकालिकांशी निगडीत नाही. कृपया नियतकालिक निवडा :"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "या नियतकलिकातील मजकूराचे प्रकाशन ऑनलाइन पद्धतीने होत नाही."
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "लेख सादर करा : लेखक नोंदणी सध्या बंद आहे."
+
+msgid "user.role.subEditor"
+msgstr "विभाग संपादक"
+
+msgid "comments.authenticated"
+msgstr ""
+"<a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a> द्वारे"
+
+msgid "search.results.orderBy.date"
+msgstr "प्रकाशन वर्षानुसार"
+
+msgid "search.results.orderBy.journal"
+msgstr "नियतकालिकानुसार"
+
+msgid "user.role.subEditors"
+msgstr "विभागाचे संपादक"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "लोकप्रियतेनुसार (गेल्या महिन्यातल्या)"
+
+msgid "user.role.subscriptionManagers"
+msgstr "वर्गणी/सदस्यता व्यवस्थापक समूह"
+
+msgid "issue.year"
+msgstr "वर्ष"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>सूचना!</h4>\n"
+"<p>ही प्रणाली कॉन्फिगरेशन फाईल आपोआप बदलू (ओव्हरराईट करू) शकत नाही. तुम्हाला "
+"कॉन्फिगरेशन बदल लागू करण्यासाठी <tt>config.inc.php</tt> ही फाईल टेक्स्ट "
+"एडिटरसारख्या आज्ञावली वापरुन त्यातील मजकूर हवा तसा बदलणे आवश्यक असते. </p>"
+
+msgid "issue.fullIssue"
+msgstr "संपूर्ण अंक"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"आर्टिकल गॅली प्लग-इन विविध प्रकारच्या लेखनाच्या कच्च्या मुद्रितांना प्रदर्शि"
+"त करण्यासाठी आधार देतात."
+
+msgid "issue.return"
+msgstr "अंकाच्या तपशीलाकडे परत जा"
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+"ऑथोरायझेशन प्लग-इन्स LDAP सर्व्हर सारख्या इतर सिस्टीमला मुक्त नियतकालिके "
+"प्रणालीतील (ओपन जर्नल सिस्टीम्सना) वापरकर्त्यांचा खरेपणा सिद्ध करण्याचे काम "
+"सोपवतात."
+
+msgid "doi.issue.incorrectContext"
+msgstr ""
+"खालील अंकासाठी DOI तयार करता आला नाही : {$itemTitle}. सध्याच्या "
+"नियतकालिकासाठी तो अस्तित्वात नाही."
+
+msgid "doi.issue.notPublished"
+msgstr ""
+"{$pubObjectTitle} साठी नोंदणीकृत DOI चिन्हांकन करणे अयशस्वी झाले. स्थिती "
+"अद्ययावत करण्यापूर्वी अंक प्रकाशित करणे आवश्यक आहे."
+
+msgid "subscriptions.status.needsApproval"
+msgstr "मंजुरी आवश्यक आहे"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "ऑनलाईन पद्धतीने शुल्क भरण्याच्या प्रतीक्षेत"
+
+msgid "subscriptions.individualDescription"
+msgstr ""
+"सदस्यांसाठीच खुला असलेला मजकूर वाचण्याकरता वैयक्तिक सदस्यांनी लॉग-इन करणे "
+"आवश्यक आहे."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"संस्था सदस्यांना लॉग-इनची आवश्यकता नाही. सदस्यांसाठीच खुला असलेला मजकूर "
+"वाचण्याकरता वापरकर्त्याचे डोमेन आणि/किंवा IP पत्ता वापरला जातो."
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>टीप :</strong> ऑनलाइन पद्धतीने वर्गणी भरून झालेल्या संस्था सदस्यांना "
+"सदस्यत्व सक्रिय होण्यापूर्वी डोमेन आणि IP श्रेणींची मान्यता आवश्यक आहे."
+
+msgid "submission.event.general.defaultEvent"
+msgstr "सादरीकरण उपक्रम"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "अंकात क्रमयोजनेकरता सादरीकरण पाठवले"
+
+msgid "submission.event.general.authorRevision"
+msgstr "लेखकाच्या सुधारित आवृत्तीने फाईल अद्ययावत केली"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"टप्पे : सादरीकरणाचा क्रम &gt; सादरीकरणाचे समीक्षण &gt; सादरीकरणाचे संपादन "
+"&gt; अनुक्रमणिका.<br /><br />\n"
+"संपादकीय प्रक्रियेचे हे पैलू हाताळण्यासाठी मॉडेल निवडा. (व्यवस्थापकीय संपादक "
+"आणि विभाग संपादक नियुक्त करण्यासाठी, नियतकालिक व्यवस्थापनातील 'संपादकां'वर "
+"जा.)"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "सादरीकरणासाठी केलेली संपादकाची नियुक्ती रद्द केली"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "सादरीकरणासाठी कॉपीएडिटर नियुक्त केला"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "अचूकता तपासण्याचे (कॉपीएडिट) कार्य सुरू झाले"
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>क्रिएटिव्ह कॉमन्स अंतर्गत स्वामित्वाधिकाराच्या (कॉपीराईट) प्रस्तावित "
+"सूचना</h3>\n"
+"<h4>1. मुक्तपणे वाचनसाहित्य उपलब्ध करून देणार्‍या नियतकालिकासाठी प्रस्तावित "
+"धोरण </h4>\n"
+"या नियतकालिकात प्रकाशन करणारे लेखक खालील अटींशी सहमत आहेत :\n"
+"<ol type=\"a\">\n"
+"\t<li>लेखक एकाच वेळी स्वामित्वाधिकार राखून ठेवत <a target=\"_new\" href="
+"\"https://creativecommons.org/licenses/by/3.0/\">Creative Commons "
+"Attribution License</a> अंतर्गत नियतकालिकाला पहिल्या प्रकाशनाचा अधिकार देत "
+"आणि इतरांना लेखकाच्या आणि नियतकालिकाच्या ऋणनिर्देशासह त्याच्या वापराची अनुमती"
+" देतात.</li>\n"
+"\t<li>लेखक नियतकालिकात प्रकाशित झालेल्या लेखन आवृत्तीच्या वितरणासाठी स्वतंत्"
+"र, अतिरिक्त व्यवस्थांमध्ये सहभागी होऊ शकतात (जसे, संस्थेच्या प्रकाशनसंग्रहातू"
+"न लेख उपलब्ध करणे किंवा तोच लेख नियतकालिकात प्रकाशित झालेला असल्याचे नमूद करी"
+"त पुस्तकात प्रकाशित करणे).</li>\n"
+"\t<li>लेखकांना त्यांचे लेखन सादरीकरणापूर्वी किंवा त्या प्रक्रियेदरम्यान ऑनला"
+"इन उपलब्ध करण्याची परवानगी आणि उत्तेजन दिले जाते (उदा. संस्थेच्या "
+"प्रकाशनसंग्रहात किंवा त्यांच्या संकेतस्थळावर), कारण यामुळे तज्ज्ञांमध्ये "
+"विचारांच्या देवाणघेवाणीला चालना मिळते, तसेच या लेखनाला प्रकाशनपूर्व आणि "
+"मोठ्या संख्येने  उद्धरणे मिळण्याची शक्यता वाढते (पहा <a target=\"_new\" href="
+"\"https://web-archive.southampton.ac.uk/opcit.eprints.org/oacitation-biblio."
+"html\">मुक्त उपलब्धीचा प्रभाव</a>).</li>\n"
+"</ol>\n"
+"<h4>2. विलंबित मुक्त उपलब्धी देणार्‍या नियतकालिकांसाठी प्रस्तावित धोरण</h4>या"
+" नियतकालिकात प्रकाशन करणारे लेखक खालील अटींशी सहमत आहेत:<ol type=\"a\">\n"
+"\t<li>लेखक एकाच वेळी स्वामित्वाधिकार राखून ठेवत <a target=\"_new\" href="
+"\"https://creativecommons.org/licenses/by/3.0/\">Creative Commons "
+"Attribution License</a> अंतर्गत नियतकालिकाला पहिल्या प्रकाशनाचा आणि त्याला "
+"सार्वजनिक उपलब्धीचा [कालावधी निर्दिष्ट करा] अधिकार देतात आणि इतरांना "
+"लेखकाच्या आणि नियतकालिकाच्या ऋणनिर्देशासह त्याच्या वापराची अनुमती देतात.</li>"
+"\n"
+"\t<li>लेखक नियतकालिकात प्रकाशित झालेल्या लेखन आवृत्तीच्या वितरणासाठी स्वतंत्"
+"र, अतिरिक्त व्यवस्थांमध्ये सहभागी होऊ शकतात (जसे, संस्थेच्या प्रकाशनसंग्रहातू"
+"न लेख उपलब्ध करणे किंवा तोच लेख नियतकालिकात प्रकाशित झालेला असल्याचे नमूद करी"
+"त पुस्तकात प्रकाशित करणे).</li>\n"
+"\t<li>लेखकांना त्यांचे लेखन सादरीकरणापूर्वी किंवा त्या प्रक्रियेदरम्यान ऑनला"
+"इन उपलब्ध करण्याची परवानगी आणि उत्तेजन दिले जाते (उदा. संस्थेच्या "
+"प्रकाशनसंग्रहात किंवा त्यांच्या संकेतस्थळावर), कारण यामुळे तज्ज्ञांमध्ये "
+"विचारांच्या देवाणघेवाणीला चालना मिळते, तसेच या लेखनाला प्रकाशनपूर्व आणि "
+"मोठ्या संख्येने  उद्धरणे मिळण्याची शक्यता वाढते (पहा <a target=\"_new\" href="
+"\"https://web-archive.southampton.ac.uk/opcit.eprints.org/oacitation-biblio."
+"html\">मुक्त उपलब्धीचा प्रभाव</a>).</li>\n"
+"</ol>"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "अचूकता तपासण्याचे (कॉपीएडिट) प्राथमिक कार्य पूर्ण झाले"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "मुद्रित लेखन तपासणार्‍याची नियुक्ती केली"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>लेखकाने उद्धृत केलेल्या लेखनाच्या ऑनलाइन आवृत्त्यांपर्यंत वाचकांना "
+"पोहोचण्यासाठी, खालील पर्याय उपलब्ध आहेत.</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>वाचन साधन जोडा</strong><p>नियतकालिकाचा व्यवस्थापक प्रकाशित "
+"लेखनांसोबत असलेल्या वाचन साधनांमध्ये वाचकांना संदर्भाचे शीर्षक पेस्ट "
+"करण्यासाठी \"संदर्भ हुडकून काढा\" ची जोड देऊन त्यांच्या आवडीच्या डेटाबेसमध्ये"
+" ते सहज शोध घेऊ शकतात.</p></li>\n"
+"\t<li><strong >संदर्भांमध्ये दुवा (लिंक) रोवणे (एम्बेड)</strong><p>लेआउट एडि"
+"टर खालील सूचनांचा वापर करून (ज्यात फेरफार केले जाऊ शकतात) संदर्भांसाठी लिंक "
+"जोडू शकतो.</p></li>\n"
+"</ol >"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "मुद्रित लेखन तपासणार्‍याची संस्करण फाईल अद्ययावत केली"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "सादरीकरणाची मांडणी करणार्‍या (layout) संपादकाची नियुक्ती केली"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "मांडणी केलेली कच्ची मुद्रिते अद्ययावत केली"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"लेखन वाचण्याकरता सदस्यता आवश्यक आहे. सदस्यता पडताळण्यासाठी, नियतकालिकात लॉग-"
+"इन करा."
+
+msgid "context.current"
+msgstr "वर्तमान नियतकलिक :"
+
+msgid "navigation.categories"
+msgstr "प्रकार/विभाग"
+
+msgid "navigation.categories.browse"
+msgstr "धुंडाळा (browse)"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "कृपया आवश्यक रकाने (फील्ड्स) भरा."
+
+msgid "common.software"
+msgstr "मुक्त नियतकालिक प्रणाली (ओपन जर्नल सिस्टम्स)"
+
+msgid "common.payment"
+msgstr "शुल्क भरणा"
+
+msgid "common.payments"
+msgstr "शुल्कांचा भरणा"
+
+msgid "common.homePageHeader.altText"
+msgstr "मुख्यपृष्ठ शीर्ष (हेडर)"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "नियतकलिकाच्या मुख्यपृष्ठावरील प्रतिमा"
+
+msgid "doi.manager.settings.publications"
+msgstr "लेख"
+
+msgid "navigation.journalHelp"
+msgstr "नियतकलिकाबाबत साह्य"
+
+msgid "navigation.otherJournals"
+msgstr "इतर नियतकलिके"
+
+msgid "navigation.browseByIssue"
+msgstr "अंकानुसार"
+
+msgid "navigation.browseByAuthor"
+msgstr "लेखकानुसार"
+
+msgid "navigation.infoForAuthors"
+msgstr "लेखकांकरता"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "संभाव्य हितसंबंधांबाबत मार्गदर्शक सूचना"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "लेखकांसाठी सूचना"
+
+msgid "navigation.skip.about"
+msgstr "\"नियतकालिकाविषयी\" वर जा"
+
+msgid "navigation.skip.issue"
+msgstr "वर्तमान अंकाला भेट द्या"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "न सोपवलेली / सोपवण्याच्या प्रतिक्षेतली"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "संपादनप्रक्रियेमध्ये"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "समीक्षणप्रक्रियेमध्ये असलेली सादरीकरणे"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "समीक्षणप्रक्रियेमध्ये"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "संग्रहित"
+
+msgid "common.queue.long.active"
+msgstr "सक्रिय असलेले"
+
+msgid "common.queue.short.active"
+msgstr "सक्रिय"
+
+msgid "common.queue.long.completed"
+msgstr "संग्रह"
+
+msgid "common.queue.short.completed"
+msgstr "संग्रह"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "नियुक्त केलेले संपादक"
+
+msgid "section.abbreviation"
+msgstr "संक्षेप"
+
+msgid "section.abbreviation.example"
+msgstr "(उदा. लेख/Articles=ART)"
+
+msgid "section.section"
+msgstr "विभाग"
+
+msgid "section.sections"
+msgstr "विभाग"
+
+msgid "section.policy"
+msgstr "विभागाचे धोरण"
+
+msgid "article.article"
+msgstr "लेख"
+
+msgid "common.publications"
+msgstr "अनेक लेख"
+
+msgid "common.publication"
+msgstr "लेख"
+
+msgid "article.submissionId"
+msgstr "सादरीकरणाचा ID"
+
+msgid "article.title"
+msgstr "शिर्षक"
+
+msgid "article.authors"
+msgstr "लेखक"
+
+msgid "article.metadata"
+msgstr "प्राथमिक माहिती (मेटाडेटा)"
+
+msgid "article.journalSection"
+msgstr "नियतकालिकाचा विभाग"
+
+msgid "article.file"
+msgstr "फाईल"
+
+msgid "article.suppFile"
+msgstr "पूरक फाईल"
+
+msgid "article.suppFilesAbbrev"
+msgstr "अतिरिक्त फाईल्स"
+
+msgid "article.discipline"
+msgstr "शैक्षणिक विषय आणि उप-विषय"
+
+msgid "article.subject"
+msgstr "शोधशब्द"
+
+msgid "article.coverage"
+msgstr "व्याप्ती"
+
+msgid "article.language"
+msgstr "भाषा"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.commentsToEditor"
+msgstr "लेखकाच्या टिप्पण्या"
+
+msgid "article.submission"
+msgstr "सादरीकरण"
+
+msgid "article.submissions"
+msgstr "सादरीकरणे"
+
+msgid "article.details"
+msgstr "विवरण"
+
+msgid "article.abstract"
+msgstr "गोषवारा"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "मुक्त उपलब्धता"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "मर्यादित उपलब्धता"
+
+msgid "article.comments.sectionDefault"
+msgstr "सर्वसाधारण (डिफॉल्ट)"
+
+msgid "article.comments.enable"
+msgstr "सक्रिय"
+
+msgid "article.fontSize"
+msgstr "अक्षराचा आकार"
+
+msgid "article.fontSize.small.altText"
+msgstr "लहान"
+
+msgid "article.fontSize.medium.altText"
+msgstr "मध्यम"
+
+msgid "article.fontSize.large.altText"
+msgstr "मोठा"
+
+msgid "submission.submissionEditing"
+msgstr "सादरीकरणाचे संपादन"
+
+msgid "submission.changeSection"
+msgstr "बदला"
+
+msgid "submission.sent"
+msgstr "पाठवले"
+
+msgid "submission.editorDecision"
+msgstr "संपादकाचा निर्णय"
+
+msgid "submission.round"
+msgstr "फेरी&nbsp;{$round}"
+
+msgid "submission.notifyAuthor"
+msgstr "लेखकाला कळवा / पूर्वसूचना द्या"
+
+msgid "submission.notifyEditor"
+msgstr "संपादकाला कळवा / पूर्वसूचना द्या"
+
+msgid "submission.reviewersVersion"
+msgstr "समीक्षकाने टिप्पणी केलेली फाईल"
+
+msgid "submission.postReviewVersion"
+msgstr "समीक्षणोत्तर बदल केलेली फाईल"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "लेखकाने पाठवलेली सुधारित फाईल"
+
+msgid "submission.authorVersion"
+msgstr "लेखकाचा दृष्टिकोन"
+
+msgid "submission.copyedit"
+msgstr "सुसंगतता आणि अचूकता तपासणी"
+
+msgid "submission.proofreading"
+msgstr "मुद्रित लेखन तपासणी"
+
+msgid "submission.scheduling"
+msgstr "अनुसूचित (शेड्यूल) करणे"
+
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+msgid "submissions.step1"
+msgstr "पहिला टप्पा"
+
+msgid "submissions.step3"
+msgstr "तिसरा टप्पा"
+
+msgid "submissions.published"
+msgstr "प्रकाशित"
+
+msgid "submissions.initial"
+msgstr "प्राथमिक"
+
+msgid "submissions.proofread"
+msgstr "मुद्रित लेखन तपासले"
+
+msgid "submissions.postAuthor"
+msgstr "टिप्पण्याचा लेखक"
+
+msgid "submissions.reviewRound"
+msgstr "समीक्षेची फेरी (round)"
+
+msgid "submissions.proof"
+msgstr "प्रमाणित (proof)"
+
+msgid "submissions.editorRuling"
+msgstr "संपादकाचा निवाडा"
+
+msgid "submission.eventLog"
+msgstr "घटनाक्रम"
+
+msgid "submissions.copyeditComplete"
+msgstr "सुसंगतता आणि अचूकता तपासणी झालेले"
+
+msgid "submissions.proofreadingComplete"
+msgstr "मुद्रित लेखन तपासलेले"
+
+msgid "submission.search"
+msgstr "लेख शोधन"
+
+msgid "journal.currentIssue"
+msgstr "वर्तमान अंक"
+
+msgid "context.contexts"
+msgstr "नियतकालिके"
+
+msgid "journal.path"
+msgstr "स्थानमार्ग (path)"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "journal.viewAllIssues"
+msgstr "सगळे अंक पहा"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "या नियतकालिकामध्ये कोणतीही भूमिका नसलेल्या वापरकर्त्यांचा समावेश करा."
+
+msgid "user.profile.profileImage"
+msgstr "संक्षिप्त परिचय पृष्ठावरील प्रतिमा"
+
+msgid "user.reviewerPrompt"
+msgstr "तुम्ही या नियतकालिकाला आलेल्या सादरीकरणांचे समीक्षण कराल का?"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "होय, {$userGroup} ही भूमिका चालेल."
+
+msgid "user.register.contextsPrompt"
+msgstr "या संकेतस्थळावरील कोणत्या नियतकालिकांसाठी तुम्ही नोंदणी करू इच्छिता?"
+
+msgid "user.register.otherContextRoles"
+msgstr "खालील भूमिका वठवण्याची इच्छा."
+
+msgid "user.myJournals"
+msgstr "माझ्या पसंतीची नियतकालिके"
+
+msgid "user.manageMySubscriptions"
+msgstr "माझ्या वर्गणीची व्यवस्था"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"या नियतकालिकासाठी सध्या तुमच्याकडे कोणतीही भूमिका नाही. कृपया खालील "
+"भूमिकांमधून निवड करा :"
+
+msgid "user.noRoles.submitArticle"
+msgstr "प्रस्ताव सादर करा"
+
+msgid "user.noRoles.regReviewer"
+msgstr "समीक्षक म्हणून नोंदणी करा"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "समीक्षक म्हणून नोंदणी करा : समीक्षक नोंदणी सध्या बंद आहे."
+
+msgid "user.role.manager"
+msgstr "नियतकालिकाचा व्यवस्थापक"
+
+msgid "user.role.journalAssistant"
+msgstr "नियतकालिकाचा साहाय्यक"
+
+msgid "user.role.journalAssistants"
+msgstr "नियतकालिकाचे साहाय्यक"
+
+msgid "issue.issue"
+msgstr "अंक"
+
+msgid "issue.issues"
+msgstr "अंक (अनेक)"
+
+msgid "issue.title"
+msgstr "शिर्षक"
+
+msgid "issue.viewIssueIdentification"
+msgstr "{$identification} पहा"
+
+msgid "issue.volume"
+msgstr "खंड"
+
+msgid "issue.number"
+msgstr "अंक"
+
+msgid "issue.vol"
+msgstr "Vol."
+
+msgid "issue.no"
+msgstr "No."
+
+msgid "issue.noIssues"
+msgstr "अंक नाहीत"
+
+msgid "issue.toc"
+msgstr "अनुक्रमणिका"
+
+msgid "issue.abstract"
+msgstr "गोषवारा"
+
+msgid "issue.coverPage.altText"
+msgstr "मुखपृष्ठ"
+
+msgid "issue.nonpdf.title"
+msgstr "अंक उतरवून घ्या (डाउनलोड करा)"
+
+msgid "issue.viewIssue"
+msgstr "अंक पहा"
+
+msgid "doi.issue.incorrectStaleStatus"
+msgstr ""
+"खालील अंकासाठी DOI स्थिती सेट करता आला नाही : {$itemTitle}. DOI कडे \"न"
+"ोंदणीकृत\" किंवा \"सादर केलेले\" अशा स्थिती असणे आवश्यक आहे."
+
+msgid "subscriptionTypes.currency"
+msgstr "चलन"
+
+msgid "subscriptionTypes.year"
+msgstr "वर्ष"
+
+msgid "subscriptionTypes.years"
+msgstr "वर्षे"
+
+msgid "subscriptionTypes.month"
+msgstr "महिना"
+
+msgid "subscriptionTypes.months"
+msgstr "महिने"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "बेमुदत"
+
+msgid "subscriptionTypes.format"
+msgstr "प्रारूप"
+
+msgid "subscriptionTypes.format.online"
+msgstr "ऑनलाईन (इंटरनेटशी जोडलेले)"
+
+msgid "subscriptionTypes.format.print"
+msgstr "छापील"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "छापील आणि ऑनलाईन"
+
+msgid "subscriptions.inactive"
+msgstr "अक्रिय"
+
+msgid "subscriptions.status"
+msgstr "सद्यस्थिती"
+
+msgid "subscriptions.status.active"
+msgstr "सक्रिय"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "माहिती हवी"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "शुल्क भरण्याच्या प्रतीक्षेत"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "तुमची सदस्यता सक्रिय नाही."
+
+msgid "subscriptions.status.other"
+msgstr "इतर, टिप्पण्या पहा"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "लेख सादर झाला"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "सादरीकरण अंकासाठी नियुक्त केले"
+
+msgid "submission.event.general.articlePublished"
+msgstr "लेख प्रकाशित झाला"
+
+msgid "submission.event.author.authorRevision"
+msgstr "लेखकाने सुधारित आवृत्ती सादर केली"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "सादरीकरणासाठी संपादक नियुक्त केला"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "संपादकाचा निर्णय सादर झाला"
+
+msgid "submission.event.editor.editorFile"
+msgstr "संपादकाची फाईल अद्ययावत केली"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "सादरीकरण संग्रहीत केले"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "सादरीकरण संग्रहातून परतवले"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "सादरीकरणासाठी कॉपीएडिटरची नियुक्ती रद्द केली"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "कॉपीएडिटरची संस्करण फाईल अद्ययावत केली"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "अचूकता तपासण्याचे (कॉपीएडिट) अंतिम कार्य पूर्ण झाले"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "अचूकता तपासलेली फाईल अद्ययावत केली"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "मुद्रित लेखन तपासणार्‍याची नियुक्ती रद्द केली"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "मुद्रित लेखन तपासण्याचे कार्य सुरू झाले"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "मुद्रित लेखन तपासण्याचे कार्य पूर्ण झाले"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "सादरीकरणाची मांडणी करणार्‍या (layout) संपादकाची नियुक्ती रद्द केली"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "सादरीकरणाची मांडणी करण्याचे कार्य सुरू झाले"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "सादरीकरणाची मांडणी करण्याचे कार्य पूर्ण झाले"
+
+msgid "reader.subscribersOnly"
+msgstr "फक्त सदस्यांसाठी"
+
+msgid "reader.openAccess"
+msgstr "मुक्तपणे उपलब्ध"
+
+msgid "reader.subscriptionAccess"
+msgstr "सदस्यता आवश्यक आहे"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "सदस्यता किंवा शुल्क आवश्यक आहे"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "comments.commentsOnArticle"
+msgstr "या लेखावरील अभिप्राय/मतप्रदर्शन (comments)"
+
+msgid "search.results.orderBy"
+msgstr "यादीचा अनुक्रम याप्रमाणे"
+
+msgid "search.results.orderBy.article"
+msgstr "लेखाच्या शिर्षकानुसार"
+
+msgid "search.results.orderBy.author"
+msgstr "लेखकानुसार"
+
+msgid "search.results.orderBy.issue"
+msgstr "अंकानुसार"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "लोकप्रियतेनुसार (एकूण)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "समर्पकतेनुसार"
+
+msgid "search.results.orderDir.asc"
+msgstr "चढत्या क्रमाने"
+
+msgid "search.results.orderDir.desc"
+msgstr "उतरत्या क्रमाने"
+
+msgid "search.results.similarDocuments"
+msgstr "लेख साम्यानुसार"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "वर्गणी/सदस्यता व्यवस्थापन"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "वैयक्तिक सदस्यत्व"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "संस्था सदस्यत्व"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "सदस्यत्वाचे प्रकार"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "आर्टिकल गॅली प्लग-इन"
+
+msgid "plugins.categories.generic.description"
+msgstr ""
+"इतर प्लग-इन श्रेणींद्वारे आधार नसलेल्या कामांसाठी जेनेरिक प्लग-इन्सचा वापर "
+"मुक्त नियतकालिके प्रणाली (ओपन जर्नल सिस्टम्स) चा विस्तार करण्यासाठी विविध "
+"मार्गांनी केला जातो."
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"हा वापरकर्ता निष्क्रिय करायचा? यामुळे वापरकर्त्यास प्रणालीमध्ये लॉग-इन करता "
+"येणार नाही.\n"
+"\n"
+"वापरकर्त्याला त्यांचे खाते निष्क्रिय करण्याचे कारण द्यायचे की नाही हे "
+"ठरवण्याचा पर्याय तुमच्याकडे असेल."
