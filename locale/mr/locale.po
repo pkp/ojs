@@ -1,7 +1,7 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-09-11 05:40+0000\n"
+"PO-Revision-Date: 2024-09-11 21:47+0000\n"
 "Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
 "Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/locale/mr/>"
 "\n"
@@ -251,7 +251,7 @@ msgstr ""
 "इन उपलब्ध करण्याची परवानगी आणि उत्तेजन दिले जाते (उदा. संस्थेच्या "
 "प्रकाशनसंग्रहात किंवा त्यांच्या संकेतस्थळावर), कारण यामुळे तज्ज्ञांमध्ये "
 "विचारांच्या देवाणघेवाणीला चालना मिळते, तसेच या लेखनाला प्रकाशनपूर्व आणि "
-"मोठ्या संख्येने  उद्धरणे मिळण्याची शक्यता वाढते (पहा <a target=\"_new\" href="
+"मोठ्या संख्येने उद्धरणे मिळण्याची शक्यता वाढते (पहा <a target=\"_new\" href="
 "\"https://web-archive.southampton.ac.uk/opcit.eprints.org/oacitation-biblio."
 "html\">मुक्त उपलब्धीचा प्रभाव</a>).</li>\n"
 "</ol>\n"
@@ -271,7 +271,7 @@ msgstr ""
 "इन उपलब्ध करण्याची परवानगी आणि उत्तेजन दिले जाते (उदा. संस्थेच्या "
 "प्रकाशनसंग्रहात किंवा त्यांच्या संकेतस्थळावर), कारण यामुळे तज्ज्ञांमध्ये "
 "विचारांच्या देवाणघेवाणीला चालना मिळते, तसेच या लेखनाला प्रकाशनपूर्व आणि "
-"मोठ्या संख्येने  उद्धरणे मिळण्याची शक्यता वाढते (पहा <a target=\"_new\" href="
+"मोठ्या संख्येने उद्धरणे मिळण्याची शक्यता वाढते (पहा <a target=\"_new\" href="
 "\"https://web-archive.southampton.ac.uk/opcit.eprints.org/oacitation-biblio."
 "html\">मुक्त उपलब्धीचा प्रभाव</a>).</li>\n"
 "</ol>"
@@ -874,3 +874,1563 @@ msgstr ""
 "\n"
 "वापरकर्त्याला त्यांचे खाते निष्क्रिय करण्याचे कारण द्यायचे की नाही हे "
 "ठरवण्याचा पर्याय तुमच्याकडे असेल."
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>ज्याला खालीलप्रमाणे लेबल केले आहे असे ठळक मुद्दे सूचित करतात की "
+"संपादकाकडून यावर कृती आवश्यक आहे :\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">समीक्षक नियुक्त केला आहे "
+"परंतु ई-मेलद्वारे सूचित केलेले नाही</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">सर्व समीक्षकांच्या टिप्पण्या "
+"पोहोचल्या आहेत, परंतु कोणताही निर्णय नोंदवलेला नाही</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">लेखकाने सुधारित सादरीकरण "
+"संक्रमित (अपलोड) केले आहे</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">समीक्षकाने समीक्षण "
+"करण्याच्या आवाहनाला होकार द्यायची वेळ टळली आहे</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">समीक्षकाने समीक्षण "
+"पाठवण्याची वेळ टळली आहे</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>\"अपेक्षित तारीख\" समीक्षकाने समीक्षण करण्याची विनंती स्वीकारतो तेव्हा "
+"भरली जाते; ती समीक्षणाच्या अपेक्षित तारखेसाठी किती आठवडे शिल्लक उरले ती "
+"संख्या दाखवते किंवा मुदत संपल्यानंतर किती आठवडे उलटले (- चिन्ह वापरून) हे "
+"दाखवते.</li>\n"
+"</ol>"
+
+msgid "submission.layout.instructions"
+msgstr "मांडणी संबंधी (layout) सूचना"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>ज्याला खालीलप्रमाणे लेबल केले आहे असे ठळक मुद्दे सूचित करतात की "
+"संपादकाकडून यावर कृती आवश्यक आहे :\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">अचूकता तपासण्याच्या (कॉपीएडिट) "
+"टप्प्यावर कृती आवश्यक आहे</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">सादरीकरणाची मांडणी करण्याच्या "
+"(layout) टप्प्यात कृती आवश्यक आहे</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">मुद्रित लेखन तपासण्याच्या टप्प्यात "
+"क्रिया आवश्यक आहे</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "submission.proofread.corrections"
+msgstr "मुद्रित तपासणीदरम्यान केलेल्या सुधारणा"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"या मांडणी करणार्‍या संपादकाला (layout editor) पुन्हा सूचित केल्यास त्याला "
+"नेमून दिलेल्या कामाचा पुनरारंभ होईल. तुम्ही हे खात्रीने करू इच्छिता का?"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "संपादक/लेखक संवाद"
+
+msgid "sectionEditor.regrets.title"
+msgstr ""
+"#{$submissionId} ला समीक्षकाचा नकार, कार्यभार रद्द आणि पूर्वीच्या "
+"सादरीकरणांच्या फेर्‍या"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "संपादकीय निर्णय फेरी {$round}"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"या टिप्पण्या लेखकासोबत सामायिक केल्या जाऊ शकतात.<br />\n"
+"(सेव्ह केल्यानंतर, आणखी टिप्पण्याही जोडल्या जाऊ शकतात.)"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "समीक्षक या नात्याने विद्यमान वापरकर्त्याची नोंदणी"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "पाठवल्यानंतर, समीक्षकांना पाठवण्यासाठी संपादनाकूल BCC प्रत सादर करा."
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "मांडणी करणार्‍या संपादकाने (layout editor) तडीस नेलेला कार्यभार"
+
+msgid "user.register.noJournals"
+msgstr "तुमच्यासाठी नोंदणीयोग्य अशी नियतकालिके या संकेतस्थळावर नाहीत."
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "मांडणी करणार्‍या संपादकाकडे (layout editor) सक्रिय कार्यभार नाही."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "तुम्ही नोंद केलेला पासवर्ड पुरेशा लांबीचा नाही."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "मांडणी करण्याचा (layout editing) कार्यभार"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "पूरक फाईल संक्रमित (अपलोड) करा"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "हे कच्चे मुद्रित (गॅली) वेगळ्या संकेतस्थळावर उपलब्ध असेल."
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "फाईलचे समीक्षण करणे शिल्लक आहे"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr ""
+"भविष्यात समीक्षक समीक्षण करण्यास सहमती देतील तेव्हा सादरीकरण उपलब्ध केले जाईल"
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "नियतकालिकाच्या अंकाच्या मुक्त उपलब्धतेनंतर ई-मेलद्वारे सूचित केले जाते."
+
+msgid "reviewer.article.submitReview"
+msgstr "संपादकाला समीक्षण सादर करा"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "समीक्षकाने त्याच्या फाईलची आवृत्ती संक्रमित (अपलोड) केली"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(संपादकासाठी तुम्हाला फाईलवर भाष्य करायचे असल्यास, तुमच्या हार्ड ड्राइव्हवर "
+"सेव्ह करा आणि ब्राउझ/अपलोड वापरा.)"
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "नियतकालिकाला आलेल्या सादरीकरणांचे तज्ज्ञ समीक्षण करण्यास इच्छुक."
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "समीक्षणासाठी पुन्हा सादर करा"
+
+msgid "user.register.reviewerInterests"
+msgstr "समीक्षणाकरता विषयांची निवड करा (मुख्य विषय आणि संशोधन पद्धती) :"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "अभिप्राय पहा"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "वेळापत्रकाचा आढावा घ्या"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"होय, मी नोंदणी केलेल्या सर्व नियतकालिकांमधील नवीन प्रकाशित लेखन आणि "
+"निवेदनांबद्दल मला सूचित केलेले आवडेल."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"होय, या नियतकालिकाच्या <a href=\"{$privacyUrl}\" target=\"_blank\">गोपनीयता "
+"विधाना</a>नुसार माझी माहिती संकलित आणि संग्रहित करण्यास माझी सहमती आहे."
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"सक्रिय आणि कालबाह्य सदस्यता त्यांची मुदत संपण्याच्या तारखेसह खालीलप्रमाणे आहे"
+". याशिवाय, प्रत्येक सदस्यतेमध्ये खालील स्थितीबाबतची माहिती समाविष्ट केली जाऊ "
+"शकते."
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr ""
+"ऑनलाइन भरणा करण्यास प्रारंभ केला होता परंतु प्रक्रिया रद्द केली गेली किंवा "
+"अपूर्ण राहिली"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"समीक्षणाची मार्गदर्शक तत्त्वे समीक्षकांना नियतकालिकामध्ये प्रकाशनासाठी "
+"सादरीकरणाची योग्यता तपासण्यासाठी निकष प्रदान करतात, तसेच परिणामकारक आणि "
+"उपयुक्त समीक्षण करण्यासाठी कोणत्याही विशेष सूचना यात समाविष्ट केल्या जाऊ शकता"
+"त. समीक्षण सादर करताना, समीक्षकांसाठी दोन चौकटी (बॉक्सेस) उपलब्ध केल्या जाता"
+"त. पहिल्यात \"लेखक आणि संपादकासाठी\" आणि दुसर्‍यात केवळ \"संपादकासाठी\" समीक्"
+"षक त्याचे विचार मांडू शकतो. आवश्यकतेनुसार नियतकालिकाचा व्यवस्थापक तज्ज्ञ "
+"समीक्षणासाठी वेगळा फॉर्म तयार करू शकतो. प्रत्येक सादरीकरणासाठी, संपादकांना "
+"लेखकाबरोबर करायच्या पत्रव्यवहारात समीक्षण समाविष्ट करण्याचा पर्याय असतो."
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "वैयक्तिक सदस्यतेची वर्गणी भरा"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "उपलब्ध सदस्यता प्रकार पहा"
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"या सादरीकरणाशी संबंधित फाईल उतरवून घेण्यासाठी (डाउनलोड) आणि समीक्षण "
+"करण्यासाठी (स्क्रीनवर किंवा प्रिंट करून) फाईलच्या नावांवर क्लिक करा."
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "निवडलेल्या वर्गणीच्या प्रकारासाठी सदस्यत्व माहिती आवश्यक आहे."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "निवडलेल्या सदस्यता प्रकारासाठी आवश्यकतेनुसार सदस्यत्व माहिती."
+
+msgid "reviewer.article.enterReviewA"
+msgstr ""
+"या सादरीकरणाचे तुमचे समीक्षण टाईप (किंवा पेस्ट) करण्यासाठी चित्रचिन्हावर "
+"(आयकॉन) क्लिक करा."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"खालीलपैकी एक शिफारस निवडून समीक्षण प्रक्रिया पूर्ण करा. शिफारसीपूर्वी तुम्ही "
+"समीक्षणाच्या नोंदी करणे किंवा फाईल संक्रमित (अपलोड) करणे आवश्यक आहे."
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"येथे डोमेन नाव नमूद केल्यास, IP श्रेणी देणे ऐच्छिक ठरते.<br />ग्राह्य "
+"पद्धतीने डोमेन नाव लिहायला हवे (उदा. https://www.unigoa.ac.in/)."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr ""
+"तुम्ही कोणतीही शिफारस केलेली नाही. समीक्षण प्रक्रिया पूर्ण करण्यासाठी "
+"पर्यायांपैकी एका शिफारसीची निवड आवश्यक आहे."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP श्रेणी (एकापेक्षा अधिक)"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "कॉपीएडिटरची अंतीम फाईल"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"जर येथे IP श्रेणींची नोंद केली असेल, तर डोमेन नाव ऐच्छिक आहे.<br />ग्राह्य "
+"पद्धतीचा IP पत्ता (उदा. 152.57.247.155), IP श्रेणी (उदा. 142.58.103.1 - 142."
+"58.103.4), IP श्रेणी वाइल्डकार्डसह '*' (उदा. 142.58.*.*), आणि CIDR सह IP "
+"श्रेणी (उदा. 142.58.100.0/24) नोंदवा."
+
+msgid "search.allJournals"
+msgstr "सगळी नियतकालिके"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>या नियतकालिकावर मूळ प्रत (सादरीकरण) संक्रमित (अपलोड) करण्यासाठी, खालील "
+"टप्पे पूर्ण करा.</p>\n"
+"<ol>\n"
+"<li>या पृष्ठावर, 'ब्राउझ' (किंवा 'फाईल निवडा'वर) वर क्लिक केल्यावर तुमच्या "
+"संगणकावर फाईल शोधण्यासाठी 'फाईल निवडा' चौकट (विंडो) उघडेल.</li>\n"
+"<li>तुम्हाला सादर करायची असलेली फाईल शोधा आणि ती ठळक (हायलाइट) करा.</li>\n"
+"<li>त्यानंतर फाईल निवडा विंडोच्या 'ओपन' बटनावर क्लिक केल्यावर या पानावर "
+"फाईलचे नाव लिहिले जाईल.</li>\n"
+"<li>या पृष्ठावरील संक्रमित (अपलोड) करा बटन क्लिक केल्यावर नियतकालिकाच्या "
+"संकेतस्थळावर संगणकावरून फाईल संक्रमित (अपलोड) होईल आणि नियतकालिकाच्या "
+"नियमांनुसार तिचे नाव बदलेल.</li>\n"
+"<li>एकदा सादरीकरण संक्रमित (अपलोड) झाल्यानंतर, या पृष्ठाच्या तळाशी येथे 'सेव्"
+"ह करा आणि पुढे जा' बटन क्लिक करा.</li>\n"
+"</ol>"
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "अचूकता तपासण्याचे (कॉपीएडिट) प्राथमिक कार्य"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "अचूकता तपासण्याचे (कॉपीएडिट) अंतिम कार्य"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"शोध टिपा : <ul>\n"
+"<li>शोध संज्ञांच्या लहान-मोठ्या अक्षरात भेद (case-insensitive) आहे</li>\n"
+"<li>साधे शब्द गाळले जातात</li>\n"
+"<li>सर्वसाधारण (डिफॉल्ट) शोधादरम्यान पृच्छेमधील <b>सगळे</b> शब्द असलेल्या "
+"लेखांनाच हुडकून त्यांची यादी सादर केली जाते (म्हणजेच दोन शब्दांमध्ये, "
+"<em>AND</em> (आणि या अर्थाने) असणे नैसर्गिक समजले जाते)</li>\n"
+"<li>दोन शोध-शब्दांमध्ये <b>OR</b> (किंवा या अर्थाने) वापरुन केलेला शोध या "
+"शब्दांपैकी कोणताही शब्द असलेला लेख हुडकून काढतो; उदा., <em>शिक्षण OR "
+"संशोधन</em></li>\n"
+"<li>अनेक शोध शब्द वापरुन तयार केलेल्या क्लिष्ट पृच्छेसाठी कंसाचा वापर करणे "
+"श्रेयस्कर असते; उदा., <em>भाषा ((शिक्षण OR संशोधन) NOT इंग्रजी) </em></li>\n"
+"<li>अवतरण चिन्ह वापरून अचूक वाक्यांश (एका पेक्षा अधिक शब्दांनी बनलेला "
+"शोधशब्द) शोधता येतो; उदा., <em>\"आदिवासी आत्मकथन\" </em></li>\n"
+"<li>विशिष्ट विषयावरील लेख नको असतील तर तो विषय व्यक्त करणार्‍या शब्दापूर्वी "
+"<strong>-</strong> चिन्ह किंवा <em>NOT </em> (नको या अर्थाने) वापरुन तो वगळता"
+" येतो; उदा. <em>एकनाथ -भारूड</em>, किंवा <em>एकनाथ NOT भारूड</em></li>\n"
+"<li>वर्णांच्या कोणत्याही क्रमाशी जुळण्यासाठी वाइल्डकार्ड म्हणून शब्दात "
+"<strong>*</strong> वापरा; उदा., <em>भजन* </em> या शब्दाने शोधल्यावर \"भजन\", "
+"\"भजने\", \"भजनांचा\" अशी अर्थाने एक, पण शब्दरचना वेगळी असलेल्या शब्दांशी "
+"जुळणी होऊन सगळ्या संबंधित लेखनांची यादी सादर केली जाईल</li>\n"
+"</ul>"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "अचूकता तपासलेली (कॉपीएडिट) C\\E प्रत (आवृत्ती)"
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>तुमच्या वेब ब्राउझरमध्ये 'PDF रीडर प्लग-इन' बसवलेले असल्यास तुम्ही "
+"निवडलेली PDF फाईल येथे ब्राउझरमध्ये उघडेल. उदा. <a href=\"https://get.adobe."
+"com/reader/\">येथून Adobe Acrobat Reader उतरवून घेता (डाउनलोड करता) येते</"
+"a>. </p>"
+
+msgid "submission.copyedit.instructions"
+msgstr "अचूकता तपासण्यासाठी (कॉपीएडिट) सूचना"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "या नियतकालिकाने अंक प्रकाशित केलेले नाहीत."
+
+msgid "about.contact"
+msgstr "संपर्क"
+
+msgid "about.editorialTeam"
+msgstr "संपादक मंडळ"
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"काहीही नाही (विनंती करण्यापूर्वी अचूकता तपासलेल्या अंतिम प्रतीला कच्चे मुद्रि"
+"त (लेआउट) प्रत/आवृत्ती म्हणून संक्रमित (अपलोड) करा)"
+
+msgid "about.sectionPolicies"
+msgstr "विभागांची धोरणे"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "सादरीकरणासाठी {$login} किंवा {$register} करा."
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "<a href=\"{$url}\">{$name}</a> विभागात नवीन सादरीकरण करा."
+
+msgid "about.submissionPreparationChecklist"
+msgstr "सादरीकरणापूर्वीच्या तयारीची यादी"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"सादरीकरणप्रक्रियेचा एक भाग म्हणून, लेखकांनी त्यांच्या सादरीकरणासाठी खालील सर्"
+"व बाबींची पुर्तता केली असल्याची खात्री करणे आवश्यक आहे आणि या मार्गदर्शक "
+"तत्त्वांचे पालन न करणाऱ्या लेखकांची सादरीकरणे परतवली जाऊ शकतात."
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "या नियतकालिकातील मजकूर मुक्त प्रारूपात उपलब्ध असेल"
+
+msgid "about.subscriptions.institutional"
+msgstr "संस्था सदस्यत्व"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr ""
+"OJS/PKP द्वारे प्रकाशन प्रणाली, प्लॅटफॉर्म आणि कार्यप्रवाहाबद्दल (वर्कफ्लो) "
+"अधिक माहिती."
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"हे नियतकालिक मुक्त नियतकालिक प्रणाली (ओपन जर्नल सिस्टम्स)ची {$ojsVersion} "
+"आवृत्ती वापरते, जी GNU जनरल पब्लिक लायसन्स अंतर्गत Public Knowledge Project "
+"द्वारे त्यांनी दिलेल्या पाठिंब्यावर विकसित केली आणि मुक्तपणे वितरित केली "
+"जाणारी मुक्त स्त्रोत नियतकालिक व्यवस्थापन आणि प्रकाशन आज्ञावली आहे. <a href="
+"\"https://pkp.sfu.ca/\">आज्ञावलीबद्दल अधिक जाणून घेण्यासाठी</a> PKP च्या "
+"संकेतस्थळाला भेट द्या. नियतकालिक आणि नियतकालिकात करायच्या सादरीकरणाबद्दलच्या "
+"अधिक माहितीसाठी कृपया थेट <a href=\"{$contactUrl}\">नियतकालिकाशी संपर्क "
+"साधा</a>."
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"हे संकेतस्थळ मुक्त नियतकालिक प्रणाली (ओपन जर्नल सिस्टम्स)ची {$ojsVersion} "
+"आवृत्ती वापरते, जी GNU जनरल पब्लिक लायसन्स अंतर्गत Public Knowledge Project "
+"द्वारे त्यांनी दिलेल्या पाठिंब्यावर विकसित केली आणि मुक्तपणे वितरित केलेली "
+"मुक्त स्त्रोत नियतकालिक व्यवस्थापन आणि प्रकाशन आज्ञावली आहे. <a href=\"https"
+"://pkp.sfu.ca/\">आज्ञावलीबद्दल अधिक जाणून घेण्यासाठी</a> PKP च्या "
+"संकेतस्थळाला भेट द्या. कृपया संकेतस्थळावरील नियतकालिकांसंबंधीच्या माहितीसाठी "
+"आणि त्यावरील नियतकालिकांमध्ये करायच्या सादरीकरणाबद्दलच्या अधिक माहितीसाठी "
+"संकेतस्थळाशी थेट संपर्क साधा."
+
+msgid "payment.loginRequired"
+msgstr "शुल्क भरणा करण्यासाठी तुम्ही लॉग-इन केले पाहिजे."
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"प्रकाशीत साहित्य पहाण्यासाठी सदस्यता किंवा लेख खरेदी करणे आवश्यक आहे. सदस्यता"
+" पडताळण्यासाठी, पूर्वीच्या खरेदीच्या माहितीसाठी किंवा लेखाच्या खरेदीसाठी, "
+"नियतकालिकामध्ये लॉग-इन करा."
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"प्रप्रकाशीत साहित्य पहाण्यासाठी सदस्यता किंवा अंकाची खरेदी आवश्यक आहे. "
+"सदस्यता पडताळण्यासाठी, पूर्वीच्या खरेदीच्या माहितीसाठी किंवा लेखाच्या "
+"खरेदीसाठी, नियतकालिकामध्ये लॉग-इन करा."
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"सादरीकरण प्रक्रिया पूर्ण करण्यासाठी तुम्ही नियतकालिकाला तुमची देय रक्कम आधीच "
+"पाठवली असल्यास ही चौकट (बॉक्स) निवडा. …रक्कम पोहोचेपर्यंत सादरीकरणाचे समीक्"
+"षण केले जाणार नाही. …भरणा करण्याची पद्धती वाचण्यासाठी 'आता रक्कम भरा' वर क्लि"
+"क करा."
+
+msgid "payment.requestPublicationFee.notEnabled"
+msgstr "प्रकाशन शुल्क भरण्याचा पर्याय उपलब्ध नाही."
+
+msgid "payment.notFound"
+msgstr ""
+"देय रक्कमेची मागणी केली होती, परंतु आता ती कालबाह्य झाली आहे. तपशीलासाठी "
+"नियतकालिकाच्या व्य्वस्थापकाशी संपर्क साधा."
+
+msgid "payment.subscription.purchase"
+msgstr "सदस्यता शुल्क भरा"
+
+msgid "installer.appInstallation"
+msgstr "OJS ची प्रस्थापना (Installation)"
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"तुम्हाला OJS च्या विद्यमान आवृत्तीचा (Installation) नव्या आवृत्तीत बदल करायचा"
+" (अपग्रेड करत) असल्यास <a href=\"{$upgradeUrl}\">येथे क्लिक करा</a>."
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS {$version} आवृत्ती/स्वरूप</h4>\n"
+"\n"
+"<p>पब्लिक नॉलेज प्रोजेक्टचे <strong>मुक्त नियतकालिक प्रणाली (ओपन जर्नल "
+"सिस्टम्स)</strong> उतरवून घेतल्याबद्दल (डाउनलोड केल्याबद्दल) धन्यवाद. याच्या "
+"वापरापूर्वी, कृपया या आज्ञावलीमध्ये समाविष्ट केलेली <a href=\"{$baseUrl}/"
+"docs/README.md\">README</a> फाईल वाचा. पब्लिक नॉलेज प्रोजेक्ट आणि त्याच्या "
+"आज्ञावली प्रकल्पांबद्दल अधिक माहितीसाठी, कृपया <a href=\"https://pkp.sfu.ca/"
+"\" target=\"_blank\">PKP च्या संकेतस्थळाला</a> भेट द्या. तुम्हाला मुक्त "
+"नियतकालिक प्रणालीतील दोष (बग) निदर्शनास आणायचे किंवा तांत्रिक बाबींबद्दल "
+"चौकशी करायची असल्यास, <a href=\"https://forum.pkp.sfu.ca\" target=\"_blank\""
+">आधार मंचाला</a> किंवा PKP च्या ऑनलाइन <a href=\"https://github.com/pkp/pkp-"
+"lib#issues\" target=\"_blank\">बग रिपोर्टिंग सिस्टम</a> ला भेट द्या. आधार मं"
+"च ही संपर्काची योग्य पद्धत असली तरी, तुम्ही यावर काम करणार्‍या गटाशी "
+"ई-मेलनेही (<a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail."
+"com</a>) संपर्क साधू शकता.</p> \n"
+"\n"
+"<h4>प्रणालीच्या वापरासाठी आवश्यक बाबी</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"https://www.php.net/\" target=\"_blank\">PHP</a> >= "
+"{$phpRequiredVersion}; तुम्ही सध्या PHP {$phpVersion}{$wrongPhpText} वापरत "
+"आहात</li>\n"
+"\t<li><a href=\"https://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 "
+"किंवा <a href=\"https://www.postgresql.org/\" target=\"_blank\">PostgreSQL</"
+"a> >= 9.1.5</li>\n"
+"\t<li><a href=\"https://httpd .apache.org/\" target=\"_blank\">Apache</a> >= "
+"1.3.2x किंवा >= 2.0.4x किंवा Microsoft IIS 6</li>\n"
+"\t<li>कार्य प्रणाली (OS): वरील आज्ञावलींना आधार देणारी कोणतीही जसे <a href="
+"\"https://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\"https://www"
+".bsd.org\" target=\"_blank\">BSD</a>, <a href=\"https://www.oracle.com/"
+"solaris/\" target=\"_blank\">Solaris</a>, <a href=\"https://www.apple.com /\""
+" target=\"_blank\">Mac OS X</a>, <a href=\"https://www.microsoft.com/\""
+">Windows</a> यासारखे OS. </li>\n"
+"</ul>\n"
+"\n"
+"<p>PKP कडे आज्ञावली आवृत्त्या/स्वरूपे आणि प्लॅटफॉर्मच्या प्रत्येक संभाव्य "
+"काँबिनेशन्सची चाचणी घेण्यासाठी संसाधने नाहीत, त्यामुळे ते अपेक्षित कार्य "
+"किंवा आधाराची कोणतीही हमी देत नाही.</p>\n"
+"\n"
+"<p>बेस OJS डिरेक्टरीतील <tt> config.inc.php</tt> फाईल संपादित करून, किंवा सा"
+"इट अ‍ॅडमिनिस्ट्रेशन वेब इंटरफेस वापरून installation नंतर या सेटिंग्जमध्ये "
+"बदल केले जाऊ शकतात.</p>\n"
+"\n"
+"<h4>आधाराकरता वापरलेल्या डेटाबेस प्रणाली</h4>\n"
+"\n"
+"<p>OJS तर्फे सध्या फक्त MySQL आणि PostgreSQL वर चाचणी केली गेली आहे, तरी <a "
+"href=\"https://adodb.org\" target=\"_blank\">ADOdb</a> द्वारे आधार देणार्‍या "
+"इतर डेटाबेस व्यवस्थापन प्रणाली (पूर्ण किंवा अंशतः) कार्य करू शकतील. पर्यायी "
+"DBMS च्या अनुकूलतेसंबंधी अहवाल आणि/किंवा कोड पॅच OJS टीमला अवश्य "
+"पाठवावेत.</p>\n"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>OJS {$version} आवृत्ती/स्वरूप</h4>\n"
+"\n"
+"<p>पब्लिक नॉलेज प्रोजेक्टचे <strong>मुक्त नियतकालिक प्रणाली (ओपन जर्नल "
+"सिस्टम्स)</strong> उतरवून घेतल्याबद्दल (डाउनलोड केल्याबद्दल) धन्यवाद. याच्या "
+"वापरापूर्वी, कृपया या आज्ञावलीमध्ये समाविष्ट केलेल्या <a href=\"{$baseUrl}/"
+"docs/README.md\">README</a> आणि <a href=\"{$baseUrl}/docs/UPGRADE.md\""
+">UPGRADE</a> फाईल्स वाचा. पब्लिक नॉलेज प्रोजेक्ट आणि त्याच्या आज्ञावली "
+"प्रकल्पांबद्दल अधिक माहितीसाठी, कृपया <a href=\"https://pkp.sfu.ca/\" target="
+"\"_blank\">PKP च्या संकेतस्थळाला</a> भेट द्या. तुम्हाला मुक्त नियतकालिक "
+"प्रणालीतील दोष (बग) निदर्शनास आणायचे किंवा तांत्रिक बाबींबद्दल चौकशी करायची "
+"असल्यास, <a href=\"https://forum.pkp.sfu.ca\" target=\"_blank\">आधार मंचाला</"
+"a> किंवा PKP च्या ऑनलाइन <a href=\"https://github.com/pkp/pkp-lib#issues\" "
+"target=\"_blank\">बग रिपोर्टिंग सिस्टम</a> ला भेट द्या. आधार मंच ही संपर्काची"
+" योग्य पद्धत असली तरी, तुम्ही यावर काम करणार्‍या गटाशी ई-मेलनेही (<a href="
+"\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a>) संपर्क साधू "
+"शकता.</p>\n"
+"<p>याच्या वापरापूर्वी तुमचा डेटाबेस, फाइल्स डिरेक्टरी आणि OJS इंस्टॉलेशन "
+"डिरेक्टरीचा बॅकअप घ्या अशी <strong>आग्रहाची शिफारस आम्ही करतो</strong>.</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"संपूर्ण युनिकोडच्या वापरासाठी PHP <a href=\"https://www.php.net/mbstring\" "
+"target=\"_blank\">mbstring</a> लायब्ररीच्या आधारासह संकलित करणे आवश्यक आहे "
+"(सर्वात अलीकडील PHP इंस्टॉलेशन्समध्ये हे आपोआप होण्याची सोय आहे). तुमचा सर्व्"
+"हर या आवश्यकता पूर्ण करत नसल्यास अक्षरांचा विस्तारित वर्ण पट वापरताना "
+"तुम्हाला अडचणी येऊ शकतात.\n"
+"<br /><br />\n"
+"तुमचा सर्व्हर सध्या <strong>{$supportsMBString}</strong> mbstring ला आधार "
+"देतो"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+"<strong>धोक्याची सूचना :</strong> डेटाबेस इन्स्टॉलेशनद्वारे इंस्टॉलेशन अंशतः "
+"अयशस्वी झाल्यास डेटाबेस पुन्हा स्थापित करण्याचा प्रयत्न करण्यापूर्वी तुम्हाला"
+" तुमचा OJS डेटाबेस किंवा डेटाबेस टेबल्स गाळावे लागतील."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>महत्वाचे!</h4>\n"
+"<p>इन्स्टॉलर कॉन्फिगरेशन फाईल आपोआप ओव्हरराइट करू शकत नाही. सिस्टम वापरण्याचा"
+" प्रयत्न करण्यापूर्वी, कृपया योग्य त्या टेक्स्ट एडिटरमध्ये <tt>config.inc."
+"php</tt> उघडा आणि त्यातील मजकूर खालील टेक्स्ट फील्डमधील मजकूराने बदला.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>OJS चे इंस्टॉलेशन यशस्वीरित्या पूर्ण झाले आहे.</p>\n"
+"<p>प्रणाली वापरणे सुरू करण्यासाठी, मागील पृष्ठावर नोंदलेल्या वापरकर्तानाव आणि"
+" पासवर्डसह <a href=\"{$loginUrl}\">लॉग-इन</a> करा. </p>\n"
+"<p>आमच्या <a href=\"https://forum.pkp.sfu.ca\" target=\"_new\">समुदाय मंचा</"
+"a> ला भेट द्या किंवा आमच्या सुरक्षा सूचना आणि नियोजित आवृत्या/स्वरूपे, नवीन "
+"प्लग-इन आणि आगामी वैशिष्ट्ये यावर माहिती मिळवण्यासाठी <a href=\"https://pkp."
+"sfu.ca/developer-newsletter\" target=\"_new\">डेव्हलपर वृत्तपत्र</a> वर साइन "
+"अप करा.</p>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>मुक्त नियतकालिक प्रणाली (ओपन जर्नल सिस्टम्स) चे नव्या {$version} "
+"आवृत्तीमध्ये अपग्रेड यशस्वीरित्या पूर्ण झाले आहे.</p>\n"
+"<p>तुमच्या config.inc.php कॉन्फिगरेशन फाइलमध्ये \"इंस्टॉल केलेले\" सेटिंग "
+"<em>On</em> वर सेट करण्यास विसरू नका. </p>\n"
+"<p>आमच्या <a href=\"https://forum.pkp.sfu.ca\" target=\"_new\">समुदाय "
+"मंचा</a>ला भेट द्या किंवा आमच्या सुरक्षा सूचना आणि नियोजित आवृत्या/स्वरूपे, "
+"नवीन प्लग-इन आणि आगामी वैशिष्ट्ये यावर माहिती मिळवण्यासाठी <a href=\"https"
+"://pkp.sfu.ca/developer-newsletter\" target=\"_new\">डेव्हलपर वृत्तपत्र</a> "
+"वर साइन अप करा.</p>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"OJS ची नवीन आवृत्ती उपलब्ध आहे! तुम्ही सध्या OJS {$currentVersion} वापरत आहा"
+"त. सर्वात अलीकडील आवृत्ती OJS {$latestVersion} आहे. सर्वात अलीकडील आवृत्ती "
+"उतरवून घेण्यासाठी (डाउनलोड करण्यासाठी) आणि अपग्रेड सूचना शोधण्यासाठी कृपया "
+"<a href=\"https://pkp.sfu.ca/ojs_download\" target=\"_new\">या पृष्ठाला</a> "
+"भेट द्या."
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"OJS ची नवीन आवृत्ती उपलब्ध आहे! तुम्ही सध्या OJS {$currentVersion} वापरत आहा"
+"त. सर्वात अलीकडील आवृत्ती OJS {$latestVersion} आहे. कृपया तुमच्या साईट "
+"अ‍ॅडमिनशी संपर्क साधा ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\""
+">{$siteAdminEmail}</a>) त्यांना या नवीन आवृत्तीबद्दल सूचित करा. अधिक माहिती "
+"<a href=\"https://pkp.sfu.ca/ojs/ojs_download/\" target=\"_new\">येथे</a> "
+"मिळू शकते."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"{$submissionId} सादरीकरणाच्या {$round} या फेरीच्या समीक्षणासाठीची शिफारस, "
+"संपादक, {$editorName}, समीक्षकाच्या वतीने, {$reviewerName} यांनी सेट केली "
+"आहे."
+
+msgid "log.review.reviewAccepted"
+msgstr ""
+"{$reviewerName} ने {$submissionId} च्या सादरीकरणासाठी {$round} या फेरीत समीक्"
+"षण करण्याचे स्वीकारले आहे."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName} ने {$reviewerName} च्या वतीने {$submissionId} च्या सादरीकरणासाठी "
+"{$round} या फेरीत समीक्षण करण्याचे स्वीकारले आहे."
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"संपादक, {$userName}, यांनी समीक्षक, {$reviewerName} च्या वतीने "
+"{$submissionId} च्या सादरीकरणासाठी {$round} या फेरीत समीक्षण करण्यासाठी फाईल "
+"संक्रमित (अपलोड) केली आहे."
+
+msgid "log.copyedit.initiate"
+msgstr ""
+"{$submissionId} या सादरीकरणाची सुसंगतता आणि अचूकता तपासणी (कॉपीएडिटींग) "
+"{$copyeditorName} द्वारे सुरू झाली आहे."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+"{$copyeditorName} ने {$submissionId} या सादरीकरणाची प्रारंभिक सुसंगतता आणि "
+"अचूकता तपासणी (कॉपी एडिटींग) पूर्ण केली आहे."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr ""
+"{$submissionId} या सादरीकरणाच्या सुसंगतता आणि अचूकता तपासणी (कॉपी एडिटींग) "
+"साठी {$copyeditorName} ला नियुक्त केले गेले आहे."
+
+msgid "log.copyedit.authorFile"
+msgstr ""
+"लेखकाने कॉपीएडिट केलेल्या सादरीकरणाच्या फाईलची आवृत्ती संक्रमित (अपलोड) केली "
+"आहे."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr ""
+"{$submissionId} या सादरीकरणासाठी लेआउट संपादक म्हणून {$editorName} ची केलेली "
+"नियुक्ती रद्द केली आहे."
+
+msgid "log.editor.metadataModified"
+msgstr ""
+"या लेखासाठीच्या प्राथमिक माहितीत (मेटाडेटा) {$editorName} ने फेरबदल केला आहे."
+
+msgid "log.editor.editorFile"
+msgstr "सादरीकरणाच्या फाईलची संपादक आवृत्ती संक्रमित (अपलोड) केली गेली आहे."
+
+msgid "log.editor.restored"
+msgstr "{$submissionId} हे सादरीकरण प्रतीक्षाक्रमात पुनर्स्थापित केले गेले आहे."
+
+msgid "log.proofread.assign"
+msgstr ""
+"{$assignerName} ने {$submissionId} या सादरीकरणाच्या मुद्रित लेखन तपासणीसाठी "
+"(प्रूफरीड) {$proofreaderName} ला नियुक्त केले आहे."
+
+msgid "log.imported"
+msgstr "{$userName} ने {$submissionId} लेख दाखल केला (इम्पोर्ट) केला आहे."
+
+msgid "notification.type.editorDecisionComment"
+msgstr "\"{$title}\" साठी संपादकाच्या निर्णयावर एक अभिप्राय आहे"
+
+msgid "notification.type.newAnnouncement"
+msgstr "एक नवीन निवेदन/सूचना तयार केली आहे."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "\"{$title}\" साठी समीक्षण फॉर्ममध्ये अभिप्राय सादर केला गेला आहे"
+
+msgid "notification.type.submissionComment"
+msgstr "एका संपादकाने \"{$title}\" वर अभिप्राय नोंदवला आहे"
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "एक नवीन सादर केल्या गेलेल्या लेखासाठी संपादक नियुक्त करणे आवश्यक आहे."
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+"नेमणूक करण्यासाठीची (असाइन) दुवा (लिंक) वापरून कच्ची मुद्रिते (गॅली) तयार "
+"करण्यासाठी सहभागींच्या सूचीमधून एकाला नियुक्त करा."
+
+msgid "user.authorization.sectionAssignment"
+msgstr "तुम्ही तुमच्या विभागात नसलेला लेख पहाण्याचा प्रयत्न करीत आहात."
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr ""
+"अवैध कॉपी एडिटर सादरीकरणाचा प्रयत्न किंवा कॉपी एडिटर सादरीकरणाची विनंती "
+"केलेली नाही!"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "इतर नियतकालिकांमध्ये नोंदणी करा"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "अनुमती दिली"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>या कच्च्या मुद्रिताच्या (गॅली) प्रकाशनाला अनुमती द्या.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>या कच्च्या मुद्रितासाठी (गॅली) दिलेली अनुमती हटवा.</p>"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} ने {$submissionId} हा लेख संपादनासाठी घेतला आहे."
+
+msgid "user.role.subscriptionManager"
+msgstr "वर्गणी/सदस्यता व्यवस्थापक"
+
+msgid "user.role.managers"
+msgstr "नियतकालिकाचे संपादक"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"क्षमस्व, तुम्हाला या वापरकर्त्यावर प्रशासकीय अधिकार वापरता येणार नाहीत. "
+"खालीलपैकी याचे एक कारण असू शकते :\n"
+"\t\t<ul>\n"
+"\t\t\t<li>वापरकर्ता संकेतस्थळाचा प्रशासक आहे</li>\n"
+"\t\t\t<li>तुम्ही व्यवस्थापन करीत नसलेल्या नियतकालिकांमध्ये वापरकर्ता सक्रिय "
+"आहे</li>\n"
+"\t\t</ul>\n"
+"\tहे कार्य संकेतस्थळाच्या प्रशासकाद्वारेच करणे आवश्यक आहे.\n"
+"\t"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "सक्रिय संपादकीय कार्यभार"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "तडीस नेलेला संपादकीय कार्यभार"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "सादरीकरणांच्या पुढील कार्यवाहीसाठी कोणालाही नियुक्त केलेले नाही."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"या कॉपी एडिटरला पुन्हा सूचित केल्यास त्याला नेमून दिलेल्या कामाचा पुनरारंभ हो"
+"ईल. तुम्ही हे खात्रीने करू इच्छिता का?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"या लेखकाला पुन्हा सूचित केल्यास त्याला नेमून दिलेल्या कामाचा पुनरारंभ होईल. "
+"तुम्ही हे खात्रीने करू इच्छिता का?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"या मुद्रिते तपासणार्‍याला (proofreader) पुन्हा सूचित केल्यास त्याला नेमून "
+"दिलेल्या कामाचा पुनरारंभ होईल. तुम्ही हे खात्रीने करू इच्छिता का?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "नकार"
+
+msgid "sectionEditor.regrets"
+msgstr "नकार"
+
+msgid "sectionEditor.regrets.link"
+msgstr "मतप्रदर्शनाला नकार, कार्यभार रद्द आणि पूर्वीच्या सादरीकरणांच्या फेर्‍या"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "तज्ज्ञ समीक्षण, फेरी {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "समीक्षकाचा नकार आणि कार्यभार रद्द"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "नकार दिला"
+
+msgid "sectionEditor.regrets.result"
+msgstr "निष्कर्ष"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "नवीन समीक्षक जोडा"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "मांडणी करणार्‍या संपादकाचा (layout editor) सक्रिय कार्यभार"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "कच्ची मुद्रिते (गॅली) संक्रमित (अपलोड) करा"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "फाईल बदला"
+
+msgid "submission.layout.imageInvalid"
+msgstr "अग्राह्य प्रतिमा प्रारूप. स्वीकृत प्रारूपे .gif, .jpg आणि .png आहेत."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "इतरत्र असलेल्या मजकूराचा URL"
+
+msgid "reviewer.pendingReviews"
+msgstr "प्रलंबित लेखांचा आढावा"
+
+msgid "reviewer.completedReviews"
+msgstr "संपवलेली समीक्षणे"
+
+msgid "reviewer.averageQuality"
+msgstr "मूल्यांकन"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "संपादकाला सूचित करा"
+
+msgid "reviewer.article.canDoReview"
+msgstr "समीक्षण करेन"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "समीक्षण करणे अशक्य आहे"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "सादरीकरणाचा संपादक"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "येथे समीक्षणाचा अभिप्राय टाइप किंवा पेस्ट करा"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "संपादकाच्या नोंदीसाठी"
+
+msgid "reviewer.article.sendReminder"
+msgstr "स्मरणपत्र पाठवा"
+
+msgid "reviewer.article.automatic"
+msgstr "(Auto)"
+
+msgid "reviewer.article.recommendation"
+msgstr "शिफारस"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "नोंदी"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "संक्रमित (अपलोड) केलेल्या फाईल्स"
+
+msgid "reviewer.article.schedule.request"
+msgstr "संपादकाची विनंती"
+
+msgid "reviewer.article.schedule.response"
+msgstr "तुमचा प्रतिसाद"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "समीक्षण सादर केले"
+
+msgid "reviewer.article.schedule.due"
+msgstr "समीक्षण नियत दिनांक"
+
+msgid "reviewer.article.decision.accept"
+msgstr "सादरीकरण स्वीकारावे"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "सुधारणा आवश्यक आहेत"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "इतरत्र सादर करा"
+
+msgid "reviewer.article.decision.decline"
+msgstr "सादरीकरणाला नकार"
+
+msgid "reviewer.article.schedule"
+msgstr "वेळापत्रक"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "सादरीकरणाचे समीक्षण अद्याप बाकी आहे"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "टप्प्यांचा आढावा घ्या"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "समीक्षकासाठी मार्गदर्शक सूचना"
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "सादरीकरणाच्या संपादकाला सूचित करा"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "तुम्ही समीक्षण करणे स्वीकारत आहात की नाही."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr ""
+"तुम्ही समीक्षण करणार असल्यास, खालील ‘समीक्षकासाठी मार्गदर्शक सूचना’ पहा."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"या संशोधनात तुमचे संभाव्य हितसंबंध गुंतले आहेत की नाही हे घोषित करा (<a "
+"target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\""
+">संभाव्य हितसंबंधांबाबत धोरण</a> पहा)."
+
+msgid "reviewer.competingInterests"
+msgstr "संभाव्य हितसंबंध"
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+"याशिवाय, तुम्ही संपादक आणि/किंवा लेखकाच्या अवलोकनार्थ आणखी फाईल्स संक्रमित "
+"(अपलोड) करू शकता."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "समीक्षकाच्या शिफारसी निश्चित करा किंवा जुळवून घ्या."
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"एकदा तुम्ही निर्णय नोंदवल्यानंतर तुम्ही यापुढे या समीक्षणात बदल करू शकणार "
+"नाही. तुम्ही खात्रीने तुमच्या निर्णयावर ठाम आहात ना?"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "फाईल अचूकता तपासण्यासाठी (कॉपीएडिट - C/E) पाठवा"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "कॉपीएडिटरची फाईल"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "मुद्रित लेखन तपासणीची कामे शिल्लक नाहीत"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "समीक्षण केलेली आवृत्ती/प्रत येईपर्यंत ई-मेल पाठविली जाऊ शकत नाही."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"समीक्षणाच्या पानावर संपादकाच्या निर्णयाच्या भागात जोपर्यंत फाईल निवडली जात "
+"नाही तोपर्यंत अचूकता तपासण्यासाठी (कॉपीएडिट) ई-मेल पाठवता येणार नाही."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr ""
+"अचूकता तपासण्यासाठी (कॉपीएडिट) फाईल संक्रमित (अपलोड) होईपर्यंत ई-मेल पाठवता "
+"येणार नाही."
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "अचूकता तपासण्याचे (कॉपीएडिट) संपादकाचे कार्य"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "अचूकता तपासण्याचे (कॉपीएडिट) लेखकाचे कार्य"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "कॉपीएडिटर नेमा"
+
+msgid "submission.copyedit.useFile"
+msgstr "फाईल वापरा"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "अचूकता तपासतानाचे (कॉपीएडिट) अभिप्राय/टिप्पण्या"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "सार्वजनिक कच्चे मुद्रित (गॅली) आधीपासून अस्तित्वात आहे."
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "मांडणी करणारा (layout) संपादक नियुक्त करा"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "मांडणी करणारा (layout) संपादक बदला"
+
+msgid "submission.layout.layoutComments"
+msgstr "मांडणी संबंधी (layout) नोंदी"
+
+msgid "submission.layout.referenceLinking"
+msgstr "संदर्भ जोडणी"
+
+msgid "submission.proofreadingComments"
+msgstr "मुद्रित तपासणीसंबंधी नोंदी"
+
+msgid "submission.proofread.instructions"
+msgstr "मुद्रित तपासणीसंबंधी सूचना"
+
+msgid "submission.logType.article"
+msgstr "लेख"
+
+msgid "submission.logType.author"
+msgstr "लेखक"
+
+msgid "submission.logType.editor"
+msgstr "संपादक"
+
+msgid "submission.logType.review"
+msgstr "समीक्षण"
+
+msgid "submission.logType.copyedit"
+msgstr "अचूकता तपासणी"
+
+msgid "submission.logType.layout"
+msgstr "लेखाची मांडणी (layout)"
+
+msgid "submission.logType.proofread"
+msgstr "मुद्रित तपासणी"
+
+msgid "submission.comments.copyeditComments"
+msgstr "अचूकता तपासताना (कॉपीएडिट) केलेल्या टिप्पण्या"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "लेखक आणि संपादकासाठी"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "संपादकासाठी"
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "लेखक आणि संपादकासाठी"
+
+msgid "submission.comments.forEditor"
+msgstr "संपादकासाठी"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "सेव्ह करुन लेखकाला ई-मेल पाठवा"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "सेव्ह करुन संपादकाला ई-मेल पाठवा"
+
+msgid "user.register.selectContext"
+msgstr "नोंदणी करण्यासाठी नियतकालिक निवडा :"
+
+msgid "user.register.privacyStatement"
+msgstr "गोपनीयता विधान"
+
+msgid "user.register.registrationDisabled"
+msgstr "हे नियतकालिक सध्या वापरकर्ता नोंदणी स्वीकारत नाही."
+
+msgid "user.register.readerDescription"
+msgstr "नियतकालिकाच्या अंकाच्या प्रकाशनानंतर ई-मेलद्वारे सूचित केले जाते."
+
+msgid "user.register.authorDescription"
+msgstr "नियतकालिकामध्ये मुद्दा (item) सादर करता येतो."
+
+msgid "user.register.reviewerDescription"
+msgstr "संकेतस्थळावरील सादरीकरणांचे तज्ज्ञ समीक्षण करण्यास इच्छुक."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"तुम्ही नोंदणी करत असलेल्या कोणत्याही नियतकालिकाच्या गोपनीयता विधानाला तुमची "
+"संमती आवश्यक आहे."
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "या संकेतस्थळाच्या गोपनीयता विधानाला तुमची संमती आवश्यक आहे."
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "माझी सदस्यता"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "सदस्यता स्थिती"
+
+msgid "user.subscriptions.status"
+msgstr "स्थिती"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "वर्णन"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "सदस्यता सक्रिय करण्यापूर्वी आणखी माहिती आवश्यक आहे"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "सदस्यता सक्रिय करण्यापूर्वी त्याचा आढावा घेणे आवश्यक आहे"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "रक्कम पाठवली गेली आहे परंतु अद्याप ती पोहोचली नाही"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "वैयक्तिक सदस्यत्व"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "संस्था सदस्यत्व"
+
+msgid "user.subscriptions.renew"
+msgstr "नुतनीकरण"
+
+msgid "user.subscriptions.purchase"
+msgstr "वर्गणी भरा"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "नव्याने वर्गणी भरा"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "संस्था सदस्यतेची वर्गणी भरा"
+
+msgid "user.subscriptions.expires"
+msgstr "{$date} या तारखेला वर्गणी संपते"
+
+msgid "user.subscriptions.expired"
+msgstr "{$date} या तारखेला वर्गणी संपली"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "सदस्यता प्रकार"
+
+msgid "user.subscriptions.form.membership"
+msgstr "सदस्यत्व"
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "कृपया ग्राह्य सदस्यता प्रकार निवडा."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "या वापरकर्त्याने पूर्वीपासूनच वैयक्तिक सदस्यता घेतली आहे."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "संस्थेचे नाव"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "संस्थेची नाव नोंदणी आवश्यक आहे."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "पत्रव्यवहाराचा पत्ता"
+
+msgid "user.subscriptions.form.domain"
+msgstr "डोमेन"
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"निवडलेल्या सदस्यत्व प्रकाराला सदस्यत्व प्रमाणीकरणासाठी डोमेन आणि/किंवा IP "
+"श्रेणी अनिवार्य आहे."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "कृपया ग्राह्य डोमेन नावाची नोंद करा."
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "कृपया ग्राह्य IP श्रेणी नोंदवा."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "वगळा"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "नोंदवा"
+
+msgid "search.browseAuthorIndex"
+msgstr "लेखक सूची चाळा (ब्राउझ करा)"
+
+msgid "search.searchFor"
+msgstr "यावरचे लेख शोधा"
+
+msgid "search.withinJournal"
+msgstr "या अंतर्गत"
+
+msgid "search.authorIndex"
+msgstr "लेखक सूची चाळा (ब्राउझ करा)"
+
+msgid "search.authorDetails"
+msgstr "लेखकाचा तपशील"
+
+msgid "article.pageTitle"
+msgstr "{$title} चे पहिले पान पहा"
+
+msgid "article.pdf.title"
+msgstr "पोर्टेबल डॉक्युमेंट फॉरमॅट (PDF)"
+
+msgid "article.download"
+msgstr "ही PDF फाईल उतरवून घ्या (डाउनलोड करा)"
+
+msgid "article.nonpdf.title"
+msgstr "लेख उतरवून घ्या (डाउनलोड करा)"
+
+msgid "article.nonpdf.note"
+msgstr ""
+"तुम्ही निवडलेली फाईल आपोआप उतरवण्यास (डाउनलोड होण्यास) सुरुवात झाली पाहिजे. "
+"तसे नसल्यास, खालील दुव्यावर (लिंक) क्लिक करा. लक्षात ठेवा या फाईलला "
+"पाहण्यासाठी विशेष viewer किंवा प्लग-इनची गरज भासू शकते.<br /><br />फाईल आपो"
+"आप उतरवता येत (डाउनलोड होत) नसल्यास, <a href=\"{$url}\">येथे क्लिक करा</a>."
+
+msgid "site.journalsHosted"
+msgstr "या संकेतस्थळावर ही नियतकालिके आहेत"
+
+msgid "site.journalView"
+msgstr "नियतकालिक पहा"
+
+msgid "site.journalRegister"
+msgstr "सदस्यता नोंदणी करा"
+
+msgid "site.journalCurrent"
+msgstr "वर्तमान अंक"
+
+msgid "site.noJournals"
+msgstr "कोणतीही नियतकालिके उपलब्ध नाहीत."
+
+msgid "current.current"
+msgstr "वर्तमान"
+
+msgid "current.noCurrentIssue"
+msgstr "वर्तमान अंक नाही"
+
+msgid "archive.archives"
+msgstr "संग्रह"
+
+msgid "archive.archivesPageNumber"
+msgstr "संग्रह - पृष्ठ {$pageNumber}"
+
+msgid "archive.browse"
+msgstr "पूर्वीचे अंक चाळा (ब्राऊझ करा)"
+
+msgid "archive.issueUnavailable"
+msgstr "अंक अनुपलब्ध"
+
+msgid "about.statistics"
+msgstr "आकडेवारी"
+
+msgid "about.aboutContext"
+msgstr "नियतकालिकाविषयी"
+
+msgid "about.history"
+msgstr "नियतकालिकाचा पूर्वेतिहास"
+
+msgid "about.editorialTeam.biography"
+msgstr "परिचय"
+
+msgid "about.editorialPolicies"
+msgstr "संपादकीय धोरणे"
+
+msgid "about.focusAndScope"
+msgstr "लक्ष्य आणि व्याप्ती"
+
+msgid "about.submissions"
+msgstr "सादरीकरणे"
+
+msgid "about.onlineSubmissions.login"
+msgstr "लॉग-इन"
+
+msgid "about.onlineSubmissions.register"
+msgstr "नोंदणी करा"
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} किंवा {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "नवीन सादरीकरण करा"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "तुमची अनिर्णित सादरीकरणे पहा"
+
+msgid "about.authorGuidelines"
+msgstr "लेखकांसाठी मार्गदर्शक तत्त्वे"
+
+msgid "about.copyrightNotice"
+msgstr "स्वामित्वाधिकारासंबंधी (कॉपीराईट) सूचना"
+
+msgid "about.privacyStatement"
+msgstr "गोपनीयता विधान"
+
+msgid "about.authorFees"
+msgstr "लेखकांसाठी शुल्क"
+
+msgid "about.authorFeesMessage"
+msgstr "हे नियतकालिक लेखकांना खालीलप्रमाणे शुल्क आकारते."
+
+msgid "about.peerReviewProcess"
+msgstr "तज्ज्ञ समीक्षण प्रक्रिया"
+
+msgid "about.publicationFrequency"
+msgstr "प्रकाशनाची वारंवारता/ कालचक्र"
+
+msgid "about.openAccessPolicy"
+msgstr "मुक्त उपलब्धतेसंबंधी धोरण"
+
+msgid "about.delayedOpenAccess"
+msgstr "विलंबित मुक्त उपलब्धता"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "महिन्यांनी अंक प्रकाशित झाल्यानंतर."
+
+msgid "about.archiving"
+msgstr "संग्रहण"
+
+msgid "about.subscriptions"
+msgstr "वर्गणी/सदस्यता"
+
+msgid "about.subscriptions.individual"
+msgstr "वैयक्तिक सदस्यत्व"
+
+msgid "about.subscriptionsContact"
+msgstr "सदस्यतेकरता संपर्क"
+
+msgid "about.subscriptionTypes.name"
+msgstr "नाव"
+
+msgid "about.subscriptionTypes.format"
+msgstr "प्रारूप"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "कालावधी"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "मूल्य"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "सदस्यतेचे प्रकार"
+
+msgid "about.memberships"
+msgstr "सदस्यत्व"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "OJS संपादकीय आणि प्रकाशन प्रक्रिया"
+
+msgid "about.aboutSoftware"
+msgstr "मुक्त नियतकालिक प्रणाली (ओपन जर्नल सिस्टम्स) बद्दल"
+
+msgid "help.ojsHelp"
+msgstr "मुक्त नियतकालिक प्रणाली (ओपन जर्नल सिस्टम्स) तर्फे हातभार"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS चा हातभार"
+
+msgid "help.searchReturnResults"
+msgstr "शोधलेल्या यादीवर परत जा"
+
+msgid "help.goToEditPage"
+msgstr "{$sectionTitle} संपादित करा"
+
+msgid "donations.thankYou"
+msgstr "धन्यवाद"
+
+msgid "donations.thankYouMessage"
+msgstr "मदत केल्याबद्दल धन्यवाद. …तुमचे योगदान बहुमूल्य आहे."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "देणगी देण्यासाठी तुम्ही लॉग-इन करणे आवश्यक आहे."
+
+msgid "payment.paid"
+msgstr "रक्कम भरली"
+
+msgid "payment.unpaid"
+msgstr "रक्कम भरली नाही"
+
+msgid "payment.waived"
+msgstr "शुल्क आकारणी रद्द केली"
+
+msgid "payment.payNow"
+msgstr "आता रक्कम भरा"
+
+msgid "payment.waive"
+msgstr "शुल्क आकारणी रद्द"
+
+msgid "payment.alreadyPaid"
+msgstr "यापूर्वीच रक्कम भरली आहे"
+
+msgid "payment.paymentReceived"
+msgstr "भरलेली रक्कम पोहोचली"
+
+msgid "payment.paymentSent"
+msgstr "देय रक्कम आधीच पाठवली आहे"
+
+msgid "payment.authorFees"
+msgstr "लेखक शुल्क"
+
+msgid "payment.type.submission"
+msgstr "सादरीकरणासाठी भरावयाचे शुल्क"
+
+msgid "payment.type.publication"
+msgstr "प्रकाशन शुल्क"
+
+msgid "payment.type.publication.required"
+msgstr "प्रकाशन शुल्क येणे बाकी आहे."
+
+msgid "payment.type.fastTrack"
+msgstr "शीघ्र समीक्षण शुल्क"
+
+msgid "payment.type.membership"
+msgstr "वैयक्तिक सदस्यत्व शुल्क"
+
+msgid "payment.type.purchaseArticle"
+msgstr "लेख खरेदी शुल्क भरा"
+
+msgid "payment.type.purchaseIssue"
+msgstr "अंक खरेदी शुल्क भरा"
+
+msgid "payment.type.subscription"
+msgstr "सदस्यता शुल्क"
+
+msgid "payment.type.donation"
+msgstr "देणग्या"
+
+msgid "payment.requestPublicationFee"
+msgstr "प्रकाशन शुल्क ({$feeAmount}) भरा"
+
+msgid "payment.donation.makeDonation"
+msgstr "देणगी द्या"
+
+msgid "payment.submission.paySubmission"
+msgstr "सादरीकरणासाठी भरावयाचे शुल्क अदा करा"
+
+msgid "payment.publication.payPublication"
+msgstr "प्रकाशन शुल्क भरा"
+
+msgid "payment.publication.publicationPaid"
+msgstr "प्रकाशन शुल्क भरले"
+
+msgid "payment.membership.buyMembership"
+msgstr "वैयक्तिक सदस्यत्व वर्गणी भरा"
+
+msgid "payment.membership.renewMembership"
+msgstr "वैयक्तिक सदस्यत्वाचे नुतनीकरण करा"
+
+msgid "payment.membership.ends"
+msgstr "कालबाह्य झाले आहे"
+
+msgid "payment.subscription.renew"
+msgstr "सदस्यत्वाचे नुतनीकरण करा"
+
+msgid "payment.subscription.expires"
+msgstr "मुदत संपली"
+
+msgid "installer.ojsUpgrade"
+msgstr "OJS चे नवे स्वरूप वापरा"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>इंस्टॉलेशनपूर्वी विचारात घ्यायच्या पायऱ्या</h4>\n"
+"\n"
+"\n"
+"<p>1. खालील फाईल्स आणि डिरेक्टरी (आणि त्यांची सामग्री) लिहिण्यायोग्य बनवणे "
+"आवश्यक आहे:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> लिहिण्यायोग्य (पर्यायी): "
+"{$writable_config}</li>\n"
+"\t<li><tt>public/</tt> लिहिण्यायोग्य आहे: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> लिहिण्यायोग्य आहे: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> लिहिण्यायोग्य आहे: "
+"{$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> लिहिण्यायोग्य आहे: "
+"{$writable_templates_compile}</li>\n"
+"\t<li> <tt>cache/_db</tt> लिहिण्यायोग्य आहे: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. संक्रमित (अपलोड) केलेल्या फाईल्स संचयित करण्यासाठी डिरेक्टरी तयार करणे "
+"आणि लिहिण्यायोग्य करणे आवश्यक आहे (खालील \"फाइल सेटिंग्ज\" पहा).</p>"
+
+msgid "installer.allowFileUploads"
+msgstr ""
+"तुमचा सर्व्हर सध्या फाईल संक्रमित (अपलोड) करायला अनुमती देतो : "
+"<strong>{$allowFileUloads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"तुमचा सर्व्हर सध्या या आकारापर्यंतची फाईल संक्रमित (अपलोड) आकाराला अनुमती "
+"देतो: <strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr ""
+"ही प्रणाली या प्राथमिक भाषांत वापरण्यासाठी उपलब्ध आहे. तुम्हाला येथे सूचीबद्"
+"ध नसलेल्या भाषेत अनुवाद करण्यात स्वारस्य असेल तर कृपया OJS प्रलेखन "
+"(documentation) वाचा."
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+"संक्रमित (अपलोड) केलेल्या फाईल्स ठेवल्या जाणाऱ्या विद्यमान डिरेक्टरीचे पूर्ण "
+"pathname लिहा. ही डिरेक्टरी इंटरनेटवरून थेट उपलब्ध नसावी. <strong>कृपया ही "
+"डिरेक्टरी अस्तित्वात असल्याची आणि इंस्टॉलेशनपूर्वी फाईल्स संक्रमित करण्यायोग्"
+"य असल्याची खात्री करा.</strong> Windows मध्ये pathname देताना फॉरवर्ड स्लॅश "
+"वापरावे, उदा. \"C:/myjournal/files\"."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+"OJS ला त्याचा डेटा संचयित करण्यासाठी SQL डेटाबेसमध्ये प्रवेश अनिवार्य आहे. "
+"आधार देणार्‍या डेटाबेसेसच्या यादीसाठी प्रणालीच्या वरील आवश्यकता पहा. खालील "
+"फील्डमध्ये, डेटाबेसशी जोडणी करण्यासाठी वापरल्या जाणाऱ्या सेटिंग्ज प्रदान करा."
+
+msgid "installer.installApplication"
+msgstr "मुक्त नियतकालिक प्रणाली (ओपन जर्नल सिस्टम्स) इंस्टॉल करा"
+
+msgid "installer.upgradeApplication"
+msgstr ""
+"मुक्त नियतकालिक प्रणाली (ओपन जर्नल सिस्टम्स) चे नवे स्वरूप वापरा (Upgrade)"
+
+msgid "log.author.documentRevised"
+msgstr ""
+"{$authorName} ने लेख {$submissionId} सुधारित केला आहे. नवीन फाईल आयडी "
+"{$fileId} आहे."
+
+msgid "log.review.reviewerUnassigned"
+msgstr ""
+"{$reviewerName} ला समीक्षण फेरीसाठी {$submissionId} च्या समीक्षणासाठी रद्द "
+"केले गेले आहे."
+
+msgid "log.review.reviewInitiated"
+msgstr ""
+"{$submissionId} या सादरीकरणाकरता {$reviewerName} द्वारे {$round} या फेरीसाठी "
+"समीक्षण सुरू केले आहे."
+
+msgid "log.review.reviewerRated"
+msgstr ""
+"{$submissionId} या सादरीकरणाकरता {$round} या फेरीच्या समीक्षणासाठी "
+"{$reviewerName} ला रेट केले गेले आहे."
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"{$reviewerName} द्वारे होणार्‍या {$submissionId} सादरीकरणाच्या {$round} या "
+"फेरीच्या समीक्षणासाठीची अंतिम तारीख {$dueDate} वर सेट केली गेली आहे."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+"{$reviewerName} द्वारे {$submissionId} सादरीकरणाच्या {$round}या फेरीच्या "
+"समीक्षणासाठी शिफारस सेट केली गेली आहे."
+
+msgid "log.review.resubmit"
+msgstr "{$submissionId} हे सादरीकरण फेरसमीक्षणासाठी पुन्हा सादर केले गेले आहे."
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+"{$reviewerName} ने सादरीकरण {$submissionId} साठीचे {$round} या फेरीत समीक्षण "
+"करण्याचे नाकारले आहे."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName} ने {$reviewerName} च्या वतीने {$submissionId} च्या सादरीकरणासाठी "
+"{$round} या फेरीत समीक्षण करण्याचे नाकारले आहे."
+
+msgid "log.review.reviewerFile"
+msgstr "समीक्षकाची फाईल संक्रमित (अपलोड) केली गेली आहे."
+
+msgid "log.editor.decision"
+msgstr ""
+"{$editorName} द्वारे {$submissionId} या लेखासाठी संपादक निर्णयाची "
+"({$decision}) नोंद केली गेली."
+
+msgid "log.editor.recommendation"
+msgstr ""
+"{$submissionId} या लेखासाठी संपादकाची शिफारस ({$decision}) {$editorName} ने "
+"नोंदवली होती."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "सर्वसाधारण (डिफॉल्ट) कॉपीएडिट फाईल निवडली आहे."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+"{$copyeditorName} ने {$submissionId} या सादरीकरणाची अंतिम सुसंगतता आणि अचूकता"
+" तपासणी (कॉपी एडिटींग) पूर्ण केली आहे."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "सादरीकरणाच्या फाईलची कॉपी एडिटर आवृत्ती संक्रमित (अपलोड) केली गेली आहे."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr ""
+"{$submissionId} या सादरीकरणाची मांडणी करण्यासाठी (layout) {$editorName} ला ले"
+"आउट संपादक म्हणून नियुक्त केले गेले आहे."
+
+msgid "log.layout.layoutEditComplete"
+msgstr ""
+"{$editorName} ने {$submissionId} या सादरीकरणासाठी लेआउट संपादन पूर्ण केले "
+"आहे."
+
+msgid "log.editor.archived"
+msgstr "{$submissionId} हे सादरीकरण संग्रहित केले गेले आहे."
+
+msgid "log.editor.editorAssigned"
+msgstr ""
+"{$editorName} यांना {$submissionId} या सादरीकरणासाठी संपादक म्हणून नियुक्त "
+"केले आहे."
+
+msgid "log.proofread.complete"
+msgstr ""
+"{$proofreaderName} ने प्रकाशन क्रम लावण्यासाठी (शेड्युलिंग) {$submissionId} "
+"हे सादरीकरण सादर केले आहे."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "तज्ज्ञ-समीक्षण केलेला लेख"
+
+msgid "notification.type.editing"
+msgstr "संपादन उपक्रम"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "एक नवीन लेख, \"{$title},\" सादर केला गेला आहे."
+
+msgid "notification.type.galleyModified"
+msgstr "\"{$title}\" साठीच्या कच्च्या मुद्रितात (गॅलीत) बदल केला आहे"
+
+msgid "notification.type.issuePublished"
+msgstr "अंक प्रकाशित झाला आहे."
+
+msgid "notification.type.openAccess"
+msgstr "अंक मुक्त उपलब्ध (ओपन ऍक्सेस) करण्यात आला आहे."
+
+msgid "notification.type.reviewing"
+msgstr "उपक्रमांचा आढावा"
+
+msgid "notification.type.site"
+msgstr "संकेतस्थळावरील उपक्रम"
+
+msgid "notification.type.submissions"
+msgstr "सादरीकरण उपक्रम"
+
+msgid "notification.type.userComment"
+msgstr "एका वाचकाने \"{$title}\" वर अभिप्राय नोंदवला आहे"
+
+msgid "notification.type.public"
+msgstr "जाहीर निवेदने"
+
+msgid "notification.savedIssueMetadata"
+msgstr "अंकाच्या प्रकाशनासंबंधी प्राथमिक माहिती (मेटाडेटा) सेव्ह केली."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "कच्च्या मुद्रितांच्या (गॅली) प्रतीक्षेत."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr ""
+"प्रवेश नाकारला! तुम्हाला या लेखाचा कॉपी एडिटर म्हणून नेमण्यात आलेले नाही."
+
+msgid "user.authorization.noContext"
+msgstr "तुमच्या शोधाशी जुळणारे नियतकालिक येथे नाही."
+
+msgid "user.authorization.invalidIssue"
+msgstr "अग्राह्य अंक शोधत आहात!"
+
+msgid "grid.action.createContext"
+msgstr "नव्या नियतकालिकाची निर्मिती करा"
+
+msgid "editor.navigation.issues"
+msgstr "अंक (अनेक)"
+
+msgid "notification.type.approveSubmission"
+msgstr ""
+"हे सादरीकरण अंकात प्रकाशित करण्यापूर्वी सध्या अनुमतीच्या प्रतीक्षेत आहे."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "अनुमतीच्या प्रतीक्षेत."
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "इतर नियतकालिके दृष्टीआड करा"
+
+msgid "article.view.interstitial"
+msgstr "कृपया उतरवून घेण्यासाठी (डाउनलोड करण्यासाठी) लेखाची फाईल निवडा."
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "अनुमतीच्या प्रतीक्षेत"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "कच्च्या मुद्रितासाठी (गॅली) अनुमती"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "सूचीकरण \"{$journalName}\""
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr ""
+"नियतकालिकाचा दिलेला स्थानमार्ग \"{$journalPath}\" नियतकालिकापर्यंत पोहोचवू "
+"शकत नाही."
+
+msgid "editor.issues.backIssues"
+msgstr "मागील अंक"
+
+msgid "editor.issues.futureIssues"
+msgstr "आगामी अंक"
+
+msgid "navigation.subscriptions"
+msgstr "वर्गणी/सदस्यता"
+
+msgid "catalog.sortBy"
+msgstr "लेखांचा क्रम"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "या गटातील लेखांचा क्रम कसा लावायचा त्याची निवड करा."
