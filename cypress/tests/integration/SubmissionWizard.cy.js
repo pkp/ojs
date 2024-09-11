@@ -84,7 +84,7 @@ describe('Submission Wizard', function() {
 
         // Make all sections editor-restricted
         cy.login('dbarnes', null, 'publicknowledge');
-        cy.get('.app__navGroup:contains("Settings") a:contains("Journal")').click();
+        cy.get('nav div[data-pc-section="header"]:contains("Settings") a:contains("Journal")').click();
         cy.get('.pkpTabs__buttons button:contains("Sections")').click();
         cy.get('#sectionsGridContainer a.show_extras')
             .each(($showExtras) => {
@@ -109,7 +109,7 @@ describe('Submission Wizard', function() {
         // Make Articles inactive and leave Reviews editor-restricted
         cy.logout();
         cy.login('dbarnes', null, 'publicknowledge');
-        cy.get('.app__navGroup:contains("Settings") a:contains("Journal")').click();
+        cy.get('nav div[data-pc-section="header"]:contains("Settings") a:contains("Journal")').click();
         cy.get('.pkpTabs__buttons button:contains("Sections")').click();
         cy.get('#sectionsGridContainer tr:contains("Articles") input').check();
         cy.get('[role="dialog"] button:contains("OK")').click();
@@ -124,7 +124,7 @@ describe('Submission Wizard', function() {
         // Make Reviews not editor-restricted
         cy.logout();
         cy.login('dbarnes', null, 'publicknowledge');
-        cy.get('.app__navGroup:contains("Settings") a:contains("Journal")').click();
+        cy.get('nav div[data-pc-section="header"]:contains("Settings") a:contains("Journal")').click();
         cy.get('.pkpTabs__buttons button:contains("Sections")').click();
         cy.get('#sectionsGridContainer tr:contains("Reviews")')
             .then(($tr) => {
@@ -150,7 +150,7 @@ describe('Submission Wizard', function() {
         // Reactivate Articles section to restore test data conditions
         cy.logout();
         cy.login('dbarnes', null, 'publicknowledge');
-        cy.get('.app__navGroup:contains("Settings") a:contains("Journal")').click();
+        cy.get('nav div[data-pc-section="header"]:contains("Settings") a:contains("Journal")').click();
         cy.get('.pkpTabs__buttons button:contains("Sections")').click();
         cy.get('#sectionsGridContainer tr:contains("Articles")')
             .then(($tr) => {

@@ -12,7 +12,7 @@ describe('Data suite tests', function() {
 		cy.login('admin', 'admin');
 		cy.get('a').contains('admin').click();
 		cy.get('a').contains('Dashboard').click();
-		cy.get('.app__nav a').contains('Journal').click();
+		cy.get('nav div[data-pc-section="header"] a').contains('Journal').click();
 		cy.get('button[id="categories-button"]').click();
 
 		// Create an Applied Science category
