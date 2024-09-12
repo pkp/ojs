@@ -1,12 +1,13 @@
 # Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2021, 2022, 2023.
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2022.
+# Kubilay Tuğlu <kubilay.tuglu@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2023-05-10 06:08+0000\n"
-"Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
+"PO-Revision-Date: 2024-09-12 19:24+0000\n"
+"Last-Translator: Kubilay Tuğlu <kubilay.tuglu@gmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/manager/tr/>"
 "\n"
 "Language: tr\n"
@@ -14,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "manager.distribution.access"
 msgstr "Erişim"
@@ -357,9 +358,10 @@ msgstr "Bu bölümün başlığını sayının içindekiler tablosunda gösterme
 msgid "manager.sections.identifyType"
 msgstr "Bu bölümde yayınlanan ögelerin belirlenmesinde kullanılacak tanım"
 
+#, fuzzy
 msgid "manager.sections.identifyTypeExamples"
 msgstr ""
-"(Örneğin,  \"Hakemlik Değerlendirmesinden Geçmiş Makale\", \"Hakemlik "
+"(Örneğin, \"Hakemlik Değerlendirmesinden Geçmiş Makale\", \"Hakemlik "
 "Değerlendirmesinden Geçmemiş Kitap İncelemesi\", \"Çağrılı Yorum\", vb.)"
 
 msgid "manager.sections.indexed"
@@ -2166,7 +2168,6 @@ msgstr "Derginin ana sayfasının URL'si"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Derginin birincil irtibat kişisinin adı"
 
-#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
 msgstr "Dergi baş harfleri"
 
@@ -2217,13 +2218,12 @@ msgstr "Kurum adı"
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr "Kurum adresi"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
 msgstr "Alan adı"
 
 #, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr "Abonelik kimlik doğrulaması için IP aralıkları"
+msgstr "Bu abonelik için geçerli IP aralıkları"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
 msgstr "Yazarın ödeme yapabileceği sayfanın URL'si"
@@ -2678,3 +2678,13 @@ msgstr ""
 
 msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
 msgstr "Bir sayı dizgisi içe aktarılamadı, dosyası eksik."
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"{$id} sayısının kapak resmi dışa aktarılmadı, dosya \"{$path}\" yolunda "
+"bulunamadı."
+
+#, fuzzy
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"{$id} sayı dizgisi dışa aktarılamadı, dosya \"{$path}\" yolunda bulunamadı."
