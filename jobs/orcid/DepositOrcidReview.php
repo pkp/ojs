@@ -19,21 +19,16 @@ namespace APP\jobs\orcid;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\orcid\OrcidReview;
-use APP\submission\Submission;
 use Carbon\Carbon;
 use GuzzleHttp\Exception\ClientException;
 use PKP\config\Config;
-use PKP\context\Context;
 use PKP\jobs\BaseJob;
 use PKP\orcid\OrcidManager;
-use PKP\submission\reviewAssignment\ReviewAssignment;
 
 class DepositOrcidReview extends BaseJob
 {
     public function __construct(
-        private Submission $submission,
-        private Context $context,
-        private ReviewAssignment $reviewAssignment,
+        private int $reviewAssignmentId
     ) {
         parent::__construct();
     }
@@ -41,23 +36,30 @@ class DepositOrcidReview extends BaseJob
     /**
      * @inheritDoc
      */
-    public function handle()
+    public function handle(): void
     {
+        $reviewAssignment = Repo::reviewAssignment()->get($this->reviewAssignmentId);
+        if ($reviewAssignment === null) {
+            $this->fail('Review assignment does not exist.');
+        }
+
+        $submission = Repo::submission()->get($reviewAssignment->getSubmissionId());
+        $context = Application::getContextDAO()->getById($submission->getData('contextId'));
+
         // If the application is set to sandbox mode, it will not reach out to external services
         if (Config::getVar('general', 'sandbox', false)) {
             $this->fail('Application is set to sandbox mode and will not interact with the ORCID service');
+        }
+
+        if (!OrcidManager::isMemberApiEnabled($context)) {
             return;
         }
 
-        if (!OrcidManager::isMemberApiEnabled($this->context)) {
+        if (!OrcidManager::getCity($context) || !OrcidManager::getCountry($context)) {
             return;
         }
 
-        if (!OrcidManager::getCity($this->context) || !OrcidManager::getCountry($this->context)) {
-            return;
-        }
-
-        $reviewer = Repo::user()->get($this->reviewAssignment->getData('reviewerId'));
+        $reviewer = Repo::user()->get($reviewAssignment->getData('reviewerId'));
 
         if ($reviewer->getOrcid() && $reviewer->getData('orcidAccessToken')) {
             $orcidAccessExpiresOn = Carbon::parse($reviewer->getData('orcidAccessExpiresOn'));
@@ -65,9 +67,9 @@ class DepositOrcidReview extends BaseJob
                 # Extract only the ORCID from the stored ORCID uri
                 $orcid = basename(parse_url($reviewer->getOrcid(), PHP_URL_PATH));
 
-                $orcidReview = new OrcidReview($this->submission, $this->reviewAssignment, $this->context);
+                $orcidReview = new OrcidReview($submission, $reviewAssignment, $context);
 
-                $uri = OrcidManager::getApiPath($this->context) . OrcidManager::ORCID_API_VERSION_URL . $orcid . '/' . OrcidManager::ORCID_REVIEW_URL;
+                $uri = OrcidManager::getApiPath($context) . OrcidManager::ORCID_API_VERSION_URL . $orcid . '/' . OrcidManager::ORCID_REVIEW_URL;
                 $method = 'POST';
                 if ($putCode = $reviewer->getData('orcidReviewPutCode')) {
                     $uri .= '/' . $putCode;
