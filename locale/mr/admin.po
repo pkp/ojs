@@ -1,3 +1,242 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2024.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2024-09-12 08:45+0000\n"
+"Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
+"Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/admin/mr/>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+"या संकेतस्थळावरील नियतकालिकांच्या वापराच्या आकडेवारीचे संकलन करण्यासाठी "
+"भौगोलिक स्तर निवडा. सखोल तपशीलाची भौगोलिक आकडेवारी तुमच्या डेटाबेसचा आकार "
+"लक्षणीयरीत्या वाढवू शकते आणि काही दुर्मीळ प्रकरणांमध्ये अभ्यागतांच्या व्यक्ति"
+"गत माहितीला बाधा आणू शकते. प्रत्येक नियतकालिकासाठी हे सेटिंग वेगळ्या पद्धतीने"
+" रचण्याची (कॉन्फिगर करण्याची) सोय आहे, परंतु संकेतस्थळावरील सेटिंग ज्या "
+"मर्यादेपर्यंत रचले गेले (कॉन्फिगर केले) आहे त्यापेक्षा अधिक तपशीलवार माहिती "
+"ते कधीही गोळा करू शकणार नाही. उदाहरणार्थ, जर संकेतस्थळ फक्त देश आणि प्रदेशाची"
+" माहिती गोळा करण्याची मर्यादा आखत असेल, तर मग त्यावरील नियतकालिकही देश आणि "
+"प्रदेश किंवा फक्त देशाच्या अभ्यागतांची आकडेवारी मिळवू शकते. अशा परिस्थितीत "
+"नियतकालिक देश, प्रदेश आणि शहरी पातळीवरील अभ्यागतांच्या आकडेवारीचा मागोवा ते "
+"घेऊ शकणार नाही."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"सगळ्या लोकॅल्सची निवड संकेतस्थळावर आधार देण्यासाठी करा. निवडलेली लोकॅल्स "
+"संकेतस्थळावर सगळ्या पोषित (होस्टेड) नियतकालिकांसाठी उपलब्ध असतील शिवाय "
+"प्रत्येक मुख्यपृष्ठावर भाषा निवडीच्या मेन्यूमध्ये देखील दिसून येतील (जे "
+"नियतकालिक-विशिष्ट पृष्ठांवरील निवड रद्द करेल). एकाधिक लोकॅल्स निवडल्या नसल्या"
+"स, भाषा निवडीचा मेनू दिसणार नाही आणि इतर भाषांचे पर्याय नियतकालिकांसाठी उपलब्"
+"ध होणार नाहीत."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"कोणतेही अतिरिक्त लोकॅल या प्रणालीत वापरण्यासाठी निवडू शकता. पोषित (होस्टेड) "
+"नियतकालिकांसाठी लोकॅल वापरण्यापूर्वी ते स्थापित केले जाणे आवश्यक आहे. नवीन "
+"भाषांचा आधार घेण्याबद्दलच्या माहितीसाठी OJS च्या संकेतस्थळावरील अधिक माहिती "
+"वाचा."
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"तुमची या नियतकालिकाचे व्यवस्थापक म्हणून आपोआप नोंदणी केली जाईल. नवीन नियतकालि"
+"क निर्माण केल्यानंतर, प्रारंभिक नियतकालिकासाठीचा सेटअप पूर्ण करण्यासाठी, "
+"तुम्हाला त्याच्या सेटिंग्ज विझार्डवर वळवले जाईल."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "स्थानमार्गाची नोंद (path) आवश्यक आहे."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"स्थानमार्ग (path) लिहिताना फक्त अक्षरे, संख्या आणि फक्त '_' तसेच '-' याच "
+"चिन्हांचा समावेश केला जाऊ शकतो. शिवाय त्याची सुरुवात आणि शेवट अक्षर किंवा "
+"आकड्यानेच झाली पाहिजे."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "संकेतस्थळावर हे नियतकालिक सर्वांसाठी खुले करा"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+"विद्यमान नियतकालिकाचा स्थानमार्ग (path) किंवा तो तयार करण्याकरता (उदा. \"ojs"
+"\")."
+
+msgid "admin.journals.transcode"
+msgstr "लेखाबाबतची प्राथमिक माहिती (मेटाडेटा) ISO8859-1 नुसार ट्रान्सकोड करा"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "दाखल (इम्पोर्ट) करण्यासाठी पत्ता (path) आवश्यक आहे."
+
+msgid "admin.mergeUsers"
+msgstr "वापरकर्ते विलीन (merge) करा"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"लेखक, संपादकीय जबाबदार्‍या, इत्यादी कामांसाठी पूर्वीच्या वापरकर्त्याऐवजी "
+"खात्यातून वेगळा वापरकर्ता निवडा"
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"एकाच वापरकर्त्याची दोन किंवा अनेक खाती असल्यास त्यांचे विलीनीकरण करण्यासाठी "
+"त्या वापरकर्त्याची खाती निवडा. प्रथम निवडलेले खाते हटवले जाईल आणि कोणत्याही "
+"सादरीकरणासाठी, कामगिरी, वगैरेसाठी दुसऱ्या खात्याला श्रेय दिले जाईल."
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"तुम्ही निवडलेले/निवडलेली {$oldAccountCount} खाते/खाती \"{$newUsername}\" या "
+"वापरकर्त्याच्या खात्यात खात्रीने विलीन करू इच्छिता ना? विलिनीकरणानंतर "
+"निवडलेली {$oldAccountCount} खाती अस्तित्वात राहणार नाहीत. तसेच ही क्रिया उलट "
+"फिरवता येणार नाही."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"पोषित (होस्टेड) नियतकालिकांपैकी अशी काही निवडा की ज्यांच्यातर्फे अनेकांना "
+"एकगठ्ठा (बल्क) ई-मेल पाठवायची परवानगी असेल. ही सोय केल्यानंतर, नियतकालिकांचे "
+"व्यवस्थापक त्यांच्या नियतकालिकांवर नोंदणी केलेल्या सगळ्या वापरकर्त्यांना "
+"एकगठ्ठा (बल्क) ई-मेल पाठवू शकतील.<br><br>अनाहूत ई-मेल पाठवण्यासाठी या "
+"वैशिष्ट्याचा गैरवापर केल्यास स्पॅम विरोधी कायद्याचे उल्लंघन होऊ शकते आणि "
+"परिणामी तुमच्या ई-मेल सर्व्हरची नोंद स्पॅम पाठवणारे सर्व्हर म्हणून होऊन ते "
+"ब्लॉक केले जाऊ शकते. हे वैशिष्ट्य सक्रिय करण्यापूर्वी तांत्रिक सल्ला घ्या आणि"
+" नियतकालिकांच्या व्यवस्थापकांशी सल्लामसलत करुन त्याचा योग्य वापर केला गेला जा"
+"ईल याची खात्री करा.<br><br><a href=\"{$hostedContextsUrl}\"> प्रत्येक पोषित "
+"(होस्टेड) नियतकालिकासाठी</a> या वैशिष्ट्याचे पुढील निर्बंध त्यासाठी असलेल्या "
+"सेटिंग विझार्डमध्ये जाऊन सक्रिय केले जाऊ शकतात."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"नियतकालिकाचा व्यवस्थापक खालच्या यादीतून निवडलेल्या विविध गटांसाठी अनेकांना "
+"एकगठ्ठा (बल्क) ई-मेल पाठवण्यावर मर्यादा घालू शकेल. ई-मेल सूचना वैशिष्ट्याचा "
+"गैरवापर टाळण्यासाठी ही सेटिंग वापरा. उदाहरणार्थ, ज्यांनी अशा ई-मेलसाठी संमती "
+"दिलेली नाही अशा वाचक, लेखक किंवा इतर प्रकारच्या वापरकर्त्यांच्या गटांना "
+"एकगठ्ठा (बल्क) ई-मेल न पाठवणे निर्धोक असू शकते.<br><br><a href=\""
+"{$siteSettingsUrl}\">Admin > Site Settings</a> येथे या नियतकालिकासाठी एकगठ्ठा"
+" (बल्क) ई-मेल पाठवण्याची सोय पूर्णपणे निष्क्रिय (disable) केली जाऊ शकते."
+
+msgid "admin.hostedContexts"
+msgstr "पोषित (होस्टेड) नियतकालिके"
+
+msgid "admin.settings.redirect"
+msgstr "नियतकालिकाकडे परत जा"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"मुख्य संकेतस्थळावर केलेल्या विनंत्या या नियतकालिकाकडे पाठवल्या जातील. "
+"उदाहरणार्थ, संकेतस्थळ केवळ एकाच नियतकालिकाचे पोषण करीत (होस्ट) असल्यास हे "
+"उपयुक्त ठरू शकते."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"तुम्ही खात्रीपूर्वक हे लोकॅल निष्क्रिय (disable) करू इच्छिता का? असे केल्याने"
+" हे लोकॅल वापरत असलेल्या इतर पोषित (होस्टेड) नियतकालिकांच्या वापरावर विपरीत "
+"परिणाम होऊ शकतो."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+"संकेतस्थळ आणि सगळ्या पोषित (होस्टेड) नियतकालिकांसाठी हीच सर्वसाधारण (डिफॉल्ट)"
+" भाषा असेल."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "निवडलेले लोकॅल्स अपूर्ण असू शकतात."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"तुम्ही खात्रीपूर्वक हे लोकॅल विस्थापित (uninstall) करू इच्छिता का? असे "
+"केल्याने हे लोकॅल वापरत असलेल्या इतर पोषित (होस्टेड) नियतकालिकांच्या वापरावर "
+"विपरीत परिणाम होऊ शकतो."
+
+msgid "admin.systemVersion"
+msgstr "OJS ची आवृत्ती (Version)"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS ची रचना (Configuration)"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "<tt>config.inc.php</tt> वरून OJS च्या रचनेची (Configuration) मांडणी."
+
+msgid "admin.journals.journalSettings"
+msgstr "नियतकालिकाची घडण (settings)"
+
+msgid "admin.journals.noneCreated"
+msgstr "एकही नियतकालिक अद्याप येथे अस्तित्वात नाही."
+
+msgid "admin.contexts.create"
+msgstr "नियतकालिक निर्माण करा"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"नियतकालिकाची ओळख ही एका छोट्या शब्दातून किंवा त्याच्या आद्याक्षरी शब्दांपासू"
+"न निर्माण करावी. नियतकालिकाचा URL {$sampleUrl} असेल."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "शीर्षक आवश्यक आहे."
+
+msgid "admin.contexts.form.pathExists"
+msgstr ""
+"तुम्ही सुचवलेला स्थानमार्ग (path) आधीपासूनच दुसऱ्या नियतकालिकासाठी वापरात "
+"आहे."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "प्राथमिक लोकॅल नियतकालिकाच्या आधारित लोकॅलपैकी एक असणे आवश्यक आहे."
+
+msgid "admin.contexts.contextDescription"
+msgstr "नियतकालिकाचे वर्णन"
+
+msgid "admin.journals.importSubscriptions"
+msgstr "सदस्यता दाखल (इम्पोर्ट) करा"
+
+msgid "admin.journals.redirect"
+msgstr "OJS 1 URLs ते OJS 2 URLs मॅप करण्यासाठी कोड निर्माण करा"
+
+msgid "admin.journals.importErrors"
+msgstr "दाखल करणे (इम्पोर्ट) अयशस्वी झाल्यामुळे प्रक्रिया अपूर्ण राहिली"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "वापरकर्ता विलीन (merge) करा"
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "सगळे नोंदणीकृत वापरकर्ते"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "नोंदणी केलेले वापरकर्ते नाहीत."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "सदस्यता संपल्याबद्दल स्मरणपत्र"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "मुक्त उपलब्धतेसंबंधी सूचना"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "स्मरणपत्राचे पुनरावलोकन करा"
+
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
+msgstr "अंकाचा आयडी पूर्णांक (integer) नाही."
+
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
+msgstr "अंकाच्या कच्च्या मुद्रिताचा आयडी पूर्णांक (integer) नाही."
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "अंकाचा आयडी त्याच्या सहयोगी (असोसिएट) आयडीशी जुळत नाही."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"या नियतकालिकासाठी एकगठ्ठा (बल्क) ई-मेल पाठवण्याची सोय निष्क्रिय (disable) "
+"केली गेली आहे. हे वैशिष्ट्य <a href=\"{$siteSettingsUrl}\">Admin > Site "
+"Settings</a> मध्ये जाऊन सक्रिय (enable) करा."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"या संकेतस्थळावर नियतकालिकांचा समावेश, संपादन किंवा वगळण्यासाठी "
+"संकेतस्थळ-व्यापी सेटिंग्ज व्यवस्थापित करा."
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+"जर तुम्हाला या संकेतस्थळावरील नियतकालिकांच्या वापराची आकडेवारी "
+"संस्थापातळीपर्यंत संकलित करू देण्याचे स्वातंत्र्य द्यायचे असेल तर "
+"संस्थापातळीवरील आकडेवारी गोळा करण्यासाठीची सोय संकेतस्थळावर सक्रिय करा. मात्"
+"र ही सोय वापरण्यासाठी नियतकालिकांना संस्था आणि त्यांचे IP क्रमांक जोडणे आवश्"
+"यक आहे. शिवाय संस्था पातळीपर्यंत आकडेवारीची सोय सक्रिय केल्यावर तुमच्या "
+"डेटाबेसच्या आकारात लक्षणीय वाढ मात्र होऊ शकते."
