@@ -19,7 +19,8 @@ describe('Subscription tests', function() {
 
 	it('Configures subscriptions', function() {
 		cy.login('dbarnes', null, 'publicknowledge');
-		cy.get('a:contains("Distribution")').click();
+		cy.get('nav div[data-pc-section="header"] a span').contains('Settings').click();
+		cy.get('nav div[data-pc-section="itemcontent"] a span').contains('Distribution').click({ force: true });
 
 		// Payment settings
 		cy.get('button#payments-button').click();

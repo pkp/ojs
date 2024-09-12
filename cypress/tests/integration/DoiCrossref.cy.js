@@ -13,7 +13,8 @@ describe('Crossref tests', function () {
 	it('Check Crossref Configuration', function () {
 		cy.login('dbarnes', null, 'publicknowledge');
 
-		cy.get('a:contains("Website")').click();
+		cy.get('nav div[data-pc-section="header"] a span').contains('Settings').click();
+		cy.get('nav div[data-pc-section="itemcontent"] a span').contains('Website').click({ force: true });
 
 		cy.waitJQuery();
 		cy.get('button#plugins-button').click();

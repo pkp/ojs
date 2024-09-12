@@ -376,7 +376,7 @@ describe('Submission Wizard', function() {
             });
 
         // Add missing data
-        cy.get('.pkpSteps button:contains("Details")').click();
+        cy.get('.pkpSteps button:contains("Details")').click({ force: true });
         cy.setTinyMceContent('titleAbstract-title-control-en', submission.title);
         cy.setTinyMceContent('titleAbstract-abstract-control-en', submission.abstract);
         cy.get('#titleAbstract-keywords-control-en').type(submission.keywords, {delay: 0});
