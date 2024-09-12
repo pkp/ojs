@@ -384,7 +384,7 @@ describe('Submission Wizard', function() {
         cy.get('#titleAbstract-keywords-control-en').type('{downarrow}{enter}', {delay: 0});
         cy.get('#citations-citationsRaw-control').type(submission.citations);
 
-        cy.get('.pkpSteps button:contains("Upload Files")').click();
+        cy.get('.pkpSteps button:contains("Upload Files")').click({ force: true });
         cy.uploadSubmissionFiles([
             {
                 'file': 'dummy.pdf',
@@ -583,7 +583,7 @@ describe('Submission Wizard', function() {
         // Add missing data
         cy.get('.pkpSteps button:contains("Details")').click();
         cy.setTinyMceContent('titleAbstract-title-control-fr_CA', submission.title.fr_CA);
-        cy.get('.pkpSteps button:contains("Contributors")').click();
+        cy.get('.pkpSteps button:contains("Contributors")').click({ force: true });
         cy.get('.listPanel__itemTitle:contains("Carlo Corino")')
             .parents('.listPanel__item')
             .find('button:contains("Edit")')
