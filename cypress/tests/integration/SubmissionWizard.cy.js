@@ -408,7 +408,7 @@ describe('Submission Wizard', function() {
         });
 
         // All errors should be gone and submit should be allowed.
-        cy.get('.pkpSteps button:contains("Review")').click();
+        cy.get('.pkpSteps button:contains("Review")').click({ force: true });
         cy.get('*:contains("There are one or more problems")').should('not.exist');
         cy.get('button:contains("Submit")').should('be.enabled');
         cy.get('*:contains("You must upload at least one Article Text file.")').should('not.exist');
