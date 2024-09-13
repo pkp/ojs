@@ -101,7 +101,6 @@ describe('Data suite tests', function() {
 		cy.get('nav').contains('Settings').click();
 		// Ensure submenu item click despite animation
 		cy.get('nav').contains('Journal').click({ force: true }); 
-		cy.get('nav div[data-pc-section="itemcontent"] a span').contains('Journal').click({ force: true });
 
 		cy.get('input[name="abbreviation-en"]').type('J Pub Know', {delay: 0});
 		cy.get('input[name="acronym-en"]').type(Cypress.env('contextAcronyms')['en'], {delay: 0});
