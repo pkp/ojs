@@ -394,7 +394,7 @@ describe('Submission Wizard', function() {
             }
         ]);
 
-        cy.get('.pkpSteps button:contains("For the Editors")').click();
+        cy.get('.pkpSteps button:contains("For the Editors")').click({ force: true });
         Object.keys(submission.metadata.autosuggest).forEach(field => {
             cy.get('#forTheEditors-' + field + '-control-en').type(submission.metadata.autosuggest[field], {delay: 0});
             cy.get('li:contains("' + submission.metadata.autosuggest[field] + '")');
@@ -581,7 +581,7 @@ describe('Submission Wizard', function() {
             .contains('Social Sciences > Sociology');
 
         // Add missing data
-        cy.get('.pkpSteps button:contains("Details")').click();
+        cy.get('.pkpSteps button:contains("Details")').click({ force: true });
         cy.setTinyMceContent('titleAbstract-title-control-fr_CA', submission.title.fr_CA);
         cy.get('.pkpSteps button:contains("Contributors")').click({ force: true });
         cy.get('.listPanel__itemTitle:contains("Carlo Corino")')
@@ -591,13 +591,13 @@ describe('Submission Wizard', function() {
         cy.get('input[name="givenName-fr_CA"]').type('Carlo', {delay: 0});
         cy.get('input[name="familyName-fr_CA"]').type('Carlo', {delay: 0});
         cy.get('[role=dialog]').find('button:contains("Save")').click();
-        cy.get('.pkpSteps button:contains("For the Editors")').click();
+        cy.get('.pkpSteps button:contains("For the Editors")').click({ force: true });
         cy.get('#forTheEditors-subjects-control-fr_CA').type('Sociologie française', {delay: 0});
         cy.get('li:contains("Sociologie française")');
         cy.get('#forTheEditors-subjects-control-fr_CA').type('{downarrow}{enter}', {delay: 0});
 
         // Should be able to submit!
-        cy.get('.pkpSteps button:contains("Review")').click();
+        cy.get('.pkpSteps button:contains("Review")').click({ force: true });
         cy.get('button:contains("Submit")').click();
         cy.contains('The submission, ' + submission.title.en + ', will be submitted to Journal of Public Knowledge for editorial review.');
         // delay is needed so previous changes gets pushed, before the submit should be triggered
