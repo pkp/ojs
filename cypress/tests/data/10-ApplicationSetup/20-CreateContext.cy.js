@@ -99,7 +99,7 @@ describe('Data suite tests', function() {
 		cy.get('a').contains('admin').click();
 		cy.get('a').contains('Dashboard').click();
 		cy.get('nav').contains('Settings').click();
-		// Ensure 'Journal' click despite submenu animation
+		// Ensure submenu item click despite animation
 		cy.get('nav').contains('Journal').click({ force: true }); 
 		cy.get('nav div[data-pc-section="itemcontent"] a span').contains('Journal').click({ force: true });
 
@@ -127,7 +127,7 @@ describe('Data suite tests', function() {
 		cy.get('a').contains('admin').click();
 		cy.get('a').contains('Dashboard').click();
 		cy.get('nav').contains('Settings').click();
-		// Ensure 'Journal' click despite submenu animation
+		// Ensure submenu item click despite animation
 		cy.get('nav').contains('Journal').click({ force: true }); 
 		cy.get('button[id="contact-button"]').click();
 

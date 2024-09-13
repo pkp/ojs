@@ -15,7 +15,7 @@ describe('Data suite tests', function() {
 
 		cy.get('li.profile a:contains("' + username + '")').click();
 		cy.get('li.profile a:contains("Dashboard")').click();
-		cy.get('nav div[data-pc-section="header"] a span').contains('Tools').click();
+		cy.get('nav').contains('Tools').click();
 		cy.get('a:contains("Native XML Plugin")').click();
 		cy.get('a:contains("Export Issues")').click();
 		cy.waitJQuery({timeout:20000});
@@ -43,7 +43,7 @@ describe('Data suite tests', function() {
 
 		cy.get('li.profile a:contains("' + username + '")').click();
 		cy.get('li.profile a:contains("Dashboard")').click();
-		cy.get('nav div[data-pc-section="header"] a span').contains('Tools').click();
+		cy.get('nav').contains('Tools').click();
 		// The a:contains(...) syntax ensures that it will wait for the
 		// tab to load. Do not convert to cy.get('a').contains('Native XML Plugin')
 		cy.get('a:contains("Native XML Plugin")').click();

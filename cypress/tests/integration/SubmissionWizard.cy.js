@@ -84,8 +84,9 @@ describe('Submission Wizard', function() {
 
         // Make all sections editor-restricted
         cy.login('dbarnes', null, 'publicknowledge');
-        cy.get('nav div[data-pc-section="header"] a span').contains('Settings').click();
-        cy.get('nav div[data-pc-section="itemcontent"] a span').contains('Journal').click({ force: true });
+        cy.get('nav').contains('Settings').click();
+        // Ensure submenu item click despite animation
+        cy.get('nav').contains('Journal').click({ force: true });
         cy.get('.pkpTabs__buttons button:contains("Sections")').click();
         cy.get('#sectionsGridContainer a.show_extras')
             .each(($showExtras) => {
@@ -110,8 +111,9 @@ describe('Submission Wizard', function() {
         // Make Articles inactive and leave Reviews editor-restricted
         cy.logout();
         cy.login('dbarnes', null, 'publicknowledge');
-        cy.get('nav div[data-pc-section="header"] a span').contains('Settings').click();
-        cy.get('nav div[data-pc-section="itemcontent"] a span').contains('Journal').click({ force: true });
+        cy.get('nav').contains('Settings').click();
+        // Ensure submenu item click despite animation
+        cy.get('nav').contains('Journal').click({ force: true });
         cy.get('.pkpTabs__buttons button:contains("Sections")').click();
         cy.get('#sectionsGridContainer tr:contains("Articles") input').check();
         cy.get('[role="dialog"] button:contains("OK")').click();
@@ -126,8 +128,9 @@ describe('Submission Wizard', function() {
         // Make Reviews not editor-restricted
         cy.logout();
         cy.login('dbarnes', null, 'publicknowledge');
-        cy.get('nav div[data-pc-section="header"] a span').contains('Settings').click();
-        cy.get('nav div[data-pc-section="itemcontent"] a span').contains('Journal').click({ force: true });
+        cy.get('nav').contains('Settings').click();
+        // Ensure submenu item click despite animation
+        cy.get('nav').contains('Journal').click({ force: true });
         cy.get('.pkpTabs__buttons button:contains("Sections")').click();
         cy.get('#sectionsGridContainer tr:contains("Reviews")')
             .then(($tr) => {
@@ -153,8 +156,9 @@ describe('Submission Wizard', function() {
         // Reactivate Articles section to restore test data conditions
         cy.logout();
         cy.login('dbarnes', null, 'publicknowledge');
-        cy.get('nav div[data-pc-section="header"] a span').contains('Settings').click();
-        cy.get('nav div[data-pc-section="itemcontent"] a span').contains('Journal').click({ force: true });
+        cy.get('nav').contains('Settings').click();
+        // Ensure submenu item click despite animation
+        cy.get('nav').contains('Journal').click({ force: true });
         cy.get('.pkpTabs__buttons button:contains("Sections")').click();
         cy.get('#sectionsGridContainer tr:contains("Articles")')
             .then(($tr) => {
