@@ -1,4 +1,4 @@
-# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2021, 2022, 2023.
+# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2021, 2022, 2023, 2024.
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2022.
 # Kubilay Tuğlu <kubilay.tuglu@gmail.com>, 2024.
 msgid ""
@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2024-09-12 19:24+0000\n"
-"Last-Translator: Kubilay Tuğlu <kubilay.tuglu@gmail.com>\n"
+"PO-Revision-Date: 2024-09-16 01:36+0000\n"
+"Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/manager/tr/>"
 "\n"
 "Language: tr\n"
@@ -358,7 +358,6 @@ msgstr "Bu bölümün başlığını sayının içindekiler tablosunda gösterme
 msgid "manager.sections.identifyType"
 msgstr "Bu bölümde yayınlanan ögelerin belirlenmesinde kullanılacak tanım"
 
-#, fuzzy
 msgid "manager.sections.identifyTypeExamples"
 msgstr ""
 "(Örneğin, \"Hakemlik Değerlendirmesinden Geçmiş Makale\", \"Hakemlik "
@@ -2210,18 +2209,15 @@ msgstr "Aboneliğin türü, adı, süresi ve maliyetinin bir özeti"
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Abonenin üyeliği hakkında bilgi"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr "Kurum adı"
+msgstr "Kurum aAbone olan kurumun adıdı"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr "Kurum adresi"
+msgstr "Abone olan kurumun posta adresi"
 
 msgid "emailTemplate.variable.subscription.domain"
 msgstr "Alan adı"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "Bu abonelik için geçerli IP aralıkları"
 
@@ -2684,7 +2680,6 @@ msgstr ""
 "{$id} sayısının kapak resmi dışa aktarılmadı, dosya \"{$path}\" yolunda "
 "bulunamadı."
 
-#, fuzzy
 msgid "plugins.importexport.common.error.issueGalleyFileMissing"
 msgstr ""
 "{$id} sayı dizgisi dışa aktarılamadı, dosya \"{$path}\" yolunda bulunamadı."
