@@ -78,7 +78,6 @@ trait RequestPayment
         $authorIds = $this->getAssignedAuthorIds($submission);
         foreach ($authorIds as $authorId) {
             $notificationMgr->createNotification(
-                Application::get()->getRequest(),
                 $authorId,
                 Notification::NOTIFICATION_TYPE_PAYMENT_REQUIRED,
                 $context->getId(),
