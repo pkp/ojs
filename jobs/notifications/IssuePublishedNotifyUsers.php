@@ -74,7 +74,6 @@ class IssuePublishedNotifyUsers extends BaseJob
 
             $notificationManager = new NotificationManager();
             $notification = $notificationManager->createNotification(
-                null,
                 $recipientId,
                 Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE,
                 $this->contextId,
