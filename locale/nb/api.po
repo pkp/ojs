@@ -1,17 +1,18 @@
 # Eirik Hanssen <eirikh@oslomet.no>, 2022.
 # Tormod Strømme <tormod.stromme@uib.no>, 2022.
+# Sofie Gilbert <sofiegi@uio.no>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-08-19 13:09+0000\n"
-"Last-Translator: Tormod Strømme <tormod.stromme@uib.no>\n"
+"PO-Revision-Date: 2024-09-16 06:52+0000\n"
+"Last-Translator: Sofie Gilbert <sofiegi@uio.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "api/nb_NO/>\n"
-"Language: nb_NO\n"
+"Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "Oppslaget du søkte etter finnes ikke i dette tidsskriftet."
@@ -81,4 +82,4 @@ msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr "Du kan ikke knytte en fil fra dette steget til et oppsett."
 
 msgid "api.submission.400.inactiveSection"
-msgstr ""
+msgstr "Denne delen godtar ikke lenger innsendinger."
