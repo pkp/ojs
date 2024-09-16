@@ -1,10 +1,11 @@
 # Eirik Hanssen <eirikh@oslomet.no>, 2022.
 # Tormod Strømme <tormod.stromme@uib.no>, 2022.
 # Sofie Gilbert <sofiegi@uio.no>, 2024.
+# Johanna Skaug <johanna.skaug@ub.uio.no>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-09-16 06:52+0000\n"
-"Last-Translator: Sofie Gilbert <sofiegi@uio.no>\n"
+"PO-Revision-Date: 2024-09-16 07:11+0000\n"
+"Last-Translator: Johanna Skaug <johanna.skaug@ub.uio.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "api/nb_NO/>\n"
 "Language: nb\n"
@@ -82,4 +83,4 @@ msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr "Du kan ikke knytte en fil fra dette steget til et oppsett."
 
 msgid "api.submission.400.inactiveSection"
-msgstr "Denne delen godtar ikke lenger innsendinger."
+msgstr "Denne seksjonen tar ikke lenger imot innleveringer."
