@@ -16,7 +16,9 @@ describe('Statistics Tests', function() {
 
 	it('Check statistics', function() {
 		cy.login('dbarnes', null, 'publicknowledge');
-		cy.get('.app__nav a:contains("Articles")').click();
+		cy.get('nav').contains('Statistics').click();
+		// Ensure submenu item click despite animation
+		cy.get('nav').contains('Articles').click({ force: true });
 		cy.checkGraph(
 			'Total abstract views by date',
 			'Abstract Views',

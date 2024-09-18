@@ -22,7 +22,7 @@ describe('DOI tests', function() {
 	};
 
 	const goToDoiPage = (itemType = 'submission') => {
-		cy.get('a:contains("DOIs")').click();
+		cy.get('nav').contains('DOIs').click();
 		cy.get(`button#${itemType}-doi-management-button`).click();
 	};
 

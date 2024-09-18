@@ -359,7 +359,9 @@ describe('Article View Metadata - DC Plugin', function() {
 		cy.get('a').contains('Dashboard').click();
 
 		// Enable metadata settings
-		cy.get('.app__nav a').contains('Workflow').click();
+		cy.get('nav').contains('Settings').click();
+		// Ensure submenu item click despite animation
+		cy.get('nav').contains('Workflow').click({ force: true });
 		cy.get('button').contains('Metadata').click();
 		cy.get('span').contains('Enable coverage metadata').prev('input[type="checkbox"]').check();
 		cy.get('span').contains('Enable type metadata').prev('input[type="checkbox"]').check();
@@ -372,7 +374,7 @@ describe('Article View Metadata - DC Plugin', function() {
 		cy.checkDoiConfig(['publication', 'issue', 'representation']);
 
 		// After configuration, go to submissions
-		cy.get('.app__nav a').contains('Submissions').click();
+		cy.get('nav').contains('Submissions').click();
 
 		// Create a new submission
 		cy.getCsrfToken();

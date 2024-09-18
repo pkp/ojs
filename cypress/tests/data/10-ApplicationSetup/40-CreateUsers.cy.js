@@ -12,7 +12,9 @@ describe('Data suite tests', function() {
 		cy.login('admin', 'admin');
 		cy.get('a:contains("admin"):visible').click();
 		cy.get('a:contains("Dashboard")').click();
-		cy.get('a:contains("Users & Roles")').click();
+		cy.get('nav').contains('Settings').click();
+		// Ensure submenu item click despite animation
+		cy.get('nav').contains('Users & Roles').click({ force: true });
 
 		var users = [
 			{

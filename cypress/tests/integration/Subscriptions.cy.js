@@ -19,7 +19,9 @@ describe('Subscription tests', function() {
 
 	it('Configures subscriptions', function() {
 		cy.login('dbarnes', null, 'publicknowledge');
-		cy.get('a:contains("Distribution")').click();
+		cy.get('nav').contains('Settings').click();
+		// Ensure submenu item click despite animation
+		cy.get('nav').contains('Distribution').click({ force: true });
 
 		// Payment settings
 		cy.get('button#payments-button').click();
@@ -38,7 +40,7 @@ describe('Subscription tests', function() {
 		cy.get('#access [role="status"]').contains('Saved');
 
 		// Configure an issue for subscription.
-		cy.get('.app__nav a:contains("Issues")').first().click();
+		cy.get('nav').contains('Issues').click();
 		cy.get('button:contains("Back Issues")').click();
 		cy.get('a:contains("Vol. 1 No. 2 (2014)")').click();
 		cy.get('[role="dialog"] a:contains("Access")').click();
@@ -47,7 +49,7 @@ describe('Subscription tests', function() {
 		cy.get('div:contains("Your changes have been saved.")');
 
 		// Set up subscription policies
-		cy.get('.app__nav a:contains("Payments")').click();
+		cy.get('nav').contains('Payments').click();
 		cy.get('a[name=subscriptionPolicies]').click();
 		cy.get('input[id^="subscriptionName-"]').type('Sebastiano Mortensen', {delay: 0});
 		cy.get('input[id^="subscriptionEmail-"]').type('smortensen@mailinator.com', {delay: 0});
@@ -79,7 +81,9 @@ describe('Subscription tests', function() {
 		cy.login('dbarnes', null, 'publicknowledge');
 
 		// Create a reader user for the subscription
-		cy.get('.app__nav a:contains("Users & Roles")').click();
+		cy.get('nav').contains('Settings').click();
+		// Ensure submenu item click despite animation
+		cy.get('nav').contains('Users & Roles').click({ force: true });
 		cy.createUser({
 			'username': 'reader',
 			'givenName': 'Rea',
@@ -105,7 +109,7 @@ describe('Subscription tests', function() {
 		cy.login('dbarnes', null, 'publicknowledge');
 
 		// Set up an individual subscription type
-		cy.get('.app__nav a:contains("Payments")').click();
+		cy.get('nav').contains('Payments').click();
 		cy.get('a[name="subscriptionTypes"]').click();
 		cy.get('a:contains("Create New Subscription Type")').click();
 		cy.wait(1000); // Form initialization problem

@@ -12,7 +12,9 @@ describe('Data suite tests', function() {
 		cy.login('admin', 'admin');
 		cy.get('a').contains('admin').click();
 		cy.get('a').contains('Dashboard').click();
-		cy.get('.app__nav a').contains('Journal').click();
+		cy.get('nav').contains('Settings').click();
+		// Ensure submenu item click despite animation
+		cy.get('nav').contains('Journal').click({ force: true });
 		cy.get('button[id="sections-button"]').click();
 
 		// Edit Articles section to add section editors
