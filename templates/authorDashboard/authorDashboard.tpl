@@ -110,12 +110,7 @@
 								</dropdown>
 							</span>
 					</pkp-header>
-					<div
-						v-if="workingPublication.status === getConstant('STATUS_PUBLISHED')"
-						class="pkpPublication__versionPublished"
-					>
-						{translate key="publication.editDisabled"}
-					</div>
+
 					<tabs :is-side-tabs="true" :track-history="true" class="pkpPublication__tabs" :label="currentPublicationTabsLabel">
 						<tab id="titleAbstract" label="{translate key="publication.titleAbstract"}">
 							<pkp-form v-bind="components.{PKP\components\forms\publication\TitleAbstractForm::FORM_TITLE_ABSTRACT}" @set="set" />
