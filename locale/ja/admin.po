@@ -1,16 +1,17 @@
 # TAKASHI IMAGIRE <imagire@gmail.com>, 2021.
+# Emma U <emmaupkp@gmail.com>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-12-11 08:32+0000\n"
-"Last-Translator: TAKASHI IMAGIRE <imagire@gmail.com>\n"
-"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/admin/"
-"ja_JP/>\n"
-"Language: ja_JP\n"
+"PO-Revision-Date: 2024-09-18 16:18+0000\n"
+"Last-Translator: Emma U <emmaupkp@gmail.com>\n"
+"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/ojs/admin/ja/>"
+"\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "admin.hostedContexts"
 msgstr "ホストされているジャーナル"
@@ -165,14 +166,14 @@ msgid "admin.scheduledTask.reviewReminder"
 msgstr "査読リマインダー"
 
 msgid "admin.job.processLogFile.invalidLogEntry.issueId"
-msgstr ""
+msgstr "巻号IDが整数ではありません。"
 
 msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
-msgstr ""
+msgstr "巻号のゲラIDが整数ではありません。"
 
 msgid ""
 "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
-msgstr ""
+msgstr "巻号IDが関連IDと一致しません。"
 
 msgid "admin.settings.enableBulkEmails.description"
 msgstr ""
@@ -202,7 +203,8 @@ msgstr ""
 "い。"
 
 msgid "admin.siteManagement.description"
-msgstr ""
+msgstr "このサイトからのジャーナルの追加、編集、削除およびサイト全体の設定を管理しま"
+"す。"
 
 msgid "admin.settings.statistics.geo.description"
 msgstr ""
