@@ -86,7 +86,7 @@ describe('Submission Wizard', function() {
         cy.login('dbarnes', null, 'publicknowledge');
         cy.get('nav').contains('Settings').click();
         // Ensure submenu item click despite animation
-        cy.get('nav').contains('Journal').click();
+        cy.get('nav').contains('Journal').click({ force: true });
         cy.get('.pkpTabs__buttons button:contains("Sections")').click();
         cy.get('#sectionsGridContainer a.show_extras')
             .each(($showExtras) => {
@@ -113,7 +113,7 @@ describe('Submission Wizard', function() {
         cy.login('dbarnes', null, 'publicknowledge');
         cy.get('nav').contains('Settings').click();
         // Ensure submenu item click despite animation
-        cy.get('nav').contains('Journal').click();
+        cy.get('nav').contains('Journal').click({ force: true });
         cy.get('.pkpTabs__buttons button:contains("Sections")').click();
         cy.get('#sectionsGridContainer tr:contains("Articles") input').check();
         cy.get('[role="dialog"] button:contains("OK")').click();
@@ -130,7 +130,7 @@ describe('Submission Wizard', function() {
         cy.login('dbarnes', null, 'publicknowledge');
         cy.get('nav').contains('Settings').click();
         // Ensure submenu item click despite animation
-        cy.get('nav').contains('Journal').click();
+        cy.get('nav').contains('Journal').click({ force: true });
         cy.get('.pkpTabs__buttons button:contains("Sections")').click();
         cy.get('#sectionsGridContainer tr:contains("Reviews")')
             .then(($tr) => {
@@ -158,7 +158,7 @@ describe('Submission Wizard', function() {
         cy.login('dbarnes', null, 'publicknowledge');
         cy.get('nav').contains('Settings').click();
         // Ensure submenu item click despite animation
-        cy.get('nav').contains('Journal').click();
+        cy.get('nav').contains('Journal').click({ force: true });
         cy.get('.pkpTabs__buttons button:contains("Sections")').click();
         cy.get('#sectionsGridContainer tr:contains("Articles")')
             .then(($tr) => {
@@ -380,7 +380,7 @@ describe('Submission Wizard', function() {
             });
 
         // Add missing data
-        cy.get('.pkpSteps button:contains("Details")').click();
+        cy.get('.pkpSteps button:contains("Details")').click({ force: true });
         cy.setTinyMceContent('titleAbstract-title-control-en', submission.title);
         cy.setTinyMceContent('titleAbstract-abstract-control-en', submission.abstract);
         cy.get('#titleAbstract-keywords-control-en').type(submission.keywords, {delay: 0});
@@ -388,7 +388,7 @@ describe('Submission Wizard', function() {
         cy.get('#titleAbstract-keywords-control-en').type('{downarrow}{enter}', {delay: 0});
         cy.get('#citations-citationsRaw-control').type(submission.citations);
 
-        cy.get('.pkpSteps button:contains("Upload Files")').click();
+        cy.get('.pkpSteps button:contains("Upload Files")').click({ force: true });
         cy.uploadSubmissionFiles([
             {
                 'file': 'dummy.pdf',
@@ -398,7 +398,7 @@ describe('Submission Wizard', function() {
             }
         ]);
 
-        cy.get('.pkpSteps button:contains("For the Editors")').click();
+        cy.get('.pkpSteps button:contains("For the Editors")').click({ force: true });
         Object.keys(submission.metadata.autosuggest).forEach(field => {
             cy.get('#forTheEditors-' + field + '-control-en').type(submission.metadata.autosuggest[field], {delay: 0});
             cy.get('li:contains("' + submission.metadata.autosuggest[field] + '")');
@@ -412,7 +412,7 @@ describe('Submission Wizard', function() {
         });
 
         // All errors should be gone and submit should be allowed.
-        cy.get('.pkpSteps button:contains("Review")').click();
+        cy.get('.pkpSteps button:contains("Review")').click({ force: true });
         cy.get('*:contains("There are one or more problems")').should('not.exist');
         cy.get('button:contains("Submit")').should('be.enabled');
         cy.get('*:contains("You must upload at least one Article Text file.")').should('not.exist');
@@ -585,9 +585,9 @@ describe('Submission Wizard', function() {
             .contains('Social Sciences > Sociology');
 
         // Add missing data
-        cy.get('.pkpSteps button:contains("Details")').click();
+        cy.get('.pkpSteps button:contains("Details")').click({ force: true });
         cy.setTinyMceContent('titleAbstract-title-control-fr_CA', submission.title.fr_CA);
-        cy.get('.pkpSteps button:contains("Contributors")').click();
+        cy.get('.pkpSteps button:contains("Contributors")').click({ force: true });
         cy.get('.listPanel__itemTitle:contains("Carlo Corino")')
             .parents('.listPanel__item')
             .find('button:contains("Edit")')
@@ -595,13 +595,13 @@ describe('Submission Wizard', function() {
         cy.get('input[name="givenName-fr_CA"]').type('Carlo', {delay: 0});
         cy.get('input[name="familyName-fr_CA"]').type('Carlo', {delay: 0});
         cy.get('[role=dialog]').find('button:contains("Save")').click();
-        cy.get('.pkpSteps button:contains("For the Editors")').click();
+        cy.get('.pkpSteps button:contains("For the Editors")').click({ force: true });
         cy.get('#forTheEditors-subjects-control-fr_CA').type('Sociologie française', {delay: 0});
         cy.get('li:contains("Sociologie française")');
         cy.get('#forTheEditors-subjects-control-fr_CA').type('{downarrow}{enter}', {delay: 0});
 
         // Should be able to submit!
-        cy.get('.pkpSteps button:contains("Review")').click();
+        cy.get('.pkpSteps button:contains("Review")').click({ force: true });
         cy.get('button:contains("Submit")').click();
         cy.contains('The submission, ' + submission.title.en + ', will be submitted to Journal of Public Knowledge for editorial review.');
         // delay is needed so previous changes gets pushed, before the submit should be triggered
