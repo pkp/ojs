@@ -91,6 +91,10 @@ class Repository extends \PKP\decision\Repository
                 $recommendatorsAvailableDecisions = [
                     new SendExternalReview()
                 ];
+            case WORKFLOW_STAGE_ID_EXTERNAL_REVIEW:
+                    $recommendatorsAvailableDecisions = [
+                        new NewExternalReviewRound()
+                    ];
         }
 
         Hook::call('Workflow::RecommendatorDecisions', [&$recommendatorsAvailableDecisions, $stageId]);
