@@ -101,7 +101,10 @@ class DepositIssueTest extends PKPTestCase
         /** @var \PKP\context\Context $contextMock */
         $contextMock = Mockery::mock(get_class(Application::getContextDAO()->newDataObject()))
             ->makePartial()
-            ->shouldReceive('getData')
+            ->shouldReceive([
+                'getData' => '',
+                'getLocalizedData' => '',
+            ])
             ->getMock();
 
         $depositIssueMock = new DepositIssue(
