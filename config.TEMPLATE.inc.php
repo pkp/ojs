@@ -94,7 +94,7 @@ allow_url_fopen = Off
 ; base_url[myJournal] = http://www.myUrl.com/myJournal
 ; base_url[myOtherJournal] = http://myOtherJournal.myUrl.com
 
-; Generate RESTful URLs using mod_rewrite.  This requires the
+; Generate RESTful URLs using mod_rewrite. This requires the
 ; rewrite directive to be enabled in your .htaccess or httpd.conf.
 ; See FAQ for more details.
 restful_urls = Off
@@ -253,8 +253,9 @@ force_ssl = Off
 force_login_ssl = Off
 
 ; This check will invalidate a session if the user's IP address changes.
-; Enabling this option provides some amount of additional security, but may
-; cause problems for users behind a proxy farm (e.g., AOL).
+; Enabling this option provides some additional security, but may cause
+; login problems for some users (e.g. if a user IP is changed frequently
+; by a server or network configuration).
 session_check_ip = On
 
 ; The encryption (hashing) algorithm to use for encrypting user passwords
@@ -279,11 +280,9 @@ reset_seconds = 7200
 allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,dd,b,i,u,img[src|alt],sup,sub,br,p"
 
 ;Is implicit authentication enabled or not
-
 ;implicit_auth = On
 
 ;Implicit Auth Header Variables
-
 ;implicit_auth_header_first_name = HTTP_GIVENNAME
 ;implicit_auth_header_last_name = HTTP_SN
 ;implicit_auth_header_email = HTTP_MAIL
@@ -295,8 +294,7 @@ allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,d
 ; A space delimited list of uins to make admin
 ;implicit_auth_admin_list = "jdoe@email.ca jshmo@email.ca"
 
-; URL of the implicit auth 'Way Finder' page. See pages/login/LoginHandler.inc.php for usage.
-
+; URL of the implicit auth 'Way Finder' page. See lib/pkp/pages/login/LoginHandler.inc.php for usage.
 ;implicit_auth_wayf_url = "/Shibboleth.sso/wayf"
 
 
@@ -375,7 +373,7 @@ max_recipients = 10
 ; If enabled, email addresses must be validated before login is possible.
 require_validation = Off
 
-; Maximum number of days before an unvalidated account expires and is deleted
+; The number of days a user has to validate their account before their access key expires.
 validation_timeout = 14
 
 
