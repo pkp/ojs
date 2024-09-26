@@ -1153,6 +1153,40 @@
 						"description": "Submission ID",
 						"required": true,
 						"type": "integer"
+					},
+					{
+						"name": "decisionTypes",
+						"description": "Filter results by the decision type. List of the `Decision::*` constants.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "editorIds",
+						"description": "Filter results by specific editor IDs.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "reviewRoundId",
+						"description": "Filter results by a specific review round ID",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					},
+					{
+						"name": "stageId",
+						"description": "Filter results by a specific workflow stage Id",
+						"in": "query",
+						"required": false,
+						"type": "integer"
 					}
 				],
 				"responses": {
