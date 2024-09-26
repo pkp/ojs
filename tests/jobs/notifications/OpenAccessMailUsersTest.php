@@ -12,12 +12,13 @@
 
 namespace APP\tests\jobs\notifications;
 
-use APP\issue\Repository as IssueRepository;
-use APP\jobs\notifications\OpenAccessMailUsers;
 use Mockery;
 use PKP\db\DAORegistry;
-use PKP\emailTemplate\Repository as EmailTemplateRepository;
+use APP\core\Application;
 use PKP\tests\PKPTestCase;
+use APP\issue\Repository as IssueRepository;
+use APP\jobs\notifications\OpenAccessMailUsers;
+use PKP\emailTemplate\Repository as EmailTemplateRepository;
 
 /**
  * @runTestsInSeparateProcesses
@@ -57,20 +58,21 @@ class OpenAccessMailUsersTest extends PKPTestCase
         /** @var OpenAccessMailUsers $openAccessMailUsersJob */
         $openAccessMailUsersJob = unserialize($this->serializedJobData);
 
+        $contextMock = Mockery::mock(get_class(Application::getContextDAO()->newDataObject()))
+            ->makePartial()
+            ->shouldReceive([
+                'getId' => 0,
+                'getLocalizedData' => '',
+                'getPrimaryLocale' => 'en',
+            ])
+            ->withAnyArgs()
+            ->getMock();
+
         $journalDAOMock = Mockery::mock(\APP\journal\JournalDAO::class)
             ->makePartial()
             ->shouldReceive('getId')
             ->withAnyArgs()
-            ->andReturn(
-                Mockery::mock(\APP\journal\Journal::class)
-                    ->makePartial()
-                    ->shouldReceive([
-                        'getData' => '',
-                        'getPrimaryLocale' => 'en'
-                    ])
-                    ->withAnyArgs()
-                    ->getMock()
-            )
+            ->andReturn($contextMock)
             ->getMock();
 
         DAORegistry::registerDAO('JournalDAO', $journalDAOMock);
@@ -102,6 +104,35 @@ class OpenAccessMailUsersTest extends PKPTestCase
             ->getMock();
 
         app()->instance(EmailTemplateRepository::class, $emailTemplateRepoMock);
+
+        $notificationMock = Mockery::mock(\APP\notification\Notification::class)
+            ->makePartial()
+            ->shouldReceive([
+                'setData' => null,
+                'getContextId' => 0,
+            ])
+            ->withAnyArgs()
+            ->getMock();
+        
+        $notifiactionDaoMock = Mockery::mock(\PKP\notification\NotificationDAO::class)
+            ->makePartial()
+            ->shouldReceive([
+                'newDataObject' => $notificationMock,
+                'insertObject' => 0,
+            ])
+            ->withAnyArgs()
+            ->getMock();
+
+        DAORegistry::registerDAO('NotificationDAO', $notifiactionDaoMock);
+
+        $notificationSettingsDaoMock = Mockery::mock(\PKP\notification\NotificationSettingsDAO::class)
+            ->makePartial()
+            ->shouldReceive('updateNotificationSetting')
+            ->withAnyArgs()
+            ->andReturn(null)
+            ->getMock();
+        
+        DAORegistry::registerDAO('NotificationSettingsDAO', $notificationSettingsDaoMock);
 
         $this->assertNull($openAccessMailUsersJob->handle());
     }
