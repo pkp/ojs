@@ -282,21 +282,6 @@ allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,d
 ;Is implicit authentication enabled or not
 ;implicit_auth = On
 
-;Implicit Auth Header Variables
-;implicit_auth_header_first_name = HTTP_GIVENNAME
-;implicit_auth_header_last_name = HTTP_SN
-;implicit_auth_header_email = HTTP_MAIL
-;implicit_auth_header_phone = HTTP_TELEPHONENUMBER
-;implicit_auth_header_initials = HTTP_METADATA_INITIALS
-;implicit_auth_header_mailing_address = HTTP_METADATA_HOMEPOSTALADDRESS
-;implicit_auth_header_uin = HTTP_UID
-
-; A space delimited list of uins to make admin
-;implicit_auth_admin_list = "jdoe@email.ca jshmo@email.ca"
-
-; URL of the implicit auth 'Way Finder' page. See lib/pkp/pages/login/LoginHandler.inc.php for usage.
-;implicit_auth_wayf_url = "/Shibboleth.sso/wayf"
-
 
 ;;;;;;;;;;;;;;;;;;
 ; Email Settings ;
