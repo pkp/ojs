@@ -32,6 +32,19 @@ class CompileCounterSubmissionDailyMetricsTest extends PKPTestCase
     END;
 
     /**
+     * @see PKPTestCase::getMockedDAOs()
+     */
+    protected function getMockedDAOs(): array
+    {
+        return [
+            ...parent::getMockedDAOs(),
+            'TemporaryTotalsDAO',
+            'TemporaryItemInvestigationsDAO',
+            'TemporaryItemRequestsDAO',
+        ];
+    }
+
+    /**
      * Test job is a proper instance
      */
     public function testUnserializationGetProperDepositIssueJobInstance(): void
