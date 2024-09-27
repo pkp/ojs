@@ -34,6 +34,30 @@ class IssuePublishedNotifyUsersTest extends PKPTestCase
     END;
 
     /**
+     * @see PKPTestCase::getMockedDAOs()
+     */
+    protected function getMockedDAOs(): array
+    {
+        return [
+            ...parent::getMockedDAOs(),
+            'JournalDAO',
+            'NotificationDAO',
+            'NotificationSettingsDAO',
+        ];
+    }
+
+    /**
+     * @see PKPTestCase::getMockedContainerKeys()
+     */
+    protected function getMockedContainerKeys(): array
+    {
+        return [
+            ...parent::getMockedContainerKeys(),
+            EmailTemplateRepository::class,
+        ];
+    }
+
+    /**
      * Test job is a proper instance
      */
     public function testUnserializationGetProperDepositIssueJobInstance(): void
