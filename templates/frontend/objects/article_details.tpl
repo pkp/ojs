@@ -348,6 +348,7 @@
 										{foreach from=$citationStyles item="citationStyle"}
 											<li>
 												<a
+													rel="nofollow"
 													aria-controls="citationOutput"
 													href="{url page="citationstylelanguage" op="get" path=$citationStyle.id params=$citationArgs}"
 													data-load-citation
