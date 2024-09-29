@@ -12,6 +12,7 @@
 
 namespace APP\tests\jobs\notifications;
 
+use APP\core\Application;
 use APP\issue\Repository as IssueRepository;
 use APP\jobs\notifications\OpenAccessMailUsers;
 use Mockery;
@@ -19,11 +20,11 @@ use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use PKP\db\DAORegistry;
 use PKP\emailTemplate\Repository as EmailTemplateRepository;
-use PKP\tests\PKPTestCase;
+use PKP\tests\DatabaseTestCase;
 
 #[RunTestsInSeparateProcesses]
 #[CoversClass(OpenAccessMailUsers::class)]
-class OpenAccessMailUsersTest extends PKPTestCase
+class OpenAccessMailUsersTest extends DatabaseTestCase
 {
     /**
      * base64_encoded serializion from OJS 3.4.0
@@ -31,6 +32,16 @@ class OpenAccessMailUsersTest extends PKPTestCase
     protected string $serializedJobData = <<<END
     O:42:"APP\\jobs\\notifications\\OpenAccessMailUsers":6:{s:10:"\0*\0userIds";O:29:"Illuminate\\Support\\Collection":2:{s:8:"\0*\0items";a:2:{i:0;i:1;i:1;i:2;}s:28:"\0*\0escapeWhenCastingToString";b:0;}s:12:"\0*\0contextId";i:1;s:10:"\0*\0issueId";i:1;s:10:"connection";s:8:"database";s:5:"queue";s:5:"queue";s:7:"batchId";s:36:"9c1c4502-5261-4b4a-965c-256cd0eaaaa4";}
     END;
+
+    /**
+     * @see \PKP\tests\DatabaseTestCase@getAffectedTables
+     */
+    protected function getAffectedTables(): array
+    {
+        return [
+            'notifications'
+        ];
+    }
 
     /**
      * Test job is a proper instance
@@ -56,20 +67,21 @@ class OpenAccessMailUsersTest extends PKPTestCase
         /** @var OpenAccessMailUsers $openAccessMailUsersJob */
         $openAccessMailUsersJob = unserialize($this->serializedJobData);
 
+        $contextMock = Mockery::mock(get_class(Application::getContextDAO()->newDataObject()))
+            ->makePartial()
+            ->shouldReceive([
+                'getId' => 0,
+                'getLocalizedData' => '',
+                'getPrimaryLocale' => 'en',
+            ])
+            ->withAnyArgs()
+            ->getMock();
+
         $journalDAOMock = Mockery::mock(\APP\journal\JournalDAO::class)
             ->makePartial()
-            ->shouldReceive('getId')
+            ->shouldReceive('getById')
             ->withAnyArgs()
-            ->andReturn(
-                Mockery::mock(\APP\journal\Journal::class)
-                    ->makePartial()
-                    ->shouldReceive([
-                        'getData' => '',
-                        'getPrimaryLocale' => 'en'
-                    ])
-                    ->withAnyArgs()
-                    ->getMock()
-            )
+            ->andReturn($contextMock)
             ->getMock();
 
         DAORegistry::registerDAO('JournalDAO', $journalDAOMock);
@@ -101,6 +113,15 @@ class OpenAccessMailUsersTest extends PKPTestCase
             ->getMock();
 
         app()->instance(EmailTemplateRepository::class, $emailTemplateRepoMock);
+
+        $notificationSettingsDaoMock = Mockery::mock(\PKP\notification\NotificationSettingsDAO::class)
+            ->makePartial()
+            ->shouldReceive('updateNotificationSetting')
+            ->withAnyArgs()
+            ->andReturn(null)
+            ->getMock();
+
+        DAORegistry::registerDAO('NotificationSettingsDAO', $notificationSettingsDaoMock);
 
         $openAccessMailUsersJob->handle();
 
