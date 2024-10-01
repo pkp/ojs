@@ -34,24 +34,24 @@
 		<items>
 			{foreach from=$announcements item=announcement}
 			<rdf:Seq>
-				<rdf:li rdf:resource="{url page="announcement" op="view" path=$announcement->getKey()}"/>
+				<rdf:li rdf:resource="{url page="announcement" op="view" path=$announcement->id}"/>
 			</rdf:Seq>
 			{/foreach}
 		</items>
 	</channel>
 
 {foreach from=$announcements item=announcement}
-	<item rdf:about="{url page="announcement" op="view" path=$announcement->getKey()}">
+	<item rdf:about="{url page="announcement" op="view" path=$announcement->id}">
 		{* required elements *}
 		<title>{$announcement->getLocalizedData('fullTitle')|strip|escape:"html"}</title>
-		<link>{url page="announcement" op="view" path=$announcement->getKey()}</link>
+		<link>{url page="announcement" op="view" path=$announcement->id}</link>
 
 		{* optional elements *}
 		{if $announcement->getLocalizedData('description')}
 		<description>{$announcement->getLocalizedData('description')|strip|escape:"html"}</description>
 		{/if}
 		<dc:creator>{$journal->getLocalizedName()|strip|escape:"html"}</dc:creator>
-		<dc:date>{$announcement->getAttribute('datePosted')|date_format:"%Y-%m-%d"}</dc:date>
+		<dc:date>{$announcement->datePosted->format("%Y-%m-%d")}</dc:date>
 	</item>
 {/foreach}
 

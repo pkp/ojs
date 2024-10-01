@@ -36,21 +36,21 @@
 {foreach from=$announcements item=announcement}
 	<entry>
 		{* required elements *}
-		<id>{url page="announcement" op="view" path=$announcement->getKey()}</id>
+		<id>{url page="announcement" op="view" path=$announcement->id}</id>
 		<title>{$announcement->getLocalizedData('fullTitle')|strip|escape:"html"}</title>
-		<updated>{$announcement->getAttribute('datePosted')|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</updated>
+		<updated>{$announcement->datePosted->format("%Y-%m-%dT%T%z")|regex_replace:"/00$/":":00"}</updated>
 	  	<author>
 			<name>{$journal->getLocalizedName()|strip|escape:"html"}</name>
         </author>
-		<link rel="alternate" href="{url page="announcement" op="view" path=$announcement->getKey()}" />
+		<link rel="alternate" href="{url page="announcement" op="view" path=$announcement->id}" />
         {if $announcement->getLocalizedData('description')}
-		<summary type="html" xml:base="{url page="announcement" op="view" path=$announcement->getKey()}">{$announcement->getLocalizedData('description')|strip|escape:"html"}</summary>
+		<summary type="html" xml:base="{url page="announcement" op="view" path=$announcement->id}">{$announcement->getLocalizedData('description')|strip|escape:"html"}</summary>
         {/if}
 
 		{* optional elements *}
 		{* <category/> *}
 		{* <contributor/> *}
-		<published>{$announcement->getAttribute('datePosted')|date_format:"%Y-%m-%dT%T%z"|regex_replace:"/00$/":":00"}</published>
+		<published>{$announcement->datePosted->format("%Y-%m-%dT%T%z")|regex_replace:"/00$/":":00"}</published>
 		{* <source/> *}
 		{* <rights/> *}
 	</entry>

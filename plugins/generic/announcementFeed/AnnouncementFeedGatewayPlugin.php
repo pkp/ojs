@@ -16,8 +16,8 @@
 namespace APP\plugins\generic\announcementFeed;
 
 use APP\template\TemplateManager;
+use Carbon\Carbon;
 use PKP\announcement\Announcement;
-use PKP\core\Core;
 use PKP\db\DAORegistry;
 use PKP\plugins\GatewayPlugin;
 use PKP\site\VersionDAO;
@@ -139,14 +139,14 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin
         $lastDateUpdated = $this->_parentPlugin->getSetting($journal->getId(), 'dateUpdated');
         if ($announcements->isEmpty()) {
             if (empty($lastDateUpdated)) {
-                $dateUpdated = Core::getCurrentDate();
+                $dateUpdated = Carbon::now();
                 $this->_parentPlugin->updateSetting($journal->getId(), 'dateUpdated', $dateUpdated, 'string');
             } else {
                 $dateUpdated = $lastDateUpdated;
             }
         } else {
-            $dateUpdated = $announcements->first()->getAttribute('datePosted');
-            if (empty($lastDateUpdated) || (strtotime($dateUpdated) > strtotime($lastDateUpdated))) {
+            $dateUpdated = $announcements->first()->datePosted;
+            if (empty($lastDateUpdated) || $dateUpdated->gt($lastDateUpdated)) {
                 $this->_parentPlugin->updateSetting($journal->getId(), 'dateUpdated', $dateUpdated, 'string');
             }
         }
