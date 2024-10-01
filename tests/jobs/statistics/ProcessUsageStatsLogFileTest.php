@@ -18,6 +18,7 @@ use Mockery;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use PKP\db\DAORegistry;
+use PKP\file\FileManager;
 use PKP\task\FileLoader;
 use PKP\tests\PKPTestCase;
 use ReflectionClass;
@@ -59,6 +60,8 @@ class ProcessUsageStatsLogFileTest extends PKPTestCase
 
         // we need to create a dummy file if not existed as to avoid mocking PHP's built in functions
         $dummyFile = $this->createDummyFileIfNeeded($processUsageStatsLogFileJob, 'loadId');
+
+        $this->createArchiveDirectoryIfRequired();
 
         $temporaryTotalsDAOMock = Mockery::mock(\APP\statistics\TemporaryTotalsDAO::class)
             ->makePartial()
@@ -129,10 +132,40 @@ class ProcessUsageStatsLogFileTest extends PKPTestCase
             . DIRECTORY_SEPARATOR;
 
         if (!file_exists($filePath . $fileName)) {
+
+            // create the 'FileLoader::FILE_LOADER_PATH_DISPATCH' directory if not exists
+            if (!file_exists($filePath)) {
+                $fileManager = new FileManager();
+                $fileManager->mkdirtree($filePath);
+            }
+
+            touch($filePath . $fileName);
+
             file_put_contents($filePath . $fileName, $this->dummyFileContent);
             return $filePath . $fileName;
         }
 
         return null;
+    }
+
+    /**
+     * Create the archive path/directory as needed
+     */
+    protected function createArchiveDirectoryIfRequired(): bool
+    {
+        $filePath = StatisticsHelper::getUsageStatsDirPath()
+            . DIRECTORY_SEPARATOR
+            . FileLoader::FILE_LOADER_PATH_ARCHIVE
+            . DIRECTORY_SEPARATOR;
+
+        if (file_exists($filePath)) {
+            return true;
+        }
+
+        // create the 'FileLoader::FILE_LOADER_PATH_ARCHIVE' directory if not exists
+        $fileManager = new FileManager();
+        $fileManager->mkdirtree($filePath);
+
+        return file_exists($filePath);
     }
 }
