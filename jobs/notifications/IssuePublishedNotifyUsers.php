@@ -28,6 +28,7 @@ use Illuminate\Support\Facades\Mail;
 use PKP\context\Context;
 use PKP\emailTemplate\EmailTemplate;
 use PKP\jobs\BaseJob;
+use PKP\notification\Notification as PKPNotification;
 use PKP\user\User;
 
 class IssuePublishedNotifyUsers extends BaseJob
@@ -73,7 +74,6 @@ class IssuePublishedNotifyUsers extends BaseJob
 
             $notificationManager = new NotificationManager();
             $notification = $notificationManager->createNotification(
-                null,
                 $recipientId,
                 Notification::NOTIFICATION_TYPE_PUBLISHED_ISSUE,
                 $this->contextId,
@@ -99,7 +99,7 @@ class IssuePublishedNotifyUsers extends BaseJob
         Issue $issue,
         User $recipient,
         EmailTemplate $template,
-        Notification $notification
+        PKPNotification $notification
     ): IssuePublishedNotify {
         $mailable = new IssuePublishedNotify($context, $issue);
         $mailable
