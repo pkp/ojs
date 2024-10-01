@@ -12,6 +12,7 @@
 
 namespace APP\tests\jobs\doi;
 
+use APP\core\Application;
 use APP\doi\Repository as DoiRepository;
 use APP\issue\Repository as IssueRepository;
 use APP\jobs\doi\DepositIssue;
@@ -33,6 +34,18 @@ class DepositIssueTest extends PKPTestCase
     END;
 
     /**
+     * @see PKPTestCase::getMockedContainerKeys()
+     */
+    protected function getMockedContainerKeys(): array
+    {
+        return [
+            ...parent::getMockedContainerKeys(),
+            IssueRepository::class,
+            DoiRepository::class,
+        ];
+    }
+
+    /**
      * Test job is a proper instance
      */
     public function testUnserializationGetProperDepositIssueJobInstance(): void
@@ -52,9 +65,6 @@ class DepositIssueTest extends PKPTestCase
         $this->mockRequest();
 
         $this->mockGuzzleClient();
-
-        /** @var DepositIssue $depositIssueJob */
-        $depositIssueJob = unserialize($this->serializedJobData);
 
         $issueMock = Mockery::mock(\APP\issue\Issue::class)
             ->makePartial()
@@ -100,6 +110,21 @@ class DepositIssueTest extends PKPTestCase
 
         app()->instance(DoiRepository::class, $doiRepoMock);
 
-        $this->assertNull($depositIssueJob->handle());
+        /** @var \PKP\context\Context $contextMock */
+        $contextMock = Mockery::mock(get_class(Application::getContextDAO()->newDataObject()))
+            ->makePartial()
+            ->shouldReceive([
+                'getData' => '',
+                'getLocalizedData' => '',
+            ])
+            ->getMock();
+
+        $depositIssueMock = new DepositIssue(
+            0,
+            $contextMock,
+            new \PKP\tests\support\DoiRegistrationAgency()
+        );
+
+        $this->assertNull($depositIssueMock->handle());
     }
 }

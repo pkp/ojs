@@ -12,13 +12,14 @@
 
 namespace APP\tests\jobs\statistics;
 
-use APP\jobs\statistics\ProcessUsageStatsLogFile;
-use APP\statistics\StatisticsHelper;
 use Mockery;
+use ReflectionClass;
 use PKP\db\DAORegistry;
 use PKP\task\FileLoader;
+use PKP\file\FileManager;
 use PKP\tests\PKPTestCase;
-use ReflectionClass;
+use APP\statistics\StatisticsHelper;
+use APP\jobs\statistics\ProcessUsageStatsLogFile;
 
 /**
  * @runTestsInSeparateProcesses
@@ -38,6 +39,20 @@ class ProcessUsageStatsLogFileTest extends PKPTestCase
      * Content example from OJS 3.4.0
      */
     protected $dummyFileContent = '{"time":"2023-08-07 17:27:11","ip":"228dc4e5b6424e9dad52f21261cb2ab5f4651d9cb426d6fdb3d71d5ab8e2ae83","userAgent":"Mozilla\/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko\/20100101 Firefox\/115.0","canonicalUrl":"http:\/\/ojs-stable-3_4_0.test\/index.php\/publicknowledge\/index","assocType":256,"contextId":1,"submissionId":null,"representationId":null,"submissionFileId":null,"fileType":null,"country":null,"region":null,"city":null,"institutionIds":[],"version":"3.4.0.0","issueId":null,"issueGalleyId":null}';
+
+    /**
+     * @see PKPTestCase::getMockedDAOs()
+     */
+    protected function getMockedDAOs(): array
+    {
+        return [
+            ...parent::getMockedDAOs(),
+            'TemporaryTotalsDAO',
+            'TemporaryItemInvestigationsDAO',
+            'TemporaryItemRequestsDAO',
+            'TemporaryInstitutionsDAO',
+        ];
+    }
 
     /**
      * Test job is a proper instance
@@ -60,6 +75,8 @@ class ProcessUsageStatsLogFileTest extends PKPTestCase
 
         // we need to create a dummy file if not existed as to avoid mocking PHP's built in functions
         $dummyFile = $this->createDummyFileIfNeeded($processUsageStatsLogFileJob, 'loadId');
+
+        $this->createArchiveDirectoryIfRequired();
 
         $temporaryTotalsDAOMock = Mockery::mock(\APP\statistics\TemporaryTotalsDAO::class)
             ->makePartial()
@@ -128,10 +145,40 @@ class ProcessUsageStatsLogFileTest extends PKPTestCase
             . DIRECTORY_SEPARATOR;
 
         if (!file_exists($filePath . $fileName)) {
+            
+            // create the 'FileLoader::FILE_LOADER_PATH_DISPATCH' directory if not exists
+            if (!file_exists($filePath)) {
+                $fileManager = new FileManager();
+                $fileManager->mkdirtree($filePath);
+            }
+
+            touch($filePath . $fileName);
+            
             file_put_contents($filePath . $fileName, $this->dummyFileContent);
             return $filePath . $fileName;
         }
 
         return null;
+    }
+
+    /**
+     * Create the archive path/directory as needed
+     */
+    protected function createArchiveDirectoryIfRequired(): bool
+    {
+        $filePath = StatisticsHelper::getUsageStatsDirPath()
+            . DIRECTORY_SEPARATOR
+            . FileLoader::FILE_LOADER_PATH_ARCHIVE
+            . DIRECTORY_SEPARATOR;
+        
+        if (file_exists($filePath)) {
+            return true;
+        }
+
+        // create the 'FileLoader::FILE_LOADER_PATH_ARCHIVE' directory if not exists
+        $fileManager = new FileManager();
+        $fileManager->mkdirtree($filePath);
+
+        return file_exists($filePath);
     }
 }
