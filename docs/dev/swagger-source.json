@@ -58,7 +58,8 @@
 				"Stats / Sushi",
 				"Vocabs",
 				"Temporary Files",
-				"Backend"
+				"Backend",
+				"ORCID"
 			]
 		}
 	],
@@ -202,6 +203,10 @@
 		{
 			"name": "Backend",
 			"description": "Private endpoints for OJS's UI. These endpoints will be less stable between versions. We discourage their use in third-party plugins or applications."
+		},
+		{
+			"name": "ORCID",
+			"description": "Endpoints for managing ORCID."
 		}
 	],
 	"definitions": {
@@ -7545,6 +7550,80 @@
 					"404": {
 						"x-summary": "Request Not Found",
 						"description": "The context could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/orcid/requestAuthorVerification/{authorId}": {
+			"post": {
+				"tags": [
+					"ORCID"
+				],
+				"summary": "Allows Journal Manager and Editors to send email request to an author to link their ORCID to a submission in OJS.",
+				"parameters": [
+					{
+						"name": "authorId",
+						"in": "path",
+						"description": "Author ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "An empty response body."
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to send ORCID verification requests or ORCID is not enabled.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "A resource was not found.",
+						"description": "Could not find author or there are no context.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/orcid/deleteForAuthor/{authorId}": {
+			"delete": {
+				"tags": [
+					"ORCID"
+				],
+				"summary": "Allows Journal Manager and Editors to revoke an author's ORCID and access tokens associated with a submission.",
+				"parameters": [
+					{
+						"name": "authorId",
+						"in": "path",
+						"description": "Author ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "An empty response body."
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to revoke an author's ORCID access and token data or ORCID is not enabled..",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "A resource was not found.",
+						"description": "Could not find author or there are no context.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
