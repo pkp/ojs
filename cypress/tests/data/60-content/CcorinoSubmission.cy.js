@@ -73,8 +73,8 @@ describe('Data suite: Ccorino', function() {
 
 	it('Logins as a section editor and recommends accept', function() {
 		cy.login('minoue');
-		cy.visit('/index.php/publicknowledge/submissions');
-		cy.get('a').contains('View ' + familyName).click({force: true});
+		cy.visit('/index.php/publicknowledge/dashboard/editorial');
+		cy.openSubmission(familyName);
 		cy.clickDecision('Recommend Accept');
 		cy.recordRecommendation('Recommend Accept', ['Daniel Barnes', 'David Buskins', 'Stephanie Berardo']);
 
