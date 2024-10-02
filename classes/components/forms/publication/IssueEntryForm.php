@@ -93,7 +93,7 @@ class IssueEntryForm extends FormComponent
             'label' => __('issue.issue'),
             'options' => $issueOptions,
             'publicationStatus' => $publication->getData('status'),
-            'value' => $publication->getData('issueId') ? $publication->getData('issueId') : 0,
+            'value' => $publication->getData('issueId') ? $publication->getData('issueId') : '',
         ]))
             ->addField(new FieldSelect('sectionId', [
                 'label' => __('section.section'),
