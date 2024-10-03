@@ -477,7 +477,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.wait(1500);
 		cy.get('#contributors-button').click();
 
-		cy.get('#contributors div').contains('Alan Mwandenga').parent().parent().find('button').contains('Edit').click();
+		cy.get('#contributors div').contains('Alan Mwandenga').parents('div').find('button').contains('Edit').click();
 		cy.get('#contributors [name="familyName-en"]').type(' Version 2', {delay: 0});
 		cy.get('#contributors button').contains('Save').click();
 		// cy.get('#contributors button').contains('Save').should("not.be.visible");
