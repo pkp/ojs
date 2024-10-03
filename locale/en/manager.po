@@ -843,6 +843,15 @@ msgstr "Reviewer Ratings"
 msgid "manager.setup.reviewOptions.reviewerReminders"
 msgstr "Reviewer Reminders"
 
+msgid "manager.setup.reviewOptions.reviewerSuggestionEnabled"
+msgstr "Reviewer Suggestion at Submission"
+
+msgid "manager.setup.reviewOptions.reviewerSuggestionEnabled.description"
+msgstr "Author can suggest few potntial reviewers before completing the submission which can streamline the review process and provide valuable input for editorial team."
+
+msgid "manager.setup.reviewOptions.reviewerSuggestionEnabled.label"
+msgstr "Allow authors to suggest potential reviews at submission process"
+
 msgid "manager.setup.reviewPolicy"
 msgstr "Review Policy"
 
