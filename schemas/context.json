@@ -377,6 +377,12 @@
 		  	"type": "boolean",
 		  	"default": false,
 		  	"description": "Whether each publication version should receive a unique DOI"
+		},
+		"reviewerSuggestionEnabled": {
+			"type": "boolean",
+			"validation": [
+				"nullable"
+			]
 		}
 	}
 }
