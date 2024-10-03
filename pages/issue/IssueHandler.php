@@ -39,7 +39,6 @@ use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\Validation;
-use PKP\submission\GenreDAO;
 use PKP\submission\PKPSubmission;
 
 class IssueHandler extends Handler
@@ -351,11 +350,8 @@ class IssueHandler extends Handler
 
         $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */
 
-        $genreDao = DAORegistry::getDAO('GenreDAO'); /** @var GenreDAO $genreDao */
-        $primaryGenres = $genreDao->getPrimaryByContextId($journal->getId())->toArray();
-        $primaryGenreIds = array_map(function ($genre) {
-            return $genre->getId();
-        }, $primaryGenres);
+        $primaryGenreIds = Repo::genre()->getPrimaryByContextId($journal->getId())->pluck('id')->toArray();
+
 
         // Show scheduled submissions if this is a preview
         $allowedStatuses = [PKPSubmission::STATUS_PUBLISHED];
