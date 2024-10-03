@@ -12,10 +12,19 @@
  */
 
 use APP\core\Application;
+use PKP\config\Config;
 
 // Initialize global environment
 define('INDEX_FILE_LOCATION', __FILE__);
 require_once './lib/pkp/includes/bootstrap.php';
+
+// Temporarly enable enable_new_submission_listing for OJS, until OMP&OPS catch up
+// Its still possible to disable it with explicitely setting it to 'Off'
+if(Config::getVar('features', 'enable_new_submission_listing') === null) {
+    $configData = & Config::getData();
+    $configData['features']['enable_new_submission_listing'] = true;
+}
+
 
 // Serve the request
 Application::get()->execute();

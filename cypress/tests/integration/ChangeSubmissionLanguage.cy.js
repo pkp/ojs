@@ -6,7 +6,8 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  */
 
-describe('Change Submission Language', function() {
+// FIX ME Temporarly disabled until the change language logic is moved legacy workflow page
+describe.skip('Change Submission Language', function() {
 	let user;
 	let author;
 	let password;
@@ -37,7 +38,8 @@ describe('Change Submission Language', function() {
 
 	it('Try to change submission language after publication', function() {
 		cy.login(user, password, 'publicknowledge');
-		cy.get('button[id="archive-button"]').click();
+		cy.get('nav').contains('Active submissions').click();
+		cy.openSubmission()
 		cy.contains('View ' + author.familyName).click({force: true});
 		cy.get(`.pkpPublication__changeSubmissionLanguage > button`).should('not.exist');
 	});
