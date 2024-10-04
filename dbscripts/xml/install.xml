@@ -39,7 +39,7 @@
 	<migration class="PKP\migration\install\TombstoneMigration" />
 	<migration class="PKP\migration\install\DoiMigration" />
 	<migration class="PKP\migration\install\InstitutionsMigration" />
-    <migration class="PKP\migration\install\RorsMigration" />
+	<migration class="PKP\migration\install\RorsMigration" />
 
 	<migration class="APP\migration\install\OJSMigration" />
 
