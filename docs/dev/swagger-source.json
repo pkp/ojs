@@ -58,7 +58,9 @@
 				"Stats / Sushi",
 				"Vocabs",
 				"Temporary Files",
-				"Backend"
+				"Backend",
+				"ORCID",
+				"Emails"
 			]
 		}
 	],
@@ -202,6 +204,14 @@
 		{
 			"name": "Backend",
 			"description": "Private endpoints for OJS's UI. These endpoints will be less stable between versions. We discourage their use in third-party plugins or applications."
+		},
+		{
+			"name": "ORCID",
+			"description": "Endpoints for managing ORCID."
+		},
+		{
+			"name": "Emails",
+			"description": "Endpoints used to retrieve user emails."
 		}
 	],
 	"definitions": {
@@ -283,6 +293,7 @@
 			}
 		},
 		"EmailTemplate": "emailTemplate",
+		"Email": "emailLog",
 		"Galley": "galley",
 		"Institution": "institution",
 		"InvalidParametersResponse": {
@@ -1152,6 +1163,40 @@
 						"in": "path",
 						"description": "Submission ID",
 						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "decisionTypes",
+						"description": "Filter results by the decision type. List of the `Decision::*` constants.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "editorIds",
+						"description": "Filter results by specific editor IDs.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "reviewRoundId",
+						"description": "Filter results by a specific review round ID",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					},
+					{
+						"name": "stageId",
+						"description": "Filter results by a specific workflow stage Id",
+						"in": "query",
+						"required": false,
 						"type": "integer"
 					}
 				],
@@ -4866,6 +4911,103 @@
 				}
 			}
 		},
+		"/emails/authorEmails": {
+			"get": {
+				"tags": [
+					"Emails"
+				],
+				"summary": "Gets an Author's email entry logs.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"description": "Filter results to emails associated with a specific submissionId.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					},
+					{
+						"name": "eventType",
+						"description": "Filter results by an event type",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					}
+				],
+				"responses":  {
+					"200": {
+						"x-summary": "Success",
+						"description": "List of emails.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/EmailSummary"
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view emails.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "No matching resource for a provided query param. Example: no submission found matching the provided `submissionId` query param.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "Your request was not valid. One or more of the request query params are invalid. The error message will contain details about the invalid query param.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/emails/{emailId}": {
+			"get": {
+				"tags": [
+					"Emails"
+				],
+				"summary": "Get an email entry log by ID",
+				"parameters": [
+					{
+						"name": "emailId",
+						"description": "Email ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The email entry log details.",
+						"schema": {
+							"$ref": "#/definitions/EmailSummary"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to access this email.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The email could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
 		"/institutions": {
 			"get": {
 				"tags": [
@@ -7511,6 +7653,80 @@
 					"404": {
 						"x-summary": "Request Not Found",
 						"description": "The context could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/orcid/requestAuthorVerification/{authorId}": {
+			"post": {
+				"tags": [
+					"ORCID"
+				],
+				"summary": "Allows Journal Manager and Editors to send email request to an author to link their ORCID to a submission in OJS.",
+				"parameters": [
+					{
+						"name": "authorId",
+						"in": "path",
+						"description": "Author ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "An empty response body."
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to send ORCID verification requests or ORCID is not enabled.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "A resource was not found.",
+						"description": "Could not find author or there are no context.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/orcid/deleteForAuthor/{authorId}": {
+			"delete": {
+				"tags": [
+					"ORCID"
+				],
+				"summary": "Allows Journal Manager and Editors to revoke an author's ORCID and access tokens associated with a submission.",
+				"parameters": [
+					{
+						"name": "authorId",
+						"in": "path",
+						"description": "Author ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "An empty response body."
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to revoke an author's ORCID access and token data or ORCID is not enabled..",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "A resource was not found.",
+						"description": "Could not find author or there are no context.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}

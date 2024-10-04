@@ -21,7 +21,7 @@
         cy.get('textarea[name="comment"]').then(node => {
 			cy.setTinyMceContent(node.attr('id'), message);
 		});
-        cy.contains('button', 'Close').click();
+        cy.contains('[data-cy="active-modal"] button', 'Close').click();
         cy.on('window:confirm', () => true);
         cy.reload();
         cy.get(discussionGrid);
@@ -32,7 +32,7 @@
         cy.get('textarea[name="comment"]').then(node => {
 			cy.setTinyMceContent(node.attr('id'), message);
 		});
-        cy.contains('button', 'Close').click();
+        cy.contains('[data-cy="active-modal"] button', 'Close').click();
         cy.on('window:confirm', () => false);
         cy.get('#queryForm button:contains("OK")').click();
         cy.get(discussionGrid + ' a:contains("' + discussion + '")');

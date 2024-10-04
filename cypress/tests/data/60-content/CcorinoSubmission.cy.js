@@ -57,29 +57,34 @@ describe('Data suite: Ccorino', function() {
 		cy.recordDecisionSendToReview('Send for Review', submission.authorNames, [submission.title]);
 		cy.assignParticipant('Section editor', 'Minoti Inoue', true);
 
-		cy.get('#publication-button').click();
-		cy.get('#metadata-button').click();
+		cy.openWorkflowMenu('Title & Abstract')
+		cy.openWorkflowMenu('Metadata')
 		cy.get('#metadata-keywords-control-en').type('pr', {delay: 0});
 		cy.wait(500);
 		cy.get('li').contains('Professional Development').click({force: true});
 		cy.get('#metadata-keywords-control-en').type('socia', {delay: 0});
 		cy.contains('Social Transformation');
 		cy.get('#metadata-keywords-control-en').type('l{downArrow}{enter}', {delay: 50});
-		cy.get('#metadata button').contains('Save').click();
-		cy.get('#metadata [role="status"]').contains('Saved');
+		cy.get('button').contains('Save').click();
+		cy.get('[role="status"]').contains('Saved');
 		cy.get('#metadata-keywords-selected-en').contains('Professional Development');
 		cy.get('#metadata-keywords-selected-en').contains('Social Transformation');
 	});
 
 	it('Logins as a section editor and recommends accept', function() {
 		cy.login('minoue');
-		cy.visit('/index.php/publicknowledge/submissions');
-		cy.get('a').contains('View ' + familyName).click({force: true});
+		cy.visit('/index.php/publicknowledge/dashboard/editorial');
+		cy.openSubmission(familyName);
 		cy.clickDecision('Recommend Accept');
 		cy.recordRecommendation('Recommend Accept', ['Daniel Barnes', 'David Buskins', 'Stephanie Berardo']);
 
 		cy.logout();
 		cy.findSubmissionAsEditor('dbarnes', null, familyName);
-		cy.get('div.pkp_workflow_recommendations:contains("Recommendations: Accept Submission")');
+		cy.get('[data-cy="workflow-secondary-items"] h2').contains("Recommendation");
+		// FIX ME correct label should come with 
+		//cy.get('[data-cy="workflow-actions"] p').contains("Accept Submission");
+		cy.get('[data-cy="workflow-secondary-items"] p').contains("Recommend Accept");
+
+		
 	});
 })

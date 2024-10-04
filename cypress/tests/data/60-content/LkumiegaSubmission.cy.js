@@ -63,7 +63,7 @@ describe('Data suite tests', function() {
 		cy.performReview('agallego', null, 'Hydrologic Connectivity', 'Resubmit for Review');
 		cy.findSubmissionAsEditor('dbarnes', null, 'Kumiega');
 		cy.clickDecision('Request Revisions');
-		cy.get('label:contains("Revisions will not be subject to a new round of peer reviews.")').find('input').check();
+		cy.get('label:contains("Revisions will not be subject to a new round of peer reviews.")').find('input').check({force: true});
 		cy.get('button').contains('Next').click();
 		cy.waitJQuery();
 		cy.recordDecisionRevisions('Request Revisions', submission.authors, [
