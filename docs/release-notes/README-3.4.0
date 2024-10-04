@@ -22,8 +22,8 @@ configuration parameters.
   The old formats will continue to work for now but are deprecated.
 
 - An allowed_hosts option was added to protect against HOST injection attacks.
-  We recommend configuring this setting! See "Recommended Configuration" in
-  docs/README.md for details. (https://github.com/pkp/pkp-lib/issues/7649)
+  We recommend configuring this setting! See https://github.com/pkp/pkp-lib/issues/7649
+  for details.
 
 - The captcha.captcha_on_login option for displaying a captcha challenge in
   the login interface has been added (default: on)
