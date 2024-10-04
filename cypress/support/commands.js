@@ -8,11 +8,11 @@
  */
 
 import Api from '../../lib/pkp/cypress/support/api.js';
-import '../../lib/pkp/cypress/support/commands';
+import '../../lib/pkp/cypress/support/commands_new_workflow';
 
 Cypress.Commands.add('publish', (issueId, issueTitle) => {
-	cy.get('button[id="publication-button"]').click();
-	cy.get('div#publication button:contains("Schedule For Publication")').click();
+	cy.openWorkflowMenu('Title & Abstract')
+	cy.get('button:contains("Schedule For Publication")').click();
 	cy.wait(1000);
 	cy.get('select[id="assignToIssue-issueId-control"]').select(issueId);
 	cy.get('div[id^="assign-"] button:contains("Save")').click();

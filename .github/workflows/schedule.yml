@@ -10,17 +10,17 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - php-version: 8.1
+          - php-version: 8.2
             validate: 'validate'
             database: pgsql
             test: 'test'
             SAVE_BUILD: 'save_build'
-          - php-version: 8.1
+          - php-version: 8.2
             validate: 'validate'
             database: mariadb
             test: 'test'
             SAVE_BUILD: 'save_build'
-          - php-version: 8.1
+          - php-version: 8.2
             validate: 'validate'
             database: mysql
             test: 'test'

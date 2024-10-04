@@ -57,6 +57,11 @@
 						);
 					{rdelim});
 				</script>
+				<pkp-header class="pkpPublication__header" :is-one-line="false">
+					<span class="pkp_submission_workflow__changeSubmissionLanguage">
+						<strong>{translate key="submission.list.changeSubmissionLanguage.currentLanguage"}</strong> {{ currentSubmissionLanguageLabel }}
+					</span>
+				</pkp-header>
 				<div id="stageTabs" class="pkp_controllers_tab">
 					<ul>
 						{foreach from=$workflowStages item=stage}
@@ -77,6 +82,9 @@
 			<tab id="publication" label="{translate key="submission.publication"}">
 				<div class="pkpPublication" ref="publication" aria-live="polite">
 					<pkp-header class="pkpPublication__header" :is-one-line="false">
+						<span class="pkpPublication__changeSubmissionLanguage">
+							<strong>{translate key="submission.list.changeSubmissionLanguage.currentLanguage"}</strong> {{ currentSubmissionLanguageLabel }}
+						</span>
 						<span class="pkpPublication__status">
 							<strong>{{ statusLabel }}</strong>
 							<span v-if="workingPublication.status === getConstant('STATUS_QUEUED') && workingPublication.id === currentPublication.id" class="pkpPublication__statusUnpublished">{translate key="publication.status.unscheduled"}</span>
