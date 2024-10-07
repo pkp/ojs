@@ -17,10 +17,9 @@
 require(dirname(__FILE__) . '/bootstrap.php');
 
 use APP\facades\Repo;
+use Illuminate\Support\Collection;
 use PKP\cliTool\CommandLineTool;
-use PKP\controlledVocab\ControlledVocab;
-use PKP\controlledVocab\ControlledVocabEntryDAO;
-use PKP\db\DAORegistry;
+use PKP\controlledVocab\ControlledVocabEntry;
 use PKP\user\interest\UserInterest;
 
 class ReviewerInterestsDeletionTool extends CommandLineTool
@@ -61,7 +60,7 @@ class ReviewerInterestsDeletionTool extends CommandLineTool
     public function execute(): void
     {
         $orphans = $this->_getOrphanVocabInterests();
-        if (!count($orphans)) {
+        if ($orphans->count() === 0) {
             echo "No user interests to remove.\n";
             exit(0);
         }
@@ -69,20 +68,13 @@ class ReviewerInterestsDeletionTool extends CommandLineTool
         $command = $this->parameters[0];
         switch ($command) {
             case '--show':
-                $interests = array_map(function ($entry) {
-                    return $entry->getData(UserInterest::CONTROLLED_VOCAB_INTEREST);
-                }, $orphans);
+                $interests = $orphans->pluck(UserInterest::CONTROLLED_VOCAB_INTEREST)->toArray();
                 echo "Below are the user interests that are not referenced by any user account.\n";
                 echo "\t" . join("\n\t", $interests) . "\n";
                 break;
 
             case '--remove':
-                /** @var ControlledVocabEntryDAO */
-                $vocabEntryDao = DAORegistry::getDAO('ControlledVocabEntryDAO');
-                foreach ($orphans as $orphanVocab) {
-                    $vocabEntryDao->deleteObject($orphanVocab);
-                }
-                echo count($orphans) . " entries deleted\n";
+                echo $orphans->toQuery()->delete() . " entries deleted\n";
                 break;
 
             default:
@@ -93,41 +85,18 @@ class ReviewerInterestsDeletionTool extends CommandLineTool
     }
 
     /**
-     * Returns user interests that are not referenced
-     *
-     * @return array array of ControlledVocabEntry object
+     * Returns user interests collection that are not referenced
      */
-    protected function _getOrphanVocabInterests(): array
+    protected function _getOrphanVocabInterests(): Collection
     {
-        /** @var ControlledVocabEntryDAO $vocabEntryDao */
-        $vocabEntryDao = DAORegistry::getDAO('ControlledVocabEntryDAO');
-        $interestVocab = ControlledVocab::withSymbolic(UserInterest::CONTROLLED_VOCAB_INTEREST)
-            ->withAssoc(0, 0)
-            ->first();
-        $vocabEntryIterator = $vocabEntryDao->getByControlledVocabId($interestVocab->id);
-        $vocabEntryList = $vocabEntryIterator->toArray();
-
-        // list of vocab interests in db
-        $allInterestVocabIds = array_map(fn ($entry) => $entry->getId(), $vocabEntryList);
-
-        // list of vocabs associated to users
-        $interests = Repo::userInterest()->getAllInterests();
-        $userInterestVocabIds = array_map(
-            fn ($interest) => $interest->getId(),
-            $interests->toArray()
+        $controlledVocab = Repo::controlledVocab()->build(
+            UserInterest::CONTROLLED_VOCAB_INTEREST
         );
 
-        // get the difference
-        $diff = array_diff($allInterestVocabIds, $userInterestVocabIds);
-
-        $orphans = array_filter(
-            $vocabEntryList,
-            function ($entry) use ($diff) {
-                return in_array($entry->getId(), $diff);
-            }
-        );
-
-        return $orphans;
+        return ControlledVocabEntry::query()
+            ->withControlledVocabId($controlledVocab->id)
+            ->whereDoesntHave('userInterest')
+            ->get();
     }
 }
 
