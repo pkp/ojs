@@ -18,7 +18,7 @@
 	<migration class="APP\migration\install\JournalsMigration" />
 
 	<!-- PKP schema components -->
-    <migration class="PKP\migration\install\AffiliationsMigration" />
+	<migration class="PKP\migration\install\AffiliationsMigration" />
 	<migration class="PKP\migration\install\CommonMigration" />
 	<migration class="PKP\migration\install\SessionsMigration" />
 	<migration class="PKP\migration\install\GenresMigration" />
