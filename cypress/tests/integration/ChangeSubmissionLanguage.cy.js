@@ -6,7 +6,6 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  */
 
-// FIX ME Temporarly disabled until the change language logic is moved legacy workflow page
 describe('Change Submission Language', function() {
 	let user;
 	let author;
