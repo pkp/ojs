@@ -71,7 +71,7 @@ class TocGridRow extends GridRow
                     __('editor.article.remove.confirm'),
                     __('grid.action.removeArticle'),
                     $router->url($request, null, null, 'removeArticle', null, ['articleId' => $this->getId(), 'issueId' => $this->issueId]),
-                    'modal_delete'
+                    'negative'
                 ),
                 __('editor.article.remove'),
                 'delete'

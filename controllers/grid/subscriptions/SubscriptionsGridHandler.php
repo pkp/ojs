@@ -74,7 +74,7 @@ abstract class SubscriptionsGridHandler extends GridHandler
                 new AjaxModal(
                     $router->url($request, null, null, 'addSubscription', null, null),
                     __('manager.subscriptions.create'),
-                    'modal_add_subscription',
+                    'side-modal',
                     true
                 ),
                 __('manager.subscriptions.create'),

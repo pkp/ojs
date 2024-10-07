@@ -71,7 +71,7 @@ class IssueGalleyGridRow extends GridRow
                             array_merge($this->getRequestArgs(), ['issueGalleyId' => $issueGalleyId])
                         ),
                         __('editor.issues.editIssueGalley'),
-                        'modal_edit',
+                        'side-modal',
                         true
                     ),
                     __('grid.action.edit'),
@@ -94,7 +94,7 @@ class IssueGalleyGridRow extends GridRow
                             null,
                             array_merge($this->getRequestArgs(), ['issueGalleyId' => $issueGalleyId])
                         ),
-                        'modal_delete'
+                        'negative'
                     ),
                     __('grid.action.delete'),
                     'delete'
