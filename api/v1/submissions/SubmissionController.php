@@ -164,6 +164,7 @@ class SubmissionController extends \PKP\API\v1\submissions\PKPSubmissionControll
 
         $section = Repo::section()->get($publication->getData('sectionId'), $context->getId());
         $locales = $this->getPublicationFormLocales($context, $submission);
+        $submissionLocale = $submission->getData('locale');
 
         $titleAbstract = new TitleAbstractForm(
             $publicationApiUrl,
@@ -172,6 +173,7 @@ class SubmissionController extends \PKP\API\v1\submissions\PKPSubmissionControll
             $section->getData('wordCount'),
             !$section->getData('abstractsNotRequired')
         );
-        return response()->json($titleAbstract->getConfig(), Response::HTTP_OK);
+
+        return response()->json($this->getLocalizedForm($titleAbstract, $submissionLocale, $locales), Response::HTTP_OK);
     }
 }
