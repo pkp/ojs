@@ -7,7 +7,7 @@
  */
 
 // FIX ME Temporarly disabled until the change language logic is moved legacy workflow page
-describe.skip('Change Submission Language', function() {
+describe('Change Submission Language', function() {
 	let user;
 	let author;
 	let password;
@@ -38,40 +38,39 @@ describe.skip('Change Submission Language', function() {
 
 	it('Try to change submission language after publication', function() {
 		cy.login(user, password, 'publicknowledge');
-		cy.get('nav').contains('Active submissions').click();
-		cy.openSubmission()
-		cy.contains('View ' + author.familyName).click({force: true});
-		cy.get(`.pkpPublication__changeSubmissionLanguage > button`).should('not.exist');
+		cy.get('nav').contains('Published').click();
+		cy.openSubmission(author.familyName);
+		cy.get('[data-cy="workflow-controls-left"] button').contains('Change').should('not.exist');
 	});
 
 	it('Change submission language', function() {
 		cy.login(user, password, 'publicknowledge');
-		cy.get('button[id="archive-button"]').click();
-		cy.contains('View ' + author.familyName).click({force: true});
+		cy.get('nav').contains('Published').click();
+		cy.openSubmission(author.familyName);
 		// Unpublish
-		cy.get('button[id="publication-button"]').click();
-		cy.get('#publication button:contains("Unpublish")').click();
-		cy.get('#headlessui-dialog-panel-5 button:contains("Unpublish")').click();
+		cy.openWorkflowMenu('Title & Abstract')
+		cy.get('button:contains("Unpublish")').click();
+		cy.get('[data-cy="dialog"] button:contains("Unpublish")').click();
 		// Change language
-		cy.get(`.pkpPublication__changeSubmissionLanguage > button`).should('be.enabled').click();
+		cy.get(`[data-cy="workflow-controls-left"] button`).contains("Change").should('be.enabled').click();
 		cy.get('#changeSubmissionLanguage').find(`input[value="${newLocaleKey}"]`).click();
 		cy.setTinyMceContent('changeSubmissionLanguageMetadata-title-control', title[newLocaleKey]);
 		cy.setTinyMceContent('changeSubmissionLanguageMetadata-abstract-control', abstract[newLocaleKey]);
 		cy.get('#changeSubmissionLanguage button[label="Confirm"]').click();
-		cy.get(`.pkpPublication__changeSubmissionLanguage > span`).contains(`Current Submission Language: ${newLanguage}`);
+		cy.contains(`Current Submission Language: ${newLanguage}`);
 	});
 
 	it('Change submission language back to the original', function() {
 		cy.findSubmissionAsEditor(user, password, author.familyName);
 		// Change language
-		cy.get('button[id="publication-button"]').click();
-		cy.get(`.pkpPublication__changeSubmissionLanguage > button`).click();
+		cy.openWorkflowMenu('Title & Abstract')
+		cy.get('[data-cy="workflow-controls-left"] button').contains('Change').click();
 		cy.get('#changeSubmissionLanguage').find(`input[value="${originalLocaleKey}"]`).click();
 		cy.get('#changeSubmissionLanguage button[label="Confirm"]').click();
 		// Publish
-		cy.get(`.pkpPublication__changeSubmissionLanguage > span`).contains(`Current Submission Language: ${originalLanguage}`);
-		cy.get('button[id="publication-button"]').click();
-		cy.get('div#publication button:contains("Schedule For Publication")').click();
-		cy.get('div.pkpWorkflow__publishModal button:contains("Publish")').click();
+		cy.contains(`Current Submission Language: ${originalLanguage}`);
+		cy.openWorkflowMenu('Title & Abstract')
+		cy.get('button:contains("Schedule For Publication")').click();
+		cy.get('[data-cy="active-modal"] button:contains("Publish")').click();
 	});
 });
