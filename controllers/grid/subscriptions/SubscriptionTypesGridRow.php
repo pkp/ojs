@@ -57,7 +57,7 @@ class SubscriptionTypesGridRow extends GridRow
                     new AjaxModal(
                         $router->url($request, null, null, 'editSubscriptionType', null, $actionArgs),
                         __('manager.subscriptionTypes.edit'),
-                        'modal_edit',
+                        'side-modal',
                         true
                     ),
                     __('common.edit'),
@@ -72,7 +72,7 @@ class SubscriptionTypesGridRow extends GridRow
                         __('manager.subscriptionTypes.confirmDelete'),
                         __('common.delete'),
                         $router->url($request, null, null, 'deleteSubscriptionType', null, $actionArgs),
-                        'modal_delete'
+                        'negative'
                     ),
                     __('grid.action.delete'),
                     'delete'
