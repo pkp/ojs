@@ -132,7 +132,8 @@ class AnnouncementFeedPlugin extends GenericPlugin
                     'settings',
                     new AjaxModal(
                         $router->url($request, null, null, 'manage', null, ['verb' => 'settings', 'plugin' => $this->getName(), 'category' => 'generic']),
-                        $this->getDisplayName()
+                        $this->getDisplayName(),
+                        'side-modal'
                     ),
                     __('manager.plugins.settings'),
                     null
