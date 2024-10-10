@@ -215,7 +215,8 @@ class ArticlePubMedXmlFilter extends PersistableFilter
             $authorElement->appendChild($doc->createElement('FirstName'))->appendChild($doc->createTextNode(ucfirst($author->getLocalizedGivenName())));
             $authorElement->appendChild($doc->createElement('LastName'))->appendChild($doc->createTextNode(ucfirst($author->getLocalizedFamilyName())));
         }
-        $authorElement->appendChild($doc->createElement('Affiliation'))->appendChild($doc->createTextNode($author->getLocalizedAffiliation()));
+        //fixme: multiple-author-affiliations
+        $authorElement->appendChild($doc->createElement('Affiliations'))->appendChild($doc->createTextNode($author->getLocalizedAffiliationsAsString()));
         // We're storing the ORCID with a URL (http://orcid.org/{$ID}), but the XML expects just the ID
         $orcidId = explode('/', trim($author->getData('orcid') ?? '', '/'));
         $orcidId = array_pop($orcidId);
