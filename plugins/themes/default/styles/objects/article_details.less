@@ -281,6 +281,153 @@
 		}
 	}
 
+	.page_title,
+	.subtitle,
+	ul.authors .name,
+	section.abstract h2 {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	[data-pkp-switcher-target],
+	[class^=switcher-buttons],
+	[class^=switcher-buttons] > span {
+		display: inline-flex;
+	}
+
+	[data-pkp-switcher-target=title] {
+		&, & + .row {
+			margin-top: calc(@triple / 2);
+		}
+	}
+
+	[data-pkp-locale] p:first-of-type {
+		margin-top: 0;
+	}
+
+	[class^=switcher-buttons] {
+		& > span {
+			flex-wrap: wrap;
+			align-content: flex-start;
+			gap: 0.2rem;
+		}
+	}	
+
+	.pkpBadge {
+		display: inline-flex;
+		padding: 0.25em 1em;
+		font-size: @font-tiny;
+		font-weight: @normal;
+		line-height: 1.5em;
+		border: 1px solid @bg-border-color-light;
+		border-radius: 1.2em;
+		color: @text;
+	}
+
+	.pkpBadge--button {
+		background: inherit;
+		text-decoration: none;
+		cursor: pointer;
+	
+		&:hover {
+			border-color: @text;
+			outline: 0;
+		}
+		&:disabled,
+		&:disabled:hover {
+			color: #fff;
+			background: @bg-dark;
+			border-color: @bg-dark;
+			cursor: not-allowed;
+		}
+	}
+
+	.collapse-switcher {
+		display: none;
+	}
+
+	.collapse-button {
+		&:not(.show-button) {
+			display: none;
+		}
+	}
+
+	.collapse-text {
+		&:not(.show-text) {
+			display: none;
+		}
+	}
+
+	.selected-button {
+		font-weight: @bold;
+	}
+
+	.show-button {
+		display: inline-flex;
+		animation: fadeIn 0.7s ease-in-out;
+
+		@keyframes fadeIn {
+			0% {
+				display: none;
+				opacity: 0;
+			}
+		
+			1% {
+				display: inline-flex;
+				opacity: 0;
+			}
+		
+			100% {
+				opacity: 1;
+			}
+		}
+	}
+
+	.show-text {
+		display: inline-flex;
+		animation: fadeIn 0.7s ease-in-out;
+
+		@keyframes fadeIn {
+			0% {
+				display: none;
+				opacity: 0;
+			}
+		
+			1% {
+				display: inline-flex;
+				opacity: 0;
+			}
+		
+			100% {
+				opacity: 1;
+			}
+		}
+	}
+
+	h1, h2 {
+		// Keep the space if no metadata 
+		& .collapse-text:first-of-type:not(.show-text) {
+			visibility: hidden;
+			display: inline-flex;
+			height: @line-lead;
+			width: 0;
+			overflow: hidden;
+		}
+		// Remove the gap
+		& .show-text {
+			order: -1;
+		}
+	}
+
+	// Show inline instead of inline-flex
+	.keywords {
+		& .show-text {
+			display: inline;
+		}
+	}
+
 	@media(min-width: @screen-phone) {
 
 		.entry_details {

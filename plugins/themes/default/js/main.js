@@ -114,3 +114,197 @@
 	});
 
 })(jQuery);
+
+/**
+ * Create language buttons to show multilingual metadata
+ * [data-pkp-locales]: Publication's locales in order
+ * [data-pkp-switcher-text]: Texts for the switchers to control
+ * [data-pkp-switcher-target]: Switchers' containers
+ */
+(() => {
+	function createButtonSwitcher(textsObj, originalLocaleOrder, metadataFieldName, selectedLocale) {
+		// Get all locales for the switcher from the texts
+		const textsElsLocales = textsObj.els.reduce((locales, textEls) => {
+			textEls.forEach((el) => {
+				locales[el.getAttribute('data-pkp-locale')] = el.getAttribute('data-pkp-locale-name');
+			});
+			return locales;
+		}, {});
+
+		// Create containers
+		const spanContainer = document.createElement('span');
+		[
+			['class', `switcher-buttons-${metadataFieldName}`],
+		].forEach((attr) => spanContainer.setAttribute(...attr));
+
+		const spanButtons = document.createElement('span');
+		const spanButtonsId = `switcher-buttons-${metadataFieldName}`;
+		[
+			['id', spanButtonsId],
+		].forEach((attr) => spanButtons.setAttribute(...attr));
+
+		// Create, sort to alphabetical order, and append buttons
+		originalLocaleOrder
+			.map((elLocale) => {
+				if (!textsElsLocales[elLocale]) {
+					return null;
+				}
+				if (!selectedLocale.value) {
+					selectedLocale.value = elLocale;
+				}
+
+				const isSelectedLocale = elLocale === selectedLocale.value;
+				const button = document.createElement('button');
+				[
+					['data-pkp-locale', elLocale],
+					['data-pkp-switcher-button', metadataFieldName],
+					['class', `pkpBadge pkpBadge--button collapse-button${isSelectedLocale ? ' selected-button show-button' : ''}`],
+					['type', 'button'],
+					['aria-controls', isSelectedLocale ? spanButtonsId : textsObj.ids.join(' ')],
+					...isSelectedLocale
+						? [
+							['aria-expanded', false],
+						]
+						: [],
+				].forEach((attr) => button.setAttribute(...attr));
+				button.textContent = textsElsLocales[elLocale];
+
+				return button;
+			})
+			.filter((btn) => btn)
+			.sort((a, b) => a.getAttribute('data-pkp-locale').localeCompare(b.getAttribute('data-pkp-locale')))
+			.forEach((btn) => spanButtons.appendChild(btn));
+
+		// If only one button, set it disabled
+		if (spanButtons.children.length === 1) {
+			spanButtons.children[0].disabled = true;
+		}
+
+		spanContainer.appendChild(spanButtons);
+
+		return spanContainer;
+	}
+
+	/**
+	 * Show or hide switcher's target texts
+	 * If selected locale doesn't match any, all texts are hidden
+	 */
+	function showText(selectedLocale, textsEls) {
+		textsEls.forEach((textsEl) => {
+			textsEl.forEach((textEl) => {
+				const elLocale = textEl.getAttribute('data-pkp-locale');
+				if (elLocale === selectedLocale.value) {
+					textEl.classList.add('show-text');
+				} else {
+					textEl.classList.remove('show-text');
+				}
+			});
+		});
+	}
+
+	/**
+	 * Change/update buttons' aria-attributes
+	 */
+	function switchButtonAria(btnTarget, buttons) {
+		let btnTargetOldAriaControls = btnTarget.getAttribute('aria-controls');
+		let btnPrevSelectedLangAriaControls = null;
+		buttons.forEach((btn) => {
+			// Previously selected langauge button 
+			if (btn.getAttribute('aria-expanded')) {
+				btnPrevSelectedLangAriaControls = btn.getAttribute('aria-controls');
+				btn.removeAttribute('aria-expanded');
+				btn.setAttribute('aria-controls', btnTargetOldAriaControls);
+			}
+		});
+		btnTarget.setAttribute('aria-expanded', true);
+		btnTarget.setAttribute('aria-controls', btnPrevSelectedLangAriaControls);
+	}
+
+	function setButtonSwitcher(textsObj, switcherTargetEl, metadataFieldName, originalLocaleOrder) {
+		// Currently selected language for buttons and texts
+		const selectedLocale = {value: null};
+		const buttonSwitcherEl = createButtonSwitcher(textsObj, originalLocaleOrder, metadataFieldName, selectedLocale);
+
+		// Sync buttons and shown texts
+		showText(selectedLocale, textsObj.els);
+
+		const buttons = buttonSwitcherEl.querySelectorAll('button');
+
+		// Add listeners if more than one button
+		if (buttons.length > 1) {
+			// Selected language shows/hides other switcher buttons, and otherwise switches language and shows text
+			buttonSwitcherEl.addEventListener('click', (evt) => {
+				const btnTarget = evt.target;
+				if (btnTarget.type === 'button') {
+					if (btnTarget.getAttribute('data-pkp-locale') === selectedLocale.value) {
+						buttons.forEach((btn) => {
+							if (btn.getAttribute('data-pkp-locale') !== selectedLocale.value) {
+								btn.classList.toggle('show-button');
+							}
+						});
+						btnTarget.setAttribute('aria-expanded', true);
+					} else {
+						selectedLocale.value = btnTarget.getAttribute('data-pkp-locale');
+						switchButtonAria(btnTarget, buttons);
+						buttons.forEach((btn) => {
+							if (btn.getAttribute('data-pkp-locale') === selectedLocale.value) {
+								btn.classList.add('selected-button');
+							} else {
+								btn.classList.remove('selected-button');
+							}
+						});
+						showText(selectedLocale, textsObj.els);
+					}
+				}
+			});
+			// Hide switcher (except selected language) buttons when it loses focus
+			buttonSwitcherEl.addEventListener('focusout', (evt) => {
+				if (!evt.relatedTarget || evt.relatedTarget.getAttribute('data-pkp-switcher-button') !== metadataFieldName) {
+					buttons.forEach((btn) => {
+						if (btn.getAttribute('data-pkp-locale') !== selectedLocale.value) {
+							btn.classList.remove('show-button');
+						} else {
+							btn.setAttribute('aria-expanded', false);
+						}
+					});
+				}
+			});
+		}
+
+		// Append and show switcher
+		switcherTargetEl.append(buttonSwitcherEl);
+		switcherTargetEl.classList.remove('collapse-switcher');
+	}
+
+	/**
+	 * Get all multilingual texts and ids for the switchers
+	 */
+	function getSwitcherTexts() {
+		const textsObj = {};
+		document.querySelectorAll('[data-pkp-switcher-text]').forEach((textsEl) => {
+			const key = textsEl.getAttribute('data-pkp-switcher-text');
+			if (!textsObj[key]) {
+				textsObj[key] = {ids: [], els: []};
+			}
+			textsObj[key].ids.push(textsEl.id);
+			textsObj[key].els.push([...textsEl.querySelectorAll('[data-pkp-locale]')]);
+		});
+		return textsObj;
+	}
+
+	(() => {
+		const originalLocaleOrder = document.querySelector('[data-pkp-locales]')?.getAttribute('data-pkp-locales').split(',');
+		const switcherTargetEls = document.querySelectorAll('[data-pkp-switcher-target]');
+		if (!originalLocaleOrder || !switcherTargetEls.length) {
+			return;
+		}
+		const switcherTextsObj = getSwitcherTexts();
+		// Get target elements for switchers and create them
+		switcherTargetEls.forEach((switcherTargetEl) => {
+			const metadataFieldName = switcherTargetEl.getAttribute('data-pkp-switcher-target');
+			if (switcherTextsObj[metadataFieldName]) {
+				setButtonSwitcher(switcherTextsObj[metadataFieldName], switcherTargetEl, metadataFieldName, originalLocaleOrder);
+			}
+		});
+	})();
+})();

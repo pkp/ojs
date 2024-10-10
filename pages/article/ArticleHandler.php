@@ -24,6 +24,7 @@ use APP\issue\IssueAction;
 use APP\observers\events\UsageEvent;
 use APP\payment\ojs\OJSCompletedPaymentDAO;
 use APP\payment\ojs\OJSPaymentManager;
+use APP\publication\Publication;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
@@ -357,6 +358,12 @@ class ArticleHandler extends Handler
                 $templateMgr->assign('purchaseArticleEnabled', true);
             }
 
+            $templateMgr->assign('pubLocaleData', $this->getMultilingualMetadataOpts(
+                $publication,
+                $templateMgr->getTemplateVars('currentLocale'),
+                $templateMgr->getTemplateVars('activeTheme')->getOption('showMultilingualMetadata') ?: [],
+            ));
+
             if (!Hook::call('ArticleHandler::view', [&$request, &$issue, &$article, $publication])) {
                 $templateMgr->display('frontend/pages/article.tpl');
                 event(new UsageEvent(Application::ASSOC_TYPE_SUBMISSION, $context, $article, null, null, $this->issue));
@@ -615,5 +622,27 @@ class ArticleHandler extends Handler
             $request->redirect(null, 'search');
         }
         return true;
+    }
+
+    /**
+     * Multilingual publication metadata for template:
+     * showMultilingualMetadataOpts - Show metadata in other languages: title (+ subtitle), keywords, abstract, etc.
+     */
+    protected function getMultilingualMetadataOpts(Publication $publication, string $currentUILocale, array $showMultilingualMetadataOpts): array
+    {
+        $langNames = collect($publication->getLanguageNames())
+            ->sortKeys();
+        $langs = $langNames->keys();
+        return [
+            'opts' => array_flip($showMultilingualMetadataOpts),
+            'localeNames' => $langNames,
+            'langTags' => $langNames->map(fn ($_, $l) => preg_replace(['/@.+$/', '/_/'], ['', '-'], $l))->toArray() /* remove @ and text after */,
+            'localeOrder' => collect($publication->getLocalePrecedence())
+                ->intersect($langs) /* remove locales not in publication's languages */
+                ->concat($langs)
+                ->unique()
+                ->values()
+                ->toArray(),
+        ];
     }
 }
