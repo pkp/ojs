@@ -104,7 +104,7 @@ class URNSettingsForm extends Form
                 __('plugins.pubIds.urn.manager.settings.urnReassign.confirm'),
                 __('common.delete'),
                 $request->url(null, null, 'manage', null, ['verb' => 'clearPubIds', 'plugin' => $plugin->getName(), 'category' => 'pubIds']),
-                'modal_delete'
+                'negative'
             ),
             __('plugins.pubIds.urn.manager.settings.urnReassign'),
             'delete'

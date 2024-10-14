@@ -210,7 +210,7 @@ class URNPubIdPlugin extends PubIdPlugin
                 __('plugins.pubIds.urn.editor.clearObjectsURN.confirm'),
                 __('common.delete'),
                 $request->url(null, null, 'clearPubId', null, $userVars),
-                'modal_delete'
+                'negative'
             ),
             __('plugins.pubIds.urn.editor.clearObjectsURN'),
             'delete',
@@ -226,7 +226,7 @@ class URNPubIdPlugin extends PubIdPlugin
                     __('plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm'),
                     __('common.delete'),
                     $request->url(null, null, 'clearIssueObjectsPubIds', null, $userVars),
-                    'modal_delete'
+                    'negative'
                 ),
                 __('plugins.pubIds.urn.editor.clearIssueObjectsURN'),
                 'delete',

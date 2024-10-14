@@ -162,7 +162,7 @@ class ArticleGalleyGridHandler extends GridHandler
                 new AjaxModal(
                     $request->getRouter()->url($request, null, null, 'addGalley', null, $this->getRequestArgs()),
                     __('submission.layout.newGalley'),
-                    'modal_add_item'
+                    'side-modal'
                 ),
                 __('grid.action.addGalley'),
                 'add_item'
