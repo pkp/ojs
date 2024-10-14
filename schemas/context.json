@@ -383,6 +383,14 @@
 			"validation": [
 				"nullable"
 			]
+		},
+		"reviewerSuggestionsHelp": {
+			"type": "string",
+			"multilingual": true,
+			"validation": [
+				"nullable"
+			],
+			"defaultLocaleKey": "default.submission.step.reviewerSuggestions"
 		}
 	}
 }

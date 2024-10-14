@@ -18,6 +18,37 @@
 			"validation": [
 				"nullable"
 			]
+		},
+		"reviewerSuggestions": {
+			"type": "array",
+			"description": "Information about suggested reviewers at the time of submission.",
+			"readOnly": true,
+			"items": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "integer"
+					},
+					"familyName" : {
+						"type": "string"
+					},
+					"givenName": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"orcidId": {
+						"type": "string",
+						"validation": [
+							"nullable"
+						]
+					},
+					"suggestionReason": {
+						"type": "string"
+					}
+				}
+			}
 		}
 	}
 }
