@@ -24,6 +24,7 @@ use APP\sushi\TR_J3;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class StatsSushiController extends \PKP\API\v1\stats\sushi\PKPStatsSushiController
 {
@@ -52,7 +53,7 @@ class StatsSushiController extends \PKP\API\v1\stats\sushi\PKPStatsSushiControll
      * A customizable report detailing activity at the journal level
      * that allows the user to apply filters and select other configuration options for the report.
      */
-    public function getReportsTR(Request $illuminateRequest): JsonResponse
+    public function getReportsTR(Request $illuminateRequest): JsonResponse|StreamedResponse
     {
         return $this->getReportResponse(new TR(), $illuminateRequest);
     }
@@ -61,7 +62,7 @@ class StatsSushiController extends \PKP\API\v1\stats\sushi\PKPStatsSushiControll
      * COUNTER 'Journal Usage by Access Type' [TR_J3].
      * This is a Standard View of Title Master Report that reports on usage of journal content for all Metric_Types broken down by Access_Type.
      */
-    public function getReportsTRJ3(Request $illuminateRequest): JsonResponse
+    public function getReportsTRJ3(Request $illuminateRequest): JsonResponse|StreamedResponse
     {
         return $this->getReportResponse(new TR_J3(), $illuminateRequest);
     }
@@ -71,7 +72,7 @@ class StatsSushiController extends \PKP\API\v1\stats\sushi\PKPStatsSushiControll
      * A customizable report detailing activity at the article level
      * that allows the user to apply filters and select other configuration options for the report.
      */
-    public function getReportsIR(Request $illuminateRequest): JsonResponse
+    public function getReportsIR(Request $illuminateRequest): JsonResponse|StreamedResponse
     {
         return $this->getReportResponse(new IR(), $illuminateRequest);
     }
@@ -80,7 +81,7 @@ class StatsSushiController extends \PKP\API\v1\stats\sushi\PKPStatsSushiControll
      * COUNTER 'Journal Article Requests' [IR_A1].
      * This is a Standard View of Item Master Report that reports on journal article requests at the article level.
      */
-    public function getReportsIRA1(Request $illuminateRequest): JsonResponse
+    public function getReportsIRA1(Request $illuminateRequest): JsonResponse|StreamedResponse
     {
         return $this->getReportResponse(new IR_A1(), $illuminateRequest);
     }

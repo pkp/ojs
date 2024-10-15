@@ -60,8 +60,25 @@ class TR_J3 extends TR
             'customer_id',
             'begin_date',
             'end_date',
-            'platform'
+            'platform',
+            '_', // for ajax requests
         ];
+    }
+
+    /**
+     * Get filters supported by this report.
+     */
+    public function getSupportedFilters(): array
+    {
+        return [];
+    }
+
+    /**
+     * Get attributes supported by this report.
+     */
+    public function getSupportedAttributes(): array
+    {
+        return [];
     }
 
     /**
@@ -104,5 +121,11 @@ class TR_J3 extends TR
     public function setAttributes(array $attributes): void
     {
         $this->attributes = [];
+    }
+
+    /** Get report specific form fields */
+    public static function getReportSettingsFormFields(): array
+    {
+        return parent::getCommonReportSettingsFormFields();
     }
 }
