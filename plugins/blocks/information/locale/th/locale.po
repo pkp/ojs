@@ -1,7 +1,7 @@
 # Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-10-17 09:32+0000\n"
+"PO-Revision-Date: 2024-10-17 09:54+0000\n"
 "Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
 "Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/"
 "blocks-information/th/>\n"
@@ -14,3 +14,9 @@ msgstr ""
 
 msgid "plugins.block.information.displayName"
 msgstr "บล็อกข้อมูล"
+
+msgid "plugins.block.information.description"
+msgstr "ปลั๊กอินนี้ให้ลิงก์ข้อมูลที่แสดงในแถบด้านข้าง"
+
+msgid "plugins.block.information.link"
+msgstr "ข้อมูล"
