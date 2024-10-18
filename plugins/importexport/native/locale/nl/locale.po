@@ -1,11 +1,12 @@
 # Kay <kay.pepping@huygens.knaw.nl>, 2024.
+# Dorien van Rheenen <d.van.rheenen@rug.nl>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:43+00:00\n"
-"PO-Revision-Date: 2024-03-28 10:44+0000\n"
-"Last-Translator: Kay <kay.pepping@huygens.knaw.nl>\n"
+"PO-Revision-Date: 2024-10-19 11:40+0000\n"
+"Last-Translator: Dorien van Rheenen <d.van.rheenen@rug.nl>\n"
 "Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-native/nl/>\n"
 "Language: nl\n"
@@ -19,7 +20,7 @@ msgid "plugins.importexport.native.displayName"
 msgstr "Native XML plugin"
 
 msgid "plugins.importexport.native.description"
-msgstr "Importeer en exporteer artikels en nummers in het XML formaat van OJS."
+msgstr "Importeer en exporteer artikelen en nummers in het XML formaat van OJS."
 
 msgid "plugins.importexport.native.import"
 msgstr "Importeer"
@@ -28,10 +29,10 @@ msgid "plugins.importexport.native.import.instructions"
 msgstr "Upload een XML bestand om te importeren"
 
 msgid "plugins.importexport.native.exportSubmissionsSelect"
-msgstr "Selecteer artikels om te exporteren"
+msgstr "Selecteer artikelen om te exporteren"
 
 msgid "plugins.importexport.native.exportSubmissions"
-msgstr "Exporteer artikels"
+msgstr "Exporteer artikelen"
 
 msgid "plugins.importexport.native.exportIssues"
 msgstr "Exporteer nummers"
@@ -86,7 +87,7 @@ msgstr ""
 
 msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
 msgstr ""
-"De sectietitels van \"{$section1Title}\" en \"{$section2Title}\" in  het "
+"De sectietitels van \"{$section1Title}\" en \"{$section2Title}\" in het "
 "nummer \"{$issueTitle}\" komen overeen met de verschillende secties in het "
 "tijdschrift."
 
@@ -99,9 +100,9 @@ msgstr ""
 
 msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
 msgstr ""
-"De afkortingen van secties \"{$section1Abbrev}\" en \"{$section2Abbrev}\" "
-"in  het nummer \"{$issueTitle}\" komen overeen met de verschillende secties "
-"in het tijdschrift."
+"De afkortingen van secties \"{$section1Abbrev}\" en \"{$section2Abbrev}\" in "
+"het nummer \"{$issueTitle}\" komen overeen met de verschillende secties in "
+"het tijdschrift."
 
 msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
 msgstr ""
