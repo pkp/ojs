@@ -1,13 +1,14 @@
 # Hans Spijker <hans.spijker@huygens.knaw.nl>, 2021.
 # Kay Pepping <openjournalsnl@gmail.com>, 2023, 2024.
 # Pia Spriensma <p.j.huizinga@rug.nl>, 2024.
+# Dorien van Rheenen <d.van.rheenen@rug.nl>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
 "PO-Revision-Date: 2024-10-19 11:40+0000\n"
-"Last-Translator: Pia Spriensma <p.j.huizinga@rug.nl>\n"
+"Last-Translator: Dorien van Rheenen <d.van.rheenen@rug.nl>\n"
 "Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/locale/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -2209,8 +2210,8 @@ msgstr ""
 
 msgid "log.review.reviewAcceptedByProxy"
 msgstr ""
-"{$userName} heeft de review voor ronde  {$round} van inzending "
-"{$submissionId} namens {$reviewerName} geaccepteerd."
+"{$userName} heeft de review voor ronde {$round} van inzending {$submissionId}"
+" namens {$reviewerName} geaccepteerd."
 
 msgid "log.review.reviewFileByProxy"
 msgstr ""
@@ -2232,7 +2233,7 @@ msgstr ""
 
 msgid "log.copyedit.initiate"
 msgstr ""
-"Tekstredactie voor inzending  {$submissionId} is gestart door "
+"Tekstredactie voor inzending {$submissionId} is gestart door "
 "{$copyeditorName}."
 
 msgid "log.copyedit.copyeditFileSet"
@@ -2367,7 +2368,7 @@ msgid "user.authorization.copyeditorAssignmentMissing"
 msgstr "Geen toegang! U bent niet de tekstredacteur voor dit artikel."
 
 msgid "user.authorization.noContext"
-msgstr "Geen tijdschrift beschikbaar!"
+msgstr "Er is geen tijdschrift gevonden dat aan je verzoek voldoet."
 
 msgid "user.authorization.sectionAssignment"
 msgstr ""
