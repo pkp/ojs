@@ -80,7 +80,7 @@ class SubscriptionTypesGridHandler extends GridHandler
                 new AjaxModal(
                     $router->url($request, null, null, 'addSubscriptionType', null, null),
                     __('manager.subscriptionTypes.create'),
-                    'side-modal',
+                    null,
                     true
                 ),
                 __('manager.subscriptionTypes.create'),

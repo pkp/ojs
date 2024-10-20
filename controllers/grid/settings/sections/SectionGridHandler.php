@@ -105,7 +105,6 @@ class SectionGridHandler extends SetupGridHandler
                 new AjaxModal(
                     $router->url($request, null, null, 'addSection', null, ['gridId' => $this->getId()]),
                     __('manager.sections.create'),
-                    'side-modal'
                 ),
                 __('manager.sections.create'),
                 'add_section'

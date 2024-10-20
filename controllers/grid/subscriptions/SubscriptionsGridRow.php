@@ -58,7 +58,7 @@ class SubscriptionsGridRow extends GridRow
                 new AjaxModal(
                     $router->url($request, null, null, 'editSubscription', null, $actionArgs),
                     __('manager.subscriptions.edit'),
-                    'side-modal',
+                    null,
                     true
                 ),
                 __('common.edit'),

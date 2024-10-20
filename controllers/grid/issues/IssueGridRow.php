@@ -52,7 +52,7 @@ class IssueGridRow extends GridRow
                     new AjaxModal(
                         $router->url($request, null, null, 'editIssue', null, ['issueId' => $issueId]),
                         __('editor.issues.editIssue', ['issueIdentification' => htmlspecialchars($issue->getIssueIdentification())]),
-                        'side-modal',
+                        null,
                         true
                     ),
                     __('grid.action.edit'),
@@ -101,7 +101,6 @@ class IssueGridRow extends GridRow
                                 ['issueId' => $issueId]
                             ),
                             __('editor.issues.publishIssue'),
-                            'primary'
                         ),
                         __('editor.issues.publishIssue'),
                         'advance'

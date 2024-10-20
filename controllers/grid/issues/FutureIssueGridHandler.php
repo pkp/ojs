@@ -46,7 +46,6 @@ class FutureIssueGridHandler extends IssueGridHandler
                 new AjaxModal(
                     $router->url($request, null, null, 'addIssue', null, ['gridId' => $this->getId()]),
                     __('grid.action.addIssue'),
-                    'side-modal'
                 ),
                 __('grid.action.addIssue'),
                 'add_category'

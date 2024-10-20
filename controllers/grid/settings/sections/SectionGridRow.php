@@ -46,7 +46,7 @@ class SectionGridRow extends GridRow
                     new AjaxModal(
                         $router->url($request, null, null, 'editSection', null, ['sectionId' => $sectionId]),
                         __('grid.action.edit'),
-                        'side-modal',
+                        null,
                         true
                     ),
                     __('grid.action.edit'),
