@@ -68,7 +68,8 @@ class SectionGridCellProvider extends GridCellProvider
                                 'activateSection',
                                 null,
                                 ['sectionKey' => $row->getId()]
-                            )
+                            ),
+                            'primary'
                         )
                     )];
                 } else {
@@ -85,7 +86,8 @@ class SectionGridCellProvider extends GridCellProvider
                                 'deactivateSection',
                                 null,
                                 ['sectionKey' => $row->getId()]
-                            )
+                            ),
+                            'negative'
                         )
                     )];
                 }
