@@ -464,7 +464,9 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('button').contains('Create New Version').click();
 		cy.contains('Are you sure you want to create a new version?');
 		cy.get('div[role=dialog]:contains("Create New Version")').get('button').contains('Yes').click();
-		cy.wait(3000);
+		
+		// Once there is 'in progress' overlay when creating new version this can be improved
+		cy.wait(10000);
 
 		// Toggle between versions
 		cy.get('button').contains('All Versions').click();
