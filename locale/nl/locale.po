@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2024-10-19 11:40+0000\n"
-"Last-Translator: Dorien van Rheenen <d.van.rheenen@rug.nl>\n"
+"PO-Revision-Date: 2024-10-21 19:28+0000\n"
+"Last-Translator: Pia Spriensma <p.j.huizinga@rug.nl>\n"
 "Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/locale/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -149,7 +149,7 @@ msgid "section.abbreviation"
 msgstr "Afkorting"
 
 msgid "section.abbreviation.example"
-msgstr "(Bijvoorbeeld: Artikels=ART)"
+msgstr "(Bijvoorbeeld: Artikelen=ART)"
 
 msgid "section.policy"
 msgstr "Sectiebeleid"
@@ -158,13 +158,13 @@ msgid "article.article"
 msgstr "Artikel"
 
 msgid "article.articles"
-msgstr "Artikels"
+msgstr "Artikelen"
 
 msgid "common.publication"
 msgstr "Artikel"
 
 msgid "common.publications"
-msgstr "Artikels"
+msgstr "Artikelen"
 
 msgid "article.submissionId"
 msgstr "Inzending ID"
@@ -1040,7 +1040,7 @@ msgid "submission.layout.galley.remoteURL"
 msgstr "URL van inhoud die elders wordt aangeboden"
 
 msgid "reviewer.pendingReviews"
-msgstr "Artikels in afwachting van review"
+msgstr "Artikelen in afwachting van review"
 
 msgid "reviewer.completedReviews"
 msgstr "Gereed"
@@ -1554,7 +1554,7 @@ msgid "search.browseAuthorIndex"
 msgstr "Blader door de auteursindex"
 
 msgid "search.searchFor"
-msgstr "Doorzoek artikels op"
+msgstr "Doorzoek artikelen op"
 
 msgid "search.withinJournal"
 msgstr "Binnen"
