@@ -124,6 +124,30 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
             'default' => 'none',
         ]);
 
+        $this->addOption('themeOptionTest', 'FieldOptions', [
+            'label' => 'test',
+            'description' => 'test',
+            'options' => [
+                [
+                    'value' => 'opt1',
+                    'label' => 'option 1',
+                ],
+                [
+                    'value' => 'opt2',
+                    'label' => 'option 2',
+                ],
+                [
+                    'value' => 'opt3',
+                    'label' => 'option 3',
+                ],
+                [
+                    'value' => 'opt4',
+                    'label' => 'option 4',
+                ],
+            ],
+            'value' => $this->getOption('themeOptionTest') ?: [],
+        ]);
+
 
         // Load primary stylesheet
         $this->addStyle('stylesheet', 'styles/index.less');
