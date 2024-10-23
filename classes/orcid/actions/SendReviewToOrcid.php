@@ -22,6 +22,6 @@ class SendReviewToOrcid extends PKPSendReviewToOrcid
     /** @inheritDoc */
     public function execute(): void
     {
-        dispatch(new DepositOrcidReview($this->reviewAssignment->getId()));
+        dispatch(new DepositOrcidReview($this->reviewAssignmentId));
     }
 }
