@@ -1,0 +1,56 @@
+/*
+ * @file  plugins/themes/default/styles/pages/masthead.less
+ *
+ * Copyright (c) 2014-2024 Simon Fraser University
+ * Copyright (c) 2003-2024 John Willinsky
+ * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles applying to the masthead and editorial history page
+ * @link templates/frontend/pages/editorialMasthead.tpl
+ * @link templates/frontend/pages/editorialHistory.tpl
+ */
+
+.page_masthead {
+	h2 {
+		margin-top: @double;
+		margin-bottom: @base;
+	}
+
+	.user_listing {
+		li {
+			margin-bottom: @double;
+		}
+		li > span {
+			display: block;
+		}
+		list-style-type: none;
+		padding: 0;
+		margin-top: @half;
+
+		.name {
+			font-weight: bold;
+		}
+
+		.affiliation {
+			font-size: @font-sml;
+			color: @text-light;
+		}
+
+		.date_start {
+			font-size: @font-sml;
+			color: @text-light;
+		}
+
+		.orcid {
+			font-size: @font-sml;
+			margin-left: 0.2rem;
+			margin-right: 0.2rem;
+		}
+
+		.orcid_icon {
+			width: 1.4rem;
+			height: 1.4rem;
+			margin: 0;
+		}
+	}
+}
