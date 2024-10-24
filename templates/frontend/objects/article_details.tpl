@@ -113,6 +113,7 @@
 							<span class="name">
 								{$author->getFullName()|escape}
 							</span>
+                            <!-- //fixme: multiple-author-affiliations -->
 							{if $author->getLocalizedData('affiliation')}
 								<span class="affiliation">
 									{$author->getLocalizedData('affiliation')|escape}
@@ -223,6 +224,7 @@
 						{if $author->getLocalizedData('biography')}
 							<li class="sub_item">
 								<div class="label">
+                                    <!-- //fixme: multiple-author-affiliations -->
 									{if $author->getLocalizedData('affiliation')}
 										{capture assign="authorName"}{$author->getFullName()|escape}{/capture}
 										{capture assign="authorAffiliation"} {$author->getLocalizedData('affiliation')|escape} {/capture}

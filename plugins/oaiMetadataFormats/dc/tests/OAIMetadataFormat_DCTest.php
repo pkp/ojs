@@ -88,6 +88,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $author = new Author();
         $author->setGivenName('author-firstname', 'en');
         $author->setFamilyName('author-lastname', 'en');
+        //fixme: multiple-author-affiliations
         $author->setAffiliation('author-affiliation', 'en');
         $author->setEmail('someone@example.com');
 

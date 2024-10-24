@@ -175,6 +175,7 @@ class ArticleReportPlugin extends ReportPlugin
                         $author->getLocalizedFamilyName(),
                         $author->getData('orcid'),
                         $author->getData('country'),
+                        //fixme: multiple-author-affiliations
                         $author->getLocalizedData('affiliation'),
                         $author->getData('email'),
                         $author->getData('url'),

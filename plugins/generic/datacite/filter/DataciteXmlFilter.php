@@ -323,6 +323,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                     $creators[] = [
                         'name' => $author->getFullName(false, true, $publication->getData('locale')),
                         'orcid' => $author->getOrcid(),
+                        //fixme: multiple-author-affiliations
                         'affiliation' => $author->getLocalizedData('affiliation', $publication->getData('locale')),
                         'ror' => $author->getData('rorId') ?? null
                     ];

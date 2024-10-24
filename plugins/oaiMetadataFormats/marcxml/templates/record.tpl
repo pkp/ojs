@@ -1,8 +1,8 @@
 {**
  * plugins/oaiMetadataFormats/marcxml/record.tpl
  *
- * Copyright (c) 2013-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2013-2024 Simon Fraser University
+ * Copyright (c) 2003-2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * MARCXML-formatted metadata record for an article
@@ -43,8 +43,8 @@
 	{foreach from=$authors item=author}
 		<datafield tag="{if $authors|@count==1}100{else}720{/if}" ind1="1" ind2=" ">
 			<subfield code="a">{$author->getFullName(false, true, $journal->getPrimaryLocale())|escape}</subfield>
-			{assign var=affiliation value=$author->getAffiliation($journal->getPrimaryLocale())}
-			{if $affiliation}<subfield code="u">{$affiliation|escape}</subfield>{/if}
+			{assign var=affiliations value=$author->getLocalizedAffiliationsAsString($journal->getPrimaryLocale())}
+			{if $affiliations}<subfield code="u">{$affiliations|escape}</subfield>{/if}
 			{if $author->getUrl()}<subfield code="0">{$author->getUrl()|escape}</subfield>{/if}
 			{if $author->getData('orcid')}<subfield code="0">{$author->getData('orcid')|escape}</subfield>{/if}
 		</datafield>
