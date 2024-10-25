@@ -30,22 +30,49 @@
 						"type": "integer"
 					},
 					"familyName" : {
-						"type": "string"
+						"type": "string",
+						"multilingual": true,
+						"apiSummary": true
 					},
 					"givenName": {
-						"type": "string"
+						"type": "string",
+						"multilingual": true,
+						"apiSummary": true
+					},
+					"fullName": {
+						"type": "string",
+						"multilingual": true,
+						"apiSummary": true
 					},
 					"email": {
-						"type": "string"
+						"type": "string",
+						"apiSummary": true
 					},
 					"orcidId": {
 						"type": "string",
+						"apiSummary": true,
 						"validation": [
 							"nullable"
 						]
 					},
 					"suggestionReason": {
-						"type": "string"
+						"type": "string",
+						"multilingual": true,
+						"apiSummary": true
+					},
+					"affiliation" : {
+						"type": "string",
+						"multilingual": true,
+						"apiSummary": true
+					},
+					"approvedAt": {
+						"type": "string",
+						"apiSummary": true,
+						"description": "The date suggestion was approved as reviewer.",
+						"validation": [
+							"nullable",
+							"date:Y-m-d H:i:s"
+						]
 					}
 				}
 			}
