@@ -17,6 +17,7 @@ namespace APP\plugins\generic\dublinCoreMeta;
 use APP\facades\Repo;
 use APP\template\TemplateManager;
 use PKP\core\PKPApplication;
+use PKP\i18n\LocaleConversion;
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
 
@@ -83,7 +84,7 @@ class DublinCoreMetaPlugin extends GenericPlugin
         if ($supportingAgencies = $publication->getData('supportingAgencies')) {
             foreach ($supportingAgencies as $locale => $localeSupportingAgencies) {
                 foreach ($localeSupportingAgencies as $i => $supportingAgency) {
-                    $templateMgr->addHeader('dublinCoreSponsor' . $locale . $i++, '<meta name="DC.Contributor.Sponsor" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($supportingAgency) . '"/>');
+                    $templateMgr->addHeader('dublinCoreSponsor' . $locale . $i++, '<meta name="DC.Contributor.Sponsor" xml:lang="' . htmlspecialchars(LocaleConversion::getIso1FromLocale($locale)) . '" content="' . htmlspecialchars($supportingAgency) . '"/>');
                 }
             }
         }
@@ -91,7 +92,7 @@ class DublinCoreMetaPlugin extends GenericPlugin
         if ($coverages = $publication->getData('coverage')) {
             foreach ($coverages as $locale => $coverage) {
                 if ($coverage != '') {
-                    $templateMgr->addHeader('dublinCoreCoverage' . $locale, '<meta name="DC.Coverage" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars(strip_tags($coverage)) . '"/>');
+                    $templateMgr->addHeader('dublinCoreCoverage' . $locale, '<meta name="DC.Coverage" xml:lang="' . htmlspecialchars(LocaleConversion::getIso1FromLocale($locale)) . '" content="' . htmlspecialchars(strip_tags($coverage)) . '"/>');
                 }
             }
         }
@@ -115,7 +116,7 @@ class DublinCoreMetaPlugin extends GenericPlugin
         $abstracts = $publication->getData('abstract') ?: [];
         foreach ($abstracts as $locale => $abstract) {
             if ($abstract != '') {
-                $templateMgr->addHeader('dublinCoreAbstract' . $locale, '<meta name="DC.Description" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars(strip_tags($abstract)) . '"/>');
+                $templateMgr->addHeader('dublinCoreAbstract' . $locale, '<meta name="DC.Description" xml:lang="' . htmlspecialchars(LocaleConversion::getIso1FromLocale($locale)) . '" content="' . htmlspecialchars(strip_tags($abstract)) . '"/>');
             }
         }
 
@@ -172,14 +173,14 @@ class DublinCoreMetaPlugin extends GenericPlugin
         if ($subjects = $publication->getData('subjects')) {
             foreach ($subjects as $locale => $localeSubjects) {
                 foreach ($localeSubjects as $i => $subject) {
-                    $templateMgr->addHeader('dublinCoreSubject' . $locale . $i++, '<meta name="DC.Subject" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($subject) . '"/>');
+                    $templateMgr->addHeader('dublinCoreSubject' . $locale . $i++, '<meta name="DC.Subject" xml:lang="' . htmlspecialchars(LocaleConversion::getIso1FromLocale($locale)) . '" content="' . htmlspecialchars($subject) . '"/>');
                 }
             }
         }
         if ($keywords = $publication->getData('keywords')) {
             foreach ($keywords as $locale => $localeKeywords) {
                 foreach ($localeKeywords as $i => $keyword) {
-                    $templateMgr->addHeader('dublinCoreKeyword' . $locale . $i++, '<meta name="DC.Subject" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($keyword) . '"/>');
+                    $templateMgr->addHeader('dublinCoreKeyword' . $locale . $i++, '<meta name="DC.Subject" xml:lang="' . htmlspecialchars(LocaleConversion::getIso1FromLocale($locale)) . '" content="' . htmlspecialchars($keyword) . '"/>');
                 }
             }
         }
@@ -187,7 +188,7 @@ class DublinCoreMetaPlugin extends GenericPlugin
         $templateMgr->addHeader('dublinCoreTitle', '<meta name="DC.Title" content="' . htmlspecialchars($publication->getLocalizedFullTitle($publicationLocale)) . '"/>');
         foreach ($publication->getFullTitles() as $locale => $title) {
             if ($title != '' && $locale != $publicationLocale) {
-                $templateMgr->addHeader('dublinCoreAltTitle' . $locale, '<meta name="DC.Title.Alternative" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars($title) . '"/>');
+                $templateMgr->addHeader('dublinCoreAltTitle' . $locale, '<meta name="DC.Title.Alternative" xml:lang="' . htmlspecialchars(LocaleConversion::getIso1FromLocale($locale)) . '" content="' . htmlspecialchars($title) . '"/>');
             }
         }
 
@@ -195,7 +196,7 @@ class DublinCoreMetaPlugin extends GenericPlugin
         if ($types = $publication->getData('type')) {
             foreach ($types as $locale => $type) {
                 if ($type != '') {
-                    $templateMgr->addHeader('dublinCoreType' . $locale, '<meta name="DC.Type" xml:lang="' . htmlspecialchars(substr($locale, 0, 2)) . '" content="' . htmlspecialchars(strip_tags($type)) . '"/>');
+                    $templateMgr->addHeader('dublinCoreType' . $locale, '<meta name="DC.Type" xml:lang="' . htmlspecialchars(LocaleConversion::getIso1FromLocale($locale)) . '" content="' . htmlspecialchars(strip_tags($type)) . '"/>');
                 }
             }
         }
