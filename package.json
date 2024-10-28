@@ -52,6 +52,7 @@
     "cypress": "^12.17.1",
     "cypress-failed-log": "^2.7.0",
     "cypress-file-upload": "^5.0.8",
+    "cypress-iframe": "^1.0.1",
     "cypress-wait-until": "^1.7.1",
     "eslint": "^8.48.0",
     "eslint-plugin-vue": "^9.17.0",
