@@ -42,6 +42,7 @@ module.exports = defineConfig({
       'cypress/tests/integration/**/*.cy.{js,jsx,ts,tsx}',
       'lib/pkp/cypress/tests/**/*.cy.{js,jsx,ts,tsx}',
     ],
+    redirectionLimit: 1000,
     experimentalRunAllSpecs: true,
   },
   // Allow cypress to interact with iframes
