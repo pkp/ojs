@@ -99,7 +99,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
                 $articleNode->appendChild($doiNode);
             }
 
-            $articleNode->appendChild($doc->createElement('Language'))->appendChild($doc->createTextNode(LocaleConversion::get3LetterFrom2LetterIsoLanguage(substr($locale, 0, 2))));
+            $articleNode->appendChild($doc->createElement('Language'))->appendChild($doc->createTextNode(LocaleConversion::get3LetterIsoFromLocale($locale)));
 
             $authorListNode = $doc->createElement('AuthorList');
             foreach ($publication->getData('authors') ?? [] as $author) {
