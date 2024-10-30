@@ -83,9 +83,9 @@ describe('Data suite tests', function() {
 		cy.get('textarea[name="customHeaders-en"]').type('<meta name="pkp" content="Test metatag.">', {delay: 0});
 		cy.get('div[id=indexing]').find('button').contains('Save').click();
 
-		cy.get('label[for="searchIndexing-searchDescription-control-en"] ~ button.tooltipButton').click();
+		cy.get('label[for="searchIndexing-searchDescription-control-en"] ~ span.tooltipButton').click();
 		cy.get('div').contains('Provide a brief description');
-		cy.get('label[for="searchIndexing-searchDescription-control-en"] ~ button.tooltipButton').click();
+		cy.get('label[for="searchIndexing-searchDescription-control-en"] ~ span.tooltipButton').click();
 
 		// OJS-specific tasks
 		cy.get('button[id="context-button"]').click();
