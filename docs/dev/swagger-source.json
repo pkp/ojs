@@ -2743,6 +2743,46 @@
 				}
 			}
 		},
+		"/users/{userId}/endRole/{userGroupId}": {
+			"put": {
+				"tags": [
+					"Users"
+				],
+				"summary": "End role access for a given user.",
+				"parameters": [
+					{
+						"name": "userId",
+						"description": "User ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "userGroupId",
+						"description": "User Group ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "User details.",
+						"schema": {
+							"$ref": "#/definitions/User"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested user or user group could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
 		"/users/reviewers": {
 			"get": {
 				"tags": [
