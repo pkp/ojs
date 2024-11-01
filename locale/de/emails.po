@@ -4,7 +4,7 @@
 # Martin Brändle <martin.braendle@uzh.ch>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-11-01 09:06+0000\n"
+"PO-Revision-Date: 2024-11-01 16:21+0000\n"
 "Last-Translator: Martin Brändle <martin.braendle@uzh.ch>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/emails/de/>\n"
 "Language: de\n"
@@ -217,7 +217,7 @@ msgstr ""
 "/>{$authors}</p><p><b>Abstract</b></p>{$submissionAbstract}<p>Bitte melden "
 "Sie sich an, um <a href=\"{$submissionUrl}\">die Einreichung einzusehen</a> "
 "und qualifizierte Gutachter/innen zuzuweisen. Sie können eine/n Gutachter/in "
-"zuweisen, indem Sie auf \"Gutachter/in hinzufügen“ klicken.</p><p>Danke im "
+"zuweisen, indem Sie auf \"Gutachter/in hinzufügen\" klicken.</p><p>Danke im "
 "Voraus.</p><p>Mit freundlichen Grüßen,</p>{$signature}"
 
 msgid "emails.reviewCancel.body"
