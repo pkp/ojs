@@ -9,7 +9,7 @@
  *
  * @class I4787_ReviewSuggestions.php
  *
- * @brief Rename the review reminder settings name
+ * @brief Add reviewer suggestion related tables
  *
  */
 
