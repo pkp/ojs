@@ -1,9 +1,10 @@
 <?php
+
 /**
  * @file classes/services/ContextService.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2014-2025 Simon Fraser University
+ * Copyright (c) 2000-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ContextService
@@ -28,6 +29,7 @@ use PKP\db\DAORegistry;
 use PKP\file\TemporaryFileManager;
 use PKP\plugins\Hook;
 use PKP\submission\GenreDAO;
+use PKP\submission\reviewer\recommendation\ReviewerRecommendation;
 
 class ContextService extends \PKP\services\PKPContextService
 {
@@ -65,7 +67,9 @@ class ContextService extends \PKP\services\PKPContextService
      */
     public function afterAddContext($hookName, $args)
     {
-        $context = $args[0];
+        $context = $args[0]; /** @var \PKP\context\Context $context */
+
+        Repo::reviewerRecommendation()->addDefaultRecommendations($context);
 
         // Create a default section
         $section = Repo::section()->newDataObject();
@@ -94,8 +98,8 @@ class ContextService extends \PKP\services\PKPContextService
      */
     public function afterEditContext($hookName, $args)
     {
-        $newContext = $args[0];
-        $currentContext = $args[1];
+        $newContext = $args[0]; /** @var \PKP\context\Context $context */
+        $currentContext = $args[1]; /** @var \PKP\context\Context $context */
         $params = $args[2];
         $request = $args[3];
 
@@ -146,7 +150,7 @@ class ContextService extends \PKP\services\PKPContextService
      */
     public function beforeDeleteContext($hookName, $args)
     {
-        $context = $args[0];
+        $context = $args[0]; /** @var \PKP\context\Context $context */
 
         // Create tombstones for all published submissions
         $articleTombstoneManager = new ArticleTombstoneManager();
@@ -168,11 +172,14 @@ class ContextService extends \PKP\services\PKPContextService
      */
     public function afterDeleteContext($hookName, $args)
     {
-        $context = $args[0];
+        $context = $args[0]; /** @var \PKP\context\Context $context */
 
         Repo::section()->deleteByContextId($context->getId());
 
         Repo::issue()->deleteByContextId($context->getId());
+
+        ReviewerRecommendation::query()->withContextId($context->getId())->delete();
+
         /** @var IndividualSubscriptionDAO */
         $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO');
         $subscriptionDao->deleteByJournalId($context->getId());
@@ -227,5 +234,13 @@ class ContextService extends \PKP\services\PKPContextService
                 }
             }
         }
+    }
+
+    /**
+     * @copydoc \PKP\services\PKPContextService::hasCustomizableReviewerRecommendation()
+     */
+    public function hasCustomizableReviewerRecommendation(): bool
+    {
+        return true;
     }
 }

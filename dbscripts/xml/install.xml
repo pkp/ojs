@@ -45,6 +45,7 @@
 
 	<migration class="APP\migration\install\OJSMigration" />
 
+	<migration class="APP\migration\install\ReviewerRecommendationsMigration" />
 	<migration class="PKP\migration\install\MetadataMigration" />
 	<migration class="PKP\migration\install\AnnouncementsMigration" />
 	<migration class="PKP\migration\install\CategoriesMigration" />
