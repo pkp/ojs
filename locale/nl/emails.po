@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2024-11-05 12:08+0000\n"
-"Last-Translator: Pia Spriensma <p.j.huizinga@rug.nl>\n"
+"PO-Revision-Date: 2024-11-12 10:40+0000\n"
+"Last-Translator: Dorien van Rheenen <d.van.rheenen@rug.nl>\n"
 "Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/emails/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -229,9 +229,8 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
 msgid "emails.reviewRequestSubsequent.subject"
-msgstr "Verzoek tot reviewen van een artikel"
+msgstr "Verzoek tot reviewen van een herzien artikel"
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
