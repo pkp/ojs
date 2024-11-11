@@ -24,6 +24,7 @@
   "article.metadata",
   "author.users.contributor.principalContact",
   "author.users.contributor.setPrincipalContact",
+  "common.active",
   "common.addCCBCC",
   "common.assign",
   "common.attachFiles",
@@ -54,6 +55,7 @@
   "common.findTemplate",
   "common.geographic",
   "common.id",
+  "common.inactive",
   "common.insert",
   "common.insertContent",
   "common.insertContentSearch",
@@ -528,7 +530,11 @@
   "user.password",
   "user.removeRole.message",
   "user.username",
+<<<<<<< HEAD
   "userInvitation.cancel.goBack",
+=======
+  "userInvitation.cancel.keepWorking",
+>>>>>>> 3b22089ac2 (pkp/pkp-lib#1660 updated registry ui locale keys)
   "userInvitation.cancel.message",
   "userInvitation.edit.message",
   "userInvitation.edit.title",
