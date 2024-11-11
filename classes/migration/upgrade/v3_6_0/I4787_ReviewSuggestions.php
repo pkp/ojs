@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file classes/migration/upgrade/v3_5_0/I4787_ReviewSuggestions.php
+ * @file classes/migration/upgrade/v3_6_0/I4787_ReviewSuggestions.php
  *
  * Copyright (c) 2024 Simon Fraser University
  * Copyright (c) 2024 John Willinsky
@@ -13,9 +13,9 @@
  *
  */
 
-namespace APP\migration\upgrade\v3_5_0;
+namespace APP\migration\upgrade\v3_6_0;
 
-class I4787_ReviewSuggestions extends \PKP\migration\upgrade\v3_5_0\I4787_ReviewSuggestions
+class I4787_ReviewSuggestions extends \PKP\migration\upgrade\v3_6_0\I4787_ReviewSuggestions
 {
     protected string $CONTEXT_TABLE = 'journals';
     protected string $CONTEXT_SETTINGS_TABLE = 'journal_settings';
