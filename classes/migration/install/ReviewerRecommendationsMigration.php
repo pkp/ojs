@@ -21,6 +21,11 @@ class ReviewerRecommendationsMigration extends \PKP\migration\install\ReviewerRe
         return 'journals';
     }
 
+    public function settingTable(): string
+    {
+        return 'journal_settings';
+    }
+
     public function contextPrimaryKey(): string
     {
         return 'journal_id';
