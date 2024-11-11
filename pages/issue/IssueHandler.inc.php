@@ -141,6 +141,10 @@ class IssueHandler extends Handler {
 		$nextPage = $total > $showingEnd ? $page + 1 : null;
 		$prevPage = $showingStart > 1 ? $page - 1 : null;
 
+		if (!count($issues) && $offset) {
+			$this->getDispatcher()->handle404();
+		}
+
 		$templateMgr->assign(array(
 			'issues' => $issues,
 			'showingStart' => $showingStart,
