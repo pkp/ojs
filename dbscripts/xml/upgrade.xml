@@ -172,13 +172,14 @@
 		<note file="docs/release-notes/README-3.5.0" />
 	</upgrade>
 
+    <upgrade minversion="3.5.0.0" maxversion="3.5.9.9">
+        <migration class="PKP\migration\upgrade\v3_5_0\I10403_EmailTemplateUserGroupAccess"/>
+    </upgrade>
+
 	<upgrade minversion="3.1.0.0" maxversion="3.5.9.9">
 		<note file="docs/release-notes/README-3.6.0" />
 	</upgrade>
 
-	<upgrade minversion="3.5.0.0" maxversion="3.5.9.9">
-		<migration class="PKP\migration\upgrade\v3_5_0\I10403_EmailTemplateUserGroupAccess"/>
-	</upgrade>
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
 </install>
