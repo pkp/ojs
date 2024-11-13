@@ -7,8 +7,8 @@
 ;
 ; config.TEMPLATE.inc.php
 ;
-; Copyright (c) 2014-2021 Simon Fraser University
-; Copyright (c) 2003-2021 John Willinsky
+; Copyright (c) 2014-2024 Simon Fraser University
+; Copyright (c) 2003-2024 John Willinsky
 ; Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
 ;
 ; OJS Configuration settings.
@@ -55,6 +55,12 @@ session_samesite = Lax
 ; execute periodically
 scheduled_tasks = Off
 
+; Scheduled tasks will send email about processing
+; only in case of errors. Set to off to receive
+; all other kind of notification, including success,
+; warnings and notices.
+scheduled_tasks_report_error_only = On
+
 ; Site time zone
 ; Please refer to https://www.php.net/timezones for a full list of supported
 ; time zones.
@@ -87,7 +93,7 @@ allow_url_fopen = Off
 ; Example3: URLs that map to a subdomain.
 ;    Example3: base_url[myOtherJournal] = http://myOtherJournal.example.com
 
-; Generate RESTful URLs using mod_rewrite.  This requires the
+; Generate RESTful URLs using mod_rewrite. This requires the
 ; rewrite directive to be enabled in your .htaccess or httpd.conf.
 ; See FAQ for more details.
 restful_urls = Off
@@ -100,16 +106,10 @@ restful_urls = Off
 allowed_hosts = ''
 
 ; Allow the X_FORWARDED_FOR header to override the REMOTE_ADDR as the source IP
-; Set this to "On" if you are behind a reverse proxy and you control the X_FORWARDED_FOR
+; Set this to "On" if you are behind a reverse proxy and you control the
+; X_FORWARDED_FOR header.
 ; Warning: This defaults to "On" if unset for backwards compatibility.
 trust_x_forwarded_for = Off
-
-; Set the maximum number of citation checking processes that may run in parallel.
-; Too high a value can increase server load and lead to too many parallel outgoing
-; requests to citation checking web services. Too low a value can lead to significantly
-; slower citation checking performance. A reasonable value is probably between 3
-; and 10. The more your connection bandwidth allows the better.
-citation_checking_max_processes = 3
 
 ; Display a message on the site admin and journal manager user home pages if there is an upgrade available
 show_upgrade_warning = On
@@ -128,10 +128,10 @@ enable_beacon = On
 ; as separate Privacy Statements for each journal.
 sitewide_privacy_statement = Off
 
-; The number of days a new user has to validate their account
-; A new user account will be expired and removed if this many days have passed since the user registered
-; their account, and they have not validated their account or logged in. If the user_validation_period is set to
-; 0, unvalidated accounts will never be removed. Use this setting to automatically remove bot registrations.
+; The number of days a new user has to validate their account.
+; A new user account will be removed if this many days have passed since the user registered
+; their account, and they have not validated their account or logged in. If set to 0,
+; unvalidated accounts will never be removed. Use this setting to automatically remove bot registrations.
 user_validation_period = 28
 
 ; Turn sandbox mode to On in order to prevent the software from interacting with outside systems.
@@ -160,6 +160,7 @@ name = ojs
 
 ; Enable database debug output (very verbose!)
 debug = Off
+
 
 ;;;;;;;;;;;;;;;;;;
 ; Cache Settings ;
@@ -236,10 +237,6 @@ public_user_dir_size = 5000
 ; Permissions mask for created files and directories
 umask = 0022
 
-; The minimum percentage similarity between filenames that should be considered
-; a possible revision
-filename_revision_match = 70
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Fileinfo (MIME) Settings ;
@@ -263,8 +260,9 @@ force_ssl = Off
 force_login_ssl = Off
 
 ; This check will invalidate a session if the user's IP address changes.
-; Enabling this option provides some amount of additional security, but may
-; cause problems for users behind a proxy farm (e.g., AOL).
+; Enabling this option provides some additional security, but may cause
+; login problems for some users (e.g. if a user IP is changed frequently
+; by a server or network configuration).
 session_check_ip = On
 
 ; The encryption (hashing) algorithm to use for encrypting user passwords
@@ -293,6 +291,7 @@ allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,d
 allowed_title_html = "b,i,u,sup,sub"
 
 ;N.b.: The implicit_auth parameter has been removed in favor of plugin implementations such as shibboleth
+
 
 ;;;;;;;;;;;;;;;;;;
 ; Email Settings ;
@@ -356,7 +355,7 @@ sendmail_path = "/usr/sbin/sendmail -bs"
 ; If enabled, email addresses must be validated before login is possible.
 require_validation = Off
 
-; Maximum number of days before an unvalidated account expires and is deleted
+; The number of days a user has to validate their account before their access key expires.
 validation_timeout = 14
 
 
@@ -410,6 +409,7 @@ repository_id = ojs.pkp.sfu.ca
 ; Maximum number of records per request to serve via OAI
 oai_max_records = 100
 
+
 ;;;;;;;;;;;;;;;;;;;;;;
 ; Interface Settings ;
 ;;;;;;;;;;;;;;;;;;;;;;
@@ -447,6 +447,7 @@ captcha_on_login = on
 ; Validate the hostname in the ReCaptcha response
 recaptcha_enforce_hostname = Off
 
+
 ;;;;;;;;;;;;;;;;;;;;;
 ; External Commands ;
 ;;;;;;;;;;;;;;;;;;;;;
@@ -455,7 +456,6 @@ recaptcha_enforce_hostname = Off
 
 ; These are paths to (optional) external binaries used in
 ; certain plug-ins or advanced program features.
-
 ; Using full paths to the binaries is recommended.
 
 ; tar (used in backup plugin, translation packaging)
@@ -468,6 +468,7 @@ tar = /bin/tar
 ; source file; eg:
 ; /usr/bin/java -jar ~/java/xalan.jar -HTML -IN %xml -XSL %xsl
 xslt_command = ""
+
 
 ;;;;;;;;;;;;;;;;;;
 ; Proxy Settings ;
@@ -500,11 +501,6 @@ deprecation_warnings = Off
 ; Log web service request information for debugging
 log_web_service_info = Off
 
-; declare a cainfo path if a certificate other than PHP's default should be used for curl calls.
-; This setting overrides the 'curl.cainfo' parameter of the php.ini configuration file.
-[curl]
-; cainfo = ""
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;
 ; Job Queues Settings ;
@@ -518,15 +514,12 @@ default_connection = "database"
 ; Default queue to use when a job is added to the queue
 default_queue = "queue"
 
-; Whether or not to turn on the built-in job runner
-;
+; Whether or not to turn on the built-in job runner.
 ; When enabled, jobs will be processed at the end of each web
 ; request to the application.
-;
 ; Use of the built-in job runner is highly discouraged for high-volume
 ; sites. Instead, a worker daemon or cron job should be configured
 ; to process jobs off the application's main thread.
-;
 ; See: https://docs.pkp.sfu.ca/admin-guide/en/deploy-jobs
 ;
 job_runner = On
@@ -537,22 +530,18 @@ job_runner_max_jobs = 30
 
 ; The maximum number of seconds the built-in job runner should spend
 ; running jobs in a single request.
-;
 ; This should be less than the max_execution_time the server has
 ; configured for PHP.
-;
 ; Lower this setting if jobs are failing due to timeouts.
 job_runner_max_execution_time = 30
 
-; The maximum consumerable memory that should be spent by the built-in
+; The maximum consumable memory that should be spent by the built-in
 ; job runner when running jobs.
 ;
 ; Set as a percentage, such as 80%:
-;
 ; job_runner_max_memory = 80
 ;
 ; Or set as a fixed value in megabytes:
-;
 ; job_runner_max_memory = 128M
 ;
 ; When setting a fixed value in megabytes, this should be less than the
