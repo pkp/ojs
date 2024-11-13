@@ -26,7 +26,9 @@ use PKP\decision\types\BackFromProduction;
 use PKP\decision\types\CancelReviewRound;
 use PKP\decision\types\Decline;
 use PKP\decision\types\InitialDecline;
+use PKP\decision\types\NewExternalReviewRound;
 use PKP\decision\types\RequestRevisions;
+use PKP\decision\types\Resubmit;
 use PKP\decision\types\RevertDecline;
 use PKP\decision\types\RevertInitialDecline;
 use PKP\decision\types\SendExternalReview;
@@ -116,7 +118,8 @@ class Schema extends \PKP\submission\maps\Schema
                         new SkipExternalReview(),
                     ];
                     if ($submission->getData('status') === Submission::STATUS_DECLINED) {
-                        $decisionTypes[] = new RevertInitialDecline();
+                        // when the submission is declined, allow only reverting declined status
+                        $decisionTypes = [new RevertInitialDecline()];
                     } elseif ($submission->getData('status') === Submission::STATUS_QUEUED) {
                         $decisionTypes[] = new InitialDecline();
                     }
@@ -124,7 +127,9 @@ class Schema extends \PKP\submission\maps\Schema
                 case WORKFLOW_STAGE_ID_EXTERNAL_REVIEW:
                     $decisionTypes = [
                         new RequestRevisions(),
+                        new Resubmit(),
                         new Accept(),
+                        new NewExternalReviewRound()
                     ];
                     $cancelReviewRound = new CancelReviewRound();
                     $reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO'); /** @var ReviewRoundDAO $reviewRoundDao */
@@ -134,7 +139,8 @@ class Schema extends \PKP\submission\maps\Schema
                         $decisionTypes[] = $cancelReviewRound;
                     }
                     if ($submission->getData('status') === Submission::STATUS_DECLINED) {
-                        $decisionTypes[] = new RevertDecline();
+                        // when the submission is declined, allow only reverting declined status
+                        $decisionTypes = [new RevertDecline()];
                     } elseif ($submission->getData('status') === Submission::STATUS_QUEUED) {
                         $decisionTypes[] = new Decline();
                     }
@@ -146,7 +152,10 @@ class Schema extends \PKP\submission\maps\Schema
                     ];
                     break;
                 case WORKFLOW_STAGE_ID_PRODUCTION:
-                    $decisionTypes[] = new BackFromProduction();
+                    if($submission->getData('status') !== Submission::STATUS_PUBLISHED) {
+                        $decisionTypes[] = new BackFromProduction();
+                    }
+
                     break;
             }
         }
