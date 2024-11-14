@@ -50,3 +50,9 @@
 [submodule "plugins/generic/webFeed"]
 	path = plugins/generic/webFeed
 	url = https://github.com/pkp/webFeed.git
+[submodule "plugins/generic/jatsTemplate"]
+	path = plugins/generic/jatsTemplate
+	url = https://github.com/pkp/jatsTemplate
+[submodule "plugins/oaiMetadataFormats/oaiJats"]
+	path = plugins/oaiMetadataFormats/oaiJats
+	url = https://github.com/pkp/oaiJats
