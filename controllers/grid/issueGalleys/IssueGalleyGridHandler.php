@@ -138,7 +138,6 @@ class IssueGalleyGridHandler extends GridHandler
                         array_merge($this->getRequestArgs(), ['gridId' => $this->getId()])
                     ),
                     __('grid.action.addIssueGalley'),
-                    'modal_add'
                 ),
                 __('grid.action.addIssueGalley'),
                 'add_category'

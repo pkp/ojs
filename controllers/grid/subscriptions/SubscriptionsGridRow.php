@@ -58,7 +58,7 @@ class SubscriptionsGridRow extends GridRow
                 new AjaxModal(
                     $router->url($request, null, null, 'editSubscription', null, $actionArgs),
                     __('manager.subscriptions.edit'),
-                    'modal_edit',
+                    null,
                     true
                 ),
                 __('common.edit'),
@@ -81,7 +81,7 @@ class SubscriptionsGridRow extends GridRow
                                 'institutional' => $element instanceof InstitutionalSubscription ? 1 : 0
                             ])
                         ),
-                        'modal_delete'
+                        'primary'
                     ),
                     __('manager.subscriptions.renew'),
                     'renew'
@@ -94,7 +94,7 @@ class SubscriptionsGridRow extends GridRow
                     __('subscriptionManager.subscription.confirmRemove'),
                     __('common.delete'),
                     $router->url($request, null, null, 'deleteSubscription', null, $actionArgs),
-                    'modal_delete'
+                    'negative'
                 ),
                 __('grid.action.delete'),
                 'delete'

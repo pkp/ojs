@@ -100,7 +100,7 @@ class IssueForm extends Form
                                     'issueId' => $this->issue->getId(),
                                 ]
                             ),
-                            'modal_delete'
+                            'negative'
                         ),
                         __('common.delete'),
                         null

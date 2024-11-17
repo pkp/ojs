@@ -52,7 +52,7 @@ class IssueGridRow extends GridRow
                     new AjaxModal(
                         $router->url($request, null, null, 'editIssue', null, ['issueId' => $issueId]),
                         __('editor.issues.editIssue', ['issueIdentification' => htmlspecialchars($issue->getIssueIdentification())]),
-                        'modal_edit',
+                        null,
                         true
                     ),
                     __('grid.action.edit'),
@@ -81,7 +81,7 @@ class IssueGridRow extends GridRow
                             __('editor.issues.confirmUnpublish'),
                             __('editor.issues.unpublishIssue'),
                             $router->url($request, null, null, 'unpublishIssue', null, ['issueId' => $issueId]),
-                            'modal_delete'
+                            'negative'
                         ),
                         __('editor.issues.unpublishIssue'),
                         'delete'
@@ -101,7 +101,6 @@ class IssueGridRow extends GridRow
                                 ['issueId' => $issueId]
                             ),
                             __('editor.issues.publishIssue'),
-                            'modal_confirm'
                         ),
                         __('editor.issues.publishIssue'),
                         'advance'
@@ -120,7 +119,7 @@ class IssueGridRow extends GridRow
                             __('editor.issues.confirmSetCurrentIssue'),
                             __('editor.issues.currentIssue'),
                             $router->url($request, null, null, 'setCurrentIssue', null, ['issueId' => $issueId]),
-                            'modal_delete'
+                            'primary'
                         ),
                         __('editor.issues.currentIssue'),
                         'delete'
@@ -136,7 +135,7 @@ class IssueGridRow extends GridRow
                         __('common.confirmDelete'),
                         __('grid.action.delete'),
                         $router->url($request, null, null, 'deleteIssue', null, ['issueId' => $issueId]),
-                        'modal_delete'
+                        'negative'
                     ),
                     __('grid.action.delete'),
                     'delete'
