@@ -28,6 +28,7 @@ use APP\facades\Repo;
 use APP\publication\Publication;
 use PKP\facades\Locale;
 use PKP\submission\PKPSubmission;
+use PKP\userGroup\UserGroup;
 
 class Submission extends PKPSubmission
 {
@@ -69,7 +70,7 @@ class Submission extends PKPSubmission
                             $publication = $this->getCurrentPublication();
                         }
 
-                        $authorUserGroups = Repo::userGroup()->getCollector()->filterByRoleIds([\PKP\security\Role::ROLE_ID_AUTHOR])->filterByContextIds([$context->getId()])->getMany();
+                        $authorUserGroups = UserGroup::where('roleId', \PKP\security\Role::ROLE_ID_AUTHOR)->where('contextId', $context->getId())->get();
                         $fieldValue = [$context->getPrimaryLocale() => $publication->getAuthorString($authorUserGroups)];
                         break;
                     case 'context':
