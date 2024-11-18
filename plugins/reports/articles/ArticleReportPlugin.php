@@ -28,6 +28,7 @@ use PKP\submission\SubmissionAgencyDAO;
 use PKP\submission\SubmissionDisciplineDAO;
 use PKP\submission\SubmissionKeywordDAO;
 use PKP\submission\SubmissionSubjectDAO;
+use PKP\userGroup\UserGroup;
 
 class ArticleReportPlugin extends ReportPlugin
 {
@@ -90,15 +91,12 @@ class ArticleReportPlugin extends ReportPlugin
         $submissionDisciplineDao = DAORegistry::getDAO('SubmissionDisciplineDAO'); /** @var SubmissionDisciplineDAO $submissionDisciplineDao */
         $submissionAgencyDao = DAORegistry::getDAO('SubmissionAgencyDAO'); /** @var SubmissionAgencyDAO $submissionAgencyDao */
 
-        $userGroups = Repo::userGroup()->getCollector()
-            ->filterByContextIds([$context->getId()])
-            ->getMany()
-            ->toArray();
+        $userGroups = UserGroup::withContextIds([$context->getId()])->get()->toArray();
 
         $editorUserGroupIds = array_map(function ($userGroup) {
-            return $userGroup->getId();
+            return $userGroup->id;
         }, array_filter($userGroups, function ($userGroup) {
-            return in_array($userGroup->getRoleId(), [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR]);
+            return in_array($userGroup->roleId, [Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR]);
         }));
 
         // Load the data from the database and store it in an array.
