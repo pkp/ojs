@@ -24,16 +24,6 @@ class I1660_ReviewerRecommendations extends \PKP\migration\upgrade\v3_6_0\I1660_
     public const SUBMISSION_REVIEWER_RECOMMENDATION_DECLINE = 5;
     public const SUBMISSION_REVIEWER_RECOMMENDATION_SEE_COMMENTS = 6;
 
-    /**
-     * Run the migration.
-     */
-    public function up(): void
-    {
-        parent::up();
-
-        $this->seedNonRemovableRecommendations();
-    }
-
     protected function systemDefineNonRemovableRecommendations(): array
     {
         return [
