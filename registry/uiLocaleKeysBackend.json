@@ -530,11 +530,8 @@
   "user.password",
   "user.removeRole.message",
   "user.username",
-<<<<<<< HEAD
-  "userInvitation.cancel.goBack",
-=======
   "userInvitation.cancel.keepWorking",
->>>>>>> 3b22089ac2 (pkp/pkp-lib#1660 updated registry ui locale keys)
+  "userInvitation.cancel.goBack",
   "userInvitation.cancel.message",
   "userInvitation.edit.message",
   "userInvitation.edit.title",
