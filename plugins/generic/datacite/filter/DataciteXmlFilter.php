@@ -914,6 +914,31 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
     }
 
     /**
+     * Try to translate an ISO language code to an OJS locale.
+     *
+     * @param string $language 2- or 3-letter ISO language code
+     *
+     * @return string|null An OJS locale or null if no matching
+     *  locale could be found.
+     *
+     * @deprecated 3.5
+     */
+    public function translateLanguageToLocale($language)
+    {
+        $locale = null;
+        if (strlen($language) == 2) {
+            $language = LocaleConversion::get3LetterFrom2LetterIsoLanguage($language);
+        }
+        if (strlen($language) == 3) {
+            $language = LocaleConversion::getLocaleFrom3LetterIso($language);
+        }
+        if (Locale::isLocaleValid($language)) {
+            $locale = $language;
+        }
+        return $locale;
+    }
+
+    /**
      * Identify the primary translation from an array of
      * localized data.
      *
