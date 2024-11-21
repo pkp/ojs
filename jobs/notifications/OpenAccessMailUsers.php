@@ -65,7 +65,6 @@ class OpenAccessMailUsers extends BaseJob
 
             $notificationManager = new NotificationManager();
             $notification = $notificationManager->createNotification(
-                null,
                 $userId,
                 Notification::NOTIFICATION_TYPE_OPEN_ACCESS,
                 $this->contextId
