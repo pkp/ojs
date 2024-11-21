@@ -73,6 +73,19 @@
 							"nullable",
 							"date:Y-m-d H:i:s"
 						]
+					},
+					"existingUserId": {
+						"type": "integer",
+						"apiSummary": true,
+						"description": "The existing user id if already present as an user.",
+						"validation": [
+							"nullable"
+						]
+					},
+					"existingReviewerRole": {
+						"type": "boolean",
+						"apiSummary": true,
+						"description": "The existing user has reviewer role when already there is an existing user association."
 					}
 				}
 			}
