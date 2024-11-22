@@ -146,7 +146,7 @@ class BackendDoiController extends \PKP\API\v1\_dois\PKPBackendDoiController
 
     protected function getUserGroups(int $contextId): LazyCollection
     {
-        return UserGroup::where('contextId', $contextId)->get();
+        return UserGroup::withContextIds($contextId)->cursor();
     }
 
     protected function getGenres(int $contextId): array

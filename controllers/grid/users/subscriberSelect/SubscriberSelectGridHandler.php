@@ -68,9 +68,9 @@ class SubscriberSelectGridHandler extends GridHandler
         $stageId = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_WORKFLOW_STAGE);
         $contextId = $request->getContext()->getId();
 
-        $userGroups = UserGroup::where('contextId', $contextId)
+        $userGroups = UserGroup::withContextIds($contextId)
             ->whereHas('userGroupStages', function ($query) use ($stageId) {
-                $query->where('stageId', $stageId);
+                $query->withStageId($stageId);
             })
             ->get();
 
@@ -153,7 +153,7 @@ class SubscriberSelectGridHandler extends GridHandler
     public function renderFilter($request, $filterData = [])
     {
         $contextId = $request->getContext()->getId();
-        $userGroups = UserGroup::where('contextId', $contextId)->get();
+        $userGroups = UserGroup::withContextIds($contextId)->get();
 
         foreach ($userGroups as $userGroup) {
             $userGroupOptions[$userGroup->id] = $userGroup->getLocalizedData('name');

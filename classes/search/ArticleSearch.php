@@ -78,7 +78,7 @@ class ArticleSearch extends SubmissionSearch
         }
 
         $i = 0; // Used to prevent ties from clobbering each other
-        $authorUserGroups = UserGroup::where('roleId', \PKP\security\Role::ROLE_ID_AUTHOR)->get();
+        $authorUserGroups = UserGroup::withRoleIds(\PKP\security\Role::ROLE_ID_AUTHOR)->get();
 
         foreach ($unorderedResults as $submissionId => $data) {
             // Exclude unwanted IDs.

@@ -269,7 +269,7 @@ class IssueController extends PKPBaseController
 
     protected function getUserGroups(int $contextId): LazyCollection
     {
-        return UserGroup::where('contextId', $contextId)->get();
+        return UserGroup::withContextIds($contextId)->cursor();
 
     }
 

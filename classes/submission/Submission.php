@@ -70,7 +70,7 @@ class Submission extends PKPSubmission
                             $publication = $this->getCurrentPublication();
                         }
 
-                        $authorUserGroups = UserGroup::where('roleId', \PKP\security\Role::ROLE_ID_AUTHOR)->where('contextId', $context->getId())->get();
+                        $authorUserGroups = UserGroup::withRoleIds(\PKP\security\Role::ROLE_ID_AUTHOR)->withContextIds($context->getId())->get();
                         $fieldValue = [$context->getPrimaryLocale() => $publication->getAuthorString($authorUserGroups)];
                         break;
                     case 'context':
