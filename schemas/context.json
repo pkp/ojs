@@ -50,7 +50,7 @@
 					"in:publication,representation,issue"
 				]
 			},
-		  	"default": ["publication"]
+			"default": ["publication"]
 		},
 		"doiCreationTime": {
 			"type": "string",
