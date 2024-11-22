@@ -25,6 +25,7 @@ use PKP\controllers\grid\GridHandler;
 use PKP\controllers\grid\users\userSelect\UserSelectGridCellProvider;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\Role;
+use PKP\userGroup\UserGroup;
 
 class SubscriberSelectGridHandler extends GridHandler
 {
@@ -65,13 +66,17 @@ class SubscriberSelectGridHandler extends GridHandler
         parent::initialize($request, $args);
 
         $stageId = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_WORKFLOW_STAGE);
-        $userGroups = Repo::userGroup()->getUserGroupsByStage(
-            $request->getContext()->getId(),
-            $stageId
-        );
+        $contextId = $request->getContext()->getId();
+
+        $userGroups = UserGroup::where('contextId', $contextId)
+            ->whereHas('userGroupStages', function ($query) use ($stageId) {
+                $query->where('stageId', $stageId);
+            })
+            ->get();
+
         $this->_userGroupOptions = [];
         foreach ($userGroups as $userGroup) {
-            $this->_userGroupOptions[$userGroup->getId()] = $userGroup->getLocalizedName();
+            $this->_userGroupOptions[$userGroup->id] = $userGroup->getLocalizedData('name');
         }
 
         $this->setTitle('editor.submission.findAndSelectUser');
@@ -95,7 +100,8 @@ class SubscriberSelectGridHandler extends GridHandler
                 null,
                 null,
                 $cellProvider,
-                ['alignment' => GridColumn::COLUMN_ALIGNMENT_LEFT,
+                [
+                    'alignment' => GridColumn::COLUMN_ALIGNMENT_LEFT,
                     'width' => 30
                 ]
             )
@@ -146,16 +152,12 @@ class SubscriberSelectGridHandler extends GridHandler
      */
     public function renderFilter($request, $filterData = [])
     {
-        $context = $request->getContext();
-        $userGroups = Repo::userGroup()->getCollector()
-            ->filterByContextIds([$context->getId()])
-            ->getMany();
+        $contextId = $request->getContext()->getId();
+        $userGroups = UserGroup::where('contextId', $contextId)->get();
 
-        $userGroupOptions = ['' => __('grid.user.allRoles')];
         foreach ($userGroups as $userGroup) {
-            $userGroupOptions[$userGroup->getId()] = $userGroup->getLocalizedName();
+            $userGroupOptions[$userGroup->id] = $userGroup->getLocalizedData('name');
         }
-
         return parent::renderFilter(
             $request,
             [

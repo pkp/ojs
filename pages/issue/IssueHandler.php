@@ -41,6 +41,7 @@ use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\Validation;
 use PKP\submission\GenreDAO;
 use PKP\submission\PKPSubmission;
+use PKP\userGroup\UserGroup;
 
 class IssueHandler extends Handler
 {
@@ -390,7 +391,9 @@ class IssueHandler extends Handler
             $issueSubmissionsInSection[$sectionId]['articles'][] = $submission;
         }
 
-        $authorUserGroups = Repo::userGroup()->getCollector()->filterByRoleIds([\PKP\security\Role::ROLE_ID_AUTHOR])->filterByContextIds([$journal->getId()])->getMany()->remember();
+        $authorUserGroups = UserGroup::withRoleIds([\PKP\security\Role::ROLE_ID_AUTHOR])
+            ->withContextIds([$journal->getId()])
+            ->get();
         $templateMgr->assign([
             'issue' => $issue,
             'issueGalleys' => $issueGalleyDao->getByIssueId($issue->getId()),

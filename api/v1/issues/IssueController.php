@@ -36,6 +36,7 @@ use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\authorization\UserRolesRequiredPolicy;
 use PKP\security\Role;
 use PKP\submission\GenreDAO;
+use PKP\userGroup\UserGroup;
 
 class IssueController extends PKPBaseController
 {
@@ -268,9 +269,8 @@ class IssueController extends PKPBaseController
 
     protected function getUserGroups(int $contextId): LazyCollection
     {
-        return Repo::userGroup()->getCollector()
-            ->filterByContextIds([$contextId])
-            ->getMany();
+        return UserGroup::where('contextId', $contextId)->get();
+
     }
 
     protected function getGenres(int $contextId): array
