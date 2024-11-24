@@ -90,7 +90,10 @@ class ReviewerInterestsDeletionTool extends CommandLineTool
     protected function _getOrphanVocabInterests(): Collection
     {
         $controlledVocab = Repo::controlledVocab()->build(
-            UserInterest::CONTROLLED_VOCAB_INTEREST
+            UserInterest::CONTROLLED_VOCAB_INTEREST,
+            UserInterest::CONTROLLED_VOCAB_INTEREST_ASSOC_TYPE,
+            UserInterest::CONTROLLED_VOCAB_INTEREST_ASSOC_ID,
+            UserInterest::CONTROLLED_VOCAB_INTEREST_CONTEXT_ID
         );
 
         return ControlledVocabEntry::query()
