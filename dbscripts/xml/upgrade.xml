@@ -153,6 +153,7 @@
 		<migration class="PKP\migration\upgrade\v3_5_0\COA75_AddUserRoleEndEmail"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I9707_WeblateUILocales"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I10738_RemoveInvalidUserGroups"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I10362_EventLogEditorNames"/>
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
