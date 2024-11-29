@@ -155,7 +155,6 @@
 		<migration class="PKP\migration\upgrade\v3_5_0\I10738_RemoveInvalidUserGroups"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I10362_EventLogEditorNames"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I10292_RemoveControlledVocabEntrySettingType"/>
-		<migration class="APP\migration\upgrade\v3_5_0\I10292_AddContextIdColumnToControlledVocabsTable"/>
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
