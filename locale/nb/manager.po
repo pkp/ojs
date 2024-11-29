@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2024-05-14 06:11+0000\n"
+"PO-Revision-Date: 2024-09-16 08:02+0000\n"
 "Last-Translator: Johanna Skaug <johanna.skaug@ub.uio.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/nb_NO/>\n"
@@ -562,11 +562,10 @@ msgstr "E-post identifikasjon"
 msgid "manager.setup.emailSignature"
 msgstr "Signatur"
 
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
-"Automatiske eposter sendt på vegne av tidsskriftet kommer til å ha følgende "
-"signatur nederst."
+"E-poster som sendes automatisk på vegne av tidsskriftet, vil ha følgende "
+"signatur."
 
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Aktiver mulighet for å lage oppslag"
@@ -2055,14 +2054,12 @@ msgstr ""
 msgid "stats.contextStats"
 msgstr "Tidsskriftsstatistikk"
 
-#, fuzzy
 msgid "stats.context.tooltip.text"
-msgstr "Antall besøkere på tidsskriftets hjemmeside."
+msgstr "Antall besøkende på tidsskriftets hjemmeside."
 
 msgid "stats.context.tooltip.label"
 msgstr "Om tidsskriftsstatistikken"
 
-#, fuzzy
 msgid "stats.context.downloadReport.description"
 msgstr ""
 "Last ned et CSV/Excel-ark med bruksstatistikk for dette tidsskriftet basert "
@@ -2072,19 +2069,22 @@ msgid "stats.context.downloadReport.downloadContext.description"
 msgstr "Antall visninger av tidsskriftets forside."
 
 msgid "stats.context.downloadReport.downloadContext"
-msgstr ""
+msgstr "Last ned tidsskrift"
 
 msgid "stats.issueStats"
-msgstr ""
+msgstr "Utgavestatistikk"
 
 msgid "stats.issues.details"
 msgstr "Visninger og nedlastinger"
 
+#, fuzzy
 msgid "stats.issues.searchIssueDescription"
-msgstr ""
+msgstr "Søk i utgavetittel, volum og nummer"
 
 msgid "stats.issues.none"
 msgstr ""
+"Ingen utgaver ble funnet med bruksstatistikk som samsvarer med disse "
+"parameterne."
 
 #, fuzzy
 msgid "stats.issues.downloadReport.description"
@@ -2092,27 +2092,25 @@ msgstr ""
 "Last ned CSV/Excel-tabell med bruksstatistikk for denne utgivelsen som "
 "treffer følgende parametre."
 
-#, fuzzy
 msgid "stats.issues.downloadReport.downloadIssues.description"
 msgstr ""
-"Antall visninger av innholdsfortegnelser og nedlastninger av "
-"publiseringsversjoner for hver utgivelse."
+"Antall visninger av innholdsfortegnelser og nedlastninger av oppsett for "
+"hver utgivelse."
 
 msgid "stats.issues.downloadReport.downloadIssues"
-msgstr ""
+msgstr "Last ned utgaver"
 
 msgid "stats.issues.countOfTotal"
 msgstr "{$count} av {$total} nummer"
 
 msgid "stats.issues.tooltip.label"
-msgstr ""
+msgstr "Om utgavesstatistikk"
 
-#, fuzzy
 msgid "stats.issues.tooltip.text"
 msgstr ""
 "<strong>Visninger</strong>: Antall besøkende til utgivelsens "
 "innholdsfortegnelse.<br><strong>Nedlastninger</strong>: Antall nedlastninger "
-"av utgivelsens publiseringsversjon, hvis en sådan finnes."
+"av utgivelsens oppsett (hvis utgaven har det)."
 
 msgid "stats.publicationStats"
 msgstr "Artikkelstatistikk"
@@ -2181,9 +2179,8 @@ msgstr "URL til tidsskriftets hjemmeside"
 msgid "emailTemplate.variable.context.contactName"
 msgstr "Navnet på tidsskriftets kontaktperson"
 
-#, fuzzy
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr "tidsskriftets initialer"
+msgstr "Tidsskriftets initialer"
 
 msgid "emailTemplate.variable.context.contextSignature"
 msgstr "Tidsskriftets e-postsignatur til automatiserte e-post"
@@ -2192,7 +2189,7 @@ msgid "emailTemplate.variable.context.contactEmail"
 msgstr "E-postadressen til tidsskriftets kontaktperson"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "Tidsskriftets postadresse"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Navn på betalingstypen"
@@ -2225,7 +2222,6 @@ msgstr "En oversikt over abbonementstype, navn, varighet og pris"
 msgid "emailTemplate.variable.subscription.membership"
 msgstr "Informasjon om abbonentens medlemsskap"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr "Navn på institusjon"
 
@@ -2239,22 +2235,26 @@ msgstr "Domene"
 
 #, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr "IP-intervall for autentisering av abbonenter"
+msgstr "De gyldige IP-intervallene for for dette abonnementet"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "URL til siden hvor forfatteren kan foreta betaling"
 
+#, fuzzy
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "URL til forfatterveiledning"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "Lenken til siden med statistikk over publiserte artikler"
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "Utgavens ID"
 
+#, fuzzy
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
+"Denne e-posten sendes automatisk månedlig til redaktører og redaksjonsleder "
+"for å gi dem en oversikt over systemets tilstand."
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Validér E-post ved registrering i tidsskrift"
@@ -2582,27 +2582,34 @@ msgstr ""
 "Denne e-posten sendes automatisk til registrerte brukere når et nytt nummer "
 "publiseres."
 
-#, fuzzy
 msgid "manager.manageEmails.description"
 msgstr "Rediger beskjedene som sendes som e-post fra dette tidsskriftet."
 
+#, fuzzy
 msgid "mailable.layoutComplete.name"
-msgstr ""
+msgstr "Ferdige oppsett"
 
+#, fuzzy
 msgid "mailable.publicationVersionNotify.name"
-msgstr ""
+msgstr "Ny versjon opprettet"
 
 msgid "mailable.publicationVersionNotify.description"
 msgstr ""
+"Denne e-posten varsler automatisk tildelte redaktører når en ny versjon av "
+"innleveringen er opprettet."
 
 msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
+"Denne e-posten sendes til tidsskriftansvarlige når en ny innsendelse er "
+"gjort, og ingen redaktører er tildelt."
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "Betalingsforespørsel"
 
 msgid "mailable.paymentRequest.description"
 msgstr ""
+"Denne automatiserte e-posten sendes til forfatteren for å be om betaling av "
+"publiseringsavgiften når deres innsendelse er akseptert."
 
 #~ msgid "manager.groups"
 #~ msgstr "Redaksjon"
@@ -3174,3 +3181,16 @@ msgstr ""
 
 #~ msgid "emailTemplate.variable.context.principalContactSignature"
 #~ msgstr "Tidsskriftets e-postsignatur til automatiserte e-poster"
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"Forsidebildet til utgave {$id} ble ikke eksportert, filen ble ikke funnet på "
+"\"{$path}\"."
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "Et utgaveoppsett kunne ikke importeres, filen mangler."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"Utgaveoppsettet {$id} kunne ikke eksporteres, filen ble ikke funnet på \""
+"{$path}\"."

@@ -1,0 +1,78 @@
+# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-10-19 16:26+0000\n"
+"Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
+"Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/api/th/>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "ประกาศที่คุณร้องขอไม่ได้เป็นส่วนหนึ่งของวารสารนี้"
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "ไม่พบวารสารที่คุณร้องขอ"
+
+msgid "api.dois.403.contextsNotMatched"
+msgstr "DOI ที่คุณร้องขอไม่ได้เป็นส่วนหนึ่งของวารสารนี้"
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "ไม่มีหน่วยงานจดทะเบียน DOI ที่กำหนดไว้สำหรับวารสารนี้"
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"บางรายการไม่สามารถฝากข้อมูลได้สำเร็จ โปรดตรวจสอบข้อผิดพลาดเฉพาะของแต่ละรายการ"
+
+msgid "api.emails.403.disabled"
+msgstr "ฟีเจอร์การแจ้งเตือนทางอีเมลยังไม่ได้เปิดใช้งานสำหรับวารสารนี้"
+
+msgid "api.submissions.400.wrongContext"
+msgstr "การส่งที่คุณร้องขอไม่ได้อยู่ในวารสารนี้"
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "คุณไม่สามารถเปลี่ยนวารสารของการส่งนี้ได้"
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "คุณไม่มีสิทธิ์ในการดูประเด็นที่ยังไม่ได้เผยแพร่"
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "คุณสามารถดูได้เฉพาะวารสารที่ถูกเปิดใช้งานแล้วเท่านั้น"
+
+msgid "api.contexts.403.notAllowed"
+msgstr "คุณไม่มีสิทธิ์ในการดูวารสารนี้"
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"คุณไม่สามารถดูหรือแก้ไขวารสารนี้ได้ เว้นแต่จะทำการร้องขอผ่าน API ของวารสารหรื"
+"อ API ระดับเว็บไซต์"
+
+msgid "api.contexts.403.requiresContext"
+msgstr "คุณไม่สามารถแก้ไขวารสารนี้จาก API ระดับเว็บไซต์ได้"
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "คุณไม่มีสิทธิ์ในการแก้ไขวารสารนี้"
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "คุณไม่มีสิทธิ์ในการลบวารสารนี้"
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "คุณไม่มีสิทธิ์ในการย้ายแม่แบบอีเมลนี้ไปยังวารสารอื่น"
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "วิธีการชำระเงินที่คุณเลือกไม่ได้รับการสนับสนุน"
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "สิ่งพิมพ์ที่คุณร้องขอไม่ได้เป็นส่วนหนึ่งของวารสารนี้"
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "สิ่งพิมพ์ที่คุณร้องขอไม่ได้เป็นส่วนหนึ่งของการส่งนี้"
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "คุณไม่สามารถเชื่อมโยงไฟล์จากขั้นตอนนี้กับแกลเลอรีได้"
+
+msgid "api.submission.400.inactiveSection"
+msgstr "ส่วนนี้ไม่รับการส่งอีกต่อไป"

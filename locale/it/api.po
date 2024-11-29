@@ -1,13 +1,14 @@
 # Stefano Bolelli Gallevi <stefano.bolelli@unimi.it>, 2022.
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
 # Fulvio Delle Donne <fulviodelledonne@libero.it>, 2023.
+# Gabriele Raimondi <gabriele.raimondi5@unibo.it>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
-"PO-Revision-Date: 2023-12-23 12:36+0000\n"
-"Last-Translator: Fulvio Delle Donne <fulviodelledonne@libero.it>\n"
+"PO-Revision-Date: 2024-08-26 13:24+0000\n"
+"Last-Translator: Gabriele Raimondi <gabriele.raimondi5@unibo.it>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/api/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -32,7 +33,7 @@ msgid "api.submissions.403.unpublishedIssues"
 msgstr "Non hai il permesso si vedere i fascicoli non pubblicati."
 
 msgid "api.contexts.403.requestedDisabledContexts"
-msgstr "E' possibile visualizzare solamente testate abilitate."
+msgstr "È possibile visualizzare solamente testate abilitate."
 
 msgid "api.contexts.403.notAllowed"
 msgstr "Non hai i permessi per visualizzare questa rivista."
@@ -83,7 +84,7 @@ msgstr "La pubblicazione che hai richiesto non è parte di questo articolo."
 
 msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr ""
-"Non è possibile associare un file in questa fase editoriale ad una galley."
+"Non è possibile associare un file in questa fase editoriale a una galley."
 
 msgid "api.submission.400.inactiveSection"
 msgstr "Questa sezione non riceve più contributi."

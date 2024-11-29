@@ -1,0 +1,43 @@
+# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-10-19 17:06+0000\n"
+"Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
+"Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/"
+"blocks-subscription/th/>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.block.subscription.displayName"
+msgstr "บล็อกการสมัครสมาชิก"
+
+msgid "plugins.block.subscription.description"
+msgstr "ปลั๊กอินนี้ให้ข้อมูลการสมัครสมาชิกในแถบด้านข้าง"
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "การสมัครสมาชิก"
+
+msgid "plugins.block.subscription.expires"
+msgstr "วันหมดอายุ"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr "การเข้าถึงโดย: {$institutionName}"
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "เข้าถึงจาก: {$ip}"
+
+msgid "plugins.block.subscription.about"
+msgstr "การสมัครสมาชิก"
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr "เข้าสู่ระบบเพื่อเข้าถึงทรัพยากรที่สงวนไว้สำหรับสมาชิกเท่านั้น"
+
+msgid "plugins.block.subscription.subscriptionRequired"
+msgstr "ต้องมีการสมัครสมาชิกเพื่อเข้าถึงทรัพยากรบางอย่าง"
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "เรียนรู้เพิ่มเติม"

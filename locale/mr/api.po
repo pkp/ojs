@@ -1,3 +1,84 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2024.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2024-09-12 08:45+0000\n"
+"Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
+"Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/api/mr/>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "तुमच्या सादरीकरणाचे नियतकालिक बदलू शकत नाही."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "तुम्ही केवळ सक्रिय (enable) केलेली नियतकालिके पाहू शकता."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"जोपर्यंत तुम्ही नियतकालिकाच्या API किंवा संकेतस्थळ-व्यापी API वर शोधत नाही "
+"तोपर्यंत तुम्ही हे नियतकालिक पाहू किंवा त्यात फेरफार करू शकणार नाही."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "तुम्ही शोधत असलेले नियतकालिक येथे उपलब्ध नाही."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr ""
+"या नियतकालिकासाठी कुठल्याही DOI नोंदणी संस्थेशी जोडणी (कॉन्फिगर) केलेली नाही."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"काही बाबी यशस्वीरित्या साठवल्या गेल्या नाहीत. कृपया प्रत्येक बाबीसाठी विशिष्"
+"ट त्रुटी संदेश तपासा."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "तुम्ही शोधत असलेले प्रकाशन या नियतकालिकाचा भाग नाही."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "तुम्ही या टप्प्यावर फाईल कच्च्या मुद्रितात (गॅली) संलग्न करू शकत नाही."
+
+msgid "api.submission.400.inactiveSection"
+msgstr "या विभागात यापुढे सादरीकरणांचा स्वीकार थांबवला आहे."
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "तुम्ही शोधत असलेले निवेदन (announcement) या नियतकालिकाचा भाग नाही."
+
+msgid "api.emails.403.disabled"
+msgstr ""
+"या नियतकालिकासाठी एकगठ्ठा (बल्क) ई-मेल पाठवण्याची सोय सक्रिय (enable) केलेली "
+"नाही."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "तुम्ही शोधत असलेल्या लेखनाचे सादरीकरण या नियतकालिकामध्ये नाही."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "तुम्हाला अप्रकाशित अंक पाहण्याची परवानगी नाही."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "तुम्हाला हे नियतकालिक चाळण्याची परवानगी नाही."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "तुम्ही हे नियतकालिक संकेतस्थळ-व्यापी API वरून संपादित करू शकत नाही."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "तुम्हाला हे नियतकालिक संपादित करण्याची परवानगी नाही."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "तुम्हाला हे नियतकालिक हटवण्याची परवानगी नाही."
+
+msgid "api.dois.403.contextsNotMatched"
+msgstr "तुम्ही शोधत असलेला DOI या नियतकालिकाचा भाग नाही."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"तुम्हाला हा ई-मेल मसूदा (टेम्पलेट) दुसऱ्या नियतकालिकासाठी वापरण्याची परवानगी "
+"नाही."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "तुम्ही निवडलेली रक्कम प्रदान करण्याची पद्धत येथे वापरात नाही."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "तुम्ही शोधत असलेले प्रकाशन या लेखन सादरीकरणाचा भाग नाही."

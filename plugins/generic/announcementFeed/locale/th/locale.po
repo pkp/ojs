@@ -1,0 +1,49 @@
+# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-10-19 17:06+0000\n"
+"Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
+"Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-announcementFeed/th/>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "ปลั๊กอินฟีดประกาศ"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr "ปลั๊กอินนี้สร้างฟีดเว็บในรูปแบบ RSS/Atom สำหรับประกาศของวารสาร"
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "การตั้งค่า"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "แสดงลิงก์ฟีดบนทุกหน้าของวารสาร"
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr "แสดงลิงก์ฟีดเฉพาะบนหน้าแรกและหน้าประกาศเท่านั้น"
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "แสดงลิงก์ฟีดเฉพาะบนหน้าประกาศเท่านั้น"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "จำกัดฟีดให้ถึง"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "ประกาศล่าสุดเท่านั้น"
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "โปรดป้อนจำนวนเต็มบวกสำหรับประกาศล่าสุด"
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "โลโก้ Atom"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "โลโก้ RSS1"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "โลโก้ RSS2"

@@ -1,7 +1,7 @@
 # Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-07-30 07:06+0000\n"
+"PO-Revision-Date: 2024-10-17 09:54+0000\n"
 "Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
 "Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/manager/th/>\n"
 "Language: th\n"
@@ -12,28 +12,27 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "manager.setup.emailBounceAddress.description"
-msgstr ""
-"อีเมลที่ไม่สามารถจัดส่งได้จะส่งผลให้เกิดข้อความแสดงข้อผิดพลาดไปยังที่อยู่นี้"
+msgstr "อีเมลที่ไม่สามารถส่งได้จะส่งผลให้มีข้อความแสดงข้อผิดพลาดไปยังที่อยู่นี้"
 
 msgid "manager.setup.journalThumbnail.description"
-msgstr "โลโก้ขนาดเล็กหรือการเป็นตัวแทนของวารสารที่สามารถใช้ในรายการวารสารได้"
+msgstr ""
+"โลโก้ขนาดเล็กหรือการแทนค่าของวารสารที่สามารถใช้ในรายการของวารสารต่างๆ ได้"
 
 msgid "manager.setup.plnDescription"
 msgstr ""
-"PKP Preservation Network (PN) ให้บริการเก็บรักษาวารสาร OJS ใดๆ "
-"ที่ตรงตามเกณฑ์พื้นฐานบางประการฟรี"
+"เครือข่ายการเก็บรักษา PKP (PN) ให้บริการการเก็บรักษาฟรีสำหรับวารสาร OJS ใด ๆ "
+"ที่ตรงตามเกณฑ์พื้นฐานบางประการ"
 
 msgid "manager.setup.management.description"
 msgstr ""
-"การเข้าถึงและความปลอดภัย การกําหนดเวลา การประกาศ การคัดลอก เค้าโครง "
-"และการพิสูจน์อักษร"
+"การเข้าถึงและความปลอดภัย การจัดตารางเวลา การประกาศ การแก้ไขสำเนา การจัดรู"
+"ปแบบ และการพิสูจน์อักษร"
 
 msgid "manager.setup.restrictArticleAccess"
-msgstr "ผู้ใช้จะต้องลงทะเบียนและเข้าสู่ระบบเพื่อดูเนื้อหาการเข้าถึงแบบเปิด"
+msgstr "ผู้ใช้ต้องลงทะเบียนและเข้าสู่ระบบเพื่อดูเนื้อหาที่เข้าถึงแบบเปิด"
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
-msgstr ""
-"ผู้ตรวจสอบจะไม่ได้รับอนุญาตให้เข้าถึงไฟล์ที่ส่งจนกว่าพวกเขาจะตกลงที่จะตรวจสอบ"
+msgstr "ผู้ทบทวนจะไม่ได้รับสิทธิ์เข้าถึงไฟล์การส่งจนกว่าพวกเขาจะตกลงที่จะทบทวน"
 
 msgid "manager.setup.emailSignature"
 msgstr "ลายเซ็น"
@@ -42,7 +41,7 @@ msgid "manager.setup.contextTitle"
 msgstr "ชื่อวารสาร"
 
 msgid "manager.setup.labelName"
-msgstr "ชื่อป้ายกํากับ"
+msgstr "ชื่อป้าย"
 
 msgid "manager.setup.managingTheJournal"
 msgstr "ขั้นตอนที่ 4 การจัดการวารสาร"
@@ -54,10 +53,10 @@ msgid "manager.setup.plnPluginEnable"
 msgstr "เปิดใช้งานปลั๊กอิน PKP PN"
 
 msgid "manager.setup.navigationBarDescription"
-msgstr "เพิ่มหรือลบรายการแถบนําทางเพิ่มเติม"
+msgstr "เพิ่มหรือลบรายการเพิ่มเติมในแถบนำทาง"
 
 msgid "manager.setup.noStyleSheetUploaded"
-msgstr "ไม่มีการอัปโหลดสไตล์ชีต"
+msgstr "ไม่มีการอัปโหลดสไตล์ชีท"
 
 msgid "manager.setup.note"
 msgstr "หมายเหตุ"
@@ -66,19 +65,19 @@ msgid "manager.setup.pageNumberIdentifier"
 msgstr "ตัวเลือกหมายเลขหน้า"
 
 msgid "manager.setup.restrictSiteAccess"
-msgstr "ผู้ใช้จะต้องลงทะเบียนและเข้าสู่ระบบเพื่อดูเว็บไซต์วารสาร"
+msgstr "ผู้ใช้ต้องลงทะเบียนและเข้าสู่ระบบเพื่อดูไซต์วารสาร"
 
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
-msgstr "สัปดาห์ที่อนุญาตให้ดําเนินการตรวจสอบให้เสร็จสิ้น"
+msgstr "จำนวนสัปดาห์ที่อนุญาตให้ทำการทบทวนให้เสร็จสมบูรณ์"
 
 msgid "manager.setup.emailSignature.description"
-msgstr "อีเมลที่ส่งโดยอัตโนมัติในนามของวารสารจะมีการเพิ่มลายเซ็นดังต่อไปนี้"
+msgstr "อีเมลที่ส่งโดยอัตโนมัติในนามของวารสารจะมีลายเซ็นต่อไปนี้เพิ่มเข้ามา"
 
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "เปิดใช้งานประกาศ"
 
 msgid "manager.setup.numAnnouncementsHomepage.description"
-msgstr "จํานวนประกาศที่จะแสดงบนหน้าแรก ปล่อยว่างไว้เพื่อไม่แสดง"
+msgstr "จำนวนประกาศที่จะแสดงบนหน้าแรก เว้นว่างเพื่อไม่แสดงประกาศ"
 
 msgid "manager.setup.enableUserRegistration"
 msgstr "ผู้เยี่ยมชมสามารถลงทะเบียนบัญชีผู้ใช้กับวารสารได้"
@@ -88,40 +87,37 @@ msgstr "จุดเน้นและขอบเขต"
 
 msgid "manager.setup.plnSettingsDescription"
 msgstr ""
-"ดูการตั้งค่า <button>plugin</button> เพื่อยอมรับข้อกําหนดการใช้งานสําหรับ "
-"PKP PN"
+"ดู <button>การตั้งค่าปลั๊กอิน</button> เพื่อยอมรับข้อกำหนดการใช้งานของ PKP PN"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
-msgstr "รวมลิงก์ที่ปลอดภัยไว้ในคําเชิญทางอีเมลถึงผู้ตรวจสอบ"
+msgstr "ใส่ลิงก์ที่ปลอดภัยในคำเชิญทางอีเมลถึงผู้ทบทวน"
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
-msgstr "การให้คะแนนของผู้ตรวจสอบ"
+msgstr "การให้คะแนนผู้ทบทวน"
 
 msgid "manager.setup.reviewOptions.reviewerReminders"
-msgstr "การแจ้งเตือนผู้ตรวจสอบ"
+msgstr "การเตือนผู้ทบทวน"
 
 msgid "manager.setup.searchEngineIndexing"
-msgstr "ค้นหา การจัดทําดัชนี"
+msgstr "การทำดัชนีการค้นหา"
 
 msgid "manager.setup.sectionsDefaultSectionDescription"
-msgstr "(หากไม่มีการเพิ่มส่วนรายการจะถูกส่งไปยังส่วนบทความตามค่าเริ่มต้น)"
+msgstr "(หากไม่มีการเพิ่มส่วน บทความจะถูกส่งไปยังส่วนบทความโดยค่าเริ่มต้น)"
 
 msgid "manager.setup.selectEditorDescription"
-msgstr "บรรณาธิการวารสารที่จะดูผ่านกระบวนการบรรณาธิการ"
+msgstr "บรรณาธิการของวารสารที่จะแก้ไขบทความผ่านกระบวนการบรรณาธิการ"
 
 msgid "manager.setup.selectSectionDescription"
-msgstr "ส่วนวารสารที่จะพิจารณารายการ"
+msgstr "ส่วนของวารสารที่บทความนี้จะถูกพิจารณา"
 
 msgid "manager.setup.showGalleyLinksDescription"
-msgstr "แสดงลิงก์ห้องครัวเสมอและระบุการเข้าถึงแบบจํากัด"
+msgstr "แสดงลิงก์กัลลีย์เสมอและระบุการเข้าถึงที่ถูกจำกัด"
 
 msgid "manager.setup.stepsToJournalSite"
 msgstr "ห้าขั้นตอนสู่เว็บไซต์วารสาร"
 
 msgid "manager.setup.competingInterests.requireReviewers"
-msgstr ""
-"กําหนดให้ผู้ตรวจสอบยื่นคําชี้แจง CI "
-"พร้อมกับการตรวจสอบโดยผู้ทรงคุณวุฒิแต่ละครั้งที่พวกเขาส่ง"
+msgstr "กำหนดให้ผู้รีวิวต้องส่งคำชี้แจง CI พร้อมกับการรีวิวทุกครั้ง"
 
 msgid "manager.setup.history"
 msgstr "ประวัติวารสาร"
@@ -130,54 +126,54 @@ msgid "manager.setup.customizingTheLook"
 msgstr "ขั้นตอนที่ 5 การปรับแต่งรูปลักษณ์"
 
 msgid "manager.setup.details.description"
-msgstr "ชื่อวารสาร ISSN ผู้ติดต่อ ผู้สนับสนุน และเครื่องมือค้นหา"
+msgstr "ชื่อวารสาร ISSN ติดต่อ ผู้สนับสนุน และเครื่องมือค้นหา"
 
 msgid "manager.setup.subjectExamples"
-msgstr "(เช่น การสังเคราะห์ด้วยแสง; หลุมดํา; ปัญหาแผนที่สี่สี; ทฤษฎีเบย์)"
+msgstr "(เช่น การสังเคราะห์แสง; หลุมดำ; ปัญหาแผนที่สี่สี; ทฤษฎีแบบเบย์)"
 
 msgid "manager.setup.discipline"
-msgstr "วินัยทางวิชาการและสาขาย่อย"
+msgstr "สาขาวิชาการและสาขาย่อย"
 
 msgid "manager.setup.printIssn"
-msgstr "พิมพ์ ISSN"
+msgstr "ISSN ฉบับพิมพ์"
 
 msgid "manager.setup.reviewOptions.onQuality"
 msgstr ""
-"บรรณาธิการจะให้คะแนนผู้ตรวจสอบในระดับคุณภาพห้าจุดหลังจากการตรวจสอบแต่ละครั้ง"
+"บรรณาธิการจะให้คะแนนผู้ทบทวนตามระดับคุณภาพห้าจุดหลังจากการทบทวนแต่ละครั้ง"
 
 msgid "manager.setup.subjectProvideExamples"
-msgstr "ให้ตัวอย่างคําหลักหรือหัวข้อเพื่อเป็นแนวทางสําหรับผู้เขียน"
+msgstr "ให้ตัวอย่างคำสำคัญหรือหัวข้อเพื่อเป็นแนวทางให้กับผู้เขียน"
 
 msgid "manager.setup.submissions.description"
-msgstr "แนวปฏิบัติของผู้เขียน ลิขสิทธิ์ และการจัดทําดัชนี (รวมถึงการจดทะเบียน)"
+msgstr "แนวทางการส่งบทความ, ลิขสิทธิ์, และการทำดัชนี (รวมถึงการลงทะเบียน)"
 
 msgid "manager.setup.look.description"
-msgstr ""
-"ส่วนหัวของหน้าแรก เนื้อหา ส่วนหัวของวารสาร ส่วนท้าย แถบการนําทาง และสไตล์ชีต"
+msgstr "หัวข้อหน้าหลัก เนื้อหา หัวข้อวารสาร ท้ายหน้า แถบนำทาง และแผ่นสไตล์"
 
 msgid "manager.setup.submissions"
-msgstr "การส่ง"
+msgstr "การส่งบทความ"
 
 msgid "manager.setup.referenceLinking"
 msgstr "การเชื่อมโยงอ้างอิง"
 
 msgid "manager.setup.disciplineDescription"
 msgstr ""
-"มีประโยชน์เมื่อวารสารข้ามขอบเขตทางวินัยและ/หรือผู้เขียนส่งรายการสหสาขาวิชาชีพ"
+"มีประโยชน์เมื่อวารสารข้ามขอบเขตของสาขาวิชาและ/หรือผู้แต่งส่งรายการแบบสหวิทยาก"
+"าร"
 
 msgid "manager.setup.disciplineProvideExamples"
-msgstr "ให้ตัวอย่างสาขาวิชาวิชาการที่เกี่ยวข้องสําหรับวารสารนี้"
+msgstr "ให้ตัวอย่างของสาขาวิชาที่เกี่ยวข้องสำหรับวารสารนี้"
 
 msgid "manager.setup.focusAndScope.description"
 msgstr ""
-"อธิบายให้ผู้เขียน ผู้อ่าน และบรรณารักษ์ทราบถึงบทความและรายการอื่นๆ "
-"ที่วารสารจะตีพิมพ์"
+"อธิบายให้ผู้แต่ง ผู้อ่าน "
+"และบรรณารักษ์ทราบเกี่ยวกับขอบเขตของบทความและรายการอื่นๆ ที่วารสารจะเผยแพร่"
 
 msgid "manager.setup.displayCurrentIssue"
-msgstr "เพิ่มสารบัญสําหรับฉบับปัจจุบัน (ถ้ามี)"
+msgstr "เพิ่มสารบัญของฉบับปัจจุบัน (หากมี)"
 
 msgid "manager.setup.journalLayout"
-msgstr "เค้าโครงวารสาร"
+msgstr "รูปแบบวารสาร"
 
 msgid "manager.setup.journalLogo.altText"
 msgstr "โลโก้วารสาร"
@@ -186,10 +182,10 @@ msgid "manager.setup.editorDecision"
 msgstr "การตัดสินใจของบรรณาธิการ"
 
 msgid "manager.setup.gettingDownTheDetails"
-msgstr "ขั้นตอนที่ 1 ลงรายละเอียด"
+msgstr "ขั้นตอนที่ 1 การระบุรายละเอียด"
 
 msgid "manager.setup.journalPageFooter"
-msgstr "ส่วนท้ายหน้าวารสาร"
+msgstr "ท้ายหน้าของวารสาร"
 
 msgid "manager.setup.journalPolicies"
 msgstr "ขั้นตอนที่ 2 นโยบายวารสาร"
@@ -198,16 +194,16 @@ msgid "manager.setup.journalSetup"
 msgstr "การตั้งค่าวารสาร"
 
 msgid "manager.setup.journalSetupUpdated"
-msgstr "การตั้งค่าบันทึกประจําวันของคุณได้รับการอัปเดตแล้ว"
+msgstr "การตั้งค่าวารสารของคุณได้ถูกอัปเดตแล้ว"
 
 msgid "manager.setup.journalStyleSheetInvalid"
-msgstr "รูปแบบสไตล์ชีตวารสารไม่ถูกต้อง รูปแบบที่ยอมรับคือ.css"
+msgstr "รูปแบบแผ่นสไตล์ของวารสารไม่ถูกต้อง รูปแบบที่ยอมรับคือ .css"
 
 msgid "manager.setup.journalTheme"
-msgstr "ธีมวารสาร"
+msgstr "ธีมของวารสาร"
 
 msgid "manager.setup.journalThumbnail"
-msgstr "ภาพขนาดย่อของวารสาร"
+msgstr "ภาพย่อของวารสาร"
 
 msgid "manager.setup.enableOai"
 msgstr "เปิดใช้งาน OAI"
@@ -216,19 +212,19 @@ msgid "manager.setup.typeMethodApproach"
 msgstr "ประเภท (วิธีการ/แนวทาง)"
 
 msgid "manager.distribution.copyrightYearBasis.issue"
-msgstr "ใช้วันที่ตีพิมพ์ของฉบับ"
+msgstr "ใช้วันที่เผยแพร่ของฉบับ"
 
 msgid "manager.distribution.copyrightYearBasis.submission"
-msgstr "ใช้วันที่ตีพิมพ์บทความ"
+msgstr "ใช้วันที่เผยแพร่ของบทความ"
 
 msgid "manager.distribution.publication"
-msgstr "สิ่งตีพิมพ์"
+msgstr "การเผยแพร่"
 
 msgid "doi.manager.settings.doiCreationTime.copyedit"
-msgstr "เมื่อถึงขั้นตอนการคัดลอก"
+msgstr "เมื่อถึงขั้นตอนการแก้ไขคำ"
 
 msgid "manager.website.archiving"
-msgstr "การเก็บถาวร"
+msgstr "การจัดเก็บ"
 
 msgid "manager.journalManagement"
 msgstr "การจัดการวารสาร"
@@ -243,25 +239,25 @@ msgid "manager.language.forms"
 msgstr "แบบฟอร์ม"
 
 msgid "manager.sections.form.reviewFormId"
-msgstr "โปรดตรวจสอบให้แน่ใจว่าคุณได้เลือกแบบฟอร์มการตรวจสอบที่ถูกต้อง"
+msgstr "โปรดตรวจสอบให้แน่ใจว่าท่านได้เลือกฟอร์มรีวิวที่ถูกต้องแล้ว"
 
 msgid "manager.sections.indexed"
-msgstr "จัดทําดัชนี"
+msgstr "จัดทำดัชนีแล้ว"
 
 msgid "manager.sections.noneCreated"
-msgstr "ไม่มีการสร้างส่วนใดๆ"
+msgstr "ยังไม่มีส่วนใดถูกสร้างขึ้น"
 
 msgid "manager.sections.open"
-msgstr "เปิดการส่ง"
+msgstr "เปิดรับการส่ง"
 
 msgid "manager.sections.readingTools"
 msgstr "เครื่องมือการอ่าน"
 
 msgid "manager.sections.reviewed"
-msgstr "‘Peer Reviewed’"
+msgstr "ผ่านการรีวิวโดยผู้เชี่ยวชาญ"
 
 msgid "manager.sections.wordCount"
-msgstr "จํานวนคํา"
+msgstr "จำนวนคำ"
 
 msgid "manager.setup"
 msgstr "การตั้งค่าวารสาร"
@@ -270,13 +266,13 @@ msgid "manager.setup.editorialTeam"
 msgstr "ทีมบรรณาธิการ"
 
 msgid "manager.setup.useStyleSheet"
-msgstr "สไตล์ชีตวารสาร"
+msgstr "แผ่นสไตล์ของวารสาร"
 
 msgid "manager.setup.contextName"
 msgstr "ชื่อวารสาร"
 
 msgid "manager.setup.pageHeader"
-msgstr "ส่วนหัวของสมุดรายวัน"
+msgstr "หัวข้อหน้าของวารสาร"
 
 msgid "manager.setup.addChecklistItem"
 msgstr "เพิ่มรายการตรวจสอบ"
@@ -285,26 +281,27 @@ msgid "manager.setup.addNavItem"
 msgstr "เพิ่มรายการ"
 
 msgid "manager.setup.addSponsor"
-msgstr "เพิ่มองค์กรที่สนับสนุน"
+msgstr "เพิ่มองค์กรผู้สนับสนุน"
 
 msgid "manager.setup.alternateHeader"
-msgstr "ส่วนหัวสํารอง"
+msgstr "หัวข้อทางเลือก"
 
 msgid "manager.setup.announcements"
 msgstr "ประกาศ"
 
 msgid "manager.setup.currentIssue"
-msgstr "ประเด็นปัจจุบัน"
+msgstr "ฉบับปัจจุบัน"
 
 msgid "manager.setup.details"
 msgstr "รายละเอียด"
 
 msgid "manager.setup.disciplineExamples"
 msgstr ""
-"(เช่น ประวัติศาสตร์; การศึกษา; สังคมวิทยา; จิตวิทยา; วัฒนธรรมศึกษา; กฎหมาย)"
+"(เช่น ประวัติศาสตร์; การศึกษา; สังคมวิทยา; จิตวิทยา; การศึกษาวัฒนธรรม; "
+"กฎหมาย)"
 
 msgid "manager.setup.emailBounceAddress"
-msgstr "ที่อยู่ตีกลับ"
+msgstr "ที่อยู่อีเมลที่ไม่ได้ส่ง"
 
 msgid "manager.setup.emails"
 msgstr "การระบุอีเมล"
@@ -313,167 +310,165 @@ msgid "manager.setup.numAnnouncementsHomepage"
 msgstr "แสดงบนหน้าแรก"
 
 msgid "manager.setup.forAuthorsToIndexTheirWork"
-msgstr "เพื่อให้ผู้เขียนจัดทําดัชนีผลงานของตน"
+msgstr "สำหรับผู้แต่งเพื่อจัดทำดัชนีงานของพวกเขา"
 
 msgid "manager.setup.typeExamples"
 msgstr ""
-"(เช่น การสอบถามทางประวัติศาสตร์ กึ่งทดลอง การวิเคราะห์วรรณกรรม "
-"การสํารวจ/สัมภาษณ์)"
+"(เช่น การสืบสวนทางประวัติศาสตร์; การทดลองกึ่งเชิง; การวิเคราะห์วรรณกรรม; "
+"แบบสอบถาม/สัมภาษณ์)"
 
 msgid "manager.setup.typeProvideExamples"
-msgstr "ให้ตัวอย่างประเภทการวิจัย วิธีการ และแนวทางที่เกี่ยวข้องสําหรับสาขานี้"
+msgstr "ให้ตัวอย่างประเภทการวิจัย วิธีการ และแนวทางที่เกี่ยวข้องสำหรับสาขานี้"
 
 msgid "manager.setup.publicationScheduling"
-msgstr "กําหนดการตีพิมพ์"
+msgstr "การกำหนดตารางการเผยแพร่"
 
 msgid "manager.setup.publicIdentifier"
-msgstr "การระบุเนื้อหาวารสาร"
+msgstr "การระบุเนื้อหาของวารสาร"
 
 msgid "manager.setup.publisher"
-msgstr "สํานักพิมพ์"
+msgstr "ผู้จัดพิมพ์"
 
 msgid "manager.setup.reviewGuidelines"
-msgstr "แนวทางการตรวจสอบ"
+msgstr "แนวทางการทบทวน"
 
 msgid "manager.setup.reviewOptions"
-msgstr "ตัวเลือกการตรวจสอบ"
+msgstr "ตัวเลือกการทบทวน"
 
 msgid "manager.setup.reviewOptions.automatedReminders"
-msgstr "การแจ้งเตือนทางอีเมลอัตโนมัติ"
+msgstr "การเตือนทางอีเมลอัตโนมัติ"
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
-msgstr "จํากัดการเข้าถึงไฟล์"
+msgstr "จำกัดการเข้าถึงไฟล์"
 
 msgid "manager.setup.reviewOptions.reviewerAccess"
-msgstr "การเข้าถึงผู้ตรวจสอบ"
+msgstr "การเข้าถึงของผู้ทบทวน"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
-msgstr "การเข้าถึงผู้ตรวจสอบด้วยคลิกเดียว"
+msgstr "การเข้าถึงของผู้ทบทวนแบบคลิกเดียว"
 
 msgid "manager.setup.reviewPolicy"
-msgstr "นโยบายการตรวจสอบ"
+msgstr "นโยบายการทบทวน"
 
 msgid "manager.setup.sectionsAndSectionEditors"
-msgstr "ส่วนและบรรณาธิการส่วน"
+msgstr "ส่วนและบรรณาธิการส่วนต่างๆ"
 
 msgid "manager.setup.siteAccess.view"
-msgstr "การเข้าถึงไซต์"
+msgstr "การเข้าถึงเว็บไซต์"
 
 msgid "manager.setup.siteAccess.viewContent"
 msgstr "ดูเนื้อหาบทความ"
 
 msgid "manager.setup.subjectKeywordTopic"
-msgstr "คําหลัก"
+msgstr "คำสำคัญ"
 
 msgid "manager.setup.submissionGuidelines"
-msgstr "แนวทางการส่ง"
+msgstr "แนวทางการส่งบทความ"
 
 msgid "manager.sections.confirmDelete"
-msgstr "คุณแน่ใจหรือว่าต้องการลบส่วนนี้อย่างถาวร?"
+msgstr "ท่านแน่ใจหรือว่าต้องการลบส่วนนี้อย่างถาวร?"
 
 msgid "manager.language.confirmDefaultSettingsOverwrite"
 msgstr ""
-"สิ่งนี้จะแทนที่การตั้งค่าบันทึกประจําตําแหน่งเฉพาะที่คุณมีสําหรับสถานที่นี้"
+"การดำเนินการนี้จะทับการตั้งค่าวารสารเฉพาะท้องถิ่นที่คุณมีสำหรับท้องถิ่นนี้"
 
 msgid "manager.sections.editorRestriction"
-msgstr "รายการสามารถส่งได้โดยบรรณาธิการและบรรณาธิการส่วนเท่านั้น"
+msgstr "รายการสามารถส่งได้เฉพาะโดยบรรณาธิการและบรรณาธิการส่วนเท่านั้น"
 
 msgid "manager.sections.editors"
 msgstr "บรรณาธิการส่วน"
 
 msgid "manager.payment.options.onlypdf"
-msgstr "จํากัดการเข้าถึงปัญหาและบทความเวอร์ชัน PDF เท่านั้น"
+msgstr "จำกัดการเข้าถึงเฉพาะไฟล์ PDF ของฉบับและบทความ"
 
 msgid "manager.payment.paymentId"
-msgstr "รหัสการชําระเงิน"
+msgstr "รหัสการชำระเงิน"
 
 msgid "manager.sections.form.abbrevRequired"
-msgstr "จําเป็นต้องมีชื่อย่อสําหรับส่วนนี้"
+msgstr "จำเป็นต้องมีชื่อย่อสำหรับส่วนนี้"
 
 msgid "manager.setup.announcementsIntroduction.description"
-msgstr "ป้อนข้อมูลใด ๆ ที่คุณต้องการให้ปรากฏในหน้าประกาศของคุณ"
+msgstr "ป้อนข้อมูลที่ท่านต้องการให้แสดงในหน้าประกาศของท่าน"
 
 msgid "manager.sections.form.titleRequired"
-msgstr "จําเป็นต้องมีชื่อเรื่องสําหรับส่วนนี้"
+msgstr "จำเป็นต้องมีชื่อสำหรับส่วนนี้"
 
 msgid "manager.setup.appearInAboutJournal"
-msgstr "(เพื่อปรากฏใน About the Journal) "
+msgstr "(จะแสดงในเกี่ยวกับวารสาร) "
 
 msgid "manager.sections.hideTocAuthor"
-msgstr "ละเว้นชื่อผู้เขียนสําหรับรายการส่วนจากสารบัญประเด็น"
+msgstr "ละเว้นชื่อผู้แต่งสำหรับรายการในส่วนจากสารบัญของฉบับ"
 
 msgid "manager.sections.hideTocTitle"
-msgstr "ละเว้นชื่อของส่วนนี้จากสารบัญประเด็น"
+msgstr "ละเว้นชื่อของส่วนนี้จากสารบัญของฉบับ"
 
 msgid "manager.sections.identifyType"
-msgstr "ระบุรายการที่เผยแพร่ในส่วนนี้เป็น a(n)"
+msgstr "ระบุรายการที่ตีพิมพ์ในส่วนนี้เป็น"
 
 msgid "manager.sections.policy"
-msgstr "นโยบายมาตรา"
+msgstr "นโยบายส่วน"
 
 msgid "manager.sections.submissionIndexing"
-msgstr "จะไม่รวมอยู่ในการจัดทําดัชนีของวารสาร"
+msgstr "จะไม่ถูกรวมอยู่ในการจัดทำดัชนีของวารสาร"
 
 msgid "manager.sections.submissionReview"
-msgstr "จะไม่ได้รับการตรวจสอบโดยเพื่อน"
+msgstr "จะไม่ผ่านการตรวจสอบโดยผู้เชี่ยวชาญ"
 
 msgid "manager.distribution.access"
-msgstr "เข้าถึง"
+msgstr "การเข้าถึง"
 
 msgid "manager.section.submissionsToThisSection"
-msgstr "การส่งข้อมูลในส่วนนี้ของวารสาร"
+msgstr "การส่งที่ทำในส่วนนี้ของวารสาร"
 
 msgid "manager.distribution.publishingMode"
 msgstr "โหมดการเผยแพร่"
 
 msgid "manager.payment.authorFeesDescription"
 msgstr ""
-"ป้อนจํานวนค่าธรรมเนียมด้านล่างเพื่อเปิดใช้งานค่าธรรมเนียมการดําเนินการของผู้เ"
-"ขียน"
+"ใส่จำนวนเงินค่าธรรมเนียมด้านล่างเพื่อเปิดใช้งานการเรียกเก็บค่าธรรมเนียมการดำเ"
+"นินการของผู้เขียน"
 
 msgid "manager.sections.unassigned"
-msgstr "ตัวแก้ไขส่วนที่มี"
+msgstr "บรรณาธิการส่วนที่พร้อมใช้งาน"
 
 msgid "manager.payment.generalOptions"
 msgstr "ตัวเลือกทั่วไป"
 
 msgid "manager.distribution.publishingMode.none"
-msgstr "OJS จะไม่ถูกใช้เพื่อเผยแพร่เนื้อหาของวารสารทางออนไลน์"
+msgstr "OJS จะไม่ถูกใช้ในการเผยแพร่เนื้อหาของวารสารทางออนไลน์"
 
 msgid "manager.distribution.publishingMode.openAccess"
-msgstr "วารสารจะให้การเข้าถึงเนื้อหาอย่างเปิดเผย"
+msgstr "วารสารจะให้การเข้าถึงเนื้อหาฟรี"
 
 msgid "manager.distribution.publishingMode.subscription"
-msgstr "วารสารจะต้องมีการสมัครสมาชิกเพื่อเข้าถึงเนื้อหาบางส่วนหรือทั้งหมด"
+msgstr "วารสารจะต้องมีการสมัครสมาชิกเพื่อเข้าถึงเนื้อหาทั้งหมดหรือบางส่วน"
 
 msgid "manager.setup.enableDois.description"
 msgstr ""
-"อนุญาตให้กําหนด Digital Object Identifiers (DOIs) "
-"ให้กับงานที่ตีพิมพ์ในวารสารนี้"
+"อนุญาตให้กำหนดหมายเลขวัตถุดิจิทัล (DOIs) สำหรับผลงานที่เผยแพร่ในวารสารนี้"
 
 msgid "manager.payment.generalFeesDescription"
-msgstr "สมาชิกสมาคมจะปรากฏในเกี่ยวกับวารสารภายใต้นโยบาย"
+msgstr "การเป็นสมาชิกสมาคมจะปรากฏในเกี่ยวกับวารสารภายใต้นโยบาย"
 
 msgid "manager.payment.paymentMethod.description"
-msgstr "คุณสามารถกําหนดค่าปลั๊กอินวิธีการชําระเงินใด ๆ ต่อไปนี้จากหน้าจอนี้"
+msgstr "ท่านสามารถกำหนดวิธีการชำระเงินได้จากปลั๊กอินที่แสดงอยู่ในหน้าจอนี้"
 
 msgid "manager.sections.alertDelete"
-msgstr "ก่อนที่จะสามารถลบส่วนนี้ได้ คุณต้องย้ายบทความที่ส่งไปยังส่วนอื่นก่อน"
+msgstr "ก่อนที่จะลบส่วนนี้ ท่านต้องย้ายบทความที่ส่งมาไปยังส่วนอื่น"
 
 msgid "manager.sections.wordCountInstructions"
-msgstr "จํากัดจํานวนคํานามธรรมสําหรับส่วนนี้ (0 สําหรับไม่จํากัด)"
+msgstr "จำกัดจำนวนคำในบทคัดย่อสำหรับส่วนนี้ (0 หมายถึงไม่มีการจำกัด)"
 
 msgid "doi.manager.settings.doiSuffixLegacy"
 msgstr ""
-"ใช้รูปแบบเริ่มต้น <br />%j.v%vi%i สําหรับปัญหา<br />%j.v%vi%i.%a สําหรั"
-"บบทความ<br />%j.v%vi%i.%a.g%g สําหรับ galleys"
+"ใช้รูปแบบค่าเริ่มต้น.<br />%j.v%vi%i สำหรับฉบับ<br />%j.v%vi%i.%a สำหรั"
+"บบทความ<br />%j.v%vi%i.%a.g%g สำหรับไฟล์"
 
-#, fuzzy
 msgid "manager.setup.masthead"
-msgstr "Masthead"
+msgstr "หัวกระดาษวารสาร"
 
 msgid "manager.people.allSiteUsers"
-msgstr "ลงทะเบียนผู้ใช้จากไซต์นี้ในวารสารนี้"
+msgstr "ลงทะเบียนผู้ใช้จากเว็บไซต์นี้ในวารสารนี้"
 
 msgid "manager.people.showNoRole"
 msgstr "แสดงผู้ใช้ที่ไม่มีบทบาท"
@@ -488,54 +483,54 @@ msgid "manager.sections.abstractsNotRequired"
 msgstr "ไม่ต้องการบทคัดย่อ"
 
 msgid "manager.setup.addAboutItem"
-msgstr "เพิ่มเกี่ยวกับรายการ"
+msgstr "เพิ่มรายการเกี่ยวกับ"
 
 msgid "manager.setup.addItem"
 msgstr "เพิ่มรายการ"
 
 msgid "manager.setup.addItemtoAboutJournal"
-msgstr "เพิ่มรายการที่จะปรากฏใน \"เกี่ยวกับวารสาร\""
+msgstr "เพิ่มรายการที่จะแสดงใน \"เกี่ยวกับวารสาร\""
 
 msgid "manager.setup.addReviewerDatabaseLink"
 msgstr "เพิ่มลิงก์ฐานข้อมูลใหม่"
 
 msgid "manager.setup.announcementsIntroduction"
-msgstr "บทนํา"
+msgstr "บทนำ"
 
 msgid "manager.payment.records"
 msgstr "บันทึก"
 
 msgid "manager.paymentTypes"
-msgstr "ประเภทการชําระเงิน"
+msgstr "ประเภทการชำระเงิน"
 
 msgid "manager.payment.userName"
-msgstr "รหัสการชําระเงิน"
+msgstr "รหัสการชำระเงิน"
 
 msgid "manager.people.allEnrolledUsers"
 msgstr "ผู้ใช้ที่ลงทะเบียนในวารสารนี้"
 
 msgid "manager.people.allJournals"
-msgstr "วารสารทั้งหมด"
+msgstr "ทุกวารสาร"
 
 msgid "manager.people.allUsers"
 msgstr "ผู้ใช้ที่ลงทะเบียนทั้งหมด"
 
 msgid "manager.people.emailUsers.selectTemplate"
-msgstr "เลือกเทมเพลต"
+msgstr "เลือกแม่แบบ"
 
 msgid "manager.people.enrollExistingUser"
-msgstr "ลงทะเบียนผู้ใช้ปัจจุบัน"
+msgstr "ลงทะเบียนผู้ใช้ที่มีอยู่แล้ว"
 
 msgid "manager.people.enrollSyncJournal"
-msgstr "พร้อมวารสาร"
+msgstr "ด้วยวารสาร"
 
 msgid "manager.people.mergeUsers.into.description"
 msgstr ""
-"เลือกผู้ใช้ที่จะระบุแหล่งที่มาของการเขียน การแก้ไขการมอบหมายงาน ฯลฯ "
-"ของผู้ใช้คนก่อน"
+"เลือกผู้ใช้ที่ท่านต้องการให้ผู้ใช้เดิมทำหน้าที่ เช่น การเป็นผู้แต่ง "
+"การมอบหมายงานแก้ไข ฯลฯ"
 
 msgid "manager.people.roleEnrollment"
-msgstr "{$role} การลงทะเบียน"
+msgstr "การลงทะเบียนบทบาทของ {$role}"
 
 msgid "manager.sections.assigned"
 msgstr "บรรณาธิการของส่วนนี้"
@@ -547,7 +542,7 @@ msgid "manager.setup.numPageLinks"
 msgstr "ลิงก์หน้า"
 
 msgid "manager.setup.numPageLinks.description"
-msgstr "จํากัดจํานวนลิงก์ที่จะแสดงไปยังหน้าถัดไปในรายการ"
+msgstr "จำกัดจำนวนลิงก์ที่จะแสดงไปยังหน้าถัดไปในรายการ"
 
 msgid "manager.setup.onlineIssn"
 msgstr "ISSN ออนไลน์"
@@ -556,54 +551,54 @@ msgid "manager.setup.policies"
 msgstr "นโยบาย"
 
 msgid "manager.setup.proofingInstructions"
-msgstr "คําแนะนําในการพิสูจน์อักษร"
+msgstr "คำแนะนำการพิสูจน์อักษร"
 
 msgid "manager.setup.publicationSchedule"
-msgstr "กําหนดการตีพิมพ์"
+msgstr "ตารางการเผยแพร่"
 
 msgid "manager.setup.contextInitials"
-msgstr "ชื่อย่อวารสาร"
+msgstr "อักษรย่อของวารสาร"
 
 msgid "manager.setup.journalLogo"
 msgstr "โลโก้วารสาร"
 
 msgid "manager.setup.keyInfo"
-msgstr "ข้อมูลสําคัญ"
+msgstr "ข้อมูลสำคัญ"
 
 msgid "manager.setup.plnPluginArchiving"
-msgstr "เครือข่ายการอนุรักษ์ PKP (PN)"
+msgstr "เครือข่ายการเก็บรักษา PKP (PN)"
 
 msgid "manager.setup.otherLockss"
-msgstr "ล็อคและนาฬิกา"
+msgstr "LOCKSS และ CLOCKSS"
 
 msgid "manager.setup.lockssLicenseDescription"
 msgstr ""
-"ใบอนุญาต LOCKSS จะปรากฏใน About Journal under Archiving: <a href=\"http://www"
-".lockss.org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS "
-"License</a>"
+"ใบอนุญาต LOCKSS จะปรากฏใน 'เกี่ยวกับวารสาร' ภายใต้การเก็บถาวร: <a href=\"http"
+"://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">ใบอนุ"
+"ญาต LOCKSS</a>"
 
 msgid "manager.setup.lockssLicenseLabel"
-msgstr "คําอธิบายใบอนุญาต LOCKSS"
+msgstr "คำอธิบายใบอนุญาต LOCKSS"
 
 msgid "manager.setup.lockssTitle"
-msgstr "ล็อค"
+msgstr "LOCKSS"
 
 msgid "manager.setup.clockssEnable"
 msgstr ""
 "เปิดใช้งาน CLOCKSS "
-"เพื่อจัดเก็บและแจกจ่ายเนื้อหาวารสารที่ห้องสมุดที่เข้าร่วมผ่านทางหน้า CLOCKSS "
-"<a href=\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</a>"
+"เพื่อเก็บและแจกจ่ายเนื้อหาวารสารในห้องสมุดที่เข้าร่วมผ่านทางหน้าสำแดง <a "
+"href=\"{$clockssUrl}\" target=\"_blank\">ผู้เผยแพร่ CLOCKSS</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
-msgstr "คําอธิบายใบอนุญาต CLOCKSS"
+msgstr "คำอธิบายใบอนุญาต CLOCKSS"
 
 msgid "manager.setup.clockssRegister"
 msgstr ""
-"ลงทะเบียนเพื่อรับบริการ CLOCKSS โดยไปที่ <a href=\"https://clockss.org\" "
-"target=\"_blank\">the CLOCKSS website</a>"
+"ลงทะเบียนสำหรับบริการ CLOCKSS โดยเยี่ยมชม <a href=\"https://clockss.org\" "
+"target=\"_blank\">เว็บไซต์ CLOCKSS</a>"
 
 msgid "manager.setup.clockssTitle"
-msgstr "นาฬิกา"
+msgstr "CLOCKSS"
 
 msgid "manager.setup.look"
 msgstr "รูปลักษณ์"
@@ -613,51 +608,51 @@ msgstr "การจัดการ"
 
 msgid "manager.setup.clockssLicenseDescription"
 msgstr ""
-"ใบอนุญาต CLOCKSS จะปรากฏใน About Journal under Archiving: <a href=\"https"
-"://clockss.org\" target=\"_blank\">CLOCKSS License</a>"
+"ใบอนุญาต CLOCKSS จะปรากฏใน 'เกี่ยวกับวารสาร' ภายใต้การเก็บถาวร: <a href="
+"\"https://clockss.org\" target=\"_blank\">ใบอนุญาต CLOCKSS</a>"
 
 msgid "manager.setup.managementOfBasicEditorialSteps"
-msgstr "การจัดการขั้นตอนบรรณาธิการขั้นพื้นฐาน"
+msgstr "การจัดการขั้นตอนการบรรณาธิการขั้นพื้นฐาน"
 
 msgid "manager.setup.managingPublishingSetup"
-msgstr "การตั้งค่าการจัดการและการเผยแพร่"
+msgstr "การจัดการและการตั้งค่าการเผยแพร่"
 
 msgid "manager.setup.navigationBar"
-msgstr "แถบนําทาง"
+msgstr "แถบนำทาง"
 
 msgid "manager.setup.navItemIsLiteral"
 msgstr ""
-"ค่าป้ายกํากับเป็นสตริงตามตัวอักษร (เช่น \"การตั้งค่าวารสาร\") "
-"แทนที่จะเป็นคีย์ข้อความการแปล (เช่น \"manager.setup\")"
+"ค่าของป้ายกำกับเป็นสตริงแบบลิตเตอรัล (เช่น \"การตั้งค่าวารสาร\") "
+"แทนที่จะเป็นคีย์ข้อความท้องถิ่น (เช่น \"manager.setup\")"
 
 msgid "manager.setup.noImageFileUploaded"
-msgstr "ไม่มีการอัปโหลดไฟล์ภาพ"
+msgstr "ไม่มีการอัปโหลดไฟล์รูปภาพ"
 
 msgid "manager.languages.noneAvailable"
 msgstr ""
-"ขออภัย ไม่มีภาษาเพิ่มเติม "
-"ติดต่อผู้ดูแลไซต์ของคุณหากคุณต้องการใช้ภาษาเพิ่มเติมกับวารสารนี้"
+"ขออภัย ไม่มีภาษาที่เพิ่มเติม "
+"โปรดติดต่อผู้ดูแลระบบหากต้องการใช้ภาษาเพิ่มเติมในวารสารนี้"
 
 msgid "manager.languages.primaryLocaleInstructions"
-msgstr "นี่จะเป็นภาษาเริ่มต้นสําหรับเว็บไซต์วารสาร"
+msgstr "นี่จะเป็นภาษาหลักสำหรับเว็บไซต์ของวารสาร"
 
 msgid "manager.managementPages"
 msgstr "หน้าการจัดการ"
 
 msgid "manager.payment.action"
-msgstr "Action"
+msgstr "การกระทำ"
 
 msgid "manager.payment.addPayment"
-msgstr "เพิ่มการชําระเงิน"
+msgstr "เพิ่มการชำระเงิน"
 
 msgid "manager.payment.amount"
-msgstr "จํานวนเงิน"
+msgstr "จำนวนเงิน"
 
 msgid "manager.payment.authorFees"
 msgstr "ค่าธรรมเนียมผู้เขียน"
 
 msgid "manager.payment.description"
-msgstr "คําอธิบาย"
+msgstr "คำอธิบาย"
 
 msgid "manager.payment.details"
 msgstr "รายละเอียด"
@@ -669,16 +664,16 @@ msgid "manager.payment.enable"
 msgstr "เปิดใช้งาน"
 
 msgid "manager.payment.feePaymentOptions"
-msgstr "ตัวเลือกการชําระค่าธรรมเนียม"
+msgstr "ตัวเลือกการชำระค่าธรรมเนียม"
 
 msgid "manager.payment.form.numeric"
-msgstr "ค่าใช้จ่ายทั้งหมดต้องเป็นค่าตัวเลขบวก (อนุญาตให้ใช้จุดทศนิยมได้)"
+msgstr "ค่าทั้งหมดต้องเป็นค่าตัวเลขบวก (สามารถใช้จุดทศนิยมได้)"
 
 msgid "manager.payment.generalFees"
 msgstr "ค่าธรรมเนียมทั่วไป"
 
 msgid "manager.payment.noPayments"
-msgstr "No Payments"
+msgstr "ไม่มีการชำระเงิน"
 
 msgid "manager.payment.notFound"
 msgstr "ไม่พบ"
@@ -687,45 +682,45 @@ msgid "manager.payment.options"
 msgstr "ตัวเลือก"
 
 msgid "subscriptionManager.subscription.confirmRemove"
-msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบการสมัครสมาชิกนี้?"
+msgstr "ท่านแน่ใจหรือว่าต้องการลบการสมัครสมาชิกนี้?"
 
 msgid "manager.payment.options.enablePayments"
 msgstr ""
-"การชําระเงินจะถูกเปิดใช้งานสําหรับวารสารนี้ "
-"โปรดทราบว่าผู้ใช้จะต้องเข้าสู่ระบบเพื่อทําการชําระเงิน"
+"จะเปิดใช้งานการชำระเงินสำหรับวารสารนี้ "
+"โปรดทราบว่าผู้ใช้ต้องเข้าสู่ระบบเพื่อทำการชำระเงิน"
 
 msgid "manager.payment.options.fee"
 msgstr "ค่าธรรมเนียม"
 
 msgid "manager.payment.options.feeDescription"
-msgstr "คําอธิบายค่าธรรมเนียม"
+msgstr "คำอธิบายค่าธรรมเนียม"
 
 msgid "manager.payment.options.feeName"
 msgstr "ชื่อค่าธรรมเนียม"
 
 msgid "manager.payment.options.membershipFee"
-msgstr "สมาชิกสมาคม"
+msgstr "ค่าธรรมเนียมการเป็นสมาชิกสมาคม"
 
 msgid "manager.payment.options.publicationFee"
-msgstr "ค่าธรรมเนียมการประมวลผลบทความ"
+msgstr "ค่าธรรมเนียมการดำเนินการบทความ"
 
 msgid "manager.payment.options.purchaseArticleFee"
-msgstr "ซื้อบทความ"
+msgstr "ค่าธรรมเนียมในการซื้อบทความ"
 
 msgid "manager.payment.options.purchaseIssueFee"
-msgstr "ปัญหาการซื้อ"
+msgstr "ค่าธรรมเนียมในการซื้อฉบับ"
 
 msgid "manager.payment.options.text"
-msgstr "คําอธิบายวิธีการชําระเงิน"
+msgstr "คำอธิบายวิธีการชำระเงิน"
 
 msgid "manager.payment.paymentMethod"
-msgstr "วิธีการชําระเงิน"
+msgstr "วิธีการชำระเงิน"
 
 msgid "manager.payment.paymentMethods"
-msgstr "วิธีการชําระค่าธรรมเนียม"
+msgstr "วิธีการชำระค่าธรรมเนียม"
 
 msgid "manager.payment.paymentType"
-msgstr "ประเภทการชําระเงิน"
+msgstr "ประเภทการชำระเงิน"
 
 msgid "manager.payment.readerFees"
 msgstr "ค่าธรรมเนียมผู้อ่าน"
@@ -734,25 +729,25 @@ msgid "manager.setup.form.issnInvalid"
 msgstr "ISSN ที่ระบุไม่ถูกต้อง"
 
 msgid "manager.setup.form.contactEmailRequired"
-msgstr "จําเป็นต้องมีอีเมลติดต่อหลัก"
+msgstr "ต้องระบุอีเมลติดต่อหลัก"
 
 msgid "manager.setup.form.contactNameRequired"
-msgstr "จําเป็นต้องมีชื่อผู้ติดต่อหลัก"
+msgstr "ต้องระบุชื่อติดต่อหลัก"
 
 msgid "manager.setup.form.journalInitialsRequired"
-msgstr "จําเป็นต้องมีชื่อย่อวารสาร"
+msgstr "ต้องระบุอักษรย่อของวารสาร"
 
 msgid "manager.setup.form.journalTitleRequired"
-msgstr "จําเป็นต้องมีชื่อวารสาร"
+msgstr "ต้องระบุชื่อวารสาร"
 
 msgid "manager.setup.form.numReviewersPerSubmission"
-msgstr "จําเป็นต้องมีจํานวนผู้วิจารณ์ต่อการส่ง"
+msgstr "ต้องระบุจำนวนผู้รีวิวต่อการส่งแต่ละครั้ง"
 
 msgid "manager.setup.form.supportEmailRequired"
-msgstr "จําเป็นต้องมีอีเมลสนับสนุน"
+msgstr "ต้องระบุอีเมลสำหรับการสนับสนุน"
 
 msgid "manager.setup.form.supportNameRequired"
-msgstr "ชื่อสนับสนุนเป็นสิ่งจําเป็น"
+msgstr "ต้องระบุชื่อสำหรับการสนับสนุน"
 
 msgid "manager.setup.generalInformation"
 msgstr "ข้อมูลทั่วไป"
@@ -761,29 +756,29 @@ msgid "manager.setup.guidelines"
 msgstr "แนวทางปฏิบัติ"
 
 msgid "manager.setup.guidingSubmissions"
-msgstr "ขั้นตอนที่ 3 การส่งคําแนะนํา"
+msgstr "ขั้นตอนที่ 3 การแนะนำการส่ง"
 
 msgid "manager.setup.identity"
-msgstr "อัตลักษณ์วารสาร"
+msgstr "อัตลักษณ์ของวารสาร"
 
 msgid "manager.setup.information"
 msgstr "ข้อมูล"
 
 msgid "manager.setup.information.forAuthors"
-msgstr "สําหรับนักเขียน"
+msgstr "สำหรับผู้แต่ง"
 
 msgid "manager.setup.information.forLibrarians"
-msgstr "สําหรับบรรณารักษ์"
+msgstr "สำหรับบรรณารักษ์"
 
 msgid "manager.setup.information.forReaders"
-msgstr "สําหรับผู้อ่าน"
+msgstr "สำหรับผู้อ่าน"
 
 msgid "manager.setup.initialIssue"
-msgstr "ประเด็นเบื้องต้น"
+msgstr "ฉบับเริ่มต้น"
 
 msgid "manager.setup.initialIssueDescription"
 msgstr ""
-"ขึ้นอยู่กับรูปแบบที่เลือกระบุปัญหาปริมาณและ/หรือปีของฉบับแรกที่จะเผยแพร่กับ "
+"ขึ้นอยู่กับรูปแบบที่เลือก ระบุฉบับ เล่ม และ/หรือปีของฉบับแรกที่จะเผยแพร่กับ "
 "OJS:"
 
 msgid "manager.setup.institution"
@@ -793,7 +788,7 @@ msgid "manager.setup.itemsPerPage"
 msgstr "รายการต่อหน้า"
 
 msgid "manager.setup.journalAbbreviation"
-msgstr "ตัวย่อวารสาร"
+msgstr "อักษรย่อของวารสาร"
 
 msgid "manager.setup.journalArchiving"
 msgstr "การเก็บถาวรวารสาร"
@@ -808,302 +803,301 @@ msgid "manager.setup.journalHomepageContent"
 msgstr "เนื้อหาหน้าแรกของวารสาร"
 
 msgid "manager.setup.journalHomepageHeader"
-msgstr "ส่วนหัวของหน้าแรกของวารสาร"
+msgstr "หัวข้อหน้าของวารสาร"
 
 msgid "manager.setup.journalHomepageHeader.altText"
-msgstr "ส่วนหัวของหน้าแรกของวารสาร"
+msgstr "หัวข้อหน้าของวารสาร"
 
 msgid "manager.distribution.copyrightYearBasis.description"
 msgstr ""
-"เลือกวิธีการเลือกวันที่ลิขสิทธิ์เริ่มต้นสําหรับบทความ "
-"ค่าเริ่มต้นนี้สามารถแทนที่ได้เป็นรายกรณี หากคุณ \"เผยแพร่ตามที่คุณไป\" "
-"อย่าใช้วันที่ตีพิมพ์ของฉบับนั้น"
+"เลือกวิธีการเลือกวันที่ลิขสิทธิ์เริ่มต้นสำหรับบทความ "
+"วันที่ลิขสิทธิ์นี้สามารถแก้ไขได้เป็นกรณีๆ ไป หากท่าน \"เผยแพร่ทันที\" "
+"อย่าใช้วันที่เผยแพร่ของฉบับ"
 
 msgid "manager.people.confirmRemove"
 msgstr ""
-"ลบผู้ใช้นี้ออกจากบันทึกนี้หรือไม่? "
-"การดําเนินการนี้จะยกเลิกการลงทะเบียนผู้ใช้จากทุกบทบาทภายในวารสารนี้"
+"ลบผู้ใช้นี้ออกจากวารสารนี้หรือไม่? "
+"การกระทำนี้จะยกเลิกการลงทะเบียนผู้ใช้จากบทบาททั้งหมดภายในวารสารนี้"
 
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr ""
-"เลือกรายการที่จะกําหนด DOI วารสารส่วนใหญ่กําหนด DOI ให้กับบทความ "
-"แต่คุณอาจต้องการกําหนด DOI ให้กับรายการที่ตีพิมพ์ทั้งหมด"
+"เลือกวัตถุที่จะกำหนด DOI ส่วนใหญ่แล้ววารสารจะกำหนด DOI ให้กับบทความ "
+"แต่ท่านอาจเลือกที่จะกำหนด DOI ให้กับสิ่งตีพิมพ์ทั้งหมด"
 
 msgid "manager.files.note"
 msgstr ""
-"หมายเหตุ: Files Browser เป็นคุณสมบัติขั้นสูงที่ช่วยให้สามารถดูและจัดการไฟล์แล"
-"ะไดเร็กทอรีที่เกี่ยวข้องกับวารสารได้โดยตรง"
+"หมายเหตุ: ตัวจัดการไฟล์เป็นฟีเจอร์ขั้นสูงที่ช่วยให้สามารถดูและจัดการไฟล์และได"
+"เรกทอรีที่เกี่ยวข้องกับวารสารได้โดยตรง"
 
 msgid "manager.languages.languageInstructions"
 msgstr ""
-"OJS สามารถให้บริการแก่ผู้ใช้ในภาษาที่รองรับหลายภาษา นอกจากนี้ OJS "
-"ยังสามารถทํางานเป็นระบบหลายภาษาได้ "
-"ทําให้ผู้ใช้สามารถสลับระหว่างภาษาในแต่ละหน้าได้ "
-"และอนุญาตให้ป้อนข้อมูลบางอย่างในภาษาเพิ่มเติมได้หลายภาษา<br /><br/>หากภาษาที่"
-" OJS รองรับไม่อยู่ในรายการด้านล่าง "
-"ขอให้ผู้ดูแลระบบไซต์ของคุณติดตั้งภาษาจากอินเทอร์เฟซการดูแลระบบไซต์ "
-"สําหรับคําแนะนําในการเพิ่มการรองรับภาษาใหม่ โปรดดูเอกสาร OJS"
+"OJS สามารถให้บริการแก่ผู้ใช้ในภาษาที่รองรับหลายภาษาได้ นอกจากนี้ OJS "
+"ยังสามารถทำงานเป็นระบบหลายภาษา ให้ผู้ใช้สามารถสลับระหว่างภาษาบนแต่ละหน้า "
+"และอนุญาตให้ป้อนข้อมูลในหลายภาษาได้<br /><br/>หากภาษาที่ OJS "
+"รองรับไม่ได้ระบุไว้ด้านล่าง "
+"โปรดติดต่อผู้ดูแลระบบเพื่อเพิ่มภาษาในการจัดการเว็บไซต์ "
+"สำหรับคำแนะนำในการเพิ่มภาษาที่รองรับ โปรดดูเอกสาร OJS"
 
 msgid "manager.payment.currencymessage"
 msgstr ""
-"OJS ไม่มีการแปลงสกุลเงินใดๆ  หากยอมรับการชําระเงินสําหรับการสมัครสมาชิก คุณต้"
-"องตรวจสอบให้แน่ใจว่าสกุลเงินในการสมัครสมาชิกตรงกับสกุลเงินที่ระบุไว้ที่นี่"
+"OJS ไม่ได้ทำการแปลงค่าเงิน หากท่านยอมรับการชำระเงินสำหรับการสมัครสมาชิก "
+"ท่านต้องแน่ใจว่าสกุลเงินการสมัครสมาชิกตรงกับที่ระบุที่นี่"
 
 msgid "manager.payment.options.acceptSubscriptionPayments"
 msgstr ""
-"การดําเนินการนี้จะเปิดใช้งานการชําระเงินสําหรับการสมัครสมาชิก โดยที่ประเภท "
-"ต้นทุน ระยะเวลา และการสมัครสมาชิกได้รับการจัดการโดยผู้จัดการวารสาร "
-"(การสมัครสมาชิก)"
+"สิ่งนี้จะเปิดใช้งานการชำระเงินสำหรับการสมัครสมาชิก ซึ่งประเภท ค่าใช้จ่าย "
+"ระยะเวลา และการสมัครสมาชิกจะถูกจัดการโดยผู้จัดการวารสาร (Subscription "
+"Manager)"
 
 msgid "manager.payment.readerFeesDescription"
 msgstr ""
-"ตัวเลือกที่เลือก พร้อมด้วยคําอธิบายและค่าธรรมเนียม "
-"(ซึ่งสามารถแก้ไขได้ด้านล่าง) จะปรากฏในเกี่ยวกับวารสารภายใต้นโยบาย "
-"รวมถึงจุดที่จําเป็นต้องชําระเงิน"
+"ตัวเลือกที่เลือกพร้อมคำอธิบายและค่าธรรมเนียม (ที่สามารถแก้ไขได้ด้านล่าง) "
+"จะปรากฏในเกี่ยวกับวารสารภายใต้นโยบาย เช่นเดียวกับในจุดที่จำเป็นต้องชำระเงิน"
 
 msgid "manager.people.mergeUsers.from.description"
 msgstr ""
-"เลือกผู้ใช้ (หรือหลายคน) เพื่อรวมเข้ากับบัญชีผู้ใช้อื่น (เช่น "
-"เมื่อมีคนมีบัญชีผู้ใช้สองบัญชี) บัญชีที่เลือกก่อนจะถูกลบ และการส่ง "
-"การมอบหมาย ฯลฯ จะถือเป็นบัญชีที่สอง"
+"เลือกผู้ใช้ (หรือหลายคน) เพื่อรวมเข้ากับบัญชีผู้ใช้อีกบัญชีหนึ่ง (เช่น "
+"เมื่อบุคคลใดมีบัญชีผู้ใช้สองบัญชี) บัญชีที่เลือกก่อนจะถูกลบและงานใดๆ เช่น "
+"การส่ง การมอบหมาย ฯลฯ จะถูกกำหนดให้กับบัญชีที่สอง"
 
 msgid "manager.people.syncUserDescription"
 msgstr ""
-"การซิงโครไนซ์การลงทะเบียนจะลงทะเบียนผู้ใช้ทั้งหมดที่ลงทะเบียนในบทบาทที่ระบุใน"
-"วารสารที่ระบุให้มีบทบาทเดียวกันในวารสารนี้ ฟังก์ชันนี้ช่วยให้ชุดผู้ใช้ทั่วไป "
-"(เช่น ผู้ตรวจสอบ) สามารถซิงโครไนซ์ระหว่างวารสารได้"
+"การซิงโครไนซ์การลงทะเบียนจะลงทะเบียนผู้ใช้ที่ลงทะเบียนในบทบาทที่ระบุในวารสารท"
+"ี่ระบุในบทบาทเดียวกันในวารสารนี้ "
+"ฟังก์ชั่นนี้ช่วยให้สามารถซิงโครไนซ์กลุ่มผู้ใช้ร่วมกัน (เช่น ผู้รีวิว) "
+"ระหว่างวารสารได้"
 
 msgid "manager.section.sectionEditorInstructions"
 msgstr ""
-"เพิ่มตัวแก้ไขส่วนในส่วนนี้เพื่อให้การส่งผลงานถูกกําหนดให้กับตัวแก้ไขส่วนโดยอั"
-"ตโนมัติ (มิฉะนั้น สามารถกําหนด Section Editor ด้วยตนเองได้ "
-"หลังจากส่งเข้ามาแล้ว) หากเพิ่มเข้าไป "
-"ตัวแก้ไขส่วนสามารถถูกกําหนดโดยอัตโนมัติเพื่อดูแลการตรวจสอบ "
-"(การตรวจสอบโดยผู้ทรงคุณวุฒิ) และ/หรือการแก้ไข (การแก้ไขสําเนา เค้าโครง "
-"และการพิสูจน์อักษร) ของการส่งไปยังส่วนนี้ บรรณาธิการส่วนถูกสร้างขึ้นโดยการคลิ"
-"กบรรณาธิการส่วนภายใต้บทบาทในการจัดการวารสาร"
+"เพิ่มบรรณาธิการส่วนในส่วนนี้เพื่อให้การส่งเข้ามาได้รับการมอบหมายไปยังบรรณาธิก"
+"ารส่วนโดยอัตโนมัติ (มิฉะนั้น "
+"บรรณาธิการส่วนสามารถมอบหมายได้ด้วยตนเองหลังจากการส่ง) หากเพิ่มแล้ว "
+"บรรณาธิการส่วนสามารถได้รับการมอบหมายให้ดูแลการรีวิว (peer review) "
+"และ/หรือการแก้ไข (การแก้ไขคำ จัดวาง และการพิสูจน์อักษร) ของการส่งในส่วนนี้ บร"
+"รณาธิการส่วนถูกสร้างขึ้นโดยการคลิกที่บรรณาธิการส่วนภายใต้บทบาทในการจัดการวารส"
+"าร"
 
 msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
-"ต้องมีการใช้งานอย่างน้อยหนึ่งส่วน "
-"เยี่ยมชมการตั้งค่าเวิร์กโฟลว์เพื่อปิดการใช้งานการส่งทั้งหมดไปยังวารสารนี้"
+"ต้องมีส่วนอย่างน้อยหนึ่งส่วนที่เปิดใช้งานอยู่ "
+"ไปที่การตั้งค่าการทำงานเพื่อปิดการส่งทั้งหมดไปยังวารสารนี้"
 
 msgid "manager.sections.form.mustAllowPermission"
 msgstr ""
-"โปรดตรวจสอบให้แน่ใจว่ามีการตรวจสอบช่องทําเครื่องหมายอย่างน้อยหนึ่งช่องสําหรับ"
-"การกําหนดตัวแก้ไขแต่ละส่วน"
+"โปรดตรวจสอบให้แน่ใจว่ามีการเลือกเครื่องหมายถูกในกล่องสำหรับการมอบหมายบรรณาธิก"
+"ารส่วนแต่ละรายการ"
 
 msgid "manager.sections.identifyTypeExamples"
 msgstr ""
-"(เช่น \"บทความที่ผ่านการตรวจสอบโดยผู้ทรงคุณวุฒิ\", \"บทว"
-"ิจารณ์หนังสือที่ไม่อ้างอิง\", \"ความเห็นที่ได้รับเชิญ\" ฯลฯ)"
+"(เช่น \"บทความที่ผ่านการตรวจสอบ\", \"รีวิวหนังสือที่ไม่ผ่านการคัดกรอง\", "
+"\"คำเชิญแสดงความคิดเห็น\")"
 
 msgid "manager.setup.homepageContentDescription"
 msgstr ""
-"หน้าแรกของวารสารประกอบด้วยลิงก์การนําทางตามค่าเริ่มต้น เนื้อหาหน้าแรกเพิ่มเติ"
-"มสามารถผนวกได้โดยใช้ตัวเลือกต่อไปนี้อย่างใดอย่างหนึ่งหรือทั้งหมด "
-"ซึ่งจะปรากฏตามลําดับที่แสดง"
+"หน้าแรกของวารสารประกอบด้วยลิงก์การนำทางตามค่าเริ่มต้น สามารถเพิ่มเนื้อหาหน้าแ"
+"รกเพิ่มเติมโดยใช้หนึ่งหรือทั้งหมดของตัวเลือกด้านล่างนี้ "
+"ซึ่งจะแสดงตามลำดับที่แสดงไว้"
 
 msgid "manager.setup.alternateHeaderDescription"
 msgstr ""
-"อีกทางหนึ่ง แทนที่จะใช้ชื่อและโลโก้ สามารถแทรกส่วนหัวเวอร์ชัน HTML "
-"ลงในกล่องข้อความด้านล่างได้ เว้นกล่องข้อความว่างไว้หากไม่จําเป็น"
+"หรือแทนที่จะใช้ชื่อและโลโก้ สามารถแทรกหัวข้อในรูปแบบ HTML "
+"ลงในกล่องข้อความด้านล่าง หากไม่ต้องการใช้ให้เว้นกล่องข้อความว่างไว้"
 
 msgid "manager.setup.historyDescription"
 msgstr ""
-"ข้อความนี้จะปรากฏในส่วน \"เกี่ยวกับ\" ของเว็บไซต์วารสาร "
-"และสามารถใช้เพื่ออธิบายการเปลี่ยนแปลงชื่อเรื่อง กองบรรณาธิการ และรายการอื่นๆ "
-"ที่เกี่ยวข้องกับประวัติการตีพิมพ์ของวารสาร"
+"ข้อความนี้จะแสดงในส่วน \"เกี่ยวกับ\" "
+"ของเว็บไซต์วารสารและสามารถใช้เพื่ออธิบายการเปลี่ยนแปลงในชื่อ คณะบรรณาธิการ "
+"และรายการอื่นๆ ที่เกี่ยวข้องกับประวัติการเผยแพร่วารสาร"
 
 msgid "manager.setup.disableUserRegistration"
 msgstr ""
-"Journal Manager จะลงทะเบียนบัญชีผู้ใช้ทั้งหมด "
-"บรรณาธิการหรือบรรณาธิการส่วนอาจลงทะเบียนบัญชีผู้ใช้สําหรับผู้ตรวจสอบ"
+"ผู้จัดการวารสารจะลงทะเบียนบัญชีผู้ใช้ทั้งหมด "
+"บรรณาธิการหรือบรรณาธิการส่วนสามารถลงทะเบียนบัญชีผู้ใช้สำหรับผู้รีวิวได้"
 
 msgid "manager.setup.emailBounceAddress.disabled"
 msgstr ""
-"ในการส่งอีเมลที่ไม่สามารถจัดส่งไปยังที่อยู่ตีกลับ "
-"ผู้ดูแลระบบไซต์จะต้องเปิดใช้งานตัวเลือก <code>allow_envelope_sender</code> "
-"ในไฟล์การกําหนดค่าไซต์ อาจจําเป็นต้องมีการกําหนดค่าเซิร์ฟเวอร์ ตามที่ระบุไว้"
-"ในเอกสาร OJS"
+"เพื่อที่จะส่งอีเมลที่ไม่สามารถส่งได้ไปยังที่อยู่ที่ไม่ได้ส่ง "
+"ผู้ดูแลระบบเว็บไซต์จะต้องเปิดใช้งานตัวเลือก <code>allow_envelope_sender</"
+"code> ในไฟล์กำหนดค่าไซต์ อาจต้องกำหนดค่าของเซิร์ฟเวอร์ตามที่ระบุในเอกสาร OJS"
 
 msgid "manager.setup.enableAnnouncements.description"
 msgstr ""
-"อาจมีการเผยแพร่ประกาศเพื่อแจ้งให้ผู้อ่านทราบข่าวสารและกิจกรรมในวารสาร "
-"ประกาศที่เผยแพร่จะปรากฏในหน้าประกาศ"
+"ประกาศสามารถเผยแพร่เพื่อแจ้งผู้อ่านเกี่ยวกับข่าวสารและเหตุการณ์ของวารสาร "
+"ประกาศที่เผยแพร่แล้วจะแสดงในหน้าประกาศ"
 
 msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
 msgstr ""
-"OJS ปฏิบัติตาม <a href=\"https://www.openarchives.org/\" target=\"_blank\""
-">Open Archives Initiative</a> Protocol for Metadata Harvesting ซึ่งเป็นมาตรฐา"
-"นที่เกิดขึ้นใหม่สําหรับการให้การเข้าถึงทรัพยากรการวิจัยอิเล็กทรอนิกส์ที่มีการ"
-"จัดทําดัชนีอย่างดีในระดับโลก "
-"ผู้เขียนจะใช้เทมเพลตที่คล้ายกันเพื่อจัดเตรียมข้อมูลเมตาสําหรับการส่ง ผู้จัดกา"
-"รวารสารควรเลือกหมวดหมู่สําหรับการจัดทําดัชนีและนําเสนอผู้เขียนพร้อมตัวอย่างที"
-"่เกี่ยวข้องเพื่อช่วยในการจัดทําดัชนีงานของตน"
+"OJS ยึดตาม <a href=\"https://www.openarchives.org/\" target=\"_blank\""
+">โปรโตคอลของ Open Archives Initiative</a> สำหรับการรวบรวมข้อมูลเมตาดาต้า ซึ่ง"
+"เป็นมาตรฐานที่กำลังเกิดขึ้นสำหรับการให้เข้าถึงทรัพยากรการวิจัยอิเล็กทรอนิกส์ท"
+"ี่มีการจัดทำดัชนีได้ดีในระดับโลก "
+"ผู้แต่งจะใช้แม่แบบที่คล้ายกันเพื่อให้ข้อมูลเมตาดาต้าสำหรับการส่งของพวกเขา ผู้"
+"จัดการวารสารควรเลือกหมวดหมู่สำหรับการจัดทำดัชนีและนำเสนอตัวอย่างที่เกี่ยวข้อง"
+"ให้กับผู้แต่งเพื่อช่วยในการจัดทำดัชนีงานของพวกเขา"
 
 msgid "manager.setup.includeCreativeCommons"
 msgstr ""
-"สําหรับวารสารที่เสนอการเข้าถึงแบบเปิดทันทีหรือล่าช้า ให้รวมใบอนุญาต Creative "
-"Commons กับผลงานตีพิมพ์ทั้งหมดในเวลาที่เหมาะสม"
+"สำหรับวารสารที่ให้การเข้าถึงแบบเปิดทันทีหรือแบบล่าช้า ให้รวมใบอนุญาต "
+"Creative Commons กับงานที่เผยแพร่ทั้งหมดในเวลาที่เหมาะสม"
 
 msgid "manager.setup.information.description"
 msgstr ""
-"คําอธิบายโดยย่อของวารสารสําหรับบรรณารักษ์และผู้สนใจเป็นผู้เขียนและผู้อ่าน "
-"สิ่งเหล่านี้มีให้ใช้งานในแถบด้านข้างของไซต์เมื่อมีการเพิ่มบล็อกข้อมูล"
+"คำอธิบายสั้นๆ ของวารสารสำหรับบรรณารักษ์และผู้แต่งและผู้อ่านที่คาดหวัง "
+"ข้อมูลเหล่านี้จะแสดงในแถบด้านข้างของไซต์เมื่อมีการเพิ่มบล็อกข้อมูล"
 
 msgid "manager.setup.itemsDescription"
 msgstr ""
-"รายการแถบนําทางสามารถเพิ่มลงในชุดปัจจุบัน (หน้าแรก เกี่ยวกับ หน้าแรกของผู้ใช้"
-" ฯลฯ) ที่ปรากฏที่ด้านบนของหน้า"
+"สามารถเพิ่มรายการในแถบนำทางไปยังชุดปัจจุบัน (หน้าหลัก, เกี่ยวกับ, "
+"หน้าแรกของผู้ใช้ ฯลฯ) ที่ปรากฏอยู่ด้านบนของหน้า"
 
 msgid "manager.setup.itemsPerPage.description"
 msgstr ""
-"จํากัดจํานวนรายการ (เช่น การส่ง ผู้ใช้ หรือการแก้ไขการมอบหมาย) "
-"เพื่อแสดงในรายการก่อนที่จะแสดงรายการถัดไปในหน้าอื่น"
+"จำกัดจำนวนรายการ (เช่น การส่ง ผู้ใช้ หรือการมอบหมายงานแก้ไข) "
+"ที่จะแสดงในรายการก่อนแสดงรายการถัดไปในหน้าอื่น"
 
 msgid "manager.setup.contextAbout.description"
 msgstr ""
-"รวมข้อมูลใดๆ เกี่ยวกับวารสารของคุณซึ่งอาจเป็นที่สนใจของผู้อ่าน ผู้เขียน "
-"หรือผู้วิจารณ์ ซึ่งอาจรวมถึงนโยบายการเข้าถึงแบบเปิดของคุณ จุดเน้"
-"นและขอบเขตของวารสาร ประกาศเกี่ยวกับลิขสิทธิ์ การเปิดเผยการสนับสนุน "
-"ประวัติความเป็นมาของวารสาร คําชี้แจงความเป็นส่วนตัว และการรวมไว้ในระบบการเก็"
-"บถาวร LOCKSS หรือ CLOCKSS"
+"รวมข้อมูลใดๆ เกี่ยวกับวารสารของคุณที่อาจเป็นที่สนใจของผู้อ่าน ผู้แต่ง "
+"หรือผู้รีวิว ข้อมูลนี้อาจรวมถึงนโยบายการเข้าถึงแบบเปิด จุดเน้"
+"นและขอบเขตของวารสาร ข้อสังเกตเรื่องลิขสิทธิ์ การเปิดเผยผู้สนับสนุน ประวัติ"
+"ของวารสาร ข้อความความเป็นส่วนตัว และการรวมอยู่ในระบบเก็บถาวร LOCKSS หรือ "
+"CLOCKSS"
 
 msgid "manager.setup.journalHomepageContentDescription"
 msgstr ""
-"ตามค่าเริ่มต้น หน้าแรกประกอบด้วยลิงก์การนําทาง "
-"เนื้อหาหน้าแรกเพิ่มเติมสามารถต่อท้ายได้โดยใช้ตัวเลือกต่อไปนี้หนึ่งหรือทั้"
-"งหมด ซึ่งจะปรากฏตามลําดับที่แสดง "
-"โปรดทราบว่าปัญหาปัจจุบันสามารถเข้าถึงได้ผ่านลิงก์ปัจจุบันในแถบนําทางเสมอ"
+"ตามค่าเริ่มต้น หน้าแรกประกอบด้วยลิงก์การนำทาง สามารถเพิ่มเนื้อหาหน้าแรกเพิ่มเ"
+"ติมโดยใช้หนึ่งหรือทั้งหมดของตัวเลือกด้านล่างนี้ ซึ่งจะแสดงตามลำดับที่แสดงไว้ "
+"โปรดทราบว่าฉบับปัจจุบันสามารถเข้าถึงได้เสมอผ่านลิงก์ 'ฉบับปัจจุบัน' "
+"ในแถบการนำทาง"
 
 msgid "manager.setup.journalHomepageHeaderDescription"
 msgstr ""
-"สามารถอัปโหลดชื่อและโลโก้ของวารสารเวอร์ชันกราฟิก (เป็นไฟล์ .gif, .jpg หรือ ."
-"png) สําหรับหน้าแรกได้ ซึ่งจะแทนที่เวอร์ชันข้อความที่ปรากฏเป็นอย่างอื่น"
+"สามารถอัปโหลดเวอร์ชันกราฟิกของชื่อและโลโก้วารสาร (ในรูปแบบไฟล์ .gif, .jpg, "
+"หรือ .png) สำหรับหน้าแรก ซึ่งจะทดแทนเวอร์ชันข้อความที่ปรากฏโดยปกติ"
 
 msgid "manager.setup.selectCountry"
 msgstr ""
 "เลือกประเทศที่วารสารนี้ตั้งอยู่ "
-"หรือประเทศที่อยู่ทางไปรษณีย์ของวารสารหรือผู้จัดพิมพ์"
+"หรือประเทศของที่อยู่สำหรับส่งจดหมายของวารสารหรือผู้จัดพิมพ์"
 
 msgid "manager.setup.journalLayoutDescription"
 msgstr ""
-"เลือกธีมวารสารและเลือกส่วนประกอบเค้าโครงที่นี่ อาจอัปโหลดสไตล์ชีตวารสาร "
-"ซึ่งสามารถใช้เพื่อแทนที่ข้อมูลสไตล์ในสไตล์ชีตและสไตล์ชีตธีมทั้งระบบ "
-"(หากเลือกธีม)"
+"เลือกรูปแบบวารสารและเลือกส่วนประกอบของรูปแบบที่นี่ "
+"นอกจากนี้ยังสามารถอัปโหลดแผ่นสไตล์ของวารสารได้ "
+"ซึ่งสามารถใช้แทนข้อมูลสไตล์ในแผ่นสไตล์ของระบบและแผ่นสไตล์ธีม "
+"(ถ้ามีการเลือกธีม)"
 
 msgid "manager.setup.journalPageFooterDescription"
 msgstr ""
-"นี่คือส่วนท้ายของบันทึกของคุณ หากต้องการเปลี่ยนหรืออัปเดตส่วนท้าย ให้วางโค้ด "
-"HTML ในกล่องข้อความด้านล่าง ตัวอย่างอาจเป็นแถบนําทางอื่น ตัวนับ ฯลฯ "
-"ส่วนท้ายนี้จะปรากฏในทุกหน้า"
+"นี่คือส่วนท้ายของวารสารของคุณ หากต้องการเปลี่ยนหรืออัปเดตส่วนท้าย ให้วางโค้ด "
+"HTML ในกล่องข้อความด้านล่าง ตัวอย่างเช่น แถบการนำทางอีกหนึ่งชุด "
+"ตัวนับจำนวนผู้เข้าชม เป็นต้น ส่วนท้ายนี้จะแสดงในทุกหน้า"
 
 msgid "manager.setup.keyInfo.description"
 msgstr ""
-"ให้คําอธิบายสั้นๆ เกี่ยวกับวารสารของคุณและระบุบรรณาธิการ กรรมการผู้จัดการ "
-"และสมาชิกคนอื่นๆ ในทีมบรรณาธิการของคุณ"
+"โปรดให้คำอธิบายสั้น ๆ เกี่ยวกับวารสารของคุณ และระบุบรรณาธิการ ผู้จัดการ "
+"และสมาชิกคนอื่น ๆ ในทีมบรรณาธิการของคุณ"
 
 msgid "manager.setup.plnPluginNotInstalled"
 msgstr ""
-"PKP Preservation Network (PN) ให้บริการเก็บรักษาวารสาร OJS ใดๆ "
-"ที่ตรงตามเกณฑ์พื้นฐานบางประการฟรี หากต้องการเก็บถาวรบันทึกประจําวันของคุณใน "
-"PN โปรดขอให้ผู้ดูแลระบบติดตั้งปลั๊กอิน PKP|PN จาก Plugin Gallery"
+"เครือข่ายการเก็บรักษา PKP (PN) ให้บริการการเก็บรักษาฟรีสำหรับวารสาร OJS ใด ๆ "
+"ที่ตรงตามเกณฑ์พื้นฐานบางประการ ในการเก็บถาวรวารสารของคุณใน PN "
+"โปรดขอให้ผู้ดูแลระบบติดตั้งปลั๊กอิน PKP|PN จากแกลเลอรีปลั๊กอิน"
 
 msgid "manager.setup.lockssEnable"
 msgstr ""
 "เปิดใช้งาน LOCKSS "
-"เพื่อจัดเก็บและแจกจ่ายเนื้อหาวารสารที่ห้องสมุดที่เข้าร่วมผ่านทางหน้า LOCKSS "
-"<a href=\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a>"
+"เพื่อเก็บและแจกจ่ายเนื้อหาวารสารในห้องสมุดที่เข้าร่วมผ่านทางหน้าสำแดง <a "
+"href=\"{$lockssUrl}\" target=\"_blank\">ผู้เผยแพร่ LOCKSS</a>"
 
 msgid "manager.setup.lockssRegister"
 msgstr ""
-"ระบุห้องสมุด 6-10 แห่งที่จะลงทะเบียนและแคชวารสาร ตัวอย่างเช่น "
-"หันไปหาสถาบันที่บรรณาธิการหรือสมาชิกคณะกรรมการทํางาน และ/หรือสถาบันที่เข้าร่"
-"วมใน LOCKSS อยู่แล้ว ดู <a href=\"https://www.lockss.org/join-lockss/partner-"
-"communities\" target=\"_blank\">the LOCKSS community</a>"
+"ระบุห้องสมุด 6-10 แห่งที่จะลงทะเบียนและแคชวารสาร เช่น "
+"หันไปที่สถาบันที่บรรณาธิการหรือสมาชิกคณะกรรมการทำงานอยู่ "
+"และ/หรือสถาบันที่เข้าร่วมใน LOCKSS ดู <a href=\"https://www.lockss.org/"
+"join-lockss/partner-communities\" target=\"_blank\">ชุมชน LOCKSS</a>"
 
 msgid "manager.setup.navItemIsAbsolute"
 msgstr ""
-"URL เป็น URL แบบสัมบูรณ์ (เช่น \"http://www.example.com\") "
-"แทนที่จะเป็นเส้นทางที่สัมพันธ์กับไซต์ (เช่น \"/ผู้จัดการ/การตั้งค่า\")"
+"URL เป็น URL แบบสมบูรณ์ (เช่น \"http://www.example.com\") "
+"แทนที่จะเป็นเส้นทางที่สัมพันธ์กับไซต์ (เช่น \"/manager/setup\")"
 
 msgid "manager.setup.notifications.submissionAckDisabled"
 msgstr ""
-"<strong>หมายเหตุ:</strong> ขณะนี้อีเมลตอบรับการส่งถูกปิดใช้งาน "
-"หากต้องการใช้คุณสมบัตินี้ ให้เปิดใช้งานอีเมล \"Submission Ack\" ในอีเมล"
+"<strong>หมายเหตุ:</strong> อีเมลยืนยันการส่งบทความถูกปิดใช้งานในขณะนี้ "
+"หากต้องการใช้คุณสมบัตินี้ โปรดเปิดใช้งานอีเมล \"การยืนยันการส่ง\" ในส่วนอีเมล"
 
 msgid "manager.setup.policies.description"
 msgstr ""
-"โฟกัส การตรวจสอบโดยผู้ทรงคุณวุฒิ ส่วนต่างๆ ความเป็นส่วนตัว ความปลอดภัย "
-"และเพิ่มเติมเกี่ยวกับรายการต่างๆ"
+"เป้าหมาย, การตรวจสอบโดยผู้ทรงคุณวุฒิ, ส่วนต่าง ๆ, ความเป็นส่วนตัว, ความปลอดภั"
+"ย, และรายการอื่น ๆ เกี่ยวกับ"
 
 msgid "manager.setup.proofingInstructionsDescription"
 msgstr ""
-"คําแนะนําในการพิสูจน์อักษรจะมีให้สําหรับผู้พิสูจน์อักษร ผู้เขียน "
-"บรรณาธิการเค้าโครง และบรรณาธิการส่วนในขั้นตอนการแก้ไขการส่ง "
-"ด้านล่างนี้คือชุดคําสั่งเริ่มต้นใน HTML ซึ่งสามารถแก้ไขหรือแทนที่ด้วย "
-"Journal Manager ได้ทุกจุด (ใน HTML หรือข้อความธรรมดา)"
+"คำแนะนำการพิสูจน์อักษรจะพร้อมใช้งานให้กับผู้พิสูจน์อักษร, ผู้เขียน, "
+"บรรณาธิการรูปแบบ และบรรณาธิการส่วนต่าง ๆ ในขั้นตอนการแก้ไขการส่งบทความ "
+"ด้านล่างนี้เป็นชุดคำแนะนำที่กำหนดไว้เป็นค่าเริ่มต้นในรูปแบบ HTML "
+"ซึ่งสามารถแก้ไขหรือแทนที่โดยผู้จัดการวารสารได้ทุกเวลา (ในรูปแบบ HTML "
+"หรือข้อความธรรมดา)"
 
 msgid "manager.setup.publicationScheduleDescription"
 msgstr ""
-"รายการวารสารสามารถตีพิมพ์ร่วมกันได้ โดยเป็นส่วนหนึ่งของประเด็นที่มีสารบั"
-"ญของตนเอง อีกทางหนึ่ง สามารถเผยแพร่แต่ละรายการได้ทันทีที่พร้อม "
-"โดยเพิ่มลงในสารบัญของเล่ม \"ปัจจุบัน\" ให้คําชี้แจงเกี่ยวกับระบบที่วารสารนี้จ"
-"ะใช้และความถี่ในการตีพิมพ์ที่คาดหวังแก่ผู้อ่านใน About the Journal"
+"รายการในวารสารสามารถเผยแพร่ร่วมกันเป็นส่วนหนึ่งของฉบับที่มีสารบัญเป็นของตั"
+"วเอง "
+"หรือรายการที่เสร็จสมบูรณ์สามารถเผยแพร่ได้ทันทีโดยการเพิ่มเข้าในสารบัญของฉบับ "
+"\"ปัจจุบัน\" โปรดให้ข้อมูลแก่ผู้อ่านในส่วน 'เกี่ยวกับวารสาร' "
+"เกี่ยวกับระบบที่วารสารนี้ใช้และความถี่ในการเผยแพร่ที่คาดไว้"
 
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr ""
-"หากต้องการส่งการแจ้งเตือนทางอีเมลอัตโนมัติ "
-"ผู้ดูแลระบบไซต์จะต้องเปิดใช้งานตัวเลือก <tt>scheduled_tasks</tt> "
-"ในไฟล์การกําหนดค่า OJS "
-"อาจจําเป็นต้องมีการกําหนดค่าเซิร์ฟเวอร์เพิ่มเติมตามที่ระบุไว้ในเอกสาร OJS"
+"ในการส่งการเตือนทางอีเมลอัตโนมัติ ผู้ดูแลระบบไซต์ต้องเปิดใช้งานตัวเลือก "
+"<tt>scheduled_tasks</tt> ในไฟล์การตั้งค่า OJS "
+"การตั้งค่าเซิร์ฟเวอร์เพิ่มเติมอาจจำเป็นตามที่ระบุไว้ในเอกสาร OJS"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
-"ผู้ตรวจสอบสามารถส่งลิงก์ที่ปลอดภัยในคําเชิญทางอีเมล "
-"ซึ่งจะเข้าสู่ระบบโดยอัตโนมัติเมื่อคลิกลิงก์"
+"ผู้ทบทวนสามารถได้รับลิงก์ที่ปลอดภัยในคำเชิญทางอีเมล "
+"ซึ่งจะเข้าสู่ระบบโดยอัตโนมัติเมื่อพวกเขาคลิกลิงก์"
 
 msgid "manager.setup.searchEngineIndexing.description"
 msgstr ""
-"ช่วยให้เครื่องมือค้นหาเช่น Google ค้นพบและแสดงไซต์ของคุณ ขอแนะนําให้ส่ง <a "
-"href=\"{$sitemapUrl}\" target=\"_blank\">sitemap</a>"
+"ช่วยให้เครื่องมือค้นหาอย่าง Google ค้นพบและแสดงเว็บไซต์ของคุณ คุณควรที่จะส่ง "
+"<a href=\"{$sitemapUrl}\" target=\"_blank\">แผนผังเว็บไซต์</a> ของคุณ"
 
 msgid "manager.setup.searchDescription.description"
 msgstr ""
-"ให้คําอธิบายโดยย่อ (50-300 ตัวอักษร) "
-"ของวารสารซึ่งเครื่องมือค้นหาสามารถแสดงได้เมื่อแสดงรายการวารสารในผลการค้นหา"
+"ให้คำอธิบายสั้น ๆ (50-300 ตัวอักษร) "
+"ของวารสารที่เครื่องมือค้นหาสามารถแสดงเมื่อแสดงรายการวารสารในการค้นหา"
 
 msgid "manager.setup.sectionsDescription"
 msgstr ""
-"หากต้องการสร้างหรือแก้ไขส่วนต่างๆ สําหรับวารสาร (เช่น บทความ บทวิจารณ์หนังสื"
-"อ ฯลฯ) ให้ไปที่ Section Management.<br /><br />Authors "
-"ในการส่งรายการไปยังวารสารจะกําหนด"
+"ในการสร้างหรือแก้ไขส่วนสำหรับวารสาร (เช่น บทความ, รีวิวหนังสือ ฯลฯ) "
+"ไปที่การจัดการส่วน <br /><br />ผู้เขียนเมื่อส่งบทความไปยังวารสารจะกำหนด..."
 
 msgid "manager.setup.disableSubmissions.description"
 msgstr ""
-"ป้องกันไม่ให้ผู้ใช้ส่งบทความใหม่ลงในวารสาร "
-"สามารถปิดใช้งานการส่งสําหรับส่วนวารสารแต่ละส่วนในหน้าการตั้งค่า <a href=\""
-"{$url}\">journal sections</a>"
+"ป้องกันไม่ให้ผู้ใช้ส่งบทความใหม่มายังวารสาร "
+"สามารถปิดการส่งบทความสำหรับแต่ละส่วนของวารสารได้ที่หน้าการตั้งค่า <a href=\""
+"{$url}\">ส่วนของวารสาร</a>"
 
 msgid "manager.setup.disableSubmissions.notAccepting"
 msgstr ""
-"วารสารนี้ไม่รับการส่งผลงานในขณะนี้ "
-"เยี่ยมชมการตั้งค่าเวิร์กโฟลว์เพื่ออนุญาตการส่ง"
+"วารสารนี้ไม่ได้รับบทความในขณะนี้ "
+"ไปที่การตั้งค่าการทำงานเพื่อเปิดรับการส่งบทความ"
 
 msgid "manager.setup.enableOai.description"
 msgstr ""
-"ให้ข้อมูลเมตาแก่บริการจัดทําดัชนีของบุคคลที่สามผ่าน <a href=\"https://www."
-"openarchives.org/\">Open Archives Initiative</a>"
+"ให้ข้อมูลเมทาดาทาแก่บริการดัชนีของบุคคลที่สามผ่านทาง <a href=\"https://www."
+"openarchives.org/\">โครงการ Open Archives Initiative</a>"
 
 msgid "manager.setup.useThumbnail"
-msgstr "ภาพขนาดย่อ"
+msgstr "ภาพย่อ"
 
 msgid "manager.setup.useTextTitle"
-msgstr "ชื่อเรื่อง"
+msgstr "ข้อความหัวเรื่อง"
 
 msgid "manager.statistics.statistics"
-msgstr "สถิติวารสาร"
+msgstr "สถิติของวารสาร"
 
 msgid "manager.statistics.statistics.count.accept"
 msgstr "ยอมรับ"
@@ -1112,90 +1106,1380 @@ msgid "manager.statistics.statistics.count.decline"
 msgstr "ปฏิเสธ"
 
 msgid "manager.statistics.statistics.daysPerReview"
-msgstr "วันที่จะตรวจสอบ"
+msgstr "จำนวนวันที่ใช้ในการทบทวน"
 
 msgid "manager.statistics.statistics.numIssues"
-msgstr "ประเด็นที่เผยแพร่"
+msgstr "ฉบับที่ตีพิมพ์"
 
 msgid "manager.statistics.statistics.numSubmissions"
-msgstr "การส่งทั้งหมด"
+msgstr "จำนวนการส่งทั้งหมด"
 
 msgid "manager.statistics.statistics.peerReviewed"
-msgstr "Peer ตรวจสอบแล้ว"
+msgstr "ผ่านการทบทวนโดยผู้ทรงคุณวุฒิ"
 
 msgid "manager.statistics.statistics.registeredReaders"
-msgstr "ผู้อ่านที่ลงทะเบียน"
+msgstr "ผู้อ่านที่ลงทะเบียนแล้ว"
 
 msgid "manager.statistics.statistics.reviewerCount"
-msgstr "เลขที่ ได้รับมอบหมาย"
+msgstr "จำนวนที่มอบหมาย"
 
 msgid "manager.statistics.statistics.reviewerScore"
 msgstr "คะแนนบรรณาธิการ"
 
 msgid "manager.statistics.statistics.selectSections"
-msgstr ""
-"เลือกส่วนสําหรับการคํานวณสถิติที่ผ่านการตรวจสอบโดยผู้ทรงคุณวุฒิของวารสารนี้"
+msgstr "เลือกส่วนสำหรับคำนวณสถิติการทบทวนบทความของวารสารนี้"
 
 msgid "manager.statistics.statistics.subscriptions"
 msgstr "การสมัครสมาชิก"
 
 msgid "manager.statistics.reports.defaultReport.articleDownloads"
-msgstr "ดาวน์โหลดไฟล์บทความ"
+msgstr "จำนวนการดาวน์โหลดไฟล์บทความ"
 
 msgid "manager.statistics.reports.defaultReport.articleAbstract"
-msgstr "การดูหน้าบทคัดย่อบทความ"
+msgstr "จำนวนครั้งที่ดูหน้าเนื้อหาย่อของบทความ"
 
 msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
-msgstr "บทความบทคัดย่อหน้าดูและดาวน์โหลด"
+msgstr "จำนวนครั้งที่ดูหน้าเนื้อหาย่อของบทความและการดาวน์โหลด"
 
 msgid "manager.setup.uniqueIdentifier"
-msgstr "ตัวระบุที่ไม่ซ้ํา"
+msgstr "รหัสประจำตัวเฉพาะ"
 
 msgid "manager.setup.useEditorialReviewBoard"
-msgstr "วารสารจะใช้กองบรรณาธิการ/คณะกรรมการพิจารณา"
+msgstr "วารสารนี้จะใช้บอร์ดบรรณาธิการ/การทบทวน"
 
 msgid "manager.setup.useImageTitle"
-msgstr "ชื่อเรื่อง รูปภาพ"
+msgstr "ภาพหัวเรื่อง"
 
 msgid "manager.setup.userRegistration"
 msgstr "การลงทะเบียนผู้ใช้"
 
 msgid "manager.statistics.statistics.articleViews"
-msgstr "จํานวนการดูบทความ (สําหรับผู้เขียนเท่านั้น)"
+msgstr "จำนวนครั้งที่ดูบทความ (สำหรับผู้เขียนเท่านั้น)"
 
 msgid "manager.statistics.statistics.count.revise"
-msgstr "ส่งอีกครั้ง"
+msgstr "แก้ไขและส่งใหม่"
 
 msgid "manager.statistics.statistics.daysToPublication"
-msgstr "วันที่จะตีพิมพ์"
+msgstr "จำนวนวันที่ใช้ในการตีพิมพ์"
 
 msgid "manager.statistics.statistics.itemsPublished"
-msgstr "รายการที่เผยแพร่"
+msgstr "จำนวนสิ่งพิมพ์"
 
 msgid "manager.statistics.statistics.makePublic"
-msgstr "ตรวจสอบรายการที่จะให้บริการแก่ผู้อ่านใน About the Journal"
+msgstr "ทำเครื่องหมายที่รายการที่จะให้ผู้อ่านสามารถเข้าถึงได้ในเกี่ยวกับวารสาร"
 
 msgid "manager.statistics.statistics.reviewers"
-msgstr "ผู้ตรวจสอบ"
+msgstr "ผู้ทบทวนบทความ"
 
 msgid "manager.statistics.statistics.reviewsPerReviewer"
-msgstr "ลําดับที่ของรีวิว"
+msgstr "จำนวนการทบทวนต่อผู้ทบทวน"
 
 msgid "manager.statistics.statistics.description"
 msgstr ""
-"OJS คํานวณสถิติต่อไปนี้สําหรับแต่ละวารสาร \"วันที่จะตรวจสอบ\" "
-"คํานวณจากวันที่ส่ง (หรือการกําหนดเวอร์ชันตรวจสอบ) "
-"ไปจนถึงการตัดสินใจของบรรณาธิการเบื้องต้น ในขณะที่ \"วันที่จะเผยแพร่\" "
-"วัดสําหรับการส่งที่ได้รับการยอมรับจากการอัปโหลดครั้งแรกไปยังการตีพิมพ์"
+"OJS คำนวณสถิติต่อไปนี้สำหรับแต่ละวารสาร โดย \"จำนวนวันที่ใช้ในการทบทวน\" "
+"คำนวณจากวันที่ส่งบทความ (หรือการกำหนดเป็น Review Version) "
+"จนถึงการตัดสินใจครั้งแรกของบรรณาธิการ ในขณะที่ \"จำนวนวันที่ใช้ในการตีพิมพ์\""
+" คำนวณจากการส่งบทความดั้งเดิมจนถึงการตีพิมพ์"
 
 msgid "manager.setup.uniqueIdentifierDescription"
 msgstr ""
-"บทความและประเด็นต่างๆ สามารถติดแท็กด้วยหมายเลขประจําตัวหรือสตริง "
-"โดยใช้ระบบการลงทะเบียน เช่น Digital Object Identifier System (DOI)"
+"บทความและฉบับสามารถถูกแท็กด้วยหมายเลขหรือรหัสที่ใช้ระบบการลงทะเบียน เช่น "
+"ระบบรหัสตัวระบุดิจิทัล (DOI)"
 
 msgid "manager.statistics.statistics.note"
 msgstr ""
-"หมายเหตุ: "
-"เปอร์เซ็นต์สําหรับการส่งที่ได้รับการตรวจสอบโดยผู้ทรงคุณวุฒิอาจรวมกันได้ไม่เกิ"
-"น 100% เนื่องจากรายการที่ส่งใหม่ได้รับการยอมรับ ปฏิเสธ "
-"หรือยังอยู่ในระหว่างดําเนินการ"
+"หมายเหตุ: เปอร์เซ็นต์สำหรับบทความที่ผ่านการทบทวนโดยเพื่อนอาจไม่รวมเป็น 100% "
+"เนื่องจากบางรายการถูกส่งซ้ำ ซึ่งอาจจะได้รับการยอมรับ, ถูกปฏิเสธ, "
+"หรือยังอยู่ในกระบวนการ"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "จำนวนครั้งที่ดูหน้าหลักของวารสาร"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} เดือน"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} สัปดาห์"
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "เลือกหนึ่งในตัวเลือกต่อไปนี้:"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "ข้อมูลการสมัครสมาชิก"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "สร้าง"
+
+msgid "manager.subscriptions.edit"
+msgstr "แก้ไขการสมัครสมาชิก"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "วันที่สิ้นสุด"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "วันที่สิ้นสุด"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "วันที่เริ่มต้น"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "วันที่เริ่มต้น"
+
+msgid "manager.subscriptions.domain"
+msgstr "โดเมน"
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "กรุณาใช้ช่องทำเครื่องหมายที่ให้ไว้"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "หมายเลขอ้างอิง"
+
+msgid "manager.subscriptions.notes"
+msgstr "หมายเหตุ"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "ค่าใช้จ่าย"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "การสมัครสมาชิก"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "แก้ไข"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "ค่าใช้จ่าย"
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "กรอกค่าเป็นตัวเลข (เช่น 40 หรือ 40.00) โดยไม่ต้องใส่สัญลักษณ์ (เช่น $)"
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "สกุลเงิน"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "ต้องระบุสกุลเงิน"
+
+msgid "plugins.importexport.common.settings"
+msgstr "การตั้งค่า"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "ส่งออก"
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "ยังไม่ได้เลือกวัตถุ"
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "ไม่สามารถแปลงวัตถุที่เลือกได้"
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "XML ไม่ถูกต้อง:"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "ไม่สามารถเขียนไฟล์ผลลัพธ์ {$param} ได้"
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "ไม่สามารถอ่านไฟล์อินพุต {$param} ได้"
+
+msgid "plugins.importexport.common.register.success"
+msgstr "การลงทะเบียนสำเร็จ!"
+
+msgid "stats.issues.details"
+msgstr "การดูและการดาวน์โหลด"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "ค้นหาชื่อฉบับ, เล่ม และหมายเลข"
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "ดาวน์โหลดฉบับ"
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "ไม่มี"
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "คุณแน่ใจหรือว่าต้องการลบ DOI ของวัตถุในฉบับที่มีอยู่?"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "จำนวนครั้งที่ดูหน้าเนื้อหาของฉบับวารสาร"
+
+msgid "manager.subscriptionPolicies"
+msgstr "นโยบายการสมัครสมาชิก"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "การเข้าถึงแบบเปิดล่าช้า"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "โปรดใช้ช่องทำเครื่องหมายที่มีให้"
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "การหมดอายุของการสมัครสมาชิก"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr ""
+"เมื่อการสมัครสมาชิกหมดอายุ "
+"ผู้อ่านอาจถูกปฏิเสธการเข้าถึงเนื้อหาที่สมัครสมาชิกทั้งหมด หรืออาจยังสามารถเข้"
+"าถึงเนื้อหาที่สมัครสมาชิกที่เผยแพร่ก่อนวันที่การสมัครหมดอายุ"
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "หมดอายุเต็มรูปแบบ"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr ""
+"ผู้อ่านจะถูกปฏิเสธการเข้าถึงเนื้อหาทั้งหมดของการสมัครสมาชิกเมื่อการสมัครหมดอา"
+"ยุ"
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "หมดอายุบางส่วน"
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr ""
+"ผู้อ่านจะถูกปฏิเสธการเข้าถึงเนื้อหาสมาชิกที่เผยแพร่เมื่อไม่นานนี้ "
+"แต่ยังสามารถเข้าถึงเนื้อหาที่สมัครสมาชิกที่เผยแพร่ก่อนวันที่การสมัครหมดอายุ"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "แจ้งเตือนสมาชิกผ่านอีเมลหลังจากการสมัครหมดอายุ"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "แจ้งเตือนสมาชิกผ่านอีเมลหลังจากการสมัครหมดอายุ"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "แจ้งเตือนสมาชิกผ่านอีเมลก่อนการสมัครหมดอายุ"
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "แจ้งเตือนสมาชิกผ่านอีเมลก่อนการสมัครหมดอายุ"
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "การแจ้งเตือนการหมดอายุของการสมัครสมาชิก"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr ""
+"อีเมลแจ้งเตือนอัตโนมัติ (ซึ่งผู้จัดการวารสารสามารถแก้ไขได้ในอีเมลของ OJS) "
+"สามารถส่งถึงผู้สมัครสมาชิกทั้งก่อนและหลังจากการสมัครหมดอายุ"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr ""
+"<strong>หมายเหตุ:</strong> เพื่อเปิดใช้งานตัวเลือกเหล่านี้ "
+"ผู้ดูแลระบบต้องเปิดใช้งานตัวเลือก <tt>scheduled_tasks</tt> ในไฟล์การกำหนดค่"
+"าของ OJS "
+"การกำหนดค่าเซิร์ฟเวอร์เพิ่มเติมอาจจำเป็นต้องใช้เพื่อรองรับฟังก์ชันนี้ "
+"(ซึ่งอาจไม่สามารถทำได้บนทุกเซิร์ฟเวอร์) ตามที่ระบุไว้ในเอกสาร OJS"
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr ""
+"สามารถใช้ HTML ในพื้นที่ข้อความ (เพื่อกำหนดขนาดฟอนต์ สี ฯลฯ) โดย \"การข"
+"ึ้นบรรทัดใหม่\" จะถูกจัดการเป็น <tt>&lt;br&gt;</tt>; HTML editor "
+"ทำงานร่วมกับเบราว์เซอร์ Firefox"
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "กรุณาเลือกค่าวันที่ถูกต้องสำหรับจำนวนเดือนหลังจากหมดอายุการสมัคร"
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "กรุณาเลือกค่าวันที่ถูกต้องสำหรับจำนวนเดือนก่อนการหมดอายุการสมัคร"
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "กรุณาเลือกค่าวันที่ถูกต้องสำหรับจำนวนสัปดาห์หลังจากหมดอายุการสมัคร"
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "กรุณาเลือกค่าวันที่ถูกต้องสำหรับจำนวนสัปดาห์ก่อนการหมดอายุการสมัคร"
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+"ผู้อ่านที่ลงทะเบียนแล้วจะมีตัวเลือกในการรับสารบัญทางอีเมลเมื่อฉบับกลายเป็นการ"
+"เข้าถึงแบบเปิด"
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr ""
+"<strong>หมายเหตุ:</strong> เพื่อเปิดใช้งานตัวเลือกนี้ "
+"ผู้ดูแลระบบต้องเปิดใช้งานตัวเลือก <tt>scheduled_tasks</tt> ในไฟล์การกำหนดค่"
+"าของ OJS "
+"การกำหนดค่าเซิร์ฟเวอร์เพิ่มเติมอาจจำเป็นต้องใช้เพื่อรองรับฟังก์ชันนี้ "
+"(ซึ่งอาจไม่สามารถทำได้บนทุกเซิร์ฟเวอร์) ตามที่ระบุไว้ในเอกสาร OJS"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "การแจ้งเตือนการชำระเงินออนไลน์"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+"การแจ้งเตือนอีเมลอัตโนมัติ (ซึ่งสามารถแก้ไขได้โดยผู้จัดการวารสารในอีเมลของ "
+"OJS) สามารถส่งถึงผู้จัดการการสมัครสมาชิกเมื่อมีการชำระเงินออนไลน์เสร็จสิ้น"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"แจ้งผู้จัดการการสมัครสมาชิกทางอีเมลเมื่อมีการซื้อการสมัครสมาชิกบุคคลออนไลน์"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"แจ้งผู้จัดการการสมัครสมาชิกทางอีเมลเมื่อมีการซื้อการสมัครสมาชิกสถาบันออนไลน์ "
+"(แนะนำ)"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"แจ้งผู้จัดการการสมัครสมาชิกทางอีเมลเมื่อมีการต่ออายุการสมัครสมาชิกบุคคลออนไลน"
+"์"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"แจ้งผู้จัดการการสมัครสมาชิกทางอีเมลเมื่อมีการต่ออายุการสมัครสมาชิกสถาบันออนไล"
+"น์"
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong>หมายเหตุ:</strong> "
+"การสมัครสมาชิกสถาบันที่ซื้อออนไลน์ต้องการการอนุมัติของโดเมนและช่วง IP "
+"ที่ระบุและการเปิดใช้งานการสมัครสมาชิกโดยผู้จัดการการสมัครสมาชิก"
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+"<strong>หมายเหตุ:</strong> เพื่อเปิดใช้งานตัวเลือกเหล่านี้ "
+"ผู้จัดการวารสารต้องเปิดใช้งานโมดูลการชำระเงินออนไลน์ "
+"รวมถึงการชำระเงินออนไลน์สำหรับการสมัครสมาชิกภายใต้ค่าธรรมเนียมผู้อ่าน"
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "ตัวเลือกการเข้าถึงแบบเปิดสำหรับวารสารที่สมัครสมาชิก"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr ""
+"วารสารที่สมัครสมาชิกสามารถให้ \"การเข้าถึงแบบเปิดล่าช้า\" "
+"สำหรับเนื้อหาที่เผยแพร่ รวมทั้งอนุญาตให้ \"การจัดเก็บด้วยตนเองโดยผู้เขียน\" "
+"(ซึ่งทั้งสองอย่างนี้เพิ่มจำนวนผู้อ่านและการอ้างอิงเนื้อหา)"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+"ประเภทการสมัครและโครงสร้างค่าธรรมเนียมจะถูกแสดงในหน้าการสมัครสมาชิก "
+"รวมถึงชื่อและข้อมูลการติดต่อของผู้จัดการการสมัครสมาชิก "
+"ข้อมูลเพิ่มเติมเกี่ยวกับการสมัครสมาชิก เช่น "
+"วิธีการชำระเงินหรือการสนับสนุนสำหรับสมาชิกในประเทศที่กำลังพัฒนา "
+"สามารถเพิ่มได้ที่นี่"
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "ผู้จัดการการสมัครสมาชิก"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr ""
+"ข้อมูลการติดต่อเหล่านี้จะแสดงอยู่ในหน้าการสมัครสมาชิกสำหรับลูกค้าที่มีคำถามเก"
+"ี่ยวกับการสมัครสมาชิก"
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "กรุณาใส่อีเมลที่ถูกต้อง"
+
+msgid "manager.subscriptions"
+msgstr "การสมัครสมาชิก"
+
+msgid "manager.individualSubscriptions"
+msgstr "การสมัครสมาชิกบุคคล"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "การสมัครสมาชิกสถาบัน"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการต่ออายุการสมัครสมาชิกนี้?"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบการสมัครสมาชิกนี้?"
+
+msgid "manager.subscriptions.summary"
+msgstr "สรุปการสมัครสมาชิก"
+
+msgid "manager.subscriptions.create"
+msgstr "สร้างการสมัครสมาชิกใหม่"
+
+msgid "manager.subscriptions.renew"
+msgstr "ต่ออายุ"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "แก้ไข"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "พร้อมสถานะ"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "ทั้งหมด"
+
+msgid "manager.subscriptions.form.status"
+msgstr "สถานะ"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "ต้องระบุสถานะการสมัครสมาชิก"
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "กรุณาเลือกสถานะการสมัครสมาชิกที่ถูกต้อง"
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "ประเภทการสมัครสมาชิก"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "ต้องระบุประเภทการสมัครสมาชิก"
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "กรุณาเลือกประเภทการสมัครสมาชิกที่ถูกต้อง"
+
+msgid "manager.subscriptions.form.institution"
+msgstr "สถาบัน"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "กรุณาเลือกสถาบันที่ถูกต้อง"
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "วันที่เริ่มต้น"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "ต้องระบุวันที่เริ่มต้นการสมัครสมาชิก"
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "กรุณาเลือกวันที่เริ่มต้นการสมัครสมาชิกที่ถูกต้อง"
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "วันที่สิ้นสุด"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "ต้องระบุวันที่สิ้นสุดการสมัครสมาชิก"
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"นี่คือประเภทการสมัครสมาชิกที่ไม่มีวันหมดอายุ กรุณาอย่าระบุวันที่เริ่มต้น"
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr "นี่คือประเภทการสมัครสมาชิกที่ไม่มีวันหมดอายุ กรุณาอย่าระบุวันที่สิ้นสุด"
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "กรุณาเลือกวันที่สิ้นสุดการสมัครสมาชิกที่ถูกต้อง"
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr ""
+"หมายเหตุ: การเปลี่ยนแปลงทั้งหมดด้านล่างนี้เป็นการเปลี่ยนแปลงโปรไฟล์ทั่วทั้งระ"
+"บบของผู้ใช้"
+
+msgid "manager.subscriptions.form.userId"
+msgstr "ผู้ใช้"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "ติดต่อ"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "ต้องระบุผู้ใช้"
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "กรุณาเลือกผู้ใช้ที่ถูกต้อง"
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "กรุณาเลือกประเทศที่ถูกต้อง"
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "ส่งอีเมลให้ผู้ใช้พร้อมชื่อผู้ใช้และรายละเอียดการสมัครสมาชิกของพวกเขา"
+
+msgid "manager.subscriptions.form.membership"
+msgstr "สมาชิก"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "หมายเลขอ้างอิง"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr ""
+"กรอกข้อมูลการเป็นสมาชิกหากประเภทการสมัครสมาชิกกำหนดให้ผู้สมัครสมาชิกต้องเป็นส"
+"มาชิกของสมาคมหรือองค์กร"
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "ประเภทการสมัครสมาชิกที่เลือกต้องการข้อมูลการเป็นสมาชิก"
+
+msgid "manager.subscriptions.form.notes"
+msgstr "หมายเหตุ"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "โดเมน"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "ชื่อสถาบัน"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "ต้องระบุชื่อสถาบัน"
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "ที่อยู่สำหรับจัดส่ง"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr ""
+"หากระบุโดเมนที่นี่ การป้อนช่วง IP เป็นตัวเลือก<br "
+"/>ค่าโดเมนที่ถูกต้องได้แก่ชื่อโดเมน (เช่น lib.sfu.ca)"
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"ประเภทการสมัครสมาชิกที่เลือกต้องการโดเมนและ/หรือช่วง IP "
+"สำหรับการยืนยันการสมัครสมาชิก"
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "กรุณากรอกโดเมนที่ถูกต้อง"
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "ช่วง IP"
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"หากป้อนช่วง IP ที่นี่ การป้อนโดเมนเป็นตัวเลือก<br "
+"/>ค่าที่ถูกต้องรวมถึงที่อยู่ IP (เช่น 142.58.103.1), ช่วง IP (เช่น "
+"142.58.103.1 - 142.58.103.4), ช่วง IP ที่มีตัวแทน '*' (เช่น 142.58.*.*), "
+"และช่วง IP ที่มี CIDR (เช่น 142.58.100.0/24)"
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "กรุณาป้อนช่วง IP ที่ถูกต้อง"
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "ลบ"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "เพิ่ม"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "บันทึกและสร้างอีกครั้ง"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr ""
+"เพื่อส่งอีเมลแจ้งเตือนให้กับผู้ใช้ "
+"ต้องระบุชื่อและที่อยู่อีเมลของผู้ติดต่อการสมัครสมาชิกในการตั้งค่าของวารสาร"
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "ผู้ใช้นี้มีการสมัครสมาชิกสำหรับวารสารนี้อยู่แล้ว"
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "ต้องสร้างประเภทการสมัครสมาชิกก่อนจึงจะสามารถสร้างการสมัครสมาชิกใหม่ได้"
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "ต้องสร้างสถาบันก่อนจึงจะสามารถสร้างการสมัครสมาชิกใหม่ได้"
+
+msgid "manager.subscriptions.ipRange"
+msgstr "ช่วง IP"
+
+msgid "manager.subscriptions.membership"
+msgstr "สมาชิก"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "ยังไม่มีการสมัครสมาชิก"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "เลือกผู้ติดต่อการสมัครสมาชิก"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "เลือกผู้ใช้"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr ""
+"สิทธิ์การเข้าถึงการสมัครสมาชิกจะมอบให้อัตโนมัติแก่ผู้จัดการวารสาร บรรณาธิการ "
+"บรรณาธิการส่วน บรรณาธิการเลย์เอาต์ ผู้แก้ไขสำเนา และผู้พิสูจน์อักษรของวารสาร"
+
+msgid "manager.subscriptions.select"
+msgstr "เลือก"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "สร้างการสมัครสมาชิกสำเร็จแล้ว"
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "ประเภทการสมัครสมาชิก"
+
+msgid "manager.subscriptions.user"
+msgstr "ผู้ใช้"
+
+msgid "manager.subscriptions.contact"
+msgstr "ชื่อผู้ติดต่อ"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "ชื่อสถาบัน"
+
+msgid "manager.subscriptionTypes"
+msgstr "ประเภทการสมัครสมาชิก"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr ""
+"คำเตือน! การสมัครสมาชิกทั้งหมดที่มีประเภทการสมัครสมาชิกนี้จะถูกลบด้วย "
+"คุณแน่ใจหรือไม่ว่าต้องการดำเนินการและลบประเภทการสมัครสมาชิกนี้?"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "บุคคล"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "สถาบัน"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "สร้างประเภทการสมัครสมาชิกใหม่"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "สร้าง"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "ระยะเวลา"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "แก้ไขประเภทการสมัครสมาชิก"
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "ค่าใช้จ่ายต้องเป็นค่าบวกและเป็นตัวเลข"
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "ต้องระบุค่าใช้จ่าย"
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "กรุณาเลือกสกุลเงินที่ถูกต้อง"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "คำอธิบาย"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "หมดอายุหลังจาก"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "เดือน (เช่น 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "ไม่มีวันหมดอายุ"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "กรุณาใช้ตัวเลือกที่ให้มา"
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "ระยะเวลา"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "จำนวนเดือนที่การสมัครสมาชิกใช้ได้ (เช่น 12)"
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "ระยะเวลาต้องเป็นค่าบวกและเป็นตัวเลข"
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "ต้องระบุระยะเวลา"
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "รูปแบบ"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "ต้องระบุรูปแบบประเภทการสมัครสมาชิก"
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "กรุณาเลือกรูปแบบประเภทการสมัครสมาชิกที่ถูกต้อง"
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "การสมัครสมาชิก"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "บุคคล (ผู้ใช้ยืนยันตัวตนผ่านการเข้าสู่ระบบ)"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "สถาบัน (ผู้ใช้ยืนยันตัวตนผ่านโดเมนหรือที่อยู่ IP)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "กรุณาใช้ตัวเลือกที่ให้มา"
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr ""
+"การสมัครสมาชิกต้องการข้อมูลการเป็นสมาชิก (เช่น ของสมาคม องค์กร กลุ่มเครือข่"
+"าย ฯลฯ)"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "กรุณาใช้กล่องเลือกที่ให้มา"
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "ตัวเลือก"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "ไม่เผยแพร่ประเภทการสมัครสมาชิกนี้บนเว็บไซต์หรือให้เห็นได้ในที่สาธารณะ"
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "กรุณาใช้กล่องเลือกที่ให้มา"
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "บันทึกและสร้างประเภทอื่น"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "ชื่อประเภท"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "มีประเภทการสมัครสมาชิกที่มีชื่อนี้อยู่แล้ว"
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "ต้องระบุชื่อประเภทการสมัครสมาชิก"
+
+msgid "manager.subscriptionTypes.name"
+msgstr "ประเภทการสมัครสมาชิก"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "ยังไม่ได้สร้างประเภทการสมัครสมาชิก"
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "สร้างประเภทการสมัครสมาชิกสำเร็จแล้ว"
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "ลิงก์ไปยังหน้าที่อธิบายการสมัครสมาชิกที่คุณเสนอ"
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "ลิงก์ไปยังหน้าที่อธิบายการสมัครสมาชิกปัจจุบันและที่ผ่านมา"
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "ลิงก์นี้จะแสดงเฉพาะเมื่อผู้เยี่ยมชมเข้าสู่ระบบแล้วเท่านั้น"
+
+msgid "manager.setup.categories"
+msgstr "หมวดหมู่"
+
+msgid "manager.setup.categories.description"
+msgstr ""
+"เลือกหมวดหมู่ที่เหมาะสมที่สุดจากชุดที่แสดงด้านบน "
+"ผู้อ่านจะสามารถเรียกดูตามหมวดหมู่จากชุดวารสารทั้งหมด"
+
+msgid "grid.category.path"
+msgstr "เส้นทาง"
+
+msgid "grid.action.addSection"
+msgstr "เพิ่มส่วน"
+
+msgid "manager.setup.section.description"
+msgstr ""
+"บทความในฉบับที่ตีพิมพ์ของวารสารจะถูกจัดกลุ่มในส่วนต่างๆ "
+"โดยทั่วไปจะแบ่งตามธีมหรือประเภทของเนื้อหา (เช่น บทความรีวิว, งานวิจัย ฯลฯ)"
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+"บทบาทคือกลุ่มของผู้ใช้ในวารสารที่ได้รับสิทธิ์การเข้าถึงระดับต่างๆ "
+"และกระบวนการทำงานที่เกี่ยวข้องในวารสาร มีระดับสิทธิ์ทั้งหมดห้าระดับ: "
+"ผู้จัดการวารสารสามารถเข้าถึงทุกสิ่งในวารสาร (เนื้อหาทั้งหมดและการตั้งค่า); "
+"บรรณาธิการส่วนสามารถเข้าถึงเนื้อหาทั้งหมดที่ได้รับมอบหมาย; ผู้ช่วยบรรณาธิการม"
+"ีการเข้าถึงที่จำกัดสำหรับการส่งที่ได้รับมอบหมายโดยตรงจากบรรณาธิการ; "
+"ผู้ประเมินสามารถดูและทำการประเมินการส่งที่ได้รับมอบหมาย; "
+"และผู้เขียนสามารถดูและโต้ตอบกับข้อมูลที่เกี่ยวข้องกับการส่งของตนเองได้ "
+"นอกจากนี้ ยังมีการกำหนดขั้นตอนงานห้าขั้นตอนที่บทบาทอาจได้รับสิทธิ์เข้าถึงได้:"
+" การส่งบทความ, การตรวจภายใน, การประเมิน, การบรรณาธิการ, และการผลิต"
+
+msgid "manager.publication.library"
+msgstr "ห้องสมุดสำนักพิมพ์"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "กำหนดปีลิขสิทธิ์ของบทความใหม่จาก"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr ""
+"บทความ: ปีเริ่มต้นจะมาจากวันที่ตีพิมพ์ของบทความ เช่น \"ตีพิมพ์แบบต่อเนื่อง\""
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "ฉบับ: ปีเริ่มต้นจะมาจากวันที่ตีพิมพ์ของฉบับ"
+
+msgid "manager.setup.resetPermissions"
+msgstr "รีเซ็ตสิทธิ์การใช้งานบทความ"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr ""
+"คุณแน่ใจหรือไม่ว่าต้องการรีเซ็ตข้อมูลสิทธิ์สำหรับบทความทั้งหมด? "
+"การกระทำนี้ไม่สามารถย้อนกลับได้"
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"ลบข้อความลิขสิทธิ์และข้อมูลใบอนุญาตของทุกบทความที่ตีพิมพ์ "
+"โดยคืนกลับไปยังการตั้งค่าเริ่มต้นของวารสาร "
+"การกระทำนี้จะลบข้อมูลลิขสิทธิ์และใบอนุญาตทั้งหมดที่เคยแนบอยู่กับบทความ การกระ"
+"ทำบางอย่างอาจไม่ถูกต้องตามกฎหมายในการเปลี่ยนใบอนุญาตของงานที่เคยตีพิมพ์ภายใต้"
+"ใบอนุญาตอื่น ขอให้ระมัดระวังในการใช้เครื่องมือนี้และปรึกษาผู้เชี่ยวชาญด้านกฎห"
+"มายหากคุณไม่แน่ใจในสิทธิที่คุณมีต่อบทความที่ตีพิมพ์ในวารสารของคุณ"
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "การรีเซ็ตสิทธิ์การใช้งานบทความสำเร็จ"
+
+msgid "grid.genres.title.short"
+msgstr "องค์ประกอบ"
+
+msgid "grid.genres.title"
+msgstr "องค์ประกอบของบทความ"
+
+msgid "grid.genres.description"
+msgstr ""
+"องค์ประกอบเหล่านี้ใช้สำหรับการตั้งชื่อไฟล์ "
+"และจะแสดงในเมนูดึงลงเมื่อทำการอัปโหลดไฟล์ แนวทางที่กำหนด ## "
+"อนุญาตให้ผู้ใช้เชื่อมโยงไฟล์กับการส่งทั้งหมด 99Z หรือกับองค์"
+"ประกอบเฉพาะโดยหมายเลข (เช่น 02)"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "การตั้งค่า DOI Plugin"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "บทความ"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "ฉบับ"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "กัลเลย์"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "ข้อกำหนดของปลั๊กอินไม่ครบถ้วน"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+"ในการใช้ปลั๊กอินนี้ กรุณาไปที่หมวดปลั๊กอิน \"Public Identifier\" "
+"เปิดใช้และกำหนดค่า DOI Plugin และระบุคำนำหน้า DOI ที่ถูกต้อง"
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "ปลั๊กอินยังไม่ได้รับการตั้งค่าอย่างสมบูรณ์"
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr ""
+"ไม่มีวัตถุที่ตีพิมพ์ถูกเลือกสำหรับการกำหนด DOI ในปลั๊กอินตัวระบุสาธารณะ DOI "
+"ดังนั้นจึงไม่สามารถฝากหรือส่งออกในปลั๊กอินนี้ได้"
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "ไม่สามารถนำเข้ากัลเลย์ของฉบับได้ เนื่องจากไม่มีไฟล์"
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"ไม่สามารถส่งออกกัลเลย์ของฉบับ {$id} ได้ เนื่องจากไม่พบไฟล์ที่เส้นทาง \""
+"{$path}\""
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"ไม่สามารถส่งออกภาพปกของฉบับ {$id} ได้ เนื่องจากไม่พบไฟล์ที่เส้นทาง \"{$path}"
+"\""
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "รหัสผ่าน"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "กรุณาทราบว่ารหัสผ่านจะถูกบันทึกเป็นข้อความล้วน ซึ่งไม่ได้เข้ารหัส"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "ทุกฉบับ"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "สถานะใดก็ได้"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "ยังไม่ได้ฝาก"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "ทำเครื่องหมายเป็นลงทะเบียนแล้ว"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "ลงทะเบียนแล้ว"
+
+msgid "plugins.importexport.common.action"
+msgstr "การกระทำ"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "ทำเครื่องหมายเป็นลงทะเบียนแล้ว"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "ลงทะเบียน"
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr ""
+"การลงทะเบียนไม่สำเร็จ! เซิร์ฟเวอร์การลงทะเบียน DOI ส่งกลับข้อผิดพลาด: "
+"'{$param}'"
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "การตรวจสอบสำเร็จ!"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "การตรวจสอบล้มเหลว"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "ไม่มีคำนำหน้า DOI สำหรับวารสารที่มีเส้นทาง {$path}"
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "ไม่พบวัตถุที่ระบุ"
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "ส่งสำเนาไปยังผู้ติดต่อหลักที่กำหนดไว้ในการตั้งค่าวารสาร"
+
+msgid "stats.contextStats"
+msgstr "สถิติของวารสาร"
+
+msgid "stats.context.tooltip.text"
+msgstr "จำนวนผู้เข้าชมที่ดูหน้าดัชนีของวารสาร"
+
+msgid "stats.context.tooltip.label"
+msgstr "เกี่ยวกับสถิติของวารสาร"
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+"ดาวน์โหลดสเปรดชีต CSV/Excel "
+"ที่มีสถิติการใช้งานของวารสารนี้ตามพารามิเตอร์ที่กำหนด"
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "จำนวนครั้งที่ดูหน้าดัชนีของวารสาร"
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "ดาวน์โหลดวารสาร"
+
+msgid "stats.issueStats"
+msgstr "สถิติของฉบับ"
+
+msgid "stats.issues.none"
+msgstr "ไม่พบฉบับที่มีสถิติการใช้งานตรงกับพารามิเตอร์เหล่านี้"
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"ดาวน์โหลดสเปรดชีต CSV/Excel ที่มีสถิติการใช้งานของฉบับตามพารามิเตอร์ที่กำหนด"
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr "จำนวนครั้งที่ดู TOC และดาวน์โหลดกัลเลย์ของฉบับสำหรับแต่ละฉบับ"
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$count} จาก {$total} ฉบับ"
+
+msgid "stats.issues.tooltip.label"
+msgstr "เกี่ยวกับสถิติของฉบับ"
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+"<strong>การดู</strong>: "
+"จำนวนผู้เข้าชมที่ดูสารบัญของฉบับ<br><strong>การดาวน์โหลด</strong>: "
+"จำนวนการดาวน์โหลดกัลเลย์ของฉบับ หากมี"
+
+msgid "stats.publicationStats"
+msgstr "สถิติของบทความ"
+
+msgid "stats.publications.details"
+msgstr "รายละเอียดของบทความ"
+
+msgid "stats.publications.none"
+msgstr "ไม่พบบทความที่มีสถิติการใช้งานตรงกับพารามิเตอร์เหล่านี้"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "จำนวนครั้งที่ดูบทคัดย่อทั้งหมดตามวันที่"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "จำนวนครั้งที่ดูไฟล์ทั้งหมดตามวันที่"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} จาก {$total} บทความ"
+
+msgid "stats.publications.abstracts"
+msgstr "บทคัดย่อ"
+
+msgid "stats.publications.galleys"
+msgstr "ไฟล์"
+
+msgid "stats.publications.downloadReport.description"
+msgstr ""
+"ดาวน์โหลดสเปรดชีต CSV/Excel "
+"ที่มีสถิติการใช้งานของบทความตามพารามิเตอร์ที่กำหนด"
+
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr "ดาวน์โหลดบทความ"
+
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr "จำนวนครั้งที่ดูบทคัดย่อและการดาวน์โหลดไฟล์สำหรับแต่ละบทความ"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr "ส่งสำเนาอีเมลยืนยันการส่งไปยังผู้ติดต่อหลักของวารสารนี้"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"ยังไม่ได้กำหนดผู้ติดต่อหลักสำหรับวารสารนี้ "
+"คุณสามารถระบุผู้ติดต่อหลักได้ในการตั้งค่าวารสารที่ <a href=\"{$url}\""
+">การตั้งค่าวารสาร</a>"
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "ผลการส่งออกฉบับ"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "กระบวนการไม่สามารถแยกวิเคราะห์กัลเลย์ของฉบับได้"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "ชื่อของวารสาร"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "URL ไปยังหน้าแรกของวารสาร"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "ชื่อของผู้ติดต่อหลักของวารสาร"
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "ตัวย่อของวารสาร"
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr "ลายเซ็นอีเมลของวารสารสำหรับอีเมลอัตโนมัติ"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "ที่อยู่อีเมลของผู้ติดต่อหลักของวารสาร"
+
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr "ที่อยู่ทางไปรษณีย์ของวารสาร"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "ชื่อประเภทการชำระเงิน"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "จำนวนเงินที่ต้องชำระ"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "สกุลเงินของจำนวนเงินที่ต้องชำระ เช่น USD"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "ชื่อของเว็บไซต์เมื่อมีการโฮสต์วารสารมากกว่าหนึ่งฉบับ"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "ชื่อของสมาชิก สังกัด หมายเลขโทรศัพท์ และที่อยู่อีเมล"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "รายละเอียดการติดต่อของผู้จัดการการสมัครสมาชิก"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "URL ไปยังหน้าการสมัครสมาชิก"
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr "วันที่ที่การสมัครสมาชิกจะสิ้นสุดลง"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "สรุปประเภท ชื่อ ระยะเวลา และค่าใช้จ่ายของการสมัครสมาชิก"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "ข้อมูลเกี่ยวกับสมาชิกของผู้สมัคร"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "ชื่อของสถาบันที่สมัครสมาชิก"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "ที่อยู่ไปรษณีย์ของสถาบันที่สมัครสมาชิก"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "ชื่อโดเมนของที่อยู่ IP ที่ถูกต้องสำหรับการสมัครสมาชิกนี้"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "ช่วง IP ที่ถูกต้องสำหรับการสมัครสมาชิกนี้"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr "URL ไปยังหน้าที่ผู้เขียนสามารถชำระเงินได้"
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr "URL ไปยังแนวทางการส่งบทความ"
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr "ลิงก์ไปยังหน้าสถิติของบทความที่เผยแพร่"
+
+msgid "emailTemplate.variable.issueId"
+msgstr "รหัสของฉบับ"
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
+"อีเมลนี้ถูกส่งโดยอัตโนมัติทุกเดือนให้กับบรรณาธิการและผู้จัดการวารสารเพื่อให้ภ"
+"าพรวมสุขภาพระบบ"
+
+msgid "mailable.validateEmailContext.name"
+msgstr "ยืนยันอีเมล (การลงทะเบียนวารสาร)"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"อีเมลนี้ถูกส่งโดยอัตโนมัติไปยังผู้ใช้ใหม่เมื่อพวกเขาลงทะเบียนกับวารสารเมื่อกา"
+"รตั้งค่ากำหนดให้ต้องยืนยันที่อยู่อีเมล"
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.description"
+msgstr ""
+"ปลั๊กอินนี้ช่วยให้การกำหนด Digital Object Identifiers ให้กับฉบับ, บทความ "
+"และกัลเลย์ใน OJS"
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.manager.displayName"
+msgstr "DOIs"
+
+msgid "doi.manager.settings.description"
+msgstr "โปรดกำหนดค่าปลั๊กอิน DOI เพื่อให้สามารถจัดการและใช้ DOIs ใน OJS:"
+
+msgid "doi.manager.settings.explainDois"
+msgstr ""
+"โปรดเลือกวัตถุที่เผยแพร่ที่จะมีการกำหนด Digital Object Identifiers (DOI):"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "กัลเลย์ของบทความ"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr "กัลเลย์ของบทความ เช่น ไฟล์ PDF ที่เผยแพร่"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "คำนำหน้า DOI"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "คำนำหน้า DOI เป็นข้อบังคับและต้องอยู่ในรูปแบบ 10.xxxx"
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr ""
+"ใส่รูปแบบส่วนต่อท้ายแบบกำหนดเองสำหรับแต่ละประเภทการเผยแพร่ "
+"รูปแบบส่วนต่อท้ายแบบกำหนดเองอาจใช้สัญลักษณ์ดังนี้เพื่อสร้างส่วนต่อท้าย:"
+"<br><br> <code>%j</code> ตัวย่อของวารสาร<br> <code>%v</code> เล่มของฉบับ<br> "
+"<code>%i</code> หมายเลขของฉบับ<br> <code>%Y</code> ปีของฉบับ<br> <code>%a</"
+"code> รหัสบทความ<br> <code>%g</code> รหัสกัลเลย์<br> <code>%f</code> รหัสไฟล์"
+"<br> <code>%p</code> หมายเลขหน้า<br> <code>%x</code> ตัวระบุ"
+"แบบกำหนดเอง<br><br> โปรดระวังว่าการใช้รูปแบบส่วนต่อท้ายแบบกำหนดเองอาจทำให้เกิ"
+"ดปัญหาในการสร้างและส่ง DOI เมื่อใช้รูปแบบส่วนต่อท้ายแบบกำหนดเอง "
+"ให้ทดสอบอย่างละเอียดว่าบรรณาธิการสามารถสร้าง DOI "
+"และส่งไปยังหน่วยงานลงทะเบียนเช่น Crossref ได้ "
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr "ตัวอย่างเช่น vol%viss%ipp%p อาจสร้าง DOI เช่น 10.1234/vol3iss2pp230"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "สำหรับฉบับ"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "สำหรับบทความ"
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "สำหรับกัลเลย์"
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "โปรดใส่รูปแบบส่วนต่อท้าย DOI สำหรับฉบับ"
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "โปรดใส่รูปแบบส่วนต่อท้าย DOI สำหรับบทความ"
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "โปรดใส่รูปแบบส่วนต่อท้าย DOI สำหรับกัลเลย์"
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "กำหนด DOI ใหม่"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr ""
+"หากคุณเปลี่ยนการกำหนดค่า DOI, DOI ที่ได้รับการกำหนดแล้วจะไม่ถูกเปลี่ยนแปลง "
+"เมื่อบันทึกการกำหนดค่า DOI แล้ว ให้ใช้ปุ่มนี้เพื่อลบ DOI "
+"ที่มีอยู่ทั้งหมดเพื่อให้การตั้งค่าใหม่มีผลกับวัตถุที่มีอยู่"
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "คุณแน่ใจหรือว่าต้องการลบ DOI ที่มีอยู่ทั้งหมด?"
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "กำหนด DOI"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"กำหนด DOI ให้กับวัตถุที่เผยแพร่ทั้งหมดที่ยังไม่ได้รับการกำหนด DOI "
+"การกระทำนี้ไม่สามารถใช้กับการกำหนดค่าส่วนต่อท้ายแบบเดี่ยวได้ "
+"หากคุณได้แก้ไขการกำหนดค่า DOI ด้านบน "
+"โปรดบันทึกการเปลี่ยนแปลงของคุณก่อนเริ่มการกระทำนี้ การกำหนด DOI "
+"อาจใช้เวลานานขึ้นอยู่กับจำนวนวัตถุที่เผยแพร่ในวารสาร"
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"คุณแน่ใจหรือว่าต้องการกำหนด DOI ให้กับวัตถุที่เผยแพร่ทั้งหมดที่ยังไม่ได้รับ "
+"DOI?"
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "หน่วยงานลงทะเบียน"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr "โปรดเลือกหน่วยงานลงทะเบียนที่คุณต้องการใช้เมื่อส่ง DOI"
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.editor.doi.description"
+msgstr "DOI ต้องเริ่มต้นด้วย {$prefix}"
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "กำหนด"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "ฉบับ"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "บทความ"
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "กัลเลย์"
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "ไม่สามารถกำหนด DOI ได้เนื่องจากไม่มีส่วนต่อท้ายแบบกำหนดเอง"
+
+msgid "doi.editor.missingIssue"
+msgstr "ไม่สามารถสร้าง DOI ได้จนกว่าการเผยแพร่จะได้รับการกำหนดให้กับฉบับ"
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"ไม่สามารถสร้าง DOI ได้เนื่องจากขาดข้อมูลในส่วนใดส่วนหนึ่งของรูปแบบ DOI "
+"คุณอาจต้องกำหนดการเผยแพร่ให้กับฉบับ, ตั้งรหัสผู้เผยแพร่, หรือกรอกหมายเลขหน้า"
+
+msgid "doi.editor.patternNotResolved"
+msgstr "ไม่สามารถกำหนด DOI ได้เนื่องจากมีรูปแบบที่ยังไม่ได้รับการแก้ไข"
+
+msgid "doi.editor.canBeAssigned"
+msgstr ""
+"สิ่งที่คุณเห็นนี้เป็นการแสดงตัวอย่างของ DOI "
+"เลือกช่องทำเครื่องหมายแล้วบันทึกฟอร์มเพื่อกำหนด DOI"
+
+msgid "doi.editor.assigned"
+msgstr "DOI ถูกกำหนดให้กับ {$pubObjectType} นี้แล้ว"
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"ส่วนต่อท้าย DOI ที่ให้ไว้ถูกใช้กับรายการที่เผยแพร่อื่นแล้ว กรุณาใส่ส่วนต่อท้"
+"าย DOI ที่ไม่ซ้ำกันสำหรับแต่ละรายการ"
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "ล้างข้อมูล"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "คุณแน่ใจหรือว่าต้องการลบ DOI ที่มีอยู่?"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "ล้าง DOI ของวัตถุในฉบับ"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"ใช้ตัวเลือกต่อไปนี้เพื่อล้าง DOI ของวัตถุทั้งหมด (บทความและกัลเลย์) "
+"ที่กำหนดเวลาสำหรับฉบับนี้"
+
+msgid "doi.editor.assignDoi"
+msgstr "กำหนด DOI {$pubId} ให้กับ {$pubObjectType} นี้"
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "ไม่สามารถกำหนด DOI ได้เนื่องจากไม่มีส่วนต่อท้ายแบบกำหนดเอง"
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr "ไม่สามารถกำหนด DOI {$pubId} ได้เนื่องจากมีรูปแบบที่ยังไม่ได้รับการแก้ไข"
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr ""
+"DOI {$pubId} ได้รับการกำหนดแล้ว หากต้องการแก้ไข DOI ให้ไปที่ <a href=\""
+"{$doiManagementLink}\">หน้าการจัดการ DOI</a>"
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI {$pubId} จะถูกกำหนดเมื่อมีการเผยแพร่"
+
+msgid "doi.editor.missingPrefix"
+msgstr "DOI ต้องเริ่มต้นด้วย {$doiPrefix}"
+
+msgid "doi.editor.preview.publication"
+msgstr "DOI สำหรับการเผยแพร่นี้จะเป็น {$doi}"
+
+msgid "doi.editor.preview.publication.none"
+msgstr "DOI ยังไม่ได้รับการกำหนดให้กับการเผยแพร่นี้"
+
+msgid "doi.editor.preview.galleys"
+msgstr "กัลเลย์: {$galleyLabel}"
+
+msgid "doi.editor.preview.objects"
+msgstr "รายการ"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "กัลเลย์ที่คุณร้องขอไม่ใช่ส่วนหนึ่งของการเผยแพร่นี้"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "สามารถแก้ไขได้เฉพาะ DOI หลังจากมีการเผยแพร่/กัลเลย์แล้ว"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "DOI ที่ส่งมาไม่ถูกต้อง"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "สามารถแก้ไขได้เฉพาะ DOI หลังจากมีการเผยแพร่แล้ว"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "ไม่พบฉบับที่คุณร้องขอ"
+
+msgid "doi.manager.submissionDois"
+msgstr "DOI ของบทความ"
+
+msgid "doi.manager.issueDois"
+msgstr "DOI ของฉบับ"
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"อีเมลนี้แจ้งผู้เขียนว่าการส่งของพวกเขาถูกปฏิเสธ ก่อนขั้นตอนการทบทวน "
+"เนื่องจากการส่งไม่ตรงตามข้อกำหนดสำหรับการตีพิมพ์ในวารสาร"
+
+msgid "manager.institutions.noContext"
+msgstr "ไม่พบวารสารของสถาบันนี้"
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "การแจ้งเตือนการสมัครสมาชิก"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr ""
+"อีเมลนี้แจ้งให้ผู้อ่านที่ลงทะเบียนทราบว่าผู้จัดการได้สร้างการสมัครสมาชิกให้กั"
+"บพวกเขาแล้ว พร้อมให้ URL ของวารสารและคำแนะนำสำหรับการเข้าถึง"
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "การสมัครสมาชิกใกล้หมดอายุ"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "การสมัครสมาชิกหมดอายุ"
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "การสมัครสมาชิกหมดอายุครั้งสุดท้าย"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "การซื้อการสมัครสมาชิกบุคคล"
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr ""
+"อีเมลนี้แจ้งให้ผู้จัดการการสมัครสมาชิกทราบว่าการสมัครสมาชิกบุคคลได้ถูกซื้อทาง"
+"ออนไลน์แล้ว โดยให้ข้อมูลสรุปเกี่ยวกับการสมัครและลิงก์เข้าถึงอย่างรวดเร็วไปยัง"
+"การสมัครที่ซื้อแล้ว"
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "การซื้อการสมัครสมาชิกสถาบัน"
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr ""
+"อีเมลนี้แจ้งให้ผู้จัดการการสมัครสมาชิกทราบว่าการสมัครสมาชิกสถาบันได้ถูกซื้อทา"
+"งออนไลน์แล้ว โดยให้ข้อมูลสรุปเกี่ยวกับการสมัครและลิงก์เข้าถึงอย่างรวดเร็วไปยั"
+"งการสมัครที่ซื้อแล้ว"
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "ต่ออายุการสมัครสมาชิกบุคคล"
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr ""
+"อีเมลนี้แจ้งให้ผู้จัดการการสมัครสมาชิกทราบว่าการสมัครสมาชิกบุคคลได้ถูกต่ออายุ"
+"ทางออนไลน์แล้ว โดยให้ข้อมูลสรุปเกี่ยวกับการสมัครและลิงก์เข้าถึงอย่างรวดเร็วไป"
+"ยังการสมัครที่ต่ออายุแล้ว"
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "ต่ออายุการสมัครสมาชิกสถาบัน"
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr ""
+"อีเมลนี้แจ้งให้ผู้จัดการการสมัครสมาชิกทราบว่าการสมัครสมาชิกสถาบันได้ถูกต่ออาย"
+"ุทางออนไลน์แล้ว โดยให้ข้อมูลสรุปเกี่ยวกับการสมัครและลิงก์เข้าถึงอย่างรวดเร็วไ"
+"ปยังการสมัครที่ต่ออายุแล้ว"
+
+msgid "mailable.openAccessNotify.name"
+msgstr "แจ้งเตือนการเข้าถึงแบบเปิด"
+
+msgid "mailable.openAccessNotify.description"
+msgstr ""
+"อีเมลนี้ถูกส่งให้กับผู้อ่านที่ลงทะเบียนซึ่งขอรับการแจ้งเตือนทางอีเมลเมื่อฉบับ"
+"กลายเป็นการเข้าถึงแบบเปิด"
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "แจ้งเตือนการเผยแพร่ฉบับ"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+"อีเมลนี้ถูกส่งอัตโนมัติให้กับผู้ใช้ที่ลงทะเบียนเมื่อมีการเผยแพร่ฉบับใหม่"
+
+msgid "manager.manageEmails.description"
+msgstr "แก้ไขข้อความที่ส่งในอีเมลจากวารสารนี้"
+
+msgid "mailable.layoutComplete.name"
+msgstr "กัลเลย์เสร็จสมบูรณ์"
+
+msgid "mailable.publicationVersionNotify.name"
+msgstr "สร้างเวอร์ชันใหม่"
+
+msgid "mailable.publicationVersionNotify.description"
+msgstr ""
+"อีเมลนี้จะส่งแจ้งอัตโนมัติให้กับบรรณาธิการที่ได้รับมอบหมายเมื่อสร้างเวอร์ชันใ"
+"หม่ของการส่งบทความ"
+
+msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+"อีเมลนี้จะถูกส่งให้กับผู้จัดการวารสารเมื่อมีการส่งบทความใหม่และไม่มีการกำหนดบ"
+"รรณาธิการ"
+
+msgid "mailable.paymentRequest.name"
+msgstr "คำขอการชำระเงิน"
+
+msgid "mailable.paymentRequest.description"
+msgstr ""
+"อีเมลนี้ส่งอัตโนมัติให้กับผู้เขียนเพื่อขอชำระค่าธรรมเนียมการเผยแพร่เมื่อการส่"
+"งบทความของพวกเขาได้รับการยอมรับ"
