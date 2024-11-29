@@ -152,7 +152,7 @@ describe('Article View Metadata - DC Plugin', function() {
 							]
 						},
 						{
-							locale: 'fr',
+							locale: 'fr-CA',
 							contents: [
 								submission.localeMetadata
 									.find(element => element.locale == 'fr_CA')
@@ -173,7 +173,7 @@ describe('Article View Metadata - DC Plugin', function() {
 							]
 						},
 						{
-							locale: 'fr',
+							locale: 'fr-CA',
 							contents: [
 								submission.localeTitles.fr_CA.abstract
 							]
@@ -184,7 +184,7 @@ describe('Article View Metadata - DC Plugin', function() {
 					element: 'DC.Title.Alternative',
 					values: [
 						{
-							locale: 'fr',
+							locale: 'fr-CA',
 							contents: [
 								submission.localeTitles.fr_CA.prefix + ' ' + submission.localeTitles.fr_CA.title + ': ' + submission.localeTitles.fr_CA.subtitle
 							]
@@ -207,7 +207,7 @@ describe('Article View Metadata - DC Plugin', function() {
 
 						},
 						{
-							locale: 'fr',
+							locale: 'fr-CA',
 							contents: [
 								submission.localeMetadata
 									.find(element => element.locale == 'fr_CA')
@@ -230,7 +230,7 @@ describe('Article View Metadata - DC Plugin', function() {
 								.values
 						},
 						{
-							locale: 'fr',
+							locale: 'fr-CA',
 							contents: submission.localeMetadata
 								.find(element => element.locale == 'fr_CA')
 								.manyValues
@@ -327,7 +327,7 @@ describe('Article View Metadata - DC Plugin', function() {
 				},
 				{
 					element: 'DC.Language',
-					scheme: 'ISO639-1',
+					scheme: 'rfc5646',
 					content: 'en'
 				},
 				{
@@ -371,7 +371,7 @@ describe('Article View Metadata - DC Plugin', function() {
 		cy.wait(500);
 
 		// Enable dois
-		cy.checkDoiConfig(['publication', 'issue', 'representation']);
+		cy.checkDoiConfig(['publication', 'issue']);
 
 		// After configuration, go to submissions
 		cy.get('nav').contains('Dashboards').click();
