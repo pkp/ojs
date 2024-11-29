@@ -1,0 +1,44 @@
+# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-10-20 01:53+0000\n"
+"Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
+"Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/"
+"paymethod-manual/th/>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.paymethod.manual.displayName"
+msgstr "การชำระค่าธรรมเนียมด้วยวิธีแมนนวล"
+
+msgid "plugins.paymethod.manual.description"
+msgstr ""
+"ผู้จัดการจะบันทึกการรับชำระเงินจากผู้ใช้อย่างแมนนวล (นอกระบบซอฟต์แวร์นี้)"
+
+msgid "plugins.paymethod.manual"
+msgstr "การชำระค่าธรรมเนียมด้วยวิธีแมนนวล"
+
+msgid "plugins.paymethod.manual.settings"
+msgstr "คำแนะนำในการชำระเงินแบบแมนนวล"
+
+msgid "plugins.paymethod.manual.sendNotificationOfPayment"
+msgstr "ส่งการแจ้งเตือนการชำระเงิน"
+
+msgid "plugins.paymethod.manual.paymentNotification"
+msgstr "การแจ้งเตือนการชำระเงิน"
+
+msgid "plugins.paymethod.manual.notificationSent"
+msgstr "การแจ้งเตือนการชำระเงินถูกส่งแล้ว"
+
+msgid "plugins.paymethod.manual.purchase.fee"
+msgstr "ค่าธรรมเนียม"
+
+msgid "plugins.paymethod.manual.purchase.title"
+msgstr "ชื่อเรื่อง"
+
+msgid "plugins.paymethod.manual.manualPaymentNotify.name"
+msgstr "การแจ้งเตือนการชำระเงินด้วยวิธีแมนนวล"

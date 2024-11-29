@@ -1,0 +1,106 @@
+# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-10-20 01:53+0000\n"
+"Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
+"Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-users/th/>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "ปลั๊กอิน Users XML"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
+"เลือกไฟล์ข้อมูล XML ที่มีข้อมูลผู้ใช้เพื่อนำเข้าไปยังวารสารนี้ "
+"ดูรายละเอียดรูปแบบไฟล์ได้ในคู่มือวารสาร<br /><br />โปรดทราบว่า "
+"หากไฟล์ที่นำเข้ามีชื่อผู้ใช้หรืออีเมลที่มีอยู่แล้วในระบบ "
+"ข้อมูลผู้ใช้เหล่านั้นจะไม่ถูกนำเข้า "
+"และบทบาทใหม่ที่ต้องสร้างขึ้นจะถูกกำหนดให้กับผู้ใช้ที่มีอยู่แล้ว"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr ""
+"ส่งอีเมลแจ้งเตือนให้กับผู้ใช้ที่นำเข้าแต่ละคน "
+"ซึ่งจะมีชื่อผู้ใช้และรหัสผ่านของผู้ใช้"
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "ดำเนินการนำเข้าผู้ใช้อื่นต่อไปหากเกิดข้อผิดพลาด"
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "ผู้ใช้ต่อไปนี้ถูกนำเข้าสู่ระบบเรียบร้อยแล้ว"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "เกิดข้อผิดพลาดระหว่างการนำเข้า"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "ยืนยันว่าผู้ใช้เหล่านี้คือผู้ที่คุณต้องการนำเข้าสู่ระบบ"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "คำเตือน"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"ไม่สามารถใช้รหัสผ่านที่ถูกแฮชด้วย {$importHash} ได้ OJS ถูกกำหนดให้ใช้ "
+"{$ojsHash}. หากคุณดำเนินการต่อ คุณจำเป็นต้องรีเซ็ตรหัสผ่านของผู้ใช้ที่นำเข้า"
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "ไม่พบเส้นทางวารสาร \"{$journalPath}\" ที่ระบุ"
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "ส่งออกผู้ใช้"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "ส่งออกตามบทบาท"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "ส่งออกทั้งหมด"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "เกิดข้อผิดพลาดระหว่างการส่งออก"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"การนำเข้าสำเร็จแล้ว "
+"ผู้ใช้ที่มีชื่อผู้ใช้และที่อยู่อีเมลที่ไม่ซ้ำในระบบได้ถูกนำเข้า "
+"พร้อมกับกลุ่มผู้ใช้ที่เกี่ยวข้อง"
+
+msgid "plugins.importexport.users.results"
+msgstr "ผลลัพธ์"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "กรุณาอัปโหลดไฟล์ที่ \"นำเข้า\" เพื่อดำเนินการต่อ"
+
+msgid "plugins.importexport.users.description"
+msgstr "นำเข้าและส่งออกผู้ใช้"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"การใช้งาน: {$scriptName} {$pluginName} [คำสั่ง] ...\n"
+"คำสั่ง:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"ตัวอย่าง:\n"
+"\tนำเข้าผู้ใช้เข้าไปยัง myJournal จากไฟล์ myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tส่งออกผู้ใช้ทั้งหมดจาก myJournal:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tส่งออกผู้ใช้ที่ระบุโดยใช้ ID ของพวกเขา:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "นำเข้าผู้ใช้"
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "ไฟล์ข้อมูลผู้ใช้"

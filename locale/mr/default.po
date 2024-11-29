@@ -1,3 +1,189 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2024.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2024-09-12 08:45+0000\n"
+"Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
+"Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/default/mr/>"
+"\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "default.contextSettings.authorGuidelines"
+msgstr ""
+"<p>या नियतकालिकामध्ये सादरीकरणासाठी लेखकांना आमंत्रित केले आहे. सगळी "
+"सादरीकरणे या नियतकालिकाच्या उद्दिष्टे आणि व्याप्तीशी निगडित आहेत की नाही हे "
+"ठरवण्यासाठी संपादकाद्वारे मूल्यमापन केले जाईल. उद्दिष्टांशी आणि व्याप्तीशी "
+"जुळणारी सादरीकरणे स्वीकारायची की नाही हे ठरवण्यापूर्वी ती विषयतज्ज्ञांकडे "
+"समीक्षणासाठी पाठवली जातील.</p><p>सादरीकरणापूर्वी, सादरीकरणात समाविष्ट केलेली "
+"कोणतीही सामग्री; जसे छायाचित्र, दस्तऐवज आणि डेटासेट प्रकाशित करण्याची परवानगी"
+" मिळविण्याची जबाबदारी लेखकांची आहे. सादरीकरणावर नमूद केल्या गेलेल्या सर्व "
+"लेखकांनी लेखक या नात्याने संमती देणे आवश्यक आहे. आवश्यक तेथे, ज्या देशात संशो"
+"धन झालेले असेल त्या देशाच्या विधिसंमत आवश्यकतांनुसार संशोधनास योग्य त्या "
+"नैतिकता समितीने मान्यता दिली पाहिजे.</p><p>सादरीकरणात किमान गुणवत्तेच्या "
+"मानकांची पूर्तता केलेली नसेल तर त्याचा अस्वीकार संपादक करु शकतात. लेख "
+"सादरीकरणापूर्वी, अभ्यासाची मांडणी आणि संशोधनाची कारणमीमांसा लेखनात "
+"योग्यरित्या संरचित आणि स्पष्टपणे केली आहे याची कृपया खात्री करा. शीर्षक "
+"संक्षिप्त आणि गोषवारा अभ्यासाची पूर्ण कल्पना देणारा असावा. यामुळे लेखनाचे "
+"समीक्षण करण्यास समीक्षकांची सहमती मिळवण्याची शक्यता वाढते. जेव्हा तुम्हाला "
+"असे खात्रीने वाटेल की तुमचे सादरीकरण या सगळ्या अपेक्षा पूर्ण करत आहे तेव्हा "
+"कृपया खालील यादीक्रमाने (चेकलिस्ट) सादरीकरणाची प्रक्रिया सुरु करा.</p>"
+
+msgid "default.contextSettings.checklist"
+msgstr ""
+"<p>सर्व सादरीकरणांनी खालील आवश्यकतांची पूर्तता केली पाहिजे.</p><ul><li>हे "
+"सादरीकरण <a href=\"{$submissionGuidelinesUrl}\">लेखकांसाठी असलेल्या मार्गदर्"
+"शक तत्त्वांची</a> पूर्तता करते.</li><li>हे सादरीकरण यापूर्वी प्रकाशित केलेले "
+"नाही किंवा ते प्रकाशनार्थ दुसऱ्या नियतकालिकाला पाठवलेले नाही.</li><li>सगळे "
+"संदर्भ अचूकता आणि पूर्णतेसाठी तपासलेले आहेत.</li><li>तक्ते आणि आकृत्यांना "
+"क्रमांक देऊन त्यांचे संक्षिप्त वर्णन केले आहे.</li><li>या सादरीकरणात वापरलेली"
+" छायाचित्रे, डेटासेट आणि इतर सामग्री प्रकाशित करण्यासाठी परवानगी मिळवली "
+"आहे.</li></ul>"
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"आमच्या सूचना सेवेद्वारे या नियतकालिकातील प्रकाशित साहित्याची माहिती "
+"मिळवण्यासाठी वाचकांना नावनोंदणी (साइन अप) करण्यास आम्ही प्रोत्साहन देतो. "
+"याकरता नियतकालिकाच्या मुख्यपृष्ठाच्या शीर्षस्थानी <a href=\""
+"{$indexUrl}/{$contextPath}/user/register\">नोंदणी करा</a> हा दुवा (लिंक) "
+"वापरा. या नोंदणीमुळे वाचकांना नियतकालिकाच्या प्रत्येक नव्याने प्रसिद्ध "
+"झालेल्या अंकातली अनुक्रमणिका ई-मेलद्वारे मिळेल. या यादीमुळे नियतकालिकाचे किती"
+" नियमित वाचकांचा पाठिंबा आहे याचा अंदाज बांधता येतो. नियतकालिकाच्या <a href="
+"\"{$indexUrl}/{$contextPath}/about/submissions#privacyStatement\">गोपनीयता "
+"विधानाद्वारे</a> वाचकांचे नाव आणि ई-मेल पत्ता इतर हेतूंसाठी वापरला जाणार नाही"
+" याचे आम्ही वाचकांना आश्वासन देतो."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"आम्ही संशोधन संस्थांमधील ग्रंथपालांना त्यांच्या 'इलेक्ट्रॉनिक जर्नल "
+"होल्डिंग'मध्ये हे नियतकालिक समाविष्ट करावे अशी विनंती करतो. तसेच, "
+"ग्रंथालयाच्या प्राध्यापक सदस्यांचे त्यांच्या नियतकालिकांना इंटरनेटवर स्थान "
+"देण्यासाठी हे नियतकालिक वापरत असलेल्या <a href=\"https://pkp.sfu.ca/ojs\""
+">मुक्त स्रोत प्रकाशन प्रणाली (ओपन जर्नल सिस्टम्स) </a> कडे आम्ही लक्ष वेधतो."
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"हे नियतकालिक वितरित संग्रहण प्रणालीचा (CLOCKSS) वापर करते ज्यायोगे सहभागी "
+"ग्रंथालयांना यातील लेखन कायमस्वरूपी उपलब्ध असेल. तसेच त्याला जतन आणि "
+"पुनर्संचयित करण्याच्या हेतूने नियतकालिकाचे कायमस्वरूपी संग्रह तयार करण्याची "
+"परवानगी देते. <a href=\"https://clockss.org\">अधिक माहितीसाठी...</a>"
+
+msgid "section.default.title"
+msgstr "लेख"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "section.default.policy"
+msgstr "विभागाविषयी सर्वसाधारण (डिफॉल्ट) धोरण"
+
+msgid "default.genres.article"
+msgstr "लेखाचा मजकूर"
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>या नियतकालिकाच्या संकेतस्थळावर नोंदवलेली नावे आणि ई-मेल पत्ते केवळ या "
+"नियतकालिकाच्या नमूद केलेल्या उद्देशांव्यतिरिक्त इतर कोणत्याही हेतूसाठी वापरले"
+" किंवा इतरांना उपलब्ध केले जाणार नाहीत.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"संशोधनाला मुक्तपणे वाचकांसाठी उपलब्ध करून दिल्यामुळे ज्ञानाच्या देवाणघेवाणीला"
+" जागतिक स्तरावर चालना मिळते या सिद्धांतानुसार हे नियतकालिक त्यात प्रसिद्ध "
+"झालेल्या लेखनाला त्वरित मुक्तपणे उपलब्ध करते."
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"या नियतकालिकात सादरीकरण करायचे आहे? तुम्ही नियतकालिकातील विभाग आणि त्यांच्या "
+"धोरणांबाबतचे आकलन करुन घेण्यासाठी <a href=\"{$indexUrl}/{$contextPath}/"
+"about\">नियतकालिकाबद्दल</a> तसेच <a href=\"{$indexUrl}/{$contextPath}/about/"
+"submissions#authorGuidelines\">लेखक मार्गदर्शक तत्त्वे</a> येथील मजकूर वाचावा"
+" असे आम्ही सुचवतो. लेखकांनी सादरीकरणापूर्वी नियतकालिकात <a href=\""
+"{$indexUrl}/{$contextPath}/user/register\">नोंदणी</a> करणे आवश्यक आहे. पूर्वी"
+" नोंदणी केलेली असल्यास, फक्त <a href=\"{$indexUrl }/index/login\">लॉग-इन "
+"करा</a> आणि पाच टप्प्यांची कार्यपद्धती वापरुन सादरीकरण प्रक्रिया सुरू करा."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"हे नियतकालिक वितरित संग्रहण प्रणालीचा (LOCKSS) वापर करते ज्यायोगे सहभागी "
+"ग्रंथालयांना यातील लेखन कायमस्वरूपी उपलब्ध असेल. तसेच त्याला जतन आणि "
+"पुनर्संचयित करण्याच्या हेतूने नियतकालिकाचे कायमस्वरूपी संग्रह तयार करण्याची "
+"परवानगी देते. <a href=\"https://www.lockss.org\">अधिक माहितीसाठी...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "नियतकालिकाचा व्यवस्थापक"
+
+msgid "default.groups.plural.manager"
+msgstr "नियतकालिकाचे व्यवस्थापक"
+
+msgid "default.groups.abbrev.manager"
+msgstr "JM"
+
+msgid "default.groups.name.editor"
+msgstr "नियतकालिकाचा संपादक"
+
+msgid "default.groups.plural.editor"
+msgstr "नियतकालिकाचे संपादक"
+
+msgid "default.groups.abbrev.editor"
+msgstr "JE"
+
+msgid "default.groups.name.guestEditor"
+msgstr "अतिथी संपादक"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "अतिथी संपादक मंडळ"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "GE"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "विभागाचा संपादक"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "विभागाचे संपादक"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SecE"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "वर्गणी/सदस्यता व्यवस्थापक"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "वर्गणी/सदस्यता व्यवस्थापक मंडळ"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "SubM"
+
+msgid "default.genres.researchInstrument"
+msgstr "संशोधन साधने"
+
+msgid "default.genres.researchMaterials"
+msgstr "संशोधन सामग्री"
+
+msgid "default.genres.researchResults"
+msgstr "संशोधन निष्पत्ती"
+
+msgid "default.genres.transcripts"
+msgstr "प्रतिलेख (ट्रान्स्क्रिप्ट)"
+
+msgid "default.genres.dataAnalysis"
+msgstr "विदा (डेटा) विश्लेषण"
+
+msgid "default.genres.dataSet"
+msgstr "विदा (डेटा) संच"
+
+msgid "default.genres.sourceTexts"
+msgstr "मजकूराचा स्रोत"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "समीक्षक"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "समीक्षक"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"

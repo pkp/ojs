@@ -1,0 +1,19 @@
+# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-10-19 16:30+0000\n"
+"Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
+"Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/"
+"blocks-languageToggle/th/>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.block.languageToggle.displayName"
+msgstr "บล็อกสลับภาษา"
+
+msgid "plugins.block.languageToggle.description"
+msgstr "ปลั๊กอินนี้มีตัวสลับภาษาในแถบด้านข้าง"

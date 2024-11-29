@@ -1,10 +1,10 @@
-# Dorien van Rheenen <d.van.rheenen@rug.nl>, 2023.
+# Dorien van Rheenen <d.van.rheenen@rug.nl>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2023-04-11 16:21+0000\n"
+"PO-Revision-Date: 2024-11-04 16:32+0000\n"
 "Last-Translator: Dorien van Rheenen <d.van.rheenen@rug.nl>\n"
 "Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/editor/nl/>\n"
 "Language: nl\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "editor.home"
 msgstr "Homepage Redacteur"
@@ -247,7 +247,7 @@ msgstr "Omslag"
 
 msgid "editor.issues.confirmIssueDelete"
 msgstr ""
-"Alle artikels gaan terug naar de redactie-wachtrij en alle geassocieerde "
+"Alle artikelen gaan terug naar de redactie-wachtrij en alle geassocieerde "
 "bestanden worden verwijderd. Weet u zeker dat u dit nummer wilt verwijderen?"
 
 msgid "editor.issues.resetIssueOrder"

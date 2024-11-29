@@ -1,7 +1,7 @@
 # Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-07-30 06:57+0000\n"
+"PO-Revision-Date: 2024-10-17 09:02+0000\n"
 "Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
 "Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/locale/th/>\n"
 "Language: th\n"
@@ -12,48 +12,48 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "user.authorization.journalDoesNotPublish"
-msgstr "วารสารนี้ไม่ได้เผยแพร่เนื้อหาทางออนไลน์"
+msgstr "วารสารนี้ไม่ได้เผยแพร่เนื้อหาของตนทางออนไลน์"
 
 msgid "context.current"
 msgstr "วารสารปัจจุบัน:"
 
 msgid "context.select"
-msgstr "สลับไปยัง another journal:"
+msgstr "เปลี่ยนไปยังวารสารอื่น:"
 
 msgid "navigation.categories"
-msgstr "ประเภท"
+msgstr "หมวดหมู่"
 
 msgid "navigation.categories.browse"
 msgstr "เรียกดู"
 
 msgid "common.software"
-msgstr "ระบบวารสารแบบเปิด"
+msgstr "Open Journal Systems"
 
 msgid "common.payments"
-msgstr "การชําระเงิน"
+msgstr "การชำระเงินทั้งหมด"
 
 msgid "navigation.journalHelp"
 msgstr "ความช่วยเหลือวารสาร"
 
 msgid "reviewer.article.enterReviewForm"
-msgstr "คลิกที่ไอคอนเพื่อกรอกแบบฟอร์มรีวิว"
+msgstr "คลิกที่ไอคอนเพื่อกรอกแบบฟอร์มการพิจารณา"
 
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
-msgstr "กรุณากรอกข้อมูลในช่องที่จําเป็น"
+msgstr "กรุณากรอกข้อมูลในช่องที่จำเป็น"
 
 msgid "common.confirmComplete"
 msgstr ""
-"คุณแน่ใจหรือว่าต้องการทําเครื่องหมายงานนี้เสร็จสมบูรณ์? "
-"คุณอาจไม่สามารถทําการเปลี่ยนแปลงได้ในภายหลัง"
+"คุณแน่ใจหรือไม่ว่าต้องการทำเครื่องหมายงานนี้ว่าเสร็จสิ้นแล้ว? "
+"คุณอาจไม่สามารถทำการแก้ไขหลังจากนี้ได้"
 
 msgid "common.payment"
-msgstr "การชําระเงิน"
+msgstr "การชำระเงิน"
 
 msgid "common.homePageHeader.altText"
 msgstr "ส่วนหัวของหน้าแรก"
 
 msgid "common.journalHomepageImage.altText"
-msgstr "รูปภาพหน้าแรกของวารสาร"
+msgstr "ภาพหน้าแรกของวารสาร"
 
 msgid "doi.manager.settings.publications"
 msgstr "บทความ"
@@ -62,35 +62,2308 @@ msgid "navigation.current"
 msgstr "ปัจจุบัน"
 
 msgid "navigation.otherJournals"
-msgstr "วารสารอื่นๆ"
+msgstr "วารสารอื่น ๆ"
 
 msgid "navigation.browseByIssue"
 msgstr "ตามฉบับ"
 
 msgid "navigation.browseByAuthor"
-msgstr "โดยผู้เขียน"
+msgstr "ตามผู้เขียน"
 
 msgid "navigation.infoForAuthors"
-msgstr "สําหรับนักเขียน"
+msgstr "สำหรับผู้เขียน"
 
 msgid "navigation.infoForLibrarians"
-msgstr "สําหรับบรรณารักษ์"
+msgstr "สำหรับบรรณารักษ์"
 
-#, fuzzy
 msgid "navigation.competingInterestGuidelines"
-msgstr "แนวทางผลประโยชน์ที่แข่งขันกัน"
+msgstr "แนวทางเรื่องผลประโยชน์ทับซ้อน"
 
 msgid "navigation.infoForAuthors.long"
-msgstr "ข้อมูลสําหรับผู้เขียน"
+msgstr "ข้อมูลสำหรับผู้เขียน"
 
 msgid "navigation.infoForLibrarians.long"
-msgstr "ข้อมูลสําหรับบรรณารักษ์"
+msgstr "ข้อมูลสำหรับบรรณารักษ์"
 
 msgid "navigation.skip.about"
 msgstr "ข้ามไปที่เกี่ยวกับวารสาร"
 
 msgid "navigation.skip.issue"
-msgstr "ข้ามไปยังปัญหาปัจจุบัน"
+msgstr "ข้ามไปที่ฉบับปัจจุบัน"
 
 msgid "common.queue.long.submissionsUnassigned"
-msgstr "ไม่ได้รับมอบหมาย"
+msgstr "ยังไม่ได้มอบหมาย"
+
+msgid "submission.editorDecision"
+msgstr "การตัดสินใจของบรรณาธิการ"
+
+msgid "submission.round"
+msgstr "รอบ&nbsp;{$round}"
+
+msgid "submission.editorReview"
+msgstr "การพิจารณาของบรรณาธิการ"
+
+msgid "submission.notifyAuthor"
+msgstr "แจ้งผู้เขียน"
+
+msgid "submission.notifyEditor"
+msgstr "แจ้งบรรณาธิการ"
+
+msgid "submissions.step1"
+msgstr "ขั้นตอนที่ 1"
+
+msgid "submissions.step3"
+msgstr "ขั้นตอนที่ 3"
+
+msgid "submissions.queuedReview"
+msgstr "อยู่ระหว่างการพิจารณา"
+
+msgid "submissions.published"
+msgstr "ตีพิมพ์แล้ว"
+
+msgid "submissions.initial"
+msgstr "เริ่มต้น"
+
+msgid "submissions.proofread"
+msgstr "พิสูจน์อักษรแล้ว"
+
+msgid "submissions.postAuthor"
+msgstr "หลังจากผู้เขียน"
+
+msgid "issue.volume"
+msgstr "เล่ม"
+
+msgid "submission.event.author.authorRevision"
+msgstr "ผู้เขียนได้ส่งการแก้ไขแล้ว"
+
+msgid "submission.event.editor.editorFile"
+msgstr "ไฟล์ของบรรณาธิการได้รับการอัปเดตแล้ว"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "ผู้คัดลอกแก้ไขได้รับมอบหมายให้ดูแลการส่งบทความ"
+
+msgid "search.results.orderBy"
+msgstr "เรียงลำดับผลการค้นหาโดย"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "ความนิยม (เดือนที่ผ่านมา)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "ความเกี่ยวข้อง"
+
+msgid "search.results.orderDir.asc"
+msgstr "เรียงจากน้อยไปมาก"
+
+msgid "search.results.orderDir.desc"
+msgstr "เรียงจากมากไปน้อย"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "ยังไม่ได้มอบหมาย"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "การส่งที่อยู่ในขั้นตอนการแก้ไข"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "อยู่ในขั้นตอนการแก้ไข"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "การส่งที่อยู่ในขั้นตอนการพิจารณา"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "อยู่ในขั้นตอนการพิจารณา"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "คลังเก็บ"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "คลังเก็บ"
+
+msgid "common.queue.long.active"
+msgstr "กำลังดำเนินการ"
+
+msgid "common.queue.short.active"
+msgstr "กำลังดำเนินการ"
+
+msgid "common.queue.long.completed"
+msgstr "คลังเก็บ"
+
+msgid "common.queue.short.completed"
+msgstr "คลังเก็บ"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "บรรณาธิการที่ได้รับมอบหมาย"
+
+msgid "section.section"
+msgstr "ส่วน"
+
+msgid "section.sections"
+msgstr "ส่วนต่าง ๆ"
+
+msgid "section.title"
+msgstr "ชื่อส่วน"
+
+msgid "section.abbreviation"
+msgstr "ตัวย่อ"
+
+msgid "section.abbreviation.example"
+msgstr "(เช่น บทความ=ART)"
+
+msgid "section.policy"
+msgstr "นโยบายส่วน"
+
+msgid "article.article"
+msgstr "บทความ"
+
+msgid "article.articles"
+msgstr "บทความทั้งหมด"
+
+msgid "common.publication"
+msgstr "บทความ"
+
+msgid "common.publications"
+msgstr "บทความทั้งหมด"
+
+msgid "article.submissionId"
+msgstr "รหัสการส่งบทความ"
+
+msgid "article.title"
+msgstr "ชื่อเรื่อง"
+
+msgid "article.authors"
+msgstr "ผู้เขียน"
+
+msgid "article.indexingInformation"
+msgstr "ข้อมูลการจัดทำดัชนี"
+
+msgid "article.metadata"
+msgstr "เมตาดาทา"
+
+msgid "article.journalSection"
+msgstr "ส่วนของวารสาร"
+
+msgid "article.file"
+msgstr "ไฟล์"
+
+msgid "article.suppFile"
+msgstr "ไฟล์เสริม"
+
+msgid "article.suppFiles"
+msgstr "ไฟล์เสริมทั้งหมด"
+
+msgid "article.suppFilesAbbrev"
+msgstr "ไฟล์เสริม"
+
+msgid "article.discipline"
+msgstr "สาขาวิชาการและสาขาย่อย"
+
+msgid "article.subject"
+msgstr "คำสำคัญ"
+
+msgid "article.coverage"
+msgstr "ขอบเขต"
+
+msgid "article.type"
+msgstr "ประเภท, วิธีการ หรือแนวทาง"
+
+msgid "article.language"
+msgstr "ภาษา"
+
+msgid "article.sectionEditor"
+msgstr "บรรณาธิการส่วน (SE)"
+
+msgid "article.commentsToEditor"
+msgstr "ความคิดเห็นจากผู้เขียน"
+
+msgid "article.submission"
+msgstr "การส่งบทความ"
+
+msgid "article.submissions"
+msgstr "การส่งบทความทั้งหมด"
+
+msgid "article.details"
+msgstr "รายละเอียด"
+
+msgid "article.abstract"
+msgstr "บทคัดย่อ"
+
+msgid "article.coverPage.altText"
+msgstr "ภาพหน้าปก"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "การเข้าถึงแบบเปิด"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "การเข้าถึงแบบจำกัด"
+
+msgid "article.comments.sectionDefault"
+msgstr "ค่าเริ่มต้น"
+
+msgid "article.comments.disable"
+msgstr "ปิดใช้งาน"
+
+msgid "article.comments.enable"
+msgstr "เปิดใช้งาน"
+
+msgid "article.fontSize"
+msgstr "ขนาดตัวอักษร"
+
+msgid "article.fontSize.small.altText"
+msgstr "เล็ก"
+
+msgid "article.fontSize.medium.altText"
+msgstr "กลาง"
+
+msgid "article.fontSize.large.altText"
+msgstr "ใหญ่"
+
+msgid "article.return"
+msgstr "กลับไปยังรายละเอียดบทความ"
+
+msgid "submission.submissionEditing"
+msgstr "การแก้ไขการส่งบทความ"
+
+msgid "submission.changeSection"
+msgstr "เปลี่ยนเป็น"
+
+msgid "submission.sent"
+msgstr "ส่งแล้ว"
+
+msgid "submission.editorAuthorRecord"
+msgstr "บันทึกอีเมลระหว่างบรรณาธิการ/ผู้เขียน"
+
+msgid "submission.reviewersVersion"
+msgstr "เวอร์ชันที่ผู้พิจารณาใส่ความคิดเห็นในไฟล์"
+
+msgid "submission.postReviewVersion"
+msgstr "เวอร์ชันไฟล์หลังการพิจารณา"
+
+msgid "submission.editorVersion"
+msgstr "เวอร์ชันของบรรณาธิการ"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "เวอร์ชันที่ผู้เขียนแก้ไขแล้ว"
+
+msgid "submission.authorVersion"
+msgstr "เวอร์ชันของผู้เขียน"
+
+msgid "submission.copyediting"
+msgstr "การคัดลอกแก้ไข"
+
+msgid "submission.copyedit"
+msgstr "คัดลอกแก้ไข"
+
+msgid "submission.proofreading"
+msgstr "การพิสูจน์อักษร"
+
+msgid "submission.scheduling"
+msgstr "การกำหนดเวลา"
+
+msgid "submission.scheduledIn"
+msgstr "กำหนดเวลาสำหรับการตีพิมพ์ใน {$issueName}"
+
+msgid "submission.scheduledIn.tba"
+msgstr "(จะแจ้งภายหลัง)"
+
+msgid "submissions.initialProof"
+msgstr "การพิสูจน์อักษรเบื้องต้น"
+
+msgid "submissions.reviewRound"
+msgstr "รอบการพิจารณา"
+
+msgid "submissions.proof"
+msgstr "การพิสูจน์อักษร"
+
+msgid "submissions.editorDecision"
+msgstr "การตัดสินใจของบรรณาธิการ"
+
+msgid "submissions.editorRuling"
+msgstr "คำตัดสินของบรรณาธิการ"
+
+msgid "submission.eventLog"
+msgstr "บันทึกเหตุการณ์"
+
+msgid "submissions.copyeditComplete"
+msgstr "คัดลอกแก้ไขเสร็จสิ้น"
+
+msgid "submissions.layoutComplete"
+msgstr "แก้ไขการจัดวางเสร็จสิ้น"
+
+msgid "submissions.proofreadingComplete"
+msgstr "พิสูจน์อักษรเสร็จสิ้น"
+
+msgid "submission.search"
+msgstr "ค้นหาบทความ"
+
+msgid "journal.currentIssue"
+msgstr "ฉบับปัจจุบัน"
+
+msgid "context.contexts"
+msgstr "วารสาร"
+
+msgid "journal.path"
+msgstr "เส้นทาง"
+
+msgid "context.context"
+msgstr "วารสาร"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "journal.viewAllIssues"
+msgstr "ดูทุกฉบับ"
+
+msgid "user.authorization.representationNotFound"
+msgstr "ไม่พบแกลเล่ย์ที่ร้องขอ"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "รวมผู้ใช้ที่ไม่มีบทบาทในวารสารนี้"
+
+msgid "user.profile.profileImage"
+msgstr "ภาพโปรไฟล์"
+
+msgid "user.showAllJournals"
+msgstr "แสดงวารสารของฉันทั้งหมด"
+
+msgid "user.registerForOtherJournals"
+msgstr "ลงทะเบียนสำหรับวารสารอื่น ๆ"
+
+msgid "user.reviewerPrompt"
+msgstr "คุณยินดีที่จะตรวจสอบบทความที่ส่งมายังวารสารนี้หรือไม่?"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "ใช่, ขอรับบทบาทเป็น {$userGroup}"
+
+msgid "user.reviewerPrompt.optin"
+msgstr "ใช่, ฉันต้องการให้ติดต่อเพื่อขอให้ตรวจสอบบทความที่ส่งมายังวารสารนี้"
+
+msgid "user.register.contextsPrompt"
+msgstr "คุณต้องการลงทะเบียนกับวารสารใดในเว็บไซต์นี้?"
+
+msgid "user.register.otherContextRoles"
+msgstr "ขอบทบาทตามที่ระบุไว้ต่อไปนี้"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "หากคุณขอเป็นผู้ทรงคุณวุฒิในวารสารใด ๆ กรุณากรอกหัวข้อความสนใจของคุณ"
+
+msgid "user.myJournals"
+msgstr "วารสารของฉัน"
+
+msgid "user.manageMySubscriptions"
+msgstr "จัดการการสมัครรับข้อมูลของฉัน"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "บัญชีของคุณยังไม่ได้เชื่อมโยงกับวารสารใด ๆ กรุณาเลือกวารสาร:"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"บัญชีของคุณยังไม่มีบทบาทใด ๆ สำหรับวารสารนี้ "
+"กรุณาเลือกจากการดำเนินการด้านล่าง:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "ส่งข้อเสนอ"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "ส่งบทความ: ขณะนี้การลงทะเบียนเป็นผู้เขียนถูกปิดอยู่"
+
+msgid "user.noRoles.regReviewer"
+msgstr "ลงทะเบียนเป็นผู้ทรงคุณวุฒิ"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr ""
+"ลงทะเบียนเป็นผู้ทรงคุณวุฒิ: ขณะนี้การลงทะเบียนเป็นผู้ทรงคุณวุฒิถูกปิดอยู่"
+
+msgid "user.role.manager"
+msgstr "ผู้จัดการวารสาร"
+
+msgid "user.role.subEditor"
+msgstr "บรรณาธิการส่วน"
+
+msgid "user.role.subscriptionManager"
+msgstr "ผู้จัดการการสมัครสมาชิก"
+
+msgid "user.role.managers"
+msgstr "ผู้จัดการวารสาร"
+
+msgid "user.role.subEditors"
+msgstr "บรรณาธิการส่วน"
+
+msgid "user.role.subscriptionManagers"
+msgstr "ผู้จัดการการสมัครสมาชิก"
+
+msgid "user.role.journalAssistant"
+msgstr "ผู้ช่วยบรรณาธิการวารสาร"
+
+msgid "user.role.journalAssistants"
+msgstr "ผู้ช่วยบรรณาธิการวารสาร"
+
+msgid "issue.issue"
+msgstr "ฉบับ"
+
+msgid "issue.issues"
+msgstr "ฉบับทั้งหมด"
+
+msgid "issue.title"
+msgstr "ชื่อเรื่อง"
+
+msgid "issue.viewIssueIdentification"
+msgstr "ดู {$identification}"
+
+msgid "issue.number"
+msgstr "หมายเลข"
+
+msgid "issue.vol"
+msgstr "เล่ม"
+
+msgid "issue.no"
+msgstr "หมายเลข"
+
+msgid "issue.year"
+msgstr "ปี"
+
+msgid "issue.noIssues"
+msgstr "ไม่มีฉบับ"
+
+msgid "issue.toc"
+msgstr "สารบัญ"
+
+msgid "issue.abstract"
+msgstr "บทคัดย่อ"
+
+msgid "issue.coverPage.altText"
+msgstr "หน้าปก"
+
+msgid "issue.fullIssue"
+msgstr "ฉบับเต็ม"
+
+msgid "issue.nonpdf.title"
+msgstr "ดาวน์โหลดฉบับ"
+
+msgid "issue.viewIssue"
+msgstr "ดูฉบับ"
+
+msgid "issue.return"
+msgstr "กลับไปยังรายละเอียดของฉบับ"
+
+msgid "doi.issue.incorrectContext"
+msgstr ""
+"ไม่สามารถสร้าง DOI สำหรับฉบับต่อไปนี้ได้: {$itemTitle} "
+"เนื่องจากไม่อยู่ในบริบทของวารสารปัจจุบัน"
+
+msgid "doi.issue.incorrectStaleStatus"
+msgstr ""
+"ไม่สามารถตั้งสถานะ DOI เป็น stale สำหรับฉบับต่อไปนี้ได้: {$itemTitle} DOI "
+"ต้องมีสถานะเป็น \"Registered\" หรือ \"Submitted\""
+
+msgid "doi.issue.notPublished"
+msgstr ""
+"ไม่สามารถทำเครื่องหมาย DOI ว่าลงทะเบียนแล้วสำหรับ {$pubObjectTitle} "
+"ฉบับนี้ต้องได้รับการตีพิมพ์ก่อนที่จะสามารถอัปเดตสถานะได้"
+
+msgid "subscriptionTypes.currency"
+msgstr "สกุลเงิน"
+
+msgid "subscriptionTypes.year"
+msgstr "ปี"
+
+msgid "subscriptionTypes.years"
+msgstr "ปี"
+
+msgid "subscriptionTypes.month"
+msgstr "เดือน"
+
+msgid "subscriptionTypes.months"
+msgstr "เดือน"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "ไม่มีวันหมดอายุ"
+
+msgid "subscriptionTypes.format"
+msgstr "รูปแบบ"
+
+msgid "subscriptionTypes.format.online"
+msgstr "ออนไลน์"
+
+msgid "subscriptionTypes.format.print"
+msgstr "พิมพ์"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "พิมพ์และออนไลน์"
+
+msgid "subscriptions.inactive"
+msgstr "ไม่ใช้งาน"
+
+msgid "subscriptions.status"
+msgstr "สถานะ"
+
+msgid "subscriptions.status.active"
+msgstr "ใช้งานอยู่"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "ต้องการข้อมูลเพิ่มเติม"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "ต้องการการอนุมัติ"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "รอการชำระเงินแบบแมนนวล"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "รอการชำระเงินออนไลน์"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "คุณไม่มีการสมัครสมาชิกที่ใช้งานอยู่"
+
+msgid "subscriptions.status.other"
+msgstr "อื่น ๆ ดูหมายเหตุ"
+
+msgid "subscriptions.individualDescription"
+msgstr "การสมัครสมาชิกแบบบุคคลต้องเข้าสู่ระบบเพื่อเข้าถึงเนื้อหาที่สมัครไว้"
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"การสมัครสมาชิกแบบสถาบันไม่ต้องเข้าสู่ระบบ โดยใช้โดเมนและ/หรือที่อยู่ IP "
+"ของผู้ใช้ในการเข้าถึงเนื้อหาที่สมัครไว้"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>หมายเหตุ:</strong> "
+"การสมัครสมาชิกแบบสถาบันที่ซื้อทางออนไลน์จำเป็นต้องได้รับการอนุมัติโดเมนและช่"
+"วง IP ก่อนที่การสมัครสมาชิกจะถูกเปิดใช้งาน"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "เหตุการณ์การส่งบทความ"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "บทความถูกส่งแล้ว"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "การส่งบทความถูกส่งไปยังคิวการกำหนดเวลาฉบับ"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "การส่งบทความถูกกำหนดให้กับฉบับ"
+
+msgid "submission.event.general.articlePublished"
+msgstr "บทความได้รับการตีพิมพ์แล้ว"
+
+msgid "submission.event.general.authorRevision"
+msgstr "ไฟล์การแก้ไขของผู้เขียนได้รับการอัปเดตแล้ว"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "บรรณาธิการได้รับมอบหมายให้ดูแลการส่งบทความ"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "บรรณาธิการถูกยกเลิกการมอบหมายจากการส่งบทความ"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "การตัดสินใจของบรรณาธิการถูกส่งแล้ว"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "การส่งบทความถูกส่งไปยังคลังเก็บ"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "การส่งบทความถูกกู้คืนจากคลังเก็บ"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "ผู้คัดลอกแก้ไขถูกยกเลิกการมอบหมายจากการส่งบทความ"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "การมอบหมายการคัดลอกแก้ไขเริ่มต้นแล้ว"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "ไฟล์การแก้ไขของผู้คัดลอกแก้ไขได้รับการอัปเดตแล้ว"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "การคัดลอกแก้ไขเบื้องต้นเสร็จสมบูรณ์แล้ว"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "การคัดลอกแก้ไขขั้นสุดท้ายเสร็จสมบูรณ์แล้ว"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "ไฟล์การคัดลอกแก้ไขได้รับการอัปเดตแล้ว"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "ผู้พิสูจน์อักษรได้รับมอบหมายให้ดูแลการส่งบทความ"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "ผู้พิสูจน์อักษรถูกยกเลิกการมอบหมายจากการส่งบทความ"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "การมอบหมายการพิสูจน์อักษรเริ่มต้นแล้ว"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "ไฟล์การแก้ไขของผู้พิสูจน์อักษรได้รับการอัปเดตแล้ว"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "การมอบหมายการพิสูจน์อักษรเสร็จสมบูรณ์แล้ว"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "บรรณาธิการการจัดวางได้รับมอบหมายให้ดูแลการส่งบทความ"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "บรรณาธิการการจัดวางถูกยกเลิกการมอบหมายจากการส่งบทความ"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "การมอบหมายการจัดวางเริ่มต้นแล้ว"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "แกลเล่ย์การจัดวางได้รับการอัปเดตแล้ว"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "การมอบหมายการจัดวางเสร็จสมบูรณ์แล้ว"
+
+msgid "reader.subscribersOnly"
+msgstr "เฉพาะสมาชิกเท่านั้น"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"ต้องมีการสมัครสมาชิกเพื่อเข้าถึงเนื้อหานี้ "
+"กรุณาเข้าสู่ระบบวารสารเพื่อยืนยันการสมัครสมาชิก"
+
+msgid "reader.openAccess"
+msgstr "การเข้าถึงแบบเปิด"
+
+msgid "reader.subscriptionAccess"
+msgstr "ต้องมีการสมัครสมาชิก"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "ต้องมีการสมัครสมาชิกหรือจ่ายค่าธรรมเนียม"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "comments.commentsOnArticle"
+msgstr "ความคิดเห็นเกี่ยวกับบทความนี้"
+
+msgid "comments.authenticated"
+msgstr "โดย <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "search.results.orderBy.article"
+msgstr "ชื่อบทความ"
+
+msgid "search.results.orderBy.author"
+msgstr "ผู้เขียน"
+
+msgid "search.results.orderBy.date"
+msgstr "วันที่ตีพิมพ์"
+
+msgid "search.results.orderBy.issue"
+msgstr "ฉบับ"
+
+msgid "search.results.orderBy.journal"
+msgstr "ชื่อวารสาร"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "ความนิยม (ตลอดเวลา)"
+
+msgid "search.results.similarDocuments"
+msgstr "เอกสารที่คล้ายกัน"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>หมายเหตุ!</h4>\n"
+"<p>ระบบไม่สามารถเขียนทับไฟล์การกำหนดค่าได้โดยอัตโนมัติ "
+"เพื่อใช้การเปลี่ยนแปลงการกำหนดค่าของคุณ คุณต้องเปิดไฟล์ <tt>config.inc.php</"
+"tt> ในโปรแกรมแก้ไขข้อความที่เหมาะสมและแทนที่เนื้อหาของไฟล์ด้วยเนื้อหาที่อยู่ใ"
+"นช่องข้อความด้านล่างนี้</p>"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "การจัดการการสมัครสมาชิก"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "การสมัครสมาชิกแบบบุคคล"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "การสมัครสมาชิกแบบสถาบัน"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "ประเภทการสมัครสมาชิก"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "ปลั๊กอินแกลเล่ย์บทความ"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"ปลั๊กอินแกลเล่ย์บทความช่วยเพิ่มการสนับสนุนการแสดงประเภทเอกสารที่แตกต่างกันในร"
+"ูปแบบแกลเล่ย์บทความ"
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+"ปลั๊กอินการอนุญาตใช้ Open Journal Systems "
+"ในการมอบหมายงานการตรวจสอบสิทธิ์ของผู้ใช้ให้กับระบบอื่น ๆ เช่น เซิร์ฟเวอร์ "
+"LDAP"
+
+msgid "plugins.categories.generic.description"
+msgstr ""
+"ปลั๊กอินทั่วไปถูกใช้เพื่อขยายความสามารถของ Open Journal Systems "
+"ในหลากหลายวิธีที่ไม่ได้รับการสนับสนุนจากหมวดหมู่ปลั๊กอินอื่น ๆ"
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>ข้อเสนอสำหรับประกาศลิขสิทธิ์ Creative Commons</h3>\n"
+"<h4>1. นโยบายที่เสนอสำหรับวารสารที่ให้การเข้าถึงแบบเปิด (Open Access)</h4>\n"
+"ผู้เขียนที่ตีพิมพ์กับวารสารนี้ตกลงตามเงื่อนไขต่อไปนี้:\n"
+"<ol type=\"a\">\n"
+"\t<li>ผู้เขียนเก็บลิขสิทธิ์และมอบสิทธิ์การตีพิมพ์แรกให้กับวารสาร "
+"โดยงานนั้นจะได้รับใบอนุญาตภายใต้ <a target=\"_new\" href=\"https"
+"://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution "
+"License</a> ที่อนุญาตให้ผู้อื่นแชร์งานได้โดยมีการยอมรับชื่อผู้เขียนและการตีพิ"
+"มพ์ครั้งแรกในวารสารนี้</li>\n"
+"\t<li>ผู้เขียนสามารถทำสัญญาเพิ่มเติมสำหรับการแจกจ่ายงานที่ตีพิมพ์ในวารสารแบบไ"
+"ม่ผูกขาดได้ (เช่น โพสต์ในคลังเก็บของสถาบันหรือพิมพ์ในหนังสือ) "
+"โดยต้องยอมรับการตีพิมพ์ครั้งแรกในวารสารนี้</li>\n"
+"\t<li>ผู้เขียนได้รับอนุญาตและสนับสนุนให้โพสต์งานของตนทางออนไลน์ (เช่น "
+"ในคลังเก็บของสถาบันหรือบนเว็บไซต์ของตน) ก่อนและระหว่างกระบวนการส่งบทความ "
+"เนื่องจากสามารถนำไปสู่การแลกเปลี่ยนที่มีประสิทธิผล "
+"รวมถึงการถูกอ้างอิงงานที่ตีพิมพ์ได้เร็วและมากขึ้น (ดูที่ <a target=\"_new\" "
+"href=\"https://web-archive.southampton.ac.uk/opcit.eprints.org/oacitation-"
+"biblio.html\">ผลของการเข้าถึงแบบเปิด</a>)</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. นโยบายที่เสนอสำหรับวารสารที่ให้การเข้าถึงแบบเปิดที่ล่าช้า</h4>\n"
+"ผู้เขียนที่ตีพิมพ์กับวารสารนี้ตกลงตามเงื่อนไขต่อไปนี้:\n"
+"<ol type=\"a\">\n"
+"\t<li>ผู้เขียนเก็บลิขสิทธิ์และมอบสิทธิ์การตีพิมพ์แรกให้กับวารสาร "
+"โดยงานนั้นจะได้รับใบอนุญาตภายใต้ <a target=\"_new\" href=\"https"
+"://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution "
+"License</a> หลังจากการตีพิมพ์ [ระบุระยะเวลาที่กำหนด] ที่อนุญาตให้ผู้อื่นแชร์ง"
+"านได้โดยมีการยอมรับชื่อผู้เขียนและการตีพิมพ์ครั้งแรกในวารสารนี้</li>\n"
+"\t <li>ผู้เขียนสามารถทำสัญญาเพิ่มเติมสำหรับการแจกจ่ายงานที่ตีพิมพ์ในวารสารแบบ"
+"ไม่ผูกขาดได้ (เช่น โพสต์ในคลังเก็บของสถาบันหรือพิมพ์ในหนังสือ) "
+"โดยต้องยอมรับการตีพิมพ์ครั้งแรกในวารสารนี้</li>\n"
+"\t <li>ผู้เขียนได้รับอนุญาตและสนับสนุนให้โพสต์งานของตนทางออนไลน์ (เช่น "
+"ในคลังเก็บของสถาบันหรือบนเว็บไซต์ของตน) ก่อนและระหว่างกระบวนการส่งบทความ "
+"เนื่องจากสามารถนำไปสู่การแลกเปลี่ยนที่มีประสิทธิผล "
+"รวมถึงการถูกอ้างอิงงานที่ตีพิมพ์ได้เร็วและมากขึ้น (ดูที่ <a target=\"_new\" "
+"href=\"https://web-archive.southampton.ac.uk/opcit.eprints.org/oacitation-"
+"biblio.html\">ผลของการเข้าถึงแบบเปิด</a>)</li>\n"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"ขั้นตอน: คิวการส่ง &gt; การพิจารณาการส่ง &gt; การแก้ไขการส่ง &gt; สารบัญ.<br "
+"/><br />\n"
+"เลือกโมเดลสำหรับจัดการขั้นตอนเหล่านี้ในกระบวนการบรรณาธิการ "
+"(หากต้องการกำหนดบรรณาธิการจัดการและบรรณาธิการส่วน "
+"ไปที่เมนูบรรณาธิการในการจัดการวารสาร)"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>เพื่อให้ผู้อ่านสามารถค้นหางานที่อ้างอิงโดยผู้เขียนได้ในรูปแบบออนไลน์ "
+"มีตัวเลือกต่อไปนี้ให้ใช้</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>เพิ่มเครื่องมือการอ่าน</strong><p>ผู้จัดการวารสารสามารถเพิ่ม "
+"\"ค้นหาอ้างอิง\" ลงในเครื่องมือการอ่านที่ใช้ร่วมกับรายการที่ตีพิมพ์ ซึ่งช่วยใ"
+"ห้ผู้อ่านวางชื่ออ้างอิงและค้นหาฐานข้อมูลวิชาการที่เลือกไว้ล่วงหน้าสำหรับงานที"
+"่อ้างอิง</p></li>\n"
+"\t<li><strong>ฝังลิงก์ในรายการอ้างอิง</strong><p>บรรณาธิการการจัดวางสามารถเพิ"
+"่มลิงก์ไปยังอ้างอิงที่สามารถพบได้ทางออนไลน์โดยใช้คำแนะนำดังนี้ "
+"(สามารถแก้ไขได้)</p></li>\n"
+"</ol>"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"ต้องการปิดการใช้งานผู้ใช้นี้หรือไม่? "
+"สิ่งนี้จะทำให้ผู้ใช้ไม่สามารถเข้าสู่ระบบได้\n"
+"\n"
+"คุณสามารถให้เหตุผลในการปิดการใช้งานบัญชีผู้ใช้ได้ตามต้องการ"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"ขออภัย คุณไม่มีสิทธิ์ในการจัดการผู้ใช้นี้ อาจเป็นเพราะ:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>ผู้ใช้เป็นผู้ดูแลระบบของเว็บไซต์</li>\n"
+"\t\t\t<li>ผู้ใช้มีบทบาทในวารสารที่คุณไม่ได้จัดการ</li>\n"
+"\t\t</ul>\n"
+"\tงานนี้ต้องดำเนินการโดยผู้ดูแลระบบเว็บไซต์\n"
+"\t"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>รายการที่ไฮไลต์หมายถึงการดำเนินการที่ต้องทำโดยบรรณาธิการ โดยระบุดังนี้:"
+"\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\""
+">ผู้พิจารณาถูกกำหนดแล้วแต่ยังไม่ได้รับการแจ้งทางอีเมล</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">ผู้พิจารณาทุกคนได้ส่งความคิดเห็นแล้ว "
+"แต่ยังไม่มีการบันทึกการตัดสินใจ</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\""
+">ผู้เขียนได้อัปโหลดต้นฉบับที่แก้ไขแล้ว</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\""
+">ผู้พิจารณาล่าช้าในการยืนยันคำเชิญการพิจารณา</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\""
+">ผู้พิจารณาล่าช้าในการเสร็จสิ้นการพิจารณา</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>\"กำหนดส่ง\" จะถูกเติมเมื่อผู้พิจารณายอมรับคำขอให้พิจารณา; "
+"แสดงจำนวนสัปดาห์จนถึงวันที่ครบกำหนดการพิจารณาหรือจำนวนสัปดาห์ (-) "
+"ที่ล่าช้าเกินกำหนด</li>\n"
+"</ol>"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>รายการที่ไฮไลต์หมายถึงการดำเนินการที่ต้องทำโดยบรรณาธิการ โดยระบุดังนี้:"
+"\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\""
+">จำเป็นต้องมีการดำเนินการในขั้นตอนการคัดลอกแก้ไข</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\""
+">จำเป็นต้องมีการดำเนินการในขั้นตอนการแก้ไขการจัดวาง</li>\n"
+"\t\t\t<li class=\"higlightProofreading\""
+">จำเป็นต้องมีการดำเนินการในขั้นตอนการพิสูจน์อักษร</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "การมอบหมายงานบรรณาธิการที่กำลังดำเนินการ"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "การมอบหมายงานบรรณาธิการที่เสร็จสมบูรณ์"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "ไม่มีการส่งบทความที่ได้รับมอบหมาย"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"การแจ้งผู้คัดลอกแก้ไขนี้อีกครั้งจะเริ่มการมอบหมายของพวกเขาใหม่ "
+"คุณแน่ใจหรือไม่ว่าต้องการทำเช่นนี้?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"การแจ้งผู้เขียนนี้อีกครั้งจะเริ่มการมอบหมายของพวกเขาใหม่ "
+"คุณแน่ใจหรือไม่ว่าต้องการทำเช่นนี้?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"การแจ้งบรรณาธิการการจัดวางนี้อีกครั้งจะเริ่มการมอบหมายของพวกเขาใหม่ "
+"คุณแน่ใจหรือไม่ว่าต้องการทำเช่นนี้?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"การแจ้งผู้พิสูจน์อักษรนี้อีกครั้งจะเริ่มการมอบหมายของพวกเขาใหม่ "
+"คุณแน่ใจหรือไม่ว่าต้องการทำเช่นนี้?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "ขออภัย"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} ความเสียใจของผู้พิจารณา, การยกเลิก & รอบก่อนหน้า"
+
+msgid "sectionEditor.regrets"
+msgstr "ขออภัย"
+
+msgid "sectionEditor.regrets.link"
+msgstr "ดูความเสียใจ, การยกเลิก, รอบก่อนหน้า"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "การพิจารณาโดยผู้ทรงคุณวุฒิ, รอบ {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "การตัดสินใจของบรรณาธิการ, รอบ {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "ความเสียใจและการยกเลิกของผู้พิจารณา"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "ขออภัย"
+
+msgid "sectionEditor.regrets.result"
+msgstr "ผลลัพธ์"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "ลงทะเบียนผู้ใช้ที่มีอยู่เป็นผู้พิจารณา"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "สร้างผู้พิจารณาใหม่"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "การมอบหมายงานบรรณาธิการที่กำลังดำเนินการ"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "การมอบหมายงานบรรณาธิการที่เสร็จสมบูรณ์"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "ไม่มีการมอบหมายงานบรรณาธิการที่กำลังดำเนินการ"
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "การมอบหมายงานการแก้ไขการจัดวาง"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "อัปโหลดรูปแบบแกลเล่ย์"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "แทนที่ไฟล์"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "อัปโหลดไฟล์เสริม"
+
+msgid "submission.layout.imageInvalid"
+msgstr "รูปแบบภาพไม่ถูกต้อง รูปแบบที่ยอมรับคือ .gif, .jpg, และ .png"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "แกลเล่ย์นี้จะพร้อมใช้งานในเว็บไซต์แยกต่างหาก"
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "URL ของเนื้อหาที่โฮสต์จากภายนอก"
+
+msgid "reviewer.pendingReviews"
+msgstr "บทความที่รอการพิจารณา"
+
+msgid "reviewer.completedReviews"
+msgstr "เสร็จสิ้น"
+
+msgid "reviewer.averageQuality"
+msgstr "การให้คะแนน"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "ไฟล์ที่จะพิจารณา"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "แจ้งบรรณาธิการ"
+
+msgid "reviewer.article.canDoReview"
+msgstr "ยินดีที่จะพิจารณา"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "ไม่สามารถพิจารณาได้"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "การส่งบทความจะพร้อมใช้งานหากและเมื่อผู้พิจารณายอมรับที่จะทำการพิจารณา"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "บรรณาธิการการส่งบทความ"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "พิมพ์หรือวางความคิดเห็นเกี่ยวกับการพิจารณาที่นี่"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "บรรณาธิการกรอกข้อมูล"
+
+msgid "reviewer.article.sendReminder"
+msgstr "ส่งการเตือนความจำ"
+
+msgid "reviewer.article.automatic"
+msgstr "(อัตโนมัติ)"
+
+msgid "reviewer.article.recommendation"
+msgstr "คำแนะนำ"
+
+msgid "reviewer.article.submitReview"
+msgstr "ส่งการพิจารณาให้บรรณาธิการ"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "ความคิดเห็น"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "ไฟล์ที่อัปโหลด"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "เวอร์ชันที่ผู้พิจารณาอัปโหลด"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(หากคุณต้องการใส่คำอธิบายลงในไฟล์สำหรับบรรณาธิการ "
+"กรุณาบันทึกไว้ที่ฮาร์ดไดรฟ์ของคุณและใช้ปุ่มเรียกดู/อัปโหลด)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "คำขอจากบรรณาธิการ"
+
+msgid "reviewer.article.schedule.response"
+msgstr "การตอบรับของคุณ"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "การพิจารณาถูกส่งแล้ว"
+
+msgid "reviewer.article.schedule.due"
+msgstr "กำหนดการพิจารณา"
+
+msgid "reviewer.article.decision.accept"
+msgstr "ยอมรับการส่งบทความ"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "ต้องการการแก้ไข"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "ส่งอีกครั้งเพื่อการพิจารณา"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "ส่งไปยังที่อื่น"
+
+msgid "reviewer.article.decision.decline"
+msgstr "ปฏิเสธการส่งบทความ"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "ดูความคิดเห็น"
+
+msgid "reviewer.article.schedule"
+msgstr "ตารางเวลา"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "บทความที่จะพิจารณา"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "ตารางการพิจารณา"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "ขั้นตอนการพิจารณา"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "แนวทางสำหรับผู้พิจารณา"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"แนวทางการพิจารณาจะให้เกณฑ์ในการพิจารณาความเหมาะสมของบทความที่ส่งมาตีพิมพ์ในวา"
+"รสารแก่ผู้พิจารณา "
+"และอาจมีคำแนะนำพิเศษสำหรับการเตรียมการพิจารณาที่มีประสิทธิภาพและเป็นประโยชน์ "
+"ในการพิจารณา ผู้พิจารณาจะได้รับกล่องข้อความเปิดสองกล่อง กล่องแรกสำหรับ \"ผ"
+"ู้เขียนและบรรณาธิการ\" และกล่องที่สองสำหรับ \"บรรณาธิการ\" "
+"หรือทางผู้จัดการวารสารสามารถสร้างแบบฟอร์มการพิจารณาโดยผู้ทรงคุณวุฒิได้ในหมวด "
+"Review Forms ในทุกกรณี "
+"บรรณาธิการจะมีตัวเลือกในการรวมการพิจารณานี้ในการติดต่อกับผู้เขียน"
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "แจ้งบรรณาธิการของการส่งบทความนี้"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "ว่าคุณจะดำเนินการพิจารณาหรือไม่"
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "หากคุณจะทำการพิจารณา โปรดศึกษาคู่มือสำหรับผู้พิจารณาที่ด้านล่างนี้"
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"คลิกที่ชื่อไฟล์เพื่อดาวน์โหลดและพิจารณา (บนหน้าจอหรือโดยการพิมพ์) "
+"ไฟล์ที่เกี่ยวข้องกับการส่งบทความนี้"
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"ประกาศว่าคุณมีผลประโยชน์ทับซ้อนเกี่ยวกับงานวิจัยนี้หรือไม่ (ดู <a target="
+"\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\""
+">นโยบายผลประโยชน์ทับซ้อน (CI&nbsp;Policy)</a>)"
+
+msgid "reviewer.competingInterests"
+msgstr "ผลประโยชน์ทับซ้อน"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "คลิกที่ไอคอนเพื่อป้อน (หรือวาง) การพิจารณาของคุณสำหรับการส่งบทความนี้"
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+"นอกจากนี้ คุณสามารถอัปโหลดไฟล์เพื่อให้บรรณาธิการและ/หรือผู้เขียนปรึกษาได้"
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"เลือกคำแนะนำและส่งการพิจารณาเพื่อเสร็จสิ้นกระบวนการ "
+"คุณต้องป้อนการพิจารณาหรืออัปโหลดไฟล์ก่อนที่จะเลือกคำแนะนำ"
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "กำหนดหรือปรับคำแนะนำของผู้พิจารณา"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "ไม่ได้เลือกคำแนะนำใด ๆ คุณต้องเลือกคำแนะนำเพื่อทำการส่ง"
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"เมื่อคุณบันทึกการตัดสินใจแล้ว "
+"คุณจะไม่สามารถทำการแก้ไขในส่วนการพิจารณานี้ได้อีก "
+"คุณแน่ใจหรือไม่ว่าต้องการดำเนินการต่อ?"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "ไฟล์ที่ต้องคัดลอกแก้ไข"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "ไฟล์ของผู้คัดลอกแก้ไข"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "ไฟล์สุดท้ายของผู้คัดลอกแก้ไข"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "ไม่มีการมอบหมายงานพิสูจน์อักษร"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>เพื่ออัปโหลดต้นฉบับไปยังวารสารนี้ โปรดทำตามขั้นตอนต่อไปนี้</p>\n"
+"<ol>\n"
+"<li>ในหน้านี้ คลิกปุ่ม Browse (หรือ เลือกไฟล์) "
+"เพื่อเปิดหน้าต่างเลือกไฟล์บนฮาร์ดไดรฟ์ของคอมพิวเตอร์ของคุณ</li>\n"
+"<li>ค้นหาไฟล์ที่คุณต้องการส่งและไฮไลต์ไฟล์นั้น</li>\n"
+"<li>คลิกปุ่ม Open ในหน้าต่างเลือกไฟล์เพื่อใส่ชื่อไฟล์ลงในหน้านี้</li>\n"
+"<li>คลิกปุ่ม Upload บนหน้านี้เพื่ออัปโหลดไฟล์จากคอมพิวเตอร์ไปยังเว็บไซต์ของวา"
+"รสารและเปลี่ยนชื่อไฟล์ตามหลักของวารสาร</li>\n"
+"<li>เมื่อการส่งเสร็จสิ้น คลิกปุ่ม Save และ Continue "
+"ที่ด้านล่างของหน้านี้</li>\n"
+"</ol>"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "ไม่สามารถส่งอีเมลขอได้จนกว่ามีการวางเวอร์ชันสำหรับการพิจารณา"
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"ไม่สามารถส่งอีเมลขอได้จนกว่าจะเลือกไฟล์สำหรับการคัดลอกแก้ไขในหน้าการตัดสินใจข"
+"องบรรณาธิการ (หน้า Review)"
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "ไม่สามารถส่งอีเมลขอได้จนกว่าไฟล์จะถูกอัปโหลดสำหรับการคัดลอกแก้ไข"
+
+msgid "submission.logType.author"
+msgstr "ผู้เขียน"
+
+msgid "submission.logType.editor"
+msgstr "บรรณาธิการ"
+
+msgid "submission.logType.review"
+msgstr "การพิจารณา"
+
+msgid "submission.logType.copyedit"
+msgstr "การคัดลอกแก้ไข"
+
+msgid "submission.logType.layout"
+msgstr "การจัดวาง"
+
+msgid "submission.logType.proofread"
+msgstr "การพิสูจน์อักษร"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "การติดต่อระหว่างบรรณาธิการ/ผู้เขียน"
+
+msgid "submission.comments.copyeditComments"
+msgstr "ความคิดเห็นการคัดลอกแก้ไข"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"ความคิดเห็นเหล่านี้สามารถแชร์กับผู้เขียนได้<br />\n"
+"(หลังจากบันทึกแล้ว สามารถเพิ่มความคิดเห็นเพิ่มเติมได้)"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "สำหรับผู้เขียนและบรรณาธิการ"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "สำหรับบรรณาธิการ"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "หลังจากส่งแล้ว แสดงสำเนา BCC ที่แก้ไขได้เพื่อส่งให้ผู้พิจารณา"
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "สำหรับผู้เขียนและบรรณาธิการ"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "บันทึกและส่งอีเมลถึงผู้เขียน"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "บันทึกและส่งอีเมลถึงบรรณาธิการ"
+
+msgid "user.register.selectContext"
+msgstr "เลือกวารสารเพื่อลงทะเบียน:"
+
+msgid "user.register.noJournals"
+msgstr "ไม่มีวารสารใดที่คุณสามารถลงทะเบียนได้บนเว็บไซต์นี้"
+
+msgid "user.register.registrationDisabled"
+msgstr "ขณะนี้วารสารนี้ไม่ได้รับการลงทะเบียนผู้ใช้"
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "รหัสผ่านที่คุณป้อนไม่ยาวพอ"
+
+msgid "user.register.readerDescription"
+msgstr "ได้รับการแจ้งทางอีเมลเมื่อมีการตีพิมพ์ฉบับของวารสาร"
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "ได้รับการแจ้งทางอีเมลเมื่อมีการเปิดการเข้าถึงฉบับของวารสาร"
+
+msgid "user.register.authorDescription"
+msgstr "สามารถส่งบทความไปยังวารสารได้"
+
+msgid "user.register.reviewerDescription"
+msgstr "ยินดีที่จะทำการพิจารณาโดยผู้ทรงคุณวุฒิสำหรับการส่งบทความไปยังเว็บไซต์"
+
+msgid "user.register.reviewerInterests"
+msgstr "ระบุความสนใจในการพิจารณา (ด้านเนื้อหาและวิธีการวิจัย):"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"ใช่, ฉันต้องการรับการแจ้งเตือนเกี่ยวกับสิ่งตีพิมพ์ใหม่และประกาศสำหรับวารสารทั"
+"้งหมดที่ฉันลงทะเบียนไว้"
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"ใช่, ฉันยินยอมให้เก็บและบันทึกข้อมูลของฉันตาม <a href=\"{$privacyUrl}\" "
+"target=\"_blank\">นโยบายความเป็นส่วนตัว</a> ของวารสารนี้"
+
+msgid "user.register.form.missingContextConsent"
+msgstr "คุณต้องยินยอมตามนโยบายความเป็นส่วนตัวสำหรับวารสารที่คุณลงทะเบียน"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "คุณต้องยินยอมตามนโยบายความเป็นส่วนตัวของเว็บไซต์นี้"
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "การสมัครสมาชิกของฉัน"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "สถานะการสมัครสมาชิก"
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"การสมัครสมาชิกที่ยังใช้งานอยู่และที่หมดอายุจะแสดงด้านล่างพร้อมวันที่หมดอายุ "
+"นอกจากนี้ ข้อมูลสถานะต่อไปนี้อาจถูกแนบมากับแต่ละการสมัครสมาชิกด้วย"
+
+msgid "user.subscriptions.status"
+msgstr "สถานะ"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "คำอธิบาย"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "จำเป็นต้องมีข้อมูลเพิ่มเติมก่อนที่จะสามารถเปิดใช้งานการสมัครสมาชิกได้"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "การสมัครสมาชิกต้องผ่านการพิจารณาก่อนที่จะสามารถเปิดใช้งานได้"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "การชำระเงินแบบแมนนวลได้เริ่มต้นแล้วแต่ยังไม่ได้รับการชำระ"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "การชำระเงินออนไลน์ได้เริ่มต้นแล้วแต่ถูกยกเลิกหรือยังไม่เสร็จสิ้น"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "การสมัครสมาชิกแบบบุคคล"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "การสมัครสมาชิกแบบสถาบัน"
+
+msgid "user.subscriptions.renew"
+msgstr "ต่ออายุ"
+
+msgid "user.subscriptions.purchase"
+msgstr "ซื้อ"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "ซื้อการสมัครสมาชิกใหม่"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "ซื้อการสมัครสมาชิกแบบบุคคล"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "ซื้อการสมัครสมาชิกแบบสถาบัน"
+
+msgid "user.subscriptions.expires"
+msgstr "หมดอายุ: {$date}"
+
+msgid "user.subscriptions.expired"
+msgstr "หมดอายุแล้ว: {$date}"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "ดูประเภทการสมัครสมาชิกที่มีอยู่"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "ประเภทการสมัครสมาชิก"
+
+msgid "user.subscriptions.form.membership"
+msgstr "สมาชิก"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "ประเภทการสมัครสมาชิกที่เลือกต้องมีข้อมูลสมาชิก"
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "โปรดเลือกประเภทการสมัครสมาชิกที่ถูกต้อง"
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "บัญชีผู้ใช้นี้มีการสมัครสมาชิกแบบบุคคลอยู่แล้ว"
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "ข้อมูลสมาชิกหากจำเป็นสำหรับประเภทการสมัครสมาชิกที่เลือก"
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "ชื่อสถาบัน"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "ต้องระบุชื่อสถาบัน"
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "ที่อยู่สำหรับส่งจดหมาย"
+
+msgid "user.subscriptions.form.domain"
+msgstr "โดเมน"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"หากใส่โดเมนที่นี่ ช่วง IP จะเป็นทางเลือก<br />ค่าที่ถูกต้องได้แก่ชื่อโดเมน "
+"(เช่น lib.sfu.ca)"
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"ประเภทการสมัครสมาชิกที่เลือกต้องมีโดเมนและ/หรือช่วง IP "
+"สำหรับการยืนยันตัวตนการสมัครสมาชิก"
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "โปรดป้อนโดเมนที่ถูกต้อง"
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "ช่วง IP"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"หากใส่ช่วง IP ที่นี่ โดเมนจะเป็นทางเลือก<br />ค่าที่ถูกต้องได้แก่ที่อยู่ IP "
+"(เช่น 142.58.103.1), ช่วง IP (เช่น 142.58.103.1 - 142.58.103.4), ช่วง IP "
+"พร้อมตัวแทน '*' (เช่น 142.58.*.*), และช่วง IP แบบ CIDR (เช่น 142.58.100.0/24)"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "โปรดป้อนช่วง IP ที่ถูกต้อง"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "ลบ"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "เพิ่ม"
+
+msgid "search.browseAuthorIndex"
+msgstr "เรียกดูดัชนีผู้เขียน"
+
+msgid "search.searchFor"
+msgstr "ค้นหาบทความสำหรับ"
+
+msgid "search.withinJournal"
+msgstr "ภายใน"
+
+msgid "search.allJournals"
+msgstr "ทุกวารสาร"
+
+msgid "search.authorIndex"
+msgstr "เรียกดูดัชนีผู้เขียน"
+
+msgid "search.authorDetails"
+msgstr "รายละเอียดผู้เขียน"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"เคล็ดลับการค้นหา: <ul>\n"
+"<li>คำที่ค้นหาไม่แยกตัวพิมพ์ใหญ่-เล็ก</li>\n"
+"<li>คำที่พบบ่อยจะถูกละเว้น</li>\n"
+"<li>โดยค่าเริ่มต้นจะคืนเฉพาะบทความที่มีคำทั้งหมดในคำค้นหา (เช่นมี <em>AND</"
+"em> โดยนัย)</li>\n"
+"<li>รวมหลายคำด้วย <em>OR</em> เพื่อค้นหาบทความที่มีคำใดคำหนึ่ง; เช่น "
+"<em>education OR research</em></li>\n"
+"<li>ใช้วงเล็บเพื่อสร้างคำค้นหาที่ซับซ้อนขึ้น; เช่น <em>archive ((journal OR "
+"conference) NOT theses)</em></li>\n"
+"<li>ค้นหาวลีที่ตรงกันโดยใส่ในเครื่องหมายคำพูด; เช่น <em>\"open access "
+"publishing\"</em></li>\n"
+"<li>ยกเว้นคำด้วยการนำหน้าด้วย <strong>-</strong> หรือ <em>NOT</em>; เช่น "
+"<em>online -politics</em> หรือ <em>online NOT politics</em></li>\n"
+"<li>ใช้ <strong>*</strong> ในคำเป็นตัวแทนเพื่อจับคู่กับลำดับตัวอักษรใด ๆ; เช่"
+"น <em>soci* morality</em> จะจับคู่เอกสารที่มีคำว่า \"sociological\" หรือ "
+"\"societal\"</li>\n"
+"</ul>"
+
+msgid "article.pageTitle"
+msgstr "ดูหัวข้อ {$title}"
+
+msgid "article.pdf.title"
+msgstr "รูปแบบเอกสารพกพา (PDF)"
+
+msgid "article.download"
+msgstr "ดาวน์โหลดไฟล์ PDF นี้"
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>ไฟล์ PDF ที่คุณเลือกควรโหลดที่นี่หากเว็บเบราว์เซอร์ของคุณมีปลั๊กอินอ่าน "
+"PDF ติดตั้งอยู่ (เช่น เวอร์ชันล่าสุดของ <a href=\"https://get.adobe.com/"
+"reader/\">Adobe Acrobat Reader</a>)</p>"
+
+msgid "article.nonpdf.title"
+msgstr "ดาวน์โหลดบทความ"
+
+msgid "article.nonpdf.note"
+msgstr ""
+"ไฟล์ที่คุณเลือกควรเริ่มดาวน์โหลดโดยอัตโนมัติ หากไม่ได้ "
+"ให้คลิกลิงก์ด้านล่างนี้ "
+"โปรดทราบว่าไฟล์นี้อาจต้องใช้โปรแกรมพิเศษหรือปลั๊กอินในการดู<br /><br "
+"/>หากไฟล์ไม่ดาวน์โหลดอัตโนมัติ <a href=\"{$url}\">คลิกที่นี่</a>"
+
+msgid "site.journalsHosted"
+msgstr "วารสารที่โฮสต์บนเว็บไซต์นี้"
+
+msgid "site.journalView"
+msgstr "ดูวารสาร"
+
+msgid "site.journalRegister"
+msgstr "ลงทะเบียน"
+
+msgid "site.journalCurrent"
+msgstr "ฉบับปัจจุบัน"
+
+msgid "site.noJournals"
+msgstr "ไม่มีวารสารที่ใช้งานได้"
+
+msgid "current.current"
+msgstr "ฉบับปัจจุบัน"
+
+msgid "current.noCurrentIssue"
+msgstr "ไม่มีฉบับปัจจุบัน"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "วารสารนี้ยังไม่ได้ตีพิมพ์ฉบับใด ๆ"
+
+msgid "archive.archives"
+msgstr "คลัง"
+
+msgid "archive.archivesPageNumber"
+msgstr "คลัง - หน้า {$pageNumber}"
+
+msgid "archive.browse"
+msgstr "เรียกดูฉบับเก่า"
+
+msgid "archive.issueUnavailable"
+msgstr "ฉบับไม่พร้อมใช้งาน"
+
+msgid "about.statistics"
+msgstr "สถิติ"
+
+msgid "about.contact"
+msgstr "ติดต่อ"
+
+msgid "about.aboutContext"
+msgstr "เกี่ยวกับวารสาร"
+
+msgid "about.history"
+msgstr "ประวัติของวารสาร"
+
+msgid "about.editorialTeam"
+msgstr "ทีมบรรณาธิการ"
+
+msgid "about.editorialTeam.biography"
+msgstr "ประวัติ"
+
+msgid "about.editorialPolicies"
+msgstr "นโยบายบรรณาธิการ"
+
+msgid "about.focusAndScope"
+msgstr "เป้าหมายและขอบเขต"
+
+msgid "about.sectionPolicies"
+msgstr "นโยบายของส่วนต่าง ๆ"
+
+msgid "about.submissions"
+msgstr "การส่งบทความ"
+
+msgid "about.onlineSubmissions.login"
+msgstr "เข้าสู่ระบบ"
+
+msgid "about.onlineSubmissions.register"
+msgstr "ลงทะเบียน"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} หรือ {$register} เพื่อทำการส่งบทความ"
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} หรือ {$viewSubmissions}"
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "ทำการส่งบทความใหม่ไปยังส่วน <a href=\"{$url}\">{$name}</a>"
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "ทำการส่งบทความใหม่"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "ดูการส่งบทความที่รอดำเนินการของคุณ"
+
+msgid "about.authorGuidelines"
+msgstr "แนวทางสำหรับผู้เขียน"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "รายการตรวจสอบการเตรียมการส่งบทความ"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"เป็นส่วนหนึ่งของกระบวนการส่งบทความ "
+"ผู้เขียนจะต้องตรวจสอบการส่งบทความของตนว่าปฏิบัติตามรายการทั้งหมดที่กำหนดไว้ "
+"และบทความที่ส่งอาจถูกส่งกลับหาผู้เขียนหากไม่ปฏิบัติตามแนวทางเหล่านี้"
+
+msgid "about.copyrightNotice"
+msgstr "ประกาศลิขสิทธิ์"
+
+msgid "about.privacyStatement"
+msgstr "นโยบายความเป็นส่วนตัว"
+
+msgid "about.authorFees"
+msgstr "ค่าธรรมเนียมผู้เขียน"
+
+msgid "about.authorFeesMessage"
+msgstr "วารสารนี้เรียกเก็บค่าธรรมเนียมผู้เขียนดังต่อไปนี้"
+
+msgid "about.peerReviewProcess"
+msgstr "กระบวนการพิจารณาโดยผู้ทรงคุณวุฒิ"
+
+msgid "about.publicationFrequency"
+msgstr "ความถี่ในการตีพิมพ์"
+
+msgid "about.openAccessPolicy"
+msgstr "นโยบายการเข้าถึงแบบเปิด"
+
+msgid "about.delayedOpenAccess"
+msgstr "การเข้าถึงแบบเปิดที่ล่าช้า"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "เนื้อหาของวารสารนี้จะสามารถเข้าถึงได้ในรูปแบบการเข้าถึงแบบเปิด"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "เดือนหลังจากการตีพิมพ์ฉบับนั้น ๆ"
+
+msgid "about.archiving"
+msgstr "การเก็บรักษา"
+
+msgid "about.subscriptions"
+msgstr "การสมัครสมาชิก"
+
+msgid "about.subscriptions.individual"
+msgstr "การสมัครสมาชิกแบบบุคคล"
+
+msgid "about.subscriptions.institutional"
+msgstr "การสมัครสมาชิกแบบสถาบัน"
+
+msgid "about.subscriptionsContact"
+msgstr "การติดต่อเกี่ยวกับการสมัครสมาชิก"
+
+msgid "about.subscriptionTypes.name"
+msgstr "ชื่อ"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "กระบวนการบรรณาธิการและการตีพิมพ์ของ OJS"
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"วารสารนี้ใช้ Open Journal Systems {$ojsVersion} "
+"ซึ่งเป็นซอฟต์แวร์การจัดการและการตีพิมพ์วารสารแบบโอเพนซอร์สที่พัฒนา สนับสนุน "
+"และแจกจ่ายโดยโครงการ Public Knowledge Project ภายใต้ใบอนุญาต GNU General "
+"Public License เยี่ยมชมเว็บไซต์ของ PKP เพื่อ <a href=\"https://pkp.sfu.ca/\""
+">เรียนรู้เพิ่มเติมเกี่ยวกับซอฟต์แวร์</a> กรุณา <a href=\"{$contactUrl}\""
+">ติดต่อวารสาร</a> โดยตรงหากมีคำถามเกี่ยวกับวารสารและการส่งบทความไปยังวารสาร"
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"เว็บไซต์นี้ใช้ Open Journal Systems {$ojsVersion} "
+"ซึ่งเป็นซอฟต์แวร์การจัดการและการตีพิมพ์วารสารแบบโอเพนซอร์สที่พัฒนา สนับสนุน "
+"และแจกจ่ายโดยโครงการ Public Knowledge Project ภายใต้ใบอนุญาต GNU General "
+"Public License เยี่ยมชมเว็บไซต์ของ PKP เพื่อ <a href=\"https://pkp.sfu.ca/\""
+">เรียนรู้เพิ่มเติมเกี่ยวกับซอฟต์แวร์</a> "
+"กรุณาติดต่อเว็บไซต์โดยตรงหากมีคำถามเกี่ยวกับวารสารและการส่งบทความไปยังวารสาร"
+
+msgid "help.ojsHelp"
+msgstr "ความช่วยเหลือเกี่ยวกับระบบ Open Journal Systems"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS ช่วยเหลือ"
+
+msgid "help.searchReturnResults"
+msgstr "กลับไปยังผลการค้นหา"
+
+msgid "help.goToEditPage"
+msgstr "แก้ไข {$sectionTitle}"
+
+msgid "donations.thankYou"
+msgstr "ขอบคุณ"
+
+msgid "donations.thankYouMessage"
+msgstr "ขอขอบคุณสำหรับการสนับสนุน การสนับสนุนของท่านเป็นที่ชื่นชมอย่างมาก"
+
+msgid "payment.loginRequired"
+msgstr "คุณต้องเข้าสู่ระบบเพื่อทำการชำระเงิน"
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"จำเป็นต้องมีการสมัครสมาชิกหรือซื้อบทความเพื่อเข้าถึงรายการนี้ "
+"หากต้องการยืนยันการสมัครสมาชิก เข้าถึงการซื้อก่อนหน้า หรือซื้อบทความ "
+"กรุณาเข้าสู่ระบบวารสาร"
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"จำเป็นต้องมีการสมัครสมาชิกหรือซื้อฉบับเพื่อเข้าถึงรายการนี้ "
+"หากต้องการยืนยันการสมัครสมาชิก เข้าถึงการซื้อก่อนหน้า หรือซื้อฉบับ "
+"กรุณาเข้าสู่ระบบวารสาร"
+
+msgid "payment.loginRequired.forDonation"
+msgstr "คุณต้องเข้าสู่ระบบเพื่อทำการบริจาค"
+
+msgid "payment.paid"
+msgstr "ชำระแล้ว"
+
+msgid "payment.unpaid"
+msgstr "ยังไม่ได้ชำระ"
+
+msgid "payment.type.membership"
+msgstr "ค่าธรรมเนียมการเป็นสมาชิกบุคคล"
+
+msgid "payment.type.purchaseArticle"
+msgstr "ค่าธรรมเนียมการซื้อบทความ"
+
+msgid "payment.type.purchaseIssue"
+msgstr "ค่าธรรมเนียมการซื้อฉบับวารสาร"
+
+msgid "payment.type.subscription"
+msgstr "ค่าธรรมเนียมการสมัครสมาชิก"
+
+msgid "payment.requestPublicationFee"
+msgstr "ขอค่าธรรมเนียมการตีพิมพ์ ({$feeAmount})"
+
+msgid "payment.requestPublicationFee.notEnabled"
+msgstr "ไม่มีการกำหนดค่าธรรมเนียมการตีพิมพ์"
+
+msgid "payment.submission.paySubmission"
+msgstr "ชำระค่าธรรมเนียมการส่งบทความ"
+
+msgid "payment.publication.payPublication"
+msgstr "ชำระเงินเพื่อการตีพิมพ์"
+
+msgid "payment.membership.ends"
+msgstr "สิ้นสุด"
+
+msgid "payment.subscription.purchase"
+msgstr "ซื้อการสมัครสมาชิก"
+
+msgid "payment.subscription.renew"
+msgstr "ต่ออายุการสมัครสมาชิก"
+
+msgid "payment.subscription.expires"
+msgstr "หมดอายุ"
+
+msgid "installer.appInstallation"
+msgstr "การติดตั้ง OJS"
+
+msgid "installer.ojsUpgrade"
+msgstr "การอัปเกรด OJS"
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"หากคุณกำลังอัปเกรดการติดตั้ง OJS ที่มีอยู่ <a href=\"{$upgradeUrl}\""
+">คลิกที่นี่</a> เพื่อดำเนินการต่อ"
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS เวอร์ชัน {$version}</h4>\n"
+"\n"
+"<p>ขอขอบคุณที่ดาวน์โหลด <strong>Open Journal Systems</strong> ของโครงการ "
+"Public Knowledge Project ก่อนดำเนินการต่อ โปรดอ่านไฟล์ <a href=\"{$baseUrl}/"
+"docs/README.md\">README</a> ที่รวมอยู่ในซอฟต์แวร์นี้ "
+"สำหรับข้อมูลเพิ่มเติมเกี่ยวกับโครงการ Public Knowledge Project "
+"และโครงการซอฟต์แวร์ต่าง ๆ ของมัน กรุณาเยี่ยมชม <a href=\"https://pkp.sfu.ca/"
+"\" target=\"_blank\">เว็บไซต์ PKP</a> "
+"หากคุณมีรายงานข้อผิดพลาดหรือข้อสงสัยเกี่ยวกับการสนับสนุนด้านเทคนิคของ Open "
+"Journal Systems ดูที่ <a href=\"https://forum.pkp.sfu.ca\" target=\"_blank\""
+">ฟอรั่มสนับสนุน</a> หรือเยี่ยมชม <a href=\"https://github.com/pkp/pkp-lib#"
+"issues\" target=\"_blank\">ระบบรายงานข้อผิดพลาดออนไลน์</a> ของ PKP "
+"แม้ว่าฟอรั่มสนับสนุนจะเป็นวิธีที่แนะนำในการติดต่อ "
+"คุณยังสามารถส่งอีเมลถึงทีมได้ที่ <a href=\"mailto:pkp.contact@gmail.com\">pkp"
+".contact@gmail.com</a>.</p>\n"
+"\n"
+"<h4>ข้อกำหนดระบบที่แนะนำ</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"https://www.php.net/\" target=\"_blank\">PHP</a> >= "
+"{$phpRequiredVersion}; ปัจจุบันคุณกำลังใช้ PHP "
+"{$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"https://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 "
+"หรือ <a href=\"https://www.postgresql.org/\" target=\"_blank\">PostgreSQL</"
+"a> >= 9.1.5</li>\n"
+"\t<li><a href=\"https://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
+"1.3.2x หรือ >= 2.0.4x หรือ Microsoft IIS 6</li>\n"
+"\t<li>ระบบปฏิบัติการ: ทุกระบบปฏิบัติการที่รองรับซอฟต์แวร์ข้างต้น เช่น <a "
+"href=\"https://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\"https"
+"://www.bsd.org\" target=\"_blank\">BSD</a>, <a href=\"https://www.oracle.com/"
+"solaris/\" target=\"_blank\">Solaris</a>, <a href=\"https://www.apple.com/\" "
+"target=\"_blank\">Mac OS X</a>, <a href=\"https://www.microsoft.com/\""
+">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>เนื่องจาก PKP "
+"ไม่มีทรัพยากรเพียงพอในการทดสอบทุกการรวมกันของเวอร์ชันซอฟต์แวร์และแพลตฟอร์มต่"
+"าง ๆ จึงไม่มีการรับประกันการทำงานที่ถูกต้องหรือการสนับสนุนใด ๆ </p>\n"
+"\n"
+"<p>การเปลี่ยนแปลงการตั้งค่าเหล่านี้สามารถทำได้หลังการติดตั้งโดยแก้ไขไฟล์ "
+"<tt>config.inc.php</tt> ในไดเรกทอรี OJS หลัก "
+"หรือใช้เว็บอินเตอร์เฟสการจัดการเว็บไซต์</p>\n"
+"\n"
+"<h4>ระบบฐานข้อมูลที่รองรับ</h4>\n"
+"\n"
+"<p>ปัจจุบัน OJS ได้รับการทดสอบเฉพาะกับ MySQL และ PostgreSQL "
+"แม้ว่าระบบการจัดการฐานข้อมูลอื่น ๆ ที่สนับสนุนโดย <a href=\"https://adodb."
+"org\" target=\"_blank\">ADOdb</a> อาจใช้งานได้ (บางส่วนหรือทั้งหมด) "
+"รายงานความเข้ากันได้และ/หรือแพตช์โค้ดสำหรับ DBMS อื่นสามารถส่งให้ทีม OJS "
+"ได้</p>\n"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>ขั้นตอนก่อนการติดตั้ง</h4>\n"
+"\n"
+"<p>1. ไฟล์และไดเรกทอรีต่อไปนี้ (รวมถึงเนื้อหาของมัน) ต้องสามารถเขียนได้:</p>"
+"\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> สามารถเขียนได้ (ทางเลือก): "
+"{$writable_config}</li>\n"
+"\t<li><tt>public/</tt> สามารถเขียนได้: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> สามารถเขียนได้: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> สามารถเขียนได้: "
+"{$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> สามารถเขียนได้: "
+"{$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> สามารถเขียนได้: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. ต้องสร้างไดเรกทอรีเพื่อจัดเก็บไฟล์ที่อัปโหลดและทำให้สามารถเขียนได้ "
+"(ดูที่ \"การตั้งค่าไฟล์\" ด้านล่าง)</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>OJS เวอร์ชัน {$version}</h4>\n"
+"\n"
+"<p>ขอขอบคุณที่ดาวน์โหลด <strong>Open Journal Systems</strong> ของโครงการ "
+"Public Knowledge Project ก่อนดำเนินการต่อ โปรดอ่านไฟล์ <a href=\"{$baseUrl}/"
+"docs/README.md\">README</a> และ <a href=\"{$baseUrl}/docs/UPGRADE.md\""
+">UPGRADE</a> ที่รวมอยู่ในซอฟต์แวร์นี้ สำหรับข้อมูลเพิ่มเติมเกี่ยวกับโครงการ "
+"Public Knowledge Project และโครงการซอฟต์แวร์ต่าง ๆ ของมัน กรุณาเยี่ยมชม <a "
+"href=\"https://pkp.sfu.ca/\" target=\"_blank\">เว็บไซต์ PKP</a> "
+"หากคุณมีรายงานข้อผิดพลาดหรือข้อสงสัยเกี่ยวกับการสนับสนุนทางเทคนิคของ Open "
+"Journal Systems ดูที่ <a href=\"https://forum.pkp.sfu.ca\" target=\"_blank\""
+">ฟอรั่มสนับสนุน</a> หรือเยี่ยมชม <a href=\"https://github.com/pkp/pkp-lib/"
+"issues\" target=\"_blank\">ระบบรายงานข้อผิดพลาดออนไลน์</a> ของ PKP "
+"แม้ว่าฟอรั่มสนับสนุนจะเป็นวิธีที่แนะนำในการติดต่อ "
+"คุณยังสามารถส่งอีเมลถึงทีมได้ที่ <a href=\"mailto:pkp.contact@gmail.com\">pkp"
+".contact@gmail.com</a>.</p>\n"
+"<p><strong>ขอแนะนำอย่างยิ่ง</strong> ให้คุณสำรองข้อมูลฐานข้อมูล ไดเรกทอรีไฟล์"
+" และไดเรกทอรีการติดตั้ง OJS ก่อนดำเนินการต่อ</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"เพื่อการสนับสนุน Unicode อย่างสมบูรณ์ PHP ต้องถูกคอมไพล์ให้รองรับไลบรารี <a "
+"href=\"https://www.php.net/mbstring\" target=\"_blank\">mbstring</a> "
+"(เปิดใช้งานโดยค่าเริ่มต้นในการติดตั้ง PHP ล่าสุดส่วนใหญ่) คุณอาจพบปัญหาในการใ"
+"ช้ชุดอักขระเพิ่มเติมหากเซิร์ฟเวอร์ของคุณไม่ตรงตามข้อกำหนดเหล่านี้\n"
+"<br /><br />\n"
+"เซิร์ฟเวอร์ของคุณปัจจุบันรองรับ mbstring: "
+"<strong>{$supportsMBString}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr ""
+"เซิร์ฟเวอร์ของคุณปัจจุบันอนุญาตให้การอัปโหลดไฟล์: "
+"<strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"เซิร์ฟเวอร์ของคุณปัจจุบันอนุญาตให้ขนาดไฟล์สูงสุดในการอัปโหลด: "
+"<strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr ""
+"ภาษาหลักที่ใช้สำหรับระบบนี้ กรุณาปรึกษาเอกสาร OJS "
+"หากคุณสนใจในการสนับสนุนภาษาที่ไม่ได้อยู่ในรายการนี้"
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+"ป้อนชื่อเส้นทางเต็มไปยังไดเรกทอรีที่มีอยู่ซึ่งจะเก็บไฟล์ที่อัปโหลดไว้ "
+"ไดเรกทอรีนี้ไม่ควรเข้าถึงได้โดยตรงทางเว็บ "
+"<strong>โปรดตรวจสอบว่าไดเรกทอรีนี้มีอยู่และสามารถเขียนได้ก่อนการติดตั้ง</"
+"strong> ชื่อเส้นทาง Windows ควรใช้เครื่องหมายทับไปข้างหน้า เช่น \"C:/"
+"myjournal/files\""
+
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+"OJS ต้องการการเข้าถึงฐานข้อมูล SQL เพื่อจัดเก็บข้อมูลของมัน "
+"ดูข้อกำหนดระบบด้านบนสำหรับรายการฐานข้อมูลที่รองรับ ในช่องด้านล่างนี้ "
+"ให้ระบุการตั้งค่าที่จะใช้ในการเชื่อมต่อกับฐานข้อมูล"
+
+msgid "installer.installApplication"
+msgstr "ติดตั้ง Open Journal Systems"
+
+msgid "installer.upgradeApplication"
+msgstr "อัปเกรด Open Journal Systems"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+"<strong>คำเตือน:</strong> หากการติดตั้งล้มเหลวในระหว่างการติดตั้งฐานข้อมูล "
+"คุณอาจต้องลบฐานข้อมูล OJS "
+"หรือตารางฐานข้อมูลก่อนที่จะพยายามติดตั้งฐานข้อมูลใหม่อีกครั้ง"
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>สำคัญ!</h4>\n"
+"<p>เครื่องมือติดตั้งไม่สามารถเขียนทับไฟล์การกำหนดค่าได้โดยอัตโนมัติ "
+"ก่อนที่จะพยายามใช้ระบบ กรุณาเปิด <tt>config.inc.php</tt> ในโปรแกรมแก้ไขข้อควา"
+"มที่เหมาะสมและแทนที่เนื้อหาของมันด้วยเนื้อหาในช่องข้อความด้านล่างนี้</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>การติดตั้ง OJS เสร็จสมบูรณ์เรียบร้อยแล้ว</p>\n"
+"<p>เพื่อเริ่มต้นใช้งานระบบ <a href=\"{$loginUrl}\">เข้าสู่ระบบ</a> "
+"ด้วยชื่อผู้ใช้และรหัสผ่านที่ป้อนในหน้าก่อนหน้า</p>\n"
+"<p>เยี่ยมชม <a href=\"https://forum.pkp.sfu.ca\" target=\"_new\""
+">ฟอรั่มชุมชน</a> หรือสมัครรับ <a href=\"https://pkp.sfu.ca/developer-"
+"newsletter\" target=\"_new\">จดหมายข่าวนักพัฒนา</a> "
+"ของเราเพื่อรับการแจ้งเตือนด้านความปลอดภัย และการอัปเดตเกี่ยวกับการเผยแพร่ใหม่"
+" ปลั๊กอินใหม่ และคุณลักษณะที่วางแผนไว้</p>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"มีเวอร์ชันใหม่ของ OJS ให้ใช้งาน! ปัจจุบันคุณกำลังใช้ OJS {$currentVersion} "
+"เวอร์ชันล่าสุดคือ OJS {$latestVersion} กรุณาเยี่ยมชม <a href=\"https://pkp."
+"sfu.ca/ojs_download\" target=\"_new\">หน้านี้</a> "
+"เพื่อดาวน์โหลดเวอร์ชันล่าสุดและค้นหาคำแนะนำการอัปเกรด"
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"มีเวอร์ชันใหม่ของ OJS ให้ใช้งาน! ปัจจุบันคุณกำลังใช้ OJS {$currentVersion} "
+"เวอร์ชันล่าสุดคือ OJS {$latestVersion} กรุณาติดต่อผู้ดูแลระบบของไซต์ "
+"({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\""
+">{$siteAdminEmail}</a>) เพื่อแจ้งให้พวกเขาทราบเกี่ยวกับการเผยแพร่ใหม่นี้ "
+"ข้อมูลเพิ่มเติมสามารถพบได้ <a href=\"https://pkp.sfu.ca/ojs/ojs_download/\" "
+"target=\"_new\">ที่นี่</a>"
+
+msgid "log.review.reviewerUnassigned"
+msgstr ""
+"{$reviewerName} ถูกยกเลิกการมอบหมายจากการตรวจบทความ {$submissionId} สำหรั"
+"บรอบการตรวจสอบ {$round}"
+
+msgid "log.review.reviewInitiated"
+msgstr ""
+"การทบทวนรอบที่ {$round} โดย {$reviewerName} สำหรับการส่งบทความ "
+"{$submissionId} ได้เริ่มต้นขึ้นแล้ว"
+
+msgid "log.review.reviewerRated"
+msgstr ""
+"{$reviewerName} ได้รับการประเมินสำหรับการทบทวนรอบที่ {$round} ของการส่"
+"งบทความ {$submissionId}"
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"กำหนดวันครบกำหนดสำหรับการทบทวนรอบที่ {$round} ของการส่งบทความ {$submissionId}"
+" โดย {$reviewerName} เป็นวันที่ {$dueDate}"
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+"คำแนะนำสำหรับการทบทวนรอบที่ {$round} ของการส่งบทความ {$submissionId} โดย "
+"{$reviewerName} ได้ถูกกำหนดแล้ว"
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"คำแนะนำสำหรับการทบทวนรอบที่ {$round} ของการส่งบทความ {$submissionId} "
+"ได้ถูกกำหนดโดยบรรณาธิการ {$editorName} ในนามของผู้ประเมิน {$reviewerName}"
+
+msgid "log.review.resubmit"
+msgstr "การส่งบทความ {$submissionId} ได้ถูกส่งอีกครั้งเพื่อการทบทวน"
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+"{$reviewerName} ปฏิเสธการทบทวนรอบที่ {$round} สำหรับการส่งบทความ "
+"{$submissionId}"
+
+msgid "log.review.reviewAccepted"
+msgstr ""
+"{$reviewerName} ยอมรับการทบทวนรอบที่ {$round} สำหรับการส่งบทความ "
+"{$submissionId}"
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName} ปฏิเสธการทบทวนรอบที่ {$round} สำหรับการส่งบทความ {$submissionId} "
+"ในนามของ {$reviewerName}"
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName} ยอมรับการทบทวนรอบที่ {$round} สำหรับการส่งบทความ {$submissionId} "
+"ในนามของ {$reviewerName}"
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"บรรณาธิการ {$userName} ได้อัปโหลดไฟล์การทบทวนสำหรับรอบที่ {$round} ของการส่"
+"งบทความ {$submissionId} ในนามของผู้ประเมิน {$reviewerName}"
+
+msgid "log.review.reviewerFile"
+msgstr "ไฟล์จากผู้ประเมินได้ถูกอัปโหลดแล้ว"
+
+msgid "log.editor.decision"
+msgstr ""
+"การตัดสินใจของบรรณาธิการ ({$decision}) สำหรับบทความ {$submissionId} "
+"ได้รับการบันทึกโดย {$editorName}"
+
+msgid "log.editor.recommendation"
+msgstr ""
+"คำแนะนำของบรรณาธิการ ({$decision}) สำหรับบทความ {$submissionId} "
+"ได้รับการบันทึกโดย {$editorName}"
+
+msgid "log.copyedit.initiate"
+msgstr ""
+"การคัดลอกแก้ไขสำหรับการส่งบทความ {$submissionId} ได้เริ่มต้นขึ้นโดย "
+"{$copyeditorName}"
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "ไฟล์การคัดลอกแก้ไขเริ่มต้นได้ถูกเลือกแล้ว"
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+"{$copyeditorName} ได้เสร็จสิ้นการคัดลอกแก้ไขเริ่มต้นของการส่งบทความ "
+"{$submissionId}"
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+"{$copyeditorName} ได้เสร็จสิ้นการคัดลอกแก้ไขขั้นสุดท้ายของการส่งบทความ "
+"{$submissionId}"
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr ""
+"{$copyeditorName} ได้รับมอบหมายให้คัดลอกแก้ไขการส่งบทความ {$submissionId}"
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "ไฟล์เวอร์ชันที่คัดลอกแก้ไขได้ถูกอัปโหลดแล้ว"
+
+msgid "log.copyedit.authorFile"
+msgstr "ไฟล์เวอร์ชันที่ผู้เขียนได้คัดลอกแก้ไขถูกอัปโหลดแล้ว"
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr ""
+"{$editorName} ได้รับมอบหมายให้เป็นบรรณาธิการรูปแบบสำหรับการส่งบทความ "
+"{$submissionId}"
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr ""
+"{$editorName} ถูกยกเลิกการมอบหมายให้เป็นบรรณาธิการรูปแบบสำหรับการส่งบทความ "
+"{$submissionId}"
+
+msgid "log.layout.layoutEditComplete"
+msgstr ""
+"{$editorName} ได้เสร็จสิ้นการแก้ไขรูปแบบสำหรับการส่งบทความ {$submissionId}"
+
+msgid "log.editor.metadataModified"
+msgstr "ข้อมูลเมตาของบทความนี้ได้ถูกแก้ไขโดย {$editorName}"
+
+msgid "log.editor.editorFile"
+msgstr "ไฟล์เวอร์ชันบรรณาธิการได้ถูกอัปโหลดแล้ว"
+
+msgid "log.editor.archived"
+msgstr "การส่งบทความ {$submissionId} ได้ถูกเก็บเข้าคลังแล้ว"
+
+msgid "log.editor.restored"
+msgstr "การส่งบทความ {$submissionId} ได้ถูกกู้คืนเข้าสู่คิว"
+
+msgid "log.editor.editorAssigned"
+msgstr ""
+"{$editorName} ได้รับมอบหมายให้เป็นบรรณาธิการสำหรับการส่งบทความ "
+"{$submissionId}"
+
+msgid "log.proofread.assign"
+msgstr ""
+"{$assignerName} ได้มอบหมายให้ {$proofreaderName} ทำการพิสูจน์อักษรสำหรับการส่"
+"งบทความ {$submissionId}"
+
+msgid "log.proofread.complete"
+msgstr ""
+"{$proofreaderName} ได้ส่งบทความ {$submissionId} สำหรับการวางกำหนดการแล้ว"
+
+msgid "log.imported"
+msgstr "{$userName} ได้ทำการนำเข้าบทความ {$submissionId}"
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "บทความที่ผ่านการประเมินโดยผู้ทรงคุณวุฒิ"
+
+msgid "notification.type.editing"
+msgstr "เหตุการณ์การแก้ไข"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "มีการส่งบทความใหม่ \"{$title}\""
+
+msgid "notification.type.editorDecisionComment"
+msgstr "มีการแสดงความคิดเห็นในส่วนการตัดสินใจของบรรณาธิการสำหรับ \"{$title}\""
+
+msgid "notification.type.galleyModified"
+msgstr "มีการแก้ไขกัลลีย์สำหรับ \"{$title}\""
+
+msgid "notification.type.issuePublished"
+msgstr "มีการเผยแพร่ฉบับใหม่"
+
+msgid "notification.type.newAnnouncement"
+msgstr "มีการสร้างประกาศใหม่"
+
+msgid "notification.type.openAccess"
+msgstr "ฉบับหนึ่งได้ถูกเปิดให้เข้าถึงได้แบบเปิดเผย"
+
+msgid "notification.type.reviewerFormComment"
+msgstr "มีการส่งความคิดเห็นแบบฟอร์มการทบทวนสำหรับ \"{$title}\""
+
+msgid "notification.type.reviewing"
+msgstr "เหตุการณ์ที่เกี่ยวกับการทบทวน"
+
+msgid "notification.type.site"
+msgstr "เหตุการณ์ของไซต์"
+
+msgid "notification.type.submissionComment"
+msgstr "บรรณาธิการได้แสดงความคิดเห็นใน \"{$title}\""
+
+msgid "notification.type.submissions"
+msgstr "เหตุการณ์เกี่ยวกับการส่งบทความ"
+
+msgid "notification.type.userComment"
+msgstr "ผู้อ่านได้แสดงความคิดเห็นใน \"{$title}\""
+
+msgid "notification.type.public"
+msgstr "ประกาศสาธารณะ"
+
+msgid "notification.savedIssueMetadata"
+msgstr "บันทึกข้อมูลเมตาของฉบับการเผยแพร่แล้ว"
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "มีบทความใหม่ที่ต้องการการมอบหมายบรรณาธิการ"
+
+msgid "notification.type.assignProductionUser"
+msgstr "มอบหมายผู้ใช้งานในการสร้างกัลลีย์โดยใช้ลิงก์มอบหมายในรายการผู้เข้าร่วม"
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "กำลังรอกัลลีย์"
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr ""
+"การเข้าถึงถูกปฏิเสธ! คุณยังไม่ได้รับมอบหมายให้เป็นผู้คัดลอกแก้ไขบทความนี้"
+
+msgid "user.authorization.noContext"
+msgstr "ไม่พบวารสารที่ตรงกับคำขอของคุณ"
+
+msgid "user.authorization.sectionAssignment"
+msgstr "คุณกำลังพยายามเข้าถึงบทความที่ไม่ได้เป็นส่วนหนึ่งของส่วนของคุณ"
+
+msgid "user.authorization.invalidIssue"
+msgstr "คำขอฉบับที่ไม่ถูกต้อง!"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr ""
+"การส่งของผู้คัดลอกแก้ไขไม่ถูกต้องหรือไม่ได้มีการร้องขอการส่งของผู้คัดลอกแก้ไข"
+"!"
+
+msgid "grid.action.createContext"
+msgstr "สร้างวารสารใหม่"
+
+msgid "editor.navigation.issues"
+msgstr "ฉบับ"
+
+msgid "notification.type.approveSubmission"
+msgstr "การส่งบทความนี้กำลังรอการอนุมัติก่อนที่จะแสดงในฉบับ"
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "กำลังรอการอนุมัติ"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "ลงทะเบียนกับวารสารอื่น ๆ"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "ซ่อนวารสารอื่น ๆ"
+
+msgid "article.view.interstitial"
+msgstr "โปรดเลือกไฟล์บทความเพื่อดาวน์โหลด"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "ได้รับการอนุมัติแล้ว"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "กำลังรอการอนุมัติ"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "การอนุมัติกัลลีย์"
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "ไม่สามารถแปลงเส้นทางวารสาร \"{$journalPath}\" ให้เป็นวารสารได้"
+
+msgid "editor.issues.backIssues"
+msgstr "ฉบับย้อนหลัง"
+
+msgid "editor.issues.futureIssues"
+msgstr "ฉบับในอนาคต"
+
+msgid "navigation.subscriptions"
+msgstr "การสมัครรับ"
+
+msgid "log.editor.submissionExpedited"
+msgstr ""
+"{$editorName} ได้เข้ามาดำเนินการกระบวนการแก้ไขสำหรับบทความ {$submissionId}"
+
+msgid "submission.proofread.instructions"
+msgstr "คำแนะนำในการพิสูจน์อักษร"
+
+msgid "submission.logType.article"
+msgstr "บทความ"
+
+msgid "submission.comments.forEditor"
+msgstr "สำหรับบรรณาธิการ"
+
+msgid "user.register.privacyStatement"
+msgstr "นโยบายความเป็นส่วนตัว"
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "ยินดีที่จะทำการพิจารณาโดยผู้ทรงคุณวุฒิสำหรับการส่งบทความไปยังวารสาร"
+
+msgid "about.subscriptionTypes.format"
+msgstr "รูปแบบ"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "ระยะเวลา"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "ค่าใช้จ่าย"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "ประเภทการสมัครสมาชิก"
+
+msgid "about.memberships"
+msgstr "การเป็นสมาชิก"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr ""
+"ข้อมูลเพิ่มเติมเกี่ยวกับระบบการตีพิมพ์ แพลตฟอร์ม และเวิร์กโฟลว์โดย OJS/PKP"
+
+msgid "about.aboutSoftware"
+msgstr "เกี่ยวกับระบบ Open Journal Systems"
+
+msgid "payment.waived"
+msgstr "ยกเว้น"
+
+msgid "payment.payNow"
+msgstr "ชำระเงินทันที"
+
+msgid "payment.waive"
+msgstr "ยกเว้นการชำระเงิน"
+
+msgid "payment.alreadyPaid"
+msgstr "ชำระเงินแล้ว"
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"เลือกช่องนี้หากคุณได้ส่งการชำระเงินไปยังวารสารแล้วเพื่อดำเนินการส่งบทความให้เ"
+"สร็จสิ้น บทความที่ส่งจะไม่ได้รับการพิจารณาจนกว่าจะได้รับการชำระเงิน คลิก "
+"ชำระเงินทันที ข้างต้นเพื่อดูคำแนะนำในการชำระเงิน"
+
+msgid "payment.paymentReceived"
+msgstr "ได้รับการชำระเงินแล้ว"
+
+msgid "payment.paymentSent"
+msgstr "ได้ส่งการชำระเงินแล้ว"
+
+msgid "payment.authorFees"
+msgstr "ค่าธรรมเนียมผู้เขียน"
+
+msgid "payment.type.submission"
+msgstr "ค่าธรรมเนียมการส่งบทความ"
+
+msgid "payment.type.publication"
+msgstr "ค่าธรรมเนียมการตีพิมพ์"
+
+msgid "payment.type.publication.required"
+msgstr "ต้องชำระค่าธรรมเนียมการตีพิมพ์"
+
+msgid "payment.type.fastTrack"
+msgstr "ค่าธรรมเนียมการพิจารณาแบบเร่งด่วน"
+
+msgid "payment.type.donation"
+msgstr "การบริจาค"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>อนุมัติกัลลีย์นี้เพื่อการเผยแพร่</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>ยกเลิกการอนุมัติกัลลีย์นี้</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "กำลังจัดทำดัชนี \"{$journalName}\""
+
+msgid "payment.notFound"
+msgstr ""
+"มีการร้องขอการชำระเงิน แต่คำขอนั้นหมดอายุแล้ว "
+"กรุณาติดต่อผู้จัดการวารสารเพื่อดูรายละเอียด"
+
+msgid "payment.donation.makeDonation"
+msgstr "ทำการบริจาค"
+
+msgid "payment.publication.publicationPaid"
+msgstr "ชำระค่าธรรมเนียมการตีพิมพ์แล้ว"
+
+msgid "payment.membership.buyMembership"
+msgstr "ซื้อการเป็นสมาชิกบุคคล"
+
+msgid "payment.membership.renewMembership"
+msgstr "ต่ออายุการเป็นสมาชิกบุคคล"
+
+msgid "catalog.sortBy"
+msgstr "ลำดับของบทความ"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "เลือกวิธีการจัดลำดับบทความในหมวดหมู่นี้"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>การอัปเกรด OJS เป็นเวอร์ชัน {$version} เสร็จสมบูรณ์เรียบร้อยแล้ว</p>\n"
+"<p>อย่าลืมตั้งค่า \"installed\" ในไฟล์การกำหนดค่า config.inc.php กลับเป็น "
+"<em>On</em></p>\n"
+"<p>เยี่ยมชม <a href=\"https://forum.pkp.sfu.ca\" target=\"_new\""
+">ฟอรั่มชุมชน</a> หรือสมัครรับ <a href=\"https://pkp.sfu.ca/developer-"
+"newsletter\" target=\"_new\">จดหมายข่าวนักพัฒนา</a> "
+"ของเราเพื่อรับการแจ้งเตือนด้านความปลอดภัย และการอัปเดตเกี่ยวกับการเผยแพร่ใหม่"
+" ปลั๊กอินใหม่ และคุณลักษณะที่วางแผนไว้</p>"
+
+msgid "log.author.documentRevised"
+msgstr ""
+"{$authorName} ได้แก้ไขบทความ {$submissionId} ไฟล์ใหม่มี ID คือ {$fileId}"
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "การคัดลอกแก้ไขเบื้องต้น"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "การคัดลอกแก้ไขของบรรณาธิการ"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "มอบหมายผู้คัดลอกแก้ไข"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "การคัดลอกแก้ไขของผู้เขียน"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "การคัดลอกแก้ไขขั้นสุดท้าย"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "เวอร์ชันคัดลอกแก้ไข (C/E)"
+
+msgid "submission.copyedit.useFile"
+msgstr "ใช้ไฟล์"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "ความคิดเห็นการคัดลอกแก้ไข"
+
+msgid "submission.copyedit.instructions"
+msgstr "คำแนะนำในการคัดลอกแก้ไข"
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"ไม่มี (อัปโหลดเวอร์ชันคัดลอกแก้ไขสุดท้ายเป็นเวอร์ชันการจัดวางก่อนส่งคำขอ)"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "การระบุแกลเล่ย์แบบสาธารณะมีอยู่แล้ว"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "มอบหมายบรรณาธิการการจัดวาง"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "แทนที่บรรณาธิการการจัดวาง"
+
+msgid "submission.layout.layoutComments"
+msgstr "ความคิดเห็นเกี่ยวกับการจัดวาง"
+
+msgid "submission.layout.instructions"
+msgstr "คำแนะนำในการจัดวาง"
+
+msgid "submission.layout.referenceLinking"
+msgstr "การเชื่อมโยงอ้างอิง"
+
+msgid "submission.proofreadingComments"
+msgstr "ความคิดเห็นการพิสูจน์อักษร"
+
+msgid "submission.proofread.corrections"
+msgstr "การแก้ไขการพิสูจน์อักษร"

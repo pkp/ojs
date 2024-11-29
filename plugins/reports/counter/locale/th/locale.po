@@ -1,0 +1,55 @@
+# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-10-20 01:53+0000\n"
+"Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
+"Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-counter/th/>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.reports.counter.description"
+msgstr ""
+"ปลั๊กอิน COUNTER ช่วยให้สามารถรายงานกิจกรรมของวารสาร โดยใช้ <a href=\"https"
+"://www.projectcounter.org\">มาตรฐาน COUNTER</a> "
+"รายงานเหล่านี้เพียงอย่างเดียวไม่ทำให้วารสารเป็นไปตามมาตรฐาน COUNTER "
+"หากต้องการให้มีความสอดคล้องกับ COUNTER โปรดตรวจสอบข้อกำหนดที่เว็บไซต์ "
+"Project COUNTER."
+
+msgid "plugins.reports.counter.error.noXML"
+msgstr "ไม่สามารถจัดรูปแบบผลลัพธ์เป็น XML ได้"
+
+msgid "plugins.reports.counter.1a.description"
+msgstr ""
+"รายงานวารสาร COUNTER 1 (R3): การขอบทความแบบเต็มเนื้อหาโดยแยกตามเดือนและวารสาร"
+
+msgid "plugins.reports.counter"
+msgstr "รายงาน COUNTER"
+
+msgid "plugins.reports.counter.release"
+msgstr "เวอร์ชัน COUNTER"
+
+msgid "plugins.reports.counter.error.badParameters"
+msgstr "พารามิเตอร์ของรายงานไม่ถูกต้อง"
+
+msgid "plugins.reports.counter.error.badRequest"
+msgstr "คำขอรายงานไม่ถูกต้อง"
+
+msgid "plugins.reports.counter.error.noResults"
+msgstr "ไม่พบผลลัพธ์สำหรับรายงานนี้"
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "รายงาน COUNTER JR1 (R3)"
+
+msgid "plugins.reports.counter.allCustomers"
+msgstr "ลูกค้าทั้งหมด"
+
+msgid "plugins.reports.counter.ar1.title"
+msgstr "รายงานบทความ 1"
+
+msgid "plugins.reports.counter.jr1.title"
+msgstr "รายงานวารสาร 1"
