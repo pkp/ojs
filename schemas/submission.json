@@ -86,6 +86,14 @@
 						"type": "boolean",
 						"apiSummary": true,
 						"description": "The existing user has reviewer role when already there is an existing user association."
+					},
+					"reviewerId": {
+						"type": "integer",
+						"apiSummary": true,
+						"description": "The existing user id with reviewer role who as been mapped to this suggestion after the suggestion has made",
+						"validation": [
+							"nullable"
+						]
 					}
 				}
 			}
