@@ -24,7 +24,7 @@ class ApproveSubmissionNotificationManager extends PKPApproveSubmissionNotificat
     /**
      * @copydoc PKPNotificationOperationManager::getNotificationTitle()
      */
-    public function getNotificationTitle(Notification $notification)
+    public function getNotificationTitle(Notification $notification): string
     {
         return match($notification->type) {
             Notification::NOTIFICATION_TYPE_APPROVE_SUBMISSION,
