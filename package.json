@@ -20,6 +20,7 @@
     "@tinymce/tinymce-vue": "^5.1.1",
     "@vue-a11y/announcer": "^3.1.5",
     "@vueuse/core": "^10.5.0",
+		"altcha": "^1.0.7",
     "chart.js": "^4.4.3",
     "clone-deep": "^4.0.1",
     "copyfiles": "^2.4.1",
