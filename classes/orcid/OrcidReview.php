@@ -103,7 +103,7 @@ class OrcidReview
             $orcidReview['review-url'] = ['value' => $publicationUrl];
             $orcidReview['subject-type'] = 'journal-article';
             $orcidReview['subject-name'] = [
-                'title' => ['value' => $this->submission->getCurrentPublication()->getLocalizedData('title') ?? '']
+                'title' => ['value' => $this->submission->getCurrentPublication()->getLocalizedTitle($submissionLocale) ?? '']
             ];
 
             if (!empty($currentPublication->getDoi())) {
@@ -125,7 +125,10 @@ class OrcidReview
         $allTitles = $currentPublication->getData('title');
         foreach ($allTitles as $locale => $title) {
             if ($locale !== $submissionLocale) {
-                $orcidReview['subject-name']['translated-title'] = ['value' => $title, 'language-code' => LocaleConversion::getIso1FromLocale($locale)];
+                $iso1Locale = LocaleConversion::getIso1FromLocale($locale);
+                if ($iso1Locale) {
+                    $orcidReview['subject-name']['translated-title'] = ['value' => $title, 'language-code' => $iso1Locale];
+                }
             }
         }
 
