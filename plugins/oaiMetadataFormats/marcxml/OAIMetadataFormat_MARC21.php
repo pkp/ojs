@@ -3,8 +3,8 @@
 /**
  * @file plugins/oaiMetadataFormats/marcxml/OAIMetadataFormat_MARC21.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2024 Simon Fraser University
+ * Copyright (c) 2003-2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormat_MARC21
@@ -18,6 +18,8 @@
 
 namespace APP\plugins\oaiMetadataFormats\marcxml;
 
+use APP\journal\Journal;
+use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\core\PKPString;
 use PKP\i18n\LocaleConversion;
@@ -33,7 +35,10 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat
      */
     public function toXml($record, $format = null)
     {
+        /** @var Submission $article */
         $article = $record->getData('article');
+
+        /* @var Journal $journal */
         $journal = $record->getData('journal');
 
         $templateMgr = TemplateManager::getManager();
@@ -46,13 +51,13 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat
         ]);
 
         $subjects = array_merge_recursive(
-            stripAssocArray((array) $article->getDiscipline(null)),
-            stripAssocArray((array) $article->getSubject(null))
+            stripAssocArray((array) $article->getData('discipline')),
+            stripAssocArray((array) $article->getData('subject'))
         );
 
         $templateMgr->assign([
             'subject' => isset($subjects[$journal->getPrimaryLocale()]) ? $subjects[$journal->getPrimaryLocale()] : '',
-            'abstract' => PKPString::html2text($article->getAbstract($article->getData('locale'))),
+            'abstract' => PKPString::html2text($article->getData('abstract', $article->getData('locale'))),
             'language' => LocaleConversion::get3LetterIsoFromLocale($article->getData('locale'))
         ]);
 

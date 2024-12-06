@@ -3,8 +3,8 @@
 /**
  * @file plugins/oaiMetadataFormats/rfc1807/OAIMetadataFormat_RFC1807.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2024 Simon Fraser University
+ * Copyright (c) 2003-2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormat_RFC1807
@@ -17,7 +17,12 @@
 namespace APP\plugins\oaiMetadataFormats\rfc1807;
 
 use APP\core\Application;
+use APP\issue\Issue;
 use APP\issue\IssueAction;
+use APP\journal\Journal;
+use APP\publication\Publication;
+use APP\section\Section;
+use APP\submission\Submission;
 use PKP\db\DAORegistry;
 use PKP\oai\OAIMetadataFormat;
 use PKP\oai\OAIUtils;
@@ -33,15 +38,21 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
      */
     public function toXml($record, $format = null)
     {
+        /** @var Submission $article */
         $article = &$record->getData('article');
-        $journal = &$record->getData('journal');
-        $section = &$record->getData('section');
-        $issue = &$record->getData('issue');
-        $galleys = &$record->getData('galleys');
 
+        /** @var Journal $journal */
+        $journal = &$record->getData('journal');
+
+        /* @var Section $section */
+        $section = &$record->getData('section');
+
+        /** @var Issue $issue */
+        $issue = &$record->getData('issue');
+
+        /** @var Publication $publication */
         $publication = $article->getCurrentPublication();
 
-        // Publisher
         $publisher = $journal->getLocalizedName(); // Default
         $publisherInstitution = $journal->getData('publisherInstitution');
         if (!empty($publisherInstitution)) {
@@ -50,14 +61,14 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
 
         // Sources contains journal title, issue ID, and pages
         $source = $issue->getIssueIdentification();
-        $pages = $article->getPages();
+        $pages = $article->getData('pages');
         if (!empty($pages)) {
             $source .= '; ' . $pages;
         }
 
         // Format creators
         $creators = [];
-        foreach ($publication->getAuthors() as $author) {
+        foreach ($publication->getData('authors') as $author) {
             $authorName = $author->getFullName(false, true);
             $affiliation = $author->getLocalizedAffiliation();
             if (!empty($affiliation)) {
@@ -66,24 +77,35 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
             $creators[] = $authorName;
         }
 
-        // Subject
         $supportedLocales = $journal->getSupportedFormLocales();
-        $submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /** @var SubmissionKeywordDAO $submissionKeywordDao */
-        $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /** @var SubmissionSubjectDAO $submissionSubjectDao */
+
+        /** @var SubmissionKeywordDAO $submissionKeywordDao */
+        $submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO');
+
+        /** @var SubmissionSubjectDAO $submissionSubjectDao */
+        $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO');
+
         $subjects = array_merge_recursive(
             (array) $submissionKeywordDao->getKeywords($publication->getId(), $supportedLocales),
             (array) $submissionSubjectDao->getSubjects($article->getCurrentPublication()->getId(), $supportedLocales)
         );
         $subject = $subjects[$journal->getPrimaryLocale()] ?? '';
 
-        // Coverage
-        $coverage = $article->getCoverage($article->getData('locale'));
+        $coverage = $article->getData('coverage', $article->getData('locale'));
 
         $issueAction = new IssueAction();
         $request = Application::get()->getRequest();
-        $url = $request->getDispatcher()->url($request, Application::ROUTE_PAGE, $journal->getPath(), 'article', 'view', [$article->getBestId()], urlLocaleForPage: '');
-        $includeUrls = $journal->getSetting('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE || $issueAction->subscribedUser($request->getUser(), $journal, null, $article->getId());
-        $response = "<rfc1807\n" .
+        $url = $request->getDispatcher()->url(
+            $request,
+            Application::ROUTE_PAGE,
+            $journal->getPath(),
+            'article',
+            'view',
+            [$article->getBestId()],
+            urlLocaleForPage: ''
+        );
+        $includeUrls = $journal->getData('publishingMode') != Journal::PUBLISHING_MODE_NONE || $issueAction->subscribedUser($request->getUser(), $journal, null, $article->getId());
+        return "<rfc1807\n" .
             "\txmlns=\"http://info.internet.isi.edu:80/in-notes/rfc/files/rfc1807.txt\"\n" .
             "\txmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n" .
             "\txsi:schemaLocation=\"http://info.internet.isi.edu:80/in-notes/rfc/files/rfc1807.txt\n" .
@@ -97,17 +119,15 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
             $this->formatElement('type', $section->getLocalizedIdentifyType()) .
 
             $this->formatElement('author', $creators) .
-            ($article->getDatePublished() ? $this->formatElement('date', $article->getDatePublished()) : '') .
+            ($article->getData('datePublished') ? $this->formatElement('date', $article->getData('datePublished')) : '') .
             $this->formatElement('copyright', strip_tags($journal->getLocalizedData('licenseTerms'))) .
             ($includeUrls ? $this->formatElement('other_access', "url:{$url}") : '') .
             $this->formatElement('keyword', $subject) .
             $this->formatElement('period', $coverage) .
-            $this->formatElement('monitoring', $article->getLocalizedSponsor()) .
+            $this->formatElement('monitoring', $article->getLocalizedData('sponsor')) .
             $this->formatElement('language', $article->getData('locale')) .
             $this->formatElement('abstract', strip_tags($publication->getLocalizedData('abstract'))) .
             "</rfc1807>\n";
-
-        return $response;
     }
 
     /**
