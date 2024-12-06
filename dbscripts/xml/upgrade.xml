@@ -151,6 +151,7 @@
         <migration class="PKP\migration\upgrade\v3_5_0\I9771_OrcidMigration"/>
 		<migration class="APP\migration\upgrade\v3_5_0\I5885_RenameReviewReminderSettingsName"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\COA75_AddUserRoleEndEmail"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I9707_WeblateUILocales"/>
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
