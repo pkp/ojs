@@ -1,8 +1,8 @@
 {**
  * plugins/oaiMetadataFormats/marcxml/record.tpl
  *
- * Copyright (c) 2013-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2013-2024 Simon Fraser University
+ * Copyright (c) 2003-2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * MARCXML-formatted metadata record for an article
@@ -12,8 +12,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.loc.gov/MARC21/slim https://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
 	<leader>     nmb a2200000Iu 4500</leader>
-	{if $article->getDatePublished()}
-		<controlfield tag="008">"{$article->getDatePublished()|strtotime|date_format:"%y%m%d %Y"}                        eng  "</controlfield>
+	{if $article->getData('datePublished')}
+		<controlfield tag="008">"{$article->getData('datePublished')|strtotime|date_format:"%y%m%d %Y"}                        eng  "</controlfield>
 	{/if}
 	{if $journal->getData('onlineIssn')}
 		<datafield tag="022" ind1="#" ind2="#">
@@ -89,13 +89,13 @@
 		<subfield code="a">{$language}</subfield>
 	</datafield>
 
-	{if $article->getCoverage($journal->getPrimaryLocale())}
+	{if $article->getData('coverage', $journal->getPrimaryLocale())}
 		<datafield tag="500" ind1=" " ind2=" ">
-			<subfield code="a">{$article->getCoverage($journal->getPrimaryLocale())|escape}</subfield>
+			<subfield code="a">{$article->getData('coverage', $journal->getPrimaryLocale())|escape}</subfield>
 		</datafield>
 	{/if}
 
 	<datafield tag="540" ind1=" " ind2=" ">
-		<subfield code="a">{translate key="submission.copyrightStatement" copyrightYear=$article->getCopyrightYear() copyrightHolder=$article->getCopyrightHolder($journal->getPrimaryLocale())|escape}</subfield>
+		<subfield code="a">{translate key="submission.copyrightStatement" copyrightYear=$article->getdata('copyrightYear') copyrightHolder=$article->getData('copyrightHolder', $journal->getPrimaryLocale())|escape}</subfield>
 	</datafield>
 </record>
