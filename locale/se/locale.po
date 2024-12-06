@@ -1,9 +1,10 @@
 # Huw Robert Grange <huw.r.grange@uit.no>, 2023.
 # Aysa Ekanger <aysa.ekanger@uit.no>, 2023.
+# Karl Magnus Nilsen <karl.magnus.nilsen@uit.no>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-11-23 13:08+0000\n"
-"Last-Translator: Aysa Ekanger <aysa.ekanger@uit.no>\n"
+"PO-Revision-Date: 2024-12-06 22:11+0000\n"
+"Last-Translator: Karl Magnus Nilsen <karl.magnus.nilsen@uit.no>\n"
 "Language-Team: Sami (Northern) <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/se/>\n"
 "Language: se\n"
@@ -39,3 +40,6 @@ msgstr "Ođđasemos"
 
 msgid "navigation.infoForAuthors"
 msgstr "Čálliide"
+
+msgid "about.authorGuidelines"
+msgstr "Čállinrávvagat"
