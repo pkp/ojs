@@ -139,13 +139,13 @@ class ResolverPlugin extends GatewayPlugin
                 foreach ($submissions as $submission) {
                     // Look for the correct page in the list of articles.
                     $matches = null;
-                    if (preg_match('/^[Pp][Pp]?[.]?[ ]?(\d+)$/u', $submission->getPages(), $matches)) {
+                    if (preg_match('/^[Pp][Pp]?[.]?[ ]?(\d+)$/u', $submission->getCurrentPublication()->getData('pages'), $matches)) {
                         $matchedPage = $matches[1];
                         if ($page == $matchedPage) {
                             $request->redirect(null, 'article', 'view', $submission->getBestId());
                         }
                     }
-                    if (preg_match('/^[Pp][Pp]?[.]?[ ]?(\d+)[ ]?-[ ]?([Pp][Pp]?[.]?[ ]?)?(\d+)$/u', $submission->getPages(), $matches)) {
+                    if (preg_match('/^[Pp][Pp]?[.]?[ ]?(\d+)[ ]?-[ ]?([Pp][Pp]?[.]?[ ]?)?(\d+)$/u', $submission->getCurrentPublication()->getData('pages'), $matches)) {
                         $matchedPageFrom = $matches[1];
                         $matchedPageTo = $matches[3];
                         if ($page >= $matchedPageFrom && ($page < $matchedPageTo || ($page == $matchedPageTo && $matchedPageFrom = $matchedPageTo))) {
