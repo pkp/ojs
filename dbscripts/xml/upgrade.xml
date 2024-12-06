@@ -3,8 +3,8 @@
 <!--
   * dbscripts/xml/upgrade.xml
   *
-  * Copyright (c) 2014-2021 Simon Fraser University
-  * Copyright (c) 2003-2021 John Willinsky
+  * Copyright (c) 2014-2024 Simon Fraser University
+  * Copyright (c) 2003-2024 John Willinsky
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
   * Upgrade descriptor file.
@@ -151,6 +151,8 @@
         <migration class="PKP\migration\upgrade\v3_5_0\I9771_OrcidMigration"/>
 		<migration class="APP\migration\upgrade\v3_5_0\I5885_RenameReviewReminderSettingsName"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\COA75_AddUserRoleEndEmail"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I7135_CreateAuthorAffiliationsTables"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I7135_CreateNewRorRegistryCacheTables"/>
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
