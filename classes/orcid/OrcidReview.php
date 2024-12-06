@@ -102,9 +102,15 @@ class OrcidReview
             $orcidReview['subject-url'] = ['value' => $publicationUrl];
             $orcidReview['review-url'] = ['value' => $publicationUrl];
             $orcidReview['subject-type'] = 'journal-article';
-            $orcidReview['subject-name'] = [
-                'title' => ['value' => $this->submission->getCurrentPublication()->getLocalizedTitle($submissionLocale) ?? '']
-            ];
+
+            $allTitles = $currentPublication->getData('title');
+            foreach ($allTitles as $locale => $title) {
+                if ($locale === $submissionLocale) {
+                    $orcidReview['subject-name']['title'] = ['value' => $title];
+                } else {
+                    $orcidReview['subject-name']['translated-title'] = ['value' => $title, 'language-code' => LocaleConversion::getIso1FromLocale($locale)];
+                }
+            }
 
             if (!empty($currentPublication->getDoi())) {
                 /** @var Doi $doiObject */
@@ -122,15 +128,6 @@ class OrcidReview
             }
         }
 
-        $allTitles = $currentPublication->getData('title');
-        foreach ($allTitles as $locale => $title) {
-            if ($locale !== $submissionLocale) {
-                $iso1Locale = LocaleConversion::getIso1FromLocale($locale);
-                if ($iso1Locale) {
-                    $orcidReview['subject-name']['translated-title'] = ['value' => $title, 'language-code' => $iso1Locale];
-                }
-            }
-        }
 
         return $orcidReview;
     }
