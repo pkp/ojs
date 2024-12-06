@@ -124,7 +124,9 @@ class OrcidReview
 
         $allTitles = $currentPublication->getData('title');
         foreach ($allTitles as $locale => $title) {
-            if ($locale !== $submissionLocale) {
+            if ($locale === $submissionLocale) {
+                $orcidReview['subject-name']['title'] = ['value' => $title];
+            } else {
                 $orcidReview['subject-name']['translated-title'] = ['value' => $title, 'language-code' => LocaleConversion::getIso1FromLocale($locale)];
             }
         }
