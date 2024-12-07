@@ -53,7 +53,7 @@
 				{translate key="journal.currentIssue"}
 			</h2>
 			<div class="current_issue_title">
-				{$issue->getIssueIdentification()|strip_unsafe_html}
+				{$issue->getIssueIdentification()|escape}
 			</div>
 			{include file="frontend/objects/issue_toc.tpl" heading="h3"}
 			<a href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page="issue" op="archive"}" class="read_more">

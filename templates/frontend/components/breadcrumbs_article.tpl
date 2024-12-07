@@ -32,7 +32,7 @@
 		{if $issue}
 			<li>
 				<a href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
-					{$issue->getIssueIdentification()}
+					{$issue->getIssueIdentification()|escape}
 				</a>
 				<span class="separator">{translate key="navigation.breadcrumbSeparator"}</span>
 			</li>

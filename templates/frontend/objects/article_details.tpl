@@ -371,7 +371,7 @@
 							</h2>
 							<div class="value">
 								<a class="title" href="{url page="issue" op="view" path=$issue->getBestIssueId()}">
-									{$issue->getIssueIdentification()}
+									{$issue->getIssueIdentification()|escape}
 								</a>
 							</div>
 						</section>
