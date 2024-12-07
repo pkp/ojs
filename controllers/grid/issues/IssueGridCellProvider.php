@@ -63,7 +63,7 @@ class IssueGridCellProvider extends GridCellProvider
                         null,
                         true
                     ),
-                    $issue->getIssueIdentification()
+                    htmlspecialchars($issue->getIssueIdentification())
                 )
             ];
         }
