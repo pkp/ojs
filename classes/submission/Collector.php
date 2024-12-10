@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/submission/Collector.php
  *
@@ -59,7 +60,7 @@ class Collector extends \PKP\submission\Collector
                     ->from('publications AS issue_p')
                     ->join('publication_settings as issue_ps', 'issue_p.publication_id', '=', 'issue_ps.publication_id')
                     ->where('issue_ps.setting_name', '=', 'issueId')
-                    ->whereIn('issue_ps.setting_value', array_map('strval', $this->issueIds));
+                    ->whereIn('issue_ps.setting_value', array_map(strval(...), $this->issueIds));
             });
         }
 

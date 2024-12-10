@@ -164,7 +164,7 @@ class IssueController extends PKPBaseController
                     } elseif (!is_array($val)) {
                         $val = [$val];
                     }
-                    $values = array_map('intval', $val);
+                    $values = array_map(intval(...), $val);
                     switch ($param) {
                         case 'volumes':
                             $collector->filterByVolumes($values);
@@ -187,7 +187,7 @@ class IssueController extends PKPBaseController
                     $collector->searchPhrase($val);
                     break;
                 case 'doiStatus':
-                    $collector->filterByDoiStatuses(array_map('intval', paramToArray($val)));
+                    $collector->filterByDoiStatuses(array_map(intval(...), paramToArray($val)));
                     break;
                 case 'hasDois':
                     $collector->filterByHasDois((bool) $val, $context->getEnabledDoiTypes());

@@ -50,7 +50,7 @@ class StatsPublicationController extends \PKP\API\v1\stats\publications\PKPStats
             } elseif (!is_array($value)) {
                 $value = [$value];
             }
-            $returnParams[$requestParam] = array_map('intval', $value);
+            $returnParams[$requestParam] = array_map(intval(...), $value);
         } else {
             $returnParams = parent::_processParam($requestParam, $value);
         }

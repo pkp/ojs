@@ -47,13 +47,13 @@ class SubmissionController extends \PKP\API\v1\submissions\PKPSubmissionControll
 
         if (isset($queryParams['issueIds'])) {
             $collector->filterByIssueIds(
-                array_map('intval', paramToArray($queryParams['issueIds']))
+                array_map(intval(...), paramToArray($queryParams['issueIds']))
             );
         }
 
         if (isset($queryParams['sectionIds'])) {
             $collector->filterBySectionIds(
-                array_map('intval', paramToArray($queryParams['sectionIds']))
+                array_map(intval(...), paramToArray($queryParams['sectionIds']))
             );
         }
 

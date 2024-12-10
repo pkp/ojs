@@ -114,7 +114,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         // Contributor
         $contributors = (array) $publication->getData('sponsor');
         foreach ($contributors as $locale => $contributor) {
-            $contributors[$locale] = array_map('trim', explode(';', $contributor));
+            $contributors[$locale] = array_map(trim(...), explode(';', $contributor));
         }
         $this->_addLocalizedElements($dc11Description, 'dc:contributor', $contributors);
 

@@ -21,7 +21,6 @@ use APP\journal\Journal;
 use APP\journal\JournalDAO;
 use APP\submission\Submission;
 use Exception;
-
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
 use PKP\jobs\submissions\UpdateSubmissionSearchJob;
@@ -58,8 +57,8 @@ class ArticleSearchIndex extends SubmissionSearchIndex
                 array_values((array) $author->getData('givenName')),
                 array_values((array) $author->getData('familyName')),
                 array_values((array) $author->getData('preferredPublicName')),
-                array_values(array_map('strip_tags', (array) $author->getData('affiliation'))),
-                array_values(array_map('strip_tags', (array) $author->getData('biography')))
+                array_values(array_map(strip_tags(...), (array) $author->getData('affiliation'))),
+                array_values(array_map(strip_tags(...), (array) $author->getData('biography')))
             );
         }
 
