@@ -18,7 +18,9 @@
 
 namespace APP\plugins\oaiMetadataFormats\marcxml;
 
+use APP\core\Application;
 use APP\journal\Journal;
+use APP\publication\Publication;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\core\PKPString;
@@ -38,6 +40,12 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat
         /** @var Submission $article */
         $article = $record->getData('article');
 
+        /** @var Publication $publication */
+        $publication = $article->getCurrentPublication();
+
+        $representationDao = Application::getRepresentationDAO();
+        $representations = $representationDao->getByPublicationId($publication->getId());
+
         /* @var Journal $journal */
         $journal = $record->getData('journal');
 
@@ -45,20 +53,21 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat
         $templateMgr->assign([
             'journal' => $journal,
             'article' => $article,
-            'publication' => $article->getCurrentPublication(),
+            'publication' => $publication,
+            'representations' => $representations,
             'issue' => $record->getData('issue'),
             'section' => $record->getData('section')
         ]);
 
         $subjects = array_merge_recursive(
-            stripAssocArray((array) $article->getData('discipline')),
-            stripAssocArray((array) $article->getData('subject'))
+            stripAssocArray((array) $publication->getData('discipline')),
+            stripAssocArray((array) $publication->getData('subject'))
         );
 
         $templateMgr->assign([
             'subject' => isset($subjects[$journal->getPrimaryLocale()]) ? $subjects[$journal->getPrimaryLocale()] : '',
-            'abstract' => PKPString::html2text($article->getData('abstract', $article->getData('locale'))),
-            'language' => LocaleConversion::get3LetterIsoFromLocale($article->getData('locale'))
+            'abstract' => PKPString::html2text($publication->getData('abstract', $publication->getData('locale'))),
+            'language' => LocaleConversion::get3LetterIsoFromLocale($publication->getData('locale'))
         ]);
 
         $plugin = PluginRegistry::getPlugin('oaiMetadataFormats', 'OAIFormatPlugin_MARC21');
