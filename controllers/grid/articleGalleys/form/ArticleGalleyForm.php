@@ -62,7 +62,7 @@ class ArticleGalleyForm extends Form
         $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
 
         // Ensure a locale is provided and valid
-        $locales = $submission->getPublicationLanguages($request->getJournal()->getSupportedSubmissionMetadataLocales(), $articleGalley?->getLanguages());
+        $locales = $submission->getPublicationLanguages($request->getJournal()->getSupportedSubmissionLocales(), $articleGalley?->getLanguages());
         $this->addCheck(
             new \PKP\form\validation\FormValidatorCustom(
                 $this,
@@ -92,7 +92,7 @@ class ArticleGalleyForm extends Form
             ]);
         }
 
-        $supportedLocales = $request->getContext()->getSupportedSubmissionMetadataLocaleNames() + $this->_submission->getPublicationLanguageNames() + ($this->_articleGalley?->getLanguageNames() ?? []);
+        $supportedLocales = $request->getContext()->getSupportedSubmissionLocaleNames() + $this->_submission->getPublicationLanguageNames() + ($this->_articleGalley?->getLanguageNames() ?? []);
         ksort($supportedLocales);
 
         $templateMgr->assign([
