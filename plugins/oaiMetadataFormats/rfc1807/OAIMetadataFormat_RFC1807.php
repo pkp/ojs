@@ -61,7 +61,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
 
         // Sources contains journal title, issue ID, and pages
         $source = $issue->getIssueIdentification();
-        $pages = $article->getData('pages');
+        $pages = $publication->getData('pages');
         if (!empty($pages)) {
             $source .= '; ' . $pages;
         }
@@ -87,11 +87,11 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
 
         $subjects = array_merge_recursive(
             (array) $submissionKeywordDao->getKeywords($publication->getId(), $supportedLocales),
-            (array) $submissionSubjectDao->getSubjects($article->getCurrentPublication()->getId(), $supportedLocales)
+            (array) $submissionSubjectDao->getSubjects($publication->getId(), $supportedLocales)
         );
         $subject = $subjects[$journal->getPrimaryLocale()] ?? '';
 
-        $coverage = $article->getData('coverage', $article->getData('locale'));
+        $coverage = $publication->getData('coverage', $publication->getData('locale'));
 
         $issueAction = new IssueAction();
         $request = Application::get()->getRequest();
@@ -117,15 +117,14 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
             $this->formatElement('organization', $source) .
             $this->formatElement('title', $publication->getLocalizedTitle()) .
             $this->formatElement('type', $section->getLocalizedIdentifyType()) .
-
             $this->formatElement('author', $creators) .
-            ($article->getData('datePublished') ? $this->formatElement('date', $article->getData('datePublished')) : '') .
+            ($publication->getData('datePublished') ? $this->formatElement('date', $publication->getData('datePublished')) : '') .
             $this->formatElement('copyright', strip_tags($journal->getLocalizedData('licenseTerms'))) .
             ($includeUrls ? $this->formatElement('other_access', "url:{$url}") : '') .
             $this->formatElement('keyword', $subject) .
             $this->formatElement('period', $coverage) .
-            $this->formatElement('monitoring', $article->getLocalizedData('sponsor')) .
-            $this->formatElement('language', $article->getData('locale')) .
+            $this->formatElement('monitoring', $publication->getLocalizedData('sponsor')) .
+            $this->formatElement('language', $publication->getData('locale')) .
             $this->formatElement('abstract', strip_tags($publication->getLocalizedData('abstract'))) .
             "</rfc1807>\n";
     }
