@@ -395,7 +395,7 @@ describe('Data suite: Amwandenga', function() {
 	it('Allow author to edit publication details', function() {
 		cy.login('dbarnes');
 		cy.visit('/index.php/publicknowledge/workflow/access/' + submission.id);
-		cy.get('button[aria-label="Alan Mwandenga More Actions"]').click();
+		cy.get('button[aria-label="Alan Mwandenga More Actions"]').scrollIntoView().should('be.visible').click();
 		cy.get('button:contains("Edit")').click();
 		cy.get('[name="canChangeMetadata"]').check();
 		cy.get('[id^="submitFormButton"]').contains('OK').click();
@@ -464,7 +464,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('button').contains('Create New Version').click();
 		cy.contains('Are you sure you want to create a new version?');
 		cy.get('div[role=dialog]:contains("Create New Version")').get('button').contains('Yes').click();
-		
+
 		// Once there is 'in progress' overlay when creating new version this can be improved
 		cy.wait(10000);
 

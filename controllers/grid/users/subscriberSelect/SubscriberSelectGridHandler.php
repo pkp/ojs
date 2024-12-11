@@ -25,6 +25,7 @@ use PKP\controllers\grid\GridHandler;
 use PKP\controllers\grid\users\userSelect\UserSelectGridCellProvider;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\Role;
+use PKP\userGroup\UserGroup;
 
 class SubscriberSelectGridHandler extends GridHandler
 {
@@ -71,7 +72,7 @@ class SubscriberSelectGridHandler extends GridHandler
         );
         $this->_userGroupOptions = [];
         foreach ($userGroups as $userGroup) {
-            $this->_userGroupOptions[$userGroup->getId()] = $userGroup->getLocalizedName();
+            $this->_userGroupOptions[$userGroup->id] = $userGroup->getLocalizedData('name');
         }
 
         $this->setTitle('editor.submission.findAndSelectUser');
@@ -146,14 +147,12 @@ class SubscriberSelectGridHandler extends GridHandler
      */
     public function renderFilter($request, $filterData = [])
     {
-        $context = $request->getContext();
-        $userGroups = Repo::userGroup()->getCollector()
-            ->filterByContextIds([$context->getId()])
-            ->getMany();
+        $contextId = $request->getContext()->getId();
+        $userGroups = UserGroup::withContextIds([$contextId])->get();
 
         $userGroupOptions = ['' => __('grid.user.allRoles')];
         foreach ($userGroups as $userGroup) {
-            $userGroupOptions[$userGroup->getId()] = $userGroup->getLocalizedName();
+            $userGroupOptions[$userGroup->id] = $userGroup->getLocalizedData('name');
         }
 
         return parent::renderFilter(

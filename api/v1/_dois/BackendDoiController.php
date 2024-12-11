@@ -24,6 +24,7 @@ use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\LazyCollection;
 use PKP\db\DAORegistry;
+use PKP\userGroup\UserGroup;
 
 class BackendDoiController extends \PKP\API\v1\_dois\PKPBackendDoiController
 {
@@ -145,9 +146,7 @@ class BackendDoiController extends \PKP\API\v1\_dois\PKPBackendDoiController
 
     protected function getUserGroups(int $contextId): LazyCollection
     {
-        return Repo::userGroup()->getCollector()
-            ->filterByContextIds([$contextId])
-            ->getMany();
+        return UserGroup::where('contextId', $contextId)->get();
     }
 
     protected function getGenres(int $contextId): array
