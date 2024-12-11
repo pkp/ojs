@@ -210,7 +210,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         // Dates
         $rootNode->appendChild($this->createDatesNode($doc, $issue, $article, $publication, $galley, $galleyFile, $publicationDate));
         // Language
-        $rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'language', LocaleConversion::getIso1FromLocale($objectLocalePrecedence[0])));
+        $rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'language', str_replace(['_', '@'], '-', $objectLocalePrecedence[0])));
         // Resource Type
         $resourceTypeNode = $this->createResourceTypeNode($doc, $issue, $article, $galley, $galleyFile);
         if ($resourceTypeNode) {
@@ -920,6 +920,8 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
      *
      * @return string|null An OJS locale or null if no matching
      *  locale could be found.
+     *
+     * @deprecated 3.5
      */
     public function translateLanguageToLocale($language)
     {
