@@ -4,7 +4,7 @@
 # Sara Ellen Gaup <sara.e.gaup@uit.no>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-12-06 22:11+0000\n"
+"PO-Revision-Date: 2024-12-11 21:05+0000\n"
 "Last-Translator: Sara Ellen Gaup <sara.e.gaup@uit.no>\n"
 "Language-Team: Sami (Northern) <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/se/>\n"
@@ -47,3 +47,27 @@ msgstr "Čállinrávvagat"
 
 msgid "about.focusAndScope"
 msgstr "Váldofokus ja viidodat"
+
+msgid "article.metadata"
+msgstr "Metadáhta"
+
+msgid "submission.search"
+msgstr "Oza"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Registrere iežat"
+
+msgid "about.editorialTeam"
+msgstr "Doaimmahus"
+
+msgid "site.journalRegister"
+msgstr "Registrere iežat"
+
+msgid "article.abstract"
+msgstr "Čoahkkáigeasut"
+
+msgid "issue.abstract"
+msgstr "Čoahkkáigeasut"
+
+msgid "about.contact"
+msgstr "Oktavuohta"
