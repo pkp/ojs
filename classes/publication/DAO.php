@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/publication/DAO.php
  *
@@ -30,7 +31,10 @@ class DAO extends \PKP\publication\DAO
         'status' => 'status',
         'urlPath' => 'url_path',
         'version' => 'version',
-        'doiId' => 'doi_id'
+        'doiId' => 'doi_id',
+        'javVersionStage' => 'jav_version_stage',
+        'javVersionMinor' => 'jav_version_minor',
+        'javVersionMajor' => 'jav_version_major',
     ];
 
     /**
