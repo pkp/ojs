@@ -1,8 +1,8 @@
 {**
  * plugins/oaiMetadataFormats/marc/record.tpl
  *
- * Copyright (c) 2013-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2013-2024 Simon Fraser University
+ * Copyright (c) 2003-2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * MARC-formatted metadata record for an article
@@ -10,8 +10,8 @@
 <oai_marc status="c" type="a" level="m" encLvl="3" catForm="u"
 	xmlns="http://www.openarchives.org/OAI/1.1/oai_marc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.openarchives.org/OAI/1.1/oai_marc http://www.openarchives.org/OAI/1.1/oai_marc.xsd">
-	{if $article->getDatePublished()}
-		<fixfield id="008">"{$article->getDatePublished()|strtotime|date_format:"%y%m%d %Y"}                        eng  "</fixfield>
+	{if $publication->getData('datePublished')}
+		<fixfield id="008">"{$publication->getData('datePublished')|strtotime|date_format:"%y%m%d %Y"}                        eng  "</fixfield>
 	{/if}
 	{if $journal->getData('onlineIssn')}
 		<varfield id="022" i1="#" i2="#">
@@ -63,7 +63,7 @@
 		<subfield label="a">{$identifyType|escape}</subfield>
 	</varfield>{/if}
 
-	{foreach from=$article->getGalleys() item=galley}
+	{foreach from=$publication->getData('galleys') item=galley}
 		<varfield id="856" i1=" " i2=" ">
 			<subfield label="q">{$galley->getFileType()|escape}</subfield>
 		</varfield>
@@ -81,13 +81,13 @@
 		<subfield label="a">{$language}</subfield>
 	</varfield>
 
-	{if $article->getCoverage($journal->getPrimaryLocale())}
+	{if $publication->getData('coverage', $journal->getPrimaryLocale())}
 		<varfield id="500" i1=" " i2=" ">
-			<subfield label="a">{$article->getCoverage($journal->getPrimaryLocale())|escape}</subfield>
+			<subfield label="a">{$publication->getData('coverage', $journal->getPrimaryLocale())|escape}</subfield>
 		</varfield>
 	{/if}
 
 	<varfield id="540" i1=" " i2=" ">
-		<subfield label="a">{translate key="submission.copyrightStatement" copyrightYear=$article->getCopyrightYear() copyrightHolder=$article->getCopyrightHolder($journal->getPrimaryLocale())|escape}</subfield>
+		<subfield label="a">{translate key="submission.copyrightStatement" copyrightYear=$publication->getdata('copyrightYear') copyrightHolder=$publication->getData('copyrightHolder', $journal->getPrimaryLocale())|escape}</subfield>
 	</varfield>
 </oai_marc>

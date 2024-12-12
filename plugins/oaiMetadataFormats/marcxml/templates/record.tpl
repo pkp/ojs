@@ -1,8 +1,8 @@
 {**
  * plugins/oaiMetadataFormats/marcxml/record.tpl
  *
- * Copyright (c) 2013-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2013-2024 Simon Fraser University
+ * Copyright (c) 2003-2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * MARCXML-formatted metadata record for an article
@@ -12,8 +12,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.loc.gov/MARC21/slim https://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
 	<leader>     nmb a2200000Iu 4500</leader>
-	{if $article->getDatePublished()}
-		<controlfield tag="008">"{$article->getDatePublished()|strtotime|date_format:"%y%m%d %Y"}                        eng  "</controlfield>
+	{if $publication->getData('datePublished')}
+		<controlfield tag="008">"{$publication->getData('datePublished')|strtotime|date_format:"%y%m%d %Y"}                        eng  "</controlfield>
 	{/if}
 	{if $journal->getData('onlineIssn')}
 		<datafield tag="022" ind1="#" ind2="#">
@@ -25,9 +25,9 @@
 			<subfield code="a">{$journal->getData('printIssn')|escape}</subfield>
 		</datafield>
 	{/if}
-	{if $article->getStoredPubId('doi')}
+	{if $publication->getStoredPubId('doi')}
 	<datafield tag="024" ind1="7" ind2="#">
-		<subfield code="a">{$article->getStoredPubId('doi')|escape}</subfield>
+		<subfield code="a">{$publication->getStoredPubId('doi')|escape}</subfield>
 		<subfield code="2">doi</subfield>
 	</datafield>
 	{/if}
@@ -72,7 +72,7 @@
 		<subfield code="a">{$identifyType|escape}</subfield>
 	</datafield>{/if}
 
-	{foreach from=$article->getGalleys() item=galley}
+	{foreach from=$publication->getData('galleys') item=galley}
 		<datafield tag="856" ind1=" " ind2=" ">
 			<subfield code="q">{$galley->getFileType()|escape}</subfield>
 		</datafield>
@@ -89,13 +89,13 @@
 		<subfield code="a">{$language}</subfield>
 	</datafield>
 
-	{if $article->getCoverage($journal->getPrimaryLocale())}
+	{if $publication->getData('coverage', $journal->getPrimaryLocale())}
 		<datafield tag="500" ind1=" " ind2=" ">
-			<subfield code="a">{$article->getCoverage($journal->getPrimaryLocale())|escape}</subfield>
+			<subfield code="a">{$publication->getData('coverage', $journal->getPrimaryLocale())|escape}</subfield>
 		</datafield>
 	{/if}
 
 	<datafield tag="540" ind1=" " ind2=" ">
-		<subfield code="a">{translate key="submission.copyrightStatement" copyrightYear=$article->getCopyrightYear() copyrightHolder=$article->getCopyrightHolder($journal->getPrimaryLocale())|escape}</subfield>
+		<subfield code="a">{translate key="submission.copyrightStatement" copyrightYear=$publication->getdata('copyrightYear') copyrightHolder=$publication->getData('copyrightHolder', $journal->getPrimaryLocale())|escape}</subfield>
 	</datafield>
 </record>
