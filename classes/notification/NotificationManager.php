@@ -82,7 +82,7 @@ class NotificationManager extends PKPNotificationManager
      */
     public function _getArticleTitle(Notification $notification): ?string
     {
-        if($notification->assocType != Application::ASSOC_TYPE_SUBMISSION) {
+        if ($notification->assocType != Application::ASSOC_TYPE_SUBMISSION) {
             throw new \Exception('Unexpected assoc type!');
         }
         $article = Repo::submission()->get($notification->assocId);
@@ -139,7 +139,7 @@ class NotificationManager extends PKPNotificationManager
         switch ($notificationType) {
             case Notification::NOTIFICATION_TYPE_APPROVE_SUBMISSION:
             case Notification::NOTIFICATION_TYPE_VISIT_CATALOG:
-                if($assocType != Application::ASSOC_TYPE_SUBMISSION) {
+                if ($assocType != Application::ASSOC_TYPE_SUBMISSION) {
                     throw new \Exception('Unexpected assoc type!');
                 }
                 return new ApproveSubmissionNotificationManager($notificationType);
@@ -153,7 +153,7 @@ class NotificationManager extends PKPNotificationManager
      */
     public function getNotificationSettingsMap(): array
     {
-        return array_merge(parent::getNotificationSettingsMap(), [
+        return [
             AppNotification::NOTIFICATION_TYPE_PUBLISHED_ISSUE => [
                 'settingName' => 'notificationPublishedIssue',
                 'emailSettingName' => 'emailNotificationPublishedIssue',
@@ -164,7 +164,8 @@ class NotificationManager extends PKPNotificationManager
                 'emailSettingName' => 'emailNotificationOpenAccess',
                 'settingKey' => 'notification.type.openAccess',
             ],
-        ]);
+            ...parent::getNotificationSettingsMap(),
+        ];
     }
 }
 
