@@ -65,11 +65,13 @@ class SubscriberSelectGridHandler extends GridHandler
     {
         parent::initialize($request, $args);
 
+        $builder = UserGroup::withContextIds([$request->getContext()->getId()]);
         $stageId = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_WORKFLOW_STAGE);
-        $userGroups = Repo::userGroup()->getUserGroupsByStage(
-            $request->getContext()->getId(),
-            $stageId
-        );
+        if ($stageId) {
+            $builder->withStageIds([$stageId]);
+        }
+        $userGroups = $builder->get();
+
         $this->_userGroupOptions = [];
         foreach ($userGroups as $userGroup) {
             $this->_userGroupOptions[$userGroup->id] = $userGroup->getLocalizedData('name');
