@@ -17,7 +17,6 @@ import PkpLoad from '../lib/pkp/js/load.js';
 import Container from '@/components/Container/Container.vue';
 import AdvancedSearchReviewerContainer from '@/components/Container/AdvancedSearchReviewerContainer.vue';
 import Page from '@/components/Container/Page.vue';
-import PageOJS from '@/components/Container/PageOJS.vue';
 import WorkflowPageOJS from '@/pages/workflow/WorkflowPageOJS.vue';
 
 import AccessPage from '@/components/Container/AccessPage.vue';
@@ -55,7 +54,6 @@ window.pkp = Object.assign(PkpLoad, window.pkp || {}, {
 		ImportExportPage,
 		ManageEmailsPage,
 		Page,
-		PageOJS,
 		SettingsPage,
 		StartSubmissionPage,
 		StatsEditorialPage,
