@@ -25,8 +25,8 @@ use APP\security\authorization\OjsJournalMustPublishPolicy;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\LazyCollection;
 use PKP\core\PKPBaseController;
 use PKP\core\PKPRequest;
 use PKP\db\DAORegistry;
@@ -267,9 +267,9 @@ class IssueController extends PKPBaseController
         return response()->json($data, Response::HTTP_OK);
     }
 
-    protected function getUserGroups(int $contextId): LazyCollection
+    protected function getUserGroups(int $contextId): Collection
     {
-        return UserGroup::where('contextId', $contextId)->get();
+        return UserGroup::withContextIds([$contextId])->get();
     }
 
     protected function getGenres(int $contextId): array
