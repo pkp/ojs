@@ -22,8 +22,8 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\LazyCollection;
 use PKP\db\DAORegistry;
+use PKP\userGroup\UserGroup;
 
 class BackendDoiController extends \PKP\API\v1\_dois\PKPBackendDoiController
 {
@@ -129,6 +129,7 @@ class BackendDoiController extends \PKP\API\v1\_dois\PKPBackendDoiController
 
         Repo::issue()->edit($issue, ['doiId' => $doi->getId()]);
         $issue = Repo::issue()->get($issue->getId());
+        $userGroups = UserGroup::withContextIds([$context->getId()])->get();
 
         return response()->json(
             Repo::issue()
@@ -136,18 +137,11 @@ class BackendDoiController extends \PKP\API\v1\_dois\PKPBackendDoiController
                 ->map(
                     $issue,
                     $context,
-                    $this->getUserGroups($context->getId()),
+                    $userGroups,
                     $this->getGenres($context->getId())
                 ),
             Response::HTTP_OK
         );
-    }
-
-    protected function getUserGroups(int $contextId): LazyCollection
-    {
-        return Repo::userGroup()->getCollector()
-            ->filterByContextIds([$contextId])
-            ->getMany();
     }
 
     protected function getGenres(int $contextId): array

@@ -122,9 +122,9 @@
 								</span>
 							{/if}
 							{assign var=authorUserGroup value=$userGroupsById[$author->getData('userGroupId')]}
-							{if $authorUserGroup->getShowTitle()}
+							{if $authorUserGroup->showTitle}
 								<span class="userGroup">
-									{$authorUserGroup->getLocalizedName()|escape}
+									{$authorUserGroup->getLocalizedData('name')|escape}
 								</span>
 							{/if}
 							{if $author->getData('orcid')}
