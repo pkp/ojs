@@ -181,7 +181,7 @@ class DRIVERPlugin extends GenericPlugin
             }
 
             // is there a full text
-            $galleys = $submission->getGalleys();
+            $galleys = $publication->getData('galleys');
             if (!empty($galleys)) {
                 return $status == DRIVER_ACCESS_OPEN;
             }
@@ -233,7 +233,7 @@ class DRIVERPlugin extends GenericPlugin
         }
 
         // is there a full text
-        $galleys = $submission->getGalleys();
+        $galleys = $publication->getData('galleys');
         if (!empty($galleys)) {
             return $status == DRIVER_ACCESS_OPEN;
         }

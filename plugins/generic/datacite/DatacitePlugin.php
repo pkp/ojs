@@ -107,7 +107,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         foreach ($submissions as $submission) {
             $items[] = $submission;
             if (in_array(Repo::doi()::TYPE_REPRESENTATION, $context->getEnabledDoiTypes())) {
-                foreach ($submission->getGalleys() as $galley) {
+                foreach ($submission->getCurrentPublication()->getData('galleys') as $galley) {
                     if ($galley->getDoi()) {
                         $items[] = $galley;
                     }
@@ -132,7 +132,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         foreach ($submissions as $submission) {
             $items[] = $submission;
             if (in_array(Repo::doi()::TYPE_REPRESENTATION, $context->getEnabledDoiTypes())) {
-                foreach ($submission->getGalleys() as $galley) {
+                foreach ($submission->getCurrentPublication()->getData('galleys') as $galley) {
                     if ($galley->getDoi()) {
                         $items[] = $galley;
                     }
