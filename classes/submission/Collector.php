@@ -127,4 +127,22 @@ class Collector extends \PKP\submission\Collector
                 });
         });
     }
+
+    /** @copydoc PKP/classes/submission/Collector::addFilterByAssociatedDoiIdsToQuery() */
+    protected function addFilterByAssociatedDoiIdsToQuery(Builder $q)
+    {
+        $q->whereIn('s.submission_id', function (Builder $query) {
+            $query->select('p.submission_id')
+                ->from('publication_galleys AS g')
+                ->join('dois AS d', 'g.doi_id', '=', 'd.doi_id')
+                ->join('publications AS p', 'g.publication_id', '=', 'p.publication_id')
+                ->whereLike('d.doi', "{$this->searchPhrase}%")
+                ->union(function (Builder $query) {
+                    $query->select('p.submission_id')
+                        ->from('publications AS p')
+                        ->join('dois AS d', 'p.doi_id', '=', 'd.doi_id')
+                        ->whereLike('d.doi', "{$this->searchPhrase}%");
+                });
+        });
+    }
 }
