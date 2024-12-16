@@ -4,7 +4,7 @@
 # Sara Ellen Gaup <sara.e.gaup@uit.no>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-12-11 21:05+0000\n"
+"PO-Revision-Date: 2024-12-16 11:33+0000\n"
 "Last-Translator: Sara Ellen Gaup <sara.e.gaup@uit.no>\n"
 "Language-Team: Sami (Northern) <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/se/>\n"
@@ -71,3 +71,12 @@ msgstr "Čoahkkáigeasut"
 
 msgid "about.contact"
 msgstr "Oktavuohta"
+
+msgid "about.copyrightNotice"
+msgstr "Copyright cealkámuš"
+
+msgid "about.privacyStatement"
+msgstr "Persovdnasuodjalus-cealkámuš"
+
+msgid "user.register.privacyStatement"
+msgstr "Persovdnasuodjalus-cealkámuš"
