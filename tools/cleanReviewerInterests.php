@@ -16,6 +16,7 @@
 
 require(dirname(__FILE__) . '/bootstrap.php');
 
+use APP\core\Application;
 use APP\facades\Repo;
 use Illuminate\Support\Collection;
 use PKP\cliTool\CommandLineTool;
@@ -91,8 +92,8 @@ class ReviewerInterestsDeletionTool extends CommandLineTool
     {
         $controlledVocab = Repo::controlledVocab()->build(
             UserInterest::CONTROLLED_VOCAB_INTEREST,
-            UserInterest::CONTROLLED_VOCAB_INTEREST_ASSOC_TYPE,
-            UserInterest::CONTROLLED_VOCAB_INTEREST_ASSOC_ID
+            Application::ASSOC_TYPE_SITE,
+            (int)Application::SITE_CONTEXT_ID,
         );
 
         return ControlledVocabEntry::query()
