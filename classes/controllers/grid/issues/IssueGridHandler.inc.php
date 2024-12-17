@@ -437,7 +437,10 @@ class IssueGridHandler extends GridHandler {
 		$issue = $this->getAuthorizedContextObject(ASSOC_TYPE_ISSUE);
 		$context = $request->getContext();
 		$contextId = $context->getId();
+		$contextUrl = $request->getDispatcher()->url($request, ROUTE_PAGE, $context->getPath());
+		$contextName = $context->getLocalizedName($context->getPrimaryLocale());
 		$wasPublished = $issue->getPublished();
+		$editorialContact = $request->getUser();
 
 		if (!$wasPublished) {
 			$confirmationText = __('editor.issues.confirmPublish');
@@ -516,13 +519,23 @@ class IssueGridHandler extends GridHandler {
 			$allUsers = $userGroupDao->getUsersByContextId($contextId);
 			while ($user = $allUsers->next()) {
 				if ($user->getDisabled()) continue;
-				$notificationUsers[] = array('id' => $user->getId());
+				$notificationUsers[] = array('id' => $user->getId(), 'email' => $user->getEmail(), 'fullName' => $user->getFullName());
 			}
 			foreach ($notificationUsers as $userRole) {
-				$notificationManager->createNotification(
-					$request, $userRole['id'], NOTIFICATION_TYPE_PUBLISHED_ISSUE,
-					$contextId, ASSOC_TYPE_ISSUE, $issue->getId()
-				);
+				import('lib.pkp.classes.mail.MailTemplate');
+				$mail = new MailTemplate('PUBLISH_NOTIFY');
+				$mail->setReplyTo($context->getData('contactEmail'), $context->getData('contactName'));
+				$mail->assignParams([
+					'contextName' => $contextName,
+					'contextUrl' => $contextUrl,
+					'editorialContactSignature' => $editorialContact->getContactSignature()
+				]);
+				$mail->addRecipient($userRole['email'], $userRole['fullName']);
+				if (!$mail->send()) {
+					import('classes.notification.NotificationManager');
+					$notificationMgr = new NotificationManager();
+					$notificationMgr->createTrivialNotification($request->getUser()->getId(), NOTIFICATION_TYPE_ERROR, array('contents' => __('email.compose.error')));
+				}
 			}
 		}
 
