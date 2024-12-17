@@ -2,7 +2,7 @@
 # Sara Ellen Gaup <sara.e.gaup@uit.no>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-12-11 21:05+0000\n"
+"PO-Revision-Date: 2024-12-17 16:35+0000\n"
 "Last-Translator: Sara Ellen Gaup <sara.e.gaup@uit.no>\n"
 "Language-Team: Sami (Northern) <http://translate.pkp.sfu.ca/projects/ojs/"
 "author/se/>\n"
@@ -15,3 +15,6 @@ msgstr ""
 
 msgid "author.submit"
 msgstr "Ođđa čálus"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr ""
