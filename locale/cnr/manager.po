@@ -1,7 +1,7 @@
 # Milutin Markovic <admin@fcjk.me>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-04-12 15:20+0000\n"
+"PO-Revision-Date: 2024-12-17 16:35+0000\n"
 "Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
 "Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "cnr/>\n"
@@ -438,3 +438,384 @@ msgstr ""
 "Početna strana časopisa se sastoji od navigacionih veza u početnoj verziji. "
 "Dodatni sadržaj može biti kreiran koristeći jednu od sledećih mogućnosti i "
 "takav sadržaj će se pojaviti prema pokazanom redosledu."
+
+msgid "manager.setup.initialIssueDescription"
+msgstr ""
+"Ovisno o odabranom formatu odredite broj, volumen i/ili godinu prvog broja "
+"koji će biti objavljen u OJS:"
+
+msgid "manager.setup.announcements"
+msgstr "Obavještenja"
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Dodatne informacije"
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr ""
+"Unesite dodatne informacije koje će biti prikazane čitaocima na stranici "
+"Obavještenja."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(Da se prikaže u \"O časopisu\") "
+
+msgid "manager.setup.history"
+msgstr "Istorija časopisa"
+
+msgid "manager.setup.customizingTheLook"
+msgstr "Korak 5. Prilagođavanje izgleda"
+
+msgid "manager.setup.details"
+msgstr "Detalji"
+
+msgid "manager.setup.details.description"
+msgstr "Ime časopisa, ISSN, kontakti, sponzori i pretraživači."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr ""
+"Tehnički sekretar će registrovati sve korisničke naloge. Urednici i Urednici "
+"sekcija mogu registrovati naloge za recenzente."
+
+msgid "manager.setup.discipline"
+msgstr "Akademska disciplina i poddiscipline"
+
+msgid "manager.setup.disciplineDescription"
+msgstr ""
+"Ovo je korisno kad časopis prelazi granice discipline i/ili kad autori "
+"prilažu članke koje imaju multidisciplinarni pristup."
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Dodajte Sadržaj za ovaj broj (ako postoji)."
+
+msgid "manager.setup.editorDecision"
+msgstr "Odluka urednika"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Adresa za vraćene poruke"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr "Sve neisporučene poruke će se vratiti na ovu adresu"
+
+msgid "manager.setup.emails"
+msgstr "Email identifikacija"
+
+msgid "manager.setup.emailSignature"
+msgstr "Potpis"
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Omogući obavijesti"
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Prikaži na naslovnoj stranici"
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Koliko obavijesti prikazati na naslovnoj stranici. Ostaviti prazno da se "
+"obavijesti ne bi prikazivale."
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Korisnici mogu sami da se registruju"
+
+msgid "manager.setup.focusAndScope"
+msgstr "Fokus i područje primjene"
+
+msgid "manager.setup.focusAndScope.description"
+msgstr ""
+"Opišite autorima, čitaocima i biblitekarima vrste članaka i drugih stavki "
+"koje objavljuje časopis."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Autorsko indeksiranje radova"
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "Navedeni ISSN nije ispravan."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "Primarna e-pošta je obavezna."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Primarno ime (kontakta) je obavezno."
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Inicijali časopisa su obavezni."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Naslov časopisa je obavezan."
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "E-pošta podrške je obavezna."
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "Ime podrške je obavezno."
+
+msgid "manager.setup.generalInformation"
+msgstr "Opšte informacije"
+
+msgid "manager.setup.guidelines"
+msgstr "Smjernice"
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "Korak 3. Smernice za prijavu članaka"
+
+msgid "manager.setup.identity"
+msgstr "Identitet časopisa"
+
+msgid "manager.setup.information"
+msgstr "Informacije"
+
+msgid "manager.setup.information.description"
+msgstr ""
+"Kratak opis časopisa za bibliotekare, autore i čitaoce. Opis će biti "
+"dostupan u bočnoj traci kad se doda blok za Informacije."
+
+msgid "manager.setup.institution"
+msgstr "Institucijа"
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Stavki po strani"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Skraćenica časopisa"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Arhiviranje časopisa"
+
+msgid "manager.setup.contextSummary"
+msgstr "Sažetak časopisa"
+
+msgid "manager.setup.contextAbout"
+msgstr "O časopisu"
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Sadržaj naslovne stranice časopisa"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr ""
+"Po inicijalnim postavkama početna stranica se satsoji od navigcijskih veza. "
+"Dodatni sadržaj se može dodati koristeći jednu ili sve od sljedećih "
+"mogućnosti koje će se pojaviti u prikazanom redosljedu. Trenutni broj je "
+"uvek dostupan preko menija Trenutni broj u navigacijskoj traci."
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Zaglavlje početne strane časopisa"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Zaglavlje početne strane časopisa"
+
+msgid "manager.setup.contextInitials"
+msgstr "Inicijali časopisa"
+
+msgid "manager.setup.journalLayout"
+msgstr "Izgled časopisa"
+
+msgid "manager.setup.journalLogo"
+msgstr "Logo časopisa"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Logo časopisa"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Podnožje stranice časopisa"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr ""
+"Ovo je podnožje strane vašeg časopisa. Ubačite HTML kod u okvir za tekst "
+"ispod kako bi izmijenili podnožje strane. To može biti drugi navigacijski "
+"segment, brojač itd. Ovo podnožje će se pojaviti na svakoj stranici."
+
+msgid "manager.setup.journalPolicies"
+msgstr "Korak 2. Politike časopisa"
+
+msgid "manager.setup.journalSetup"
+msgstr "Podešavanje časopisa"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "Ažurirano je podešavanje vašeg časopisa"
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr "Neispravan format stranice stila. Prihvaćen format je .css."
+
+msgid "manager.setup.journalTheme"
+msgstr "Tema časopisa"
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Mala sličica časopisa"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr ""
+"Mali logo ili predstavljanje časopisa koje može biti korišćeno u listi "
+"časopisa."
+
+msgid "manager.setup.contextTitle"
+msgstr "Naslov časopisa"
+
+msgid "manager.setup.keyInfo"
+msgstr "Ključne informacije"
+
+msgid "manager.setup.labelName"
+msgstr "Naziv stavke"
+
+msgid "manager.setup.lists"
+msgstr "Liste"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "Omogućite PKP PN dodatak"
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+"PKP Preservation Network (PN) osigurava besplatnu uslugu očuvanja za bilo "
+"koji OJS časopis koji ispunjava nekoliko osnovnih kriterija."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"Kliknite na <button>Postavke</button> kako biste prihvatili uslove "
+"korištenja za PKP PN."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr ""
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS i CLOCKSS"
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+"Uključi LOCKSS za čuvanje i distribuciju sadržaja časopisa u bibliotekama "
+"koje učestvuju preko LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\""
+">Izdavački manifest</a> strane."
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Opis LOCKSS licence"
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Broj recenzenata po prijavi je obavezan."
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "Korak 1. Ulazak u detalje"
+
+msgid "manager.setup.disciplineExamples"
+msgstr ""
+"(npr. Istorija; Obrazovanje; Sociologija; Psihologija; Studije kulture; "
+"Pravo)"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr "Navedite primjere relevantnih akademskih disciplina za ovaj časopis"
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr ""
+"Zahtijevajte od recenzenata da potvrde izjavu o Konfliktu interesa za svaku "
+"stručnu recenziju koju vam pošalju."
+
+msgid "manager.setup.keyInfo.description"
+msgstr "Popis urednika, menadžera i drugih osoba povezanih s časopisom."
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr ""
+"Dodajte Urednika rubrike kako bi se prijavljeni članci automatski dodijeliti "
+"Uredniku rubrike. (U suprotnom, Urednici rubrike mogu biti dodati ručno "
+"nakon prijavljenog članka.) Kad se doda, Urednik rubrike može biti "
+"automatski  dodijeljen da nadgleda recenzije (stručna recenzija) i/ili "
+"uređivanje (korektura, lektura, izgled) prijavljenih članaka u rubrici. "
+"Urednici rubrika se kreiraju tako što se klikne na Urednici rubrike u Uloge "
+"i Upravljanje časopisom."
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr ""
+"Alternativno, moguće je postaviti HTML verziju zaglavlja umjesto naslova ili "
+"logotipa. Ukoliko to ne želite, ostavite priloženi tekstni okvir prazan."
+
+msgid "manager.setup.historyDescription"
+msgstr ""
+"Tekst će se pojaviti u stranici O časopisu i on treba da opiše promjene u "
+"naslovu, redakacijski odbor i druge stavke relevantne za istoriju "
+"objavljivanja časopisa."
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"<strong>Napomena:</strong> Da bi aktivirali ovu opciju administrator mora "
+"uključiti <tt>allow_envelope_sender</tt> opciju u OJS konfiguracionom fajlu. "
+"Dodatna konfiguracija servera može biti potrebna da bi se podržala ova "
+"funkcija (koja možda nije moguća na svim serverima), kao što je naznačeno u "
+"OJS dokumentaciji."
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Objavljivanje obavještenja je namenjeno da se čitaoci obavijeste o novostima "
+"i događajima vezanim za časopis. Objavljena obavještenja će se pojaviti na "
+"stranici Obavještenja."
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr ""
+"OJS je usaglašen sa <a href=\"http://www.openarchives.org/\" target=\"_blank"
+"\">Open Archives Initiative</a> protokolom za sakupljanje metapodataka što "
+"je novi standard za obezbjeđivanje dobro indeksiranog pristupa elektronskim "
+"resursima na globalnom nivou. Autori će koristiti sličan šablon za "
+"upisivanje metapodataka o svojim prijavljenim člancima. Upravnik časopisa će "
+"odabrati kategorije za indeksiranje i predstaviti ih autorima kako bi im "
+"pomogao u toku indeksiranja."
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+"Časopisi koji imaju neposredan ili odgođen otvoreni pristup potrebno je "
+"unijeti licencu Creative Commons sa objavljenim radovima u odgovarajuće "
+"vrijeme."
+
+msgid "manager.setup.itemsDescription"
+msgstr ""
+"Stavke u navigacionom meniju mogu biti dodate sadašnjem izgledu (Početna, O "
+"časopisu, Početna korisnička itd.) će se pojaviti na vrhu strane."
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Unesite maksimalan broj stavki koji se može pojaviti na pojedinoj stranici "
+"raznih popisa koje generiše časopis (npr. arhiv izdanja, indeks autora, "
+"popis prijava, korisnika ili uređivanje zaduženja), te broj poveznica na "
+"prethodne odnosno slijedeće stranice popisa koji se može prikazati ispod "
+"popisa."
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Upišite informacije koje mogu biti inetersantne za vaše čitaoce, autore i "
+"recenzente. Tu možete upisati informacije o politici otvorenog pristupa, "
+"fokusa i opsega časopisa, autorska prava, sponzorstva, istoriju časopisa, "
+"izjavu o privatnosti i uključenost u neki od LOCKSS ili CLOCKSS sistema za "
+"arhiviranje."
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr ""
+"Grafička verzija naslova i logo časopisa (kao .gif, .jpg, ili .png fajl) "
+"može da se postavi na početnu stranu i tako zamijeniti tekstualnu verziju "
+"koja bi se inače viđela."
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+"Odaberite temu časopisa i odaberite komponente izgleda. Možete postaviti i "
+"strnicu stila časopisa koja će imati prioritet u prikazu strane ako je "
+"odabrana tema ili u cijelom sistemu."
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"PKP Preservation Network (PN) osigurava besplatne usluge očuvanja za bilo "
+"koji OJS časopis koji ispunjava nekoliko osnovnih kriterija. PKP PN dodatak "
+"za OJS 3 je trenutno u razvoju i uskoro će bit dostupan u galeriji dodataka."
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"LOCKSS licenca će se pojaviti u strani O časopisu odeljku Arhiviranje: <a "
+"href=\"http://www.lockss.org/community/publishers-titles-gln/\" target="
+"\"_blank\">LOCKSS Licenca</a>"
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+"Identifikujte 6-10 biblioteka koje će registrovati i sačuvati kod sebe "
+"kopije vašeg časopisa. Na primer, obratite se institucijama đe rade vaši "
+"urednici, članovi redakcije i/ili institucijama koje već učestvuju u LOCKSS. "
+"Viđi <a href=\"http://www.lockss.org/community/\" target=\"_blank\">the "
+"LOCKSS zajednica</a>."
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"Uključi CLOCKSS da bi sačuvali i distruibuirali sadržaj časopisa u "
+"bibliotekama koje učestvuju preko CLOCKSS <a href=\"{$clockssUrl}\" target="
+"\"_blank\">Izdavački manifest</a> strana."
