@@ -4,7 +4,7 @@
 # Sara Ellen Gaup <sara.e.gaup@uit.no>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-12-17 09:19+0000\n"
+"PO-Revision-Date: 2024-12-17 16:35+0000\n"
 "Last-Translator: Sara Ellen Gaup <sara.e.gaup@uit.no>\n"
 "Language-Team: Sami (Northern) <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/se/>\n"
@@ -92,3 +92,100 @@ msgstr ""
 "Čálli ferte sázustit ahte sisasáddejuvvon čálus deavdá gáibádusaid mat leat "
 "namuhuvvon vuollelis. Sisasáddejuvvon čálus sáhttá máhcahuvvot jus dat bargu "
 "ii leat čađahuvvon."
+
+msgid "navigation.infoForLibrarians"
+msgstr "Girjerájusbargiide"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Dieđut girjerájusbargiide"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Vuorká"
+
+msgid "section.section"
+msgstr "Juogus"
+
+msgid "article.language"
+msgstr "Giella"
+
+msgid "journal.currentIssue"
+msgstr "Ođđaseamos ilmmus"
+
+msgid "journal.viewAllIssues"
+msgstr "Čájet buot nummiriid"
+
+msgid "issue.issue"
+msgstr "Almmuhus"
+
+msgid "issue.issues"
+msgstr "Almmuhusat"
+
+msgid "issue.vol"
+msgstr "Vol."
+
+msgid "issue.no"
+msgstr "Nr."
+
+msgid "issue.title"
+msgstr "Bajilčála"
+
+msgid "issue.fullIssue"
+msgstr "Almmuhusat"
+
+msgid "search.results.orderBy.author"
+msgstr "Čálli"
+
+msgid "submission.logType.article"
+msgstr "Artihkal"
+
+msgid "site.journalCurrent"
+msgstr "Ođđaseamos ilmmus"
+
+msgid "about.submissions"
+msgstr "Boahtán čállosat"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Logge sisa"
+
+msgid "about.peerReviewProcess"
+msgstr "Fágaguoibmeárvvoštallama proseassa"
+
+msgid "search.results.orderBy.article"
+msgstr "Artihkkala namma"
+
+msgid "about.aboutContext"
+msgstr "Áigečállaga birra"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} dahje {$register} vai beasat sáddet čállosa."
+
+msgid "search.results.orderBy.issue"
+msgstr "Almmuhus"
+
+msgid "editor.navigation.issues"
+msgstr "Almmuhusat"
+
+msgid "navigation.browseByAuthor"
+msgstr "Čálli"
+
+msgid "about.openAccessPolicy"
+msgstr "Open Access njuolggadusat"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Vuorká"
+
+msgid "archive.archives"
+msgstr "Vuorká"
+
+msgid "about.aboutSoftware"
+msgstr "Open Journal Systems birra"
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"Dát áigečála geavaha Open Journal Systems {$ojsVersion}, mii lea reaidu "
+"hálddašit ja almmuhit \"Open access\" áigečállagiid. OJS lea lágiduvvon ja "
+"nuvttá juhkkojuvvon  vuogádat oassin Public Knowledge Project GNU General "
+"Public Licence vuolde. Gallet PKP neahttasiiddu <a href=\"https://pkp.sfu.ca/"
+"\">.\n"
+"Váldde njuolgga oktavuođa Sámi Dieđálaš áigečállagiin gažaldagaiguin mat "
+"gusket áigečállagii dahje mo almmuhit áigečállaga bokte."
