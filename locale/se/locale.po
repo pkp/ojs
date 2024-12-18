@@ -4,8 +4,8 @@
 # Sara Ellen Gaup <sara.e.gaup@uit.no>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-12-17 16:35+0000\n"
-"Last-Translator: Sara Ellen Gaup <sara.e.gaup@uit.no>\n"
+"PO-Revision-Date: 2024-12-18 14:05+0000\n"
+"Last-Translator: Karl Magnus Nilsen <karl.magnus.nilsen@uit.no>\n"
 "Language-Team: Sami (Northern) <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/se/>\n"
 "Language: se\n"
@@ -189,3 +189,6 @@ msgstr ""
 "\">.\n"
 "Váldde njuolgga oktavuođa Sámi Dieđálaš áigečállagiin gažaldagaiguin mat "
 "gusket áigečállagii dahje mo almmuhit áigečállaga bokte."
+
+msgid "submissions.published"
+msgstr "Almmuhuvvon"
