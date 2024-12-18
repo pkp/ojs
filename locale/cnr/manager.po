@@ -1,7 +1,7 @@
 # Milutin Markovic <admin@fcjk.me>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-12-17 16:35+0000\n"
+"PO-Revision-Date: 2024-12-18 09:32+0000\n"
 "Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
 "Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "cnr/>\n"
@@ -671,7 +671,7 @@ msgstr ""
 "korištenja za PKP PN."
 
 msgid "manager.setup.plnPluginArchiving"
-msgstr ""
+msgstr "PKP Preservation Network (PN)"
 
 msgid "manager.setup.otherLockss"
 msgstr "LOCKSS i CLOCKSS"
@@ -819,3 +819,254 @@ msgstr ""
 "Uključi CLOCKSS da bi sačuvali i distruibuirali sadržaj časopisa u "
 "bibliotekama koje učestvuju preko CLOCKSS <a href=\"{$clockssUrl}\" target="
 "\"_blank\">Izdavački manifest</a> strana."
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"Prijavi se za CLOCKSS uslugu putem <a href=\"http://clockss.org/\" target="
+"\"_blank\">the CLOCKSS web stranice</a>."
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Uputstva za korekturu"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Dodaj ili ukloni dodatne stavke navigacijske trake."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Dodajte sigurnu poveznicu u e-mail pozivu recenzentima."
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Prikazivanje sadržaja članka"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "Napišite primere ključnih riječi ili tema kao smjernice za autore."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"CLOCKSS licenca će biti prikazana u O časopisu pod Arhiviranje: <a href="
+"\"http://clockss.org/\" target=\"_blank\">CLOCKSS Licenca</a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "Opis CLOCKSS licence"
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.look"
+msgstr "Izgled"
+
+msgid "manager.setup.look.description"
+msgstr ""
+"Zaglavlje početne strane, sadržaj, zaglavlje časopisa, podnožje, "
+"navigacijska traka i stranica stila."
+
+msgid "manager.setup.management"
+msgstr "Upravljanje"
+
+msgid "manager.setup.management.description"
+msgstr ""
+"Pristup i bezbjednost, planiranje objavljivanja, obavještenja, korektura, "
+"izgled i finalne kopije."
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Upravljanje i osnovni koraci uređivanja"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Postavljanje upravljanja i objavljivanja"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "Korak 4. Upravljanje časopisom"
+
+msgid "manager.setup.navigationBar"
+msgstr "Navigacijska traka"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr ""
+"Vrijednost oznake je doslovni niz (npr. \"Postavljanje časopisa\"), a ne "
+"ključ poruke o lokalizaciji (npr. \"menadžer.postavljanje\")"
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Nije postavljen fajl slike na server."
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Stilska stranica nije postavljena."
+
+msgid "manager.setup.note"
+msgstr "Napomena"
+
+msgid "manager.setup.numPageLinks"
+msgstr "Veze stranica"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr "Ograničenje broja poveznica za prikaz sljedećih stranica na popisu."
+
+msgid "manager.setup.onlineIssn"
+msgstr "Onlajn ISSN"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Opcija za broj strana"
+
+msgid "manager.setup.policies"
+msgstr "Uređivačka politika"
+
+msgid "manager.setup.policies.description"
+msgstr ""
+"Fokus, stručna recenzija, sekcije, privatnost, bezbjednost i dodatne stavke "
+"o časopisu."
+
+msgid "manager.setup.printIssn"
+msgstr "Štampani ISSN"
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Raspored objavljivanja"
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Planiranje objavljivanja"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Identifikacija sadržaja časopisa"
+
+msgid "manager.setup.publisher"
+msgstr "Izdavač"
+
+msgid "manager.setup.referenceLinking"
+msgstr "Povezivanje referenci"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr ""
+"Korisnici moraju biti registrovani i prijavljeni da bi pristupili sadržaju "
+"otvorenog pristupa."
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr ""
+"Korisnici moraju biti registrovani i prijavljeni da bi pristupili sajtu "
+"časopisa."
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Uputstvo za recenziju"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Opcije recenzije"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Automatski podśetnici imejlom"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Dozvoljen broj nedelja da se završi recenzija"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr ""
+"Urednici će bodovati kvalitet recenzenata na skali od 1-5 nakon svake "
+"recenzije."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Ograničenje pristupa fajlu"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"Recenzenti će imati pristup prijavljenom članku tek nakon što prihvate "
+"recenziju."
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Pristup za recenzente"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Pristup za recenzenta putem jednog klika"
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Ocjena rada recenzenata"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Podśetnici za recenzente"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Politika recenzije"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Indeksiranje pretraživačima"
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Kratki opis (50-300 znakova) časopisa kojeg će pretraživač prikazati na "
+"prikazu časopisa u rezultatima pretraživanja."
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Sekcije i urednici sekcija"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr ""
+"(Ako sekcije nisu dodate onda su stavke po početnim podešavanjima stavljene "
+"u sekciju Članci.)"
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Urednik časopisa koji će to viđeti kroz postupak uređivanja."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Sekcija časopisa za koju će članak biti razmatran."
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "Uvjek pokaži veze prem finalnim kopijama i ukaži na ograničen pristup."
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Ograničenja pristupa stranici"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Pet koraka do sajta časopisa"
+
+msgid "manager.setup.subjectExamples"
+msgstr ""
+"(npr. Fotosinteza; Crne rupe; Problem četvorobojne mape; Bajezianska teorija)"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Ključne riječi"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Uputstvo za prijavljivanje članka"
+
+msgid "manager.setup.submissions"
+msgstr "Prijave"
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr ""
+"URL je apsolutni URL (npr. \"http://www.example.com\") prije nego relativna "
+"putanja do sajta (npr. \"/manager/setup\")"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+"<strong>Napomena:</strong> Trenutno je isključena mogućnost slanja potvrde o "
+"prijemu prijavljenog članka. Da bi je uključili uradite to u Potvrda prijave "
+"u Emejlovi."
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"Instrukcije za finalnu korekturu će biti dostupne finalnim kontrolorima, "
+"Autorima, Grafičkim urednicima, Urednicima sekcija u fazi uređivanja "
+"prijavljenog članka. Dolje možete viđeti početni niz instrukcija u HTML koje "
+"Upravnik časopisa može izmijeniti ili zamijeniti u bilo koje vrijeme (u HTML "
+"ili u čistom tekstu)."
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"Prilozi časopisa mogu biti objavljeni kolektivno kao dio broja sa svojim "
+"Sadržajem. Inače, pojedinačni prilozi mogu biti objavljeni čim budu spremni "
+"za objavljivanje dodavanjem u trenutni broj i njihov Sadržaj. Stavite u "
+"strani O časopisu informaciju koji će sistem časopis imati u objavljivanju "
+"te koliko često će izlaziti."
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr ""
+"<strong>Napomena:</strong> Da biste aktivirali ovu opciju, administrator "
+"stranice mora omogućiti <tt>scheduled_tasks</tt> opciju u konfiguracijskom "
+"fajlu (što možda neće biti moguće na svim serverima), kao što je pojašnjeno "
+"u OJS dokumentaciji."
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"Napišite kratak opis časopisa koji mogu prikazati pretraživači kad prikazuju "
+"rezultate pretrage. Preporučujemo vam da pošaljete <a href=\"{$sitemapUrl}\" "
+"target=\"_blank\">mapu web stranice</a>."
+
+msgid "manager.setup.sectionsDescription"
+msgstr ""
+"Da bi kreirali ili modifikovali sekcije/rubrike u ovom časopisu (npr. "
+"Članci, Prikazi knjiga itd) ideite na Upravljanje sekcijama <br /><br /> "
+"Autori će prilikom prijave članaka u časopis dodijeliti...."
