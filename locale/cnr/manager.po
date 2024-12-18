@@ -1,7 +1,7 @@
 # Milutin Markovic <admin@fcjk.me>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-12-18 09:32+0000\n"
+"PO-Revision-Date: 2024-12-18 14:05+0000\n"
 "Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
 "Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "cnr/>\n"
@@ -493,7 +493,7 @@ msgid "manager.setup.emailBounceAddress"
 msgstr "Adresa za vraćene poruke"
 
 msgid "manager.setup.emailBounceAddress.description"
-msgstr "Sve neisporučene poruke će se vratiti na ovu adresu"
+msgstr "Sve neisporučene poruke će se vratiti na ovu adresu."
 
 msgid "manager.setup.emails"
 msgstr "Email identifikacija"
@@ -513,7 +513,7 @@ msgstr ""
 "obavijesti ne bi prikazivale."
 
 msgid "manager.setup.enableUserRegistration"
-msgstr "Korisnici mogu sami da se registruju"
+msgstr "Korisnici mogu sami da se registruju."
 
 msgid "manager.setup.focusAndScope"
 msgstr "Fokus i područje primjene"
@@ -629,7 +629,7 @@ msgid "manager.setup.journalSetup"
 msgstr "Podešavanje časopisa"
 
 msgid "manager.setup.journalSetupUpdated"
-msgstr "Ažurirano je podešavanje vašeg časopisa"
+msgstr "Ažurirano je podešavanje vašeg časopisa."
 
 msgid "manager.setup.journalStyleSheetInvalid"
 msgstr "Neispravan format stranice stila. Prihvaćen format je .css."
@@ -715,7 +715,7 @@ msgstr ""
 "Dodajte Urednika rubrike kako bi se prijavljeni članci automatski dodijeliti "
 "Uredniku rubrike. (U suprotnom, Urednici rubrike mogu biti dodati ručno "
 "nakon prijavljenog članka.) Kad se doda, Urednik rubrike može biti "
-"automatski  dodijeljen da nadgleda recenzije (stručna recenzija) i/ili "
+"automatski dodijeljen da nadgleda recenzije (stručna recenzija) i/ili "
 "uređivanje (korektura, lektura, izgled) prijavljenih članaka u rubrici. "
 "Urednici rubrika se kreiraju tako što se klikne na Urednici rubrike u Uloge "
 "i Upravljanje časopisom."
@@ -838,7 +838,7 @@ msgid "manager.setup.siteAccess.viewContent"
 msgstr "Prikazivanje sadržaja članka"
 
 msgid "manager.setup.subjectProvideExamples"
-msgstr "Napišite primere ključnih riječi ili tema kao smjernice za autore."
+msgstr "Napišite primere ključnih riječi ili tema kao smjernice za autore"
 
 msgid "manager.setup.clockssLicenseDescription"
 msgstr ""
@@ -1070,3 +1070,246 @@ msgstr ""
 "Da bi kreirali ili modifikovali sekcije/rubrike u ovom časopisu (npr. "
 "Članci, Prikazi knjiga itd) ideite na Upravljanje sekcijama <br /><br /> "
 "Autori će prilikom prijave članaka u časopis dodijeliti...."
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr ""
+"Odaberite sekcije/rubrike da bi izračunali statistike stručnih recenzija za "
+"ovaj časopis."
+
+msgid "manager.setup.submissions.description"
+msgstr ""
+"Uputsvo autorima, autorska prava i indeksiranje (uključujući registraciju)."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Spriječite korisnike da šalju nove članke u časopis. Prijave se mogu "
+"onemogućiti za pojedinačne sekcije časopisa na stranici postavki <a href=\""
+"{$url}\"> sekcije časopisa</a>."
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Ovaj časopis trenutno ne prihvata prijave. Posjetite postavke toka rada kako "
+"biste omogućili predaje članaka."
+
+msgid "manager.setup.enableOai"
+msgstr "Uključi OAI"
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Pružanje metapodataka vanjskim uslugama indeksiranja kroz <a href=\"https"
+"://www.openarchives.org/\">Open Archives Initiative</a>."
+
+msgid "manager.setup.typeExamples"
+msgstr ""
+"(npr., Istorijsko istraživanje; Kvazieksperimentalno; Literarna analiza; "
+"Anketa/intervju)"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Tip (Metoda/Pristup)"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr ""
+"Napišite primjere relevantnih tipova istraživanja, metoda i pristupa ovom "
+"polju"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Jedinstveni identifikator"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr ""
+"Članci i brojevi časopisa mogu biti označeni jedinstvenim identifikacijskim "
+"brojem ili nizom znakova, koristeći sistem za evidentiranje poput Digital "
+"Object Identifier System (DOI)."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "Časopis će voditi Urednički/recenzentski odbor."
+
+msgid "manager.setup.useThumbnail"
+msgstr "Mala slika"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Slika naslova"
+
+msgid "manager.setup.userRegistration"
+msgstr "Registracija korisnika"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Tekst naslova"
+
+msgid "manager.statistics.statistics"
+msgstr "Statistika časopisa"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Broj pregleda članaka (samo za autore)"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Prihvati"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Ne prihvati"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Dana do recenzije"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Dana do objave"
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Objavljenih članaka"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr ""
+"Odaberite stavke koje trebaju biti vidljive za čitaoce na strani O časopisu."
+
+msgid "manager.statistics.statistics.note"
+msgstr ""
+"Napomena: Zbroj postotaka za ishode recenzija može biti različit od 100% jer "
+"ponovno prijavljeni prilozi mogu biti ili prihvaćeni, ili odbijeni, ili se "
+"još nalaziti u postupku."
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Objavljenih brojeva"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Ukupno prijavljenih članaka"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Stručno recenzirano"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Registrovani čitaoci"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "Broj dodijeljenih"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Recenzenta"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Urednikova ocjena"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Broj recenzija"
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Pretplate"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Preuzimanja dokumenta članka"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Broj pregleda stranice sa sažetkom"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Sažetak članka i preuzimanja"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Broj pregleda naslovnice časopisa"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Broj pregleda Sadržaja"
+
+msgid "manager.subscriptionPolicies"
+msgstr "Politika pretplate"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Odgođeni otvoreni pristup"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Koristite polje za potvrdu."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Istek pretplate"
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Potpuni istek"
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Djelimični istek"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} neđelja"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr "Obavijesti pretplatnike putem e-maila nakon isteka pretplate."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr "Obavijesti pretplatnike putem e-maila prije isteka pretplate."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr "Obavijesti pretplatnike putem e-maila prije isteka pretplate."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Podśetnici o isteku pretplate"
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Odaberite jedno od sledećeg:"
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr ""
+"HTML može da se koristi u području za tekst (za veličinu fonta, boju itd.) "
+"čiji rezultati su tretirani kao <tt>&lt;br&gt;</tt>; HTML editor radi u "
+"Firefox pretraživaču."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "Odaberite tačnu vrijednost za broj meseci nakon isteka pretplate."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "Odaberite tačnu vrijednost za broj mjeseci prije isteka pretplate."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "Odaberite tačnu vrijednost za broj neđelja nakon isteka pretplate."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+"Registrovani čitaoci će imati opciju da primaju Sadržaj časopisa porukom kad "
+"broj postane objavljen u otovorenom pristupu."
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Ponovo prijavi"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr ""
+"Čitaocima je uskraćen pristup cjelokupnom sadržaju nakon isteka pretplate."
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} mjeseci"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr "Obavijesti pretplatnike putem e-maila nakon isteka pretplate"
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "Odaberite tačnu vrijednost za broj neđelja nakon isteka pretplate."
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+"OJS izračunava sljedeće statistike za svaki časopis. Broj \"dana do "
+"recenzije\" je izračunat od dana prijave članka (ili dodjele recenzentske "
+"verzije) do početne urednikove odluke dok je broj \"dana do objavljivanja\" "
+"mjeren za prihvaćenje prijave od izvornog postavljanja u sistem do "
+"objavljivanja."
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr ""
+"Nakon isteka pretplate čitaocima može biti onemogućen pristup na sadržaj "
+"koji je u pretplati ili se može zadržati pristup pretplati za sadržaj koji "
+"je objavljen prije isteka pretplate."
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr ""
+"Čitaocima je uskraćen pristup sadržajima koji su nedavno objavljeni u dijelu "
+"za pretplatu, ali zadržvaju pravo pristupa sadržaju koji je objavljen prije "
+"isteka pretplate."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr ""
+"Automatski podśetnici (koji može da uredi Upravnik časopisa u delu za poruke "
+"u OJS) se mogu poslati pretplatnicima prije i posle isteka perioda pretplate."
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr ""
+"<strong>Napomena:</strong> Da bi aiktivirali ove mogućnosti administrator "
+"mora omogućiti <tt>scheduled_tasks</tt> opciju u konfiguracionom fajlu za "
+"OJS. Moguće je da su potrebna dodatna podešavanja servera da bi se podržala "
+"ova funkcija (što možda nije moguće na svim serverima) kao što je naznačeno "
+"u dokumentaciji za OJS."
