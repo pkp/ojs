@@ -388,7 +388,7 @@ describe('Data suite: Amwandenga', function() {
 
 		cy.openWorkflowMenu('Galleys')
 		cy.get('button:contains("Add galley")').should('not.exist');
-		cy.get('button[aria-label="More Actions"]').click();
+		cy.get('[data-cy="active-modal"] button[aria-label="More Actions"]').click();
 		cy.get('button:contains("View")').should('exist');
 	});
 
@@ -499,7 +499,7 @@ describe('Data suite: Amwandenga', function() {
 		// Edit Galley
 		cy.openWorkflowMenu('Galleys')
 		cy.contains('Add galley');
-		cy.get('button[aria-label="More Actions"]').click();
+		cy.get('[data-cy="active-modal"] button[aria-label="More Actions"]').click();
 		cy.get('button:contains("Edit")').click();
 		cy.waitJQuery(); // Wait for the form initialization
 		cy.wait(1000); // Additional wait needed to reduce failures
