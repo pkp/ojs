@@ -190,10 +190,9 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
             $recordNode->appendChild($node = $doc->createElement('fullTextUrl', htmlspecialchars($request->getDispatcher()->url($request, Application::ROUTE_PAGE, null, 'article', 'view', [$pubObject->getId()], urlLocaleForPage: ''), ENT_COMPAT, 'UTF-8')));
             $node->setAttribute('format', 'html');
             // Keywords
-            $supportedLocales = $context->getSupportedFormLocales();
             /** @var SubmissionKeywordDAO */
             $dao = DAORegistry::getDAO('SubmissionKeywordDAO');
-            $articleKeywords = $dao->getKeywords($publication->getId(), $supportedLocales);
+            $articleKeywords = $dao->getKeywords($publication->getId());
             if (array_key_exists($publication->getData('locale'), $articleKeywords)) {
                 $keywordsInArticleLocale = $articleKeywords[$publication->getData('locale')];
                 unset($articleKeywords[$publication->getData('locale')]);
