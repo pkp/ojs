@@ -24,6 +24,9 @@ use APP\plugins\generic\datacite\DataciteExportDeployment;
 use APP\plugins\generic\datacite\DataciteExportPlugin;
 use APP\publication\Publication;
 use APP\submission\Submission;
+use DOMDocument;
+use DOMNode;
+use PKP\context\Context;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
@@ -87,9 +90,8 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
      *
      * @param Issue|Submission|Galley $pubObject
      *
-     * @return \DOMDocument
      */
-    public function &process(&$pubObject)
+    public function &process(&$pubObject): DOMDocument
     {
         // Create the XML document
         $doc = new \DOMDocument('1.0', 'utf-8');
@@ -103,20 +105,22 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $cache = $plugin->getCache();
 
         // Get all objects
-        $issue = $article = $galley = $galleyFile = null;
+        $issue = $article = $galley = $galleyFile = $doi = null;
         if ($pubObject instanceof Issue) {
             $issue = $pubObject;
             if (!$cache->isCached('issues', $issue->getId())) {
                 $cache->add($issue, null);
             }
+            $doi = $issue->getDoi();
         } elseif ($pubObject instanceof Submission) {
             $article = $pubObject;
             if (!$cache->isCached('articles', $article->getId())) {
                 $cache->add($article, null);
             }
+            $doi = $article->getCurrentPublication()->getDoi();
         } elseif ($pubObject instanceof Galley) {
             $galley = $pubObject;
-            $galleyFile = $galley->getFile();
+            $galleyFile = Repo::submissionFile()->get($galley->getData('submissionFileId'));
             $publication = Repo::publication()->get($galley->getData('publicationId'));
             if ($cache->isCached('articles', $publication->getData('submissionId'))) {
                 $article = $cache->get('articles', $publication->getData('submissionId'));
@@ -138,6 +142,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                     }
                 }
             }
+            $doi = $galley->getDoi();
         }
         if (!$issue) {
             $issueId = $article->getCurrentPublication()->getData('issueId');
@@ -174,7 +179,6 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $rootNode = $this->createRootNode($doc);
         $doc->appendChild($rootNode);
         // DOI (mandatory)
-        $doi = $pubObject->getStoredPubId('doi');
         if ($plugin->isTestMode($context)) {
             $testDOIPrefix = $plugin->getSetting($context->getId(), 'testDOIPrefix');
             assert(!empty($testDOIPrefix));
@@ -183,9 +187,9 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'identifier', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
         $node->setAttribute('identifierType', DATACITE_IDTYPE_DOI);
         // Creators (mandatory)
-        $rootNode->appendChild($this->createCreatorsNode($doc, $issue, $publication, $galley, $galleyFile, $publisher, $objectLocalePrecedence));
+        $rootNode->appendChild($this->createCreatorsNode($doc, $issue, $publication, $galleyFile, $publisher, $objectLocalePrecedence));
         // Title (mandatory)
-        $rootNode->appendChild($this->createTitlesNode($doc, $issue, $publication, $galley, $galleyFile, $objectLocalePrecedence));
+        $rootNode->appendChild($this->createTitlesNode($doc, $issue, $publication, $galleyFile, $objectLocalePrecedence));
         // Publisher (mandatory)
         $rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'publisher', htmlspecialchars($publisher, ENT_COMPAT, 'UTF-8')));
         // Publication Year (mandatory)
@@ -208,7 +212,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             $rootNode->appendChild($subjectsNode);
         }
         // Dates
-        $rootNode->appendChild($this->createDatesNode($doc, $issue, $article, $publication, $galley, $galleyFile, $publicationDate));
+        $rootNode->appendChild($this->createDatesNode($doc, $issue, $article, $publication, $galleyFile, $publicationDate));
         // Language
         $rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'language', str_replace(['_', '@'], '-', $objectLocalePrecedence[0])));
         // Resource Type
@@ -224,7 +228,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             $rootNode->appendChild($relatedIdentifiersNode);
         }
         // Sizes
-        $sizesNode = $this->createSizesNode($doc, $issue, $article, $publication, $galley, $galleyFile);
+        $sizesNode = $this->createSizesNode($doc, $issue, $galley, $galleyFile);
         if ($sizesNode) {
             $rootNode->appendChild($sizesNode);
         }
@@ -264,12 +268,8 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
     //
     /**
      * Create and return the root node.
-     *
-     * @param \DOMDocument $doc
-     *
-     * @return \DOMElement
      */
-    public function createRootNode($doc)
+    public function createRootNode(DOMDocument $doc): DOMNode
     {
         /** @var DataciteExportDeployment */
         $deployment = $this->getDeployment();
@@ -281,18 +281,8 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
 
     /**
      * Create creators node.
-     *
-     * @param \DOMDocument $doc
-     * @param \APP\issue\Issue $issue
-     * @param \APP\publication\Publication $publication
-     * @param \PKP\galley\Galley $galley
-     * @param \PKP\submissionFile\SubmissionFile $galleyFile
-     * @param string $publisher
-     * @param array $objectLocalePrecedence
-     *
-     * @return \DOMElement
      */
-    public function createCreatorsNode($doc, $issue, $publication, $galley, $galleyFile, $publisher, $objectLocalePrecedence)
+    public function createCreatorsNode(DOMDocument $doc, Issue $issue, Publication $publication, ?SubmissionFile $galleyFile, string $publisher, array $objectLocalePrecedence): DOMNode
     {
         /** @var DataciteExportDeployment */
         $deployment = $this->getDeployment();
@@ -312,8 +302,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                     ];
                     break;
                 }
-                // ...if not then go on by retrieving the publication
-                // authors.
+                // ...if not then go on by retrieving the publication authors.
                 // no break
             case isset($publication):
                 // Retrieve the publication authors.
@@ -366,17 +355,8 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
 
     /**
      * Create titles node.
-     *
-     * @param \DOMDocument $doc
-     * @param \APP\issue\Issue $issue
-     * @param \APP\publication\Publication $publication
-     * @param \PKP\galley\Galley $galley
-     * @param \PKP\submissionFile\SubmissionFile $galleyFile
-     * @param array $objectLocalePrecedence
-     *
-     * @return \DOMElement
      */
-    public function createTitlesNode($doc, $issue, $publication, $galley, $galleyFile, $objectLocalePrecedence)
+    public function createTitlesNode(DOMDocument $doc, Issue $issue, Publication $publication, ?SubmissionFile $galleyFile, array $objectLocalePrecedence): DOMNode
     {
         /** @var DataciteExportDeployment */
         $deployment = $this->getDeployment();
@@ -419,18 +399,8 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
 
     /**
      * Create a date node list.
-     *
-     * @param \DOMDocument $doc
-     * @param Issue $issue
-     * @param Submission $article
-     * @param Publication $publication
-     * @param Galley $galley
-     * @param SubmissionFile $galleyFile
-     * @param string $publicationDate
-     *
-     * @return \DOMElement
      */
-    public function createDatesNode($doc, $issue, $article, $publication, $galley, $galleyFile, $publicationDate)
+    public function createDatesNode(DOMDocument $doc, Issue $issue, Submission $article, Publication $publication, ?SubmissionFile $galleyFile, string $publicationDate): DOMNode
     {
         /** @var DataciteExportDeployment */
         $deployment = $this->getDeployment();
@@ -508,16 +478,8 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
 
     /**
      * Create a resource type node.
-     *
-     * @param \DOMDocument $doc
-     * @param Issue $issue
-     * @param Submission $article
-     * @param Galley $galley
-     * @param SubmissionFile $galleyFile
-     *
-     * @return \DOMElement
      */
-    public function createResourceTypeNode($doc, $issue, $article, $galley, $galleyFile)
+    public function createResourceTypeNode(DOMDocument $doc, Issue $issue, Submission $article, ?Galley $galley, ?SubmissionFile $galleyFile): DOMNode
     {
         /** @var DataciteExportDeployment */
         $deployment = $this->getDeployment();
@@ -561,15 +523,8 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
 
     /**
      * Generate alternate identifiers node list.
-     *
-     * @param \DOMDocument $doc
-     * @param Issue $issue
-     * @param Submission $article
-     * @param Galley $galley
-     *
-     * @return \DOMElement
      */
-    public function createAlternateIdentifiersNode($doc, $issue, $article, $galley)
+    public function createAlternateIdentifiersNode(DOMDocument $doc, Issue $issue, Submission $article, ?Galley $galley): DOMNode
     {
         $deployment = $this->getDeployment();
         $context = $deployment->getContext();
@@ -605,16 +560,8 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
 
     /**
      * Generate related identifiers node list.
-     *
-     * @param \DOMDocument $doc
-     * @param Issue $issue
-     * @param Submission $article
-     * @param Publication $publication
-     * @param Galley $galley
-     *
-     * @return ?\DOMElement
      */
-    public function createRelatedIdentifiersNode($doc, $issue, $article, $publication, $galley)
+    public function createRelatedIdentifiersNode(DOMDocument $doc, Issue $issue, Submission $article, Publication $publication, ?Galley $galley): ?DOMNode
     {
         $deployment = $this->getDeployment();
         $relatedIdentifiersNode = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifiers');
@@ -622,7 +569,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             case isset($galley):
                 // Part of: article.
                 assert(isset($article));
-                $doi = $article->getStoredPubId('doi');
+                $doi = $publication->getStoredPubId('doi');
                 if (!empty($doi)) {
                     $relatedIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifier', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
                     $node->setAttribute('relatedIdentifierType', DATACITE_IDTYPE_DOI);
@@ -679,17 +626,8 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
 
     /**
      * Create a sizes node list.
-     *
-     * @param \DOMDocument $doc
-     * @param Issue $issue
-     * @param Submission $article
-     * @param Publication $publication
-     * @param Galley $galley
-     * @param SubmissionFile $galleyFile
-     *
-     * @return ?\DOMElement Can be null if a size cannot be identified for the given object.
      */
-    public function createSizesNode($doc, $issue, $article, $publication, $galley, $galleyFile)
+    public function createSizesNode(DOMDocument $doc, Issue $issue, ?Galley $galley, ?SubmissionFile $galleyFile): ?DOMNode
     {
         $deployment = $this->getDeployment();
         $sizes = [];
@@ -726,18 +664,8 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
 
     /**
      * Create descriptions node list.
-     *
-     * @param \DOMDocument $doc
-     * @param Issue $issue
-     * @param Submission $article
-     * @param Publication $publication
-     * @param Galley $galley
-     * @param SubmissionFile $galleyFile
-     * @param array $objectLocalePrecedence
-     *
-     * @return ?\DOMElement Can be null if a size cannot be identified for the given object.
      */
-    public function createDescriptionsNode($doc, $issue, $article, $publication, $galley, $galleyFile, $objectLocalePrecedence)
+    public function createDescriptionsNode(DOMDocument $doc, Issue $issue, Submission $article, Publication $publication, ?Galley $galley, ?SubmissionFile $galleyFile, array $objectLocalePrecedence): ?DOMNode
     {
         /** @var DataciteExportDeployment */
         $deployment = $this->getDeployment();
@@ -785,17 +713,8 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
 
     /**
      * Create related items node.
-     *
-     * @param \DOMDocument $doc
-     * @param Issue $issue
-     * @param Submission $article
-     * @param Publication $publication
-     * @param string $publisher
-     * @param array $objectLocalePrecedence
-     *
-     * @return ?\DOMElement Can be null if a size cannot be identified for the given object.
      */
-    public function createRelatedItemsNode($doc, $issue, $article, $publication, $publisher, $objectLocalePrecedence)
+    public function createRelatedItemsNode(DOMDocument $doc, Issue $issue, Submission $article, Publication $publication, string $publisher, array $objectLocalePrecedence): ?DOMNode
     {
         /** @var DataciteExportDeployment */
         $deployment = $this->getDeployment();
@@ -878,15 +797,9 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
     /**
      * Identify the locale precedence for this export.
      *
-     * @param \PKP\context\Context $context
-     * @param \APP\submission\Submission $article
-     * @param \APP\publication\Publication $publication
-     * @param \PKP\galley\Galley $galley
-     *
-     * @return array A list of valid PKP locales in descending
-     *  order of priority.
+     * @return array A list of valid PKP locales ordered by priority.
      */
-    public function getObjectLocalePrecedence($context, $article, $publication, $galley)
+    public function getObjectLocalePrecedence(Context $context, Submission $article, Publication $publication, ?Galley $galley): array
     {
         $locales = [];
         if ($galley instanceof Galley && Locale::isLocaleValid($galley->getLocale())) {
@@ -947,10 +860,10 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
      * @param array $localePrecedence An array of locales
      *  by descending priority.
      *
-     * @return mixed|null The value of the primary locale
+     * @return mixed The value of the primary locale
      *  or null if no primary translation could be found.
      */
-    public function getPrimaryTranslation($localizedData, $localePrecedence)
+    public function getPrimaryTranslation(array $localizedData, array $localePrecedence): mixed
     {
         // Check whether we have localized data at all.
         if (!is_array($localizedData) || empty($localizedData)) {
@@ -984,7 +897,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
      *
      * @return array Re-ordered localized data.
      */
-    public function getTranslationsByPrecedence($localizedData, $localePrecedence)
+    public function getTranslationsByPrecedence(array $localizedData, array $localePrecedence): array
     {
         $reorderedLocalizedData = [];
 
@@ -1013,13 +926,10 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
      * Construct an issue title from the journal title
      * and the issue identification.
      *
-     * @param \APP\issue\Issue $issue
-     * @param array $objectLocalePrecedence
-     *
      * @return array|string An array of localized issue titles
      *  or a string if a locale has been given.
      */
-    public function getIssueInformation($issue, $objectLocalePrecedence = null)
+    public function getIssueInformation(Issue $issue, array $objectLocalePrecedence = null): array|string
     {
         $deployment = $this->getDeployment();
         $context = $deployment->getContext();
@@ -1042,13 +952,8 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
 
     /**
      * Construct a table of content for an issue.
-     *
-     * @param \APP\issue\Issue $issue
-     * @param array $objectLocalePrecedence
-     *
-     * @return string
      */
-    public function getIssueToc($issue, $objectLocalePrecedence)
+    public function getIssueToc(Issue $issue, array $objectLocalePrecedence): string
     {
         $submissions = Repo::submission()
             ->getCollector()
