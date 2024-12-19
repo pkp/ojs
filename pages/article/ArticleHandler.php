@@ -359,8 +359,9 @@ class ArticleHandler extends Handler
 
             // ror icon
             $rorIdIcon = 'ROR';
-            if (file_exists('templates/images/ror-org-logo-icon.svg'))
-                $rorIdIcon = file_get_contents('templates/images/ror-org-logo-icon.svg');
+            if (file_exists('lib/pkp/templates/images/ror.svg')) {
+                $rorIdIcon = file_get_contents('lib/pkp/templates/images/ror.svg');
+            }
             $templateMgr->assign('rorIdIcon', $rorIdIcon);
 
             if (!Hook::call('ArticleHandler::view', [&$request, &$issue, &$article, $publication])) {
