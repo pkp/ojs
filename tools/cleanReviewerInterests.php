@@ -93,7 +93,7 @@ class ReviewerInterestsDeletionTool extends CommandLineTool
         $controlledVocab = Repo::controlledVocab()->build(
             UserInterest::CONTROLLED_VOCAB_INTEREST,
             Application::ASSOC_TYPE_SITE,
-            (int)Application::SITE_CONTEXT_ID,
+            Application::SITE_CONTEXT_ID,
         );
 
         return ControlledVocabEntry::query()
