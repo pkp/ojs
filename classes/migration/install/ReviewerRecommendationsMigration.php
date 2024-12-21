@@ -9,23 +9,32 @@
  *
  * @class ReviewerRecommendationsMigration
  *
- * @brief
+ * @brief Describe database table structures .
  */
 
 namespace APP\migration\install;
 
 class ReviewerRecommendationsMigration extends \PKP\migration\install\ReviewerRecommendationsMigration
 {
+    /**
+     * @copydoc \PKP\migration\install\ReviewerRecommendationsMigratio::contextTable()
+     */
     public function contextTable(): string
     {
         return 'journals';
     }
 
+    /**
+     * @copydoc \PKP\migration\install\ReviewerRecommendationsMigratio::settingTable()
+     */
     public function settingTable(): string
     {
         return 'journal_settings';
     }
 
+    /**
+     * @copydoc \PKP\migration\install\ReviewerRecommendationsMigratio::contextPrimaryKey()
+     */
     public function contextPrimaryKey(): string
     {
         return 'journal_id';
