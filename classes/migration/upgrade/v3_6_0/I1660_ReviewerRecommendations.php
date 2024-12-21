@@ -9,7 +9,7 @@
  *
  * @class I1660_ReviewerRecommendations.php
  *
- * @brief
+ * @brief Upgrade migration add recommendations
  *
  */
 
@@ -19,6 +19,9 @@ use PKP\submission\reviewer\recommendation\ReviewerRecommendation;
 
 class I1660_ReviewerRecommendations extends \PKP\migration\upgrade\v3_6_0\I1660_ReviewerRecommendations
 {
+    /**
+     * @copydoc \PKP\migration\upgrade\v3_6_0\I1660_ReviewerRecommendations::systemDefineNonRemovableRecommendations()
+     */
     protected function systemDefineNonRemovableRecommendations(): array
     {
         return ReviewerRecommendation::seedableRecommendations();
