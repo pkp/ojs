@@ -28,6 +28,7 @@ use APP\journal\Journal;
 use APP\oai\ojs\OAIDAO;
 use APP\plugins\PubIdPlugin;
 use APP\submission\Submission;
+use PKP\controlledVocab\ControlledVocab;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
@@ -35,8 +36,6 @@ use PKP\metadata\MetadataDataObjectAdapter;
 use PKP\metadata\MetadataDescription;
 use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
-use PKP\submission\SubmissionKeywordDAO;
-use PKP\submission\SubmissionSubjectDAO;
 
 class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
 {
@@ -90,12 +89,20 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         }
 
         // Subject
-        $submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /** @var SubmissionKeywordDAO $submissionKeywordDao */
-        $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /** @var SubmissionSubjectDAO $submissionSubjectDao */
         $supportedLocales = $journal->getSupportedFormLocales();
         $subjects = array_merge_recursive(
-            (array) $submissionKeywordDao->getKeywords($publication->getId(), $supportedLocales),
-            (array) $submissionSubjectDao->getSubjects($publication->getId(), $supportedLocales)
+            Repo::controlledVocab()->getBySymbolic(
+                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
+                Application::ASSOC_TYPE_PUBLICATION,
+                $publication->getId(),
+                $supportedLocales
+            ),
+            Repo::controlledVocab()->getBySymbolic(
+                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_SUBJECT,
+                Application::ASSOC_TYPE_PUBLICATION,
+                $publication->getId(),
+                $supportedLocales
+            )
         );
         $this->_addLocalizedElements($dc11Description, 'dc:subject', $subjects);
 

@@ -16,18 +16,15 @@
 
 namespace APP\plugins\reports\articles;
 
+use APP\core\Application;
 use APP\decision\Decision;
 use APP\facades\Repo;
-use PKP\db\DAORegistry;
+use PKP\controlledVocab\ControlledVocab;
 use PKP\facades\Locale;
 use PKP\plugins\ReportPlugin;
 use PKP\security\Role;
 use PKP\stageAssignment\StageAssignment;
 use PKP\submission\PKPSubmission;
-use PKP\submission\SubmissionAgencyDAO;
-use PKP\submission\SubmissionDisciplineDAO;
-use PKP\submission\SubmissionKeywordDAO;
-use PKP\submission\SubmissionSubjectDAO;
 use PKP\userGroup\UserGroup;
 
 class ArticleReportPlugin extends ReportPlugin
@@ -85,11 +82,6 @@ class ArticleReportPlugin extends ReportPlugin
         $fp = fopen('php://output', 'wt');
         // Add BOM (byte order mark) to fix UTF-8 in Excel
         fprintf($fp, chr(0xEF) . chr(0xBB) . chr(0xBF));
-
-        $submissionKeywordDao = DAORegistry::getDAO('SubmissionKeywordDAO'); /** @var SubmissionKeywordDAO $submissionKeywordDao */
-        $submissionSubjectDao = DAORegistry::getDAO('SubmissionSubjectDAO'); /** @var SubmissionSubjectDAO $submissionSubjectDao */
-        $submissionDisciplineDao = DAORegistry::getDAO('SubmissionDisciplineDAO'); /** @var SubmissionDisciplineDAO $submissionDisciplineDao */
-        $submissionAgencyDao = DAORegistry::getDAO('SubmissionAgencyDAO'); /** @var SubmissionAgencyDAO $submissionAgencyDao */
 
         $userGroups = UserGroup::withContextIds([$context->getId()])
             ->get()
@@ -159,10 +151,29 @@ class ArticleReportPlugin extends ReportPlugin
                 $sectionTitles[$sectionId] = $section->getLocalizedTitle();
             }
 
-            $subjects = $submissionSubjectDao->getSubjects($submission->getCurrentPublication()->getId());
-            $disciplines = $submissionDisciplineDao->getDisciplines($submission->getCurrentPublication()->getId());
-            $keywords = $submissionKeywordDao->getKeywords($submission->getCurrentPublication()->getId());
-            $agencies = $submissionAgencyDao->getAgencies($submission->getCurrentPublication()->getId());
+            $subjects = Repo::controlledVocab()->getBySymbolic(
+                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_SUBJECT,
+                Application::ASSOC_TYPE_PUBLICATION,
+                $submission->getCurrentPublication()->getId()
+            );
+
+            $disciplines = Repo::controlledVocab()->getBySymbolic(
+                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_DISCIPLINE,
+                Application::ASSOC_TYPE_PUBLICATION,
+                $submission->getCurrentPublication()->getId()
+            );
+
+            $keywords = Repo::controlledVocab()->getBySymbolic(
+                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
+                Application::ASSOC_TYPE_PUBLICATION,
+                $submission->getCurrentPublication()->getId()
+            );
+
+            $agencies = Repo::controlledVocab()->getBySymbolic(
+                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_AGENCY,
+                Application::ASSOC_TYPE_PUBLICATION,
+                $submission->getCurrentPublication()->getId()
+            );
 
             // Store the submission results
             $results[] = [
