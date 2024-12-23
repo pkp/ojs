@@ -23,7 +23,7 @@
 
 		{* optional elements *}
 		{if $journal->getPrimaryLocale()}
-			<language>{$journal->getPrimaryLocale()|replace:'_':'-'|strip|escape:"html"}</language>
+			<language>{$language|escape}</language>
 		{/if}
 		{capture assign="dateUpdated"}{$dateUpdated|strtotime}{/capture}
 		<pubDate>{$smarty.const.DATE_RSS|date:$dateUpdated}</pubDate>
