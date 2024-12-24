@@ -18,6 +18,85 @@
 			"validation": [
 				"nullable"
 			]
+		},
+		"reviewerSuggestions": {
+			"type": "array",
+			"description": "Information about suggested reviewers at the time of submission.",
+			"readOnly": true,
+			"items": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "integer"
+					},
+					"familyName" : {
+						"type": "string",
+						"multilingual": true,
+						"apiSummary": true
+					},
+					"givenName": {
+						"type": "string",
+						"multilingual": true,
+						"apiSummary": true
+					},
+					"fullName": {
+						"type": "string",
+						"multilingual": true,
+						"apiSummary": true
+					},
+					"email": {
+						"type": "string",
+						"apiSummary": true
+					},
+					"orcidId": {
+						"type": "string",
+						"apiSummary": true,
+						"validation": [
+							"nullable"
+						]
+					},
+					"suggestionReason": {
+						"type": "string",
+						"multilingual": true,
+						"apiSummary": true
+					},
+					"affiliation" : {
+						"type": "string",
+						"multilingual": true,
+						"apiSummary": true
+					},
+					"approvedAt": {
+						"type": "string",
+						"apiSummary": true,
+						"description": "The date suggestion was approved as reviewer.",
+						"validation": [
+							"nullable",
+							"date:Y-m-d H:i:s"
+						]
+					},
+					"existingUserId": {
+						"type": "integer",
+						"apiSummary": true,
+						"description": "The existing user id if already present as an user.",
+						"validation": [
+							"nullable"
+						]
+					},
+					"existingReviewerRole": {
+						"type": "boolean",
+						"apiSummary": true,
+						"description": "The existing user has reviewer role when already there is an existing user association."
+					},
+					"reviewerId": {
+						"type": "integer",
+						"apiSummary": true,
+						"description": "The existing user id with reviewer role who as been mapped to this suggestion after the suggestion has made",
+						"validation": [
+							"nullable"
+						]
+					}
+				}
+			}
 		}
 	}
 }
