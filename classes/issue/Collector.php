@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/issue/Collector.php
  *
@@ -22,6 +23,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\LazyCollection;
 use InvalidArgumentException;
 use PKP\core\interfaces\CollectorInterface;
+use PKP\doi\Doi;
 use PKP\plugins\Hook;
 
 class Collector implements CollectorInterface
@@ -414,8 +416,11 @@ class Collector implements CollectorInterface
                 )
             );
 
+            // Add support to search using DOI identifiers
+            // search phrases starting with number followed by a '.'  will be interpreted as a DOI identifier. E.g: 10.1
+            $isSearchPhraseDoi = Doi::beginsWithDoiPrefixPattern($searchPhrase);
             $words = array_filter(array_unique(explode(' ', $searchPhrase)), 'strlen');
-            if (count($words)) {
+            if (count($words) && !$isSearchPhraseDoi) {
                 $likePattern = DB::raw("CONCAT('%', LOWER(?), '%')");
                 foreach ($words as $word) {
                     $q->where(
@@ -440,6 +445,24 @@ class Collector implements CollectorInterface
                             ->when(ctype_digit($word) && strlen($word) === 4, fn (Builder $q) => $q->orWhere('i.year', '=', $word))
                     );
                 }
+            }
+
+            if ($isSearchPhraseDoi) {
+                $q->when(
+                    Application::get()->getRequest()->getContext()->isDoiTypeEnabled(Repo::doi()::TYPE_ISSUE),
+                    function (Builder $query) {
+                        $query->whereIn('i.issue_id', function (Builder $query) {
+                            $query->select('is.issue_id')
+                                ->from('issues as is')
+                                ->join('dois AS d', 'is.doi_id', '=', 'd.doi_id')
+                                ->whereLike('d.doi', "{$this->searchPhrase}%");
+                        });
+                    },
+                    function (Builder $query) {
+                        // Default to empty result if searching by DOI when issue DOI is not enabled.
+                        $query->whereRaw('1 = 0');
+                    }
+                );
             }
         }
 

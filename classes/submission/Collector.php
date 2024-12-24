@@ -14,6 +14,7 @@
 
 namespace APP\submission;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use Illuminate\Database\Query\Builder;
 
@@ -123,6 +124,34 @@ class Collector extends \PKP\submission\Collector
                                 $q->whereNotNull('current_g.galley_id');
                             });
                         });
+                    });
+                });
+        });
+    }
+
+    /** @copydoc PKP/classes/submission/Collector::addFilterByAssociatedDoiIdsToQuery() */
+    protected function addFilterByAssociatedDoiIdsToQuery(Builder $q)
+    {
+        $q->whereIn('s.submission_id', function (Builder $query) {
+            $context = Application::get()->getRequest()->getContext();
+
+            // Does two things:
+            // 1 - Defaults to empty result when no DOIs are enabled.
+            // 2 - Ensures that the union clause can be safely used if the query with the union clause is the only one that is executed.
+            $query->selectRaw('NULL AS submission_id')->whereRaw('1 = 0');
+            $query->when($context->isDoiTypeEnabled(Repo::doi()::TYPE_REPRESENTATION), function (Builder $q) {
+                $q->select('p.submission_id')
+                    ->from('publication_galleys AS g')
+                    ->join('dois AS d', 'g.doi_id', '=', 'd.doi_id')
+                    ->join('publications AS p', 'g.publication_id', '=', 'p.publication_id')
+                    ->whereLike('d.doi', "{$this->searchPhrase}%");
+            })
+                ->when($context->isDoiTypeEnabled(Repo::doi()::TYPE_PUBLICATION), function (Builder $q) {
+                    $q->union(function (Builder $q) {
+                        $q->select('p.submission_id')
+                            ->from('publications AS p')
+                            ->join('dois AS d', 'p.doi_id', '=', 'd.doi_id')
+                            ->whereLike('d.doi', "{$this->searchPhrase}%");
                     });
                 });
         });
