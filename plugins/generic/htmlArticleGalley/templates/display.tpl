@@ -17,7 +17,8 @@
 
 	{* Header wrapper *}
 	<header class="header_view">
-		{capture assign="articleUrl"}{url page="article" op="view" path=$article->getBestId()}{/capture}
+
+		{capture assign="articleUrl"}{url page="articles" op="view" path=$article->getBestId()}{/capture}
 
 		<a href="{$articleUrl}" class="return">
 			<span class="pkp_screen_reader">
@@ -38,11 +39,11 @@
 				</div>
 			</div>
 			{capture assign="htmlUrl"}
-				{url page="article" op="download" path=$article->getBestId()|to_array:'version':$galleyPublication->getId():$galley->getBestGalleyId():$submissionFile->getId() inline=true}
+				{url page="articles" op="download" path=$article->getBestId()|to_array:'version':$galleyPublication->getId():$galley->getBestGalleyId():$submissionFile->getId() inline=true}
 			{/capture}
 		{else}
 			{capture assign="htmlUrl"}
-				{url page="article" op="download" path=$article->getBestId()|to_array:$galley->getBestGalleyId():$submissionFile->getId() inline=true}
+				{url page="articles" op="download" path=$article->getBestId()|to_array:$galley->getBestGalleyId():$submissionFile->getId() inline=true}
 			{/capture}
 		{/if}
 		<iframe name="htmlFrame" src="{$htmlUrl}" title="{translate key="submission.representationOfTitle" representation=$galley->getLabel() title=$galleyPublication->getLocalizedFullTitle(null, 'html')|strip_unsafe_html}" allowfullscreen webkitallowfullscreen></iframe>

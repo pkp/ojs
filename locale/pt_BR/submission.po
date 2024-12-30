@@ -156,7 +156,7 @@ msgstr "Opções da seção"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} Itens"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "Todos os itens"
 
 msgid "galley.editPublishedDisabled"

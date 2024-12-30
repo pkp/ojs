@@ -278,6 +278,9 @@ msgstr ""
 msgid "manager.sections.form.abbrevRequired"
 msgstr "An abbreviated title is required for the section"
 
+msgid "manager.setup.form.section.urlPathAlphaNumeric"
+msgstr "The series url path must consist of only letters and numbers."
+
 msgid "manager.sections.form.mustAllowPermission"
 msgstr "Please ensure that at least one checkbox is checked for each Section Editor assignment."
 
@@ -304,6 +307,9 @@ msgstr "Indexed"
 
 msgid "manager.sections.noneCreated"
 msgstr "No sections have been created."
+
+msgid "manager.sections.notBrowsable"
+msgstr "Disable the page that allows readers to browse all publications in this section"
 
 msgid "manager.sections.open"
 msgstr "Open Submissions"
