@@ -148,7 +148,7 @@ msgstr "Možnosti sekcie"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} položiek"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "Všetky položky"
 
 msgid "galley.editPublishedDisabled"

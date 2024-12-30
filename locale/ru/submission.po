@@ -155,7 +155,7 @@ msgstr "Параметры раздела"
 msgid "catalog.browseTitles"
 msgstr "Число категорий: {$numTitles}"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "Все категории"
 
 msgid "galley.editPublishedDisabled"

@@ -154,7 +154,7 @@ msgstr "Bo'lim variantlari"
 msgid "catalog.browseTitles"
 msgstr "{$ numTitles} elementlar"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "Barcha narsalar"
 
 msgid "galley.editPublishedDisabled"

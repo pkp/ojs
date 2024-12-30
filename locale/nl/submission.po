@@ -158,7 +158,7 @@ msgstr "Sectie opties"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} Onderdelen"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "Alle onderdelen"
 
 msgid "galley.editPublishedDisabled"
