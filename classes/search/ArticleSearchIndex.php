@@ -16,9 +16,11 @@
 
 namespace APP\search;
 
+use APP\core\Application;
 use APP\facades\Repo;
 use APP\journal\Journal;
 use APP\journal\JournalDAO;
+use APP\orcid\actions\SendSubmissionToOrcid;
 use APP\submission\Submission;
 use Exception;
 use PKP\core\PKPApplication;
@@ -28,6 +30,7 @@ use PKP\plugins\Hook;
 use PKP\search\SearchFileParser;
 use PKP\search\SubmissionSearch;
 use PKP\search\SubmissionSearchIndex;
+use PKP\submission\PKPSubmission;
 use PKP\submissionFile\SubmissionFile;
 use Throwable;
 
@@ -74,6 +77,10 @@ class ArticleSearchIndex extends SubmissionSearchIndex
         $this->_updateTextIndex($submissionId, SubmissionSearch::SUBMISSION_SEARCH_TYPE, (array) $publication->getData('type'));
         $this->_updateTextIndex($submissionId, SubmissionSearch::SUBMISSION_SEARCH_COVERAGE, (array) $publication->getData('coverage'));
         // FIXME Index sponsors too?
+
+        if ($publication->getData('status') == PKPSubmission::STATUS_PUBLISHED) {
+            (new SendSubmissionToOrcid($publication, Application::getContextDAO()->getById($submission->getData('contextId'))))->execute();
+        }
     }
 
     /**
