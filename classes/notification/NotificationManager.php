@@ -163,9 +163,8 @@ class NotificationManager extends PKPNotificationManager
                 'settingName' => 'notificationOpenAccess',
                 'emailSettingName' => 'emailNotificationOpenAccess',
                 'settingKey' => 'notification.type.openAccess',
-            ],
-            ...parent::getNotificationSettingsMap(),
-        ];
+            ]
+        ] + parent::getNotificationSettingsMap();
     }
 }
 
