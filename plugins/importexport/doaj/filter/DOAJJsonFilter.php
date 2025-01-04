@@ -20,10 +20,9 @@ use APP\core\Application;
 use APP\facades\Repo;
 use APP\plugins\importexport\doaj\DOAJExportDeployment;
 use APP\plugins\importexport\doaj\DOAJExportPlugin;
+use PKP\controlledVocab\ControlledVocab;
 use PKP\core\PKPString;
-use PKP\db\DAORegistry;
 use PKP\plugins\importexport\PKPImportExportFilter;
-use PKP\submission\SubmissionKeywordDAO;
 
 class DOAJJsonFilter extends PKPImportExportFilter
 {
@@ -176,9 +175,13 @@ class DOAJJsonFilter extends PKPImportExportFilter
             $article['bibjson']['abstract'] = PKPString::html2text($abstract);
         }
         // Keywords
-        /** @var SubmissionKeywordDAO */
-        $dao = DAORegistry::getDAO('SubmissionKeywordDAO');
-        $keywords = $dao->getKeywords($publication->getId(), [$publicationLocale]);
+        $keywords = Repo::controlledVocab()->getBySymbolic(
+            ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
+            Application::ASSOC_TYPE_PUBLICATION,
+            $publication->getId(),
+            [$publicationLocale]
+        );
+
         $allowedNoOfKeywords = array_slice($keywords[$publicationLocale] ?? [], 0, 6);
         if (!empty($keywords[$publicationLocale])) {
             $article['bibjson']['keywords'] = $allowedNoOfKeywords;
