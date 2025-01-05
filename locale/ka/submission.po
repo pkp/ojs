@@ -154,7 +154,7 @@ msgstr "სექციის პარამეტრები"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} ელემენტი"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "ყველა კატეგორია"
 
 msgid "galley.editPublishedDisabled"

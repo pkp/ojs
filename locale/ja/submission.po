@@ -150,7 +150,7 @@ msgstr "セクション・オプション"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} 項目"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "全項目"
 
 msgid "galley.editPublishedDisabled"

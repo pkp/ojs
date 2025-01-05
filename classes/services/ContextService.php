@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/services/ContextService.php
  *
@@ -71,6 +72,8 @@ class ContextService extends \PKP\services\PKPContextService
         $section = Repo::section()->newDataObject();
         $section->setTitle(__('section.default.title'), $context->getPrimaryLocale());
         $section->setAbbrev(__('section.default.abbrev'), $context->getPrimaryLocale());
+        $section->setUrlPath(__('section.default.urlPath'), $context->getPrimaryLocale());
+        $section->setNotBrowsable(false);
         $section->setMetaIndexed(true);
         $section->setMetaReviewed(true);
         $section->setPolicy(__('section.default.policy'), $context->getPrimaryLocale());

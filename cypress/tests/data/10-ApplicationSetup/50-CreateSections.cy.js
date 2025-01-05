@@ -32,6 +32,7 @@ describe('Data suite tests', function() {
 		cy.wait(1000); // Avoid occasional failure due to form init taking time, waitJQuery is not sufficient
 		cy.get('input[id^="title-en-"]').type('Reviews', {delay: 0});
 		cy.get('input[id^="abbrev-en-"]').type('REV', {delay: 0});
+		cy.get('input[id^="urlPath-"]').type('reviews', {delay: 0});
 		cy.get('input[id^="identifyType-en-"]').type('Review Article', {delay: 0});
 		cy.get('input[id=abstractsNotRequired]').click();
 		cy.get('label').contains('Daniel Barnes').click();

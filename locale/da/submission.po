@@ -162,7 +162,7 @@ msgstr "Sektionsindstillinger"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} numre"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "Alle numre"
 
 msgid "galley.editPublishedDisabled"

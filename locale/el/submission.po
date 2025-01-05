@@ -161,7 +161,7 @@ msgstr "Επιλογές Ενότητας"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} Τεκμήρια"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "Όλα τα Τεκμήρια"
 
 msgid "galley.editPublishedDisabled"

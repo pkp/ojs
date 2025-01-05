@@ -42,6 +42,7 @@ class DAO extends \PKP\section\DAO
     public $primaryTableColumns = [
         'id' => 'section_id',
         'contextId' => 'journal_id',
+        'urlPath' => 'url_path',
         'reviewFormId' => 'review_form_id',
         'sequence' => 'seq',
         'editorRestricted' => 'editor_restricted',
@@ -51,6 +52,7 @@ class DAO extends \PKP\section\DAO
         'hideTitle' => 'hide_title',
         'hideAuthor' => 'hide_author',
         'isInactive' => 'is_inactive',
+        'notBrowsable' => 'not_browsable',
         'wordCount' => 'abstract_word_count'
     ];
 
