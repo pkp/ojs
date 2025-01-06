@@ -388,8 +388,7 @@ describe('Data suite: Amwandenga', function() {
 
 		cy.openWorkflowMenu('Galleys')
 		cy.get('button:contains("Add galley")').should('not.exist');
-		cy.get('[data-cy="active-modal"] button[aria-label="More Actions"]').click();
-		cy.get('button:contains("View")').should('exist');
+		cy.get('[data-cy="active-modal"] button[aria-label="More Actions"]').should('not.exist')
 	});
 
 	it('Allow author to edit publication details', function() {
