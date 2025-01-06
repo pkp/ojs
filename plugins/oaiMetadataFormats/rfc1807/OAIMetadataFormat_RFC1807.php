@@ -75,20 +75,16 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
             $creators[] = $authorName;
         }
 
-        $supportedLocales = $journal->getSupportedFormLocales();
-
         $subjects = array_merge_recursive(
             Repo::controlledVocab()->getBySymbolic(
                 ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
                 Application::ASSOC_TYPE_PUBLICATION,
-                $publication->getId(),
-                $supportedLocales
+                $publication->getId()
             ),
             Repo::controlledVocab()->getBySymbolic(
                 ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_SUBJECT,
                 Application::ASSOC_TYPE_PUBLICATION,
-                $article->getCurrentPublication()->getId(),
-                $supportedLocales
+                $article->getCurrentPublication()->getId()
             )
         );
         $subject = $subjects[$journal->getPrimaryLocale()] ?? '';
