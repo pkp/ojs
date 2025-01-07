@@ -161,16 +161,12 @@ debug = Off
 
 [cache]
 
-; Choose the type of object data caching to use. Options are:
-; - memcache: Use the memcache server configured below
-; - xcache: Use the xcache variable store
-; - apc: Use the APC variable store
-; - none: Use no caching.
-object_cache = none
+; Default driver for Laravel-based caching. Currently supports opcache and file drivers.
+; By default, the opcache is used.
+; default = opcache
 
-; Enable memcache support
-memcache_hostname = localhost
-memcache_port = 11211
+; Path to store cache contents for file or opcode based caches.
+; path = cache/opcache
 
 ; For site visitors who are not logged in, many pages are often entirely
 ; static (e.g. About, the home page, etc). If the option below is enabled,
