@@ -410,7 +410,7 @@
 				{if $pubIdPlugin->getPubIdType() == 'doi'}
 					{continue}
 				{/if}
-				{assign var=pubId value=$article->getStoredPubId($pubIdPlugin->getPubIdType())}
+				{assign var=pubId value=$publication->getStoredPubId($pubIdPlugin->getPubIdType())}
 				{if $pubId}
 					<section class="item pubid">
 						<h2 class="label">

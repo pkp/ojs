@@ -206,7 +206,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
             if ($issue && $pubIssueId = $issue->getStoredPubId($publicIdentifier)) {
                 $dc11Description->addStatement('dc:source', $pubIssueId, MetadataDescription::METADATA_DESCRIPTION_UNKNOWN_LOCALE);
             }
-            if ($pubArticleId = $article->getStoredPubId($publicIdentifier)) {
+            if ($pubArticleId = $publication->getStoredPubId($publicIdentifier)) {
                 $dc11Description->addStatement('dc:identifier', $pubArticleId);
             }
             foreach ($galleys as $galley) {
