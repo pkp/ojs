@@ -97,7 +97,6 @@
 		<migration class="PKP\migration\upgrade\v3_4_0\I9039_DropDeprecatedFields"/>
 		<migration class="APP\migration\upgrade\v3_4_0\I8933_EventLogLocalized"/>
 		<migration class="APP\migration\upgrade\v3_4_0\I7470_FixDeprecatedFileStage"/>
-		<migration class="APP\migration\upgrade\v3_4_0\FilterClassNames"/>
 		<note file="docs/release-notes/README-3.4.0" />
 	</upgrade>
 
@@ -158,6 +157,8 @@
 		<migration class="PKP\migration\upgrade\v3_5_0\I10292_RemoveControlledVocabEntrySettingType"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I10292_UpdateControlledVocabAssocId"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I10292_UpdateControlledVocabEntrySettingName"/>
+		<migration class="APP\migration\upgrade\v3_4_0\FilterClassNames"/>
+		<note file="docs/release-notes/README-3.5.0" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
