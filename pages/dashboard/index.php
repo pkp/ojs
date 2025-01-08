@@ -20,6 +20,7 @@
 
 switch ($op) {
     case 'index':
+        return new APP\pages\dashboard\DashboardHandlerNext();
     case 'editorial':
         return new APP\pages\dashboard\DashboardHandlerNext(PKP\pages\dashboard\DashboardPage::EditorialDashboard);
     case 'mySubmissions':
