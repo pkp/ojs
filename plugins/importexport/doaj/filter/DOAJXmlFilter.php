@@ -190,12 +190,10 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
             $node->setAttribute('format', 'html');
 
             // Keywords
-            $supportedLocales = $context->getSupportedFormLocales();
             $articleKeywords = Repo::controlledVocab()->getBySymbolic(
                 ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
                 Application::ASSOC_TYPE_PUBLICATION,
-                $publication->getId(),
-                $supportedLocales
+                $publication->getId()
             );
 
             if (array_key_exists($publication->getData('locale'), $articleKeywords)) {

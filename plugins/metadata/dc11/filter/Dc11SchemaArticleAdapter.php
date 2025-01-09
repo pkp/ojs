@@ -89,19 +89,16 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         }
 
         // Subject
-        $supportedLocales = $journal->getSupportedFormLocales();
         $subjects = array_merge_recursive(
             Repo::controlledVocab()->getBySymbolic(
                 ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
                 Application::ASSOC_TYPE_PUBLICATION,
-                $publication->getId(),
-                $supportedLocales
+                $publication->getId()
             ),
             Repo::controlledVocab()->getBySymbolic(
                 ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_SUBJECT,
                 Application::ASSOC_TYPE_PUBLICATION,
-                $publication->getId(),
-                $supportedLocales
+                $publication->getId()
             )
         );
         $this->_addLocalizedElements($dc11Description, 'dc:subject', $subjects);
