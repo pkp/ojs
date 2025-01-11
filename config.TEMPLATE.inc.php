@@ -449,7 +449,7 @@ recaptcha_enforce_hostname = Off
 ; work with ALTCHA instead of ReCaptcha on system
 
 ; Whether or not to enable ALTCHA
-altcha = on
+altcha = off
 
 ; Private key for ALTCHA
 altcha_hmackey = 'Example key'
