@@ -1,8 +1,9 @@
 # Huw Robert Grange <huw.r.grange@uit.no>, 2023.
+# Karl Magnus Nilsen <karl.magnus.nilsen@uit.no>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-11-15 10:38+0000\n"
-"Last-Translator: Huw Robert Grange <huw.r.grange@uit.no>\n"
+"PO-Revision-Date: 2024-12-18 14:05+0000\n"
+"Last-Translator: Karl Magnus Nilsen <karl.magnus.nilsen@uit.no>\n"
 "Language-Team: Sami (Northern) <http://translate.pkp.sfu.ca/projects/ojs/"
 "default/se/>\n"
 "Language: se\n"
@@ -14,3 +15,9 @@ msgstr ""
 
 msgid "section.default.title"
 msgstr "Artihkkalat"
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>Namat ja epoastčujuhusat mat ilbmet dán áigečállaga siidduin "
+"geavahuvvojit dušše áigečállaga mearriduvvon áigumušaid mielde, eai ge "
+"dahkko almmolažžan makkár ge eará oktavuhtii dahje olgguldas olbmuide.</p>"
