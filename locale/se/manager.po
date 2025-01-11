@@ -3,7 +3,7 @@
 # Sara Ellen Gaup <sara.e.gaup@uit.no>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-07-16 14:18+0000\n"
+"PO-Revision-Date: 2024-12-17 16:35+0000\n"
 "Last-Translator: Sara Ellen Gaup <sara.e.gaup@uit.no>\n"
 "Language-Team: Sami (Northern) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/se/>\n"
@@ -22,3 +22,30 @@ msgstr "Čoavddasánit"
 
 msgid "manager.setup.contextAbout"
 msgstr "Áigečállaga birra"
+
+msgid "manager.language.submissions"
+msgstr "Boahtán čállosat"
+
+msgid "manager.setup.announcements"
+msgstr "Diehtotávval"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Artihkkalat"
+
+msgid "manager.setup.information.forReaders"
+msgstr "Lohkkiide"
+
+msgid "manager.setup.information"
+msgstr "Dieđut"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Girjerájusbargiide"
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Čálliide"
+
+msgid "manager.setup.submissions"
+msgstr "Boahtán čállosat"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "artihkal"

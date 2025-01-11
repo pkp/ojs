@@ -1,7 +1,7 @@
 # Milutin Markovic <admin@fcjk.me>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-02-03 20:48+0000\n"
+"PO-Revision-Date: 2024-12-18 14:05+0000\n"
 "Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
 "Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "cnr/>\n"
@@ -53,7 +53,7 @@ msgid "default.groups.plural.manager"
 msgstr "Glavni urednici"
 
 msgid "default.groups.name.editor"
-msgstr "Urednik"
+msgstr "Urednik časopisa"
 
 msgid "default.groups.plural.editor"
 msgstr "Urednici"

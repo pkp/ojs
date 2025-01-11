@@ -1,10 +1,10 @@
-# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022, 2023.
+# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2023-04-19 22:35+0000\n"
+"PO-Revision-Date: 2024-12-13 11:57+0000\n"
 "Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/locale/da/>\n"
 "Language: da\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Dette tidsskrift offentliggør ikke sit indhold online."
@@ -767,7 +767,7 @@ msgid "search.results.orderDir.desc"
 msgstr "Faldende"
 
 msgid "search.results.similarDocuments"
-msgstr "tilsvarende dokumenter"
+msgstr "lignende dokumenter"
 
 msgid "admin.overwriteConfigFileInstructions"
 msgstr ""
