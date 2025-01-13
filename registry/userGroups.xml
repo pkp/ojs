@@ -45,4 +45,7 @@
 
 	<!-- Subscription Manager Role -->
 	<group roleId="0x00200000" stages="" name="default.groups.name.subscriptionManager" plural="default.groups.plural.subscriptionManager" abbrev="default.groups.abbrev.subscriptionManager" />
+
+	<!-- Editorial Board Member Role -->
+	<group roleId="0x00001001" stages="" name="default.groups.name.editorialBoardMember" plural="default.groups.plural.editorialBoardMember" abbrev="default.groups.abbrev.editorialBoardMember" masthead="true" />
 </groups>
