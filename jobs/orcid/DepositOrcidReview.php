@@ -24,6 +24,7 @@ use GuzzleHttp\Exception\ClientException;
 use PKP\config\Config;
 use PKP\jobs\BaseJob;
 use PKP\orcid\OrcidManager;
+use PKP\submission\reviewAssignment\ReviewAssignment;
 
 class DepositOrcidReview extends BaseJob
 {
@@ -41,6 +42,10 @@ class DepositOrcidReview extends BaseJob
         $reviewAssignment = Repo::reviewAssignment()->get($this->reviewAssignmentId);
         if ($reviewAssignment === null) {
             $this->fail('Review assignment does not exist.');
+        }
+
+        if (!in_array($reviewAssignment->getStatus(), ReviewAssignment::REVIEW_COMPLETE_STATUSES)) {
+            $this->fail('Review assignment was not completed.');
         }
 
         $submission = Repo::submission()->get($reviewAssignment->getSubmissionId());
@@ -67,7 +72,7 @@ class DepositOrcidReview extends BaseJob
                 # Extract only the ORCID from the stored ORCID uri
                 $orcid = basename(parse_url($reviewer->getOrcid(), PHP_URL_PATH));
 
-                $orcidReview = new OrcidReview($submission, $reviewAssignment, $context);
+                $orcidReview = (new OrcidReview($submission, $reviewAssignment, $context))->toArray();
 
                 $uri = OrcidManager::getApiPath($context) . OrcidManager::ORCID_API_VERSION_URL . $orcid . '/' . OrcidManager::ORCID_REVIEW_URL;
                 $method = 'POST';
@@ -89,7 +94,7 @@ class DepositOrcidReview extends BaseJob
                         $uri,
                         [
                             'headers' => $headers,
-                            'json' => $orcidReview->toArray(),
+                            'json' => $orcidReview,
                         ]
                     );
 
@@ -101,7 +106,7 @@ class DepositOrcidReview extends BaseJob
                             OrcidManager::logInfo("Review updated in profile, putCode: {$putCode}");
                             break;
                         case 201:
-                            $location = $responseHeaders['Location'][0];
+                            $location = $responseHeaders['location'][0];
                             // Extract the ORCID work put code for updates/deletion.
                             $putCode = basename(parse_url($location, PHP_URL_PATH));
                             $reviewer->setData('orcidReviewPutCode', $putCode);
