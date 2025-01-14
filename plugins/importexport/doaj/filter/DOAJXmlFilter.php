@@ -140,7 +140,7 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
                 $recordNode->appendChild($node = $doc->createElement('documentType', htmlspecialchars($type, ENT_COMPAT, 'UTF-8')));
             }
             // Article title
-            $articleTitles = $publication->getTitles();
+            $articleTitles = $publication->getFullTitles();
             if (array_key_exists($publication->getData('locale'), $articleTitles)) {
                 $titleInArticleLocale = $articleTitles[$publication->getData('locale')];
                 unset($articleTitles[$publication->getData('locale')]);
