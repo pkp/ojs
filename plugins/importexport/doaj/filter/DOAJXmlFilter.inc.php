@@ -116,7 +116,7 @@ class DOAJXmlFilter extends NativeExportFilter {
 			$type = $publication->getLocalizedData('type', $publication->getData('locale'));
 			if (!empty($type)) $recordNode->appendChild($node = $doc->createElement('documentType', htmlspecialchars($type, ENT_COMPAT, 'UTF-8')));
 			// Article title
-			$articleTitles = (array) $publication->getData('title');
+			$articleTitles = (array) $publication->getFullTitles();
 			if (array_key_exists($publication->getData('locale'), $articleTitles)) {
 				$titleInArticleLocale = $articleTitles[$publication->getData('locale')];
 				unset($articleTitles[$publication->getData('locale')]);
