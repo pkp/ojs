@@ -22,7 +22,7 @@ pkp.registry.registerComponent('FieldPubIdUrn', {
     },
     methods: {
         generateId() {
-            var id = pkp.Vue.component('field-pub-id').methods['generateId'].apply(this);
+            var id = pkp.registry.getComponent('PkpFieldPubId').methods['generateId'].apply(this);
             return this.applyCheckNumber
                 ? id + $.pkp.plugins.generic.urn.getCheckNumber(id, this.prefix)
                 : id;
