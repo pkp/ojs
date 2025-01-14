@@ -203,7 +203,7 @@ class ArticleReportPlugin extends ReportPlugin
                 'keywords' => join(', ', $keywords[Locale::getLocale()] ?? $keywords[$submission->getData('locale')] ?? []),
                 'agencies' => join(', ', $agencies[Locale::getLocale()] ?? $agencies[$submission->getData('locale')] ?? []),
                 'status' => $submission->getData('status') == PKPSubmission::STATUS_QUEUED ? $this->getStageLabel($submission->getData('stageId')) : __($statusMap[$submission->getData('status')]),
-                'url' => $request->url(null, 'workflow', 'access', $submission->getId()),
+                'url' => $request->url(null, 'dashboard', 'editorial', null, ['workflowSubmissionId' => $submission->getId()]),
                 'doi' => $publication->getDoi(),
                 'dateSubmitted' => $submission->getData('dateSubmitted'),
                 'lastModified' => $submission->getData('lastModified'),
