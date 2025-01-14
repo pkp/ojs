@@ -11,7 +11,6 @@
  * @brief A Vue.js component for URN field, that is used for pattern suffixes and that considers check number.
  */
 
-console.log('pubid test', pkp.registry.getComponent('field-pub-id'));
 pkp.registry.registerComponent('FieldPubIdUrn', {
     name: 'FieldPubIdUrn',
     extends: pkp.registry.getComponent('PkpFieldPubId'),
