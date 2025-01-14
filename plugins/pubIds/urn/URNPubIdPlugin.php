@@ -470,7 +470,7 @@ class URNPubIdPlugin extends PubIdPlugin
         $templateMgr = $args[0];
         $template = $args[1];
 
-        if ($template !== 'workflow/workflow.tpl') {
+        if ($template !== 'dashboard/editors.tpl') {
             return;
         }
 
