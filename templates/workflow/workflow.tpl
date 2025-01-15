@@ -123,7 +123,7 @@
 							<span v-else class="pkpPublication__statusUnpublished">{translate key="publication.status.unpublished"}</span>
 						</span>
 						<span v-if="publicationList.length > 1" class="pkpPublication__version">
-							<strong tabindex="0">{{ versionLabel }}</strong> {{ workingPublication.version }}
+							<strong tabindex="0">{{ versionLabel }}</strong> {{ workingPublication.versionDataDisplay }}
 							<dropdown
 								class="pkpPublication__versions"
 								label="{translate key="publication.version.all"}"
@@ -137,7 +137,7 @@
 											:disabled="publication.id === workingPublication.id"
 											@click="setWorkingPublicationById(publication.id)"
 										>
-											{{ publication.version }} /
+											{{ publication.versionDataDisplay }} /
 											<template v-if="publication.status === getConstant('STATUS_QUEUED') && publication.id === currentPublication.id">{translate key="publication.status.unscheduled"}</template>
 											<template v-else-if="publication.status === getConstant('STATUS_SCHEDULED')">{translate key="publication.status.scheduled"}</template>
 											<template v-else-if="publication.status === getConstant('STATUS_PUBLISHED')">{{ publication.datePublished }}</template>

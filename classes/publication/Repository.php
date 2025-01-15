@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/publication/Repository.php
  *
@@ -24,6 +25,7 @@ use PKP\core\Core;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\publication\Collector;
+use PKP\publication\enums\VersionStage;
 
 class Repository extends \PKP\publication\Repository
 {
@@ -128,9 +130,9 @@ class Repository extends \PKP\publication\Repository
     }
 
     /** @copydoc \PKP\publication\Repository::version() */
-    public function version(Publication $publication): int
+    public function version(Publication $publication, ?VersionStage $versionStage = null, bool $isMinorVersion = true): int
     {
-        $newId = parent::version($publication);
+        $newId = parent::version($publication, $versionStage, $isMinorVersion);
 
         $context = Application::get()->getRequest()->getContext();
 
