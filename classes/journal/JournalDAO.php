@@ -118,7 +118,7 @@ class JournalDAO extends ContextDAO
         $pubObjectDaos = [
             Application::ASSOC_TYPE_ISSUE => Repo::issue()->dao,
             Application::ASSOC_TYPE_PUBLICATION => Repo::publication()->dao,
-            Application::ASSOC_TYPE_GALLEY => Application::getRepresentationDAO(),
+            Application::ASSOC_TYPE_REPRESENTATION => Application::getRepresentationDAO(),
             Application::ASSOC_TYPE_ISSUE_GALLEY => DAORegistry::getDAO('IssueGalleyDAO'),
             Application::ASSOC_TYPE_SUBMISSION_FILE => Repo::submissionFile()->dao,
         ];

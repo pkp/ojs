@@ -21,6 +21,7 @@ use APP\issue\Issue;
 use APP\plugins\PubIdPlugin;
 use APP\plugins\pubIds\urn\classes\form\FieldPubIdUrn;
 use APP\plugins\pubIds\urn\classes\form\FieldTextUrn;
+use APP\plugins\pubIds\urn\classes\form\URNSettingsForm;
 use APP\template\TemplateManager;
 use PKP\components\forms\FormComponent;
 use PKP\components\forms\publication\PKPPublicationIdentifiersForm;
@@ -157,7 +158,7 @@ class URNPubIdPlugin extends PubIdPlugin
      */
     public function instantiateSettingsForm($contextId)
     {
-        return new classes\form\URNSettingsForm($this, $contextId);
+        return new URNSettingsForm($this, $contextId);
     }
 
     /**
@@ -312,7 +313,7 @@ class URNPubIdPlugin extends PubIdPlugin
         if (strpos($props['pub-id::other::urn'], $urnPrefix) !== 0) {
             $urnErrors[] = __('plugins.pubIds.urn.editor.missingPrefix', ['urnPrefix' => $urnPrefix]);
         }
-        if (!$this->checkDuplicate($props['pub-id::other::urn'], 'Publication', $submission->getId(), $contextId)) {
+        if (!$this->checkDuplicate($props['pub-id::other::urn'], $publication, $contextId)) {
             $urnErrors[] = $this->getNotUniqueErrorMsg();
         }
         if (!empty($urnErrors)) {
