@@ -10,6 +10,6 @@ trim_trailing_whitespace = true
 indent_style = space
 indent_size = 4
 
-[*.{js,vue,json,less}]
+[*.{js,vue,json,less,tpl}]
 indent_style = tab
 
