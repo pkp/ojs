@@ -56,10 +56,12 @@ class AssignToIssueHandler extends Handler
     //
     /**
      * @copydoc PKPHandler::initialize()
+     *
+     * @param null|mixed $args
      */
-    public function initialize($request)
+    public function initialize($request, $args = null)
     {
-        parent::initialize($request);
+        parent::initialize($request, $args);
         $this->submission = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_SUBMISSION);
         $this->publication = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_PUBLICATION);
         $this->setupTemplate($request);
