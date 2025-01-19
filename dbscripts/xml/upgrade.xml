@@ -151,7 +151,6 @@
 		<migration class="PKP\migration\upgrade\v3_5_0\I9771_OrcidMigration"/>
 		<migration class="APP\migration\upgrade\v3_5_0\I5885_RenameReviewReminderSettingsName"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\COA75_AddUserRoleEndEmail"/>
-		<migration class="PKP\migration\upgrade\v3_5_0\I9707_WeblateUILocales"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I10738_RemoveInvalidUserGroups"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I10362_EventLogEditorNames"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I10292_RemoveControlledVocabEntrySettingType"/>
@@ -159,6 +158,7 @@
 		<migration class="PKP\migration\upgrade\v3_5_0\I10292_UpdateControlledVocabEntrySettingName"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\FilterClassNames"/>
 		<migration class="APP\migration\upgrade\v3_5_0\I10620_EditorialBoardMemberRole"/>
+		<migration class="APP\migration\upgrade\v3_5_0\I9707_WeblateUILocales"/>
 		<note file="docs/release-notes/README-3.5.0" />
 	</upgrade>
 
