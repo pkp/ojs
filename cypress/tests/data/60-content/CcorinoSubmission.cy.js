@@ -81,10 +81,6 @@ describe('Data suite: Ccorino', function() {
 		cy.logout();
 		cy.findSubmissionAsEditor('dbarnes', null, familyName);
 		cy.get('[data-cy="workflow-secondary-items"] h2').contains("Recommendation");
-		// FIX ME correct label should come with 
-		//cy.get('[data-cy="workflow-actions"] p').contains("Accept Submission");
-		cy.get('[data-cy="workflow-secondary-items"] p').contains("Recommend Accept");
-
-		
+		cy.get('[data-cy="workflow-secondary-items"] p').contains("Accept Submission");
 	});
 })
