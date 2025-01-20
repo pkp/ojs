@@ -55,7 +55,6 @@ pkp.registry.registerComponent('FieldTextUrn', {
 		'					:id="describedByErrorId"' +
 		'					:messages="errors"' +
 		'				/>' +
-		'				</div>' +
 		'			</div>' +
 		'		</div>',
 	props: {
