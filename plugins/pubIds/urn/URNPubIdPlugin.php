@@ -504,11 +504,6 @@ class URNPubIdPlugin extends PubIdPlugin
                     .pkpFormField--urn__input {
                         display: inline-block;
                     }
-
-                    .pkpFormField--urn__button {
-                        margin-left: 0.25rem;
-                        height: 2.5rem; // Match input height
-                    }
                 ',
                 [
                     'contexts' => 'backend',

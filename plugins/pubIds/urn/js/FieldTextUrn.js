@@ -43,13 +43,13 @@ pkp.registry.registerComponent('FieldTextUrn', {
 		'					:required="isRequired"' +
 		'					:style="inputStyles"' +
 		'				/>' +
-		'				<button' +
+		'				<pkp-button' +
 		'					v-if="applyCheckNumber"' +
-		'					class="pkpButton pkpFormField--urn__button"' +
 		'					@click.prevent="addCheckNumber"' +
+		'					:disabled="currentValue.length === 0"' +
 		'				>' +
 		'					{{ addCheckNumberLabel }}' +
-		'				</button>' +
+		'				</pkp-button>' +
 		'				<field-error' +
 		'					v-if="errors.length"' +
 		'					:id="describedByErrorId"' +
