@@ -345,10 +345,6 @@ class URNPubIdPlugin extends PubIdPlugin
 
         $appyCheckNumber = $this->getSetting($form->submissionContext->getId(), 'urnCheckNo');
 
-        if ($appyCheckNumber) {
-            // Load the checkNumber.js file that is required for URN fields
-            $this->addJavaScript(Application::get()->getRequest(), TemplateManager::getManager(Application::get()->getRequest()));
-        }
         // If a pattern exists, use a DOI-like field to generate the URN
         if ($pattern) {
             $fieldData = [
@@ -470,12 +466,20 @@ class URNPubIdPlugin extends PubIdPlugin
         $templateMgr = $args[0];
         $template = $args[1];
 
-        if ($template !== 'workflow/workflow.tpl') {
+        if ($template !== 'dashboard/editors.tpl') {
             return;
         }
 
         $context = Application::get()->getRequest()->getContext();
         $suffixType = $this->getSetting($context->getId(), 'urnSuffix');
+
+        $appyCheckNumber = $this->getSetting($context->getId(), 'urnCheckNo');
+
+        if ($appyCheckNumber) {
+            // Load the checkNumber.js file that is required for URN fields
+            $this->addJavaScript(Application::get()->getRequest(), TemplateManager::getManager(Application::get()->getRequest()));
+        }
+
         if ($suffixType === 'default' || $suffixType === 'pattern') {
             $templateMgr->addJavaScript(
                 'field-pub-id-urn-component',

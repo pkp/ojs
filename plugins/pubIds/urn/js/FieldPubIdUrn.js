@@ -11,9 +11,9 @@
  * @brief A Vue.js component for URN field, that is used for pattern suffixes and that considers check number.
  */
 
-pkp.Vue.component('field-pub-id-urn', {
+pkp.registry.registerComponent('FieldPubIdUrn', {
     name: 'FieldPubIdUrn',
-    extends: pkp.Vue.component('field-pub-id'),
+    extends: pkp.registry.getComponent('PkpFieldPubId'),
     props: {
         applyCheckNumber: {
             type: Boolean,
@@ -22,10 +22,10 @@ pkp.Vue.component('field-pub-id-urn', {
     },
     methods: {
         generateId() {
-            var id = pkp.Vue.component('field-pub-id').options.methods['generateId'].apply(this);
+            var id = pkp.registry.getComponent('PkpFieldPubId').methods['generateId'].apply(this);
             return this.applyCheckNumber
                 ? id + $.pkp.plugins.generic.urn.getCheckNumber(id, this.prefix)
                 : id;
         }
     },
-});
+})
