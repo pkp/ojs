@@ -1,7 +1,7 @@
 # Milutin Markovic <admin@fcjk.me>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-01-20 12:42+0000\n"
+"PO-Revision-Date: 2025-01-21 12:04+0000\n"
 "Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
 "Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "cnr/>\n"
@@ -1409,3 +1409,72 @@ msgstr ""
 "<strong>Napomena:</strong> Institucionalne pretplate koje su kupljene onlajn "
 "zahtijevaju potvrdu odgovarajućeg domena i IP opsega i aktivaciju pretplate "
 "od strane Upravnika za pretplate."
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Korisnik"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Neophodan je korisnik."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Odaberite tačnu državu."
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Kontakt"
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Odaberite ispravnog korisnika."
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Koristite ponuđene markere za označavanje."
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Članstvo"
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Referentni broj"
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Odabrani tip pretplate zahtijeva informaciju o članstvu."
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Bilješke"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Domen"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Naziv institucije"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Potreban je naziv institucije"
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Poštanska adresa"
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Unesite ispravan domen."
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IP opsezi"
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr "Pošalji korisniku imejl sa korisničkim imenom i detaljima o pretplati."
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr ""
+"Unesite informaciju o članstvu ako to zahtijeva tip pretplate tj. da li je "
+"član asocijacije ili organizacije."
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr ""
+"Ako je ovde upisan domen, IP opsezi nisu obavezni .<br /> Ispravne "
+"vrijednosti su imena domena (npr. lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Odabrani tip pretplate zahtijeva domen i/ili IP opseg za provjeru identiteta "
+"korisnika pretplate."
