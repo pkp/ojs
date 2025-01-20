@@ -1,7 +1,7 @@
-# Milutin Markovic <admin@fcjk.me>, 2024.
+# Milutin Markovic <admin@fcjk.me>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-12-18 14:05+0000\n"
+"PO-Revision-Date: 2025-01-20 12:42+0000\n"
 "Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
 "Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "cnr/>\n"
@@ -1313,3 +1313,99 @@ msgstr ""
 "OJS. Moguće je da su potrebna dodatna podešavanja servera da bi se podržala "
 "ova funkcija (što možda nije moguće na svim serverima) kao što je naznačeno "
 "u dokumentaciji za OJS."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr ""
+"<strong>Napomena:</strong> Da bi aktivirali ove mogućnosti administrator "
+"mora omogućiti <tt>scheduled_tasks</tt> opciju u konfiguracionom fajlu za "
+"OJS. Mogće je da su potrebna dodatna podešavanja servera da bi se podržala "
+"ova funkcija (što možda nije moguće na svim serverima) kao što je naznačeno "
+"u dokumentaciji za OJS."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Obavještenja o internet plaćanjima"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"Obavijesti Upravnika za pretplatu emajlom o kupovini individualne pretplate."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"Obavijesti Upravnika za pretplatu emajlom o kupovini institucionalne "
+"pretplate (preporučeno)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"Obavijesti Upravnika za pretplatu emajlom o obnovi individualne pretplate."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+"<strong>Napomena:</strong> Da bi se uključile ove opcije Upravnik časopisa "
+"mora da uključi modul za onlajn plaćanja uključujući i onlajn plaćanja za "
+"pretplate u dijelu Naknade za čitaoce."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Mogućnosti otvorenog pristupa za pretplatu na časopise"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Da li ste sigurni da želite obrisati ovu pretplatu?"
+
+msgid "manager.subscriptions.summary"
+msgstr "Pregled pretplata"
+
+msgid "manager.subscriptions.create"
+msgstr "Kreiraj novu pretplatu"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Kreiraj"
+
+msgid "manager.subscriptions.renew"
+msgstr "Obnovi"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Kraj"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Datum završetka"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Početak"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Datum početka"
+
+msgid "manager.subscriptions.domain"
+msgstr "Domen"
+
+msgid "manager.subscriptions.edit"
+msgstr "Uredi pretplatu"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Uredi"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Sa statusom"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Sve"
+
+msgid "manager.subscriptions.form.status"
+msgstr "Status"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Potreban je status pretplate."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+"Аutomatske poruke koje se nalaze u dijelu za Upravnika časopisa u OJS mogu "
+"se poslati Upravniku za pretplatu nakon kompletiranja internet plaćanja."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"Obavijesti Upravnika za pretplatu emajlom o obnovi institucionalne pretplate."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong>Napomena:</strong> Institucionalne pretplate koje su kupljene onlajn "
+"zahtijevaju potvrdu odgovarajućeg domena i IP opsega i aktivaciju pretplate "
+"od strane Upravnika za pretplate."
