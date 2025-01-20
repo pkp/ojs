@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/issue/DAO.php
  *
@@ -308,7 +309,7 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
         return DB::table('issue_settings AS ist')
             ->join('issues AS i', 'ist.issue_id', '=', 'i.issue_id')
             ->where('ist.setting_name', '=', "pub-id::{$pubIdType}")
-            ->where('ist.setting_value', '<>', $pubId)
+            ->where('ist.setting_value', '=', $pubId)
             ->where('i.issue_id', '<>', $excludePubObjectId)
             ->where('i.journal_id', '=', $contextId)
             ->count() > 0;
