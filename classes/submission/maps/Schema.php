@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/submission/maps/Schema.php
  *
@@ -109,7 +110,7 @@ class Schema extends \PKP\submission\maps\Schema
         $isOnlyRecommending = $permissions['isOnlyRecommending'];
 
         if ($isOnlyRecommending && $stageId == WORKFLOW_STAGE_ID_SUBMISSION) {
-            $decisionTypes[] = Repo::decision()->getDecisionTypesMadeByRecommendingUsers($stageId);
+            $decisionTypes = Repo::decision()->getDecisionTypesMadeByRecommendingUsers($stageId);
         } else {
             switch ($stageId) {
                 case WORKFLOW_STAGE_ID_SUBMISSION:
@@ -152,7 +153,7 @@ class Schema extends \PKP\submission\maps\Schema
                     ];
                     break;
                 case WORKFLOW_STAGE_ID_PRODUCTION:
-                    if($submission->getData('status') !== Submission::STATUS_PUBLISHED) {
+                    if ($submission->getData('status') !== Submission::STATUS_PUBLISHED) {
                         $decisionTypes[] = new BackFromProduction();
                     }
 
