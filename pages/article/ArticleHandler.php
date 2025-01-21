@@ -311,6 +311,7 @@ class ArticleHandler extends Handler
             'pubIdPlugins' => PluginRegistry::loadCategory('pubIds', true),
             'keywords' => $publication->getData('keywords'),
             'orcidIcon' => OrcidManager::getIcon(),
+            'orcidUnauthenticatedIcon' => OrcidManager::getUnauthenticatedIcon(),
         ]);
 
         // Fetch and assign the galley to the template

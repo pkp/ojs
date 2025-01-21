@@ -129,11 +129,13 @@
 							{/if}
 							{if $author->getData('orcid')}
 								<span class="orcid">
-									{if $author->getData('orcidAccessToken')}
+									{if $author->hasVerifiedOrcid()}
 										{$orcidIcon}
+									{else}
+										{$orcidUnauthenticatedIcon}
 									{/if}
 									<a href="{$author->getData('orcid')|escape}" target="_blank">
-										{$author->getData('orcid')|escape}
+										{$author->getOrcidDisplayValue()|escape}
 									</a>
 								</span>
 							{/if}
