@@ -50,7 +50,7 @@ class DRIVERDAO extends OAIDAO
     {
         $records = [];
 
-        $result = new \ArrayIterator($this->_getRecordsRecordSetQuery($setIds, $from, $until, null)->get()->toArray());
+        $result = new \ArrayIterator($this->_getRecordsRecordSetQuery($setIds, $from, $until, null)->get()->all());
 
         $total = 0;
         for ($i = 0; $i < $offset; $i++) {
