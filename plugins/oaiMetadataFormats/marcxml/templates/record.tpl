@@ -46,7 +46,7 @@
 			{assign var=affiliation value=$author->getAffiliation($journal->getPrimaryLocale())}
 			{if $affiliation}<subfield code="u">{$affiliation|escape}</subfield>{/if}
 			{if $author->getUrl()}<subfield code="0">{$author->getUrl()|escape}</subfield>{/if}
-			{if $author->getData('orcid')}<subfield code="0">{$author->getData('orcid')|escape}</subfield>{/if}
+			{if $author->getData('orcid') && $author->getData('orcidIsVerified')}<subfield code="0">{$author->getData('orcid')|escape}</subfield>{/if}
 		</datafield>
 	{/foreach}
 	{if $subject}<datafield tag="653" ind1=" " ind2=" ">

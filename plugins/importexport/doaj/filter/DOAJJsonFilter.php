@@ -162,8 +162,8 @@ class DOAJJsonFilter extends PKPImportExportFilter
                 if (!empty($affiliation)) {
                     $author['affiliation'] = $affiliation;
                 }
-                if ($orcid = $articleAuthor->getData('orcid')) {
-                    $author['orcid_id'] = $orcid;
+                if ($articleAuthor->getData('orcid') && $articleAuthor->getData('orcidIsVerified')) {
+                    $author['orcid_id'] = $articleAuthor->getData('orcid');
                 }
                 $article['bibjson']['author'][] = $author;
             }
