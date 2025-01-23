@@ -21,12 +21,15 @@ use APP\facades\Repo;
 use APP\orcid\OrcidReview;
 use Carbon\Carbon;
 use GuzzleHttp\Exception\ClientException;
+use Illuminate\Contracts\Queue\ShouldBeUnique;
 use PKP\config\Config;
 use PKP\jobs\BaseJob;
+use PKP\jobs\orcid\SendUpdateScopeMail;
+use PKP\orcid\enums\OrcidDepositType;
 use PKP\orcid\OrcidManager;
 use PKP\submission\reviewAssignment\ReviewAssignment;
 
-class DepositOrcidReview extends BaseJob
+class DepositOrcidReview extends BaseJob implements ShouldBeUnique
 {
     public function __construct(
         private int $reviewAssignmentId
@@ -45,7 +48,7 @@ class DepositOrcidReview extends BaseJob
         }
 
         if (!in_array($reviewAssignment->getStatus(), ReviewAssignment::REVIEW_COMPLETE_STATUSES)) {
-            $this->fail('Review assignment was not completed.');
+            return;
         }
 
         $submission = Repo::submission()->get($reviewAssignment->getSubmissionId());
@@ -56,7 +59,7 @@ class DepositOrcidReview extends BaseJob
             $this->fail('Application is set to sandbox mode and will not interact with the ORCID service');
         }
 
-        if (OrcidManager::isEnabled($context)) {
+        if (!OrcidManager::isEnabled($context)) {
             return;
         }
 
@@ -71,6 +74,13 @@ class DepositOrcidReview extends BaseJob
         $reviewer = Repo::user()->get($reviewAssignment->getData('reviewerId'));
 
         if ($reviewer->getOrcid() && $reviewer->getData('orcidAccessToken')) {
+            // Check user scope, if public API, stop here and request member scope
+            if ($reviewer->getData('orcidAccessScope') !== OrcidManager::ORCID_API_SCOPE_MEMBER) {
+                // Request member scope and retry deposit
+                dispatch(new SendUpdateScopeMail($reviewer, $context->getId(), $this->reviewAssignmentId, OrcidDepositType::REVIEW));
+                return;
+            }
+
             $orcidAccessExpiresOn = Carbon::parse($reviewer->getData('orcidAccessExpiresOn'));
             if ($orcidAccessExpiresOn->isFuture()) {
                 # Extract only the ORCID from the stored ORCID uri
@@ -121,12 +131,17 @@ class DepositOrcidReview extends BaseJob
                             OrcidManager::logError("Unexpected status {$httpStatus} response, body: " . json_encode($responseHeaders));
                     }
                 } catch (ClientException $exception) {
-                    $reason = $exception->getResponse()->getBody();
+                    $reason = $exception->getResponse()->getBody()->getContents();
                     OrcidManager::logError("Publication fail: {$reason}");
 
                     $this->fail($exception);
                 }
             }
         }
+    }
+
+    public function uniqueId(): string
+    {
+        return (string) $this->reviewAssignmentId;
     }
 }
