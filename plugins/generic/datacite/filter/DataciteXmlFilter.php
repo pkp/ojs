@@ -311,7 +311,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 foreach ($authors as $author) { /** @var Author $author */
                     $creators[] = [
                         'name' => $author->getFullName(false, true, $publication->getData('locale')),
-                        'orcid' => $author->getOrcid(),
+                        'orcid' => $author->getData('orcidIsVerified') ? $author->getData('orcid') : null,
                         'affiliation' => $author->getLocalizedData('affiliation', $publication->getData('locale')),
                         'ror' => $author->getData('rorId') ?? null
                     ];
