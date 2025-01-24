@@ -209,7 +209,7 @@ msgstr "Назначи за број на списание"
 
 msgid "publication.assignedToIssue"
 msgstr ""
-"Ова е доделено на <a href=\"{$issueUrl}\"> {$ issueName} </a>, но не е "
+"Ова е доделено на <a href=\"{$issueUrl}\"> {$issueName} </a>, но не е "
 "закажано за објавување."
 
 msgid "publication.changeIssue"

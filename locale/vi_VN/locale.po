@@ -2152,7 +2152,7 @@ msgstr ""
 
 msgid "log.review.reviewerRated"
 msgstr ""
-"{$ reviewerName} đã được xếp hạng cho vòng phản biện {$round} về việc gửi {$ "
+"{$reviewerName} đã được xếp hạng cho vòng phản biện {$round} về việc gửi {$"
 "submitId}."
 
 msgid "log.review.reviewDueDateSet"
@@ -2214,7 +2214,7 @@ msgstr ""
 
 msgid "log.copyedit.initiate"
 msgstr ""
-"Việc biên tập của bài gửi {$ submitId} đã được bắt đầu bởi {$copyeditorName}."
+"Việc biên tập của bài gửi {$submitId} đã được bắt đầu bởi {$copyeditorName}."
 
 msgid "log.copyedit.copyeditFileSet"
 msgstr "Các tập tin copyedit mặc định đã được chọn."

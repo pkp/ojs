@@ -2619,15 +2619,15 @@ msgstr "अमान्य XML:"
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) endpunc: Different punctuation at the end
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ param}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$param}
 msgid "plugins.importexport.common.export.error.outputFileNotWritable"
-msgstr "आउटपुट फ़ाइल {$ param} लेखन योग्य नहीं है।"
+msgstr "आउटपुट फ़ाइल {$param} लेखन योग्य नहीं है।"
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) endpunc: Different punctuation at the end
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ param}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$param}
 msgid "plugins.importexport.common.export.error.inputFileNotReadable"
-msgstr "इनपुट फ़ाइल {$ param} पठनीय नहीं है।"
+msgstr "इनपुट फ़ाइल {$param} पठनीय नहीं है।"
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) endpunc: Different punctuation at the end
@@ -2667,7 +2667,7 @@ msgstr "त्रुटि:"
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startcaps: Different capitalization at the start
 msgid "plugins.importexport.common.error.unknownJournal"
-msgstr "निर्दिष्ट जर्नल पथ, \"{$ journalPath}\", मौजूद नहीं है।"
+msgstr "निर्दिष्ट जर्नल पथ, \"{$journalPath}\", मौजूद नहीं है।"
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization

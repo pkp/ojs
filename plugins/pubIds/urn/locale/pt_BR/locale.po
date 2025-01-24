@@ -217,13 +217,13 @@ msgstr ""
 "resolvido."
 
 msgid "plugins.pubIds.urn.editor.assignURN.assigned"
-msgstr "O URN {$ pubId} foi atribuído."
+msgstr "O URN {$pubId} foi atribuído."
 
 msgid "plugins.pubIds.urn.form.checkNoRequired"
 msgstr "Número de verificação faltando."
 
 msgid "plugins.pubIds.urn.editor.urn.description"
-msgstr "O URN deve começar com {$ prefix}."
+msgstr "O URN deve começar com {$prefix}."
 
 msgid "plugins.pubIds.urn.editor.urn.assignUrn"
 msgstr "Atribuir"

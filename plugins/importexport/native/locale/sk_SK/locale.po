@@ -88,7 +88,7 @@ msgstr ""
 msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
 msgstr ""
 "Skratka sekcia \"{$section1Abbrev}\" a skratka sekcie {$section2Abbrev}\" "
-"čísla \"{$ issueTitle}\" zodpovedajú rôznym existujúcim sekciám časopisu."
+"čísla \"{$issueTitle}\" zodpovedajú rôznym existujúcim sekciám časopisu."
 
 msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
 msgstr ""

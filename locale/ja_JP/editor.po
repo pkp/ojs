@@ -43,7 +43,7 @@ msgstr "自分"
 
 msgid "editor.publicIdentificationExists"
 msgstr ""
-"公開巻号識別子 '{$ publicIdentifier}'は、別のオブジェクト（巻号、論文、ゲラ、"
+"公開巻号識別子 '{$publicIdentifier}'は、別のオブジェクト（巻号、論文、ゲラ、"
 "またはファイル）に既に存在します。 雑誌内で一意の識別子を選択してください。"
 
 msgid "editor.submissionArchive.noSubmissions"
@@ -468,7 +468,7 @@ msgstr ""
 
 msgid "editor.publicIdentificationExistsForTheSameType"
 msgstr ""
-"公開巻号識別子 '{$ publicIdentifier}'は、同じタイプの別のオブジェクトに既に存"
+"公開巻号識別子 '{$publicIdentifier}'は、同じタイプの別のオブジェクトに既に存"
 "在します。 雑誌内で一意の識別子を選択してください。"
 
 msgid "editor.article.coverImage"

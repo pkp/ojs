@@ -93,8 +93,8 @@ msgstr ""
 
 msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
 msgstr ""
-"Abrevierea secțiunii \"{$ section1Abbrev}\" și abrevierea secțiunii \"{$ "
-"section2Abbrev}\" din numărul \"{$ issueTitle}\" se potrivesc diferitelor "
+"Abrevierea secțiunii \"{$section1Abbrev}\" și abrevierea secțiunii \"{$"
+"section2Abbrev}\" din numărul \"{$issueTitle}\" se potrivesc diferitelor "
 "secțiuni de jurnal existente."
 
 msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"

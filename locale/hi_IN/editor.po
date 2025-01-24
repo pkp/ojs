@@ -50,12 +50,12 @@ msgstr "मुझे"
 
 # (pofilter) brackets: Added '{', '}', '(', ')'
 # (pofilter) endpunc: Different punctuation at the end
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ publicIdentifier}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$publicIdentifier}
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
 # (pofilter) singlequoting: Different quotation marks
 msgid "editor.publicIdentificationExists"
 msgstr ""
-"सार्वजनिक पहचानकर्ता '{$ publicIdentifier}' किसी अन्य ऑब्जेक्ट (अंक, आलेख, गैली या "
+"सार्वजनिक पहचानकर्ता '{$publicIdentifier}' किसी अन्य ऑब्जेक्ट (अंक, आलेख, गैली या "
 "फ़ाइल) के लिए पहले से मौजूद है। कृपया अपनी जर्नल के भीतर विशिष्ट पहचानकर्ता चुनें।"
 
 # (pofilter) endpunc: Different punctuation at the end
@@ -96,9 +96,9 @@ msgid "editor.notifyUsers.allReaders"
 msgstr "सभी पाठक ({$count} उपयोगकर्ता)"
 
 # (pofilter) brackets: Added '{', '}', '(', ')'
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ count}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$count}
 msgid "editor.notifyUsers.allAuthors"
-msgstr "सभी प्रकाशित लेखक ({$ count} उपयोगकर्ता)"
+msgstr "सभी प्रकाशित लेखक ({$count} उपयोगकर्ता)"
 
 # (pofilter) brackets: Added '{', '}', '(', ')'
 # (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$count}
@@ -119,16 +119,16 @@ msgid "editor.usersNotified"
 msgstr "उपयोगकर्ताओं को सूचित किया"
 
 # (pofilter) brackets: Added '{', '}', '(', ')'
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ count}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$count}
 msgid "editor.notifyUsers.allUsers"
-msgstr "इस जर्नल से जुड़े सभी उपयोगकर्ताओं को यह संदेश भेजें ({$ count} उपयोगकर्ता)"
+msgstr "इस जर्नल से जुड़े सभी उपयोगकर्ताओं को यह संदेश भेजें ({$count} उपयोगकर्ता)"
 
 # (pofilter) brackets: Added '{', '}', '(', ')'
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ count}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$count}
 msgid "editor.notifyUsers.interestedUsers"
 msgstr ""
 "इस जर्नल से जुड़े उपयोगकर्ताओं को यह संदेश भेजें जिन्होंने संकेत दिया है कि वे अपडेट प्राप्त करना "
-"चाहते हैं ({$ count} उपयोगकर्ता)"
+"चाहते हैं ({$count} उपयोगकर्ता)"
 
 # (pofilter) endpunc: Different punctuation at the end
 msgid "editor.notifyUsers.includeToc"
@@ -600,12 +600,12 @@ msgstr ""
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) endpunc: Different punctuation at the end
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ publicIdentifier}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$publicIdentifier}
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
 # (pofilter) singlequoting: Different quotation marks
 msgid "editor.publicIdentificationExistsForTheSameType"
 msgstr ""
-"सार्वजनिक पहचानकर्ता '{$ publicIdentifier}' पहले से ही उसी प्रकार की किसी अन्य वस्तु "
+"सार्वजनिक पहचानकर्ता '{$publicIdentifier}' पहले से ही उसी प्रकार की किसी अन्य वस्तु "
 "के लिए मौजूद है। कृपया अपनी जर्नल में उसी प्रकार की वस्तुओं के लिए विशिष्ट पहचानकर्ता चुनें।"
 
 # (pofilter) simplecaps: Different capitalization

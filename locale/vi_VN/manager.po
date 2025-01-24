@@ -2041,7 +2041,7 @@ msgid "plugins.importexport.common.validation.fail"
 msgstr ""
 
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
-msgstr "Tiền tố DOI bị thiếu cho tạp chí có đường dẫn {$ path}."
+msgstr "Tiền tố DOI bị thiếu cho tạp chí có đường dẫn {$path}."
 
 msgid "plugins.importexport.common.cliError"
 msgstr "LỖI:"

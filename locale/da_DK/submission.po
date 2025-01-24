@@ -343,7 +343,7 @@ msgstr ""
 msgid "submission.license.description"
 msgstr ""
 "Licensen indstilles automatisk til <a href='{$licenseUrl}' "
-"target='_blank'>{$ licensnavn}</a>, når dette publiceres."
+"target='_blank'>{$licenseName}</a>, når dette publiceres."
 
 msgid "submission.copyrightHolder.description"
 msgstr "Copyright tildeles automatisk {$copyright}, når dette publiceres."

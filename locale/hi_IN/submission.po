@@ -59,9 +59,9 @@ msgstr "सबमिशन वर्कफ़्लो"
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) endpunc: Different punctuation at the end
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ wordCount}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$wordCount}
 msgid "submission.abstract.wordCount.description"
-msgstr "सार {$ wordCount} शब्द या उससे कम का होना चाहिए ।"
+msgstr "सार {$wordCount} शब्द या उससे कम का होना चाहिए ।"
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization

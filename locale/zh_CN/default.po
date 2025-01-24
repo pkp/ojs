@@ -61,9 +61,9 @@ msgstr "本期刊遵循内容时开放存取原则，促使其研究免费地用
 msgid "default.contextSettings.forReaders"
 msgstr ""
 "我们鼓励读者订阅期刊出版通知服务。 在期刊主页的顶部使用<a href=\"{$index "
-"Url}/{$journal Path}/user/register\">注册</a>链接。完成注册后，读者可以接收到"
+"Url}/{$journalPath}/user/register\">注册</a>链接。完成注册后，读者可以接收到"
 "期刊每一期内容的目录表的电子邮件。这样期刊可以获得一定水平度额支持和读者群。"
-"期刊上的<a href=\"{$index Url}/{$journal Path}/about/"
+"期刊上的<a href=\"{$indexUrl}/{$journalPath}/about/"
 "submissions#privacyStatement\">隐私声明</a>保证读者的姓名和电子邮件地址不会被"
 "用于其他用途。"
 

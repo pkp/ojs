@@ -46,7 +46,7 @@ msgid "grid.action.workflow"
 msgstr "Proces predaje rada"
 
 msgid "submission.abstract.wordCount.description"
-msgstr "Sažetak mora sadržavati {$ wordCount} riječi ili manje."
+msgstr "Sažetak mora sadržavati {$wordCount} riječi ili manje."
 
 msgid "submission.submit.noContext"
 msgstr "Časopis ovog predanog rada nije moguće pronaći."
@@ -67,10 +67,10 @@ msgid "grid.action.issueEntry"
 msgstr "Pogledajte metapodatke ove predaje"
 
 msgid "submission.event.articleGalleyMadeAvailable"
-msgstr "Kopija članka \"{$ galley FormatName}\" je dostupna."
+msgstr "Kopija članka \"{$galleyFormatName}\" je dostupna."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "Kopija članka \"{$ galley FormatName}\" nije dostupna."
+msgstr "Kopija članka \"{$galleyFormatName}\" nije dostupna."
 
 msgid "submission.event.publicIdentifiers"
 msgstr "Javni identifikatori predaje su ažurirani."
