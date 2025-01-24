@@ -205,7 +205,7 @@ msgid "plugins.pubIds.urn.editor.assignURN.pattern"
 msgstr "Không thể gán URN {$pubId} vì nó chứa dạng chưa được giải quyết."
 
 msgid "plugins.pubIds.urn.editor.assignURN.assigned"
-msgstr "URN {$ pubId} đã được chỉ định."
+msgstr "URN {$pubId} đã được chỉ định."
 
 msgid "plugins.pubIds.urn.form.checkNoRequired"
 msgstr "Số kiểm tra bị thiếu."

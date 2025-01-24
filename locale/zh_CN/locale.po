@@ -1545,7 +1545,7 @@ msgid "about.onlineSubmissions.submissionActions"
 msgstr "{$newSubmission} 或 {$viewSubmissions}."
 
 msgid "about.onlineSubmissions.submitToSection"
-msgstr "向<a href=\"{$url}\"> {$ name} </a>栏目提交新稿件。"
+msgstr "向<a href=\"{$url}\"> {$name} </a>栏目提交新稿件。"
 
 msgid "about.onlineSubmissions.newSubmission"
 msgstr "提交新稿件"
@@ -1741,7 +1741,7 @@ msgid "payment.type.donation"
 msgstr "捐献"
 
 msgid "payment.requestPublicationFee"
-msgstr "需要出版费（{$ feeAmount}）"
+msgstr "需要出版费（{$feeAmount}）"
 
 msgid "payment.notFound"
 msgstr "已申请付款，但申请已过期。有关详细信息，请联系期刊管理员。"
@@ -2024,7 +2024,7 @@ msgid "log.editor.decision"
 msgstr "对于稿件{$submissionId} 的编辑决策已经被{$editorName}记录."
 
 msgid "log.editor.recommendation"
-msgstr "{$ editorName} 撰写了文章 {$ submissionId} 的推荐语（{$ decision}）。"
+msgstr "{$editorName} 撰写了文章 {$submissionId} 的推荐语（{$decision}）。"
 
 msgid "log.copyedit.initiate"
 msgstr "文字编辑{$copyeditorName}已对稿件{$submissionId}提出文字编辑意见."
@@ -2089,7 +2089,7 @@ msgid "notification.type.editing"
 msgstr "编辑事件"
 
 msgid "notification.type.submissionSubmitted"
-msgstr "提交了新稿件 “ {$ title}” 。"
+msgstr "提交了新稿件 “ {$title}” 。"
 
 msgid "notification.type.editorDecisionComment"
 msgstr "在编辑的决定里已经对 \"{$title}\"进行了评论"
@@ -2206,7 +2206,7 @@ msgid "navigation.subscriptions"
 msgstr "订阅"
 
 msgid "log.editor.submissionExpedited"
-msgstr "{$ editorName}已完成文章{$ submissionId}的编辑。"
+msgstr "{$editorName}已完成文章{$submissionId}的编辑。"
 
 msgid "catalog.sortBy"
 msgstr "稿件顺序"

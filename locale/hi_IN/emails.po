@@ -46,12 +46,12 @@ msgstr "पासवर्ड रीसेट पुष्टि"
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) long: The translation is much longer than the original
 # (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ siteTitle}, {$url}, {$principalContactSignature}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$siteTitle}, {$url}, {$principalContactSignature}
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
 # (pofilter) xmltags: Added XML tags
 msgid "emails.passwordResetConfirm.body"
 msgstr ""
-"हमें {$ siteTitle} वेब साइट के लिए आपका पासवर्ड रीसेट करने का अनुरोध मिला है.<br />\n"
+"हमें {$siteTitle} वेब साइट के लिए आपका पासवर्ड रीसेट करने का अनुरोध मिला है.<br />\n"
 "<br />\n"
 "यदि आपने यह अनुरोध नहीं किया है, तो कृपया इस ईमेल को अनदेखा करें और आपका पासवर्ड "
 "परिवर्तित नहीं किया जाएगा। यदि आप अपना पासवर्ड रीसेट करना चाहते हैं, तो नीचे दिए गए "
@@ -455,7 +455,7 @@ msgstr "लेख समीक्षा का अनुरोध"
 # (pofilter) brackets: Added '{', '}', '(', ')'
 # (pofilter) long: The translation is much longer than the original
 # (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ responseDueDate}, {$contextUrl}, {$editorialContactSignature}, {$submissionTitle}, {$reviewDueDate}, {$submissionAbstract}, {$reviewerName}, {$submissionReviewUrl}, {$contextName}, {$passwordResetUrl}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$responseDueDate}, {$contextUrl}, {$editorialContactSignature}, {$submissionTitle}, {$reviewDueDate}, {$submissionAbstract}, {$reviewerName}, {$submissionReviewUrl}, {$contextName}, {$passwordResetUrl}
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 6
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
@@ -463,7 +463,7 @@ msgid "emails.reviewRequestRemindAuto.body"
 msgstr ""
 "{$reviewerName}:<br />\n"
 "प्रस्तुत करने की आपकी समीक्षा के लिए हमारे अनुरोध का एक सौम्य अनुस्मारक, &quot;"
-"{$submissionTitle},&quot; for {$contextName}. हम {$ responseDueDate} द्वारा "
+"{$submissionTitle},&quot; for {$contextName}. हम {$responseDueDate} द्वारा "
 "आपकी प्रतिक्रिया की उम्मीद कर रहे थे, और यह ईमेल स्वचालित रूप से जनरेट किया गया है और "
 "उस तारीख को पारित करने के साथ भेजा गया है.\n"
 "<br />\n"
@@ -508,7 +508,7 @@ msgstr "लेख समीक्षा का अनुरोध"
 # (pofilter) doublespacing: Different use of double spaces
 # (pofilter) long: The translation is much longer than the original
 # (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ responseDueDate}, {$editorialContactSignature}, {$reviewDueDate}, {$submissionTitle}, {$submissionAbstract}, {$reviewerName}, {$submissionReviewUrl}, {$contextName}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$responseDueDate}, {$editorialContactSignature}, {$reviewDueDate}, {$submissionTitle}, {$submissionAbstract}, {$reviewerName}, {$submissionReviewUrl}, {$contextName}
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
@@ -522,7 +522,7 @@ msgstr ""
 "विचार करेंगे.<br />\n"
 "<br />\n"
 "कृपया यह दिखाने के लिए कि क्या आप समीक्षा करेंगे या नहीं, साथ ही सबमिशन एक्सेस करने और "
-"अपनी समीक्षा और अनुशंसा दर्ज करने के लिए कृपया {$ responseDueDate} जर्नल में लॉग इन "
+"अपनी समीक्षा और अनुशंसा दर्ज करने के लिए कृपया {$responseDueDate} जर्नल में लॉग इन "
 "करें।.<br />\n"
 "<br />\n"
 "The review itself is due {$reviewDueDate}.<br />\n"
@@ -554,7 +554,7 @@ msgstr "लेख समीक्षा का अनुरोध"
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) long: The translation is much longer than the original
 # (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ responseDueDate}, {$editorialContactSignature}, {$reviewDueDate}, {$submissionTitle}, {$submissionAbstract}, {$reviewerName}, {$submissionReviewUrl}, {$contextName}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$responseDueDate}, {$editorialContactSignature}, {$reviewDueDate}, {$submissionTitle}, {$submissionAbstract}, {$reviewerName}, {$submissionReviewUrl}, {$contextName}
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
@@ -562,7 +562,7 @@ msgid "emails.reviewRequestRemindAutoOneclick.body"
 msgstr ""
 "{$reviewerName}:<br />\n"
 "प्रस्तुत करने की आपकी समीक्षा के लिए हमारे अनुरोध का एक सौम्य अनुस्मारक, &quot;"
-"{$submissionTitle},&quot; for {$contextName}. हम {$ responseDueDate} द्वारा "
+"{$submissionTitle},&quot; for {$contextName}. हम {$responseDueDate} द्वारा "
 "आपकी प्रतिक्रिया की उम्मीद कर रहे थे, और यह ईमेल स्वचालित रूप से जनरेट किया गया है और "
 "उस तारीख को पारित करने के साथ भेजा गया है.\n"
 "<br />\n"
@@ -602,7 +602,7 @@ msgstr "लेख समीक्षा का अनुरोध"
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) long: The translation is much longer than the original
 # (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ responseDueDate}, {$reviewerName}, {$editorialContactSignature}, {$reviewDueDate}, {$submissionTitle}, {$reviewGuidelines}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$responseDueDate}, {$reviewerName}, {$editorialContactSignature}, {$reviewDueDate}, {$submissionTitle}, {$reviewGuidelines}
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
@@ -616,7 +616,7 @@ msgstr ""
 "ईमेल से जुड़ा हुआ है। प्रस्तुत करने की आपकी समीक्षा, आपकी सिफारिश के साथ, मेरे द्वारा ईमेल "
 "की जानी चाहिए {$reviewDueDate}.<br />\n"
 "<br />\n"
-"कृपया {$ responseDueDate} द्वारा वापसी ईमेल में इंगित करें कि क्या आप समीक्षा करने में "
+"कृपया {$responseDueDate} द्वारा वापसी ईमेल में इंगित करें कि क्या आप समीक्षा करने में "
 "सक्षम और इच्छुक हैं।<br />\n"
 "<br />\n"
 "इस अनुरोध पर विचार करने के लिए धन्यवाद।<br />\n"
@@ -643,7 +643,7 @@ msgstr "लेख समीक्षा का अनुरोध"
 # (pofilter) brackets: Added '{', '}', '(', ')'
 # (pofilter) long: The translation is much longer than the original
 # (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ responseDueDate}, {$contextUrl}, {$editorialContactSignature}, {$submissionTitle}, {$reviewDueDate}, {$submissionAbstract}, {$reviewerName}, {$submissionReviewUrl}, {$contextName}, {$passwordResetUrl}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$responseDueDate}, {$contextUrl}, {$editorialContactSignature}, {$submissionTitle}, {$reviewDueDate}, {$submissionAbstract}, {$reviewerName}, {$submissionReviewUrl}, {$contextName}, {$passwordResetUrl}
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
@@ -659,7 +659,7 @@ msgstr ""
 "<br />\n"
 "<br />\n"
 "कृपया यह दिखाने के लिए कि क्या आप समीक्षा करेंगे या नहीं, साथ ही सबमिशन एक्सेस करने और "
-"अपनी समीक्षा और अनुशंसा दर्ज करने के लिए कृपया {$ responseDueDate} द्वारा जर्नल वेब "
+"अपनी समीक्षा और अनुशंसा दर्ज करने के लिए कृपया {$responseDueDate} द्वारा जर्नल वेब "
 "साइट पर लॉग इन करें। वेब साइट है {$contextUrl}<br />\n"
 "<br />\n"
 "समीक्षा स्वयं होने वाली है{$reviewDueDate}.<br />\n"
@@ -696,7 +696,7 @@ msgstr "लेख समीक्षा का अनुरोध"
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) long: The translation is much longer than the original
 # (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ responseDueDate}, {$editorialContactSignature}, {$reviewDueDate}, {$submissionTitle}, {$submissionAbstract}, {$reviewerName}, {$submissionReviewUrl}, {$contextName}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$responseDueDate}, {$editorialContactSignature}, {$reviewDueDate}, {$submissionTitle}, {$submissionAbstract}, {$reviewerName}, {$submissionReviewUrl}, {$contextName}
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
@@ -712,7 +712,7 @@ msgstr ""
 "<br />\n"
 "<br />\n"
 "कृपया यह दिखाने के लिए कि क्या आप समीक्षा करेंगे या नहीं, साथ ही सबमिशन एक्सेस करने और "
-"अपनी समीक्षा और अनुशंसा दर्ज करने के लिए कृपया {$ responseDueDate} जर्नल में लॉग इन "
+"अपनी समीक्षा और अनुशंसा दर्ज करने के लिए कृपया {$responseDueDate} जर्नल में लॉग इन "
 "करें।.<br />\n"
 "<br />\n"
 "समीक्षा स्वयं होने वाली है {$reviewDueDate}.<br />\n"
@@ -745,7 +745,7 @@ msgstr "लेख समीक्षा का अनुरोध"
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) long: The translation is much longer than the original
 # (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ responseDueDate}, {$reviewerName}, {$ reviewDueDate}, {$editorialContactSignature}, {$submissionTitle}, {$contextName}, {$reviewGuidelines}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$responseDueDate}, {$reviewerName}, {$reviewDueDate}, {$editorialContactSignature}, {$submissionTitle}, {$contextName}, {$reviewGuidelines}
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
@@ -761,10 +761,10 @@ msgstr ""
 "<br />\n"
 "<br />\n"
 "इस जर्नल के लिए समीक्षा दिशानिर्देश नीचे संलग्न हैं, और प्रस्तुत इस ईमेल से जुड़ा हुआ है। आपकी "
-"अनुशंसा के साथ, आपकी सबमिट की समीक्षा, {$ reviewDueDate} द्वारा मुझे ईमेल की जानी "
+"अनुशंसा के साथ, आपकी सबमिट की समीक्षा, {$reviewDueDate} द्वारा मुझे ईमेल की जानी "
 "चाहिए.<br />\n"
 "<br />\n"
-"कृपया {$ responseDueDate} द्वारा वापसी ईमेल में इंगित करें कि क्या आप समीक्षा करने में "
+"कृपया {$responseDueDate} द्वारा वापसी ईमेल में इंगित करें कि क्या आप समीक्षा करने में "
 "सक्षम और इच्छुक हैं.<br />\n"
 "<br />\n"
 "इस अनुरोध पर विचार करने के लिए धन्यवाद।<br />\n"
@@ -855,7 +855,7 @@ msgstr "समीक्षा करने में सक्षम"
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) long: The translation is much longer than the original
 # (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$reviewerName}, {$ reviewDueDate}, {$submissionTitle}, {$contextName}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$reviewerName}, {$reviewDueDate}, {$submissionTitle}, {$contextName}
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startcaps: Different capitalization at the start
@@ -865,7 +865,7 @@ msgstr ""
 "Editors:<br />\n"
 "<br />\n"
 "मैं सबमिशन की समीक्षा करने में सक्षम और तैयार हूं, &quot;{$submissionTitle},&quot; for "
-"{$contextName}. मेरे बारे में सोचने के लिए धन्यवाद, और मेरी योजना इसकी नियत तारीख, {$ "
+"{$contextName}. मेरे बारे में सोचने के लिए धन्यवाद, और मेरी योजना इसकी नियत तारीख, {$"
 "reviewDueDate} से पूरी होने की है, अगर पहले नहीं.<br />\n"
 "<br />\n"
 "{$reviewerName}"
@@ -941,7 +941,7 @@ msgstr "सबमिशन रिव्यू रिमाइंडर"
 # (pofilter) brackets: Added '{', '}', '(', ')'
 # (pofilter) long: The translation is much longer than the original
 # (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$reviewerName}, {$ reviewDueDate}, {$editorialContactSignature}, {$submissionTitle}, {$submissionReviewUrl}, {$contextName}, {$ PasswordResetUrl}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$reviewerName}, {$reviewDueDate}, {$editorialContactSignature}, {$submissionTitle}, {$submissionReviewUrl}, {$contextName}, {$passwordResetUrl}
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
 # (pofilter) simplecaps: Different capitalization
 # (pofilter) startpunc: Different punctuation at the start
@@ -951,13 +951,13 @@ msgstr ""
 "{$reviewerName}:<br />\n"
 "<br />\n"
 "प्रस्तुत करने की आपकी समीक्षा के लिए हमारे अनुरोध का एक सौम्य अनुस्मारक, &quot;"
-"{$submissionTitle},&quot; for {$contextName}. हम {$ reviewDueDate} द्वारा इस "
+"{$submissionTitle},&quot; for {$contextName}. हम {$reviewDueDate} द्वारा इस "
 "समीक्षा की उम्मीद कर रहे थे, और जैसे ही आप इसे तैयार करने वाले हैं, इसे प्राप्त करके प्रसन्न "
 "होंगे.<br />\n"
 "<br />\n"
 "यदि आपके पास जर्नल की वेब साइट के लिए आपका उपयोगकर्ता नाम और पासवर्ड नहीं है, तो आप "
 "अपना पासवर्ड रीसेट करने के लिए इस लिंक का उपयोग कर सकते हैं (जो तब आपके उपयोगकर्ता नाम "
-"के साथ आपको ईमेल किया जाएगा)। {$ PasswordResetUrl}<br />\n"
+"के साथ आपको ईमेल किया जाएगा)। {$passwordResetUrl}<br />\n"
 "<br />\n"
 "Submission URL: {$submissionReviewUrl}<br />\n"
 "<br />\n"
@@ -979,7 +979,7 @@ msgstr "सबमिशन समीक्षा रिमाइंडर"
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) long: The translation is much longer than the original
 # (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$reviewerName}, {$ reviewDueDate}, {$editorialContactSignature}, {$submissionTitle}, {$submissionReviewUrl}, {$contextName}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$reviewerName}, {$reviewDueDate}, {$editorialContactSignature}, {$submissionTitle}, {$submissionReviewUrl}, {$contextName}
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
@@ -988,7 +988,7 @@ msgstr ""
 "{$reviewerName}:<br />\n"
 "<br />\n"
 "प्रस्तुत करने की आपकी समीक्षा के लिए हमारे अनुरोध का एक सौम्य अनुस्मारक, &quot;"
-"{$submissionTitle},&quot; for {$contextName}. हम {$ reviewDueDate} द्वारा इस "
+"{$submissionTitle},&quot; for {$contextName}. हम {$reviewDueDate} द्वारा इस "
 "समीक्षा की उम्मीद कर रहे थे, और जैसे ही आप इसे तैयार करने वाले हैं, इसे प्राप्त करके प्रसन्न "
 "होंगे.<br />\n"
 "<br />\n"
@@ -1011,7 +1011,7 @@ msgstr "ऑटोमेटेड सबमिशन रिव्यू रिम
 # (pofilter) brackets: Added '{', '}', '(', ')'
 # (pofilter) long: The translation is much longer than the original
 # (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$reviewerName}, {$ reviewDueDate}, {$editorialContactSignature}, {$submissionTitle}, {$submissionReviewUrl}, {$contextName}, {$ PasswordResetUrl}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$reviewerName}, {$reviewDueDate}, {$editorialContactSignature}, {$submissionTitle}, {$submissionReviewUrl}, {$contextName}, {$passwordResetUrl}
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 5
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
@@ -1020,14 +1020,14 @@ msgstr ""
 "{$reviewerName}:<br />\n"
 "<br />\n"
 "प्रस्तुत करने की आपकी समीक्षा के लिए हमारे अनुरोध का एक सौम्य अनुस्मारक, &quot;"
-"{$submissionTitle},&quot; for {$contextName}. हम {$ reviewDueDate} द्वारा इस "
+"{$submissionTitle},&quot; for {$contextName}. हम {$reviewDueDate} द्वारा इस "
 "समीक्षा की उम्मीद कर रहे थे, और यह ईमेल स्वचालित रूप से जनरेट किया गया है और उस तारीख "
 "को पारित करने के साथ भेजा गया है। जैसे ही आप इसे तैयार करने में सक्षम होंगे, हम इसे प्राप्त "
 "करके प्रसन्न होंगे.<br />\n"
 "<br />\n"
 "यदि आपके पास जर्नल की वेब साइट के लिए आपका उपयोगकर्ता नाम और पासवर्ड नहीं है, तो आप "
 "अपना पासवर्ड रीसेट करने के लिए इस लिंक का उपयोग कर सकते हैं (जो तब आपके उपयोगकर्ता नाम "
-"के साथ आपको ईमेल किया जाएगा)। {$ PasswordResetUrl}<br />\n"
+"के साथ आपको ईमेल किया जाएगा)। {$passwordResetUrl}<br />\n"
 "<br />\n"
 "Submission URL: {$submissionReviewUrl}<br />\n"
 "<br />\n"
@@ -1051,7 +1051,7 @@ msgstr "ऑटोमेटेड सबमिशन रिव्यू रिम
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) long: The translation is much longer than the original
 # (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$reviewerName}, {$ reviewDueDate}, {$editorialContactSignature}, {$submissionTitle}, {$submissionReviewUrl}, {$contextName}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$reviewerName}, {$reviewDueDate}, {$editorialContactSignature}, {$submissionTitle}, {$submissionReviewUrl}, {$contextName}
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 4
 # (pofilter) startpunc: Different punctuation at the start
 # (pofilter) xmltags: Added XML tags
@@ -1060,7 +1060,7 @@ msgstr ""
 "{$reviewerName}:<br />\n"
 "<br />\n"
 "प्रस्तुत करने की आपकी समीक्षा के लिए हमारे अनुरोध का एक सौम्य अनुस्मारक, &quot;"
-"{$submissionTitle},&quot; for {$contextName}. हम {$ reviewDueDate} द्वारा इस "
+"{$submissionTitle},&quot; for {$contextName}. हम {$reviewDueDate} द्वारा इस "
 "समीक्षा की उम्मीद कर रहे थे, और यह ईमेल स्वचालित रूप से जनरेट किया गया है और उस तारीख "
 "को पारित करने के साथ भेजा गया है। जैसे ही आप इसे तैयार करने में सक्षम होंगे, हम इसे प्राप्त "
 "करके प्रसन्न होंगे.<br />\n"
@@ -1567,11 +1567,11 @@ msgstr "सदस्यता खरीद: व्यक्तिगत"
 # (pofilter) brackets: Added '{', '}', '(', ')'
 # (pofilter) long: The translation is much longer than the original
 # (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$userDetails}, {$subscriptionUrl}, {$membership}, {$subscriptionType}, {$ contextName}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$userDetails}, {$subscriptionUrl}, {$membership}, {$subscriptionType}, {$contextName}
 # (pofilter) xmltags: Added XML tags
 msgid "emails.subscriptionPurchaseIndl.body"
 msgstr ""
-"निम्नलिखित विवरण के साथ {$ contextName} के लिए एक व्यक्तिगत सदस्यता ऑनलाइन खरीदी "
+"निम्नलिखित विवरण के साथ {$contextName} के लिए एक व्यक्तिगत सदस्यता ऑनलाइन खरीदी "
 "गई है।<br />\n"
 "<br />\n"
 "Subscription Type:<br />\n"
@@ -1757,13 +1757,13 @@ msgstr "संशोधित संस्करण अपलोड किया
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) newlines: Different line endings
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ authorName}, {$editorialContactSignature}, {$submissionTitle}, {$submissionUrl}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$authorName}, {$editorialContactSignature}, {$submissionTitle}, {$submissionUrl}
 # (pofilter) xmltags: Added XML tags
 msgid "emails.revisedVersionNotify.body"
 msgstr ""
 "संपादकों:<br />\n"
 "<br />\n"
-"का संशोधित संस्करण &quot;{$submissionTitle}&quot; लेखक द्वारा अपलोड किया गया है {$ "
+"का संशोधित संस्करण &quot;{$submissionTitle}&quot; लेखक द्वारा अपलोड किया गया है {$"
 "authorName}.<br />\n"
 "<br />\n"
 "सबमिशन URL: {$submissionUrl}<br />\n"

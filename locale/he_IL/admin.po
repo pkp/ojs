@@ -228,7 +228,7 @@ msgstr ""
 #~ msgstr "הורד אזור"
 
 #~ msgid "admin.languages.localeInstalled"
-#~ msgstr "האזור \"{$ locale}\" הותקן."
+#~ msgstr "האזור \"{$locale}\" הותקן."
 
 #~ msgid "admin.languages.downloadFailed"
 #~ msgstr "הורדת האזור נכשלה. הודעת השגיאה להלן מתארת את הכישלון."

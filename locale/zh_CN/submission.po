@@ -214,14 +214,14 @@ msgid "publication.publish.confirmation"
 msgstr "已满足所有发布要求。您确定要发布吗？"
 
 msgid "publication.publish.confirmation.futureIssue"
-msgstr "已满足所有发布要求。这将在{$ issue}发布时发布。您确定要安排发布吗？"
+msgstr "已满足所有发布要求。这将在{$issue}发布时发布。您确定要安排发布吗？"
 
 msgid "publication.publish.confirmation.backIssue"
-msgstr "已满足所有发布要求。这将发布在{$ issue}中。您确定要发布吗？"
+msgstr "已满足所有发布要求。这将发布在{$issue}中。您确定要发布吗？"
 
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
-"已满足所有发布要求。由于发布日期已设置为{$ datePublished}。您确定要发布吗？"
+"已满足所有发布要求。由于发布日期已设置为{$datePublished}。您确定要发布吗？"
 
 msgid "publication.required.issue"
 msgstr "在发布之前，必须先将该文章分配一个期次。"

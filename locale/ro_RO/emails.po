@@ -1183,7 +1183,7 @@ msgstr "Achiziție abonament: Individual"
 
 msgid "emails.subscriptionPurchaseIndl.body"
 msgstr ""
-"Un abonament individual a fost achiziționat online pentru {$ contextName} cu "
+"Un abonament individual a fost achiziționat online pentru {$contextName} cu "
 "următoarele detalii.<br />\n"
 "<br />\n"
 "Tip de abonament:<br />\n"

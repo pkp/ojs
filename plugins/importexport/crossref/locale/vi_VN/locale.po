@@ -144,7 +144,7 @@ msgstr ""
 "Đăng ký không hoàn toàn thành công! Máy chủ đăng ký DOI trả về một lỗi."
 
 msgid "plugins.importexport.crossref.register.success.warning"
-msgstr "Đăng ký thành công nhưng cảnh báo sau đã xảy ra: '{$ param}'."
+msgstr "Đăng ký thành công nhưng cảnh báo sau đã xảy ra: '{$param}'."
 
 msgid "plugins.importexport.crossref.export.error.issueNotFound"
 msgstr "Không cósố  nào khớp với ID số được chỉ định \"{$issueId}\"."

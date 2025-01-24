@@ -43,7 +43,7 @@ msgstr "Men"
 
 msgid "editor.publicIdentificationExists"
 msgstr ""
-"\"{$ PublicIdentifier}\" ochiq identifikatori allaqachon boshqa ob'ekt uchun "
+"\"{$publicIdentifier}\" ochiq identifikatori allaqachon boshqa ob'ekt uchun "
 "ishlatilgan (nashr, maqola yoki qo‘shimcha fayl). Iltimos, jurnalingizga "
 "noyob identifikatorlarni tanlang."
 
@@ -76,13 +76,13 @@ msgid "editor.notifyUsers.allReaders"
 msgstr "Barcha mushtariylar ({$count} foydalanuvchilar)"
 
 msgid "editor.notifyUsers.allAuthors"
-msgstr "Barcha nashr etilgan mualliflar ({$ count} foydalanuvchilar)"
+msgstr "Barcha nashr etilgan mualliflar ({$count} foydalanuvchilar)"
 
 msgid "editor.notifyUsers.allIndividualSubscribers"
-msgstr "Barcha alohida obunachilar ({$ count} foydalanuvchilar)"
+msgstr "Barcha alohida obunachilar ({$count} foydalanuvchilar)"
 
 msgid "editor.notifyUsers.allInstitutionalSubscribers"
-msgstr "Barcha institutsional obunachilar ({$ count} foydalanuvchilar)"
+msgstr "Barcha institutsional obunachilar ({$count} foydalanuvchilar)"
 
 msgid "editor.notifyUsers.inProgress"
 msgstr "Foydalanuvchilar xabardor qilinmoqda ..."
@@ -93,12 +93,12 @@ msgstr "Foydalanuvchilar ogohlantirildi"
 msgid "editor.notifyUsers.allUsers"
 msgstr ""
 "Ushbu xabarni ushbu jurnal bilan bog‘liq bo‘lgan barcha foydalanuvchilarga "
-"yuboring ({$ count} foydalanuvchilar)"
+"yuboring ({$count} foydalanuvchilar)"
 
 msgid "editor.notifyUsers.interestedUsers"
 msgstr ""
 "Ushbu xabarni jurnal bilan bog‘langan, yangilanishlarni qabul qilish istagi "
-"bor  barcha foydalanuvchilarga yuboring ({$ count} foydalanuvchilar)"
+"bor  barcha foydalanuvchilarga yuboring ({$count} foydalanuvchilar)"
 
 msgid "editor.notifyUsers.includeToc"
 msgstr "Ushbu nashrdan tarkibni qo‘shing:"
@@ -110,7 +110,7 @@ msgid "editor.issues.createIssue"
 msgstr "Nashr yaratish"
 
 msgid "editor.issues.editIssue"
-msgstr "Chiqarishni boshqarish: {$ issueIdentification}"
+msgstr "Chiqarishni boshqarish: {$issueIdentification}"
 
 msgid "editor.issues.currentIssue"
 msgstr "Joriy nashr"
@@ -476,7 +476,7 @@ msgstr ""
 
 msgid "editor.publicIdentificationExistsForTheSameType"
 msgstr ""
-"\"{$ PublicIdentifier}\" ochiq identifikatori allaqachon shu turdagi boshqa "
+"\"{$publicIdentifier}\" ochiq identifikatori allaqachon shu turdagi boshqa "
 "ob'ekt uchun mavjud. Iltimos, jurnalingizda bir xil turdagi ob'ektlar uchun "
 "noyob identifikatorlarni tanlang."
 

@@ -405,7 +405,7 @@ msgid "user.reviewerPrompt"
 msgstr "Ați fi dispus să evaluați manuscrise înregistrate la acest jurnal?"
 
 msgid "user.reviewerPrompt.userGroup"
-msgstr "Da, solicitați rolul {$ userGroup}."
+msgstr "Da, solicitați rolul {$userGroup}."
 
 msgid "user.reviewerPrompt.optin"
 msgstr ""
