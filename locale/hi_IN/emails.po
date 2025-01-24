@@ -1813,7 +1813,7 @@ msgstr ""
 "कम कर देता है"
 
 msgid "emails.statisticsReportNotification.subject"
-msgstr "{$ माह}, {$ वर्ष} के लिए संपादकीय गतिविधि"
+msgstr "{$month}, {$year} के लिए संपादकीय गतिविधि"
 
 msgid "emails.statisticsReportNotification.body"
 msgstr ""

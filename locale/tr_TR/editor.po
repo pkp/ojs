@@ -473,7 +473,7 @@ msgstr ""
 
 msgid "editor.publicIdentificationExistsForTheSameType"
 msgstr ""
-"'{$PublicIdentifier}' genel tanımlayıcısı aynı türden başka bir öğe için "
+"'{$publicIdentifier}' genel tanımlayıcısı aynı türden başka bir öğe için "
 "zaten kullanımda. Lütfen derginiz içerisinde aynı türden öğeler için "
 "benzersiz tanımlayıcılar seçin."
 
