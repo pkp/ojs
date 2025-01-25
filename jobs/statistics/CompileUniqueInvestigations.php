@@ -22,6 +22,8 @@ use PKP\jobs\BaseJob;
 
 class CompileUniqueInvestigations extends BaseJob
 {
+    public int $timeout = 600;
+
     /**
      * Create a new job instance.
      *
