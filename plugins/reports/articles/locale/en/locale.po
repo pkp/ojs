@@ -21,3 +21,6 @@ msgstr ""
 
 msgid "plugins.reports.articles.nodecision"
 msgstr "No Decision"
+
+msgid "plugins.reports.articles.initialDecline"
+msgstr "Decline (Pre-review)"

@@ -367,7 +367,7 @@ class ArticleReportPlugin extends ReportPlugin
             case Decision::EXTERNAL_REVIEW:
                 return __('editor.submission.decision.sendExternalReview');
             case Decision::INITIAL_DECLINE:
-                return __('editor.submission.decision.decline');
+                return __('plugins.reports.articles.initialDecline');
             case Decision::RECOMMEND_ACCEPT:
                 return __('editor.submission.recommendation.display', ['recommendation' => __('editor.submission.decision.accept')]);
             case Decision::RECOMMEND_DECLINE:
