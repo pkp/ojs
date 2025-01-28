@@ -1,0 +1,132 @@
+# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-05-23 19:49+0000\n"
+"Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
+"Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/plugins/"
+"immersion/tr/>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgstr "Dergi ana sayfasındaki dergi açıklama bölümü için arka plan rengi"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgstr "Dergi açıklaması arka planı"
+
+msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgstr "Etkinleştir"
+
+msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgstr "Devre dışı (varsayılan)"
+
+msgid "plugins.themes.immersion.options.journalDescription.description"
+msgstr ""
+"Etkinleştirilirse, dergi açıklaması derginin ana sayfasında gösterilecektir"
+
+msgid "plugins.themes.immersion.options.journalDescription.label"
+msgstr "Dergi açıklamasını göster"
+
+msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgstr ""
+"Etkinleştirme; Bölüme Göre Göz At eklentisinin etkinleştirilmesini gerektirir"
+
+msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgstr "Devre dışı bırak"
+
+msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgstr ""
+"Etkinleştirilirse, bölüm açıklaması dergi ana sayfasındaki uygun bölümün "
+"altında gösterilecektir"
+
+msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgstr "Bölüm açıklamasını göster"
+
+msgid "plugins.themes.immersion.author.details"
+msgstr "Yazar Detayları"
+
+msgid "plugins.themes.immersion.authors.browse"
+msgstr "Yazara göre gör"
+
+msgid "plugins.themes.immersion.article.figure"
+msgstr "Kapak resmi"
+
+msgid "plugins.themes.immersion.article.biography"
+msgstr "Biyografi"
+
+msgid "plugins.themes.immersion.search.parameters"
+msgstr "Parametreler"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "Tüm sayıyı gör"
+
+msgid "plugins.themes.immersion.about.journal"
+msgstr "Dergi hakkında"
+
+msgid "plugins.themes.immersion.adminMenu"
+msgstr "Admin menü"
+
+msgid "plugins.themes.immersion.language.toggle"
+msgstr "Dili değiştir. Mevcut dil:"
+
+msgid "plugins.themes.immersion.mainMenu"
+msgstr "Ana menü"
+
+msgid "plugins.themes.immersion.registration.consent"
+msgstr "İzin ver"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "Sayı açıklaması"
+
+msgid "plugins.themes.immersion.issue.published"
+msgstr "Yayınlanan"
+
+msgid "editor.issues.sectionArea"
+msgstr "Sayı bölümü için seçenekler"
+
+msgid "plugins.themes.immersion.announcements.colorPick"
+msgstr "Derginin ana sayfasındaki Duyurular bölüm rengi"
+
+msgid "plugins.themes.immersion.section.coverPage"
+msgstr "Bölüm Kapak Resmi"
+
+msgid "plugins.themes.immersion.colorPickInstructions"
+msgstr ""
+"Derginin arayüzünde görüntülenecek bir bölüm için bir renk seçin. Geçerli "
+"onaltılık HTML kodu olmalıdır (ör. Sarı için # ffff00)."
+
+msgid "plugins.themes.immersion.colorPick"
+msgstr "Renk Seçici"
+
+msgid "plugins.themes.immersion.description"
+msgstr ""
+"Görsellere odaklanarak dergiler için uyarlanmış tam sayfa görseller, büyük "
+"yazı tipleri ve kalın renk blokları içeren bir OJS teması."
+
+msgid "plugins.themes.immersion.name"
+msgstr "Immersion Teması"
+
+msgid "plugins.themes.immersion.option.displayStats.label"
+msgstr "Kullanım istatistikleri görüntüleme seçenekleri"
+
+msgid "plugins.themes.immersion.option.displayStats.none"
+msgstr "Okuyucu için kullanım istatistikleri tablosunu görüntüleme."
+
+msgid "plugins.themes.immersion.option.displayStats.bar"
+msgstr "Kullanım istatistikleri için çubuk grafik tipini kullanın."
+
+msgid "plugins.themes.immersion.option.displayStats.line"
+msgstr "Kullanım istatistikleri için çizgi grafik tipini kullanın."
+
+msgid "plugins.themes.immersion.displayStats.monthInitials"
+msgstr "Oca Şub Mar Nis May Haz Tem Ağu Eyl Ekim Kas Ara"
+
+msgid "plugins.themes.immersion.displayStats.downloads"
+msgstr "İndirmeler"
+
+msgid "plugins.themes.immersion.displayStats.noStats"
+msgstr "İndirme verileri henüz mevcut değil."

@@ -1,0 +1,135 @@
+# Marco Urso <urso.marco+weblate@gmail.com>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-23T10:59:50+00:00\n"
+"PO-Revision-Date: 2024-05-18 07:39+0000\n"
+"Last-Translator: Marco Urso <urso.marco+weblate@gmail.com>\n"
+"Language-Team: Italian <http://translate.pkp.sfu.ca/projects/plugins/"
+"immersion/it/>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "Guarda il fascicolo completo"
+
+msgid "plugins.themes.immersion.name"
+msgstr "Tema Immersion"
+
+msgid "plugins.themes.immersion.description"
+msgstr ""
+"Un tema OJS con immagini a tutta pagina, caratteri grandi e blocchi di "
+"colore in grassetto su misura per le riviste con un focus sulla grafica."
+
+msgid "plugins.themes.immersion.colorPick"
+msgstr "Selettore di colore"
+
+msgid "plugins.themes.immersion.colorPickInstructions"
+msgstr "Seleziona un colore per una sezione da mostrare nell'interfaccia utente della rivista. Deve essere in codice hex HTML valido (ad es. #ffff00 per il giallo)."
+
+msgid "plugins.themes.immersion.section.coverPage"
+msgstr "Immagine di copertina per la sezione"
+
+msgid "plugins.themes.immersion.annoucements.colorPick"
+msgstr "Colori per la sezione Annunci sull'home page della rivista"
+
+msgid "editor.issues.sectionArea"
+msgstr "Opzioni per le sezioni dei fascicoli"
+
+msgid "plugins.themes.immersion.issue.published"
+msgstr "Pubblicato"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "Descrizione del fascicolo"
+
+msgid "plugins.themes.immersion.registration.consent"
+msgstr "Consenso"
+
+msgid "plugins.themes.immersion.mainMenu"
+msgstr "Menu principale"
+
+msgid "plugins.themes.immersion.language.toggle"
+msgstr "Cambia la lingua. La lingua corrente è:"
+
+msgid "plugins.themes.immersion.adminMenu"
+msgstr "Menu di amministrazione"
+
+msgid "plugins.themes.immersion.search.parameters"
+msgstr "Parametri"
+
+msgid "plugins.themes.immersion.article.biography"
+msgstr "Biografia"
+
+msgid "plugins.themes.immersion.article.figure"
+msgstr "Immagine di copertina"
+
+msgid "plugins.themes.immersion.authors.browse"
+msgstr "Scorri per autore"
+
+msgid "plugins.themes.immersion.author.details"
+msgstr "Dettagli dell'autore"
+
+msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgstr "Mostra la descrizione della sezione"
+
+msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgstr "Se attivata, la descrizione della sezione sarà mostrata per la sezione appropriata nell'home page della rivista"
+
+msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgstr "Disabilita"
+
+msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgstr "Abilita; richiede che sia attivato il plugin Scorri per sezione"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgstr ""
+"Colore di sfondo della sezione per la descrizione della rivista nella home "
+"page"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgstr "Sfondo della descrizione della rivista"
+
+msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgstr "Abilita"
+
+msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgstr "Disabilita (default)"
+
+msgid "plugins.themes.immersion.options.journalDescription.description"
+msgstr "Se abilitato, la descrizione della rivista verrà mostrata in home page"
+
+msgid "plugins.themes.immersion.options.journalDescription.label"
+msgstr "Mostra la descrizione della rivista"
+
+msgid "plugins.themes.immersion.about.journal"
+msgstr "Sulla rivista"
+
+msgid "plugins.themes.immersion.announcements.colorPick"
+msgstr "Colore della sezione avvisi nella home page della rivista"
+
+msgid "plugins.themes.immersion.option.displayStats.none"
+msgstr ""
+"Non mostrare l'invio del grafico delle statistiche d'uso per il lettore."
+
+msgid "plugins.themes.immersion.option.displayStats.bar"
+msgstr "Utilizza il tipo grafico a barre per visualizzare le statistiche."
+
+msgid "plugins.themes.immersion.displayStats.monthInitials"
+msgstr "Gen Feb Mar Apr Mag Giu Lug Ago Set Ott Nov Dic"
+
+msgid "plugins.themes.immersion.option.displayStats.label"
+msgstr "Opzione di visualizzazione delle statistiche d'utilizzo"
+
+msgid "plugins.themes.immersion.option.displayStats.line"
+msgstr "Utilizza il tipo grafico a linee per visualizzare le statistiche."
+
+msgid "plugins.themes.immersion.displayStats.downloads"
+msgstr "Download"
+
+msgid "plugins.themes.immersion.displayStats.noStats"
+msgstr "I dati di download non sono ancora disponibili."

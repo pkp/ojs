@@ -1,0 +1,33 @@
+/**
+ * @file less/pages/catalogCategory.less
+ *
+ * Copyright (c) 2014-2020 Simon Fraser University
+ * Copyright (c) 2003-2020 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles applying to the category page
+ */
+
+section.category {
+	padding: 7.5vh 0;
+}
+
+.category__meta {
+
+	&:before {
+		content: '— ';
+	}
+}
+
+.category__list {
+	list-style-type: none;
+	padding-left: 0;
+
+	.article {
+		margin-bottom: 3vh;
+	}
+}
+
+.category__cover {
+	margin: 2vh 0;
+}

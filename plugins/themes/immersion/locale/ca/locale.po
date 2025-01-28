@@ -1,0 +1,137 @@
+# Jordi LC <jordi.lacruz@uab.cat>, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-07-25 08:58+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"Language-Team: Catalan <http://translate.pkp.sfu.ca/projects/plugins/"
+"immersion/ca/>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgstr ""
+"Color de fons per a la secció de descripció de la revista a la pàgina "
+"d'inici de la revista"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgstr "Fons de la descripció de la revista"
+
+msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgstr "Habilitar"
+
+msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgstr "Deshabilitar (predeterminat)"
+
+msgid "plugins.themes.immersion.options.journalDescription.description"
+msgstr ""
+"Si està activat, la descripció de la revista es mostrarà a la pàgina de "
+"destí de la revista"
+
+msgid "plugins.themes.immersion.options.journalDescription.label"
+msgstr "Mostrar la descripció de la revista"
+
+msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgstr ""
+"Activar; necessita que el mòdul de navegar per seccions estigui habilitat"
+
+msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgstr "Desactivar"
+
+msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgstr ""
+"Si està activat, la descripció de la secció es mostrarà sota la secció "
+"corresponent a la pàgina d'inici de la revista"
+
+msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgstr "Mostrar la descripció de la secció"
+
+msgid "plugins.themes.immersion.author.details"
+msgstr "Detalls de l'autor/a"
+
+msgid "plugins.themes.immersion.authors.browse"
+msgstr "Navegar per autor/a"
+
+msgid "plugins.themes.immersion.article.figure"
+msgstr "Imatge de portada"
+
+msgid "plugins.themes.immersion.article.biography"
+msgstr "Biografia"
+
+msgid "plugins.themes.immersion.search.parameters"
+msgstr "Paràmetres"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "Veure el número complet"
+
+msgid "plugins.themes.immersion.about.journal"
+msgstr "Quant a la revista"
+
+msgid "plugins.themes.immersion.adminMenu"
+msgstr "Menú d'administració"
+
+msgid "plugins.themes.immersion.language.toggle"
+msgstr "Canviar l'idioma. L'actual és:"
+
+msgid "plugins.themes.immersion.mainMenu"
+msgstr "Menú principal"
+
+msgid "plugins.themes.immersion.registration.consent"
+msgstr "Consentiment"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "Descripció del número"
+
+msgid "plugins.themes.immersion.issue.published"
+msgstr "Publicat"
+
+msgid "editor.issues.sectionArea"
+msgstr "Opcions per a les seccions de la revista"
+
+msgid "plugins.themes.immersion.announcements.colorPick"
+msgstr "Color de la secció d'avisos de la pàgina d'inici de la revista"
+
+msgid "plugins.themes.immersion.section.coverPage"
+msgstr "Imatge de portada de la secció"
+
+msgid "plugins.themes.immersion.colorPickInstructions"
+msgstr ""
+"Escolliu un color de secció per mostrar-lo a la interfície d'usuari de la "
+"revista. Ha de ser un codi HTML hexadecimal vàlid (p. ex., #ffff00 per al "
+"groc)."
+
+msgid "plugins.themes.immersion.colorPick"
+msgstr "Selector de color"
+
+msgid "plugins.themes.immersion.description"
+msgstr ""
+"Aquest és un tema d'OJS amb imatges a pàgina completa, tipografies grans i "
+"blocs en negreta que s'adapta a revistes que donen molta importància al "
+"factor visual."
+
+msgid "plugins.themes.immersion.name"
+msgstr "Tema Immersion"
+
+msgid "plugins.themes.immersion.option.displayStats.label"
+msgstr "Opcions de visualització de les estadístiques d'us"
+
+msgid "plugins.themes.immersion.option.displayStats.none"
+msgstr "No mostrar el gràfic d'estadístiques de trameses als lectors/ores."
+
+msgid "plugins.themes.immersion.option.displayStats.line"
+msgstr "Utilitzar un gràfic de línies per mostrar les estadístiques d'ús."
+
+msgid "plugins.themes.immersion.option.displayStats.bar"
+msgstr "Utilitzar un gràfic de barres per mostrar les estadístiques d'ús."
+
+msgid "plugins.themes.immersion.displayStats.monthInitials"
+msgstr "Gen. Feb. Març Abr. Maig Juny Jul. Ag. Set. Oct. Nov. Des."
+
+msgid "plugins.themes.immersion.displayStats.downloads"
+msgstr "Descàrregues"
+
+msgid "plugins.themes.immersion.displayStats.noStats"
+msgstr "Les dades de descàrrega encara no estan disponibles."

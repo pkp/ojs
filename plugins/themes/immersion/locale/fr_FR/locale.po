@@ -1,0 +1,134 @@
+# Germán Huélamo Bautista <germanhuelamo@gmail.com>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-23T10:59:41+00:00\n"
+"PO-Revision-Date: 2024-05-11 17:39+0000\n"
+"Last-Translator: Germán Huélamo Bautista <germanhuelamo@gmail.com>\n"
+"Language-Team: French <http://translate.pkp.sfu.ca/projects/plugins/"
+"immersion/fr_FR/>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.themes.immersion.name"
+msgstr "Theme Immersion"
+
+msgid "plugins.themes.immersion.description"
+msgstr "Un thème pour OJS 3.1.1+ qui met l'accent sur une expérience de lecture immersive et offre des options de conception audacieuses telles que des choix de couleurs dans toute la section."
+
+msgid "plugins.themes.immersion.colorPick"
+msgstr "Selecteur de couleur"
+
+msgid "plugins.themes.immersion.colorPickInstructions"
+msgstr "Choisissez une couleur pour une section à afficher sur le front-end. Doit être un code hexadécimal HTML valide (par exemple, # ffff00 pour le jaune)."
+
+msgid "plugins.themes.immersion.section.coverPage"
+msgstr "Image de couverture de la section"
+
+msgid "plugins.themes.immersion.announcements.colorPick"
+msgstr "Couleur de la section annonce de la page d'accueil"
+
+msgid "editor.issues.sectionArea"
+msgstr "Options pour les sections des numéros"
+
+msgid "plugins.themes.immersion.issue.published"
+msgstr "Publié"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "Description du numéro"
+
+msgid "plugins.themes.immersion.registration.consent"
+msgstr "Consentement"
+
+msgid "plugins.themes.immersion.mainMenu"
+msgstr "Menu principal"
+
+msgid "plugins.themes.immersion.language.toggle"
+msgstr "Changer de langue. La langue actuelle est :"
+
+msgid "plugins.themes.immersion.adminMenu"
+msgstr "Administration"
+
+msgid "plugins.themes.immersion.about.journal"
+msgstr "À propos du journal"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "Voir le numéro complet"
+
+msgid "plugins.themes.immersion.search.parameters"
+msgstr "Paramètres"
+
+msgid "plugins.themes.immersion.article.biography"
+msgstr "Biographie"
+
+msgid "plugins.themes.immersion.article.figure"
+msgstr "Image de couverture"
+
+msgid "plugins.themes.immersion.authors.browse"
+msgstr "Navigation par auteur"
+
+msgid "plugins.themes.immersion.author.details"
+msgstr "Détails sur l'auteur"
+
+msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgstr "Afficher la description de la section"
+
+msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgstr ""
+"Si cette option est activée, la description de la rubrique sera affichée "
+"sous la rubrique correspondante sur la page d'accueil du journal"
+
+msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgstr "Désactiver"
+
+msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgstr ""
+"Activer ; nécessite le module « Parcourir par rubrique » pour être activé"
+
+msgid "plugins.themes.immersion.options.journalDescription.label"
+msgstr "Afficher la description du journal"
+
+msgid "plugins.themes.immersion.options.journalDescription.description"
+msgstr "Si cette option est activée, la description du journal sera affichée sur sa page d'accueil"
+
+msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgstr "Désactiver (par défaut)"
+
+msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgstr "Activer"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgstr "Fond de la description"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgstr "Couleur d'arrière-plan de la section de description du journal sur la page d'accueil du journal"
+
+msgid "plugins.themes.immersion.option.displayStats.none"
+msgstr ""
+"Ne pas afficher aux lecteur·rice·s le graphique des statistiques "
+"d'utilisation des soumissions."
+
+msgid "plugins.themes.immersion.option.displayStats.bar"
+msgstr ""
+"Utiliser un graphique à barres pour afficher les statistiques d'utilisation."
+
+msgid "plugins.themes.immersion.displayStats.monthInitials"
+msgstr "Janv. Févr. Mars Avr. Mai Juin Juill. Août Sept. Oct. Nov. Déc."
+
+msgid "plugins.themes.immersion.displayStats.downloads"
+msgstr "Téléchargements"
+
+msgid "plugins.themes.immersion.displayStats.noStats"
+msgstr "Les données de téléchargement ne sont pas encore disponibles."
+
+msgid "plugins.themes.immersion.option.displayStats.label"
+msgstr "Options d'affichage des statistiques d'utilisation"
+
+msgid "plugins.themes.immersion.option.displayStats.line"
+msgstr ""
+"Utiliser un graphique linéaire pour afficher les statistiques d'utilisation."

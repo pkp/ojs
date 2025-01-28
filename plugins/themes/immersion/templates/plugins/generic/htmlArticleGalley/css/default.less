@@ -1,0 +1,106 @@
+@import "/../../../../../resources/less/variables.less";
+
+body {
+	font-family: @font-family-primary;
+	color: #000;
+	font-size: 18px;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: none;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: @font-family-primary;
+	font-weight: bold;
+}
+
+p, li, blockquote, cite, dd, legend {
+	font-family: @font-family-primary;
+	line-height: 1.5;
+}
+
+dt, address, table, label {
+	font-family: @font-family-secondary;
+	font-size: smaller;
+}
+
+ol {
+	list-style: none;
+	counter-reset: item;
+}
+
+ol li:before {
+	  font-family: @font-family-secondary;
+	  font-size: smaller;
+	  counter-increment: item;
+	  content: counter(item) '. ';
+}
+
+li {
+	margin-bottom: 0.25em;
+}
+
+blockquote {
+	border-left: 1px solid #000;
+	padding-left: 30px;
+}
+
+cite {
+	display: block;
+	text-align: right;
+}
+
+dt {
+	font-weight: normal;
+	margin: 30px 0 10px 0;
+}
+
+dt:first-child {
+	margin-top: 0;
+}
+
+code {
+	color: #000;
+	font-size: smaller;
+}
+
+a {
+	color: #000;
+	display: inline-block;
+}
+
+a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+@media (min-width: 1200px) {
+	body {
+		max-width: 770px;
+        margin-left: auto;
+        margin-right: auto;
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+	body {
+		padding-left: 12%;
+		padding-right: 12%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	body {
+		padding-left: 7%;
+		padding-right: 7%;
+	}
+}
+
+@media (max-width: 767px) {
+	body {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}

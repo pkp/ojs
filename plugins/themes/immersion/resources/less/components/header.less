@@ -1,0 +1,257 @@
+/**
+* @file resources/less/components/header.less
+*
+* Copyright (c) 2014-2020 Simon Fraser University
+* Copyright (c) 2003-2020 John Willinsky
+* Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+*
+* @brief Stylesheet for journal-wide header
+*
+*/
+
+// Header and general rules for navigation menus
+
+.main-header {
+	background-color: @primary-color;
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: @font-family-primary;
+	font-weight: 300;
+	height: 100%;
+
+	& ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	& li {
+		display: inline-block;
+	}
+
+	& a {
+		border: 0;
+		box-shadow: none;
+	}
+}
+
+.page_index:not(.indexSite) .main-header {
+	padding-top: 2.5vh;
+}
+
+// Header title
+
+.main-header__title {
+	text-align: center;
+	width: 75vw;
+	font-size: 1.5rem;
+	line-height: 1.4;
+	padding: 0.5rem 0;
+	margin: 0.5rem auto;
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	& span {
+		display: inline;
+		padding: 0.5rem;
+		background: #fff;
+		line-height: 1.5;
+		font-family: @font-family-secondary;
+		font-weight: 700;
+
+		/* Needs prefixing */
+		box-decoration-break: clone;
+		-webkit-box-decoration-break: clone;
+	}
+}
+
+.page_index:not(.indexSite) .main-header__title {
+	text-align: center;
+	margin: 7.5vh auto 15vh auto;
+	max-width: 75vw;
+}
+
+// Admin Navigation
+
+.dropdown-item {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+.nav-tabs .nav-link {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+
+}
+
+.main-header__admin {
+	display: flex;
+	font-size: smaller;
+
+	&.locale-enabled {
+		justify-content: space-between;
+	}
+
+	&.locale-disabled {
+		justify-content: flex-end;
+	}
+}
+
+.main-header__admin-link, .main-header__lang-link {
+	padding: 0.25em 0.5em;
+	margin-left: 0.5em;
+	background-color: @primary-color;
+	color: @secondary-color;
+	cursor: pointer;
+
+	&:hover, &:focus, &:active {
+		color: @primary-color;
+		background-color: @secondary-color;
+	}
+}
+
+#languageNav {
+	border-bottom: none;
+
+	// overwriting bootstrap
+	.main-header__lang-link {
+		color: @secondary-color;
+
+		&:hover, &:focus, &:active {
+			color: @primary-color;
+		}
+	}
+}
+
+// Primary Navigation
+
+.main-header__nav-link {
+	padding: 0.25em 0.5em;
+	background-color: #fff;
+	margin: 0 2vw;
+
+	&:hover, &:focus, &:active {
+		color: @secondary-color;
+		background-color: @primary-color;
+	}
+}
+
+.navbar-nav {
+	flex-wrap: wrap;
+}
+
+.dropdown-menu {
+	border-radius: 0;
+}
+
+.nav-link {
+	padding: 0.25em 0.5em;
+	color: @primary-color;
+
+	&:hover, &:focus {
+		color: inherit;
+	}
+}
+
+@media (min-width: 992px) {
+	// Dropdown menu for Primary Navigation
+	#navigationPrimary {
+		& .dropdown-menu.show {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-content: center;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			padding: 1rem;
+			background-color: @secondary-color;
+			border-radius: 0;
+			width: 100%;
+			padding-top: 16px;
+			padding-bottom: 14px;
+		}
+
+		& .nav-item {
+			position: static;
+		}
+
+		& .nav-link {
+
+			&:focus, &:hover {
+
+			}
+		}
+
+		& .dropdown-item {
+			width: initial;
+			padding: 0;
+			margin-bottom: 0;
+
+			& a {
+				margin-left: 0;
+				padding: 10px 8px 8px 8px;
+				border: 1px solid @secondary-color;
+
+				&:focus, &:hover {
+					background-color: @secondary-color;
+					border: 1px solid @primary-color;
+				}
+			}
+		}
+	}
+}
+
+/* Custom hamburger menu */
+.hamburger {
+	font: inherit;
+	display: inline-block;
+	overflow: visible;
+	margin: 1em 0;
+	padding: 10px;
+	cursor: pointer;
+	color: inherit;
+	border: 0;
+	background-color: #fff;
+	border-radius: 0;
+	height: 45px;
+}
+
+.hamburger__wrapper {
+	position: relative;
+	display: inline-block;
+	width: 40px;
+	height: 24px;
+}
+
+.hamburger__icon {
+	background-color: #000;
+	top: 2px;
+	position: absolute;
+	width: 40px;
+	height: 4px;
+	display: block;
+	margin-top: -2px;
+
+	&:before {
+		top: 10px;
+	}
+
+	&:after {
+		top: 20px;
+	}
+
+	&:before, &:after {
+		background-color: #000;
+		display: block;
+		content: "";
+		position: absolute;
+		width: 40px;
+		height: 4px;
+	}
+}

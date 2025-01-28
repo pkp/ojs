@@ -1,0 +1,133 @@
+# Pavel Pisklakov <ppv1979@mail.ru>, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-04-29 17:01+0000\n"
+"Last-Translator: Pavel Pisklakov <ppv1979@mail.ru>\n"
+"Language-Team: Russian <http://translate.pkp.sfu.ca/projects/plugins/"
+"immersion/ru/>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgstr "Цвет фона для раздела с описанием журнала на главной странице журнала"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgstr "Цвет фона для описания журнала"
+
+msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgstr "Включить"
+
+msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgstr "Отключить (по умолчанию)"
+
+msgid "plugins.themes.immersion.options.journalDescription.description"
+msgstr ""
+"Если включено, описание журнала будет показано на странице лендинга журнала"
+
+msgid "plugins.themes.immersion.options.journalDescription.label"
+msgstr "Показать описание журнала"
+
+msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgstr "Включить; требует включения модуля «Просмотр по разделам»"
+
+msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgstr "Отключить"
+
+msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgstr ""
+"Если включено, описание раздела будет показано в соответствующем разделе на "
+"главной странице журнала"
+
+msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgstr "Показать описание раздела"
+
+msgid "plugins.themes.immersion.author.details"
+msgstr "Информация об авторе"
+
+msgid "plugins.themes.immersion.authors.browse"
+msgstr "Просмотр по автору"
+
+msgid "plugins.themes.immersion.article.figure"
+msgstr "Обложка"
+
+msgid "plugins.themes.immersion.article.biography"
+msgstr "Биография"
+
+msgid "plugins.themes.immersion.search.parameters"
+msgstr "Параметры"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "Посмотреть полный выпуск"
+
+msgid "plugins.themes.immersion.about.journal"
+msgstr "О журнале"
+
+msgid "plugins.themes.immersion.adminMenu"
+msgstr "Меню администрирования"
+
+msgid "plugins.themes.immersion.language.toggle"
+msgstr "Изменить язык. Текущий язык:"
+
+msgid "plugins.themes.immersion.mainMenu"
+msgstr "Главное меню"
+
+msgid "plugins.themes.immersion.registration.consent"
+msgstr "Согласие"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "Описание выпуска"
+
+msgid "plugins.themes.immersion.issue.published"
+msgstr "Опубликован"
+
+msgid "editor.issues.sectionArea"
+msgstr "Настройки для разделов выпуска"
+
+msgid "plugins.themes.immersion.announcements.colorPick"
+msgstr "Цвет раздела объявлений на главной странице журнала"
+
+msgid "plugins.themes.immersion.section.coverPage"
+msgstr "Изображение обложки раздела"
+
+msgid "plugins.themes.immersion.colorPickInstructions"
+msgstr ""
+"Выберите цвет для отображения раздела на страницах журнала. Должен быть "
+"корректным шестнадцатеричным HTML-кодом (например, #ffff00 для жёлтого)."
+
+msgid "plugins.themes.immersion.colorPick"
+msgstr "Выбор цвета"
+
+msgid "plugins.themes.immersion.description"
+msgstr ""
+"Тема OJS с полностраничными изображениями, крупными шрифтами и большими "
+"цветовыми блоками, разработанная для журналов с акцентом на изображения и "
+"другие визуалы."
+
+msgid "plugins.themes.immersion.name"
+msgstr "Тема «Погружение»"
+
+msgid "plugins.themes.immersion.option.displayStats.none"
+msgstr "Не показывать график статистики использования материала читателю."
+
+msgid "plugins.themes.immersion.option.displayStats.line"
+msgstr "Использовать линейный график для показа статистики использования."
+
+msgid "plugins.themes.immersion.displayStats.monthInitials"
+msgstr "Янв Фев Мар Апр Май Июн Июл Авг Сен Окт Ноя Дек"
+
+msgid "plugins.themes.immersion.displayStats.downloads"
+msgstr "Скачивания"
+
+msgid "plugins.themes.immersion.option.displayStats.label"
+msgstr "Параметры отображения статистики использования"
+
+msgid "plugins.themes.immersion.option.displayStats.bar"
+msgstr "Использовать столбиковую диаграмму для показа статистики использования."
+
+msgid "plugins.themes.immersion.displayStats.noStats"
+msgstr "Данные скачивания пока не доступны."

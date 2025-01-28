@@ -1,0 +1,139 @@
+# Petro Bilous <petrobilous@ukr.net>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-23T11:00:04+00:00\n"
+"PO-Revision-Date: 2023-06-01 15:49+0000\n"
+"Last-Translator: Petro Bilous <petrobilous@ukr.net>\n"
+"Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/plugins/"
+"immersion/uk/>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.themes.immersion.name"
+msgstr "Імерційна тема"
+
+msgid "plugins.themes.immersion.description"
+msgstr ""
+"Тема для OJS із повноекранними зображеннями, великими шрифтами й насиченими "
+"кольоровими блоками, розроблена для журналів з акцентом на візуальному "
+"контенті."
+
+msgid "plugins.themes.immersion.colorPick"
+msgstr "Обрати колір"
+
+msgid "plugins.themes.immersion.colorPickInstructions"
+msgstr ""
+"Оберіть колір для розділу, який буде відображатися на сайті журналу. Має "
+"бути валідним HTML кодом (наприклад, #ffff00 для жовтого)."
+
+msgid "plugins.themes.immersion.section.coverPage"
+msgstr "Малюнок обкладинки розділу"
+
+msgid "plugins.themes.immersion.announcements.colorPick"
+msgstr "Колір розділу оголошень на головній сторінці журналу"
+
+msgid "editor.issues.sectionArea"
+msgstr "Налаштування для розділів випуску"
+
+msgid "plugins.themes.immersion.issue.published"
+msgstr "Опубліковано"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "Опис випуску"
+
+msgid "plugins.themes.immersion.registration.consent"
+msgstr "Згода"
+
+msgid "plugins.themes.immersion.mainMenu"
+msgstr "Головне меню"
+
+msgid "plugins.themes.immersion.language.toggle"
+msgstr "Змінити мову. Поточна мова:"
+
+msgid "plugins.themes.immersion.adminMenu"
+msgstr "Адмінменю"
+
+msgid "plugins.themes.immersion.about.journal"
+msgstr "Про журнал"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "Переглянути повний випуск"
+
+msgid "plugins.themes.immersion.search.parameters"
+msgstr "Параметри"
+
+msgid "plugins.themes.immersion.article.biography"
+msgstr "Біографія"
+
+msgid "plugins.themes.immersion.article.figure"
+msgstr "Обкладинка статті"
+
+msgid "plugins.themes.immersion.authors.browse"
+msgstr "Знайти за автором"
+
+msgid "plugins.themes.immersion.author.details"
+msgstr "Детальніше про автора"
+
+msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgstr "Показувати опис розділу"
+
+msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgstr ""
+"Якщо активовано, на головній сторінці журналу під відповідним розділом буде "
+"показано опис розділу"
+
+msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgstr "Вимкнути"
+
+msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgstr "Увімкнути; потребує активації та налаштування модуля Browse By Section"
+
+msgid "plugins.themes.immersion.options.journalDescription.label"
+msgstr "Показати опис журналу"
+
+msgid "plugins.themes.immersion.options.journalDescription.description"
+msgstr "Якщо увімкнено, опис журналу буде представленим на головній сторінці журналу"
+
+msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgstr "Вимкнути (за замовчуванням)"
+
+msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgstr "Увімкнути"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgstr "Фон для опису журналу"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgstr "Фоновий колір для секції опису журналу на головній сторінці журналу"
+
+msgid "plugins.themes.immersion.option.displayStats.label"
+msgstr "Параметри відображення статистики використання"
+
+msgid "plugins.themes.immersion.option.displayStats.none"
+msgstr "Не відображати читачеві діаграму статистики використання подання."
+
+msgid "plugins.themes.immersion.option.displayStats.bar"
+msgstr ""
+"Використовувати стовпчиковий тип діаграми для відображення статистики "
+"використання."
+
+msgid "plugins.themes.immersion.displayStats.monthInitials"
+msgstr "Січ Лют Бер Кві Тра Чер Лип Сер Вер Жов Лис Гру"
+
+msgid "plugins.themes.immersion.displayStats.downloads"
+msgstr "Завантаження"
+
+msgid "plugins.themes.immersion.displayStats.noStats"
+msgstr "Дані завантажень поки не доступні."
+
+msgid "plugins.themes.immersion.option.displayStats.line"
+msgstr ""
+"Використовувати лінійний тип діаграми для відображення статистики "
+"використання."

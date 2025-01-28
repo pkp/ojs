@@ -1,0 +1,142 @@
+# Marc Bria <marc.bria@gmail.com>, 2023.
+# Jordi LC <jordi.lacruz@uab.cat>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-23T11:01:12+00:00\n"
+"PO-Revision-Date: 2024-04-26 12:23+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/plugins/"
+"immersion/es/>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.themes.immersion.name"
+msgstr "Tema Immersion"
+
+msgid "plugins.themes.immersion.description"
+msgstr ""
+"Este es un tema de OJS con imágenes a página completa, tipografías grandes y "
+"bloques en negrita que se adapta a revistas que dan mucha importancia al "
+"factor visual."
+
+msgid "plugins.themes.immersion.colorPick"
+msgstr "Selector de color"
+
+msgid "plugins.themes.immersion.colorPickInstructions"
+msgstr "Elija un color para la sección a mostrar en la parte frontal de la revista. Debe ser un código hexadecimal HTML válido (ej.:, #ffff00 para amarillo)."
+
+msgid "plugins.themes.immersion.section.coverPage"
+msgstr "Imagen de portada de la sección"
+
+msgid "plugins.themes.immersion.annoucements.colorPick"
+msgstr "Color de la sección de anuncios en la página principal de la revista."
+
+msgid "editor.issues.sectionArea"
+msgstr "Opciones para las secciones de las publicaciones"
+
+msgid "plugins.themes.immersion.issue.published"
+msgstr "Publicado"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "Descripción del número"
+
+msgid "plugins.themes.immersion.registration.consent"
+msgstr "Consentimiento"
+
+msgid "plugins.themes.immersion.mainMenu"
+msgstr "Menú principal"
+
+msgid "plugins.themes.immersion.language.toggle"
+msgstr "Cambiar el idioma. El idioma actual es:"
+
+msgid "plugins.themes.immersion.adminMenu"
+msgstr "Menú de administración"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "Ver el número completo"
+
+msgid "plugins.themes.immersion.search.parameters"
+msgstr "Parámetros"
+
+msgid "plugins.themes.immersion.article.biography"
+msgstr "Biografía"
+
+msgid "plugins.themes.immersion.article.figure"
+msgstr "Imagen de portada"
+
+msgid "plugins.themes.immersion.authors.browse"
+msgstr "Navegar por autor/a"
+
+msgid "plugins.themes.immersion.author.details"
+msgstr "Información del autor"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgstr "Fondo de la descripción de la revista"
+
+msgid "plugins.themes.immersion.options.journalDescription.description"
+msgstr ""
+"Si está habilitado, la descripción de la revista se mostrará en la página de "
+"destino de la revista"
+
+msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgstr ""
+"Si está activado, la descripción de la sección se mostrará en la sección "
+"correspondiente en la página de inicio de la revista"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgstr ""
+"Color de fondo para la sección de descripción de la revista en la página de "
+"inicio de la revista"
+
+msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgstr "Habilitar"
+
+msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgstr "Deshabilitar (predeterminado)"
+
+msgid "plugins.themes.immersion.options.journalDescription.label"
+msgstr "Mostrar descripción de la revista"
+
+msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgstr "Activar; requiere que el módulo de navegar por sección esté habilitado"
+
+msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgstr "Desactivar"
+
+msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgstr "Mostrar descripción de la sección"
+
+msgid "plugins.themes.immersion.about.journal"
+msgstr "Acerca de la revista"
+
+msgid "plugins.themes.immersion.announcements.colorPick"
+msgstr "Color de la sección de anuncios en la página de inicio de la revista"
+
+msgid "plugins.themes.immersion.option.displayStats.label"
+msgstr "Opciones de visualización de las estadísticas de uso"
+
+msgid "plugins.themes.immersion.option.displayStats.none"
+msgstr "No mostrar el gráfico de estadísticas de envíos a los lectores/as."
+
+msgid "plugins.themes.immersion.displayStats.monthInitials"
+msgstr "Ene Feb Mar Abr May Jun Jul Ago Sep Oct Nov Dic"
+
+msgid "plugins.themes.immersion.displayStats.downloads"
+msgstr "Descargas"
+
+msgid "plugins.themes.immersion.displayStats.noStats"
+msgstr "Los datos de descarga todavía no están disponibles."
+
+msgid "plugins.themes.immersion.option.displayStats.bar"
+msgstr ""
+"Usar un gráfico de barras para la visualización de las estadísticas de uso."
+
+msgid "plugins.themes.immersion.option.displayStats.line"
+msgstr ""
+"Usar un gráfico de líneas para la visualización de las estadísticas de uso."

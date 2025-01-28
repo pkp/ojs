@@ -1,0 +1,27 @@
+/**
+ * @file resources/less/pages/orcidProfile.less
+ *
+ * Copyright (c) 2014-2020 Simon Fraser University
+ * Copyright (c) 2003-2020 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Stylesheet for the ORCID Profile Plugin related templates
+ *
+ */
+
+// Registration page;
+#connect-orcid-button {
+	background-color: transparent;
+	border: 1px solid @primary-color;
+	color: @primary-color;
+	font-family: @font-family-primary;
+	font-size: smaller;
+	padding: .75em 1em;
+	font-weight: 600;
+
+	&:hover {
+		background-color: @primary-color;
+		border: 1px solid @primary-color;
+		color: @secondary-color;
+	}
+}

@@ -1,0 +1,128 @@
+# M. Ali <vorteem@gmail.com>, 2023.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-23T10:58:17+00:00\n"
+"PO-Revision-Date: 2023-08-12 02:06+0000\n"
+"Last-Translator: M. Ali <vorteem@gmail.com>\n"
+"Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/plugins/"
+"immersion/ar/>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.themes.immersion.name"
+msgstr "نمط Immersion"
+
+msgid "plugins.themes.immersion.description"
+msgstr "نمط مخصص لنظام المجلات المفتوحة 3.1.1+ معد لتقديم تجربة قراءة متفردة مع خيارات تصميمة هامة مثل إمكانية التحكم بألوان أقسام المجلة."
+
+msgid "plugins.themes.immersion.colorPick"
+msgstr "منتقي الألوان"
+
+msgid "plugins.themes.immersion.colorPickInstructions"
+msgstr "إختر لوناً للقسم ليتم عرضه به في واجهة المجلة. ينبغي أن يكون ترميزاً رقمياً صحيحاً بتنسيق HTML hex (مثلاً، #ffff00 للون الأصفر)."
+
+msgid "plugins.themes.immersion.section.coverPage"
+msgstr "صورة غلاف القسم"
+
+msgid "plugins.themes.immersion.announcements.colorPick"
+msgstr "لون قسم الإعلانات على صفحة المجلة الرئيسية"
+
+msgid "editor.issues.sectionArea"
+msgstr "خيارات أقسام الأعداد"
+
+msgid "plugins.themes.immersion.issue.published"
+msgstr "منشور"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "وصف العدد"
+
+msgid "plugins.themes.immersion.registration.consent"
+msgstr "موافق"
+
+msgid "plugins.themes.immersion.mainMenu"
+msgstr "القائمة الرئيسية"
+
+msgid "plugins.themes.immersion.language.toggle"
+msgstr "تغيير اللغة. اللغة الحالية هي:"
+
+msgid "plugins.themes.immersion.adminMenu"
+msgstr "قائمة المشرف"
+
+msgid "plugins.themes.immersion.about.journal"
+msgstr "عن المجلة"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "معاينة العدد الكامل"
+
+msgid "plugins.themes.immersion.search.parameters"
+msgstr "العوامل"
+
+msgid "plugins.themes.immersion.article.biography"
+msgstr "السيرة"
+
+msgid "plugins.themes.immersion.article.figure"
+msgstr "صورة الغلاف"
+
+msgid "plugins.themes.immersion.authors.browse"
+msgstr "التصفح حسب المؤلف"
+
+msgid "plugins.themes.immersion.author.details"
+msgstr "تفاصيل المؤلف"
+
+msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgstr "إظهار وصف القسم"
+
+msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgstr "عند تفعيله، فإن وصف القسم سيظهر مرافقاً للقسم المعني على الصفحة الرئيسية للمجلة"
+
+msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgstr "تعطيل"
+
+msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgstr "تمكين؛ يتطلب تمكين إضافة التصفح حسب الأقسام"
+
+msgid "plugins.themes.immersion.options.journalDescription.label"
+msgstr "إظهار وصف المجلة"
+
+msgid "plugins.themes.immersion.options.journalDescription.description"
+msgstr "عند تفعيله، فإن وصف المجلة سيظهر على صفحة تواجدها ضمن الموقع"
+
+msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgstr "تعطيل (الإفتراضي)"
+
+msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgstr "تمكين"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgstr "خلفية وصف المجلة"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgstr "لون خلفية وصف المجلة ضمن صفحتها الرئيسية"
+
+msgid "plugins.themes.immersion.option.displayStats.label"
+msgstr "خيارات عرض إحصائيات الاستعمال"
+
+msgid "plugins.themes.immersion.option.displayStats.none"
+msgstr "لا تعرض مخطط إحصائيات الاستعمال عن التقديمات للقراء."
+
+msgid "plugins.themes.immersion.option.displayStats.bar"
+msgstr "استعمل مخطط إحصائي من نوع الأعمدة لعرض إحصائيات الاستعمال."
+
+msgid "plugins.themes.immersion.displayStats.monthInitials"
+msgstr "كا2 شبا آذر نيس أيا حزي تمو آب أيل تش1 تش2 كا1"
+
+msgid "plugins.themes.immersion.displayStats.downloads"
+msgstr "التنزيلات"
+
+msgid "plugins.themes.immersion.displayStats.noStats"
+msgstr "تنزيل البيانات غير متاح بعد."
+
+msgid "plugins.themes.immersion.option.displayStats.line"
+msgstr "استعمل مخطط إحصائي من نوع الخطوط لعرض إحصائيات الاستعمال."

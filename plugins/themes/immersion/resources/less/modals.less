@@ -1,0 +1,91 @@
+/**
+* @file resources/less/modals.less
+*
+* Copyright (c) 2014-2020 Simon Fraser University
+* Copyright (c) 2003-2020 John Willinsky
+* Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+*
+* @brief Stylesheet for modals (login, author's bio, etc.)
+*
+*/
+
+
+.modal-dialog {
+    max-width: 540px;
+    text-align: center;
+}
+
+.modal-content {
+    border-radius: 0;
+    background: #000;
+    color: #fff;
+}
+
+@media (min-width: 992px) {
+    .modal-content {
+        padding: 4rem;
+    }
+
+    .close {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.8rem;
+    }
+}
+
+.modal-content .close {
+    text-shadow: none;
+    opacity: 1;
+}
+
+.modal-content a {
+    color: #fff;
+    border-color: #fff;
+}
+
+.modal-content .btn-primary {
+    border-color: #fff;
+		background-color: #fff;
+		color: #000;
+}
+
+.modal-content fieldset {
+    margin: 0;
+}
+
+.modal-content label {
+    display: block;
+    text-align: left;
+}
+
+.modal-content .form-group {
+    margin-bottom: 2.5em;
+}
+
+.modal-content .form-group:last-child {
+    margin-bottom: 0;
+}
+
+.modal-content .form-control {
+    background: transparent;
+    border-color: #fff;
+    color: #fff;
+}
+
+@media (min-width: 992px) {
+
+    #loginModal .close {
+        top: -2.5rem;
+        right: -2rem;
+    }
+}
+
+// Overriding Bootstrap
+
+.close:not(:disabled):not(.disabled):focus, .close:not(:disabled):not(.disabled):hover {
+	color: @primary-color;
+}
+
+label[for="rememberModal"] {
+    display: inline-block;
+}

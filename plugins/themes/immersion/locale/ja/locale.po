@@ -1,0 +1,128 @@
+# Bjorn-Ole Kamm <pkp_trans@b-ok.de>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-05-06 02:01+0000\n"
+"Last-Translator: Bjorn-Ole Kamm <pkp_trans@b-ok.de>\n"
+"Language-Team: Japanese <http://translate.pkp.sfu.ca/projects/plugins/"
+"immersion/ja/>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.themes.immersion.name"
+msgstr "イマージョン・テーマ"
+
+msgid "plugins.themes.immersion.issue.published"
+msgstr "発行日"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "巻号の概要"
+
+msgid "plugins.themes.immersion.colorPick"
+msgstr "カラーピッカー"
+
+msgid "plugins.themes.immersion.description"
+msgstr "全ページ画像、大きな書体、大胆なカラーブロックを備えたOJSテーマであり、ビジュ"
+"アル重視の雑誌に適しています。"
+
+msgid "plugins.themes.immersion.section.coverPage"
+msgstr "セクション表紙画像"
+
+msgid "plugins.themes.immersion.announcements.colorPick"
+msgstr "雑誌のホームページのお知らせセクションの色"
+
+msgid "editor.issues.sectionArea"
+msgstr "巻号のセクションのオプション"
+
+msgid "plugins.themes.immersion.registration.consent"
+msgstr "同意"
+
+msgid "plugins.themes.immersion.mainMenu"
+msgstr "メインメニュー"
+
+msgid "plugins.themes.immersion.language.toggle"
+msgstr "言語変更。選択中の言語は次のとおりです:"
+
+msgid "plugins.themes.immersion.adminMenu"
+msgstr "アドミンメニュー"
+
+msgid "plugins.themes.immersion.about.journal"
+msgstr "本誌について"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "全巻号をご覧"
+
+msgid "plugins.themes.immersion.search.parameters"
+msgstr "パラメータ"
+
+msgid "plugins.themes.immersion.article.biography"
+msgstr "著者略歴"
+
+msgid "plugins.themes.immersion.article.figure"
+msgstr "表紙画像"
+
+msgid "plugins.themes.immersion.authors.browse"
+msgstr "筆者別に閲覧"
+
+msgid "plugins.themes.immersion.author.details"
+msgstr "著者詳細"
+
+msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgstr "セクション概要を表示"
+
+msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgstr "無効"
+
+msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgstr "有効化（セクション別閲覧プラグインが有効化されている必要あり）"
+
+msgid "plugins.themes.immersion.options.journalDescription.label"
+msgstr "雑誌の概要を表示"
+
+msgid "plugins.themes.immersion.options.journalDescription.description"
+msgstr "有効にすると、雑誌の概要が雑誌のホームページに表示されます"
+
+msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgstr "無効（デフォルト）"
+
+msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgstr "有効化"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgstr "雑誌ホームページの雑誌概要セクションの背景色"
+
+msgid "plugins.themes.immersion.option.displayStats.label"
+msgstr "利用統計表示オプション"
+
+msgid "plugins.themes.immersion.option.displayStats.none"
+msgstr "読者に投稿利用統計チャートを表示しない。"
+
+msgid "plugins.themes.immersion.option.displayStats.line"
+msgstr "利用統計の表示には、ライングラフを使用します。"
+
+msgid "plugins.themes.immersion.displayStats.monthInitials"
+msgstr "1月 2月 3月 4月 5月 6月 7月 8月 9月 10月 11月 12月"
+
+msgid "plugins.themes.immersion.displayStats.downloads"
+msgstr "ダウンロード数"
+
+msgid "plugins.themes.immersion.displayStats.noStats"
+msgstr "ダウンロードデータはまだありません。"
+
+msgid "plugins.themes.immersion.colorPickInstructions"
+msgstr ""
+"雑誌のフロントエンドに表示するセクションの色を選択してください。有効な HTML "
+"HEXコードを記入してください（たとえば、黄色は #ffff00)。"
+
+msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgstr "有効にすると、雑誌ホームページの該当セクション見出しの下にセクションの概要が"
+"表示されます"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgstr "雑誌の概要の背景"
+
+msgid "plugins.themes.immersion.option.displayStats.bar"
+msgstr "利用統計の表示には、棒グラフを使用します。"

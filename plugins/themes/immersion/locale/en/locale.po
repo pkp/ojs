@@ -1,0 +1,123 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-04-23T10:58:55+00:00\n"
+"PO-Revision-Date: 2020-04-23T10:58:55+00:00\n"
+"Language: \n"
+
+msgid "plugins.themes.immersion.name"
+msgstr "Immersion Theme"
+
+msgid "plugins.themes.immersion.description"
+msgstr "An OJS theme with full-page images, large typefaces, and bold colour blocks tailored for journals with a focus on visuals."
+
+msgid "plugins.themes.immersion.colorPick"
+msgstr "Color Picker"
+
+msgid "plugins.themes.immersion.colorPickInstructions"
+msgstr "Pick a color for a section to display on the journal's front-end. Must be valid HTML hex code (e.g., #ffff00 for yellow)."
+
+msgid "plugins.themes.immersion.section.coverPage"
+msgstr "Section Cover Image"
+
+msgid "plugins.themes.immersion.announcements.colorPick"
+msgstr "Announcements section colour on the journal's home page"
+
+msgid "editor.issues.sectionArea"
+msgstr "Options for issue's sections"
+
+msgid "plugins.themes.immersion.issue.published"
+msgstr "Published"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "Issue description"
+
+msgid "plugins.themes.immersion.registration.consent"
+msgstr "Consent"
+
+msgid "plugins.themes.immersion.mainMenu"
+msgstr "Main menu"
+
+msgid "plugins.themes.immersion.language.toggle"
+msgstr "Change the language. The current language is:"
+
+msgid "plugins.themes.immersion.adminMenu"
+msgstr "Admin menu"
+
+msgid "plugins.themes.immersion.about.journal"
+msgstr "About the journal"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "See the full issue"
+
+msgid "plugins.themes.immersion.search.parameters"
+msgstr "Parameters"
+
+msgid "plugins.themes.immersion.article.biography"
+msgstr "Bio"
+
+msgid "plugins.themes.immersion.article.figure"
+msgstr "Cover image"
+
+msgid "plugins.themes.immersion.authors.browse"
+msgstr "Browse by Author"
+
+msgid "plugins.themes.immersion.author.details"
+msgstr "Author Details"
+
+msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgstr "Show section description"
+
+msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgstr "If activated, the section description will be shown under the appropriate section on the journal homepage"
+
+msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgstr "Disable"
+
+msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgstr "Enable; requires Browse By Section plugin to be activated"
+
+msgid "plugins.themes.immersion.options.journalDescription.label"
+msgstr "Show journal description"
+
+msgid "plugins.themes.immersion.options.journalDescription.description"
+msgstr "If enabled, the journal description will be shown on the journal's landing page"
+
+msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgstr "Disable (default)"
+
+msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgstr "Enable"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgstr "Journal description background"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgstr "Background colour for the journal description section on the journal home page"
+
+msgid "plugins.themes.immersion.option.displayStats.label"
+msgstr "Usage statistics display options"
+
+msgid "plugins.themes.immersion.option.displayStats.none"
+msgstr "Do not display submission usage statistics chart for reader."
+
+msgid "plugins.themes.immersion.option.displayStats.bar"
+msgstr "Use bar type of the chart for usage statistics display."
+
+msgid "plugins.themes.immersion.option.displayStats.line"
+msgstr "Use line type of the chart for usage statistics display."
+
+msgid "plugins.themes.immersion.displayStats.monthInitials"
+msgstr "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec"
+
+msgid "plugins.themes.immersion.displayStats.downloads"
+msgstr "Downloads"
+
+msgid "plugins.themes.immersion.displayStats.noStats"
+msgstr "Download data is not yet available."

@@ -1,0 +1,138 @@
+# Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-04-07 08:48+0000\n"
+"Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
+"Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/plugins/"
+"immersion/hy/>\n"
+"Language: hy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgstr "Ամսագրի գլխավոր էջում ամսագրի նկարագրության բաժնի հետնամասի գույնը"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgstr "Ամսագրի նկարագրության նախապատմություն"
+
+msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgstr "Միացնել"
+
+msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgstr "Անջատել (կանխադրված)"
+
+msgid "plugins.themes.immersion.options.journalDescription.description"
+msgstr ""
+"Եթե միացված է, ամսագրի նկարագրությունը կցուցադրվի ամսագրի վայրէջքի էջում"
+
+msgid "plugins.themes.immersion.options.journalDescription.label"
+msgstr "Ցույց տալ ամսագրի նկարագրությունը"
+
+msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgstr "Միացնել; պահանջում է «Թերթիր ըստ բաժնի» հավելվածի ակտիվացումը"
+
+msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgstr "Անջատել"
+
+msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgstr ""
+"Եթե ակտիվացված է, բաժնի նկարագրությունը կցուցադրվի ամսագրի տնային էջի "
+"համապատասխան բաժնում"
+
+msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgstr "Ցույց տալ բաժնի նկարագրությունը"
+
+msgid "plugins.themes.immersion.author.details"
+msgstr "Հեղինակի մանրամասներ"
+
+msgid "plugins.themes.immersion.authors.browse"
+msgstr "Թերթիր ըստ հեղինակի"
+
+msgid "plugins.themes.immersion.article.figure"
+msgstr "Շապիկի պատկեր"
+
+msgid "plugins.themes.immersion.article.biography"
+msgstr "Կենսագրություն"
+
+msgid "plugins.themes.immersion.search.parameters"
+msgstr "Պարամետրեր"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "Տես ամբողջական թողարկումը"
+
+msgid "plugins.themes.immersion.about.journal"
+msgstr "Ամսագրի մասին"
+
+msgid "plugins.themes.immersion.adminMenu"
+msgstr "Ադմինի ընտրացանկ"
+
+msgid "plugins.themes.immersion.language.toggle"
+msgstr "Փոխեք լեզուն։ Ներկայիս լեզուն հետևյալն է:"
+
+msgid "plugins.themes.immersion.mainMenu"
+msgstr "Հիմնական ընտրացանկ"
+
+msgid "plugins.themes.immersion.registration.consent"
+msgstr "Համաձայնություն"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "Թողարկման նկարագրություն"
+
+msgid "plugins.themes.immersion.issue.published"
+msgstr "Հրատարակված"
+
+msgid "editor.issues.sectionArea"
+msgstr "Թողարկման բաժնի ընտրանքներ"
+
+msgid "plugins.themes.immersion.announcements.colorPick"
+msgstr "Հայտարարությունների բաժնի գույնը ամսագրի գլխավոր էջում"
+
+msgid "plugins.themes.immersion.section.coverPage"
+msgstr "Բաժնի շապիկի պատկեր"
+
+msgid "plugins.themes.immersion.colorPickInstructions"
+msgstr ""
+"Ընտրեք գույն մի հատվածի համար, որը կցուցադրվի ամսագրի ճակատային մասում: Պետք "
+"է լինի վավեր HTML տասնվեցական կոդ (օրինակ՝ #ffff00 դեղինի համար):"
+
+msgid "plugins.themes.immersion.colorPick"
+msgstr "Գույնի ընտրիչ"
+
+msgid "plugins.themes.immersion.description"
+msgstr ""
+"OJS թեմա՝ ամբողջ էջով պատկերներով, մեծ տառատեսակներով և թավ գունավոր "
+"բլոկներով, որոնք հարմարեցված են ամսագրերի համար՝ ուշադրություն դարձնելով "
+"տեսողական պատկերներին:"
+
+msgid "plugins.themes.immersion.name"
+msgstr "Ընկղման թեմա"
+
+msgid "plugins.themes.immersion.option.displayStats.label"
+msgstr "Օգտագործման վիճակագրության ցուցադրման ընտրանքներ"
+
+msgid "plugins.themes.immersion.option.displayStats.bar"
+msgstr ""
+"Օգտագործման վիճակագրության ցուցադրման համար օգտագործեք գծապատկերի վահանակի "
+"տեսակը:"
+
+msgid "plugins.themes.immersion.displayStats.monthInitials"
+msgstr "Հնվ Փտր Մար Ապր Մյս Հնս Հլս Օգս Սպտ Հկտ Նոյ Դկտ"
+
+msgid "plugins.themes.immersion.displayStats.downloads"
+msgstr "Ներբեռնումներ"
+
+msgid "plugins.themes.immersion.displayStats.noStats"
+msgstr "Ներբեռնման տվյալները դեռ հասանելի չեն:"
+
+msgid "plugins.themes.immersion.option.displayStats.none"
+msgstr ""
+"Մի ցուցադրեք ներկայացումների օգտագործման վիճակագրության աղյուսակը ընթերցողի "
+"համար:"
+
+msgid "plugins.themes.immersion.option.displayStats.line"
+msgstr ""
+"Օգտագործման վիճակագրության ցուցադրման համար օգտագործեք գծապատկերի գծի տեսակը:"

@@ -1,0 +1,182 @@
+/**
+* @file resources/objects/article_details.less
+*
+* Copyright (c) 2014-2020 Simon Fraser University
+* Copyright (c) 2003-2020 John Willinsky
+* Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+*
+* @brief Stylesheet for article landing page
+*
+*/
+
+
+/* General */
+
+.article-page {
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+	background: @primary-color;
+	color: @secondary-color;
+}
+
+.article-page a {
+	color: @secondary-color;
+}
+
+.article-page__alert {
+  border: 1px solid @secondary-color;
+  padding: 0.75em;
+}
+
+.article-page__meta {
+	margin: 0.75em 0;
+	font-size: smaller;
+}
+
+.article-page__galleys {
+	margin: 5vh 0;
+}
+
+.article-page .btn {
+	border-color: #fff;
+	margin-right: 1em;
+}
+
+.article-sidebar {
+	padding-top: 5vh;
+}
+
+.article-page__versions {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+// List of authors
+
+.authors-string {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: flex-start;
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.authors-string__item {
+
+	&:not(:last-child):after {
+		content: ', ';
+		padding-right: 7px;
+	}
+}
+
+.bio-modal {
+
+	p {
+		font-size: 16px;
+		text-align: left;
+	}
+}
+
+.orcidImage img {
+	height: 16px;
+	width: 16px;
+	margin-left: 2px;
+	margin-right: 1px;
+}
+
+.author-symbol {
+	display: inline-block;
+	width: 9px;
+
+	&.hidden {
+		display: none;
+	}
+}
+
+// Galleys
+
+.list-galleys {
+	display: flex;
+	padding-left: 0;
+	list-style-type: none;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: flex-start;
+
+	& a {
+		background-color: @primary-color;
+		border: 1px solid @secondary-color;
+		font-weight: 600;
+		color:@secondary-color;
+		padding: 6px 12px;
+
+		&:hover {
+			background-color: @secondary-color;
+			border: 1px solid @primary-color;
+			color: @primary-color;
+		}
+
+		&:after {
+			display: none;
+		}
+	}
+}
+
+// Referenecs
+
+ol.references {
+	padding-left: 20px;
+}
+
+.references, .csl-entry {
+	word-break: break-word;
+}
+
+// Citation Formats
+
+.download-cite {
+	padding: 0.25rem 1.5rem;
+	margin: 1.5rem 0 1rem 0;
+}
+
+.dropdown-cite-link {
+
+	&:after {
+		display: none;
+	}
+
+	&:focus {
+		background-color: @primary-color;
+		color: @secondary-color;
+	}
+}
+
+.csl-entry {
+	font-size: 0.75em;
+	margin-bottom: 20px;
+}
+
+.citation_format_value .csl-left-margin {
+	display: none;
+}
+
+// Copyright
+
+.copyright-info {
+	margin: 3.5rem 0 1.5rem 0;
+
+	& > a:after {
+		display: none;
+	}
+}
+
+#copyrightModal p {
+	text-align: left;
+}
+
+.copyright-notice__modal {
+	cursor: pointer;
+	font-size: 0.75em;
+}
