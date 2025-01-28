@@ -22,7 +22,7 @@ At least 12 months before a LTS version reaches EOL, a new LTS version is design
 
 ## Reporting a Vulnerability
 
-To report a vulnerability, please contact PKP privately using: pkp.contact@gmail.com
+To report a vulnerability, please contact PKP privately using: pkp-security@lists.sfu.ca
 
 You can expect a response via email to acknowledge your report within 2 working days.
 
