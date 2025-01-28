@@ -1,0 +1,135 @@
+# Jeppe Hauge Bæk <jeppe.baek@hotmail.com>, 2023.
+# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-04-13 14:48+0000\n"
+"Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
+"Language-Team: Danish <http://translate.pkp.sfu.ca/projects/plugins/"
+"immersion/da/>\n"
+"Language: da\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.themes.immersion.colorPick"
+msgstr "Farvevælger"
+
+msgid "plugins.themes.immersion.announcements.colorPick"
+msgstr "Meddelelser-sektionens farve på tidsskriftets hjemmeside"
+
+msgid "editor.issues.sectionArea"
+msgstr "Valgmuligheder for nummerets sektioner"
+
+msgid "plugins.themes.immersion.issue.published"
+msgstr "Udgivet"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "Nummerbeskrivelse"
+
+msgid "plugins.themes.immersion.mainMenu"
+msgstr "Hovedmenu"
+
+msgid "plugins.themes.immersion.adminMenu"
+msgstr "Admin menu"
+
+msgid "plugins.themes.immersion.about.journal"
+msgstr "Om tidsskriftet"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "Se hele nummeret"
+
+msgid "plugins.themes.immersion.search.parameters"
+msgstr "Parametre"
+
+msgid "plugins.themes.immersion.article.biography"
+msgstr "Biografi"
+
+msgid "plugins.themes.immersion.article.figure"
+msgstr "Coverbillede"
+
+msgid "plugins.themes.immersion.authors.browse"
+msgstr "Søg via forfatter"
+
+msgid "plugins.themes.immersion.author.details"
+msgstr "Om forfatteren"
+
+msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgstr "Vis sektionsbeskrivelse"
+
+msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgstr ""
+"Hvis aktiveret, vil sektionsbeskrivelsen blive vist under den passende "
+"sektion på tidsskriftets hjemmeside"
+
+msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgstr "Deaktiver"
+
+msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgstr "Aktiver; kræver Søg via sektion plugin er aktiveret"
+
+msgid "plugins.themes.immersion.options.journalDescription.label"
+msgstr "Vis tidsskrifts beskrivelse"
+
+msgid "plugins.themes.immersion.options.journalDescription.description"
+msgstr ""
+"Hvis aktiveret, vil tidsskriftets beskrivelse blive vist på tidsskriftets "
+"forside"
+
+msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgstr "Deaktiver (default)"
+
+msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgstr "Aktiver"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgstr "Tidsskrifts beskrivelses baggrund"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgstr ""
+"Baggrundsfarve for sektionen om tidsskriftets beskrivelse på tidsskriftets "
+"hjemmeside"
+
+msgid "plugins.themes.immersion.name"
+msgstr "Immersion Tema"
+
+msgid "plugins.themes.immersion.registration.consent"
+msgstr "Samtykke"
+
+msgid "plugins.themes.immersion.description"
+msgstr ""
+"Et OJS tema med helsidebilleder, store skrifttyper og modige farveblokke "
+"skræddersyet til tidsskrifter med fokus på det visuelle."
+
+msgid "plugins.themes.immersion.language.toggle"
+msgstr "Skift sprog. Nuværende sprog er:"
+
+msgid "plugins.themes.immersion.colorPickInstructions"
+msgstr ""
+"Vælg en farve til en sektion, der vises på tidsskriftets front-end. Skal "
+"være gyldig HTML hex code (f.eks. \"ffff00 for gul)."
+
+msgid "plugins.themes.immersion.section.coverPage"
+msgstr "Sektion coverbillede"
+
+msgid "plugins.themes.immersion.option.displayStats.label"
+msgstr "Visningsmuligheder for brugsstatistik"
+
+msgid "plugins.themes.immersion.option.displayStats.none"
+msgstr "Fremvis ikke diagram over indsendelsers brugsstatistik for læseren."
+
+msgid "plugins.themes.immersion.option.displayStats.bar"
+msgstr "Anvend søjlediagram til visning af brugsstatistik."
+
+msgid "plugins.themes.immersion.option.displayStats.line"
+msgstr "Anvend kurvediagram til visning af brugsstatistik."
+
+msgid "plugins.themes.immersion.displayStats.monthInitials"
+msgstr "Jan Feb Mar Apr Maj Jun Jul Aug Sep Okt Nov Dec"
+
+msgid "plugins.themes.immersion.displayStats.downloads"
+msgstr "Downloads"
+
+msgid "plugins.themes.immersion.displayStats.noStats"
+msgstr "Download-data er endnu ikke tilgængelige."

@@ -1,0 +1,162 @@
+/* BEM components: issue */
+.issue {
+	padding-top: 7.5vh;
+	background: #000;
+	color: #fff;
+
+	& .container {
+		min-height: 20vh;
+	}
+}
+
+.issue.issue__empty {
+	background-color: #fff;
+	color: #000;
+	min-height: 20vh;
+}
+
+.issue__header {
+	margin-bottom: 5vh;
+}
+
+.issue__meta {
+	margin: 0.75em 0;
+}
+
+.issue__title {
+	margin: 0.15em 0;
+	font-size: 2em;
+}
+
+.issue__title {
+	span {
+		display: block;
+		font-weight: 400;
+	}
+
+	.issue__volume, .issue__number {
+		display: inline;
+	}
+}
+
+.issue__number ~ .issue__volume:after {
+	content: ", ";
+}
+
+
+.issue__title span:last-of-type {
+	display: block;
+	font-weight: 700;
+}
+
+.issue__title span:last-of-type:before {
+	content: '— ';
+}
+
+/* BEM components: issue description */
+
+.issue-desc {
+	padding-top: 2.5em;
+	padding-bottom: 2.5em;
+}
+
+.issue-desc a {
+	color: #fff;
+	padding-left: 5px;
+}
+
+.issue-desc a:hover,
+.issue-desc a:focus,
+.issue-desc a:active {
+	color: rgba(255, 255, 255, 0.75);
+}
+
+.issue-desc a:after {
+	border-color: #fff;
+}
+
+.issue-desc__title {
+	margin-top: 0;
+}
+
+.issue-desc__content {
+
+}
+
+.issue-desc__btn-group {
+	list-style: none;
+	padding: 0;
+	margin: 2.5vh 0 0 0;
+
+	.article__btn {
+		border: 1px solid @secondary-color;
+		text-align: right;
+		padding: .75em 1em;
+
+		&:hover {
+			background-color: @secondary-color;
+			color: @primary-color;
+		}
+
+		&:after {
+			display: none;
+		}
+	}
+}
+
+/* BEM components: issue section */
+.issue-section {
+	padding: 7.5vh 0 7.5vh 0;
+	color: #000;
+}
+
+.issue-section__header {
+	margin-bottom: 2.5vh;
+}
+
+.issue-section__title {
+	font-family: @font-family-primary;
+	font-weight: 700;
+}
+
+.issue-section__desc {
+
+}
+
+.issue-section__toc {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.issue-section__toc-item:last-child .article {
+	margin-bottom: 0;
+}
+
+.issue-section__toc-item {
+
+}
+
+// Section colors
+.issue-section {
+	background-color: @secondary-color;
+
+	h2, h3, h4, h5, h6 {
+		margin-top: 0;
+	}
+}
+
+.section_dark {
+	& h3, h4, a, p, span {
+		color: @secondary-color;
+	}
+
+	.btn {
+		border-color: @secondary-color;
+
+		&:hover, &:focus, &:active {
+			background-color: @secondary-color;
+			color: @primary-color;
+		}
+	}
+}

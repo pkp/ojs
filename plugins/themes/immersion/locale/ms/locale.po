@@ -1,0 +1,112 @@
+# Studiorimau <studiorimau@gmail.com>, 2021.
+# Mohamad Shabilullah <shabilhamid91@gmail.com>, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-02-08 13:48+0000\n"
+"Last-Translator: Mohamad Shabilullah <shabilhamid91@gmail.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/plugins/immersion/"
+"ms/>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgstr "Warna latar untuk bahagian butiran jurnal di laman utama jurnal"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgstr "Latar belakang butiran jurnal"
+
+msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgstr "Dayakan"
+
+msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgstr "Nyahdayakan (lalai)"
+
+msgid "plugins.themes.immersion.options.journalDescription.description"
+msgstr ""
+"Sekiranya didayakan, butiran jurnal akan ditunjukkan di halaman landing "
+"jurnal"
+
+msgid "plugins.themes.immersion.options.journalDescription.label"
+msgstr "Tunjukkan butiran jurnal"
+
+msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgstr "Dayakan; memerlukan plugin Browse By Section untuk diaktifkan"
+
+msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgstr "Nyahdayakan"
+
+msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgstr "Tunjukkan bahagian butiran"
+
+msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgstr ""
+"Sekiranya diaktifkan, bahagian butiran akan ditunjukkan di bawah bahagian "
+"yang sesuai di laman utama jurnal"
+
+msgid "plugins.themes.immersion.author.details"
+msgstr "Butir-butir Pengarang"
+
+msgid "plugins.themes.immersion.authors.browse"
+msgstr "Layari mengikut Pengarang"
+
+msgid "plugins.themes.immersion.article.figure"
+msgstr "Gambar muka hadapan"
+
+msgid "plugins.themes.immersion.article.biography"
+msgstr "Bio"
+
+msgid "plugins.themes.immersion.search.parameters"
+msgstr "Parameter"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "Lihat terbitan penuh"
+
+msgid "plugins.themes.immersion.about.journal"
+msgstr "Mengenai jurnal"
+
+msgid "plugins.themes.immersion.adminMenu"
+msgstr "Menu Pentadbir"
+
+msgid "plugins.themes.immersion.language.toggle"
+msgstr "Tukar bahasa. Bahasa semasa adalah:"
+
+msgid "plugins.themes.immersion.mainMenu"
+msgstr "Menu utama"
+
+msgid "plugins.themes.immersion.registration.consent"
+msgstr "Persetujuan"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "Butiran isu"
+
+msgid "plugins.themes.immersion.issue.published"
+msgstr "Diterbitkan"
+
+msgid "editor.issues.sectionArea"
+msgstr "Pilihan untuk bahagian terbitan"
+
+msgid "plugins.themes.immersion.announcements.colorPick"
+msgstr "Warna bahagian pengumuman di laman utama jurnal"
+
+msgid "plugins.themes.immersion.section.coverPage"
+msgstr "Gambar muka depan bahagian"
+
+msgid "plugins.themes.immersion.colorPickInstructions"
+msgstr ""
+"Pilih warna untuk bahagian untuk dipaparkan pada bahagian hadapan jurnal. "
+"Mestilah kod heks HTML yang sah (cth., #ffff00 untuk kuning)."
+
+msgid "plugins.themes.immersion.colorPick"
+msgstr "Pemilih Warna"
+
+msgid "plugins.themes.immersion.description"
+msgstr ""
+"Tema OJS dengan imej halaman penuh, muka taip besar dan blok warna tebal "
+"yang disesuaikan untuk jurnal dengan tumpuan pada visual."
+
+msgid "plugins.themes.immersion.name"
+msgstr "Tema Immersion"

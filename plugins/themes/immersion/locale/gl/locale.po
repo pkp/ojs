@@ -1,0 +1,114 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-03-11 09:54+0000\n"
+"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/plugins/"
+"immersion/gl_ES/>\n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgstr ""
+"Cor de fondo para a sección de descrición da publicación na súa páxina de "
+"inicio"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgstr "Fondo da descrición da publicación"
+
+msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgstr "Habilitar"
+
+msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgstr "Deshabilitar (predeterminado)"
+
+msgid "plugins.themes.immersion.options.journalDescription.description"
+msgstr ""
+"Se está habilitado, a descrición da publicación amosarase na súa páxina de "
+"inicio"
+
+msgid "plugins.themes.immersion.options.journalDescription.label"
+msgstr "Mostrar a descrición da publicación"
+
+msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgstr "Habilitar; require que se active o complemento Explorar por sección"
+
+msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgstr "Deshabilitar"
+
+msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgstr ""
+"Se está activada, a descrición da sección mostrarase na sección "
+"correspondente na páxina de inicio da publicación"
+
+msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgstr "Mostrar a descrición da sección"
+
+msgid "plugins.themes.immersion.author.details"
+msgstr "Información do autor/a"
+
+msgid "plugins.themes.immersion.authors.browse"
+msgstr "Explorar por autor/a"
+
+msgid "plugins.themes.immersion.article.figure"
+msgstr "Imaxe da portada"
+
+msgid "plugins.themes.immersion.article.biography"
+msgstr "Biografía"
+
+msgid "plugins.themes.immersion.search.parameters"
+msgstr "Parámetros"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "Ver o número completo"
+
+msgid "plugins.themes.immersion.about.journal"
+msgstr "Acerca da publicación"
+
+msgid "plugins.themes.immersion.adminMenu"
+msgstr "Menú de administración"
+
+msgid "plugins.themes.immersion.language.toggle"
+msgstr "Cambiar o idioma. O actual é:"
+
+msgid "plugins.themes.immersion.mainMenu"
+msgstr "Menú principal"
+
+msgid "plugins.themes.immersion.registration.consent"
+msgstr "Consentimento"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "Descrición do número"
+
+msgid "plugins.themes.immersion.issue.published"
+msgstr "Publicado"
+
+msgid "editor.issues.sectionArea"
+msgstr "Opcións para as seccións do número"
+
+msgid "plugins.themes.immersion.announcements.colorPick"
+msgstr "Cor da sección de anuncios na páxina de inicio da publicación"
+
+msgid "plugins.themes.immersion.section.coverPage"
+msgstr "Imaxe da portada da sección"
+
+msgid "plugins.themes.immersion.colorPickInstructions"
+msgstr ""
+"Escolle unha cor para que unha sección se mostre na portada da publicación. "
+"Debe ser un código hexadecimal HTML válido (por exemplo, #ffff00 para o "
+"amarelo)."
+
+msgid "plugins.themes.immersion.colorPick"
+msgstr "Selector de cores"
+
+msgid "plugins.themes.immersion.description"
+msgstr ""
+"Un tema de OJS con imaxes a páxina completa, grandes tipos de letra e "
+"bloques de cores en negrita adaptados para publicaciones con importante "
+"estilo visual."
+
+msgid "plugins.themes.immersion.name"
+msgstr "Tema Immersion"

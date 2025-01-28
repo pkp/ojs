@@ -1,0 +1,55 @@
+/**
+* @file resources/less/components/footer.less
+*
+* Copyright (c) 2014-2020 Simon Fraser University
+* Copyright (c) 2003-2020 John Willinsky
+* Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+*
+* @brief Stylesheet for journal-wide footer
+*
+*/
+
+
+/* BEM components: site footer */
+
+.main-footer {
+	padding: 7.5vh 0;
+	background-color: @secondary-color;
+	border-top: 1px solid darkgrey;
+
+	& h1, h2, h3, h4, h5, h6 {
+		font-family: @font-family-secondary;
+		font-weight: 700;
+		font-size: 1em;
+		margin-top: 0;
+	}
+
+	& p, li, blockquote, cite, dd, .btn {
+		font-family: @font-family-secondary;
+		font-weight: 300;
+	}
+
+	& ul, ol {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	& a {
+		border: 0;
+		box-shadow: none;
+	}
+
+	& p {
+		margin-bottom: 5px;
+	}
+
+	& img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.pkp_block {
+	margin-bottom: 40px;
+}

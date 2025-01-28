@@ -1,0 +1,40 @@
+/**
+ * @file less/components/registrationFormContexts.less
+ *
+ * Copyright (c) 2014-2020 Simon Fraser University
+ * Copyright (c) 2003-2020 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Stylesheet for site-wide registration page
+ *
+ */
+
+// Show/hide privacy statement
+
+.context_privacy {
+	position: absolute;
+	left: -9999px;
+}
+
+.context_privacy_visible {
+	position: relative;
+	left: auto;
+}
+
+.registration-context {
+	list-style-type: none;
+	padding-left: 0;
+
+	& li {
+
+
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+.registration-context__roles {
+	margin-bottom: 0;
+	margin-top: 20px;
+}

@@ -1,0 +1,74 @@
+/**
+ * @file resources/less/pages/search.less
+ *
+ * Copyright (c) 2014-2020 Simon Fraser University
+ * Copyright (c) 2003-2020 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Stylesheet for search page
+ *
+ */
+
+/* Search form aside */
+.search__form {
+	background-color: @primary-color;
+	color: @secondary-color;
+	padding: 5vh 5% 5vh 5%;
+	margin-bottom: 5vh;
+}
+
+.search__control {
+	background-color: transparent;
+	border-color: @secondary-color;
+	color: @secondary-color;
+}
+
+.search__control:focus {
+	background-color: transparent;
+	color: @secondary-color;
+}
+
+.form-control-date {
+	position: relative;
+}
+
+.search__form button {
+	border: 1px solid white;
+}
+
+.select__wrapper {
+
+	&:after {
+		width: 0;
+		height: 0;
+		border-left: 4px solid transparent;
+		border-right: 4px solid transparent;
+		border-top: 4px solid @secondary-color;
+		position: absolute;
+		top: 50%;
+		right: 5px;
+		content: "";
+		z-index: 2;
+	}
+
+	&:focus {
+		border-top: @primary-color;
+	}
+}
+
+.search__select {
+	position: relative;
+	z-index: 3;
+	background: transparent;
+	color: @secondary-color;
+	border-bottom: 1px solid @secondary-color;
+	padding-right: 5px;
+
+	&:focus {
+		background: transparent;
+		color: @secondary-color;
+		& option {
+			color: @primary-color;
+		}
+	}
+}

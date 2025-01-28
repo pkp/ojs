@@ -1,0 +1,51 @@
+/**
+* @file resources/less/page.less
+*
+* Copyright (c) 2014-2020 Simon Fraser University
+* Copyright (c) 2003-2020 John Willinsky
+* Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+*
+* @brief General page layout
+*
+*/
+
+.main__content {
+	margin-bottom: 7.5vh;
+}
+
+
+.cmp_edit_link {
+	margin-bottom: 24px;
+}
+
+h2 .cmp_edit_link {
+	margin-bottom: 0;
+	font-size: 18px;
+	text-transform: lowercase;
+	font-weight: normal;
+}
+
+.cmp_back_link {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.hidden {
+	display: none;
+}
+
+.table .thead-dark th {
+	background-color: @primary-color;
+	border-color: @primary-color;
+}
+
+a.img-wrapper {
+	color: inherit;
+	border-bottom: 0;
+	transition: none;
+	-webkit-transition: none;
+
+	&:after {
+		display: none;
+	}
+}

@@ -1,0 +1,143 @@
+# Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-04-24 10:30+0000\n"
+"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-helene."
+"vezina@umontreal.ca>\n"
+"Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/plugins/"
+"immersion/fr_CA/>\n"
+"Language: fr_CA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgstr ""
+"Activer ; requiert le plugiciel « Parcourir par rubrique » pour être activé"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgstr ""
+"Couleur d'arrière-plan de la section de description de la revue sur sa page "
+"d'accueil"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgstr "Couleur de fond de la description de la revue"
+
+msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgstr "Activer"
+
+msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgstr "Désactiver (par défaut)"
+
+msgid "plugins.themes.immersion.options.journalDescription.description"
+msgstr ""
+"Si activée, la description de la revue sera affichée sur sa page d'accueil"
+
+msgid "plugins.themes.immersion.options.journalDescription.label"
+msgstr "Afficher la description de la revue"
+
+msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgstr "Désactiver"
+
+msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgstr ""
+"Si activée, la description de la rubrique sera affichée sous la rubrique "
+"appropriée de la page d'accueil de la revue"
+
+msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgstr "Afficher la description de la rubrique"
+
+msgid "plugins.themes.immersion.author.details"
+msgstr "Renseignements sur l'auteur-e"
+
+msgid "plugins.themes.immersion.authors.browse"
+msgstr "Parcourir par auteur"
+
+msgid "plugins.themes.immersion.article.figure"
+msgstr "Image de couverture"
+
+msgid "plugins.themes.immersion.article.biography"
+msgstr "Biographie"
+
+msgid "plugins.themes.immersion.search.parameters"
+msgstr "Paramètres"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "Afficher le numéro complet"
+
+msgid "plugins.themes.immersion.about.journal"
+msgstr "À propos de la revue"
+
+msgid "plugins.themes.immersion.adminMenu"
+msgstr "Menu d'administration"
+
+msgid "plugins.themes.immersion.language.toggle"
+msgstr "Changer de langue. La langue actuelle est :"
+
+msgid "plugins.themes.immersion.mainMenu"
+msgstr "Menu principal"
+
+msgid "plugins.themes.immersion.registration.consent"
+msgstr "Consentement"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "Description du numéro"
+
+msgid "plugins.themes.immersion.issue.published"
+msgstr "Publié-e"
+
+msgid "editor.issues.sectionArea"
+msgstr "Options pour les rubriques des numéros"
+
+msgid "plugins.themes.immersion.announcements.colorPick"
+msgstr "Couleur de la section « annonces » de la page d'accueil"
+
+msgid "plugins.themes.immersion.colorPickInstructions"
+msgstr ""
+"Choisir la couleur de la rubrique à afficher au niveau de l'interface "
+"utilisateur. Doit être un code hexadécimal HTML valide (par exemple, #ffff00 "
+"pour le jaune)."
+
+msgid "plugins.themes.immersion.section.coverPage"
+msgstr "Image de couverture de la rubrique"
+
+msgid "plugins.themes.immersion.colorPick"
+msgstr "Sélecteur de couleurs"
+
+msgid "plugins.themes.immersion.description"
+msgstr ""
+"Un thème pour OJS affichant des images pleine-largeur, de grandes polices de "
+"caractères et des blocs de couleurs contrastantes, conçu pour les revues "
+"désirant mettre l'accent sur les éléments visuels."
+
+msgid "plugins.themes.immersion.name"
+msgstr "Thème Immersion"
+
+msgid "plugins.themes.immersion.option.displayStats.label"
+msgstr "Options d'affichage des statistiques d'utilisation"
+
+msgid "plugins.themes.immersion.option.displayStats.none"
+msgstr ""
+"Ne pas afficher aux lecteur.trice.s le graphique des statistiques "
+"d'utilisation des soumissions."
+
+msgid "plugins.themes.immersion.option.displayStats.bar"
+msgstr ""
+"Utiliser le type de graphique à barres pour afficher les statistiques "
+"d'utilisation."
+
+msgid "plugins.themes.immersion.displayStats.downloads"
+msgstr "Téléchargements"
+
+msgid "plugins.themes.immersion.displayStats.noStats"
+msgstr "Les données de téléchargement ne sont pas encore disponible."
+
+msgid "plugins.themes.immersion.displayStats.monthInitials"
+msgstr "Jan. Fév. Mar. Avr. Mai Juin Juil. Août Sept. Oct. Nov. Déc."
+
+msgid "plugins.themes.immersion.option.displayStats.line"
+msgstr ""
+"Utiliser le type de graphique à ligne pour afficher les statistiques "
+"d'utilisation."

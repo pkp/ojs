@@ -1,0 +1,134 @@
+# Weblate Admin <alec@smecher.bc.ca>, 2022.
+# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2022, 2023, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-01-14 09:39+0000\n"
+"Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
+"Language-Team: Czech <http://translate.pkp.sfu.ca/projects/plugins/immersion/"
+"cs/>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgstr "Barva pozadí pro popis časopisu na domovské stránce časopisu"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgstr "Pozadí pro popis časopisu"
+
+msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgstr "Povolit"
+
+msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgstr "Zakázat (výchozí)"
+
+msgid "plugins.themes.immersion.options.journalDescription.description"
+msgstr ""
+"Pokud je tato možnost povolena, popis časopisu se zobrazí na vstupní stránce "
+"časopisu"
+
+msgid "plugins.themes.immersion.options.journalDescription.label"
+msgstr "Ukázat popis časopisu"
+
+msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgstr ""
+"Povolit; vyžaduje, aby byl aktivován zásuvný modul Procházet podle sekcí"
+
+msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgstr "Zakázat"
+
+msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgstr ""
+"Pokud je aktivován, popis sekce se zobrazí pod příslušnou sekcí na domovské "
+"stránce časopisu"
+
+msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgstr "Ukázat popis sekce"
+
+msgid "plugins.themes.immersion.author.details"
+msgstr "Podrobnosti o autorovi"
+
+msgid "plugins.themes.immersion.authors.browse"
+msgstr "Procházet podle autorů"
+
+msgid "plugins.themes.immersion.article.figure"
+msgstr "Obrázek na obálku"
+
+msgid "plugins.themes.immersion.article.biography"
+msgstr "Bio (životopis)"
+
+msgid "plugins.themes.immersion.search.parameters"
+msgstr "Parametry"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "Podívejte se na celé číslo"
+
+msgid "plugins.themes.immersion.about.journal"
+msgstr "O časopise"
+
+msgid "plugins.themes.immersion.adminMenu"
+msgstr "Menu správce"
+
+msgid "plugins.themes.immersion.language.toggle"
+msgstr "Změna jazyka. Aktuální jazyk je:"
+
+msgid "plugins.themes.immersion.mainMenu"
+msgstr "Hlavní menu"
+
+msgid "plugins.themes.immersion.registration.consent"
+msgstr "Souhlas"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "Popis vydání"
+
+msgid "plugins.themes.immersion.issue.published"
+msgstr "Publikováno"
+
+msgid "editor.issues.sectionArea"
+msgstr "Možnosti sekcí čísla"
+
+msgid "plugins.themes.immersion.announcements.colorPick"
+msgstr "Barva sekce Oznámení na domovské stránce časopisu"
+
+msgid "plugins.themes.immersion.section.coverPage"
+msgstr "Obrázek na titulní straně oddílu"
+
+msgid "plugins.themes.immersion.colorPickInstructions"
+msgstr ""
+"Vyberte barvu pro oddíl, který se má zobrazit na úvodní straně časopisu. "
+"Musí to být platný šestnáctkový kód HTML (např. #ffff00 pro žlutou)."
+
+msgid "plugins.themes.immersion.colorPick"
+msgstr "Nástroj pro výběr barvy"
+
+msgid "plugins.themes.immersion.description"
+msgstr ""
+"Téma OJS s celostránkovými obrázky, velkým písmem a výraznými barevnými "
+"bloky je přizpůsobeno časopisům se zaměřením na vizuální stránku."
+
+msgid "plugins.themes.immersion.name"
+msgstr "Téma Immersion"
+
+msgid "plugins.themes.immersion.option.displayStats.label"
+msgstr "Možnosti zobrazení statistik používání"
+
+msgid "plugins.themes.immersion.option.displayStats.none"
+msgstr "Nezobrazujte čtenářům tabulku statistik využití příspěvku."
+
+msgid "plugins.themes.immersion.option.displayStats.bar"
+msgstr "Pro zobrazení statistik používání použijte sloupcový typ grafu."
+
+msgid "plugins.themes.immersion.option.displayStats.line"
+msgstr "Pro zobrazení statistik používání použijte čárový typ grafu."
+
+msgid "plugins.themes.immersion.displayStats.monthInitials"
+msgstr "Led Úno Bře Dub Kvě Čer Čvn Srp Zář Říj Lis Pro"
+
+msgid "plugins.themes.immersion.displayStats.downloads"
+msgstr "Stažení"
+
+msgid "plugins.themes.immersion.displayStats.noStats"
+msgstr "Data ke stažení zatím nejsou k dispozici."

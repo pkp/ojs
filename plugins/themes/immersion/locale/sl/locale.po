@@ -1,0 +1,131 @@
+# Primož Svetek <primoz.svetek@gmail.com>, 2022, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-02-27 16:48+0000\n"
+"Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
+"Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/plugins/"
+"immersion/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
+"%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgstr "Barva ozadja za razdelek z opisom revije na osnovni strani revije"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgstr "Ozadje opisa revije"
+
+msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgstr "Omogoči"
+
+msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgstr "Onemogoči (privzeto)"
+
+msgid "plugins.themes.immersion.options.journalDescription.description"
+msgstr "Če je vključeno, se bo opis revije prikazal na osnovni strani revije"
+
+msgid "plugins.themes.immersion.options.journalDescription.label"
+msgstr "Pokaži opis revije"
+
+msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgstr "Omogoči; predpogoj je, da je vključen vtičnik za Iskanje po rubriki"
+
+msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgstr "Onemogoči"
+
+msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgstr ""
+"Če je vključeno, se bo pod rubriko prikazal opis rubrike na domači strani "
+"revije"
+
+msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgstr "Pokaži opis rubrike"
+
+msgid "plugins.themes.immersion.author.details"
+msgstr "Podrobnosti avtorja"
+
+msgid "plugins.themes.immersion.authors.browse"
+msgstr "Išči po avtorju"
+
+msgid "plugins.themes.immersion.article.figure"
+msgstr "Naslovnica"
+
+msgid "plugins.themes.immersion.article.biography"
+msgstr "Biografija"
+
+msgid "plugins.themes.immersion.search.parameters"
+msgstr "Parametri"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "Poglej celotno številko"
+
+msgid "plugins.themes.immersion.about.journal"
+msgstr "O reviji"
+
+msgid "plugins.themes.immersion.adminMenu"
+msgstr "Administratorski meni"
+
+msgid "plugins.themes.immersion.language.toggle"
+msgstr "Spremeni jezik. Trenutni jezik je:"
+
+msgid "plugins.themes.immersion.mainMenu"
+msgstr "Glavni meni"
+
+msgid "plugins.themes.immersion.registration.consent"
+msgstr "Soglasje"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "Opis številke"
+
+msgid "plugins.themes.immersion.issue.published"
+msgstr "Objavljeno"
+
+msgid "editor.issues.sectionArea"
+msgstr "Možnosti za rubrike revije"
+
+msgid "plugins.themes.immersion.announcements.colorPick"
+msgstr "Barva za razdelek z obvestili na naslovni strani revije"
+
+msgid "plugins.themes.immersion.section.coverPage"
+msgstr "Naslovna slika rubrike"
+
+msgid "plugins.themes.immersion.colorPickInstructions"
+msgstr ""
+"Izberite barvo za razdelek na prvi strani revije. Biti mora veljavna HTML "
+"koda (npr. #ffff00 za rumeno)."
+
+msgid "plugins.themes.immersion.colorPick"
+msgstr "Izbira barv"
+
+msgid "plugins.themes.immersion.description"
+msgstr ""
+"OJS tema s celostranskimi slikami, velikimi pisavami in poudarjenimi barvami "
+"blokov za revije s fokusom na vizualnem efektu."
+
+msgid "plugins.themes.immersion.name"
+msgstr "Immersion tema"
+
+msgid "plugins.themes.immersion.option.displayStats.label"
+msgstr "Možnosti prikaza statistik uporabe"
+
+msgid "plugins.themes.immersion.option.displayStats.none"
+msgstr "Brlacem ne prikazuj grafa statistik prispevkov."
+
+msgid "plugins.themes.immersion.option.displayStats.bar"
+msgstr "Uporabi vrstični diagram za prikaz statistik uporabe."
+
+msgid "plugins.themes.immersion.displayStats.monthInitials"
+msgstr "Jan Feb Mar Apr Maj Jun Jul Avg Sep Okt Nov Dec"
+
+msgid "plugins.themes.immersion.displayStats.downloads"
+msgstr "Prenosi"
+
+msgid "plugins.themes.immersion.displayStats.noStats"
+msgstr "Podatki o prenosih še niso na voljo."
+
+msgid "plugins.themes.immersion.option.displayStats.line"
+msgstr "Uporabi črtni diagram za prikaz statistik uporabe."

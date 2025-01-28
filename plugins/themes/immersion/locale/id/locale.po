@@ -1,0 +1,110 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-01-15 06:53+0000\n"
+"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/plugins/"
+"immersion/id_ID/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgstr ""
+"Jika diaktifkan, deskripsi seksi akan ditampilkan di bawah bagian beranda "
+"jurnal"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgstr "Warna latar untuk seksi deskripsi pada halaman beranda jurnal"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgstr "Latar deskripsi jurnal"
+
+msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgstr "Aktifkan"
+
+msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgstr "Nonaktofkan (default)"
+
+msgid "plugins.themes.immersion.options.journalDescription.description"
+msgstr ""
+"Jika diaktifkan, deskripsi jurnal akan ditampilkan pada landing page jurnal"
+
+msgid "plugins.themes.immersion.options.journalDescription.label"
+msgstr "Tampilkan deskripsi jurnal"
+
+msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgstr "Aktifkan; plugin Cari Berdasarkan Seksi harus diaktifkan"
+
+msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgstr "Nonaktifkan"
+
+msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgstr "Tampilkan deskripsi seksi"
+
+msgid "plugins.themes.immersion.author.details"
+msgstr "Rincian Penulis"
+
+msgid "plugins.themes.immersion.authors.browse"
+msgstr "Cari berdasarkan Penulis"
+
+msgid "plugins.themes.immersion.article.figure"
+msgstr "Gambar sampul"
+
+msgid "plugins.themes.immersion.article.biography"
+msgstr "Bio"
+
+msgid "plugins.themes.immersion.search.parameters"
+msgstr "Parameter"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "Buka terbitan lengkap"
+
+msgid "plugins.themes.immersion.about.journal"
+msgstr "Tentang jurnal"
+
+msgid "plugins.themes.immersion.adminMenu"
+msgstr "Menu Admin"
+
+msgid "plugins.themes.immersion.language.toggle"
+msgstr "Ubah bahasa. Bahasa saat ini adalah:"
+
+msgid "plugins.themes.immersion.mainMenu"
+msgstr "Menu utama"
+
+msgid "plugins.themes.immersion.registration.consent"
+msgstr "Persetujuan"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "Deskripsi Terbitan"
+
+msgid "plugins.themes.immersion.issue.published"
+msgstr "Telah Terbit"
+
+msgid "editor.issues.sectionArea"
+msgstr "Opsi pada seksi terbitan"
+
+msgid "plugins.themes.immersion.announcements.colorPick"
+msgstr "Warna bagian pengumuman pada halaman beranda jurnal"
+
+msgid "plugins.themes.immersion.section.coverPage"
+msgstr "Bagian Gambah Sampul"
+
+msgid "plugins.themes.immersion.colorPickInstructions"
+msgstr ""
+"Pilihlah warna seksi untuk ditampilkan pada halaman jurnal. Kode hex HTML "
+"harus valid."
+
+msgid "plugins.themes.immersion.colorPick"
+msgstr "Pilih Warna"
+
+msgid "plugins.themes.immersion.description"
+msgstr ""
+"Satu tema OJS yang mengusung gambar halaman penuh, tipografi besar, serta "
+"blok warna tebal yang dirancang khusus buat jurnal yang fokus pada aspek "
+"visual."
+
+msgid "plugins.themes.immersion.name"
+msgstr "Tema Immersion"

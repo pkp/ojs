@@ -1,0 +1,42 @@
+/**
+* @file resources/objects/issue_summary.less
+*
+* Copyright (c) 2014-2020 Simon Fraser University
+* Copyright (c) 2003-2020 John Willinsky
+* Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+*
+* @brief Stylesheet for issue summary on the archive page
+*
+*/
+
+.archived-issue {
+	margin-bottom: 3rem;
+
+	& .series {
+		font-size: 80%;
+		letter-spacing: -0.025em;
+	}
+}
+
+.archived-issue__title {
+	margin-top: 0.75em;
+	font-size: 80%;
+	font-family: @font-family-primary;
+	font-weight: 400;
+	line-height: 1.45;
+}
+
+.archived-issue__date {
+	color: darkgrey;
+}
+
+a.issue-summary__link {
+	color: #000;
+	border-bottom: 0;
+	transition: none;
+	-webkit-transition: none;
+
+	&:after {
+		display: none;
+	}
+}

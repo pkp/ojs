@@ -1,0 +1,126 @@
+/**
+ * @file resources/less/typography.less
+ *
+ * Copyright (c) 2014-2020 Simon Fraser University
+ * Copyright (c) 2003-2020 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief most site-wide typography
+ *
+ */
+
+/** General default styles **/
+
+body {
+	font-family: @font-family-primary;
+	color: #000;
+	font-size: 18px;
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: none;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6, legend {
+	font-family: @font-family-secondary;
+	font-weight: 700;
+	letter-spacing: -0.025em;
+	margin: 3.5rem 0 1.5rem 0;
+
+	a:after {
+		border: 0;
+	}
+}
+
+p, li, blockquote, cite, dd {
+	font-family: @font-family-primary;
+	line-height: 1.5;
+	margin-bottom: 1.25rem;
+}
+
+dt, address, table {
+	font-family: @font-family-primary;
+	font-size: smaller;
+}
+
+li {
+	margin-bottom: 0.25em;
+}
+
+blockquote {
+	border-left: 1px solid #000;
+	padding-left: 30px;
+}
+
+cite {
+	display: block;
+	text-align: right;
+}
+
+dt {
+	font-family: @font-family-secondary;
+	font-weight: 400;
+	margin: 0;
+}
+
+dt:first-child {
+	margin-top: 0;
+}
+
+dd {
+	display: inline-block;
+}
+
+code {
+	color: #000;
+	font-size: smaller;
+}
+
+a {
+	color: #000;
+	display: inline-block;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+aside h1,
+aside h2,
+aside h3,
+aside h4,
+aside h5,
+aside h6,
+aside legend {
+	font-size: 0.85em;
+}
+
+aside p,
+aside dt,
+aside dd,
+aside li {
+	font-size: 0.75em;
+}
+
+main a:after,
+aside a:after {
+	display: block;
+	content: '';
+	height: 1px;
+	width: 100%;
+	-webkit-transition: all 0.4s ease-in;
+	-o-transition: all 0.4s ease-in;
+	transition: all 0.4s ease-in;
+	border-bottom: 1px solid #000;
+}
+
+main a:hover:after,
+aside a:hover:after {
+	width: 0%;
+	-webkit-transition: all 0.4s ease-out;
+	-o-transition: all 0.4s ease-out;
+	transition: all 0.4s ease-out;
+}

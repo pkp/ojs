@@ -1,0 +1,70 @@
+/**
+ * @file less/pages/htmlGalley.less
+ *
+ * Copyright (c) 2014-2020 Simon Fraser University
+ * Copyright (c) 2003-2020 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles applying to the page for viewing HTML galley
+ */
+
+
+// container
+
+.galley_view {
+
+	& iframe {
+		padding-top: 30px;
+	}
+}
+
+.html-galley__header {
+	position: relative;
+	z-index: 2;
+	border-bottom: 1px solid @primary-color;
+}
+
+.html-galley__header .return {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 30px;
+	width: 30px;
+	line-height: 30px;
+	text-align: center;
+	background-color: @secondary-color;
+
+	&:before {
+		content: "\21b5";
+		display: inline-block;
+		color: @primary-color;
+	}
+}
+
+.html-galley__header .title {
+	margin-left: 30px;
+	padding-left: 10px;
+	display: block;
+	text-overflow: ellipsis;
+	color: @secondary-color;
+	background-color: @primary-color;
+	height: 30px;
+	line-height: 30px;
+	max-width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+
+	a {
+		color: @secondary-color;
+		text-decoration: underline;
+	}
+}
+
+// inner HTML
+
+@media (min-width: 1200px) {
+	.without_own_css body {
+		padding-left: 15%;
+		padding-right: 15%;
+	}
+}

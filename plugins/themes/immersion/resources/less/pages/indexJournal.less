@@ -1,0 +1,65 @@
+/**
+ * @file resources/less/pages/indexJournal.less
+ *
+ * Copyright (c) 2014-2020 Simon Fraser University
+ * Copyright (c) 2003-2020 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Stylesheet for journal's home page
+ *
+ */
+
+.additional-home-content {
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	& > *:last-child {
+		margin-bottom: 0;
+	}
+}
+
+// Journal description
+
+.journal-description {
+	background-color: #fff;
+	padding: 10vh 0 7.5vh 0;
+
+	a:after {
+		border-color: #fff;
+	}
+}
+
+// Announcements
+
+.announcements {
+	background-color: #fff;
+	padding: 7.5vh 0 7.5vh 0;
+}
+
+.announcement-section__toc {
+	list-style-type: none;
+	padding-left: 0;
+
+	& li {
+		margin-bottom: 10px;
+	}
+
+	& img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+.announcement__title {
+	margin-top: 0.75rem;
+
+	& a:after {
+		display: none;
+	}
+}
+
+.announcement__date {
+	font-size: smaller;
+	margin-bottom: 10px;
+}

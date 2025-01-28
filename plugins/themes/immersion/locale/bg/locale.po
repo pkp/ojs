@@ -1,0 +1,143 @@
+# Cyril Kamburov <cc@intermedia.bg>, 2022, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-02-27 16:48+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/plugins/"
+"immersion/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgstr ""
+"Цвят на фона за раздела за описанието на списанието на началната страница на "
+"списанието"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgstr "Фон за описанието на списанието"
+
+msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgstr "Активиране"
+
+msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgstr "Деактивиране (по подразбиране)"
+
+msgid "plugins.themes.immersion.options.journalDescription.description"
+msgstr ""
+"Ако е активирано, описанието на списанието ще бъде показано на целевата "
+"страница на списанието"
+
+msgid "plugins.themes.immersion.options.journalDescription.label"
+msgstr "Показване на описанието на списанието"
+
+msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgstr ""
+"Активиране; изисква активиране на добавката (плъгин) \"Преглед по секции\" ("
+"Browse By Section)"
+
+msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgstr "Деактивиране"
+
+msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgstr ""
+"Ако е активирано, описанието на раздела ще бъде показано под съответния "
+"раздел на началната страница на списанието"
+
+msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgstr "Показване на описанието на раздела"
+
+msgid "plugins.themes.immersion.author.details"
+msgstr "Информация за автора"
+
+msgid "plugins.themes.immersion.authors.browse"
+msgstr "Преглед по автор"
+
+msgid "plugins.themes.immersion.article.figure"
+msgstr "Обложка"
+
+msgid "plugins.themes.immersion.article.biography"
+msgstr "Биография"
+
+msgid "plugins.themes.immersion.search.parameters"
+msgstr "Параметри"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "Преглед на целия брой"
+
+msgid "plugins.themes.immersion.about.journal"
+msgstr "Относно списанието"
+
+msgid "plugins.themes.immersion.adminMenu"
+msgstr "Административно меню"
+
+msgid "plugins.themes.immersion.language.toggle"
+msgstr "Смяна на езика. Текущият език е:"
+
+msgid "plugins.themes.immersion.mainMenu"
+msgstr "Главно меню"
+
+msgid "plugins.themes.immersion.registration.consent"
+msgstr "Съгласие"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "Описание на броя"
+
+msgid "plugins.themes.immersion.issue.published"
+msgstr "Публикуван"
+
+msgid "editor.issues.sectionArea"
+msgstr "Опции за секциите на броя"
+
+msgid "plugins.themes.immersion.announcements.colorPick"
+msgstr "Цвят на раздела за съобщения на началната страница на списанието"
+
+msgid "plugins.themes.immersion.section.coverPage"
+msgstr "Изображение на корицата на раздела"
+
+msgid "plugins.themes.immersion.colorPickInstructions"
+msgstr ""
+"Изберете цвят за раздел, който да се показва на публичната част на "
+"списанието. Трябва да е валиден шестнадесетичен HTML код (напр. #ffff00 за "
+"жълто)."
+
+msgid "plugins.themes.immersion.colorPick"
+msgstr "Средство за избиране на цвят"
+
+msgid "plugins.themes.immersion.description"
+msgstr ""
+"Тема на OJS с изображения на цяла страница, големи шрифтове и удебелени "
+"цветни блокове, пригодени за списания с акцент върху визуализацията."
+
+msgid "plugins.themes.immersion.name"
+msgstr "Тема \"Immersion\""
+
+msgid "plugins.themes.immersion.option.displayStats.label"
+msgstr "Опции за показване на статистика за употреба"
+
+msgid "plugins.themes.immersion.option.displayStats.bar"
+msgstr ""
+"Използвайте лентов тип на диаграмата за показване на статистически данни за "
+"употребата."
+
+msgid "plugins.themes.immersion.displayStats.monthInitials"
+msgstr "яну фев мар апр май юни юли авг сеп окт ное дек"
+
+msgid "plugins.themes.immersion.displayStats.downloads"
+msgstr "Изтегляния"
+
+msgid "plugins.themes.immersion.displayStats.noStats"
+msgstr "Данните за изтегляне все още не са налични."
+
+msgid "plugins.themes.immersion.option.displayStats.none"
+msgstr ""
+"Не показвайте диаграма със статистически данни за използването на подаването "
+"за четец."
+
+msgid "plugins.themes.immersion.option.displayStats.line"
+msgstr ""
+"Използвайте тип линия на диаграмата за показване на статистически данни за "
+"употребата."

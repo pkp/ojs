@@ -1,0 +1,49 @@
+/**
+ * @file less/pages/searchAuthorDetails.less
+ *
+ * Copyright (c) 2014-2020 Simon Fraser University
+ * Copyright (c) 2003-2020 John Willinsky
+ * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+ *
+ * @brief Styles for index author page
+ */
+
+// Header
+
+.author-details__meta {
+	background-color: @primary-color;
+	color: @secondary-color;
+	padding-top: 7.5vh;
+	padding-bottom: 7.5vh;
+}
+
+.author-details__title, .author-details__name {
+	margin: .15em 0;
+}
+
+.author-details__title {
+	font-weight: 400;
+}
+
+.author-details__affiliation {
+	margin: .75em 0;
+}
+
+.author-details__name {
+
+	&:before {
+		content: '— ';
+	}
+}
+
+// Articles
+
+.author-details__articles {
+	padding-top: 7.5vh;
+	padding-bottom: 7.5vh;
+}
+
+.author-details__list {
+	list-style-type: none;
+	padding-left: 0;
+}

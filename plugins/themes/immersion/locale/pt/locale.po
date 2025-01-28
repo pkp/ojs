@@ -1,0 +1,77 @@
+# Carla Marques <carla.marques@usdb.uminho.pt>, 2023.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2023-04-22 09:49+0000\n"
+"Last-Translator: Carla Marques <carla.marques@usdb.uminho.pt>\n"
+"Language-Team: Portuguese <http://translate.pkp.sfu.ca/projects/plugins/"
+"immersion/pt/>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.themes.immersion.name"
+msgstr "Tema Immersion"
+
+msgid "plugins.themes.immersion.description"
+msgstr ""
+"Um tema do OJS com imagens de página inteira, fontes grandes e blocos de "
+"cores ousadas para revistas com foco no visual."
+
+msgid "plugins.themes.immersion.colorPick"
+msgstr "Escolha uma Cor"
+
+msgid "plugins.themes.immersion.colorPickInstructions"
+msgstr ""
+"Escolha uma cor para uma secção que ficará disponível na página da revista. "
+"Deve ser um código HTML HEX válido (ex., #ffff00 para amarelo)."
+
+msgid "plugins.themes.immersion.section.coverPage"
+msgstr "Imagem da Capa da Secção"
+
+msgid "plugins.themes.immersion.announcements.colorPick"
+msgstr "Cor da secção das Notíficas na página de início da revista"
+
+msgid "editor.issues.sectionArea"
+msgstr "Opções para secções da edição"
+
+msgid "plugins.themes.immersion.issue.published"
+msgstr "Publicado"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "Descrição da edição"
+
+msgid "plugins.themes.immersion.registration.consent"
+msgstr "Consentimento"
+
+msgid "plugins.themes.immersion.mainMenu"
+msgstr "Menu principal"
+
+msgid "plugins.themes.immersion.language.toggle"
+msgstr "Alterar idioma. O idioma atual é:"
+
+msgid "plugins.themes.immersion.adminMenu"
+msgstr "Menu administração"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "Ver volume completo"
+
+msgid "plugins.themes.immersion.search.parameters"
+msgstr "Parâmetros"
+
+msgid "plugins.themes.immersion.article.biography"
+msgstr "Biografia"
+
+msgid "plugins.themes.immersion.article.figure"
+msgstr "Imagem de capa"
+
+msgid "plugins.themes.immersion.authors.browse"
+msgstr "Procurar por Autor"
+
+msgid "plugins.themes.immersion.author.details"
+msgstr "Deatlhes do Autor"
+
+msgid "plugins.themes.immersion.about.journal"
+msgstr "Sobre a revista"

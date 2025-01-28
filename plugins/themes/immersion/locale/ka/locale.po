@@ -1,0 +1,109 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2021-04-09 08:55+0000\n"
+"Last-Translator: Dimitri Gogelia <dimitri.gogelia@iliauni.edu.ge>\n"
+"Language-Team: Georgian <http://translate.pkp.sfu.ca/projects/plugins/"
+"immersion/ka_GE/>\n"
+"Language: ka_GE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.themes.immersion.issue.published"
+msgstr "გამოქვეყნებული"
+
+msgid "plugins.themes.immersion.mainMenu"
+msgstr "მთვარი მენიუ"
+
+msgid "plugins.themes.immersion.options.sectionDescription.disable"
+msgstr "გამორთვა"
+
+msgid "plugins.themes.immersion.options.journalDescription.enable"
+msgstr "ჩართვა"
+
+msgid "plugins.themes.immersion.name"
+msgstr "თემა Immersion"
+
+msgid "plugins.themes.immersion.description"
+msgstr ""
+"OJS თემა მთლიანი გვერდის სურათებით, დიდი ტიპაჟებით და თამამი ფერადი "
+"ბლოკებით, რომლებიც შექმნილია ჟურნალებისთვის, რომელზეც ფოკუსირებულია "
+"ვიზუალები."
+
+msgid "plugins.themes.immersion.colorPick"
+msgstr "მორგებული ფერის არჩევა"
+
+msgid "plugins.themes.immersion.colorPickInstructions"
+msgstr ""
+"შეარჩიეთ ფერი სექციისთვის, რომლითაც გამოისახება ჟურნალის წინა ბოლოში. უნდა "
+"იყოს მოქმედი HTML hex კოდი (მაგ., # Ffff00 ყვითლისთვის)."
+
+msgid "plugins.themes.immersion.section.coverPage"
+msgstr "განყოფილების გარეკანის სურათი"
+
+msgid "plugins.themes.immersion.announcements.colorPick"
+msgstr "განცხადების განყოფილების ფერი ჟურნალის მთავარ გვერდზე"
+
+msgid "editor.issues.sectionArea"
+msgstr "საკითხის განყოფილებების პარამეტრები"
+
+msgid "plugins.themes.immersion.issue.description"
+msgstr "გამოცემის აღწერა"
+
+msgid "plugins.themes.immersion.registration.consent"
+msgstr "თანმხობა"
+
+msgid "plugins.themes.immersion.language.toggle"
+msgstr "ენის შეცვლა. ამჟამინდელი ენა:"
+
+msgid "plugins.themes.immersion.adminMenu"
+msgstr "ადმინისტრატორის მენიუ"
+
+msgid "plugins.themes.immersion.about.journal"
+msgstr "ჟურნალის შესახებ"
+
+msgid "plugins.themes.immersion.issue.fullIssueLink"
+msgstr "იხილეთ სრული ნომერი"
+
+msgid "plugins.themes.immersion.search.parameters"
+msgstr "პარამეტრები"
+
+msgid "plugins.themes.immersion.article.biography"
+msgstr "ბიოგრაფია"
+
+msgid "plugins.themes.immersion.article.figure"
+msgstr "ყდის სურათი"
+
+msgid "plugins.themes.immersion.authors.browse"
+msgstr "ავტორთა სიის დათვალიერება"
+
+msgid "plugins.themes.immersion.author.details"
+msgstr "ავტორის დეტალები"
+
+msgid "plugins.themes.immersion.options.sectionDescription.label"
+msgstr "სექციის აღწერილობის ჩვენება"
+
+msgid "plugins.themes.immersion.options.sectionDescription.description"
+msgstr ""
+"გააქტიურების შემთხვევაში, განყოფილების აღწერა ნაჩვენებია ჟურნალის მთავარ "
+"გვერდზე განთავსებულ შესაბამის განყოფილებაში"
+
+msgid "plugins.themes.immersion.options.sectionDescription.enable"
+msgstr "ჩართვა; მოითხოვს „დაათვალიერება სექციის მიხედვით“ პლაგინის გააქტიურებას"
+
+msgid "plugins.themes.immersion.options.journalDescription.label"
+msgstr "ჟურნალის აღწერილობის ჩვენება"
+
+msgid "plugins.themes.immersion.options.journalDescription.description"
+msgstr "ჩართვის შემთხვევაში, ჟურნალის აღწერა გამოჩნდება ჟურნალის საწყის გვერდზე"
+
+msgid "plugins.themes.immersion.options.journalDescription.disable"
+msgstr "გამორთვა (ნაგულისხმევი)"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.label"
+msgstr "ჟურნალის აღწერილობის ფონი"
+
+msgid "plugins.themes.immersion.options.journalDescriptionColour.description"
+msgstr "ჟურნალის მთავარ გვერდზე ჟურნალის აღწერის განყოფილების ფონის ფერი"
