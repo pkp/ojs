@@ -18,6 +18,7 @@ namespace APP\controllers\grid\users\reviewer;
 
 use APP\core\Application;
 use APP\facades\Repo;
+use APP\log\event\SubmissionEventLogEntry;
 use PKP\controllers\grid\users\reviewer\PKPReviewerGridHandler;
 use PKP\core\Core;
 use PKP\core\PKPApplication;
@@ -44,11 +45,10 @@ class ReviewerGridHandler extends PKPReviewerGridHandler
             $reviewer = Repo::user()->get($reviewAssignment->getReviewerId(), true);
             $user = $request->getUser();
 
-            class_exists(\APP\log\event\SubmissionEventLogEntry::class); // Force definition of SUBMISSION_LOG_REVIEW_RECOMMENDATION_BY_PROXY
             $eventLog = Repo::eventLog()->newDataObject([
                 'assocType' => PKPApplication::ASSOC_TYPE_SUBMISSION,
                 'assocId' => $submission->getId(),
-                'eventType' => \SUBMISSION_LOG_REVIEW_RECOMMENDATION_BY_PROXY,
+                'eventType' => SubmissionEventLogEntry::SUBMISSION_LOG_REVIEW_RECOMMENDATION_BY_PROXY,
                 'userId' => Validation::loggedInAs() ?? $user->getId(),
                 'message' => 'log.review.reviewRecommendationSetByProxy',
                 'isTranslated' => false,
