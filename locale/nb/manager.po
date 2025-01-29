@@ -4,13 +4,14 @@
 # FRITT, University of Oslo Library <fritt-info@journals.uio.no>, 2022.
 # Johanna Skaug <johanna.skaug@ub.uio.no>, 2024.
 # "My L. Bjørnflaten" <myl@uio.no>, 2024.
+# Jan Erik Frantsvåg <jan.e.frantsvag@uit.no>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2024-09-16 08:02+0000\n"
-"Last-Translator: Johanna Skaug <johanna.skaug@ub.uio.no>\n"
+"PO-Revision-Date: 2025-01-29 17:28+0000\n"
+"Last-Translator: Jan Erik Frantsvåg <jan.e.frantsvag@uit.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/nb_NO/>\n"
 "Language: nb\n"
@@ -2233,9 +2234,8 @@ msgstr "Postadressen til institusjonen"
 msgid "emailTemplate.variable.subscription.domain"
 msgstr "Domene"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr "De gyldige IP-intervallene for for dette abonnementet"
+msgstr "De gyldige IP-intervallene for dette abonnementet"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
 msgstr "URL til siden hvor forfatteren kan foreta betaling"
