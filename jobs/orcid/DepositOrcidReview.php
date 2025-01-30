@@ -56,6 +56,10 @@ class DepositOrcidReview extends BaseJob
             $this->fail('Application is set to sandbox mode and will not interact with the ORCID service');
         }
 
+        if (OrcidManager::isEnabled($context)) {
+            return;
+        }
+
         if (!OrcidManager::isMemberApiEnabled($context)) {
             return;
         }
