@@ -210,6 +210,7 @@
 
 	<upgrade minversion="3.3.0.16" maxversion="3.3.0.18">
 		<migration class="lib.pkp.classes.migration.upgrade.I10249_FixProfileImageDataLoss" />
+		<migration class="lib.pkp.classes.migration.upgrade.I8933_FixSubmissionFileRevisionsFileIdForeignKeyConstraint" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
