@@ -23,6 +23,8 @@ tools:
       - '\badd(?:s|ed)?\b'
       - '\bimplement(?:s|ed)?\b'
 build:
+  environment:
+    node: 20.18.1
   dependencies:
     before:
       - 'git submodule update --init --recursive'
