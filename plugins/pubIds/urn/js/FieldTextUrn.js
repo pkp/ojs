@@ -46,7 +46,7 @@ pkp.registry.registerComponent('FieldTextUrn', {
 		'				<pkp-button' +
 		'					v-if="applyCheckNumber"' +
 		'					@click.prevent="addCheckNumber"' +
-		'					:disabled="currentValue.length === 0"' +
+		'					:disabled="currentValue === null || currentValue?.length === 0"' +
 		'				>' +
 		'					{{ addCheckNumberLabel }}' +
 		'				</pkp-button>' +
