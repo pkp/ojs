@@ -3,8 +3,8 @@
 /**
  * @file pages/article/ArticleHandler.php
  *
- * Copyright (c) 2014-2025 Simon Fraser University
- * Copyright (c) 2003-2025 John Willinsky
+ * Copyright (c) 2014-2024 Simon Fraser University
+ * Copyright (c) 2003-2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleHandler
@@ -28,7 +28,6 @@ use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use Firebase\JWT\Key;
-use PKP\citation\CitationDAO;
 use PKP\config\Config;
 use PKP\core\Core;
 use PKP\core\PKPApplication;
@@ -295,10 +294,8 @@ class ArticleHandler extends Handler
 
         // Citations
         if ($publication->getData('citationsRaw')) {
-            $citationDao = DAORegistry::getDAO('CitationDAO'); /** @var CitationDAO $citationDao */
-            $parsedCitations = $citationDao->getByPublicationId($publication->getId());
             $templateMgr->assign([
-                'parsedCitations' => $parsedCitations->toArray(),
+                'parsedCitations' => Repo::citation()->getByPublicationId($publication->getId()),
             ]);
         }
 
