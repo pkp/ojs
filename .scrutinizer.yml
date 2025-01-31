@@ -24,7 +24,7 @@ tools:
       - '\bimplement(?:s|ed)?\b'
 build:
   environment:
-    node: 22
+    node: 12
   dependencies:
     before:
       - 'git submodule update --init --recursive'
