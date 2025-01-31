@@ -23,12 +23,10 @@ tools:
       - '\badd(?:s|ed)?\b'
       - '\bimplement(?:s|ed)?\b'
 build:
+  environment:
+    node: 22
   dependencies:
     before:
-      - sudo npm cache clean -f
-      - sudo npm install -g n
-      - sudo n  22
-      - source ~/.bashrc
       - 'git submodule update --init --recursive'
       - 'wget https://raw.githubusercontent.com/composer/getcomposer.org/76a7060ccb93902cd7576b67264ad91c8a2700e2/web/installer -O - -q | php -- --quiet'
       - 'php composer.phar --working-dir=lib/pkp install --no-dev'
