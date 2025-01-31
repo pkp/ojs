@@ -66,13 +66,8 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
 
         // Format creators
         $creators = [];
-        foreach ($publication->getData('authors') as $author) {
-            $authorName = $author->getFullName(false, true);
-            $affiliation = $author->getLocalizedAffiliation();
-            if (!empty($affiliation)) {
-                $authorName .= '; ' . $affiliation;
-            }
-            $creators[] = $authorName;
+        foreach ($publication->getAuthors() as $author) {
+            $creators[] = $author->getFullName(false, true);
         }
 
         $subjects = array_merge_recursive(

@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/doaj/filter/DOAJJsonFilter.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2014-2024 Simon Fraser University
+ * Copyright (c) 2000-2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DOAJJsonFilter
@@ -158,9 +158,9 @@ class DOAJJsonFilter extends PKPImportExportFilter
 
             foreach ($articleAuthors as $articleAuthor) {
                 $author = ['name' => $articleAuthor->getFullName(false, false, $publicationLocale)];
-                $affiliation = $articleAuthor->getAffiliation($publicationLocale);
-                if (!empty($affiliation)) {
-                    $author['affiliation'] = $affiliation;
+                $affiliations = $articleAuthor->getLocalizedAffiliationNamesAsString($publicationLocale);
+                if (!empty($affiliations)) {
+                    $author['affiliations'] = $affiliations;
                 }
                 if ($articleAuthor->getData('orcid') && $articleAuthor->getData('orcidIsVerified')) {
                     $author['orcid_id'] = $articleAuthor->getData('orcid');

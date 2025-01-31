@@ -3,8 +3,8 @@
 <!--
   * dbscripts/xml/upgrade.xml
   *
-  * Copyright (c) 2014-2021 Simon Fraser University
-  * Copyright (c) 2003-2021 John Willinsky
+  * Copyright (c) 2014-2024 Simon Fraser University
+  * Copyright (c) 2003-2024 John Willinsky
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
   * Upgrade descriptor file.
@@ -159,6 +159,8 @@
 		<migration class="PKP\migration\upgrade\v3_5_0\FilterClassNames"/>
 		<migration class="APP\migration\upgrade\v3_5_0\I10620_EditorialBoardMemberRole"/>
 		<migration class="APP\migration\upgrade\v3_5_0\I9707_WeblateUILocales"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I7135_CreateAuthorAffiliationsTables"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I7135_CreateNewRorRegistryCacheTables"/>
 		<note file="docs/release-notes/README-3.5.0" />
 	</upgrade>
 

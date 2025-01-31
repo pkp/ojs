@@ -3,8 +3,8 @@
 /**
  * @file pages/article/ArticleHandler.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2024 Simon Fraser University
+ * Copyright (c) 2003-2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleHandler
@@ -360,6 +360,13 @@ class ArticleHandler extends Handler
             if ($paymentManager->purchaseArticleEnabled()) {
                 $templateMgr->assign('purchaseArticleEnabled', true);
             }
+
+            // ror icon
+            $rorIdIcon = 'ROR';
+            if (file_exists('lib/pkp/templates/images/ror.svg')) {
+                $rorIdIcon = file_get_contents('lib/pkp/templates/images/ror.svg');
+            }
+            $templateMgr->assign('rorIdIcon', $rorIdIcon);
 
             if (!Hook::call('ArticleHandler::view', [&$request, &$issue, &$article, $publication])) {
                 $templateMgr->display('frontend/pages/article.tpl');

@@ -7,8 +7,8 @@
 /**
  * @file plugins/oaiMetadataFormats/dc/tests/OAIMetadataFormat_DCTest.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2014-2024 Simon Fraser University
+ * Copyright (c) 2000-2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormat_DCTest
@@ -102,7 +102,14 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $author = new Author();
         $author->setGivenName('author-firstname', 'en');
         $author->setFamilyName('author-lastname', 'en');
-        $author->setAffiliation('author-affiliation', 'en');
+        $author->setAffiliations([
+            Repo::affiliation()->newDataObject([
+                "id" => 1,
+                "authorId" => 1,
+                "ror" => 'https://ror.org/05ek4tb53',
+                "name" => ['en' => 'author-affiliation']
+            ])
+        ]);
         $author->setEmail('someone@example.com');
 
         // Publication

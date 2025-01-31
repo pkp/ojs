@@ -3,8 +3,8 @@
 /**
  * @file plugins/reports/articles/ArticleReportPlugin.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2024 Simon Fraser University
+ * Copyright (c) 2003-2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleReportPlugin
@@ -186,7 +186,7 @@ class ArticleReportPlugin extends ReportPlugin
                         $author->getLocalizedFamilyName(),
                         $author->getData('orcid'),
                         $author->getData('country'),
-                        $author->getLocalizedData('affiliation'),
+                        $author->getLocalizedAffiliationNamesAsString(),
                         $author->getData('email'),
                         $author->getData('url'),
                         html_entity_decode(strip_tags($author->getLocalizedData('biography'))),

@@ -1,8 +1,8 @@
 {**
  * templates/frontend/objects/article_details.tpl
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2024 Simon Fraser University
+ * Copyright (c) 2003-2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @brief View of an Article which displays all details about the article.
@@ -113,13 +113,13 @@
 							<span class="name">
 								{$author->getFullName()|escape}
 							</span>
-							{if $author->getLocalizedData('affiliation')}
+							{if $author->getLocalizedAffiliations()}
+							{foreach $author->getLocalizedAffiliations() as $affiliation}
 								<span class="affiliation">
-									{$author->getLocalizedData('affiliation')|escape}
-									{if $author->getData('rorId')}
-										<a href="{$author->getData('rorId')|escape}">{$rorIdIcon}</a>
-									{/if}
-								</span>
+								{$affiliation['name']|escape}
+								{if $affiliation['ror']}<a href="{$affiliation['ror']|escape}">{$rorIdIcon}</a>{/if}
+								</span><br/>
+							{/foreach}
 							{/if}
 							{assign var=authorUserGroup value=$userGroupsById[$author->getData('userGroupId')]}
 							{if $authorUserGroup->showTitle}
@@ -225,13 +225,13 @@
 						{if $author->getLocalizedData('biography')}
 							<li class="sub_item">
 								<div class="label">
-									{if $author->getLocalizedData('affiliation')}
-										{capture assign="authorName"}{$author->getFullName()|escape}{/capture}
-										{capture assign="authorAffiliation"} {$author->getLocalizedData('affiliation')|escape} {/capture}
-										{translate key="submission.authorWithAffiliation" name=$authorName affiliation=$authorAffiliation}
-									{else}
-										{$author->getFullName()|escape}
-									{/if}
+								{if $author->getLocalizedAffiliationNamesAsString()}
+									{capture assign="authorName"}{$author->getFullName()|escape}{/capture}
+									{capture assign="authorAffiliations"} {$author->getLocalizedAffiliationNamesAsString()|escape} {/capture}
+									{translate key="submission.authorWithAffiliation" name=$authorName affiliation=$authorAffiliations}
+								{else}
+									{$author->getFullName()|escape}
+								{/if}
 								</div>
 								<div class="value">
 									{$author->getLocalizedData('biography')|strip_unsafe_html}

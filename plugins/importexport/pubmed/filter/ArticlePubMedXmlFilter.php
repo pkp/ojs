@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/pubmed/filter/ArticlePubMedXmlFilter.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2014-2024 Simon Fraser University
+ * Copyright (c) 2000-2024 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticlePubMedXmlFilter
@@ -215,8 +215,15 @@ class ArticlePubMedXmlFilter extends PersistableFilter
             $authorElement->appendChild($doc->createElement('FirstName'))->appendChild($doc->createTextNode(ucfirst($author->getLocalizedGivenName())));
             $authorElement->appendChild($doc->createElement('LastName'))->appendChild($doc->createTextNode(ucfirst($author->getLocalizedFamilyName())));
         }
-        $authorElement->appendChild($doc->createElement('Affiliation'))->appendChild($doc->createTextNode($author->getLocalizedAffiliation()));
-
+        foreach ($author->getAffiliations() as $affiliation) {
+            $affiliationInfoElement = $doc->createElement('AffiliationInfo');
+            $affiliationInfoElement->appendChild($doc->createElement('Affiliation'))->appendChild($doc->createTextNode($affiliation->getLocalizedName()));
+            if ($affiliation->getRor()) {
+                $affiliationInfoElement->appendChild($identifierNode = $doc->createElement('Identifier'))->appendChild($doc->createTextNode($affiliation->getRor()));
+                $identifierNode->setAttribute('Source', 'ROR');
+            }
+            $authorElement->appendChild($affiliationInfoElement);
+        }
         if ($author->getData('orcid') && $author->getData('orcidIsVerified')) {
             // We're storing the ORCID with a URL (http://orcid.org/{$ID}), but the XML expects just the ID
             $orcidId = explode('/', trim($author->getData('orcid') ?? '', '/'));
