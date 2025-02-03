@@ -159,6 +159,7 @@
 		<migration class="PKP\migration\upgrade\v3_5_0\FilterClassNames"/>
 		<migration class="APP\migration\upgrade\v3_5_0\I10620_EditorialBoardMemberRole"/>
 		<migration class="APP\migration\upgrade\v3_5_0\I9707_WeblateUILocales"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I3094_ReminderWeeksToDays" />
 		<note file="docs/release-notes/README-3.5.0" />
 	</upgrade>
 
