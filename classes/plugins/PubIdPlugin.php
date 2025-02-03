@@ -211,7 +211,7 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
         if (!$pubObject instanceof Issue) {
             assert(!is_null($submission));
             $issue = Repo::issue()->getBySubmissionId($submission->getId());
-            $issue = $issue->getJournalId() == $contextId ? $issue : null;
+            $issue = $issue?->getJournalId() == $contextId ? $issue : null;
         }
         if ($issue && $contextId != $issue->getJournalId()) {
             return null;
