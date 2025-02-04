@@ -84,7 +84,7 @@ describe('Subscription tests', function() {
 		cy.get('nav').contains('Settings').click();
 		// Ensure submenu item click despite animation
 		cy.get('nav').contains('Users & Roles').click({ force: true });
-		cy.createUser({
+		cy.createUserByInvitation({
 			'username': 'reader',
 			'givenName': 'Rea',
 			'familyName': 'Der',
