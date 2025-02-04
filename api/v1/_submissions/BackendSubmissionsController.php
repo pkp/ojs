@@ -82,6 +82,7 @@ class BackendSubmissionsController extends \PKP\API\v1\_submissions\PKPBackendSu
             ], Response::HTTP_NOT_FOUND);
         }
 
+        /** @var \APP\payment\ojs\OJSPaymentManager $paymentManager */
         $paymentManager = Application::get()->getPaymentManager($context);
         $publicationFeeEnabled = $paymentManager->publicationEnabled();
         if (!$publicationFeeEnabled) {
@@ -147,8 +148,8 @@ class BackendSubmissionsController extends \PKP\API\v1\_submissions\PKPBackendSu
                     OJSPaymentManager::PAYMENT_TYPE_PUBLICATION,
                     $submitterAssignment->userId,
                     $submission->getId(),
-                    $context->getSetting('publicationFee'),
-                    $context->getSetting('currency')
+                    $context->getData('publicationFee'),
+                    $context->getData('currency')
                 );
                 $paymentManager->queuePayment($queuedPayment);
                 $paymentManager->fulfillQueuedPayment($request, $queuedPayment, 'Waiver');
