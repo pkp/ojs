@@ -1,7 +1,7 @@
 # Milutin Markovic <admin@fcjk.me>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-01-21 12:04+0000\n"
+"PO-Revision-Date: 2025-02-04 10:33+0000\n"
 "Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
 "Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "cnr/>\n"
@@ -1478,3 +1478,269 @@ msgid "manager.subscriptions.form.domainIPRangeRequired"
 msgstr ""
 "Odabrani tip pretplate zahtijeva domen i/ili IP opseg za provjeru identiteta "
 "korisnika pretplate."
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Tip pretplate je obavezan."
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Odaberi kontakt za pretplatu"
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Cijena je obavezna."
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Odaberite ispravan tip pretplate."
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Koristite ponuđene mogućnosti."
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Odaberite ispravan format tipa pretplate."
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr ""
+"Časopisi koji imaju pretplatu mogu da ponude \"odgođeni otvoren pristup\" za "
+"njihov objavljeni sadržaj te da dozvole \" autorsko samoarhiviranje\" (obje "
+"opcije pomažu rast čitalačke publike i citiranja sadržaja)."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Informacija o pretplati"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+"Tipovi pretplata i struktura naknada će biti automatski smještene u dijelu "
+"Pretplate na strani O časopisu zajedno sa imenom i kontaktom Upravnika za "
+"pretplate. Dodatne informacije o pretplatama kao što su metodi plaćanja ili "
+"podrška za pretplatnike u zemljama u razvoju može da se doda ovđe."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Upravnik za pretplatu"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr "Kontakt naveden u \"Pretplate\" u strani \"O časopisu\""
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Unesite ispravnu imejl adresu."
+
+msgid "manager.subscriptions"
+msgstr "Pretplate"
+
+msgid "manager.individualSubscriptions"
+msgstr "Individualne pretplate"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Institucionalne pretplate"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Jeste li sigurni da želite obnoviti ovu pretplatu?"
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Odaberite ispravan status pretplate."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Tip pretplate"
+
+msgid "manager.subscriptions.form.institution"
+msgstr "Institucija"
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Datum početka"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Potreban je datum početka pretplate."
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Odaberite ispravan datum početka pretplate."
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Odaberite ispravnu instituciju."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Datum završetka"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Potreban je datum završetka pretplate."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"Ovo je vrsta pretplate koja ne ističe; molimo da ne navodite datum završetka."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Odaberite ispravan datum završetka pretplate."
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr ""
+"Napomena: Sve dolje unesene promjene važe za korisnikov profil u cijelom "
+"sistemu."
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Unesite ispravan IP opseg."
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Obriši"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Dodaj"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Sačuvaj i kreiraj sljedeći"
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr ""
+"Da bi se korisniku poslala poruka potrebno je da u podešavanjima časopisa "
+"postoji kontakt ime i email adresa."
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "Tip pretplate mora biti kreiran pre nego što se naprave nove pretplate."
+
+msgid "manager.subscriptions.ipRange"
+msgstr "IP opseg"
+
+msgid "manager.subscriptions.membership"
+msgstr "Članstvo"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Referentni broj"
+
+msgid "manager.subscriptions.notes"
+msgstr "Bilješke"
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Nema pretplata"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Odaberi korisnika"
+
+msgid "manager.subscriptions.select"
+msgstr "Odaberi"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Pretplata uspješno kreirana."
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Tip pretplate"
+
+msgid "manager.subscriptions.user"
+msgstr "Korisnik"
+
+msgid "manager.subscriptions.contact"
+msgstr "Ime kontakta"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Ime institucije"
+
+msgid "manager.subscriptionTypes"
+msgstr "Tipovi pretplate"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr ""
+"Upozorenje! Sve pretplate sa ovim tipom pretplate će takođe biti obrisane. "
+"Da li ste sigurni da želite da nastavite da obrišete ovaj tip pretplate?"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Cijena"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Pretplate"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Individualna"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Institucionalna"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Kreiraj novi tip pretplate"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Kreiraj"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Trajanje"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Uredi tip pretplate"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Uredi"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Cijena"
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Cijena mora biti pozitivna numerička vrijednost."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Valuta"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Valuta je obavezna."
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Odaberite ispravnu valutu."
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Opis"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Ističe nakon"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "mjeseci (npr. 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Nikad ne ističe"
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Trajanje"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Broj mjeseci trajanja pretplate (npr. 12)."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Trajanje mora biti pozitivna numerička vrijednost."
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Potrebno je unijeti trajanje."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Format"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Potreban je format tipa pretplate."
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Pretplate"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "Institucionalni (korisnici su provjereni pomoću domena ili IP adrese)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Upotrijebite ponuđene opcije."
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"Ovo je vrsta pretplate koja ne ističe; molimo da ne navodite datum početka."
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Ako su IP opsezi ovđe uneseni domen je opcion. <br /> Ispravne vrijednosti "
+"uključuju adrese (e.g. 142.58.103.1), IP opseg (e.g. 142.58.103.1 - 142.58."
+"103.4), IP opseg sa pomoćnim znakom '*' (npr. 142.58.*.*), i IP opseg sa "
+"CIDR (npr. 142.58.100.0/24)."
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Ovaj korisnik već ima pretplatu na ovaj časopis."
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr ""
+"Privilegije pristupa pretplati su automatski dodijeljene Upravniku časopisa, "
+"Urednicima, Urednicima sekcija, Grafičkim urednicima, Korektorima i Finalnoj "
+"kontroli."
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr ""
+"Unesite numeričku vrijednost (npr. 40 ili 40.00) bez simbola valute (npr. $)."
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Individualni (korisnici su provjereni preko prijave u sistem)"
