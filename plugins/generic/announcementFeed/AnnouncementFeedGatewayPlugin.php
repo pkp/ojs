@@ -20,6 +20,7 @@ use Carbon\Carbon;
 use PKP\announcement\Announcement;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
+use PKP\i18n\LocaleConversion;
 use PKP\plugins\GatewayPlugin;
 use PKP\site\VersionDAO;
 
@@ -162,7 +163,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin
             'dateUpdated' => $dateUpdated,
             'announcements' => $announcements,
             'journal' => $journal,
-            'language' => str_replace(['_', '@'], '-', Locale::getLocale()),
+            'language' => LocaleConversion::toBcp47(Locale::getLocale()),
         ]);
 
         $templateMgr->setHeaders(['content-type: ' . $mimeTypeMap[$type] . '; charset=utf-8']);
