@@ -251,6 +251,8 @@
   "form.errorMany",
   "form.errorOne",
   "form.errors",
+  "form.errorSummaryOne",
+  "form.errorSummaryMany",
   "form.multilingualLabel",
   "form.multilingualProgress",
   "form.saved",
