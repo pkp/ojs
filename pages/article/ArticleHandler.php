@@ -3,8 +3,8 @@
 /**
  * @file pages/article/ArticleHandler.php
  *
- * Copyright (c) 2014-2024 Simon Fraser University
- * Copyright (c) 2003-2024 John Willinsky
+ * Copyright (c) 2014-2025 Simon Fraser University
+ * Copyright (c) 2003-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleHandler
@@ -30,6 +30,7 @@ use APP\template\TemplateManager;
 use Firebase\JWT\Key;
 use PKP\citation\CitationDAO;
 use PKP\config\Config;
+use PKP\core\Core;
 use PKP\core\PKPApplication;
 use PKP\core\PKPJwt as JWT;
 use PKP\db\DAORegistry;
@@ -301,6 +302,9 @@ class ArticleHandler extends Handler
             ]);
         }
 
+        $rorIconPath = Core::getBaseDir() . '/' . PKP_LIB_PATH . '/templates/images/ror.svg';
+        $rorIdIcon = file_exists($rorIconPath) ? file_get_contents($rorIconPath) : '';
+
         // Assign deprecated values to the template manager for
         // compatibility with older themes
         $templateMgr->assign([
@@ -312,6 +316,7 @@ class ArticleHandler extends Handler
             'keywords' => $publication->getData('keywords'),
             'orcidIcon' => OrcidManager::getIcon(),
             'orcidUnauthenticatedIcon' => OrcidManager::getUnauthenticatedIcon(),
+            'rorIdIcon' => $rorIdIcon
         ]);
 
         // Fetch and assign the galley to the template
@@ -360,13 +365,6 @@ class ArticleHandler extends Handler
             if ($paymentManager->purchaseArticleEnabled()) {
                 $templateMgr->assign('purchaseArticleEnabled', true);
             }
-
-            // ror icon
-            $rorIdIcon = 'ROR';
-            if (file_exists('lib/pkp/templates/images/ror.svg')) {
-                $rorIdIcon = file_get_contents('lib/pkp/templates/images/ror.svg');
-            }
-            $templateMgr->assign('rorIdIcon', $rorIdIcon);
 
             if (!Hook::call('ArticleHandler::view', [&$request, &$issue, &$article, $publication])) {
                 $templateMgr->display('frontend/pages/article.tpl');

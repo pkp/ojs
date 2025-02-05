@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/doaj/filter/DOAJXmlFilter.php
  *
- * Copyright (c) 2014-2024 Simon Fraser University
- * Copyright (c) 2000-2024 John Willinsky
+ * Copyright (c) 2014-2025 Simon Fraser University
+ * Copyright (c) 2000-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DOAJXmlFilter
@@ -250,13 +250,12 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
         $authorNode->appendChild($node = $doc->createElement('name', htmlspecialchars($author->getFullName(false, false, $publication->getData('locale')), ENT_COMPAT, 'UTF-8')));
         $affiliations = $author->getLocalizedAffiliationNames($publication->getData('locale'));
         foreach ($affiliations as $affiliation) {
-            if (in_array($affiliation, $affilList) && !empty($affilList[0])) {
-                $authorNode->appendChild(
-                    $node = $doc->createElement('affiliationId',
-                        htmlspecialchars(current(array_keys($affilList, $affiliation)), ENT_COMPAT, 'UTF-8')
-                    )
-                );
-            }
+            $authorNode->appendChild(
+                $doc->createElement(
+                    'affiliationId',
+                    htmlspecialchars(current(array_keys($affilList, $affiliation)), ENT_COMPAT, 'UTF-8')
+                )
+            );
         }
         if ($author->getData('orcid') && $author->getData('orcidIsVerified')) {
             $authorNode->appendChild($doc->createElement('orcid_id'))->appendChild($doc->createTextNode($author->getData('orcid')));
@@ -279,7 +278,8 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
             $affiliations = $author->getLocalizedAffiliationNames($publication->getData('locale'));
             foreach ($affiliations as $affiliation) {
                 if (!in_array($affiliation, $affilList)) {
-                    $affilList[] = $affiliation;;
+                    $affilList[] = $affiliation;
+                    ;
                 }
             }
         }

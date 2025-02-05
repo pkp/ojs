@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/datacite/filter/DataciteXmlFilter.php
  *
- * Copyright (c) 2014-2024 Simon Fraser University
- * Copyright (c) 2000-2024 John Willinsky
+ * Copyright (c) 2014-2025 Simon Fraser University
+ * Copyright (c) 2000-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DataciteXmlFilter
@@ -336,14 +336,16 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 $creatorNode->appendChild($node);
             }
             if ($creator['affiliations']) {
-                foreach($creator['affiliations'] as $affiliation) {
+                // Currently affiliations are only there for Publication objects
+                foreach ($creator['affiliations'] as $affiliation) {
                     $node = $doc->createElementNS($deployment->getNamespace(), 'affiliation');
-                    if ($affiliation['ror']) {
-                        $node->setAttribute('affiliationIdentifier', $affiliation['ror']);
+                    $ror = $affiliation->getRor();
+                    if ($ror) {
+                        $node->setAttribute('affiliationIdentifier', $ror);
                         $node->setAttribute('affiliationIdentifierScheme', 'ROR');
                         $node->setAttribute('schemeURI', 'https://ror.org');
                     }
-                    $node->appendChild($doc->createTextNode($affiliation['name']));
+                    $node->appendChild($doc->createTextNode($affiliation->getLocalizedName($publication->getData('locale'))));
                     $creatorNode->appendChild($node);
                 }
             }
