@@ -7,5 +7,5 @@ for documentation.
 
 ## Sample XML
 
-Sample XML can be found in https://github.com/pkp/ojs/blob/[tag]/cypress/fixtures/export-issues.xml,
-where [tag] indicates your version of OJS, e.g.: 3_2_1-0 for OJS 3.1.2-0.
+Sample XML can be found in https://github.com/pkp/datasets/blob/main/omp/[branch]/mysql/native-export-sample.xml,
+where [branch] indicates the GitHub repository branch name of your OMP version, e.g.: stable-3_3_0 for OJS 3.3.0-x, stable-3_4_0 for OJS 3.4.0-x.

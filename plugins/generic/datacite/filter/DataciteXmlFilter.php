@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/datacite/filter/DataciteXmlFilter.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2014-2025 Simon Fraser University
+ * Copyright (c) 2000-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DataciteXmlFilter
@@ -297,8 +297,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                     $creators[] = [
                         'name' => $creator,
                         'orcid' => null,
-                        'affiliation' => null,
-                        'ror' => null
+                        'affiliations' => null
                     ];
                     break;
                 }
@@ -312,8 +311,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                     $creators[] = [
                         'name' => $author->getFullName(false, true, $publication->getData('locale')),
                         'orcid' => $author->getData('orcidIsVerified') ? $author->getData('orcid') : null,
-                        'affiliation' => $author->getLocalizedData('affiliation', $publication->getData('locale')),
-                        'ror' => $author->getData('rorId') ?? null
+                        'affiliations' => $author->getAffiliations()
                     ];
                 }
                 break;
@@ -321,8 +319,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 $creators[] = [
                     'name' => $publisher,
                     'orcid' => null,
-                    'affiliation' => null,
-                    'ror' => null
+                    'affiliations' => null
                 ];
                 break;
         }
@@ -338,15 +335,19 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 $node->setAttribute('nameIdentifierScheme', 'ORCID');
                 $creatorNode->appendChild($node);
             }
-            if ($creator['affiliation']) {
-                $node = $doc->createElementNS($deployment->getNamespace(), 'affiliation');
-                if ($creator['ror']) {
-                    $node->setAttribute('affiliationIdentifier', $creator['ror']);
-                    $node->setAttribute('affiliationIdentifierScheme', 'ROR');
-                    $node->setAttribute('schemeURI', 'https://ror.org');
+            if ($creator['affiliations']) {
+                // Currently affiliations are only there for Publication objects
+                foreach ($creator['affiliations'] as $affiliation) {
+                    $node = $doc->createElementNS($deployment->getNamespace(), 'affiliation');
+                    $ror = $affiliation->getRor();
+                    if ($ror) {
+                        $node->setAttribute('affiliationIdentifier', $ror);
+                        $node->setAttribute('affiliationIdentifierScheme', 'ROR');
+                        $node->setAttribute('schemeURI', 'https://ror.org');
+                    }
+                    $node->appendChild($doc->createTextNode($affiliation->getLocalizedName($publication->getData('locale'))));
+                    $creatorNode->appendChild($node);
                 }
-                $node->appendChild($doc->createTextNode($creator['affiliation']));
-                $creatorNode->appendChild($node);
             }
             $creatorsNode->appendChild($creatorNode);
         }

@@ -1,8 +1,8 @@
 {**
  * plugins/oaiMetadataFormats/marc/record.tpl
  *
- * Copyright (c) 2013-2024 Simon Fraser University
- * Copyright (c) 2003-2024 John Willinsky
+ * Copyright (c) 2013-2025 Simon Fraser University
+ * Copyright (c) 2003-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * MARC-formatted metadata record for an article
@@ -34,8 +34,10 @@
 	{foreach from=$authors item=author}
 		<varfield id="{if $authors|@count==1}100{else}720{/if}" i1="1" i2=" ">
 			<subfield label="a">{$author->getFullName(false, true, $journal->getPrimaryLocale())|escape}</subfield>
-			{assign var=affiliation value=$author->getAffiliation($journal->getPrimaryLocale())}
-			{if $affiliation}<subfield label="u">{$affiliation|escape}</subfield>{/if}
+			{foreach from=$author->getAffiliations() item=$affiliation}
+				{if $affiliation->getRor()}<subfield code="u">{$affiliation->getRor()|escape}</subfield>
+				{else}<subfield code="u">{$affiliation->getLocalizedName($publication->getData('locale'))|escape}</subfield>{/if}
+			{/foreach}
 			{if $author->getUrl()}<subfield label="0">{$author->getUrl()|escape}</subfield>{/if}
 			{if $author->getData('orcid') && $author->getData('orcidIsVerified')}<subfield label="0">{$author->getData('orcid')|escape}</subfield>{/if}
 		</varfield>

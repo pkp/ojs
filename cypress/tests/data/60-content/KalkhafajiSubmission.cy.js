@@ -1,8 +1,8 @@
 /**
  * @file cypress/tests/data/60-content/KalkhafajiSubmission.cy.js
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2014-2025 Simon Fraser University
+ * Copyright (c) 2000-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  */
@@ -25,7 +25,11 @@ describe('Data suite tests', function() {
 			{
 				givenName: {en: 'Margaret'},
 				familyName: {en: 'Morse'},
-				affiliation: {en: 'Stanford University'},
+				affiliations: [
+					{
+						name: {en: 'Stanford University'}
+					}
+				],
 				email: 'mmorse@mailinator.com',
 				country: 'US',
 				userGroupId: Cypress.env('authorUserGroupId')

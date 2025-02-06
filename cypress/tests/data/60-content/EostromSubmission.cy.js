@@ -1,8 +1,8 @@
 /**
  * @file cypress/tests/data/60-content/EostromSubmission.cy.js
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2014-2025 Simon Fraser University
+ * Copyright (c) 2000-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  */
@@ -24,7 +24,11 @@ describe('Data suite tests', function() {
 			{
 				givenName: {en: 'Frank'},
 				familyName: {en: 'van Laerhoven'},
-				affiliation: {en: 'Indiana University'},
+				affiliations: [
+					{
+						name: {en: 'Indiana University'}
+					}
+				],
 				email: 'fvanlaerhoven@mailinator.com',
 				country: 'US',
 				userGroupId: Cypress.env('authorUserGroupId')

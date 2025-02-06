@@ -3,8 +3,8 @@
 /**
  * @file plugins/oaiMetadataFormats/rfc1807/OAIMetadataFormat_RFC1807.php
  *
- * Copyright (c) 2014-2024 Simon Fraser University
- * Copyright (c) 2003-2024 John Willinsky
+ * Copyright (c) 2014-2025 Simon Fraser University
+ * Copyright (c) 2003-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormat_RFC1807
@@ -67,12 +67,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
         // Format creators
         $creators = [];
         foreach ($publication->getData('authors') as $author) {
-            $authorName = $author->getFullName(false, true);
-            $affiliation = $author->getLocalizedAffiliation();
-            if (!empty($affiliation)) {
-                $authorName .= '; ' . $affiliation;
-            }
-            $creators[] = $authorName;
+            $creators[] = $author->getFullName(false, true);
         }
 
         $subjects = array_merge_recursive(
