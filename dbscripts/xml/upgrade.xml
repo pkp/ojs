@@ -237,6 +237,7 @@
 	<upgrade minversion="3.4.0.0" maxversion="3.4.9.9">
 		<!-- Needs to be re-executed on every minor upgrade, the user might still be using an outdated plugin -->
 		<migration class="APP\migration\upgrade\v3_4_0\I9813_QuickSubmitSubmissionProgressType"/>
+		<migration class="PKP\migration\upgrade\v3_4_0\I9822_ChangeUsageStatsTemporaryTablesIndexes"/>
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
