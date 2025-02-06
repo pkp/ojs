@@ -80,7 +80,7 @@ class DepositOrcidReview extends BaseJob
 
                 $uri = OrcidManager::getApiPath($context) . OrcidManager::ORCID_API_VERSION_URL . $orcid . '/' . OrcidManager::ORCID_REVIEW_URL;
                 $method = 'POST';
-                if ($putCode = $reviewer->getData('orcidReviewPutCode')) {
+                if ($putCode = $reviewAssignment->getData('orcidReviewPutCode')) {
                     $uri .= '/' . $putCode;
                     $method = 'PUT';
                     $orcidReview['put-code'] = $putCode;
@@ -113,8 +113,8 @@ class DepositOrcidReview extends BaseJob
                             $location = $responseHeaders['location'][0];
                             // Extract the ORCID work put code for updates/deletion.
                             $putCode = basename(parse_url($location, PHP_URL_PATH));
-                            $reviewer->setData('orcidReviewPutCode', $putCode);
-                            Repo::user()->edit($reviewer, ['orcidReviewPutCode']);
+                            $reviewAssignment->setData('orcidReviewPutCode', $putCode);
+                            Repo::reviewAssignment()->edit($reviewAssignment, ['orcidReviewPutCode']);
                             OrcidManager::logInfo("Review added to profile, putCode: {$putCode}");
                             break;
                         default:

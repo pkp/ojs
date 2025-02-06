@@ -161,6 +161,7 @@
 		<migration class="APP\migration\upgrade\v3_5_0\I9707_WeblateUILocales"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I7135_CreateAuthorAffiliationsTables"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I7135_CreateNewRorRegistryCacheTables"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I10759_AddReviewAssignmentSettings"/>
 		<note file="docs/release-notes/README-3.5.0" />
 	</upgrade>
 
