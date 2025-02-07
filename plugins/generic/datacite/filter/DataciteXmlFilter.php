@@ -214,7 +214,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         // Dates
         $rootNode->appendChild($this->createDatesNode($doc, $issue, $article, $publication, $galleyFile, $publicationDate));
         // Language
-        $rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'language', str_replace(['_', '@'], '-', $objectLocalePrecedence[0])));
+        $rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'language', LocaleConversion::toBcp47($objectLocalePrecedence[0])));
         // Resource Type
         $resourceTypeNode = $this->createResourceTypeNode($doc, $issue, $article, $galley, $galleyFile);
         if ($resourceTypeNode) {
