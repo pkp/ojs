@@ -847,7 +847,7 @@ msgid "manager.setup.reviewOptions.reviewerSuggestionEnabled"
 msgstr "Reviewer Suggestion at Submission"
 
 msgid "manager.setup.reviewOptions.reviewerSuggestionEnabled.description"
-msgstr "Author can suggest few potntial reviewers before completing the submission which can streamline the review process and provide valuable input for editorial team."
+msgstr "Author can suggest few potential reviewers before completing the submission which can streamline the review process and provide valuable input for editorial team."
 
 msgid "manager.setup.reviewOptions.reviewerSuggestionEnabled.label"
 msgstr "Allow authors to suggest potential reviewers at submission process"
