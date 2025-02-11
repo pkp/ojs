@@ -1,7 +1,7 @@
-# Murari P Tapaswi <tapaswimurari@gmail.com>, 2024.
+# Murari P Tapaswi <tapaswimurari@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-09-12 08:45+0000\n"
+"PO-Revision-Date: 2025-02-11 19:44+0000\n"
 "Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
 "Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/api/mr/>\n"
 "Language: mr\n"
@@ -15,7 +15,7 @@ msgid "api.submissions.403.cantChangeContext"
 msgstr "तुमच्या सादरीकरणाचे नियतकालिक बदलू शकत नाही."
 
 msgid "api.contexts.403.requestedDisabledContexts"
-msgstr "तुम्ही केवळ सक्रिय (enable) केलेली नियतकालिके पाहू शकता."
+msgstr "तुम्ही केवळ कार्यान्वित (enable) केलेली नियतकालिके पाहू शकता."
 
 msgid "api.contexts.403.contextsDidNotMatch"
 msgstr ""
@@ -48,8 +48,8 @@ msgstr "तुम्ही शोधत असलेले निवेदन (a
 
 msgid "api.emails.403.disabled"
 msgstr ""
-"या नियतकालिकासाठी एकगठ्ठा (बल्क) ई-मेल पाठवण्याची सोय सक्रिय (enable) केलेली "
-"नाही."
+"या नियतकालिकासाठी एकगठ्ठा (बल्क) ई-मेल पाठवण्याची सोय कार्यान्वित (enable) "
+"केलेली नाही."
 
 msgid "api.submissions.400.wrongContext"
 msgstr "तुम्ही शोधत असलेल्या लेखनाचे सादरीकरण या नियतकालिकामध्ये नाही."
