@@ -15,7 +15,7 @@
 
 namespace APP\migration\upgrade\v3_6_0;
 
-use PKP\submission\reviewer\recommendation\ReviewerRecommendation;
+use APP\facades\Repo;
 
 class I1660_ReviewerRecommendations extends \PKP\migration\upgrade\v3_6_0\I1660_ReviewerRecommendations
 {
@@ -24,6 +24,6 @@ class I1660_ReviewerRecommendations extends \PKP\migration\upgrade\v3_6_0\I1660_
      */
     protected function systemDefineNonRemovableRecommendations(): array
     {
-        return ReviewerRecommendation::seedableRecommendations();
+        return Repo::reviewerRecommendation()->getDefaultRecommendations();
     }
 }
