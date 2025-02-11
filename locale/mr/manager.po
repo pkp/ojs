@@ -1,7 +1,7 @@
-# Murari P Tapaswi <tapaswimurari@gmail.com>, 2024.
+# Murari P Tapaswi <tapaswimurari@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-09-11 05:40+0000\n"
+"PO-Revision-Date: 2025-02-11 19:44+0000\n"
 "Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
 "Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/manager/mr/>"
 "\n"
@@ -587,7 +587,8 @@ msgstr "लेखक शुल्क"
 
 msgid "manager.payment.authorFeesDescription"
 msgstr ""
-"लेखक प्रक्रिया शुल्क सक्रिय करण्यासाठी खाली शुल्काच्या रक्कमांची नोंद करा."
+"लेखक प्रक्रिया शुल्क कार्यान्वित (enable) करण्यासाठी खाली शुल्काच्या "
+"रक्कमांची नोंद करा."
 
 msgid "manager.payment.description"
 msgstr "प्रकार"
