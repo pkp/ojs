@@ -10,6 +10,7 @@
  */
 
 // styles
+import '../lib/ui-library/tailwind.css';
 import '@/styles/_global.less';
 
 import PkpLoad from '../lib/pkp/js/load.js';
