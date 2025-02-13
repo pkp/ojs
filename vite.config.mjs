@@ -1,5 +1,6 @@
 import {defineConfig} from 'vite';
 import Vue from '@vitejs/plugin-vue';
+import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
 import copy from 'rollup-plugin-copy';
 import i18nExtractKeys from './lib/pkp/tools/i18nExtractKeys.vite.js';
@@ -11,6 +12,7 @@ export default defineConfig(({mode}) => {
 	process.env.NODE_ENV = mode;
 	return {
 		plugins: [
+			tailwindcss(),
 			i18nExtractKeys({
 				// existing in tpl files, to be replaced in future
 				extraKeys: [
