@@ -1,0 +1,30 @@
+# Murari P Tapaswi <tapaswimurari@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-02-11 19:44+0000\n"
+"Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
+"Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-recommendByAuthor/mr/>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.generic.recommendByAuthor.description"
+msgstr ""
+"हे प्लगइन लेखाच्या सारांश पृष्ठावर या लेखकाच्या लेखांची यादीही समाविष्ट करते."
+
+msgid "plugins.generic.recommendByAuthor.displayName"
+msgstr "लेखकाच्या लेखांची शिफारस करा"
+
+msgid "plugins.generic.recommendByAuthor.heading"
+msgstr "या लेखकांचे सर्वाधिक वाचलेले लेख"
+
+msgid "plugins.generic.recommendByAuthor.noMetric"
+msgstr ""
+"टीप: या प्लगइनसाठी किमान एक सांख्यिकी/अहवाल प्लगइन कार्यान्वित (enable ) करणे"
+" आवश्यक आहे. जर तुमचे सांख्यिकी प्लगइन एकापेक्षा जास्त मेट्रिक प्रदान करत "
+"असतील तर कृपया प्रशासकाच्या साइट सेटिंग्ज पृष्ठावर आणि/किंवा नियतकालिकाच्या "
+"व्यवस्थापकाच्या सेटिंग्ज पृष्ठांवर एक मुख्य मेट्रिक निवडा."

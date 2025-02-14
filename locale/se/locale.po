@@ -1,11 +1,11 @@
 # Huw Robert Grange <huw.r.grange@uit.no>, 2023.
 # Aysa Ekanger <aysa.ekanger@uit.no>, 2023.
-# Karl Magnus Nilsen <karl.magnus.nilsen@uit.no>, 2024.
+# Karl Magnus Nilsen <karl.magnus.nilsen@uit.no>, 2024, 2025.
 # Sara Ellen Gaup <sara.e.gaup@uit.no>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-01-07 14:14+0000\n"
-"Last-Translator: Sara Ellen Gaup <sara.e.gaup@uit.no>\n"
+"PO-Revision-Date: 2025-01-29 10:38+0000\n"
+"Last-Translator: Karl Magnus Nilsen <karl.magnus.nilsen@uit.no>\n"
 "Language-Team: Sami (Northern) <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/se/>\n"
 "Language: se\n"
@@ -192,3 +192,17 @@ msgstr ""
 
 msgid "submissions.published"
 msgstr "Almmuhuvvon"
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Juo, áinnas háliidan ahte váldo oktavuohta muinna jearaldagain árvvoštallat "
+"dán áigečállaga čállosiid."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} dahje {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Sádde čállosa sisa"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "geahča iežat sisasáddejuvvon čállusii"

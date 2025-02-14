@@ -1,7 +1,7 @@
-# Murari P Tapaswi <tapaswimurari@gmail.com>, 2024.
+# Murari P Tapaswi <tapaswimurari@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-09-12 08:45+0000\n"
+"PO-Revision-Date: 2025-02-11 19:44+0000\n"
 "Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
 "Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/editor/mr/>"
 "\n"
@@ -111,7 +111,7 @@ msgid "editor.issues.accessDate"
 msgstr "मुक्त उपलब्धता दिनांक"
 
 msgid "editor.issues.enableOpenAccessDate"
-msgstr "विलंबित मुक्त उपलब्धता सिद्ध करा"
+msgstr "विलंबित मुक्त उपलब्धता कार्यान्वित (enable) करा"
 
 msgid "editor.issues.coverPage"
 msgstr "मुखपृष्ठ प्रतिमा"
