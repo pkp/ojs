@@ -155,7 +155,7 @@ msgstr "R"
 
 msgid "default.submission.step.reviewerSuggestions"
 msgstr ""
-"<p>When submitting your article, you have the option to suggest 2/3 potential "
+"<p>When submitting your article, you have the option to suggest several potential "
 "reviewers. This can help streamline the review process and provide valueable "
 "input for the editorial team. Please choose reviewers who are expert in your "
 "field and have no conflict of interest with your work. This feature aims to "
