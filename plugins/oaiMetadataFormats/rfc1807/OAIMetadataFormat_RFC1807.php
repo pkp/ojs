@@ -16,12 +16,14 @@
 
 namespace APP\plugins\oaiMetadataFormats\rfc1807;
 
+use APP\author\Author;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\issue\IssueAction;
 use APP\journal\Journal;
 use APP\publication\Publication;
+use APP\section\Section;
 use APP\submission\Submission;
 use PKP\controlledVocab\ControlledVocab;
 use PKP\oai\OAIMetadataFormat;
@@ -51,7 +53,9 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
         /** @var Publication $publication */
         $publication = $article->getCurrentPublication();
 
-        $publisher = $journal->getLocalizedName(); // Default
+        $publicationLocale = $publication->getData('locale');
+
+        $publisher = $journal->getName($journal->getPrimaryLocale()); // Default
         $publisherInstitution = $journal->getData('publisherInstitution');
         if (!empty($publisherInstitution)) {
             $publisher = $publisherInstitution;
@@ -66,8 +70,8 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
 
         // Format creators
         $creators = [];
-        foreach ($publication->getData('authors') as $author) {
-            $creators[] = $author->getFullName(false, true);
+        foreach ($publication->getData('authors') as $author) { /** @var Author $author */
+            $creators[] = $author->getFullName(false, true, $publicationLocale);
         }
 
         $subjects = array_merge_recursive(
@@ -82,9 +86,9 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
                 $article->getCurrentPublication()->getId()
             )
         );
-        $subject = $subjects[$journal->getPrimaryLocale()] ?? '';
+        $subject = $subjects[$publicationLocale] ?? $subjects[$journal->getPrimaryLocale()] ?? '';
 
-        $coverage = $publication->getData('coverage', $publication->getData('locale'));
+        $coverage = $publication->getData('coverage', $publicationLocale);
 
         $issueAction = new IssueAction();
         $request = Application::get()->getRequest();
@@ -108,7 +112,7 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
             $this->formatElement('entry', $record->datestamp) .
             $this->formatElement('organization', $publisher) .
             $this->formatElement('organization', $source) .
-            $this->formatElement('title', $publication->getLocalizedTitle()) .
+            $this->formatElement('title', $publication->getLocalizedTitle($publicationLocale)) .
             $this->formatElement('type', $section->getLocalizedIdentifyType()) .
             $this->formatElement('author', $creators) .
             ($publication->getData('datePublished') ? $this->formatElement('date', $publication->getData('datePublished')) : '') .
@@ -116,9 +120,9 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
             ($includeUrls ? $this->formatElement('other_access', "url:{$url}") : '') .
             $this->formatElement('keyword', $subject) .
             $this->formatElement('period', $coverage) .
-            $this->formatElement('monitoring', $publication->getLocalizedData('sponsor')) .
-            $this->formatElement('language', $publication->getData('locale')) .
-            $this->formatElement('abstract', strip_tags($publication->getLocalizedData('abstract'))) .
+            $this->formatElement('monitoring', $publication->getLocalizedData('sponsor', $publicationLocale)) .
+            $this->formatElement('language', $publicationLocale) .
+            $this->formatElement('abstract', strip_tags($publication->getLocalizedData('abstract', $publicationLocale))) .
             "</rfc1807>\n";
     }
 

@@ -33,18 +33,22 @@
 	{assign var=authors value=$publication->getData('authors')}
 	{foreach from=$authors item=author}
 		<varfield id="{if $authors|@count==1}100{else}720{/if}" i1="1" i2=" ">
-			<subfield label="a">{$author->getFullName(false, true, $journal->getPrimaryLocale())|escape}</subfield>
+			<subfield label="a">{$author->getFullName(false, true, $publicationLocale)|escape}</subfield>
 			{foreach from=$author->getAffiliations() item=$affiliation}
 				{if $affiliation->getRor()}<subfield code="u">{$affiliation->getRor()|escape}</subfield>
-				{else}<subfield code="u">{$affiliation->getLocalizedName($publication->getData('locale'))|escape}</subfield>{/if}
+				{else}<subfield code="u">{$affiliation->getLocalizedName($publicationLocale)|escape}</subfield>{/if}
 			{/foreach}
 			{if $author->getUrl()}<subfield label="0">{$author->getUrl()|escape}</subfield>{/if}
 			{if $author->getData('orcid') && $author->getData('orcidIsVerified')}<subfield label="0">{$author->getData('orcid')|escape}</subfield>{/if}
 		</varfield>
 	{/foreach}
-	{if $subject}<varfield id="653" i1=" " i2=" ">
-		<subfield label="a">{$subject|escape}</subfield>
-	</varfield>{/if}
+	{if $subject}
+		{foreach from=$subject item=$currentSubject}
+			<varfield id="653" i1=" " i2=" ">
+				<subfield label="a">{$currentSubject|escape}</subfield>
+			</varfield>
+		{/foreach}
+	{/if}
 	{if $abstract}<varfield id="520" i1=" " i2=" ">
 		<subfield label="a">{$abstract|escape}</subfield>
 	</varfield>{/if}
@@ -83,13 +87,13 @@
 		<subfield label="a">{$language}</subfield>
 	</varfield>
 
-	{if $publication->getData('coverage', $journal->getPrimaryLocale())}
+	{if $publication->getData('coverage', $publicationLocale)}
 		<varfield id="500" i1=" " i2=" ">
-			<subfield label="a">{$publication->getData('coverage', $journal->getPrimaryLocale())|escape}</subfield>
+			<subfield label="a">{$publication->getData('coverage', $publicationLocale)|escape}</subfield>
 		</varfield>
 	{/if}
 
 	<varfield id="540" i1=" " i2=" ">
-		<subfield label="a">{translate key="submission.copyrightStatement" copyrightYear=$publication->getdata('copyrightYear') copyrightHolder=$publication->getData('copyrightHolder', $journal->getPrimaryLocale())|escape}</subfield>
+		<subfield label="a">{translate key="submission.copyrightStatement" copyrightYear=$publication->getdata('copyrightYear') copyrightHolder=$publication->getData('copyrightHolder', $publicationLocale)|escape}</subfield>
 	</varfield>
 </oai_marc>

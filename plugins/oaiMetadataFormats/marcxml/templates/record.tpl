@@ -42,18 +42,22 @@
 	{assign var=authors value=$publication->getData('authors')}
 	{foreach from=$authors item=author}
 		<datafield tag="{if $authors|@count==1}100{else}720{/if}" ind1="1" ind2=" ">
-			<subfield code="a">{$author->getFullName(false, true, $journal->getPrimaryLocale())|escape}</subfield>
+			<subfield code="a">{$author->getFullName(false, true, $publicationLocale)|escape}</subfield>
 			{foreach from=$author->getAffiliations() item=$affiliation}
 				{if $affiliation->getRor()}<subfield code="u">{$affiliation->getRor()|escape}</subfield>
-				{else}<subfield code="u">{$affiliation->getLocalizedName($publication->getData('locale'))|escape}</subfield>{/if}
+				{else}<subfield code="u">{$affiliation->getLocalizedName($publicationLocale)|escape}</subfield>{/if}
 			{/foreach}
 			{if $author->getUrl()}<subfield code="0">{$author->getUrl()|escape}</subfield>{/if}
 			{if $author->getData('orcid') && $author->getData('orcidIsVerified')}<subfield code="0">{$author->getData('orcid')|escape}</subfield>{/if}
 		</datafield>
 	{/foreach}
-	{if $subject}<datafield tag="653" ind1=" " ind2=" ">
-		<subfield code="a">{$subject|escape}</subfield>
-	</datafield>{/if}
+	{if $subject}
+		{foreach from=$subject item=$currentSubject}
+			<datafield tag="653" ind1=" " ind2=" ">
+				<subfield code="a">{$currentSubject|escape}</subfield>
+			</datafield>
+		{/foreach}
+	{/if}
 	{if $abstract}<datafield tag="520" ind1=" " ind2=" ">
 		<subfield code="a">{$abstract|escape}</subfield>
 	</datafield>{/if}
@@ -91,13 +95,13 @@
 		<subfield code="a">{$language}</subfield>
 	</datafield>
 
-	{if $publication->getData('coverage', $journal->getPrimaryLocale())}
+	{if $publication->getData('coverage', $publicationLocale)}
 		<datafield tag="500" ind1=" " ind2=" ">
-			<subfield code="a">{$publication->getData('coverage', $journal->getPrimaryLocale())|escape}</subfield>
+			<subfield code="a">{$publication->getData('coverage', $publicationLocale)|escape}</subfield>
 		</datafield>
 	{/if}
 
 	<datafield tag="540" ind1=" " ind2=" ">
-		<subfield code="a">{translate key="submission.copyrightStatement" copyrightYear=$publication->getdata('copyrightYear') copyrightHolder=$publication->getData('copyrightHolder', $journal->getPrimaryLocale())|escape}</subfield>
+		<subfield code="a">{translate key="submission.copyrightStatement" copyrightYear=$publication->getdata('copyrightYear') copyrightHolder=$publication->getData('copyrightHolder', $publicationLocale)|escape}</subfield>
 	</datafield>
 </record>
