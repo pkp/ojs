@@ -419,6 +419,8 @@ describe('Article View Metadata - DC Plugin', function() {
 
 			locale.manyValues.forEach((manyValueMetadata) => {
 				manyValueMetadata.values.forEach((value) => {
+					cy.get('#metadata-' + manyValueMetadata.metadata + '-control-' + localeName).click({force: true});
+					cy.wait(1000);
 					cy.get('#metadata-' + manyValueMetadata.metadata + '-control-' + localeName).type(value, {delay: 0});
 					cy.wait(2000);
 					cy.get('#metadata-' + manyValueMetadata.metadata + '-control-' + localeName).type('{enter}', {delay: 0});
