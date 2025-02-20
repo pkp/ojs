@@ -105,7 +105,7 @@ describe('Data suite tests', function() {
 		// check status = 5 (scheduled)
 		cy.wait(1000); // to be able to get the header
 		// check submission status
-		cy.get('[data-cy="sidemodal-header"]').contains("Scheduled For Publication");
+		cy.get('[data-cy="sidemodal-header"]').contains("Scheduled");
 		// check publication status
 		cy.get('[data-cy="workflow-controls-left"]').contains("Scheduled");
 		// the button "Unschedule" exists
@@ -151,7 +151,7 @@ describe('Data suite tests', function() {
 		cy.get('button:contains("OK")').click();
 		// check status = 5 (scheduled)
 		cy.visit('index.php/publicknowledge/dashboard/editorial');
-		cy.get('nav').contains('Scheduled for publication').click();
+		cy.get('nav').contains('Scheduled').click();
 		cy.openSubmission(author.familyName);
 
 		// check submission status
