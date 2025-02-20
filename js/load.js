@@ -11,6 +11,7 @@
 
 // styles
 import '@/styles/_global.less';
+import '@/styles/tw-theme-vars.css';
 
 import PkpLoad from '../lib/pkp/js/load.js';
 // Import controllers used by OJS
