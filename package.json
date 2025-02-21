@@ -14,7 +14,7 @@
     "postinstall": "copyfiles -f node_modules/swiper/swiper-bundle*.{js,css} plugins/themes/default/js/lib/swiper"
   },
   "dependencies": {
-    "@headlessui/vue": "^1.7.16",
+    "@headlessui/vue": "^1.7.23",
     "@highlightjs/vue-plugin": "^2.1.0",
     "@lk77/vue3-color": "^3.0.6",
     "@tinymce/tinymce-vue": "^6.1.0",
