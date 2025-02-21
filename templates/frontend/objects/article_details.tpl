@@ -149,43 +149,43 @@
 		</div>
 	{/if}
 
-	{** Example usage of the language switcher, title and subtitle
-	 * In h1, the attribute data-pkp-switcher-data="title" and, in h2, the attribute data-pkp-switcher-data="subtitle" are used to sync the text content in elements when
-	 * the language is switched. 
-	 * The attribute data-pkp-switcher="titles" is the container for the switcher's buttons, it needs to match json's switcher-key's value, e.g. {"title":{"switcher":"titles"...
-	 * The function wrapData wraps publication data for the json and the tpl, e.g. $pubLocaleData.title=$publication->getTitles('html')|wrapData:"titles":['strip_unsafe_html'],
-	 *  $pubLocaleData's title-key needs to match data-pkp-switcher-data'-attribute's value, e.g. data-pkp-switcher-data="title". This is for to sync the data in the correct element.
-	 * See all the examples below.
-	 * The rest of the work is handled by the js code.
-	 *}
-	{* Publication title for json *}
-	{* array $data | wrapData : string $switcher : ?array $filters : ?string $separator (e.g. keywords) *}
-	{$pubLocaleData.title=$publication->getTitles('html')|wrapData:"titles":['strip_unsafe_html']}
-	<h1
-		class="page_title"
-		aria-live="polite"
-		data-pkp-switcher-data="title"
-		lang="{$pubLocaleData.accessibility.langAttrs[$pubLocaleData.title.defaultLocale]}"
-	>
-		{$pubLocaleData.title.data[$pubLocaleData.title.defaultLocale]}
-	</h1>
-
-	{if $publication->getSubTitles('html')}
-		{* Publication subtitle for json *}
-		{$pubLocaleData.subtitle=$publication->getSubTitles('html')|wrapData:"titles":['strip_unsafe_html']}
-		<h2
-			class="subtitle"
-			aria-live="polite"
-			data-pkp-switcher-data="subtitle"
-			lang="{$pubLocaleData.accessibility.langAttrs[$pubLocaleData.subtitle.defaultLocale]}"
+	<div class="page_titles" aria-live="polite">
+		{** Example usage of the language switcher, title and subtitle
+		* In h1, the attribute data-pkp-switcher-data="title" and, in h2, the attribute data-pkp-switcher-data="subtitle" are used to sync the text content in elements when
+		* the language is switched. 
+		* The attribute data-pkp-switcher="titles" is the container for the switcher's buttons, it needs to match json's switcher-key's value, e.g. {"title":{"switcher":"titles"...
+		* The function wrapData wraps publication data for the json and the tpl, e.g. $pubLocaleData.title=$publication->getTitles('html')|wrapData:"titles":['strip_unsafe_html'],
+		*  $pubLocaleData's title-key needs to match data-pkp-switcher-data'-attribute's value, e.g. data-pkp-switcher-data="title". This is for to sync the data in the correct element.
+		* See all the examples below.
+		* The rest of the work is handled by the js code.
+		*}
+		{* Publication title for json *}
+		{* array $data | wrapData : string $switcher : ?array $filters : ?string $separator (e.g. keywords) *}
+		{$pubLocaleData.title=$publication->getTitles('html')|wrapData:"titles":['strip_unsafe_html']}
+		<h1
+			class="page_title"
+			data-pkp-switcher-data="title"
+			lang="{$pubLocaleData.accessibility.langAttrs[$pubLocaleData.title.defaultLocale]}"
 		>
-			{$pubLocaleData.subtitle.data[$pubLocaleData.subtitle.defaultLocale]}
-		</h2>
-	{/if}
-	{* Title and subtitle common switcher *}
-	{if isset($pubLocaleData.opts.title)}
-		<span aria-label="{translate key="plugins.themes.default.languageSwitcher.ariaDescription.titles"}" role="group" data-pkp-switcher="titles">{switcherContainer}</span>
-	{/if}
+			{$pubLocaleData.title.data[$pubLocaleData.title.defaultLocale]}
+		</h1>
+
+		{if $publication->getSubTitles('html')}
+			{* Publication subtitle for json *}
+			{$pubLocaleData.subtitle=$publication->getSubTitles('html')|wrapData:"titles":['strip_unsafe_html']}
+			<h2
+				class="subtitle"
+				data-pkp-switcher-data="subtitle"
+				lang="{$pubLocaleData.accessibility.langAttrs[$pubLocaleData.subtitle.defaultLocale]}"
+			>
+				{$pubLocaleData.subtitle.data[$pubLocaleData.subtitle.defaultLocale]}
+			</h2>
+		{/if}
+		{* Title and subtitle common switcher *}
+		{if isset($pubLocaleData.opts.title)}
+			<span aria-label="{translate key="plugins.themes.default.languageSwitcher.ariaDescription.titles"}" role="group" data-pkp-switcher="titles">{switcherContainer}</span>
+		{/if}
+	</div>
 
 	{* Comma list separator for authors' affiliations and keywords *}
 	{capture assign=commaListSeparator}{translate key="common.commaListSeparator"}{/capture}
@@ -198,14 +198,13 @@
 					<h2 class="pkp_screen_reader">{translate key="article.authors"}</h2>
 					<ul class="authors">
 					{foreach from=$publication->getData('authors') item=author}
-						<li>
+						<li aria-live="polite">
 							<div>
 								{* Publication author name for json *}
 								{$pubLocaleData["author{$author@index}Name"]=$author|getAuthorFullNames|wrapData:"author{$author@index}":['escape']}
 								{* Name *}
 								<span
 									class="name"
-									aria-live="polite"
 									data-pkp-switcher-data="author{$author@index}Name"
 									lang="{$pubLocaleData.accessibility.langAttrs[$pubLocaleData["author{$author@index}Name"].defaultLocale]}"
 								>
@@ -223,7 +222,6 @@
 								{* Affiliation *}
 								<span class="affiliation">
 									<span
-										aria-live="polite"
 										data-pkp-switcher-data="author{$author@index}Affiliation"
 										lang="{$pubLocaleData.accessibility.langAttrs[$pubLocaleData["author{$author@index}Affiliation"].defaultLocale]}"
 									>
@@ -277,7 +275,7 @@
 			{if $publication->getData('keywords')}
 				{* Publication keywords for json *}
 				{$pubLocaleData.keywords=$publication->getData('keywords')|wrapData:"keywords":['escape']:$keywordSeparator}
-				<section class="item keywords">
+				<section class="item keywords" aria-live="polite">
 					<h2 class="label">
 						{capture assign=translatedKeywords}{translate key="article.subject"}{/capture}
 						{translate key="semicolon" label=$translatedKeywords}
@@ -285,7 +283,6 @@
 					<span>
 						<span
 							class="value"
-							aria-live="polite"
 							lang="{$pubLocaleData.accessibility.langAttrs[$pubLocaleData.keywords.defaultLocale]}"
 							data-pkp-switcher-data="keywords"
 						>
@@ -303,7 +300,7 @@
 			{if $publication->getData('abstract')}
 				{* Publication abstract for json *}
 				{$pubLocaleData.abstract=$publication->getData('abstract')|wrapData:"abstract":['strip_unsafe_html']}
-				<section class="item abstract">
+				<section class="item abstract" aria-live="polite">
 					<div>
 						<h2 class="label">
 						{translate key="article.abstract"}
@@ -314,7 +311,6 @@
 						{/if}
 					</div>
 					<div
-						aria-live="polite"
 						data-pkp-switcher-data="abstract"
 						lang="{$pubLocaleData.accessibility.langAttrs[$pubLocaleData.abstract.defaultLocale]}"
 					>
