@@ -193,6 +193,14 @@ class Application extends PKPApplication
     }
 
     /**
+     * Get the review workflow stages used by this application.
+     */
+    public function getReviewStages(): array
+    {
+        return [WORKFLOW_STAGE_ID_EXTERNAL_REVIEW];
+    }
+
+    /**
      * Returns the context type for this application.
      */
     public static function getContextAssocType(): int
