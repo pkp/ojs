@@ -152,7 +152,7 @@ msgstr "Valmöguleikar kafla"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} Atriði"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "Öll atriði"
 
 msgid "galley.editPublishedDisabled"

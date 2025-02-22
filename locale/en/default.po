@@ -21,6 +21,9 @@ msgstr "Articles"
 msgid "section.default.abbrev"
 msgstr "ART"
 
+msgid "section.default.urlPath"
+msgstr "articles"
+
 msgid "section.default.policy"
 msgstr "Section default policy"
 

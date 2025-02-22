@@ -150,7 +150,7 @@ msgstr "Odaberite opcije"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} Stavke"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "Sve stavke"
 
 msgid "galley.editPublishedDisabled"

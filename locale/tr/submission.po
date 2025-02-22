@@ -153,7 +153,7 @@ msgstr "Bölüm Seçenekleri"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} Öge"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "Tüm Öğeler"
 
 msgid "galley.editPublishedDisabled"

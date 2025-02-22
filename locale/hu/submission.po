@@ -157,7 +157,7 @@ msgstr "Rovat opciók"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} elemek"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "Összes elem"
 
 msgid "galley.editPublishedDisabled"

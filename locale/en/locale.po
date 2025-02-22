@@ -147,6 +147,12 @@ msgstr "Abbreviation"
 msgid "section.abbreviation.example"
 msgstr "(For example, Articles=ART)"
 
+msgid "section.urlPathDescription"
+msgstr "Section URL Path. Use hyphens (-) instead of spaces."
+
+msgid "section.description"
+msgstr "Section archive Description"
+
 msgid "section.policy"
 msgstr "Section Policy"
 

@@ -157,7 +157,7 @@ msgstr "Параметри розділу"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} Пункти"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "Всі пункти"
 
 msgid "galley.editPublishedDisabled"

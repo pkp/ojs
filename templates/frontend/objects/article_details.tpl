@@ -83,7 +83,7 @@
 	{* Notification that this is an old version *}
 	{elseif $currentPublication->getId() !== $publication->getId()}
 		<div class="cmp_notification notice">
-			{capture assign="latestVersionUrl"}{url page="article" op="view" path=$article->getBestId()}{/capture}
+			{capture assign="latestVersionUrl"}{url page="articles" op="view" path=$article->getBestId()}{/capture}
 			{translate key="submission.outdatedVersion"
 				datePublished=$publication->getData('datePublished')|date_format:$dateFormatShort
 				urlRecentVersion=$latestVersionUrl|escape
@@ -343,9 +343,9 @@
 									{if $iPublication->getId() === $publication->getId()}
 										{$name}
 									{elseif $iPublication->getId() === $currentPublication->getId()}
-										<a href="{url page="article" op="view" path=$article->getBestId()}">{$name}</a>
+										<a href="{url page="articles" op="view" path=$article->getBestId()}">{$name}</a>
 									{else}
-										<a href="{url page="article" op="view" path=$article->getBestId()|to_array:"version":$iPublication->getId()}">{$name}</a>
+										<a href="{url page="articles" op="view" path=$article->getBestId()|to_array:"version":$iPublication->getId()}">{$name}</a>
 									{/if}
 								</li>
 							{/foreach}
@@ -386,7 +386,11 @@
 								{translate key="section.section"}
 							</h2>
 							<div class="value">
-								{$section->getLocalizedTitle()|escape}
+								{if !$section->getNotBrowsable()}
+									<a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="articles" op="section" path=$section->getUrlPath()|escape}">{$section->getLocalizedTitle()|escape}</a>
+								{else}
+									{$section->getLocalizedTitle()|escape}
+								{/if}
 							</div>
 						</section>
 					{/if}
@@ -399,7 +403,11 @@
 							<div class="value">
 								<ul class="categories">
 									{foreach from=$categories item=category}
-										<li><a href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page="catalog" op="category" path=$category->getPath()|escape}">{$category->getLocalizedTitle()|escape}</a></li>
+										{if $category->getParentPath()}
+											<li><a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="articles" op="category" path=$category->getParentPath()|to_array:$category->getPath()}">{$category->getLocalizedTitle()|escape}</a></li>
+										{else}
+											<li><a href="{url router=\PKP\core\PKPApplication::ROUTE_PAGE page="articles" op="category" path=$category->getPath()|escape}">{$category->getLocalizedTitle()|escape}</a></li>
+										{/if}
 									{/foreach}
 								</ul>
 							</div>

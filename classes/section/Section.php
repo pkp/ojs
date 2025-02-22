@@ -190,6 +190,22 @@ class Section extends \PKP\section\PKPSection
     {
         $this->setData('identifyType', $identifyType, $locale);
     }
+
+    /**
+     * Set if section is browsable.
+     */
+    public function setNotBrowsable(bool $notBrowsable): void
+    {
+        $this->setData('notBrowsable', $notBrowsable);
+    }
+
+    /**
+     * Return boolean indicating if section is browsable.
+     */
+    public function getNotBrowsable(): bool
+    {
+        return $this->getData('notBrowsable');
+    }
 }
 
 if (!PKP_STRICT_MODE) {

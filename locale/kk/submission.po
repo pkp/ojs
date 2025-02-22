@@ -158,7 +158,7 @@ msgstr "Бөлім параметрлері"
 msgid "catalog.browseTitles"
 msgstr "Атаулар саны: {$numTitles}"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "Барлық категориялар"
 
 msgid "galley.editPublishedDisabled"

@@ -163,7 +163,7 @@ msgstr "Sektions alternativ"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} Objekt"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "Alla objekt"
 
 msgid "galley.editPublishedDisabled"

@@ -141,7 +141,7 @@ msgstr "栏目选项"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} 项"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "所有项"
 
 msgid "galley.editPublishedDisabled"

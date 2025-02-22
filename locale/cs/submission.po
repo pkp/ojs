@@ -150,7 +150,7 @@ msgstr "Možnosti sekce"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} položek"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "Všechny položky"
 
 msgid "galley.editPublishedDisabled"
