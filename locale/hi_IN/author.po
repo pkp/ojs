@@ -419,15 +419,15 @@ msgstr "सार्वजनिक पूरक फ़ाइल पहचान
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) endpunc: Different punctuation at the end
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ JournalTitle}, {$ journalTitle}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$journalTitle}, {$journalTitle}
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 3
 # (pofilter) simplecaps: Different capitalization
 msgid "author.submit.confirmationDescription"
 msgstr ""
-"अपनी पांडुलिपि को {$ journalTitle} सबमिट करने के लिए, सबमिशन समाप्त पर क्लिक करें। "
+"अपनी पांडुलिपि को {$journalTitle} सबमिट करने के लिए, सबमिशन समाप्त पर क्लिक करें। "
 "सबमिशन के प्रमुख संपर्क को ईमेल द्वारा एक स्वीकृति प्राप्त होगी और जर्नल वेब साइट पर लॉग "
-"इन करके संपादकीय प्रक्रिया के माध्यम से प्रस्तुत करने की प्रगति को देखने में सक्षम होगा। {$ "
-"JournalTitle} के साथ प्रकाशन में आपकी रुचि के लिए धन्यवाद।"
+"इन करके संपादकीय प्रक्रिया के माध्यम से प्रस्तुत करने की प्रगति को देखने में सक्षम होगा। {$"
+"journalTitle} के साथ प्रकाशन में आपकी रुचि के लिए धन्यवाद।"
 
 # (pofilter) endpunc: Different punctuation at the end
 # (pofilter) simplecaps: Different capitalization
@@ -444,11 +444,11 @@ msgstr "सबमिशन खत्म करो"
 
 # (pofilter) brackets: Added '{', '}'
 # (pofilter) endpunc: Different punctuation at the end
-# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$ JournalTitle}
+# (pofilter) pythonbraceformat: Unknown named placeholders in translation: {$journalTitle}
 # (pofilter) sentencecount: Different number of sentences: 1 ≠ 2
 # (pofilter) simplecaps: Different capitalization
 msgid "author.submit.submissionComplete"
-msgstr "सबमिशन पूर्ण। {$ JournalTitle} के साथ प्रकाशन में आपकी रुचि के लिए धन्यवाद।"
+msgstr "सबमिशन पूर्ण। {$journalTitle} के साथ प्रकाशन में आपकी रुचि के लिए धन्यवाद।"
 
 msgid "author.article.uploadAuthorVersion"
 msgstr "लेखक संस्करण अपलोड करें"

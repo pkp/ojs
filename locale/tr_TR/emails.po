@@ -99,7 +99,7 @@ msgstr ""
 "adlarını ve şifrelerini kaydetmelerini sağlamak için gönderilir."
 
 msgid "emails.reviewerRegister.subject"
-msgstr "{$ContextName} ile Hakem Olarak Kayıt"
+msgstr "{$contextName} ile Hakem Olarak Kayıt"
 
 msgid "emails.reviewerRegister.body"
 msgstr ""

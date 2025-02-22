@@ -405,7 +405,7 @@ msgid "user.reviewerPrompt"
 msgstr "Ați fi dispus să evaluați manuscrise înregistrate la acest jurnal?"
 
 msgid "user.reviewerPrompt.userGroup"
-msgstr "Da, solicitați rolul {$ userGroup}."
+msgstr "Da, solicitați rolul {$userGroup}."
 
 msgid "user.reviewerPrompt.optin"
 msgstr ""
@@ -711,14 +711,14 @@ msgid "reader.subscriptionOrFeeAccess"
 msgstr "Necesită abonare sau plată"
 
 msgid "reader.purchasePrice"
-msgstr "({$valuta} {$preț})"
+msgstr "({$currency} {$price})"
 
 msgid "comments.commentsOnArticle"
 msgstr "Comentarii pentru acest articol"
 
 msgid "comments.authenticated"
 msgstr ""
-"by <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$NumeUtilzator}</a>"
+"by <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
 
 msgid "search.results.orderBy"
 msgstr "Ordonează rezultatele după"

@@ -54,7 +54,7 @@ msgstr "Tarefa de registro automático do DOAJ"
 
 msgid "plugins.importexport.doaj.register.error.mdsError"
 msgstr ""
-"O depósito não foi bem sucedido! A API do DOAJ retornou um erro: '{$ param}'."
+"O depósito não foi bem sucedido! A API do DOAJ retornou um erro: '{$param}'."
 
 msgid "plugins.importexport.doaj.cliUsage"
 msgstr ""

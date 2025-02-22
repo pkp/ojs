@@ -112,7 +112,7 @@ msgstr "학술지 만들기"
 msgid "admin.journals.urlWillBe"
 msgstr ""
 "학술지를 식별하는 하나의 짧은 단어 또는 머리 글자 여야합니다. 저널의 URL은 "
-"{$ sampleUrl}입니다."
+"{$sampleUrl}입니다."
 
 msgid "admin.contexts.form.titleRequired"
 msgstr "제목이 필요합니다."

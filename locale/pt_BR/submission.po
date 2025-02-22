@@ -216,7 +216,7 @@ msgstr "Atribuir a Edição"
 
 msgid "publication.assignedToIssue"
 msgstr ""
-"Atribuído à <a href=\"{$issueUrl}\">{$ issueName}</a> mas não foi agendado "
+"Atribuído à <a href=\"{$issueUrl}\">{$issueName}</a> mas não foi agendado "
 "para publicação."
 
 msgid "publication.changeIssue"
