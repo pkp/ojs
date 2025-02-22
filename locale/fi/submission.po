@@ -160,7 +160,7 @@ msgstr "Osaston valinnat"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} nimikettä"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "Kaikki nimikkeet"
 
 msgid "galley.editPublishedDisabled"

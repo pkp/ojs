@@ -155,7 +155,7 @@ msgstr "Opcje działu"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} pozycji"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "Wszystkie pozycje"
 
 msgid "galley.editPublishedDisabled"

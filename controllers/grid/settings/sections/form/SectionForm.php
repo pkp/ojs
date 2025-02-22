@@ -26,6 +26,9 @@ use PKP\reviewForm\ReviewFormDAO;
 
 class SectionForm extends PKPSectionForm
 {
+    /** @var int $_journalId */
+    public $_journalId;
+
     /**
      * Constructor.
      *
@@ -40,9 +43,23 @@ class SectionForm extends PKPSectionForm
             $sectionId
         );
 
+        $this->_journalId = $journalId = $request->getContext()->getId();
+
         // Validation checks for this form
+        $form = $this;
         $this->addCheck(new \PKP\form\validation\FormValidatorLocale($this, 'title', 'required', 'manager.setup.form.section.nameRequired'));
         $this->addCheck(new \PKP\form\validation\FormValidatorLocale($this, 'abbrev', 'required', 'manager.sections.form.abbrevRequired'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorRegExp($this, 'urlPath', 'required', 'grid.section.urlPathAlphaNumeric', '/^[a-zA-Z0-9\/._-]+$/'));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom(
+            $this,
+            'urlPath',
+            'required',
+            'grid.section.urlPathExists',
+            function ($urlPath) use ($form, $journalId) {
+                return !Repo::section()->getCollector()->filterByUrlPaths([$urlPath])->filterByContextIds([$journalId])->getMany()->first() || ($form->getData('oldPath') != null && $form->getData('oldPath') == $urlPath);
+            }
+        ));
+
         $journal = $request->getJournal();
         $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'reviewFormId', 'optional', 'manager.sections.form.reviewFormId', [DAORegistry::getDAO('ReviewFormDAO'), 'reviewFormExists'], [Application::ASSOC_TYPE_JOURNAL, $journal->getId()]));
     }
@@ -66,6 +83,7 @@ class SectionForm extends PKPSectionForm
                 'abbrev' => $this->section->getAbbrev(null), // Localized
                 'reviewFormId' => $this->section->getReviewFormId(),
                 'isInactive' => $this->section->getIsInactive(),
+                'notBrowsable' => $this->section->getNotBrowsable(),
                 'metaIndexed' => !$this->section->getMetaIndexed(), // #2066: Inverted
                 'metaReviewed' => !$this->section->getMetaReviewed(), // #2066: Inverted
                 'abstractsNotRequired' => $this->section->getAbstractsNotRequired(),
@@ -73,6 +91,8 @@ class SectionForm extends PKPSectionForm
                 'editorRestricted' => $this->section->getEditorRestricted(),
                 'hideTitle' => $this->section->getHideTitle(),
                 'hideAuthor' => $this->section->getHideAuthor(),
+                'urlPath' => $this->section->getUrlPath(),
+                'description' => $this->section->getDescription(null),
                 'policy' => $this->section->getPolicy(null), // Localized
                 'wordCount' => $this->section->getAbstractWordCount(),
             ]);
@@ -133,7 +153,13 @@ class SectionForm extends PKPSectionForm
     public function readInputData()
     {
         parent::readInputData();
-        $this->readUserVars(['abbrev', 'policy', 'reviewFormId', 'identifyType', 'isInactive', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestricted', 'hideTitle', 'hideAuthor', 'wordCount']);
+
+        $this->readUserVars(['abbrev', 'urlPath', 'description', 'policy', 'reviewFormId', 'identifyType', 'isInactive', 'notBrowsable', 'metaIndexed', 'metaReviewed', 'abstractsNotRequired', 'editorRestricted', 'hideTitle', 'hideAuthor', 'wordCount']);
+        // For path duplicate checking; excuse the current path.
+        if ($sectionId = $this->getSectionId()) {
+            $section = Repo::section()->get($sectionId, $this->_journalId);
+            $this->setData('oldPath', $section->getUrlPath());
+        }
     }
 
     /**
@@ -141,7 +167,7 @@ class SectionForm extends PKPSectionForm
      */
     public function getLocaleFieldNames(): array
     {
-        return ['title', 'policy', 'abbrev', 'identifyType'];
+        return ['title', 'policy', 'abbrev', 'identifyType','description'];
     }
 
     /**
@@ -163,7 +189,8 @@ class SectionForm extends PKPSectionForm
         // Populate/update the section object from the form
         $section->setTitle($this->getData('title'), null); // Localized
         $section->setAbbrev($this->getData('abbrev'), null); // Localized
-
+        $section->setUrlPath($this->getData('urlPath'));
+        $section->setDescription($this->getData('description'), null); // Localized
         $reviewFormId = $this->getData('reviewFormId');
         if (!$reviewFormId) {
             $reviewFormId = null;
@@ -171,6 +198,7 @@ class SectionForm extends PKPSectionForm
 
         $section->setReviewFormId($reviewFormId);
         $section->setIsInactive($this->getData('isInactive') ? 1 : 0);
+        $section->setNotBrowsable($this->getData('notBrowsable') ? 1 : 0);
         $section->setMetaIndexed($this->getData('metaIndexed') ? 0 : 1); // #2066: Inverted
         $section->setMetaReviewed($this->getData('metaReviewed') ? 0 : 1); // #2066: Inverted
         $section->setAbstractsNotRequired($this->getData('abstractsNotRequired') ? 1 : 0);

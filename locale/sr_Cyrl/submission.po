@@ -148,7 +148,7 @@ msgstr ""
 msgid "catalog.browseTitles"
 msgstr ""
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr ""
 
 msgid "galley.editPublishedDisabled"

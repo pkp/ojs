@@ -148,7 +148,7 @@ msgstr ""
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} zenbakiak"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "Zenbaki guztiak"
 
 msgid "galley.editPublishedDisabled"

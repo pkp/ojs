@@ -34,6 +34,8 @@ class OJSMigration extends \PKP\migration\Migration
             $table->foreign('journal_id', 'sections_journal_id')->references('journal_id')->on('journals')->onDelete('cascade');
             $table->index(['journal_id'], 'sections_journal_id');
 
+            $table->string('url_path', 255);
+
             $table->bigInteger('review_form_id')->nullable();
             $table->foreign('review_form_id', 'sections_review_form_id')->references('review_form_id')->on('review_forms')->onDelete('set null');
             $table->index(['review_form_id'], 'sections_review_form_id');
@@ -46,6 +48,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->smallInteger('hide_title')->default(0);
             $table->smallInteger('hide_author')->default(0);
             $table->smallInteger('is_inactive')->default(0);
+            $table->smallInteger('not_browsable')->default(0);
             $table->bigInteger('abstract_word_count')->nullable();
         });
 

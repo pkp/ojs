@@ -150,7 +150,7 @@ msgstr "خيارات القسم"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} فقرة/فقرات"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "كل الفقرات"
 
 msgid "galley.editPublishedDisabled"
