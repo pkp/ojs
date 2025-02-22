@@ -19,6 +19,10 @@
 namespace APP\search;
 
 use APP\journal\Journal;
+use Illuminate\Database\MySqlConnection;
+use Illuminate\Database\Query\Builder;
+use Illuminate\Database\Query\JoinClause;
+use Illuminate\Support\Facades\DB;
 use PKP\search\SubmissionSearchDAO;
 use PKP\submission\PKPSubmission;
 
@@ -42,83 +46,65 @@ class ArticleSearchDAO extends SubmissionSearchDAO
             return [];
         }
 
-        $sqlFrom = '';
-        $sqlWhere = '';
-        $params = [];
+        $q = DB::table('submissions', 's')
+            ->join('journals AS j', 'j.journal_id', '=', 's.context_id')
+            ->leftJoin(
+                'journal_settings AS js',
+                fn (JoinClause $j) => $j
+                    ->on('j.journal_id', '=', 'js.journal_id')
+                    ->where('js.locale', '=', '')
+                    ->where('js.setting_name', '=', 'publishingMode')
+            )
+            ->join('publications AS p', 'p.publication_id', '=', 's.current_publication_id')
+            ->join(
+                'publication_settings AS ps',
+                fn (JoinClause $j) => $j
+                    ->where('ps.setting_name', '=', 'issueId')
+                    ->whereColumn('ps.publication_id', '=', 'p.publication_id')
+                    ->where('ps.locale', '=', '')
+            )
+            ->join('issues AS i', 'i.issue_id', '=', DB::raw('CAST(ps.setting_value AS ' . (DB::connection() instanceof MySqlConnection ? 'UNSIGNED' : 'INTEGER') . ')'))
+            ->join('submission_search_objects AS o', 's.submission_id', '=', 'o.submission_id');
 
-        for ($i = 0, $count = count($phrase); $i < $count; $i++) {
-            if (!empty($sqlFrom)) {
-                $sqlFrom .= ', ';
-                $sqlWhere .= ' AND ';
-            }
-            $sqlFrom .= 'submission_search_object_keywords o' . $i . ' NATURAL JOIN submission_search_keyword_list k' . $i;
-            if (strstr($phrase[$i], '%') === false) {
-                $sqlWhere .= 'k' . $i . '.keyword_text = ?';
-            } else {
-                $sqlWhere .= 'k' . $i . '.keyword_text LIKE ?';
-            }
-            if ($i > 0) {
-                $sqlWhere .= ' AND o0.object_id = o' . $i . '.object_id AND o0.pos+' . $i . ' = o' . $i . '.pos';
-            }
-
-            $params[] = $phrase[$i];
+        foreach ($phrase as $i => $keyword) {
+            $q->join("submission_search_object_keywords AS o{$i}", "o{$i}.object_id", '=', 'o.object_id')
+                ->join("submission_search_keyword_list AS k{$i}", "k{$i}.keyword_id", '=', "o{$i}.keyword_id")
+                ->where("k{$i}.keyword_text", strstr($phrase[$i], '%') !== false ? 'LIKE' : '=', $keyword)
+                ->when(
+                    $i,
+                    fn (Builder $q) => $q
+                        ->whereColumn('o0.object_id', '=', "o{$i}.object_id")
+                        ->whereColumn(DB::raw("o0.pos + {$i}"), '=', "o{$i}.pos")
+                );
         }
 
-        if (!empty($type)) {
-            $sqlWhere .= ' AND (o.type & ?) != 0';
-            $params[] = $type;
-        }
+        $q->where('s.status', '=', PKPSubmission::STATUS_PUBLISHED)
+            ->when(!empty($journal), fn (Builder $q) => $q->where('j.journal_id', '=', $journal->getId()))
+            ->where('j.enabled', '=', 1)
+            ->where(DB::raw("COALESCE(js.setting_value, '0')"), '<>', Journal::PUBLISHING_MODE_NONE)
+            ->when(!empty($publishedFrom), fn (Builder $q) => $q->where('p.date_published', '>=', $this->datetimeToDB($publishedFrom)))
+            ->when(!empty($publishedTo), fn (Builder $q) => $q->where('p.date_published', '<=', $this->datetimeToDB($publishedTo)))
+            ->where('i.published', '=', 1)
+            ->when(!empty($type), fn (Builder $q) => $q->whereRaw('(o.type & ?) != 0', [$type]))
+            ->groupBy('o.submission_id')
+            ->orderByDesc('count')
+            ->limit($limit)
+            ->select(
+                'o.submission_id',
+                DB::raw('MAX(s.context_id) AS journal_id'),
+                DB::raw('MAX(i.date_published) AS i_pub'),
+                DB::raw('MAX(p.date_published) AS s_pub'),
+                DB::raw('COUNT(0) AS count')
+            );
 
-        if (!empty($publishedFrom)) {
-            $sqlWhere .= ' AND p.date_published >= ' . $this->datetimeToDB($publishedFrom);
-        }
-
-        if (!empty($publishedTo)) {
-            $sqlWhere .= ' AND p.date_published <= ' . $this->datetimeToDB($publishedTo);
-        }
-
-        if (!empty($journal)) {
-            $sqlWhere .= ' AND i.journal_id = ?';
-            $params[] = $journal->getId();
-        }
-
-        $result = $this->retrieve(
-            'SELECT
-                o.submission_id,
-                MAX(s.context_id) AS journal_id,
-                MAX(i.date_published) AS i_pub,
-                MAX(p.date_published) AS s_pub,
-                COUNT(*) AS count
-            FROM
-                submissions s
-                JOIN publications p ON (p.publication_id = s.current_publication_id)
-                JOIN publication_settings ps ON (ps.publication_id = p.publication_id AND ps.setting_name=\'issueId\' AND ps.locale=\'\')
-                JOIN issues i ON (CAST(i.issue_id AS CHAR(20)) = ps.setting_value AND i.journal_id = s.context_id)
-                JOIN submission_search_objects o ON (s.submission_id = o.submission_id)
-                JOIN journals j ON j.journal_id = s.context_id
-                LEFT JOIN journal_settings js ON j.journal_id = js.journal_id AND js.setting_name = \'publishingMode\'
-                NATURAL JOIN ' . $sqlFrom . '
-            WHERE
-                (js.setting_value <> \'' . Journal::PUBLISHING_MODE_NONE . '\' OR
-                js.setting_value IS NULL) AND j.enabled = 1 AND
-                s.status = ' . PKPSubmission::STATUS_PUBLISHED . ' AND
-                i.published = 1 AND ' . $sqlWhere . '
-            GROUP BY o.submission_id
-            ORDER BY count DESC
-            LIMIT ' . $limit,
-            $params
-        );
-
-        $returner = [];
-        foreach ($result as $row) {
-            $returner[$row->submission_id] = [
+        return $q->get()
+            ->mapWithKeys(fn (object $row) => [$row->submission_id => [
                 'count' => $row->count,
                 'journal_id' => $row->journal_id,
                 'issuePublicationDate' => $this->datetimeFromDB($row->i_pub),
                 'publicationDate' => $this->datetimeFromDB($row->s_pub)
-            ];
-        }
-        return $returner;
+            ]])
+            ->toArray();
     }
 }
 
