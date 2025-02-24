@@ -26,6 +26,7 @@ use APP\user\Repository as UserRepository;
 use PKP\facades\Repo as BaseRepo;
 use PKP\galley\Repository as GalleyRepository;
 use PKP\submission\reviewAssignment\Repository as ReviewAssignmentRepository;
+use PKP\submission\reviewer\recommendation\Repository as ReviewerRecommendationRepository;
 
 class Repo extends BaseRepo
 {
@@ -82,5 +83,10 @@ class Repo extends BaseRepo
     public static function reviewAssignment(): ReviewAssignmentRepository
     {
         return app(ReviewAssignmentRepository::class);
+    }
+
+    public static function reviewerRecommendation(): ReviewerRecommendationRepository
+    {
+        return app(ReviewerRecommendationRepository::class);
     }
 }
