@@ -41,6 +41,7 @@
 	<migration class="PKP\migration\install\InstitutionsMigration" />
 	<migration class="PKP\migration\install\AffiliationsMigration" />
 	<migration class="PKP\migration\install\RorsMigration" />
+	<migration class="PKP\migration\upgrade\v3_5_0\I10359_DateConsideredToReviewAssignments" />
 
 	<migration class="APP\migration\install\OJSMigration" />
 
