@@ -27,12 +27,12 @@ class SubjectsProcessor
      */
     public static function process(object $data, int $publicationId): void
     {
-        $subjectsList = [$data->locale => array_map('trim', explode(';', $data->subjects))];
+        $subjectsList = array_map('trim', explode(';', $data->subjects));
 
-        if (count($subjectsList[$data->locale]) > 0) {
+        if (count($subjectsList) > 0) {
             Repo::controlledVocab()->insertBySymbolic(
                 ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_SUBJECT,
-                $subjectsList[$data->locale],
+                [$data->locale => $subjectsList],
                 Application::ASSOC_TYPE_PUBLICATION,
                 $publicationId
             );
