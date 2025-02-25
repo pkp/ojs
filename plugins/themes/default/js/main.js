@@ -142,7 +142,8 @@
 				button.type = 'button';
 				button.classList.add('pkpBadge', 'pkpBadge--button');
 				button.value = locale;
-				button.tabIndex = isSelectedLocale ? '0' : '-1'; // For safari losing button focus
+				button.tabIndex = '0'; // For safari losing button focus
+				//button.tabIndex = isSelectedLocale ? '0' : '-1'; // For safari losing button focus
 				if (!isSelectedLocale) {
 					button.classList.add('pkp_screen_reader');
 				}
@@ -192,7 +193,7 @@
 	}
 
 	/**
-	 * Toggle visibility of the buttons
+	 * Toggle 'visually hidden' of the buttons; Current selected is always visual
 	 * pkp_screen_reader: button visibility hidden
 	 */
 	function setVisibility(buttons, currentSelected, visible) {
@@ -209,7 +210,7 @@
 		// Create buttons and append them to the switcher container
 		const listbox = switcherContainer.querySelector('[role="listbox"]');
 		const buttons = createSwitcher(listbox, propsData.data, localeOrder, localeNames, accessibility);
-		const currentSelected = {btn: switcherContainer.querySelector('[tabindex="0"]')};
+		const currentSelected = {btn: switcherContainer.querySelector('.pkpBadge--button:not(.pkp_screen_reader')};
 		const focused = {btn: currentSelected.btn};
 
 		// Sync contents in data elements to match the selected locale (currentSelected.btn.value)
@@ -222,7 +223,7 @@
 
 		const isButtonsHidden = () => buttons.some(b => b.classList.contains('pkp_screen_reader'));
 
-		// New button switches language and syncs data contents. Same button hides buttons.
+		// New button switches language and syncs data contents
 		switcherContainer.addEventListener('click', (evt) => {
 			// Choices are li > button > span
 			const newSelectedBtn = evt.target.classList.contains('pkpBadge--button')
@@ -230,7 +231,7 @@
 				: (evt.target.querySelector('.pkpBadge--button') ?? evt.target.closest('.pkpBadge--button'));
 			if (buttons.some(b => b === newSelectedBtn)) {
 				// Set visibility
-				setVisibility(buttons, currentSelected, newSelectedBtn !== currentSelected.btn ? true : isButtonsHidden());
+				setVisibility(buttons, currentSelected, true);
 				if (newSelectedBtn !== currentSelected.btn) {
 					// Sync contents
 					syncDataElContents(newSelectedBtn.value, propsData, accessibility);
@@ -238,32 +239,44 @@
 					currentSelected.btn.parentElement.ariaSelected = 'false';
 					newSelectedBtn.parentElement.ariaSelected = 'true';
 					// Button: Tab index
-					currentSelected.btn.tabIndex = '-1';
-					newSelectedBtn.tabIndex = '0';
-					// Update current and focused button
-					focused.btn = currentSelected.btn = newSelectedBtn;
-					focused.btn.focus();
+					/// currentSelected.btn.tabIndex = '-1';
+					/// newSelectedBtn.tabIndex = '0';
+					// Update current button
+					currentSelected.btn = newSelectedBtn;
 				}
+				// Reset focus to current selected
+				focused.btn = currentSelected.btn
+				focused.btn.focus();
 			}
 		});
 
-		// Hide buttons when focus out
+		// Visually hide buttons when focus out
 		switcherContainer.addEventListener('focusout', (evt) => {
 			if (evt.target !== evt.currentTarget && evt.relatedTarget?.closest('[data-pkp-switcher]') !== switcherContainer) {
 				setVisibility(buttons, currentSelected, false);
 			}
 		});
 
+		// Show all visually hidden buttons when one of the buttons receives focus
+		switcherContainer.addEventListener('focusin', (evt) => {
+			if (isButtonsHidden() && buttons.find(b => b === evt.target)) {
+				setVisibility(buttons, currentSelected, true);
+				// Reset focus to current selected
+				focused.btn = currentSelected.btn;
+				focused.btn.focus();
+			}
+		});
+
 		// Arrow keys left and right cycles button focus when all buttons are visible. Set focused button.
 		switcherContainer.addEventListener("keydown", (evt) => {
-			if (evt.key !== "ArrowRight" && evt.key !== "ArrowLeft") return;
-
-			const i = buttons.findIndex(b => b === evt.target);
-			if (i !== -1 && !isButtonsHidden()) {
-				focused.btn = (evt.key === "ArrowRight")
-					? (buttons[i + 1] ?? buttons[0])
-					: (buttons[i - 1] ?? buttons[buttons.length - 1]);
-				focused.btn.focus();
+			if (evt.key === "ArrowRight" || evt.key === "ArrowLeft") {
+				const i = buttons.findIndex(b => b === evt.target);
+				if (i !== -1 && !isButtonsHidden()) {
+					focused.btn = (evt.key === "ArrowRight")
+						? (buttons[i + 1] ?? buttons[0])
+						: (buttons[i - 1] ?? buttons[buttons.length - 1]);
+					focused.btn.focus();
+				}
 			}
 		});
 	}
