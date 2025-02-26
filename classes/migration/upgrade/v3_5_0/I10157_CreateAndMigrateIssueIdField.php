@@ -5,9 +5,8 @@ namespace APP\migration\upgrade\v3_5_0;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
-use PKP\migration\Migration;
 
-class I10157_CreateAndMigrateIssueIdField extends Migration
+class I10157_CreateAndMigrateIssueIdField extends \PKP\migration\Migration
 {
     /**
      * Run the migrations.

@@ -149,7 +149,7 @@
 		<migration class="APP\migration\upgrade\v3_5_0\I9937_EditorialTeamToEditorialHistory"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I10041_UserGroupsAndUserUserGroupsMastheadValues"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I9771_OrcidMigration"/>
-		<migration class="PKP\migration\upgrade\v3_5_0\I10157_CreateAndMigrateIssueIdField.php"/>
+		<migration class="APP\migration\upgrade\v3_5_0\I10157_CreateAndMigrateIssueIdField.php"/>
 		<migration class="APP\migration\upgrade\v3_5_0\I5885_RenameReviewReminderSettingsName"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\COA75_AddUserRoleEndEmail"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I10738_RemoveInvalidUserGroups"/>
