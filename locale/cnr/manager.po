@@ -1,7 +1,7 @@
 # Milutin Markovic <admin@fcjk.me>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-02-26 11:45+0000\n"
+"PO-Revision-Date: 2025-02-26 13:03+0000\n"
 "Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
 "Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "cnr/>\n"
@@ -1797,3 +1797,29 @@ msgstr "Kategorije"
 msgid "manager.navigationMenus.mySubscriptions.description"
 msgstr ""
 "Poveznica na stranicu koja opisuje trenutne i prethodne pretplate pośetilaca."
+
+msgid "plugins.importexport.common.settings"
+msgstr "Podešavanja"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "Podešavanja za DOI dodatak"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Članci"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Brojevi"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Prelomi"
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Dodatak nije u potpunosti podešen."
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Zahtijevi dodatka nisu ispunjeni"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+"Ako želite da koristite ovaj dodatak idite u kategoriju dodataka \"Public "
+"Identifier (Javni dodaci)\" i uključite i konfigurišite dodatak DOI."
