@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file pages/dashboard/DashboardHandlerNext.php
  *
@@ -21,6 +22,7 @@ use APP\core\Request;
 use APP\facades\Repo;
 use APP\template\TemplateManager;
 use PKP\pages\dashboard\PKPDashboardHandlerNext;
+use PKP\submission\reviewer\recommendation\ReviewerRecommendation;
 
 class_exists(\APP\components\forms\publication\AssignToIssueForm::class); // Force define of FORM_ASSIGN_TO_ISSUE
 
@@ -49,6 +51,16 @@ class DashboardHandlerNext extends PKPDashboardHandlerNext
         $templateMgr->setConstants([
             'FORM_ASSIGN_TO_ISSUE' => FORM_ASSIGN_TO_ISSUE
         ]);
+
+        $pageInitConfig = $templateMgr->getState('pageInitConfig');
+        $pageInitConfig['recommendations'] = ReviewerRecommendation::query()
+            ->withContextId($context->getId())
+            ->get()
+            ->select(['recommendationId', 'status', 'value', 'title'])
+            ->values()
+            ->toArray();
+
+        $templateMgr->setState(['pageInitConfig' => $pageInitConfig]);
     }
 
 
