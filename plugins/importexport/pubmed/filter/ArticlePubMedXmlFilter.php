@@ -26,6 +26,7 @@ use DOMElement;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\filter\PersistableFilter;
+use PKP\i18n\interfaces\LocaleInterface;
 use PKP\i18n\LocaleConversion;
 
 class ArticlePubMedXmlFilter extends PersistableFilter
@@ -76,7 +77,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
             $publication = $submission->getCurrentPublication();
 
             $publicationLocale = $publication->getData('locale');
-            if ($publicationLocale == 'en') {
+            if ($publicationLocale == LocaleInterface::DEFAULT_LOCALE) {
                 $articleNode->appendChild($doc->createElement('ArticleTitle'))->appendChild($doc->createTextNode($publication->getLocalizedTitle($publicationLocale, 'html')));
             } else {
                 $articleNode->appendChild($doc->createElement('VernacularTitle'))->appendChild($doc->createTextNode($publication->getLocalizedTitle($publicationLocale, 'html')));
