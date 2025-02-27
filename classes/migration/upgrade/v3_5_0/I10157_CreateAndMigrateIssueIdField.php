@@ -13,16 +13,32 @@ class I10157_CreateAndMigrateIssueIdField extends \PKP\migration\Migration
      */
     public function up(): void
     {
-        // adding new column to the publications table
+        // add the new column to publications table
         Schema::table('publications', function (Blueprint $table) {
             $table->bigInteger('issue_id')->nullable()->after('submission_id');
         });
 
-        // migrating data from publication_settings to the new issue_id column
-        DB::statement('UPDATE publications p JOIN publication_settings ps ON p.publication_id = ps.publication_id AND ps.setting_name = "issueId" SET p.issue_id = ps.setting_value');
+        // add the foreign key constraint and index,
+        Schema::table('publications', function (Blueprint $table) {
+            $table->foreign('issue_id')
+                ->references('issue_id')
+                ->on('issues')
+                ->nullOnDelete();
+            $table->index(['issue_id'], 'publications_issue_id_index');
+        });
+
+        // migrate data from publication_settings to the new issue_id column.
+        DB::table('publications')
+            ->join('publication_settings', 'publication_settings.publication_id', '=', 'publications.publication_id')
+            ->where('publication_settings.setting_name', 'issueId')
+            ->update([
+                'publications.issue_id' => DB::raw('publication_settings.setting_value'),
+            ]);
 
         // clear the old data of issueId in publication_settings
-        DB::table('publication_settings')->where('setting_name', 'issueId')->delete();
+        DB::table('publication_settings')
+            ->where('setting_name', 'issueId')
+            ->delete();
     }
 
     /**
@@ -30,8 +46,9 @@ class I10157_CreateAndMigrateIssueIdField extends \PKP\migration\Migration
      */
     public function down(): void
     {
-        // remove the column in case rolling back
         Schema::table('publications', function (Blueprint $table) {
+            $table->dropForeign(['issue_id']);
+            $table->dropIndex('publications_issue_id_index');
             $table->dropColumn('issue_id');
         });
     }
