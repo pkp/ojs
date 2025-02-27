@@ -28,13 +28,23 @@ class I10157_CreateAndMigrateIssueIdField extends \PKP\migration\Migration
         });
 
         // migrate data from publication_settings to the new issue_id column.
-        DB::table('publications')
-            ->join('publication_settings', 'publication_settings.publication_id', '=', 'publications.publication_id')
-            ->where('publication_settings.setting_name', 'issueId')
-            ->update([
-                'publications.issue_id' => DB::raw('publication_settings.setting_value'),
-            ]);
-
+        if (DB::getDriverName() === 'pgsql') {
+            DB::statement("
+                UPDATE publications
+                SET issue_id = ps.setting_value::bigint
+                FROM publication_settings ps
+                WHERE publications.publication_id = ps.publication_id
+                AND ps.setting_name = 'issueId'
+            ");
+        } else {
+            DB::statement("
+                UPDATE publications p
+                JOIN publication_settings ps
+                    ON p.publication_id = ps.publication_id
+                    AND ps.setting_name = 'issueId'
+                SET p.issue_id = ps.setting_value
+            ");
+        }
         // clear the old data of issueId in publication_settings
         DB::table('publication_settings')
             ->where('setting_name', 'issueId')
