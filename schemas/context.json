@@ -143,13 +143,6 @@
 				}
 			}
 		},
-		"licenseTerms": {
-			"type": "string",
-			"multilingual": true,
-			"validation": [
-				"nullable"
-			]
-		},
 		"lockssLicense": {
 			"type": "string",
 			"multilingual": true,
