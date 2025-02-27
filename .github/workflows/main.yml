@@ -18,6 +18,8 @@ jobs:
           - php-version: 8.2
             database: pgsql
             test: 'test'
+            upgrade: 'upgrade'
+            upgrade_test: 'stable-3_3_0,stable-3_4_0'
           - php-version: 8.2
             database: mariadb
             test: 'test'
