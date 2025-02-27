@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @defgroup api_v1_contexts Context API requests
  */
@@ -14,13 +15,5 @@
  *
  * @brief Handle API requests for contexts (journals/presses).
  */
-
-$urlParts = explode('/', trim($_SERVER['PATH_INFO'], '/'));
-
-if (in_array('recommendations', $urlParts)) {
-    return new \PKP\handler\APIHandler(
-        new \PKP\API\v1\reviewers\recommendations\ReviewerRecommendationController()
-    );
-}
 
 return new \PKP\handler\APIHandler(new \PKP\API\v1\contexts\PKPContextController());
