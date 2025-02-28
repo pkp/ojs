@@ -46,6 +46,22 @@ class Publication extends PKPPublication
             $coverImage['uploadName'],
         ]);
     }
+
+    /**
+     * Retrieves the issue ID associated with the publication.
+     */
+    public function getIssueId(): ?int
+    {
+        return $this->getData('issueId');
+    }
+
+    /**
+     * Sets the issue ID associated with the publication.
+     */
+    public function setIssueId(?int $issueId): void
+    {
+        $this->setData('issueId', $issueId);
+    }
 }
 
 if (!PKP_STRICT_MODE) {

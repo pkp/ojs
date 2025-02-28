@@ -242,6 +242,10 @@ class OJSMigration extends \PKP\migration\Migration
             $table->foreign('doi_id')->references('doi_id')->on('dois')->nullOnDelete();
             $table->index(['doi_id'], 'publications_doi_id');
 
+            $table->bigInteger('issue_id')->nullable();
+            $table->foreign('issue_id')->references('issue_id')->on('issues')->nullOnDelete();
+            $table->index(['issue_id'], 'publications_issue_id_index');
+
             $table->index(['url_path'], 'publications_url_path');
         });
         // The following foreign key relationships are for tables defined in SubmissionsMigration

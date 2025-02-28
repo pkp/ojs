@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/submission/DAO.php
  *
@@ -52,15 +53,9 @@ class DAO extends \PKP\submission\DAO
             ->leftJoin('publications AS p', 's.current_publication_id', '=', 'p.publication_id')
             ->leftJoin('publication_settings AS ps', 'p.publication_id', '=', 'ps.publication_id')
             ->when(
-                $issueId,
-                fn (Builder $q) => $q->leftJoin(
-                    'publication_settings AS psi',
-                    fn (JoinClause $j) => $j->on('p.publication_id', '=', 'psi.publication_id')
-                        ->where('psi.setting_name', '=', 'issueId')
-                        ->where('psi.locale', '=', '')
-                )
+                $pubIdType != null,
+                fn (Builder $q) => $q->leftJoin('publication_settings AS pspidt', 'p.publication_id', '=', 'pspidt.publication_id')
             )
-            ->when($pubIdType != null, fn (Builder $q) => $q->leftJoin('publication_settings AS pspidt', 'p.publication_id', '=', 'pspidt.publication_id'))
             ->when($title != null, fn (Builder $q) => $q->leftJoin('publication_settings AS pst', 'p.publication_id', '=', 'pst.publication_id'))
             ->when(
                 $author != null,
@@ -89,7 +84,7 @@ class DAO extends \PKP\submission\DAO
             ->when($pubIdType != null, fn (Builder $q) => $q->where('pspidt.setting_name', '=', "pub-id::{$pubIdType}")->whereNotNull('pspidt.setting_value'))
             ->when($title != null, fn (Builder $q) => $q->where('pst.setting_name', '=', 'title')->where('pst.setting_value', 'LIKE', "%{$title}%"))
             ->when($author != null, fn (Builder $q) => $q->whereRaw("CONCAT(COALESCE(asgs.setting_value, ''), ' ', COALESCE(asfs.setting_value, '')) LIKE ?", [$author]))
-            ->when($issueId != null, fn (Builder $q) => $q->where('psi.setting_value', '=', $issueId))
+            ->when($issueId != null, fn (Builder $q) => $q->where('p.issue_id', '=', $issueId))
             ->when(
                 $pubIdSettingName,
                 fn (Builder $q) => $q->when(
