@@ -35,7 +35,7 @@
     "moment": "^2.29.4",
     "ofetch": "^1.3.3",
     "pinia": "^2.1.7",
-    "primevue": "^4.0.5",
+    "primevue": "^4.2.5",
     "swiper": "^10.3.1",
     "tiny-emitter": "^2.1.0",
     "tinymce": "^7.6.0",
