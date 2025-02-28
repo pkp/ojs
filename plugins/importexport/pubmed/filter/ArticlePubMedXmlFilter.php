@@ -9,7 +9,7 @@
  *
  * @class ArticlePubMedXmlFilter
  *
- * @brief Class that converts a Article to a PubMed XML document.
+ * @brief Class that converts an Article to a PubMed XML document.
  */
 
 namespace APP\plugins\importexport\pubmed\filter;
@@ -21,9 +21,12 @@ use APP\issue\Issue;
 use APP\journal\Journal;
 use APP\journal\JournalDAO;
 use APP\submission\Submission;
+use DOMDocument;
+use DOMElement;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\filter\PersistableFilter;
+use PKP\i18n\interfaces\LocaleInterface;
 use PKP\i18n\LocaleConversion;
 
 class ArticlePubMedXmlFilter extends PersistableFilter
@@ -33,10 +36,8 @@ class ArticlePubMedXmlFilter extends PersistableFilter
     //
     /**
      * Get the representation export filter group name
-     *
-     * @return string
      */
-    public function getRepresentationExportFilterGroupName()
+    public function getRepresentationExportFilterGroupName(): string
     {
         return 'article-galley=>pubmed-xml';
     }
@@ -48,10 +49,8 @@ class ArticlePubMedXmlFilter extends PersistableFilter
      * @see Filter::process()
      *
      * @param array $submissions Array of submissions
-     *
-     * @return \DOMDocument
      */
-    public function &process(&$submissions)
+    public function &process(&$submissions): DOMDocument
     {
         // Create the XML document
         $implementation = new \DOMImplementation();
@@ -77,11 +76,11 @@ class ArticlePubMedXmlFilter extends PersistableFilter
 
             $publication = $submission->getCurrentPublication();
 
-            $locale = $publication->getData('locale');
-            if ($locale == 'en') {
-                $articleNode->appendChild($doc->createElement('ArticleTitle'))->appendChild($doc->createTextNode($publication->getLocalizedTitle($locale, 'html')));
+            $publicationLocale = $publication->getData('locale');
+            if ($publicationLocale == LocaleInterface::DEFAULT_LOCALE) {
+                $articleNode->appendChild($doc->createElement('ArticleTitle'))->appendChild($doc->createTextNode($publication->getLocalizedTitle($publicationLocale, 'html')));
             } else {
-                $articleNode->appendChild($doc->createElement('VernacularTitle'))->appendChild($doc->createTextNode($publication->getLocalizedTitle($locale, 'html')));
+                $articleNode->appendChild($doc->createElement('VernacularTitle'))->appendChild($doc->createTextNode($publication->getLocalizedTitle($publicationLocale, 'html')));
             }
 
             $startPage = $publication->getStartingPage();
@@ -99,7 +98,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
                 $articleNode->appendChild($doiNode);
             }
 
-            $articleNode->appendChild($doc->createElement('Language'))->appendChild($doc->createTextNode(LocaleConversion::get3LetterIsoFromLocale($locale)));
+            $articleNode->appendChild($doc->createElement('Language'))->appendChild($doc->createTextNode(LocaleConversion::get3LetterIsoFromLocale($publicationLocale)));
 
             $authorListNode = $doc->createElement('AuthorList');
             foreach ($publication->getData('authors') ?? [] as $author) {
@@ -132,7 +131,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
 
             // FIXME: Revision dates
 
-            if ($abstract = PKPString::html2text($publication->getLocalizedData('abstract', $locale))) {
+            if ($abstract = PKPString::html2text($publication->getLocalizedData('abstract', $publicationLocale))) {
                 $articleNode->appendChild($doc->createElement('Abstract'))->appendChild($doc->createTextNode($abstract));
             }
 
@@ -145,12 +144,12 @@ class ArticlePubMedXmlFilter extends PersistableFilter
     /**
      * Construct and return a Journal element.
      *
-     * @param \DOMDocument $doc
+     * @param DOMDocument $doc
      * @param Journal $journal
      * @param Issue $issue
      * @param Submission $submission
      */
-    public function createJournalNode($doc, $journal, $issue, $submission)
+    public function createJournalNode($doc, $journal, $issue, $submission): DOMElement
     {
         $journalNode = $doc->createElement('Journal');
 
@@ -195,29 +194,31 @@ class ArticlePubMedXmlFilter extends PersistableFilter
     /**
      * Generate and return an author node representing the supplied author.
      *
-     * @param \DOMDocument $doc
+     * @param DOMDocument $doc
      * @param Journal $journal
      * @param Issue $issue
      * @param Submission $submission
      * @param Author $author
      *
-     * @return \DOMElement
+     * @return DOMElement
      */
     public function generateAuthorNode($doc, $journal, $issue, $submission, $author)
     {
         $authorElement = $doc->createElement('Author');
+        $publication = $submission->getCurrentPublication();
+        $publicationLocale = $publication->getData('locale');
 
-        if (empty($author->getLocalizedFamilyName())) {
+        if (empty($author->getFamilyName($publicationLocale))) {
             $authorElement->appendChild($node = $doc->createElement('FirstName'));
             $node->setAttribute('EmptyYN', 'Y');
-            $authorElement->appendChild($doc->createElement('LastName'))->appendChild($doc->createTextNode(ucfirst($author->getLocalizedGivenName())));
+            $authorElement->appendChild($doc->createElement('LastName'))->appendChild($doc->createTextNode(ucfirst($author->getGivenName($publicationLocale))));
         } else {
-            $authorElement->appendChild($doc->createElement('FirstName'))->appendChild($doc->createTextNode(ucfirst($author->getLocalizedGivenName())));
-            $authorElement->appendChild($doc->createElement('LastName'))->appendChild($doc->createTextNode(ucfirst($author->getLocalizedFamilyName())));
+            $authorElement->appendChild($doc->createElement('FirstName'))->appendChild($doc->createTextNode(ucfirst($author->getGivenName($publicationLocale))));
+            $authorElement->appendChild($doc->createElement('LastName'))->appendChild($doc->createTextNode(ucfirst($author->getFamilyName($publicationLocale))));
         }
         foreach ($author->getAffiliations() as $affiliation) {
             $affiliationInfoElement = $doc->createElement('AffiliationInfo');
-            $affiliationInfoElement->appendChild($doc->createElement('Affiliation'))->appendChild($doc->createTextNode($affiliation->getLocalizedName()));
+            $affiliationInfoElement->appendChild($doc->createElement('Affiliation'))->appendChild($doc->createTextNode($affiliation->getLocalizedName($publicationLocale)));
             if ($affiliation->getRor()) {
                 $affiliationInfoElement->appendChild($identifierNode = $doc->createElement('Identifier'))->appendChild($doc->createTextNode($affiliation->getRor()));
                 $identifierNode->setAttribute('Source', 'ROR');
@@ -241,13 +242,11 @@ class ArticlePubMedXmlFilter extends PersistableFilter
     /**
      * Generate and return a date element per the PubMed standard.
      *
-     * @param \DOMDocument $doc
+     * @param DOMDocument $doc
      * @param string $pubDate
      * @param string $pubStatus
-     *
-     * @return \DOMElement
      */
-    public function generatePubDateDom($doc, $pubDate, $pubStatus)
+    public function generatePubDateDom($doc, $pubDate, $pubStatus): DOMElement
     {
         $pubDateNode = $doc->createElement('PubDate');
         $pubDateNode->setAttribute('PubStatus', $pubStatus);
