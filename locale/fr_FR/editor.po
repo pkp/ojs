@@ -2,13 +2,14 @@
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
 # Germán Huélamo Bautista <germanhuelamo@gmail.com>, 2024.
 # François Théron <francois.theron@uvsq.fr>, 2025.
+# Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
 "PO-Revision-Date: 2025-02-28 10:48+0000\n"
-"Last-Translator: François Théron <francois.theron@uvsq.fr>\n"
+"Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/editor/fr_FR/"
 ">\n"
 "Language: fr_FR\n"
@@ -477,7 +478,7 @@ msgstr "Sélectionner les fichiers d'épreuves"
 
 msgid "editor.submission.editorial.finalDraftDescription"
 msgstr ""
-"Les versions finales sur cette liste sont transformées par un secrétaire de "
+"Les versions finales sur cette liste sont transformées par le secrétariat de "
 "rédaction en versions révisées, téléchargées dans <span class="
 "\"pkp_help_title\">Révision</span>."
 
