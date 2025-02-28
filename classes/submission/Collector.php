@@ -56,12 +56,20 @@ class Collector extends \PKP\submission\Collector
 
         // By issue IDs
         if (is_array($this->issueIds)) {
-            $q->whereIn('po.issue_id', $this->issueIds);
+            $q->whereIn('s.submission_id', function ($query) {
+                $query->select('p.submission_id')
+                    ->from('publications as p')
+                    ->whereIn('p.issue_id', $this->issueIds);
+            });
         }
 
         // By section IDs
         if (is_array($this->sectionIds)) {
-            $q->whereIn('po.section_id', $this->sectionIds);
+            $q->whereIn('s.submission_id', function ($query) {
+                $query->select('p.submission_id')
+                    ->from('publications as p')
+                    ->whereIn('p.section_id', $this->sectionIds);
+            });
         }
 
         return $q;

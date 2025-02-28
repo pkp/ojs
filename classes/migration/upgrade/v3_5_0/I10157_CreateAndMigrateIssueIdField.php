@@ -2,6 +2,9 @@
 
 namespace APP\migration\upgrade\v3_5_0;
 
+use Illuminate\Database\MariaDbConnection;
+use Illuminate\Database\MySqlConnection;
+use Illuminate\Database\PostgresConnection;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
@@ -18,7 +21,7 @@ class I10157_CreateAndMigrateIssueIdField extends \PKP\migration\Migration
             $table->bigInteger('issue_id')->nullable()->after('submission_id');
         });
 
-        // add the foreign key constraint and index,
+        // add the foreign key constraint and index
         Schema::table('publications', function (Blueprint $table) {
             $table->foreign('issue_id')
                 ->references('issue_id')
@@ -28,22 +31,31 @@ class I10157_CreateAndMigrateIssueIdField extends \PKP\migration\Migration
         });
 
         // migrate data from publication_settings to the new issue_id column.
-        if (DB::getDriverName() === 'pgsql') {
-            DB::statement("
-                UPDATE publications
-                SET issue_id = ps.setting_value::bigint
-                FROM publication_settings ps
-                WHERE publications.publication_id = ps.publication_id
-                AND ps.setting_name = 'issueId'
-            ");
-        } else {
-            DB::statement("
-                UPDATE publications p
-                JOIN publication_settings ps
-                    ON p.publication_id = ps.publication_id
+        $connection = DB::connection();
+        switch (true) {
+            case $connection instanceof PostgresConnection:
+                $connection->statement("
+                    UPDATE publications
+                    SET issue_id = ps.setting_value::bigint
+                    FROM publication_settings ps
+                    WHERE publications.publication_id = ps.publication_id
                     AND ps.setting_name = 'issueId'
-                SET p.issue_id = ps.setting_value
-            ");
+                ");
+                break;
+
+            case $connection instanceof MySqlConnection:
+            case $connection instanceof MariaDbConnection:
+                $connection->statement("
+                    UPDATE publications p
+                    JOIN publication_settings ps
+                        ON p.publication_id = ps.publication_id
+                        AND ps.setting_name = 'issueId'
+                    SET p.issue_id = ps.setting_value
+                ");
+                break;
+
+            default:
+                throw new \Exception('Unsupported database driver');
         }
         // clear the old data of issueId in publication_settings
         DB::table('publication_settings')
