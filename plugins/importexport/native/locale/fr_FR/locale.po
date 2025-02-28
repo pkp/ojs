@@ -1,8 +1,9 @@
 # Rodolphe Lemétayer <rlemetayer@protonmail.com>, 2024.
+# Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-06-21 13:38+0000\n"
-"Last-Translator: Rodolphe Lemétayer <rlemetayer@protonmail.com>\n"
+"PO-Revision-Date: 2025-02-28 14:35+0000\n"
+"Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-native/fr_FR/>\n"
 "Language: fr_FR\n"
@@ -121,8 +122,7 @@ msgstr ""
 
 msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
 msgstr ""
-"L'élément d'identification du numéro est manquant pour l'article  "
-"« {$articleTitle} »."
+"L'identifiant du numéro est manquant pour l'article « {$articleTitle} »."
 
 msgid "plugins.importexport.native.import.error.publishedDateMissing"
 msgstr ""
