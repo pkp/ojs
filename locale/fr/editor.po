@@ -1,13 +1,15 @@
 # Simon Mathdoc <karacaca38@outlook.fr>, 2021.
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
 # Germán Huélamo Bautista <germanhuelamo@gmail.com>, 2024.
+# François Théron <francois.theron@uvsq.fr>, 2025.
+# Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
-"PO-Revision-Date: 2024-05-10 23:21+0000\n"
-"Last-Translator: Germán Huélamo Bautista <germanhuelamo@gmail.com>\n"
+"PO-Revision-Date: 2025-02-28 14:35+0000\n"
+"Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/editor/fr_FR/"
 ">\n"
 "Language: fr_FR\n"
@@ -249,13 +251,13 @@ msgid "editor.issues.access"
 msgstr "Accès"
 
 msgid "editor.issues.cover"
-msgstr "Page couverture"
+msgstr "Page de couverture"
 
 msgid "editor.issues.confirmIssueDelete"
 msgstr ""
-"Tous les articles seront retournés dans la file d'attente d'évaluation et "
-"tous les fichiers associés seront supprimés définitivement. Voulez-vous "
-"vraiment supprimer ce numéro ?"
+"Tous les articles seront renvoyés en file d'attente d'évaluation et tous les "
+"fichiers associés seront supprimés définitivement. Voulez-vous vraiment "
+"supprimer ce numéro ?"
 
 msgid "editor.issues.resetIssueOrder"
 msgstr ""
@@ -271,7 +273,7 @@ msgid "editor.issues.issueData"
 msgstr "Données du numéro"
 
 msgid "editor.issues.saveChanges"
-msgstr "Enregistrer les modifications à la table des matières ?"
+msgstr "Enregistrer les modifications dans la table des matières ?"
 
 msgid "editor.issues.default"
 msgstr "Par défaut"
@@ -298,10 +300,10 @@ msgid "editor.issues.confirmPublish"
 msgstr "Êtes-vous certain de vouloir publier le nouveau numéro ?"
 
 msgid "editor.issues.confirmUnpublish"
-msgstr "Êtes-vous certain que vous souhaitez retirer ce numéro publié ?"
+msgstr "Êtes-vous certain de vouloir dépublier ce numéro publié ?"
 
 msgid "editor.issues.confirmSetCurrentIssue"
-msgstr "Etes-vous sûr de vouloir définir ce volume comme étant le courant ?"
+msgstr "Etes-vous sûr de vouloir définir ce volume comme étant celui en cours ?"
 
 msgid "editor.issues.publicArticleIdExists"
 msgstr "Impossible d'enregistrer l'identifiant public pour cet article :"
@@ -370,13 +372,13 @@ msgid "grid.action.addIssueGalley"
 msgstr "Créer une épreuve pour le numéro"
 
 msgid "grid.action.setCurrentIssue"
-msgstr "Définir le volume courant"
+msgstr "Définir le volume en cours"
 
 msgid "editor.navigation.issueArchive"
 msgstr "Numéros précédents"
 
 msgid "editor.article.designateReviewVersion"
-msgstr "Désigner le fichier original comme le fichier d'évaluation"
+msgstr "Désigner le fichier original en tant que fichier évalué"
 
 msgid "editor.article.decision"
 msgstr "Décision"
@@ -406,7 +408,7 @@ msgid "editor.submissions.averageTime"
 msgstr "Semaines"
 
 msgid "editor.submissions.lastCompleted"
-msgstr "Dernière complétée"
+msgstr "Dernière achevée"
 
 msgid "editor.submissions.assignedTo"
 msgstr "Assigné au rédacteur en chef"
@@ -445,7 +447,7 @@ msgstr "Demander le paiement"
 
 msgid "editor.article.removeCoverImageFileNotFound"
 msgstr ""
-"L'image de page couverture à supprimer n'a pu être repérée. Elle est peut-"
+"L'image de page couverture à supprimer n'a pu être trouvée. Elle est peut-"
 "être déjà supprimée. Essayer de recharger la page."
 
 msgid "grid.action.removeArticle"
@@ -463,7 +465,7 @@ msgid "editor.issues.invalidAccessDate"
 msgstr "La date d'accès n'est pas valide."
 
 msgid "editor.issues.editIssueGalley"
-msgstr "Éditer les épreuves du numéro"
+msgstr "Modifier les épreuves du numéro"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
 msgstr ""
@@ -476,9 +478,9 @@ msgstr "Sélectionner les fichiers d'épreuves"
 
 msgid "editor.submission.editorial.finalDraftDescription"
 msgstr ""
-"Les versions finales sur cette liste sont transformées par un éditeur en "
-"versions éditées et téléversées dans <span class=\"pkp_help_title\""
-">Édition</span>."
+"Les versions finales sur cette liste sont transformées par le secrétariat de "
+"rédaction en versions révisées, téléchargées dans <span class="
+"\"pkp_help_title\">Révision</span>."
 
 msgid "editor.submission.proof.manageProofFilesDescription"
 msgstr ""
@@ -490,9 +492,9 @@ msgstr ""
 
 msgid "editor.publicIdentificationExistsForTheSameType"
 msgstr ""
-"Le public identifié comme '{$publicIdentifier}' existe déjà pour un autre "
-"objet de même type. Veuillez indiquer un public unique pour l'objet de même "
-"type à l'intérieur de votre revue."
+"L'identifiant public '{$publicIdentifier}' existe déjà pour un autre objet "
+"de même type. Veuillez indiquer un identifiant public unique pour les objet "
+"de même type à l'intérieur de votre revue."
 
 msgid "editor.article.coverImage"
 msgstr "Image de la page de couverture"

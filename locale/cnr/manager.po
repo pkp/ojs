@@ -1,7 +1,7 @@
 # Milutin Markovic <admin@fcjk.me>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-02-04 10:33+0000\n"
+"PO-Revision-Date: 2025-02-26 13:03+0000\n"
 "Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
 "Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "cnr/>\n"
@@ -1741,3 +1741,82 @@ msgstr ""
 
 msgid "manager.subscriptionTypes.form.individual"
 msgstr "Individualni (korisnici su provjereni preko prijave u sistem)"
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr ""
+"Pretplate zahtijevaju podatke o članstvu (npr. Udruženje, organizacija, "
+"konzorcij itd.)"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Označite u potvrdni okvir."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Opcije"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr ""
+"Nemojte ovaj tip pretplate učiniti javnim ili vidljivim <br />(u dijelu za "
+"Pretplate ili u dijelu O časopisu)."
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Označite u potvrdni okvir."
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Sačuvaj i kreiraj sljedeće"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Ime tipa"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Tip pretplate sa ovim imenom već postoji."
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Potrebno je ime tipa pretplate."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Tip pretplate"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Nema kreiranih tipova pretplate."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Uspješno kreiran tip pretplate."
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Poveznica na stranicu s opisom pretplata koje nudite."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Ova poveznica bit će prikazana samo kada se pośetilac prijavi."
+
+msgid "manager.setup.categories"
+msgstr "Kategorije"
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr ""
+"Poveznica na stranicu koja opisuje trenutne i prethodne pretplate pośetilaca."
+
+msgid "plugins.importexport.common.settings"
+msgstr "Podešavanja"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "Podešavanja za DOI dodatak"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Članci"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Brojevi"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Prelomi"
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Dodatak nije u potpunosti podešen."
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Zahtijevi dodatka nisu ispunjeni"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+"Ako želite da koristite ovaj dodatak idite u kategoriju dodataka \"Public "
+"Identifier (Javni dodaci)\" i uključite i konfigurišite dodatak DOI."
