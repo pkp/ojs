@@ -28,7 +28,6 @@ use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use Firebase\JWT\Key;
-use PKP\citation\CitationDAO;
 use PKP\config\Config;
 use PKP\core\Core;
 use PKP\core\PKPApplication;
@@ -295,11 +294,8 @@ class ArticleHandler extends Handler
 
         // Citations
         if ($publication->getData('citationsRaw')) {
-            $citationDao = DAORegistry::getDAO('CitationDAO'); /** @var CitationDAO $citationDao */
-            $parsedCitations = $citationDao->getByPublicationId($publication->getId());
             $templateMgr->assign([
-                'parsedCitations' => $parsedCitations->toArray(),
-            ]);
+                'parsedCitations' => Repo::citation()->getByPublicationId($publication->getId())]);
         }
 
         $rorIconPath = Core::getBaseDir() . '/' . PKP_LIB_PATH . '/templates/images/ror.svg';
