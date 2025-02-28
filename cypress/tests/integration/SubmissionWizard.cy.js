@@ -383,13 +383,9 @@ describe('Submission Wizard', function() {
         cy.get('.pkpSteps button:contains("Details")').click({ force: true });
         cy.setTinyMceContent('titleAbstract-title-control-en', submission.title);
         cy.setTinyMceContent('titleAbstract-abstract-control-en', submission.abstract);
-       // cy.pause();
         cy.get('#titleAbstract-keywords-control-en').type(submission.keywords, {delay: 0});
-        //cy.pause();
         cy.get('li:contains("' + submission.keywords + '")');
-        //cy.pause();
         cy.get('#titleAbstract-keywords-control-en').type('{downarrow}{enter}');
-        //cy.pause();
         cy.get('#citations-citationsRaw-control').type(submission.citations);
 
         cy.get('.pkpSteps button:contains("Upload Files")').click({ force: true });
@@ -406,7 +402,6 @@ describe('Submission Wizard', function() {
         Object.keys(submission.metadata.autosuggest).forEach(field => {
             cy.get('#forTheEditors-' + field + '-control-en').type(submission.metadata.autosuggest[field], {delay: 0});
             cy.get('li:contains("' + submission.metadata.autosuggest[field] + '")');
-            //cy.pause()
             cy.get('#forTheEditors-' + field + '-control-en').type('{downarrow}{enter}');
         });
         Object.keys(submission.metadata.string).forEach(field => {
@@ -602,7 +597,6 @@ describe('Submission Wizard', function() {
         cy.get('[role=dialog]').find('button:contains("Save")').click();
         cy.get('.pkpSteps button:contains("For the Editors")').click({ force: true });
         cy.get('#forTheEditors-subjects-control-fr_CA').type('Sociologie française', {delay: 0});
-        //cy.pause();
         cy.get('li:contains("Sociologie française")');
         cy.get('#forTheEditors-subjects-control-fr_CA').type('{downarrow}{enter}');
 
