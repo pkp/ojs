@@ -1,4 +1,4 @@
-# Pierre Couchet <pierre.couchet@gmail.com>, 2022.
+# Pierre Couchet <pierre.couchet@gmail.com>, 2022, 2025.
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
 # Germán Huélamo Bautista <germanhuelamo@gmail.com>, 2024.
 # Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2025.
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T09:43:26+00:00\n"
 "PO-Revision-Date: 2025-02-28 10:42+0000\n"
-"Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
+"Last-Translator: Pierre Couchet <pierre.couchet@gmail.com>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/admin/fr_FR/>"
 "\n"
 "Language: fr_FR\n"
@@ -223,7 +223,7 @@ msgstr ""
 
 msgid "admin.siteManagement.description"
 msgstr ""
-"Ajouter, modifier ou supprimer des revues de ce site et gérer les paramètres "
+"Ajouter, éditer ou enlever des revues de ce site et gérer des paramètres "
 "généraux."
 
 msgid "admin.settings.statistics.geo.description"
