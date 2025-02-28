@@ -112,6 +112,7 @@ class Application extends PKPApplication
             'IssueGalleyDAO' => 'APP\issue\IssueGalleyDAO',
             'IssueFileDAO' => 'APP\issue\IssueFileDAO',
             'JournalDAO' => 'APP\journal\JournalDAO',
+            'GalleyDAO' => 'APP\galley\DAO',
             'OAIDAO' => 'APP\oai\ojs\OAIDAO',
             'OJSCompletedPaymentDAO' => 'APP\payment\ojs\OJSCompletedPaymentDAO',
             'SubscriptionDAO' => 'APP\subscription\SubscriptionDAO',
