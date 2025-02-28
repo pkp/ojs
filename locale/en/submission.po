@@ -252,7 +252,7 @@ msgid "publication.datePublished"
 msgstr "Date Published"
 
 msgid "publication.editDisabled"
-msgstr "This version has been published and can not be edited."
+msgstr "Warning: This version has been published. Editing it may impact the published content."
 
 msgid "publication.event.published"
 msgstr "The submission was published."
