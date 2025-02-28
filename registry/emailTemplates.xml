@@ -77,8 +77,8 @@
 	<email key="SUBMISSION_NEEDS_EDITOR" name="mailable.submissionNeedsEditor.name" subject="emails.submissionNeedsEditor.subject" body="emails.submissionNeedsEditor.body"/>
 	<email key="PAYMENT_REQUEST_NOTIFICATION" name="mailable.paymentRequest.name" subject="emails.paymentRequestNotification.subject" body="emails.paymentRequestNotification.body"/>
 	<email key="CHANGE_EMAIL" name="mailable.changeProfileEmailInvitationNotify.name" subject="emails.changeProfileEmailInvitationNotify.subject" body="emails.changeProfileEmailInvitationNotify.body"/>
-	<email key="ORCID_COLLECT_AUTHOR_ID" name="orcidProfile.orcidCollectAuthorId.name" subject="emails.orcidCollectAuthorId.subject" body="emails.orcidCollectAuthorId.body"/>
-	<email key="ORCID_REQUEST_AUTHOR_AUTHORIZATION" name="orcidProfile.orcidRequestAuthorAuthorization.name"  subject="emails.orcidRequestAuthorAuthorization.subject" body="emails.orcidRequestAuthorAuthorization.body"/>
+	<email key="ORCID_COLLECT_AUTHOR_ID" name="orcid.orcidCollectAuthorId.name" subject="emails.orcidCollectAuthorId.subject" body="emails.orcidCollectAuthorId.body"/>
+	<email key="ORCID_REQUEST_AUTHOR_AUTHORIZATION" name="orcid.orcidRequestAuthorAuthorization.name"  subject="emails.orcidRequestAuthorAuthorization.subject" body="emails.orcidRequestAuthorAuthorization.body"/>
 	<email key="USER_ROLE_ASSIGNMENT_INVITATION" name="mailable.userRoleAssignmentInvitationNotify.name" subject="emails.userRoleAssignmentInvitationNotify.subject" body="emails.userRoleAssignmentInvitationNotify.body"/>
 	<email key="USER_ROLE_END" name="mailable.userRoleEndNotify.name" subject="emails.userRoleEndNotify.subject" body="emails.userRoleEndNotify.body"/>
 	<email key="ORCID_REQUEST_UPDATE_SCOPE" name="orcid.orcidRequestUpdateScope.name"  subject="emails.orcidRequestUpdateScope.subject" body="emails.orcidRequestUpdateScope.body"/>
