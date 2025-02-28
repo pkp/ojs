@@ -2,14 +2,14 @@
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
 # Germán Huélamo Bautista <germanhuelamo@gmail.com>, 2024.
 # Pierre Couchet <pierre.couchet@gmail.com>, 2024.
-# Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2024.
+# Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:24+00:00\n"
-"PO-Revision-Date: 2024-12-13 22:58+0000\n"
-"Last-Translator: Germán Huélamo Bautista <germanhuelamo@gmail.com>\n"
+"PO-Revision-Date: 2025-02-28 10:42+0000\n"
+"Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/locale/fr_FR/"
 ">\n"
 "Language: fr_FR\n"
@@ -868,7 +868,10 @@ msgstr ""
 msgid "manager.setup.basicEditorialStepsDescription"
 msgstr ""
 "Étapes : Soumission en attente &gt; Soumission en évaluation &gt; Soumission "
-"en édition &gt; Table des matières.<br /><br />"
+"en édition &gt; Table des matières.<br /><br />\n"
+"Sélectionnez un modèle pour gérer ces aspects du processus éditorial. (Pour "
+"désigner un rédacteur en chef et des rédacteurs de rubrique, consultez la "
+"rubrique Editors in Journal Management.)"
 
 msgid "manager.setup.referenceLinkingDescription"
 msgstr ""
