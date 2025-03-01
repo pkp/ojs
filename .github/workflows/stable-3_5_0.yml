@@ -4,7 +4,7 @@ on:
       - '*'
   pull_request:
     branches:
-      ['main']
+      ['stable-3_5_0']
 name: ojs
 jobs:
   ojs:
@@ -40,5 +40,5 @@ jobs:
       - uses: pkp/pkp-github-actions@v1
         with:
           node_version: 20
-          dataset_branch: 'main'
+          dataset_branch: 'stable-3_5_0'
           DEBUG_IN_TMATE: false
