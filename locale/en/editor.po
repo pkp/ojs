@@ -417,6 +417,9 @@ msgstr "The cover image you requested to delete could not be found. It may have 
 msgid "grid.action.removeArticle"
 msgstr "Remove Article From Issue"
 
+msgid "grid.action.addReviewerRecommendation"
+msgstr "Add Recommendation"
+
 msgid "editor.article.remove"
 msgstr "Remove"
 
