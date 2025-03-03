@@ -35,7 +35,7 @@ jobs:
             database: pgsql
             test: 'test'
 
-    name: ojs
+    name: ojs-stable-3_5_0-schedule
     steps:
       - uses: pkp/pkp-github-actions@v1
         with:
