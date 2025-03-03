@@ -1,12 +1,12 @@
-# Primož Svetek <primoz.svetek@gmail.com>, 2022, 2023.
+# Primož Svetek <primoz.svetek@gmail.com>, 2022, 2023, 2025.
 # Matevž Rudolf <matevz.rudolf@uni-lj.si>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:18-08:00\n"
-"PO-Revision-Date: 2024-03-07 15:12+0000\n"
-"Last-Translator: Matevž Rudolf <matevz.rudolf@uni-lj.si>\n"
+"PO-Revision-Date: 2025-03-03 09:17+0000\n"
+"Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/emails/sl/"
 ">\n"
 "Language: sl\n"
@@ -108,8 +108,8 @@ msgstr ""
 "številka revije {$contextName} : {$issueIdentification}. Vabimo vas, da "
 "pogledate kazalo vsebine in da preberete članke in ostale stvari, ki vas "
 "zanimajo. Zahvaljujemo se tudi našim avtorjem, recenzentom in lektorjem za "
-"njihov dragoc prispevek pri tem delu. </p><p>Hvala za zanimanje za naše delo,"
-"</p>{$signature}"
+"njihov dragoc prispevek pri tem delu. </p><div>{$issueToc}</div><p>Hvala za "
+"zanimanje za naše delo,</p>{$signature}"
 
 msgid "emails.editorAssign.subject"
 msgstr "Kot urednik ste bili dodeljeni na prispevek {$contextName}"
