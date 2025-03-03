@@ -11,5 +11,5 @@
  */
 
 return new \PKP\handler\APIHandler(
-    new \PKP\API\v1\reviewers\recommendations\ReviewerRecommendationController()
+    new \APP\API\v1\reviewers\recommendations\ReviewerRecommendationController()
 );
