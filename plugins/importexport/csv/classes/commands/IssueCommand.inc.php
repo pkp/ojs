@@ -144,17 +144,17 @@ class IssueCommand
 
                 $fieldsList = array_pad($fields, $this->_expectedRowSize, null);
 
-                $reason = InvalidRowValidations::validateArticleFileIsValid($data->articleFilepath, $this->_sourceDir);
+                $reason = InvalidRowValidations::validateArticleFileIsValid($data->articleGalleyFilename, $this->_sourceDir);
 
                 if (!is_null($reason)) {
                     CSVFileHandler::processFailedRow($invalidCsvFile, $fields, $this->_expectedRowSize, $reason, $this->_failedRows);
                     continue;
                 }
 
-                if ($data->galleyFilenames) {
+                if ($data->suppFilenames) {
                     $reason = InvalidRowValidations::validateArticleGalleys(
-                        $data->galleyFilenames,
-                        $data->galleyLabels,
+                        $data->suppFilenames,
+                        $data->suppLabels,
                         $this->_sourceDir
                     );
 
@@ -229,8 +229,8 @@ class IssueCommand
 
                 // Copy Submission file. If an error occured, save this row as invalid,
                 // delete the saved submission and continue the loop.
-                $articleFilePathId = $this->_saveSubmissionFile(
-                    $data->articleFilepath,
+                $articleGalleyFilenameId = $this->_saveSubmissionFile(
+                    $data->articleGalleyFilename,
                     $journal->getId(),
                     $submission->getId(),
                     $invalidCsvFile,
@@ -238,33 +238,32 @@ class IssueCommand
                     $fieldsList
                 );
 
-                if (is_null($articleFilePathId)) {
+                if (is_null($articleGalleyFilenameId)) {
                     continue;
                 }
 
-                // // Array to store each galley ID to its respective galley file
-                $galleyIds = [];
-                foreach (array_map('trim', explode(';', $data->galleyFilenames)) as $galleyFile) {
-                    $galleyFileId = $this->_saveSubmissionFile(
-                        $galleyFile,
+                $suppIds = [];
+                foreach (array_map('trim', explode(';', $data->suppFilenames)) as $suppFile) {
+                    $suppFileId = $this->_saveSubmissionFile(
+                        $suppFile,
                         $journal->getId(),
                         $submission->getId(),
                         $invalidCsvFile,
-                        __('plugins.importexport.csv.errorWhileSavingSubmissionGalley', ['galley' => $galleyFile]),
+                        __('plugins.importexport.csv.errorWhileSavingSubmissionGalley', ['supp' => $suppFile]),
                         $fieldsList
                     );
 
-                    if (is_null($galleyFileId)) {
-                        $this->_fileService->delete($articleFilePathId);
+                    if (is_null($suppFileId)) {
+                        $this->_fileService->delete($articleGalleyFilenameId);
 
-                        foreach($galleyIds as $galleyItem) {
-                            $this->_fileService->delete($galleyItem['id']);
+                        foreach($suppIds as $suppItem) {
+                            $this->_fileService->delete($suppItem['id']);
                         }
 
                         continue;
                     }
 
-                    $galleyIds[] = ['file' => $galleyFile, 'id' => $galleyFileId];
+                    $suppIds[] = ['file' => $suppFile, 'id' => $suppFileId];
                 }
 
 				import('plugins.importexport.csv.classes.processors.PublicationProcessor');
@@ -275,14 +274,14 @@ class IssueCommand
 
                 // Process submission file data into the database
 				import('plugins.importexport.csv.classes.processors.SubmissionFileProcessor');
-                $articleFileCompletePath = "{$this->_sourceDir}/{$data->articleFilepath}";
+                $articleFileCompletePath = "{$this->_sourceDir}/{$data->articleGalleyFilename}";
                 SubmissionFileProcessor::process(
                     $data->locale,
                     $this->_user->getId(),
                     $submission->getId(),
                     $articleFileCompletePath,
                     $genreId,
-                    $articleFilePathId
+                    $articleGalleyFilenameId
                 );
 
                 // Now, process the submission file for all article galleys

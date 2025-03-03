@@ -105,25 +105,25 @@ class InvalidRowValidations
      * Perform all necessary validations for article galleys. Returns the reason if an error occurred,
      * or null if everything is correct.
 	 *
-	 * @param string $galleyFilenames
-	 * @param string $galleyLabels
+	 * @param string $suppFilenames
+	 * @param string $suppLabels
 	 * @param string $sourceDir
 	 *
 	 * @return string|null
      */
-    public static function validateArticleGalleys($galleyFilenames, $galleyLabels, $sourceDir)
+    public static function validateArticleGalleys($suppFilenames, $suppLabels, $sourceDir)
     {
-        $galleyFilenamesArray = explode(';', $galleyFilenames);
-        $galleyLabelsArray = explode(';', $galleyLabels);
+        $suppFilenamesArray = explode(';', $suppFilenames);
+        $suppLabelsArray = explode(';', $suppLabels);
 
-        if (count($galleyFilenamesArray) !== count($galleyLabelsArray)) {
+        if (count($suppFilenamesArray) !== count($suppLabelsArray)) {
             return __('plugins.importexport.csv.invalidNumberOfLabelsAndGalleys');
         }
 
-        foreach($galleyFilenamesArray as $galleyFilename) {
-            $galleyPath = "{$sourceDir}/{$galleyFilename}";
-            if (!is_readable($galleyPath)) {
-                return __('plugins.importexport.csv.invalidGalleyFile', ['filename' => $galleyFilename]);
+        foreach($suppFilenamesArray as $suppFilename) {
+            $suppPath = "{$sourceDir}/{$suppFilename}";
+            if (!is_readable($suppPath)) {
+                return __('plugins.importexport.csv.invalidGalleyFile', ['filename' => $suppFilename]);
             }
         }
 
