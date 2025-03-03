@@ -5,7 +5,7 @@ on:
   pull_request:
     branches:
       ['stable-3_3_0']
-name: ojs
+name: ojs-stable-3_3_0
 jobs:
   ojs:
     runs-on: ubuntu-latest
