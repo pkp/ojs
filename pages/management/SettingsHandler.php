@@ -16,10 +16,11 @@
 
 namespace APP\pages\management;
 
+use APP\API\v1\reviewers\recommendations\resources\ReviewerRecommendationResource;
 use APP\components\forms\context\AccessForm;
 use APP\components\forms\context\ArchivingLockssForm;
+use APP\components\listPanels\ReviewerRecommendationsListPanel;
 use APP\template\TemplateManager;
-use PKP\API\v1\reviewers\recommendations\resources\ReviewerRecommendationResource;
 use PKP\components\forms\context\PKPContextStatisticsForm;
 use PKP\components\forms\context\PKPDisableSubmissionsForm;
 use PKP\components\forms\context\PKPDoiRegistrationSettingsForm;
@@ -30,7 +31,6 @@ use PKP\components\forms\context\PKPPaymentSettingsForm;
 use PKP\components\forms\context\PKPReviewGuidanceForm;
 use PKP\components\forms\context\PKPReviewSetupForm;
 use PKP\components\forms\context\PKPSearchIndexingForm;
-use PKP\components\listPanels\ReviewerRecommendationsListPanel;
 use PKP\core\PKPApplication;
 use PKP\core\PKPRequest;
 use PKP\pages\management\ManagementHandler;

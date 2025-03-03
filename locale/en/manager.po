@@ -2130,6 +2130,45 @@ msgstr "This email is automatically sent to registered users when the new issue 
 msgid "manager.manageEmails.description"
 msgstr "Edit the messages sent in emails from this journal."
 
+msgid "manager.reviewerRecommendations"
+msgstr "Reviewer Recommendations"
+
+msgid "manager.reviewerRecommendations.title.label"
+msgstr "Review Recommendations"
+
+msgid "manager.reviewerRecommendations.title.description"
+msgstr "e.g. accept, reject"
+
+msgid "manager.reviewerRecommendations.activateUponSaving.label"
+msgstr "Active Upon Saving"
+
+msgid "manager.reviewerRecommendations.activateUponSaving.deactivate"
+msgstr "Deactivate"
+
+msgid "manager.reviewerRecommendations.confirmDelete"
+msgstr "Are you sure you want to delete the recommendation <b>{$title}</b>"
+
+msgid "manager.reviewerRecommendations.confirmActivate"
+msgstr "Are you sure you want to activate the recommendation <b>{$title}</b>"
+
+msgid "manager.reviewerRecommendations.activate.title"
+msgstr "Activate Reviewer Recommendation"
+
+msgid "manager.reviewerRecommendations.confirmDeactivate"
+msgstr "Are you sure you want to deactivate the recommendation <b>{$title}</b>"
+
+msgid "manager.reviewerRecommendations.deactivate.title"
+msgstr "Deactivate Reviewer Recommendation"
+
+msgid "manager.reviewerRecommendations.list.name.title"
+msgstr "Recommendations"
+
+msgid "manager.reviewerRecommendations.list.status.title"
+msgstr "Activate"
+
+msgid "manager.reviewerRecommendations.context.restriction"
+msgstr "Journal does not have access to this reviewer recommendation"
+
 msgid "mailable.layoutComplete.name"
 msgstr "Galleys Complete"
 
