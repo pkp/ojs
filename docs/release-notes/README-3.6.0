@@ -1,0 +1,16 @@
+OJS 3.6.0 Release Notes
+Git tag: 3_6_0-0
+
+Release date: 
+============================
+
+Configuration Changes
+---------------------
+
+See config.TEMPLATE.inc.php for a description and examples of all supported
+configuration parameters.
+
+
+New Features
+------------
+

@@ -15,6 +15,8 @@ jobs:
             database: pgsql
             test: 'test'
             SAVE_BUILD: 'save_build'
+            upgrade: 'upgrade'
+            upgrade_test: 'stable-3_3_0,stable-3_4_0,stable-3_5_0'
           - php-version: 8.2
             validate: 'validate'
             database: mariadb
@@ -25,7 +27,8 @@ jobs:
             database: mysql
             test: 'test'
             SAVE_BUILD: 'save_build'
-
+            upgrade: 'upgrade'
+            upgrade_test: 'stable-3_3_0,stable-3_4_0,stable-3_5_0'
     name: ojs-main-schedule
     steps:
       - uses: pkp/pkp-github-actions@v1
@@ -46,15 +49,14 @@ jobs:
             validate: 'validate'
             database: pgsql
             test: 'test'
-            upgrade: 'upgrade'
             SAVE_BUILD: 'save_build'
+            upgrade: 'upgrade'
             upgrade_test: 'stable-3_2_0,stable-3_2_1,stable-3_3_0,stable-3_4_0'
           - php-version: 8.1
             database: mariadb
             test: 'test'
             SAVE_BUILD: 'save_build'
           - php-version: 8.1
-            validate: 'validate'
             database: mysql
             test: 'test'
             SAVE_BUILD: 'save_build'
@@ -80,8 +82,8 @@ jobs:
             validate: 'validate'
             database: pgsql
             test: 'test'
-            upgrade: 'upgrade'
             SAVE_BUILD: 'save_build'
+            upgrade: 'upgrade'
             upgrade_test: '3.1.0,3.1.1-2,3.1.2,stable-3_2_0,stable-3_2_1,stable-3_3_0'
           - php-version: 8.1
             database: mariadb
@@ -119,7 +121,6 @@ jobs:
             database: mysql
             test: 'test'
             SAVE_BUILD: 'save_build'
-
     name: ojs-stable-3_3_0
     steps:
       - uses: pkp/pkp-github-actions@v1

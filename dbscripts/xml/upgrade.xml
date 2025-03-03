@@ -11,7 +11,7 @@
   *
   -->
 
-<install version="3.5.0.0">
+<install version="3.6.0.0">
 	<code function="checkPhpVersion" />
 
 	<upgrade minversion="2.0.0.0" maxversion="3.2.9.9">
@@ -168,6 +168,10 @@
 		<migration class="APP\migration\upgrade\v3_5_0\I4787_AddReviewSuggestionHelp"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I4787_InstallReviewerSuggestion"/>
 		<note file="docs/release-notes/README-3.5.0" />
+	</upgrade>
+
+	<upgrade minversion="3.1.0.0" maxversion="3.5.9.9">
+		<note file="docs/release-notes/README-3.6.0" />
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
