@@ -26,7 +26,7 @@ jobs:
             test: 'test'
             SAVE_BUILD: 'save_build'
 
-    name: ojs
+    name: ojs-main-schedule
     steps:
       - uses: pkp/pkp-github-actions@v1
         with:
