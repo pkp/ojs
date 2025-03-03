@@ -16,8 +16,10 @@
 
 namespace APP\pages\management;
 
+use APP\API\v1\reviewers\recommendations\resources\ReviewerRecommendationResource;
 use APP\components\forms\context\AccessForm;
 use APP\components\forms\context\ArchivingLockssForm;
+use APP\components\listPanels\ReviewerRecommendationsListPanel;
 use APP\template\TemplateManager;
 use PKP\components\forms\context\PKPContextStatisticsForm;
 use PKP\components\forms\context\PKPDisableSubmissionsForm;
@@ -30,10 +32,12 @@ use PKP\components\forms\context\PKPReviewGuidanceForm;
 use PKP\components\forms\context\PKPReviewSetupForm;
 use PKP\components\forms\context\PKPSearchIndexingForm;
 use PKP\core\PKPApplication;
+use PKP\core\PKPRequest;
 use PKP\pages\management\ManagementHandler;
 use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
 use PKP\security\Role;
+use PKP\submission\reviewer\recommendation\ReviewerRecommendation;
 
 class SettingsHandler extends ManagementHandler
 {
@@ -75,6 +79,35 @@ class SettingsHandler extends ManagementHandler
         $templateMgr->registerClass(PKPMetadataSettingsForm::class, PKPMetadataSettingsForm::class); // FORM_METADATA_SETTINGS
         $templateMgr->registerClass(PKPDisableSubmissionsForm::class, PKPDisableSubmissionsForm::class); // FORM_DISABLE_SUBMISSIONS
         $templateMgr->display('management/workflow.tpl');
+    }
+
+    /**
+     * Add support for review related forms in workflow.
+     */
+    protected function addReviewFormWorkflowSupport(PKPRequest $request): void
+    {
+        parent::addReviewFormWorkflowSupport($request);
+
+        $templateManager = TemplateManager::getManager($request);
+        $components = $templateManager->getState('components');
+
+        $context = $request->getContext();
+        $recommendations = ReviewerRecommendation::query()->withContextId($context->getId())->get();
+
+        $reviewerRecommendationsListPanel = new ReviewerRecommendationsListPanel(
+            __('manager.reviewerRecommendations'),
+            $context,
+            $this->getSupportedFormLocales($context),
+            array_values(
+                ReviewerRecommendationResource::collection($recommendations)
+                    ->toArray(app()->get('request'))
+            ),
+            $recommendations->count()
+        );
+
+        $components[$reviewerRecommendationsListPanel->id] = $reviewerRecommendationsListPanel->getConfig();
+        $templateManager->setState(['components' => $components]);
+        $templateManager->assign('hasCustomizableRecommendation', true);
     }
 
     /**
