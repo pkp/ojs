@@ -6,7 +6,7 @@ on:
     branches:
       ['stable-3_4_0']
 
-name: ojs
+name: ojs-stable-3_4_0
 jobs:
   ojs:
     runs-on: ubuntu-latest
@@ -35,10 +35,7 @@ jobs:
           - php-version: 8.2
             database: pgsql
             test: 'test'
-
-
-
-    name: ojs
+    name: ojs-stable-3_4_0
     steps:
       - uses: pkp/pkp-github-actions@v1
         with:
