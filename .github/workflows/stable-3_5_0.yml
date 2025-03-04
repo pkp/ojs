@@ -5,7 +5,7 @@ on:
   pull_request:
     branches:
       ['stable-3_5_0']
-name: ojs
+name: ojs-stable-3_5_0
 jobs:
   ojs:
     runs-on: ubuntu-latest
@@ -34,8 +34,7 @@ jobs:
           - php-version: 8.3
             database: pgsql
             test: 'test'
-
-    name: ojs-stable-3_5_0-schedule
+    name: ojs-stable-3_5_0
     steps:
       - uses: pkp/pkp-github-actions@v1
         with:
