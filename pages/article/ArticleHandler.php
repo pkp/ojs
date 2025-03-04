@@ -24,21 +24,26 @@ use APP\issue\IssueAction;
 use APP\observers\events\UsageEvent;
 use APP\payment\ojs\OJSCompletedPaymentDAO;
 use APP\payment\ojs\OJSPaymentManager;
+use APP\publication\Publication;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use Firebase\JWT\Key;
+use Illuminate\Support\Arr;
+use PKP\author\Author;
 use PKP\citation\CitationDAO;
 use PKP\config\Config;
 use PKP\core\Core;
 use PKP\core\PKPApplication;
 use PKP\core\PKPJwt as JWT;
 use PKP\db\DAORegistry;
+use PKP\facades\Locale;
 use PKP\orcid\OrcidManager;
 use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\Validation;
+use PKP\services\PKPSchemaService;
 use PKP\submission\Genre;
 use PKP\submission\GenreDAO;
 use PKP\submission\PKPSubmission;
@@ -366,6 +371,17 @@ class ArticleHandler extends Handler
                 $templateMgr->assign('purchaseArticleEnabled', true);
             }
 
+            $templateMgr->assign('pubLocaleData', $this->getMultilingualMetadataOpts(
+                $publication,
+                $templateMgr->getTemplateVars('currentLocale'),
+                $templateMgr->getTemplateVars('activeTheme')->getOption('showMultilingualMetadata') ?: [],
+            ));
+
+            $templateMgr->registerPlugin('modifier', 'wrapData', fn (...$args) => $this->smartyWrapData($templateMgr, ...$args));
+            $templateMgr->registerPlugin('modifier', 'useFilters', fn (...$args) => $this->smartyUseFilters($templateMgr, ...$args));
+            $templateMgr->registerPlugin('modifier', 'getAuthorFullNames', $this->smartyGetAuthorFullNames(...));
+            $templateMgr->registerPlugin('modifier', 'getAffiliationNamesWithRors', $this->smartyGetAffiliationNamesWithRors(...));
+
             if (!Hook::call('ArticleHandler::view', [&$request, &$issue, &$article, $publication])) {
                 $templateMgr->display('frontend/pages/article.tpl');
                 event(new UsageEvent(Application::ASSOC_TYPE_SUBMISSION, $context, $article, null, null, $this->issue));
@@ -622,5 +638,129 @@ class ArticleHandler extends Handler
             $request->redirect(null, 'search');
         }
         return true;
+    }
+
+    /**
+     * Multilingual publication metadata for template:
+     * showMultilingualMetadataOpts - Show metadata in other languages: title (+ subtitle), keywords, abstract, etc.
+     */
+    protected function getMultilingualMetadataOpts(Publication $publication, string $currentUILocale, array $showMultilingualMetadataOpts): array
+    {
+        // Affiliation languages are not in multiligual props
+        $authorsLocales = collect($publication->getData('authors'))
+            ->map(fn ($author): array => $this->getAuthorLocales($author))
+            ->flatten()
+            ->unique()
+            ->values()
+            ->toArray();
+        $langNames = collect($publication->getLanguageNames() + Locale::getSubmissionLocaleDisplayNames($authorsLocales))
+            ->sortKeys();
+        $langs = $langNames->keys();
+
+        return [
+            'opts' => array_flip($showMultilingualMetadataOpts),
+            'uiLocale' => $currentUILocale,
+            'localeNames' => $langNames,
+            'localeOrder' => collect($publication->getLocalePrecedence())
+                ->intersect($langs) /* remove locales not in publication's languages */
+                ->concat($langs)
+                ->unique()
+                ->values()
+                ->toArray(),
+            'accessibility' => [
+                'localeNames' => $langNames,
+                'langAttrs' => $langNames->map(fn ($_, $l) => preg_replace(['/@.+$/', '/_/'], ['', '-'], $l))->toArray() /* remove @ and text after */,
+            ],
+        ];
+    }
+
+    /**
+     * Publication's multilingual data to array for js and page
+     */
+    protected function smartyWrapData(TemplateManager $templateMgr, array $data, string $switcher, ?array $filters = null, ?string $separator = null): array
+    {
+        return [
+            'switcher' => $switcher,
+            'data' => collect($data)
+                ->map(
+                    fn ($value): string => collect(Arr::wrap($value))
+                        ->when($filters, fn ($value) => $value->map(fn ($v) => $this->smartyUseFilters($templateMgr, $v, $filters)))
+                        ->when($separator, fn ($value): string => $value->join($separator), fn ($value): string => $value->first())
+                )
+                ->toArray(),
+            'defaultLocale' => collect($templateMgr->getTemplateVars('pubLocaleData')['localeOrder'])
+                ->first(fn (string $locale) => isset($data[$locale])),
+        ];
+    }
+
+    /**
+     * Smarty template: Apply filters to given value
+     */
+    protected function smartyUseFilters(TemplateManager $templateMgr, string $value, ?array $filters): string
+    {
+        if (!$filters) {
+            return $value;
+        }
+        foreach ($filters as $filter) {
+            $params = Arr::wrap($filter);
+            $funcName = array_shift($params);
+            if ($func = $templateMgr->registered_plugins['modifier'][$funcName][0] ?? null) {
+                $value = $func($value, ...$params);
+            } else {
+                error_log("{$funcName} : No such modifier in template registered plugins.");
+            }
+        }
+        return $value;
+    }
+
+    /**
+     * Smarty template: Get author's full names to multilingual array including all multilingual and affiliation languages as default localized name
+     */
+    protected function smartyGetAuthorFullNames(Author $author): array
+    {
+        return collect($this->getAuthorLocales($author))
+            ->mapWithKeys(fn (string $locale) => [$locale => $author->getFullName(preferredLocale: $locale)])
+            ->toArray();
+    }
+
+    /**
+     * Smarty template: Get authors' affiliations with rors
+     */
+    protected function smartyGetAffiliationNamesWithRors(Author $author): array
+    {
+        $affiliations = collect($author->getAffiliations());
+
+        return collect($this->getAuthorLocales($author))
+            ->flip()
+            ->map(
+                fn ($_, string $locale) => $affiliations
+                    ->map(fn ($affiliation): array => [
+                        'name' => $affiliation->getAffiliationName($locale),
+                        'ror' => $affiliation->getRor(),
+                    ])
+                    ->filter(fn (array $nameRor) => $nameRor['name'])
+                    ->toArray()
+            )
+            ->filter()
+            ->toArray();
+    }
+
+    /**
+     * Aux for smarty template functions: Get author's locales from multilingual props and affiliations
+     */
+    protected function getAuthorLocales(Author $author): array
+    {
+        $multilingualLocales = collect(app()->get('schema')->getMultilingualProps(PKPSchemaService::SCHEMA_AUTHOR))
+            ->map(fn (string $prop): array => array_keys($author->getData($prop) ?? []));
+        $affiliationLocales = collect($author->getAffiliations())
+            ->flatten()
+            ->map(fn ($affiliation): array => array_keys($affiliation->getData('name') ?? []));
+
+        return $multilingualLocales
+            ->concat($affiliationLocales)
+            ->flatten()
+            ->unique()
+            ->values()
+            ->toArray();
     }
 }
