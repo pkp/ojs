@@ -683,7 +683,7 @@ class ArticleHandler extends Handler
             'switcher' => $switcher,
             'data' => collect($data)
                 ->map(
-                    fn ($value): string => collect(Arr::wrap($value))
+                    fn ($val): string => collect(Arr::wrap($val))
                         ->when($filters, fn ($value) => $value->map(fn ($v) => $this->smartyUseFilters($templateMgr, $v, $filters)))
                         ->when($separator, fn ($value): string => $value->join($separator), fn ($value): string => $value->first())
                 )
