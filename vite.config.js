@@ -82,6 +82,7 @@ export default defineConfig(({mode}) => {
 				'floating-vue',
 				'highlight.js',
 				'moment',
+				'luxon',
 				'ofetch',
 				'pinia',
 				'swiper',
