@@ -1,15 +1,19 @@
+# Rodrigo Emmanuel Santana Borges <rodrigo@borges.net.br>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:35-07:00\n"
-"PO-Revision-Date: 2019-09-30T11:58:35-07:00\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: \n"
+"PO-Revision-Date: 2025-03-07 21:13+0000\n"
+"Last-Translator: Rodrigo Emmanuel Santana Borges <rodrigo@borges.net.br>\n"
+"Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-articles/pt_BR/>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.reports.articles.displayName"
 msgstr "Relatório de artigos"
@@ -21,3 +25,7 @@ msgstr ""
 
 msgid "plugins.reports.articles.nodecision"
 msgstr "Sem decisão"
+
+#, fuzzy
+msgid "plugins.reports.articles.initialDecline"
+msgstr "Declinar (Pré-revisão)"
