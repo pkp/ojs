@@ -173,4 +173,4 @@ For fields that accept multiple values:
 - For galleys:
   - Both `suppFilenames` and `suppLabels` support multiple values
   - They must have the same number of items to ensure correct pairing between files and their labels
-  - Example: if `suppFilenames=article.pdf;article.html`, then `suppLabels` must be something like `PDF;HTML`
+  - Example: if `suppFilenames=suppFile1.pdf;suppFile2.pdf`, then `suppLabels` must be something like `PDF;PDF`
