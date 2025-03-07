@@ -1,11 +1,12 @@
 # Primož Svetek <primoz.svetek@gmail.com>, 2021, 2022, 2023, 2025.
+# Matevž Rudolf <matevz.rudolf@uni-lj.si>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
-"PO-Revision-Date: 2025-03-03 19:43+0000\n"
-"Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
+"PO-Revision-Date: 2025-03-07 21:13+0000\n"
+"Last-Translator: Matevž Rudolf <matevz.rudolf@uni-lj.si>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sl/>\n"
 "Language: sl\n"
@@ -1879,7 +1880,7 @@ msgstr "Ponastavi dovoljenja prispevkov"
 msgid "manager.setup.resetPermissions.confirm"
 msgstr ""
 "Ste prepričani, da želite ponastaviti vse pravice, ki so bile že določene "
-"člankom? Ta operacija je ireverzibilna!"
+"člankom? Ta operacija je ireverzibilna."
 
 msgid "manager.setup.resetPermissions.description"
 msgstr ""
