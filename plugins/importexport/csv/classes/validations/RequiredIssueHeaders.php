@@ -36,6 +36,7 @@ class RequiredIssueHeaders
         'coverImageAltText',
         'suppFilenames',
         'suppLabels',
+        'genreName',
         'sectionTitle',
         'sectionAbbrev',
         'issueTitle',
