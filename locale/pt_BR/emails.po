@@ -5,13 +5,14 @@
 # Danilo Silva <profdanilocsilva@outlook.com>, 2023.
 # Daniel Caixeta <daniel.caixeta@inep.gov.br>, 2023.
 # Cintya Takahaschi <ctakahaschi@sp.gov.br>, 2023.
+# Rodrigo Emmanuel Santana Borges <rodrigo@borges.net.br>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2023-07-17 17:43+0000\n"
-"Last-Translator: Cintya Takahaschi <ctakahaschi@sp.gov.br>\n"
+"PO-Revision-Date: 2025-03-07 21:13+0000\n"
+"Last-Translator: Rodrigo Emmanuel Santana Borges <rodrigo@borges.net.br>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "emails/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -19,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Confirmação de Redefinição de Senha"
@@ -115,7 +116,7 @@ msgstr ""
 "{$contextName}.  Convidamos você a ler e compartilhar este trabalho com sua "
 "comunidade acadêmica.</p><p>Muito obrigado aos nossos autores, avaliadores e "
 "editores por suas valiosas contribuições, e aos nossos leitores por seu "
-"interesse contínuo.</p><p>Obrigado,</p>{$signature}"
+"interesse contínuo.</p><div>{$issueToc}</div><p>Obrigado,</p>{$signature}"
 
 msgid "emails.editorAssign.subject"
 msgstr "Você foi designado como editor em uma submissão para {$contextName}"
