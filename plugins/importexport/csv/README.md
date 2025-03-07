@@ -1,5 +1,20 @@
 # CSV Import/Export Plugin
 
+## Table of Contents
+- [Overview](#overview)
+- [Usage](#usage)
+  - [Parameters](#parameters)
+  - [Examples](#examples)
+- [CSV Fields](#csv-fields)
+  - [Issues Import](#issues-import)
+    - [File Structure](#file-structure)
+    - [Field Descriptions](#field-descriptions)
+  - [Users Import](#users-import)
+    - [Field Descriptions](#field-descriptions-1)
+- [Multiple Values](#multiple-values)
+
+## Overview
+
 This plugin allows you to import issues and users into OJS using CSV files.
 
 The tool processes each row (issue or user) individually. If an error is found during processing:
@@ -42,12 +57,12 @@ php tools/importExport.php CSVImportExportPlugin users admin /path/to/csv/direct
 
 Complete field list (in order):
 ```
-journalPath,locale,articleTitle,articlePrefix,articleSubtitle,articleAbstract,articleFilepath,authors,keywords,subjects,coverage,categories,doi,coverImageFilename,coverImageAltText,galleyFilenames,galleyLabels,genreName,sectionTitle,sectionAbbrev,issueTitle,issueVolume,issueNumber,issueYear,issueDescription,datePublished,startPage,endPage
+journalPath,locale,articleTitle,articlePrefix,articleSubtitle,articleAbstract,articleGalleyFilename,authors,keywords,subjects,coverage,categories,doi,coverImageFilename,coverImageAltText,suppFilenames,suppLabels,genreName,sectionTitle,sectionAbbrev,issueTitle,issueVolume,issueNumber,issueYear,issueDescription,datePublished,startPage,endPage
 ```
 
 Required fields only:
 ```
-journalPath,locale,articleTitle,articleAbstract,articleFilepath,authors,issueTitle,issueVolume,issueNumber,issueYear,datePublished
+journalPath,locale,articleTitle,articleAbstract,articleGalleyFilename,authors,issueTitle,issueVolume,issueNumber,issueYear,datePublished
 ```
 
 > **Important**: Even when using only required fields, always maintain the same field order as shown in the "Complete field list". For unused optional fields, keep them empty but preserve their position in the CSV.
@@ -56,22 +71,22 @@ journalPath,locale,articleTitle,articleAbstract,articleFilepath,authors,issueTit
 
 All files referenced in the CSV must be placed in the same directory as your CSV file. Required files:
 - The CSV file(s) containing issue metadata
-- Article files referenced in `articleFilepath` column
-- Galley files referenced in `galleyFilenames` column
+- Article files referenced in `articleGalleyFilename` column
+- Galley files referenced in `suppFilenames` column
 - Cover images referenced in `coverImageFilename` column
 
 For example, if your CSV contains:
 ```
-articleFilepath=article1.pdf,galleyFilenames=galleys1.pdf;galleys2.pdf,coverImageFilename=cover.png
+articleGalleyFilename=articleGalley.pdf,suppFilenames=suppFile1.pdf;suppFile2.pdf,coverImageFilename=cover.png
 ```
 
 Your directory should contain:
 ```
 /your/import/directory/
   ├── issues.csv
-  ├── article1.pdf
-  ├── galleys1.pdf
-  ├── galleys2.pdf
+  ├── articleGalley.pdf
+  ├── suppFile1.pdf
+  ├── suppFile2.pdf
   └── cover.png
 ```
 
@@ -83,7 +98,7 @@ Field descriptions:
 - `articlePrefix`: Prefix for the article title
 - `articleSubtitle`: Subtitle of the article
 - `articleAbstract`: Article abstract
-- `articleFilepath`: Path to the article's main file
+- `articleGalleyFilename`: Name of the article's primary galley file
 - `authors`: Author information with the following rules:
   - Each author's data must follow the format: "GivenName,FamilyName,email,affiliation"
   - Multiple authors must be separated by semicolons (;)
@@ -101,8 +116,8 @@ Field descriptions:
 - `doi`: Digital Object Identifier
 - `coverImageFilename`: Cover image file name
 - `coverImageAltText`: Alt text for cover image
-- `galleyFilenames`: Names of galley files (semicolon-separated)
-- `galleyLabels`: Labels for galleys (semicolon-separated). Must have the same number of items as `galleyFilenames` to ensure correct pairing between files and labels
+- `suppFilenames`: Names of supplementary files (semicolon-separated). Note only supplementary files that doesn't require dependent files are supported on this field.
+- `suppLabels`: Labels for supplementary files (semicolon-separated). Must have the same number of items as `suppFilenames` to ensure correct pairing between files and labels
 - `genreName`: Genre name
 - `sectionTitle`: Journal section title
 - `sectionAbbrev`: Section abbreviation
@@ -156,6 +171,6 @@ For fields that accept multiple values:
   - Multiple authors must be separated by semicolons
   - Example: "John,Doe,john@email.com,University A;Jane,,jane@email.com,;Robert,Smith,,"
 - For galleys:
-  - Both `galleyFilenames` and `galleyLabels` support multiple values
+  - Both `suppFilenames` and `suppLabels` support multiple values
   - They must have the same number of items to ensure correct pairing between files and their labels
-  - Example: if `galleyFilenames=article.pdf;article.html`, then `galleyLabels` must be something like `PDF;HTML`
+  - Example: if `suppFilenames=suppFile1.pdf;suppFile2.pdf`, then `suppLabels` must be something like `PDF;PDF`
