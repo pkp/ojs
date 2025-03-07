@@ -77,16 +77,16 @@ All files referenced in the CSV must be placed in the same directory as your CSV
 
 For example, if your CSV contains:
 ```
-articleGalleyFilename=article1.pdf,suppFilenames=galleys1.pdf;galleys2.pdf,coverImageFilename=cover.png
+articleGalleyFilename=articleGalley.pdf,suppFilenames=suppFile1.pdf;suppFile2.pdf,coverImageFilename=cover.png
 ```
 
 Your directory should contain:
 ```
 /your/import/directory/
   ├── issues.csv
-  ├── article1.pdf
-  ├── galleys1.pdf
-  ├── galleys2.pdf
+  ├── articleGalley.pdf
+  ├── suppFile1.pdf
+  ├── suppFile2.pdf
   └── cover.png
 ```
 
@@ -116,7 +116,7 @@ Field descriptions:
 - `doi`: Digital Object Identifier
 - `coverImageFilename`: Cover image file name
 - `coverImageAltText`: Alt text for cover image
-- `suppFilenames`: Names of supplementary files (semicolon-separated)
+- `suppFilenames`: Names of supplementary files (semicolon-separated). Note only supplementary files that doesn't require dependent files are supported on this field.
 - `suppLabels`: Labels for supplementary files (semicolon-separated). Must have the same number of items as `suppFilenames` to ensure correct pairing between files and labels
 - `genreName`: Genre name
 - `sectionTitle`: Journal section title
