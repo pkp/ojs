@@ -12,14 +12,14 @@ describe('Data suite tests', function() {
 	let submission, suggestions;
 
 	before(function() {
-		const title = 'Reviewer Suggestion Testing all phase';
+		const title = 'Transformative Impact of AI Tools on Modern Education: Opportunities, Challenges, and Future Directions';
 		submission = {
 			id: 0,
 			section: 'Articles',
 			prefix: '',
 			title: title,
 			subtitle: '',
-			abstract: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a accumsan dolor. Proin placerat mi quis est ornare porta. Integer maximus faucibus sapien maximus congue. Aliquam euismod venenatis nibh hendrerit vestibulum. Nulla erat ex, mollis vitae tincidunt facilisis, sodales non lacus. Nunc in euismod ante, varius molestie velit. Suspendisse imperdiet vitae risus a finibus. Sed sed lacus ac massa condimentum molestie ac sed velit. Aenean et ligula lectus.',
+			abstract: 'The integration of artificial intelligence (AI) tools into educational systems is reshaping pedagogical practices, offering unprecedented opportunities for personalized learning, administrative efficiency, and scalable access to quality education. This study examines the multifaceted impact of AI technologies—such as adaptive learning platforms, automated grading systems, and natural language processing (NLP)-driven tutoring tools—on students, educators, and institutions. By analyzing current applications and case studies, we highlight AI’s capacity to tailor instruction to individual learner needs, reduce educators’ administrative burdens, and provide real-time feedback. Emerging evidence suggests that AI-enhanced tools like virtual tutors and chatbots can bridge gaps in resource-limited settings, fostering inclusivity and engagement.',
 			shortAuthorString: 'Zayan, et al.',
 			authorNames: ['Zayan Zedd', 'Nargis Parvin'],
 			assignedAuthorNames: ['Zayan Zedd'],
@@ -238,7 +238,9 @@ describe('Data suite tests', function() {
         cy.get('.pkpFormField:contains("Email")').find('input[name="email"]').type('testsuggestion');
         cy.get('.pkpFormField:contains("Affiliation")').find('input[name*="-en"]').type('Test Affiliation');
         cy.setTinyMceContent('reviewerSuggestions-suggestionReason-control-en', 'Test suggestion reason');
-        cy.get('div[role=dialog]:contains("Add Reviewer Suggestion")').find('button').contains('Save').click();
+        cy.get('div[role=dialog]:contains("Add Reviewer Suggestion")')
+            .find('button:contains("Save")')
+            .click();
         cy.wait(3000);
         
         cy.get('#reviewerSuggestions-email-error').contains('This is not a valid email address.');
