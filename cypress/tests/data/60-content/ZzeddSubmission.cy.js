@@ -141,13 +141,12 @@ describe('Data suite tests', function() {
                 reason: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
             },
         ];
-	});
-
-	it('Registers as author and create submission with several suggested reviewer', function() {
 
         cy.enableReviewerSuggestion();
         cy.logout();
+	});
 
+	it('Registers as author and create submission with several suggested reviewer', function() {
 		cy.register({
 			'username': 'zzedd',
 			'givenName': 'Zayan',
@@ -222,7 +221,7 @@ describe('Data suite tests', function() {
         cy.contains('Make a Submission: Reviewer Suggestions');
         cy.get('.pkpSteps__step__label--current').contains('Reviewer Suggestions');
         cy.get('h2').contains('Reviewer Suggestions');
-        // add reviewer suggestion
+        
         cy.get('button').contains('Add Reviewer Suggestion').should('be.visible').click();
         cy.get('div[role=dialog]:contains("Add Reviewer Suggestion")').find('button').contains('Save').click();
 
