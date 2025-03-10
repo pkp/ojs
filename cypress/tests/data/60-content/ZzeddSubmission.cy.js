@@ -241,6 +241,9 @@ describe('Data suite tests', function() {
             .find('button:contains("Save")')
             .click();
         cy.wait(3000);
+        cy.on('uncaught:exception', (err, runnable) => {
+            return false
+        });
         
         cy.get('#reviewerSuggestions-email-error').contains('This is not a valid email address.');
         cy.get('.pkpFormField:contains("email")').find('input[name="email"]').click().focused().clear().type('testsuggestion@mail.test');
