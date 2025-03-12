@@ -1,11 +1,12 @@
 # Rodrigo Emmanuel Santana Borges <rodrigo@borges.net.br>, 2025.
+# Diego José Macêdo <diegojmacedo@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:35-07:00\n"
-"PO-Revision-Date: 2025-03-07 21:13+0000\n"
-"Last-Translator: Rodrigo Emmanuel Santana Borges <rodrigo@borges.net.br>\n"
+"PO-Revision-Date: 2025-03-12 20:23+0000\n"
+"Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-articles/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -26,6 +27,5 @@ msgstr ""
 msgid "plugins.reports.articles.nodecision"
 msgstr "Sem decisão"
 
-#, fuzzy
 msgid "plugins.reports.articles.initialDecline"
-msgstr "Declinar (Pré-revisão)"
+msgstr "Recusar (pré-avaliação)"
