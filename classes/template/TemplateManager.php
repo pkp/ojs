@@ -141,8 +141,16 @@ class TemplateManager extends PKPTemplateManager
                 'icon' => 'Issues'
             ];
             $index = false;
-            if(Config::getVar('features', 'enable_new_submission_listing')) {
-                $index = array_search('dashboards', array_keys($menu));
+            if (Config::getVar('features', 'enable_new_submission_listing')) {
+                $reviewAssignmentsIndex = array_search('reviewAssignments', array_keys($menu));
+                $mySubmissionsIndex = array_search('mySubmissions', array_keys($menu));
+                if ($mySubmissionsIndex) {
+                    $index = $mySubmissionsIndex;
+                } elseif ($reviewAssignmentsIndex) {
+                    $index = $reviewAssignmentsIndex;
+                } else {
+                    $index = array_search('dashboards', array_keys($menu));
+                }
             } else {
                 $index = array_search('submissions', array_keys($menu));
             }
