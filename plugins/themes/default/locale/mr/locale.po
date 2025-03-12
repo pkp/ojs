@@ -1,3 +1,107 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2025.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2025-03-12 14:11+0000\n"
+"Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
+"Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/mr/>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr ""
+"Noto Serif: गुगलच्या डिजिटल-नैसर्गिक (नेटिव्ह) फॉन्टचा एक अलंकृत टंक (सेरिफ) "
+"प्रकार."
+
+msgid "plugins.themes.default.name"
+msgstr "सर्वसाधारण मध्यवर्ती कल्पना (Default Theme)"
+
+msgid "plugins.themes.default.description"
+msgstr ""
+"ही मध्यवर्ती कल्पना (Theme) सर्वसाधारण मध्यवर्ती कल्पना (Default Theme) लागू "
+"करते."
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "अक्षरमुद्रण (Typography)"
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "या नियतकालिकाला अनुकूल अशी मुद्रावर्ग जोडी (font combination) निवडा."
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr ""
+"Noto Sans: व्यापक भाषा आधारासाठी गुगलने निर्माण केलेला डिजिटल-नैसर्गिक "
+"(नेटिव्ह) फॉन्ट."
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr ""
+"Noto Serif/Noto Sans: सेरिफ हेडिंग्ज आणि सॅन्स-सेरिफ बॉडी टेक्स्टसह एक पूरक "
+"जोडी."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr ""
+"Noto Sans/Noto Serif: सॅन्स-सेरिफ हेडिंग्ज आणि सेरिफ बॉडी टेक्स्टसह एक पूरक "
+"जोडी."
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr "Lora: ऑनलाइन वाचण्यासाठी चांगला असलेला एक विस्तृत-सेट सेरिफ फॉन्ट."
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr ""
+"Lora/Open Sans: सेरिफ हेडिंग्ज आणि सॅन्स-सेरिफ बॉडी टेक्स्टसह एक पूरक जोडी."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
+msgstr ""
+"जेव्हा मुख्यपृष्ठ प्रतिमा संक्रमित (अपलोड) केली जाते, तेव्हा ती "
+"मुख्यपृष्ठावरील नेहमीच्या स्थाना/स्थितीऐवजी पृष्ठशिर्षा (header) च्या "
+"पार्श्वभूमीत प्रदर्शित करा."
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr "वाचकासाठी सादरीकरणाची आकडेवारी दाखवू नका."
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr "नियतकालिकाचा वापर दाखवण्यासाठी लाइन चार्टचा प्रकार वापरा."
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "डाउनलोड्सची आकडेवारी अद्याप उपलब्ध नाही."
+
+msgid "plugins.themes.default.nextSlide"
+msgstr "पुढील स्लाइड"
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Lato: एक लोकप्रिय आधुनिक सॅन्स-सेरिफ फॉन्ट."
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "रंग (Colour)"
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "पृष्ठशीर्षासाठी (हेडर) रंग निवडा."
+
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
+msgstr "मुख्यपृष्ठावर (होमपेज) नियतकालिकाचा गोषवारा प्रदर्शित करा."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
+msgstr "पृष्ठशीर्षासाठी पार्श्वभूमी प्रतिमा (Header Background Image)"
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
+msgstr ""
+"पृष्ठशीर्षाची पार्श्वभूमी (header background) म्हणून मुख्यपृष्ठ प्रतिमा "
+"दाखवा."
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "वापराच्या आकडेवारीची माहिती प्रदर्शित करण्याकरता पर्याय"
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr "नियतकालिकाचा वापर दाखवण्यासाठी बार चार्टचा प्रकार वापरा."
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "जाने फेब्रु मार्च एप्रिल मे जून जुलै ऑगस्ट सप्टें ऑक्टो नोव्हें डिसें"
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "डाउनलोड्स"
+
+msgid "plugins.themes.default.prevSlide"
+msgstr "मागील स्लाइड"
