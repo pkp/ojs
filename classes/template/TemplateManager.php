@@ -22,7 +22,6 @@ use APP\core\Application;
 use APP\core\PageRouter;
 use APP\file\PublicFileManager;
 use APP\journal\Journal;
-use PKP\config\Config;
 use PKP\core\PKPSessionGuard;
 use PKP\facades\Locale;
 use PKP\i18n\LocaleMetadata;
@@ -141,20 +140,15 @@ class TemplateManager extends PKPTemplateManager
                 'icon' => 'Issues'
             ];
             $index = false;
-            if (Config::getVar('features', 'enable_new_submission_listing')) {
-                $reviewAssignmentsIndex = array_search('reviewAssignments', array_keys($menu));
-                $mySubmissionsIndex = array_search('mySubmissions', array_keys($menu));
-                if ($mySubmissionsIndex !== false) {
-                    $index = $mySubmissionsIndex;
-                } elseif ($reviewAssignmentsIndex !== false) {
-                    $index = $reviewAssignmentsIndex;
-                } else {
-                    $index = array_search('dashboards', array_keys($menu));
-                }
+            $reviewAssignmentsIndex = array_search('reviewAssignments', array_keys($menu));
+            $mySubmissionsIndex = array_search('mySubmissions', array_keys($menu));
+            if ($mySubmissionsIndex !== false) {
+                $index = $mySubmissionsIndex;
+            } elseif ($reviewAssignmentsIndex !== false) {
+                $index = $reviewAssignmentsIndex;
             } else {
-                $index = array_search('submissions', array_keys($menu));
+                $index = array_search('dashboards', array_keys($menu));
             }
-
 
             if ($index === false || count($menu) <= $index + 1) {
                 $menu['issues'] = $issuesLink;
