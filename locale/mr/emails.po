@@ -1,7 +1,7 @@
-# Murari P Tapaswi <tapaswimurari@gmail.com>, 2024.
+# Murari P Tapaswi <tapaswimurari@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-09-12 08:45+0000\n"
+"PO-Revision-Date: 2025-03-12 14:11+0000\n"
 "Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
 "Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/emails/mr/>"
 "\n"
@@ -128,7 +128,8 @@ msgstr ""
 "त आहे. …आम्ही तुम्हाला हा वाचण्याची तसेच इतर बुद्धिवादी समुदायाला पाठवून "
 "(शेअर) त्यांचे याकडे लक्ष वेधण्याची विनंती करतो.</p><p>आमच्या लेखक, समीक्षक "
 "आणि संपादकांना त्यांच्या अमूल्य योगदानाबद्दल आणि आमच्या वाचकांना त्यांच्या "
-"अखंडित अभिरुचीबद्दल अनेक धन्यवाद.</p><p>धन्यवाद,</p>{$signature}"
+"अखंडित अभिरुचीबद्दल अनेक "
+"धन्यवाद.</p><div>{$issueToc}</div><p>धन्यवाद,</p>{$signature}"
 
 msgid "emails.editorAssign.body"
 msgstr ""
