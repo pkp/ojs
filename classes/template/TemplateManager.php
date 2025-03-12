@@ -144,9 +144,9 @@ class TemplateManager extends PKPTemplateManager
             if (Config::getVar('features', 'enable_new_submission_listing')) {
                 $reviewAssignmentsIndex = array_search('reviewAssignments', array_keys($menu));
                 $mySubmissionsIndex = array_search('mySubmissions', array_keys($menu));
-                if ($mySubmissionsIndex) {
+                if ($mySubmissionsIndex !== false) {
                     $index = $mySubmissionsIndex;
-                } elseif ($reviewAssignmentsIndex) {
+                } elseif ($reviewAssignmentsIndex !== false) {
                     $index = $reviewAssignmentsIndex;
                 } else {
                     $index = array_search('dashboards', array_keys($menu));
