@@ -81,7 +81,6 @@ export default defineConfig(({mode}) => {
 				'element-resize-event',
 				'floating-vue',
 				'highlight.js',
-				'moment',
 				'ofetch',
 				'pinia',
 				'swiper',
