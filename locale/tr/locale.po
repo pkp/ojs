@@ -1,13 +1,14 @@
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2022.
 # Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2022, 2023.
 # Mustafa Tat <tridinebandim@yahoo.com>, 2024.
+# "Dr. Uğur Koçak" <ugurkocak@hotmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
-"PO-Revision-Date: 2024-08-05 13:16+0000\n"
-"Last-Translator: Mustafa Tat <tridinebandim@yahoo.com>\n"
+"PO-Revision-Date: 2025-03-14 20:26+0000\n"
+"Last-Translator: \"Dr. Uğur Koçak\" <ugurkocak@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/locale/tr/>"
 "\n"
 "Language: tr\n"
@@ -2499,3 +2500,6 @@ msgstr "Bu kategorideki makalelerin nasıl sıralanacağını seçin."
 
 #~ msgid "category.category"
 #~ msgstr "Kategori"
+
+msgid "search.journal"
+msgstr "Dergiye göre"
