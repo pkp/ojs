@@ -3,13 +3,14 @@
 # Diego José Macêdo <diegojmacedo@gmail.com>, 2021, 2022, 2023.
 # cicilia conceiçao de maria <ccmaria@uem.br>, 2022, 2023.
 # William Costa Rodrigues <webmaster@antsoft.com.br>, 2023.
+# Rodrigo Emmanuel Santana Borges <rodrigo@borges.net.br>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2023-04-24 20:16+0000\n"
-"Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
+"PO-Revision-Date: 2025-03-07 21:13+0000\n"
+"Last-Translator: Rodrigo Emmanuel Santana Borges <rodrigo@borges.net.br>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "manager.distribution.access"
 msgstr "Acesso"
@@ -2730,3 +2731,12 @@ msgid "plugins.importexport.common.error.issueCoverImageMissing"
 msgstr ""
 "A imagem da capa da edição {$id} não foi exportada, seu arquivo não foi "
 "encontrado no caminho \"{$path}\"."
+
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr ""
+"O índice do número tal como uma lista de todas as submissões associadas."
+
+msgid "manager.setup.contextSummary.description"
+msgstr ""
+"Forneça uma breve descrição de sua revista para dar uma ideia de seu "
+"conteúdo e propósito."

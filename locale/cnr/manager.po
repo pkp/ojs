@@ -1,7 +1,7 @@
 # Milutin Markovic <admin@fcjk.me>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-02-26 13:03+0000\n"
+"PO-Revision-Date: 2025-03-10 09:37+0000\n"
 "Last-Translator: Milutin Markovic <admin@fcjk.me>\n"
 "Language-Team: Montenegrin <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "cnr/>\n"
@@ -1820,3 +1820,213 @@ msgid "plugins.importexport.common.error.DOIsNotAvailable"
 msgstr ""
 "Ako želite da koristite ovaj dodatak idite u kategoriju dodataka \"Public "
 "Identifier (Javni dodaci)\" i uključite i konfigurišite dodatak DOI."
+
+msgid "grid.action.addSection"
+msgstr "Dodaj sekciju/rubriku"
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "Broj: početna godina će biti izvučena iz datuma objavljivanja broja."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Vrati na početno stanje dozvole u vezi članka."
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Dozvole članka uspješno su resetovane."
+
+msgid "grid.genres.title.short"
+msgstr "Komponente"
+
+msgid "grid.genres.title"
+msgstr "Komponente članka"
+
+msgid "grid.genres.description"
+msgstr ""
+"Ove komponente se koriste u svrhu davanja imena i predstavljene su u "
+"padajućem meniju na fajlovima u toku postavljanja na server. Žanrovi kojima "
+"je dodijeljeno ## omogućavaju korisnicima da dodijele cijelom prijavljenom "
+"članku 99Z ili neku posebnu komponentu sa brojem (npr. 02)."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Lozinka"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Bilo koji broj"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Bilo koji status"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Nije položeno"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Označeni registrovani"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Registrovan"
+
+msgid "plugins.importexport.common.action"
+msgstr "Akcija"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Izvoz"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Označi registrovane"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Registracija"
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Nema odabranih objekata."
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Nije moguće konvertovati odabrane objekte."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Neispravan XML:"
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Ulazni fail {$param} nije čitljiv."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr ""
+"Registracija nije bila uspešna! DOI registracioni server je vratio grešku: "
+"'{$param}'."
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Provjera valjanosti nije uspjela."
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "Nedostaje DOI prefiks za časopis sa putanjom {$path}."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Navedeni objekti nisu pronađeni."
+
+msgid "stats.publications.details"
+msgstr "Detalji članka"
+
+msgid "stats.publications.none"
+msgstr "Nije pronađena statistika članka sa navedenim parametrima."
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "DOI prefiks"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "DOI prefiks je obavezan i mora biti u formi 10.xxxx."
+
+msgid "grid.category.path"
+msgstr "Putanja"
+
+msgid "manager.publication.library"
+msgstr "Izdavačka biblioteka"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Postavi godinu autorskih prava članka na"
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr ""
+"Nema objekata namijenjenih za objavljivanje kojima su dodijeljeni DOI u DOI "
+"dodatku javnih identifikatora. Zbog toga nema mogućnosti polaganja ni izvoza "
+"u ovom dodatku."
+
+msgid "stats.contextStats"
+msgstr "Status časopisa"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} od {$total} članaka"
+
+msgid "stats.publications.abstracts"
+msgstr "Sažeci"
+
+msgid "stats.publications.galleys"
+msgstr "Filovi"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Ukupno pregleda failova po datumu"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Prikaz"
+
+msgid "manager.setup.categories.description"
+msgstr ""
+"Odaberite odgovarajuće kategorije iz liste gore. Čitaoci će tako moći da "
+"pretražuju časopis."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Izjava o autorskim pravima i informacija o licenci će biti trajno "
+"priključena uz objavljen sadržaj, kako se ti podaci ne bi promijenili u "
+"slučaju da časopis izmijeni pravila za nove podneske članaka. Pritisni donje "
+"dugme da bi se vratile na početno stanje informacije o spremljenim dozvolama "
+"uz objavljen sadržaj članka."
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr ""
+"Obratite pažnju da će lozinka biti sačuvana kao običan tekst tj. neće biti "
+"dodatno šifrovana."
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "U fajl {$param} nije moguće pisati."
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr ""
+"Pošalji kopiju primarnom kontaktu identifikovanom u Postavkama časopisa."
+
+msgid "doi.description"
+msgstr "Ovaj dodatak omogućava dodjeljivanje DOI-a"
+
+msgid "manager.setup.section.description"
+msgstr ""
+"Članci u objavljenim brojevima u časopisu su organizovani u Sekcije/rubrike, "
+"obično po temi ili tipu sadržaja (pregledni članak, Istraživanje itd)."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Uspješna registracija!"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr ""
+"Članak: početna godina će biti izvučena prema datumu objavljivanja članka "
+"kao \"objavi kako ide\"."
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Provjera valjanosti je uspješna!"
+
+msgid "stats.publicationStats"
+msgstr "Statistika članka"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr ""
+"Da li ste sigurni da želite poništiti podatke o dozvolama koje ste već "
+"dodijelili člancima? Ova akcija se ne može poništiti."
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Ukupno pregleda sažetka po datumu"
+
+msgid "doi.manager.settings.description"
+msgstr "Podesite DOI dodatak kako biste mogli koristiti DOI-e u OJS-u:"
+
+msgid "doi.manager.settings.explainDois"
+msgstr ""
+"Odaberite objekte kojima će biti dodijeljeni Digital Object Identifiers "
+"(DOI):"
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr ""
+"Ovaj imejl obaveštava registrovane čitaoce da je urednik napravio nalog za "
+"njihovu pretplatu. Imejl poruka sadrži URL časopisa kao i instrukcije za "
+"pristup."
+
+msgid "mailable.openAccessNotify.description"
+msgstr ""
+"Ovaj obrazac imeil šalje se registrovanim čitaocima koji su zatražili "
+"primanje obavještenja imeilom kada broj časopisa postane dostupan pod "
+"uslovom otvorenog pristupa."

@@ -1,17 +1,17 @@
 # Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
-# Tigran Zargaryan <tigran@flib.sci.am>, 2022.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-08-03 14:20+0000\n"
+"PO-Revision-Date: 2025-03-03 19:43+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
-"Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/themes-"
-"default/hy_AM/>\n"
-"Language: hy_AM\n"
+"Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/hy/>\n"
+"Language: hy\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.themes.default.name"
 msgstr "Կանխադրված թեմա"
@@ -100,3 +100,9 @@ msgstr "Ներբեռնումներ"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Ներբեռնման տվյալները դեռ հասանելի չեն:"
+
+msgid "plugins.themes.default.nextSlide"
+msgstr "Հաջորդ սահիկը"
+
+msgid "plugins.themes.default.prevSlide"
+msgstr "Նախորդ սահիկը"

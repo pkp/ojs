@@ -1,15 +1,16 @@
+# Haval Abdulkarim <haval.abdulkarim@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-07 12:00+0000\n"
-"Last-Translator: avin a hama <avinasoshama@gmail.com>\n"
-"Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/author/ku/"
-">\n"
-"Language: ku_IQ\n"
+"PO-Revision-Date: 2025-03-09 13:50+0000\n"
+"Last-Translator: Haval Abdulkarim <haval.abdulkarim@gmail.com>\n"
+"Language-Team: Kurdish (Central) <http://translate.pkp.sfu.ca/projects/ojs/"
+"author/ckb/>\n"
+"Language: ckb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "author.submit"
 msgstr "داواکاری بڵاوکردنەوەی نوێ"
@@ -108,7 +109,7 @@ msgid "author.submissions.viewStatus"
 msgstr "پیشاندانی بارودۆخ"
 
 msgid "author.submissions.noSubmissions"
-msgstr ".هیچ پێشکەشکردنێکت نییە"
+msgstr "هیچ پێشکەشکردنێکت نییە."
 
 msgid "author.submit.journalSection"
 msgstr "بەشی گۆڤار"
@@ -144,13 +145,13 @@ msgid "author.submit.reorder"
 msgstr "ڕیزبەندیی ناوی توێژەرەکان"
 
 msgid "author.submit.selectPrincipalContact"
-msgstr ".پەیوەندیگرتن لەگەڵ سەرنوسەر"
+msgstr "پەیوەندیگرتن لەگەڵ سەرنوسەر."
 
 msgid "author.submit.addAuthor"
 msgstr "توێژەرێک زیاد بکە"
 
 msgid "author.submit.deleteAuthor"
-msgstr "توێژەرێک  بسڕەوە"
+msgstr "توێژەر بسڕەوە"
 
 msgid "author.submit.submissionIndexingDescription"
 msgstr ""
@@ -160,8 +161,8 @@ msgstr ""
 
 msgid "author.submit.coverageInstructions"
 msgstr ""
-".ئاماژەکردن بە پێگە جوگرافی و ڕوداوە مێژوییەکان و/یان تایبەتمەندییەکانی "
-"نمونەی توێژینەوە"
+"ئاماژەکردن بە پێگە جوگرافی و ڕوداوە مێژوییەکان و/یان تایبەتمەندییەکانی "
+"نمونەی توێژینەوە."
 
 msgid "author.submit.languageInstructions"
 msgstr ""
@@ -180,10 +181,10 @@ msgid "author.submit.form.titleRequired"
 msgstr "تکایە ناونیشانی توێژینەوەکەت لێرە بنوسە."
 
 msgid "author.submit.form.abstractRequired"
-msgstr ".تکایە پوختەی توێژینەوەکەت لێرە بنوسە"
+msgstr "تکایە پوختەی توێژینەوەکەت لێرە بنوسە."
 
 msgid "author.submit.form.wordCountAlert"
-msgstr ".ژمارەی وشەکانت زیاترە لە ژمارەی دیاریکراو"
+msgstr "ژمارەی وشەکانت زیاترە لە ژمارەی دیاریکراو بۆ پوختە لەم بەشە."
 
 msgid "author.submit.submissionFile"
 msgstr "فایلی پێشکەشکردن"
@@ -281,13 +282,13 @@ msgstr ""
 "پێچەوانەی یاساکانی هەڵسەنگاندنی نهێنی نییە."
 
 msgid "author.submit.suppFile.publisherDescription"
-msgstr ".تەنیا بۆ بەکارهێنان لەگەڵ ئەو شتانەی کە بە فەرمی بڵاو کراونەتەوە"
+msgstr "تەنیا بۆ بەکارهێنان لەگەڵ ئەو شتانەی کە بە فەرمی بڵاو کراونەتەوە."
 
 msgid "author.submit.suppFile.dateDescription"
 msgstr "ڕێککەوتی کۆکردنەوەی داتا یان دروستکردنی کەرەستەی توێژینەوە."
 
 msgid "author.submit.suppFile.sourceDescription"
-msgstr ".ناوی توێژینەوە یان سەچاوەی شتێکی دیکە"
+msgstr "ناوی توێژینەوە یان سەچاوەی شتێکی دیکە."
 
 msgid "author.submit.suppFile.specifyOtherType"
 msgstr "یەکێکی دیکە دیاری بکە"
@@ -317,7 +318,7 @@ msgid "author.submit.finishSubmission"
 msgstr "پێشکەش بکە"
 
 msgid "author.submit.submissionComplete"
-msgstr "توێژینەوەکەت پێشکەش کرا. سوپاس بۆ هەڵبژاردنی گۆڤاری  {$journalTitle}."
+msgstr "توێژینەوەکەت پێشکەش کرا. سوپاس بۆ هەڵبژاردنی گۆڤاری {$journalTitle}."
 
 msgid "author.article.uploadAuthorVersion"
 msgstr "نوسخەی نوسەر بار بکە"
