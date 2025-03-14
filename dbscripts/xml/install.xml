@@ -51,6 +51,7 @@
 	<migration class="PKP\migration\install\HighlightsMigration" />
 	<migration class="APP\migration\install\MetricsMigration" />
 	<migration class="PKP\migration\install\ReviewAssignmentSettings" />
+	<migration class="PKP\migration\install\EmailTemplateUserGroupAccessMigration"/>
 
 	<!-- Other install tasks -->
 	<code function="createData"/>
