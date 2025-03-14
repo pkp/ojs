@@ -1,7 +1,7 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-02-11 19:44+0000\n"
+"PO-Revision-Date: 2025-03-12 14:11+0000\n"
 "Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
 "Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/api/mr/>\n"
 "Language: mr\n"
@@ -82,3 +82,8 @@ msgstr "तुम्ही निवडलेली रक्कम प्रद
 
 msgid "api.publications.403.submissionsDidNotMatch"
 msgstr "तुम्ही शोधत असलेले प्रकाशन या लेखन सादरीकरणाचा भाग नाही."
+
+msgid "api.publications.403.paymentFeesNotEnabled"
+msgstr ""
+"प्रकाशन शुल्क भरणे कार्यान्वित (enable) केलेले नसल्यामुळे सादरीकरण "
+"शुल्कासाठीचा फॉर्म उपलब्ध नाही."
