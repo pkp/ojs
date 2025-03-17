@@ -24,7 +24,5 @@ switch ($op) {
     case 'externalReview':
     case 'editorial':
     case 'production':
-    case 'editorDecisionActions':
-    case 'submissionProgressBar':
         return new APP\pages\workflow\WorkflowHandler();
 }
