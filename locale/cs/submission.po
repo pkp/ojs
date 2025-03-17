@@ -251,6 +251,9 @@ msgstr "Datum publikace"
 msgid "publication.editDisabled"
 msgstr "Tato verze byla publikována a nelze ji upravovat."
 
+msgid "publication.editorEditWarning"
+msgstr ""
+
 msgid "publication.event.published"
 msgstr "Příspěvek byl publikován."
 

@@ -265,6 +265,9 @@ msgstr "Dato publiceret"
 msgid "publication.editDisabled"
 msgstr "Denne version er blevet publiceret og kan ikke redigeres."
 
+msgid "publication.editorEditWarning"
+msgstr ""
+
 msgid "publication.event.published"
 msgstr "Indsendelsen blev publiceret."
 

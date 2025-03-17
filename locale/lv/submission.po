@@ -178,6 +178,9 @@ msgstr "Publicēšanas datums"
 msgid "publication.editDisabled"
 msgstr "Šī versija ir publicēta, un to nevar rediģēt."
 
+msgid "publication.editorEditWarning"
+msgstr ""
+
 msgid "publication.event.published"
 msgstr "Materiāls tika publicēts."
 

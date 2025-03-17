@@ -260,6 +260,9 @@ msgstr "გამოქვეყნების თარიღი"
 msgid "publication.editDisabled"
 msgstr "ეს ვერსია გამოქვეყნდა, მისი ჩასწორება შეუძლებელია."
 
+msgid "publication.editorEditWarning"
+msgstr ""
+
 msgid "publication.event.published"
 msgstr "მასალა გამოქვეყნდა."
 

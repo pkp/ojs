@@ -235,6 +235,9 @@ msgstr "出版日期"
 msgid "publication.editDisabled"
 msgstr "此版本已出版及不能修改。"
 
+msgid "publication.editorEditWarning"
+msgstr ""
+
 msgid "publication.event.published"
 msgstr "投稿已出版。"
 

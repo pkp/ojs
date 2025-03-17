@@ -258,6 +258,9 @@ msgstr "Дата публикации"
 msgid "publication.editDisabled"
 msgstr "Эта версия была опубликована, её нельзя отредактировать."
 
+msgid "publication.editorEditWarning"
+msgstr ""
+
 msgid "publication.event.published"
 msgstr "Материал был опубликован."
 

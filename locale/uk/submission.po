@@ -261,6 +261,9 @@ msgstr "Дата Публікації"
 msgid "publication.editDisabled"
 msgstr "Ця версія була опублікована і не може бути змінена."
 
+msgid "publication.editorEditWarning"
+msgstr ""
+
 msgid "publication.event.published"
 msgstr "Подання було опубліковано."
 

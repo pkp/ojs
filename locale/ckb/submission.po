@@ -239,6 +239,9 @@ msgstr "ڕێکەوتی بڵاوکردنەوە"
 msgid "publication.editDisabled"
 msgstr "ئەم وەشانە بڵاوکراوەتەوە و ناتوانرێت دەستکاری بکرێت."
 
+msgid "publication.editorEditWarning"
+msgstr ""
+
 msgid "publication.event.published"
 msgstr ""
 

@@ -270,6 +270,9 @@ msgstr "Ημερομηνία Δημοσίευσης"
 msgid "publication.editDisabled"
 msgstr "Αυτή η έκδοση έχει δημοσιευτεί και δεν είναι δυνατή η επεξεργασία της."
 
+msgid "publication.editorEditWarning"
+msgstr ""
+
 msgid "publication.event.published"
 msgstr "Η υποβολή δημοσιεύτηκε."
 
