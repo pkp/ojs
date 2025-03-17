@@ -1,12 +1,13 @@
 <?php
+
 /**
- * @file pages/dashboard/DashboardHandlerNext.php
+ * @file pages/dashboard/DashboardHandler.php
  *
  * Copyright (c) 2014-2021 Simon Fraser University
  * Copyright (c) 2003-2021 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class DashboardHandlerNext
+ * @class DashboardHandler
  *
  * @ingroup pages_dashboard
  *
@@ -20,11 +21,11 @@ use APP\core\Application;
 use APP\core\Request;
 use APP\facades\Repo;
 use APP\template\TemplateManager;
-use PKP\pages\dashboard\PKPDashboardHandlerNext;
+use PKP\pages\dashboard\PKPDashboardHandler;
 
 class_exists(\APP\components\forms\publication\AssignToIssueForm::class); // Force define of FORM_ASSIGN_TO_ISSUE
 
-class DashboardHandlerNext extends PKPDashboardHandlerNext
+class DashboardHandler extends PKPDashboardHandler
 {
     /**
      * Setup variables for the template

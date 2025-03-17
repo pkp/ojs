@@ -364,12 +364,12 @@ Hooks
     Parameters: `[[&$errors, $action, $props, $allowedLocales, $primaryLocale]]`
 
 `Dashboard::columns`
-    Class: :php:class:`PKP\pages\dashboard\DashboardHandlerNext`
+    Class: :php:class:`PKP\pages\dashboard\DashboardHandler`
     
     Parameters: `[[&$columns, $userRoles]]`
 
 `Dashboard::views`
-    Class: :php:class:`PKP\pages\dashboard\DashboardHandlerNext`
+    Class: :php:class:`PKP\pages\dashboard\DashboardHandler`
     
     Parameters: `[[&$views, $userRoles]]`
 
