@@ -7566,8 +7566,8 @@
 				"summary": "Get a list of submissions in a review stage",
 				"parameters": [
 					{
-						"name": "needsReviewers",
-						"description": "Filter results by submissions which need reviewers to be assigned",
+						"name": "needsReviews",
+						"description": "Filter results by submissions without configured limit of confirmed reviews",
 						"in": "query",
 						"required": false,
 						"type": "boolean"
