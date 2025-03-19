@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/doaj/DOAJExportPlugin.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2025 Simon Fraser University
+ * Copyright (c) 2003-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DOAJExportPlugin
@@ -24,7 +24,6 @@ use PKP\notification\Notification;
 define('DOAJ_XSD_URL', 'https://www.doaj.org/schemas/doajArticles.xsd');
 define('DOAJ_API_DEPOSIT_OK', 201);
 define('DOAJ_API_URL', 'https://doaj.org/api/');
-define('DOAJ_API_URL_DEV', 'https://testdoaj.cottagelabs.com/api/');
 define('DOAJ_API_OPERATION', 'articles');
 
 class DOAJExportPlugin extends PubObjectsExportPlugin
@@ -128,7 +127,7 @@ class DOAJExportPlugin extends PubObjectsExportPlugin
         try {
             $response = $httpClient->request(
                 'POST',
-                ($this->isTestMode($context) ? DOAJ_API_URL_DEV : DOAJ_API_URL) . DOAJ_API_OPERATION,
+                DOAJ_API_URL . DOAJ_API_OPERATION,
                 [
                     'query' => ['api_key' => $apiKey],
                     'json' => json_decode($jsonString)

@@ -40,11 +40,6 @@ msgstr ""
 "función de la configuración cron). Puede comprobar todos los artículos no "
 "registrados."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Utilice la API de prueba de DOAJ (entorno de prueba) para el registro. No "
-"olvide desactivar esta opción en la versión de producción."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "Tarea de registro automático de DOAJ"
 

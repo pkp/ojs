@@ -1,8 +1,8 @@
 {**
  * plugins/importexport/doaj/templates/settingsForm.tpl
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2025 Simon Fraser University
+ * Copyright (c) 2003-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * DOAJ plugin settings
@@ -24,9 +24,6 @@
 		{/fbvFormSection}
 		{fbvFormSection list="true"}
 			{fbvElement type="checkbox" id="automaticRegistration" label="plugins.importexport.doaj.settings.form.automaticRegistration.description" checked=$automaticRegistration|compare:true}
-		{/fbvFormSection}
-		{fbvFormSection list="true"}
-			{fbvElement type="checkbox" id="testMode" label="plugins.importexport.doaj.settings.form.testMode.description" checked=$testMode|compare:true}
 		{/fbvFormSection}
 	{/fbvFormArea}
 	{fbvFormButtons submitText="common.save"}

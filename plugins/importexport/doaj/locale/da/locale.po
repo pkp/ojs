@@ -42,11 +42,6 @@ msgstr ""
 "publicering, kan gå lidt tid inden processen er fuldført. Du kan tjekke om "
 "der skulle være artikler der er uregistrerede."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Brug DOAJ test-API (testmiljø) til registrering. Husk at fjerne denne "
-"mulighed i forbindelse med produktionen."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "DOAJ automatiske registreringsopgave"
 
