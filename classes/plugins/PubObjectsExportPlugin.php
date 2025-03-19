@@ -591,7 +591,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
     {
         $scheduler
             ->addSchedule(new DOAJInfoSender())
-            ->everyMinute()
+            ->daily()
             ->name(DOAJInfoSender::class)
             ->withoutOverlapping();
     }
