@@ -702,6 +702,9 @@ msgstr "Requires Subscription"
 msgid "reader.subscriptionOrFeeAccess"
 msgstr "Requires Subscription or Fee"
 
+msgid "reader.accessibleLinks.buttontext"
+msgstr "simplified"
+
 msgid "reader.purchasePrice"
 msgstr "({$currency} {$price})"
 
