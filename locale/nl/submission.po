@@ -265,8 +265,7 @@ msgstr "Datum van publicatie"
 msgid "publication.editDisabled"
 msgstr "Deze versie is gepubliceerd en kan niet worden aangepast."
 
-msgid "publication.editorEditWarning"
-msgstr ""
+
 
 msgid "publication.event.published"
 msgstr "Deze inzending is gepubliceerd."

@@ -258,8 +258,7 @@ msgstr "Publikálás dátuma"
 msgid "publication.editDisabled"
 msgstr "Ez a verzió publikálásra került és nem szerkeszthető."
 
-msgid "publication.editorEditWarning"
-msgstr ""
+
 
 msgid "publication.event.published"
 msgstr "A cikk publikált."

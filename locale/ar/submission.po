@@ -244,9 +244,6 @@ msgstr "تأريخ النشر"
 msgid "publication.editDisabled"
 msgstr "هذه النسخة سبق وأن نُشرت ولا يمكن تعديلها."
 
-msgid "publication.editorEditWarning"
-msgstr ""
-
 msgid "publication.event.published"
 msgstr "طلب التقديم نُشر."
 

@@ -244,8 +244,7 @@ msgstr ""
 msgid "publication.editDisabled"
 msgstr ""
 
-msgid "publication.editorEditWarning"
-msgstr ""
+
 
 msgid "publication.event.published"
 msgstr ""

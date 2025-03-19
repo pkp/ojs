@@ -260,8 +260,7 @@ msgstr "Data publicării"
 msgid "publication.editDisabled"
 msgstr "Această versiune a fost publicată și nu poate fi modificată."
 
-msgid "publication.editorEditWarning"
-msgstr ""
+
 
 msgid "publication.event.published"
 msgstr "Manuscrisul a fost publicat."

@@ -255,8 +255,7 @@ msgstr "Հրապարակման ամսաթիվ"
 msgid "publication.editDisabled"
 msgstr "Այս տարբերակը հրապարակվել է և հնարավոր չէ խմբագրել:"
 
-msgid "publication.editorEditWarning"
-msgstr ""
+
 
 msgid "publication.event.published"
 msgstr "Ներկայացված նյութը հրապարակվել է."

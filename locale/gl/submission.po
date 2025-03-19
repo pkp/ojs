@@ -256,8 +256,7 @@ msgstr "Data de publicación"
 msgid "publication.editDisabled"
 msgstr "Esta versión xa publicouse e non se pode editar."
 
-msgid "publication.editorEditWarning"
-msgstr ""
+
 
 msgid "publication.event.published"
 msgstr "O envío foi publicado."

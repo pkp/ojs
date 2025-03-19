@@ -67,9 +67,6 @@ msgstr "Müəllif hüquqları ili, nəşr tarixinə görə avtomatik olaraq tən
 msgid "publication.editDisabled"
 msgstr "Bu versiya nəşr edildi və redaktə edilə bilməz."
 
-msgid "publication.editorEditWarning"
-msgstr ""
-
 msgid "publication.event.published"
 msgstr "Məqalə nəşr edildi."
 

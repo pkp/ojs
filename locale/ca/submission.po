@@ -261,9 +261,6 @@ msgstr "Data de publicació"
 msgid "publication.editDisabled"
 msgstr "Aquesta versió ja s'ha publicat i no es pot editar."
 
-msgid "publication.editorEditWarning"
-msgstr ""
-
 msgid "publication.event.published"
 msgstr "La tramesa ha estat publicada."
 

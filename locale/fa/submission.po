@@ -252,8 +252,7 @@ msgstr "تاریخ منتشر شده"
 msgid "publication.editDisabled"
 msgstr "این نسخه منتشر شده و نمی‌تواند ویرایش شود."
 
-msgid "publication.editorEditWarning"
-msgstr ""
+
 
 msgid "publication.event.published"
 msgstr "مقاله ارسال شده منتشر شده."

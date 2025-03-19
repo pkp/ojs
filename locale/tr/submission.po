@@ -253,8 +253,7 @@ msgstr "Yayın Tarihi"
 msgid "publication.editDisabled"
 msgstr "Bu sürüm yayınlandı ve düzenlenemez."
 
-msgid "publication.editorEditWarning"
-msgstr ""
+
 
 msgid "publication.event.published"
 msgstr "Gönderi yayınlandı."

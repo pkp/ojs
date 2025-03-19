@@ -241,9 +241,6 @@ msgstr "Argitaratze-data"
 msgid "publication.editDisabled"
 msgstr "Bertsio hau argitaratu da eta ezin da editatu."
 
-msgid "publication.editorEditWarning"
-msgstr ""
-
 msgid "publication.event.published"
 msgstr "Bidalketa argitaratu da."
 

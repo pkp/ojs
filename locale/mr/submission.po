@@ -131,8 +131,7 @@ msgstr "प्रकाशन दिनांक"
 msgid "publication.editDisabled"
 msgstr "या प्रारूपाचे प्रकाशन झाले आहे आणि त्याचे संपादन आता शक्य नाही."
 
-msgid "publication.editorEditWarning"
-msgstr ""
+
 
 msgid "publication.event.published"
 msgstr "सादरीकरणाचे प्रकाशन झाले आहे."

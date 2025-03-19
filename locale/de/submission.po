@@ -267,9 +267,6 @@ msgstr "Veröffentlichungsdatum"
 msgid "publication.editDisabled"
 msgstr "Diese Version wurde veröffentlicht und kann nicht geändert werden."
 
-msgid "publication.editorEditWarning"
-msgstr ""
-
 msgid "publication.event.published"
 msgstr "Der Beitrag wurde veröffentlicht."
 

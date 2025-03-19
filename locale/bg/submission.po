@@ -260,9 +260,6 @@ msgstr "Дата на публикуване"
 msgid "publication.editDisabled"
 msgstr "Тази версия е публикувана и не може да бъде редактирана."
 
-msgid "publication.editorEditWarning"
-msgstr ""
-
 msgid "publication.event.published"
 msgstr "Изпратеният материал беше публикуван."
 

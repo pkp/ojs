@@ -135,6 +135,7 @@ describe('Data suite tests', function() {
 		cy.get('[data-cy="sidemodal-header"]').contains("Published");
 		// check publication status
 		cy.get('[data-cy="workflow-controls-left"]').contains("Published");
+		cy.contains('Warning: This version has been published. Editing it may impact the published content.');
 		// the button "Unpublish" (connected with the publication)
 		// and the button "Create New Version" (connected with submission) exist
 		cy.get('button:contains("Unpublish")').should('exist');
@@ -179,6 +180,7 @@ describe('Data suite tests', function() {
 		cy.get('[data-cy="sidemodal-header"]').contains("Published");
 		// check publication status
 		cy.get('[data-cy="workflow-controls-left"]').contains("Published");
+		cy.contains('Warning: This version has been published. Editing it may impact the published content.');
 		// the button "Unpublish" (connected with the publication)
 		// and the button "Create New Version" (connected with submission) exist
 		cy.get('button:contains("Unpublish")').should('exist');

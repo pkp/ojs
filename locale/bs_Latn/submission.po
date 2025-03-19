@@ -253,9 +253,6 @@ msgstr "Datum objavljivanja"
 msgid "publication.editDisabled"
 msgstr "Ova verzija je objavljena i ne može se uređivati."
 
-msgid "publication.editorEditWarning"
-msgstr ""
-
 msgid "publication.event.published"
 msgstr "Predaja je objavljena."
 
