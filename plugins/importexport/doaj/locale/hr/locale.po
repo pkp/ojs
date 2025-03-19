@@ -46,9 +46,6 @@ msgstr ""
 "biti potrebno kraće vrijeme nakon objavljivanja do procesiranja. Možete "
 "provjeriti postoje li neregistrirani članci."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "DOAJ automatska registracija"
 

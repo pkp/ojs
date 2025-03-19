@@ -41,11 +41,6 @@ msgstr ""
 "proceso pode demorarse algún tempo tras a publicación (p.ex. en función da "
 "súa configuración cron). Pode comprobar todos os artigos non rexistrados."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Utilice a API de proba de DOAJ (ambiente de proba) para o rexistro. Non se "
-"esqueza de desactivar esta opción na versión de produción."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "Tarefa de rexistro automático de DOAJ"
 

@@ -42,12 +42,6 @@ msgstr ""
 "в зависимост от конфигурацията на cronjob). Можете да проверите за всички "
 "нерегистрирани статии."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Използвайте DOAJ test API (среда за тестване) за регистрация. Моля, не "
-"забравяйте да премахнете тази опция за производството (след приключване на "
-"тестовете)."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "Задача за автоматична регистрация на DOAJ"
 
