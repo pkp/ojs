@@ -233,7 +233,7 @@ class OJSPaymentManager extends PaymentManager
             switch ($queuedPayment->getType()) {
                 case self::PAYMENT_TYPE_MEMBERSHIP:
                     $user = Repo::user()->get($queuedPayment->getUserId(), true);
-                    $dateEnd = $user->getSetting('dateEndMembership', 0);
+                    $dateEnd = $user->getData('dateEndMembership', 0);
                     if (!$dateEnd) {
                         $dateEnd = 0;
                     }
@@ -245,7 +245,8 @@ class OJSPaymentManager extends PaymentManager
                     }
 
                     $dateEnd = mktime(23, 59, 59, date('m', $dateEnd), date('d', $dateEnd), date('Y', $dateEnd) + 1);
-                    $user->updateSetting('dateEndMembership', $dateEnd, 'date', 0);
+                    $user->setData('dateEndMembership', $dateEnd);
+                    Repo::user()->edit($user);
                     $returner = true;
                     break;
                 case self::PAYMENT_TYPE_PURCHASE_SUBSCRIPTION:
