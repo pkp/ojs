@@ -258,6 +258,8 @@ msgstr "Tanggal Diterbitkan"
 msgid "publication.editDisabled"
 msgstr "Versi ini telah diterbitkan dan tidak dapat disunting."
 
+
+
 msgid "publication.event.published"
 msgstr "Naskah telah diterbitkan."
 

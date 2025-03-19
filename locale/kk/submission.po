@@ -261,6 +261,8 @@ msgstr "Жарияланған күні"
 msgid "publication.editDisabled"
 msgstr "Бұл нұсқа жарияланды және оны өңдеу мүмкін емес."
 
+
+
 msgid "publication.event.published"
 msgstr "Материал жарияланды."
 

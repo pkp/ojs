@@ -245,6 +245,8 @@ msgstr "発行日"
 msgid "publication.editDisabled"
 msgstr "このバージョンは公開されており、編集することはできません。"
 
+
+
 msgid "publication.event.published"
 msgstr "投稿が公開済みです。"
 

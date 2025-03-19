@@ -271,6 +271,8 @@ msgstr "Data di pubblicazione"
 msgid "publication.editDisabled"
 msgstr "Questa versione è stata pubblicata e non può essere modificata."
 
+
+
 msgid "publication.event.published"
 msgstr "Questo articolo è stato pubblicato."
 

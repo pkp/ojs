@@ -254,6 +254,8 @@ msgstr "Útgáfudagur"
 msgid "publication.editDisabled"
 msgstr "Búið er að gefa út þessa útgáfu og ekki hægt að breyta henni."
 
+
+
 msgid "publication.event.published"
 msgstr "Innsendingin hefur verið gefin út."
 

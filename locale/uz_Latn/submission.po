@@ -259,6 +259,8 @@ msgstr "Chop etilgan sana"
 msgid "publication.editDisabled"
 msgstr "Bu versiya chop etilgan va uni tahrir qilib bo'lmaydi."
 
+
+
 msgid "publication.event.published"
 msgstr "Taqdimot e'lon qilindi."
 

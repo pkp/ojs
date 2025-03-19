@@ -260,6 +260,8 @@ msgstr "Julkaisupäivä"
 msgid "publication.editDisabled"
 msgstr "Tämä versio on julkaistu eikä sitä voi muokata."
 
+
+
 msgid "publication.event.published"
 msgstr "Käsikirjoitus julkaistiin."
 

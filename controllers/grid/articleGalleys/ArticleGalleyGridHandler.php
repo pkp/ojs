@@ -40,7 +40,6 @@ use PKP\security\authorization\internal\RepresentationRequiredPolicy;
 use PKP\security\authorization\PublicationAccessPolicy;
 use PKP\security\authorization\WorkflowStageAccessPolicy;
 use PKP\security\Role;
-use PKP\submission\PKPSubmission;
 
 class ArticleGalleyGridHandler extends GridHandler
 {
@@ -474,12 +473,11 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function canEdit()
     {
-        return $this->getPublication()->getData('status') !== PKPSubmission::STATUS_PUBLISHED &&
-            Repo::user()->canUserAccessStage(
-                WORKFLOW_STAGE_ID_PRODUCTION,
-                PKPApplication::WORKFLOW_TYPE_EDITORIAL,
-                $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ACCESSIBLE_WORKFLOW_STAGES),
-                $this->getAuthorizedContextObject(Application::ASSOC_TYPE_USER_ROLES)
-            );
+        return Repo::user()->canUserAccessStage(
+            WORKFLOW_STAGE_ID_PRODUCTION,
+            PKPApplication::WORKFLOW_TYPE_EDITORIAL,
+            $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ACCESSIBLE_WORKFLOW_STAGES),
+            $this->getAuthorizedContextObject(Application::ASSOC_TYPE_USER_ROLES)
+        );
     }
 }

@@ -265,6 +265,8 @@ msgstr "Publiceringsdatum"
 msgid "publication.editDisabled"
 msgstr "Versionen har publicerats och kan inte redigeras."
 
+
+
 msgid "publication.event.published"
 msgstr "Bidraget är publicerat."
 

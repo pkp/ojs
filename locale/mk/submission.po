@@ -258,6 +258,8 @@ msgstr "Датум на објава"
 msgid "publication.editDisabled"
 msgstr "Оваа верзија е објавена и не може да се уредува."
 
+
+
 msgid "publication.event.published"
 msgstr "Поднесокот беше објавен."
 
