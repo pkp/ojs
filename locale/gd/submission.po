@@ -164,7 +164,7 @@ msgstr "Roghainnean na h-earrainn"
 msgid "catalog.browseTitles"
 msgstr "Nithean ({$numTitles})"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "A h-uile nì"
 
 msgid "galley.editPublishedDisabled"

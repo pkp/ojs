@@ -154,7 +154,7 @@ msgstr "Opțiuni secțiune"
 msgid "catalog.browseTitles"
 msgstr "Elemente {$numTitles} |"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "Toate elementele"
 
 msgid "galley.editPublishedDisabled"

@@ -62,6 +62,7 @@
 		<migration class="APP\migration\upgrade\v3_4_0\I6782_CleanOldMetrics" />
 		<migration class="APP\migration\upgrade\v3_4_0\I6782_RemovePlugins" />
 		<migration class="PKP\migration\upgrade\v3_4_0\I7286_BatchesMigration"/>
+		<migration class="APP\migration\upgrade\v3_4_0\I5932_GenerateSectionUrlPaths" />
 		<migration class="APP\migration\upgrade\v3_4_0\I8151_ExtendSettingValues"/>
 		<migration class="PKP\migration\upgrade\v3_4_0\I8151_ExtendSettingValues"/>
 		<migration class="PKP\migration\upgrade\v3_4_0\I2890_EmailTemplatesVarcharLengthUpdate"/>

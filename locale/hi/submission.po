@@ -209,7 +209,7 @@ msgstr "अनुभाग विकल्प"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} आइटम"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "सभी आइटम"
 
 # (pofilter) endpunc: Different punctuation at the end

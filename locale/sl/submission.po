@@ -154,7 +154,7 @@ msgstr "Nastavitve rubrike"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} postavk"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "Vse postavke"
 
 msgid "galley.editPublishedDisabled"

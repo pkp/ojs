@@ -15,8 +15,10 @@
  * @uses $hideGalleys bool Hide the article galleys for this article?
  * @uses $primaryGenreIds array List of file genre ids for primary file types
  * @uses $heading string HTML heading element, default: h2
- *
  * @hook Templates::Issue::Issue::Article []
+ * @uses $hidePageNumbers bool Hide pagenumbers for this article?
+ * @uses $issueUrl string issue url
+ * @uses $issueName string issue name
  *}
 {assign var=publication value=$article->getCurrentPublication()}
 
@@ -32,8 +34,8 @@
 <div class="obj_article_summary">
 	{if $publication->getLocalizedData('coverImage')}
 		<div class="cover">
-			<a {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if} class="file">
-				{assign var="coverImage" value=$publication->getLocalizedData('coverImage')}
+			<a {if $journal}href="{url journal=$journal->getPath() page="articles" op="view" path=$articlePath}"{else}href="{url page="articles" op="view" path=$articlePath}"{/if} class="file">
+				{assign var="coverImage" value=$article->getCurrentPublication()->getLocalizedData('coverImage')}
 				<img
 					src="{$publication->getLocalizedCoverImageUrl($article->getData('contextId'))|escape}"
 					alt="{$coverImage.altText|escape|default:''}"
@@ -43,7 +45,7 @@
 	{/if}
 
 	<{$heading} class="title">
-		<a id="article-{$article->getId()}" {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if}>
+		<a id="article-{$article->getId()}" {if $journal}href="{url journal=$journal->getPath() page="articles" op="view" path=$articlePath}"{else}href="{url page="articles" op="view" path=$articlePath}"{/if}>
 			{if $currentContext}
 				{$publication->getLocalizedTitle(null, 'html')|strip_unsafe_html}
 				{assign var=localizedSubtitle value=$publication->getLocalizedSubtitle(null, 'html')|strip_unsafe_html}
@@ -63,6 +65,13 @@
 	{assign var=submissionDatePublished value=$publication->getData('datePublished')}
 	{if $showAuthor || $submissionPages || ($submissionDatePublished && $showDatePublished)}
 	<div class="meta">
+
+		{if $issueName}
+			<div class="issue">
+				<a href="{$issueUrl|escape}">{$issueName|escape}</a>
+			</div>
+		{/if}
+
 		{if $showAuthor}
 		<div class="authors">
 			{$publication->getAuthorString($authorUserGroups)|escape}

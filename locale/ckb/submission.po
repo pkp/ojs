@@ -145,7 +145,7 @@ msgstr "هەڵبژاردنەکانی بەش"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} دانە"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "هەمو دانەکان"
 
 msgid "galley.editPublishedDisabled"

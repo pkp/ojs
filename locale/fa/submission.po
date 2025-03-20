@@ -150,7 +150,7 @@ msgstr "گزینه‌های بخش"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} آیتم"
 
-msgid "catalog.category.heading"
+msgid "category.heading"
 msgstr "همه آیتم‌ها"
 
 msgid "galley.editPublishedDisabled"

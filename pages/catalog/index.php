@@ -21,5 +21,6 @@ switch ($op) {
     case 'category':
     case 'fullSize':
     case 'thumbnail':
-        return new PKP\pages\catalog\PKPCatalogHandler();
+        define('HANDLER_CLASS', 'APP\pages\catalog\CatalogHandler');
+        break;
 }
