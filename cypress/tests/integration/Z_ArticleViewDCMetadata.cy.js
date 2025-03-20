@@ -374,7 +374,7 @@ describe('Article View Metadata - DC Plugin', function() {
 		cy.checkDoiConfig(['publication', 'issue']);
 
 		// After configuration, go to submissions
-		cy.get('nav').contains('Dashboards').click();
+		cy.get('nav').contains('Editor Dashboard').click();
 		cy.get('nav').contains('Active submissions').click();
 
 		// Create a new submission
