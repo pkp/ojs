@@ -120,6 +120,9 @@ msgstr "Unpublished"
 msgid "editor.issues.datePublished"
 msgstr "Date Published"
 
+msgid "editor.issues.resetPublicationDatePublished"
+msgstr "Reset Article published dates to match Issue date"
+
 msgid "editor.issues.volumeRequired"
 msgstr "Volume is required and must be a positive, numeric value."
 
