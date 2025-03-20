@@ -83,7 +83,7 @@ class ReviewerRecommendationsListPanel extends ListPanel
     }
 
     /**
-     *
+     * Construct the api url to perform actions on recommendations
      */
     protected function getReviewerRecommendationsApiUrl(): string
     {
