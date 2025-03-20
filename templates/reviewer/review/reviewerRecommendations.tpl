@@ -16,7 +16,7 @@
 		type="select"
 		id="recommendation"
 		from=$reviewerRecommendationOptions
-		selected=$reviewAssignment->getRecommendation()
+		selected=$reviewAssignment->getRecommendationId()
 		size=$fbvStyles.size.MEDIUM
 		required=$required|default:true
 		disabled=$readOnly

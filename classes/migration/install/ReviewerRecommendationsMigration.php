@@ -63,13 +63,14 @@ class ReviewerRecommendationsMigration extends \PKP\migration\Migration
 
             $table->index(['context_id'], 'reviewer_recommendations_context_id');
 
-            $table->unsignedInteger('value');
-            $table->unique(['context_id', 'value'], 'reviewer_recommendations_context_unique');
+            // TODO : Need to remove the value column
+            // $table->unsignedInteger('value');
+            // $table->unique(['context_id', 'value'], 'reviewer_recommendations_context_unique');
 
             $table
                 ->boolean('status')
                 ->default(true)
-                ->comment('The status which determine if will be showen in recommendation list');
+                ->comment('The status which determine if will be shown in recommendation list');
 
             $table->timestamps();
 
