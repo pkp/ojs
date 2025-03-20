@@ -511,7 +511,7 @@ msgid "issue.noIssues"
 msgstr "No hay números"
 
 msgid "issue.toc"
-msgstr "Tabla de contenidos"
+msgstr "Tabla de contenido"
 
 msgid "issue.abstract"
 msgstr "Resumen"
@@ -848,7 +848,7 @@ msgstr ""
 msgid "manager.setup.basicEditorialStepsDescription"
 msgstr ""
 "Pasos: Cola de envío &gt; revisión de envíos &gt; edición de envíos &gt; "
-"tabla de contenidos.<br /><br /> Seleccione un modelo para gestionar esos "
+"tabla de contenido.<br /><br /> Seleccione un modelo para gestionar esos "
 "aspectos del proceso editorial. (Para designar un gestor/a de edición y "
 "editores/as de sección, vaya a \"Editores\" en \"Gestión de la revista».)"
 
