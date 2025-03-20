@@ -18,8 +18,11 @@ use APP\core\Application;
 use APP\decision\types\Accept;
 use APP\decision\types\SkipExternalReview;
 use APP\facades\Repo;
+use APP\issue\Issue;
+use APP\publication\Publication;
 use APP\submission\Submission;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Enumerable;
 use PKP\db\DAORegistry;
 use PKP\decision\DecisionType;
 use PKP\decision\types\BackFromCopyediting;
@@ -41,6 +44,9 @@ use PKP\submission\reviewRound\ReviewRoundDAO;
 
 class Schema extends \PKP\submission\maps\Schema
 {
+    /** @var Enumerable<int, Issue[]> Issues associated with submissions. Keyed by submission ID. **/
+    public Enumerable $submissionsIssues;
+
     /**
      * @copydoc \PKP\submission\maps\Schema::mapByProperties()
      */
@@ -70,6 +76,10 @@ class Schema extends \PKP\submission\maps\Schema
             $locales[] = $primaryLocale;
         }
 
+        if (in_array('issueToBePublished', $props)) {
+            $output['issueToBePublished'] = $this->getPropertyIssueToBePublished($submission->getData('publications'));
+        }
+
         $output = $this->schemaService->addMissingMultilingualValues($this->schemaService::SCHEMA_SUBMISSION, $output, $locales);
 
         ksort($output);
@@ -81,9 +91,9 @@ class Schema extends \PKP\submission\maps\Schema
     {
         return [
             'scheduledIn',
+            'issueToBePublished'
         ];
     }
-
 
     /**
      * Gets the Editorial decisions available to editors for a given stage of a submission
@@ -164,5 +174,68 @@ class Schema extends \PKP\submission\maps\Schema
         Hook::call('Workflow::Decisions', [&$decisionTypes, $stageId]);
 
         return $decisionTypes;
+    }
+
+    /**
+     * Get issues associated with submissions. Results are keyed by submission ID.
+     *
+     * @return Enumerable<int, Issue[]>
+     */
+    protected function getSubmissionsIssues(Enumerable $submissions): Enumerable
+    {
+        $submissionIds = $submissions->map(fn (Submission $submission) => $submission->getId())->all();
+        $publications = Repo::publication()->getCollector()->filterBySubmissionIds($submissionIds)->getMany();
+        $issueIds = $publications->map(fn (Publication $publication) => $publication->getData('issueId'))
+            ->unique()
+            ->all();
+
+        $issues = Repo::issue()->getCollector()
+            ->filterByContextIds([$this->context->getId()])
+            ->filterByIssueIds($issueIds)
+            ->getMany();
+
+        $issueIdsGroupedBySubmission = $publications->groupBy(fn (Publication $publication) => $publication->getData('submissionId'))
+            ->map(fn ($entry) => $entry->map(fn (Publication $publication) => $publication->getData('issueId'))
+                ->filter()); // Filter to remove any entry where `$publication->getData('issueId')` returned null
+
+        return $submissions->mapWithKeys(function ($submission) use ($issues, $publications, $issueIdsGroupedBySubmission) {
+            $submissionIssueIds = $issueIdsGroupedBySubmission->get($submission->getId());
+            return [$submission->getId() => $submissionIssueIds->mapWithKeys(fn ($id) => [$id => $issues->get($id)])];
+        });
+    }
+
+    /**
+     * Get details about the issue a submission will be published in.
+     *
+     * @param Enumerable<int, Publication> $publications Publications, keyed by publication ID.
+     */
+    protected function getPropertyIssueToBePublished(Enumerable $publications): ?array
+    {
+        /** @var Publication $latestScheduledPublication */
+        $latestScheduledPublication = $publications
+            ->filter(fn ($publication) => $publication->getData('status') === Submission::STATUS_SCHEDULED)
+            ->sortByDesc(fn (Publication $publication) => $publication->getData('version'))
+            ->first();
+
+        if (!$latestScheduledPublication) {
+            return null;
+        }
+
+        $submissionId = $latestScheduledPublication->getData('submissionId');
+        $issueId = $latestScheduledPublication->getData('issueId');
+        $issue = $this->submissionsIssues->get($submissionId)?->get($issueId);
+
+        return $issue ? [
+            'id' => $issueId,
+            'label' => $issue->getIssueIdentification()
+        ] : null;
+    }
+
+    /**
+     * Populate class properties specific to OJS.
+     */
+    protected function addAppSpecificData(Enumerable $submissions): void
+    {
+        $this->submissionsIssues ??= $this->getSubmissionsIssues($submissions);
     }
 }
