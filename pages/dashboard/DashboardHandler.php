@@ -56,7 +56,7 @@ class DashboardHandler extends PKPDashboardHandler
         $pageInitConfig['recommendations'] = ReviewerRecommendation::query()
             ->withContextId($context->getId())
             ->get()
-            ->select(['recommendationId', 'status', 'value', 'title'])
+            ->select(['reviewerRecommendationId', 'status', 'value', 'title'])
             ->values()
             ->toArray();
 

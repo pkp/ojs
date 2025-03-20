@@ -15,7 +15,7 @@
 
 namespace APP\security\authorization;
 
-use APP\core\Request;
+use PKP\core\PKPRequest;
 use PKP\context\Context;
 use PKP\security\authorization\AuthorizationPolicy;
 use PKP\submission\reviewer\recommendation\ReviewerRecommendation;
@@ -23,18 +23,18 @@ use PKP\submission\reviewer\recommendation\ReviewerRecommendation;
 class RecommendationContextPolicy extends AuthorizationPolicy
 {
     public ?Context $context;
-    public int $recommendationId;
+    public int $reviewerRecommendationId;
 
     /**
      * Constructor
      */
     public function __construct(
-        Request $request,
-        int $recommendationId,
+        PKPRequest $request,
+        int $reviewerRecommendationId,
         string $message = 'manager.reviewerRecommendations.context.restriction'
     ) {
         parent::__construct($message);
-        $this->recommendationId = $recommendationId;
+        $this->reviewerRecommendationId = $reviewerRecommendationId;
         $this->context = $request->getContext();
     }
 
@@ -47,7 +47,7 @@ class RecommendationContextPolicy extends AuthorizationPolicy
             return AuthorizationPolicy::AUTHORIZATION_DENY;
         }
 
-        $recommendation = ReviewerRecommendation::find($this->recommendationId);
+        $recommendation = ReviewerRecommendation::find($this->reviewerRecommendationId);
 
         if ($this->context->getId() !== $recommendation->contextId) {
             return AuthorizationPolicy::AUTHORIZATION_DENY;

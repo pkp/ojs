@@ -20,12 +20,14 @@ use PKP\submission\reviewer\recommendation\ReviewerRecommendation;
 
 class RecommendationRequiredPolicy extends AuthorizationPolicy
 {
-    public $recommendationId;
+    public $reviewerRecommendationId;
+    protected string $message;
 
-    public function __construct(int $recommendationId, string $message = 'api.404.resourceNotFound')
+    public function __construct(int $reviewerRecommendationId, string $message = 'api.404.resourceNotFound')
     {
         parent::__construct($message);
-        $this->recommendationId = $recommendationId;
+        $this->reviewerRecommendationId = $reviewerRecommendationId;
+        $this->message = $message;
     }
 
     /**
@@ -33,8 +35,13 @@ class RecommendationRequiredPolicy extends AuthorizationPolicy
      */
     public function effect(): int
     {
-        return ReviewerRecommendation::find($this->recommendationId)
-            ? AuthorizationPolicy::AUTHORIZATION_PERMIT
-            : AuthorizationPolicy::AUTHORIZATION_DENY;
+        if (!ReviewerRecommendation::find($this->reviewerRecommendationId)) {
+            throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException(
+                message: __($this->message),
+                code: 404
+            );
+        }
+
+        return AuthorizationPolicy::AUTHORIZATION_PERMIT;
     }
 }

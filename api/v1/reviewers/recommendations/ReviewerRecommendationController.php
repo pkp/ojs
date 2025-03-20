@@ -69,11 +69,11 @@ class ReviewerRecommendationController extends PKPBaseController
         $this->addPolicy(new UserRolesRequiredPolicy($request), true);
         $this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
 
-        if (in_array($actionName, ['edit', 'updateStatus', 'delete'])) {
+        if (in_array($actionName, ['get', 'edit', 'updateStatus', 'delete'])) {
             $this->addPolicy(
                 new RecommendationAccessPolicy(
                     $request,
-                    static::getRequestedRoute($illuminateRequest)->parameter('recommendationId')
+                    static::getRequestedRoute($illuminateRequest)->parameter('reviewerRecommendationId')
                 )
             );
         }
@@ -86,9 +86,9 @@ class ReviewerRecommendationController extends PKPBaseController
      */
     public function getGroupRoutes(): void
     {
-        Route::get('{recommendationId}', $this->get(...))
+        Route::get('{reviewerRecommendationId}', $this->get(...))
             ->name('reviewer.recommendations.get')
-            ->whereNumber(['recommendationId']);
+            ->whereNumber(['reviewerRecommendationId']);
 
         Route::get('', $this->getMany(...))
             ->name('reviewer.recommendations.getMany');
@@ -96,17 +96,17 @@ class ReviewerRecommendationController extends PKPBaseController
         Route::post('', $this->add(...))
             ->name('reviewer.recommendations.add');
 
-        Route::put('{recommendationId}', $this->edit(...))
+        Route::put('{reviewerRecommendationId}', $this->edit(...))
             ->name('reviewer.recommendations.edit')
-            ->whereNumber(['recommendationId']);
+            ->whereNumber(['reviewerRecommendationId']);
 
-        Route::put('{recommendationId}/status', $this->updateStatus(...))
+        Route::put('{reviewerRecommendationId}/status', $this->updateStatus(...))
             ->name('reviewer.recommendations.edit.status')
-            ->whereNumber(['recommendationId']);
+            ->whereNumber(['reviewerRecommendationId']);
 
-        Route::delete('{recommendationId}', $this->delete(...))
+        Route::delete('{reviewerRecommendationId}', $this->delete(...))
             ->name('reviewer.recommendations.delete')
-            ->whereNumber(['recommendationId']);
+            ->whereNumber(['reviewerRecommendationId']);
     }
 
     /**
@@ -114,7 +114,7 @@ class ReviewerRecommendationController extends PKPBaseController
      */
     public function get(Request $illuminateRequest): JsonResponse
     {
-        $recommendation = ReviewerRecommendation::find($illuminateRequest->route('recommendationId'));
+        $recommendation = ReviewerRecommendation::find($illuminateRequest->route('reviewerRecommendationId'));
 
         return response()->json(
             (new ReviewerRecommendationResource($recommendation))->toArray($illuminateRequest),
@@ -160,7 +160,7 @@ class ReviewerRecommendationController extends PKPBaseController
     {
         $validated = $illuminateRequest->validated();
 
-        $recommendation = ReviewerRecommendation::find($illuminateRequest->route('recommendationId'));
+        $recommendation = ReviewerRecommendation::find($illuminateRequest->route('reviewerRecommendationId'));
 
         if (!$recommendation->removable) {
             return response()->json([
@@ -188,7 +188,7 @@ class ReviewerRecommendationController extends PKPBaseController
     {
         $validated = $illuminateRequest->validated();
 
-        $recommendation = ReviewerRecommendation::find($illuminateRequest->route('recommendationId'));
+        $recommendation = ReviewerRecommendation::find($illuminateRequest->route('reviewerRecommendationId'));
 
         $recommendation->update($validated);
 
@@ -204,7 +204,7 @@ class ReviewerRecommendationController extends PKPBaseController
      */
     public function delete(Request $illuminateRequest): JsonResponse
     {
-        $recommendation = ReviewerRecommendation::find($illuminateRequest->route('recommendationId'));
+        $recommendation = ReviewerRecommendation::find($illuminateRequest->route('reviewerRecommendationId'));
 
         if (!$recommendation->removable) {
             return response()->json([

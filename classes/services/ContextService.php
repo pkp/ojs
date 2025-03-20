@@ -235,12 +235,4 @@ class ContextService extends \PKP\services\PKPContextService
             }
         }
     }
-
-    /**
-     * @copydoc \PKP\services\PKPContextService::hasCustomizableReviewerRecommendation()
-     */
-    public function hasCustomizableReviewerRecommendation(): bool
-    {
-        return true;
-    }
 }
