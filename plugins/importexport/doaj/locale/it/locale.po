@@ -44,11 +44,6 @@ msgstr ""
 "processare la registrazione. Potrà controllare tutti gli articoli non "
 "registrati."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Usare l'API di test di DOAJ per le registrazioni. Non dimenticarsi di "
-"rimuovere questa opzione prima di andare in produzione."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "Nome del task di registrazione automatica su DOAJ"
 

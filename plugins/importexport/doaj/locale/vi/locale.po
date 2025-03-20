@@ -39,11 +39,6 @@ msgstr ""
 "khoảng thời gian ngắn sau khi xuất bản để xử lý (ví dụ: tùy thuộc vào cấu "
 "hình cronjob của bạn). Bạn có thể kiểm tra tất cả các bài viết chưa đăng ký."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Sử dụng API kiểm tra DOAJ (môi trường thử nghiệm) để đăng ký. Xin đừng quên "
-"loại bỏ tùy chọn này khi xuất bản."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "Nhiệm vụ đăng ký tự động DOAJ"
 

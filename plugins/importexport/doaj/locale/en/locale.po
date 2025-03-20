@@ -39,11 +39,6 @@ msgstr ""
 "take a short amount of time after publication to process (e.g. depending on "
 "your cronjob configuration). You can check for all unregistered articles."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Use the DOAJ test API (testing environment) for the registration. Please do "
-"not forget to remove this option for the production."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "DOAJ automatic registration task"
 

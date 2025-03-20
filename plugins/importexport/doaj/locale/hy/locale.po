@@ -42,11 +42,6 @@ msgstr ""
 "(օրինակ՝ կախված ձեր cronjob-ի կազմաձևից): Դուք կարող եք ստուգել բոլոր "
 "չգրանցված հոդվածները:"
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Գրանցման համար օգտագործեք DOAJ թեստային API (փորձարկման միջավայր): Խնդրում "
-"ենք մի մոռացեք հեռացնել այս տարբերակը արտադրության դեպքում:"
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "DOAJ ինքնաշխատ գրանցման առաջադրանք"
 

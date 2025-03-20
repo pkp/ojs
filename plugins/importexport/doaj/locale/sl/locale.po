@@ -36,11 +36,6 @@ msgstr "Svoj DAOJ API ključ lahko najdete na vaši DOAJ uporabniški strani."
 msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
 msgstr "OJS bo avtomatsko opravil depozit prispevkov na DOAJ. Prosimo upoštevajte, da je za to lahko potrebno nekaj časa po tistem, ko objavite novo številko. Lahko preverite vse nedeponirane prispevke."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Uporabi DOAJ test API (testno okolje) za registracijo. Ne pozabite "
-"odstraniti te možnosti za produkcijo."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "Opravilo avtomatske registracije pri DOAJ"
 

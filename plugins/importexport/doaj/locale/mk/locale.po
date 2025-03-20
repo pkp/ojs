@@ -41,11 +41,6 @@ msgstr ""
 "зависно од вашата cronjob конфигурација). Можете да ги проверите сите "
 "нерегистрирани трудови."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Користете го DOAJ API за тестирање (околина за тестирање) за регистрацијата. "
-"Ве молиме не заборавајте да ја извадите оваа опција за продукција."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "DOAJ задача за автоматска регистрација"
 
