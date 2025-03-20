@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @defgroup controllers_grid_issues Issues Grid
  * The Issues Grid implements the management interface allowing editors to
@@ -560,7 +561,11 @@ class IssueGridHandler extends GridHandler
         }
 
         $issue->setPublished(1);
-        $issue->setDatePublished(Core::getCurrentDate());
+
+        // If no datePublished was given, use current date
+        if (!$issue->getData('datePublished')) {
+            $issue->setDatePublished(Core::getCurrentDate());
+        }
 
         // If subscriptions with delayed open access are enabled then
         // update open access date according to open access delay policy
@@ -601,7 +606,14 @@ class IssueGridHandler extends GridHandler
                 $publications = $submission->getData('publications');
 
                 foreach ($publications as $publication) { /** @var Publication $publication */
+
                     if ($publication->getData('status') === Submission::STATUS_SCHEDULED && $publication->getData('issueId') === (int) $issue->getId()) {
+
+                        if (!$publication->getData('datePublished')) {
+
+                            $publication->setData('datePublished', $issue->getData('datePublished'));
+                        }
+
                         Repo::publication()->publish($publication);
                     }
                 }
@@ -676,11 +688,8 @@ class IssueGridHandler extends GridHandler
             return new JSONMessage(false);
         }
 
-        // NB: Data set via params because setData('datePublished', null)
-        // removes the entry into _data rather than updating 'datePublished' to null.
         $updateParams = [
-            'published' => 0,
-            'datePublished' => null
+            'published' => 0
         ];
 
         Hook::call('IssueGridHandler::unpublishIssue', [&$issue]);
