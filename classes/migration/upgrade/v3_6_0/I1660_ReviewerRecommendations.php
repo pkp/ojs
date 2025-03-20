@@ -18,6 +18,8 @@ namespace APP\migration\upgrade\v3_6_0;
 use APP\facades\Repo;
 use APP\migration\install\ReviewerRecommendationsMigration;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
 use PKP\facades\Locale;
 use PKP\install\Installer;
 use PKP\submission\reviewer\recommendation\ReviewerRecommendation;
@@ -40,21 +42,28 @@ class I1660_ReviewerRecommendations extends \PKP\migration\Migration
     }
 
     /**
-     * @copydoc \PKP\migration\upgrade\v3_6_0\I1660_ReviewerRecommendations::systemDefineNonRemovableRecommendations()
-     */
-    protected function systemDefineNonRemovableRecommendations(): array
-    {
-        return Repo::reviewerRecommendation()->getDefaultRecommendations();
-    }
-
-    /**
      * Run the migration.
      */
     public function up(): void
     {
         $this->recommendationInstallMigration->up();
 
-        $this->seedNonRemovableRecommendations($this->systemDefineNonRemovableRecommendations());
+        Schema::table('review_assignments', function (Blueprint $table) {
+            $table->bigInteger('recommendation_id')->nullable()->after('reviewer_id');
+            $table
+                ->foreign('recommendation_id')
+                ->references('recommendation_id')
+                ->on('reviewer_recommendations')
+                ->onDelete('set null');
+            $table->index(['recommendation_id'], 'review_assignments_recommendation_id');
+        });
+
+        $this->seedDefaultRecommendations(Repo::reviewerRecommendation()->getDefaultRecommendations());
+
+        // TODO : make sure to drop the `recommendation` column by uncommenting following lines
+        // Schema::table('review_assignments', function (Blueprint $table) {
+        //     $table->dropColumn('recommendation');
+        // });
     }
 
     /**
@@ -62,15 +71,19 @@ class I1660_ReviewerRecommendations extends \PKP\migration\Migration
      */
     public function down(): void
     {
+        // TODO : make downgrading not possible
+        Schema::table('review_assignments', function (Blueprint $table) {
+            $table->dropConstrainedForeignId('recommendation_id');
+        });
         $this->recommendationInstallMigration->down();
     }
 
     /**
      * Seed the existing recommendations with context mapping on upgrade
      */
-    protected function seedNonRemovableRecommendations(array $nonRemovablerecommendations): void
+    protected function seedDefaultRecommendations(array $defaultRecommendations): void
     {
-        if (empty($nonRemovablerecommendations)) {
+        if (empty($defaultRecommendations)) {
             return;
         }
 
@@ -94,12 +107,13 @@ class I1660_ReviewerRecommendations extends \PKP\migration\Migration
 
         $recommendations = [];
 
-        foreach ($nonRemovablerecommendations as $recommendationValue => $translatableKey) {
+        foreach ($defaultRecommendations as $recommendationValue => $translatableKey) {
             $recommendations[$recommendationValue] = [
                 'contextId' => null,
                 'value' => $recommendationValue,
                 'status' => 1,
                 'title' => [],
+                'defaultTranslationKey' => $translatableKey,
             ];
         }
 
@@ -109,10 +123,8 @@ class I1660_ReviewerRecommendations extends \PKP\migration\Migration
             ->unique()
             ->toArray();
 
-        ReviewerRecommendation::unguard();
-
         foreach ($allContextSupportLocales as $locale) {
-            foreach ($nonRemovablerecommendations as $recommendationValue => $translatableKey) {
+            foreach ($defaultRecommendations as $recommendationValue => $translatableKey) {
                 $recommendations[$recommendationValue]['title'][$locale] = Locale::get(
                     $translatableKey,
                     [],
@@ -121,21 +133,112 @@ class I1660_ReviewerRecommendations extends \PKP\migration\Migration
             }
         }
 
-        $contextSupportedLocales->each(
-            fn (array $supportedLocales, int $contextId) => collect($recommendations)->each(
-                fn (array $recommendation) =>
-                    ReviewerRecommendation::create(
-                        array_merge($recommendation, [
-                            'contextId' => $contextId,
-                            'title' => array_intersect_key(
-                                $recommendation['title'],
-                                array_flip($supportedLocales)
-                            )
-                        ])
-                    )
-            )
-        );
+        $contextIdToSubmissionIdsMap = $this->getContextIdToSubmissionsMap();
+
+        ReviewerRecommendation::unguard();
+
+        foreach ($contextSupportedLocales->toArray() as $contextId => $contextSupportedLocales) {
+
+            // If the context has no submission, then nothing to update and continue for next context
+            if (empty($contextIdToSubmissionIdsMap[$contextId] ?? [])) {
+                continue;
+            }
+
+            $recommendationIds = $this->createDefaultRecommendation(
+                $contextId,
+                $recommendations,
+                $contextSupportedLocales
+            );
+
+            $caseQuery = $this->constructCaseQuery($defaultRecommendations, $recommendationIds);
+            $submissionIds = implode(',', $contextIdToSubmissionIdsMap[$contextId]);
+
+            DB::statement(
+                "UPDATE `review_assignments` 
+                SET `recommendation_id` = ({$caseQuery}) 
+                WHERE `submission_id` IN ({$submissionIds})",
+            );
+        }
+
+        // $contextSupportedLocales->each(
+        //     fn (array $supportedLocales, int $contextId) => collect($recommendations)->each(
+        //         fn (array $recommendation) =>
+        //             ReviewerRecommendation::create(
+        //                 array_merge($recommendation, [
+        //                     'contextId' => $contextId,
+        //                     'title' => array_intersect_key(
+        //                         $recommendation['title'],
+        //                         array_flip($supportedLocales)
+        //                     ),
+        //                 ])
+        //             )
+        //     )
+        // );
 
         ReviewerRecommendation::reguard();
+    }
+
+    /**
+     * Construct a query case string to update/set recommendation_id based on recommendation value
+     */
+    protected function constructCaseQuery(array $defaultRecommendations, array $recommendationIds): string
+    {
+        $caseQuery = 'CASE ';
+
+        foreach ($defaultRecommendations as $value => $translatableKey) {
+            $caseQuery = $caseQuery . "WHEN `recommendation` = {$value} THEN {$recommendationIds[$value]} ";
+        }
+
+        return $caseQuery . 'END';
+    }
+
+    /**
+     * Store/Create the default pre existing recommendations for the given context
+     */
+    protected function createDefaultRecommendation(
+        int $contextId,
+        array $recommendations,
+        array $contextSupportedLocales
+    ): array
+    {
+        $recommendationIds = [];
+
+        foreach ($recommendations as $recommendationValue => $recommendation) {
+            $recommendationIds[$recommendationValue] = ReviewerRecommendation::create(
+                array_merge($recommendation, [
+                    'contextId' => $contextId,
+                    'title' => array_intersect_key(
+                        $recommendation['title'],
+                        array_flip($contextSupportedLocales)
+                    ),
+                ])
+            )->id;
+        }
+
+        return $recommendationIds;
+    }
+
+    /**
+     * Get a map to context_id to submission_id as
+     * [
+     *     context_id_1 => [submission_id, submission_id, ...],
+     *     context_id_2 => [submission_id, submission_id, ...],
+     * ]
+     */
+    protected function getContextIdToSubmissionsMap(): array
+    {
+        $submissions = DB::table('submissions')
+            ->select(['context_id', 'submission_id'])
+            ->orderBy('context_id')
+            ->get();
+
+        return $submissions
+            ->groupBy('context_id')
+            ->mapWithKeys(function ($group, $contextId) {
+                return [
+                    $contextId => $group->pluck('submission_id')
+                ];
+            })
+            ->toArray();
     }
 }
