@@ -120,6 +120,15 @@ msgstr "Unpublished"
 msgid "editor.issues.datePublished"
 msgstr "Date Published"
 
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr "If left empty, the date will be set automatically when the issue is published."
+
+msgid "editor.issues.datePublished.invalid"
+msgstr "Date Published is not valid. The date must be in the format YYYY-MM-DD."
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr "Date Published is required when the issue is published."
+
 msgid "editor.issues.volumeRequired"
 msgstr "Volume is required and must be a positive, numeric value."
 
