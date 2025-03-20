@@ -97,6 +97,18 @@
 					}
 				}
 			}
+		},
+		"issueToBePublished": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "integer"
+				},
+				"label": {
+					"type": "string"
+				}
+			},
+			"apiSummary": true
 		}
 	}
 }
