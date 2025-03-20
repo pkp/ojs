@@ -105,7 +105,7 @@ msgstr ""
 "indicado que desean recibir actualizaciones ({$count} usuarios/as)"
 
 msgid "editor.notifyUsers.includeToc"
-msgstr "Incluir la tabla de contenidos de este número:"
+msgstr "Incluir la tabla de contenido de este número:"
 
 msgid "editor.editorAdministration"
 msgstr "Administración del editor/a"
@@ -260,7 +260,7 @@ msgid "editor.issues.issueData"
 msgstr "Datos del número"
 
 msgid "editor.issues.saveChanges"
-msgstr "¿Desea guardar los cambios efectuados en las tabla de contenidos?"
+msgstr "¿Desea guardar los cambios efectuados en las tabla de contenido?"
 
 msgid "editor.issues.default"
 msgstr "Valor por defecto"
@@ -491,14 +491,14 @@ msgstr "Imagen de portada"
 #~ "No mostrar la miniatura de la imagen de portada en la lista de números."
 
 #~ msgid "editor.issues.hideCoverPageCover"
-#~ msgstr "No mostrar la imagen de portada antes que la tabla de contenidos."
+#~ msgstr "No mostrar la imagen de portada antes que la tabla de contenido."
 
 #~ msgid "editor.article.showCoverPage"
 #~ msgstr "Crear una portada para este artículo con los siguientes elementos."
 
 #~ msgid "editor.article.hideCoverPageToc"
 #~ msgstr ""
-#~ "No mostrar la miniatura de la imagen de portada en la tabla de contenidos."
+#~ "No mostrar la miniatura de la imagen de portada en la tabla de contenido."
 
 #~ msgid "editor.article.hideCoverPageAbstract"
 #~ msgstr ""
