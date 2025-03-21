@@ -1,0 +1,28 @@
+# Murari P Tapaswi <tapaswimurari@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-03-15 22:17+0000\n"
+"Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
+"Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-recommendBySimilarity/mr/>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.generic.recommendBySimilarity.displayName"
+msgstr "अशाच प्रकारचे लेख सुचवा"
+
+msgid "plugins.generic.recommendBySimilarity.description"
+msgstr "हे प्लगइन लेखाच्या सारांश पृष्ठावर अशाच प्रकारच्या लेखांची यादी जोडते."
+
+msgid "plugins.generic.recommendBySimilarity.heading"
+msgstr "अशाच प्रकारचे लेख"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
+msgstr "तुम्ही या लेखासाठी {$advancedSearchLink} देखील वापरू शकता."
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearch"
+msgstr "अशाच प्रकारच्या लेखांचा प्रगत शोध (advanced similarity search) सुरू करा"

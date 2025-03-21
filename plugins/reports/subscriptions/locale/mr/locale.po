@@ -1,0 +1,27 @@
+# Murari P Tapaswi <tapaswimurari@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-03-15 22:17+0000\n"
+"Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
+"Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-subscriptions/mr/>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.reports.subscriptions.displayName"
+msgstr "सदस्यता अहवाल"
+
+msgid "plugins.reports.subscriptions.description"
+msgstr ""
+"हा प्लगइन सदस्यतांची यादी आणि त्यांची माहिती असलेला CSV अहवाल कार्यवाहीत "
+"आणतो."
+
+msgid "plugins.reports.subscriptions.institutionMailingAddress"
+msgstr "संस्थेचा पत्रव्यवहाराचा पत्ता"
+
+msgid "plugins.reports.subscriptions.ipRanges"
+msgstr "IP श्रेणी"
