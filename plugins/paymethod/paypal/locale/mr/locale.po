@@ -1,0 +1,42 @@
+# Murari P Tapaswi <tapaswimurari@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-03-15 22:17+0000\n"
+"Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
+"Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/"
+"paymethod-paypal/mr/>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.paymethod.paypal.description"
+msgstr "पेपॅल सेवेचा वापर करून रकमेचा भरणा केला जाईल."
+
+msgid "plugins.paymethod.paypal"
+msgstr "पेपॅल वापरून रकमेचा भरणा"
+
+msgid "plugins.paymethod.paypal.displayName"
+msgstr "रक्कम भरण्यासाठी पेपॅल"
+
+msgid "plugins.paymethod.paypal.settings"
+msgstr "पेपॅल पेमेंट सेटिंग्ज"
+
+msgid "plugins.paymethod.paypal.settings.testMode"
+msgstr "चाचणीसाठी"
+
+msgid "plugins.paymethod.paypal.settings.accountName"
+msgstr "खात्याचे नाव"
+
+msgid "plugins.paymethod.paypal.settings.clientId"
+msgstr "ग्राहकाचा ID"
+
+msgid "plugins.paymethod.paypal.settings.secret"
+msgstr "गुप्त"
+
+msgid "plugins.paymethod.paypal.error"
+msgstr ""
+"व्यवहार करताना त्रुटी आली. तपशीलांसाठी कृपया नियतकालिकाच्या व्यवस्थापकाशी "
+"संपर्क साधा."

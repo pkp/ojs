@@ -1,11 +1,11 @@
 # Jesper B. Thestrup <jbt@kb.dk>, 2022.
-# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022, 2023.
+# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022, 2023, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:18-08:00\n"
-"PO-Revision-Date: 2023-05-26 22:09+0000\n"
+"PO-Revision-Date: 2025-03-18 08:59+0000\n"
 "Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/emails/da/>\n"
 "Language: da\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Bekræftelse af nulstilling af adgangskode"
@@ -112,7 +112,8 @@ msgstr ""
 "inviterer dig til at læse og dele dette i dit videnskabelige fællesskab.</"
 "p><p>Mange tak til vores forfattere, bedømmere og redaktører for deres "
 "værdifulde bidrag, og også mange tak til vores læsere for jeres fortsatte "
-"interesse i vores arbejde.</p><p>Med venlig hilsen</p>{$signature}"
+"interesse i vores arbejde.</p><div>{$issueToc}</div><p>Med venlig "
+"hilsen</p>{$signature}"
 
 msgid "emails.editorAssign.subject"
 msgstr ""

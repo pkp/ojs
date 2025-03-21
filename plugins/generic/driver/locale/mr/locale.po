@@ -1,0 +1,21 @@
+# Murari P Tapaswi <tapaswimurari@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-03-15 22:17+0000\n"
+"Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
+"Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-driver/mr/>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.generic.driver.displayName"
+msgstr "ड्रायव्हर (DRIVER)"
+
+msgid "plugins.generic.driver.description"
+msgstr ""
+"ड्रायव्हर प्लगइन DRIVER Guidelines 2.0 नुसार OAI-PMH चा इंटरफेस वाढवते, "
+"ज्यामुळे OJS नियतकालिके ड्रायव्हर अनुरूप करण्यास मदत करतात."

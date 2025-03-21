@@ -1,7 +1,7 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-02-13 08:08+0000\n"
+"PO-Revision-Date: 2025-03-15 22:17+0000\n"
 "Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
 "Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/locale/mr/>"
 "\n"
@@ -739,7 +739,7 @@ msgid "subscriptions.status.needsInformation"
 msgstr "माहिती हवी"
 
 msgid "subscriptions.status.awaitingManualPayment"
-msgstr "शुल्क भरण्याच्या प्रतीक्षेत"
+msgstr "मानवी/प्रस्थापित पद्धतीने शुल्क भरण्याच्या प्रतीक्षेत"
 
 msgid "subscriptions.status.noSubscription"
 msgstr "तुमची सदस्यता सक्रिय नाही."
@@ -1845,7 +1845,8 @@ msgid "user.subscriptions.status.needsApprovalDescription"
 msgstr "सदस्यता सक्रिय करण्यापूर्वी त्याचा आढावा घेणे आवश्यक आहे"
 
 msgid "user.subscriptions.status.awaitingManualPaymentDescription"
-msgstr "रक्कम पाठवली गेली आहे परंतु अद्याप ती पोहोचली नाही"
+msgstr ""
+"मानवी/प्रस्थापित पद्धतीने रक्कम पाठवली गेली आहे परंतु अद्याप ती पोहोचली नाही"
 
 msgid "user.subscriptions.individualSubscriptions"
 msgstr "वैयक्तिक सदस्यत्व"
