@@ -1,17 +1,17 @@
 # IgorVeha <igor.veha@gmail.com>, 2022.
-# Petro Bilous <petrobilous@ukr.net>, 2023.
+# Petro Bilous <petrobilous@ukr.net>, 2023, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-06-02 20:47+0000\n"
+"PO-Revision-Date: 2025-03-22 19:52+0000\n"
 "Last-Translator: Petro Bilous <petrobilous@ukr.net>\n"
 "Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/ojs/api/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.13.1\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "Оголошення, яке Ви запросили, не є частиною цього журнала."
@@ -82,3 +82,7 @@ msgstr "Ви не можете асоціювати файл з цієї ста�
 
 msgid "api.submission.400.inactiveSection"
 msgstr "Цей розділ більше не отримує подань."
+
+msgid "api.publications.403.paymentFeesNotEnabled"
+msgstr ""
+"Форма оплати подання недоступна, оскільки оплата публікації не ввімкнена."
