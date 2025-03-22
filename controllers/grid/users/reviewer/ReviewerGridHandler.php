@@ -37,8 +37,8 @@ class ReviewerGridHandler extends PKPReviewerGridHandler
         // Recommendation
         $newRecommendation = $request->getUserVar('recommendation');
         // If editor set or changed the recommendation
-        if ($newRecommendation && $reviewAssignment->getRecommendation() != $newRecommendation) {
-            $reviewAssignment->setRecommendation($newRecommendation);
+        if ($newRecommendation && $reviewAssignment->getRecommendationId() != $newRecommendation) {
+            $reviewAssignment->setRecommendationId($newRecommendation);
 
             // Add log entry
             $submission = $this->getSubmission();
