@@ -102,8 +102,8 @@ class ReviewerRecommendationsMigration extends \PKP\migration\Migration
     public function down(): void
     {
         Schema::disableForeignKeyConstraints();
-        Schema::drop('reviewer_recommendations');
         Schema::drop('reviewer_recommendation_settings');
+        Schema::drop('reviewer_recommendations');
         Schema::enableForeignKeyConstraints();
     }
 }
