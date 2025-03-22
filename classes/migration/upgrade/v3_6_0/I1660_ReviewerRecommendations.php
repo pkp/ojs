@@ -22,6 +22,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use PKP\facades\Locale;
 use PKP\install\Installer;
+use PKP\install\DowngradeNotSupportedException;
 use PKP\submission\reviewer\recommendation\ReviewerRecommendation;
 
 class I1660_ReviewerRecommendations extends \PKP\migration\Migration
@@ -60,10 +61,9 @@ class I1660_ReviewerRecommendations extends \PKP\migration\Migration
 
         $this->seedDefaultRecommendations(Repo::reviewerRecommendation()->getDefaultRecommendations());
 
-        // TODO : make sure to drop the `recommendation` column by uncommenting following lines
-        // Schema::table('review_assignments', function (Blueprint $table) {
-        //     $table->dropColumn('recommendation');
-        // });
+        Schema::table('review_assignments', function (Blueprint $table) {
+            $table->dropColumn('recommendation');
+        });
     }
 
     /**
@@ -71,11 +71,7 @@ class I1660_ReviewerRecommendations extends \PKP\migration\Migration
      */
     public function down(): void
     {
-        // TODO : make downgrading not possible
-        Schema::table('review_assignments', function (Blueprint $table) {
-            $table->dropConstrainedForeignId('recommendation_id');
-        });
-        $this->recommendationInstallMigration->down();
+        throw new DowngradeNotSupportedException();
     }
 
     /**
@@ -99,6 +95,7 @@ class I1660_ReviewerRecommendations extends \PKP\migration\Migration
                     ->where('setting_name', 'supportedLocales')
                     ->limit(1)
             ])
+            ->orderBy($this->recommendationInstallMigration->contextPrimaryKey())
             ->get()
             ->pluck('supportedLocales', $this->recommendationInstallMigration->contextPrimaryKey())
             ->filter()
@@ -110,7 +107,6 @@ class I1660_ReviewerRecommendations extends \PKP\migration\Migration
         foreach ($defaultRecommendations as $recommendationValue => $translatableKey) {
             $recommendations[$recommendationValue] = [
                 'contextId' => null,
-                'value' => $recommendationValue,
                 'status' => 1,
                 'title' => [],
                 'defaultTranslationKey' => $translatableKey,
@@ -135,20 +131,19 @@ class I1660_ReviewerRecommendations extends \PKP\migration\Migration
 
         $contextIdToSubmissionIdsMap = $this->getContextIdToSubmissionsMap();
 
-        ReviewerRecommendation::unguard();
-
         foreach ($contextSupportedLocales->toArray() as $contextId => $contextSupportedLocales) {
 
-            // If the context has no submission, then nothing to update and continue for next context
-            if (empty($contextIdToSubmissionIdsMap[$contextId] ?? [])) {
-                continue;
-            }
-
+            // first create the default recommendations no matter if the context has submissions or not
             $recommendationIds = $this->createDefaultRecommendation(
                 $contextId,
                 $recommendations,
                 $contextSupportedLocales
             );
+
+            // If the context has no submission, then nothing to update and continue for next context
+            if (empty($contextIdToSubmissionIdsMap[$contextId] ?? [])) {
+                continue;
+            }
 
             $caseQuery = $this->constructCaseQuery($defaultRecommendations, $recommendationIds);
             $submissionIds = implode(',', $contextIdToSubmissionIdsMap[$contextId]);
@@ -159,23 +154,6 @@ class I1660_ReviewerRecommendations extends \PKP\migration\Migration
                 WHERE `submission_id` IN ({$submissionIds})",
             );
         }
-
-        // $contextSupportedLocales->each(
-        //     fn (array $supportedLocales, int $contextId) => collect($recommendations)->each(
-        //         fn (array $recommendation) =>
-        //             ReviewerRecommendation::create(
-        //                 array_merge($recommendation, [
-        //                     'contextId' => $contextId,
-        //                     'title' => array_intersect_key(
-        //                         $recommendation['title'],
-        //                         array_flip($supportedLocales)
-        //                     ),
-        //                 ])
-        //             )
-        //     )
-        // );
-
-        ReviewerRecommendation::reguard();
     }
 
     /**

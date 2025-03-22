@@ -63,10 +63,6 @@ class ReviewerRecommendationsMigration extends \PKP\migration\Migration
 
             $table->index(['context_id'], 'reviewer_recommendations_context_id');
 
-            // TODO : Need to remove the value column
-            // $table->unsignedInteger('value');
-            // $table->unique(['context_id', 'value'], 'reviewer_recommendations_context_unique');
-
             $table
                 ->boolean('status')
                 ->default(true)
