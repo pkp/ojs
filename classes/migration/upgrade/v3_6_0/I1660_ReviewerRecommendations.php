@@ -149,9 +149,9 @@ class I1660_ReviewerRecommendations extends \PKP\migration\Migration
             $submissionIds = implode(',', $contextIdToSubmissionIdsMap[$contextId]);
 
             DB::statement(
-                "UPDATE `review_assignments` 
-                SET `recommendation_id` = ({$caseQuery}) 
-                WHERE `submission_id` IN ({$submissionIds})",
+                "UPDATE review_assignments 
+                SET recommendation_id = ({$caseQuery}) 
+                WHERE submission_id IN ({$submissionIds})",
             );
         }
     }
@@ -164,7 +164,7 @@ class I1660_ReviewerRecommendations extends \PKP\migration\Migration
         $caseQuery = 'CASE ';
 
         foreach ($defaultRecommendations as $value => $translatableKey) {
-            $caseQuery = $caseQuery . "WHEN `recommendation` = {$value} THEN {$recommendationIds[$value]} ";
+            $caseQuery = $caseQuery . "WHEN recommendation = {$value} THEN {$recommendationIds[$value]} ";
         }
 
         return $caseQuery . 'END';
