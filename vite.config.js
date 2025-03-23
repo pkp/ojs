@@ -54,6 +54,10 @@ export default defineConfig(({mode}) => {
 						src: 'node_modules/chart.js/dist/**/*.umd.js',
 						dest: 'js/build/chart.js',
 					},
+					{
+						src: 'lib/ui-library/node_modules/@sciflow/component-demo/styles.css',
+						dest: 'js/build/sciflow'
+					},
 				],
 				// run the copy task after writing the bundle
 				hook: 'writeBundle',
@@ -63,8 +67,10 @@ export default defineConfig(({mode}) => {
 		resolve: {
 			alias: {
 				'@': path.resolve(__dirname, 'lib/ui-library/src'),
-				// use vue version with template compiler
 				vue: 'vue/dist/vue.esm-bundler.js',
+				'~sciflow': path.resolve(__dirname, 'lib/ui-library/node_modules/@sciflow/component-demo'),
+				// Add alias for sciflow components
+				'@sciflow': path.resolve(__dirname, 'lib/ui-library/node_modules/@sciflow'),
 			},
 			// https://github.com/vitejs/vite/discussions/15906
 			dedupe: [
@@ -94,6 +100,9 @@ export default defineConfig(({mode}) => {
 				'vue3-highlightjs',
 			],
 		},
+		optimizeDeps: {
+			exclude: ['@sciflow/component-demo'],
+		},
 		build: {
 			sourcemap: mode === 'development' ? 'inline' : false,
 			target: ['chrome66', 'edge79', 'firefox67', 'safari12'],
@@ -120,6 +129,11 @@ export default defineConfig(({mode}) => {
 						vue: 'pkp.Vue',
 					},
 				},
+				external: [
+					'@sciflow/component-demo/polyfills.js',
+					'@sciflow/component-demo/main.js',
+					'@sciflow/component-demo/styles.css'
+				]
 			},
 			outDir: path.resolve(__dirname),
 		},
