@@ -1,7 +1,7 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-14 09:04+0000\n"
+"PO-Revision-Date: 2025-03-23 23:25+0000\n"
 "Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
 "Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/"
 "generic-announcementFeed/mr/>\n"
@@ -45,3 +45,6 @@ msgstr "RSS1 चिन्ह (logo)"
 
 msgid "plugins.generic.announcementfeed.rss2.altText"
 msgstr "RSS2 चिन्ह (logo)"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "नियतकालिकाच्या सगळ्या पानांवर RSS feed फीड दुवे (लिंक्स) प्रदर्शित करा."
