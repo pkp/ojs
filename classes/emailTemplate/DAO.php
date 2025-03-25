@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/emailTemplate/DAO.php
  *
@@ -24,6 +25,7 @@ class DAO extends \PKP\emailTemplate\DAO
             'contextName' => 'journalName',
             'contextUrl' => 'journalUrl',
             'contextSignature' => 'journalSignature',
+            'contextAcronym' => 'journalAcronym',
         ];
     }
 }
