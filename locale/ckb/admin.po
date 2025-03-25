@@ -2,7 +2,7 @@
 # Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-25 20:44+0000\n"
+"PO-Revision-Date: 2025-03-25 22:15+0000\n"
 "Last-Translator: Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>\n"
 "Language-Team: Kurdish (Central) <http://translate.pkp.sfu.ca/projects/ojs/"
 "admin/ckb/>\n"
@@ -214,8 +214,18 @@ msgstr ""
 "لەم سایتە و ڕێکخستنە گشتگیرەکانی ئەم سایتە گۆڤارەکان زیاد بکە، دەستکاری بکە "
 "یان بیانسڕەوە."
 
+#, fuzzy
 msgid "admin.settings.statistics.geo.description"
 msgstr ""
+"جۆری ئاماری بەکارهێنانی جوگرافی هەڵبژێرە کە گۆڤارەکان دەتوانن لەم شوێنە کۆی "
+"بکەنەوە. ئامارە جوگرافییە زیاتر وردەکان لەوانەیە قەبارەی بنکەی زانیارییەکانت "
+"بە شێوەیەکی بەرچاو زیاد بکەن و، لە هەندێک حاڵەتی دەگمەندا، رەنگە دۆخی "
+"نەناسراوی سەردانکەرانت لاواز بکەن. هەر گۆڤارێک دەتوانێت ئەم رێکخستنە بە "
+"جۆرێکی جیاواز ئامادە بکات، بەڵام گۆڤارێک هەرگیز ناتوانێت تۆمارگەلێکی بە "
+"وردەکاری زیاتر  کۆ بکاتەوە لەوەی کە لێرەدا رێکخراوە. بۆ نموونە، ئەگەر "
+"سایتەکە تەنها پشتگیری وڵات و ناوچە دەکات، گۆڤارەکە دەتوانێت وڵات و ناوچە "
+"هەڵبژێرێت یان تەنها وڵات هەڵبژێرێت. گۆڤارەکە ناتوانێت وڵات، ناوچە و شار "
+"بدۆزێتەوە."
 
 msgid "admin.settings.statistics.institutions.description"
 msgstr ""
