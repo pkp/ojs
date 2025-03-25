@@ -2,7 +2,7 @@
 # Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-25 18:59+0000\n"
+"PO-Revision-Date: 2025-03-25 19:26+0000\n"
 "Last-Translator: Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>\n"
 "Language-Team: Kurdish (Central) <http://translate.pkp.sfu.ca/projects/ojs/"
 "admin/ckb/>\n"
@@ -55,15 +55,14 @@ msgstr ""
 "فایلەکان پێویستە پێش ئەوەی لە لایەن گۆڤارە میوانەکانەوە بەکار بهێندرێن، "
 "دابەزێندرابن."
 
-#, fuzzy
 msgid "admin.systemVersion"
-msgstr "وەشانی سیستەمەکە گۆڤاری کراوە"
+msgstr "وەشانی سیستەمی گۆڤاری کراوە"
 
 msgid "admin.systemConfiguration"
-msgstr "هەیکەلی سیستەمی گۆڤاری کراوە"
+msgstr "شێوە و ڕێکخستنی سیستەمی گۆڤاری کراوە"
 
 msgid "admin.systemConfigurationDescription"
-msgstr "فۆڕمی ڕێکخستنی هەیکەلی سیستەمی گۆڤاری کراوە <tt>config.inc.php</tt>."
+msgstr "فۆڕمی ڕێکخستنی شێوەی سیستەمی گۆڤاری کراوە <tt>config.inc.php</tt>."
 
 msgid "admin.journals.createInstructions"
 msgstr ""
