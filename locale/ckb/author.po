@@ -2,7 +2,7 @@
 # Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-25 18:42+0000\n"
+"PO-Revision-Date: 2025-03-25 18:43+0000\n"
 "Last-Translator: Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>\n"
 "Language-Team: Kurdish (Central) <http://translate.pkp.sfu.ca/projects/ojs/"
 "author/ckb/>\n"
@@ -31,7 +31,7 @@ msgstr "دەست بە پێشکەشکردنی توێژینەوەیەکی نوێ �
 msgid "author.submit.startHereLink"
 msgstr ""
 "<a href=\"{$submitUrl}\" class=\"action\">کلیک لێرە بکە</a> بۆ دەستپێکردنی "
-"هەنگاوی یەکەم."
+"هەنگاوی یەکەم لە پێنج هەنگاوەکەی پڕۆسەی پێشکەشکردن.."
 
 msgid "author.submit.step1"
 msgstr "هەنگاوی یەکەم: دەستپێکردنی پێشکەشکردن"
