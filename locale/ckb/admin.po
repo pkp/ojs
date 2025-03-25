@@ -2,7 +2,7 @@
 # Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-25 20:40+0000\n"
+"PO-Revision-Date: 2025-03-25 20:44+0000\n"
 "Last-Translator: Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>\n"
 "Language-Team: Kurdish (Central) <http://translate.pkp.sfu.ca/projects/ojs/"
 "admin/ckb/>\n"
@@ -208,8 +208,11 @@ msgstr ""
 "تایبەتمەندی ئیمەیڵی بەکۆمەڵ بۆ ئەم گۆڤارە ناچالاک کراوە. ئەم تایبەت مەندییە "
 "چالاک بکە لە <a href=\"{$siteSettingsUrl}\">ئەدمین> رێکخستنەکانی شوێن</a>."
 
+#, fuzzy
 msgid "admin.siteManagement.description"
 msgstr ""
+"لەم سایتە و ڕێکخستنە گشتگیرەکانی ئەم سایتە گۆڤارەکان زیاد بکە، دەستکاری بکە "
+"یان بیانسڕەوە."
 
 msgid "admin.settings.statistics.geo.description"
 msgstr ""
