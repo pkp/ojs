@@ -9,8 +9,6 @@
  *
  * @hook Templates::Editor::Issues::IssueData::AdditionalMetadata []
  *}
-
-{help file="issue-management" section="edit-issue-data" class="pkp_help_tab"}
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.
