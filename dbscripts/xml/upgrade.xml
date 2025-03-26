@@ -238,6 +238,7 @@
 		<!-- Needs to be re-executed on every minor upgrade, the user might still be using an outdated plugin -->
 		<migration class="APP\migration\upgrade\v3_4_0\I9813_QuickSubmitSubmissionProgressType"/>
 		<migration class="PKP\migration\upgrade\v3_4_0\I9822_ChangeUsageStatsTemporaryTablesIndexes"/>
+		<migration class="APP\migration\upgrade\v3_4_0\I11125_UpdateEmailTemplateVariables"/>
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
