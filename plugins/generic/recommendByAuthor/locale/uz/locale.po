@@ -13,6 +13,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr ""
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""

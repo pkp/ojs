@@ -21,10 +21,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Artículos más leídos del mismo autor/a"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""
-"Nota: Este módulo requiere de la activación de, al menos, un módulo de "
-"estadísticas/informes. Si los módulos de estadísticas proporcionan más de "
-"una métrica, selecciona una métrica principal en la página de configuración "
-"del sitio y/o en las páginas de propiedades de la revista."
