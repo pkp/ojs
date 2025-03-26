@@ -16,9 +16,6 @@
 </script>
 
 <form class="pkp_form" id="issueAccessForm" method="post" action="{url op="updateAccess" issueId=$issueId}">
-	{* Help Link *}
-	{help file="issue-management" section="edit-issue-data" class="pkp_help_tab"}
-
 	{csrf}
 	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="issueAccessNotification"}
 
