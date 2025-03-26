@@ -21,10 +21,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Najbolj brani prispevki istega avtorja(jev)"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""
-"Opozorilo: Ta vtičnik zahteva omogočen vsaj en vtičnik za statistike/"
-"poročila. Če je vaš vtičnik za statistike nastavljen, da zbira več kot eno "
-"metriko, potem določite privzeto metriko na administratorskih straneh "
-"upravnika revije."

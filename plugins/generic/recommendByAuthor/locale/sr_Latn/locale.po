@@ -20,10 +20,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Najčitanije od istog autora"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""
-"Napomena: Ovaj dodatak zahteva najmanje jedan omogućen dodatak za statistiku/"
-"izveštaje. Ukoliko imate više statističkih dodataka koji pružaju više "
-"metrika odaberite koji će biti osnovni na administratorskoj stranici i/ili "
-"na stranici podešavanja samog časopisa."
