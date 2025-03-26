@@ -25,10 +25,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Meestgelezen artikelen van dezelfde auteur(s)"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""
-"Let op: voor deze plugin moet minstens één statistiek/rapport plugin "
-"ingeschakeld zijn. Als uw statistieken plugins meer dan één gebruiksmeting "
-"bieden, stel dan een hoofdgebruiksmeting in op de beheerspagina van de "
-"website en/of het tijdschrift."

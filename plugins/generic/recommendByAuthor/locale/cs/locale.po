@@ -24,6 +24,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Nejaktuálnější články stejného autora (stejných autorů)"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr "Poznámka: Tento plugin vyžaduje, aby byl aktivován alespoň jeden plugin pro statistiky/přehled. Pokud vaše statistiky pro statistiky poskytují více než jednu metriku, vyberte prosím také hlavní metriku na stránce nastavení administrátora a/nebo na stránkách nastavení správce časopisů."

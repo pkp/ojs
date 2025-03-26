@@ -21,10 +21,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Saman kirjoittajan/kirjoittajien luetuimmat artikkelit"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""
-"Huom. Tämä lisäosa vaatii, että vähintään yksi tilasto-/raporttilisäosa on "
-"käytössä. Jos tilastolisäosasi tarjoaa useamman kuin yhden mittarin, valitse "
-"myös päämittari ylläpidon Sivuston asetukset -sivulla ja/tai julkaisun "
-"hallinnoijan asetussivuilla."

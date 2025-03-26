@@ -20,9 +20,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Inne teksty tego samego autora"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""
-"Wtyczka wymaga co najmniej jednej wtyczki statystycznej/raportowania. Jeżeli "
-"twoja wtyczka obsługująca statystyki udostępnia więcej niż jedną metrykę, "
-"wybierz również główną metrykę w ustawieniach administracyjnych strony."

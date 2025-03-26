@@ -21,10 +21,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Mest lästa artiklar av samma författare"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""
-"OBS.: Pluginet kräver minst ett statistik/rapport-plugin aktiverat för att "
-"fungera. Om dina statistikplugin skapar mer än ett mått, välj då det "
-"huvudsakliga måttet på sidan för administratörens sidinställningar och/eller "
-"inställningarna för tidskriftsansvarig."
