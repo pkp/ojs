@@ -26,7 +26,6 @@ class DAO extends \PKP\emailTemplate\DAO
             'contextUrl' => 'journalUrl',
             'contextSignature' => 'journalSignature',
             'contextAcronym' => 'journalAcronym',
-
         ];
     }
 }
