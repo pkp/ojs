@@ -1,19 +1,19 @@
-# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022.
+# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2022, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:18+00:00\n"
-"PO-Revision-Date: 2022-08-05 17:52+0000\n"
+"PO-Revision-Date: 2025-03-26 08:24+0000\n"
 "Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
-"Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/themes-"
-"default/da_DK/>\n"
-"Language: da_DK\n"
+"Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/da/>\n"
+"Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.themes.default.name"
 msgstr "Standard layout-tema"
@@ -96,3 +96,9 @@ msgstr "Downloads"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Download-data er endnu ikke tilgængelige."
+
+msgid "plugins.themes.default.nextSlide"
+msgstr "Næste slide/side"
+
+msgid "plugins.themes.default.prevSlide"
+msgstr "Forrige slide/side"

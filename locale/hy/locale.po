@@ -1,9 +1,10 @@
 # Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
 # Tigran Zargaryan <tigran@flib.sci.am>, 2022, 2023, 2025.
+# Tatev Tamazyan <ta.tamazyan@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-03 19:43+0000\n"
-"Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
+"PO-Revision-Date: 2025-03-25 13:50+0000\n"
+"Last-Translator: Tatev Tamazyan <ta.tamazyan@gmail.com>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/locale/hy/>"
 "\n"
 "Language: hy\n"
@@ -73,7 +74,7 @@ msgid "navigation.browseByAuthor"
 msgstr "Ըստ հեղինակի"
 
 msgid "navigation.infoForAuthors"
-msgstr "Ըստ հեղինակների"
+msgstr "Հեղինակների համար"
 
 msgid "navigation.infoForLibrarians"
 msgstr "Գրադարանավարների հանար"
@@ -497,7 +498,7 @@ msgid "issue.vol"
 msgstr "Հտ․"
 
 msgid "issue.no"
-msgstr "Հմր․"
+msgstr "No."
 
 msgid "issue.year"
 msgstr "Տարի"
@@ -714,7 +715,7 @@ msgstr ""
 "Բաժանորդագրությունը հաստատելու համար մուտք գործեք ամսագիր:"
 
 msgid "reader.openAccess"
-msgstr "Բաց մատչելիություն"
+msgstr "Հանրահասանելի"
 
 msgid "reader.subscriptionAccess"
 msgstr "Պահանջում է բաժանորդագրություն"

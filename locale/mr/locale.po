@@ -1,7 +1,7 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-15 22:17+0000\n"
+"PO-Revision-Date: 2025-03-23 23:25+0000\n"
 "Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
 "Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/locale/mr/>"
 "\n"
@@ -1315,7 +1315,6 @@ msgstr ""
 "DBMS च्या अनुकूलतेसंबंधी अहवाल आणि/किंवा कोड पॅच OJS टीमला अवश्य "
 "पाठवावेत.</p>\n"
 
-#, fuzzy
 msgid "installer.upgradeInstructions"
 msgstr ""
 "<h4>OJS {$version} आवृत्ती/स्वरूप</h4>\n"
@@ -2439,3 +2438,6 @@ msgstr "लेखांचा क्रम"
 
 msgid "catalog.sortBy.categoryDescription"
 msgstr "या गटातील लेखांचा क्रम कसा लावायचा त्याची निवड करा."
+
+msgid "search.journal"
+msgstr "नियतकालिकानुसार शोधा"
