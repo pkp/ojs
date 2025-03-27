@@ -1,12 +1,13 @@
 # Jordi LC <jordi.lacruz@uab.cat>, 2021.
 # Marc Bria <marc.bria@gmail.com>, 2023.
+# Guilherme Godoy <guilherme_godoy@sfu.ca>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2023-04-12 16:29+0000\n"
-"Last-Translator: Marc Bria <marc.bria@gmail.com>\n"
+"PO-Revision-Date: 2025-03-27 10:25+0000\n"
+"Last-Translator: Guilherme Godoy <guilherme_godoy@sfu.ca>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/editor/es/>"
 "\n"
 "Language: es\n"
@@ -14,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "editor.home"
 msgstr "Página principal del editor/a"
@@ -104,7 +105,7 @@ msgstr ""
 "indicado que desean recibir actualizaciones ({$count} usuarios/as)"
 
 msgid "editor.notifyUsers.includeToc"
-msgstr "Incluir la tabla de contenidos de este número:"
+msgstr "Incluir la tabla de contenido de este número:"
 
 msgid "editor.editorAdministration"
 msgstr "Administración del editor/a"
