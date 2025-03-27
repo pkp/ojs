@@ -24,10 +24,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Aynı yazar(lar)ın dergideki en çok okunan makaleleri"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""
-"Uyarı: Bu eklenti en az bir istatistik/rapor eklentisinin etkinleştirilmiş "
-"olmasını gerektirir. İstatistik eklentileriniz birden fazla metrik "
-"sunuyorsa, lütfen site yöneticisinin site ayarları sayfasından ve dergi "
-"yöneticisinin ayarlar sayfalarından bir ana metrik seçin."

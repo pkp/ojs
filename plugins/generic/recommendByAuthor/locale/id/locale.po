@@ -21,10 +21,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Artikel paling banyak dibaca berdasarkan penulis yang sama"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""
-"Obs.: Plugin ini minimal membutuhkan satu plugin statistik/laporan aktif. "
-"Jika plugin statistik menghasilkan lebih dari satu metrik, pilihlah metrik "
-"utama pada pengaturan halaman admin dan/atau pada halaman pengaturan manajer "
-"jurnal."

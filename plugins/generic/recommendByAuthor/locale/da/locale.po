@@ -24,10 +24,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Mest læste artikler af samme forfatter(e)"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""
-"Bemærk: Denne plugin kræver mindst en aktiveret statistik-rapport-plugin. "
-"Hvis dine statistiske plugins indeholder mere end en enhed, skal du også "
-"vælge en normalenhed på administratorens og/eller tidsskriftschefens "
-"indstillingssider."
