@@ -1,8 +1,9 @@
 # Haval Abdulkarim <haval.abdulkarim@gmail.com>, 2025.
+# Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-09 13:50+0000\n"
-"Last-Translator: Haval Abdulkarim <haval.abdulkarim@gmail.com>\n"
+"PO-Revision-Date: 2025-03-25 22:15+0000\n"
+"Last-Translator: Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>\n"
 "Language-Team: Kurdish (Central) <http://translate.pkp.sfu.ca/projects/ojs/"
 "admin/ckb/>\n"
 "Language: ckb\n"
@@ -55,13 +56,13 @@ msgstr ""
 "دابەزێندرابن."
 
 msgid "admin.systemVersion"
-msgstr "ژمارەی وەشانی سیستەمەکە"
+msgstr "وەشانی سیستەمی گۆڤاری کراوە"
 
 msgid "admin.systemConfiguration"
-msgstr "هەیکەلی سیستەمی گۆڤاری کراوە"
+msgstr "شێوە و ڕێکخستنی سیستەمی گۆڤاری کراوە"
 
 msgid "admin.systemConfigurationDescription"
-msgstr "فۆڕمی ڕێکخستنی هەیکەلی سیستەمی گۆڤاری کراوە <tt>config.inc.php</tt>."
+msgstr "فۆڕمی ڕێکخستنی شێوەی سیستەمی گۆڤاری کراوە <tt>config.inc.php</tt>."
 
 msgid "admin.journals.createInstructions"
 msgstr ""
@@ -97,7 +98,7 @@ msgid "admin.contexts.form.pathExists"
 msgstr "ڕێچکەکەی تۆ پێشنیازت کردووە لە لایەن گۆڤارێکی دیکەوە گیراوە."
 
 msgid "admin.contexts.form.primaryLocaleNotSupported"
-msgstr ""
+msgstr "زمانی سەرەکی دەبێت یەکێک لە زمانە پشتگیریکراوەکانی گۆڤارەکە بێت."
 
 msgid "admin.journals.enableJournalInstructions"
 msgstr "بینینی ئەم گۆڤارە بۆ هەمووان چالاک بکە"
@@ -162,30 +163,69 @@ msgstr "ئاگادارکردنەوەی ئەکسێسی کراوە"
 msgid "admin.scheduledTask.reviewReminder"
 msgstr "بەبیرهێنانەوەی هەڵسەنگاندن"
 
+#, fuzzy
 msgid "admin.job.processLogFile.invalidLogEntry.issueId"
-msgstr ""
+msgstr "ناسنامەی ژمارەی دەرچوو ژمارەیەکی تەواو نیە."
 
+#, fuzzy
 msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
-msgstr ""
+msgstr "ناسنامەی وەشانی ژمارەی دەرچوو ژمارەیەکی تەواو نیە."
 
 msgid ""
 "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
-msgstr ""
+msgstr "ناسنامەی ژمارەی دەرچوو لەگەڵ ناسنامەی پەیوەندیدار یەک ناگرێتەوە."
 
+#, fuzzy
 msgid "admin.settings.enableBulkEmails.description"
 msgstr ""
+"گۆڤارە میوانداریکراوەکان هەڵبژێرە کە دەبێت رێگەیان پێبدرێت بۆ ناردنی ئیمەیڵی "
+"بەکۆمەڵ. کاتێک ئەم تایبەتمەندییە چالاک دەکرێت، بەڕێوەبەرێکی گۆڤار دەتوانێت "
+"ئیمەیڵ بۆ هەموو بەکارهێنەرانی تۆمارکراو لە گۆڤارەکەیدا بنێرێت.<br><br> خراپ "
+"بەکارهێنانی ئەم تایبەتمەندییە بۆ ناردنی ئیمەیڵی نەخوازراو لەوانەیە پێشێلی "
+"یاساکانی دژە پۆست و ئیمێڵی نەخوازراو بکات لە هەندێک دەسەڵاتدا و رەنگە ببێتە "
+"هۆی ئەوەی ئیمەیڵەکانی سێرڤەرەکەت وەک پۆست و ئیمێڵی نەخوازراو (سپام) بلۆک "
+"بکرێن. پێش چالاک کردنی ئەم تایبەتمەندییە، داوای راوێژی تەکنیکی بکە و بیر لە "
+"راوێژکردن لەگەڵ بەڕێوەبەرانی گۆڤار بکەوە بۆ دڵنیابوون لە بەکارهێنانی "
+"گونجاو.<br><br> سنووردانانی زیاتر بۆ ئەم تایبەتمەندییە دەکرێت بۆ هەر گۆڤارێک "
+"چالاک بکرێت بە سەردانی کۆمەکی ئامادەکردنی رێکخستنەکانی لە لیستی <a href=\""
+"{$hostedContextsUrl}\">گۆڤارە میوانداریکراوەکان</a>."
 
+#, fuzzy
 msgid "admin.settings.disableBulkEmailRoles.description"
 msgstr ""
+"بەڕێوەبەرێکی گۆڤار ناتوانێت ئیمەیڵی بەکۆمەڵ بۆ هیچ کام لە رۆڵەکانی خوارەوە "
+"بنێرێت. ئەم رێکخستنە بەکار بهێنە بۆ سنووردانان بۆ خراپ بەکارهێنانی "
+"تایبەتمەندی ئاگادارکردنەوەی ئیمەیڵ. بۆ نموونە، رەنگە پارێزراوتر بێت کە "
+"ناردنی ئیمەیڵی بەکۆمەڵ بۆ خوێنەران، نووسەران، یان گرووپە گەورەکانی "
+"بەکارهێنەرانی تر کە رەزامەندییان بۆ وەرگرتنی ئەم جۆرە ئیمەیڵانە نەداوە، "
+"ناچالاک بکرێت.<br><br> تایبەتمەندی ئیمەیڵی بەکۆمەڵ دەکرێت بە تەواوی بۆ ئەم "
+"گۆڤارە لە <a href=\"{$siteSettingsUrl}\">بەڕێوەبەر > رێکخستنەکانی شوێن</a> "
+"چاڵاک یان ناچالاک بکرێت."
 
+#, fuzzy
 msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
 msgstr ""
+"تایبەتمەندی ئیمەیڵی بەکۆمەڵ بۆ ئەم گۆڤارە ناچالاک کراوە. ئەم تایبەت مەندییە "
+"چالاک بکە لە <a href=\"{$siteSettingsUrl}\">ئەدمین> رێکخستنەکانی شوێن</a>."
 
+#, fuzzy
 msgid "admin.siteManagement.description"
 msgstr ""
+"لەم سایتە و ڕێکخستنە گشتگیرەکانی ئەم سایتە گۆڤارەکان زیاد بکە، دەستکاری بکە "
+"یان بیانسڕەوە."
 
+#, fuzzy
 msgid "admin.settings.statistics.geo.description"
 msgstr ""
+"جۆری ئاماری بەکارهێنانی جوگرافی هەڵبژێرە کە گۆڤارەکان دەتوانن لەم شوێنە کۆی "
+"بکەنەوە. ئامارە جوگرافییە زیاتر وردەکان لەوانەیە قەبارەی بنکەی زانیارییەکانت "
+"بە شێوەیەکی بەرچاو زیاد بکەن و، لە هەندێک حاڵەتی دەگمەندا، رەنگە دۆخی "
+"نەناسراوی سەردانکەرانت لاواز بکەن. هەر گۆڤارێک دەتوانێت ئەم رێکخستنە بە "
+"جۆرێکی جیاواز ئامادە بکات، بەڵام گۆڤارێک هەرگیز ناتوانێت تۆمارگەلێکی بە "
+"وردەکاری زیاتر  کۆ بکاتەوە لەوەی کە لێرەدا رێکخراوە. بۆ نموونە، ئەگەر "
+"سایتەکە تەنها پشتگیری وڵات و ناوچە دەکات، گۆڤارەکە دەتوانێت وڵات و ناوچە "
+"هەڵبژێرێت یان تەنها وڵات هەڵبژێرێت. گۆڤارەکە ناتوانێت وڵات، ناوچە و شار "
+"بدۆزێتەوە."
 
 msgid "admin.settings.statistics.institutions.description"
 msgstr ""
