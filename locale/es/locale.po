@@ -1,12 +1,13 @@
 # Jordi LC <jordi.lacruz@uab.cat>, 2021, 2023, 2024.
 # Marc Bria <marc.bria@gmail.com>, 2023.
+# Guilherme Godoy <guilherme_godoy@sfu.ca>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2024-05-03 13:49+0000\n"
-"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"PO-Revision-Date: 2025-03-27 10:31+0000\n"
+"Last-Translator: Guilherme Godoy <guilherme_godoy@sfu.ca>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/locale/es/>"
 "\n"
 "Language: es\n"
@@ -513,7 +514,7 @@ msgid "issue.noIssues"
 msgstr "No hay números"
 
 msgid "issue.toc"
-msgstr "Tabla de contenidos"
+msgstr "Tabla de contenido"
 
 msgid "issue.abstract"
 msgstr "Resumen"
