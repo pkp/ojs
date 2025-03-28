@@ -6,13 +6,14 @@
 # Daniel Caixeta <daniel.caixeta@inep.gov.br>, 2023.
 # Cintya Takahaschi <ctakahaschi@sp.gov.br>, 2023.
 # Rodrigo Emmanuel Santana Borges <rodrigo@borges.net.br>, 2025.
+# Carolina Miki Tanigushi <carolina.tanigushi@scielo.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:19-08:00\n"
-"PO-Revision-Date: 2025-03-07 21:13+0000\n"
-"Last-Translator: Rodrigo Emmanuel Santana Borges <rodrigo@borges.net.br>\n"
+"PO-Revision-Date: 2025-03-28 17:45+0000\n"
+"Last-Translator: Carolina Miki Tanigushi <carolina.tanigushi@scielo.org>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "emails/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -162,7 +163,7 @@ msgstr "A revista {$contextName} solicita avaliação de artigo"
 msgid "emails.reviewRequest.body"
 msgstr ""
 "<p>Prezado(a) {$recipientName},</p><p>Acredito que você seria um(a) "
-"excelente avaliador(a) de uma submissão  a {$contextName}. O título da "
+"excelente avaliador(a) de uma submissão   a {$contextName}. O título da "
 "submissão e o resumo estão abaixo, e espero que você considere realizar esta "
 "importante tarefa para nós.</p><p>Se você puder revisar esta submissão, peço "
 "que efetue até {$reviewDueDate}. Você pode visualizar a submissão, carregar "
