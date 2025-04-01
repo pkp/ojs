@@ -196,7 +196,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$exportXml = $this->exportSubmissions(
 					(array) $request->getUserVar('selectedSubmissions'),
 					$request->getContext(),
-					$request->getUser()
+					$request->getUser(),
+					$this->getExportOptionsFromRequest($request)
 				);
 				import('lib.pkp.classes.file.FileManager');
 				$fileManager = new FileManager();
@@ -209,7 +210,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$exportXml = $this->exportIssues(
 					(array) $request->getUserVar('selectedIssues'),
 					$request->getContext(),
-					$request->getUser()
+					$request->getUser(),
+					$this->getExportOptionsFromRequest($request)
 				);
 				import('lib.pkp.classes.file.FileManager');
 				$fileManager = new FileManager();
@@ -222,6 +224,17 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$dispatcher = $request->getDispatcher();
 				$dispatcher->handle404();
 		}
+	}
+
+	/**
+	 * Get export options from the request object
+	 * @param $request PKPRequest
+	 * @return array
+	 */
+	function getExportOptionsFromRequest($request) {
+		$opts = array();
+		if ($request->getUserVar('no-embed')) $opts['no-embed'] = true;
+		return $opts;
 	}
 
 	/**

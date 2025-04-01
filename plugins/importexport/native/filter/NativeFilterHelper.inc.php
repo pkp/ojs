@@ -81,9 +81,12 @@ class NativeFilterHelper {
 				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', htmlspecialchars($coverImageName, ENT_COMPAT, 'UTF-8')));
 				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', htmlspecialchars($coverImage['altText'], ENT_COMPAT, 'UTF-8')));
 
-				$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
-				$embedNode->setAttribute('encoding', 'base64');
-				$coverNode->appendChild($embedNode);
+				// Only embed if the no-embed option was not specified
+				if (empty($filter->opts['no-embed'])) {
+					$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
+					$embedNode->setAttribute('encoding', 'base64');
+					$coverNode->appendChild($embedNode);
+				}
 				$coversNode->appendChild($coverNode);
 			}
 		}
@@ -116,9 +119,19 @@ class NativeFilterHelper {
 				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', htmlspecialchars($coverImage, ENT_COMPAT, 'UTF-8')));
 				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', htmlspecialchars($object->getCoverImageAltText($locale), ENT_COMPAT, 'UTF-8')));
 
-				$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
-				$embedNode->setAttribute('encoding', 'base64');
-				$coverNode->appendChild($embedNode);
+				// Only embed if the no-embed option was not specified
+				if (empty($filter->opts['no-embed'])) {
+					$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
+					$embedNode->setAttribute('encoding', 'base64');
+					$coverNode->appendChild($embedNode);
+				} else if (!empty($filter->opts['use-file-urls'])) {
+					// Use the file URL in the XML
+					$request = Application::get()->getRequest();
+					$baseUrl = $request->getBaseUrl();
+					$context = $deployment->getContext();
+					$fileUrl = $baseUrl . '/' . $context->getPath() . '/public/' . $coverImage;
+					$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_url', htmlspecialchars($fileUrl, ENT_COMPAT, 'UTF-8')));
+				}
 				$coversNode->appendChild($coverNode);
 			}
 		}

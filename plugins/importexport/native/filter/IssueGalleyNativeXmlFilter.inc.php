@@ -123,10 +123,11 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_uploaded', strftime('%Y-%m-%d', strtotime($issueFile->getDateUploaded()))));
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_modified', strftime('%Y-%m-%d', strtotime($issueFile->getDateModified()))));
 
-
-			$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
-			$embedNode->setAttribute('encoding', 'base64');
-			$issueFileNode->appendChild($embedNode);
+			if (empty($this->opts['no-embed'])) {
+				$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
+				$embedNode->setAttribute('encoding', 'base64');
+				$issueFileNode->appendChild($embedNode);
+			}
 
 			$issueGalleyNode->appendChild($issueFileNode);
 			return true;

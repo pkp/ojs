@@ -125,3 +125,15 @@ msgid "plugins.importexport.native.import.error.publishedDateMissing"
 msgstr ""
 "The article \"{$articleTitle}\" is contained within an issue, but has no "
 "published date."
+
+msgid "plugins.importexport.common.export"
+msgstr "Export"
+
+msgid "plugins.importexport.native.exportOptions"
+msgstr "Export Options"
+
+msgid "plugins.importexport.native.noEmbedOption"
+msgstr "Do not embed binary files (reduces memory usage)"
+
+msgid "plugins.importexport.native.export.articles"
+msgstr "Export Articles"
