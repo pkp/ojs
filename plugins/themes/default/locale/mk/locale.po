@@ -1,8 +1,9 @@
 # Teodora Fildishevska <t.fildishevska@gmail.com>, 2023.
+# Mirko Spiroski <mspiroski@id-press.eu>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-03-15 15:21+0000\n"
-"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"PO-Revision-Date: 2025-04-02 08:12+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/mk/>\n"
 "Language: mk\n"
@@ -10,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.themes.default.name"
 msgstr "Предодредена тема"
@@ -94,3 +95,9 @@ msgstr "Превземања"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Податоците за превземање не се сè уште достапни."
+
+msgid "plugins.themes.default.nextSlide"
+msgstr "Следен слајд"
+
+msgid "plugins.themes.default.prevSlide"
+msgstr "Претходен слајд"
