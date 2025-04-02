@@ -15,4 +15,5 @@
 	<type>plugins.generic</type>
 	<release>2.0.0.0</release>
 	<date>2016-08-01</date>
+	<class>DatacitePlugin</class>
 </version>
