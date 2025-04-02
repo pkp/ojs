@@ -1,9 +1,10 @@
 # Teodora Fildishevska <t.fildishevska@gmail.com>, 2022.
 # Ana Vucurevic <ana.vucurevic97@yahoo.com>, 2023.
+# Mirko Spiroski <mspiroski@id-press.eu>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-03-16 10:33+0000\n"
-"Last-Translator: Ana Vucurevic <ana.vucurevic97@yahoo.com>\n"
+"PO-Revision-Date: 2025-04-02 08:12+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "mk/>\n"
 "Language: mk\n"
@@ -11,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Ова списание не објавува онлајн содржина."
@@ -2025,7 +2026,6 @@ msgstr ""
 "<p> 2. Именикот за зачувување на подигнатите датотеки мора да биде креиран и "
 "да се запишува (видете „Подесувања на датотека“ подолу). </p>"
 
-#, fuzzy
 msgid "installer.upgradeInstructions"
 msgstr ""
 "<h4>OJS Верзија {$version}</h4>\n"
@@ -2437,3 +2437,6 @@ msgstr "Изберете како да нарачате статии од ова
 
 #~ msgid "category.category"
 #~ msgstr "Категории"
+
+msgid "search.journal"
+msgstr "Од списание"
