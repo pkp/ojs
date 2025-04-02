@@ -1,10 +1,10 @@
-# Mirko Spiroski <mspiroski@id-press.eu>, 2021.
+# Mirko Spiroski <mspiroski@id-press.eu>, 2021, 2025.
 # Teodora Fildishevska <t.fildishevska@gmail.com>, 2022, 2023.
 # Ana Vucurevic <ana.vucurevic97@yahoo.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-03-16 10:25+0000\n"
-"Last-Translator: Ana Vucurevic <ana.vucurevic97@yahoo.com>\n"
+"PO-Revision-Date: 2025-04-02 08:12+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "mk/>\n"
 "Language: mk\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "manager.distribution.access"
 msgstr "Пристап"
@@ -2654,3 +2654,11 @@ msgid "plugins.importexport.common.error.issueCoverImageMissing"
 msgstr ""
 "Не можевме да ја експортираме насловната страна на изданието {$id}, не беше "
 "пронајдена неговата датотека на \"{$path}\"."
+
+msgid "manager.setup.contextSummary.description"
+msgstr ""
+"Понуди краток опис на вашето списание за да се добие претстава за содржината "
+"и намерата."
+
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr "Содржина на бројот како листа од сите придружни поднесоци."
