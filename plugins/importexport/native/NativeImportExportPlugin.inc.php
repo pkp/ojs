@@ -232,7 +232,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * @return array
 	 */
 	protected function getExportOptionsFromRequest(PKPRequest $request): array {
-		$opts = array();
+		$opts = [];
 		if ($request->getUserVar('no-embed')) $opts['no-embed'] = true;
 		return $opts;
 	}
