@@ -1,3 +1,300 @@
 # "10 ..." <jaana.tonisson@tlulib.ee>, 2025.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2025-04-03 14:59+0000\n"
+"Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
+"Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/locale/et/>"
+"\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "context.current"
+msgstr "Praegune ajakiri:"
+
+msgid "context.select"
+msgstr "Vaheta ajakirja:"
+
+msgid "navigation.categories"
+msgstr "Kategooriad"
+
+msgid "navigation.categories.browse"
+msgstr "Sirvi"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Klõpsake ikoonil, et täita retsensiooni vorm."
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Palun täitke kohustuslikud väljad."
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "common.payment"
+msgstr "Makse"
+
+msgid "common.payments"
+msgstr "Maksed"
+
+msgid "doi.manager.settings.publications"
+msgstr "Artiklid"
+
+msgid "navigation.journalHelp"
+msgstr "Ajakirja abi"
+
+msgid "navigation.current"
+msgstr "Praegune"
+
+msgid "navigation.otherJournals"
+msgstr "Teised ajakirjad"
+
+msgid "navigation.browseByIssue"
+msgstr "Numbri järgi"
+
+msgid "navigation.browseByAuthor"
+msgstr "Autori järgi"
+
+msgid "navigation.infoForAuthors"
+msgstr "Autoritele"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Raamatukoguhoidjatele"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Huvide konfliktide juhised"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Informatsioon autoritele"
+
+msgid "navigation.skip.about"
+msgstr "Liigu ajakirja info juurde"
+
+msgid "navigation.skip.issue"
+msgstr "Liigu praeguse numbri juurde"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Määramata"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Määramata"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Kaastööd toimetamisel"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Toimetamisel"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Kaastööd retsenseerimisel"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Retsenseerimisel"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Arhiiv"
+
+msgid "common.queue.long.active"
+msgstr "Aktiivsed"
+
+msgid "common.queue.short.active"
+msgstr "Aktiivsed"
+
+msgid "common.queue.long.completed"
+msgstr "Arhiiv"
+
+msgid "common.queue.short.completed"
+msgstr "Arhiiv"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Määratud toimetajad"
+
+msgid "section.section"
+msgstr "Rubriik"
+
+msgid "section.sections"
+msgstr "Rubriigid"
+
+msgid "section.title"
+msgstr "Rubriigi pealkiri"
+
+msgid "section.abbreviation"
+msgstr "Lühend"
+
+msgid "section.abbreviation.example"
+msgstr "(Näiteks: Artiklid=ART)"
+
+msgid "section.policy"
+msgstr "Rubriigi eeskiri"
+
+msgid "article.article"
+msgstr "Artikkel"
+
+msgid "common.publication"
+msgstr "Artikkel"
+
+msgid "common.publications"
+msgstr "Artiklid"
+
+msgid "article.submissionId"
+msgstr "Kaastöö ID"
+
+msgid "article.title"
+msgstr "Pealkiri"
+
+msgid "article.indexingInformation"
+msgstr "Indekseerimise informatsioon"
+
+msgid "article.metadata"
+msgstr "Metaandmed"
+
+msgid "article.journalSection"
+msgstr "Ajakirja rubriik"
+
+msgid "article.file"
+msgstr "Fail"
+
+msgid "article.suppFile"
+msgstr "Lisafail"
+
+msgid "article.suppFiles"
+msgstr "Lisafailid"
+
+msgid "article.subject"
+msgstr "Märksõnad"
+
+msgid "article.coverage"
+msgstr "Katvus"
+
+msgid "article.type"
+msgstr "Tüüp, meetod või lähenemine"
+
+msgid "article.language"
+msgstr "Keel"
+
+msgid "article.sectionEditor"
+msgstr "RT"
+
+msgid "article.commentsToEditor"
+msgstr "Autori kommentaarid"
+
+msgid "article.submission"
+msgstr "Kaastöö"
+
+msgid "article.submissions"
+msgstr "Kaastööd"
+
+msgid "article.coverPage.altText"
+msgstr "Kaanepilt"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Avatud juurdepääs"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Piiratud juurdepääs"
+
+msgid "article.comments.sectionDefault"
+msgstr "Vaikimisi"
+
+msgid "article.comments.disable"
+msgstr "Keela"
+
+msgid "article.comments.enable"
+msgstr "Luba"
+
+msgid "article.fontSize"
+msgstr "Fondi suurus"
+
+msgid "article.fontSize.small.altText"
+msgstr "Väike"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Keskmine"
+
+msgid "article.fontSize.large.altText"
+msgstr "Suur"
+
+msgid "submission.submissionEditing"
+msgstr "Kaastöö toimetamine"
+
+msgid "submission.changeSection"
+msgstr "Muuda"
+
+msgid "submission.sent"
+msgstr "Saadetud"
+
+msgid "submission.editorDecision"
+msgstr "Toimetaja otsus"
+
+msgid "submission.round"
+msgstr "Ring&nbsp;{$round}"
+
+msgid "submission.editorReview"
+msgstr "Toimetaja arvustus"
+
+msgid "submission.notifyAuthor"
+msgstr "Teavita autorit"
+
+msgid "submission.notifyEditor"
+msgstr "Teavita toimetajat"
+
+msgid "submission.reviewersVersion"
+msgstr "Retsenseerimise-järgse faili versioon"
+
+msgid "submission.postReviewVersion"
+msgstr "Retsenseerimise-järgne faili versioon"
+
+msgid "submission.editorVersion"
+msgstr "Toimetaja versioon"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Autori parandatud versioon failist"
+
+msgid "submission.authorVersion"
+msgstr "Autori versioon"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "See ajakiri ei avalda oma sisu internetis."
+
+msgid "common.confirmComplete"
+msgstr ""
+"Kas oled kindel, et soovid märkida selle ülesande lõpetatuks? Hiljem ei "
+"pruugi muudatuste tegemine olla võimalik."
+
+msgid "common.homePageHeader.altText"
+msgstr "Kodulehe päis"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Ajakirja kodulehe pilt"
+
+msgid "article.details"
+msgstr "Üksikasjad"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Informatsioon raamatukoguhoidjatele"
+
+msgid "article.abstract"
+msgstr "Sisukokkuvõte"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Arhiiv"
+
+msgid "article.return"
+msgstr "Tagasi artikli üksikasjade juurde"
+
+msgid "article.articles"
+msgstr "Artiklid"
+
+msgid "article.authors"
+msgstr "Autorid"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Toimetaja/autori e-kirjavahetus"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Lisafailid"
+
+msgid "article.discipline"
+msgstr "Akadeemiline valdkond ja alamvaldkonnad"
