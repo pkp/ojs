@@ -2,10 +2,11 @@
   "name": "modern-ojs-landing",
   "version": "1.0.0",
   "description": "Landing page for Modern Open Journal Systems",
+  "type": "module",
   "main": "index.html",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "keywords": [
