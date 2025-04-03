@@ -24,11 +24,13 @@ MOJS is built with a full-stack architecture optimized for performance, scalabil
 - **Deployment**: Docker and Kubernetes for scalable, portable infrastructure.
 - **Monitoring**: Prometheus and Grafana for system health and performance tracking.
 
+For a detailed migration plan and timeline, see our [ROADMAP.md](./ROADMAP.md).
+
 ## Bugs / Feature Requests
 
 > ⚠️ If you have found a security risk or vulnerability, please read our [security policy](./SECURITY.md).
 
-All issues should be filed at the [balinesthesia/modern-ojs](https://github.com/balinesthesia/modern-ojs/issues) repository. Feature requests can be made by opening a discussion at [github.com/balinesthesia/modern-ojs/discussions](https://github.com/balinesthesia/modern-ojs/discussions). Learn more about how to [report a problem](https://github.com/balinesthesia/modern-ojs/blob/main/CONTRIBUTING.md#report-a-problem). For PKP’s original OJS issue tracker, visit [pkp/pkp-lib](https://github.com/pkp/pkp-lib/issues/).
+All issues should be filed at the [balinesthesia/modern-ojs](https://github.com/balinesthesia/modern-ojs/issues) repository. Feature requests can be made by opening a discussion at [github.com/balinesthesia/modern-ojs/discussions](https://github.com/balinesthesia/modern-ojs/discussions). Learn more about how to [report a problem](https://github.com/balinesthesia/modern-ojs/blob/main/CONTRIBUTING.md#report-a-problem). For PKP's original OJS issue tracker, visit [pkp/pkp-lib](https://github.com/pkp/pkp-lib/issues/).
 
 ## Community Code of Conduct
 
@@ -36,7 +38,7 @@ This repository is a community space managed by [Balinesthesia](https://website.
 
 ## Contributions
 
-> *MOJS’s Contributor Guide is under development and will be available upon our first release at [balinesthesia.github.io/modern-ojs/docs/contributors/](https://balinesthesia.github.io/modern-ojs/docs/contributors/). It will cover pull request guidelines, code formatting (e.g., Prettier for TypeScript, rustfmt for Rust), and branch/submodule organization for the frontend, backend, and AI components. For now, see [CONTRIBUTING.md](./docs/CONTRIBUTING.md) for basic contribution details.*
+> *MOJS's Contributor Guide is under development and will be available upon our first release at [balinesthesia.github.io/modern-ojs/docs/contributors/](https://balinesthesia.github.io/modern-ojs/docs/contributors/). It will cover pull request guidelines, code formatting (e.g., Prettier for TypeScript, rustfmt for Rust), and branch/submodule organization for the frontend, backend, and AI components. For now, see [CONTRIBUTING.md](./docs/CONTRIBUTING.md) for basic contribution details.*
 
 ## License
 
