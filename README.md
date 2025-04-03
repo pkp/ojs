@@ -1,21 +1,16 @@
-# Open Journal Systems
+# Modern Open Journal Systems
 
 [![Build Status](https://github.com/pkp/ojs/actions/workflows/main.yml/badge.svg)](https://github.com/pkp/ojs/actions/workflows/main.yml)
 
-Open Journal Systems (OJS) is open-source software originally developed by the [Public Knowledge Project](https://pkp.sfu.ca/) to manage scholarly journals. This modernized version, maintained by [Balinesthesia](https://website.anestesiudayana.com/), reimagines OJS with a cutting-edge full-stack architecture, leveraging React with TypeScript and Next.js for a dynamic frontend, Rust for a high-performance backend, and Python for AI-driven features like peer review matchmaking and beyond. [Learn More](https://github.com/balinesthesia/modern-ojs)
+Modern Open Journal Systems (MOJS) is open-source software derive from Open Journal System (OJS) originally developed by the [Public Knowledge Project](https://pkp.sfu.ca/) to manage scholarly journals. This modernized fork, maintained by [Balinesthesia](https://website.anestesiudayana.com/), reimagines OJS with a cutting-edge full-stack architecture, leveraging React with TypeScript and Next.js for a dynamic frontend, Rust for a high-performance backend, and Python for AI-driven features like peer review matchmaking and beyond. [Learn More](https://github.com/balinesthesia/modern-ojs)
 
 ## Usage
 
-Read one of these guides to get started using OJS:
-
-- Read the [Admin Guide](https://docs.pkp.sfu.ca/admin-guide/) to learn how to install and configure the application from an official release package. Use this guide to deploy to production.
-- Read the [Getting Started](https://docs.pkp.sfu.ca/dev/documentation/en/getting-started) guide to learn how to install the application from this source repository. Use this guide for local development.
-
-Visit our [Documentation Hub](https://docs.pkp.sfu.ca/) for user guides, tutorials, and technical documentation.
+> *MOJS is currently under active development and not yet ready for production or local deployment. Usage guides (Admin Guide, Getting Started, and Documentation Hub) will be provided upon our first release. Stay tuned at [github.com/balinesthesia/modern-ojs](https://github.com/balinesthesia/modern-ojs) for updates!*
 
 ## Tech Stack Overview
 
-This modernized OJS is built with a full-stack architecture optimized for performance, scalability, and academic publishing needs:
+The MOJS is built with a full-stack architecture optimized for performance, scalability, and academic publishing needs:
 
 - **Frontend**: React with TypeScript and Next.js for a responsive, SEO-friendly interface.
 - **Backend**: Rust with Actix Web for secure, high-performance APIs.
@@ -46,6 +41,12 @@ Read the [Contributor's Guide](https://docs.pkp.sfu.ca/dev/contributors/) to lea
 
 ## License
 
-This software is released under the the GNU General Public License. See the file `docs/COPYING` included with this distribution for the terms of this license.
+**Modern Open Journal Systems (MOJS)**
 
-Third parties are welcome to modify and redistribute this modernized OJS in entirety or parts according to the terms of this license. [Balinesthesia](https://website.anestesiudayana.com/) also welcomes patches for improvements or bug fixes to the software, whether for the React frontend, Rust backend, or Python AI services. This project is a derivative of [Open Journal Systems](https://pkp.sfu.ca/software/ojs/) by the [Public Knowledge Project](https://pkp.sfu.ca/).
+Copyright (C) 2025 Balinesthesia
+
+Derived from [Open Journal Systems (OJS)](https://pkp.sfu.ca/software/ojs/), Copyright (C) 2001-2025 [Public Knowledge Project](https://pkp.sfu.ca/)
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the `docs/LICENSE` and `docs/COPYING` files for details.
+
+Third parties are welcome to modify and redistribute MOJS in entirety or parts according to the terms of this license. [Balinesthesia](https://website.anestesiudayana.com/) also welcomes patches for improvements or bug fixes to the software, whether for the React frontend, Rust backend, or Python AI services—see [github.com/balinesthesia/modern-ojs](https://github.com/balinesthesia/modern-ojs) for contribution details.
