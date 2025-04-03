@@ -231,7 +231,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * @param $request PKPRequest
 	 * @return array
 	 */
-	function getExportOptionsFromRequest($request) {
+	protected function getExportOptionsFromRequest(PKPRequest $request): array {
 		$opts = array();
 		if ($request->getUserVar('no-embed')) $opts['no-embed'] = true;
 		return $opts;
