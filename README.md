@@ -7,7 +7,7 @@ Modern Open Journal Systems (MOJS) is open-source software derived from Open Jou
 
 ## Usage
 
-> *MOJS is currently under active development and not yet ready for production or local deployment. Usage guides (Admin Guide, Getting Started, and Documentation Hub) will be provided upon our first release. Stay tuned at [github.com/balinesthesia/modern-ojs](https://github.com/balinesthesia/modern-ojs) for updates!*
+> *MOJS is currently under active development and not yet ready for production or local deployment. Usage guides (Admin Guide, Getting Started, and Documentation Hub) will be provided upon our first release at [balinesthesia.github.io/docs](https://balinesthesia.github.io/docs). Stay tuned at [github.com/balinesthesia/modern-ojs](https://github.com/balinesthesia/modern-ojs) for updates!*
 
 ## Tech Stack Overview
 
@@ -36,7 +36,7 @@ This repository is a community space managed by [Balinesthesia](https://website.
 
 ## Contributions
 
-> *MOJS’s Contributor Guide is under development and will be available upon our first release. It will cover pull request guidelines, code formatting (e.g., Prettier for TypeScript, rustfmt for Rust), and branch/submodule organization for the frontend, backend, and AI components. For now, see [CONTRIBUTING.md](./docs/CONTRIBUTING.md) for basic contribution details.*
+> *MOJS’s Contributor Guide is under development and will be available upon our first release. It will cover pull request guidelines, code formatting (e.g., Prettier for TypeScript, rustfmt for Rust), and branch/submodule organization for the frontend, backend, and AI components. For now, see [CONTRIBUTING.md](/docs/CONTRIBUTING.md) for basic contribution details.*
 
 ## License
 
