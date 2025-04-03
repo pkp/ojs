@@ -13,9 +13,6 @@
 [submodule "plugins/generic/pdfJsViewer"]
 	path = plugins/generic/pdfJsViewer
 	url = https://github.com/pkp/pdfJsViewer.git
-[submodule "docs/manual"]
-	path = docs/manual
-	url = https://github.com/pkp/ojs-user-guide
 [submodule "plugins/generic/lensGalley"]
 	path = plugins/generic/lensGalley
 	url = https://github.com/asmecher/lensGalley
