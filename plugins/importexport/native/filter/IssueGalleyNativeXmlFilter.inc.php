@@ -100,7 +100,7 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 	 * @param $issueGalley IssueGalley
 	 */
 	function addFile($doc, $issueGalleyNode, $issueGalley) {
-		$issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /* @var $issueFileDao IssueFileDAO */
+		$issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /** @var IssueFileDAO $issueFileDao  */
 		$issueFile = $issueFileDao->getById($issueGalley->getFileId());
 
 		if ($issueFile) {
@@ -120,10 +120,36 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_size', $issueFile->getFileSize()));
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'content_type', htmlspecialchars($issueFile->getContentType(), ENT_COMPAT, 'UTF-8')));
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'original_file_name', htmlspecialchars($issueFile->getOriginalFileName(), ENT_COMPAT, 'UTF-8')));
-			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_uploaded', strftime('%Y-%m-%d', strtotime($issueFile->getDateUploaded()))));
-			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_modified', strftime('%Y-%m-%d', strtotime($issueFile->getDateModified()))));
 
-			if (empty($this->opts['no-embed'])) {
+			$dateUploaded = $issueFile->getDateUploaded();
+			if (is_string($dateUploaded)) {
+				$dateUploaded = substr($dateUploaded, 0, 10); // Extract YYYY-MM-DD
+			}
+
+			$dateModified = $issueFile->getDateModified();
+			if (is_string($dateModified)) {
+				$dateModified = substr($dateModified, 0, 10); // Extract YYYY-MM-DD
+			}
+
+			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_uploaded', $dateUploaded));
+			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_modified', $dateModified));
+
+			if (!empty($this->opts['use-file-urls'])) {
+				import('classes.file.PublicFileManager');
+				$publicFileManager = new PublicFileManager();
+				$request = Application::get()->getRequest();
+
+				if (!empty($this->opts['use-absolute-urls'])) {
+					$fileUrl = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($deployment->getContext()->getId()) . '/' . $issueFile->getServerFileName();
+				} else {
+					$fileUrl = $request->getBasePath() . '/' . $publicFileManager->getContextFilesPath($deployment->getContext()->getId()) . '/' . $issueFile->getServerFileName();
+				}
+
+				$hrefNode = $doc->createElementNS($deployment->getNamespace(), 'href');
+				$hrefNode->setAttribute('src', htmlspecialchars($fileUrl, ENT_COMPAT, 'UTF-8'));
+				$hrefNode->setAttribute('mime_type', $issueFile->getFileType());
+				$issueFileNode->appendChild($hrefNode);
+			} else if (empty($this->opts['no-embed'])) {
 				$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
 				$embedNode->setAttribute('encoding', 'base64');
 				$issueFileNode->appendChild($embedNode);

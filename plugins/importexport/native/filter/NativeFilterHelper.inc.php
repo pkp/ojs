@@ -81,8 +81,22 @@ class NativeFilterHelper {
 				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', htmlspecialchars($coverImageName, ENT_COMPAT, 'UTF-8')));
 				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', htmlspecialchars($coverImage['altText'], ENT_COMPAT, 'UTF-8')));
 
-				// Only embed if the no-embed option was not specified
-				if (empty($filter->opts['no-embed'])) {
+				if (!empty($filter->opts['use-file-urls'])) {
+					import('classes.file.PublicFileManager');
+					$publicFileManager = new PublicFileManager();
+					$request = Application::get()->getRequest();
+
+					if (!empty($filter->opts['use-absolute-urls'])) {
+						$fileUrl = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($object->getJournalId()) . '/' . $coverImageName;
+					} else {
+						$fileUrl = $request->getBasePath() . '/' . $publicFileManager->getContextFilesPath($object->getJournalId()) . '/' . $coverImageName;
+					}
+
+					$hrefNode = $doc->createElementNS($deployment->getNamespace(), 'href');
+					$hrefNode->setAttribute('src', htmlspecialchars($fileUrl, ENT_COMPAT, 'UTF-8'));
+					$hrefNode->setAttribute('mime_type', $this->_getMimeTypeFromFileName($coverImageName));
+					$coverNode->appendChild($hrefNode);
+				} else if (empty($filter->opts['no-embed'])) {
 					$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
 					$embedNode->setAttribute('encoding', 'base64');
 					$coverNode->appendChild($embedNode);
@@ -119,18 +133,25 @@ class NativeFilterHelper {
 				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image', htmlspecialchars($coverImage, ENT_COMPAT, 'UTF-8')));
 				$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'cover_image_alt_text', htmlspecialchars($object->getCoverImageAltText($locale), ENT_COMPAT, 'UTF-8')));
 
-				// Only embed if the no-embed option was not specified
-				if (empty($filter->opts['no-embed'])) {
+				if (!empty($filter->opts['use-file-urls'])) {
+					import('classes.file.PublicFileManager');
+					$publicFileManager = new PublicFileManager();
+					$request = Application::get()->getRequest();
+
+					if (!empty($filter->opts['use-absolute-urls'])) {
+						$fileUrl = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($object->getJournalId()) . '/' . $coverImage;
+					} else {
+						$fileUrl = $request->getBasePath() . '/' . $publicFileManager->getContextFilesPath($object->getJournalId()) . '/' . $coverImage;
+					}
+
+					$hrefNode = $doc->createElementNS($deployment->getNamespace(), 'href');
+					$hrefNode->setAttribute('src', htmlspecialchars($fileUrl, ENT_COMPAT, 'UTF-8'));
+					$hrefNode->setAttribute('mime_type', $this->_getMimeTypeFromFileName($coverImage));
+					$coverNode->appendChild($hrefNode);
+				} else if (empty($filter->opts['no-embed'])) {
 					$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
 					$embedNode->setAttribute('encoding', 'base64');
 					$coverNode->appendChild($embedNode);
-				} else if (!empty($filter->opts['use-file-urls'])) {
-					// Use the file URL in the XML
-					$request = Application::get()->getRequest();
-					$baseUrl = $request->getBaseUrl();
-					$context = $deployment->getContext();
-					$fileUrl = $baseUrl . '/' . $context->getPath() . '/public/' . $coverImage;
-					$coverNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_url', htmlspecialchars($fileUrl, ENT_COMPAT, 'UTF-8')));
 				}
 				$coversNode->appendChild($coverNode);
 			}
@@ -237,6 +258,66 @@ class NativeFilterHelper {
 
 						file_put_contents($filePath, base64_decode($n->textContent));
 						break;
+					case 'href':
+						if (!isset($coverImage['uploadName'])) {
+							$deployment->addWarning(ASSOC_TYPE_PUBLICATION, $object->getId(), __('plugins.importexport.common.error.coverImageNameUnspecified'));
+							break;
+						}
+
+						import('classes.file.PublicFileManager');
+						$publicFileManager = new PublicFileManager();
+						$filePath = $publicFileManager->getContextFilesPath($context->getId()) . '/' . $coverImage['uploadName'];
+						$allowedFileTypes = ['gif', 'jpg', 'png', 'webp'];
+						$extension = pathinfo(strtolower($filePath), PATHINFO_EXTENSION);
+						if (!in_array($extension, $allowedFileTypes)) {
+							$deployment->addWarning(ASSOC_TYPE_PUBLICATION, $object->getId(), __('plugins.importexport.common.error.invalidFileExtension'));
+							break;
+						}
+
+						$imageUrl = $n->getAttribute('src');
+						if (empty($imageUrl)) {
+							$deployment->addWarning(ASSOC_TYPE_PUBLICATION, $object->getId(), __('plugins.importexport.common.error.missingHref'));
+							break;
+						}
+
+						$fileContents = file_get_contents($imageUrl);
+						if ($fileContents === false) {
+							$deployment->addWarning(ASSOC_TYPE_PUBLICATION, $object->getId(), __('plugins.importexport.common.error.failedDownloadingFile', array('url' => $imageUrl)));
+							break;
+						}
+
+						file_put_contents($filePath, $fileContents);
+						break;
+					case 'file_url':
+						if (!isset($coverImage['uploadName'])) {
+							$deployment->addWarning(ASSOC_TYPE_PUBLICATION, $object->getId(), __('plugins.importexport.common.error.coverImageNameUnspecified'));
+							break;
+						}
+
+						import('classes.file.PublicFileManager');
+						$publicFileManager = new PublicFileManager();
+						$filePath = $publicFileManager->getContextFilesPath($context->getId()) . '/' . $coverImage['uploadName'];
+						$allowedFileTypes = ['gif', 'jpg', 'png', 'webp'];
+						$extension = pathinfo(strtolower($filePath), PATHINFO_EXTENSION);
+						if (!in_array($extension, $allowedFileTypes)) {
+							$deployment->addWarning(ASSOC_TYPE_PUBLICATION, $object->getId(), __('plugins.importexport.common.error.invalidFileExtension'));
+							break;
+						}
+
+						$imageUrl = $n->textContent;
+						if (empty($imageUrl)) {
+							$deployment->addWarning(ASSOC_TYPE_PUBLICATION, $object->getId(), __('plugins.importexport.common.error.missingFileUrl'));
+							break;
+						}
+
+						$fileContents = file_get_contents($imageUrl);
+						if ($fileContents === false) {
+							$deployment->addWarning(ASSOC_TYPE_PUBLICATION, $object->getId(), __('plugins.importexport.common.error.failedDownloadingFile', array('url' => $imageUrl)));
+							break;
+						}
+
+						file_put_contents($filePath, $fileContents);
+						break;
 					default:
 						$deployment->addWarning(ASSOC_TYPE_PUBLICATION, $object->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
 				}
@@ -297,10 +378,92 @@ class NativeFilterHelper {
 
 						file_put_contents($filePath, base64_decode($n->textContent));
 						break;
+					case 'href':
+						if (!$object->getCoverImage($locale)) {
+							$deployment->addWarning(ASSOC_TYPE_ISSUE, $object->getId(), __('plugins.importexport.common.error.coverImageNameUnspecified'));
+							break;
+						}
+
+						import('classes.file.PublicFileManager');
+						$publicFileManager = new PublicFileManager();
+						$filePath = $publicFileManager->getContextFilesPath($context->getId()) . '/' . $object->getCoverImage($locale);
+						$allowedFileTypes = ['gif', 'jpg', 'png', 'webp'];
+						$extension = pathinfo(strtolower($filePath), PATHINFO_EXTENSION);
+						if (!in_array($extension, $allowedFileTypes)) {
+							$deployment->addWarning(ASSOC_TYPE_ISSUE, $object->getId(), __('plugins.importexport.common.error.invalidFileExtension'));
+							break;
+						}
+
+						$imageUrl = $n->getAttribute('src');
+						if (empty($imageUrl)) {
+							$deployment->addWarning(ASSOC_TYPE_ISSUE, $object->getId(), __('plugins.importexport.common.error.missingHref'));
+							break;
+						}
+
+						$fileContents = file_get_contents($imageUrl);
+						if ($fileContents === false) {
+							$deployment->addWarning(ASSOC_TYPE_ISSUE, $object->getId(), __('plugins.importexport.common.error.failedDownloadingFile', array('url' => $imageUrl)));
+							break;
+						}
+
+						file_put_contents($filePath, $fileContents);
+						break;
+					case 'file_url':
+						if (!$object->getCoverImage($locale)) {
+							$deployment->addWarning(ASSOC_TYPE_ISSUE, $object->getId(), __('plugins.importexport.common.error.coverImageNameUnspecified'));
+							break;
+						}
+
+						import('classes.file.PublicFileManager');
+						$publicFileManager = new PublicFileManager();
+						$filePath = $publicFileManager->getContextFilesPath($context->getId()) . '/' . $object->getCoverImage($locale);
+						$allowedFileTypes = ['gif', 'jpg', 'png', 'webp'];
+						$extension = pathinfo(strtolower($filePath), PATHINFO_EXTENSION);
+						if (!in_array($extension, $allowedFileTypes)) {
+							$deployment->addWarning(ASSOC_TYPE_ISSUE, $object->getId(), __('plugins.importexport.common.error.invalidFileExtension'));
+							break;
+						}
+
+						$imageUrl = $n->textContent;
+						if (empty($imageUrl)) {
+							$deployment->addWarning(ASSOC_TYPE_ISSUE, $object->getId(), __('plugins.importexport.common.error.missingFileUrl'));
+							break;
+						}
+
+						$fileContents = file_get_contents($imageUrl);
+						if ($fileContents === false) {
+							$deployment->addWarning(ASSOC_TYPE_ISSUE, $object->getId(), __('plugins.importexport.common.error.failedDownloadingFile', array('url' => $imageUrl)));
+							break;
+						}
+
+						file_put_contents($filePath, $fileContents);
+						break;
 					default:
 						$deployment->addWarning(ASSOC_TYPE_ISSUE, $object->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
 				}
 			}
+		}
+	}
+
+	/**
+	 * Get MIME type based on file extension
+	 * @param $fileName string
+	 * @return string MIME type
+	 */
+	protected function _getMimeTypeFromFileName($fileName) {
+		$extension = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
+		switch ($extension) {
+			case 'jpg':
+			case 'jpeg':
+				return 'image/jpeg';
+			case 'png':
+				return 'image/png';
+			case 'gif':
+				return 'image/gif';
+			case 'webp':
+				return 'image/webp';
+			default:
+				return 'application/octet-stream';
 		}
 	}
 

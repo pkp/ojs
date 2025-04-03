@@ -135,7 +135,20 @@
 			<element name="original_file_name" type="string" minOccurs="1" maxOccurs="1" />
 			<element name="date_uploaded" type="date" minOccurs="1" maxOccurs="1" />
 			<element name="date_modified" type="date" minOccurs="1" maxOccurs="1" />
-			<element name="embed" type="pkp:embed" minOccurs="0" maxOccurs="1" />
+			<choice minOccurs="0" maxOccurs="1">
+				<element name="embed" type="pkp:embed" />
+				<element name="href">
+					<complexType>
+						<simpleContent>
+							<extension base="string">
+								<attribute name="src" type="string" use="required"/>
+								<attribute name="mime_type" type="string" use="required"/>
+							</extension>
+						</simpleContent>
+					</complexType>
+				</element>
+			</choice>
+			<element name="file_url" type="string" minOccurs="0" maxOccurs="1" />
 		</sequence>
 	</complexType>
 
@@ -152,7 +165,20 @@
 			<sequence>
 				<element name="cover_image" type="string" minOccurs="1" maxOccurs="1" />
 				<element name="cover_image_alt_text" type="string" minOccurs="1" maxOccurs="1" />
-				<element name="embed" type="pkp:embed" minOccurs="0" maxOccurs="1" />
+				<choice minOccurs="0" maxOccurs="1">
+					<element name="embed" type="pkp:embed" />
+					<element name="href">
+						<complexType>
+							<simpleContent>
+								<extension base="string">
+									<attribute name="src" type="string" use="required"/>
+									<attribute name="mime_type" type="string" use="required"/>
+								</extension>
+							</simpleContent>
+						</complexType>
+					</element>
+				</choice>
+				<element name="file_url" type="string" minOccurs="0" maxOccurs="1" />
 			</sequence>
 			<attribute name="locale" type="string" />
 		</complexType>

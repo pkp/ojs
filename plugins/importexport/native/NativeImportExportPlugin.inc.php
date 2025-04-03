@@ -233,9 +233,24 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 */
 	protected function getExportOptionsFromRequest(PKPRequest $request): array {
 		$opts = [];
-		if ($request->getUserVar('no-embed')) {
-				$opts['no-embed'] = true;
+
+		$imageOption = $request->getUserVar('image-option');
+		switch ($imageOption) {
+			case 'embed':
+				break;
+			case 'relative':
+				$opts['use-file-urls'] = true;
+				break;
+			case 'url':
+				$opts['use-file-urls'] = true;
+				$opts['use-absolute-urls'] = true;
+				break;
+			default:
+				if ($request->getUserVar('no-embed')) {
+					$opts['no-embed'] = true;
+				}
 		}
+
 		return $opts;
 	}
 
@@ -342,7 +357,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * @see PKPImportExportPlugin::executeCLI()
 	 */
 	function executeCLI($scriptName, &$args) {
-		$opts = $this->parseOpts($args, ['no-embed', 'use-file-urls']);
+		$opts = $this->parseOpts($args, ['no-embed', 'use-file-urls', 'use-absolute-urls', 'image-option:']);
 		$command = array_shift($args);
 		$xmlFile = array_shift($args);
 		$journalPath = array_shift($args);
@@ -540,6 +555,23 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			}
 		}
 		$args = $newArgs;
+
+		if (isset($opts['image-option'])) {
+			switch ($opts['image-option']) {
+				case 'embed':
+					break;
+				case 'relative':
+					$opts['use-file-urls'] = true;
+					break;
+				case 'url':
+					$opts['use-file-urls'] = true;
+					$opts['use-absolute-urls'] = true;
+					break;
+				default:
+					break;
+			}
+		}
+
 		return $opts;
 	}
 }

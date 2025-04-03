@@ -129,12 +129,11 @@
 			{fbvFormArea id="issuesXmlForm"}
 				{capture assign="issuesListGridUrl"}{url router=$smarty.const.ROUTE_COMPONENT component="grid.issues.ExportableIssuesListGridHandler" op="fetchGrid" escape=false}{/capture}
 				{load_url_in_div id="issuesListGridContainer" url=$issuesListGridUrl}
-				{fbvFormSection list="true"}
-					{fbvElement type="checkbox" id="validation" label="plugins.importexport.common.validation" checked=$validation|default:true}
-				{/fbvFormSection}
 
-				{fbvFormSection list="true" title="plugins.importexport.native.exportOptions"}
-					{fbvElement type="checkbox" id="no-embed" name="no-embed" label="plugins.importexport.native.noEmbedOption" checked=$noEmbed|default:false}
+				{fbvFormSection list="true" title="plugins.importexport.native.exportOptions.coverImagesAndSubmissionFile"}
+					{fbvElement type="radio" id="embed" name="image-option" value="embed" label="plugins.importexport.native.exportOptions.coverImages.embed" checked=true}
+					{fbvElement type="radio" id="relative" name="image-option" value="relative" label="plugins.importexport.native.exportOptions.coverImages.relative"}
+					{fbvElement type="radio" id="url" name="image-option" value="url" label="plugins.importexport.native.exportOptions.coverImages.url"}
 				{/fbvFormSection}
 
 				{fbvFormButtons submitText="plugins.importexport.common.export" hideCancel="true"}
