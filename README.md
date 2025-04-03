@@ -1,8 +1,9 @@
 # Modern Open Journal Systems
 
-[![Build Status](https://github.com/pkp/ojs/actions/workflows/main.yml/badge.svg)](https://github.com/pkp/ojs/actions/workflows/main.yml)
+<!-- Build Status badge to be added once CI is set up -->
+<!-- [![Build Status](https://github.com/balinesthesia/modern-ojs/actions/workflows/main.yml/badge.svg)](https://github.com/balinesthesia/modern-ojs/actions/workflows/main.yml) -->
 
-Modern Open Journal Systems (MOJS) is open-source software derive from Open Journal System (OJS) originally developed by the [Public Knowledge Project](https://pkp.sfu.ca/) to manage scholarly journals. This modernized fork, maintained by [Balinesthesia](https://website.anestesiudayana.com/), reimagines OJS with a cutting-edge full-stack architecture, leveraging React with TypeScript and Next.js for a dynamic frontend, Rust for a high-performance backend, and Python for AI-driven features like peer review matchmaking and beyond. [Learn More](https://github.com/balinesthesia/modern-ojs)
+Modern Open Journal Systems (MOJS) is open-source software derived from Open Journal Systems (OJS), originally developed by the [Public Knowledge Project](https://pkp.sfu.ca/) to manage scholarly journals. This modernized fork, maintained by [Balinesthesia](https://website.anestesiudayana.com/), reimagines OJS with a cutting-edge full-stack architecture, leveraging React with TypeScript and Next.js for a dynamic frontend, Rust for a high-performance backend, and Python for AI-driven features like peer review matchmaking and beyond. [Learn More](https://github.com/balinesthesia/modern-ojs)
 
 ## Usage
 
@@ -10,7 +11,7 @@ Modern Open Journal Systems (MOJS) is open-source software derive from Open Jour
 
 ## Tech Stack Overview
 
-The MOJS is built with a full-stack architecture optimized for performance, scalability, and academic publishing needs:
+MOJS is built with a full-stack architecture optimized for performance, scalability, and academic publishing needs:
 
 - **Frontend**: React with TypeScript and Next.js for a responsive, SEO-friendly interface.
 - **Backend**: Rust with Actix Web for secure, high-performance APIs.
@@ -25,19 +26,17 @@ The MOJS is built with a full-stack architecture optimized for performance, scal
 
 ## Bugs / Feature Requests
 
-> ⚠️ If you have found a security risk or vulnerability, please read our [security policy](SECURITY.md).
+> ⚠️ If you have found a security risk or vulnerability, please read our [security policy](./SECURITY.md).
 
-All issues should be filed at the [balinesthesia/modern-ojs](https://github.com/balinesthesia/modern-ojs) repository. Feature requests can be made at our Community Forum. Learn more about how to report a problem. For PKP’s original issue tracker, visit pkp/pkp-lib.
-
-All issues should be filed at the [pkp/pkp-lib](https://github.com/pkp/pkp-lib/issues/) repository. Feature requests can be made at our [Community Forum](https://forum.pkp.sfu.ca/). Learn more about how to [report a problem](https://docs.pkp.sfu.ca/dev/contributors/#report-a-problem).
+All issues should be filed at the [balinesthesia/modern-ojs](https://github.com/balinesthesia/modern-ojs/issues) repository. Feature requests can be made by opening a discussion at [github.com/balinesthesia/modern-ojs/discussions](https://github.com/balinesthesia/modern-ojs/discussions). Learn more about how to [report a problem](https://github.com/balinesthesia/modern-ojs/blob/main/CONTRIBUTING.md#report-a-problem). For PKP’s original OJS issue tracker, visit [pkp/pkp-lib](https://github.com/pkp/pkp-lib/issues/).
 
 ## Community Code of Conduct
 
-This repository is a community space managed by [Balinesthesia](https://website.anestesiudayana.com/). All activities here are governed by [Balinesthesia Code of Conduct](), inspired by [PKP's Code of Conduct](https://pkp.sfu.ca/code-of-conduct/) governance. Please review the Code and help us create a welcoming environment for all participants.
+This repository is a community space managed by [Balinesthesia](https://website.anestesiudayana.com/). All activities here are governed by the [Balinesthesia Code of Conduct](CODE_OF_CONDUCT.md), inspired by [PKP's Code of Conduct](https://pkp.sfu.ca/code-of-conduct/). Please review the Code and help us create a welcoming environment for all participants.
 
 ## Contributions
 
-Read the [Contributor's Guide](https://docs.pkp.sfu.ca/dev/contributors/) to learn how to make a pull request. This document describes our code formatting guidelines (e.g., Prettier for TypeScript, rustfmt for Rust), as well as information about how we organize stable branches and submodules across the frontend, backend, and AI components.
+> *MOJS’s Contributor Guide is under development and will be available upon our first release. It will cover pull request guidelines, code formatting (e.g., Prettier for TypeScript, rustfmt for Rust), and branch/submodule organization for the frontend, backend, and AI components. For now, see [CONTRIBUTING.md](./docs/CONTRIBUTING.md) for basic contribution details.*
 
 ## License
 
@@ -47,6 +46,6 @@ Copyright (C) 2025 Balinesthesia
 
 Derived from [Open Journal Systems (OJS)](https://pkp.sfu.ca/software/ojs/), Copyright (C) 2001-2025 [Public Knowledge Project](https://pkp.sfu.ca/)
 
-This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the `docs/LICENSE` and `docs/COPYING` files for details.
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, version 3. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the [docs/LICENSE](./docs/LICENSE) and [docs/COPYING](./docs/COPYING) files for details.
 
 Third parties are welcome to modify and redistribute MOJS in entirety or parts according to the terms of this license. [Balinesthesia](https://website.anestesiudayana.com/) also welcomes patches for improvements or bug fixes to the software, whether for the React frontend, Rust backend, or Python AI services—see [github.com/balinesthesia/modern-ojs](https://github.com/balinesthesia/modern-ojs) for contribution details.
