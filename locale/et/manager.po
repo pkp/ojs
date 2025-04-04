@@ -1,7 +1,7 @@
 # "10 ..." <jaana.tonisson@tlulib.ee>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-04-04 13:52+0000\n"
+"PO-Revision-Date: 2025-04-04 17:47+0000\n"
 "Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
 "Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/manager/et/"
 ">\n"
@@ -1697,3 +1697,816 @@ msgstr ""
 "Automaatseid e-posti teavitusi (mida ajakirja haldjad saavad muuta OJS-i e-"
 "kirjade seadistustes) saab saata tellimuste haldajale pärast tellimuse "
 "veebimaksete teostamist."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Kestus"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Tellimuse kestus kuudes (nt 12)."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Kestus peab olema positiivne numbriline väärtus."
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Kestus on kohustuslik."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Formaat"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Tellimuse tüübi formaat on kohustuslik."
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Palun vali kehtiv tellimuse tüübi formaat."
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Tellimused"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Individuaalne (kasutajad valideeritakse sisselogimise kaudu)"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr ""
+"Institutsionaalne (kasutajad valideeritakse domeeni või IP-aadressi kaudu)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Palun kasuta pakutud valikuid."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr ""
+"Tellimused nõuavad liikmelisuse infot (nt ühingu, organisatsiooni, "
+"konsortsiumi jne liige)"
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Palun kasuta pakutud märkeruutu."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Valikud"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr ""
+"Ära tee seda tellimuse tüüpi avalikult kättesaadavaks või nähtavaks "
+"veebilehel."
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Palun kasuta märkeruutu."
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Salvesta ja loo teine"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Tüübi nimi"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Selle nimega tellimuse tüüp on juba olemas."
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Tellimuse tüübi nimi on kohustuslik."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Tellimuse tüüp"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Ühtegi tellimuse tüüpi pole loodud."
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Link lehele, mis kirjeldab pakutavaid tellimusi."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "See link kuvatakse ainult siis, kui külastaja on sisse loginud."
+
+msgid "manager.setup.categories"
+msgstr "Kategooriad"
+
+msgid "grid.category.path"
+msgstr "Tee"
+
+msgid "grid.action.addSection"
+msgstr "Lisa rubriik"
+
+msgid "manager.setup.section.description"
+msgstr ""
+"Avaldatud ajakirjanumbrites olevad artiklid on organiseeritud rubriikidesse, "
+"tavaliselt teema või sisu tüübi järgi (nt ülevaateartiklid, teadusartiklid "
+"jne)."
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr ""
+"Artikkel: vaikimisi aasta võetakse artikli avaldamise kuupäevast, nagu "
+"\"avalda jooksvalt\"."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Lähtesta artikli õigused"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr ""
+"Oled kindel, et soovid lähtestada kõikide artiklite õiguste andmed? Seda "
+"toimingut ei saa tagasi võtta."
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Artikli õigused on edukalt lähtestatud."
+
+msgid "grid.genres.title.short"
+msgstr "Komponendid"
+
+msgid "grid.genres.title"
+msgstr "Artikli komponendid"
+
+msgid "grid.genres.description"
+msgstr ""
+"Neid komponente kasutatakse failide nimetamiseks ja esitatakse rippmenüüs "
+"failide üleslaadimisel. Tähisega ## tähistatud žanrid võimaldavad kasutajal "
+"seostada faili kas kogu koostööga 99Z või konkreetse komponendiga numbri "
+"järgi (nt 02)."
+
+msgid "plugins.importexport.common.settings"
+msgstr "Seaded"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "DOI plugina seaded"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Artiklid"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Numbrid"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Lõppfailid"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Plugina nõuded pole täidetud"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+"Selle plugina kasutamiseks mine \"Avaliku identifikaatori\" plugina "
+"kategooriasse, luba ja seadista DOI plugin ning määra seal kehtiv DOI "
+"eesliide."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Plugin pole täielikult seadistatud."
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "Numbri lõppfaili ei saanud importida, see fail puudub."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"Numbri lõppfaili {$id} ei saanud eksportida, seda faili ei leitud asukohas \""
+"{$path}\"."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Parool"
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Ükskõik, milline number"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Ükskõik, milline staatus"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Hoiustamata"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Märgitud registreerituks"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Registreeritud"
+
+msgid "plugins.importexport.common.action"
+msgstr "Tegevus"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Märgi registreerituks"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Registreeri"
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Objekte pole valitud."
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Valitud objekte ei saanud teisendada."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Vigane XML:"
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Sisendfaili {$param} ei saa lugeda."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr ""
+"Registreerimine ei õnnestunud! DOI registreerimisserver tagastas vea: "
+"'{$param}'."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Registreerimine õnnestus!"
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Valideerimine õnnestus!"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Valideerimine ebaõnnestus."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Määratud objekte ei leitud."
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr "Saada koopia peamisele kontaktile, kes on märgitud ajakirja seadetes."
+
+msgid "stats.contextStats"
+msgstr "Ajakirja statistika"
+
+msgid "stats.context.tooltip.text"
+msgstr "Ajakirja avaleheküljel käinud külastajate arv."
+
+msgid "stats.context.tooltip.label"
+msgstr "Ajakirja statistika kohta"
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "Ajakirja avalehe vaatamiste arv."
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Laadi ajakiri alla"
+
+msgid "stats.issueStats"
+msgstr "Numbri statistika"
+
+msgid "stats.issues.details"
+msgstr "Vaatamised ja allalaadimised"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "Otsi numbri pealkirja, köidet ja numbrit"
+
+msgid "stats.issues.none"
+msgstr ""
+"Nendele parameetritele vastavate kasutusstatistikatega numbreid ei leitud."
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr ""
+"Sisukorra vaatamiste arv ja numbri lõppfailide allalaadimiste arv iga numbri "
+"kohta."
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "Laadi numbrid alla"
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$count} {$total} numbrist"
+
+msgid "stats.issues.tooltip.label"
+msgstr "Numbri statistikast"
+
+msgid "stats.publicationStats"
+msgstr "Artikli statistika"
+
+msgid "stats.publications.details"
+msgstr "Artikli üksikasjad"
+
+msgid "stats.publications.none"
+msgstr ""
+"Nendele parameetritele vastavate kasutusstatistikatega artikleid ei leitud."
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Kokkuvõtete vaatamiste koguarv kuupäeva järgi"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Failide vaatamiste koguarv kuupäeva järgi"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} {$total} artiklist"
+
+msgid "stats.publications.abstracts"
+msgstr "Kokkuvõtted"
+
+msgid "stats.publications.galleys"
+msgstr "Failid"
+
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr "Laadi artiklid alla"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Selle ajakirja jaoks pole määratud peamist kontakti. Saad lisada peamise "
+"kontakti <a href=\"{$url}\">ajakirja seadetes</a>."
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Numbrite eksportimise tulemused"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Numbri lõppfailide parsimine ebaõnnestus"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Ajakirja nimi"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "URL ajakirja kodulehele"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Ajakirja peamise kontakti nimi"
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "Ajakirja initsiaalid"
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr "Ajakirja e-posti allkiri automaatsetele meilidele"
+
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr "Ajakirja postiaadress"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Makse tüübi nimi"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Makse summa"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Makse summa valuuta, näiteks USD"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Veebilehe nimi, kui majutatakse rohkem kui ühte ajakirja"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Tellimuste halduri kontaktandmed"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "URL tellimuse lehele"
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr "Kuupäev, mil tellimus lõppeb"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Kokkuvõte tellimuse tüübist, nimest, kestusest ja hinnast"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Teave tellija liikmelisuse kohta"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "Telliva asutuse nimi"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "Telliva asutuse postiaadress"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "Selle tellimuse kehtivad IP-vahemikud"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr "URL lehele, kus autor saab teha makse"
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr "URL käsikirja esitamise juhendile"
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr "Link avaldatud artiklite statistika lehele"
+
+msgid "emailTemplate.variable.issueId"
+msgstr "Numbri ID"
+
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr "Numbri sisukord ehk kõik seotud kaastööd."
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Valideeri e-post (ajakirja registreerimine)"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"See e-kiri saadetakse automaatselt uuele kasutajale, kui ta registreerub "
+"ajakirja kasutajaks, kui seaded nõuavad e-posti aadressi valideerimist."
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.manager.displayName"
+msgstr "DOI-d"
+
+msgid "doi.manager.settings.explainDois"
+msgstr ""
+"Palun vali avaldamisobjektid, millele määratakse digitaalobjekti "
+"identifikaatorid (DOI):"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Artikli lõppfailid"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr "Artikli lõppfailid, näiteks avaldatud PDF"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "DOI eesliide"
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr "Näiteks vol%viss%ipp%p võib luua DOI nagu 10.1234/vol3iss2pp230"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "numbrite jaoks"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "artiklite jaoks"
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "küljendatud lõppfailide jaoks"
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Palun sisesta DOI järelliide muster numbrite jaoks."
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Palun sisesta DOI järelliite muster artiklite jaoks."
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Palun sisesta DOI järelliite muster lõppfailide jaoks."
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "Määra DOI-d uuesti"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr ""
+"Kui muudad oma DOI konfiguratsiooni, siis juba määratud DOI-sid see ei "
+"mõjuta. Kui DOI konfiguratsioon on salvestatud, kasuta seda nuppu "
+"olemasolevate DOI-de kustutamiseks, et uued seadistused hakkaksid kehtima ka "
+"olemasolevate objektide puhul."
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "Kas oled kindel, et soovid kustutada kõik olemasolevad DOI-d?"
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "Määra DOI-d"
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"Kas oled kindel, et soovid määrata DOI-d kõigile avaldatud objektidele, "
+"millele pole DOI-sid määratud?"
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Registreerimisagentuur"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"Palun vali registreerimisagentuur, mida soovid kasutada DOI-de hoiustamiseks."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Puudub"
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.editor.doi.description"
+msgstr "DOI peab algama {$prefix}."
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Määra"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "number"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "artikkel"
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "lõppfail"
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "DOI-d ei saa määrata, kuna kohandatud järelliide puudub."
+
+msgid "doi.editor.missingIssue"
+msgstr "DOI-d ei saa genereerida enne, kui see väljaanne on numbrile määratud."
+
+msgid "doi.editor.patternNotResolved"
+msgstr "DOI-d ei saa määrata, kuna see sisaldab lahendamata mustrit."
+
+msgid "doi.editor.canBeAssigned"
+msgstr "Näed DOI eelvaadet. Vali märkeruut ja salvesta vorm DOI määramiseks."
+
+msgid "doi.editor.assigned"
+msgstr "DOI on määratud sellele {$pubObjectType}."
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "Kustuta numbri objektide DOI-d"
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr ""
+"Kas oled kindel, et soovid kustutada olemasolevad väljaande objektide DOI-d?"
+
+msgid "doi.editor.assignDoi"
+msgstr "Määra DOI {$pubId} sellele {$pubObjectType}"
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "DOI-d ei saa määrata, kuna kohandatud järelliide puudub."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr "DOI-d {$pubId} ei saa määrata, kuna see sisaldab lahendamata mustrit."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI {$pubId} määratakse avaldamisel."
+
+msgid "doi.editor.missingPrefix"
+msgstr "DOI peab algama eesliitega {$doiPrefix}."
+
+msgid "doi.editor.preview.publication"
+msgstr "Selle väljaande DOI on {$doi}."
+
+msgid "doi.editor.preview.publication.none"
+msgstr "Sellele väljaandele ei ole DOI-d määratud."
+
+msgid "doi.editor.preview.objects"
+msgstr "Object"
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "Pärast väljaande/lõppfaili avaldamist saab muuta ainult DOI-sid"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "Esitatud DOI ei ole kehtiv"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "Teie poolt soovitud väljaandeid ei leitud"
+
+msgid "doi.manager.submissionDois"
+msgstr "Artikli DOI-d"
+
+msgid "doi.manager.issueDois"
+msgstr "Väljaande DOI-d"
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"See e-kiri teavitab autorit, et kaastöö lükatakse tagasi enne "
+"retsenseerimise etappi, kuna kaastöö ei vasta ajakirjas avaldamise nõuetele."
+
+msgid "manager.institutions.noContext"
+msgstr "Selle asutuse ajakirja ei leitud."
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "Tellimuse teavitus"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr ""
+"See e-kiri teavitab registreeritud lugejat, et haldur on neile loonud "
+"tellimuse. See sisaldab ajakirja URL-i koos juurdepääsu juhistega."
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "Tellimus aegub peagi"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Tellimus on aegunud"
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Viimane tellimuse aegumise teavitus"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Individuaalse tellimuse ost"
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr ""
+"See e-kiri teavitab tellimuste haldajat, et individuaalne tellimus on veebis "
+"ostetud. See sisaldab kokkuvõtet tellimusest ja kiire juurdepääsu linki "
+"ostetud tellimusele."
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Institutsionaalse tellimuse ost"
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Individuaalse tellimuse uuendamine"
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr ""
+"See e-kiri teavitab tellimuste haldajat, et individuaalne tellimus on veebis "
+"uuendatud. See sisaldab kokkuvõtet tellimusest ja kiire juurdepääsu linki "
+"uuendatud tellimusele."
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Institutsionaalse tellimuse uuendamine"
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr ""
+"See e-kiri teavitab tellimuste haldajat, et institutsionaalne tellimus on "
+"veebis uuendatud. See sisaldab kokkuvõtet tellimusest ja kiire juurdepääsu "
+"linki uuendatud tellimusele."
+
+msgid "mailable.openAccessNotify.name"
+msgstr "Avatud juurdepääsu teavitus"
+
+msgid "mailable.openAccessNotify.description"
+msgstr ""
+"See e-kiri saadetakse registreeritud lugejatele, kes on soovinud saada "
+"teavitust, kui väljaanne muutub avatud juurdepääsuga väljaandeks."
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "Väljaande avaldamise teavitus"
+
+msgid "manager.manageEmails.description"
+msgstr "Muuda selle ajakirja e-kirjades saadetavaid sõnumeid."
+
+msgid "mailable.layoutComplete.name"
+msgstr "Küljendatud lõppfailid on valmis"
+
+msgid "mailable.publicationVersionNotify.name"
+msgstr "Uus versioon on loodud"
+
+msgid "mailable.publicationVersionNotify.description"
+msgstr ""
+"See e-kiri teavitab automaatselt määratud toimetajaid, kui kaastööst on "
+"loodud uus versioon."
+
+msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+"See e-kiri saadetakse ajakirja haldajatele, kui esitatud on uus kaastöö ja "
+"ühtegi toimetajat pole määratud."
+
+msgid "mailable.paymentRequest.name"
+msgstr "Maksepäring"
+
+msgid "mailable.paymentRequest.description"
+msgstr ""
+"See automaatne e-kiri saadetakse autorile, et taotleda avaldamistasu "
+"tasumist, kui kaastöö on vastu võetud."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Tellimuse tüüp edukalt loodud."
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Domeeninimi selle tellimuse kehtivate IP-aadresside jaoks"
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr "Link lehele, mis kirjeldab külastaja praegusi ja varasemaid tellimusi."
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
+"See e-kiri saadetakse automaatselt igakuiselt toimetajatele ja ajakirja "
+"haldajatele, et anda neile süsteemi tervise ülevaade."
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "manager.setup.categories.description"
+msgstr ""
+"Vali ülaltoodud nimekirjast kõige sobivamad kategooriad. Lugejad saavad "
+"sirvida ajakirjade nimekirju kategooriate kaupa."
+
+msgid "doi.description"
+msgstr ""
+"See plugin võimaldab määrata digitaalobjekti identifikaatoreid (DOI) OJS-is "
+"numbritele, artiklitele ja kujundustele."
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+"Rollid on ajakirja kasutajate rühmad, millele on antud juurdepääs eri "
+"õigustasemetele ja ajakirja töövoogudele. Õigustasemeid on viis: ajakirja "
+"toimetajatel on juurdepääs kõigele ajakirjas (kogu sisu ja seaded); "
+"rubriigitoimetajatel on täielik juurdepääs kõigile neile määratud sisule; "
+"ajakirja assistentidel on piiratud juurdepääs kõigile käsikirjadele, mis on "
+"neile toimetaja poolt selgesõnaliselt määratud; retsensendid näevad ja "
+"täidavad neile hindamiseks määratud käsikirju; ning autorid näevad ja "
+"suhtlevad piiratud teabega oma käsikirjade kohta. Lisaks on viis erinevat "
+"etapi määrangut, millele rollidele võib anda juurdepääsu: esitamine, "
+"sisemise ülevaatus, ülevaatus, toimetamine ja tootmine."
+
+msgid "doi.manager.settings.description"
+msgstr ""
+"Palun seadista DOI plugin, et saaksid hallata ja kasutada DOI-sid OJS-is:"
+
+msgid "manager.publication.library"
+msgstr "Väljaandev raamatukogu"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "DOI eesliide on kohustuslik ja peab olema kujul 10.xxxx."
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Uue artikli autoriõiguse aasta aluseks on"
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "Number: vaikimisi aasta võetakse numbri avaldamise kuupäevast."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Eemalda autoriõiguse teatis ja litsentsiinfo iga avaldatud artikli juurest, "
+"taastades need ajakirja praegustele vaikeseadetele. See eemaldab püsivalt "
+"kõik varasemad artiklitele lisatud autoriõiguse ja litsentsimise andmed. "
+"Mõnel juhul ei pruugi sul olla seaduslikult lubatud uuesti litsentsida tööd, "
+"mis on avaldatud erineva litsentsi alusel. Palun ole selle tööriista "
+"kasutamisel ettevaatlik ja konsulteeri õigusabiga, kui sa pole kindel, "
+"millised õigused sul on ajakirjas avaldatud artiklite suhtes."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr ""
+"DOI avaliku identifikaatori pluginas pole valitud avaldamisobjekte DOI "
+"määramiseks, seega pole selles pluginas hoiustamise või eksportimise "
+"võimalust."
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"Numbri {$id} kaanepilti ei eksporditud, selle faili ei leitud asukohas \""
+"{$path}\"."
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "Pane tähele, et parool salvestatakse lihttekstina, st krüpteerimata."
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"Määra DOI-d kõigile avaldatud ajakirja objektidele, millele pole DOI-sid "
+"määratud. Seda toimingut ei saa kasutada individuaalse järelliidete "
+"konfiguratsiooni puhul. Kui oled eespool muutnud DOI konfiguratsiooni, palun "
+"salvesta oma muudatused enne selle toimingu alustamist. DOI-de määramine "
+"võib võtta kaua aega, sõltuvalt ajakirjas avaldatud objektide arvust."
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Ekspordi"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "Väljundfail {$param} ei ole kirjutatav."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"DOI-d ei saa genereerida, kuna DOI mustrile vajalikud andmed puuduvad. Võib-"
+"olla pead määrama väljaande numbrile, määrama väljaandja ID või sisestama "
+"leheküljenumbrid."
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "DOI eesliitel puudub tee {$path} ajakirja jaoks."
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Antud DOI järelliide on juba kasutusel teise avaldatud elemendi jaoks. Palun "
+"sisesta igale elemendile unikaalne DOI järelliide."
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+"Laadi alla CSV/Exceli tabel selle ajakirja kasutusstatistikaga, mis vastab "
+"järgmistele parameetritele."
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "Kustuta"
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"Laadi alla CSV/Exceli tabel kasutusstatistikaga numbritele, mis vastavad "
+"järgmistele parameetritele."
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "Kas oled kindel, et soovid kustutada olemasoleva DOI?"
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+"<strong>Vaatamised</strong>: Numbri sisukorda vaatavate külastajate "
+"arv.<br><strong>Allalaadimised</strong>: Numbri lõppfailide allalaadimiste "
+"arv, kui see on olemas."
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"Kasuta järgmist võimalust kõikide käesoleva väljaande jaoks planeeritud "
+"objektide (artiklite ja korrektuuride) DOI-de kustutamiseks."
+
+msgid "stats.publications.downloadReport.description"
+msgstr ""
+"Laadi alla CSV/Exceli tabel kasutusstatistikaga artiklitele, mis vastavad "
+"järgmistele parameetritele."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr ""
+"DOI {$pubId} on määratud. DOI redigeerimiseks külastage<a href=\""
+"{$doiManagementLink}\">DOI haldamise lehte</a>."
+
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr "Kokkuvõtete vaatamiste ja failide allalaadimiste arv iga artikli kohta."
+
+msgid "doi.editor.preview.galleys"
+msgstr "Küljendatud lõppfail: {$galleyLabel}"
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Saada kaastöö kättesaamise kinnituse meili koopia selle ajakirja peamisele "
+"kontaktile."
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Lõppfail, mida küsisite, ei kuulu selle väljaande juurde."
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "Ajakirja peamise kontakti e-posti aadress"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Pärast väljaande avaldamist saab muuta ainult DOI-sid"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr "Tellija nimi, kuuluvus, telefoninumber ja e-posti aadress"
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr ""
+"See e-kiri teavitab tellimuste haldajat, et institutsionaalne tellimus on "
+"veebis ostetud. See sisaldab kokkuvõtet tellimusest ja kiire juurdepääsu "
+"linki ostetud tellimusele."
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+"See e-kiri saadetakse automaatselt registreeritud kasutajatele, kui uus "
+"väljaanne on avaldatud."
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr ""
+"Sisesta kohandatud järelliite muster iga väljaande tüübi jaoks. Kohandatud "
+"järelliite mustris võib kasutada järgmisi sümboleid järelliite "
+"genereerimiseks:<br><br><code>%j</code> Ajakirja lühend<br><code>%v</code> "
+"Numbri köide<br><code>%i</code> Numbri number<br><code>%Y</code> Numbri "
+"aasta<br><code>%a</code> Artikli ID<br><code>%g</code> Küljenduse "
+"ID<br><code>%f</code> Faili ID<br><code>%p</code> Lehekülje "
+"number<br><code>%x</code> Kohandatud identifikaator<br><br>Olge ettevaatlik, "
+"kuna kohandatud järelliite mustrid põhjustavad sageli probleeme DOI-de "
+"genereerimisel ja hoiustamisel. Kohandatud järelliite mustri kasutamisel "
+"testige hoolikalt, et toimetajad saaksid DOI-sid genereerida ja hoiustada "
+"registreerimisagentuuris, nagu Crossref. "
