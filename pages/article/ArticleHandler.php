@@ -293,10 +293,10 @@ class ArticleHandler extends Handler
         ]);
 
         // Citations
-        if ($publication->getData('citations') || $publication->getData('citationsRaw')) {
+        if ($publication->getData('citations') || $publication->getData('rawCitations')) {
             $templateMgr->assign([
                 'citations' => $publication->getData('citations'),
-                'citationsRaw' => $publication->getData('citationsRaw')
+                'rawCitations' => $publication->getData('rawCitations')
             ]);
         }
 

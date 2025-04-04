@@ -242,7 +242,7 @@
 			{/if}
 
 			{* References *}
-			{if $citations || $citationsRaw}
+			{if $citations || $rawCitations}
 				<section class="item references">
 					<h2 class="label">
 						{translate key="submission.citations"}
@@ -253,7 +253,7 @@
 								<p>{$citation->getRawCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$citation}</p>
 							{/foreach}
 						{else}
-							{$citationsRaw|escape|nl2br}
+							{$rawCitations|escape|nl2br}
 						{/if}
 					</div>
 				</section>
