@@ -46,9 +46,10 @@
  * Core components are produced manually below, but can also be added via
  * plugins using the hooks provided:
  *
- * Templates::Article::Main
- * Templates::Article::Details
- *
+ * @hook Templates::Article::Main []
+ * @hook Templates::Article::Details::Reference []
+ * @hook Templates::Article::Details []
+
  * @uses $article Submission This article
  * @uses $publication Publication The publication being displayed
  * @uses $firstPublication Publication The first published version of this article
@@ -64,10 +65,6 @@
  * @uses $licenseUrl string URL to license. Only assigned if license should be
  *   included with published submissions.
  * @uses $ccLicenseBadge string An image and text with details about the license
- *
- * @hook Templates::Article::Main []
- * @hook Templates::Article::Details::Reference []
- * @hook Templates::Article::Details []
  *}
  {if !$heading}
  	{assign var="heading" value="h3"}
@@ -245,18 +242,18 @@
 			{/if}
 
 			{* References *}
-			{if $parsedCitations || $publication->getData('citationsRaw')}
+			{if $citations || $rawCitations}
 				<section class="item references">
 					<h2 class="label">
 						{translate key="submission.citations"}
 					</h2>
 					<div class="value">
-						{if $parsedCitations}
-							{foreach from=$parsedCitations item="parsedCitation"}
-								<p>{$parsedCitation->getCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$parsedCitation}</p>
+						{if $citations}
+							{foreach from=$citations item="citation"}
+								<p>{$citation->getRawCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$citation}</p>
 							{/foreach}
 						{else}
-							{$publication->getData('citationsRaw')|escape|nl2br}
+							{$rawCitations|escape|nl2br}
 						{/if}
 					</div>
 				</section>
