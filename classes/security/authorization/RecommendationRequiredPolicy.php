@@ -20,12 +20,12 @@ use PKP\submission\reviewer\recommendation\ReviewerRecommendation;
 
 class RecommendationRequiredPolicy extends AuthorizationPolicy
 {
-    public $recommendationId;
+    public $reviewerRecommendationId;
 
-    public function __construct(int $recommendationId, string $message = 'api.404.resourceNotFound')
+    public function __construct(int $reviewerRecommendationId, string $message = 'api.404.resourceNotFound')
     {
         parent::__construct($message);
-        $this->recommendationId = $recommendationId;
+        $this->reviewerRecommendationId = $reviewerRecommendationId;
     }
 
     /**
@@ -33,7 +33,7 @@ class RecommendationRequiredPolicy extends AuthorizationPolicy
      */
     public function effect(): int
     {
-        return ReviewerRecommendation::find($this->recommendationId)
+        return ReviewerRecommendation::find($this->reviewerRecommendationId)
             ? AuthorizationPolicy::AUTHORIZATION_PERMIT
             : AuthorizationPolicy::AUTHORIZATION_DENY;
     }
