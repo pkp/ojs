@@ -586,11 +586,13 @@ describe('Data suite: Amwandenga', function() {
 	it('Logout as should redirect to the same submission workflow', function() {
 		cy.login('dbarnes');
 		cy.visit('/index.php/publicknowledge/workflow/access/' + submission.id);
+		cy.openWorkflowMenu('Submission');
 		cy.clickStageParticipantButton('Stephanie Berardo', 'Login As');
 		cy.get('button').contains('OK').click();
 		cy.contains('Logout as Stephanie Berardo').should('exist').click();
 		cy.location('search').should('include', `workflowSubmissionId=${submission.id}`);
 
+		cy.openWorkflowMenu('Submission');
 		cy.clickStageParticipantButton('Alan Mwandenga', 'Login As');
 		cy.get('button').contains('OK').click();
 		cy.get('[data-cy="active-modal"] [data-cy="app-user-nav"] button').click();
