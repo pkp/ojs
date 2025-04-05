@@ -236,4 +236,12 @@ class Application extends PKPApplication
     {
         return new OJSPaymentManager($context);
     }
+
+    /**
+     * Get the help URL of this application
+     */
+    public function getHelpUrl(): string
+    {
+        return 'https://docs.pkp.sfu.ca/learning-ojs/';
+    }
 }
