@@ -236,4 +236,12 @@ class Application extends PKPApplication
     {
         return new OJSPaymentManager($context);
     }
+
+    /**
+     * Define if the context has customizable reviewer recommendation functionality
+     */
+    public function hasCustomizableReviewerRecommendation(): bool
+    {
+        return true;
+    }
 }
