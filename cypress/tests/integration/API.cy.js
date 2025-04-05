@@ -20,7 +20,7 @@ describe('API tests', function() {
 
 	it("Configures an author's API key", function() {
 		cy.login('ccorino', null, 'publicknowledge');
-		cy.get('.app__userNav button').click();
+		cy.get('[data-cy="app-user-nav"] button').click();
 		cy.get('a:contains("Edit Profile")').click();
 		cy.get('a[name="apiSettings"]').click();
 		cy.get("body").then($body => {
@@ -51,7 +51,7 @@ describe('API tests', function() {
 
 	it("Deletes an author's API key", function() {
 		cy.login('ccorino', null, 'publicknowledge');
-		cy.get('.app__userNav button').click();
+		cy.get('[data-cy="app-user-nav"] button').click();
 		cy.get('a:contains("Edit Profile")').click();
 		cy.get('a[name="apiSettings"]').click();
 		cy.get('form[id="apiProfileForm"] button:contains("Delete")').click();
