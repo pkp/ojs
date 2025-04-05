@@ -18,8 +18,10 @@ namespace APP\submission\reviewer\form;
 
 use APP\submission\Submission;
 use PKP\core\PKPRequest;
+use PKP\form\validation\FormValidatorCustom;
 use PKP\submission\reviewAssignment\ReviewAssignment;
 use PKP\submission\reviewer\form\PKPReviewerReviewStep3Form;
+use PKP\submission\reviewer\recommendation\ReviewerRecommendation;
 
 class ReviewerReviewStep3Form extends PKPReviewerReviewStep3Form
 {
@@ -29,9 +31,16 @@ class ReviewerReviewStep3Form extends PKPReviewerReviewStep3Form
     public function __construct(PKPRequest $request, Submission $reviewSubmission, ReviewAssignment $reviewAssignment)
     {
         parent::__construct($request, $reviewSubmission, $reviewAssignment);
-        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'recommendation', 'required', 'reviewer.submission.reviewFormResponse.form.recommendationRequired', function ($recommendation) {
-            return isset($recommendation);
-        }));
+        $this->addCheck(new FormValidatorCustom(
+            $this,
+            'reviewerRecommendationId',
+            'required',
+            'reviewer.submission.reviewFormResponse.form.recommendationRequired', 
+            fn ($reviewerRecommendationId) => ReviewerRecommendation::query()
+                ->withContextId($reviewSubmission->getData('contextId'))
+                ->withRecommendations([$reviewerRecommendationId])
+                ->exists()
+        ));
     }
 }
 
