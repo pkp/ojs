@@ -38,9 +38,6 @@
 {/if}
 {csrf}
 
-{* Help Link *}
-{help file="issue-management" section="edit-issue-identifiers" class="pkp_help_tab"}
-
 {*include file="common/formErrors.tpl"*}
 {if $enablePublisherId}
 	{fbvFormSection}
