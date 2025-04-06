@@ -1,23 +1,27 @@
+# Basida Haider Anwar <basideh.haider@koyauniversity.org>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-04-04 02:13+0000\n"
-"Last-Translator: Hewa Salam Khalid <hewa.salam@koyauniversity.org>\n"
-"Language-Team: Kurdish <http://translate.pkp.sfu.ca/projects/ojs/api/ku/>\n"
-"Language: ku_IQ\n"
+"PO-Revision-Date: 2025-04-07 10:50+0000\n"
+"Last-Translator: Basida Haider Anwar <basideh.haider@koyauniversity.org>\n"
+"Language-Team: Kurdish (Central) <http://translate.pkp.sfu.ca/projects/ojs/"
+"api/ckb/>\n"
+"Language: ckb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "api.announcements.400.contextsNotMatched"
-msgstr ""
+msgstr "ئەو ئاگادارییەی کە داوات کردبوو بەشێک نییە لەم گۆڤارە."
 
+#, fuzzy
 msgid "api.emails.403.disabled"
-msgstr ""
+msgstr "تایبەتمەندی ئاگادارکردنەوەی ئیمەیڵ بۆ ئەم گۆڤارە چالاک نەکراوە."
 
+#, fuzzy
 msgid "api.submissions.400.wrongContext"
-msgstr ""
+msgstr "ئەو پێشکەش کردنەی کە داوات کردووە لەم گۆڤارەدا نییە."
 
 msgid "api.submissions.403.cantChangeContext"
 msgstr "تۆ ناتوانیت ئەو گۆڤارە بگۆڕیت کە پێشکەشت کردووە."
@@ -48,11 +52,13 @@ msgstr "تۆ ڕێگەپێدانی سڕینەوەی ئەم گۆڤارەت نیی�
 msgid "api.contexts.404.contextNotFound"
 msgstr "ئەو گۆڤارەی کە تۆ بۆی گەڕایت نەدۆزرایەوە."
 
+#, fuzzy
 msgid "api.dois.403.contextsNotMatched"
-msgstr ""
+msgstr "ئەو DOI یەی کە داوات کردووە بەشێک نییە لەم گۆڤارە."
 
+#, fuzzy
 msgid "api.dois.400.noRegistrationAgencyConfigured"
-msgstr ""
+msgstr "هیچ دەزگایەکی تۆمارکردنی DOI بۆ ئەم گۆڤارە ڕێک نەخراوە."
 
 msgid "api.dois.400.depositFailed"
 msgstr ""
@@ -69,8 +75,16 @@ msgstr "ئەو توێژینەوەی کە تۆ داوای دەکەیت لەم گ�
 msgid "api.publications.403.submissionsDidNotMatch"
 msgstr "ئەو بڵاوکراوەی کە تۆ داوات کردووە بەشێک نییە لەم پێشکەشکردنە."
 
+#, fuzzy
 msgid "api.submissionFiles.400.badRepresentationAssocType"
-msgstr ""
+msgstr "ناتوانیت لەم قۆناغە فایلێک بە گالێرییەوە ببەستیتەوە."
 
+#, fuzzy
 msgid "api.submission.400.inactiveSection"
+msgstr "ئەم بەشە چیتر پێشکەشکردن وەرناگرێت."
+
+#, fuzzy
+msgid "api.publications.403.paymentFeesNotEnabled"
 msgstr ""
+"فۆڕمی پارەدانی پێشکەشکردن بەردەست نییە چونکە کرێی پارەی بڵاوکردنەوە چالاک "
+"نەکراوە."
