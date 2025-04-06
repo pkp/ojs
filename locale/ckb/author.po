@@ -1,9 +1,10 @@
 # Haval Abdulkarim <haval.abdulkarim@gmail.com>, 2025.
 # Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>, 2025.
+# Basida Haider Anwar <basideh.haider@koyauniversity.org>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-25 18:56+0000\n"
-"Last-Translator: Ibrahim Abulrahman Ahmed <ibrahim.iskawayee@yahoo.com>\n"
+"PO-Revision-Date: 2025-04-07 10:50+0000\n"
+"Last-Translator: Basida Haider Anwar <basideh.haider@koyauniversity.org>\n"
 "Language-Team: Kurdish (Central) <http://translate.pkp.sfu.ca/projects/ojs/"
 "author/ckb/>\n"
 "Language: ckb\n"
@@ -41,7 +42,7 @@ msgstr "هەنگاوی دووەم: بارکردنی فایلەکان"
 
 #, fuzzy
 msgid "author.submit.step3"
-msgstr "هەنگاوی سێیەم: خستنە ناوەوەی زانیارییەکانی پێشکەشکردن"
+msgstr "هەنگاوی سێیەم: داخڵکردنی زانیارییەکانی پێشکەشکردن"
 
 msgid "author.submit.step4"
 msgstr "هەنگاوی چوارەم: فایلە تەواوکارییەکان بار بکە"
