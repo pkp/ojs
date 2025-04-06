@@ -7960,40 +7960,55 @@
 			"put": {
 				"tags": [
 					"Categories"
-				]
-			},
-			"summary": "Update the sequence order of top-level parent categories.",
-			"parameters": [
-				{
-					"description": "Details about the new category order.",
-					"in": "body",
-					"type": "object"
-				}
-			],
-			"responses": {
-				"200": {
-					"x-summary": "Success",
-					"description": "An empty response body."
-				},
-				"400": {
-					"x-summary": "Request Invalid",
-					"description": "Could not complete ordering because a non-top level category was included",
-					"schema": {
-						"$ref": "#/definitions/ErrorResponse"
+				],
+				"summary": "Reorder top-level categories.",
+				"parameters": [
+					{
+						"description": "Array of objects with details about the new category order.",
+						"in": "body",
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"id": {
+										"type": "integer",
+										"description": "Category ID"
+									},
+									"seq": {
+										"type": "integer",
+										"description": "The new sequence order for the Category"
+									}
+								}
+							}
+						}
 					}
-				},
-				"403": {
-					"x-summary": "Request Unauthorized",
-					"description": "You do not have permission to redorder categories.",
-					"schema": {
-						"$ref": "#/definitions/ErrorResponse"
-					}
-				},
-				"404": {
-					"x-summary": "Resource not found",
-					"description": "Could not find one or more of the categories submitted to be ordered.",
-					"schema": {
-						"$ref": "#/definitions/ErrorResponse"
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "An empty response body."
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "Could not complete ordering because a non-top level category was included",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to redorder categories.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Resource not found",
+						"description": "Could not find one or more of the categories submitted to be ordered.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
 					}
 				}
 			}
