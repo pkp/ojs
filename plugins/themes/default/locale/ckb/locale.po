@@ -1,8 +1,9 @@
 # Haval Abdulkarim <haval.abdulkarim@gmail.com>, 2025.
+# Basida Haider Anwar <basideh.haider@koyauniversity.org>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-25 18:32+0000\n"
-"Last-Translator: Haval Abdulkarim <haval.abdulkarim@gmail.com>\n"
+"PO-Revision-Date: 2025-04-07 10:50+0000\n"
+"Last-Translator: Basida Haider Anwar <basideh.haider@koyauniversity.org>\n"
 "Language-Team: Kurdish (Central) <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/ckb/>\n"
 "Language: ckb\n"
@@ -76,20 +77,36 @@ msgstr "وێنەی پەڕەی سەرەکی لە پاشبنەمای سەرپەڕ�
 msgid "plugins.themes.default.option.displayStats.label"
 msgstr "هەڵبژاردەکانی پیشاندانی ئاماری بەکارهێنان"
 
+#, fuzzy
 msgid "plugins.themes.default.option.displayStats.none"
-msgstr ""
+msgstr "هێڵکاری ئاماری بەکارهێنانی پێشکەشکردن بۆ خوێنەر پیشان مەدە."
 
+#, fuzzy
 msgid "plugins.themes.default.option.displayStats.bar"
-msgstr ""
+msgstr "جۆرێکی باری هێڵکارییەکە بەکاربهێنە بۆ پیشاندانی ئاماری بەکارهێنان."
 
+#, fuzzy
 msgid "plugins.themes.default.option.displayStats.line"
-msgstr ""
+msgstr "جۆری هێڵی هێڵکارییەکە بەکاربهێنە بۆ پیشاندانی ئاماری بەکارهێنان."
 
+#, fuzzy
 msgid "plugins.themes.default.displayStats.monthInitials"
 msgstr ""
+"کانوونی دووەم، شوبات، ئازار، نیسان، ئایار، حوزەیران، تەمموز، ئاب، ئەیلول، "
+"تشرینی یەکەم، تشرینی دووەم، کانوونی یەکەم"
 
+#, fuzzy
 msgid "plugins.themes.default.displayStats.downloads"
-msgstr ""
+msgstr "داگرتنەکان"
 
+#, fuzzy
 msgid "plugins.themes.default.displayStats.noStats"
-msgstr ""
+msgstr "هێشتا داتای داگرتن بەردەست نییە."
+
+#, fuzzy
+msgid "plugins.themes.default.nextSlide"
+msgstr "سلایدی داهاتوو"
+
+#, fuzzy
+msgid "plugins.themes.default.prevSlide"
+msgstr "سلایدی پێشوو"
