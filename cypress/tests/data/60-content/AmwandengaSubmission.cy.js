@@ -589,6 +589,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.openWorkflowMenu('Submission');
 		cy.clickStageParticipantButton('Stephanie Berardo', 'Login As');
 		cy.get('button').contains('OK').click();
+		cy.openWorkflowMenu('Submission');
 		cy.contains('Logout as Stephanie Berardo').should('exist').click();
 		cy.location('search').should('include', `workflowSubmissionId=${submission.id}`);
 
