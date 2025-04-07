@@ -1,11 +1,11 @@
-# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2022, 2023.
+# Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2022, 2023, 2025.
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
-"PO-Revision-Date: 2023-11-02 07:38+0000\n"
+"PO-Revision-Date: 2025-04-08 00:28+0000\n"
 "Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/admin/tr/>\n"
 "Language: tr\n"
