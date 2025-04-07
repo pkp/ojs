@@ -386,7 +386,7 @@ describe('Submission Wizard', function() {
         cy.get('#titleAbstract-keywords-control-en').type(submission.keywords, {delay: 0});
         cy.get('li:contains("' + submission.keywords + '")');
         cy.get('#titleAbstract-keywords-control-en').type('{downarrow}{enter}');
-        cy.get('#citations-citationsRaw-control').type(submission.citations);
+        cy.get('#citations-rawCitations-control').type(submission.citations);
 
         cy.get('.pkpSteps button:contains("Upload Files")').click({ force: true });
         cy.uploadSubmissionFiles([
