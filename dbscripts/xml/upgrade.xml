@@ -169,6 +169,7 @@
 		<migration class="PKP\migration\upgrade\v3_5_0\I4787_InstallReviewerSuggestion"/>
 		<!-- Intentional re-run of 3.4.0 migration; see https://github.com/pkp/pkp-lib/issues/10264#issuecomment-2702413991 -->
 		<migration class="PKP\migration\upgrade\v3_4_0\I7624_StrftimeDeprecation"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I11238_PrepareDBForStructuredCitations"/>
 		<note file="docs/release-notes/README-3.5.0" />
 	</upgrade>
 
