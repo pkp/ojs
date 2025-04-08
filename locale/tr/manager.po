@@ -1,6 +1,6 @@
 # Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>, 2021, 2022, 2023, 2024, 2025.
 # Osman Durmaz <osmandurmaz@hotmail.de>, 2022.
-# Kubilay Tuğlu <kubilay.tuglu@gmail.com>, 2024.
+# Kubilay Tuğlu <kubilay.tuglu@gmail.com>, 2024, 2025.
 # Kerim Sarıgül <sarigulkerim@gmail.com>, 2025.
 msgid ""
 msgstr ""
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:36+00:00\n"
 "PO-Revision-Date: 2025-04-08 23:35+0000\n"
-"Last-Translator: Hüseyin Körpeoğlu <yoruyenturk@hotmail.com>\n"
+"Last-Translator: Kubilay Tuğlu <kubilay.tuglu@gmail.com>\n"
 "Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/manager/tr/>"
 "\n"
 "Language: tr\n"
@@ -2191,7 +2191,7 @@ msgid "emailTemplate.variable.subscription.membership"
 msgstr "Abonenin üyeliği hakkında bilgi"
 
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr "Abone olan kurumun adı"
+msgstr "Abone olan kurum/kuruluşun adı"
 
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
 msgstr "Abone olan kurum/kuruluşun e-posta adresi"
