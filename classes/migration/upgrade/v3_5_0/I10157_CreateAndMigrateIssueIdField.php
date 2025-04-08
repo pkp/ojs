@@ -40,6 +40,7 @@ class I10157_CreateAndMigrateIssueIdField extends \PKP\migration\Migration
                     FROM publication_settings ps
                     WHERE publications.publication_id = ps.publication_id
                     AND ps.setting_name = 'issueId'
+		    AND ps.setting_value <> '0'
                 ");
                 break;
 
