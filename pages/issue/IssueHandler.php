@@ -80,7 +80,7 @@ class IssueHandler extends Handler
 
             // Invalid galley id, redirect to issue page
             if (!$galley) {
-                $request->redirect(null, null, 'view', $issue->getId());
+                $request->redirect(null, null, 'view', [$issue->getId()]);
             }
 
             $this->setGalley($galley);
