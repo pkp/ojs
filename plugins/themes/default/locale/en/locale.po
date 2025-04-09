@@ -98,3 +98,24 @@ msgstr "Next slide"
 
 msgid "plugins.themes.default.prevSlide"
 msgstr "Previous slide"
+
+msgid "plugins.themes.default.option.metadata.label"
+msgstr "Show article metadata on the article landing page"
+
+msgid "plugins.themes.default.option.metadata.description"
+msgstr "Select the article metadata to show in other languages."
+
+msgid "plugins.themes.default.languageSwitcher.ariaDescription.select"
+msgstr "Select language"
+
+msgid "plugins.themes.default.languageSwitcher.ariaDescription.titles"
+msgstr "The article title and subtitle languages"
+
+msgid "plugins.themes.default.languageSwitcher.ariaDescription.author"
+msgstr "The author's affiliation languages"
+
+msgid "plugins.themes.default.languageSwitcher.ariaDescription.keywords"
+msgstr "The keywords languages"
+
+msgid "plugins.themes.default.languageSwitcher.ariaDescription.abstract"
+msgstr "The abstract languages"
