@@ -16,8 +16,8 @@
 
 namespace APP\migration\upgrade\v3_5_0;
 
-use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Database\Query\Builder;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Query\JoinClause;
 use PKP\decision\Decision;
 use PKP\install\DowngradeNotSupportedException;
@@ -97,7 +97,7 @@ class I11241_MissingDecisionConstantsUpdate extends \PKP\migration\upgrade\v3_4_
          *          (Decision::EXTERNAL_REVIEW, Decision::REVERT_INITIAL_DECLINE)
          * 
          */
-        Capsule::table("edit_decisions as ed1")
+        DB::table("edit_decisions as ed1")
             ->select("ed1.*")
             ->joinSub(
                 function (Builder $sub) {
@@ -138,7 +138,7 @@ class I11241_MissingDecisionConstantsUpdate extends \PKP\migration\upgrade\v3_4_
                         ->whereNull("ed4.edit_decision_id")
                         ->groupBy("ed2.submission_id")
                         ->select(
-                            Capsule::raw(
+                            DB::raw(
                                 "MAX(ed2.edit_decision_id) as max_edit_decision_id"
                             )
                         );
