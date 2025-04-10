@@ -27,14 +27,14 @@ class I7725_DecisionConstantsUpdate extends \PKP\migration\upgrade\v3_4_0\I7725_
         return [
             // \PKP\decision\Decision::ACCEPT
             [
-                'stage_id' => [WORKFLOW_STAGE_ID_EDITING],
+                'stage_id' => [WORKFLOW_STAGE_ID_SUBMISSION, WORKFLOW_STAGE_ID_EXTERNAL_REVIEW, WORKFLOW_STAGE_ID_EDITING],
                 'current_value' => 1,
                 'updated_value' => 2,
             ],
 
             // \PKP\decision\Decision::EXTERNAL_REVIEW
             [
-                'stage_id' => [WORKFLOW_STAGE_ID_EXTERNAL_REVIEW],
+                'stage_id' => [WORKFLOW_STAGE_ID_SUBMISSION],
                 'current_value' => 8,
                 'updated_value' => 3,
             ],
@@ -118,21 +118,21 @@ class I7725_DecisionConstantsUpdate extends \PKP\migration\upgrade\v3_4_0\I7725_
 
             // \PKP\decision\Decision::SKIP_EXTERNAL_REVIEW
             [
-                'stage_id' => [WORKFLOW_STAGE_ID_EDITING],
+                'stage_id' => [WORKFLOW_STAGE_ID_SUBMISSION],
                 'current_value' => 19,
                 'updated_value' => 17,
             ],
 
             // \PKP\decision\Decision::BACK_FROM_PRODUCTION
             [
-                'stage_id' => [WORKFLOW_STAGE_ID_EDITING],
+                'stage_id' => [WORKFLOW_STAGE_ID_PRODUCTION],
                 'current_value' => 31,
                 'updated_value' => 29,
             ],
 
             // \PKP\decision\Decision::BACK_FROM_COPYEDITING
             [
-                'stage_id' => [WORKFLOW_STAGE_ID_SUBMISSION, WORKFLOW_STAGE_ID_EXTERNAL_REVIEW],
+                'stage_id' => [WORKFLOW_STAGE_ID_EDITING],
                 'current_value' => 32,
                 'updated_value' => 30,
             ],
