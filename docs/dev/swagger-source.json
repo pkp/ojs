@@ -685,7 +685,9 @@
 				}
 			}
 		},
-		"Category": "category"
+		"Category": "category",
+		"Affiliation": "Affiliation",
+		"Ror": "Ror"
 	},
 	"paths": {
 		"/submissions": {
@@ -7785,24 +7787,15 @@
 				"tags": [
 					"Categories"
 				],
-				"summary": "Get a list of categories.",
-				"description": "See `/categories/{categoryId}` for notes about submission properties.",
+				"summary": "Get a list of categories. Returns top-level categories with their nested sub-categories.",
 				"responses": {
 					"200": {
 						"x-summary": "Success",
 						"description": "List of categories.",
 						"schema": {
-							"type": "object",
-							"properties": {
-								"itemsMax": {
-									"type": "integer"
-								},
-								"items": {
-									"type": "array",
-									"items": {
-										"$ref": "#/definitions/Category"
-									}
-								}
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Category"
 							}
 						}
 					},
@@ -7913,7 +7906,7 @@
 					},
 					"404": {
 						"x-summary": "Resource not found",
-						"description": "There are no categories with ID matching the categoryId path param.",
+						"description": "There are no category with ID matching the categoryId path param.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -7991,7 +7984,7 @@
 					},
 					"400": {
 						"x-summary": "Request Invalid",
-						"description": "Could not complete ordering because a non-top level category was included",
+						"description": "Could not complete ordering because a non-top level category was included.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
