@@ -44,7 +44,6 @@
 			{load_url_in_div id="sectionsGridContainer" url=$sectionsGridUrl}
 		</tab>
 		<tab id="categories" label="{translate key="grid.category.categories"}">
-			{help file="settings/journal-settings" section="categories" class="pkp_help_tab"}
 			<pkp-category-manager v-bind="components.{PKP\components\CategoryManager::COMPONENT_CATEGORY}"></pkp-category-manager>
 		</tab>
 	</tabs>
