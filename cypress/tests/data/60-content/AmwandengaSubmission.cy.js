@@ -582,4 +582,22 @@ describe('Data suite: Amwandenga', function() {
 		cy.openWorkflowMenu('Title & Abstract');
 		cy.get('button').contains('Save').should('be.disabled');
 	});
+
+	it('Logout as should redirect to the same submission workflow', function() {
+		cy.login('dbarnes');
+		cy.visit('/index.php/publicknowledge/workflow/access/' + submission.id);
+		cy.openWorkflowMenu('Submission');
+		cy.clickStageParticipantButton('Stephanie Berardo', 'Login As');
+		cy.get('button').contains('OK').click();
+		cy.openWorkflowMenu('Submission');
+		cy.contains('Logout as Stephanie Berardo').should('exist').click();
+		cy.location('search').should('include', `workflowSubmissionId=${submission.id}`);
+
+		cy.openWorkflowMenu('Submission');
+		cy.clickStageParticipantButton('Alan Mwandenga', 'Login As');
+		cy.get('button').contains('OK').click();
+		cy.get('[data-cy="active-modal"] [data-cy="app-user-nav"] button').click();
+		cy.get('[data-cy="active-modal"] a:contains("Logout as amwandenga")').first().click();
+		cy.location('search').should('include', `workflowSubmissionId=${submission.id}`);
+	});
 });
