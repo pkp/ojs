@@ -88,7 +88,7 @@ class PublishForm extends FormComponent
             }
 
             // If publication does not have a version stage assigned
-            $publicationVersion = $publication->getCurrentVersionData();
+            $publicationVersion = $publication->getVersionData();
             if (!isset($publicationVersion)) {
                 $submission = Repo::submission()->get($publication->getData('submissionId'));
                 $nextVersionData = Repo::submission()->getNextAvailableVersionData($submission, VersionStage::VERSION_OF_RECORD, false);

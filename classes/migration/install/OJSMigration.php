@@ -17,6 +17,7 @@ namespace APP\migration\install;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
+use PKP\publication\enums\VersionStage;
 
 class OJSMigration extends \PKP\migration\Migration
 {
@@ -236,11 +237,14 @@ class OJSMigration extends \PKP\migration\Migration
 
             $table->smallInteger('status')->default(1); // PKPSubmission::STATUS_QUEUED
             $table->string('url_path', 64)->nullable();
-            $table->bigInteger('version')->nullable();
 
             $table->bigInteger('doi_id')->nullable();
             $table->foreign('doi_id')->references('doi_id')->on('dois')->nullOnDelete();
             $table->index(['doi_id'], 'publications_doi_id');
+
+            $table->enum('version_stage', array_column(VersionStage::cases(), 'value'))->nullable();
+            $table->integer('version_minor')->nullable();
+            $table->integer('version_major')->nullable();
 
             $table->bigInteger('issue_id')->nullable();
             $table->foreign('issue_id')->references('issue_id')->on('issues')->nullOnDelete();
