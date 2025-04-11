@@ -238,6 +238,14 @@ class Application extends PKPApplication
     }
 
     /**
+     * Define if the application has customizable reviewer recommendation functionality
+     */
+    public function hasCustomizableReviewerRecommendation(): bool
+    {
+        return true;
+    }
+
+    /**
      * Get the help URL of this application
      */
     public static function getHelpUrl(): string
