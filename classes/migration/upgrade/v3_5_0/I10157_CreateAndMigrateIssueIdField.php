@@ -51,6 +51,7 @@ class I10157_CreateAndMigrateIssueIdField extends \PKP\migration\Migration
                     JOIN publication_settings ps
                         ON p.publication_id = ps.publication_id
                         AND ps.setting_name = 'issueId'
+                        AND ps.setting_value <> '0'
                     SET p.issue_id = ps.setting_value
                 ");
                 break;
