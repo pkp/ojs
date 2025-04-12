@@ -38,7 +38,7 @@
     "primevue": "^4.3.1",
     "swiper": "^10.3.1",
     "tiny-emitter": "^2.1.0",
-    "tinymce": "^7.7.1",
+    "tinymce": "^7.7.2",
     "uuid": "^9.0.1",
     "vue": "^3.5.13",
     "vue-chartjs": "^5.3.2",
