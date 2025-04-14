@@ -8,6 +8,10 @@
  * Include reviewer recommendations for OJS review assignment responses.
  *}
 
+{foreach from=$reviewerRecommendationOptions item=item key=key}
+	{$reviewerRecommendationOptions.$key = $item|escape}
+{/foreach}
+
 {fbvFormSection 
 	label="reviewer.article.recommendation"
 	description=$description|default:"reviewer.article.selectRecommendation"
@@ -15,7 +19,7 @@
 	{fbvElement 
 		type="select"
 		id="reviewerRecommendationId"
-		from=$reviewerRecommendationOptions|escape
+		from=$reviewerRecommendationOptions
 		selected=$reviewAssignment->getReviewerRecommendationId()
 		size=$fbvStyles.size.MEDIUM
 		required=$required|default:true
