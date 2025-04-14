@@ -14,7 +14,7 @@
 
 namespace APP\security\authorization;
 
-use APP\core\Request;
+use PKP\core\PKPRequest;
 use PKP\security\authorization\PolicySet;
 
 class RecommendationAccessPolicy extends PolicySet
@@ -22,7 +22,7 @@ class RecommendationAccessPolicy extends PolicySet
     /**
      * Constructor
      */
-    public function __construct(Request $request, int $reviewerRecommendationId)
+    public function __construct(PKPRequest $request, int $reviewerRecommendationId)
     {
         parent::__construct();
         $this->addPolicy(new RecommendationRequiredPolicy($reviewerRecommendationId));

@@ -37,7 +37,7 @@ msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
 msgstr "Please fill in required fields."
 
 msgid "reviewer.submission.reviewFormResponse.form.recommendationRequired"
-msgstr "Please select a recommendation."
+msgstr "Must select a recommendation associated with journal"
 
 msgid "common.software"
 msgstr "Open Journal Systems"

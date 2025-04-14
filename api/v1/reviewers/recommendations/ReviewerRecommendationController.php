@@ -69,7 +69,7 @@ class ReviewerRecommendationController extends PKPBaseController
         $this->addPolicy(new UserRolesRequiredPolicy($request), true);
         $this->addPolicy(new ContextAccessPolicy($request, $roleAssignments));
 
-        if (in_array($actionName, ['edit', 'updateStatus', 'delete'])) {
+        if (in_array($actionName, ['get', 'edit', 'updateStatus', 'delete'])) {
             $this->addPolicy(
                 new RecommendationAccessPolicy(
                     $request,
