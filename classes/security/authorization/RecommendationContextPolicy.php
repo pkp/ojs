@@ -15,7 +15,7 @@
 
 namespace APP\security\authorization;
 
-use APP\core\Request;
+use PKP\core\PKPRequest;
 use PKP\context\Context;
 use PKP\security\authorization\AuthorizationPolicy;
 use PKP\submission\reviewer\recommendation\ReviewerRecommendation;
@@ -29,7 +29,7 @@ class RecommendationContextPolicy extends AuthorizationPolicy
      * Constructor
      */
     public function __construct(
-        Request $request,
+        PKPRequest $request,
         int $reviewerRecommendationId,
         string $message = 'manager.reviewerRecommendations.context.restriction'
     ) {
