@@ -1,13 +1,14 @@
 # Diego José Macêdo <diegojmacedo@gmail.com>, 2022.
 # cicilia conceiçao de maria <ccmaria@uem.br>, 2022.
 # Alex Mendonça <alex.mendonca@scielo.org>, 2024.
+# Diego Abadan <diego@lepidus.com.br>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2024-09-11 05:40+0000\n"
-"Last-Translator: Alex Mendonça <alex.mendonca@scielo.org>\n"
+"PO-Revision-Date: 2025-04-14 20:52+0000\n"
+"Last-Translator: Diego Abadan <diego@lepidus.com.br>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "admin/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -68,7 +69,7 @@ msgid "admin.systemConfiguration"
 msgstr "Configuração do OJS"
 
 msgid "admin.systemConfigurationDescription"
-msgstr "Configurações do OJS no arquivo <tt>config.inc.php</tt>."
+msgstr "Configurações do OJS definidas no arquivo <tt>config.inc.php</tt>."
 
 msgid "admin.journals.createInstructions"
 msgstr ""
