@@ -178,7 +178,6 @@ class Repository extends \PKP\publication\Repository
 
         // If no predefined datePublished available for the publication, use current date
         if (!$publication->getData('datePublished')) {
-            error_log('here4');
             $publication->setData('datePublished', Core::getCurrentDate());
         }
     }
