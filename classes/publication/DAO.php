@@ -36,7 +36,7 @@ class DAO extends \PKP\publication\DAO
         'versionStage' => 'version_stage',
         'versionMinor' => 'version_minor',
         'versionMajor' => 'version_major',
-
+        'createdAt' => 'created_at',
     ];
 
     /**

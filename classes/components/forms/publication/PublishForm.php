@@ -88,18 +88,18 @@ class PublishForm extends FormComponent
             }
 
             // If publication does not have a version stage assigned
-            $publicationVersion = $publication->getVersionData();
+            $publicationVersion = $publication->getVersion();
             if (!isset($publicationVersion)) {
                 $submission = Repo::submission()->get($publication->getData('submissionId'));
-                $nextVersionData = Repo::submission()->getNextAvailableVersionData($submission, VersionStage::VERSION_OF_RECORD, false);
+                $nextVersion = Repo::submission()->getNextAvailableVersion($submission, VersionStage::VERSION_OF_RECORD, false);
 
                 $msg .= '<p>' . __('publication.required.versionStage') . '</p>';
                 $msg .= '<p>' . __('publication.required.versionStage.assignment', [
-                    'versionDataDisplay' => $nextVersionData->display()
+                    'versionString' => $nextVersion
                 ]) . '</p>';
             } else {
                 $msg .= '<p>' . __('publication.required.versionStage.alreadyAssignment', [
-                    'versionDataDisplay' => $publicationVersion->display()
+                    'versionString' => $publicationVersion
                 ]) . '</p>';
             }
 
