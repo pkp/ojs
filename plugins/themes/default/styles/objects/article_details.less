@@ -10,15 +10,17 @@
  */
 .obj_article_details {
 
-	> .page_title {
-		margin: 0;
-	}
-
-	> .subtitle {
-		margin: 0;
-		font-size: @font-base;
-		line-height: @line-lead;
-		font-weight: @normal;
+	.page_titles {
+		.page_title {
+			margin: 0;
+		}
+	
+		.subtitle {
+			margin: 0;
+			font-size: @font-base;
+			line-height: @line-lead;
+			font-weight: @normal;
+		}
 	}
 
 	.row {
@@ -61,9 +63,14 @@
 				font-weight: @bold;
 			}
 
-			&.doi .label,
-			&.keywords .label {
+			&.doi .label {
 				display: inline;
+				font-size: @font-base;
+			}
+
+			&.keywords .label,
+			&.abstract .label {
+				display: inline-block;
 				font-size: @font-base;
 			}
 		}
@@ -86,7 +93,7 @@
 
 		.name {
 			font-weight: bold;
-			display: block;
+			display: inline-block;
 		}
 
 		.userGroup {
@@ -289,6 +296,76 @@
 		}
 	}
 
+	/**
+	 * Language switcher
+	*/
+	[data-pkp-switcher] {
+		.pkpBadge {
+			padding: 0.25em 1em;
+			font-size: @font-tiny;
+			font-weight: @normal;
+			line-height: 1.5em;
+			border: 1px solid @bg-border-color-light;
+			border-radius: 1.2em;
+			color: @text;
+		}
+	
+		.pkpBadge--button {
+			background: inherit;
+			text-decoration: none;
+			cursor: pointer;
+		
+			&:hover {
+				border-color: @text;
+				outline: 0;
+			}
+		}
+		// Button
+		[aria-disabled="true"],
+		[aria-disabled="true"]:hover {
+			color: #fff;
+			background: @bg-dark;
+			border-color: @bg-dark;
+			cursor: not-allowed;
+		}
+
+		display: inline-block;
+
+		* {
+			display: inline-block;
+		}
+
+		[role="listbox"],
+		[role="option"] {
+			padding: 0;
+			margin: 0;
+		}
+
+		[aria-selected="true"] .pkpBadge--button {
+			font-weight: @bold;
+		}
+
+		.pkpBadge--button:not(.pkp_screen_reader) {
+			animation: fadeIn 0.7s ease-in-out;
+
+			@keyframes fadeIn {
+				0% {
+					display: none;
+					opacity: 0;
+				}
+			
+				1% {
+					display: inline-block;
+					opacity: 0;
+				}
+			
+				100% {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
 	@media(min-width: @screen-phone) {
 
 		.entry_details {
@@ -323,8 +400,7 @@
 				font-weight: @bold;
 			}
 
-			&.doi .label,
-			&.keywords .label {
+			&.doi .label {
 				display: inline;
 				font-size: @font-base;
 			}
