@@ -15,8 +15,10 @@
 
 namespace APP\security\authorization;
 
+use Illuminate\Http\Response;
 use PKP\security\authorization\AuthorizationPolicy;
 use PKP\submission\reviewer\recommendation\ReviewerRecommendation;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class RecommendationRequiredPolicy extends AuthorizationPolicy
 {
@@ -36,9 +38,9 @@ class RecommendationRequiredPolicy extends AuthorizationPolicy
     public function effect(): int
     {
         if (!ReviewerRecommendation::find($this->reviewerRecommendationId)) {
-            throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException(
+            throw new NotFoundHttpException(
                 message: __($this->message),
-                code: 404
+                code: Response::HTTP_NOT_FOUND
             );
         }
 
