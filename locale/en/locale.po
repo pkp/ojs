@@ -36,6 +36,9 @@ msgstr "Click on icon to fill in the review form."
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
 msgstr "Please fill in required fields."
 
+msgid "reviewer.submission.reviewFormResponse.form.recommendationRequired"
+msgstr "Must select a recommendation associated with journal"
+
 msgid "common.software"
 msgstr "Open Journal Systems"
 

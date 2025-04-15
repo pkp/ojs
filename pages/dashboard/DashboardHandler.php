@@ -22,6 +22,7 @@ use APP\core\Request;
 use APP\facades\Repo;
 use APP\template\TemplateManager;
 use PKP\pages\dashboard\PKPDashboardHandler;
+use PKP\submission\reviewer\recommendation\ReviewerRecommendation;
 
 class_exists(\APP\components\forms\publication\AssignToIssueForm::class); // Force define of FORM_ASSIGN_TO_ISSUE
 
@@ -50,6 +51,16 @@ class DashboardHandler extends PKPDashboardHandler
         $templateMgr->setConstants([
             'FORM_ASSIGN_TO_ISSUE' => FORM_ASSIGN_TO_ISSUE
         ]);
+
+        $pageInitConfig = $templateMgr->getState('pageInitConfig');
+        $pageInitConfig['recommendations'] = ReviewerRecommendation::query()
+            ->withContextId($context->getId())
+            ->get()
+            ->select(['reviewerRecommendationId', 'status', 'value', 'title'])
+            ->values()
+            ->toArray();
+
+        $templateMgr->setState(['pageInitConfig' => $pageInitConfig]);
     }
 
 

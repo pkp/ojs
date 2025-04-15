@@ -35,10 +35,10 @@ class ReviewerGridHandler extends PKPReviewerGridHandler
         $reviewAssignment = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_REVIEW_ASSIGNMENT); /** @var \PKP\submission\reviewAssignment\ReviewAssignment $reviewAssignment */
 
         // Recommendation
-        $newRecommendation = $request->getUserVar('recommendation');
+        $newRecommendation = $request->getUserVar('reviewerRecommendationId');
         // If editor set or changed the recommendation
-        if ($newRecommendation && $reviewAssignment->getRecommendation() != $newRecommendation) {
-            $reviewAssignment->setRecommendation($newRecommendation);
+        if ($newRecommendation && $reviewAssignment->getReviewerRecommendationId() != $newRecommendation) {
+            $reviewAssignment->setReviewerRecommendationId($newRecommendation);
 
             // Add log entry
             $submission = $this->getSubmission();
