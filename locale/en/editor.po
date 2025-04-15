@@ -420,6 +420,12 @@ msgstr "Remove Article From Issue"
 msgid "grid.action.addReviewerRecommendation"
 msgstr "Add Recommendation"
 
+msgid "grid.action.editReviewerRecommendation"
+msgstr "Edit Recommendation"
+
+msgid "grid.action.deleteReviewerRecommendation"
+msgstr "Delete Recommendation"
+
 msgid "editor.article.remove"
 msgstr "Remove"
 

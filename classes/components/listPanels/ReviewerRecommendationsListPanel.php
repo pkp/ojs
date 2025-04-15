@@ -63,17 +63,6 @@ class ReviewerRecommendationsListPanel extends ListPanel
         $config = array_merge(
             $config,
             [
-                'addRecommendationLabel' => __('grid.action.addReviewerRecommendation'),
-                'confirmDeleteMessage' => __('manager.reviewerRecommendations.confirmDelete'),
-                'deleteRecommendationLabel' => __('common.delete'),
-                'editRecommendationLabel' => __('common.edit'),
-                'activateTitle' => __('manager.reviewerRecommendations.activate.title'),
-                'confirmActivateMessage' => __('manager.reviewerRecommendations.confirmActivate'),
-                'deactivateTitle' => __('manager.reviewerRecommendations.deactivate.title'),
-                'confirmDeactivateMessage' => __('manager.reviewerRecommendations.confirmDeactivate'),
-                'recommendationNameTitle' => __('manager.reviewerRecommendations.list.name.title'),
-                'recommendationStatusTitle' => __('manager.reviewerRecommendations.list.status.title'),
-                'apiUrl' => $this->getReviewerRecommendationsApiUrl(),
                 'form' => $this->getLocalizedForm(),
                 'items' => $this->items,
             ]
