@@ -1,12 +1,13 @@
 # Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2022.
 # Pierre Lasou <pierre.lasou@bibl.ulaval.ca>, 2023.
+# Nicolas Dickner <dickner.nicolas@uqam.ca>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2023-04-11 16:21+0000\n"
-"Last-Translator: Pierre Lasou <pierre.lasou@bibl.ulaval.ca>\n"
+"PO-Revision-Date: 2025-04-16 13:34+0000\n"
+"Last-Translator: Nicolas Dickner <dickner.nicolas@uqam.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/api/"
 "fr_CA/>\n"
 "Language: fr_CA\n"
@@ -14,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "L'annonce que vous avez demandée ne fait pas partie de cette revue."
@@ -96,3 +97,8 @@ msgstr "Cette rubrique ne reçoit plus de soumission."
 
 msgid "api.dois.400.contextsNotMatched"
 msgstr "Le DOI demandé ne fait pas partie de cette revue."
+
+msgid "api.publications.403.paymentFeesNotEnabled"
+msgstr ""
+"Le formulaire de paiement n'est pas disponible car les paiements ne sont pas "
+"activés."
