@@ -2,16 +2,15 @@
 # Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2022, 2023.
 # Pierre Lasou <pierre.lasou@bibl.ulaval.ca>, 2023.
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
-# Nicolas Dickner <dickner.nicolas@uqam.ca>, 2023.
+# Nicolas Dickner <dickner.nicolas@uqam.ca>, 2023, 2025.
 # "Marie-Hélène Vézina [UdeMontréal]" <marie-helene.vezina@umontreal.ca>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2024-04-27 05:12+0000\n"
-"Last-Translator: \"Marie-Hélène Vézina [UdeMontréal]\" <marie-helene."
-"vezina@umontreal.ca>\n"
+"PO-Revision-Date: 2025-04-16 13:34+0000\n"
+"Last-Translator: Nicolas Dickner <dickner.nicolas@uqam.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -98,7 +97,7 @@ msgstr "Formulaires"
 msgid "manager.language.confirmDefaultSettingsOverwrite"
 msgstr ""
 "Ceci remplacera n'importe quel paramètre de langue spécifique à une revue "
-"que vous aviez pour cette langue."
+"que vous aviez pour cette langue"
 
 msgid "manager.languages.languageInstructions"
 msgstr ""
@@ -428,7 +427,7 @@ msgstr ""
 "limite)"
 
 msgid "manager.setup"
-msgstr "Configuration de la revue"
+msgstr "Paramètres de la revue"
 
 msgid "manager.setup.homepageContent"
 msgstr "Contenu de la page d'accueil de la revue"
@@ -1068,7 +1067,7 @@ msgid "manager.setup.reviewOptions.reviewerAccess"
 msgstr "Accès pour l'évaluateur-trice"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
-msgstr "Activer l'accès en un clic pour l'évaluateur-trice."
+msgstr "Activer l'accès en un clic pour l'évaluateur-trice"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
@@ -1355,7 +1354,7 @@ msgid "manager.subscriptionPolicies.xWeeks"
 msgstr "{$x} semaines"
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
-msgstr "Signaler par courriel l'expiration de leur abonnement aux abonnés-es."
+msgstr "Signaler par courriel l'expiration de leur abonnement aux abonnés-es"
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
 msgstr "Signaler par courriel l'expiration de leur abonnement aux abonnés-es."
@@ -2001,7 +2000,7 @@ msgstr "Réinitialiser les autorisations de l'article"
 msgid "manager.setup.resetPermissions.confirm"
 msgstr ""
 "Êtes-vous certain-e de vouloir réinitialiser les autorisations déjà "
-"rattachées à l'article ?"
+"rattachées à l'article ? Cette action ne pourra être annulée."
 
 msgid "manager.setup.resetPermissions.description"
 msgstr ""
@@ -2336,7 +2335,6 @@ msgstr "URL des directives de soumission"
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
 msgstr "Lien vers la page des statistiques d'utilisation des articles publiés"
 
-#, fuzzy
 msgid "emailTemplate.variable.issueId"
 msgstr "Identifiant du numéro"
 
@@ -2588,11 +2586,9 @@ msgstr "Seuls les DOIs peuvent être édités une fois la publication publiée"
 msgid "api.issue.404.issuesNotFound"
 msgstr "Les numéros demandés n'ont pu être trouvés"
 
-#, fuzzy
 msgid "doi.manager.submissionDois"
-msgstr "DOIs d'article"
+msgstr "DOIs de l'article"
 
-#, fuzzy
 msgid "doi.manager.issueDois"
 msgstr "DOIs du numéro"
 
@@ -2762,3 +2758,12 @@ msgid "plugins.importexport.common.error.issueCoverImageMissing"
 msgstr ""
 "L'image de couverture du numéro {$id} n'a pas été exportée du fait que les "
 "fichiers n'ont pu être trouvés dans \"{$path}\"."
+
+msgid "manager.setup.contextSummary.description"
+msgstr ""
+"Veuillez fournir une brève description de votre revue afin de présenter sa "
+"propositon et son contenu."
+
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr ""
+"Table des matières du numéro, tel que la liste des soumissions associées."
