@@ -1,11 +1,11 @@
 # Jens Unkenholz <jens.unkenholz@uni-muenster.de>, 2023.
-# Pia Piontkowitz <pia.piontkowitz@rub.de>, 2023.
+# Pia Piontkowitz <pia.piontkowitz@rub.de>, 2023, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T06:56:49-07:00\n"
-"PO-Revision-Date: 2023-04-26 14:01+0000\n"
+"PO-Revision-Date: 2025-04-16 12:58+0000\n"
 "Last-Translator: Pia Piontkowitz <pia.piontkowitz@rub.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/de/>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.themes.default.name"
 msgstr "Standard-Thema"
@@ -97,3 +97,9 @@ msgstr "Downloads"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Download-Daten sind nocht nicht verfügbar."
+
+msgid "plugins.themes.default.nextSlide"
+msgstr "Nächste Folie"
+
+msgid "plugins.themes.default.prevSlide"
+msgstr "Vorherige Folie"
