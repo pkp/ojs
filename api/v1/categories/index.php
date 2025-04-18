@@ -15,4 +15,4 @@
  *
  * @brief Handle API requests for categories.
  */
-return new \PKP\handler\APIHandler(new \PKP\API\v1\categories\PkpCategoryCategoryController());
+return new \PKP\handler\APIHandler(new \PKP\API\v1\categories\CategoryCategoryController());

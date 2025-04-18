@@ -7767,7 +7767,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to revoke an author's ORCID access and token data or ORCID is not enabled..",
+						"description": "You do not have permission to revoke an author's ORCID access and token data or ORCID is not enabled.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -7823,7 +7823,7 @@
 					},
 					{
 						"name": "parentCategoryId",
-						"description": "ID of the parent category under which the new category should be created",
+						"description": "ID of the parent category under which the new category should be created.",
 						"in": "query",
 						"required": false,
 						"type": "integer"
@@ -7942,63 +7942,6 @@
 					"404": {
 						"x-summary": "Request Not Found",
 						"description": "The category could not be found.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
-					}
-				}
-			}
-		},
-		"/categories/saveOrder": {
-			"put": {
-				"tags": [
-					"Categories"
-				],
-				"summary": "Reorder top-level categories.",
-				"parameters": [
-					{
-						"description": "Array of objects with details about the new category order.",
-						"in": "body",
-						"schema": {
-							"type": "array",
-							"items": {
-								"type": "object",
-								"properties": {
-									"id": {
-										"type": "integer",
-										"description": "Category ID"
-									},
-									"seq": {
-										"type": "integer",
-										"description": "The new sequence order for the Category"
-									}
-								}
-							}
-						}
-					}
-				],
-				"responses": {
-					"200": {
-						"x-summary": "Success",
-						"description": "An empty response body."
-					},
-					"400": {
-						"x-summary": "Request Invalid",
-						"description": "Could not complete ordering because a non-top level category was included.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
-					},
-					"403": {
-						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to redorder categories.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
-					},
-					"404": {
-						"x-summary": "Resource not found",
-						"description": "Could not find one or more of the categories submitted to be ordered.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
