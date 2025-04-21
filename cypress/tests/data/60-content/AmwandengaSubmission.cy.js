@@ -162,20 +162,16 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('button').contains('Save Order').click();
 		cy.get('button:contains("Preview")').click(); // Will only appear after order is saved
 		cy.get('div[role=dialog]:contains("List of Contributors")').find('tr:contains("Abbreviated")').contains('Mansour et al.');
-		cy.get('div[role=dialog]:contains("List of Contributors")').find('tr:contains("Publication Lists")').contains('Amina Mansour');
-		cy.get('div[role=dialog]:contains("List of Contributors")').find('tr:contains("Publication Lists")').contains('Alan Mwandenga (Author)');
-		cy.get('div[role=dialog]:contains("List of Contributors")').find('tr:contains("Full")').contains('Amina Mansour');
-		cy.get('div[role=dialog]:contains("List of Contributors")').find('tr:contains("Full")').contains('Alan Mwandenga (Author)');
+		cy.get('div[role=dialog]:contains("List of Contributors")').find('tr:contains("Publication Lists")').contains('Amina Mansour, Alan Mwandenga (Author)');
+		cy.get('div[role=dialog]:contains("List of Contributors")').find('tr:contains("Full")').contains('Amina Mansour, Alan Mwandenga (Author)');
 		cy.get('div[role=dialog]:contains("List of Contributors")').find('button:contains("Close")').click();
 		cy.get('.listPanel:contains("Contributors")').find('button').contains('Order').click();
 		cy.get('button:contains("Increase position of Alan Mwandenga")').click();
 		cy.get('.listPanel:contains("Contributors")').find('button').contains('Save Order').click();
 		cy.get('.listPanel:contains("Contributors") button:contains("Preview")').click(); // Will only appear after order is saved
 		cy.get('div[role=dialog]:contains("List of Contributors")').find('tr:contains("Abbreviated")').contains('Mwandenga et al.');
-		cy.get('div[role=dialog]:contains("List of Contributors")').find('tr:contains("Publication Lists")').contains('Alan Mwandenga');
-		cy.get('div[role=dialog]:contains("List of Contributors")').find('tr:contains("Publication Lists")').contains('Amina Mansour (Author)');
-		cy.get('div[role=dialog]:contains("List of Contributors")').find('tr:contains("Full")').contains('Alan Mwandenga');
-		cy.get('div[role=dialog]:contains("List of Contributors")').find('tr:contains("Full")').contains('Amina Mansour (Author)');
+		cy.get('div[role=dialog]:contains("List of Contributors")').find('tr:contains("Publication Lists")').contains('Alan Mwandenga, Amina Mansour (Author)');
+		cy.get('div[role=dialog]:contains("List of Contributors")').find('tr:contains("Full")').contains('Alan Mwandenga, Amina Mansour (Author)');
 		cy.get('div[role=dialog]:contains("List of Contributors")').find('button:contains("Close")').click();
 
 		// Delete a contributor
