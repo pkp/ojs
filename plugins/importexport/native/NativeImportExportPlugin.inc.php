@@ -234,8 +234,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	protected function getExportOptionsFromRequest(PKPRequest $request): array {
 		$opts = [];
 
-		$imageOption = $request->getUserVar('image-option');
-		switch ($imageOption) {
+		$serializationMode = $request->getUserVar('serializationMode');
 			case 'embed':
 				break;
 			case 'relative':
