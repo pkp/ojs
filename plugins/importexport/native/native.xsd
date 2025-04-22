@@ -148,7 +148,6 @@
 					</complexType>
 				</element>
 			</choice>
-			<element name="file_url" type="string" minOccurs="0" maxOccurs="1" />
 		</sequence>
 	</complexType>
 
