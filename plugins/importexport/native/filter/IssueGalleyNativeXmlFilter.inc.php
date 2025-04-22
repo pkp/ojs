@@ -140,7 +140,7 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 				$hrefNode->setAttribute('src', htmlspecialchars($fileUrl, ENT_COMPAT, 'UTF-8'));
 				$hrefNode->setAttribute('mime_type', $issueFile->getFileType());
 				$issueFileNode->appendChild($hrefNode);
-			} else if (empty($this->opts['no-embed'])) {
+			} else {
 				$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
 				$embedNode->setAttribute('encoding', 'base64');
 				$issueFileNode->appendChild($embedNode);
