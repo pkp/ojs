@@ -356,7 +356,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * @see PKPImportExportPlugin::executeCLI()
 	 */
 	function executeCLI($scriptName, &$args) {
-		$opts = $this->parseOpts($args, ['no-embed', 'use-file-urls', 'use-absolute-urls', 'image-option:']);
+		$opts = $this->parseOpts($args, ['no-embed', 'use-file-urls', 'serializationMode:']);
 		$command = array_shift($args);
 		$xmlFile = array_shift($args);
 		$journalPath = array_shift($args);
