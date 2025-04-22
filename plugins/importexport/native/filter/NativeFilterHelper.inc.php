@@ -288,36 +288,6 @@ class NativeFilterHelper {
 
 						file_put_contents($filePath, $fileContents);
 						break;
-					case 'file_url':
-						if (!isset($coverImage['uploadName'])) {
-							$deployment->addWarning(ASSOC_TYPE_PUBLICATION, $object->getId(), __('plugins.importexport.common.error.coverImageNameUnspecified'));
-							break;
-						}
-
-						import('classes.file.PublicFileManager');
-						$publicFileManager = new PublicFileManager();
-						$filePath = $publicFileManager->getContextFilesPath($context->getId()) . '/' . $coverImage['uploadName'];
-						$allowedFileTypes = ['gif', 'jpg', 'png', 'webp'];
-						$extension = pathinfo(strtolower($filePath), PATHINFO_EXTENSION);
-						if (!in_array($extension, $allowedFileTypes)) {
-							$deployment->addWarning(ASSOC_TYPE_PUBLICATION, $object->getId(), __('plugins.importexport.common.error.invalidFileExtension'));
-							break;
-						}
-
-						$imageUrl = $n->textContent;
-						if (empty($imageUrl)) {
-							$deployment->addWarning(ASSOC_TYPE_PUBLICATION, $object->getId(), __('plugins.importexport.common.error.missingFileUrl'));
-							break;
-						}
-
-						$fileContents = file_get_contents($imageUrl);
-						if ($fileContents === false) {
-							$deployment->addWarning(ASSOC_TYPE_PUBLICATION, $object->getId(), __('plugins.importexport.common.error.failedDownloadingFile', array('url' => $imageUrl)));
-							break;
-						}
-
-						file_put_contents($filePath, $fileContents);
-						break;
 					default:
 						$deployment->addWarning(ASSOC_TYPE_PUBLICATION, $object->getId(), __('plugins.importexport.common.error.unknownElement', array('param' => $n->tagName)));
 				}
