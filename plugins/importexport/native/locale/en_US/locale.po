@@ -80,12 +80,6 @@ msgstr "A cover image was embedded without specifying a name."
 msgid "plugins.importexport.common.error.missingHref"
 msgstr "The href element is missing the required href attribute."
 
-msgid "plugins.importexport.common.error.missingFileUrl"
-msgstr "The file_url element does not contain a URL."
-
-msgid "plugins.importexport.common.error.failedDownloadingFile"
-msgstr "Failed to download file from URL: {$url}"
-
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "The specified user, \"{$userName}\", does not exist."
 
