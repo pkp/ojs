@@ -131,8 +131,8 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 				$dateModified = substr($dateModified, 0, 10); // Extract YYYY-MM-DD
 			}
 
-			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_uploaded', $dateUploaded));
-			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_modified', $dateModified));
+			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_uploaded', strftime('%Y-%m-%d', strtotime($issueFile->getDateUploaded()))));
+			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_modified', strftime('%Y-%m-%d', strtotime($issueFile->getDateModified()))));
 
 			if (!empty($this->opts['use-file-urls'])) {
 				import('classes.file.PublicFileManager');
