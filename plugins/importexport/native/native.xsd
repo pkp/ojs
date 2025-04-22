@@ -135,7 +135,7 @@
 			<element name="original_file_name" type="string" minOccurs="1" maxOccurs="1" />
 			<element name="date_uploaded" type="date" minOccurs="1" maxOccurs="1" />
 			<element name="date_modified" type="date" minOccurs="1" maxOccurs="1" />
-			<choice minOccurs="0" maxOccurs="1">
+			<choice minOccurs="1" maxOccurs="1">
 				<element name="embed" type="pkp:embed" />
 				<element name="href">
 					<complexType>
