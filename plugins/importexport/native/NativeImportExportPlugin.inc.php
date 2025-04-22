@@ -235,19 +235,6 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		$opts = [];
 
 		$serializationMode = $request->getUserVar('serializationMode');
-			case 'embed':
-				break;
-			case 'relative':
-				$opts['use-file-urls'] = true;
-				break;
-			case 'url':
-				$opts['use-file-urls'] = true;
-				$opts['use-absolute-urls'] = true;
-				break;
-			default:
-				if ($request->getUserVar('no-embed')) {
-					$opts['no-embed'] = true;
-				}
 		}
 
 		return $opts;
