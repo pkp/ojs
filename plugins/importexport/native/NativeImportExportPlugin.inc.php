@@ -542,19 +542,11 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		}
 		$args = $newArgs;
 
-		if (isset($opts['image-option'])) {
-			switch ($opts['image-option']) {
-				case 'embed':
-					break;
-				case 'relative':
-					$opts['use-file-urls'] = true;
-					break;
-				case 'url':
-					$opts['use-file-urls'] = true;
-					$opts['use-absolute-urls'] = true;
-					break;
-				default:
-					break;
+		if (!isset($opts['serializationMode'])) {
+			if (isset($opts['use-file-urls']) {
+				$opts['serializationMode'] = 'url';
+			} elseif (isset($opts['no-embed']) {
+				$opts['serializationMode'] = 'relative';
 			}
 		}
 
