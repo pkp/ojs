@@ -28,7 +28,7 @@ New config.inc.php parameters added for queues:
     - process_jobs_at_task_scheduler (default value: Off): Controls whether queued jobs should be executed together with the scheduled tasks.
 
 New config.inc.php parameters added for caching:
-    - default (default value: 'opcache'). Can be either 'file' or 'opcache' to indicate which Laravel caching implementation should be used.
+    - default (default value: 'file'). Can be either 'file' or 'opcache' to indicate which Laravel caching implementation should be used.
     - path (default value: 'cache/opcache'). Use to specify a path for cache storage when using 'file' or 'opcache' drivers.
 
 
