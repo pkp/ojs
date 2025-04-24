@@ -129,26 +129,14 @@ msgstr ""
 "The article \"{$articleTitle}\" is contained within an issue, but has no "
 "published date."
 
-msgid "plugins.importexport.common.export"
-msgstr "Export"
+msgid "plugins.importexport.native.exportOptions.coverImagesAndSubmissionFiles"
+msgstr "Submission Files and Cover Images Handling"
 
-msgid "plugins.importexport.native.exportOptions"
-msgstr "Export Options"
+msgid "plugins.importexport.native.exportOptions.files.embed"
+msgstr "Embed images and submission files in XML (base64) - uses more memory"
 
-msgid "plugins.importexport.native.exportOptions.coverImagesAndSubmissionFile"
-msgstr "Submission File and Cover Image Handling"
+msgid "plugins.importexport.native.exportOptions.files.relative"
+msgstr "Use relative URLs for images and submission files - reduces memory usage"
 
-msgid "plugins.importexport.native.exportOptions.coverImages.embed"
-msgstr "Embed images in XML (base64) - uses more memory"
-
-msgid "plugins.importexport.native.exportOptions.coverImages.relative"
-msgstr "Use relative URLs for images - reduces memory usage"
-
-msgid "plugins.importexport.native.exportOptions.coverImages.url"
-msgstr "Use absolute URLs for images - reduces memory usage"
-
-msgid "plugins.importexport.native.noEmbedOption"
-msgstr "Do not embed binary files (reduces memory usage)"
-
-msgid "plugins.importexport.native.export.articles"
-msgstr "Export Articles"
+msgid "plugins.importexport.native.exportOptions.files.url"
+msgstr "Use absolute URLs for images and submission files - reduces memory usage"

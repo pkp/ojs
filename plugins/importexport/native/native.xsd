@@ -164,7 +164,7 @@
 			<sequence>
 				<element name="cover_image" type="string" minOccurs="1" maxOccurs="1" />
 				<element name="cover_image_alt_text" type="string" minOccurs="1" maxOccurs="1" />
-				<choice minOccurs="0" maxOccurs="1">
+				<choice minOccurs="1" maxOccurs="1">
 					<element name="embed" type="pkp:embed" />
 					<element name="href">
 						<complexType>
@@ -177,7 +177,6 @@
 						</complexType>
 					</element>
 				</choice>
-				<element name="file_url" type="string" minOccurs="0" maxOccurs="1" />
 			</sequence>
 			<attribute name="locale" type="string" />
 		</complexType>

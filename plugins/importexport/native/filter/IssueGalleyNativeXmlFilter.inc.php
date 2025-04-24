@@ -125,16 +125,12 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_uploaded', strftime('%Y-%m-%d', strtotime($issueFile->getDateUploaded()))));
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_modified', strftime('%Y-%m-%d', strtotime($issueFile->getDateModified()))));
 
-			if (!empty($this->opts['use-file-urls'])) {
-				import('classes.file.PublicFileManager');
-				$publicFileManager = new PublicFileManager();
+			if ($this->opts['serializationMode'] !== self::SERIALIZATION_MODE_EMBED) {
 				$request = Application::get()->getRequest();
 
-				if (!empty($this->opts['use-absolute-urls'])) {
-					$fileUrl = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($deployment->getContext()->getId()) . '/' . $issueFile->getServerFileName();
-				} else {
-					$fileUrl = $request->getBasePath() . '/' . $publicFileManager->getContextFilesPath($deployment->getContext()->getId()) . '/' . $issueFile->getServerFileName();
-				}
+				$fileUrl = ($this->opts['serializationMode'] === self::SERIALIZATION_MODE_URL)
+					? $request->url(null, 'issue', 'view', array($issueGalley->getIssueId(), $issueGalley->getId()))
+					: "{$request->getBasePath()}/{$filePath}";
 
 				$hrefNode = $doc->createElementNS($deployment->getNamespace(), 'href');
 				$hrefNode->setAttribute('src', htmlspecialchars($fileUrl, ENT_COMPAT, 'UTF-8'));

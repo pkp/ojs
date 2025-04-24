@@ -130,13 +130,13 @@
 				{capture assign="issuesListGridUrl"}{url router=$smarty.const.ROUTE_COMPONENT component="grid.issues.ExportableIssuesListGridHandler" op="fetchGrid" escape=false}{/capture}
 				{load_url_in_div id="issuesListGridContainer" url=$issuesListGridUrl}
 
-				{fbvFormSection list="true" title="plugins.importexport.native.exportOptions.coverImagesAndSubmissionFile"}
-					{fbvElement type="radio" id="embed" name="image-option" value="embed" label="plugins.importexport.native.exportOptions.coverImages.embed" checked=true}
-					{fbvElement type="radio" id="relative" name="image-option" value="relative" label="plugins.importexport.native.exportOptions.coverImages.relative"}
-					{fbvElement type="radio" id="url" name="image-option" value="url" label="plugins.importexport.native.exportOptions.coverImages.url"}
+				{fbvFormSection list="true" title="plugins.importexport.native.exportOptions.coverImagesAndSubmissionFiles"}
+					{fbvElement type="radio" id="embed" name="serializationMode" value="embed" label="plugins.importexport.native.exportOptions.files.embed" checked=true}
+					{fbvElement type="radio" id="relative" name="serializationMode" value="relative" label="plugins.importexport.native.exportOptions.files.relative"}
+					{fbvElement type="radio" id="url" name="serializationMode" value="url" label="plugins.importexport.native.exportOptions.files.url"}
 				{/fbvFormSection}
 
-				{fbvFormButtons submitText="plugins.importexport.common.export" hideCancel="true"}
+				{fbvFormButtons submitText="common.export" hideCancel="true"}
 			{/fbvFormArea}
 		</form>
 	</div>

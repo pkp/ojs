@@ -235,6 +235,9 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		$opts = [];
 
 		$serializationMode = $request->getUserVar('serializationMode');
+
+		if (isset($serializationMode)) {
+			$opts['serializationMode'] = $serializationMode;
 		}
 
 		return $opts;
@@ -531,6 +534,14 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				continue;
 			}
 			$opt = substr($arg, 2);
+			// Check for --serializationMode:value format
+			if (strpos($opt, 'serializationMode:') === 0) {
+				$value = substr($opt, strlen('serializationMode:'));
+				if (in_array($value, ['embed', 'url', 'relative'])) {
+					$opts['serializationMode'] = $value;
+				}
+				continue;
+			}
 			if (in_array($opt, $optCodes)) {
 				$opts[$opt] = true;
 				continue;
@@ -543,10 +554,12 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 		$args = $newArgs;
 
 		if (!isset($opts['serializationMode'])) {
-			if (isset($opts['use-file-urls']) {
+			if (isset($opts['use-file-urls'])) {
 				$opts['serializationMode'] = 'url';
-			} elseif (isset($opts['no-embed']) {
+			} elseif (isset($opts['no-embed'])) {
 				$opts['serializationMode'] = 'relative';
+			} else {
+				$opts['serializationMode'] = 'embed';
 			}
 		}
 
