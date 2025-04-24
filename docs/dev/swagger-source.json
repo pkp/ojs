@@ -60,7 +60,8 @@
 				"Temporary Files",
 				"Backend",
 				"ORCID",
-				"Emails"
+				"Emails",
+				"Categories"
 			]
 		}
 	],
@@ -212,6 +213,10 @@
 		{
 			"name": "Emails",
 			"description": "Endpoints used to retrieve user emails."
+		},
+		{
+			"name": "Categories",
+			"description": "Endpoints used to manage Context categories."
 		}
 	],
 	"definitions": {
@@ -679,7 +684,10 @@
 					"type": "string"
 				}
 			}
-		}
+		},
+		"Category": "category",
+		"Affiliation": "Affiliation",
+		"Ror": "Ror"
 	},
 	"paths": {
 		"/submissions": {
@@ -7759,7 +7767,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to revoke an author's ORCID access and token data or ORCID is not enabled..",
+						"description": "You do not have permission to revoke an author's ORCID access and token data or ORCID is not enabled.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -7767,6 +7775,173 @@
 					"404": {
 						"x-summary": "A resource was not found.",
 						"description": "Could not find author or there are no context.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/categories": {
+			"get": {
+				"tags": [
+					"Categories"
+				],
+				"summary": "Get a list of categories. Returns top-level categories with their nested sub-categories.",
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "List of categories.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Category"
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to get categories.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"Categories"
+				],
+				"summary": "Create a new category.",
+				"parameters": [
+					{
+						"description": "Details about the category that should be created.",
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/CategoryEditable"
+						}
+					},
+					{
+						"name": "parentCategoryId",
+						"description": "ID of the parent category under which the new category should be created.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Details of the category that was just added.",
+						"schema": {
+							"$ref": "#/definitions/Category"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to create categories.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Resource not found",
+						"description": "There are no categories with ID matching the parentCategoryId param.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/categories/{categoryId}": {
+			"put": {
+				"tags": [
+					"Categories"
+				],
+				"summary": "Edit category.",
+				"parameters": [
+					{
+						"description": "Details about the category that should edited.",
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/CategoryEditable"
+						}
+					},
+					{
+						"description": "Category ID",
+						"name": "categoryId",
+						"in": "path",
+						"required": true
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Details of the category that was just edited.",
+						"schema": {
+							"$ref": "#/definitions/Category"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to get edit categories.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Resource not found",
+						"description": "There are no category with ID matching the categoryId path param.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"Categories"
+				],
+				"summary": "Delete a category.",
+				"description": "Delete a category by ID.",
+				"parameters": [
+					{
+						"name": "categoryId",
+						"description": "Category ID",
+						"in": "path",
+						"required": true
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Empty response."
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You are not allowed to delete this category.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The category could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
