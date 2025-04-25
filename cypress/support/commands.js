@@ -10,6 +10,7 @@
 import Api from '../../lib/pkp/cypress/support/api.js';
 import '../../lib/pkp/cypress/support/commands.js';
 import '../../lib/pkp/cypress/support/commands_orcid.js';
+import '../../lib/pkp/cypress/support/command_reviewer_suggestion.js';
 
 Cypress.Commands.add('publish', (issueId, issueTitle) => {
 	cy.openWorkflowMenu('Title & Abstract')
