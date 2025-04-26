@@ -1,13 +1,14 @@
 # Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023.
 # Josu Acosta <josuacostacalvo@gmail.com>, 2023, 2024.
 # Informatikaria <informatikaria@ueu.eus>, 2024.
+# Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2024-06-12 18:32+0000\n"
-"Last-Translator: Josu Acosta <josuacostacalvo@gmail.com>\n"
+"PO-Revision-Date: 2025-04-26 08:10+0000\n"
+"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/manager/eu/>"
 "\n"
 "Language: eu\n"
@@ -256,7 +257,7 @@ msgid "manager.people.allSiteUsers"
 msgstr "Inskribatu gune honetako erabiltzaile bat Aldizkari honetan"
 
 msgid "manager.people.showNoRole"
-msgstr "Erabiltzaileak eginkizunik gabe erakutsi"
+msgstr "Erakutsi rolik gabeko erabiltzaileak"
 
 msgid "manager.people.allUsers"
 msgstr "Inskribatutako erabiltzaile guztiak"
