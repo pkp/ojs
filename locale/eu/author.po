@@ -1,10 +1,10 @@
-# Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023.
+# Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
-"PO-Revision-Date: 2023-04-28 14:09+0000\n"
+"PO-Revision-Date: 2025-04-28 14:12+0000\n"
 "Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/author/eu/>\n"
 "Language: eu\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "author.submit"
 msgstr "Bidalketa berria"
@@ -281,11 +281,10 @@ msgstr "Iturburu-testua"
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Azalpen laburra"
 
-#, fuzzy
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
-"Aurkeztu fitxategia ebaluatzaileei (metadaturik gabe), ez du arriskurik "
-"ebaluazio anonimoarentzat."
+"Aurkeztu fitxategia ebaluatzaileei (metadaturik gabe), ebaluazio "
+"anonimoarentzat arriskurik ez izateko."
 
 msgid "author.submit.suppFile.publisherDescription"
 msgstr "Formalki argitaratutako materialekin bakarrik erabili."
