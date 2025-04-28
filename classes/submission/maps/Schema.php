@@ -195,10 +195,10 @@ class Schema extends \PKP\submission\maps\Schema
             ->getMany();
 
         $issueIdsGroupedBySubmission = $publications->groupBy(fn (Publication $publication) => $publication->getData('submissionId'))
-            ->map(fn ($entry) => $entry->map(fn (Publication $publication) => $publication->getData('issueId')));
+            ->map(fn ($entry) => $entry->map(fn (Publication $publication) => $publication->getData('issueId')))->toArray();
 
         return $submissions->mapWithKeys(function ($submission) use (&$issues, $publications, $issueIdsGroupedBySubmission) {
-            $submissionIssueIds = $issueIdsGroupedBySubmission->get($submission->getId())->all();
+            $submissionIssueIds = $issueIdsGroupedBySubmission[$submission->getId()] ?? [];
             return [$submission->getId() => $issues->filter(fn ($issue) => in_array($issue->getId(), $submissionIssueIds))];
         });
     }
