@@ -46,9 +46,10 @@
  * Core components are produced manually below, but can also be added via
  * plugins using the hooks provided:
  *
- * Templates::Article::Main
- * Templates::Article::Details
- *
+ * @hook Templates::Article::Main []
+ * @hook Templates::Article::Details::Reference []
+ * @hook Templates::Article::Details []
+
  * @uses $article Submission This article
  * @uses $publication Publication The publication being displayed
  * @uses $firstPublication Publication The first published version of this article
@@ -64,10 +65,6 @@
  * @uses $licenseUrl string URL to license. Only assigned if license should be
  *   included with published submissions.
  * @uses $ccLicenseBadge string An image and text with details about the license
- *
- * @hook Templates::Article::Main []
- * @hook Templates::Article::Details::Reference []
- * @hook Templates::Article::Details []
  *}
  {if !$heading}
  	{assign var="heading" value="h3"}
@@ -245,19 +242,54 @@
 			{/if}
 
 			{* References *}
-			{if $parsedCitations || $publication->getData('citationsRaw')}
+			{if $citations}
 				<section class="item references">
 					<h2 class="label">
 						{translate key="submission.citations"}
 					</h2>
 					<div class="value">
-						{if $parsedCitations}
-							{foreach from=$parsedCitations item="parsedCitation"}
-								<p>{$parsedCitation->getCitationWithLinks()|strip_unsafe_html} {call_hook name="Templates::Article::Details::Reference" citation=$parsedCitation}</p>
-							{/foreach}
-						{else}
-							{$publication->getData('citationsRaw')|escape|nl2br}
-						{/if}
+						{foreach from=$citations item="citation"}
+							<p>
+								{if $useStructuredCitations}
+									{if $citation->getData('doi') && $citation->getData('title')}
+										<span>{$citation->getData('title')}</span><br/>
+										{foreach from=$citation->getData('authors') item="author"}
+											<span>
+												{$author['givenName']}
+												{$author['familyName']}
+												{if $author['orcid']}
+													<a href="{$author['orcid']}" target="_blank">orcid</a>
+												{/if}
+											</span>
+										{/foreach}<br/>
+										<span>{$citation->getData('sourceName')}</span>
+										<span>{$citation->getData('sourceIssn')}</span>
+										<span>{$citation->getData('sourceHost')}</span>
+										<span style="text-transform: capitalize;">{str_replace('-', ' ', $citation->getData('sourceType'))}</span>
+										<br/>
+										<span>{$citation->getData('date')}</span>
+										<span>{str_replace('-', ' ', $citation->getData('type'))}</span>
+										<span>{$citation->getData('volume')}</span>
+										<span>{$citation->getData('issue')}</span>
+										<span>{$citation->getData('firstPage')}</span>
+										<span>{$citation->getData('lastPage')}</span>
+										<br/>
+										<span>{$citation->getData('urn')}</span>
+										<span>{if $citation->getData('doi')}<a href="{$citation->getData('doi')}" target="_blank">doi</a>{/if}</span>
+										<span>{if $citation->getData('url')}<a href="{$citation->getData('url')}" target="_blank">url</a>{/if}</span>
+										<span>{if $citation->getData('arxiv')}<a href="{$citation->getData('arxiv')}" target="_blank">arxiv</a>{/if}</span>
+										<span>{if $citation->getData('handle')}<a href="{$citation->getData('handle')}" target="_blank">handle</a>{/if}</span>
+										<span>{if $citation->getData('openAlex')}<a href="{$citation->getData('openAlex')}" target="_blank">openAlex</a>{/if}</span>
+										<span>{if $citation->getData('wikidata')}<a href="{$citation->getData('wikidata')}" target="_blank">wikidata</a>{/if}</span>
+									{else}
+										{$citation->getRawCitationWithLinks()|strip_unsafe_html}
+									{/if}
+								{else}
+									{$citation->getData('rawCitation')|strip_unsafe_html}
+								{/if}
+								{call_hook name="Templates::Article::Details::Reference" citation=$citation}
+							</p>
+						{/foreach}
 					</div>
 				</section>
 			{/if}
