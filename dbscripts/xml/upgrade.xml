@@ -177,6 +177,8 @@
 	<upgrade minversion="3.5.0.0" maxversion="3.5.9.9">
 		<migration class="PKP\migration\upgrade\v3_6_0\PreflightCheckMigration" fallback="3.5.9.9" />
 		<migration class="PKP\migration\upgrade\v3_6_0\I10403_EmailTemplateUserGroupAccess"/>
+		<migration class="APP\migration\install\ReviewerRecommendationsMigration" />
+		<migration class="APP\migration\upgrade\v3_6_0\I1660_ReviewerRecommendations"/>
 	</upgrade>
 
     <upgrade minversion="3.1.0.0" maxversion="3.5.9.9">

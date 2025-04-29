@@ -59,3 +59,9 @@ Cypress.Commands.add('createSubmissionWithApi', (data, csrfToken) => {
 		.addSubmissionAuthorsWithApi(api, data, csrfToken);
 });
 
+Cypress.Commands.add('accessReviewerRecommendations', (username, password, contextPath) => {
+	cy.login(username, password, contextPath);
+	cy.visit('/index.php/' + contextPath + '/en/management/settings/workflow#review');
+    cy.get('button').contains('Reviewer Recommendations').click();
+});
+
