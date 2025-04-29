@@ -1,0 +1,42 @@
+# "10 ..." <jaana.tonisson@tlulib.ee>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-06 09:42+0000\n"
+"Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
+"Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/"
+"paymethod-paypal/et/>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.paymethod.paypal.description"
+msgstr "Makseid töödeldakse PayPali teenust kasutades."
+
+msgid "plugins.paymethod.paypal"
+msgstr "Paypali tasu maksmine"
+
+msgid "plugins.paymethod.paypal.settings.testMode"
+msgstr "Testirežiim"
+
+msgid "plugins.paymethod.paypal.settings.accountName"
+msgstr "Konto nimi"
+
+msgid "plugins.paymethod.paypal.settings.clientId"
+msgstr "Kliendi ID"
+
+msgid "plugins.paymethod.paypal.settings.secret"
+msgstr "Salajane"
+
+msgid "plugins.paymethod.paypal.error"
+msgstr ""
+"Ilmnes tehinguviga. Täpsema teabe saamiseks võtke ühendust ajakirja "
+"halduriga."
+
+msgid "plugins.paymethod.paypal.displayName"
+msgstr "Paypali tasu maksmine"
+
+msgid "plugins.paymethod.paypal.settings"
+msgstr "Paypali makse seaded"

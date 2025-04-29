@@ -1,7 +1,7 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-23 23:25+0000\n"
+"PO-Revision-Date: 2025-04-13 17:21+0000\n"
 "Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
 "Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/locale/mr/>"
 "\n"
@@ -16,7 +16,7 @@ msgid "context.select"
 msgstr "इतर नियतकलिकांकडे वळा :"
 
 msgid "navigation.current"
-msgstr "वर्तमान"
+msgstr "वर्तमान अंक"
 
 msgid "section.title"
 msgstr "विभागाचे शिर्षक"
@@ -653,7 +653,7 @@ msgid "issue.issue"
 msgstr "अंक"
 
 msgid "issue.issues"
-msgstr "अंक (अनेक)"
+msgstr "अंक"
 
 msgid "issue.title"
 msgstr "शिर्षक"
@@ -2395,7 +2395,7 @@ msgid "grid.action.createContext"
 msgstr "नव्या नियतकालिकाची निर्मिती करा"
 
 msgid "editor.navigation.issues"
-msgstr "अंक (अनेक)"
+msgstr "अंक"
 
 msgid "notification.type.approveSubmission"
 msgstr ""

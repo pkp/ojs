@@ -1,7 +1,7 @@
-# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-03-21 09:51+0000\n"
+"PO-Revision-Date: 2025-04-07 10:50+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/editor/ky/>\n"
 "Language: ky\n"
@@ -366,3 +366,21 @@ msgstr "Түпнуска файлды карап чыгуу версиясы к�
 
 msgid "editor.article.decision"
 msgstr "Чечим"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Артка маселелер"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Активдүү тапшырмалар"
+
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr "Эгер бош калтырылса, күн жарыяланганда автоматтык түрдө коюлат."
+
+msgid "editor.issues.datePublished.invalid"
+msgstr "Жарыяланган датасы жараксыз. Дата YYYY-MM-DD форматында болушу керек."
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr "Чыгарылган датасы чыгарылыш жарыяланганда талап кылынат."
+
+msgid "editor.submissions.submitMMDD"
+msgstr "MM-DD тапшырыңыз"

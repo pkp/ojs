@@ -1,7 +1,7 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-14 09:04+0000\n"
+"PO-Revision-Date: 2025-04-12 09:06+0000\n"
 "Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
 "Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
 "mr/>\n"
@@ -27,13 +27,13 @@ msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
 msgstr "कुठल्या संसाधनांना URN (एकसमान नाव) द्यायचे ते कृपया निवडा."
 
 msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
-msgstr "लेख (अनेक)"
+msgstr "लेख"
 
 msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
-msgstr "अंक (अनेक)"
+msgstr "अंक"
 
 msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
-msgstr "गॅली (अनेक)"
+msgstr "गॅली संचय"
 
 msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
 msgstr "संसाधनाच्या एकसमान नावासाठी उपसर्ग (URN Prefix)"

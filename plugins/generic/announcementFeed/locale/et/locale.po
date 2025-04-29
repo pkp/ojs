@@ -1,0 +1,51 @@
+# "10 ..." <jaana.tonisson@tlulib.ee>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-06 09:42+0000\n"
+"Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
+"Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-announcementFeed/et/>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "Teadaannete voo plugin"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr ""
+"See plugin loob ajakirja teadaannete jaoks RSS/Atom veebisündikatsiooni "
+"vooge."
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Seaded"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Kuva voo linke igal ajakirja lehel."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr "Kuva voo linke vaid avalehel ja teadaannete lehel."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "Kuva voo linke vaid teadaannete lehel."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Piira voogu"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "viimased teadaanded."
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "Palun sisesta positiivne täisarv viimaste teadannete jaoks."
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Atom-i logo"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "RSS1-e logo"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "RSS2-e logo"

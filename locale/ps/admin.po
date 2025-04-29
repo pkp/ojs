@@ -2,7 +2,7 @@
 # Jan Mohammad Rasa <eng.omid.rasa@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-02-25 05:29+0000\n"
+"PO-Revision-Date: 2025-04-21 20:59+0000\n"
 "Last-Translator: Jan Mohammad Rasa <eng.omid.rasa@gmail.com>\n"
 "Language-Team: Pashto <http://translate.pkp.sfu.ca/projects/ojs/admin/ps/>\n"
 "Language: ps\n"
@@ -13,4 +13,212 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "admin.hostedContexts"
-msgstr "کوربه شوي ژورنالونه"
+msgstr "همکار ژورنالونه"
+
+msgid "admin.systemVersion"
+msgstr "OJS نسخه"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS تنظيماتي مالومات له <tt>config.inc.php</tt>."
+
+msgid "admin.settings.redirect"
+msgstr "ژورنال ته د مقالې د بيا لېږد وړانديز"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"اصلي وېبپاڼې ته د مقالې لېږلو غوښتنې دغه ژورنال ته استول کيږي، ځکه کله چې "
+"سايټ يوازې د يو ژورنال همکاري ولري، نو بيا دا کار ګټور دی."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"آيا ډاډه ياست چې دا تڼۍ غير فعاله کړئ؟ دا کار ښآيي نور همکار ژورنالونه چې له "
+"دې تڼۍ کار اخلي، زيانمن کړي."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "دا به د سایټ او ټولو کوربه ژورنالونو لپاره اصلي ژبه وي."
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"د نوي ژورنال له جوړولو وروسته، تاسو به په اتومات ډول د دې ژورنال مدير ټاکل "
+"کېږئ. وروسته، تاسو د تنظيماتو برخې ته راجع کېږئ څو د ژورنال لمړني تنظيمات "
+"بشپړ کړئ."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "کومه برخه چې تاسو یې ټاکئ، بل ژورنال له مخکې ټاکلې ده."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "په وېبپاڼه کې د عامه لاسرسي لپاره د دې ژورنال فعالول"
+
+msgid "admin.journals.importErrors"
+msgstr "د معلوماتو انتقال په بريالي توګه ترسره نه شول"
+
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
+msgstr "د مقالو د شمیری فارمت ID باید ارقام نه وي."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"ټولې هغه ژبې وټاکئ چې په سایټ کې یې غواړئ. ټاکل شوې ژبې به د ټولو ژورنالونو "
+"لپاره د کارونې وړ وي، او د ژبې ټاکلو مېنيو کې به هم ښکاري. که څو ژبې و نه "
+"ټاکئ، نو د ژبې ټاکلو مينيو به د ډېرو تنظيماتو د نه لرلو له امله نه ښکاري."
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"د پخواني کاروونکي پر ځای نوی هغه وټاکئ څو د ليکوالي او ايډېټ دندې پر مخ يوسي."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"هغه همکار ژورنالونه وټاکئ چې په يو ځايي ډول د ګڼو ايميلونو د استولو وړتيا "
+"ولري. کله چې دا ځآنګړنه فعاله شي، د ژورنال مدير کولای شي چې ټولو ثبت شویو "
+"کاروونکو ته ايميلونه واستوي<br><br> . د دې ځانګړنې ناسمه کارونه ښايي د ځينو "
+"هيوادونو د پاليسي خلاف وي. او کیدای شي چې سرور مو د سپم لېږدوونکي په توګه "
+"بند کړي. د دې ځانګړنې د ښې کارونې په موخه له فعالولو څخه مخکې د ژورنال له "
+"مديرانو سره تخنيکي مشوره وکړئ<br><br>. د تنظيماتو له لارې کولای شئ چې په دې "
+"ځانګړنې نور محدوديتونه هم وضع کړئ <a href=\"{$hostedContextsUrl}\">Hosted "
+"Journals</a>."
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"یو یا څو کاروونکي وټاکئ چې له بل کاروونکي سره یوځای شي (لکه یو څوک چې دوه "
+"کاروونکي حسابونه لري). لمړی ټاکل شوی اکاونټ یا اکاونټونه به وروسته د ټولو "
+"مسئولیتونو د لېږد څخه دوهم اکاونټ ته لرې شي."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"د لاندې تنظيماتو په فعالولو سره د ژورنال مدير نه شي کولای چې ډله اييز "
+"ايميلونه واستوي: د دې ځانګړنې فعالول لوستونکو، ليکوالانو او لويو ګروپونو ته "
+"چې نه غواړي اضافي ايميلونه تر لاسه کړي، مخنيوی کوي. <br><br> یا، د دې ژورنال "
+"لپاره په يو ځای ډول د ګڼو ايميلونه په بشپړ ډول بند کړئ <a href=\""
+"{$siteSettingsUrl}\">Admin > Site Settings</a>."
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+"د جغرافیوي احصایې کارونې ډول وټاکئ چې ژورنالونه یې له مخې معلومات راټول کړي. "
+"د جغرافیوي احصایې له حده زیات معلومات ښایي ستاسو د ډیټابیس حجم زیات کړي او "
+"په ځینو مواردو کې ښایي د کاروونکو محرمیت زیانمن کړي. هر ژورنال کولی شي دا "
+"برخه د ځان لپاره په جلا ډول تنظیم کړي، خو هیڅ ژورنال په سېستم کې له تنظیمل "
+"شوې ټاکلې اندازې پورته زیات معلومات ثبت کړي. د بېلګې په ډول، که سایټ یوازې د "
+"هېواد او سیمې د ټاکلو اجازه ورکوي، نو ژورنال کولای شي یوازې هېواد یا همدا "
+"دواړه انتخاب کړي، خو ژورنال نشي کولای د هېواد، زون او ښار ټاکلو انتخاب درکړي."
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "د موضوع ID‌ له اړوندې ID سره توپير لري."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "ښايي ټاکل شوې ژبې نيمګړې وي."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"آيا ډاډه ياست چې دا ژبه لرې کوئ؟ دا کار مو ښايي له دې ژبې څخه همکار "
+"ژورنالونه اغېزمن کړي."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"نورې ژبې هم سیستم ته ور زیاتې کړئ. مخکې د ژورنالونو د ګټې اخیستنې څخه بايد "
+"ژبې انسټال شوي وي. د ژبو د اضافه کولو لپاره د OJS مېنيو ته ورګرځئ."
+
+msgid "admin.journals.noneCreated"
+msgstr "هېڅ ژورنال نه دی جوړ شوی."
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"د ژورنال نوم یوه کوچنۍ کلمه یا اکرونیم ټاکلی شئ. د ژورنال URL به داسې وي "
+"{$sampleUrl}."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "سرليک مو وټاکئ."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "برخه مو وټاکئ."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"د برخې د نوم لپاره یواځې حروف، اعداد او دا دوه نښې (–، _) کارولای شئ. د برخې "
+"نوم باید پیل او پای دواړه په حروفو او عددونو وي."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "کومه ژبه چې تاسو يې ټاکئ، بايد ژورنال يې ولري."
+
+msgid "admin.systemConfiguration"
+msgstr "د OJS تنظيمات"
+
+msgid "admin.journals.journalSettings"
+msgstr "د ژورنال تنظیمات"
+
+msgid "admin.contexts.create"
+msgstr "نوی ژورنال جوړ کړئ"
+
+msgid "admin.contexts.contextDescription"
+msgstr "د ژورنال توضیحات"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "د موجوده ژورنال برخه او یا د برخې جوړولو طریقه (لکه د \"OJS\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "د سبسکرايب شويو غړو را انتقالول"
+
+msgid "admin.journals.transcode"
+msgstr "د مقالې ميټا ډټا له ISO8859-1 څخه بدل کړئ"
+
+msgid "admin.journals.redirect"
+msgstr "د OJS 1 URL څخه د OJS 2 URLs ته برابرولو کوډ جوړ کړئ"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "د معلوماتو انتقال برخې ټاکل وټاکئ."
+
+msgid "admin.mergeUsers"
+msgstr "د کاروونکو يوځای کول"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "د کاروونکي يوځای کول"
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "ټول ثبت/ شامل شوي کاروونکي"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"آيا غواړئ چې ټاکل شوي پخواني اکاونټونه {oldAccountCount$} د {$newUsername$}\""
+" اکاونټونو سره یوځای کړئ؟ ټاکل شوي ټول اکاونټونه مو له منځه ځي او بېرته "
+"سمېدلای هم نه شي."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "هېڅ ثبت شوی کاروونکی نشته."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "د ګډون د پای ته رسېدو خبرتیا"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "د لاسرسي خبرتيا"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "د بيا کتنې یادونه"
+
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
+msgstr "ورکول کېدونکې ID‌ بايد ارقام نه وي."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"د دې ژورنال لپاره په يو ځای ډول د ګڼو ايمیلونو ځانګړنه غيرفعاله ده، فعاله يې "
+"کړئ<a href=\"{$siteSettingsUrl}\">Admin > Site Settings</a>."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"دې سايټ ته ژورنالونه ور اضافه، ايډېټ او یا لرې کړئ او دا ټول تنظيمات له دې "
+"ځایه جوړ کړئ."
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+"د علمي ادارې د معلوماتو او احصائیې ځانګړنه هغه مهال فعاله کړئ، چې غواړئ د "
+"علمي ادارې په ترتیب معلومات راټول کړئ. ژورنالونه باید د علمي ادارو او د "
+"هغويIP ادرسونه اضافه کړي ترڅو دا ځانګړنه وکاروي. دا کار کولای شي ستاسو د "
+"ډیټابېس حجم زیات کړي."
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""
+"آيا غواړئ چې د SUSHI API د ټولو ژورنالونو ته لاسرسي وړ وي؟ که تاسېAPI برخه "
+"فعاله کړئ، ژورنالونه کولی شي په دې برخه حاکم او خپل معلومات خصوصي یا محرم "
+"کړي. خو که دا برخه غیر فعاله کړئ، ژورنالونه نشي کولی دا برخه په عامه توګه د "
+"لاسرسي وړ وګرځوي."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "دا سايټ د ټولو ژورنالونو لپاره د يو پلاټفورم په توګه وکاروئ."

@@ -1,7 +1,7 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-15 22:17+0000\n"
+"PO-Revision-Date: 2025-04-12 09:06+0000\n"
 "Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
 "Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/"
 "blocks-subscription/mr/>\n"
@@ -33,7 +33,7 @@ msgid "plugins.block.subscription.comingFromIP"
 msgstr "या IP पत्त्यावरून प्रवेश केला आहे : {$ip}"
 
 msgid "plugins.block.subscription.about"
-msgstr "सदस्यता (अनेक)"
+msgstr "सदस्यता"
 
 msgid "plugins.block.subscription.loginToVerifySubscription"
 msgstr "\"केवळ-सदस्यांसाठीच उपलब्ध\" संसाधने/लेख मिळवण्यासाठी लॉग-इन करा."

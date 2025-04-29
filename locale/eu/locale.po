@@ -1,12 +1,13 @@
 # Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023, 2025.
 # Informatikaria <informatikaria@ueu.eus>, 2023.
+# Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2025-02-25 13:09+0000\n"
-"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
+"PO-Revision-Date: 2025-04-25 12:59+0000\n"
+"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/locale/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
@@ -538,9 +539,13 @@ msgstr ""
 
 msgid "doi.issue.incorrectStaleStatus"
 msgstr ""
+"Ezin izan da ezarri DOIaren egoera zaharkitu gisa hurrengo zenbakirako: "
+"{$itemTitle}. DOIak \"Erregistratua\" edo \"Bidalia\" egoera izan behar du."
 
 msgid "doi.issue.notPublished"
 msgstr ""
+"Ezin izan da markatu {$pubObjectTitle}rako erregistratutako DOIa. Zenbakia "
+"argitaratu behar da egoera eguneratu aurretik."
 
 msgid "subscriptionTypes.currency"
 msgstr "Dibisa"
@@ -720,7 +725,7 @@ msgid "reader.subscriptionAccess"
 msgstr "Harpidetuta egotea beharrezkoa da"
 
 msgid "reader.subscriptionOrFeeAccess"
-msgstr "Harpidetuta egotea edo ordaintzea  beharrezkoa da"
+msgstr "Harpidetuta egotea edo ordaintzea beharrezkoa da"
 
 msgid "reader.purchasePrice"
 msgstr "{{$price} {$currency}}"
@@ -1906,7 +1911,7 @@ msgid "payment.requestPublicationFee"
 msgstr "Eskatu argitaratze-tarifa ({$feeAmount})"
 
 msgid "payment.requestPublicationFee.notEnabled"
-msgstr ""
+msgstr "Ez dago argitalpen-tasarik gaituta."
 
 msgid "payment.notFound"
 msgstr ""
@@ -2331,7 +2336,7 @@ msgid "notification.type.newAnnouncement"
 msgstr "Iragarki berria sortu da."
 
 msgid "notification.type.openAccess"
-msgstr ""
+msgstr "Zenbaki bat sarbide irekikoa bihurtu da."
 
 msgid "notification.type.reviewerFormComment"
 msgstr ""
@@ -2373,7 +2378,7 @@ msgid "user.authorization.copyeditorAssignmentMissing"
 msgstr "Sarbidea ukatuta! Ez zaizu esleitu artikulu honen zuzenketa egitea."
 
 msgid "user.authorization.noContext"
-msgstr "Ez dago aldizkaririk testuinguru honetan!"
+msgstr "Ez dago aldizkaririk testuinguru honetan."
 
 msgid "user.authorization.sectionAssignment"
 msgstr "Zure atalekoa ez den artikulu batean sartu nahi duzu."
@@ -2505,3 +2510,6 @@ msgstr "Aukeratu nola antolatu artikuluak kategoria honetan."
 
 #~ msgid "category.category"
 #~ msgstr "Kategoriak"
+
+msgid "search.journal"
+msgstr "Aldizkariaren arabera"
