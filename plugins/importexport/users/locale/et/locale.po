@@ -1,0 +1,107 @@
+# "10 ..." <jaana.tonisson@tlulib.ee>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-06 09:42+0000\n"
+"Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
+"Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-users/et/>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Kasutajate XML plugin"
+
+msgid "plugins.importexport.users.description"
+msgstr "Impordi ja ekspordi kasutajad"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Kasutus: {$scriptName} {$pluginName} [command] ...\n"
+"Käsklused:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\teksport [xmlFileName] [journal_path]\n"
+"\teksport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Näited:\n"
+"\tImpordi kasutajad ajakirja myJournal failist myImportFile.xml:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tEkspordi kõik kasutajad ajakirjast myJournal:\n"
+"\t{$scriptName} {$pluginName} eksport myExportFile.xml myJournal\n"
+"\n"
+"\tEkspordi kasutajad nende ID põhjal:\n"
+"\t{$scriptName} {$pluginName} eksport myExportFile.xml myJournal 1 2\n"
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Impordi kasutajad"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
+"Vali XML andmefail, mis sisaldab kasutajainfot, et need ajakirja juurde "
+"importida. Vaata ajakirja abiteksti failiformaadi detailideks.<br /><br /"
+">Pane tähele, et kui imporditud fail sisaldab süsteemis juba olemasolevaid "
+"kasutajanimesid või e-maili aadresse, siis nende kasutajate andmeid ei "
+"impordita ning loodavad uued rollid määratakse olemasolevatele kasutajatele."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Kasutaja andmete fail"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr ""
+"Saada teavituskiri kõikidele imporditud kasutajatele nende kasutajanime ja "
+"parooliga."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Kui esineb tõrge, jätka teiste kasutajate importimisega."
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Järgnevad kasutajad on edukalt süsteemi imporditud"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Importimise ajal esines tõrkeid"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Kinnita, et soovid neid kasutajaid süsteemi importida"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Hoiatus"
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Tuvastati tundmatu ajakirja tee \"{$journalPath}\"."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Ekspordi kasutajad"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Ekspordi rolli järgi"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Ekspordi kõik"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Eksportimise käigus esines tõrkeid"
+
+msgid "plugins.importexport.users.results"
+msgstr "Tulemused"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Jätkamiseks palun lae fail üles \"Import\" väljal."
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"Ei saa kasutada paroolidega, mis on hakitud {$importHash}; OJS on "
+"seadistatud kasutama {$ojsHash}. Kui jätkad, siis pead imporditud "
+"kasutajatele uued paroolid looma."
+
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"Importimine lõpetati edukalt. Kasutajad, kelle kasutajanimed ja e-maili "
+"aadresside ei ole veel kasutusel, on imporditud koos teiste "
+"kasutajarühmadega."

@@ -1,0 +1,85 @@
+# "10 ..." <jaana.tonisson@tlulib.ee>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-05 13:31+0000\n"
+"Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
+"Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/api/et/>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "api.submissions.400.wrongContext"
+msgstr "Teie soovitud kaastöö ei ole selles ajakirjas."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Te ei saa muuta kaastöö ajakirja."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Teil ei ole luba vaadata avaldamata väljaandeid."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Saate vaadata ainult ajakirju, mis on lubatud."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Teil ei ole luba seda ajakirja vaadata."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Te ei saa seda ajakirja muuta kogu saidi API kaudu."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Teil ei ole luba seda ajakirja muuta."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Teil ei ole luba seda ajakirja kustutada."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Teie soovitud ajakirja ei leitud."
+
+msgid "api.dois.403.contextsNotMatched"
+msgstr "Teie soovitud DOI ei kuulu sellesse ajakirja."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Mõned üksused ei olnud edukalt deponeeritud. Palun kontrollige üksikuid "
+"üksusi konkreetsete veateadete saamiseks."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "Teil ei ole luba seda e-posti malli teise ajakirja viia."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Teie valitud makseviisi ei toetata."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Teie soovitud väljaanne ei kuulu sellesse ajakirja."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Teie soovitud väljaanne ei kuulu sellesse kaastöösse."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Te ei saa seostada faili sellest failietapist."
+
+msgid "api.publications.403.paymentFeesNotEnabled"
+msgstr ""
+"Kaastööde esitamise tasude vorm ei ole kättesaadav, kuna esitamistasud ei "
+"ole lubatud."
+
+msgid "api.submission.400.inactiveSection"
+msgstr "See rubriik ei võta enam kaastöid vastu."
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Teie soovitud teadaanne ei kuulu sellesse ajakirja."
+
+msgid "api.emails.403.disabled"
+msgstr "E-posti teavituste funktsioon ei ole selles ajakirjas lubatud."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Te ei saa seda ajakirja vaadata ega muuta, kui te ei esita päringut ajakirja "
+"API-le või kogu saidi API-le."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr ""
+"Selle ajakirja jaoks ei ole DOI registreerimisagentuuri konfigureeritud."

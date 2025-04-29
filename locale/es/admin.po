@@ -1,4 +1,4 @@
-# Jordi LC <jordi.lacruz@uab.cat>, 2021, 2023, 2024.
+# Jordi LC <jordi.lacruz@uab.cat>, 2021, 2023, 2024, 2025.
 # Marc Bria <marc.bria@gmail.com>, 2023.
 # pep sanso <pep.sanso@uab.cat>, 2023.
 msgid ""
@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2024-03-02 04:51+0000\n"
+"PO-Revision-Date: 2025-04-09 13:12+0000\n"
 "Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/admin/es/>\n"
 "Language: es\n"
@@ -72,7 +72,7 @@ msgid "admin.systemConfiguration"
 msgstr "Configuración de OJS"
 
 msgid "admin.systemConfigurationDescription"
-msgstr "Configuración de OJS de <tt>config.inc.php</tt>."
+msgstr "Ajustes de la configuración de OJS de <tt>config.inc.php</tt>."
 
 msgid "admin.journals.createInstructions"
 msgstr ""

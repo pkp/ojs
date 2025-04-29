@@ -1,0 +1,418 @@
+# "10 ..." <jaana.tonisson@tlulib.ee>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-06 09:42+0000\n"
+"Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
+"Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
+"et/>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "submission.title"
+msgstr "Artikli pealkiri"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Alusta uut kaastööd väljaandes"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Uus kaastöö"
+
+msgid "grid.action.workflow"
+msgstr "Kaastöö esitamise töövoog"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Sisukokkuvõte peab olema {$wordCount} sõna või vähem."
+
+msgid "submission.submit.noContext"
+msgstr "Selle kaastöö ajakirja ei leitud."
+
+msgid "submission.issueEntry"
+msgstr "Metaandmed"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Ajakirja on teavitatud teie kaastöö esitamisest ja teile on saadetud "
+"kinnitus teie dokumentatsiooni jaoks. Kui toimetaja on kaastöö üle vaadanud, "
+"võetakse teiega ühendust."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Küljendatud lõppfail ilmub väljaande kirjes"
+
+msgid "grid.action.issueEntry"
+msgstr "Vaata selle kaastöö metaandmeid"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr ""
+"Artikli küljendatud lõppfail \"{$galleyFormatName}\" on tehtud "
+"kättesaadavaks."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Kaastöö avalikud identifikaatorid on uuendatud."
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>See lõppfail <em>tehakse lugejatele kättesaadavaks</em>.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Tee see lõppfail kättesaadavaks"
+
+msgid "submission.galleyFiles"
+msgstr "Küljendatud lõppfailid"
+
+msgid "grid.action.approveProof"
+msgstr "Kinnita see korrektuur küljenduses kasutamiseks."
+
+msgid "grid.action.pageProofApproved"
+msgstr "See korrektuur on kinnitatud küljenduses kasutamiseks."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Pealkiri ja sisukokkuvõte"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Laadi üles selle kaastööga seotud failid, sealhulgas artikkel, multimeedia, "
+"andmestikud, illustratsioonid jne."
+
+msgid "submission.pageProofs"
+msgstr "Korrektuuri lugemine"
+
+msgid "workflow.review.externalReview"
+msgstr "Retsenseerimine"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Kaastöö väljaande metaandmed on uuendatud."
+
+msgid "submission.upload.fileContents"
+msgstr "Artikli komponent"
+
+msgid "submission.complete"
+msgstr "Kinnitatud"
+
+msgid "submission.incomplete"
+msgstr "Ootab kinnitamist"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Privaatsuspoliitika"
+
+msgid "submission.submit.contributorRole"
+msgstr "Kaasautori roll"
+
+msgid "submission.citationFormat.notFound"
+msgstr "Soovitud viitamise formaati ei õnnestunud leida."
+
+msgid "section.any"
+msgstr "Mistahes rubriik"
+
+msgid "submission.sectionOptions"
+msgstr "Rubriigi valikud"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} onjekti"
+
+msgid "catalog.category.heading"
+msgstr "Kõik objektid"
+
+msgid "galley.editPublishedDisabled"
+msgstr "Selle väljaande lõppfaili ei saa muuta, kuna see on juba avaldatud."
+
+msgid "galley.publicationNotFound"
+msgstr "Selle lõppfaili väljaannet ei leitud."
+
+msgid "publication.assignToissue"
+msgstr "Määra numbrile"
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Esitamise kontrollnimekiri"
+
+msgid "publication.changeIssue"
+msgstr "Muuda numbrit"
+
+msgid "publication.invalidSection"
+msgstr "Selle väljaande rubriiki ei leitud."
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (Mitteaktiivne)"
+
+msgid "publication.invalidIssue"
+msgstr "Selle väljaande numbrit ei leitud."
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Kõik avaldamise nõuded on täidetud. Kas olete kindel, et soovite seda "
+"avaldada?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Kõik avaldamise nõuded on täidetud. See avaldatakse, kui {$issue} on "
+"avaldatud. Kas olete kindel, et soovite selle avaldamiseks ajatada?"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Kõik avaldamise nõuded on täidetud. See avaldatakse kohe, kuna avaldamise "
+"kuupäev on määratud {$datePublished}. Kas olete kindel, et soovite selle "
+"avaldada?"
+
+msgid "publication.required.issue"
+msgstr "Väljaanne peab olema määratud numbrile enne avaldamist."
+
+msgid "publication.publishedIn"
+msgstr "Avaldatud numbris<a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr ""
+"Ajatatud avaldamiseks väljaandes <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.unscheduledIn"
+msgstr "Seda pole väljaandes avaldamiseks ajatatud."
+
+msgid "publication.status.published"
+msgstr "Avaldatud"
+
+msgid "submission.publications"
+msgstr "Väljaanded"
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Autoriõiguse aasta määratakse automaatselt, kui see avaldatakse numbris."
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr "Autoriõiguse aasta määratakse automaatselt avaldamise kuupäeva põhjal."
+
+msgid "publication.datePublished"
+msgstr "Avaldamise kuupäev"
+
+msgid "publication.editDisabled"
+msgstr "See versioon on avaldatud ja seda ei saa muuta."
+
+msgid "publication.event.published"
+msgstr "Kaastöö avaldati."
+
+msgid "publication.event.scheduled"
+msgstr "Kaastöö ajatati avaldamiseks."
+
+msgid "publication.event.unpublished"
+msgstr "Kaastöö eemaldati avaldamisest."
+
+msgid "publication.event.versionPublished"
+msgstr "Uus versioon avaldati."
+
+msgid "publication.event.versionScheduled"
+msgstr "Uus versioon ajatati avaldamiseks."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Versioon eemaldati avaldamisest."
+
+msgid "publication.invalidSubmission"
+msgstr "Selle väljaande kaastööd ei leitud."
+
+msgid "publication.publish"
+msgstr "Avalda"
+
+msgid "publication.required.declined"
+msgstr "Tagasilükatud esitust ei saa avaldada."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Kaastöö peab olema toimetamise või küljenduse etapis enne, kui seda saab "
+"avaldada."
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Autoriõigused määratakse automaatselt {$copyright}, kui see avaldatakse."
+
+msgid "submission.copyrightOther.description"
+msgstr "Määra avaldatud kaastööde autoriõigused järgmisele osapoolele."
+
+msgid "publication.unpublish"
+msgstr "Tühista avaldamine"
+
+msgid "publication.unschedule.confirm"
+msgstr "Kas olete kindel, et te ei soovi seda avaldamiseks ajatada?"
+
+msgid "publication.version.details"
+msgstr "Versiooni {$version} avaldamise üksikasjad"
+
+msgid "submission.queries.production"
+msgstr "Tootmise arutelud"
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Tagasi retsenseerimisele"
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} tühistas otsuse selle kaastöö vastuvõtmise kohta ja saatis "
+"selle tagasi retsenseerimise etappi."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Tagasi retsenseerimisele saadetud"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "Kaastöö {$title} saadeti tagasi retsenseerimise etappi."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Vali failid, mis tuleks saata retsenseerimise etappi."
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+"Järgmise kaastöö {$pubObjectTitle} küljenduse DOI-d ei saanud luua: "
+"{$itemTitle}. Esitus peab olema määratud numbrile enne DOI genereerimist."
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+"Järgmise kaastöö DOI-d ei saanud luua: {$pubObjectTitle}. Esitus peab olema "
+"määratud numbrile enne DOI genereerimist."
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+"Järgmise kaastöö DOI-d ei saanud luua: {$pubObjectTitle}. See ei eksisteeri "
+"praeguses ajakirja kontekstis."
+
+msgid "submission.layout.viewGalley"
+msgstr "Vaata küljenduse lõppfaili"
+
+msgid "galley.cantEditPublished"
+msgstr "Seda lõppfaili ei saa muuta, kuna see on juba avaldatud."
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+"Te ei saa sellesse ajakirja kaastööd esitada, kuna kaastööd kõikidesse selle "
+"ajakirja rubriikidesse on deaktiveeritud või piiratud. Kui arvate, et "
+"tegemist on veaga, võtke palun ühendust <a "
+"href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+"{$contextName} ei võta vastu kaastöid rubriiki {$section}. Kui vajate abi "
+"oma kaastöö taastamiseks, võtke palun ühendust <a "
+"href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.sectionNotFound"
+msgstr "Selle kaastöö rubriiki ei leitud."
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr ""
+"Ainult toimetuse liikmetel on lubatud sellesse rubriiki kaastöid esitada."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Vähemalt üks autor on nõutav."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Palun sisesta oma artikli kokkuvõte."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Teie kokkuvõte on liiga pikk. Palun lühendage seda alla sõnade arvu "
+"piirangu, mis on selle rubriigi jaoks märgitud."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Palun valige kaasautori roll."
+
+msgid "submission.submit.userGroup"
+msgstr "Esita oma rollis kui..."
+
+msgid "submission.upload.selectComponent"
+msgstr "Vali artikli komponent"
+
+msgid "submission.title.tip"
+msgstr ""
+"Kaastöö tüüp on tavaliselt kas 'pilt', 'tekst' või muud multimeedia tüübid, "
+"sealhulgas 'tarkvara' või 'interaktiivne'. Palun valige oma kaastöö jaoks "
+"kõige asjakohasem. Näiteid võib leida aadressil <a target=\"_blank\" href="
+"\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\""
+">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr ""
+"Artikli küljendatud lõppfail \"{$galleyFormatName}\" on muudetud "
+"kättesaamatuks."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Formaadi kinnitamine"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>See lõppfail<em>ei ole enam lugejatele kättesaadav</em>.</p>"
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Küljendaja laadib üles avaldamiseks valmis failid, mis on avaldamiseks ette "
+"valmistatud. Kasutage <em>Määra kontrollija</em>, et määrata autorid ja "
+"teised küljenduste korrektuuri lugemiseks, koos parandatud failide "
+"üleslaadimisega kinnitamiseks enne avaldamist."
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Need spetsifikatsioonid põhinevad Dublin Core metaandmete standardil, "
+"rahvusvahelisel standardil, mida kasutatakse ajakirja sisu kirjeldamiseks."
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"See on määratud numbrile <a href=\"{$issueUrl}\">{$issueName}</a>, kuid seda "
+"pole avaldamiseks ajatatud."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Avaldamise kuupäev määratakse automaatselt, kui number avaldatakse. Ärge "
+"sisestage avaldamise kuupäeva, välja arvatud juhul, kui artikkel on varem "
+"mujal avaldatud ja teil on vaja seda tagasi dateerida."
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Kõik avaldamise nõuded on täidetud. See avaldatakse kohe väljaandes {$issue}"
+". Kas olete kindel, et soovite selle avaldada?"
+
+msgid "publication.selectIssue"
+msgstr "Valige number avaldamiseks ajatamiseks"
+
+msgid "submission.publication"
+msgstr "Väljaanne"
+
+msgid "submission.status.scheduled"
+msgstr "Ajatatud"
+
+msgid "publication.status.unscheduled"
+msgstr "Ajatamata"
+
+msgid "publication.publish.requirements"
+msgstr "Enne avaldamist peavad olema täidetud järgmised nõuded."
+
+msgid "submission.license.description"
+msgstr ""
+"Litsents määratakse automaatselt <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a>, kui see avaldatakse."
+
+msgid "publication.unpublish.confirm"
+msgstr "Kas olete kindel, et te ei soovi seda avaldada?"
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"Tühista otsus selle kaastöö vastuvõtmise kohta ja saada see tagasi "
+"retsenseerimise etappi."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Saada autoritele e-kiri, et teavitada neid kaastöö tagasisaatmisest "
+"retsenseerimise etappi. Selgita, miks see otsus tehti ja teavita autorit, "
+"milline täiendav retsenseerimine toimub."
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"Saada autoritele e-kiri, et teavitada neid, et see kaastöö saadetakse "
+"eelretsenseerimisele. Võimalusel anna autoritele teada, kui kaua "
+"eelretsenseerimise protsess võib kesta ja millal nad peaksid toimetajatelt "
+"uuesti kuulma. See e-kiri saadetakse alles pärast otsuse salvestamist."
+
+msgid "submission.copyright.description"
+msgstr ""
+"Palun lugege ja mõistke selle ajakirja kaastööde autoriõiguse tingimusi."
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+"Te ei saa sellesse ajakirja kaastööd esitada, kuna autorid peavad olema "
+"registreeritud toimetuse poolt. Kui arvate, et tegemist on veaga, võtke "
+"palun ühendust <a href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Palun sisestage oma artikli pealkiri."

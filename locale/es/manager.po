@@ -1,4 +1,4 @@
-# Jordi LC <jordi.lacruz@uab.cat>, 2021, 2022, 2023.
+# Jordi LC <jordi.lacruz@uab.cat>, 2021, 2022, 2023, 2025.
 # Antonio <elguije.ag@gmail.com>, 2021.
 # Guilherme Godoy <guilherme_godoy@sfu.ca>, 2025.
 msgid ""
@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2025-03-27 10:35+0000\n"
-"Last-Translator: Guilherme Godoy <guilherme_godoy@sfu.ca>\n"
+"PO-Revision-Date: 2025-04-09 13:12+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/manager/es/>"
 "\n"
 "Language: es\n"
@@ -2756,3 +2756,11 @@ msgid "plugins.importexport.common.error.issueGalleyFileMissing"
 msgstr ""
 "No se pudo exportar la galerada del número {$id}, no se encontró el archivo "
 "en la ruta \"{$path}\"."
+
+msgid "manager.setup.contextSummary.description"
+msgstr ""
+"Proporcione una descripción breve de su revista para dar una idea de su "
+"contenido y finalidad."
+
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr "El índice de la revista como lista de todos los envíos asociados."

@@ -1,7 +1,7 @@
 # "10 ..." <jaana.tonisson@tlulib.ee>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-04-04 13:52+0000\n"
+"PO-Revision-Date: 2025-04-06 09:42+0000\n"
 "Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
 "Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/locale/et/>"
 "\n"
@@ -1714,7 +1714,7 @@ msgid "notification.type.submissionSubmitted"
 msgstr "Uus artikkel, \"{$title},\" on esitatud."
 
 msgid "notification.type.galleyModified"
-msgstr "Artikli \"{$title}\" lõppfaili on muudetud."
+msgstr "Artikli \"{$title}\" lõppfaili on muudetud"
 
 msgid "notification.type.newAnnouncement"
 msgstr "Uus teadaanne on loodud."
@@ -1723,13 +1723,13 @@ msgid "notification.type.reviewing"
 msgstr "Retsenseerimise sündmused"
 
 msgid "notification.type.reviewerFormComment"
-msgstr "Artikli \"{$title}\" kohta on esitatud retsenseerimise vorm."
+msgstr "Artikli \"{$title}\" kohta on esitatud retsenseerimise vorm"
 
 msgid "notification.type.site"
 msgstr "Saidi sündmused"
 
 msgid "notification.type.submissionComment"
-msgstr "Toimetaja on jätnud kommentaari artikli \"{$title}\" kohta."
+msgstr "Toimetaja on jätnud kommentaari artikli \"{$title}\" kohta"
 
 msgid "notification.type.submissions"
 msgstr "Esitamise sündmused"
@@ -2187,7 +2187,7 @@ msgid "search.authorDetails"
 msgstr "Autori üksikasjad"
 
 msgid "notification.type.editorDecisionComment"
-msgstr "Artiklile \"{$title}\" on jäetud kommentaar toimetaja otsuse kohta."
+msgstr "Artiklile \"{$title}\" on jäetud kommentaar toimetaja otsuse kohta"
 
 msgid "search.syntaxInstructions"
 msgstr ""

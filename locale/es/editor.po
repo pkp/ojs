@@ -1,4 +1,4 @@
-# Jordi LC <jordi.lacruz@uab.cat>, 2021.
+# Jordi LC <jordi.lacruz@uab.cat>, 2021, 2025.
 # Marc Bria <marc.bria@gmail.com>, 2023.
 # Guilherme Godoy <guilherme_godoy@sfu.ca>, 2025.
 msgid ""
@@ -6,8 +6,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2025-03-27 10:31+0000\n"
-"Last-Translator: Guilherme Godoy <guilherme_godoy@sfu.ca>\n"
+"PO-Revision-Date: 2025-04-09 13:12+0000\n"
+"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/editor/es/>"
 "\n"
 "Language: es\n"
@@ -512,3 +512,14 @@ msgstr "Imagen de portada"
 #~ msgid "editor.article.hideCoverPageAbstract"
 #~ msgstr ""
 #~ "No mostrar la imagen de portada en la vista de resúmenes de artículos."
+
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr ""
+"Si se deja vacío, la fecha se establecerá automáticamente cuando se publique "
+"el número."
+
+msgid "editor.issues.datePublished.invalid"
+msgstr "La fecha de publicación no es válida. Debe tener el formato AAAA-MM-DD."
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr "La fecha de publicación es obligatoria cuando se publica un número."

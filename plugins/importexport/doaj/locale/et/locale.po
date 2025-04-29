@@ -1,0 +1,53 @@
+# "10 ..." <jaana.tonisson@tlulib.ee>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-06 09:42+0000\n"
+"Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
+"Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-doaj/et/>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "DOAJ ekspordi plugin"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "Ekspordi ajakiri DOAJ jaoks."
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "Kaasamiseks kontakteeru DOAJ-ga"
+
+msgid "plugins.importexport.doaj.registrationIntro"
+msgstr ""
+"Kui soovid registreerida OJS artikleid, palun sisesta oma DOAJ API võti. "
+"Vastasel juhul saad eksportida DOAJ XML formaati, kuid ei saa artikleid OJS "
+"sees registreerida DOAJ-s."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "DOAJ API võti"
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "Leiad oma API võtme DOAJ kasutaja lehelt."
+
+msgid ""
+"plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr ""
+"OJS deponeerib artikleid automaatselt DOAJ-sse. Pane tähele, et "
+"publikatsiooni töötlemine võib võtta veidi aega (nt olenevalt sinu ajatamise "
+"seadistusest). Saad kontrollida kõiki registreerimata artikleid."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "DOAJ automaatne registreerimine"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr "Deponeerimine ei olnud edukas! DOAJ API andis vaeteate: '{$param}'."
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"Kasutus:\n"
+"{$scriptName} {$pluginName} eksport [xmlFileName] [journal_path] artiklid "
+"objectId1 [objectId2] ...\n"

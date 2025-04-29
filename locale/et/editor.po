@@ -1,0 +1,493 @@
+# "10 ..." <jaana.tonisson@tlulib.ee>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-06 09:42+0000\n"
+"Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
+"Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/editor/et/>"
+"\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Esitatud kaastööd ja avaldamine"
+
+msgid "editor.submissionQueue"
+msgstr "Kaastööde järjekord"
+
+msgid "editor.submissionArchive"
+msgstr "Kaastööde arhiiv"
+
+msgid "editor.publishing"
+msgstr "Avaldamine"
+
+msgid "editor.publishedIssues"
+msgstr "Avaldatud numbrid"
+
+msgid "editor.allSections"
+msgstr "Kõik rubriigid"
+
+msgid "editor.allEditors"
+msgstr "Kõik toimetajad"
+
+msgid "editor.me"
+msgstr "Mina"
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Kaastöid arhiivis ei ole."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"Kas salvestada muudatused arhiveeritud kaastöödes? Kustutamiseks märgitud "
+"esitatud kaastööd kustutatakse süsteemist jäädavalt."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Kas olete kindel, et soovid selle otsuse salvestada?"
+
+msgid "editor.notifyUsers"
+msgstr "Teavita kasutajaid"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Kõik lugejad ({$count} users)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Kõik avaldatud autorid ({$count} kasutajat)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Kõik individuaalsed tellijad ({$count} kasutajat)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Kasutajate teavitamine..."
+
+msgid "editor.usersNotified"
+msgstr "Kasutajaid teavitatud"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+"Saada see teade kõigile selle ajakirjaga seotud kasutajatele ({$count} "
+"kasutajat)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Lisa selle numbri sisukord:"
+
+msgid "editor.editorAdministration"
+msgstr "Toimetaja administreerimine"
+
+msgid "editor.issues.createIssue"
+msgstr "Loo number"
+
+msgid "editor.issues.editIssue"
+msgstr "Numbri haldamine: {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "Praegune number"
+
+msgid "editor.issues.numArticles"
+msgstr "Artiklid"
+
+msgid "editor.issues.noArticles"
+msgstr "Sellesse numbrisse pole praegu ajatatud ühtegi artiklit."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Kas oled kindel, et soovid selle numbri jäädavalt kustutada?"
+
+msgid "editor.issues.published"
+msgstr "Avaldatud"
+
+msgid "editor.issues.unpublished"
+msgstr "Avaldamata"
+
+msgid "editor.issues.datePublished"
+msgstr "Avaldamise kuupäev"
+
+msgid "editor.issues.datePublished.invalid"
+msgstr "Avaldamise kuupäev on vigane. Kuupäev peab olema vormingus AAAA-KK-PP."
+
+msgid "editor.issues.volumeRequired"
+msgstr "Köide on kohustuslik ja peab olema positiivne numbriline väärtus."
+
+msgid "editor.issues.numberRequired"
+msgstr "Number on kohustuslik ja peab olema positiivne numbriline väärtus."
+
+msgid "editor.issues.titleRequired"
+msgstr "Numbri pealkiri on kohustuslik."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr ""
+"Numbri identifikaator on kohustuslik. Palun valige vähemalt üks numbri "
+"identifitseerimise valik."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Numbri identifikaator"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Avalik numbri identifikaator"
+
+msgid "editor.issues.description"
+msgstr "Kirjeldus"
+
+msgid "editor.issues.accessStatus"
+msgstr "Juurdepääsu staatus"
+
+msgid "editor.issues.accessDate"
+msgstr "Avatud juurdepääsu kuupäev"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Luba viivitusega avatud juurdepääs"
+
+msgid "editor.issues.coverPage"
+msgstr "Kaanepilt"
+
+msgid "editor.issues.uploaded"
+msgstr "Üles laaditud"
+
+msgid "editor.issues.remove"
+msgstr "Eemalda"
+
+msgid "editor.issues.proofed"
+msgstr "Korrektuur tehtud"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Kas eemaldada kaanepilt?"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"Kaanepilt, mida soovisite kustutada, ei vastanud selle numbri kaanepildile. "
+"Palun värskendage lehte ja proovige uuesti."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"Kaanepilti, mida soovisite kustutada, ei leitud. See võib olla juba "
+"kustutatud. Proovige lehte värskendada."
+
+msgid "editor.issues.styleFile"
+msgstr "Stiilileht"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"Sobimatu stiililehe formaat. Veenduge, et esitatud fail on kehtiv CSS. ("
+"Pange tähele, et stiililehed, mille alguses on kommentaarid, võidakse tagasi "
+"lükata.)"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Kas eemaldada stiilileht?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Kaane pealkiri"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Loo sellele numbrile kaas järgmiste elementidega."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Kuva"
+
+msgid "editor.issues.subscription"
+msgstr "Tellimus"
+
+msgid "editor.issues.identification"
+msgstr "Identifitseerimine"
+
+msgid "editor.issues.access"
+msgstr "Juurdepääs"
+
+msgid "editor.issues.cover"
+msgstr "Kaas"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"See ajakiri kasutab kohandatud numbrite järjestust. <a href=\"{$url}\" class="
+"\"action\">Lähtesta vaikimisi sätted</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"See number kasutab kohandatud rubriikide järjestust. <a href=\"{$url}\" "
+"class=\"action\">Lähtesta vaikimisi sätted</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Numbri andmed"
+
+msgid "editor.issues.saveChanges"
+msgstr "Kas salvestada muudatused sisukorras?"
+
+msgid "editor.issues.default"
+msgstr "Vaikimisi"
+
+msgid "editor.issues.order"
+msgstr "Järjestus"
+
+msgid "editor.issues.publicId"
+msgstr "Avalik ID"
+
+msgid "editor.issues.publishIssue"
+msgstr "Avalda number"
+
+msgid "editor.issues.previewIssue"
+msgstr "Numbri eelvaade"
+
+msgid "editor.issues.preview"
+msgstr "Eelvaade"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Kas olete kindel, et soovite avaldada uue numbri?"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Kas olete kindel, et soovite määrata selle numbri praeguseks numbriks?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Artikli avaliku ID salvestamine ebaõnnestus:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Avaldatud numbreid pole"
+
+msgid "editor.issues.open"
+msgstr "Avatud"
+
+msgid "editor.issues.galleys"
+msgstr "Numbri lõppfailid"
+
+msgid "editor.issues.galley"
+msgstr "Numbri lõppfail"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Numbri lõppfaili vaatamine"
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Ühtegi numbri lõppfaili pole avaldatud."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Numbri lõppfaili silt on kohustuslik."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Numbri lõppfaili keel on kohustuslik."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Numbri lõppfaili avalik identifikaator on juba olemas."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Tagasi numbri lõppfailide juurde"
+
+msgid "editor.issues.identifiers"
+msgstr "Identifikaatorid"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Tulevased numbrid"
+
+msgid "grid.action.addGalley"
+msgstr "Lisa lõppfail"
+
+msgid "grid.action.publish"
+msgstr "Avalda number"
+
+msgid "grid.action.addIssue"
+msgstr "Loo number"
+
+msgid "grid.action.previewIssue"
+msgstr "Eelvaade"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Loo numbri lõppfail"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Määra praegune number"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Varasemad numbrid"
+
+msgid "editor.article.decision"
+msgstr "Otsus"
+
+msgid "editor.submissions.showBy"
+msgstr "Näita"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Esita MM-DD"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Aktiivsed ülesanded"
+
+msgid "editor.submissions.invite"
+msgstr "Kutsu"
+
+msgid "editor.submissions.accept"
+msgstr "Aktsepteeri"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Viimane"
+
+msgid "editor.submissions.averageTime"
+msgstr "Nädalad"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Viimati lõpetatud"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Määratud toimetajale"
+
+msgid "issues.submissions.issueIds"
+msgstr "Määratud numbrile"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Näita ajatatud publikatsioon"
+
+msgid "editor.article.publishVersion"
+msgstr "Avaldamise versioon"
+
+msgid "editor.article.viewMetadata"
+msgstr "Vaata versiooni metaandmeid"
+
+msgid "editor.article.editMetadata"
+msgstr "Muuda versiooni metaandmeid"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Määratakse"
+
+msgid "editor.article.payment.requestPayment"
+msgstr "Küsi makset"
+
+msgid "grid.action.removeArticle"
+msgstr "Eemalda artikkel numbrist"
+
+msgid "editor.article.remove"
+msgstr "Eemalda"
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"Kas olete kindel, et soovite selle artikli numbrist eemaldada? Artikkel on "
+"saadaval ajatamiseks teises numbris."
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Juurdepääsu kuupäev ei ole kehtiv."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Muuda numbri lõppfaili"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"Küljendaja valmistab need failid iga korrektuuriversiooni jaoks ette ja "
+"laadib need seejärel korrektuuri jaoks üles vastava <span class="
+"\"pkp_help_title\">Lõppfailid</span> alla."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Vali korrektuuri lõppfailid"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"Lõplikud mustandfailid selles nimekirjas muudetakse toimetaja poolt "
+"toimetatud versioonideks ja laaditakse üles rubriiki <span class="
+"\"pkp_help_title\">Toimetamine</span>."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"Kõik failid, mis on juba üles laaditud mis tahes esitamise etapis, saab "
+"lisada korrektuuride loendisse, märkides alloleva märkeruudu \"Kaasa\" ja "
+"klõpsates \"Otsi\": kõik saadaolevad failid loetletakse ja neid saab valida "
+"kaasamiseks."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"Avalik identifikaator '{$publicIdentifier}' on juba määratud teisele sama "
+"tüüpi objektile. Palun valige oma ajakirja piires sama tüüpi objektidele "
+"unikaalsed identifikaatorid."
+
+msgid "editor.article.coverImage"
+msgstr "Kaanepilt"
+
+msgid "editor.home"
+msgstr "Toimetaja avaleht"
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"Avalik identifikaator '{$publicIdentifier}' on juba määratud teisele "
+"objektile (numbrile, artiklile, korrektuurversioonile või failile). Palun "
+"valige oma ajakirja piires unikaalsed identifikaatorid."
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"See esitatud kaastöö arhiveeritakse pärast seda, kui on saadetud e-kiri „"
+"Teavita autorit\" või vajutatud nuppu „Jäta e-kiri vahele\"."
+
+msgid "editor.submissions.inSection"
+msgstr "Rubriigis"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Enne esitatud kaastöö toimetamisse saatmist kasutage autorite teavitamiseks "
+"linki „Teavita autorit\" ja valige saadetav versioon."
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Ajata avaldamiseks väljaandes"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"Avaldamistasu pole makstud. Artikli avaldamiseks teavita autorit tasu "
+"maksmisest või sellest loobumisest."
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Kõik institutsionaalsed tellijad ({$count} kasutajat)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"Saada see teade kõigile selle ajakirjaga seotud kasutajatele, kes on "
+"märkinud, et soovivad uuendusi saada ({$count} kasutajat)"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"Kaanepilti, mida soovisite kustutada, ei leitud. See võib olla juba "
+"kustutatud. Proovige lehte värskendada."
+
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr "Kui jätate tühjaks, määratakse kuupäev numbri avaldamisel automaatselt."
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr "Avaldamise kuupäev on kohustuslik, kui number on avaldatud."
+
+msgid "editor.issues.yearRequired"
+msgstr "Aasta on kohustuslik ja peab olema positiivne numbriline väärtus."
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Lubatud vormingud: .gif, .jpg või .png)"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"Kaanepilt, mida soovite kustutada, vastab teise ajakirja numbrile. Palun "
+"kontrollige, et töötate õige ajakirjaga, kasutate õiget numbri ID-d ja "
+"proovige uuesti."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+"Sobimatu kaanelehe formaat. Aktsepteeritud vormingud on .gif, .jpg või .png."
+
+msgid "editor.issues.openAccess"
+msgstr "Avatud juurdepääs"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"Kõik artiklid lähevad tagasi toimetamise järjekorda ja kõik seotud failid "
+"eemaldatakse jäädavalt. Kas olete kindel, et soovite selle numbri eemaldada?"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Tühista numbri avaldamine"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Kas olete kindel, et soovite avaldatud numbri avaldamise tagasi võtta?"
+
+msgid "editor.issues.pages"
+msgstr "Leheküljed"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Avalda lõppfailid koos kogu numbri sisuga."
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Kas olete kindel, et soovite selle numbri lõppfaili kustutada?"
+
+msgid "grid.action.viewIssue"
+msgstr "Vaata"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Määra algne fail retsenseerimise versiooniks"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Kaastöid ei ole"

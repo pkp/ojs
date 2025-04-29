@@ -1,12 +1,13 @@
 # Dariusz Lis <Dariusz@Lis.PL>, 2021, 2023.
 # rl <biuro@fimagis.pl>, 2022, 2024.
+# Mikołaj Machowski <mikmach@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-30T17:55:29+00:00\n"
-"PO-Revision-Date: 2024-04-19 14:16+0000\n"
-"Last-Translator: rl <biuro@fimagis.pl>\n"
+"PO-Revision-Date: 2025-04-16 12:58+0000\n"
+"Last-Translator: Mikołaj Machowski <mikmach@gmail.com>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/manager/pl/>"
 "\n"
 "Language: pl\n"
@@ -2832,3 +2833,8 @@ msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
 msgstr ""
 "Nie można zaimportować ostatecznej treści wydania, bo brakuje pliku który ją "
 "zawiera."
+
+msgid "manager.setup.contextSummary.description"
+msgstr ""
+"Zaoferuj krótki opis swojego pisma by zapewnić wgląd w jego treści i "
+"przeznaczenie."
