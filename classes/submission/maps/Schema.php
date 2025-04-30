@@ -196,10 +196,10 @@ class Schema extends \PKP\submission\maps\Schema
 
         $issueIdsGroupedBySubmission = $publications->groupBy(fn (Publication $publication) => $publication->getData('submissionId'))
             ->map(fn ($entry) => $entry->map(fn (Publication $publication) => $publication->getData('issueId'))
-                ->filter()); // Filter to remove any entry where `$publication->getData('issueId')` returned null
+                ->filter())->toArray(); // Filter to remove any entry where `$publication->getData('issueId')` returned null
 
         return $submissions->mapWithKeys(function ($submission) use ($issues, $publications, $issueIdsGroupedBySubmission) {
-            $submissionIssueIds = $issueIdsGroupedBySubmission->get($submission->getId());
+            $submissionIssueIds = $issueIdsGroupedBySubmission[$submission->getId()] ?? [];
             return [$submission->getId() => $submissionIssueIds->mapWithKeys(fn ($id) => [$id => $issues->get($id)])];
         });
     }
