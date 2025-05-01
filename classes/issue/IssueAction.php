@@ -66,7 +66,7 @@ class IssueAction
      */
     public function allowedIssuePrePublicationAccess($journal, $user)
     {
-        /** @var RoleDAO */
+        /** @var RoleDAO $roleDao */
         $roleDao = DAORegistry::getDAO('RoleDAO');
         if ($user && $journal) {
             $journalId = $journal->getId();
