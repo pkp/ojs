@@ -199,7 +199,7 @@ class Schema extends \PKP\submission\maps\Schema
                 ->filter())->toArray(); // Filter to remove any entry where `$publication->getData('issueId')` returned null
 
         return $submissions->mapWithKeys(function ($submission) use ($issues, $publications, $issueIdsGroupedBySubmission) {
-            $submissionIssueIds = $issueIdsGroupedBySubmission[$submission->getId()] ?? collect();
+            $submissionIssueIds = collect($issueIdsGroupedBySubmission[$submission->getId()] ?? []);
             return [$submission->getId() => $submissionIssueIds->mapWithKeys(fn ($id) => [$id => $issues->get($id)])];
         });
     }
