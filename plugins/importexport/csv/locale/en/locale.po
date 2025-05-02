@@ -1,0 +1,102 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-09-30T06:56:45-07:00\n"
+"PO-Revision-Date: 2019-09-30T06:56:45-07:00\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "plugins.importexport.csv.displayName"
+msgstr "CSV Import Export Plugin"
+
+msgid "plugins.importexport.csv.description"
+msgstr "Import and export issues or users through a CSV file."
+
+msgid "plugins.importexport.csv.cliUsage"
+msgstr "Command-line tool for importing issues or users through a CSV file.\n"
+"Usage:\n"
+"{$scriptName} [users|issues] username [pathToCsvFile] <sendWelcomeEmail>\n"
+"Choose one of the following options:\n"
+" - users - import users from CSV file\n"
+" - issues - import issues from CSV file\n\n"
+"username - the username of the user to whom imported issues should be assigned.\n"
+"pathToCsvFile - the path to the CSV file to be imported.\n"
+"sendWelcomeEmail - optional parameter, if set to true, a welcome email will be sent to the imported users.\n"
+
+msgid "plugins.importexport.csv.cliUsage.examples"
+msgstr "Examples:\n"
+"{$scriptName} users admin /home/user/import_files/users.csv\n"
+"{$scriptName} issues admin /home/user/import_files/issues.csv\n"
+"{$scriptName} users admin /home/user/import_files/users.csv true\n"
+"{$scriptName} issues admin /home/user/import_files/issues.csv true\n"
+
+msgid "plugins.importexport.csv.unknownUser"
+msgstr "Unknown User: \"{$username}\". Exiting."
+
+msgid "plugins.importexport.csv.unknownSourceDir"
+msgstr "Invalid source dir: \"{$sourceDir}\". Please verify this param on CLI. Exiting."
+
+msgid "plugins.importexport.csv.couldNotOpenFile"
+msgstr "Could not read file: \"{$filePath}\". Error: \"{$errorMessage}\"."
+
+msgid "plugins.importexport.csv.couldNotCreateFile"
+msgstr "Could not create the file \"{$filename}\"."
+
+msgid "plugins.importexport.csv.rowDoesntContainAllFields"
+msgstr "Row doesn't contain all fields."
+
+msgid "plugins.importexport.csv.verifyRequiredFieldsForThisRow"
+msgstr "Verify the required fields for this row."
+
+msgid "plugins.importexport.csv.unknownJournal"
+msgstr "Unknown journal with path \"{$journalPath}\"."
+
+msgid "plugins.importexport.csv.unknownLocale"
+msgstr "Unknown locale or locale not supported by this journal: \"{$locale}\""
+
+msgid "plugins.importexport.csv.invalidArticleFile"
+msgstr "Invalid article file for this submission."
+
+msgid "plugins.importexport.csv.invalidCoverImage"
+msgstr "Invalid cover image for this submission."
+
+msgid "plugins.importexport.csv.invalidGalleyFile"
+msgstr "Invalid galley file \"{$filename}\" for this submission."
+
+msgid "plugins.importexport.csv.invalidNumberOfLabelsAndGalleys"
+msgstr "Galley files don't have the same amount as the labels. Please verify it for this row."
+
+msgid "plugins.importexport.csv.noAuthorGroup"
+msgstr "There is no default author group in the journal {$journal}."
+
+msgid "plugins.importexpot.csv.fileProcessFinished"
+msgstr "Process for file \"{$filename}\" finished. {$processedRows} rows processed. {$failedRows} rows with error."
+
+msgid "plugins.importexport.csv.invalidBookCoverImage"
+msgstr "The cover image has an invalid format for this row."
+
+msgid "plugins.importexport.csv.erroWhileSavingBookCoverImage"
+msgstr "An error occurred while saving the book cover image."
+
+msgid "plugins.importexport.csv.noGenre"
+msgstr "There is no {$genreName} genre."
+
+msgid "plugins.importexport.csv.errorWhileSavingSubmissionFile"
+msgstr "An error occurred while saving the Submission file."
+
+msgid "plugins.importexport.csv.errorWhileSavingSubmissionGalley"
+msgstr "An error occurred while saving the galley {$galley}."
+
+msgid "plugins.importexport.csv.userAlreadyExistsWithEmail"
+msgstr "User already exists with email \"{$email}\"."
+
+msgid "plugins.importexport.csv.userAlreadyExistsWithUsername"
+msgstr "User already exists with username \"{$username}\"."
+
+msgid "plugins.importexport.csv.roleDoesntExist"
+msgstr "Role \"{$role}\" doesn't exist."
