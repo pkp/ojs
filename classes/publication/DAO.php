@@ -30,7 +30,6 @@ class DAO extends \PKP\publication\DAO
         'submissionId' => 'submission_id',
         'status' => 'status',
         'urlPath' => 'url_path',
-        'version' => 'version',
         'doiId' => 'doi_id',
         'issueId' => 'issue_id',
         'versionStage' => 'version_stage',
