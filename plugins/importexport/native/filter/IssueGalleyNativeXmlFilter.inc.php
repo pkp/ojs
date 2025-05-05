@@ -100,7 +100,7 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 	 * @param $issueGalley IssueGalley
 	 */
 	function addFile($doc, $issueGalleyNode, $issueGalley) {
-		$issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /* @var $issueFileDao IssueFileDAO */
+		$issueFileDao = DAORegistry::getDAO('IssueFileDAO'); /** @var IssueFileDAO $issueFileDao  */
 		$issueFile = $issueFileDao->getById($issueGalley->getFileId());
 
 		if ($issueFile) {
@@ -120,13 +120,27 @@ class IssueGalleyNativeXmlFilter extends NativeExportFilter {
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'file_size', $issueFile->getFileSize()));
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'content_type', htmlspecialchars($issueFile->getContentType(), ENT_COMPAT, 'UTF-8')));
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'original_file_name', htmlspecialchars($issueFile->getOriginalFileName(), ENT_COMPAT, 'UTF-8')));
+
+
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_uploaded', strftime('%Y-%m-%d', strtotime($issueFile->getDateUploaded()))));
 			$issueFileNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'date_modified', strftime('%Y-%m-%d', strtotime($issueFile->getDateModified()))));
 
+			if ($this->opts['serializationMode'] !== self::SERIALIZATION_MODE_EMBED) {
+				$request = Application::get()->getRequest();
 
-			$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
-			$embedNode->setAttribute('encoding', 'base64');
-			$issueFileNode->appendChild($embedNode);
+				$fileUrl = ($this->opts['serializationMode'] === self::SERIALIZATION_MODE_URL)
+					? $request->url(null, 'issue', 'view', array($issueGalley->getIssueId(), $issueGalley->getId()))
+					: "{$request->getBasePath()}/{$filePath}";
+
+				$hrefNode = $doc->createElementNS($deployment->getNamespace(), 'href');
+				$hrefNode->setAttribute('src', htmlspecialchars($fileUrl, ENT_COMPAT, 'UTF-8'));
+				$hrefNode->setAttribute('mime_type', $issueFile->getFileType());
+				$issueFileNode->appendChild($hrefNode);
+			} else {
+				$embedNode = $doc->createElementNS($deployment->getNamespace(), 'embed', base64_encode(file_get_contents($filePath)));
+				$embedNode->setAttribute('encoding', 'base64');
+				$issueFileNode->appendChild($embedNode);
+			}
 
 			$issueGalleyNode->appendChild($issueFileNode);
 			return true;
