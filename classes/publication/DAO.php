@@ -32,7 +32,12 @@ class DAO extends \PKP\publication\DAO
         'urlPath' => 'url_path',
         'version' => 'version',
         'doiId' => 'doi_id',
-        'issueId' => 'issue_id'
+        'issueId' => 'issue_id',
+        'versionStage' => 'version_stage',
+        'versionMinor' => 'version_minor',
+        'versionMajor' => 'version_major',
+        'createdAt' => 'created_at',
+        'sourcePublicationId' => 'source_publication_id'
     ];
 
     /**
