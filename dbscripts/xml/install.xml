@@ -58,4 +58,5 @@
 	<code function="addPluginVersions"/>
 	<code function="installDefaultNavigationMenus"/>
 	<code function="updateRorRegistryDataset"/>
+	<code function="downloadIPGeoDB"/>
 </install>
