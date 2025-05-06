@@ -44,7 +44,7 @@
 			{load_url_in_div id="sectionsGridContainer" url=$sectionsGridUrl}
 		</tab>
 		<tab id="categories" label="{translate key="grid.category.categories"}">
-			<category-manager v-bind="components.{PKP\components\CategoryManager::COMPONENT_CATEGORY}"></category-manager>
+			<category-manager v-bind="pageInitConfig"></category-manager>
 		</tab>
 	</tabs>
 {/block}
