@@ -1,15 +1,20 @@
+# Petra Cacic <petracacic3@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:08+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:08+00:00\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: \n"
+"PO-Revision-Date: 2025-05-07 12:57+0000\n"
+"Last-Translator: Petra Cacic <petracacic3@gmail.com>\n"
+"Language-Team: Croatian <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-counter/hr/>\n"
+"Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.reports.counter.description"
 msgstr ""
@@ -21,34 +26,36 @@ msgid "plugins.reports.counter"
 msgstr "COUNTER statistike"
 
 msgid "plugins.reports.counter.release"
-msgstr ""
+msgstr "COUNTER Statistike"
 
 msgid "plugins.reports.counter.error.badParameters"
-msgstr ""
+msgstr "Parametri izvješća nisu bili važeći."
 
 msgid "plugins.reports.counter.error.badRequest"
-msgstr ""
+msgstr "Zahtjev za izvješće nije važeći."
 
 msgid "plugins.reports.counter.error.noResults"
-msgstr ""
+msgstr "Za ovo izvješće nisu pronađeni rezultati."
 
 msgid "plugins.reports.counter.error.noXML"
-msgstr ""
+msgstr "Rezultati se nisu mogli formatirati kao XML."
 
 msgid "plugins.reports.counter.1a.name"
-msgstr ""
+msgstr "COUNTER Izvješće JR1 (R3)"
 
 msgid "plugins.reports.counter.1a.description"
 msgstr ""
+"Izvješće COUNTER Journal 1 (R3): Zahtjevi za članke u punom tekstu po "
+"mjesecu i časopisu"
 
 msgid "plugins.reports.counter.allCustomers"
-msgstr ""
+msgstr "Svi kupci"
 
 msgid "plugins.reports.counter.ar1.title"
-msgstr ""
+msgstr "Izvješće o članku 1"
 
 msgid "plugins.reports.counter.jr1.title"
-msgstr ""
+msgstr "Izvješće časopisa 1"
 
 #~ msgid "plugins.reports.counter.clearLog"
 #~ msgstr "Izbriši evidenciju"
