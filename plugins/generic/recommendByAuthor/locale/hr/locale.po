@@ -2,7 +2,7 @@
 # Petra Cacic <petracacic3@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-06 18:55+0000\n"
+"PO-Revision-Date: 2025-05-07 12:57+0000\n"
 "Last-Translator: Petra Cacic <petracacic3@gmail.com>\n"
 "Language-Team: Croatian <http://translate.pkp.sfu.ca/projects/ojs/"
 "generic-recommendByAuthor/hr/>\n"
@@ -17,3 +17,9 @@ msgstr ""
 msgid "plugins.generic.recommendByAuthor.description"
 msgstr ""
 "Ovaj dodatak umeće popis članaka istog autora na stranicu sažetka članka."
+
+msgid "plugins.generic.recommendByAuthor.displayName"
+msgstr "Preporučeni članci autora"
+
+msgid "plugins.generic.recommendByAuthor.heading"
+msgstr "Najčitaniji članci istog autora / istih autora"
