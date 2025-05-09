@@ -1,12 +1,13 @@
 # Vladimir Dobovičnik <vladimir.dobovicnik@pravo.hr>, 2022.
 # Franjo <fpehar@unizd.hr>, 2024.
+# Petra Cacic <petracacic3@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:24+00:00\n"
-"PO-Revision-Date: 2024-12-11 21:05+0000\n"
-"Last-Translator: Franjo <fpehar@unizd.hr>\n"
+"PO-Revision-Date: 2025-05-09 17:03+0000\n"
+"Last-Translator: Petra Cacic <petracacic3@gmail.com>\n"
 "Language-Team: Croatian <http://translate.pkp.sfu.ca/projects/ojs/locale/hr/>"
 "\n"
 "Language: hr\n"
@@ -534,12 +535,19 @@ msgstr "Povratak na detalje broja"
 
 msgid "doi.issue.incorrectContext"
 msgstr ""
+"Nije bilo moguće generirati DOI za sljedeći broj: {$itemTitle}. Broj ne "
+"postoji u trenutnom časopisu."
 
+#, fuzzy
 msgid "doi.issue.incorrectStaleStatus"
 msgstr ""
+"Nije bilo moguće postaviti status DOI-a za sljedeći broj: {$itemTitle}. DOI "
+"mora imati status \"Registrirano\" ili \"Poslano\"."
 
 msgid "doi.issue.notPublished"
 msgstr ""
+"Nije bilo moguće označiti DOI kao registriran za {$pubObjectTitle}. Broj "
+"mora biti objavljen prije nego što se status može ažurirati."
 
 msgid "subscriptionTypes.currency"
 msgstr "Valuta"
@@ -1764,8 +1772,9 @@ msgstr "Više informacija o OJS-u."
 msgid "about.aboutThisPublishingSystem.altText"
 msgstr "Proces uređivanja i izdavanja u OJS-u"
 
+#, fuzzy
 msgid "about.aboutSoftware"
-msgstr ""
+msgstr "O sustavu Open Journal Systems"
 
 #, fuzzy
 msgid "about.aboutOJSJournal"
@@ -2470,3 +2479,6 @@ msgstr "Odaberite kako želite rasporediti članke u ovoj kategoriji."
 #~ "primjedbama kao i tekst pregleda i preporuka. Urednici upisuju "
 #~ "odobravanja ili neslaganja i njihove preglede i preporuke u stranicu "
 #~ "Pregled podnesaka da bi pratili proces recenzije."
+
+msgid "search.journal"
+msgstr "Prema časopisu"
