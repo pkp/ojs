@@ -21,7 +21,7 @@
     "@vue-a11y/announcer": "^3.1.5",
     "@vueuse/core": "^10.11.1",
     "altcha": "^1.4.2",
-    "chart.js": "^4.4.8",
+    "chart.js": "^4.4.9",
     "clone-deep": "^4.0.1",
     "copyfiles": "^2.4.1",
     "debounce": "^1.2.1",
