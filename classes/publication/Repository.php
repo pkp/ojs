@@ -93,6 +93,13 @@ class Repository extends \PKP\publication\Repository
             }
         }
 
+        // If the continuousPublication enabled and no issue is selected,
+        // this is allowed and will return other error if there are any
+        if (!isset($props['issueId']) && $context->getData('continuousPublication')) {
+            return $errors;    
+        }
+
+        // If the continuousPublication is not enable
         // Ensure that the issueId exists
         if (isset($props['issueId']) && empty($errors['issueId'])) {
             if (!Repo::issue()->exists($props['issueId'])) {
@@ -106,15 +113,17 @@ class Repository extends \PKP\publication\Repository
     /** @copydoc PKP\publication\Repository::validatePublish() */
     public function validatePublish(Publication $publication, Submission $submission, array $allowedLocales, string $primaryLocale): array
     {
+        $context = Application::get()->getRequest()->getContext();
+
         $errors = parent::validatePublish($publication, $submission, $allowedLocales, $primaryLocale);
 
-        // Every publication must be scheduled in an issue
-        if (!$publication->getData('issueId') || !Repo::issue()->get($publication->getData('issueId'))) {
+        if (!$publication->getData('issueId') && !$publication->getData('continuousPublication')) {
+            $errors['issueId'] = __('publication.required.issue');
+        } else if ($publication->getData('issueId') && !Repo::issue()->get($publication->getData('issueId'))) {
             $errors['issueId'] = __('publication.required.issue');
         }
 
         // If submission fees are enabled, check that they're fulfilled
-        $context = Application::get()->getRequest()->getContext();
         if (!$context || $context->getId() !== $submission->getData('contextId')) {
             $context = app()->get('context')->get($submission->getData('contextId'));
         }
@@ -166,6 +175,16 @@ class Repository extends \PKP\publication\Repository
      */
     protected function setStatusOnPublish(Publication $publication)
     {
+        if ($publication->getData('continuousPublication')) {
+            $publication->setData('status', Submission::STATUS_PUBLISHED);
+            
+            if (!$publication->getData('datePublished')) {
+                $publication->setData('datePublished', Core::getCurrentDate());
+            }
+
+            return;
+        }
+
         $issue = Repo::issue()->get($publication->getData('issueId'));
 
         // If issue is not published just set publication status to STATUS_SCHEDULED

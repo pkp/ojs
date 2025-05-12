@@ -17,6 +17,8 @@
 namespace APP\components\forms\context;
 
 use APP\journal\Journal;
+use APP\core\Application;
+
 use PKP\components\forms\FieldOptions;
 use PKP\components\forms\FieldSelect;
 use PKP\components\forms\FormComponent;
@@ -50,16 +52,37 @@ class AccessForm extends FormComponent
             ];
         }
 
-        $this->addField(new FieldOptions('publishingMode', [
-            'label' => __('manager.distribution.publishingMode'),
-            'type' => 'radio',
-            'options' => [
-                ['value' => Journal::PUBLISHING_MODE_OPEN, 'label' => __('manager.distribution.publishingMode.openAccess')],
-                ['value' => Journal::PUBLISHING_MODE_SUBSCRIPTION, 'label' => __('manager.distribution.publishingMode.subscription')],
-                ['value' => Journal::PUBLISHING_MODE_NONE, 'label' => __('manager.distribution.publishingMode.none')],
-            ],
-            'value' => $context->getData('publishingMode'),
-        ]))
+        $issueUrl = Application::get()->getRequest()->getDispatcher()->url(
+            Application::get()->getRequest(),
+            Application::ROUTE_PAGE,
+            null,
+            'manageIssues',
+        );
+        
+        $description = __('manager.setup.continuousPublication.description', ['url' => $issueUrl]);
+
+        $this
+            ->addField(new FieldOptions('continuousPublication', [
+                'label' => __('manager.setup.continuousPublication'),
+                'description' => $description,
+                'options' => [
+                    [
+                        'value' => true,
+                        'label' => __('manager.setup.continuousPublication'),
+                    ],
+                ],
+                'value' => (bool) $context->getData('continuousPublication'),
+            ]))
+            ->addField(new FieldOptions('publishingMode', [
+                'label' => __('manager.distribution.publishingMode'),
+                'type' => 'radio',
+                'options' => [
+                    ['value' => Journal::PUBLISHING_MODE_OPEN, 'label' => __('manager.distribution.publishingMode.openAccess')],
+                    ['value' => Journal::PUBLISHING_MODE_SUBSCRIPTION, 'label' => __('manager.distribution.publishingMode.subscription')],
+                    ['value' => Journal::PUBLISHING_MODE_NONE, 'label' => __('manager.distribution.publishingMode.none')],
+                ],
+                'value' => $context->getData('publishingMode'),
+            ]))
             ->addField(new FieldSelect('delayedOpenAccessDuration', [
                 'label' => __('about.delayedOpenAccess'),
                 'options' => $validDelayedOpenAccessDuration,

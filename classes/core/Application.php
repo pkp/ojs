@@ -246,6 +246,14 @@ class Application extends PKPApplication
     }
 
     /**
+     * Define if the application has continuous publication functionality
+     */
+    public function hasContinuousPublication(): bool
+    {
+        return true;
+    }
+
+    /**
      * Get the help URL of this application
      */
     public static function getHelpUrl(): string
