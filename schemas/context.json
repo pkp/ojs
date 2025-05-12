@@ -384,6 +384,12 @@
 				"nullable"
 			],
 			"defaultLocaleKey": "default.submission.step.reviewerSuggestions"
+		},
+		"continuousPublication": {
+			"type": "boolean",
+			"validation": [
+				"nullable"
+			]
 		}
 	}
 }

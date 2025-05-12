@@ -49,6 +49,12 @@ class IssueEntryForm extends FormComponent
         // Issue options
         $issueOptions = [['value' => '', 'label' => '']];
 
+        $issueExists = Repo::issue()
+            ->getCollector()
+            ->filterByContextIds([$publicationContext->getId()])
+            ->getQueryBuilder()
+            ->exists();
+
         $unpublishedIssues = Repo::issue()->getCollector()
             ->filterByContextIds([$publicationContext->getId()])
             ->filterByPublished(false)
@@ -90,17 +96,21 @@ class IssueEntryForm extends FormComponent
             ];
         }
 
-        $this->addField(new FieldSelectIssue('issueId', [
-            'label' => __('issue.issue'),
-            'options' => $issueOptions,
-            'publicationStatus' => $publication->getData('status'),
-            'value' => $publication->getData('issueId') ? $publication->getData('issueId') : '',
-        ]))
-            ->addField(new FieldSelect('sectionId', [
-                'label' => __('section.section'),
-                'options' => $sectionOptions,
-                'value' => (int) $publication->getData('sectionId'),
+        if ($issueExists) {
+            $this->addField(new FieldSelectIssue('issueId', [
+                'label' => __('issue.issue'),
+                'options' => $issueOptions,
+                'publicationStatus' => $publication->getData('status'),
+                'value' => $publication->getData('issueId') ? $publication->getData('issueId') : '',
             ]));
+        }
+
+        
+        $this->addField(new FieldSelect('sectionId', [
+            'label' => __('section.section'),
+            'options' => $sectionOptions,
+            'value' => (int) $publication->getData('sectionId'),
+        ]));
 
         // Categories
         $categoryOptions = [];
