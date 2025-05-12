@@ -16,6 +16,7 @@
 
 namespace APP\pages\management;
 
+use APP\core\Application;
 use APP\API\v1\reviewers\recommendations\resources\ReviewerRecommendationResource;
 use APP\components\forms\context\AccessForm;
 use APP\components\forms\context\ArchivingLockssForm;
@@ -107,7 +108,7 @@ class SettingsHandler extends ManagementHandler
 
         $components[$reviewerRecommendationsListPanel->id] = $reviewerRecommendationsListPanel->getConfig();
         $templateManager->setState(['components' => $components]);
-        $templateManager->assign('hasCustomizableRecommendation', true);
+        $templateManager->assign('hasCustomizableRecommendation', Application::get()->hasCustomizableReviewerRecommendation());
     }
 
     /**
