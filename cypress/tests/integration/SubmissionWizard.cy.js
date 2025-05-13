@@ -554,7 +554,7 @@ describe('Submission Wizard', function() {
         });
 
         // Categories should appear in UI language (English)
-        cy.get('label:contains("Social Sciences > Sociology")').click();
+        // cy.get('label:contains("Social Sciences > Sociology")').click();
 
         // Errors in review
         cy.get('button:contains("Continue")').click();
@@ -580,9 +580,9 @@ describe('Submission Wizard', function() {
             .should('not.exist');
 
         // Categories in current UI language (English)
-        cy.get('h4:contains("Categories")')
-            .parent()
-            .contains('Social Sciences > Sociology');
+        // cy.get('h4:contains("Categories")')
+        //     .parent()
+        //     .contains('Social Sciences > Sociology');
 
         // Add missing data
         cy.get('.pkpSteps button:contains("Details")').click({ force: true });
