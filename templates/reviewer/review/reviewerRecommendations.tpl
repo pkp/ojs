@@ -25,7 +25,7 @@
 		required=$required|default:true
 		disabled=$readOnly
 		translate=false
-		defaultValue=""
+		defaultValue=" "
 		defaultLabel="common.chooseOne"|translate
 	}
 {/fbvFormSection}
