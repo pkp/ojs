@@ -18,6 +18,7 @@ use APP\core\Application;
 use APP\facades\Repo;
 use APP\payment\ojs\OJSCompletedPaymentDAO;
 use APP\payment\ojs\OJSPaymentManager;
+use APP\publication\enums\VersionStage;
 use APP\submission\Submission;
 use Illuminate\Support\Facades\App;
 use PKP\context\Context;
@@ -25,7 +26,6 @@ use PKP\core\Core;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\publication\Collector;
-use PKP\publication\enums\VersionStage;
 
 class Repository extends \PKP\publication\Repository
 {
