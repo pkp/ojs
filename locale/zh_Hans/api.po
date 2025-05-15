@@ -2,7 +2,7 @@
 # wenshao521！ <wainixueer3334@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-14 06:24+0000\n"
+"PO-Revision-Date: 2025-05-15 10:57+0000\n"
 "Last-Translator: wenshao521！ <wainixueer3334@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/api/zh_Hans/>\n"
@@ -51,13 +51,13 @@ msgid "api.contexts.404.contextNotFound"
 msgstr "未找到您请求的期刊。"
 
 msgid "api.dois.403.contextsNotMatched"
-msgstr ""
+msgstr "您请求的 DOI 不属于此期刊。"
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"
-msgstr ""
+msgstr "此期刊尚未配置 DOI 注册机构。"
 
 msgid "api.dois.400.depositFailed"
-msgstr ""
+msgstr "部分项目未成功存储。请检查各个项目的具体错误信息。"
 
 msgid "api.emailTemplates.403.notAllowedChangeContext"
 msgstr "您无权将此电子邮件模板移至其他期刊。"
@@ -75,7 +75,10 @@ msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr "您不能将此备用阶段文件与此文件关联。"
 
 msgid "api.submission.400.inactiveSection"
-msgstr ""
+msgstr "该版块不再接收提交稿件。"
 
 #~ msgid "api.submissions.403.contextRequired"
 #~ msgstr "要提交或编辑稿件，您必须向期刊的 API 端点发送请求。"
+
+msgid "api.publications.403.paymentFeesNotEnabled"
+msgstr "提交支付表单不可用，因为出版支付费用未启用。"
