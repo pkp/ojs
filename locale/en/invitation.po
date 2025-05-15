@@ -14,7 +14,7 @@ msgid "acceptInvitation.detailsReview.stepDescription"
 msgstr "Review details to start your new roles in OJS"
 
 msgid "acceptInvitation.modal.message"
-msgstr "Congratulations on your new role in OJS! You might now have access to new options. If you need assistance navigating the system, please click on the “Help” buttons throughout the interface for guidance"
+msgstr "Congratulations on your new role in OJS! You might now have access to new options. If you need any assistance in understanding the system, please click on the “Help” button throughout the system for guidance."
 
 msgid "acceptInvitation.modal.title"
 msgstr "You've been assigned a new role in OJS"
