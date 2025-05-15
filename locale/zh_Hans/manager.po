@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2025-05-15 10:57+0000\n"
+"PO-Revision-Date: 2025-05-15 14:43+0000\n"
 "Last-Translator: wenshao521！ <wainixueer3334@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/manager/zh_Hans/>\n"
@@ -911,13 +911,8 @@ msgstr "审稿人阅读选项"
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
 msgstr "「一点审稿」模式"
 
-#, fuzzy
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
-msgstr ""
-"<strong>注意：</strong> 这封给审稿人的电子邮件邀请函会包涵一个特殊的网址链"
-"接，邀请审稿人直接进入稿件的「审稿」页面（同时可以存取其他需要登入身份的页"
-"面）。基于与这个选项相关的安全性理由，编辑在寄出给审稿人的邀请函之前，不能变"
-"更电子邮件或者增加副本(CCs)或密件副本(BCCs)。"
+msgstr "审稿人可以在电子邮件邀请中收到一个安全链接，点击该链接时将自动登录。"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr "在发给审稿人的邮件中嵌入安全链接。"
@@ -1359,10 +1354,10 @@ msgid "manager.subscriptions.form.typeIdValid"
 msgstr "请选择一个有效的订阅类型。"
 
 msgid "manager.subscriptions.form.institution"
-msgstr ""
+msgstr "机构"
 
 msgid "manager.subscriptions.form.institutionIdValid"
-msgstr ""
+msgstr "请选择一个有效的机构。"
 
 msgid "manager.subscriptions.form.dateStart"
 msgstr "开始日期"
@@ -1487,7 +1482,7 @@ msgid "manager.subscriptions.form.typeRequired"
 msgstr "订阅类型必须在新订阅之前被创建。"
 
 msgid "manager.subscriptions.form.institutionRequired"
-msgstr ""
+msgstr "必须先创建一个机构，才能进行新的订阅。"
 
 msgid "manager.subscriptions.ipRange"
 msgstr "IP 范围"
@@ -1848,52 +1843,54 @@ msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "将副本发送到“期刊设置”中标识的主要联系人。"
 
 msgid "stats.contextStats"
-msgstr ""
+msgstr "期刊统计数据"
 
 msgid "stats.context.tooltip.text"
-msgstr ""
+msgstr "浏览期刊首页的访客数量。"
 
 msgid "stats.context.tooltip.label"
-msgstr ""
+msgstr "关于期刊统计信息"
 
 msgid "stats.context.downloadReport.description"
-msgstr ""
+msgstr "下载符合以下参数的本期刊使用统计数据的 CSV/Excel 表格。"
 
 msgid "stats.context.downloadReport.downloadContext.description"
-msgstr ""
+msgstr "期刊首页的浏览次数。"
 
 msgid "stats.context.downloadReport.downloadContext"
-msgstr ""
+msgstr "下载期刊"
 
 msgid "stats.issueStats"
-msgstr ""
+msgstr "期刊期次统计"
 
 msgid "stats.issues.details"
-msgstr ""
+msgstr "浏览量与下载量"
 
 msgid "stats.issues.searchIssueDescription"
-msgstr ""
+msgstr "搜索期刊标题、卷号和期号"
 
 msgid "stats.issues.none"
-msgstr ""
+msgstr "未找到符合这些参数的期刊使用统计数据。"
 
 msgid "stats.issues.downloadReport.description"
-msgstr ""
+msgstr "下载符合以下参数的期刊期次使用统计数据的 CSV/Excel 表格。"
 
 msgid "stats.issues.downloadReport.downloadIssues.description"
-msgstr ""
+msgstr "每期目录（TOC）浏览次数及期刊版式文件下载量。"
 
 msgid "stats.issues.downloadReport.downloadIssues"
-msgstr ""
+msgstr "下载期刊期次数据"
 
 msgid "stats.issues.countOfTotal"
-msgstr ""
+msgstr "已显示 {$count} 条，共 {$total} 条期刊期次记录"
 
 msgid "stats.issues.tooltip.label"
-msgstr ""
+msgstr "关于期刊期次统计信息"
 
 msgid "stats.issues.tooltip.text"
 msgstr ""
+"<strong>浏览量</strong>：查看该期目录的访客数量。<br><strong>下载量</strong>"
+"：该期版式文件的下载次数（如存在）。"
 
 msgid "stats.publicationStats"
 msgstr "文章统计"
@@ -1920,13 +1917,13 @@ msgid "stats.publications.galleys"
 msgstr "文件"
 
 msgid "stats.publications.downloadReport.description"
-msgstr ""
+msgstr "下载符合以下参数的文章使用统计数据的 CSV/Excel 表格。"
 
 msgid "stats.publications.downloadReport.downloadSubmissions"
-msgstr ""
+msgstr "下载文章数据"
 
 msgid "stats.publications.downloadReport.downloadSubmissions.description"
-msgstr ""
+msgstr "每篇文章的摘要浏览次数和文件下载量。"
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr "将提交确认电子邮件的副本发送给该期刊的主要联系人。"
@@ -1957,7 +1954,7 @@ msgid "emailTemplate.variable.context.contactName"
 msgstr "期刊主要联系地址"
 
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr ""
+msgstr "期刊简称"
 
 msgid "emailTemplate.variable.context.contextSignature"
 msgstr "用于自动发送电子邮件的期刊电子邮件签名"
@@ -1966,7 +1963,7 @@ msgid "emailTemplate.variable.context.contactEmail"
 msgstr "期刊主要联系人的电子邮件地址"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "期刊邮寄地址"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "付款类型名称"
@@ -1981,250 +1978,270 @@ msgid "emailTemplate.variable.site.siteTitle"
 msgstr "托管多种期刊的网站名称"
 
 msgid "emailTemplate.variable.subscription.subscriberDetails"
-msgstr ""
+msgstr "订阅者的姓名、单位、电话号码和电子邮件地址"
 
 msgid "emailTemplate.variable.subscription.subscriptionSignature"
-msgstr ""
+msgstr "订阅管理人员的联系方式"
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
-msgstr ""
+msgstr "订阅页面的链接网址"
 
 msgid "emailTemplate.variable.subscription.expiryDate"
-msgstr ""
+msgstr "订阅结束日期"
 
 msgid "emailTemplate.variable.subscription.subscriptionType"
-msgstr ""
+msgstr "订阅类型、名称、期限及费用的概要说明"
 
 msgid "emailTemplate.variable.subscription.membership"
-msgstr ""
+msgstr "订阅者会员身份信息"
 
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr ""
+msgstr "订阅机构名称"
 
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr ""
+msgstr "订阅机构的邮寄地址"
 
 msgid "emailTemplate.variable.subscription.domain"
-msgstr ""
+msgstr "本订阅有效 IP 地址对应的域名"
 
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr ""
+msgstr "本订阅的有效 IP 地址范围"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "作者支付页面的网址链接"
 
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "投稿指南的网址链接"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "已发表文章统计页面的链接"
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "期次编号"
 
 msgid "mailable.statisticsReportNotify.description"
-msgstr ""
+msgstr "该邮件由系统自动每月发送给编辑和期刊管理员，提供系统运行状态概览。"
 
 msgid "mailable.validateEmailContext.name"
-msgstr ""
+msgstr "验证电子邮件（期刊注册）"
 
 msgid "mailable.validateEmailContext.description"
-msgstr ""
+msgstr "当系统设置要求验证电子邮件地址时，该邮件会在新用户注册期刊时自动发送。"
 
 msgid "doi.displayName"
-msgstr ""
+msgstr "DOI"
 
 msgid "doi.description"
-msgstr ""
+msgstr "该插件支持在 OJS 中为期次、文章和版式分配数字对象唯一标识符（DOI）。"
 
 msgid "doi.readerDisplayName"
-msgstr ""
+msgstr "DOI"
 
 msgid "doi.manager.displayName"
-msgstr ""
+msgstr "数字对象唯一标识符（DOI）"
 
 msgid "doi.manager.settings.description"
-msgstr ""
+msgstr "请配置 DOI 插件，以便在 OJS 中管理和使用 DOI："
 
 msgid "doi.manager.settings.explainDois"
-msgstr ""
+msgstr "请选择将被分配数字对象唯一标识符（DOI）的出版对象："
 
 msgid "doi.manager.settings.enableRepresentationDoi"
-msgstr ""
+msgstr "文章版式文件"
 
 msgid "doi.manager.settings.galleysWithDescription"
-msgstr ""
+msgstr "文章版式文件，例如已发布的 PDF 文件"
 
 msgid "doi.manager.settings.doiPrefix"
-msgstr ""
+msgstr "DOI 前缀"
 
 msgid "doi.manager.settings.doiPrefixPattern"
-msgstr ""
+msgstr "DOI 前缀为必填项，格式必须为 10.xxxx。"
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr ""
+"为每种出版类型输入自定义后缀模式。自定义后缀模式可使用以下符号生成后缀：<br><"
+"br>\n"
+"<code>%j</code> 期刊简称<br><code>%v</code> 期次卷号<br><code>%i</code> "
+"期次编号<br><code>%Y</code> 期次年份<br><code>%a</code> "
+"文章编号<br><code>%g</code> 版式编号\n"
+"<br><code>%f</code> 文件编号<br><code>%p</code> 页码<br><code>%x</code> "
+"自定义标识符\n"
+"<br><br>请注意，自定义后缀模式常常会导致 DOI "
+"生成和注册出现问题。使用自定义后缀模式时，请务必仔细测试编辑是否能够正确生成 "
+"DOI 并成功向像 Crossref 这样的注册机构提交。 "
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
-msgstr ""
+msgstr "例如，使用 vol%viss%ipp%p 作为后缀模式，可能生成 DOI 如 10.1234/vol3iss2pp230"
 
 msgid "doi.manager.settings.doiSuffixPattern.issues"
-msgstr ""
+msgstr "针对期次"
 
 msgid "doi.manager.settings.doiSuffixPattern.submissions"
-msgstr ""
+msgstr "针对文章"
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
-msgstr ""
+msgstr "针对版式文件"
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
-msgstr ""
+msgstr "请输入期次的 DOI 后缀模式。"
 
 msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
-msgstr ""
+msgstr "请输入文章的 DOI 后缀模式。"
 
 msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
-msgstr ""
+msgstr "请输入版式文件的 DOI 后缀模式。"
 
 msgid "doi.manager.settings.doiReassign"
-msgstr ""
+msgstr "重新分配 DOI"
 
 msgid "doi.manager.settings.doiReassign.description"
 msgstr ""
+"如果您更改了 DOI 配置，已分配的 DOI 将不会受到影响。保存 DOI 配置后，"
+"请使用此按钮清除所有现有 DOI，以便新设置能够应用于已有的对象。"
 
 msgid "doi.manager.settings.doiReassign.confirm"
-msgstr ""
+msgstr "您确定要删除所有现有的 DOI 吗？"
 
 msgid "doi.manager.settings.doiAssignJournalWide"
-msgstr ""
+msgstr "分配 DOI"
 
 msgid "doi.manager.settings.doiAssignJournalWide.description"
 msgstr ""
+"为所有尚未分配 DOI 的已发布期刊对象分配 "
+"DOI。此操作无法与单独的后缀配置同时使用。如果您已修改上述 DOI "
+"配置，请先保存更改后再执行此操作。根据期刊已发布对象的数量，分配 DOI "
+"可能需要较长时间。"
 
 msgid "doi.manager.settings.doiAssignJournalWide.confirm"
-msgstr ""
+msgstr "您确定要为所有尚未分配 DOI 的已发布对象分配 DOI 吗？"
 
 msgid "doi.manager.settings.registrationAgency"
-msgstr ""
+msgstr "注册机构"
 
 msgid "doi.manager.settings.registrationAgency.description"
-msgstr ""
+msgstr "请选择您在提交 DOI 时要使用的注册机构。"
 
 msgid "doi.manager.settings.registrationAgency.none"
-msgstr ""
+msgstr "无"
 
 msgid "doi.editor.doi"
-msgstr ""
+msgstr "数字对象唯一标识符（DOI）"
 
 msgid "doi.editor.doi.description"
-msgstr ""
+msgstr "DOI 必须以 {$prefix} 开头。"
 
 msgid "doi.editor.doi.assignDoi"
-msgstr ""
+msgstr "分配"
 
 msgid "doi.editor.doiObjectTypeIssue"
-msgstr ""
+msgstr "期刊"
 
 msgid "doi.editor.doiObjectTypeSubmission"
-msgstr ""
+msgstr "文章"
 
 msgid "doi.editor.doiObjectTypeRepresentation"
-msgstr ""
+msgstr "版式文件"
 
 msgid "doi.editor.customSuffixMissing"
-msgstr ""
+msgstr "无法分配 DOI，原因是缺少自定义后缀。"
 
 msgid "doi.editor.missingIssue"
-msgstr ""
+msgstr "在该出版物未被分配到期次之前，无法生成 DOI。"
 
 msgid "doi.editor.missingParts"
-msgstr ""
+msgstr "无法生成 DOI，因为 DOI "
+"模式中的一个或多个部分缺少数据。您可能需要将出版物分配到期次，设置出版商 ID "
+"或输入页码。"
 
 msgid "doi.editor.patternNotResolved"
-msgstr ""
+msgstr "无法分配 DOI，因为其中包含未解析的模式。"
 
 msgid "doi.editor.canBeAssigned"
-msgstr ""
+msgstr "您看到的是 DOI 的预览。请选择复选框并保存表单以分配 DOI。"
 
 msgid "doi.editor.assigned"
-msgstr ""
+msgstr "DOI 已分配给此 {$pubObjectType}。"
 
 msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
-msgstr ""
+msgstr "所输入的 DOI 后缀已被另一个已发布项目使用。请为每个项目输入唯一的 DOI 后缀。"
 
 msgid "doi.editor.clearObjectsDoi"
-msgstr ""
+msgstr "清除"
 
 msgid "doi.editor.clearObjectsDoi.confirm"
-msgstr ""
+msgstr "您确定要删除现有的 DOI 吗？"
 
 msgid "doi.editor.clearIssueObjectsDoi"
-msgstr ""
+msgstr "清除期次对象的 DOI"
 
 msgid "doi.editor.clearIssueObjectsDoi.confirm"
-msgstr ""
+msgstr "您确定要删除现有期次对象的 DOI 吗？"
 
 msgid "doi.editor.clearIssueObjectsDoi.description"
-msgstr ""
+msgstr "使用以下选项清除当前安排在此期次的所有对象（文章和版式文件）的 DOI。"
 
 msgid "doi.editor.assignDoi"
-msgstr ""
+msgstr "将 DOI {$pubId} 分配给此 {$pubObjectType}"
 
 msgid "doi.editor.assignDoi.emptySuffix"
-msgstr ""
+msgstr "无法分配 DOI，原因是缺少自定义后缀。"
 
 msgid "doi.editor.assignDoi.pattern"
-msgstr ""
+msgstr "无法分配 DOI {$pubId}，因为其中包含未解析的模式。"
 
 msgid "doi.editor.assignDoi.assigned"
 msgstr ""
+"DOI {$pubId} 已分配。要编辑该 DOI，请访问 <a href=\"{$doiManagementLink}\""
+">DOI 管理页面</a>。"
 
 msgid "doi.editor.assignDoi.toBeAssigned"
-msgstr ""
+msgstr "DOI {$pubId} 将在发布时分配。"
 
 msgid "doi.editor.missingPrefix"
-msgstr ""
+msgstr "DOI 必须以 {$doiPrefix} 开头。"
 
 msgid "doi.editor.preview.publication"
-msgstr ""
+msgstr "该出版物的 DOI 将为 {$doi}。"
 
 msgid "doi.editor.preview.publication.none"
-msgstr ""
+msgstr "该出版物尚未分配 DOI。"
 
 msgid "doi.editor.preview.galleys"
-msgstr ""
+msgstr "版式文件：{$galleyLabel}"
 
 msgid "doi.editor.preview.objects"
-msgstr ""
+msgstr "项目"
 
 msgid "api.galley.403.publicationDidNotMatch"
-msgstr ""
+msgstr "您请求的版式文件不属于此出版物。"
 
 msgid "api.galley.403.canEditPublishedDoi"
-msgstr ""
+msgstr "出版物/版式文件发布后，仅可编辑 DOI"
 
 msgid "api.issue.400.invalidDoi"
-msgstr ""
+msgstr "提交的 DOI 无效"
 
 msgid "api.issue.403.canEditPublishedDoi"
-msgstr ""
+msgstr "出版物发布后，仅可编辑 DOI"
 
 msgid "api.issue.404.issuesNotFound"
-msgstr ""
+msgstr "未找到您请求的期次"
 
 msgid "doi.manager.submissionDois"
-msgstr ""
+msgstr "文章 DOI"
 
 msgid "doi.manager.issueDois"
-msgstr ""
+msgstr "期刊 DOI"
 
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
-msgstr ""
+msgstr "此邮件通知作者其投稿在评审阶段前被拒稿，原因是该投稿不符合期刊的发表要求。"
 
 msgid "manager.institutions.noContext"
-msgstr ""
+msgstr "未找到该机构的期刊。"
 
 msgid "mailable.subscriptionNotify.name"
-msgstr ""
+msgstr "订阅通知"
 
 msgid "mailable.subscriptionNotify.description"
 msgstr ""
@@ -2232,7 +2249,7 @@ msgstr ""
 "有期刊的网址以及访问网站内容的指引。"
 
 msgid "mailable.subscriptionExpiresSoon.name"
-msgstr ""
+msgstr "订阅即将到期"
 
 msgid "mailable.subscriptionExpiresSoon.description"
 msgstr ""
@@ -2240,7 +2257,7 @@ msgstr ""
 "进入网站的指南。"
 
 msgid "mailable.subscriptionExpired.name"
-msgstr ""
+msgstr "订阅已过期"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
@@ -2248,14 +2265,14 @@ msgstr ""
 "进入网站的指南。"
 
 msgid "mailable.subscriptionExpiredLast.name"
-msgstr ""
+msgstr "上次订阅已过期"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
 "这封电子邮件通知订阅者，订阅已到期。邮件中含有期刊的网址以及进入网站的指南。"
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
-msgstr ""
+msgstr "购买个人订阅"
 
 msgid "mailable.subscriptionPurchaseIndividual.description"
 msgstr ""
@@ -2263,7 +2280,7 @@ msgstr ""
 "快速存取链接到订阅."
 
 msgid "mailable.subscriptionPurchaseInstitutional.name"
-msgstr ""
+msgstr "购买机构订阅"
 
 msgid "mailable.subscriptionPurchaseInstitutional.description"
 msgstr ""
@@ -2271,7 +2288,7 @@ msgstr ""
 "信息和到订阅的快速存取链接."
 
 msgid "mailable.subscriptionRenewIndividual.name"
-msgstr ""
+msgstr "续订个人订阅"
 
 msgid "mailable.subscriptionRenewIndividual.description"
 msgstr ""
@@ -2279,7 +2296,7 @@ msgstr ""
 "信息和到续订的快速存取链接."
 
 msgid "mailable.subscriptionRenewInstitutional.name"
-msgstr ""
+msgstr "续订机构订阅"
 
 msgid "mailable.subscriptionRenewInstitutional.description"
 msgstr ""
@@ -2287,7 +2304,7 @@ msgstr ""
 "信息和到续订的快速存取链接."
 
 msgid "mailable.openAccessNotify.name"
-msgstr ""
+msgstr "开放获取通知"
 
 msgid "mailable.openAccessNotify.description"
 msgstr ""
@@ -2295,31 +2312,31 @@ msgstr ""
 "读者。"
 
 msgid "mailable.issuePublishNotify.name"
-msgstr ""
+msgstr "期次发布通知"
 
 msgid "mailable.issuePublishNotify.description"
-msgstr ""
+msgstr "当新期次发布时，该邮件会自动发送给已注册用户。"
 
 msgid "manager.manageEmails.description"
-msgstr ""
+msgstr "编辑本期刊发送的邮件内容。"
 
 msgid "mailable.layoutComplete.name"
-msgstr ""
+msgstr "版式文件已完成"
 
 msgid "mailable.publicationVersionNotify.name"
-msgstr ""
+msgstr "已创建新版本"
 
 msgid "mailable.publicationVersionNotify.description"
-msgstr ""
+msgstr "当稿件创建新版本时，该邮件会自动通知指定编辑。"
 
 msgid "mailable.submissionNeedsEditor.description"
-msgstr ""
+msgstr "当有新稿件提交且未分配编辑时，该邮件会发送给期刊管理员。"
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "付款请求"
 
 msgid "mailable.paymentRequest.description"
-msgstr ""
+msgstr "当稿件被接受时，该自动邮件会发送给作者，提醒支付出版费用。"
 
 #~ msgid "manager.setup.metadata.coverage"
 #~ msgstr "涵盖范围"
@@ -2371,3 +2388,15 @@ msgstr ""
 
 msgid "manager.setup.contextSummary.description"
 msgstr "简要描述您的期刊，以提供其内容和宗旨的概览。"
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "无法导入期刊版式文件，相关文件丢失。"
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr "期刊版式 {$id} 无法导出，未能在路径 \"{$path}\" 找到对应文件。"
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr "期刊封面图 {$id} 未能导出，未在路径 \"{$path}\" 发现对应文件。"
+
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr "期次目录，例如所有关联稿件的列表。"
