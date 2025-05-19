@@ -2,7 +2,7 @@
 # Petra Cacic <petracacic3@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-07 10:20+0000\n"
+"PO-Revision-Date: 2025-05-19 14:14+0000\n"
 "Last-Translator: Petra Cacic <petracacic3@gmail.com>\n"
 "Language-Team: Croatian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "hr/>\n"
@@ -15,127 +15,165 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "submission.submit.userGroup"
-msgstr "Pošalji kao..."
+msgstr "Prijavi u ulozi..."
 
 msgid "submission.upload.selectComponent"
 msgstr "Odaberi sastavnicu članka"
 
 msgid "submission.title"
-msgstr "Naslov"
+msgstr "Naslov članka"
 
 msgid "submission.title.tip"
 msgstr ""
+"Vrsta prijave je obično 'slika', 'tekst' ili druge vrste multimedija, "
+"uključujući 'softverske' i 'interaktivne', Molimo odaberite onu vrstu koja "
+"najviše odgovara Vašoj prijavi. Primjere možete pronaći na <a target=\"_blank"
+"\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/generic."
+"shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/generic."
+"shtml#type</a>"
 
 msgid "submission.submit.newSubmissionMultiple"
-msgstr ""
+msgstr "Započni novu prijavu"
 
 msgid "submission.submit.newSubmissionSingle"
 msgstr "Nova prijava"
 
 msgid "grid.action.workflow"
-msgstr ""
+msgstr "Tijek rada prijave"
 
 msgid "submission.abstract.wordCount.description"
-msgstr ""
+msgstr "Sažetak mora imati {$wordCount} riječi ili manje."
 
 msgid "submission.submit.noContext"
-msgstr ""
+msgstr "Časopis ove prijave nije pronađen."
 
 msgid "submission.issueEntry"
-msgstr ""
+msgstr "Metapodaci"
 
 msgid "submission.submit.whatNext.description"
 msgstr ""
+"Časopis je obaviješten o Vašoj prijavi te Vam je poslana potvrda putem e-"
+"pošte. Nakon što urednik pregleda prijavu, kontaktirat će Vas."
 
 msgid "grid.action.galleyInIssueEntry"
-msgstr ""
+msgstr "U unosu broja pojavio se prijelom"
 
 msgid "grid.action.issueEntry"
-msgstr ""
+msgstr "Pregledaj metapodatke ove prijave"
 
 msgid "submission.event.articleGalleyMadeAvailable"
-msgstr ""
+msgstr "Prijelom članka \"{$galleyFormatName}\" je omogućen."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr ""
+msgstr "Prijelom članka \"{$galleyFormatName}\" je onemogućen."
 
 msgid "submission.event.publicIdentifiers"
-msgstr ""
+msgstr "Javni identifikatori prijave ažurirani."
 
 msgid "grid.issueEntry.availableGalley.title"
-msgstr ""
+msgstr "Odobrenje formata"
 
 msgid "grid.issueEntry.availableGalley.removeMessage"
-msgstr ""
+msgstr "<p>Čitateljima <em>više neće biti dostupan</em> ovaj prijelom.</p>"
 
+#, fuzzy
 msgid "grid.issueEntry.availableGalley.message"
-msgstr ""
+msgstr "<p>Čitateljima će ovaj prijelom <em> biti dostupan</em>.</p>"
 
+#, fuzzy
 msgid "grid.action.availableArticleGalley"
-msgstr ""
+msgstr "Učini ovaj prijelom dostupnim"
 
+#, fuzzy
 msgid "submission.galleyFiles"
-msgstr ""
+msgstr "Datoteke prijeloma"
 
+#, fuzzy
 msgid "submission.proofReadingDescription"
 msgstr ""
+"Grafički urednik šalje datoteke spremne za produkciju ovdje. Koristite "
+"<em>Dodijeli revizora</em> kako biste odredili autore i ostale koji će "
+"obaviti korekturu prijeloma, s ispravljenim datotekama poslanim na "
+"odobravanje prije objavljivanja."
 
+#, fuzzy
 msgid "grid.action.approveProof"
-msgstr ""
+msgstr "Odobri ovu korekturu za uključivanje u prijelom."
 
+#, fuzzy
 msgid "grid.action.pageProofApproved"
-msgstr ""
+msgstr "Ova korektura je odobrena za uključivanje u prijelom."
 
+#, fuzzy
 msgid "submission.submit.titleAndSummary"
-msgstr ""
+msgstr "Naslov i sažetak"
 
+#, fuzzy
 msgid "submission.submit.upload.description"
 msgstr ""
+"Pošalji datoteke povezane s ovom prijavom, uključujući članke, multimedije, "
+"skupove podataka, netekstualne dijelove, itd."
 
+#, fuzzy
 msgid "submission.pageProofs"
-msgstr ""
+msgstr "Korekcija"
 
+#, fuzzy
 msgid "workflow.review.externalReview"
 msgstr "Recenzija"
 
+#, fuzzy
 msgid "submission.event.issueMetadataUpdated"
-msgstr ""
+msgstr "Metapodaci broja prijave su ažurirani."
 
+#, fuzzy
 msgid "submission.upload.fileContents"
-msgstr ""
+msgstr "Sastavnica članka"
 
+#, fuzzy
 msgid "submission.complete"
-msgstr ""
+msgstr "Odobreno"
 
+#, fuzzy
 msgid "submission.incomplete"
-msgstr ""
+msgstr "Čekanje odobrenja"
 
+#, fuzzy
 msgid "submission.submit.submissionChecklist"
-msgstr ""
+msgstr "Popis stavki prijave"
 
+#, fuzzy
 msgid "submission.submit.privacyStatement"
-msgstr ""
+msgstr "Izjava o privatnosti"
 
+#, fuzzy
 msgid "submission.submit.contributorRole"
-msgstr ""
+msgstr "Uloga suradnika"
 
+#, fuzzy
 msgid "submission.citationFormat.notFound"
-msgstr ""
+msgstr "Nije bilo moguće dohvatiti traženi format citiranja."
 
+#, fuzzy
 msgid "submission.metadataDescription"
 msgstr ""
+"Ove specifikacije se temelje na Dublin Core skupu metapodataka, "
+"internacionalnom standardu koji se koristi za opis sadržaja časopisa.."
 
+#, fuzzy
 msgid "section.any"
-msgstr ""
+msgstr "Bilo koja rubrika"
 
 msgid "submission.sectionOptions"
 msgstr ""
 
+#, fuzzy
 msgid "catalog.browseTitles"
-msgstr ""
+msgstr "{$numTitles} stavki"
 
+#, fuzzy
 msgid "catalog.category.heading"
-msgstr ""
+msgstr "Sve stavke"
 
 msgid "galley.editPublishedDisabled"
 msgstr ""
@@ -332,17 +370,24 @@ msgstr ""
 msgid "submission.sectionRestrictedToEditors"
 msgstr ""
 
+#, fuzzy
 msgid "submission.submit.form.authorRequired"
-msgstr ""
+msgstr "Potrebno je unijeti najmanje jednog autora"
 
+#, fuzzy
 msgid "submission.submit.form.titleRequired"
-msgstr ""
+msgstr "Molimo unesite naslov svojeg članka."
 
+#, fuzzy
 msgid "submission.submit.form.abstractRequired"
-msgstr ""
+msgstr "Molimo unesite sažetak svojeg članka."
 
+#, fuzzy
 msgid "submission.submit.form.wordCountAlert"
 msgstr ""
+"Vaš je sažetak predug. Molimo smanjite broj riječi u sažetku ispod "
+"ograničenja postavljenog za ovaj odjeljak."
 
+#, fuzzy
 msgid "submission.submit.form.contributorRoleRequired"
-msgstr ""
+msgstr "Molimo odaberite ulogu suradnika."
