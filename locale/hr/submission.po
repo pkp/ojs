@@ -2,7 +2,7 @@
 # Petra Cacic <petracacic3@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-19 14:14+0000\n"
+"PO-Revision-Date: 2025-05-19 16:35+0000\n"
 "Last-Translator: Petra Cacic <petracacic3@gmail.com>\n"
 "Language-Team: Croatian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "hr/>\n"
@@ -154,35 +154,31 @@ msgstr "Uloga suradnika"
 msgid "submission.citationFormat.notFound"
 msgstr "Nije bilo moguće dohvatiti traženi format citiranja."
 
-#, fuzzy
 msgid "submission.metadataDescription"
 msgstr ""
 "Ove specifikacije se temelje na Dublin Core skupu metapodataka, "
-"internacionalnom standardu koji se koristi za opis sadržaja časopisa.."
+"internacionalnom standardu koji se koristi za opis sadržaja časopisa."
 
-#, fuzzy
 msgid "section.any"
 msgstr "Bilo koja rubrika"
 
 msgid "submission.sectionOptions"
-msgstr ""
+msgstr "Opcije sekcije"
 
-#, fuzzy
 msgid "catalog.browseTitles"
-msgstr "{$numTitles} stavki"
+msgstr "{$numTitles} Stavki"
 
-#, fuzzy
 msgid "catalog.category.heading"
 msgstr "Sve stavke"
 
 msgid "galley.editPublishedDisabled"
-msgstr ""
+msgstr "Prijelom ove publikacije ne može se uređivati jer je već objavljena."
 
 msgid "galley.publicationNotFound"
-msgstr ""
+msgstr "Publikacija za ovaj prijelom nije pronađena."
 
 msgid "publication.assignToissue"
-msgstr ""
+msgstr "Dodijeli broju"
 
 msgid "publication.assignedToIssue"
 msgstr ""
