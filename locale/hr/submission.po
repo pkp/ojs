@@ -2,7 +2,7 @@
 # Petra Cacic <petracacic3@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-19 16:35+0000\n"
+"PO-Revision-Date: 2025-05-20 15:07+0000\n"
 "Last-Translator: Petra Cacic <petracacic3@gmail.com>\n"
 "Language-Team: Croatian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "hr/>\n"
@@ -76,19 +76,15 @@ msgstr "Odobrenje formata"
 msgid "grid.issueEntry.availableGalley.removeMessage"
 msgstr "<p>Čitateljima <em>više neće biti dostupan</em> ovaj prijelom.</p>"
 
-#, fuzzy
 msgid "grid.issueEntry.availableGalley.message"
 msgstr "<p>Čitateljima će ovaj prijelom <em> biti dostupan</em>.</p>"
 
-#, fuzzy
 msgid "grid.action.availableArticleGalley"
 msgstr "Učini ovaj prijelom dostupnim"
 
-#, fuzzy
 msgid "submission.galleyFiles"
 msgstr "Datoteke prijeloma"
 
-#, fuzzy
 msgid "submission.proofReadingDescription"
 msgstr ""
 "Grafički urednik šalje datoteke spremne za produkciju ovdje. Koristite "
@@ -96,61 +92,47 @@ msgstr ""
 "obaviti korekturu prijeloma, s ispravljenim datotekama poslanim na "
 "odobravanje prije objavljivanja."
 
-#, fuzzy
 msgid "grid.action.approveProof"
 msgstr "Odobri ovu korekturu za uključivanje u prijelom."
 
-#, fuzzy
 msgid "grid.action.pageProofApproved"
 msgstr "Ova korektura je odobrena za uključivanje u prijelom."
 
-#, fuzzy
 msgid "submission.submit.titleAndSummary"
 msgstr "Naslov i sažetak"
 
-#, fuzzy
 msgid "submission.submit.upload.description"
 msgstr ""
 "Pošalji datoteke povezane s ovom prijavom, uključujući članke, multimedije, "
 "skupove podataka, netekstualne dijelove, itd."
 
-#, fuzzy
 msgid "submission.pageProofs"
 msgstr "Korekcija"
 
-#, fuzzy
 msgid "workflow.review.externalReview"
 msgstr "Recenzija"
 
-#, fuzzy
 msgid "submission.event.issueMetadataUpdated"
 msgstr "Metapodaci broja prijave su ažurirani."
 
-#, fuzzy
 msgid "submission.upload.fileContents"
 msgstr "Sastavnica članka"
 
-#, fuzzy
 msgid "submission.complete"
 msgstr "Odobreno"
 
-#, fuzzy
 msgid "submission.incomplete"
 msgstr "Čekanje odobrenja"
 
-#, fuzzy
 msgid "submission.submit.submissionChecklist"
 msgstr "Popis stavki prijave"
 
-#, fuzzy
 msgid "submission.submit.privacyStatement"
 msgstr "Izjava o privatnosti"
 
-#, fuzzy
 msgid "submission.submit.contributorRole"
 msgstr "Uloga suradnika"
 
-#, fuzzy
 msgid "submission.citationFormat.notFound"
 msgstr "Nije bilo moguće dohvatiti traženi format citiranja."
 
@@ -182,12 +164,17 @@ msgstr "Dodijeli broju"
 
 msgid "publication.assignedToIssue"
 msgstr ""
+"Ovo je dodijeljeno <a href=\"{$issueUrl}\">{$issueName}</a>, ali još nije "
+"zakazano za objavu."
 
 msgid "publication.changeIssue"
-msgstr ""
+msgstr "Promijeni Broj"
 
 msgid "publication.datePublished.description"
 msgstr ""
+"Datum objave bit će postavljen automatski kada se broj časopisa objavi. "
+"Nemojte unositi datum objave osim ako članak nije ranije objavljen negdje "
+"drugdje i trebate unijeti stariji datum."
 
 msgid "publication.invalidSection"
 msgstr ""
@@ -229,16 +216,16 @@ msgid "submission.publication"
 msgstr ""
 
 msgid "publication.status.published"
-msgstr ""
+msgstr "Objavljeno"
 
 msgid "submission.status.scheduled"
-msgstr ""
+msgstr "Zakazano"
 
 msgid "publication.status.unscheduled"
-msgstr ""
+msgstr "Nije zakazano"
 
 msgid "submission.publications"
-msgstr ""
+msgstr "Publikacije"
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
@@ -253,7 +240,7 @@ msgid "publication.editDisabled"
 msgstr ""
 
 msgid "publication.event.published"
-msgstr ""
+msgstr "Prijava je objavljena."
 
 msgid "publication.event.scheduled"
 msgstr ""
