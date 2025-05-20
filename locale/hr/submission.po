@@ -2,7 +2,7 @@
 # Petra Cacic <petracacic3@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-20 15:07+0000\n"
+"PO-Revision-Date: 2025-05-20 18:13+0000\n"
 "Last-Translator: Petra Cacic <petracacic3@gmail.com>\n"
 "Language-Team: Croatian <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "hr/>\n"
@@ -246,25 +246,25 @@ msgid "publication.event.scheduled"
 msgstr ""
 
 msgid "publication.event.unpublished"
-msgstr ""
+msgstr "Prijava je povučena iz objave."
 
 msgid "publication.event.versionPublished"
-msgstr ""
+msgstr "Objavljena je nova verzija."
 
 msgid "publication.event.versionScheduled"
-msgstr ""
+msgstr "Zakazano je objavljivanje nove verzije."
 
 msgid "publication.event.versionUnpublished"
-msgstr ""
+msgstr "Verzija je uklonjena iz objave."
 
 msgid "publication.invalidSubmission"
-msgstr ""
+msgstr "Prijavu za ovu publikaciju nije moguće pronaći."
 
 msgid "publication.publish"
-msgstr ""
+msgstr "Objavi"
 
 msgid "publication.publish.requirements"
-msgstr ""
+msgstr "Prije objave potrebno je ispuniti sljedeće uvjete."
 
 msgid "publication.required.declined"
 msgstr ""
