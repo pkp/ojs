@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:39+00:00\n"
-"PO-Revision-Date: 2025-05-07 12:57+0000\n"
+"PO-Revision-Date: 2025-05-21 14:17+0000\n"
 "Last-Translator: Petra Cacic <petracacic3@gmail.com>\n"
 "Language-Team: Croatian <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-doaj/hr/>\n"
@@ -46,7 +46,6 @@ msgstr ""
 "biti potrebno kraće vrijeme nakon objavljivanja do procesiranja. Možete "
 "provjeriti postoje li neregistrirani članci."
 
-#, fuzzy
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "DOAJ automatska registracija"
 
