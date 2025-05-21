@@ -1,12 +1,13 @@
 # Huang Feilong <hfl@nominsang.org>, 2021.
 # wenshao521！ <wainixueer3334@gmail.com>, 2025.
+# kenrsy <kenrsy@foxmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2025-05-14 06:24+0000\n"
-"Last-Translator: wenshao521！ <wainixueer3334@gmail.com>\n"
+"PO-Revision-Date: 2025-05-21 09:28+0000\n"
+"Last-Translator: kenrsy <kenrsy@foxmail.com>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
 "ojs/default/zh_Hans/>\n"
 "Language: zh_Hans\n"
@@ -125,7 +126,7 @@ msgid "default.groups.plural.sectionEditor"
 msgstr "栏目编辑"
 
 msgid "default.groups.abbrev.sectionEditor"
-msgstr "SecE"
+msgstr "编辑（缩写）"
 
 msgid "default.groups.name.subscriptionManager"
 msgstr "订阅管理员"
@@ -134,7 +135,7 @@ msgid "default.groups.plural.subscriptionManager"
 msgstr "订阅管理员"
 
 msgid "default.groups.abbrev.subscriptionManager"
-msgstr "SubM"
+msgstr "订阅管理员（缩写）"
 
 msgid "default.genres.researchInstrument"
 msgstr "科研仪器"
