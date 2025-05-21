@@ -1,7 +1,7 @@
 # Petra Cacic <petracacic3@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-19 13:24+0000\n"
+"PO-Revision-Date: 2025-05-21 16:34+0000\n"
 "Last-Translator: Petra Cacic <petracacic3@gmail.com>\n"
 "Language-Team: Croatian <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
 "hr/>\n"
@@ -118,7 +118,7 @@ msgstr ""
 "broj URN-a."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
-msgstr "Koristi zadane uzorke"
+msgstr "Koristi zadane uzorke."
 
 msgid "plugins.pubIds.urn.manager.settings.namespace.description"
 msgstr ""
@@ -137,7 +137,7 @@ msgid "plugins.pubIds.urn.manager.settings.urnReassign"
 msgstr "Ponovno dodijeli URN-ove"
 
 msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
-msgstr "Molimo unesite URL rezolvera"
+msgstr "Molimo unesite URL rezolvera."
 
 msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
 msgstr "Jeste li sigurni da želite izbrisati sve postojeće URN-ove?"
@@ -177,7 +177,7 @@ msgid "plugins.pubIds.urn.editor.assignURN.assigned"
 msgstr "URN {$pubId} je dodijeljen."
 
 msgid "plugins.pubIds.urn.form.checkNoRequired"
-msgstr "Nedostaje broj provjere"
+msgstr "Nedostaje broj provjere."
 
 msgid "plugins.pubIds.urn.editor.urn.assignUrn"
 msgstr "Dodijeli"
