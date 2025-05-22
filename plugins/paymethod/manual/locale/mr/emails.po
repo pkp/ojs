@@ -23,6 +23,7 @@ msgstr ""
 "हा ई-मेल मजकूर नियतकालिकाच्या व्यवस्थापकाला सूचित करतो की मानवी/प्रस्थापित "
 "पद्धतीने शुल्क भरण्यासंबंधी (Manual Payment) विनंती करण्यात आली आहे."
 
+#, fuzzy
 msgid "emails.manualPaymentNotification.body"
 msgstr ""
 "वापरकर्ता {senderName} (वापरकर्तानाव &quot;{$senderUsername}&quot;) "

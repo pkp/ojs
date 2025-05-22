@@ -15,6 +15,7 @@ msgstr ""
 msgid "emails.manualPaymentNotification.subject"
 msgstr "Əl ilə ödəniş bildirişi"
 
+#, fuzzy
 msgid "emails.manualPaymentNotification.body"
 msgstr ""
 "{$ContextName} jurnalı və {senderName} istifadəçisi (istifadəçi adı \""

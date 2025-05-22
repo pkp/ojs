@@ -15,6 +15,7 @@ msgstr ""
 msgid "emails.manualPaymentNotification.subject"
 msgstr "Käsitsi makse teade"
 
+#, fuzzy
 msgid "emails.manualPaymentNotification.body"
 msgstr ""
 "Käsitsi makset vajatakse ajakirja {$contextName} ja kasutaja {senderName} ("

@@ -27,7 +27,9 @@ use PKP\user\User;
 class ManualPaymentNotify extends Mailable
 {
     use Configurable;
-    use Sender;
+    use Sender {
+        sender as protected senderFromTrait;
+    }
 
     protected static ?string $name = 'plugins.paymethod.manual.manualPaymentNotify.name';
     protected static ?string $description = 'emails.manualPaymentNotification.description';
@@ -62,6 +64,7 @@ class ManualPaymentNotify extends Mailable
     public function sender(User $sender, ?string $defaultLocale = null): Mailable
     {
         $this->addData([self::SENDER_USERNAME => $sender->getUsername()]);
+        $this->senderFromTrait($sender, $defaultLocale);
         return $this;
     }
 }
