@@ -18,6 +18,7 @@ msgstr ""
 msgid "emails.manualPaymentNotification.subject"
 msgstr "اطلاع رسانی پرداخت دستی"
 
+#, fuzzy
 msgid "emails.manualPaymentNotification.body"
 msgstr ""
 "فرآیند پرداخت هزینه کاربر {senderName} (با نام کاربری {$senderUsername}) "
