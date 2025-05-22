@@ -35,7 +35,7 @@ msgid "userInvitation.enterDetails.stepDescription"
 msgstr "You can invite them to take up a role in OJS"
 
 msgid "userInvitation.modal.message"
-msgstr "{$email} has been invited to new role in OJS. You can be updated about the user's decision on the User and Role page, your OJS notification and/or your email"
+msgstr "{$email} has been invited to new role in OJS. You can be updated about the user's decision on the Users & Roles page, your OJS notifications and/or your email"
 
 msgid "userInvitation.roleTable.journalMasthead"
 msgstr "Journal Masthead"
