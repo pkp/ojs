@@ -1,8 +1,8 @@
 OJS 3.3.0 Release Notes
-Git tag: 3_3_0-20
+Git tag: 3_3_0-21
 
-Release date: November 29, 2024
-===============================
+Release date: May 23, 2025
+==========================
 
 Configuration Changes
 ---------------------
@@ -29,6 +29,27 @@ configuration parameters.
   - email.smtp_oauth_refreshtoken
 - The setting general.session_samesite (default value: Lax) has been added to control the "SameSite" setting for the session cookie.
 - The setting security.force_ssl, when enabled, will also set the "Secure" flag for the session cookie.
+
+3.3.0-21 Build
+--------------
+	#11399: Properly escape uploaded plugin filename on upload bounce
+	#11244: Respond to request - Title, missing a space after the colon
+	#11242: Fix string concatenation of URLs to avoid subdomain redirection
+	#11236: Participants - Assign Participant, Assignment privileges not working correctly
+	#11212: Published article - Download statistics display is ambiguous
+	#11095: Custom Blocks (plugin) - Unable to save sitewide custom block
+	#11051: Fix static call to non-static method
+	#11049: Password resets fail with PHP 8.1
+	#10938: Unable to save license terms
+	#10922: Native XML export error - ArgumentCountError
+	#10837: Announcement desc toolbar missing image code and lists
+	#10786: Resolver plugin not matching on page ranges
+	#10738: Do not permit user XML import to import with role_id = ROLE_ID_SITE_ADMIN
+	#10680: Files in the publisher library are missing a file description field
+	#10664: .xhtml file missing text/html mimetype, not loaded by HtmlArticleGalley plugin
+	#10660: Cancelling a file revision deletes the original file
+	#10616: Proposal: add ThemePlugin function to access multilingual theme options
+	#10578: Unable to upload images to custom nav item at site level
 
 3.3.0-20 Build
 --------------

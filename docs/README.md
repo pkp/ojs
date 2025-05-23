@@ -2,8 +2,8 @@
 	=== Open Journal Systems
 	=== The Public Knowledge Project
 	=== Version: 3.3.0
-	=== GIT tag: 3_3_0-20
-	=== Release date: November 29, 2024
+	=== GIT tag: 3_3_0-21
+	=== Release date: May 23, 2025
 	====================================
 
 
@@ -28,7 +28,7 @@ improvements or bug fixes to the software.
 
 Recommended server requirements:
 
-* PHP 7.3.x, 7.4.x, or 8.0.x
+* PHP 7.3.x, 7.4.x, 8.0.x, 8.1.x, or 8.2.x
 * MySQL >= 4.1 or PostgreSQL >= 9.5
 * Apache >= 1.3.2x or >= 2.0.4x or Microsoft IIS 6
 * Operating system: Any OS that supports the above software, including
