@@ -1,8 +1,8 @@
 OJS 3.4.0 Release Notes
-Git tag: 3_4_0-8
+Git tag: 3_4_0-9
 
-Release date: November 29, 2024
-===============================
+Release date: May 23, 2025
+==========================
 
 Configuration Changes
 ---------------------
@@ -45,6 +45,31 @@ New config.inc.php section for queues is added, with the following parameters:
 New config.inc.php parameters added for emails:
     - default (default value: sendmail), being the default mailer driver to be used for email delivery
     - sendmail_path (default value: "/usr/sbin/sendmail -bs"), being the path to the sendmail program on the server
+
+3.4.0-9 Build
+-------------
+    #11119: Website settings - Navigation menu item, name field does not store value for a new locale
+    #11011: [Website Settings] | Setup - Language, Unable to set navigation item title with multiple languages
+    #11006: Pagination in OPS front end section listing does not work
+    #10934: Fatal error when accessing site settings
+    #10866: All institutional COUNTER R5 reports contain the same numbers
+    #10864: OPS/OMP Native XML Export missing publication titles in 3.4
+    #10843: Do not log bot visits in usage stats log files
+    #10830: DRIVER plugin not producing records in OAI
+    #10758: Deleting a galley does not delete associated submission files
+    #10739: No reviewers returned from the API endoint users/reviewers
+    #10725: RFC1807 OAI-PMH requests lead to a fatal error
+    #10705: Upload file - Cancelling upload file results in error and does not prevent the uploaded file
+    #10662: Multiple overdue conditions lead to errors in the "overdue" submission list filter
+    #10636: Notification NOTIFICATION_TYPE_FORMAT_NEEDS_APPROVED_SUBMISSION is not updated & displayed
+    #10568: Review reminder are sent even for closed rounds
+    #10496: Null pointer in the Editorial Reminder if the user has blocked notifications
+    #10468: Co-authors receive several e-mails when a decision is notified
+    #10362: Variable {$editorName} not replaced in activity log for decisions
+    #10173: [OMP] Onix export record references are not unique for each pub format
+    #9957: Author Reviewer Grid: the grid fails to be displayed.
+    #9822: Increase timeout and improve DB table indexes for jobs ProcessUsageStatsLogFile and RemoveDoubleClicks
+    #7188: Display number of current assignments for each Moderator
 
 3.4.0-8 Build
 -------------
