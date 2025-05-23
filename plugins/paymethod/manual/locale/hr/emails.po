@@ -1,0 +1,37 @@
+# Nino <orcalator@gmail.com>, 2025.
+# Petra Cacic <petracacic3@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-05-21 14:17+0000\n"
+"Last-Translator: Petra Cacic <petracacic3@gmail.com>\n"
+"Language-Team: Croatian <http://translate.pkp.sfu.ca/projects/ojs/"
+"paymethod-manual-emails/hr/>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "emails.manualPaymentNotification.subject"
+msgstr "Obavijest o ručnom plaćanju"
+
+msgid "emails.manualPaymentNotification.description"
+msgstr ""
+"Ovaj predložak e-maila koristi se za obavještavanje kontakt osobe časopisa "
+"da je zatraženo ručno plaćanje."
+
+msgid "emailTemplate.variable.manualPaymentPlugin.senderUsername"
+msgstr "Korisničko ime korisnika koji je izvršio plaćanje"
+
+msgid "emails.manualPaymentNotification.body"
+msgstr ""
+"Potrebno je obraditi ručno plaćanje za časopis {$contextName} i korisnika "
+"{senderName} (korisničko ime \"{$senderUsername}\").<br />\n"
+"<br />\n"
+"Predmet plaćanja je \"{$paymentName}\".<br />\n"
+"Iznos je {$paymentAmount} ({$paymentCurrencyCode}).<br />\n"
+"<br />\n"
+"Ovaj e-mail generiran je putem dodatka za ručna plaćanja sustava Open "
+"Journal Systems."
