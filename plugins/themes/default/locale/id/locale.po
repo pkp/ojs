@@ -1,16 +1,17 @@
 # Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>, 2022.
+# Zahid Rizky Fakhri <zahidrizkyfakhri@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-08-06 15:07+0000\n"
-"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
-"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/themes-"
-"default/id_ID/>\n"
-"Language: id_ID\n"
+"PO-Revision-Date: 2025-05-02 14:24+0000\n"
+"Last-Translator: Zahid Rizky Fakhri <zahidrizkyfakhri@gmail.com>\n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/id/>\n"
+"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.themes.default.name"
 msgstr "Tema Bawaan"
@@ -94,3 +95,9 @@ msgstr "Unduhan"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Data unduhan tidak tersedia."
+
+msgid "plugins.themes.default.nextSlide"
+msgstr "Salindia berikutnya"
+
+msgid "plugins.themes.default.prevSlide"
+msgstr "Salindia sebelumnya"

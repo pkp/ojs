@@ -1,0 +1,128 @@
+# Petra Cacic <petracacic3@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-05-20 15:07+0000\n"
+"Last-Translator: Petra Cacic <petracacic3@gmail.com>\n"
+"Language-Team: Croatian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-native/hr/>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.importexport.native.import"
+msgstr "Uvoz"
+
+msgid "plugins.importexport.native.import.instructions"
+msgstr "Učitaj XML datoteku za uvoz"
+
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "Odaberite članke za izvoz"
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "Izvezi članke"
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "Izvezi brojeve"
+
+msgid "plugins.importexport.native.results"
+msgstr "Uvezi Rezultate"
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr "Molimo učitajte datoteku pod stavkom \"Uvoz\" kako biste nastavili."
+
+msgid "plugins.importexport.native.importComplete"
+msgstr "Uvoz je uspješno dovršen. Uvezeni su sljedeći elementi:"
+
+msgid "plugins.importexport.native.error.unknownSection"
+msgstr "Nepoznata sekcija {$param}"
+
+msgid "plugins.importexport.native.error.unknownUser"
+msgstr ""
+"Korisnik mora biti naveden korištenjem parametra naredbe --user_name ili -u."
+
+msgid "plugins.importexport.native.displayName"
+msgstr "Dodatak za izvorni XML"
+
+msgid "plugins.importexport.common.error.invalidFileExtension"
+msgstr "Za naslovnu sliku je navedena neispravna ekstenzija datoteke."
+
+msgid "plugins.importexport.native.description"
+msgstr "Uvoz i izvoz članaka i brojeva u izvornom XML formatu OJS-a."
+
+msgid "plugins.importexport.common.error.coverImageNameUnspecified"
+msgstr "Naslovna slika je umetnuta bez navođenja naziva."
+
+msgid "plugins.importexport.native.cliUsage"
+msgstr ""
+"Upotreba: {$scriptName} {$pluginName} [naredba] ...\n"
+"Naredbe:\n"
+"import [xmlDatoteka] [putanja_časopisa] [--korisničko_ime] ...\n"
+"export [xmlDatoteka] [putanja_časopisa] articles [idČlanka1] [idČlanka2] ..."
+"\n"
+"export [xmlDatoteka] [putanja_časopisa] article [idČlanka]\n"
+"export [xmlDatoteka] [putanja_časopisa] issues [idBroja1] [idBroja2] ...\n"
+"export [xmlDatoteka] [putanja_časopisa] issue [idBroja]\n"
+"\n"
+"Dodatni parametri potrebni su za uvoz podataka, ovisno o korijenskom čvoru "
+"XML dokumenta.\n"
+"\n"
+"Ako je korijenski čvor <article> ili <articles>, potrebni su dodatni "
+"parametri. Prihvaćeni su sljedeći formati:\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlDatoteka] [putanja_časopisa] "
+"[--korisničko_ime] \\\n"
+"\tissue_id [idBroja] section_id [idSekcije]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlDatoteka] [putanja_časopisa] "
+"[--korisničko_ime] \\\n"
+"\tissue_id [idBroja] section_name [naziv]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlDatoteka] [putanja_časopisa] \\\n"
+"\tissue_id [idBroja] section_abbrev [kratica]\n"
+
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
+msgstr ""
+"Naslov sekcije \"{$section1Title}\" i naslov sekcije \"{$section2Title}\" u "
+"broju \"{$issueTitle}\" odgovaraju različitim postojećim sekcijama časopisa."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMatch"
+msgstr ""
+"Naslov sekcije \"{$sectionTitle}\" u broju \"{$issueTitle}\" odgovara "
+"postojećoj sekciji časopisa, ali drugi naslov te sekcije ne podudara se s "
+"drugim naslovom postojeće sekcije časopisa."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr ""
+"Kratica sekcije \"{$sectionAbbrev}\" u broju \"{$issueTitle}\" odgovara "
+"postojećoj sekciji časopisa, ali druga kratica te sekcije ne podudara se s "
+"drugom kraticom postojeće sekcije časopisa."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr ""
+"Nijedan ili više brojeva ne odgovara navedenoj identifikaciji broja \""
+"{$issueIdentification}\"."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgstr ""
+"Element za identifikaciju broja nedostaje za članak \"{$articleTitle}\"."
+
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr ""
+"Članak \"{$articleTitle}\" nalazi se unutar broja časopisa, ali nema naveden "
+"datum objave."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
+msgstr ""
+"Kratica sekcije \"{$section1Abbrev}\" i kratica sekcije \"{$section2Abbrev}\""
+" u broju \"{$issueTitle}\" odgovaraju različitim postojećim sekcijama "
+"časopisa."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgstr ""
+"Postojeći broj s ID-om {$issueId} odgovara navedenoj identifikaciji broja \""
+"{$issueIdentification}\". Taj broj neće biti izmijenjen, ali će članci biti "
+"dodani."

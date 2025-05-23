@@ -1,8 +1,8 @@
 # Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
-# Tigran Zargaryan <tigran@flib.sci.am>, 2022, 2023.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022, 2023, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-11-03 21:30+0000\n"
+"PO-Revision-Date: 2025-05-23 12:40+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/"
 "paymethod-manual-emails/hy/>\n"
@@ -18,8 +18,8 @@ msgstr "Ձեռքով վճարման ծանուցում"
 
 msgid "emails.manualPaymentNotification.body"
 msgstr ""
-"ձեռքով վճարումը պետք է մշակվի {$contextName} ամսագրի և {$senderName} օգտվողի "
-"համար (օգտանուն &quot;{$senderUsername}&quot;).<br />\n"
+"Ձեռքով վճարումը պետք է մշակվի {$contextName} ամսագրի և "
+"&quot;{$senderUsername}&quot; օգտվողի համար.<br />\n"
 "<br />\n"
 "Վճարվող նյութն է &quot;{$paymentName}&quot;.<br />\n"
 "Գինն է {$paymentAmount} ({$paymentCurrencyCode}).<br />\n"

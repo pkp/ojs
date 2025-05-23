@@ -1,0 +1,43 @@
+# Petra Cacic <petracacic3@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-05-21 16:34+0000\n"
+"Last-Translator: Petra Cacic <petracacic3@gmail.com>\n"
+"Language-Team: Croatian <http://translate.pkp.sfu.ca/projects/ojs/"
+"paymethod-paypal/hr/>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.paymethod.paypal.description"
+msgstr "Plaćanja će se obrađivati putem PayPal usluge."
+
+msgid "plugins.paymethod.paypal"
+msgstr "Plaćanje naknade putem PayPala"
+
+msgid "plugins.paymethod.paypal.settings"
+msgstr "Postavke plaćanja putem PayPala"
+
+msgid "plugins.paymethod.paypal.settings.testMode"
+msgstr "Testni način rada"
+
+msgid "plugins.paymethod.paypal.settings.accountName"
+msgstr "Naziv računa"
+
+msgid "plugins.paymethod.paypal.settings.clientId"
+msgstr "ID klijenta"
+
+msgid "plugins.paymethod.paypal.settings.secret"
+msgstr "Tajni ključ"
+
+msgid "plugins.paymethod.paypal.displayName"
+msgstr "Plaćanje naknade putem PayPala"
+
+msgid "plugins.paymethod.paypal.error"
+msgstr ""
+"Došlo je do pogreške u transakciji. Molimo kontaktirajte upravitelja "
+"časopisa za detalje."

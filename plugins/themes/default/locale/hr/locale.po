@@ -1,0 +1,102 @@
+# Petra Cacic <petracacic3@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-05-22 14:04+0000\n"
+"Last-Translator: Petra Cacic <petracacic3@gmail.com>\n"
+"Language-Team: Croatian <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/hr/>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.themes.default.name"
+msgstr "Zadana tema"
+
+msgid "plugins.themes.default.description"
+msgstr "Ova tema implementira zadanu temu."
+
+msgid "plugins.themes.default.option.typography.label"
+msgstr "Tipografija"
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr ""
+"Noto Sans: Digitalno izvorni font koji je dizajnirao Google s podrškom za "
+"velik broj jezika."
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr "Noto Serif: Serifska varijanta Googleovog digitalno izvornog fonta."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr ""
+"Noto Sans/Noto Serif: Komplementarni par s naslovima u sans-serifnom stilu i "
+"tekstom tijela u serifnom stilu."
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Lato: Popularan moderan sans-serif font."
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr "Lora: Serif font širokog proreda, prikladan za čitanje na mreži."
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr ""
+"Lora/Open Sans: Komplementarni par sa serifnim naslovima i sans-serifnim "
+"tekstom tijela."
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "Boja"
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "Odaberi boju za zaglavlje."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
+msgstr "Pozadinska slika zaglavlja"
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
+msgstr "Prikaži sliku s početne stranice kao pozadinu zaglavlja."
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "Opcije prikaza statistike korištenja"
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr "Ne prikazuj grafikone statistike korištenja čitateljima."
+
+msgid "plugins.themes.default.nextSlide"
+msgstr "Sljedeći slajd"
+
+msgid "plugins.themes.default.prevSlide"
+msgstr "Prethodni slajd"
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "Odaberite kombinaciju fontova koja odgovara ovom časopisu."
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr ""
+"Noto Serif/Noto Sans: Komplementarni par s naslovima u serifnom stilu i "
+"tekstom tijela u sans-serifnom stilu."
+
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
+msgstr "Prikaži sažetak časopisa na naslovnoj stranici."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
+msgstr ""
+"Kad je slika za početnu stranicu učitana, prikaži je kao pozadinu zaglavlja "
+"umjesto na uobičajenom mjestu na početnoj stranici."
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr "Koristi stupčasti grafikon za prikaz statistike korištenja."
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr "Koristi linijski grafikon za prikaz statistike korištenja."
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "Sij Vel Ožu Tra Svi Lip Srp Kol Ruj Lis Stu Pro"
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "Preuzimanja"
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "Podaci o preuzimanjima još nisu dostupni."

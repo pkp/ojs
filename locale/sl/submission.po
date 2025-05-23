@@ -1,21 +1,21 @@
-# Primož Svetek <primoz.svetek@gmail.com>, 2022.
+# Primož Svetek <primoz.svetek@gmail.com>, 2022, 2025.
 # Matevž Rudolf <matevz.rudolf@uni-lj.si>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
-"PO-Revision-Date: 2023-02-21 17:56+0000\n"
-"Last-Translator: Matevž Rudolf <matevz.rudolf@uni-lj.si>\n"
+"PO-Revision-Date: 2025-05-07 12:57+0000\n"
+"Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/sl/>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
-"%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 4.13.1\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "submission.submit.userGroup"
 msgstr "Oddaj v moji vlogi..."
@@ -55,8 +55,8 @@ msgstr "Metapodatki"
 
 msgid "submission.submit.whatNext.description"
 msgstr ""
-"Uredništvo revije je bilo obveščeno o vaši oodaji prispevka. Hkrati ste "
-"preko emaila dobili tudi potrdilo o uspešni oddaji. Ko bodo urendiki "
+"Uredništvo revije je bilo obveščeno o vaši oddaji prispevka. Hkrati ste "
+"preko emaila dobili tudi potrdilo o uspešni oddaji. Ko bodo uredniki "
 "pogledali prispevek, se vam bodo oglasili."
 
 msgid "grid.action.galleyInIssueEntry"
