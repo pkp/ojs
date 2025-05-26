@@ -13,13 +13,25 @@ import '../../lib/pkp/cypress/support/commands_orcid.js';
 import '../../lib/pkp/cypress/support/command_reviewer_suggestion.js';
 
 Cypress.Commands.add('publish', (issueId, issueTitle) => {
-	cy.openWorkflowMenu('Title & Abstract')
+	cy.openWorkflowMenu('Unassigned version', 'Title & Abstract')
 	cy.get('button:contains("Schedule For Publication")').click();
 	cy.wait(1000);
+	cy.assignPublicationStage('AO', 'false', true);
 	cy.get('select[id="assignToIssue-issueId-control"]').select(issueId);
 	cy.get('div[id^="assign-"] button:contains("Save")').click();
 	cy.get('div:contains("All publication requirements have been met. This will be published immediately in ' + issueTitle + '. Are you sure you want to publish this?")');
 	cy.get('div.pkpWorkflow__publishModal button:contains("Publish")').click();
+});
+
+Cypress.Commands.add('assignPublicationStage', (stage, versionIsMinor = 'true', sideModal) => {
+	cy.get('select[id="version-versionStage-control"]').select(stage);
+	cy.get('select[id="version-versionIsMinor-control"]').select(versionIsMinor);
+	if (sideModal) {
+		cy.contains('[data-cy="active-modal"] button', 'Confirm').click();
+	} else {
+		cy.contains('[data-cy="dialog"] button', 'Confirm').click();
+	}
+	cy.waitJQuery();
 });
 
 Cypress.Commands.add('isInIssue', (submissionTitle, issueTitle) => {
