@@ -1,12 +1,13 @@
 # Dorien van Rheenen <d.van.rheenen@rug.nl>, 2023, 2024.
 # Kay <kay.pepping@huygens.knaw.nl>, 2024.
+# Minna Kivinen <minna.kivinen@hamk.fi>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2024-10-19 11:40+0000\n"
-"Last-Translator: Dorien van Rheenen <d.van.rheenen@rug.nl>\n"
+"PO-Revision-Date: 2025-05-26 10:57+0000\n"
+"Last-Translator: Minna Kivinen <minna.kivinen@hamk.fi>\n"
 "Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/manager/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -2649,3 +2650,6 @@ msgid "plugins.importexport.common.error.issueCoverImageMissing"
 msgstr ""
 "De omslagafbeelding van nummer {$id} is niet geëxporteerd, het bestand is "
 "niet gevonden via pad \"{$path}\"."
+
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr ""
