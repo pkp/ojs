@@ -41,6 +41,7 @@
 					);
 				{rdelim});
 			</script>
+			<div class="legacyDefaults">
 			<form id="importXmlForm" class="pkp_form" action="{plugin_url path="importBounce"}" method="post">
 				{csrf}
 				{fbvFormArea id="importForm"}
@@ -57,6 +58,7 @@
 					{fbvFormButtons submitText="plugins.importexport.users.import.importUsers" hideCancel="true"}
 				{/fbvFormArea}
 			</form>
+			</div>
 		</div>
 		<div id="export-tab">
 			<script type="text/javascript">

@@ -14,6 +14,7 @@
 		$('#doajSettingsForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
 	{rdelim});
 </script>
+<div class="legacyDefaults">
 <form class="pkp_form" id="doajSettingsForm" method="post" action="{url router=PKP\core\PKPApplication::ROUTE_COMPONENT op="manage" plugin="DOAJExportPlugin" category="importexport" verb="save"}">
 	{csrf}
 	{fbvFormArea id="doajSettingsFormArea"}
@@ -29,3 +30,4 @@
 	{fbvFormButtons submitText="common.save"}
 	<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 </form>
+</div>
