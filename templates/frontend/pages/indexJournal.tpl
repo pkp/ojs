@@ -22,14 +22,14 @@
 
 	{call_hook name="Templates::Index::journal"}
 
-	{if !$activeTheme->getOption('useHomepageImageAsHeader') && $homepageImage}
+	{if $activeTheme && !$activeTheme->getOption('useHomepageImageAsHeader') && $homepageImage}
 		<div class="homepage_image">
 			<img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}"{if $homepageImage.altText} alt="{$homepageImage.altText|escape}"{/if}>
 		</div>
 	{/if}
 
 	{* Journal Description *}
-	{if $activeTheme->getOption('showDescriptionInJournalIndex')}
+	{if $activeTheme && $activeTheme->getOption('showDescriptionInJournalIndex')}
 		<section class="homepage_about">
 			<a id="homepageAbout"></a>
 			<h2>{translate key="about.aboutContext"}</h2>
