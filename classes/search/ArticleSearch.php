@@ -287,7 +287,8 @@ class ArticleSearch extends SubmissionSearch
                 }
 
                 // Get the issue, storing in cache if necessary.
-                $issueId = $publishedSubmission->getCurrentPublication()->getData('issueId');
+                $currentPublication = $publishedSubmission->getCurrentPublication();
+                $issueId = $currentPublication->getData('issueId');
                 if ($issueId && !isset($issueCache[$issueId])) {
                     $issue = Repo::issue()->get($issueId);
                     $issueCache[$issueId] = $issue;
@@ -295,8 +296,9 @@ class ArticleSearch extends SubmissionSearch
                     $issueAvailabilityCache[$issueId] = !$issueAction->subscriptionRequired($issue, $contextCache[$contextId]) || $issueAction->subscribedUser($user, $contextCache[$contextId], $issueId, $articleId) || $issueAction->subscribedDomain(Application::get()->getRequest(), $contextCache[$contextId], $issueId, $articleId);
                 }
 
-                // Only display articles from published issues.
-                if (!isset($issueCache[$issueId]) || !$issueCache[$issueId]->getPublished()) {
+                // Only display articles from published issues or continuous publications.
+                if ((bool)$currentPublication->getData('continuousPublication') === false
+                    && !(isset($issueCache[$issueId]) || $issueCache[$issueId]->getPublished())) {
                     continue;
                 }
 
