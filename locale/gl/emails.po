@@ -1,16 +1,17 @@
 # Real Academia Galega <reacagal@gmail.com>, 2021.
+# Helena Rita Gonçalves Marinho Moreira <bragatec@fceer.org>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-08-03 09:36+0000\n"
-"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
-"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/emails/"
-"gl_ES/>\n"
-"Language: gl_ES\n"
+"PO-Revision-Date: 2025-05-27 13:51+0000\n"
+"Last-Translator: Helena Rita Gonçalves Marinho Moreira <bragatec@fceer.org>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/emails/gl/>"
+"\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Confirmación de restablecemento de contrasinal"
@@ -66,10 +67,20 @@ msgstr ""
 "{$contextSignature}"
 
 msgid "emails.userValidateSite.subject"
-msgstr ""
+msgstr "Valida a túa conta"
 
 msgid "emails.userValidateSite.body"
 msgstr ""
+"{$recipientName}<br />\n"
+"<br />\n"
+"Creaches unha conta en {$siteTitle}, pero antes de poder comezar a usala, "
+"necesitas validar a túa conta de correo electrónico. Para facelo, "
+"simplemente segue o enlace que aparece a continuación:<br />\n"
+"<br />\n"
+"{$activateUrl}<br />\n"
+"<br />\n"
+"Grazas,<br />\n"
+"{$siteSignature}"
 
 msgid "emails.reviewerRegister.subject"
 msgstr "Rexistro como revisor de {$contextName}"
@@ -97,9 +108,8 @@ msgstr ""
 "Moitas grazas,<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.issuePublishNotify.subject"
-msgstr "Novo número publicado"
+msgstr "Novo número publicado: {$issueIdentification} de {$contextName}"
 
 #, fuzzy
 msgid "emails.issuePublishNotify.body"
