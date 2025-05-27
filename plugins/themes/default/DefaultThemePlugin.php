@@ -93,6 +93,27 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
             ],
             'default' => false,
         ]);
+        
+        $this->addOption('journalContentOrganization', 'FieldOptions', [
+            'label' => __('manager.setup.journalContentOrganization'),
+            'description' => __('manager.setup.journalContentOrganization.description'),
+            'options' => [
+                [
+                    'value' => 'issue_toc',
+                    'label' => __('manager.setup.journalContentOrganization.option.issue_toc'),
+                ],
+                [
+                    'value' => 'recent_published',
+                    'label' => __('manager.setup.journalContentOrganization.option.recent_published'),
+                ],
+                [
+                    'value' => 'category_listing',
+                    'label' => __('manager.setup.journalContentOrganization.option.category_listing'),
+                ],
+            ],
+            'default' => ['issue_toc'],
+        ]);
+
         $this->addOption('useHomepageImageAsHeader', 'FieldOptions', [
             'label' => __('plugins.themes.default.option.useHomepageImageAsHeader.label'),
             'description' => __('plugins.themes.default.option.useHomepageImageAsHeader.description'),

@@ -20,12 +20,19 @@ use PKP\publication\Collector as PKPCollector;
 class Collector extends PKPCollector
 {
     protected ?array $issueIds = null;
+    // protected ?bool $continuousPublication = null;
 
     public function filterByIssueIds(?array $issueIds): self
     {
         $this->issueIds = $issueIds;
         return $this;
     }
+
+    // public function filterByContinuousPublication(bool $continuousPublication): self
+    // {
+    //     $this->continuousPublication = $continuousPublication;
+    //     return $this;
+    // }
 
     public function getQueryBuilder(): Builder
     {
@@ -35,6 +42,13 @@ class Collector extends PKPCollector
         $qb->when($this->issueIds !== null, function (Builder $qb) {
             $qb->whereIn('p.issue_id', $this->issueIds);
         });
+
+        // add OJS-specific continuous publication filter
+        // $qb->when($this->continuousPublication !== null, function (Builder $qb) {
+        //     $qb->join('publication_settings as ps', 'p.publication_id', '=', 'ps.publication_id')
+        //         ->where('ps.setting_name', '=', 'continuousPublication')
+        //         ->where('ps.setting_value', '=', $this->continuousPublication);
+        // });
 
         return $qb;
     }
