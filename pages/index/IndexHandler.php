@@ -19,6 +19,7 @@ namespace APP\pages\index;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\journal\JournalDAO;
+use APP\journal\enums\JournalContentOption;
 use APP\observers\events\UsageEvent;
 use APP\pages\issue\IssueHandler;
 use APP\template\TemplateManager;
@@ -26,7 +27,8 @@ use PKP\config\Config;
 use PKP\db\DAORegistry;
 use PKP\pages\index\PKPIndexHandler;
 use PKP\security\Validation;
-
+use PKP\security\Role;
+use PKP\userGroup\UserGroup;
 class IndexHandler extends PKPIndexHandler
 {
     //
@@ -58,14 +60,40 @@ class IndexHandler extends PKPIndexHandler
         }
 
         $this->setupTemplate($request);
-        $router = $request->getRouter();
         $templateMgr = TemplateManager::getManager($request);
         $templateMgr->assign([
             'highlights' => $this->getHighlights($journal),
         ]);
 
         $this->_setupAnnouncements($journal ?? $request->getSite(), $templateMgr);
+        
         if ($journal) {
+            $authorUserGroups = UserGroup::withRoleIds([Role::ROLE_ID_AUTHOR])
+                ->withContextIds([$journal->getId()])
+                ->get();
+            $templateMgr->assign(['authorUserGroups' => $authorUserGroups]);
+
+            $activeTheme = $templateMgr->getTemplateVars('activeTheme');
+
+            if (in_array(JournalContentOption::CATEGORY_LISTING->value, $activeTheme->getOption('journalContentOrganization'))) {
+                $categories = Repo::category()
+                    ->getCollector()
+                    ->filterByContextIds([$journal->getId()])
+                    ->getMany();
+
+                $templateMgr->assign(['categories' => $categories]);
+            }
+
+            if (in_array(JournalContentOption::RECENT_PUBLISHED->value, $activeTheme->getOption('journalContentOrganization'))) {
+                $continuousPublication = Repo::submission()
+                    ->getCollector()
+                    ->filterByContextIds([$journal->getId()])
+                    ->filterByContinuousPublication(true)
+                    ->getMany();
+
+                $templateMgr->assign(['continuousPublication' => $continuousPublication]);
+            }
+
             // Assign header and content for home page
             $templateMgr->assign([
                 'additionalHomeContent' => $journal->getLocalizedData('additionalHomeContent'),
@@ -74,10 +102,13 @@ class IndexHandler extends PKPIndexHandler
                 'journalDescription' => $journal->getLocalizedData('description'),
             ]);
 
-            $issue = Repo::issue()->getCurrent($journal->getId(), true);
-            if (isset($issue) && $journal->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE) {
-                // The current issue TOC/cover page should be displayed below the custom home page.
-                IssueHandler::_setupIssueTemplate($request, $issue);
+            if (in_array(JournalContentOption::ISSUE_TOC->value, $activeTheme->getOption('journalContentOrganization'))) {
+
+                $issue = Repo::issue()->getCurrent($journal->getId(), true);
+                if (isset($issue) && $journal->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE) {
+                    // The current issue TOC/cover page should be displayed below the custom home page.
+                    IssueHandler::_setupIssueTemplate($request, $issue);
+                }
             }
 
             $templateMgr->display('frontend/pages/indexJournal.tpl');

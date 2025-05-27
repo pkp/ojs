@@ -34,6 +34,10 @@
 		</div>
 	{/if}
 
+	{if $categories}
+		{include file="frontend/components/categotyHeader.tpl" categories=$categories}
+	{/if}
+
 	{* Journal Description *}
 	{if $activeTheme && $activeTheme->getOption('showDescriptionInJournalIndex')}
 		<section class="homepage_about">
@@ -44,6 +48,11 @@
 	{/if}
 
 	{include file="frontend/objects/announcements_list.tpl" numAnnouncements=$numAnnouncementsHomepage}
+
+	{* Latest Continuous Publication *}
+	{if $continuousPublication && $continuousPublication->count()}
+		{include file="frontend/objects/latest_article.tpl" articles=$continuousPublication heading="h2"}
+	{/if}
 
 	{* Latest issue *}
 	{if $issue}

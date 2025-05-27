@@ -20,12 +20,12 @@ use APP\payment\ojs\OJSCompletedPaymentDAO;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\publication\enums\VersionStage;
 use APP\submission\Submission;
+use APP\publication\Collector;
 use Illuminate\Support\Facades\App;
 use PKP\context\Context;
 use PKP\core\Core;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
-use PKP\publication\Collector;
 
 class Repository extends \PKP\publication\Repository
 {

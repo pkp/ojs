@@ -576,6 +576,21 @@ msgstr "Journal Summary"
 msgid "manager.setup.contextSummary.description"
 msgstr "Offer a brief description of your journal to provide insight into its content and purpose."
 
+msgid "manager.setup.journalContentOrganization"
+msgstr "Journal Content Organization"
+
+msgid "manager.setup.journalContentOrganization.description"
+msgstr "Choose how your journal's content will be organized on the homepage."
+
+msgid "manager.setup.journalContentOrganization.option.issue_toc"
+msgstr "Include the current issue's table of contents"
+
+msgid "manager.setup.journalContentOrganization.option.recent_published"
+msgstr "Include recent most published articles"
+
+msgid "manager.setup.journalContentOrganization.option.category_listing"
+msgstr "Include a listing of categories"
+
 msgid "manager.setup.contextAbout"
 msgstr "About the Journal"
 

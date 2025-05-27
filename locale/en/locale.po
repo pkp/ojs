@@ -333,6 +333,9 @@ msgstr "In Review"
 msgid "submissions.published"
 msgstr "Published"
 
+msgid "submissions.published.latest"
+msgstr "Latest Publications"
+
 msgid "submissions.initial"
 msgstr "Initial"
 
