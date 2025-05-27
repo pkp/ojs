@@ -15,6 +15,7 @@
 namespace APP\plugins\themes\default;
 
 use APP\core\Application;
+use APP\journal\enums\JournalContentOption;
 use APP\file\PublicFileManager;
 use PKP\config\Config;
 use PKP\core\PKPSessionGuard;
@@ -39,6 +40,8 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
      */
     public function init()
     {
+        $context = Application::get()->getRequest()->getContext();
+
         // Register theme options
         $this->addOption('typography', 'FieldOptions', [
             'type' => 'radio',
@@ -93,6 +96,14 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
             ],
             'default' => false,
         ]);
+        
+        $this->addOption('journalContentOrganization', 'FieldOptions', [
+            'label' => __('manager.setup.journalContentOrganization'),
+            'description' => __('manager.setup.journalContentOrganization.description'),
+            'options' => JournalContentOption::getOptions($context),
+            'default' => JournalContentOption::default($context),
+        ]);
+
         $this->addOption('useHomepageImageAsHeader', 'FieldOptions', [
             'label' => __('plugins.themes.default.option.useHomepageImageAsHeader.label'),
             'description' => __('plugins.themes.default.option.useHomepageImageAsHeader.description'),
@@ -178,7 +189,6 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
         );
 
         // Get homepage image and use as header background if useAsHeader is true
-        $context = Application::get()->getRequest()->getContext();
         if ($context && $this->getOption('useHomepageImageAsHeader') && ($homepageImage = $context->getLocalizedData('homepageImage'))) {
             $publicFileManager = new PublicFileManager();
             $publicFilesDir = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($context->getId());

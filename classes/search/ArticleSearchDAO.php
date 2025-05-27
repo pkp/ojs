@@ -89,10 +89,10 @@ class ArticleSearchDAO extends SubmissionSearchDAO
         }
 
         if (!empty($context)) {
-            $sqlWhere .= ' AND i.journal_id = ?';
+            $sqlWhere .= ' AND (i.journal_id = ? OR i.journal_id is NULL)';
             $params[] = $context->getId();
         }
-
+        
         $result = $this->retrieve(
             'SELECT
                 o.submission_id,
@@ -102,17 +102,25 @@ class ArticleSearchDAO extends SubmissionSearchDAO
                 COUNT(*) AS count
             FROM
                 submissions s
-                JOIN publications p ON (p.publication_id = s.current_publication_id)
-                JOIN issues i ON (i.issue_id = p.issue_id)
-                JOIN submission_search_objects o ON (s.submission_id = o.submission_id)
-                JOIN journals j ON j.journal_id = s.context_id
-                LEFT JOIN journal_settings js ON j.journal_id = js.journal_id AND js.setting_name = \'publishingMode\'
-                ' . ($sqlFrom ? "NATURAL JOIN {$sqlFrom}" : '') . '
+                JOIN publications AS p ON p.publication_id = s.current_publication_id
+                LEFT JOIN issues AS i ON i.issue_id = p.issue_id
+                JOIN submission_search_objects AS o ON s.submission_id = o.submission_id
+                JOIN journals AS j ON j.journal_id = s.context_id
+                LEFT JOIN journal_settings AS js ON j.journal_id = js.journal_id
+                    AND js.setting_name = \'publishingMode\'
+                LEFT JOIN publication_settings AS ps ON ps.publication_id = p.publication_id
+                    AND ps.setting_name = \'continuousPublication\'
+                    AND ps.setting_value = 1
+                NATURAL JOIN ' . $sqlFrom . '
             WHERE
-                (js.setting_value <> \'' . Journal::PUBLISHING_MODE_NONE . '\' OR
-                js.setting_value IS NULL) AND j.enabled = 1 AND
-                s.status = ' . PKPSubmission::STATUS_PUBLISHED . ' AND
-                i.published = 1 ' . $sqlWhere . '
+                (js.setting_value <> \'' . Journal::PUBLISHING_MODE_NONE . '\' 
+                OR js.setting_value IS NULL) 
+                AND j.enabled = 1 
+                AND s.status = ' . PKPSubmission::STATUS_PUBLISHED . '
+                AND ( i.published = 1
+                    OR ps.publication_id IS NOT NULL
+                    OR p.issue_id IS NULL )
+                AND ' . $sqlWhere . '
             GROUP BY o.submission_id
             ORDER BY count DESC
             LIMIT ' . $limit,
