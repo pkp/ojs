@@ -17,12 +17,13 @@ namespace APP\submission;
 use APP\core\Application;
 use APP\facades\Repo;
 use Illuminate\Database\Query\Builder;
+use Illuminate\Database\Query\JoinClause;
 
 class Collector extends \PKP\submission\Collector
 {
     public ?array $issueIds = null;
-
     public ?array $sectionIds = null;
+    protected ?bool $continuousPublication = null;
 
     public function __construct(DAO $dao)
     {
@@ -44,6 +45,12 @@ class Collector extends \PKP\submission\Collector
     public function filterBySectionIds(array $sectionIds): self
     {
         $this->sectionIds = $sectionIds;
+        return $this;
+    }
+
+    public function filterByContinuousPublication(bool $continuousPublication): static
+    {
+        $this->continuousPublication = $continuousPublication;
         return $this;
     }
 
@@ -71,6 +78,29 @@ class Collector extends \PKP\submission\Collector
                     ->whereIn('p.section_id', $this->sectionIds);
             });
         }
+
+        // add OJS-specific continuous publication filter
+        $q->when(
+            $this->continuousPublication !== null, 
+            fn (Builder $query) => $query
+                ->join(
+                    'publications as publication_cp',
+                    's.current_publication_id',
+                    '=',
+                    'publication_cp.publication_id'
+                )
+                ->leftJoin(
+                    'publication_settings as publication_cps', 
+                    fn (JoinClause $join) => $join
+                        ->on(
+                            'publication_cp.publication_id',
+                            '=',
+                            'publication_cps.publication_id'
+                        )
+                        ->where('publication_cps.setting_name', 'continuousPublication')
+                )
+                ->where('publication_cps.setting_value', $this->continuousPublication)
+        );
 
         return $q;
     }
