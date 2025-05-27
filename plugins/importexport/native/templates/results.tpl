@@ -7,7 +7,7 @@
  *
  * Result of operations this plugin performed
  *}
-
+<div class="legacyDefaults">
 {if $submissionsWarnings || $issuesWarnings || $sectionWarnings}
 	<h2>{translate key="plugins.importexport.common.warningsEncountered"}</h2>
 	{foreach from=$issuesWarnings item=issuesWarningMessages name=issuesWarnings}
@@ -94,3 +94,4 @@
 		{/foreach}
 	</ul>
 {/if}
+</div>

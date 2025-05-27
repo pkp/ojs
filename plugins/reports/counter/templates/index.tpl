@@ -14,7 +14,7 @@
 		{translate key="plugins.reports.counter"}
 	</h1>
 
-	<div class="app__contentPanel">
+	<div class="app__contentPanel legacyDefaults">
 		<p>{translate key="plugins.reports.counter.description"}</p>
 		<h2>{translate key="plugins.reports.counter.release"} {$release}</h2>
 		<ul>

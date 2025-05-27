@@ -7,7 +7,7 @@
  *
  * List of operations this plugin can perform
  *}
-
+<div class="legacyDefaults">
 {if $validationErrors}
 	<h2>{translate key="plugins.importexport.common.validationErrors"}</h2>
 	<ul>
@@ -25,3 +25,4 @@
 {else}
 	{translate key="plugins.importexport.users.importComplete"}
 {/if}
+</div>
