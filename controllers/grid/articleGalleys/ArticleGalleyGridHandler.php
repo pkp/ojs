@@ -473,12 +473,11 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function canEdit()
     {
-        return $this->getPublication()->getData('status') !== Publication::STATUS_PUBLISHED &&
-            Repo::user()->canUserAccessStage(
-                WORKFLOW_STAGE_ID_PRODUCTION,
-                PKPApplication::WORKFLOW_TYPE_EDITORIAL,
-                $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ACCESSIBLE_WORKFLOW_STAGES),
-                $this->getAuthorizedContextObject(Application::ASSOC_TYPE_USER_ROLES)
-            );
+        return Repo::user()->canUserAccessStage(
+            WORKFLOW_STAGE_ID_PRODUCTION,
+            PKPApplication::WORKFLOW_TYPE_EDITORIAL,
+            $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ACCESSIBLE_WORKFLOW_STAGES),
+            $this->getAuthorizedContextObject(Application::ASSOC_TYPE_USER_ROLES)
+        );
     }
 }
