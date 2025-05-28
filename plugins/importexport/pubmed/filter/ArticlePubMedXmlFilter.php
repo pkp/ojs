@@ -15,7 +15,6 @@
 namespace APP\plugins\importexport\pubmed\filter;
 
 use APP\author\Author;
-use APP\core\Application;
 use APP\decision\Decision;
 use APP\facades\Repo;
 use APP\issue\Issue;
@@ -24,8 +23,7 @@ use APP\journal\JournalDAO;
 use APP\submission\Submission;
 use DOMDocument;
 use DOMElement;
-use PKP\citation\CitationDAO;
-use PKP\controlledVocab\ControlledVocab;
+use PKP\citation\Citation;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\filter\PersistableFilter;
@@ -139,16 +137,11 @@ class ArticlePubMedXmlFilter extends PersistableFilter
             }
 
             // Keywords
-            $keywords = Repo::controlledVocab()->getBySymbolic(
-                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
-                Application::ASSOC_TYPE_PUBLICATION,
-                $publication->getId(),
-                [$publicationLocale]
-            );
+            $keywords = $publication->getData('keywords', $publicationLocale);
 
-            if (!empty($keywords[$publicationLocale])) {
+            if (!empty($keywords)) {
                 $objectListNode = $doc->createElement('ObjectList');
-                foreach ($keywords[$publicationLocale] as $keyword) {
+                foreach ($keywords as $keyword) {
                     $objectNode = $doc->createElement('Object');
                     $objectNode->setAttribute('Type', 'keyword');
                     $keywordNode = $doc->createElement('Param');
@@ -161,14 +154,13 @@ class ArticlePubMedXmlFilter extends PersistableFilter
             }
 
             // References
-            $citationDao = DAORegistry::getDAO('CitationDAO'); /** @var CitationDAO $citationDao */
-            $rawCitations = $citationDao->getRawCitationsByPublicationId($publication->getId());
+            $rawCitations = $publication->getData('citations');
             if (!empty($rawCitations)) {
                 $referenceListNode = $doc->createElement('ReferenceList');
-                foreach ($rawCitations as $rawCitation) {
+                foreach ($rawCitations as $rawCitation) { /** @var Citation $rawCitation */
                     $referenceNode = $doc->createElement('Reference');
                     $citationNode = $doc->createElement('Citation');
-                    $citationNode->appendChild($doc->createTextNode($rawCitation));
+                    $citationNode->appendChild($doc->createTextNode($rawCitation->getRawCitation()));
                     $referenceNode->appendChild($citationNode);
                     $referenceListNode->appendChild($referenceNode);
                 }
