@@ -23,6 +23,7 @@ use APP\journal\JournalDAO;
 use APP\submission\Submission;
 use DOMDocument;
 use DOMElement;
+use PKP\citation\Citation;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\filter\PersistableFilter;
@@ -54,7 +55,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
     {
         // Create the XML document
         $implementation = new \DOMImplementation();
-        $dtd = $implementation->createDocumentType('ArticleSet', '-//NLM//DTD PubMed 2.0//EN', 'http://www.ncbi.nlm.nih.gov/entrez/query/static/PubMed.dtd');
+        $dtd = $implementation->createDocumentType('ArticleSet', '-//NLM//DTD PubMed 2.8//EN', 'https://dtd.nlm.nih.gov/ncbi/pubmed/in/PubMed.dtd');
         $doc = $implementation->createDocument('', '', $dtd);
         $doc->preserveWhiteSpace = false;
         $doc->formatOutput = true;
@@ -133,6 +134,37 @@ class ArticlePubMedXmlFilter extends PersistableFilter
 
             if ($abstract = PKPString::html2text($publication->getLocalizedData('abstract', $publicationLocale))) {
                 $articleNode->appendChild($doc->createElement('Abstract'))->appendChild($doc->createTextNode($abstract));
+            }
+
+            // Keywords
+            $keywords = $publication->getData('keywords', $publicationLocale);
+
+            if (!empty($keywords)) {
+                $objectListNode = $doc->createElement('ObjectList');
+                foreach ($keywords as $keyword) {
+                    $objectNode = $doc->createElement('Object');
+                    $objectNode->setAttribute('Type', 'keyword');
+                    $keywordNode = $doc->createElement('Param');
+                    $keywordNode->appendChild($doc->createTextNode($keyword));
+                    $keywordNode->setAttribute('Name', 'value');
+                    $objectNode->appendChild($keywordNode);
+                    $objectListNode->appendChild($objectNode);
+                }
+                $articleNode->appendChild($objectListNode);
+            }
+
+            // References
+            $rawCitations = $publication->getData('citations');
+            if (!empty($rawCitations)) {
+                $referenceListNode = $doc->createElement('ReferenceList');
+                foreach ($rawCitations as $rawCitation) { /** @var Citation $rawCitation */
+                    $referenceNode = $doc->createElement('Reference');
+                    $citationNode = $doc->createElement('Citation');
+                    $citationNode->appendChild($doc->createTextNode($rawCitation->getRawCitation()));
+                    $referenceNode->appendChild($citationNode);
+                    $referenceListNode->appendChild($referenceNode);
+                }
+                $articleNode->appendChild($referenceListNode);
             }
 
             $rootNode->appendChild($articleNode);
