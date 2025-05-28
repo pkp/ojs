@@ -176,21 +176,18 @@
 		<note file="docs/release-notes/README-3.5.0" />
 	</upgrade>
 
-	<upgrade minversion="3.5.0.0" maxversion="3.5.9.9">
+	<upgrade minversion="3.3.0.0" maxversion="3.5.9.9">
 		<migration class="PKP\migration\upgrade\v3_6_0\PreflightCheckMigration" fallback="3.5.9.9" />
 		<migration class="PKP\migration\upgrade\v3_6_0\I10403_EmailTemplateUserGroupAccess"/>
 		<migration class="APP\migration\install\ReviewerRecommendationsMigration" />
 		<migration class="APP\migration\upgrade\v3_6_0\I1660_ReviewerRecommendations"/>
 		<migration class="APP\migration\upgrade\v3_6_0\I10404_UpdateCategoryImageNameFields"/>
-		<note file="docs/release-notes/README-3.6.0" />
-	</upgrade>
-
-	<upgrade minversion="3.1.0.0" maxversion="3.5.9.9">
 		<migration class="PKP\migration\upgrade\v3_6_0\I4860_MigratePublicationVersion"/>
 		<migration class="PKP\migration\upgrade\v3_6_0\I4860_MigratePublicationAddCreatedAt"/>
 		<migration class="PKP\migration\upgrade\v3_6_0\I4860_MigratePublicationVersionSourcePublicationId"/>
 		<note file="docs/release-notes/README-3.6.0" />
 	</upgrade>
+
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
 </install>
