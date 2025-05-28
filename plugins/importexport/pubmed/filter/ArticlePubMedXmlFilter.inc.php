@@ -3,14 +3,14 @@
 /**
  * @file plugins/importexport/pubmed/filter/ArticlePubMedXmlFilter.inc.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2014-2025 Simon Fraser University
+ * Copyright (c) 2000-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticlePubMedXmlFilter
  * @ingroup plugins_importexport_pubmed
  *
- * @brief Class that converts a Article to a PubMed XML document.
+ * @brief Class that converts an Article to a PubMed XML document.
  */
 
 import('lib.pkp.classes.filter.PersistableFilter');
@@ -58,7 +58,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 	function &process(&$submissions) {
 		// Create the XML document
 		$implementation = new DOMImplementation();
-		$dtd = $implementation->createDocumentType('ArticleSet', '-//NLM//DTD PubMed 2.0//EN', 'http://www.ncbi.nlm.nih.gov/entrez/query/static/PubMed.dtd');
+		$dtd = $implementation->createDocumentType('ArticleSet', '-//NLM//DTD PubMed 2.8//EN', 'https://dtd.nlm.nih.gov/ncbi/pubmed/in/PubMed.dtd');
 		$doc = $implementation->createDocument('', '', $dtd);
 		$doc->preserveWhiteSpace = false;
 		$doc->formatOutput = true;
@@ -140,6 +140,38 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 				$articleNode->appendChild($doc->createElement('Abstract'))->appendChild($doc->createTextNode($abstract));
 			}
 
+			// Keywords
+			$keywords = $publication->getData('keywords', $locale);
+			if (!empty($keywords)) {
+				$objectListNode = $doc->createElement('ObjectList');
+				foreach ($keywords as $keyword) {
+					$objectNode = $doc->createElement('Object');
+					$objectNode->setAttribute('Type', 'keyword');
+					$keywordNode = $doc->createElement('Param');
+					$keywordNode->appendChild($doc->createTextNode($keyword));
+					$keywordNode->setAttribute('Name', 'value');
+					$objectNode->appendChild($keywordNode);
+					$objectListNode->appendChild($objectNode);
+				}
+				$articleNode->appendChild($objectListNode);
+			}
+
+			// References
+			$citationDao = DAORegistry::getDAO('CitationDAO'); /** @var CitationDAO $citationDao */
+			$citations = $citationDao->getByPublicationId($publication->getId())->toAssociativeArray();
+			if (!empty($citations)) {
+				$referenceListNode = $doc->createElement('ReferenceList');
+				foreach ($citations as $submissionCitation) {
+					$rawCitation = $submissionCitation->getRawCitation();
+					$referenceNode = $doc->createElement('Reference');
+					$citationNode = $doc->createElement('Citation');
+					$citationNode->appendChild($doc->createTextNode($rawCitation));
+					$referenceNode->appendChild($citationNode);
+					$referenceListNode->appendChild($referenceNode);
+				}
+				$articleNode->appendChild($referenceListNode);
+			}
+
 			$rootNode->appendChild($articleNode);
 		}
 		$doc->appendChild($rootNode);
@@ -204,7 +236,9 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 			$authorElement->appendChild($doc->createElement('FirstName'))->appendChild($doc->createTextNode(ucfirst($author->getLocalizedGivenName())));
 			$authorElement->appendChild($doc->createElement('LastName'))->appendChild($doc->createTextNode(ucfirst($author->getLocalizedFamilyName())));
 		}
-		$authorElement->appendChild($doc->createElement('Affiliation'))->appendChild($doc->createTextNode($author->getLocalizedAffiliation()));
+		if ($author->getLocalizedAffiliation()) {
+			$authorElement->appendChild($doc->createElement('Affiliation'))->appendChild($doc->createTextNode($author->getLocalizedAffiliation()));
+		}
 		// We're storing the ORCID with a URL (http://orcid.org/{$ID}), but the XML expects just the ID
 		$orcidId = explode('/', trim($author->getData('orcid') ?? '', '/'));
 		$orcidId = array_pop($orcidId);
@@ -235,5 +269,3 @@ class ArticlePubMedXmlFilter extends PersistableFilter {
 		return $pubDateNode;
 	}
 }
-
-
