@@ -420,18 +420,3 @@ msgstr ""
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Please select the contributor's role."
-
-msgid "publication.versionStage.authorOriginal"
-msgstr "Author Original"
-
-msgid "publication.versionStage.acceptedManuscript"
-msgstr "Accepted Manuscript"
-
-msgid "publication.versionStage.submittedManuscript"
-msgstr "Submitted Manuscript"
-
-msgid "publication.versionStage.proof"
-msgstr "Proof"
-
-msgid "publication.versionStage.versionOfRecord"
-msgstr "Version of Record"
