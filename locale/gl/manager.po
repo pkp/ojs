@@ -1,16 +1,17 @@
 # Real Academia Galega <reacagal@gmail.com>, 2021.
+# Helena Rita Gonçalves Marinho Moreira <bragatec@fceer.org>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-13 15:26+0000\n"
-"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
-"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/manager/"
-"gl_ES/>\n"
-"Language: gl_ES\n"
+"PO-Revision-Date: 2025-05-28 15:02+0000\n"
+"Last-Translator: Helena Rita Gonçalves Marinho Moreira <bragatec@fceer.org>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/manager/gl/"
+">\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "manager.distribution.access"
 msgstr "Acceso"
@@ -46,17 +47,21 @@ msgstr ""
 "contidos."
 
 msgid "manager.setup.enableDois.description"
-msgstr ""
+msgstr "Permitir asignación de DOIs aos traballos publicados nesta revista."
 
-#, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr "Escolla os obxectos aos que se deben asignar os DOIs."
+msgstr ""
+"Selecciona os elementos aos que se lles asignará un DOI. A maioría das "
+"revistas asignan DOIs aos artigos, pero tamén podes optar por asignalos a "
+"todos os elementos publicados."
 
 msgid "doi.manager.settings.doiSuffixLegacy"
 msgstr ""
+"Usar patróns predeterminados.<br />%j.v%vi%i para números<br />%j.v%vi%i.%a "
+"para artigos<br />%j.v%vi%i.%a.g%g para probas."
 
 msgid "doi.manager.settings.doiCreationTime.copyedit"
-msgstr ""
+msgstr "Cando se alcanza a etapa de corrección de estilo"
 
 msgid "manager.website.archiving"
 msgstr "Arquivar"
