@@ -466,13 +466,13 @@ describe('Data suite: Amwandenga', function() {
 
 		// Toggle between versions
 		cy.get('button').contains('All Versions').click();
-		cy.get('button').contains('Version 1').click();
+		cy.get('button').contains('Version of Record 1.0').click();
 		cy.contains('This version has been published and can not be edited.');
 		cy.openWorkflowMenu('Title & Abstract')
 
 		cy.get('button').contains('Save').should('be.disabled');
 		cy.get('button').contains('All Versions').click();
-		cy.get('button').contains('Version 2').click();
+		cy.get('button').contains('Version of Record 1.1').click();
 		cy.get('button').contains('Publish');
 		cy.contains('This version has been published and can not be edited.').should('not.exist');
 
@@ -525,7 +525,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.contains('Alan Mwandenga Version 2');
 		cy.checkViewableGalley('PDF Version 2');
 		cy.contains('The Signalling Theory Dividends Version 2').click();
-		cy.get('.versions a').contains('(1)').click();
+		cy.get('.versions a').contains('(Version of Record 1.0)').click();
 		cy.contains('This is an outdated version');
 		cy.checkViewableGalley('PDF');
 		cy.contains('This is an outdated version');
@@ -563,7 +563,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('button:contains("Publish")').should('not.exist');
 		cy.get('button:contains("Create Version")').should('not.exist');
 		cy.get('button').contains('All Versions').click();
-		cy.get('button').contains('Version 1').click();
+		cy.get('button').contains('Version of Record 1.0').click();
 		cy.contains('This version has been published and can not be edited.');
 		cy.get('button:contains("Unpublish")').should('not.exist');
 	});
