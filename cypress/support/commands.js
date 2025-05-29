@@ -23,17 +23,6 @@ Cypress.Commands.add('publish', (issueId, issueTitle) => {
 	cy.get('div.pkpWorkflow__publishModal button:contains("Publish")').click();
 });
 
-Cypress.Commands.add('assignPublicationStage', (stage, versionIsMinor = 'true', sideModal) => {
-	cy.get('select[id="version-versionStage-control"]').select(stage);
-	cy.get('select[id="version-versionIsMinor-control"]').select(versionIsMinor);
-	if (sideModal) {
-		cy.contains('[data-cy="active-modal"] button', 'Confirm').click();
-	} else {
-		cy.contains('[data-cy="dialog"] button', 'Confirm').click();
-	}
-	cy.waitJQuery();
-});
-
 Cypress.Commands.add('isInIssue', (submissionTitle, issueTitle) => {
 	cy.visit('');
 	cy.get('a:contains("Archives")').click();
