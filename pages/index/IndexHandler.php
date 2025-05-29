@@ -17,6 +17,7 @@
 namespace APP\pages\index;
 
 use APP\core\Application;
+use APP\submission\Submission;
 use APP\facades\Repo;
 use APP\journal\JournalDAO;
 use APP\journal\enums\JournalContentOption;
@@ -89,6 +90,7 @@ class IndexHandler extends PKPIndexHandler
                     ->getCollector()
                     ->filterByContextIds([$journal->getId()])
                     ->filterByContinuousPublication(true)
+                    ->filterByStatus([Submission::STATUS_PUBLISHED])
                     ->getMany();
 
                 $templateMgr->assign(['continuousPublication' => $continuousPublication]);

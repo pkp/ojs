@@ -918,9 +918,6 @@ msgstr "Author guidelines, copyright, and indexing (including registration)."
 msgid "manager.setup.disableSubmissions.description"
 msgstr "Prevent users from submitting new articles to the journal. Submissions can be disabled for individual journal sections on the <a href=\"{$url}\">journal sections</a> settings page."
 
-msgid "manager.setup.continuousPublication.description"
-msgstr "Allow manager/editor to publich an articles to the journal without beign associated with an <a href=\"{$url}\">issue</a>."
-
 msgid "manager.setup.disableSubmissions.notAccepting"
 msgstr "This journal is not accepting submissions at this time. Visit the workflow settings to allow submissions."
 

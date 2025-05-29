@@ -72,14 +72,13 @@ class AssignToIssueForm extends FormComponent
             }
         }
 
-        $this->addField(new FieldSelect('issueId', [
-            'label' => __('issue.issue'),
-            'options' => $issueOptions,
-            'value' => $publication->getData('issueId') ? $publication->getData('issueId') : '',
-        ]));
-
-        if ($publicationContext->getData('continuousPublication')) {
-            $this->addField(new FieldOptions('continuousPublication', [
+        $this
+            ->addField(new FieldSelect('issueId', [
+                'label' => __('issue.issue'),
+                'options' => $issueOptions,
+                'value' => $publication->getData('issueId') ? $publication->getData('issueId') : '',
+            ]))
+            ->addField(new FieldOptions('continuousPublication', [
                 'label' => __('manager.setup.continuousPublication'),
                 'description' => __('publication.publish.continuousPublication.description'),
                 'options' => [
@@ -89,7 +88,7 @@ class AssignToIssueForm extends FormComponent
                     ],
                 ],
                 'value' => (bool) $publication->getData('continuousPublication'),
+                'showWhen' => 'issueId',
             ]));
-        }
     }
 }
