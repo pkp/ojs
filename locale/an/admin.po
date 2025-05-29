@@ -1,7 +1,7 @@
 # Juan Pablo Martínez <juanpabl@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-24 18:51+0000\n"
+"PO-Revision-Date: 2025-05-29 22:50+0000\n"
 "Last-Translator: Juan Pablo Martínez <juanpabl@gmail.com>\n"
 "Language-Team: Aragonese <http://translate.pkp.sfu.ca/projects/ojs/admin/an/>"
 "\n"
@@ -65,7 +65,7 @@ msgstr ""
 "rechionals compatibles con a revista."
 
 msgid "admin.journals.importSubscriptions"
-msgstr "Importar condutas"
+msgstr "Importar subscripcions"
 
 msgid "admin.journals.transcode"
 msgstr "Transcodificar metadatos d'articlos de ISO8859-1"
@@ -118,7 +118,7 @@ msgid "admin.mergeUsers.from.description"
 msgstr ""
 "Tríe un (u varios) usuarios/as pa fusionar-los en unatra cuenta de usuario/a "
 "(p. eix. cuan bel usuario/a tiene dos cuentas distintas). La cuenta/s triada "
-"en primer puesto será eliminada/s y toz los envíos, asignacions, etc. "
+"en primer puesto será eliminada/s y toz los ninvios, asignacions, etc. "
 "s'atribuyirán a la segunda cuenta."
 
 msgid "admin.mergeUsers.confirm"
