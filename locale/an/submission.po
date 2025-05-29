@@ -2,7 +2,7 @@
 # Juan Pablo Martínez <juanpabl@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-29 07:24+0000\n"
+"PO-Revision-Date: 2025-05-29 22:50+0000\n"
 "Last-Translator: Juan Pablo Martínez <juanpabl@gmail.com>\n"
 "Language-Team: Aragonese <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/an/>\n"
@@ -183,8 +183,8 @@ msgstr ""
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
 "Toz los requisitos de publicación se cumplen. Esto se publicará "
-"immediatament perque la calendata de publicación s'establió pa lo "
-"{$datePublished}. Seguro que quiere publicar-lo?"
+"immediatament perque la data de publicación s'establió pa lo {$datePublished}"
+". Seguro que quiere publicar-lo?"
 
 msgid "publication.required.issue"
 msgstr ""
@@ -221,11 +221,11 @@ msgstr ""
 
 msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr ""
-"L'anyo d'os dreitos d'autor s'achustará automaticament en función d'a "
-"calendata de publicación."
+"L'anyo d'os dreitos d'autor s'achustará automaticament en función d'a data "
+"de publicación."
 
 msgid "publication.datePublished"
-msgstr "Calendata de publicación"
+msgstr "Data de publicación"
 
 msgid "publication.editDisabled"
 msgstr "Esta versión ya ha estau publicada y no puede editar-se."
@@ -320,7 +320,7 @@ msgstr ""
 
 msgid "submission.copyright.description"
 msgstr ""
-"Per favor, leiga y comprenda los termins de dreitos d'autor pa los envíos a "
+"Per favor, leiga y comprenda los termins de dreitos d'autor pa los ninvios a "
 "esta revista."
 
 msgid "submission.wizard.notAllowed.description"
@@ -342,7 +342,7 @@ msgstr ""
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
-"No puede realizar ninvios a esta revista perque los envíos a totas las "
+"No puede realizar ninvios a esta revista perque los ninvios a totas las "
 "seccions d'esta revista han estau desactivaus u restrinchius. Si creye que "
 "se trata d'una error, se comunique con <a href='mailto:{$email}'>{$name}</a>."
 
