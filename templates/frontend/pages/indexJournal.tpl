@@ -35,7 +35,7 @@
 	{/if}
 
 	{if $categories}
-		{include file="frontend/components/categotyHeader.tpl" categories=$categories}
+		{include file="frontend/components/categoryHeader.tpl" categories=$categories}
 	{/if}
 
 	{* Journal Description *}
