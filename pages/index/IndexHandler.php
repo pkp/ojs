@@ -19,6 +19,7 @@ namespace APP\pages\index;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\journal\JournalDAO;
+use APP\journal\enums\JournalContentOption;
 use APP\observers\events\UsageEvent;
 use APP\pages\issue\IssueHandler;
 use APP\template\TemplateManager;
@@ -74,7 +75,7 @@ class IndexHandler extends PKPIndexHandler
 
             $activeTheme = $templateMgr->getTemplateVars('activeTheme');
 
-            if (in_array('category_listing', $activeTheme->getOption('journalContentOrganization'))) {
+            if (in_array(JournalContentOption::CATEGORY_LISTING->value, $activeTheme->getOption('journalContentOrganization'))) {
                 $categories = Repo::category()
                     ->getCollector()
                     ->filterByContextIds([$journal->getId()])
@@ -83,7 +84,7 @@ class IndexHandler extends PKPIndexHandler
                 $templateMgr->assign(['categories' => $categories]);
             }
 
-            if (in_array('recent_published', $activeTheme->getOption('journalContentOrganization'))) {
+            if (in_array(JournalContentOption::RECENT_PUBLISHED->value, $activeTheme->getOption('journalContentOrganization'))) {
                 $continuousPublication = Repo::submission()
                     ->getCollector()
                     ->filterByContextIds([$journal->getId()])
@@ -101,7 +102,7 @@ class IndexHandler extends PKPIndexHandler
                 'journalDescription' => $journal->getLocalizedData('description'),
             ]);
 
-            if (in_array('issue_toc', $activeTheme->getOption('journalContentOrganization'))) {
+            if (in_array(JournalContentOption::ISSUE_TOC->value, $activeTheme->getOption('journalContentOrganization'))) {
 
                 $issue = Repo::issue()->getCurrent($journal->getId(), true);
                 if (isset($issue) && $journal->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE) {

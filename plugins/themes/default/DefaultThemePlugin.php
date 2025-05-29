@@ -15,6 +15,7 @@
 namespace APP\plugins\themes\default;
 
 use APP\core\Application;
+use APP\journal\enums\JournalContentOption;
 use APP\file\PublicFileManager;
 use PKP\config\Config;
 use PKP\core\PKPSessionGuard;
@@ -39,6 +40,8 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
      */
     public function init()
     {
+        $context = Application::get()->getRequest()->getContext();
+
         // Register theme options
         $this->addOption('typography', 'FieldOptions', [
             'type' => 'radio',
@@ -97,21 +100,8 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
         $this->addOption('journalContentOrganization', 'FieldOptions', [
             'label' => __('manager.setup.journalContentOrganization'),
             'description' => __('manager.setup.journalContentOrganization.description'),
-            'options' => [
-                [
-                    'value' => 'issue_toc',
-                    'label' => __('manager.setup.journalContentOrganization.option.issue_toc'),
-                ],
-                [
-                    'value' => 'recent_published',
-                    'label' => __('manager.setup.journalContentOrganization.option.recent_published'),
-                ],
-                [
-                    'value' => 'category_listing',
-                    'label' => __('manager.setup.journalContentOrganization.option.category_listing'),
-                ],
-            ],
-            'default' => ['issue_toc'],
+            'options' => JournalContentOption::getOptions($context),
+            'default' => JournalContentOption::default($context),
         ]);
 
         $this->addOption('useHomepageImageAsHeader', 'FieldOptions', [
@@ -199,7 +189,6 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
         );
 
         // Get homepage image and use as header background if useAsHeader is true
-        $context = Application::get()->getRequest()->getContext();
         if ($context && $this->getOption('useHomepageImageAsHeader') && ($homepageImage = $context->getLocalizedData('homepageImage'))) {
             $publicFileManager = new PublicFileManager();
             $publicFilesDir = $request->getBaseUrl() . '/' . $publicFileManager->getContextFilesPath($context->getId());
