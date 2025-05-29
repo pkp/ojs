@@ -41,7 +41,7 @@ class SubmissionFilters extends PKPSubmissionFilters
         ;
     }
 
-    protected function addIssues(): self
+    protected function addIssues(): static
     {
         $request = Application::get()->getRequest();
 

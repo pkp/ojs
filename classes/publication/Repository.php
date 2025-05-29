@@ -93,14 +93,12 @@ class Repository extends \PKP\publication\Repository
             }
         }
 
-        // If the continuousPublication enabled and no issue is selected,
-        // this is allowed and will return other error if there are any
-        if (!isset($props['issueId']) && $context->getData('continuousPublication')) {
-            return $errors;    
+        // If no issue is selected, it will be considered as continuous publication
+        if (!isset($props['issueId'])) {
+            return $errors;
         }
 
-        // If the continuousPublication is not enable
-        // Ensure that the issueId exists
+        // Ensure that the valid issue exists is any issue selected
         if (isset($props['issueId']) && empty($errors['issueId'])) {
             if (!Repo::issue()->exists($props['issueId'])) {
                 $errors['issueId'] = [__('publication.invalidIssue')];
