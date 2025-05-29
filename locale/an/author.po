@@ -2,7 +2,7 @@
 # Juan Pablo Martínez <juanpabl@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-24 18:51+0000\n"
+"PO-Revision-Date: 2025-05-29 22:50+0000\n"
 "Last-Translator: Juan Pablo Martínez <juanpabl@gmail.com>\n"
 "Language-Team: Aragonese <http://translate.pkp.sfu.ca/projects/ojs/author/an/"
 ">\n"
@@ -268,7 +268,7 @@ msgid "author.submit.suppFile.publisherDescription"
 msgstr "Utilizar nomás con materials publicaus formalment."
 
 msgid "author.submit.suppFile.dateDescription"
-msgstr "Calendata en a cuala se recopilaron los datos u se creó lo traste."
+msgstr "Data en a cuala se recopilaron los datos u se creó lo traste."
 
 msgid "author.submit.suppFile.sourceDescription"
 msgstr "Nombre d'o estudeyo u unatro punto d'orichen."
@@ -311,9 +311,9 @@ msgstr "Fichero de l'autor/a"
 
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr ""
-"Ye necesario disposar d'una cuenta d'usuario/a pa realizar envíos a la "
-"revista. Esto permite que nuestros editores/as faigan un seguimiento d'os "
-"suyos envíos y puedan contactar-le cuan cambie lo estau d'os mesmos u si ye "
+"Ye necesario disposar d'una cuenta d'usuario/a pa realizar ninvios a la "
+"revista. Esto permite que nuestros editors/as faigan un seguimiento d'os "
+"suyos ninvios y puedan contactar-le cuan cambie lo estau d'os mesmos u si ye "
 "necesario proporcionar información adicional."
 
 msgid "author.track"
