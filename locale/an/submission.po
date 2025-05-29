@@ -2,7 +2,7 @@
 # Juan Pablo Martínez <juanpabl@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-29 07:10+0000\n"
+"PO-Revision-Date: 2025-05-29 07:24+0000\n"
 "Last-Translator: Juan Pablo Martínez <juanpabl@gmail.com>\n"
 "Language-Team: Aragonese <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/an/>\n"
@@ -140,7 +140,7 @@ msgstr ""
 "publicada."
 
 msgid "galley.publicationNotFound"
-msgstr "No se podió trobar la publicación d'esta galerada."
+msgstr "No s'ha puesto trobar la publicación d'esta galerada."
 
 msgid "publication.assignToissue"
 msgstr "Asignar a numero"
@@ -155,15 +155,15 @@ msgstr "Cambiar numero"
 
 msgid "publication.datePublished.description"
 msgstr ""
-"La calendata de publicación s'establirá automaticament cuan se publique lo "
-"numero. No introduzca una calendata de publicación de no estar que l'articlo "
-"haiga estau publicau anteriorment en unatro puesto y amenesta cambiar-la."
+"La data de publicación s'establirá automaticament cuan se publique lo "
+"numero. No introduzca una data de publicación de no estar que l'articlo "
+"haiga estau publicau anteriorment en unatro puesto y le calga cambiar-la."
 
 msgid "publication.invalidSection"
-msgstr "No se podió trobar la sección d'esta publicación."
+msgstr "No s'ha puesto trobar la sección d'esta publicación."
 
 msgid "publication.invalidIssue"
-msgstr "No se podió trobar lo numero d'esta publicación."
+msgstr "No s'ha puesto trobar lo numero d'esta publicación."
 
 msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
@@ -194,13 +194,13 @@ msgid "publication.publishedIn"
 msgstr "Publicau en <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.scheduledIn"
-msgstr "Programado pa publicar-se en <a href=\"{$issueUrl}\">{$issueName}</a>."
+msgstr "Programau pa publicar-se en <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.unscheduledIn"
-msgstr "Esto no s'ha programado pa publicar-se en garra numero."
+msgstr "Esto no s'ha programau pa publicar-se en garra numero."
 
 msgid "publication.selectIssue"
-msgstr "Triar un numero pa programarlo pa publicación"
+msgstr "Triar un numero pa programar-lo pa publicación"
 
 msgid "submission.publication"
 msgstr "Publicación"
@@ -209,7 +209,7 @@ msgid "publication.status.published"
 msgstr "Publicau"
 
 msgid "publication.status.unscheduled"
-msgstr "No programado"
+msgstr "No programau"
 
 msgid "submission.publications"
 msgstr "Publicacions"
