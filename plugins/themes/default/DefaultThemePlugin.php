@@ -100,7 +100,7 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
         $this->addOption('journalContentOrganization', 'FieldOptions', [
             'label' => __('manager.setup.journalContentOrganization'),
             'description' => __('manager.setup.journalContentOrganization.description'),
-            'options' => JournalContentOption::getOptions($context),
+            'options' => JournalContentOption::getOptions(),
             'default' => JournalContentOption::default($context),
         ]);
 
