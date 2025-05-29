@@ -2,7 +2,7 @@
 # Juan Pablo Martínez <juanpabl@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-26 10:57+0000\n"
+"PO-Revision-Date: 2025-05-29 22:50+0000\n"
 "Last-Translator: Juan Pablo Martínez <juanpabl@gmail.com>\n"
 "Language-Team: Aragonese <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "an/>\n"
@@ -99,7 +99,7 @@ msgid "default.groups.name.editor"
 msgstr "Editor/a d'a revista"
 
 msgid "default.groups.plural.editor"
-msgstr "Editores/as d'a revista"
+msgstr "Editors/as d'a revista"
 
 msgid "default.groups.abbrev.editor"
 msgstr "ER"
