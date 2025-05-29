@@ -78,7 +78,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO
         }
 
         if (!empty($journal)) {
-            $sqlWhere .= ' AND (i.journal_id = ? OR i.journal_id is NULL)';
+            $sqlWhere .= ' AND (s.context_id = ?)';
             $params[] = $journal->getId();
         }
         
@@ -106,7 +106,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO
                 OR js.setting_value IS NULL) 
                 AND j.enabled = 1 
                 AND s.status = ' . PKPSubmission::STATUS_PUBLISHED . '
-                AND ( i.published = 1
+                AND ( (i.published = 1 AND i.journal_id = s.context_id)
                     OR ps.publication_id IS NOT NULL
                     OR p.issue_id IS NULL )
                 AND ' . $sqlWhere . '

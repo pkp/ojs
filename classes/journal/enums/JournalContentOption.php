@@ -14,8 +14,9 @@
 
 namespace APP\journal\enums;
 
-use PKP\context\Context;
+use APP\core\Application;
 use APP\facades\Repo;
+use PKP\context\Context;
 
 enum JournalContentOption: int
 {
@@ -23,34 +24,30 @@ enum JournalContentOption: int
     case RECENT_PUBLISHED = 2;
     case CATEGORY_LISTING = 3;
 
-    public static function default(Context $context): array
+    /**
+     * Get the default content options for a journal.
+     */
+    public static function default(?Context $context = null): array
     {
-        $issueExists = Repo::issue()
-            ->getCollector()
-            ->filterByContextIds([$context->getId()])
-            ->getQueryBuilder()
-            ->exists();
-
-        return $issueExists ? [static::ISSUE_TOC] : [static::RECENT_PUBLISHED];
-    }
-
-    public static function getOptions(Context $context): array
-    {
-        $options = [];
-        $issueExists = Repo::issue()
-            ->getCollector()
-            ->filterByContextIds([$context->getId()])
-            ->getQueryBuilder()
-            ->exists();
-
-        if ($issueExists) {
-            $options[] = [
-                'value' => static::ISSUE_TOC->value,
-                'label' => __('manager.setup.journalContentOrganization.option.issue_toc'),
-            ];
+        $context ??= Application::get()->getRequest()->getContext();
+        
+        if (!$context) {
+            return [static::ISSUE_TOC];
         }
 
-        return array_merge($options, [
+        return static::getIssueExists($context) ? [static::ISSUE_TOC] : [static::RECENT_PUBLISHED];
+    }
+
+    /**
+     * Get the content options for a journal.
+     */
+    public static function getOptions(): array
+    {
+        return [
+            [
+                'value' => static::ISSUE_TOC->value,
+                'label' => __('manager.setup.journalContentOrganization.option.issue_toc'),
+            ],
             [
                 'value' => static::RECENT_PUBLISHED->value,
                 'label' => __('manager.setup.journalContentOrganization.option.recent_published'),
@@ -58,7 +55,19 @@ enum JournalContentOption: int
             [
                 'value' => static::CATEGORY_LISTING->value,
                 'label' => __('manager.setup.journalContentOrganization.option.category_listing'),
-            ]
-        ]);
+            ],
+        ];
+    }
+
+    /**
+     * Get whether the issue exists for a context.
+     */
+    protected static function getIssueExists(Context $context): bool
+    {
+        return Repo::issue()
+            ->getCollector()
+            ->filterByContextIds([$context->getId()])
+            ->getQueryBuilder()
+            ->exists();
     }
 }
