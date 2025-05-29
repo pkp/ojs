@@ -245,7 +245,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->enum('version_stage', array_column(VersionStage::cases(), 'value'))->nullable();
             $table->integer('version_minor')->nullable();
             $table->integer('version_major')->nullable();
-            $table->datetime('created_at');
+            $table->datetime('created_at')->useCurrent();
 
             $table->bigInteger('issue_id')->nullable();
             $table->foreign('issue_id')->references('issue_id')->on('issues')->nullOnDelete();
