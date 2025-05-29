@@ -245,7 +245,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->enum('version_stage', array_column(VersionStage::cases(), 'value'))->nullable();
             $table->integer('version_minor')->nullable();
             $table->integer('version_major')->nullable();
-            $table->datetime('created_at')->after('date_published');
+            $table->datetime('created_at');
 
             $table->bigInteger('issue_id')->nullable();
             $table->foreign('issue_id')->references('issue_id')->on('issues')->nullOnDelete();
@@ -253,7 +253,7 @@ class OJSMigration extends \PKP\migration\Migration
 
             $table->index(['url_path'], 'publications_url_path');
 
-            $table->bigInteger('source_publication_id')->nullable()->after('publication_id');
+            $table->bigInteger('source_publication_id')->nullable();
             $table->foreign('source_publication_id', 'publications_source_publication_id')
                 ->references('publication_id')->on('publications')->nullOnDelete();
             $table->index(['source_publication_id'], 'publications_source_publication_id_index');
