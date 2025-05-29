@@ -14,6 +14,7 @@
 
 namespace APP\migration\install;
 
+use APP\publication\enums\VersionStage;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
@@ -236,17 +237,27 @@ class OJSMigration extends \PKP\migration\Migration
 
             $table->smallInteger('status')->default(1); // PKPSubmission::STATUS_QUEUED
             $table->string('url_path', 64)->nullable();
-            $table->bigInteger('version')->nullable();
 
             $table->bigInteger('doi_id')->nullable();
             $table->foreign('doi_id')->references('doi_id')->on('dois')->nullOnDelete();
             $table->index(['doi_id'], 'publications_doi_id');
+
+            $table->enum('version_stage', array_column(VersionStage::cases(), 'value'))->nullable();
+            $table->integer('version_minor')->nullable();
+            $table->integer('version_major')->nullable();
+            $table->datetime('created_at')->useCurrent();
 
             $table->bigInteger('issue_id')->nullable();
             $table->foreign('issue_id')->references('issue_id')->on('issues')->nullOnDelete();
             $table->index(['issue_id'], 'publications_issue_id_index');
 
             $table->index(['url_path'], 'publications_url_path');
+
+            $table->bigInteger('source_publication_id')->nullable();
+            $table->foreign('source_publication_id', 'publications_source_publication_id')
+                ->references('publication_id')->on('publications')->nullOnDelete();
+            $table->index(['source_publication_id'], 'publications_source_publication_id_index');
+
         });
         // The following foreign key relationships are for tables defined in SubmissionsMigration
         // but they depend on publications to exist so are created here.

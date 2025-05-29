@@ -20,10 +20,13 @@ namespace APP\publication;
 
 use APP\core\Application;
 use APP\file\PublicFileManager;
+use APP\publication\enums\VersionStage;
 use PKP\publication\PKPPublication;
 
 class Publication extends PKPPublication
 {
+    public const DEFAULT_VERSION_STAGE = VersionStage::VERSION_OF_RECORD;
+
     /**
      * Get the URL to a localized cover image
      *

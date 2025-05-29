@@ -18,6 +18,7 @@ use APP\core\Application;
 use APP\facades\Repo;
 use APP\payment\ojs\OJSCompletedPaymentDAO;
 use APP\payment\ojs\OJSPaymentManager;
+use APP\publication\enums\VersionStage;
 use APP\submission\Submission;
 use Illuminate\Support\Facades\App;
 use PKP\context\Context;
@@ -129,9 +130,9 @@ class Repository extends \PKP\publication\Repository
     }
 
     /** @copydoc \PKP\publication\Repository::version() */
-    public function version(Publication $publication): int
+    public function version(Publication $publication, ?VersionStage $versionStage = null, bool $isMinorVersion = true): int
     {
-        $newId = parent::version($publication);
+        $newId = parent::version($publication, $versionStage, $isMinorVersion);
 
         $context = Application::get()->getRequest()->getContext();
 
