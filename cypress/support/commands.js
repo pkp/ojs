@@ -13,9 +13,10 @@ import '../../lib/pkp/cypress/support/commands_orcid.js';
 import '../../lib/pkp/cypress/support/command_reviewer_suggestion.js';
 
 Cypress.Commands.add('publish', (issueId, issueTitle) => {
-	cy.openWorkflowMenu('Title & Abstract')
+	cy.openWorkflowMenu('Unassigned version', 'Title & Abstract')
 	cy.get('button:contains("Schedule For Publication")').click();
 	cy.wait(1000);
+	cy.assignPublicationStage('AO', 'false', true);
 	cy.get('select[id="assignToIssue-issueId-control"]').select(issueId);
 	cy.get('div[id^="assign-"] button:contains("Save")').click();
 	cy.get('div:contains("All publication requirements have been met. This will be published immediately in ' + issueTitle + '. Are you sure you want to publish this?")');

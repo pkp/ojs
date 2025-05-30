@@ -392,7 +392,7 @@ describe('Article View Metadata - DC Plugin', function() {
 
 
 		// Go to publication tabs
-		cy.openWorkflowMenu('Title & Abstract').click();
+		cy.openWorkflowMenu('Unassigned version', 'Title & Abstract').click();
 
 		// Open multilanguage inputs and add data to fr_CA inputs
 		cy.get('button').contains('French').click();
@@ -410,7 +410,8 @@ describe('Article View Metadata - DC Plugin', function() {
 		cy.get('[role="status"]').contains('Saved');
 
 		// Go to metadata
-		cy.openWorkflowMenu('Metadata').click();
+		cy.openWorkflowMenu('Unassigned version', 'Metadata').click();
+		cy.wait(2000); // wait for the form to load
 		cy.get('button').contains('French').click();
 
 		// Add the metadata to the submission
@@ -439,14 +440,14 @@ describe('Article View Metadata - DC Plugin', function() {
 		cy.get('[role="status"]').contains('Saved');
 
 		// Permissions & Disclosure
-		cy.openWorkflowMenu('Permissions & Disclosure').click();
+		cy.openWorkflowMenu('Unassigned version', 'Permissions & Disclosure').click();
 
 		cy.get('[name="licenseUrl"]').type(submission.licenceUrl, {delay: 0});
 		cy.get('button').contains('Save').click();
 		cy.get('[role="status"]').contains('Saved');
 
 		// Create a galley
-		cy.openWorkflowMenu('Galleys')
+		cy.openWorkflowMenu('Unassigned version', 'Galleys')
 		submission.galleys.forEach((galley) => {
 			cy.get('[data-cy="galley-manager"]').contains('Add galley').click();
 			cy.wait(1500); // Wait for the form to settle
@@ -466,7 +467,7 @@ describe('Article View Metadata - DC Plugin', function() {
 
 
 		// Issue
-		cy.openWorkflowMenu('Issue')
+		cy.openWorkflowMenu('Unassigned version', 'Issue')
 		submission.publishIssueSections.forEach((sectionTitle) => {
 			cy.get('[name="sectionId"]').select(sectionTitle);
 		});
