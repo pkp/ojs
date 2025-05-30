@@ -41,38 +41,7 @@ enum JournalContentOption: int
     /**
      * Get the content options for a journal.
      */
-    public static function getOptions(?Context $context = null): array
-    {
-        $context ??= Application::get()->getRequest()->getContext();
-        $options = static::getDefaultOptions();
-
-        if (!$context) {
-            return $options;
-        }
-
-        if (!static::getIssueExists($context)) {
-            array_shift($options);
-        }
-
-        return $options;
-    }
-
-    /**
-     * Get whether the issue exists for a context.
-     */
-    protected static function getIssueExists(Context $context): bool
-    {
-        return Repo::issue()
-            ->getCollector()
-            ->filterByContextIds([$context->getId()])
-            ->getQueryBuilder()
-            ->exists();
-    }
-
-    /**
-     * Get the default options for a journal.
-     */
-    protected static function getDefaultOptions(): array
+    public static function getOptions(): array
     {
         return [
             [
@@ -88,5 +57,17 @@ enum JournalContentOption: int
                 'label' => __('manager.setup.journalContentOrganization.option.category_listing'),
             ],
         ];
+    }
+
+    /**
+     * Get whether the issue exists for a context.
+     */
+    protected static function getIssueExists(Context $context): bool
+    {
+        return Repo::issue()
+            ->getCollector()
+            ->filterByContextIds([$context->getId()])
+            ->getQueryBuilder()
+            ->exists();
     }
 }

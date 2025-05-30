@@ -51,15 +51,15 @@ class AccessForm extends FormComponent
         }
 
         $this->addField(new FieldOptions('publishingMode', [
-                'label' => __('manager.distribution.publishingMode'),
-                'type' => 'radio',
-                'options' => [
-                    ['value' => Journal::PUBLISHING_MODE_OPEN, 'label' => __('manager.distribution.publishingMode.openAccess')],
-                    ['value' => Journal::PUBLISHING_MODE_SUBSCRIPTION, 'label' => __('manager.distribution.publishingMode.subscription')],
-                    ['value' => Journal::PUBLISHING_MODE_NONE, 'label' => __('manager.distribution.publishingMode.none')],
-                ],
-                'value' => $context->getData('publishingMode'),
-            ]))
+            'label' => __('manager.distribution.publishingMode'),
+            'type' => 'radio',
+            'options' => [
+                ['value' => Journal::PUBLISHING_MODE_OPEN, 'label' => __('manager.distribution.publishingMode.openAccess')],
+                ['value' => Journal::PUBLISHING_MODE_SUBSCRIPTION, 'label' => __('manager.distribution.publishingMode.subscription')],
+                ['value' => Journal::PUBLISHING_MODE_NONE, 'label' => __('manager.distribution.publishingMode.none')],
+            ],
+            'value' => $context->getData('publishingMode'),
+        ]))
             ->addField(new FieldSelect('delayedOpenAccessDuration', [
                 'label' => __('about.delayedOpenAccess'),
                 'options' => $validDelayedOpenAccessDuration,

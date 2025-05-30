@@ -93,11 +93,6 @@ class Repository extends \PKP\publication\Repository
             }
         }
 
-        // If no issue is selected, it will be considered as continuous publication
-        if (!isset($props['issueId'])) {
-            return $errors;
-        }
-
         // Ensure that the valid issue exists is any issue selected
         if (isset($props['issueId']) && empty($errors['issueId'])) {
             if (!Repo::issue()->exists($props['issueId'])) {
@@ -169,30 +164,33 @@ class Repository extends \PKP\publication\Repository
      *
      * - If the issue is **not published**, the publication status is set to `STATUS_SCHEDULED`.
      * - If the issue is **published** or there is no issue, the status is set to `STATUS_PUBLISHED`.
+     * - If the publication is a **continuous publication**, the status is set to `STATUS_PUBLISHED`
+     *   regardless of the issue's publication status.
      * - If the publication does not have a `datePublished`, it is set to the current date.
      */
     protected function setStatusOnPublish(Publication $publication)
     {
+        if ($publication->getData('issueId') && ($issue = Repo::issue()->get($publication->getData('issueId')))) {
+            // If there is an issue
+            //   - set the publication status to STATUS_PUBLISHED if issue is published
+            //   - set the publication status to STATUS_SCHEDULED if issue is not published
+            $publication->setData(
+                'status', 
+                $issue->getData('published')
+                    ? Submission::STATUS_PUBLISHED
+                    : Submission::STATUS_SCHEDULED
+            );
+        } else {
+            // if there is no issue, set the publication status to STATUS_PUBLISHED
+            // as it is a continuous publication
+            $publication->setData('status', Submission::STATUS_PUBLISHED);
+        }
+
+        // if the publication is marked as continuous publication, set the status to STATUS_PUBLISHED
+        // regardless of the issue's publication status is any issue is associated with the publication
         if ($publication->getData('continuousPublication')) {
             $publication->setData('status', Submission::STATUS_PUBLISHED);
-            
-            if (!$publication->getData('datePublished')) {
-                $publication->setData('datePublished', Core::getCurrentDate());
-            }
-
-            return;
         }
-
-        $issue = Repo::issue()->get($publication->getData('issueId'));
-
-        // If issue is not published just set publication status to STATUS_SCHEDULED
-        if ($issue && !$issue->getData('published')) {
-            $publication->setData('status', Submission::STATUS_SCHEDULED);
-            return;
-        }
-
-        // If issue is published or no issue, set publication status to STATUS_PUBLISHED
-        $publication->setData('status', Submission::STATUS_PUBLISHED);
 
         // If no predefined datePublished available for the publication, use current date
         if (!$publication->getData('datePublished')) {
