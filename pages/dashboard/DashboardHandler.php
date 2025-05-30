@@ -59,6 +59,11 @@ class DashboardHandler extends PKPDashboardHandler
             ->select(['reviewerRecommendationId', 'status', 'value', 'title'])
             ->values()
             ->toArray();
+        $pageInitConfig['issueCount'] = Repo::issue()
+            ->getCollector()
+            ->filterByContextIds([$context->getId()])
+            ->getQueryBuilder()
+            ->count();
 
         $templateMgr->setState(['pageInitConfig' => $pageInitConfig]);
     }
