@@ -22,7 +22,6 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
-use PKP\db\DAORegistry;
 use PKP\userGroup\UserGroup;
 
 class BackendDoiController extends \PKP\API\v1\_dois\PKPBackendDoiController
@@ -82,9 +81,8 @@ class BackendDoiController extends \PKP\API\v1\_dois\PKPBackendDoiController
 
         Repo::galley()->edit($galley, ['doiId' => $doi->getId()]);
 
-        /** @var \PKP\submission\GenreDAO $genreDao */
-        $genreDao = DAORegistry::getDAO('GenreDAO');
-        $genres = $genreDao->getByContextId($context->getId())->toArray();
+        /** @var \PKP\submission\genre\Genre[] $genres */
+        $genres = Repo::genre()->getByContextId($context->getId())->all();
         // Re-fetch submission and publication to reflect changes in galley
         $submission = Repo::submission()->get((int) $submissionId);
         $publication = Repo::publication()->get((int) $publicationId);
@@ -146,8 +144,8 @@ class BackendDoiController extends \PKP\API\v1\_dois\PKPBackendDoiController
 
     protected function getGenres(int $contextId): array
     {
-        /** @var \PKP\submission\GenreDAO $genreDao */
-        $genreDao = DAORegistry::getDAO('GenreDAO');
-        return $genreDao->getByContextId($contextId)->toArray();
+        return Repo::genre()
+            ->getByContextId($contextId)
+            ->toArray();
     }
 }
