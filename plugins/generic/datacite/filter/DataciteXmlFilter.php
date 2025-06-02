@@ -32,8 +32,7 @@ use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\galley\Galley;
 use PKP\i18n\LocaleConversion;
-use PKP\submission\Genre;
-use PKP\submission\GenreDAO;
+use PKP\submission\genre\Genre;
 use PKP\submissionFile\SubmissionFile;
 
 // Title types
@@ -134,9 +133,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 if ($cache->isCached('genres', $galleyFile->getData('genreId'))) {
                     $genre = $cache->get('genres', $galleyFile->getData('genreId'));
                 } else {
-                    /** @var GenreDAO */
-                    $genreDao = DAORegistry::getDAO('GenreDAO');
-                    $genre = $genreDao->getById($galleyFile->getData('genreId'));
+                    $genre = Repo::genre()->get((int)$galleyFile->getData('genreId'));
                     if ($genre) {
                         $cache->add($genre, null);
                     }

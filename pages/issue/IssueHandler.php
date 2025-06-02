@@ -42,7 +42,6 @@ use PKP\plugins\PluginRegistry;
 use PKP\publication\PKPPublication;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\Validation;
-use PKP\submission\GenreDAO;
 
 class IssueHandler extends Handler
 {
@@ -355,9 +354,20 @@ class IssueHandler extends Handler
 
         $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */
 
-        $genreDao = DAORegistry::getDAO('GenreDAO'); /** @var GenreDAO $genreDao */
-        $primaryGenres = $genreDao->getPrimaryByContextId($journal->getId())->toArray();
-        $primaryGenreIds = array_map(fn ($genre) => $genre->getId(), $primaryGenres);
+        $primaryGenreIds = Repo::genre()->getPrimaryIdsByContextId($journal->getId());
+
+        // Show scheduled submissions if this is a preview
+        $allowedStatuses = [PKPSubmission::STATUS_PUBLISHED];
+        if (!$issue->getPublished()) {
+            $allowedStatuses[] = PKPSubmission::STATUS_SCHEDULED;
+        }
+
+        $issueSubmissions = Repo::submission()->getCollector()
+            ->filterByContextIds([$issue->getJournalId()])
+            ->filterByIssueIds([$issue->getId()])
+            ->filterByStatus($allowedStatuses)
+            ->orderBy(\APP\submission\Collector::ORDERBY_SEQUENCE, \APP\submission\Collector::ORDER_DIR_ASC)
+            ->getMany();
 
         $sections = Repo::section()->getByIssueId($issue->getId());
         $issueSubmissionsInSection = [];

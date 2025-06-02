@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/issue/maps/Schema.php
  *
@@ -21,7 +22,7 @@ use APP\journal\Journal;
 use Illuminate\Support\Enumerable;
 use PKP\db\DAORegistry;
 use PKP\services\PKPSchemaService;
-use PKP\submission\Genre;
+use PKP\submission\genre\Genre;
 use PKP\userGroup\UserGroup;
 
 class Schema extends \PKP\core\maps\Schema
