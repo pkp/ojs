@@ -244,6 +244,32 @@
 				</section>
 			{/if}
 
+			{* Author Credit Roles *}
+			{$authorCreditRoles = []}
+			{foreach $publication->getData('authors') as $author}
+				{$creditroles = $author->getData('creditRoles')}
+				{if $creditroles}
+					{$authorCreditRoles[$author->getFullName()|escape] = $creditroles}
+				{/if}
+			{/foreach}
+			{if $authorCreditRoles}
+				<section class="item author_creditRoles">
+					<h2 class="label">
+						{translate key="submission.submit.creditRoles.title"}
+					</h2>
+					<p class="authors">
+					{foreach $authorCreditRoles as $author => $creditroles}
+						<b>{translate key="semicolon" label=$author}</b> 
+						{foreach $creditroles as $credit}
+							<span>
+								{$creditRoleTerms.roles[$credit.role]|escape} ({$creditRoleTerms.degrees[$credit.degree]|escape}){if $credit@last}.{else}{translate key="common.commaListSeparator"}{/if}
+							</span>
+						{/foreach}
+					{/foreach}
+					</p>
+				</section>
+			{/if}
+
 			{* References *}
 			{if $parsedCitations || $publication->getData('citationsRaw')}
 				<section class="item references">

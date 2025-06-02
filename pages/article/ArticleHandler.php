@@ -28,6 +28,7 @@ use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use Firebase\JWT\Key;
+use PKP\author\Author;
 use PKP\config\Config;
 use PKP\core\Core;
 use PKP\core\PKPApplication;
@@ -299,6 +300,11 @@ class ArticleHandler extends Handler
 
         $rorIconPath = Core::getBaseDir() . '/' . PKP_LIB_PATH . '/templates/images/ror.svg';
         $rorIdIcon = file_exists($rorIconPath) ? file_get_contents($rorIconPath) : '';
+
+        // Credit Role Terms
+        $templateMgr->assign([
+            'creditRoleTerms' => Author::getCreditRoleTerms(),
+        ]);
 
         // Assign deprecated values to the template manager for
         // compatibility with older themes

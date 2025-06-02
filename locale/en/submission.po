@@ -132,6 +132,42 @@ msgstr "Privacy Statement"
 msgid "submission.submit.contributorRole"
 msgstr "Contributor's role"
 
+msgid "submission.submit.creditRoles.degrees.lead"
+msgstr "Lead"
+
+msgid "submission.submit.creditRoles.degrees.equal"
+msgstr "Equal"
+
+msgid "submission.submit.creditRoles.degrees.supporting"
+msgstr "Supporting"
+
+msgid "submission.submit.creditRoles.title"
+msgstr "CRediT roles and the degrees of contribution"
+
+msgid "submission.submit.creditRoles.description"
+msgstr "Select the CRediT roles of the contributor and the degrees of contribution."
+
+msgid "submission.submit.creditRoles.label"
+msgstr "CRediT Roles"
+
+msgid "submission.submit.creditRoles.role"
+msgstr "Role"
+
+msgid "submission.submit.creditRoles.degree"
+msgstr "Degree"
+
+msgid "submission.submit.creditRoles.selectRole"
+msgstr "Select a new role (required)"
+
+msgid "submission.submit.creditRoles.selectDegree"
+msgstr "Degree"
+
+msgid "submission.submit.creditRoles.button.add"
+msgstr "Add Another Role"
+
+msgid "submission.submit.creditRoles.button.remove"
+msgstr "Remove Role"
+
 msgid "submission.citationFormat.notFound"
 msgstr "The requested citation format could not be retrieved."
 
