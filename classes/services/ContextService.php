@@ -28,7 +28,6 @@ use PKP\config\Config;
 use PKP\db\DAORegistry;
 use PKP\file\TemporaryFileManager;
 use PKP\plugins\Hook;
-use PKP\submission\GenreDAO;
 use PKP\submission\reviewer\recommendation\ReviewerRecommendation;
 
 class ContextService extends \PKP\services\PKPContextService
@@ -155,9 +154,7 @@ class ContextService extends \PKP\services\PKPContextService
         // Create tombstones for all published submissions
         $articleTombstoneManager = new ArticleTombstoneManager();
         $articleTombstoneManager->insertTombstonesByContext($context);
-        /** @var GenreDAO */
-        $genreDao = DAORegistry::getDAO('GenreDAO');
-        $genreDao->deleteByContextId($context->getId());
+        Repo::genre()->deleteByContextId($context->getId());
     }
 
     /**
