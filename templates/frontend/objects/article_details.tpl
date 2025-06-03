@@ -259,12 +259,19 @@
 					</h2>
 					<p class="authors">
 					{foreach $authorCreditRoles as $author => $creditroles}
-						<b>{translate key="semicolon" label=$author}</b> 
-						{foreach $creditroles as $credit}
-							<span>
-								{$creditRoleTerms.roles[$credit.role]|escape} ({$creditRoleTerms.degrees[$credit.degree]|escape}){if $credit@last}.{else}{translate key="common.commaListSeparator"}{/if}
-							</span>
-						{/foreach}
+						{strip}
+							<b>{translate key="semicolon" label=$author}</b> 
+							{foreach $creditroles as $credit}
+								<span>
+									{$creditRoleTerms.roles[$credit.role]|escape}
+									{if $creditRoleTerms.degrees[$credit.degree]}
+										&nbsp;({$creditRoleTerms.degrees[$credit.degree]|escape})
+									{/if}
+									{if !$credit@last}{translate key="common.commaListSeparator"}{/if}
+								</span>
+							{/foreach}
+							{if !$creditroles@last}{translate key="common.commaListSeparator"}{/if}
+						{/strip}
 					{/foreach}
 					</p>
 				</section>
