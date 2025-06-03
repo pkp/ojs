@@ -86,7 +86,7 @@ class IssuePublishedNotifyUsers extends BaseJob
             }
 
             $mailable = $this->createMailable($context, $this->issue, $recipient, $template, $notification);
-            $mailable->setData($this->locale);
+            $mailable->setLocale($this->locale);
             Mail::send($mailable);
         }
     }
