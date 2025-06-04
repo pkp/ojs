@@ -2,7 +2,7 @@
 # Juan Pablo Martínez <juanpabl@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-29 22:50+0000\n"
+"PO-Revision-Date: 2025-06-04 23:19+0000\n"
 "Last-Translator: Juan Pablo Martínez <juanpabl@gmail.com>\n"
 "Language-Team: Aragonese <http://translate.pkp.sfu.ca/projects/ojs/author/an/"
 ">\n"
@@ -78,7 +78,7 @@ msgstr ""
 "espacio que se le proporciona."
 
 msgid "author.submissions.queuedReviewSubsequent"
-msgstr "En ronda de revisión {$round}"
+msgstr "En tongada de revisión {$round}"
 
 msgid "author.submissions.queuedReviewRevisions"
 msgstr "En revisión: Publicable con modificacions"
