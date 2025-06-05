@@ -34,7 +34,7 @@
 		</div>
 	{/if}
 
-	{if $categories}
+	{if $categories && $categories->count() > 0}
 		{include file="frontend/components/categoryHeader.tpl" categories=$categories}
 	{/if}
 
