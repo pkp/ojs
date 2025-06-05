@@ -32,10 +32,12 @@ enum JournalContentOption: int
         $context ??= Application::get()->getRequest()->getContext();
         
         if (!$context) {
-            return [static::ISSUE_TOC];
+            return [static::ISSUE_TOC->value];
         }
 
-        return static::getIssueExists($context) ? [static::ISSUE_TOC] : [static::RECENT_PUBLISHED];
+        return static::getIssueExists($context)
+            ? [static::ISSUE_TOC->value]
+            : [static::RECENT_PUBLISHED->value];
     }
 
     /**
