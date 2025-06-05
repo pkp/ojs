@@ -22,6 +22,7 @@ namespace APP\search;
 use APP\core\Application;
 use APP\core\Request;
 use APP\facades\Repo;
+use APP\issue\Issue;
 use APP\issue\IssueAction;
 use PKP\controlledVocab\ControlledVocab;
 use PKP\db\DAORegistry;
@@ -29,6 +30,7 @@ use PKP\facades\Locale;
 use PKP\plugins\Hook;
 use PKP\search\SubmissionSearch;
 use PKP\submission\PKPSubmission;
+use PKP\publication\PKPPublication;
 use PKP\userGroup\UserGroup;
 
 class ArticleSearch extends SubmissionSearch
@@ -285,7 +287,8 @@ class ArticleSearch extends SubmissionSearch
                 }
 
                 // Get the issue, storing in cache if necessary.
-                $issueId = $publishedSubmission->getCurrentPublication()->getData('issueId');
+                $currentPublication = $publishedSubmission->getCurrentPublication();
+                $issueId = $currentPublication->getData('issueId');
                 if ($issueId && !isset($issueCache[$issueId])) {
                     $issue = Repo::issue()->get($issueId);
                     $issueCache[$issueId] = $issue;
@@ -293,8 +296,7 @@ class ArticleSearch extends SubmissionSearch
                     $issueAvailabilityCache[$issueId] = !$issueAction->subscriptionRequired($issue, $contextCache[$contextId]) || $issueAction->subscribedUser($user, $contextCache[$contextId], $issueId, $articleId) || $issueAction->subscribedDomain(Application::get()->getRequest(), $contextCache[$contextId], $issueId, $articleId);
                 }
 
-                // Only display articles from published issues.
-                if (!isset($issueCache[$issueId]) || !$issueCache[$issueId]->getPublished()) {
+                if (!$this->canDisplayArticle($currentPublication, $issueCache[$issueId] ?? null)) {
                     continue;
                 }
 
@@ -302,9 +304,9 @@ class ArticleSearch extends SubmissionSearch
                 $returner[] = [
                     'article' => $article,
                     'publishedSubmission' => $publishedSubmissionCache[$articleId],
-                    'issue' => $issueCache[$issueId],
+                    'issue' => $issueCache[$issueId] ?? null,
                     'journal' => $contextCache[$contextId],
-                    'issueAvailable' => $issueAvailabilityCache[$issueId],
+                    'issueAvailable' => $issueAvailabilityCache[$issueId] ?? false,
                     'section' => $sectionCache[$sectionId]
                 ];
             }
@@ -419,6 +421,18 @@ class ArticleSearch extends SubmissionSearch
     protected function getSearchDao()
     {
         return DAORegistry::getDAO('ArticleSearchDAO');
+    }
+
+    /**
+     * Check if the article can be displayed.
+     */
+    protected function canDisplayArticle(PKPPublication $currentPublication, ?Issue $issue = null): bool
+    {
+        if ((bool)$currentPublication->getData('continuousPublication') === true) {
+            return true;
+        }
+
+        return $issue && $issue->getPublished();
     }
 }
 

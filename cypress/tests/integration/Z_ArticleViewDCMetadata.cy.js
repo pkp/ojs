@@ -411,7 +411,8 @@ describe('Article View Metadata - DC Plugin', function() {
 
 		// Go to metadata
 		cy.openWorkflowMenu('Metadata').click();
-		cy.get('button').contains('French').click();
+		cy.wait(2000);
+		cy.get('button:contains("French")').click({force:true});
 
 		// Add the metadata to the submission
 		submission.localeMetadata.forEach((locale) => {

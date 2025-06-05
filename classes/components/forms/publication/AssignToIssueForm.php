@@ -16,6 +16,7 @@
 namespace APP\components\forms\publication;
 
 use APP\facades\Repo;
+use PKP\components\forms\FieldOptions;
 use PKP\components\forms\FieldSelect;
 use PKP\components\forms\FormComponent;
 
@@ -71,10 +72,23 @@ class AssignToIssueForm extends FormComponent
             }
         }
 
-        $this->addField(new FieldSelect('issueId', [
-            'label' => __('issue.issue'),
-            'options' => $issueOptions,
-            'value' => $publication->getData('issueId') ? $publication->getData('issueId') : 0,
-        ]));
+        $this
+            ->addField(new FieldSelect('issueId', [
+                'label' => __('issue.issue'),
+                'options' => $issueOptions,
+                'value' => $publication->getData('issueId') ? $publication->getData('issueId') : '',
+            ]))
+            ->addField(new FieldOptions('continuousPublication', [
+                'label' => __('manager.setup.continuousPublication'),
+                'description' => __('publication.publish.continuousPublication.description'),
+                'options' => [
+                    [
+                        'value' => true,
+                        'label' => __('publication.publish.continuousPublication.label'),
+                    ],
+                ],
+                'value' => (bool) $publication->getData('continuousPublication'),
+                'showWhen' => 'issueId',
+            ]));
     }
 }
