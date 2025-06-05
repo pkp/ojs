@@ -46,24 +46,21 @@ class DashboardHandler extends PKPDashboardHandler
 
         $pageInitConfig = $templateMgr->getState('pageInitConfig');
         $pageInitConfig['publicationSettings']['submissionPaymentsEnabled'] = $paymentManager->publicationEnabled();
-        $templateMgr->setState(['pageInitConfig' => $pageInitConfig]);
 
         $templateMgr->setConstants([
             'FORM_ASSIGN_TO_ISSUE' => FORM_ASSIGN_TO_ISSUE
         ]);
 
-        $pageInitConfig = $templateMgr->getState('pageInitConfig');
         $pageInitConfig['recommendations'] = ReviewerRecommendation::query()
             ->withContextId($context->getId())
             ->get()
             ->select(['reviewerRecommendationId', 'status', 'value', 'title'])
             ->values()
             ->toArray();
-        $pageInitConfig['issueCount'] = Repo::issue()
+        $pageInitConfig['publicationSettings']['countIssues'] = Repo::issue()
             ->getCollector()
             ->filterByContextIds([$context->getId()])
-            ->getQueryBuilder()
-            ->count();
+            ->getCount();
 
         $templateMgr->setState(['pageInitConfig' => $pageInitConfig]);
     }
