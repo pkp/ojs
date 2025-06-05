@@ -293,9 +293,13 @@ class ArticleHandler extends Handler
         ]);
 
         // Citations
-        $templateMgr->assign([
-            'parsedCitations' => $publication->getData('citations'),
-        ]);
+        if ($publication->getData('citations') || $publication->getData('citationsRaw')) {
+            $templateMgr->assign([
+                'useStructuredCitations' => $publication->getData('useStructuredCitations'),
+                'citations' => $publication->getData('citations'),
+                'citationsRaw' => $publication->getData('citationsRaw')
+            ]);
+        }
 
         $rorIconPath = Core::getBaseDir() . '/' . PKP_LIB_PATH . '/templates/images/ror.svg';
         $rorIdIcon = file_exists($rorIconPath) ? file_get_contents($rorIconPath) : '';
