@@ -412,7 +412,7 @@ describe('Article View Metadata - DC Plugin', function() {
 		// Go to metadata
 		cy.openWorkflowMenu('Unassigned version', 'Metadata').click();
 		cy.wait(2000); // wait for the form to load
-		cy.get('button').contains('French').click();
+		cy.get('button:contains("French")').click({force:true});
 
 		// Add the metadata to the submission
 		submission.localeMetadata.forEach((locale) => {
