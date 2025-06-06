@@ -6,9 +6,8 @@
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  */
-
 describe('Data suite tests', function() {
-	it.skip('Creates/configures categories', function() {
+	it('Creates/configures categories', function() {
 		cy.login('admin', 'admin');
 		cy.get('a').contains('admin').click();
 		cy.get('a').contains('Dashboard').click();
@@ -18,55 +17,25 @@ describe('Data suite tests', function() {
 		cy.get('button[id="categories-button"]').click();
 
 		// Create an Applied Science category
-		cy.get('a[id^=component-grid-settings-category-categorycategorygrid-addCategory-button-]').click();
-		cy.wait(1000); // Avoid occasional failure due to form init taking time
-		cy.get('input[id^="name-en-"]').type('Applied Science', {delay: 0});
-		cy.get('input[id^="path-"]').type('applied-science', {delay: 0});
-		cy.get('form[id=categoryForm]').contains('OK').click();
-		cy.get('tr[id^="component-grid-settings-category-categorycategorygrid-category-"] a:contains("Applied Science")');
+		cy.addCategory('Applied Science', 'applied-science');
 
 		// Create a Computer Science subcategory
-		cy.get('a[id^=component-grid-settings-category-categorycategorygrid-addCategory-button-]').click();
-		cy.wait(1000); // Avoid occasional failure due to form init taking time
-		cy.get('input[id^="name-en-"]').type('Computer Science', {delay: 0});
-		cy.get('select[id="parentId"]').select('Applied Science');
-		cy.get('input[id^="path-"]').type('comp-sci', {delay: 0});
-		cy.get('form[id=categoryForm]').contains('OK').click();
-		cy.get('tr[id^="component-grid-settings-category-categorycategorygrid-category-"] span:contains("Computer Science")');
+		cy.addCategory('Computer Science', 'comp-sci', 'Applied Science');
+
+		// Create a Computer Vision subcategory within Computer Science
+		cy.addCategory('Computer Vision', 'computer-vision', 'Computer Science');
+
 
 		// Create an Engineering subcategory
-		cy.get('a[id^=component-grid-settings-category-categorycategorygrid-addCategory-button-]').click();
-		cy.wait(1000); // Avoid occasional failure due to form init taking time
-		cy.get('input[id^="name-en-"]').type('Engineering', {delay: 0});
-		cy.get('select[id="parentId"]').select('Applied Science');
-		cy.get('input[id^="path-"]').type('eng', {delay: 0});
-		cy.get('form[id=categoryForm]').contains('OK').click();
-		cy.get('tr[id^="component-grid-settings-category-categorycategorygrid-category-"] span:contains("Engineering")');
+		cy.addCategory('Engineering', 'eng', 'Applied Science');
 
 		// Create a Social Sciences category
-		cy.get('a[id^=component-grid-settings-category-categorycategorygrid-addCategory-button-]').click();
-		cy.wait(1000); // Avoid occasional failure due to form init taking time
-		cy.get('input[id^="name-en-"]').type('Social Sciences', {delay: 0});
-		cy.get('input[id^="path-"]').type('social-sciences', {delay: 0});
-		cy.get('form[id=categoryForm]').contains('OK').click();
-		cy.get('tr[id^="component-grid-settings-category-categorycategorygrid-category-"] a:contains("Social Sciences")');
+		cy.addCategory('Social Sciences', 'social-sciences');
 
 		// Create a Sociology subcategory
-		cy.get('a[id^=component-grid-settings-category-categorycategorygrid-addCategory-button-]').click();
-		cy.wait(1000); // Avoid occasional failure due to form init taking time
-		cy.get('input[id^="name-en-"]').type('Sociology', {delay: 0});
-		cy.get('select[id="parentId"]').select('Social Sciences');
-		cy.get('input[id^="path-"]').type('sociology', {delay: 0});
-		cy.get('form[id=categoryForm]').contains('OK').click();
-		cy.get('tr[id^="component-grid-settings-category-categorycategorygrid-category-"] span:contains("Sociology")');
+		cy.addCategory('Sociology', 'sociology', 'Social Sciences');
 
 		// Create a Anthropology subcategory
-		cy.get('a[id^=component-grid-settings-category-categorycategorygrid-addCategory-button-]').click();
-		cy.wait(1000); // Avoid occasional failure due to form init taking time
-		cy.get('input[id^="name-en-"]').type('Anthropology', {delay: 0});
-		cy.get('select[id="parentId"]').select('Social Sciences');
-		cy.get('input[id^="path-"]').type('anthropology', {delay: 0});
-		cy.get('form[id=categoryForm]').contains('OK').click();
-		cy.get('tr[id^="component-grid-settings-category-categorycategorygrid-category-"] span:contains("Anthropology")');
+		cy.addCategory('Anthropology', 'anthropology', 'Social Sciences');
 	});
 })
