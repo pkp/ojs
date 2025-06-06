@@ -2,7 +2,7 @@
 # Helena Rita Gonçalves Marinho Moreira <bragatec@fceer.org>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-28 15:02+0000\n"
+"PO-Revision-Date: 2025-06-06 15:58+0000\n"
 "Last-Translator: Helena Rita Gonçalves Marinho Moreira <bragatec@fceer.org>\n"
 "Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/manager/gl/"
 ">\n"
@@ -555,12 +555,10 @@ msgstr "Identificación por correo electrónico"
 msgid "manager.setup.emailSignature"
 msgstr "Sinatura"
 
-#, fuzzy
 msgid "manager.setup.emailSignature.description"
 msgstr ""
 "Os padróns das mensaxes de correo electrónico que o sistema envíe en nome da "
-"revista incluirán a sinatura seguinte ao final. O corpo do texto pódese "
-"editar na sección Administración da revista."
+"revista incluirán a sinatura seguinte ao final."
 
 msgid "manager.setup.enableAnnouncements.enable"
 msgstr "Activar os avisos"
@@ -1557,10 +1555,10 @@ msgid "manager.subscriptions.form.typeIdValid"
 msgstr "Selecciona un tipo de subscrición válido."
 
 msgid "manager.subscriptions.form.institution"
-msgstr ""
+msgstr "Institución"
 
 msgid "manager.subscriptions.form.institutionIdValid"
-msgstr ""
+msgstr "Seleccione unha institución válida, por favor."
 
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Data de inicio"
@@ -1701,7 +1699,7 @@ msgstr ""
 "subscricións."
 
 msgid "manager.subscriptions.form.institutionRequired"
-msgstr ""
+msgstr "Debe crearse unha institución antes de poder facer novas subscricións."
 
 msgid "manager.subscriptions.ipRange"
 msgstr "Rango de IP"
@@ -2099,52 +2097,62 @@ msgstr ""
 "revista."
 
 msgid "stats.contextStats"
-msgstr ""
+msgstr "Estatísticas da revista"
 
 msgid "stats.context.tooltip.text"
-msgstr ""
+msgstr "Número de visitantes que consultan a páxina de índice da revista."
 
 msgid "stats.context.tooltip.label"
-msgstr ""
+msgstr "Sobre as estatísticas da revista"
 
 msgid "stats.context.downloadReport.description"
 msgstr ""
+"Descarga unha folla de cálculo CSV/Excel con estatísticas de uso desta "
+"revista que coincidan cos seguintes parámetros."
 
 msgid "stats.context.downloadReport.downloadContext.description"
-msgstr ""
+msgstr "O número de visualizacións da páxina de índice da revista."
 
 msgid "stats.context.downloadReport.downloadContext"
-msgstr ""
+msgstr "Descargar revista"
 
 msgid "stats.issueStats"
-msgstr ""
+msgstr "Estatísticas da edición"
 
 msgid "stats.issues.details"
-msgstr ""
+msgstr "Visualizacións e Descargas"
 
 msgid "stats.issues.searchIssueDescription"
-msgstr ""
+msgstr "Buscar título do número, volume e número"
 
 msgid "stats.issues.none"
 msgstr ""
+"Non se encontraron problemas nas estatísticas de uso que coincidan con estes "
+"parámetros."
 
 msgid "stats.issues.downloadReport.description"
 msgstr ""
+"Descarga unha folla de cálculo CSV/Excel con estatísticas de uso para os "
+"números que cumpren os seguintes parámetros."
 
 msgid "stats.issues.downloadReport.downloadIssues.description"
 msgstr ""
+"O número de visualizacións do índice e descargas de ficheiros de cada número."
 
 msgid "stats.issues.downloadReport.downloadIssues"
-msgstr ""
+msgstr "Descargar Números"
 
 msgid "stats.issues.countOfTotal"
-msgstr ""
+msgstr "{$count} de {$total} números"
 
 msgid "stats.issues.tooltip.label"
-msgstr ""
+msgstr "Sobre as estatísticas do número"
 
 msgid "stats.issues.tooltip.text"
 msgstr ""
+"<strong>Views</strong>: Número de visitantes que visualizan o índice  do "
+"número.<br><strong>Downloads</strong>: Número de descargas do número, se "
+"existe."
 
 msgid "stats.publicationStats"
 msgstr "Estatísticas do artigo"
@@ -2174,12 +2182,16 @@ msgstr "Arquivos"
 
 msgid "stats.publications.downloadReport.description"
 msgstr ""
+"Descarga unha folla de cálculo CSV/Excel con estatísticas de uso dos artigos "
+"que cumpran os seguintes parámetros."
 
 msgid "stats.publications.downloadReport.downloadSubmissions"
-msgstr ""
+msgstr "Descargar Artigos"
 
 msgid "stats.publications.downloadReport.downloadSubmissions.description"
 msgstr ""
+"O número de visualizacións dos resumos e de descargas de ficheiros de cada "
+"artigo."
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
@@ -2212,7 +2224,7 @@ msgid "emailTemplate.variable.context.contactName"
 msgstr "O nome do contacto principal da revista"
 
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr ""
+msgstr "As iniciais da revista"
 
 msgid "emailTemplate.variable.context.contextSignature"
 msgstr "A sinatura para os correos electrónicos automatizados da revista"
@@ -2221,7 +2233,7 @@ msgid "emailTemplate.variable.context.contactEmail"
 msgstr "O enderezo de correo electrónico do contacto principal da revista"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "O enderezo postal da revista"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "Nome do tipo de pagamento"
@@ -2237,54 +2249,61 @@ msgstr "Nome do sitio web cando se aloxa máis dunha revista"
 
 msgid "emailTemplate.variable.subscription.subscriberDetails"
 msgstr ""
+"O nome, a afiliación, o teléfono e o correo electrónico do/a subscritor/a"
 
 msgid "emailTemplate.variable.subscription.subscriptionSignature"
-msgstr ""
+msgstr "Datos de contacto do xestor de subscricións"
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
-msgstr ""
+msgstr "A URL da páxina de subscrición"
 
 msgid "emailTemplate.variable.subscription.expiryDate"
-msgstr ""
+msgstr "A data en que remata a subscrición"
 
 msgid "emailTemplate.variable.subscription.subscriptionType"
-msgstr ""
+msgstr "Un resumo do tipo, nome, duración e custo da subscrición"
 
 msgid "emailTemplate.variable.subscription.membership"
-msgstr ""
+msgstr "Información sobre a afiliación do/a subscritor/a"
 
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr ""
+msgstr "O nome da institución subscritora"
 
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr ""
+msgstr "Enderezo postal da institución subscritora"
 
 msgid "emailTemplate.variable.subscription.domain"
 msgstr ""
+"O nome de dominio da(s) dirección(ións) IP válidas para esta subscrición"
 
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr ""
+msgstr "Os rangos de IP válidos para esta subscrición"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "URL da páxina onde o autor pode realizar o pagamento"
 
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "URL ás directrices/normas para o envío"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "O enlace á páxina de estatísticas dos artigos publicados"
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "O ID do Número"
 
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
+"Este correo envíase automaticamente cada mes aos editores e xestores da "
+"revista para lles ofrecer unha visión xeral do estado do sistema."
 
 msgid "mailable.validateEmailContext.name"
-msgstr ""
+msgstr "Validar o correo electrónico (Rexistro na revista)"
 
 msgid "mailable.validateEmailContext.description"
 msgstr ""
+"Este correo electrónico envíase automaticamente a un novo usuario cando se "
+"rexistra na revista, cando a configuración require que se valide o enderezo "
+"de correo electrónico."
 
 msgid "doi.displayName"
 msgstr "DOI"
@@ -2299,7 +2318,7 @@ msgid "doi.readerDisplayName"
 msgstr "DOI"
 
 msgid "doi.manager.displayName"
-msgstr ""
+msgstr "DOIs"
 
 msgid "doi.manager.settings.description"
 msgstr ""
@@ -2312,7 +2331,7 @@ msgid "doi.manager.settings.enableRepresentationDoi"
 msgstr "Galeradas"
 
 msgid "doi.manager.settings.galleysWithDescription"
-msgstr ""
+msgstr "Versións en galera do artigo, como un PDF publicado"
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "Prefixo DOI"
@@ -2380,13 +2399,15 @@ msgstr ""
 "aos que non se lles asignou?"
 
 msgid "doi.manager.settings.registrationAgency"
-msgstr ""
+msgstr "Axencia de Rexistro"
 
 msgid "doi.manager.settings.registrationAgency.description"
 msgstr ""
+"Por favor, selecciona a axencia de rexistro que desexas empregar ao "
+"depositar os DOIs."
 
 msgid "doi.manager.settings.registrationAgency.none"
-msgstr ""
+msgstr "Ningún / Ningunha"
 
 msgid "doi.editor.doi"
 msgstr "DOI"
@@ -2466,7 +2487,7 @@ msgid "doi.editor.assignDoi.assigned"
 msgstr "Asignouse o DOI {$pubId}."
 
 msgid "doi.editor.assignDoi.toBeAssigned"
-msgstr ""
+msgstr "O DOI {$pubId} asignarase no momento da publicación."
 
 msgid "doi.editor.missingPrefix"
 msgstr "O DOI debe comezar por {$doiPrefix}."
@@ -2484,34 +2505,39 @@ msgid "doi.editor.preview.objects"
 msgstr "Elemento"
 
 msgid "api.galley.403.publicationDidNotMatch"
-msgstr ""
+msgstr "A versión en galera que solicitaches non forma parte desta publicación."
 
 msgid "api.galley.403.canEditPublishedDoi"
 msgstr ""
+"Só se poden editar os DOIs despois de que unha publicación ou galera sexa "
+"publicada"
 
 msgid "api.issue.400.invalidDoi"
-msgstr ""
+msgstr "O DOI enviado non é válido"
 
 msgid "api.issue.403.canEditPublishedDoi"
-msgstr ""
+msgstr "Só se poden editar os DOIs despois da publicación"
 
 msgid "api.issue.404.issuesNotFound"
-msgstr ""
+msgstr "Os números que solicitaches non foron atopados"
 
 msgid "doi.manager.submissionDois"
-msgstr ""
+msgstr "DOIs dos artigos"
 
 msgid "doi.manager.issueDois"
-msgstr ""
+msgstr "DOIs do Número"
 
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr ""
+"Este correo electrónico notifica ao autor que a súa presentación está a ser "
+"rexeitada, antes da fase de revisión, porque a presentación non cumpre cos "
+"requisitos para a publicación na revista."
 
 msgid "manager.institutions.noContext"
-msgstr ""
+msgstr "Non se puido atopar a revista desta institución."
 
 msgid "mailable.subscriptionNotify.name"
-msgstr ""
+msgstr "Notificación de subscrición"
 
 msgid "mailable.subscriptionNotify.description"
 msgstr ""
@@ -2520,7 +2546,7 @@ msgstr ""
 "xuntamente coas instrucións para acceder a ela."
 
 msgid "mailable.subscriptionExpiresSoon.name"
-msgstr ""
+msgstr "A subscrición expira pronto"
 
 msgid "mailable.subscriptionExpiresSoon.description"
 msgstr ""
@@ -2529,7 +2555,7 @@ msgstr ""
 "instrucións para acceder a esta."
 
 msgid "mailable.subscriptionExpired.name"
-msgstr ""
+msgstr "Subscrición expirada"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
@@ -2538,7 +2564,7 @@ msgstr ""
 "instrucións para acceder a ela."
 
 msgid "mailable.subscriptionExpiredLast.name"
-msgstr ""
+msgstr "Subscrición expirada Apelido"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
@@ -2547,7 +2573,7 @@ msgstr ""
 "acceder a ela."
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
-msgstr ""
+msgstr "Facer unha subscrición individual"
 
 msgid "mailable.subscriptionPurchaseIndividual.description"
 msgstr ""
@@ -2557,7 +2583,7 @@ msgstr ""
 "subscrición adquirida."
 
 msgid "mailable.subscriptionPurchaseInstitutional.name"
-msgstr ""
+msgstr "Facer unha subscrición institucional"
 
 msgid "mailable.subscriptionPurchaseInstitutional.description"
 msgstr ""
@@ -2567,7 +2593,7 @@ msgstr ""
 "ela."
 
 msgid "mailable.subscriptionRenewIndividual.name"
-msgstr ""
+msgstr "Renovar Subscrición Individual"
 
 msgid "mailable.subscriptionRenewIndividual.description"
 msgstr ""
@@ -2576,7 +2602,7 @@ msgstr ""
 "sobre a dita subscrición e  un enlace de acceso rápido a ela."
 
 msgid "mailable.subscriptionRenewInstitutional.name"
-msgstr ""
+msgstr "Renovar a Subscrición Institucional"
 
 msgid "mailable.subscriptionRenewInstitutional.description"
 msgstr ""
@@ -2586,7 +2612,7 @@ msgstr ""
 "renovada."
 
 msgid "mailable.openAccessNotify.name"
-msgstr ""
+msgstr "Notificación de Acceso Aberto"
 
 msgid "mailable.openAccessNotify.description"
 msgstr ""
@@ -2595,31 +2621,62 @@ msgstr ""
 "libre."
 
 msgid "mailable.issuePublishNotify.name"
-msgstr ""
+msgstr "Notificación de número publicado"
 
 msgid "mailable.issuePublishNotify.description"
 msgstr ""
+"Este correo envíase automaticamente aos usuarios rexistrados cando se "
+"publica o novo número."
 
 msgid "manager.manageEmails.description"
-msgstr ""
+msgstr "Edite as mensaxes enviadas nos correos electrónicos desta revista."
 
 msgid "mailable.layoutComplete.name"
-msgstr ""
+msgstr "Número completo"
 
 msgid "mailable.publicationVersionNotify.name"
-msgstr ""
+msgstr "Creada Nova Versión"
 
 msgid "mailable.publicationVersionNotify.description"
 msgstr ""
+"Este correo notifica automaticamente aos editores asignados cando se crea "
+"unha nova versión da entrega."
 
 msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
+"Este correo envíase aos xestores da revista cando se realiza un novo envío e "
+"non hai editores/as asignados/as."
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "Solicitude de pagamento"
 
 msgid "mailable.paymentRequest.description"
 msgstr ""
+"Este correo electrónico automatizado envíase ao autor para solicitar o "
+"pagamento da taxa de publicación cando a súa proposta é aceptada."
 
 #~ msgid "doi.manager.settings.enablePublicationDoi"
 #~ msgstr "Artigos"
+
+msgid "manager.setup.contextSummary.description"
+msgstr ""
+"Ofrece unha breve descrición da túa revista para achegar información sobre o "
+"seu contido e propósito."
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"A imaxe de capa do número {$id} non foi exportada, non se atopou o seu "
+"ficheiro na ruta '{$path}'."
+
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr "O índice do número, como a lista de todas as achegas asociadas."
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr ""
+"Non se puido importar unha galerada/maquetada do número; falta o seu "
+"ficheiro."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"Non se puido exportar a galerada do número {$id}, non se atopou o seu "
+"ficheiro na ruta '{$path}'."
