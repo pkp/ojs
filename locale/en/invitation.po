@@ -22,8 +22,9 @@ msgstr "You've been assigned a new role in OJS"
 msgid "acceptInvitation.verifyOrcid.stepDescription"
 msgstr "You can choose to verify your ORCID iD or skip it. If you chose to skip it now, you can verify your ORCID iD from your profile section in OJS later"
 
+#, fuzzy
 msgid "invitation.orcid.acceptInvitation.message"
-msgstr "Not verified. You can verify your ORCID iD from your profile section in OJS"
+msgstr "Not verified. You can verify your ORCID iD from your profile section in OJS."
 
 msgid "invitation.role.masthead"
 msgstr "Journal Masthead"
