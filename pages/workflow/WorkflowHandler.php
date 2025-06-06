@@ -110,6 +110,15 @@ class WorkflowHandler extends PKPWorkflowHandler
 
         $components[$jatsPanel->id] = $jatsPanel->getConfig();
 
+        $editorPanel = $this->getEditorPanel(
+            $submission,
+            $submissionContext,
+            $canEditPublication,
+            $latestPublication
+        );
+
+        $components[$editorPanel->id] = $editorPanel->getConfig();
+
         // Add payments form if enabled
         $paymentManager = Application::get()->getPaymentManager($submissionContext);
         $templateMgr->assign([
