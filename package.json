@@ -6,7 +6,10 @@
   "private": true,
   "scripts": {
     "dev": "vite build --watch --mode development",
-    "build": "vite build",
+    "dev:frontend": "vite build --watch --mode development --config vite.config.frontend.js",
+    "build": "npm run build:backend && npm run build:frontend",
+    "build:backend": "vite build",
+    "build:frontend": "vite build --config vite.config.frontend.js",
     "lint": "eslint --fix ./js/load.js ./lib/pkp/js/load.js ./lib/pkp/js/usage-stats-chart.js ./lib/pkp/js/classes/VueRegistry.js",
     "format": "prettier --write ./js/load.js ./lib/pkp/js/load.js ./lib/pkp/js/usage-stats-chart.js ./lib/pkp/js/classes/VueRegistry.js",
     "php-fix": "php lib/pkp/lib/vendor/bin/php-cs-fixer fix --config .php-cs-fixer.php --allow-risky=yes",
