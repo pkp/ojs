@@ -35,6 +35,17 @@ enum VersionStage: string
         };
     }
 
+    public function order(): int
+    {
+        return match ($this) {
+            self::AUTHOR_ORIGINAL => 1,
+            self::SUBMITTED_MANUSCRIPT => 2,
+            self::ACCEPTED_MANUSCRIPT => 3,
+            self::PROOF => 4,
+            self::VERSION_OF_RECORD => 5,
+        };
+    }
+
     public function label(?string $locale = null): string
     {
         return __($this->labelKey(), locale: $locale);
