@@ -7,7 +7,7 @@
  *
  * Result of operations this plugin performed
  *}
-<div class="legacyDefaults">
+<div class="semantic-defaults">
 {if $submissionsWarnings || $issuesWarnings || $sectionWarnings}
 	<h2>{translate key="plugins.importexport.common.warningsEncountered"}</h2>
 	{foreach from=$issuesWarnings item=issuesWarningMessages name=issuesWarnings}
