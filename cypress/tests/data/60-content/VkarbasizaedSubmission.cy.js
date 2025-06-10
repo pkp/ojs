@@ -72,7 +72,7 @@ describe('Data suite tests', function() {
 		cy.assignParticipant('Proofreader', 'Catherine Turner');
 
 		// Create a galley
-		cy.openWorkflowMenu('Galleys')
+		cy.openWorkflowMenu('Unassigned version', 'Galleys')
 		cy.get('[data-cy="galley-manager"] button').contains('Add galley').click();
 		cy.wait(1000); // Wait for the form to settle
 		cy.get('input[id^=label-]').type('PDF', {delay: 0});
@@ -95,8 +95,10 @@ describe('Data suite tests', function() {
 		cy.visit('index.php/publicknowledge/dashboard/editorial');
 		cy.get('nav').contains('Active submissions').click();
 		cy.openSubmission(author.familyName);
-		cy.openWorkflowMenu('Title & Abstract')
+		cy.openWorkflowMenu('Unassigned version', 'Title & Abstract')
 		cy.get('button:contains("Schedule For Publication")').click();
+		cy.wait(1000);
+		cy.assignPublicationStage('VoR', 'false', true);
 		cy.get('select[id="assignToIssue-issueId-control"]').select(issueTitle);
 		cy.get('div[id^="assign-"] button:contains("Save")').click();
 		cy.get('div:contains("All publication requirements have been met. This will be published when ' + issueTitle + ' is published. Are you sure you want to schedule this for publication?")');
@@ -109,9 +111,8 @@ describe('Data suite tests', function() {
 		// check publication status
 		cy.get('[data-cy="workflow-controls-left"]').contains("Scheduled");
 		// the button "Unschedule" exists
-		// the buttons "Create New Version" (connected with submission) and "Unpublish" (connected with publication) does not exist
+		// the button "Unpublish" (connected with publication) does not exist
 		cy.get('button:contains("Unschedule")');
-		cy.get('button:contains("Create New Version")').should('not.exist');
 		cy.get('button:contains("Unpublish")').should('not.exist');
 
 		// isInTOC:
@@ -139,7 +140,7 @@ describe('Data suite tests', function() {
 		// the button "Unpublish" (connected with the publication)
 		// and the button "Create New Version" (connected with submission) exist
 		cy.get('button:contains("Unpublish")');
-		cy.get('button:contains("Create New Version")');
+		cy.get(`[data-cy="active-modal"] nav a:contains('Create New Version')`);
 	});
 
 	it('Unpublish the issue', function() {
@@ -159,9 +160,8 @@ describe('Data suite tests', function() {
 		// check publication status
 		cy.get('[data-cy="workflow-controls-left"]').contains("Scheduled");
 		// the button "Unschedule" exists
-		// the buttons "Create New Version" (connected with submission) and "Unpublish" (connected with publication) does not exist
+		// the button "Unpublish" (connected with publication) does not exist
 		cy.get('button:contains("Unschedule")');
-		cy.get('button:contains("Create New Version")').should('not.exist');
 		cy.get('button:contains("Unpublish")').should('not.exist');
 	});
 
@@ -184,7 +184,7 @@ describe('Data suite tests', function() {
 		// the button "Unpublish" (connected with the publication)
 		// and the button "Create New Version" (connected with submission) exist
 		cy.get('button:contains("Unpublish")');
-		cy.get('button:contains("Create New Version")');
+		cy.get(`[data-cy="active-modal"] nav a:contains('Create New Version')`);
 	});
 
 	it('Remove submission from TOC', function() {
@@ -205,7 +205,7 @@ describe('Data suite tests', function() {
 		// check submission status
 		cy.get('[data-cy="sidemodal-header"]').contains("Production");
 		// check publication status
-		cy.openWorkflowMenu('Title & Abstract')
+		cy.openWorkflowMenu('Version of Record 1.0', 'Title & Abstract')
 		cy.get('[data-cy="workflow-controls-left"]').contains("Unscheduled");
 		// the button "Schedule For Publication" exists
 		cy.get('button:contains("Schedule For Publication")');
@@ -217,7 +217,7 @@ describe('Data suite tests', function() {
 		cy.visit('index.php/publicknowledge/dashboard/editorial');
 		cy.get('nav').contains('Active submissions').click();
 		cy.openSubmission(author.familyName);
-		cy.openWorkflowMenu('Issue')
+		cy.openWorkflowMenu('Version of Record 1.0', 'Issue')
 
 		cy.get('button:contains("Change Issue")').click();
 		cy.get('select[id="assignToIssue-issueId-control"]').select('Vol. 1 No. 2 (2014)');

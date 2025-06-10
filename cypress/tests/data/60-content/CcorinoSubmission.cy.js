@@ -57,8 +57,8 @@ describe('Data suite: Ccorino', function() {
 		cy.recordDecisionSendToReview('Send for Review', submission.authorNames, [submission.title]);
 		cy.assignParticipant('Section editor', 'Minoti Inoue', true);
 
-		cy.openWorkflowMenu('Title & Abstract')
-		cy.openWorkflowMenu('Metadata')
+		cy.openWorkflowMenu('Unassigned version', 'Title & Abstract')
+		cy.openWorkflowMenu('Unassigned version', 'Metadata')
 		cy.get('#metadata-keywords-control-en').type('pr', {delay: 0});
 		cy.wait(500);
 		cy.get('li').contains('Professional Development').click({force: true});
