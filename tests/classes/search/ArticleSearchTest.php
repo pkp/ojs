@@ -24,13 +24,17 @@ use APP\journal\Journal;
 use APP\journal\JournalDAO;
 use APP\search\ArticleSearch;
 use APP\search\ArticleSearchDAO;
+use APP\submission\Repository as SubmissionRepository;
+use APP\section\Repository as SectionRepository;
 use Mockery;
 use Mockery\MockInterface;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PKP\db\DAORegistry;
 use PKP\plugins\Hook;
 use PKP\tests\PKPTestCase;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
+#[RunTestsInSeparateProcesses]
 #[CoversClass(ArticleSearch::class)]
 class ArticleSearchTest extends PKPTestCase
 {
@@ -90,7 +94,88 @@ class ArticleSearchTest extends PKPTestCase
     // Unit tests
     //
 
-    public function testRetrieveResults()
+    public function testRetrieveResultsWithUnpublishedIssueAndUnpublishedArticle()
+    {
+        // Make sure that no hook is being called.
+        Hook::clear('SubmissionSearch::retrieveResults');
+
+        $journal = new Journal();
+        $keywords = [null => 'test'];
+        $articleSearch = new ArticleSearch();
+        $error = '';
+        $request = Application::get()->getRequest();
+
+        /**
+         * @disregard P1013 PHP Intelephense error suppression
+         * @see https://github.com/bmewburn/vscode-intelephense/issues/568
+         */
+        $publicationMock = Mockery::mock(\APP\publication\Publication::class)
+            ->makePartial()
+            ->shouldReceive('getData')
+            ->with('keywords')
+            ->andReturn($keywords)
+            ->shouldReceive('getData')
+            ->with('published')
+            ->andReturn(false)
+            ->getMock();
+        
+        $sectionMock = Mockery::mock(\APP\section\Section::class)
+            ->makePartial()
+            ->shouldReceive('get')
+            ->withAnyArgs()
+            ->andReturn(new \APP\section\Section())
+            ->getMock();
+        
+        $sectionRepoMock = Mockery::mock(SectionRepository::class)
+            ->makePartial()
+            ->shouldReceive('get')
+            ->withAnyArgs()
+            ->andReturn($sectionMock)
+            ->getMock();
+
+        app()->instance(SectionRepository::class, $sectionRepoMock);
+
+        $submissionMock = Mockery::mock(\APP\submission\Submission::class)
+            ->makePartial()
+            ->shouldReceive([
+                'getId' => 0,
+                'getData' => 0,
+                'getCurrentPublication' => $publicationMock,
+                'getSectionId' => 0
+            ])
+            ->withAnyArgs()
+            ->getMock();
+
+        $submissionRepoMock = Mockery::mock(app(SubmissionRepository::class))
+            ->makePartial()
+            ->shouldReceive('get')
+            ->withAnyArgs()
+            ->andReturn($submissionMock)
+            ->getMock();
+
+        app()->instance(SubmissionRepository::class, $submissionRepoMock);
+
+        $issue = new \APP\issue\Issue();
+        $issue->setPublished(false);
+        $issue->setJournalId(1);
+
+        // Setup the mock
+        app()->instance(
+            \APP\issue\DAO::class,
+            Mockery::mock(
+                \APP\issue\DAO::class,
+                fn (MockInterface $mock) => $mock->shouldReceive('get')
+                    ->withAnyArgs()
+                    ->andReturn($issue)
+            )
+        );
+
+        $this->registerMockArticleSearchDAO(); // This is necessary to instantiate a fresh iterator.
+        $searchResult = $articleSearch->retrieveResults($request, $journal, $keywords, $error);
+        self::assertTrue($searchResult->eof());
+    }
+
+    public function testRetrieveResultsWithUnpublishedIssueAndPublishedArticle()
     {
         // Make sure that no hook is being called.
         Hook::clear('SubmissionSearch::retrieveResults');
@@ -110,8 +195,7 @@ class ArticleSearchTest extends PKPTestCase
         self::assertEquals(self::SUBMISSION_SEARCH_TEST_DEFAULT_ARTICLE, $firstResult['article']->getId());
         self::assertEquals('', $error);
 
-        // Make sure that articles from unpublished issues will
-        // be filtered out.
+        // Make sure that published articles from unpublished/future issues will be counted
         $issue = new \APP\issue\Issue();
         $issue->setPublished(false);
         $issue->setJournalId(1);
@@ -130,6 +214,11 @@ class ArticleSearchTest extends PKPTestCase
         $this->registerMockArticleSearchDAO(); // This is necessary to instantiate a fresh iterator.
         $keywords = [null => 'test'];
         $searchResult = $articleSearch->retrieveResults($request, $journal, $keywords, $error);
+        
+        self::assertFalse($searchResult->eof());
+        self::assertEquals(self::SUBMISSION_SEARCH_TEST_DEFAULT_ARTICLE, $searchResult->getCount());
+        
+        $searchResult->next();
         self::assertTrue($searchResult->eof());
     }
 

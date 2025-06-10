@@ -16,6 +16,7 @@ namespace APP\submission;
 
 use APP\core\Application;
 use APP\facades\Repo;
+use APP\submission\Submission;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Database\Query\JoinClause;
 
@@ -23,7 +24,7 @@ class Collector extends \PKP\submission\Collector
 {
     public ?array $issueIds = null;
     public ?array $sectionIds = null;
-    protected ?bool $continuousPublication = null;
+    protected ?bool $latestPublished = null;
 
     public function __construct(DAO $dao)
     {
@@ -48,9 +49,14 @@ class Collector extends \PKP\submission\Collector
         return $this;
     }
 
-    public function filterByContinuousPublication(bool $continuousPublication): static
+    /**
+     * Filter by latest published submission as 
+     *  - Issueless publications
+     *  - Continuous publications e.g. attached to future issue but published
+     */
+    public function filterByLatestPublished(bool $latestPublished): static
     {
-        $this->continuousPublication = $continuousPublication;
+        $this->latestPublished = $latestPublished;
         return $this;
     }
 
@@ -79,27 +85,22 @@ class Collector extends \PKP\submission\Collector
             });
         }
 
-        // add OJS-specific continuous publication filter
+        // add OJS-specific continuous publication (e.g. attached to future issue but published)
+        // and issueless publication filters
         $q->when(
-            $this->continuousPublication !== null, 
+            $this->latestPublished !== null, 
             fn (Builder $query) => $query
-                ->join(
-                    'publications as publication_cp',
-                    's.current_publication_id',
-                    '=',
-                    'publication_cp.publication_id'
+                ->join('publications as publication_cp', fn (JoinClause $join) => $join
+                    ->on('publication_cp.publication_id', '=', 's.current_publication_id')
+                    ->where('publication_cp.status', Submission::STATUS_PUBLISHED)
+                    ->whereNotNull('publication_cp.date_published')
+                    ->where('publication_cp.published', true)
                 )
-                ->leftJoin(
-                    'publication_settings as publication_cps', 
-                    fn (JoinClause $join) => $join
-                        ->on(
-                            'publication_cp.publication_id',
-                            '=',
-                            'publication_cps.publication_id'
-                        )
-                        ->where('publication_cps.setting_name', 'continuousPublication')
+                ->leftJoin('issues as pi', 'publication_cp.issue_id', '=', 'pi.issue_id')
+                ->where(fn (Builder $query) => $query
+                    ->whereNull('publication_cp.issue_id')
+                    ->orWhere('pi.published', false)
                 )
-                ->where('publication_cps.setting_value', $this->continuousPublication)
         );
 
         return $q;

@@ -59,8 +59,10 @@ class PublishForm extends FormComponent
 
         // Set separate messages and buttons if publication requirements have passed
         if (empty($requirementErrors)) {
+            $issue = null;
             $msg = __('publication.publish.confirmation');
             $submitLabel = __('publication.publish');
+            
             if ($publication->getData('issueId')) {
                 $issue = Repo::issue()->get($publication->getData('issueId'));
                 if ($issue) {
@@ -72,6 +74,18 @@ class PublishForm extends FormComponent
                     }
                 }
             }
+
+            // If the publication is marked to be published immediately regardless of the issue assignment
+            // or to a future issue, it will be published immediately
+            if ($publication->getData('published')) {
+                $msg = match($issue?->getData('published')) {
+                    true => __('publication.publish.confirmation'),
+                    false => __('publication.publish.confirmation.continuousPublication', ['issue' => htmlspecialchars($issue->getIssueIdentification())]),
+                    null => __('publication.publish.confirmation.issueLess'),
+                };
+                $submitLabel = __('publication.publish');
+            }
+            
             // If a publication date has already been set and the date has passed this will
             // be published immediately regardless of the issue assignment
             if ($publication->getData('datePublished') && $publication->getData('datePublished') <= Core::getCurrentDate()) {
@@ -121,10 +135,11 @@ class PublishForm extends FormComponent
             ]);
         }
 
-        $this->addGroup([
-            'id' => 'default',
-            'pageId' => 'default',
-        ])
+        $this
+            ->addGroup([
+                'id' => 'default',
+                'pageId' => 'default',
+            ])
             ->addField(new FieldHTML('validation', [
                 'description' => $msg,
                 'groupId' => 'default',
