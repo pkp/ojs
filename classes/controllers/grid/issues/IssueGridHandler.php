@@ -533,6 +533,7 @@ class IssueGridHandler extends GridHandler
      */
     public function publishIssue($args, $request)
     {
+        /** @var \APP\issue\Issue $issue */
         $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $context = $request->getContext();
         $contextId = $context->getId();
@@ -607,13 +608,11 @@ class IssueGridHandler extends GridHandler
 
                 foreach ($publications as $publication) { /** @var Publication $publication */
 
-                    if ($publication->getData('status') === Submission::STATUS_SCHEDULED && $publication->getData('issueId') === (int) $issue->getId()) {
+                    if ((int) $publication->getData('issueId') !== (int) $issue->getId()) {
+                        continue;
+                    }
 
-                        if (!$publication->getData('datePublished')) {
-
-                            $publication->setData('datePublished', $issue->getData('datePublished'));
-                        }
-
+                    if ($publication->getData('status') === Submission::STATUS_SCHEDULED) {
                         Repo::publication()->publish($publication);
                     }
                 }
@@ -681,6 +680,7 @@ class IssueGridHandler extends GridHandler
      */
     public function unpublishIssue($args, $request)
     {
+        /** @var \APP\issue\Issue $issue */
         $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $journal = $request->getJournal();
 

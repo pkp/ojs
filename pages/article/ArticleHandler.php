@@ -547,7 +547,12 @@ class ArticleHandler extends Handler
         }
 
         // Make sure the reader has rights to view the article/issue.
-        if ($issue && $issue->getPublished() && $submission->getData('status') == PKPSubmission::STATUS_PUBLISHED) {
+        if ($submission->getData('status') == PKPSubmission::STATUS_PUBLISHED) {
+
+            if (!$issue) {
+                return true;
+            }
+
             $subscriptionRequired = $issueAction->subscriptionRequired($issue, $context);
             $isSubscribedDomain = $issueAction->subscribedDomain($request, $context, $issue->getId(), $submission->getId());
 
@@ -616,6 +621,7 @@ class ArticleHandler extends Handler
         } else {
             $request->redirect(null, 'search');
         }
+
         return true;
     }
 }

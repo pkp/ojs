@@ -48,15 +48,15 @@ enum JournalContentOption: int
         return [
             [
                 'value' => static::ISSUE_TOC->value,
-                'label' => __('manager.setup.journalContentOrganization.option.issue_toc'),
+                'label' => __('manager.setup.journalContentOrganization.option.issueToc'),
             ],
             [
                 'value' => static::RECENT_PUBLISHED->value,
-                'label' => __('manager.setup.journalContentOrganization.option.recent_published'),
+                'label' => __('manager.setup.journalContentOrganization.option.recentPublished'),
             ],
             [
                 'value' => static::CATEGORY_LISTING->value,
-                'label' => __('manager.setup.journalContentOrganization.option.category_listing'),
+                'label' => __('manager.setup.journalContentOrganization.option.categoryListing'),
             ],
         ];
     }
