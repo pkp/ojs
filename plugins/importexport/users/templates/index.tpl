@@ -41,7 +41,7 @@
 					);
 				{rdelim});
 			</script>
-			<div class="legacyDefaults">
+			<div class="semantic-defaults">
 			<form id="importXmlForm" class="pkp_form" action="{plugin_url path="importBounce"}" method="post">
 				{csrf}
 				{fbvFormArea id="importForm"}
