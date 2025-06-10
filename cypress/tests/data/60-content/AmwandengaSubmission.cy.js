@@ -463,11 +463,6 @@ describe('Data suite: Amwandenga', function() {
 		cy.get(`[data-cy="active-modal"] nav a:contains('Create New Version')`).click();
 		cy.assignPublicationStage('AO', 'true');
 
-		// wait for the new publication data to appear on the side menu
-		cy.get('body').then($body =>
-			$body.find('[data-cy="dialog"]').length === 0
-		);
-
 		// Toggle between versions
 		cy.openWorkflowMenu('Author Original 1.0', 'Title & Abstract');
 		cy.contains('This version has been published and can not be edited.');
