@@ -87,14 +87,14 @@ class IndexHandler extends PKPIndexHandler
             }
 
             if (in_array(JournalContentOption::RECENT_PUBLISHED->value, $activeTheme->getOption('journalContentOrganization'))) {
-                $continuousPublication = Repo::submission()
+                $publishedPublications = Repo::submission()
                     ->getCollector()
                     ->filterByContextIds([$journal->getId()])
-                    ->filterByContinuousPublication(true)
+                    ->filterByLatestPublished(true)
                     ->filterByStatus([Submission::STATUS_PUBLISHED])
                     ->getMany();
 
-                $templateMgr->assign(['continuousPublication' => $continuousPublication]);
+                $templateMgr->assign(['publishedPublications' => $publishedPublications]);
             }
 
             // Assign header and content for home page

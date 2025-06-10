@@ -92,7 +92,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO
             $sqlWhere .= ' AND (s.context_id = ?)';
             $params[] = $context->getId();
         }
-        
+
         $result = $this->retrieve(
             'SELECT
                 o.submission_id,
@@ -108,9 +108,6 @@ class ArticleSearchDAO extends SubmissionSearchDAO
                 JOIN journals AS j ON j.journal_id = s.context_id
                 LEFT JOIN journal_settings AS js ON j.journal_id = js.journal_id
                     AND js.setting_name = \'publishingMode\'
-                LEFT JOIN publication_settings AS ps ON ps.publication_id = p.publication_id
-                    AND ps.setting_name = \'continuousPublication\'
-                    AND ps.setting_value = 1
                 NATURAL JOIN ' . $sqlFrom . '
             WHERE
                 (js.setting_value <> \'' . Journal::PUBLISHING_MODE_NONE . '\' 
@@ -118,7 +115,7 @@ class ArticleSearchDAO extends SubmissionSearchDAO
                 AND j.enabled = 1 
                 AND s.status = ' . PKPSubmission::STATUS_PUBLISHED . '
                 AND ( (i.published = 1 AND i.journal_id = s.context_id)
-                    OR ps.publication_id IS NOT NULL
+                    OR p.status = ' . PKPSubmission::STATUS_PUBLISHED . '
                     OR p.issue_id IS NULL )
                 AND ' . $sqlWhere . '
             GROUP BY o.submission_id
