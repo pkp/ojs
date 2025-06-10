@@ -132,6 +132,7 @@ class Repository extends \PKP\publication\Repository
     /** @copydoc \PKP\publication\Repository::version() */
     public function version(Publication $publication, ?VersionStage $versionStage = null, bool $isMinorVersion = true): int
     {
+        $publication->setData('published', false);
         $newId = parent::version($publication, $versionStage, $isMinorVersion);
 
         $context = Application::get()->getRequest()->getContext();
@@ -158,11 +159,56 @@ class Repository extends \PKP\publication\Repository
      */
     public function publish(Publication $publication)
     {
+        // if there is no issue, set the publication as published as part of continuous publication
         if (!$publication->getData('issueId')) {
-            $publication->setData('continuousPublication', true);
+            $publication->setData('published', true);
+        } else {
+            $issue = Repo::issue()->get($publication->getData('issueId'));
+            $publication->setData('published', $issue->getData('published'));
         }
 
         parent::publish($publication);
+    }
+
+    /**
+     * @copydoc \PKP\publication\Repository::unpublish()
+     */
+    public function unpublish(Publication $publication)
+    {
+        $publication->setData('published', false);
+        parent::unpublish($publication);
+    }
+
+    /**
+     * Schedule the publication to be published in the future
+     */
+    public function schedule(Publication $publication)
+    {
+        $publication->setData('status', Submission::STATUS_SCHEDULED);
+        $this->dao->update($publication);
+        
+        $submission = Repo::submission()->get($publication->getData('submissionId'));
+        Repo::submission()->updateStatus($submission);
+    }
+
+    /**
+     * @copydoc \PKP\publication\Repository::edit()
+     */
+    public function edit(Publication $publication, array $params): Publication
+    {
+        if (isset($params['issueId'])) {
+            $issue = Repo::issue()->get($params['issueId']);
+            
+            // Attached to a future issue e.g. non published issue
+            // and marked as continuous publication
+            if (!$issue->getData('published') && 
+                (isset($params['published']) && $params['published'] == 1)) {
+                $params['published'] = 0;
+                $publication->setData('datePublished', Core::getCurrentDate());
+            }
+        }
+
+        return parent::edit($publication, $params);
     }
 
     /**
@@ -192,18 +238,21 @@ class Repository extends \PKP\publication\Repository
             );
         } else {
             // if there is no issue, set the publication status to STATUS_PUBLISHED
-            // as it is a continuous publication
+            // as it is a issueless publication
             $publication->setData('status', Submission::STATUS_PUBLISHED);
         }
 
-        // if the publication is marked as continuous publication, set the status to STATUS_PUBLISHED
+        // if the publication is marked as part of continuous publication, set the status to STATUS_PUBLISHED
         // regardless of the issue's publication status is any issue is associated with the publication
-        if ($publication->getData('continuousPublication')) {
+        if ($publication->isMarkedAsContinuousPublication()) {
             $publication->setData('status', Submission::STATUS_PUBLISHED);
         }
 
-        // If no predefined datePublished available for the publication, use current date
-        if (!$publication->getData('datePublished')) {
+        // If no predefined datePublished available for the publication
+        // or if the publication is marked as part of continuous publication
+        // use current date to set/update the date published
+        if ($publication->getData('status') === Submission::STATUS_PUBLISHED
+            && (!$publication->getData('datePublished') || $publication->isMarkedAsContinuousPublication())) {
             $publication->setData('datePublished', Core::getCurrentDate());
         }
     }

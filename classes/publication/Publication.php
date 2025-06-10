@@ -65,6 +65,18 @@ class Publication extends PKPPublication
     {
         $this->setData('issueId', $issueId);
     }
+
+    /**
+     * Determine if the publication is marked as part of continuous publication.
+     */
+    public function isMarkedAsContinuousPublication(): bool
+    {
+        if (!$this->getData('issueId')) {
+            return false;
+        }
+
+        return !$this->getData('published') && $this->getData('datePublished');
+    }
 }
 
 if (!PKP_STRICT_MODE) {

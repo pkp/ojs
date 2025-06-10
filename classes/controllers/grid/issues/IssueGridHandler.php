@@ -533,6 +533,7 @@ class IssueGridHandler extends GridHandler
      */
     public function publishIssue($args, $request)
     {
+        /** @var \APP\issue\Issue $issue */
         $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $context = $request->getContext();
         $contextId = $context->getId();
@@ -607,10 +608,14 @@ class IssueGridHandler extends GridHandler
 
                 foreach ($publications as $publication) { /** @var Publication $publication */
 
-                    if ($publication->getData('status') === Submission::STATUS_SCHEDULED && $publication->getData('issueId') === (int) $issue->getId()) {
+                    if ((int) $publication->getData('issueId') !== (int) $issue->getId()) {
+                        continue;
+                    }
+
+                    if ($publication->getData('status') === Submission::STATUS_SCHEDULED
+                        || ($publication->getData('status') === Submission::STATUS_PUBLISHED && $publication->isMarkedAsContinuousPublication())) {
 
                         if (!$publication->getData('datePublished')) {
-
                             $publication->setData('datePublished', $issue->getData('datePublished'));
                         }
 
@@ -681,6 +686,7 @@ class IssueGridHandler extends GridHandler
      */
     public function unpublishIssue($args, $request)
     {
+        /** @var \APP\issue\Issue $issue */
         $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $journal = $request->getJournal();
 
@@ -709,11 +715,11 @@ class IssueGridHandler extends GridHandler
             $publications = $submission->getData('publications');
             foreach ($publications as $publication) { /** @var Publication $publication */
                 if ($publication->getData('status') === Submission::STATUS_PUBLISHED && $publication->getData('issueId') === (int) $issue->getId()) {
-                    // Republish the publication in the issue, now that it's status has changed,
+                    // Reschedule the publication in the issue, now that it's status has changed,
                     // to ensure the publication's status is restored to Submission::STATUS_SCHEDULED
                     // rather than Submission::STATUS_QUEUED
                     Repo::publication()->unpublish($publication);
-                    Repo::publication()->publish($publication);
+                    Repo::publication()->schedule($publication);
                 }
             }
         }

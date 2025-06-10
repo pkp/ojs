@@ -24,13 +24,13 @@ use APP\core\Request;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\issue\IssueAction;
+use APP\publication\Publication;
 use PKP\controlledVocab\ControlledVocab;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\plugins\Hook;
 use PKP\search\SubmissionSearch;
 use PKP\submission\PKPSubmission;
-use PKP\publication\PKPPublication;
 use PKP\userGroup\UserGroup;
 
 class ArticleSearch extends SubmissionSearch
@@ -426,9 +426,13 @@ class ArticleSearch extends SubmissionSearch
     /**
      * Check if the article can be displayed.
      */
-    protected function canDisplayArticle(PKPPublication $currentPublication, ?Issue $issue = null): bool
+    protected function canDisplayArticle(Publication $currentPublication, ?Issue $issue = null): bool
     {
-        if ((bool)$currentPublication->getData('continuousPublication') === true) {
+        if ($currentPublication->getData('status') != PKPSubmission::STATUS_PUBLISHED) {
+            return false;
+        }
+
+        if ($currentPublication->isMarkedAsContinuousPublication()) {
             return true;
         }
 
