@@ -202,6 +202,17 @@ msgstr ""
 "All publication requirements have been met. This will be published "
 "immediately in {$issue}. Are you sure you want to publish this?"
 
+msgid "publication.publish.confirmation.issueLess"
+msgstr ""
+"All publication requirements have been met. This will be published "
+"immediately without any issue association. Are you sure you want to publish this?"
+
+msgid "publication.publish.confirmation.continuousPublication"
+msgstr ""
+"All publication requirements have been met. This will be published "
+"immediately as continuous publication even though it is assigned to {$issue} "
+"which is not published yet. Are you sure you want to publish this?"
+
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
 "All publication requirements have been met. This will be published "
@@ -212,7 +223,13 @@ msgid "publication.publish.continuousPublication.description"
 msgstr "Allow this publication to be published regardless of the issue being published."
 
 msgid "publication.publish.continuousPublication.label"
-msgstr "Publish in continuous publication"
+msgstr "Publish immediately"
+
+msgid "publication.publish.issuelessPublication.description"
+msgstr "Allow this publication to be published without an issue."
+
+msgid "publication.publish.issuelessPublication.label"
+msgstr "Publish without issue association"
 
 msgid "publication.required.issue"
 msgstr ""

@@ -45,7 +45,7 @@
 			"type": "integer",
 			"apiSummary": true
 		},
-		"continuousPublication": {
+		"published": {
 			"type": "boolean",
 			"validation": [
 				"nullable"
