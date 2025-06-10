@@ -7,7 +7,7 @@
  *
  * List of operations this plugin can perform
  *}
-<div class="legacyDefaults">
+<div class="semantic-defaults">
 {if $validationErrors}
 	<h2>{translate key="plugins.importexport.common.validationErrors"}</h2>
 	<ul>
