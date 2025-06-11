@@ -1,11 +1,12 @@
 # Antti-Jussi Nygård <ajnyga@gmail.com>, 2021, 2023.
+# Minna Kivinen <minna.kivinen@hamk.fi>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
-"PO-Revision-Date: 2023-05-22 19:28+0000\n"
-"Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
+"PO-Revision-Date: 2025-06-09 07:54+0000\n"
+"Last-Translator: Minna Kivinen <minna.kivinen@hamk.fi>\n"
 "Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/editor/fi/>"
 "\n"
 "Language: fi\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "editor.home"
 msgstr "Toimittajan etusivu"
@@ -483,3 +484,16 @@ msgstr ""
 
 msgid "editor.article.coverImage"
 msgstr "Kansikuva"
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr "Julkaisupäivämäärä on pakollinen, kun numero julkaistaan."
+
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr ""
+"Jos tämä kenttä jätetään tyhjäksi, päivämäärä tulee automaattisesti, kun "
+"numero julkaistaan."
+
+msgid "editor.issues.datePublished.invalid"
+msgstr ""
+"Julkaisupäivämäärä ei ole kelvollinen. Päiväyksen tulee olla muotoa VVVV-KK-"
+"PP."
