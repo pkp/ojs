@@ -1,12 +1,13 @@
 # Kay <kay.pepping@huygens.knaw.nl>, 2024.
 # Dorien van Rheenen <d.van.rheenen@rug.nl>, 2024.
+# Jan Willem Wijnen <janwillem.wijnen@huygens.knaw.nl>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:05+00:00\n"
-"PO-Revision-Date: 2024-10-19 11:40+0000\n"
-"Last-Translator: Dorien van Rheenen <d.van.rheenen@rug.nl>\n"
+"PO-Revision-Date: 2025-05-27 13:51+0000\n"
+"Last-Translator: Jan Willem Wijnen <janwillem.wijnen@huygens.knaw.nl>\n"
 "Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-articles/nl/>\n"
 "Language: nl\n"
@@ -26,3 +27,6 @@ msgstr ""
 
 msgid "plugins.reports.articles.nodecision"
 msgstr "Geen beslissing"
+
+msgid "plugins.reports.articles.initialDecline"
+msgstr "Wijs af (Pre-view)"

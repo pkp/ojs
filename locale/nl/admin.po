@@ -1,12 +1,13 @@
 # Dorien van Rheenen <d.van.rheenen@rug.nl>, 2023.
 # Kay <kay.pepping@huygens.knaw.nl>, 2024.
+# Jan Willem Wijnen <janwillem.wijnen@huygens.knaw.nl>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2024-03-21 21:01+0000\n"
-"Last-Translator: Kay <kay.pepping@huygens.knaw.nl>\n"
+"PO-Revision-Date: 2025-05-27 13:51+0000\n"
+"Last-Translator: Jan Willem Wijnen <janwillem.wijnen@huygens.knaw.nl>\n"
 "Language-Team: Dutch <http://translate.pkp.sfu.ca/projects/ojs/admin/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
@@ -39,9 +40,9 @@ msgid "admin.languages.supportedLocalesInstructions"
 msgstr ""
 "Selecteer de talen die de site moet ondersteunen. De geselecteerde talen "
 "zijn beschikbaar voor alle tijdschriften in de site en zullen ook "
-"verschijnen in een taalkeuzemenu  op alle pagina's van de site (dat kan "
+"verschijnen in een taalkeuzemenu op alle pagina's van de site (dat kan "
 "overruled worden voor specifieke tijdschriften). Als er slechts één taal "
-"geselecteerd wordt zal er geen taalkeuzemenu getoond worden en zijn er geen "
+"geselecteerd wordt, zal er geen taalkeuzemenu getoond worden en zijn er geen "
 "taalinstellingen bij de tijdschriften."
 
 msgid "admin.locale.maybeIncomplete"
