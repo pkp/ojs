@@ -252,4 +252,9 @@ class Application extends PKPApplication
     {
         return 'https://docs.pkp.sfu.ca/learning-ojs/';
     }
+
+    public function getNamespace(): string
+    {
+        return 'APP\\';
+    }
 }
