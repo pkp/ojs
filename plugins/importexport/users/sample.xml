@@ -17,9 +17,13 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en">Press managerxx</name>
-			<abbrev locale="en">PM</abbrev>
-			<stage_assignments />
+			<permit_metadata_edit>true</permit_metadata_edit>
+			<name locale="en">Journal manager</name>
+			<name locale="fr_CA">Directeur-trice de la revue</name>
+			<abbrev locale="en">JM</abbrev>
+			<abbrev locale="fr_CA">DIR</abbrev>
+			<stage_assignments/>
+			<masthead>false</masthead>
 		</user_group>
 		<user_group>
 			<role_id>16</role_id>
@@ -27,9 +31,13 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en">Press editorxx</name>
-			<abbrev locale="en">PE</abbrev>
-			<stage_assignments>1:2:3:4:5</stage_assignments>
+			<permit_metadata_edit>true</permit_metadata_edit>
+			<name locale="en">Journal editor</name>
+			<name locale="fr_CA">Rédacteur-trice</name>
+			<abbrev locale="en">JE</abbrev>
+			<abbrev locale="fr_CA">RÉD</abbrev>
+			<stage_assignments>1:3:4:5</stage_assignments>
+			<masthead>true</masthead>
 		</user_group>
 		<user_group>
 			<role_id>16</role_id>
@@ -37,19 +45,41 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en">Production editorxx</name>
+			<permit_metadata_edit>true</permit_metadata_edit>
+			<name locale="en">Production editor</name>
+			<name locale="fr_CA">Directeur-trice de production</name>
 			<abbrev locale="en">ProdE</abbrev>
+			<abbrev locale="fr_CA">DirProd</abbrev>
 			<stage_assignments>4:5</stage_assignments>
+			<masthead>false</masthead>
 		</user_group>
 		<user_group>
-			<role_id>513</role_id>
+			<role_id>17</role_id>
 			<context_id>1</context_id>
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en">Series editorxx</name>
-			<abbrev locale="en">AcqE</abbrev>
-			<stage_assignments>1:2:3:4:5</stage_assignments>
+			<permit_metadata_edit>true</permit_metadata_edit>
+			<name locale="en">Section editor</name>
+			<name locale="fr_CA">Rédacteur-trice de rubrique</name>
+			<abbrev locale="en">SecE</abbrev>
+			<abbrev locale="fr_CA">RÉDRUB</abbrev>
+			<stage_assignments>1:3:4:5</stage_assignments>
+			<masthead>true</masthead>
+		</user_group>
+		<user_group>
+			<role_id>17</role_id>
+			<context_id>1</context_id>
+			<is_default>true</is_default>
+			<show_title>true</show_title>
+			<permit_self_registration>false</permit_self_registration>
+			<permit_metadata_edit>false</permit_metadata_edit>
+			<name locale="en">Guest editor</name>
+			<name locale="fr_CA">Rédacteur-trice invité-e</name>
+			<abbrev locale="en">GE</abbrev>
+			<abbrev locale="fr_CA">RÉDINV</abbrev>
+			<stage_assignments>1:3:4:5</stage_assignments>
+			<masthead>false</masthead>
 		</user_group>
 		<user_group>
 			<role_id>4097</role_id>
@@ -57,9 +87,13 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en">Copyeditorxx</name>
+			<permit_metadata_edit>false</permit_metadata_edit>
+			<name locale="en">Copyeditor</name>
+			<name locale="fr_CA">Réviseur-e</name>
 			<abbrev locale="en">CE</abbrev>
+			<abbrev locale="fr_CA">RÉV</abbrev>
 			<stage_assignments>4</stage_assignments>
+			<masthead>false</masthead>
 		</user_group>
 		<user_group>
 			<role_id>4097</role_id>
@@ -67,9 +101,13 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en">Designerxx</name>
+			<permit_metadata_edit>false</permit_metadata_edit>
+			<name locale="en">Designer</name>
+			<name locale="fr_CA">Designer</name>
 			<abbrev locale="en">Design</abbrev>
+			<abbrev locale="fr_CA">Design</abbrev>
 			<stage_assignments>5</stage_assignments>
+			<masthead>false</masthead>
 		</user_group>
 		<user_group>
 			<role_id>4097</role_id>
@@ -77,9 +115,13 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
+			<permit_metadata_edit>false</permit_metadata_edit>
 			<name locale="en">Funding coordinator</name>
+			<name locale="fr_CA">Coordonnateur-trice du financement</name>
 			<abbrev locale="en">FC</abbrev>
-			<stage_assignments>1:2:3</stage_assignments>
+			<abbrev locale="fr_CA">CF</abbrev>
+			<stage_assignments>1:3</stage_assignments>
+			<masthead>false</masthead>
 		</user_group>
 		<user_group>
 			<role_id>4097</role_id>
@@ -87,9 +129,13 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
+			<permit_metadata_edit>false</permit_metadata_edit>
 			<name locale="en">Indexer</name>
+			<name locale="fr_CA">Indexeur-e</name>
 			<abbrev locale="en">IND</abbrev>
+			<abbrev locale="fr_CA">Indx</abbrev>
 			<stage_assignments>5</stage_assignments>
+			<masthead>false</masthead>
 		</user_group>
 		<user_group>
 			<role_id>4097</role_id>
@@ -97,9 +143,13 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
+			<permit_metadata_edit>false</permit_metadata_edit>
 			<name locale="en">Layout Editor</name>
+			<name locale="fr_CA">Responsable de la mise en page</name>
 			<abbrev locale="en">LE</abbrev>
+			<abbrev locale="fr_CA">RespMP</abbrev>
 			<stage_assignments>5</stage_assignments>
+			<masthead>false</masthead>
 		</user_group>
 		<user_group>
 			<role_id>4097</role_id>
@@ -107,9 +157,13 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
+			<permit_metadata_edit>false</permit_metadata_edit>
 			<name locale="en">Marketing and sales coordinator</name>
+			<name locale="fr_CA">Coordonnateur-trice des ventes et du marketing</name>
 			<abbrev locale="en">MS</abbrev>
+			<abbrev locale="fr_CA">CVM</abbrev>
 			<stage_assignments>4</stage_assignments>
+			<masthead>false</masthead>
 		</user_group>
 		<user_group>
 			<role_id>4097</role_id>
@@ -117,19 +171,27 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
+			<permit_metadata_edit>false</permit_metadata_edit>
 			<name locale="en">Proofreader</name>
+			<name locale="fr_CA">Correcteur-trice d'épreuves</name>
 			<abbrev locale="en">PR</abbrev>
+			<abbrev locale="fr_CA">CorEp</abbrev>
 			<stage_assignments>5</stage_assignments>
+			<masthead>false</masthead>
 		</user_group>
 		<user_group>
 			<role_id>65536</role_id>
 			<context_id>1</context_id>
 			<is_default>true</is_default>
 			<show_title>true</show_title>
-			<permit_self_registration>false</permit_self_registration>
+			<permit_self_registration>true</permit_self_registration>
+			<permit_metadata_edit>false</permit_metadata_edit>
 			<name locale="en">Author</name>
+			<name locale="fr_CA">Auteur-e</name>
 			<abbrev locale="en">AU</abbrev>
-			<stage_assignments>1:2:3:4:5</stage_assignments>
+			<abbrev locale="fr_CA">AU</abbrev>
+			<stage_assignments>1:3:4:5</stage_assignments>
+			<masthead>false</masthead>
 		</user_group>
 		<user_group>
 			<role_id>65536</role_id>
@@ -137,116 +199,132 @@
 			<is_default>true</is_default>
 			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
-			<name locale="en">Volume editor</name>
-			<abbrev locale="en">VE</abbrev>
-			<stage_assignments>1:2:3:4:5</stage_assignments>
-		</user_group>
-		<user_group>
-			<role_id>65536</role_id>
-			<context_id>1</context_id>
-			<is_default>true</is_default>
-			<show_title>true</show_title>
-			<permit_self_registration>false</permit_self_registration>
-			<name locale="en">Chapter Author</name>
-			<abbrev locale="en">CA</abbrev>
-			<stage_assignments>4:5</stage_assignments>
-		</user_group>
-		<user_group>
-			<role_id>65536</role_id>
-			<context_id>1</context_id>
-			<is_default>true</is_default>
-			<show_title>true</show_title>
-			<permit_self_registration>false</permit_self_registration>
+			<permit_metadata_edit>false</permit_metadata_edit>
 			<name locale="en">Translator</name>
+			<name locale="fr_CA">Traducteur-trice</name>
 			<abbrev locale="en">Trans</abbrev>
-			<stage_assignments>1:2:3:4:5</stage_assignments>
+			<abbrev locale="fr_CA">Trad</abbrev>
+			<stage_assignments>1:3:4:5</stage_assignments>
+			<masthead>false</masthead>
 		</user_group>
 		<user_group>
 			<role_id>4096</role_id>
 			<context_id>1</context_id>
 			<is_default>true</is_default>
 			<show_title>true</show_title>
-			<permit_self_registration>false</permit_self_registration>
-			<name locale="en">Internal Reviewer</name>
-			<abbrev locale="en">IR</abbrev>
-			<stage_assignments>2</stage_assignments>
-		</user_group>
-		<user_group>
-			<role_id>4096</role_id>
-			<context_id>1</context_id>
-			<is_default>true</is_default>
-			<show_title>true</show_title>
-			<permit_self_registration>false</permit_self_registration>
-			<name locale="en">External Reviewer</name>
-			<abbrev locale="en">ER</abbrev>
+			<permit_self_registration>true</permit_self_registration>
+			<permit_metadata_edit>false</permit_metadata_edit>
+			<name locale="en">Reviewer</name>
+			<name locale="fr_CA">Évaluateur-trice</name>
+			<abbrev locale="en">R</abbrev>
+			<abbrev locale="fr_CA">ÉVAL</abbrev>
 			<stage_assignments>3</stage_assignments>
+			<masthead>true</masthead>
+		</user_group>
+		<user_group>
+			<role_id>1048576</role_id>
+			<context_id>1</context_id>
+			<is_default>true</is_default>
+			<show_title>true</show_title>
+			<permit_self_registration>true</permit_self_registration>
+			<permit_metadata_edit>false</permit_metadata_edit>
+			<name locale="en">Reader</name>
+			<name locale="fr_CA">Lecteur-trice</name>
+			<abbrev locale="en">Read</abbrev>
+			<abbrev locale="fr_CA">Lect</abbrev>
+			<stage_assignments/>
+			<masthead>false</masthead>
+		</user_group>
+		<user_group>
+			<role_id>2097152</role_id>
+			<context_id>1</context_id>
+			<is_default>true</is_default>
+			<show_title>true</show_title>
+			<permit_self_registration>false</permit_self_registration>
+			<permit_metadata_edit>false</permit_metadata_edit>
+			<name locale="en">Subscription Manager</name>
+			<name locale="fr_CA">Responsable des abonnements</name>
+			<abbrev locale="en">SubM</abbrev>
+			<abbrev locale="fr_CA">RespAB</abbrev>
+			<stage_assignments/>
+			<masthead>false</masthead>
+		</user_group>
+		<user_group>
+			<role_id>4097</role_id>
+			<context_id>1</context_id>
+			<is_default>true</is_default>
+			<show_title>true</show_title>
+			<permit_self_registration>false</permit_self_registration>
+			<permit_metadata_edit>false</permit_metadata_edit>
+			<name locale="en">Editorial Board Member</name>
+			<abbrev locale="en">EBM</abbrev>
+			<stage_assignments/>
+			<masthead>true</masthead>
 		</user_group>
 	</user_groups>
 	<users>
 		<user>
 			<givenname locale="en">John</givenname>
 			<familyname locale="en">Author</familyname>
+			<country>CA</country>
 			<email>john@author.com</email>
 			<username>author</username>
 			<password is_disabled="false" must_change="false"
 				encryption="sha1">
-				<value>1c328d557344e37c07dd0a4e9312d68d790d1c06</value>
+				<value>$2y$10$p1eYTMwsee1PsRsFuZ8FIOuh.uIdnkcluHEoThpNEt9saE1.QyEaW</value>
 			</password>
 			<date_registered>2013-11-05 12:46:08</date_registered>
 			<date_last_login>2013-11-05 12:46:08</date_last_login>
 			<inline_help>true</inline_help>
-			<user_group_ref>Author</user_group_ref>
+			<user_user_group>
+				<user_group_ref>Author</user_group_ref>
+				<date_start>2013-11-05 00:00:00</date_start>
+				<masthead>true</masthead>
+			</user_user_group>
 		</user>
 		<user>
 			<givenname locale="en">John</givenname>
 			<familyname locale="en">Editor</familyname>
+			<country>CA</country>
 			<email>john@editor.com</email>
 			<username>editor</username>
 			<password is_disabled="false" must_change="false"
 				encryption="sha1">
-				<value>a756a1ea5876011250528d98609af2dd2b5f7dbe</value>
+				<value>$2y$10$p1eYTMwsee1PsRsFuZ8FIOuh.uIdnkcluHEoThpNEt9saE1.QyEaW</value>
 			</password>
 			<date_registered>2013-11-05 12:44:51</date_registered>
 			<date_last_login>2013-11-07 10:55:39</date_last_login>
 			<inline_help>true</inline_help>
-			<user_group_ref>Press editor</user_group_ref>
-		</user>
-		<user>
-			<givenname locale="en">admin</givenname>
-			<familyname locale="en">Smith</familyname>
-			<country>CA</country>
-			<email>john@admin-site.com</email>
-			<url>http://www.admin-site.com</url>
-			<username>admin</username>
-			<password is_disabled="false" must_change="false"
-				encryption="sha1">
-				<value>6f7303f0285dd527b2da3620ccaf25ee384ae7db</value>
-			</password>
-			<salutation>Mr</salutation>
-			<initials>JMN</initials>
-			<date_registered>2013-11-05 12:42:05</date_registered>
-			<date_last_login>2014-01-06 08:58:08</date_last_login>
-			<date_validated>2013-11-06 00:00:00</date_validated>
-			<inline_help>false</inline_help>
-			<auth_id>23</auth_id>
-			<billing_address>my billing address</billing_address>
-			<user_group_ref>Press manager</user_group_ref>
-			<review_interests>Math, Chemistry, life science</review_interests>
+			<user_user_group>
+				<user_group_ref>Journal editor</user_group_ref>
+				<date_start>2013-11-05 00:00:00</date_start>
+				<masthead>true</masthead>
+			</user_user_group>
 		</user>
 		<user>
 			<givenname locale="en">John</givenname>
 			<familyname locale="en">Reviewer</familyname>
+			<country>CA</country>
 			<email>john@reviewer.com</email>
 			<username>reviewer</username>
 			<password is_disabled="false" must_change="false"
 				encryption="sha1">
-				<value>42667ea2bc04fbe8efdddb6844f858e76e5ca07a</value>
+				<value>$2y$10$p1eYTMwsee1PsRsFuZ8FIOuh.uIdnkcluHEoThpNEt9saE1.QyEaW</value>
 			</password>
 			<date_registered>2013-11-05 12:45:23</date_registered>
-			<date_last_login>2013-11-05 12:45:23</date_last_login>
+			<date_last_login>2024-11-15 12:45:23</date_last_login>
 			<inline_help>true</inline_help>
-			<user_group_ref>Internal Reviewer</user_group_ref>
-			<user_group_ref>External Reviewer</user_group_ref>
+			<user_user_group>
+				<user_group_ref>Reviewer</user_group_ref>
+				<date_start>2013-11-05 00:00:00</date_start>
+				<date_end>2023-11-05 00:00:00</date_end>
+				<masthead>true</masthead>
+			</user_user_group>
+			<user_user_group>
+				<user_group_ref>Reviewer</user_group_ref>
+				<date_start>2024-11-05 00:00:00</date_start>
+				<masthead>true</masthead>
+			</user_user_group>
 		</user>
 	</users>
 </PKPUsers>
