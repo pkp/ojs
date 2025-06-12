@@ -430,7 +430,7 @@ describe('Data suite: Amwandenga', function() {
 	it('Article is not available when unpublished', function() {
 		cy.login('dbarnes');
 		cy.visit('/index.php/publicknowledge/workflow/access/' + submission.id);
-		cy.openWorkflowMenu('Author Original 1.0', 'Title & Abstract')
+		cy.openWorkflowMenu('Version of Record 1.0', 'Title & Abstract')
 		cy.get('button').contains('Unpublish').click();
 		cy.contains('Are you sure you don\'t want this to be published?');
 		cy.get('[data-cy="dialog"] button').contains('Unpublish').click();
@@ -449,7 +449,7 @@ describe('Data suite: Amwandenga', function() {
 		// Re-publish it
 		cy.login('dbarnes');
 		cy.visit('/index.php/publicknowledge/workflow/access/' + submission.id);
-		cy.openWorkflowMenu('Author Original 1.0', 'Title & Abstract')
+		cy.openWorkflowMenu('Version of Record 1.0', 'Title & Abstract')
 		cy.get('button').contains('Schedule For Publication').click();
 		cy.contains('All publication requirements have been met.');
 		cy.get('.pkpWorkflow__publishModal button').contains('Publish').click();
@@ -458,17 +458,17 @@ describe('Data suite: Amwandenga', function() {
 	it('Editor must create version to make changes', function() {
 		cy.login('dbarnes');
 		cy.visit('/index.php/publicknowledge/workflow/access/' + submission.id);
-		cy.openWorkflowMenu('Author Original 1.0', 'Title & Abstract')
+		cy.openWorkflowMenu('Version of Record 1.0', 'Title & Abstract')
 		cy.get('button').contains('Save').should('be.disabled');
 		cy.get(`[data-cy="active-modal"] nav a:contains('Create New Version')`).click();
-		cy.assignPublicationStage('AO', 'true');
+		cy.assignPublicationStage('VoR', 'true');
 
 		// Toggle between versions
-		cy.openWorkflowMenu('Author Original 1.0', 'Title & Abstract');
+		cy.openWorkflowMenu('Version of Record 1.0', 'Title & Abstract');
 		cy.contains('This version has been published and can not be edited.');
 		cy.get('button').contains('Save').should('be.disabled');
 
-		cy.openWorkflowMenu('Author Original 1.1', 'Title & Abstract');
+		cy.openWorkflowMenu('Version of Record 1.1', 'Title & Abstract');
 		cy.get('button').contains('Publish');
 		cy.contains('This version has been published and can not be edited.').should('not.exist');
 
@@ -478,7 +478,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('[role="status"]').contains('Saved');
 
 		// Edit Contributor
-		cy.openWorkflowMenu('Author Original 1.1', 'Contributors')
+		cy.openWorkflowMenu('Version of Record 1.1', 'Contributors')
 
 
 		cy.get('[data-cy="contributor-manager"]').contains('li','Alan Mwandenga').find('button').contains('Edit').click();
@@ -489,7 +489,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('[data-cy="contributor-manager"]').contains('Alan Mwandenga Version 2');
 
 		// Edit Galley
-		cy.openWorkflowMenu('Author Original 1.1', 'Galleys')
+		cy.openWorkflowMenu('Version of Record 1.1', 'Galleys')
 		cy.contains('Add galley');
 		cy.get('[data-cy="active-modal"] button[aria-label="More Actions"]').click();
 		cy.get('button:contains("Edit")').click();
@@ -504,7 +504,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('[data-cy="galley-manager"]').contains("PDF Version 2");
 
 		// Edit url path
-		cy.openWorkflowMenu('Author Original 1.1', 'Issue')
+		cy.openWorkflowMenu('Version of Record 1.1', 'Issue')
 		cy.get('[name="urlPath"]').clear().type('mwandenga');
 		cy.get('button').contains('Save').click();
 		cy.get('[role="status"]').contains('Saved');
@@ -521,7 +521,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.contains('Alan Mwandenga Version 2');
 		cy.checkViewableGalley('PDF Version 2');
 		cy.contains('The Signalling Theory Dividends Version 2').click();
-		cy.get('.versions a').contains('(Author Original 1.0)').click();
+		cy.get('.versions a').contains('(Version of Record 1.0)').click();
 		cy.contains('This is an outdated version');
 		cy.checkViewableGalley('PDF');
 		cy.contains('This is an outdated version');
@@ -533,7 +533,7 @@ describe('Data suite: Amwandenga', function() {
 	it('Article landing page displays correct version after version is unpublished', function() {
 		cy.login('dbarnes');
 		cy.visit('/index.php/publicknowledge/workflow/access/' + submission.id);
-		cy.openWorkflowMenu('Author Original 1.1', 'Title & Abstract')
+		cy.openWorkflowMenu('Version of Record 1.1', 'Title & Abstract')
 		cy.get('button').contains('Unpublish').click();
 		cy.contains('Are you sure you don\'t want this to be published?');
 		cy.get('[data-cy="dialog"] button').contains('Unpublish').click();
@@ -555,10 +555,10 @@ describe('Data suite: Amwandenga', function() {
 		cy.waitJQuery();
 		cy.clickStageParticipantButton('Stephanie Berardo', 'Login As');
 		cy.get('button').contains('OK').click();
-		cy.openWorkflowMenu('Author Original 1.1', 'Title & Abstract');
+		cy.openWorkflowMenu('Version of Record 1.1', 'Title & Abstract');
 		cy.get('button:contains("Publish")').should('not.exist');
 		cy.get(`[data-cy="active-modal"] nav a:contains('Create New Version')`).should('not.exist');
-		cy.openWorkflowMenu('Author Original 1.0', 'Title & Abstract')
+		cy.openWorkflowMenu('Version of Record 1.0', 'Title & Abstract')
 		cy.contains('This version has been published and can not be edited.');
 		cy.get('button:contains("Unpublish")').should('not.exist');
 	});
@@ -574,7 +574,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.waitJQuery();
 		cy.clickStageParticipantButton('Stephanie Berardo', 'Login As');
 		cy.get('button').contains('OK').click();
-		cy.openWorkflowMenu('Author Original 1.1', 'Title & Abstract');
+		cy.openWorkflowMenu('Version of Record 1.1', 'Title & Abstract');
 		cy.get('button').contains('Save').should('be.disabled');
 	});
 
