@@ -19,7 +19,7 @@ namespace APP\plugins;
 use APP\issue\Issue;
 use APP\submission\Submission;
 use PKP\galley\Galley;
-use PKP\submission\Genre;
+use PKP\submission\genre\Genre;
 
 class PubObjectCache
 {
