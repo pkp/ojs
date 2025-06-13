@@ -19,6 +19,7 @@
 namespace APP\search;
 
 use APP\journal\Journal;
+use PKP\context\Context;
 use PKP\search\SubmissionSearchDAO;
 use PKP\submission\PKPSubmission;
 
@@ -27,17 +28,20 @@ class ArticleSearchDAO extends SubmissionSearchDAO
     /**
      * Retrieve the top results for a phrase.
      *
-     * @param Journal $journal
-     * @param array $phrase
-     * @param int|null $publishedFrom Optional start date
-     * @param int|null $publishedTo Optional end date
      * @param int|null $type Application::ASSOC_TYPE_...
-     * @param int $limit
      *
      * @return array of results (associative arrays)
      */
-    public function getPhraseResults($journal, $phrase, $publishedFrom = null, $publishedTo = null, $type = null, $limit = 500)
-    {
+    public function getPhraseResults(
+        ?Context $context,
+        array $phrase,
+        ?string $publishedFrom = null,
+        ?string $publishedTo = null,
+        ?array $categoryIds = null,
+        ?array $sectionIds = null,
+        ?int $type = null,
+        int $limit = 500
+    ): array {
         if (empty($phrase)) {
             return [];
         }
@@ -64,6 +68,14 @@ class ArticleSearchDAO extends SubmissionSearchDAO
             $params[] = $phrase[$i];
         }
 
+        if (is_array($categoryIds)) {
+            $sqlWhere .= ' AND p.publication_id IN (SELECT publication_id FROM publication_categories WHERE category_id IN (' . implode(',', array_map(intval(...), $categoryIds)) . '))';
+        }
+
+        if (is_array($sectionIds)) {
+            $sqlWhere .= ' AND p.section_id IN (' . implode(',', array_map(intval(...), $sectionIds)) . ')';
+        }
+
         if (!empty($type)) {
             $sqlWhere .= ' AND (o.type & ?) != 0';
             $params[] = $type;
@@ -77,9 +89,9 @@ class ArticleSearchDAO extends SubmissionSearchDAO
             $sqlWhere .= ' AND p.date_published <= ' . $this->datetimeToDB($publishedTo);
         }
 
-        if (!empty($journal)) {
+        if (!empty($context)) {
             $sqlWhere .= ' AND i.journal_id = ?';
-            $params[] = $journal->getId();
+            $params[] = $context->getId();
         }
 
         $result = $this->retrieve(
