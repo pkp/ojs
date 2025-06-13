@@ -42,24 +42,23 @@ class ArticleSearchDAO extends SubmissionSearchDAO
         ?int $type = null,
         int $limit = 500
     ): array {
-        if (empty($phrase)) {
-            return [];
-        }
-
         $sqlFrom = '';
         $sqlWhere = '';
         $params = [];
 
         for ($i = 0, $count = count($phrase); $i < $count; $i++) {
+            if (empty($phrase[$i])) {
+                continue;
+            }
+
             if (!empty($sqlFrom)) {
                 $sqlFrom .= ', ';
-                $sqlWhere .= ' AND ';
             }
             $sqlFrom .= 'submission_search_object_keywords o' . $i . ' NATURAL JOIN submission_search_keyword_list k' . $i;
             if (strstr($phrase[$i], '%') === false) {
-                $sqlWhere .= 'k' . $i . '.keyword_text = ?';
+                $sqlWhere .= 'AND k' . $i . '.keyword_text = ?';
             } else {
-                $sqlWhere .= 'k' . $i . '.keyword_text LIKE ?';
+                $sqlWhere .= 'AND k' . $i . '.keyword_text LIKE ?';
             }
             if ($i > 0) {
                 $sqlWhere .= ' AND o0.object_id = o' . $i . '.object_id AND o0.pos+' . $i . ' = o' . $i . '.pos';
@@ -108,12 +107,12 @@ class ArticleSearchDAO extends SubmissionSearchDAO
                 JOIN submission_search_objects o ON (s.submission_id = o.submission_id)
                 JOIN journals j ON j.journal_id = s.context_id
                 LEFT JOIN journal_settings js ON j.journal_id = js.journal_id AND js.setting_name = \'publishingMode\'
-                NATURAL JOIN ' . $sqlFrom . '
+                ' . ($sqlFrom ? "NATURAL JOIN {$sqlFrom}" : '') . '
             WHERE
                 (js.setting_value <> \'' . Journal::PUBLISHING_MODE_NONE . '\' OR
                 js.setting_value IS NULL) AND j.enabled = 1 AND
                 s.status = ' . PKPSubmission::STATUS_PUBLISHED . ' AND
-                i.published = 1 AND ' . $sqlWhere . '
+                i.published = 1 ' . $sqlWhere . '
             GROUP BY o.submission_id
             ORDER BY count DESC
             LIMIT ' . $limit,
