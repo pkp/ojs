@@ -125,7 +125,7 @@
 	<upgrade minversion="3.4.0.0" maxversion="3.4.9.9">
 		<migration class="APP\migration\upgrade\v3_4_0\I9813_QuickSubmitSubmissionProgressType"/>
 		<migration class="APP\migration\upgrade\v3_5_0\I11241_MissingDecisionConstantsUpdate"/>
-		<migration class="APP\migration\upgrade\v3_4_0\I7264_UpdateEmailTemplates"/>
+		<migration class="APP\migration\upgrade\v3_4_0\I10962_UpdateEmailTemplateVariables"/>
 	</upgrade>
 
 	<upgrade minversion="3.1.0.0" maxversion="3.4.9.9">
