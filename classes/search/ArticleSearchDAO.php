@@ -56,9 +56,9 @@ class ArticleSearchDAO extends SubmissionSearchDAO
             }
             $sqlFrom .= 'submission_search_object_keywords o' . $i . ' NATURAL JOIN submission_search_keyword_list k' . $i;
             if (strstr($phrase[$i], '%') === false) {
-                $sqlWhere .= 'AND k' . $i . '.keyword_text = ?';
+                $sqlWhere .= ' AND k' . $i . '.keyword_text = ?';
             } else {
-                $sqlWhere .= 'AND k' . $i . '.keyword_text LIKE ?';
+                $sqlWhere .= ' AND k' . $i . '.keyword_text LIKE ?';
             }
             if ($i > 0) {
                 $sqlWhere .= ' AND o0.object_id = o' . $i . '.object_id AND o0.pos+' . $i . ' = o' . $i . '.pos';
