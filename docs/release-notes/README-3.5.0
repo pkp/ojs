@@ -1,39 +1,112 @@
-OJS 3.5.0rc2 Release Notes
-Git tag: 3_5_0rc2
+OJS 3.5.0 Release Notes
+Git tag: 3_5_0-0
 
-Release date: March 20, 2025
+Release date: June 16, 2025
 ============================
-
-THIS IS A PRE-RELEASE VERSION OF THIS SOFTWARE AND IS NOT INTENDED FOR
-PRODUCTION USE.
 
 Configuration Changes
 ---------------------
 
-See config.TEMPLATE.inc.php for a description and examples of all supported
-configuration parameters.
+The following changes should be applied to the config.inc.php configuration file. See config.TEMPLATE.inc.php for descriptions and examples of all supported configuration parameters.
 
-New config.inc.php parameters added for general:
-    - app_key (default value: ''), application specific key will used internally for encryption/decryption. This will be automatically added at upgrade.
+In the [general] section:
+    - app_key: A unique key used internally for encryption/decryption. It will be automatically added at upgrade.
+    - scheduled_tasks: This setting is no longer used and can be removed.
 
-New config.inc.php parameters added for security:
-    - cipher (default value: ''), cipher algorithm used to generate app key and encryption purpose
-    - cookie_encryption (default value: ''), allow cookie encryption when set
+In the [security] section:
+    - cipher: Algorithm used to generate app key and encryption purpose
+    - cookie_encryption: Allow cookie encryption when set
 
-New config.inc.php section for schedule task named schedule is added, with the following parameters:
-    - task_runner (default value: On), Whether or not to run the schedule tasks through web based task runner
-    - task_runner_interval (default value: 60), How often should the built-in web based task runner run scheduled tasks in seconds
-    - scheduled_tasks_report_error_only (default value: On), Whether or not schedule task execution failure details will be sent via mail
+In the newly added [schedule] section:
+    - task_runner (default value: On): Whether or not to run the schedule tasks through the web based task runner
+    - task_runner_interval (default value: 60): How often the web based task runner should run tasks (in seconds)
+    - scheduled_tasks_report_error_only (default value: On): Whether or not task execution failure details will be sent via mail
 
-- The setting general.scheduled_tasks has been removed. It was supposed to control the schedule tasks but had no impact.
-
-New config.inc.php parameters added for queues:
+In [queues]:
     - process_jobs_at_task_scheduler (default value: Off): Controls whether queued jobs should be executed together with the scheduled tasks.
 
-New config.inc.php parameters added for caching:
-    - default (default value: 'file'). Can be either 'file' or 'opcache' to indicate which Laravel caching implementation should be used.
+In [cache]:
+    - default (default value: 'file'). Can be either 'file' or 'opcache' to indicate which Laravel cache should be used.
     - path (default value: 'cache/opcache'). Use to specify a path for cache storage when using 'file' or 'opcache' drivers.
 
 
 New Features
 ------------
+    #10983, #10970, and many more: Redesigned dashboard and workflow pages
+    #10796, #10792, and many more: ORCiD integration and improvements
+    #3022, 10610, #10609, and many more: Allow Journal Managers to invite users to adopt a role
+    #10620, #9860: Editorial board management
+    #11273: Improve UserAccessManager extensibility
+    #11122: [Press Series | Press Series-Series, Submissions can be assigned under inactivated press series
+    #11044, #10651, #10489: Add user initials to UI
+    #10994: New showMore component with accessibility in mind
+    #10964: Retire the Resolver plugin
+    #10951: Personalise review round statuses for Recommend only editor
+    #10921: [OMP] Add option to show Press Summary on the home page
+    #10659: Update Crossref to 5.4.0
+    #10561: [OMP] Update Onix schema in export plugins
+    #10537, #10515, #10500, #10480, #10465, and many more: API additions
+    #10514: Increase resilience of the application against malfunctions on plugins
+    #10458, #10434, #7505, and many more: Add basic JATS support
+    #10447: Create new ButtonIcon component
+    #10444: Improve dialog component design
+    #10365: [OMP] Update the Onix schema version
+    #10363: Allow definition of minimum reviews required for a Submission
+    #10283: Add support for ALTCHA
+    #10178: Add search by DOI to DOI manager
+    #10163: Add support for catching registrants to removed hooks
+    #10158: Move publication to category relationship out of publication_settings
+    #10157: Move publication to issue_id relationship out of publication_settings table
+    #10053: Introduce Author::add::before hook
+    #10033: Add new dropdown menu component
+    #10001: Possibility to add Cancel button in the form
+    #9999: Track Editor Workload While Assigning Participants
+    #9914: Editorial History
+    #9910: Use UI Language in Web and Announcement RSS2 Feeds
+    #9895: Introduce APP KEY feature of Laravel
+    #9892: Upgrade to Laravel version 11.x
+    #9890: Implement side menu navigation component
+    #9887, #9197, and many more: Introduce general-purpose invitations toolset
+    #9857: Create FieldSlider component
+    #9823: Improve job runner configuration/execution
+    #9707: Align UI locales with Weblate locales
+    #9678: Replace task scheduler with Laravel scheduler
+    #9642: Create date picker in Vue
+    #9566: Convert session and cookie management to Laravel
+    #9453: In OJS, a reviewer cannot access his/her recommendations from a previous round.
+    #9434: Allow plugins to add/modify API endpoints of existing entity
+    #9425: Make submission language selection and metadata forms independent from website language settings
+    #9366: Upgrade to TinyMCE7
+    #9284: Display list of authors with reviewer assignment process
+    #9243: Performance & Optimization
+    #9239: 3.5 LTS Dependency maintenance and updates
+    #8884: New design for pagination component
+    #8883: Add a summary panel to the submissions list
+    #8881: Add review assignment progress and pop-ups to submissions table
+    #8365: Remove disable_path_info URL generation mode
+    #8350: Authors should be able to cancel in-progress submissions
+    #7698: Replace Slim with Laravel-based routing toolset
+    #7512: Use the Accept-Language header when assigning a default language to a new user session
+    #7504: Add UI tools to control HTML in submission titles
+    #7135: Multiple author affiliations and machine-readable affiliations
+    #6528: Ability to bulk-delete old incomplete submissions
+    #5953: Issue published notification email should include table of contents
+    #5504: Have option to restrict Editor access to Settings
+    #5502: Not possible to see or select publication language after submission
+    #5340: Distinguish different types of Decline in CSV export for editorial stats
+    #4787: Suggest Reviewers at the Time of Submission
+    #4396: Allow editors to have saved views for the submissions list
+    #4348: [OJS] Always show Delete button in submissions listing when user is assigned as editor
+    #3075: Submissions with completed review assignments should move to reviewer's archive list
+    #2887: Add quick actions from submissions list
+    #1550: Allow a journal to define a limited set of allowed keywords and reviewer interests
+    #699: Ensure that all languages are indexable by crawlers
+
+Bug fixes:
+----------
+    #11397: [Admin] | Creating a new Journal - Adding Locales, when there are multiple locales installed adding them to a new journal seems to cause errors.
+    #11393: QuickSubmit Plugin| Lingering Form field on Multilingual journals
+    #10232: REVIEW_ASSIGNMENT_CONSIDERED and REVIEW_ASSIGNMENT_NEW are never granted
+    #9290: 1061 Duplicate key name 'static_page_settings_static_page_id'
+    #7611: Assigned To Editor Filter on Submission dashboard picks up submissions by Editor
+

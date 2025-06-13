@@ -1,8 +1,8 @@
 OJS 3.4.0 Release Notes
-Git tag: 3_4_0-0
+Git tag: 3_4_0-9
 
-Release date: June 9, 2023
-============================
+Release date: May 23, 2025
+==========================
 
 Configuration Changes
 ---------------------
@@ -46,11 +46,265 @@ New config.inc.php parameters added for emails:
     - default (default value: sendmail), being the default mailer driver to be used for email delivery
     - sendmail_path (default value: "/usr/sbin/sendmail -bs"), being the path to the sendmail program on the server
 
+3.4.0-9 Build
+-------------
+    #11119: Website settings - Navigation menu item, name field does not store value for a new locale
+    #11011: [Website Settings] | Setup - Language, Unable to set navigation item title with multiple languages
+    #11006: Pagination in OPS front end section listing does not work
+    #10934: Fatal error when accessing site settings
+    #10866: All institutional COUNTER R5 reports contain the same numbers
+    #10864: OPS/OMP Native XML Export missing publication titles in 3.4
+    #10843: Do not log bot visits in usage stats log files
+    #10830: DRIVER plugin not producing records in OAI
+    #10758: Deleting a galley does not delete associated submission files
+    #10739: No reviewers returned from the API endoint users/reviewers
+    #10725: RFC1807 OAI-PMH requests lead to a fatal error
+    #10705: Upload file - Cancelling upload file results in error and does not prevent the uploaded file
+    #10662: Multiple overdue conditions lead to errors in the "overdue" submission list filter
+    #10636: Notification NOTIFICATION_TYPE_FORMAT_NEEDS_APPROVED_SUBMISSION is not updated & displayed
+    #10568: Review reminder are sent even for closed rounds
+    #10496: Null pointer in the Editorial Reminder if the user has blocked notifications
+    #10468: Co-authors receive several e-mails when a decision is notified
+    #10362: Variable {$editorName} not replaced in activity log for decisions
+    #10173: [OMP] Onix export record references are not unique for each pub format
+    #9957: Author Reviewer Grid: the grid fails to be displayed.
+    #9822: Increase timeout and improve DB table indexes for jobs ProcessUsageStatsLogFile and RemoveDoubleClicks
+    #7188: Display number of current assignments for each Moderator
+
+3.4.0-8 Build
+-------------
+   #10632: VirtualArrayIterator __construct references $this->theArray before it's initialised
+   #10451: Long affiliations should be wrapped in backend (bad UI/UX)
+   #10423: Error 500 when creating a reviewer with keywords very similar (collation issue)
+   #10414: Fatal error when making a new submission with certain editor configurations
+   #10402: Discussion board notifications cannot handle disabled users
+   #10385: Opening a new discussion with a participant who has disabled new discussion notifications does not work
+   #10376: Editorial Reminder: miscalculation for inactiveDays (I think)
+   #10373: "Enroll existing user" as reviewer no longer finds users outside the current journal
+   #10372: Category pages show double-escaped entities in category title landing page breadcrumbs
+   #10350: COUNTER R5 form field customer_id is not provided correctly to the API endpoint
+   #10341: Cannot upgrade to 3.4.0-7 (from 3.4.0.3)
+   #10272: For installed plugins, display the version that is currently installed
+   #10050: Error handling in SubmissionWizard crashes
+   #9991: Re-add sent review request email data into the email log
+   #9303: Date format isn't properly localized in 3.4
+
+3.4.0-7 Build
+-------------
+    #10327: fulfillQueuedPayment fails when no user session is set such as in payment gateway callbacks
+    #10321: Fix ConvertApacheAccessLogFile CLI tool
+    #10270: Cast int to string in the I9813_QuickSubmitSubmissionProgressType upgrade script
+    #10244: Upgrade fails if there are no files in usageEventLogs
+
+3.4.0-6 Build
+-------------
+    #6186: Can't use multilingual values in theme options
+    #8365: Remove disable_path_info URL generation mode
+    #8592: Accessing user notification settings from the site throws a fatal error
+    #8683: Deprecated warnings in logs from Slim 3.* and PHP 8.1
+    #8700: Slowness at the "user & roles" page
+    #9759: Additional file validation causes error
+    #9773: Submission title/subtitle html text quirk
+    #9777: Missing values in frontend download stats graph
+    #9789: System Information displays SMTP password as plain text.
+    #9797: [OJS] New submissions "Do not send an email" configuration not functionnal
+    #9806: CSS might be cached with invalid URLs
+    #9810: Error while upgrading to OJS 3.4 if the journal's URL/domain has been changed
+    #9813: Improve Editorial Activity calculations
+    #9824: Fatal error at site-wide announcements
+    #9828: Fatal error at announcement feed plugin
+    #9830: The users.locales migration is generating invalid data
+    #9832: Enrolling an existing user as reviewer is broken
+    #9833: Log files might be skipped by the statistics processing after migrating to OJS 3.4
+    #9834: Statistics processing is stalled
+    #9837: you can access to worflow process even if a submission is incomplete
+    #9845: Sitemap index namespace URL shouldn't contain https
+    #9851: Data loss at I7191_EditorAssignments migration
+    #9864: Add participant RecommendOnly checkbox does not respect selected UserGroup value for recommendOnly as it's default value
+    #9867: PKP-LIB: Hook call author validate errors param missing &-reference
+    #9872: Fatal error at Recommend by similarity plugin
+    #9946: Do not remove numbers from the beginning of each citation
+    #9953: Custom review form possible responses get garbled on upgrade form 3.2.1-x to 3.3.0-x
+    #9959: Crossref export xml validation error: & in title not escaped
+    #9966: Issue titles double-escaped
+    #9979: Scheduled task cannot open log file
+    #10017: Fatal error changing site primary locale
+    #10019: Activity Log not updating for metadata changes
+    #10036: Error on the Plugin Gallery Page when the PKP Site is Down
+    #10051: Incorrect handling of HTML entity code &amp; in OJS email subject
+    #10061: Highlights feature shouldn't be displayed if it's not enabled
+    #10101: Fatal error when removing a journal
+    #10111: Some items at the search result page are sorted wrong
+    #10132: [OMP] Add option to disable validation in Onix export plugin
+    #10135: Add HTML decoding in getLocalizedTitle and getLocalizedSubTitle in PKPPublication
+    #10154: Firefox does not correctly save named files
+    #10155: OJS 3.4.0.5 on postgres fatal error in query regarding tombstones
+    #10159: generate test download metrics
+    #10162: Error Message Persisting During Final Step of Submission Process Despite Deletion and Restoration of Default Components in Components Set-up
+    #10174: Add ORCID ID to the PubMed export plugin
+    #10175: Filter "Assigned to Editor" in Submission list return Editors of all journals
+    #10180: Limit "permission level" when creating a new role as a Journal Manager
+    #10209: Locale with variants prevent submission wizard to load
+
+3.4.0-5 Build
+-------------
+    #6627: Allow users to unsubscribe from emails sent using the notify tool
+    #7470: Fair Copy files not migrated when upgrading from OJS 2 to 3
+    #8248: Tab Separated Values reporting for COUNTER R5
+    #9066: [OJS] CLI for the PubMedExportPlugin plugin is broken
+    #9131: Typo in ReviewAssignmentFileWritePolicy which permits managers file access when assigned to a submission
+    #9296: Implement sandbox mode
+    #9302: Internal PHP locale fails to be defined under Windows and others
+    #9381: Limit reviewers' statistics to a journal in multi-journals OJS instance
+    #9400: Display competing Interests in OJS once a reviewer accepts an invitation
+    #9421: Review html escaping strategy on vue.js codebase in stable-3_3_0 and stable-3_4_0
+    #9476: Data loss at review rounds after migrating from OJS 2.x to +3.3
+    #9487: Upgrade to 3.3.x can be interrupted due to non-conforming *_settings tables
+    #9500: Hook `Template::SubmissionWizard::Section::Review ` not inside `submissionWizard__reviewPanel`
+    #9518: [ OJS ] Error in I5716_EmailTemplateAssignments upgrading from 3.3.0-8 to 3.4.0-3
+    #9535: PHP Fatal error:  Uncaught ValueError: DOMDocument::loadXML(): Argument #1 ($source) must not be empty in
+    #9541: Fatal error when adding reviewer
+    #9546: "xmlEscapeEntities: char out of range" error when exporting issues through the Native XML plugin
+    #9557: PHP Fatal error:  Uncaught TypeError: PKP\section\PKPSection::getTitle()
+    #9561: Fatal error filtering unassigned submissions by keyword
+    #9574: Add support for author's competing interests statement
+    #9582: CompileUsageStatsFromTemporaryRecords fails on PostgreSQL due to non-existing function (OJS 3.4.0.4)
+    #9590: OJS 3.4 - Removing journal is not updating the list automatically
+    #9592: False "save" confirmation leads to keyword loss
+    #9594: Missing CSRF check in issue publication
+    #9607: Selecting an email template in Discussions uses the template name as subject, rather than its actual subject.
+    #9617: Adding a new not null column in PostgreSQL leads to an error if the table contains entries
+    #9624: Fix section filter autocomplete
+    #9625: Native XML plugin not escaping data properly
+    #9627: SQL in removeDoubleClicks needs improvement
+    #9632: Opening category in OPS/OMP causes 500
+    #9637: Migrations can be re-executed at OJS 3.4
+    #9650: Resolve template injection with context name
+    #9664: Use jobs chain for usage stats log files processing
+    #9665: Indexation, for search purposes, might fail silently
+    #9679: Allow processing of the log files from the last month
+    #9682: Address the execution of scheduled tasks and jobs
+    #9686: The arguments for the jobs.php are not working
+    #9731: Remove the min/max length for login Username/Email
+    #9742: Add missing functionality to gracefully restart queue worker
+    #9759: Additional file validation causes error
+    #9762: Deadlock happening often at the statistics' jobs
+
+3.4.0-4 build
+-------------
+    #8025: Context name can not be localized correctly in a job
+    #8871: Add ability to login via Email
+    #8915: Improve the search indexer
+    #9226: Announcement feed plugin incorrect sorting
+    #9253: Add site-level announcements to OJS
+    #9256: Add filter to search by journal to site-level searching in OJS
+    #9262: Add the ability to show features on the homepage for OJS
+    #9266: OJS 3.4.0.1 / 3.4.0.3 error tools/install.php
+    #9277: Submission title not properly escaped when opening information center from submission list
+    #9278: Use ISO639-2b instead of ISO639-3 for locale conversion
+    #9282: Upgrade error, DOI related
+    #9283: Issue title incorrectly escaped in issue edit grid
+    #9298: Not possible to edit a publication from a CLI tool
+    #9301: Remove user email address confirmation from password reset message
+    #9304: Properly escape special characters in statistics area
+    #9305: Special characters in section names not escaped in About > Submissions
+    #9306: Properly escape context name when presenting in form field
+    #9310: OJS 3.4 Editorial Activity: "Accept and Skip Review" does not mark article as "Accepted"
+    #9315: Disallow SVGs
+    #9319: PubMed plugin includes author email in affiliation element
+    #9322: Escape user group name in Statistics > Users > Export
+    #9325: Link action button unescape presents XSS risk
+    #9326: Existing sessions not invalidated when user account is disabled
+    #9327: Escape issue title in statistics
+    #9335: One-click reviewer access causes fatal error
+    #9364: Translation performance improvement
+    #9376: Add CSRF check on navigation menu item deletion
+    #9382: Display users’ roles in OJS user list
+    #9383: Add publisher URL field
+    #9384: installPluginVerion.php script fails for some importexport plugins in OJS 3.4
+    #9386: [A11Y] Missing label on Google reCaptcha form triggering accessibility non-compliance issue
+    #9391: DOAJ plugin does not store deposit status in OJS 3.4
+    #9395: Missing call to parent::validate() in AddParticipantForm.inc.php
+    #9396: Missing HTML / special character escaping in modal title for query edit action
+    #9397: Enable strict RFC compliant redirects for Guzzle
+    #9401: Inline CSS styles ignored in htmlGalley context
+    #9406: Missing CSRF check on AssignPublicIdentifiersForm
+    #9407: Missing CSRF check in payment types form
+    #9409: Missing CSRF check in reviewRead function
+    #9410: CSRF checks missing in cancel and reinstate reviewer forms
+    #9411: Escape reviewer name in reviewer selection modal
+    #9415: Fatal error when uploading .mht file
+    #9433: Missing variable on SubmissionAcknowledgement mailable
+    #9438: Add new email config to the release notes
+    #9444: Fatal error when setting the body of a mailable with null
+    #9449: issueform::execute hook without $issue attached to $form
+    #9464: Sanitize cover image filename in native import
+    #9483: Search navigation menu item not displayed at site level
+    #9503: [A11Y] Add information about required fields with asterisks in forms
+    #9512: Bug in recommendByAuthor plugin - it returns whole statistics data instead of recommended articles in some cases
+
+3.4.0-3 build
+-------------
+    #9264: Type of APP\jobs\statistics\CompileUsageStatsFromTemporaryRecords::$tries must be int
+
+3.4.0-2 build
+-------------
+    #9247: Fatal error: Uncaught TypeError when opening Activity
+    #9246: Improve support for CC and BCC fields in the new decision email step UI
+    #9236: DataCite updateDepositStatus does not work
+    #9231: Use smaller data types for load_id and city in the metrics tables
+    #9227: Incorrect (encrypted) password sent to the user after the user was added by Admin/Journal Manager
+    #9222: Exception when listing jobs
+    #9217: Missing E-mail Template SUBMISSION_SAVED_FOR_LATER after upgrade from 3.3.0-1
+    #9210: OMP 3.4.0 Sitemap does not respect chapter landing page setting
+    #9195: Add controlling configuration to queue jobs
+    #9194: Record reviewer recommendation by proxy causes fatal error
+    #9184: Author names do not localize in reader front end
+    #9183: OAI interface reports errors when date ranges are specified
+    #9180: Update to cypress 12, reduce flakiness on M1
+    #9171: Undefined array key "user" in pkp/classes/proxy/ProxyParser.php on line 57
+    #9168: PHP fatal error when assigning editors to new submissions
+    #9166: Submission checklist migration sometimes presents an error on upgrade
+    #9161: Wrong type cast for testDOIPrefix in DataciteSettings form
+    #9153: Sending email to a reviewer results in a fatal error
+    #9152: Locale migration does not take into account plugin_settings table
+    #9150: Error on User Import Uncaught BadMethodCallException...
+    #9149: Job configuration not included in OMP template configuration file
+    #9148: Recommend decision email form doesn't respect to, cc and bcc fields
+    #9145: Authors may have trouble initiating discussions
+    #9142: One-click review request access keys not being generated/sent
+    #9139: PHP error with array_intersect on null
+    #9136: Missing uniqueSiteId on new installations
+    #9134: (OMP 3.4.0-1) Error when changing Cover Image Max Width & Height
+    #9126: Multilingual Metadata in Crossref
+    #9123: Doi migration script failing to return doi_id
+    #9121: Unsupported assoc_type in the event log: 515
+    #9119: zh_Hant is not considered a valid locale code
+    #9111: Wrong variable name in PASSWORD_RESET_CONFIRM email template
+    #9109: REVIEW_COMPLETE email template seems to be not installed
+    #9089: Make easier to create custom Vue component in plugin
+    #9045: Inability to Properly Add and Display New Fields in PKPMetadataForm
+    #8980: Form heading much shorter than needed
+    #8854: Discussions: mail attached files alongside the content
+    #8288: Announcements placed on homepage may include announcements from other contexts
+    #7052: Can't access all contexts from dropdown when exceeds viewport height
+
+3.4.0-1 build
+-------------
+    #9102: Review Reports not generate
+    #9084: HTML should be stripped from submission titles when used in email titles
+    #9097: Invalid DOI plugin settings for context_id 0 cause database error on upgrade
+    #9094: 3.4.0-0 Backend Page for managing catalog not loading
+    #9098: MyISAM/InnoDB engine check does not properly present list of affected tables
+    #9091: ROLE_ID_ASSISTANT const has wrong value
+    #9072: Update event log variable names in locale messages submission.event.*
+    #8967: Crossref Reference Linking Plugin for OJS 3.4
+
 New Features
 ------------
     #8490 #8484: Improved MariaDB testing and support
     #8478: Improve GoogleScholarPlugin
-    #8474: Improve the content of REVIEW_COMPLETE and REVIEW_EDITED templates 
+    #8474: Improve the content of REVIEW_COMPLETE and REVIEW_EDITED templates
     #8437: Add descriptive comments to database tables/columns
     #8406: Improve DublinCoreMetaPlugin
     #8403: Consider submissions with no contributors
@@ -60,7 +314,7 @@ New Features
     #7191: Improve submission wizard accessibility and usability
     #2676: Track and report on institutional subscriber usage
     #8328: CSV for stats API timeline functions
-    #8306: Enhance the queue failed jobs functionality. 
+    #8306: Enhance the queue failed jobs functionality.
     #6781: Support COUNTER Release 5
     #6782: Improve usage statistics handling in the background/code
     #7392: Ensure Site Administrators have "global" access within journals
@@ -77,14 +331,14 @@ New Features
     #6328: Migrate locale file loading to standard toolset
     #5678: Introduce code formatter to enforce code style
     #8290: Inclusion of Data Availability Statement as submission metadata
-    #8258: Add more context and documentation to Crossref setup/credentials 
+    #8258: Add more context and documentation to Crossref setup/credentials
     #8250: Improve help text for statistics settings forms
     #8240: Consider parent object ID in DAO exists and get functions
     #8310: Discourage DOI assignment for items other than submissions
     #8239: Update Cypress to support end-to-end testing
     #8210: Standardize locale code handling
     #8157: Extend all setting_value columns in settings table to mediumText
-    #8155: Allow Mailables to use custom email templates through API 
+    #8155: Allow Mailables to use custom email templates through API
     #8127: Allow embedding a footer to certain emails
     #8117: Refactor email sending code in plugins and convert to Mailables
     #8093 #8092 #7129 #7128 #7127 #7126 #7125 #7124: Add improved Repository patterns
@@ -115,7 +369,7 @@ New Features
     #6895: IP location and institution service
     #6685: OPS should support tombstones for deleted content
     #6241: Add an option to make a submission file mandatory
-    #6222: Embed discussion content into the notification message body  
+    #6222: Embed discussion content into the notification message body
     #6126: Send a weekly email to editors of pending tasks
     #6099: Add a "country" field to journal setup
     #6077: Reduce dependency on `exec`
@@ -155,16 +409,16 @@ Bug Fixes
     #8363: Submission search index not updating after deleting a submission
     #8348: Missing email template variables in emails related to a new submission
     #8344: Author country is not validated in the REST API
-    #8263: Current and default values are not being displayed correctly in form fields (as per appearance theme form) 
+    #8263: Current and default values are not being displayed correctly in form fields (as per appearance theme form)
     #8231: Consider valid spacial characters in DOI suffix
     #8223: Update API Key related cypress test
-    #8219: Native Import/Export plugin - Security Issue regarding file download 
+    #8219: Native Import/Export plugin - Security Issue regarding file download
     #8176: Remove LDAP plugin and auth plugin category
     #8170: Upgrade sokil/php-isocodes to fix warnings
     #8166: The dc oai metadata format plugin for OJS has duplicated localization
     #8160: Flaky test failing most of OMP builds
     #8158: Replace abandoned Stringy package
-    #8143: SubmissionFile's corresponding File not deleted when a new Note process is cancelled  
+    #8143: SubmissionFile's corresponding File not deleted when a new Note process is cancelled
     #8091: Consider new templates for automatic notification emails and remove redundant
     #8060: User locales set to NULL on user registration
     #8014: Document new usage stats implementation
@@ -196,7 +450,7 @@ Bug Fixes
     #7687: Consolidate DOI settings migrations into pkp-lib where possible
     #7673: Remove locale requirement in upgrade XML when installing new email templates
     #7665: The DataCite Export plugin misrepresents page numbers of journal articles
-    #7624: Replace strftime() as it's deprecate in PHP 8.1 
+    #7624: Replace strftime() as it's deprecate in PHP 8.1
     #7608: Add test to check DC metadata tags on article landing page
     #7592: Refactor review assignments emails
     #7537: Sync PKP repository for TextEditorExtras and make release
@@ -235,7 +489,7 @@ Bug Fixes
     #7077: Hover/focus states misaligned in default theme navigation menu
     #7074: Include discussion emails in activity log
     #7050: Remove unused issue import test files
-    #7034: Import/Export plugin - remove get_class dependency for filter retrieval 
+    #7034: Import/Export plugin - remove get_class dependency for filter retrieval
     #7009: GoogleScholarPlugin.inc.php still references removed SupplementaryFile class
     #7002: "usage" command missing from native import/export CLI
     #6983: On password change, invalidate other sessions
@@ -245,14 +499,14 @@ Bug Fixes
     #6927: Quicksubmit cover image preview is broken
     #6925: Set default user for CLI tool
     #6921: Show exception error message when a plugin migration fails
-    #6918: Aria-labelledby on galley links must include galley label 
+    #6918: Aria-labelledby on galley links must include galley label
     #6917: Increase contrast of required indicator in login/registration forms
     #6915: Register Laravel service providers to allow use of global functions
     #6904: REVIEW_REQUEST_REMIND_AUTO & REVIEW_REMIND_AUTO
-    #6882: Unnecessary path part in search URLs 
+    #6882: Unnecessary path part in search URLs
     #6874: remove commercial URL from config.TEMPLATE.inc.php
     #6850: Move creator (author) management tools to API and new form structures
-    #6849: Tool to convert old and apache log files into new format 
+    #6849: Tool to convert old and apache log files into new format
     #6839: Import/Export plugin - SubmissionFiles lose doi data on import
     #6831: Update gettext dependency to 5.x
     #6826: Migrate TinyMCE to 5.x
@@ -265,7 +519,7 @@ Bug Fixes
     #6432: Email templates offer first alphabetically available installed language even if language is not active
     #6306: Add an option to enable/disable categories in submission workflow
     #6272: Re-add submission acknowledgement email recipient controls in Settings
-    #6160: Submission process confusion with Corresponding Contact and Privacy Consent 
+    #6160: Submission process confusion with Corresponding Contact and Privacy Consent
     #6039: Difficulty to edit fields in other languages
     #6006: DOI/Crossref Cypress Tests
     #5998: A stalled request to plugins.xml can block subsequent http requests
