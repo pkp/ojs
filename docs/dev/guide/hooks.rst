@@ -327,10 +327,10 @@ Hooks
     
     Parameters: `[[&$errors, $object, $props, $allowedLocales, $primaryLocale]]`
 
-`CitationDAO::afterImportCitations`
+`Citation::importCitations::after`
     Class: :php:class:`PKP\citation\CitationDAO`
     
-    Parameters: `[[$publicationId, $existingCitations, $importedCitations]]`
+    Parameters: `[$publicationId, $existingCitations, $importedCitations]`
 
 `CitationStyleLanguage::citation`
     Class: :php:class:`APP\plugins\generic\citationStyleLanguage\CitationStyleLanguagePlugin`
