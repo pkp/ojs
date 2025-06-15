@@ -219,6 +219,7 @@ class OJSMigration extends \PKP\migration\Migration
 
             $table->bigInteger('access_status')->default(0)->nullable();
             $table->date('date_published')->nullable();
+            $table->boolean('published')->default(false);
             $table->datetime('last_modified')->nullable();
 
             $table->bigInteger('primary_contact_id')->nullable();
