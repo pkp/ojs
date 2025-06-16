@@ -1,10 +1,11 @@
 # Josu Aramberri <josu.aramberri@gmail.com>, 2022.
 # Josu Acosta <josuacostacalvo@gmail.com>, 2023.
 # Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023.
+# Informatikaria <informatikaria@ueu.eus>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-07-10 17:53+0000\n"
-"Last-Translator: Josu Acosta <josuacostacalvo@gmail.com>\n"
+"PO-Revision-Date: 2025-06-15 21:25+0000\n"
+"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "eu/>\n"
 "Language: eu\n"
@@ -12,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "submission.submit.userGroup"
 msgstr "Bidalketa egiteko rola…"
@@ -25,15 +26,12 @@ msgstr "Artikuluaren izenburua"
 
 msgid "submission.title.tip"
 msgstr ""
-"\"Bidalketa mota 'irudia', 'testua' edo beste multimedia mota bat izaten da, "
-"'softwarea' edo 'interaktiboa' barne. \n"
-"  \n"
-"Mesedez, aukeratu zure bidalketarako egokiena dena. \n"
-"  \n"
-"Hona hemen adibide batzuk: <a target=\"\"_blank\"\" href=\"\"http"
-"://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\"\""
-">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
-"\""
+"Bidalketa mota 'irudia', 'testua' edo beste multimedia mota bat izaten da, "
+"'softwarea' edo 'interaktiboa' barne.  Mesedez, aukeratu zure bidalketarako "
+"egokiena dena. Hona hemen adibide batzuk: <a target=\"\"_blank\"\" href=\""
+"\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\""
+"\">http://dublincore.org/documents/2001/04/12/usageguide/generic."
+"shtml#type</a>\""
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "Hasi bidalketa berri bat hemen"
@@ -78,19 +76,24 @@ msgid "grid.issueEntry.availableGalley.title"
 msgstr "Formatua onartzea"
 
 msgid "grid.issueEntry.availableGalley.removeMessage"
-msgstr ""
+msgstr "<p>Galerada hau <em>ez da gehiago </em>irakurleen eskura jarriko.</p>"
 
 msgid "grid.issueEntry.availableGalley.message"
-msgstr ""
+msgstr "<p>Galerada hau irakurleei <em>eskuragarri jarriko da </em>.</p>"
 
 msgid "grid.action.availableArticleGalley"
-msgstr ""
+msgstr "Galerada hau eskuragarri jarri"
 
 msgid "submission.galleyFiles"
-msgstr ""
+msgstr "Galerada fitxategiak"
 
 msgid "submission.proofReadingDescription"
 msgstr ""
+"Maketazio-editoreak argitaratzeko prestatu eta produkziorako prest dauden "
+"fitxategiak igotzen ditu hemen. <em>Auditorea esleitu</em> erabili galeraden "
+"proba-zuzenketak egin behar dituzten egile eta bestelako zuzentzaileak "
+"izendatzeko, argitaratu aurretik fitxategi zuzenduak igo eta homologatu "
+"ditzaten."
 
 msgid "grid.action.approveProof"
 msgstr ""
@@ -300,10 +303,12 @@ msgid "submission.queries.production"
 msgstr "Ekoizpenari buruzko eztabaidak"
 
 msgid "editor.submission.decision.backToReview"
-msgstr ""
+msgstr "Ebaluaziora bueltatu"
 
 msgid "editor.submission.decision.backToReview.description"
 msgstr ""
+"Bidalketa onartzeko erabakia atzera bota eta berriz ere ebaluazio-fasera "
+"bidali."
 
 msgid "editor.submission.decision.backToReview.log"
 msgstr ""
@@ -359,7 +364,7 @@ msgid "submission.sectionRestrictedToEditors"
 msgstr ""
 
 msgid "submission.submit.form.authorRequired"
-msgstr ""
+msgstr "Gutxienez egile bat behar da."
 
 msgid "submission.submit.form.titleRequired"
 msgstr "Mesedez, sartu zure artikuluaren izenburua."
@@ -369,6 +374,8 @@ msgstr "Mesedez, sartu zure artikuluaren laburpena."
 
 msgid "submission.submit.form.wordCountAlert"
 msgstr ""
+"Zure laburpenak hitz-muga gainditzen du. Mesedez, laburtu testua atal "
+"honetarako ezarritako gehienezko luzerara egokitzeko."
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Mesedez, sartu kolaboratzailearen rola."
