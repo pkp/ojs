@@ -169,27 +169,13 @@ class ArticleSearch extends SubmissionSearch
             'abstract' => $request->getUserVar('abstract'),
             'authors' => $request->getUserVar('authors'),
             'title' => $request->getUserVar('title'),
-            'galleyFullText' => $request->getUserVar('galleyFullText'),
             'discipline' => $request->getUserVar('discipline'),
             'subject' => $request->getUserVar('subject'),
             'type' => $request->getUserVar('type'),
             'coverage' => $request->getUserVar('coverage'),
-            'indexTerms' => $request->getUserVar('indexTerms'),
             'categoryIds' => $request->getUserVar('categoryIds'),
             'sectionIds' => $request->getUserVar('sectionIds'),
         ];
-
-        // Is this a simplified query from the navigation
-        // block plugin?
-        $simpleQuery = $request->getUserVar('simpleQuery');
-        if (!empty($simpleQuery)) {
-            // In the case of a simplified query we get the
-            // filter type from a drop-down.
-            $searchType = $request->getUserVar('searchField');
-            if (array_key_exists($searchType, $searchFilters)) {
-                $searchFilters[$searchType] = $simpleQuery;
-            }
-        }
 
         // Publishing dates.
         $fromDate = $request->getUserDateVar('dateFrom', 1, 1);
@@ -233,7 +219,6 @@ class ArticleSearch extends SubmissionSearch
     public function getKeywordsFromSearchFilters($searchFilters)
     {
         $indexFieldMap = $this->getIndexFieldMap();
-        $indexFieldMap[SubmissionSearch::SUBMISSION_SEARCH_INDEX_TERMS] = 'indexTerms';
         $keywords = [];
         if (isset($searchFilters['query'])) {
             $keywords[''] = $searchFilters['query'];
