@@ -25,7 +25,6 @@ use APP\submission\Submission;
 use Exception;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
-use PKP\jobs\submissions\UpdateSubmissionSearchJob;
 use PKP\plugins\Hook;
 use PKP\search\SearchFileParser;
 use PKP\search\SubmissionSearch;
@@ -291,6 +290,8 @@ class ArticleSearchIndex extends SubmissionSearchIndex
             return;
         }
 
+        app(\Laravel\Scout\EngineManager::class)->engine()->flush('submissions');
+
         // Clear index
         if ($log) {
             echo __('search.cli.rebuildIndex.clearingIndex') . ' ... ';
@@ -318,7 +319,7 @@ class ArticleSearchIndex extends SubmissionSearchIndex
                 ->getMany();
 
             foreach ($submissions as $submission) {
-                dispatch(new UpdateSubmissionSearchJob($submission->getId()));
+                $submission->syncMakeSearchable(collect([$submission]));
                 ++$numIndexed;
             }
 

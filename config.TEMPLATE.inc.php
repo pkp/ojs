@@ -362,6 +362,9 @@ validation_timeout = 14
 
 [search]
 
+; Laravel Scout search driver name
+driver = database
+
 ; Minimum indexed word length
 min_word_length = 3
 
