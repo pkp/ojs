@@ -136,24 +136,18 @@ class SearchHandler extends Handler
         // Get and transform active filters.
         $articleSearch = new ArticleSearch();
         $searchFilters = $articleSearch->getSearchFilters($request);
-        $keywords = $articleSearch->getKeywordsFromSearchFilters($searchFilters);
-
-        // Get the range info.
-        $rangeInfo = $this->getRangeInfo($request, 'search');
 
         // Retrieve results.
-        $error = '';
-        $results = $articleSearch->retrieveResults(
-            request: $request,
-            context: $searchFilters['searchJournal'],
-            keywords: $keywords,
-            error: $error,
-            publishedFrom: $searchFilters['fromDate'] ?? null,
-            publishedTo: $searchFilters['toDate'] ?? null,
-            categoryIds: $searchFilters['categoryIds'] ?? null,
-            sectionIds: $searchFilters['sectionIds'] ?? null,
-            rangeInfo: $rangeInfo
-        );
+        $results = \APP\submission\Submission::search($searchFilters['query'])
+            ->where('contextId', $searchFilters['searchJournal']->getId())
+            ->where('publishedFrom', $searchFilters['fromDate'] ? strtotime($searchFilters['fromDate']) : null)
+            ->where('publishedTo', $searchFilters['toDate'] ? strtotime($searchFilters['toDate']) : null)
+            ->whereIn('categoryIds', $searchFilters['categoryIds'] ?? null)
+            ->whereIn('sectionIds', $searchFilters['sectionIds'] ?? null)
+            ->options([
+                'rangeInfo' => $this->getRangeInfo($request, 'search'),
+            ])
+            ->get();
 
         $this->setupTemplate($request);
 
@@ -163,6 +157,7 @@ class SearchHandler extends Handler
         $this->_assignSearchFilters($request, $templateMgr, $searchFilters);
         [$orderBy, $orderDir] = $articleSearch->getResultSetOrdering($request);
 
+        $error = ''; // FIXME
         $templateMgr->assign([
             'orderBy' => $orderBy,
             'orderDir' => $orderDir,
