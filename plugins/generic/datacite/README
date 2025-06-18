@@ -12,8 +12,7 @@ the registration of DOIs with DataCite.
 
 License
 -------
-This plugin is licensed under the GNU General Public License v2. See the file COPYING for the
-complete terms of this license.
+This software is released under the GNU General Public License. See the file `docs/COPYING` included with this distribution for the terms of this license.
 
 System Requirements
 -------------------
