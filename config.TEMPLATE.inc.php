@@ -362,6 +362,14 @@ validation_timeout = 14
 
 [search]
 
+; The search driver to use. Options: pkpdatabase, opensearch
+driver = pkpdatabase
+
+; When using the OpenSearch driver, the following must be specified...
+;opensearch_hosts = "[\"https://localhost:9200\"]"
+;opensearch_username = "admin"
+;opensearch_password = "password"
+
 ; Laravel Scout search driver name
 driver = database
 
