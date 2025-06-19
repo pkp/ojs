@@ -19,7 +19,7 @@ namespace APP\components\forms\publication;
 
 use APP\components\forms\FieldSelectIssue;
 use APP\facades\Repo;
-use PKP\components\forms\FieldOptions;
+use PKP\components\forms\FieldAutosuggestPreset;
 use PKP\components\forms\FieldSelect;
 use PKP\components\forms\FieldText;
 use PKP\components\forms\FieldUploadImage;
@@ -118,11 +118,22 @@ class IssueEntryForm extends FormComponent
 
         $hasAllBreadcrumbs = count($categories) === $categoriesBreadcrumb->count();
         if (!empty($categoryOptions)) {
-            $this->addField(new FieldOptions('categoryIds', [
+
+            $vocabulary = Repo::category()->getCategoryVocabularyStructure($categories);
+
+            $this->addField(new FieldAutosuggestPreset('categoryIds', [
                 'label' => __('submission.submit.placement.categories'),
                 'description' => $hasAllBreadcrumbs ? '' : __('submission.categories.circularReferenceWarning'),
                 'value' => $publication->getData('categoryIds'),
                 'options' => $categoryOptions,
+                'vocabularies' => [
+                    [
+                        'addButtonLabel' => __('grid.category.add'),
+                        'modalTitleLabel' => __('grid.category.add'),
+                        'items' => $vocabulary
+                    ]
+                ]
+
             ]));
         }
 
