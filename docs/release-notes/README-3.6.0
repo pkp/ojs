@@ -10,6 +10,9 @@ Configuration Changes
 See config.TEMPLATE.inc.php for a description and examples of all supported
 configuration parameters.
 
+New config.inc.php parameters added for [search]:
+    - driver (default value: 'pkpdatabase'): Specifies which Laravel Scout driver should be used for the search engine.
+
 
 New Features
 ------------
