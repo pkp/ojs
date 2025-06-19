@@ -16,6 +16,8 @@
 namespace APP\components\forms\publication;
 
 use APP\facades\Repo;
+use APP\issue\enums\IssueSelection;
+use PKP\components\forms\FieldOptions;
 use PKP\components\forms\FieldSelect;
 use PKP\components\forms\FormComponent;
 
@@ -39,7 +41,12 @@ class AssignToIssueForm extends FormComponent
         $this->action = $action;
 
         // Issue options
-        $issueOptions = [['value' => '', 'label' => '']];
+        $issueOptions = [
+            [
+                'value' => IssueSelection::NO_ISSUE->value,
+                'label' => IssueSelection::NO_ISSUE->getLabel()
+            ]
+        ];
 
         $unpublishedIssues = Repo::issue()->getCollector()
             ->filterByContextIds([$publicationContext->getId()])
@@ -47,7 +54,11 @@ class AssignToIssueForm extends FormComponent
             ->getMany();
 
         if ($unpublishedIssues->count() > 0) {
-            $issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.futureIssues') . ' ---'];
+            $issueOptions[] = [
+                'value' => IssueSelection::FUTURE_ISSUES->value,
+                'label' => IssueSelection::FUTURE_ISSUES->getLabel()
+            ];
+
             foreach ($unpublishedIssues as $issue) {
                 $issueOptions[] = [
                     'value' => (int) $issue->getId(),
@@ -62,7 +73,11 @@ class AssignToIssueForm extends FormComponent
             ->getMany();
 
         if ($publishedIssues->count() > 0) {
-            $issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.backIssues') . ' ---'];
+            $issueOptions[] = [
+                'value' => IssueSelection::BACK_ISSUES->value,
+                'label' => IssueSelection::BACK_ISSUES->getLabel()
+            ];
+
             foreach ($publishedIssues as $issue) {
                 $issueOptions[] = [
                     'value' => (int) $issue->getId(),
@@ -71,10 +86,39 @@ class AssignToIssueForm extends FormComponent
             }
         }
 
-        $this->addField(new FieldSelect('issueId', [
-            'label' => __('issue.issue'),
-            'options' => $issueOptions,
-            'value' => $publication->getData('issueId') ? $publication->getData('issueId') : 0,
-        ]));
+        $this
+            ->addField(new FieldSelect('issueId', [
+                'label' => __('issue.issue'),
+                'options' => $issueOptions,
+                'value' => $publication->getData('issueId') ?? IssueSelection::NO_ISSUE->value
+            ]))
+            ->addField(new FieldOptions('published', [
+                'label' => __('manager.setup.issuelessPublication'),
+                'description' => __('publication.publish.issuelessPublication.description'),
+                'options' => [
+                    [
+                        'value' => true,
+                        'label' => __('publication.publish.issuelessPublication.label'),
+                    ],
+                ],
+                'value' => (bool) $publication->getData('published'),
+                'showWhen' => ['issueId', IssueSelection::NO_ISSUE->value],
+            ]));
+        
+        foreach ($unpublishedIssues as $issue) {
+            $this->addField(new FieldOptions('continuousPublication', [
+                'label' => __('manager.setup.continuousPublication'),
+                'description' => __('publication.publish.continuousPublication.description'),
+                'options' => [
+                    [
+                        'value' => true,
+                        'label' => __('publication.publish.continuousPublication.label'),
+                    ],
+                ],
+                'value' => $publication->isMarkedAsContinuousPublication(),
+                'showWhen' => ['issueId', (int) $issue->getId()],
+            ]));
+        }
+        
     }
 }
