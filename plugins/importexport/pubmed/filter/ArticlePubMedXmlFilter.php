@@ -23,12 +23,15 @@ use APP\journal\JournalDAO;
 use APP\submission\Submission;
 use DOMDocument;
 use DOMElement;
+use DOMException;
 use PKP\citation\Citation;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\filter\PersistableFilter;
 use PKP\i18n\interfaces\LocaleInterface;
 use PKP\i18n\LocaleConversion;
+use PKP\plugins\Plugin;
+use PKP\plugins\PluginRegistry;
 
 class ArticlePubMedXmlFilter extends PersistableFilter
 {
@@ -47,9 +50,12 @@ class ArticlePubMedXmlFilter extends PersistableFilter
     // Implement template methods from Filter
     //
     /**
+     * @param array $submissions Array of submissions
+     *
+     * @throws DOMException
+     *
      * @see Filter::process()
      *
-     * @param array $submissions Array of submissions
      */
     public function &process(&$submissions): DOMDocument
     {
@@ -59,6 +65,9 @@ class ArticlePubMedXmlFilter extends PersistableFilter
         $doc = $implementation->createDocument('', '', $dtd);
         $doc->preserveWhiteSpace = false;
         $doc->formatOutput = true;
+
+        PluginRegistry::loadCategory('importexport');
+        $plugin = PluginRegistry::getPlugin('importexport', 'PubMedExportPlugin');
 
         $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
         $journal = null;
@@ -73,7 +82,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
             $issue = $issue?->getJournalId() === $journal->getId() ? $issue : null;
 
             $articleNode = $doc->createElement('Article');
-            $articleNode->appendChild($this->createJournalNode($doc, $journal, $issue, $submission));
+            $articleNode->appendChild($this->createJournalNode($doc, $plugin, $journal, $issue, $submission));
 
             $publication = $submission->getCurrentPublication();
 
@@ -177,20 +186,27 @@ class ArticlePubMedXmlFilter extends PersistableFilter
      * Construct and return a Journal element.
      *
      * @param DOMDocument $doc
+     * @param Plugin $plugin
      * @param Journal $journal
      * @param Issue $issue
      * @param Submission $submission
+     *
+     * @throws DOMException
      */
-    public function createJournalNode($doc, $journal, $issue, $submission): DOMElement
+    public function createJournalNode($doc, $plugin, $journal, $issue, $submission): DOMElement
     {
+        $nlmTitle = $plugin->getSetting($journal->getId(), 'nlmTitle');
         $journalNode = $doc->createElement('Journal');
 
         $publisherNameNode = $doc->createElement('PublisherName');
         $publisherNameNode->appendChild($doc->createTextNode($journal->getData('publisherInstitution')));
         $journalNode->appendChild($publisherNameNode);
 
+        $journalTitle = $nlmTitle ?? $journal->getName($journal->getPrimaryLocale());
+
         $journalTitleNode = $doc->createElement('JournalTitle');
-        $journalTitleNode->appendChild($doc->createTextNode($journal->getName($journal->getPrimaryLocale())));
+        $journalTitleNode->appendChild($doc->createTextNode($journalTitle));
+
         $journalNode->appendChild($journalTitleNode);
 
         // check various ISSN fields to create the ISSN tag
@@ -231,6 +247,8 @@ class ArticlePubMedXmlFilter extends PersistableFilter
      * @param Issue $issue
      * @param Submission $submission
      * @param Author $author
+     *
+     * @throws DOMException
      *
      * @return DOMElement
      */
@@ -277,6 +295,8 @@ class ArticlePubMedXmlFilter extends PersistableFilter
      * @param DOMDocument $doc
      * @param string $pubDate
      * @param string $pubStatus
+     *
+     * @throws DOMException
      */
     public function generatePubDateDom($doc, $pubDate, $pubStatus): DOMElement
     {
