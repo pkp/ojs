@@ -17,7 +17,6 @@
  */
 
 require(dirname(__FILE__) . '/bootstrap.php');
-import('lib.pkp.classes.services.PKPSchemaService');
 
 $tool = new \PKP\cliTool\UpgradeTool($argv ?? []);
 $tool->execute();
