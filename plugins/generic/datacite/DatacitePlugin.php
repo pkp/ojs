@@ -100,7 +100,6 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
      */
     public function exportSubmissions(array $submissions, Context $context): array
     {
-        $exportPlugin = $this->_getExportPlugin();
         $xmlErrors = [];
 
         $items = [];
@@ -116,7 +115,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
             }
         }
 
-        $temporaryFileId = $exportPlugin->exportAsDownload($context, $items, null, $xmlErrors);
+        $temporaryFileId = $this->_exportPlugin->exportAsDownload($context, $items, null, $xmlErrors);
         return ['temporaryFileId' => $temporaryFileId, 'xmlErrors' => $xmlErrors];
     }
 
@@ -125,7 +124,6 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
      */
     public function depositSubmissions(array $submissions, Context $context): array
     {
-        $exportPlugin = $this->_getExportPlugin();
         $responseMessage = '';
 
         $items = [];
@@ -141,7 +139,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
             }
         }
 
-        $status = $exportPlugin->exportAndDeposit($context, $items, $responseMessage);
+        $status = $this->_exportPlugin->exportAndDeposit($context, $items, $responseMessage);
         return [
             'hasErrors' => !$status,
             'responseMessage' => $responseMessage
@@ -154,10 +152,8 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
      */
     public function exportIssues(array $issues, Context $context): array
     {
-        $exportPlugin = $this->_getExportPlugin();
         $xmlErrors = [];
-
-        $temporaryFileId = $exportPlugin->exportAsDownload($context, $issues, null, $xmlErrors);
+        $temporaryFileId = $this->_exportPlugin->exportAsDownload($context, $issues, null, $xmlErrors);
         return ['temporaryFileId' => $temporaryFileId, 'xmlErrors' => $xmlErrors];
     }
 
@@ -167,11 +163,8 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
      */
     public function depositIssues(array $issues, Context $context): array
     {
-        $exportPlugin = $this->_getExportPlugin();
         $responseMessage = '';
-
-
-        $status = $exportPlugin->exportAndDeposit($context, $issues, $responseMessage);
+        $status = $this->_exportPlugin->exportAndDeposit($context, $issues, $responseMessage);
         return [
             'hasErrors' => !$status,
             'responseMessage' => $responseMessage
@@ -249,30 +242,12 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
     }
 
     /**
-     * @return DataciteExportPlugin
-     */
-    private function _getExportPlugin()
-    {
-        if (empty($this->_exportPlugin)) {
-            $pluginCategory = 'importexport';
-            $pluginPathName = 'DataciteExportPlugin';
-            $this->_exportPlugin = PluginRegistry::getPlugin($pluginCategory, $pluginPathName);
-            // If being run from CLI, there is no context, so plugin initialization would not have been fired
-            if ($this->_exportPlugin === null && !isset($_SERVER['SERVER_NAME'])) {
-                $this->_pluginInitialization();
-                $this->_exportPlugin = PluginRegistry::getPlugin($pluginCategory, $pluginPathName);
-            }
-        }
-        return $this->_exportPlugin;
-    }
-
-    /**
      * Helper to register hooks that are used in normal plugin setup and in CLI tool usage.
      */
     private function _pluginInitialization()
     {
         PluginRegistry::register('importexport', new DataciteExportPlugin($this), $this->getPluginPath());
-
+        $this->_exportPlugin = PluginRegistry::getPlugin('importexport', 'DataciteExportPlugin');
         Hook::add('DoiSettingsForm::setEnabledRegistrationAgencies', [$this, 'addAsRegistrationAgencyOption']);
         Hook::add('DoiSetupSettingsForm::getObjectTypes', [$this, 'addAllowedObjectTypes']);
         Hook::add('DoiListPanel::setConfig', [$this, 'addRegistrationAgencyName']);
@@ -291,7 +266,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
     public function addRegistrationAgencyName(string $hookName, array $args): bool
     {
         $config = &$args[0];
-        $config['registrationAgencyNames'][$this->_getExportPlugin()->getName()] = $this->getRegistrationAgencyName();
+        $config['registrationAgencyNames'][$this->_exportPlugin->getName()] = $this->getRegistrationAgencyName();
 
         return HOOK::CONTINUE;
     }
