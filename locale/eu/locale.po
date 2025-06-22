@@ -1,13 +1,13 @@
 # Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023, 2025.
-# Informatikaria <informatikaria@ueu.eus>, 2023.
+# Informatikaria <informatikaria@ueu.eus>, 2023, 2025.
 # Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2025-04-25 12:59+0000\n"
-"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
+"PO-Revision-Date: 2025-06-22 18:24+0000\n"
+"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/locale/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
@@ -20,10 +20,10 @@ msgid "user.authorization.journalDoesNotPublish"
 msgstr "Aldizkari honek ez du bere edukia sarean argitaratzen."
 
 msgid "context.current"
-msgstr "Aukeratutako aldizkaria:"
+msgstr "Hautatutako aldizkaria:"
 
 msgid "context.select"
-msgstr "Aukeratu beste aldizkari bat:"
+msgstr "Beste aldizkari bat hautatu:"
 
 msgid "navigation.categories"
 msgstr "Kategoriak"
@@ -91,10 +91,10 @@ msgid "navigation.infoForLibrarians.long"
 msgstr "Liburuzainentzako informazioa"
 
 msgid "navigation.skip.about"
-msgstr "Jauzi egin “Aldizkariari buruz” atalera"
+msgstr "Zuzenean \"Aldizkariari buruz\" atalera joan"
 
 msgid "navigation.skip.issue"
-msgstr "Jauzi egin uneko zenbakira"
+msgstr "Zuzenean uneko zenbakira joan"
 
 msgid "common.queue.long.submissionsUnassigned"
 msgstr "Esleitu gabe"
@@ -151,7 +151,7 @@ msgid "section.abbreviation.example"
 msgstr "(Adibidez, Artikuluak=ART)"
 
 msgid "section.policy"
-msgstr "Atalaren politika"
+msgstr "Ataleko politika"
 
 msgid "article.article"
 msgstr "Artikulua"
@@ -259,7 +259,7 @@ msgid "article.fontSize.large.altText"
 msgstr "Handia"
 
 msgid "article.return"
-msgstr "Itzuli artikuluaren xehetasunetara"
+msgstr "Artikuluaren xehetasunetara itzuli"
 
 msgid "submission.submissionEditing"
 msgstr "Bidalketaren edizioa"
@@ -370,7 +370,7 @@ msgid "submissions.proofreadingComplete"
 msgstr "Probak zuzenduta"
 
 msgid "submission.search"
-msgstr "Bilatu artikulua"
+msgstr "Artikulua bilatu"
 
 msgid "journal.currentIssue"
 msgstr "Uneko zenbakia"
@@ -388,16 +388,16 @@ msgid "journal.issn"
 msgstr "ISSN"
 
 msgid "journal.viewAllIssues"
-msgstr "Ikusi zenbaki guztiak"
+msgstr "Zenbaki guztiak ikusi"
 
 msgid "user.authorization.representationNotFound"
 msgstr "Eskatutako galerada ezin izan da aurkitu."
 
 msgid "user.noRoles.selectUsersWithoutRoles"
-msgstr "Sartu rolik gabeko erabiltzaileak aldizkari honetan."
+msgstr "Aldizkari honetan rolik ez duten erabiltzaileak sartu."
 
 msgid "user.profile.profileImage"
-msgstr "Profileko irudia"
+msgstr "Profilaren irudia"
 
 msgid "user.showAllJournals"
 msgstr "Erakutsi nire aldizkariak"
@@ -406,7 +406,7 @@ msgid "user.registerForOtherJournals"
 msgstr "Izena eman beste aldizkari batzuetan"
 
 msgid "user.reviewerPrompt"
-msgstr "Aldizkari honetarako bidalketarik ebaluatu nahi zenuke?"
+msgstr "Aldizkari honetara bidalitako lanak ebaluatzeko prest egongo zinateke?"
 
 msgid "user.reviewerPrompt.userGroup"
 msgstr "Bai, eskatu {$userGroup} rola."
