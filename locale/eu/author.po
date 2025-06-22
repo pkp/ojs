@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
-"PO-Revision-Date: 2025-04-28 14:12+0000\n"
+"PO-Revision-Date: 2025-06-22 18:24+0000\n"
 "Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/author/eu/>\n"
 "Language: eu\n"
@@ -38,10 +38,10 @@ msgid "author.submit.step1"
 msgstr "1. urratsa. Bidalketa hasi"
 
 msgid "author.submit.step2"
-msgstr "2. urratsa. Bidalketaren metadatuak sartu"
+msgstr "2. urratsa. Bidalketa kargatu"
 
 msgid "author.submit.step3"
-msgstr "3. urratsa. Bidalketa kargatu"
+msgstr "3. urratsa. Bidalketaren metadatuak sartu"
 
 msgid "author.submit.step4"
 msgstr "4. urratsa. Fitxategi osagarriak kargatu"
@@ -56,10 +56,10 @@ msgid "author.submit.start"
 msgstr "Hasi"
 
 msgid "author.submit.upload"
-msgstr "3. Bidalketa kargatu"
+msgstr "Bidalketa kargatu"
 
 msgid "author.submit.metadata"
-msgstr "2. Metadatuak sartu"
+msgstr "Metadatuak sartu"
 
 msgid "author.submit.supplementaryFiles"
 msgstr "Fitxategi osagarriak kargatu"
@@ -89,13 +89,13 @@ msgstr ""
 "horretarako jarritako lekuan."
 
 msgid "author.submissions.queuedReviewSubsequent"
-msgstr "Ebaluazio-fasean {$round}"
+msgstr "{$round}. ebaluazio-fasean"
 
 msgid "author.submissions.queuedReviewRevisions"
 msgstr "Ebaluatzen: ebaluazioak behar dira"
 
 msgid "author.submissions.queuedEditingCopyedit"
-msgstr "Editatzen: Zuzenketak egiteko eskatu da"
+msgstr "Editatzen: zuzenketak egiteko eskatu da"
 
 msgid "author.submissions.queuedEditingProofread"
 msgstr "Editatzen: proba-zuzenketa eskatu da"
