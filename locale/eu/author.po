@@ -1,11 +1,12 @@
 # Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023, 2025.
+# Informatikaria <informatikaria@ueu.eus>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
 "PO-Revision-Date: 2025-06-22 18:24+0000\n"
-"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
+"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/author/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
@@ -92,7 +93,7 @@ msgid "author.submissions.queuedReviewSubsequent"
 msgstr "{$round}. ebaluazio-fasean"
 
 msgid "author.submissions.queuedReviewRevisions"
-msgstr "Ebaluatzen: ebaluazioak behar dira"
+msgstr "Ebaluatzen: zuzenketak behar dira"
 
 msgid "author.submissions.queuedEditingCopyedit"
 msgstr "Editatzen: zuzenketak egiteko eskatu da"
