@@ -30,7 +30,7 @@
 		</ul>
 		<div id="settings-tab">
 			{capture assign=pubmedSettingsGridUrl}
-				{url router=PKP\core\PKPApplication::ROUTE_COMPONENT component="grid.settings.plugins.settingsPluginGridHandler" op="manage" plugin="PubMedExportPlugin" category="importexport" verb="settings" escape=false}
+				{url router=PKP\core\PKPApplication::ROUTE_COMPONENT component="grid.settings.plugins.settingsPluginGridHandler" op="manage" plugin="PubMedExportPlugin" category="importexport" verb="index" escape=false}
 			{/capture}
 			{load_url_in_div id="pubmedSettingsGridContainer" url=$pubmedSettingsGridUrl}
 		</div>

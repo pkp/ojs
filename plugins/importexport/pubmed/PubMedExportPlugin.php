@@ -110,8 +110,6 @@ class PubMedExportPlugin extends ImportExportPlugin
                 ]);
                 $templateMgr->display($this->getTemplateResource('index.tpl'));
                 break;
-            case 'settings':
-                return $this->manage($args, $request);
             case 'exportSubmissions':
                 $exportXml = $this->exportSubmissions(
                     (array) $request->getUserVar('selectedSubmissions'),
@@ -152,22 +150,24 @@ class PubMedExportPlugin extends ImportExportPlugin
      */
     public function manage($args, $request): JSONMessage
     {
-        if ($request->getUserVar('verb') == 'settings') {
-            $user = $request->getUser();
-            $this->addLocaleData();
-            $form = new PubMedSettingsForm($this, $request->getContext()->getId());
+        $user = $request->getUser();
+        $this->addLocaleData();
+        $form = new PubMedSettingsForm($this, $request->getContext()->getId());
 
-            if ($request->getUserVar('save')) {
+        switch ($request->getUserVar('verb')) {
+            case 'index':
+                $form->initData();
+                return new JSONMessage(true, $form->fetch($request));
+            case 'save':
                 $form->readInputData();
                 if ($form->validate()) {
                     $form->execute();
                     $notificationManager = new NotificationManager();
                     $notificationManager->createTrivialNotification($user->getId());
+                    return new JSONMessage(true);
+                } else {
+                    return new JSONMessage(true, $form->fetch($request));
                 }
-            } else {
-                $form->initData();
-            }
-            return new JSONMessage(true, $form->fetch($request));
         }
         return parent::manage($args, $request);
     }

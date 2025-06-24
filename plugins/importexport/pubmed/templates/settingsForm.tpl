@@ -15,8 +15,7 @@
 		{rdelim});
 </script>
 <div class="legacyDefaults">
-	<form class="pkp_form" id="pubmedSettingsForm" method="post" action="{url router=PKP\core\PKPApplication::ROUTE_COMPONENT op="manage" plugin="PubMedExportPlugin" category="importexport" verb="settings" save="true"}">
-		{include file="controllers/notification/inPlaceNotification.tpl" notificationId="pubmedSettingsFormNotification"}
+	<form class="pkp_form" id="pubmedSettingsForm" method="post" action="{url router=PKP\core\PKPApplication::ROUTE_COMPONENT op="manage" plugin="PubMedExportPlugin" category="importexport" verb="save"}">
 		{csrf}
 		{fbvFormArea id="pubmedSettingsFormArea"}
 			{fbvFormSection}
