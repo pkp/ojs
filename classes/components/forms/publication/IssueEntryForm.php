@@ -128,8 +128,8 @@ class IssueEntryForm extends FormComponent
                 'options' => $categoryOptions,
                 'vocabularies' => [
                     [
-                        'addButtonLabel' => __('grid.category.add'),
-                        'modalTitleLabel' => __('grid.category.add'),
+                        'addButtonLabel' => __('manager.selectCategories'),
+                        'modalTitleLabel' => __('manager.selectCategories'),
                         'items' => $vocabulary
                     ]
                 ]
