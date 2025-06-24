@@ -554,7 +554,7 @@ describe('Submission Wizard', function() {
         });
 
         // Categories should appear in UI language (English)
-        cy.get('button').contains('Add Category').click();
+        cy.get('button').contains('Select Categories').click();
         // Social Sciences > Sociology
         cy.get('label:contains("Sociology")').click();
 		cy.get('[data-cy="active-modal"] button').contains('Save').click();
