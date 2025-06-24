@@ -22,6 +22,7 @@ jobs:
             upgrade_test: 'stable-3_3_0,stable-3_4_0,stable-3_5_0'
           - php-version: 8.2
             database: mariadb
+            upgrade_test: 'stable-3_4_0,stable-3_5_0'
             test: 'test'
             upgrade: 'upgrade'
             upgrade_test: 'stable-3_4_0,stable-3_5_0'
