@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/pubmed/PubMedExportPlugin.php
  *
- * Copyright (c) 2014-2024 Simon Fraser University
- * Copyright (c) 2003-2024 John Willinsky
+ * Copyright (c) 2014-2025 Simon Fraser University
+ * Copyright (c) 2003-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PubMedExportPlugin
@@ -15,15 +15,21 @@
 namespace APP\plugins\importexport\pubmed;
 
 use APP\core\Application;
+use APP\core\Request;
 use APP\facades\Repo;
 use APP\journal\JournalDAO;
+use APP\notification\NotificationManager;
+use APP\plugins\importexport\pubmed\filter\ArticlePubMedXmlFilter;
 use APP\template\TemplateManager;
 use Exception;
+use PKP\context\Context;
+use PKP\core\JSONMessage;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
 use PKP\file\FileManager;
 use PKP\filter\FilterDAO;
 use PKP\plugins\ImportExportPlugin;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class PubMedExportPlugin extends ImportExportPlugin
 {
@@ -32,7 +38,7 @@ class PubMedExportPlugin extends ImportExportPlugin
      *
      * @param null|mixed $mainContextId
      */
-    public function register($category, $path, $mainContextId = null)
+    public function register($category, $path, $mainContextId = null): bool
     {
         $success = parent::register($category, $path, $mainContextId);
         $this->addLocaleData();
@@ -42,30 +48,24 @@ class PubMedExportPlugin extends ImportExportPlugin
     /**
      * Get the name of this plugin. The name must be unique within
      * its category.
-     *
-     * @return string name of plugin
      */
-    public function getName()
+    public function getName(): string
     {
         return 'PubMedExportPlugin';
     }
 
     /**
      * Get the display name.
-     *
-     * @return string
      */
-    public function getDisplayName()
+    public function getDisplayName(): string
     {
         return __('plugins.importexport.pubmed.displayName');
     }
 
     /**
      * Get the display description.
-     *
-     * @return string
      */
-    public function getDescription()
+    public function getDescription(): string
     {
         return __('plugins.importexport.pubmed.description');
     }
@@ -74,7 +74,9 @@ class PubMedExportPlugin extends ImportExportPlugin
      * Display the plugin.
      *
      * @param array $args
-     * @param \APP\core\Request $request
+     * @param Request $request
+     *
+     * @throws Exception
      */
     public function display($args, $request)
     {
@@ -111,11 +113,10 @@ class PubMedExportPlugin extends ImportExportPlugin
             case 'exportSubmissions':
                 $exportXml = $this->exportSubmissions(
                     (array) $request->getUserVar('selectedSubmissions'),
-                    $request->getContext(),
-                    $request->getUser()
+                    $request->getContext()
                 );
                 $fileManager = new FileManager();
-                $exportFileName = $this->getExportFileName($this->getExportPath(), 'articles', $context, '.xml');
+                $exportFileName = $this->getExportFileName($this->getExportPath(), 'articles', $context);
                 $fileManager->writeFile($exportFileName, $exportXml);
                 $fileManager->downloadByPath($exportFileName);
                 $fileManager->deleteByPath($exportFileName);
@@ -123,29 +124,58 @@ class PubMedExportPlugin extends ImportExportPlugin
             case 'exportIssues':
                 $exportXml = $this->exportIssues(
                     (array) $request->getUserVar('selectedIssues'),
-                    $request->getContext(),
-                    $request->getUser()
+                    $request->getContext()
                 );
                 $fileManager = new FileManager();
-                $exportFileName = $this->getExportFileName($this->getExportPath(), 'issues', $context, '.xml');
+                $exportFileName = $this->getExportFileName($this->getExportPath(), 'issues', $context);
                 $fileManager->writeFile($exportFileName, $exportXml);
                 $fileManager->downloadByPath($exportFileName);
                 $fileManager->deleteByPath($exportFileName);
                 break;
             default:
-                throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
+                throw new NotFoundHttpException();
         }
     }
 
     /**
      * @copydoc ImportExportPlugin::getPluginSettingsPrefix()
      */
-    public function getPluginSettingsPrefix()
+    public function getPluginSettingsPrefix(): string
     {
         return 'pubmed';
     }
 
-    public function exportSubmissions($submissionIds, $context, $user)
+    /**
+     * @copydoc Plugin::manage()
+     */
+    public function manage($args, $request): JSONMessage
+    {
+        $user = $request->getUser();
+        $this->addLocaleData();
+        $form = new PubMedSettingsForm($this, $request->getContext()->getId());
+
+        switch ($request->getUserVar('verb')) {
+            case 'index':
+                $form->initData();
+                return new JSONMessage(true, $form->fetch($request));
+            case 'save':
+                $form->readInputData();
+                if ($form->validate()) {
+                    $form->execute();
+                    $notificationManager = new NotificationManager();
+                    $notificationManager->createTrivialNotification($user->getId());
+                    return new JSONMessage(true);
+                } else {
+                    return new JSONMessage(true, $form->fetch($request));
+                }
+        }
+        return parent::manage($args, $request);
+    }
+
+    /*
+     * Get the XML for a set of submissions.
+     */
+    public function exportSubmissions(array $submissionIds, Context $context)
     {
         $filterDao = DAORegistry::getDAO('FilterDAO'); /** @var FilterDAO $filterDao */
         $pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
@@ -177,16 +207,14 @@ class PubMedExportPlugin extends ImportExportPlugin
     /**
      * Get the XML for a set of issues.
      *
-     * @param array $issueIds Array of issue IDs
-     * @param \PKP\context\Context $context
-     * @param \PKP\user\User $user
+     * @throws Exception
      *
      * @return string XML contents representing the supplied issue IDs.
      */
-    public function exportIssues($issueIds, $context, $user)
+    public function exportIssues(array $issueIds, Context $context): string
     {
         $filterDao = DAORegistry::getDAO('FilterDAO'); /** @var FilterDAO $filterDao */
-        /** @var \APP\plugins\importexport\pubmed\filter\ArticlePubMedXmlFilter[] $pubmedExportFilters */
+        /** @var ArticlePubMedXmlFilter[] $pubmedExportFilters */
         $pubmedExportFilters = $filterDao->getObjectsByGroup('article=>pubmed-xml');
         assert(count($pubmedExportFilters) == 1); // Assert only a single serialization filter
         $exportFilter = array_shift($pubmedExportFilters);
@@ -216,10 +244,11 @@ class PubMedExportPlugin extends ImportExportPlugin
      * Execute import/export tasks using the command-line interface.
      *
      * @param array $args Parameters to the plugin
+     *
+     * @throws Exception
      */
     public function executeCLI($scriptName, &$args)
     {
-        // $command = array_shift($args);
         $xmlFile = array_shift($args);
         $journalPath = array_shift($args);
 
@@ -242,7 +271,7 @@ class PubMedExportPlugin extends ImportExportPlugin
             switch (array_shift($args)) {
                 case 'articles':
                     try {
-                        file_put_contents($xmlFile, $this->exportSubmissions($args, $journal, $user));
+                        file_put_contents($xmlFile, $this->exportSubmissions($args, $journal));
                     } catch (Exception $e) {
                         echo $e->getMessage() . "\n\n";
                     }
@@ -257,7 +286,7 @@ class PubMedExportPlugin extends ImportExportPlugin
                     }
                     $issues = [$issue];
                     try {
-                        file_put_contents($xmlFile, $this->exportIssues($issues, $journal, $user));
+                        file_put_contents($xmlFile, $this->exportIssues($issues, $journal));
                     } catch (Exception $e) {
                         echo $e->getMessage() . "\n\n";
                     }
