@@ -1,8 +1,9 @@
 # Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023.
+# Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-04-19 22:35+0000\n"
-"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
+"PO-Revision-Date: 2025-06-24 12:54+0000\n"
+"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/default/eu/>"
 "\n"
 "Language: eu\n"
@@ -10,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "section.default.abbrev"
 msgstr "ART"
@@ -83,3 +84,31 @@ msgstr "Ataleko editorea"
 
 msgid "default.groups.plural.subscriptionManager"
 msgstr "Harpidetzen arduradunak"
+
+msgid "section.default.policy"
+msgstr "Atalaren politika lehenetsia"
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"Aldizkari honek LOCKSS sistema erabiltzen du parte hartzen duten "
+"liburutegien artean banatutako artxibo-sistema bat sortzeko, eta liburutegi "
+"horiei aldizkariaren artxibo iraunkorrak sortzeko aukera ematen die, "
+"kontserbazio eta zaharberritze helburuekin. <a href=\"https://www.lockss."
+"org\">Gehiago...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"Aldizkari honek CLOCKSS sistema erabiltzen du parte hartzen duten "
+"liburutegien artean banatutako artxibo-sistema bat sortzeko, eta liburutegi "
+"horiei aldizkariaren artxibo iraunkorrak sortzeko aukera ematen die "
+"kontserbazio eta zaharberritze helburuarekin. <a href=\"https://clockss.org/"
+"\">Gehiago...</a>"
+
+msgid "default.genres.researchInstrument"
+msgstr "Ikerketa tresna"
+
+msgid "default.genres.researchMaterials"
+msgstr "Ikerketa materiala"
+
+msgid "default.genres.researchResults"
+msgstr "Ikerketaren emaitzak"
