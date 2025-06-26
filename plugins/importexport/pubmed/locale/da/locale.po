@@ -1,11 +1,12 @@
 # "Jesper B. Thestrup" <jbt@kb.dk>, 2025.
+# Alexandra Fogtmann-Schulz <alfo@kb.dk>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:45+00:00\n"
-"PO-Revision-Date: 2025-06-26 08:28+0000\n"
-"Last-Translator: \"Jesper B. Thestrup\" <jbt@kb.dk>\n"
+"PO-Revision-Date: 2025-06-26 10:49+0000\n"
+"Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-pubmed/da/>\n"
 "Language: da\n"
@@ -58,6 +59,6 @@ msgstr "NLM Titelforkortelse"
 
 msgid "plugins.importexport.pubmed.settings.form.nlmTitle.description"
 msgstr ""
-"Tidsskriftets NLM Titelforkortelse. Hvis du ikke kender forkortelsen, så søg "
+"Tidsskriftets NLM titelforkortelse. Hvis du ikke kender forkortelsen, så søg "
 "i NLM kataloget <a href=\"https://www.ncbi.nlm.nih.gov/nlmcatalog/\">search "
 "the NLM Catalog</a>."
