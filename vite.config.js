@@ -83,6 +83,7 @@ export default defineConfig(({mode}) => {
 				'highlight.js',
 				'ofetch',
 				'pinia',
+				'reka-ui',
 				'swiper',
 				'tiny-emitter',
 				'tinymce',
