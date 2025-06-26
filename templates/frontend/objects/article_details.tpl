@@ -350,7 +350,7 @@
 
 			{* Data Availability Statement *}
 			{if $publication->getLocalizedData('dataAvailability')}
-				<section class="item dataAvailability">
+				<section class="item dataAvailability" id="data-availability-statement">
 					<h2 class="label">{translate key="submission.dataAvailability"}</h2>
 					{$publication->getLocalizedData('dataAvailability')|strip_unsafe_html}
 				</section>
