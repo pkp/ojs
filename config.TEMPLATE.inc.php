@@ -370,6 +370,7 @@ driver = pkpdatabase
 ;opensearch_username = "admin"
 ;opensearch_password = "password"
 ;opensearch_index = "submissions"
+;opensearch_ssl_verification = On
 
 ; Laravel Scout search driver name
 driver = database
