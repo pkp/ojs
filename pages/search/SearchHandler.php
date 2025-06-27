@@ -160,7 +160,6 @@ class SearchHandler extends Handler
         $templateMgr->assign([
             'orderBy' => $orderBy,
             'orderDir' => $orderDir,
-            'simDocsEnabled' => true,
             'results' => $results,
             'authorUserGroups' => UserGroup::withRoleIds([\PKP\security\Role::ROLE_ID_AUTHOR])
                 ->withContextIds($searchFilters['searchJournal'] ? [$searchFilters['searchJournal']->getId()] : null)
