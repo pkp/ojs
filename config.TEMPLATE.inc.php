@@ -365,11 +365,13 @@ validation_timeout = 14
 ; The search driver to use. Options: pkpdatabase, opensearch
 driver = pkpdatabase
 
+; For indexing engines supporting it, provide a name for the submission index.
+search_index_name = "submissions"
+
 ; When using the OpenSearch driver, the following must be specified...
 ;opensearch_hosts = "[\"https://localhost:9200\"]"
 ;opensearch_username = "admin"
 ;opensearch_password = "password"
-;opensearch_index = "submissions"
 ;opensearch_ssl_verification = On
 
 ; Laravel Scout search driver name

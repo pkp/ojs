@@ -23,6 +23,7 @@ use APP\journal\JournalDAO;
 use APP\orcid\actions\SendSubmissionToOrcid;
 use APP\submission\Submission;
 use Exception;
+use PKP\config\Config;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
 use PKP\plugins\Hook;
@@ -290,7 +291,11 @@ class ArticleSearchIndex extends SubmissionSearchIndex
             return;
         }
 
-        app(\Laravel\Scout\EngineManager::class)->engine()->flush('submissions');
+        try {
+            app(\Laravel\Scout\EngineManager::class)->engine()->flush(Config::getVar('search_index_name', 'submissions'));
+        } catch (\Exception $e) {
+            echo 'Exception: ' . $e->getMessage() . "\n";
+        }
 
         // Clear index
         if ($log) {
