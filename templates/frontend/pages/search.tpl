@@ -123,11 +123,7 @@
 	{* No results found *}
 	{if $results->wasEmpty()}
 		<span role="status">
-			{if $error}
-				{include file="frontend/components/notification.tpl" type="error" message=$error|escape}
-			{else}
-				{include file="frontend/components/notification.tpl" type="notice" messageKey="search.noResults"}
-			{/if}
+			{include file="frontend/components/notification.tpl" type="notice" messageKey="search.noResults"}
 		</span>
 
 	{* Results pagination *}
