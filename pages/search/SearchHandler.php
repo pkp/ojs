@@ -157,13 +157,11 @@ class SearchHandler extends Handler
         $this->_assignSearchFilters($request, $templateMgr, $searchFilters);
         [$orderBy, $orderDir] = $articleSearch->getResultSetOrdering($request);
 
-        $error = ''; // FIXME
         $templateMgr->assign([
             'orderBy' => $orderBy,
             'orderDir' => $orderDir,
             'simDocsEnabled' => true,
             'results' => $results,
-            'error' => $error,
             'authorUserGroups' => UserGroup::withRoleIds([\PKP\security\Role::ROLE_ID_AUTHOR])
                 ->withContextIds($searchFilters['searchJournal'] ? [$searchFilters['searchJournal']->getId()] : null)
                 ->get(),
