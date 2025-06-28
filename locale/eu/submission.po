@@ -1,11 +1,11 @@
 # Josu Aramberri <josu.aramberri@gmail.com>, 2022.
 # Josu Acosta <josuacostacalvo@gmail.com>, 2023.
-# Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023.
+# Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023, 2025.
 # Informatikaria <informatikaria@ueu.eus>, 2025.
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2025-06-29 11:04+0000\n"
-"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
+"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "eu/>\n"
 "Language: eu\n"
@@ -185,7 +185,7 @@ msgid "publication.invalidSection"
 msgstr "Ezin izan da argitalpen honen atala aurkitu."
 
 msgid "publication.inactiveSection"
-msgstr ""
+msgstr "{$section} (Ez-aktiboa)"
 
 msgid "publication.invalidIssue"
 msgstr ""
