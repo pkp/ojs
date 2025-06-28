@@ -4,7 +4,7 @@
 # Informatikaria <informatikaria@ueu.eus>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-06-15 21:25+0000\n"
+"PO-Revision-Date: 2025-06-29 11:04+0000\n"
 "Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "eu/>\n"
@@ -96,10 +96,10 @@ msgstr ""
 "ditzaten."
 
 msgid "grid.action.approveProof"
-msgstr ""
+msgstr "Onartu proba hau galeradan sartzeko."
 
 msgid "grid.action.pageProofApproved"
-msgstr ""
+msgstr "Proba hau galeradan sartzeko onartu da."
 
 msgid "submission.submit.titleAndSummary"
 msgstr "Izenburua eta laburpena"
@@ -116,7 +116,7 @@ msgid "workflow.review.externalReview"
 msgstr "Ebaluazioa"
 
 msgid "submission.event.issueMetadataUpdated"
-msgstr ""
+msgstr "Bidalketaren zenbakiaren metadatuak eguneratu dira."
 
 msgid "submission.upload.fileContents"
 msgstr "Artikuluaren osagaia"
@@ -137,16 +137,18 @@ msgid "submission.submit.contributorRole"
 msgstr "Kolaboratzailearen rola"
 
 msgid "submission.citationFormat.notFound"
-msgstr ""
+msgstr "Eskatutako erreferentzia formatua ezin izan da berreskuratu."
 
 msgid "submission.metadataDescription"
 msgstr ""
+"Ezarpen hauek Dublin Core metadatu multzoan oinarritzen dira, aldizkarietako "
+"edukia deskribatzeko erabiltzen den nazioarteko estandar bat."
 
 msgid "section.any"
 msgstr "Atal guztiak"
 
 msgid "submission.sectionOptions"
-msgstr ""
+msgstr "Atalaren Aukerak"
 
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} zenbakiak"
@@ -156,15 +158,19 @@ msgstr "Zenbaki guztiak"
 
 msgid "galley.editPublishedDisabled"
 msgstr ""
+"Argitalpen honen galeradak ezin dira editatu, dagoeneko argitaratuta "
+"dagoelako."
 
 msgid "galley.publicationNotFound"
-msgstr ""
+msgstr "Galerada honen argitalpena ezin izan da aurkitu."
 
 msgid "publication.assignToissue"
 msgstr "Ale bati esleitu"
 
 msgid "publication.assignedToIssue"
 msgstr ""
+"<a href=\"{$issueUrl}\">{$issueName}</a>(e)ri esleitu zaio, baina ez da "
+"argitaratzeko programatu."
 
 msgid "publication.changeIssue"
 msgstr "Aldatu zenbakia"
@@ -176,7 +182,7 @@ msgstr ""
 "dagoela aurrez eta aurreko data jarri behar diozula."
 
 msgid "publication.invalidSection"
-msgstr ""
+msgstr "Ezin izan da argitalpen honen atala aurkitu."
 
 msgid "publication.inactiveSection"
 msgstr ""
