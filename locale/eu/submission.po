@@ -4,8 +4,8 @@
 # Informatikaria <informatikaria@ueu.eus>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-06-29 11:04+0000\n"
-"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
+"PO-Revision-Date: 2025-06-29 20:53+0000\n"
+"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "eu/>\n"
 "Language: eu\n"
@@ -34,13 +34,13 @@ msgstr ""
 "shtml#type</a>\""
 
 msgid "submission.submit.newSubmissionMultiple"
-msgstr "Hasi bidalketa berri bat hemen"
+msgstr "Hasi bidalketa berri bat"
 
 msgid "submission.submit.newSubmissionSingle"
 msgstr "Bidalketa berria"
 
 msgid "grid.action.workflow"
-msgstr "Bidalketaren argitaratze-prozesua"
+msgstr "Bidalketaren lan-fluxua"
 
 msgid "submission.abstract.wordCount.description"
 msgstr "Laburpenak {$wordCount} hitz edo gutxiago izan behar ditu."
@@ -58,7 +58,7 @@ msgstr ""
 "berrikusi ondoren, zurekin harremanetan jarriko dira."
 
 msgid "grid.action.galleyInIssueEntry"
-msgstr "Galerada alearen sarreran agertzen da"
+msgstr "Galerada zenbakiaren sarreran agertzen da"
 
 msgid "grid.action.issueEntry"
 msgstr "Ikusi bidalketa honen metadatuak"
@@ -67,7 +67,7 @@ msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "Artikuluaren “{$galleyFormatNme}” galerada eskuragarri dago."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "Artikuluaren “{$galleyFormatNme}” galerada eskuragarri dago."
+msgstr "Artikuluaren “{$galleyFormatNme}” galerada ez dago eskuragarri."
 
 msgid "submission.event.publicIdentifiers"
 msgstr "Bidalketaren identifikatzaile publikoak eguneratuta."
@@ -151,10 +151,10 @@ msgid "submission.sectionOptions"
 msgstr "Atalaren Aukerak"
 
 msgid "catalog.browseTitles"
-msgstr "{$numTitles} zenbakiak"
+msgstr "{$numTitles} elementuak"
 
 msgid "catalog.category.heading"
-msgstr "Zenbaki guztiak"
+msgstr "Elementu guztiak"
 
 msgid "galley.editPublishedDisabled"
 msgstr ""
@@ -165,7 +165,7 @@ msgid "galley.publicationNotFound"
 msgstr "Galerada honen argitalpena ezin izan da aurkitu."
 
 msgid "publication.assignToissue"
-msgstr "Ale bati esleitu"
+msgstr "Zenbaki bati esleitu"
 
 msgid "publication.assignedToIssue"
 msgstr ""
@@ -188,7 +188,7 @@ msgid "publication.inactiveSection"
 msgstr "{$section} (Ez-aktiboa)"
 
 msgid "publication.invalidIssue"
-msgstr ""
+msgstr "Ezin izan da argitalpen honen zenbakia aurkitu."
 
 msgid "publication.publish.confirmation"
 msgstr ""
@@ -197,12 +197,19 @@ msgstr ""
 
 msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
+"Argitalpeneko baldintza guztiak bete dira. Hau {$issue} argitaratzean denean "
+"argitaratuko da. Ziur zaude argitaratzeko programatu nahi duzula?"
 
 msgid "publication.publish.confirmation.backIssue"
 msgstr ""
+"Argitalpeneko baldintza guztiak bete dira. Hau berehala argitaratuko da "
+"{$issue}(e)an. Ziur zaude argitaratu nahi duzula?"
 
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
+"Argitaratzeko baldintza guztiak bete dira. Hau berehala argitaratuko da, "
+"{$datePublished} argitaratze-data ezarrita dagoelako. Ziur zaude argitaratu "
+"nahi duzula?"
 
 msgid "publication.required.issue"
 msgstr ""
