@@ -59,7 +59,7 @@ class SubscriptionExpiryReminder extends ScheduledTask
             ->recipients([$user])
             ->subject($template->getLocalizedData('subject', $locale))
             ->body($template->getLocalizedData('body', $locale))
-            ->setData($locale);
+            ->setLocale($locale);
 
         Mail::send($mailable);
     }
