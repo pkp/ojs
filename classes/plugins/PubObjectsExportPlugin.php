@@ -23,7 +23,7 @@ use APP\issue\Issue;
 use APP\journal\Journal;
 use APP\journal\JournalDAO;
 use APP\notification\NotificationManager;
-use APP\plugins\importexport\doaj\DOAJInfoSender;
+use APP\plugins\generic\doaj\DOAJInfoSender;
 use APP\publication\Publication;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
