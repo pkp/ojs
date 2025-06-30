@@ -21,6 +21,7 @@ use APP\facades\Repo;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Route;
 use PKP\userGroup\UserGroup;
 
@@ -81,14 +82,13 @@ class BackendDoiController extends \PKP\API\v1\_dois\PKPBackendDoiController
 
         Repo::galley()->edit($galley, ['doiId' => $doi->getId()]);
 
-        /** @var \PKP\submission\genre\Genre[] $genres */
-        $genres = Repo::genre()->getByContextId($context->getId())->all();
+        $genres = Repo::genre()->getByContextId($context->getId());
         // Re-fetch submission and publication to reflect changes in galley
         $submission = Repo::submission()->get((int) $submissionId);
         $publication = Repo::publication()->get((int) $publicationId);
         $galley = Repo::galley()->get($galley->getId());
 
-        $galleyProps = Repo::galley()->getSchemaMap($submission, $publication, $genres)->map($galley);
+        $galleyProps = Repo::galley()->getSchemaMap($submission, $publication, $genres->all())->map($galley);
 
         return response()->json($galleyProps, Response::HTTP_OK);
     }
@@ -136,16 +136,14 @@ class BackendDoiController extends \PKP\API\v1\_dois\PKPBackendDoiController
                     $issue,
                     $context,
                     $userGroups,
-                    $this->getGenres($context->getId())
+                    $this->getGenres($context->getId())->all()
                 ),
             Response::HTTP_OK
         );
     }
 
-    protected function getGenres(int $contextId): array
+    protected function getGenres(int $contextId): Collection
     {
-        return Repo::genre()
-            ->getByContextId($contextId)
-            ->toArray();
+        return Repo::genre()->getByContextId($contextId);
     }
 }
