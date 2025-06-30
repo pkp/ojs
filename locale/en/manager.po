@@ -1602,6 +1602,9 @@ msgstr "DOI Plugin Settings"
 msgid "plugins.importexport.common.export.articles"
 msgstr "Articles"
 
+msgid "plugins.importexport.common.export.publications"
+msgstr "Publications"
+
 msgid "plugins.importexport.common.export.issues"
 msgstr "Issues"
 
@@ -1649,6 +1652,15 @@ msgstr "Marked registered"
 
 msgid "plugins.importexport.common.status.registered"
 msgstr "Registered"
+
+msgid "plugins.importexport.common.status.stale"
+msgstr "Needs Sync"
+
+msgid "plugins.importexport.common.status.error"
+msgstr "Error"
+
+msgid "plugins.importexport.common.status.failed"
+msgstr "Failed"
 
 msgid "plugins.importexport.common.action"
 msgstr "Action"

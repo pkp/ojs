@@ -3,8 +3,8 @@
 /**
  * @file classes/plugins/PubObjectsExportPlugin.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2025 Simon Fraser University
+ * Copyright (c) 2003-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PubObjectsExportPlugin
@@ -24,8 +24,10 @@ use APP\journal\Journal;
 use APP\journal\JournalDAO;
 use APP\notification\NotificationManager;
 use APP\plugins\importexport\doaj\DOAJInfoSender;
+use APP\publication\Publication;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
+use PKP\context\Context;
 use PKP\core\EntityDAO;
 use PKP\core\JSONMessage;
 use PKP\db\DAO;
@@ -35,6 +37,7 @@ use PKP\file\FileManager;
 use PKP\filter\FilterDAO;
 use PKP\galley\Galley;
 use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
 use PKP\linkAction\request\NullAction;
 use PKP\notification\Notification;
 use PKP\plugins\Hook;
@@ -50,9 +53,12 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
 {
     // The statuses
     public const EXPORT_STATUS_ANY = '';
+    public const EXPORT_STATUS_DEPOSITABLE = 'depositable'; // A help const, to get all depositable (not registered, stale, status error)
     public const EXPORT_STATUS_NOT_DEPOSITED = 'notDeposited';
     public const EXPORT_STATUS_MARKEDREGISTERED = 'markedRegistered';
     public const EXPORT_STATUS_REGISTERED = 'registered';
+    public const EXPORT_STATUS_STALE = 'stale';
+    public const EXPORT_STATUS_ERROR = 'error';
     // The actions
     public const EXPORT_ACTION_EXPORT = 'export';
     public const EXPORT_ACTION_MARKREGISTERED = 'markRegistered';
@@ -103,6 +109,13 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
                 Hook::add(strtolower(get_class($dao)) . '::getAdditionalFieldNames', $this->getAdditionalFieldNames(...));
             }
         }
+
+        $context = Application::get()->getRequest()->getContext();
+        if ($context?->getData(Context::SETTING_DOI_VERSIONING)) {
+            Hook::add('Publication::version', $this->handlePublicationVersioning(...));
+        }
+        Hook::add('Publication::publish', $this->handlePublicationPublishing(...));
+        Hook::add('Publication::unpublish', $this->handlePublicationUnpublishing(...));
         return true;
     }
 
@@ -178,13 +191,16 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
                     $linkActions[] = new LinkAction($action, new NullAction(), $actionName);
                 }
                 $templateMgr = TemplateManager::getManager($request);
+                $templateMgr->registerClass(PubObjectsExportPlugin::class, PubObjectsExportPlugin::class);
                 $templateMgr->assign([
                     'plugin' => $this,
                     'actionNames' => $actionNames,
                     'configurationErrors' => $configurationErrors,
+                    'doiVersioning' => $context->getData(Context::SETTING_DOI_VERSIONING) ?? false,
                 ]);
                 break;
             case 'exportSubmissions':
+            case 'exportPublications':
             case 'exportIssues':
             case 'exportRepresentations':
                 $this->prepareAndExportPubObjects($request, $context);
@@ -201,6 +217,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
     public function prepareAndExportPubObjects($request, $context, $args = [])
     {
         $selectedSubmissions = (array) $request->getUserVar('selectedSubmissions');
+        $selectedPublications = (array) $request->getUserVar('selectedPublications');
         $selectedIssues = (array) $request->getUserVar('selectedIssues');
         $selectedRepresentations = (array) $request->getUserVar('selectedRepresentations');
         $tab = (string) $request->getUserVar('tab');
@@ -212,13 +229,17 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
         if (!empty($args['issueIds'])) {
             $selectedIssues = (array) $args['issueIds'];
         }
-        if (empty($selectedSubmissions) && empty($selectedIssues) && empty($selectedRepresentations)) {
+        if (empty($selectedSubmissions) && empty($selectedPublications) && empty($selectedIssues) && empty($selectedRepresentations)) {
             throw new \Exception(__('plugins.importexport.common.error.noObjectsSelected'));
         }
         if (!empty($selectedSubmissions)) {
             $objects = $this->getPublishedSubmissions($selectedSubmissions, $context);
             $filter = $this->getSubmissionFilter();
             $objectsFileNamePart = 'articles';
+        } elseif (!empty($selectedPublications)) {
+            $objects = $this->getPublishedPublications($selectedPublications, $context);
+            $filter = $this->getPublicationFilter();
+            $objectsFileNamePart = 'publications';
         } elseif (!empty($selectedIssues)) {
             $objects = $this->getPublishedIssues($selectedIssues, $context);
             $filter = $this->getIssueFilter();
@@ -322,7 +343,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
                 $request->redirect(null, null, null, $path, null, $tab);
             }
         } elseif ($this->_checkForExportAction(PubObjectsExportPlugin::EXPORT_ACTION_MARKREGISTERED)) {
-            $this->markRegistered($context, $objects);
+            $this->markRegistered($objects);
             if ($shouldRedirect) {
                 // redirect back to the right tab
                 $request->redirect(null, null, null, $path, null, $tab);
@@ -345,7 +366,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
      * Deposit XML document.
      * This must be implemented in the subclasses, if the action is supported.
      *
-     * @param mixed $objects Array of or single published submission, issue or galley
+     * @param mixed $objects Array of or single published submission, publication, issue or galley
      * @param Journal $context
      * @param string $filename Export XML filename
      *
@@ -353,18 +374,6 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
      */
     abstract public function depositXML($objects, $context, $filename);
 
-    /**
-     * Get detailed message of the object status i.e. failure messages.
-     * Parameters needed have to be in the request object.
-     *
-     * @param Request $request
-     *
-     * @return string Preformatted text that will be displayed in a div element in the modal
-     */
-    public function getStatusMessage($request)
-    {
-        return null;
-    }
 
     /**
      * Get the submission filter.
@@ -372,6 +381,14 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
      * @return string|null
      */
     public function getSubmissionFilter()
+    {
+        return null;
+    }
+
+    /**
+     * Get the publication filter.
+     */
+    public function getPublicationFilter(): ?string
     {
         return null;
     }
@@ -397,31 +414,17 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
     }
 
     /**
-     * Get status names for the filter search option.
+     * Get action names.
      *
-     * @return array (string status => string text)
+     * @return array (string action => string text)
      */
-    public function getStatusNames()
+    public function getExportActionNames()
     {
         return [
-            PubObjectsExportPlugin::EXPORT_STATUS_ANY => __('plugins.importexport.common.status.any'),
-            PubObjectsExportPlugin::EXPORT_STATUS_NOT_DEPOSITED => __('plugins.importexport.common.status.notDeposited'),
-            PubObjectsExportPlugin::EXPORT_STATUS_MARKEDREGISTERED => __('plugins.importexport.common.status.markedRegistered'),
-            PubObjectsExportPlugin::EXPORT_STATUS_REGISTERED => __('plugins.importexport.common.status.registered'),
+            PubObjectsExportPlugin::EXPORT_ACTION_DEPOSIT => __('plugins.importexport.common.action.register'),
+            PubObjectsExportPlugin::EXPORT_ACTION_EXPORT => __('plugins.importexport.common.action.export'),
+            PubObjectsExportPlugin::EXPORT_ACTION_MARKREGISTERED => __('plugins.importexport.common.action.markRegistered'),
         ];
-    }
-
-    /**
-     * Get status actions for the display to the user,
-     * i.e. links to a web site with more information about the status.
-     *
-     * @param object $pubObject
-     *
-     * @return array (string status => link)
-     */
-    public function getStatusActions($pubObject)
-    {
-        return [];
     }
 
     /**
@@ -441,17 +444,81 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
     }
 
     /**
-     * Get action names.
-     *
-     * @return array (string action => string text)
+     * Get status names for the filter search option.
      */
-    public function getExportActionNames()
+    public function getStatusNames(): array
     {
         return [
-            PubObjectsExportPlugin::EXPORT_ACTION_DEPOSIT => __('plugins.importexport.common.action.register'),
-            PubObjectsExportPlugin::EXPORT_ACTION_EXPORT => __('plugins.importexport.common.action.export'),
-            PubObjectsExportPlugin::EXPORT_ACTION_MARKREGISTERED => __('plugins.importexport.common.action.markRegistered'),
+            PubObjectsExportPlugin::EXPORT_STATUS_ANY => __('plugins.importexport.common.status.any'),
+            PubObjectsExportPlugin::EXPORT_STATUS_NOT_DEPOSITED => __('plugins.importexport.common.status.notDeposited'),
+            PubObjectsExportPlugin::EXPORT_STATUS_MARKEDREGISTERED => __('plugins.importexport.common.status.markedRegistered'),
+            PubObjectsExportPlugin::EXPORT_STATUS_REGISTERED => __('plugins.importexport.common.status.registered'),
+            PubObjectsExportPlugin::EXPORT_STATUS_STALE => __('plugins.importexport.common.status.stale'),
+            PubObjectsExportPlugin::EXPORT_STATUS_ERROR => __('plugins.importexport.common.status.error'),
         ];
+    }
+
+    /**
+     * Get status actions for the display to the user,
+     * i.e. a link to a modal where error messages are dispalyed,
+     * or link to a web site with more information about the status.
+     *
+     * @return array (string status => link)
+     */
+    public function getStatusActions(Submission|Publication $pubObject): array
+    {
+        $request = Application::get()->getRequest();
+        $dispatcher = $request->getDispatcher();
+        $objectIdName = match (true) {
+            $pubObject instanceof Submission => 'articleId',
+            $pubObject instanceof Publication => 'publicationId',
+            // Not considering issues and galleys, because they are maybe not used at all
+        };
+        return [
+            PubObjectsExportPlugin::EXPORT_STATUS_ERROR =>
+                new LinkAction(
+                    'failureMessage',
+                    new AjaxModal(
+                        $dispatcher->url(
+                            $request,
+                            Application::ROUTE_COMPONENT,
+                            null,
+                            'grid.settings.plugins.settingsPluginGridHandler',
+                            'manage',
+                            null,
+                            ['plugin' => $this->getName(), 'category' => 'importexport', 'verb' => 'statusMessage', $objectIdName => $pubObject->getId()]
+                        ),
+                        __('plugins.importexport.common.status.error'),
+                        'failureMessage'
+                    ),
+                    __('plugins.importexport.common.status.failed')
+                )
+        ];
+    }
+
+    /**
+     * Get detailed message of the object status i.e. failure messages.
+     * Parameters needed have to be in the request object.
+     *
+     * @return string Preformatted text that will be displayed in a div element in the modal
+     */
+    public function getStatusMessage(Request $request): ?string
+    {
+        $articleId = (int) $request->getUserVar('articleId');
+        $publicationId = (int) $request->getUserVar('publicationId');
+        if (isset($articleId)) {
+            $object = Repo::submission()->get($articleId);
+        } elseif (isset($publicationId)) {
+            $object = Repo::publication()->get($publicationId);
+        }
+        // Not considering issues and galleys, because they are maybe not used at all
+
+        $failedMsg = $object->getData($this->getFailedMsgSettingName());
+
+        if (!empty($failedMsg)) {
+            return $failedMsg;
+        }
+        return null;
     }
 
     /**
@@ -464,7 +531,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
     /**
      * Get the XML for selected objects.
      *
-     * @param mixed $objects Array of or single published submission, issue or galley
+     * @param mixed $objects Array of or single published submission, publication, issue or galley
      * @param string $filter
      * @param Journal $context
      * @param bool $noValidation If set to true no XML validation will be done
@@ -500,33 +567,63 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
     }
 
     /**
-     * Mark selected submissions or issues as registered.
+     * Mark selected submissions, publications or issues as registered.
      *
-     * @param Journal $context
-     * @param array $objects Array of published submissions, issues or galleys
+     * @param array $objects Array of published submissions, publications, issues or galleys
      */
-    public function markRegistered($context, $objects)
+    public function markRegistered($objects)
     {
         foreach ($objects as $object) {
-            $object->setData($this->getDepositStatusSettingName(), PubObjectsExportPlugin::EXPORT_STATUS_MARKEDREGISTERED);
-            $this->updateObject($object);
+            $this->updateStatus($object, PubObjectsExportPlugin::EXPORT_STATUS_MARKEDREGISTERED);
         }
     }
 
     /**
-     * Update the given object.
-     *
-     * @param Issue|Submission|Galley $object
+     * Mark publication as stale.
      */
-    protected function updateObject($object)
+    public function markStale(Submission|Publication $pubObject): void
+    {
+        $this->updateStatus($pubObject, PubObjectsExportPlugin::EXPORT_STATUS_STALE);
+    }
+
+    /**
+     * Gets a repo for a pub object.
+     *
+     * @return mixed Returns either a repo for the given pub object
+     */
+    protected function getObjectRepo(Submission|Publication|Issue|Galley $object): mixed
+    {
+        return match (true) {
+            $object instanceof Submission => Repo::submission(),
+            $object instanceof Publication => Repo::publication(),
+            $object instanceof Issue => Repo::issue(),
+            $object instanceof Galley => Repo::galley(),
+        };
+    }
+
+    /**
+     * Update the given object.
+     */
+    protected function updateObject(Submission|Publication|Issue|Galley $object, ?array $editParams = [])
     {
         // Register a hook for the required additional
         // object fields. We do this on a temporary
         // basis as the hook adds a performance overhead
         // and the field will "stealthily" survive even
         // when the DAO does not know about it.
-        $dao = $object->getDAO();
-        $dao->update($object);
+        $this->getObjectRepo($object)->edit($object, $editParams);
+    }
+
+    /**
+     * Update status based on if deposits and registration have been successful
+     */
+    public function updateStatus(Submission|Publication $object, string $status, ?string $failedMsg = null)
+    {
+        $statusParams = [
+            $this->getDepositStatusSettingName() => $status,
+            $this->getFailedMsgSettingName() => $failedMsg,
+        ];
+        $this->updateObject($object, $statusParams);
     }
 
     /**
@@ -575,13 +672,110 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
     }
 
     /**
+     * Handle publication versioning:
+     * If different DOIs are used for different versions: Remove existing settings for the new publication, if it is a major version.
+     *
+     * @return bool Hook processing status
+     */
+    public function handlePublicationVersioning($hookName, $params): bool
+    {
+        $newPublication = &$params[0];
+        $publication = $params[1];
+
+        $isMajorVersion = $newPublication->getData('versionStage') != $publication->getData('versionStage') ||
+            $newPublication->getData('versionMajor') != $publication->getData('versionMajor');
+
+        if (!$isMajorVersion) {
+            return false;
+        }
+
+        foreach ($this->_getObjectAdditionalSettings() as $fieldName) {
+            $newPublication->setData($fieldName, null);
+        }
+        Repo::publication()->edit($newPublication, []);
+        return false;
+    }
+
+    /**
+     * Handle publishing a version:
+     * If the same DOI is used for all versions: mark the registered submission stale if a new current publication has been published.
+     * If different DOIs are used for different versions: if a new minor (but already registered) version has been published, mark the version stale
+     *
+     * @return bool Hook processing status
+     */
+    public function handlePublicationPublishing($hookName, $params): bool
+    {
+        $newPublication = &$params[0];
+        $submission = $params[2];
+
+        $updatableStatuses = [
+            PubObjectsExportPlugin::EXPORT_STATUS_REGISTERED,
+            PubObjectsExportPlugin::EXPORT_STATUS_MARKEDREGISTERED
+        ];
+        $context = Application::get()->getRequest()->getContext();
+        if ($context->getData(Context::SETTING_DOI_VERSIONING) &&
+            in_array($newPublication->getData($this->getDepositStatusSettingName()), $updatableStatuses)) {
+
+            // This will be the case if a new minor version, of a version that is already registered, is published
+            // because for minor versions the settings are copied at versioning.
+            // Or if a minor version is unpublished and then published again
+            $this->markStale($newPublication);
+
+        } elseif ($submission->getData('currentPublicationId') === $newPublication->getId() &&
+            in_array($submission->getData($this->getDepositStatusSettingName()), $updatableStatuses)) {
+
+            $this->markStale($submission);
+        }
+        return false;
+    }
+
+    /**
+     * Handle unpublishing a version:
+     * If the same DOI is used for all versions: mark the registered submission stale only if the current publication was unpublished.
+     * If different DOIs are used for different versions: if the latest minor version, that was registered, is unpublished, mark the next previous
+     * published minor version stale.
+     *
+     * @return bool Hook processing status
+     */
+    public function handlePublicationUnpublishing($hookName, $params): bool
+    {
+        $newPublication = &$params[0];
+        $submission = $params[2];
+
+        $updatableStatuses = [
+            PubObjectsExportPlugin::EXPORT_STATUS_REGISTERED,
+            PubObjectsExportPlugin::EXPORT_STATUS_MARKEDREGISTERED
+        ];
+        $context = Application::get()->getRequest()->getContext();
+        if ($context->getData(Context::SETTING_DOI_VERSIONING) &&
+            in_array($newPublication->getData($this->getDepositStatusSettingName()), $updatableStatuses) &&
+            $newPublication->getData('versionMinor') != '0') {
+
+            $lastMinorPublication = Repo::publication()->getCollector()
+                ->filterBySubmissionIds([$newPublication->getData('submissionId')])
+                ->filterByVersionStage($newPublication->getData('versionStage'))
+                ->filterByVersionMajor($newPublication->getData('versionMajor'))
+                ->filterByStatus([Submission::STATUS_PUBLISHED])
+                ->getMany()
+                ->last(); // minor versions are sorted ASC, so get the last one
+            $this->markStale($lastMinorPublication);
+
+        } elseif ($submission->getData('currentPublicationId') === $newPublication->getId() &&
+            in_array($submission->getData($this->getDepositStatusSettingName()), $updatableStatuses)) {
+
+            $this->markStale($submission);
+        }
+        return false;
+    }
+
+    /**
      * Get a list of additional setting names that should be stored with the objects.
      *
      * @return array
      */
     protected function _getObjectAdditionalSettings()
     {
-        return [$this->getDepositStatusSettingName()];
+        return [$this->getDepositStatusSettingName(), $this->getFailedMsgSettingName()];
     }
 
     /**
@@ -597,15 +791,11 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
     }
 
     /**
-     * Retrieve all unregistered articles.
-     *
-     * @param Journal $context
-     *
-     * @return array
+     * Retrieve all published submissions that should be (re)deposited:
+     * those not yet registered, stale, or with status error.
      */
-    public function getUnregisteredArticles($context)
+    public function getAllDepositableArticles(Journal $context): array
     {
-        // Retrieve all published submissions that have not yet been registered.
         $articles = Repo::submission()->dao->getExportable(
             $context->getId(),
             null,
@@ -613,11 +803,31 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
             null,
             null,
             $this->getDepositStatusSettingName(),
-            PubObjectsExportPlugin::EXPORT_STATUS_NOT_DEPOSITED,
+            PubObjectsExportPlugin::EXPORT_STATUS_DEPOSITABLE,
             null
         );
         return $articles->toArray();
     }
+
+    /**
+     * Retrieve all published publications that should be (re)deposited:
+     * those not yet registered, stale, or with status error.
+     */
+    public function getAllDepositablePublications(Journal $context): array
+    {
+        $publications = Repo::publication()->dao->getExportable(
+            $context->getId(),
+            null,
+            null,
+            null,
+            null,
+            $this->getDepositStatusSettingName(),
+            PubObjectsExportPlugin::EXPORT_STATUS_DEPOSITABLE,
+            null
+        );
+        return $publications->toArray();
+    }
+
     /**
      * Check whether we are in test mode.
      *
@@ -640,7 +850,13 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
         return $this->getPluginSettingsPrefix() . '::status';
     }
 
-
+    /**
+     * Get request failed message setting name.
+     */
+    public function getFailedMsgSettingName(): string
+    {
+        return $this->getPluginSettingsPrefix() . '_failedMsg';
+    }
 
     /**
      * @copydoc PKPImportExportPlugin::usage
@@ -795,6 +1011,23 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
         return array_map(function ($submissionId) {
             return Repo::submission()->get($submissionId);
         }, $validSubmissionIds);
+    }
+
+    /**
+     * Get published publications from publication IDs.
+     */
+    public function getPublishedPublications(array $publicationIds, Journal $context): array
+    {
+        $allPublicationIds = Repo::publication()
+            ->getCollector()
+            ->filterByContextIds([$context->getId()])
+            ->filterByStatus([PKPSubmission::STATUS_PUBLISHED])
+            ->getIds()
+            ->toArray();
+        $validPublicationIds = array_intersect($allPublicationIds, $publicationIds);
+        return array_map(function ($publicationId) {
+            return Repo::publication()->get($publicationId);
+        }, $validPublicationIds);
     }
 
     /**
