@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/importexport/doaj/classes/form/DOAJSettingsForm.php
+ * @file plugins/generic/doaj/classes/form/DOAJSettingsForm.php
  *
  * Copyright (c) 2014-2025 Simon Fraser University
  * Copyright (c) 2003-2025 John Willinsky
@@ -12,7 +12,7 @@
  * @brief Form for journal managers to setup DOAJ plugin
  */
 
-namespace APP\plugins\importexport\doaj\classes\form;
+namespace APP\plugins\generic\doaj\classes\form;
 
 use PKP\form\Form;
 
