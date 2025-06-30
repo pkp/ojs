@@ -225,19 +225,24 @@ class IssueController extends PKPBaseController
         $issue = Repo::issue()->getCurrent($context->getId());
 
         if (!$issue) {
-            return response()->json([
-                'error' => __('api.404.resourceNotFound'),
-            ], Response::HTTP_NOT_FOUND);
+            return new JsonResponse(
+                ['error' => __('api.404.resourceNotFound')],
+                Response::HTTP_NOT_FOUND
+            );
         }
 
-        $data = Repo::issue()->getSchemaMap()->map(
-            $issue,
-            $context,
-            $this->getUserGroups($context->getId()),
-            $this->getGenres($context->getId())
-        );
+        $data = Repo::issue()
+            ->getSchemaMap()
+            ->map(
+                $issue,
+                $context,
+                $this->getUserGroups($context->getId()),
+                // make sure to pass a plain array here, not a Collection
+                $this->getGenres($context->getId())->all()
+            );
 
-        return response()->json($data, Response::HTTP_OK);
+        // use the JsonResponse constructor directly so it accepts your array
+        return new JsonResponse($data, Response::HTTP_OK);
     }
 
     /**
@@ -259,7 +264,7 @@ class IssueController extends PKPBaseController
             $issue,
             $context,
             $this->getUserGroups($context->getId()),
-            $this->getGenres($context->getId())
+            $this->getGenres($context->getId())->all()
         );
 
         return response()->json($data, Response::HTTP_OK);
@@ -270,10 +275,8 @@ class IssueController extends PKPBaseController
         return UserGroup::withContextIds([$contextId])->get();
     }
 
-    protected function getGenres(int $contextId): array
+    protected function getGenres(int $contextId): Collection
     {
-        return Repo::genre()
-            ->getByContextId($contextId)
-            ->toArray();
+        return Repo::genre()->getByContextId($contextId);
     }
 }
