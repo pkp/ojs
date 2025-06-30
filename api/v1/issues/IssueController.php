@@ -274,6 +274,6 @@ class IssueController extends PKPBaseController
     {
         return Repo::genre()
             ->getByContextId($contextId)
-            ->toArray();
+            ->all();
     }
 }
