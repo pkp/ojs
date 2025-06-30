@@ -1,10 +1,10 @@
 <?php
 
 /**
- * @file plugins/importexport/doaj/DOAJInfoSender.php
+ * @file plugins/generic/doaj/DOAJInfoSender.php
  *
- * Copyright (c) 2013-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2013-2025 Simon Fraser University
+ * Copyright (c) 2003-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DOAJInfoSender
@@ -12,9 +12,10 @@
  * @brief Scheduled task to send deposits to DOAJ.
  */
 
-namespace APP\plugins\importexport\doaj;
+namespace APP\plugins\generic\doaj;
 
 use APP\core\Application;
+use APP\journal\Journal;
 use APP\journal\JournalDAO;
 use PKP\plugins\PluginRegistry;
 use PKP\scheduledTask\ScheduledTask;
@@ -65,11 +66,16 @@ class DOAJInfoSender extends ScheduledTask
         foreach ($journals as $journal) {
             // load pubIds for this journal
             PluginRegistry::loadCategory('pubIds', true, $journal->getId());
-            // Get unregistered articles
-            $unregisteredArticles = $plugin->getUnregisteredArticles($journal);
-            // If there are articles to be deposited
-            if (count($unregisteredArticles)) {
-                $this->_registerObjects($unregisteredArticles, 'article=>doaj-json', $journal, 'articles');
+            if ($journal->getData(Journal::SETTING_DOI_VERSIONING)) {
+                $depositablePublications = $plugin->getAllDepositablePublications($journal);
+                if (count($depositablePublications)) {
+                    $this->_registerObjects($depositablePublications, 'publication=>doaj-json', $journal);
+                }
+            } else {
+                $depositableArticles = $plugin->getAllDepositableArticles($journal);
+                if (count($depositableArticles)) {
+                    $this->_registerObjects($depositableArticles, 'article=>doaj-json', $journal);
+                }
             }
         }
 
@@ -80,16 +86,16 @@ class DOAJInfoSender extends ScheduledTask
      * Get all journals that meet the requirements to have
      * their articles automatically sent to DOAJ.
      *
-     * @return array
+     * @return array<Journal>
      */
-    public function _getJournals()
+    protected function _getJournals(): array
     {
         $plugin = $this->_plugin;
         $contextDao = Application::getContextDAO(); /** @var JournalDAO $contextDao */
         $journalFactory = $contextDao->getAll(true);
 
         $journals = [];
-        while ($journal = $journalFactory->next()) {
+        while ($journal = $journalFactory->next()) { /** @var  Journal $journal */
             $journalId = $journal->getId();
             if (!$plugin->getSetting($journalId, 'apiKey') || !$plugin->getSetting($journalId, 'automaticRegistration')) {
                 continue;
@@ -99,16 +105,12 @@ class DOAJInfoSender extends ScheduledTask
         return $journals;
     }
 
-
     /**
-     * Register objects
+     * Register articles or publications
      *
-     * @param array $objects
-     * @param string $filter
-     * @param \APP\journal\Journal $journal
-     * @param string $objectsFileNamePart
+     * @param array<Article|Publication> $objects
      */
-    public function _registerObjects($objects, $filter, $journal, $objectsFileNamePart)
+    protected function _registerObjects(array $objects, string $filter, Journal $journal): void
     {
         $plugin = $this->_plugin;
         foreach ($objects as $object) {
@@ -125,9 +127,8 @@ class DOAJInfoSender extends ScheduledTask
     /**
      * Add execution log entry
      *
-     * @param array $errors
      */
-    public function _addLogEntry($errors)
+    protected function _addLogEntry(array $errors): void
     {
         if (is_array($errors)) {
             foreach ($errors as $error) {
