@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/datacite/DataciteExportPlugin.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2025 Simon Fraser University
+ * Copyright (c) 2003-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DataciteExportPlugin
@@ -124,7 +124,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
     /**
      * @copydoc DOIPubIdExportPlugin::getSettingsFormClassName()
      */
-    public function getSettingsFormClassName()
+    public function getSettingsFormClassName(): string
     {
         throw new Exception('DOI settings no longer managed via plugin settings form.');
     }
@@ -354,35 +354,6 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
         Repo::doi()->edit($doiObject, $editParams);
     }
 
-    /**
-     * @copydoc DOIPubIdExportPlugin::markRegistered()
-     */
-    public function markRegistered($context, $objects)
-    {
-        foreach ($objects as $object) {
-            // Get all DOIs for each object
-            // Check if submission or issue
-            if ($object instanceof Submission) {
-                $doiIds = Repo::doi()->getDoisForSubmission($object->getId());
-            } else {
-                $doiIds = Repo::doi()->getDoisForIssue($object->getId, true);
-            }
-            foreach ($doiIds as $doiId) {
-                Repo::doi()->markRegistered($doiId);
-            }
-        }
-    }
-
-    /**
-     * Get request failed message setting name.
-     * NB: Changed as of 3.4
-     *
-     * @return string
-     */
-    public function getFailedMsgSettingName()
-    {
-        return $this->getPluginSettingsPrefix() . '_failedMsg';
-    }
 
     /**
      * Test whether the tar binary is available.
