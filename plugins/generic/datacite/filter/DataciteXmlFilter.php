@@ -193,7 +193,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $rootNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'publicationYear', date('Y', strtotime($publicationDate))));
         // Subjects
         $subjects = [];
-        if (!empty($galleyFile) && !empty($genre) && $genre->getSupplementary()) {
+        if (!empty($galleyFile) && !empty($genre) && $genre->supplementary) {
             $subjects = (array) $this->getPrimaryTranslation($galleyFile->getData('subject'), $objectLocalePrecedence);
         } elseif (!empty($article) && !empty($publication)) {
             $subjects = array_merge(
@@ -287,7 +287,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $plugin = $deployment->getPlugin();
         $creators = [];
         switch (true) {
-            case (isset($galleyFile) && ($genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'))) && $genre->getSupplementary()):
+            case (isset($galleyFile) && ($genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'))) && $genre->supplementary):
                 // Check whether we have a supp file creator set...
                 $creator = $this->getPrimaryTranslation($galleyFile->getData('creator'), $objectLocalePrecedence);
                 if (!empty($creator)) {
@@ -363,7 +363,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         // Get an array of localized titles.
         $alternativeTitle = null;
         switch (true) {
-            case (isset($galleyFile) && ($genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'))) && $genre->getSupplementary()):
+            case (isset($galleyFile) && ($genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'))) && $genre->supplementary):
                 $titles = $galleyFile->getData('name');
                 break;
             case isset($publication):
@@ -408,7 +408,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         switch (true) {
             case isset($galleyFile):
                 $genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'));
-                if ($genre->getSupplementary()) {
+                if ($genre->supplementary) {
                     // Created date (for supp files only): supp file date created.
                     $createdDate = $galleyFile->getData('dateCreated');
                     if (!empty($createdDate)) {
@@ -488,7 +488,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             case isset($galley):
                 if (!$galley->getData('urlRemote')) {
                     $genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'));
-                    if ($genre->getCategory() == Genre::GENRE_CATEGORY_DOCUMENT && !$genre->getSupplementary() && !$genre->getDependent()) {
+                    if ($genre->category == Genre::GENRE_CATEGORY_DOCUMENT && !$genre->supplementary && !$genre->dependent) {
                         $resourceType = 'Article';
                     }
                 } else {
@@ -674,7 +674,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             case isset($galley):
                 if (!$galley->getData('urlRemote')) {
                     $genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'));
-                    if ($genre->getSupplementary()) {
+                    if ($genre->supplementary) {
                         $suppFileDesc = $this->getPrimaryTranslation($galleyFile->getData('description'), $objectLocalePrecedence);
                         if (!empty($suppFileDesc)) {
                             $descriptions[DATACITE_DESCTYPE_OTHER] = $suppFileDesc;

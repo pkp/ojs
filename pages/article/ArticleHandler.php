@@ -535,7 +535,7 @@ class ArticleHandler extends Handler
                     $assocType = Application::ASSOC_TYPE_SUBMISSION_FILE;
                     $genre = Repo::genre()->get((int) $submissionFile->getData('genreId'));
                     // TO-DO: is this correct ?
-                    if ($genre->getCategory() != Genre::GENRE_CATEGORY_DOCUMENT || $genre->getSupplementary() || $genre->getDependent()) {
+                    if ($genre->category != Genre::GENRE_CATEGORY_DOCUMENT || $genre->supplementary || $genre->dependent) {
                         $assocType = Application::ASSOC_TYPE_SUBMISSION_FILE_COUNTER_OTHER;
                     }
                     event(new UsageEvent($assocType, $request->getContext(), $this->article, $this->galley, $submissionFile, $this->issue));
