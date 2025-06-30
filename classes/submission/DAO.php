@@ -15,6 +15,8 @@
 namespace APP\submission;
 
 use APP\plugins\PubObjectsExportPlugin;
+use APP\publication\enums\VersionStage;
+use APP\publication\Publication;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Database\Query\JoinClause;
 use Illuminate\Support\Facades\DB;
@@ -79,11 +81,12 @@ class DAO extends \PKP\submission\DAO
                         ->where('pss.setting_name', '=', $pubIdSettingName)
                 )
             )
-            ->where('s.status', '=', Submission::STATUS_PUBLISHED)
             ->where('s.context_id', '=', $contextId)
+            ->where('p.version_stage', '=', VersionStage::VERSION_OF_RECORD)
+            ->where('p.status', '=', Publication::STATUS_PUBLISHED)
             ->when($pubIdType != null, fn (Builder $q) => $q->where('pspidt.setting_name', '=', "pub-id::{$pubIdType}")->whereNotNull('pspidt.setting_value'))
             ->when($title != null, fn (Builder $q) => $q->where('pst.setting_name', '=', 'title')->where('pst.setting_value', 'LIKE', "%{$title}%"))
-            ->when($author != null, fn (Builder $q) => $q->whereRaw("CONCAT(COALESCE(asgs.setting_value, ''), ' ', COALESCE(asfs.setting_value, '')) LIKE ?", [$author]))
+            ->when($author != null, fn (Builder $q) => $q->whereRaw("CONCAT(COALESCE(asgs.setting_value, ''), ' ', COALESCE(asfs.setting_value, '')) LIKE ?", ["%{$author}%"]))
             ->when($issueId != null, fn (Builder $q) => $q->where('p.issue_id', '=', $issueId))
             ->when(
                 $pubIdSettingName,
