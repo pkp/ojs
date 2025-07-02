@@ -291,21 +291,23 @@ class ArticleSearchIndex extends SubmissionSearchIndex
             return;
         }
 
+        // Clear index
+        if ($log) {
+            echo __('search.cli.rebuildIndex.clearingIndex') . ' ... ';
+        }
+
         try {
             app(\Laravel\Scout\EngineManager::class)->engine()->flush(Config::getVar('search_index_name', 'submissions'));
         } catch (\Exception $e) {
             echo 'Exception: ' . $e->getMessage() . "\n";
         }
+        try {
+            app(\Laravel\Scout\EngineManager::class)->engine()->createIndex(Config::getVar('search_index_name', 'submissions'));
+        } catch (\Exception $e) {
+            echo 'Exception: ' . $e->getMessage() . "\n";
+        }
 
-        // Clear index
-        if ($log) {
-            echo __('search.cli.rebuildIndex.clearingIndex') . ' ... ';
-        }
-        $searchDao = DAORegistry::getDAO('ArticleSearchDAO'); /** @var ArticleSearchDAO $searchDao */
-        $searchDao->clearIndex($journal ? $journal->getId() : null);
-        if ($log) {
-            echo __('search.cli.rebuildIndex.done') . "\n";
-        }
+        echo "\n";
 
         // Build index
         $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
