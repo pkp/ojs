@@ -30,6 +30,7 @@ use APP\template\TemplateManager;
 use Firebase\JWT\Key;
 use PKP\components\UserCommentComponent;
 use PKP\config\Config;
+use PKP\context\Context;
 use PKP\core\Core;
 use PKP\core\PKPApplication;
 use PKP\core\PKPJwt as JWT;
@@ -242,6 +243,21 @@ class ArticleHandler extends Handler
             'enablePublicComments' => $enablePublicComments,
         ]);
         $this->setupTemplate($request);
+
+        $doiObject = $publication->getData('doiObject');
+        if (!$doiObject) {
+            if ($context->getData(Context::SETTING_DOI_VERSIONING)) {
+                // get DOI from a sibling minor version
+                $doiObject = Repo::publication()->getMinorVersionsDoi($publication);
+            } else {
+                if ($publication->getId() !== $article->getCurrentPublication()->getId()) {
+                    $doiObject = $article->getCurrentPublication()->getData('doiObject');
+                }
+            }
+        }
+        $templateMgr->assign([
+            'doiObject' => $doiObject,
+        ]);
 
         // Get the earliest published publication
         $firstPublication = $article->getData('publications')->reduce(function ($a, $b) {
