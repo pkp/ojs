@@ -17,6 +17,8 @@ namespace APP\publication;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\enums\IssueAssignment;
+use APP\journal\Journal;
+use APP\journal\JournalDAO;
 use APP\payment\ojs\OJSCompletedPaymentDAO;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\publication\enums\VersionStage;
@@ -25,6 +27,7 @@ use Illuminate\Support\Facades\App;
 use PKP\context\Context;
 use PKP\core\Core;
 use PKP\db\DAORegistry;
+use PKP\doi\exceptions\DoiException;
 
 class Repository extends \PKP\publication\Repository
 {
@@ -158,7 +161,7 @@ class Repository extends \PKP\publication\Repository
                 $newGalley = clone $galley;
                 $newGalley->setData('id', null);
                 $newGalley->setData('publicationId', $newId);
-                if ($isDoiVersioningEnabled) {
+                if ($isDoiVersioningEnabled && !$isMinorVersion) {
                     $newGalley->setData('doiId', null);
                 }
                 Repo::galley()->add($newGalley);
@@ -237,15 +240,43 @@ class Repository extends \PKP\publication\Repository
         parent::delete($publication);
     }
 
-    /**
-     * Create all DOIs associated with the publication.
-     *
-     * @throws \Exception
-     */
-    protected function createDois(Publication $newPublication): void
+    /** @copydoc \PKP\publication\Repository::createDois() */
+    public function createDois(Publication $publication): array
     {
-        $submission = Repo::submission()->get($newPublication->getData('submissionId'));
-        Repo::submission()->createDois($submission);
+        $submission = Repo::submission()->get($publication->getData('submissionId'));
+
+        /** @var JournalDAO $contextDao */
+        $contextDao = Application::getContextDAO();
+        /** @var Journal $context */
+        $context = $contextDao->getById($submission->getData('contextId'));
+
+        $doiCreationFailures = [];
+
+        if ($context->isDoiTypeEnabled(Repo::doi()::TYPE_PUBLICATION) && empty($publication->getData('doiId'))) {
+            try {
+                $doiId = Repo::doi()->mintPublicationDoi($publication, $submission, $context);
+                Repo::publication()->edit($publication, ['doiId' => $doiId]);
+            } catch (DoiException $exception) {
+                $doiCreationFailures[] = $exception;
+            }
+        }
+
+        // Galleys
+        if ($context->isDoiTypeEnabled(Repo::doi()::TYPE_REPRESENTATION)) {
+            $galleys = $publication->getData('galleys');
+            foreach ($galleys as $galley) {
+                if (empty($galley->getData('doiId'))) {
+                    try {
+                        $doiId = Repo::doi()->mintGalleyDoi($galley, $publication, $submission, $context);
+                        Repo::galley()->edit($galley, ['doiId' => $doiId]);
+                    } catch (DoiException $exception) {
+                        $doiCreationFailures[] = $exception;
+                    }
+                }
+            }
+        }
+
+        return $doiCreationFailures;
     }
 
     /**
