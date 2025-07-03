@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/submission/Repository.php
  *
@@ -14,7 +15,9 @@
 namespace APP\submission;
 
 use APP\article\ArticleTombstoneManager;
+use APP\core\Application;
 use APP\facades\Repo;
+use APP\journal\Journal;
 use APP\journal\JournalDAO;
 use APP\section\Section;
 use PKP\context\Context;
@@ -140,7 +143,8 @@ class Repository extends \PKP\submission\Repository
     public function createDois(Submission $submission): array
     {
         /** @var JournalDAO $contextDao */
-        $contextDao = DAORegistry::getDAO('JournalDAO');
+        $contextDao = Application::getContextDAO();
+        /** @var Journal $context */
         $context = $contextDao->getById($submission->getData('contextId'));
 
         // Article
