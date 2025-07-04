@@ -27,12 +27,3 @@ use PKP\decision\Decision as BaseDecision;
 class Decision extends BaseDecision
 {
 }
-
-if (!PKP_STRICT_MODE) {
-    // Some constants are not redefined here because they never existed as global constants
-    define('SUBMISSION_EDITOR_DECISION_EXTERNAL_REVIEW', Decision::EXTERNAL_REVIEW);
-    define('SUBMISSION_EDITOR_DECISION_ACCEPT', Decision::ACCEPT);
-    define('SUBMISSION_EDITOR_DECISION_DECLINE', Decision::DECLINE);
-    define('SUBMISSION_EDITOR_DECISION_PENDING_REVISIONS', Decision::PENDING_REVISIONS);
-    define('SUBMISSION_EDITOR_DECISION_RESUBMIT', Decision::RESUBMIT);
-}

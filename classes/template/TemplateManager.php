@@ -205,7 +205,3 @@ class TemplateManager extends PKPTemplateManager
         $this->setState(['menu' => $menu]);
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\template\TemplateManager', '\TemplateManager');
-}

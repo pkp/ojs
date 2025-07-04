@@ -56,14 +56,3 @@ class Journal extends Context
         return DAORegistry::getDAO('JournalDAO');
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\journal\Journal', '\Journal');
-    foreach ([
-        'PUBLISHING_MODE_OPEN',
-        'PUBLISHING_MODE_SUBSCRIPTION',
-        'PUBLISHING_MODE_NONE',
-    ] as $constantName) {
-        define($constantName, constant('\Journal::' . $constantName));
-    }
-}

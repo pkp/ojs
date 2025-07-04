@@ -407,7 +407,3 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
         return array_merge(parent::getDAOs(), [Repo::issue()->dao]);
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\PubIdPlugin', '\PubIdPlugin');
-}

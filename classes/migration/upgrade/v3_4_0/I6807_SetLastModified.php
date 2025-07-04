@@ -36,7 +36,3 @@ class I6807_SetLastModified extends \PKP\migration\Migration
         // We don't have the data to downgrade and downgrades are unwanted here anyway.
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\migration\upgrade\v3_4_0\I6807_SetLastModified', '\I6807_SetLastModified');
-}

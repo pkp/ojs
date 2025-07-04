@@ -552,7 +552,3 @@ class URNPubIdPlugin extends PubIdPlugin
         return $quotString[strlen($quotString) - 1];
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\pubIds\urn\URNPubIdPlugin', '\URNPubIdPlugin');
-}

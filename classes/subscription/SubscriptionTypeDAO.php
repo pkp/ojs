@@ -383,7 +383,3 @@ class SubscriptionTypeDAO extends \PKP\db\DAO
         }
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\subscription\SubscriptionTypeDAO', '\SubscriptionTypeDAO');
-}

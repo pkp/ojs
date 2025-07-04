@@ -33,7 +33,3 @@ class IndividualSubscription extends Subscription
         return $subscriptionDao->isValidIndividualSubscription($this->getData('userId'), $this->getData('journalId'), $check, $checkDate);
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\subscription\IndividualSubscription', '\IndividualSubscription');
-}

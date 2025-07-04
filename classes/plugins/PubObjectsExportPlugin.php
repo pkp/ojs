@@ -919,20 +919,3 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin implements HasT
         return false;
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\PubObjectsExportPlugin', '\PubObjectsExportPlugin');
-
-    foreach ([
-        'EXPORT_STATUS_ANY',
-        'EXPORT_STATUS_NOT_DEPOSITED',
-        'EXPORT_STATUS_MARKEDREGISTERED',
-        'EXPORT_STATUS_REGISTERED',
-        'EXPORT_ACTION_EXPORT',
-        'EXPORT_ACTION_MARKREGISTERED',
-        'EXPORT_ACTION_DEPOSIT',
-        'EXPORT_CONFIG_ERROR_SETTINGS',
-    ] as $constantName) {
-        define($constantName, constant('\PubObjectsExportPlugin::' . $constantName));
-    }
-}

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/security/authorization/OjsIssueGalleyRequiredPolicy.php
  *
@@ -62,8 +63,4 @@ class OjsIssueGalleyRequiredPolicy extends DataObjectRequiredPolicy
         $this->addAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE_GALLEY, $issueGalley);
         return AuthorizationPolicy::AUTHORIZATION_PERMIT;
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\security\authorization\OjsIssueGalleyRequiredPolicy', '\OjsIssueGalleyRequiredPolicy');
 }

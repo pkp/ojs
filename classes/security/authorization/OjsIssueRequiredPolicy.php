@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/security/authorization/OjsIssueRequiredPolicy.php
  *
@@ -111,8 +112,4 @@ class OjsIssueRequiredPolicy extends DataObjectRequiredPolicy
 
         return false;
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\security\authorization\OjsIssueRequiredPolicy', '\OjsIssueRequiredPolicy');
 }

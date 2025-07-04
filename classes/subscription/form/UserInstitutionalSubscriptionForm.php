@@ -238,7 +238,3 @@ class UserInstitutionalSubscriptionForm extends Form
         parent::execute(...$functionArgs);
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\subscription\form\UserInstitutionalSubscriptionForm', '\UserInstitutionalSubscriptionForm');
-}

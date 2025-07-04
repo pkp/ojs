@@ -399,14 +399,3 @@ abstract class SubscriptionDAO extends \PKP\db\DAO
         $this->updateObject($subscription);
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\subscription\SubscriptionDAO', '\SubscriptionDAO');
-    foreach ([
-        'SUBSCRIPTION_MEMBERSHIP',
-        'SUBSCRIPTION_REFERENCE_NUMBER',
-        'SUBSCRIPTION_NOTES',
-    ] as $constantName) {
-        define($constantName, constant('\SubscriptionDAO::' . $constantName));
-    }
-}

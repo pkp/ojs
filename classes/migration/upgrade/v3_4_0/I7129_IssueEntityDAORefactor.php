@@ -104,7 +104,3 @@ class I7129_IssueEntityDAORefactor extends \PKP\migration\Migration
         }
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\migration\upgrade\v3_4_0\I7129_IssueEntityDAORefactor', '\I7129_IssueEntityDAORefactor');
-}

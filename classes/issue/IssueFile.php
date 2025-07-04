@@ -85,8 +85,3 @@ class IssueFile extends PKPFile
         return $this->setData('dateModified', $dateModified);
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\issue\IssueFile', '\IssueFile');
-    define('ISSUE_FILE_PUBLIC', IssueFile::ISSUE_FILE_PUBLIC);
-}
