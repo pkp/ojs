@@ -17,7 +17,6 @@ namespace APP\plugins\generic\recommendBySimilarity;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\handler\Handler;
-use APP\search\ArticleSearch;
 use APP\submission\Collector;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
@@ -62,7 +61,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin
         $submissionId = $templateManager->getTemplateVars('article')->getId();
 
         // If there's no keywords, quit
-        if (!strlen($searchPhrase = implode(' ', (new ArticleSearch())->getSimilarityTerms($submissionId)))) {
+        if (!strlen($searchPhrase = implode(' ', (new ArticleSearch())->getSimilarityTerms($submissionId)))) { // FIXME
             return null;
         }
 
