@@ -94,7 +94,3 @@ class ArticleTombstoneManager
         }
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\article\ArticleTombstoneManager', '\ArticleTombstoneManager');
-}

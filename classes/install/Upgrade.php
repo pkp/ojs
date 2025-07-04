@@ -145,7 +145,3 @@ class Upgrade extends Installer
         return $fileStagePathMap[$fileStage];
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\install\Upgrade', '\Upgrade');
-}

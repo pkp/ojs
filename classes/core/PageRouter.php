@@ -27,7 +27,3 @@ class PageRouter extends \PKP\core\PKPPageRouter
         return ['about', 'announcement', 'help', 'index', 'information', 'issue', ''];
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\core\PageRouter', '\PageRouter');
-}

@@ -229,7 +229,3 @@ class PaypalPaymentPlugin extends PaymethodPlugin
         }
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\paymethod\paypal\PaypalPaymentPlugin', '\PaypalPaymentPlugin');
-}

@@ -540,7 +540,3 @@ class IndividualSubscriptionDAO extends SubscriptionDAO
         return $this->_renewSubscription($individualSubscription);
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\subscription\IndividualSubscriptionDAO', '\IndividualSubscriptionDAO');
-}

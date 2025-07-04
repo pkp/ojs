@@ -437,7 +437,3 @@ class ArticleSearch extends SubmissionSearch
         return $currentPublication->getData('published');
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\search\ArticleSearch', '\ArticleSearch');
-}

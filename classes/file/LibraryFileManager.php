@@ -21,7 +21,3 @@ use PKP\file\PKPLibraryFileManager;
 class LibraryFileManager extends PKPLibraryFileManager
 {
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\file\LibraryFileManager', '\LibraryFileManager');
-}

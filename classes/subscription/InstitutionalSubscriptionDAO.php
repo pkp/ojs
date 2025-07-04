@@ -697,14 +697,3 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
         LEFT JOIN institution_settings isapl ON (isapl.institution_id = iss.institution_id AND isapl.setting_name = ? AND isapl.locale = ?)';
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\subscription\InstitutionalSubscriptionDAO', '\InstitutionalSubscriptionDAO');
-    foreach ([
-        'SUBSCRIPTION_INSTITUTION_NAME',
-        'SUBSCRIPTION_DOMAIN',
-        'SUBSCRIPTION_IP_RANGE',
-    ] as $constantName) {
-        define($constantName, constant('\InstitutionalSubscriptionDAO::' . $constantName));
-    }
-}

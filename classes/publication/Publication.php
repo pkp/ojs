@@ -81,7 +81,3 @@ class Publication extends PKPPublication
         return !$issue->getData('published') && $this->getData('published');
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\publication\Publication', '\Publication');
-}

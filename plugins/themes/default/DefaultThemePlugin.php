@@ -15,8 +15,8 @@
 namespace APP\plugins\themes\default;
 
 use APP\core\Application;
-use APP\journal\enums\JournalContentOption;
 use APP\file\PublicFileManager;
+use APP\journal\enums\JournalContentOption;
 use PKP\config\Config;
 use PKP\core\PKPSessionGuard;
 
@@ -96,7 +96,7 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
             ],
             'default' => false,
         ]);
-        
+
         $this->addOption('journalContentOrganization', 'FieldOptions', [
             'label' => __('manager.setup.journalContentOrganization'),
             'description' => __('manager.setup.journalContentOrganization.description'),
@@ -280,8 +280,4 @@ class DefaultThemePlugin extends \PKP\plugins\ThemePlugin
             'prevSlide' => __('plugins.themes.default.prevSlide'),
         ]);
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\themes\default\DefaultThemePlugin', '\DefaultThemePlugin');
 }

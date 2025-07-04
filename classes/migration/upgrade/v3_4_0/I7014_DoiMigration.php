@@ -788,7 +788,3 @@ class I7014_DoiMigration extends PKPI7014_DoiMigration
         return $pattern;
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\migration\upgrade\v3_4_0\I7014_DoiMigration', '\I7014_DoiMigration');
-}

@@ -35,15 +35,11 @@ class ReviewerReviewStep3Form extends PKPReviewerReviewStep3Form
             $this,
             'reviewerRecommendationId',
             'required',
-            'reviewer.submission.reviewFormResponse.form.recommendationRequired', 
+            'reviewer.submission.reviewFormResponse.form.recommendationRequired',
             fn ($reviewerRecommendationId) => ReviewerRecommendation::query()
                 ->withContextId($reviewSubmission->getData('contextId'))
                 ->withRecommendations([$reviewerRecommendationId])
                 ->exists()
         ));
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\submission\reviewer\form\ReviewerReviewStep3Form', '\ReviewerReviewStep3Form');
 }

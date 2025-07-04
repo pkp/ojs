@@ -67,7 +67,3 @@ class OjsJournalMustPublishPolicy extends AuthorizationPolicy
         return AuthorizationPolicy::AUTHORIZATION_PERMIT;
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\security\authorization\OjsJournalMustPublishPolicy', '\OjsJournalMustPublishPolicy');
-}
