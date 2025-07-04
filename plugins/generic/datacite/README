@@ -12,7 +12,7 @@ the registration of DOIs with DataCite.
 
 License
 -------
-This plugin is licensed under the GNU General Public License v2. See the file COPYING for the
+This plugin is licensed under the GNU General Public License v3. See the file docs/COPYING for the
 complete terms of this license.
 
 System Requirements
@@ -25,4 +25,3 @@ In order to register DOIs with DataCite from within OJS you will have to enter y
 If you do not enter or have your own username and password you'll still be able to export into the
 DataCite XML format but you cannot register your DOIs from within OJS.
 Please note, that the passowrd will be saved as plain text, i.e. not encrypted, due to DataCite registration service requirements.
-
