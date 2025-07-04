@@ -216,46 +216,6 @@ Hooks
     
     Parameters: `[[&$request, &$issue, &$this->galley, &$article, $publication]]`
 
-`ArticleSearch::getSimilarityTerms`
-    Class: :php:class:`APP\search\ArticleSearch`
-    
-    Parameters: `[[$submissionId, &$searchTerms]]`
-
-`ArticleSearchIndex::articleChangesFinished`
-    Class: :php:class:`APP\search\ArticleSearchIndex`
-    
-    Parameters: `[]`
-
-`ArticleSearchIndex::articleDeleted`
-    Class: :php:class:`APP\search\ArticleSearchIndex`
-    
-    Parameters: `[[$articleId]]`
-
-`ArticleSearchIndex::articleMetadataChanged`
-    Class: :php:class:`APP\search\ArticleSearchIndex`
-    
-    Parameters: `[[$submission]]`
-
-`ArticleSearchIndex::rebuildIndex`
-    Class: :php:class:`APP\search\ArticleSearchIndex`
-    
-    Parameters: `[[$log, $journal, $switches]]`
-
-`ArticleSearchIndex::submissionFileChanged`
-    Class: :php:class:`APP\search\ArticleSearchIndex`
-    
-    Parameters: `[[$articleId, $type, $submissionFile->getId()]]`
-
-`ArticleSearchIndex::submissionFileDeleted`
-    Class: :php:class:`APP\search\ArticleSearchIndex`
-    
-    Parameters: `[[$articleId, $type, $assocId]]`
-
-`ArticleSearchIndex::submissionFilesChanged`
-    Class: :php:class:`APP\search\ArticleSearchIndex`
-    
-    Parameters: `[[$article]]`
-
 `Author::Collector`
     Class: :php:class:`PKP\author\Collector`
     
@@ -1296,16 +1256,6 @@ Hooks
     Class: :php:class:`PKP\submissionFile\`
     
     Parameters: `[[ &$errors, $object, $props, $allowedLocales, $primaryLocale ]]`
-
-`SubmissionSearch::getResultSetOrderingOptions`
-    Class: :php:class:`APP\search\ArticleSearch`
-    
-    Parameters: `[[$context, &$resultSetOrderingOptions]]`
-
-`SubmissionSearch::retrieveResults`
-    Class: :php:class:`PKP\search\`
-    
-    Parameters: `[[&$context, &$keywords, $publishedFrom, $publishedTo, $orderBy, $orderDir, $exclude, $page, $itemsPerPage, &$totalResults, &$error, &$results]]`
 
 `SubscriptionDAO::_fromRow`
     Class: :php:class:`APP\subscription\`

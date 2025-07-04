@@ -20,7 +20,6 @@ namespace APP\core;
 use APP\facades\Repo;
 use APP\journal\JournalDAO;
 use APP\payment\ojs\OJSPaymentManager;
-use APP\search\ArticleSearchIndex;
 use PKP\context\Context;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
@@ -105,7 +104,6 @@ class Application extends PKPApplication
     public function getDAOMap(): array
     {
         return array_merge(parent::getDAOMap(), [
-            'ArticleSearchDAO' => 'APP\search\ArticleSearchDAO',
             'IndividualSubscriptionDAO' => 'APP\subscription\IndividualSubscriptionDAO',
             'InstitutionalSubscriptionDAO' => 'APP\subscription\InstitutionalSubscriptionDAO',
             'IssueGalleyDAO' => 'APP\issue\IssueGalleyDAO',
@@ -160,22 +158,6 @@ class Application extends PKPApplication
     public static function getRepresentationDAO(): RepresentationDAOInterface
     {
         return Repo::galley()->dao;
-    }
-
-    /**
-     * Get a SubmissionSearchIndex instance.
-     */
-    public static function getSubmissionSearchIndex(): ArticleSearchIndex
-    {
-        return new ArticleSearchIndex();
-    }
-
-    /**
-     * Get a SubmissionSearchDAO instance.
-     */
-    public static function getSubmissionSearchDAO(): \APP\search\ArticleSearchDAO
-    {
-        return DAORegistry::getDAO('ArticleSearchDAO');
     }
 
     /**
