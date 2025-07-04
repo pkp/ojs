@@ -18,7 +18,6 @@ use APP\author\Author;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\handler\Handler;
-use APP\search\ArticleSearch;
 use APP\statistics\StatisticsHelper;
 use PKP\core\VirtualArrayIterator;
 use PKP\plugins\GenericPlugin;
@@ -158,7 +157,7 @@ class RecommendByAuthorPlugin extends GenericPlugin
         }
 
         // Visualization.
-        $articleSearch = new ArticleSearch();
+        $articleSearch = new ArticleSearch(); // FIXME
         $pagedResults = $articleSearch->formatResults($pagedResults);
         $returner = new VirtualArrayIterator($pagedResults, $totalResults, $page, $itemsPerPage);
         $smarty->assign('articlesBySameAuthor', $returner);
