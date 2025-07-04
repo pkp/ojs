@@ -712,12 +712,7 @@ class Issue extends \PKP\core\DataObject
         return __('plugins.importexport.issue.cli.display', ['issueId' => $this->getId(), 'issueIdentification' => $this->getIssueIdentification()]);
     }
 }
+
 if (!PKP_STRICT_MODE) {
     class_alias('\APP\issue\Issue', '\Issue');
-    foreach ([
-        'ISSUE_ACCESS_OPEN',
-        'ISSUE_ACCESS_SUBSCRIPTION',
-    ] as $constantName) {
-        define($constantName, constant('\Issue::' . $constantName));
-    }
 }

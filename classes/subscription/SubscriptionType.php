@@ -372,14 +372,3 @@ class SubscriptionType extends \PKP\core\DataObject
         return $this->getLocalizedName() . ' - ' . $this->getDurationYearsMonths() . ' - ' . sprintf('%.2f', $this->getCost()) . ' ' . $this->getCurrencyStringShort();
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\subscription\SubscriptionType', '\SubscriptionType');
-    foreach ([
-        'SUBSCRIPTION_TYPE_FORMAT_ONLINE',
-        'SUBSCRIPTION_TYPE_FORMAT_PRINT',
-        'SUBSCRIPTION_TYPE_FORMAT_PRINT_ONLINE',
-    ] as $constantName) {
-        define($constantName, constant('\SubscriptionType::' . $constantName));
-    }
-}

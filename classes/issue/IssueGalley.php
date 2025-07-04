@@ -164,7 +164,3 @@ class IssueGalley extends IssueFile
         return $this->_issueFile;
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\issue\IssueGalley', '\IssueGalley');
-}

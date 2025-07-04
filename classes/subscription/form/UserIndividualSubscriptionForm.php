@@ -204,7 +204,3 @@ class UserIndividualSubscriptionForm extends Form
         $paymentForm->display($this->request);
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\subscription\form\UserIndividualSubscriptionForm', '\UserIndividualSubscriptionForm');
-}

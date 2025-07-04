@@ -264,7 +264,3 @@ class OJSCompletedPaymentDAO extends \PKP\db\DAO
         return $payment;
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\payment\ojs\OJSCompletedPaymentDAO', '\OJSCompletedPaymentDAO');
-}

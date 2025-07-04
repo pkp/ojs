@@ -72,7 +72,3 @@ class SubmissionEventLogEntry extends PKPSubmissionEventLogEntry
 {
     public const SUBMISSION_LOG_REVIEW_RECOMMENDATION_BY_PROXY = 1073741846; // 0x40000016;
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\log\event\SubmissionEventLogEntry', '\SubmissionEventLogEntry');
-}

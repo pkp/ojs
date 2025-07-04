@@ -20,7 +20,3 @@ namespace APP\core;
 class Services extends \PKP\core\PKPServices
 {
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\core\Services', '\Services');
-}

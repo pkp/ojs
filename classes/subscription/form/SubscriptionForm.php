@@ -251,7 +251,3 @@ class SubscriptionForm extends Form
         return $mailable;
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\subscription\form\SubscriptionForm', '\SubscriptionForm');
-}

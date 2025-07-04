@@ -66,7 +66,3 @@ class SubscriptionAction
         }
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\subscription\SubscriptionAction', '\SubscriptionAction');
-}

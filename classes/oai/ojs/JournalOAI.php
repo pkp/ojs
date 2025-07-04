@@ -181,6 +181,8 @@ class JournalOAI extends OAI
 
     /**
      * @copydoc OAI::records()
+     *
+     * @hook JournalOAI::records [[$this, $from, $until, $set, $offset, $limit, &$total, &$records]]
      */
     public function records($metadataPrefix, $from, $until, $set, $offset, $limit, &$total)
     {
@@ -199,6 +201,8 @@ class JournalOAI extends OAI
 
     /**
      * @copydoc OAI::identifiers()
+     *
+     * @hook JournalOAI::identifiers [[$this, $from, $until, $set, $offset, $limit, &$total, &$records]]
      */
     public function identifiers($metadataPrefix, $from, $until, $set, $offset, $limit, &$total)
     {
@@ -217,6 +221,8 @@ class JournalOAI extends OAI
 
     /**
      * @copydoc OAI::sets()
+     *
+     * @hook JournalOAI::sets [[$this, $offset, $limit, &$total, &$sets]]
      */
     public function sets($offset, $limit, &$total)
     {
@@ -249,8 +255,4 @@ class JournalOAI extends OAI
         $this->dao->insertToken($token);
         return $token;
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\oai\ojs\JournalOAI', '\JournalOAI');
 }
