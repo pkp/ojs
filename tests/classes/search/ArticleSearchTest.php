@@ -24,17 +24,17 @@ use APP\journal\Journal;
 use APP\journal\JournalDAO;
 use APP\search\ArticleSearch;
 use APP\search\ArticleSearchDAO;
-use APP\submission\Repository as SubmissionRepository;
 use APP\section\Repository as SectionRepository;
+use APP\submission\Repository as SubmissionRepository;
 use Mockery;
 use Mockery\MockInterface;
 use PKP\core\VirtualArrayIterator;
 use PKP\core\ItemIterator;
 use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use PKP\db\DAORegistry;
 use PKP\plugins\Hook;
 use PKP\tests\PKPTestCase;
-use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 #[RunTestsInSeparateProcesses]
 #[CoversClass(ArticleSearch::class)]
@@ -109,6 +109,7 @@ class ArticleSearchTest extends PKPTestCase
 
         /**
          * @disregard P1013 PHP Intelephense error suppression
+         *
          * @see https://github.com/bmewburn/vscode-intelephense/issues/568
          */
         $publicationMock = Mockery::mock(\APP\publication\Publication::class)
@@ -120,14 +121,14 @@ class ArticleSearchTest extends PKPTestCase
             ->with('published')
             ->andReturn(false)
             ->getMock();
-        
+
         $sectionMock = Mockery::mock(\APP\section\Section::class)
             ->makePartial()
             ->shouldReceive('get')
             ->withAnyArgs()
             ->andReturn(new \APP\section\Section())
             ->getMock();
-        
+
         $sectionRepoMock = Mockery::mock(SectionRepository::class)
             ->makePartial()
             ->shouldReceive('get')
@@ -216,10 +217,10 @@ class ArticleSearchTest extends PKPTestCase
         $this->registerMockArticleSearchDAO(); // This is necessary to instantiate a fresh iterator.
         $keywords = [null => 'test'];
         $searchResult = $articleSearch->retrieveResults($request, $journal, $keywords, $error);
-        
+
         self::assertFalse($searchResult->eof());
         self::assertEquals(self::SUBMISSION_SEARCH_TEST_DEFAULT_ARTICLE, $searchResult->getCount());
-        
+
         $searchResult->next();
         self::assertTrue($searchResult->eof());
     }
