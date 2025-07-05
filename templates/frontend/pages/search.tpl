@@ -129,10 +129,8 @@
 	{* Results pagination *}
 	{else}
 		<div class="cmp_pagination">
-{*  FIXME
 			{page_info iterator=$results}
 			{page_links anchor="results" iterator=$results name="search" query=$query searchJournal=$searchJournal authors=$authors dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear}
-*}
 		</div>
 	{/if}
 
