@@ -100,7 +100,7 @@
 	<h2 class="pkp_screen_reader">{translate key="search.searchResults"}</h2>
 
 	{* Results pagination *}
-	{if !$results->wasEmpty()}
+	{if $results->count()}
 		{assign var="count" value=$results->count}
 		<div class="pkp_screen_reader" role="status">
 			{if $results->count > 1}
@@ -113,21 +113,17 @@
 
 	{* Search results, finally! *}
 	<ul class="search_results">
-		{iterate from=results item=result}
+		{foreach from=$results item=result}
 			<li>
 				{include file="frontend/objects/article_summary.tpl" article=$result.publishedSubmission journal=$result.journal showDatePublished=true hideGalleys=true heading="h3"}
 			</li>
-		{/iterate}
+		{/foreach}
 	</ul>
 
 	{* No results found *}
-	{if $results->wasEmpty()}
+	{if $results->count() == 0}
 		<span role="status">
-			{if $error}
-				{include file="frontend/components/notification.tpl" type="error" message=$error|escape}
-			{else}
-				{include file="frontend/components/notification.tpl" type="notice" messageKey="search.noResults"}
-			{/if}
+			{include file="frontend/components/notification.tpl" type="notice" messageKey="search.noResults"}
 		</span>
 
 	{* Results pagination *}
