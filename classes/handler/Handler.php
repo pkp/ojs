@@ -21,7 +21,3 @@ use PKP\handler\PKPHandler;
 class Handler extends PKPHandler
 {
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\handler\Handler', '\Handler');
-}

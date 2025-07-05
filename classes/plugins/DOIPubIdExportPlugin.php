@@ -205,7 +205,3 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
         return false;
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\DOIPubIdExportPlugin', '\DOIPubIdExportPlugin');
-}

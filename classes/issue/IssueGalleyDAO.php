@@ -393,7 +393,3 @@ class IssueGalleyDAO extends \PKP\db\DAO
         return $row->next_sequence;
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\issue\IssueGalleyDAO', '\IssueGalleyDAO');
-}

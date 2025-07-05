@@ -240,7 +240,3 @@ class DRIVERPlugin extends GenericPlugin
         return false;
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\generic\driver\DRIVERPlugin', '\DRIVERPlugin');
-}

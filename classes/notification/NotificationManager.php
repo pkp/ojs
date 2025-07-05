@@ -167,7 +167,3 @@ class NotificationManager extends PKPNotificationManager
         ] + parent::getNotificationSettingsMap();
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\notification\NotificationManager', '\NotificationManager');
-}

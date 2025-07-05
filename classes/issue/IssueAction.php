@@ -175,7 +175,3 @@ class IssueAction
         return (bool) $result;
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\issue\IssueAction', '\IssueAction');
-}

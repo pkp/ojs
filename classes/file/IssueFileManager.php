@@ -227,7 +227,3 @@ class IssueFileManager extends FileManager
         return $issueFile;
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\file\IssueFileManager', '\IssueFileManager');
-}

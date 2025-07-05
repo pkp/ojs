@@ -91,7 +91,3 @@ class PaymentTypesForm extends Form
         $journalDao->updateObject($journal);
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\subscription\form\PaymentTypesForm', '\PaymentTypesForm');
-}
