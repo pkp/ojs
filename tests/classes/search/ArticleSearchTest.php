@@ -24,15 +24,15 @@ use APP\journal\Journal;
 use APP\journal\JournalDAO;
 use APP\search\ArticleSearch;
 use APP\search\ArticleSearchDAO;
-use APP\submission\Repository as SubmissionRepository;
 use APP\section\Repository as SectionRepository;
+use APP\submission\Repository as SubmissionRepository;
 use Mockery;
 use Mockery\MockInterface;
 use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 use PKP\db\DAORegistry;
 use PKP\plugins\Hook;
 use PKP\tests\PKPTestCase;
-use PHPUnit\Framework\Attributes\RunTestsInSeparateProcesses;
 
 #[RunTestsInSeparateProcesses]
 #[CoversClass(ArticleSearch::class)]
@@ -107,6 +107,7 @@ class ArticleSearchTest extends PKPTestCase
 
         /**
          * @disregard P1013 PHP Intelephense error suppression
+         *
          * @see https://github.com/bmewburn/vscode-intelephense/issues/568
          */
         $publicationMock = Mockery::mock(\APP\publication\Publication::class)
@@ -118,14 +119,14 @@ class ArticleSearchTest extends PKPTestCase
             ->with('published')
             ->andReturn(false)
             ->getMock();
-        
+
         $sectionMock = Mockery::mock(\APP\section\Section::class)
             ->makePartial()
             ->shouldReceive('get')
             ->withAnyArgs()
             ->andReturn(new \APP\section\Section())
             ->getMock();
-        
+
         $sectionRepoMock = Mockery::mock(SectionRepository::class)
             ->makePartial()
             ->shouldReceive('get')
@@ -189,7 +190,7 @@ class ArticleSearchTest extends PKPTestCase
         $searchResult = $articleSearch->retrieveResults($request, $journal, $keywords, $error);
 
         // Test whether the result from the mocked DAOs is being returned.
-        self::assertInstanceOf('ItemIterator', $searchResult);
+        self::assertInstanceOf('\PKP\core\ItemIterator', $searchResult);
         $firstResult = $searchResult->next();
         self::assertArrayHasKey('article', $firstResult);
         self::assertEquals(self::SUBMISSION_SEARCH_TEST_DEFAULT_ARTICLE, $firstResult['article']->getId());
@@ -214,10 +215,10 @@ class ArticleSearchTest extends PKPTestCase
         $this->registerMockArticleSearchDAO(); // This is necessary to instantiate a fresh iterator.
         $keywords = [null => 'test'];
         $searchResult = $articleSearch->retrieveResults($request, $journal, $keywords, $error);
-        
+
         self::assertFalse($searchResult->eof());
         self::assertEquals(self::SUBMISSION_SEARCH_TEST_DEFAULT_ARTICLE, $searchResult->getCount());
-        
+
         $searchResult->next();
         self::assertTrue($searchResult->eof());
     }
@@ -266,7 +267,7 @@ class ArticleSearchTest extends PKPTestCase
             self::assertCount(1, array_filter($calledHooks, fn ($hook) => $hook[0] === 'SubmissionSearch::retrieveResults'));
 
             // Test whether the result from the hook is being returned.
-            self::assertInstanceOf('VirtualArrayIterator', $searchResult);
+            self::assertInstanceOf('\PKP\core\VirtualArrayIterator', $searchResult);
 
             // Test the total count.
             self::assertEquals(3, $searchResult->getCount());
