@@ -163,3 +163,7 @@ class Submission extends PKPSubmission
         return $this->getData('galleys');
     }
 }
+
+if (!PKP_STRICT_MODE) {
+    class_alias('\APP\submission\Submission', '\Submission');
+}
