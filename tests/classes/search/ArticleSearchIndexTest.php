@@ -327,7 +327,7 @@ class ArticleSearchIndexTest extends PKPTestCase
         self::assertEquals('ArticleSearchIndex::articleMetadataChanged', $hook);
 
         [$article] = $params;
-        self::assertInstanceOf('Submission', $article);
+        self::assertInstanceOf(Submission::class, $article);
 
         // Returning "true" is required so that the default submissionMetadataChanged()
         // code won't run.
@@ -345,7 +345,7 @@ class ArticleSearchIndexTest extends PKPTestCase
         self::assertEquals('ArticleSearchIndex::submissionFilesChanged', $hook);
 
         [$article] = $params;
-        self::assertInstanceOf('Submission', $article);
+        self::assertInstanceOf(Submission::class, $article);
 
         // Returning "true" is required so that the default submissionMetadataChanged()
         // code won't run.
