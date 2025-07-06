@@ -26,6 +26,8 @@ use APP\search\ArticleSearch;
 use APP\search\ArticleSearchDAO;
 use Mockery;
 use Mockery\MockInterface;
+use PKP\core\VirtualArrayIterator;
+use PKP\core\ItemIterator;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PKP\db\DAORegistry;
 use PKP\plugins\Hook;
@@ -104,7 +106,7 @@ class ArticleSearchTest extends PKPTestCase
         $searchResult = $articleSearch->retrieveResults($request, $journal, $keywords, $error);
 
         // Test whether the result from the mocked DAOs is being returned.
-        self::assertInstanceOf('ItemIterator', $searchResult);
+        self::assertInstanceOf(ItemIterator::class, $searchResult);
         $firstResult = $searchResult->next();
         self::assertArrayHasKey('article', $firstResult);
         self::assertEquals(self::SUBMISSION_SEARCH_TEST_DEFAULT_ARTICLE, $firstResult['article']->getId());
@@ -177,7 +179,7 @@ class ArticleSearchTest extends PKPTestCase
             self::assertCount(1, array_filter($calledHooks, fn ($hook) => $hook[0] === 'SubmissionSearch::retrieveResults'));
 
             // Test whether the result from the hook is being returned.
-            self::assertInstanceOf('VirtualArrayIterator', $searchResult);
+            self::assertInstanceOf(VirtualArrayIterator::class, $searchResult);
 
             // Test the total count.
             self::assertEquals(3, $searchResult->getCount());
