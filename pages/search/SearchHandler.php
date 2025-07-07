@@ -60,7 +60,7 @@ class SearchHandler extends Handler
         $this->validate(null, $request);
         $context = $request->getContext();
 
-        $query = $request->getUserVar('query');
+        $query = (string) $request->getUserVar('query');
         $dateFrom = $request->getUserDateVar('dateFrom');
         $dateTo = $request->getUserDateVar('dateTo');
 
