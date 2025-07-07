@@ -58,7 +58,12 @@ class SearchHandler extends Handler
     public function search(array $args, PKPRequest $request)
     {
         $this->validate(null, $request);
+
         $context = $request->getContext();
+        $contextId = $context?->getId();
+        if (!$context) {
+            $contextId = (int) $request->getUserVar('searchContext');
+        }
 
         $query = (string) $request->getUserVar('query');
         $dateFrom = $request->getUserDateVar('dateFrom');
@@ -68,7 +73,7 @@ class SearchHandler extends Handler
 
         // Retrieve results.
         $results = (new Builder(new SubmissionSearchResult(), $query))
-            ->where('contextId', $context?->getId())
+            ->where('contextId', $contextId)
             ->where('publishedFrom', $dateFrom)
             ->where('publishedTo', $dateTo)
             ->whereIn('categoryIds', $request->getUserVar('categoryIds'))
@@ -82,8 +87,8 @@ class SearchHandler extends Handler
 
         // Assign the year range.
         $collector = Repo::publication()->getCollector();
-        if ($context) {
-            $collector->filterByContextIds([$context->getId()]);
+        if ($contextId) {
+            $collector->filterByContextIds([$contextId]);
         }
         $yearRange = Repo::publication()->getDateBoundaries($collector);
         $yearStart = substr($yearRange->min_date_published, 0, 4);
@@ -92,12 +97,13 @@ class SearchHandler extends Handler
         $templateMgr->assign([
             'query' => $query,
             'results' => $results,
+            'searchContext' => $contextId,
             'dateFrom' => $dateFrom ? date('Y-m-d H:i:s', $dateFrom) : null,
             'dateTo' => $dateTo ? date('Y-m-d H:i:s', $dateTo) : null,
             'yearStart' => $yearStart,
             'yearEnd' => $yearEnd,
             'authorUserGroups' => UserGroup::withRoleIds([\PKP\security\Role::ROLE_ID_AUTHOR])
-                ->withContextIds($context ? [$context->getId()] : null)
+                ->withContextIds($contextId ? [$contextId] : null)
                 ->get(),
         ]);
 
@@ -108,38 +114,6 @@ class SearchHandler extends Handler
         }
 
         $templateMgr->display('frontend/pages/search.tpl');
-    }
-
-    /**
-     * Redirect to a search query that shows documents
-     * similar to the one identified by an article id in the
-     * request.
-     *
-     * @param array $args
-     * @param \APP\core\Request $request
-     */
-    public function similarDocuments($args, &$request)
-    {
-        $this->validate(null, $request);
-
-        // Retrieve the (mandatory) ID of the article that
-        // we want similar documents for.
-        $articleId = $request->getUserVar('articleId');
-        if (!is_numeric($articleId)) {
-            $request->redirect(null, 'search');
-        }
-
-        // Check whether a search plugin provides terms for a similarity search.
-        $articleSearch = new ArticleSearch(); // FIXME
-        $searchTerms = $articleSearch->getSimilarityTerms($articleId);
-
-        // Redirect to a search query with the identified search terms (if any).
-        if (empty($searchTerms)) {
-            $searchParams = null;
-        } else {
-            $searchParams = ['query' => implode(' ', $searchTerms)];
-        }
-        $request->redirect(null, 'search', null, null, $searchParams);
     }
 
     /**
