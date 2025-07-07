@@ -60,18 +60,6 @@ class Upgrade extends Installer
     //
 
     /**
-     * Rebuild the search index.
-     *
-     * @return bool
-     */
-    public function rebuildSearchIndex()
-    {
-        $submissionSearchIndex = Application::getSubmissionSearchIndex();
-        $submissionSearchIndex->rebuildIndex();
-        return true;
-    }
-
-    /**
      * Clear the CSS cache files (needed when changing LESS files)
      *
      * @return bool
