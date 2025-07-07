@@ -362,8 +362,8 @@ validation_timeout = 14
 
 [search]
 
-; The search driver to use. Options: pkpdatabase, opensearch
-driver = pkpdatabase
+; The search driver to use. Options: database, opensearch
+driver = database
 
 ; For indexing engines supporting it, provide a name for the submission index.
 search_index_name = "submissions"
