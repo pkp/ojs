@@ -80,8 +80,6 @@ class SearchHandler extends Handler
         $templateMgr = TemplateManager::getManager($request);
         $templateMgr->setCacheability(TemplateManager::CACHEABILITY_NO_STORE);
 
-        // [$orderBy, $orderDir] = $articleSearch->getResultSetOrdering($request); FIXME
-
         // Assign the year range.
         $collector = Repo::publication()->getCollector();
         if ($context) {
@@ -93,8 +91,6 @@ class SearchHandler extends Handler
 
         $templateMgr->assign([
             'query' => $query,
-            // 'orderBy' => $orderBy, FIXME
-            // 'orderDir' => $orderDir, FIXME
             'results' => $results,
             'dateFrom' => $dateFrom ? date('Y-m-d H:i:s', $dateFrom) : null,
             'dateTo' => $dateTo ? date('Y-m-d H:i:s', $dateTo) : null,
@@ -103,8 +99,6 @@ class SearchHandler extends Handler
             'authorUserGroups' => UserGroup::withRoleIds([\PKP\security\Role::ROLE_ID_AUTHOR])
                 ->withContextIds($context ? [$context->getId()] : null)
                 ->get(),
-            /*            'searchResultOrderOptions' => $articleSearch->getResultSetOrderingOptions($request),
-            'searchResultOrderDirOptions' => $articleSearch->getResultSetOrderingDirectionOptions(), */ // FIXME
         ]);
 
         if (!$request->getContext()) {
