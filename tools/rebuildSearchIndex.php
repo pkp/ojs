@@ -67,26 +67,18 @@ class rebuildSearchIndex extends CommandLineTool
         // useful URLs to journal content.
         Hook::add('Request::getBaseUrl', $this->callbackBaseUrl(...));
 
-        try {
-            app(\Laravel\Scout\EngineManager::class)->engine()->flush(Config::getVar('search_index_name', 'submissions'));
-        } catch (\Exception $e) {
-            echo 'Exception: ' . $e->getMessage() . "\n";
-        }
-        try {
-            app(\Laravel\Scout\EngineManager::class)->engine()->createIndex(Config::getVar('search_index_name', 'submissions'));
-        } catch (\Exception $e) {
-            echo 'Exception: ' . $e->getMessage() . "\n";
-        }
+        $searchEngine = app(\Laravel\Scout\EngineManager::class)->engine();
+        $searchEngine->flush(Config::getVar('search_index_name', 'submissions'));
 
         // Let the search implementation re-build the index.
         $submissions = Repo::submission()->getCollector()
             ->filterByContextIds($journal ? [$journal->getId()] : [Application::SITE_CONTEXT_ID_ALL])
-            ->getIds()->chunk(100)->each(function ($submissionIds) {
+            ->getIds()->chunk(100)->each(function ($submissionIds) use ($searchEngine) {
                 $submissions = Repo::submission()->getCollector()
                     ->filterByContextIds([Application::SITE_CONTEXT_ID_ALL])
                     ->filterBySubmissionIds($submissionIds->toArray())
                     ->getMany();
-                app(\Laravel\Scout\EngineManager::class)->engine()->update($submissions);
+                $searchEngine->update($submissions);
             });
     }
 
