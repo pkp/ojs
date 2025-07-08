@@ -70,6 +70,21 @@
  * @hook Templates::Article::Details::Reference []
  * @hook Templates::Article::Details []
  *}
+
+<script>
+	function attachScrollToComments() {
+		const el = document.getElementById('scrollToComments');
+		if (el) {
+			el.onclick = function(event) {
+				event.preventDefault();
+				// Element with ID 'pkpUserCommentsContainer' is defined in the pkpUserComment component.
+				document.getElementById('pkpUserCommentsContainer')?.scrollIntoView({ behavior: 'smooth' });
+			};
+		}
+	}
+	document.addEventListener('DOMContentLoaded', attachScrollToComments);
+</script>
+
  {if !$heading}
  	{assign var="heading" value="h3"}
  {/if}
@@ -431,6 +446,22 @@
 					{/if}
 				</div>
 			{/if}
+
+			<div class="item">
+				<section class="sub_item">
+					<h2 class="label"> {translate key="userComment.comments"} </h2>
+					<a id="scrollToComments" style="cursor:pointer;">
+						{translate key="userComment.allComments" commentCount=$allCommentsCount}
+					</a>
+                   <div class="value">
+					    {if !$isUserLoggedIn}
+                            <a class="value pkp_button pkp_button_primary" style="margin-top:2rem;" href="{$loginUrl|escape}">
+                                {translate key="userComment.login"}
+                            </a>
+					    {/if}
+                   </div>
+				</section>
+			</div>
 
 			{* PubIds (requires plugins) *}
 			{foreach from=$pubIdPlugins item=pubIdPlugin}
