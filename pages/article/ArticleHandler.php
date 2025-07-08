@@ -300,6 +300,11 @@ class ArticleHandler extends Handler
         $rorIconPath = Core::getBaseDir() . '/' . PKP_LIB_PATH . '/templates/images/ror.svg';
         $rorIdIcon = file_exists($rorIconPath) ? file_get_contents($rorIconPath) : '';
 
+        // Credit Role Terms
+        $templateMgr->assign([
+            'creditRoleTerms' => Repo::CreditRole()->getTerms(),
+        ]);
+
         // Assign deprecated values to the template manager for
         // compatibility with older themes
         $templateMgr->assign([
