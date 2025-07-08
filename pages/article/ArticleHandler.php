@@ -28,6 +28,8 @@ use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use Firebase\JWT\Key;
+use PKP\components\forms\userComment\UserCommentForm;
+use PKP\components\forms\userComment\UserCommentReportForm;
 use PKP\config\Config;
 use PKP\core\Core;
 use PKP\core\PKPApplication;
@@ -219,6 +221,28 @@ class ArticleHandler extends Handler
         $article = $this->article;
         $publication = $this->publication;
         $templateMgr = TemplateManager::getManager($request);
+
+        $commentsApiUrl = Application::get()->getRequest()->getDispatcher()->url(
+            Application::get()->getRequest(),
+            Application::ROUTE_API,
+            $context->getPath(),
+            'comments'
+        );
+
+        $userCommentForm = new UserCommentForm($commentsApiUrl, []);
+        $userCommentReportForm = new UserCommentReportForm($commentsApiUrl, []);
+        $templateMgr->assign(
+            'commentsInitConfig',
+            [
+                'publicationId' => $publication->getId(),
+                'articleLatestPublicationId' => $article->getCurrentPublication()->getId(),
+                'userCommentForm' => $userCommentForm->getConfig(),
+                'userCommentReportForm' => $userCommentReportForm->getConfig(),
+                'itemsPerPage' => Repo::userComment()->getPerPage(),
+                'loginUrl' => $request->url(null, 'login', ),
+            ],
+        );
+        $templateMgr->requiresVueRuntime();
         $templateMgr->assign([
             'issue' => $issue,
             'article' => $article,
@@ -260,6 +284,7 @@ class ArticleHandler extends Handler
 
         $primaryGalleys = [];
         $supplementaryGalleys = [];
+
         if ($galleys) {
             $genreDao = DAORegistry::getDAO('GenreDAO'); /** @var GenreDAO $genreDao */
             $primaryGenres = $genreDao->getPrimaryByContextId($context->getId())->toArray();
@@ -362,7 +387,10 @@ class ArticleHandler extends Handler
             }
 
             if (!Hook::call('ArticleHandler::view', [&$request, &$issue, &$article, $publication])) {
+
+
                 $templateMgr->display('frontend/pages/article.tpl');
+
                 event(new UsageEvent(Application::ASSOC_TYPE_SUBMISSION, $context, $article, null, null, $this->issue));
                 return;
             }
