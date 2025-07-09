@@ -30,6 +30,11 @@ In [cache]:
     - path (default value: 'cache/opcache'). Use to specify a path for cache storage when using 'file' or 'opcache' drivers.
 
 
+3.5.0-1 Build
+-------------
+    #11603: User role assignment email template missing
+    #11559: Uncaught TypeError in NotificationsGridCellProvider.php for a deleted query
+
 New Features
 ------------
     #10983, #10970, and many more: Redesigned dashboard and workflow pages
