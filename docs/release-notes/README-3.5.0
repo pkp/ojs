@@ -1,8 +1,8 @@
 OJS 3.5.0 Release Notes
-Git tag: 3_5_0-0
+Git tag: 3_5_0-1
 
-Release date: June 16, 2025
-============================
+Release date: July 9, 2025
+==========================
 
 Configuration Changes
 ---------------------
@@ -29,11 +29,28 @@ In [cache]:
     - default (default value: 'file'). Can be either 'file' or 'opcache' to indicate which Laravel cache should be used.
     - path (default value: 'cache/opcache'). Use to specify a path for cache storage when using 'file' or 'opcache' drivers.
 
-
 3.5.0-1 Build
 -------------
     #11603: User role assignment email template missing
     #11559: Uncaught TypeError in NotificationsGridCellProvider.php for a deleted query
+    #11544: Author ORCID request email fails with new author
+    #11447: Add NLM Title Abbreviation to PubMed exports
+    #11529: Upgrade Fails with SQL Syntax Error 1064 on MariaDB/MySQL due to Incorrect Default Value Quoting
+    #11333: Highlights | Homepage - Long Descriptions ignores paragraph breaks
+    #11517: [Suggest Reviewers] | Various areas - small adjustments to 4787 feature, to align with design consistency
+    #9079: Different plugins use different licenses
+    #11532: Install form time zone is not considered during initial installation
+    #11536: Language settings, Submissions languages grid shows Reset defaults action which is not needed
+    #11460: Missing info from existing user invitation in journal A being added to a role in journal B
+    #11586: [DOI Deposit] | XML generated is not well-formed or does not validate
+    #11577: Top menu items are only clickable on text
+    #11613: Reviews - One Click Login for reviewers don't work when inviting a new reviewer
+    #11609: Remove API controller override mechanism for plugin
+    #11594: Reader profile language, UI Language change not possible if allowed_hosts is not enabled
+    #11548: Sitemap - Announcement id error when upgrade to 3.5.0
+    #11580: Review workflow - Step 3, Buttons are not in the correct order
+    #11551: 3.5.0 Annoucement sort asc by default
+    #11556: Edit existing announcement - Expiry Date, the announcement expiry date is not preserved after saving
 
 New Features
 ------------
