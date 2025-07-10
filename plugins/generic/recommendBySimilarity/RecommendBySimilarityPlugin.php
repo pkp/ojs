@@ -101,10 +101,10 @@ class RecommendBySimilarityPlugin extends GenericPlugin
             ->getMany();
 
         $nextPage = $rangeInfo->getPage() * $rangeInfo->getCount() < $submissionCount
-            ? $request->getDispatcher()->url($request, PKPApplication::ROUTE_PAGE, path: $submissionId, params: ['articlesBySimilarityPage' => $rangeInfo->getPage() + 1], urlLocaleForPage: '')
+            ? $request->getDispatcher()->url($request, PKPApplication::ROUTE_PAGE, path: [$submissionId], params: ['articlesBySimilarityPage' => $rangeInfo->getPage() + 1], urlLocaleForPage: '')
             : null;
         $previousPage = $rangeInfo->getPage() > 1
-            ? $request->getDispatcher()->url($request, PKPApplication::ROUTE_PAGE, path: $submissionId, params: ['articlesBySimilarityPage' => $rangeInfo->getPage() - 1], urlLocaleForPage: '')
+            ? $request->getDispatcher()->url($request, PKPApplication::ROUTE_PAGE, path: [$submissionId], params: ['articlesBySimilarityPage' => $rangeInfo->getPage() - 1], urlLocaleForPage: '')
             : null;
 
         $templateManager->assign('articlesBySimilarity', (object) [
