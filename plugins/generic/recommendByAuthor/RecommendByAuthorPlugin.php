@@ -156,7 +156,7 @@ class RecommendByAuthorPlugin extends GenericPlugin
             );
         }
 
-        $collection = (new \PKP\search\SubmissionSearchResult())->newCollection($pagedResults);
+        $collection = (new \APP\search\SubmissionSearchResult())->newCollection($pagedResults);
         $paginator = new LengthAwarePaginator($collection, $totalResults, $itemsPerPage, $page);
         $smarty->assign('articlesBySameAuthor', $paginator);
         $output .= $smarty->fetch($this->getTemplateResource('articleFooter.tpl'));
