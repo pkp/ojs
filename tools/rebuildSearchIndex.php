@@ -17,6 +17,7 @@
 require dirname(__FILE__) . '/bootstrap.php';
 
 use APP\core\Application;
+use APP\facades\Repo;
 use APP\journal\JournalDAO;
 use PKP\cliTool\CommandLineTool;
 use PKP\config\Config;
@@ -66,9 +67,19 @@ class rebuildSearchIndex extends CommandLineTool
         // useful URLs to journal content.
         Hook::add('Request::getBaseUrl', $this->callbackBaseUrl(...));
 
+        $searchEngine = app(\Laravel\Scout\EngineManager::class)->engine();
+        $searchEngine->flush(Config::getVar('search_index_name', 'submissions'));
+
         // Let the search implementation re-build the index.
-        $articleSearchIndex = Application::getSubmissionSearchIndex();
-        $articleSearchIndex->rebuildIndex(true, $journal, $switches);
+        $submissions = Repo::submission()->getCollector()
+            ->filterByContextIds($journal ? [$journal->getId()] : [Application::SITE_CONTEXT_ID_ALL])
+            ->getIds()->chunk(100)->each(function ($submissionIds) use ($searchEngine) {
+                $submissions = Repo::submission()->getCollector()
+                    ->filterByContextIds([Application::SITE_CONTEXT_ID_ALL])
+                    ->filterBySubmissionIds($submissionIds->toArray())
+                    ->getMany();
+                $searchEngine->update($submissions);
+            });
     }
 
     /**

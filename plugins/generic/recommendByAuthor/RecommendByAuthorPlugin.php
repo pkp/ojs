@@ -18,9 +18,8 @@ use APP\author\Author;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\handler\Handler;
-use APP\search\ArticleSearch;
 use APP\statistics\StatisticsHelper;
-use PKP\core\VirtualArrayIterator;
+use Illuminate\Pagination\LengthAwarePaginator;
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
 use PKP\submission\PKPSubmission;
@@ -157,11 +156,9 @@ class RecommendByAuthorPlugin extends GenericPlugin
             );
         }
 
-        // Visualization.
-        $articleSearch = new ArticleSearch();
-        $pagedResults = $articleSearch->formatResults($pagedResults);
-        $returner = new VirtualArrayIterator($pagedResults, $totalResults, $page, $itemsPerPage);
-        $smarty->assign('articlesBySameAuthor', $returner);
+        $collection = (new \APP\search\SubmissionSearchResult())->newCollection($pagedResults);
+        $paginator = new LengthAwarePaginator($collection, $totalResults, $itemsPerPage, $page);
+        $smarty->assign('articlesBySameAuthor', $paginator);
         $output .= $smarty->fetch($this->getTemplateResource('articleFooter.tpl'));
         return false;
     }

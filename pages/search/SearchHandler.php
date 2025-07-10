@@ -18,9 +18,11 @@ namespace APP\pages\search;
 
 use APP\facades\Repo;
 use APP\handler\Handler;
-use APP\search\ArticleSearch;
+use APP\search\SubmissionSearchResult;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\template\TemplateManager;
+use Laravel\Scout\Builder;
+use PKP\core\PKPRequest;
 use PKP\userGroup\UserGroup;
 
 class SearchHandler extends Handler
@@ -51,129 +53,58 @@ class SearchHandler extends Handler
     }
 
     /**
-     * Private function to transmit current filter values
-     * to the template.
-     *
-     * @param \APP\core\Request $request
-     * @param TemplateManager $templateMgr
-     * @param array $searchFilters
-     */
-    public function _assignSearchFilters($request, &$templateMgr, $searchFilters)
-    {
-        // Get the journal id (if any).
-        $journal = & $searchFilters['searchJournal'];
-        $journalId = ($journal ? $journal->getId() : null);
-        $searchFilters['searchJournal'] = $journalId;
-
-        // Assign all filters except for dates which need special treatment.
-        $templateSearchFilters = [];
-        foreach ($searchFilters as $filterName => $filterValue) {
-            if (in_array($filterName, ['fromDate', 'toDate'])) {
-                continue;
-            }
-            $templateSearchFilters[$filterName] = $filterValue;
-        }
-
-        // Assign the filters to the template.
-        $templateMgr->assign($templateSearchFilters);
-
-        // Special case: publication date filters.
-        foreach (['From', 'To'] as $fromTo) {
-            $month = $request->getUserVar("date{$fromTo}Month");
-            $day = $request->getUserVar("date{$fromTo}Day");
-            $year = $request->getUserVar("date{$fromTo}Year");
-            if (empty($year)) {
-                $date = null;
-                $hasEmptyFilters = true;
-            } else {
-                $defaultMonth = ($fromTo == 'From' ? 1 : 12);
-                $defaultDay = ($fromTo == 'From' ? 1 : 31);
-                $date = date(
-                    'Y-m-d H:i:s',
-                    mktime(
-                        0,
-                        0,
-                        0,
-                        empty($month) ? $defaultMonth : $month,
-                        empty($day) ? $defaultDay : $day,
-                        $year
-                    )
-                );
-                $hasActiveFilters = true;
-            }
-            $templateMgr->assign([
-                "date{$fromTo}Month" => $month,
-                "date{$fromTo}Day" => $day,
-                "date{$fromTo}Year" => $year,
-                "date{$fromTo}" => $date
-            ]);
-        }
-
-        // Assign the year range.
-        $collector = Repo::publication()->getCollector();
-        if ($journalId) {
-            $collector->filterByContextIds([(int) $journalId]);
-        }
-        $yearRange = Repo::publication()->getDateBoundaries($collector);
-        $yearStart = substr($yearRange->min_date_published, 0, 4);
-        $yearEnd = substr($yearRange->max_date_published, 0, 4);
-        $templateMgr->assign([
-            'yearStart' => $yearStart,
-            'yearEnd' => $yearEnd,
-        ]);
-    }
-
-    /**
      * Show the search form
-     *
-     * @param array $args
-     * @param \APP\core\Request $request
      */
-    public function search($args, $request)
+    public function search(array $args, PKPRequest $request)
     {
         $this->validate(null, $request);
 
-        // Get and transform active filters.
-        $articleSearch = new ArticleSearch();
-        $searchFilters = $articleSearch->getSearchFilters($request);
-        $keywords = $articleSearch->getKeywordsFromSearchFilters($searchFilters);
+        $context = $request->getContext();
+        $contextId = $context?->getId();
+        if (!$context) {
+            $contextId = (int) $request->getUserVar('searchContext');
+        }
 
-        // Get the range info.
+        $query = (string) $request->getUserVar('query');
+        $dateFrom = $request->getUserDateVar('dateFrom');
+        $dateTo = $request->getUserDateVar('dateTo');
+
         $rangeInfo = $this->getRangeInfo($request, 'search');
 
         // Retrieve results.
-        $error = '';
-        $results = $articleSearch->retrieveResults(
-            request: $request,
-            context: $searchFilters['searchJournal'],
-            keywords: $keywords,
-            error: $error,
-            publishedFrom: $searchFilters['fromDate'] ?? null,
-            publishedTo: $searchFilters['toDate'] ?? null,
-            categoryIds: $searchFilters['categoryIds'] ?? null,
-            sectionIds: $searchFilters['sectionIds'] ?? null,
-            rangeInfo: $rangeInfo
-        );
+        $results = (new Builder(new SubmissionSearchResult(), $query))
+            ->where('contextId', $contextId)
+            ->where('publishedFrom', $dateFrom)
+            ->where('publishedTo', $dateTo)
+            ->whereIn('categoryIds', $request->getUserVar('categoryIds'))
+            ->whereIn('sectionIds', $request->getUserVar('sectionIds'))
+            ->paginate($rangeInfo->getCount(), 'submissions', $rangeInfo->getPage());
 
         $this->setupTemplate($request);
 
         $templateMgr = TemplateManager::getManager($request);
         $templateMgr->setCacheability(TemplateManager::CACHEABILITY_NO_STORE);
 
-        $this->_assignSearchFilters($request, $templateMgr, $searchFilters);
-        [$orderBy, $orderDir] = $articleSearch->getResultSetOrdering($request);
+        // Assign the year range.
+        $collector = Repo::publication()->getCollector();
+        if ($contextId) {
+            $collector->filterByContextIds([$contextId]);
+        }
+        $yearRange = Repo::publication()->getDateBoundaries($collector);
+        $yearStart = substr($yearRange->min_date_published, 0, 4);
+        $yearEnd = substr($yearRange->max_date_published, 0, 4);
 
         $templateMgr->assign([
-            'orderBy' => $orderBy,
-            'orderDir' => $orderDir,
-            'simDocsEnabled' => true,
+            'query' => $query,
             'results' => $results,
-            'error' => $error,
+            'searchContext' => $contextId,
+            'dateFrom' => $dateFrom ? date('Y-m-d H:i:s', $dateFrom) : null,
+            'dateTo' => $dateTo ? date('Y-m-d H:i:s', $dateTo) : null,
+            'yearStart' => $yearStart,
+            'yearEnd' => $yearEnd,
             'authorUserGroups' => UserGroup::withRoleIds([\PKP\security\Role::ROLE_ID_AUTHOR])
-                ->withContextIds($searchFilters['searchJournal'] ? [$searchFilters['searchJournal']->getId()] : null)
+                ->withContextIds($contextId ? [$contextId] : null)
                 ->get(),
-            'searchResultOrderOptions' => $articleSearch->getResultSetOrderingOptions($request),
-            'searchResultOrderDirOptions' => $articleSearch->getResultSetOrderingDirectionOptions(),
         ]);
 
         if (!$request->getContext()) {
@@ -183,38 +114,6 @@ class SearchHandler extends Handler
         }
 
         $templateMgr->display('frontend/pages/search.tpl');
-    }
-
-    /**
-     * Redirect to a search query that shows documents
-     * similar to the one identified by an article id in the
-     * request.
-     *
-     * @param array $args
-     * @param \APP\core\Request $request
-     */
-    public function similarDocuments($args, &$request)
-    {
-        $this->validate(null, $request);
-
-        // Retrieve the (mandatory) ID of the article that
-        // we want similar documents for.
-        $articleId = $request->getUserVar('articleId');
-        if (!is_numeric($articleId)) {
-            $request->redirect(null, 'search');
-        }
-
-        // Check whether a search plugin provides terms for a similarity search.
-        $articleSearch = new ArticleSearch();
-        $searchTerms = $articleSearch->getSimilarityTerms($articleId);
-
-        // Redirect to a search query with the identified search terms (if any).
-        if (empty($searchTerms)) {
-            $searchParams = null;
-        } else {
-            $searchParams = ['query' => implode(' ', $searchTerms)];
-        }
-        $request->redirect(null, 'search', null, null, $searchParams);
     }
 
     /**
