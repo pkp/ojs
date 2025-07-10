@@ -126,7 +126,6 @@ class RecommendBySimilarityPlugin extends GenericPlugin
         $submissions = $collector
             ->limit($rangeInfo->getCount())
             ->offset($offset)
-            ->orderBy(Collector::ORDERBY_SEARCH_RANKING)
             ->getMany();
 
         // Load the linked issues
