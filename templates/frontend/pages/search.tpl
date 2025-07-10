@@ -115,7 +115,7 @@
 	<ul class="search_results">
 		{foreach from=$results item=result}
 			<li>
-				{include file="frontend/objects/article_summary.tpl" article=$result.publishedSubmission journal=$result.journal showDatePublished=true hideGalleys=true heading="h3"}
+				{include file="frontend/objects/article_summary.tpl" article=$result.submission journal=$result.context showDatePublished=true hideGalleys=true heading="h3"}
 			</li>
 		{/foreach}
 	</ul>

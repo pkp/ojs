@@ -18,11 +18,11 @@ namespace APP\pages\search;
 
 use APP\facades\Repo;
 use APP\handler\Handler;
+use APP\search\SubmissionSearchResult;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\template\TemplateManager;
 use Laravel\Scout\Builder;
 use PKP\core\PKPRequest;
-use PKP\search\SubmissionSearchResult;
 use PKP\userGroup\UserGroup;
 
 class SearchHandler extends Handler
