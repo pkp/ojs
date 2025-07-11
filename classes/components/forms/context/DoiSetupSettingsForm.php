@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/components/form/context/DoiSetupSettingsForm.php
  *
@@ -18,6 +19,7 @@ namespace APP\components\forms\context;
 use APP\facades\Repo;
 use PKP\components\forms\context\PKPDoiSetupSettingsForm;
 use PKP\components\forms\FieldOptions;
+use PKP\components\forms\FieldRadioInput;
 use PKP\components\forms\FieldText;
 use PKP\context\Context;
 use PKP\plugins\Hook;
@@ -66,6 +68,22 @@ class DoiSetupSettingsForm extends PKPDoiSetupSettingsForm
                 'label' => __('issue.issues'),
                 'groupId' => self::DOI_CUSTOM_SUFFIX_GROUP,
                 'value' => $context->getData(Repo::doi()::CUSTOM_ISSUE_PATTERN),
+            ]))
+            ->addField(new FieldRadioInput(Context::SETTING_DOI_VERSIONING, [
+                'label' => __('doi.manager.settings.doiVersioning'),
+                'description' => __('doi.manager.settings.doiVersioning.description'),
+                'groupId' => self::DOI_SETTINGS_GROUP,
+                'options' => [
+                    [
+                        'value' => true,
+                        'label' => __('doi.manager.settings.doiVersioning.yes')
+                    ],
+                    [
+                        'value' => false,
+                        'label' => __('doi.manager.settings.doiVersioning.no')
+                    ]
+                ],
+                'value' => $context->getData(Context::SETTING_DOI_VERSIONING) === null ? false : (bool) $context->getData(Context::SETTING_DOI_VERSIONING)
             ]));
     }
 }
