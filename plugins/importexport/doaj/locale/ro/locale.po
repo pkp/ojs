@@ -40,11 +40,6 @@ msgstr ""
 "poate dura puțin timp după publicare (de exemplu, în funcție de configurația "
 "dvs. cronjob). Puteți verifica dacă există articole neînregistrate."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Utilizați API-ul de testare DOAJ (mediul de testare) pentru înregistrare. Vă "
-"rugăm să nu uitați să eliminați această opțiune pentru producție."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "Sarcină de înregistrare automată DOAJ"
 

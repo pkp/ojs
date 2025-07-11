@@ -44,11 +44,6 @@ msgstr ""
 "konfigurasi cronjob Anda). Anda dapat melakukan pemeriksaan untuk semua "
 "artikel yang belum didaftarkan."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Gunakan API ujicoba DOAJ (dalam lingkungan ujicoba) untuk pendaftaran. Mohon "
-"tidak lupa untuk membuang pilihan ini pada sistem produksi."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "Tugas registrasi otomatis DOAJ"
 

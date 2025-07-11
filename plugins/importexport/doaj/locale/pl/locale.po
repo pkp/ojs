@@ -43,11 +43,6 @@ msgstr ""
 "realizowane zaraz po publikacji. Upewnij się, że dane zostały automatycznie "
 "przesłane."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Wykorzystaj test API DOAJ (środowisko testowe) do rejestracji. Nie zapomnij "
-"usunąć tej opcji przed produkcją."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "Zadanie automatycznej rejestracji DOAJ"
 

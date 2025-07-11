@@ -41,11 +41,6 @@ msgstr ""
 "OJS vil sende artikler automatisk til DOAJ. Dette kan ta tid å behandle. Du "
 "kan se etter uregistrerte artikler."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Bruk DOAJ test API for registreringen. Husk å fjerne denne valgmuligheten "
-"for produksjonsfasen."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "DOAJs automatiske registrering"
 
