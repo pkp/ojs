@@ -71,10 +71,9 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
     /**
      * Mark selected submissions or issues as registered.
      *
-     * @param Journal $context
      * @param array $objects Array of published submissions, issues or galleys
      */
-    public function markRegistered($context, $objects)
+    public function markRegistered($objects)
     {
         foreach ($objects as $object) {
             $doiId = $object->getData('doiId');
