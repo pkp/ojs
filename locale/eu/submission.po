@@ -5,8 +5,8 @@
 # Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-07-15 17:47+0000\n"
-"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
+"PO-Revision-Date: 2025-07-15 19:24+0000\n"
+"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "eu/>\n"
 "Language: eu\n"
@@ -213,7 +213,7 @@ msgstr ""
 "nahi duzula?"
 
 msgid "publication.required.issue"
-msgstr "Argitalpena zenbaki bati esleitu behar zaio argitaratu aurretik"
+msgstr "Argitalpena zenbaki bati esleitu behar zaio argitaratu aurretik."
 
 msgid "publication.publishedIn"
 msgstr "<a href=\"{$issueUrl}\">{$issueName}</a> zenbakian argitaratua."
@@ -265,7 +265,7 @@ msgid "publication.event.scheduled"
 msgstr "Bidalketa argitaratzeko programatu da."
 
 msgid "publication.event.unpublished"
-msgstr ""
+msgstr "Bidalketa hau argitalpenetik kendu da."
 
 msgid "publication.event.versionPublished"
 msgstr "Bertsio berri bat argitaratu da."
@@ -274,19 +274,19 @@ msgid "publication.event.versionScheduled"
 msgstr "Bertsio berri bat programatu da argitaratzeko."
 
 msgid "publication.event.versionUnpublished"
-msgstr ""
+msgstr "Bertsio bat argitalpenetik kendu da."
 
 msgid "publication.invalidSubmission"
-msgstr ""
+msgstr "Ezin izan da argitalpen honetarako bidalketa aurkitu."
 
 msgid "publication.publish"
 msgstr "Argitaratu"
 
 msgid "publication.publish.requirements"
-msgstr ""
+msgstr "Argitaratu ahal izateko, ondorengo baldintzak bete behar dira."
 
 msgid "publication.required.declined"
-msgstr ""
+msgstr "Baztertutako bidalketa ezin da argitaratu."
 
 msgid "publication.required.reviewStage"
 msgstr ""
