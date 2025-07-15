@@ -2,10 +2,11 @@
 # Josu Acosta <josuacostacalvo@gmail.com>, 2023.
 # Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023, 2025.
 # Informatikaria <informatikaria@ueu.eus>, 2025.
+# Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-06-29 20:53+0000\n"
-"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
+"PO-Revision-Date: 2025-07-15 15:53+0000\n"
+"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "eu/>\n"
 "Language: eu\n"
@@ -54,8 +55,8 @@ msgstr "Metadatuak"
 msgid "submission.submit.whatNext.description"
 msgstr ""
 "Aldizkariak zure bidalketaren berri jaso du, eta posta elektronikoaren bidez "
-"egiaztatze mezu bat bidaliko dizu, artxiba dezazun.s.  Editoreak bidalketa "
-"berrikusi ondoren, zurekin harremanetan jarriko dira."
+"egiaztatze mezu bat bidaliko dizu, artxiba dezazun. Editoreak bidalketa "
+"berrikusten duenean, zurekin harremanetan jarriko da."
 
 msgid "grid.action.galleyInIssueEntry"
 msgstr "Galerada zenbakiaren sarreran agertzen da"
