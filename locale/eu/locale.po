@@ -1,13 +1,14 @@
 # Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023, 2025.
 # Informatikaria <informatikaria@ueu.eus>, 2023, 2025.
 # Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
+# Aitor Renobales <aitor.renobales@ehu.eus>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2025-06-22 18:24+0000\n"
-"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
+"PO-Revision-Date: 2025-07-15 17:47+0000\n"
+"Last-Translator: Aitor Renobales <aitor.renobales@ehu.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/locale/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
@@ -524,7 +525,7 @@ msgid "issue.fullIssue"
 msgstr "Zenbaki osoa"
 
 msgid "issue.nonpdf.title"
-msgstr "Jaitsi zenbakia"
+msgstr "Zenbakia jaistea"
 
 msgid "issue.viewIssue"
 msgstr "Ikusi zenbakia"
