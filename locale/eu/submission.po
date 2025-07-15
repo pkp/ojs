@@ -5,7 +5,7 @@
 # Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-07-15 19:24+0000\n"
+"PO-Revision-Date: 2025-07-16 00:00+0000\n"
 "Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "eu/>\n"
@@ -295,6 +295,8 @@ msgstr ""
 
 msgid "submission.license.description"
 msgstr ""
+"Lizentzia automatikoki ezarriko da  <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> gisa, hau argitaratzen denean."
 
 msgid "submission.copyrightHolder.description"
 msgstr ""
