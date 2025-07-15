@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2025-07-16 00:00+0000\n"
-"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
+"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "eu/>\n"
 "Language: eu\n"
@@ -290,8 +290,7 @@ msgstr "Baztertutako bidalketa ezin da argitaratu."
 
 msgid "publication.required.reviewStage"
 msgstr ""
-"Bidalketa zuzenketa edo ekoizpen fasean egon behar du argitaratu ahal "
-"izateko."
+"Bidalketa edizio edo ekoizpen fasean egon behar du argitaratu ahal izateko."
 
 msgid "submission.license.description"
 msgstr ""
@@ -304,6 +303,7 @@ msgstr ""
 
 msgid "submission.copyrightOther.description"
 msgstr ""
+"Argitaratutako bidalketen egile-eskubideen aitormena honako honi esleitu."
 
 msgid "publication.unpublish"
 msgstr ""
