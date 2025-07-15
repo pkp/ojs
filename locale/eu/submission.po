@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2025-07-15 19:24+0000\n"
-"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
+"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "eu/>\n"
 "Language: eu\n"
@@ -290,6 +290,8 @@ msgstr "Baztertutako bidalketa ezin da argitaratu."
 
 msgid "publication.required.reviewStage"
 msgstr ""
+"Bidalketa zuzenketa edo ekoizpen fasean egon behar du argitaratu ahal "
+"izateko."
 
 msgid "submission.license.description"
 msgstr ""
