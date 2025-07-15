@@ -95,12 +95,12 @@ describe('Data suite: Amwandenga', function() {
 
 
 		// The submission wizard has loaded
-		cy.contains('Make a Submission: Details');
+		cy.contains('Make a Submission: Upload Files');
 		cy.get('.submissionWizard__submissionDetails').contains('Mwandenga');
 		cy.get('.submissionWizard__submissionDetails').contains(submission.title);
 		cy.contains('Submitting to the Articles section in English');
-		cy.get('.pkpSteps__step__label--current').contains('Details');
-		cy.get('.pkpSteps__step__label').contains('Upload Files');
+		cy.get('.pkpSteps__step__label--current').contains('Upload Files');
+		cy.get('.pkpSteps__step__label').contains('Details');
 		cy.get('.pkpSteps__step__label').contains('Contributors');
 		cy.get('.pkpSteps__step__label').contains('For the Editors');
 		cy.get('.pkpSteps__step__label').contains('Review');
@@ -110,13 +110,6 @@ describe('Data suite: Amwandenga', function() {
 			.then(search => {
 				submission.id = parseInt(search.split('=')[1]);
 			});
-
-		// Enter details
-		cy.get('h2').contains('Submission Details');
-		cy.setTinyMceContent('titleAbstract-abstract-control-en', submission.abstract);
-		cy.get('#titleAbstract-title-control-en').click({force: true}); // Ensure blur event is fired
-
-		cy.get('.submissionWizard__footer button').contains('Continue').click();
 
 		// Upload files and set file genres
 		cy.contains('Make a Submission: Upload Files');
@@ -134,6 +127,13 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('.listPanel__item:contains("delete-this-file.pdf")').find('button').contains('Remove').click();
 		cy.get('div[role=dialog]:contains("Are you sure you want to remove this file?")').find('button').contains('Yes').click();
 		cy.get('.listPanel__item:contains("delete-this-file.pdf")').should('not.exist');
+
+		cy.get('.submissionWizard__footer button').contains('Continue').click();
+
+		// Enter details
+		cy.get('h2').contains('Submission Details');
+		cy.setTinyMceContent('titleAbstract-abstract-control-en', submission.abstract);
+		cy.get('#titleAbstract-title-control-en').click({force: true}); // Ensure blur event is fired
 
 		cy.get('.submissionWizard__footer button').contains('Continue').click();
 

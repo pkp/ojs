@@ -348,8 +348,8 @@ describe('Submission Wizard', function() {
         cy.contains('Submitting to the Articles section in English');
 
         // Remove title and go to review
-        cy.setTinyMceContent('titleAbstract-title-control-en', '');
         cy.get('button:contains("Continue")').click();
+        cy.setTinyMceContent('titleAbstract-title-control-en', '');
         cy.get('button:contains("Continue")').click();
         cy.get('button:contains("Continue")').click();
         cy.get('button:contains("Continue")').click();
@@ -380,14 +380,6 @@ describe('Submission Wizard', function() {
             });
 
         // Add missing data
-        cy.get('.pkpSteps button:contains("Details")').click({ force: true });
-        cy.setTinyMceContent('titleAbstract-title-control-en', submission.title);
-        cy.setTinyMceContent('titleAbstract-abstract-control-en', submission.abstract);
-        cy.get('#titleAbstract-keywords-control-en').type(submission.keywords, {delay: 0});
-        cy.get('li:contains("' + submission.keywords + '")');
-        cy.get('#titleAbstract-keywords-control-en').type('{downarrow}{enter}');
-        cy.get('#citations-citationsRaw-control').type(submission.citations);
-
         cy.get('.pkpSteps button:contains("Upload Files")').click({ force: true });
         cy.uploadSubmissionFiles([
             {
@@ -397,6 +389,14 @@ describe('Submission Wizard', function() {
                 'genre': Cypress.env('defaultGenre')
             }
         ]);
+
+        cy.get('.pkpSteps button:contains("Details")').click({ force: true });
+        cy.setTinyMceContent('titleAbstract-title-control-en', submission.title);
+        cy.setTinyMceContent('titleAbstract-abstract-control-en', submission.abstract);
+        cy.get('#titleAbstract-keywords-control-en').type(submission.keywords, {delay: 0});
+        cy.get('li:contains("' + submission.keywords + '")');
+        cy.get('#titleAbstract-keywords-control-en').type('{downarrow}{enter}');
+        cy.get('#citations-citationsRaw-control').type(submission.citations);
 
         cy.get('.pkpSteps button:contains("For the Editors")').click({ force: true });
         Object.keys(submission.metadata.autosuggest).forEach(field => {
@@ -498,6 +498,17 @@ describe('Submission Wizard', function() {
                 cy.get('button:contains("Save")').click();
             });
 
+        // Upload a file
+        cy.get('button:contains("Continue")').click();
+        cy.uploadSubmissionFiles([
+            {
+                'file': 'dummy.pdf',
+                'fileName': submission.title.en + '.pdf',
+                'mimeType': 'application/pdf',
+                'genre': Cypress.env('defaultGenre')
+            }
+        ]);
+
         // Forms load with French (Canada) fields displayed instead of English
         cy.contains('Submitting to the Reviews section in French (Canada)');
         cy.get('span.pkpFormLocales__locale:contains("French (Canada)")');
@@ -515,17 +526,6 @@ describe('Submission Wizard', function() {
         cy.get('label:contains("Title in English")');
         cy.get('label:contains("Keywords in English")');
         cy.get('label:contains("Abstract in English")');
-
-        // Upload a file
-        cy.get('button:contains("Continue")').click();
-        cy.uploadSubmissionFiles([
-            {
-                'file': 'dummy.pdf',
-                'fileName': submission.title.en + '.pdf',
-                'mimeType': 'application/pdf',
-                'genre': Cypress.env('defaultGenre')
-            }
-        ]);
 
         // Skip contributors
         cy.get('button:contains("Continue")').click();
