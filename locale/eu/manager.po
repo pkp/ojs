@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2025-07-16 10:08+0000\n"
+"PO-Revision-Date: 2025-07-16 13:41+0000\n"
 "Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/manager/eu/>"
 "\n"
@@ -23,9 +23,12 @@ msgstr "Sarbidea"
 
 msgid "manager.distribution.copyrightYearBasis.description"
 msgstr ""
+"Aukeratu artikulu baten copyrightaren data lehenetsia nola hautatzen den. "
+"Lehenetsitako balio hau kasuz kasu gainidatzi daiteke. Artikuluz artikulu "
+"argitaratzen baduzu, ez erabili zenbakiaren argitalpen data."
 
 msgid "manager.distribution.copyrightYearBasis.issue"
-msgstr ""
+msgstr "Erabili zenbakiaren argitalpen-data"
 
 msgid "manager.distribution.copyrightYearBasis.submission"
 msgstr "Erabili artikuluaren argitalpen data"
@@ -625,7 +628,7 @@ msgid "manager.setup.guidingSubmissions"
 msgstr "3. urratsa. Bidalketak egiteko gidalerroak"
 
 msgid "manager.setup.identity"
-msgstr ""
+msgstr "Aldizkariaren identitatea"
 
 msgid "manager.setup.includeCreativeCommons"
 msgstr ""
@@ -677,7 +680,7 @@ msgid "manager.setup.journalArchiving"
 msgstr "Aldizkari-artxibatzea"
 
 msgid "manager.setup.contextSummary"
-msgstr ""
+msgstr "Aldizkariaren aurkibidea"
 
 msgid "manager.setup.contextAbout"
 msgstr ""
@@ -771,22 +774,27 @@ msgid "manager.setup.lists"
 msgstr "Zerrendak"
 
 msgid "manager.setup.plnPluginEnable"
-msgstr ""
+msgstr "Gaitu PKP PN plugina"
 
 msgid "manager.setup.plnDescription"
 msgstr ""
+"PKP Preservation Network (PN) erakundeak doako kontserbazio zerbitzuak "
+"eskaintzen ditu oinarrizko irizpide batzuk betetzen dituen edozein OJS "
+"aldizkarirentzat."
 
 msgid "manager.setup.plnSettingsDescription"
 msgstr ""
+"Ikusi <button>pluginaren ezarpenak</button> PKP PNren erabilera baldintzak "
+"onartzeko."
 
 msgid "manager.setup.plnPluginArchiving"
-msgstr ""
+msgstr "PKP Preservation Network (PN)"
 
 msgid "manager.setup.plnPluginNotInstalled"
 msgstr ""
 
 msgid "manager.setup.otherLockss"
-msgstr ""
+msgstr "LOCKSS eta CLOCKSS"
 
 msgid "manager.setup.lockssEnable"
 msgstr ""
@@ -1093,10 +1101,12 @@ msgid "manager.setup.disableSubmissions.notAccepting"
 msgstr ""
 
 msgid "manager.setup.enableOai"
-msgstr ""
+msgstr "Gaitu OAI"
 
 msgid "manager.setup.enableOai.description"
 msgstr ""
+"Eman metadatuak hirugarrenen indexazio-zerbitzuei <a href=\"https://www."
+"openarchives.org/\">Open Archives Initiative</a>-ren bidez."
 
 msgid "manager.setup.typeExamples"
 msgstr ""
