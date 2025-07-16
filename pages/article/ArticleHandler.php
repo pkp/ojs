@@ -24,6 +24,7 @@ use APP\issue\IssueAction;
 use APP\observers\events\UsageEvent;
 use APP\payment\ojs\OJSCompletedPaymentDAO;
 use APP\payment\ojs\OJSPaymentManager;
+use APP\publication\enums\VersionStage;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
@@ -151,6 +152,30 @@ class ArticleHandler extends Handler
             if (!$this->publication) {
                 throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
             }
+        } elseif ($subPath === 'jav') {
+            $versionStageParam = array_shift($args);
+            $versionStage = VersionStage::getFromLower(strtolower($versionStageParam));
+            if (!$versionStage) {
+                throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
+            }
+            $versionMajor = (int) array_shift($args);
+            $publicationId = Repo::publication()
+                ->getCollector()
+                ->filterBySubmissionIds([$this->article->getId()])
+                ->filterByVersionStage($versionStage)
+                ->filterByVersionMajor($versionMajor)
+                ->filterByStatus([Submission::STATUS_PUBLISHED])
+                ->orderByVersion()
+                ->getIds()
+                ->last();
+            if (!$publicationId) {
+                throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
+            }
+            $redirectPath = [$submission->getBestId()];
+            if ($publicationId != $this->article->getData('currentPublicationId')) {
+                $redirectPath = [$submission->getBestId(), 'version', $publicationId];
+            }
+            $request->redirect(null, $request->getRequestedPage(), $request->getRequestedOp(), $redirectPath);
         } else {
             $this->publication = $this->article->getCurrentPublication();
             $galleyId = $subPath;

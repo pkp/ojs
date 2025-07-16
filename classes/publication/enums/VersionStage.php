@@ -50,4 +50,15 @@ enum VersionStage: string
     {
         return __($this->labelKey(), locale: $locale);
     }
+
+    public static function getFromLower(string $lowerVersionStage): string
+    {
+        return match ($lowerVersionStage) {
+            'ao' => self::AUTHOR_ORIGINAL->value,
+            'am' => self::ACCEPTED_MANUSCRIPT->value,
+            'sm' => self::SUBMITTED_MANUSCRIPT->value,
+            'pf' => self::PROOF->value,
+            'vor' => self::VERSION_OF_RECORD->value,
+        };
+    }
 }
