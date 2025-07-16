@@ -64,6 +64,7 @@
  * @uses $licenseUrl string URL to license. Only assigned if license should be
  *   included with published submissions.
  * @uses $ccLicenseBadge string An image and text with details about the license
+ * @uses $creditRoleTerms Array of translated credit role terms: roles and degrees
  *
  * @hook Templates::Article::Main []
  * @hook Templates::Article::Details::Reference []
@@ -138,6 +139,21 @@
 									<a href="{$author->getData('orcid')|escape}" target="_blank">
 										{$author->getOrcidDisplayValue()|escape}
 									</a>
+								</span>
+							{/if}
+							{if $author->getData('creditRoles')}
+								<span class="credit_roles">
+								{strip}
+								{foreach $author->getData('creditRoles') as $credit}
+									<span class="value">
+										{$creditRoleTerms.roles[$credit.role]|escape}
+										{if $creditRoleTerms.degrees[$credit.degree]}
+											&nbsp;({$creditRoleTerms.degrees[$credit.degree]|escape})
+										{/if}
+									</span>
+									{if !$credit@last}{translate key="common.commaListSeparator"}{/if}
+								{/foreach}
+								{/strip}
 								</span>
 							{/if}
 						</li>
