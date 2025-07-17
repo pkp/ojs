@@ -128,6 +128,10 @@
 		<migration class="APP\migration\upgrade\v3_4_0\I10962_UpdateEmailTemplateVariables"/>
 	</upgrade>
 
+	<upgrade minversion="3.5.0.0" maxversion="3.5.9.9">
+		<migration class="APP\migration\upgrade\v3_4_0\I10962_UpdateEmailTemplateVariables"/>
+	</upgrade>
+
 	<upgrade minversion="3.1.0.0" maxversion="3.4.9.9">
 		<migration class="PKP\migration\upgrade\v3_5_0\PreflightCheckMigration" fallback="3.4.9.9" />
 		<migration class="APP\migration\upgrade\v3_5_0\I8333_AddMissingForeignKeys" />
