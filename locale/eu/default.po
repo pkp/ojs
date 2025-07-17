@@ -2,7 +2,7 @@
 # Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-06-24 12:54+0000\n"
+"PO-Revision-Date: 2025-07-17 19:00+0000\n"
 "Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/default/eu/>"
 "\n"
@@ -105,10 +105,10 @@ msgstr ""
 "\">Gehiago...</a>"
 
 msgid "default.genres.researchInstrument"
-msgstr "Ikerketa tresna"
+msgstr "Ikerketa-tresna"
 
 msgid "default.genres.researchMaterials"
-msgstr "Ikerketa materiala"
+msgstr "Ikerketa-materialak"
 
 msgid "default.genres.researchResults"
 msgstr "Ikerketaren emaitzak"
