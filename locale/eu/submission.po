@@ -5,7 +5,7 @@
 # Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-07-16 11:20+0000\n"
+"PO-Revision-Date: 2025-07-17 11:23+0000\n"
 "Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "eu/>\n"
@@ -309,13 +309,13 @@ msgid "publication.unpublish"
 msgstr "Desargitaratu"
 
 msgid "publication.unpublish.confirm"
-msgstr ""
+msgstr "Ziur zaude hau ez duzula argitaratu nahi?"
 
 msgid "publication.unschedule.confirm"
-msgstr ""
+msgstr "Ziur zaude ez duzula nahi hau argitaratzeko programatzea?"
 
 msgid "publication.version.details"
-msgstr ""
+msgstr "{$version} bertsioaren argitalpen-xehetasunak"
 
 msgid "submission.queries.production"
 msgstr "Ekoizpenari buruzko eztabaidak"
@@ -356,10 +356,10 @@ msgid "doi.submission.incorrectContext"
 msgstr ""
 
 msgid "submission.layout.viewGalley"
-msgstr ""
+msgstr "Ikusi galerada"
 
 msgid "galley.cantEditPublished"
-msgstr ""
+msgstr "Galerada hau ezin da editatu dagoeneko argitaratu delako."
 
 msgid "submission.copyright.description"
 msgstr ""
@@ -376,10 +376,12 @@ msgid "submission.wizard.sectionClosed.message"
 msgstr ""
 
 msgid "submission.sectionNotFound"
-msgstr ""
+msgstr "Bidalketa honen atala ezin izan da aurkitu."
 
 msgid "submission.sectionRestrictedToEditors"
 msgstr ""
+"Erredakzioko langileek bakarrik bidali ahal izango dituzte artikuluak atal "
+"honetara."
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Gutxienez egile bat behar da."
