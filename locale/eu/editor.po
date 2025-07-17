@@ -1,12 +1,13 @@
 # Josu Acosta <josuacostacalvo@gmail.com>, 2023.
 # Informatikaria <informatikaria@ueu.eus>, 2025.
+# Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2025-06-22 23:24+0000\n"
-"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
+"PO-Revision-Date: 2025-07-17 19:00+0000\n"
+"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/editor/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
@@ -66,7 +67,7 @@ msgstr ""
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
 msgstr ""
-"Aurkezpena zuzentzera bidali baino lehen, erabili “Egileari Jakinarazi” "
+"Bidalketa zuzentzera bidali baino lehen, erabili “Egileari Jakinarazi” "
 "esteka egileari erabakiaren berri emateko eta bidali behar den bertsioa "
 "hautatzeko."
 
