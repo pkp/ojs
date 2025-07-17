@@ -4,7 +4,6 @@
 import {defineConfig} from 'vite';
 import Vue from '@vitejs/plugin-vue';
 import path from 'path';
-
 export default defineConfig(({mode}) => {
 	// its very unclear how the plugin-vue is handling inProduction option
 	// in any case its still heavily relying on NODE_ENV, thats why its being set
