@@ -14,11 +14,13 @@
 
 namespace APP\migration\upgrade\v3_4_0;
 
+use Illuminate\Support\Facades\DB;
+
 class InstallEmailTemplates extends \PKP\migration\upgrade\v3_4_0\InstallEmailTemplates
 {
     public function up(): void
     {
-        // remove any carried over “NOTIFICATION” template rows
+        // remove any carried over NOTIFICATION template rows
         DB::table('email_templates_default_data')
             ->where('email_key', 'NOTIFICATION')
             ->delete();
