@@ -167,12 +167,12 @@ describe('Data suite tests', function() {
 
 
 		// The submission wizard has loaded
-		cy.contains('Make a Submission: Details');
+		cy.contains('Make a Submission: Upload Files');
 		cy.get('.submissionWizard__submissionDetails').contains('Zedd');
 		cy.get('.submissionWizard__submissionDetails').contains(submission.title);
 		cy.contains('Submitting to the Articles section in English');
-		cy.get('.pkpSteps__step__label--current').contains('Details');
-		cy.get('.pkpSteps__step__label').contains('Upload Files');
+		cy.get('.pkpSteps__step__label--current').contains('Upload Files');
+		cy.get('.pkpSteps__step__label').contains('Details');
 		cy.get('.pkpSteps__step__label').contains('Contributors');
 		cy.get('.pkpSteps__step__label').contains('For the Editors');
         cy.get('.pkpSteps__step__label').contains('Reviewer Suggestions');
@@ -184,17 +184,17 @@ describe('Data suite tests', function() {
 				submission.id = parseInt(search.split('=')[1]);
 			});
 
-		// Enter details
-		cy.get('h2').contains('Submission Details');
-		cy.setTinyMceContent('titleAbstract-abstract-control-en', submission.abstract);
-		cy.get('#titleAbstract-title-control-en').click({force: true}); // Ensure blur event is fired
-		cy.get('.submissionWizard__footer button').contains('Continue').click();
-
 		// Upload files and set file genres
 		cy.contains('Make a Submission: Upload Files');
 		cy.get('h2').contains('Upload Files');
 		cy.get('h2').contains('Files');
 		cy.uploadSubmissionFiles(submission.files);
+		cy.get('.submissionWizard__footer button').contains('Continue').click();
+
+		// Enter details
+		cy.get('h2').contains('Submission Details');
+		cy.setTinyMceContent('titleAbstract-abstract-control-en', submission.abstract);
+		cy.get('#titleAbstract-title-control-en').click({force: true}); // Ensure blur event is fired
 		cy.get('.submissionWizard__footer button').contains('Continue').click();
 
 		// Add Contributors
