@@ -1,15 +1,20 @@
+# "M. Ali" <vorteem@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:44+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:05:44+00:00\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: \n"
+"PO-Revision-Date: 2025-07-19 11:54+0000\n"
+"Last-Translator: \"M. Ali\" <vorteem@gmail.com>\n"
+"Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-pubmed/ar/>\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.importexport.pubmed.displayName"
 msgstr "إضافة التصدير PubMed XML"
@@ -48,3 +53,11 @@ msgstr "لا يوجد عدد يطابق رمز تعريف العدد المحد�
 
 msgid "plugins.importexport.pubmed.export.error.articleNotFound"
 msgstr "لا توجد مقالة يطابق رمز تعريفها الرمز المحدد \"{$articleId}\"."
+
+msgid "plugins.importexport.pubmed.settings.form.nlmTitle"
+msgstr "مختصر عنوان NLM"
+
+msgid "plugins.importexport.pubmed.settings.form.nlmTitle.description"
+msgstr ""
+"مختصر عنوان NLM  للمجلة. إذا لم تكن تعرف المختصر،  <a href=\"https://www.ncbi"
+".nlm.nih.gov/nlmcatalog/\">إبحث في كاتالوغ NLM</a>."

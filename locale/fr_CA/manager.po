@@ -4,13 +4,14 @@
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
 # Nicolas Dickner <dickner.nicolas@uqam.ca>, 2023, 2025.
 # "Marie-Hélène Vézina [UdeMontréal]" <marie-helene.vezina@umontreal.ca>, 2024.
+# Emma U <emmaupkp@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2025-04-16 13:34+0000\n"
-"Last-Translator: Nicolas Dickner <dickner.nicolas@uqam.ca>\n"
+"PO-Revision-Date: 2025-06-17 02:43+0000\n"
+"Last-Translator: Emma U <emmaupkp@gmail.com>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -2601,7 +2602,6 @@ msgstr ""
 msgid "manager.institutions.noContext"
 msgstr "L'établissement de la revue n'a pu être trouvé."
 
-#, fuzzy
 msgid "mailable.subscriptionNotify.name"
 msgstr "Notification d'abonnement"
 
@@ -2627,7 +2627,6 @@ msgstr ""
 "Ce courriel avise un-e abonné-e que son abonnement est expiré. Il fournit "
 "l'adresse URL de la revue, ainsi que les instructions pour y accéder."
 
-#, fuzzy
 msgid "mailable.subscriptionExpiredLast.name"
 msgstr "Abonnement échu en dernier"
 
@@ -2672,7 +2671,6 @@ msgstr ""
 "institutionnel a été renouvelé en ligne. Il fournit des renseignements "
 "sommaires sur l'abonnement et le lien pour accéder à l'abonnement renouvelé."
 
-#, fuzzy
 msgid "mailable.openAccessNotify.name"
 msgstr "Notification de diffusion en libre accès"
 
