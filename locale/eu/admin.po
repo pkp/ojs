@@ -1,12 +1,13 @@
 # Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023.
 # Informatikaria <informatikaria@ueu.eus>, 2024.
+# Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
-"PO-Revision-Date: 2024-02-15 15:39+0000\n"
-"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
+"PO-Revision-Date: 2025-07-21 12:11+0000\n"
+"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/admin/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
@@ -28,8 +29,8 @@ msgstr ""
 
 msgid "admin.languages.confirmDisable"
 msgstr ""
-"Ziur zaude hizkuntza hau kendu nahi duzula? Gerta daiteke aldizkari bat "
-"erabiltzen duela."
+"Ziur zaude hizkuntza hau kendu nahi duzula? Honek hizkuntza hori darabilten "
+"aldizkariei eragin diezaieke."
 
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr ""
@@ -103,7 +104,9 @@ msgid "admin.contexts.form.pathExists"
 msgstr "Hautatutako bidea beste aldizkari batek erabiltzen du."
 
 msgid "admin.contexts.form.primaryLocaleNotSupported"
-msgstr "OJS Bertsioa"
+msgstr ""
+"Eskualde-ezarpen nagusiak aldizkariak onartzen dituen eskualde-ezarpenetako "
+"bat izan behar du."
 
 msgid "admin.journals.enableJournalInstructions"
 msgstr "Gaitu aldizkari hau publikoki agertzeko gunean"
@@ -172,14 +175,14 @@ msgstr ""
 "{$oldUsername}\" kontua galdu egingo da. Ekintza hau ezingo da desegin."
 
 msgid "admin.job.processLogFile.invalidLogEntry.issueId"
-msgstr ""
+msgstr "Zenbakiaren IDa ez da zenbaki osoa."
 
 msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
-msgstr ""
+msgstr "Zenbakiaren galeradaren IDa ez da zenbaki osoa."
 
 msgid ""
 "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
-msgstr ""
+msgstr "Zenbakiaren IDa ez dator bat assoc IDarekin."
 
 msgid "admin.settings.enableBulkEmails.description"
 msgstr ""
@@ -192,6 +195,8 @@ msgstr ""
 
 msgid "admin.siteManagement.description"
 msgstr ""
+"Gehitu, editatu edo kendu aldizkariak gune honetatik eta kudeatu gune osoko "
+"ezarpenak."
 
 msgid "admin.settings.statistics.geo.description"
 msgstr ""
@@ -220,3 +225,6 @@ msgstr ""
 
 #~ msgid "admin.settings.appearance.success"
 #~ msgstr "Itxura konfigurazioa ondo eguneratu egin da."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Erabili gune hau aldizkari guztien plataforma gisa."
