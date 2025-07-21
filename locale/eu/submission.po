@@ -5,8 +5,8 @@
 # Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-07-17 11:23+0000\n"
-"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
+"PO-Revision-Date: 2025-07-21 11:26+0000\n"
+"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "eu/>\n"
 "Language: eu\n"
@@ -335,7 +335,7 @@ msgid "editor.submission.decision.backToReview.completed"
 msgstr "Ebaluatzeko birbidalia"
 
 msgid "editor.submission.decision.backToReview.completed.description"
-msgstr "Bidalketa, {$title}, ebaluazio-fasera itzuli da."
+msgstr "Bidalketa, {$title}, ebaluazio-fasera bueltan bidali da."
 
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
@@ -394,8 +394,8 @@ msgstr "Mesedez, sartu zure artikuluaren laburpena."
 
 msgid "submission.submit.form.wordCountAlert"
 msgstr ""
-"Zure laburpenak hitz-muga gainditzen du. Mesedez, laburtu testua atal "
-"honetarako ezarritako gehienezko luzerara egokitzeko."
+"Zure laburpena luzeegia da. Mesedez, laburtu ezazu ezarritako hitz-mugara "
+"egokitzeko."
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Mesedez, sartu kolaboratzailearen rola."
