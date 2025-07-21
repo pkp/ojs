@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2025-04-26 08:10+0000\n"
+"PO-Revision-Date: 2025-07-17 11:23+0000\n"
 "Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/manager/eu/>"
 "\n"
@@ -23,9 +23,12 @@ msgstr "Sarbidea"
 
 msgid "manager.distribution.copyrightYearBasis.description"
 msgstr ""
+"Aukeratu artikulu baten copyrightaren data lehenetsia nola hautatzen den. "
+"Lehenetsitako balio hau kasuz kasu gainidatzi daiteke. Artikuluz artikulu "
+"argitaratzen baduzu, ez erabili zenbakiaren argitalpen data."
 
 msgid "manager.distribution.copyrightYearBasis.issue"
-msgstr ""
+msgstr "Erabili zenbakiaren argitalpen-data"
 
 msgid "manager.distribution.copyrightYearBasis.submission"
 msgstr "Erabili artikuluaren argitalpen data"
@@ -564,9 +567,7 @@ msgid "manager.setup.numAnnouncementsHomepage.description"
 msgstr ""
 
 msgid "manager.setup.enableUserRegistration"
-msgstr ""
-"Erabiltzaileek beren burua erregistra dezakete egunkarian funtzio hauetako "
-"batean edo gehiagotan:"
+msgstr "Bisitariek erabiltzaile-kontu bat erregistra dezakete aldizkarian."
 
 msgid "manager.setup.focusAndScope"
 msgstr "Orientazioa eta esparrua"
@@ -627,7 +628,7 @@ msgid "manager.setup.guidingSubmissions"
 msgstr "3. urratsa. Bidalketak egiteko gidalerroak"
 
 msgid "manager.setup.identity"
-msgstr ""
+msgstr "Aldizkariaren identitatea"
 
 msgid "manager.setup.includeCreativeCommons"
 msgstr ""
@@ -679,13 +680,19 @@ msgid "manager.setup.journalArchiving"
 msgstr "Aldizkari-artxibatzea"
 
 msgid "manager.setup.contextSummary"
-msgstr ""
+msgstr "Aldizkariaren aurkibidea"
 
 msgid "manager.setup.contextAbout"
-msgstr ""
+msgstr "Aldizkariari buruz"
 
 msgid "manager.setup.contextAbout.description"
 msgstr ""
+"Sartu zure aldizkariari buruzko edozein informazio, irakurleentzat, egile "
+"edo berrikusleentzat interesgarria izan daitekeena. Honen barruan egon "
+"daitezke zure sarbide irekiko politika, aldizkariaren fokua eta irismena, "
+"egile-eskubideen oharra, babesleen dibulgazioa, aldizkariaren historia, "
+"pribatutasun adierazpena eta LOCKSS edo CLOCKSS artxibo-sistema batean "
+"sartzea."
 
 msgid "manager.setup.journalHomepageContent"
 msgstr "Aldizkariaren hasierako orriaren edukia"
@@ -773,22 +780,27 @@ msgid "manager.setup.lists"
 msgstr "Zerrendak"
 
 msgid "manager.setup.plnPluginEnable"
-msgstr ""
+msgstr "Gaitu PKP PN plugina"
 
 msgid "manager.setup.plnDescription"
 msgstr ""
+"PKP Preservation Network (PN) erakundeak doako kontserbazio zerbitzuak "
+"eskaintzen ditu oinarrizko irizpide batzuk betetzen dituen edozein OJS "
+"aldizkarirentzat."
 
 msgid "manager.setup.plnSettingsDescription"
 msgstr ""
+"Ikusi <button>pluginaren ezarpenak</button> PKP PNren erabilera baldintzak "
+"onartzeko."
 
 msgid "manager.setup.plnPluginArchiving"
-msgstr ""
+msgstr "PKP Preservation Network (PN)"
 
 msgid "manager.setup.plnPluginNotInstalled"
 msgstr ""
 
 msgid "manager.setup.otherLockss"
-msgstr ""
+msgstr "LOCKSS eta CLOCKSS"
 
 msgid "manager.setup.lockssEnable"
 msgstr ""
@@ -1095,10 +1107,12 @@ msgid "manager.setup.disableSubmissions.notAccepting"
 msgstr ""
 
 msgid "manager.setup.enableOai"
-msgstr ""
+msgstr "Gaitu OAI"
 
 msgid "manager.setup.enableOai.description"
 msgstr ""
+"Eman metadatuak hirugarrenen indexazio-zerbitzuei <a href=\"https://www."
+"openarchives.org/\">Open Archives Initiative</a>-ren bidez."
 
 msgid "manager.setup.typeExamples"
 msgstr ""
@@ -1856,7 +1870,7 @@ msgid "settings.roles.gridDescription"
 msgstr ""
 
 msgid "manager.publication.library"
-msgstr ""
+msgstr "Argitaletxearen liburutegia"
 
 msgid "manager.setup.copyrightYearBasis"
 msgstr ""
@@ -1889,13 +1903,13 @@ msgid "grid.genres.description"
 msgstr ""
 
 msgid "plugins.importexport.common.settings"
-msgstr ""
+msgstr "Ezarpenak"
 
 msgid "plugins.importexport.common.settings.DOIPluginSettings"
-msgstr ""
+msgstr "DOI pluginaren ezarpenak"
 
 msgid "plugins.importexport.common.export.articles"
-msgstr ""
+msgstr "Artikuluak"
 
 msgid "plugins.importexport.common.export.issues"
 msgstr ""
@@ -1916,10 +1930,12 @@ msgid "plugins.importexport.common.error.noDOIContentObjects"
 msgstr ""
 
 msgid "plugins.importexport.common.settings.form.password"
-msgstr ""
+msgstr "Pasahitza"
 
 msgid "plugins.importexport.common.settings.form.password.description"
 msgstr ""
+"Kontuan izan pasahitza testu arrunt gisa gordeko dela, hau da, ez dago "
+"enkriptatuta."
 
 msgid "plugins.importexport.common.filter.issue"
 msgstr ""

@@ -1,11 +1,12 @@
 # Josu Aramberri <josu.aramberri@gmail.com>, 2022.
 # Josu Acosta <josuacostacalvo@gmail.com>, 2023.
-# Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023.
+# Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023, 2025.
 # Informatikaria <informatikaria@ueu.eus>, 2025.
+# Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-06-15 21:25+0000\n"
-"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
+"PO-Revision-Date: 2025-07-21 11:26+0000\n"
+"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "eu/>\n"
 "Language: eu\n"
@@ -28,19 +29,19 @@ msgid "submission.title.tip"
 msgstr ""
 "Bidalketa mota 'irudia', 'testua' edo beste multimedia mota bat izaten da, "
 "'softwarea' edo 'interaktiboa' barne.  Mesedez, aukeratu zure bidalketarako "
-"egokiena dena. Hona hemen adibide batzuk: <a target=\"\"_blank\"\" href=\""
-"\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\""
-"\">http://dublincore.org/documents/2001/04/12/usageguide/generic."
-"shtml#type</a>\""
+"egokiena dena. Hona hemen adibide batzuk: <a target=\"_blank\" href=\"http"
+"://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\""
+">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</a>"
+"\""
 
 msgid "submission.submit.newSubmissionMultiple"
-msgstr "Hasi bidalketa berri bat hemen"
+msgstr "Hasi bidalketa berri bat"
 
 msgid "submission.submit.newSubmissionSingle"
 msgstr "Bidalketa berria"
 
 msgid "grid.action.workflow"
-msgstr "Bidalketaren argitaratze-prozesua"
+msgstr "Bidalketaren lan-fluxua"
 
 msgid "submission.abstract.wordCount.description"
 msgstr "Laburpenak {$wordCount} hitz edo gutxiago izan behar ditu."
@@ -54,11 +55,11 @@ msgstr "Metadatuak"
 msgid "submission.submit.whatNext.description"
 msgstr ""
 "Aldizkariak zure bidalketaren berri jaso du, eta posta elektronikoaren bidez "
-"egiaztatze mezu bat bidaliko dizu, artxiba dezazun.s.  Editoreak bidalketa "
-"berrikusi ondoren, zurekin harremanetan jarriko dira."
+"egiaztatze mezu bat bidaliko dizu, artxiba dezazun. Editoreak bidalketa "
+"berrikusten duenean, zurekin harremanetan jarriko da."
 
 msgid "grid.action.galleyInIssueEntry"
-msgstr "Galerada alearen sarreran agertzen da"
+msgstr "Galerada zenbakiaren sarreran agertzen da"
 
 msgid "grid.action.issueEntry"
 msgstr "Ikusi bidalketa honen metadatuak"
@@ -67,7 +68,7 @@ msgid "submission.event.articleGalleyMadeAvailable"
 msgstr "Artikuluaren “{$galleyFormatNme}” galerada eskuragarri dago."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "Artikuluaren “{$galleyFormatNme}” galerada eskuragarri dago."
+msgstr "Artikuluaren “{$galleyFormatNme}” galerada ez dago eskuragarri."
 
 msgid "submission.event.publicIdentifiers"
 msgstr "Bidalketaren identifikatzaile publikoak eguneratuta."
@@ -96,10 +97,10 @@ msgstr ""
 "ditzaten."
 
 msgid "grid.action.approveProof"
-msgstr ""
+msgstr "Onartu proba hau galeradan sartzeko."
 
 msgid "grid.action.pageProofApproved"
-msgstr ""
+msgstr "Proba hau galeradan sartzeko onartu da."
 
 msgid "submission.submit.titleAndSummary"
 msgstr "Izenburua eta laburpena"
@@ -116,7 +117,7 @@ msgid "workflow.review.externalReview"
 msgstr "Ebaluazioa"
 
 msgid "submission.event.issueMetadataUpdated"
-msgstr ""
+msgstr "Bidalketaren zenbakiaren metadatuak eguneratu dira."
 
 msgid "submission.upload.fileContents"
 msgstr "Artikuluaren osagaia"
@@ -137,34 +138,40 @@ msgid "submission.submit.contributorRole"
 msgstr "Kolaboratzailearen rola"
 
 msgid "submission.citationFormat.notFound"
-msgstr ""
+msgstr "Eskatutako erreferentzia formatua ezin izan da berreskuratu."
 
 msgid "submission.metadataDescription"
 msgstr ""
+"Ezarpen hauek Dublin Core metadatu multzoan oinarritzen dira, aldizkarietako "
+"edukia deskribatzeko erabiltzen den nazioarteko estandar bat."
 
 msgid "section.any"
 msgstr "Atal guztiak"
 
 msgid "submission.sectionOptions"
-msgstr ""
+msgstr "Atalaren aukerak"
 
 msgid "catalog.browseTitles"
-msgstr "{$numTitles} zenbakiak"
+msgstr "{$numTitles} elementuak"
 
 msgid "catalog.category.heading"
-msgstr "Zenbaki guztiak"
+msgstr "Elementu guztiak"
 
 msgid "galley.editPublishedDisabled"
 msgstr ""
+"Argitalpen honen galeradak ezin dira editatu, dagoeneko argitaratuta "
+"dagoelako."
 
 msgid "galley.publicationNotFound"
-msgstr ""
+msgstr "Galerada honen argitalpena ezin izan da aurkitu."
 
 msgid "publication.assignToissue"
-msgstr "Ale bati esleitu"
+msgstr "Zenbaki bati esleitu"
 
 msgid "publication.assignedToIssue"
 msgstr ""
+"<a href=\"{$issueUrl}\">{$issueName}</a>(e)ri esleitu zaio, baina ez da "
+"argitaratzeko programatu."
 
 msgid "publication.changeIssue"
 msgstr "Aldatu zenbakia"
@@ -176,13 +183,13 @@ msgstr ""
 "dagoela aurrez eta aurreko data jarri behar diozula."
 
 msgid "publication.invalidSection"
-msgstr ""
+msgstr "Ezin izan da argitalpen honen atala aurkitu."
 
 msgid "publication.inactiveSection"
-msgstr ""
+msgstr "{$section} (Ez-aktiboa)"
 
 msgid "publication.invalidIssue"
-msgstr ""
+msgstr "Ezin izan da argitalpen honen zenbakia aurkitu."
 
 msgid "publication.publish.confirmation"
 msgstr ""
@@ -191,15 +198,22 @@ msgstr ""
 
 msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
+"Argitalpeneko baldintza guztiak bete dira. Hau {$issue} argitaratzean denean "
+"argitaratuko da. Ziur zaude argitaratzeko programatu nahi duzula?"
 
 msgid "publication.publish.confirmation.backIssue"
 msgstr ""
+"Argitalpeneko baldintza guztiak bete dira. Hau berehala argitaratuko da "
+"{$issue}(e)an. Ziur zaude argitaratu nahi duzula?"
 
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
+"Argitaratzeko baldintza guztiak bete dira. Hau berehala argitaratuko da, "
+"{$datePublished} argitaratze-data ezarrita dagoelako. Ziur zaude argitaratu "
+"nahi duzula?"
 
 msgid "publication.required.issue"
-msgstr ""
+msgstr "Argitalpena zenbaki bati esleitu behar zaio argitaratu aurretik."
 
 msgid "publication.publishedIn"
 msgstr "<a href=\"{$issueUrl}\">{$issueName}</a> zenbakian argitaratua."
@@ -251,7 +265,7 @@ msgid "publication.event.scheduled"
 msgstr "Bidalketa argitaratzeko programatu da."
 
 msgid "publication.event.unpublished"
-msgstr ""
+msgstr "Bidalketa hau argitalpenetik kendu da."
 
 msgid "publication.event.versionPublished"
 msgstr "Bertsio berri bat argitaratu da."
@@ -260,25 +274,28 @@ msgid "publication.event.versionScheduled"
 msgstr "Bertsio berri bat programatu da argitaratzeko."
 
 msgid "publication.event.versionUnpublished"
-msgstr ""
+msgstr "Bertsio bat argitalpenetik kendu da."
 
 msgid "publication.invalidSubmission"
-msgstr ""
+msgstr "Ezin izan da argitalpen honetarako bidalketa aurkitu."
 
 msgid "publication.publish"
 msgstr "Argitaratu"
 
 msgid "publication.publish.requirements"
-msgstr ""
+msgstr "Argitaratu ahal izateko, ondorengo baldintzak bete behar dira."
 
 msgid "publication.required.declined"
-msgstr ""
+msgstr "Baztertutako bidalketa ezin da argitaratu."
 
 msgid "publication.required.reviewStage"
 msgstr ""
+"Bidalketa edizio edo ekoizpen fasean egon behar du argitaratu ahal izateko."
 
 msgid "submission.license.description"
 msgstr ""
+"Lizentzia automatikoki ezarriko da <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> gisa, hau argitaratzen denean."
 
 msgid "submission.copyrightHolder.description"
 msgstr ""
@@ -286,18 +303,19 @@ msgstr ""
 
 msgid "submission.copyrightOther.description"
 msgstr ""
+"Argitaratutako bidalketen egile-eskubideen aitormena honako honi esleitu."
 
 msgid "publication.unpublish"
-msgstr ""
+msgstr "Desargitaratu"
 
 msgid "publication.unpublish.confirm"
-msgstr ""
+msgstr "Ziur zaude hau ez duzula argitaratu nahi?"
 
 msgid "publication.unschedule.confirm"
-msgstr ""
+msgstr "Ziur zaude ez duzula nahi hau argitaratzeko programatzea?"
 
 msgid "publication.version.details"
-msgstr ""
+msgstr "{$version} bertsioaren argitalpen-xehetasunak"
 
 msgid "submission.queries.production"
 msgstr "Ekoizpenari buruzko eztabaidak"
@@ -312,36 +330,52 @@ msgstr ""
 
 msgid "editor.submission.decision.backToReview.log"
 msgstr ""
+"{$editorName}-(e)k bidalketa hau onartzeko erabakia atzera bota du eta "
+"ebaluazio-fasera bidali du berriro."
 
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Ebaluatzeko birbidalia"
 
 msgid "editor.submission.decision.backToReview.completed.description"
-msgstr "Bidalketa, {$title}, ebaluazio-fasera itzuli da."
+msgstr "Bidalketa, {$title}, ebaluazio-fasera bueltan bidali da."
 
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
+"Bidali mezu elektroniko bat egileei beren lana ebaluazio-fasera itzuliko "
+"dela jakinarazteko. Azaldu zergatik hartu den erabaki hau eta jakinarazi "
+"egileari zer berrikuspen gehiago egingo den."
 
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
+"Bidali mezu elektroniko bat egileei, bidalketa hau pareen ebaluaziora "
+"bidaliko dela jakinarazteko. Ahal bada, adierazi egileei pareen berrikuspen "
+"prozesuak zenbat denbora iraun dezakeen eta noizko espero dezaketen "
+"editoreen berri berriro izatea."
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Hautatu ebaluazio-fasera bidali behar diren fitxategiak."
 
 msgid "doi.submission.issueMissing.publication"
 msgstr ""
+"Ezin izan da DOI bat sortu ondorengo bidalketarentzat: {$pubObjectTitle}. "
+"Bidalketa zenbaki bati esleitu behar zaio DOI bat sortu ahal izateko."
 
 msgid "doi.submission.issueMissing.representation"
 msgstr ""
+"Ezin izan da DOI bat sortu {$itemTitle} bidalketako {$pubObjectTitle} "
+"galeradarentzat. Bidalketa zenbaki bati esleitu behar zaio DOI bat sortu "
+"ahal izateko."
 
 msgid "doi.submission.incorrectContext"
 msgstr ""
+"Ezin izan da DOI bat sortu ondorengo bidalketarentzat: {$pubObjectTitle}. Ez "
+"da existitzen egungo aldizkariaren testuinguruan."
 
 msgid "submission.layout.viewGalley"
-msgstr ""
+msgstr "Ikusi galerada"
 
 msgid "galley.cantEditPublished"
-msgstr ""
+msgstr "Galerada hau ezin da editatu dagoeneko argitaratu delako."
 
 msgid "submission.copyright.description"
 msgstr ""
@@ -350,18 +384,30 @@ msgstr ""
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
+"Ez duzu aldizkari honetara bidaltzeko baimenik, egileak erredakzio-taldeak "
+"erregistratu behar baititu. Akats bat dela uste baduzu, jarri harremanetan "
+"<a href='mailto:{$email}'>{$name}</a>-(r)ekin."
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
+"Ez duzu aldizkari honetara bidaltzeko baimenik, aldizkari honetako atal "
+"guztietarako bidalketak desaktibatu edo mugatu egin direlako. Akats bat dela "
+"uste baduzu, jarri harremanetan <a "
+"href='mailto:{$email}'>{$name}</a>-(r)ekin."
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
+"{$contextName}-k ez ditu bidalketak onartzen {$section} atalerako. Zure "
+"bidalketa berreskuratzeko laguntza behar baduzu, jarri harremanetan <a "
+"href='mailto:{$email}'>{$name}</a>-(r)ekin."
 
 msgid "submission.sectionNotFound"
-msgstr ""
+msgstr "Bidalketa honen atala ezin izan da aurkitu."
 
 msgid "submission.sectionRestrictedToEditors"
 msgstr ""
+"Erredakzioko langileek bakarrik bidali ahal izango dituzte artikuluak atal "
+"honetara."
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Gutxienez egile bat behar da."
@@ -374,8 +420,8 @@ msgstr "Mesedez, sartu zure artikuluaren laburpena."
 
 msgid "submission.submit.form.wordCountAlert"
 msgstr ""
-"Zure laburpenak hitz-muga gainditzen du. Mesedez, laburtu testua atal "
-"honetarako ezarritako gehienezko luzerara egokitzeko."
+"Zure laburpena luzeegia da. Mesedez, laburtu ezazu ezarritako hitz-mugara "
+"egokitzeko."
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Mesedez, sartu kolaboratzailearen rola."

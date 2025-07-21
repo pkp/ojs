@@ -1,11 +1,12 @@
 # Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023, 2025.
+# Informatikaria <informatikaria@ueu.eus>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
-"PO-Revision-Date: 2025-04-28 14:12+0000\n"
-"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
+"PO-Revision-Date: 2025-06-22 23:24+0000\n"
+"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/author/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
@@ -38,10 +39,10 @@ msgid "author.submit.step1"
 msgstr "1. urratsa. Bidalketa hasi"
 
 msgid "author.submit.step2"
-msgstr "2. urratsa. Bidalketaren metadatuak sartu"
+msgstr "2. urratsa. Bidalketa kargatu"
 
 msgid "author.submit.step3"
-msgstr "3. urratsa. Bidalketa kargatu"
+msgstr "3. urratsa. Bidalketaren metadatuak sartu"
 
 msgid "author.submit.step4"
 msgstr "4. urratsa. Fitxategi osagarriak kargatu"
@@ -56,10 +57,10 @@ msgid "author.submit.start"
 msgstr "Hasi"
 
 msgid "author.submit.upload"
-msgstr "3. Bidalketa kargatu"
+msgstr "Bidalketa kargatu"
 
 msgid "author.submit.metadata"
-msgstr "2. Metadatuak sartu"
+msgstr "Metadatuak sartu"
 
 msgid "author.submit.supplementaryFiles"
 msgstr "Fitxategi osagarriak kargatu"
@@ -89,13 +90,13 @@ msgstr ""
 "horretarako jarritako lekuan."
 
 msgid "author.submissions.queuedReviewSubsequent"
-msgstr "Ebaluazio-fasean {$round}"
+msgstr "{$round}. ebaluazio-fasean"
 
 msgid "author.submissions.queuedReviewRevisions"
-msgstr "Ebaluatzen: ebaluazioak behar dira"
+msgstr "Ebaluatzen: zuzenketak behar dira"
 
 msgid "author.submissions.queuedEditingCopyedit"
-msgstr "Editatzen: Zuzenketak egiteko eskatu da"
+msgstr "Editatzen: testu-edizioa egiteko eskatu da"
 
 msgid "author.submissions.queuedEditingProofread"
 msgstr "Editatzen: proba-zuzenketa eskatu da"
@@ -130,7 +131,7 @@ msgstr ""
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
-"Jarraitu ahal izateko, Copyright informazioko baldintzak onartu behar dituzu."
+"Jarraitu ahal izateko, copyright informazioko baldintzak onartu behar dituzu."
 
 msgid "submission.submit.coverNote"
 msgstr "Editorearentzako oharrak"
@@ -139,15 +140,15 @@ msgid "author.submit.comments"
 msgstr "Idatzi testua (aukerakoa)"
 
 msgid "author.submit.form.localeRequired"
-msgstr "Mesedez, aukeratu aurkezpenaren hizkuntza."
+msgstr "Mesedez, aukeratu bidalketaren hizkuntza."
 
 msgid "author.submit.reorderInstructions"
 msgstr ""
-"Berrordenatu egileak argitalpenean zerrendatuko diren ordena berean "
+"Berrantolatu egileak, argitalpenean zerrendatuko diren ordena berean "
 "azaltzeko."
 
 msgid "author.submit.reorder"
-msgstr "Berriz eskatu egilearen izena"
+msgstr "Berrantolatu egilearen izena"
 
 msgid "author.submit.selectPrincipalContact"
 msgstr "Korrespondentzia editorialerako kontaktu nagusia."
@@ -182,7 +183,7 @@ msgstr ""
 "Egile bakoitzaren izena, abizena eta helbide elektronikoa eman behar dira."
 
 msgid "author.submit.form.titleRequired"
-msgstr "Sartu zure artikuluaren titulua."
+msgstr "Sartu zure artikuluaren izenburua."
 
 msgid "author.submit.form.abstractRequired"
 msgstr "Sartu zure artikuluaren laburpena."
@@ -302,7 +303,7 @@ msgid "author.submit.suppFile.noFile"
 msgstr "Ez da fitxategirik kargatu."
 
 msgid "author.submit.suppFile.form.titleRequired"
-msgstr "Idatzi fitxategi osagarri honen titulua."
+msgstr "Idatzi fitxategi osagarri honen izenburua."
 
 msgid "author.submit.suppFile.form.subjectRequired"
 msgstr "Sartu gaia."
@@ -328,7 +329,7 @@ msgstr ""
 "duzun interesagatik."
 
 msgid "author.article.uploadAuthorVersion"
-msgstr "Kargatu Egilearen bertsioa"
+msgstr "Kargatu egilearen bertsioa"
 
 msgid "author.article.copyeditedFile"
 msgstr "Zuzendutako fitxategia"
