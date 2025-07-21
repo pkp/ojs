@@ -1,4 +1,4 @@
-# Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023.
+# Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023, 2025.
 # Informatikaria <informatikaria@ueu.eus>, 2024.
 # Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
@@ -7,7 +7,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
 "PO-Revision-Date: 2025-07-21 12:11+0000\n"
-"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
+"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/admin/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
@@ -89,7 +89,7 @@ msgid "admin.journals.urlWillBe"
 msgstr "Aldizkariaren URLa {$sampleUrl} izango da."
 
 msgid "admin.contexts.form.titleRequired"
-msgstr "Titulu bat behar da."
+msgstr "Izenburu bat behar da."
 
 msgid "admin.contexts.form.pathRequired"
 msgstr "Bidea zehaztu behar da."
@@ -166,13 +166,10 @@ msgid "admin.scheduledTask.subscriptionExpiryReminder"
 msgstr "Harpidetza iraungitze abisua"
 
 msgid "admin.scheduledTask.openAccessNotification"
-msgstr "Inskribatutako erabiltzaile guztiak"
+msgstr "Sarbide irekiari buruzko jakinarazpena"
 
 msgid "admin.scheduledTask.reviewReminder"
-msgstr ""
-"Ziur zaude \"{$oldUsername}\" erabiltzaile-izena duen kontua ezabatu eta \""
-"{$newUsername}\" erabiltzaile-izena duen kontuarekin batu nahi duzula? \""
-"{$oldUsername}\" kontua galdu egingo da. Ekintza hau ezingo da desegin."
+msgstr "Ebaluazioaren ohartarazpena"
 
 msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "Zenbakiaren IDa ez da zenbaki osoa."
