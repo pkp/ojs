@@ -84,6 +84,14 @@ class DOAJExportPlugin extends PubObjectsExportPlugin
     }
 
     /**
+     * @copydoc PubObjectsExportPlugin::getPublicationFilter()
+     */
+    public function getPublicationFilter()
+    {
+        return 'publication=>doaj-xml';
+    }
+
+    /**
      * @copydoc PubObjectsExportPlugin::getExportActions()
      */
     public function getExportActions($context)
