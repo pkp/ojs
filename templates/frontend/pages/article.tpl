@@ -35,4 +35,8 @@
 
 </div><!-- .page -->
 
+
+	<div id="UserComment">
+		<user-comment data='{$commentsInitConfig|json_encode}'></user-comment>
+	</div>
 {include file="frontend/components/footer.tpl"}
