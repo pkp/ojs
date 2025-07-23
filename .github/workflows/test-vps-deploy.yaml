@@ -1,10 +1,13 @@
-name: Test VPS Deploy stable branches
+name: Test VPS Deploy main branch
 
 on:
   push:
+    branches:
+      - main
 
 jobs:
   deploy:
+    if: github.repository == 'pkp/ojs'
     concurrency:
       group: deploy-${{ github.ref_name }}
       cancel-in-progress: true
