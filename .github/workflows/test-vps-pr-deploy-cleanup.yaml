@@ -1,0 +1,16 @@
+name: Test VPS Cleanup PR Deployment on Close
+
+on:
+  pull_request_target:
+    types: [closed]
+
+jobs:
+  cleanup:
+    uses: jardakotesovec/pkp-test-vps-ci/.github/workflows/deploy-cleanup.yaml@main
+    with:
+      project: ${{ github.event.repository.name }}
+      pr_number: ${{ github.event.number }}
+    secrets:
+      SSH_PRIVATE_KEY: ${{ secrets.TEST_VPS_CI_SSH_PRIVATE_KEY }}
+      SSH_HOST: ${{ secrets.TEST_VPS_CI_SSH_HOST }}
+      SSH_USERNAME: ${{ secrets.TEST_VPS_CI_SSH_USERNAME }}

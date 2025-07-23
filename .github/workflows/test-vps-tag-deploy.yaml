@@ -1,0 +1,23 @@
+name: Test VPS Deploy PR
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag Name to Deploy (e.g., 3_5_0-0)"
+        required: true
+        type: string
+
+jobs:
+  deploy:
+    concurrency:
+      group: deploy-tag-${{ inputs.tag }} # Group by tag name (e.g., "deploy-tag-ojs-3_5_0-1")
+      cancel-in-progress: true
+    uses: jardakotesovec/pkp-test-vps-ci/.github/workflows/deploy.yaml@main
+    with:
+      project: ${{ github.event.repository.name }}
+      tag: ${{ inputs.tag }}
+    secrets:
+      SSH_PRIVATE_KEY: ${{ secrets.TEST_VPS_CI_SSH_PRIVATE_KEY }}
+      SSH_HOST: ${{ secrets.TEST_VPS_CI_SSH_HOST }}
+      SSH_USERNAME: ${{ secrets.TEST_VPS_CI_SSH_USERNAME }}
