@@ -1,10 +1,10 @@
-name: Test VPS Deploy PR
+name: Test VPS Deploy Tag
 
 on:
   workflow_dispatch:
     inputs:
       tag:
-        description: "Tag Name to Deploy (e.g., 3_5_0-0)"
+        description: 'Tag Name to Deploy (e.g., 3_5_0-0)'
         required: true
         type: string
 
