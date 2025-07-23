@@ -1,0 +1,19 @@
+name: Test VPS Deploy stable branches
+
+on:
+  push:
+
+jobs:
+  deploy:
+    concurrency:
+      group: deploy-${{ github.ref_name }}
+      cancel-in-progress: true
+    uses: jardakotesovec/pkp-test-vps-ci/.github/workflows/deploy.yaml@main
+    with:
+      project: ${{ github.event.repository.name }}
+      branch: ${{ github.ref_name }}
+      copies: qa,hosting
+    secrets:
+      SSH_PRIVATE_KEY: ${{ secrets.TEST_VPS_CI_SSH_PRIVATE_KEY }}
+      SSH_HOST: ${{ secrets.TEST_VPS_CI_SSH_HOST }}
+      SSH_USERNAME: ${{ secrets.TEST_VPS_CI_SSH_USERNAME }}
