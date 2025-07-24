@@ -203,6 +203,14 @@
 				</section>
 			{/if}
 
+			{* Plain language summary *}
+			{if $publication->getLocalizedData('plainLanguageSummary')}
+				<section class="item abstract">
+					<h2 class="label">{translate key="article.plainLanguageSummary"}</h2>
+					{$publication->getLocalizedData('plainLanguageSummary')|strip_unsafe_html}
+				</section>
+			{/if}
+
 			{call_hook name="Templates::Article::Main"}
 
 			{* Usage statistics chart *}

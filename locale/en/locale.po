@@ -228,6 +228,9 @@ msgstr "Details"
 msgid "article.abstract"
 msgstr "Abstract"
 
+msgid "article.plainLanguageSummary"
+msgstr "Plain language summary"
+
 msgid "article.coverPage.altText"
 msgstr "Cover Image"
 
