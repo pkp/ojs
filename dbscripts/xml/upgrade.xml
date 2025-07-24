@@ -181,6 +181,10 @@
 		<migration class="PKP\migration\upgrade\v3_5_0\I11603_AddMissingUserRoleAssignmentInvitationEmail"/>
 	</upgrade>
 
+	<upgrade minversion="3.5.0.0" maxversion="3.5.0.2">
+		<migration class="PKP\migration\upgrade\v3_5_0\I11673_AddMissingApprovalToReviewerSuggestion"/>
+	</upgrade>
+
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
 </install>
