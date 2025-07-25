@@ -3,9 +3,12 @@ name: Test VPS Cleanup PR Deployment on Close
 on:
   pull_request_target:
     types: [closed]
+    branches:
+      - main
 
 jobs:
   cleanup:
+    if: github.repository == 'pkp/ojs'
     uses: jardakotesovec/pkp-test-vps-ci/.github/workflows/deploy-cleanup.yaml@main
     with:
       project: ${{ github.event.repository.name }}
