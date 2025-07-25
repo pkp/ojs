@@ -106,9 +106,11 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         $items = [];
 
         foreach ($submissions as $submission) {
-            $items[] = $submission;
+            if (in_array(Repo::doi()::TYPE_PUBLICATION, $context->getEnabledDoiTypes())) {
+                $items[] = $submission;
+            }
             if (in_array(Repo::doi()::TYPE_REPRESENTATION, $context->getEnabledDoiTypes())) {
-                foreach ($submission->getGalleys() as $galley) {
+                foreach ($submission->getCurrentPublication()->getData('galleys') as $galley) {
                     if ($galley->getDoi()) {
                         $items[] = $galley;
                     }
@@ -131,9 +133,11 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         $items = [];
 
         foreach ($submissions as $submission) {
-            $items[] = $submission;
+            if (in_array(Repo::doi()::TYPE_PUBLICATION, $context->getEnabledDoiTypes())) {
+                $items[] = $submission;
+            }
             if (in_array(Repo::doi()::TYPE_REPRESENTATION, $context->getEnabledDoiTypes())) {
-                foreach ($submission->getGalleys() as $galley) {
+                foreach ($submission->getCurrentPublication()->getData('galleys') as $galley) {
                     if ($galley->getDoi()) {
                         $items[] = $galley;
                     }
@@ -179,6 +183,29 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
     }
 
     /**
+     * Adds DataCite specific info to Repo::doi()->markRegistered()
+     *
+     * @param string $hookName Doi::markRegistered
+     *
+     */
+    public function editMarkRegisteredParams(string $hookName, array $args): bool
+    {
+        $editParams = &$args[0];
+        $editParams[$this->_getFailedMsgSettingName()] = null;
+        return HOOK::CONTINUE;
+    }
+
+    /**
+     * Get request failed message setting name.
+     * NB: Change from 3.3.x to camelCase (over crossref::failedMsg)
+     *
+     */
+    private function _getFailedMsgSettingName(): string
+    {
+        return $this->getName() . '_failedMsg';
+    }
+
+    /**
      * Includes plugin in list of configurable registration agencies for DOI depositing functionality
      *
      * @param string $hookName DoiSettingsForm::setEnabledRegistrationAgencies
@@ -192,6 +219,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         /** @var Collection<int,IDoiRegistrationAgency> $enabledRegistrationAgencies */
         $enabledRegistrationAgencies = &$args[0];
         $enabledRegistrationAgencies->add($this);
+        return HOOK::CONTINUE;
     }
 
     /**
@@ -236,7 +264,7 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
      */
     public function getErrorMessageKey(): ?string
     {
-        return null;
+        return $this->_getFailedMsgSettingName();
     }
 
     /**
@@ -276,6 +304,36 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         Hook::add('DoiSettingsForm::setEnabledRegistrationAgencies', [$this, 'addAsRegistrationAgencyOption']);
         Hook::add('DoiSetupSettingsForm::getObjectTypes', [$this, 'addAllowedObjectTypes']);
         Hook::add('DoiListPanel::setConfig', [$this, 'addRegistrationAgencyName']);
+        Hook::add('Doi::markRegistered', [$this, 'editMarkRegisteredParams']);
+        Hook::add('Schema::get::doi', [$this, 'addToSchema']);
+    }
+
+    /**
+     * Add properties for DataCite to the DOI entity for storage in the database.
+     *
+     * @param string $hookName `Schema::get::doi`
+     * @param array $args [
+     *
+     *      @option stdClass $schema
+     * ]
+     *
+     */
+    public function addToSchema(string $hookName, array $args): bool
+    {
+        $schema = &$args[0];
+
+        $settings = [
+            $this->_getFailedMsgSettingName(),
+        ];
+
+        foreach ($settings as $settingName) {
+            $schema->properties->{$settingName} = (object) [
+                'type' => 'string',
+                'apiSummary' => true,
+                'validation' => ['nullable'],
+            ];
+        }
+        return HOOK::CONTINUE;
     }
 
     /**
@@ -292,7 +350,6 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
     {
         $config = &$args[0];
         $config['registrationAgencyNames'][$this->_getExportPlugin()->getName()] = $this->getRegistrationAgencyName();
-
         return HOOK::CONTINUE;
     }
 

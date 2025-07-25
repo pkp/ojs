@@ -115,6 +115,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             if (!$cache->isCached('articles', $article->getId())) {
                 $cache->add($article, null);
             }
+            $pubObject = $article->getCurrentPublication();
         } elseif ($pubObject instanceof Galley) {
             $galley = $pubObject;
             $galleyFile = $galley->getFile();
@@ -175,7 +176,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $rootNode = $this->createRootNode($doc);
         $doc->appendChild($rootNode);
         // DOI (mandatory)
-        $doi = $pubObject->getStoredPubId('doi');
+        $doi = $pubObject->getDoi();
         if ($plugin->isTestMode($context)) {
             $testDOIPrefix = $plugin->getSetting($context->getId(), 'testDOIPrefix');
             assert(!empty($testDOIPrefix));
