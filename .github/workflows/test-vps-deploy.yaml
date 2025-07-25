@@ -1,20 +1,32 @@
-name: Test VPS Deploy main branch
+name: Test VPS Deploy stable branch
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to deploy'
+        required: true
+        type: choice
+        default: 'main'
+        options:
+          - main
+          - stable-3_5_0
+          - stable-3_4_0
+          - stable-3_3_0
 
 jobs:
   deploy:
     if: github.repository == 'pkp/ojs'
     concurrency:
-      group: deploy-${{ github.ref_name }}
+      group: deploy-${{ inputs.branch || github.ref_name }}
       cancel-in-progress: true
     uses: jardakotesovec/pkp-test-vps-ci/.github/workflows/deploy.yaml@main
     with:
       project: ${{ github.event.repository.name }}
-      branch: ${{ github.ref_name }}
+      branch: ${{ inputs.branch || github.ref_name }}
       copies: qa,hosting
     secrets:
       SSH_PRIVATE_KEY: ${{ secrets.TEST_VPS_CI_SSH_PRIVATE_KEY }}
