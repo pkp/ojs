@@ -50,6 +50,12 @@ class Collector implements CollectorInterface
     /** @var array|null List of issue IDs to include */
     public ?array $issueIds = null;
 
+    /** @var array|null List of publication IDs to include */
+    public ?array $publicationIds = null;
+
+    /** @var array|null List of submission IDs to include */
+    public ?array $submissionIds = null;
+
     /** @var array|null order and direction pairing for queries */
     public ?array $resultOrderings = null;
 
@@ -131,6 +137,28 @@ class Collector implements CollectorInterface
     public function filterByIssueIds(?array $issueIds): static
     {
         $this->issueIds = $issueIds;
+        return $this;
+    }
+
+    /**
+     * Set publication ID filter
+     *
+     * @return $this
+     */
+    public function filterByPublicationIds(?array $publicationIds): static
+    {
+        $this->publicationIds = $publicationIds;
+        return $this;
+    }
+
+    /**
+     * Set submission ID filter
+     *
+     * @return $this
+     */
+    public function filterBySubmissionIds(?array $submissionIds): static
+    {
+        $this->submissionIds = $submissionIds;
         return $this;
     }
 
@@ -339,6 +367,10 @@ class Collector implements CollectorInterface
         }
         // Issue IDs
         $q->when($this->issueIds !== null, fn (Builder $q) => $q->whereIn('i.issue_id', $this->issueIds));
+        // Publication IDs
+        $q->when($this->publicationIds !== null, fn (Builder $q) => $q->whereIn('i.issue_id', DB::table('publications')->select('issue_id')->whereIn('publication_id', $this->publicationIds)));
+        // Submission IDs
+        $q->when($this->submissionIds !== null, fn (Builder $q) => $q->whereIn('i.issue_id', DB::table('publications')->select('issue_id')->whereIn('submission_id', $this->submissionIds)));
         // Published
         $q->when($this->isPublished !== null, fn (Builder $q) => $q->where('i.published', '=', $this->isPublished ? 1 : 0));
         // Volumes

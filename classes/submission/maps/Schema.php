@@ -185,13 +185,9 @@ class Schema extends \PKP\submission\maps\Schema
     {
         $submissionIds = $submissions->map(fn (Submission $submission) => $submission->getId())->all();
         $publications = Repo::publication()->getCollector()->filterBySubmissionIds($submissionIds)->getMany();
-        $issueIds = $publications->map(fn (Publication $publication) => $publication->getData('issueId'))
-            ->unique()
-            ->all();
-
         $issues = Repo::issue()->getCollector()
             ->filterByContextIds([$this->context->getId()])
-            ->filterByIssueIds($issueIds)
+            ->filterBySubmissionIds($submissionIds)
             ->getMany();
 
         $issueIdsGroupedBySubmission = $publications->groupBy(fn (Publication $publication) => $publication->getData('submissionId'))
