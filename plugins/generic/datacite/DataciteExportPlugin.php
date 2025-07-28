@@ -355,25 +355,6 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
     }
 
     /**
-     * @copydoc DOIPubIdExportPlugin::markRegistered()
-     */
-    public function markRegistered($context, $objects)
-    {
-        foreach ($objects as $object) {
-            // Get all DOIs for each object
-            // Check if submission or issue
-            if ($object instanceof Submission) {
-                $doiIds = Repo::doi()->getDoisForSubmission($object->getId());
-            } else {
-                $doiIds = Repo::doi()->getDoisForIssue($object->getId, true);
-            }
-            foreach ($doiIds as $doiId) {
-                Repo::doi()->markRegistered($doiId);
-            }
-        }
-    }
-
-    /**
      * Get request failed message setting name.
      * NB: Changed as of 3.4
      *
