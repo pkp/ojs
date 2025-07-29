@@ -23,6 +23,7 @@ use APP\section\Repository as SectionRepository;
 use APP\submission\Repository as SubmissionRepository;
 use APP\submissionFile\Repository as SubmissionFileRepository;
 use APP\user\Repository as UserRepository;
+use APP\userComment\Repository as UserCommentRepository;
 use PKP\facades\Repo as BaseRepo;
 use PKP\galley\Repository as GalleyRepository;
 use PKP\submission\reviewAssignment\Repository as ReviewAssignmentRepository;
@@ -82,5 +83,10 @@ class Repo extends BaseRepo
     public static function reviewAssignment(): ReviewAssignmentRepository
     {
         return app(ReviewAssignmentRepository::class);
+    }
+
+    public static function userComment(): UserCommentRepository
+    {
+        return app(UserCommentRepository::class);
     }
 }
