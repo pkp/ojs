@@ -34,28 +34,28 @@ class Scheduler extends PKPScheduler
         $this
             ->schedule
             ->call(fn () => (new ReviewReminder())->execute())
-            ->hourly()
+            ->daily()
             ->name(ReviewReminder::class)
             ->withoutOverlapping();
 
         $this
             ->schedule
             ->call(fn () => (new DepositDois())->execute())
-            ->hourly()
+            ->daily()
             ->name(DepositDois::class)
             ->withoutOverlapping();
 
         $this
             ->schedule
             ->call(fn () => (new EditorialReminders())->execute())
-            ->daily()
+            ->monthlyOn(1)
             ->name(EditorialReminders::class)
             ->withoutOverlapping();
 
         $this
             ->schedule
             ->call(fn () => (new SubscriptionExpiryReminder())->execute())
-            ->daily()
+            ->monthlyOn(1)
             ->name(SubscriptionExpiryReminder::class)
             ->withoutOverlapping();
 
@@ -69,7 +69,7 @@ class Scheduler extends PKPScheduler
         $this
             ->schedule
             ->call(fn () => (new OpenAccessNotification())->execute())
-            ->hourly()
+            ->daily()
             ->name(OpenAccessNotification::class)
             ->withoutOverlapping();
     }
