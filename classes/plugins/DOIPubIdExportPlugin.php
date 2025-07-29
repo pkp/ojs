@@ -69,17 +69,22 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
     }
 
     /**
-     * Mark selected submissions or issues as registered.
+     * Mark selected submissions or issues and their subobject DOIs as registered.
      *
-     * @param Journal $context
      * @param array $objects Array of published submissions, issues or galleys
      */
-    public function markRegistered($context, $objects)
+    public function markRegistered($objects)
     {
         foreach ($objects as $object) {
-            $doiId = $object->getData('doiId');
+            // Get all DOIs for each object
+            // Check if submission or issue
+            if ($object instanceof Submission) {
+                $doiIds = Repo::doi()->getDoisForSubmission($object->getId());
+            } else {
+                $doiIds = Repo::doi()->getDoisForIssue($object->getId, true);
+            }
 
-            if ($doiId != null) {
+            foreach ($doiIds as $doiId) {
                 Repo::doi()->markRegistered($doiId);
             }
         }
