@@ -66,25 +66,28 @@ class RecommendBySimilarityPlugin extends GenericPlugin
         $searchTerms = [];
         $result = Hook::run('RecommendBySimilarityPlugin::getSimilarityTerms', [$submissionId, &$searchTerms]);
 
-        // If no plugin implements the hook then use the subject keywords
-        // of the submission for a similarity search.
-        if ($result === false) {
-            // Retrieve the article.
-            $submission = Repo::submission()->get($submissionId);
-            if ($submission->getData('status') === Submission::STATUS_PUBLISHED) {
-                // Retrieve keywords (if any).
-                $allSearchTerms = array_filter(
-                    Repo::controlledVocab()->getBySymbolic(
-                        ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
-                        Application::ASSOC_TYPE_PUBLICATION,
-                        $submission->getCurrentPublication()->getId(),
-                        [Locale::getLocale(), $submission->getData('locale'), Locale::getPrimaryLocale()]
-                    )
-                );
-                foreach ($allSearchTerms as $localeSearchTerms) {
-                    $searchTerms += $localeSearchTerms;
-                }
-            }
+        // If a plugin implements the hook then respect its search terms.
+        if ($result === Hook::ABORT) {
+            return $searchTerms;
+        }
+
+        // Retrieve the article.
+        $submission = Repo::submission()->get($submissionId);
+        if ($submission->getData('status') != Submission::STATUS_PUBLISHED) {
+            return $searchTerms;
+        }
+
+        // Retrieve keywords (if any).
+        $allSearchTerms = array_filter(
+            Repo::controlledVocab()->getBySymbolic(
+                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
+                Application::ASSOC_TYPE_PUBLICATION,
+                $submission->getCurrentPublication()->getId(),
+                [Locale::getLocale(), $submission->getData('locale'), Locale::getPrimaryLocale()]
+            )
+        );
+        foreach ($allSearchTerms as $localeSearchTerms) {
+            $searchTerms += $localeSearchTerms;
         }
 
         return $searchTerms;
