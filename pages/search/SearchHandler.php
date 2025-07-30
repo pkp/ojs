@@ -55,15 +55,12 @@ class SearchHandler extends Handler
     /**
      * Show the search form
      */
-    public function search(array $args, PKPRequest $request)
+    public function search(array $args, PKPRequest $request): void
     {
         $this->validate(null, $request);
 
         $context = $request->getContext();
-        $contextId = $context?->getId();
-        if (!$context) {
-            $contextId = (int) $request->getUserVar('searchContext');
-        }
+        $contextId = $context?->getId() ?? (int) $request->getUserVar('searchContext');
 
         $query = (string) $request->getUserVar('query');
         $dateFrom = $request->getUserDateVar('dateFrom');
@@ -83,13 +80,10 @@ class SearchHandler extends Handler
         $this->setupTemplate($request);
 
         $templateMgr = TemplateManager::getManager($request);
-        $templateMgr->setCacheability(TemplateManager::CACHEABILITY_NO_STORE);
 
         // Assign the year range.
         $collector = Repo::publication()->getCollector();
-        if ($contextId) {
-            $collector->filterByContextIds([$contextId]);
-        }
+        $collector->filterByContextIds($contextId ? [$contextId] : null);
         $yearRange = Repo::publication()->getDateBoundaries($collector);
         $yearStart = substr($yearRange->min_date_published, 0, 4);
         $yearEnd = substr($yearRange->max_date_published, 0, 4);
