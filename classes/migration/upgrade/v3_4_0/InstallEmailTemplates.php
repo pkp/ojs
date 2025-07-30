@@ -30,6 +30,7 @@ class InstallEmailTemplates extends \PKP\migration\upgrade\v3_4_0\InstallEmailTe
             'EDITOR_DECISION_BACK_FROM_COPYEDITING',
             'EDITOR_DECISION_CANCEL_REVIEW_ROUND',
             'REVIEW_RESEND_REQUEST',
+            'REVIEW_REMIND',
             'DISCUSSION_NOTIFICATION_SUBMISSION',
             'DISCUSSION_NOTIFICATION_REVIEW',
             'DISCUSSION_NOTIFICATION_COPYEDITING',
