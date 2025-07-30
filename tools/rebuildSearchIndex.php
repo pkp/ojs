@@ -72,11 +72,13 @@ class rebuildSearchIndex extends CommandLineTool
 
         // Let the search implementation re-build the index.
         $submissions = Repo::submission()->getCollector()
-            ->filterByContextIds($journal ? [$journal->getId()] : [Application::SITE_CONTEXT_ID_ALL])
-            ->getIds()->chunk(100)->each(function ($submissionIds) use ($searchEngine) {
+            ->filterByContextIds([$journal?->getId() ?? Application::SITE_CONTEXT_ID_ALL])
+            ->getIds()
+            ->chunk(100)
+            ->each(function (array $submissionIds) use ($searchEngine) {
                 $submissions = Repo::submission()->getCollector()
                     ->filterByContextIds([Application::SITE_CONTEXT_ID_ALL])
-                    ->filterBySubmissionIds($submissionIds->toArray())
+                    ->filterBySubmissionIds($submissionIds->all())
                     ->getMany();
                 $searchEngine->update($submissions);
             });

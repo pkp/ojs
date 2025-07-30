@@ -35,7 +35,7 @@ class SubmissionSearchResult extends \PKP\search\SubmissionSearchResult
         foreach ($collection as $result) {
             $submissionId = $result['submission']->getId();
             $issueId = $result['currentPublication']->getData('issueId');
-            $issue = $issueId ? $issueCache[$issueId] ?? ($issueCache[$issueId] = Repo::issue()->get($issueId)) : null;
+            $issue = $issueId ? ($issueCache[$issueId] ??= Repo::issue()->get($issueId)) : null;
 
             if ($issue) {
                 $issueAvailabilityCache[$issueId] ??= !$issueAction->subscriptionRequired($issue, $result['context'])

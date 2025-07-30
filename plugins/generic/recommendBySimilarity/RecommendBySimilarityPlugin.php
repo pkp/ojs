@@ -60,7 +60,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin
      *
      * @hook RecommendBySimilarityPlugin::getSimilarityTerms [$submissionId, &$searchTerms]
      */
-    public function getSimilarityTerms(int $submissionId)
+    public function getSimilarityTerms(int $submissionId): array
     {
         // Check whether a search plugin provides terms for a similarity search.
         $searchTerms = [];
@@ -81,7 +81,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin
                         [Locale::getLocale(), $submission->getData('locale'), Locale::getPrimaryLocale()]
                     )
                 );
-                foreach ($allSearchTerms as $locale => $localeSearchTerms) {
+                foreach ($allSearchTerms as $localeSearchTerms) {
                     $searchTerms += $localeSearchTerms;
                 }
             }
