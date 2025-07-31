@@ -19,6 +19,7 @@ require dirname(__FILE__) . '/bootstrap.php';
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\journal\JournalDAO;
+use Illuminate\Support\Collection;
 use PKP\cliTool\CommandLineTool;
 use PKP\config\Config;
 use PKP\db\DAORegistry;
@@ -75,7 +76,7 @@ class rebuildSearchIndex extends CommandLineTool
             ->filterByContextIds([$journal?->getId() ?? Application::SITE_CONTEXT_ID_ALL])
             ->getIds()
             ->chunk(100)
-            ->each(function (array $submissionIds) use ($searchEngine) {
+            ->each(function (Collection $submissionIds) use ($searchEngine) {
                 $submissions = Repo::submission()->getCollector()
                     ->filterByContextIds([Application::SITE_CONTEXT_ID_ALL])
                     ->filterBySubmissionIds($submissionIds->all())
