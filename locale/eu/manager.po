@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2025-07-28 16:49+0000\n"
+"PO-Revision-Date: 2025-07-31 12:01+0000\n"
 "Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/manager/eu/>"
 "\n"
@@ -824,6 +824,9 @@ msgstr ""
 
 msgid "manager.setup.lockssLicenseDescription"
 msgstr ""
+"LOCKSS lizentzia bat agertuko da \"Aldizkariari buruz\" atalean, "
+"\"Artxibatuta\" atalean: <a href=\"http://www.lockss.org/community/"
+"publishers-titles-gln/\" target=\"_blank\">LOCKSS Lizentzia</a>"
 
 msgid "manager.setup.lockssLicenseLabel"
 msgstr ""
@@ -841,13 +844,19 @@ msgstr ""
 "bidaltzeko."
 
 msgid "manager.setup.lockssTitle"
-msgstr ""
+msgstr "LOCKSS"
 
 msgid "manager.setup.clockssEnable"
 msgstr ""
+"Gaitu CLOCKSS aldizkariaren edukia parte hartzen duten liburutegietan "
+"gordetzeko eta banatzeko CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\""
+">Publisher Manifest</a> orri baten bidez."
 
 msgid "manager.setup.clockssLicenseDescription"
 msgstr ""
+"CLOCKSS lizentzia bat agertuko da \"Aldizkariari buruz\" atalean, "
+"\"Artxibatuta\" atalean: <a href=\"https://clockss.org\" target=\"_blank\""
+">CLOCKSS Lizentzia</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr ""
@@ -856,7 +865,7 @@ msgid "manager.setup.clockssRegister"
 msgstr ""
 
 msgid "manager.setup.clockssTitle"
-msgstr ""
+msgstr "CLOCKSS"
 
 msgid "manager.setup.look"
 msgstr "Itxura"
@@ -1898,22 +1907,32 @@ msgid "manager.setup.copyrightYearBasis.issue"
 msgstr ""
 
 msgid "manager.setup.resetPermissions"
-msgstr ""
+msgstr "Berrezarri artikuluaren baimenak"
 
 msgid "manager.setup.resetPermissions.confirm"
 msgstr ""
+"Ziur zaude artikulu guztien baimen-datuak berrezarri nahi dituzula? Ekintza "
+"hau ezin da desegin."
 
 msgid "manager.setup.resetPermissions.description"
 msgstr ""
+"Kendu argitaratutako artikulu guztien pribatutasuna-adierazpena eta "
+"lizentzia informazioa, aldizkariaren uneko ezarpen lehenetsietara itzuliz. "
+"Honek artikuluei erantsitako aurreko egile-eskubideak eta lizentzia "
+"informazio guztia behin betiko ezabatuko du. Kasu batzuetan, baliteke legez "
+"baimenik ez izatea beste lizentzia batekin argitaratutako lana berriro "
+"lizentziatzeko. Mesedez, kontuz ibili tresna hau erabiltzean eta kontsultatu "
+"legezko aditu bati zure aldizkarian argitaratutako artikuluen gainean zer "
+"eskubide dituzun ziur ez bazaude."
 
 msgid "manager.setup.resetPermissions.success"
-msgstr ""
+msgstr "Artikuluaren baimenak behar bezala berrezarri dira."
 
 msgid "grid.genres.title.short"
 msgstr "Osagaiak"
 
 msgid "grid.genres.title"
-msgstr ""
+msgstr "Artikuluaren osagaiak"
 
 msgid "grid.genres.description"
 msgstr ""
@@ -2065,37 +2084,42 @@ msgid "stats.issues.tooltip.text"
 msgstr ""
 
 msgid "stats.publicationStats"
-msgstr ""
+msgstr "Artikuluaren estatistikak"
 
 msgid "stats.publications.details"
-msgstr ""
+msgstr "Artikuluaren xehetasunak"
 
 msgid "stats.publications.none"
 msgstr ""
+"Ez da aurkitu parametro horiekin bat datorren erabilera-estatistikarik duen "
+"artikulurik."
 
 msgid "stats.publications.totalAbstractViews.timelineInterval"
-msgstr ""
+msgstr "Laburpenaren bistaratze guztiak dataren arabera"
 
 msgid "stats.publications.totalGalleyViews.timelineInterval"
-msgstr ""
+msgstr "Fitxategiaren bistaratze guztiak dataren arabera"
 
 msgid "stats.publications.countOfTotal"
-msgstr ""
+msgstr "{$total} artikulutik {$count}"
 
 msgid "stats.publications.abstracts"
 msgstr "Laburpena"
 
 msgid "stats.publications.galleys"
-msgstr ""
+msgstr "Fitxategiak"
 
 msgid "stats.publications.downloadReport.description"
 msgstr ""
+"Deskargatu CSV/Excel kalkulu-orri bat, ondorengo parametroekin bat datozen "
+"artikuluen erabilera-estatistikekin."
 
 msgid "stats.publications.downloadReport.downloadSubmissions"
 msgstr "Jaitsi artikuluak"
 
 msgid "stats.publications.downloadReport.downloadSubmissions.description"
 msgstr ""
+"Artikulu bakoitzerako laburpenen bistaratze eta fitxategien deskarga kopurua."
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
