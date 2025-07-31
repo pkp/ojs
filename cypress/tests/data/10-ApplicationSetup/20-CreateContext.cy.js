@@ -27,7 +27,7 @@ describe('Data suite tests', function() {
 		cy.get('div[id=context-primaryLocale-error]').find('span').contains('This field is required.');
 		cy.get('input[name="name-en"]').type(Cypress.env('contextTitles')['en'], {delay: 0});
 		cy.get('input[name=acronym-en]').type('JPK', {delay: 0});
-		cy.get('span').contains('Enable this journal to appear publicly on the site').closest('label').find('input[type="checkbox"]').check();		
+		cy.get('span').contains('Enable this journal').closest('label').find('input[type="checkbox"]').check();
 		cy.get('input[name="supportedLocales"][value="en').check();
 		cy.get('input[name="supportedLocales"][value="fr_CA').check();
 		cy.get('input[name="primaryLocale"][value="en').check();
