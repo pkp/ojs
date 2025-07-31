@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2025-07-31 12:01+0000\n"
+"PO-Revision-Date: 2025-07-31 22:35+0000\n"
 "Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/manager/eu/>"
 "\n"
@@ -1248,19 +1248,19 @@ msgid "manager.statistics.statistics.subscriptions"
 msgstr "Harpidetzak"
 
 msgid "manager.statistics.reports.defaultReport.articleDownloads"
-msgstr ""
+msgstr "Artikuluaren fitxategiaren deskargak"
 
 msgid "manager.statistics.reports.defaultReport.articleAbstract"
-msgstr ""
+msgstr "Artikuluaren laburpenaren orri-bistaratzeak"
 
 msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
-msgstr ""
+msgstr "Artikuluaren laburpenaren orri-bistaratzeak eta deskargak"
 
 msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
-msgstr ""
+msgstr "Aldizkariaren orri nagusiko bistaratzeak"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
-msgstr ""
+msgstr "Zenbakiaren aurkibidearen orri-bistaratzeak"
 
 msgid "manager.subscriptionPolicies"
 msgstr "Harpidetza-politikak"
