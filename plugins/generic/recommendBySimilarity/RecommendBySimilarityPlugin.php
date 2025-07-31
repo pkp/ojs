@@ -55,10 +55,9 @@ class RecommendBySimilarityPlugin extends GenericPlugin
     /**
      * Identify similarity terms for a given submission.
      *
-     * @return null|array An array of string keywords or null
-     * if some kind of error occurred.
-     *
      * @hook RecommendBySimilarityPlugin::getSimilarityTerms [$submissionId, &$searchTerms]
+     *
+     * @return array[] An array of string keywords.
      */
     public function getSimilarityTerms(int $submissionId): array
     {
