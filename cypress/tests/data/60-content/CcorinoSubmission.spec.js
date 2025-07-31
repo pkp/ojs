@@ -36,11 +36,11 @@ describe('Data suite tests', function() {
 		// Select pre-existing keywords
 		cy.get('#publication-button').click();
 		cy.get('#metadata-button').click();
-		cy.get('#metadata-keywords-control-en_US').type('pr', {delay: 0});
+		cy.get('#metadata-keywords-control-en_US').type('pr', {delay: 0, force: true});
 		cy.wait(500);
 		cy.get('li').contains('Professional Development').click({force: true});
 		cy.wait(500);
-		cy.get('#metadata-keywords-control-en_US').type('socia', {delay: 0});
+		cy.get('#metadata-keywords-control-en_US').type('socia', {delay: 0, force: true});
 		cy.wait(500);
 		cy.contains('Social Transformation');
 		cy.wait(500);
