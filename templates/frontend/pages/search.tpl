@@ -100,11 +100,11 @@
 	<h2 class="pkp_screen_reader">{translate key="search.searchResults"}</h2>
 
 	{* Results pagination *}
-	{if $results->count()}
-		{assign var="count" value=$results->count}
+	{assign var="count" value=$results->count()}
+	{if $count}
 		<div class="pkp_screen_reader" role="status">
-			{if $results->count > 1}
-				{translate key="search.searchResults.foundPlural" count=$results->count}
+			{if $count > 1}
+				{translate key="search.searchResults.foundPlural" count=$count}
 			{else}
 				{translate key="search.searchResults.foundSingle"}
 			{/if}
@@ -121,7 +121,7 @@
 	</ul>
 
 	{* No results found *}
-	{if $results->count() == 0}
+	{if $count == 0}
 		<span role="status">
 			{include file="frontend/components/notification.tpl" type="notice" messageKey="search.noResults"}
 		</span>

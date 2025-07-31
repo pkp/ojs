@@ -42,11 +42,8 @@ class SearchHandler extends Handler
 
     /**
      * Show the search form
-     *
-     * @param array $args
-     * @param \APP\core\Request $request
      */
-    public function index($args, $request)
+    public function index(array $args, PKPRequest $request)
     {
         $this->validate(null, $request);
         $this->search($args, $request);
