@@ -374,9 +374,6 @@ search_index_name = "submissions"
 ;opensearch_password = "password"
 ;opensearch_ssl_verification = On
 
-; Laravel Scout search driver name
-driver = database
-
 ; Minimum indexed word length
 min_word_length = 3
 
