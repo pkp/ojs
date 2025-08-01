@@ -48,10 +48,14 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 			$params[] = $phrase[$i];
 		}
 
-		if (!empty($type)) {
-			$sqlWhere .= ' AND (o.type & ?) != 0';
-			$params[] = $type;
-		}
+       if (!empty($type)) {
+           if ($type == SUBMISSION_SEARCH_AUTHOR) {
+               $sqlWhere .= ' AND o.type = ?';
+           } else {
+               $sqlWhere .= ' AND (o.type & ?) != 0';
+           }
+           $params[] = $type;
+       }
 
 		if (!empty($publishedFrom)) {
 			$sqlWhere .= ' AND p.date_published >= ' . $this->datetimeToDB($publishedFrom);
@@ -106,4 +110,3 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 		return $returner;
 	}
 }
-
