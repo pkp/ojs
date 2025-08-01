@@ -1,2 +1,83 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2025-08-01 09:12+0000\n"
+"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
+"Language-Team: Basque <http://translate.pkp.sfu.ca/projects/plugins/datacite/"
+"eu/>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.importexport.datacite.displayName"
+msgstr "DataCite esportazio/erregistro plugina"
+
+msgid "plugins.importexport.datacite.description"
+msgstr ""
+"Zenbakien, artikuluen, galeraden eta fitxategi osagarrien metadatuak "
+"esportatu edo erregistratu DataCite formatuan."
+
+msgid "plugins.importexport.datacite.settings.description"
+msgstr ""
+"Mesedez, konfiguratu DataCite esportazio-plugina lehen aldiz erabili "
+"aurretik."
+
+msgid "plugins.importexport.datacite.settings.label"
+msgstr "DataCite ezarpenak"
+
+msgid "plugins.importexport.datacite.registrationAgency.name"
+msgstr "DataCite"
+
+msgid "plugins.importexport.datacite.settings.form.username"
+msgstr "Erabiltzaile-izena (sinboloa)"
+
+msgid "plugins.importexport.datacite.settings.form.usernameRequired"
+msgstr ""
+"Mesedez, sartu DataCite-tik lortu duzun erabiltzaile-izena (sinboloa). "
+"Erabiltzaile-izenak ezin ditu bi puntu izan."
+
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
+msgstr ""
+"\"DOI erregistrorako proba aurrizkia erabili\" hautatzen denean, probarako "
+"DOI aurrizki bat behar da."
+
+msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
+msgstr "Probarako DOI aurrizkia"
+
+msgid "plugins.importexport.datacite.settings.form.testPassword"
+msgstr "Probarako pasahitza"
+
+msgid "plugins.importexport.datacite.settings.form.testUsername"
+msgstr "Probarako erabiltzaile-izena"
+
+msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
+msgstr ""
+"Produkzioko erabiltzaile-izen bat ematen denean, probarako erabiltzaile-izen "
+"bat behar da."
+
+msgid "plugins.importexport.datacite.senderTask.name"
+msgstr "DataCite erregistro automatikoaren zeregina"
+
+msgid "plugins.importexport.datacite.cliUsage"
+msgstr ""
+"Erabilera: \n"
+"{$scriptName} {$pluginName} esportatu du [outputFileName] [journal_path] "
+"{issues|articles|galleys} objectId1 [objectId2] ...\n"
+"{$scriptName} {$pluginName} erregistratu du [journal_path] "
+"{issues|articles|galleys} objectId1 [objectId2] ...\n"
+
+msgid "plugins.generic.datacite.displayName"
+msgstr "Datacite Manager plugina"
+
+msgid "plugins.generic.datacite.description"
+msgstr "DataCite-ko metadatuen bilketa eta esportazioa kudeatzen ditu"
+
+msgid "plugins.generic.datacite.registrationAgency.name"
+msgstr "DataCite"
+
+msgid "plugins.generic.datacite.deposit.unsuccessful"
+msgstr ""
+"Erregistroa ez da behar bezala egin. Mesedez, egiaztatu konfigurazioa eta "
+"saiatu berriro."
