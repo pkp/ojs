@@ -23,6 +23,7 @@ use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\publication\enums\VersionStage;
 use PKP\publication\PKPPublication;
+use APP\submission\Submission;
 
 class Publication extends PKPPublication
 {
@@ -65,20 +66,6 @@ class Publication extends PKPPublication
     public function setIssueId(?int $issueId): void
     {
         $this->setData('issueId', $issueId);
-    }
-
-    /**
-     * Determine if the publication is marked as part of continuous publication.
-     */
-    public function isMarkedAsContinuousPublication(): bool
-    {
-        if (!$this->getData('issueId')) {
-            return false;
-        }
-
-        $issue = Repo::issue()->get($this->getData('issueId'));
-
-        return !$issue->getData('published') && $this->getData('published');
     }
 }
 
