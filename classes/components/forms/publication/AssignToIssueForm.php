@@ -16,6 +16,7 @@
 namespace APP\components\forms\publication;
 
 use APP\facades\Repo;
+use APP\submission\Submission;
 use APP\issue\enums\IssueSelection;
 use PKP\components\forms\FieldOptions;
 use PKP\components\forms\FieldSelect;
@@ -93,18 +94,6 @@ class AssignToIssueForm extends FormComponent
                 'options' => $issueOptions,
                 'value' => $publication->getData('issueId') ?? IssueSelection::NO_ISSUE->value
             ]))
-            ->addField(new FieldOptions('published', [
-                'label' => __('manager.setup.issuelessPublication'),
-                'description' => __('publication.publish.issuelessPublication.description'),
-                'options' => [
-                    [
-                        'value' => true,
-                        'label' => __('publication.publish.issuelessPublication.label'),
-                    ],
-                ],
-                'value' => (bool) $publication->getData('published'),
-                'showWhen' => ['issueId', IssueSelection::NO_ISSUE->value],
-            ]))
             ->addField(new FieldOptions('continuousPublication', [
                 'label' => __('manager.setup.continuousPublication'),
                 'description' => __('publication.publish.continuousPublication.description'),
@@ -114,8 +103,8 @@ class AssignToIssueForm extends FormComponent
                         'label' => __('publication.publish.continuousPublication.label'),
                     ],
                 ],
-                'value' => $publication->isMarkedAsContinuousPublication(),
-                'showWhen' => ['issueId', $unpublishedIssueIds],
+                'value' => (int)$publication->getData('status') === Submission::STATUS_READY_TO_PUBLISH,
+                'showWhen' => ['issueId', array_merge($unpublishedIssueIds, [IssueSelection::NO_ISSUE->value])],
             ]));        
     }
 }

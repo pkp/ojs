@@ -140,7 +140,6 @@ class Repository extends \PKP\publication\Repository
     /** @copydoc \PKP\publication\Repository::version() */
     public function version(Publication $publication, ?VersionStage $versionStage = null, bool $isMinorVersion = true): int
     {
-        $publication->setData('published', false);
         $newId = parent::version($publication, $versionStage, $isMinorVersion);
 
         $context = Application::get()->getRequest()->getContext();
@@ -169,12 +168,12 @@ class Repository extends \PKP\publication\Repository
     {
         // if there is no issue, set the publication as published as part of continuous publication
         if (!$publication->getData('issueId')) {
-            $publication->setData('published', true);
+            $publication->setData('status', Submission::STATUS_READY_TO_PUBLISH);
         } 
         else {
             $issue = Repo::issue()->get($publication->getData('issueId'));
             if ($issue->getData('published')) {
-                $publication->setData('published', true);
+                $publication->setData('status', Submission::STATUS_READY_TO_PUBLISH);
             }
         }
 
@@ -186,7 +185,6 @@ class Repository extends \PKP\publication\Repository
      */
     public function unpublish(Publication $publication)
     {
-        $publication->setData('published', false);
         parent::unpublish($publication);
     }
 
@@ -199,17 +197,15 @@ class Repository extends \PKP\publication\Repository
             unset($params['issueId']);
         }
 
-        if (isset($params['issueId'])) {
-            $issue = Repo::issue()->get($params['issueId']);
-            
-            // Attached to a future issue e.g. non published issue
-            // and marked as continuous publication
-            if (!$issue->getData('published')) {
-                $params['published'] = filter_var(
-                    $params['continuousPublication'] ?? false,
-                    FILTER_VALIDATE_BOOLEAN
-                );
-            }
+        $continuousPublication = filter_var(
+            $params['continuousPublication'] ?? false,
+            FILTER_VALIDATE_BOOLEAN
+        );
+
+        // Attached to a future issue e.g. non published issue or no issue
+        // and marked as to publication immediately
+        if ($continuousPublication) {
+            $params['status'] = Submission::STATUS_READY_TO_PUBLISH;
         }
 
         return parent::edit($publication, $params);
@@ -226,11 +222,18 @@ class Repository extends \PKP\publication\Repository
      * - If the issue is **published** or there is no issue, the status is set to `STATUS_PUBLISHED`.
      * - If the publication is a **continuous publication**, the status is set to `STATUS_PUBLISHED`
      *   regardless of the issue's publication status.
-     * - If the publication does not have a `datePublished`, it is set to the current date.
+     * - If the publication does not have a `datePublished`, it is set to the current date when
+     *   set to `STATUS_PUBLISHED` .
      */
     protected function setStatusOnPublish(Publication $publication)
     {
-        if ($publication->getData('issueId') && ($issue = Repo::issue()->get($publication->getData('issueId')))) {
+        $issue = $publication->getData('issueId')
+            ? Repo::issue()->get($publication->getData('issueId'))
+            : null;
+
+        if (!$issue || $publication->getData('status') === Submission::STATUS_READY_TO_PUBLISH) {
+            $publication->setData('status', Submission::STATUS_PUBLISHED);
+        } else {
             // If there is an issue
             //   - set the publication status to STATUS_PUBLISHED if issue is published
             //   - set the publication status to STATUS_SCHEDULED if issue is not published
@@ -240,23 +243,13 @@ class Repository extends \PKP\publication\Repository
                     ? Submission::STATUS_PUBLISHED
                     : Submission::STATUS_SCHEDULED
             );
-        } else {
-            // if there is no issue, set the publication status to STATUS_PUBLISHED
-            // as it is a issueless publication
-            $publication->setData('status', Submission::STATUS_PUBLISHED);
-        }
-
-        // if the publication is marked as part of continuous publication, set the status to STATUS_PUBLISHED
-        // regardless of the issue's publication status is any issue is associated with the publication
-        if ($publication->isMarkedAsContinuousPublication()) {
-            $publication->setData('status', Submission::STATUS_PUBLISHED);
         }
 
         // If no predefined datePublished available for the publication
-        // or if the publication is marked as part of continuous publication
+        // and the publication is marked as published by above check
         // use current date to set/update the date published
-        if ($publication->getData('status') === Submission::STATUS_PUBLISHED && !$publication->getData('datePublished')
-            // && (!$publication->getData('datePublished') || $publication->isMarkedAsContinuousPublication())
+        if ($publication->getData('status') === Submission::STATUS_PUBLISHED
+            && !$publication->getData('datePublished')
         ) {
             $publication->setData('datePublished', Core::getCurrentDate());
         }
