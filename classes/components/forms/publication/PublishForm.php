@@ -19,6 +19,7 @@
 namespace APP\components\forms\publication;
 
 use APP\facades\Repo;
+use APP\submission\Submission;
 use APP\publication\Publication;
 use PKP\components\forms\FieldHTML;
 use PKP\components\forms\FormComponent;
@@ -75,9 +76,10 @@ class PublishForm extends FormComponent
                 }
             }
 
-            // If the publication is marked to be published immediately regardless of the issue assignment
+            // If the publication is marked as ready to publish, 
+            // it will be published immediately regardless of the issue assignment
             // or to a future issue, it will be published immediately
-            if ($publication->getData('published')) {
+            if ((int)$publication->getData('status') === Submission::STATUS_READY_TO_PUBLISH) {
                 $msg = match($issue?->getData('published')) {
                     true => __('publication.publish.confirmation'),
                     false => __('publication.publish.confirmation.continuousPublication', ['issue' => htmlspecialchars($issue->getIssueIdentification())]),
