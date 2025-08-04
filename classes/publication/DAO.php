@@ -23,7 +23,6 @@ class DAO extends \PKP\publication\DAO
         'id' => 'publication_id',
         'accessStatus' => 'access_status',
         'datePublished' => 'date_published',
-        'published' => 'published',
         'lastModified' => 'last_modified',
         'primaryContactId' => 'primary_contact_id',
         'sectionId' => 'section_id',
