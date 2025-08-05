@@ -344,7 +344,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
         $section->setAbstractsNotRequired((bool) $node->getAttribute('abstracts_not_required'));
         $section->setHideAuthor((bool) $node->getAttribute('hide_author'));
         $section->setHideTitle((bool) $node->getAttribute('hide_title'));
-        $section->setAbstractWordCount($node->getAttribute('abstract_word_count'));
+        $section->setAbstractWordCount((int) $node->getAttribute('abstract_word_count'));
 
         $unknownNodes = [];
         for ($n = $node->firstChild; $n !== null; $n = $n->nextSibling) {
