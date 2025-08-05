@@ -16,6 +16,7 @@ js/build.js
 js/build_frontend.js
 js/hot-updates
 styles/build.css
+styles/build_frontend.css 
 cypress.env.json
 cypress/logs/
 cypress/screenshots/
