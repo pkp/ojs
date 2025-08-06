@@ -15,6 +15,7 @@
 namespace APP\publication;
 
 use APP\core\Application;
+use APP\issue\enums\IssueAssignment;
 use APP\facades\Repo;
 use APP\issue\enums\IssueSelection;
 use APP\payment\ojs\OJSCompletedPaymentDAO;
@@ -167,25 +168,18 @@ class Repository extends \PKP\publication\Repository
     public function publish(Publication $publication)
     {
         // if there is no issue, set the publication as published as part of continuous publication
-        if (!$publication->getData('issueId')) {
-            $publication->setData('status', Submission::STATUS_READY_TO_PUBLISH);
-        } 
-        else {
-            $issue = Repo::issue()->get($publication->getData('issueId'));
-            if ($issue->getData('published')) {
-                $publication->setData('status', Submission::STATUS_READY_TO_PUBLISH);
-            }
-        }
+
+        // if (!$publication->getData('issueId')) {
+        //     $publication->setData('status', Submission::STATUS_READY_TO_PUBLISH);
+        // } 
+        // else {
+        //     $issue = Repo::issue()->get($publication->getData('issueId'));
+        //     if ($issue->getData('published')) {
+        //         $publication->setData('status', Submission::STATUS_READY_TO_PUBLISH);
+        //     }
+        // }
 
         parent::publish($publication);
-    }
-
-    /**
-     * @copydoc \PKP\publication\Repository::unpublish()
-     */
-    public function unpublish(Publication $publication)
-    {
-        parent::unpublish($publication);
     }
 
     /**
@@ -193,20 +187,20 @@ class Repository extends \PKP\publication\Repository
      */
     public function edit(Publication $publication, array $params): Publication
     {
-        if ($params['issueId'] == IssueSelection::NO_ISSUE->value) {
-            unset($params['issueId']);
-        }
+        // if ($params['issueId'] == IssueSelection::NO_ISSUE->value) {
+        //     unset($params['issueId']);
+        // }
 
-        $continuousPublication = filter_var(
-            $params['continuousPublication'] ?? false,
-            FILTER_VALIDATE_BOOLEAN
-        );
+        // $continuousPublication = filter_var(
+        //     $params['continuousPublication'] ?? false,
+        //     FILTER_VALIDATE_BOOLEAN
+        // );
 
         // Attached to a future issue e.g. non published issue or no issue
         // and marked as to publication immediately
-        if ($continuousPublication) {
-            $params['status'] = Submission::STATUS_READY_TO_PUBLISH;
-        }
+        // if ($continuousPublication) {
+        //     $params['status'] = Submission::STATUS_READY_TO_PUBLISH;
+        // }
 
         return parent::edit($publication, $params);
     }
@@ -227,28 +221,39 @@ class Repository extends \PKP\publication\Repository
      */
     protected function setStatusOnPublish(Publication $publication)
     {
-        $issue = $publication->getData('issueId')
-            ? Repo::issue()->get($publication->getData('issueId'))
-            : null;
-
-        if (!$issue || $publication->getData('status') === Submission::STATUS_READY_TO_PUBLISH) {
-            $publication->setData('status', Submission::STATUS_PUBLISHED);
-        } else {
-            // If there is an issue
-            //   - set the publication status to STATUS_PUBLISHED if issue is published
-            //   - set the publication status to STATUS_SCHEDULED if issue is not published
+        $currentStatus = (int) $publication->getData('status');
+        
+        if (in_array($currentStatus, [Submission::STATUS_READY_TO_PUBLISH, Submission::STATUS_READY_TO_SCHEDULE])) {
             $publication->setData(
-                'status', 
-                $issue->getData('published')
+                'status',
+                $currentStatus === Submission::STATUS_READY_TO_PUBLISH
                     ? Submission::STATUS_PUBLISHED
                     : Submission::STATUS_SCHEDULED
             );
+        } else {
+            $issue = $publication->getData('issueId')
+                ? Repo::issue()->get($publication->getData('issueId'))
+                : null;
+
+            if (!$issue || $currentStatus === Submission::STATUS_READY_TO_PUBLISH) {
+                $publication->setData('status', Submission::STATUS_PUBLISHED);
+            } else {
+                // If there is an issue
+                //   - set the publication status to STATUS_PUBLISHED if issue is published
+                //   - set the publication status to STATUS_SCHEDULED if issue is not published
+                $publication->setData(
+                    'status', 
+                    $issue->getData('published')
+                        ? Submission::STATUS_PUBLISHED
+                        : Submission::STATUS_SCHEDULED
+                );
+            }
         }
 
         // If no predefined datePublished available for the publication
         // and the publication is marked as published by above check
         // use current date to set/update the date published
-        if ($publication->getData('status') === Submission::STATUS_PUBLISHED
+        if ($publication->getData('status') == Submission::STATUS_PUBLISHED
             && !$publication->getData('datePublished')
         ) {
             $publication->setData('datePublished', Core::getCurrentDate());
@@ -278,5 +283,16 @@ class Repository extends \PKP\publication\Repository
     {
         $submission = Repo::submission()->get($newPublication->getData('submissionId'));
         Repo::submission()->createDois($submission);
+    }
+
+    public function getIssueAssignmentStatus(Publication $publication, Context $context): IssueAssignment
+    {
+        if ($publication->getData('status') == Submission::STATUS_QUEUED) {
+            return IssueAssignment::defaultAssignment($context);
+        }
+
+        
+
+        return IssueAssignment::defaultAssignment($context);
     }
 }
