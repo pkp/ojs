@@ -10,5 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (pkp?._piniaData) {
 		pageStore.setData(pkp._piniaData);
 	}
+
+	// pkp-modal-manager:
+	const div = document.createElement('div');
+	div.setAttribute('data-vue-root', '');
+	const modalManager = document.createElement('pkp-modal-manager');
+	div.appendChild(modalManager);
+	document.body.prepend(div);
 	pkp.registry.initVueFromAttributes();
 });
