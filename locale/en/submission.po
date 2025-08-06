@@ -247,6 +247,36 @@ msgstr "This has not been scheduled for publication in an issue."
 msgid "publication.selectIssue"
 msgstr "Select an issue to schedule for publication"
 
+msgid "publication.assignToIssue.label"
+msgstr "Assign to Issue"
+
+msgid "publication.assignToIssue.description"
+msgstr "Choose how to assign this publication to an issue."
+
+msgid "publication.assignToIssue.noIssue"
+msgstr "Don't Assign To An Issue"
+
+msgid "publication.assignToIssue.futureIssuePublish"
+msgstr "Assign To Future Issue and Publish Immediately"
+
+msgid "publication.assignToIssue.futureIssueSchedule"
+msgstr "Assign To Future Issue and Schedule Only"
+
+msgid "publication.assignToIssue.currentBackIssue"
+msgstr "Assign To Current/Back Issue"
+
+msgid "publication.assignToIssue.validation.issueRequired"
+msgstr "Must select an issue when assigning to an issue."
+
+msgid "publication.assignToIssue.assignmentType"
+msgstr "Issue Assignment"
+
+msgid "publication.assignToIssue.assignmentTypeDescription"
+msgstr "Choose how to assign this publication to an issue."
+
+msgid "publication.assignToIssue.issueDescription"
+msgstr "Select the issue to assign this publication to."
+
 msgid "submission.publication"
 msgstr "Publication"
 
