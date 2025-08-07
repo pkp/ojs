@@ -1,21 +1,22 @@
 # Carla Marques <carla.marques@usdb.uminho.pt>, 2021, 2022, 2023.
 # José Carvalho <jcarvalho@keep.pt>, 2022, 2023.
 # Marisa Mourão <marisa.mourao@usdb.uminho.pt>, 2023.
+# António Moreira <amdsmoreira@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2023-04-24 20:16+0000\n"
-"Last-Translator: Marisa Mourão <marisa.mourao@usdb.uminho.pt>\n"
-"Language-Team: Portuguese (Portugal) <http://translate.pkp.sfu.ca/projects/"
-"ojs/manager/pt_PT/>\n"
-"Language: pt_PT\n"
+"PO-Revision-Date: 2025-08-07 13:47+0000\n"
+"Last-Translator: António Moreira <amdsmoreira@gmail.com>\n"
+"Language-Team: Portuguese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
+"pt/>\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "manager.distribution.access"
 msgstr "Acesso"
@@ -2649,3 +2650,11 @@ msgid "plugins.importexport.common.error.issueGalleyFileMissing"
 msgstr ""
 "A composição da edição {$id} não pode ser exportada, o ficheiro não foi "
 "encontrado no caminho \"{$path}\"."
+
+msgid "manager.setup.contextSummary.description"
+msgstr ""
+"Apresente uma breve descrição da sua revista para fornecer informações sobre "
+"seu conteúdo e propósitos."
+
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr "O índice do número e a lista de todos submissões associadas."
