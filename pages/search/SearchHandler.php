@@ -43,7 +43,7 @@ class SearchHandler extends Handler
     /**
      * Show the search form
      */
-    public function index(array $args, PKPRequest $request)
+    public function index($args, $request)
     {
         $this->validate(null, $request);
         $this->search($args, $request);
