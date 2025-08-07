@@ -4,6 +4,9 @@
   "version": "3.6.0",
   "author": "Public Knowledge Project",
   "private": true,
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
   "scripts": {
     "dev": "vite build --watch --mode development",
     "dev:frontend": "vite build --watch --mode development --config vite.config.frontend.js",
