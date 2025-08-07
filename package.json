@@ -4,6 +4,9 @@
   "version": "3.5.0",
   "author": "Public Knowledge Project",
   "private": true,
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
   "scripts": {
     "dev": "vite build --watch --mode development",
     "dev:frontend": "vite build --watch --mode development --config vite.config.frontend.js",
@@ -65,7 +68,7 @@
     "google-closure-compiler-java": "^20200719.0.0",
     "husky": "^8.0.3",
     "less": "^4.2.2",
-    "lint-staged": "^14.0.1",
+    "lint-staged": "^16.1.4",
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
