@@ -4,6 +4,9 @@
   "version": "3.5.0",
   "author": "Public Knowledge Project",
   "private": true,
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
   "scripts": {
     "dev": "vite build --watch --mode development",
     "dev:frontend": "vite build --watch --mode development --config vite.config.frontend.js",
@@ -51,10 +54,10 @@
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.10.5",
-    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitejs/plugin-vue": "^6.0.1",
     "@vue/eslint-config-prettier": "^8.0.0",
     "autoprefixer": "^10.4.20",
-    "cypress": "^13.17.0",
+    "cypress": "^14.5.3",
     "cypress-failed-log": "2.10",
     "cypress-file-upload": "^5.0.8",
     "cypress-iframe": "^1.0.1",
@@ -65,12 +68,13 @@
     "google-closure-compiler-java": "^20200719.0.0",
     "husky": "^8.0.3",
     "less": "^4.2.2",
-    "lint-staged": "^14.0.1",
+    "lint-staged": "^16.1.4",
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "rollup-plugin-copy": "^3.5.0",
-    "tailwindcss": "^3.4.17"
+    "tailwindcss": "^3.4.17",
+    "vite": "^7.1.0"
   },
   "prettier": {
     "$schema": "https://json.schemastore.org/prettierrc",
