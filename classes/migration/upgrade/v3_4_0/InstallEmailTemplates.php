@@ -45,11 +45,6 @@ class InstallEmailTemplates extends \PKP\migration\upgrade\v3_4_0\InstallEmailTe
 
     protected function getAppVariableNames(): array
     {
-        return [
-            'contextName' => 'journalName',
-            'contextUrl' => 'journalUrl',
-            'contextSignature' => 'journalSignature',
-            'contextAcronym' => 'journalAcronym',
-        ];
+        return [];
     }
 }
