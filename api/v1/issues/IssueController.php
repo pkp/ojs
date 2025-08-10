@@ -276,7 +276,7 @@ class IssueController extends PKPBaseController
      */
     public function getAssignmentOptions(Request $illuminateRequest): JsonResponse
     {
-        $options = IssueAssignment::getAssignmentOptions();
+        $options = IssueAssignment::getAvailableAssignmentOption($this->getRequest()->getContext());
         return response()->json($options, Response::HTTP_OK);
     }
 

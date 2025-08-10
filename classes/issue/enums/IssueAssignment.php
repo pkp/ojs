@@ -16,26 +16,24 @@ namespace APP\issue\enums;
 
 use APP\submission\Submission;
 use APP\facades\Repo;
-
 use PKP\context\Context;
-
 
 enum IssueAssignment: int
 {
     case NO_ISSUE = 1;
     case FUTURE_ISSUES_PUBLISHED = 2;
-    case CURRENT_ISSUE_SCHEDULED = 3;
+    case FUTURE_ISSUE_SCHEDULED = 3;
     case CURRENT_BACK_ISSUES_PUBLISHED = 4;
 
     /*
-     * Get the label for the issue selection option
+     * Get the label for the issue assignment option
      */
     public function getLabel(): string
     {
         return match ($this) {
             static::NO_ISSUE => __('publication.assignToIssue.noIssue'),
             static::FUTURE_ISSUES_PUBLISHED => __('publication.assignToIssue.futureIssuePublish'),
-            static::CURRENT_ISSUE_SCHEDULED => __('publication.assignToIssue.futureIssueSchedule'),
+            static::FUTURE_ISSUE_SCHEDULED => __('publication.assignToIssue.futureIssueSchedule'),
             static::CURRENT_BACK_ISSUES_PUBLISHED => __('publication.assignToIssue.currentBackIssue'),
         };
     }
@@ -45,7 +43,7 @@ enum IssueAssignment: int
         return match ($this) {
             static::NO_ISSUE => Submission::STATUS_READY_TO_PUBLISH,
             static::FUTURE_ISSUES_PUBLISHED => Submission::STATUS_READY_TO_PUBLISH,
-            static::CURRENT_ISSUE_SCHEDULED => Submission::STATUS_READY_TO_SCHEDULE,
+            static::FUTURE_ISSUE_SCHEDULED => Submission::STATUS_READY_TO_SCHEDULE,
             static::CURRENT_BACK_ISSUES_PUBLISHED => Submission::STATUS_READY_TO_PUBLISH,
         };
     }
@@ -54,13 +52,21 @@ enum IssueAssignment: int
     {
         return match ($this) {
             static::NO_ISSUE => null,
-            static::FUTURE_ISSUES_PUBLISHED => 1,
-            static::CURRENT_ISSUE_SCHEDULED => 0,
+            static::FUTURE_ISSUES_PUBLISHED => 0,
+            static::FUTURE_ISSUE_SCHEDULED => 0,
             static::CURRENT_BACK_ISSUES_PUBLISHED => 1,
         };
     }
 
-    public static function getAssignmentOptions(): array
+    public static function getValidPrePublishStatuses(): array
+    {
+        return [
+            Submission::STATUS_READY_TO_PUBLISH,
+            Submission::STATUS_READY_TO_SCHEDULE,
+        ];
+    }
+
+    public static function getAllAssignmentOptions(): array
     {
         $options = [];
 
@@ -74,6 +80,29 @@ enum IssueAssignment: int
         }
 
         return $options;
+    }
+
+    public static function getAvailableAssignmentOption(Context $context): array
+    {
+        $options = static::getAllAssignmentOptions();
+
+        return collect($options)
+            ->map(function ($option) use ($context) {
+                if ($option['isPublished'] === null) {
+                    return $option;
+                }
+
+                $issueExistsQuery = Repo::issue()
+                    ->getCollector()
+                    ->filterByContextIds([$context->getId()])
+                    ->filterByPublished((bool)$option['isPublished'])
+                    ->getQueryBuilder()
+                    ->exists();
+
+                return $issueExistsQuery ? $option : null;
+            })
+            ->filter()
+            ->toArray();
     }
 
     public static function defaultAssignment(Context $context): self
