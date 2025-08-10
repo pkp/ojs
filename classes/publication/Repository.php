@@ -17,7 +17,6 @@ namespace APP\publication;
 use APP\core\Application;
 use APP\issue\enums\IssueAssignment;
 use APP\facades\Repo;
-use APP\issue\enums\IssueSelection;
 use APP\payment\ojs\OJSCompletedPaymentDAO;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\publication\enums\VersionStage;
@@ -95,16 +94,16 @@ class Repository extends \PKP\publication\Repository
             }
         }
 
+        // Validate the prePublishStatus if given
+        if (isset($props['prePublishStatus'])) {
+            if (!in_array($props['prePublishStatus'], IssueAssignment::getValidPrePublishStatuses())) {
+                $errors['prePublishStatus'] = [__('api.publication.403.cantEditStatus')];
+            }
+        }
+
         // Ensure that the valid issue exists is any issue selected
         if (isset($props['issueId']) && empty($errors['issueId'])) {
-            
-            // Will allow to create a publication without an issue
-            if ($props['issueId'] == IssueSelection::NO_ISSUE->value) {
-                return $errors;
-            }
-
-            if (in_array($props['issueId'], IssueSelection::unselectableOptionsValue())
-                || !Repo::issue()->exists($props['issueId'])) {
+            if (!Repo::issue()->exists($props['issueId'])) {
                 $errors['issueId'] = [__('publication.invalidIssue')];
             }
         }
@@ -163,44 +162,15 @@ class Repository extends \PKP\publication\Repository
     }
 
     /**
-     * @copydoc \PKP\publication\Repository::publish()
-     */
-    public function publish(Publication $publication)
-    {
-        // if there is no issue, set the publication as published as part of continuous publication
-
-        // if (!$publication->getData('issueId')) {
-        //     $publication->setData('status', Submission::STATUS_READY_TO_PUBLISH);
-        // } 
-        // else {
-        //     $issue = Repo::issue()->get($publication->getData('issueId'));
-        //     if ($issue->getData('published')) {
-        //         $publication->setData('status', Submission::STATUS_READY_TO_PUBLISH);
-        //     }
-        // }
-
-        parent::publish($publication);
-    }
-
-    /**
      * @copydoc \PKP\publication\Repository::edit()
      */
     public function edit(Publication $publication, array $params): Publication
     {
-        // if ($params['issueId'] == IssueSelection::NO_ISSUE->value) {
-        //     unset($params['issueId']);
-        // }
-
-        // $continuousPublication = filter_var(
-        //     $params['continuousPublication'] ?? false,
-        //     FILTER_VALIDATE_BOOLEAN
-        // );
-
-        // Attached to a future issue e.g. non published issue or no issue
-        // and marked as to publication immediately
-        // if ($continuousPublication) {
-        //     $params['status'] = Submission::STATUS_READY_TO_PUBLISH;
-        // }
+        if (isset($params['prePublishStatus']) 
+            && in_array($params['prePublishStatus'], IssueAssignment::getValidPrePublishStatuses())) {
+            $params['status'] = $params['prePublishStatus'];
+            unset($params['prePublishStatus']);
+        }
 
         return parent::edit($publication, $params);
     }
@@ -235,7 +205,7 @@ class Repository extends \PKP\publication\Repository
                 ? Repo::issue()->get($publication->getData('issueId'))
                 : null;
 
-            if (!$issue || $currentStatus === Submission::STATUS_READY_TO_PUBLISH) {
+            if (!$issue) {
                 $publication->setData('status', Submission::STATUS_PUBLISHED);
             } else {
                 // If there is an issue
@@ -285,13 +255,53 @@ class Repository extends \PKP\publication\Repository
         Repo::submission()->createDois($submission);
     }
 
+    /**
+     * Get the possible issue assignment status for the publication
+     */
     public function getIssueAssignmentStatus(Publication $publication, Context $context): IssueAssignment
     {
+        $issue = $publication->getData('issueId')
+            ? Repo::issue()->get($publication->getData('issueId'))
+            : null;
+
         if ($publication->getData('status') == Submission::STATUS_QUEUED) {
-            return IssueAssignment::defaultAssignment($context);
+            if (!$issue) {
+                // As the is no issue association
+                // if it was previously published and then got unpublished e.g has `date_published`
+                // the it was previously issueless e.g. NO_ISSUE
+                // otherwise we get the default assignment
+                return $publication->getData('datePublished')
+                    ? IssueAssignment::NO_ISSUE
+                    : IssueAssignment::defaultAssignment($context);
+            }
+
+            // There is issue association and based on the assignment will be deduced
+            return $issue->getData('published')
+                ? IssueAssignment::CURRENT_BACK_ISSUES_PUBLISHED
+                : IssueAssignment::FUTURE_ISSUES_PUBLISHED;
+
         }
 
-        
+        if ($publication->getData('status') == Submission::STATUS_DECLINED) {
+            return IssueAssignment::defaultAssignment($context);    
+        }
+
+        if ($publication->getData('status') == Submission::STATUS_PUBLISHED
+            || $publication->getData('status') == Submission::STATUS_READY_TO_PUBLISH) {
+            
+            if (!$issue) {
+                return IssueAssignment::NO_ISSUE;
+            }
+
+            return $issue->getData('published')
+                ? IssueAssignment::CURRENT_BACK_ISSUES_PUBLISHED
+                : IssueAssignment::FUTURE_ISSUES_PUBLISHED;
+        }
+
+        if ($publication->getData('status') == Submission::STATUS_SCHEDULED
+            || $publication->getData('status') == Submission::STATUS_READY_TO_SCHEDULE) {
+            return IssueAssignment::FUTURE_ISSUE_SCHEDULED;
+        }
 
         return IssueAssignment::defaultAssignment($context);
     }
