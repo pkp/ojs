@@ -1,7 +1,7 @@
-import {defineConfig} from 'vite';
+import {defineConfig, rolldownVersion} from 'vite';
 import Vue from '@vitejs/plugin-vue';
 import path from 'path';
-import copy from 'rollup-plugin-copy';
+import {viteStaticCopy} from 'vite-plugin-static-copy';
 import i18nExtractKeys from './lib/pkp/tools/i18nExtractKeys.vite.js';
 
 export default defineConfig(({mode}) => {
@@ -9,6 +9,8 @@ export default defineConfig(({mode}) => {
 	// in any case its still heavily relying on NODE_ENV, thats why its being set
 	// so for example the devtools support is enabled in development mode
 	process.env.NODE_ENV = mode;
+	console.log('rolldownVersion:', rolldownVersion);
+
 	return {
 		plugins: [
 			i18nExtractKeys({
@@ -32,7 +34,7 @@ export default defineConfig(({mode}) => {
 					},
 				},
 			}),
-			copy({
+			viteStaticCopy({
 				targets: [
 					{
 						src: 'lib/ui-library/public/styles/tinymce/*',
@@ -55,8 +57,6 @@ export default defineConfig(({mode}) => {
 						dest: 'js/build/chart.js',
 					},
 				],
-				// run the copy task after writing the bundle
-				hook: 'writeBundle',
 			}),
 		],
 		publicDir: false,
@@ -108,14 +108,17 @@ export default defineConfig(({mode}) => {
 					format: 'iife', // Set the format to IIFE
 					entryFileNames: 'js/build.js',
 					assetFileNames: (assetInfo) => {
+						if (!assetInfo.name) {
+							// Fallback to a default pattern with placeholders (Vite/Rollup will handle [hash] and [ext])
+							return 'assets/unnamed-[hash].[ext]';
+						}
 						const info = assetInfo.name.split('.');
 						const extType = info[info.length - 1];
 						if (/\.(css)$/.test(assetInfo.name)) {
 							return 'styles/build.css';
 						}
 						return `[name].${extType}`;
-					},
-					// Provide global variables to use in the UMD build
+					}, // Provide global variables to use in the UMD build
 					// for externalized deps
 					globals: {
 						vue: 'pkp.Vue',
