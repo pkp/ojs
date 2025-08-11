@@ -60,26 +60,27 @@ class PublishForm extends FormComponent
 
         // Set separate messages and buttons if publication requirements have passed
         if (empty($requirementErrors)) {
-            $issue = null;
+            $issue = $publication->getData('issueId')
+                ? Repo::issue()->get($publication->getData('issueId'))
+                : null;
             $msg = __('publication.publish.confirmation');
             $submitLabel = __('publication.publish');
             
-            if ($publication->getData('issueId')) {
-                $issue = Repo::issue()->get($publication->getData('issueId'));
-                if ($issue) {
-                    if ($issue->getData('published')) {
-                        $msg = __('publication.publish.confirmation.backIssue', ['issue' => htmlspecialchars($issue->getIssueIdentification())]);
-                    } else {
-                        $msg = __('publication.publish.confirmation.futureIssue', ['issue' => htmlspecialchars($issue->getIssueIdentification())]);
-                        $submitLabel = __('editor.submission.schedulePublication');
-                    }
-                }
-            }
+            // if ($publication->getData('issueId')) {
+            //     if ($issue) {
+            //         if ($issue->getData('published')) {
+            //             $msg = __('publication.publish.confirmation.backIssue', ['issue' => htmlspecialchars($issue->getIssueIdentification())]);
+            //         } else {
+            //             $msg = __('publication.publish.confirmation.futureIssue', ['issue' => htmlspecialchars($issue->getIssueIdentification())]);
+            //             $submitLabel = __('editor.submission.schedulePublication');
+            //         }
+            //     }
+            // }
 
             // If the publication is marked as ready to publish, 
             // it will be published immediately regardless of the issue assignment
             // or to a future issue, it will be published immediately
-            if ((int)$publication->getData('status') === Submission::STATUS_READY_TO_PUBLISH) {
+            if ($publication->getData('status') == Submission::STATUS_READY_TO_PUBLISH) {
                 $msg = match($issue?->getData('published')) {
                     true => __('publication.publish.confirmation'),
                     false => __('publication.publish.confirmation.continuousPublication', ['issue' => htmlspecialchars($issue->getIssueIdentification())]),
@@ -87,21 +88,26 @@ class PublishForm extends FormComponent
                 };
                 $submitLabel = __('publication.publish');
             }
+
+            if ($publication->getData('status') == Submission::STATUS_READY_TO_SCHEDULE) {
+                $msg = __('publication.publish.confirmation.futureIssue', ['issue' => htmlspecialchars($issue->getIssueIdentification())]);
+                $submitLabel = __('editor.submission.schedulePublication');
+            }
             
             // If a publication date has already been set and the date has passed this will
             // be published immediately regardless of the issue assignment
-            if ($publication->getData('datePublished') && $publication->getData('datePublished') <= Core::getCurrentDate()) {
-                $dateFormatLong = PKPString::convertStrftimeFormat($submissionContext->getLocalizedDateFormatLong());
-                $msg = __(
-                    'publication.publish.confirmation.datePublishedInPast',
-                    [
-                        'datePublished' => (new \Carbon\Carbon($publication->getData('datePublished')))
-                            ->locale(Locale::getLocale())
-                            ->translatedFormat($dateFormatLong),
-                    ]
-                );
-                $submitLabel = __('publication.publish');
-            }
+            // if ($publication->getData('datePublished') && $publication->getData('datePublished') <= Core::getCurrentDate()) {
+            //     $dateFormatLong = PKPString::convertStrftimeFormat($submissionContext->getLocalizedDateFormatLong());
+            //     $msg = __(
+            //         'publication.publish.confirmation.datePublishedInPast',
+            //         [
+            //             'datePublished' => (new \Carbon\Carbon($publication->getData('datePublished')))
+            //                 ->locale(Locale::getLocale())
+            //                 ->translatedFormat($dateFormatLong),
+            //         ]
+            //     );
+            //     $submitLabel = __('publication.publish');
+            // }
 
             // If publication does not have a version stage assigned
             $publicationVersion = $publication->getVersion();

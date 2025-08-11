@@ -8,8 +8,6 @@
  *
  * @class FieldIssueSelection
  *
- * @ingroup classes_controllers_form
- *
  * @brief An extension of the FieldSelect for issue assignment with radio options.
  */
 
