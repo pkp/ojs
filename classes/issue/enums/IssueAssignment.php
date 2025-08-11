@@ -9,7 +9,7 @@
  *
  * @class IssueAssignment
  * 
- * @brief 
+ * @brief Control issue assignment for issue selection form
  */
 
 namespace APP\issue\enums;
@@ -38,6 +38,9 @@ enum IssueAssignment: int
         };
     }
 
+    /*
+     * Get the publication status for the issue assignment option
+     */
     public function getPublicationStatus(): int
     {
         return match ($this) {
@@ -48,6 +51,9 @@ enum IssueAssignment: int
         };
     }
 
+    /*
+     * Get the issue publish status for the issue assignment option
+     */
     public function getIssuePublishStatus(): ?int
     {
         return match ($this) {
@@ -58,6 +64,9 @@ enum IssueAssignment: int
         };
     }
 
+    /*
+     * Get the valid pre-publish statuses
+     */
     public static function getValidPrePublishStatuses(): array
     {
         return [
@@ -66,6 +75,9 @@ enum IssueAssignment: int
         ];
     }
 
+    /*
+     * Get all assignment options
+     */
     public static function getAllAssignmentOptions(): array
     {
         $options = [];
@@ -82,6 +94,10 @@ enum IssueAssignment: int
         return $options;
     }
 
+    /*
+     * Get the available assignment options for journal depending on available
+     * future/current/back issues
+     */
     public static function getAvailableAssignmentOption(Context $context): array
     {
         $options = static::getAllAssignmentOptions();
@@ -105,6 +121,9 @@ enum IssueAssignment: int
             ->toArray();
     }
 
+    /*
+     * Get the default assignment for a publication based on the context
+     */
     public static function defaultAssignment(Context $context): self
     {
         $issueExists = Repo::issue()

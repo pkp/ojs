@@ -257,19 +257,19 @@ msgid "publication.assignToIssue.noIssue"
 msgstr "Don't Assign To An Issue"
 
 msgid "publication.assignToIssue.futureIssuePublish"
-msgstr "Assign To Future Issue (Publish Immediately)"
+msgstr "Assign To Future Issue and Publish Immediately"
 
 msgid "publication.assignToIssue.futureIssueSchedule"
-msgstr "Assign To Future Issue (Schedule Only)"
+msgstr "Assign To Future Issue and Schedule Only"
 
 msgid "publication.assignToIssue.currentBackIssue"
 msgstr "Assign To Current/Back Issue"
 
 msgid "publication.assignToIssue.validation.issueRequired"
-msgstr "Please select an issue when assigning to an issue."
+msgstr "Must select an issue when assigning to an issue."
 
 msgid "publication.assignToIssue.assignmentType"
-msgstr "Assignment Type"
+msgstr "Issue Assignment"
 
 msgid "publication.assignToIssue.assignmentTypeDescription"
 msgstr "Choose how to assign this publication to an issue."

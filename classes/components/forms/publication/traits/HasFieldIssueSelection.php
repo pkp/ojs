@@ -37,7 +37,7 @@ trait HasFieldIssueSelection
                 'issueCount' => $issueCount,
                 'publication' => $publication,
             ]))
-            // TODO: add hidden field for prePublishStatus and remove normal text field
+            // FIXME: add hidden field for prePublishStatus and remove normal text field
             // ->addHiddenField('prePublishStatus', $publication->getData('status'))
             ->addField(new FieldText('prePublishStatus', [
                 'value' => $publication->getData('status'),
