@@ -1,7 +1,7 @@
 /**
  * As starting point, this is just to build vue runtime, which can be requested for Reader UI #11468
  */
-import {defineConfig} from 'vite';
+import {defineConfig, rolldownVersion} from 'vite';
 import Vue from '@vitejs/plugin-vue';
 import path from 'path';
 
@@ -10,6 +10,8 @@ export default defineConfig(({mode}) => {
 	// in any case its still heavily relying on NODE_ENV, thats why its being set
 	// so for example the devtools support is enabled in development mode
 	process.env.NODE_ENV = mode;
+	console.log('rolldownVersion:', rolldownVersion);
+
 	return {
 		plugins: [
 			Vue({
@@ -39,6 +41,11 @@ export default defineConfig(({mode}) => {
 					format: 'iife', // Set the format to IIFE
 					entryFileNames: 'js/build_frontend.js',
 					assetFileNames: (assetInfo) => {
+						if (!assetInfo.name) {
+							// Fallback to a default pattern with placeholders (Vite/Rollup will handle [hash] and [ext])
+							return 'assets/unnamed-[hash].[ext]';
+						}
+
 						const info = assetInfo.name.split('.');
 						const extType = info[info.length - 1];
 						if (/\.(css)$/.test(assetInfo.name)) {
