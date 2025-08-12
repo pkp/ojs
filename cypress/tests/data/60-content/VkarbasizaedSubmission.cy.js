@@ -100,13 +100,14 @@ describe('Data suite tests', function() {
 		cy.openWorkflowMenu('Unassigned version', 'Title & Abstract')
 		cy.get('button:contains("Schedule For Publication")').click();
 		cy.wait(1000);
-		cy.assignPublicationStage('VoR', 'false', true);
 
 		cy.get('label:Contains("'+issueAssignmentOption+'")').click();
 		cy.wait(500); // wait for the issues to load
 		cy.get('select[name="issueId"]').select(issueId);
 
-		cy.get('div[id^="assign-"] button:contains("Save")').click();
+		// complete publication stage version selection and confrim the issue and stage settings
+		cy.assignPublicationStage('VoR', 'false', true);
+
 		cy.get('div:contains("All publication requirements have been met. This will be published when ' + issueTitle + ' is published. Are you sure you want to schedule this for publication?")');
 		cy.get('.pkpWorkflow__publishModal button:contains("Schedule For Publication")').click();
 
