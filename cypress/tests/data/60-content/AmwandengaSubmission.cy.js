@@ -451,6 +451,11 @@ describe('Data suite: Amwandenga', function() {
 		cy.visit('/index.php/publicknowledge/workflow/access/' + submission.id);
 		cy.openWorkflowMenu('Version of Record 1.0', 'Title & Abstract')
 		cy.get('button').contains('Schedule For Publication').click();
+		
+		// Reconfirm the version stage and issue selection
+		cy.contains('[data-cy="active-modal"] button', 'Confirm').click();
+		cy.wait(1000);
+		
 		cy.contains('All publication requirements have been met.');
 		cy.get('.pkpWorkflow__publishModal button').contains('Publish').click();
 	});
