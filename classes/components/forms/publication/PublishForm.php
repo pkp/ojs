@@ -82,15 +82,24 @@ class PublishForm extends FormComponent
             // or to a future issue, it will be published immediately
             if ($publication->getData('status') == Submission::STATUS_READY_TO_PUBLISH) {
                 $msg = match($issue?->getData('published')) {
-                    true => __('publication.publish.confirmation'),
-                    false => __('publication.publish.confirmation.continuousPublication', ['issue' => htmlspecialchars($issue->getIssueIdentification())]),
+                    true => __(
+                        'publication.publish.confirmation.backIssue',
+                        ['issue' => htmlspecialchars($issue->getIssueIdentification())]
+                    ),
+                    false => __(
+                        'publication.publish.confirmation.continuousPublication',
+                        ['issue' => htmlspecialchars($issue->getIssueIdentification())]
+                    ),
                     null => __('publication.publish.confirmation.issueLess'),
                 };
                 $submitLabel = __('publication.publish');
             }
 
             if ($publication->getData('status') == Submission::STATUS_READY_TO_SCHEDULE) {
-                $msg = __('publication.publish.confirmation.futureIssue', ['issue' => htmlspecialchars($issue->getIssueIdentification())]);
+                $msg = __(
+                    'publication.publish.confirmation.futureIssue',
+                    ['issue' => htmlspecialchars($issue->getIssueIdentification())]
+                );
                 $submitLabel = __('editor.submission.schedulePublication');
             }
             
