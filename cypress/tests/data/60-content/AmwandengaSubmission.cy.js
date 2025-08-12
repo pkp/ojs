@@ -413,7 +413,7 @@ describe('Data suite: Amwandenga', function() {
 	it('Publish submission', function() {
 		cy.login('dbarnes');
 		cy.visit('/index.php/publicknowledge/workflow/access/' + submission.id);
-		cy.publish('1', 'Vol. 1 No. 2 (2014)');
+		cy.publish('Assign To Current/Back Issue', '1', 'Vol. 1 No. 2 (2014)');
 		cy.isInIssue(submission.title, 'Vol. 1 No. 2 (2014)');
 		cy.contains(submission.title).click();
 		cy.get('h1:contains("' + submission.title + '")');

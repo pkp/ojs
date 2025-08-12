@@ -166,7 +166,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
             $pages = '; ' . $pages;
         }
         foreach ($sources as $locale => $source) {
-            $sources[$locale] .= '; ' . $issue->getIssueIdentification([], $locale);
+            $sources[$locale] .= '; ' . $issue?->getIssueIdentification([], $locale);
             $sources[$locale] .= $pages;
         }
         $this->_addLocalizedElements($dc11Description, 'dc:source', $sources);

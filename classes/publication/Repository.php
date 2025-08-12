@@ -182,10 +182,10 @@ class Repository extends \PKP\publication\Repository
      * issue's `datePublished` in IssueGridHandler if they do not already
      * have a specific publication date set.
      *
-     * - If the issue is **not published**, the publication status is set to `STATUS_SCHEDULED`.
-     * - If the issue is **published** or there is no issue, the status is set to `STATUS_PUBLISHED`.
-     * - If the publication is a **continuous publication**, the status is set to `STATUS_PUBLISHED`
-     *   regardless of the issue's publication status.
+     * - If the issue is `STATUS_READY_TO_SCHEDULE`, the publication status is set to `STATUS_SCHEDULED`.
+     * - If the issue is `STATUS_READY_TO_PUBLISH` or there is no issue, the status is set to `STATUS_PUBLISHED`.
+     * - In the absense of of `STATUS_READY_TO_PUBLISH` or `STATUS_READY_TO_SCHEDULE`, then publication status
+     *   in set based on the issue status if issue is set. if No issue, it's set to `STATUS_READY_TO_PUBLISH`
      * - If the publication does not have a `datePublished`, it is set to the current date when
      *   set to `STATUS_PUBLISHED` .
      */

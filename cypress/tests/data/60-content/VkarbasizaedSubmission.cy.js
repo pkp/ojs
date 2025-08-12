@@ -9,6 +9,8 @@
 
 describe('Data suite tests', function() {
 	var issueTitle = 'Vol. 2 No. 1 (2015)';
+	let issueId = 2;
+	let issueAssignmentOption = 'Assign To Future Issue and Schedule Only';
 	let submission;
 	let author;
 	let title;
@@ -99,7 +101,11 @@ describe('Data suite tests', function() {
 		cy.get('button:contains("Schedule For Publication")').click();
 		cy.wait(1000);
 		cy.assignPublicationStage('VoR', 'false', true);
-		cy.get('select[id="assignToIssue-issueId-control"]').select(issueTitle);
+
+		cy.get('label:Contains("'+issueAssignmentOption+'")').click();
+		cy.wait(500); // wait for the issues to load
+		cy.get('select[name="issueId"]').select(issueId);
+
 		cy.get('div[id^="assign-"] button:contains("Save")').click();
 		cy.get('div:contains("All publication requirements have been met. This will be published when ' + issueTitle + ' is published. Are you sure you want to schedule this for publication?")');
 		cy.get('.pkpWorkflow__publishModal button:contains("Schedule For Publication")').click();
