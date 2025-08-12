@@ -31,6 +31,10 @@ use PKP\userGroup\UserGroup;
 
 class Submission extends PKPSubmission
 {
+    // Submission status constants
+    public const STATUS_READY_TO_PUBLISH = 6;
+    public const STATUS_READY_TO_SCHEDULE = 7;
+
     // Author display in ToC
     public const AUTHOR_TOC_DEFAULT = 0;
     public const AUTHOR_TOC_HIDE = 1;

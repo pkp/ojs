@@ -94,7 +94,6 @@ class Collector extends \PKP\submission\Collector
                     ->on('publication_cp.publication_id', '=', 's.current_publication_id')
                     ->where('publication_cp.status', Submission::STATUS_PUBLISHED)
                     ->whereNotNull('publication_cp.date_published')
-                    ->where('publication_cp.published', true)
                 )
                 ->leftJoin('issues as pi', 'publication_cp.issue_id', '=', 'pi.issue_id')
                 ->where(fn (Builder $query) => $query
