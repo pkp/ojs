@@ -16,8 +16,10 @@
 namespace APP\components\forms\publication;
 
 use APP\components\forms\publication\traits\HasFieldIssueSelection;
+use APP\core\Application;
 use APP\facades\Repo;
 use PKP\components\forms\FieldAutosuggestPreset;
+use PKP\components\forms\FieldOptions;
 use PKP\components\forms\FieldSelect;
 use PKP\components\forms\FieldText;
 use PKP\components\forms\FieldUploadImage;
@@ -48,8 +50,7 @@ class IssueEntryForm extends FormComponent
         $publicationContext,
         $baseUrl,
         $temporaryFileApiUrl
-    )
-    {
+    ) {
         $this->action = $action;
         $this->locales = $locales;
 
@@ -68,10 +69,36 @@ class IssueEntryForm extends FormComponent
             ->getCount();
 
         if ($issueCount > 0) {
-            $this->addFieldIssueSelection($publication, $publicationContext);
+            //$this->addFieldIssueSelection($publication, $publicationContext);
+
+
+            $assignmentType = Repo::publication()
+                ->getIssueAssignmentStatus(
+                    $publication,
+                    Application::get()->getRequest()->getContext()
+                )
+                ->value;
+
+            $this->addField(new FieldOptions('assignment', [
+                'label' => 'Assign an issue',
+                'type' => 'radio',
+                'options' => [],
+                'value' => $assignmentType,
+                'size' => 'large'
+            ]));
+
+
+            $this->addHiddenField('prePublishStatus', '');
+
+
+            $this->addField(new FieldSelect('issueId', [
+                'label' => 'Issue',
+                'options' => [],
+                'value' => $publication->getData('issueId') ? $publication->getData('issueId') : '',
+                'size' => 'large'
+            ]));
         }
 
-        
         $this->addField(new FieldSelect('sectionId', [
             'label' => __('section.section'),
             'options' => $sectionOptions,
