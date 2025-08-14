@@ -19,6 +19,7 @@
 namespace APP\search;
 
 use APP\journal\Journal;
+use PKP\search\SubmissionSearch;
 use PKP\search\SubmissionSearchDAO;
 use PKP\submission\PKPSubmission;
 
@@ -65,7 +66,11 @@ class ArticleSearchDAO extends SubmissionSearchDAO
         }
 
         if (!empty($type)) {
-            $sqlWhere .= ' AND (o.type & ?) != 0';
+            if ($type === SubmissionSearch::SUBMISSION_SEARCH_AUTHOR) {
+                $sqlWhere .= ' AND o.type = ?';
+            } else {
+                $sqlWhere .= ' AND (o.type & ?) != 0';
+            }
             $params[] = $type;
         }
 
