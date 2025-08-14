@@ -14,7 +14,6 @@
 namespace APP\components\forms\publication\traits;
 
 use APP\publication\Publication;
-use PKP\components\forms\FieldText;
 use APP\components\forms\publication\FieldIssueSelection;
 use APP\facades\Repo;
 use PKP\context\Context;
@@ -31,16 +30,14 @@ trait HasFieldIssueSelection
             ->filterByContextIds([$context->getId()])
             ->getCount();
 
-        return $this /** @var \PKP\components\forms\FormComponent $this */
+        $this /** @var \PKP\components\forms\FormComponent $this */
             ->addField(new FieldIssueSelection('issueId', [
                 'label' => __('publication.assignToIssue.label'),
                 'issueCount' => $issueCount,
                 'publication' => $publication,
             ]))
-            // FIXME: add hidden field for prePublishStatus and remove normal text field
-            // ->addHiddenField('prePublishStatus', $publication->getData('status'))
-            ->addField(new FieldText('prePublishStatus', [
-                'value' => $publication->getData('status'),
-            ]));
+            ->addHiddenField('prePublishStatus', $publication->getData('status'));
+        
+        return $this;
     }
 }

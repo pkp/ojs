@@ -102,8 +102,8 @@ describe('Data suite tests', function() {
 		cy.wait(1000);
 
 		cy.get('label:Contains("'+issueAssignmentOption+'")').click();
-		cy.wait(500); // wait for the issues to load
-		cy.get('select[name="issueId"]').select(issueId);
+		cy.wait(1000); // wait for the issues to load
+		cy.get('select[name="issueId"]').select(issueTitle);
 
 		// complete publication stage version selection and confrim the issue and stage settings
 		cy.assignPublicationStage('VoR', 'false', true);
@@ -226,9 +226,12 @@ describe('Data suite tests', function() {
 		cy.openSubmission(author.familyName);
 		cy.openWorkflowMenu('Version of Record 1.0', 'Issue')
 
-		cy.get('button:contains("Change Issue")').click();
-		cy.get('select[id="assignToIssue-issueId-control"]').select('Vol. 1 No. 2 (2014)');
-		cy.get('div[id^="assign-"] button:contains("Save")').click();
+		// update issue selection
+		cy.get('label:Contains("Assign To Current/Back Issue")').click();
+		cy.wait(500); // wait for the issues to load
+		cy.get('select[name="issueId"]').select('Vol. 1 No. 2 (2014)');
+		$('button:Contains("Save")')
+
 		cy.get('button').contains('Schedule For Publication').click();
 		cy.get('div[id^="publish-"] button:contains("Publish")').click();
 		cy.isInIssue('Antimicrobial, heavy metal resistance', 'Vol. 1 No. 2 (2014)');

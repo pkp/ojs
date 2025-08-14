@@ -329,6 +329,9 @@ describe('Data suite: Amwandenga', function() {
 		// Issue
 		cy.openWorkflowMenu('Unassigned version', 'Issue')
 
+		// Initially set to no issue
+		cy.get('label:Contains("Don\'t Assign To An Issue")').click();
+
 		cy.get('[name="sectionId"]').select('Reviews');
 		cy.get('[name="sectionId"]').select('Articles');
 		cy.get('[name="pages"]').type('71-98', {delay: 0});
