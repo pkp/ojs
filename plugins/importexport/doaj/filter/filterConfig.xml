@@ -4,8 +4,8 @@
 <!--
   * plugins/importexport/doaj/filter/filterConfig.xml
   *
-  * Copyright (c) 2014-2021 Simon Fraser University
-  * Copyright (c) 2003-2021 John Willinsky
+  * Copyright (c) 2014-2025 Simon Fraser University
+  * Copyright (c) 2003-2025 John Willinsky
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
   * Filter Configuration.
@@ -26,6 +26,20 @@
 			description="plugins.importexport.doaj.description"
 			inputType="class::classes.submission.Submission"
 			outputType="primitive::string" />
+		<!-- DOAJ XML publication output -->
+		<filterGroup
+			symbolic="publication=>doaj-xml"
+			displayName="plugins.importexport.doaj.displayName"
+			description="plugins.importexport.doaj.description"
+			inputType="class::classes.publication.Publication[]"
+			outputType="xml::schema(plugins/importexport/doaj/doajArticles.xsd)" />
+		<!-- DOAJ JSON publication output -->
+		<filterGroup
+			symbolic="publication=>doaj-json"
+			displayName="plugins.importexport.doaj.displayName"
+			description="plugins.importexport.doaj.description"
+			inputType="class::classes.publication.Publication"
+			outputType="primitive::string" />
 	</filterGroups>
 	<filters>
 		<!-- DOAJ XML article output -->
@@ -36,6 +50,16 @@
 		<!-- DOAJ JSON article output -->
 		<filter
 			inGroup="article=>doaj-json"
+			class="APP\plugins\importexport\doaj\filter\DOAJJsonFilter"
+			isTemplate="0" />
+		<!-- DOAJ XML publication output -->
+		<filter
+			inGroup="publication=>doaj-xml"
+			class="APP\plugins\importexport\doaj\filter\DOAJXmlFilter"
+			isTemplate="0" />
+		<!-- DOAJ JSON publication output -->
+		<filter
+			inGroup="publication=>doaj-json"
 			class="APP\plugins\importexport\doaj\filter\DOAJJsonFilter"
 			isTemplate="0" />
 	</filters>
