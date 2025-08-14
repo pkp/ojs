@@ -49,7 +49,11 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 		}
 
 		if (!empty($type)) {
-			$sqlWhere .= ' AND (o.type & ?) != 0';
+			if ($type == SUBMISSION_SEARCH_AUTHOR) {
+				$sqlWhere .= ' AND o.type = ?';
+			} else {
+				$sqlWhere .= ' AND (o.type & ?) != 0';
+			}
 			$params[] = $type;
 		}
 
@@ -106,4 +110,3 @@ class ArticleSearchDAO extends SubmissionSearchDAO {
 		return $returner;
 	}
 }
-
