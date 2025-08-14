@@ -50,6 +50,7 @@ use PKP\facades\Locale;
 use PKP\file\TemporaryFileManager;
 use PKP\mail\Mailer;
 use PKP\notification\NotificationSubscriptionSettingsDAO;
+use PKP\observers\events\MetadataChanged;
 use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\ContextAccessPolicy;
@@ -614,6 +615,9 @@ class IssueGridHandler extends GridHandler
 
                     if ($publication->getData('status') === Submission::STATUS_SCHEDULED) {
                         Repo::publication()->publish($publication);
+
+                        // dispatch the MetadataChanged event after publishing
+                        event(new MetadataChanged($submission));
                     }
                 }
             }
