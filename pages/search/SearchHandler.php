@@ -72,6 +72,7 @@ class SearchHandler extends Handler
             ->where('publishedTo', $dateTo)
             ->whereIn('categoryIds', $request->getUserVar('categoryIds'))
             ->whereIn('sectionIds', $request->getUserVar('sectionIds'))
+            ->whereIn('keywords', $request->getUserVar('keywords'))
             ->paginate($rangeInfo->getCount(), 'submissions', $rangeInfo->getPage());
 
         $this->setupTemplate($request);
