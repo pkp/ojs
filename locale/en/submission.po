@@ -268,6 +268,12 @@ msgstr "Assign To Current/Back Issue"
 msgid "publication.assignToIssue.validation.issueRequired"
 msgstr "Must select an issue when assigning to an issue."
 
+msgid "publication.assignToIssue.validation.assignmentRequired"
+msgstr "Must select an assignment type."
+
+msgid "publication.assignToIssue.validation.incomplete"
+msgstr "Please complete the issue selection"
+
 msgid "publication.assignToIssue.assignmentType"
 msgstr "Issue Assignment"
 

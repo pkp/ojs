@@ -34,6 +34,11 @@ class FieldIssueSelection extends FieldSelect
     {
         $config = parent::getConfig();
         
+        $config['isPhpForm'] = true;
+        
+        // always required it and let the dynamic nature to vue component to manage it
+        $config['isRequired'] = true;
+        
         $config['issueCount'] = $this->issueCount;
         $config['publication'] = $this->publication->getAllData();
         $config['assignmentType'] = Repo::publication()
@@ -42,8 +47,6 @@ class FieldIssueSelection extends FieldSelect
                 Application::get()->getRequest()->getContext()
             )
             ->value;
-
-        $config['isPhpForm'] = true;
 
         return $config;
     }
