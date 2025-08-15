@@ -102,8 +102,8 @@ describe('Data suite tests', function() {
 		cy.wait(1000);
 
 		cy.get('label:Contains("'+issueAssignmentOption+'")').click();
-		cy.wait(500); // wait for the issues to load
-		cy.get('select[name="issueId"]').select(issueId);
+		cy.wait(1000); // wait for the issues to load
+		cy.get('select[name="issueId"]').select(issueTitle);
 
 		// complete publication stage version selection and confrim the issue and stage settings
 		cy.assignPublicationStage('VoR', 'false', true);
