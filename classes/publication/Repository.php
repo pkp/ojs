@@ -17,16 +17,18 @@ namespace APP\publication;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\enums\IssueSelection;
+use APP\journal\Journal;
+use APP\journal\JournalDAO;
 use APP\payment\ojs\OJSCompletedPaymentDAO;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\publication\enums\VersionStage;
 use APP\submission\Submission;
-use APP\publication\Collector;
 use Illuminate\Support\Facades\App;
 use PKP\context\Context;
 use PKP\core\Core;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
+use PKP\doi\exceptions\DoiException;
 
 class Repository extends \PKP\publication\Repository
 {
@@ -96,7 +98,7 @@ class Repository extends \PKP\publication\Repository
 
         // Ensure that the valid issue exists is any issue selected
         if (isset($props['issueId']) && empty($errors['issueId'])) {
-            
+
             // Will allow to create a publication without an issue
             if ($props['issueId'] == IssueSelection::NO_ISSUE->value) {
                 return $errors;
@@ -152,7 +154,7 @@ class Repository extends \PKP\publication\Repository
                 $newGalley = clone $galley;
                 $newGalley->setData('id', null);
                 $newGalley->setData('publicationId', $newId);
-                if ($isDoiVersioningEnabled) {
+                if ($isDoiVersioningEnabled && !$isMinorVersion) {
                     $newGalley->setData('doiId', null);
                 }
                 Repo::galley()->add($newGalley);
@@ -170,8 +172,7 @@ class Repository extends \PKP\publication\Repository
         // if there is no issue, set the publication as published as part of continuous publication
         if (!$publication->getData('issueId')) {
             $publication->setData('published', true);
-        } 
-        else {
+        } else {
             $issue = Repo::issue()->get($publication->getData('issueId'));
             if ($issue->getData('published')) {
                 $publication->setData('published', true);
@@ -201,7 +202,7 @@ class Repository extends \PKP\publication\Repository
 
         if (isset($params['issueId'])) {
             $issue = Repo::issue()->get($params['issueId']);
-            
+
             // Attached to a future issue e.g. non published issue
             // and marked as continuous publication
             if (!$issue->getData('published')) {
@@ -235,7 +236,7 @@ class Repository extends \PKP\publication\Repository
             //   - set the publication status to STATUS_PUBLISHED if issue is published
             //   - set the publication status to STATUS_SCHEDULED if issue is not published
             $publication->setData(
-                'status', 
+                'status',
                 $issue->getData('published')
                     ? Submission::STATUS_PUBLISHED
                     : Submission::STATUS_SCHEDULED
@@ -276,14 +277,45 @@ class Repository extends \PKP\publication\Repository
         parent::delete($publication);
     }
 
-    /**
-     * Create all DOIs associated with the publication.
-     *
-     * @throws \Exception
-     */
-    protected function createDois(Publication $newPublication): void
+    /** @copydoc \PKP\publication\Repository::createDois() */
+    public function createDois(Publication $publication): array
     {
-        $submission = Repo::submission()->get($newPublication->getData('submissionId'));
-        Repo::submission()->createDois($submission);
+        $submission = Repo::submission()->get($publication->getData('submissionId'));
+
+        /** @var JournalDAO $contextDao */
+        $contextDao = Application::getContextDAO();
+        /** @var Journal $context */
+        $context = $contextDao->getById($submission->getData('contextId'));
+
+        $doiCreationFailures = [];
+
+        if ($context->isDoiTypeEnabled(Repo::doi()::TYPE_PUBLICATION) && empty($publication->getData('doiId'))) {
+            try {
+                $doiId = Repo::doi()->mintPublicationDoi($publication, $submission, $context);
+                Repo::publication()->edit($publication, ['doiId' => $doiId]);
+            } catch (DoiException $exception) {
+                $doiCreationFailures[] = $exception;
+            }
+        }
+
+        // Galleys
+        if ($context->isDoiTypeEnabled(Repo::doi()::TYPE_REPRESENTATION)) {
+            $galleys = Repo::galley()->getCollector()
+                ->filterByPublicationIds(['publicationIds' => $publication->getId()])
+                ->getMany();
+
+            foreach ($galleys as $galley) {
+                if (empty($galley->getData('doiId'))) {
+                    try {
+                        $doiId = Repo::doi()->mintGalleyDoi($galley, $publication, $submission, $context);
+                        Repo::galley()->edit($galley, ['doiId' => $doiId]);
+                    } catch (DoiException $exception) {
+                        $doiCreationFailures[] = $exception;
+                    }
+                }
+            }
+        }
+
+        return $doiCreationFailures;
     }
 }
