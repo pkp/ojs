@@ -230,7 +230,7 @@ describe('Data suite tests', function() {
 		cy.get('label:Contains("Assign To Current/Back Issue")').click();
 		cy.wait(500); // wait for the issues to load
 		cy.get('select[name="issueId"]').select('Vol. 1 No. 2 (2014)');
-		$('button:Contains("Save")')
+		cy.get('button:Contains("Save")');
 
 		cy.get('button').contains('Schedule For Publication').click();
 		cy.get('div[id^="publish-"] button:contains("Publish")').click();

@@ -42,6 +42,7 @@ class SubmissionController extends \PKP\API\v1\submissions\PKPSubmissionControll
             'getPublicationIssueForm',
             'getSubmissionPaymentForm',
             'getIssueAssignmentStatus',
+            'publicationReviewEdit',
         );
     }
 
@@ -80,6 +81,11 @@ class SubmissionController extends \PKP\API\v1\submissions\PKPSubmissionControll
                 Role::ROLE_ID_ASSISTANT
             ]),
         ])->group(function () {
+            Route::put(
+                '{submissionId}/publications/{publicationId}/reviewEdit',
+                $this->publicationReviewEdit(...)
+            )->name('submission.publication.reviewEdit');
+
             Route::get(
                 '{submissionId}/publications/{publicationId}/issueAssignmentStatus',
                 $this->getIssueAssignmentStatus(...)
@@ -132,7 +138,7 @@ class SubmissionController extends \PKP\API\v1\submissions\PKPSubmissionControll
 
     /**
      * Get SubmissionPaymentsForm
-    */
+     */
     protected function getSubmissionPaymentForm(Request $illuminateRequest): JsonResponse
     {
         $request = $this->getRequest();
@@ -193,14 +199,35 @@ class SubmissionController extends \PKP\API\v1\submissions\PKPSubmissionControll
     }
 
     /**
-     * Change version data for publication
+     * Edit publication as part of final review confirmation
      */
-    public function changeVersion(Request $illuminateRequest): JsonResponse
+    public function publicationReviewEdit(Request $illuminateRequest): JsonResponse
     {
-        $response = parent::changeVersion($illuminateRequest);
+        $publication = Repo::publication()->get((int) $illuminateRequest->route('publicationId'));
 
-        if ($response->getStatusCode() !== Response::HTTP_OK) {
-            return $response;
+        if (!$publication) {
+            return response()->json([
+                'error' => __('api.404.resourceNotFound'),
+            ], Response::HTTP_NOT_FOUND);
+        }
+
+        $submission = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_SUBMISSION);
+
+        if ($submission->getId() != $publication->getData('submissionId')) {
+            return response()->json([
+                'error' => __('api.publications.403.submissionsDidNotMatch'),
+            ], Response::HTTP_FORBIDDEN);
+        }
+
+        $versionStage = $this->validateVersionStage($illuminateRequest);
+
+        // will only allow to update the version data update of the version stage change on re-publish
+        if ($publication->getData('versionStage') !== $versionStage->value) {
+            $response = $this->changeVersion($illuminateRequest);
+
+            return $response->getStatusCode() !== Response::HTTP_OK
+                ? $response
+                : $this->editPublication($illuminateRequest);
         }
 
         return parent::editPublication($illuminateRequest);
