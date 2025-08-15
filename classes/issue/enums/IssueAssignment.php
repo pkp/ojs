@@ -118,6 +118,7 @@ enum IssueAssignment: int
                 return $issueExistsQuery ? $option : null;
             })
             ->filter()
+            ->values()
             ->toArray();
     }
 
