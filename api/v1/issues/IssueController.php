@@ -275,6 +275,6 @@ class IssueController extends PKPBaseController
     protected function getGenres(int $contextId): array
     {
         $genreDao = DAORegistry::getDAO('GenreDAO'); /** @var GenreDAO $genreDao */
-        return $genreDao->getByContextId($contextId)->toArray();
+        return $genreDao->getByContextId($contextId)->toAssociativeArray();
     }
 }
