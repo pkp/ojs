@@ -1,4 +1,5 @@
 {**
+ * TODO: we need this anymore ? remove after testing
  * templates/controllers/modals/publish/assignToIssue.tpl
  *
  * Copyright (c) 2014-2021 Simon Fraser University
