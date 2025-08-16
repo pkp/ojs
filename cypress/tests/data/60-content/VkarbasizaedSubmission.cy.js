@@ -233,8 +233,11 @@ describe('Data suite tests', function() {
 		cy.get('button:Contains("Save")');
 
 		cy.get('button').contains('Schedule For Publication').click();
+		cy.contains('[data-cy="active-modal"] button', 'Confirm').click();
+		cy.wait(1000);
 		cy.get('div[id^="publish-"] button:contains("Publish")').click();
 		cy.isInIssue('Antimicrobial, heavy metal resistance', 'Vol. 1 No. 2 (2014)');
+		
 		// unpublish the future issue
 		cy.visit('index.php/publicknowledge/manageIssues');
 		cy.get('button:contains("Back Issues")').click();
@@ -243,6 +246,7 @@ describe('Data suite tests', function() {
 		cy.get('button:contains("OK")').click();
 		cy.visit('index.php/publicknowledge/manageIssues');
 		cy.get('span:contains("' + issueTitle + '")');
+		
 		// define the back issue as the current issue again
 		cy.visit('index.php/publicknowledge/manageIssues');
 		cy.get('button:contains("Back Issues")').click();
