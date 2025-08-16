@@ -84,7 +84,7 @@ class BackendDoiController extends \PKP\API\v1\_dois\PKPBackendDoiController
 
         /** @var \PKP\submission\GenreDAO $genreDao */
         $genreDao = DAORegistry::getDAO('GenreDAO');
-        $genres = $genreDao->getByContextId($context->getId())->toArray();
+        $genres = $genreDao->getByContextId($context->getId())->toAssociativeArray();
         // Re-fetch submission and publication to reflect changes in galley
         $submission = Repo::submission()->get((int) $submissionId);
         $publication = Repo::publication()->get((int) $publicationId);
@@ -148,6 +148,6 @@ class BackendDoiController extends \PKP\API\v1\_dois\PKPBackendDoiController
     {
         /** @var \PKP\submission\GenreDAO $genreDao */
         $genreDao = DAORegistry::getDAO('GenreDAO');
-        return $genreDao->getByContextId($contextId)->toArray();
+        return $genreDao->getByContextId($contextId)->toAssociativeArray();
     }
 }
