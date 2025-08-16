@@ -519,6 +519,8 @@ describe('Data suite: Amwandenga', function() {
 
 		// Publish version
 		cy.get('button').contains('Publish').click();
+		cy.contains('[data-cy="active-modal"] button', 'Confirm').click();
+		cy.wait(1000);
 		cy.contains('All publication requirements have been met.');
 		cy.get('.pkpWorkflow__publishModal button').contains('Publish').click();
 	});
