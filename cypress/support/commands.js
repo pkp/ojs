@@ -22,7 +22,13 @@ Cypress.Commands.add('publish', (issueAssignmentOption, issueId, issueTitle) => 
 		? cy.get('input[name="issueId_assignment"][value="'+issueAssignmentOption+'"]').click()
 		: cy.get('label:Contains("'+issueAssignmentOption+'")').click();
 	cy.wait(500); // wait for the issues to load
-	cy.get('select[name="issueId"]').select(issueId);
+	
+	// certian issue assignment option make the issue selection invisible
+	cy.get('[data-cy="active-modal"]').then(($activeModal) => {
+		if ($activeModal.find('select[name="issueId"]').length > 0) {
+			cy.get('[data-cy="active-modal"]').find('select[name="issueId"]').select(issueId);
+		}
+	});
 
 	// complete publication stage version selection and confrim the issue and stage settings
 	cy.assignPublicationStage('VoR', 'false', true);
