@@ -95,11 +95,11 @@ class Repository extends \PKP\publication\Repository
         }
 
         // Validate the prePublishStatus if given
-        if (isset($props['prePublishStatus'])) {
-            if (!in_array($props['prePublishStatus'], IssueAssignment::getValidPrePublishStatuses())) {
-                $errors['prePublishStatus'] = [__('api.publication.403.cantEditStatus')];
-            }
-        }
+        // if (isset($props['prePublishStatus'])) {
+        //     if (!in_array($props['prePublishStatus'], Submission::getPrePublishStatuses())) {
+        //         $errors['prePublishStatus'] = [__('api.publication.403.cantEditStatus')];
+        //     }
+        // }
 
         // Ensure that the valid issue exists is any issue selected
         if (isset($props['issueId']) && empty($errors['issueId'])) {
@@ -166,11 +166,11 @@ class Repository extends \PKP\publication\Repository
      */
     public function edit(Publication $publication, array $params): Publication
     {
-        if (isset($params['prePublishStatus']) 
-            && in_array($params['prePublishStatus'], IssueAssignment::getValidPrePublishStatuses())) {
-            $params['status'] = $params['prePublishStatus'];
-            unset($params['prePublishStatus']);
-        }
+        // if (isset($params['prePublishStatus']) 
+        //     && in_array($params['prePublishStatus'], Submission::getPrePublishStatuses())) {
+        //     $params['status'] = $params['prePublishStatus'];
+        //     unset($params['prePublishStatus']);
+        // }
 
         return parent::edit($publication, $params);
     }
