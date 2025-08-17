@@ -469,6 +469,8 @@ describe('Article View Metadata - DC Plugin', function() {
 
 		// Issue
 		cy.openWorkflowMenu('Unassigned version', 'Issue')
+		cy.get('label:Contains("'+issueAssignmentOption+'")').click();
+		cy.get('select[name="issueId"]').select(submission.source.issueTitle);
 		submission.publishIssueSections.forEach((sectionTitle) => {
 			cy.get('[name="sectionId"]').select(sectionTitle);
 		});

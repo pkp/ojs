@@ -66,10 +66,16 @@ describe('Change Submission Language', function() {
 		cy.get('[data-cy="workflow-controls-left"] button').contains('Change').click();
 		cy.get('#changeSubmissionLanguage').find(`input[value="${originalLocaleKey}"]`).click();
 		cy.get('#changeSubmissionLanguage button[label="Confirm"]').click();
+		
 		// Publish
 		cy.contains(`Current Submission Language: ${originalLanguage}`);
 		cy.openWorkflowMenu('Version of Record 1.0', 'Title & Abstract')
 		cy.get('button:contains("Schedule For Publication")').click();
+		cy.get(('[data-cy="active-modal"]')).find('label:Contains("Assign To Current/Back Issue")').click();
+		cy.wait(500); // wait for the issues to load
+		cy.get(('[data-cy="active-modal"]')).find('select[name="issueId"]').select('Vol. 1 No. 2 (2014)');
+		cy.get(('[data-cy="active-modal"]')).find('button:Contains("Confirm")').click();
+		cy.wait(1000);
 		cy.get('[data-cy="active-modal"] button:contains("Publish")').click();
 	});
 });

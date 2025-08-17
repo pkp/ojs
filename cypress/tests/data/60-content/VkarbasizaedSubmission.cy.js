@@ -226,16 +226,13 @@ describe('Data suite tests', function() {
 		cy.openSubmission(author.familyName);
 		cy.openWorkflowMenu('Version of Record 1.0', 'Issue')
 
-		// update issue selection
-		cy.get('label:Contains("Assign To Current/Back Issue")').click();
-		cy.wait(500); // wait for the issues to load
-		cy.get('select[name="issueId"]').select('Vol. 1 No. 2 (2014)');
-		cy.get('button:Contains("Save")').click();
-		cy.wait(500);
-
+		// update issue selection and publish
 		cy.get('button').contains('Schedule For Publication').click();
-		// cy.contains('[data-cy="active-modal"] button', 'Confirm').click();
-		// cy.wait(1000);
+		cy.get(('[data-cy="active-modal"]')).find('label:Contains("Assign To Current/Back Issue")').click();
+		cy.wait(500); // wait for the issues to load
+		cy.get(('[data-cy="active-modal"]')).find('select[name="issueId"]').select('Vol. 1 No. 2 (2014)');
+		cy.get(('[data-cy="active-modal"]')).find('button:Contains("Confirm")').click();
+		cy.wait(1000);
 		cy.get('div[id^="publish-"] button:contains("Publish")').click();
 		cy.isInIssue('Antimicrobial, heavy metal resistance', 'Vol. 1 No. 2 (2014)');
 		
