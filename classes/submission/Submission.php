@@ -49,6 +49,23 @@ class Submission extends PKPSubmission
     //
 
     /**
+     * @copydoc \PKP\submission\PKPSubmission::getStatusMap()
+     */
+    public function &getStatusMap()
+	{
+		static $statusMap = null;
+		
+		if ($statusMap === null) {
+			$statusMap = parent::getStatusMap() + [
+                self::STATUS_READY_TO_PUBLISH => 'submission.status.readyToPublish',
+                self::STATUS_READY_TO_SCHEDULE => 'submission.status.readyToSchedule',
+            ];
+		}
+		
+		return $statusMap;
+	}
+
+    /**
      * Get the value of a license field from the containing context.
      *
      * @param string $locale Locale code
@@ -165,6 +182,17 @@ class Submission extends PKPSubmission
         );
 
         return $this->getData('galleys');
+    }
+
+    /**
+     * Get the valid pre-publish statuses if available
+     */
+    public static function getPrePublishStatuses(): array
+    {
+        return [
+            static::STATUS_READY_TO_PUBLISH,
+            static::STATUS_READY_TO_SCHEDULE,
+        ];
     }
 }
 

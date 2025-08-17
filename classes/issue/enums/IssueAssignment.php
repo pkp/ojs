@@ -65,17 +65,6 @@ enum IssueAssignment: int
     }
 
     /*
-     * Get the valid pre-publish statuses
-     */
-    public static function getValidPrePublishStatuses(): array
-    {
-        return [
-            Submission::STATUS_READY_TO_PUBLISH,
-            Submission::STATUS_READY_TO_SCHEDULE,
-        ];
-    }
-
-    /*
      * Get all assignment options
      */
     public static function getAllAssignmentOptions(): array

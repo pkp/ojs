@@ -146,6 +146,12 @@ msgstr "Any Section"
 msgid "submission.sectionOptions"
 msgstr "Section Options"
 
+msgid "submission.status.readyToPublish"
+msgstr "Ready to Publish"
+
+msgid "submission.status.readyToSchedule"
+msgstr "Ready to Schedule"
+
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} Items"
 
