@@ -36,7 +36,7 @@ trait HasFieldIssueSelection
                 'issueCount' => $issueCount,
                 'publication' => $publication,
             ]))
-            ->addHiddenField('prePublishStatus', $publication->getData('status'));
+            ->addHiddenField('status', $publication->getData('status'));
         
         return $this;
     }
