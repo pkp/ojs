@@ -65,17 +65,6 @@ class PublishForm extends FormComponent
                 : null;
             $msg = __('publication.publish.confirmation');
             $submitLabel = __('publication.publish');
-            
-            // if ($publication->getData('issueId')) {
-            //     if ($issue) {
-            //         if ($issue->getData('published')) {
-            //             $msg = __('publication.publish.confirmation.backIssue', ['issue' => htmlspecialchars($issue->getIssueIdentification())]);
-            //         } else {
-            //             $msg = __('publication.publish.confirmation.futureIssue', ['issue' => htmlspecialchars($issue->getIssueIdentification())]);
-            //             $submitLabel = __('editor.submission.schedulePublication');
-            //         }
-            //     }
-            // }
 
             // If the publication is marked as ready to publish, 
             // it will be published immediately regardless of the issue assignment
@@ -102,21 +91,6 @@ class PublishForm extends FormComponent
                 );
                 $submitLabel = __('editor.submission.schedulePublication');
             }
-            
-            // If a publication date has already been set and the date has passed this will
-            // be published immediately regardless of the issue assignment
-            // if ($publication->getData('datePublished') && $publication->getData('datePublished') <= Core::getCurrentDate()) {
-            //     $dateFormatLong = PKPString::convertStrftimeFormat($submissionContext->getLocalizedDateFormatLong());
-            //     $msg = __(
-            //         'publication.publish.confirmation.datePublishedInPast',
-            //         [
-            //             'datePublished' => (new \Carbon\Carbon($publication->getData('datePublished')))
-            //                 ->locale(Locale::getLocale())
-            //                 ->translatedFormat($dateFormatLong),
-            //         ]
-            //     );
-            //     $submitLabel = __('publication.publish');
-            // }
 
             // If publication does not have a version stage assigned
             $publicationVersion = $publication->getVersion();
