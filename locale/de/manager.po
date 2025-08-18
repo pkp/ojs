@@ -2,13 +2,14 @@
 # Felix Henn <shenn@ub.uni-koeln.de>, 2022.
 # Jens Unkenholz <jens.unkenholz@uni-muenster.de>, 2023.
 # Martin Brändle <martin.braendle@uzh.ch>, 2024.
+# Sebastian Wolf <bibliothekswelt@htmlwolf.de>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2025-04-16 12:58+0000\n"
-"Last-Translator: Pia Piontkowitz <pia.piontkowitz@rub.de>\n"
+"PO-Revision-Date: 2025-08-18 13:04+0000\n"
+"Last-Translator: Sebastian Wolf <bibliothekswelt@htmlwolf.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/manager/de/>"
 "\n"
 "Language: de\n"
@@ -21,9 +22,10 @@ msgstr ""
 msgid "manager.distribution.access"
 msgstr "Zugriff"
 
+#, fuzzy
 msgid "manager.distribution.copyrightYearBasis.description"
 msgstr ""
-"Bitte wählen Sie aus, wie das Standard Copyright Datum für einen Artikel "
+"Bitte wählen Sie aus, wie das Standard-Copyright-Datum für einen Artikel "
 "ausgewählt werden soll. Dieser Standard kann von Fall zu Fall überschrieben "
 "werden. Praktizieren Sie \"publish as you go\", nutzen Sie nicht das "
 "Publikationsdatum der Ausgabe."
@@ -2749,3 +2751,9 @@ msgid "manager.setup.contextSummary.description"
 msgstr ""
 "Geben Sie eine kurze Beschreibung Ihrer Zeitschrift an, um einen Einblick in "
 "deren Inhalte und Zweck zu gewähren."
+
+#, fuzzy
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr ""
+"Das Inhaltsverzeichnis der Ausgabe, z. B. eine Liste aller zugehörigen "
+"Beiträge."
