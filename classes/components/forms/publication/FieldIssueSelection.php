@@ -2,13 +2,13 @@
 /**
  * @file classes/components/form/publication/FieldIssueSelection.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2025 Simon Fraser University
+ * Copyright (c) 2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class FieldIssueSelection
  *
- * @brief An extension of the FieldSelect for issue assignment with radio options.
+ * @brief An extension of the FieldSelect for issue assignment options.
  */
 
 namespace APP\components\forms\publication;
