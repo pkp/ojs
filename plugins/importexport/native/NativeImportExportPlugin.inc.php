@@ -196,7 +196,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$exportXml = $this->exportSubmissions(
 					(array) $request->getUserVar('selectedSubmissions'),
 					$request->getContext(),
-					$request->getUser()
+					$request->getUser(),
+					$this->getExportOptionsFromRequest($request)
 				);
 				import('lib.pkp.classes.file.FileManager');
 				$fileManager = new FileManager();
@@ -209,7 +210,8 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$exportXml = $this->exportIssues(
 					(array) $request->getUserVar('selectedIssues'),
 					$request->getContext(),
-					$request->getUser()
+					$request->getUser(),
+					$this->getExportOptionsFromRequest($request)
 				);
 				import('lib.pkp.classes.file.FileManager');
 				$fileManager = new FileManager();
@@ -222,6 +224,23 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				$dispatcher = $request->getDispatcher();
 				$dispatcher->handle404();
 		}
+	}
+
+	/**
+	 * Get export options from the request object
+	 * @param $request PKPRequest
+	 * @return array
+	 */
+	protected function getExportOptionsFromRequest(PKPRequest $request): array {
+		$opts = [];
+
+		$serializationMode = $request->getUserVar('serializationMode');
+
+		if (isset($serializationMode)) {
+			$opts['serializationMode'] = $serializationMode;
+		}
+
+		return $opts;
 	}
 
 	/**
@@ -327,7 +346,7 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 	 * @see PKPImportExportPlugin::executeCLI()
 	 */
 	function executeCLI($scriptName, &$args) {
-		$opts = $this->parseOpts($args, ['no-embed', 'use-file-urls']);
+		$opts = $this->parseOpts($args, ['no-embed', 'use-file-urls', 'serializationMode:']);
 		$command = array_shift($args);
 		$xmlFile = array_shift($args);
 		$journalPath = array_shift($args);
@@ -515,6 +534,14 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 				continue;
 			}
 			$opt = substr($arg, 2);
+			// Check for --serializationMode:value format
+			if (strpos($opt, 'serializationMode:') === 0) {
+				$value = substr($opt, strlen('serializationMode:'));
+				if (in_array($value, ['embed', 'url', 'relative'])) {
+					$opts['serializationMode'] = $value;
+				}
+				continue;
+			}
 			if (in_array($opt, $optCodes)) {
 				$opts[$opt] = true;
 				continue;
@@ -525,6 +552,17 @@ class NativeImportExportPlugin extends ImportExportPlugin {
 			}
 		}
 		$args = $newArgs;
+
+		if (!isset($opts['serializationMode'])) {
+			if (isset($opts['use-file-urls'])) {
+				$opts['serializationMode'] = 'url';
+			} elseif (isset($opts['no-embed'])) {
+				$opts['serializationMode'] = 'relative';
+			} else {
+				$opts['serializationMode'] = 'embed';
+			}
+		}
+
 		return $opts;
 	}
 }
