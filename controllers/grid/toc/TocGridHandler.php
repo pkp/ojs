@@ -17,6 +17,7 @@
 namespace APP\controllers\grid\toc;
 
 use APP\core\Application;
+use APP\publication\Publication;
 use APP\core\Request;
 use APP\facades\Repo;
 use APP\section\Section;
@@ -255,7 +256,7 @@ class TocGridHandler extends CategoryGridHandler
         if ($submission && $request->checkCSRF()) {
             foreach ($submission->getData('publications') as $publication) {
                 if ($publication->getData('issueId') === (int) $issue->getId()
-                        && in_array($publication->getData('status'), [PKPSubmission::STATUS_SCHEDULED, PKPSubmission::STATUS_PUBLISHED])) {
+                        && in_array($publication->getData('status'), [Publication::STATUS_SCHEDULED, Publication::STATUS_PUBLISHED])) {
                     Repo::publication()->unpublish($publication);
                     $publication = Repo::publication()->get($publication->getId());
                     Repo::publication()->edit(

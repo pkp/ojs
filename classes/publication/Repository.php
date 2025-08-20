@@ -170,14 +170,14 @@ class Repository extends \PKP\publication\Repository
      */
     protected function setStatusOnPublish(Publication $publication)
     {
-        $currentStatus = (int) $publication->getData('status');
+        $currentPublicaionStatus = (int) $publication->getData('status');
         
-        if (in_array($currentStatus, [Submission::STATUS_READY_TO_PUBLISH, Submission::STATUS_READY_TO_SCHEDULE])) {
+        if (in_array($currentPublicaionStatus, [Publication::STATUS_READY_TO_PUBLISH, Publication::STATUS_READY_TO_SCHEDULE])) {
             $publication->setData(
                 'status',
-                $currentStatus === Submission::STATUS_READY_TO_PUBLISH
-                    ? Submission::STATUS_PUBLISHED
-                    : Submission::STATUS_SCHEDULED
+                $currentPublicaionStatus === Publication::STATUS_READY_TO_PUBLISH
+                    ? Publication::STATUS_PUBLISHED
+                    : Publication::STATUS_SCHEDULED
             );
         } else {
             $issue = $publication->getData('issueId')
@@ -185,7 +185,7 @@ class Repository extends \PKP\publication\Repository
                 : null;
 
             if (!$issue) {
-                $publication->setData('status', Submission::STATUS_PUBLISHED);
+                $publication->setData('status', Publication::STATUS_PUBLISHED);
             } else {
                 // If there is an issue
                 //   - set the publication status to STATUS_PUBLISHED if issue is published
@@ -193,8 +193,8 @@ class Repository extends \PKP\publication\Repository
                 $publication->setData(
                     'status', 
                     $issue->getData('published')
-                        ? Submission::STATUS_PUBLISHED
-                        : Submission::STATUS_SCHEDULED
+                        ? Publication::STATUS_PUBLISHED
+                        : Publication::STATUS_SCHEDULED
                 );
             }
         }
@@ -202,7 +202,7 @@ class Repository extends \PKP\publication\Repository
         // If no predefined datePublished available for the publication
         // and the publication is marked as published by above check
         // use current date to set/update the date published
-        if ($publication->getData('status') == Submission::STATUS_PUBLISHED
+        if ($publication->getData('status') == Publication::STATUS_PUBLISHED
             && !$publication->getData('datePublished')
         ) {
             $publication->setData('datePublished', Core::getCurrentDate());
@@ -243,7 +243,7 @@ class Repository extends \PKP\publication\Repository
             ? Repo::issue()->get($publication->getData('issueId'))
             : null;
 
-        if ($publication->getData('status') == Submission::STATUS_QUEUED) {
+        if ($publication->getData('status') == Publication::STATUS_QUEUED) {
             if (!$issue) {
                 // As the is no issue association
                 // if it was previously published and then got unpublished e.g has `date_published`
@@ -261,12 +261,12 @@ class Repository extends \PKP\publication\Repository
 
         }
 
-        if ($publication->getData('status') == Submission::STATUS_DECLINED) {
+        if ($publication->getData('status') == Publication::STATUS_DECLINED) {
             return IssueAssignment::defaultAssignment($context);    
         }
 
-        if ($publication->getData('status') == Submission::STATUS_PUBLISHED
-            || $publication->getData('status') == Submission::STATUS_READY_TO_PUBLISH) {
+        if ($publication->getData('status') == Publication::STATUS_PUBLISHED
+            || $publication->getData('status') == Publication::STATUS_READY_TO_PUBLISH) {
             
             if (!$issue) {
                 return IssueAssignment::NO_ISSUE;
@@ -277,8 +277,8 @@ class Repository extends \PKP\publication\Repository
                 : IssueAssignment::FUTURE_ISSUES_PUBLISHED;
         }
 
-        if ($publication->getData('status') == Submission::STATUS_SCHEDULED
-            || $publication->getData('status') == Submission::STATUS_READY_TO_SCHEDULE) {
+        if ($publication->getData('status') == Publication::STATUS_SCHEDULED
+            || $publication->getData('status') == Publication::STATUS_READY_TO_SCHEDULE) {
             return IssueAssignment::FUTURE_ISSUE_SCHEDULED;
         }
 

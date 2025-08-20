@@ -15,6 +15,7 @@
 namespace APP\issue\enums;
 
 use APP\submission\Submission;
+use APP\publication\Publication;
 use APP\facades\Repo;
 use PKP\context\Context;
 
@@ -44,10 +45,10 @@ enum IssueAssignment: int
     public function getPublicationStatus(): int
     {
         return match ($this) {
-            static::NO_ISSUE => Submission::STATUS_READY_TO_PUBLISH,
-            static::FUTURE_ISSUES_PUBLISHED => Submission::STATUS_READY_TO_PUBLISH,
-            static::FUTURE_ISSUE_SCHEDULED => Submission::STATUS_READY_TO_SCHEDULE,
-            static::CURRENT_BACK_ISSUES_PUBLISHED => Submission::STATUS_READY_TO_PUBLISH,
+            static::NO_ISSUE => Publication::STATUS_READY_TO_PUBLISH,
+            static::FUTURE_ISSUES_PUBLISHED => Publication::STATUS_READY_TO_PUBLISH,
+            static::FUTURE_ISSUE_SCHEDULED => Publication::STATUS_READY_TO_SCHEDULE,
+            static::CURRENT_BACK_ISSUES_PUBLISHED => Publication::STATUS_READY_TO_PUBLISH,
         };
     }
 
