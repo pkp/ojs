@@ -19,15 +19,29 @@
 namespace APP\publication;
 
 use APP\core\Application;
-use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\publication\enums\VersionStage;
 use PKP\publication\PKPPublication;
-use APP\submission\Submission;
 
 class Publication extends PKPPublication
 {
+    // Case of no issue, published issue and future issue with publish intent
+    public const STATUS_READY_TO_PUBLISH = 6;
+    // Case of future issue with schedule intent
+    public const STATUS_READY_TO_SCHEDULE = 7;
+
     public const DEFAULT_VERSION_STAGE = VersionStage::VERSION_OF_RECORD;
+
+    /**
+     * Get the valid pre-publish statuses if available
+     */
+    public static function getPrePublishStatuses(): array
+    {
+        return [
+            static::STATUS_READY_TO_PUBLISH,
+            static::STATUS_READY_TO_SCHEDULE,
+        ];
+    }
 
     /**
      * Get the URL to a localized cover image
