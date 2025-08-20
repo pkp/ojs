@@ -69,7 +69,7 @@ class PublishForm extends FormComponent
             // If the publication is marked as ready to publish, 
             // it will be published immediately regardless of the issue assignment
             // or to a future issue, it will be published immediately
-            if ($publication->getData('status') == Submission::STATUS_READY_TO_PUBLISH) {
+            if ($publication->getData('status') == Publication::STATUS_READY_TO_PUBLISH) {
                 $msg = match($issue?->getData('published')) {
                     true => __(
                         'publication.publish.confirmation.backIssue',
@@ -84,7 +84,7 @@ class PublishForm extends FormComponent
                 $submitLabel = __('publication.publish');
             }
 
-            if ($publication->getData('status') == Submission::STATUS_READY_TO_SCHEDULE) {
+            if ($publication->getData('status') == Publication::STATUS_READY_TO_SCHEDULE) {
                 $msg = __(
                     'publication.publish.confirmation.futureIssue',
                     ['issue' => htmlspecialchars($issue->getIssueIdentification())]

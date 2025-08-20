@@ -235,7 +235,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->foreign('submission_id', 'publications_submission_id')->references('submission_id')->on('submissions')->onDelete('cascade');
             $table->index(['submission_id'], 'publications_submission_id');
 
-            $table->smallInteger('status')->default(1); // PKPSubmission::STATUS_QUEUED
+            $table->smallInteger('status')->default(1); // PKPPublication::STATUS_QUEUED
             $table->string('url_path', 64)->nullable();
 
             $table->bigInteger('doi_id')->nullable();

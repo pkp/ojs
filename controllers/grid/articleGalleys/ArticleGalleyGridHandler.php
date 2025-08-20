@@ -474,7 +474,7 @@ class ArticleGalleyGridHandler extends GridHandler
      */
     public function canEdit()
     {
-        return $this->getPublication()->getData('status') !== PKPSubmission::STATUS_PUBLISHED &&
+        return $this->getPublication()->getData('status') !== Publication::STATUS_PUBLISHED &&
             Repo::user()->canUserAccessStage(
                 WORKFLOW_STAGE_ID_PRODUCTION,
                 PKPApplication::WORKFLOW_TYPE_EDITORIAL,

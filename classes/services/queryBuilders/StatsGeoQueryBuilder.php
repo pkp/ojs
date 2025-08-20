@@ -18,6 +18,7 @@
 namespace APP\services\queryBuilders;
 
 use APP\submission\Submission;
+use APP\publication\Publication;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\DB;
 use PKP\services\queryBuilders\PKPStatsGeoQueryBuilder;
@@ -49,7 +50,7 @@ class StatsGeoQueryBuilder extends PKPStatsGeoQueryBuilder
                 $query->select(DB::raw(1))
                     ->from('publications as p')
                     ->whereRaw('p.submission_id = metrics_submission_geo_monthly.' . PKPStatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID)
-                    ->where('p.status', Submission::STATUS_PUBLISHED)
+                    ->where('p.status', Publication::STATUS_PUBLISHED)
                     ->whereIn('p.issue_id', $this->issueIds);
             });
         }

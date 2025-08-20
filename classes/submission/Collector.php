@@ -15,6 +15,7 @@
 namespace APP\submission;
 
 use APP\core\Application;
+use APP\publication\Publication;
 use APP\facades\Repo;
 use APP\submission\Submission;
 use Illuminate\Database\Query\Builder;
@@ -92,7 +93,7 @@ class Collector extends \PKP\submission\Collector
             fn (Builder $query) => $query
                 ->join('publications as publication_cp', fn (JoinClause $join) => $join
                     ->on('publication_cp.publication_id', '=', 's.current_publication_id')
-                    ->where('publication_cp.status', Submission::STATUS_PUBLISHED)
+                    ->where('publication_cp.status', Publication::STATUS_PUBLISHED)
                     ->whereNotNull('publication_cp.date_published')
                 )
                 ->leftJoin('issues as pi', 'publication_cp.issue_id', '=', 'pi.issue_id')

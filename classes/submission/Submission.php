@@ -31,10 +31,6 @@ use PKP\userGroup\UserGroup;
 
 class Submission extends PKPSubmission
 {
-    // Submission status constants
-    public const STATUS_READY_TO_PUBLISH = 6;
-    public const STATUS_READY_TO_SCHEDULE = 7;
-
     // Author display in ToC
     public const AUTHOR_TOC_DEFAULT = 0;
     public const AUTHOR_TOC_HIDE = 1;
@@ -47,23 +43,6 @@ class Submission extends PKPSubmission
     //
     // Get/set methods
     //
-
-    /**
-     * @copydoc \PKP\submission\PKPSubmission::getStatusMap()
-     */
-    public function &getStatusMap()
-	{
-		static $statusMap = null;
-		
-		if ($statusMap === null) {
-			$statusMap = parent::getStatusMap() + [
-                self::STATUS_READY_TO_PUBLISH => 'submission.status.readyToPublish',
-                self::STATUS_READY_TO_SCHEDULE => 'submission.status.readyToSchedule',
-            ];
-		}
-		
-		return $statusMap;
-	}
 
     /**
      * Get the value of a license field from the containing context.
@@ -182,17 +161,6 @@ class Submission extends PKPSubmission
         );
 
         return $this->getData('galleys');
-    }
-
-    /**
-     * Get the valid pre-publish statuses if available
-     */
-    public static function getPrePublishStatuses(): array
-    {
-        return [
-            static::STATUS_READY_TO_PUBLISH,
-            static::STATUS_READY_TO_SCHEDULE,
-        ];
     }
 }
 
