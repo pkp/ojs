@@ -86,8 +86,8 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
             case 'issue':
                 $contextId = $submission->getData('contextId');
                 $issueId = $submission->getCurrentPublication()->getData('issueId');
-                $issue = Repo::issue()->get($issueId);
-                $issue = $issue->getJournalId() == $contextId ? $issue : null;
+                $issue = $issueId ? Repo::issue()->get($issueId) : null;
+                $issue = $issue?->getJournalId() == $contextId ? $issue : null;
                 if ($issue) {
                     // Link to the issue edit modal
                     $application = Application::get();
