@@ -28,7 +28,7 @@ use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use Firebase\JWT\Key;
-use Illuminate\Support\Facades\DB;
+use PKP\components\UserCommentComponent;
 use PKP\config\Config;
 use PKP\core\Core;
 use PKP\core\PKPApplication;
@@ -43,7 +43,6 @@ use PKP\submission\Genre;
 use PKP\submission\GenreDAO;
 use PKP\submission\PKPSubmission;
 use PKP\submissionFile\SubmissionFile;
-use PKP\userComment\UserComment;
 use PKP\userGroup\UserGroup;
 use stdClass;
 
@@ -223,65 +222,17 @@ class ArticleHandler extends Handler
         $templateMgr = TemplateManager::getManager($request);
         $templateMgr->requiresVueRuntime();
 
-        // get submission from publication
-        $submission = Repo::submission()->get($publication->getData('submissionId'));
-        // get all published  publication ids for this submission
-        $publishedPublicationIds = collect();
-        foreach ($submission->getPublishedPublications() as $publishedPublication) {
-            $publishedPublicationIds->add($publishedPublication->getId());
-        }
+        $userCommentComponent = new UserCommentComponent($article, $request);
 
-        $templateMgr->setLocaleKeys([
-            'userComment.discussionClosed',
-            'userComment.awaitingApprovalNotice',
-            'userComment.report.reason',
-            'common.cancel',
-            'userComment.reportCommentBy',
-            'userComment.reportCommentByUserWithAffiliation',
-            'userComment.report',
-            'userComment.showMore',
-            'form.submit',
-            'userComment.login',
-            'userComment.commentOnThisPublication',
-            'userComment.versionWithCount',
-            'common.delete',
-            'userComment.deleteCommentConfirmation',
-            'userComment.deleteComment',
-        ]);
-
-        $loginUrl = $request->getDispatcher()
-            ->url(
-                $request,
-                Application::ROUTE_PAGE,
-                null,
-                'login',
-                null,
-                null,
-                ['source' => $request->getRequestPath()]
-            );
-
-        $commentsCountPerPublication = UserComment::withPublicationIds($publishedPublicationIds->all())
-            ->withIsApproved(true)
-            ->select('publication_id', DB::raw('count(*) as count'))
-            ->groupBy('publication_id')
-            ->pluck('count', 'publication_id')
-            ->toArray();
-
-        $allCommentsCount = array_sum($commentsCountPerPublication);
-
+        $templateMgr->setLocaleKeys($userCommentComponent->getLocaleKeys());
+        $templateMgr->assign('userCommentsInitConfig', $userCommentComponent->getConfig());
         $templateMgr->assign(
-            'userCommentsInitConfig',
+            'scrollToCommentsInitConfig',
             [
-                'publicationIds' => $publishedPublicationIds->sortDesc()->values(),
-                'latestPublicationId' => $article->getCurrentPublication()->getId(),
-                'itemsPerPage' => Repo::userComment()->getPerPage(),
-                'loginUrl' => $loginUrl,
-                'allCommentsCount' => $allCommentsCount,
-                'commentsCountPerPublication' => $commentsCountPerPublication,
-            ],
+                'loginUrl' => $userCommentComponent->getLoginUrl(),
+                'allCommentsCount' => $userCommentComponent->getAllCommentsCount()
+            ]
         );
-        $templateMgr->assign('loginUrl', $loginUrl);
-        $templateMgr->assign('allCommentsCount', $allCommentsCount);
 
         $templateMgr->assign([
             'issue' => $issue,
