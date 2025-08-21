@@ -1,5 +1,6 @@
 // styles
 import '@/frontend/styles/pkp-variables.css';
+import '@/frontend/styles/style.css';
 
 import PkpLoad from '../lib/pkp/js/load_frontend.js';
 import {usePageStore} from '../lib/ui-library/src/frontend/stores/pkpPageStore.js';
