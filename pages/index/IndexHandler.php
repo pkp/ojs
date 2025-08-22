@@ -17,19 +17,17 @@
 namespace APP\pages\index;
 
 use APP\core\Application;
-use APP\submission\Submission;
 use APP\facades\Repo;
-use APP\journal\JournalDAO;
 use APP\journal\enums\JournalContentOption;
+use APP\journal\JournalDAO;
 use APP\observers\events\UsageEvent;
 use APP\pages\issue\IssueHandler;
+use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\config\Config;
 use PKP\db\DAORegistry;
 use PKP\pages\index\PKPIndexHandler;
 use PKP\security\Validation;
-use PKP\security\Role;
-use PKP\userGroup\UserGroup;
 
 class IndexHandler extends PKPIndexHandler
 {
@@ -68,13 +66,8 @@ class IndexHandler extends PKPIndexHandler
         ]);
 
         $this->_setupAnnouncements($journal ?? $request->getSite(), $templateMgr);
-        
-        if ($journal) {
-            $authorUserGroups = UserGroup::withRoleIds([Role::ROLE_ID_AUTHOR])
-                ->withContextIds([$journal->getId()])
-                ->get();
-            $templateMgr->assign(['authorUserGroups' => $authorUserGroups]);
 
+        if ($journal) {
             $activeTheme = $templateMgr->getTemplateVars('activeTheme');
 
             if (in_array(JournalContentOption::CATEGORY_LISTING->value, $activeTheme->getOption('journalContentOrganization'))) {

@@ -26,6 +26,7 @@ describe('Data suite: Cmontgomerie', function() {
 		],
 		'additionalAuthors': [
 			{
+				contributorType: Cypress.env('contributorTypePerson'),
 				givenName: {en: 'Mark'},
 				familyName: {en: 'Irvine'},
 				affiliations: [
@@ -35,7 +36,7 @@ describe('Data suite: Cmontgomerie', function() {
 				],
 				email: 'mirvine@mailinator.com',
 				country: 'CA',
-				userGroupId: Cypress.env('authorUserGroupId')
+				contributorRoles: [Cypress.env('contributorRoleAuthor')]
 			}
 		],
 		files: [
