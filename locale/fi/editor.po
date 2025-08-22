@@ -1,12 +1,12 @@
-# Antti-Jussi Nygård <ajnyga@gmail.com>, 2021, 2023.
+# Antti-Jussi Nygård <ajnyga@gmail.com>, 2021, 2023, 2025.
 # Minna Kivinen <minna.kivinen@hamk.fi>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
-"PO-Revision-Date: 2025-06-09 07:54+0000\n"
-"Last-Translator: Minna Kivinen <minna.kivinen@hamk.fi>\n"
+"PO-Revision-Date: 2025-08-22 10:03+0000\n"
+"Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
 "Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/editor/fi/>"
 "\n"
 "Language: fi\n"
@@ -472,10 +472,10 @@ msgstr ""
 
 msgid "editor.submission.proof.manageProofFilesDescription"
 msgstr ""
-"Mitä tahansa tiedostoja, joita on ladattu käsikirjoituksen eri "
-"lähetysvaiheissa, voidaan lisätä oikolukulistalle rastittamalla Sisällytä-"
-"valintaruutu alla ja klikkaamalla Etsi: kaikki saatavilla olevat tiedostot "
-"näytetään ja voidaan valita lisättäväksi."
+"Mitä tahansa tiedostoja, joita on ladattu käsikirjoituksen eri työvaiheissa, "
+"voidaan lisätä oikolukulistalle rastittamalla Sisällytä-valintaruutu alla ja "
+"klikkaamalla Etsi: kaikki saatavilla olevat tiedostot näytetään ja voidaan "
+"valita lisättäväksi."
 
 msgid "editor.publicIdentificationExistsForTheSameType"
 msgstr ""
