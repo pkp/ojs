@@ -179,6 +179,7 @@
 
 	<upgrade minversion="3.5.0.0" maxversion="3.5.0.1">
 		<migration class="PKP\migration\upgrade\v3_5_0\I11603_AddMissingUserRoleAssignmentInvitationEmail"/>
+		<migration class="APP\migration\upgrade\v3_5_0\I10045_AddReviewRemindDefaultData"/>
 	</upgrade>
 
 	<upgrade minversion="3.5.0.0" maxversion="3.5.0.2">
