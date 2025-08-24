@@ -1,0 +1,44 @@
+{
+  "name": "premiumHelper",
+  "displayName": "Aide à la soumission Premium",
+  "description": "Analyse IA du résumé pour les utilisateurs premium",
+  "version": "1.0.0",
+  "author": "Saliou Ngom",
+  "url": "https://github.com/salioungom/ojs/premiumHelper",
+  "license": "GPL-3.0",
+  "settings": {
+    "enabled": true,
+    "minWordCount": 50,
+    "maxWordCount": 300,
+    "readabilityThreshold": 60,
+    "showWordCount": true,
+    "showSentenceCount": true,
+    "showReadabilityScore": true,
+    "maxKeywords": 10,
+    "enableAdvancedAnalysis": false,
+    "customStopWords": "",
+    "enableDebugMode": false,
+    "logRetentionDays": 90
+  },
+  "install": {
+    "migrations": [
+      {
+        "class": "plugins.generic.premiumHelper.install.migrations.InstallMigration",
+        "version": "1.0.0",
+        "date": "2025-08-24 00:00:00"
+      }
+    ]
+  },
+  "scheduledTasks": [
+    {
+      "class": "plugins.generic.premiumHelper.scheduledTasks.PremiumHelperScheduledTask",
+      "frequency": "weekly"
+    }
+  ],
+  "handlers": [
+    {
+      "class": "plugins.generic.premiumHelper.handlers.PremiumHelperHandler",
+      "methods": ["index", "analyze", "settings", "saveSettings"]
+    }
+  ]
+}

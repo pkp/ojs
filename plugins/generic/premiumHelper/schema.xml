@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  * @file schema.xml
+  *
+  * Copyright (c) 2024 Université de Montréal
+  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+  *
+  * @brief Schéma de base de données pour le plugin Premium Helper
+  -->
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.w3.org/2001/XMLSchema http://pkp.sfu.ca/xml/xsd/xml.xsd"
+        targetNamespace="http://pkp.sfu.ca"
+        elementFormDefault="qualified">
+
+  <!-- Table des analyses de résumés -->
+  <table name="premiumhelper_analyses">
+    <description>Stocke les analyses de résumés effectuées par les utilisateurs</description>
+    
+    <field name="analysis_id" type="BIGINT" primaryKey="true" autoIncrement="true" />
+    <field name="submission_id" type="BIGINT" notNull="true" />
+    <field name="user_id" type="BIGINT" notNull="true" />
+    <field name="context_id" type="BIGINT" notNull="true" />
+    <field name="date_analyzed" type="DATETIME" notNull="true" />
+    <field name="word_count" type="INTEGER" default="0" />
+    <field name="sentence_count" type="INTEGER" default="0" />
+    <field name="syllable_count" type="INTEGER" default="0" />
+    <field name="readability_score" type="FLOAT" default="0" />
+    <field name="keywords" type="TEXT" />
+    <field name="metadata" type="TEXT" />
+    
+    <index name="premiumhelper_analyses_submission">
+      <col>submission_id</col>
+    </index>
+    <index name="premiumhelper_analyses_user">
+      <col>user_id</col>
+    </index>
+    <index name="premiumhelper_analyses_context">
+      <col>context_id</col>
+    </index>
+    
+    <foreignKey name="premiumhelper_analyses_submission_fk" table="submissions" column="submission_id" reference="submission_id" onDelete="CASCADE" />
+    <foreignKey name="premiumhelper_analyses_user_fk" table="users" column="user_id" reference="user_id" onDelete="CASCADE" />
+    <foreignKey name="premiumhelper_analyses_context_fk" table="journals" column="context_id" reference="journal_id" onDelete="CASCADE" />
+  </table>
+
+  <!-- Table des paramètres du plugin -->
+  <table name="premiumhelper_settings">
+    <description>Stocke les paramètres de configuration du plugin par contexte</description>
+    
+    <field name="setting_id" type="BIGINT" primaryKey="true" autoIncrement="true" />
+    <field name="context_id" type="BIGINT" notNull="true" />
+    <field name="setting_name" type="VARCHAR(255)" notNull="true" />
+    <field name="setting_value" type="TEXT" />
+    <field name="setting_type" type="VARCHAR(6)" notNull="true" />
+    
+    <index name="premiumhelper_settings_context">
+      <col>context_id</col>
+    </index>
+    <unique name="premiumhelper_settings_unique">
+      <col>context_id</col>
+      <col>setting_name</col>
+    </unique>
+    
+    <foreignKey name="premiumhelper_settings_context_fk" table="journals" column="context_id" reference="journal_id" onDelete="CASCADE" />
+  </table>
+
+  <!-- Table des journaux d'activité -->
+  <table name="premiumhelper_logs">
+    <description>Journal des activités du plugin pour le débogage et l'audit</description>
+    
+    <field name="log_id" type="BIGINT" primaryKey="true" autoIncrement="true" />
+    <field name="context_id" type="BIGINT" notNull="true" />
+    <field name="user_id" type="BIGINT" />
+    <field name="submission_id" type="BIGINT" />
+    <field name="date_logged" type="DATETIME" notNull="true" />
+    <field name="event_type" type="VARCHAR(50)" notNull="true" />
+    <field name="message" type="TEXT" notNull="true" />
+    <field name="data" type="LONGTEXT" />
+    
+    <index name="premiumhelper_logs_context">
+      <col>context_id</col>
+    </index>
+    <index name="premiumhelper_logs_user">
+      <col>user_id</col>
+    </index>
+    <index name="premiumhelper_logs_submission">
+      <col>submission_id</col>
+    </index>
+    <index name="premiumhelper_logs_event">
+      <col>event_type</col>
+    </index>
+    
+    <foreignKey name="premiumhelper_logs_context_fk" table="journals" column="context_id" reference="journal_id" onDelete="CASCADE" />
+    <foreignKey name="premiumhelper_logs_user_fk" table="users" column="user_id" reference="user_id" onDelete="SET NULL" />
+    <foreignKey name="premiumhelper_logs_submission_fk" table="submissions" column="submission_id" reference="submission_id" onDelete="CASCADE" />
+  </table>
+
+</schema>

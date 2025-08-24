@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE settings>
+<settings>
+    <!-- Section principale des paramètres du plugin -->
+    <setting key="enabled" type="boolean" required="true" default="true">
+        <label locale="plugins.generic.premiumHelper.settings.enabled" />
+        <description locale="plugins.generic.premiumHelper.settings.enabled.description" />
+    </setting>
+    
+    <!-- Paramètres d'analyse -->
+    <setting key="minWordCount" type="number" required="true" default="50">
+        <label locale="plugins.generic.premiumHelper.settings.minWordCount" />
+        <description locale="plugins.generic.premiumHelper.settings.minWordCount.description" />
+        <validation type="number" min="10" max="1000" />
+    </setting>
+    
+    <setting key="maxWordCount" type="number" required="true" default="300">
+        <label locale="plugins.generic.premiumHelper.settings.maxWordCount" />
+        <description locale="plugins.generic.premiumHelper.settings.maxWordCount.description" />
+        <validation type="number" min="50" max="5000" />
+    </setting>
+    
+    <setting key="readabilityThreshold" type="number" required="true" default="60">
+        <label locale="plugins.generic.premiumHelper.settings.readabilityThreshold" />
+        <description locale="plugins.generic.premiumHelper.settings.readabilityThreshold.description" />
+        <validation type="number" min="0" max="100" />
+    </setting>
+    
+    <!-- Paramètres d'affichage -->
+    <setting key="showWordCount" type="boolean" required="true" default="true">
+        <label locale="plugins.generic.premiumHelper.settings.showWordCount" />
+        <description locale="plugins.generic.premiumHelper.settings.showWordCount.description" />
+    </setting>
+    
+    <setting key="showSentenceCount" type="boolean" required="true" default="true">
+        <label locale="plugins.generic.premiumHelper.settings.showSentenceCount" />
+        <description locale="plugins.generic.premiumHelper.settings.showSentenceCount.description" />
+    </setting>
+    
+    <setting key="showReadabilityScore" type="boolean" required="true" default="true">
+        <label locale="plugins.generic.premiumHelper.settings.showReadabilityScore" />
+        <description locale="plugins.generic.premiumHelper.settings.showReadabilityScore.description" />
+    </setting>
+    
+    <setting key="maxKeywords" type="number" required="true" default="10">
+        <label locale="plugins.generic.premiumHelper.settings.maxKeywords" />
+        <description locale="plugins.generic.premiumHelper.settings.maxKeywords.description" />
+        <validation type="number" min="1" max="20" />
+    </setting>
+    
+    <!-- Paramètres avancés -->
+    <setting key="enableAdvancedAnalysis" type="boolean" required="true" default="false">
+        <label locale="plugins.generic.premiumHelper.settings.enableAdvancedAnalysis" />
+        <description locale="plugins.generic.premiumHelper.settings.enableAdvancedAnalysis.description" />
+    </setting>
+    
+    <setting key="customStopWords" type="text" required="false" default="">
+        <label locale="plugins.generic.premiumHelper.settings.customStopWords" />
+        <description locale="plugins.generic.premiumHelper.settings.customStopWords.description" />
+    </setting>
+    
+    <!-- Paramètres de débogage -->
+    <setting key="enableDebugMode" type="boolean" required="true" default="false">
+        <label locale="plugins.generic.premiumHelper.settings.enableDebugMode" />
+        <description locale="plugins.generic.premiumHelper.settings.enableDebugMode.description" />
+    </setting>
+</settings>
