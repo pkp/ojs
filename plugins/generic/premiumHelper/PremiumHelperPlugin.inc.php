@@ -4,6 +4,7 @@
  * @file plugins/generic/premiumHelper/PremiumHelperPlugin.inc.php
  *
  * Copyright (c) 2025 Université de Montréal
+ * Copyright (c) 2025 Saliou Ngom
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PremiumHelperPlugin
@@ -13,6 +14,18 @@
  * 
  * Ce plugin offre des fonctionnalités avancées d'analyse de texte pour les utilisateurs premium.
  * Il permet d'analyser les résumés en temps réel et de fournir des suggestions d'amélioration.
+ * 
+ * Fonctionnalités principales :
+ * - Analyse en temps réel des résumés
+ * - Comptage des mots et des phrases
+ * - Calcul d'un score de lisibilité
+ * - Extraction automatique de mots-clés pertinents
+ * - Interface utilisateur intégrée au formulaire de soumission OJS
+ * - Support multilingue (français par défaut)
+ * - Restriction aux utilisateurs premium
+ * 
+ * @author Saliou Ngom <saliou.ngom@umontreal.ca>
+ * @github https://github.com/Salioungom/ojs
  */
 
 import('lib.pkp.classes.plugins.GenericPlugin');
@@ -175,7 +188,11 @@ class PremiumHelperPlugin extends GenericPlugin {
     }
     
     /**
-     * @copydoc Plugin::getActions()
+     * Obtient les actions disponibles pour ce plugin
+     * 
+     * @param Request $request La requête en cours
+     * @param array $actionArgs Les arguments d'action
+     * @return array Tableau d'actions disponibles pour ce plugin
      */
     public function getActions($request, $actionArgs) {
         // Obtenir les actions existantes
@@ -217,7 +234,11 @@ class PremiumHelperPlugin extends GenericPlugin {
     }
     
     /**
-     * @copydoc Plugin::manage()
+     * Gère les actions du plugin
+     * 
+     * @param array $args Les arguments de la requête
+     * @param Request $request L'objet de requête
+     * @return JSONMessage Le résultat de l'action
      */
     public function manage($args, $request) {
         switch ($request->getUserVar('verb')) {
@@ -433,12 +454,25 @@ class PremiumHelperPlugin extends GenericPlugin {
     
     /**
      * Surcharge les templates du plugin
+     * 
+     * Cette méthode permet de surcharger les templates du plugin avec des versions personnalisées.
+     * Elle est appelée automatiquement par le système de template d'OJS.
+     * 
+     * @param string $hookName Le nom du hook
+     * @param array $args Les arguments du hook
+     * @return bool Toujours retourne false pour permettre aux autres hooks de s'exécuter
+     * 
+     * @since 1.0.0
+     * @author Saliou Ngom <saliou.ngom@umontreal.ca>
      */
     public function _overridePluginTemplates($hookName, $args) {
+        // Vérifier si le chemin du template commence par 'templates/'
         $templatePath = $args[0];
         if (strpos($templatePath, 'templates/') === 0) {
+            // Remplacer le chemin du template par le chemin personnalisé
             $args[0] = $this->getTemplatePath() . substr($templatePath, 10);
         }
+        // Retourner false pour permettre aux autres hooks de s'exécuter
         return false;
     }
 }

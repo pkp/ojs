@@ -1,5 +1,8 @@
 # Aide à la soumission Premium pour OJS
 
+> **Propriétaire du plugin** : Saliou Ngom  
+> **Dépôt GitHub** : [github.com/Salioungom/ojs](https://github.com/Salioungom/ojs)
+
 ## Description
 
 Ce plugin pour Open Journal Systems (OJS) ajoute une fonctionnalité d'analyse avancée des résumés pour les utilisateurs premium. Il permet d'analyser le contenu des résumés soumis et fournit des métriques utiles comme le comptage de mots, le nombre de phrases, un score de lisibilité et des suggestions de mots-clés.
@@ -90,8 +93,8 @@ Ce plugin est distribué sous la licence GNU GPL v3. Voir le fichier [LICENSE](L
 
 ## Crédits
 
-Développé par [Votre Nom] pour [Votre Organisation]
+Développé par Saliou Ngom ingénieur en informatique
 
 ## Support
 
-Pour toute question ou problème, veuillez ouvrir une issue sur notre [dépôt GitHub](https://github.com/salioungom/ojs/plugins/generic/premiumHelper) ou contacter l'équipe de support à support@votresite.org.
+Pour toute question ou problème, veuillez ouvrir une issue sur notre [dépôt GitHub](https://github.com/salioungom/ojs/plugins/generic/premiumHelper) 

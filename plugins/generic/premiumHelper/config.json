@@ -3,7 +3,7 @@
   "displayName": "Aide à la soumission Premium",
   "description": "Analyse IA du résumé pour les utilisateurs premium",
   "version": "1.0.0",
-  "author": "Saliou Ngom",
+  "author": "Saliou Ngom <saliou.ngom@umontreal.ca>",
   "url": "https://github.com/salioungom/ojs/premiumHelper",
   "license": "GPL-3.0",
   "settings": {
