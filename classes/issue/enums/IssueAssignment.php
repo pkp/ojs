@@ -127,4 +127,20 @@ enum IssueAssignment: int
             ? static::CURRENT_BACK_ISSUES_PUBLISHED
             : static::NO_ISSUE;
     }
+
+    /*
+     * Get the assignment options that require issue selection
+     */
+    public static function getIssueRequiredOptions(): array
+    {
+        return collect(static::cases())
+            ->map(
+                fn (self $option): static|null => $option->getIssuePublishStatus() !== null
+                    ? $option
+                    : null
+            )
+            ->filter()
+            ->values()
+            ->toArray();
+    }
 }

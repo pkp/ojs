@@ -513,9 +513,13 @@ describe('Data suite: Amwandenga', function() {
 		cy.wait(3000);
 		cy.get('[data-cy="galley-manager"]').contains("PDF Version 2");
 
-		// Edit url path
+		// Edit url path and select issue
 		cy.openWorkflowMenu('Version of Record 1.1', 'Issue')
-		cy.get('[name="urlPath"]').clear().type('mwandenga');
+		cy.wait(2000);
+		cy.get('select[name="issueId"]').select('Vol. 1 No. 2 (2014)');
+		cy.get('[name="urlPath"]').clear();
+		cy.wait(500);
+		cy.get('[name="urlPath"]').type('mwandenga');
 		cy.get('button').contains('Save').click();
 		cy.get('[role="status"]').contains('Saved');
 

@@ -205,8 +205,10 @@ class TemplateManager extends PKPTemplateManager
         }
 
         $this->setConstants([
-            'PUBLICATION_STATUS_READY_TO_PUBLISH' => Publication::STATUS_READY_TO_PUBLISH,
-            'PUBLICATION_STATUS_READY_TO_SCHEDULE' => Publication::STATUS_READY_TO_SCHEDULE,
+            'publication' => [
+                'STATUS_READY_TO_PUBLISH' => Publication::STATUS_READY_TO_PUBLISH,
+                'STATUS_READY_TO_SCHEDULE' => Publication::STATUS_READY_TO_SCHEDULE,
+            ],
         ]);
 
         $this->setState(['menu' => $menu]);

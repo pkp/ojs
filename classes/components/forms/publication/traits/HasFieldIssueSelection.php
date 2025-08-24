@@ -14,29 +14,68 @@
 namespace APP\components\forms\publication\traits;
 
 use APP\publication\Publication;
-use APP\components\forms\publication\FieldIssueSelection;
+use APP\issue\Issue;
+use PKP\components\forms\FieldOptions;
 use APP\facades\Repo;
+use APP\issue\enums\IssueAssignment;
+use PKP\components\forms\FieldSelect;
 use PKP\context\Context;
 
 trait HasFieldIssueSelection
 {
     public function addFieldIssueSelection(
         Publication $publication,
-        Context $context,
-        ?int $issueCount = null
+        Context $context
     ): static
     {
-        $issueCount ??= Repo::issue()->getCollector()
-            ->filterByContextIds([$context->getId()])
-            ->getCount();
+        $currentIssueAssignmentStatus = Repo::publication()->getIssueAssignmentStatus($publication, $context);
+        $issuesOptions = $currentIssueAssignmentStatus->getIssuePublishStatus() === null
+            ? []
+            :Repo::issue()
+                ->getCollector()
+                ->filterByContextIds([$context->getId()])
+                ->filterByPublished((bool)$currentIssueAssignmentStatus->getIssuePublishStatus())
+                ->getMany()
+                ->map(fn (Issue $issue): array => [
+                    'label' => htmlspecialchars($issue->getIssueIdentification()),
+                    'value' => (int )$issue->getId(),
+                ])
+                ->filter()
+                ->values()
+                ->toArray();
 
-        $this /** @var \PKP\components\forms\FormComponent $this */
-            ->addField(new FieldIssueSelection('issueId', [
-                'label' => __('publication.assignToIssue.label'),
-                'issueCount' => $issueCount,
-                'publication' => $publication,
+        $this
+            // ->addGroup([
+            //     'label' => __('publication.assignToIssue.label'),
+            //     'description' => __('publication.assignToIssue.assignmentTypeDescription'),
+            //     'id' => 'issueSelection',
+            // ])
+            ->addField(new FieldOptions('assignment', [
+                // 'groupId' => 'issueSelection',
+                'label' => __('publication.assignToIssue.assignmentType'),
+                'type' => 'radio',
+                'options' => IssueAssignment::getAvailableAssignmentOption($context),
+                'value' => $currentIssueAssignmentStatus->value,
+                'isRequired' => true,
             ]))
-            ->addHiddenField('status', $publication->getData('status'));
+            ->addField(new FieldSelect('issueId', [
+                // 'groupId' => 'issueSelection',
+                'label' => __('issue.issue'),
+                'options' => $issuesOptions,
+                'value' => $publication->getData('issueId'),
+                'size' => 'large',
+                'isRequired' => true,
+                'showWhen' => [
+                    'assignment',
+                    collect(IssueAssignment::getIssueRequiredOptions())
+                        ->map(fn (IssueAssignment $option): int => $option->value)
+                        ->toArray()
+                ],
+            ]))
+            ->addHiddenField(
+                'status',
+                $currentIssueAssignmentStatus->getPublicationStatus()
+            );
         
         return $this;
     }

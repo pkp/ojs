@@ -20,7 +20,6 @@ use APP\components\forms\publication\PublishForm;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
-use APP\issue\enums\IssueAssignment;
 use APP\publication\Publication;
 use APP\template\TemplateManager;
 use PKP\components\forms\publication\TitleAbstractForm;
@@ -93,7 +92,6 @@ class WorkflowHandler extends PKPWorkflowHandler
         $templateMgr->setConstants([
             'FORM_ISSUE_ENTRY' => $issueEntryForm::FORM_ISSUE_ENTRY,
             'FORM_PUBLISH' => PublishForm::FORM_PUBLISH,
-            'ISSUE_ASSIGNMENT_DEFAULT' => IssueAssignment::defaultAssignment($submissionContext),
         ]);
 
         $components = $templateMgr->getState('components');
