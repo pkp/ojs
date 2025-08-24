@@ -22,6 +22,7 @@ use APP\statistics\StatisticsHelper;
 use Illuminate\Pagination\LengthAwarePaginator;
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
+use PKP\publication\PKPPublication;
 use PKP\submission\PKPSubmission;
 
 class RecommendByAuthorPlugin extends GenericPlugin
@@ -100,7 +101,7 @@ class RecommendByAuthorPlugin extends GenericPlugin
             }
             $submissionIds = array_map(function ($publicationId) {
                 $publication = Repo::publication()->get($publicationId);
-                return $publication->getData('status') == PKPSubmission::STATUS_PUBLISHED ? $publication->getData('submissionId') : null;
+                return $publication->getData('status') == PKPPublication::STATUS_PUBLISHED ? $publication->getData('submissionId') : null;
             }, array_unique($publicationIds));
             $foundArticles = array_unique(array_merge($foundArticles, $submissionIds));
         }
