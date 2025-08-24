@@ -257,7 +257,7 @@ class Repository extends \PKP\publication\Repository
             // There is issue association and based on the assignment will be deduced
             return $issue->getData('published')
                 ? IssueAssignment::CURRENT_BACK_ISSUES_PUBLISHED
-                : IssueAssignment::FUTURE_ISSUES_PUBLISHED;
+                : IssueAssignment::FUTURE_ISSUE_SCHEDULED;
 
         }
 

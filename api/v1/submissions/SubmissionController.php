@@ -212,11 +212,14 @@ class SubmissionController extends \PKP\API\v1\submissions\PKPSubmissionControll
             ], Response::HTTP_FORBIDDEN);
         }
 
+        $assignmentType = Repo::publication()->getIssueAssignmentStatus(
+            $publication,
+            $request->getContext()
+        );
+
         return response()->json([
-            'assignmentType' => Repo::publication()->getIssueAssignmentStatus(
-                $publication,
-                $request->getContext()
-            )->value
+            'assignmentType' => $assignmentType->value,
+            'status' => $assignmentType->getPublicationStatus(),
         ], Response::HTTP_OK);
     }
 }

@@ -55,12 +55,6 @@ class DashboardHandler extends PKPDashboardHandler
             ->getCollector()
             ->filterByContextIds([$context->getId()])
             ->getCount();
-        $pageInitConfig['publicationSettings']['issuePublishedStatus'] = Repo::issue()
-            ->getCollector()
-            ->filterByContextIds([$context->getId()])
-            ->getQueryBuilder()
-            ->pluck('published', Repo::issue()->dao->primaryKeyColumn)
-            ->toArray();
 
         $templateMgr->setState(['pageInitConfig' => $pageInitConfig]);
     }
