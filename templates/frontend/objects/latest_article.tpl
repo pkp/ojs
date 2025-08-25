@@ -9,5 +9,7 @@
                 {include file="frontend/objects/article_summary.tpl" heading=$articleHeading}
             </li>
         {/foreach}
+        {page_info iterator=$articles}
+        {page_links iterator=$articles name="publishedPublications"}
     </ul>
 </div>

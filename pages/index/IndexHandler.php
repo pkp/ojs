@@ -17,18 +17,18 @@
 namespace APP\pages\index;
 
 use APP\core\Application;
-use APP\submission\Submission;
 use APP\facades\Repo;
-use APP\journal\JournalDAO;
 use APP\journal\enums\JournalContentOption;
+use APP\journal\JournalDAO;
 use APP\observers\events\UsageEvent;
 use APP\pages\issue\IssueHandler;
+use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\config\Config;
 use PKP\db\DAORegistry;
 use PKP\pages\index\PKPIndexHandler;
-use PKP\security\Validation;
 use PKP\security\Role;
+use PKP\security\Validation;
 use PKP\userGroup\UserGroup;
 
 class IndexHandler extends PKPIndexHandler
@@ -68,7 +68,7 @@ class IndexHandler extends PKPIndexHandler
         ]);
 
         $this->_setupAnnouncements($journal ?? $request->getSite(), $templateMgr);
-        
+
         if ($journal) {
             $authorUserGroups = UserGroup::withRoleIds([Role::ROLE_ID_AUTHOR])
                 ->withContextIds([$journal->getId()])
@@ -87,14 +87,26 @@ class IndexHandler extends PKPIndexHandler
             }
 
             if (in_array(JournalContentOption::RECENT_PUBLISHED->value, $activeTheme->getOption('journalContentOrganization'))) {
-                $publishedPublications = Repo::submission()
+                $rangeInfo = $this->getRangeInfo($request, 'publishedPublications');
+                $itemsPerPage = $journal->getData('itemsPerPage');
+
+                $collector = Repo::submission()
                     ->getCollector()
                     ->filterByContextIds([$journal->getId()])
                     ->filterByLatestPublished(true)
-                    ->filterByStatus([Submission::STATUS_PUBLISHED])
-                    ->getMany();
+                    ->filterByStatus([Submission::STATUS_PUBLISHED]);
 
-                $templateMgr->assign(['publishedPublications' => $publishedPublications]);
+                $totalPublications = $collector->getCount();
+
+                $templateMgr->assign('publishedPublications', new \Illuminate\Pagination\LengthAwarePaginator(
+                    $collector
+                        ->offset($rangeInfo->page * $itemsPerPage)
+                        ->limit($itemsPerPage)
+                        ->getMany(),
+                    $totalPublications,
+                    $itemsPerPage,
+                    $rangeInfo->page
+                ));
             }
 
             // Assign header and content for home page
