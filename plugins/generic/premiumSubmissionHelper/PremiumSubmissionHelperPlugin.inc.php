@@ -1,5 +1,7 @@
 <?php
 
+namespace APP\plugins\generic\premiumSubmissionHelper;
+
 /**
  * @file plugins/generic/premiumSubmissionHelper/PremiumSubmissionHelperPlugin.inc.php
  *
@@ -39,7 +41,7 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 class PremiumSubmissionHelperPlugin extends GenericPlugin
 {
     /** @var array Rôles autorisés à utiliser la fonctionnalité premium */
-    private const ALLOWED_ROLES = [
+    protected const ALLOWED_ROLES = [
         ROLE_ID_MANAGER,
         ROLE_ID_SUB_EDITOR,
         ROLE_ID_AUTHOR
@@ -476,19 +478,15 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
      *
      * @param string $hookName Le nom du hook
      * @param array $args Les arguments du hook
-     * @return bool Toujours retourne false pour permettre aux autres hooks de s'exécuter
-     *
-     * @since 1.0.0
-     * @author Saliou Ngom <saliou.ngom@umontreal.ca>
+     * @return bool Retourne false pour permettre aux autres hooks de s'exécuter
      */
-    public function _overridePluginTemplates($hookName, $args)
+    protected function overridePluginTemplates($hookName, $args)
     {
-        // Vérifier si le chemin du template commence par 'templates/'
-        $templatePath = $args[0];
-        if (strpos($templatePath, 'templates/') === 0) {
-            // Remplacer le chemin du template par le chemin personnalisé
-            $args[0] = $this->getTemplatePath() . substr($templatePath, 10);
-        }
+        $templateMgr = &$args[0];
+        $template = &$args[1];
+
+        // Ajoutez ici la logique de surcharge des templates si nécessaire
+
         // Retourner false pour permettre aux autres hooks de s'exécuter
         return false;
     }
