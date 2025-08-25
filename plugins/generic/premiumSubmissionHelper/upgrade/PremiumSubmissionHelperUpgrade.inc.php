@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file upgrade/PremiumSubmissionHelperUpgrade.inc.php
  *
@@ -11,79 +12,84 @@
  * @brief Gère les mises à jour du schéma de la base de données
  */
 
-class PremiumSubmissionHelperUpgrade {
+class PremiumSubmissionHelperUpgrade
+{
     /**
      * Exécute les mises à jour nécessaires
-     * 
+     *
      * @param string $context Le contexte de la mise à jour
      * @param string $plugin Le plugin concerné
      * @param string $fromVersion La version actuelle
      * @param string $toVersion La version cible
      * @return bool True si la mise à jour a réussi
      */
-    public static function upgrade($context, $plugin, $fromVersion, $toVersion) {
+    public static function upgrade($context, $plugin, $fromVersion, $toVersion)
+    {
         $migration = new SchemaMigration($plugin, $fromVersion, $toVersion);
-        
+
         // Ajouter les étapes de migration
-        $migration->addMigration('1.0.0', function() use ($context, $plugin) {
+        $migration->addMigration('1.0.0', function () use ($context, $plugin) {
             return self::installSchema($context, $plugin);
         });
-        
+
         // Exécuter les migrations
         return $migration->migrate();
     }
-    
+
     /**
      * Installe le schéma de la base de données
-     * 
+     *
      * @param string $context Le contexte de l'installation
      * @param string $plugin Le plugin concerné
      * @return bool True si l'installation a réussi
      */
-    public static function installSchema($context, $plugin) {
+    public static function installSchema($context, $plugin)
+    {
         $schemaMgr = new SchemaMigration($plugin);
         $installer = new Install($plugin);
-        
+
         // Exécuter les fichiers SQL d'installation
         $schemaMgr->addSQL(
             $installer->getInstallSchema(),
             $installer->getInstallData()
         );
-        
+
         // Créer les tables nécessaires
         $tables = self::getSchemaTables();
         foreach ($tables as $tableName => $tableSchema) {
             $schemaMgr->createTable($tableName, $tableSchema);
         }
-        
+
         return $schemaMgr->execute();
     }
-    
+
     /**
      * Désinstalle le schéma de la base de données
-     * 
+     *
      * @param string $context Le contexte de la désinstallation
      * @param string $plugin Le plugin concerné
      * @return bool True si la désinstallation a réussi
      */
-    public static function uninstallSchema($context, $plugin) {
+    public static function uninstallSchema($context, $plugin)
+    {
         $schemaMgr = new SchemaMigration($plugin);
-        
+
         // Supprimer les tables
         $tables = array_keys(self::getSchemaTables());
         foreach ($tables as $tableName) {
             $schemaMgr->dropTable($tableName);
         }
-        
+
         return $schemaMgr->execute();
     }
-    
+
     /**
      * Retourne la définition des tables du schéma
-     * 
+     *
      * @return array Définition des tables
      */
-    private static function getSchemaTables() {
+    private static function getSchemaTables()
+    {
         return [
             'premiumhelper_analyses' => [
                 'columns' => [

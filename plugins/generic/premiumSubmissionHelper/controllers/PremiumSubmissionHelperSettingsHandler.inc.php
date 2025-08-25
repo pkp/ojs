@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file controllers/PremiumSubmissionHelperSettingsHandler.inc.php
  *
@@ -13,7 +14,8 @@
 
 import('classes.handler.Handler');
 
-class PremiumSubmissionHelperSettingsHandler extends Handler {
+class PremiumSubmissionHelperSettingsHandler extends Handler
+{
     /** @var PremiumSubmissionHelperPlugin Le plugin */
     static $plugin;
 
@@ -22,20 +24,21 @@ class PremiumSubmissionHelperSettingsHandler extends Handler {
      * @param $args array Arguments
      * @param $request Request La requête
      */
-    function settings($args, $request) {
+    function settings($args, $request)
+    {
         $plugin = self::$plugin;
         $templateMgr = TemplateManager::getManager($request);
-        
+
         // Vérifier les autorisations
         $context = $request->getContext();
         if (!$context) {
             $request->redirect(null, 'index');
         }
-        
+
         // Charger les paramètres actuels
         $contextId = $context->getId();
         $settings = $plugin->getSetting($contextId, 'settings');
-        
+
         // Si aucun paramètre n'est défini, utiliser les valeurs par défaut
         if (empty($settings)) {
             $settings = array(
@@ -52,11 +55,11 @@ class PremiumSubmissionHelperSettingsHandler extends Handler {
                 'enableDebugMode' => false
             );
         }
-        
+
         // Préparer le formulaire
         $settingsForm = new FormBuilderSchema();
         $settingsForm->setAction($request->getRouter()->url($request, null, null, 'saveSettings'));
-        
+
         // Section principale
         $settingsForm->addPage('general', __('plugins.generic.premiumHelper.settings.general'))
             ->addGroup('general', array('label' => __('plugins.generic.premiumHelper.settings.generalSettings')))
@@ -82,7 +85,7 @@ class PremiumSubmissionHelperSettingsHandler extends Handler {
                     'value' => $settings['maxWordCount'] ?? 300,
                     'size' => 5,
                 )));
-        
+
         // Section d'affichage
         $settingsForm->addPage('display', __('plugins.generic.premiumHelper.settings.display'))
             ->addGroup('display', array('label' => __('plugins.generic.premiumHelper.settings.displaySettings')))
@@ -116,7 +119,7 @@ class PremiumSubmissionHelperSettingsHandler extends Handler {
                     ),
                     'value' => $settings['showReadabilityScore'] ?? true,
                 )));
-        
+
         // Section avancée
         $settingsForm->addPage('advanced', __('plugins.generic.premiumHelper.settings.advanced'))
             ->addGroup('advanced', array('label' => __('plugins.generic.premiumHelper.settings.advancedSettings')))
@@ -146,29 +149,30 @@ class PremiumSubmissionHelperSettingsHandler extends Handler {
                     ),
                     'value' => $settings['enableDebugMode'] ?? false,
                 )));
-        
+
         // Assigner le formulaire au template
         $templateMgr->assign('settingsForm', $settingsForm);
         $templateMgr->assign('pluginName', $plugin->getName());
         $templateMgr->assign('pluginBaseUrl', $request->getBaseUrl() . '/' . $plugin->getPluginPath());
-        
+
         // Afficher le template
         return $templateMgr->display($plugin->getTemplateResource('settings.tpl'));
     }
-    
+
     /**
      * Sauvegarde les paramètres du plugin
      * @param $args array Arguments
      * @param $request Request La requête
      */
-    function saveSettings($args, $request) {
+    function saveSettings($args, $request)
+    {
         $plugin = self::$plugin;
         $context = $request->getContext();
         $contextId = $context ? $context->getId() : 0;
-        
+
         // Vérifier le jeton CSRF
         $this->validateCsrf();
-        
+
         // Récupérer les données du formulaire
         $settings = array(
             'enabled' => (bool) $request->getUserVar('enabled'),
@@ -183,25 +187,25 @@ class PremiumSubmissionHelperSettingsHandler extends Handler {
             'customStopWords' => $request->getUserVar('customStopWords'),
             'enableDebugMode' => (bool) $request->getUserVar('enableDebugMode')
         );
-        
+
         // Valider les données
         if ($settings['minWordCount'] < 10) {
             $settings['minWordCount'] = 10;
         }
-        
+
         if ($settings['maxWordCount'] < $settings['minWordCount']) {
             $settings['maxWordCount'] = $settings['minWordCount'];
         }
-        
+
         if ($settings['maxKeywords'] < 1) {
             $settings['maxKeywords'] = 1;
         } elseif ($settings['maxKeywords'] > 20) {
             $settings['maxKeywords'] = 20;
         }
-        
+
         // Sauvegarder les paramètres
         $plugin->updateSetting($contextId, 'settings', $settings, 'object');
-        
+
         // Journaliser l'événement
         import('classes.core.Services');
         $eventLog = Services::get('eventLog');
@@ -212,7 +216,7 @@ class PremiumSubmissionHelperSettingsHandler extends Handler {
             'plugins.generic.premiumHelper.settings.updated',
             array('userName' => $request->getUser()->getFullName())
         );
-        
+
         // Rediriger avec un message de confirmation
         $notificationManager = new NotificationManager();
         $notificationManager->createTrivialNotification(
@@ -220,15 +224,16 @@ class PremiumSubmissionHelperSettingsHandler extends Handler {
             NOTIFICATION_TYPE_SUCCESS,
             array('contents' => __('plugins.generic.premiumHelper.settings.saved'))
         );
-        
+
         return new JSONMessage(true);
     }
-    
+
     /**
      * Définit le plugin
      * @param $plugin PremiumHelperPlugin
      */
-    static function setPlugin($plugin) {
+    static function setPlugin($plugin)
+    {
         self::$plugin = $plugin;
     }
 }

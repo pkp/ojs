@@ -217,11 +217,11 @@
         max-width: none;
         top: 10px;
     }
-    
+
     #premiumHelperContainer {
         padding: 1rem;
     }
-    
+
     #premiumSubmissionHelperResults .pkp_common_highlight {
         padding: 1rem;
     }
@@ -274,18 +274,18 @@
     #premiumHelperContainer {
         padding: 0.75rem;
     }
-    
+
     #premiumSubmissionHelperResults .pkp_form_group {
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     #premiumSubmissionHelperResults .label,
     #premiumSubmissionHelperResults .value {
         width: 100%;
         text-align: left;
     }
-    
+
     #premiumSubmissionHelperResults .label {
         margin-bottom: 0.25rem;
     }

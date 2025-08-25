@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/form/SettingsForm.inc.php
  *
@@ -13,41 +14,44 @@
 
 import('lib.pkp.classes.form.Form');
 
-class SettingsForm extends Form {
+class SettingsForm extends Form
+{
     /** @var PremiumSubmissionHelperPlugin Le plugin */
     protected $plugin;
-    
+
     /** @var int ID du contexte */
     protected $contextId;
-    
+
     /**
      * Constructeur
      * @param $plugin PremiumSubmissionHelperPlugin Le plugin
      * @param $contextId int ID du contexte
      */
-    public function __construct($plugin, $contextId) {
+    public function __construct($plugin, $contextId)
+    {
         parent::__construct($plugin->getTemplateResource('settings.tpl'));
         $this->plugin = $plugin;
         $this->contextId = $contextId;
-        
+
         // Ajouter les validations
         $this->addCheck(new FormValidatorPost($this));
         $this->addCheck(new FormValidatorCSRF($this));
-        
+
         // Appeler les méthodes d'initialisation
         $this->initData();
     }
-    
+
     /**
      * @copydoc Form::initData()
      */
-    public function initData() {
+    public function initData()
+    {
         $contextId = $this->contextId;
         $plugin = $this->plugin;
-        
+
         // Charger les paramètres existants
         $settings = $plugin->getSetting($contextId, 'settings');
-        
+
         // Si aucun paramètre n'est défini, utiliser les valeurs par défaut
         if (empty($settings)) {
             $settings = array(
@@ -64,17 +68,18 @@ class SettingsForm extends Form {
                 'enableDebugMode' => false
             );
         }
-        
+
         // Définir les données du formulaire
         $this->_data = $settings;
-        
+
         parent::initData();
     }
-    
+
     /**
      * @copydoc Form::readInputData()
      */
-    public function readInputData() {
+    public function readInputData()
+    {
         $this->readUserVars(array(
             'enabled',
             'minWordCount',
@@ -88,39 +93,41 @@ class SettingsForm extends Form {
             'customStopWords',
             'enableDebugMode'
         ));
-        
+
         // Convertir les cases à cocher en booléens
         foreach (['enabled', 'showWordCount', 'showSentenceCount', 'showReadabilityScore', 'enableAdvancedAnalysis', 'enableDebugMode'] as $key) {
             $this->_data[$key] = (bool) $this->getData($key);
         }
-        
+
         // Convertir les nombres
         foreach (['minWordCount', 'maxWordCount', 'readabilityThreshold', 'maxKeywords'] as $key) {
             $this->_data[$key] = (int) $this->getData($key);
         }
     }
-    
+
     /**
      * @copydoc Form::fetch()
      */
-    public function fetch($request, $template = null, $display = false) {
+    public function fetch($request, $template = null, $display = false)
+    {
         $templateMgr = TemplateManager::getManager($request);
         $templateMgr->assign([
             'pluginName' => $this->plugin->getName(),
             'pluginBaseUrl' => $request->getBaseUrl() . '/' . $this->plugin->getPluginPath(),
             'currentPage' => $request->getUserVar('page') ?? 'general',
         ]);
-        
+
         return parent::fetch($request, $template, $display);
     }
-    
+
     /**
      * @copydoc Form::execute()
      */
-    public function execute(...$functionArgs) {
+    public function execute(...$functionArgs)
+    {
         $plugin = $this->plugin;
         $contextId = $this->contextId;
-        
+
         // Préparer les paramètres à enregistrer
         $settings = [
             'enabled' => (bool) $this->getData('enabled'),
@@ -135,15 +142,15 @@ class SettingsForm extends Form {
             'customStopWords' => $this->getData('customStopWords'),
             'enableDebugMode' => (bool) $this->getData('enableDebugMode')
         ];
-        
+
         // S'assurer que le nombre maximum de mots est supérieur au minimum
         if ($settings['maxWordCount'] < $settings['minWordCount']) {
             $settings['maxWordCount'] = $settings['minWordCount'];
         }
-        
+
         // Enregistrer les paramètres
         $plugin->updateSetting($contextId, 'settings', $settings, 'object');
-        
+
         parent::execute(...$functionArgs);
     }
 }
