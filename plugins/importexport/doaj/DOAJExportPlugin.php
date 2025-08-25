@@ -17,6 +17,7 @@ namespace APP\plugins\importexport\doaj;
 use APP\core\Application;
 use APP\plugins\PubObjectsExportPlugin;
 use APP\template\TemplateManager;
+use PKP\context\Context;
 use PKP\db\DAORegistry;
 use PKP\filter\FilterDAO;
 use PKP\notification\Notification;
@@ -81,6 +82,14 @@ class DOAJExportPlugin extends PubObjectsExportPlugin
     public function getSubmissionFilter()
     {
         return 'article=>doaj-xml';
+    }
+
+    /**
+     * @copydoc PubObjectsExportPlugin::getPublicationFilter()
+     */
+    public function getPublicationFilter(): ?string
+    {
+        return 'publication=>doaj-xml';
     }
 
     /**
@@ -157,7 +166,11 @@ class DOAJExportPlugin extends PubObjectsExportPlugin
         if ($request->getUserVar(PubObjectsExportPlugin::EXPORT_ACTION_DEPOSIT)) {
             assert($filter != null);
             // Set filter for JSON
-            $filter = 'article=>doaj-json';
+            if ($context->getData(Context::SETTING_DOI_VERSIONING)) {
+                $filter = 'publication=>doaj-json';
+            } else {
+                $filter = 'article=>doaj-json';
+            }
             $resultErrors = [];
             foreach ($objects as $object) {
                 // Get the JSON
