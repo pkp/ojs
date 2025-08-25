@@ -596,8 +596,8 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
         $params = array_merge([$dateEnd[0], $dateEnd[1], $dateEnd[2], (int) $journalId], $this->getInstitutionNameFetchParameters());
 
         $result = $this->retrieveRange(
-            'SELECT	s.*, iss.*
-                ' . $this->getInstitutionNameFetchColumns() . ',
+            'SELECT	s.*, iss.*,
+                ' . $this->getInstitutionNameFetchColumns() . '
 			FROM	subscriptions s
 				JOIN subscription_types st ON (s.type_id = st.type_id)
 				JOIN institutional_subscriptions iss ON (s.subscription_id = iss.subscription_id)
