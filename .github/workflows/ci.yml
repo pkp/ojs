@@ -1,0 +1,32 @@
+# .github/workflows/ci.yml
+name: CI
+
+on:
+  push:
+    branches: [ "feat/premium-helper-plugin-salioungom" ]
+    paths:
+      - 'plugins/generic/premiumSubmissionHelper/**'
+  pull_request:
+    branches: [ "feat/premium-helper-plugin-salioungom" ]
+    paths:
+      - 'plugins/generic/premiumSubmissionHelper/**'
+
+jobs:
+  phpcs:
+    name: PHP_CodeSniffer
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.3'
+        tools: composer
+        
+    - name: Install PHP_CodeSniffer
+      run: composer global require "squizlabs/php_codesniffer=*" --dev
+      
+    - name: Run PHP_CodeSniffer
+      run: ~/.composer/vendor/bin/phpcs --standard=PSR12 --extensions=php --warning-severity=0 --colors plugins/generic/premiumSubmissionHelper/
