@@ -1,11 +1,12 @@
 # Jordi LC <jordi.lacruz@uab.cat>, 2025.
+# Camilo Torres <camilotorres@cienciasbiomedicas.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:05:45+00:00\n"
-"PO-Revision-Date: 2025-07-24 13:29+0000\n"
-"Last-Translator: Jordi LC <jordi.lacruz@uab.cat>\n"
+"PO-Revision-Date: 2025-08-25 03:22+0000\n"
+"Last-Translator: Camilo Torres <camilotorres@cienciasbiomedicas.com>\n"
 "Language-Team: Spanish <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-pubmed/es/>\n"
 "Language: es\n"
@@ -54,3 +55,9 @@ msgstr "No existe ningún artículo con el ID especificado \"{$articleId}\"."
 
 msgid "plugins.importexport.pubmed.settings.form.nlmTitle"
 msgstr "Abreviatura del título NLM"
+
+msgid "plugins.importexport.pubmed.settings.form.nlmTitle.description"
+msgstr ""
+"Abreviatura del título de la revista de la NLM. Si no conoce la "
+"abreviatura,  <a href=\"https://www.ncbi.nlm.nih.gov/nlmcatalog/\">busque en "
+"el Catálogo NLM</a>."
