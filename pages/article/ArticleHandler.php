@@ -367,8 +367,17 @@ class ArticleHandler extends Handler
             }
 
             if (!Hook::call('ArticleHandler::view', [&$request, &$issue, &$article, $publication])) {
-                $templateMgr->display('frontend/pages/article.tpl');
+                //$templateMgr->display('frontend/pages/article.tpl');
                 event(new UsageEvent(Application::ASSOC_TYPE_SUBMISSION, $context, $article, null, null, $this->issue));
+
+                error_log('does exist');
+                error_log(class_exists('App\\View\\Components\\Authors'));
+                echo view('bladeTest.article', [
+                    'publication' => $publication,
+                    'title' => 'My Title',
+                    'text' => 'This is my text!',
+                ]);
+
                 return;
             }
         } else {
