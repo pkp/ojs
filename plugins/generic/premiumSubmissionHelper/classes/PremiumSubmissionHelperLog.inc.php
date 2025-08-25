@@ -1,5 +1,9 @@
 <?php
 
+namespace APP\plugins\generic\premiumSubmissionHelper\classes;
+
+use PKP\db\DataObject;
+
 /**
  * @file classes/PremiumSubmissionHelperLog.inc.php
  *

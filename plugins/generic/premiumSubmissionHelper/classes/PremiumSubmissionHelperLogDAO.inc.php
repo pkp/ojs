@@ -1,5 +1,12 @@
 <?php
 
+namespace APP\plugins\generic\premiumSubmissionHelper\classes;
+
+use PKP\db\DAO;
+use PKP\db\DAORegistry;
+use PKP\db\DBResultRange;
+use PKP\plugins\PluginRegistry;
+
 /**
  * @file classes/PremiumSubmissionHelperLogDAO.inc.php
  *
@@ -20,7 +27,7 @@ class PremiumSubmissionHelperLogDAO extends DAO
     /**
      * @copydoc DAO::_getCacheName()
      */
-    protected function _getCacheName()
+    protected function getCacheName()
     {
         return 'premiumSubmissionHelperLogs';
     }
@@ -28,7 +35,7 @@ class PremiumSubmissionHelperLogDAO extends DAO
     /**
      * @copydoc DAO::_getTableName()
      */
-    protected function _getTableName()
+    protected function getTableName()
     {
         return 'premiumsubmissionhelper_logs';
     }
@@ -36,7 +43,7 @@ class PremiumSubmissionHelperLogDAO extends DAO
     /**
      * @copydoc DAO::_getPrimaryKeyColumn()
      */
-    protected function _getPrimaryKeyColumn()
+    protected function getPrimaryKeyColumn()
     {
         return 'log_id';
     }
@@ -44,7 +51,7 @@ class PremiumSubmissionHelperLogDAO extends DAO
     /**
      * @copydoc DAO::_fromRow()
      */
-    protected function _fromRow($row)
+    protected function fromRow($row)
     {
         $log = new PremiumSubmissionHelperLog();
         $log->setLogId($row->log_id);
@@ -62,7 +69,7 @@ class PremiumSubmissionHelperLogDAO extends DAO
     /**
      * @copydoc DAO::_toRow()
      */
-    protected function _toRow($log)
+    protected function toRow($log)
     {
         return [
             'context_id' => $log->getContextId(),

@@ -1,5 +1,13 @@
 <?php
 
+namespace APP\plugins\generic\premiumSubmissionHelper\classes\form;
+
+use PKP\form\Form;
+use PKP\form\validation\FormValidatorPost;
+use PKP\form\validation\FormValidatorCSRF;
+use PKP\notification\NotificationManager;
+use APP\template\TemplateManager;
+
 /**
  * @file classes/form/SettingsForm.inc.php
  *
@@ -16,7 +24,7 @@ import('lib.pkp.classes.form.Form');
 
 class SettingsForm extends Form
 {
-    /** @var PremiumSubmissionHelperPlugin Le plugin */
+    /** @var \APP\plugins\generic\premiumSubmissionHelper\PremiumSubmissionHelperPlugin Le plugin */
     protected $plugin;
 
     /** @var int ID du contexte */

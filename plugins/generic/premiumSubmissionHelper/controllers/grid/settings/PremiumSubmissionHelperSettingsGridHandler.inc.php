@@ -1,5 +1,17 @@
 <?php
 
+namespace APP\plugins\generic\premiumSubmissionHelper\controllers\grid\settings;
+
+use PKP\controllers\grid\GridHandler;
+use PKP\core\JSONMessage;
+use PKP\core\PKPRequest;
+use PKP\security\authorization\ContextAccessPolicy;
+use PKP\security\Role;
+use APP\core\Application;
+use APP\notification\NotificationManager;
+use APP\template\TemplateManager;
+use PKP\plugins\PluginRegistry;
+
 /**
  * @file controllers/grid/settings/PremiumSubmissionHelperSettingsGridHandler.inc.php
  *
@@ -18,12 +30,13 @@ import('plugins.generic.premiumSubmissionHelper.controllers.grid.settings.Premiu
 class PremiumSubmissionHelperSettingsGridHandler extends GridHandler
 {
     /** @var PremiumSubmissionHelperPlugin Le plugin */
-    static $plugin;
+    /** @var \APP\plugins\generic\premiumSubmissionHelper\PremiumSubmissionHelperPlugin Le plugin */
+    protected static $plugin;
 
     /**
      * @copydoc GridHandler::initialize()
      */
-    function initialize($request, $args = null)
+    public function initialize($request, $args = null)
     {
         parent::initialize($request, $args);
 
@@ -98,7 +111,7 @@ class PremiumSubmissionHelperSettingsGridHandler extends GridHandler
     /**
      * @copydoc GridHandler::initFeatures()
      */
-    function initFeatures($request, $args)
+    public function initFeatures($request, $args)
     {
         import('lib.pkp.classes.controllers.grid.feature.PagingFeature');
         return array(new PagingFeature());
@@ -107,7 +120,7 @@ class PremiumSubmissionHelperSettingsGridHandler extends GridHandler
     /**
      * @copydoc GridHandler::getRowInstance()
      */
-    function getRowInstance()
+    public function getRowInstance()
     {
         return new PremiumSubmissionHelperSettingsGridRow();
     }
@@ -116,12 +129,12 @@ class PremiumSubmissionHelperSettingsGridHandler extends GridHandler
      * Définit le plugin
      * @param $plugin PremiumSubmissionHelperPlugin
      */
-    static function setPlugin($plugin)
+    public static function setPlugin($plugin)
     {
         self::$plugin = $plugin;
     }
 }
 
-// Définir le plugin pour la classe
+// Register the handler with the application
 $plugin = PluginRegistry::getPlugin('generic', 'premiumsubmissionhelperplugin');
-PremiumSubmissionHelperSettingsGridHandler::setPlugin($plugin);
+\APP\plugins\generic\premiumSubmissionHelper\controllers\grid\settings\PremiumSubmissionHelperSettingsGridHandler::setPlugin($plugin);

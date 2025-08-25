@@ -1,12 +1,21 @@
 <?php
 
+namespace APP\plugins\generic\premiumSubmissionHelper\pages;
+
+use PKP\handler\APIHandler;
+use PKP\core\JSONMessage;
+use PKP\db\DAORegistry;
+use PKP\security\authorization\ContextRequiredPolicy;
+use PKP\security\Role;
+use PKP\plugins\PluginRegistry;
+
 /**
  * @file plugins/generic/premiumSubmissionHelper/pages/APIHandler.inc.php
  *
  * Copyright (c) 2025 Université de Montréal
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class APIHandler
+ * @class PremiumSubmissionHelperAPIHandler
  * @ingroup plugins_generic_premiumSubmissionHelper
  *
  * @brief Gestionnaire de l'API pour l'analyse de résumé
@@ -23,9 +32,9 @@ import('lib.pkp.classes.handler.PKPHandler');
  * Cette classe traite les requêtes d'analyse, valide les entrées,
  * et renvoie des métriques détaillées sur le texte fourni.
  */
-class APIHandler extends PKPHandler
+class PremiumSubmissionHelperAPIHandler extends PKPHandler
 {
-    /** @var PremiumSubmissionHelperPlugin Le plugin */
+    /** @var \APP\plugins\generic\premiumSubmissionHelper\PremiumSubmissionHelperPlugin Le plugin */
     protected $plugin;
 
     /**

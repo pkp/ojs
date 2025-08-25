@@ -1,5 +1,15 @@
 <?php
 
+namespace APP\plugins\generic\premiumSubmissionHelper\controllers;
+
+use APP\handler\Handler;
+use APP\core\Application;
+use APP\template\TemplateManager;
+use PKP\db\DAORegistry;
+use PKP\plugins\PluginRegistry;
+use PKP\security\authorization\ContextRequiredPolicy;
+use PKP\security\Role;
+
 /**
  * @file controllers/PremiumSubmissionHelperSettingsHandler.inc.php
  *
@@ -17,14 +27,15 @@ import('classes.handler.Handler');
 class PremiumSubmissionHelperSettingsHandler extends Handler
 {
     /** @var PremiumSubmissionHelperPlugin Le plugin */
-    static $plugin;
+    /** @var \APP\plugins\generic\premiumSubmissionHelper\PremiumSubmissionHelperPlugin Le plugin */
+    protected static $plugin;
 
     /**
      * Affiche la page de paramètres du plugin
      * @param $args array Arguments
      * @param $request Request La requête
      */
-    function settings($args, $request)
+    public function settings($args, $request)
     {
         $plugin = self::$plugin;
         $templateMgr = TemplateManager::getManager($request);
@@ -164,7 +175,7 @@ class PremiumSubmissionHelperSettingsHandler extends Handler
      * @param $args array Arguments
      * @param $request Request La requête
      */
-    function saveSettings($args, $request)
+public function saveSettings($args, $request)
     {
         $plugin = self::$plugin;
         $context = $request->getContext();
@@ -232,12 +243,12 @@ class PremiumSubmissionHelperSettingsHandler extends Handler
      * Définit le plugin
      * @param $plugin PremiumHelperPlugin
      */
-    static function setPlugin($plugin)
+    public static function setPlugin($plugin)
     {
         self::$plugin = $plugin;
     }
 }
 
-// Définir le plugin pour la classe
+// Register the handler with the application
 $plugin = PluginRegistry::getPlugin('generic', 'premiumsubmissionhelperplugin');
-PremiumSubmissionHelperSettingsHandler::setPlugin($plugin);
+\APP\plugins\generic\premiumSubmissionHelper\controllers\PremiumSubmissionHelperSettingsHandler::setPlugin($plugin);

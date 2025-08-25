@@ -1,5 +1,11 @@
 <?php
 
+namespace APP\plugins\generic\premiumSubmissionHelper\upgrade;
+
+use PKP\db\SchemaMigration;
+use PKP\db\XMLDAO;
+use PKP\db\DAORegistry;
+
 /**
  * @file upgrade/PremiumSubmissionHelperUpgrade.inc.php
  *

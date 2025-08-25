@@ -1,5 +1,11 @@
 <?php
 
+namespace APP\plugins\generic\premiumSubmissionHelper;
+
+use PKP\plugins\Install;
+use PKP\db\SchemaDAO;
+use PKP\db\DAORegistry;
+
 /**
  * @file PremiumSubmissionHelperInstall.inc.php
  *

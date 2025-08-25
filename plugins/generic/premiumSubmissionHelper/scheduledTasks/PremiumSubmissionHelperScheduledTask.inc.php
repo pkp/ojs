@@ -1,5 +1,13 @@
 <?php
 
+namespace APP\plugins\generic\premiumSubmissionHelper\scheduledTasks;
+
+use PKP\scheduledTask\ScheduledTask;
+use PKP\scheduledTask\ScheduledTaskHelper;
+use PKP\db\DAORegistry;
+use APP\facades\Repo;
+use PKP\plugins\PluginRegistry;
+
 /**
  * @file scheduledTasks/PremiumSubmissionHelperScheduledTask.inc.php
  *
@@ -17,7 +25,7 @@ import('lib.pkp.classes.scheduledTask.ScheduledTaskHelper');
 
 class PremiumSubmissionHelperScheduledTask extends ScheduledTask
 {
-    /** @var PremiumSubmissionHelperPlugin Le plugin */
+    /** @var \APP\plugins\generic\premiumSubmissionHelper\PremiumSubmissionHelperPlugin Le plugin */
     protected $plugin;
 
     /**

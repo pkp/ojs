@@ -1,5 +1,15 @@
 <?php
 
+namespace APP\plugins\generic\premiumSubmissionHelper\controllers\grid\settings;
+
+use PKP\controllers\grid\GridRow;
+use PKP\core\PKPApplication;
+use APP\core\Application;
+use APP\template\TemplateManager;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\RemoteActionConfirmationModal;
+use PKP\plugins\PluginRegistry;
+
 /**
  * @file controllers/grid/settings/PremiumSubmissionHelperSettingsGridRow.inc.php
  *
@@ -19,7 +29,7 @@ class PremiumSubmissionHelperSettingsGridRow extends GridRow
     /**
      * @copydoc GridRow::initialize()
      */
-    function initialize($request, $template = null)
+    public function initialize($request, $template = null)
     {
         parent::initialize($request, $template);
 
