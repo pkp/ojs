@@ -1,11 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 namespace APP\plugins\generic\premiumSubmissionHelper\controllers\grid\settings;
 
-use PKP\controllers\grid\GridRow;
-use PKP\core\PKPApplication;
+// Application classes
 use APP\core\Application;
 use APP\template\TemplateManager;
+
+// PKP classes
+use PKP\controllers\grid\GridRow;
+use PKP\core\PKPApplication;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\RemoteActionConfirmationModal;
 use PKP\plugins\PluginRegistry;
@@ -13,19 +18,16 @@ use PKP\plugins\PluginRegistry;
 /**
  * @file controllers/grid/settings/PremiumSubmissionHelperSettingsGridRow.inc.php
  *
- * Copyright (c) 2024 Université de Montréal
- * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
- *
  * @class PremiumSubmissionHelperSettingsGridRow
- * @ingroup plugins_generic_premiumSubmissionHelper
+ * @ingroup controllers_grid_settings
  *
  * @brief Gère les lignes de la grille des paramètres.
  */
-
-import('lib.pkp.classes.controllers.grid.GridRow');
-
 class PremiumSubmissionHelperSettingsGridRow extends GridRow
 {
+    /**
+     * @copydoc GridRow::initialize()
+     */
     /**
      * @copydoc GridRow::initialize()
      */

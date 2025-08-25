@@ -1,37 +1,34 @@
 <?php
 
+declare(strict_types=1);
+
 namespace APP\plugins\generic\premiumSubmissionHelper\scheduledTasks;
 
+// Application classes
+use APP\facades\Repo;
+use APP\plugins\generic\premiumSubmissionHelper\PremiumSubmissionHelperPlugin;
+
+// PKP classes
+use PKP\db\DAORegistry;
+use PKP\plugins\PluginRegistry;
 use PKP\scheduledTask\ScheduledTask;
 use PKP\scheduledTask\ScheduledTaskHelper;
-use PKP\db\DAORegistry;
-use APP\facades\Repo;
-use PKP\plugins\PluginRegistry;
 
 /**
  * @file scheduledTasks/PremiumSubmissionHelperScheduledTask.inc.php
  *
- * Copyright (c) 2024 Université de Montréal
- * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
- *
  * @class PremiumSubmissionHelperScheduledTask
- * @ingroup plugins_generic_premiumSubmissionHelper
+ * @ingroup scheduled_tasks
  *
  * @brief Tâche planifiée pour le plugin Premium Submission Helper
  */
-
-import('lib.pkp.classes.scheduledTask.ScheduledTask');
-import('lib.pkp.classes.scheduledTask.ScheduledTaskHelper');
-
 class PremiumSubmissionHelperScheduledTask extends ScheduledTask
 {
-    /** @var \APP\plugins\generic\premiumSubmissionHelper\PremiumSubmissionHelperPlugin Le plugin */
-    protected $plugin;
+    protected PremiumSubmissionHelperPlugin $plugin;
 
     /**
-     * Constructeur
-     *
-     * @param array $args Arguments de la tâche
+     * Constructor
+     * @param array $args Arguments
      */
     public function __construct($args)
     {
@@ -54,7 +51,7 @@ class PremiumSubmissionHelperScheduledTask extends ScheduledTask
     /**
      * @copydoc ScheduledTask::executeActions()
      */
-    protected function executeActions()
+    public function executeActions()
     {
         if (!$this->plugin) {
             return false;
@@ -66,7 +63,7 @@ class PremiumSubmissionHelperScheduledTask extends ScheduledTask
     }
 
     /**
-     * Nettoie les anciennes entrées de journal
+     * Nettoie les anciens logs selon la configuration de rétention
      */
     protected function cleanupOldLogs()
     {

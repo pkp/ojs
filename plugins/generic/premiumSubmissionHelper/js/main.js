@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
         showLoading(analysisResults);
 
         // Récupérer le jeton CSRF
-        const csrfToken = document.querySelector('meta[name="csrf-token"]') ? .getAttribute('content') || '';
+        const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || '';
 
         // Construire l'URL de l'API
         const apiUrl = typeof premiumHelper !== 'undefined' ?

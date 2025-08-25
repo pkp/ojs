@@ -1,43 +1,44 @@
 <?php
 
+/**
+ * @file controllers/PremiumSubmissionHelperSettingsHandler.inc.php
+ *
+ * @class PremiumSubmissionHelperSettingsHandler
+ * @ingroup controllers
+ *
+ * @brief Gère les pages de paramètres du plugin.
+ */
+
+declare(strict_types=1);
+
 namespace APP\plugins\generic\premiumSubmissionHelper\controllers;
 
-use APP\handler\Handler;
+// Application classes
 use APP\core\Application;
+use APP\core\Request;
+use APP\handler\Handler;
+use APP\notification\NotificationManager;
+use APP\plugins\generic\premiumSubmissionHelper\PremiumSubmissionHelperPlugin;
 use APP\template\TemplateManager;
+
+// PKP classes
 use PKP\db\DAORegistry;
 use PKP\plugins\PluginRegistry;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\Role;
 
-/**
- * @file controllers/PremiumSubmissionHelperSettingsHandler.inc.php
- *
- * Copyright (c) 2024 Université de Montréal
- * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
- *
- * @class PremiumSubmissionHelperSettingsHandler
- * @ingroup plugins_generic_premiumSubmissionHelper
- *
- * @brief Gère les pages de paramètres du plugin.
- */
-
-import('classes.handler.Handler');
-
 class PremiumSubmissionHelperSettingsHandler extends Handler
 {
-    /** @var PremiumSubmissionHelperPlugin Le plugin */
-    /** @var \APP\plugins\generic\premiumSubmissionHelper\PremiumSubmissionHelperPlugin Le plugin */
-    protected static $plugin;
+    protected PremiumSubmissionHelperPlugin $plugin;
 
     /**
      * Affiche la page de paramètres du plugin
-     * @param $args array Arguments
-     * @param $request Request La requête
+     * @param array $args Arguments
+     * @param Request $request La requête
      */
     public function settings($args, $request)
     {
-        $plugin = self::$plugin;
+        $plugin = $this->plugin;
         $templateMgr = TemplateManager::getManager($request);
 
         // Vérifier les autorisations
@@ -73,111 +74,132 @@ class PremiumSubmissionHelperSettingsHandler extends Handler
 
         // Section principale
         $settingsForm->addPage('general', __('plugins.generic.premiumHelper.settings.general'))
-            ->addGroup('general', array('label' => __('plugins.generic.premiumHelper.settings.generalSettings')))
-                ->addField(new FieldOptions('enabled', array(
+            ->addGroup('general', ['label' => __('plugins.generic.premiumHelper.settings.generalSettings')])
+                ->addField(new FieldOptions('enabled', [
                     'label' => __('plugins.generic.premiumHelper.settings.enabled'),
                     'description' => __('plugins.generic.premiumHelper.settings.enabled.description'),
                     'type' => 'radio',
-                    'options' => array(
-                        array('value' => true, 'label' => __('common.enable')),
-                        array('value' => false, 'label' => __('common.disable')),
-                    ),
+                    'options' => [
+                        ['value' => true, 'label' => __('common.enable')],
+                        ['value' => false, 'label' => __('common.disable')],
+                    ],
                     'value' => $settings['enabled'] ?? true,
-                )))
-                ->addField(new FieldText('minWordCount', array(
+                ]))
+                ->addField(new FieldText('minWordCount', [
                     'label' => __('plugins.generic.premiumHelper.settings.minWordCount'),
                     'description' => __('plugins.generic.premiumHelper.settings.minWordCount.description'),
                     'value' => $settings['minWordCount'] ?? 50,
                     'size' => 5,
-                )))
-                ->addField(new FieldText('maxWordCount', array(
+                ]))
+                ->addField(new FieldText('maxWordCount', [
                     'label' => __('plugins.generic.premiumHelper.settings.maxWordCount'),
                     'description' => __('plugins.generic.premiumHelper.settings.maxWordCount.description'),
                     'value' => $settings['maxWordCount'] ?? 300,
                     'size' => 5,
-                )));
+                ]));
 
         // Section d'affichage
         $settingsForm->addPage('display', __('plugins.generic.premiumHelper.settings.display'))
-            ->addGroup('display', array('label' => __('plugins.generic.premiumHelper.settings.displaySettings')))
-                ->addField(new FieldOptions('showWordCount', array(
+            ->addGroup('display', ['label' => __('plugins.generic.premiumHelper.settings.displaySettings')])
+                ->addField(new FieldOptions('showWordCount', [
                     'label' => __('plugins.generic.premiumHelper.settings.showWordCount'),
                     'description' => __('plugins.generic.premiumHelper.settings.showWordCount.description'),
                     'type' => 'radio',
-                    'options' => array(
-                        array('value' => true, 'label' => __('common.yes')),
-                        array('value' => false, 'label' => __('common.no')),
-                    ),
+                    'options' => [
+                        ['value' => true, 'label' => __('common.yes')],
+                        ['value' => false, 'label' => __('common.no')],
+                    ],
                     'value' => $settings['showWordCount'] ?? true,
-                )))
-                ->addField(new FieldOptions('showSentenceCount', array(
+                ]))
+                ->addField(new FieldOptions('showSentenceCount', [
                     'label' => __('plugins.generic.premiumHelper.settings.showSentenceCount'),
                     'description' => __('plugins.generic.premiumHelper.settings.showSentenceCount.description'),
                     'type' => 'radio',
-                    'options' => array(
-                        array('value' => true, 'label' => __('common.yes')),
-                        array('value' => false, 'label' => __('common.no')),
-                    ),
+                    'options' => [
+                        ['value' => true, 'label' => __('common.yes')],
+                        ['value' => false, 'label' => __('common.no')],
+                    ],
                     'value' => $settings['showSentenceCount'] ?? true,
-                )))
-                ->addField(new FieldOptions('showReadabilityScore', array(
+                ]))
+                ->addField(new FieldOptions('showReadabilityScore', [
                     'label' => __('plugins.generic.premiumHelper.settings.showReadabilityScore'),
                     'description' => __('plugins.generic.premiumHelper.settings.showReadabilityScore.description'),
                     'type' => 'radio',
-                    'options' => array(
-                        array('value' => true, 'label' => __('common.yes')),
-                        array('value' => false, 'label' => __('common.no')),
-                    ),
+                    'options' => [
+                        ['value' => true, 'label' => __('common.yes')],
+                        ['value' => false, 'label' => __('common.no')],
+                    ],
                     'value' => $settings['showReadabilityScore'] ?? true,
-                )));
+                ]));
 
         // Section avancée
         $settingsForm->addPage('advanced', __('plugins.generic.premiumHelper.settings.advanced'))
-            ->addGroup('advanced', array('label' => __('plugins.generic.premiumHelper.settings.advancedSettings')))
-                ->addField(new FieldOptions('enableAdvancedAnalysis', array(
+            ->addGroup('advanced', ['label' => __('plugins.generic.premiumHelper.settings.advancedSettings')])
+                ->addField(new FieldOptions('enableAdvancedAnalysis', [
                     'label' => __('plugins.generic.premiumHelper.settings.enableAdvancedAnalysis'),
                     'description' => __('plugins.generic.premiumHelper.settings.enableAdvancedAnalysis.description'),
                     'type' => 'radio',
-                    'options' => array(
-                        array('value' => true, 'label' => __('common.enable')),
-                        array('value' => false, 'label' => __('common.disable')),
-                    ),
+                    'options' => [
+                        ['value' => true, 'label' => __('common.enable')],
+                        ['value' => false, 'label' => __('common.disable')],
+                    ],
                     'value' => $settings['enableAdvancedAnalysis'] ?? false,
-                )))
-                ->addField(new FieldTextArea('customStopWords', array(
+                ]))
+                ->addField(new FieldTextArea('customStopWords', [
                     'label' => __('plugins.generic.premiumHelper.settings.customStopWords'),
                     'description' => __('plugins.generic.premiumHelper.settings.customStopWords.description'),
                     'value' => $settings['customStopWords'] ?? '',
                     'size' => 'large',
-                )))
-                ->addField(new FieldOptions('enableDebugMode', array(
+                ]))
+                ->addField(new FieldOptions('enableDebugMode', [
                     'label' => __('plugins.generic.premiumHelper.settings.enableDebugMode'),
                     'description' => __('plugins.generic.premiumHelper.settings.enableDebugMode.description'),
                     'type' => 'radio',
-                    'options' => array(
-                        array('value' => true, 'label' => __('common.enable')),
-                        array('value' => false, 'label' => __('common.disable')),
-                    ),
+                    'options' => [
+                        ['value' => true, 'label' => __('common.enable')],
+                        ['value' => false, 'label' => __('common.disable')],
+                    ],
                     'value' => $settings['enableDebugMode'] ?? false,
-                )));
+                ]));
 
-        // Assigner le formulaire au template
-        $templateMgr->assign('settingsForm', $settingsForm);
-        $templateMgr->assign('pluginName', $plugin->getName());
-        $templateMgr->assign('pluginBaseUrl', $request->getBaseUrl() . '/' . $plugin->getPluginPath());
+        // Assign template variables
+        $templateMgr->assign([
+            'settingsForm' => $settingsForm,
+            'pluginName' => $plugin->getName(),
+        ]);
 
+        // Display the template
         // Afficher le template
         return $templateMgr->display($plugin->getTemplateResource('settings.tpl'));
     }
 
     /**
-     * Sauvegarde les paramètres du plugin
-     * @param $args array Arguments
-     * @param $request Request La requête
+     * @copydoc Handler::authorize()
      */
-public function saveSettings($args, $request)
+    public function authorize($request, &$args, $roleAssignments)
     {
-        $plugin = self::$plugin;
+        $plugin = $this->plugin;
+        $templateMgr = TemplateManager::getManager($request);
+
+        // Vérifier les autorisations
+        $context = $request->getContext();
+        if (!$context) {
+            $request->redirect(null, 'index');
+        }
+        
+        // Call parent authorize to check standard permissions
+        return parent::authorize($request, $args, $roleAssignments);
+    }
+
+    /**
+     * Enregistre les paramètres
+     * @param array $args
+     * @param Request $request
+     * @return JSONMessage
+     */
+    public function saveSettings($args, $request)
+    {
+        $plugin = $this->plugin;
         $context = $request->getContext();
         $contextId = $context ? $context->getId() : 0;
 
@@ -185,7 +207,7 @@ public function saveSettings($args, $request)
         $this->validateCsrf();
 
         // Récupérer les données du formulaire
-        $settings = array(
+        $settings = [
             'enabled' => (bool) $request->getUserVar('enabled'),
             'minWordCount' => (int) $request->getUserVar('minWordCount'),
             'maxWordCount' => (int) $request->getUserVar('maxWordCount'),
@@ -197,7 +219,7 @@ public function saveSettings($args, $request)
             'enableAdvancedAnalysis' => (bool) $request->getUserVar('enableAdvancedAnalysis'),
             'customStopWords' => $request->getUserVar('customStopWords'),
             'enableDebugMode' => (bool) $request->getUserVar('enableDebugMode')
-        );
+        ];
 
         // Valider les données
         if ($settings['minWordCount'] < 10) {
@@ -240,15 +262,11 @@ public function saveSettings($args, $request)
     }
 
     /**
-     * Définit le plugin
-     * @param $plugin PremiumHelperPlugin
+     * Set the plugin.
+     * @param PremiumSubmissionHelperPlugin $plugin
      */
-    public static function setPlugin($plugin)
+    public function setPlugin($plugin)
     {
-        self::$plugin = $plugin;
+        $this->plugin = $plugin;
     }
 }
-
-// Register the handler with the application
-$plugin = PluginRegistry::getPlugin('generic', 'premiumsubmissionhelperplugin');
-\APP\plugins\generic\premiumSubmissionHelper\controllers\PremiumSubmissionHelperSettingsHandler::setPlugin($plugin);

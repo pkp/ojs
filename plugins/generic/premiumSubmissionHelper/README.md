@@ -3,6 +3,48 @@
 > **Propriétaire du plugin** : Saliou Ngom  
 > **Dépôt GitHub** : [github.com/Salioungom/ojs](https://github.com/Salioungom/ojs)
 
+## 📁 Structure du projet
+
+```
+premiumSubmissionHelper/
+├── classes/                    # Classes principales du plugin
+│   ├── PremiumSubmissionHelperLog.php        # Modèle pour la journalisation
+│   └── PremiumSubmissionHelperLogDAO.php     # Accès aux données de journalisation
+├── js/                        # Fichiers JavaScript
+│   └── premiumSubmissionHelper.js    # Scripts côté client
+├── locale/                    # Fichiers de traduction
+│   ├── en_US/                 # Traductions anglaises
+│   └── fr_FR/                 # Traductions françaises
+├── pages/                     # Gestionnaires de pages
+│   └── APIHandler.php         # Gestionnaire des appels API
+├── templates/                 # Modèles de vue
+│   └── premiumSubmissionHelper.tpl  # Template principal
+├── vendor/                    # Dépendances externes
+├── .gitignore                 # Fichiers ignorés par Git
+├── LICENSE                   # Licence du plugin
+├── PremiumSubmissionHelperPlugin.php  # Point d'entrée principal
+└── version.xml               # Version du plugin
+```
+
+## 🔄 Interactions entre les composants
+
+1. **Flux d'analyse d'un résumé**
+   - L'utilisateur clique sur "Analyser le résumé" dans l'interface
+   - `premiumSubmissionHelper.js` capture l'événement et envoie une requête AJAX
+   - `APIHandler.php` reçoit la requête, valide les données et les permissions
+   - `PremiumSubmissionHelperLogDAO` enregistre l'événement dans la base de données
+   - Les résultats sont renvoyés et affichés à l'utilisateur
+
+2. **Sécurité**
+   - Toutes les requêtes passent par le système d'autorisation d'OJS
+   - Protection CSRF intégrée
+   - Validation stricte des entrées
+   - Journalisation des événements importants
+
+3. **Internationalisation**
+   - Les textes sont extraits dans des fichiers de traduction
+   - Support multilingue via le système de localisation d'OJS
+
 ## Description
 
 Ce plugin pour Open Journal Systems (OJS) ajoute une fonctionnalité d'analyse avancée des résumés pour les utilisateurs premium. Il permet d'analyser le contenu des résumés soumis et fournit des métriques utiles comme le comptage de mots, le nombre de phrases, un score de lisibilité et des suggestions de mots-clés.
@@ -20,18 +62,18 @@ Ce plugin pour Open Journal Systems (OJS) ajoute une fonctionnalité d'analyse a
 ## Prérequis
 
 - OJS version 3.4.0 ou supérieure
-- PHP 8.2 ou supérieur
+- PHP 8.3 ou supérieur
 - Extensions PHP requises : json, mbstring, ctype
 
 ## Installation
 
 1. Téléchargez la dernière version du plugin
 2. Décompressez l'archive dans le répertoire `plugins/generic/` de votre installation OJS
-3. Renommez le dossier en `premiumHelper`
+3. Renommez le dossier en `premiumSubmissionHelper`
 4. Assurez-vous que les permissions sont correctement définies :
    ```bash
-   chmod -R 755 plugins/generic/premiumHelper
-   chown -R www-data:www-data plugins/generic/premiumHelper
+   chmod -R 755 plugins/generic/premiumSubmissionHelper
+   chown -R www-data:www-data plugins/generic/premiumSubmissionHelper
    ```
 5. Connectez-vous à l'interface d'administration d'OJS
 6. Allez dans Paramètres > Site Web > Plugins
@@ -54,17 +96,80 @@ Ce plugin pour Open Journal Systems (OJS) ajoute une fonctionnalité d'analyse a
 4. Cliquez sur le bouton pour lancer l'analyse
 5. Les résultats s'afficheront sous le bouton
 
-## Personnalisation
+## ⚙️ Configuration avancée
 
-### Styles
+### Variables d'environnement
+
+Le plugin supporte les variables d'environnement suivantes :
+
+- `PREMIUM_HELPER_MAX_REQUESTS`: Nombre maximum de requêtes par minute (défaut: 100)
+- `PREMIUM_HELPER_DEBUG`: Active le mode débogage (défaut: false)
+- `PREMIUM_HELPER_LOG_LEVEL`: Niveau de journalisation (debug, info, warning, error)
+
+### Fichier de configuration
+
+Créez un fichier `config.inc.php` dans le dossier du plugin pour surcharger les paramètres par défaut :
+
+```php
+<?php
+return [
+    'max_requests_per_minute' => 150,
+    'enable_rate_limiting' => true,
+    'debug_mode' => false,
+    'log_level' => 'info'
+];
+```
+
+### Personnalisation
+
+#### Styles
 
 Vous pouvez personnaliser l'apparence en modifiant le fichier CSS :
-`plugins/generic/premiumHelper/styles/premiumHelper.css`
+`plugins/generic/premiumSubmissionHelper/css/premiumSubmissionHelper.css`
 
-### Traductions
+#### Traductions
 
 Les fichiers de traduction se trouvent dans :
-`plugins/generic/premiumHelper/locale/{lang_ISO}/locale.xml`
+`plugins/generic/premiumSubmissionHelper/locale/{lang_ISO}/LC_MESSAGES/locale.po`
+
+Pour ajouter une nouvelle langue :
+1. Créez un nouveau dossier avec le code de langue (ex: `es_ES`)
+2. Copiez la structure du dossier `en_US`
+3. Traduisez les chaînes dans le fichier `locale.po`
+4. Compilez le fichier .po en .mo avec `msgfmt`
+
+## 🐛 Débogage
+
+### Activer les logs
+
+1. Modifiez le fichier `config.inc.php` :
+   ```php
+   return [
+       'debug_mode' => true,
+       'log_level' => 'debug'
+   ];
+   ```
+
+2. Vérifiez les logs dans :
+   - Logs PHP : `/var/log/apache2/error.log` ou équivalent
+   - Logs du plugin : `data/logs/premiumSubmissionHelper.log`
+
+### Erreurs courantes
+
+#### Le bouton d'analyse n'apparaît pas
+- Vérifiez que l'utilisateur a les droits premium
+- Vérifiez la console JavaScript pour les erreurs
+- Vérifiez que le fichier JavaScript est bien chargé
+
+#### L'analyse échoue avec une erreur 403
+- Vérifiez la validité du jeton CSRF
+- Assurez-vous que l'utilisateur est toujours connecté
+- Vérifiez les logs pour plus de détails
+
+#### Problèmes de performance
+- Augmentez la limite de requêtes/min si nécessaire
+- Vérifiez que le cache est correctement configuré
+- Surveillez l'utilisation mémoire du serveur
 
 ## Dépannage
 

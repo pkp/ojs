@@ -1,36 +1,34 @@
 <?php
 
+declare(strict_types=1);
+
 namespace APP\plugins\generic\premiumSubmissionHelper;
 
-/**
- * @file plugins/generic/premiumSubmissionHelper/PremiumSubmissionHelperPlugin.inc.php
- *
- * Copyright (c) 2025 Université de Montréal
- * Copyright (c) 2025 Saliou Ngom
- * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
- *
- * @class PremiumSubmissionHelperPlugin
- * @ingroup plugins_generic_premiumSubmissionHelper
- *
- * @brief Plugin d'aide à la rédaction pour les utilisateurs premium
- *
- * Ce plugin offre des fonctionnalités avancées d'analyse de texte pour les utilisateurs premium.
- * Il permet d'analyser les résumés en temps réel et de fournir des suggestions d'amélioration.
- *
- * Fonctionnalités principales :
- * - Analyse en temps réel des résumés
- * - Comptage des mots et des phrases
- * - Calcul d'un score de lisibilité
- * - Extraction automatique de mots-clés pertinents
- * - Interface utilisateur intégrée au formulaire de soumission OJS
- * - Support multilingue (français par défaut)
- * - Restriction aux utilisateurs premium
- *
- * @author Saliou Ngom <saliou.ngom@umontreal.ca>
- * @github https://github.com/Salioungom/ojs
- */
+// PKP classes
+use PKP\core\JSONMessage;
+use PKP\core\PKPRequest;
+use PKP\core\PKPString;
+use PKP\notification\NotificationManager;
+use PKP\plugins\GenericPlugin;
+use PKP\security\Role;
+use PKP\security\authorization\PolicySet;
+use PKP\security\authorization\RoleBasedHandlerOperationPolicy;
+use PKP\security\authorization\UserRequiredPolicy;
+use PKP\security\authorization\UserRolesRequiredPolicy;
 
-import('lib.pkp.classes.plugins.GenericPlugin');
+// Application classes
+use APP\core\Application;
+use APP\facades\Repo;
+use APP\notification\form\ValidationForm;
+
+// Plugin classes
+use APP\plugins\generic\premiumSubmissionHelper\classes\PremiumSubmissionHelperLog;
+use APP\plugins\generic\premiumSubmissionHelper\classes\PremiumSubmissionHelperLogDAO;
+use APP\plugins\generic\premiumSubmissionHelper\classes\form\SettingsForm;
+use APP\plugins\generic\premiumSubmissionHelper\controllers\PremiumSubmissionHelperSettingsHandler;
+use APP\plugins\generic\premiumSubmissionHelper\controllers\grid\settings\PremiumSubmissionHelperSettingsGridHandler;
+use APP\plugins\generic\premiumSubmissionHelper\scheduledTasks\PremiumSubmissionHelperScheduledTask;
+use APP\plugins\generic\premiumSubmissionHelper\upgrade\PremiumSubmissionHelperUpgrade;
 
 /**
  * Classe principale du plugin Premium Helper
@@ -40,7 +38,10 @@ import('lib.pkp.classes.plugins.GenericPlugin');
  */
 class PremiumSubmissionHelperPlugin extends GenericPlugin
 {
-    /** @var array Rôles autorisés à utiliser la fonctionnalité premium */
+    /**
+     * Rôles autorisés à utiliser la fonctionnalité premium
+     * @var array<int>
+     */
     protected const ALLOWED_ROLES = [
         ROLE_ID_MANAGER,
         ROLE_ID_SUB_EDITOR,
@@ -49,8 +50,12 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
 
     /**
      * @copydoc Plugin::register()
+     * @param string $category
+     * @param string $path
+     * @param ?int $mainContextId
+     * @return bool
      */
-    public function register($category, $path, $mainContextId = null)
+    public function register(string $category, string $path, ?int $mainContextId = null): bool
     {
         $success = parent::register($category, $path, $mainContextId);
 
@@ -68,16 +73,18 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
 
     /**
      * @copydoc Plugin::getDisplayName()
+     * @return string Nom d'affichage du plugin
      */
-    public function getDisplayName()
+    public function getDisplayName(): string
     {
         return __('plugins.generic.premiumHelper.displayName');
     }
 
     /**
      * @copydoc Plugin::getDescription()
+     * @return string Description du plugin
      */
-    public function getDescription()
+    public function getDescription(): string
     {
         return __('plugins.generic.premiumHelper.description');
     }
@@ -88,7 +95,13 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
      * @param $args array Les arguments du hook
      * @return bool
      */
-    public function injectAnalysisButton($hookName, $args)
+    /**
+     * Injecte le bouton d'analyse dans le formulaire de soumission
+     * @param string $hookName Le nom du hook
+     * @param array $args Les arguments du hook
+     * @return bool
+     */
+    public function injectAnalysisButton(string $hookName, array $args): bool
     {
         $templateMgr = $args[0];
         $template = $args[1];

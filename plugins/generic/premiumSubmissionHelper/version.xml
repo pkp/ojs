@@ -6,8 +6,8 @@
     <code>premiumSubmissionHelper</code>
     <name>Premium Submission Helper</name>
     <description>Plugin d'aide à la soumission pour utilisateurs premium</description>
-    <release>1.0.0</release>
-    <date>2025-08-24</date>
+    <release>1.1.0</release>
+    <date>2025-08-25</date>
     <install>
         <mkdir>
             <path>templates</path>
@@ -18,6 +18,7 @@
         </mkdir>
     </install>
     <lazy-load>0</lazy-load>
+    <php-version>8.3.0</php-version>
     <sitewide>0</sitewide>
     <install>
         <permit>1</permit>

@@ -1,12 +1,11 @@
 # French translations for Premium Submission Helper plugin.
-# Copyright (C) 2025 Université de Montréal
 # This file is distributed under the same license as the Premium Submission Helper package.
 msgid ""
 msgstr ""
-"Project-Id-Version: premiumSubmissionHelper 1.0.0\n"
+"Project-Id-Version: premiumSubmissionHelper 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-24 04:43+0000\n"
-"PO-Revision-Date: 2025-08-24 04:43+0000\n"
+"POT-Creation-Date: 2025-08-25 13:59:10+0000\n"
+"PO-Revision-Date: 2025-08-25 13:59:10+0000\n"
 "Last-Translator: Saliou Ngom <saliou.ngom@umontreal.ca>\n"
 "Language: fr\n"
 "Language-Team: French\n"
@@ -15,11 +14,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: PremiumSubmissionHelperPlugin.inc.php:50
+#: PremiumSubmissionHelperPlugin.php:50
 msgid "plugins.generic.premiumSubmissionHelper.displayName"
 msgstr "Aide à la soumission Premium"
 
-#: PremiumSubmissionHelperPlugin.inc.php:58
+#: PremiumSubmissionHelperPlugin.php:58
 msgid "plugins.generic.premiumSubmissionHelper.description"
 msgstr "Fournit des outils d'analyse avancée pour les utilisateurs premium"
 
@@ -47,6 +46,39 @@ msgstr "L'analyse de résumé n'est pas disponible pour le moment."
 #: pages/APIHandler.inc.php:97
 msgid "plugins.generic.premiumSubmissionHelper.error.abstractRequired"
 msgstr "Veuillez fournir un résumé à analyser."
+
+# Erreurs de validation
+msgid "plugins.generic.premiumSubmissionHelper.error.invalidJson"
+msgstr "Format JSON invalide. Veuillez vérifier votre requête."
+
+msgid "plugins.generic.premiumSubmissionHelper.error.invalidAbstract"
+msgstr "Le résumé fourni est invalide ou trop court (minimum 20 caractères)."
+
+msgid "plugins.generic.premiumSubmissionHelper.error.abstractTooLong"
+msgstr "Le résumé est trop long. Maximum {$maxLength} caractères, actuellement {$current}."
+
+# Erreurs de sécurité
+msgid "plugins.generic.premiumHelper.error.rateLimitExceeded"
+msgstr "Trop de requêtes. Veuillez réessayer dans une minute."
+
+msgid "plugins.generic.premiumHelper.error.analysisFailed"
+msgstr "Une erreur est survenue lors de l'analyse du résumé."
+
+# Messages de journalisation
+msgid "plugins.generic.premiumHelper.log.csrfFailed"
+msgstr "Échec de la validation CSRF"
+
+msgid "plugins.generic.premiumHelper.log.rateLimitExceeded"
+msgstr "Limite de débit dépassée pour l'utilisateur"
+
+msgid "plugins.generic.premiumHelper.log.analysisAttempt"
+msgstr "Tentative d'analyse de résumé"
+
+msgid "plugins.generic.premiumHelper.log.analysisSuccess"
+msgstr "Analyse de résumé réussie"
+
+msgid "plugins.generic.premiumHelper.log.analysisError"
+msgstr "Échec de l'analyse de résumé"
 
 #: pages/APIHandler.inc.php:105
 msgid "plugins.generic.premiumSubmissionHelper.error.abstractEmpty"

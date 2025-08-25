@@ -1,8 +1,5 @@
 {* @file plugins/generic/premiumSubmissionHelper/templates/premiumSubmissionHelper.tpl
  *
- * Copyright (c) 2024 Université de Montréal
- * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
- *
  * @brief Template pour l'interface d'analyse de résumé
  *}
 

@@ -1,30 +1,47 @@
 <?php
 
-namespace APP\plugins\generic\premiumSubmissionHelper\pages;
-
-use PKP\handler\APIHandler;
-use PKP\core\JSONMessage;
-use PKP\db\DAORegistry;
-use PKP\security\authorization\ContextRequiredPolicy;
-use PKP\security\Role;
-use PKP\plugins\PluginRegistry;
-
 /**
  * @file plugins/generic/premiumSubmissionHelper/pages/APIHandler.inc.php
  *
- * Copyright (c) 2025 Université de Montréal
- * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
- *
  * @class PremiumSubmissionHelperAPIHandler
- * @ingroup plugins_generic_premiumSubmissionHelper
+ * @ingroup pages_api
  *
  * @brief Gestionnaire de l'API pour l'analyse de résumé
  *
  * Ce fichier contient la logique de traitement des requêtes d'analyse de texte.
  * Il gère la validation des entrées, l'analyse du texte et la génération des réponses JSON.
+ *
+ * Ce gestionnaire prend en charge :
+ * - La validation des données d'entrée
+ * - L'autorisation des utilisateurs
+ * - La limitation du taux de requêtes
+ * - La journalisation des activités
  */
 
-import('lib.pkp.classes.handler.PKPHandler');
+declare(strict_types=1);
+
+namespace APP\plugins\generic\premiumSubmissionHelper\pages;
+
+// PKP classes
+use PKP\core\JSONMessage;
+use PKP\db\DAORegistry;
+use PKP\handler\APIHandler;
+use PKP\security\authorization\ContextRequiredPolicy;
+use PKP\security\Role;
+
+// External classes
+use Exception;
+use PKP\plugins\PluginRegistry;
+use PKP\core\PKPRequest;
+use PKP\security\authorization\UserRolesRequiredPolicy;
+use PKP\security\authorization\PolicySet;
+use PKP\security\authorization\RoleBasedHandlerOperationPolicy;
+use PKP\session\SessionManager;
+use PKP\core\PKPString;
+use PKP\core\Registry;
+use APP\plugins\generic\premiumSubmissionHelper\PremiumSubmissionHelperPlugin;
+use APP\plugins\generic\premiumSubmissionHelper\classes\PremiumSubmissionHelperLog;
+use PKP\security\authorization\UserRequiredPolicy;
 
 /**
  * Gestionnaire des requêtes API pour l'analyse de texte
@@ -32,14 +49,14 @@ import('lib.pkp.classes.handler.PKPHandler');
  * Cette classe traite les requêtes d'analyse, valide les entrées,
  * et renvoie des métriques détaillées sur le texte fourni.
  */
-class PremiumSubmissionHelperAPIHandler extends PKPHandler
+class PremiumSubmissionHelperAPIHandler extends APIHandler
 {
-    /** @var \APP\plugins\generic\premiumSubmissionHelper\PremiumSubmissionHelperPlugin Le plugin */
+    /** @var PremiumSubmissionHelperPlugin */
     protected $plugin;
 
     /**
-     * Constructeur
-     * @param PremiumHelperPlugin $plugin Instance du plugin
+     * Constructor
+     * @param PremiumSubmissionHelperPlugin $plugin
      */
     public function __construct($plugin)
     {
@@ -56,51 +73,58 @@ class PremiumSubmissionHelperAPIHandler extends PKPHandler
     /**
      * @copydoc PKPHandler::authorize()
      */
+    /**
+     * @copydoc PKPHandler::authorize()
+     */
     public function authorize($request, &$args, $roleAssignments)
     {
-        import('lib.pkp.classes.security.authorization.ContextRequiredPolicy');
+        // Vérification de la session et du contexte
         $this->addPolicy(new ContextRequiredPolicy($request));
-
-        // Vérifier que l'utilisateur est connecté et a un rôle autorisé
-        $context = $request->getContext();
-        $user = $request->getUser();
-
-        if (!$user || !$context) {
+        $this->addPolicy(new UserRequiredPolicy($request));
+        
+        // Configuration des rôles autorisés
+        $this->addPolicy(new UserRolesRequiredPolicy($request), true);
+        
+        // Vérification des rôles spécifiques
+        $rolePolicy = new PolicySet(PolicySet::COMBINING_PERMIT_OVERRIDES);
+        
+        foreach ([Role::ROLE_ID_SITE_ADMIN, Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR] as $roleId) {
+            $rolePolicy->addPolicy(new RoleBasedHandlerOperationPolicy($request, $roleId, $roleAssignments));
+        }
+        
+        $this->addPolicy($rolePolicy);
+        
+        // Vérification CSRF pour les requêtes POST
+        if ($request->isPost() && !SessionManager::isCsrfValid()) {
+            $this->logSecurityEvent($request, 'CSRF_VALIDATION_FAILED');
             return $this->jsonResponse([
                 'success' => false,
-                'message' => __('user.authorization.userRequired')
+                'message' => __('form.csrfInvalid')
             ], 403);
         }
-
-        // Vérifier que l'utilisateur a un rôle autorisé
-        if (!$this->plugin->isUserPremium($user, $context)) {
+        
+        // Vérification du taux de requêtes
+        if (!$this->checkRateLimit($request)) {
+            $this->logSecurityEvent($request, 'RATE_LIMIT_EXCEEDED');
             return $this->jsonResponse([
                 'success' => false,
-                'message' => __('plugins.generic.premiumHelper.premiumRequired')
-            ], 403);
+                'message' => __('plugins.generic.premiumHelper.error.rateLimitExceeded')
+            ], 429);
         }
-
+        
         return parent::authorize($request, $args, $roleAssignments);
     }
 
     /**
-     * Gère la requête d'analyse de résumé
-     *
-     * @param array $args Arguments de la requête
-     * @param PKPRequest $request Requête actuelle
-     */
-    /**
-     * Traite une requête d'analyse de résumé
-     *
-     * Point d'entrée principal pour l'API d'analyse. Valide la requête,
-     * effectue l'analyse et renvoie les résultats au format JSON.
-     *
+     * Traite une requête d'analyse de résumé avec validation renforcée
+     * 
      * @param array $args Arguments de la requête
      * @param PKPRequest $request Objet de requête OJS
-     * @return JSONMessage Réponse JSON contenant les résultats ou une erreur
+     * @return JSONMessage Réponse JSON
      */
     public function analyze($args, $request)
     {
+        // Vérification de la méthode HTTP
         if (!$request->isPost()) {
             return $this->jsonResponse([
                 'success' => false,
@@ -108,57 +132,190 @@ class PremiumSubmissionHelperAPIHandler extends PKPHandler
             ], 405);
         }
 
-        if (!SessionManager::isCsrfValid()) {
-            return $this->jsonResponse([
-                'success' => false,
-                'message' => __('form.csrfInvalid')
-            ], 400);
-        }
-
-        $abstract = $request->getUserVar('abstract');
-        if (empty($abstract)) {
-            return $this->jsonResponse([
-                'success' => false,
-                'message' => __('plugins.generic.premiumHelper.error.emptyAbstract')
-            ], 400);
-        }
-
-        // Effectuer l'analyse
-        try {
-            $analysis = $this->analyzeAbstract($abstract);
-
-            return $this->jsonResponse([
-                'success' => true,
-                'data' => $analysis
-            ]);
-        } catch (Exception $e) {
-            error_log('Erreur lors de l\'analyse du résumé: ' . $e->getMessage());
-
-            return $this->jsonResponse([
-                'success' => false,
-                'message' => __('plugins.generic.premiumHelper.error.analysisFailed')
-            ], 500);
-        }
-
-        // Récupérer les données JSON
+        // Récupération et validation des données
         $json = file_get_contents('php://input');
         $data = json_decode($json, true);
-
-        // Valider les données
-        if (!isset($data['abstract']) || !is_string($data['abstract'])) {
+        
+        if (json_last_error() !== JSON_ERROR_NONE) {
             return $this->jsonResponse([
                 'success' => false,
-                'message' => __('plugins.generic.premiumHelper.error.abstractRequired')
+                'message' => __('plugins.generic.premiumHelper.error.invalidJson')
             ], 400);
         }
 
-        $abstract = trim($data['abstract']);
-
-        if (empty($abstract)) {
+        // Validation du résumé
+        $abstract = $this->validateAndSanitizeAbstract($data['abstract'] ?? '');
+        if ($abstract === null) {
             return $this->jsonResponse([
                 'success' => false,
-                'message' => __('plugins.generic.premiumHelper.error.abstractEmpty')
+                'message' => __('plugins.generic.premiumHelper.error.invalidAbstract')
             ], 400);
+        }
+        
+        // Vérification de la longueur du résumé
+        $maxLength = (int) $this->plugin->getSetting(
+            $request->getContext()?->getId() ?? 0, 
+            'maxAbstractLength'
+        ) ?: 10000; // Valeur par défaut de 10 000 caractères
+        
+        if (mb_strlen($abstract) > $maxLength) {
+            return $this->jsonResponse([
+                'success' => false,
+                'message' => __('plugins.generic.premiumHelper.error.abstractTooLong', [
+                    'max' => $maxLength,
+                    'current' => mb_strlen($abstract)
+                ])
+            ], 400);
+        }
+
+        // Journalisation de la tentative d'analyse
+        $this->logSecurityEvent($request, 'ANALYSIS_ATTEMPT', [
+            'abstract_length' => mb_strlen($abstract),
+            'context_id' => $request->getContext()?->getId()
+        ]);
+
+        // Effectuer l'analyse avec gestion des erreurs
+        try {
+            $startTime = microtime(true);
+            $analysis = $this->analyzeAbstract($abstract);
+            $processingTime = microtime(true) - $startTime;
+
+            // Journalisation de l'analyse réussie
+            $this->logSecurityEvent($request, 'ANALYSIS_SUCCESS', [
+                'processing_time' => round($processingTime, 3),
+                'word_count' => $analysis['word_count'] ?? 0
+            ]);
+
+            // Réponse avec en-têtes de sécurité
+            $response = $this->jsonResponse([
+                'success' => true,
+                'data' => $analysis,
+                'meta' => [
+                    'processing_time' => round($processingTime, 3),
+                    'api_version' => '1.0.0'
+                ]
+            ]);
+            
+            // Ajout des en-têtes de sécurité
+            $response->setHeader('X-Content-Type-Options', 'nosniff');
+            $response->setHeader('X-Frame-Options', 'DENY');
+            $response->setHeader('X-XSS-Protection', '1; mode=block');
+            $response->setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+            
+            return $response;
+            
+        } catch (\Exception $e) {
+            // Journalisation de l'erreur
+            $this->logSecurityEvent($request, 'ANALYSIS_ERROR', [
+                'error' => $e->getMessage(),
+                'trace' => $e->getTraceAsString()
+            ]);
+            
+            // Ne pas renvoyer de détails sensibles en production
+            $errorMessage = APP_DEBUG 
+                ? $e->getMessage() 
+                : __('plugins.generic.premiumHelper.error.analysisFailed');
+                
+            return $this->jsonResponse([
+                'success' => false,
+                'message' => $errorMessage
+            ], 500);
+        }
+    }
+
+    /**
+     * Valide et nettoie le résumé
+     * 
+     * @param mixed $abstract Résumé à valider
+     * @return string|null Résumé nettoyé ou null si invalide
+     */
+    protected function validateAndSanitizeAbstract($abstract): ?string
+    {
+        if (!is_string($abstract) || empty(trim($abstract))) {
+            return null;
+        }
+        
+        // Nettoyage du texte
+        $abstract = trim($abstract);
+        $abstract = PKPString::stripUnsafeHtml($abstract);
+        
+        // Vérification de la longueur minimale
+        if (mb_strlen($abstract) < 20) {
+            return null;
+        }
+        
+        return $abstract;
+    }
+    
+    /**
+     * Vérifie et applique une limite de débit
+     * 
+     * @param PKPRequest $request
+     * @return bool True si la requête est autorisée
+     */
+    protected function checkRateLimit(PKPRequest $request): bool
+    {
+        $userId = $request->getUser()?->getId();
+        $ip = $request->getRemoteAddr();
+        $cache = Registry::get('cache', true);
+        
+        if (!$cache) {
+            return true; // Désactiver la limitation si le cache n'est pas disponible
+        }
+        
+        $cacheKey = "rate_limit_{$userId}_{$ip}";
+        $requests = (int) $cache->get($cacheKey);
+        
+        // Limite: 100 requêtes par minute par utilisateur/IP
+        if ($requests > 100) {
+            return false;
+        }
+        
+        $cache->set($cacheKey, $requests + 1, 60); // Expire après 60 secondes
+        return true;
+    }
+    
+    /**
+     * Journalise les événements de sécurité
+     * 
+     * @param PKPRequest $request
+     * @param string $eventType Type d'événement
+     * @param array $data Données supplémentaires
+     */
+    protected function logSecurityEvent(PKPRequest $request, string $eventType, array $data = []): void
+    {
+        $user = $request->getUser();
+        $context = $request->getContext();
+        
+        PremiumSubmissionHelperLog::logEvent(
+            $context ? $context->getId() : 0,
+            $user ? $user->getId() : null,
+            null,
+            'SECURITY_' . $eventType,
+            'Security event: ' . $eventType,
+            array_merge($data, [
+                'ip' => $request->getRemoteAddr(),
+                'user_agent' => $request->getUserAgent(),
+                'request_uri' => $request->getRequestUrl()
+            ])
+        );
+    }
+
+
+    /**
+     * Analyse le résumé et retourne des métriques utiles
+     * @param string $abstract Le résumé à analyser
+     * @return array Les résultats de l'analyse
+     */
+    protected function analyzeAbstract($abstract): array
+    {
+        $settings = $this->plugin->getSettings();
+        
+        if (empty($abstract)) {
+            return [
+                'success' => false,
+                'message' => __('plugins.generic.premiumHelper.error.abstractEmpty')
+            ];
         }
 
         // Vérifier la longueur du résumé
@@ -300,44 +457,6 @@ class PremiumSubmissionHelperAPIHandler extends PKPHandler
     }
 
     /**
-     * Analyse le résumé et retourne des métriques utiles
-     * @param string $abstract Le résumé à analyser
-     * @return array Les résultats de l'analyse
-     */
-    protected function analyzeAbstract($abstract)
-    {
-        // Nettoyer le texte
-        $abstract = trim(strip_tags($abstract));
-
-        // Compter les mots (séparés par des espaces, des tabulations ou des retours à la ligne)
-        $wordCount = count(preg_split('/\s+/', $abstract));
-
-        // Compter les phrases (séparées par . ! ? suivi d'un espace ou d'une majuscule)
-        $sentenceCount = preg_match_all('/[.!?]\s+[A-Z]|[.!?]$/u', $abstract) + 1;
-
-        // Calculer la longueur moyenne des phrases
-        $avgSentenceLength = $sentenceCount > 0 ? $wordCount / $sentenceCount : 0;
-
-        // Calculer un score de lisibilité (formule simplifiée de Flesch-Kincaid)
-        $readabilityScore = 206.835 - 1.015 * ($wordCount / max(1, $sentenceCount)) - 84.6 * $this->countSyllablesInText($abstract) / max(1, $wordCount);
-        $readabilityScore = max(0, min(100, round($readabilityScore, 1)));
-
-        // Extraire les mots-clés (mots les plus fréquents, en excluant les mots vides)
-        $keywords = $this->extractKeywords($abstract);
-
-        // Retourner les résultats
-        return [
-            'wordCount' => $wordCount,
-            'sentenceCount' => $sentenceCount,
-            'avgSentenceLength' => round($avgSentenceLength, 1),
-            'readabilityScore' => $readabilityScore,
-            'readabilityLevel' => $this->getReadabilityLevel($readabilityScore),
-            'keywords' => array_slice($keywords, 0, 10), // Limiter à 10 mots-clés
-            'analysisDate' => date('Y-m-d H:i:s')
-        ];
-    }
-
-
     /**
      * Extrait les mots-clés d'un texte
      * @param string $text Le texte à analyser

@@ -1,33 +1,33 @@
 <?php
 
+declare(strict_types=1);
+
 namespace APP\plugins\generic\premiumSubmissionHelper\upgrade;
 
+// PKP classes
+use PKP\db\DAORegistry;
 use PKP\db\SchemaMigration;
 use PKP\db\XMLDAO;
-use PKP\db\DAORegistry;
+use PKP\plugins\Plugin;
 
 /**
  * @file upgrade/PremiumSubmissionHelperUpgrade.inc.php
  *
- * Copyright (c) 2024 Université de Montréal
- * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
- *
  * @class PremiumSubmissionHelperUpgrade
- * @ingroup plugins_generic_premiumSubmissionHelper
+ * @ingroup classes_plugins_generic_premiumSubmissionHelper
  *
  * @brief Gère les mises à jour du schéma de la base de données
  */
-
 class PremiumSubmissionHelperUpgrade
 {
     /**
-     * Exécute les mises à jour nécessaires
+     * Execute necessary upgrade operations
      *
-     * @param string $context Le contexte de la mise à jour
-     * @param string $plugin Le plugin concerné
-     * @param string $fromVersion La version actuelle
-     * @param string $toVersion La version cible
-     * @return bool True si la mise à jour a réussi
+     * @param string $context Update context
+     * @param Plugin $plugin The plugin being upgraded
+     * @param string $fromVersion Current version
+     * @param string $toVersion Target version
+     * @return bool True on success
      */
     public static function upgrade($context, $plugin, $fromVersion, $toVersion)
     {

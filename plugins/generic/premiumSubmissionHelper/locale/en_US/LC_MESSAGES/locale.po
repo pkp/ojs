@@ -1,12 +1,11 @@
 # English translations for Premium Submission Helper plugin.
-# Copyright (C) 2025 Université de Montréal
 # This file is distributed under the same license as the Premium Submission Helper package.
 msgid ""
 msgstr ""
-"Project-Id-Version: premiumSubmissionHelper 1.0.0\n"
+"Project-Id-Version: premiumSubmissionHelper 1.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-24 04:43+0000\n"
-"PO-Revision-Date: 2025-08-24 04:43+0000\n"
+"POT-Creation-Date: 2025-08-25 13:59:10+0000\n"
+"PO-Revision-Date: 2025-08-25 13:59:10+0000\n"
 "Last-Translator: Saliou Ngom <saliou.ngom@umontreal.ca>\n"
 "Language: en\n"
 "Language-Team: English\n"
@@ -15,11 +14,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: PremiumSubmissionHelperPlugin.inc.php:50
+#: PremiumSubmissionHelperPlugin.php:50
 msgid "plugins.generic.premiumSubmissionHelper.displayName"
 msgstr "Premium Submission Helper"
 
-#: PremiumSubmissionHelperPlugin.inc.php:58
+#: PremiumSubmissionHelperPlugin.php:58
 msgid "plugins.generic.premiumSubmissionHelper.description"
 msgstr "Provides advanced analysis tools for premium users"
 

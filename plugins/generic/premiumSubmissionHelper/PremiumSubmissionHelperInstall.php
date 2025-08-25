@@ -1,25 +1,24 @@
 <?php
 
+declare(strict_types=1);
+
 namespace APP\plugins\generic\premiumSubmissionHelper;
 
-use PKP\plugins\Install;
-use PKP\db\SchemaDAO;
+// PKP classes
 use PKP\db\DAORegistry;
+use PKP\db\DAOResultFactory;
+use PKP\db\SchemaDAO;
+use PKP\db\XMLDAO;
+use PKP\plugins\Install;
 
 /**
  * @file PremiumSubmissionHelperInstall.inc.php
- *
- * Copyright (c) 2024 Université de Montréal
- * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class PremiumSubmissionHelperInstall
  * @ingroup plugins_generic_premiumSubmissionHelper
  *
  * @brief Gère l'installation et la désinstallation du plugin
  */
-
-import('lib.pkp.classes.plugins.Install');
-
 class PremiumSubmissionHelperInstall extends Install
 {
     /**
@@ -91,6 +90,24 @@ class PremiumSubmissionHelperInstall extends Install
     public function getInstallSchema()
     {
         return []; // Le schéma est géré par la classe Upgrade
+    }
+
+    /**
+     * Installe les modèles d'emails
+     * @return bool
+     */
+    protected function installEmailTemplates()
+    {
+        return [];
+    }
+
+    /**
+     * Installe les tables nécessaires
+     * @return bool
+     */
+    protected function installSQL()
+    {
+        return [];
     }
 
     /**

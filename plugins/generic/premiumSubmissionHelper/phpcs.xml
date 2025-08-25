@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<ruleset name="PremiumSubmissionHelper">
+    <description>PHP_CodeSniffer rules for Premium Submission Helper plugin</description>
+    
+    <!-- Base directory for the project -->
+    <file>.</file>
+    
+    <!-- Exclude directories -->
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+    <exclude-pattern>*/lib/*</exclude-pattern>
+    <exclude-pattern>*/templates_c/*</exclude-pattern>
+    
+    <!-- Show progress -->
+    <arg value="p"/>
+    
+    <!-- Show sniff codes in all reports -->
+    <arg value="s"/>
+    
+    <!-- Include the whole PSR-12 standard -->
+    <rule ref="PSR12">
+        <exclude name="PSR12.Files.FileHeader.SpacingAfterBlock" />
+        <exclude name="PSR12.Files.ImportStatement.LeadingSlash" />
+    </rule>
+    
+    <!-- Line length -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="120"/>
+            <property name="absoluteLineLimit" value="120"/>
+        </properties>
+    </rule>
+    
+    <!-- PHP version -->
+    <config name="testVersion" value="8.3-"/>
+    
+    <!-- Error levels -->
+    <arg name="error-severity" value="1"/>
+    <arg name="warning-severity" value="8"/>
+    
+    <!-- Show colors in output -->
+    <arg name="colors"/>
+    
+    <!-- Show sniff and source of warnings -->
+    <arg value="v"/>
+    
+    <!-- Report width -->
+    <arg name="report-width" value="120"/>
+    
+    <!-- Ignore warnings in the following -->
+    <rule ref="Generic.PHP.DisallowShortOpenTag">
+        <severity>0</severity>
+    </rule>
+    
+    <!-- Ignore line endings -->
+    <rule ref="Generic.Files.LineEndings">
+        <properties>
+            <property name="eolChar" value="\n"/>
+        </properties>
+    </rule>
+</ruleset>

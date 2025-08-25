@@ -1,41 +1,40 @@
 <?php
 
+declare(strict_types=1);
+
 namespace APP\plugins\generic\premiumSubmissionHelper\classes\form;
 
+// PKP classes
 use PKP\form\Form;
-use PKP\form\validation\FormValidatorPost;
 use PKP\form\validation\FormValidatorCSRF;
+use PKP\form\validation\FormValidatorPost;
 use PKP\notification\NotificationManager;
+
+// Application classes
 use APP\template\TemplateManager;
+
+// Plugin classes
+use APP\plugins\generic\premiumSubmissionHelper\PremiumSubmissionHelperPlugin;
 
 /**
  * @file classes/form/SettingsForm.inc.php
  *
- * Copyright (c) 2024 Université de Montréal
- * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
- *
  * @class SettingsForm
- * @ingroup plugins_generic_premiumSubmissionHelper
+ * @ingroup classes_plugins_generic_premiumSubmissionHelper
  *
  * @brief Formulaire de configuration du plugin Premium Submission Helper
  */
-
-import('lib.pkp.classes.form.Form');
-
 class SettingsForm extends Form
 {
-    /** @var \APP\plugins\generic\premiumSubmissionHelper\PremiumSubmissionHelperPlugin Le plugin */
-    protected $plugin;
-
-    /** @var int ID du contexte */
-    protected $contextId;
+    protected PremiumSubmissionHelperPlugin $plugin;
+    protected int $contextId;
 
     /**
-     * Constructeur
-     * @param $plugin PremiumSubmissionHelperPlugin Le plugin
-     * @param $contextId int ID du contexte
+     * Constructor
+     * @param PremiumSubmissionHelperPlugin $plugin
+     * @param int $contextId Context ID
      */
-    public function __construct($plugin, $contextId)
+    public function __construct(PremiumSubmissionHelperPlugin $plugin, int $contextId)
     {
         parent::__construct($plugin->getTemplateResource('settings.tpl'));
         $this->plugin = $plugin;

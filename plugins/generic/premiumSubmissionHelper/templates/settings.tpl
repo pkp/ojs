@@ -1,9 +1,7 @@
 {**
  * @file plugins/generic/premiumSubmissionHelper/templates/settings.tpl
  *
- * Copyright (c) 2024 Université de Montréal
- * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
- *
+
  * Page de paramètres du plugin Aide à la soumission Premium
  *}
 {extends file="layouts/backend.tpl"}
