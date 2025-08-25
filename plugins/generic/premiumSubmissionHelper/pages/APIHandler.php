@@ -28,7 +28,6 @@ use PKP\db\DAORegistry;
 use PKP\handler\APIHandler;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\Role;
-
 // External classes
 use Exception;
 use PKP\plugins\PluginRegistry;
@@ -73,51 +72,61 @@ class PremiumSubmissionHelperAPIHandler extends APIHandler
     /**
      * @copydoc PKPHandler::authorize()
      */
-    /**
-     * @copydoc PKPHandler::authorize()
-     */
     public function authorize($request, &$args, $roleAssignments)
     {
-        // Vérification de la session et du contexte
         $this->addPolicy(new ContextRequiredPolicy($request));
         $this->addPolicy(new UserRequiredPolicy($request));
-        
-        // Configuration des rôles autorisés
         $this->addPolicy(new UserRolesRequiredPolicy($request), true);
-        
-        // Vérification des rôles spécifiques
+
         $rolePolicy = new PolicySet(PolicySet::COMBINING_PERMIT_OVERRIDES);
-        
-        foreach ([Role::ROLE_ID_SITE_ADMIN, Role::ROLE_ID_MANAGER, Role::ROLE_ID_SUB_EDITOR] as $roleId) {
-            $rolePolicy->addPolicy(new RoleBasedHandlerOperationPolicy($request, $roleId, $roleAssignments));
+        $roles = [
+            Role::ROLE_ID_SITE_ADMIN,
+            Role::ROLE_ID_MANAGER,
+            Role::ROLE_ID_SUB_EDITOR,
+        ];
+
+        foreach ($roles as $roleId) {
+            $rolePolicy->addPolicy(
+                new RoleBasedHandlerOperationPolicy(
+                    $request,
+                    $roleId,
+                    $roleAssignments
+                )
+            );
         }
-        
+
         $this->addPolicy($rolePolicy);
-        
+
         // Vérification CSRF pour les requêtes POST
         if ($request->isPost() && !SessionManager::isCsrfValid()) {
             $this->logSecurityEvent($request, 'CSRF_VALIDATION_FAILED');
-            return $this->jsonResponse([
-                'success' => false,
-                'message' => __('form.csrfInvalid')
-            ], 403);
+            return $this->jsonResponse(
+                [
+                    'success' => false,
+                    'message' => __('form.csrfInvalid'),
+                ],
+                403
+            );
         }
-        
+
         // Vérification du taux de requêtes
         if (!$this->checkRateLimit($request)) {
             $this->logSecurityEvent($request, 'RATE_LIMIT_EXCEEDED');
-            return $this->jsonResponse([
-                'success' => false,
-                'message' => __('plugins.generic.premiumHelper.error.rateLimitExceeded')
-            ], 429);
+            return $this->jsonResponse(
+                [
+                    'success' => false,
+                    'message' => __('plugins.generic.premiumHelper.error.rateLimitExceeded'),
+                ],
+                429
+            );
         }
-        
+
         return parent::authorize($request, $args, $roleAssignments);
     }
 
     /**
      * Traite une requête d'analyse de résumé avec validation renforcée
-     * 
+     *
      * @param array $args Arguments de la requête
      * @param PKPRequest $request Objet de requête OJS
      * @return JSONMessage Réponse JSON
@@ -126,53 +135,72 @@ class PremiumSubmissionHelperAPIHandler extends APIHandler
     {
         // Vérification de la méthode HTTP
         if (!$request->isPost()) {
-            return $this->jsonResponse([
-                'success' => false,
-                'message' => __('common.wrongMethod')
-            ], 405);
+            return $this->jsonResponse(
+                [
+                    'success' => false,
+                    'message' => __('common.wrongMethod'),
+                ],
+                405
+            );
         }
 
         // Récupération et validation des données
         $json = file_get_contents('php://input');
         $data = json_decode($json, true);
-        
+
         if (json_last_error() !== JSON_ERROR_NONE) {
-            return $this->jsonResponse([
-                'success' => false,
-                'message' => __('plugins.generic.premiumHelper.error.invalidJson')
-            ], 400);
+            return $this->jsonResponse(
+                [
+                    'success' => false,
+                    'message' => __('plugins.generic.premiumHelper.error.invalidJson'),
+                ],
+                400
+            );
         }
 
         // Validation du résumé
         $abstract = $this->validateAndSanitizeAbstract($data['abstract'] ?? '');
         if ($abstract === null) {
-            return $this->jsonResponse([
-                'success' => false,
-                'message' => __('plugins.generic.premiumHelper.error.invalidAbstract')
-            ], 400);
+            return $this->jsonResponse(
+                [
+                    'success' => false,
+                    'message' => __('plugins.generic.premiumHelper.error.invalidAbstract'),
+                ],
+                400
+            );
         }
-        
+
         // Vérification de la longueur du résumé
         $maxLength = (int) $this->plugin->getSetting(
-            $request->getContext()?->getId() ?? 0, 
+            $request->getContext()?->getId() ?? 0,
             'maxAbstractLength'
         ) ?: 10000; // Valeur par défaut de 10 000 caractères
-        
+
         if (mb_strlen($abstract) > $maxLength) {
-            return $this->jsonResponse([
-                'success' => false,
-                'message' => __('plugins.generic.premiumHelper.error.abstractTooLong', [
-                    'max' => $maxLength,
-                    'current' => mb_strlen($abstract)
-                ])
-            ], 400);
+            return $this->jsonResponse(
+                [
+                    'success' => false,
+                    'message' => __(
+                        'plugins.generic.premiumHelper.error.abstractTooLong',
+                        [
+                            'max' => $maxLength,
+                            'current' => mb_strlen($abstract),
+                        ]
+                    ),
+                ],
+                400
+            );
         }
 
         // Journalisation de la tentative d'analyse
-        $this->logSecurityEvent($request, 'ANALYSIS_ATTEMPT', [
-            'abstract_length' => mb_strlen($abstract),
-            'context_id' => $request->getContext()?->getId()
-        ]);
+        $this->logSecurityEvent(
+            $request,
+            'ANALYSIS_ATTEMPT',
+            [
+                'abstract_length' => mb_strlen($abstract),
+                'context_id' => $request->getContext()?->getId(),
+            ]
+        );
 
         // Effectuer l'analyse avec gestion des erreurs
         try {
@@ -181,51 +209,63 @@ class PremiumSubmissionHelperAPIHandler extends APIHandler
             $processingTime = microtime(true) - $startTime;
 
             // Journalisation de l'analyse réussie
-            $this->logSecurityEvent($request, 'ANALYSIS_SUCCESS', [
-                'processing_time' => round($processingTime, 3),
-                'word_count' => $analysis['word_count'] ?? 0
-            ]);
+            $this->logSecurityEvent(
+                $request,
+                'ANALYSIS_SUCCESS',
+                [
+                    'processing_time' => round($processingTime, 3),
+                    'word_count' => $analysis['word_count'] ?? 0,
+                ]
+            );
 
             // Réponse avec en-têtes de sécurité
-            $response = $this->jsonResponse([
-                'success' => true,
-                'data' => $analysis,
-                'meta' => [
-                    'processing_time' => round($processingTime, 3),
-                    'api_version' => '1.0.0'
+            $response = $this->jsonResponse(
+                [
+                    'success' => true,
+                    'data' => $analysis,
+                    'meta' => [
+                        'processing_time' => round($processingTime, 3),
+                        'api_version' => '1.0.0',
+                    ],
                 ]
-            ]);
-            
+            );
+
             // Ajout des en-têtes de sécurité
             $response->setHeader('X-Content-Type-Options', 'nosniff');
             $response->setHeader('X-Frame-Options', 'DENY');
             $response->setHeader('X-XSS-Protection', '1; mode=block');
             $response->setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
-            
+
             return $response;
-            
         } catch (\Exception $e) {
             // Journalisation de l'erreur
-            $this->logSecurityEvent($request, 'ANALYSIS_ERROR', [
-                'error' => $e->getMessage(),
-                'trace' => $e->getTraceAsString()
-            ]);
-            
+            $this->logSecurityEvent(
+                $request,
+                'ANALYSIS_ERROR',
+                [
+                    'error' => $e->getMessage(),
+                    'trace' => $e->getTraceAsString(),
+                ]
+            );
+
             // Ne pas renvoyer de détails sensibles en production
-            $errorMessage = APP_DEBUG 
-                ? $e->getMessage() 
+            $errorMessage = APP_DEBUG
+                ? $e->getMessage()
                 : __('plugins.generic.premiumHelper.error.analysisFailed');
-                
-            return $this->jsonResponse([
-                'success' => false,
-                'message' => $errorMessage
-            ], 500);
+
+            return $this->jsonResponse(
+                [
+                    'success' => false,
+                    'message' => $errorMessage,
+                ],
+                500
+            );
         }
     }
 
     /**
      * Valide et nettoie le résumé
-     * 
+     *
      * @param mixed $abstract Résumé à valider
      * @return string|null Résumé nettoyé ou null si invalide
      */
@@ -234,22 +274,22 @@ class PremiumSubmissionHelperAPIHandler extends APIHandler
         if (!is_string($abstract) || empty(trim($abstract))) {
             return null;
         }
-        
+
         // Nettoyage du texte
         $abstract = trim($abstract);
         $abstract = PKPString::stripUnsafeHtml($abstract);
-        
+
         // Vérification de la longueur minimale
         if (mb_strlen($abstract) < 20) {
             return null;
         }
-        
+
         return $abstract;
     }
-    
+
     /**
      * Vérifie et applique une limite de débit
-     * 
+     *
      * @param PKPRequest $request
      * @return bool True si la requête est autorisée
      */
@@ -258,86 +298,108 @@ class PremiumSubmissionHelperAPIHandler extends APIHandler
         $userId = $request->getUser()?->getId();
         $ip = $request->getRemoteAddr();
         $cache = Registry::get('cache', true);
-        
+
         if (!$cache) {
             return true; // Désactiver la limitation si le cache n'est pas disponible
         }
-        
+
         $cacheKey = "rate_limit_{$userId}_{$ip}";
         $requests = (int) $cache->get($cacheKey);
-        
+
         // Limite: 100 requêtes par minute par utilisateur/IP
         if ($requests > 100) {
             return false;
         }
-        
+
         $cache->set($cacheKey, $requests + 1, 60); // Expire après 60 secondes
         return true;
     }
-    
+
     /**
      * Journalise les événements de sécurité
-     * 
+     *
      * @param PKPRequest $request
      * @param string $eventType Type d'événement
      * @param array $data Données supplémentaires
      */
-    protected function logSecurityEvent(PKPRequest $request, string $eventType, array $data = []): void
-    {
+    /**
+     * Journalise les événements de sécurité
+     *
+     * @param PKPRequest $request Requête courante
+     * @param string $eventType Type d'événement
+     * @param array $data Données supplémentaires
+     * @return void
+     */
+    protected function logSecurityEvent(
+        PKPRequest $request,
+        string $eventType,
+        array $data = []
+    ): void {
         $user = $request->getUser();
         $context = $request->getContext();
-        
+
         PremiumSubmissionHelperLog::logEvent(
             $context ? $context->getId() : 0,
             $user ? $user->getId() : null,
             null,
             'SECURITY_' . $eventType,
             'Security event: ' . $eventType,
-            array_merge($data, [
-                'ip' => $request->getRemoteAddr(),
-                'user_agent' => $request->getUserAgent(),
-                'request_uri' => $request->getRequestUrl()
-            ])
+            array_merge(
+                $data,
+                [
+                    'ip' => $request->getRemoteAddr(),
+                    'user_agent' => $request->getUserAgent(),
+                    'request_uri' => $request->getRequestUrl(),
+                ]
+            )
         );
     }
 
 
     /**
      * Analyse le résumé et retourne des métriques utiles
+     *
      * @param string $abstract Le résumé à analyser
      * @return array Les résultats de l'analyse
      */
     protected function analyzeAbstract($abstract): array
     {
         $settings = $this->plugin->getSettings();
-        
+
         if (empty($abstract)) {
             return [
                 'success' => false,
-                'message' => __('plugins.generic.premiumHelper.error.abstractEmpty')
+                'message' => __('plugins.generic.premiumHelper.error.abstractEmpty'),
             ];
         }
 
         // Vérifier la longueur du résumé
         $wordCount = str_word_count(strip_tags($abstract));
+
         if ($wordCount < $settings['minWordCount']) {
-            return $this->jsonResponse([
+            return [
                 'success' => false,
-                'message' => __('plugins.generic.premiumHelper.error.abstractTooShort', [
-                    'minWords' => $settings['minWordCount'],
-                    'currentWords' => $wordCount
-                ])
-            ], 400);
+                'message' => __(
+                    'plugins.generic.premiumHelper.error.abstractTooShort',
+                    [
+                        'minWords' => $settings['minWordCount'],
+                        'currentWords' => $wordCount,
+                    ]
+                ),
+            ];
         }
 
         if ($wordCount > $settings['maxWordCount']) {
-            return $this->jsonResponse([
+            return [
                 'success' => false,
-                'message' => __('plugins.generic.premiumHelper.error.abstractTooLong', [
-                    'maxWords' => $settings['maxWordCount'],
-                    'currentWords' => $wordCount
-                ])
-            ], 400);
+                'message' => __(
+                    'plugins.generic.premiumHelper.error.abstractTooLong',
+                    [
+                        'maxWords' => $settings['maxWordCount'],
+                        'currentWords' => $wordCount,
+                    ]
+                ),
+            ];
         }
 
         try {
@@ -457,15 +519,22 @@ class PremiumSubmissionHelperAPIHandler extends APIHandler
     }
 
     /**
-    /**
      * Extrait les mots-clés d'un texte
+     *
      * @param string $text Le texte à analyser
      * @return array Tableau des mots-clés triés par fréquence décroissante
      */
-    protected function extractKeywords($text)
+    protected function extractKeywords($text): array
     {
         // Liste des mots vides à exclure
-        $stopWords = ['le', 'la', 'les', 'de', 'des', 'du', 'un', 'une', 'et', 'ou', 'que', 'qui', 'dont', 'où', 'à', 'au', 'aux', 'en', 'par', 'pour', 'sur', 'dans', 'avec', 'sans', 'sous', 'mais', 'donc', 'or', 'ni', 'car', 'si', 'est', 'sont', 'a', 'as', 'ai', 'ont', 'été', 'être', 'été', 'être', 'ce', 'cet', 'cette', 'ces', 'mon', 'ton', 'son', 'notre', 'votre', 'leur', 'mes', 'tes', 'ses', 'nos', 'vos', 'leurs'];
+        $stopWords = [
+            'le', 'la', 'les', 'de', 'des', 'du', 'un', 'une', 'et', 'ou',
+            'que', 'qui', 'dont', 'où', 'à', 'au', 'aux', 'en', 'par', 'pour',
+            'sur', 'dans', 'avec', 'sans', 'sous', 'mais', 'donc', 'or', 'ni',
+            'car', 'si', 'est', 'sont', 'a', 'as', 'ai', 'ont', 'été', 'être',
+            'ce', 'cet', 'cette', 'ces', 'mon', 'ton', 'son', 'notre', 'votre',
+            'leur', 'mes', 'tes', 'ses', 'nos', 'vos', 'leurs',
+        ];
 
         // Nettoyer le texte
         $text = mb_strtolower($text);
@@ -495,60 +564,76 @@ class PremiumSubmissionHelperAPIHandler extends APIHandler
 
     /**
      * Détermine le niveau de lisibilité en fonction du score
+     *
      * @param float $score Le score de lisibilité
      * @return string Le niveau de lisibilité
      */
-    protected function getReadabilityLevel($score)
+    protected function getReadabilityLevel($score): string
     {
         if ($score >= 90) {
             return 'Très facile';
         }
+
         if ($score >= 80) {
             return 'Facile';
         }
+
         if ($score >= 70) {
             return 'Assez facile';
         }
+
         if ($score >= 60) {
             return 'Standard';
         }
+
         if ($score >= 50) {
             return 'Assez difficile';
         }
+
         if ($score >= 30) {
             return 'Difficile';
         }
+
         return 'Très difficile';
     }
 
     /**
-     * Get plugin settings
+     * Récupère les paramètres du plugin
+     *
      * @param array $args Arguments de la requête
      * @param PKPRequest $request Requête actuelle
-     * @return array
+     * @return JSONMessage Réponse JSON contenant les paramètres
      */
-    public function getSettings($args, $request)
+    public function getSettings($args, $request): JSONMessage
     {
         $context = $request->getContext();
         if (!$context) {
-            return $this->jsonResponse([
-                'success' => false,
-                'message' => __('plugins.generic.premiumHelper.error.contextRequired')
-            ], 400);
+            return $this->jsonResponse(
+                [
+                    'success' => false,
+                    'message' => __('plugins.generic.premiumHelper.error.contextRequired'),
+                ],
+                400
+            );
         }
 
         $settings = $this->plugin->getSetting($context->getId(), 'settings');
         if (empty($settings)) {
-            return $this->jsonResponse([
-                'success' => false,
-                'message' => __('plugins.generic.premiumHelper.error.settingsNotFound')
-            ], 404);
+            return $this->jsonResponse(
+                [
+                    'success' => false,
+                    'message' => __('plugins.generic.premiumHelper.error.settingsNotFound'),
+                ],
+                404
+            );
         }
 
-        return $this->jsonResponse([
-            'success' => true,
-            'settings' => $settings
-        ]);
+        return $this->jsonResponse(
+            [
+                'success' => true,
+                'settings' => $settings,
+            ]
+        );
     }
 
     /**
@@ -556,22 +641,22 @@ class PremiumSubmissionHelperAPIHandler extends APIHandler
      *
      * @return array Liste des mots vides
      */
-    private function getStopWords()
+    private function getStopWords(): array
     {
         // Mots vides en français
-        $frenchStopWords = [
+        return [
             // Articles
             'le', 'la', 'les', 'un', 'une', 'des', 'du', 'de', 'd', 'au', 'aux', 'l', 'à',
             // Prépositions
-            'à', 'dans', 'par', 'pour', 'avec', 'sans', 'sur', 'sous', 'vers', 'parmi', 'dès',
+            'dans', 'par', 'pour', 'avec', 'sans', 'sur', 'sous', 'vers', 'parmi', 'dès',
             'depuis', 'pendant', 'durant', 'jusque', 'contre', 'malgré', 'sauf', 'selon', 'chez',
             // Conjonctions
             'et', 'ou', 'mais', 'donc', 'car', 'ni', 'or', 'que', 'qui', 'quoi', 'dont', 'où',
             'lorsque', 'quoique', 'puisque', 'tandis', 'quand', 'comme', 'si', 'soit',
             // Adverbes
-            'voici', 'voilà', 'afin', 'ainsi', 'alors', 'aussi', 'bien', 'comme', 'déjà',
+            'voici', 'voilà', 'afin', 'ainsi', 'alors', 'aussi', 'bien', 'déjà',
             'encore', 'ensuite', 'hors', 'même', 'parce', 'peu', 'plus', 'plutôt', 'puis',
-            'quand', 'si', 'surtout', 'tant', 'tard', 'tôt', 'toujours', 'très', 'trop',
+            'surtout', 'tant', 'tard', 'tôt', 'toujours', 'très', 'trop',
             'autant', 'beaucoup', 'bientôt', 'cependant', 'certes', 'davantage', 'déjà', 'enfin',
             // Pronoms
             'je', 'tu', 'il', 'elle', 'nous', 'vous', 'ils', 'elles', 'me', 'te', 'se', 'y', 'en',
@@ -604,11 +689,12 @@ class PremiumSubmissionHelperAPIHandler extends APIHandler
      * @param string $text Texte à analyser
      * @return int Nombre de syllabes
      */
-    private function countSyllablesInText($text)
+    private function countSyllablesInText(string $text): int
     {
         // Nettoyer le texte
         $text = strip_tags($text);
-        $text = preg_replace('/[^\p{L}\s]/u', '', $text); // Supprimer la ponctuation
+        // Supprimer la ponctuation
+        $text = preg_replace('/[^\p{L}\s]/u', '', $text);
         $text = mb_strtolower($text);
 
         // Diviser en mots
@@ -618,7 +704,11 @@ class PremiumSubmissionHelperAPIHandler extends APIHandler
         foreach ($words as $word) {
             // Règles simplifiées pour compter les syllabes en français
             // 1. Compter les groupes de voyelles (approximation)
-            $syllables = preg_match_all('/[aeiouyàâäéèêëîïôöùûüœæ]+/i', $word, $matches);
+            $syllables = preg_match_all(
+                '/[aeiouyàâäéèêëîïôöùûüœæ]+/i',
+                $word,
+                $matches
+            );
 
             // 2. Ajustements pour les mots courts
             if (mb_strlen($word) <= 3) {
@@ -638,10 +728,13 @@ class PremiumSubmissionHelperAPIHandler extends APIHandler
      * @param int $wordCount Nombre de mots
      * @param int $sentenceCount Nombre de phrases
      * @param int $syllableCount Nombre de syllabes
-     * @return float Score de lisibilité (0-100)
+     * @return int Score de lisibilité (0-100)
      */
-    private function calculateReadabilityScore($wordCount, $sentenceCount, $syllableCount)
-    {
+    private function calculateReadabilityScore(
+        int $wordCount,
+        int $sentenceCount,
+        int $syllableCount
+    ): int {
         if ($wordCount === 0 || $sentenceCount === 0) {
             return 0;
         }
@@ -657,8 +750,35 @@ class PremiumSubmissionHelperAPIHandler extends APIHandler
         $score = 207 - (1.015 * $wordsPerSentence) - (73.6 * $syllablesPerWord);
 
         // Normaliser entre 0 et 100
-        $score = max(0, min(100, $score));
+        return (int) round(max(0, min(100, $score)));
+    }
 
-        return (int) round($score);
+    /**
+     * Retourne une réponse JSON formatée avec des en-têtes de sécurité
+     *
+     * @param array $data Données à renvoyer
+     * @param int $statusCode Code HTTP de statut (par défaut: 200)
+     * @return JSONMessage Réponse JSON formatée
+     */
+    private function jsonResponse(array $data, int $statusCode = 200): JSONMessage
+    {
+        $response = new JSONMessage($data);
+        $response->setHttpStatus($statusCode);
+
+        // Configuration des en-têtes de sécurité
+        $securityHeaders = [
+            'Content-Type' => 'application/json; charset=utf-8',
+            'X-Content-Type-Options' => 'nosniff',
+            'X-Frame-Options' => 'DENY',
+            'X-XSS-Protection' => '1; mode=block',
+            'Referrer-Policy' => 'strict-origin-when-cross-origin',
+            'Content-Security-Policy' => "default-src 'self'"
+        ];
+
+        foreach ($securityHeaders as $header => $value) {
+            $response->setHeader($header, $value);
+        }
+
+        return $response;
     }
 }

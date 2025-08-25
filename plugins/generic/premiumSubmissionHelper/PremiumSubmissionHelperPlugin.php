@@ -15,12 +15,10 @@ use PKP\security\authorization\PolicySet;
 use PKP\security\authorization\RoleBasedHandlerOperationPolicy;
 use PKP\security\authorization\UserRequiredPolicy;
 use PKP\security\authorization\UserRolesRequiredPolicy;
-
 // Application classes
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\notification\form\ValidationForm;
-
 // Plugin classes
 use APP\plugins\generic\premiumSubmissionHelper\classes\PremiumSubmissionHelperLog;
 use APP\plugins\generic\premiumSubmissionHelper\classes\PremiumSubmissionHelperLogDAO;

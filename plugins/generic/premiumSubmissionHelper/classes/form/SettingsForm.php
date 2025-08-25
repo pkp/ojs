@@ -9,10 +9,8 @@ use PKP\form\Form;
 use PKP\form\validation\FormValidatorCSRF;
 use PKP\form\validation\FormValidatorPost;
 use PKP\notification\NotificationManager;
-
 // Application classes
 use APP\template\TemplateManager;
-
 // Plugin classes
 use APP\plugins\generic\premiumSubmissionHelper\PremiumSubmissionHelperPlugin;
 
@@ -77,7 +75,9 @@ class SettingsForm extends Form
         }
 
         // Définir les données du formulaire
-        $this->_data = $settings;
+        foreach ($settings as $key => $value) {
+            $this->setData($key, $value);
+        }
 
         parent::initData();
     }

@@ -10,7 +10,6 @@ use PKP\db\DAORegistry;
 use PKP\db\DBResultRange;
 use PKP\db\SchemaDAO;
 use PKP\plugins\PluginRegistry;
-
 // Plugin classes
 use APP\plugins\generic\premiumSubmissionHelper\PremiumSubmissionHelperLog;
 
@@ -52,11 +51,11 @@ class PremiumSubmissionHelperLogDAO extends DAO
     }
 
     /**
-     * @copydoc DAO::_fromRow()
+     * @copydoc DAO::fromRow()
      * @param array|object $row Ligne de base de données
      * @return PremiumSubmissionHelperLog
      */
-    protected function _fromRow($row): PremiumSubmissionHelperLog
+    protected function fromRow($row): PremiumSubmissionHelperLog
     {
         $log = new PremiumSubmissionHelperLog();
         $log->setLogId($row->log_id);
@@ -72,11 +71,11 @@ class PremiumSubmissionHelperLogDAO extends DAO
     }
 
     /**
-     * @copydoc DAO::_toRow()
+     * @copydoc DAO::toRow()
      * @param PremiumSubmissionHelperLog $log L'objet log à convertir en tableau
      * @return array Tableau associatif des données du log
      */
-    protected function _toRow(PremiumSubmissionHelperLog $log): array
+    protected function toRow(PremiumSubmissionHelperLog $log): array
     {
         return [
             'context_id' => $log->getContextId(),
@@ -97,7 +96,7 @@ class PremiumSubmissionHelperLogDAO extends DAO
     public function insertObject(PremiumSubmissionHelperLog $log): int
     {
         $this->update(
-            'INSERT INTO ' . $this->_getTableName() . '
+            'INSERT INTO ' . $this->getTableName() . '
                 (context_id, user_id, submission_id, date_logged, event_type, message, data)
                 VALUES
                 (?, ?, ?, ?, ?, ?, ?)',
@@ -213,15 +212,15 @@ class PremiumSubmissionHelperLogDAO extends DAO
     public function getByContextId(int $contextId, ?DBResultRange $rangeInfo = null): DAOResultFactory
     {
         $params = [$contextId];
-        $sql = 'SELECT * FROM ' . $this->_getTableName() . ' WHERE context_id = ?';
-        
+        $sql = 'SELECT * FROM ' . $this->getTableName() . ' WHERE context_id = ?';
+
         if ($rangeInfo) {
             $result = $this->retrieveRange($sql, $params, $rangeInfo);
         } else {
             $result = $this->retrieve($sql, $params);
         }
-        
-        return new DAOResultFactory($result, $this, '_fromRow');
+
+        return new DAOResultFactory($result, $this, 'fromRow');
     }
 
     /**

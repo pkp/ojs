@@ -7,7 +7,6 @@ namespace APP\plugins\generic\premiumSubmissionHelper\controllers\grid\settings;
 // Application classes
 use APP\core\Application;
 use APP\template\TemplateManager;
-
 // PKP classes
 use PKP\controllers\grid\GridRow;
 use PKP\core\PKPApplication;

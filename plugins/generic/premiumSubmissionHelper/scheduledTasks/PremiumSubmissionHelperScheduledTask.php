@@ -7,7 +7,6 @@ namespace APP\plugins\generic\premiumSubmissionHelper\scheduledTasks;
 // Application classes
 use APP\facades\Repo;
 use APP\plugins\generic\premiumSubmissionHelper\PremiumSubmissionHelperPlugin;
-
 // PKP classes
 use PKP\db\DAORegistry;
 use PKP\plugins\PluginRegistry;

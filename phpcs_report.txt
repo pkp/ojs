@@ -1,0 +1,27 @@
+
+FILE: C:\Users\pc\Desktop\ojs\plugins\generic\premiumSubmissionHelper\classes\form\SettingsForm.php
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+LINE 105: WARNING Line exceeds 120 characters; contains 146 characters
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+   103:  
+   104:          // Convertir les cases à cocher en booléens
+>> 105:          foreach (['enabled', 'showWordCount', 'showSentenceCount', 'showReadabilityScore', 'enableAdvancedAnalysis', 'enableDebugMode'] as $key) {
+   106:              $this->_data[$key] = (bool) $this->getData($key);
+   107:          }
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+FILE: C:\Users\pc\Desktop\ojs\plugins\generic\premiumSubmissionHelper\classes\PremiumSubmissionHelperLog.php
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+FOUND 0 ERRORS AND 1 WARNING AFFECTING 1 LINE
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+LINE 226: WARNING Line exceeds 120 characters; contains 145 characters
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+   224:       * @return bool True si l'enregistrement a réussi, false sinon
+   225:       */
+>> 226:      public static function logEvent(int $contextId, ?int $userId, ?int $submissionId, string $eventType, string $message, array $data = []): bool
+   227:      {
+   228:          $log = new self();
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+

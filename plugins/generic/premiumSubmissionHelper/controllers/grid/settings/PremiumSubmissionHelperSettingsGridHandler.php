@@ -9,7 +9,6 @@ use APP\core\Application;
 use APP\notification\NotificationManager;
 use APP\plugins\generic\premiumSubmissionHelper\PremiumSubmissionHelperPlugin;
 use APP\template\TemplateManager;
-
 // PKP classes
 use PKP\controllers\grid\GridHandler;
 use PKP\core\JSONMessage;
@@ -133,6 +132,4 @@ class PremiumSubmissionHelperSettingsGridHandler extends GridHandler
     {
         return new PremiumSubmissionHelperSettingsGridRow();
     }
-
 }
-

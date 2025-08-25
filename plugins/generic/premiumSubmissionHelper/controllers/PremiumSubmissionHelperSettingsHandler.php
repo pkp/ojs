@@ -20,7 +20,6 @@ use APP\handler\Handler;
 use APP\notification\NotificationManager;
 use APP\plugins\generic\premiumSubmissionHelper\PremiumSubmissionHelperPlugin;
 use APP\template\TemplateManager;
-
 // PKP classes
 use PKP\db\DAORegistry;
 use PKP\plugins\PluginRegistry;
@@ -186,7 +185,7 @@ class PremiumSubmissionHelperSettingsHandler extends Handler
         if (!$context) {
             $request->redirect(null, 'index');
         }
-        
+
         // Call parent authorize to check standard permissions
         return parent::authorize($request, $args, $roleAssignments);
     }

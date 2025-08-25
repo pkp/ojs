@@ -11,6 +11,11 @@
     <exclude-pattern>*/lib/*</exclude-pattern>
     <exclude-pattern>*/templates_c/*</exclude-pattern>
     
+    <!-- PSR-12 -->
+    <rule ref="PSR12">
+        <!-- Autoriser les méthodes avec underscore -->
+        <exclude name="PSR2.Methods.MethodDeclaration.Underscore"/>
+    </rule>
     <!-- Show progress -->
     <arg value="p"/>
     
