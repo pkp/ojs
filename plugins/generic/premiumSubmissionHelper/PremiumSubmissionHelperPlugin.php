@@ -1,25 +1,29 @@
 <?php
 
-declare(strict_types=1);
+/**
+ * @file plugins/generic/premiumSubmissionHelper/PremiumSubmissionHelper.php
+ * @class PremiumSubmissionHelperPlugin
+ * @ingroup plugins_generic_premiumSubmissionHelper
+ *
+ * @brief Premium Submission Helper plugin class
+ */
 
 namespace APP\plugins\generic\premiumSubmissionHelper;
 
-// PKP classes
-use PKP\core\JSONMessage;
-use PKP\core\PKPRequest;
-use PKP\core\PKPString;
-use PKP\notification\NotificationManager;
 use PKP\plugins\GenericPlugin;
+use PKP\plugins\Hook;
+use APP\core\Application;
+use PKP\core\JSONMessage;
+use PKP\plugins\PluginRegistry;
 use PKP\security\Role;
+use PKP\core\PKPString;
+use APP\facades\Repo;
+use PKP\notification\NotificationManager;
 use PKP\security\authorization\PolicySet;
 use PKP\security\authorization\RoleBasedHandlerOperationPolicy;
 use PKP\security\authorization\UserRequiredPolicy;
 use PKP\security\authorization\UserRolesRequiredPolicy;
-// Application classes
-use APP\core\Application;
-use APP\facades\Repo;
 use APP\notification\form\ValidationForm;
-// Plugin classes
 use APP\plugins\generic\premiumSubmissionHelper\classes\PremiumSubmissionHelperLog;
 use APP\plugins\generic\premiumSubmissionHelper\classes\PremiumSubmissionHelperLogDAO;
 use APP\plugins\generic\premiumSubmissionHelper\classes\form\SettingsForm;
@@ -48,43 +52,48 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
 
     /**
      * @copydoc Plugin::register()
-     * @param string $category
-     * @param string $path
-     * @param ?int $mainContextId
-     * @return bool
      */
-    public function register(string $category, string $path, ?int $mainContextId = null): bool
+    public function register($category, $path, $mainContextId = null)
     {
+        // Register the plugin even when it is not enabled
         $success = parent::register($category, $path, $mainContextId);
-
+        
         if ($success && $this->getEnabled()) {
-            // Enregistrer les hooks
-            HookRegistry::register('TemplateManager::display', array($this, 'injectAnalysisButton'));
-            HookRegistry::register('LoadHandler', array($this, 'setupAPIHandler'));
-
-            // Ajouter le CSS et JS nécessaires
-            HookRegistry::register('TemplateManager::include', array($this, 'addScripts'));
+            // Register hooks
+            Hook::add('TemplateManager::display', [$this, 'injectAnalysisButton']);
+            Hook::add('LoadHandler', [$this, 'setupAPIHandler']);
+            Hook::add('TemplateManager::include', [$this, 'addScripts']);
+            
+            // Register components that are required for the plugin to work
+            $this->import('classes.PremiumSubmissionHelperLog');
+            $this->import('classes.PremiumSubmissionHelperLogDAO');
+            
+            // Register the DAO for the log entries
+            $logDao = new PremiumSubmissionHelperLogDAO();
+            DAORegistry::registerDAO('PremiumSubmissionHelperLogDAO', $logDao);
+            
+            // Register the scheduled task
+            $this->import('scheduledTasks.PremiumSubmissionHelperScheduledTask');
+            Hook::add('Schema::get::premiumSubmissionHelperLog', [$this, 'addLogSchema']);
         }
-
+        
         return $success;
     }
 
     /**
      * @copydoc Plugin::getDisplayName()
-     * @return string Nom d'affichage du plugin
      */
-    public function getDisplayName(): string
+    public function getDisplayName()
     {
-        return __('plugins.generic.premiumHelper.displayName');
+        return __('plugins.generic.premiumSubmissionHelper.displayName');
     }
 
     /**
      * @copydoc Plugin::getDescription()
-     * @return string Description du plugin
      */
-    public function getDescription(): string
+    public function getDescription()
     {
-        return __('plugins.generic.premiumHelper.description');
+        return __('plugins.generic.premiumSubmissionHelper.description');
     }
 
     /**

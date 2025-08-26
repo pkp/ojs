@@ -5,7 +5,8 @@
     <type>plugins.generic</type>
     <code>premiumSubmissionHelper</code>
     <name>Premium Submission Helper</name>
-    <description>Plugin d'aide à la soumission pour utilisateurs premium</description>
+    <class>PremiumSubmissionHelperPlugin</class>
+    <description>plugins.generic.premiumSubmissionHelper.description</description>
     <release>1.1.0</release>
     <date>2025-08-25</date>
     <install>

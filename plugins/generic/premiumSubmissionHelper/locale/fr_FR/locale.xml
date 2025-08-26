@@ -2,96 +2,96 @@
 <!DOCTYPE locale SYSTEM "../../../../lib/pkp/dtd/locale.dtd">
 <locale name="fr_FR" full_name="Français (France)">
     <!-- Noms et descriptions -->
-    <message key="plugins.generic.premiumHelper.displayName">Aide à la soumission Premium</message>
-    <message key="plugins.generic.premiumHelper.description">Analyse IA du résumé pour les utilisateurs premium</message>
+    <message key="plugins.generic.premiumSubmissionHelper.displayName">Aide à la soumission Premium</message>
+    <message key="plugins.generic.premiumSubmissionHelper.description">Analyse IA du résumé pour les utilisateurs premium</message>
     
     <!-- Interface utilisateur -->
-    <message key="plugins.generic.premiumHelper.analyze">Analyser le résumé</message>
-    <message key="plugins.generic.premiumHelper.analyzing">Analyse en cours, veuillez patienter...</message>
-    <message key="plugins.generic.premiumHelper.results">Résultats de l'analyse</message>
-    <message key="plugins.generic.premiumHelper.premiumRequired">Fonctionnalité réservée aux utilisateurs premium</message>
+    <message key="plugins.generic.premiumSubmissionHelper.analyze">Analyser le résumé</message>
+    <message key="plugins.generic.premiumSubmissionHelper.analyzing">Analyse en cours, veuillez patienter...</message>
+    <message key="plugins.generic.premiumSubmissionHelper.results">Résultats de l'analyse</message>
+    <message key="plugins.generic.premiumSubmissionHelper.premiumRequired">Fonctionnalité réservée aux utilisateurs premium</message>
     
     <!-- Métriques d'analyse -->
-    <message key="plugins.generic.premiumHelper.wordCount">Nombre de mots</message>
-    <message key="plugins.generic.premiumHelper.sentenceCount">Nombre de phrases</message>
-    <message key="plugins.generic.premiumHelper.readabilityScore">Score de lisibilité</message>
-    <message key="plugins.generic.premiumHelper.keywords">Mots-clés suggérés</message>
+    <message key="plugins.generic.premiumSubmissionHelper.wordCount">Nombre de mots</message>
+    <message key="plugins.generic.premiumSubmissionHelper.sentenceCount">Nombre de phrases</message>
+    <message key="plugins.generic.premiumSubmissionHelper.readabilityScore">Score de lisibilité</message>
+    <message key="plugins.generic.premiumSubmissionHelper.keywords">Mots-clés suggérés</message>
     
     <!-- Messages d'erreur -->
-    <message key="plugins.generic.premiumHelper.error">Erreur lors de l'analyse</message>
-    <message key="plugins.generic.premiumHelper.error.abstractRequired">Le résumé est requis pour l'analyse</message>
-    <message key="plugins.generic.premiumHelper.error.abstractEmpty">Le résumé ne peut pas être vide</message>
-    <message key="plugins.generic.premiumHelper.error.analysisFailed">L'analyse a échoué. Veuillez réessayer plus tard.</message>
-    <message key="plugins.generic.premiumHelper.error.unauthorized">Accès non autorisé. Veuillez vous connecter.</message>
-    <message key="plugins.generic.premiumHelper.error.invalidRequest">Requête invalide</message>
-    <message key="plugins.generic.premiumHelper.error.contextRequired">Contexte manquant pour cette opération</message>
-    <message key="plugins.generic.premiumHelper.error.pluginDisabled">Le plugin est désactivé pour ce journal</message>
-    <message key="plugins.generic.premiumHelper.error.abstractTooShort">Le résumé est trop court (minimum {$minWords} mots requis, actuellement {$currentWords} mots)</message>
-    <message key="plugins.generic.premiumHelper.error.abstractTooLong">Le résumé est trop long (maximum {$maxWords} mots autorisés, actuellement {$currentWords} mots)</message>
-    <message key="plugins.generic.premiumHelper.error.settingsNotFound">Paramètres de configuration introuvables</message>
-    <message key="plugins.generic.premiumHelper.error.invalidJson">Données JSON invalides</message>
+    <message key="plugins.generic.premiumSubmissionHelper.error">Erreur lors de l'analyse</message>
+    <message key="plugins.generic.premiumSubmissionHelper.error.abstractRequired">Le résumé est requis pour l'analyse</message>
+    <message key="plugins.generic.premiumSubmissionHelper.error.abstractEmpty">Le résumé ne peut pas être vide</message>
+    <message key="plugins.generic.premiumSubmissionHelper.error.analysisFailed">L'analyse a échoué. Veuillez réessayer plus tard.</message>
+    <message key="plugins.generic.premiumSubmissionHelper.error.unauthorized">Accès non autorisé. Veuillez vous connecter.</message>
+    <message key="plugins.generic.premiumSubmissionHelper.error.invalidRequest">Requête invalide</message>
+    <message key="plugins.generic.premiumSubmissionHelper.error.contextRequired">Contexte manquant pour cette opération</message>
+    <message key="plugins.generic.premiumSubmissionHelper.error.pluginDisabled">Le plugin est désactivé pour ce journal</message>
+    <message key="plugins.generic.premiumSubmissionHelper.error.abstractTooShort">Le résumé est trop court (minimum {$minWords} mots requis, actuellement {$currentWords} mots)</message>
+    <message key="plugins.generic.premiumSubmissionHelper.error.abstractTooLong">Le résumé est trop long (maximum {$maxWords} mots autorisés, actuellement {$currentWords} mots)</message>
+    <message key="plugins.generic.premiumSubmissionHelper.error.settingsNotFound">Paramètres de configuration introuvables</message>
+    <message key="plugins.generic.premiumSubmissionHelper.error.invalidJson">Données JSON invalides</message>
     
     <!-- Messages de succès -->
-    <message key="plugins.generic.premiumHelper.success.analysisComplete">Analyse terminée avec succès !</message>
+    <message key="plugins.generic.premiumSubmissionHelper.success.analysisComplete">Analyse terminée avec succès !</message>
     
     <!-- Aide contextuelle -->
-    <message key="plugins.generic.premiumHelper.help.wordCount">Nombre total de mots dans le résumé</message>
-    <message key="plugins.generic.premiumHelper.help.sentenceCount">Nombre total de phrases détectées</message>
-    <message key="plugins.generic.premiumHelper.help.readabilityScore">Score de lisibilité basé sur des algorithmes standards</message>
-    <message key="plugins.generic.premiumHelper.help.keywords">Mots-clés extraits du résumé, classés par pertinence</message>
+    <message key="plugins.generic.premiumSubmissionHelper.help.wordCount">Nombre total de mots dans le résumé</message>
+    <message key="plugins.generic.premiumSubmissionHelper.help.sentenceCount">Nombre total de phrases détectées</message>
+    <message key="plugins.generic.premiumSubmissionHelper.help.readabilityScore">Score de lisibilité basé sur des algorithmes standards</message>
+    <message key="plugins.generic.premiumSubmissionHelper.help.keywords">Mots-clés extraits du résumé, classés par pertinence</message>
     
     <!-- Paramètres -->
-    <message key="plugins.generic.premiumHelper.settings">Paramètres de l'aide à la soumission Premium</message>
-    <message key="plugins.generic.premiumHelper.settings.enabled">Activer le plugin</message>
-    <message key="plugins.generic.premiumHelper.settings.enabled.description">Active ou désactive la fonctionnalité d'analyse de résumé</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings">Paramètres de l'aide à la soumission Premium</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.enabled">Activer le plugin</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.enabled.description">Active ou désactive la fonctionnalité d'analyse de résumé</message>
     
     <!-- Paramètres d'analyse -->
-    <message key="plugins.generic.premiumHelper.settings.minWordCount">Nombre minimum de mots</message>
-    <message key="plugins.generic.premiumHelper.settings.minWordCount.description">Nombre minimum de mots requis pour l'analyse</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.minWordCount">Nombre minimum de mots</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.minWordCount.description">Nombre minimum de mots requis pour l'analyse</message>
     
-    <message key="plugins.generic.premiumHelper.settings.maxWordCount">Nombre maximum de mots</message>
-    <message key="plugins.generic.premiumHelper.settings.maxWordCount.description">Nombre maximum de mots autorisé pour l'analyse</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.maxWordCount">Nombre maximum de mots</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.maxWordCount.description">Nombre maximum de mots autorisé pour l'analyse</message>
     
-    <message key="plugins.generic.premiumHelper.settings.readabilityThreshold">Seuil de lisibilité</message>
-    <message key="plugins.generic.premiumHelper.settings.readabilityThreshold.description">Score minimum recommandé pour une bonne lisibilité (0-100)</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.readabilityThreshold">Seuil de lisibilité</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.readabilityThreshold.description">Score minimum recommandé pour une bonne lisibilité (0-100)</message>
     
     <!-- Paramètres d'affichage -->
-    <message key="plugins.generic.premiumHelper.settings.showWordCount">Afficher le nombre de mots</message>
-    <message key="plugins.generic.premiumHelper.settings.showWordCount.description">Affiche le nombre total de mots dans les résultats</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.showWordCount">Afficher le nombre de mots</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.showWordCount.description">Affiche le nombre total de mots dans les résultats</message>
     
-    <message key="plugins.generic.premiumHelper.settings.showSentenceCount">Afficher le nombre de phrases</message>
-    <message key="plugins.generic.premiumHelper.settings.showSentenceCount.description">Affiche le nombre total de phrases dans les résultats</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.showSentenceCount">Afficher le nombre de phrases</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.showSentenceCount.description">Affiche le nombre total de phrases dans les résultats</message>
     
-    <message key="plugins.generic.premiumHelper.settings.showReadabilityScore">Afficher le score de lisibilité</message>
-    <message key="plugins.generic.premiumHelper.settings.showReadabilityScore.description">Affiche le score de lisibilité calculé</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.showReadabilityScore">Afficher le score de lisibilité</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.showReadabilityScore.description">Affiche le score de lisibilité calculé</message>
     
-    <message key="plugins.generic.premiumHelper.settings.maxKeywords">Nombre maximum de mots-clés</message>
-    <message key="plugins.generic.premiumHelper.settings.maxKeywords.description">Nombre maximum de mots-clés à suggérer</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.maxKeywords">Nombre maximum de mots-clés</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.maxKeywords.description">Nombre maximum de mots-clés à suggérer</message>
     
     <!-- Paramètres avancés -->
-    <message key="plugins.generic.premiumHelper.settings.enableAdvancedAnalysis">Activer l'analyse avancée</message>
-    <message key="plugins.generic.premiumHelper.settings.enableAdvancedAnalysis.description">Active des analyses plus détaillées (peut être plus lent)</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.enableAdvancedAnalysis">Activer l'analyse avancée</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.enableAdvancedAnalysis.description">Active des analyses plus détaillées (peut être plus lent)</message>
     
-    <message key="plugins.generic.premiumHelper.settings.customStopWords">Mots vides personnalisés</message>
-    <message key="plugins.generic.premiumHelper.settings.customStopWords.description">Liste de mots séparés par des virgules à exclure de l'analyse</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.customStopWords">Mots vides personnalisés</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.customStopWords.description">Liste de mots séparés par des virgules à exclure de l'analyse</message>
     
-    <message key="plugins.generic.premiumHelper.settings.enableDebugMode">Mode débogage</message>
-    <message key="plugins.generic.premiumHelper.settings.enableDebugMode.description">Active les journaux de débogage détaillés (à désactiver en production)</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.enableDebugMode">Mode débogage</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.enableDebugMode.description">Active les journaux de débogage détaillés (à désactiver en production)</message>
     
-    <message key="plugins.generic.premiumHelper.settings.logRetentionDays">Rétention des journaux (jours)</message>
-    <message key="plugins.generic.premiumHelper.settings.logRetentionDays.description">Durée de conservation des journaux d'activité (en jours)</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.logRetentionDays">Rétention des journaux (jours)</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.logRetentionDays.description">Durée de conservation des journaux d'activité (en jours)</message>
     
     <!-- Messages de confirmation -->
-    <message key="plugins.generic.premiumHelper.settings.saved">Paramètres enregistrés avec succès</message>
+    <message key="plugins.generic.premiumSubmissionHelper.settings.saved">Paramètres enregistrés avec succès</message>
     
     <!-- Messages de journalisation -->
-    <message key="plugins.generic.premiumHelper.log.analyzed">Résumé analysé par {$username} - {$wordCount} mots, {$sentenceCount} phrases</message>
-    <message key="plugins.generic.premiumHelper.log.settingsUpdated">Paramètres mis à jour par {$username}</message>
-    <message key="plugins.generic.premiumHelper.log.cleanup">Nettoyage des journaux pour {$contextName} : {$count} entrées supprimées (plus anciennes que {$days} jours)</message>
+    <message key="plugins.generic.premiumSubmissionHelper.log.analyzed">Résumé analysé par {$username} - {$wordCount} mots, {$sentenceCount} phrases</message>
+    <message key="plugins.generic.premiumSubmissionHelper.log.settingsUpdated">Paramètres mis à jour par {$username}</message>
+    <message key="plugins.generic.premiumSubmissionHelper.log.cleanup">Nettoyage des journaux pour {$contextName} : {$count} entrées supprimées (plus anciennes que {$days} jours)</message>
     
     <!-- Niveaux de sévérité -->
-    <message key="plugins.generic.premiumHelper.severity.info">Information</message>
-    <message key="plugins.generic.premiumHelper.severity.warning">Avertissement</message>
-    <message key="plugins.generic.premiumHelper.severity.error">Erreur</message>
-    <message key="plugins.generic.premiumHelper.severity.debug">Débogage</message>
+    <message key="plugins.generic.premiumSubmissionHelper.severity.info">Information</message>
+    <message key="plugins.generic.premiumSubmissionHelper.severity.warning">Avertissement</message>
+    <message key="plugins.generic.premiumSubmissionHelper.severity.error">Erreur</message>
+    <message key="plugins.generic.premiumSubmissionHelper.severity.debug">Débogage</message>
 </locale>
