@@ -1,13 +1,10 @@
 <?php
-
 declare(strict_types=1);
 
 /**
  * @file plugins/generic/premiumSubmissionHelper/PremiumSubmissionHelper.php
- *
  * @class PremiumSubmissionHelperPlugin
  * @ingroup plugins_generic_premiumSubmissionHelper
- *
  * @brief Plugin d'aide à la soumission premium pour OJS
  */
 
@@ -321,7 +318,7 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
     public function manage(array $args, \PKP\core\Request $request): \PKP\core\JSONMessage
     {
         $verb = (string) $request->getUserVar('verb');
-        
+
         switch ($verb) {
             case 'settings':
                 $context = $request->getContext();
@@ -331,7 +328,7 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
 
                 if ($request->getUserVar('save')) {
                     $settingsForm->readInputData();
-                    
+
                     if ($settingsForm->validate()) {
                         $settingsForm->execute();
                         $notificationManager = new NotificationManager();
@@ -404,7 +401,7 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
 
         // Vérifier les rôles de l'utilisateur
         $userRoles = $user->getRoles($contextId);
-        
+
         foreach ($userRoles as $role) {
             if (in_array($role->getRoleId(), $allowedRoles, true)) {
                 return true;
@@ -515,12 +512,12 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
             // Importer et initialiser le gestionnaire d'API
             $this->import('pages.APIHandler');
             $handler = new APIHandler($this);
-            
+
             // Traiter la requête
             if ($sourceFile !== null) {
                 $handler->handle($op, $sourceFile);
             }
-            
+
             return true;
         } catch (\Exception $e) {
             error_log('Erreur dans le gestionnaire de rappel: ' . $e->getMessage());
@@ -549,7 +546,7 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
 
         $template = (string) $args[0];
         $templateMgr = $args[1];
-        
+
         if (!($templateMgr instanceof \PKP\template\PKPTemplateManager)) {
             return false;
         }
@@ -566,7 +563,7 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
                 if (!$dispatcher) {
                     break;
                 }
-                
+
                 $pluginSettingsUrl = $dispatcher->url(
                     $request,
                     ROUTE_PAGE,
@@ -583,7 +580,7 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
                 
                 $templateMgr->assign('pluginSettingsUrl', $pluginSettingsUrl);
                 break;
-                
+
             // Ajouter d'autres cas de surcharge de templates ici si nécessaire
         }
 
