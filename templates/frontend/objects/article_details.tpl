@@ -432,6 +432,16 @@
 				</div>
 			{/if}
 
+			{if $enablePublicComments}
+			    <div class="item">
+				    <section class="sub_item" data-vue-root>
+                        <h2 class="label"> {translate key="userComment.comments"} </h2>
+                        <pkp-scroll-to-comments v-bind='{$scrollToCommentsInitConfig|json_encode}'></pkp-scroll-to-comments>
+				    </section>
+			    </div>
+			{/if}
+
+			{* AddThis sharing widget *}
 			{* PubIds (requires plugins) *}
 			{foreach from=$pubIdPlugins item=pubIdPlugin}
 				{if $pubIdPlugin->getPubIdType() == 'doi'}

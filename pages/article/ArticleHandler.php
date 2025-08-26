@@ -28,6 +28,7 @@ use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use Firebase\JWT\Key;
+use PKP\components\UserCommentComponent;
 use PKP\config\Config;
 use PKP\core\Core;
 use PKP\core\PKPApplication;
@@ -219,6 +220,24 @@ class ArticleHandler extends Handler
         $article = $this->article;
         $publication = $this->publication;
         $templateMgr = TemplateManager::getManager($request);
+        $templateMgr->requiresVueRuntime();
+
+        $enablePublicComments = $context->getData('enablePublicComments');
+
+        if ($enablePublicComments) {
+            $userCommentComponent = new UserCommentComponent($article, $request);
+            $templateMgr->setLocaleKeys($userCommentComponent->getLocaleKeys());
+            $templateMgr->assign('userCommentsInitConfig', $userCommentComponent->getConfig());
+
+            $templateMgr->assign(
+                'scrollToCommentsInitConfig',
+                [
+                    'loginUrl' => $userCommentComponent->getLoginUrl(),
+                    'allCommentsCount' => $userCommentComponent->getAllCommentsCount()
+                ]
+            );
+        }
+
         $templateMgr->assign([
             'issue' => $issue,
             'article' => $article,
@@ -227,6 +246,7 @@ class ArticleHandler extends Handler
             'galley' => $this->galley,
             'fileId' => $this->submissionFileId, // DEPRECATED in 3.4.0: https://github.com/pkp/pkp-lib/issues/6545
             'submissionFileId' => $this->submissionFileId,
+            'enablePublicComments' => $enablePublicComments,
         ]);
         $this->setupTemplate($request);
 
