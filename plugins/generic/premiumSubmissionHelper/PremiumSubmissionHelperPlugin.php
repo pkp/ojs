@@ -1,42 +1,56 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * @file plugins/generic/premiumSubmissionHelper/PremiumSubmissionHelper.php
+ *
  * @class PremiumSubmissionHelperPlugin
  * @ingroup plugins_generic_premiumSubmissionHelper
  *
- * @brief Premium Submission Helper plugin class
+ * @brief Plugin d'aide à la soumission premium pour OJS
  */
 
 namespace APP\plugins\generic\premiumSubmissionHelper;
 
+// Framework imports
+use APP\core\Application;
+use APP\facades\Repo;
+use APP\notification\form\ValidationForm;
+use PKP\core\JSONMessage;
+use PKP\core\PKPString;
+use PKP\notification\NotificationManager;
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
-use APP\core\Application;
-use PKP\core\JSONMessage;
 use PKP\plugins\PluginRegistry;
 use PKP\security\Role;
-use PKP\core\PKPString;
-use APP\facades\Repo;
-use PKP\notification\NotificationManager;
 use PKP\security\authorization\PolicySet;
 use PKP\security\authorization\RoleBasedHandlerOperationPolicy;
 use PKP\security\authorization\UserRequiredPolicy;
 use PKP\security\authorization\UserRolesRequiredPolicy;
-use APP\notification\form\ValidationForm;
-use APP\plugins\generic\premiumSubmissionHelper\classes\PremiumSubmissionHelperLog;
-use APP\plugins\generic\premiumSubmissionHelper\classes\PremiumSubmissionHelperLogDAO;
+
+// Plugin imports
+use APP\plugins\generic\premiumSubmissionHelper\classes\{
+    PremiumSubmissionHelperLog,
+    PremiumSubmissionHelperLogDAO
+};
 use APP\plugins\generic\premiumSubmissionHelper\classes\form\SettingsForm;
-use APP\plugins\generic\premiumSubmissionHelper\controllers\PremiumSubmissionHelperSettingsHandler;
-use APP\plugins\generic\premiumSubmissionHelper\controllers\grid\settings\PremiumSubmissionHelperSettingsGridHandler;
-use APP\plugins\generic\premiumSubmissionHelper\scheduledTasks\PremiumSubmissionHelperScheduledTask;
-use APP\plugins\generic\premiumSubmissionHelper\upgrade\PremiumSubmissionHelperUpgrade;
+use APP\plugins\generic\premiumSubmissionHelper\controllers\{
+    PremiumSubmissionHelperSettingsHandler,
+    grid\settings\PremiumSubmissionHelperSettingsGridHandler
+};
+use APP\plugins\generic\premiumSubmissionHelper\{
+    scheduledTasks\PremiumSubmissionHelperScheduledTask,
+    upgrade\PremiumSubmissionHelperUpgrade
+};
 
 /**
  * Classe principale du plugin Premium Helper
  *
  * Gère l'initialisation du plugin, l'injection des éléments d'interface utilisateur
  * et la configuration des routes d'API.
+ *
+ * @package APP\plugins\generic\premiumSubmissionHelper
  */
 class PremiumSubmissionHelperPlugin extends GenericPlugin
 {
@@ -51,62 +65,80 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
     ];
 
     /**
-     * @copydoc Plugin::register()
+     * Enregistre le plugin
+     *
+     * Cette méthode est appelée lors du chargement du plugin et permet d'enregistrer
+     * les hooks et les gestionnaires nécessaires.
+     *
+     * @param string $category Catégorie du plugin
+     * @param string $path Chemin du plugin
+     * @param int|null $mainContextId ID du contexte principal
+     *
+     * @return bool True si l'enregistrement a réussi
      */
-    public function register($category, $path, $mainContextId = null)
+    public function register(string $category, string $path, ?int $mainContextId = null): bool
     {
-        // Register the plugin even when it is not enabled
+        // Enregistrer le plugin même s'il n'est pas activé
         $success = parent::register($category, $path, $mainContextId);
-        
+
         if ($success && $this->getEnabled()) {
-            // Register hooks
+            // Enregistrer les hooks
             Hook::add('TemplateManager::display', [$this, 'injectAnalysisButton']);
             Hook::add('LoadHandler', [$this, 'setupAPIHandler']);
             Hook::add('TemplateManager::include', [$this, 'addScripts']);
-            
+
             // Register components that are required for the plugin to work
             $this->import('classes.PremiumSubmissionHelperLog');
             $this->import('classes.PremiumSubmissionHelperLogDAO');
-            
+
             // Register the DAO for the log entries
             $logDao = new PremiumSubmissionHelperLogDAO();
             DAORegistry::registerDAO('PremiumSubmissionHelperLogDAO', $logDao);
-            
+
             // Register the scheduled task
             $this->import('scheduledTasks.PremiumSubmissionHelperScheduledTask');
             Hook::add('Schema::get::premiumSubmissionHelperLog', [$this, 'addLogSchema']);
         }
-        
+
         return $success;
     }
 
     /**
-     * @copydoc Plugin::getDisplayName()
+     * Récupère le nom d'affichage du plugin
+     *
+     * Cette méthode retourne le nom localisé du plugin qui sera affiché dans
+     * l'interface d'administration d'OJS.
+     *
+     * @return string Le nom d'affichage du plugin
      */
-    public function getDisplayName()
+    public function getDisplayName(): string
     {
-        return __('plugins.generic.premiumSubmissionHelper.displayName');
+        return (string) __('plugins.generic.premiumSubmissionHelper.displayName');
     }
 
     /**
-     * @copydoc Plugin::getDescription()
+     * Récupère la description du plugin
+     *
+     * Cette méthode retourne la description localisée du plugin qui sera affichée
+     * dans l'interface d'administration d'OJS.
+     *
+     * @return string La description du plugin
      */
-    public function getDescription()
+    public function getDescription(): string
     {
-        return __('plugins.generic.premiumSubmissionHelper.description');
+        return (string) __('plugins.generic.premiumSubmissionHelper.description');
     }
 
     /**
      * Injecte le bouton d'analyse dans le formulaire de soumission
-     * @param $hookName string Le nom du hook
-     * @param $args array Les arguments du hook
-     * @return bool
-     */
-    /**
-     * Injecte le bouton d'analyse dans le formulaire de soumission
-     * @param string $hookName Le nom du hook
+     *
+     * Cette méthode est appelée par le hook TemplateManager::display et ajoute un bouton
+     * d'analyse dans le formulaire de soumission pour les utilisateurs premium.
+     *
+     * @param string $hookName Le nom du hook appelant
      * @param array $args Les arguments du hook
-     * @return bool
+     *
+     * @return bool Retourne false pour permettre aux autres hooks de s'exécuter
      */
     public function injectAnalysisButton(string $hookName, array $args): bool
     {
@@ -118,7 +150,7 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
             return false;
         }
 
-        // Vérifier si l'utilisateur est premium
+        // Vérifier si l'utilisateur est connecté et dans un contexte valide
         $request = Application::get()->getRequest();
         $user = $request->getUser();
         $context = $request->getContext();
@@ -127,6 +159,7 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
             return false;
         }
 
+        // Vérifier si l'utilisateur a les droits premium
         $isPremiumUser = $this->isUserPremium($context->getId());
 
         // Ajouter les données au template
@@ -151,11 +184,13 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
 
     /**
      * Configure le gestionnaire d'API
-     * @param $hookName string Le nom du hook
-     * @param $args array Les arguments du hook
-     * @return bool
+     *
+     * @param string $hookName Le nom du hook
+     * @param array $args Les arguments du hook
+     *
+     * @return bool Retourne true si le gestionnaire a été configuré, false sinon
      */
-    public function setupAPIHandler($hookName, $args)
+    public function setupAPIHandler(string $hookName, array $args): bool
     {
         $page = $args[0];
         $op = $args[1];
@@ -173,11 +208,13 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
 
     /**
      * Ajoute les scripts et styles nécessaires
-     * @param $hookName string Le nom du hook
-     * @param $args array Les arguments du hook
-     * @return bool
+     *
+     * @param string $hookName Le nom du hook
+     * @param array $args Les arguments du hook
+     *
+     * @return bool Retourne false si les scripts n'ont pas pu être chargés
      */
-    public function addScripts($hookName, $args)
+    public function addScripts(string $hookName, array $args): bool
     {
         $templateMgr = TemplateManager::getManager();
         $request = Application::get()->getRequest();
@@ -201,7 +238,7 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
             $request->getBaseUrl() . '/' . $this->getPluginPath() . '/styles/premiumSubmissionHelper.css',
             [
                 'contexts' => 'backend',
-                'priority' => STYLE_SEQUENCE_LAST
+                'priority' => STYLE_SEQUENCE_LAST,
             ]
         );
 
@@ -221,19 +258,21 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
     /**
      * Obtient les actions disponibles pour ce plugin
      *
-     * @param Request $request La requête en cours
+     * Cette méthode retourne un tableau d'actions disponibles pour ce plugin
+     * dans l'interface d'administration d'OJS.
+     *
+     * @param \PKP\core\Request $request La requête en cours
      * @param array $actionArgs Les arguments d'action
-     * @return array Tableau d'actions disponibles pour ce plugin
+     *
+     * @return array<\PKP\linkAction\LinkAction> Tableau d'actions disponibles pour ce plugin
      */
-    public function getActions($request, $actionArgs)
+    public function getActions(\PKP\core\Request $request, array $actionArgs): array
     {
-        // Obtenir les actions existantes
+        // Obtenir les actions existantes du parent
         $actions = parent::getActions($request, $actionArgs);
 
-        // Vérifier les autorisations
+        // Vérifier que l'utilisateur est connecté
         $user = $request->getUser();
-        $dispatcher = $request->getDispatcher();
-
         if (!$user) {
             return $actions;
         }
@@ -268,13 +307,22 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
     /**
      * Gère les actions du plugin
      *
+     * Cette méthode est le point d'entrée principal pour les actions du plugin
+     * dans l'interface d'administration. Elle gère les différentes actions
+     * comme la sauvegarde des paramètres.
+     *
      * @param array $args Les arguments de la requête
-     * @param Request $request L'objet de requête
-     * @return JSONMessage Le résultat de l'action
+     * @param \PKP\core\Request $request L'objet de requête
+     *
+     * @return \PKP\core\JSONMessage Le résultat de l'action
+     *
+     * @throws \Exception En cas d'erreur lors du traitement de l'action
      */
-    public function manage($args, $request)
+    public function manage(array $args, \PKP\core\Request $request): \PKP\core\JSONMessage
     {
-        switch ($request->getUserVar('verb')) {
+        $verb = (string) $request->getUserVar('verb');
+        
+        switch ($verb) {
             case 'settings':
                 $context = $request->getContext();
                 $contextId = $context ? $context->getId() : 0;
@@ -283,6 +331,7 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
 
                 if ($request->getUserVar('save')) {
                     $settingsForm->readInputData();
+                    
                     if ($settingsForm->validate()) {
                         $settingsForm->execute();
                         $notificationManager = new NotificationManager();
@@ -308,9 +357,10 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
      *
      * @param string $hookName Nom du hook
      * @param array $params Paramètres du hook
-     * @return bool
+     *
+     * @return bool Retourne true si le gestionnaire a été configuré, false sinon
      */
-    public function setupSettingsHandler($hookName, $params)
+    public function setupSettingsHandler(string $hookName, array $params): bool
     {
         $page = $params[0];
         $op = $params[1];
@@ -326,143 +376,115 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
     }
 
     /**
-     * Ajoute un lien vers les paramètres dans la liste des plugins
-     *
-     * @param string $hookName Nom du hook
-     * @param array $params Paramètres du hook
-     * @return bool
-     */
-    public function addSettingsLink($hookName, $params)
-    {
-        $templateMgr = $params[0];
-        $template = $params[1];
-
-        if ($template === 'controllers/grid/plugins/plugins.tpl') {
-            $plugin = $this;
-
-            // Vérifier si c'est notre plugin
-            $pluginName = $this->getName();
-            $displayName = $this->getDisplayName();
-
-            // Récupérer le contenu actuel
-            $output =& $params[2];
-            $pos = strpos($output, '>' . htmlspecialchars($displayName) . '</span>');
-
-            if ($pos !== false) {
-                $request = Application::get()->getRequest();
-                $dispatcher = $request->getDispatcher();
-                $url = $dispatcher->url(
-                    $request,
-                    ROUTE_PAGE,
-                    null,
-                    'management',
-                    'settings',
-                    null,
-                    array('plugin' => $pluginName, 'category' => 'generic')
-                );
-
-                $link = '<a href="' . $url . '" class="action">' .
-                    __('plugins.generic.premiumHelper.settings') .
-                    '</a>';
-
-                // Insérer le lien après le nom du plugin
-                $output = substr_replace($output, '</span> ' . $link, $pos + 7 + strlen($displayName), 0);
-            }
-        }
-
-        return false;
-    }
-
-    /**
      * Vérifie si l'utilisateur actuel est un utilisateur premium
      *
-     * @param int $contextId ID du contexte
-     * @return bool
+     * Cette méthode vérifie si l'utilisateur connecté a les droits premium
+     * en fonction de son rôle ou d'autres critères métier.
+     *
+     * @param int $contextId ID du contexte (journal/revue)
+     *
+     * @return bool Retourne true si l'utilisateur a les droits premium, false sinon
      */
-    public function isUserPremium($contextId)
+    public function isUserPremium(int $contextId): bool
     {
-        $user = Application::get()->getRequest()->getUser();
+        $request = Application::get()->getRequest();
+        $user = $request->getUser();
+
+        // Si aucun utilisateur n'est connecté, retourner false
         if (!$user) {
             return false;
         }
 
-        // Vérifier si l'utilisateur a un rôle d'éditeur ou d'administrateur
-        $userRoles = $user->getRoles($contextId);
+        // Rôles autorisés à accéder aux fonctionnalités premium
         $allowedRoles = [
             ROLE_ID_MANAGER,
             ROLE_ID_SUB_EDITOR,
-            ROLE_ID_ASSISTANT,
             ROLE_ID_SITE_ADMIN
         ];
 
+        // Vérifier les rôles de l'utilisateur
+        $userRoles = $user->getRoles($contextId);
+        
         foreach ($userRoles as $role) {
-            if (in_array($role->getRoleId(), $allowedRoles)) {
+            if (in_array($role->getRoleId(), $allowedRoles, true)) {
                 return true;
             }
         }
 
-        // Vérifier les abonnements ou autres critères spécifiques
-        // À implémenter selon la logique métier
+        // Ici, vous pouvez ajouter d'autres vérifications spécifiques
+        // comme la vérification d'abonnements, de forfaits, etc.
+        // Exemple : return $this->checkUserSubscription($user->getId(), $contextId);
 
         return false;
     }
 
     /**
-     * Injecte les champs dans le formulaire de soumission
+     * Ajoute un lien vers les paramètres dans la liste des plugins
      *
-     * @param string $hookName Nom du hook
-     * @param array $params Paramètres du hook
-     * @return bool
+     * Cette méthode ajoute un lien "Paramètres" à côté du nom du plugin
+     * dans la liste des plugins de l'administration.
+     *
+     * @param string $hookName Nom du hook appelant
+     * @param array $params Paramètres du hook (TemplateManager, template, output, etc.)
+     *
+     * @return bool Retourne false pour permettre aux autres hooks de s'exécuter
      */
-    public function injectSubmissionFormFields($hookName, $params)
+    public function addSettingsLink(string $hookName, array $params): bool
     {
-        $templateMgr = TemplateManager::getManager(Application::get()->getRequest());
-        $output =& $params[2];
+        $templateMgr = $params[0];
+        $template = $params[1];
         $request = Application::get()->getRequest();
-        $context = $request->getContext();
 
-        if (!$context) {
+        // Vérifier que nous sommes sur la bonne page de template
+        if ($template !== 'controllers/grid/plugins/plugins.tpl') {
             return false;
         }
 
-        // Charger les paramètres
-        $settings = $this->getSetting($context->getId(), 'settings');
+        $pluginName = $this->getName();
+        $displayName = $this->getDisplayName();
+        $output =& $params[2];
+        $searchString = '>' . htmlspecialchars($displayName, ENT_QUOTES, 'UTF-8') . '</span>';
+        $pos = strpos($output, $searchString);
 
-        // Si le plugin est désactivé, ne rien faire
-        if (isset($settings['enabled']) && !$settings['enabled']) {
+        if ($pos === false) {
             return false;
         }
 
-        // Vérifier si l'utilisateur est premium
-        $isPremium = $this->isUserPremium($context->getId());
+        // Construire l'URL des paramètres du plugin
+        $dispatcher = $request->getDispatcher();
+        $url = $dispatcher->url(
+            $request,
+            ROUTE_PAGE,
+            null,
+            'management',
+            'settings',
+            null,
+            [
+                'plugin' => $pluginName,
+                'category' => 'generic',
+                'verb' => 'settings'
+            ]
+        );
 
-        // Préparer les données pour le template
+        // Créer le lien HTML
+        $link = sprintf(
+            '<a href="%s" class="action">%s</a>',
+            htmlspecialchars($url, ENT_QUOTES, 'UTF-8'),
+            htmlspecialchars(__('plugins.generic.premiumHelper.settings'), ENT_QUOTES, 'UTF-8')
+        );
+
+        // Insérer le lien après le nom du plugin
+        $output = substr_replace(
+            $output,
+            $searchString . ' ' . $link,
+            $pos,
+            strlen($searchString)
+        );
+
+        // Assigner l'URL du plugin pour une utilisation dans le template
         $templateMgr->assign([
-            'isPremiumUser' => $isPremium,
-            'pluginUrl' => $request->getBaseUrl() . '/' . $this->getPluginPath(),
-            'apiUrl' => $request->getDispatcher()->url($request, ROUTE_PAGE, null, 'premiumHelper', 'analyze'),
-            'settings' => $settings
+            'pluginUrl' => $request->getBaseUrl() . '/' . $this->getPluginPath()
         ]);
-
-        // Ajouter le CSS
-        $templateMgr->addStyleSheet(
-            'premiumHelperStyles',
-            $request->getBaseUrl() . '/' . $this->getPluginPath() . '/styles/premiumHelper.css',
-            array('contexts' => array('backend', 'frontend'))
-        );
-
-        // Ajouter le JavaScript
-        $templateMgr->addJavaScript(
-            'premiumHelperScripts',
-            $request->getBaseUrl() . '/' . $this->getPluginPath() . '/js/main.js',
-            array(
-                'contexts' => array('backend', 'frontend'),
-                'inline' => false
-            )
-        );
-
-        // Rendre le template
-        $output .= $templateMgr->fetch($this->getTemplateResource('premiumHelper.tpl'));
 
         return false;
     }
@@ -470,22 +492,40 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
     /**
      * Configure le gestionnaire de rappel pour l'API
      *
-     * @param string $hookName Nom du hook
-     * @param array $params Paramètres du hook
-     * @return bool
+     * Cette méthode configure le gestionnaire de rappel pour les webhooks et autres
+     * appels d'API entrants. Elle est appelée automatiquement par le routeur d'OJS.
+     *
+     * @param string $hookName Nom du hook appelant
+     * @param array $params Paramètres du hook (page, opération, sourceFile, etc.)
+     *
+     * @return bool Retourne true si le gestionnaire a été configuré, false sinon
      */
-    public function setupCallbackHandler($hookName, $params)
+    public function setupCallbackHandler(string $hookName, array $params): bool
     {
-        $page = $params[0];
-        $op = $params[1];
-        $handler =& $params[3];
+        $page = (string) $params[0];
+        $op = (string) $params[1];
+        $sourceFile = $params[2] ?? null;
 
-        if ($page === 'premiumHelper' && $op === 'analyze') {
-            $handler = new APIHandler($this);
-            return true;
+        // Vérifier si c'est une requête pour notre gestionnaire de rappel
+        if ($page !== 'premiumHelper' || $op !== 'callback') {
+            return false;
         }
 
-        return false;
+        try {
+            // Importer et initialiser le gestionnaire d'API
+            $this->import('pages.APIHandler');
+            $handler = new APIHandler($this);
+            
+            // Traiter la requête
+            if ($sourceFile !== null) {
+                $handler->handle($op, $sourceFile);
+            }
+            
+            return true;
+        } catch (\Exception $e) {
+            error_log('Erreur dans le gestionnaire de rappel: ' . $e->getMessage());
+            return false;
+        }
     }
 
 
@@ -496,18 +536,57 @@ class PremiumSubmissionHelperPlugin extends GenericPlugin
      * Cette méthode permet de surcharger les templates du plugin avec des versions personnalisées.
      * Elle est appelée automatiquement par le système de template d'OJS.
      *
-     * @param string $hookName Le nom du hook
-     * @param array $args Les arguments du hook
+     * @param string $hookName Le nom du hook appelant
+     * @param array $args Les arguments du hook (template, templateMgr, etc.)
+     *
      * @return bool Retourne false pour permettre aux autres hooks de s'exécuter
      */
-    protected function overridePluginTemplates($hookName, $args)
+    public function overridePluginTemplates(string $hookName, array $args): bool
     {
-        $templateMgr = &$args[0];
-        $template = &$args[1];
+        if (count($args) < 2) {
+            return false;
+        }
 
-        // Ajoutez ici la logique de surcharge des templates si nécessaire
+        $template = (string) $args[0];
+        $templateMgr = $args[1];
+        
+        if (!($templateMgr instanceof \PKP\template\PKPTemplateManager)) {
+            return false;
+        }
 
-        // Retourner false pour permettre aux autres hooks de s'exécuter
+        $request = Application::get()->getRequest();
+        if (!$request) {
+            return false;
+        }
+
+        // Surcharger les templates spécifiques
+        switch ($template) {
+            case 'controllers/grid/plugins/plugins.tpl':
+                $dispatcher = $request->getDispatcher();
+                if (!$dispatcher) {
+                    break;
+                }
+                
+                $pluginSettingsUrl = $dispatcher->url(
+                    $request,
+                    ROUTE_PAGE,
+                    null,
+                    'management',
+                    'settings',
+                    null,
+                    [
+                        'plugin' => $this->getName(),
+                        'category' => 'generic',
+                        'verb' => 'settings'
+                    ]
+                );
+                
+                $templateMgr->assign('pluginSettingsUrl', $pluginSettingsUrl);
+                break;
+                
+            // Ajouter d'autres cas de surcharge de templates ici si nécessaire
+        }
+
         return false;
     }
 }
