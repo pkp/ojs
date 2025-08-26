@@ -3,8 +3,8 @@
 /**
  * @file classes/publication/Repository.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2014-2025 Simon Fraser University
+ * Copyright (c) 2000-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class Repository
@@ -21,7 +21,6 @@ use APP\payment\ojs\OJSCompletedPaymentDAO;
 use APP\payment\ojs\OJSPaymentManager;
 use APP\publication\enums\VersionStage;
 use APP\submission\Submission;
-use APP\publication\Collector;
 use Illuminate\Support\Facades\App;
 use PKP\context\Context;
 use PKP\core\Core;
@@ -96,7 +95,7 @@ class Repository extends \PKP\publication\Repository
 
         // Ensure that the valid issue exists is any issue selected
         if (isset($props['issueId']) && empty($errors['issueId'])) {
-            
+
             // Will allow to create a publication without an issue
             if ($props['issueId'] == IssueSelection::NO_ISSUE->value) {
                 return $errors;
@@ -170,8 +169,7 @@ class Repository extends \PKP\publication\Repository
         // if there is no issue, set the publication as published as part of continuous publication
         if (!$publication->getData('issueId')) {
             $publication->setData('published', true);
-        } 
-        else {
+        } else {
             $issue = Repo::issue()->get($publication->getData('issueId'));
             if ($issue->getData('published')) {
                 $publication->setData('published', true);
@@ -195,13 +193,13 @@ class Repository extends \PKP\publication\Repository
      */
     public function edit(Publication $publication, array $params): Publication
     {
-        if ($params['issueId'] == IssueSelection::NO_ISSUE->value) {
+        if (array_key_exists('issueId', $params) && $params['issueId'] == IssueSelection::NO_ISSUE->value) {
             unset($params['issueId']);
         }
 
         if (isset($params['issueId'])) {
             $issue = Repo::issue()->get($params['issueId']);
-            
+
             // Attached to a future issue e.g. non published issue
             // and marked as continuous publication
             if (!$issue->getData('published')) {
@@ -235,7 +233,7 @@ class Repository extends \PKP\publication\Repository
             //   - set the publication status to STATUS_PUBLISHED if issue is published
             //   - set the publication status to STATUS_SCHEDULED if issue is not published
             $publication->setData(
-                'status', 
+                'status',
                 $issue->getData('published')
                     ? Submission::STATUS_PUBLISHED
                     : Submission::STATUS_SCHEDULED
