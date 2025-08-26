@@ -34,7 +34,9 @@
 	{call_hook name="Templates::Article::Footer::PageFooter"}
 
 </div><!-- .page -->
-<div data-vue-root>
-    <pkp-user-comment v-bind='{$userCommentsInitConfig|json_encode}'></pkp-user-comment>
-</div>
+{if $enablePublicComments}
+    <div data-vue-root>
+        <pkp-user-comment v-bind='{$userCommentsInitConfig|json_encode}'></pkp-user-comment>
+    </div>
+{/if}
 {include file="frontend/components/footer.tpl"}

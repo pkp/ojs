@@ -222,17 +222,21 @@ class ArticleHandler extends Handler
         $templateMgr = TemplateManager::getManager($request);
         $templateMgr->requiresVueRuntime();
 
-        $userCommentComponent = new UserCommentComponent($article, $request);
+        $enablePublicComments = $context->getData('enablePublicComments');
 
-        $templateMgr->setLocaleKeys($userCommentComponent->getLocaleKeys());
-        $templateMgr->assign('userCommentsInitConfig', $userCommentComponent->getConfig());
-        $templateMgr->assign(
-            'scrollToCommentsInitConfig',
-            [
-                'loginUrl' => $userCommentComponent->getLoginUrl(),
-                'allCommentsCount' => $userCommentComponent->getAllCommentsCount()
-            ]
-        );
+        if ($enablePublicComments) {
+            $userCommentComponent = new UserCommentComponent($article, $request);
+            $templateMgr->setLocaleKeys($userCommentComponent->getLocaleKeys());
+            $templateMgr->assign('userCommentsInitConfig', $userCommentComponent->getConfig());
+
+            $templateMgr->assign(
+                'scrollToCommentsInitConfig',
+                [
+                    'loginUrl' => $userCommentComponent->getLoginUrl(),
+                    'allCommentsCount' => $userCommentComponent->getAllCommentsCount()
+                ]
+            );
+        }
 
         $templateMgr->assign([
             'issue' => $issue,
@@ -242,6 +246,7 @@ class ArticleHandler extends Handler
             'galley' => $this->galley,
             'fileId' => $this->submissionFileId, // DEPRECATED in 3.4.0: https://github.com/pkp/pkp-lib/issues/6545
             'submissionFileId' => $this->submissionFileId,
+            'enablePublicComments' => $enablePublicComments,
         ]);
         $this->setupTemplate($request);
 
