@@ -24,7 +24,6 @@ use APP\submission\Submission;
 use Illuminate\Support\Facades\App;
 use PKP\context\Context;
 use PKP\core\Core;
-use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 
 class Repository extends \PKP\publication\Repository
@@ -76,19 +75,35 @@ class Repository extends \PKP\publication\Repository
                 }
 
                 // Check the word count on abstracts
-                $allowedLocales = $submission->getPublicationLanguages($context->getSupportedSubmissionMetadataLocales());
-                foreach ($allowedLocales as $localeKey) {
-                    if (empty($props['abstract'][$localeKey])) {
-                        continue;
+                $wordCountLimit = $section->getData('wordCount');
+                if ($wordCountLimit) {
+                    $abstractErrors = $this->validateWordCount(
+                        $context,
+                        $submission,
+                        $wordCountLimit,
+                        'publication.abstract.wordCountLong',
+                        $props['abstract']
+                    );
+                    if (count($abstractErrors)) {
+                        $errors['abstract'] = $abstractErrors;
                     }
-                    $wordCount = PKPString::getWordCount($props['abstract'][$localeKey]);
-                    $wordCountLimit = $section->getData('wordCount');
-                    if ($wordCountLimit && $wordCount > $wordCountLimit) {
-                        if (!isset($errors['abstract'])) {
-                            $errors['abstract'] = [];
-                        };
-                        $errors['abstract'][$localeKey] = [__('publication.wordCountLong', ['limit' => $wordCountLimit, 'count' => $wordCount])];
-                    }
+                }
+            }
+        }
+
+        if (isset($props['plainLanguageSummary'])) {
+            // Check the word count on plain language summary
+            $wordCountLimit = $section->getData('wordCount');
+            if ($wordCountLimit) {
+                $plainLanguageSummaryErrors = $this->validateWordCount(
+                    $context,
+                    $submission,
+                    $wordCountLimit,
+                    'publication.plainLanguageSummary.wordCountLong',
+                    $props['plainLanguageSummary'],
+                );
+                if (count($plainLanguageSummaryErrors)) {
+                    $errors['plainLanguageSummary'] = $plainLanguageSummaryErrors;
                 }
             }
         }
