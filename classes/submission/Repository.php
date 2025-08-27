@@ -74,30 +74,31 @@ class Repository extends \PKP\submission\Repository
             $errors['abstract'] = [$locale => [__('validator.required')]];
         }
 
-        // Abstract word limit
+        // Abstract/Plain Language Summary word limit
         if ($section->getAbstractWordCount()) {
-            $abstracts = $publication->getData('abstract');
-            if ($abstracts) {
-                $abstractErrors = [];
-                $allowedLocales = $submission->getPublicationLanguages($context->getSupportedSubmissionMetadataLocales());
-                foreach ($allowedLocales as $localeKey) {
-                    $abstract = $publication->getData('abstract', $localeKey);
-                    $wordCount = $abstract ? PKPString::getWordCount($abstract) : 0;
-                    if ($wordCount > $section->getAbstractWordCount()) {
-                        $abstractErrors[$localeKey] = [
-                            __(
-                                'publication.wordCountLong',
-                                [
-                                    'limit' => $section->getAbstractWordCount(),
-                                    'count' => $wordCount
-                                ]
-                            )
-                        ];
-                    }
-                }
-                if (count($abstractErrors)) {
-                    $errors['abstract'] = $abstractErrors;
-                }
+            
+            // validate abstract error count and add to errors
+            $abstractErrors = $this->validateWordCount(
+                $context,
+                $submission,
+                $section->getAbstractWordCount(),
+                'publication.abstract.wordCountLong',
+                $publication->getData('abstract') ?? []
+            );
+            if (count($abstractErrors)) {
+                $errors['abstract'] = $abstractErrors;
+            }
+
+            // validate plain language summary error count and add to errors
+            $plainLanguageSummaryErrors = $this->validateWordCount(
+                $context,
+                $submission,
+                $section->getAbstractWordCount(),
+                'publication.plainLanguageSummary.wordCountLong',
+                $publication->getData('plainLanguageSummary') ?? []
+            );
+            if (count($plainLanguageSummaryErrors)) {
+                $errors['plainLanguageSummary'] = $plainLanguageSummaryErrors;
             }
         }
 
