@@ -2,7 +2,7 @@
 # Darius Zviedris <darius.zviedris@lki.lt>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-08-27 13:05+0000\n"
+"PO-Revision-Date: 2025-08-27 13:17+0000\n"
 "Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "lt/>\n"
@@ -53,3 +53,96 @@ msgstr ""
 "ir paveikslai buvo sunumeruoti ir pažymėti.</li><li>Gautas leidimas "
 "publikuoti visas nuotraukas, duomenų rinkinius ir kitą medžiagą, pateiktą "
 "kartu su šiuo darbu.</li></ul>"
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>Šiame žurnalo tinklalapyje įvesti vardai ir el. pašto adresai bus "
+"naudojami tik nurodytiems šio žurnalo tikslams ir nebus prieinami jokiems "
+"kitiems tikslams ar jokiai trečiajai šaliai.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"Šis žurnalas suteikia tiesioginę atvirą prieigą prie savo turinio, "
+"remdamasis principu, kad laisvas mokslinių tyrimų prieinamumas visuomenei "
+"skatina platesnį pasaulinį žinių mainus."
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"Raginame skaitytojus užsiregistruoti šio žurnalo leidybos pranešimų "
+"paslaugai. Naudokite nuorodą <a href=\"{$indexUrl}/{$contextPath}/user/"
+"register\">Registruotis</a>, esančią žurnalo pagrindinio puslapio viršuje. "
+"Užsiregistravę skaitytojai el. paštu gaus kiekvieno naujo žurnalo numerio "
+"turinį. Šis sąrašas taip pat leidžia žurnalui pareikšti tam tikrą paramos ar "
+"skaitytojų skaičių. Žr. žurnalo <a href=\"{$indexUrl}/{$contextPath}/about/"
+"submissions#privacyStatement\">Privatumo pareiškimą</a>, kuriame skaitytojai "
+"užtikrinami, kad jų vardas ir el. pašto adresas nebus naudojami kitais "
+"tikslais."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"Šis žurnalas naudoja LOCKSS sistemą, kad sukurtų paskirstytą archyvavimo "
+"sistemą tarp dalyvaujančių bibliotekų ir leistų šioms bibliotekoms kurti "
+"nuolatinius žurnalo archyvus išsaugojimo ir restauravimo tikslais. <a href="
+"\"https://www.lockss.org\">Daugiau...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"Šis žurnalas naudoja CLOCKSS sistemą, kad sukurtų paskirstytą archyvavimo "
+"sistemą tarp dalyvaujančių bibliotekų ir leistų šioms bibliotekoms kurti "
+"nuolatinius žurnalo archyvus išsaugojimo ir restauravimo tikslais. <a href="
+"\"https://clockss.org\">Daugiau...</a>"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"Domina galimybė pateikti darbą šiam žurnalui? Rekomenduojame peržiūrėti "
+"puslapį <a href=\"{$indexUrl}/{$contextPath}/about\">Apie žurnalą</a>, "
+"kuriame rasite žurnalo skyrių politiką, taip pat <a href=\""
+"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\">Autorių "
+"gaires</a>. Prieš pateikdami darbą autoriai turi <a href=\""
+"{$indexUrl}/{$contextPath}/user/register\">užsiregistruoti</a> žurnale arba, "
+"jei jau esate užsiregistravę, tiesiog <a href=\"{$indexUrl}/index/login\""
+">prisijungti</a> ir pradėti penkių žingsnių procesą."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"Raginame mokslinių bibliotekų darbuotojus įtraukti šį žurnalą į savo "
+"bibliotekų elektroninių žurnalų fondus. Taip pat verta paminėti, kad šio "
+"žurnalo atvirojo kodo leidybos sistema tinka bibliotekoms, kad jų dėstytojai "
+"galėtų ja naudotis žurnale, kurį jie redaguoja (žr. <a href=\"https://pkp.sfu"
+".ca/ojs\">Atvirosios žurnalų sistemos</a>)."
+
+msgid "default.groups.name.manager"
+msgstr "Žurnalo vedėjas"
+
+msgid "default.groups.plural.manager"
+msgstr "Žurnalų vadovai"
+
+msgid "default.groups.abbrev.manager"
+msgstr "JM"
+
+msgid "default.groups.name.editor"
+msgstr "Žurnalo redaktorius"
+
+msgid "default.groups.plural.editor"
+msgstr "Žurnalo redaktoriai"
+
+msgid "default.groups.abbrev.editor"
+msgstr "JE"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Kviestiniai redaktoriai"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Kviestinis redaktorius"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "GE"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Skyriaus redaktorius"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Skyriaus redaktoriai"
