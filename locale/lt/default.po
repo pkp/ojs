@@ -2,7 +2,7 @@
 # Darius Zviedris <darius.zviedris@lki.lt>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-08-27 13:18+0000\n"
+"PO-Revision-Date: 2025-08-27 13:37+0000\n"
 "Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "lt/>\n"
@@ -139,7 +139,7 @@ msgid "default.groups.name.guestEditor"
 msgstr "Kviestinis redaktorius"
 
 msgid "default.groups.abbrev.guestEditor"
-msgstr "GE"
+msgstr "KR"
 
 msgid "default.groups.name.sectionEditor"
 msgstr "Skyriaus redaktorius"
@@ -149,3 +149,42 @@ msgstr "Skyriaus redaktoriai"
 
 msgid "default.groups.abbrev.sectionEditor"
 msgstr "SecE"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Prenumeratų tvarkytojas (-a)"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Prenumeratų tvarkytojai"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "SubM"
+
+msgid "default.genres.researchInstrument"
+msgstr "Tyrimų instrumentas"
+
+msgid "default.genres.researchMaterials"
+msgstr "Tyrimų medžiagos"
+
+msgid "default.genres.researchResults"
+msgstr "Tyrimų rezultatai"
+
+msgid "default.genres.transcripts"
+msgstr "Nuorašai"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Duomenų analizė"
+
+msgid "default.genres.dataSet"
+msgstr "Duomenų rinkinys"
+
+msgid "default.genres.sourceTexts"
+msgstr "Šaltinių tekstai"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Recenzentas"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Recenzentai"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
