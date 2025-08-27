@@ -293,9 +293,11 @@ class ArticleHandler extends Handler
         ]);
 
         // Citations
-        $templateMgr->assign([
-            'parsedCitations' => $publication->getData('citations'),
-        ]);
+        if ($publication->getData('citations') || $publication->getData('citationsRaw')) {
+            $templateMgr->assign([
+                'citations' => $publication->getData('citations')
+            ]);
+        }
 
         $rorIconPath = Core::getBaseDir() . '/' . PKP_LIB_PATH . '/templates/images/ror.svg';
         $rorIdIcon = file_exists($rorIconPath) ? file_get_contents($rorIconPath) : '';
