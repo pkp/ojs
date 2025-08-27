@@ -91,7 +91,6 @@
 			}
 		</div>
 	{/if}
-
 	<h1 class="page_title">
 		{$publication->getLocalizedTitle(null, 'html')|strip_unsafe_html}
 	</h1>
@@ -286,6 +285,16 @@
 				</section>
 			{/if}
 
+			{if $enablePublicComments}
+				<section class="item comments" data-vue-root>
+					<h2 class="label">
+						{translate key="comments.commentsOnArticle"}
+					</h2>
+        			<pkp-comments v-bind='{$userCommentsInitConfig|json_encode}'></pkp-comments>
+			    </section>
+			{/if}
+
+
 		</div><!-- .main_entry -->
 
 		<div class="entry_details">
@@ -431,10 +440,10 @@
 			{/if}
 
 			{if $enablePublicComments}
-			    <div class="item">
+			    <div class="item comments">
 				    <section class="sub_item" data-vue-root>
                         <h2 class="label"> {translate key="userComment.comments"} </h2>
-                        <pkp-scroll-to-comments v-bind='{$scrollToCommentsInitConfig|json_encode}'></pkp-scroll-to-comments>
+                        <pkp-scroll-to-comments></pkp-scroll-to-comments>
 				    </section>
 			    </div>
 			{/if}

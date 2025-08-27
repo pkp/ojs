@@ -45,7 +45,6 @@ class TemplateManager extends PKPTemplateManager
         $this->assign([
             'brandImage' => 'templates/images/ojs_brand.png',
         ]);
-
         if (!PKPSessionGuard::isSessionDisable()) {
             /**
              * Kludge to make sure no code that tries to connect to

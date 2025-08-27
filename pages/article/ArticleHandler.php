@@ -229,14 +229,6 @@ class ArticleHandler extends Handler
             $userCommentComponent = new UserCommentComponent($article, $request);
             $templateMgr->setLocaleKeys($userCommentComponent->getLocaleKeys());
             $templateMgr->assign('userCommentsInitConfig', $userCommentComponent->getConfig());
-
-            $templateMgr->assign(
-                'scrollToCommentsInitConfig',
-                [
-                    'loginUrl' => $userCommentComponent->getLoginUrl(),
-                    'allCommentsCount' => $userCommentComponent->getAllCommentsCount()
-                ]
-            );
         }
 
         $templateMgr->assign([
