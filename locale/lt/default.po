@@ -2,7 +2,7 @@
 # Darius Zviedris <darius.zviedris@lki.lt>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-08-27 13:37+0000\n"
+"PO-Revision-Date: 2025-08-27 13:42+0000\n"
 "Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "lt/>\n"
@@ -93,7 +93,7 @@ msgstr ""
 "\"https://clockss.org\">Daugiau...</a>"
 
 msgid "section.default.abbrev"
-msgstr "ART"
+msgstr "STR"
 
 msgid "default.contextSettings.forAuthors"
 msgstr ""
@@ -121,7 +121,7 @@ msgid "default.groups.plural.manager"
 msgstr "Žurnalų vadovai"
 
 msgid "default.groups.abbrev.manager"
-msgstr "JM"
+msgstr "ŽV"
 
 msgid "default.groups.name.editor"
 msgstr "Žurnalo redaktorius"
@@ -130,7 +130,7 @@ msgid "default.groups.plural.editor"
 msgstr "Žurnalo redaktoriai"
 
 msgid "default.groups.abbrev.editor"
-msgstr "JE"
+msgstr "ŽR"
 
 msgid "default.groups.plural.guestEditor"
 msgstr "Kviestiniai redaktoriai"
@@ -148,7 +148,7 @@ msgid "default.groups.plural.sectionEditor"
 msgstr "Skyriaus redaktoriai"
 
 msgid "default.groups.abbrev.sectionEditor"
-msgstr "SecE"
+msgstr "SR"
 
 msgid "default.groups.name.subscriptionManager"
 msgstr "Prenumeratų tvarkytojas (-a)"
@@ -157,7 +157,7 @@ msgid "default.groups.plural.subscriptionManager"
 msgstr "Prenumeratų tvarkytojai"
 
 msgid "default.groups.abbrev.subscriptionManager"
-msgstr "SubM"
+msgstr "PT"
 
 msgid "default.genres.researchInstrument"
 msgstr "Tyrimų instrumentas"
