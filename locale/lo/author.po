@@ -1,0 +1,63 @@
+# pheth Sonevilay <p.sonevilay@nuol.edu.la>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-07-31 12:01+0000\n"
+"Last-Translator: pheth Sonevilay <p.sonevilay@nuol.edu.la>\n"
+"Language-Team: Lao <http://translate.pkp.sfu.ca/projects/ojs/author/lo/>\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+#, fuzzy
+msgid "author.submit.submitArticle"
+msgstr "ສົ່ງບົດຄວາມ"
+
+#, fuzzy
+msgid "author.submit.stepsToSubmit"
+msgstr "5 ຂັ້ນຕອນໃນການສົ່ງຜົນງານ"
+
+#, fuzzy
+msgid "author.submit.startHereTitle"
+msgstr "ເລີ່ມຕົ້ນການສົ່ງໃໝ່"
+
+#, fuzzy
+msgid "author.submit"
+msgstr "ການສົງບົດຄວາມໃໝ່"
+
+#, fuzzy
+msgid "author.submit.step2"
+msgstr "ຂັ້ນຕອນທີ 2. ອັບໂຫຼດຜົນງານ"
+
+#, fuzzy
+msgid "author.submit.step3"
+msgstr "ຂັ້ນຕອນທີ 3. ປ້ອນຂໍ້ມູນຄຳອະທິບາຍຂອງຜົນງານ"
+
+#, fuzzy
+msgid "author.submit.step4a"
+msgstr "ຂັ້ນຕອນທີ 4a. ເພີ່ມໄຟລເພີ່ມຕື່ມ"
+
+#, fuzzy
+msgid "author.submit.step5"
+msgstr "ຂັ້ນຕອນທີ 5. ຢືນຢັນການສົ່ງຜົນງານ"
+
+#, fuzzy
+msgid "author.track"
+msgstr "ການສົ່ງບົດຄວາມທີ່ກຳລັງດຳເນີນຢູ່"
+
+#, fuzzy
+msgid "author.submit.startHereLink"
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\""
+">ຄລິກທີ່ນີ້</a>ເພື່ອໄປຍັງຂັ້ນຕອນທຳອິດຂອງການປະມວນຜົນສົ່ງຜົນງານໃນ 5 "
+"ຂັ້ນຕອນໃນການສົ່ງຜົນງານ."
+
+#, fuzzy
+msgid "author.submit.step1"
+msgstr "ຂັ້ນຕອນທີ 1. ເລີ່ມຕົ້ນການສົ່ງຜົນງານ"
+
+#, fuzzy
+msgid "author.submit.step4"
+msgstr "ຂັ້ນຕອນທີ 4. ອັບໂຫຼດໄຟລເພີ່ມຕື່ມ"

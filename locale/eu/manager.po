@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2025-07-17 11:23+0000\n"
+"PO-Revision-Date: 2025-07-31 22:35+0000\n"
 "Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/manager/eu/>"
 "\n"
@@ -51,15 +51,19 @@ msgstr ""
 
 msgid "manager.setup.enableDois.description"
 msgstr ""
+"Aldizkari honetan argitaratutako lanei Objektu Identifikatzaile Digitalak "
+"(DOI) esleitzea baimendu."
 
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr ""
 
 msgid "doi.manager.settings.doiSuffixLegacy"
 msgstr ""
+"Erabili lehenetsitako ereduak.<br />%j.v%vi%i zenbakietarako<br /"
+">%j.v%vi%i.%a artikuluetarako<br />%j.v%vi%i.%a.g%g galeradetarako."
 
 msgid "doi.manager.settings.doiCreationTime.copyedit"
-msgstr ""
+msgstr "Edizio-fasera iritsitakoan"
 
 msgid "manager.website.archiving"
 msgstr "Artxibatzea"
@@ -180,7 +184,7 @@ msgstr ""
 "eta harpidedunak Harpidetzen kudeatzaileak kudeatuko ditu."
 
 msgid "subscriptionManager.subscription.confirmRemove"
-msgstr ""
+msgstr "Ziur zaude harpidetza hau ezabatu nahi duzula?"
 
 msgid "manager.payment.options.enablePayments"
 msgstr ""
@@ -245,7 +249,7 @@ msgid "manager.payment.records"
 msgstr "Erregistroak"
 
 msgid "manager.paymentTypes"
-msgstr ""
+msgstr "Ordainketa-motak"
 
 msgid "manager.payment.userName"
 msgstr "Ordainketa ID"
@@ -408,19 +412,22 @@ msgid "manager.setup"
 msgstr "Konfigurazioa"
 
 msgid "manager.setup.homepageContent"
-msgstr ""
+msgstr "Aldizkariaren hasiera-orriko edukia"
 
 msgid "manager.setup.homepageContentDescription"
 msgstr ""
+"Aldizkariaren hasierako orrialdeak nabigazio-estekak ditu lehenetsita. Eduki "
+"gehigarria erantsi daiteke ondorengo aukeretako bat edo guztiak erabiliz, "
+"eta erakusten diren ordenan agertuko dira."
 
 msgid "manager.setup.useStyleSheet"
-msgstr ""
+msgstr "Aldizkariaren estilo-liburua"
 
 msgid "manager.setup.contextName"
-msgstr ""
+msgstr "Aldizkariaren izena"
 
 msgid "manager.setup.pageHeader"
-msgstr ""
+msgstr "Aldizkariaren goiburua"
 
 msgid "manager.setup.aboutItemContent"
 msgstr "Edukia"
@@ -458,7 +465,7 @@ msgid "manager.setup.announcements"
 msgstr "Iragarkiak"
 
 msgid "manager.setup.announcementsIntroduction"
-msgstr ""
+msgstr "Sarrera"
 
 msgid "manager.setup.announcementsIntroduction.description"
 msgstr ""
@@ -561,10 +568,12 @@ msgstr ""
 "agertuko dira."
 
 msgid "manager.setup.numAnnouncementsHomepage"
-msgstr ""
+msgstr "Erakutsi hasiera-orria"
 
 msgid "manager.setup.numAnnouncementsHomepage.description"
 msgstr ""
+"Zenbat iragarki bistaratu hasierako orrian. Utzi hutsik bat ere ez "
+"bistaratzeko."
 
 msgid "manager.setup.enableUserRegistration"
 msgstr "Bisitariek erabiltzaile-kontu bat erregistra dezakete aldizkarian."
@@ -574,6 +583,8 @@ msgstr "Orientazioa eta esparrua"
 
 msgid "manager.setup.focusAndScope.description"
 msgstr ""
+"Deskribatu egileei, irakurleei eta liburuzainei aldizkariak argitaratuko "
+"dituen artikulu- eta bestelako elementu-sorta."
 
 msgid "manager.setup.forAuthorsToIndexTheirWork"
 msgstr "Egileek beren lana indexatzen lagundu dezaten"
@@ -592,7 +603,7 @@ msgstr ""
 "edo \"Adibidez,\" jarrita."
 
 msgid "manager.setup.form.issnInvalid"
-msgstr ""
+msgstr "Zehaztutako ISSNa ez da baliozkoa."
 
 msgid "manager.setup.form.contactEmailRequired"
 msgstr "Kontaktu nagusiaren helbide elektronikoa eman behar da."
@@ -632,6 +643,8 @@ msgstr "Aldizkariaren identitatea"
 
 msgid "manager.setup.includeCreativeCommons"
 msgstr ""
+"Berehalako edo atzeratutako sarbide irekia eskaintzen duten aldizkarietan, "
+"sartu Creative Commons lizentzia argitaratutako lan guztietan une egokian."
 
 msgid "manager.setup.information"
 msgstr "Informazioa"
@@ -811,6 +824,9 @@ msgstr ""
 
 msgid "manager.setup.lockssLicenseDescription"
 msgstr ""
+"LOCKSS lizentzia bat agertuko da \"Aldizkariari buruz\" atalean, "
+"\"Artxibatuta\" atalean: <a href=\"http://www.lockss.org/community/"
+"publishers-titles-gln/\" target=\"_blank\">LOCKSS Lizentzia</a>"
 
 msgid "manager.setup.lockssLicenseLabel"
 msgstr ""
@@ -828,13 +844,19 @@ msgstr ""
 "bidaltzeko."
 
 msgid "manager.setup.lockssTitle"
-msgstr ""
+msgstr "LOCKSS"
 
 msgid "manager.setup.clockssEnable"
 msgstr ""
+"Gaitu CLOCKSS aldizkariaren edukia parte hartzen duten liburutegietan "
+"gordetzeko eta banatzeko CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\""
+">Publisher Manifest</a> orri baten bidez."
 
 msgid "manager.setup.clockssLicenseDescription"
 msgstr ""
+"CLOCKSS lizentzia bat agertuko da \"Aldizkariari buruz\" atalean, "
+"\"Artxibatuta\" atalean: <a href=\"https://clockss.org\" target=\"_blank\""
+">CLOCKSS Lizentzia</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr ""
@@ -843,7 +865,7 @@ msgid "manager.setup.clockssRegister"
 msgstr ""
 
 msgid "manager.setup.clockssTitle"
-msgstr ""
+msgstr "CLOCKSS"
 
 msgid "manager.setup.look"
 msgstr "Itxura"
@@ -1070,10 +1092,10 @@ msgid "manager.setup.showGalleyLinksDescription"
 msgstr "Beti erakutsi galerada-estekak eta adierazi sarbide murriztua."
 
 msgid "manager.setup.siteAccess.view"
-msgstr ""
+msgstr "Gunerako sarbidea"
 
 msgid "manager.setup.siteAccess.viewContent"
-msgstr ""
+msgstr "Ikusi artikuluaren edukia"
 
 msgid "manager.setup.stepsToJournalSite"
 msgstr "Aldizkariaren webgunea konfiguratzeko bost urrats"
@@ -1102,6 +1124,9 @@ msgstr ""
 
 msgid "manager.setup.disableSubmissions.description"
 msgstr ""
+"Eragotzi erabiltzaileei aldizkarira artikulu berriak bidaltzea. Bidalketak "
+"aldizkariaren atal bakoitzerako desgaitu daitezke <a href=\"{$url}\""
+">aldizkariaren atalen</a> ezarpenen orrian."
 
 msgid "manager.setup.disableSubmissions.notAccepting"
 msgstr ""
@@ -1223,19 +1248,19 @@ msgid "manager.statistics.statistics.subscriptions"
 msgstr "Harpidetzak"
 
 msgid "manager.statistics.reports.defaultReport.articleDownloads"
-msgstr ""
+msgstr "Artikuluaren fitxategiaren deskargak"
 
 msgid "manager.statistics.reports.defaultReport.articleAbstract"
-msgstr ""
+msgstr "Artikuluaren laburpenaren orri-bistaratzeak"
 
 msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
-msgstr ""
+msgstr "Artikuluaren laburpenaren orri-bistaratzeak eta deskargak"
 
 msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
-msgstr ""
+msgstr "Aldizkariaren orri nagusiko bistaratzeak"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
-msgstr ""
+msgstr "Zenbakiaren aurkibidearen orri-bistaratzeak"
 
 msgid "manager.subscriptionPolicies"
 msgstr "Harpidetza-politikak"
@@ -1882,22 +1907,32 @@ msgid "manager.setup.copyrightYearBasis.issue"
 msgstr ""
 
 msgid "manager.setup.resetPermissions"
-msgstr ""
+msgstr "Berrezarri artikuluaren baimenak"
 
 msgid "manager.setup.resetPermissions.confirm"
 msgstr ""
+"Ziur zaude artikulu guztien baimen-datuak berrezarri nahi dituzula? Ekintza "
+"hau ezin da desegin."
 
 msgid "manager.setup.resetPermissions.description"
 msgstr ""
+"Kendu argitaratutako artikulu guztien pribatutasuna-adierazpena eta "
+"lizentzia informazioa, aldizkariaren uneko ezarpen lehenetsietara itzuliz. "
+"Honek artikuluei erantsitako aurreko egile-eskubideak eta lizentzia "
+"informazio guztia behin betiko ezabatuko du. Kasu batzuetan, baliteke legez "
+"baimenik ez izatea beste lizentzia batekin argitaratutako lana berriro "
+"lizentziatzeko. Mesedez, kontuz ibili tresna hau erabiltzean eta kontsultatu "
+"legezko aditu bati zure aldizkarian argitaratutako artikuluen gainean zer "
+"eskubide dituzun ziur ez bazaude."
 
 msgid "manager.setup.resetPermissions.success"
-msgstr ""
+msgstr "Artikuluaren baimenak behar bezala berrezarri dira."
 
 msgid "grid.genres.title.short"
-msgstr ""
+msgstr "Osagaiak"
 
 msgid "grid.genres.title"
-msgstr ""
+msgstr "Artikuluaren osagaiak"
 
 msgid "grid.genres.description"
 msgstr ""
@@ -2049,37 +2084,42 @@ msgid "stats.issues.tooltip.text"
 msgstr ""
 
 msgid "stats.publicationStats"
-msgstr ""
+msgstr "Artikuluaren estatistikak"
 
 msgid "stats.publications.details"
-msgstr ""
+msgstr "Artikuluaren xehetasunak"
 
 msgid "stats.publications.none"
 msgstr ""
+"Ez da aurkitu parametro horiekin bat datorren erabilera-estatistikarik duen "
+"artikulurik."
 
 msgid "stats.publications.totalAbstractViews.timelineInterval"
-msgstr ""
+msgstr "Laburpenaren bistaratze guztiak dataren arabera"
 
 msgid "stats.publications.totalGalleyViews.timelineInterval"
-msgstr ""
+msgstr "Fitxategiaren bistaratze guztiak dataren arabera"
 
 msgid "stats.publications.countOfTotal"
-msgstr ""
+msgstr "{$total} artikulutik {$count}"
 
 msgid "stats.publications.abstracts"
 msgstr "Laburpena"
 
 msgid "stats.publications.galleys"
-msgstr ""
+msgstr "Fitxategiak"
 
 msgid "stats.publications.downloadReport.description"
 msgstr ""
+"Deskargatu CSV/Excel kalkulu-orri bat, ondorengo parametroekin bat datozen "
+"artikuluen erabilera-estatistikekin."
 
 msgid "stats.publications.downloadReport.downloadSubmissions"
 msgstr "Jaitsi artikuluak"
 
 msgid "stats.publications.downloadReport.downloadSubmissions.description"
 msgstr ""
+"Artikulu bakoitzerako laburpenen bistaratze eta fitxategien deskarga kopurua."
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""

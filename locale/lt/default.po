@@ -1,3 +1,190 @@
 # Gintautas <gintautas@charivari.lt>, 2024.
+# Darius Zviedris <darius.zviedris@lki.lt>, 2025.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2025-08-27 13:42+0000\n"
+"Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
+"Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/default/"
+"lt/>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
+"19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
+"1 : 2);\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "section.default.policy"
+msgstr "Skilties numatytoji politika"
+
+msgid "default.contextSettings.authorGuidelines"
+msgstr ""
+"<p>Autoriai kviečiami teikti straipsnius šiam žurnalui. Visus pateiktus "
+"darbus įvertins redaktorius, kad nustatytų, ar jie atitinka žurnalo tikslus "
+"ir apimtį. Tinkamais laikomi darbai bus išsiųsti recenzuoti kolegų, prieš "
+"priimant sprendimą, ar jie bus priimti, ar atmesti.</p><p>Prieš teikdami "
+"darbą, autoriai privalo gauti leidimą publikuoti bet kokią pateiktą "
+"medžiagą, pvz., nuotraukas, dokumentus ir duomenų rinkinius. Visi pateiktame "
+"darbe nurodyti autoriai turi sutikti būti nurodyti kaip autoriai. Prireikus "
+"tyrimą turėtų patvirtinti atitinkamas etikos komitetas pagal tyrimo šalies "
+"teisinius reikalavimus.</p><p>Redaktorius gali atmesti pateiktą darbą, jei "
+"jis neatitinka minimalių kokybės standartų. Prieš pateikdami darbą, "
+"įsitikinkite, kad tyrimo planas ir tyrimo argumentai yra tinkamai "
+"struktūrizuoti ir suformuluoti. Pavadinimas turėtų būti glaustas, o "
+"santrauka – savarankiška. Tai padidins tikimybę, kad recenzentai sutiks "
+"peržiūrėti straipsnį. Kai būsite įsitikinę, kad jūsų darbas atitinka šį "
+"standartą, vadovaukitės toliau pateiktu kontroliniu sąrašu, kad parengtumėte "
+"savo darbą.</p>"
+
+msgid "section.default.title"
+msgstr "Straipsniai"
+
+msgid "default.genres.article"
+msgstr "Straipsnio tekstas"
+
+msgid "default.contextSettings.checklist"
+msgstr ""
+"<p>Visi pateikti darbai turi atitikti šiuos reikalavimus.</p><ul><li>Šis "
+"pateiktas darbas atitinka <a href=\"{$submissionGuidelinesUrl}\">Autorių "
+"gairėse</a> nurodytus reikalavimus.</li><li>Šis pateiktas darbas anksčiau "
+"nebuvo publikuotas ir nėra pateiktas svarstyti kitame žurnale.</li><li>Visos "
+"nuorodos buvo patikrintos dėl tikslumo ir išsamumo.</li><li>Visos lentelės "
+"ir paveikslai buvo sunumeruoti ir pažymėti.</li><li>Gautas leidimas "
+"publikuoti visas nuotraukas, duomenų rinkinius ir kitą medžiagą, pateiktą "
+"kartu su šiuo darbu.</li></ul>"
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>Šiame žurnalo tinklalapyje įvesti vardai ir el. pašto adresai bus "
+"naudojami tik nurodytiems šio žurnalo tikslams ir nebus prieinami jokiems "
+"kitiems tikslams ar jokiai trečiajai šaliai.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"Šis žurnalas suteikia tiesioginę atvirą prieigą prie savo turinio, "
+"remdamasis principu, kad laisvas mokslinių tyrimų prieinamumas visuomenei "
+"skatina platesnį pasaulinį žinių mainus."
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"Raginame skaitytojus užsiregistruoti šio žurnalo leidybos pranešimų "
+"paslaugai. Naudokite nuorodą <a href=\"{$indexUrl}/{$contextPath}/user/"
+"register\">Registruotis</a>, esančią žurnalo pagrindinio puslapio viršuje. "
+"Užsiregistravę skaitytojai el. paštu gaus kiekvieno naujo žurnalo numerio "
+"turinį. Šis sąrašas taip pat leidžia žurnalui pareikšti tam tikrą paramos ar "
+"skaitytojų skaičių. Žr. žurnalo <a href=\"{$indexUrl}/{$contextPath}/about/"
+"submissions#privacyStatement\">Privatumo pareiškimą</a>, kuriame skaitytojai "
+"užtikrinami, kad jų vardas ir el. pašto adresas nebus naudojami kitais "
+"tikslais."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"Šis žurnalas naudoja LOCKSS sistemą, kad sukurtų paskirstytą archyvavimo "
+"sistemą tarp dalyvaujančių bibliotekų ir leistų šioms bibliotekoms kurti "
+"nuolatinius žurnalo archyvus išsaugojimo ir restauravimo tikslais. <a href="
+"\"https://www.lockss.org\">Daugiau...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"Šis žurnalas naudoja CLOCKSS sistemą, kad sukurtų paskirstytą archyvavimo "
+"sistemą tarp dalyvaujančių bibliotekų ir leistų šioms bibliotekoms kurti "
+"nuolatinius žurnalo archyvus išsaugojimo ir restauravimo tikslais. <a href="
+"\"https://clockss.org\">Daugiau...</a>"
+
+msgid "section.default.abbrev"
+msgstr "STR"
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"Domina galimybė pateikti darbą šiam žurnalui? Rekomenduojame peržiūrėti "
+"puslapį <a href=\"{$indexUrl}/{$contextPath}/about\">Apie žurnalą</a>, "
+"kuriame rasite žurnalo skyrių politiką, taip pat <a href=\""
+"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\">Autorių "
+"gaires</a>. Prieš pateikdami darbą autoriai turi <a href=\""
+"{$indexUrl}/{$contextPath}/user/register\">užsiregistruoti</a> žurnale arba, "
+"jei jau esate užsiregistravę, tiesiog <a href=\"{$indexUrl}/index/login\""
+">prisijungti</a> ir pradėti penkių žingsnių procesą."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"Raginame mokslinių bibliotekų darbuotojus įtraukti šį žurnalą į savo "
+"bibliotekų elektroninių žurnalų fondus. Taip pat verta paminėti, kad šio "
+"žurnalo atvirojo kodo leidybos sistema tinka bibliotekoms, kad jų dėstytojai "
+"galėtų ja naudotis žurnale, kurį jie redaguoja (žr. <a href=\"https://pkp.sfu"
+".ca/ojs\">Atvirosios žurnalų sistemos</a>)."
+
+msgid "default.groups.name.manager"
+msgstr "Žurnalo vedėjas"
+
+msgid "default.groups.plural.manager"
+msgstr "Žurnalų vadovai"
+
+msgid "default.groups.abbrev.manager"
+msgstr "ŽV"
+
+msgid "default.groups.name.editor"
+msgstr "Žurnalo redaktorius"
+
+msgid "default.groups.plural.editor"
+msgstr "Žurnalo redaktoriai"
+
+msgid "default.groups.abbrev.editor"
+msgstr "ŽR"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Kviestiniai redaktoriai"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Kviestinis redaktorius"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "KR"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Skyriaus redaktorius"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Skyriaus redaktoriai"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "SR"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Prenumeratų tvarkytojas (-a)"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Prenumeratų tvarkytojai"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "PT"
+
+msgid "default.genres.researchInstrument"
+msgstr "Tyrimų instrumentas"
+
+msgid "default.genres.researchMaterials"
+msgstr "Tyrimų medžiagos"
+
+msgid "default.genres.researchResults"
+msgstr "Tyrimų rezultatai"
+
+msgid "default.genres.transcripts"
+msgstr "Nuorašai"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Duomenų analizė"
+
+msgid "default.genres.dataSet"
+msgstr "Duomenų rinkinys"
+
+msgid "default.genres.sourceTexts"
+msgstr "Šaltinių tekstai"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Recenzentas"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Recenzentai"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "R"
