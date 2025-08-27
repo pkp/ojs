@@ -2,7 +2,7 @@
 # Petra Cacic <petracacic3@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-21 14:17+0000\n"
+"PO-Revision-Date: 2025-08-12 13:42+0000\n"
 "Last-Translator: Petra Cacic <petracacic3@gmail.com>\n"
 "Language-Team: Croatian <http://translate.pkp.sfu.ca/projects/ojs/"
 "paymethod-manual-emails/hr/>\n"

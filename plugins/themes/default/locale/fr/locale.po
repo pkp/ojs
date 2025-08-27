@@ -2,7 +2,7 @@
 # Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-04-11 17:19+0000\n"
+"PO-Revision-Date: 2025-08-14 13:30+0000\n"
 "Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/fr/>\n"
@@ -94,7 +94,7 @@ msgstr ""
 "Utiliser un graphique linéaire pour afficher les statistiques d'utilisation."
 
 msgid "plugins.themes.default.displayStats.monthInitials"
-msgstr "Janv. Févr. Mars Avr. Mai Juin Juill. Août Sept. Oct. Nov. Déc."
+msgstr "Janv. Févr. Mars Avr. Mai Juin Juil. Août Sept. Oct. Nov. Déc."
 
 msgid "plugins.themes.default.displayStats.downloads"
 msgstr "Téléchargements"

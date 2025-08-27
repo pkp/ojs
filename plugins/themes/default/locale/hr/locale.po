@@ -1,7 +1,7 @@
 # Petra Cacic <petracacic3@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-22 14:04+0000\n"
+"PO-Revision-Date: 2025-08-13 11:22+0000\n"
 "Last-Translator: Petra Cacic <petracacic3@gmail.com>\n"
 "Language-Team: Croatian <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/hr/>\n"
@@ -32,19 +32,19 @@ msgstr "Noto Serif: Serifska varijanta Googleovog digitalno izvornog fonta."
 
 msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
 msgstr ""
-"Noto Sans/Noto Serif: Komplementarni par s naslovima u sans-serifnom stilu i "
-"tekstom tijela u serifnom stilu."
+"Komplementarna kombinacija s naslovima u bezserifnom fontu i glavnim tekstom "
+"u serifnom fontu."
 
 msgid "plugins.themes.default.option.typography.lato"
-msgstr "Lato: Popularan moderan sans-serif font."
+msgstr "Popularan, moderan bezserifni font."
 
 msgid "plugins.themes.default.option.typography.lora"
-msgstr "Lora: Serif font širokog proreda, prikladan za čitanje na mreži."
+msgstr "Lora: Široki serifni font pogodan za čitanje na mreži."
 
 msgid "plugins.themes.default.option.typography.lora_openSans"
 msgstr ""
-"Lora/Open Sans: Komplementarni par sa serifnim naslovima i sans-serifnim "
-"tekstom tijela."
+"Lora/Open Sans: Komplementarna kombinacija s naslovima u serifnom fontu i "
+"glavnim tekstom u bezserifnom fontu."
 
 msgid "plugins.themes.default.option.colour.label"
 msgstr "Boja"
@@ -75,8 +75,8 @@ msgstr "Odaberite kombinaciju fontova koja odgovara ovom časopisu."
 
 msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
 msgstr ""
-"Noto Serif/Noto Sans: Komplementarni par s naslovima u serifnom stilu i "
-"tekstom tijela u sans-serifnom stilu."
+"Komplementarna kombinacija s naslovima u serifnom fontu i glavnim tekstom u "
+"bezserifnom fontu."
 
 msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
 msgstr "Prikaži sažetak časopisa na naslovnoj stranici."

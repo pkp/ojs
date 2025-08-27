@@ -1,0 +1,88 @@
+# Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-08-03 07:11+0000\n"
+"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
+"Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/api/eu/>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Eskatu duzun iragarkia ez da aldizkari honetakoa."
+
+msgid "api.emails.403.disabled"
+msgstr ""
+"Posta elektroniko bidezko jakinarazpenak ez daude gaituta aldizkari "
+"honetarako."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "Eskatu duzun bidalketa ez dago aldizkari honetan."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Ezin duzu bidalketa baten aldizkaria aldatu."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Ez duzu baimenik argitaratu gabeko zenbakiak ikusteko."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Gaituta dauden aldizkariak bakarrik ikus ditzakezu."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Ez duzu baimenik aldizkari hau ikusteko."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Ezin duzu aldizkari hau ikusi edo editatu aldizkariaren APIari edo gune "
+"osoko APIari eskaera bat egiten ez badiozu."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Ezin da aldizkari hau editatu gune osoko APItik."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Ez duzu baimenik aldizkari hau editatzeko."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Ez duzu baimenik aldizkari hau ezabatzeko."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Eskatu duzun aldizkaria ez da aurkitu."
+
+msgid "api.dois.403.contextsNotMatched"
+msgstr "Eskatu duzun DOIa ez da aldizkari honetakoa."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "Ez da DOI erregistro-agentziarik konfiguratu aldizkari honetarako."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Elementu batzuk ez dira behar bezala gorde. Mesedez, egiaztatu elementu "
+"bakoitza, dagokion errore-mezu zehatza ikusteko."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Ez duzu baimenik posta elektronikoko txantiloi hau beste aldizkari batera "
+"eramateko."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Hautatu duzun ordainketa-metodoa ez dago onartuta."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Eskatu duzun argitalpena ez da aldizkari honetakoa."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Eskatu duzun argitalpena ez da bidalketa honetakoa."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Fitxategi-fase honetako fitxategi bat ezin duzu galerada batekin lotu."
+
+msgid "api.publications.403.paymentFeesNotEnabled"
+msgstr ""
+"Bidalketa-ordainketa inprimakia ez dago erabilgarri, argitalpen-ordainketa-"
+"tasak gaituta ez daudelako."
+
+msgid "api.submission.400.inactiveSection"
+msgstr "Atal honek jada ez du bidalketarik jasotzen."

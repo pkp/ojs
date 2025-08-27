@@ -1,12 +1,13 @@
 # "Marie-Hélène Vézina [UdeMontréal]" <marie-helene.vezina@umontreal.ca>, 2023.
 # Emma U <emmaupkp@gmail.com>, 2025.
+# Nicolas Dickner <dickner.nicolas@uqam.ca>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T06:56:45-07:00\n"
-"PO-Revision-Date: 2025-06-17 02:43+0000\n"
-"Last-Translator: Emma U <emmaupkp@gmail.com>\n"
+"PO-Revision-Date: 2025-08-27 12:14+0000\n"
+"Last-Translator: Nicolas Dickner <dickner.nicolas@uqam.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-native/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -53,6 +54,7 @@ msgstr ""
 
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
+"Utilisation: {$scriptName} {$pluginName} [command] ...\n"
 "Commandes :\n"
 "\timport [xmlFileName] [journal_path] [user_name] ...\n"
 "\texport [xmlFileName] [journal_path] articles [articleId1] [articleId2] ..."
