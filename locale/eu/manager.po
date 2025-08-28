@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2025-08-28 11:50+0000\n"
+"PO-Revision-Date: 2025-08-28 15:00+0000\n"
 "Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/manager/eu/>"
 "\n"
@@ -2235,37 +2235,38 @@ msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
 msgstr "Ordainketaren zenbatekoaren moneta, adibidez, USD"
 
 msgid "emailTemplate.variable.site.siteTitle"
-msgstr ""
+msgstr "Webgunearen izena aldizkari bat baino gehiago ostatatzen denean"
 
 msgid "emailTemplate.variable.subscription.subscriberDetails"
 msgstr ""
+"Harpidedunaren izena, afiliazioa, telefono zenbakia eta helbide elektronikoa"
 
 msgid "emailTemplate.variable.subscription.subscriptionSignature"
-msgstr ""
+msgstr "Harpidetza-kudeatzailearen harremanetarako datuak"
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
-msgstr ""
+msgstr "Harpidetza-orriaren URLa"
 
 msgid "emailTemplate.variable.subscription.expiryDate"
-msgstr ""
+msgstr "Harpidetza amaitzen den data"
 
 msgid "emailTemplate.variable.subscription.subscriptionType"
-msgstr ""
+msgstr "Harpidetza-motaren, izenaren, iraupenaren eta kostuaren laburpena"
 
 msgid "emailTemplate.variable.subscription.membership"
-msgstr ""
+msgstr "Harpidedunaren kidetzari buruzko informazioa"
 
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr ""
+msgstr "Harpidedun den erakundearen izena"
 
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr ""
+msgstr "Harpidedun den erakundearen posta-helbidea"
 
 msgid "emailTemplate.variable.subscription.domain"
-msgstr ""
+msgstr "Harpidetza honen IP helbide baliozkoen domeinu-izena"
 
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr ""
+msgstr "Harpidetza honetarako IP barruti baliozkoak"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
 msgstr ""
