@@ -12,6 +12,7 @@ describe('Article View Metadata - DC Plugin', function() {
 	let uniqueId;
 	let today;
 	let dcElements;
+	let issueAssignmentOption = 'Assign To Current/Back Issue';
 
 	before(function() {
 		today = new Date();
@@ -468,6 +469,8 @@ describe('Article View Metadata - DC Plugin', function() {
 
 		// Issue
 		cy.openWorkflowMenu('Unassigned version', 'Issue')
+		cy.get('label:Contains("'+issueAssignmentOption+'")').click();
+		cy.get('select[name="issueId"]').select(submission.source.issueTitle);
 		submission.publishIssueSections.forEach((sectionTitle) => {
 			cy.get('[name="sectionId"]').select(sectionTitle);
 		});
@@ -483,7 +486,7 @@ describe('Article View Metadata - DC Plugin', function() {
 		cy.isActiveStageTab('Copyediting');
 
 		// Publish the submission
-		cy.publish(submission.source.volume, submission.source.issueTitle);
+		cy.publish(issueAssignmentOption ,submission.source.volume, submission.source.issueTitle);
 	});
 
 	it('Tests if Header DC Metadata are present and consistent', function() {

@@ -12,13 +12,27 @@ import '../../lib/pkp/cypress/support/commands.js';
 import '../../lib/pkp/cypress/support/commands_orcid.js';
 import '../../lib/pkp/cypress/support/command_reviewer_suggestion.js';
 
-Cypress.Commands.add('publish', (issueId, issueTitle) => {
+Cypress.Commands.add('publish', (issueAssignmentOption, issueId, issueTitle) => {
 	cy.openWorkflowMenu('Unassigned version', 'Title & Abstract')
 	cy.get('button:contains("Schedule For Publication")').click();
 	cy.wait(1000);
+
+	// complete issue assignment and selection
+	typeof assignmentOption === 'number'
+		? cy.get('input[name="issueId_assignment"][value="'+issueAssignmentOption+'"]').click()
+		: cy.get('label:Contains("'+issueAssignmentOption+'")').click();
+	cy.wait(500); // wait for the issues to load
+	
+	// certian issue assignment option make the issue selection invisible
+	cy.get('[data-cy="active-modal"]').then(($activeModal) => {
+		if ($activeModal.find('select[name="issueId"]').length > 0) {
+			cy.get('[data-cy="active-modal"]').find('select[name="issueId"]').select(issueId);
+		}
+	});
+
+	// complete publication stage version selection and confrim the issue and stage settings
 	cy.assignPublicationStage('VoR', 'false', true);
-	cy.get('select[id="assignToIssue-issueId-control"]').select(issueId);
-	cy.get('div[id^="assign-"] button:contains("Save")').click();
+
 	cy.get('div:contains("All publication requirements have been met. This will be published immediately in ' + issueTitle + '. Are you sure you want to publish this?")');
 	cy.get('div.pkpWorkflow__publishModal button:contains("Publish")').click();
 });

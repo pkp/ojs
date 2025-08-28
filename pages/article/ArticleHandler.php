@@ -18,6 +18,7 @@
 namespace APP\pages\article;
 
 use APP\core\Application;
+use PKP\publication\PKPPublication;
 use APP\facades\Repo;
 use APP\handler\Handler;
 use APP\issue\IssueAction;
@@ -157,7 +158,7 @@ class ArticleHandler extends Handler
             $galleyId = $subPath;
         }
 
-        if ($this->publication->getData('status') !== PKPSubmission::STATUS_PUBLISHED && !Repo::submission()->canPreview($user, $submission)) {
+        if ($this->publication->getData('status') !== PKPPublication::STATUS_PUBLISHED && !Repo::submission()->canPreview($user, $submission)) {
             throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
         }
 
