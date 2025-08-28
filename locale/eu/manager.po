@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2025-08-28 09:27+0000\n"
+"PO-Revision-Date: 2025-08-28 11:50+0000\n"
 "Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/manager/eu/>"
 "\n"
@@ -1491,7 +1491,7 @@ msgid "manager.subscriptions"
 msgstr "Harpidetzak"
 
 msgid "manager.individualSubscriptions"
-msgstr "Harpidetza indibidualak"
+msgstr "Banakako harpidetzak"
 
 msgid "manager.institutionalSubscriptions"
 msgstr "Harpidetza instituzionalak"
@@ -2220,19 +2220,19 @@ msgid "emailTemplate.variable.context.contextSignature"
 msgstr "Aldizkariaren sinadura mezu elektroniko automatizatuetarako"
 
 msgid "emailTemplate.variable.context.contactEmail"
-msgstr ""
+msgstr "Aldizkariaren kontaktu nagusiaren posta elektronikoa"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "Aldizkariaren posta-helbidea"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
-msgstr ""
+msgstr "Ordainketa-motaren izena"
 
 msgid "emailTemplate.variable.queuedPayment.itemCost"
-msgstr ""
+msgstr "Ordainketaren zenbatekoa"
 
 msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
-msgstr ""
+msgstr "Ordainketaren zenbatekoaren moneta, adibidez, USD"
 
 msgid "emailTemplate.variable.site.siteTitle"
 msgstr ""
@@ -2514,7 +2514,7 @@ msgstr ""
 "Aldizkariaren URLa eta aldizkarian sartzeko argibideak ematen ditu."
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
-msgstr ""
+msgstr "Erosi banakako harpidetza"
 
 msgid "mailable.subscriptionPurchaseIndividual.description"
 msgstr ""
@@ -2523,7 +2523,7 @@ msgstr ""
 "harpidetzara bizkor joateko esteka."
 
 msgid "mailable.subscriptionPurchaseInstitutional.name"
-msgstr ""
+msgstr "Erosi harpidetza instituzionala"
 
 msgid "mailable.subscriptionPurchaseInstitutional.description"
 msgstr ""
@@ -2532,7 +2532,7 @@ msgstr ""
 "harpidetzara bizkor joateko esteka."
 
 msgid "mailable.subscriptionRenewIndividual.name"
-msgstr ""
+msgstr "Berritu banakako harpidetza"
 
 msgid "mailable.subscriptionRenewIndividual.description"
 msgstr ""
@@ -2541,7 +2541,7 @@ msgstr ""
 "berritutako harpidetzara bizkor joateko esteka."
 
 msgid "mailable.subscriptionRenewInstitutional.name"
-msgstr ""
+msgstr "Berritu harpidetza instituzionala"
 
 msgid "mailable.subscriptionRenewInstitutional.description"
 msgstr ""
@@ -2550,7 +2550,7 @@ msgstr ""
 "berritutako harpidetzara bizkor joateko esteka."
 
 msgid "mailable.openAccessNotify.name"
-msgstr ""
+msgstr "Sarbide irekiaren jakinarazpena"
 
 msgid "mailable.openAccessNotify.description"
 msgstr ""
@@ -2558,31 +2558,39 @@ msgstr ""
 "jaso nahi dutela esan duten erabiltzaile erregistratuei."
 
 msgid "mailable.issuePublishNotify.name"
-msgstr ""
+msgstr "Zenbaki argitaratuaren jakinarazpena"
 
 msgid "mailable.issuePublishNotify.description"
 msgstr ""
+"Zenbaki berria argitaratzen denean, mezu elektroniko hau automatikoki "
+"bidaltzen zaie erregistratutako erabiltzaileei."
 
 msgid "manager.manageEmails.description"
-msgstr ""
+msgstr "Editatu aldizkari honetatik bidalitako mezu elektronikoak."
 
 msgid "mailable.layoutComplete.name"
-msgstr ""
+msgstr "Galeradak osatuta"
 
 msgid "mailable.publicationVersionNotify.name"
-msgstr ""
+msgstr "Bertsio berria sortu da"
 
 msgid "mailable.publicationVersionNotify.description"
 msgstr ""
+"Mezu elektroniko honek automatikoki jakinarazten die esleitutako editoreei "
+"bidalketaren bertsio berri bat sortzen denean."
 
 msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
+"Mezu elektroniko hau aldizkariaren kudeatzaileei bidaltzen zaie bidalketa "
+"berri bat egiten denean eta editorerik esleituta ez dagoenean."
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "Ordainketa-eskaera"
 
 msgid "mailable.paymentRequest.description"
 msgstr ""
+"Mezu elektroniko automatiko hau egileari bidaltzen zaio argitalpen-tasa "
+"ordaintzeko eskatzeko, bere bidalketa onartzen denean."
 
 #~ msgid "manager.setup.metadata.coverage"
 #~ msgstr "Estaldura"
