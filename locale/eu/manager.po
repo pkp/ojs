@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2025-07-31 22:35+0000\n"
+"PO-Revision-Date: 2025-08-28 08:13+0000\n"
 "Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/manager/eu/>"
 "\n"
@@ -56,6 +56,9 @@ msgstr ""
 
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr ""
+"Hautatu zein elementuri esleituko zaien DOI bat. Aldizkari gehienek "
+"artikuluei esleitzen diete DOIa, baina baliteke argitaratutako elementu "
+"guztiei DOIa esleitu nahi izatea."
 
 msgid "doi.manager.settings.doiSuffixLegacy"
 msgstr ""
@@ -271,8 +274,8 @@ msgstr "Inskribatutako erabiltzaile guztiak"
 
 msgid "manager.people.confirmRemove"
 msgstr ""
-"Erabiltzailea aldizkaritik kendu nahi duzu?  Ekintza honek aldizkarian "
-"dituen funtzio guztiak kenduko dizkio erabiltzaileari."
+"Erabiltzailea aldizkaritik kendu nahi duzu? Ekintza honek aldizkarian dituen "
+"rol guztiak kenduko dizkio erabiltzaileari."
 
 msgid "manager.people.emailUsers.selectTemplate"
 msgstr "Hautatu txantiloi bat"
@@ -300,7 +303,7 @@ msgstr "{$role} inskribatzea"
 
 msgid "manager.people.syncUserDescription"
 msgstr ""
-"Inskripzioak sinkronizatzean, zehaztutako aldizkarian daukaten funtzio bera "
+"Inskripzioak sinkronizatzean, zehaztutako aldizkarian daukaten rol bera "
 "emango zaie erabiltzaileei aldizkari honetan. Erabiltzaile multzoak (adib., "
 "Ebaluatzaileak) aldizkari batetik bestera sinkronizatzeko erabiltzen da."
 
@@ -328,9 +331,9 @@ msgstr ""
 "automatikoki esleitzeko Ataleko editore horri. (Bestela, Ataleko editorea "
 "eskuz esleitu ahal izango da, bidalketa bat iristen den bakoitzean). Editore "
 "bat gehitzen bada, automatikoki esleitu ahal izango zaio atal honetarako "
-"bidaltzen diren lanen EBALUAZIOA (adituen ebaluazioa) eta/edo EDIZIOA "
-"(zuzenketa, maketazioa eta proba-zuzenketa) gainbegiratzea. Ataleko "
-"editoreak sortzeko, Aldizkariaren kudeaketako Funtzioetan, Ataleko editoreak "
+"bidaltzen diren lanen EBALUAZIOA (adituen ebaluazioa) eta/edo EDIZIOA ("
+"zuzenketa, maketazioa eta proba-zuzenketa) gainbegiratzea. Ataleko editoreak "
+"sortzeko, Aldizkariaren kudeaketako Rolak azpiatalean, Ataleko editoreak "
 "esteka sakatu behar da."
 
 msgid "manager.sections.editorRestriction"
@@ -540,7 +543,7 @@ msgstr ""
 msgid "manager.setup.emailBounceAddress.disabled"
 msgstr ""
 "<strong>Oharra:</strong> Aukera hau aktibatzeko, gune-administratzaileak "
-"<tt>allow_envelope_sender</tt> aukera gaitu behar du konfigurazio-"
+"<code>allow_envelope_sender</code> aukera gaitu behar du konfigurazio-"
 "fitxategian. Funtzionalitate hau erabili ahal izateko, zerbitzari-"
 "konfigurazio gehiago egin beharko dira seguru asko (eta zerbitzari guztietan "
 "ezin izango da), OJS dokumentazioan adierazten den bezala."
@@ -685,6 +688,9 @@ msgstr "Orrialdeko elementuak"
 
 msgid "manager.setup.itemsPerPage.description"
 msgstr ""
+"Mugatu zerrenda batean agertzeko elementu-kopurua (adibidez, bidalketak, "
+"erabiltzaileak edo edizio-esleipenak) ondorengo elementuak beste orri batean "
+"erakutsi aurretik."
 
 msgid "manager.setup.journalAbbreviation"
 msgstr "Aldizkariaren laburdura"
@@ -734,6 +740,8 @@ msgstr "Aldizkariaren inizialak"
 
 msgid "manager.setup.selectCountry"
 msgstr ""
+"Hautatu aldizkari hau kokatuta dagoen herrialdea, edo aldizkariaren edo "
+"argitaletxearen posta-helbidearen herrialdea."
 
 msgid "manager.setup.journalLayout"
 msgstr "Aldizkariaren diseinua"
@@ -782,6 +790,8 @@ msgstr "Aldizkariaren miniatura"
 
 msgid "manager.setup.journalThumbnail.description"
 msgstr ""
+"Aldizkariaren logotipo edo irudikapen txiki bat, aldizkarien zerrendetan "
+"erabil daitekeena."
 
 msgid "manager.setup.contextTitle"
 msgstr "Aldizkariaren titulua"
@@ -811,6 +821,10 @@ msgstr "PKP Preservation Network (PN)"
 
 msgid "manager.setup.plnPluginNotInstalled"
 msgstr ""
+"PKP Preservation Network (PN) sareak doako kontserbazio zerbitzuak "
+"eskaintzen ditu oinarrizko irizpide batzuk betetzen dituen edozein OJS "
+"aldizkarirentzat. Zure aldizkaria PNn artxibatzeko, eskatu "
+"administratzaileari Pluginen Galeriatik PKP|PN plugina instalatzeko."
 
 msgid "manager.setup.otherLockss"
 msgstr "LOCKSS eta CLOCKSS"
@@ -829,7 +843,7 @@ msgstr ""
 "publishers-titles-gln/\" target=\"_blank\">LOCKSS Lizentzia</a>"
 
 msgid "manager.setup.lockssLicenseLabel"
-msgstr ""
+msgstr "LOCKSS lizentziaren deskribapena"
 
 msgid "manager.setup.lockssRegister"
 msgstr ""
@@ -859,10 +873,12 @@ msgstr ""
 ">CLOCKSS Lizentzia</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
-msgstr ""
+msgstr "CLOCKSS lizentziaren deskribapena"
 
 msgid "manager.setup.clockssRegister"
 msgstr ""
+"Eman izena CLOCKSS zerbitzuan <a href=\"https://clockss.org\" target=\"_blank"
+"\">CLOCKSS webgunea</a> bisitatuz."
 
 msgid "manager.setup.clockssTitle"
 msgstr "CLOCKSS"
@@ -929,6 +945,8 @@ msgstr "Orrialdeetarako estekak"
 
 msgid "manager.setup.numPageLinks.description"
 msgstr ""
+"Mugatu zerrenda bateko hurrengo orrialdeetara bistaratuko diren esteka-"
+"kopurua."
 
 msgid "manager.setup.onlineIssn"
 msgstr "Lineako ISSN"
@@ -1020,7 +1038,7 @@ msgstr ""
 "ebaluatzaileak, ebaluazio bakoitzaren ondoren."
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
-msgstr ""
+msgstr "Mugatu fitxategirako sarbidea"
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
 msgstr ""
@@ -1045,6 +1063,7 @@ msgstr ""
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
 msgstr ""
+"Sartu esteka seguru bat ebaluatzaileei bidalitako gonbidapen elektronikoan."
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
 msgstr "Ebaluatzaileen kalifikazioa"
@@ -1066,6 +1085,8 @@ msgstr ""
 
 msgid "manager.setup.searchDescription.description"
 msgstr ""
+"Eman aldizkariaren deskribapen labur bat (50-300 karaktere), bilatzaileek "
+"aldizkaria bilaketa-emaitzetan zerrendatzean bistara dezaketena."
 
 msgid "manager.setup.sectionsAndSectionEditors"
 msgstr "Atalak eta Ataleko editoreak"
@@ -1130,6 +1151,8 @@ msgstr ""
 
 msgid "manager.setup.disableSubmissions.notAccepting"
 msgstr ""
+"Aldizkari honek ez ditu bidalketarik onartzen une honetan. Joan lan-"
+"fluxuaren ezarpenetara bidalketak onartzeko."
 
 msgid "manager.setup.enableOai"
 msgstr "Gaitu OAI"
@@ -1271,7 +1294,7 @@ msgstr "Sarrera libre geroratua"
 msgid ""
 "manager.subscriptionPolicies."
 "enableSubscriptionExpiryReminderBeforeMonthsValid"
-msgstr ""
+msgstr "Erabili horretarako dagoen kontrol-laukia."
 
 msgid "manager.subscriptionPolicies.expiry"
 msgstr "Harpidetzaren amaiera"
@@ -1299,22 +1322,24 @@ msgstr ""
 "eduki berririk, baina lehenago argitaratuko lanak ikusi ahal izango dituzte."
 
 msgid "manager.subscriptionPolicies.xMonths"
-msgstr ""
+msgstr "{$x} hilabete"
 
 msgid "manager.subscriptionPolicies.xWeeks"
-msgstr ""
+msgstr "{$x} aste"
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
-msgstr ""
+msgstr "Jakinarazi harpidedunei posta elektronikoz, harpidetza iraungi ondoren"
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
-msgstr ""
+msgstr "Jakinarazi harpidedunei posta elektronikoz, harpidetza iraungi ondoren."
 
 msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
 msgstr ""
+"Jakinarazi harpidedunei posta elektronikoz, harpidetza iraungi aurretik."
 
 msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
 msgstr ""
+"Jakinarazi harpidedunei posta elektronikoz, harpidetza iraungi aurretik."
 
 msgid "manager.subscriptionPolicies.expiryReminders"
 msgstr "Harpidetza-amaierako oroigarriak"
@@ -1472,7 +1497,7 @@ msgid "manager.institutionalSubscriptions"
 msgstr "Harpidetza instituzionalak"
 
 msgid "manager.subscriptions.confirmRenew"
-msgstr ""
+msgstr "Ziur zaude harpidetza hau berritu nahi duzula?"
 
 msgid "manager.subscriptions.confirmDelete"
 msgstr "Ziur zaude harpidetza hau ezabatu nahi duzula?"
@@ -1535,10 +1560,10 @@ msgid "manager.subscriptions.form.typeIdValid"
 msgstr "Hautatu baliozko harpidetza mota bat."
 
 msgid "manager.subscriptions.form.institution"
-msgstr ""
+msgstr "Erakundea"
 
 msgid "manager.subscriptions.form.institutionIdValid"
-msgstr ""
+msgstr "Mesedez, hautatu baliozko erakunde bat."
 
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Hasiera-data"
@@ -1557,9 +1582,11 @@ msgstr "Harpidetzaren amaiera-data zehaztu behar da."
 
 msgid "manager.subscriptions.form.dateStartEmpty"
 msgstr ""
+"Harpidetza-mota hau ez da iraungitzen; mesedez, ez zehaztu hasiera-datarik."
 
 msgid "manager.subscriptions.form.dateEndEmpty"
 msgstr ""
+"Harpidetza-mota hau ez da iraungitzen; mesedez, ez zehaztu amaiera-datarik."
 
 msgid "manager.subscriptions.form.dateEndValid"
 msgstr "Hautatu baliozko amaiera-data bat."
@@ -1675,7 +1702,7 @@ msgstr ""
 "Harpidetza motaren bat sortu behar da harpidetza berriak egin baino lehen."
 
 msgid "manager.subscriptions.form.institutionRequired"
-msgstr ""
+msgstr "Harpidetza berriak egin aurretik erakunde bat sortu behar da."
 
 msgid "manager.subscriptions.ipRange"
 msgstr "IP barrutia"
@@ -1867,12 +1894,15 @@ msgstr "Harpidetza mota ondo sortu da."
 
 msgid "manager.navigationMenus.subscriptions.description"
 msgstr ""
+"Eskaintzen dituzun harpidetzak deskribatzen dituen orri baterako esteka."
 
 msgid "manager.navigationMenus.mySubscriptions.description"
 msgstr ""
+"Bisitariaren uneko eta iraganeko harpidetzak deskribatzen dituen orri "
+"baterako esteka."
 
 msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
-msgstr ""
+msgstr "Esteka hau bisitari batek saioa hasten duenean bakarrik bistaratuko da."
 
 msgid "manager.setup.categories"
 msgstr "Kategoriak"
@@ -1883,13 +1913,16 @@ msgstr ""
 "kategoriaren arabera arakatu ahal izango dute aldizkari osotik."
 
 msgid "grid.category.path"
-msgstr ""
+msgstr "Helbidea"
 
 msgid "grid.action.addSection"
-msgstr ""
+msgstr "Gehitu atala"
 
 msgid "manager.setup.section.description"
 msgstr ""
+"Aldizkari baten argitaratutako zenbakietako artikuluak ataletan antolatzen "
+"dira, normalean gaiaren edo eduki motaren arabera (adibidez, berrikuspen "
+"artikuluak, ikerketak, etab.)."
 
 msgid "settings.roles.gridDescription"
 msgstr ""
@@ -1897,14 +1930,17 @@ msgstr ""
 msgid "manager.publication.library"
 msgstr "Argitaletxearen liburutegia"
 
+#, fuzzy
 msgid "manager.setup.copyrightYearBasis"
-msgstr ""
+msgstr "Artikulu berriaren copyright urtea oinarri hartuta"
 
 msgid "manager.setup.copyrightYearBasis.article"
 msgstr ""
+"Artikulua: urte lehenetsia artikuluaren argitaratze-datatik aterako da, "
+"\"argitaratu ahala\" moduan bezala."
 
 msgid "manager.setup.copyrightYearBasis.issue"
-msgstr ""
+msgstr "Zenbakia: lehenetsitako urtea alearen argitalpen-datatik hartuko da."
 
 msgid "manager.setup.resetPermissions"
 msgstr "Berrezarri artikuluaren baimenak"
@@ -2556,3 +2592,8 @@ msgstr ""
 
 #~ msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks2"
 #~ msgstr "aste lehenago bidali mezua harpidedunei."
+
+msgid "manager.setup.contextSummary.description"
+msgstr ""
+"Eman zure aldizkariaren deskribapen labur bat, bere edukia eta helburua "
+"hobeto ulertzeko."
