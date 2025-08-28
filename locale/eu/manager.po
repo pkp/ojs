@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2025-08-28 08:13+0000\n"
+"PO-Revision-Date: 2025-08-28 09:27+0000\n"
 "Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/manager/eu/>"
 "\n"
@@ -1972,6 +1972,11 @@ msgstr "Artikuluaren osagaiak"
 
 msgid "grid.genres.description"
 msgstr ""
+"Osagai hauek fitxategiak izendatzeko erabiltzen dira eta fitxategiak "
+"igotzean goitibeherako menu batean aurkezten dira. ## ikurrarekin "
+"izendatutako generoek erabiltzaileari fitxategia 99Z bidalketa osoarekin edo "
+"osagai jakin batekin zenbakiaren bidez lotzeko aukera ematen diote ("
+"adibidez, 02)."
 
 msgid "plugins.importexport.common.settings"
 msgstr "Ezarpenak"
@@ -1983,22 +1988,28 @@ msgid "plugins.importexport.common.export.articles"
 msgstr "Artikuluak"
 
 msgid "plugins.importexport.common.export.issues"
-msgstr ""
+msgstr "Zenbakiak"
 
 msgid "plugins.importexport.common.export.representations"
-msgstr ""
+msgstr "Galeradak"
 
 msgid "plugins.importexport.common.missingRequirements"
-msgstr ""
+msgstr "Pluginaren eskakizunak ez dira betetzen"
 
 msgid "plugins.importexport.common.error.DOIsNotAvailable"
 msgstr ""
+"Plugin hau erabiltzeko, joan \"Identifikatzaile publikoa\" plugin-"
+"kategoriara, gaitu eta konfiguratu DOI plugina eta zehaztu baliozko DOI "
+"aurrizki bat bertan."
 
 msgid "plugins.importexport.common.error.pluginNotConfigured"
-msgstr ""
+msgstr "Plugina ez dago guztiz konfiguratuta."
 
 msgid "plugins.importexport.common.error.noDOIContentObjects"
 msgstr ""
+"DOI identifikatzaile publikoaren pluginean ez da argitalpen-objekturik "
+"hautatu DOI esleipenerako, beraz, ez dago gordailu edo esportazio aukerarik "
+"plugin honetan."
 
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Pasahitza"
@@ -2009,115 +2020,130 @@ msgstr ""
 "enkriptatuta."
 
 msgid "plugins.importexport.common.filter.issue"
-msgstr ""
+msgstr "Edozein zenbaki"
 
 msgid "plugins.importexport.common.status.any"
-msgstr ""
+msgstr "Edozein egoera"
 
 msgid "plugins.importexport.common.status.notDeposited"
-msgstr ""
+msgstr "Gordailatu gabea"
 
 msgid "plugins.importexport.common.status.markedRegistered"
-msgstr ""
+msgstr "Erregistratuta markatuta"
 
 msgid "plugins.importexport.common.status.registered"
-msgstr ""
+msgstr "Erregistratuta"
 
 msgid "plugins.importexport.common.action"
-msgstr ""
+msgstr "Ekintza"
 
 msgid "plugins.importexport.common.action.export"
-msgstr ""
+msgstr "Esportatu"
 
 msgid "plugins.importexport.common.action.markRegistered"
-msgstr ""
+msgstr "Markatu erregistratuta"
 
 msgid "plugins.importexport.common.action.register"
-msgstr ""
+msgstr "Erregistratu"
 
 msgid "plugins.importexport.common.error.noObjectsSelected"
-msgstr ""
+msgstr "Ez da objekturik hautatu."
 
 msgid "plugins.importexport.common.error.validation"
-msgstr ""
+msgstr "Ezin izan dira bihurtu hautatutako objektuak."
 
 msgid "plugins.importexport.common.invalidXML"
-msgstr ""
+msgstr "XML baliogabea:"
 
 msgid "plugins.importexport.common.export.error.outputFileNotWritable"
-msgstr ""
+msgstr "{$param} irteerako fitxategia ez da editagarria."
 
 msgid "plugins.importexport.common.export.error.inputFileNotReadable"
-msgstr ""
+msgstr "{$param} sarrera-fitxategia ezin da irakurri."
 
 msgid "plugins.importexport.common.register.error.mdsError"
 msgstr ""
+"Erregistroa ez da zuzena izan! DOIen erregistro-zerbitzariak errore bat eman "
+"du: '{$param}'."
 
 msgid "plugins.importexport.common.register.success"
-msgstr ""
+msgstr "Erregistroa ongi burutu da!"
 
 msgid "plugins.importexport.common.validation.success"
-msgstr ""
+msgstr "Baliozkotzea zuzena izan da!"
 
 msgid "plugins.importexport.common.validation.fail"
-msgstr ""
+msgstr "Baliozkotzeak huts egin du."
 
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
-msgstr ""
+msgstr "DOI aurrizkia falta da {$path} helbidea duen aldizkariarentzat."
 
 msgid "plugins.importexport.common.error.unknownObjects"
-msgstr ""
+msgstr "Zehaztutako objektuak ezin izan dira aurkitu."
 
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr ""
+"Bidali kopia bat aldizkariaren ezarpenetan identifikatu den kontaktu "
+"nagusiari."
 
 msgid "stats.contextStats"
-msgstr ""
+msgstr "Aldizkariaren estatistikak"
 
 msgid "stats.context.tooltip.text"
-msgstr ""
+msgstr "Aldizkariaren aurkibide-orria ikusten duten bisitari-kopurua."
 
 msgid "stats.context.tooltip.label"
-msgstr ""
+msgstr "Aldizkariaren estatistikei buruz"
 
 msgid "stats.context.downloadReport.description"
 msgstr ""
+"Deskargatu CSV/Excel kalkulu-orri bat, ondorengo parametroekin bat datozen "
+"aldizkariaren erabilera-estatistikekin."
 
 msgid "stats.context.downloadReport.downloadContext.description"
-msgstr ""
+msgstr "Aldizkariaren aurkibide-orriaren bistaratze kopurua."
 
 msgid "stats.context.downloadReport.downloadContext"
-msgstr ""
+msgstr "Deskargatu aldizkaria"
 
 msgid "stats.issueStats"
-msgstr ""
+msgstr "Zenbakiaren estatistikak"
 
 msgid "stats.issues.details"
-msgstr ""
+msgstr "Bistaratzeak eta deskargak"
 
 msgid "stats.issues.searchIssueDescription"
-msgstr ""
+msgstr "Bilatu izenburua, bolumena eta zenbakia"
 
 msgid "stats.issues.none"
 msgstr ""
+"Ez da aurkitu parametro horiekin bat datorren erabilera-estatistikarik duen "
+"zenbakirik."
 
 msgid "stats.issues.downloadReport.description"
 msgstr ""
+"Deskargatu CSV/Excel kalkulu-orri bat, ondorengo parametroekin bat datozen "
+"zenbakien erabilera-estatistikekin."
 
 msgid "stats.issues.downloadReport.downloadIssues.description"
 msgstr ""
+"Aurkibidearen bistaratze-kopurua eta galeraden deskarga-kopurua, zenbaki "
+"bakoitzeko."
 
 msgid "stats.issues.downloadReport.downloadIssues"
-msgstr ""
+msgstr "Deskargatu zenbakiak"
 
 msgid "stats.issues.countOfTotal"
-msgstr ""
+msgstr "{$total}-etik {$count} zenbakiak"
 
 msgid "stats.issues.tooltip.label"
-msgstr ""
+msgstr "Zenbakiaren estatistikei buruz"
 
 msgid "stats.issues.tooltip.text"
 msgstr ""
+"<strong>Bistaratzeak</strong>: Zenbakiaren edukien taula ikusten duten "
+"bisitari kopurua. <br><strong>Deskargak</strong>: Zenbakiaren galeradaren "
+"deskarga-kopurua, baldin badago."
 
 msgid "stats.publicationStats"
 msgstr "Artikuluaren estatistikak"
@@ -2159,35 +2185,39 @@ msgstr ""
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
+"Bidali bidalketaren baieztapen-mezu elektronikoaren kopia aldizkari honen "
+"kontaktu nagusiari."
 
 msgid ""
 "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled."
 "description"
 msgstr ""
+"Ez da kontaktu nagusirik definitu aldizkari honetarako. Kontaktu nagusi bat "
+"sar dezakezu <a href=\"{$url}\">aldizkariaren ezarpenetan</a>."
 
 msgid "plugins.importexport.native.export.issues.results"
-msgstr ""
+msgstr "Esportatu zenbakiaren emaitzak"
 
 msgid "plugins.importexport.issue.cli.display"
-msgstr ""
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
 
 msgid "plugins.importexport.issueGalleys.exportFailed"
-msgstr ""
+msgstr "Prozesuak huts egin du zenbakiaren galeradak aztertzean"
 
 msgid "emailTemplate.variable.context.contextName"
-msgstr ""
+msgstr "Aldizkariaren izena"
 
 msgid "emailTemplate.variable.context.contextUrl"
-msgstr ""
+msgstr "Aldizkariaren hasierako orriaren URLa"
 
 msgid "emailTemplate.variable.context.contactName"
-msgstr ""
+msgstr "Aldizkariaren kontaktu nagusiaren izena"
 
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr ""
+msgstr "Aldizkariaren inizialak"
 
 msgid "emailTemplate.variable.context.contextSignature"
-msgstr ""
+msgstr "Aldizkariaren sinadura mezu elektroniko automatizatuetarako"
 
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr ""
@@ -2597,3 +2627,16 @@ msgid "manager.setup.contextSummary.description"
 msgstr ""
 "Eman zure aldizkariaren deskribapen labur bat, bere edukia eta helburua "
 "hobeto ulertzeko."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"Ezin izan da {$id} zenbakiaren galerada esportatu, bere fitxategia ez da "
+"aurkitu \"{$path}\" helbidean."
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"{$id} zenbakiaren azaleko irudia ez da esportatu, bere fitxategia ez da "
+"aurkitu \"{$path}\" helbidean."
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "Ezin izan da zenbakiaren galerada inportatu, bere fitxategia falta da."
