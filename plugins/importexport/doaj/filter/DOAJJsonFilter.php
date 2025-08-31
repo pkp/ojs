@@ -179,7 +179,8 @@ class DOAJJsonFilter extends PKPImportExportFilter
             ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
             Application::ASSOC_TYPE_PUBLICATION,
             $publication->getId(),
-            [$publicationLocale]
+            [$publicationLocale],
+            true
         );
 
         $allowedNoOfKeywords = array_slice($keywords[$publicationLocale] ?? [], 0, 6);

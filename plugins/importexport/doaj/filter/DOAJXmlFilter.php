@@ -193,7 +193,9 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
             $articleKeywords = Repo::controlledVocab()->getBySymbolic(
                 ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
                 Application::ASSOC_TYPE_PUBLICATION,
-                $publication->getId()
+                $publication->getId(),
+                [],
+                true
             );
 
             if (array_key_exists($publication->getData('locale'), $articleKeywords)) {

@@ -308,7 +308,7 @@ class ArticleHandler extends Handler
             'copyrightHolder' => $publication->getLocalizedData('copyrightHolder'),
             'copyrightYear' => $publication->getData('copyrightYear'),
             'pubIdPlugins' => PluginRegistry::loadCategory('pubIds', true),
-            'keywords' => $publication->getData('keywords'),
+            'keywords' => $publication->getData('keywords'), # NOTE! Not used in the default theme templates
             'orcidIcon' => OrcidManager::getIcon(),
             'orcidUnauthenticatedIcon' => OrcidManager::getUnauthenticatedIcon(),
             'rorIdIcon' => $rorIdIcon

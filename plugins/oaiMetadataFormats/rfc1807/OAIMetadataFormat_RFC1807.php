@@ -78,12 +78,16 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
             Repo::controlledVocab()->getBySymbolic(
                 ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
                 Application::ASSOC_TYPE_PUBLICATION,
-                $publication->getId()
+                $publication->getId(),
+                [],
+                true
             ),
             Repo::controlledVocab()->getBySymbolic(
                 ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_SUBJECT,
                 Application::ASSOC_TYPE_PUBLICATION,
-                $article->getCurrentPublication()->getId()
+                $article->getCurrentPublication()->getId(),
+                [],
+                true
             )
         );
         $subject = $subjects[$publicationLocale] ?? $subjects[$journal->getPrimaryLocale()] ?? '';
