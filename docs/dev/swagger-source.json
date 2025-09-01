@@ -39,6 +39,7 @@
 				"Submissions / Publications",
 				"Submissions / Publications / Contributors",
 				"Submissions / DashboardViews",
+				"Submissions / Tasks",
 				"Issues",
 				"Users",
 				"Contexts",
@@ -122,6 +123,10 @@
 		},
 		{
 			"name": "Submissions / DashboardViews"
+		},
+		{
+			"name": "Submissions / Tasks",
+			"description": "The endpoint to interact with tasks and discussions"
 		},
 		{
 			"name": "Issues"
@@ -303,6 +308,51 @@
 			]
 		},
 		"Doi": "doi",
+		"EditorialTask": {
+			"type": "object",
+			"description": "A task or discussion associated with the submission",
+			"properties": {
+				"assocId": {
+					"type": "integer"
+				},
+				"assocType": {
+					"type": "integer"
+				},
+				"createdBy": {
+					"type": "integer"
+				},
+				"createdByName": {
+					"type": "string"
+				},
+				"createdByUsername": {
+					"type": "string"
+				},
+				"dateClosed": {
+					"type": "string"
+				},
+				"dateDue": {
+					"type": "string"
+				},
+				"id": {
+					"type": "integer"
+				},
+				"participants": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/TaskParticipant"
+					}
+				},
+				"stageId": {
+					"type": "integer"
+				},
+				"status": {
+					"type": "string"
+				},
+				"title": {
+					"type": "string"
+				}
+			}
+		},
 		"ErrorResponse": {
 			"type": "object",
 			"description": "A response object that will be returned when the request could not be fulfilled.",
@@ -660,6 +710,38 @@
 		"Site": "site",
 		"Submission": "submission",
 		"SubmissionFile": "submissionFile",
+		"TaskParticipant": {
+			"type": "object",
+			"description": "A user assigned to a task or discussion.",
+			"properties": {
+				"fullName": {
+					"type": "string"
+				},
+				"id": {
+					"type": "integer"
+				},
+				"isResponsible": {
+					"type": "boolean"
+				},
+				"roles": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"id": {
+								"type": "integer"
+							},
+							"name": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"username": {
+					"type": "string"
+				}
+			}
+		},
 		"ThemeOptions": {
 			"type": "object",
 			"description": "A theme with values for any of its theme options. The theme is provided in the `themePluginPath` key. Other keys may or may not exist depending on what options have been defined by that theme.",
@@ -2591,13 +2673,479 @@
 				}
 			}
 		},
+		"/submissions/{submissionId}/stage/{stageId}/tasks": {
+			"get": {
+				"tags": [
+					"Submissions / Tasks"
+				],
+				"summary": "Retrieve all submission's task associated with the certain workflow stage" ,
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "stageId",
+						"in": "path",
+						"description": "Stage ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "List of submission's tasks associated with the requested stage.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/EditorialTask"
+							}
+						}
+					},
+					"401": {
+						"x-summary": "Request Unauthorized",
+						"description": "A workflow stage is invalid",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You are not allowed to access the requested submission or stage.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested submission could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/tasks/{taskId}": {
+			"get": {
+				"tags": [
+					"Submissions / Tasks"
+				],
+				"summary": "Retrieve the task or discussion by ID.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "taskId",
+						"in": "path",
+						"description": "Task ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The task.",
+						"schema": {
+							"$ref": "#/definitions/EditorialTask"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You are not allowed to access the task or discussion because don't participate in it.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The task could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"Submissions / Tasks"
+				],
+				"summary": "Add a comment to a task or discussion.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "taskId",
+						"in": "path",
+						"description": "Task ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "body",
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"type": {
+									"type": "integer",
+									"description": "An integer representing the type of the task. Use `1` for a discussion and `2` for a task.",
+									"required": true
+								},
+								"title": {
+									"type": "string",
+									"description": "The title of the task or discussion.",
+									"required": false
+								},
+								"stageId": {
+									"type": "integer",
+									"description": "The workflow stage ID that this task belongs to. Creator must have access to it.",
+									"required": true
+								},
+								"dateDue": {
+									"type": "string",
+									"format": "date-time",
+									"description": "The due date of the task in the format Y-m-d. Only applicable to tasks.",
+									"required": false
+								},
+								"participants": {
+									"type": "array",
+									"description": "An array of user IDs that should be assigned to this task or discussion. The creator will be automatically added to the participants list.",
+									"required": true,
+									"items": {
+										"type": "object",
+										"properties": {
+											"userId": {
+												"type": "integer",
+												"description": "The user ID of the participant.",
+												"required": true
+											},
+											"isResponsible": {
+												"type": "boolean",
+												"description": "Whether this participant is responsible for the task. Only one participant can be responsible. Discussions do not have a responsible participant.",
+												"required": false
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Details of the comment that was just added.",
+						"schema": {
+							"$ref": "#/definitions/EditorialTask"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You are not allowed to access the task or discussion because don't participate in it.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The task could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"Submissions / Tasks"
+				],
+				"summary": "Edit a task or discussion.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "taskId",
+						"in": "path",
+						"description": "Task ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "body",
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"type": {
+									"type": "integer",
+									"description": "An integer representing the type of the task. Use `1` for a discussion and `2` for a task.",
+									"required": true
+								},
+								"title": {
+									"type": "string",
+									"description": "The title of the task. Discussions do not have titles.",
+									"required": false
+								},
+								"dateDue": {
+									"type": "string",
+									"format": "date-time",
+									"description": "The due date of the task in the format Y-m-d. Only applicable to tasks.",
+									"required": false
+								},
+								"participants": {
+									"type": "array",
+									"description": "An array of user IDs that should be assigned to this task or discussion. The creator will be automatically added to the participants list.",
+									"required": true,
+									"items": {
+										"type": "object",
+										"properties": {
+											"userId": {
+												"type": "integer",
+												"description": "The user ID of the participant.",
+												"required": true
+											},
+											"isResponsible": {
+												"type": "boolean",
+												"description": "Whether this participant is responsible for the task. Only one participant can be responsible. Discussions do not have a responsible participant.",
+												"required": false
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Details of the comment that was just added.",
+						"schema": {
+							"$ref": "#/definitions/EditorialTask"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You are not allowed to access the task or discussion because don't participate in it.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The task could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/tasks/{taskId}/close": {
+			"put": {
+				"tags": [
+					"Submissions / Tasks"
+				],
+				"summary": "Close a task or discussion.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "taskId",
+						"in": "path",
+						"description": "Task ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The task that was just closed.",
+						"schema": {
+							"$ref": "#/definitions/EditorialTask"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You are not allowed to access the task or discussion because don't participate in it.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The task could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"409": {
+						"x-summary": "Request Conflict",
+						"description": "The task is already closed.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/tasks/{taskId}/open": {
+			"put": {
+				"tags": [
+					"Submissions / Tasks"
+				],
+				"summary": "Reopen a closed task or discussion.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "taskId",
+						"in": "path",
+						"description": "Task ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The task that was just reopened.",
+						"schema": {
+							"$ref": "#/definitions/EditorialTask"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You are not allowed to access the task or discussion because don't participate in it.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The task could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"409": {
+						"x-summary": "Request Conflict",
+						"description": "The task is already open.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/tasks/{taskId}/start": {
+			"put": {
+				"tags": [
+					"Submissions / Tasks"
+				],
+				"summary": "Start a task.",
+				"description": "Sets the `dateStarted` property of the task to the current date and time. Applicable only for tasks. This action cannot be undone.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "taskId",
+						"in": "path",
+						"description": "Task ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The task that was just started.",
+						"schema": {
+							"$ref": "#/definitions/EditorialTask"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You are not allowed to access the task or discussion because don't participate in it.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The task could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"409": {
+						"x-summary": "Request Conflict",
+						"description": "The task has already been started.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
 		"/issues": {
 			"get": {
 				"tags": [
 					"Issues"
 				],
 				"summary": "Get a list of issues.",
-				"description": "Results are eordered by `datePublished`.",
+				"description": "Results are ordered by `datePublished`.",
 				"parameters": [
 					{
 						"name": "count",
