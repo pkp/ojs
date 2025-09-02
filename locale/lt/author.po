@@ -1,7 +1,7 @@
 # Darius Zviedris <darius.zviedris@lki.lt>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-02 13:55+0000\n"
+"PO-Revision-Date: 2025-09-02 14:49+0000\n"
 "Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "lt/>\n"
@@ -86,7 +86,7 @@ msgid "author.submit.supplementaryFiles"
 msgstr "Įkelti papildomus failus"
 
 msgid "author.submit.nextSteps"
-msgstr "Kas toliau?"
+msgstr "Kas toliau"
 
 msgid "author.submit.notAccepting"
 msgstr "Šiuo metu straipsnių teikti šiam žurnalui negalima."
