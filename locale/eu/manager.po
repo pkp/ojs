@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2025-08-28 15:00+0000\n"
+"PO-Revision-Date: 2025-09-02 12:58+0000\n"
 "Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/manager/eu/>"
 "\n"
@@ -2269,178 +2269,195 @@ msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "Harpidetza honetarako IP barruti baliozkoak"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "Egileak ordainketa egin dezakeen orriaren URLa"
 
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "Bidalketa-jarraibideen URLa"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "Argitaratutako artikuluen estatistika-orrirako esteka"
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "Zenbakiaren IDa"
 
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
+"Mezu elektroniko hau automatikoki bidaltzen zaie hilero editoreei eta "
+"aldizkariaren kudeatzaileei, sistemaren osasunaren ikuspegi orokorra emateko."
 
 msgid "mailable.validateEmailContext.name"
-msgstr ""
+msgstr "Baliozkotu posta elektronikoa (aldizkariaren erregistroa)"
 
 msgid "mailable.validateEmailContext.description"
 msgstr ""
+"Mezu elektroniko hau automatikoki bidaltzen zaio erabiltzaile berri bati "
+"aldizkarian izena ematen duenean, ezarpenek helbide elektronikoa "
+"baliozkotzea eskatzen dutenean."
 
 msgid "doi.displayName"
-msgstr ""
+msgstr "DOI"
 
 msgid "doi.description"
 msgstr ""
+"Plugin honek OJSko zenbakiei, artikuluei eta galeradei Objektu Digitalen "
+"Identifikatzaileak (DOI) esleitzeko aukera ematen du."
 
 msgid "doi.readerDisplayName"
-msgstr ""
+msgstr "DOI"
 
 msgid "doi.manager.displayName"
-msgstr ""
+msgstr "DOIak"
 
 msgid "doi.manager.settings.description"
 msgstr ""
+"Mesedez, konfiguratu DOI plugina OJSn DOIak kudeatu eta erabili ahal izateko:"
 
 msgid "doi.manager.settings.explainDois"
 msgstr ""
+"Hautatu Objektu Digitalen Identifikatzaileak (DOI) esleituta izango dituzten "
+"argitalpen-objektuak:"
 
 msgid "doi.manager.settings.enableRepresentationDoi"
-msgstr ""
+msgstr "Artikuluaren galeradak"
 
 msgid "doi.manager.settings.galleysWithDescription"
-msgstr ""
+msgstr "Artikuluaren galeradak, hala nola argitaratutako PDF bat"
 
 msgid "doi.manager.settings.doiPrefix"
-msgstr ""
+msgstr "DOI aurrizkia"
 
 msgid "doi.manager.settings.doiPrefixPattern"
-msgstr ""
+msgstr "DOI aurrizkia nahitaezkoa da eta 10.xxxx formatuan egon behar du."
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr ""
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
 msgstr ""
+"Adibidez, vol%viss%ipp%p-k honelako DOI bat sor dezake: 10.1234/vol3iss2pp230"
 
 msgid "doi.manager.settings.doiSuffixPattern.issues"
-msgstr ""
+msgstr "zenbakientzat"
 
 msgid "doi.manager.settings.doiSuffixPattern.submissions"
-msgstr ""
+msgstr "artikuluentzat"
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
-msgstr ""
+msgstr "galeradentzat"
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
-msgstr ""
+msgstr "Mesedez, sartu DOI atzizkiaren eredua zenbakietarako."
 
 msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
-msgstr ""
+msgstr "Mesedez, sartu DOI atzizkiaren eredua artikuluetarako."
 
 msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
-msgstr ""
+msgstr "Mesedez, sartu DOI atzizkiaren eredua galeradetarako."
 
 msgid "doi.manager.settings.doiReassign"
-msgstr ""
+msgstr "Berriro esleitu DOIak"
 
 msgid "doi.manager.settings.doiReassign.description"
 msgstr ""
 
 msgid "doi.manager.settings.doiReassign.confirm"
-msgstr ""
+msgstr "Ziur zaude dauden DOI guztiak ezabatu nahi dituzula?"
 
 msgid "doi.manager.settings.doiAssignJournalWide"
-msgstr ""
+msgstr "Esleitu DOIak"
 
 msgid "doi.manager.settings.doiAssignJournalWide.description"
 msgstr ""
 
 msgid "doi.manager.settings.doiAssignJournalWide.confirm"
 msgstr ""
+"Ziur zaude DOIak esleitu nahi dizkiezula DOIrik ez duten argitaratutako "
+"objektu guztiei?"
 
 msgid "doi.manager.settings.registrationAgency"
-msgstr ""
+msgstr "Erregistro-agentzia"
 
 msgid "doi.manager.settings.registrationAgency.description"
 msgstr ""
+"Mesedez, hautatu DOIak gordetzeko erabili nahi duzun erregistro-agentzia."
 
 msgid "doi.manager.settings.registrationAgency.none"
-msgstr ""
+msgstr "Bat ere ez"
 
 msgid "doi.editor.doi"
-msgstr ""
+msgstr "DOI"
 
 msgid "doi.editor.doi.description"
-msgstr ""
+msgstr "DOIak {$prefix} aurrizkiarekin hasi behar du."
 
 msgid "doi.editor.doi.assignDoi"
 msgstr "Esleitu"
 
 msgid "doi.editor.doiObjectTypeIssue"
-msgstr ""
+msgstr "zenbakia"
 
 msgid "doi.editor.doiObjectTypeSubmission"
 msgstr "artikulu"
 
 msgid "doi.editor.doiObjectTypeRepresentation"
-msgstr ""
+msgstr "galerada"
 
 msgid "doi.editor.customSuffixMissing"
-msgstr ""
+msgstr "Ezin da DOIa esleitu, atzizki pertsonalizatua falta delako."
 
 msgid "doi.editor.missingIssue"
-msgstr ""
+msgstr "Ezin duzu DOI bat sortu argitalpen hau zenbaki bati esleitu arte."
 
 msgid "doi.editor.missingParts"
 msgstr ""
 
 msgid "doi.editor.patternNotResolved"
-msgstr ""
+msgstr "Ezin da DOIa esleitu, konpondu gabeko eredu bat duelako."
 
 msgid "doi.editor.canBeAssigned"
 msgstr ""
 
 msgid "doi.editor.assigned"
-msgstr ""
+msgstr "DOIa {$pubObjectType} honi esleituta dago."
 
 msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
 msgstr ""
 
 msgid "doi.editor.clearObjectsDoi"
-msgstr ""
+msgstr "Garbitu"
 
 msgid "doi.editor.clearObjectsDoi.confirm"
-msgstr ""
+msgstr "Ziur zaude lehendik dagoen DOIa ezabatu nahi duzula?"
 
 msgid "doi.editor.clearIssueObjectsDoi"
-msgstr ""
+msgstr "Garbitu zenbakiko objektuen DOIak"
 
 msgid "doi.editor.clearIssueObjectsDoi.confirm"
 msgstr ""
+"Ziur zaude lehendik dauden zenbakiaren objektuen DOIak ezabatu nahi dituzula?"
 
 msgid "doi.editor.clearIssueObjectsDoi.description"
 msgstr ""
 
 msgid "doi.editor.assignDoi"
-msgstr ""
+msgstr "Esleitu {$pubId} DOIa {$pubObjectType} honi"
 
 msgid "doi.editor.assignDoi.emptySuffix"
-msgstr ""
+msgstr "DOIa ezin da esleitu, atzizki pertsonalizatua falta delako."
 
 msgid "doi.editor.assignDoi.pattern"
-msgstr ""
+msgstr "Ezin da {$pubId} DOIa esleitu, konpondu gabeko eredu bat duelako."
 
 msgid "doi.editor.assignDoi.assigned"
 msgstr ""
+"{$pubId} DOIa esleitu da. DOIa editatzeko, bisitatu <a href=\""
+"{$doiManagementLink}\">DOI Kudeaketa orria</a>."
 
 msgid "doi.editor.assignDoi.toBeAssigned"
-msgstr ""
+msgstr "{$pubId} DOIa argitaratzean esleituko da."
 
 msgid "doi.editor.missingPrefix"
-msgstr ""
+msgstr "DOIa {$doiPrefix} balioarekin hasi behar da."
 
 msgid "doi.editor.preview.publication"
 msgstr ""
@@ -2649,3 +2666,6 @@ msgstr ""
 
 msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
 msgstr "Ezin izan da zenbakiaren galerada inportatu, bere fitxategia falta da."
+
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr "Zenbakiaren aurkibidea, hala nola lotutako bidalketa guztien zerrenda."
