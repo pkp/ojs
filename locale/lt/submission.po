@@ -1,7 +1,7 @@
 # Darius Zviedris <darius.zviedris@lki.lt>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-03 06:41+0000\n"
+"PO-Revision-Date: 2025-09-03 07:14+0000\n"
 "Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/lt/>\n"
@@ -164,3 +164,6 @@ msgid "submission.submit.form.wordCountAlert"
 msgstr ""
 "Santrauka per ilga. Sutrumpinkite, kad nebūtų ilgesnė nei nustatytas žodžių "
 "skaičius."
+
+msgid "submission.submit.noContext"
+msgstr "Šio pateikto žurnalo rasti nepavyko."
