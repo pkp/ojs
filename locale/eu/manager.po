@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2025-09-03 06:41+0000\n"
+"PO-Revision-Date: 2025-09-03 11:56+0000\n"
 "Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/manager/eu/>"
 "\n"
@@ -23,7 +23,7 @@ msgstr "Sarbidea"
 
 msgid "manager.distribution.copyrightYearBasis.description"
 msgstr ""
-"Aukeratu artikulu baten copyrightaren data lehenetsia nola hautatzen den. "
+"Aukeratu artikulu baten egile-eskubideen data lehenetsia nola hautatzen den. "
 "Lehenetsitako balio hau kasuz kasu gainidatzi daiteke. Artikuluz artikulu "
 "argitaratzen baduzu, ez erabili zenbakiaren argitalpen data."
 
@@ -1930,9 +1930,8 @@ msgstr ""
 msgid "manager.publication.library"
 msgstr "Argitaletxearen liburutegia"
 
-#, fuzzy
 msgid "manager.setup.copyrightYearBasis"
-msgstr "Artikulu berriaren copyright urtea oinarri hartuta"
+msgstr "Jarri artikulu berriaren egile-eskubideen urtea honetan oinarrituta"
 
 msgid "manager.setup.copyrightYearBasis.article"
 msgstr ""
