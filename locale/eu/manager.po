@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2025-09-03 11:56+0000\n"
+"PO-Revision-Date: 2025-09-03 12:57+0000\n"
 "Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/manager/eu/>"
 "\n"
@@ -31,7 +31,7 @@ msgid "manager.distribution.copyrightYearBasis.issue"
 msgstr "Erabili zenbakiaren argitalpen-data"
 
 msgid "manager.distribution.copyrightYearBasis.submission"
-msgstr "Erabili artikuluaren argitalpen data"
+msgstr "Erabili artikuluaren argitalpen-data"
 
 msgid "manager.distribution.publication"
 msgstr "Argitalpena"
@@ -2358,6 +2358,9 @@ msgstr "Berriro esleitu DOIak"
 
 msgid "doi.manager.settings.doiReassign.description"
 msgstr ""
+"DOI konfigurazioa aldatzen baduzu, esleitutako DOIak ez dira aldatuko. DOI "
+"konfigurazioa gorde ondoren, erabili botoi hau dauden DOI guztiak "
+"ezabatzeko, ezarpen berriak dauden objektuetan eragina izan dezan."
 
 msgid "doi.manager.settings.doiReassign.confirm"
 msgstr "Ziur zaude dauden DOI guztiak ezabatu nahi dituzula?"
@@ -2367,6 +2370,11 @@ msgstr "Esleitu DOIak"
 
 msgid "doi.manager.settings.doiAssignJournalWide.description"
 msgstr ""
+"Esleitu DOIa DOIrik ez duten aldizkariko argitaratutako objektu guztiei. "
+"Ekintza hau ezin da erabili banakako atzizkien konfigurazioarekin erabili. "
+"Goiko DOI konfigurazioa aldatu baduzu, gorde aldaketak ekintza hau hasi "
+"aurretik. DOIak esleitzeak denbora asko iraun dezake, aldizkarian "
+"argitaratutako objektu-kopuruaren arabera."
 
 msgid "doi.manager.settings.doiAssignJournalWide.confirm"
 msgstr ""
@@ -2409,18 +2417,25 @@ msgstr "Ezin duzu DOI bat sortu argitalpen hau zenbaki bati esleitu arte."
 
 msgid "doi.editor.missingParts"
 msgstr ""
+"Ezin duzu DOI bat sortu DOI ereduaren zati bati edo gehiagori datuak falta "
+"zaizkielako. Baliteke argitalpena zenbaki bati esleitu, argitaratzaile ID "
+"bat ezarri edo orrialde zenbakiak sartu behar izatea."
 
 msgid "doi.editor.patternNotResolved"
 msgstr "Ezin da DOIa esleitu, konpondu gabeko eredu bat duelako."
 
 msgid "doi.editor.canBeAssigned"
 msgstr ""
+"Ikusten duzuna DOIaren aurrebista bat da. Hautatu kontrol-laukia eta gorde "
+"formularioa DOIa esleitzeko."
 
 msgid "doi.editor.assigned"
 msgstr "DOIa {$pubObjectType} honi esleituta dago."
 
 msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
 msgstr ""
+"Emandako DOI atzizkia argitaratutako beste elementu batean erabiltzen da "
+"dagoeneko. Mesedez, sartu DOI atzizki bakarra elementu bakoitzerako."
 
 msgid "doi.editor.clearObjectsDoi"
 msgstr "Garbitu"
@@ -2437,6 +2452,8 @@ msgstr ""
 
 msgid "doi.editor.clearIssueObjectsDoi.description"
 msgstr ""
+"Erabili aukera hau zenbaki honetarako programatuta dauden objektu (artikulu "
+"eta galerada) guztien DOIak garbitzeko."
 
 msgid "doi.editor.assignDoi"
 msgstr "Esleitu {$pubId} DOIa {$pubObjectType} honi"
@@ -2459,46 +2476,52 @@ msgid "doi.editor.missingPrefix"
 msgstr "DOIa {$doiPrefix} balioarekin hasi behar da."
 
 msgid "doi.editor.preview.publication"
-msgstr ""
+msgstr "Argitalpen honen DOIa {$doi} izango da."
 
 msgid "doi.editor.preview.publication.none"
-msgstr ""
+msgstr "Argitalpen honi ez zaio DOIrik esleitu."
 
 msgid "doi.editor.preview.galleys"
-msgstr ""
+msgstr "Galerada: {$galleyLabel}"
 
 msgid "doi.editor.preview.objects"
-msgstr ""
+msgstr "Elementua"
 
 msgid "api.galley.403.publicationDidNotMatch"
-msgstr ""
+msgstr "Eskatu duzun galerada ez da argitalpen honen parte."
 
+#, fuzzy
 msgid "api.galley.403.canEditPublishedDoi"
 msgstr ""
+"Argitalpen/galerada bat argitaratu ondoren, DOIak bakarrik edita daitezke"
 
 msgid "api.issue.400.invalidDoi"
-msgstr ""
+msgstr "Bidalitako DOIa ez da baliozkoa"
 
+#, fuzzy
 msgid "api.issue.403.canEditPublishedDoi"
-msgstr ""
+msgstr "DOIak bakarrik edita daitezke argitalpen bat argitaratu ondoren"
 
 msgid "api.issue.404.issuesNotFound"
-msgstr ""
+msgstr "Eskatu dituzun zenbakiak ez dira aurkitu"
 
 msgid "doi.manager.submissionDois"
 msgstr "Artikuluen DOIak"
 
 msgid "doi.manager.issueDois"
-msgstr ""
+msgstr "Zenbakiaren DOIak"
 
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr ""
+"Mezu elektroniko honek egileari jakinarazten dio bere bidalketa baztertu "
+"egingo dela berrikuspen fasea hasi aurretik, bidalketak ez dituelako "
+"aldizkarian argitaratzeko baldintzak betetzen."
 
 msgid "manager.institutions.noContext"
-msgstr ""
+msgstr "Erakunde honen aldizkaria ezin izan da aurkitu."
 
 msgid "mailable.subscriptionNotify.name"
-msgstr ""
+msgstr "Harpidetza jakinarazpena"
 
 msgid "mailable.subscriptionNotify.description"
 msgstr ""
@@ -2507,7 +2530,7 @@ msgstr ""
 "argibideak ematen ditu."
 
 msgid "mailable.subscriptionExpiresSoon.name"
-msgstr ""
+msgstr "Harpidetza laster iraungiko da"
 
 msgid "mailable.subscriptionExpiresSoon.description"
 msgstr ""
@@ -2515,7 +2538,7 @@ msgstr ""
 "Aldizkariaren URLa eta aldizkarian sartzeko argibideak ematen ditu."
 
 msgid "mailable.subscriptionExpired.name"
-msgstr ""
+msgstr "Harpidetza iraungita"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
@@ -2523,7 +2546,7 @@ msgstr ""
 "Aldizkariaren URLa eta aldizkarian sartzeko argibideak ematen ditu."
 
 msgid "mailable.subscriptionExpiredLast.name"
-msgstr ""
+msgstr "Iraungitako azken harpidetza"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
