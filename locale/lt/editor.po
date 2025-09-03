@@ -1,3 +1,496 @@
 # Darius Zviedris <darius.zviedris@lki.lt>, 2025.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2025-09-03 06:41+0000\n"
+"Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
+"Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
+"lt/>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
+"19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
+"1 : 2);\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "editor.home"
+msgstr "Redaktoriaus pagrindinis puslapis"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Paraiškos ir publikavimas"
+
+msgid "editor.submissionQueue"
+msgstr "Laukiamos paraiškos"
+
+msgid "editor.submissionArchive"
+msgstr "Paraiškų archyvas"
+
+msgid "editor.publishing"
+msgstr "Publikavimas"
+
+msgid "editor.publishedIssues"
+msgstr "Išleisti numeriai"
+
+msgid "editor.me"
+msgstr "Mano paskyra"
+
+msgid "editor.notifyUsers"
+msgstr "Informuoti vartotojus:"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "visus žurnalą prenumeruojančius asmenis (iš viso {$count})"
+
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr ""
+"Jei paliksite tuščią, data bus nustatyta automatiškai, kai numeris bus "
+"išleistas."
+
+msgid "editor.issues.datePublished.invalid"
+msgstr "Paskelbimo data negalioja. Data turi būti pateikta formatu YYYY-MM-DD."
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr "Išleidimo data privaloma, kai numeris publikuojamas."
+
+msgid "editor.issues.accessDate"
+msgstr "Atvirosios prieigos data"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Aktyvuoti atidėtą atvirąją prieigą"
+
+msgid "editor.issues.coverPage"
+msgstr "Viršelio paveikslėlis"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(galimi formatai: .gif, .jpg arba .png)"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"Viršelio paveikslėlis, kurį prašėte ištrinti, atitinka kito žurnalo numerį. "
+"Įsitikinkite, kad dirbate su tinkamu žurnalu, naudojate teisingą numerio ID "
+"ir bandykite dar kartą."
+
+msgid "issues.submissions.issueIds"
+msgstr "Priskirta problemai"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Rodyti suplanuotą leidinį"
+
+msgid "editor.article.publishVersion"
+msgstr "Publikuoti versiją"
+
+msgid "editor.article.viewMetadata"
+msgstr "Peržiūrėti versijos metaduomenis"
+
+msgid "editor.article.editMetadata"
+msgstr "Redaguoti versijos metaduomenis"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Bus skelbiama (žurnalo numeris)"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Bus paskirti"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"Nesumokėtas spausdinimo mokestis. Kad straipsnis būtų spausdinamas, priminti "
+"autoriui apie mokestį arba mokesčio nereikalauti."
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"Nurodyto ištrinti viršelio atvaizdo nerasta. Gali būti, kad jis jau "
+"ištrintas. Pamėginkite perkrauti puslapį."
+
+msgid "grid.action.removeArticle"
+msgstr "Straipsnį iš šio numerio išbraukti"
+
+msgid "editor.article.remove"
+msgstr "Išbraukti"
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"Ar tikrai norite straipsnį iš šio numerio išbraukti? Jį bus galima numatyti "
+"kitam numeriui."
+
+msgid "editor.article.payment.requestPayment"
+msgstr "Prašyti mokėjimo"
+
+msgid "editor.allSections"
+msgstr "Visi skirsniai"
+
+msgid "editor.allEditors"
+msgstr "Visi redaktoriai"
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"Šis viešasis identifikatorius {$publicIdentifier} jau taikomas kitam "
+"objektui (numeriui, straipsniui, skilčiai, aplankui) identifikuoti. Prašom "
+"pasirinkti unikalų savo žurnalo identifikatorių."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Archyve straipsnių nėra."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"Išsaugoti archyvuotų straipsnių pakeitimus? Straipsniai, pažymėti „Naikinti“"
+", iš sistemos bus ištrinti negrįžtamai."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Ar tikrai norite, kad šis sprendimas būtų įrašytas?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"E. laišku informavus autorių arba nuspaudus mygtuką „Praleisti“, pateiktas "
+"straipsnis pateks į archyvą."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Prieš siųsdamas straipsnį redaguoti, laišku „Informuoti autorių“ praneškite "
+"autoriui apie sprendimą ir pasirinkite variantą, kuris bus siunčiamas "
+"redaguoti."
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "visus skaitytojus (iš viso {$count})"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "visus spausdintų straipsnių autorius (iš viso {$count})"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "visas žurnalą prenumeruojančias institucijas (iš viso {$count})"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Informuojama..."
+
+msgid "editor.usersNotified"
+msgstr "Informuota"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+"Siųsti šį pranešimą visiems su žurnalu susijusiems vartotojams (iš viso "
+"{$count})"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"Siųsti šį pranešimą tiems su žurnalu susijusiems vartotojams, kurie pareiškė "
+"norą gauti tokius pranešimus (iš viso {$count})"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Įtraukti šio numerio turinį:"
+
+msgid "editor.editorAdministration"
+msgstr "Redakcija"
+
+msgid "editor.issues.createIssue"
+msgstr "Kurti numerį"
+
+msgid "editor.issues.editIssue"
+msgstr "Rengti leidinį {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "Naujasis numeris"
+
+msgid "editor.issues.numArticles"
+msgstr "Straipsniai"
+
+msgid "editor.issues.noArticles"
+msgstr "Šiam numeriui nenumatyta jokių straipsnių."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Ar tikrai norite šį numerį ištrinti visam laikui?"
+
+msgid "editor.issues.published"
+msgstr "Paskelbta"
+
+msgid "editor.issues.unpublished"
+msgstr "Nepaskelbta"
+
+msgid "editor.issues.datePublished"
+msgstr "Paskelbimo data"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Nurodykite tomą (teigiamą skaičių)"
+
+msgid "editor.issues.numberRequired"
+msgstr "Nurodykite numerį (teigiamą skaičių)."
+
+msgid "editor.issues.yearRequired"
+msgstr "Nurodykite metus (teigiamą skaičių)"
+
+msgid "editor.issues.titleRequired"
+msgstr "Užrašykite leidinio pavadinimą."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr ""
+"Nurodykite leidinio identifikatorių. Prašom pasirinkti bent vieną numerio "
+"identiikatorių."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Leidinio identifikavimas"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Viešasis leidinio identifikatorius"
+
+msgid "editor.issues.description"
+msgstr "Aprašymas"
+
+msgid "editor.issues.accessStatus"
+msgstr "Prieigos statusas"
+
+msgid "editor.issues.uploaded"
+msgstr "Įkelta"
+
+msgid "editor.issues.remove"
+msgstr "Ištrinti"
+
+msgid "editor.issues.proofed"
+msgstr "Ištaisyta"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Ištrinti viršelio paveikslėlį?"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"Nurodytas ištrinti viršelio atvaizdas nesutampa su šio leidinio atvaizdu. "
+"Prašom perkrauti puslapį ir mėginti iš naujo."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"Nurodyto ištrinti viršelioatvaizdo nerasta. Gali būti, kad jis jau "
+"ištrintas. Pamėginkite perkrauti puslapį."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+"Netinkamas viršelio atvaizdo formatas. Jis gali būti .gif, .jpg arba .png."
+
+msgid "editor.issues.styleFile"
+msgstr "Stiliaus sąrašas"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"Netinkamas stiliaus sąrašo formatas. Patikrinkite, ar pateiktas pakopinių "
+"stilių sąrašas (CSS) yra galimas. (Gali būti atmetamas stilių sąrašas, kurio "
+"pradžioje pateikiamos pastabos.)"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Pašalinti stilių failą?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Viršelio pavadinimas"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Sukurti leidinio viršelį iš šių elementų."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Rodyti"
+
+msgid "editor.issues.openAccess"
+msgstr "Atviroji prieiga"
+
+msgid "editor.issues.subscription"
+msgstr "Prenumerata"
+
+msgid "editor.issues.identification"
+msgstr "Identifikavimas"
+
+msgid "editor.issues.access"
+msgstr "Prieiga"
+
+msgid "editor.issues.cover"
+msgstr "Viršelis"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"Visi straipsniai vėl pateks į redaguotinų straipsnių eilę, o susiję "
+"dokumentai bus visam laikui panaikinti. Ar tikrai norite šį numerį ištrinti?"
+
+msgid "editor.issues.saveChanges"
+msgstr "Išsaugoti turinio pakeitimus?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"Šio žurnalo numerio skyriai rikiuojami nestandartiškai. <a href=\"{$url}\" "
+"class=\"action\">Atstatyti numatytąjį rikiavimą.</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"This issue uses custom section ordering. <a href=\"{$url}\" class=\"action\""
+">Reset to defaults</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Numerio duomenys"
+
+msgid "editor.issues.default"
+msgstr "Numatyta"
+
+msgid "editor.issues.order"
+msgstr "Eilė"
+
+msgid "editor.issues.publicId"
+msgstr "Viešasis identifikatorius"
+
+msgid "editor.issues.publishIssue"
+msgstr "Skelbti numerį"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Numerio neskelbti"
+
+msgid "editor.issues.previewIssue"
+msgstr "Peržiūrėti numerį"
+
+msgid "editor.issues.preview"
+msgstr "Peržiūra"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Ar tikrai naująjį numerį norite skelbti?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Ar tikrai norite šį paskelbtą numerį padaryti neprieinamą?"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Ar tikrai norite nustatyti, kad šis numeris būtų naujausias?"
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Toks numerio skilties viešasis identifikatorius jau yra."
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Išsaugoti viešojo identifikatoriaus straipsniui negalima."
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Rengiamų numerių nėra."
+
+msgid "editor.issues.open"
+msgstr "Atverti"
+
+msgid "editor.issues.pages"
+msgstr "Puslapiai"
+
+msgid "editor.issues.galleys"
+msgstr "Numerio skiltys"
+
+msgid "editor.issues.galley"
+msgstr "Numerio skiltis"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Matomos numerio skiltys"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Skelbti skiltis ir pateikti viso numerio turinį."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Paskelbtų numerio skilčių nėra."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Pridėkite numerio skilties žymę."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Pridėkite numerio skilties lokalę."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Grįžti į numerio skiltis"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Ar tikrai norite šią numerio skiltį ištrinti?"
+
+msgid "editor.issues.identifiers"
+msgstr "Identifikatoriai"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Būsimi numeriai"
+
+msgid "grid.action.addGalley"
+msgstr "Pridėti skiltį"
+
+msgid "grid.action.publish"
+msgstr "Leidinį skelbti"
+
+msgid "grid.action.addIssue"
+msgstr "Kurti leidinį"
+
+msgid "grid.action.viewIssue"
+msgstr "Rodyti"
+
+msgid "grid.action.previewIssue"
+msgstr "Peržvelgti"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Sukurti numerio skiltį"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Nustatyti kaip naujausią numerį"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Ankstesni numeriai"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Nustatyti šį dokumentą kaip versiją recenzuoti"
+
+msgid "editor.article.decision"
+msgstr "Sprendimas"
+
+msgid "editor.submissions.showBy"
+msgstr "Rodyti pagal"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Pateikimo mėnuo ir diena"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Esami paskyrimai"
+
+msgid "editor.submissions.invite"
+msgstr "Kviesti"
+
+msgid "editor.submissions.accept"
+msgstr "Priimti"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Pateiktų straipsnių nėra"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Naujausias"
+
+msgid "editor.submissions.averageTime"
+msgstr "Savaitės"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Paskutinį kartą pildyta"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Paskirta (kam)"
+
+msgid "editor.submissions.inSection"
+msgstr "Šiame skyriuje"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Neteisingai nurodyta atvirosios prieigos data."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Redaguoti numerio skiltį."
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"Maketo redaktorius paruošia šiuos failus kiekveinai skilčiai ir tada įkelia "
+"tinkamus korektūros <span class=\"pkp_help_title\">taisymus</span>."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Pasirinkti skilčių dokumentus."
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"Galutinę šiame sąraše pateiktų juodraščių versiją kalbos redaktorius išsaugo "
+"kaip suredaguotą versiją ir įkelia žemiau, į skyrelį <span class="
+"\"pkp_help_title\">Kalbos redagavimas</span>."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"Visi straipsniai, kad ir kuris jų rengimo etapas vyktų, gali būti pateikiami "
+"korektūroms skaityti. Susiraskite langelį „Įtraukti“, nurodykite „Ieškoti“, "
+"ir bus pateikti visi tekstai. Liks įtraukti reikiamus."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"Šis viešasis identifikatorius {$publicIdentifier} jau naudojamas kitam "
+"tokios pat rūšies objektui nustatyti. Prašom savo žurnalui pasirinkti "
+"unikalų tokios rūšies objektų identifikatorių."
+
+msgid "editor.article.coverImage"
+msgstr "Viršelio atvaizdas"
