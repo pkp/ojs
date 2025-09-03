@@ -80,7 +80,7 @@ class SubscriberSelectGridHandler extends GridHandler
         $this->setTitle('editor.submission.findAndSelectUser');
 
         // Columns
-        $cellProvider = new UserSelectGridCellProvider($request->getUserVar('userId'));
+        $cellProvider = new UserSelectGridCellProvider($request->getContext()->getId(), $request->getUserVar('userId'));
         $this->addColumn(
             new GridColumn(
                 'select',
