@@ -4,8 +4,8 @@
 
 | Version | Supported                                             | Released      | End Of Life   | Support |
 | ------- | ----------------------------------------------------- | ------------- | ------------- | :-----: |
-| 3.5.x   | :hourglass:        Pre-release                        | 2025 (est)    | 2028 (est)    | LTS     |
-| 3.4.x   | :heavy_check_mark: Active development                 | 2023          | 2025 (est)    |         |
+| 3.5.x   | :hourglass:        Pre-release                        | 2025 (est)    | 2029 (est)    | LTS     |
+| 3.4.x   | :heavy_check_mark: Active development                 | 2023          | 2026 (est)    |         |
 | 3.3.x   | :heavy_check_mark: Active maintenance                 | 2020          | 2026 (est)    | LTS     |
 | 3.2.x   | :x: Not supported                                     | 2020          | 2023          |         |
 | 3.1.x   | :x: Not supported                                     | 2017          | 2022          |         |
