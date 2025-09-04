@@ -340,11 +340,12 @@ class ArticleSearch extends SubmissionSearch
                         ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
                         Application::ASSOC_TYPE_PUBLICATION,
                         $article->getCurrentPublication()->getId(),
-                        [Locale::getLocale(), $article->getData('locale'), Locale::getPrimaryLocale()]
+                        [Locale::getLocale(), $article->getData('locale'), Locale::getPrimaryLocale()],
+                        true
                     )
                 );
                 foreach ($allSearchTerms as $locale => $localeSearchTerms) {
-                    $searchTerms += $localeSearchTerms;
+                    $searchTerms = array_merge($searchTerms, $localeSearchTerms);
                 }
             }
         }

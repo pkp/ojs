@@ -93,12 +93,16 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
             Repo::controlledVocab()->getBySymbolic(
                 ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
                 Application::ASSOC_TYPE_PUBLICATION,
-                $publication->getId()
+                $publication->getId(),
+                [],
+                true
             ),
             Repo::controlledVocab()->getBySymbolic(
                 ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_SUBJECT,
                 Application::ASSOC_TYPE_PUBLICATION,
-                $publication->getId()
+                $publication->getId(),
+                [],
+                true
             )
         );
         $this->_addLocalizedElements($dc11Description, 'dc:subject', $subjects);

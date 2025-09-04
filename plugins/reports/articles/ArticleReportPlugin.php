@@ -154,25 +154,33 @@ class ArticleReportPlugin extends ReportPlugin
             $subjects = Repo::controlledVocab()->getBySymbolic(
                 ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_SUBJECT,
                 Application::ASSOC_TYPE_PUBLICATION,
-                $submission->getCurrentPublication()->getId()
+                $submission->getCurrentPublication()->getId(),
+                [],
+                true
             );
 
             $disciplines = Repo::controlledVocab()->getBySymbolic(
                 ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_DISCIPLINE,
                 Application::ASSOC_TYPE_PUBLICATION,
-                $submission->getCurrentPublication()->getId()
+                $submission->getCurrentPublication()->getId(),
+                [],
+                true
             );
 
             $keywords = Repo::controlledVocab()->getBySymbolic(
                 ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
                 Application::ASSOC_TYPE_PUBLICATION,
-                $submission->getCurrentPublication()->getId()
+                $submission->getCurrentPublication()->getId(),
+                [],
+                true
             );
 
             $agencies = Repo::controlledVocab()->getBySymbolic(
                 ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_AGENCY,
                 Application::ASSOC_TYPE_PUBLICATION,
-                $submission->getCurrentPublication()->getId()
+                $submission->getCurrentPublication()->getId(),
+                [],
+                true
             );
 
             // Store the submission results
