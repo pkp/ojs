@@ -1,7 +1,7 @@
 # Darius Zviedris <darius.zviedris@lki.lt>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-03 07:14+0000\n"
+"PO-Revision-Date: 2025-09-04 07:42+0000\n"
 "Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/lt/>\n"
@@ -167,3 +167,252 @@ msgstr ""
 
 msgid "submission.submit.noContext"
 msgstr "Šio pateikto žurnalo rasti nepavyko."
+
+msgid "submission.sectionOptions"
+msgstr "Skyriaus parinktys"
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Šio leidinio galutinės versijos negalima redaguoti, nes jis jau buvo "
+"publikuotas."
+
+msgid "galley.publicationNotFound"
+msgstr "Šios galerijos leidinio rasti nepavyko."
+
+msgid "publication.assignToissue"
+msgstr "Priskirti numeriui"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Tai buvo priskirta <a href=\"{$issueUrl}\">{$issueName</a>, bet nebuvo "
+"suplanuota publikuoti."
+
+msgid "publication.invalidSection"
+msgstr "Šio leidinio skyriaus nerasta."
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (Inactive)"
+
+msgid "publication.invalidIssue"
+msgstr "Šio leidinio numerio rasti nepavyko."
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Visi publikavimo reikalavimai įvykdyti. Ar tikrai norite tai publikuoti?"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Visi publikavimo reikalavimai įvykdyti. Šis įrašas bus paskelbtas "
+"nedelsiant, nes publikavimo data nustatyta kaip {$datePublished}. Ar tikrai "
+"norite tai publikuoti?"
+
+msgid "publication.required.issue"
+msgstr "Prieš publikuojant, leidinys turi būti priskirtas numeriui."
+
+msgid "publication.publishedIn"
+msgstr "Paskelbta <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr "Numatyta paskelbti <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.unscheduledIn"
+msgstr "Tai nebuvo suplanuota publikuoti jokiame numeryje."
+
+msgid "publication.selectIssue"
+msgstr "Pasirinkite numerį, kurį norite suplanuoti publikuoti"
+
+msgid "submission.publication"
+msgstr "Leidinys"
+
+msgid "publication.status.published"
+msgstr "Paskelbta"
+
+msgid "submission.status.scheduled"
+msgstr "Suplanuota"
+
+msgid "submission.publications"
+msgstr "Leidinys"
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr "Autorių teisių metai bus nustatyti automatiškai pagal išleidimo datą."
+
+msgid "publication.datePublished"
+msgstr "Paskelbimo data"
+
+msgid "publication.editDisabled"
+msgstr "Ši versija buvo paskelbta ir jos negalima redaguoti."
+
+msgid "publication.event.published"
+msgstr "Pateikimas buvo paskelbtas."
+
+msgid "publication.event.unpublished"
+msgstr "Pateikimas nebuvo paskelbtas."
+
+msgid "publication.event.versionPublished"
+msgstr "Buvo sukurta nauja versija."
+
+msgid "publication.event.versionScheduled"
+msgstr "Buvo numatyta išleisti naują versiją."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Versija buvo pašalinta iš leidinio."
+
+msgid "publication.invalidSubmission"
+msgstr "Šio autoriaus leidinio rasti nepavyko."
+
+msgid "publication.publish"
+msgstr "Paskelbta"
+
+msgid "publication.required.declined"
+msgstr "Atmestas pateikimas negali būti publikuojamas."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Pateikimas turi būti redagavimo arba gamybos etape, kad jį būtų galima "
+"publikuoti."
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Autorių teisės bus automatiškai priskirtos {$copyright}, kai šis kūrinys bus "
+"paskelbtas."
+
+msgid "submission.copyrightOther.description"
+msgstr "Priskirti publikuojamų darbų autorių teises toliau nurodytai šaliai."
+
+msgid "publication.unpublish"
+msgstr "Neskelbta"
+
+msgid "publication.unpublish.confirm"
+msgstr "Ar tikrai nenorite, kad tai būtų publikuojama?"
+
+msgid "publication.unschedule.confirm"
+msgstr "Ar tikrai nenorite, kad tai būtų suplanuota publikuoti?"
+
+msgid "publication.version.details"
+msgstr "Leidinio {$version} versijos informacija"
+
+msgid "submission.queries.production"
+msgstr "Gamybos diskusijos"
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"Atšaukti sprendimą priimti šį pateikimą ir grąžinti jį peržiūros etapui."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Išsiųsta atgal peržiūrai"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "Pateiktas darbas, {$title}, buvo grąžintas peržiūros etapui."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Išsiųskite autoriams el. laišką, kad praneštumėte, jog jų pateiktas darbas "
+"grąžinamas peržiūros etapui. Paaiškinkite, kodėl buvo priimtas toks "
+"sprendimas, ir informuokite autorių apie tolesnę peržiūrą."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Pasirinkite failus, kurie turėtų būti siunčiami peržiūrai."
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+"Nepavyko sukurti DOI šiam pateikimui: {$pubObjectTitle}. Prieš sugeneruojant "
+"DOI, pateikimas turi būti priskirtas problemai."
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+"Nepavyko sukurti DOI {$pubObjectTitle} galerijai šiam pateikimui: "
+"{$itemTitle}. Prieš sugeneruojant DOI, pateikimas turi būti priskirtas "
+"problemai."
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+"Nepavyko sukurti DOI šiam pateikimui: {$pubObjectTitle}. Dabartiniame "
+"žurnalo kontekste jo nėra."
+
+msgid "submission.layout.viewGalley"
+msgstr "Peržiūrėti numeri"
+
+msgid "galley.cantEditPublished"
+msgstr "Šios galerijos negalima redaguoti, nes ji jau buvo publikuota."
+
+msgid "submission.copyright.description"
+msgstr ""
+"Prašome perskaityti ir suprasti autorių teisių sąlygas, taikomas pateikiant "
+"straipsnius šiam žurnalui."
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+"Jums neleidžiama pateikti darbų šiam žurnalui, nes pateikimas visuose šio "
+"žurnalo skyriuose buvo išjungtas arba apribotas. Jei manote, kad tai klaida, "
+"susisiekite su <a href='mailto:{$email}'>{$name</a>."
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+"„{$contextName}“ nepriima pateiktų darbų į „{$section}“ skyrių. Jei jums "
+"reikia pagalbos atkuriant pateiktą darbą, susisiekite su <a "
+"href='mailto:{$email}'>{$name</a>."
+
+msgid "submission.sectionNotFound"
+msgstr "Šio leidinio numerio rasti nepavyko."
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr "Šiam skyriui gali teikti darbus tik redakcijos darbuotojai."
+
+msgid "publication.changeIssue"
+msgstr "Pakeisti numeri"
+
+msgid "publication.event.scheduled"
+msgstr "Publikuoti suplanuotus publikuoti darbus"
+
+msgid "publication.publish.requirements"
+msgstr "Prieš publikuojant, turi būti įvykdyti šie reikalavimai."
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Grįžti į apžvalgą"
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"Išsiųskite autoriams el. laišką, kad šis pateiktas darbas bus išsiųstas "
+"recenzuoti. Jei įmanoma, nurodykite autoriams, kiek laiko gali užtrukti "
+"recenzavimo procesas ir kada jie turėtų tikėtis kito redaktorių atsakymo. "
+"Šis el. laiškas bus išsiųstas tik tada, kai bus užregistruotas sprendimas."
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+"Jums neleidžiama pateikti darbų šiam žurnalui, nes autorius turi "
+"užregistruoti redakcijos darbuotojai. Jei manote, kad tai klaida, "
+"susisiekite su <a href='mailto:{$email}'>{$name</a>."
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Išleidimo data bus nustatyta automatiškai, kai numeris bus išleistas. "
+"Neįveskite išleidimo datos, nebent straipsnis anksčiau buvo publikuotas "
+"kitur ir jums reikia jį datuoti atgal."
+
+msgid "submission.license.description"
+msgstr ""
+"Licencija bus automatiškai nustatyta į <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName</a>, kai tai bus paskelbta."
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} atšaukė sprendimą priimti šį pateiktą darbą ir grąžino jį "
+"peržiūros etapui."
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Visi publikavimo reikalavimai įvykdyti. Šis leidinys bus išleistas, kai bus "
+"išleistas {$issue}. Ar tikrai norite suplanuoti jo publikavimą?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Visi publikavimo reikalavimai įvykdyti. Tai bus nedelsiant paskelbta "
+"leidinyje {$issue}. Ar tikrai norite tai publikuoti?"
+
+msgid "publication.status.unscheduled"
+msgstr "Atšaukti suplanuotą"
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Autorių teisių metai bus nustatyti automatiškai, kai šis straipsnis bus "
+"paskelbtas numeryje."
