@@ -56,3 +56,6 @@
 [submodule "plugins/generic/credit"]
 	path = plugins/generic/credit
 	url = https://github.com/pkp/credit
+[submodule "plugins/generic/openCitations"]
+	path = plugins/generic/openCitations
+	url = https://github.com/pkp/openCitations
