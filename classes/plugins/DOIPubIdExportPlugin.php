@@ -3,8 +3,8 @@
 /**
  * @file classes/plugins/DOIPubIdExportPlugin.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2025 Simon Fraser University
+ * Copyright (c) 2003-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DOIPubIdExportPlugin
@@ -69,17 +69,18 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
     }
 
     /**
-     * Mark selected submissions or issues as registered.
+     * Mark selected submissions or issues and their subobject DOIs as registered.
      *
-     * @param Journal $context
-     * @param array $objects Array of published submissions, issues or galleys
+     * @param array $objects Array of published submissions or issues
      */
-    public function markRegistered($context, $objects)
+    public function markRegistered($objects)
     {
         foreach ($objects as $object) {
-            $doiId = $object->getData('doiId');
-
-            if ($doiId != null) {
+            $doiIds = match (true) {
+                $object instanceof Submission => Repo::doi()->getDoisForSubmission($object->getId()),
+                $object instanceof Issue => Repo::doi()->getDoisForIssue($object->getId(), true),
+            };
+            foreach ($doiIds as $doiId) {
                 Repo::doi()->markRegistered($doiId);
             }
         }
@@ -110,12 +111,10 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
 
     /**
      * Get a list of additional setting names that should be stored with the objects.
-     *
-     * @return array
      */
-    protected function _getObjectAdditionalSettings()
+    public function getObjectAdditionalSettings(): array
     {
-        return array_merge(parent::_getObjectAdditionalSettings(), [
+        return array_merge(parent::getObjectAdditionalSettings(), [
             $this->getPluginSettingsPrefix() . '::' . DOI_EXPORT_REGISTERED_DOI
         ]);
     }
