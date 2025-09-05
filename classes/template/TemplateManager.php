@@ -19,6 +19,8 @@
 namespace APP\template;
 
 use APP\core\Application;
+use APP\publication\Publication;
+use APP\submission\Submission;
 use APP\core\PageRouter;
 use APP\file\PublicFileManager;
 use APP\journal\Journal;
@@ -201,6 +203,13 @@ class TemplateManager extends PKPTemplateManager
                 ['institutions' => $institutionsLink] +
                 array_slice($menu, $paymentsIndex, null, true);
         }
+
+        $this->setConstants([
+            'publication' => [
+                'STATUS_READY_TO_PUBLISH' => Publication::STATUS_READY_TO_PUBLISH,
+                'STATUS_READY_TO_SCHEDULE' => Publication::STATUS_READY_TO_SCHEDULE,
+            ],
+        ]);
 
         $this->setState(['menu' => $menu]);
     }

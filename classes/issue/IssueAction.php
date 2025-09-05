@@ -19,6 +19,7 @@
 namespace APP\issue;
 
 use APP\facades\Repo;
+use Exception;
 use APP\journal\Journal;
 use APP\subscription\IndividualSubscriptionDAO;
 use APP\subscription\InstitutionalSubscriptionDAO;
