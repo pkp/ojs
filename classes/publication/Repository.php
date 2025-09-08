@@ -257,7 +257,14 @@ class Repository extends \PKP\publication\Repository
             // There is issue association and based on the assignment will be deduced
             return $issue->getData('published')
                 ? IssueAssignment::CURRENT_BACK_ISSUES_PUBLISHED
-                : IssueAssignment::FUTURE_ISSUE_SCHEDULED;
+                : (
+                    // If the publication has a datePublished, it means it was published previously 
+                    // for future issue as continuous publication
+                    // otherwise it was scheduled for publication
+                    $publication->getData('datePublished')
+                        ? IssueAssignment::FUTURE_ISSUES_PUBLISHED
+                        : IssueAssignment::FUTURE_ISSUE_SCHEDULED
+                );
 
         }
 

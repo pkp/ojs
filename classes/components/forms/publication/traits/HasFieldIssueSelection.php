@@ -74,7 +74,11 @@ trait HasFieldIssueSelection
             ]))
             ->addHiddenField(
                 'status',
-                $currentIssueAssignmentStatus->getPublicationStatus()
+                in_array(
+                    $publication->getData('status'),
+                    [Publication::STATUS_PUBLISHED, Publication::STATUS_SCHEDULED]
+                ) ? null : $currentIssueAssignmentStatus->getPublicationStatus()
+
             );
         
         return $this;
