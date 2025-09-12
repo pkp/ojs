@@ -337,11 +337,6 @@ msgstr "The following requirements must be met before this can be published."
 msgid "publication.required.declined"
 msgstr "A declined submission can not be published."
 
-msgid "publication.required.reviewStage"
-msgstr ""
-"The submission must be in the Copyediting or Production stages before it can "
-"be published."
-
 msgid "submission.license.description"
 msgstr ""
 "The license will be set automatically to <a href='{$licenseUrl}' "
