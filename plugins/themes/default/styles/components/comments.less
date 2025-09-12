@@ -76,7 +76,7 @@ h3.BaseCommentsVersionHeader {
 }
 
 
-.BaseCommentsNotificationMessageApproved {
+.BaseCommentsNotificationMessageNeedsApproval {
     color: @primary;
     font-size: @font-tiny;
     display: flex;
@@ -126,6 +126,14 @@ h3.BaseCommentsVersionHeader {
 .BaseCommentsMessageAuthorOrcid {
     color: @text-light;
     font-size: @font-tiny;
+    display: flex;
+    align-items: center;
+    column-gap: 0.2rem;
+    > svg {
+        height: 0.9rem;
+        width: 0.9rem;
+    }
+
 }
 
 .BaseCommentsMessageAuthorAffiliation{
