@@ -355,7 +355,6 @@
 						{/if}
 					</div>
 				</section>
-				{if count($article->getPublishedPublications()) > 1}
 					<section class="sub_item versions">
 						<h2 class="label">
 							{translate key="submission.versions"}
@@ -375,7 +374,6 @@
 							{/foreach}
 						</ul>
 					</section>
-				{/if}
 			</div>
 			{/if}
 
