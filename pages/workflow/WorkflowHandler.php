@@ -90,7 +90,6 @@ class WorkflowHandler extends PKPWorkflowHandler
         }
 
         $templateMgr->setConstants([
-            'FORM_ASSIGN_TO_ISSUE' => \APP\components\forms\publication\AssignToIssueForm::FORM_ASSIGN_TO_ISSUE,
             'FORM_ISSUE_ENTRY' => $issueEntryForm::FORM_ISSUE_ENTRY,
             'FORM_PUBLISH' => PublishForm::FORM_PUBLISH,
         ]);
@@ -139,24 +138,10 @@ class WorkflowHandler extends PKPWorkflowHandler
             }
         }
 
-        $assignToIssueUrl = $request->getDispatcher()->url(
-            $request,
-            Application::ROUTE_COMPONENT,
-            null,
-            'modals.publish.AssignToIssueHandler',
-            'assign',
-            null,
-            [
-                'submissionId' => $submission->getId(),
-                'publicationId' => '__publicationId__',
-            ]
-        );
-
         $publicationFormIds = $templateMgr->getState('publicationFormIds');
         $publicationFormIds[] = $issueEntryForm::FORM_ISSUE_ENTRY;
 
         $templateMgr->setState([
-            'assignToIssueUrl' => $assignToIssueUrl,
             'components' => $components,
             'publicationFormIds' => $publicationFormIds,
             'issueApiUrl' => $issueApiUrl,

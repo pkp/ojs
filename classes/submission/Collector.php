@@ -16,7 +16,7 @@ namespace APP\submission;
 
 use APP\core\Application;
 use APP\facades\Repo;
-use APP\submission\Submission;
+use APP\publication\Publication;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Database\Query\JoinClause;
 
@@ -50,7 +50,7 @@ class Collector extends \PKP\submission\Collector
     }
 
     /**
-     * Filter by latest published submission as 
+     * Filter by latest published submission as
      *  - Issueless publications
      *  - Continuous publications e.g. attached to future issue but published
      */
@@ -88,18 +88,20 @@ class Collector extends \PKP\submission\Collector
         // add OJS-specific continuous publication (e.g. attached to future issue but published)
         // and issueless publication filters
         $q->when(
-            $this->latestPublished !== null, 
+            $this->latestPublished !== null,
             fn (Builder $query) => $query
-                ->join('publications as publication_cp', fn (JoinClause $join) => $join
-                    ->on('publication_cp.publication_id', '=', 's.current_publication_id')
-                    ->where('publication_cp.status', Submission::STATUS_PUBLISHED)
-                    ->whereNotNull('publication_cp.date_published')
-                    ->where('publication_cp.published', true)
+                ->join(
+                    'publications as publication_cp',
+                    fn (JoinClause $join) => $join
+                        ->on('publication_cp.publication_id', '=', 's.current_publication_id')
+                        ->where('publication_cp.status', Publication::STATUS_PUBLISHED)
+                        ->whereNotNull('publication_cp.date_published')
                 )
                 ->leftJoin('issues as pi', 'publication_cp.issue_id', '=', 'pi.issue_id')
-                ->where(fn (Builder $query) => $query
-                    ->whereNull('publication_cp.issue_id')
-                    ->orWhere('pi.published', false)
+                ->where(
+                    fn (Builder $query) => $query
+                        ->whereNull('publication_cp.issue_id')
+                        ->orWhere('pi.published', false)
                 )
         );
 

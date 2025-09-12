@@ -20,6 +20,7 @@ namespace APP\API\v1\issues;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\Collector;
+use APP\issue\enums\IssueAssignment;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use Illuminate\Http\JsonResponse;
@@ -86,6 +87,9 @@ class IssueController extends PKPBaseController
         Route::get('{issueId}', $this->get(...))
             ->name('issue.getIssue')
             ->whereNumber('issueId');
+
+        Route::get('assignmentOptions', $this->getAssignmentOptions(...))
+            ->name('issue.getAssignmentOptions');
     }
 
     /**
@@ -265,6 +269,15 @@ class IssueController extends PKPBaseController
         );
 
         return response()->json($data, Response::HTTP_OK);
+    }
+
+    /**
+     * Get issue assignment options
+     */
+    public function getAssignmentOptions(Request $illuminateRequest): JsonResponse
+    {
+        $options = IssueAssignment::getAvailableAssignmentOption($this->getRequest()->getContext());
+        return response()->json($options, Response::HTTP_OK);
     }
 
     protected function getUserGroups(int $contextId): Collection

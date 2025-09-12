@@ -24,7 +24,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use PKP\context\Context;
 use PKP\doi\Doi;
-use PKP\submission\PKPSubmission;
+use PKP\publication\PKPPublication;
 
 class DAO extends \PKP\doi\DAO
 {
@@ -51,7 +51,7 @@ class DAO extends \PKP\doi\DAO
                             ->leftJoin('submissions as s', 'p.publication_id', '=', 's.current_publication_id')
                             ->whereColumn('p.publication_id', '=', 's.current_publication_id')
                             ->whereNotNull('p.doi_id')
-                            ->where('p.status', '=', PKPSubmission::STATUS_PUBLISHED);
+                            ->where('p.status', '=', PKPPublication::STATUS_PUBLISHED);
                     });
                 })
                     // Galley DOIs
@@ -63,7 +63,7 @@ class DAO extends \PKP\doi\DAO
                                 ->leftJoin('submissions as s', 'p.publication_id', '=', 's.current_publication_id')
                                 ->whereColumn('p.publication_id', '=', 's.current_publication_id')
                                 ->whereNotNull('g.doi_id')
-                                ->where('p.status', '=', PKPSubmission::STATUS_PUBLISHED);
+                                ->where('p.status', '=', PKPPublication::STATUS_PUBLISHED);
                         });
                     });
             });

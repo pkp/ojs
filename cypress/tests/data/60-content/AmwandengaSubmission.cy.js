@@ -329,6 +329,9 @@ describe('Data suite: Amwandenga', function() {
 		// Issue
 		cy.openWorkflowMenu('Unassigned version', 'Issue')
 
+		// Initially set to no issue
+		cy.get('label:Contains("Don\'t Assign To An Issue")').click();
+
 		cy.get('[name="sectionId"]').select('Reviews');
 		cy.get('[name="sectionId"]').select('Articles');
 		cy.get('[name="pages"]').type('71-98', {delay: 0});
@@ -413,7 +416,7 @@ describe('Data suite: Amwandenga', function() {
 	it('Publish submission', function() {
 		cy.login('dbarnes');
 		cy.visit('/index.php/publicknowledge/workflow/access/' + submission.id);
-		cy.publish('1', 'Vol. 1 No. 2 (2014)');
+		cy.publish('Assign To Current/Back Issue', '1', 'Vol. 1 No. 2 (2014)');
 		cy.isInIssue(submission.title, 'Vol. 1 No. 2 (2014)');
 		cy.contains(submission.title).click();
 		cy.get('h1:contains("' + submission.title + '")');
@@ -451,6 +454,13 @@ describe('Data suite: Amwandenga', function() {
 		cy.visit('/index.php/publicknowledge/workflow/access/' + submission.id);
 		cy.openWorkflowMenu('Version of Record 1.0', 'Title & Abstract')
 		cy.get('button').contains('Schedule For Publication').click();
+		cy.wait(1000);
+		
+		// Reconfirm the version stage and issue selection
+		cy.get('[data-cy="active-modal"]').find('select[name="issueId"]').select('Vol. 1 No. 2 (2014)');
+		cy.get('[data-cy="active-modal"] button:Contains("Confirm")').click();
+		cy.wait(1000);
+		
 		cy.contains('All publication requirements have been met.');
 		cy.get('.pkpWorkflow__publishModal button').contains('Publish').click();
 	});
@@ -503,14 +513,22 @@ describe('Data suite: Amwandenga', function() {
 		cy.wait(3000);
 		cy.get('[data-cy="galley-manager"]').contains("PDF Version 2");
 
-		// Edit url path
+		// Edit url path and select issue
 		cy.openWorkflowMenu('Version of Record 1.1', 'Issue')
-		cy.get('[name="urlPath"]').clear().type('mwandenga');
+		cy.wait(2000);
+		cy.get('select[name="issueId"]').select('Vol. 1 No. 2 (2014)');
+		cy.get('[name="urlPath"]').clear();
+		cy.wait(500);
+		cy.get('[name="urlPath"]').type('mwandenga');
 		cy.get('button').contains('Save').click();
 		cy.get('[role="status"]').contains('Saved');
 
 		// Publish version
 		cy.get('button').contains('Publish').click();
+		cy.wait(1000);
+		cy.get('[data-cy="active-modal"]').find('select[name="issueId"]').select('Vol. 1 No. 2 (2014)');
+		cy.get('[data-cy="active-modal"] button:Contains("Confirm")').click();
+		cy.wait(1000);
 		cy.contains('All publication requirements have been met.');
 		cy.get('.pkpWorkflow__publishModal button').contains('Publish').click();
 	});

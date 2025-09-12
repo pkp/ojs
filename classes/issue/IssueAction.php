@@ -23,6 +23,7 @@ use APP\journal\Journal;
 use APP\subscription\IndividualSubscriptionDAO;
 use APP\subscription\InstitutionalSubscriptionDAO;
 use APP\subscription\Subscription;
+use Exception;
 use PKP\db\DAORegistry;
 use PKP\plugins\Hook;
 use PKP\security\Role;

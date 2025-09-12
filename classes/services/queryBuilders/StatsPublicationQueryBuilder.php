@@ -17,7 +17,7 @@
 
 namespace APP\services\queryBuilders;
 
-use APP\submission\Submission;
+use APP\publication\Publication;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\DB;
 use PKP\services\queryBuilders\PKPStatsPublicationQueryBuilder;
@@ -46,7 +46,7 @@ class StatsPublicationQueryBuilder extends PKPStatsPublicationQueryBuilder
     {
         if (!empty($this->issueIds)) {
             $issueSubmissionIds = DB::table('publications as p')->select('p.submission_id')->distinct()
-                ->where('p.status', Submission::STATUS_PUBLISHED)
+                ->where('p.status', Publication::STATUS_PUBLISHED)
                 ->whereIn('p.issue_id', $this->issueIds);
             $q->joinSub($issueSubmissionIds, 'is', function ($join) {
                 $join->on('metrics_submission.' . PKPStatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID, '=', 'is.submission_id');

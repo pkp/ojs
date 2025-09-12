@@ -378,7 +378,10 @@ class IssueGridHandler extends GridHandler
             $publications = $submission->getData('publications');
             foreach ($publications as $publication) {
                 if ($publication->getData('issueId') === (int) $issue->getId()) {
-                    Repo::publication()->edit($publication, ['issueId' => '', 'status' => Submission::STATUS_QUEUED]);
+                    Repo::publication()->edit(
+                        $publication,
+                        ['issueId' => '', 'status' => Publication::STATUS_QUEUED]
+                    );
                 }
             }
             $newSubmission = Repo::submission()->get($submission->getId());
@@ -612,7 +615,7 @@ class IssueGridHandler extends GridHandler
                         continue;
                     }
 
-                    if ($publication->getData('status') === Submission::STATUS_SCHEDULED) {
+                    if ($publication->getData('status') === Publication::STATUS_SCHEDULED) {
                         Repo::publication()->publish($publication);
                     }
                 }
@@ -708,10 +711,10 @@ class IssueGridHandler extends GridHandler
         foreach ($submissions as $submission) { /** @var Submission $submission */
             $publications = $submission->getData('publications');
             foreach ($publications as $publication) { /** @var Publication $publication */
-                if ($publication->getData('status') === Submission::STATUS_PUBLISHED && $publication->getData('issueId') === (int) $issue->getId()) {
+                if ($publication->getData('status') === Publication::STATUS_PUBLISHED && $publication->getData('issueId') === (int) $issue->getId()) {
                     // Republish the publication in the issue, now that it's status has changed,
-                    // to ensure the publication's status is restored to Submission::STATUS_SCHEDULED
-                    // rather than Submission::STATUS_QUEUED
+                    // to ensure the publication's status is restored to Publication::STATUS_SCHEDULED
+                    // rather than Publication::STATUS_QUEUED
                     Repo::publication()->unpublish($publication);
                     Repo::publication()->publish($publication);
                 }

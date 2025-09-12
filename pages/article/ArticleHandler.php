@@ -37,6 +37,7 @@ use PKP\db\DAORegistry;
 use PKP\orcid\OrcidManager;
 use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
+use PKP\publication\PKPPublication;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\Validation;
 use PKP\submission\Genre;
@@ -157,7 +158,7 @@ class ArticleHandler extends Handler
             $galleyId = $subPath;
         }
 
-        if ($this->publication->getData('status') !== PKPSubmission::STATUS_PUBLISHED && !Repo::submission()->canPreview($user, $submission)) {
+        if ($this->publication->getData('status') !== PKPPublication::STATUS_PUBLISHED && !Repo::submission()->canPreview($user, $submission)) {
             throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
         }
 

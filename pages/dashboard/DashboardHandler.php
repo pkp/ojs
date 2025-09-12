@@ -24,8 +24,6 @@ use APP\template\TemplateManager;
 use PKP\pages\dashboard\PKPDashboardHandler;
 use PKP\submission\reviewer\recommendation\ReviewerRecommendation;
 
-class_exists(\APP\components\forms\publication\AssignToIssueForm::class); // Force define of FORM_ASSIGN_TO_ISSUE
-
 class DashboardHandler extends PKPDashboardHandler
 {
     /**
@@ -47,10 +45,6 @@ class DashboardHandler extends PKPDashboardHandler
         $pageInitConfig = $templateMgr->getState('pageInitConfig');
         $pageInitConfig['publicationSettings']['submissionPaymentsEnabled'] = $paymentManager->publicationEnabled();
 
-        $templateMgr->setConstants([
-            'FORM_ASSIGN_TO_ISSUE' => FORM_ASSIGN_TO_ISSUE
-        ]);
-
         $pageInitConfig['recommendations'] = ReviewerRecommendation::query()
             ->withContextId($context->getId())
             ->get()
@@ -61,12 +55,6 @@ class DashboardHandler extends PKPDashboardHandler
             ->getCollector()
             ->filterByContextIds([$context->getId()])
             ->getCount();
-        $pageInitConfig['publicationSettings']['issuePublishedStatus'] = Repo::issue()
-            ->getCollector()
-            ->filterByContextIds([$context->getId()])
-            ->getQueryBuilder()
-            ->pluck('published', Repo::issue()->dao->primaryKeyColumn)
-            ->toArray();
 
         $templateMgr->setState(['pageInitConfig' => $pageInitConfig]);
     }

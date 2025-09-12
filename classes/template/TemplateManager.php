@@ -22,6 +22,7 @@ use APP\core\Application;
 use APP\core\PageRouter;
 use APP\file\PublicFileManager;
 use APP\journal\Journal;
+use APP\publication\Publication;
 use PKP\core\PKPSessionGuard;
 use PKP\facades\Locale;
 use PKP\i18n\LocaleMetadata;
@@ -201,6 +202,13 @@ class TemplateManager extends PKPTemplateManager
                 ['institutions' => $institutionsLink] +
                 array_slice($menu, $paymentsIndex, null, true);
         }
+
+        $this->setConstants([
+            'publication' => [
+                'STATUS_READY_TO_PUBLISH' => Publication::STATUS_READY_TO_PUBLISH,
+                'STATUS_READY_TO_SCHEDULE' => Publication::STATUS_READY_TO_SCHEDULE,
+            ],
+        ]);
 
         $this->setState(['menu' => $menu]);
     }
