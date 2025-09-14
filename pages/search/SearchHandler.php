@@ -23,6 +23,7 @@ use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\template\TemplateManager;
 use Laravel\Scout\Builder;
 use PKP\core\PKPRequest;
+use PKP\plugins\Hook;
 use PKP\userGroup\UserGroup;
 
 class SearchHandler extends Handler
@@ -51,6 +52,8 @@ class SearchHandler extends Handler
 
     /**
      * Show the search form
+     *
+     * @hook SearchHandler::search::builder ['builder' => $builder, 'request' => $request]
      */
     public function search(array $args, PKPRequest $request): void
     {
@@ -65,16 +68,21 @@ class SearchHandler extends Handler
 
         $rangeInfo = $this->getRangeInfo($request, 'search');
 
+        $builder = new Builder(new SubmissionSearchResult(), $query);
         // Retrieve results.
-        $results = (new Builder(new SubmissionSearchResult(), $query))
+        $builder
             ->where('contextId', $contextId)
             ->where('publishedFrom', $dateFrom)
             ->where('publishedTo', $dateTo)
             ->whereIn('categoryIds', $request->getUserVar('categoryIds'))
             ->whereIn('sectionIds', $request->getUserVar('sectionIds'))
             ->whereIn('keywords', $request->getUserVar('keywords'))
-            ->whereIn('subjects', $request->getUserVar('subjects'))
-            ->paginate($rangeInfo->getCount(), 'submissions', $rangeInfo->getPage());
+            ->whereIn('subjects', $request->getUserVar('subjects'));
+
+        // Allow hook registrants to adjust the builder before querying
+        Hook::run('SearchHandler::search::builder', ['builder' => $builder, 'request' => $request]);
+
+        $results = $builder->paginate($rangeInfo->getCount(), 'submissions', $rangeInfo->getPage());
 
         $this->setupTemplate($request);
 
