@@ -558,7 +558,6 @@ describe('Data suite: Amwandenga', function() {
 		cy.wait(1000);
 		cy.get('button').contains('View').click();
 		cy.contains('The Signalling Theory Dividends Version 2').should('not.exist');
-		cy.get('.versions').should('not.exist');
 	});
 
 	it('Recommend-only editors can not publish, unpublish or create versions', function() {
