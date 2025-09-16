@@ -1,7 +1,7 @@
 # Jan Mohammad Rasa <eng.omid.rasa@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-15 12:34+0000\n"
+"PO-Revision-Date: 2025-09-16 09:45+0000\n"
 "Last-Translator: Jan Mohammad Rasa <eng.omid.rasa@gmail.com>\n"
 "Language-Team: Pashto <http://translate.pkp.sfu.ca/projects/ojs/emails/ps/>\n"
 "Language: ps\n"
@@ -182,3 +182,6 @@ msgstr "د بیاکتنې لپاره بلنه"
 
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "آیا تاسو به وکولی شئ چې دا زموږ لپاره بیاکتنه وکړئ؟"
+
+msgid "emails.reviewRequestSubsequent.subject"
+msgstr "د اصلاح شوې سپارښتنې د بیاکتنې غوښتنه"
