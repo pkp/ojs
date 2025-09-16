@@ -288,7 +288,7 @@
 			{if $enablePublicComments}
 				<section class="item comments" data-vue-root>
 					<h2 class="label">
-						{translate key="comments.commentsOnArticle"}
+						{translate key="userComment.commentsOnThisPublication"}
 					</h2>
         			<pkp-comments v-bind='{$userCommentsInitConfig|json_encode}'></pkp-comments>
 			    </section>
