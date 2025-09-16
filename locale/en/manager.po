@@ -1965,6 +1965,17 @@ msgstr "Assign DOIs to all published journal objects that have not been assigned
 msgid "doi.manager.settings.doiAssignJournalWide.confirm"
 msgstr "Are you sure you wish to assign DOIs to all published objects that have not been assigned DOIs?"
 
+msgid "doi.manager.settings.doiVersioning.description"
+msgstr ""
+"Assign a new DOI to each publication version? Most users will "
+"want to use the default option (no), as it was until now."
+
+msgid "doi.manager.settings.doiVersioning.yes"
+msgstr "Yes, assign a unique DOI to every version of an article."
+
+msgid "doi.manager.settings.doiVersioning.no"
+msgstr "No, all versions of an article should have the same DOI."
+
 msgid "doi.manager.settings.registrationAgency"
 msgstr "Registration Agency"
 
