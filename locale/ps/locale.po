@@ -1,3 +1,92 @@
 # Jan Mohammad Rasa <eng.omid.rasa@gmail.com>, 2025.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2025-09-17 07:29+0000\n"
+"Last-Translator: Jan Mohammad Rasa <eng.omid.rasa@gmail.com>\n"
+"Language-Team: Pashto <http://translate.pkp.sfu.ca/projects/ojs/locale/ps/>\n"
+"Language: ps\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "دا مجله خپل مطالب آنلاین نه خپروي."
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "د بیاکتنې فورمه ډکولو لپاره په آیکون کلیک وکړئ."
+
+msgid "common.confirmComplete"
+msgstr ""
+"ایا تاسو ډاډه یاست چې غواړئ دا دنده د بشپړ شوي په توګه په نښه کړئ؟ تاسو ممکن "
+"وروسته بدلونونه ونه شئ راوستلی."
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "د سیالۍ ګټو لارښوونې"
+
+msgid "context.current"
+msgstr "اوسنۍ ورځپاڼه:"
+
+msgid "context.select"
+msgstr "بل ژورنال ته لاړ شئ:"
+
+msgid "navigation.categories"
+msgstr "کټګورۍ"
+
+msgid "navigation.categories.browse"
+msgstr "لټون وکړئ"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "مهرباني وکړئ اړین ځایونه ډک کړئ."
+
+msgid "common.software"
+msgstr "وړیا لاسرسی وړ ژورنال سیستومونه"
+
+msgid "common.payment"
+msgstr "تادیه"
+
+msgid "common.payments"
+msgstr "تادیات"
+
+msgid "common.homePageHeader.altText"
+msgstr "د کور پاڼې سرلیک"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "د ژورنال کورپاڼه انځور"
+
+msgid "doi.manager.settings.publications"
+msgstr "مقالې"
+
+msgid "navigation.journalHelp"
+msgstr "د ژورنال مرسته"
+
+msgid "navigation.current"
+msgstr "اوسنۍ"
+
+msgid "navigation.otherJournals"
+msgstr "نور ژورنالونه"
+
+msgid "navigation.browseByIssue"
+msgstr "د نشریه په واسط"
+
+msgid "navigation.browseByAuthor"
+msgstr "د لیکوال په واسطه"
+
+msgid "navigation.infoForAuthors"
+msgstr "د لیکوال لپاره"
+
+msgid "navigation.infoForLibrarians"
+msgstr "د کتابتونونو لپاره"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "د لیکوالانو لپاره معلومات"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "د کتابتونونو لپاره معلومات"
+
+msgid "navigation.skip.about"
+msgstr "د ژورنال په اړه لاړ شئ"
+
+msgid "navigation.skip.issue"
+msgstr "اوسنۍ موضوع ته لاړ شئ"
