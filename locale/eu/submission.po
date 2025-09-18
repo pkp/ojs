@@ -5,7 +5,7 @@
 # Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-07-21 11:26+0000\n"
+"PO-Revision-Date: 2025-09-03 11:56+0000\n"
 "Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "eu/>\n"
@@ -246,11 +246,12 @@ msgstr "Argitalpenak"
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
-"Copyright-urtea automatikoki ezarriko da hau zenbaki batean argitaratzen "
-"denean."
+"Egile-eskubideen urtea automatikoki ezarriko da hau zenbaki batean "
+"argitaratzen denean."
 
 msgid "publication.copyrightYearBasis.submissionDescription"
-msgstr "Copyright-urtea argitaratze-dataren arabera ezarriko da automatikoki."
+msgstr ""
+"Egile-eskubideen urtea argitaratze-dataren arabera ezarriko da automatikoki."
 
 msgid "publication.datePublished"
 msgstr "Argitaratze-data"
@@ -299,7 +300,8 @@ msgstr ""
 
 msgid "submission.copyrightHolder.description"
 msgstr ""
-"Copyrighta {$copyright}i esleituko zaio automatikoki argitaratzen denean."
+"Egile-eskubideak {$copyright}-i esleituko zaizkio automatikoki argitaratzen "
+"denean."
 
 msgid "submission.copyrightOther.description"
 msgstr ""
@@ -379,8 +381,8 @@ msgstr "Galerada hau ezin da editatu dagoeneko argitaratu delako."
 
 msgid "submission.copyright.description"
 msgstr ""
-"Mesedez, irakurri eta ulertu aldizkari honetara lan bat bidaltzeko copyright-"
-"baldintzak."
+"Mesedez, irakurri eta ulertu aldizkari honetara lan bat bidaltzeko egile-"
+"eskubideen baldintzak."
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
