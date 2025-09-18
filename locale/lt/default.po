@@ -2,7 +2,7 @@
 # Darius Zviedris <darius.zviedris@lki.lt>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-08-27 13:42+0000\n"
+"PO-Revision-Date: 2025-08-28 11:50+0000\n"
 "Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "lt/>\n"
@@ -115,76 +115,76 @@ msgstr ""
 ".ca/ojs\">Atvirosios žurnalų sistemos</a>)."
 
 msgid "default.groups.name.manager"
-msgstr "Žurnalo vedėjas"
+msgstr "Žurnalo sekretorius (-ė)"
 
 msgid "default.groups.plural.manager"
-msgstr "Žurnalų vadovai"
+msgstr "Žurnalo sekretoriai (-ės)"
 
 msgid "default.groups.abbrev.manager"
-msgstr "ŽV"
+msgstr "Sek."
 
 msgid "default.groups.name.editor"
-msgstr "Žurnalo redaktorius"
+msgstr "Žurnalo redaktorius (-ė)"
 
 msgid "default.groups.plural.editor"
-msgstr "Žurnalo redaktoriai"
+msgstr "Žurnalo redaktoriai (-ės)"
 
 msgid "default.groups.abbrev.editor"
-msgstr "ŽR"
+msgstr "Red."
 
 msgid "default.groups.plural.guestEditor"
-msgstr "Kviestiniai redaktoriai"
+msgstr "Redaktorių kolegijos nariai"
 
 msgid "default.groups.name.guestEditor"
-msgstr "Kviestinis redaktorius"
+msgstr "Redaktorių kolegijos narys"
 
 msgid "default.groups.abbrev.guestEditor"
-msgstr "KR"
+msgstr "Red. kolegijos narys (-iai)"
 
 msgid "default.groups.name.sectionEditor"
-msgstr "Skyriaus redaktorius"
+msgstr "Skyriaus redaktorius (-ė)"
 
 msgid "default.groups.plural.sectionEditor"
-msgstr "Skyriaus redaktoriai"
+msgstr "Skyriaus redaktoriai (-ės)"
 
 msgid "default.groups.abbrev.sectionEditor"
-msgstr "SR"
+msgstr "Sk. red."
 
 msgid "default.groups.name.subscriptionManager"
-msgstr "Prenumeratų tvarkytojas (-a)"
+msgstr "Prenumeratos redaktorius (-ė)"
 
 msgid "default.groups.plural.subscriptionManager"
-msgstr "Prenumeratų tvarkytojai"
+msgstr "Prenumeratos redaktoriai (-ės)"
 
 msgid "default.groups.abbrev.subscriptionManager"
-msgstr "PT"
+msgstr "Prenumer."
 
 msgid "default.genres.researchInstrument"
-msgstr "Tyrimų instrumentas"
+msgstr "Tyrimo būdas"
 
 msgid "default.genres.researchMaterials"
-msgstr "Tyrimų medžiagos"
+msgstr "Tiriamoji medžiaga"
 
 msgid "default.genres.researchResults"
-msgstr "Tyrimų rezultatai"
+msgstr "Tyrimo rezultatai"
 
 msgid "default.genres.transcripts"
-msgstr "Nuorašai"
+msgstr "Rankraščiai"
 
 msgid "default.genres.dataAnalysis"
 msgstr "Duomenų analizė"
 
 msgid "default.genres.dataSet"
-msgstr "Duomenų rinkinys"
+msgstr "Duomenys"
 
 msgid "default.genres.sourceTexts"
-msgstr "Šaltinių tekstai"
+msgstr "Tekstai, kuriais remtasi"
 
 msgid "default.groups.name.externalReviewer"
-msgstr "Recenzentas"
+msgstr "Recenzentas (-ė)"
 
 msgid "default.groups.plural.externalReviewer"
-msgstr "Recenzentai"
+msgstr "Recenzentai (-ės)"
 
 msgid "default.groups.abbrev.externalReviewer"
-msgstr "R"
+msgstr "Rec."

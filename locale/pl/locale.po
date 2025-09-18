@@ -1,12 +1,13 @@
 # rl <biuro@fimagis.pl>, 2022.
 # Dariusz Lis <Dariusz@Lis.PL>, 2023.
+# Mikołaj Machowski <mikmach@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-30T17:55:22+00:00\n"
-"PO-Revision-Date: 2023-04-26 14:01+0000\n"
-"Last-Translator: Dariusz Lis <Dariusz@Lis.PL>\n"
+"PO-Revision-Date: 2025-09-04 06:23+0000\n"
+"Last-Translator: Mikołaj Machowski <mikmach@gmail.com>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/locale/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -14,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Czasopismo nie publikuje treści w Internecie."
@@ -94,7 +95,7 @@ msgid "navigation.skip.about"
 msgstr "Przejdź do informacji o czasopiśmie"
 
 msgid "navigation.skip.issue"
-msgstr "Przejdź do aktualnego wydania"
+msgstr "Przejdź do aktualnego numeru"
 
 msgid "common.queue.long.submissionsUnassigned"
 msgstr "Nieprzypisane"
@@ -388,7 +389,7 @@ msgid "journal.issn"
 msgstr "ISSN"
 
 msgid "journal.viewAllIssues"
-msgstr "Wyświetl wszystkie wydania"
+msgstr "Wyświetl wszystkie numery"
 
 msgid "user.authorization.representationNotFound"
 msgstr "Nie znaleziono zażądanej korekty."
@@ -484,7 +485,7 @@ msgid "issue.issue"
 msgstr "Numer"
 
 msgid "issue.issues"
-msgstr "Wydania"
+msgstr "Numery"
 
 msgid "issue.title"
 msgstr "Tytuł"
@@ -2602,3 +2603,6 @@ msgstr "Wybierz kolejność artykułów w tej kategorii."
 
 #~ msgid "category.category"
 #~ msgstr "Kategorie"
+
+msgid "search.journal"
+msgstr "Według czasopisma"

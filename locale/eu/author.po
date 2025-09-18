@@ -1,12 +1,13 @@
 # Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023, 2025.
 # Informatikaria <informatikaria@ueu.eus>, 2025.
+# Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
-"PO-Revision-Date: 2025-06-22 23:24+0000\n"
-"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
+"PO-Revision-Date: 2025-09-03 11:56+0000\n"
+"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/author/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
@@ -131,7 +132,8 @@ msgstr ""
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
-"Jarraitu ahal izateko, copyright informazioko baldintzak onartu behar dituzu."
+"Jarraitu ahal izateko, egile-eskubideen oharreko baldintzak onartu behar "
+"dituzu."
 
 msgid "submission.submit.coverNote"
 msgstr "Editorearentzako oharrak"
