@@ -2,17 +2,19 @@
 <!DOCTYPE version SYSTEM "../../../lib/pkp/dtd/pluginVersion.dtd">
 
 <!--
-  * vplugins/importexport/doaj/ersion.xml
+  * vplugins/generic/doaj/ersion.xml
   *
-  * Copyright (c) 2014-2021 Simon Fraser University
-  * Copyright (c) 2003-2021 John Willinsky
+  * Copyright (c) 2014-2025 Simon Fraser University
+  * Copyright (c) 2003-2025 John Willinsky
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
   * Plugin version information.
   -->
 <version>
 	<application>doaj</application>
-	<type>plugins.importexport</type>
-	<release>1.1.0.0</release>
-	<date>2016-08-27</date>
+	<type>plugins.generic</type>
+	<release>1.0.0.0</release>
+	<date>2025-09-01</date>
+	<lazy-load>1</lazy-load>
+	<class>DOAJPlugin</class>
 </version>

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/importexport/doaj/classes/form/DOAJSettingsForm.php
+ * @file plugins/generic/doaj/classes/form/DOAJSettingsForm.php
  *
  * Copyright (c) 2014-2025 Simon Fraser University
  * Copyright (c) 2003-2025 John Willinsky
@@ -12,11 +12,11 @@
  * @brief Form for journal managers to setup DOAJ plugin
  */
 
-namespace APP\plugins\importexport\doaj\classes\form;
+namespace APP\plugins\generic\doaj\classes\form;
 
-use PKP\form\Form;
+use APP\plugins\PubObjectsExportSettingsForm;
 
-class DOAJSettingsForm extends Form
+class DOAJSettingsForm extends PubObjectsExportSettingsForm
 {
     //
     // Private properties
@@ -106,16 +106,10 @@ class DOAJSettingsForm extends Form
         }
     }
 
-
-    //
-    // Public helper methods
-    //
     /**
-     * Get form fields
-     *
-     * @return array (field name => field type)
+     * @copydoc PubObjectsExportSettingsForm::isOptional()
      */
-    public function getFormFields()
+    public function getFormFields(): array
     {
         return [
             'apiKey' => 'string',
@@ -124,13 +118,9 @@ class DOAJSettingsForm extends Form
     }
 
     /**
-     * Is the form field optional
-     *
-     * @param string $settingName
-     *
-     * @return bool
+     * @copydoc PubObjectsExportSettingsForm::isOptional()
      */
-    public function isOptional($settingName)
+    public function isOptional($settingName): bool
     {
         return in_array($settingName, ['apiKey', 'automaticRegistration']);
     }
