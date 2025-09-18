@@ -9220,7 +9220,7 @@
 				}
 			}
 		},
-		"/comments/{commentId}/reports/{reportId": {
+		"/comments/{commentId}/reports/{reportId}": {
 			"get": {
 				"tags": [
 					"Comments / Reports"
