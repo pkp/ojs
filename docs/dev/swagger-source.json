@@ -62,7 +62,9 @@
 				"Backend",
 				"ORCID",
 				"Emails",
-				"Categories"
+				"Categories",
+				"Comments",
+				"Comments / Reports"
 			]
 		}
 	],
@@ -222,6 +224,14 @@
 		{
 			"name": "Categories",
 			"description": "Endpoints used to manage Context categories."
+		},
+		{
+			"name": "Comments",
+			"description": "Endpoints used to manage public user comments."
+		},
+		{
+			"name": "Comments / Reports",
+			"description": "Endpoints used to manage comment reports."
 		}
 	],
 	"definitions": {
@@ -815,6 +825,164 @@
 				"versionDisplay": {
 					"type": "string",
 					"description": "Human-readable version string (e.g., Version or Record 2.1)."
+				}
+			}
+		},
+		"UserComment": {
+			"type": "object",
+			"description": "Information about a public user comment.",
+			"properties": {
+				"id": {
+					"type": "integer",
+					"description": "Unique identifier for the comment."
+				},
+				"contextId": {
+					"type": "integer",
+					"description": "The ID of the context the comment belongs to."
+				},
+				"commentText": {
+					"type": "string",
+					"description": "The content of the comment."
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "date-time",
+					"description": "Timestamp when the comment was created."
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "date-time",
+					"description": "Timestamp when the comment was last updated."
+				},
+				"isApproved": {
+					"type": "boolean",
+					"description": "Whether the comment has been approved by a moderator."
+				},
+				"isReported": {
+					"type": "boolean",
+					"description": "Whether the comment has been reported by users."
+				},
+				"publicationId": {
+					"type": "integer",
+					"description": "The publication ID the comment is associated with."
+				},
+				"userId": {
+					"type": "integer",
+					"description": "The ID of the user who submitted the comment."
+				},
+				"userName": {
+					"type": "string",
+					"description": "Full name of the user who submitted the comment."
+				},
+				"userOrcidDisplayValue": {
+					"type": "string",
+					"nullable": true,
+					"description": "The user's ORCID identifier."
+				},
+				"isUserOrcidAuthenticated": {
+					"type": "boolean",
+					"description": "Whether the user has verified their ORCID."
+				},
+				"userAffiliation": {
+					"type": "string",
+					"nullable": true,
+					"description": "The user's institutional affiliation."
+				},
+				"userDisplayInitials": {
+					"type": "string",
+					"description": "Initials to display for the user."
+				},
+				"publication": {
+					"type": "object",
+					"description": "Details of the publication the comment is associated with.",
+					"properties": {
+						"authorsStringShort": {
+							"type": "string",
+							"description": "Short string of authors for the publication."
+						},
+						"id": {
+							"type": "integer",
+							"description": "Publication ID."
+						},
+						"submissionId": {
+							"type": "integer",
+							"description": "Submission ID the publication belongs to."
+						},
+						"fullTitle": {
+							"type": "string",
+							"description": "Full localized title of the publication."
+						}
+					}
+				},
+				"approvedAt": {
+					"type": "string",
+					"format": "date-time",
+					"nullable": true,
+					"description": "Timestamp when the comment was approved. Only available to moderators."
+				},
+				"approvedByUserName": {
+					"type": "string",
+					"nullable": true,
+					"description": "Name of the moderator who approved the comment. Only available to moderators."
+				},
+				"reports": {
+					"type": "array",
+					"description": "Reports associated with the comment. Only included when `includeReports` query param is present in the request.",
+					"nullable": true,
+					"items": {
+						"$ref": "#/definitions/UserCommentReport"
+					}
+				}
+			}
+		},
+		"UserCommentReport": {
+			"type": "object",
+			"description": "A report submitted for a user comment.",
+			"properties": {
+				"id": {
+					"type": "integer",
+					"description": "Unique identifier for the report."
+				},
+				"userCommentId": {
+					"type": "integer",
+					"description": "ID of the comment being reported."
+				},
+				"userId": {
+					"type": "integer",
+					"description": "ID of the user who submitted the report."
+				},
+				"userName": {
+					"type": "string",
+					"description": "Full name of the reporting user."
+				},
+				"userOrcidDisplayValue": {
+					"type": "string",
+					"nullable": true,
+					"description": "The user's ORCID identifier."
+				},
+				"note": {
+					"type": "string",
+					"nullable": false,
+					"description": "The reason provided by the user for reporting the comment."
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "date-time",
+					"description": "Timestamp when the report was created."
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "date-time",
+					"description": "Timestamp when the report was last updated."
+				},
+				"isUserOrcidAuthenticated": {
+					"type": "boolean",
+					"description": "Whether the user has verified their ORCID."
+				},
+				"userAffiliation": {
+					"type": "string",
+					"nullable": true,
+					"description": "The reporting user's institutional affiliation."
 				}
 			}
 		}
@@ -8647,6 +8815,545 @@
 					"404": {
 						"x-summary": "Request Not Found",
 						"description": "The category could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/comments": {
+			"get": {
+				"tags": [
+					"Comments"
+				],
+				"summary": "Get a list of comments. This endpoint is only available to moderators.",
+				"parameters": [
+					{
+						"name": "publicationIds",
+						"description": "Filter comments by those associated to the given publication IDs.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "userIds",
+						"description": "Filter comments by those created by the given user IDs.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					},
+					{
+						"name": "isReported",
+						"description": "Filter comments based on whether they have been reported.",
+						"in": "query",
+						"required": false,
+						"type": "boolean"
+					},
+					{
+						"name": "isApproved",
+						"description": "Filter comments by approval status.",
+						"in": "query",
+						"required": false,
+						"type": "boolean"
+					},
+					{
+						"name": "page",
+						"description": "The pagination page number to retrieve records from.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "List of comments.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/UserComment"
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view comments.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"Comments"
+				],
+				"summary": "Create a new comment.",
+				"parameters": [
+					{
+						"description": "Details about the comment to be created.",
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"publicationId": {
+									"type": "integer",
+									"description": "The ID of the publication the comment is to be created for.",
+									"required": true
+								},
+								"commentText": {
+									"type": "string",
+									"description": "The content of the comment.",
+									"required": true
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Details of the comment that was just added.",
+						"schema": {
+							"$ref": "#/definitions/UserComment"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to create comments. This typically means that you're not logged in.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/comments/public": {
+			"get": {
+				"tags": [
+					"Comments"
+				],
+				"summary": "Get a list of approved comments for a specific publication.",
+				"description": "This endpoint is publicly accessible. It returns only approved comments, except for the user's own unapproved comments if they are logged in.",
+				"parameters": [
+					{
+						"name": "publicationId",
+						"description": "Filter comments by those associated to the given publication ID.",
+						"in": "query",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "page",
+						"description": "The pagination page number to retrieve records from.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "List of approved comments for the given publication. If a user is logged in, their own unapproved comments will also be included.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/UserComment"
+							}
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The `publicationId` parameter is required.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Resource Not Found",
+						"description": "No publication was found with the given ID.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/comments/{commentId}": {
+			"get": {
+				"tags": [
+					"Comments"
+				],
+				"summary": "Get details for a specific comment. This endpoint is only available to moderators.",
+				"parameters": [
+					{
+						"name": "commentId",
+						"description": "ID of the comment.",
+						"in": "path",
+						"required": true
+					},
+					{
+						"name": "includeReports",
+						"description": "Whether to include any reports associated with this comment.",
+						"in": "query",
+						"required": false,
+						"type": "boolean"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Details of the requested comment.",
+						"schema": {
+							"$ref": "#/definitions/UserComment"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view this comment.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Resource Not Found",
+						"description": "No comment was found with the given ID.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"Comments"
+				],
+				"summary": "Delete a comment.",
+				"parameters": [
+					{
+						"name": "commentId",
+						"description": "ID of the comment to delete.",
+						"in": "path",
+						"required": true
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Empty response."
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You are not allowed to delete this comment.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Resource Not Found",
+						"description": "No comment was found with the given ID.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/comments/{commentId}/reports": {
+			"get": {
+				"tags": [
+					"Comments / Reports"
+				],
+				"summary": "Get a paginated list of reports for a specific comment.",
+				"parameters": [
+					{
+						"name": "commentId",
+						"description": "ID of the comment whose reports should be retrieved.",
+						"in": "path",
+						"required": true
+					},
+					{
+						"name": "page",
+						"description": "The pagination page number to retrieve records from.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "List of paginated reports for the given comment.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/UserCommentReport"
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view comment reports.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Resource Not Found",
+						"description": "No comment was found with the given ID.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"Comments / Reports"
+				],
+				"summary": "Report a comment.",
+				"parameters": [
+					{
+						"name": "commentId",
+						"description": "ID of the comment to be reported.",
+						"in": "path",
+						"required": true
+					},
+					{
+						"description": "Details of the report to be created.",
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"note": {
+									"type": "string",
+									"description": "The note explaining why the comment is being reported.",
+									"required": true
+								}
+							}
+						}
+					},
+					{
+						"name": "commentId",
+						"description": "ID of the comment being reported.",
+						"in": "path",
+						"required": true
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Details of the report that was just created.",
+						"schema": {
+							"$ref": "#/definitions/UserCommentReport"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to report comments.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Resource Not Found",
+						"description": "No comment was found with the given ID.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"Comments / Reports"
+				],
+				"summary": "Delete all reports for a specific comment.",
+				"parameters": [
+					{
+						"name": "commentId",
+						"description": "ID of the comment whose reports should be deleted.",
+						"in": "path",
+						"required": true
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Empty response."
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to delete comment reports.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Resource Not Found",
+						"description": "No comment was found with the given ID.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/comments/{commentId}/reports/{reportId}": {
+			"get": {
+				"tags": [
+					"Comments / Reports"
+				],
+				"summary": "Get details for a specific comment report.",
+				"parameters": [
+					{
+						"name": "commentId",
+						"description": "ID of the comment whose report should be retrieved.",
+						"in": "path",
+						"required": true
+					},
+					{
+						"name": "reportId",
+						"description": "ID of the report to retrieve.",
+						"in": "path",
+						"required": true
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Details of the requested comment report.",
+						"schema": {
+							"$ref": "#/definitions/UserCommentReport"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view this comment report.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Resource Not Found",
+						"description": "No comment or report was found with the given IDs.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"Comments / Reports"
+				],
+				"summary": "Delete a specific comment report.",
+				"parameters": [
+					{
+						"name": "commentId",
+						"description": "ID of the comment whose report should be deleted.",
+						"in": "path",
+						"required": true
+					},
+					{
+						"name": "reportId",
+						"description": "ID of the report to delete.",
+						"in": "path",
+						"required": true
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Empty response."
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to delete this comment report.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Resource Not Found",
+						"description": "No comment or report was found with the given IDs.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/comments/{commentId}/setApproval": {
+			"put": {
+				"tags": [
+					"Comments"
+				],
+				"summary": "Set approval status of a comment",
+				"description": "Update the approval status of a specific comment by ID.",
+				"parameters": [
+					{
+						"name": "commentId",
+						"in": "path",
+						"description": "ID of the comment to update.",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"description": "Approval payload for the comment.",
+						"in": "body",
+						"required": true,
+						"schema": {
+							"type": "object",
+							"properties": {
+								"approved": {
+									"type": "boolean",
+									"description": "Set to `true` to approve the comment, or `false` to disapprove it.",
+									"required": true
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Details of the updated comment.",
+						"schema": {
+							"$ref": "#/definitions/UserComment"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Resource Not Found",
+						"description": "No comment was found with the given ID.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
