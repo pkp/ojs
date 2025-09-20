@@ -31,4 +31,8 @@ if (in_array('suggestions', $urlParts)) {
     return new \PKP\handler\APIHandler(new PKP\API\v1\reviewers\suggestions\ReviewerSuggestionController());
 }
 
+if (in_array('tasks', $urlParts)) {
+    return new \PKP\handler\APIHandler(new \PKP\API\v1\submissions\tasks\EditorialTaskController());
+}
+
 return new \PKP\handler\APIHandler(new \APP\API\v1\submissions\SubmissionController());
