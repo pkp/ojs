@@ -2,7 +2,7 @@
 # Juan Pablo Martínez <juanpabl@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-26 10:57+0000\n"
+"PO-Revision-Date: 2025-09-20 09:37+0000\n"
 "Last-Translator: Juan Pablo Martínez <juanpabl@gmail.com>\n"
 "Language-Team: Aragonese <http://translate.pkp.sfu.ca/projects/ojs/editor/an/"
 ">\n"
@@ -109,7 +109,7 @@ msgid "editor.notifyUsers.includeToc"
 msgstr "Incluyir la tabla de conteniu d'este numero:"
 
 msgid "editor.editorAdministration"
-msgstr "Administración d'o editor/a"
+msgstr "Administración de l'editor/a"
 
 msgid "editor.issues.createIssue"
 msgstr "Crear numero"
@@ -399,7 +399,7 @@ msgid "editor.article.coverImage"
 msgstr "Imachen de portalada"
 
 msgid "editor.home"
-msgstr "Pachina principal d'o editor/a"
+msgstr "Pachina principal de l'editor/la editora"
 
 msgid "editor.submissionArchive"
 msgstr "Archivo de ninvios"
