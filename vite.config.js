@@ -35,7 +35,7 @@ export default defineConfig(({mode}) => {
 			copy({
 				targets: [
 					{
-						src: 'lib/ui-library/public/styles/tinymce/*',
+						src: 'node_modules/tinymce/skins/ui/tinymce-5/**/*.css',
 						dest: 'lib/pkp/styles/tinymce',
 					},
 					{
