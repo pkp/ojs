@@ -3432,7 +3432,7 @@
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
-					},
+					}
 				}
 			}
 		},
