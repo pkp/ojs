@@ -1,0 +1,2448 @@
+# Juan Pablo Martínez <juanpabl@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-06-04 23:19+0000\n"
+"Last-Translator: Juan Pablo Martínez <juanpabl@gmail.com>\n"
+"Language-Team: Aragonese <http://translate.pkp.sfu.ca/projects/ojs/locale/an/"
+">\n"
+"Language: an\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Pa bibliotecarios/as"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "En edición"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Ninvios en revisión"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "En revisión"
+
+msgid "common.queue.long.active"
+msgstr "Ninvios activos"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Archius"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Archius"
+
+msgid "submissions.step3"
+msgstr "Paso 3"
+
+msgid "submissions.queuedReview"
+msgstr "En revisión"
+
+msgid "submissions.published"
+msgstr "Publicau"
+
+msgid "user.profile.profileImage"
+msgstr "Imachen de perfil"
+
+msgid "user.showAllJournals"
+msgstr "Amostrar Las mías revistas"
+
+msgid "issue.issue"
+msgstr "Numero"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Imprentar y en linia"
+
+msgid "subscriptions.inactive"
+msgstr "Inactivo"
+
+msgid "subscriptions.status"
+msgstr "Estau"
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Evento de ninvio"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Ninvio mandau a la coda de planificación de numers"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "S'ha asignau lo ninvio a un numero"
+
+msgid "submission.event.general.articlePublished"
+msgstr "S'ha publicau l'articlo"
+
+msgid "submission.event.general.authorRevision"
+msgstr "S'ha actualizau lo fichero de revisión de l'autor/a"
+
+msgid "search.results.orderBy.date"
+msgstr "Data de publicación"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "No i hai ninvios asignaus."
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Rechazos"
+
+msgid "sectionEditor.regrets.title"
+msgstr ""
+"#{$submissionId} Refusaus per lo revisor/a, cancelacions y tongadas previas"
+
+msgid "reviewer.completedReviews"
+msgstr "Feito"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Reninviar pa revisión"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Reninviar a unatra publicación"
+
+msgid "reviewer.article.decision.decline"
+msgstr "No publicable"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Veyer comentarios"
+
+msgid "reviewer.article.schedule"
+msgstr "Planificación"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Ninvio pa revisar"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Planificación de revisión"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Pasos de revisión"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Directrices pa lo revisor/a"
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Notificar a lo/a editor/a d'o ninvio"
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr ""
+"No s'ha triau garra recomendación. Ha de triar una recomendación antes de "
+"ninviar lo formulario."
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Fichero pa lo corrector/a d'orichinals"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr ""
+"No puede ninviar-se lo correu electronico de solicitut dica que no i haiga "
+"una versión d'o revisor/a."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"No puede ninviar-se lo correu electronico de solicitut dica que no se tríe "
+"un fichero pa la corrección d'orichinals en a Decisión d'o editor/a, d'a "
+"pachina de Revisión."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr ""
+"No puede ninviar-se lo correu electronico de solicitut dica que no se cargue "
+"lo fichero pa la corrección d'orichinals."
+
+msgid "submission.proofreadingComments"
+msgstr "Comentarios de corrección de prebas"
+
+msgid "submission.proofread.corrections"
+msgstr "Modificacions d'a corrección de prebas"
+
+msgid "user.register.privacyStatement"
+msgstr "Declaración de privacidat"
+
+msgid "user.register.registrationDisabled"
+msgstr "En este momento esta revista no acepta rechistros d'usuario/a."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "La clau que ha introduciu no ye pro larga."
+
+msgid "user.register.readerDescription"
+msgstr ""
+"Recibirá una notificación en o suyo correu electronico cuan se publique un "
+"nuevo numero d'a revista."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr ""
+"Recibirá una notificación en o suyo correu electronico cuan un numero d'esta "
+"revista pase a estar d'acceso ubierto."
+
+msgid "user.register.authorDescription"
+msgstr "Puede ninviar articlos a la revista."
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"Si s'introduz un dominio aquí, los rangos d'IP son opcionals.<br />Las "
+"valors validas son nombres de dominio (p. eix., lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Lo tipo de subscripción triada requiere un dominio u un rango d'IP pa "
+"validar la subscripción."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Eliminar"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Anyadir"
+
+msgid "search.browseAuthorIndex"
+msgstr "Examinar índiz d'autors/as"
+
+msgid "search.searchFor"
+msgstr "Buscar articlos per"
+
+msgid "search.withinJournal"
+msgstr "Dentro de"
+
+msgid "search.journal"
+msgstr "Per revista"
+
+msgid "search.allJournals"
+msgstr "Totas las revistas"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "Editorial OJS y proceso de publicación"
+
+msgid "about.aboutSoftware"
+msgstr "Sobre Open Journal Systems"
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Ha d'iniciar la sesión pa realizar una donación."
+
+msgid "payment.subscription.expires"
+msgstr "Caduca"
+
+msgid "installer.appInstallation"
+msgstr "Instalación de OJS"
+
+msgid "installer.ojsUpgrade"
+msgstr "Actualización de OJS"
+
+msgid "installer.allowFileUploads"
+msgstr ""
+"Lo suyo servidor actualment permite cargas de fichers: "
+"<strong>{$allowFileUploads}</strong>"
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Articlo revisau per pars"
+
+msgid "notification.type.editing"
+msgstr "Edición d'eventos"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "S'ha ninviau un nuevo articlo: \"{$title}\"."
+
+msgid "notification.type.issuePublished"
+msgstr "S'ha pubicau un numero."
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+"Asigne la persona encargada d'a maquetación per medio d'a opción \"Asignar\" "
+"d'o panel de participants."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Asperando galeradas."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr ""
+"Acceso denegau! No ha estau asignau como corrector/a d'orichinals pa este "
+"articlo."
+
+msgid "navigation.browseByAuthor"
+msgstr "Per autor/a"
+
+msgid "navigation.infoForAuthors"
+msgstr "Pa autors/as"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Esta revista no publica los suyos contenius en linia."
+
+msgid "context.current"
+msgstr "Revista actual:"
+
+msgid "context.select"
+msgstr "Cambiar a unatra revista:"
+
+msgid "navigation.categories"
+msgstr "Categorías"
+
+msgid "navigation.categories.browse"
+msgstr "Examinar"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Faga clic en l'icono pa replenar lo formulario de revisión."
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Replene los campos obligatorios."
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "common.confirmComplete"
+msgstr ""
+"Ye seguro/a que deseya marcar esta fayena como completa? No podrá fer "
+"cambios dimpués."
+
+msgid "common.payment"
+msgstr "Pago"
+
+msgid "common.payments"
+msgstr "Pagos"
+
+msgid "common.homePageHeader.altText"
+msgstr "Capitero d'a pachina inicial"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Imachen d'a pachina inicial d'a revista"
+
+msgid "doi.manager.settings.publications"
+msgstr "Articlos"
+
+msgid "navigation.journalHelp"
+msgstr "Servicio d'aduya d'a revista"
+
+msgid "navigation.current"
+msgstr "Actual"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Directrices sobre conflictos d'intereses"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Información pa autors/as"
+
+msgid "navigation.otherJournals"
+msgstr "Atras revistas"
+
+msgid "navigation.browseByIssue"
+msgstr "Per numero"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Información pa bibliotecarios/as"
+
+msgid "navigation.skip.about"
+msgstr "Ir ta l'apartau \"Sobre la revista\""
+
+msgid "navigation.skip.issue"
+msgstr "Ir ta lo numero actual"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Sin asignar"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Sin asignar"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Ninvios en edición"
+
+msgid "section.title"
+msgstr "Títol de sección"
+
+msgid "section.abbreviation"
+msgstr "Abreviatura"
+
+msgid "common.queue.short.active"
+msgstr "Activo"
+
+msgid "common.queue.long.completed"
+msgstr "Archivar"
+
+msgid "common.queue.short.completed"
+msgstr "Archivar"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Editors/as asignaus"
+
+msgid "section.section"
+msgstr "Sección"
+
+msgid "section.sections"
+msgstr "Seccions d'a revista"
+
+msgid "section.abbreviation.example"
+msgstr "(Per eixemplo, articlos=ART)"
+
+msgid "section.policy"
+msgstr "Politica de sección"
+
+msgid "article.article"
+msgstr "Articlo"
+
+msgid "article.articles"
+msgstr "Articlos"
+
+msgid "common.publication"
+msgstr "Articlo"
+
+msgid "common.publications"
+msgstr "Articlos"
+
+msgid "article.submissionId"
+msgstr "Id. d'o ninvio"
+
+msgid "article.title"
+msgstr "Títol"
+
+msgid "article.authors"
+msgstr "Autors/as"
+
+msgid "article.indexingInformation"
+msgstr "Información d'indexación"
+
+msgid "article.metadata"
+msgstr "Metadatos"
+
+msgid "article.journalSection"
+msgstr "Sección d'a revista"
+
+msgid "article.file"
+msgstr "Fichero"
+
+msgid "article.suppFile"
+msgstr "Fichero complementario"
+
+msgid "article.suppFiles"
+msgstr "Fichero(s) complementario(s)"
+
+msgid "article.discipline"
+msgstr "Disciplina academica y subdisciplinas"
+
+msgid "article.subject"
+msgstr "Parolas clau"
+
+msgid "article.coverage"
+msgstr "Cobertura"
+
+msgid "article.type"
+msgstr "Tipo, metodo u enfoque"
+
+msgid "article.language"
+msgstr "Idioma"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.commentsToEditor"
+msgstr "Comentarios de l'autor/a"
+
+msgid "article.submission"
+msgstr "Ninvio"
+
+msgid "article.submissions"
+msgstr "Ninvios"
+
+msgid "article.details"
+msgstr "Detalles"
+
+msgid "article.abstract"
+msgstr "Resumen"
+
+msgid "article.coverPage.altText"
+msgstr "Imachen de portalada"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Acceso ubierto"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Acceso restrinchiu"
+
+msgid "article.comments.sectionDefault"
+msgstr "Valor predeterminada"
+
+msgid "article.comments.disable"
+msgstr "Deshabilitar"
+
+msgid "article.comments.enable"
+msgstr "Habilitar"
+
+msgid "article.fontSize"
+msgstr "Grandaria de fuent"
+
+msgid "article.fontSize.small.altText"
+msgstr "Chicot"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Normal"
+
+msgid "article.fontSize.large.altText"
+msgstr "Gran"
+
+msgid "article.return"
+msgstr "Tornar ta los detalles de l'articlo"
+
+msgid "submission.submissionEditing"
+msgstr "Edición de ninvios"
+
+msgid "submission.changeSection"
+msgstr "Cambiar a"
+
+msgid "submission.sent"
+msgstr "Ninviau"
+
+msgid "submission.editorDecision"
+msgstr "Decisión de lo/a editor/a"
+
+msgid "submission.round"
+msgstr "Tongada&nbsp;{$round}"
+
+msgid "submission.editorReview"
+msgstr "Revisión d'o editor/a"
+
+msgid "submission.notifyAuthor"
+msgstr "Notificar a l'autora/a"
+
+msgid "submission.notifyEditor"
+msgstr "Notificar a lo/a editor/a"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Rechistro de correu electronico d'o editor/a u autor/a"
+
+msgid "submission.reviewersVersion"
+msgstr "Versión d'o fichero comentau per lo revisor/a"
+
+msgid "submission.postReviewVersion"
+msgstr "Versión d'o fichero posterior a la revisión"
+
+msgid "submission.editorVersion"
+msgstr "Versión d'o editor/a"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Versión d'o fichero revisau per l'autor/aversión"
+
+msgid "submission.authorVersion"
+msgstr "Versión de l'autor/a"
+
+msgid "submission.copyediting"
+msgstr "Edición"
+
+msgid "submission.copyedit"
+msgstr "Correchir orichinals"
+
+msgid "submission.proofreading"
+msgstr "Corrección de prebas"
+
+msgid "submission.scheduling"
+msgstr "Planificación"
+
+msgid "submission.scheduledIn"
+msgstr "Listo pa publicar en {$issueName}."
+
+msgid "submission.scheduledIn.tba"
+msgstr "(Anuncio pendient)"
+
+msgid "submissions.step1"
+msgstr "Paso 1"
+
+msgid "submissions.initial"
+msgstr "Inicial"
+
+msgid "submissions.proofread"
+msgstr "Correchir prebas"
+
+msgid "submissions.initialProof"
+msgstr "Preba inicial"
+
+msgid "submissions.postAuthor"
+msgstr "Posterior a l'autor/a"
+
+msgid "submissions.reviewRound"
+msgstr "Tongada de revisión"
+
+msgid "submissions.proof"
+msgstr "Preba"
+
+msgid "submissions.editorDecision"
+msgstr "Decisión d'o editor/a"
+
+msgid "submissions.editorRuling"
+msgstr "Normativa d'edición"
+
+msgid "submission.eventLog"
+msgstr "Rechistro d'eventos"
+
+msgid "submissions.copyeditComplete"
+msgstr "Orichinal correchiu"
+
+msgid "submissions.layoutComplete"
+msgstr "Maquetación editada"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Correchir prebas"
+
+msgid "submission.search"
+msgstr "Busqueda d'articlos"
+
+msgid "journal.currentIssue"
+msgstr "Numero actual"
+
+msgid "context.contexts"
+msgstr "Revistas"
+
+msgid "journal.path"
+msgstr "Rota"
+
+msgid "context.context"
+msgstr "Revista"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "journal.viewAllIssues"
+msgstr "Veyer toz los numeros"
+
+msgid "user.authorization.representationNotFound"
+msgstr "No s'ha puesto trobar la galerada solicitada."
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Incluyir usuarios/as d'esta revista sin rols."
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Sí, solicitar lo rol {$userGroup}."
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Sí, me fería goyo que me contactasen pa revisar articlos d'esta revista."
+
+msgid "user.register.contextsPrompt"
+msgstr "En qué revistas d'este puesto le fería goyo rechistrar-se?"
+
+msgid "user.register.otherContextRoles"
+msgstr "Solicitar los siguients rols."
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Si ha solicitau estar revisor/a en bella revista introduzca los suyos temas "
+"de interés, per favor."
+
+msgid "user.registerForOtherJournals"
+msgstr "Rechistrar-se en Atras revistas"
+
+msgid "user.reviewerPrompt"
+msgstr "Sería disposau a revisar ninvios pa esta revista?"
+
+msgid "user.myJournals"
+msgstr "Las mías revistas"
+
+msgid "user.manageMySubscriptions"
+msgstr "Chestionar las mías subscripcions"
+
+msgid "user.noRoles.chooseJournal"
+msgstr ""
+"En este momento la suya cuenta no ye asociada a garra revista. Tríe un "
+"revista:"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"En este momento la suya cuenta no tiene asignau garra rol pa esta revista. "
+"Tríe entre las siguients accions:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Ninvie una proposada"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr ""
+"Ninvie un articlo: En este momento lo rechistro d'autors/as se troba "
+"deshabilitau."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Rechistrar-se como revisor/a"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr ""
+"Rechistrar-se como revisor/a: En este momento lo rechistro de revisors/as se "
+"troba deshabilitau."
+
+msgid "user.role.manager"
+msgstr "Chestor/a d'a revista"
+
+msgid "user.role.subEditor"
+msgstr "Editor/a de sección"
+
+msgid "user.role.subscriptionManager"
+msgstr "Chestor/a de subscripcions"
+
+msgid "user.role.managers"
+msgstr "Chestors/as d'a revista"
+
+msgid "user.role.subEditors"
+msgstr "Editors/as de sección"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Chestors/as de subscripción"
+
+msgid "user.role.journalAssistant"
+msgstr "Asistent/a de revista"
+
+msgid "doi.issue.notPublished"
+msgstr ""
+"No s'ha puesto marcar lo DOI rechistrau pa {$pubObjectTitle}. Lo numero ha "
+"de publicar-se antes que se pueda actualizar lo estau."
+
+msgid "subscriptionTypes.currency"
+msgstr "Moneda"
+
+msgid "user.role.journalAssistants"
+msgstr "Asistents/as de revista"
+
+msgid "issue.issues"
+msgstr "Numeros"
+
+msgid "issue.title"
+msgstr "Títol"
+
+msgid "issue.viewIssueIdentification"
+msgstr "Veyer {$identification}"
+
+msgid "issue.volume"
+msgstr "Volumen"
+
+msgid "issue.number"
+msgstr "Numero"
+
+msgid "issue.vol"
+msgstr "Vol."
+
+msgid "issue.no"
+msgstr "Núm."
+
+msgid "issue.year"
+msgstr "Anyo"
+
+msgid "issue.noIssues"
+msgstr "No i hai numeros"
+
+msgid "issue.toc"
+msgstr "Tabla de conteniu"
+
+msgid "issue.abstract"
+msgstr "Resumen"
+
+msgid "issue.coverPage.altText"
+msgstr "Portiada"
+
+msgid "issue.fullIssue"
+msgstr "Numero completo"
+
+msgid "issue.nonpdf.title"
+msgstr "Descargar numero"
+
+msgid "issue.viewIssue"
+msgstr "Veyer numero"
+
+msgid "issue.return"
+msgstr "Tornar a los detalles d'o numero"
+
+msgid "doi.issue.incorrectContext"
+msgstr ""
+"No s'ha puesto crear un DOI pa lo siguient numero: {$itemTitle}. No existe "
+"en lo contexto actual d'a revista."
+
+msgid "doi.issue.incorrectStaleStatus"
+msgstr ""
+"No s'ha puesto establir lo estau d'o DOI como obsoleto pa lo siguient numero:"
+" {$itemTitle}. Lo DOI ha de tener lo estau \"Rechistrau\" u \"Ninviau\"."
+
+msgid "subscriptionTypes.year"
+msgstr "anyo"
+
+msgid "subscriptionTypes.years"
+msgstr "anyos"
+
+msgid "subscriptionTypes.month"
+msgstr "mes"
+
+msgid "subscriptionTypes.months"
+msgstr "meses"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Sin caducidat"
+
+msgid "subscriptionTypes.format"
+msgstr "Formato"
+
+msgid "subscriptionTypes.format.online"
+msgstr "En linia"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Imprentar"
+
+msgid "subscriptions.status.active"
+msgstr "Activa"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Ameneste información"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Ameneste aprebación"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Asperando lo pago manual"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Asperando lo pago en linia"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>Nota:</strong> Antes d'activar las subscripcions institucionals "
+"adquiridas en linia, ye necesario aprebar lo suyo dominio y rangos d'IP."
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Articlo ninviau"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Revisión de l'autor/a ninviada"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Editor/a asignau a lo ninvio"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Editor/a no asignau a lo ninvio"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "No tiene una subscripción activa."
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Decisión d'o editor/a ninviada"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Fichero d'o editor/a actualizau"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Ninvio archivado"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Ninvio recuperau d'o fichero"
+
+msgid "subscriptions.status.other"
+msgstr "Unatro, veyer notas"
+
+msgid "subscriptions.individualDescription"
+msgstr ""
+"Los suscriptors individuals han d'iniciar sesión pa acceder a lo conteniu "
+"d'a subscripción."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"Los suscriptors institucionals no amenesten iniciar sesión. Lo dominio d'o "
+"usuario/a u l'adreza IP s'utilizan pa dar acceso a lo conteniu d'a "
+"subscripción."
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Corrector/a d'orichinals asignau a lo ninvio"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Corrector/a d'orichinals no asignau a lo ninvio"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Asignación de corrección d'orichinals iniciada"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Fichero de revisions d'o corrector/a d'orichinals actualizau"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Corrección d'orichinals inicial completada"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Corrección d'orichinals final completada"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Fichero de corrección d'orichinals actualizau"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Corrector/a de prebas asignau a lo ninvio"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Corrector/a de prebas no asignau a lo ninvio"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Asignación de corrección de prebas iniciada"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Fichero de revisions d'o corrector/a de prebas actualizau"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Asignación de corrección de prebas completada"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Maquetador/a asignau a lo ninvio"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Maquetador/a no asignau a lo ninvio"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Asignación de maquetación iniciada"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Maquetación de galerada actualizada"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Asignación de maquetación completada"
+
+msgid "reader.subscribersOnly"
+msgstr "Nomás suscriptors"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"Ye necesario estar suscrito pa acceder a este elemento. Acceda a la revista "
+"con os suyos datos d'usuario pa verificar la subscripción."
+
+msgid "reader.openAccess"
+msgstr "Acceso ubierto"
+
+msgid "reader.subscriptionAccess"
+msgstr "Acceso per medio de subscripción"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Subscripción u acceso de pago"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "comments.commentsOnArticle"
+msgstr "Comentarios sobre este articlo"
+
+msgid "comments.authenticated"
+msgstr "per <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "search.results.orderBy"
+msgstr "Ordenar resultaus per"
+
+msgid "search.results.orderBy.article"
+msgstr "Títol de l'articlo"
+
+msgid "search.results.orderBy.author"
+msgstr "Autor/a"
+
+msgid "search.results.orderBy.issue"
+msgstr "Numero"
+
+msgid "search.results.orderBy.journal"
+msgstr "Títol d'a revista"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Popularidat (historico)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Popularidat (zaguer mes)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Relevancia"
+
+msgid "search.results.orderDir.asc"
+msgstr "Ascendent"
+
+msgid "search.results.orderDir.desc"
+msgstr "Descendent"
+
+msgid "search.results.similarDocuments"
+msgstr "documentos semellants"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>NOTA!</h4>\n"
+"<p>Lo sistema no puede sobrescribir automaticament lo fichero de "
+"configuración. Pa aplicar los cambios de configuración ye necesario ubrir "
+"<tt>config.inc.php</tt> en un editor de texto adecuau y reemplazar los "
+"contenius per los d'o campo de texto que s'amuestran contino.</p>"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Chestión de subscripción"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Subscripcions individuals"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Subscripcions institucionals"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Tipos de subscripción"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Modulos de galerada de l'articlo"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"Los modulos de galerada de l'articlo anyaden suporte pa visualizar diferents "
+"tipos de documentos como galeradas de l'articlo."
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+"Los modulos d'autorización permiten a Open Journal Systems delegar las "
+"fayenas d'autenticación d'usuarios/as a atros sistemas, como servidors LDAP."
+
+msgid "plugins.categories.generic.description"
+msgstr ""
+"Los modulos chenericos s'utilizan pa enamplar las caracteristicas d'o Open "
+"Journal Systems de diversas trazas y que son incompatibles con atras "
+"categorías de modulos."
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Avisos de dreitos d'autor proposaus per Creative Commons</h3>\n"
+"<h4>1. Politica proposada pa revistas que ofreixen acceso ubierto</h4>\n"
+"Aquels autors/as que tiengan publicacions con esta revista, aceptan los "
+"termins siguients:\n"
+"<ol type=\"a\">\n"
+"\t<li>Los autors/as conservarán los suyos dreitos d'autor y guarenciarán a "
+"la revista lo dreito de primera publicación d'a suya obra, lo cual será "
+"simultaniament sucheto a la <a target=\"_new\" href=\"http://creativecommons."
+"org/licenses/by/3.0/\">Licencia de reconoixencia de Creative Commons</a> que "
+"permite a tercers compartir la obra, siempre que s'indique lo suyo autor y "
+"la suya primera publicación esta revista.</li>\n"
+"\t<li>Los autors/as podrán adoptar atros acuerdos de licencia no exclusiva "
+"de distribución d'a versión d'a obra publicada (p. eix.: depositar-la en un "
+"fichero telematico institucional u publicar-la en un volumen monografico) "
+"siempre que s'indique la publicación inicial en esta revista.</li>\n"
+"\t<li>Se permite y recomienda a los autors/as difundir la suya obra a "
+"traviés de Internet (p. eix.: en fichers telematicos institucionals u en a "
+"suya pachina web) dinantes y entre lo proceso de ninvio, lo cual puede "
+"producir intercambios interesants y aumentar las citas d'a obra publicada. ("
+"se Veiga <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio"
+".html\">L'efecto de l'acceso ubierto</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. Politica proposada pa revistas que ofreixen acceso ubierto "
+"diferiu</h4>\n"
+"Aquels autors/as que tiengan publicacions con esta revista, aceptan los "
+"termins siguients:\n"
+"<ol type=\"a\">\n"
+"\t<li>Los autors/as conservarán los suyos dreitos d'autor y guarenciarán a "
+"la revista lo dreito de primera publicación d'a suya obra [ESPECIFICAR "
+"PERIODO DE TIEMPO], lo cual será simultaniament sucheto a la <a target=\"_new"
+"\" href=\"http://creativecommons.org/licenses/by/3.0/\">Licencia de "
+"reconoixencia de Creative Commons</a> que permite a tercers compartir la "
+"obra siempre que s'indique lo suyo autor y la suya primera publicación esta "
+"revista.</li>\n"
+"\t<li>Los autors/as podrán adoptar atros acuerdos de licencia no exclusiva "
+"de distribución d'a versión d'a obra publicada (p. eix.: depositar-la en un "
+"fichero telematico institucional u publicar-la en un volumen monografico) "
+"siempre que s'indique la publicación inicial en esta revista.</li>\n"
+"\t<li>Se permite y recomienda a los autors/as difundir la suya obra a "
+"traviés de Internet (p. eix.: en fichers telematicos institucionals u en a "
+"suya pachina web) dinantes y entre lo proceso de ninvio, lo cual puede "
+"producir intercambios interesants y aumentar las citas d'a obra publicada. ("
+"se Veiga <a target=\"_new\" href=\"http://opcit.eprints.org/oacitation-biblio"
+".html\">L'efecto de l'acceso ubierto</a>).</li>\n"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Pasos: Coda de ninvio &gt; revisión de ninvios &gt; edición de ninvios &gt; "
+"tabla de conteniu.<br /><br /> \n"
+"Tríe un modelo pa chestionar ixes aspectos d'o proceso editorial. (Pa "
+"designar un chestor/a d'edición y editors/as de sección, vaiga a \"Editors\" "
+"en \"Chestión d'a revista».)"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Pa permitir que los lectors/as troben versions en linia d'una obra citada "
+"per un autor/a son disponibles las siguients opcions:</p>\n"
+"\n"
+"<ol> \n"
+"\t<li><strong> Anyadir una ferramienta de lectura</strong><p>Lo chestor/a de "
+"la revista puede anyadir la opción \"Buscar referencias\" a las ferramientas "
+"de lectura que acompanyan a los elementos publicaus, lo que permite a los "
+"lectors/as apegar lo títol d'una referencia y dimpués buscar-lo en as bases "
+"de datos academicas preseleccionadas.</p></li> \n"
+"\t<li><strong>Incrustar vinclos en as referencias</strong><p>Lo maquetador/a "
+"puede anyadir un vinclo a las referencias que sían en linia per medio d'as "
+"siguients instruccions (se pueden editar).</p></li>\n"
+"</ol>"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Deshabilitar este usuario/a? Esta acción no permitirá a l'usuario/a iniciar "
+"sesión en o sistema. \n"
+"\n"
+"Opcionalment puede indicar lo motivo per lo cual s'ha deshabilitau la cuenta."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Lo sentimos, noo tiene dreitos administrativos sobre este usuario/a. Esto "
+"puede estar a causa que: \n"
+"<ul> \n"
+"<li>L'usuario/a ye administrador/a d'o puesto</li> \n"
+"<li>L'usuario/a ye activo en revistas que vusté no chestiona</li> \n"
+"</ul> \n"
+"Esta fayena ha de levar-la a cabo un administrador/a d'o puesto.\n"
+"\t"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol> \n"
+"\t<li>Los elementos resaltaus indican que un editor/a ha de levar a cabo "
+"beluna d'as accions etiquetadas como siguen:\n"
+"\t\t<ul>\n"
+"\t\t\t <li class=\"highlightCopyediting\">Ye necesario prener medidas en a "
+"fase de corrección d'orichinals</li> \n"
+"\t\t\t<li class=\"highlightLayoutEditing\">Ye necesario prener medidas en a "
+"fase de maquetación</li> \n"
+"\t\t\t<li class=\"higlightProofreading\">Ye necesario prener medidas en a "
+"fase de corrección de prebas</li> \n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Fayenas editorials activas"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Fayenas editorials completadas"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"En contactar de nuevo con este corrector/a d'orichinals se reiniciará la "
+"suya asignación. Ye seguro/a que deseya continar?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"En contactar de nuevo con este autor/a se reiniciará la suya asignación. Ye "
+"seguro/a que deseya continar?"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Los elementos resaltaus indican que l'editor ha de levar a cabo las "
+"siguients accions tal como s'amuestra contino:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">I hai un revisor/a asignau "
+"a qui no se le ha avisau per correu electronico</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">Toz los revisors/as han ninviau los "
+"suyos comentarios, pero no s'ha rechistrau garra decisión</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">L'autor/a ha puyau un "
+"manuscrito revisau</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">Falta que lo "
+"revisor/a confirme la invitación pa l'avaluación per pars</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">Falta que lo revisor/"
+"a remate la suya fayena</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>La \"Calendata de vencimiento\" se completa cuan lo revisor/a acepta "
+"la fayena y muestra lo numero de semanas dica la entrega u (-) las semanas "
+"que leva de retardo.</li>\n"
+"</ol>"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"En contactar de nuevo con este maquetador/a se reiniciará la suya "
+"asignación. Ye seguro/a que deseya continar?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"En contactar de nuevo con este corrector/a de prebas se reiniciará la suya "
+"asignación. Ye seguro/a que deseya continar?"
+
+msgid "sectionEditor.regrets"
+msgstr "Rechazos"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Veyer rechazos, cancelacions, tongadas previas"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Avaluación per pars, tongada {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Decisión d'o editor/a, tongada {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Refusaus per lo revisor/a y cancelacions"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Refuso"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Resultau"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "No i hai fayenas editorials activas."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Asignacions de maquetación"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Cargar formato de galerada"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Remplazar fichero"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Cargar fichero complementario"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Asignar lo rol de revisor/a a un usuario/a existent"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Crear un nuevo revisor/a"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Fayenas editorials activas"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Fayenas editorials completadas"
+
+msgid "submission.layout.imageInvalid"
+msgstr ""
+"Formato d'imachen no valido. Los formatos aceptaus son: .gif, .jpg y .png."
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Esta galerada s'ubrirá en una pachina web nueva."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "URL d'o conteniu alochau remotament"
+
+msgid "reviewer.pendingReviews"
+msgstr "Articlos pendients de revisión"
+
+msgid "reviewer.averageQuality"
+msgstr "Clasificación"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Fichero pa revisar"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Notificar a lo/a editor/a"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Fará la revisión"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr ""
+"Lo ninvio será disponible cuan lo revisor/a acceda a proceder con a revisión"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Editor/a d'o ninvio"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Escriba u apegue los comentarios de revisión aquí"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Editor/a per introducir"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "No puede fer la revisión"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Ninviar un aviso"
+
+msgid "reviewer.article.automatic"
+msgstr "(Auto)"
+
+msgid "reviewer.article.recommendation"
+msgstr "Recomendación"
+
+msgid "reviewer.article.submitReview"
+msgstr "Ninviar la revisión a lo/a editor/a"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Comentarios"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Fichers puyaus"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Versión cargada per lo revisor/a"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(Si deseya anotar lo fichero pa lo/a editor/a, l'alce en o suyo disco duro y "
+"utilice Examinar/Cargar.)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Petición d'o editor/a"
+
+msgid "reviewer.article.schedule.response"
+msgstr "La suya respuesta"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Revisión ninviada"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Calendata d'entrega de revisión"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Aceptar este ninvio"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Publicable con modificacions"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "de si aceptará u no la revisión."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr ""
+"Si va a revisar, consulte las directrices pa lo revisor que amaneixen a "
+"continación."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"Faiga clic en os nombres d'os fichers relacionaus con este ninvio que deseye "
+"descargar y revisar (en pantalla u imprentando-los)."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"Indique si tiene u no, bel conflicto d'intereses per lo que fa a esta "
+"investigación (consulte <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
+
+msgid "reviewer.competingInterests"
+msgstr "Conflicto d'intereses"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "Faiga clic en l'icono pa escribir (u apegar) la revisión d'este ninvio."
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+"Amás, puede cargar fichers pa que los consulte lo/a editor/a u l'autor/a."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"Tríe una recomendación y ninvie la revisión pa completar lo proceso. Ha "
+"d'introducir la revisión u puyar un fichero antes de triar una recomendación."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Configurar u achustar la recomendación d'o revisor/a."
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"Una vegada haiga rechistrau la suya decisión, no podrá fer cambios en esta "
+"revisión. Ye seguro/a que deseya continar?"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Fichero d'o corrector/a d'orichinals"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Fichero d'o corrector/a d'orichinals"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "No i hai asignacions de corrección de prebas"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>Pa cargar un manuscrito en esta revista, complete los siguients pasos:</p>"
+"\n"
+"<ol>\n"
+"<li>Faiga clic en Examinar (u Triar fichero) en esta pachina pa ubrir la "
+"finestra Triar fichero y asinas poder localizar-lo en o suyo disco duro.</li>"
+"\n"
+"<li>Localice lo fichero que deseya ninviar y lo resalte.</li>\n"
+"<li>Faiga clic en Ubrir (en a finestra Triar fichero) y veyerá lo nombre d'o "
+"fichero en esta pachina.</li>\n"
+"<li>Faiga clic en Cargar pa ninviar lo fichero a lo puesto web d'a revista y "
+"renombrar-lo seguntes las normas d'a revista.</li>\n"
+"<li>Una vegada cargau lo ninvio, faiga clic en Alzar y continar, en a parte "
+"inferior d'esta pachina.</li>\n"
+"</ol>"
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Corrección inicial"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Corrección de lo/a editor/a"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Corrección de l'autor/a"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Corrección final"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Versión de corrección d'orichinals"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Asignar corrector/a d'orichinals"
+
+msgid "submission.copyedit.useFile"
+msgstr "Utilizar lo fichero"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Comentarios de corrección d'orichinals"
+
+msgid "submission.copyedit.instructions"
+msgstr "Instruccions de corrección d'orichinals"
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"Garra (cargue la versión final d'a corrección d'orichinals como Versión "
+"maquetada antes de ninviar la solicitut)"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "L'identificador publico de galerada ya existe."
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Asignar maquetador/a"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Reemplazar maquetador/a"
+
+msgid "submission.layout.layoutComments"
+msgstr "Comentarios de maquetación"
+
+msgid "submission.layout.instructions"
+msgstr "Instruccions de maquetación"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Vinclos de referencia"
+
+msgid "submission.proofread.instructions"
+msgstr "Instruccions de corrección de prebas"
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Pa l'autor/a y lo/a editor/a"
+
+msgid "submission.logType.article"
+msgstr "Articlo"
+
+msgid "submission.logType.author"
+msgstr "Autor/a"
+
+msgid "submission.logType.editor"
+msgstr "Editor/a"
+
+msgid "submission.logType.review"
+msgstr "Revisión"
+
+msgid "submission.logType.copyedit"
+msgstr "Correchir orichinals"
+
+msgid "submission.logType.layout"
+msgstr "Maquetación"
+
+msgid "submission.logType.proofread"
+msgstr "Correchir prebas"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Correspondencia entre lo/a editor/a y l'autor/a"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Comentarios de corrección d'orichinals"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Estes comentarios se pueden compartir con l'autor/a.<br /> \n"
+"(Dimpués d'alzar-los, se pueden anyadir mas comentarios.)"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Pa l'autor/a y lo/a editor/a"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Pa lo/a editor/a"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr ""
+"Dimpués de ninviar, present una copia amagada (CCO) editable pa ninviar a "
+"los revisors/as."
+
+msgid "submission.comments.forEditor"
+msgstr "Pa lo/a editor/a"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Alzar y ninviar un correu electronico a l'autor/a"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Alzar y ninviar un correu electronico a lo/a editor/a"
+
+msgid "user.register.selectContext"
+msgstr "Triar una revista pa rechistrar-se:"
+
+msgid "user.register.noJournals"
+msgstr "En este puesto no i hai revistas en as cuals se pueda rechistrar."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Deseyo realizar l'avaluación per pars de ninvios a la revista."
+
+msgid "user.register.reviewerDescription"
+msgstr "Deseyo realizar l'avaluación per pars de ninvios a lo puesto."
+
+msgid "user.register.reviewerInterests"
+msgstr ""
+"Identificar intereses de revisión (arias fundamentals y metodos de "
+"investigación):"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"Sí, deseyo que me notifiquen sobre las nuevas publicacions y avisos de totas "
+"las revistas en as cuals m'he rechistrau."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Sí, accepto que los míos datos sían recopilados y almagacenaus seguntes la "
+"<a href=\"{$privacyUrl}\" target=\"_blank\">declaración de privacidat</a> "
+"d'esta revista."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Ha d'aceptar la declaración de privacidat de totas las revistas en as cuals "
+"se rechistre."
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Ha d'aceptar la declaración de privacidat d'este puesto."
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Las mías subscripcions"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Estau de subscripción"
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"Las subscripcions activas y caducadas s'amuestran abaixo chunto a las suyas "
+"calendatas de vencimiento. Amás, la siguient información sobre lo suyo estau "
+"puede incluyir-se con cada subscripción."
+
+msgid "user.subscriptions.status"
+msgstr "Estau"
+
+msgid "user.subscriptions.renew"
+msgstr "Renovar"
+
+msgid "user.subscriptions.purchase"
+msgstr "Mercar"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Mercar una nueva subscripción"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Descripción"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "S'ameneste información adicional antes d'activar la subscripción"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Ye necesario revisar la subscripción antes d'activar-la"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "S'ha iniciau lo pago manual pero encara no s'ha recibiu"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "S'ha iniciau lo pago en linia, pero s'ha cancelau u no s'ha completau"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Subscripción individual"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Subscripcions institucionals"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Mercar una subscripción individual"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Mercar una subscripción institucional"
+
+msgid "user.subscriptions.expires"
+msgstr "Expira lo {$da-te}"
+
+msgid "user.subscriptions.expired"
+msgstr "Ha veniu lo {$date}"
+
+msgid "search.authorDetails"
+msgstr "Detalles d'autor/a"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Veyer tipos de subscripción disponibles"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Tipo de subscripción"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Afiliación"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr ""
+"Pa este tipo de subscripción ye necesario provedir información d'a "
+"afiliación."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Tríe un tipo de subscripción valida."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Esta cuenta d'usuario/a ya tiene una subscripción individual."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr ""
+"Podría amenester información d'afiliación pa lo tipo de subscripción triada."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Nombre d'a institución"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Lo nombre d'a institución ye obligatorio."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Adreza postal"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Dominio"
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Introduzca un dominio valido."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "Rangos d'IP"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Si s'introducen rangos d'IP aquí, lo dominio ye opcional.<br />Las valors "
+"validas incluyen una adreza IP (p. eix., 142.58.103.1), un rango IP (p. "
+"eix., 142.58.103.1 - 142.58.103.4), un rango IP con carácter comodín '' (p. "
+"eix., 142.58.*.) y rango IP con CIDR (p. eix., 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Introduzca un rango d'IP valido."
+
+msgid "search.authorIndex"
+msgstr "Examinar índiz d'autors/as"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Consellos de busqueda:<ul>\n"
+"<li>Los termins de busqueda no distinguen entre mayusclas y minusclas</li>\n"
+"<li>Las parolas comuns son ignoradas</li>\n"
+"<li>Per defecto solo son tornaus los articlos que contiengan <em>toz</em> "
+"los termins de la consulta (p. eix., <em>Y</em> ye implicito)</li>\n"
+"<li>Combine multiples parolas con <em>U</em> pa trobar articlos que "
+"contiengan cualsequiera d'estas parolas; p. eix., <em>educación U "
+"investigación</em></li>\n"
+"<li>Utilice parentesi pa crear consultas mas complexas; p. eix., <em>fichero "
+"((revista U conferencia) NO tesi)</em></li>\n"
+"<li>Busque frases exactas introducindo cometas; p.ej, <em>\"publicacions "
+"d'acceso ubierto\"</em></li>\n"
+"<li>Excluiga una parola metendo como prefixo <strong>-</strong> u "
+"<em>NO</em>; p. eix. <em>en linia -politicas</em> u <em>en linia NO "
+"politicas</em></li>\n"
+"<li>Utilice <strong></strong> en un termin como comodín pa que cualsequier "
+"secuencia de carácters concuerde; p. eix., <em>soci* moralidat</em> fará que "
+"amaneixcan aquels documentos que contienen \"sociolochico\" u \"social\"</li>"
+"\n"
+"</ul>"
+
+msgid "article.pageTitle"
+msgstr "Vista de {$title}"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.download"
+msgstr "Descargar este fichero PDF"
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>Lo fichero PDF que ha triau habría de cargar-se aquí si lo suyo navegador "
+"tiene instalau un modulo de lectura de PDF (per eixemplo, una versión "
+"recient de <a href=\"https://get.adobe.com/reader/\">Adobe Acrobat "
+"Reader</a>).</p>"
+
+msgid "article.nonpdf.title"
+msgstr "Descargar articlo"
+
+msgid "about.submissions"
+msgstr "Ninvios"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Ir a Iniciar sesión"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Rechistrar"
+
+msgid "article.nonpdf.note"
+msgstr ""
+"Lo fichero triau s'empecipiará a descargar automaticament. Si no ye asinas, "
+"faiga clic en o siguient vinclo. Tienga en cuenta que pa poder veyer este "
+"fichero puede amenester un visor especial u un modulo.<br /><br />Si lo "
+"fichero no se descarga automaticament, <a href=\"{$url}\">faiga clic "
+"aquí</a>."
+
+msgid "site.journalsHosted"
+msgstr "Revistas alochadas en este puesto"
+
+msgid "site.journalView"
+msgstr "Veyer revista"
+
+msgid "site.journalRegister"
+msgstr "Rechistrar-se"
+
+msgid "site.journalCurrent"
+msgstr "Numero actual"
+
+msgid "site.noJournals"
+msgstr "No i hai revistas disponibles."
+
+msgid "current.current"
+msgstr "Actual"
+
+msgid "current.noCurrentIssue"
+msgstr "Garra numero actual"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Esta revista no ha publicau garra numero."
+
+msgid "archive.archivesPageNumber"
+msgstr "Fichers - Pachina {$pageNumber}"
+
+msgid "archive.browse"
+msgstr "Examinar los numeros anteriors"
+
+msgid "archive.issueUnavailable"
+msgstr "Numero no disponible"
+
+msgid "about.statistics"
+msgstr "Estatisticas"
+
+msgid "about.contact"
+msgstr "Contacto"
+
+msgid "about.aboutContext"
+msgstr "Sobre la revista"
+
+msgid "about.history"
+msgstr "Historial d'a revista"
+
+msgid "about.editorialPolicies"
+msgstr "Politicas d'a editorial"
+
+msgid "about.focusAndScope"
+msgstr "Enfoque y aconsiga"
+
+msgid "about.sectionPolicies"
+msgstr "Politicas de sección"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr ""
+"Lo rechistro y l'inicio de sesión son necesarios pa ninviar elementos en "
+"linia y pa comprebar lo estau d'os ninvios recients. {$login} a una cuenta "
+"existent u {$register} una nueva conta."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} u {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Realizar un nuevo ninvio a la sección <a href=\"{$url}\">{$name}</a>."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Realizar un nuevo ninvio"
+
+msgid "about.authorFees"
+msgstr "Cuotas d'os autors/as"
+
+msgid "about.authorFeesMessage"
+msgstr ""
+"Esta revista cobra a los autors/as los pres que s'amuestran a continación."
+
+msgid "about.peerReviewProcess"
+msgstr "Proceso d'avaluación per pars"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "Veyer los suyos ninvios pendients"
+
+msgid "about.authorGuidelines"
+msgstr "Directrices pa autors/as"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Lista de comprebación pa la preparación de ninvios"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"Como parte d'o proceso de ninvio, los autors/as son obligaus a comprebar que "
+"lo suyo ninvio cumpla toz los elementos que s'amuestran contino. Se tornarán "
+"a los autors/as aquels ninvios que no cumplan estas directrices."
+
+msgid "about.copyrightNotice"
+msgstr "Aviso de dreitos d'autor/a"
+
+msgid "about.privacyStatement"
+msgstr "Declaración de privacidat"
+
+msgid "about.publicationFrequency"
+msgstr "Frecuencia de publicación"
+
+msgid "about.openAccessPolicy"
+msgstr "Politica d'acceso ubierto"
+
+msgid "about.delayedOpenAccess"
+msgstr "Acceso ubierto diferiu"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr ""
+"Los contenius d'esta revista serán disponibles en un formato d'acceso ubierto"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "mes/ye dimpués d'a publicación d'un numero."
+
+msgid "about.archiving"
+msgstr "Archivar"
+
+msgid "about.subscriptions"
+msgstr "Subscripcions"
+
+msgid "about.subscriptions.individual"
+msgstr "Subscripcions individuals"
+
+msgid "about.subscriptions.institutional"
+msgstr "Subscripcions institucionals"
+
+msgid "about.subscriptionsContact"
+msgstr "Contacto de subscripcions"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Nombre"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Formato"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Duración"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Coste"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Tipos de subscripción"
+
+msgid "about.memberships"
+msgstr "Afiliacions"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr ""
+"Mas información sobre lo sistema de publicación, d'a plataforma y d'o fluxo "
+"de treballo de OJS/PKP."
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"Esta revista utiliza Open Journal Systems {$ojsVersion}, que ye un software "
+"de chestión de revistas de codigo ubierto desenvuelto, empentau y "
+"distribuyiu de forma gratuita per Public Knowledge Project baixo una "
+"licencia publica cheneral GNU. Visite la pachina web de PKP pa <a href=\"http"
+"://pkp.sfu.ca/\">saber mas sobre lo software</a>. Per favor, <a href=\""
+"{$contactUrl}\">contacte con a revista</a> dreitament si tiene preguntas "
+"sobre la revista u sobre los ninvios a la revista."
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"Este puesto utiliza Open Journal Systems {$ojsVersion}, que ye un chestor de "
+"revistas d'acceso ubierto y un software de publicación desenvuelto, "
+"financiau y distribuyiu de forma gratuita per Public Knowledge Project (PKP) "
+"baixo una licencia publica cheneral GNU. Visite la pachina web de PKP <a "
+"href=\"https://pkp.sfu.ca/\"> pa saber mas d'o software</a>. Pa cuestions "
+"relacionadas con as revistas u con os ninvios a las revistas, contacte "
+"dreitament con o puesto."
+
+msgid "help.ojsHelp"
+msgstr "Aduya de Open Journal Systems"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "Aduya de OJS"
+
+msgid "help.searchReturnResults"
+msgstr "Tornar a los resultaus d'a busqueda"
+
+msgid "help.goToEditPage"
+msgstr "Editar {$sectionTitle}"
+
+msgid "donations.thankYou"
+msgstr "Gracias"
+
+msgid "donations.thankYouMessage"
+msgstr "Gracias per la suya contribución. Valoramos muito la suya contribución."
+
+msgid "payment.loginRequired"
+msgstr "Ha d'iniciar la sesión pa realizar un pago."
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"Ye necesario mercar una subscripción u un articlo pa acceder a l'elemento. "
+"Pa verificar la subscripción, acceder a la compra anterior, u adquirir un "
+"articlo, inicie sesión en a revista."
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"Ye necesario mercar una subscripción u un numero pa acceder a l'elemento. Pa "
+"verificar la subscripción, acceder a la compra anterior, u adquirir un "
+"numero, inicie sesión en a revista."
+
+msgid "payment.paid"
+msgstr "Pagau"
+
+msgid "payment.unpaid"
+msgstr "No pagau"
+
+msgid "payment.waived"
+msgstr "No exichiu"
+
+msgid "payment.payNow"
+msgstr "Pagar agora"
+
+msgid "payment.waive"
+msgstr "Renunciar"
+
+msgid "payment.alreadyPaid"
+msgstr "Ya pagau"
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"Marque esta caixeta si ya ha ninviau la suya pago a la revista y asinas "
+"finalizar lo proceso. Lo ninvio no será revisau dica recibir lo pago. Faiga "
+"clic en PAGAR AGORA (mas alto) pa veyer las instruccions de pago."
+
+msgid "payment.paymentReceived"
+msgstr "Pago recibiu"
+
+msgid "payment.paymentSent"
+msgstr "Lo pago ya s'ha ninviau"
+
+msgid "payment.authorFees"
+msgstr "Cuotas d'os autors/as"
+
+msgid "payment.type.submission"
+msgstr "Cuota de ninvio"
+
+msgid "payment.type.publication"
+msgstr "Cuota de publicación"
+
+msgid "payment.type.publication.required"
+msgstr "La taxa de publicación ye pendient de pago."
+
+msgid "payment.type.fastTrack"
+msgstr "Cuota de revisión rapida"
+
+msgid "payment.type.membership"
+msgstr "Cuota d'afiliación individual"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Cuota de compra d'articlos"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Cuota de compra de numeros"
+
+msgid "payment.type.subscription"
+msgstr "Cuota de subscripción"
+
+msgid "payment.type.donation"
+msgstr "Donacions"
+
+msgid "payment.requestPublicationFee"
+msgstr "Solicitar taxa de publicación ({$feeAmount})"
+
+msgid "payment.requestPublicationFee.notEnabled"
+msgstr "No i hai garra taxa de publicación habilitada."
+
+msgid "payment.notFound"
+msgstr ""
+"Se le ha solicitau un pago pero la petición ha expirau. Contacte con o "
+"administrador/a d'a revista pa obtener mas detalles."
+
+msgid "payment.donation.makeDonation"
+msgstr "Fer una donación"
+
+msgid "payment.submission.paySubmission"
+msgstr "Pagar cuota de ninvio"
+
+msgid "payment.publication.payPublication"
+msgstr "Pagar pa publicar"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Cuota de publicación pagada"
+
+msgid "payment.membership.buyMembership"
+msgstr "Mercar afiliación individual"
+
+msgid "payment.membership.renewMembership"
+msgstr "Renovar afiliación individual"
+
+msgid "payment.membership.ends"
+msgstr "Finaliza"
+
+msgid "payment.subscription.purchase"
+msgstr "Mercar subscripción"
+
+msgid "payment.subscription.renew"
+msgstr "Renovar subscripción"
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"Si ye actualizando una instalación ya existent de OJS, faiga <a href=\""
+"{$upgradeUrl}\">clic aquí</a> pa continar."
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>Versión OJS{$version}</h4>\n"
+"\n"
+"<p>Gracias per descargar <strong>Open Journal Systems</strong> de Public "
+"Knowledge Project. Antes de continar leiga lo fichero <a href=\""
+"{$baseUrl}/README.md\">ME LEIGA</a> incluyiu en este software. Pa obtener "
+"mas información sobre Public Knowledge Project y los suyos prochectos de "
+"software visite lo <a href=\"http://pkp.sfu.ca/\" target=\"_blank\">puesto "
+"web de PKP</a>. Si quiere informar sobre bella error u tiene preguntas sobre "
+"asistencia tecnica de Open Journal Systems, consulte lo <a href=\"http"
+"://forum.pkp.sfu.ca\" target=\"_blank\">foro d'asistencia</a> u lo <a href="
+"\"https://github.com/pkp/pkp-lib#issues\" target=\"_blank\">sistema de "
+"rechistro d'errors</a> en linia de PKP. Encara que lo foro d'asistencia ye "
+"lo metodo prioritario de contacto, tamién puede ninviar un correu "
+"electronico a nuestro equipo a <a href=\"mailto:pkp.contact@gmail.com\">pkp."
+"contact@gmail.com</a>.</p>\n"
+"\n"
+"<h4>Requisitos de sistema recomendaus</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"http://www.php.net/\" target=\"_blank\">PHP</a> >= "
+"{$phpRequiredVersion}; ye utilizando actualment PHP "
+"{$phpVersion}{$wrongPhpText}</li>\n"
+"\t<li><a href=\"http://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 u "
+"<a href=\"http://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> >= 9."
+"1.5</li>\n"
+"\t<li><a href=\"http://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
+"1.3.2x u >= 2.0.4x u Microsoft IIS 6</li>\n"
+"\t<li>Sistema operativo: cualsequiera compatible con o software anterior, "
+"incluyius <a href=\"http://www.linux.org/\" target=\"_blank\">Linux</a>, <a "
+"href=\"http://www.bsd.org/\" target=\"_blank\">BSD</a>, <a href=\"http://www."
+"oracle.com/sun/\" target=\"_blank\">Solaris</a>, <a href=\"http://www.apple."
+"com/\" target=\"_blank\">Mac TOS X</a>, <a href=\"http://www.microsoft.com/\""
+">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>Ya que PKP no disposa de recursos pa prebar totas las combinacions "
+"posibles de versions de software y plataformas, no guarencia que lo sistema "
+"funcione correctament.</p>\n"
+"\n"
+"<p>Dimpués d'a instalación, se pueden fer cambios a estes achustes editando "
+"lo fichero <tt>config.inc.php</tt> en o directorio base de OJS u utilizando "
+"la interficie web de l'administración d'o puesto.</p>\n"
+"\n"
+"<h4>Sistemas de bases de datos compatibles</h4>\n"
+"\n"
+"<p>Actualment, OJS nomás s'ha prebau en MySQL y PostgreSQL, encara que atros "
+"sistemas de chestión de bases de datos aceptaus per <a href=\"http://adodb."
+"sourceforge.net/\" target=\"_blank\">ADOdb</a> podrían funcionar (de forma "
+"completa u parcial). Puede ninviar a l'equipo de OJS informes de "
+"compatibilidat u parches de codigo pa DBMSs alternativos.</p>\n"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>Pasos pa la preinstalación</h4>\n"
+"\n"
+"\n"
+"<p>1. Los siguients fichers y directorios (y los suyos contenius) han "
+"d'estar editables:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> ye editable (opcional): {$writable_config}</li>"
+"\n"
+"\t<li><tt>public/</tt> ye editable: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> ye editable: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> ye editable: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> ye editable: "
+"{$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> ye editable: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. S'ha de crear un directorio editable pa almagacenar los fichers "
+"cargaus (se veiga \"Achustes de fichero\" mas abaixo).</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4> Versión de OJS {$version}</h4>\n"
+"\n"
+"<p>Gracias per descargar <strong>Open Journal Systems</strong> de Public "
+"Knowledge Project. Per favor, antes de continar leiga los documentos <a href="
+"\"{$baseUrl}/README.md\">README</a> y la <a href=\"https://docs.pkp.sfu.ca/"
+"dev/upgrade-guide)\">guía d'actualización</a>. Pa obtener mas información "
+"sobre Public Knowledge Project y los suyos prochectos de software, visite lo "
+"<a href=\"https://pkp.sfu.ca/\" target=\"_blank\">puesto web de PKP</a>. Si "
+"tiene informes d'errors u consultas de suporte tecnico sobre Open Journal "
+"Systems, consulte lo <a href=\"https://forum.pkp.sfu.ca\" target=\"_blank\""
+">foro de suporte</a> u visite lo <a href=\"https://github.com/pkp/pkp-lib/"
+"issues\" target=\"_blank\">sistema d'informes d'errors</a> en linia de PKP. "
+"Encara que lo foro de suporte sía lo metodo preferiu de contacto, tamién "
+"puede ninviar un correu electronico a l'equipo: <a href=\"mailto:pkp."
+"contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"<p>Ye <strong>altament recomendau</strong> que faiga una copia de seguranza "
+"d'a suya base de datos, directorio de fichers y directorio d'instalación de "
+"OJS antes de continar.</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"Pa disposar de suporte completo en Unicode, PHP ha de compilar-se con "
+"suporte pa la biblioteca <a href=\"https://www.php.net/mbstring\" target="
+"\"_blank\">mbstring</a> (habilitada de forma predeterminada en a mayoría de "
+"las instalacions recients de PHP). Puede experimentar problemas en usar "
+"conchuntos de carácters extendius si lo suyo servidor no cumple con estes "
+"requisitos.\n"
+"<br /><br />\n"
+"Actualment, lo suyo servidor admite mbstring: "
+"<strong>{$supportsMBString}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"Lo suyo servidor actualment permite cargar fichers con una grandaria maxima "
+"de: <strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr ""
+"L'idioma prencipal que s'utilizará pa este sistema. Consulte la "
+"documentación de OJS si ye intresau en a compatibilidat d'idiomas que no "
+"figuran en esta lista."
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+"Introduzca la rota completa d'un directorio existent an s'haigan de alzar "
+"los fichers. Este directorio no ha d'estar accesible dende la web. "
+"<strong>s'Asegure que este directorio existe y ye editable antes d'a "
+"instalación.</strong> Los nombres de rota pa las finestras han de utilizar "
+"barras oblicuas; p. eix. \"C:/mirevista/fichers\"."
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+"<strong>Atención:</strong> Si lo proceso falla en bel momento entre la "
+"instalación d'a base de datos, podría amenester desinstalar la base de datos "
+"OJS u las tablas de bases de datos antes de proceder a la suya reinstalación."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>IMPORTANT!</h4> \n"
+"<p>L'instalador no puede rescribir automaticament lo fichero de "
+"configuración. Antes de proceder a utilizar lo sistema, ubra <tt>config.inc."
+"php</tt> en un editor de texto adecuau y reemplace los contenius per los d'o "
+"campo de texto que s'amuestran contino.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>La instalación de OJS s'ha rematau con exito.</p>\n"
+"<p>Pa prencipiar a utilizar lo sistema, <a href=\"{$loginUrl}\">inicie "
+"sesión</a> con o nombre d'usuario/a y la clau que ha escrito en a pachina "
+"anterior.</p>\n"
+"<p>Visite nuestro <a href=\"https://forum.pkp.sfu.ca\" target=\"_new\">foro "
+"d'a comunidat</a> u s'inscriba a lo nuestro <a href=\"https://pkp.sfu.ca/"
+"developer-newsletter\" target=\"_new\">boletín de desembolicadors</a> pa "
+"recibir avisos de seguranza y novedaz sobre futuros lanzamientos, nuevos "
+"modulos y caracteristicas previstas.</p>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>L'actualización de OJS a la versión {$version} s'ha completau con "
+"exito.</p>\n"
+"<p>No ixuplide establir l'achuste \"instalau\" en o suyo fichero de "
+"configuración config.inc.php de nuevo en modo <em>On</em>.</p> \n"
+"<p>Visite nuestro <a href=\"https://forum.pkp.sfu.ca\" target=\"_new\">foro "
+"d'a comunidat</a> u s'inscriba a lo nuestro <a href=\"https://pkp.sfu.ca/"
+"developer-newsletter\" target=\"_new\">boletín de desembolicadors</a> pa "
+"recibir avisos de seguranza y novedaz sobre futuros lanzamientos, nuevos "
+"modulos y caracteristicas previstas.</p>"
+
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+"OJS requiere l'acceso a una base de datos SQL pa almagacenar los suyos "
+"datos. Veiga los requisitos d'o sistema pa obtener una lista de bases de "
+"datos compatibles. En os campos siguients, introduzca la configuración que "
+"utilizará pa connectar-se a la base de datos."
+
+msgid "installer.installApplication"
+msgstr "Instalar Open Journal Systems"
+
+msgid "installer.upgradeApplication"
+msgstr "Actualizar Open Journal Systems"
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"I hai una nueva versión de OJS disponible! Ye utilizando la versión de OJS "
+"{$currentVersion}. La versión mas recient de OJS ye {$latestVersion}. Visite "
+"<a href=\"http://pkp.sfu.ca/ojs_download\" target=\"_new\">esta pachina</a> "
+"pa descargar la versión mas recient y pa trobar instruccions pa "
+"l'actualización."
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"I hai una nueva versión de OJS disponible! Ye utilizando la versión de OJS "
+"{$currentVersion}. La versión mas recient de OJS ye {$latestVersion}. "
+"Contacte con o suyo administrador/a d'o puesto ({$siteAdminName}, <a href="
+"\"mailto:{$siteAdminEmail}\">{$siteAdminEmail}</a>) pa gritar-les d'esta "
+"nueva versión. Podrá trobar mas información <a href=\"http://pkp.sfu.ca/"
+"ojs_download\" target=\"_new\">aquí</a>."
+
+msgid "log.author.documentRevised"
+msgstr ""
+"{$authorName} ha revisau l'articlo {$submissionId}. L'Id. d'o nuevo fichero "
+"ye {$fileId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr ""
+"S'ha excluyiu a {$reviewerName} d'a revisión d'o ninvio {$submissionId} en a "
+"tongada de revisión {$round}."
+
+msgid "log.review.reviewInitiated"
+msgstr ""
+"{$reviewerName} ha iniciau la tongada de revisión {$round} d'o ninvio "
+"{$submissionId}."
+
+msgid "log.review.reviewerRated"
+msgstr ""
+"{$reviewerName} ha estau clasificau/a pa la tongada de revisión {$round} d'o "
+"ninvio {$submissionId}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"La calendata limite pa la tongada de revisión {$round} d'o ninvio "
+"{$submissionId} de {$reviewerName} s'ha establiu pa {$dueDate}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+"La recomendación pa la tongada de revisión {$round} d'o ninvio "
+"{$submissionId} s'ha establiu per lo revisor/a {$reviewerName}."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"Lo/a editor/a {$editorName} ha fixau la recomendación pa la tongada de "
+"revisión {$round} d'o ninvio {$submissionId} en nombre d'o revisor/a "
+"{$reviewerName}."
+
+msgid "log.review.resubmit"
+msgstr "S'ha reninviau {$submissionId} pa la suya revisión."
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+"{$reviewerName} ha refusau la tongada de revisión {$round} pa lo ninvio "
+"{$submissionId}."
+
+msgid "log.review.reviewAccepted"
+msgstr ""
+"{$reviewerName} ha aceptau la tongada de revisión {$round} pa lo ninvio "
+"{$submissionId}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName} ha refusau la tongada {$round} de revisión pa lo ninvio "
+"{$submissionId} en nombre de {$reviewerName}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName} ha aceptau la tongada de revisión {$round} pa lo ninvio "
+"{$submissionId} en nombre de {$reviewerName}."
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"lo/a editor/a {$userName} ha puyau un fichero de revisión pa la tongada "
+"{$round} d'o ninvio {$submissionId} en nombre d'o revisor {$reviewerName}."
+
+msgid "log.review.reviewerFile"
+msgstr "S'ha puyau un fichero de revisión."
+
+msgid "log.editor.decision"
+msgstr ""
+"{$editorName} ha rechistrau una decisión editorial pa l'articlo "
+"{$submissionId}: ({$decision})."
+
+msgid "log.editor.recommendation"
+msgstr ""
+"{$editorName} ha rechistrau una recomendación editorial pa l'articlo "
+"{$submissionId}: ({$decision})."
+
+msgid "log.copyedit.initiate"
+msgstr ""
+"{$copyeditorName} ha iniciau la corrección d'orichinals en o ninvio "
+"{$submissionId}."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "S'ha triau lo fichero de corrección d'orichinals per defecto."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+"{$copyeditorName} ha rematau la corrección inicial d'o ninvio "
+"{$submissionId}."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+"{$copyeditorName} ha rematau la corrección final d'o ninvio {$submissionId}."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr ""
+"{$copyeditorName} ha estau asignau/a pa la corrección d'o ninvio "
+"{$submissionId}."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr ""
+"S'ha puyau una versión d'o corrector/a d'orichinals d'o fichero de ninvio."
+
+msgid "log.copyedit.authorFile"
+msgstr "S'ha puyau una versión d'o fichero de ninvio correchiu per l'autor/a."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr ""
+"S'ha asignau a {$editorName} como maquetador/a pa lo ninvio {$submissionId}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr ""
+"S'ha destituyiu a {$editorName} como maquetador/a pa lo ninvio "
+"{$submissionId}."
+
+msgid "log.layout.layoutEditComplete"
+msgstr ""
+"{$editorName} ha completau la edición de maquetación pa lo ninvio "
+"{$submissionId}."
+
+msgid "log.editor.metadataModified"
+msgstr "{$editorName} ha modificau los metadatos pa este articlo."
+
+msgid "log.editor.editorFile"
+msgstr "S'ha puyau una versión d'o editor/a d'o fichero de ninvio."
+
+msgid "log.editor.archived"
+msgstr "Lo ninvio {$submissionId} s'ha archivau."
+
+msgid "log.editor.restored"
+msgstr "Lo ninvio {$submissionId} s'ha tornau a meter en coda."
+
+msgid "log.editor.editorAssigned"
+msgstr ""
+"{$editorName} ha estau asignau/a como editor/a pa lo ninvio {$submissionId}."
+
+msgid "log.proofread.assign"
+msgstr ""
+"{$assignerName} ha asignau a {$proofreaderName} la corrección de prebas d'o "
+"ninvio {$submissionId}."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} ha ninviau {$submissionId} a planificación."
+
+msgid "log.imported"
+msgstr "{$userName} ha importau l'articlo {$submissionId}."
+
+msgid "notification.type.editorDecisionComment"
+msgstr "S'ha deixau un comentario en a decisión editorial pa \"{$title}\"."
+
+msgid "notification.type.galleyModified"
+msgstr "S'ha modificau una galerada pa \"{$title}\"."
+
+msgid "notification.type.newAnnouncement"
+msgstr "S'ha creau un nuevo aviso."
+
+msgid "notification.type.openAccess"
+msgstr "Un numero s'ha feito d'acceso ubierto."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "S'ha ninviau una revisión d'un formulario de revisión pa \"{$title}\"."
+
+msgid "notification.type.reviewing"
+msgstr "Revisar eventos"
+
+msgid "notification.type.site"
+msgstr "Eventos d'o puesto"
+
+msgid "notification.type.submissionComment"
+msgstr "Un editor/a ha feito un comentario en \"{$title}\"."
+
+msgid "notification.type.submissions"
+msgstr "Eventos d'os ninvios"
+
+msgid "notification.type.userComment"
+msgstr "Un lector/a ha feito un comentario en \"{$title}\""
+
+msgid "notification.type.public"
+msgstr "Avisos publicos"
+
+msgid "notification.savedIssueMetadata"
+msgstr "S'han alzau los metadatos de publicación d'o numero."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "S'ha ninviau un nuevo articlo pa lo cual cal asignar un editor/a."
+
+msgid "user.authorization.noContext"
+msgstr "No i hai garra revista que coincida con a suya solicitut."
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Ye intentando acceder a un articlo que no forma parte d'a suya sección."
+
+msgid "user.authorization.invalidIssue"
+msgstr "Petición de numero no valida!"
+
+msgid "grid.action.createContext"
+msgstr "Crear una nueva revista"
+
+msgid "editor.navigation.issues"
+msgstr "Numeros"
+
+msgid "notification.type.approveSubmission"
+msgstr ""
+"Lo ninvio ye actualment asperando l'aprebación, dimpués d'ella amaneixerá en "
+"o numero."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Asperando aceptación."
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Rechistrar-se en atras revistas"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Amagar las atras revistas"
+
+msgid "article.view.interstitial"
+msgstr "Per favor, tríe un articlo pa descargar."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Aceptau"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Asperando aceptación"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Aceptación de galerada"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Aceptar esta galerada pa la suya publicación.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Cancelar l'aceptación d'esta galerada.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Indexando \"{$journalName}\""
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "La rota \"{$journalPath}\" no corresponde a garra revista."
+
+msgid "editor.issues.backIssues"
+msgstr "Numeros anteriors"
+
+msgid "editor.issues.futureIssues"
+msgstr "Proximos numeros"
+
+msgid "navigation.subscriptions"
+msgstr "Subscripcions"
+
+msgid "log.editor.submissionExpedited"
+msgstr ""
+"{$editorName} se fará cargo d'o proceso d'edición de l'articlo "
+"{$submissionId}."
+
+msgid "catalog.sortBy"
+msgstr "Orden d'os articlos"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Tríe la traza d'ordenar los articlos en esta categoría."
+
+msgid "article.suppFilesAbbrev"
+msgstr "Fichers adic."
+
+msgid "archive.archives"
+msgstr "Archius"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr ""
+"Lo ninvio d'o corrector/a d'orichinals no ye valido u no s'ha solicitau "
+"ninvio."
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"Las directrices pa lo revisor/a proporcionarán a los revisors/as lo criterio "
+"necesario pa chudgar si un ninvio ye adecuau pa estar publicau en la "
+"revista, y puede incluyir cualsequier tipo d'instruccions particulars pa "
+"preparar una revisión efectiva y útil. En realizar la revisión, los revisors/"
+"as disposan de dos cuadros de texto ubiertos: lo primero \"pa lo autor/a y l'"
+"editor/a\" y lo segundo \"pa l'editor/a\". Lo chestor/a d'a revista tamién "
+"puede crear un formulario de revisión per pars en o apartau Formularios de "
+"revisión. En cualsequier caso, los editors/as tendrán la opción d'incluyir "
+"las revisions pa l'autor/a."

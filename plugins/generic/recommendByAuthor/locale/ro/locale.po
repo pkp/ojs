@@ -22,11 +22,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Cele mai citite articole ale aceluiași autor(i)"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""
-"Observații: Acest plugin necesită cel puțin un plugin pentru statistici / "
-"rapoarte pentru a fi activat. Dacă pluginurile dvs. de statistici furnizează "
-"mai multe valori, vă rugăm să selectați și o valoare principală în pagina de "
-"setări a site-ului administratorului și/sau în paginile de setări ale "
-"managerului jurnalului."

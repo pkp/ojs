@@ -39,11 +39,6 @@ msgstr ""
 "kan ta en kort stund att efter publicering. Du kan söka efter alla "
 "oregistrerade artiklar."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Använd DOAJ:s test-API (testmiljö) för registreringen. Glöm inte att ta bort "
-"detta alternativ innan produktion."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "Automatisk registrering hos DOAJ"
 

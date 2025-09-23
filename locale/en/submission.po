@@ -146,6 +146,12 @@ msgstr "Any Section"
 msgid "submission.sectionOptions"
 msgstr "Section Options"
 
+msgid "submission.status.readyToPublish"
+msgstr "Ready to Publish"
+
+msgid "submission.status.readyToSchedule"
+msgstr "Ready to Schedule"
+
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} Items"
 
@@ -202,11 +208,34 @@ msgstr ""
 "All publication requirements have been met. This will be published "
 "immediately in {$issue}. Are you sure you want to publish this?"
 
+msgid "publication.publish.confirmation.issueLess"
+msgstr ""
+"All publication requirements have been met. This will be published "
+"immediately without any issue association. Are you sure you want to publish this?"
+
+msgid "publication.publish.confirmation.continuousPublication"
+msgstr ""
+"All publication requirements have been met. This will be published "
+"immediately as continuous publication even though it is assigned to {$issue} "
+"which is not published yet. Are you sure you want to publish this?"
+
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
 "All publication requirements have been met. This will be published "
 "immediately because the date of publication has been set to "
 "{$datePublished}. Are you sure you want to publish this?"
+
+msgid "publication.publish.continuousPublication.description"
+msgstr "Allow this publication to be published regardless of the issue being published."
+
+msgid "publication.publish.continuousPublication.label"
+msgstr "Publish immediately"
+
+msgid "publication.publish.issuelessPublication.description"
+msgstr "Allow this publication to be published without an issue."
+
+msgid "publication.publish.issuelessPublication.label"
+msgstr "Publish without issue association"
 
 msgid "publication.required.issue"
 msgstr ""
@@ -223,6 +252,30 @@ msgstr "This has not been scheduled for publication in an issue."
 
 msgid "publication.selectIssue"
 msgstr "Select an issue to schedule for publication"
+
+msgid "publication.assignToIssue.label"
+msgstr "Assign to Issue"
+
+msgid "publication.assignToIssue.noIssue"
+msgstr "Don't Assign To An Issue"
+
+msgid "publication.assignToIssue.futureIssuePublish"
+msgstr "Assign To Future Issue and Publish Immediately"
+
+msgid "publication.assignToIssue.futureIssueSchedule"
+msgstr "Assign To Future Issue and Schedule Only"
+
+msgid "publication.assignToIssue.currentBackIssue"
+msgstr "Assign To Current/Back Issue"
+
+msgid "publication.assignToIssue.assignmentType"
+msgstr "Issue Assignment"
+
+msgid "publication.assignToIssue.assignmentTypeDescription"
+msgstr "Choose how to assign this publication to an issue."
+
+msgid "publication.assignToIssue.issueDescription"
+msgstr "Select the issue to assign this publication to."
 
 msgid "submission.publication"
 msgstr "Publication"
@@ -283,11 +336,6 @@ msgstr "The following requirements must be met before this can be published."
 
 msgid "publication.required.declined"
 msgstr "A declined submission can not be published."
-
-msgid "publication.required.reviewStage"
-msgstr ""
-"The submission must be in the Copyediting or Production stages before it can "
-"be published."
 
 msgid "submission.license.description"
 msgstr ""
@@ -420,3 +468,4 @@ msgstr ""
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Please select the contributor's role."
+

@@ -1,0 +1,62 @@
+name: Test VPS Update Dataset
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        type: choice
+        description: "Branch to update dataset for"
+        required: true
+        default: "main"
+        options:
+          - main
+          - stable-3_5_0
+          - stable-3_4_0
+          - stable-3_3_0
+      update_default:
+        type: boolean
+        description: "Update the default copy (no suffix)"
+        default: true
+      update_qa:
+        type: boolean
+        description: "Update the QA copy"
+        default: false
+      update_hosting:
+        type: boolean
+        description: "Update the Hosting copy"
+        default: false
+
+jobs:
+  build-copies-string:
+    runs-on: ubuntu-latest
+    outputs:
+      copies: ${{ steps.set-copies.outputs.copies }}
+    steps:
+      - id: set-copies
+        run: |
+          COPIES=""
+          if [ "${{ inputs.update_default }}" = "true" ]; then
+            COPIES="default"
+          fi
+          if [ "${{ inputs.update_qa }}" = "true" ]; then
+            if [ -n "$COPIES" ]; then COPIES="$COPIES,"; fi
+            COPIES="${COPIES}qa"
+          fi
+          if [ "${{ inputs.update_hosting }}" = "true" ]; then
+            if [ -n "$COPIES" ]; then COPIES="$COPIES,"; fi
+            COPIES="${COPIES}hosting"
+          fi
+          echo "copies=$COPIES" >> $GITHUB_OUTPUT
+
+  update-dataset:
+    needs: build-copies-string
+    if: ${{ needs.build-copies-string.outputs.copies != '' }} # Skip if no copies selected
+    uses: jardakotesovec/pkp-test-vps-ci/.github/workflows/update-dataset.yaml@main
+    with:
+      project: ${{ github.event.repository.name }}
+      branch: ${{ inputs.branch }}
+      copies: ${{ needs.build-copies-string.outputs.copies }}
+    secrets:
+      SSH_PRIVATE_KEY: ${{ secrets.TEST_VPS_CI_SSH_PRIVATE_KEY }}
+      SSH_HOST: ${{ secrets.TEST_VPS_CI_SSH_HOST }}
+      SSH_USERNAME: ${{ secrets.TEST_VPS_CI_SSH_USERNAME }}

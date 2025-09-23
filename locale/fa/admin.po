@@ -1,13 +1,14 @@
 # Hamid Reza Khoddami <dr_hrkhoddami@yahoo.com>, 2022.
 # Ebrahim Rasti Borazjani Faghat <e.rasti.b@gmail.com>, 2023.
 # Naqibullah Asadi Karkin <website.manager@knu.edu.af>, 2024.
+# Sajad Sepehri <sjd.sphri@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2024-03-26 14:05+0000\n"
-"Last-Translator: Naqibullah Asadi Karkin <website.manager@knu.edu.af>\n"
+"PO-Revision-Date: 2025-09-03 17:37+0000\n"
+"Last-Translator: Sajad Sepehri <sjd.sphri@gmail.com>\n"
 "Language-Team: Persian <http://translate.pkp.sfu.ca/projects/ojs/admin/fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
@@ -61,10 +62,10 @@ msgid "admin.systemVersion"
 msgstr "نسخه OJS"
 
 msgid "admin.systemConfiguration"
-msgstr "پیکره‌بندی OJS"
+msgstr "پیکربندی OJS"
 
 msgid "admin.systemConfigurationDescription"
-msgstr "تنظیمات پیکره‌بندی OJS بر گرفته شده از فایل <tt>config.inc.php</tt>."
+msgstr "تنظیمات پیکربندی OJS بر گرفته شده از فایل <tt>config.inc.php</tt>."
 
 msgid "admin.journals.createInstructions"
 msgstr ""

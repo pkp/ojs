@@ -39,11 +39,6 @@ msgstr ""
 "ممکن است پس از انتشار ، زمان کوتاهی برای پردازش طی شود. شما می توانید تمام "
 "مقالات ثبت نشده را تیک بزنید."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"از API تست DOAJ (محیط آزمایش) برای ثبت استفاده کنید. لطفا فراموش نکنید که "
-"این گزینه را در زمان انتشار محتویات حذف کنید."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "عملیات ثبت خودکار DOAJ"
 

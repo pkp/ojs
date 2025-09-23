@@ -1,0 +1,236 @@
+# Jan Mohammad Rasa <eng.omid.rasa@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-09-17 09:46+0000\n"
+"Last-Translator: Jan Mohammad Rasa <eng.omid.rasa@gmail.com>\n"
+"Language-Team: Pashto <http://translate.pkp.sfu.ca/projects/ojs/locale/ps/>\n"
+"Language: ps\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "دا مجله خپل مطالب آنلاین نه خپروي."
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "د بیاکتنې فورمه ډکولو لپاره په آیکون کلیک وکړئ."
+
+msgid "common.confirmComplete"
+msgstr ""
+"ایا تاسو ډاډه یاست چې غواړئ دا دنده د بشپړ شوي په توګه په نښه کړئ؟ تاسو ممکن "
+"وروسته بدلونونه ونه شئ راوستلی."
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "د سیالۍ ګټو لارښوونې"
+
+msgid "context.current"
+msgstr "اوسنۍ ورځپاڼه:"
+
+msgid "context.select"
+msgstr "بل ژورنال ته لاړ شئ:"
+
+msgid "navigation.categories"
+msgstr "کټګورۍ"
+
+msgid "navigation.categories.browse"
+msgstr "لټون وکړئ"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "مهرباني وکړئ اړین ځایونه ډک کړئ."
+
+msgid "common.software"
+msgstr "وړیا لاسرسی وړ ژورنال سیستومونه"
+
+msgid "common.payment"
+msgstr "تادیه"
+
+msgid "common.payments"
+msgstr "تادیات"
+
+msgid "common.homePageHeader.altText"
+msgstr "د کور پاڼې سرلیک"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "د ژورنال کورپاڼه انځور"
+
+msgid "doi.manager.settings.publications"
+msgstr "مقالې"
+
+msgid "navigation.journalHelp"
+msgstr "د ژورنال مرسته"
+
+msgid "navigation.current"
+msgstr "اوسنۍ"
+
+msgid "navigation.otherJournals"
+msgstr "نور ژورنالونه"
+
+msgid "navigation.browseByIssue"
+msgstr "د نشریه په واسط"
+
+msgid "navigation.browseByAuthor"
+msgstr "د لیکوال په واسطه"
+
+msgid "navigation.infoForAuthors"
+msgstr "د لیکوال لپاره"
+
+msgid "navigation.infoForLibrarians"
+msgstr "د کتابتونونو لپاره"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "د لیکوالانو لپاره معلومات"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "د کتابتونونو لپاره معلومات"
+
+msgid "navigation.skip.about"
+msgstr "د ژورنال په اړه لاړ شئ"
+
+msgid "navigation.skip.issue"
+msgstr "اوسنۍ موضوع ته لاړ شئ"
+
+msgid "article.discipline"
+msgstr "اکاډمیک ډسیپلین او فرعي ډسیپلینونه"
+
+msgid "article.subject"
+msgstr "کلیدي کلمې"
+
+msgid "article.coverage"
+msgstr "پوښښ"
+
+msgid "article.type"
+msgstr "ډول، طریقه یا چلند"
+
+msgid "article.language"
+msgstr "ژبه"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.commentsToEditor"
+msgstr "د لیکوال نظرونه"
+
+msgid "article.submission"
+msgstr "سپارل"
+
+msgid "article.submissions"
+msgstr "سپارل شوی"
+
+msgid "article.details"
+msgstr "جزیات"
+
+msgid "article.abstract"
+msgstr "لنډیز"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "خلاص لاسرسی"
+
+msgid "article.coverPage.altText"
+msgstr "د پوښ تصویر"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "محدود لاسرسی"
+
+msgid "article.comments.sectionDefault"
+msgstr "مخکلی له مخکی موجود"
+
+msgid "article.comments.disable"
+msgstr "غیر فعال کړئ"
+
+msgid "article.comments.enable"
+msgstr "فعال کړئ"
+
+msgid "article.fontSize"
+msgstr "د فونټ اندازه"
+
+msgid "article.fontSize.small.altText"
+msgstr "کوچنی"
+
+msgid "article.fontSize.medium.altText"
+msgstr "منځنی"
+
+msgid "article.fontSize.large.altText"
+msgstr "لوی"
+
+msgid "article.return"
+msgstr "بېرته د مقالې جزییات ته"
+
+msgid "submission.submissionEditing"
+msgstr "د سپارلو ترمیم"
+
+msgid "submission.changeSection"
+msgstr "ته بدل کړئ"
+
+msgid "submission.sent"
+msgstr "لیږل شوی"
+
+msgid "submission.editorDecision"
+msgstr "د مدیر پریکړه"
+
+msgid "submission.round"
+msgstr "ګرد {$ ګرد}"
+
+msgid "submission.editorReview"
+msgstr "د مدیر بیاکتنه"
+
+msgid "submission.notifyAuthor"
+msgstr "لیکوال ته خبر ورکړئ"
+
+msgid "submission.notifyEditor"
+msgstr "مدیر ته خبر ورکړئ"
+
+msgid "submission.editorAuthorRecord"
+msgstr "د تحریریه/لیکوال د برېښنالیک ریکارډ"
+
+msgid "submission.reviewersVersion"
+msgstr "د بیاکتونکي لخوا د فایل تشریح شوی نسخه"
+
+msgid "submission.postReviewVersion"
+msgstr "د فایل د بیاکتنې وروسته نسخه"
+
+msgid "submission.editorVersion"
+msgstr "د تحریریه نسخه"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "د لیکوال لخوا د فایل اصلاح شوی نسخه"
+
+msgid "submission.authorVersion"
+msgstr "د لیکوال نسخه"
+
+msgid "submission.copyediting"
+msgstr "کاپي کول"
+
+msgid "submission.copyedit"
+msgstr "کاپي"
+
+msgid "submission.proofreading"
+msgstr "تصحیح"
+
+msgid "submission.scheduling"
+msgstr "مهالویش"
+
+msgid "submission.scheduledIn"
+msgstr "په {$issueName} کې د خپرولو لپاره مهالویش شوی."
+
+msgid "article.indexingInformation"
+msgstr "د لیست کولو معلومات"
+
+msgid "article.metadata"
+msgstr "میټاډاټا"
+
+msgid "article.journalSection"
+msgstr "د ژورنال برخه"
+
+msgid "article.file"
+msgstr "فایل"
+
+msgid "article.suppFile"
+msgstr "ضمیمه فایل"
+
+msgid "article.suppFiles"
+msgstr "ضمیه فایلونه"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Supp. فایلونه"

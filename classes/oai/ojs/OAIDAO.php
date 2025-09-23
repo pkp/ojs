@@ -81,15 +81,20 @@ class OAIDAO extends PKPOAIDAO
     /**
      * Cached function to get an issue
      *
-     * @param int $issueId
+     * @param int|null $issueId
      *
-     * @return object
+     * @return object|null
      */
     public function &getIssue($issueId)
     {
+        if (!$issueId) {
+            return $issueId;
+        }
+
         if (!isset($this->issueCache[$issueId])) {
             $this->issueCache[$issueId] = Repo::issue()->get($issueId);
         }
+
         return $this->issueCache[$issueId];
     }
 
@@ -120,6 +125,8 @@ class OAIDAO extends PKPOAIDAO
      * @param int $total
      *
      * @return array OAISet
+     *
+     * @hook OAIDAO::getJournalSets [[$this, $journalId, $offset, $limit, $total, &$sets]]
      */
     public function &getJournalSets($journalId, $offset, $limit, &$total)
     {
@@ -269,15 +276,9 @@ class OAIDAO extends PKPOAIDAO
                 's.section_id AS section_id',
             ])
             ->join('publications AS p', 'a.current_publication_id', '=', 'p.publication_id')
-            ->join('publication_settings AS psissue', function ($join) {
-                $join->on('psissue.publication_id', '=', 'p.publication_id');
-                $join->where('psissue.setting_name', '=', DB::raw('\'issueId\''));
-                $join->where('psissue.locale', '=', DB::raw('\'\''));
-            })
-            ->join('issues AS i', DB::raw('CAST(i.issue_id AS CHAR(20))'), '=', 'psissue.setting_value')
+            ->leftJoin('issues AS i', 'i.issue_id', '=', 'p.issue_id')
             ->join('sections AS s', 's.section_id', '=', 'p.section_id')
             ->join('journals AS j', 'j.journal_id', '=', 'a.context_id')
-            ->where('i.published', '=', 1)
             ->where('j.enabled', '=', 1)
             ->where('a.status', '=', PKPSubmission::STATUS_PUBLISHED)
             ->when($excludeJournals, function ($query, $excludeJournals) {
@@ -342,8 +343,4 @@ class OAIDAO extends PKPOAIDAO
             )
             ->orderBy(DB::raw($orderBy));
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\oai\ojs\OAIDAO', '\OAIDAO');
 }

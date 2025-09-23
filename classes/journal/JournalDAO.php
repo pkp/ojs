@@ -157,7 +157,3 @@ class JournalDAO extends ContextDAO
         );
     }
 }
-
-if (!defined('PKP_STRICT_MODE')) {
-    class_alias('\APP\journal\JournalDAO', '\JournalDAO');
-}

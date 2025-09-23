@@ -16,6 +16,7 @@ msgstr ""
 msgid "emails.manualPaymentNotification.subject"
 msgstr "Manuāls maksājuma paziņojums"
 
+#, fuzzy
 msgid "emails.manualPaymentNotification.body"
 msgstr ""
 "Jāapstrādā manuāls maksājums par žurnālu {$contextName} un lietotāju "

@@ -42,11 +42,6 @@ msgstr ""
 "cronjob konfiguratsiyangizga bog'liq). Siz ro'yxatdan o'tmagan barcha "
 "maqolalarni tekshirishingiz mumkin."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Ro'yxatdan o'tish uchun DOAJ test API (sinov muhiti) dan foydalaning. "
-"Iltimos, ishlab chiqarish uchun ushbu variantni olib tashlashni unutmang."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "DOAJ avtomatik ro'yxatga olish vazifasi"
 

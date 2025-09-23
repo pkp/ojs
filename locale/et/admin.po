@@ -1,0 +1,234 @@
+# "10 ..." <jaana.tonisson@tlulib.ee>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-06 09:42+0000\n"
+"Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
+"Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/admin/et/>"
+"\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "admin.hostedContexts"
+msgstr "Majutatud ajakirjad"
+
+msgid "admin.settings.redirect"
+msgstr "Ajakirja ümbersuunamine"
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "See on saidi ja kõigi majutatud ajakirjade vaikimisi keel."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Märgitud lokaadid võivad olla mittetäielikud."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Kas olete kindel, et soovite selle lokaadi eemaldada? See võib mõjutada "
+"kõiki majutatud ajakirju, mis praegu seda lokaati kasutavad."
+
+msgid "admin.systemVersion"
+msgstr "OJS versioon"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS seadistused"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS seadistused failist <tt>config.inc.php</tt>."
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Teid registreeritakse automaatselt selle ajakirja haldajana. Pärast uue "
+"ajakirja loomist suunatakse teid seadistusviisardisse, et lõpetada esialgne "
+"ajakirja seadistamine."
+
+msgid "admin.journals.journalSettings"
+msgstr "Ajakirja seaded"
+
+msgid "admin.journals.noneCreated"
+msgstr "Ühtegi ajakirja pole loodud."
+
+msgid "admin.contexts.create"
+msgstr "Loo ajakiri"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Pealkiri on kohustuslik."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Tee on kohustuslik."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Teie sisestatud tee on juba teise ajakirja kasutuses."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "Peamine lokaat peab olema üks ajakirja toetatud lokaatidest."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Luba see ajakiri saidil avalikult näha"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Ajakirja kirjeldus"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Olemasolev ajakirja tee või loodav tee (nt \"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Impordi tellimused"
+
+msgid "admin.journals.transcode"
+msgstr "Teisenda artikli metaandmed ISO8859-1-st"
+
+msgid "admin.journals.redirect"
+msgstr "Loo kood OJS 1 URL-ide kaardistamiseks OJS 2 URL-ideks"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Impordi tee on kohustuslik."
+
+msgid "admin.journals.importErrors"
+msgstr "Importimine ebaõnnestus"
+
+msgid "admin.mergeUsers"
+msgstr "Ühenda kasutajad"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Ühenda kasutaja"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Valige kasutaja, kellele omistatakse eelmise kasutaja autorlus, toimetamise "
+"ülesanded jne."
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Valige kasutaja (või mitu), keda soovite teise kasutajakontoga ühendada (nt "
+"kui kellelgi on kaks kasutajakontot). Esimesena valitud konto(d) "
+"kustutatakse ja kõik esitatud materjalid, määratud ülesanded jne omistatakse "
+"teisele kontole."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Ühtegi registreeritud kasutajat pole."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Tellimuse aegumise meeldetuletus"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Avatud juurdepääsu teade"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Retsenseerimise meeldetuletus"
+
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
+msgstr "Numbri lõppfailide ID ei ole täisarv."
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "Numbri ID ei ühti assoc ID-ga."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"Lisa, muuda või eemalda ajakirju sellel saidil ja halda saidülesesid seadeid."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Kasuta saiti platvormina kõigi ajakirjade jaoks."
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Päringud põhisaidile suunatakse ümber sellesse ajakirja. See võib olla "
+"kasulik, kui sait majutab näiteks ainult ühte ajakirja."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Kas olete kindel, et soovite selle lokaadi välja lülitada? See võib mõjutada "
+"kõiki majutatud ajakirju, mis praegu seda lokaati kasutavad."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Valige kõik lokaadid, mida soovite saidil toetada. Valitud lokaadid on "
+"kasutatavad kõigis saidil majutatud ajakirjades ja ilmuvad ka keelevaliku "
+"menüüs, mis kuvatakse igal saidilehel (seda saab üle kirjutada ajakirja-"
+"spetsiifiliste lehtede puhul). Kui mitut lokaati ei valita, siis keele "
+"vahetamise menüü ei ilmu ja laiendatud keele seaded ei ole ajakirjadele "
+"saadaval."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Valige täiendavad lokaadid, mille jaoks soovite süsteemis toe installida. "
+"Lokaadid tuleb installida enne, kui majutatud ajakirjad saavad neid "
+"kasutada. Vaadake OJS dokumentatsiooni, kuidas lisada uute keelte tugi."
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"See peaks olema üks lühike sõna või akronüüm, mis identifitseerib ajakirja. "
+"Ajakirja URL on {$sampleUrl}."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Tee võib sisaldada ainult tähti, numbreid ja märke _ ja -. See peab algama "
+"ja lõppema tähe või numbriga."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Kõik registreeritud kasutajad"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Kas olete kindel, et soovite ühendada valitud {$oldAccountCount} konto(d) "
+"kasutajanimega \"{$newUsername}\" kontoga? Valitud {$oldAccountCount} kontot "
+"ei eksisteeri pärast seda. See toiming ei ole tagasipööratav."
+
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
+msgstr "Numbri ID ei ole täisarv."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Valige majutatud ajakirjad, millel on lubatud saata massimeil. Kui see "
+"funktsioon on lubatud, saab ajakirja haldaja saata e-kirja kõigile nende "
+"ajakirjaga registreeritud kasutajatele.<br><br>Selle funktsiooni "
+"väärkasutamine soovimatu e-posti saatmiseks võib rikkuda mõnes "
+"jurisdiktsioonis rämpsposti vastaseid seadusi ja võib põhjustada teie "
+"serveri e-kirjade blokeerimise rämpspostina. Enne selle funktsiooni lubamist "
+"küsige tehnilist nõu ja konsulteerige ajakirja haldajatega, et tagada selle "
+"nõuetekohane kasutamine.<br><br>Selle funktsiooni täiendavaid piiranguid "
+"saab lubada iga ajakirja jaoks, kui külastate selle seadistusviisardit <a "
+"href=\"{$hostedContextsUrl}\">Majutatud ajakirjade</a> loendis."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"Ajakirja haldaja ei saa saata massimeili ühelegi allpool valitud rollile. "
+"Kasutage seda seadet, et piirata e-posti teavituse funktsiooni väärkasutust. "
+"Näiteks võib olla turvalisem keelata massimeilid lugejatele, autoritele või "
+"teistele suurtele kasutajagruppidele, kes pole nõustunud selliste e-kirjade "
+"saamisega.<br><br>Massikirjade funktsiooni saab selle ajakirja jaoks "
+"täielikult keelata <a href=\"{$siteSettingsUrl}\">Admin > Saidi seaded</a> "
+"all."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"Massikirjade funktsioon on selle ajakirja jaoks keelatud. Lubage see "
+"funktsioon <a href=\"{$siteSettingsUrl}\">Admin > Saidi seaded</a> alt."
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+"Valige geograafiliste kasutusstatistikate tüüp, mida selle saidi ajakirjad "
+"saavad koguda. Üksikasjalikumad geograafilised statistikad võivad "
+"märkimisväärselt suurendada teie andmebaasi mahtu ja mõnel harval juhul "
+"võivad õõnestada teie külastajate anonüümsust. Iga ajakiri võib seda "
+"seadistust erinevalt konfigureerida, kuid ajakiri ei saa kunagi koguda "
+"üksikasjalikumaid andmeid, kui siin on seadistatud. Näiteks, kui sait toetab "
+"ainult riiki ja piirkonda, siis ajakiri võib valida riigi ja piirkonna või "
+"ainult riigi. Ajakiri ei saa jälgida riiki, piirkonda ja linna."
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+"Lubage asutuste statistika, kui soovite, et selle saidi ajakirjad saaksid "
+"koguda kasutusstatistikat asutuste kaupa. Ajakirjad peavad lisama asutuse ja "
+"selle IP-vahemikud, et seda funktsiooni kasutada. Asutuste statistika "
+"lubamine võib märkimisväärselt suurendada teie andmebaasi mahtu."
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""
+"Kas teha SUSHI API lõpp-punktid avalikult ligipääsetavaks kõigile "
+"ajakirjadele sellel saidil. Kui lubate avaliku API, siis iga ajakiri võib "
+"selle seade üle kirjutada, et muuta oma statistika privaatseks. Kuid kui te "
+"keelate avaliku API, siis ajakirjad ei saa oma API-d avalikuks teha."

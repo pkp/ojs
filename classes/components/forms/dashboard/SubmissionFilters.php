@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/components/form/dashboard/SubmissionFilters.php
  *
@@ -17,6 +18,7 @@ namespace APP\components\forms\dashboard;
 
 use APP\components\forms\FieldSelectIssues;
 use APP\core\Application;
+use APP\facades\Repo;
 use Illuminate\Support\LazyCollection;
 use PKP\components\forms\dashboard\PKPSubmissionFilters;
 use PKP\context\Context;
@@ -40,9 +42,20 @@ class SubmissionFilters extends PKPSubmissionFilters
         ;
     }
 
-    protected function addIssues(): self
+    protected function addIssues(): static
     {
         $request = Application::get()->getRequest();
+
+        $issueExists = Repo::issue()
+            ->getCollector()
+            ->filterByContextIds([$this->context->getId()])
+            ->getQueryBuilder()
+            ->exists();
+
+        // If there are no issues, don't show the issue filter
+        if (!$issueExists) {
+            return $this;
+        }
 
         return $this->addField(new FieldSelectIssues('issueIds', [
             'groupId' => 'default',

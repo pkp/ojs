@@ -1,20 +1,20 @@
 # M. Ali <vorteem@gmail.com>, 2021, 2022.
+# adams smithes <damya@ruincuit.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:16+00:00\n"
-"PO-Revision-Date: 2022-04-29 09:26+0000\n"
-"Last-Translator: M. Ali <vorteem@gmail.com>\n"
-"Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/editor/ar_IQ/"
-">\n"
-"Language: ar_IQ\n"
+"PO-Revision-Date: 2025-03-20 20:37+0000\n"
+"Last-Translator: adams smithes <damya@ruincuit.com>\n"
+"Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/editor/ar/>\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "editor.home"
 msgstr "صفحة المحرر الرئيسية"
@@ -478,3 +478,12 @@ msgstr ""
 
 msgid "editor.article.coverImage"
 msgstr "صورة الغلاف"
+
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr "إذا تركت فارغًا، فسيتم تعيين التاريخ تلقائيًا عند نشر الإصدار."
+
+msgid "editor.issues.datePublished.invalid"
+msgstr "تاريخ النشر غير صحيح. يجب أن يكون التاريخ بالتنسيق (يوم - شهر - سنة)."
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr "تاريخ النشر مطلوب عند نشر العدد."

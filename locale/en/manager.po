@@ -576,6 +576,21 @@ msgstr "Journal Summary"
 msgid "manager.setup.contextSummary.description"
 msgstr "Offer a brief description of your journal to provide insight into its content and purpose."
 
+msgid "manager.setup.journalContentOrganization"
+msgstr "Journal Content Organization"
+
+msgid "manager.setup.journalContentOrganization.description"
+msgstr "Choose how your journal's content will be organized on the homepage."
+
+msgid "manager.setup.journalContentOrganization.option.issueToc"
+msgstr "Include the current issue's table of contents"
+
+msgid "manager.setup.journalContentOrganization.option.recentPublished"
+msgstr "Include recent most published articles"
+
+msgid "manager.setup.journalContentOrganization.option.categoryListing"
+msgstr "Include a listing of categories"
+
 msgid "manager.setup.contextAbout"
 msgstr "About the Journal"
 
@@ -941,6 +956,12 @@ msgstr "User Registration"
 
 msgid "manager.setup.useTextTitle"
 msgstr "Title text"
+
+msgid "manager.setup.continuousPublication"
+msgstr "Continuous Publication"
+
+msgid "manager.setup.issuelessPublication"
+msgstr "Issueless Publication"
 
 msgid "manager.statistics.statistics"
 msgstr "Journal Statistics"
@@ -1944,6 +1965,17 @@ msgstr "Assign DOIs to all published journal objects that have not been assigned
 msgid "doi.manager.settings.doiAssignJournalWide.confirm"
 msgstr "Are you sure you wish to assign DOIs to all published objects that have not been assigned DOIs?"
 
+msgid "doi.manager.settings.doiVersioning.description"
+msgstr ""
+"Assign a new DOI to each publication version? Most users will "
+"want to use the default option (no), as it was until now."
+
+msgid "doi.manager.settings.doiVersioning.yes"
+msgstr "Yes, assign a unique DOI to every version of an article."
+
+msgid "doi.manager.settings.doiVersioning.no"
+msgstr "No, all versions of an article should have the same DOI."
+
 msgid "doi.manager.settings.registrationAgency"
 msgstr "Registration Agency"
 
@@ -2129,6 +2161,45 @@ msgstr "This email is automatically sent to registered users when the new issue 
 
 msgid "manager.manageEmails.description"
 msgstr "Edit the messages sent in emails from this journal."
+
+msgid "manager.reviewerRecommendations"
+msgstr "Reviewer Recommendations"
+
+msgid "manager.reviewerRecommendations.title.label"
+msgstr "Review Recommendations"
+
+msgid "manager.reviewerRecommendations.title.description"
+msgstr "e.g. accept, reject"
+
+msgid "manager.reviewerRecommendations.activateUponSaving.label"
+msgstr "Active Upon Saving"
+
+msgid "manager.reviewerRecommendations.activateUponSaving.deactivate"
+msgstr "Deactivate"
+
+msgid "manager.reviewerRecommendations.confirmDelete"
+msgstr "Are you sure you want to delete the recommendation <b>{$title}</b>"
+
+msgid "manager.reviewerRecommendations.confirmActivate"
+msgstr "Are you sure you want to activate the recommendation <b>{$title}</b>"
+
+msgid "manager.reviewerRecommendations.activate.title"
+msgstr "Activate Reviewer Recommendation"
+
+msgid "manager.reviewerRecommendations.confirmDeactivate"
+msgstr "Are you sure you want to deactivate the recommendation <b>{$title}</b>"
+
+msgid "manager.reviewerRecommendations.deactivate.title"
+msgstr "Deactivate Reviewer Recommendation"
+
+msgid "manager.reviewerRecommendations.list.name.title"
+msgstr "Recommendations"
+
+msgid "manager.reviewerRecommendations.list.status.title"
+msgstr "Activate"
+
+msgid "manager.reviewerRecommendations.context.restriction"
+msgstr "Journal does not have access to this reviewer recommendation"
 
 msgid "mailable.layoutComplete.name"
 msgstr "Galleys Complete"

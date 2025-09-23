@@ -42,11 +42,6 @@ msgstr ""
 "ação pode demorar a ser processada. Pode verificar todos os artigos não "
 "registados."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Use a API de teste DOAJ (ambiente de teste) para o registo. Não se esqueça "
-"de remover esta opção para produção."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "Tarefa de registo automático no DOAJ"
 

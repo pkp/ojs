@@ -12,6 +12,7 @@ describe('Article View Metadata - DC Plugin', function() {
 	let uniqueId;
 	let today;
 	let dcElements;
+	let issueAssignmentOption = 'Assign To Current/Back Issue';
 
 	before(function() {
 		today = new Date();
@@ -374,7 +375,7 @@ describe('Article View Metadata - DC Plugin', function() {
 		cy.checkDoiConfig(['publication', 'issue']);
 
 		// After configuration, go to submissions
-		cy.get('nav').contains('Dashboards').click();
+		cy.get('nav').contains('Editor Dashboard').click();
 		cy.get('nav').contains('Active submissions').click();
 
 		// Create a new submission
@@ -392,7 +393,7 @@ describe('Article View Metadata - DC Plugin', function() {
 
 
 		// Go to publication tabs
-		cy.openWorkflowMenu('Title & Abstract').click();
+		cy.openWorkflowMenu('Unassigned version', 'Title & Abstract').click();
 
 		// Open multilanguage inputs and add data to fr_CA inputs
 		cy.get('button').contains('French').click();
@@ -410,8 +411,9 @@ describe('Article View Metadata - DC Plugin', function() {
 		cy.get('[role="status"]').contains('Saved');
 
 		// Go to metadata
-		cy.openWorkflowMenu('Metadata').click();
-		cy.get('button').contains('French').click();
+		cy.openWorkflowMenu('Unassigned version', 'Metadata').click();
+		cy.wait(2000); // wait for the form to load
+		cy.get('button:contains("French")').click({force:true});
 
 		// Add the metadata to the submission
 		submission.localeMetadata.forEach((locale) => {
@@ -419,6 +421,8 @@ describe('Article View Metadata - DC Plugin', function() {
 
 			locale.manyValues.forEach((manyValueMetadata) => {
 				manyValueMetadata.values.forEach((value) => {
+					cy.get('#metadata-' + manyValueMetadata.metadata + '-control-' + localeName).click({force: true});
+					cy.wait(1000);
 					cy.get('#metadata-' + manyValueMetadata.metadata + '-control-' + localeName).type(value, {delay: 0});
 					cy.wait(2000);
 					cy.get('#metadata-' + manyValueMetadata.metadata + '-control-' + localeName).type('{enter}', {delay: 0});
@@ -437,14 +441,14 @@ describe('Article View Metadata - DC Plugin', function() {
 		cy.get('[role="status"]').contains('Saved');
 
 		// Permissions & Disclosure
-		cy.openWorkflowMenu('Permissions & Disclosure').click();
+		cy.openWorkflowMenu('Unassigned version', 'Permissions & Disclosure').click();
 
 		cy.get('[name="licenseUrl"]').type(submission.licenceUrl, {delay: 0});
 		cy.get('button').contains('Save').click();
 		cy.get('[role="status"]').contains('Saved');
 
 		// Create a galley
-		cy.openWorkflowMenu('Galleys')
+		cy.openWorkflowMenu('Unassigned version', 'Galleys')
 		submission.galleys.forEach((galley) => {
 			cy.get('[data-cy="galley-manager"]').contains('Add galley').click();
 			cy.wait(1500); // Wait for the form to settle
@@ -464,7 +468,9 @@ describe('Article View Metadata - DC Plugin', function() {
 
 
 		// Issue
-		cy.openWorkflowMenu('Issue')
+		cy.openWorkflowMenu('Unassigned version', 'Issue')
+		cy.get('label:Contains("'+issueAssignmentOption+'")').click();
+		cy.get('select[name="issueId"]').select(submission.source.issueTitle);
 		submission.publishIssueSections.forEach((sectionTitle) => {
 			cy.get('[name="sectionId"]').select(sectionTitle);
 		});
@@ -480,7 +486,7 @@ describe('Article View Metadata - DC Plugin', function() {
 		cy.isActiveStageTab('Copyediting');
 
 		// Publish the submission
-		cy.publish(submission.source.volume, submission.source.issueTitle);
+		cy.publish(issueAssignmentOption ,submission.source.volume, submission.source.issueTitle);
 	});
 
 	it('Tests if Header DC Metadata are present and consistent', function() {

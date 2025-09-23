@@ -41,11 +41,6 @@ msgstr ""
 "(گرێدراوی شێوازی ڕێکخستنەکانتە). تۆ دەتوانیت وردبینی لە هەمو توێژینەوە "
 "تۆمارنەکراوەکاندا بکەیت."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"سیستەمی تاقیکردنەوەی ڕوکاری DOAJ  بەکار بهێنە (تەنیا بۆ ئەزمونکردن) بۆ "
-"تۆمارکردن. تکایە پێش بڵاوکردنەوە ئەم بژاردەیە لا ببە."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "ئەرکی تۆمارکردنی DOAJ بە شێوەی تۆماتیکی"
 

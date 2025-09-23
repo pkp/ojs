@@ -143,13 +143,6 @@
 				}
 			}
 		},
-		"licenseTerms": {
-			"type": "string",
-			"multilingual": true,
-			"validation": [
-				"nullable"
-			]
-		},
 		"lockssLicense": {
 			"type": "string",
 			"multilingual": true,
@@ -377,6 +370,20 @@
 		  	"type": "boolean",
 		  	"default": false,
 		  	"description": "Whether each publication version should receive a unique DOI"
+		},
+		"reviewerSuggestionEnabled": {
+			"type": "boolean",
+			"validation": [
+				"nullable"
+			]
+		},
+		"reviewerSuggestionsHelp": {
+			"type": "string",
+			"multilingual": true,
+			"validation": [
+				"nullable"
+			],
+			"defaultLocaleKey": "default.submission.step.reviewerSuggestions"
 		}
 	}
 }

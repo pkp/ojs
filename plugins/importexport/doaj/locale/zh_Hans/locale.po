@@ -40,10 +40,6 @@ msgstr ""
 "OJS 将自动将文章存入 DOAJ。 请注意，发布后可能需要很短的时间来处理（例如，取"
 "决于您的 cronjob 配置）。 您可以检查所有未注册的文章。"
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"使用 DOAJ 测试 API（测试环境）进行注册。 请不要忘记在生产环境中删除此选项。"
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "DOAJ 自动注册任务"
 

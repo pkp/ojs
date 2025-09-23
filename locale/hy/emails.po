@@ -1,8 +1,8 @@
 # Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
-# Tigran Zargaryan <tigran@flib.sci.am>, 2022, 2023.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022, 2023, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-05-26 22:09+0000\n"
+"PO-Revision-Date: 2025-03-03 19:43+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/emails/hy/>"
 "\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Գաղտնաբառի վերակայման հաստատում"
@@ -107,7 +107,8 @@ msgstr ""
 "Հրավիրում ենք Ձեզ կարդալ այս աշխատանքը և կիսվել Ձեր գիտական համայնքի հետ:</"
 "p><p>Շատ շնորհակալություն մեր հեղինակներին, գրախոսներին և խմբագիրներին իրենց "
 "արժեքավոր ներդրումների համար, ինչպես նաև մեր ընթերցողներին իրենց "
-"շարունակական հետաքրքրության համար:</p><p> p>Շնորհակալություն,</p>{$signature}"
+"շարունակական հետաքրքրության "
+"համար:</p><div>{$issueToc}</div><p>Շնորհակալություն,</p>{$signature}"
 
 msgid "emails.editorAssign.subject"
 msgstr "Դուք նշանակվել եք որպես խմբագիր {$contextName} -ի ներկայացման համար"

@@ -1,20 +1,21 @@
 # M. Ali <vorteem@gmail.com>, 2022.
+# adams smithes <damya@ruincuit.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:17+00:00\n"
-"PO-Revision-Date: 2022-09-30 05:01+0000\n"
-"Last-Translator: M. Ali <vorteem@gmail.com>\n"
+"PO-Revision-Date: 2025-03-20 20:37+0000\n"
+"Last-Translator: adams smithes <damya@ruincuit.com>\n"
 "Language-Team: Arabic <http://translate.pkp.sfu.ca/projects/ojs/"
-"themes-default/ar_IQ/>\n"
-"Language: ar_IQ\n"
+"themes-default/ar/>\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.themes.default.name"
 msgstr "النمط الإفتراضي"
@@ -87,3 +88,9 @@ msgstr "التنزيلات"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "تنزيل البيانات ليس متاحًا بعد."
+
+msgid "plugins.themes.default.nextSlide"
+msgstr "الشريحة التالية"
+
+msgid "plugins.themes.default.prevSlide"
+msgstr "الشريحة السابقة"

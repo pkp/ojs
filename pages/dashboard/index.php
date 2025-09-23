@@ -20,11 +20,11 @@
 
 switch ($op) {
     case 'index':
-        return new APP\pages\dashboard\DashboardHandlerNext();
+        return new APP\pages\dashboard\DashboardHandler();
     case 'editorial':
-        return new APP\pages\dashboard\DashboardHandlerNext(PKP\pages\dashboard\DashboardPage::EditorialDashboard);
+        return new APP\pages\dashboard\DashboardHandler(PKP\pages\dashboard\DashboardPage::EditorialDashboard);
     case 'mySubmissions':
-        return new APP\pages\dashboard\DashboardHandlerNext(PKP\pages\dashboard\DashboardPage::MySubmissions);
+        return new APP\pages\dashboard\DashboardHandler(PKP\pages\dashboard\DashboardPage::MySubmissions);
     case 'reviewAssignments':
-        return new APP\pages\dashboard\DashboardHandlerNext(PKP\pages\dashboard\DashboardPage::MyReviewAssignments);
+        return new APP\pages\dashboard\DashboardHandler(PKP\pages\dashboard\DashboardPage::MyReviewAssignments);
 }

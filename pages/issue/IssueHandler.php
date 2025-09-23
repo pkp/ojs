@@ -292,7 +292,7 @@ class IssueHandler extends Handler
 
                         // If the issue galley has been purchased, then allow reader access
                         $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */
-                        $dateEndMembership = $user->getSetting('dateEndMembership', 0);
+                        $dateEndMembership = $user->getData('dateEndMembership', 0);
                         if ($completedPaymentDao->hasPaidPurchaseIssue($userId, $issue->getId()) || (!is_null($dateEndMembership) && $dateEndMembership > time())) {
                             return true;
                         } else {

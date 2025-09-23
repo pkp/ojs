@@ -42,11 +42,6 @@ msgstr ""
 "että artikkelin julkaisun jälkeen tietojen viennissä on pieni viive. Voit "
 "tarkistaa listauksesta mitkä artikkelit ovat rekisteröimättä."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Käytä DOAJ-palvelun testirajapintaa. Poista tämä valinta, kun haluat "
-"aloittaa artikkeleiden rekisteröinnin."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "DOAJ automaattisen rekisteröinnin tehtävä"
 

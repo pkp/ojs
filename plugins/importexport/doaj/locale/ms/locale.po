@@ -42,11 +42,6 @@ msgstr ""
 "Bergantung pada konfigurasi cronjob anda). Anda boleh menyemak semua artikel "
 "yang tidak berdaftar."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Gunakan API ujian DOAJ (persekitaran ujian) untuk pendaftaran. Jangan lupa "
-"untuk membuang pilihan ini untuk produksi."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "Tugasan pendaftaran automatik DOAJ"
 

@@ -9,8 +9,6 @@
  *
  * @hook Templates::Editor::Issues::IssueData::AdditionalMetadata []
  *}
-
-{help file="issue-management" section="edit-issue-data" class="pkp_help_tab"}
 <script>
 	$(function() {ldelim}
 		// Attach the form handler.
@@ -43,16 +41,16 @@
 		{assign var=issuePublished value=false}
 	{/if}
 
-	{if $issuePublished}
 		{fbvFormArea id="datePublishedArea" title="editor.issues.datePublished"}
 			{fbvFormSection}
-				{if $issuePublished}
-					{fbvElement type="text" id="datePublished" value=$datePublished size=$fbvStyles.size.SMALL class="datepicker"}
-				{/if}
+				{if !$issuePublished}
+			        {assign var=notPublishedDescription value="editor.issues.datePublished.notPublished.description"}
+			    {else}
+			        {assign var=notPublishedDescription value=""}
+			    {/if}
+				{fbvElement type="text" id="datePublished" value=$datePublished size=$fbvStyles.size.SMALL class="datepicker" autocomplete="off" label=$notPublishedDescription}
 			{/fbvFormSection}
 		{/fbvFormArea}
-	{/if}
-
 
 	{fbvFormArea id="identificationArea" title="editor.issues.identification"}
 		{fbvFormSection}

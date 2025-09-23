@@ -11,6 +11,7 @@
 
 // styles
 import '@/styles/_global.less';
+import '@/styles/tw-theme-vars.css';
 
 import PkpLoad from '../lib/pkp/js/load.js';
 // Import controllers used by OJS
@@ -34,7 +35,6 @@ import StatsContextPage from '@/components/Container/StatsContextPage.vue';
 import StatsIssuesPage from '@/components/Container/StatsIssuesPage.vue';
 import StatsUsersPage from '@/components/Container/StatsUsersPage.vue';
 import SubmissionWizardPage from '@/components/Container/SubmissionWizardPage.vue';
-import WorkflowPage from '@/components/Container/WorkflowPageOJS.vue';
 import DashboardPage from '@/pages/dashboard/DashboardPage.vue';
 
 // Helper for initializing and tracking Vue controllers
@@ -62,7 +62,6 @@ window.pkp = Object.assign(PkpLoad, window.pkp || {}, {
 		StatsIssuesPage,
 		StatsUsersPage,
 		SubmissionWizardPage,
-		WorkflowPage,
 		DashboardPage,
 	},
 });

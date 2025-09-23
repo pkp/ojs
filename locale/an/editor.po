@@ -1,0 +1,500 @@
+# Emma U <emmaupkp@gmail.com>, 2025.
+# Juan Pablo Martínez <juanpabl@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-05-26 10:57+0000\n"
+"Last-Translator: Juan Pablo Martínez <juanpabl@gmail.com>\n"
+"Language-Team: Aragonese <http://translate.pkp.sfu.ca/projects/ojs/editor/an/"
+">\n"
+"Language: an\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "editor.issues.access"
+msgstr "Acceso"
+
+msgid "editor.issues.previewIssue"
+msgstr "Vista previa d'o numero"
+
+msgid "grid.action.viewIssue"
+msgstr "Veyer"
+
+msgid "editor.submissions.invite"
+msgstr "Convida"
+
+msgid "grid.action.removeArticle"
+msgstr "Eliminar articlo d'o numero"
+
+msgid "editor.article.remove"
+msgstr "Eliminar"
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"Cualsequier fichero que ya haiga estau asignau a una fase d'o ninvio puede "
+"anyadir-se a la lista de corrección d'orichinals marcando la caixeta "
+"\"Anyadir\" y fendo clic en \"Buscar\": se listarán toz los fichers "
+"disponibles y podrán estar triaus pa la suya inclusión."
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Ninvios y publicacions"
+
+msgid "editor.submissionQueue"
+msgstr "Coda de ninvio"
+
+msgid "editor.publishing"
+msgstr "Publicación"
+
+msgid "editor.publishedIssues"
+msgstr "Numeros publicaus"
+
+msgid "editor.allSections"
+msgstr "Totas las seccions"
+
+msgid "editor.me"
+msgstr "Yo"
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"La identificación publica '{$publicIdentifier}' ya existe pa unatro obchecto "
+"(numero, articlo, galerada u fichero complementario). Tríe identificadors "
+"exclusivos en a revista."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Garra ninvio en o fichero."
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"Este ninvio se archivará dimpués que se ninvie lo correu electronico de "
+"notificación a l'autor/a, u dimpués de pretar lo botón No ninviar correu "
+"electronico."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Ye seguro/a de que deseya rechistrar esta decisión?"
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Antes de mandar un ninvio a corrección d'orichinals, utilice lo vinclo "
+"Notificar a l'autor/a pa comunicar-le la decisión y triar la versión que se "
+"ninviará."
+
+msgid "editor.notifyUsers"
+msgstr "Informar a los usuarios/as"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Toz los lectors/as ({$count} usuarios/as)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Toz los autors/as publicaus ({$count} usuarios/as)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Se ye informando a los usuarios/as..."
+
+msgid "editor.usersNotified"
+msgstr "Usuarios/as informaus"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+"Ninviar este mensache a toz los usuarios/as asociaus con esta revista "
+"({$count} usuarios/as)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"Ninviar este mensache a los usuarios/as asociaus con esta revista que haigan "
+"indicau que deseyan recibir actualizacions ({$count} usuarios/as)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Incluyir la tabla de conteniu d'este numero:"
+
+msgid "editor.editorAdministration"
+msgstr "Administración d'o editor/a"
+
+msgid "editor.issues.createIssue"
+msgstr "Crear numero"
+
+msgid "editor.issues.editIssue"
+msgstr "Chestión d'o numero: {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "Numero actual"
+
+msgid "editor.issues.numArticles"
+msgstr "Elementos"
+
+msgid "editor.issues.noArticles"
+msgstr "No i hai elementos planificaus pa este numero."
+
+msgid "editor.issues.published"
+msgstr "Publicau"
+
+msgid "editor.issues.unpublished"
+msgstr "No publicau"
+
+msgid "editor.issues.volumeRequired"
+msgstr "Introduzca lo volumen, que ha d'estar una valor numerica positiva."
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr "La data de publicación ye obligatoria cuan se publica un numero."
+
+msgid "editor.issues.numberRequired"
+msgstr "Introduzca lo numero, que ha d'estar una valor numerica positiva."
+
+msgid "editor.issues.yearRequired"
+msgstr "Introduzca l'anyo, que ha d'estar una valor numerica positiva."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr ""
+"Introduzca una identificación d'o numero. Tríe a lo menos una d'as opcions "
+"d'identificación d'o numero."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Identificación d'o numero"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Identificación publica d'o numero"
+
+msgid "editor.issues.description"
+msgstr "Descripción"
+
+msgid "editor.issues.accessStatus"
+msgstr "Estau d'acceso"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Habilitar l'acceso ubierto diferiu"
+
+msgid "editor.issues.accessDate"
+msgstr "Data d'acceso ubierto"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Formatos permitius: .gif, .jpg, u .png )"
+
+msgid "editor.issues.uploaded"
+msgstr "Cargau"
+
+msgid "editor.issues.remove"
+msgstr "Eliminar"
+
+msgid "editor.issues.proofed"
+msgstr "Revisau"
+
+msgid "editor.issues.styleFile"
+msgstr "Fuella d'estilo"
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"La imachen de portalada que deseyaba eliminar no s'ha puesto trobar, puede "
+"que ya haiga estau eliminada. L'intente recargando la pachina."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+"Formato de portalada no valido. Los formatos acceptaus son .gif, .jpg, or ."
+"png."
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Eliminar fuella d'estilo?"
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Amostrar"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Crear una portalada pa este numero con os siguients elementos."
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Piet de portalada"
+
+msgid "editor.issues.openAccess"
+msgstr "Acceso ubierto"
+
+msgid "editor.issues.identification"
+msgstr "Identificación"
+
+msgid "editor.issues.subscription"
+msgstr "Subscripción"
+
+msgid "editor.issues.cover"
+msgstr "Portalada"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"Toz los articlos se tornarán a la lista d'edición y toz los fichers asociaus "
+"s'eliminarán de forma permanent. Ye seguro/a que deseya eliminar este numero?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"Esta revista usa un sistema d'orden de numeros personalizau. <a href=\"{$url}"
+"\" class=\"action\">Restablir valors per defecto</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"Este numero usa un sistema d'orden de seccions personalizau. <a href=\"{$url}"
+"\" class=\"action\">Restablir valors per defecto</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Datos d'o numero"
+
+msgid "editor.issues.default"
+msgstr "Valor per defecto"
+
+msgid "editor.issues.order"
+msgstr "Orden"
+
+msgid "editor.issues.publishIssue"
+msgstr "Publicar numero"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Eliminar numero publicau"
+
+msgid "editor.issues.preview"
+msgstr "(Vista previa)"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Ye seguro/a que deseya eliminar lo numero publicau?"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Ye seguro que deseya establir este numero como l'actual?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "No s'ha puesto alzar la Id. publica pa l'articlo:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "No i hai garra numero en curso"
+
+msgid "editor.issues.open"
+msgstr "Ubrir"
+
+msgid "editor.issues.pages"
+msgstr "Pachinas"
+
+msgid "editor.issues.galleys"
+msgstr "Galeradas d'o numero"
+
+msgid "editor.issues.galley"
+msgstr "Galerada d'o numero"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Visualizar galerada d'o numero"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Publicar galeradas con toz los contenius d'o numero."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Se requiere la etiqueta de galerada d'o numero."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Se requiere la configuración rechional de galerada d'o numero."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "La identificación publica de galerada d'o numero ya existe."
+
+msgid "editor.issues.identifiers"
+msgstr "Identificadors"
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Tornar ta galeradas d'o numero"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Proximos numeros"
+
+msgid "grid.action.addGalley"
+msgstr "Anyadir galerada"
+
+msgid "grid.action.publish"
+msgstr "Publicar numero"
+
+msgid "grid.action.addIssue"
+msgstr "Crear numero"
+
+msgid "grid.action.previewIssue"
+msgstr "Previsualizar"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Crear galerada d'o numero"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Establir numero actual"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Numeros anteriors"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Designar lo fichero orichinal como la versión pa revisar"
+
+msgid "editor.article.decision"
+msgstr "Decisión"
+
+msgid "editor.submissions.showBy"
+msgstr "Amostrau per"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Ninviau en MM-DD"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Zaguera(s)"
+
+msgid "editor.submissions.averageTime"
+msgstr "Semanas"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Asignau a un editor/a"
+
+msgid "issues.submissions.issueIds"
+msgstr "Asignau a un numero"
+
+msgid "editor.submissions.inSection"
+msgstr "En sección"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Amostrar publicación programada"
+
+msgid "editor.article.publishVersion"
+msgstr "Publicar versión"
+
+msgid "editor.article.viewMetadata"
+msgstr "Veyer los metadatos d'a versión"
+
+msgid "editor.article.editMetadata"
+msgstr "Editar los metadatos d'a versión"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Encara sin asignar"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"Cuota de publicación sin pagar. Pa programar l'elemento pa la suya "
+"publicación, notifique a l'autor/a sobre lo pago d'a cuota u d'a suya "
+"exención."
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Data d'acceso no valida."
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"La imachen de portalada que deseyaba eliminar no s'ha puesto trobar, puede "
+"que ya haiga estau eliminada. L'intente recargando la pachina."
+
+msgid "editor.article.payment.requestPayment"
+msgstr "Demandar pago"
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Editar la galerada d'o numero"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"Lo editor de maquetación prepara estes fichers pa cada galerada y los carga "
+"en o puesto <span class=\"pkp_help_title\">Prebas</span> apropiau pa la suya "
+"corrección."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Triar los fichers de galerada"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"Los borradors finals d'esta lista son transformaus per lo corrector/a de "
+"orichinals en versions revisadas, cargadas contino en <span class="
+"\"pkp_help_title\">Corrección d'orichinals</span>."
+
+msgid "editor.article.coverImage"
+msgstr "Imachen de portalada"
+
+msgid "editor.home"
+msgstr "Pachina principal d'o editor/a"
+
+msgid "editor.submissionArchive"
+msgstr "Archivo de ninvios"
+
+msgid "editor.allEditors"
+msgstr "Toz los editors/as"
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"Quiere alzar los cambios en ninvios archivaus? Los ninvios que se tríen pa "
+"estar eliminaus s'eliminarán permanentment d'o sistema."
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Toz los suscriptors/as individuals ({$count} usuarios/as)"
+
+msgid "editor.issues.datePublished.invalid"
+msgstr "La data de publicación no ye valida. Ha de tener lo formato AAAA-MM-DD."
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Toz los suscriptors/as institucionals ({$count} usuarios/as)"
+
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr ""
+"Si se deixa vuedo, la data s'establirá automaticament cuan se publique lo "
+"numero."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"L'identificador publico '{$publicIdentifier}' ya existe pa unatro obchecto "
+"d'o mesmo tipo. Per favor, tríe identificadors unicos pa los obchectos d'o "
+"mesmo tipo en a suya revista."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Ye seguro/a de que quiere eliminar este numero de forma permanent?"
+
+msgid "editor.issues.titleRequired"
+msgstr "Escriba un títol pa lo numero."
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"Ye seguro que deseya eliminar este articlo d'o numero? Dito articlo será "
+"disponible pa programar-lo en unatro numero."
+
+msgid "editor.issues.datePublished"
+msgstr "Data de publicación"
+
+msgid "editor.issues.coverPage"
+msgstr "Imachen de portalada"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Programau pa publicar en"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Eliminar la imachen de portalada?"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Sin ninvios"
+
+msgid "editor.submissions.accept"
+msgstr "Aceptar"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Zaguer ninvio completau"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"La imachen de portalada que quiere eliminar coincide con a d'un numero de "
+"unatra revista. Comprebe que ye treballando en a revista correcta y que "
+"utiliza l'ID de numero adecuau y torne a intentar-lo."
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Fayenas activos"
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "No s'ha publicau garra galerada d'o numero."
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"La imachen de portalada que deseyaba eliminar no coincidiba con a d'este "
+"numero. Recargue la pachina y torne a intentar-lo."
+
+msgid "editor.issues.saveChanges"
+msgstr "Quiere alzar los cambios feitos en a tabla de conteniu?"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"Formato de fuella d'estilo no valido. S'asegure de que lo fichero ninviau ye "
+"un CSS valido. (Tienga en cuenta que las fuellas d'estilo que contiengan "
+"comentarios a l'inicio pueden estar refusadas.)"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Ye seguro/a de que deseya publicar lo nuevo numero?"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Ye seguro/a de que deseya eliminar la galerada d'o numero?"
+
+msgid "editor.issues.publicId"
+msgstr "Id. publica"

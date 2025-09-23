@@ -1,0 +1,106 @@
+# Jan Mohammad Rasa <eng.omid.rasa@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-09-17 07:29+0000\n"
+"Last-Translator: Jan Mohammad Rasa <eng.omid.rasa@gmail.com>\n"
+"Language-Team: Pashto <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-users/ps/>\n"
+"Language: ps\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"کارول: {$scriptName} {$pluginName} [command] ...\n"
+"امرونه:\n"
+"واردول [xmlFileName] [journal_path]\n"
+"صادرول [xmlFileName] [journal_path]\n"
+"صادرول [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "کارونکی XML پلگ ان"
+
+msgid "plugins.importexport.users.description"
+msgstr "د کاروونکو واردات او صادرات"
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"مثالونه:\n"
+"کاروونکي له myImportFile.xml څخه myJournal ته وارد کړئ:\n"
+"{$scriptName} {$pluginName} myImportFile.xml myJournal وارد کړئ\n"
+"\n"
+"ټول کاروونکي له myJournal څخه صادر کړئ:\n"
+"{$scriptName} {$pluginName} myExportFile.xml myJournal صادر کړئ\n"
+"\n"
+"هغه کاروونکي صادر کړئ چې د دوی د ID لخوا مشخص شوي دي:\n"
+"{$scriptName} {$pluginName} myExportFile.xml myJournal 1 2 صادر کړئ\n"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
+"د XML ډیټا فایل غوره کړئ چې د کارونکي معلومات ولري ترڅو دې ژورنال ته وارد "
+"شي. د دې فایل د بڼې په اړه د جزیاتو لپاره د ژورنال مرسته وګورئ.<br /><br /"
+">په یاد ولرئ چې که وارد شوی فایل کوم کارونکي نومونه یا بریښنالیک پتې ولري چې "
+"دمخه په سیسټم کې شتون لري، د دې کاروونکو لپاره د کارونکي ډیټا به وارد نشي او "
+"کوم نوي رولونه چې رامینځته کیږي به موجوده کاروونکو ته ورکړل شي."
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "لاندې کاروونکي په بریالیتوب سره سیسټم ته وارد شول"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "تایید کړئ چې دا هغه کارونکي دي چې تاسو یې سیسټم ته واردول غواړئ"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "د صادراتو پر مهال تېروتنې رامنځته شوې"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"واردول په بریالیتوب سره بشپړ شول. هغه کارونکي چې د کارن نومونو او بریښنالیک "
+"پتې لري او دمخه په استعمال کې ندي، د ملګرو کاروونکو ډلو سره وارد شوي دي."
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "د کاروونکو واردول"
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "د کارونکي ډیټا فایل"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr ""
+"هر وارد شوي کارونکي ته د خبرتیا بریښنالیک واستوئ چې د کارونکي کارن نوم او "
+"پټنوم ولري."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "که کومه ناکامي رامنځته شي، د نورو کاروونکو واردول دوام ورکړئ."
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "د واردولو پر مهال تېروتنې رامنځته شوې"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "خبرتیا"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"د {$importHash} سره هش شوي پاسورډونه نشي کارول کیدی؛ OJS د {$ojsHash} کارولو "
+"لپاره تنظیم شوی. که تاسو دوام ورکړئ، نو تاسو به د وارد شوي کاروونکو "
+"پاسورډونه بیا تنظیمولو ته اړتیا ولرئ."
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "د ژورنال یوه نامعلومه لاره \"{$journalPath}\" مشخص شوې وه."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "د کاروونکو صادرول"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "د رول په واسطه صادرول"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "ټول صادر کړئ"
+
+msgid "plugins.importexport.users.results"
+msgstr "پایلې"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "د دوام ورکولو لپاره مهرباني وکړئ د \"واردول\" لاندې یوه فایل اپلوډ کړئ."

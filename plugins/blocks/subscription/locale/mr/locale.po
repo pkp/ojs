@@ -1,0 +1,45 @@
+# Murari P Tapaswi <tapaswimurari@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-12 09:06+0000\n"
+"Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
+"Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/"
+"blocks-subscription/mr/>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.block.subscription.displayName"
+msgstr "सदस्यता गट"
+
+msgid "plugins.block.subscription.description"
+msgstr "हे प्लगइन साइडबारमध्ये वर्गणीची/सदस्यतेची माहिती प्रदान करते."
+
+msgid "plugins.block.subscription.expires"
+msgstr "वर्गणीची/सदस्यतेची मुदत संपते"
+
+msgid "plugins.block.subscription.providedBy"
+msgstr ""
+"या संस्थेच्या वर्गणीतून नियतकालिकात प्रवेश प्रदान केला आहे : "
+"{$institutionName}"
+
+msgid "plugins.block.subscription.blockTitle"
+msgstr "सदस्यता"
+
+msgid "plugins.block.subscription.comingFromIP"
+msgstr "या IP पत्त्यावरून प्रवेश केला आहे : {$ip}"
+
+msgid "plugins.block.subscription.about"
+msgstr "सदस्यता"
+
+msgid "plugins.block.subscription.loginToVerifySubscription"
+msgstr "\"केवळ-सदस्यांसाठीच उपलब्ध\" संसाधने/लेख मिळवण्यासाठी लॉग-इन करा."
+
+msgid "plugins.block.subscription.subscriptionRequired"
+msgstr "निवडक संसाधनांसाठी/लेखांसाठी सदस्यता आवश्यक आहे."
+
+msgid "plugins.block.subscription.subscriptionRequired.learnMore"
+msgstr "अधिक माहिती जाणून घ्या"

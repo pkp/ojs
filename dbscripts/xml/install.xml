@@ -10,7 +10,7 @@
   * Installation descriptor file.
   -->
 
-<install version="3.5.0.0">
+<install version="3.6.0.0">
 	<code function="checkPhpVersion" />
 
 	<code function="createDirectories"/>
@@ -34,7 +34,9 @@
 	<migration class="PKP\migration\install\ReviewFormsMigration" />
 	<migration class="PKP\migration\install\SubmissionFilesMigration" />
 	<migration class="PKP\migration\install\LibraryFilesMigration" />
+	<migration class="APP\migration\install\ReviewerRecommendationsMigration" />
 	<migration class="PKP\migration\install\ReviewsMigration" />
+	<migration class="PKP\migration\install\ReviewerSuggestionsMigration" />
 	<migration class="PKP\migration\install\TemporaryFilesMigration" />
 	<migration class="PKP\migration\install\TombstoneMigration" />
 	<migration class="PKP\migration\install\DoiMigration" />
@@ -49,7 +51,10 @@
 	<migration class="PKP\migration\install\CategoriesMigration" />
 	<migration class="PKP\migration\install\HighlightsMigration" />
 	<migration class="APP\migration\install\MetricsMigration" />
-	<migration class="PKP\migration\install\ReviewAssignmentSettings" />
+	<migration class="PKP\migration\install\ReviewAssignmentSettingsMigration"/>
+	<migration class="PKP\migration\install\EmailTemplateUserGroupAccessMigration"/>
+	<migration class="PKP\migration\install\UserCommentsMigration"/>
+	<migration class="PKP\migration\install\SubmissionSearchMigration" />
 
 	<!-- Other install tasks -->
 	<code function="createData"/>
@@ -57,4 +62,5 @@
 	<code function="addPluginVersions"/>
 	<code function="installDefaultNavigationMenus"/>
 	<code function="updateRorRegistryDataset"/>
+	<code function="downloadIPGeoDB"/>
 </install>

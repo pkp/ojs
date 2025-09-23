@@ -1,8 +1,8 @@
 # Primož Svetek <primoz.svetek@gmail.com>, 2022.
-# Matevž Rudolf <matevz.rudolf@uni-lj.si>, 2022, 2024.
+# Matevž Rudolf <matevz.rudolf@uni-lj.si>, 2022, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-03-07 15:12+0000\n"
+"PO-Revision-Date: 2025-03-07 21:13+0000\n"
 "Last-Translator: Matevž Rudolf <matevz.rudolf@uni-lj.si>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-subscriptions/sl/>\n"
@@ -26,4 +26,4 @@ msgid "plugins.reports.subscriptions.institutionMailingAddress"
 msgstr "E-poštni naslov institucije"
 
 msgid "plugins.reports.subscriptions.ipRanges"
-msgstr ""
+msgstr "IP Razpon"

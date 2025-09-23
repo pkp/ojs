@@ -1,8 +1,9 @@
 # Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>, 2022, 2023.
+# Zahid Rizky Fakhri <zahidrizkyfakhri@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-04-07 08:35+0000\n"
-"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
+"PO-Revision-Date: 2025-05-02 14:24+0000\n"
+"Last-Translator: Zahid Rizky Fakhri <zahidrizkyfakhri@gmail.com>\n"
 "Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/ojs/api/id/>"
 "\n"
 "Language: id\n"
@@ -10,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "Pengumuman yang Anda cari bukan bagian dari jurnal ini."
@@ -82,3 +83,8 @@ msgstr ""
 
 msgid "api.submission.400.inactiveSection"
 msgstr "Seksi ini tidak lagi menerima naskah."
+
+msgid "api.publications.403.paymentFeesNotEnabled"
+msgstr ""
+"Formulir pembayaran pengajuan tidak tersedia karena biaya pembayaran "
+"publikasi tidak diaktifkan."

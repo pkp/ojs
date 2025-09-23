@@ -1,20 +1,19 @@
-# Pavel Pisklakov <ppv1979@mail.ru>, 2022.
+# Pavel Pisklakov <ppv1979@mail.ru>, 2022, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:31+00:00\n"
-"PO-Revision-Date: 2022-12-21 06:02+0000\n"
+"PO-Revision-Date: 2025-03-27 17:29+0000\n"
 "Last-Translator: Pavel Pisklakov <ppv1979@mail.ru>\n"
-"Language-Team: Russian <http://translate.pkp.sfu.ca/projects/ojs/api/ru_RU/"
-">\n"
-"Language: ru_RU\n"
+"Language-Team: Russian <http://translate.pkp.sfu.ca/projects/ojs/api/ru/>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.13.1\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "Объявление, которое вы запросили, не является частью данного журнала."
@@ -83,3 +82,8 @@ msgstr "Вы не можете связать файл с этого этапа 
 
 msgid "api.submission.400.inactiveSection"
 msgstr "Этот раздел больше не принимает материалы."
+
+msgid "api.publications.403.paymentFeesNotEnabled"
+msgstr ""
+"Форма оплаты за публикации недоступна, так как оплата за публикации не "
+"включена."

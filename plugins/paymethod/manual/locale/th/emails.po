@@ -15,6 +15,7 @@ msgstr ""
 msgid "emails.manualPaymentNotification.subject"
 msgstr "การแจ้งเตือนการชำระเงินด้วยวิธีการแมนนวล"
 
+#, fuzzy
 msgid "emails.manualPaymentNotification.body"
 msgstr ""
 "การชำระเงินด้วยตนเองต้องดำเนินการสำหรับวารสาร {$contextName} และผู้ใช้ "

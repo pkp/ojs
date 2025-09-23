@@ -1,0 +1,327 @@
+# "10 ..." <jaana.tonisson@tlulib.ee>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-05 13:31+0000\n"
+"Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
+"Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/author/et/>"
+"\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "author.submit"
+msgstr "Uus kaastöö"
+
+msgid "author.track"
+msgstr "Aktiivsed kaastööd"
+
+msgid "author.submit.submitArticle"
+msgstr "Esita artikkel"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Viis sammu esitamiseks"
+
+msgid "author.submit.startHereTitle"
+msgstr "Alusta uut kaastööd"
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">Vajuta siia</a>, et alustada "
+"viiesammulise esitamisprotsessi esimese sammuga."
+
+msgid "author.submit.step1"
+msgstr "Samm 1. Alusta kaastöö esitamisega"
+
+msgid "author.submit.step2"
+msgstr "Samm 2. Kaastöö üleslaadimine"
+
+msgid "author.submit.step3"
+msgstr "Samm 3. Kaastöö metaandmete sisestamine"
+
+msgid "author.submit.step4"
+msgstr "Samm 4. Lisafailide üleslaadimine"
+
+msgid "author.submit.step4a"
+msgstr "Samm 4a. Lisa lisafail"
+
+msgid "author.submit.step5"
+msgstr "Samm 5. Kaastöö kinnitamine"
+
+msgid "author.submit.start"
+msgstr "Alusta"
+
+msgid "author.submit.upload"
+msgstr "Lae kaastöö üles"
+
+msgid "author.submit.metadata"
+msgstr "Sisesta metaandmed"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Lae lisafailid üles"
+
+msgid "author.submit.nextSteps"
+msgstr "Järgmised sammud"
+
+msgid "author.submit.notAccepting"
+msgstr "See ajakiri ei võta praegu kaastöid vastu."
+
+msgid "author.submit.requestWaiver"
+msgstr "Taotle loobumist"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "Palun kaaluge selle artikli esitamistasust loobumist"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr ""
+"Palun kasutage allpool olevat kommentaaride kasti põhjendamiseks, miks "
+"tasudest tuleks loobuda."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "Kui taotlete loobumist, peate ettenähtud kohas põhjuse sisestama."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "Ülevaatuse ringis {$round}"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "Ülevaatamisel: parandused on vajalikud"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "Toimetamisel: korrektuur taotletud"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "Toimetamisel: korrektuurlugemine taotletud"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Lae toimetatud versioon üles"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Korrektuuri parandused"
+
+msgid "author.submissions.viewStatus"
+msgstr "Vaata staatust"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Esitatud kaastöid ei ole."
+
+msgid "author.submit.journalSection"
+msgstr "Ajakirja rubriik"
+
+msgid "author.submit.verifyChecklist"
+msgstr ""
+"Veendu enne jätkamist, et kõik kaastöö esitamise kontrollnimekirja punktid "
+"on läbitud."
+
+msgid "author.submit.comments"
+msgstr "Sisesta tekst (valikuline)"
+
+msgid "author.submit.form.localeRequired"
+msgstr "Palun vali esitatud kaastöö keel."
+
+msgid "author.submit.reorder"
+msgstr "Järjesta autori nimi ümber"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Peamine kontakt toimetusküsimuste jaoks."
+
+msgid "author.submit.addAuthor"
+msgstr "Lisa autor"
+
+msgid "author.submit.deleteAuthor"
+msgstr "Kustuta autor"
+
+msgid "author.submit.coverageInstructions"
+msgstr ""
+"Viitab geograafilisele asukohale, kronoloogilisele või ajaloolisele "
+"katvusele ja/või uurimisvalimi omadustele."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Vähemalt üks autor on nõutav."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "Iga autori eesnimi, perekonnanimi ja e-posti aadress on kohustuslikud."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Palun sisestage oma artikli pealkiri."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr ""
+"Olete ületanud selle rubriigi kokkuvõtete maksimaalse sõnade arvu piirangu."
+
+msgid "author.submit.submissionFile"
+msgstr "Kaastöö fail"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Lae kaastöö fail üles"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Asenda kaastöö fail"
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "Kas olete kindel, et soovite jätkata ilma kaastöö faili üles laadimata?"
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr ""
+"Faili üleslaadimiseks klõpsake nuppu Salvesta (pärast mida saab üles laadida "
+"täiendavaid faile)."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr ""
+"Kas olete kindel, et soovite jätkata ilma valitud täiendavat faili üles "
+"laadimata?"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Sellele kaastööle pole lisatud täiendavaid faile."
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Tagasi lisafailide juurde"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Kas olete kindel, et soovite selle lisafaili kustutada?"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Lae lisafail üles"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Lisa lisafail"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Muuda lisafaili"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Lisafaili metaandmed"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr ""
+"Lisamaterjali indekseerimiseks esitage järgmised metaandmed üleslaaditud "
+"lisamaterjali kohta."
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Lisafail"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Faili looja (või omanik)"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Uurimisinstrument"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Uurimismaterjalid"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Uurimistulemused"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Transkriptsioonid"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Andmeanalüüs"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Andmestik"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Lähtetekst"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Lühike kirjeldus"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr ""
+"Esitage fail retsensentidele (ilma metaandmeteta), kuna see ei ohusta "
+"anonüümset ülevaatust."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Kasutage ainult ametlikult avaldatud materjalidega."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Kuupäev, mil andmed koguti või instrument loodi."
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Uuringu nimi või muu päritolupunkt."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Täpsusta muu"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Faili pole üles laetud."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Palun sisesta teema."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Palun sisesta kirjeldus."
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "Avalik lisamaterjali identifikaator on juba olemas."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Avalik lisamaterjali identifikaator"
+
+msgid "author.submit.filesSummary"
+msgstr "Faili kokkuvõte"
+
+msgid "author.submit.finishSubmission"
+msgstr "Lõpeta kaasöö lisamine"
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Lae üles autori versioon"
+
+msgid "author.article.copyeditedFile"
+msgstr "Toimetatud fail"
+
+msgid "author.article.authorRevisedFile"
+msgstr "Autori fail"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Kas olete kindel, et soovite selle lõpetamata kaastöö kustutada?"
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "Enne jätkamist peate nõustuma autoriõiguse tingimustega."
+
+msgid "submission.submit.coverNote"
+msgstr "Kommentaarid toimetajale"
+
+msgid "author.submit.reorderInstructions"
+msgstr "Järjestage autorid, et need ilmuksid avaldamisel soovitud järjekorras."
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr ""
+"Esitage terminid kaastöö indekseerimiseks, eraldage terminid semikooloniga "
+"(term1; term2; term3)."
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+"Inglise=en; Prantuse=fr; Hispaania=es. <a href=\"https://www.loc.gov/"
+"standards/iso639-2/php/code_list.php\" target=\"_blank\">Veel koode</a>."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Palun sisestage oma artikli kokkuvõte."
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Kaastöö faili ei ole üles laetud."
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr ""
+"See valikuline samm võimaldab kaastööle lisada täiendavaid faile. Mistahes "
+"vormingus olevad failid võivad sisaldada (a) uurimisvahendeid, (b) "
+"andmekogumeid, mis vastavad uuringu eetilise läbivaatamise tingimustele, (c) "
+"allikaid, mis muidu ei oleks lugejatele kättesaadavad, (d) jooniseid ja "
+"tabeleid, mida ei saa teksti endasse integreerida, või muid materjale, mis "
+"täiendavad töö panust."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Palun sisestage selle lisafaili pealkiri."
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr ""
+"Sellesse ajakirja kaastöö esitamiseks on vajalik kasutajakonto. See "
+"võimaldab meie toimetajatel jälgida teie kaastöid ja võtta teiega ühendust, "
+"kui teie kaastöö staatus muutub või kui teilt on vaja täiendavat teavet."
+
+msgid "author.submit.submissionComplete"
+msgstr ""
+"Kaastöö esitamine on lõpetatud. Täname teid huvi eest avaldada väljaandes "
+"{$journalTitle}."

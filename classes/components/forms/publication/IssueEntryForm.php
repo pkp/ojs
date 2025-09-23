@@ -1,14 +1,13 @@
 <?php
+
 /**
  * @file classes/components/form/publication/IssueEntryForm.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2014-2025 Simon Fraser University
+ * Copyright (c) 2000-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IssueEntryForm
- *
- * @ingroup classes_controllers_form
  *
  * @brief A preset form for setting a publication's issue, section, categories,
  *  pages, etc.
@@ -16,9 +15,9 @@
 
 namespace APP\components\forms\publication;
 
-use APP\components\forms\FieldSelectIssue;
+use APP\components\forms\publication\traits\HasFieldIssueSelection;
 use APP\facades\Repo;
-use PKP\components\forms\FieldOptions;
+use PKP\components\forms\FieldAutosuggestPreset;
 use PKP\components\forms\FieldSelect;
 use PKP\components\forms\FieldText;
 use PKP\components\forms\FieldUploadImage;
@@ -26,6 +25,8 @@ use PKP\components\forms\FormComponent;
 
 class IssueEntryForm extends FormComponent
 {
+    use HasFieldIssueSelection;
+
     public const FORM_ISSUE_ENTRY = 'issueEntry';
     public $id = self::FORM_ISSUE_ENTRY;
     public $method = 'PUT';
@@ -40,44 +41,16 @@ class IssueEntryForm extends FormComponent
      * @param string $baseUrl Site's base URL. Used for image previews.
      * @param string $temporaryFileApiUrl URL to upload files to
      */
-    public function __construct($action, $locales, $publication, $publicationContext, $baseUrl, $temporaryFileApiUrl)
-    {
+    public function __construct(
+        $action,
+        $locales,
+        $publication,
+        $publicationContext,
+        $baseUrl,
+        $temporaryFileApiUrl
+    ) {
         $this->action = $action;
         $this->locales = $locales;
-
-        // Issue options
-        $issueOptions = [['value' => '', 'label' => '']];
-
-        $unpublishedIssues = Repo::issue()->getCollector()
-            ->filterByContextIds([$publicationContext->getId()])
-            ->filterByPublished(false)
-            ->getMany()
-            ->toArray();
-
-        if (count($unpublishedIssues)) {
-            $issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.futureIssues') . ' ---'];
-            foreach ($unpublishedIssues as $issue) {
-                $issueOptions[] = [
-                    'value' => (int) $issue->getId(),
-                    'label' => htmlspecialchars($issue->getIssueIdentification()),
-                ];
-            }
-        }
-        $publishedIssues = Repo::issue()->getCollector()
-            ->filterByContextIds([$publicationContext->getId()])
-            ->filterByPublished(true)
-            ->getMany()
-            ->toArray();
-
-        if (count($publishedIssues)) {
-            $issueOptions[] = ['value' => '', 'label' => '--- ' . __('editor.issues.backIssues') . ' ---'];
-            foreach ($publishedIssues as $issue) {
-                $issueOptions[] = [
-                    'value' => (int) $issue->getId(),
-                    'label' => htmlspecialchars($issue->getIssueIdentification()),
-                ];
-            }
-        }
 
         // Section options
         $sections = Repo::section()->getSectionList($publicationContext->getId());
@@ -89,52 +62,67 @@ class IssueEntryForm extends FormComponent
             ];
         }
 
-        $this->addField(new FieldSelectIssue('issueId', [
-            'label' => __('issue.issue'),
-            'options' => $issueOptions,
-            'publicationStatus' => $publication->getData('status'),
-            'value' => $publication->getData('issueId') ? $publication->getData('issueId') : '',
-        ]))
-            ->addField(new FieldSelect('sectionId', [
-                'label' => __('section.section'),
-                'options' => $sectionOptions,
-                'value' => (int) $publication->getData('sectionId'),
-            ]));
+        $issueCount = Repo::issue()->getCollector()
+            ->filterByContextIds([$publicationContext->getId()])
+            ->getCount();
+
+        if ($issueCount > 0) {
+            $this->addFieldIssueSelection($publication, $publicationContext);
+        }
+
+
+        $this->addField(new FieldSelect('sectionId', [
+            'label' => __('section.section'),
+            'options' => $sectionOptions,
+            'value' => (int) $publication->getData('sectionId'),
+            'size' => 'large',
+        ]));
 
         // Categories
         $categoryOptions = [];
         $categories = Repo::category()->getCollector()
             ->filterByContextIds([$publicationContext->getId()])
-            ->getMany()
-            ->toArray();
+            ->getMany();
 
-        foreach ($categories as $category) {
-            $label = $category->getLocalizedTitle();
-            if ($category->getParentId()) {
-                $label = $categories[$category->getParentId()]->getLocalizedTitle() . ' > ' . $label;
-            }
+        $categoriesBreadcrumb = Repo::category()->getBreadcrumbs($categories);
+        foreach ($categoriesBreadcrumb as $categoryId => $breadcrumb) {
             $categoryOptions[] = [
-                'value' => (int) $category->getId(),
-                'label' => $label,
+                'value' => $categoryId,
+                'label' => $breadcrumb,
             ];
         }
+
+        $hasAllBreadcrumbs = count($categories) === $categoriesBreadcrumb->count();
         if (!empty($categoryOptions)) {
-            $this->addField(new FieldOptions('categoryIds', [
+
+            $vocabulary = Repo::category()->getCategoryVocabularyStructure($categories);
+
+            $this->addField(new FieldAutosuggestPreset('categoryIds', [
                 'label' => __('submission.submit.placement.categories'),
+                'description' => $hasAllBreadcrumbs ? '' : __('submission.categories.circularReferenceWarning'),
                 'value' => $publication->getData('categoryIds'),
                 'options' => $categoryOptions,
+                'vocabularies' => [
+                    [
+                        'addButtonLabel' => __('manager.selectCategories'),
+                        'modalTitleLabel' => __('manager.selectCategories'),
+                        'items' => $vocabulary
+                    ]
+                ]
+
             ]));
         }
 
-        $this->addField(new FieldUploadImage('coverImage', [
-            'label' => __('editor.article.coverImage'),
-            'value' => $publication->getData('coverImage'),
-            'isMultilingual' => true,
-            'baseUrl' => $baseUrl,
-            'options' => [
-                'url' => $temporaryFileApiUrl,
-            ],
-        ]))
+        $this
+            ->addField(new FieldUploadImage('coverImage', [
+                'label' => __('editor.article.coverImage'),
+                'value' => $publication->getData('coverImage'),
+                'isMultilingual' => true,
+                'baseUrl' => $baseUrl,
+                'options' => [
+                    'url' => $temporaryFileApiUrl,
+                ],
+            ]))
             ->addField(new FieldText('pages', [
                 'label' => __('editor.issues.pages'),
                 'value' => $publication->getData('pages'),

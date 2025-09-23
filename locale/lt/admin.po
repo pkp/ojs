@@ -1,0 +1,241 @@
+# Darius Zviedris <darius.zviedris@lki.lt>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-09-02 14:49+0000\n"
+"Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
+"Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/admin/lt/"
+">\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
+"19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
+"1 : 2);\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "admin.hostedContexts"
+msgstr "Talpinami žurnalai"
+
+msgid "admin.settings.redirect"
+msgstr "Žurnalo peradresavimas"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Nėra įtrauktų vartotojų."
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Pranešimas apie atvirą prieigą"
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Naudokite svetainę kaip platformą visiems žurnalams."
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Užklausos, skirtos pagrindinei svetainei, bus nukreiptos į šį žurnalą. Tai "
+"gali būti naudinga, pavyzdžiui, jei svetainėje yra tik vienas žurnalas."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Ar tikrai norite pasyvinti šią lokalę? Tai gali paveikti bet kuriuos "
+"žurnalus, naudojančius šią lokalę."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr "Ši kalba bus nustatytą kaip svetainės ir visų žurnalų numatytoji."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Pasirinkite visas svetainėje palaikomas lokalizacijas. Pasirinktos "
+"lokalizacijos bus prieinamos visiems svetainėje talpinamiems žurnalams ir "
+"taip pat bus rodomos kalbos pasirinkimo meniu kiekviename svetainės "
+"puslapyje (kurį galima perrašyti konkretaus žurnalo puslapiuose). Jei "
+"nepasirinktos kelios lokalizacijos, kalbos perjungimo meniu nebus rodomas, o "
+"išplėstiniai kalbos nustatymai nebus prieinami žurnalams."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Pažymėtos lokalės gali būti nebaigtos."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Ar tikrai norite pašalinti šią lokalę? Tai gali paveikti bet kuriuos "
+"žurnalus, naudojančius šią lokalę."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Pasirinkite papildomas lokales, kurias norite įdiegti naudoti sistemoje. "
+"Norėdami naudoti lokales žurnaluose, jas pirma reikia įdiegti. Žr. OJS "
+"dokumentaciją, norėdami sužinoti daugiau apie tai, kaip įtraukti naujas "
+"kalbas."
+
+msgid "admin.systemVersion"
+msgstr "OJS versija"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS konfigūracija"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS konfigūracijos nustatymai, esantys faile <tt>config.inc.php</tt>."
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Jūs busite automatiškai paskirti šio žurnalo mokslo sekretoriumi (-e). "
+"Sukūrus naują žurnalą, busite nukreipti į jo nustatymų vediklį, kad "
+"sutvarkytumėte pradinius žurnalo nustatymus."
+
+msgid "admin.journals.journalSettings"
+msgstr "Žurnalo nustatymai"
+
+msgid "admin.journals.noneCreated"
+msgstr "Nėra sukurtų žurnalų"
+
+msgid "admin.contexts.create"
+msgstr "Sukurti žurnalą"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Tai turi būti vienas trumpas žodis arba akronimas, kuris identifikuoja "
+"žurnalą. Nuorodą į žurnalą (URL) bus {$sampleUrl}"
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Reikia nurodyti antraštę."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Reikia nurodyti kelią."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Kelias gali būti sudarytas tik iš raidžių, skaitmenų, apatinių brūkšnių ir "
+"brūkšnelių, taip pat turi prasidėti ir baigtis raide arba skaitmeniu."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "Nurodytas kelias jau yra naudojamas kitame žurnale."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr "Pagrindinė lokalė turi būti viena iš žurnalo palaikomų lokalių."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Rodyti žurnalą viešai tinklapyje"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Žurnalo aprašymas"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Esamas arba kuriamas žurnalo kelias, pvz., ojs."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Importuoti prenumeratas"
+
+msgid "admin.journals.transcode"
+msgstr "Perkoduoti straipsnio metaduomenis iš ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Sugeneruoti kodą, OJS 1 nuorodas (URL) atvaizduojantį OJS 2 aplinkoje."
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Reikia nurodyti importavimo kelią."
+
+msgid "admin.journals.importErrors"
+msgstr "Importavimas nepavyko"
+
+msgid "admin.mergeUsers"
+msgstr "Sujungti vartotojus"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Sujungti vartotoją"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Nurodykite, kuriam vartotojui paskirti ankstesnio vartotojo autorystę, "
+"redagavimo užduotis ir pan."
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Nurodykite, kurį vartotoją (-us) sujungti su kito vartotojo paskyra (pvz., "
+"kai kuris nors vartotojas turi dvi paskyras). Pasirinktos paskyros bus "
+"ištrintos ir visi straipsniai, užduotys ir pan. bus paskirtos antrajai "
+"paskyrai."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Visi įtraukti vartotojai"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Ar tikrai norite sujungti pasirinktas {$oldAccountCount} paskyrą (-as) į "
+"vieną paskyra su vartotojo vardu „{$newUsername}“? Pasirinktos "
+"{$oldAccountCount} paskyros bus panaikintos. Šis veiksmas yra negrįžtamas."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Pranešimas apie prenumeratos pabaigą"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Priminimas apie recenziją"
+
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
+msgstr "Problemos ID nėra sveikasis skaičius."
+
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
+msgstr "Problemos ID nėra sveikasis skaičius."
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "Problemos ID nesutampa su susietojo ID."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Pasirinkite talpinamus žurnalus, kuriems turėtų būti leidžiama siųsti "
+"masinius el. laiškus. Įjungus šią funkciją, žurnalo tvarkytojas galės siųsti "
+"el. laišką visiems vartotojams, užsiregistravusiems jo "
+"žurnale.<br><br>Piktnaudžiavimas šia funkcija siunčiant nepageidaujamus el. "
+"laiškus gali pažeisti kai kurių jurisdikcijų apsaugos nuo brukalo įstatymus "
+"ir gali lemti, kad jūsų serverio el. laiškai būtų blokuojami kaip brukalas. "
+"Prieš įjungdami šią funkciją, kreipkitės į techninius patarimus ir "
+"pasikonsultuokite su žurnalų tvarkytojais, kad įsitikintumėte, jog ji "
+"naudojama tinkamai.<br><br>Kiti šios funkcijos apribojimai gali būti įjungti "
+"kiekvienam žurnalui apsilankius jo nustatymų vedlyje, esančiame <a href=\""
+"{$hostedContextsUrl}\">Talpinamų žurnalų</a> sąraše."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"Žurnalo vadovas negalės siųsti masinių el. laiškų jokiems iš toliau "
+"pasirinktų vaidmenų. Naudokite šį nustatymą, kad apribotumėte "
+"piktnaudžiavimą el. pašto pranešimų funkcija. Pavyzdžiui, gali būti saugiau "
+"išjungti masinius el. laiškus skaitytojams, autoriams ar kitoms didelėms "
+"vartotojų grupėms, kurios nesutiko gauti tokių el. laiškų.<br><br>Masinių "
+"el. laiškų funkciją šiam žurnalui galima visiškai išjungti <a href=\""
+"{$siteSettingsUrl}\">Administratorius > Svetainės nustatymai</a>."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"Šiam žurnalui masinių el. laiškų siuntimo funkcija išjungta. Įjunkite šią "
+"funkciją skiltyje <a href=\"{$siteSettingsUrl}\">Administratorius > "
+"Svetainės nustatymai</a>."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"Pridėti, redaguoti arba pašalinti žurnalus iš šios svetainės ir tvarkyti "
+"visos svetainės nustatymus."
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+"Pasirinkite geografinės naudojimo statistikos tipą, kurį gali rinkti "
+"žurnalai šioje svetainėje. Išsamesnė geografinė statistika gali gerokai "
+"padidinti jūsų duomenų bazės dydį ir kai kuriais retais atvejais pakenkti "
+"jūsų lankytojų anonimiškumui. Kiekvienas žurnalas gali konfigūruoti šį "
+"nustatymą skirtingai, tačiau žurnalas niekada negali rinkti išsamesnių įrašų "
+"nei čia sukonfigūruota. Pavyzdžiui, jei svetainė palaiko tik šalį ir "
+"regioną, žurnalas gali pasirinkti šalį ir regioną arba tik šalį. Žurnalas "
+"negalės sekti šalies, regiono ir miesto."
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+"Įjunkite institucinę statistiką, jei norite, kad šios svetainės žurnalai "
+"galėtų rinkti naudojimo statistiką pagal instituciją. Kad galėtų naudotis "
+"šia funkcija, žurnalai turės pridėti instituciją ir jos IP adresų "
+"diapazonus. Įjungus institucinę statistiką, jūsų duomenų bazės dydis gali "
+"gerokai padidėti."
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""
+"Ar SUSHI API galinius taškus padaryti viešai prieinamus visiems šios "
+"svetainės žurnalams. Jei įjungsite viešąją API, kiekvienas žurnalas galės "
+"pakeisti šį nustatymą, kad jų statistika būtų privati. Tačiau jei išjungsite "
+"viešąją API, žurnalai negalės savo API padaryti viešos."

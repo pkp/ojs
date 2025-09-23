@@ -25,10 +25,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Altri articoli dello/a stesso/a autore/rice"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""
-"Attenzione: questo plugin richiede che almeno un plugin di report/"
-"statistiche sia abilitato. Se il tuo plugin di statistiche prevede più di "
-"una metrica, seleziona una matrica principale nelle configurazioni "
-"dell'admin o nella pagine di configurazione del journal manager."

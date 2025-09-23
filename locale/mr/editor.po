@@ -1,7 +1,7 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-02-11 19:44+0000\n"
+"PO-Revision-Date: 2025-03-23 23:25+0000\n"
 "Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
 "Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/editor/mr/>"
 "\n"
@@ -485,3 +485,13 @@ msgid "editor.submissionReview.cannotSendToCopyediting"
 msgstr ""
 "सादर केलेल्या लेखनाची अचूकता तपासण्यासाठी (Copyediting) पाठवण्यापूर्वी योग्य "
 "फाईलची निवड करा आणि 'लेखकाला कळवा' हा दुवा (लिंक) वापरून निर्णय कळवा."
+
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr "रिक्त सोडले तरी अंक प्रकाशित झाल्यावर तारीख आपोआप सेट होईल."
+
+msgid "editor.issues.datePublished.invalid"
+msgstr ""
+"प्रकाशनाची तारीख वैध नाही. तारीख YYYY-MM-DD या स्वरूपात असणे आवश्यक आहे."
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr "अंक प्रकाशित झाल्यावर प्रकाशनाची तारीख आवश्यक आहे."

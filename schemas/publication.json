@@ -4,6 +4,15 @@
 		"sectionId"
 	],
 	"properties": {
+		"status": {
+			"type": "integer",
+			"description": "Whether the publication is Queued (not yet scheduled for publication), Declined, Published or Scheduled (scheduled for publication at a future date). One of the `PKPPublication::STATUS_*` constants. Default is `PKPPublication::STATUS_QUEUED`.",
+			"apiSummary": true,
+			"default": 1,
+			"validation": [
+				"in:1,3,4,5,6,7"
+			]
+		},
 		"accessStatus": {
 			"type": "integer",
 			"default": 0,

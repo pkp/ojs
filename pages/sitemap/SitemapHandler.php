@@ -49,7 +49,7 @@ class SitemapHandler extends PKPSitemapHandler
                 ->orderBy(Collector::ORDERBY_PUBLISHED_ISSUES)
                 ->getMany();
             foreach ($publishedIssues as $issue) {
-                $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'issue', 'view', $issue->getId())));
+                $root->appendChild($this->_createUrlTree($doc, $request->url($journal->getPath(), 'issue', 'view', [$issue->getId()])));
                 // Articles for issue
                 $submissions = Repo::submission()
                     ->getCollector()

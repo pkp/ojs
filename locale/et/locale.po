@@ -1,0 +1,2382 @@
+# "10 ..." <jaana.tonisson@tlulib.ee>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-06 09:42+0000\n"
+"Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
+"Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/locale/et/>"
+"\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "context.current"
+msgstr "Praegune ajakiri:"
+
+msgid "context.select"
+msgstr "Vaheta ajakirja:"
+
+msgid "navigation.categories"
+msgstr "Kategooriad"
+
+msgid "navigation.categories.browse"
+msgstr "Sirvi"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Klõpsake ikoonil, et täita retsensiooni vorm."
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Palun täitke kohustuslikud väljad."
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "common.payment"
+msgstr "Makse"
+
+msgid "common.payments"
+msgstr "Maksed"
+
+msgid "doi.manager.settings.publications"
+msgstr "Artiklid"
+
+msgid "navigation.journalHelp"
+msgstr "Ajakirja abi"
+
+msgid "navigation.current"
+msgstr "Praegune"
+
+msgid "navigation.otherJournals"
+msgstr "Teised ajakirjad"
+
+msgid "navigation.browseByIssue"
+msgstr "Numbri järgi"
+
+msgid "navigation.browseByAuthor"
+msgstr "Autori järgi"
+
+msgid "navigation.infoForAuthors"
+msgstr "Autoritele"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Raamatukoguhoidjatele"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Huvide konfliktide juhised"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Informatsioon autoritele"
+
+msgid "navigation.skip.about"
+msgstr "Liigu ajakirja info juurde"
+
+msgid "navigation.skip.issue"
+msgstr "Liigu praeguse numbri juurde"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Määramata"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Määramata"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Kaastööd toimetamisel"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Toimetamisel"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Kaastööd retsenseerimisel"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Retsenseerimisel"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Arhiiv"
+
+msgid "common.queue.long.active"
+msgstr "Aktiivsed"
+
+msgid "common.queue.short.active"
+msgstr "Aktiivsed"
+
+msgid "common.queue.long.completed"
+msgstr "Arhiiv"
+
+msgid "common.queue.short.completed"
+msgstr "Arhiiv"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Määratud toimetajad"
+
+msgid "section.section"
+msgstr "Rubriik"
+
+msgid "section.sections"
+msgstr "Rubriigid"
+
+msgid "section.title"
+msgstr "Rubriigi pealkiri"
+
+msgid "section.abbreviation"
+msgstr "Lühend"
+
+msgid "section.abbreviation.example"
+msgstr "(Näiteks: Artiklid=ART)"
+
+msgid "section.policy"
+msgstr "Rubriigi eeskiri"
+
+msgid "article.article"
+msgstr "Artikkel"
+
+msgid "common.publication"
+msgstr "Artikkel"
+
+msgid "common.publications"
+msgstr "Artiklid"
+
+msgid "article.submissionId"
+msgstr "Kaastöö ID"
+
+msgid "article.title"
+msgstr "Pealkiri"
+
+msgid "article.indexingInformation"
+msgstr "Indekseerimise informatsioon"
+
+msgid "article.metadata"
+msgstr "Metaandmed"
+
+msgid "article.journalSection"
+msgstr "Ajakirja rubriik"
+
+msgid "article.file"
+msgstr "Fail"
+
+msgid "article.suppFile"
+msgstr "Lisafail"
+
+msgid "article.suppFiles"
+msgstr "Lisafailid"
+
+msgid "article.subject"
+msgstr "Märksõnad"
+
+msgid "article.coverage"
+msgstr "Katvus"
+
+msgid "article.type"
+msgstr "Tüüp, meetod või lähenemine"
+
+msgid "article.language"
+msgstr "Keel"
+
+msgid "article.sectionEditor"
+msgstr "RT"
+
+msgid "article.commentsToEditor"
+msgstr "Autori kommentaarid"
+
+msgid "article.submission"
+msgstr "Kaastöö"
+
+msgid "article.submissions"
+msgstr "Kaastööd"
+
+msgid "article.coverPage.altText"
+msgstr "Kaanepilt"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Avatud juurdepääs"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Piiratud juurdepääs"
+
+msgid "article.comments.sectionDefault"
+msgstr "Vaikimisi"
+
+msgid "article.comments.disable"
+msgstr "Keela"
+
+msgid "article.comments.enable"
+msgstr "Luba"
+
+msgid "article.fontSize"
+msgstr "Fondi suurus"
+
+msgid "article.fontSize.small.altText"
+msgstr "Väike"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Keskmine"
+
+msgid "article.fontSize.large.altText"
+msgstr "Suur"
+
+msgid "submission.submissionEditing"
+msgstr "Kaastöö toimetamine"
+
+msgid "submission.changeSection"
+msgstr "Muuda"
+
+msgid "submission.sent"
+msgstr "Saadetud"
+
+msgid "submission.editorDecision"
+msgstr "Toimetaja otsus"
+
+msgid "submission.round"
+msgstr "Ring&nbsp;{$round}"
+
+msgid "submission.editorReview"
+msgstr "Toimetaja arvustus"
+
+msgid "submission.notifyAuthor"
+msgstr "Teavita autorit"
+
+msgid "submission.notifyEditor"
+msgstr "Teavita toimetajat"
+
+msgid "submission.reviewersVersion"
+msgstr "Retsenseerimise-järgse faili versioon"
+
+msgid "submission.postReviewVersion"
+msgstr "Retsenseerimise-järgne faili versioon"
+
+msgid "submission.editorVersion"
+msgstr "Toimetaja versioon"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Autori parandatud versioon failist"
+
+msgid "submission.authorVersion"
+msgstr "Autori versioon"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "See ajakiri ei avalda oma sisu internetis."
+
+msgid "common.confirmComplete"
+msgstr ""
+"Kas oled kindel, et soovid märkida selle ülesande lõpetatuks? Hiljem ei "
+"pruugi muudatuste tegemine olla võimalik."
+
+msgid "common.homePageHeader.altText"
+msgstr "Kodulehe päis"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Ajakirja kodulehe pilt"
+
+msgid "article.details"
+msgstr "Üksikasjad"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Informatsioon raamatukoguhoidjatele"
+
+msgid "article.abstract"
+msgstr "Sisukokkuvõte"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Arhiiv"
+
+msgid "article.return"
+msgstr "Tagasi artikli üksikasjade juurde"
+
+msgid "article.articles"
+msgstr "Artiklid"
+
+msgid "article.authors"
+msgstr "Autorid"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Toimetaja/autori e-kirjavahetus"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Lisafailid"
+
+msgid "article.discipline"
+msgstr "Akadeemiline valdkond ja alamvaldkonnad"
+
+msgid "submission.copyediting"
+msgstr "Toimetamine"
+
+msgid "submission.copyedit"
+msgstr "Toimeta"
+
+msgid "submission.scheduling"
+msgstr "Ajatamine"
+
+msgid "submission.scheduledIn"
+msgstr "Ajatatud avaldamiseks väljaandes {$issueName}."
+
+msgid "submission.scheduledIn.tba"
+msgstr "(TBA)"
+
+msgid "submissions.step1"
+msgstr "Samm 1"
+
+msgid "submissions.step3"
+msgstr "Samm 3"
+
+msgid "submissions.queuedReview"
+msgstr "Retsenseerimisel"
+
+msgid "submissions.published"
+msgstr "Avaldatud"
+
+msgid "submissions.initial"
+msgstr "Esialgne"
+
+msgid "submissions.proofread"
+msgstr "Korrektuur tehtud"
+
+msgid "submissions.initialProof"
+msgstr "Esialgne korrektuur"
+
+msgid "submissions.postAuthor"
+msgstr "Autorijärgne"
+
+msgid "submission.proofreading"
+msgstr "Keelekorrektuur"
+
+msgid "submissions.proof"
+msgstr "Korrektuur"
+
+msgid "submissions.editorDecision"
+msgstr "Toimetaja otsus"
+
+msgid "submissions.editorRuling"
+msgstr "Toimetaja korraldus"
+
+msgid "submission.eventLog"
+msgstr "Sündmuste logi"
+
+msgid "submissions.layoutComplete"
+msgstr "Küljendatud"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Korrektuur loetud"
+
+msgid "submission.search"
+msgstr "Artiklite otsing"
+
+msgid "journal.currentIssue"
+msgstr "Praegune number"
+
+msgid "context.contexts"
+msgstr "Ajakirjad"
+
+msgid "journal.path"
+msgstr "Tee"
+
+msgid "context.context"
+msgstr "Ajakiri"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "journal.viewAllIssues"
+msgstr "Vaata kõiki numbreid"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Kaasa kasutajad, kellel pole selles ajakirjas rolle."
+
+msgid "user.profile.profileImage"
+msgstr "Profiilipilt"
+
+msgid "user.showAllJournals"
+msgstr "Näita minu ajakirju"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Jah, soovi {$userGroup} rolli."
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Jah, soovin, et minuga võetaks ühendust selle ajakirja kaastööde "
+"retsenseerimiseks."
+
+msgid "user.register.contextsPrompt"
+msgstr "Milliste ajakirjade jaoks soovid sellel veebisaidil registreeruda?"
+
+msgid "user.register.otherContextRoles"
+msgstr "Soovi järgmisi rolle."
+
+msgid "user.myJournals"
+msgstr "Minu ajakirjad"
+
+msgid "user.manageMySubscriptions"
+msgstr "Halda minu tellimusi"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "Teie konto pole hetkel ühegi ajakirjaga seotud. Palun valige ajakiri:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Esita kaastöö"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Esita artikkel: autori registreerimine on praegu suletud."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Registreeru retsensendina"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr ""
+"Registreeru retsensendina: retsensendi registreerimine on praegu suletud."
+
+msgid "user.role.manager"
+msgstr "Ajakirja haldur"
+
+msgid "user.role.subEditor"
+msgstr "Rubriigi toimetaja"
+
+msgid "user.role.subscriptionManager"
+msgstr "Tellimuste haldur"
+
+msgid "user.role.managers"
+msgstr "Ajakirja haldurid"
+
+msgid "user.role.subEditors"
+msgstr "Rubriigi toimetajad"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Tellimuste haldurid"
+
+msgid "user.role.journalAssistant"
+msgstr "Ajakirja assistent"
+
+msgid "user.role.journalAssistants"
+msgstr "Ajakirja assistendid"
+
+msgid "issue.issue"
+msgstr "Number"
+
+msgid "issue.issues"
+msgstr "Numbrid"
+
+msgid "issue.title"
+msgstr "Pealkiri"
+
+msgid "issue.volume"
+msgstr "Köide"
+
+msgid "issue.number"
+msgstr "Number"
+
+msgid "issue.vol"
+msgstr "Kd"
+
+msgid "issue.no"
+msgstr "Nr"
+
+msgid "issue.year"
+msgstr "Aasta"
+
+msgid "issue.noIssues"
+msgstr "Numbreid pole"
+
+msgid "issue.toc"
+msgstr "Sisukord"
+
+msgid "issue.abstract"
+msgstr "Sisukokkuvõte"
+
+msgid "issue.coverPage.altText"
+msgstr "Kaaneleht"
+
+msgid "issue.fullIssue"
+msgstr "Täisnumber"
+
+msgid "issue.nonpdf.title"
+msgstr "Numbri allalaadimine"
+
+msgid "issue.viewIssue"
+msgstr "Vaata numbrit"
+
+msgid "issue.return"
+msgstr "Tagasi numbri üksikasjade juurde"
+
+msgid "doi.issue.notPublished"
+msgstr ""
+"DOI registreerimise märkimine {$pubObjectTitle} jaoks ebaõnnestus. Number "
+"peab olema avaldatud enne staatuse uuendamist."
+
+msgid "subscriptionTypes.currency"
+msgstr "Valuuta"
+
+msgid "subscriptionTypes.year"
+msgstr "aasta"
+
+msgid "subscriptionTypes.years"
+msgstr "aastad"
+
+msgid "subscriptionTypes.month"
+msgstr "kuu"
+
+msgid "subscriptionTypes.months"
+msgstr "kuud"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Aegumatu"
+
+msgid "subscriptionTypes.format"
+msgstr "Formaat"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Online"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Trükk"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Trükk ja online"
+
+msgid "subscriptions.inactive"
+msgstr "Mitteaktiivne"
+
+msgid "subscriptions.status"
+msgstr "Staatus"
+
+msgid "subscriptions.status.active"
+msgstr "Aktiivne"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Vajab infot"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Vajab heakskiitu"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Ootab käsitsi makset"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Ootab veebimakset"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Teil pole aktiivset tellimust."
+
+msgid "subscriptions.status.other"
+msgstr "Muu, vaata märkusi"
+
+msgid "subscriptions.individualDescription"
+msgstr ""
+"Individuaalsed tellimused nõuavad sisselogimist, et pääseda ligi tellimuse "
+"sisule."
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Esitamise sündmus"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Artikkel esitatud"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Kaastöö on saadetud väljaande ajatamise järjekorda"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Kaastöö on määratud väljaandele"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Artikkel avaldatud"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Autori parandus esitatud"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Autori parandusfail uuendatud"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Kaastööle on toimetaja määratud"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Kaastöö toimetaja eemaldatud"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Toimetaja otsus esitatud"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Toimetaja fail uuendatud"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Kaastöö saadetud arhiivi"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Kaastöö taastatud arhiivist"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Kaastööle keeletoimetaja määratud"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Kaastöölt keeletoimetaja eemaldatud"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Keeletoimetamine algatatud"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Esialgne keeletoimetamine lõpetatud"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Lõplik keeletoimetamine lõpetatud"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Keeletoimetamise fail uuendatud"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Kaastööle korrektor määratud"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Kaastöölt korrektor eemaldatud"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Korrektori parandusfail uuendatud"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Korrektori ülesanne lõpetatud"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Kaastööle küljendaja määratud"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Kaastöölt küljendaja eemaldatud"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Küljendamine algatatud"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Küljenduse lõppfailid uuendatud"
+
+msgid "reader.subscribersOnly"
+msgstr "Ainult tellijatele"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"Üksusele juurdepääsuks on vajalik tellimus. Tellimuse kontrollimiseks logige "
+"ajakirja sisse."
+
+msgid "reader.openAccess"
+msgstr "Avatud juurdepääs"
+
+msgid "reader.subscriptionAccess"
+msgstr "Nõuab tellimust"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Nõuab tellimust või tasu"
+
+msgid "comments.commentsOnArticle"
+msgstr "Kommentaarid sellele artiklile"
+
+msgid "search.results.orderBy"
+msgstr "Tulemuste järjestamine"
+
+msgid "search.results.orderBy.article"
+msgstr "Artikli pealkiri"
+
+msgid "search.results.orderBy.author"
+msgstr "Autor"
+
+msgid "search.results.orderBy.date"
+msgstr "Avaldamise kuupäev"
+
+msgid "search.results.orderBy.issue"
+msgstr "Väljaanne"
+
+msgid "search.results.orderBy.journal"
+msgstr "Ajakirja pealkiri"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Populaarsus (läbi aegade)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Populaarsus (viimane kuu)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Asjakohasus"
+
+msgid "search.results.orderDir.asc"
+msgstr "Kasvav"
+
+msgid "search.results.orderDir.desc"
+msgstr "Kahanev"
+
+msgid "search.results.similarDocuments"
+msgstr "sarnased dokumendid"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Tellimuste haldamine"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Individuaalsed tellimused"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Institutsionaalsed tellimused"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Tellimuse tüübid"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Artikli lõppfaili pluginad"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"Artikli lõppfaili pluginad lisavad tuge erinevate dokumenditüüpide "
+"kuvamiseks artikli lõppfailina."
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+"Autoriseerimise pluginad võimaldavad Open Journal Systems-il delegeerida "
+"kasutaja autentimist teistele süsteemidele, nagu LDAP serverid."
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Sammud: Esitamise järjekord &gt; Esitamise ülevaatus &gt; Esitamise "
+"toimetamine &gt; Sisukord.<br /><br />\n"
+"Valige toimetamise protsessi nende aspektide käsitlemiseks mudel. (Vastutava "
+"toimetaja ja rubriigiredaktorite määramiseks minge ajakirja halduses "
+"Toimetajate juurde.)"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Kas blokeerida see kasutaja? See takistab kasutajal süsteemi sisselogimist.\n"
+"\n"
+"Soovi korral võite kasutajale selgitada nende konto blokeerimise põhjust."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Vabandust, teil pole selle kasutaja üle administratiivseid õigusi. See võib "
+"olla tingitud sellest, et:\n"
+"<ul>\n"
+"<li>Kasutaja on saidi administraator</li>\n"
+"<li>Kasutaja on aktiivne ajakirjades, mida te ei halda</li>\n"
+"</ul>\n"
+"Seda ülesannet peab täitma saidi administraator.\n"
+"\t"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Esiletõstetud elemendid näitavad, et toimetaja peab tegutsema, "
+"märgistatud järgmiselt:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Vajalik on toiming keeletoimetamise "
+"etapis</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">Vajalik on toiming küljendamise "
+"etapis</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">Vajalik on toiming korrektuuri "
+"etapis</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Aktiivsed toimetamisülesanded"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Lõpetatud toimetamisülesanded"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Ülesandeid pole määratud."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"Selle keeletoimetaja uuesti teavitamine taaskäivitab tema ülesande. Kas "
+"olete kindel, et soovite seda teha?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"Selle autori uuesti teavitamine taaskäivitab tema ülesande. Kas olete "
+"kindel, et soovite seda teha?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"Selle küljendaja uuesti teavitamine taaskäivitab tema ülesande. Kas olete "
+"kindel, et soovite seda teha?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Keeldumised"
+
+msgid "sectionEditor.regrets.title"
+msgstr ""
+"#{$submissionId} Retsensendi keeldumised, tühistamised ja varasemad ringid"
+
+msgid "sectionEditor.regrets"
+msgstr "Keeldumised"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Vaata keeldumisi, tühistamisi, eelmisi ringe"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Eelretsensioon, ring {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Toimetaja otsus, ring {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Retsensendi keeldumised ja tühistamised"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Keeldumine"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Tulemus"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Loo uus retsensent"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Aktiivsed toimetamisülesanded"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Lõpetatud toimetamisülesanded"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Aktiivseid toimetamisülesandeid pole."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Küljendamise ülesanded"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Lae üles lõppfail"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Lae üles täiendav fail"
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "See lõppfail on saadaval eraldi veebisaidil."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "Kaugmajutatud sisu URL"
+
+msgid "reviewer.pendingReviews"
+msgstr "Ootel retsenseerimised"
+
+msgid "reviewer.completedReviews"
+msgstr "Lõpetatud"
+
+msgid "reviewer.averageQuality"
+msgstr "Hinnang"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Retsenseeritav fail"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Teavita toimetajat"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Teen retsensiooni"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Ei saa retsensiooni teha"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Kaastöö toimetaja"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Sisesta või kopeeri retsensiooni kommentaarid siia"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Saada meeldetuletus"
+
+msgid "reviewer.article.automatic"
+msgstr "(Automaatne)"
+
+msgid "reviewer.article.submitReview"
+msgstr "Esita retsensioon toimetajale"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Kommentaarid"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Üleslaaditud failid"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Retsensendi poolt üleslaaditud versioon"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Toimetaja taotlus"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Teie vastus"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Retsensioon esitatud"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Retsensioon tähtaeg"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Aktsepteeri esitatud kaastöö"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Parandused on vajalikud"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Esita uuesti retsensiooniks"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Esita mujale"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Lükka esitatud kaastöö tagasi"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Vaata kommentaare"
+
+msgid "reviewer.article.schedule"
+msgstr "Ajakava"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Retsenseerimisele esitatud kaastöö"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Retsensiooni etapid"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Retsensendi juhend"
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Teavita artikli toimetajat"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "kas võtate retsensiooni enda kanda."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr ""
+"Kui kavatsete retsensiooni teha, tutvuge alltoodud retsensendi juhenditega."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"Klõpsake failinimedel, et alla laadida ja vaadata (ekraanil või printides) "
+"selle esitatud artikliga seotud faile."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"Kinnitage, kas teil on selle uurimistöö suhtes huvide konflikti või mitte ("
+"vt <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">CI&nbsp;Huvide konflikti poliitika</a>)."
+
+msgid "reviewer.competingInterests"
+msgstr "Huvide konflikt"
+
+msgid "reviewer.article.enterReviewA"
+msgstr ""
+"Klõpsake ikoonil, et sisestada (või kleepida) oma retsensioon esitatud "
+"kaastöö kohta."
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+"Lisaks võite üles laadida faile, millega toimetaja ja/või autor saavad "
+"tutvuda."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Määrake või kohandage retsensiendi soovitust."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "Ühtegi soovitust ei ole valitud. Esitamiseks peate valima soovituse."
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"Kui olete otsuse salvestanud, ei saa te enam selles retsensioonis muudatusi "
+"teha. Kas olete kindel, et soovite jätkata?"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Fail toimetamiseks"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Toimetaja fail"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Toimetaja lõplik fail"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Korrektuuri ülesandeid pole"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr ""
+"Taotluse e-kirja ei saa saata enne, kui retsensiooni versioon on olemas."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"Taotluse e-kirja ei saa saata enne, kui fail on valitud toimetamiseks "
+"toimetaja otsuse lehel."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr ""
+"Taotluse e-kirja ei saa saata enne, kui fail on toimetamiseks üles laaditud."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Algne toimetamine"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Toimetaja toimetusfail"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Lõplik toimetus"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Autori toimetus"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Toimetatud versioon"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Määra toimetaja"
+
+msgid "submission.copyedit.useFile"
+msgstr "Kasuta faili"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Toimetamise kommentaarid"
+
+msgid "submission.copyedit.instructions"
+msgstr "Toimetamise juhised"
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"Puudub (Laadige lõplik toimetatud versioon üles küljenduse versioonina enne "
+"taotluse saatmist)"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Avalik lõppfaili identifikaator on juba olemas."
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Määra küljendaja"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Asenda küljendaja"
+
+msgid "submission.layout.layoutComments"
+msgstr "Küljenduse kommentaarid"
+
+msgid "submission.layout.instructions"
+msgstr "Küljenduse juhised"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Viidete linkimine"
+
+msgid "submission.proofreadingComments"
+msgstr "Korrektuuri kommentaarid"
+
+msgid "submission.proofread.corrections"
+msgstr "Korrektuuri parandused"
+
+msgid "submission.proofread.instructions"
+msgstr "Korrektuuri juhised"
+
+msgid "submission.logType.article"
+msgstr "Artikkel"
+
+msgid "submission.logType.editor"
+msgstr "Toimetaja"
+
+msgid "submission.logType.review"
+msgstr "Retsensioon"
+
+msgid "submission.logType.layout"
+msgstr "Küljendus"
+
+msgid "submission.logType.proofread"
+msgstr "Korrektuur"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Toimetaja/Autori kirjavahetus"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Toimetamise kommentaarid"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Autorile ja toimetajale"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Toimetajale"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr ""
+"Pärast saatmist esita redigeeritav pimekoopia retsensentidele saatmiseks."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Autorile ja toimetajale"
+
+msgid "submission.comments.forEditor"
+msgstr "Toimetajale"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Salvesta ja saada e-kiri autorile"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Salvesta ja saada e-kiri toimetajale"
+
+msgid "user.register.selectContext"
+msgstr "Valige ajakiri, millesse registreeruda:"
+
+msgid "user.register.privacyStatement"
+msgstr "Privaatsusavaldus"
+
+msgid "user.register.registrationDisabled"
+msgstr "See ajakiri ei võta praegu kasutajate registreerimisi vastu."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Sisestatud parool ei ole piisavalt pikk."
+
+msgid "user.register.authorDescription"
+msgstr "Saate esitada kaastöid ajakirjale."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Olete nõus retsenseerima ajakirjale esitatud artikleid."
+
+msgid "user.register.reviewerDescription"
+msgstr "Olete nõus retsenseerima sellele saidile esitatud artikleid."
+
+msgid "user.register.reviewerInterests"
+msgstr ""
+"Määratlege oma retsenseerimise huvid (sisulised valdkonnad ja "
+"uurimismeetodid):"
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Jah, olen nõus, et minu andmeid kogutakse ja säilitatakse vastavalt selle "
+"ajakirja <a href=\"{$privacyUrl}\" target=\"_blank\""
+">privaatsusavaldusele</a>."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Peate nõustuma iga ajakirja privaatsusavaldusega, millesse registreerute."
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Peate nõustuma selle saidi privaatsusavaldusega."
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Minu tellimused"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Tellimuse staatus"
+
+msgid "user.subscriptions.status"
+msgstr "Staatus"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Kirjeldus"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Enne tellimuse aktiveerimist on vaja täiendavat teavet"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Tellimust tuleb enne aktiveerimist kontrollida"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Manuaalne makse on algatatud, kuid pole veel laekunud"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Veebimakse on algatatud, kuid tühistatud või pole lõpule viidud"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Individuaalne tellimus"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Institutsionaalsed tellimused"
+
+msgid "user.subscriptions.renew"
+msgstr "Pikenda"
+
+msgid "user.subscriptions.purchase"
+msgstr "Osta"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Osta individuaalne tellimus"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Osta institutsionaalne tellimus"
+
+msgid "user.subscriptions.expires"
+msgstr "Aegub: {$date}"
+
+msgid "user.subscriptions.expired"
+msgstr "Aegunud: {$date}"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Vaata saadaolevaid tellimuse tüüpe"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Tellimuse tüüp"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Liikmelisus"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Valitud tellimuse tüüp nõuab liikmelisuse teavet."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Palun valige kehtiv tellimuse tüüp."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Sellel kasutajakontol on juba individuaalne tellimus."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Liikmelisuse teave, kui valitud tellimuse tüüp seda nõuab."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Asutuse nimi"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Asutuse nimi on nõutav."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Postiaadress"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Domeen"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"Kui siin on sisestatud domeen, on IP-vahemikud valikulised.<br />Kehtivad "
+"väärtused on domeeni nimed (nt lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Valitud tellimuse tüüp nõuab tellimuse autentimiseks domeeni ja/või IP-"
+"vahemikku."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Palun sisestage kehtiv domeen."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP-vahemikud"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Palun sisestage kehtiv IP-vahemik."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Kustuta"
+
+msgid "search.searchFor"
+msgstr "Otsi artikleid"
+
+msgid "search.withinJournal"
+msgstr "Sees"
+
+msgid "search.journal"
+msgstr "Ajakirja järgi"
+
+msgid "article.pageTitle"
+msgstr "Vaade: {$title}"
+
+msgid "article.pdf.title"
+msgstr "Porditav dokumendiformaat (PDF)"
+
+msgid "article.download"
+msgstr "Laadi see PDF-fail alla"
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>PDF-faili, mille valisite, peaks siia laadima, kui teie veebibrauseril on "
+"PDF-lugeja plugin installeeritud (nt <a href=\"https://get.adobe.com/reader/"
+"\">Adobe Acrobat Readeri</a> uusim versioon).</p>"
+
+msgid "article.nonpdf.title"
+msgstr "Artikli allalaadimine"
+
+msgid "article.nonpdf.note"
+msgstr ""
+"Valitud fail peaks automaatselt alla laadima hakkama. Kui see ei käivitu, "
+"klõpsake allolevat linki. Pange tähele, et selle faili vaatamiseks võib vaja "
+"minna spetsiaalset vaaturit või pluginat.<br /><br />Kui fail ei laadi "
+"automaatselt alla, <a href=\"{$url}\">klõpsake siia</a>."
+
+msgid "site.journalsHosted"
+msgstr "Sellel saidil majutatavad ajakirjad"
+
+msgid "site.journalView"
+msgstr "Vaata ajakirja"
+
+msgid "site.journalRegister"
+msgstr "Registreeru"
+
+msgid "site.noJournals"
+msgstr "Ajakirju pole saadaval."
+
+msgid "current.current"
+msgstr "Praegune"
+
+msgid "site.journalCurrent"
+msgstr "Praegune number"
+
+msgid "current.noCurrentIssue"
+msgstr "Praegust numbrit pole"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "See ajakiri pole veel ühtegi numbrit avaldanud."
+
+msgid "archive.archives"
+msgstr "Arhiiv"
+
+msgid "archive.archivesPageNumber"
+msgstr "Arhiiv - lehekülg {$pageNumber}"
+
+msgid "archive.browse"
+msgstr "Sirvi vanemaid numbreid"
+
+msgid "about.statistics"
+msgstr "Statistika"
+
+msgid "about.contact"
+msgstr "Kontakt"
+
+msgid "about.aboutContext"
+msgstr "Ajakirjast"
+
+msgid "about.history"
+msgstr "Ajakirja ajalugu"
+
+msgid "about.focusAndScope"
+msgstr "Fookus ja ulatus"
+
+msgid "about.sectionPolicies"
+msgstr "Rubriikide poliitika"
+
+msgid "about.submissions"
+msgstr "Kaastööd"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Logi sisse"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Registreeru"
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} või {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Sisesta uus kaastöö"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "vaata oma pooleliolevaid kaastöid"
+
+msgid "about.authorGuidelines"
+msgstr "Juhised autoritele"
+
+msgid "about.copyrightNotice"
+msgstr "Autoriõiguse teatis"
+
+msgid "about.privacyStatement"
+msgstr "Privaatsusavaldus"
+
+msgid "about.authorFees"
+msgstr "Autoritasud"
+
+msgid "about.authorFeesMessage"
+msgstr "See ajakiri küsib järgmisi autoritasusid."
+
+msgid "about.peerReviewProcess"
+msgstr "Eelretsenseerimise protsess"
+
+msgid "about.publicationFrequency"
+msgstr "Ilmumissagedus"
+
+msgid "about.openAccessPolicy"
+msgstr "Avatud juurdepääsu poliitika"
+
+msgid "about.delayedOpenAccess"
+msgstr "Viivitatud avatud juurdepääs"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Selle ajakirja sisu on avatud juurdepääsuga saadaval"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "kuu pärast number avaldatakse."
+
+msgid "about.archiving"
+msgstr "Arhiveerimine"
+
+msgid "about.subscriptions"
+msgstr "Tellimused"
+
+msgid "about.subscriptions.individual"
+msgstr "Individuaalsed tellimused"
+
+msgid "about.subscriptions.institutional"
+msgstr "Institutsionaalsed tellimused"
+
+msgid "about.subscriptionsContact"
+msgstr "Tellimuste kontakt"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Nimi"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Formaat"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Kestus"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Hind"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Tellimuste tüübid"
+
+msgid "about.memberships"
+msgstr "Liikmelisused"
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "OJS toimetamis- ja avaldamisprotsess"
+
+msgid "about.aboutSoftware"
+msgstr "Open Journal Systems'i kohta"
+
+msgid "help.ojsHelp"
+msgstr "Open Journal Systems abi"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS abi"
+
+msgid "help.searchReturnResults"
+msgstr "Tagasi otsingutulemuste juurde"
+
+msgid "help.goToEditPage"
+msgstr "Muuda {$sectionTitle}"
+
+msgid "donations.thankYou"
+msgstr "Täname teid"
+
+msgid "donations.thankYouMessage"
+msgstr "Täname teid panuse eest.   Teie panust väärtustatakse kõrgelt."
+
+msgid "payment.loginRequired"
+msgstr "Maksmiseks peate olema sisse logitud."
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"Üksusele juurdepääsuks on vajalik tellimus või numbri ostmine. Tellimuse "
+"kontrollimiseks, varasema ostu juurde pääsemiseks või numbri ostmiseks "
+"logige ajakirja sisse."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Annetuse tegemiseks peate olema sisse logitud."
+
+msgid "payment.paid"
+msgstr "Makstud"
+
+msgid "payment.unpaid"
+msgstr "Maksmata"
+
+msgid "payment.waived"
+msgstr "Loobutud"
+
+msgid "payment.payNow"
+msgstr "Maksa kohe"
+
+msgid "payment.waive"
+msgstr "Loobu"
+
+msgid "payment.alreadyPaid"
+msgstr "Juba makstud"
+
+msgid "payment.paymentReceived"
+msgstr "Makse laekunud"
+
+msgid "payment.paymentSent"
+msgstr "Makse on juba saadetud"
+
+msgid "payment.authorFees"
+msgstr "Autoritasud"
+
+msgid "payment.type.submission"
+msgstr "Kaastöö tasu"
+
+msgid "payment.type.publication"
+msgstr "Avaldamistasu"
+
+msgid "payment.type.publication.required"
+msgstr "Avaldamistasu tuleb tasuda."
+
+msgid "payment.type.fastTrack"
+msgstr "Kiirretsenseerimise tasu"
+
+msgid "payment.type.membership"
+msgstr "Individuaalse liikmelisuse tasu"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Artikli ostmise tasu"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Numbri ostmise tasu"
+
+msgid "payment.type.donation"
+msgstr "Annetused"
+
+msgid "payment.requestPublicationFee"
+msgstr "Küsi avaldamistasu ({$feeAmount})"
+
+msgid "payment.requestPublicationFee.notEnabled"
+msgstr "Avaldamistasu ei ole lubatud."
+
+msgid "payment.donation.makeDonation"
+msgstr "Tee annetus"
+
+msgid "payment.submission.paySubmission"
+msgstr "Maksa kaastöö tasu"
+
+msgid "payment.publication.payPublication"
+msgstr "Maksa avaldamiseks"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Avaldamistasu makstud"
+
+msgid "payment.membership.buyMembership"
+msgstr "Osta individuaalne liikmelisus"
+
+msgid "payment.membership.ends"
+msgstr "Lõpeb"
+
+msgid "payment.subscription.renew"
+msgstr "Pikenda tellimust"
+
+msgid "payment.subscription.expires"
+msgstr "Aegub"
+
+msgid "installer.appInstallation"
+msgstr "OJS paigaldus"
+
+msgid "installer.ojsUpgrade"
+msgstr "OJS uuendus"
+
+msgid "installer.allowFileUploads"
+msgstr ""
+"Teie server lubab praegu failide üleslaadimist: "
+"<strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"Teie server lubab praegu maksimaalset failide üleslaadimise suurust: "
+"<strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr ""
+"Peamine keel, mida selle süsteemi jaoks kasutada. Kui olete huvitatud "
+"keeltest, mida siin loendis pole, vaadake palun OJS-i dokumentatsiooni."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+"OJS vajab juurdepääsu SQL andmebaasile oma andmete salvestamiseks. Toetatud "
+"andmebaaside loendit vaadake ülaltoodud süsteeminõuetest. Allpool olevates "
+"väljades sisestage andmebaasiga ühendumiseks kasutatavad seaded."
+
+msgid "installer.installApplication"
+msgstr "Paigalda Open Journal Systems"
+
+msgid "installer.upgradeApplication"
+msgstr "Uuenda Open Journal Systems"
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>TÄHTIS!</h4>\n"
+"<p>Installer ei suutnud konfiguratsiooni faili automaatselt üle kirjutada. "
+"Enne süsteemi kasutamist avage palun <tt>config.inc.php</tt> sobivas "
+"tekstiredaktoris ja asendage selle sisu alloleva tekstivälja sisuga.</p>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"OJS-ist on saadaval uus versioon! Praegu kasutate OJS-i {$currentVersion}. "
+"Kõige uuem versioon on OJS {$latestVersion}. Palun külasta <a href=\"https"
+"://pkp.sfu.ca/ojs_download\" target=\"_new\">seda lehte</a>, et laadida alla "
+"kõige uuem versioon ja leida uuendamise juhised."
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"OJS-ist on saadaval uus versioon! Praegu kasutate OJS-i {$currentVersion}. "
+"Kõige uuem versioon on OJS {$latestVersion}. Palun võtke ühendust oma saidi "
+"administraatoriga ({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\""
+">{$siteAdminEmail}</a>), et teavitada teda sellest uuest versioonist. Rohkem "
+"teavet leiad <a href=\"https://pkp.sfu.ca/ojs/ojs_download/\" target=\"_new\""
+">siit</a>."
+
+msgid "log.author.documentRevised"
+msgstr ""
+"{$authorName} on muutnud artiklit {$submissionId}. Uus faili ID on {$fileId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr ""
+"{$reviewerName} on vabastatud kaastöö {$submissionId} retsenseerimisest "
+"ülevaatamise ringil {$round}."
+
+msgid "log.review.reviewInitiated"
+msgstr ""
+"Ülevaatamise ringi {$round} retsensioon, mille teostab {$reviewerName} "
+"kaastööle {$submissionId}, on algatatud.."
+
+msgid "log.review.reviewerRated"
+msgstr ""
+"{$reviewerName} on hinnatud kaastöö ringi {$round} retsensiooniks "
+"{$submissionId}."
+
+msgid "log.review.reviewerFile"
+msgstr "Retsensendi fail on üles laaditud."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+"Soovitus kaastöö ringi {$round} retsenseerimiseks{$submissionId} "
+"{$reviewerName} poolt on määratud."
+
+msgid "log.review.resubmit"
+msgstr "Kaastöö {$submissionId} on uuesti esitatud retsenseerimiseks."
+
+msgid "log.review.reviewAccepted"
+msgstr ""
+"{$reviewerName} on aktsepteerinud kaastöö ringi {$round} "
+"retsensiooni{$submissionId}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName} on keeldunud kaastöö ringi {$round} retsensioonist{$submissionId}"
+" {$reviewerName} nimel."
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"Toimetaja {$userName} on ringi {$round} üles laadinud faili {$submissionId} "
+"retsensendi{$reviewerName} nimel."
+
+msgid "log.editor.decision"
+msgstr ""
+"Toimetaja otsus ({$decision}) artikli {$submissionId} kohta on salvestatud "
+"{$editorName} poolt."
+
+msgid "log.editor.recommendation"
+msgstr ""
+"Toimetaja soovitus({$decision}) artikli {$submissionId} kohta on salvestatud "
+"{$editorName} poolt."
+
+msgid "log.copyedit.initiate"
+msgstr ""
+"Kaastöö {$submissionId} toimetamine on alustatud {$copyeditorName} poolt."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Vaikimisi toimetatud fail on valitud."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+"{$copyeditorName} on lõpetanud kaastöö{$submissionId} esialgse toimetamise."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+"{$copyeditorName} on lõpetanud kaastöö{$submissionId} lõpliku toimetamise."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "{$copyeditorName} on määratud kaastöö{$submissionId} toimetajaks."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "Toimetaja versioon esituse failist on üles laaditud."
+
+msgid "log.copyedit.authorFile"
+msgstr "Autori poolt toimetatud versioon esituse failist on üles laaditud."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "{$editorName} on eemaldatud kaastöö{$submissionId} küljendaja rollist."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} on lõpetanud kaastöö{$submissionId} küljendamise."
+
+msgid "log.editor.metadataModified"
+msgstr "Selle artikli metaandmeid on muudetud {$editorName} poolt."
+
+msgid "log.editor.editorFile"
+msgstr "Toimetaja versioon kaastöö failist on üles laaditud."
+
+msgid "log.editor.archived"
+msgstr "Kaastöö{$submissionId} on arhiveeritud."
+
+msgid "log.editor.restored"
+msgstr "Kaastöö{$submissionId} on uuesti järjekorda pandud."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} on määratud kaastöö {$submissionId} toimetajaks."
+
+msgid "log.proofread.assign"
+msgstr ""
+"{$assignerName} on määranud {$proofreaderName} kaastöö{$submissionId} "
+"korrektoriks."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} on esitanud kaastöö {$submissionId} ajatamiseks."
+
+msgid "log.imported"
+msgstr "{$userName} on importinud artikli {$submissionId}."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Eelretsenseeritud artikkel"
+
+msgid "notification.type.editing"
+msgstr "Toimetamise sündmused"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Uus artikkel, \"{$title},\" on esitatud."
+
+msgid "notification.type.galleyModified"
+msgstr "Artikli \"{$title}\" lõppfaili on muudetud"
+
+msgid "notification.type.newAnnouncement"
+msgstr "Uus teadaanne on loodud."
+
+msgid "notification.type.reviewing"
+msgstr "Retsenseerimise sündmused"
+
+msgid "notification.type.reviewerFormComment"
+msgstr "Artikli \"{$title}\" kohta on esitatud retsenseerimise vorm"
+
+msgid "notification.type.site"
+msgstr "Saidi sündmused"
+
+msgid "notification.type.submissionComment"
+msgstr "Toimetaja on jätnud kommentaari artikli \"{$title}\" kohta"
+
+msgid "notification.type.submissions"
+msgstr "Esitamise sündmused"
+
+msgid "notification.type.public"
+msgstr "Avalikud teadaanded"
+
+msgid "notification.savedIssueMetadata"
+msgstr "Väljaande avaldamise metaandmed on salvestatud."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Ootel olevad lõppfailid."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "Juurdepääs keelatud! Teid pole määratud selle artikli toimetajaks."
+
+msgid "user.authorization.noContext"
+msgstr "Teie päringule vastavat ajakirja ei leitud."
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Üritate pääseda juurde artiklile, mis ei kuulu teie sektsiooni."
+
+msgid "user.authorization.invalidIssue"
+msgstr "Taotleti vigast numbrit!"
+
+msgid "grid.action.createContext"
+msgstr "Loo uus ajakiri"
+
+msgid "editor.navigation.issues"
+msgstr "Väljaanded"
+
+msgid "notification.type.approveSubmission"
+msgstr "See kaastöö ootab praegu heakskiitu, enne kui see ilmub väljaandes."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Ootab heakskiitu."
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Registreeru teiste ajakirjadega"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Peida teised ajakirjad"
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Heakskiidetud"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Ootab heakskiitu"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Lõppfaili heakskiitmine"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Kiida avaldamiseks lõppfail heaks</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "\"{$journalName}\" indekseerimine"
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "Antud ajakirja tee \"{$journalPath}\" ei saanud lahendada ajakirjaks."
+
+msgid "editor.issues.futureIssues"
+msgstr "Tulevased väljaanded"
+
+msgid "navigation.subscriptions"
+msgstr "Tellimused"
+
+msgid "log.editor.submissionExpedited"
+msgstr ""
+"{$editorName} on võtnud enda peale artikli {$submissionId} "
+"toimetamisprotsessi."
+
+msgid "catalog.sortBy"
+msgstr "Artiklite järjestus"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Valige, kuidas järjestada artikleid selles kategoorias."
+
+msgid "submissions.reviewRound"
+msgstr "Retsenseerimise ring"
+
+msgid "submissions.copyeditComplete"
+msgstr "Toimetatud"
+
+msgid "user.authorization.representationNotFound"
+msgstr "Soovitud lõplikku versiooni ei leitud."
+
+msgid "user.registerForOtherJournals"
+msgstr "Registreeri teiste ajakirjade jaoks"
+
+msgid "user.reviewerPrompt"
+msgstr "Kas olete nõus selle ajakirja kaastöid retsenseerima?"
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Kui soovisite olla mõne ajakirja retsensent, sisestage palun oma "
+"huvivaldkonnad."
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"Teie kontol ei ole praegu selle ajakirja jaoks ühtegi rolli. Palun valige "
+"järgmistest toimingutest:"
+
+msgid "issue.viewIssueIdentification"
+msgstr "Vaata {$identification}"
+
+msgid "doi.issue.incorrectContext"
+msgstr ""
+"Järgmisele numbrile ei saanud DOI-d luua: {$itemTitle}. See ei eksisteeri "
+"praeguses ajakirja kontekstis."
+
+msgid "doi.issue.incorrectStaleStatus"
+msgstr ""
+"Järgmisele numbrile ei saanud DOI staatust aegunuks määrata: {$itemTitle}. "
+"DOI-l peab olema staatus \"Registreeritud\" või \"Esitatud\"."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"Institutsionaalsed tellimused ei vaja sisselogimist. Kasutaja domeen ja/või "
+"IP-aadress võimaldab juurdepääsu tellimuse sisule."
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>Märkus:</strong> Internetis ostetud institutsionaalsed tellimused "
+"vajavad domeeni ja IP-vahemike kinnitamist enne tellimuse aktiveerimist."
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Keeletoimetaja parandusfail uuendatud"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Korrektori ülesanne algatatud"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Küljendamine lõpetatud"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "comments.authenticated"
+msgstr ""
+"kasutajalt <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>TÄHELEPANU!</h4>\n"
+"<p>Süsteem ei saanud automaatselt konfiguratsiooni faili üle kirjutada. "
+"Konfiguratsiooni muudatuste rakendamiseks peate avama faili <tt>config.inc."
+"php</tt> sobivas tekstiredaktoris ja asendama selle sisu allolevast "
+"tekstiväljast pärit sisuga.</p>"
+
+msgid "plugins.categories.generic.description"
+msgstr ""
+"Üldisi pluginaid kasutatakse Open Journal Systems-i laiendamiseks "
+"mitmesugustel viisidel, mida teised plugina kategooriad ei toeta."
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Soovitatud Creative Commons autoriõiguse märkused</h3>\n"
+"<h4>1. Soovitatud poliitika ajakirjadele, mis pakuvad avatud juurdepääsu</h4>"
+"\n"
+"Autorid, kes avaldavad selles ajakirjas, nõustuvad järgmiste tingimustega:\n"
+"<ol type=\"a\">\n"
+"<li>Autorid säilitavad autoriõiguse ja annavad ajakirjale esmaavaldamise "
+"õiguse koos tööga, mis on samaaegselt litsentseeritud <a target=\"_new\" "
+"href=\"https://creativecommons.org/licenses/by/3.0/\"> Creative Commons "
+"Attribution License</a> alusel, mis võimaldab teistel jagada teost, "
+"tunnustades teose autorlust ja esmast avaldamist selles ajakirjas.</li>\n"
+"<li>Autorid saavad sõlmida eraldi täiendavaid lepingulisi kokkuleppeid "
+"ajakirjas avaldatud teose mitte-eksklusiivse levitamise kohta (nt postitada "
+"see institutsionaalsesse repositooriumisse või avaldada raamatus), "
+"tunnustades selle esmast avaldamist selles ajakirjas.</li>\n"
+"<li>Autoritel on lubatud ja neid julgustatakse postitama oma tööd internetis "
+"(nt institutsionaalsetes repositooriumites või oma veebisaidil) enne ja "
+"esitamisprotsessi ajal, kuna see võib viia produktiivsete vahetusteni, "
+"samuti varasemale ja suuremale avaldatud töö tsiteerimisele (vt <a target="
+"\"_new\" href=\"https://web-archive.southampton.ac.uk/opcit.eprints.org/"
+"oacitation-biblio.html\">Avatud juurdepääsu mõju</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. Soovitatud poliitika ajakirjadele, mis pakuvad viivitusega avatud "
+"juurdepääsu</h4>\n"
+"Autorid, kes avaldavad selles ajakirjas, nõustuvad järgmiste tingimustega:\n"
+"<ol type=\"a\">\n"
+"<li>Autorid säilitavad autoriõiguse ja annavad ajakirjale esmaavaldamise "
+"õiguse, kus teos [TÄPSUSTA AJAPERIOOD] pärast avaldamist on samaaegselt "
+"litsentseeritud <a target=\"_new\" href=\"https://creativecommons.org/"
+"licenses/by/3.0/\">Creative Commons Attribution License</a> alusel, mis "
+"võimaldab teistel jagada teost, tunnustades teose autorlust ja esmast "
+"avaldamist selles ajakirjas.</li>\n"
+"<li>Autorid saavad sõlmida eraldi täiendavaid lepingulisi kokkuleppeid "
+"ajakirjas avaldatud teose mitte-eksklusiivse levitamise kohta (nt postitada "
+"see institutsionaalsesse repositooriumisse või avaldada raamatus), "
+"tunnustades selle esmast avaldamist selles ajakirjas.</li>\n"
+"<li>Autoritel on lubatud ja neid julgustatakse postitama oma tööd internetis "
+"(nt institutsionaalsetes repositooriumites või oma veebisaidil) enne ja "
+"esitamisprotsessi ajal, kuna see võib viia produktiivsete vahetusteni, "
+"samuti varasemale ja suuremale avaldatud töö tsiteerimisele (vt <a target="
+"\"_new\" href=\"https://web-archive.southampton.ac.uk/opcit.eprints.org/"
+"oacitation-biblio.html\"> Avatud juurdepääsu mõju</a>).</li>\n"
+"</ol>\""
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Et võimaldada lugejatel leida autori poolt viidatud tööde veebiversioone, "
+"on saadaval järgmised võimalused.</p>\n"
+"\n"
+"<ol>\n"
+"<li><strong>Lisage lugemise tööriist</strong><p>Ajakirja haldur saab lisada "
+"\"Leia viited\" avaldatud üksustega kaasnevatele lugemistööriistadele, mis "
+"võimaldab lugejatel kopeerida viite pealkirja ja seejärel otsida viidatud "
+"tööd eelvalitud teadusandmebaasidest.</p></li>\n"
+"<li><strong>Põimige viited linkidena</strong><p>Küljendaja saab lisada lingi "
+"viidetele, mida saab leida internetist, kasutades järgmisi juhiseid (mida "
+"saab muuta).</p></li>\n"
+"</ol>"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Esiletõstetud elemendid näitavad, et toimetaja peab tegutsema, "
+"märgistatud järgmiselt:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">Retsensent on määratud, "
+"kuid teda pole e-posti teel teavitatud</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">Kõik retsensendid on tagastanud oma "
+"kommentaarid, kuid otsust pole registreeritud</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">Autor on üles laadinud "
+"parandatud käsikirja</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">Retsensent on "
+"hilinenud eelretsensiooni kutse kinnitamisega</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">Retsensent on "
+"hilinenud retsensiooni lõpetamisega</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>\"Tähtaeg\" täidetakse, kui retsensent nõustub retsensiooni taotlusega;"
+" näitab retsensiooni tähtajani jäänud nädalate arvu või (-) nädalaid, mille "
+"võrra see on hilinenud.</li>\n"
+"</ol>"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"Selle korrektori uuesti teavitamine taaskäivitab tema ülesande. Kas olete "
+"kindel, et soovite seda teha?"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Registreeri olemasolev kasutaja retsensendina"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Asenda fail"
+
+msgid "submission.layout.imageInvalid"
+msgstr "Vigane pildi formaat. Aktsepteeritud formaadid on .gif, .jpg ja .png."
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr ""
+"Kaastöö tehakse kättesaadavaks siis, kui retsensent nõustub retsensiooni "
+"tegema"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Toimetaja sisestamiseks"
+
+msgid "reviewer.article.recommendation"
+msgstr "Soovitus"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"Kui soovite failile lisada kommentaare toimetaja jaoks, salvestage see oma "
+"arvutisse ning kasutage Sirvi/Laadi üles.)"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Retsensiooni ajakava"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"Retsensiooni juhend pakub retsensentidele kriteeriume, mille alusel hinnata "
+"esitatud artikli sobivust ajakirjas avaldamiseks, ning võib sisaldada eraldi "
+"juhiseid tõhusa ja kasuliku retsensiooni ettevalmistamiseks. Retsensiooni "
+"koostamisel esitatakse retsensentidele kaks avatud tekstivälja, esimene "
+"\"autorile ja toimetajale\" ning teine \"toimetajale\". Teise võimalusena "
+"võib ajakirja juht luua retsensioonivormid jaotises \"Retsensioonivormid\". "
+"Kõigil juhtudel on toimetajatel võimalus lisada retsensioonid autorile "
+"edastatavatesse kirjadesse."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"Valige soovitus ja esitage retsensioon protsessi lõpetamiseks. Soovituse "
+"valimisel peate sisestama retsensiooni või laadima üles faili."
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>Käsikirja üleslaadimiseks sellesse ajakirja järgige järgmisi samme.</p>\n"
+"<ol>\n"
+"<li>Klõpsake sellel lehel nuppu Sirvi (või Vali fail), mis avab teie arvuti "
+"kõvakettalt faili leidmiseks dialoogiakna.</li>\n"
+"<li>Leidke fail, mida soovite esitada, ja märkige see.</li>\n"
+"<li>Klõpsake dialoogiaknas nuppu Ava, mis lisab faili nime sellele "
+"lehele.</li>\n"
+"<li>Klõpsake sellel lehel nuppu Laadi üles, mis laadib faili teie arvutist "
+"ajakirja veebisaidile ja nimetab selle ümber vastavalt ajakirja "
+"tavadele.</li>\n"
+"<li>ui esitatud fail on üles laaditud, klõpsake selle lehe allosas nuppu "
+"Salvesta ja jätka.</li>\n"
+"</ol>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>OJS versioon {$version}</h4>\n"
+"\n"
+"<p>Täname, et laadisite alla Public Knowledge Project'i <strong>Open Journal "
+"Systems</strong>. Enne jätkamist lugege palun <a href=\"{$baseUrl}/README."
+"md\">README</a> ja <a href=\"https://docs.pkp.sfu.ca/dev/upgrade-guide)\""
+">the Upgrade Guide</a> faile, mis on selle tarkvaraga kaasas. Rohkem teavet "
+"Public Knowledge Project'i ja selle tarkvaraprojektide kohta leiate <a href="
+"\"https://pkp.sfu.ca/\" target=\"_blank\">PKP veebilehelt</a>. Kui teil on "
+"Open Journal Systems'i kohta veateateid või tehnilise toe päringuid, vaadake "
+"<a href=\"https://forum.pkp.sfu.ca\" target=\"_blank\">support forum</a> või "
+"külastage PKP veebipõhist <a href=\"https://github.com/pkp/pkp-lib/issues\" "
+"target=\"_blank\">veateate süsteemi</a>. Kuigi tugifoorum on eelistatud "
+"kontaktimeetod, võite meeskonnale ka e-posti saata aadressil <a href=\"mailto"
+":pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"<p>On <strong>tungivalt soovitatav</strong> enne jätkamist varundada oma "
+"andmebaas, failide kataloog ja OJS-i installatsioonikataloog.</p>"
+
+msgid "submission.logType.author"
+msgstr "Autor"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"Täieliku Unicode'i toe jaoks peab PHP olema kompileeritud <a href=\"https"
+"://www.php.net/mbstring\" target=\"_blank\">mbstring</a> teegi toega ("
+"vaikimisi lubatud enamikus uuemates PHP installatsioonides). Võite kogeda "
+"probleeme laiendatud märgistikega, kui teie server ei vasta nendele nõuetele."
+"\n"
+"<br /><br />\n"
+"Teie server toetab praegu mbstring'i: <strong>{$supportsMBString}</strong>"
+
+msgid "submission.logType.copyedit"
+msgstr "Toimetus"
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+"Sisestage täielik tee olemasolevale kataloogile, kuhu üleslaaditud failid "
+"salvestatakse. See kataloog ei tohiks olla veebi kaudu otse "
+"ligipääsetav.<strong>Palun veenduge, et see kataloog eksisteerib ja on "
+"kirjutatav enne installimist.</strong> Windowsi teed peaksid kasutama "
+"kaldkriipse, nt \"C:/myjournal/files\"."
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Neid kommentaare saab jagada autoriga.<br />\n"
+"(Pärast salvestamist saab lisada veel kommentaare.)"
+
+msgid "user.register.noJournals"
+msgstr "Sellel saidil pole ajakirju, millesse saaksite registreeruda."
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+"<strong>Hoiatus:</strong> Kui installimine nurjus andmebaasi installimise "
+"ajal, võib olla vaja kustutada OJS-i andmebaas või andmebaasi tabelid enne "
+"andmebaasi taasinstallimise üritamist."
+
+msgid "user.register.readerDescription"
+msgstr "Saate e-kirja teel teate, kui ajakirja uus number ilmub."
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>OJS-i paigaldamine on edukalt lõpetatud.</p>\n"
+"<p>Süsteemi kasutama hakkamiseks <a href=\"{$loginUrl}\">logige sisse</a> "
+"kasutajanimega ja parooliga, mille eelmisel lehel sisestasite.</p>\n"
+"<p>Külastage meie <a href=\"https://forum.pkp.sfu.ca\" target=\"_new\""
+">kogukonna foorumit</a> või registreeruge meie <a href=\"https://pkp.sfu.ca/"
+"developer-newsletter\" target=\"_new\">arendajate uudiskirja</a> saajaks, et "
+"saada turvateateid, uudiseid eelseisvatest väljalasetest, uutest pluginatest "
+"ja planeeritud funktsioonidest.</p>"
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr ""
+"Saate e-kirja teel teate, kui ajakirja number muutub vabalt kättesaadavaks."
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>OJS-i uuendamine versioonile {$version} on edukalt lõpetatud.</p>\n"
+"<p>Ärge unustage seada \"installed\" seade oma config.inc.php "
+"konfiguratsioonifailis tagasi <em>On</em> peale.</p>\n"
+"<p>Külastage meie <a href=\"https://forum.pkp.sfu.ca\" target=\"_new\""
+">kogukonna foorumit</a> või registreeruge meie <a href=\"https://pkp.sfu.ca/"
+"developer-newsletter\" target=\"_new\">arendajate uudiskirja</a> saajaks, et "
+"saada turvateateid, uudiseid eelseisvatest väljalasetest, uutest pluginatest "
+"ja planeeritud funktsioonidest.</p>"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"Jah, soovin saada teateid uute väljaannete ja teadaannete kohta kõigist "
+"ajakirjadest, kuhu olen registreerunud."
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"Allpool on kuvatud aktiivsed ja aegunud tellimused koos nende lõppemise "
+"kuupäevaga. Lisaks võib iga tellimuse juures olla järgmine staatuseteave."
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Osta uus tellimus"
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"Kaastöö ringi {$round} retsensioon {$submissionId} {$reviewerName} poolt on "
+"määratud {$dueDate}."
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Eemalda selle lõppfaili heakskiit.</p>"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Kui IP-vahemikud on siia sisestatud, on domeen valikuline.<br />Kehtivad "
+"väärtused sisaldavad IP-aadressi (nt 142.58.103.1), IP-vahemikku (nt "
+"142.58.103.1 - 142.58.103.4), IP-vahemikku metamärgiga '*' (nt 142.58.*.*) "
+"ja IP-vahemikku CIDR-iga (nt 142.58.100.0/24)."
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+"{$reviewerName} on keeldunud kaastöö ringi {$round} "
+"retsensioonist{$submissionId}."
+
+msgid "editor.issues.backIssues"
+msgstr "Varasemad väljaanded"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Lisa"
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName} on aktsepteerinud kaastöö ringi {$round} "
+"retsensiooni{$submissionId} {$reviewerName} nimel."
+
+msgid "search.browseAuthorIndex"
+msgstr "Sirvi autorite indeksit"
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"Soovitus kaastöö ringi {$round} retsensiooniks{$submissionId} on toimetaja "
+"{$editorName} poolt määratud retsensendi {$reviewerName} nimel."
+
+msgid "search.allJournals"
+msgstr "Kõik ajakirjad"
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "{$editorName} on määratud kaastöö{$submissionId} küljendajaks."
+
+msgid "search.authorIndex"
+msgstr "Sirvi autorite indeksit"
+
+msgid "search.authorDetails"
+msgstr "Autori üksikasjad"
+
+msgid "notification.type.editorDecisionComment"
+msgstr "Artiklile \"{$title}\" on jäetud kommentaar toimetaja otsuse kohta"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Otsinguvihjed: <ul>\n"
+"<li>Otsingusõnad ei ole tõstutundlikud</li>\n"
+"<li>Korduvaid sõnu ignoreeritakse</li>\n"
+"<li>Vaikimisi näidatakse ainult artiklid, mis sisaldavad <em>kõiki</em> "
+"otsingutingimusi (st <em>JA</em> on varjatud)</li>\n"
+"<li>Kombineerige mitu sõna <em>VÕI</em>-ga, et leida artikleid, mis "
+"sisaldavad ükskõik kumba terminit; nt <em>haridus VÕI teadus</em></li>\n"
+"<li>Kasutage sulgusid keerulisemate päringute loomiseks; nt <em>arhiiv (("
+"ajakiri VÕI konverents) MITTE väitekirjad)</em></li>\n"
+"<li>Otsige täpset fraasi, pannes selle jutumärkidesse; nt <em>\\\"avatud "
+"juurdepääsuga avaldamine\\\"</em></li>\n"
+"<li>Välistage sõna, lisades sellele eesliite <strong>-</strong> või "
+"<em>MITTE</em>; nt <em>veebis -poliitika</em> või <em>veebis MITTE "
+"poliitika</em></li>\n"
+"<li>Kasutage terminis <strong>*</strong> metamärgina, et sobitada mistahes "
+"märgijada; nt <em>sotsio* moraal</em> vastaks dokumentidele, mis sisaldavad "
+"sõnu \"sotsioloogiline\" või \"sotsiaalne\"</li>\n"
+"</ul>"
+
+msgid "notification.type.issuePublished"
+msgstr "Väljaanne on avaldatud."
+
+msgid "archive.issueUnavailable"
+msgstr "Number pole saadaval"
+
+msgid "notification.type.openAccess"
+msgstr "Väljaanne on tehtud avatud juurdepääsuga."
+
+msgid "about.editorialPolicies"
+msgstr "Toimetuspoliitika"
+
+msgid "notification.type.userComment"
+msgstr "Lugeja on jätnud kommentaari artikli \"{$title}\" kohta"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "Kaastöö esitamiseks on vajalik {$login} või {$register}."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Uus artikkel, millele tuleb määrata toimetaja, on esitatud."
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Sisesta uus kaastöö rubriiki <a href=\"{$url}\">{$name}</a>."
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+"Määra kasutaja lõppfaili loomiseks, kasutades osalejate nimekirjas olevat "
+"määramise linki."
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Kaastöö esitamise kontrollnimekiri"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "Kehtetu toimetaja kaastöö või toimetaja kaastööd pole taotletud!"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"Kaastöö esitamise protsessi osana peavad autorid kinnitama, et nende kaastöö "
+"vastab kõigile järgnevatele nõuetele, ning tekstid, mis neid juhiseid ei "
+"järgi, võidakse autoritele tagastada."
+
+msgid "article.view.interstitial"
+msgstr "Palun vali allalaadimiseks artikli fail."
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "Rohkem teavet avaldamissüsteemi, platvormi ja OJS/PKP töövoo kohta."
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"See ajakiri kasutab Open Journal Systems {$ojsVersion}, mis on avatud "
+"lähtekoodiga ajakirjade haldamise ja avaldamise tarkvara, mida arendab, "
+"toetab ja vabalt levitab Public Knowledge Project GNU üldise avaliku "
+"litsentsi alusel. Külastage PKP veebilehte, et <a href=\"https://pkp.sfu.ca/"
+"\">rohkem tarkvara kohta teada saada</a>. <a href=\"{$contactUrl}\">Võtke "
+"otse ühendust ajakirjaga</a> ajakirja ja kaastöid puudutavate küsimuste "
+"korral."
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"See sait kasutab Open Journal Systems {$ojsVersion}, mis on avatud "
+"lähtekoodiga ajakirjade haldamise ja avaldamise tarkvara, mida arendab, "
+"toetab ja vabalt levitab Public Knowledge Project GNU üldise avaliku "
+"litsentsi alusel. Külastage PKP veebilehte, et <a href=\"https://pkp.sfu.ca/"
+"\">rohkem tarkvara kohta teada saada</a>. Võtke otse ühendust ajakirjaga "
+"ajakirja ja kaastöid puudutavate küsimuste korral."
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"Üksusele juurdepääsuks on vajalik tellimus või artikli ostmine. Tellimuse "
+"kontrollimiseks, varasema ostu juurde pääsemiseks või artikli ostmiseks "
+"logige ajakirja sisse."
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"Märkige kastis linnuke, kui olete ajakirjale juba makse saatnud, et kaastöö "
+"esitamise protsess lõpetada. Kaastööd ei vaadata üle enne, kui makse on "
+"saabunud. Klõpsake üleval MAKSA KOHE, et näha maksejuhiseid."
+
+msgid "payment.type.subscription"
+msgstr "Tellimustasu"
+
+msgid "payment.notFound"
+msgstr ""
+"Makse on algatatud, kuid taotlus on aegunud. Üksikasjade saamiseks võtke "
+"ühendust ajakirja toimetajaga."
+
+msgid "payment.membership.renewMembership"
+msgstr "Pikenda individuaalset liikmelisust"
+
+msgid "payment.subscription.purchase"
+msgstr "Osta tellimus"
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"Kui uuendate olemasolevat OJS installatsiooni,<a href=\"{$upgradeUrl}\""
+">klõpsake siia</a>, et jätkata."
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS versioon{$version}</h4>\n"
+"\n"
+"<p>Täname, et laadisite alla Public Knowledge Project'i <strong>Open Journal "
+"Systems</strong>. Enne jätkamist lugege palun <a href=\"{$baseUrl}/README."
+"md\">README</a> faili, mis on selle tarkvaraga kaasas. Rohkem teavet Public "
+"Knowledge Project'i ja selle tarkvaraprojektide kohta leiate <a href=\"https"
+"://pkp.sfu.ca/\" target=\"_blank\">PKP veebilehelt</a>. Kui teil on Open "
+"Journal Systems'i kohta veaettekandeid või tehnilise toe päringuid, vaadake "
+"<a href=\"https://forum.pkp.sfu.ca\" target=\"_blank\">support forum</a> või "
+"külastage PKP veebipõhist <a href=\"https://github.com/pkp/pkp-lib#issues\" "
+"target=\"_blank\">veateate süsteemi</a>. Kuigi tugifoorum on eelistatud "
+"kontaktimeetod, võite meeskonnale ka e-posti saata aadressil <a href=\"mailto"
+":pkp.contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"\n"
+"<h4>Soovitatavad süsteeminõuded</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"https://www.php.net/\" target=\"_blank\">PHP</a> >= "
+"{$phpRequiredVersion}; praegu kasutate PHP {$phpVersion}{$wrongPhpText}</li>"
+"\n"
+"\t<li><a href=\"https://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 "
+"or <a href=\"https://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> "
+">= 9.1.5</li>\n"
+"\t<li><a href=\"https://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
+"1.3.2x or >= 2.0.4x or Microsoft IIS 6</li>\n"
+"\t<li>Operatsioonisüsteem: Mis tahes OS, mis toetab ülaltoodud tarkvara, "
+"sealhulgas <a href=\"https://www.linux.org/\" target=\"_blank\">Linux</a>, "
+"<a href=\"https://www.bsd.org\" target=\"_blank\">BSD</a>, <a href=\"https"
+"://www.oracle.com/solaris/\" target=\"_blank\">Solaris</a>, <a href=\"https"
+"://www.apple.com/\" target=\"_blank\">Mac OS X</a>, <a href=\"https://www."
+"microsoft.com/\">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>Kuna PKP-l ei ole ressursse testida iga võimalikku tarkvaraversioonide ja "
+"platvormide kombinatsiooni, siis korrektset toimimist või tuge ei "
+"garanteerita.</p>\n"
+"\n"
+"<p>Muudatusi nendesse seadetesse saab teha pärast installimist, muutes faili "
+"<tt>config.inc.php</tt> OJS-i baaskataloogis või kasutades saidi "
+"administreerimise veebiliidest.</p>\n"
+"\n"
+"<h4>Toetatud andmebaasisüsteemid</h4>\n"
+"\n"
+"<p>OJS-i on praegu testitud ainult MySQL-i ja PostgreSQL-iga, kuigi teised "
+"<a href=\"https://adodb.org\" target=\"_blank\">ADOdb</a> toetatud "
+"andmebaasisüsteemid võivad töötada (täielikult või osaliselt). Ühilduvuse "
+"raporteid ja/või koodipaiku alternatiivsetele DBMS-idele saab saata OJS "
+"meeskonnale.</p>\n"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>Paigalduseelsed sammud</h4>\n"
+"\n"
+"\n"
+"<p>1. Järgmised failid ja kataloogid (ja nende sisu) peavad olema "
+"kirjutatavad:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> on kirjutatav (valikuline): "
+"{$writable_config}</li>\n"
+"\t<li><tt>public/</tt> on kirjutatav: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> on kirjutatav: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> on kirjutatav: {$writable_templates_cache}</li>"
+"\n"
+"\t<li><tt>cache/t_compile/</tt> on kirjutatav: "
+"{$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> on kirjutatav: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. Üleslaaditud failide jaoks tuleb luua kataloog ja teha see "
+"kirjutatavaks (vt \"Failiseaded\" allpool).</p>"

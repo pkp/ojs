@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/doaj/classes/form/DOAJSettingsForm.php
  *
- * Copyright (c) 2014-2022 Simon Fraser University
- * Copyright (c) 2003-2022 John Willinsky
+ * Copyright (c) 2014-2025 Simon Fraser University
+ * Copyright (c) 2003-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DOAJSettingsForm
@@ -120,7 +120,6 @@ class DOAJSettingsForm extends Form
         return [
             'apiKey' => 'string',
             'automaticRegistration' => 'bool',
-            'testMode' => 'bool'
         ];
     }
 
@@ -133,6 +132,6 @@ class DOAJSettingsForm extends Form
      */
     public function isOptional($settingName)
     {
-        return in_array($settingName, ['apiKey', 'automaticRegistration', 'testMode']);
+        return in_array($settingName, ['apiKey', 'automaticRegistration']);
     }
 }

@@ -1,0 +1,422 @@
+# Emma U <emmaupkp@gmail.com>, 2025.
+# Juan Pablo Martínez <juanpabl@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-05-29 22:50+0000\n"
+"Last-Translator: Juan Pablo Martínez <juanpabl@gmail.com>\n"
+"Language-Team: Aragonese <http://translate.pkp.sfu.ca/projects/ojs/"
+"submission/an/>\n"
+"Language: an\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "submission.submit.userGroup"
+msgstr "Ninviar en o mío rol como..."
+
+msgid "submission.upload.selectComponent"
+msgstr "Triar lo component de l'articlo"
+
+msgid "submission.title"
+msgstr "Títol de l'articlo"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Lo resumen ha de tener {$wordCount} parolas u menos."
+
+msgid "grid.action.issueEntry"
+msgstr "Veyer los metadatos d'este ninvio"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Fer disponible esta galerada"
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (Inactivo)"
+
+msgid "publication.version.details"
+msgstr "Detalles de publicación d'a versión {$version}"
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Empecipiar un nuevo ninvio en"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Nuevo ninvio"
+
+msgid "grid.action.workflow"
+msgstr "Fluxo de treballo d'o ninvio"
+
+msgid "submission.issueEntry"
+msgstr "Metadatos"
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "La galerada amaneixe en a dentrada d'o numero"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "La galerada de l'articlo \"{$galleyFormatName}\" ya ye disponible."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "La galerada de l'articlo \"{$galleyFormatName}\" ya no ye disponible."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Identificadors publicos d'o ninvio actualizaus."
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Esta galerada <em>ya no será disponible</em> pa los lectors.</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Esta galerada <em>será disponible</em> pa los lectors.</p>"
+
+msgid "submission.galleyFiles"
+msgstr "Fichers de galerada"
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Aceptación de formato"
+
+msgid "grid.action.pageProofApproved"
+msgstr "Esta preba ha estau acceptada pa la suya inclusión en a galerada."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Títol y resumen"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Cargue los fichers asociaus con este ninvio, incluyindo articlo, multimedia, "
+"conchuntos de datos, material grafico, etc."
+
+msgid "grid.action.approveProof"
+msgstr "Aceptar esta preba pa incluyir-la en a galerada."
+
+msgid "submission.pageProofs"
+msgstr "Corrección de prebas"
+
+msgid "workflow.review.externalReview"
+msgstr "Revisión"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Los metadatos d'o ninvio han estau actualizaus."
+
+msgid "submission.upload.fileContents"
+msgstr "Component de l'articlo"
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Lista de verificación d'o ninvio"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Declaración de privacidat"
+
+msgid "submission.submit.contributorRole"
+msgstr "Rol d'o colaborador"
+
+msgid "submission.citationFormat.notFound"
+msgstr "Lo formato de cita solicitau no puede recuperar-se."
+
+msgid "submission.complete"
+msgstr "Aceptau"
+
+msgid "submission.incomplete"
+msgstr "Asperando aceptación"
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Estas especificacions se basan en o conchunto de metadatos Dublin Core, un "
+"estándard internacional utilizau pa describir lo conteniu d'una revista."
+
+msgid "section.any"
+msgstr "Cualsequier sección"
+
+msgid "submission.sectionOptions"
+msgstr "Opcions de sección"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} elementos"
+
+msgid "catalog.category.heading"
+msgstr "Toz los ítems"
+
+msgid "galley.editPublishedDisabled"
+msgstr ""
+"Las galeradas d'esta publicación no se pueden editar perque ya ha estau "
+"publicada."
+
+msgid "galley.publicationNotFound"
+msgstr "No s'ha puesto trobar la publicación d'esta galerada."
+
+msgid "publication.assignToissue"
+msgstr "Asignar a numero"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"S'ha asignau a <a href=\"{$issueUrl}\">{$issueName}</a> pero encara no s'ha "
+"programado pa publicar-se."
+
+msgid "publication.changeIssue"
+msgstr "Cambiar numero"
+
+msgid "publication.datePublished.description"
+msgstr ""
+"La data de publicación s'establirá automaticament cuan se publique lo "
+"numero. No introduzca una data de publicación de no estar que l'articlo "
+"haiga estau publicau anteriorment en unatro puesto y le calga cambiar-la."
+
+msgid "publication.invalidSection"
+msgstr "No s'ha puesto trobar la sección d'esta publicación."
+
+msgid "publication.invalidIssue"
+msgstr "No s'ha puesto trobar lo numero d'esta publicación."
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Toz los requisitos de publicación se cumplen. Este articlo se publicará cuan "
+"se publique {$issue}. Ye seguro que quiere programarlo pa publicación?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Toz los requisitos de publicación se cumplen. Este articlo se publicará "
+"immediatament en {$issue}. Ye seguro que quiere publicar-lo?"
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Toz los requisitos de publicación se cumplen. Ye seguro de que quiere "
+"publicar?"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Toz los requisitos de publicación se cumplen. Esto se publicará "
+"immediatament perque la data de publicación s'establió pa lo {$datePublished}"
+". Seguro que quiere publicar-lo?"
+
+msgid "publication.required.issue"
+msgstr ""
+"La publicación ha d'asignar-se a un numero antes de poder estar publicada."
+
+msgid "publication.publishedIn"
+msgstr "Publicau en <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.scheduledIn"
+msgstr "Programau pa publicar-se en <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "publication.unscheduledIn"
+msgstr "Esto no s'ha programau pa publicar-se en garra numero."
+
+msgid "publication.selectIssue"
+msgstr "Triar un numero pa programar-lo pa publicación"
+
+msgid "submission.publication"
+msgstr "Publicación"
+
+msgid "publication.status.published"
+msgstr "Publicau"
+
+msgid "publication.status.unscheduled"
+msgstr "No programau"
+
+msgid "submission.publications"
+msgstr "Publicacions"
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"L'anyo d'os dreitos d'autor s'achustará automaticament cuan se publique en "
+"un numero."
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"L'anyo d'os dreitos d'autor s'achustará automaticament en función d'a data "
+"de publicación."
+
+msgid "publication.datePublished"
+msgstr "Data de publicación"
+
+msgid "publication.editDisabled"
+msgstr "Esta versión ya ha estau publicada y no puede editar-se."
+
+msgid "publication.event.scheduled"
+msgstr "Lo ninvio s'ha programau pa la suya publicación."
+
+msgid "publication.event.unpublished"
+msgstr "Lo ninvio s'ha retirau de publicación."
+
+msgid "publication.event.versionPublished"
+msgstr "S'ha publicau una versión nueva."
+
+msgid "publication.event.versionScheduled"
+msgstr "S'ha programau una versión nueva pa la suya publicación."
+
+msgid "publication.event.versionUnpublished"
+msgstr "S'ha eliminau una versión de publicación."
+
+msgid "publication.publish"
+msgstr "Publicar"
+
+msgid "publication.required.declined"
+msgstr "Un ninvio refusau no puede estar publicau."
+
+msgid "submission.license.description"
+msgstr ""
+"La licencia s'achustará automaticament a <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> cuan se publique."
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Los dreitos d'autor s'asignarán automaticament a {$copyright} cuan se "
+"publique."
+
+msgid "publication.unpublish"
+msgstr "Retirar de publicación"
+
+msgid "publication.unpublish.confirm"
+msgstr "Seguro que no quiere que esto sía publicau?"
+
+msgid "submission.queries.production"
+msgstr "Discusions de producción"
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Lo ninvio ha d'estar en as fases de \"corrección\" u de \"producción\" antes "
+"de poder publicar-lo."
+
+msgid "submission.copyrightOther.description"
+msgstr "Asignar dreitos d'autor pa los ninvios publicaus en a parte siguient."
+
+msgid "publication.unschedule.confirm"
+msgstr "Seguro que no quiere que esto se programe pa la suya publicación?"
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Tornar ta la revisión"
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} ha revertiu la decisión d'aceptar este ninvio y tornar-lo ta "
+"la etapa de revisión."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Ninviau de tornada ta revisión"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "Lo ninvio, {$title}, s'a retornau ta la fase de revisión."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Ninvie un correu electronico a los autors pa informar-les que lo suyo ninvio "
+"será tornada a la fase de revisión. Explique lo motivo d'esta decisión y "
+"informe a l'autor d'a revisión adicional que se fará."
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+"No s'ha puesto crear un DOI pa lo siguient ninvio: {$pubObjectTitle}. Este "
+"no existe en o contexto actual d'a revista."
+
+msgid "submission.layout.viewGalley"
+msgstr "Veyer galerada"
+
+msgid "galley.cantEditPublished"
+msgstr "Esta galerada no se puede editar perque ya s'ha publicau."
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+"No s'ha puesto crear un DOI d'a galerada {$pubObjectTitle} pa lo siguient "
+"ninvio: {$itemTitle}. Lo ninvio ha d'estar asignau a una numero (fascículo) "
+"antes que no se pueda chenerar un DOI."
+
+msgid "submission.copyright.description"
+msgstr ""
+"Per favor, leiga y comprenda los termins de dreitos d'autor pa los ninvios a "
+"esta revista."
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+"No se le permite ninviar a esta revista perque los autors/as han d'estar "
+"rechistraus/as per lo personal editorial. Si creye que se trata d'una error, "
+"se comunique con <a href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr "Nomás lo personal editorial puede ninviar a esta sección."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Se requiere a lo menos un autor."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Lo resumen ye masiau largo, ha d'achustar-lo a lo limite de parolas d'a "
+"sección."
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+"No puede realizar ninvios a esta revista perque los ninvios a totas las "
+"seccions d'esta revista han estau desactivaus u restrinchius. Si creye que "
+"se trata d'una error, se comunique con <a href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+"{$contextName} no acepta ninvios a la sección {$section}. Si le fa falta "
+"aduya pa recuperar lo suyo ninvio, se comunique con <a "
+"href='mailto:{$email}'>{$name}</a>."
+
+msgid "submission.sectionNotFound"
+msgstr "No s'ha puesto trobar la sección pa este ninvio."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Per favor, escriba lo títol d'o suyo articlo."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Per favor, escriba lo resumen d'o suyo articlo."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Tríe lo rol de colaborador/a."
+
+msgid "submission.status.scheduled"
+msgstr "Programau"
+
+msgid "publication.event.published"
+msgstr "Lo ninvio ha estau publicau."
+
+msgid "publication.invalidSubmission"
+msgstr "No s'ha puesto trobar lo ninvio pa esta publicación."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Tríe los fichers que han de ninviar-se a la fase de revisión."
+
+msgid "publication.publish.requirements"
+msgstr "S'han de complir los siguients requisitos antes de poder publicar esto."
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"Ninvie un correu electronico a los autors pa informar-les que este ninvio se "
+"ninviará a revisión per pars. Si ye posible, ofreixca a los autors bella "
+"indicación de cuánto tiempo podría prener lo proceso de revisión per pars y "
+"cuánto han d'asperar tener noticias d'os editores nuevament. Este correu "
+"electronico no se ninviará dica que se rechistre la decisión."
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"Revierta la decisión d'aceptar este ninvió y lo torne a la fase de revisión."
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+"No s'ha puesto crear un DOI pa lo siguient ninvio: {$pubObjectTitle}. Lo "
+"ninvio ha d'estar asignau a un numero antes que no se pueda chenerar un DOI."
+
+msgid "submission.submit.noContext"
+msgstr "No s'ha puesto trobar este ninvio."
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"La revista ha estau notificada sobre lo suyo ninvio y se le ninviará un "
+"correu electronico de confirmación pa los suyos rechistros. Cuan l'editor "
+"haiga revisau lo ninvio, contactará con vusté."
+
+msgid "submission.title.tip"
+msgstr ""
+"Lo tipo de ninvios normalment consiste en una imachen, texto u atros "
+"contenius multimedia, como software u elementos interactivos. Per favor, "
+"tríe lo que sía mas representativo pa lo suyo ninvio. Puede trobar eixemplos "
+"en <a target=\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/"
+"usageguide/generic.shtml#type\">http://dublincore.org/documents/2001/04/12/"
+"usageguide/generic.shtml#type</a>"
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Lo maquetador/a carga aquí los fichers de producción listos que ha preparau "
+"pa la publicación. Emplegue<em>Asignar auditor</em> pa designar autors/as u "
+"atros pa correchir las galeradas con os fichers correchius cargaus pa "
+"l'aceptación previa a la publicación."

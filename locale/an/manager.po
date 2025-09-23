@@ -1,0 +1,2645 @@
+# Emma U <emmaupkp@gmail.com>, 2025.
+# Juan Pablo Martínez <juanpabl@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-06-08 18:51+0000\n"
+"Last-Translator: Juan Pablo Martínez <juanpabl@gmail.com>\n"
+"Language-Team: Aragonese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
+"an/>\n"
+"Language: an\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "manager.distribution.access"
+msgstr "Acceso"
+
+msgid "manager.distribution.publishingMode.none"
+msgstr "No ha d'utilizar OJS pa publicar en linia los contenius d'a revista."
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr "La revista proporcionará acceso ubierto a los suyos contenius."
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr "En plegar a la fase d'edición"
+
+msgid "manager.language.forms"
+msgstr "Formularios"
+
+msgid "manager.payment.enable"
+msgstr "Habilitar"
+
+msgid "manager.payment.noPayments"
+msgstr "Sin pagos"
+
+msgid "manager.people.enrollExistingUser"
+msgstr "Asignar un rol a un usuario/a existent"
+
+msgid "manager.setup.announcements"
+msgstr "Avisos"
+
+msgid "manager.setup.currentIssue"
+msgstr "Numero actual"
+
+msgid "manager.setup.emailSignature"
+msgstr "Sinyatura"
+
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+"Los correus electronicos ninviaus automaticament en nombre d'a revista "
+"tendrán la siguient sinyatura."
+
+msgid "manager.setup.journalThumbnail"
+msgstr "Miniatura d'a revista"
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP Preservation Network (PN)"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "Descripción d'a licencia LOCKSS"
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "No se cargó garra fichero d'imachen."
+
+msgid "manager.setup.policies.description"
+msgstr ""
+"Obchecto d'a revista, proceso d'avaluación per pars, seccions, privacidat, "
+"seguranza y atros."
+
+msgid "manager.setup.printIssn"
+msgstr "Imprentar ISSN"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Identificación d'o conteniu d'a revista"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Opcions de revisión"
+
+msgid "manager.setup.enableOai"
+msgstr "Habilitar OAI"
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Elementos publicaus"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr ""
+"Comprebar elementos que serán disponibles en a sección Sobre la revista."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Opcions d'acceso ubierto pa las revistas de subscripción"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Información sobre subscripcions"
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Afiliación"
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Adreza postal"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Tríe un usuario/a"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Editar"
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Subscripcions"
+
+msgid "manager.setup.section.description"
+msgstr ""
+"Los articlos incluyius en numeros ya publicaus d'una revista s'organizan en "
+"seccions, normalment per tema u tipo de conteniu (p. eix.: articlos de "
+"revisión, investigación, etc.)."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Reinicia permisos d'articlo"
+
+msgid "stats.publications.abstracts"
+msgstr "Resúmenes"
+
+msgid "doi.editor.preview.galleys"
+msgstr "Galerada: {$galleyLabel}"
+
+msgid "doi.editor.preview.objects"
+msgstr "Elemento"
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Zaguera subscripción caducada"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Adquirir subscripción individual"
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr ""
+"Este correu electronico notifica a l'administrador/a de subscripcions que "
+"una subscripción individual ha estau adquirida en linia. Proporciona un "
+"resumen de la información sobre la subscripción y un vinclo d'acceso rapido "
+"a la subscripción adquirida."
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Subscripción caducada"
+
+msgid "manager.distribution.publication"
+msgstr "Publicación"
+
+msgid "manager.distribution.publishingMode"
+msgstr "Modo de publicación"
+
+msgid "manager.setup.enableDois.description"
+msgstr "Permitir que s'asignen DOI a las obras publicadas en esta revista."
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr "Utilizar la data de publicación d'o numero"
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr ""
+"Tríe qué elementos tendrán DOI. La mayoría d'as revistas asignan DOI a los "
+"articlos, pero talment deseye asignar DOI a toz los elementos publicaus."
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+"Utilizar patrones predeterminaus.<br />%j.v%veyié%i pa numeros<br /"
+">%j.v%veyié%i.%a pa articlos<br />%j.v%veyié%i.%a.g%g pa galeradas."
+
+msgid "manager.website.archiving"
+msgstr "Almagacenamiento"
+
+msgid "manager.files.note"
+msgstr ""
+"Nota: Lo explorador de fichers ye una función abanzada que permite "
+"visualizar y manipular de traza directa fichers y directorios asociaus con "
+"una revista."
+
+msgid "manager.journalManagement"
+msgstr "Chestión d'a revista"
+
+msgid "manager.language.ui"
+msgstr "IU"
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr ""
+"Se reemplazará cualsequier configuración especifica d'a revista que s'haiga "
+"establiu anteriorment pa esta configuración rechional"
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+"Se puede configurar OJS pa que los usuarios/as puedan veyer-lo en "
+"cualsequiera d'os idiomas compatibles. Asinasmesmo, OJS puede funcionar como "
+"un sistema multilingüe que proporciona a los usuarios/as la capacidat de "
+"cambiar entre idiomas en cada pachina y permite introducir bels datos en "
+"cuantos idiomas adicionals.<br /><br />Si un idioma compatible con OJS no "
+"amaneixe a continación, solicite a l'administrador/a que instale dito idioma "
+"dende la interficie d'administración d'o puesto. Pa mas información sobre "
+"cómo fer que nuevos idiomas sían compatibles, consulte la documentación de "
+"OJS."
+
+msgid "manager.languages.noneAvailable"
+msgstr ""
+"Lo sentimos, no i hai mas idiomas disponibles. Si deseya utilizar mas "
+"idiomas en esta revista, se meta en contacto con l'administrador/a."
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr "Este será l'idioma predeterminau pa lo puesto web d'a revista."
+
+msgid "manager.managementPages"
+msgstr "Pachinas de chestión"
+
+msgid "manager.payment.action"
+msgstr "Acción"
+
+msgid "manager.payment.addPayment"
+msgstr "Anyadir pago"
+
+msgid "manager.payment.amount"
+msgstr "Importe"
+
+msgid "manager.payment.authorFees"
+msgstr "Cuotas d'os autors/as"
+
+msgid "manager.payment.description"
+msgstr "Descripción"
+
+msgid "manager.payment.details"
+msgstr "Detalles"
+
+msgid "manager.payment.authorFeesDescription"
+msgstr ""
+"Las opcions triadas, la suya descripción y las cuotas (tot ixo se puede "
+"editar mas abaixo) s'amostrarán en o paso n.º 1 d'o proceso de ninvio y en "
+"Ninvios, dentro d'a sección Sobre la revista, asinas como en aquels puntos "
+"en os cuals se requiera cualsequier pago."
+
+msgid "manager.payment.feePaymentOptions"
+msgstr "Opcions de pago d'a cuota"
+
+msgid "manager.payment.form.numeric"
+msgstr ""
+"Toz los costes han de tener una valor numerica positiva (se permite l'uso de "
+"decimals)"
+
+msgid "manager.payment.generalFees"
+msgstr "Cuotas chenerals"
+
+msgid "manager.payment.generalFeesDescription"
+msgstr ""
+"Los miembros de l'asociación s'amostrarán en a sección \"Sobre la revista\", "
+"baixo l'apartau de \"Politicas\"."
+
+msgid "manager.payment.generalOptions"
+msgstr "Opcions chenerals"
+
+msgid "manager.payment.notFound"
+msgstr "No s'ha puesto trobar"
+
+msgid "manager.payment.options"
+msgstr "Opcions"
+
+msgid "manager.payment.options.enablePayments"
+msgstr ""
+"Faiga clic aquí pa habilitar lo modulo de pagos. Ha de configurar las "
+"opcions de pago. Pa ixo, replene lo siguient formulario. Tienga en cuenta "
+"que ha d'iniciar sesión pa realizar cualsequier pago."
+
+msgid "manager.payment.options.fee"
+msgstr "Cuota"
+
+msgid "manager.payment.options.feeDescription"
+msgstr "Descripción d'a cuota"
+
+msgid "manager.payment.options.feeName"
+msgstr "Nombre d'a cuota"
+
+msgid "manager.payment.options.membershipFee"
+msgstr "Afiliación a una asociación"
+
+msgid "manager.payment.options.onlypdf"
+msgstr ""
+"Restrinchir l'acceso solament a la versión en PDF d'os numeros y articlos"
+
+msgid "manager.payment.options.publicationFee"
+msgstr "Publicar un articlo"
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr "Mercar un articlo"
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr "Mercar un numero"
+
+msgid "manager.payment.options.text"
+msgstr "Descripción d'a forma de pago"
+
+msgid "manager.payment.paymentId"
+msgstr "Iz. d'o pago"
+
+msgid "manager.payment.paymentMethod"
+msgstr "Forma de pago"
+
+msgid "manager.payment.paymentMethod.description"
+msgstr ""
+"Puede configurar cualsequiera d'os siguients modulos de formas de pago en "
+"esta pantalla."
+
+msgid "manager.payment.paymentMethods"
+msgstr "Formas de pago d'as cuotas"
+
+msgid "manager.payment.paymentType"
+msgstr "Tipo de pago"
+
+msgid "manager.payment.readerFees"
+msgstr "Cuota pa lectors/as"
+
+msgid "manager.payment.editSubscription"
+msgstr "Editar subscripción"
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr "Seguro que quiere eliminar esta subscripción?"
+
+msgid "manager.payment.readerFeesDescription"
+msgstr ""
+"Las opcions triadas, la suya descripción y las cuotas (tot ixo se puede "
+"editar mas abaixo) s'amostrarán dentro d'a pachina Sobre la revista, debaixo "
+"d'a sección Politicas, asinas como en aquels puntos en os cuals se requiera "
+"cualsequier pago."
+
+msgid "manager.payment.records"
+msgstr "Rechistro"
+
+msgid "manager.paymentTypes"
+msgstr "Tipos de pago"
+
+msgid "manager.payment.userName"
+msgstr "Iz. d'o pago"
+
+msgid "manager.people.allEnrolledUsers"
+msgstr "Usuarios/as inscritos a la revista"
+
+msgid "manager.people.allJournals"
+msgstr "Totas las revistas"
+
+msgid "manager.people.allSiteUsers"
+msgstr "Asignar un rol en esta revista a un usuario/a d'este puesto"
+
+msgid "manager.people.showNoRole"
+msgstr "Amostrar los usuarios/as sin rol asignau"
+
+msgid "manager.people.allUsers"
+msgstr "Toz los usuarios/as rechistraus"
+
+msgid "manager.people.confirmRemove"
+msgstr ""
+"Deseya eliminar a este usuario/a d'a revista? Se desvinculará a l'usuario/a "
+"de toz los rols que tenese asignaus en esta revista."
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr "Tríe una plantilla"
+
+msgid "manager.people.enrollSyncJournal"
+msgstr "Con a revista"
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr ""
+"Tríe l'usuario/a final a lo cual se le atribuyirán las autorías, fayenas "
+"d'edición, etc. d'os usuarios/as anteriors."
+
+msgid "manager.people.roleEnrollment"
+msgstr "Asignar lo rol de {$role}"
+
+msgid "manager.people.syncUserDescription"
+msgstr ""
+"La sincronización de rols permite asignar a los usuarios/as d'esta revista "
+"lo mesmo rol que poseyen en a revista especificada. Esta función permite que "
+"un grupo común d'usuarios/as (p. eix., los revisors/as) sía sincronizau en "
+"mas d'una revista."
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr "No se requiere un resumen"
+
+msgid "manager.sections.confirmDelete"
+msgstr "Ye seguro/a que deseya eliminar esta sección de forma permanent?"
+
+msgid "manager.sections.alertDelete"
+msgstr ""
+"Antes d'eliminar esta sección ha de mover los articlos ninviaus a ella a "
+"atras seccions."
+
+msgid "manager.sections.create"
+msgstr "Crear sección"
+
+msgid "manager.sections.assigned"
+msgstr "Editors/as d'esta sección"
+
+msgid "manager.sections.editorRestriction"
+msgstr ""
+"Nomás los editors/as y los editors/as de sección pueden ninviar elementos."
+
+msgid "manager.sections.editors"
+msgstr "Editors/as de sección"
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr "Especifique un títol abreviau pa la sección"
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr ""
+"s'Asegure que i hai, a lo menos, una caixeta de verificación triada pa cada "
+"fayena d'o editor/a de sección."
+
+msgid "manager.sections.form.reviewFormId"
+msgstr "s'Asegure que ha triau un formulario de revisión valido."
+
+msgid "manager.sections.form.titleRequired"
+msgstr "Especifique un títol pa la sección."
+
+msgid "manager.sections.hideTocAuthor"
+msgstr ""
+"Omitir los nombres d'os autors/as en os elementos de sección d'a tabla de "
+"conteniu d'a publicación."
+
+msgid "manager.sections.hideTocTitle"
+msgstr "Omitir lo títol d'esta sección en a tabla de conteniu d'a publicación."
+
+msgid "manager.sections.identifyType"
+msgstr "Identificar los elementos publicaus en esta sección como"
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr ""
+"(Per eixemplo, \"Articlo avaluau per pars\", \"Resinya de libro no avaluada\""
+", \"Comentario convidau\", etc.)"
+
+msgid "manager.sections.indexed"
+msgstr "Indizado"
+
+msgid "manager.sections.noneCreated"
+msgstr "No se creó garra sección."
+
+msgid "manager.sections.policy"
+msgstr "Politica d'a sección"
+
+msgid "manager.sections.readingTools"
+msgstr "Ferramientas de lectura"
+
+msgid "manager.sections.reviewed"
+msgstr "Avaluau per pars"
+
+msgid "manager.sections.submissionIndexing"
+msgstr "No s'incluyirán en l'índiz d'a revista"
+
+msgid "manager.sections.submissionReview"
+msgstr "No s'avaluarán per pars"
+
+msgid "manager.setup"
+msgstr "Configuración"
+
+msgid "manager.setup.homepageContent"
+msgstr "Conteniu d'a pachina d'inicio d'a revista"
+
+msgid "manager.sections.wordCount"
+msgstr "N.º de parolas"
+
+msgid "manager.sections.wordCountInstructions"
+msgstr ""
+"Limitar lo numero de parolas d'o resumen en esta sección (escriba 0 si no "
+"deseya meter un limite)"
+
+msgid "manager.setup.homepageContentDescription"
+msgstr ""
+"La pachina d'inicio d'a revista consta d'os vinclos per defecto. Se le puede "
+"anyadir conteniu adicional per medio d'una u totas las opcions siguients, "
+"que amaneixerán en l'orden amostrau."
+
+msgid "manager.sections.unassigned"
+msgstr "Editors/as de sección disponibles"
+
+msgid "manager.setup.useStyleSheet"
+msgstr "Plantilla d'a revista"
+
+msgid "manager.setup.contextName"
+msgstr "Nombre d'a revista"
+
+msgid "manager.setup.pageHeader"
+msgstr "Capitero d'a revista"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Conteniu"
+
+msgid "manager.setup.addAboutItem"
+msgstr "Anyadir un elemento \"Sobre\""
+
+msgid "manager.setup.addChecklistItem"
+msgstr "Anyadir un elemento de lista de comprebación"
+
+msgid "manager.setup.addItem"
+msgstr "Anyadir elemento"
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr "Anyadir un elemento pa que s'amuestre en a sección Sobre la revista"
+
+msgid "manager.setup.addNavItem"
+msgstr "Anyadir elemento"
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr "Anyadir un nuevo vinclo enta la base de datos"
+
+msgid "manager.setup.addSponsor"
+msgstr "Anyadir patrocinador"
+
+msgid "manager.setup.alternateHeader"
+msgstr "Capitero alternativo"
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr ""
+"En o siguient cuadro de texto puede ficar una versión HTML d'o capitero, en "
+"cuenta d'o títol y logotipo habituals. Si no deseya introducir-lo, lo deixe "
+"en blanco."
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr "Introducción"
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr ""
+"Introduzca la información adicional que ha d'amostrar-se en a pachina Avisos."
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr "(Amaneixerá en a sección \"Sobre la revista\") "
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr ""
+"Pedir a los revisors/as que adchunten una declaración de conflicto de "
+"intereses a cada avaluación per pars."
+
+msgid "manager.setup.history"
+msgstr "Historial d'a revista"
+
+msgid "manager.setup.historyDescription"
+msgstr ""
+"Lo siguient texto s'amostrará en a sección Sobre la revista y se puede "
+"utilizar pa describir cambios realizaus en os títols, en o Consello "
+"editorial u en atros elementos relevants a la historia d'a revista."
+
+msgid "manager.setup.customizingTheLook"
+msgstr "Paso 5. Apariencia personalizada"
+
+msgid "manager.setup.details"
+msgstr "Detalles"
+
+msgid "manager.setup.details.description"
+msgstr ""
+"Nombre d'a revista, ISSN, contactos, patrocinadores y motors de busqueda."
+
+msgid "manager.setup.disableUserRegistration"
+msgstr ""
+"Nomás lo chestor/a d'a revista puede rechistrar a toz los usuarios; los "
+"editores u editores de sección nomás pueden rechistrar a revisors."
+
+msgid "manager.setup.discipline"
+msgstr "Disciplina academica y subdisciplinas"
+
+msgid "manager.setup.disciplineDescription"
+msgstr ""
+"Esta información resulta útil cuan la revista cruceya las buegas de bella "
+"disciplina u los autors/as entregan treballos multidisciplinarios."
+
+msgid "manager.setup.disciplineExamples"
+msgstr ""
+"(p. eix., historia, educación, sociolochía, psicolochía, estudios culturals, "
+"dreito)"
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr ""
+"Proporcione eixemplos d'as disciplinas academicas mas relevants en esta "
+"revista"
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr "Anyadir la tabla de conteniu d'esta publicación, si ye posible."
+
+msgid "manager.setup.editorDecision"
+msgstr "Decisión d'o editor/a"
+
+msgid "manager.setup.emailBounceAddress"
+msgstr "Adreza pa los mensaches tornaus"
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr ""
+"Si un correu electronico no se puede ninviar, se recibirá un mensache "
+"d'error en esta adreza."
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+"Pa activar esta opción, l'administrador/a d'o puesto ha d'habilitar la "
+"opción <code>allow_envelope_sender</code> en o fichero de configuración de "
+"OJS. Ye posible que se requiera una configuración adicional d'o servidor pa "
+"admitir esta función, tal como s'indica en a documentación d'o OJS."
+
+msgid "manager.setup.emails"
+msgstr "Identificación d'o correu electronico"
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr "Amostrar en a pachina d'inicio"
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr "Habilitar avisos"
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+"Pueden publicar-se avisos pa informar a los lectors/as sobre noticias y "
+"eventos d'a revista. Estes s'amostrarán en a pachina Avisos."
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+"Cantidat d'avisos que amostrar en a pachina d'inicio. lo Deixe vuedo pa no "
+"amostrar garra."
+
+msgid "manager.setup.enableUserRegistration"
+msgstr "Los visitantes pueden rechistrar una cuenta d'usuario/a en a revista."
+
+msgid "manager.setup.focusAndScope"
+msgstr "Obchecto y aconsiga"
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr "Las inicials d'a revista son obligatorias."
+
+msgid "manager.setup.focusAndScope.description"
+msgstr ""
+"Describir a autors/as, lectors/as y bibliotecarios/as lo rango de articlos y "
+"atros elementos que la revista publicará."
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr "Instruccions d'indexación pa los autors/as"
+
+msgid "manager.setup.form.issnInvalid"
+msgstr "Lo ISSN especificau no ye valido."
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr "Especifique lo correu electronico de contacto prencipal."
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr "Especifique lo nombre d'o contacto prencipal."
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr "Especifique lo títol d'a revista."
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr "Especifique lo numero de revisors/as per ninvio."
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr "Especifique lo nombre secundario."
+
+msgid "manager.setup.generalInformation"
+msgstr "Información cheneral"
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr "Especifique lo correu electronico secundario."
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr "Paso 1. Profundizar en os detalles"
+
+msgid "manager.setup.guidelines"
+msgstr "Indicacions"
+
+msgid "manager.setup.journalAbbreviation"
+msgstr "Abreviatura d'a revista"
+
+msgid "manager.setup.identity"
+msgstr "Identidat d'a revista"
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+"Las revistas que ofreixen acceso ubierto immediato u retardado han "
+"d'incluyir una licencia Creative Commons con tot lo treballo publicau en o "
+"momento adecuau."
+
+msgid "manager.setup.information"
+msgstr "Información"
+
+msgid "manager.setup.information.description"
+msgstr ""
+"En a sección Información d'a barra lateral, se facilita una breu descripción "
+"d'a revista pa los bibliotecarios/as, futuros autors/as y lectors/as."
+
+msgid "manager.setup.information.forAuthors"
+msgstr "Pa autors/as"
+
+msgid "manager.setup.information.forLibrarians"
+msgstr "Pa bibliotecarios/as"
+
+msgid "manager.setup.information.forReaders"
+msgstr "Pa lectors/as"
+
+msgid "manager.setup.initialIssue"
+msgstr "Numero inicial"
+
+msgid "manager.setup.initialIssueDescription"
+msgstr ""
+"En función d'o formato triau, identifique lo numero, lo volumen y/u l'anyo "
+"d'o primer numero que se publicará con OJS:"
+
+msgid "manager.setup.institution"
+msgstr "Institución"
+
+msgid "manager.setup.itemsDescription"
+msgstr ""
+"Se pueden anyadir elementos a la barra de navegación actual que s'amuestra "
+"en la parte superior d'a pachina (Inicio, Sobre, Aria personal, etc.)."
+
+msgid "manager.setup.itemsPerPage"
+msgstr "Elementos per pachina"
+
+msgid "manager.setup.journalArchiving"
+msgstr "Fichero d'a revista"
+
+msgid "manager.setup.contextSummary"
+msgstr "Índiz d'a revista"
+
+msgid "manager.setup.contextSummary.description"
+msgstr ""
+"Proporcione una descripción breu d'a suya revista pa dar una ideya d'o suyo "
+"conteniu y finalidat."
+
+msgid "manager.setup.contextAbout"
+msgstr "Sobre la revista"
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+"Incluiga tota la información sobre la suya revista que considere d'interés "
+"pa lectors/as, autors/as u revisors/as, per eixemplo: la politica d'acceso "
+"ubierto, l'enfoque y ambito d'a revista, l'aviso de dreitos d'autor, la "
+"declaración de esponsorización, la historia d'a revista, la declaración de "
+"privacidat u la inclusión en bel sistema de fichero LOCKSS u CLOCKSS."
+
+msgid "manager.setup.journalHomepageContent"
+msgstr "Conteniu d'a pachina inicial d'a revista"
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr ""
+"Per defecto, la pachina inicial se compone d'una serie de vinclos de "
+"navegación. Ye posible anyadir conteniu adicional per medio d'una u cuantas "
+"de las siguients opcions, que s'amostrarán en este orden. Tienga en cuenta "
+"que siempre podrá acceder a lo zaguer numero per medio d'o vinclo Novedaz "
+"d'a barra de navegación."
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr "Encabezau d'a pachina inicial d'a revista"
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr "Encabezau d'a pachina inicial d'a revista"
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr ""
+"Ye posible cargar una versión grafica (.gif, .jpg u .png) d'o títol y d'o "
+"logotipo d'a revista pa que esta reemplace a la versión de texto y se "
+"amuestre como capitero en a pachina inicial."
+
+msgid "manager.setup.contextInitials"
+msgstr "Inicials d'a revista"
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+"Tríe lo país an s'ubica la revista, u lo país de l'adreza postal d'a revista "
+"u d'o editor/a."
+
+msgid "manager.setup.journalLayout"
+msgstr "Estilo d'a revista"
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+"En esta sección puede triar lo tema y lo estilo d'a revista y triar los "
+"suyos components. Si lo prefiere, tamién puede cargar una fuella d'estilo pa "
+"reemplazar los datos d'o estilo y d'o tema incluyius en as fuellas de estilo "
+"d'o sistema, siempre que haiga triau un tema."
+
+msgid "manager.setup.journalLogo"
+msgstr "Logotipo d'a revista"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Logotipo d'a revista"
+
+msgid "manager.setup.journalPageFooter"
+msgstr "Piet de pachina d'a revista"
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr ""
+"Este ye lo piet de pachina d'a suya revista. Pa cambiar-lo u actualizar-lo, "
+"copie lo codigo HTML en o siguient cuadro de texto. Puede incluyir, p. eix., "
+"unatra barra de navegación, un contador, etc. Lo piet de pachina s'amostrará "
+"en totas las pachinas d'a revista."
+
+msgid "manager.setup.journalPolicies"
+msgstr "Paso 2. Politicas d'a revista"
+
+msgid "manager.setup.journalSetup"
+msgstr "Configuración d'a revista"
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr "S'actualizó la configuración d'a revista."
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr ""
+"Lo formato d'a fuella d'estilo no ye valido. Lo formato acceptau ye .css."
+
+msgid "manager.setup.journalTheme"
+msgstr "Tema d'a revista"
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr ""
+"Un chicot logotipo u imachen d'a revista que pueda usar-se en o listau de "
+"revistas."
+
+msgid "manager.setup.contextTitle"
+msgstr "Títol d'a revista"
+
+msgid "manager.setup.labelName"
+msgstr "Nombre d'a etiqueta"
+
+msgid "manager.setup.lists"
+msgstr "Listas"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "Habilitar lo modulo PKP PN"
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+"PKP Preservation Network (PN) proporciona servicios gratuitos de "
+"preservación pa cualsequier revista OJS que cumpla con unas normas basicas."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"Amostrar los <button>achustes de modulo</button> pa acceptar los termins de "
+"uso de PKP PN."
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+"PKP Preservation Network (PN) proporciona servicios gratuitos de "
+"preservación pa cualsequier revista OJS que cumpla con unas normas basicas. "
+"Lo modulo PKP PN pa OJS 3 ye actualment en desembolique y será disponible en "
+"a galería de modulos luego."
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS y CLOCKSS"
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+"Habilite LOCKSS pa almagacenar y distribuyir conteniu d'a revista en "
+"bibliotecas colaboraderas a traviés d'una pachina d'o <a href=\"{$lockssUrl}"
+"\" target=\"_blank\">Manifiesto editorial</a> LOCKSS."
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"Una licencia LOCKSS amaneixerá en \"Sobre la revista\" debaixo de \"Archivado"
+"\": <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" "
+"target=\"_blank\">LOCKSS License</a>"
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"Permitir a CLOCKSS almagacenar y distribuyir conteniu d'a revista a las "
+"bibliotecas participants a traviés d'a pachina CLOCKSS <a href=\""
+"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</a>."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"Una licencia CLOCKSS amaneixerá en \"Sobre la revista\" debaixo de "
+"\"Archivado\": <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS "
+"License</a>"
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "Descripción d'a licencia CLOCKSS"
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"s'Inscriba a lo servicio CLOCKSS visitando la suya pachina web: <a href="
+"\"http://clockss.org/\" target=\"_blank\"></a>."
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.look"
+msgstr "Apariencia"
+
+msgid "manager.setup.navigationBar"
+msgstr "Barra de navegación"
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Anyadir u sacar elementos adicionals d'a barra de navegación."
+
+msgid "manager.setup.look.description"
+msgstr ""
+"Encabezau d'a pachina inicial, conteniu, encabezau d'a revista, piet de "
+"pachina, barra de navegación y fuella d'estilo."
+
+msgid "manager.setup.management"
+msgstr "Chestión"
+
+msgid "manager.setup.management.description"
+msgstr ""
+"Acceso y seguranza, planificación, avisos, corrección d'orichinals, "
+"maquetación y revisión."
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr "Chestión d'os pasos basicos d'a editorial"
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr "Chestión y configuración d'a publicación"
+
+msgid "manager.setup.managingTheJournal"
+msgstr "Paso 4. Chestión d'a revista"
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr ""
+"L'adreza URL ye absoluta (p. eix., \"http://www.ejemplo.com\") en puesto "
+"d'una rota relativa d'o puesto (p. eix., \"/administracion/configuracion\")"
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr ""
+"La valor d'a etiqueta ye una cadena literal (p. eix., \"Configuración d'a "
+"revista\") en cuenta d'un codigo de mensache de localización (p. eix., "
+"\"administracion.configuracion\")"
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "No se cargó garra fuella d'estilo."
+
+msgid "manager.setup.note"
+msgstr "Nota"
+
+msgid "manager.setup.numPageLinks"
+msgstr "Vinclos d'a pachina"
+
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+"Limitar lo numero de vinclos que amostrar en as pachinas subsiguients d'una "
+"lista."
+
+msgid "manager.setup.onlineIssn"
+msgstr "ISSN en linia"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Opcions de numeración de pachinas"
+
+msgid "manager.setup.policies"
+msgstr "Politicas"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Instruccions de corrección de prebas"
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Planificación d'a publicación"
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+"<strong>Nota:</strong> Lo correu electronico de confirmación ye actualment "
+"deshabilitau. Pa utilizar esta función, habilite lo correu electronico de "
+"CONFIRMACIÓN en l'apartau de correus electronicos."
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"Los elementos d'a revista se pueden publicar de forma masiva como parte de "
+"un numero con a suya propia tabla de conteniu. Tamién, se pueden publicar "
+"separaus tan luego como se dispose d'éls, pa ixo, cal anyadir-los en a tabla "
+"de conteniu d'o volumen \"actual\". En a sección Sobre la revista, "
+"proporcione a los lectors/as información sobre lo sistema que utilizará la "
+"revista y la frecuencia de publicación prevista."
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Planificación pa publicacions"
+
+msgid "manager.setup.publisher"
+msgstr "Editorial"
+
+msgid "manager.setup.referenceLinking"
+msgstr "Vinclos de referencia"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr ""
+"Los usuarios/as han de rechistrar-se y iniciar sesión pa veyer lo conteniu "
+"de acceso ubierto."
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr ""
+"Los usuarios/as han de rechistrar-se y iniciar sesión pa veyer lo puesto web "
+"de la revista."
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Indicacions pa la revisión"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Recordatorios de correu automaticos"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Lo plazo habitual establiu pa las revisions ye de"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Restrinchir l'acceso a lo fichero"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"Permitir que los revisors/as tiengan acceso a los fichers de ninvio nomás "
+"dimpués que estes/as haigan acceptau la revisión."
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Acceso pa los revisors/as"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Acceso pa revisors/as con un solo clic"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr ""
+"Se puede ninviar un vinclo seguro a los revisors/as en o correu electronico "
+"d'invitación, que les ferá iniciar sesión automaticament cuan faigan clic en "
+"o vinclo."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr ""
+"Incluyir un vinclo seguro en o correu electronico d'invitación pa los "
+"revisors/as."
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Cualificación d'os revisors/as"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Recordatorios pa los revisors/as"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Politica de revisión"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Indización en buscadores"
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"Aduye a buscadores como Google a descubrir y amostrar lo suyo puesto. Pa ixo "
+"le animamos a ninviar lo suyo <a href=\"{$sitemapUrl}\" target=\"_blank\""
+">mapa d'o puesto</a>."
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Proporcione una breu descripción d'a revista (50-300 carácters) que los "
+"buscadores puedan amostrar cuan la revista amaneixca en os resultaus de "
+"busqueda."
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr ""
+"(Si no s'han anyadiu seccions, los elementos se ninvian per defecto a la "
+"sección Articlos.)"
+
+msgid "manager.setup.sectionsDescription"
+msgstr ""
+"Pa crear u modificar seccions en a revista (p. eix., Articlos, Revisión de "
+"libros, etc.), vaiga a la sección Chestión. <br /><br />Los autors/as con "
+"elementos pa ninviar a la revista designarán..."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr ""
+"Lo editor/a d'a revista exercerá de supervisor entre tot lo proceso "
+"editorial."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "La sección d'a revista pa la cuala se considerará l'elemento."
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr ""
+"Amostrar siempre los vinclos de galeradas y indicar que l'acceso ye "
+"restrinchiu."
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Acceso a lo puesto"
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Veyer lo conteniu de l'articlo"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Cinco pasos pa configurar lo puesto web d'a revista"
+
+msgid "manager.setup.subjectExamples"
+msgstr ""
+"(p. eix., fotosintesi; foraus negros; Teorema d'as cuatro colors; Teoría de "
+"Bayes)"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Parolas clau"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr ""
+"Proporcione eixemplos de parolas clau y temas que sirvan de guía pa los "
+"autors/as"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Indicacions pa lo ninvio"
+
+msgid "manager.setup.submissions.description"
+msgstr ""
+"Indicacions pa los autors/as, dreitos d'autor/a y indexación (incluyiu lo "
+"rechistro)."
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"Proporcione metadatos pa servicios d'indexación de tercers a traviés de la "
+"<a href=\"https://www.openarchives.org/\">iniciativa de fichers ubiertos</a>."
+
+msgid "manager.setup.typeExamples"
+msgstr ""
+"(p. eix., investigación historica; cuasi experimental; analisi literaria; "
+"enquesta/columbrada)"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Tipo (metodo/enfoque)"
+
+msgid "manager.setup.submissions"
+msgstr "Ninvios"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr ""
+"Proporcione eixemplos de tipos d'investigación, metodos y enfoques pa este "
+"campo"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Identificador solo"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr ""
+"Se puede etiquetar a los articlos y publicacions con un numero de "
+"identificación u una cadena, per medio de l'emplego d'un sistema de "
+"rechistro como lo Sistema d'Identificación d'Obchectos Dichitals (DOI)."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "La revista disposará d'un consello de redacción y de revisión."
+
+msgid "manager.setup.useImageTitle"
+msgstr "Títol en formato d'imachen"
+
+msgid "manager.setup.userRegistration"
+msgstr "Rechistro d'usuarios/as"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Títol en formato de texto"
+
+msgid "manager.statistics.statistics"
+msgstr "Estatisticas d'a revista"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Contador de visitas a l'articlo (nomás pa autors/as)"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Acceptau"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Refusau"
+
+msgid "manager.setup.useThumbnail"
+msgstr "Miniatura"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Reninviau"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Periodo de revisión"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Periodo de publicación"
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Numeros publicaus"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Avaluau per pars"
+
+msgid "manager.statistics.statistics.note"
+msgstr ""
+"Nota: Puede que lo percentache de ninvios avaluaus per pars no aconsiga lo "
+"100%, ya que los elementos que se tornan a ninviar pueden haber estau "
+"acceptaus, refusaus u trobar-se en proceso."
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Ninvios totals"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Lectors/as rechistraus"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "Numero asignau"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Revisors/as"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Puntuación d'o editor/a"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Numero de revisions"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr ""
+"Tríe las seccions pa calcular las estatisticas d'avaluación per pars pa esta "
+"revista."
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Descargas d'o fichero de l'articlo"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Visitas a la pachina d'o resumen de l'articlo"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Resumen de l'articlo y descargas"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Visitas a la pachina prencipal d'a revista"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Visualizacions d'a tabla de conteniu d'o numero"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Acceso ubierto diferiu"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Per favor, use la caixeta de verificación proporcionada."
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Vencimiento total"
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Vencimiento parcial"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} meses"
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} semanas"
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Subscripcions"
+
+msgid "manager.subscriptionPolicies"
+msgstr "Politicas de subscripción"
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Vencimiento d'a subscripción"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr ""
+"Los lectors/as no podrán acceder a garra conteniu d'a subscripción dimpués "
+"d'o vencimiento d'esta."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr ""
+"Notificar a los suscriptors/as per correu electronico dimpués d'a caducidat "
+"de la subscripción"
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Tríe una d'as siguients opcions:"
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr ""
+"Lo HTML puede utilizar-se en arias de texto (pa grandaria de fuent, color, "
+"etc.) con \"devolucions\" tratadas como <tt>&lt;br&gt;</tt>; lo editor HTML "
+"funciona con navegadors Firefox."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+"Los lectors/as rechistraus tendrán la opción de recibir una tabla de "
+"conteniu per correu electronico cuan un numero pase a estar d'acceso ubierto."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Notificacions de pago en linia"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"Notificar a lo chestor/a de subscripcions a traviés de correu electronico "
+"cuan se den d'alta subscripcions d'individuals."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Tríe una valor valida pa lo numero de meses dimpués d'o vencimiento d'a "
+"subscripción."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Tríe una valor valida pa lo numero de meses antes d'o vencimiento de la "
+"subscripción."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr ""
+"Tríe una valor valida pa lo numero de semanas dimpués d'o vencimiento d'a "
+"subscripción."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+"Tríe una valor valida pa lo numero de semanas antes d'o vencimiento d'a "
+"subscripción."
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Introduzca una adreza de correu electronico valida."
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Crear"
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Chestor/a de subscripcions"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr ""
+"Lo contacto se troba en l'apartau Subscripcions d'a sección Amana d'a "
+"revista."
+
+msgid "manager.subscriptions"
+msgstr "Subscripcions"
+
+msgid "manager.individualSubscriptions"
+msgstr "Subscripcions individuals"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Subscripcions institucionals"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Seguro que deseya renovar la subscripción?"
+
+msgid "manager.subscriptions.create"
+msgstr "Crear una nueva subscripción"
+
+msgid "manager.subscriptions.renew"
+msgstr "Renovar"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Finalización"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Inicio"
+
+msgid "manager.subscriptions.domain"
+msgstr "Dominio"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Editar"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Incluyir estau"
+
+msgid "manager.subscriptions.edit"
+msgstr "Editar subscripción"
+
+msgid "manager.subscriptions.form.status"
+msgstr "Estau"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Toz"
+
+msgid "manager.subscriptions.form.institution"
+msgstr "Institución"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Tríe una institución valida."
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr ""
+"Nota: Toz los cambios realizaus contino afectan a lo perfil de sistema de l'"
+"usuario/a."
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Usuario/a"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Contacto"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Especifique un usuario/a."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Especifique un usuario/a valido."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Especifique un país valido."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Data de finalización"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Especifique una data d'inicio."
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Utilice las caixetas de verificación proporcionadas."
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Numero de referencia"
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Notas"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Dominio"
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Nombre d'a institución"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Lo nombre d'a institución ye obligatorio."
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr ""
+"Si s'introduz un dominio aquí, los rangos d'IP son opcionals.<br />Las "
+"valors validas son nombres de dominio (p. eix., lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Introduzca un dominio valido."
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "Rangos d'IP"
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Si s'introducen rangos d'IP aquí, lo dominio ye opcional.<br />Las valors "
+"validas incluyen una adreza IP (p. eix., 142.58.103.1), un rango IP (p. "
+"eix., 142.58.103.1 - 142.58.103.4), un rango IP con carácter comodín '' (p. "
+"eix., 142.58.*.) y rango IP con CIDR (p. eix., 142.58.100.0/24)."
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Introduzca un rango d'IP valido."
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Eliminar"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Anyadir"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Alzar y crear nuevo"
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Este usuario/a ya ye suscrito a esta revista."
+
+msgid "manager.subscriptions.ipRange"
+msgstr "Rango d'IP"
+
+msgid "manager.subscriptions.membership"
+msgstr "Afiliación"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Numero de referencia"
+
+msgid "manager.subscriptions.notes"
+msgstr "Notas"
+
+msgid "manager.subscriptions.select"
+msgstr "Triar"
+
+msgid "manager.subscriptions.user"
+msgstr "Usuario/a"
+
+msgid "manager.subscriptions.contact"
+msgstr "Nombre de contacto"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Nombre d'a institución"
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "S'ha de crear una institución antes de realizar una subscripción nueva."
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Garra subscripción"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Coste"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Individual"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Institucional"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Crear"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Duración"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Coste"
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr ""
+"Introduzca una valor numerica (p. eix., 40 u 40,00) sin simbolo de moneda ("
+"p. eix., $)."
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Lo coste ha d'estar una valor numerica positiva."
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Especifique lo coste."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Moneda"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Especifique una moneda."
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Subscripcions"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Crear un nuevo tipo de subscripción"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Editar lo tipo de subscripción"
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Tríe una moneda valida."
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Descripción"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Caduca en"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "meses (p. eix., 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "No caduca nunca"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Utilice las opcions proporcionadas."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Duración"
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "La duración ha d'estar una valor numerica positiva."
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Especifique la duración."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Formato"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Numero de meses que dura la subscripción (p. eix., 12)."
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Utilice las opcions proporcionadas."
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Utilice las caixetas de verificación proporcionadas."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Opcions"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr ""
+"Subscripcions d'institucions (los usuarios/as se validan per medio d'o "
+"dominio u l'adreza IP)"
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Utilice las caixetas de verificación proporcionadas."
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Alzar y crear nuevo"
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Lo vinclo nomás s'amostrará cuan lo visitante haiga iniciau la sesión."
+
+msgid "manager.setup.categories"
+msgstr "Categorías"
+
+msgid "manager.setup.categories.description"
+msgstr ""
+"Tríe las categorías mas adecuadas d'a lista que amaneixe mas alto. Los "
+"lectors/as podrán examinar per categoría dende lo conchunto completo d'a "
+"revista."
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr ""
+"No fer visiblement u publicament disponible este tipo de subscripción<br />("
+"p. eix., en l'apartau Subscripcions d'a sección Sobre la revista)."
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Nombre d'o tipo de subscripción"
+
+msgid "grid.category.path"
+msgstr "Rota"
+
+msgid "grid.action.addSection"
+msgstr "Anyadir sección"
+
+msgid "manager.publication.library"
+msgstr "Biblioteca editorial"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr ""
+"Seguro que deseya reiniciar los datos sobre permisos de toz los articlos? "
+"Esta acción no puede desfer-se."
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Elimina la declaración de privacidat y la información de licencia de toz los "
+"articlos publicaus y las achusta a la configuración per defecto actual d'a "
+"revista. Esto eliminará permanentment toz los dreitos d'autor/a y "
+"información de licencia previament asociaus a los articlos. En cualques "
+"casos puede que no sía permitiu legalment cambiar la licencia d'un treballo "
+"ya publicau baixo unatra licencia. Per ixo, sía cudiadoso cuan utilice esta "
+"ferramienta y, si tiene dudas sobre qué dreitos tiene sobre los articlos "
+"publicaus en a suya revista, consulte a un experto legal."
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Los permisos de l'articlo estioron reiniciaus con exito."
+
+msgid "grid.genres.title.short"
+msgstr "Components"
+
+msgid "grid.genres.title"
+msgstr "Components de l'articlo"
+
+msgid "grid.genres.description"
+msgstr ""
+"Estes components s'usan pa dar nombre a los fichers y se presientan en un "
+"menú desplegable en os fichers cargaus. Los cheneros designaus ## permiten a "
+"l'usuario asociar lo fichero tanto con o ninvio completo 99Z como con un "
+"component particular per numero (p. eix.: 02)."
+
+msgid "plugins.importexport.common.settings"
+msgstr "Achustes"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "Achustes d'o modulo DOI"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Articlos"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Numeros"
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Galeradas"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "No se cumplen los requisitos d'o modulo"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+"Pa utilizar este modulo s'endrece a la categoría de modulo \"Identificador "
+"publico\", active y configure lo modulo DOI, y especifique un prefixo DOI "
+"valido allí."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Lo modulo no ye totalment configurau."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr ""
+"No i hai garra elemento publicable triau pa l'asignación de DOI en lo modulo "
+"d'identificador publico DOI, per lo que no i hai posibilidat de depósito u "
+"exportación en este modulo."
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "No s'ha puesto importar la galerada d'o numero, falta lo fichero."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"No s'ha puesto exportar la galerada d'o numero {$iz}, no se trobó lo fichero "
+"en a rota \"{$path}\"."
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"No s'ha puesto exportar la imachen de cubierta d'o numero {$iz}, no se trobó "
+"lo fichero en a rota \"{$path}\"."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Clau"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr ""
+"Per favor, tienga en cuenta que la clau s'alzará como texto plano, no "
+"encriptada."
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Cualsequier numero"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Cualsequier estau"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "No depositau"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Marcar como rechistrau"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Rechistrau/a"
+
+msgid "plugins.importexport.common.action"
+msgstr "Acción"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Exportar"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Rechistrar"
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Garra obchecto triau."
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "No se pueden convertir los obchectos triaus."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "XML invalido:"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "Lo fichero de salida {$param} no ye editable."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Lo fichero cargau {$param} no se puede leyer."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr ""
+"Lo rechistro ha fallau! Lo servidor de rechistro d'o DOI ha comunicau una "
+"error: '{$param}'."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Rechistro correcto!"
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Validación correcta!"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Validación incorrecta."
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "No se troba lo prefixo DOI pa la revista con a rota {$path}."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Los obchectos especificaus no se pueden trobar."
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr ""
+"Ninviar una copia a lo contacto prencipal identificau en os achustes d'a "
+"revista."
+
+msgid "stats.contextStats"
+msgstr "Estatisticas d'a revista"
+
+msgid "stats.context.tooltip.text"
+msgstr "Numero de visitantes que visualizan la pachina d'inicio d'a revista."
+
+msgid "stats.context.tooltip.label"
+msgstr "Sobre las estatisticas d'a revista"
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+"Descargar una fuella de calculo CSV/Excel con as estatisticas d'uso d'esta "
+"revista que cumplan con os siguients parametros."
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "Lo numero de visualizacions d'a pachina d'inicio d'a revista."
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Descargar revista"
+
+msgid "stats.issues.details"
+msgstr "Visualizacions y descargas"
+
+msgid "stats.issueStats"
+msgstr "Estatisticas d'o numero"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "Buscar títol, volumen y numero"
+
+msgid "stats.issues.none"
+msgstr ""
+"No se trobó garra numero con estatisticas d'uso que coincidan con estes "
+"parametros."
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"Descargar una fuella de calculo CSV/Excel con as estatisticas d'uso d'os "
+"numeros que coincidan con os parametros siguients."
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr ""
+"Lo numero de visualizacions d'o sumario y de descargas d'as galeradas de "
+"cada numero."
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "Descargar numeros"
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$count} de {$total} numeros"
+
+msgid "stats.issues.tooltip.label"
+msgstr "Sobre las estatisticas d'o numero"
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+"<strong>Visualizacions</strong>: numero de visitantes que visualizan lo "
+"sumario d'o numero.<br><strong>Descargas</strong>: numero de descargas d'a "
+"galerada d'o numero, si la i hai."
+
+msgid "stats.publicationStats"
+msgstr "Estatisticas de l'articlo"
+
+msgid "stats.publications.details"
+msgstr "Detalles de l'articlo"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$count} de {$total} articlos"
+
+msgid "stats.publications.none"
+msgstr ""
+"No se trobó garra articlo con estatisticas d'uso que coincidan con estes "
+"parametros."
+
+msgid "stats.publications.galleys"
+msgstr "Fichers"
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Visualizacions totals d'o resumen per data"
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr "La sinyatura pa los correus electronicos automatizaus d'a revista"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "L'adreza de correu electronico d'o contacto prencipal d'a revista"
+
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr "L'adreza postal d'a revista"
+
+msgid "stats.publications.downloadReport.description"
+msgstr ""
+"Descargar una fuella de calculo CSV/Excel con as estatisticas d'uso de "
+"articlos que coincidan con os parametros siguients."
+
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr "Descargar articlos"
+
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr ""
+"Lo numero de visualizacions d'o resumen y de descargas de fichero de cada "
+"articlo."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Ninviar una copia d'o correu electronico d'agradeiximiento per lo ninvio a "
+"lo contacto prencipal d'a revista."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"No s'ha definiu lo contacto prencipal d'esta revista. Puede introducir-lo en "
+"os <a href=\"{$url}\">achustes d'a revista</a>."
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Exportar los resultaus d'os numeros"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Lo proceso ha fallau en analisar las galeradas d'o numero"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Lo nombre d'a revista"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "URL a la pachina d'inicio d'a revista"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Lo nombre d'o contacto prencipal d'a revista"
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "Las inicials d'a revista"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Lo nombre d'o tipo de pago"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "L'amonto d'o pago"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "La moneda de l'importe d'o pago, per eixemplo USD"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Información sobre l'afiliación d'o suscriptor/a"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "Lo nombre d'a institución suscriptora"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "Lo correu electronico d'a institución suscriptora"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr "URL d'a pachina en que l'autor/a puede fer lo pago"
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr "URL d'as directrices de ninvio"
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr "Lo vinclo a la pachina d'estatisticas d'articlos publicaus"
+
+msgid "emailTemplate.variable.issueId"
+msgstr "L'IZ d'o numero"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Nombre d'o puesto web cuan s'alocha mas d'una revista"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr ""
+"Lo nombre, la filiación, lo numero de telefono y lo correu electronico d'o "
+"suscriptor/a"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "La URL d'a pachina de subscripción"
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Validar correu electronico (rechistro en a revista)"
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.manager.displayName"
+msgstr "DOI"
+
+msgid "doi.manager.settings.description"
+msgstr "Configure lo modulo de DOI pa poder administrar y usar DOIs en OJS:"
+
+msgid "doi.manager.settings.explainDois"
+msgstr ""
+"Tríe los obchectos de publicación que tendrán Identificadors d'Obchectos "
+"Dichitals (Dichital Object Identifier, DOI) asignaus:"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr "Galeradas de l'articlo, como per eixemplo un PDF publicau"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "Prefixo DOI"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "Lo prefixo DOI ye obligatorio y sigue lo formato 10.xxxx."
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr ""
+"Per eixemplo, vol%viss%ipp%p crearia un DOI d'o tipo 10.1234/vol3iss2pp230"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "pa numeros"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "pa articlos"
+
+msgid "doi.description"
+msgstr ""
+"Este modulo permite l'asignación de l'Identificador d'Obchecto Dichital ("
+"Digital Object Identifier, DOI) a publicacions, articlos y galeradas en OJS."
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Galeradas de l'articlo"
+
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr "L'índiz d'a revista como lista de toz los ninvios asociaus."
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
+"Este correu electronico se ninvia mensualment a los editors/as y a los "
+"administradors/as d'a revista pa ofrir-les una visión cheneral d'a salut d'o "
+"sistema."
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "pa galeradas"
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Introduzca lo patrón d'o sufixo DOI pa numeros."
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Introduzca lo patrón d'o sufixo DOI pa articlos."
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Introduzca lo patrón d'o sufixo DOI pa galeradas."
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "Reasignar DOIs"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr ""
+"Si cambia la suya configuración, los DOIs que ya han estau asignaus no se "
+"veyerán afectaus. Si lo deseya, cuan alce la configuración d'o DOI, use este "
+"botón pa borrar toz los DOIs existents y que los nuevos achustes tamién "
+"tiengan efecto sobre los identificadors ya asignaus."
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "Seguro que quiere eliminar toz los DOI existents?"
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "Asignar DOI"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"Asignar DOI a los obchectos publicaus d'a revista que no disposen ya de un. "
+"Esta acción no puede estar usada con a configuración de sufixo individual. "
+"Si ha modificau la configuración d'o DOI (mas alto), per favor, alce los "
+"cambios antes de realizar esta acción. L'asignación de DOI puede levar muito "
+"tiempo, dependendo d'o numero d'obchectos publicaus en a revista."
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"Seguro que quiere asignar DOI a toz los obchectos publicaus que no disposen "
+"ya d'un?"
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Achencia de rechistro"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+"Tríe l'achencia de rechistro que le fería goyo utilizar cuan se depositen "
+"los DOI."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Garra"
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.editor.doi.description"
+msgstr "Lo DOI ha d'empecipiar con {$prefix}."
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Asignar"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "numero"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "articlo"
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "galerada"
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "Lo DOI no puede estar asignau perque falta lo sufixo personalizau."
+
+msgid "doi.editor.missingIssue"
+msgstr ""
+"No puede chenerar un DOI dica que esta publicación sía asignada a un numero."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"No puede chenerar un DOI perque una u mas partes d'o patrón DOI no se "
+"troban. Sería necesario asignar la publicación a un numero, establir un "
+"identificador editorial u anyadir los numeros de pachina."
+
+msgid "doi.editor.patternNotResolved"
+msgstr "Lo DOI no puede estar asignau perque contiene un patrón irresoluble."
+
+msgid "doi.editor.canBeAssigned"
+msgstr ""
+"Esto ye una previsualización d'o DOI. Tríe la caixeta de verificación y alce "
+"lo formulario pa asignar lo DOI."
+
+msgid "doi.editor.assigned"
+msgstr "S'ha asignau un DOI a este {$pubObjectType}."
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Lo sufixo DOI proporcionau ya ye en uso per unatro obchecto publicau. "
+"Introduzca un sufixo DOI solo pa cada obchecto."
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "Limpiar"
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "Seguro que quiere eliminar lo DOI existent?"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "Limpiar los DOI d'os obchectos de publicación"
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr "Seguro que quiere eliminar los DOI existents d'os obchectos d'o numero?"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"Use la siguient opción pa borrar los DOIs de toz los obchectos (articlos y "
+"galeradas) actualment planificaus pa esta publicación."
+
+msgid "doi.editor.assignDoi"
+msgstr "Asignar lo DOI {$pubId} a este {$pubObjectType}"
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "Lo DOI no puede estar asignau perque falta lo sufixo personalizau."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr ""
+"Lo DOI {$pubId} no puede estar asignau perque contiene un patrón irresoluble."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr ""
+"S'ha asignau lo DOI {$pubId}. Pa editar-lo visite la pachina de <a href=\""
+"{$doiManagementLink}\">Chestión d'o DOI</a>."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "Lo DOI {$pubId} s'asignará a la publicación."
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "La galerada que ha solicitau no forma parte d'esta publicación."
+
+msgid "doi.editor.missingPrefix"
+msgstr "Lo DOI ha d'empecipiar con {$doiPrefix}."
+
+msgid "doi.editor.preview.publication"
+msgstr "Lo DOI d'esta publicación será {$doi}."
+
+msgid "doi.editor.preview.publication.none"
+msgstr "No s'ha asignau garra DOI a esta publicación."
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr ""
+"Nomás se pueden editar los DOI dimpués que una galerada/publicación se haiga "
+"publicau"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "Lo DOI ninviau no ye valido"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr ""
+"Nomás se pueden editar los DOI dimpués que una publicación s'haiga publicau"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "No s'han trobau los numeros solicitaus"
+
+msgid "doi.manager.submissionDois"
+msgstr "DOI de l'articlo"
+
+msgid "doi.manager.issueDois"
+msgstr "DOI d'o numero"
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"Este correu electronico notifica a l'autor/a que lo suyo ninvio ha estau "
+"refusau antes d'a fase de revisión, perque este no cumple los requisitos de "
+"publicación d'a revista."
+
+msgid "manager.institutions.noContext"
+msgstr "No s'ha puesto trobar la revista d'esta institución."
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "Notificación de subscripción"
+
+msgid "mailable.openAccessNotify.name"
+msgstr "Notificación d'acceso ubierto"
+
+msgid "mailable.openAccessNotify.description"
+msgstr ""
+"Este correu electronico se ninvia a los lectors/as rechistraus que han pediu "
+"recibir notificacions per email cuan un numero se torna d'acceso libre."
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "Notificación de numero publicau"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+"Este correu electronico se ninvia automaticament a los usuarios/as "
+"rechistraus cuan se publica un numero nuevo."
+
+msgid "manager.manageEmails.description"
+msgstr "Editar los mensaches ninviaus per correu electronico dende la revista."
+
+msgid "mailable.layoutComplete.name"
+msgstr "Galeradas completas"
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Renovar subscripción individual"
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Renovar subscripción institucional"
+
+msgid "mailable.publicationVersionNotify.name"
+msgstr "Nueva versión creada"
+
+msgid "mailable.paymentRequest.name"
+msgstr "Solicitut de pago"
+
+msgid "mailable.paymentRequest.description"
+msgstr ""
+"Este correu electronico automatico se ninvia a l'autor/a pa solicitar-le lo "
+"pago d'a taxa de publicación cuan la suya ninvio s'accepta."
+
+msgid "mailable.publicationVersionNotify.description"
+msgstr ""
+"Este correu electronico notifica automaticament a los editors/as asignaus "
+"que s'ha creau una nueva versión d'o ninvio."
+
+msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+"Este correu electronico se ninvia a los chestors/as d'a revista cuan se "
+"realiza un ninvio nuevo y no i hai editors/as asignaus."
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Seguro que deseya eliminar esta subscripción?"
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Data d'inicio"
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Tipo de subscripción"
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Tipo de subscripción"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Marcar como rechistraus"
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+"Tríe la traza en que se tría la data de copyright predefinida pa un articlo. "
+"Esto puede fer-se manualment pa cada caso. Si lo suyo modelo se basa en a "
+"publicación articlo a articlo no utilice la data de publicación d'o numero."
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr "Utilizar la data de publicación de l'articlo"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"Este correu electronico se ninvia automaticament a un nuevo usuario/a en "
+"rechistrar-se en a revista cuan en os achustes se pide que l'adreza de "
+"correu electronico ha de validar-se."
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+"OJS elabora las siguients estatisticas pa cada revista. Lo periodo de "
+"revisión se calcula a partir d'a data de ninvio (u día en que se designa la "
+"versión de revisión) dica la decisión inicial d'o editor/a. Lo periodo de "
+"publicación s'estima a traviés de las entregas acceptadas dende que se "
+"entregó l'orichinal dica la suya publicación."
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr ""
+"Establir como obligatoria la subscripción a la revista pa acceder a beluns u "
+"a toz los suyos contenius."
+
+msgid "manager.payment.currencymessage"
+msgstr ""
+"OJS no realiza conversions de moneda. Si decide cobrar per subscripción, ha d"
+"'asegurar-se que la moneda de pago sía la mesma que la especificada aquí."
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Especifique una data de finalización."
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Meter la data d'o copyright de l'articlo a"
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr ""
+"Articlo: l'anyo per defecto provendrá d'a data de publicación d'o articlo, "
+"como en o caso d'a publicación immediata."
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr ""
+"Numero: l'anyo per defecto provendrá d'a data de publicación d'o numero."
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Visualizacions totals d'o fichero per data"
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+"Este tipo de subscripción no expira; per tanto, no especifique una data "
+"d'inicio."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Tríe una data de finalización d'a subscripción valida."
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Data de finalización"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Data d'inicio"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"Notificar a lo chestor/a de subscripcions a traviés de correu electronico "
+"cuan se den d'alta subscripcions d'institucions (recomendau)."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"Notificar a lo chestor/a de subscripcions a traviés de correu electronico "
+"amana d'a renovación en linia d'as subscripcions individuals."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"Notificar a lo chestor/a de subscripcions a traviés de correu electronico "
+"amana d'a renovación en linia d'as subscripcions d'institucions."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+"<strong>Nota:</strong> Pa habilitar estas opcions, lo chestor/a d'a revista "
+"ha d'habilitar lo modulo de pagos en linia, incluyius los pagos en linia pa "
+"subscripcions, en l'apartau Cuota pa lectors/as."
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr ""
+"Las subscripcions a revistas pueden proporcionar acceso ubierto diferiu a lo "
+"suyo conteniu publicau, asinas como permitir que los autors/as archiven éls "
+"mesmos los suyos documentos (en toz dos casos, con a finalidat d'aumentar lo "
+"numero de lectors/as y las referencias a lo conteniu)."
+
+msgid "manager.subscriptions.summary"
+msgstr "Resumen de subscripcions"
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr ""
+"Las subscripcions requieren información sobre l'afiliación (p. eix., una "
+"asociación, una organización, una sociedat mercantil, etc.)"
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Enlazar con una pachina que describa las subscripcions disponibles."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr ""
+"Enlazar con una pachina que describa las subscripcions actuals y anteriors "
+"d'o visitante."
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr ""
+"S'ha de crear un tipo de subscripción antes de realizar nuevas subscripcions."
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr ""
+"Alvertencia: S'eliminarán tamién totas las subscripcions con este tipo de "
+"subscripción. Ye seguro/a que quiere continar y eliminar este tipo de "
+"subscripción?"
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr ""
+"Este correu en linia notifica a l'administrador/a de subscripcions que una "
+"subscripción institucional ha estau renovada en linia. Proporciona "
+"información resumida d'a subscripción y un vinclo d'acceso rapido a la "
+"subscripción renovada."
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Subscripcions individuals (los usuarios/as se validan iniciando sesión)"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+"Los tipos de subscripción y la estructura de cuota s'establirán de traza "
+"automatica en l'apartau Subscripcions d'a sección Sobre la revista, de "
+"conchunta con o nombre y la información de contacto d'o chestor/a de "
+"subscripcions. Aquí puede anyadir-se información adicional sobre "
+"subscripcions, como metodos de pago u suporte tecnico pa suscriptors/as en "
+"países en vías de desembolique."
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr ""
+"Esta opción activa lo pago pa suscribirse a la revista. Los tipos de "
+"subscripción, lo coste, la duración y las subscripcions en él las administra "
+"lo chestor/a (de subscripcions) d'a revista."
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr ""
+"A partir d'o vencimiento d'a subscripción, los lectors/as podrían no tener "
+"acceso a lo conteniu total d'a subscripción, encara que ye posible que sí "
+"puedan tener acceso a lo conteniu de dita subscripción que s'haiga publicau "
+"dinantes d'a data de vencimiento."
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr ""
+"Los lectors/as no podrán acceder a lo conteniu recient d'a subscripción, "
+"pero tendrán acceso a lo conteniu de dita subscripción publicau antes d'a "
+"data de vencimiento d'esta."
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr ""
+"Notificar a los suscriptores per correu electronico dimpués d'a caducidat "
+"d'a subscripción."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr ""
+"Notificar a los suscriptores per correu electronico antes d'a caducidat de "
+"la subscripción."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr ""
+"Notificar a los suscriptores per correu electronico antes d'a caducidat de "
+"la subscripción."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Recordatorios d'o vencimiento d'a subscripción"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+"Se pueden ninviar notificacions de correu electronico automaticas a lo "
+"chestor/a de subscripcions una vegada realizaus los pagos en linia "
+"correspondients a la subscripción. Lo chestor/a d'a revista puede editar "
+"estes mensaches en a sección Plantillas de correu de OJS."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong>Nota:</strong> Las subscripcions institucionals adquiridas en linia "
+"requieren l'aprebación d'o dominio facilitau y los rangos d'IP, asinas como "
+"l'activación d'a subscripción per parte d'o chestor/a de subscripcions."
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Especifique un estau de subscripción."
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Tríe un estau de subscripción valido."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Tipo de subscripción"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Especifique lo tipo de subscripción."
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Tríe un tipo de subscripción valida."
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Tríe una data d'inicio de subscripción valida."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+"Este tipo de subscripción no expira; per tanto, no especifique una data de "
+"finalización."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr ""
+"Ninviar un correu electronico a l'usuario/a con o suyo nombre d'usuario/a y "
+"información sobre la suya subscripción."
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr ""
+"Pa este tipo de subscripción ye necesario provedir información d'a "
+"afiliación."
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Lo tipo de subscripción triada requiere un dominio u un rango d'IP pa "
+"validar la subscripción."
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr ""
+"Pa poder ninviar un correu electronico de notificación a l'usuario/a, lo "
+"nombre de contacto d'a subscripción y l'adreza de correu electronico han "
+"d'estar especificaus en a configuración d'a revista."
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Tríe un contacto pa la subscripción"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "La subscripción creó correctament."
+
+msgid "manager.subscriptionTypes"
+msgstr "Tipos de subscripción"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Especifique un tipo de formato de subscripción."
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Tríe un tipo de formato de subscripción valido."
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Ya existe un tipo de subscripción con este nombre."
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Especifique lo nombre d'o tipo de subscripción."
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "No se creó garra tipo de subscripción."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Lo tipo de subscripción se creó correctament."
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Los detalles de contacto de l'administrador/a d'a subscripción"
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr "La data de vencimiento d'a subscripción"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Un resumen d'o tipo, nombre, duración y coste d'a subscripción"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Lo nombre d'o dominio d'a(s) adreza(ye) IP validas d'esta subscripción"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "Los rangos d'IP validos d'esta subscripción"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr ""
+"Este correu electronico notifica a un/a lector/a rechistrau/a que lo/a "
+"Chestor/a les ha creau una subscripción. Proporciona la URL d'a revista de "
+"conchunta con instruccions pa acceder a ella."
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "La subscripción caduca luego"
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Adquirir subscripción institucional"
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr ""
+"Este correu electronico notifica a l'administrador/a de subscripcions que "
+"una subscripción institucional ha estau adquirida en linia. Proporciona "
+"información resumida sobre la subscripción y un vinclo d'acceso rapido a la "
+"subscripción adquirida."
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr ""
+"Este correu electronico notifica a l'administrador/a de subscripcions que "
+"una subscripción individual s'ha renovado en linia. Proporciona información "
+"resumida sobre la subscripción y un vinclo d'acceso rapido a la subscripción "
+"renovada."
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr ""
+"Tríe un usuario/a (u varios) pa fusionar con unatra cuenta d'usuario/a (p. "
+"eix., si se tienen dos cuentas d'usuario/a). Las cuentas triadas en primer "
+"puesto s'eliminarán, y los ninvios, fayenas, etc. s'atribuyirán a la segunda "
+"cuenta."
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+"Como minimo ha d'estar activa una sección. Visite los achustes d'o fluxo de "
+"treballo pa deshabilitar toz los ninvios a la revista."
+
+msgid "manager.sections.open"
+msgstr "Ubrir ninvios"
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr ""
+"OJS se adhiere a lo protocolo <a href=\"http://www.openarchives.org/\" "
+"target=\"_blank\">Open Archives Initiative</a> Protocol for Metadata "
+"Harvesting, estándard emerchent pa proporcionar acceso indexado a recursos "
+"de investigación electronicos a escala global. Los autors/as han d'usar una "
+"plantilla semellant pa proporcionar los metadatos necesarios pa los suyos "
+"ninvios. Lo chestor/a d'a revista ha de triar las categorías pa la "
+"indexación y amostrar a los autors/as eixemplos relevants pa aduyar-los a "
+"indexar los suyos treballos, deseparando los termins con un punto y coma (p. "
+"eix., término1; término2). Las dentradas han d'introducir-se como eixemplos "
+"utilizando \"p. eix.,\" u \"Per eixemplo,\"."
+
+msgid "manager.setup.guidingSubmissions"
+msgstr "Paso 3. Guiar ninvios"
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+"Limitar lo numero de ítems (per eixemplo, ninvios, usuarios/as u asignacions "
+"d'edición) que amostrar en una lista antes d'amostrar los ítems subsiguients "
+"en unatra pachina."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Impedir que los usuarios/as ninvien nuevos articlos a la revista. Los "
+"ninvios pueden deshabilitar-se individualment en cada sección d'a revista en "
+"a pachina d'achustes de <a href=\"{$url}\">seccions d'a revista</a> ."
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"La revista no accepta ninvios en este momento. Visite los achustes d'o fluxo "
+"de treballo pa permitir los ninvios."
+
+msgid "manager.language.submissions"
+msgstr "Ninvios"
+
+msgid "manager.section.submissionsToThisSection"
+msgstr "Ninvios realizaus a esta sección d'a revista"
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+"Los rols son grupos d'usuarios d'a revista que tienen acceso a diferents "
+"nivels de permisos y fluxos de treballo asociaus adintro d'a revista. I hai "
+"cinco nivels de permisos diferents: 1) los administradors d'a revista, que "
+"tienen acceso total a la revista (tot lo conteniu y los achustes); 2) los "
+"editors d'a revista, que tienen acceso a tot lo conteniu adintro d'a suya "
+"categoría; 3) los asistents d'a revista, que tienen acceso a totas las "
+"monografías que un editor les ha asignau especificament; 4) los revisors, "
+"que pueden veyer y fer las revisions que se les han asignau; y 5) los "
+"autors, que pueden veyer y interactuar con una cantidat limitada "
+"d'información d'os suyos ninvios. Adicionalment i hai cinco fases diferents "
+"a las cuals los rols puede tener acceso: ninvio, revisión interna, revisión, "
+"edición y producción."
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr ""
+"Anyadir un editor/a de sección a esta sección pa que los ninvios se le "
+"asignen dreitament. (Se pueden asignar editors/as de sección manualment "
+"dimpués de recibir un ninvio.) Una vegada anyadiu, se le puede asignar a lo "
+"editor/a de sección la fayena de supervisar la REVISIÓN (avaluación per pars)"
+" y/u la EDICIÓN (corrección d'orichinals, maquetación y revisión) d'os "
+"ninvios que tienen como destín esta sección. Pa crear editors/as de sección, "
+"faiga clic en Editors/as de sección debaixo de Rols dentro d'a sección "
+"Chestión d'a revista."
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+"Identifique de 6 a 10 bibliotecas que rechistrarán y almagacenarán "
+"temporalment la revista. Per eixemplo, consulte las institucions en as "
+"cualas treballan los editors/as u los miembros d'o consello de redacción y/u "
+"las institucions que ya emplegan lo sistema LOCKSS. Consulte <a href=\"http"
+"://www.lockss.org/community/\" target=\"_blank\">la comunidat LOCKSS</a>."
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"Las instruccions pa la corrección de prebas se troban a disposición d'os "
+"correctors/as de prebas, autors/as, editors/as de maquetación, editors/as de "
+"sección en o paso correspondient a la edición d'o ninvio. A continación, "
+"s'amuestra un conchunto d'instruccions en HTML que lo chestor/a d'a revista "
+"puede modificar u reemplazar en cualsequier momento (en HTML u texto plano)."
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr ""
+"Los editors/as pueden cualificar a los revisors/as en una escala de cinco "
+"puntos dimpués de cada revisión."
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Seccions y editors/as de seccions"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr ""
+"Se pueden ninviar correus electronicos automaticos a los suscriptors/as "
+"dinantes y dimpués d'o vencimiento d'a suya subscripción. Lo chestor/a d'a "
+"revista puede editar estes mensaches en a sección Plantillas de correu de "
+"OJS."
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr ""
+"Introduzca la suya información d'afiliación si lo tipo de subscripción "
+"requiere que los suscriptors/as perteneixcan a una asociación u organización."
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr ""
+"Se proporcionan automaticament permisos d'acceso de subscripción a los "
+"chestors/as d'a revista, los editors/as, los editors/as de sección, los "
+"maquetadors/as, los correctors/as d'orichinals y los correctors/as de prebas."
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr ""
+"Introduzca un patrón de sufixo personalizau pa cada tipo de publicación. Lo "
+"patrón de sufixo personalizau puede utilizar los simbolos siguients pa "
+"chenerar un sufixo:<br><br> <code>%j</code> Inicials d'a revista<br> "
+"<code>%v</code> Volumen<br> <code>%i</code> Numero<br> <code>%Y</code> "
+"Anyo<br> <code>%a</code> ID d'articlo<br> <code>%g</code> IZ de galerada<br> "
+"<code>%f</code> IZ de fichero<br> <code>%p</code> Numero de pachina<br> "
+"<code>%x</code> Identificador personalizau<br><br> Tienga en cuenta que lo "
+"patrón de sufixo personalizau causa a ormino problemas a la hora de chenerar "
+"y depositar los DOI. Cuan utilice un patrón de sufixo personalizau comprebe "
+"minuciosament que los editors/as pueden chenerar DOI y depositar-los en una "
+"achencia de rechistro como Crossref. "

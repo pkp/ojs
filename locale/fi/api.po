@@ -1,10 +1,10 @@
-# Antti-Jussi Nygård <ajnyga@gmail.com>, 2023.
+# Antti-Jussi Nygård <ajnyga@gmail.com>, 2023, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:22+00:00\n"
-"PO-Revision-Date: 2023-05-22 19:28+0000\n"
+"PO-Revision-Date: 2025-08-19 20:26+0000\n"
 "Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
 "Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/ojs/api/fi/>\n"
 "Language: fi\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "Pyytämäsi ilmoitus ei ole osa tätä julkaisua."
@@ -80,3 +80,8 @@ msgstr "Tämän vaiheen tiedosto ei voi olla julkaistava tiedosto."
 
 msgid "api.submission.400.inactiveSection"
 msgstr "Tämä osasto ei enää vastaanota käsikirjoituksia."
+
+msgid "api.publications.403.paymentFeesNotEnabled"
+msgstr ""
+"Käsikirjoituksen maksulomake ei ole käytettävissä, koska maksuja ei ole "
+"otettu käyttöön."

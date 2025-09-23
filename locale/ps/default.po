@@ -1,0 +1,187 @@
+# Jan Mohammad Rasa <eng.omid.rasa@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-22 09:20+0000\n"
+"Last-Translator: Jan Mohammad Rasa <eng.omid.rasa@gmail.com>\n"
+"Language-Team: Pashto <http://translate.pkp.sfu.ca/projects/ojs/default/ps/>"
+"\n"
+"Language: ps\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "section.default.title"
+msgstr "مقالې"
+
+msgid "section.default.policy"
+msgstr "د برخې اصلي پالیسي"
+
+msgid "section.default.abbrev"
+msgstr "مخفف"
+
+msgid "default.genres.researchResults"
+msgstr "د څېړنې پایلې"
+
+msgid "default.genres.transcripts"
+msgstr "لیکلي متنونه"
+
+msgid "default.genres.dataSet"
+msgstr "معلوماتي ټولګه"
+
+msgid "default.genres.sourceTexts"
+msgstr "مبدا/لومړي لاس متنونه"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "بیاکتونکی"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "بیاکتونکي"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "آر"
+
+msgid "default.genres.article"
+msgstr "د مقالې متن"
+
+msgid "default.contextSettings.authorGuidelines"
+msgstr ""
+"<p>لیکوالانو ته بلنه ورکول کېږي چې خپلې مقالې دغه ژورنال ته وسپاري. ټولې "
+"مقالې به د یوه اېډېټر لخوا وڅېړل شي ترڅو دا معلومه شي چې آیا دا مقاله د "
+"ژورنال له موخو او چوکاټ سره مطابقت لري او که نه. هغه مقالې چې مناسبې وګڼل شي،"
+" مخکې له دې چې د منلو یا ردولو پرېکړه وشي د هم ‌رتبه کس د بیاکتنې لپاره لېږل "
+"کېږي.<p/>\n"
+"<p> تر سپارلو مخکې، لیکوالان مسؤل دي چې د سپارل شويو مطالبو لکه عکسونو، "
+"اسنادو یا معلوماتي ټولګې د خپرولو اجازه ولري. ټول لیکوالان چې په مقاله کې "
+"ذکر شوي، باید رضایت ورکړي چې د لیکوال په توګه معرفی شي. چیرې چې لازمه وي، "
+"څېړنه باید د مناسبو قانوني اړتیاوو له مخې د اخلاقي برخې له کمېټې څخه منل شوې "
+"وي.<p/>\n"
+"<p>که چیرې یوه دا د کیفیت لږ تر لږه معیارونه پوره نه کړي نو ایډیټر کولی شي "
+"یوه مقاله رد کړي. له سپارلو مخکې، مهرباني وکړئ ډاډ ترلاسه کړئ چې د مطالعې "
+"ډیزاین او څېړنیز استدلال سم جوړ شوی او واضح بیان شوی دی. سرلیک باید لنډ وي "
+"او لنډیز باید خپله ځانته واضح او بشپړ وي. دا به دا امکان ډېر کړي چې "
+"بیاکتونکي ستاسو مقاله بیا وګوري. که ډاډه یاست چې مقاله مو دغه معیارونه پوره "
+"کوي، نو مهرباني وکړئ لاندې لېست تعقیب کړئ.<p/>"
+
+msgid "default.contextSettings.checklist"
+msgstr ""
+"<p>ټولې سپارنې باید دا شرایط پوره کړي. </p>\n"
+"<ul>\n"
+"<li>دا سپارنه د لیکوال لپاره له ټاکل شوو لارښودونو<a href=\""
+"{$submissionGuidelinesUrl}\">Author Guidelines</a> سره مطابقت لري.</li>\n"
+"<li>دا سپارنه مخکې نه ده خپره شوې، او دا مهال کوم بل ژورنال ته هم نه ده "
+"وسپارل شوې.</li>\n"
+"<li>ټول ماخذونه د دقت او بشپړتیا له پلوه چېک شوي دي. </li>\n"
+"<li>ټول جدولونه او انځورونه شمېرل شوي او نومول شوي دي.</li>\n"
+"<li>د عکسونو، معلوماتي ټولګو او نورو توکو د خپرولو اجازه ترلاسه شوې ده</li>\n"
+"</ul>"
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"موږ لوستونکو ته سپارښتنه کوو چې د دغه ژورنال د خپرونو د خبرتیاوو لپاره نوم ‌"
+"لیکنه وکړي. د ژورنال د کور پاڼې له سر څخه د <a href=\""
+"{$indexUrl}/{$contextPath}/user/register\">Register</a> لېنک وکاروئ. نوم ‌"
+"لیکنه به د دې لامل شي چې تاسو ته د هرې نوې ګڼې د جدول د مطالبو لېست د "
+"برېښنالیک له لارې در ولېږل شي. دا لېست ژورنال ته دا فرصت ورکوي چې د لوستونکو "
+"شمېر وښيي. د ژورنال د د محرمیت پالیسي <a href=\"{$indexUrl}/{$contextPath}/"
+"about/submissions#privacyStatement\">Privacy Statement</a> وګورئ، چې "
+"لوستونکو ته دا ډاډ ورکوي چې د دوی نوم او برېښنالیک پته به د بلې موخې لپاره "
+"ونه کارول شي."
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"ایا غواړئ چې دغه ژورنال ته مقاله وسپارئ؟ مونږ سپارښتنه کوو چې د ژورنال د "
+"برخو پالیسي<a href=\"{$indexUrl}/{$contextPath}/about\">About the Journal</"
+"a> او د لیکوال لپاره اصول <a href=\"{$indexUrl}/{$contextPath}/about/"
+"submissions#authorGuidelines\">Author Guidelines</a> ولولئ. لیکوالان باید تر "
+"سپارلو مخکې نوم ‌لیکنه وکړي <a href=\"{$indexUrl}/{$contextPath}/user/"
+"register\">register</a>، یا که مخکې نوم ‌لیکل شوی وي، نو یوازې دننه شي <a "
+"href=\"{$indexUrl}/index/login\">log in</a> او د پنځه پړاوه لرونکې سپارنې "
+"پروسه پیل کړي."
+
+msgid "default.genres.researchInstrument"
+msgstr "څېړنیزه وسیله"
+
+msgid "default.genres.researchMaterials"
+msgstr "څېړنیز مواد"
+
+msgid "default.genres.dataAnalysis"
+msgstr "د معلوماتو تحلیل"
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>په دغه ژورنال کې داخل شوي نومونه او برېښنالیکونه به یوازې د دغه ژورنال "
+"لپاره د ټاکل شوو موخو لپاره وکارول شي او بل هېڅ لوري ته نه ورکول کېږي.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"دا ژورنال خپل مطالب سم لاسي د آزاد لاسرسي سره وړاندې کوي، د دې اصل پر اساس "
+"چې څېړنه عامو خلکو ته په وړیا ډول د لاسرسي وړ ده، چې دا د نړیوالې پوهې "
+"تبادله ډېروي."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"مونږ څېړنیزو کتابتونونو ته سپارښتنه کوو چې دا ژورنال د خپل کتابتون په "
+"برېښنایی ژورنالونو کې شامل کړي. همدا راز، د یادونې وړ ده چې د دغه ژورنال د "
+"آزادو سرچینو د خپرولو سیستم د کتابتونونو لپاره مناسب دی چې هغوی یې د خپلو "
+"استادانو لپاره وکاروي، ترڅو هغوی دا سیستم د هغو ژورنالونو لپاره وکاروي چې "
+"دوی پکې د اېډېټ دنده ترسره کوي(see <a href=\"https://pkp.sfu.ca/ojs\">Open "
+"Journal Systems</a>)."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"دا ژورنال د LOCKSS سیسټم کاروي ترڅو په ګډون کوونکو کتابتونونو کې وېشل شوی "
+"آرشیف جوړ کړي او هغو ته اجازه ورکوي چې د ژورنال دايمي آرشیفونه د ساتنې او "
+"بیا ترلاسه کولو لپاره جوړ کړي. <a href=\"https://www.lockss.org\">نور...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"دا ژورنال د CLOCKSS سیسټم کاروي ترڅو په ګډون کوونکو کتابتونونو کې وېشل شوی "
+"آرشیف جوړ کړي او هغو ته اجازه ورکوي چې د ژورنال دايمي آرشیفونه د ساتنې او "
+"بیا ترلاسه کولو لپاره جوړ کړي.<a href=\"https://clockss.org\">نور...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "د ژورنال مدیر"
+
+msgid "default.groups.plural.manager"
+msgstr "د ژورنال مدیران"
+
+msgid "default.groups.abbrev.manager"
+msgstr "ژ‌ م"
+
+msgid "default.groups.name.editor"
+msgstr "د ژورنال اېډېټر"
+
+msgid "default.groups.plural.editor"
+msgstr "د ژورنال اېډېټران"
+
+msgid "default.groups.name.guestEditor"
+msgstr "مېلمه اېډېټر"
+
+msgid "default.groups.abbrev.editor"
+msgstr "ژورنال ایدیتر"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "مېلمه اېډېټران"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "میلمه ایدیتر"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "برخې اېډېټر"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "د برخې اېډېټران"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "برخی ایدیتر"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "د ګډون مدیر"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "د ګډون مدیران"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "د اشتراک مدیران"

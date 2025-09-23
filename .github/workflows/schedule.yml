@@ -1,6 +1,8 @@
 on:
   schedule:
     - cron: '5 5 * * *'
+  workflow_dispatch:
+
 name: schedule
 jobs:
   ojs-main:
@@ -15,18 +17,23 @@ jobs:
             database: pgsql
             test: 'test'
             SAVE_BUILD: 'save_build'
+            upgrade: 'upgrade'
+            upgrade_test: 'stable-3_3_0,stable-3_4_0,stable-3_5_0'
           - php-version: 8.2
             validate: 'validate'
             database: mariadb
             test: 'test'
             SAVE_BUILD: 'save_build'
+            upgrade: 'upgrade'
+            upgrade_test: 'stable-3_4_0,stable-3_5_0'
           - php-version: 8.2
             validate: 'validate'
             database: mysql
             test: 'test'
             SAVE_BUILD: 'save_build'
-
-    name: ojs
+            upgrade: 'upgrade'
+            upgrade_test: 'stable-3_3_0,stable-3_4_0,stable-3_5_0'
+    name: ojs-main
     steps:
       - uses: pkp/pkp-github-actions@v1
         with:
@@ -34,6 +41,42 @@ jobs:
           dataset_branch: 'main'
           DATASETS_ACCESS_KEY:  ${{secrets.DATASETS_ACCESS_KEY}}
           DEBUG_IN_TMATE: false
+
+  ojs-stable-3_5_0:
+    if: github.repository == 'pkp/ojs'
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - php-version: 8.2
+            validate: 'validate'
+            database: pgsql
+            test: 'test'
+            SAVE_BUILD: 'save_build'
+            upgrade: 'upgrade'
+            upgrade_test: 'stable-3_3_0,stable-3_4_0'
+          - php-version: 8.2
+            database: mariadb
+            test: 'test'
+            SAVE_BUILD: 'save_build'
+            upgrade: 'upgrade'
+            upgrade_test: 'stable-3_4_0'
+          - php-version: 8.2
+            database: mysql
+            test: 'test'
+            SAVE_BUILD: 'save_build'
+            upgrade: 'upgrade'
+            upgrade_test: 'stable-3_3_0,stable-3_4_0'
+    name: ojs-stable-3_5_0
+    steps:
+      - uses: pkp/pkp-github-actions@v1
+        with:
+          node_version: 20
+          dataset_branch: 'stable-3_5_0'
+          DATASETS_ACCESS_KEY: ${{secrets.DATASETS_ACCESS_KEY}}
+          DEBUG_IN_TMATE: false
+
   ojs-stable-3_4_0:
     if: github.repository == 'pkp/ojs'
     runs-on: ubuntu-latest
@@ -46,6 +89,8 @@ jobs:
             database: pgsql
             test: 'test'
             SAVE_BUILD: 'save_build'
+            upgrade: 'upgrade'
+            upgrade_test: '3.1.0,stable-3_2_0,stable-3_2_1,stable-3_3_0'
           - php-version: 8.1
             database: mariadb
             test: 'test'
@@ -57,8 +102,6 @@ jobs:
             SAVE_BUILD: 'save_build'
             upgrade: 'upgrade'
             upgrade_test: '3.1.0,3.1.1-2,3.1.2,stable-3_2_0,stable-3_2_1,stable-3_3_0'
-
-
     name: ojs-stable-3_4_0
     steps:
       - uses: pkp/pkp-github-actions@v1
@@ -84,8 +127,7 @@ jobs:
             database: mysql
             test: 'test'
             SAVE_BUILD: 'save_build'
-
-    name: ojs-stable-3_0
+    name: ojs-stable-3_3_0
     steps:
       - uses: pkp/pkp-github-actions@v1
         with:

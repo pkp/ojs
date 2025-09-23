@@ -1,0 +1,49 @@
+.BaseDropdownMenuTrigger {
+	background-color: transparent;
+    border: transparent;
+	cursor: pointer;
+	color: @primary;
+	padding: @half;
+	border-radius: @radius;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.BaseDropdownMenuTriggerIcon {
+	height: @double;
+	width: @double;
+}
+
+.BaseDropdownMenuTrigger:hover {
+	background-color: @primary;
+    color: @bg;
+}
+
+.BaseDropdownMenuItems {
+	background-color: @bg;
+	border-radius: @radius;
+	min-width: 160px;
+	z-index: 50;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+
+}
+
+.BaseDropdownMenuItem {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	font: @font-sml;
+	color: @primary;
+    padding: @half @base;
+
+}
+
+.BaseDropdownMenuItem:hover:not([data-disabled]) {
+	background-color: @bg-shade;
+}
+
+.BaseDropdownMenuItem[data-disabled] {
+	color: @text-light;
+	cursor: not-allowed;
+}

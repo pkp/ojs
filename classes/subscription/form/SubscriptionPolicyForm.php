@@ -182,7 +182,3 @@ class SubscriptionPolicyForm extends Form
         $journalDao->updateObject($journal);
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\subscription\form\SubscriptionPolicyForm', '\SubscriptionPolicyForm');
-}

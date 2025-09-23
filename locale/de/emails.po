@@ -1,11 +1,11 @@
 # Jens Unkenholz <jens.unkenholz@uni-muenster.de>, 2023.
-# Pia Piontkowitz <pia.piontkowitz@rub.de>, 2023.
+# Pia Piontkowitz <pia.piontkowitz@rub.de>, 2023, 2025.
 # Renate Voget <renate.voget@hbz-nrw.de>, 2024.
 # Martin Brändle <martin.braendle@uzh.ch>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-11-04 12:11+0000\n"
-"Last-Translator: Martin Brändle <martin.braendle@uzh.ch>\n"
+"PO-Revision-Date: 2025-04-16 12:58+0000\n"
+"Last-Translator: Pia Piontkowitz <pia.piontkowitz@rub.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/emails/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -164,8 +164,8 @@ msgstr ""
 "Ausgabe zu lesen und mit Anderen Ihrer wissenschaftlichen Community zu "
 "teilen.</p><p>Vielen Dank an unsere Autor/innen, Gutachter/innen und "
 "Redakteur/innen für ihre wertvollen Beiträge - und natürlich an unsere Leser/"
-"innen für das anhaltende Interesse an unserer Arbeit.</p><p>Vielen "
-"Dank</p>{$signature}"
+"innen für das anhaltende Interesse an unserer Arbeit.</p><div>{$issueToc}</"
+"div><p>Vielen Dank</p>{$signature}"
 
 msgid "emails.reviewerRegister.body"
 msgstr ""

@@ -42,11 +42,6 @@ msgstr ""
 "exemple en fonction de votre configuration cronjob). Vous pouvez vérifier "
 "l'ensemble des articles non enregistrés."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Utiliser l'API de test DOAJ (environnement de test) pour l'enregistrement. "
-"N'oubliez pas de désactiver cette option en mode production."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "Tâche d'enregistrement automatique DOAJ"
 

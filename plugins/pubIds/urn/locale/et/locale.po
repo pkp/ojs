@@ -1,0 +1,239 @@
+# "10 ..." <jaana.tonisson@tlulib.ee>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-06 09:42+0000\n"
+"Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
+"Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
+"et/>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr "Palun seadiste URN plugin, et OJS-is saaks kasutada ja hallata URN-e:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "Ajakirja sisu"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "Palun vali objektid, millele URN määrata."
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "Numbrid"
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "Artiklid"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "Küljendatud lõppfailid"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "URN prefiks"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr ""
+"URN prefiks on fikseeritud muutumatu osa URN-is (nt \"urn:nbn:de:0000-\")."
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr "URN-i prefiks peab olema vormis \"urn:\"&lt;NID&gt;\":\"&lt;NSS&gt;."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "URN sufiks"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr "Näiteks vol%viss%ipp%p looks URN-i sufiksi \"vol3iss2pp230\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "numbritele"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "artiklitele"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "küljendatud lõppfailidele"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
+msgstr "Palun sisesta URN-i sufiksi muster artiklite jaoks."
+
+msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "Palun sisesta URN-i sufiksi muster lõppfailide jaoks."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "Kasuta vaikimisi mustreid."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr ""
+"Sisesta individuaalne URN-i sufiks igale avaldatud objektile. Iga objekti "
+"metaandmete lehelt leiad lisa URN-i välja."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "Kontrollnumber"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "Nime koht"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "Vali"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "Lahendaja URL"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(nt https://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "Palun sisesta lahendaja URL."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "Määra URN-id uuesti"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "Kas oled kindel, et soovid kõik olemasolevad URN-id kustutada?"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "number"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "artikkel"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "lõppfail"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "URN-i ei saa määrata, kuna puudub kohandatud sufiks."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "URN-i ei saa määrata, kuna see sisaldab ebasobivat mustrit."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr ""
+"Näed URN-i eelvaadet. Vali märkeruut ja salvesta vorm URN-i määramiseks."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "URN on määratud sellele {$pubObjectType}."
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr ""
+"See URN-i sufiks on juba kasutusel mõnel muul avaldatud objektil. Palun "
+"sisesta unikaalne URN sufiks igale objektile."
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "Kustuta"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Kas oled kindel, et soovid olemasolevat URN-i kustutada?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "Kustuta numbri objektide URN-id"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr ""
+"Kasuta allolevat võimalust URN-i kustutamiseks kõikidelt objektidelt ("
+"artiklid ja lõppfailid), mis on selle numbri jaoks ajatatud."
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Lisa kontrollnumber"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "Määra URN {$pubId} sellele {$pubObjectType}"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "URN-i ei saa määrata, kuna kohandatud sufiks on puudu."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "URN {$pubId} on määratud."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Kontrollnumber on puudu."
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "URN peab algama {$prefix}."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Määra"
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr ""
+"URN-i ei saa genereerida enne, kui kaastöö on määratud ajakirja numbrile."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "URN peab algama {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "Selle objekti URN on {$urn}."
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "Sellele objektile on URN määratud."
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Lõppfail: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Objekt"
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.description"
+msgstr ""
+"See plugin võimaldab OJS-is olevatele numbritele, artiklitele ja küljendatud "
+"lõppfailidele määrata ühtseid ressursside nimesid (Uniform Resource Names)."
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr "Palun vali avaldatavad objektid, millele määratakse URN:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr ""
+"URN-i sufiks võib olla mistahes vormis, kuid peab olema unikaalne igal "
+"objektil, millele määratakse sama URN-i prefiks:"
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr ""
+"URN-i {$pubId} ei saanud määrata, kuna see sisaldab ebatäielikku mustrit."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"URN-i ei saa luua, kuna URN-i mustri üks või mitu osa on puudu. Võimalik, et "
+"pead kaastöö määrama ajakirja numbrile, sisestama kirjastaja ID või "
+"leheküljenumbrid."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr ""
+"Kasuta allolevat mustrit URN-i sufiksite genereerimiseks. Kasuta %j ajakirja "
+"initsiaalide, %v köite, %i numbri, %Y aasta, %a OJS artikli ID, %g OJS "
+"lõppfaili ID, %f OJS faili ID, %p lehekülje numbri ja %x \"Muu "
+"identifikaator\" jaoks."
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "Palun sisesta URN-i sufiksi muster numbrite jaoks."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i numbritele<br />%j.v%vi%i.%a artiklitele<br />%j.v%vi%i.%a.g%g "
+"lõppfailidele."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr ""
+"Kontrollnumber arvutatakse automaatselt ja lisatakse lõppu URN-i viimaseks "
+"numbriks."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr ""
+"Püsiv identifikaatori nimekoht vajab tavaliselt registreerimist (nt Deutsche "
+"Nationalbibliothek)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr ""
+"Kui muudad URN seadistust, siis olemasolevad URN-id ei muutu. Kui URN-i "
+"seadistus on salvestatud, kasuta seda nuppu kõikide olemasolevate URN-ide "
+"kustutamiseks, et uus seadistus saaks mõjuda olemasolevatele objektidele."
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr ""
+"Kas oled kindel, et soovid olemasolevad numbri objektide URN-id kustutada?"

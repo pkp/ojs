@@ -1,16 +1,17 @@
 # Huang Feilong <hfl@nominsang.org>, 2021.
+# wenshao521！ <wainixueer3334@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-10-23 23:29+0000\n"
-"Last-Translator: Huang Feilong <hfl@nominsang.org>\n"
+"PO-Revision-Date: 2025-05-15 10:57+0000\n"
+"Last-Translator: wenshao521！ <wainixueer3334@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
-"ojs/themes-default/zh_CN/>\n"
-"Language: zh_CN\n"
+"ojs/themes-default/zh_Hans/>\n"
+"Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.themes.default.name"
 msgstr "默认主题"
@@ -64,22 +65,28 @@ msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
 msgstr "将首页图像显示为标头背景。"
 
 msgid "plugins.themes.default.option.displayStats.label"
-msgstr ""
+msgstr "使用统计显示选项"
 
 msgid "plugins.themes.default.option.displayStats.none"
-msgstr ""
+msgstr "不向读者显示提交稿件的使用统计图表。"
 
 msgid "plugins.themes.default.option.displayStats.bar"
-msgstr ""
+msgstr "使用条形图显示使用统计数据。"
 
 msgid "plugins.themes.default.option.displayStats.line"
-msgstr ""
+msgstr "使用折线图显示使用统计数据。"
 
 msgid "plugins.themes.default.displayStats.monthInitials"
-msgstr ""
+msgstr "一月 二月 三月 四月 五月 六月 七月 八月 九月 十月 十一月 十二月"
 
 msgid "plugins.themes.default.displayStats.downloads"
-msgstr ""
+msgstr "下载次数"
 
 msgid "plugins.themes.default.displayStats.noStats"
-msgstr ""
+msgstr "下载数据尚不可用。"
+
+msgid "plugins.themes.default.nextSlide"
+msgstr "下一页"
+
+msgid "plugins.themes.default.prevSlide"
+msgstr "上一页"

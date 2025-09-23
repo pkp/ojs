@@ -19,6 +19,7 @@ namespace APP\controllers\grid\toc;
 use APP\core\Application;
 use APP\core\Request;
 use APP\facades\Repo;
+use APP\publication\Publication;
 use APP\section\Section;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\submission\Submission;
@@ -29,7 +30,6 @@ use PKP\core\JSONMessage;
 use PKP\db\DAO;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\Role;
-use PKP\submission\PKPSubmission;
 
 class TocGridHandler extends CategoryGridHandler
 {
@@ -255,7 +255,7 @@ class TocGridHandler extends CategoryGridHandler
         if ($submission && $request->checkCSRF()) {
             foreach ($submission->getData('publications') as $publication) {
                 if ($publication->getData('issueId') === (int) $issue->getId()
-                        && in_array($publication->getData('status'), [PKPSubmission::STATUS_SCHEDULED, PKPSubmission::STATUS_PUBLISHED])) {
+                        && in_array($publication->getData('status'), [Publication::STATUS_SCHEDULED, Publication::STATUS_PUBLISHED])) {
                     Repo::publication()->unpublish($publication);
                     $publication = Repo::publication()->get($publication->getId());
                     Repo::publication()->edit(

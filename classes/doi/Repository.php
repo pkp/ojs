@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/doi/Repository.php
  *
@@ -13,6 +14,7 @@
 
 namespace APP\doi;
 
+use APP\core\Application;
 use APP\core\Request;
 use APP\facades\Repo;
 use APP\issue\Issue;
@@ -203,7 +205,7 @@ class Repository extends \PKP\doi\Repository
 
 
         /** @var JournalDAO $contextDao */
-        $contextDao = DAORegistry::getDAO('JournalDAO');
+        $contextDao = Application::getContextDAO();
         /** @var Journal $context */
         $context = $contextDao->getById($submission->getData('contextId'));
 
@@ -214,15 +216,45 @@ class Repository extends \PKP\doi\Repository
             }
 
             // Galleys
-            $galleys = Repo::galley()->getCollector()
-                ->filterByPublicationIds(['publicationIds' => $publication->getId()])
-                ->getMany();
-
+            $galleys = $publication->getData('galleys');
             foreach ($galleys as $galley) {
                 $galleyDoiId = $galley->getData('doiId');
                 if (!empty($galleyDoiId) && $context->isDoiTypeEnabled(self::TYPE_REPRESENTATION)) {
                     $doiIds->add($galleyDoiId);
                 }
+            }
+        }
+
+        return $doiIds->unique()->toArray();
+    }
+
+    /**
+     * Gets all DOI IDs related to a publication
+     *
+     * @return array<int> DOI IDs
+     */
+    public function getDoisForPublication(Publication $publication): array
+    {
+        $doiIds = Collection::make();
+
+        $submission = Repo::submission()->get($publication->getData('submissionId'));
+
+        /** @var JournalDAO $contextDao */
+        $contextDao = Application::getContextDAO();
+        /** @var Journal */
+        $context = $contextDao->getById($submission->getData('contextId'));
+
+        $publicationDoiId = $publication->getData('doiId');
+        if (!empty($publicationDoiId) && $context->isDoiTypeEnabled(self::TYPE_PUBLICATION)) {
+            $doiIds->add($publicationDoiId);
+        }
+
+        // Galleys
+        $galleys = $publication->getData('galleys');
+        foreach ($galleys as $galley) {
+            $galleyDoiId = $galley->getData('doiId');
+            if (!empty($galleyDoiId) && $context->isDoiTypeEnabled(self::TYPE_REPRESENTATION)) {
+                $doiIds->add($galleyDoiId);
             }
         }
 

@@ -39,7 +39,7 @@ describe('Change Submission Language', function() {
 		cy.login(user, password, 'publicknowledge');
 		cy.get('nav').contains('Published').click();
 		cy.openSubmission(author.familyName);
-		cy.get('[data-cy="workflow-controls-left"] button').contains('Change').should('not.exist');
+		cy.get('[data-cy="workflow-controls-left"] button:contains("Change")').should('not.exist');
 	});
 
 	it('Change submission language', function() {
@@ -47,7 +47,7 @@ describe('Change Submission Language', function() {
 		cy.get('nav').contains('Published').click();
 		cy.openSubmission(author.familyName);
 		// Unpublish
-		cy.openWorkflowMenu('Title & Abstract')
+		cy.openWorkflowMenu('Version of Record 1.0', 'Title & Abstract')
 		cy.get('button:contains("Unpublish")').click();
 		cy.get('[data-cy="dialog"] button:contains("Unpublish")').click();
 		// Change language
@@ -62,14 +62,20 @@ describe('Change Submission Language', function() {
 	it('Change submission language back to the original', function() {
 		cy.findSubmissionAsEditor(user, password, author.familyName);
 		// Change language
-		cy.openWorkflowMenu('Title & Abstract')
+		cy.openWorkflowMenu('Version of Record 1.0', 'Title & Abstract')
 		cy.get('[data-cy="workflow-controls-left"] button').contains('Change').click();
 		cy.get('#changeSubmissionLanguage').find(`input[value="${originalLocaleKey}"]`).click();
 		cy.get('#changeSubmissionLanguage button[label="Confirm"]').click();
+		
 		// Publish
 		cy.contains(`Current Submission Language: ${originalLanguage}`);
-		cy.openWorkflowMenu('Title & Abstract')
+		cy.openWorkflowMenu('Version of Record 1.0', 'Title & Abstract')
 		cy.get('button:contains("Schedule For Publication")').click();
+		cy.get(('[data-cy="active-modal"]')).find('label:Contains("Assign To Current/Back Issue")').click();
+		cy.wait(500); // wait for the issues to load
+		cy.get(('[data-cy="active-modal"]')).find('select[name="issueId"]').select('Vol. 1 No. 2 (2014)');
+		cy.get(('[data-cy="active-modal"]')).find('button:Contains("Confirm")').click();
+		cy.wait(1000);
 		cy.get('[data-cy="active-modal"] button:contains("Publish")').click();
 	});
 });

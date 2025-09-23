@@ -1,0 +1,29 @@
+# "10 ..." <jaana.tonisson@tlulib.ee>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-06 09:42+0000\n"
+"Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
+"Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-recommendBySimilarity/et/>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.generic.recommendBySimilarity.displayName"
+msgstr "Soovita sarnaseid artikleid"
+
+msgid "plugins.generic.recommendBySimilarity.description"
+msgstr ""
+"See plugin lisab artikli kokkuvõtte lehele nimekirja sarnastest artiklitest."
+
+msgid "plugins.generic.recommendBySimilarity.heading"
+msgstr "Sarnased artiklid"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearch"
+msgstr "alusta täiendavat sarnasuse otsingut"
+
+msgid "plugins.generic.recommendBySimilarity.advancedSearchIntro"
+msgstr "Võid ka {$advancedSearchLink} sellele artiklile."

@@ -1,0 +1,86 @@
+# Darius Zviedris <darius.zviedris@lki.lt>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-09-02 11:20+0000\n"
+"Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
+"Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/api/lt/>"
+"\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
+"19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
+"1 : 2);\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Jūsų prašomas pranešimas nėra šio žurnalo dalis."
+
+msgid "api.emails.403.disabled"
+msgstr "Šiam žurnalui neįjungta el. pašto pranešimų funkcija."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "Jūsų prašomo pateikimo šiame žurnale nėra."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Pateikimo žurnalo pakeisti negalima."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Jums neleidžiama peržiūrėti nepaskelbtų numerių."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Galite peržiūrėti tik tuos žurnalus, kurie yra įjungti."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Jūs neturite leidimo peržiūrėti šio žurnalo."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Šio žurnalo negalite peržiūrėti ar redaguoti, nebent pateiksite užklausą "
+"žurnalo API arba visos svetainės API."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Šio žurnalo negalima redaguoti naudojant visos svetainės API."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Jūs neturite leidimo redaguoti šio žurnalo."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Jūs neturite leidimo ištrinti šio žurnalo."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Jūsų ieškomas žurnalas nerastas."
+
+msgid "api.dois.403.contextsNotMatched"
+msgstr "Jūsų prašytas DOI nėra šio žurnalo dalis."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "Šiam žurnalui nesukonfigūruota jokia DOI registracijos agentūra."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Kai kurių elementų nepavyko sėkmingai įnešti. Patikrinkite atskirus "
+"elementus, ar nėra konkrečių klaidų pranešimų."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "Jūs neturite leidimo perkelti šio el. laiško šablono į kitą žurnalą."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Pasirinktas mokėjimo būdas nepalaikomas."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Jūsų prašomas leidinys nėra šio žurnalo dalis."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Jūsų prašomas leidinys nėra šio pateikimo dalis."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Šio failo etapo failo negalima susieti su virtuve."
+
+msgid "api.publications.403.paymentFeesNotEnabled"
+msgstr ""
+"Pateikimo mokėjimo forma nepasiekiama, nes publikavimo mokesčiai neįjungti."
+
+msgid "api.submission.400.inactiveSection"
+msgstr "Į šį skyrių paraiškos nebepriimamos."

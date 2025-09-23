@@ -1,0 +1,251 @@
+# Juan Pablo Martínez <juanpabl@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-05-29 22:50+0000\n"
+"Last-Translator: Juan Pablo Martínez <juanpabl@gmail.com>\n"
+"Language-Team: Aragonese <http://translate.pkp.sfu.ca/projects/ojs/admin/an/>"
+"\n"
+"Language: an\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "admin.hostedContexts"
+msgstr "Revistas alochadas"
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Las configuracions rechionals marcadas pueden estar incompletas."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Ye seguro/a que deseya desinstalar esta configuración rechional? Esto puede "
+"afectar a cualsequier revista alochada que sía utilizando actualment dita "
+"configuración rechional."
+
+msgid "admin.systemConfiguration"
+msgstr "Configuración d'OJS"
+
+msgid "admin.journals.journalSettings"
+msgstr "Configuración d'a revista"
+
+msgid "admin.contexts.create"
+msgstr "Crear revista"
+
+msgid "admin.journals.noneCreated"
+msgstr "No s'ha creau garra revista."
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Una parola curta u acronimo pa identificar la revista. L'adreza URL d'a "
+"revista será {$sampleUrl}."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Fa falta un títol."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Escriba una rota."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Habilitar esta revista pa que amaneixca de forma publica en o puesto"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Descripción d'a revista"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr "Rota actual d'a revista u rota que se deseya crear (p. eix. \"ojs\")."
+
+msgid "admin.contexts.form.pathExists"
+msgstr "La rota triada ya ye emplegada per unatra revista."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr ""
+"La configuración rechional principal ha d'estar una d'as configuracions "
+"rechionals compatibles con a revista."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Importar subscripcions"
+
+msgid "admin.journals.transcode"
+msgstr "Transcodificar metadatos d'articlos de ISO8859-1"
+
+msgid "admin.journals.redirect"
+msgstr "Chenerar codigo pa asignar adrezas URL OJS 1 a URL OJS 2"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Se requiere la rota d'importación."
+
+msgid "admin.journals.importErrors"
+msgstr "La importación no s'ha completau correctament"
+
+msgid "admin.mergeUsers"
+msgstr "Fusionar usuarios/as"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Fusionar usuario/a"
+
+msgid ""
+"admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "La ID de numero (Issue ID) no coincide con assoc ID."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Tríe totas las configuracions rechionals que serán compatibles con o puesto. "
+"Las configuracions rechionals triadas serán disponibles pa totas las "
+"revistas alochadas en o puesto y tamién amaneixerán en o menú de selección "
+"d'idioma en cada pachina d'o puesto (puede estar anulau en pachinas "
+"especificas d'as revistas). Si no ha triau mas d'una configuración "
+"rechional, lo menú de selección no amaneixerá y la configuración extendida "
+"de idioma no será disponible pa las revistas."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Tríe cualsequier configuración rechional adicional pa instalar lo suyo "
+"suporte en este sistema. Ha d'instalar las configuracions rechionals antes "
+"que las revistas alochadas puedan fer-las serivr. Mire-se la documentación "
+"de OJS pa obtener mas información u pa anyadir suporte pa nuevos idiomas."
+
+msgid "admin.systemConfigurationDescription"
+msgstr "Achustes d'a configuración d'OJS de <tt>config.inc.php</tt>."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"La rota nomás puede contener carácters alfanumericos, guions e guions "
+"baixos, y ha d'empecipiar y rematar con un carácter alfanumerico."
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Tríe un (u varios) usuarios/as pa fusionar-los en unatra cuenta de usuario/a "
+"(p. eix. cuan bel usuario/a tiene dos cuentas distintas). La cuenta/s triada "
+"en primer puesto será eliminada/s y toz los ninvios, asignacions, etc. "
+"s'atribuyirán a la segunda cuenta."
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Ye seguro/a que deseya fusionar la cuenta/s triada {$oldAccountCount} con a "
+"cuenta con o nombre d'usuario/a \"{$newUsername}\"? Las cuentas triadas "
+"{$oldAccountCount} deixarán de existir. Esta acción no ye reversible."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Tríe las revistas alochadas que habrían de tener permiso pa ninviar correus "
+"electronicos masivos. Cuan s'activa esta caracteristica, l'administrador/a "
+"d'a revista puede ninviar un correu electronico a toz los usuarios/as "
+"rechistraus.<br><br>Un uso indebiu d'esta funcionalidat podría violar las "
+"leis en contra d'o correu vasuera de cualques churisdiccions, lo que "
+"provocaría lo bloqueyo d'os correus electronicos procedents d'o suyo "
+"servidor. Busque asesoramiento tecnico antes d'activar esta caracteristica e "
+"considere consultar-lo con os administradors/as d'as revistas pa asegurar-se "
+"que s'usa correctament.<br><br>Se pueden activar mas restriccions a esta "
+"funcionalidat pa cada revista a traviés de l'asistent de configuración en o "
+"listau de <a href=\"{$hostedContextsUrl}\">revistas alochadas</a>."
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+"Tríe lo tipo d'estatisticas d'uso cheograficas que pueden recopilar las "
+"revistas d'este puesto. Unas estatisticas cheograficas mas detalladas pueden "
+"aumentar considerablement la grandaria d'a suya base de datos y, en cualques "
+"casos excepcionals, pueden socavar lo anonimato d'os suyos visitants. Cada "
+"revista puede configurar esta opción de forma diferent, pero una revista "
+"nunca no puede recopilar rechistros mas detallaus que los configuraus aquí. "
+"Per eixemplo, si lo puesto nomás admite lo país e la rechión, la revista "
+"puede triar lo país e la rechión, u nomás lo país. La revista no podrá fer "
+"un seguimiento d'o país, la rechión e la ciudat."
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+"Active las estatisticas institucionals si deseya que las revistas d'este "
+"puesto puedan recopilar estatisticas d'uso per institución. Las revistas "
+"habrán d'anyadir la institución e los suyos rangos d'IP pa usar esta "
+"función. Activar las estatisticas institucionals puede aumentar "
+"considerablement la grandaria d'a suya base de datos."
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""
+"Activar u desactivar los puntos finals (endpoints) de l'API SUSHI pa que "
+"sían accesibles publicament pa totas las revistas d'este puesto. Si habilita "
+"la API publica, cada revista podrá anular esta configuración pa que las "
+"suyas estatisticas sían privadas. Manimenos, si desactiva l'API publica, las "
+"revistas no podrán fer publica la suya propia API."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+"Este será l'idioma predeterminau pa lo puesto e pa totas las revistas que "
+"aloche."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Ye seguro que deseya desactivar esta configuración rechional? Esto puede "
+"afectar a las revistas alochadas que actualment usan esta configuración "
+"rechional."
+
+msgid "admin.settings.redirect"
+msgstr "Redirichir revista"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Las solicituz pa acceder a lo puesto prencipal se redirichirán enta esta "
+"revista. Esto puede resultar-le útil si lo puesto nomás alocha una revista, "
+"per eixemplo."
+
+msgid "admin.systemVersion"
+msgstr "Versión d'OJS"
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Se le asignará de forma automatica lo rol de chestor/a d'a revista. Dimpués "
+"de crear una nueva revista, acceda a ella como chestor/a pa continar con a "
+"configuración y lo rechistro d'usuarios/as."
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Tríe un usuario/a pa atribuyir-le las autorías de l'anterior usuario/a, "
+"editar asignacions, etc."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Toz los usuarios/as rechistraus"
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Usuarios/as no rechistraus."
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Notificación d'acceso ubierto"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Recordatorio de revisión"
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Recordatorio de caducidat d'a subscripción"
+
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
+msgstr "L'ID d'o numero (issue ID) no ye un entero."
+
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
+msgstr "La ID de galerada de numero (Issue galley ID) no ye un entero."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"L'administrador/a d'a revista no podrá ninviar correus electronicos masivos "
+"a garra d'os rols triaus debaixo. Faga servir este achuste pa limitar "
+"l'abuso d'a funcionalidat de notificación per correu electronico. Per "
+"eixemplo, podría estar mas seguro desactivar los correus electronicos "
+"masivos pa lectors/as, autors/as u atros grupos con muitos usuarios/as que "
+"no haigan dau lo suyo consentimiento pa recibir esta mena de correus "
+"electronicos.<br><br>La funcionalidat de correus electronicos masivos se "
+"puede desactivar completament en esta revista en <a href=\"{$siteSettingsUrl}"
+"\">Admin > Achustes d'o puesto</a>."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"Lo correu electronico masivo s'ha desactivau en esta revista. Pa tornar a "
+"activar-lo vaiga ta <a href=\"{$siteSettingsUrl}\">Admin > Achustes d'o "
+"puesto</a>."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"Anyada, edite u elimine revistas y administre la configuración de tot lo "
+"puesto."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Fer servir este puesto como plataforma pa totas las revistas."

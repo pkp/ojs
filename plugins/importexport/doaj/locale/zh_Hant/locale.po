@@ -38,10 +38,6 @@ msgstr ""
 "OJS將會自動典藏文章至DOAJ。請注意，此步驟在出版後需要一些時間（例如：視乎您的"
 "cronjob設置）。您可以點選所有未註冊文章。"
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"使用DOAJ測試API（測試環境）註冊。請不要忘記在正式製作程序時移除此選項。"
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "DOAJ自動註冊工序"
 

@@ -1,7 +1,7 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-02-13 08:08+0000\n"
+"PO-Revision-Date: 2025-04-13 17:21+0000\n"
 "Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
 "Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/locale/mr/>"
 "\n"
@@ -16,7 +16,7 @@ msgid "context.select"
 msgstr "इतर नियतकलिकांकडे वळा :"
 
 msgid "navigation.current"
-msgstr "वर्तमान"
+msgstr "वर्तमान अंक"
 
 msgid "section.title"
 msgstr "विभागाचे शिर्षक"
@@ -653,7 +653,7 @@ msgid "issue.issue"
 msgstr "अंक"
 
 msgid "issue.issues"
-msgstr "अंक (अनेक)"
+msgstr "अंक"
 
 msgid "issue.title"
 msgstr "शिर्षक"
@@ -739,7 +739,7 @@ msgid "subscriptions.status.needsInformation"
 msgstr "माहिती हवी"
 
 msgid "subscriptions.status.awaitingManualPayment"
-msgstr "शुल्क भरण्याच्या प्रतीक्षेत"
+msgstr "मानवी/प्रस्थापित पद्धतीने शुल्क भरण्याच्या प्रतीक्षेत"
 
 msgid "subscriptions.status.noSubscription"
 msgstr "तुमची सदस्यता सक्रिय नाही."
@@ -1269,7 +1269,7 @@ msgstr ""
 "<p>पब्लिक नॉलेज प्रोजेक्टचे <strong>मुक्त नियतकालिक प्रणाली (ओपन जर्नल "
 "सिस्टम्स)</strong> उतरवून घेतल्याबद्दल (डाउनलोड केल्याबद्दल) धन्यवाद. याच्या "
 "वापरापूर्वी, कृपया या आज्ञावलीमध्ये समाविष्ट केलेली <a href=\"{$baseUrl}/"
-"docs/README.md\">README</a> फाईल वाचा. पब्लिक नॉलेज प्रोजेक्ट आणि त्याच्या "
+"README.md\">README</a> फाईल वाचा. पब्लिक नॉलेज प्रोजेक्ट आणि त्याच्या "
 "आज्ञावली प्रकल्पांबद्दल अधिक माहितीसाठी, कृपया <a href=\"https://pkp.sfu.ca/"
 "\" target=\"_blank\">PKP च्या संकेतस्थळाला</a> भेट द्या. तुम्हाला मुक्त "
 "नियतकालिक प्रणालीतील दोष (बग) निदर्शनास आणायचे किंवा तांत्रिक बाबींबद्दल "
@@ -1844,7 +1844,8 @@ msgid "user.subscriptions.status.needsApprovalDescription"
 msgstr "सदस्यता सक्रिय करण्यापूर्वी त्याचा आढावा घेणे आवश्यक आहे"
 
 msgid "user.subscriptions.status.awaitingManualPaymentDescription"
-msgstr "रक्कम पाठवली गेली आहे परंतु अद्याप ती पोहोचली नाही"
+msgstr ""
+"मानवी/प्रस्थापित पद्धतीने रक्कम पाठवली गेली आहे परंतु अद्याप ती पोहोचली नाही"
 
 msgid "user.subscriptions.individualSubscriptions"
 msgstr "वैयक्तिक सदस्यत्व"
@@ -2394,7 +2395,7 @@ msgid "grid.action.createContext"
 msgstr "नव्या नियतकालिकाची निर्मिती करा"
 
 msgid "editor.navigation.issues"
-msgstr "अंक (अनेक)"
+msgstr "अंक"
 
 msgid "notification.type.approveSubmission"
 msgstr ""
@@ -2437,3 +2438,6 @@ msgstr "लेखांचा क्रम"
 
 msgid "catalog.sortBy.categoryDescription"
 msgstr "या गटातील लेखांचा क्रम कसा लावायचा त्याची निवड करा."
+
+msgid "search.journal"
+msgstr "नियतकालिकानुसार शोधा"

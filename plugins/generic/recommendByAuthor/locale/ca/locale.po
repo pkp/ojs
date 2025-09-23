@@ -21,11 +21,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Articles més llegits del mateix autor/a"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""
-"Nota: Aquest mòdul necessita que com a mínim s'activi un mòdul "
-"d'estadístiques/informes. Si els vostres mòduls d'estadístiques proporcionen "
-"més d'una mètrica, seleccioneu també aleshores una mètrica principal en la "
-"pàgina de configuració de l'administrador/a del lloc i/o en les pàgines "
-"d'administració de la revista."

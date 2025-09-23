@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @defgroup oai_format OAI Formats
  */
@@ -33,8 +34,4 @@ class OAIMetadataFormat_DC extends \PKP\plugins\oaiMetadataFormats\dc\PKPOAIMeta
         $article = & $record->getData('article');
         return parent::toXml($article, $format);
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\oaiMetadataFormats\dc\OAIMetadataFormat_DC', '\OAIMetadataFormat_DC');
 }

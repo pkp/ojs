@@ -1,16 +1,17 @@
 # Huang Feilong <hfl@nominsang.org>, 2021.
+# wenshao521！ <wainixueer3334@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-11-09 12:41+0000\n"
-"Last-Translator: Huang Feilong <hfl@nominsang.org>\n"
+"PO-Revision-Date: 2025-05-15 10:57+0000\n"
+"Last-Translator: wenshao521！ <wainixueer3334@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
-"ojs/submission/zh_CN/>\n"
-"Language: zh_CN\n"
+"ojs/submission/zh_Hans/>\n"
+"Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "submission.submit.userGroup"
 msgstr "以下列角色提交……"
@@ -116,9 +117,8 @@ msgstr "已批准"
 msgid "submission.incomplete"
 msgstr "等待批复中"
 
-#, fuzzy
 msgid "submission.submit.submissionChecklist"
-msgstr "稿件清单"
+msgstr "提交清单"
 
 msgid "submission.submit.privacyStatement"
 msgstr "隐私声明"
@@ -289,61 +289,75 @@ msgid "submission.queries.production"
 msgstr "出版讨论"
 
 msgid "editor.submission.decision.backToReview"
-msgstr ""
+msgstr "返回审稿"
 
 msgid "editor.submission.decision.backToReview.description"
-msgstr ""
+msgstr "撤回接受该提交的决定，并将其送回审稿阶段。"
 
 msgid "editor.submission.decision.backToReview.log"
-msgstr ""
+msgstr "{$editorName} 撤回了接受该提交的决定，并将其送回审稿阶段。"
 
 msgid "editor.submission.decision.backToReview.completed"
-msgstr ""
+msgstr "送回审稿"
 
 msgid "editor.submission.decision.backToReview.completed.description"
-msgstr ""
+msgstr "提交的稿件 {$title} 被送回审稿阶段。"
 
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
-msgstr ""
+msgstr "向作者发送电子邮件，告知他们其提交稿件已被送回审稿阶段。解释做出此决定的原因"
+"，并告知作者将进行的进一步审稿工作。"
 
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
+"向作者发送电子邮件，告知他们该提交稿件将送交同行评审。如果可能，给作者一些关"
+"于同行评审过程可能需要多长时间的提示，并告知他们何时可以期待再次收到编辑的回"
+"复。此电子邮件将在决定被记录后才会发送。"
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
-msgstr ""
+msgstr "选择应发送至审稿阶段的文件。"
 
 msgid "doi.submission.issueMissing.publication"
-msgstr ""
+msgstr "无法为以下提交稿件创建 DOI: "
+"{$pubObjectTitle}。必须先将提交稿件分配到某一期刊期次，才能生成 DOI。"
 
 msgid "doi.submission.issueMissing.representation"
 msgstr ""
+"无法为以下提交稿件 {$itemTitle} 的 {$pubObjectTitle} 排版稿创建 "
+"DOI。必须先将提交稿件分配到某一期刊期次，才能生成 DOI。"
 
 msgid "doi.submission.incorrectContext"
-msgstr ""
+msgstr "无法为以下提交稿件创建 DOI: "
+"{$pubObjectTitle}。该稿件在当前期刊上下文中不存在。"
 
 msgid "submission.layout.viewGalley"
-msgstr ""
+msgstr "查看排版稿"
 
 msgid "galley.cantEditPublished"
-msgstr ""
+msgstr "该排版稿已发布，无法编辑。"
 
 msgid "submission.copyright.description"
-msgstr ""
+msgstr "请阅读并理解本期刊提交稿件的版权条款。"
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
+"您无权向本期刊提交稿件，因为作者必须由编辑部注册。如您认为这是错误，请联系 "
+"<a href='mailto:{$email}'>{$name}</a>。"
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
+"您无权向本期刊提交稿件，因为本期刊所有栏目已被禁用或限制提交。如您认为这是错"
+"误，请联系 <a href='mailto:{$email}'>{$name}</a>。"
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
+"{$contextName} 不接受 {$section} 栏目的稿件提交。如需帮助恢复您的提交，"
+"请联系 <a href='mailto:{$email}'>{$name}</a>。"
 
 msgid "submission.sectionNotFound"
-msgstr ""
+msgstr "未找到该提交对应的栏目。"
 
 msgid "submission.sectionRestrictedToEditors"
-msgstr ""
+msgstr "仅允许编辑部人员向此栏目提交稿件。"
 
 msgid "submission.submit.form.authorRequired"
 msgstr "至少要有一位作者。"

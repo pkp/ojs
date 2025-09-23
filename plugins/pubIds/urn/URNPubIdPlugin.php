@@ -23,6 +23,7 @@ use APP\plugins\pubIds\urn\classes\form\FieldPubIdUrn;
 use APP\plugins\pubIds\urn\classes\form\FieldTextUrn;
 use APP\plugins\pubIds\urn\classes\form\URNSettingsForm;
 use APP\template\TemplateManager;
+use Illuminate\Support\Str;
 use PKP\components\forms\FormComponent;
 use PKP\components\forms\publication\PKPPublicationIdentifiersForm;
 use PKP\linkAction\LinkAction;
@@ -353,7 +354,7 @@ class URNPubIdPlugin extends PubIdPlugin
                 'value' => $form->publication->getData('pub-id::other::urn'),
                 'prefix' => $prefix,
                 'pattern' => $pattern,
-                'contextInitials' => $form->submissionContext->getData('acronym', $form->submissionContext->getData('primaryLocale')) ?? '',
+                'contextInitials' => preg_replace('/[^-._;()\/A-Za-z0-9]/', '', Str::lower($form->submissionContext->getData('acronym', $form->submissionContext->getData('primaryLocale')) ?? '')),
                 'submissionId' => $form->publication->getData('submissionId'),
                 'assignIdLabel' => __('plugins.pubIds.urn.editor.urn.assignUrn'),
                 'clearIdLabel' => __('plugins.pubIds.urn.editor.clearObjectsURN'),
@@ -550,8 +551,4 @@ class URNPubIdPlugin extends PubIdPlugin
 
         return $quotString[strlen($quotString) - 1];
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\pubIds\urn\URNPubIdPlugin', '\URNPubIdPlugin');
 }

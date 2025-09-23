@@ -36,9 +36,6 @@ msgstr "ستجد مفتاح واجهة التطبيق على صفحة المست
 msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
 msgstr "نظام المجلات المفتوحة سيقوم بإيداع المقالات تلقائياً في DOAJ. لطفاً، خذ بنظر الاعتبار أن هذه العملية قد تستغرق وقتاً قصيراً بُعيد النشر لأغراض المعالجة (أي اعتماداً على إعداداتك للإضافة cronjob). بإمكانك دوماً التحقق من وجود مقالات غير مسجلة فيه."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr "استعمل واجهة التطبيق الاختبارية لـ DOAJ (بيئة إختبارية) لغرض التسجيل. لطفاً، إحرص على إزالة هذا الخيار عند مرحلة الإنتاج الفعلي."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "وظيفة التسجيل التلقائي في DOAJ"
 

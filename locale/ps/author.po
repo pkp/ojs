@@ -1,0 +1,315 @@
+# Jan Mohammad Rasa <eng.omid.rasa@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-21 20:59+0000\n"
+"Last-Translator: Jan Mohammad Rasa <eng.omid.rasa@gmail.com>\n"
+"Language-Team: Pashto <http://translate.pkp.sfu.ca/projects/ojs/author/ps/>\n"
+"Language: ps\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "author.track"
+msgstr "استول شوې مقالې"
+
+msgid "author.submit.startHereTitle"
+msgstr "د مقالې لېږل له دې ځايه پيل کړئ"
+
+msgid "author.submit.step1"
+msgstr "لمړی پړاو: د مقالې لېږلو پيل"
+
+msgid "author.submit.step2"
+msgstr "دویم پړاو: د مقالې پورته کول"
+
+msgid "author.submit.step3"
+msgstr "درېم پړاو: لومړنۍ (ميټا) ډاټا ثبتول"
+
+msgid "author.submit.step4"
+msgstr "څلورم پړاو: د مقالې اړوند فايلونه پورته کول"
+
+msgid "author.submit.step4a"
+msgstr "څلورم \"الف\" پړاو: د مقالې د لومړي اړوند فايل پورته کول"
+
+msgid "author.submit.start"
+msgstr "پيل"
+
+msgid "author.submit.upload"
+msgstr "د مقالې پورته کول"
+
+msgid "author.submit.metadata"
+msgstr "لومړنۍ (ميټا) ډاټا ثبت کول"
+
+msgid "author.submit.nextSteps"
+msgstr "راتلونکي پړاوونه"
+
+msgid "author.submit.requestWaiver"
+msgstr "د فيس د معافي غوښتنه"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "مهرباني وکړئ، دا مقاله وړيا ثبت کړئ"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "د مقالې د وړيا ثبت دليل دلته وليکئ."
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "بيا کتنه کې: د سمون اړتيا"
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "د بيا کتنې پړاو کې {round$}"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "ايډېټ کې: د کاپي ايډيټ غوښتنه"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "ايډېټ کې: د بيا لوستنې غوښتنه"
+
+msgid "author.submissions.confirmDelete"
+msgstr "آيا غواړئ چې دا نيمګړې نسخه ړنګه کړئ؟"
+
+msgid "author.submissions.viewStatus"
+msgstr "د کتنې حالت"
+
+msgid "author.submissions.noSubmissions"
+msgstr "د مقالې ثبت شوې نسخه شتون نلري."
+
+msgid "author.submit.journalSection"
+msgstr "د ژورنال برخه"
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "مخکې له دې چې مخکې ولاړ شئ، د چاپ د حقوقو په شرايطو بايد برابر و اوسئ."
+
+msgid "submission.submit.coverNote"
+msgstr "د اېډېټور تبصرې"
+
+msgid "author.submit.comments"
+msgstr "متن وليکئ (اختياري)"
+
+msgid "author.submit.reorder"
+msgstr "د ليکوالو نومونه بياځلي تنظيمول"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "د اداري ليکنو لپاره د اصلي اړيکې شمېره."
+
+msgid "author.submit.addAuthor"
+msgstr "ليکوال اضافه کړئ"
+
+msgid "author.submit.deleteAuthor"
+msgstr "ليکوال لرې کړئ"
+
+msgid "author.submit.coverageInstructions"
+msgstr "د ځای، وخت يا د څېړنې د نمونې ځانګړتياوو ته اشاره کوي."
+
+msgid "author.submit.form.authorRequired"
+msgstr "له تر لږه يو ليکوال بايد شتون ولري."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "د هر ليکوال نوم، تخلص او بريښناليک پته اړين دی."
+
+msgid "author.submit.form.titleRequired"
+msgstr "مهرباني وکړئ د مقالې سرليک وليکئ."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "مهربانې وکړئ د مقالې لنډيز وليکئ."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "تاسو د دې برخې لپاره د مقالې د لنډیز د کلمو ټاکل شوی حد پوره کړی دی."
+
+msgid "author.submit.submissionFile"
+msgstr "د مقالې فایل لېږل"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "د مقالې فایل پورته کول"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "مقاله فایل نه ده پورته شوې."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr ""
+"د فايل د پورته کولو لپاره د ثبت تڼۍ کيکاږئ (له دې وروسته کولای شئ اړوند "
+"اضافي فايلونه هم پورته کړئ)."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "آیا غواړئ چې له د اضافي فايلونو له پورته کولو پرته دوام ورکړئ؟"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "له دې مقالې سره هېڅ اړوند اضافي فايلونه نه دی ثبت شوی."
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "بېرته اضافي اړوندو فايلونو ته ورګرځېدل"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "آيا غواړئ دا اضافي فايل لرې کړئ؟"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "اضافي فايل پورته کړئ"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "اضافي فايل زيات کړئ"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "اضافي فايل سم کړئ"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "د اضافي فايل ميټا ډټا"
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "د اضافي فايل نوم"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "د فايل د ليکونکي نوم"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "د څېړنې ابزار"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "د څېړنې مواد"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "ليکلي مواد/ ټرانسکرپټونه"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "د مالوماتو تحليل"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "د مالوماتو ټولګه"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "اصلي متن"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "د فايل په اړه لنډه مالومات"
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "يواځې د رسمي خپرو شويو موادو سره ېې وکاروئ."
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "د څېړنې نوم يا اصلي منبع."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "مهرباني وکړئ موضوع ېې وليکئ."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "مهرباني وکړئ د فايل توضيحات کړئ."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "د عامه اضافه فايل پېژندندونکی"
+
+msgid "author.submit.filesSummary"
+msgstr "د فايل لنډيز"
+
+msgid "author.submit.finishSubmission"
+msgstr "د مقالې نهايي لېږنه پای ته ورسوئ"
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "د ليکوال نسخه پورته کړئ"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr ""
+"دې ژورنال ته د مقالې لېږلو لپاره يو کارن حساب ته اړتيا ده، ترڅو د ژورنال "
+"مسؤل مديران وکولای شي، ستاسې د مقالې لېږل وګوري او له تاسو سره د اړتيا "
+"پرمهال اړيکه ونيسي."
+
+msgid "author.submit"
+msgstr "د نوې مقالې لېږل"
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"لومړي پړاو پيل له دې ځايه وکړئ <a href=\"{$submitUrl}\" class=\"action\""
+">Click here</a> ."
+
+msgid "author.submit.step5"
+msgstr "پنځم پړاو: د مقالې د لېږلو تايئدول"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr ""
+"که تاسو د معافیت غوښتنه کوئ، نو تاسو باید خپل دلیل په ورکړل شوي ځای کې دننه "
+"کړئ."
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "د کاپي ايډېټ شوې نسخې پورته کول"
+
+msgid "author.submit.verifyChecklist"
+msgstr ""
+"مخکې له دې چې مخک ولاړ شئ، د مقالې لېږلو د چک لست ټولې معيارونه بايد بشپړې "
+"کړئ."
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr ""
+"د ثبتولو د لړليک جوړولو لپاره شرايط وټاکئ او د سيمي کالن په وسيله يې سره بېل "
+"کړئ."
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+"انگلیسی= en;فرانسوی= fr;هسپانیوی=es.<a href=\"https://www.loc.gov/standards/"
+"iso639-2/php/code_list.php\" target=\"_blank\">Additional codes</a>."
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "د پورته کېدونکې مقالې بدلول"
+
+msgid "author.submit.submitArticle"
+msgstr "د مقالې لېږل"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "د اړوند فايلونو پورته کول"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "د بيا لوستنې اصلاحات"
+
+msgid "author.submit.form.localeRequired"
+msgstr "مهرباني وکړئ، ژبه وټاکئ."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "آیا غواړئ چې د مقالې فایل له پورته کولو پرته دوام ورکړئ؟"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "د مقالې د ثبت پنځه پړاوونه"
+
+msgid "author.submit.notAccepting"
+msgstr "ژورنال د اوس لپاره د مقالې لېږل نشي منلی."
+
+msgid "author.submit.reorderInstructions"
+msgstr "د مقالو په ګڼه کې د ليکوالو نومونه په ترتيب سره بياځلي تنظيم کړئ."
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr ""
+"د دې اختياري پړاو له لارې کولای شئ له پورته کېدونکې مقالې سره اړوند فايلونه "
+"هم اضافه کړئ. اړوند فايلونو کې شامل اسناد په هر فارمټ کې عبارت دي له: (الف) "
+"د څېړنې ابزار (ب) د معلوماتو ټولګې چې د څېړنې د اخلاقي او بياکتنې له اصولو "
+"سره سمون ولري (ج) د څېړنې اړوند هغه سرچينې چې لوستونکو ته د لاس رسي وړ نه "
+"وي. (د): داسې شکلونه او جدولونه چې د مقالې په اصلي متن کې اضافه شوي نه وي، "
+"او د مقالې ارزښت لوړوي."
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr "د دې اضافي فايل د لړليک جوړولو لپاره لاندې مالومات وليکئ."
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "د څېړنې پايلې"
+
+msgid "author.submit.submissionComplete"
+msgstr "د مقالې لېږل بشپړ شو. {journalTitle$} سره د مقالې له خپرولو څخه مننه."
+
+msgid "author.article.copyeditedFile"
+msgstr "کاپي ايډېټ شوی فايل"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr "له نوم پرته بيا کتونکو ته د فايل وړاندې کول."
+
+msgid "author.article.authorRevisedFile"
+msgstr "د لېکوال فايل"
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "د مالوماتو ټولولو او د مالوماتو ټولولو د ابزار جوړولو نېټه."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "نورې برخې ېې هم مشخص کړئ"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "هیڅ فایل نه دی پورته شوی."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "مهرباني وکړئ د اضافي پورته شوي فايل عنوان وليکئ."
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "ټولو ته د لاسرسي وړ اضافي فايل پېژندنه له مخکې شتون لري."

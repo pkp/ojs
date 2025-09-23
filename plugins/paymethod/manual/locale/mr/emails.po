@@ -1,0 +1,38 @@
+# Murari P Tapaswi <tapaswimurari@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-03-15 22:17+0000\n"
+"Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
+"Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/"
+"paymethod-manual-emails/mr/>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "emails.manualPaymentNotification.subject"
+msgstr "मानवी/प्रस्थापित पद्धतीने शुल्क भरण्यासंबंधी (Manual Payment) सूचना"
+
+msgid "emailTemplate.variable.manualPaymentPlugin.senderUsername"
+msgstr "शुल्क भरणाऱ्या वापरकर्त्याचे वापरकर्तानाव"
+
+msgid "emails.manualPaymentNotification.description"
+msgstr ""
+"हा ई-मेल मजकूर नियतकालिकाच्या व्यवस्थापकाला सूचित करतो की मानवी/प्रस्थापित "
+"पद्धतीने शुल्क भरण्यासंबंधी (Manual Payment) विनंती करण्यात आली आहे."
+
+#, fuzzy
+msgid "emails.manualPaymentNotification.body"
+msgstr ""
+"वापरकर्ता {senderName} (वापरकर्तानाव &quot;{$senderUsername}&quot;) "
+"मानवी/प्रस्थापित पद्धतीने {$contextName} या नियतकालिकासाठी शुल्क भरू इच्छितो "
+"त्यासाठी तजवीज करणे आवश्यक आहे.<br />\n"
+"<br />\n"
+"&quot;{$paymentName}&quot; याकरता शुल्क भरले जात आहे.<br />\n"
+"({$paymentCurrencyCode}) {$paymentAmount} इतक्या रकमेचा भरणा होणार आहे.<br />"
+"\n"
+"<br />\n"
+"हा ई-मेल ओपन जर्नल सिस्टम्सच्या मानवी/प्रस्थापित पद्धतीने शुल्क "
+"भरण्यासंबंधीच्या प्लगइनद्वारे तयार केला गेला आहे."

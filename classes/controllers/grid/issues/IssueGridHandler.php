@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @defgroup controllers_grid_issues Issues Grid
  * The Issues Grid implements the management interface allowing editors to
@@ -377,7 +378,10 @@ class IssueGridHandler extends GridHandler
             $publications = $submission->getData('publications');
             foreach ($publications as $publication) {
                 if ($publication->getData('issueId') === (int) $issue->getId()) {
-                    Repo::publication()->edit($publication, ['issueId' => '', 'status' => Submission::STATUS_QUEUED]);
+                    Repo::publication()->edit(
+                        $publication,
+                        ['issueId' => '', 'status' => Publication::STATUS_QUEUED]
+                    );
                 }
             }
             $newSubmission = Repo::submission()->get($submission->getId());
@@ -532,6 +536,7 @@ class IssueGridHandler extends GridHandler
      */
     public function publishIssue($args, $request)
     {
+        /** @var \APP\issue\Issue $issue */
         $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $context = $request->getContext();
         $contextId = $context->getId();
@@ -560,7 +565,11 @@ class IssueGridHandler extends GridHandler
         }
 
         $issue->setPublished(1);
-        $issue->setDatePublished(Core::getCurrentDate());
+
+        // If no datePublished was given, use current date
+        if (!$issue->getData('datePublished')) {
+            $issue->setDatePublished(Core::getCurrentDate());
+        }
 
         // If subscriptions with delayed open access are enabled then
         // update open access date according to open access delay policy
@@ -601,7 +610,12 @@ class IssueGridHandler extends GridHandler
                 $publications = $submission->getData('publications');
 
                 foreach ($publications as $publication) { /** @var Publication $publication */
-                    if ($publication->getData('status') === Submission::STATUS_SCHEDULED && $publication->getData('issueId') === (int) $issue->getId()) {
+
+                    if ((int) $publication->getData('issueId') !== (int) $issue->getId()) {
+                        continue;
+                    }
+
+                    if ($publication->getData('status') === Publication::STATUS_SCHEDULED) {
                         Repo::publication()->publish($publication);
                     }
                 }
@@ -669,6 +683,7 @@ class IssueGridHandler extends GridHandler
      */
     public function unpublishIssue($args, $request)
     {
+        /** @var \APP\issue\Issue $issue */
         $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $journal = $request->getJournal();
 
@@ -676,11 +691,8 @@ class IssueGridHandler extends GridHandler
             return new JSONMessage(false);
         }
 
-        // NB: Data set via params because setData('datePublished', null)
-        // removes the entry into _data rather than updating 'datePublished' to null.
         $updateParams = [
-            'published' => 0,
-            'datePublished' => null
+            'published' => 0
         ];
 
         Hook::call('IssueGridHandler::unpublishIssue', [&$issue]);
@@ -699,10 +711,10 @@ class IssueGridHandler extends GridHandler
         foreach ($submissions as $submission) { /** @var Submission $submission */
             $publications = $submission->getData('publications');
             foreach ($publications as $publication) { /** @var Publication $publication */
-                if ($publication->getData('status') === Submission::STATUS_PUBLISHED && $publication->getData('issueId') === (int) $issue->getId()) {
+                if ($publication->getData('status') === Publication::STATUS_PUBLISHED && $publication->getData('issueId') === (int) $issue->getId()) {
                     // Republish the publication in the issue, now that it's status has changed,
-                    // to ensure the publication's status is restored to Submission::STATUS_SCHEDULED
-                    // rather than Submission::STATUS_QUEUED
+                    // to ensure the publication's status is restored to Publication::STATUS_SCHEDULED
+                    // rather than Publication::STATUS_QUEUED
                     Repo::publication()->unpublish($publication);
                     Repo::publication()->publish($publication);
                 }

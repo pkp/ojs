@@ -1,15 +1,16 @@
+# Helena Rita Gonçalves Marinho Moreira <bragatec@fceer.org>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-05-03 22:23+0000\n"
-"Last-Translator: Real Academia Galega <reacagal@gmail.com>\n"
-"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/themes-"
-"default/gl_ES/>\n"
-"Language: gl_ES\n"
+"PO-Revision-Date: 2025-05-28 15:02+0000\n"
+"Last-Translator: Helena Rita Gonçalves Marinho Moreira <bragatec@fceer.org>\n"
+"Language-Team: Galician <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/gl/>\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.themes.default.name"
 msgstr "Tema por defecto"
@@ -73,22 +74,29 @@ msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
 msgstr "Mostrar as imaxes da páxina de inicio como fondo da cabeceira."
 
 msgid "plugins.themes.default.option.displayStats.label"
-msgstr ""
+msgstr "Opcións de visualización das estatísticas de uso"
 
 msgid "plugins.themes.default.option.displayStats.none"
-msgstr ""
+msgstr "Non mostrar o gráfico das estatísticas de uso de envíos para o lector."
 
 msgid "plugins.themes.default.option.displayStats.bar"
-msgstr ""
+msgstr "Use o tipo de gráfico de barras para mostrar as estatísticas de uso."
 
 msgid "plugins.themes.default.option.displayStats.line"
 msgstr ""
+"Usa o tipo de liña do gráfico para a visualización das estatísticas de uso."
 
 msgid "plugins.themes.default.displayStats.monthInitials"
-msgstr ""
+msgstr "Xan Feb Mar Abr Mai Xuñ Xul Ago Set Out Nov Dec"
 
 msgid "plugins.themes.default.displayStats.downloads"
-msgstr ""
+msgstr "Descargas"
 
 msgid "plugins.themes.default.displayStats.noStats"
-msgstr ""
+msgstr "A descarga de datos aínda non está dispoñible."
+
+msgid "plugins.themes.default.nextSlide"
+msgstr "Diapositiva seguinte"
+
+msgid "plugins.themes.default.prevSlide"
+msgstr "Diapositiva anterior"

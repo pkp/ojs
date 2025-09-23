@@ -35,9 +35,6 @@ msgstr "Sie finden Ihren API-Key auf Ihrer DOAJ-Nutzerseite."
 msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
 msgstr "OJS wird Artikel automatisch an DOAJ abliefern. Bitte beachten Sie, dass dieser Prozess eine gewisse Zeit nach der Veröffentlichung dauern kann (z.B. abhängig von Ihrer Cronjob-Konfiguration). Sie können nach allen unregistrierten Artikeln suchen."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr "Die DOAJ-Test-API (Testumgebung) für die Registrierung nutzen. Bitte vergessen Sie nicht, diese Option für den Produktivbetrieb wieder abzuwählen."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "DOAJ automatische Registrierung"
 

@@ -1,11 +1,12 @@
 # Rodolphe Lemétayer <rlemetayer@protonmail.com>, 2024.
+# Express2120+ <mirouxmmp111@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-06-20 20:27+0000\n"
-"Last-Translator: Rodolphe Lemétayer <rlemetayer@protonmail.com>\n"
+"PO-Revision-Date: 2025-09-01 14:43+0000\n"
+"Last-Translator: Express2120+ <mirouxmmp111@gmail.com>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/"
-"paymethod-manual-emails/fr_FR/>\n"
-"Language: fr_FR\n"
+"paymethod-manual-emails/fr/>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"

@@ -60,18 +60,6 @@ class Upgrade extends Installer
     //
 
     /**
-     * Rebuild the search index.
-     *
-     * @return bool
-     */
-    public function rebuildSearchIndex()
-    {
-        $submissionSearchIndex = Application::getSubmissionSearchIndex();
-        $submissionSearchIndex->rebuildIndex();
-        return true;
-    }
-
-    /**
      * Clear the CSS cache files (needed when changing LESS files)
      *
      * @return bool
@@ -144,8 +132,4 @@ class Upgrade extends Installer
 
         return $fileStagePathMap[$fileStage];
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\install\Upgrade', '\Upgrade');
 }

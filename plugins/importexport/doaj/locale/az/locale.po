@@ -32,11 +32,6 @@ msgstr ""
 "biləcəyini unutmayın (məs. planlaşdırılmış əməliyyatlar tənzimlərinizə bağlı "
 "gecikmələr). Yadda saxlanmamış məqalələri yoxlaya bilərsiniz."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Qeydiyyat üçün DOAJ test API-sini (test mühiti) istifadə edin. Zəhmət olmasa "
-"məqalələrinizin nəşr edilməsi üçün bu seçimi qaldırmağı unutmayın."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "DOAJ avtomatik qeydiyyat vəzifəsi"
 

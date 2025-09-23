@@ -39,11 +39,6 @@ msgstr ""
 "konfigurācijas). Jūs varat pārbaudīt, vai ir reģistrēti visi nereģistrētie "
 "raksti."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Reģistrācijas veikšanai izmantojiet DOAJ testa API (testēšanas vidi). Lūdzu, "
-"neaizmirstiet atcelt šo opciju produkcijai."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "DOAJ automātiskās reģistrācijas uzdevums"
 

@@ -1,0 +1,51 @@
+# "10 ..." <jaana.tonisson@tlulib.ee>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-06 09:42+0000\n"
+"Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
+"Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-pubmed/et/>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.importexport.pubmed.description"
+msgstr ""
+"Ekspordi artikli metaandmed PubMed XML formaadis MEDLINE-is indekseerimiseks."
+
+msgid "plugins.importexport.pubmed.export"
+msgstr "Ekspordi andmed"
+
+msgid "plugins.importexport.pubmed.export.issues"
+msgstr "Eksportimise probleemid"
+
+msgid "plugins.importexport.pubmed.export.selectIssue"
+msgstr "Vali number eksportimiseks."
+
+msgid "plugins.importexport.pubmed.export.articles"
+msgstr "Ekspordi artiklid"
+
+msgid "plugins.importexport.pubmed.export.selectArticle"
+msgstr "Vali artiklid eksportimiseks."
+
+msgid "plugins.importexport.pubmed.cliUsage"
+msgstr ""
+"Kasutus: \n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] artiklid "
+"[articleId1] [articleId2] ...\n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] number [issueId]\n"
+
+msgid "plugins.importexport.pubmed.cliError"
+msgstr "Viga:"
+
+msgid "plugins.importexport.pubmed.export.error.issueNotFound"
+msgstr "Ükski number ei vastanud numbri ID-le \"{$issueId}\"."
+
+msgid "plugins.importexport.pubmed.export.error.articleNotFound"
+msgstr "Ükski artikkel ei vastanud artikli ID-le \"{$articleId}\"."
+
+msgid "plugins.importexport.pubmed.displayName"
+msgstr "PubMed XML Export plugin"

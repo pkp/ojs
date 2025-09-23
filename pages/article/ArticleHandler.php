@@ -28,8 +28,9 @@ use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use Firebase\JWT\Key;
-use PKP\citation\CitationDAO;
+use PKP\components\UserCommentComponent;
 use PKP\config\Config;
+use PKP\context\Context;
 use PKP\core\Core;
 use PKP\core\PKPApplication;
 use PKP\core\PKPJwt as JWT;
@@ -37,6 +38,7 @@ use PKP\db\DAORegistry;
 use PKP\orcid\OrcidManager;
 use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
+use PKP\publication\PKPPublication;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\Validation;
 use PKP\submission\Genre;
@@ -157,7 +159,7 @@ class ArticleHandler extends Handler
             $galleyId = $subPath;
         }
 
-        if ($this->publication->getData('status') !== PKPSubmission::STATUS_PUBLISHED && !Repo::submission()->canPreview($user, $submission)) {
+        if ($this->publication->getData('status') !== PKPPublication::STATUS_PUBLISHED && !Repo::submission()->canPreview($user, $submission)) {
             throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
         }
 
@@ -220,6 +222,16 @@ class ArticleHandler extends Handler
         $article = $this->article;
         $publication = $this->publication;
         $templateMgr = TemplateManager::getManager($request);
+        $templateMgr->requiresVueRuntime();
+
+        $enablePublicComments = $context->getData('enablePublicComments');
+
+        if ($enablePublicComments) {
+            $userCommentComponent = new UserCommentComponent($article, $request);
+            $templateMgr->setLocaleKeys($userCommentComponent->getLocaleKeys());
+            $templateMgr->assign('userCommentsInitConfig', $userCommentComponent->getConfig());
+        }
+
         $templateMgr->assign([
             'issue' => $issue,
             'article' => $article,
@@ -228,8 +240,24 @@ class ArticleHandler extends Handler
             'galley' => $this->galley,
             'fileId' => $this->submissionFileId, // DEPRECATED in 3.4.0: https://github.com/pkp/pkp-lib/issues/6545
             'submissionFileId' => $this->submissionFileId,
+            'enablePublicComments' => $enablePublicComments,
         ]);
         $this->setupTemplate($request);
+
+        $doiObject = $publication->getData('doiObject');
+        if (!$doiObject) {
+            if ($context->getData(Context::SETTING_DOI_VERSIONING)) {
+                // get DOI from a sibling minor version
+                $doiObject = Repo::publication()->getMinorVersionsDoi($publication);
+            } else {
+                if ($publication->getId() !== $article->getCurrentPublication()->getId()) {
+                    $doiObject = $article->getCurrentPublication()->getData('doiObject');
+                }
+            }
+        }
+        $templateMgr->assign([
+            'doiObject' => $doiObject,
+        ]);
 
         // Get the earliest published publication
         $firstPublication = $article->getData('publications')->reduce(function ($a, $b) {
@@ -294,16 +322,17 @@ class ArticleHandler extends Handler
         ]);
 
         // Citations
-        if ($publication->getData('citationsRaw')) {
-            $citationDao = DAORegistry::getDAO('CitationDAO'); /** @var CitationDAO $citationDao */
-            $parsedCitations = $citationDao->getByPublicationId($publication->getId());
-            $templateMgr->assign([
-                'parsedCitations' => $parsedCitations->toArray(),
-            ]);
-        }
+        $templateMgr->assign([
+            'parsedCitations' => $publication->getData('citations'),
+        ]);
 
         $rorIconPath = Core::getBaseDir() . '/' . PKP_LIB_PATH . '/templates/images/ror.svg';
         $rorIdIcon = file_exists($rorIconPath) ? file_get_contents($rorIconPath) : '';
+
+        // Credit Role Terms
+        $templateMgr->assign([
+            'creditRoleTerms' => Repo::CreditRole()->getTerms(),
+        ]);
 
         // Assign deprecated values to the template manager for
         // compatibility with older themes
@@ -552,7 +581,12 @@ class ArticleHandler extends Handler
         }
 
         // Make sure the reader has rights to view the article/issue.
-        if ($issue && $issue->getPublished() && $submission->getData('status') == PKPSubmission::STATUS_PUBLISHED) {
+        if ($submission->getData('status') == PKPSubmission::STATUS_PUBLISHED) {
+
+            if (!$issue) {
+                return true;
+            }
+
             $subscriptionRequired = $issueAction->subscriptionRequired($issue, $context);
             $isSubscribedDomain = $issueAction->subscribedDomain($request, $context, $issue->getId(), $submission->getId());
 
@@ -621,6 +655,7 @@ class ArticleHandler extends Handler
         } else {
             $request->redirect(null, 'search');
         }
+
         return true;
     }
 }

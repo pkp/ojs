@@ -1,7 +1,7 @@
-# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-06-21 18:39+0000\n"
+"PO-Revision-Date: 2025-04-07 10:50+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/api/ky/>\n"
 "Language: ky\n"
@@ -77,3 +77,8 @@ msgstr "Бул этаптагы файлды галлеяга байланышт
 
 msgid "api.submission.400.inactiveSection"
 msgstr "Бул бөлүм мындан ары тапшырыктарды кабыл албайт."
+
+msgid "api.publications.403.paymentFeesNotEnabled"
+msgstr ""
+"Тапшыруу төлөмдөрүнүн формасы жеткиликтүү эмес, анткени жарыялоо үчүн "
+"төлөмдөр иштетилбейт."

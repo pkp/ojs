@@ -596,8 +596,8 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
         $params = array_merge([$dateEnd[0], $dateEnd[1], $dateEnd[2], (int) $journalId], $this->getInstitutionNameFetchParameters());
 
         $result = $this->retrieveRange(
-            'SELECT	s.*, iss.*
-                ' . $this->getInstitutionNameFetchColumns() . ',
+            'SELECT	s.*, iss.*,
+                ' . $this->getInstitutionNameFetchColumns() . '
 			FROM	subscriptions s
 				JOIN subscription_types st ON (s.type_id = st.type_id)
 				JOIN institutional_subscriptions iss ON (s.subscription_id = iss.subscription_id)
@@ -695,16 +695,5 @@ class InstitutionalSubscriptionDAO extends SubscriptionDAO
     {
         return 'LEFT JOIN institution_settings isal ON (isal.institution_id = iss.institution_id AND isal.setting_name = ? AND isal.locale = ?)
         LEFT JOIN institution_settings isapl ON (isapl.institution_id = iss.institution_id AND isapl.setting_name = ? AND isapl.locale = ?)';
-    }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\subscription\InstitutionalSubscriptionDAO', '\InstitutionalSubscriptionDAO');
-    foreach ([
-        'SUBSCRIPTION_INSTITUTION_NAME',
-        'SUBSCRIPTION_DOMAIN',
-        'SUBSCRIPTION_IP_RANGE',
-    ] as $constantName) {
-        define($constantName, constant('\InstitutionalSubscriptionDAO::' . $constantName));
     }
 }

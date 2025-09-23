@@ -91,12 +91,10 @@ lib/pkp/js/controllers/grid/representations/form/RepresentationFormHandler.js
 lib/pkp/js/controllers/grid/settings/user/form/UserDetailsFormHandler.js
 lib/pkp/js/controllers/grid/settings/roles/form/UserGroupFormHandler.js
 lib/pkp/js/controllers/grid/notifications/NotificationsGridHandler.js
-lib/pkp/js/controllers/tab/workflow/WorkflowTabHandler.js
 lib/pkp/js/controllers/informationCenter/NotesHandler.js
 lib/pkp/js/controllers/dashboard/form/DashboardTaskFormHandler.js
 lib/pkp/js/pages/header/HeaderHandler.js
 lib/pkp/js/pages/header/TasksHandler.js
-lib/pkp/js/pages/workflow/WorkflowHandler.js
 lib/pkp/js/controllers/grid/users/UserGridHandler.js
 lib/pkp/js/controllers/grid/users/reviewer/AdvancedReviewerSearchHandler.js
 lib/pkp/js/controllers/grid/users/reviewer/form/EditReviewFormHandler.js

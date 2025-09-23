@@ -1,8 +1,8 @@
 {**
  * plugins/importexport/doaj/templates/settingsForm.tpl
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2025 Simon Fraser University
+ * Copyright (c) 2003-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * DOAJ plugin settings
@@ -14,6 +14,7 @@
 		$('#doajSettingsForm').pkpHandler('$.pkp.controllers.form.AjaxFormHandler');
 	{rdelim});
 </script>
+<div class="semantic-defaults">
 <form class="pkp_form" id="doajSettingsForm" method="post" action="{url router=PKP\core\PKPApplication::ROUTE_COMPONENT op="manage" plugin="DOAJExportPlugin" category="importexport" verb="save"}">
 	{csrf}
 	{fbvFormArea id="doajSettingsFormArea"}
@@ -25,10 +26,8 @@
 		{fbvFormSection list="true"}
 			{fbvElement type="checkbox" id="automaticRegistration" label="plugins.importexport.doaj.settings.form.automaticRegistration.description" checked=$automaticRegistration|compare:true}
 		{/fbvFormSection}
-		{fbvFormSection list="true"}
-			{fbvElement type="checkbox" id="testMode" label="plugins.importexport.doaj.settings.form.testMode.description" checked=$testMode|compare:true}
-		{/fbvFormSection}
 	{/fbvFormArea}
 	{fbvFormButtons submitText="common.save"}
 	<p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 </form>
+</div>

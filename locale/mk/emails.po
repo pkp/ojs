@@ -2,10 +2,10 @@
 # Jovan Jonovski <jonovski@hotmail.com>, 2022.
 # katerina spiroska <kspiroska07@gmail.com>, 2023.
 # Ana Vucurevic <ana.vucurevic97@yahoo.com>, 2023.
-# Mirko Spiroski <mspiroski@id-press.eu>, 2023.
+# Mirko Spiroski <mspiroski@id-press.eu>, 2023, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-09-01 08:58+0000\n"
+"PO-Revision-Date: 2025-04-02 08:12+0000\n"
 "Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "mk/>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Потврда за ресетирање на лозинката"
@@ -112,7 +112,8 @@ msgstr ""
 "од{$contextName}. Ве покануваме да го прочитате и споделите ова дело со "
 "вашата научна заедница.</p><p>Голема благодарност до нашите автори, "
 "рецензенти и уредници за нивните придонеси и до нашите читатели за вашиот "
-"континуиран интерес.</p><p>Ви благодариме,</p>{$signature}"
+"континуиран интерес.</p><div>{$issueToc}</div><p>Ви "
+"благодариме,</p>{$signature}"
 
 msgid "emails.editorAssign.subject"
 msgstr "Бевте назначени како уредник на поднесок во {$contextName}"

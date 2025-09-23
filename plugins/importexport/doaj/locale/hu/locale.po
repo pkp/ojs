@@ -35,11 +35,6 @@ msgstr "Az API kulcsát a saját DOAJ felhasználói oldalán találja."
 msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
 msgstr "Az OJS automatikusan betölti a cikkeket a DOAJ-ba. Felhívjuk figyelmét, hogy a közzététel után a feldolgozáshoz rövid idő szükséges. Ellenőrizheti az összes nem regisztrált cikket."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Használja a DOAJ teszt API-t (teszt környezet) a regisztrációhoz. Kérjük, ne "
-"felejtse el eltávolítani ezt az opciót megjelentetéskor."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "DOAJ automatikus regisztrációs feladat"
 

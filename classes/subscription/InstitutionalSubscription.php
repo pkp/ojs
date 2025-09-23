@@ -93,7 +93,3 @@ class InstitutionalSubscription extends Subscription
         return $subscriptionDao->isValidInstitutionalSubscription($domain, $IP, $this->getData('journalId'), $check, $checkDate);
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\subscription\InstitutionalSubscription', '\InstitutionalSubscription');
-}

@@ -24,10 +24,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Artigos mais lidos do(s) mesmo(s) autor(es)"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""
-"Obs.: Este plugin requer pelo menos um plugin de estatísticas/relatório "
-"ativado. Se os seus plugins de estatísticas fornecem mais de uma métrica, "
-"selecione também uma métrica principal na área de configurações do "
-"administrador e/ou na área de configurações da Revista."

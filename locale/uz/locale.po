@@ -1,282 +1,291 @@
+# Zokirov Sanjar Ikromjon o'g'li <phd-2019@mail.ru>, 2025.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2025-03-18 15:28+0000\n"
+"Last-Translator: Zokirov Sanjar Ikromjon o'g'li <phd-2019@mail.ru>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/locale/uz/>\n"
+"Language: uz\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "user.authorization.journalDoesNotPublish"
-msgstr ""
+msgstr "Ushbu jurnal materiallari onlayn nashr qilinmaydi."
 
 msgid "context.current"
-msgstr ""
+msgstr "Joriy jurnal:"
 
 msgid "context.select"
-msgstr ""
+msgstr "Boshqa jurnalga o'tish:"
 
 msgid "navigation.categories"
-msgstr ""
+msgstr "Kategoriyalar"
 
 msgid "navigation.categories.browse"
-msgstr ""
+msgstr "Ko‘rib chiqish"
 
 msgid "reviewer.article.enterReviewForm"
-msgstr ""
+msgstr "Taqriz shaklini to'ldirish uchun belgini bosing."
 
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
-msgstr ""
+msgstr "Iltimos, kerakli maydonlarni toʻldiring."
 
+#, fuzzy
 msgid "common.software"
-msgstr ""
+msgstr "Open Journal Systems"
 
 msgid "common.confirmComplete"
 msgstr ""
+"Haqiqatan ham bu vazifani bajarildi deb belgilamoqchimisiz? Keyinchalik "
+"o'zgartirishlar kirita olmasligingiz mumkin."
 
 msgid "common.payment"
-msgstr ""
+msgstr "To'lov"
 
 msgid "common.payments"
-msgstr ""
+msgstr "To'lovlar"
 
 msgid "common.homePageHeader.altText"
-msgstr ""
+msgstr "Bosh sahifa sarlavhasi"
 
 msgid "common.journalHomepageImage.altText"
-msgstr ""
+msgstr "Jurnal bosh sahifasining rasmi"
 
 msgid "doi.manager.settings.publications"
-msgstr ""
+msgstr "Maqolalar"
 
 msgid "navigation.journalHelp"
-msgstr ""
+msgstr "Yordam"
 
 msgid "navigation.current"
-msgstr ""
+msgstr "Joriy"
 
 msgid "navigation.otherJournals"
-msgstr ""
+msgstr "Boshqa jurnallar"
 
 msgid "navigation.browseByIssue"
-msgstr ""
+msgstr "Sonlar bo'yicha"
 
 msgid "navigation.browseByAuthor"
-msgstr ""
+msgstr "Mualliflar bo'yicha"
 
 msgid "navigation.infoForAuthors"
-msgstr ""
+msgstr "Mualliflar uchun"
 
 msgid "navigation.infoForLibrarians"
-msgstr ""
+msgstr "Kutubxonachilar uchun"
 
 msgid "navigation.competingInterestGuidelines"
-msgstr ""
+msgstr "Manfaatlar to'qnashuvi bo'yicha ko'rsatmalar"
 
 msgid "navigation.infoForAuthors.long"
-msgstr ""
+msgstr "Mualliflar uchun ma'lumot"
 
 msgid "navigation.infoForLibrarians.long"
-msgstr ""
+msgstr "Kutubxonachilar uchun ma'lumot"
 
 msgid "navigation.skip.about"
-msgstr ""
+msgstr "\"Jurnal haqida\" bo'limiga o'tish"
 
 msgid "navigation.skip.issue"
-msgstr ""
+msgstr "Joriy songa o'tish"
 
 msgid "common.queue.long.submissionsUnassigned"
-msgstr ""
+msgstr "Tayinlanmagan"
 
 msgid "common.queue.short.submissionsUnassigned"
-msgstr ""
+msgstr "Tayinlanmagan"
 
 msgid "common.queue.long.submissionsInEditing"
-msgstr ""
+msgstr "Materiallar tahrirlashda"
 
 msgid "common.queue.short.submissionsInEditing"
-msgstr ""
+msgstr "Tahrirlashda"
 
 msgid "common.queue.long.submissionsInReview"
-msgstr ""
+msgstr "Materiallar taqrizda"
 
 msgid "common.queue.short.submissionsInReview"
-msgstr ""
+msgstr "Taqrizda"
 
 msgid "common.queue.long.submissionsArchives"
-msgstr ""
+msgstr "Arxivlar"
 
 msgid "common.queue.short.submissionsArchives"
-msgstr ""
+msgstr "Arxivlar"
 
 msgid "common.queue.long.active"
-msgstr ""
+msgstr "Faol"
 
 msgid "common.queue.short.active"
-msgstr ""
+msgstr "Faol"
 
 msgid "common.queue.long.completed"
-msgstr ""
+msgstr "Arxiv"
 
 msgid "common.queue.short.completed"
-msgstr ""
+msgstr "Arxiv"
 
 msgid "submissionGroup.assignedSubEditors"
-msgstr ""
+msgstr "Tayinlangan muharrirlar"
 
 msgid "section.section"
-msgstr ""
+msgstr "Bo'lim"
 
 msgid "section.sections"
-msgstr ""
+msgstr "Bo'limlar"
 
 msgid "section.title"
-msgstr ""
+msgstr "Bo'lim nomi"
 
 msgid "section.abbreviation"
-msgstr ""
+msgstr "Qisqartma"
 
 msgid "section.abbreviation.example"
-msgstr ""
+msgstr "(Masalan, Maqolalar=MQ)"
 
 msgid "section.policy"
-msgstr ""
+msgstr "Bo'lim siyosati"
 
 msgid "article.article"
-msgstr ""
+msgstr "Maqola"
 
 msgid "article.articles"
-msgstr ""
+msgstr "Maqolalar"
 
 msgid "common.publication"
-msgstr ""
+msgstr "Maqola"
 
 msgid "common.publications"
-msgstr ""
+msgstr "Maqolalar"
 
 msgid "article.submissionId"
-msgstr ""
+msgstr "Ariza ID si"
 
 msgid "article.title"
-msgstr ""
+msgstr "Sarlavha"
 
 msgid "article.authors"
-msgstr ""
+msgstr "Mualliflar"
 
 msgid "article.indexingInformation"
-msgstr ""
+msgstr "Indekslash ma'lumotlari"
 
 msgid "article.metadata"
-msgstr ""
+msgstr "Meta ma'lumot"
 
 msgid "article.journalSection"
-msgstr ""
+msgstr "Jurnal bo'limi"
 
 msgid "article.file"
-msgstr ""
+msgstr "fayl"
 
 msgid "article.suppFile"
-msgstr ""
+msgstr "Qo'shimcha fayl"
 
 msgid "article.suppFiles"
-msgstr ""
+msgstr "Qo'shimcha fayl(lar)"
 
 msgid "article.suppFilesAbbrev"
-msgstr ""
+msgstr "Qo'sh. fayllar"
 
 msgid "article.discipline"
-msgstr ""
+msgstr "Akademik sohalar va sohalar bo'limlari"
 
 msgid "article.subject"
-msgstr ""
+msgstr "Kalit so'zlar"
 
 msgid "article.coverage"
-msgstr ""
+msgstr "Muqova"
 
 msgid "article.type"
-msgstr ""
+msgstr "Turi, usuli yoki yondashuvi"
 
 msgid "article.language"
-msgstr ""
+msgstr "Til"
 
 msgid "article.sectionEditor"
-msgstr ""
+msgstr "BM"
 
 msgid "article.commentsToEditor"
-msgstr ""
+msgstr "Muallif izohlari"
 
 msgid "article.submission"
-msgstr ""
+msgstr "Material"
 
 msgid "article.submissions"
-msgstr ""
+msgstr "Materiallar"
 
 msgid "article.details"
-msgstr ""
+msgstr "Tafsilotlar"
 
 msgid "article.abstract"
-msgstr ""
+msgstr "Annotatsiya"
 
 msgid "article.coverPage.altText"
-msgstr ""
+msgstr "Muqova rasmi"
 
 msgid "article.accessLogoOpen.altText"
-msgstr ""
+msgstr "Ochiq kirish"
 
 msgid "article.accessLogoRestricted.altText"
-msgstr ""
+msgstr "Cheklangan kirish"
 
 msgid "article.comments.sectionDefault"
-msgstr ""
+msgstr "Standart"
 
 msgid "article.comments.disable"
-msgstr ""
+msgstr "O'chirish"
 
 msgid "article.comments.enable"
-msgstr ""
+msgstr "Yoqish"
 
 msgid "article.fontSize"
-msgstr ""
+msgstr "Shrift hajmi"
 
 msgid "article.fontSize.small.altText"
-msgstr ""
+msgstr "Kichik"
 
 msgid "article.fontSize.medium.altText"
-msgstr ""
+msgstr "O'rtacha"
 
 msgid "article.fontSize.large.altText"
-msgstr ""
+msgstr "Katta"
 
 msgid "article.return"
-msgstr ""
+msgstr "Maqola tafsilotlariga qaytish"
 
 msgid "submission.submissionEditing"
-msgstr ""
+msgstr "Taqdim etilgan materialni tahrirlash"
 
 msgid "submission.changeSection"
-msgstr ""
+msgstr "...ga oʻzgartirish"
 
 msgid "submission.sent"
-msgstr ""
+msgstr "Yuborildi"
 
 msgid "submission.editorDecision"
-msgstr ""
+msgstr "Muharrir qarori"
 
 msgid "submission.round"
-msgstr ""
+msgstr "{$round} &nbsp; bosqich"
 
 msgid "submission.editorReview"
-msgstr ""
+msgstr "Muharrir izohi"
 
 msgid "submission.notifyAuthor"
-msgstr ""
+msgstr "Muallifga xabar berish"
 
 msgid "submission.notifyEditor"
-msgstr ""
+msgstr "Muharrirga xabar berish"
 
 msgid "submission.editorAuthorRecord"
-msgstr ""
+msgstr "\"Muharrir/muallif\" yozishmalari"
 
 msgid "submission.reviewersVersion"
-msgstr ""
+msgstr "Faylning taqrizchi izohlari kiritilgan versiyasi"
 
 msgid "submission.postReviewVersion"
 msgstr ""

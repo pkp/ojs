@@ -1,0 +1,161 @@
+@import (reference) "../components.less";
+
+.BaseCommentsVersions {
+    display: flex;
+    flex-direction: column;
+    gap: @base;
+}
+
+.BaseCommentsVersionHeader {
+	width: 100%;
+}
+h3.BaseCommentsVersionHeader {
+    margin: 0;
+}
+
+.BaseCommentsVersionHeaderTrigger {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: @base;
+	background-color: lighten(@bg-shade, 5%);
+    border: 1px solid @bg-border-color;
+	color: @text;
+    font-weight: @bold;
+    font-size: @font-base;
+	cursor: pointer;
+}
+
+.BaseCommentsVersionHeaderTrigger:hover {
+    background-color: @bg-shade;
+}
+
+.BaseCommentsVersionHeaderTrigger[data-state='open']
+	.BaseCommentsVersionHeaderChevron {
+	transform: rotate(180deg);
+}
+
+// use the form elements styling
+.BaseCommentsNew {
+    margin-top: @base;
+    &:extend(.cmp_form all);
+}
+
+.BaseCommentsNewSubmit {
+    margin-top: @base;
+}
+
+.BaseCommentsLogInto {
+    margin-top: @base;
+}
+
+.BaseCommentsMessages {
+    margin-top: @double;
+    display: flex;
+    flex-direction: column;
+    gap: @base;
+}
+
+.BaseCommentsNotificationNotLatest{
+    font-size: @font-tiny;
+    display: flex;
+    align-items: center;
+    gap: @half;
+    margin-top: @base;
+    margin-bottom: @base;
+    padding: @base;
+    border-radius: @radius;
+    background-color: #F9E1E173;
+    > svg {
+        color: @offset;
+        height: 1rem;
+        width: 1rem;
+    }
+
+}
+
+
+.BaseCommentsNotificationMessageNeedsApproval {
+    color: @primary;
+    font-size: @font-tiny;
+    display: flex;
+    align-items: center;
+    gap: @half;
+    margin-bottom: @half;
+
+    > svg {
+        height: 1rem;
+        width: 1rem;
+    }
+
+}
+
+.BaseCommentsMessage {
+    padding: @double;
+    background-color: lighten(@bg-shade, 10%);
+	border-radius: @radius;
+}
+
+.BaseCommentsMessageHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.BaseCommentsMessageDate {
+    font-size: @font-tiny;
+}
+
+.BaseCommentsMessageBody {
+    margin-top: @double;
+    white-space: pre-line;
+}
+
+.BaseCommentsMessageAuthor {
+    margin-top: @double;
+    display: flex;
+    flex-direction: column;
+}
+.BaseCommentsMessageAuthorName {
+    margin-top: @half;
+    font-weight: @bold;
+    font-size: @font-sml;
+}
+
+.BaseCommentsMessageAuthorOrcid {
+    color: @text-light;
+    font-size: @font-tiny;
+    display: flex;
+    align-items: center;
+    column-gap: 0.2rem;
+    > svg {
+        height: 0.9rem;
+        width: 0.9rem;
+    }
+
+}
+
+.BaseCommentsMessageAuthorAffiliation{
+    font-size: @font-tiny;
+}
+
+.BaseCommentReportDialogAuthor {
+    font-size: @font-sml;
+    color: @text-light;
+}
+
+.BaseCommentReportDialogCommentText {
+    margin-bottom: @double;
+}
+
+.BaseCommentReportDialogReasonInput {
+    &:extend(.cmp_form all);
+}
+
+.BaseScrollToComments {
+    display: flex;
+    flex-direction: column;
+    gap: @double;
+}
+

@@ -1,0 +1,124 @@
+# "10 ..." <jaana.tonisson@tlulib.ee>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-06 09:42+0000\n"
+"Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
+"Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-native/et/>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.importexport.native.displayName"
+msgstr "Native XML plugin"
+
+msgid "plugins.importexport.native.description"
+msgstr "Impordi ja ekspordi artikleid ja numbreid OJS-i XML formaadis."
+
+msgid "plugins.importexport.native.import"
+msgstr "Import"
+
+msgid "plugins.importexport.native.import.instructions"
+msgstr "Importimiseks lae üles XML fail"
+
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr "Eksportimiseks vali artiklid"
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr "Ekspordi artiklid"
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr "Ekspordi numbrid"
+
+msgid "plugins.importexport.native.results"
+msgstr "Impordi tulemused"
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr "Jätkamiseks palun lae fail üles \"Import\" sektsiooni."
+
+msgid "plugins.importexport.native.importComplete"
+msgstr "Importimine on edukalt lõpetatud. Imporditi järgnevad objektid:"
+
+msgid "plugins.importexport.native.error.unknownSection"
+msgstr "Tundmatu sektsioon {$param}"
+
+msgid "plugins.importexport.common.error.invalidFileExtension"
+msgstr "Tuvastati ebasobiva laiendiga kaanepildi fail."
+
+msgid "plugins.importexport.common.error.coverImageNameUnspecified"
+msgstr "Kaanepilt lisati ilma täpsustava nimeta."
+
+msgid "plugins.importexport.native.error.unknownUser"
+msgstr "Kasutajat peab sisestama kasutades --user_name või -u käsklust."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
+msgstr ""
+"Rubriigi nimi \"{$section1Title}\" ja rubriigi nimi \"{$section2Title}\" "
+"väljaandes \"{$issueTitle}\" on samad, mis teises olemasolevad ajakirja "
+"rubriigis."
+
+msgid "plugins.importexport.native.import.error.sectionTitleMatch"
+msgstr ""
+"Rubriigi nimi \"{$sectionTitle}\" väljaandes \"{$issueTitle}\" on sama, kui "
+"olemasolevas numbris, kuid teine pealkiri ei ühildu juba olemasolevaga."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
+msgstr ""
+"Rubriigi lühend \"{$section1Abbrev}\" ja rubriigi lühend \"{$section2Abbrev}"
+"\" väljaandes \"{$issueTitle}\" on samad teise olemasoleva ajakirja "
+"rubriigiga."
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr ""
+"Rubriigi lühend \"{$sectionAbbrev}\" väljaandes \"{$issueTitle}\" on sama "
+"olemasoleva ajakirja rubriigiga, kuid teine lühend ei ühildu."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr ""
+"Mitte ükski või rohkem kui üks number ühildub antud numbri ID-ga \""
+"{$issueIdentification}\"."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgstr ""
+"Olemasolev numbri ID {$issueId} on sama antud numbri ID-ga \""
+"{$issueIdentification}\".  Seda numbrit ei muudeta, kuid artikleid lisatakse."
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgstr "Numbri ID element on artiklil \"{$articleTitle}\" puudu."
+
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr ""
+"Artikkel \"{$articleTitle}\" lisati numbrisse, kuid puudub avaldamise "
+"kuupäev."
+
+msgid "plugins.importexport.native.cliUsage"
+msgstr ""
+"Kasutus: {$scriptName} {$pluginName} [command] ...\n"
+"Käsklused:\n"
+"\timport [xmlFileName] [journal_path] [--user_name] ...\n"
+"\teksport [xmlFileName] [journal_path] artiklid [articleId1] [articleId2] ..."
+"\n"
+"\teksport [xmlFileName] [journal_path] artikkel [articleId]\n"
+"\teksport [xmlFileName] [journal_path] numbrid [issueId1] [issueId2] ...\n"
+"\teksport [xmlFileName] [journal_path] number[issueId]\n"
+"\n"
+"Importimiseks on lisaparameetrid nõutavad, olenevalt\n"
+"XML dokumendi juurtipust (root node).\n"
+"\n"
+"Kui juurtipp on <article> või <articles>, siis on vajalikud lisaparameetrid."
+"\n"
+"Järgnevad formaadid on aktsepteeritud:\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [--user_name]"
+"\n"
+"\tissue_id [issueId] section_id [sectionId]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path] [--user_name]"
+"\n"
+"\tissue_id [issueId] section_name [name]\n"
+"\n"
+"{$scriptName} {$pluginName} import [xmlFileName] [journal_path]\n"
+"\tissue_id [issueId] section_abbrev [abbrev]\n"

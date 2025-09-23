@@ -2,14 +2,14 @@
 # Marie-Hélène Vézina [UdeMontréal] <marie-helene.vezina@umontreal.ca>, 2022, 2023.
 # Jeanette Hatherill <jeanette.hatherill@uottawa.ca>, 2022.
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
+# Nicolas Dickner <dickner.nicolas@uqam.ca>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-15T14:05:03-07:00\n"
-"PO-Revision-Date: 2023-07-19 09:01+0000\n"
-"Last-Translator: Marie-Hélène Vézina [UdeMontréal] <marie-helene."
-"vezina@umontreal.ca>\n"
+"PO-Revision-Date: 2025-04-16 13:34+0000\n"
+"Last-Translator: Nicolas Dickner <dickner.nicolas@uqam.ca>\n"
 "Language-Team: French (Canada) <http://translate.pkp.sfu.ca/projects/ojs/"
 "editor/fr_CA/>\n"
 "Language: fr_CA\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 # localization file for fr_CA. Last revision 2019-10-22T10:49:41 by Marie-Hélène Vézina, Bibliothèques, Université de Montréal.
 msgid "editor.home"
@@ -506,3 +506,16 @@ msgstr ""
 
 msgid "editor.article.coverImage"
 msgstr "Image de la page couverture"
+
+msgid "editor.issues.datePublished.invalid"
+msgstr ""
+"La date de publication n'est pas valide. La date doit être au format AAAA-MM-"
+"JJ."
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr "Une date de publication est requise lorsque le numéro est publié."
+
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr ""
+"Si aucune date n'est indiquée, elle sera automatiquement attribuée à la "
+"publication du numéro."

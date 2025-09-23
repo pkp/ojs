@@ -1,11 +1,12 @@
 # Diego José Macêdo <diegojmacedo@gmail.com>, 2021, 2022.
+# Carolina Miki Tanigushi <carolina.tanigushi@scielo.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2022-04-22 07:57+0000\n"
-"Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
+"PO-Revision-Date: 2025-03-28 16:29+0000\n"
+"Last-Translator: Carolina Miki Tanigushi <carolina.tanigushi@scielo.org>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "editor/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "editor.home"
 msgstr "Página Inicial do Editor"
@@ -511,3 +512,15 @@ msgstr "Imagem de Capa"
 
 #~ msgid "editor.article.hideCoverPageAbstract"
 #~ msgstr "Não exibir capa na página de resumo de artigo."
+
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr ""
+"Se o campo não for preenchido, a data será inserida automaticamente quando o "
+"número for publicado."
+
+msgid "editor.issues.datePublished.invalid"
+msgstr ""
+"A Data de Publicação não é válida. A data deve estar no formato AAAA-MM-DD."
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr "A Data de Publicação é exigida quando o número é publicado."

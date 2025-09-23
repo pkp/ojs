@@ -52,6 +52,19 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
         $this->agencyPlugin = $agencyPlugin;
     }
 
+    public function register($category, $path, $mainContextId = null)
+    {
+        $success = parent::register($category, $path, $mainContextId);
+        if ($success) {
+            // register hooks. This will prevent DB access attempts before the
+            // schema is installed.
+            if (Application::isUnderMaintenance()) {
+                return true;
+            }
+        }
+        return $success;
+    }
+
     /**
      * @see Plugin::getName()
      */
@@ -105,7 +118,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
      */
     public function getPluginSettingsPrefix()
     {
-        return 'datacite';
+        return 'dataciteplugin';
     }
 
     /**
@@ -249,7 +262,11 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
 
         $request = Application::get()->getRequest();
         // Get the DOI and the URL for the object.
-        $doi = $object->getStoredPubId('doi');
+        if ($object instanceof Submission) {
+            $doi = $object->getCurrentPublication()->getDoi();
+        } else {
+            $doi = $object->getDoi();
+        }
         assert(!empty($doi));
         $testDOIPrefix = null;
         if ($this->isTestMode($context)) {
@@ -285,7 +302,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
             if ($e->hasResponse()) {
                 $returnMessage = $e->getResponse()->getBody() . ' (' . $e->getResponse()->getStatusCode() . ' ' . $e->getResponse()->getReasonPhrase() . ')';
             }
-            $this->updateDepositStatus($object, Doi::STATUS_ERROR);
+            $this->updateDepositStatus($object, Doi::STATUS_ERROR, $returnMessage);
             return [['plugins.importexport.common.register.error.mdsError', "Registering DOI {$doi}: {$returnMessage}"]];
         }
 
@@ -304,7 +321,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
             if ($e->hasResponse()) {
                 $returnMessage = $e->getResponse()->getBody() . ' (' . $e->getResponse()->getStatusCode() . ' ' . $e->getResponse()->getReasonPhrase() . ')';
             }
-            $this->updateDepositStatus($object, Doi::STATUS_ERROR);
+            $this->updateDepositStatus($object, Doi::STATUS_ERROR, $returnMessage);
             return [['plugins.importexport.common.register.error.mdsError', "Registering DOI {$doi}: {$returnMessage}"]];
         }
         // Test mode submits entirely different DOI and URL so the status of that should not be stored in the database
@@ -320,7 +337,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
      *
      * @param Submission|Issue|Representation $object
      */
-    public function updateDepositStatus(DataObject $object, string $status)
+    public function updateDepositStatus(DataObject $object, string $status, ?string $failedMsg = null)
     {
         assert($object instanceof Submission || $object instanceof Issue || $object instanceof Representation);
         if ($object instanceof Submission) {
@@ -328,12 +345,43 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
         }
         $doiObject = $object->getData('doiObject');
         $editParams = [
-            'status' => $status
+            'status' => $status,
+            $this->getFailedMsgSettingName() => $failedMsg,
         ];
         if ($status == Doi::STATUS_REGISTERED) {
             $editParams['registrationAgency'] = $this->getName();
         }
         Repo::doi()->edit($doiObject, $editParams);
+    }
+
+    /**
+     * @copydoc DOIPubIdExportPlugin::markRegistered()
+     */
+    public function markRegistered($context, $objects)
+    {
+        foreach ($objects as $object) {
+            // Get all DOIs for each object
+            // Check if submission or issue
+            if ($object instanceof Submission) {
+                $doiIds = Repo::doi()->getDoisForSubmission($object->getId());
+            } else {
+                $doiIds = Repo::doi()->getDoisForIssue($object->getId, true);
+            }
+            foreach ($doiIds as $doiId) {
+                Repo::doi()->markRegistered($doiId);
+            }
+        }
+    }
+
+    /**
+     * Get request failed message setting name.
+     * NB: Changed as of 3.4
+     *
+     * @return string
+     */
+    public function getFailedMsgSettingName()
+    {
+        return $this->getPluginSettingsPrefix() . '_failedMsg';
     }
 
     /**

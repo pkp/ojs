@@ -1,10 +1,10 @@
-# Pia Piontkowitz <pia.piontkowitz@rub.de>, 2023.
+# Pia Piontkowitz <pia.piontkowitz@rub.de>, 2023, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:41-07:00\n"
-"PO-Revision-Date: 2023-04-29 14:49+0000\n"
+"PO-Revision-Date: 2025-04-16 12:58+0000\n"
 "Last-Translator: Pia Piontkowitz <pia.piontkowitz@rub.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/admin/de/>\n"
 "Language: de\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "admin.hostedContexts"
 msgstr "Zeitschriften auf dieser Website"
@@ -69,7 +69,7 @@ msgid "admin.systemConfiguration"
 msgstr "OJS-Konfiguration"
 
 msgid "admin.systemConfigurationDescription"
-msgstr "OJS-Konfigurationsdatei <tt>config.inc.php</tt>."
+msgstr "OJS-Konfigurationseinstellungen aus <tt>config.inc.php</tt>."
 
 msgid "admin.journals.createInstructions"
 msgstr ""

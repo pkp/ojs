@@ -1,8 +1,9 @@
 # Josu Acosta <josuacostacalvo@gmail.com>, 2024.
+# Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-06-12 18:32+0000\n"
-"Last-Translator: Josu Acosta <josuacostacalvo@gmail.com>\n"
+"PO-Revision-Date: 2025-09-02 08:41+0000\n"
+"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/"
 "generic-recommendByAuthor/eu/>\n"
 "Language: eu\n"
@@ -13,4 +14,12 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.generic.recommendByAuthor.heading"
-msgstr "Egile beraren gehien irakurritako artikuluak"
+msgstr "Egile beraren artikulu irakurrienak"
+
+msgid "plugins.generic.recommendByAuthor.description"
+msgstr ""
+"Plugin honek egile beraren artikuluen zerrenda txertatzen du artikuluaren "
+"laburpen-orrian."
+
+msgid "plugins.generic.recommendByAuthor.displayName"
+msgstr "Gomendatu egilearen artikuluak"

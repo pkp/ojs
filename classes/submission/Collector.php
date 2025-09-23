@@ -16,13 +16,15 @@ namespace APP\submission;
 
 use APP\core\Application;
 use APP\facades\Repo;
+use APP\publication\Publication;
 use Illuminate\Database\Query\Builder;
+use Illuminate\Database\Query\JoinClause;
 
 class Collector extends \PKP\submission\Collector
 {
     public ?array $issueIds = null;
-
     public ?array $sectionIds = null;
+    protected ?bool $latestPublished = null;
 
     public function __construct(DAO $dao)
     {
@@ -48,6 +50,17 @@ class Collector extends \PKP\submission\Collector
     }
 
     /**
+     * Filter by latest published submission as
+     *  - Issueless publications
+     *  - Continuous publications e.g. attached to future issue but published
+     */
+    public function filterByLatestPublished(bool $latestPublished): static
+    {
+        $this->latestPublished = $latestPublished;
+        return $this;
+    }
+
+    /**
      * @copydoc CollectorInterface::getQueryBuilder()
      */
     public function getQueryBuilder(): Builder
@@ -57,25 +70,44 @@ class Collector extends \PKP\submission\Collector
         // By issue IDs
         if (is_array($this->issueIds)) {
             $q->whereIn('s.submission_id', function ($query) {
-                $query->select('issue_p.submission_id')
-                    ->from('publications AS issue_p')
-                    ->join('publication_settings as issue_ps', 'issue_p.publication_id', '=', 'issue_ps.publication_id')
-                    ->where('issue_ps.setting_name', '=', 'issueId')
-                    ->whereIn('issue_ps.setting_value', array_map(strval(...), $this->issueIds));
+                $query->select('p.submission_id')
+                    ->from('publications as p')
+                    ->whereIn('p.issue_id', $this->issueIds);
             });
         }
 
         // By section IDs
         if (is_array($this->sectionIds)) {
             $q->whereIn('s.submission_id', function ($query) {
-                $query->select('section_p.submission_id')
-                    ->from('publications AS section_p')
-                    ->whereIn('section_p.section_id', $this->sectionIds);
+                $query->select('p.submission_id')
+                    ->from('publications as p')
+                    ->whereIn('p.section_id', $this->sectionIds);
             });
         }
 
+        // add OJS-specific continuous publication (e.g. attached to future issue but published)
+        // and issueless publication filters
+        $q->when(
+            $this->latestPublished !== null,
+            fn (Builder $query) => $query
+                ->join(
+                    'publications as publication_cp',
+                    fn (JoinClause $join) => $join
+                        ->on('publication_cp.publication_id', '=', 's.current_publication_id')
+                        ->where('publication_cp.status', Publication::STATUS_PUBLISHED)
+                        ->whereNotNull('publication_cp.date_published')
+                )
+                ->leftJoin('issues as pi', 'publication_cp.issue_id', '=', 'pi.issue_id')
+                ->where(
+                    fn (Builder $query) => $query
+                        ->whereNull('publication_cp.issue_id')
+                        ->orWhere('pi.published', false)
+                )
+        );
+
         return $q;
     }
+
 
     /**
      * Add APP-specific filtering methods for submission sub objects DOI statuses

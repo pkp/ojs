@@ -23,10 +23,3 @@ msgstr "Ez a bővítmény beszúr egy cikklistát a szerzőtől, a cikk absztrak
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Ugyanannak a szerző(k)nek a legtöbbet olvasott cikkei"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""
-"Megj.: Ez a plugin legalább egy statisztikai/jelentési plugin bekapcsolt "
-"állapotát igényli. Ha statisztikai bővítményei több mint egy metrikát "
-"tartalmaznak, kérjük, válasszon egy fő metrikát is az admin webhelyének "
-"beállítási oldalán és / vagy a naplókezelő beállításai oldalain."

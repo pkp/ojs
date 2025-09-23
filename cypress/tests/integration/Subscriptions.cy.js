@@ -131,7 +131,12 @@ describe('Subscription tests', function() {
 		cy.get('form#userSearchForm input[name=search]').type('Der');
 		cy.get('form#userSearchForm button:contains("Search")').click();
 		cy.waitJQuery();
-		cy.get('form#individualSubscriptionForm input[name="userId"]').click(); // Should be only match
+		displayUserSearchResults();
+
+		cy.contains('tr', 'Rea Der').within(() => {
+			cy.get('input[type="radio"]').check({ force: true });
+		});
+
 		cy.get('form#individualSubscriptionForm select#typeId').select('Yearly Subscription - 1 year - 50.00 CAD');
 		cy.get('form#individualSubscriptionForm select#status').select('Active');
 		cy.get('form#individualSubscriptionForm input[id^="dateStart-"]:visible').type((new Date().getFullYear()) + "-01-01", {delay: 0});
@@ -150,4 +155,19 @@ describe('Subscription tests', function() {
 		cy.get('a.obj_galley_link:first').click();
 		cy.get('iframe'); // The PDF viewer loads; we can't inspect within it, though.
 	});
+
+	// Multiple results may be returned for a user search phrase, as the search API searches roles as well.
+	// So ensure the correct user's name is visible in the table before attempting to interact with it.
+	function displayUserSearchResults() {
+		return cy.document().then(doc => {
+			const elements = Cypress.$('a.pkp_linkaction_moreItems', doc);
+			if (elements.length > 0) {
+				cy.get('a.pkp_linkaction_moreItems').click({force: true})
+					.then(() => {
+						cy.wait(800);
+						return displayUserSearchResults();
+					});
+			}
+		});
+	}
 })

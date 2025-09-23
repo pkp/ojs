@@ -28,14 +28,18 @@
 		{include file="frontend/components/highlights.tpl" highlights=$highlights}
 	{/if}
 
-	{if !$activeTheme->getOption('useHomepageImageAsHeader') && $homepageImage}
+	{if $activeTheme && !$activeTheme->getOption('useHomepageImageAsHeader') && $homepageImage}
 		<div class="homepage_image">
 			<img src="{$publicFilesDir}/{$homepageImage.uploadName|escape:"url"}"{if $homepageImage.altText} alt="{$homepageImage.altText|escape}"{/if}>
 		</div>
 	{/if}
 
+	{if $categories && $categories->count() > 0}
+		{include file="frontend/components/categoryHeader.tpl" categories=$categories}
+	{/if}
+
 	{* Journal Description *}
-	{if $activeTheme->getOption('showDescriptionInJournalIndex')}
+	{if $activeTheme && $activeTheme->getOption('showDescriptionInJournalIndex')}
 		<section class="homepage_about">
 			<a id="homepageAbout"></a>
 			<h2>{translate key="about.aboutContext"}</h2>
@@ -44,6 +48,11 @@
 	{/if}
 
 	{include file="frontend/objects/announcements_list.tpl" numAnnouncements=$numAnnouncementsHomepage}
+
+	{* Latest Published Publications *}
+	{if $publishedPublications && $publishedPublications->count()}
+		{include file="frontend/objects/latest_article.tpl" articles=$publishedPublications heading="h2"}
+	{/if}
 
 	{* Latest issue *}
 	{if $issue}

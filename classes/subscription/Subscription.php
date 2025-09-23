@@ -326,22 +326,3 @@ class Subscription extends \PKP\core\DataObject
         }
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\subscription\Subscription', '\Subscription');
-    foreach ([
-        'SUBSCRIPTION_STATUS_ACTIVE',
-        'SUBSCRIPTION_STATUS_NEEDS_INFORMATION',
-        'SUBSCRIPTION_STATUS_NEEDS_APPROVAL',
-        'SUBSCRIPTION_STATUS_AWAITING_MANUAL_PAYMENT',
-        'SUBSCRIPTION_STATUS_AWAITING_ONLINE_PAYMENT',
-        'SUBSCRIPTION_STATUS_OTHER',
-        'SUBSCRIPTION_DATE_START',
-        'SUBSCRIPTION_DATE_END',
-        'SUBSCRIPTION_DATE_BOTH',
-        'SUBSCRIPTION_YEAR_OFFSET_PAST',
-        'SUBSCRIPTION_YEAR_OFFSET_FUTURE',
-    ] as $constantName) {
-        define($constantName, constant('\Subscription::' . $constantName));
-    }
-}

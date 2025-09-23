@@ -3,13 +3,11 @@
 /**
  * @file api/v1/submissions/SubmissionController.php
  *
- * Copyright (c) 2023 Simon Fraser University
- * Copyright (c) 2023 John Willinsky
+ * Copyright (c) 2025 Simon Fraser University
+ * Copyright (c) 2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class SubmissionController
- *
- * @ingroup api_v1_submission
  *
  * @brief Handle API requests for submission operations.
  *
@@ -37,7 +35,12 @@ class SubmissionController extends \PKP\API\v1\submissions\PKPSubmissionControll
 {
     public function __construct()
     {
-        array_push($this->requiresSubmissionAccess, 'getPublicationIssueForm', 'getSubmissionPaymentForm');
+        array_push(
+            $this->requiresSubmissionAccess,
+            'getPublicationIssueForm',
+            'getSubmissionPaymentForm',
+            'getIssueAssignmentStatus',
+        );
     }
 
     /** @copydoc PKPSubmissionHandler::getSubmissionCollector() */
@@ -68,8 +71,18 @@ class SubmissionController extends \PKP\API\v1\submissions\PKPSubmissionControll
         parent::getGroupRoutes();
 
         Route::middleware([
-            self::roleAuthorizer([Role::ROLE_ID_SUB_EDITOR, Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN, Role::ROLE_ID_ASSISTANT]),
+            self::roleAuthorizer([
+                Role::ROLE_ID_SUB_EDITOR,
+                Role::ROLE_ID_MANAGER,
+                Role::ROLE_ID_SITE_ADMIN,
+                Role::ROLE_ID_ASSISTANT
+            ]),
         ])->group(function () {
+            Route::get(
+                '{submissionId}/publications/{publicationId}/issueAssignmentStatus',
+                $this->getIssueAssignmentStatus(...)
+            )->name('submission.publication.issue.assignmentStatus');
+
             Route::prefix('{submissionId}/publications/{publicationId}/_components')->group(function () {
                 Route::get('issue', $this->getPublicationIssueForm(...))->name('submission.publication._components.issue');
                 Route::get('submissionPayment', $this->getSubmissionPaymentForm(...))->name('submission.publication._components.submissionPayment');
@@ -117,7 +130,7 @@ class SubmissionController extends \PKP\API\v1\submissions\PKPSubmissionControll
 
     /**
      * Get SubmissionPaymentsForm
-    */
+     */
     protected function getSubmissionPaymentForm(Request $illuminateRequest): JsonResponse
     {
         $request = $this->getRequest();
@@ -175,5 +188,38 @@ class SubmissionController extends \PKP\API\v1\submissions\PKPSubmissionControll
         );
 
         return response()->json($this->getLocalizedForm($titleAbstract, $submissionLocale, $locales), Response::HTTP_OK);
+    }
+
+    /**
+     * Get the publication's current issue assignment status as per IssueAssignment cases
+     */
+    public function getIssueAssignmentStatus(Request $illuminateRequest): JsonResponse
+    {
+        $request = $this->getRequest();
+        $publication = Repo::publication()->get((int) $illuminateRequest->route('publicationId'));
+
+        if (!$publication) {
+            return response()->json([
+                'error' => __('api.404.resourceNotFound'),
+            ], Response::HTTP_NOT_FOUND);
+        }
+
+        $submission = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_SUBMISSION);
+
+        if ($submission->getId() != $publication->getData('submissionId')) {
+            return response()->json([
+                'error' => __('api.publications.403.submissionsDidNotMatch'),
+            ], Response::HTTP_FORBIDDEN);
+        }
+
+        $assignmentType = Repo::publication()->getIssueAssignmentStatus(
+            $publication,
+            $request->getContext()
+        );
+
+        return response()->json([
+            'assignmentType' => $assignmentType->value,
+            'status' => $assignmentType->getPublicationStatus(),
+        ], Response::HTTP_OK);
     }
 }

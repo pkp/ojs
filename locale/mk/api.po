@@ -1,8 +1,8 @@
 # Teodora Fildishevska <t.fildishevska@gmail.com>, 2022.
-# Mirko Spiroski <mspiroski@id-press.eu>, 2023.
+# Mirko Spiroski <mspiroski@id-press.eu>, 2023, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-02-26 15:48+0000\n"
+"PO-Revision-Date: 2025-04-02 08:12+0000\n"
 "Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/api/mk/>"
 "\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "Објавата која ја побаравте не е дел од ова списание."
@@ -81,3 +81,8 @@ msgstr "Не можете да поврзете документ од оваа �
 
 msgid "api.submission.400.inactiveSection"
 msgstr "Оваа секција повеќе не прима поднесоци."
+
+msgid "api.publications.403.paymentFeesNotEnabled"
+msgstr ""
+"Формулар за плаќање при поднесување не е достапен затоа што не е овозможено "
+"плаќање членарина."

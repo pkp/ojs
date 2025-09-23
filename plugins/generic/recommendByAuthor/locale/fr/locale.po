@@ -21,11 +21,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Articles les plus lus par le même auteur ou la même autrice"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""
-"N.B. : ce module nécessite l'activation d'au moins un module de statistiques/"
-"rapport. Si vos modules de statistiques fournissent plus d'une mesure, "
-"veuillez également sélectionner une mesure principale sur la page des "
-"paramètres du site de l'administrateur ou sur la page des paramètres du "
-"responsable de la publication."

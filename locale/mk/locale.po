@@ -1,9 +1,10 @@
 # Teodora Fildishevska <t.fildishevska@gmail.com>, 2022.
 # Ana Vucurevic <ana.vucurevic97@yahoo.com>, 2023.
+# Mirko Spiroski <mspiroski@id-press.eu>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-03-16 10:33+0000\n"
-"Last-Translator: Ana Vucurevic <ana.vucurevic97@yahoo.com>\n"
+"PO-Revision-Date: 2025-04-02 08:12+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "mk/>\n"
 "Language: mk\n"
@@ -11,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Ова списание не објавува онлајн содржина."
@@ -1955,7 +1956,7 @@ msgstr ""
 "\n"
 "<p>Ви благодариме што го преземавте Проектот за Јавно Знаење <strong>Систем "
 "на Отворени Списанија</strong>. Пред да продолжите, ве молиме прочитајте ја "
-"<a href=\"{$baseUrl}/docs/README.md\">ПРОЧИТАЈМЕ</a> датотеката вклучена во "
+"<a href=\"{$baseUrl}/README.md\">ПРОЧИТАЈМЕ</a> датотеката вклучена во "
 "овој софтвер. За повеќе информации за Проектот за јавно знаење и неговите "
 "софтверски проекти, посетете ја <a href=\"https://pkp.sfu.ca/\" target="
 "\"_blank\">PKP веб страната</a>. Доколку имате извештаи за грешки или "
@@ -2436,3 +2437,6 @@ msgstr "Изберете како да нарачате статии од ова
 
 #~ msgid "category.category"
 #~ msgstr "Категории"
+
+msgid "search.journal"
+msgstr "Од списание"

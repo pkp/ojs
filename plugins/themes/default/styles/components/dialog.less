@@ -1,0 +1,68 @@
+.BaseDialogOverlay {
+    position: fixed;
+	inset: 0;
+	z-index: 30;
+	background-color: fade(#000000,60%);
+}
+
+.BaseDialogOverlay[data-state='open'] {
+	animation: overlayShow 550ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+h2.BaseDialogTitle {
+	margin: 0;
+}
+
+.BaseDialogBody {
+	margin-top: @base;
+}
+
+.BaseDialogContent {
+    background-color: @bg;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	z-index: 100;
+	max-height: 85vh;
+	width: 90vw;
+	max-width: 450px;
+	transform: translate(-50%, -50%);
+	border-radius: @radius;
+	padding: @double;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.BaseDialogContent:focus {
+	outline: none;
+}
+
+.BaseDialogContent[data-state='open'] {
+	animation: contentShow 550ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.BaseDialogActionButtons {
+    margin-top: @triple;
+	display: flex;
+	gap: @base;
+}
+
+@keyframes overlayShow {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes contentShow {
+	from {
+		opacity: 0;
+		transform: translate(-50%, -48%) scale(0.96);
+	}
+	to {
+		opacity: 1;
+		transform: translate(-50%, -50%) scale(1);
+	}
+}

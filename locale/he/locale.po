@@ -1,8 +1,2286 @@
-# Emma U <emmaupkp@gmail.com>, 2023.
+# Emma U <emmaupkp@gmail.com>, 2023, 2025.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2025-05-05 19:31+0000\n"
+"Last-Translator: Emma U <emmaupkp@gmail.com>\n"
+"Language-Team: Hebrew <http://translate.pkp.sfu.ca/projects/ojs/locale/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
+"n % 10 == 0) ? 2 : 3));\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "context.select"
+msgstr "עבור לכתב עת אחר:"
+
+msgid "navigation.categories"
+msgstr "קטגוריות"
+
+msgid "navigation.categories.browse"
+msgstr "לדפדף"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "לחץ על האיקון כדי למלא את טופס הסקירה."
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "אנא מלאו את השדות הנדרשים."
+
+msgid "common.confirmComplete"
+msgstr ""
+"האם אתה בטוח שאתה רוצה לסמן את המשימה הזו כמשימה שהושלמה? ייתכן ולא ניתן "
+"יהיה לבצע שינויים לאחר מכן."
+
+msgid "common.payment"
+msgstr "תשלום"
+
+msgid "common.payments"
+msgstr "תשלומים"
+
+msgid "common.homePageHeader.altText"
+msgstr "כותרת עמוד הבית"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "תמונת דף הבית של כתב העת"
+
+msgid "doi.manager.settings.publications"
+msgstr "מאמרים"
+
+msgid "navigation.journalHelp"
+msgstr "עזרה בכתב העת"
+
+msgid "navigation.current"
+msgstr "כתב העת הנוכחי"
+
+msgid "navigation.otherJournals"
+msgstr "כתבי עת אחרים"
+
+msgid "navigation.browseByIssue"
+msgstr "לפי גיליון"
+
+msgid "navigation.browseByAuthor"
+msgstr "לפי מחבר"
+
+msgid "navigation.infoForAuthors"
+msgstr "למחברים"
+
+msgid "navigation.infoForLibrarians"
+msgstr "לספרנים"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "הנחיות לניגודי עניינים"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "מידע למחברים"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "מידע לספרנים"
+
+msgid "navigation.skip.about"
+msgstr "דלג לאודות כתב העת"
+
+msgid "navigation.skip.issue"
+msgstr "דלג לגיליון הנוכחי"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "לא הוקצה"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "לא הוקצה"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "הגשות בעריכה"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "בעריכה"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "הגשות בסקירה"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "בסקירה"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "ארכיונים"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "ארכיונים"
+
+msgid "common.queue.long.active"
+msgstr "פעיל"
+
+msgid "common.queue.short.active"
+msgstr "פעיל"
+
+msgid "common.queue.long.completed"
+msgstr "ארכיון"
+
+msgid "common.queue.short.completed"
+msgstr "ארכיון"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "עורכים שהוקצו"
+
+msgid "section.section"
+msgstr "מדור"
+
+msgid "section.sections"
+msgstr "מדורים"
+
+msgid "section.title"
+msgstr "כותרת המדור"
+
+msgid "section.abbreviation"
+msgstr "קיצור"
+
+msgid "section.abbreviation.example"
+msgstr "(לדוגמה, מאמרים=ART)"
+
+msgid "section.policy"
+msgstr "מדיניות המדור"
+
+msgid "article.article"
+msgstr "מאמר"
+
+msgid "article.articles"
+msgstr "מאמרים"
+
+msgid "common.publication"
+msgstr "מאמר"
+
+msgid "common.publications"
+msgstr "מאמרים"
+
+msgid "article.submissionId"
+msgstr "מזהה הגשה"
+
+msgid "article.title"
+msgstr "כותר"
+
+msgid "article.authors"
+msgstr "מחברים"
+
+msgid "article.indexingInformation"
+msgstr "מידע על יצירת אינדקס"
+
+msgid "article.metadata"
+msgstr "מטא נתונים"
+
+msgid "article.journalSection"
+msgstr "מדור כתבי עת"
+
+msgid "article.file"
+msgstr "קובץ"
+
+msgid "article.suppFile"
+msgstr "קובץ משלים"
+
+msgid "article.suppFiles"
+msgstr "קבצים משלימים"
+
+msgid "article.suppFilesAbbrev"
+msgstr "קבצים נוספים"
+
+msgid "article.discipline"
+msgstr "דיסציפלינה אקדמית ותתי דיסציפלינות"
+
+msgid "article.subject"
+msgstr "מילות מפתח"
+
+msgid "article.coverage"
+msgstr "כיסוי"
+
+msgid "article.type"
+msgstr "סוג, שיטה או גישה"
+
+msgid "article.language"
+msgstr "שפה"
+
+msgid "article.sectionEditor"
+msgstr "עורך מדור"
+
+msgid "article.commentsToEditor"
+msgstr "הערות המחבר"
+
+msgid "article.submission"
+msgstr "הגשה"
+
+msgid "article.submissions"
+msgstr "הגשות"
+
+msgid "article.details"
+msgstr "פרטים"
+
+msgid "article.abstract"
+msgstr "תקציר"
+
+msgid "article.coverPage.altText"
+msgstr "תמונת שער"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "גישה פתוחה"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "גישה מוגבלת"
+
+msgid "article.comments.sectionDefault"
+msgstr "ברירת מחדל"
+
+msgid "article.comments.disable"
+msgstr "בטל"
+
+msgid "article.comments.enable"
+msgstr "אפשר"
+
+msgid "article.fontSize"
+msgstr "גודל גופן"
+
+msgid "article.fontSize.small.altText"
+msgstr "קטן"
+
+msgid "article.fontSize.medium.altText"
+msgstr "בינוני"
+
+msgid "article.fontSize.large.altText"
+msgstr "גדול"
+
+msgid "article.return"
+msgstr "חזור לפרטי המאמר"
+
+msgid "submission.changeSection"
+msgstr "שנה ל"
+
+msgid "submission.sent"
+msgstr "נשלח"
+
+msgid "submission.editorDecision"
+msgstr "החלטת העורך"
+
+msgid "submission.round"
+msgstr "&nbsp;{$round} סבב"
+
+msgid "submission.editorReview"
+msgstr "סקירת העורך"
+
+msgid "submission.notifyAuthor"
+msgstr "הודע למחבר"
+
+msgid "submission.notifyEditor"
+msgstr "הודע לעורך"
+
+msgid "submission.editorAuthorRecord"
+msgstr "רשומת דוא\"ל של העורך/מחבר"
+
+msgid "submission.reviewersVersion"
+msgstr "גרסת הקובץ עם הערות הסוקר"
+
+msgid "submission.postReviewVersion"
+msgstr "גרסת הקובץ לאחר הסקירה"
+
+msgid "submission.editorVersion"
+msgstr "גרסת העורך"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "הגרסה המתוקנת של הקובץ על ידי המחבר"
+
+msgid "submission.authorVersion"
+msgstr "גרסת המחבר"
+
+msgid "submission.copyediting"
+msgstr "עריכה לשונית"
+
+msgid "submission.copyedit"
+msgstr "לערוך לשונית"
+
+msgid "submission.proofreading"
+msgstr "הגהה"
+
+msgid "submission.scheduling"
+msgstr "תזמון"
+
+msgid "submission.scheduledIn"
+msgstr "מתוכנן לפרסום ב- {$issueName}."
+
+msgid "submission.scheduledIn.tba"
+msgstr "(יפורסם בהמשך)"
+
+msgid "submissions.step1"
+msgstr "שלב 1"
+
+msgid "submissions.step3"
+msgstr "שלב 3"
+
+msgid "submissions.queuedReview"
+msgstr "בסקירה"
+
+msgid "submissions.published"
+msgstr "פורסם"
+
+msgid "submissions.initial"
+msgstr "הראשונית"
+
+msgid "submissions.proofread"
+msgstr "הגיה"
+
+msgid "submissions.initialProof"
+msgstr "הגהה ראשונית"
+
+msgid "submissions.postAuthor"
+msgstr "לאחר המחבר"
+
+msgid "submissions.reviewRound"
+msgstr "סבב סקירה"
+
+msgid "submissions.proof"
+msgstr "הגהה"
+
+msgid "submissions.editorDecision"
+msgstr "החלטת העורך"
+
+msgid "submissions.editorRuling"
+msgstr "פסיקת העורך"
+
+msgid "submission.eventLog"
+msgstr "יומן אירועים"
+
+msgid "submissions.copyeditComplete"
+msgstr "נערך לשונית"
+
+msgid "submissions.layoutComplete"
+msgstr "הסידור נערך"
+
+msgid "submissions.proofreadingComplete"
+msgstr "הגהה"
+
+msgid "submission.search"
+msgstr "חיפוש מאמר"
+
+msgid "journal.currentIssue"
+msgstr "גיליון נוכחי"
+
+msgid "context.contexts"
+msgstr "כתבי עת"
+
+msgid "journal.path"
+msgstr "נתיב"
+
+msgid "context.context"
+msgstr "כתב עת"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "journal.viewAllIssues"
+msgstr "הצג את כל הגיליונות"
+
+msgid "user.authorization.representationNotFound"
+msgstr "לא ניתן היה למצוא את הגרסה הסופית המבוקשת"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "כולל משתמשים ללא תפקיד בכתב עת זה"
+
+msgid "user.profile.profileImage"
+msgstr "תמונת פרופיל"
+
+msgid "user.showAllJournals"
+msgstr "הצג את כתבי העת שלי"
+
+msgid "user.registerForOtherJournals"
+msgstr "הירשם לכתבי עת אחרים"
+
+msgid "user.reviewerPrompt"
+msgstr "האם תהיה מוכן לבחון את ההגשות לכתב העת הזה?"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "כן, בקש את התפקיד {$userGroup}."
+
+msgid "user.reviewerPrompt.optin"
+msgstr "כן, אני מעוניין שיצרו איתי קשר עם בקשות לסקור הגשות לכתב העת הזה."
+
+msgid "user.register.contextsPrompt"
+msgstr "לאילו כתבי עת באתר זה תרצה להירשם?"
+
+msgid "user.register.otherContextRoles"
+msgstr "בקש את התפקידים הבאים."
+
+msgid "user.register.noContextReviewerInterests"
+msgstr "אם ביקשת להיות סוקר בכתב עת כלשהו, אנא הזן את תחומי העניין שלך."
+
+msgid "user.myJournals"
+msgstr "כתבי העת שלי"
+
+msgid "user.manageMySubscriptions"
+msgstr "ניהול המנויים שלי"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "החשבון שלך אינו משויך כרגע לכתבי עת כלשהם. נא לבחור כתב עת:"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr "לחשבון שלך אין כרגע תפקידים בכתב עת זה. אנא בחר מבין הפעולות הבאות:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "הגש הצעה"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "שלח מאמר: רישום המחבר מושבת כעת."
+
+msgid "user.noRoles.regReviewer"
+msgstr "הירשם כסוקר"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "הירשם כסוקר: רישום הסוקר אינו זמין כעת."
+
+msgid "user.role.manager"
+msgstr "מנהל כתב העת"
+
+msgid "user.role.subEditor"
+msgstr "עורך מדור"
+
+msgid "user.role.subscriptionManager"
+msgstr "מנהל מנויים"
+
+msgid "user.role.managers"
+msgstr "מנהלי כתבי עת"
+
+msgid "user.role.subEditors"
+msgstr "עורכי מדורים"
+
+msgid "user.role.subscriptionManagers"
+msgstr "מנהלי מנויים"
+
+msgid "user.role.journalAssistant"
+msgstr "עוזר לכתב העת"
+
+msgid "user.role.journalAssistants"
+msgstr "עוזרי כתב העת"
+
+msgid "issue.issue"
+msgstr "גיליון"
+
+msgid "issue.issues"
+msgstr "גיליונות"
+
+msgid "issue.title"
+msgstr "כותר"
+
+msgid "issue.viewIssueIdentification"
+msgstr "הצג {$identification}"
+
+msgid "issue.volume"
+msgstr "כרך"
+
+msgid "issue.number"
+msgstr "מספר"
+
+msgid "issue.vol"
+msgstr "כרך"
+
+msgid "issue.no"
+msgstr "מספר"
+
+msgid "issue.year"
+msgstr "שנה"
+
+msgid "issue.noIssues"
+msgstr "אין גיליונות"
+
+msgid "issue.toc"
+msgstr "תוכן עניינים"
+
+msgid "issue.abstract"
+msgstr "תקציר"
+
+msgid "issue.fullIssue"
+msgstr "הגיליון המלא"
+
+msgid "issue.nonpdf.title"
+msgstr "הורדת הגיליון"
+
+msgid "issue.viewIssue"
+msgstr "צפה בגיליון"
+
+msgid "issue.return"
+msgstr "חזרה לפרטי הגיליון"
+
+msgid "doi.issue.incorrectContext"
+msgstr ""
+"לא היתה אפשרות ליצור DOI עבור הגיליון הבא: {$itemTitle}. לא קיים בהקשר "
+"הנוכחי של כתב העת."
+
+msgid "doi.issue.incorrectStaleStatus"
+msgstr ""
+"לא היתה אפשרות להגדיר את סטטוס ה-DOI כישן עבור הגיליון הבא: {$itemTitle}. ה-"
+"DOI חייב להיות בסטטוס \"רשום\" או \"הוגש\"."
+
+msgid "doi.issue.notPublished"
+msgstr ""
+"לא ניתן לסמן את ה-DOI הרשום עבור {$pubObjectTitle}. יש לפרסם את הגיליון לפני "
+"שניתן יהיה לעדכן את הסטטוס."
+
+msgid "subscriptionTypes.currency"
+msgstr "מטבע"
+
+msgid "subscriptionTypes.year"
+msgstr "שנה"
+
+msgid "subscriptionTypes.years"
+msgstr "שנים"
+
+msgid "subscriptionTypes.month"
+msgstr "חודש"
+
+msgid "subscriptionTypes.months"
+msgstr "חודשים"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "שאינו פג תוקף"
+
+msgid "subscriptionTypes.format"
+msgstr "תבנית"
+
+msgid "subscriptionTypes.format.online"
+msgstr "מקוון"
+
+msgid "subscriptionTypes.format.print"
+msgstr "מודפס"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "מודפס ומקוון"
+
+msgid "subscriptions.inactive"
+msgstr "אינו פעיל"
+
+msgid "subscriptions.status"
+msgstr "מצב"
+
+msgid "subscriptions.status.active"
+msgstr "פעיל"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "זקוק למידע"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "זקוק לאישור"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "ממתין לתשלום ידני"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "ממתין לתשלום מקוון"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "אין לך מנוי פעיל."
+
+msgid "subscriptions.status.other"
+msgstr "אחר, ראה הערות"
+
+msgid "subscriptions.individualDescription"
+msgstr "מינויים בודדים דורשים התחברות כדי לגשת לתוכן המינוי."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"מנויים מוסדיים אינם דורשים התחברות. הדומיין ו/או כתובת ה-IP של המשתמש משמשים "
+"למתן גישה לתוכן המנויים."
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"מנויים מוסדיים שנרכשו באופן מקוון דורשים אישור של התחום וטווחי ה-IP לפני "
+"הפעלת המנוי."
+
+msgid "submission.event.general.defaultEvent"
+msgstr "אירוע הגשה"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "המאמר הוגש"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "הגשה הוקצתה לגיליון"
+
+msgid "submission.event.general.articlePublished"
+msgstr "המאמר פורסם"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "עורך הלשון הוסר מהגשה"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "מטלת עריכת לשון החלה"
+
+msgid "submission.event.author.authorRevision"
+msgstr "גרסת המחבר הוגשה"
+
+msgid "submission.event.general.authorRevision"
+msgstr "קובץ התיקון של המחבר עודכן"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "עורך שהוקצה להגשה"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "העורך הוסר מההגשה"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "החלטת העורך הוגשה"
+
+msgid "submission.event.editor.editorFile"
+msgstr "קובץ העורך עודכן"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "ההגשה נשלחה לארכיון"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "ההגשה אוחזרה מהארכיון"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "עורך הלשון הוקצה להגשה"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "קובץ התיקונים של עורך לשון עודכן"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "העריכה הלשונית הראשונית הושלמה"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "העריכה הלשונית הסופית הושלמה"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "הקובץ שעבר עריכה לשונית עודכן"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "מגיה הוקצה להגשה"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "מגיה הוסר מההגשה"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "מטלת הגהה החלה"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "מטלת ההגהה הושלמה"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "עורך הסידור הוקצה להגשה"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "עורך הסידור הוסר מההגשה"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "מטלת הסידור החלה"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "הסידור של הגרסה הסופית עודכן"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "משימת הסידור הושלמה"
+
+msgid "reader.subscribersOnly"
+msgstr "מנויים בלבד"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr "נדרש מנוי כדי לגשת לפריט. כדי לאמת את המנוי, התחבר לכתב העת."
+
+msgid "reader.subscriptionAccess"
+msgstr "דורש מנוי"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "דורש מנוי או תשלום"
+
+msgid "comments.commentsOnArticle"
+msgstr "תגובות למאמר זה"
+
+msgid "comments.authenticated"
+msgstr "מאת <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "search.results.orderBy"
+msgstr "סדר תוצאות לפי"
+
+msgid "search.results.orderBy.article"
+msgstr "כותרת המאמר"
+
+msgid "search.results.orderBy.author"
+msgstr "מחבר"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "ניהול מנויים"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "מינויים אישיים"
+
+msgid "search.results.orderBy.date"
+msgstr "תאריך פרסום"
+
+msgid "search.results.orderBy.issue"
+msgstr "גיליון"
+
+msgid "search.results.orderBy.journal"
+msgstr "שם כתב העת"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "פופולריות (כל הזמנים)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "פופולריות (בחודש שעבר)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "רלוונטיות"
+
+msgid "search.results.orderDir.asc"
+msgstr "בסדר עולה"
+
+msgid "search.results.orderDir.desc"
+msgstr "בסדר יורד"
+
+msgid "search.results.similarDocuments"
+msgstr "מסמכים דומים"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>הערה!</h4>\n"
+"<p>למערכת לא היתה אפשרות להחליף באופן אוטומטי את קובץ התצורה. כדי להחיל את "
+"שינויי התצורה שלך, עליך לפתוח <tt>config.inc.php</tt> בעורך טקסט מתאים "
+"ולהחליף את תוכנו בתוכן של שדה הטקסט למטה.</p>"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "מנויים מוסדיים"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "סוגי מינויים"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "תוספים לגרסה הסופית של המאמר"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"תוספי הגרסה הסופית מאפשרים תמיכה בהצגת סוגי מסמכים שונים כגרסאות הכנה לדפוס "
+"של מאמרים."
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+"תוספי הרשאה מאפשרים למערכות כתבי עת בגישה פתוחה להעביר משימות אימות משתמשים "
+"למערכות אחרות, כגון שרתי LDAP."
+
+msgid "plugins.categories.generic.description"
+msgstr ""
+"תוספים גנריים משמשים להרחבת מערכות כתבי עת בגישה פתוחה במגוון דרכים שאינן "
+"נתמכות על ידי קטגוריות התוספים האחרות."
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>הצעות להודעות זכויות יוצרים של Creative Commons</h3>\n"
+"<h4>1. מדיניות מוצעת לכתבי עת המציעים גישה פתוחה</h4>\n"
+"מחברים המפרסמים בכתב עת זה מסכימים לתנאים הבאים:\n"
+"<ol type=\"a\">\n"
+"\t<li>המחברים שומרים על זכויות היוצרים ומעניקים לכתב העת את הזכות לפרסום "
+"ראשון כאשר היצירה מורשית בו זמנית תחת רישיון <a target=\"_new\" href=\"https"
+"://creativecommons.org/licenses/by/3.0/\">Creative Commons Attribution "
+"License</a> המאפשר לאחרים לשתף את היצירה עם אישור על מחבר היצירה והפרסום "
+"הראשוני בכתב עת זה.</li>\n"
+"\t<li>מחברים יכולים להתקשר בהסדרים חוזיים נפרדים נוספים להפצה לא בלעדית של "
+"הגרסה שפורסמה של העבודה בכתב העת (למשל, לפרסם אותה במאגר מוסדי או לפרסם אותה "
+"בספר), עם אישור על פרסומה הראשוני בכתב עת זה.</li>\n"
+"\t<li>מחברים רשאים ומעודדים לפרסם את עבודתם באינטרנט (למשל, במאגרים מוסדיים "
+"או באתר האינטרנט שלהם) לפני ובמהלך תהליך ההגשה, מכיוון שזה יכול להוביל "
+"לחילופי דברים פרודוקטיביים, כמו גם לציטוט מוקדם וגדול יותר של עבודות שפורסמו "
+"(ראה <a target=\"_new\" href=\"https://web-archive.southampton.ac.uk/opcit."
+"eprints.org/oacitation-biblio.html\">השפעת הגישה הפתוחה</a>).</li>\n"
+"</ol>\n"
+"\n"
+"<h4>2. מדיניות מוצעת לכתבי עת המציעים גישה פתוחה מושהית</h4>\n"
+"מחברים המפרסמים בכתב עת זה מסכימים לתנאים הבאים:\n"
+"<ol type=\"a\">\n"
+"\t<li>המחברים שומרים על זכויות היוצרים ומעניקים לכתב העת את זכות הפרסום "
+"הראשון, כאשר היצירה [SPECIFY PERIOD OF TIME] לאחר הפרסום מורשית בו-זמנית תחת "
+"רישיון <a target=\"_new\" href=\"https://creativecommons.org/licenses/by/3.0/"
+"\">רישיון ייחוס Creative Commons</a> המאפשר לאחרים לשתף את היצירה עם אישור "
+"על מחבר היצירה והפרסום הראשוני בכתב עת זה.</li>\n"
+"\t <li>מחברים יכולים להתקשר בהסדרים חוזיים נפרדים נוספים להפצה לא בלעדית של "
+"הגרסה שפורסמה של העבודה בכתב העת (למשל, לפרסם אותה במאגר מוסדי או לפרסם אותה "
+"בספר), עם אישור על פרסומה הראשוני בכתב עת זה.</li>\n"
+"\t <li>מחברים רשאים ומעודדים לפרסם את עבודתם באינטרנט (למשל, במאגרים מוסדיים "
+"או באתר האינטרנט שלהם) לפני ובמהלך תהליך ההגשה, מכיוון שזה יכול להוביל "
+"לחילופי דברים פרודוקטיביים, כמו גם לציטוט מוקדם וגדול יותר של עבודות שפורסמו "
+"(ראה <a target=\"_new\" href=\"https://web-archive.southampton.ac.uk/opcit."
+"eprints.org/oacitation-biblio.html\"> השפעת הגישה הפתוחה</a>).</li>\n"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"שלבים: תור הגשה &gt; סקירת הגשה &gt; עריכת הגשה &gt; תוכן העניינים.<br /><br "
+"/>\n"
+"בחר מודל לטיפול בהיבטים אלה של תהליך העריכה. (כדי למנות עורך ראשי ועורכי "
+"מדורים, עבור אל העורכים בהנהלת כתב העת.)"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>כדי לאפשר לקוראים לאתר גרסאות מקוונות של היצירה המצוטטת על ידי מחבר, "
+"האפשרויות הבאות זמינות.</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>הוסף כלי קריאה</strong><p>מנהל כתב העת יכול להוסיף \"מצא "
+"הפניות\" לכלי הקריאה הנלווים לפריטים שפורסמו, מה שמאפשר לקוראים להדביק כותרת "
+"של הפניה ולאחר מכן לחפש במאגרי מידע אקדמיים שנבחרו מראש עבור העבודה "
+"המצוטטת.</p></li>\n"
+"\t<li><strong>הטבעת קישורים בהפניות</strong><p>עורך הסידור יכול להוסיף קישור "
+"להפניות שניתן למצוא באינטרנט באמצעות ההוראות הבאות (הניתנות לעריכה).</p></li>"
+"\n"
+"</ol>"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"להשבית משתמש זה? פעולה זו תמנע מהמשתמש להיכנס למערכת.\n"
+"\n"
+"באפשרותך לספק למשתמש סיבה להשבתת חשבונו."
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"מצטערים, אין לך זכויות ניהול על משתמש זה. ייתכן שהסיבה לכך היא:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>המשתמש הוא מנהל האתר</li>\n"
+"\t\t\t<li>המשתמש פעיל בכתבי עת שאינך מנהל</li>\n"
+"\t\t</ul>\n"
+"\tמשימה זו חייבת להתבצע על-ידי מנהל האתר.\n"
+"\t"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>פריטים מודגשים מציינים שנדרשת פעולה על-ידי עורך, ומסומנים כך:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotNotified\">סוקר הוקצה אך לא קיבל "
+"הודעה בדוא\"ל</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">כל הסוקרים חזרו עם הערותיהם, אך לא "
+"נרשמה החלטה</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">המחבר העלה כתב יד מתוקן</li>"
+"\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">הסוקר איחר לאשר "
+"הזמנה לסקירת עמיתים</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">הסוקר איחר להשלמת "
+"הסקירה</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>\"תאריך היעד\" מתמלא כאשר הסוקר מקבל בקשה לסקירה; הוא מציג את מספר "
+"השבועות עד לתאריך היעד של הסקירה או (-) השבועות שתאריך היעד שלהם חלף.</li>\n"
+"</ol>"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>פריטים מודגשים מציינים שנדרשת פעולה על-ידי עורך, ומסומנים כך:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">נדרשת פעולה בשלב עריכת הלשון</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">נדרשת פעולה בשלב עריכת הסידור</li>"
+"\n"
+"\t\t\t<li class=\"higlightProofreading\">נדרשת פעולה בשלב ההגהה</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "מטלות עריכה פעילות"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "מטלות עריכה שהושלמו"
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"הודעה נוספת לעורך לשון זה תפעיל מחדש את המטלה שלו. האם אתה בטוח שאתה רוצה "
+"לעשות זאת?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"הודעה נוספת למחבר זה תפעיל מחדש את המטלה שלו. האם אתה בטוח שאתה רוצה לעשות "
+"זאת?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"הודעה נוספת לעורך סידור זה תפעיל מחדש את המטלה שלו. האם אתה בטוח שאתה רוצה "
+"לעשות זאת?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"הודעה נוספת למגיה זה תפעיל מחדש את המטלה שלו. האם אתה בטוח שאתה רוצה לעשות "
+"זאת?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "חרטות"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} התחרטויות של סוקרים, ביטולים וסבבים קודמים"
+
+msgid "sectionEditor.regrets"
+msgstr "חרטות"
+
+msgid "sectionEditor.regrets.link"
+msgstr "הצגת חרטות, ביטולים, סבבים קודמים"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "ביקורת עמיתים, סבב {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "החלטת עורך, סבב {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "התחרטויות וביטולים של הסוקר"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "התחרטות"
+
+msgid "sectionEditor.regrets.result"
+msgstr "תוצאה"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "רשום משתמש קיים כסוקר"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "יצירת סוקר חדש"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "מטלות עריכה פעילות"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "מטלות עריכה שהושלמו"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "אין מטלות עריכה פעילות."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "מטלות עריכת סידור"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "העלאת פורמט הגרסה הסופית"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "החלף קובץ"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "העלאת קובץ משלים"
+
+msgid "submission.layout.imageInvalid"
+msgstr "תבנית תמונה לא תקפה. התבניות המקובלות הן .gif, .jpg ו- .png."
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "גרסה סופית זו תהיה זמינה באתר נפרד."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "כתובת URL של תוכן המתארח מרחוק"
+
+msgid "reviewer.pendingReviews"
+msgstr "מאמרים ממתינים לסקירה"
+
+msgid "reviewer.completedReviews"
+msgstr "בוצע"
+
+msgid "reviewer.averageQuality"
+msgstr "דירוג"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "הקובץ לבדיקה"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "הודע לעורך"
+
+msgid "reviewer.article.canDoReview"
+msgstr "יעשה את הסקירה"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "לא יכול לבצע את הסקירה"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "ההגשה תהיה זמינה, אם וכאשר הסוקר יסכים לבצע את הסקירה"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "עורך הגשות"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "הקלד או הדבק את הערות הסקירה כאן"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "למילוי על ידי העורך"
+
+msgid "reviewer.article.sendReminder"
+msgstr "שלח תזכורת"
+
+msgid "reviewer.article.recommendation"
+msgstr "המלצה"
+
+msgid "reviewer.article.submitReview"
+msgstr "שלח סקירה לעורך"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "הערות"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "קבצים שהועלו"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "הגרסה הועלתה על ידי הבודק"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(אם ברצונך להוסיף הערות לקובץ, עבור העורך, שמור בכונן הקשיח והשתמש "
+"בעיון/העלאה.)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "בקשת העורך"
+
+msgid "reviewer.article.schedule.response"
+msgstr "תגובתך"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "הסקירה נשלחה"
+
+msgid "reviewer.article.schedule.due"
+msgstr "מועד הסקירה"
+
+msgid "reviewer.article.decision.accept"
+msgstr "אשר הגשה"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "תיקונים נדרשים"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "שלח מחדש לסקירה"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "שלח מחדש במקום אחר"
+
+msgid "reviewer.article.decision.decline"
+msgstr "דחיית הגשה"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "ראה הערות"
+
+msgid "reviewer.article.schedule"
+msgstr "לוח זמנים"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "הגשה לסקירה"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "לוח זמנים לסקירה"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "שלבי הסקירה"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "הנחיות לסוקר"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"הנחיות הסקירה יספקו לסוקרים קריטריונים לשיפוט התאמת ההגשה לפרסום בכתב העת, "
+"ויכולים לכלול הוראות מיוחדות להכנת סקירה יעילה ומועילה. בעריכת הסקירה, "
+"מוצגות בפני הסוקרים שתי תיבות טקסט פתוחות, הראשונה \"למחבר ולעורך\" והשנייה "
+"\"לעורך\". לחלופין, מנהל כתב העת יכול ליצור טופס סקירת עמיתים תחת טפסי "
+"סקירה. בכל המקרים, לעורכים תהיה אפשרות לכלול את הסקירות בהתכתבות עם המחבר."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "הודע לעורך ההגשה"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "באשר לשאלה האם יבצע את הסקירה"
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "אם אתה מתכוון לבצע את הסקירה, עיין בהנחיות הסוקר להלן."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"לחץ על שמות הקבצים כדי להוריד ולסקור (על המסך או על ידי הדפסה) את הקבצים "
+"המשויכים להגשה זו."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"הצהירו אם יש לכם אינטרסים מנוגדים בנוגע למחקר זה (ראו <a target=\"_new\" "
+"class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">מדיניות "
+"CI&nbsp;</a>)."
+
+msgid "reviewer.competingInterests"
+msgstr "ניגודי אינטרסים"
+
+msgid "reviewer.article.enterReviewA"
+msgstr "לחץ על האיקון כדי להזין (או להדביק) את הסקירה שלך על הגשה זו."
+
+msgid "reviewer.article.uploadFile"
+msgstr "בנוסף, ניתן להעלות קבצים לעורך ו/או למחבר להתייעצות."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"בחר המלצה והגש את הסקירה כדי להשלים את התהליך. עליך להזין סקירה או להעלות "
+"קובץ לפני בחירת המלצה."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "הגדר או שנה את המלצת הסוקר."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "לא נבחרה המלצה. עליך לבחור המלצה להגשה."
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"לאחר שתזין החלטה, לא תוכל עוד לבצע שינויים בסקירה זו. האם אתה בטוח שאתה רוצה "
+"להמשיך?"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "קובץ לעורך לשון"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "קובץ עורך לשון"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "קובץ עורך לשון"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "אין מטלות הגהה"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>כדי להעלות כתב יד לכתב עת זה, בצע את השלבים הבאים.</p>\n"
+"<ol>\n"
+"<li>בדף זה, לחץ על עיון (או בחר קובץ) הפותח חלון בחירת קובץ לאיתור הקובץ "
+"בכונן הקשיח של המחשב.</li>\n"
+"<li>אתר את הקובץ שברצונך לשלוח וסמן אותו.</li>\n"
+"<li>לחץ על פתח בחלון בחירת קובץ, הממקם את שם הקובץ בדף זה.</li>\n"
+"<li>לחץ על העלה בדף זה, המעלה את הקובץ מהמחשב לאתר האינטרנט של כתב העת ומשנה "
+"את שמו בהתאם למוסכמות של כתב העת.</li>\n"
+"<li>לאחר העלאת ההגשה, לחץ על שמור והמשך בתחתית דף זה.</li>\n"
+"</ol>"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "לא ניתן לשלוח בקשה בדוא\"ל עד שגירסת הסקירה תהיה זמינה."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"לא ניתן לשלוח בקשה בדוא\"ל עד לבחירת הקובץ לעריכה לשונית בהחלטת העורך, בדף "
+"הסקירה."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "לא ניתן לשלוח בקשה בדוא\"ל עד להעלאת הקובץ לעריכה לשונית."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "עריכת לשון ראשונית"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "עריכת לשון של העורך"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "עריכת לשון של המחבר"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "עריכת לשונית סופית"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "גרסת עורך הלשון"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "הקצאת עורך לשון"
+
+msgid "submission.copyedit.useFile"
+msgstr "השתמש בקובץ"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "הערות עריכה לשונית"
+
+msgid "submission.copyedit.instructions"
+msgstr "הוראות עריכה לשונית"
+
+msgid "submission.layout.noLayoutFile"
+msgstr "ללא (העלאת גרסת עריכת הלשון הסופית כגרסת סידור לפני שליחת הבקשה)"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "הגרסה הסופית הציבורית כבר קיימת."
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "הקצה עורך סידור"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "החלף את עורך הסידור"
+
+msgid "submission.layout.layoutComments"
+msgstr "הערות סידור"
+
+msgid "submission.layout.instructions"
+msgstr "הוראות סידור"
+
+msgid "submission.layout.referenceLinking"
+msgstr "קישור הפניות"
+
+msgid "submission.proofreadingComments"
+msgstr "הערות הגהה"
+
+msgid "submission.proofread.corrections"
+msgstr "תיקוני הגהה"
+
+msgid "submission.proofread.instructions"
+msgstr "הוראות הגהה"
+
+msgid "submission.logType.article"
+msgstr "מאמר"
+
+msgid "submission.logType.author"
+msgstr "מחבר"
+
+msgid "submission.logType.editor"
+msgstr "עורך"
+
+msgid "submission.logType.review"
+msgstr "סקירה"
+
+msgid "submission.logType.copyedit"
+msgstr "עריכת לשון"
+
+msgid "submission.logType.layout"
+msgstr "סידור"
+
+msgid "submission.logType.proofread"
+msgstr "הגהה"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "התכתבות עורך/מחבר"
+
+msgid "submission.comments.copyeditComments"
+msgstr "העתק הערות"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"ניתן לשתף את ההערות הללו עם המחבר.<br />\n"
+"(לאחר השמירה, ניתן להוסיף הערות נוספות.)"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "למחבר ולעורך"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "לעורך"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "לאחר השליחה, הצג עותק מוסתר הניתן לעריכה כדי לשלוח לסוקרים."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "למחבר ולעורך"
+
+msgid "submission.comments.forEditor"
+msgstr "לעורך"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "שמירה ושליחה בדוא\"ל למחבר"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "שמירה ושליחה בדוא\"ל לעורך"
+
+msgid "user.register.selectContext"
+msgstr "בחר כתב עת להירשם אליו:"
+
+msgid "user.register.noJournals"
+msgstr "אין כתבי עת שאתה יכול להירשם אליהם באתר זה."
+
+msgid "user.register.privacyStatement"
+msgstr "הצהרת פרטיות"
+
+msgid "user.register.registrationDisabled"
+msgstr "כתב עת זה אינו מקבל כרגע רישומי משתמשים."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "הסיסמה שהזנת אינה ארוכה מספיק."
+
+msgid "user.register.readerDescription"
+msgstr "הודעה בדוא\"ל על פרסום גיליון של כתב העת."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr "הודעה בדוא\"ל כאשר גיליון של כתב העת הופך לגישה פתוחה."
+
+msgid "user.register.authorDescription"
+msgstr "מסוגל להגיש פריטים לכתב העת."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "מוכן לערוך סקירת עמיתים על הגשות לכתב העת."
+
+msgid "user.register.reviewerDescription"
+msgstr "מוכן לערוך סקירת עמיתים על הגשות לאתר."
+
+msgid "user.register.reviewerInterests"
+msgstr "זיהוי תחומי עניין (תחומים מהותיים ושיטות מחקר):"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"כן, ברצוני לקבל הודעה על פרסומים והודעות חדשות עבור כל כתבי העת שנרשמתי "
+"אליהם."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"כן, אני מסכים שהנתונים שלי ייאספו ויאוחסנו בהתאם ל-<a href=\"{$privacyUrl}\" "
+"target=\"_blank\">להצהרת הפרטיות של כתב עת זה</a>."
+
+msgid "user.register.form.missingContextConsent"
+msgstr "עליך להסכים להצהרת הפרטיות של כל כתב עת שאתה נרשם אליו."
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "עליך להסכים להצהרת הפרטיות של אתר זה."
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "המנויים שלי"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "סטטוס מנוי"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "מנויים מוסדיים"
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"מנויים פעילים ומנויים שפג תוקפם מוצגים להלן יחד עם תאריך התפוגה שלהם. בנוסף, "
+"פרטי הסטטוס הבאים עשויים להיכלל בכל מנוי."
+
+msgid "user.subscriptions.status"
+msgstr "סטטוס"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "תיאור"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "יש לבדוק את המנוי לפני שניתן יהיה להפעיל אותו"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "התשלום הידני הוזן אך עדיין לא התקבל"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "תשלום מקוון הוזן אך בוטל או לא הושלם"
+
+msgid "user.subscriptions.renew"
+msgstr "לחדש"
+
+msgid "user.subscriptions.purchase"
+msgstr "לרכוש"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "רכישת מנוי חדש"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "רכישת מנוי אישי"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "רכישת מנוי מוסדי"
+
+msgid "user.subscriptions.expires"
+msgstr "פג תוקף: {$date}"
+
+msgid "user.subscriptions.expired"
+msgstr "פג תוקף: {$date}"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "הצגת סוגי מינויים זמינים"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "סוג מנוי"
+
+msgid "user.subscriptions.form.membership"
+msgstr "חברות"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "סוג המינוי שנבחר דורש מידע על החברות."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "בחר סוג מנוי תקף."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "לחשבון משתמש זה כבר יש מנוי אישי."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "מידע על חברות אם נדרש עבור סוג המינוי שנבחר."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "שם המוסד"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "נדרש שם מוסד."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "כתובת למשלוח דואר"
+
+msgid "user.subscriptions.form.domain"
+msgstr "דומיין"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"אם הוזן כאן דומיין, טווחי IP הם אופציונליים.<br />ערכים תקפים הם שמות דומיין "
+"(למשל lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr "סוג המנוי שנבחר דורש תחום ו/או טווח IP לאימות מנוי."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "טווחי IP"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"אם מוזנים כאן טווחי IP, הדומיין הוא אופציונלי.<br />ערכים תקפים כוללים כתובת "
+"IP (למשל 142.58.103.1), טווח IP (למשל 142.58.103.1 - 142.58.103.4), טווח IP "
+"עם תו כללי '*' (למשל 142.58.*.*), וטווח IP עם CIDR (למשל 142.58.100.0/24)."
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "הזן טווח IP תקף."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "מחק"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "הוסף"
+
+msgid "search.browseAuthorIndex"
+msgstr "עיין באינדקס המחברים"
+
+msgid "search.searchFor"
+msgstr "חיפוש מאמרים עבור"
+
+msgid "search.withinJournal"
+msgstr "בתוך"
+
+msgid "search.allJournals"
+msgstr "כל כתבי העת"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"טיפים לחיפוש: <ul>\n"
+"<li>מונחי חיפוש אינם תלויי רישיות</li>\n"
+"<li>המערכת מתעלמת ממילים נפוצות</li>\n"
+"<li>כברירת מחדל מוחזרים רק ערכים המכילים <em>את כל</em> המונחים בשאילתה ("
+"כלומר, <em>AND</em> משתמע)</li>\n"
+"<li>שלב מספר מילים עם <em>OR</em> כדי למצוא מאמרים המכילים אחד מהמונחים; "
+"למשל, <em>חינוך או מחקר</em></li>\n"
+"<li>השתמש בסוגריים כדי ליצור שאילתות מורכבות יותר; למשל, <em>ארכיון ((כתב עת "
+"או כנס) לא תזות)</em></li>\n"
+"<li>חפש ביטוי מדויק על ידי הצבתו במרכאות; למשל, <em>\"הוצאה לאור בגישה "
+"פתוחה\"</em></li>\n"
+"<li>אל תכלול מילה על ידי קידומת <strong>שלה עם -</strong> או <em>NOT</em>; "
+"למשל <em>פוליטיקה מקוונת</em> או <em>פוליטיקה מקוונת</em></li>\n"
+"<li>השתמש ב<strong>- *</strong> במונח כתו כללי כדי להתאים לכל רצף של תווים; "
+"לדוגמה, <em>מוסר חברתי*</em> יתאים למסמכים המכילים \"סוציולוגי\" או \"חברתי\""
+"</li>\n"
+"</ul>"
+
+msgid "article.pdf.title"
+msgstr "קובץ מסמך נייד (PDF)"
+
+msgid "article.download"
+msgstr "הורד קובץ PDF"
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>קובץ ה- PDF שבחרת אמור להיטען כאן אם בדפדפן האינטרנט שלך מותקן תוסף קורא "
+"PDF (לדוגמה, גרסה עדכנית של <a href=\"https://get.adobe.com/reader/\">Adobe "
+"Acrobat Reader</a>).</p>"
+
+msgid "article.nonpdf.title"
+msgstr "הורדת מאמר"
+
+msgid "article.nonpdf.note"
+msgstr ""
+"הקובץ שבחרת אמור להתחיל להוריד באופן אוטומטי. אם לא, לחץ על הקישור למטה. שים "
+"לב שקובץ זה עשוי לדרוש מציג או תוסף מיוחד כדי להציג.<br /><br />אם הקובץ לא "
+"יורד אוטומטית, <a href=\"{$url}\">לחץ כאן</a>."
+
+msgid "site.journalRegister"
+msgstr "הירשם"
+
+msgid "site.journalCurrent"
+msgstr "גיליון נוכחי"
+
+msgid "archive.issueUnavailable"
+msgstr "הגיליון אינו זמין"
+
+msgid "site.noJournals"
+msgstr "אין כתבי עת זמינים."
+
+msgid "current.current"
+msgstr "נוכחי"
+
+msgid "current.noCurrentIssue"
+msgstr "אין בעיה נוכחית"
+
+msgid "archive.archivesPageNumber"
+msgstr "ארכיון - עמוד {$pageNumber}"
+
+msgid "archive.browse"
+msgstr "עיין בגיליונות הישנים יותר"
+
+msgid "about.statistics"
+msgstr "סטטיסטיקה"
+
+msgid "about.contact"
+msgstr "איש קשר"
+
+msgid "about.aboutContext"
+msgstr "אודות כתב העת"
+
+msgid "about.history"
+msgstr "היסטוריה של כתב העת"
+
+msgid "about.editorialPolicies"
+msgstr "מדיניות המערכת"
+
+msgid "about.focusAndScope"
+msgstr "מיקוד והיקף"
+
+msgid "about.sectionPolicies"
+msgstr "מדיניות המדור"
+
+msgid "about.submissions"
+msgstr "הגשות"
+
+msgid "about.onlineSubmissions.login"
+msgstr "כניסה"
+
+msgid "about.onlineSubmissions.register"
+msgstr "הירשם"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "{$login} או {$register} כדי לבצע הגשה."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} או {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "בצע הגשה חדשה למדור <a href=\"{$url}\">{$name}</a>."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "בצע הגשה חדשה"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "הצגת ההגשות הממתינות שלך"
+
+msgid "about.authorGuidelines"
+msgstr "הנחיות למחבר"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "רשימת פעולות לביצוע כהכנה להגשה"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"כחלק מתהליך ההגשה, המחברים נדרשים לבדוק את עמידת ההגשה שלהם בכל הפריטים "
+"הבאים, וייתכן שההגשות יוחזרו למחברים שאינם מצייתים להנחיות אלה."
+
+msgid "about.copyrightNotice"
+msgstr "הודעת זכויות יוצרים"
+
+msgid "about.privacyStatement"
+msgstr "הצהרת פרטיות"
+
+msgid "about.authorFees"
+msgstr "דמי מחבר"
+
+msgid "about.authorFeesMessage"
+msgstr "כתב עת זה גובה את דמי המחבר הבאים."
+
+msgid "about.peerReviewProcess"
+msgstr "תהליך סקירת עמיתים"
+
+msgid "about.publicationFrequency"
+msgstr "תדירות פרסום"
+
+msgid "about.openAccessPolicy"
+msgstr "מדיניות גישה פתוחה"
+
+msgid "about.delayedOpenAccess"
+msgstr "עיכוב בגישה פתוחה"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "התוכן של כתב עת זה יהיה זמין בפורמט גישה פתוחה"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "חודש(ים) לאחר פרסום גיליון."
+
+msgid "about.archiving"
+msgstr "בארכיון"
+
+msgid "about.subscriptions"
+msgstr "מנויים"
+
+msgid "about.subscriptions.individual"
+msgstr "מינויים אישיים"
+
+msgid "about.subscriptions.institutional"
+msgstr "מנויים מוסדיים"
+
+msgid "about.subscriptionsContact"
+msgstr "מנויים צור קשר"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "סוגי מינויים"
+
+msgid "about.memberships"
+msgstr "חברויות"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr "מידע נוסף על מערכת הפרסום, פלטפורמה וזרימת עבודה מאת OJS/PKP."
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "תהליך העריכה והפרסום של OJS"
+
+msgid "about.aboutSoftware"
+msgstr "אודות PKP"
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"כתב עת זה משתמש ב-Open Journal Systems {$ojsVersion}, שהיא תוכנה לניהול "
+"ופרסום כתבי עת בקוד פתוח שפותחה, נתמכת ומופצת באופן חופשי על ידי פרויקט הידע "
+"הציבורי תחת הרישיון הציבורי הכללי של GNU. בקר באתר האינטרנט של PKP כדי <a "
+"href=\"https://pkp.sfu.ca/\">למידע נוסף על התוכנה</a>. אנא <a href=\""
+"{$contactUrl}\"> צור קשר ישירות עם כתב העת</a> עם שאלות על כתב העת והגשות "
+"לכתב העת."
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"אתר זה משתמש ב-Open Journal Systems {$ojsVersion}, שהיא תוכנת קוד פתוח "
+"לניהול ופרסום כתבי עת שפותחה, נתמכת ומופצת באופן חופשי על ידי פרויקט הידע "
+"הציבורי תחת הרישיון הציבורי הכללי של GNU. בקר באתר האינטרנט של PKP כדי <a "
+"href=\"https://pkp.sfu.ca/\">למידע נוסף על התוכנה</a>. אנא צור קשר ישירות עם "
+"האתר עם שאלות על כתבי העת שלו והגשות לכתבי העת שלו."
+
+msgid "help.ojsHelp"
+msgstr "עזרה במערכות כתבי עת פתוחים"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "עזרה של OJS"
+
+msgid "help.searchReturnResults"
+msgstr "חזרה לתוצאות החיפוש"
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"נדרשת רכישה של מנוי או גיליון כדי לגשת לפריט. כדי לאמת מנוי, לגשת לרכישה "
+"קודמת או לבעיית רכישה, היכנס לכתב העת."
+
+msgid "payment.unpaid"
+msgstr "לא שולם"
+
+msgid "payment.waived"
+msgstr "ויתרו"
+
+msgid "payment.payNow"
+msgstr "שלם עכשיו"
+
+msgid "payment.waive"
+msgstr "ויתור"
+
+msgid "payment.alreadyPaid"
+msgstr "כבר שולם"
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"סמן תיבה זו אם כבר שלחת את התשלום לכתב העת כדי לסיים את תהליך ההגשה.  ההגשה "
+"לא תיבדק עד להגעת התשלום.  לחצו על שלם עכשיו למעלה כדי לראות את הוראות "
+"התשלום."
+
+msgid "payment.paymentReceived"
+msgstr "התשלום התקבל"
+
+msgid "payment.paymentSent"
+msgstr "התשלום כבר נשלח"
+
+msgid "payment.authorFees"
+msgstr "דמי מחבר"
+
+msgid "payment.type.submission"
+msgstr "דמי הגשה"
+
+msgid "payment.type.publication"
+msgstr "דמי פרסום"
+
+msgid "payment.type.publication.required"
+msgstr "דמי הפרסום נדרשים לתשלום."
+
+msgid "payment.type.fastTrack"
+msgstr "דמי סקירה במסלול מהיר"
+
+msgid "payment.type.membership"
+msgstr "דמי חבר אישיים"
+
+msgid "payment.type.purchaseArticle"
+msgstr "דמי רכישת מאמר"
+
+msgid "payment.type.purchaseIssue"
+msgstr "דמי רכישת גיליון"
+
+msgid "payment.type.subscription"
+msgstr "דמי מנוי"
+
+msgid "payment.type.donation"
+msgstr "תרומות"
+
+msgid "payment.requestPublicationFee"
+msgstr "בקשת דמי פרסום ({$feeAmount})"
+
+msgid "payment.requestPublicationFee.notEnabled"
+msgstr "לא ניתן לשלם דמי פרסום."
+
+msgid "payment.notFound"
+msgstr "התבקש תשלום, אך תוקף הבקשה פג. צור קשר עם מנהל כתב העת לפרטים."
+
+msgid "payment.donation.makeDonation"
+msgstr "תרומה"
+
+msgid "payment.submission.paySubmission"
+msgstr "תשלום דמי הגשה"
+
+msgid "payment.membership.ends"
+msgstr "מסתיים"
+
+msgid "payment.subscription.purchase"
+msgstr "רכישת מנוי"
+
+msgid "payment.subscription.renew"
+msgstr "חידוש מנוי"
+
+msgid "payment.subscription.expires"
+msgstr "יפוג"
+
+msgid "installer.appInstallation"
+msgstr "התקנת OJS"
+
+msgid "installer.ojsUpgrade"
+msgstr "שדרוג OJS"
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"אם אתה משדרג התקנה קיימת של OJS, <a href=\"{$upgradeUrl}\">לחץ כאן</a> כדי "
+"להמשיך."
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>גירסת OJS {$version}</h4>\n"
+"\n"
+"<p>תודה שהורדת את <strong>מערכות היומן הפתוח</strong> של פרויקט הידע "
+"הציבורי. לפני שתמשיך, אנא קרא את קובץ <a href=\"{$baseUrl}/README.md\""
+">README</a> הכלול בתוכנה זו. לקבלת מידע נוסף אודות פרוייקט הידע הציבורי "
+"ופרוייקטי התוכנה שלו, בקר באתר האינטרנט <a href=\"https://pkp.sfu.ca/\" "
+"target=\"_blank\">PKP</a>. אם יש לך דוחות באגים או שאלות תמיכה טכנית לגבי "
+"מערכות יומן פתוחות, עיין בפורום <a href=\"https://forum.pkp.sfu.ca\" target="
+"\"_blank\">support או בקר בפורום</a> המקוון של PKP <a href=\"https://github."
+"com/pkp/pkp-lib#issues\" target=\"_blank\">מערכת דיווח באגים</a>. למרות "
+"שפורום התמיכה הוא שיטת ההתקשרות המועדפת, אתה יכול גם לשלוח דוא\"ל לצוות "
+"בכתובת <a href=\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail."
+"com</a>.</p>\n"
+"\n"
+"<h4>דרישות מערכת מומלצות</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"https://www.php.net/\" target=\"_blank\">PHP</a> >= "
+"{$phpRequiredVersion}; אתה משתמש כרגע ב-PHP {$phpVersion}{$wrongPhpText}</li>"
+"\n"
+"\t<li><a href=\"https://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 "
+"או <a href=\"https://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> "
+">= 9.1.5</li>\n"
+"\t<li><a href=\"https://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
+"1.3.2x או >= 2.0.4x או Microsoft IIS 6</li>\n"
+"\t<li>מערכת הפעלה: כל מערכת הפעלה שתומכת בתוכנה הנ\"ל, כולל <a href=\"https"
+"://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\"https://www.bsd."
+"org\" target=\"_blank\">BSD</a>, <a href=\"https://www.oracle.com/solaris/\" "
+"target=\"_blank\">Solaris</a>, <a href=\"https://www.apple.com/\" target="
+"\"_blank\">Mac OS X</a>, <a href=\"https://www.microsoft.com/\""
+">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>מכיוון של-PKP אין את המשאבים לבדוק כל שילוב אפשרי של גרסאות תוכנה "
+"ופלטפורמות, לא משתמעת כל ערובה לפעולה או תמיכה נכונה.</p>\n"
+"\n"
+"<p>ניתן לבצע שינויים בהגדרות אלה לאחר ההתקנה על ידי עריכת <tt>config.inc."
+"php</tt> הקובץ בספריית OJS הבסיסית, או באמצעות ממשק האינטרנט של ניהול "
+"האתר.</p>\n"
+"\n"
+"<h4>מערכות מסד נתונים נתמכות</h4>\n"
+"\n"
+"<p>OJS נבדק כרגע רק על MySQL ו-PostgreSQL, אם כי מערכות ניהול מסדי נתונים "
+"אחרות הנתמכות על ידי <a href=\"https://adodb.org\" target=\"_blank\">ADOdb</"
+"a> עשויות לעבוד (באופן מלא או חלקי). ניתן לשלוח דוחות תאימות ו/או תיקוני קוד "
+"עבור DBMS חלופיים לצוות OJS.</p>\n"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>גירסת OJS {$version}</h4>\n"
+"\n"
+"<p>תודה שהורדת את <strong>מערכות היומן הפתוח</strong> של פרויקט הידע "
+"הציבורי. לפני שתמשיך, אנא קרא את <a href=\"{$baseUrl}/README.md\">README</a> "
+"ו-<a href=\"https://docs.pkp.sfu.ca/dev/upgrade-guide)\">מדריך השדרוג</a>. "
+"לקבלת מידע נוסף אודות פרוייקט הידע הציבורי ופרוייקטי התוכנה שלו, בקר באתר "
+"האינטרנט <a href=\"https://pkp.sfu.ca/\" target=\"_blank\">PKP</a>. אם יש לך "
+"דיווחי באגים או שאלות תמיכה טכנית לגבי מערכות יומן פתוחות, עיין בפורום <a "
+"href=\"https://forum.pkp.sfu.ca\" target=\"_blank\">support או בקר בפורום</"
+"a> המקוון של PKP <a href=\"https://github.com/pkp/pkp-lib/issues\" target="
+"\"_blank\">מערכת דיווח באגים</a>. למרות שפורום התמיכה הוא שיטת ההתקשרות "
+"המועדפת, אתה יכול גם לשלוח דוא\"ל לצוות בכתובת <a href=\"mailto:pkp."
+"contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
+"<p><strong>מומלץ מאוד</strong> לגבות את מסד הנתונים, ספריית הקבצים וספריית "
+"ההתקנה של OJS לפני שתמשיך.</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"לתמיכה מלאה ב-Unicode, יש להדר PHP עם תמיכה בספריית <a href=\"https://www.php"
+".net/mbstring\" target=\"_blank\">mbstring</a> (מופעלת כברירת מחדל בהתקנות "
+"PHP האחרונות). ייתכן שתיתקל בבעיות בשימוש בערכות תווים מורחבות אם השרת שלך "
+"אינו עומד בדרישות אלה.\n"
+"<br /><br />\n"
+"השרת שלך תומך כעת ב- mbstring: <strong>{$supportsMBString}</strong>"
+
+msgid "installer.allowFileUploads"
+msgstr "השרת שלך מאפשר כרגע העלאת קבצים: <strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"השרת שלך מאפשר כרגע גודל העלאת קובץ מקסימלי של: "
+"<strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr ""
+"השפה העיקרית לשימוש עבור מערכת זו. אנא עיין בתיעוד של OJS אם אתה מעוניין "
+"בתמיכה בשפות שאינן מופיעות כאן."
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+"הזן שם נתיב מלא לספרייה קיימת שבה יש לשמור קבצים שהועלו. ספרייה זו לא צריכה "
+"להיות נגישה ישירות לאינטרנט. <strong>אנא ודא שספרייה זו קיימת וניתנת לכתיבה "
+"לפני ההתקנה.</strong> שמות נתיבים של Windows צריכים להשתמש בקווים נטויים, "
+"למשל \"C:/myjournal/files\"."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+"OJS דורש גישה למסד נתונים של SQL כדי לאחסן את הנתונים שלו. עיין בדרישות "
+"המערכת לעיל לקבלת רשימה של מסדי נתונים נתמכים. בשדות שלהלן, ספק את ההגדרות "
+"שישמשו להתחברות למסד הנתונים."
+
+msgid "installer.installApplication"
+msgstr "התקנת מערכות כתב עת פתוח"
+
+msgid "installer.upgradeApplication"
+msgstr "שדרוג מערכות כתב עת פתוח"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+"<strong>אזהרה:</strong> אם ההתקנה נכשלה בחלק מהתקנת מסד הנתונים, ייתכן שיהיה "
+"עליך לשחרר את מסד הנתונים או טבלאות מסד הנתונים של OJS לפני שתנסה להתקין "
+"מחדש את מסד הנתונים."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>חשוב!</h4>\n"
+"<p>תוכנית ההתקנה לא הצליחה להחליף באופן אוטומטי את קובץ התצורה. לפני שתנסה "
+"להשתמש במערכת, אנא פתח <tt>config.inc.php</tt> בעורך טקסט מתאים והחלף את "
+"תוכנו בתוכן שדה הטקסט למטה.</p>"
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>ההתקנה של OJS הושלמה בהצלחה.</p>\n"
+"<p>כדי להתחיל להשתמש במערכת, <a href=\"{$loginUrl}\">התחבר</a> עם שם המשתמש "
+"והסיסמה שהוזנו בעמוד הקודם.</p>\n"
+"<p>בקר בפורום הקהילה שלנו <a href=\"https://forum.pkp.sfu.ca\" target=\"_new"
+"\"></a> או הירשם לידיעון <a href=\"https://pkp.sfu.ca/developer-newsletter\" "
+"target=\"_new\"> למפתחים</a> כדי לקבל הודעות אבטחה ועדכונים על מהדורות "
+"קרובות, תוספים חדשים ותכונות מתוכננות.</p>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>השדרוג של OJS לגרסה {$version} הושלם בהצלחה.</p>\n"
+"<p>אל תשכח להגדיר את ההגדרה \"מותקן\" בקובץ התצורה של config.inc.php בחזרה "
+"<em>למצב מופעל</em>.</p>\n"
+"<p>בקר בפורום הקהילה שלנו <a href=\"https://forum.pkp.sfu.ca\" target=\"_new"
+"\"></a> או הירשם לידיעון <a href=\"https://pkp.sfu.ca/developer-newsletter\" "
+"target=\"_new\"> למפתחים</a> כדי לקבל הודעות אבטחה ועדכונים על מהדורות "
+"קרובות, תוספים חדשים ותכונות מתוכננות.</p>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"קיימת גרסה חדשה של OJS זמינה! אתה משתמש כעת ב- OJS {$currentVersion}. הגרסה "
+"העדכנית ביותר היא OJS {$latestVersion}. אנא בקר בדף <a href=\"https://pkp.sfu"
+".ca/ojs_download\" target=\"_new\">דף זה</a> כדי להוריד את הגרסה העדכנית "
+"ביותר ולמצוא הוראות שדרוג."
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"קיימת גרסה חדשה של OJS זמינה! אתה משתמש כעת ב- OJS {$currentVersion}. הגרסה "
+"העדכנית ביותר היא OJS {$latestVersion}. אנא צור קשר עם מנהל האתר שלך "
+"({$siteAdminName}, <a href=\"mailto:{$siteAdminEmail}\""
+">{$siteAdminEmail}</a>) כדי להודיע לו על הגרסה החדשה הזו. מידע נוסף ניתן "
+"למצוא <a href=\"https://pkp.sfu.ca/ojs/ojs_download/\" target=\"_new\""
+">כאן</a>."
+
+msgid "log.author.documentRevised"
+msgstr ""
+"{$authorName} תיקן את הערך {$submissionId}. מזהה הקובץ החדש הוא {$fileId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr "{$reviewerName} הוסר מבדיקת ההגשה {$submissionId} לסבב הבדיקה {$round}."
+
+msgid "log.review.reviewInitiated"
+msgstr "סבב סקירה {$round} על ידי {$reviewerName} להגשה {$submissionId} החלה."
+
+msgid "log.review.reviewerRated"
+msgstr "{$reviewerName} דורג עבור סקירת {$round} של הגשה {$submissionId}."
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"תאריך היעד לסבב הסקירה {$round} של הגשת {$submissionId} על ידי "
+"{$reviewerName} נקבע ל-{$dueDate}."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+"ההמלצה לסקירת {$round} של הגשת {$submissionId} על ידי {$reviewerName} נקבעה."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"ההמלצה לסקירה {$round} של הגשה {$submissionId} נקבעה על ידי העורך, "
+"{$editorName}, בשם הסוקר, {$reviewerName}."
+
+msgid "log.review.resubmit"
+msgstr "ההגשה {$submissionId} הוגשה מחדש לסקירה."
+
+msgid "log.review.reviewDeclined"
+msgstr "{$reviewerName} דחה את סבב הסקירה {$round} להגשה {$submissionId}."
+
+msgid "log.review.reviewAccepted"
+msgstr "{$reviewerName} קיבל את הסקירה של {$round} להגשה {$submissionId}."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName} דחה את סבב הסקירה {$round} להגשה {$submissionId} בשם "
+"{$reviewerName}."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName} קיבל את הסקירה של {$round} להגשה {$submissionId} בשם "
+"{$reviewerName}."
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"העורך, {$userName}, העלה קובץ סקירה עבור {$round} של הגשת {$submissionId} "
+"בשם הבודק, {$reviewerName}."
+
+msgid "log.review.reviewerFile"
+msgstr "קובץ סוקר הועלה."
+
+msgid "log.editor.decision"
+msgstr ""
+"החלטת עורך ({$decision}) למאמר {$submissionId} נרשמה על ידי {$editorName}."
+
+msgid "log.editor.recommendation"
+msgstr ""
+"המלצת עורך ({$decision}) למאמר {$submissionId} נרשמה על ידי {$editorName}."
+
+msgid "log.copyedit.initiate"
+msgstr "עריכת לשון בהגשה {$submissionId} החלה על ידי {$copyeditorName}."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+"{$copyeditorName} השלים את עריכת הלשון הראשונית של ההגשה {$submissionId}."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr "{$copyeditorName} השלים את עריכת הלשון הסופית של ההגשה {$submissionId}."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr "{$copyeditorName} הוקצה לעריכת לשון להגשה {$submissionId}."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "הועלתה גרסת עורך לשון של קובץ ההגשה."
+
+msgid "log.copyedit.authorFile"
+msgstr "הועלתה גרסה של קובץ ההגשה שנערכה על ידי המחבר."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr "{$editorName} הוקצה כעורך סידור להגשה {$submissionId}."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr "{$editorName} לא הוקצה כעורך סידור להגשה {$submissionId}."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} השלים את עריכת הסידור לשליחה {$submissionId}."
+
+msgid "log.editor.metadataModified"
+msgstr "המטא-נתונים של המאמר הזה שונו על ידי {$editorName}."
+
+msgid "log.editor.editorFile"
+msgstr "הועלתה גרסת עורך של קובץ ההגשה."
+
+msgid "log.editor.archived"
+msgstr "ההגשה {$submissionId} הועברה לארכיון."
+
+msgid "log.editor.restored"
+msgstr "ההגשה {$submissionId} הוחזרה לתור."
+
+msgid "log.editor.editorAssigned"
+msgstr "{$editorName} הוקצה כעורך להגשת {$submissionId}."
+
+msgid "log.proofread.assign"
+msgstr "{$assignerName} הקצה את {$proofreaderName} להגהה של {$submissionId}."
+
+msgid "log.proofread.complete"
+msgstr "{$proofreaderName} שלח {$submissionId} לתזמון."
+
+msgid "log.imported"
+msgstr "{$userName} ייבא את הערך {$submissionId}."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "מאמר שעבר שיפוט עמיתים"
+
+msgid "notification.type.editing"
+msgstr "אירועי עריכה"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "הוגש מאמר חדש, \"{$title}\"."
+
+msgid "notification.type.editorDecisionComment"
+msgstr "הושארה הערה על החלטת העורך עבור \"{$title}\"."
+
+msgid "notification.type.galleyModified"
+msgstr "הגרסה הסופית שונתה ל- \"{$title}\"."
+
+msgid "notification.type.issuePublished"
+msgstr "גיליון פורסם."
+
+msgid "notification.type.newAnnouncement"
+msgstr "נוצרה הודעה חדשה."
+
+msgid "notification.type.openAccess"
+msgstr "גיליון הוגדר בגישה פתוחה."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "סקירת טופס סקירה נשלחה עבור \"{$title}\"."
+
+msgid "notification.type.reviewing"
+msgstr "סקירת אירועים"
+
+msgid "notification.type.site"
+msgstr "אירועי אתר"
+
+msgid "notification.type.submissionComment"
+msgstr "עורך העיר הערה על \"{$title}\"."
+
+msgid "notification.type.submissions"
+msgstr "אירועי הגשה"
+
+msgid "notification.type.userComment"
+msgstr "קורא העיר הערה על \"{$title}\""
+
+msgid "notification.type.public"
+msgstr "הודעות לציבור"
+
+msgid "notification.savedIssueMetadata"
+msgstr "מטה-נתונים של פרסום הגיליון נשמרו."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "הוגש מאמר חדש שצריך להקצות לו עורך."
+
+msgid "notification.type.assignProductionUser"
+msgstr "הקצה משתמש ליצירת הכנה לדפוס באמצעות הקישור הקצה ברשימה המשתתפים."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "ממתינים לגרסה סופית."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr "הגישה נדחתה! לא הוקצת כעורך לשון למאמר זה."
+
+msgid "user.authorization.noContext"
+msgstr "לא נמצא כתב עת התואם את בקשתך."
+
+msgid "user.authorization.sectionAssignment"
+msgstr "אתה מנסה לגשת למאמר שאינו חלק מהמדור שלך."
+
+msgid "user.authorization.invalidIssue"
+msgstr "התבקש גיליון לא תקף!"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "הגשת עריכת לשון לא תקפה או לא התבקשה עריכת לשון כלל!"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "הרשמה לכתבי עת אחרים"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "הסתרת כתבי עת אחרים"
+
+msgid "article.view.interstitial"
+msgstr "אנא בחר קובץ מאמר להורדה."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "מאושר"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "ממתין לאישור"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "אישור גרסה סופית"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>אשר את הגרסה הסופית הזו לפרסום.</p>"
+
+msgid "editor.issues.futureIssues"
+msgstr "גיליונות עתידיים"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>הסר את האישור של הגרסה הסופית הזו.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "יצירת אינדקס \"{$journalName}\""
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "לא היתה אפשרות לפתור את נתיב כתב העת הנתון \"{$journalPath}\" לכתב עת."
+
+msgid "editor.issues.backIssues"
+msgstr "גיליונות קודמים"
+
+msgid "navigation.subscriptions"
+msgstr "מנויים"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} לקח את תהליך העריכה של המאמר {$submissionId}."
+
+msgid "catalog.sortBy"
+msgstr "סדר המאמרים"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price}) ({$מטבע} {$מחיר})"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>שלבי טרום התקנה</h4>\n"
+"<p>\n"
+"1. יש להפוך את הקבצים והספריות הבאים (ותוכנם) לניתנים לכתיבה:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> ניתן לכתיבה (אופציונלי): "
+"{$writable_config}</li>\n"
+"\t<li><tt>ציבורי/</tt> ניתן לכתיבה: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> ניתן לכתיבה: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> ניתן לכתיבה: {$writable_templates_cache}</li>\n"
+"\t<li><tt>cache/t_compile/</tt> ניתן לכתיבה: "
+"{$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> ניתן לכתיבה: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"<p>\n"
+"2. יש ליצור ספרייה לאחסון קבצים שהועלו ולהפוך אותה לניתנת לכתיבה (ראה "
+"\"הגדרות קובץ\" להלן).</p>"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "תוכן כתב העת אינו מתפרסם אונליין"
+
+msgid "context.current"
+msgstr "כתב עת נוכחי:"
+
+msgid "common.software"
+msgstr "מערכות כתב עת פתוח"
+
+msgid "submission.submissionEditing"
+msgstr "עריכת הגשה"
+
+msgid "issue.coverPage.altText"
+msgstr "עמוד שער"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "ההגשה נשלחה לתור תזמון הגיליון"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "קובץ תיקוני ההגהה עודכן"
+
+msgid "reader.openAccess"
+msgstr "גישה פתוחה"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "לא הוקצו הגשות."
+
+msgid "reviewer.article.automatic"
+msgstr "(אוטומטי)"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "יש צורך במידע נוסף לפני שניתן יהיה להפעיל את המנוי"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "מנוי אישי"
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "הזן דומיין תקף."
+
+msgid "article.pageTitle"
+msgstr "תצוגה של {$title}"
+
+msgid "about.subscriptionTypes.name"
+msgstr "שם"
+
+msgid "about.subscriptionTypes.format"
+msgstr "תבנית"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "משך"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "עלות"
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"נדרשת רכישת מנוי או מאמר כדי לגשת לפריט. כדי לאמת מנוי, לגשת לרכישה קודמת או "
+"לרכוש מאמר, היכנס לכתב העת."
+
+msgid "payment.paid"
+msgstr "שולם"
+
+msgid "payment.publication.payPublication"
+msgstr "תשלום כדי לפרסם"
+
+msgid "payment.publication.publicationPaid"
+msgstr "דמי פרסום ששולמו"
+
+msgid "payment.membership.buyMembership"
+msgstr "קנה חברות אישית"
+
+msgid "payment.membership.renewMembership"
+msgstr "חידוש חברות אישית"
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "קובץ ברירת המחדל לעריכת לשון נבחר."
+
+msgid "grid.action.createContext"
+msgstr "יצירת כתה עת חדש"
+
+msgid "editor.navigation.issues"
+msgstr "גיליונות"
+
+msgid "notification.type.approveSubmission"
+msgstr "הגשה זו ממתינה כעת לאישור לפני שתופיע בגיליון."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "ממתין לאישור."
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "בחר כיצד לסדר את המאמרים בקטגוריה זו."
+
+msgid "search.journal"
+msgstr "לפי כתב עת"
+
+msgid "search.authorIndex"
+msgstr "עיין באינדקס המחברים"
+
+msgid "search.authorDetails"
+msgstr "פרטי המחבר"
+
+msgid "site.journalsHosted"
+msgstr "כתבי עת המתארחים באתר זה"
+
+msgid "site.journalView"
+msgstr "לצפייה בכתב עת"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "כתב עת זה לא פרסם שום גיליונות."
+
+msgid "archive.archives"
+msgstr "ארכיונים"
+
+msgid "help.goToEditPage"
+msgstr "ערוך {$sectionTitle}"
+
+msgid "donations.thankYou"
+msgstr "תודה"
+
+msgid "donations.thankYouMessage"
+msgstr "תודה על התרומה.  תרומתך מוערכת מאוד."
+
+msgid "payment.loginRequired"
+msgstr "עליך להיות מחובר כדי לבצע תשלום."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "עליך להיות מחובר כדי לתרום."

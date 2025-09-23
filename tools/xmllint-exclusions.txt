@@ -9,6 +9,7 @@
 ./plugins/oaiMetadataFormats/dc/tests/expectedResult.xml
 ./plugins/importexport/users/sample.xml
 ./plugins/paymethod/paypal/vendor
+./plugins/generic/credit/jats-schematrons
 ./lib/pkp/tests
 ./node_modules
 ./lib/ui-library/node_modules

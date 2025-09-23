@@ -34,9 +34,6 @@ msgid ""
 "plugins.importexport.doaj.settings.form.automaticRegistration.description"
 msgstr ""
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr ""
 

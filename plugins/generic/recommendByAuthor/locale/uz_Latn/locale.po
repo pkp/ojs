@@ -22,10 +22,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Xuddi shu muallif (lar) ning eng ko'p o'qilgan maqolalari"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""
-"Obs.: Bu plaginni yoqish uchun kamida bitta statistika/hisobot plagini "
-"kerak. Agar sizning statistik plaginlaringiz bir nechta ko'rsatkichlarni "
-"taqdim etsa, iltimos, administratorning sayt sozlamalari sahifasida va/yoki "
-"jurnal menejerining sozlash sahifalarida asosiy ko'rsatkichni tanlang."

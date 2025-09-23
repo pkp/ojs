@@ -1,6 +1,7 @@
 <?php
+
 /**
- * @defgroup api_v1_announcements Email templates API requests
+ * @defgroup api_v1_announcements Announcements API requests
  */
 
 /**

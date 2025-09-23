@@ -1,0 +1,84 @@
+# Jan Mohammad Rasa <eng.omid.rasa@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-21 20:59+0000\n"
+"Last-Translator: Jan Mohammad Rasa <eng.omid.rasa@gmail.com>\n"
+"Language-Team: Pashto <http://translate.pkp.sfu.ca/projects/ojs/api/ps/>\n"
+"Language: ps\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "هغه خبرتيا چې تاسو يې غوښتنه کړې، د دې ژورنال برخه نه ده."
+
+msgid "api.emails.403.disabled"
+msgstr "د ایمیل د خبرتیا ځانګړنه د دې ژورنال لپاره غیر فعاله ده."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "هغه سپارنه چې تاسو یې غواړئ، دې ژورنال کې نشته."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "تاسو نه شئ کولای د مقالې د لېږد ژورنال بدل کړئ."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "تاسو د هغو مقالو چې نه دي خپرې شوې، د ليدلو اجازه نه لرئ."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "تاسو يوازې هغه ژورنالونه ليدلای شئ چې فعال وي."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "تاسو د دې ژورنال د لېدو اجازه نه لرئ."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "دا ژورنال نه شئ ایډیټ کولای."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "هغه ژورنال چې تاسو يې غوښتنه کړې، ونه موندل شو."
+
+msgid "api.dois.403.contextsNotMatched"
+msgstr "هغه DOI چې تاسو يې غوښتنه کړې، ونه موندل شو."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr "د دې ایمېل نمونه بل ژورنال ته نه شئ لېږدولای."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "غوښتل شوې مقاله، ، دلته نه ده ثبت شوې."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "نه شئ کولای چې کوم فايل د فايل له مرحلې څخه ګيلې ته ونښلوئ."
+
+msgid "api.submission.400.inactiveSection"
+msgstr "دا برخه نورې سپارښتنې نه مني."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"د ژورنال د API یا د سایټ د API له اجازې پرته نه شئ کولای چې دا ژورنال وګورئ "
+"یا ایډیټ کړئ."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "هېڅ DOI ثبتوونکې اداره د دې ژورنال لپاره نه ده تنظيم شوې."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "د پیسو د لېږد کومه طريقه چې تاسو ټاکلې، کار نه کوي."
+
+msgid "api.publications.403.paymentFeesNotEnabled"
+msgstr ""
+"د خپرونو لپاره د فيس ورکولو ځانګړنه نه ده فعاله شوې، نو ځکه د پيسو سپارلو "
+"فورم شتون نه لري."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "د سایټ له API څخه ژورنال نه شئ ايډيټ کولای."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"ځينې ځانګړنې په برياليتوب سره نه دي خوندي شوې. مهرباني وکړئ د هرې ځانګړنې "
+"تېروتنه جلا وګورئ."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "غوښتل شوې مقاله، په دې ګڼه کې شتون نه لري."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "نه شئ کولای دا ژورنال لرې (ډيليټ) کړئ."

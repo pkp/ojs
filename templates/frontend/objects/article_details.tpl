@@ -64,6 +64,7 @@
  * @uses $licenseUrl string URL to license. Only assigned if license should be
  *   included with published submissions.
  * @uses $ccLicenseBadge string An image and text with details about the license
+ * @uses $creditRoleTerms Array of translated credit role terms: roles and degrees
  *
  * @hook Templates::Article::Main []
  * @hook Templates::Article::Details::Reference []
@@ -75,7 +76,7 @@
 <article class="obj_article_details">
 
 	{* Indicate if this is only a preview *}
-	{if $publication->getData('status') !== PKP\submission\PKPSubmission::STATUS_PUBLISHED}
+	{if $publication->getData('status') !== PKP\publication\PKPPublication::STATUS_PUBLISHED}
 	<div class="cmp_notification notice">
 		{capture assign="submissionUrl"}{url page="dashboard" op="editorial" workflowSubmissionId=$article->getId()}{/capture}
 		{translate key="submission.viewingPreview" url=$submissionUrl}
@@ -90,7 +91,6 @@
 			}
 		</div>
 	{/if}
-
 	<h1 class="page_title">
 		{$publication->getLocalizedTitle(null, 'html')|strip_unsafe_html}
 	</h1>
@@ -140,6 +140,21 @@
 									</a>
 								</span>
 							{/if}
+							{if $author->getData('creditRoles')}
+								<span class="credit_roles">
+								{strip}
+								{foreach $author->getData('creditRoles') as $credit}
+									<span class="value">
+										{$creditRoleTerms.roles[$credit.role]|escape}
+										{if $creditRoleTerms.degrees[$credit.degree]}
+											&nbsp;({$creditRoleTerms.degrees[$credit.degree]|escape})
+										{/if}
+									</span>
+									{if !$credit@last}{translate key="common.commaListSeparator"}{/if}
+								{/foreach}
+								{/strip}
+								</span>
+							{/if}
 						</li>
 					{/foreach}
 					</ul>
@@ -147,7 +162,6 @@
 			{/if}
 
 			{* DOI *}
-			{assign var=doiObject value=$article->getCurrentPublication()->getData('doiObject')}
 			{if $doiObject}
 				{assign var="doiUrl" value=$doiObject->getData('resolvingUrl')|escape}
 				<section class="item doi">
@@ -187,10 +201,18 @@
 				</section>
 			{/if}
 
+			{* Plain language summary *}
+			{if $publication->getLocalizedData('plainLanguageSummary')}
+				<section class="item abstract">
+					<h2 class="label">{translate key="submission.plainLanguageSummary"}</h2>
+					{$publication->getLocalizedData('plainLanguageSummary')|strip_unsafe_html}
+				</section>
+			{/if}
+
 			{call_hook name="Templates::Article::Main"}
 
-			{* Usage statistics chart*}
-			{if $activeTheme->getOption('displayStats') != 'none'}
+			{* Usage statistics chart *}
+			{if $activeTheme && $activeTheme->getOption('displayStats') != 'none'}
 				{$activeTheme->displayUsageStatsGraph($article->getId())}
 				<section class="item downloads_chart">
 					<h2 class="label">
@@ -245,7 +267,7 @@
 			{/if}
 
 			{* References *}
-			{if $parsedCitations || $publication->getData('citationsRaw')}
+			{if $parsedCitations || (string) $publication->getData('citationsRaw')}
 				<section class="item references">
 					<h2 class="label">
 						{translate key="submission.citations"}
@@ -261,6 +283,16 @@
 					</div>
 				</section>
 			{/if}
+
+			{if $enablePublicComments}
+				<section class="item comments" data-vue-root>
+					<h2 class="label">
+						{translate key="userComment.commentsOnThisPublication"}
+					</h2>
+        			<pkp-comments v-bind='{$userCommentsInitConfig|json_encode}'></pkp-comments>
+			    </section>
+			{/if}
+
 
 		</div><!-- .main_entry -->
 
@@ -331,14 +363,13 @@
 						{/if}
 					</div>
 				</section>
-				{if count($article->getPublishedPublications()) > 1}
 					<section class="sub_item versions">
 						<h2 class="label">
 							{translate key="submission.versions"}
 						</h2>
 						<ul class="value">
 							{foreach from=array_reverse($article->getPublishedPublications()) item=iPublication}
-								{capture assign="name"}{translate key="submission.versionIdentity" datePublished=$iPublication->getData('datePublished')|date_format:$dateFormatShort version=$iPublication->getData('version')}{/capture}
+								{capture assign="name"}{translate key="submission.versionIdentity" datePublished=$iPublication->getData('datePublished')|date_format:$dateFormatShort version=$iPublication->getData('versionString')}{/capture}
 								<li>
 									{if $iPublication->getId() === $publication->getId()}
 										{$name}
@@ -351,13 +382,12 @@
 							{/foreach}
 						</ul>
 					</section>
-				{/if}
 			</div>
 			{/if}
 
 			{* Data Availability Statement *}
 			{if $publication->getLocalizedData('dataAvailability')}
-				<section class="item dataAvailability">
+				<section class="item dataAvailability" id="data-availability-statement">
 					<h2 class="label">{translate key="submission.dataAvailability"}</h2>
 					{$publication->getLocalizedData('dataAvailability')|strip_unsafe_html}
 				</section>
@@ -408,6 +438,16 @@
 				</div>
 			{/if}
 
+			{if $enablePublicComments}
+			    <div class="item comments">
+				    <section class="sub_item" data-vue-root>
+                        <h2 class="label"> {translate key="userComment.comments"} </h2>
+                        <pkp-scroll-to-comments></pkp-scroll-to-comments>
+				    </section>
+			    </div>
+			{/if}
+
+			{* AddThis sharing widget *}
 			{* PubIds (requires plugins) *}
 			{foreach from=$pubIdPlugins item=pubIdPlugin}
 				{if $pubIdPlugin->getPubIdType() == 'doi'}

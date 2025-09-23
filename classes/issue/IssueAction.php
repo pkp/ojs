@@ -23,6 +23,7 @@ use APP\journal\Journal;
 use APP\subscription\IndividualSubscriptionDAO;
 use APP\subscription\InstitutionalSubscriptionDAO;
 use APP\subscription\Subscription;
+use Exception;
 use PKP\db\DAORegistry;
 use PKP\plugins\Hook;
 use PKP\security\Role;
@@ -174,8 +175,4 @@ class IssueAction
         Hook::call('IssueAction::subscribedDomain', [&$request, &$journal, &$issueId, &$articleId, &$result]);
         return (bool) $result;
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\issue\IssueAction', '\IssueAction');
 }

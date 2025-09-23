@@ -1,138 +1,165 @@
+# Zokirov Sanjar Ikromjon o'g'li <phd-2019@mail.ru>, 2025.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2025-03-18 15:28+0000\n"
+"Last-Translator: Zokirov Sanjar Ikromjon o'g'li <phd-2019@mail.ru>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/submission/uz/"
+">\n"
+"Language: uz\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "submission.submit.userGroup"
-msgstr ""
+msgstr "... rolida yuborish"
 
 msgid "submission.upload.selectComponent"
-msgstr ""
+msgstr "Maqola komponentini tanlang"
 
 msgid "submission.title"
-msgstr ""
+msgstr "Maqola nomi"
 
 msgid "submission.title.tip"
 msgstr ""
+"Taqdim etish turi odatda “tasvir”, “matn” yoki boshqa multimedia turlaridan "
+"biri, jumladan “dasturiy taʼminot” yoki “interaktiv” bo'lishi mumkin. "
+"Iltimos, taqdimotingiz uchun eng mosini tanlang. Misollarni <a target="
+"\"_blank\" href=\"http://dublincore.org/documents/2001/04/12/usageguide/"
+"generic.shtml#type\">http://dublincore.org/documents/2001/04/12/usageguide/"
+"generic.shtml#type</a> sahifasida topish mumkin."
 
 msgid "submission.submit.newSubmissionMultiple"
-msgstr ""
+msgstr "... da yangi yuborishni boshlash"
 
 msgid "submission.submit.newSubmissionSingle"
-msgstr ""
+msgstr "Yangi ariza yuborish"
 
 msgid "grid.action.workflow"
-msgstr ""
+msgstr "Ariza topshirish ish jarayoni"
 
 msgid "submission.abstract.wordCount.description"
-msgstr ""
+msgstr "Annotatsiya {$wordCount} yoki undan kam soʻzdan iborat boʻlishi kerak."
 
 msgid "submission.submit.noContext"
-msgstr ""
+msgstr "Ushbu material jurnali topilmadi."
 
 msgid "submission.issueEntry"
-msgstr ""
+msgstr "Metadata"
 
 msgid "submission.submit.whatNext.description"
 msgstr ""
+"Jurnal sizning arizangiz to'g'risida xabardor qilindi va sizning "
+"arizalaringiz uchun elektron pochta orqali tasdiqlov yuborildi. Muharrir "
+"sizning arizangizni ko'rib chiqqach, u siz bilan bog'lanadi."
 
 msgid "grid.action.galleyInIssueEntry"
-msgstr ""
+msgstr "Galley nashrda paydo bo'ladi"
 
 msgid "grid.action.issueEntry"
-msgstr ""
+msgstr "Ushbu materialning metamaʼlumotlarini koʻrish"
 
 msgid "submission.event.articleGalleyMadeAvailable"
-msgstr ""
+msgstr "“{$galleyFormatName}” maqola galleyi mavjud."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr ""
+msgstr "“{$galleyFormatName}” maqola galleyi mavjud emas."
 
 msgid "submission.event.publicIdentifiers"
-msgstr ""
+msgstr "Materialning ommaviy identifikatorlari yangilandi."
 
 msgid "grid.issueEntry.availableGalley.title"
-msgstr ""
+msgstr "Formatni tasdiqlash"
 
 msgid "grid.issueEntry.availableGalley.removeMessage"
-msgstr ""
+msgstr "<p>Ushbu gallley <em>endi o'quvchilarga taqdim etilmaydi</em>.</p>"
 
 msgid "grid.issueEntry.availableGalley.message"
-msgstr ""
+msgstr "<p>Ushbu galley <em>o'quvchilarga taqdim etiladi</em>.</p>"
 
 msgid "grid.action.availableArticleGalley"
-msgstr ""
+msgstr "Ushbu galleyni foydalanish uchun ochish"
 
 msgid "submission.galleyFiles"
-msgstr ""
+msgstr "Galley fayllari"
 
 msgid "submission.proofReadingDescription"
 msgstr ""
+"Sahifalovchi muharrir nashrga tayyor fayllarni shu yerda yuklaydi. "
+"Mualliflarni va boshqalarni galleylaringizni tekshirish uchun tayinlash va "
+"nashrdan oldin tasdiqlash uchun qayta koʻrib chiqilgan fayllarni yuklash "
+"uchun <em>Auditor tayinlash</em> funksiyasidan foydalaning."
 
 msgid "grid.action.approveProof"
-msgstr ""
+msgstr "Ushbu dalilning galleylarga kiritilishini ma'qullash."
 
 msgid "grid.action.pageProofApproved"
-msgstr ""
+msgstr "Ushbu dalil galleylarga qo'shish uchun tasdiqlangan."
 
 msgid "submission.submit.titleAndSummary"
-msgstr ""
+msgstr "Sarlavha va Annotatsiya"
 
 msgid "submission.submit.upload.description"
 msgstr ""
+"Ushbu arizaga tegishli fayllarni, jumladan maqola, multimedia, maʼlumotlar "
+"toʻplami, illyustratsiyalar va boshqalarni yuklang."
 
 msgid "submission.pageProofs"
-msgstr ""
+msgstr "Tekshirish"
 
 msgid "workflow.review.externalReview"
-msgstr ""
+msgstr "Taqriz"
 
 msgid "submission.event.issueMetadataUpdated"
-msgstr ""
+msgstr "Taqdim etilgan material nashri metama’lumotlari yangilandi."
 
 msgid "submission.upload.fileContents"
-msgstr ""
+msgstr "Maqola komponenti"
 
 msgid "submission.complete"
-msgstr ""
+msgstr "Tasdiqlangan"
 
 msgid "submission.incomplete"
-msgstr ""
+msgstr "Tasdiqlash kutilmoqda"
 
 msgid "submission.submit.submissionChecklist"
-msgstr ""
+msgstr "Ariza tekshirish roʻyxati"
 
 msgid "submission.submit.privacyStatement"
-msgstr ""
+msgstr "Maxfiylik bayonoti"
 
 msgid "submission.submit.contributorRole"
-msgstr ""
+msgstr "Ishtirokchining roli"
 
 msgid "submission.citationFormat.notFound"
-msgstr ""
+msgstr "Soʻralgan iqtibos formatini olib boʻlmadi."
 
 msgid "submission.metadataDescription"
 msgstr ""
+"Ushbu spetsifikatsiyalar jurnallar mazmunini tavsiflash uchun "
+"foydalaniladigan xalqaro standart bo'lgan Dublin Core metama'lumotlar "
+"to'plamiga asoslanadi."
 
 msgid "section.any"
-msgstr ""
+msgstr "Har qanday bo'lim"
 
 msgid "submission.sectionOptions"
-msgstr ""
+msgstr "Bo'lim parametrlari"
 
 msgid "catalog.browseTitles"
-msgstr ""
+msgstr "{$numTitles} ta element"
 
 msgid "catalog.category.heading"
-msgstr ""
+msgstr "Barcha elementlar"
 
 msgid "galley.editPublishedDisabled"
 msgstr ""
+"Bu nashrning galleylarini tahrir qilib bo‘lmaydi, chunki u allaqachon chop "
+"etilgan."
 
 msgid "galley.publicationNotFound"
-msgstr ""
+msgstr "Bu galley uchun nashr topilmadi."
 
 msgid "publication.assignToissue"
 msgstr ""

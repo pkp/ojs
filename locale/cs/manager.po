@@ -1,10 +1,10 @@
-# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2021, 2022, 2023.
+# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2021, 2022, 2023, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2023-04-24 00:11+0000\n"
+"PO-Revision-Date: 2025-03-01 11:23+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/manager/cs/>\n"
 "Language: cs\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "manager.distribution.access"
 msgstr "Přístup"
@@ -2711,3 +2711,10 @@ msgid "plugins.importexport.common.error.issueGalleyFileMissing"
 msgstr ""
 "Sazebnice vydání {$id} nemohla být exportována, její soubor nebyl nalezen na "
 "cestě \"{$path}\"."
+
+msgid "manager.setup.contextSummary.description"
+msgstr ""
+"Nabídněte stručný popis svého časopisu, abyste přiblížili jeho obsah a účel."
+
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr "Obsah vydání, například seznam všech souvisejících příspěvků."

@@ -1,9 +1,10 @@
 # Jovan Jonovski <jonovski@hotmail.com>, 2022.
 # Ana Vucurevic <ana.vucurevic97@yahoo.com>, 2023.
+# Mirko Spiroski <mspiroski@id-press.eu>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-03-15 15:21+0000\n"
-"Last-Translator: Ana Vucurevic <ana.vucurevic97@yahoo.com>\n"
+"PO-Revision-Date: 2025-04-02 08:12+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/admin/mk/"
 ">\n"
 "Language: mk\n"
@@ -11,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "admin.hostedContexts"
 msgstr "Хостирани списанија"
@@ -58,13 +59,13 @@ msgstr ""
 "додавање нови јазици."
 
 msgid "admin.systemVersion"
-msgstr "OJS верзија"
+msgstr "СОС верзија"
 
 msgid "admin.systemConfiguration"
-msgstr "OJS конфигурација"
+msgstr "СОС конфигурација"
 
 msgid "admin.systemConfigurationDescription"
-msgstr "OJS подесување на конфигурацијата од <tt>config.inc.php</tt>."
+msgstr "СОС подесување на конфигурацијата од <tt>config.inc.php</tt>."
 
 msgid "admin.journals.createInstructions"
 msgstr ""

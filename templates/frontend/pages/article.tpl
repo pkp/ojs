@@ -34,5 +34,4 @@
 	{call_hook name="Templates::Article::Footer::PageFooter"}
 
 </div><!-- .page -->
-
 {include file="frontend/components/footer.tpl"}

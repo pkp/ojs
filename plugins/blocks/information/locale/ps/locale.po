@@ -1,0 +1,22 @@
+# Jan Mohammad Rasa <eng.omid.rasa@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-22 09:20+0000\n"
+"Last-Translator: Jan Mohammad Rasa <eng.omid.rasa@gmail.com>\n"
+"Language-Team: Pashto <http://translate.pkp.sfu.ca/projects/ojs/"
+"blocks-information/ps/>\n"
+"Language: ps\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.block.information.description"
+msgstr "دا برخه د صفحې څنګ (sidebar) معلوماتو لینک چمتو کوي."
+
+msgid "plugins.block.information.link"
+msgstr "معلومات"
+
+msgid "plugins.block.information.displayName"
+msgstr "د معلوماتو بلاک"

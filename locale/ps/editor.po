@@ -1,0 +1,486 @@
+# Jan Mohammad Rasa <eng.omid.rasa@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-22 09:20+0000\n"
+"Last-Translator: Jan Mohammad Rasa <eng.omid.rasa@gmail.com>\n"
+"Language-Team: Pashto <http://translate.pkp.sfu.ca/projects/ojs/editor/ps/>\n"
+"Language: ps\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "سپارنې او خپرونې"
+
+msgid "editor.submissionQueue"
+msgstr "د سپارنو کتار"
+
+msgid "editor.submissionArchive"
+msgstr "د سپارنو آرشیف"
+
+msgid "editor.publishing"
+msgstr "خپرول"
+
+msgid "editor.publishedIssues"
+msgstr "خپرې شوې ګڼې"
+
+msgid "editor.allSections"
+msgstr "ټولې برخې"
+
+msgid "editor.me"
+msgstr "زه"
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "په آرشیف کې هېڅ سپارنه نشته."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"آیا غواړئ د آرشیف شوو سپارنو بدلونونه وساتئ؟ هغه سپارنې چې د حذف لپاره نښه "
+"شوې وي، له سیستم څخه به په دایمي ډول حذف شي."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "آیا تاسو ډاډه یاست ترڅو غواړئ دا پرېکړه ثبت کړئ؟"
+
+msgid "editor.notifyUsers"
+msgstr "کاروونکو ته خبر ورکړئ"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "ټول لوستونکي ({count$} کاروونکي)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "ټول خپاره شوي لیکوالان ({count$} کاروونکي)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "ټول انفرادي ګډونوال ({count$} کاروونکي)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "کاروونکو ته خبر ورکول روان دي..."
+
+msgid "editor.usersNotified"
+msgstr "کاروونکو ته خبر ورکړل شو"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"دا پیغام هغو کاروونکو ته واستوئ چې ویلي یې دي غواړي په دې اړه تازه معلومات "
+"ترلاسه کړي ({count$} کاروونکي)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "د دې موضوع/ګڼې د مطالبو لیکلړ شامل کړئ:"
+
+msgid "editor.editorAdministration"
+msgstr "د اېډېټر اداره"
+
+msgid "editor.issues.createIssue"
+msgstr "ګڼه/موضوع جوړه کړئ"
+
+msgid "editor.issues.editIssue"
+msgstr "د ګڼې مدیریت : {issueIdentification$}"
+
+msgid "editor.issues.currentIssue"
+msgstr "اوسنۍ ګڼه"
+
+msgid "editor.issues.numArticles"
+msgstr "توکي"
+
+msgid "editor.issues.noArticles"
+msgstr "د دې ګڼې لپاره اوس مهال هېڅ توکي تقسیم بندي شوي نه دي."
+
+msgid "editor.issues.confirmDelete"
+msgstr "ایا تاسو ډاډه یاست چې غواړئ دا ګڼه د تل لپاره حذف کړئ؟"
+
+msgid "editor.issues.published"
+msgstr "خپره شوې"
+
+msgid "editor.issues.unpublished"
+msgstr "نه ده خپره شوې"
+
+msgid "editor.issues.datePublished"
+msgstr "د خپرېدو نېټه"
+
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr ""
+"که تش پرېښودل شي، نېټه به په اوتومات ډول هغه وخت وټاکل شي چې ګڼه خپره شي."
+
+msgid "editor.issues.volumeRequired"
+msgstr "جلد لازمي دی او باید یو مثبت عدد وي."
+
+msgid "editor.issues.numberRequired"
+msgstr "شمېره لازمي ده او باید یو مثبت عدد وي."
+
+msgid "editor.issues.titleRequired"
+msgstr "سرلیک د ګڼې لپاره لازمي دی."
+
+msgid "editor.issues.issueIdentification"
+msgstr "د ګڼې پېژندنه"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "د عامه ګڼې پېژندونکی"
+
+msgid "editor.issues.description"
+msgstr "تشریح"
+
+msgid "editor.issues.accessStatus"
+msgstr "د لاسرسي حالت"
+
+msgid "editor.issues.accessDate"
+msgstr "د آزاد لاسرسي نېټه"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "د ځنډول شوي آزاد لاسرسي فعالول"
+
+msgid "editor.issues.coverPage"
+msgstr "د پوښ انځور"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(منل شوي فارمیټونه: .gif, jpg یا png)"
+
+msgid "editor.issues.uploaded"
+msgstr "پورته شوی (اپلوډ شوی)"
+
+msgid "editor.issues.remove"
+msgstr "لیرې کول"
+
+msgid "editor.issues.proofed"
+msgstr "ثبوت شوی"
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"هغه د پوښ انځور چې تاسو یې د حذفولو غوښتنه کړې، د دې ګڼې له انځور سره سمون "
+"نه لري. مهرباني وکړئ پاڼه بیا تازه کړئ او بیا هڅه وکړئ."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr "د پوښ مخ بڼه بااعتباره نه ده. منل شوي بڼې : gif، jpg یا png دي."
+
+msgid "editor.issues.removeStyleFile"
+msgstr "سټایل‌شیټ لیرې کول غواړئ؟"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "د پوښ سرلیک"
+
+msgid "editor.issues.showCoverPage"
+msgstr "د لاندې عناصرو سره د دې ګڼې لپاره پوښ جوړ کړئ."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "ښکاره کول"
+
+msgid "editor.issues.subscription"
+msgstr "ګډون"
+
+msgid "editor.issues.identification"
+msgstr "پېژندنه"
+
+msgid "editor.issues.access"
+msgstr "لاسرسی"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"دا ژورنال دودیز ترتیب کاروي. <a href=\"{$url}\" class=\"action\">Reset to "
+"defaults</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"دا ګڼه د برخو دودیز ترتیب کاروي. <a href=\"{$url}\" class=\"action\">Reset "
+"to defaults</a>"
+
+msgid "editor.issues.issueData"
+msgstr "د ګڼې معلومات"
+
+msgid "editor.issues.default"
+msgstr "اصلي"
+
+msgid "editor.issues.order"
+msgstr "ترتیب"
+
+msgid "editor.issues.publicId"
+msgstr "عامه ID"
+
+msgid "editor.issues.publishIssue"
+msgstr "ګڼه خپرول"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "ګڼه نه خپرول"
+
+msgid "editor.issues.preview"
+msgstr "مخکتنه"
+
+msgid "editor.issues.confirmPublish"
+msgstr "ایا تاسو ډاډه یاست چې غواړئ نوې ګڼه خپره کړئ؟"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "ایا تاسو ډاډه یاست چې غواړئ دا ګڼه اوسنۍ وټاکئ؟"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "د مقالې لپاره عامه ID ثبت نه شوه :"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "په ژوندۍ بڼه هېڅ ګڼه نشته"
+
+msgid "editor.issues.open"
+msgstr "پرانستل"
+
+msgid "editor.issues.galleys"
+msgstr "د ګڼي فارمتونه"
+
+msgid "editor.issues.galley"
+msgstr "د ګڼې فارمت لیدل"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "د ټولو مطالبو سره ګالۍ خپرول."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "هیڅ د ګڼې ګالۍ نه ده خپره شوې."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "د ګڼې د ګالۍ لپاره سرلیک اړین دی."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "د عامه ګالۍ پېژندونکی مخکې نشته."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "د ګالۍ لیست ته بېرته تګ"
+
+msgid "editor.issues.identifiers"
+msgstr "پېژندونکي"
+
+msgid "editor.navigation.futureIssues"
+msgstr "راتلونکې ګڼې"
+
+msgid "grid.action.addGalley"
+msgstr "ګالۍ زیاتول"
+
+msgid "grid.action.publish"
+msgstr "ګڼه خپرول"
+
+msgid "grid.action.addIssue"
+msgstr "ګڼه جوړول"
+
+msgid "grid.action.viewIssue"
+msgstr "کتل"
+
+msgid "grid.action.previewIssue"
+msgstr "مخکتنه"
+
+msgid "grid.action.addIssueGalley"
+msgstr "د ګڼې ګالۍ جوړول"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "اوسنۍ ګڼه وټاکئ"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "اصلي فایل د بیاکتنې د نسخې په توګه وټاکئ"
+
+msgid "editor.article.decision"
+msgstr "پرېکړه"
+
+msgid "editor.submissions.showBy"
+msgstr "ښودل په"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "فعالې سپارنې"
+
+msgid "editor.submissions.invite"
+msgstr "بلنه ورکول"
+
+msgid "editor.submissions.accept"
+msgstr "منل"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "هیڅ سپارنه نشته"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "وروستۍ"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "وروستی بشپړ شوی"
+
+msgid "editor.submissions.assignedTo"
+msgstr "اېډېټر ته سپارل شوی"
+
+msgid "issues.submissions.issueIds"
+msgstr "ګڼې ته سپارل شوی"
+
+msgid "editor.submissions.inSection"
+msgstr "په برخه کې"
+
+msgid "editor.article.publishVersion"
+msgstr "بڼه / نسخه خپرول"
+
+msgid "editor.article.viewMetadata"
+msgstr "د بڼې Metadata لیدل"
+
+msgid "editor.article.editMetadata"
+msgstr "د بڼې Metadata اېډېټ"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "باید وسپارل شي"
+
+msgid "editor.article.payment.requestPayment"
+msgstr "د پیسو د ورکړې غوښتنه"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"د پوښ انځور چې تاسو یې د حذف غوښتنه کړې، ونه موندل شو. ښايي له مخکې حذف شوی "
+"وي. مهرباني وکړئ پاڼه بیا تازه کړئ."
+
+msgid "grid.action.removeArticle"
+msgstr "له ګڼې څخه د مقاله لرې کول"
+
+msgid "editor.article.remove"
+msgstr "لیرې کول"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "د لاسرسي نېټه د اعتبار وړ نه ده."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "د ګڼې د ګالۍ اېډېټ"
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "ګالۍ فایلونه وټاکئ"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"د وروستۍ بڼې فایلونه به د کاپي اېډېټر لخوا سم شي او لاندې د \"Copyediting\" "
+"لاندې پورته شي <span class=\"pkp_help_title\">Copyediting</span>."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"هر هغه فایلونه چې لا دمخه د کومې سپارنې پړاو ته پورته شوي، کولی شي د بیا "
+"کتنې لپاره د نوملړ برخه شي."
+
+msgid "editor.article.coverImage"
+msgstr "د انځور پوښ"
+
+msgid "editor.home"
+msgstr "د اېډېټو (اوډونکي) کورپاڼه"
+
+msgid "editor.allEditors"
+msgstr "ټول اېډېټر (اوډونکي)"
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"عامه پېژندونکی '{publicIdentifier$}' لا دمخه د بل څیز (موضو/ګڼه، مقالې، فایل)"
+" لپاره کارول شوی دی. مهرباني وکړئ د خپل ژورنال لپاره ځانګړي پېژندونکي وټاکئ."
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"دا سپارنه به وروسته له هغې آرشیف ته ولېږل شي چې د لیکوال د خبرولو برېښنالیک "
+"ته واستول شي یا د برېښنالیک مه لېږئ تڼۍ کېکاږل شي."
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "ټول اداري ګډونوال ({count$} کاروونکي)"
+
+msgid "editor.issues.datePublished.invalid"
+msgstr ""
+"د خپرېدو نېټه بااعتباره نه ده. نېټه باید په دې بڼه وي : ورځ – میاشت – کال."
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr "د خپرېدو نېټه لازمي ده کله چې ګڼه خپرېږي."
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"هغه د پوښ انځور چې تاسو د حذفولو غوښتنه کړې، د بل ژورنال یوې ګڼې سره سمون "
+"لري. مهرباني وکړئ ډاډ ترلاسه کړئ چې له سم ژورنال سره کار کوئ، د ګڼې سم ID "
+"کاروئ او بیا هڅه وکړئ."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"هغه د پوښ انځور چې تاسو یې د حذفولو غوښتنه کړې، ونه موندل شو. ښايي دا انځور "
+"له مخکې حذف شوی وي. پاڼه بیا تازه کړئ او بیا هڅه وکړئ."
+
+msgid "editor.issues.styleFile"
+msgstr "سټایل‌شیټ (Stylesheet)"
+
+msgid "editor.issues.previewIssue"
+msgstr "د ګڼې مخکتنه کول"
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "د ګڼې د ګالۍ لپاره ژبه اړینه ده."
+
+msgid "editor.submissions.submitMMDD"
+msgstr "د سپارلو میاشت – ورځ"
+
+msgid "editor.submissions.averageTime"
+msgstr "اونۍ"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "د خپرونې لپاره مهالوېش جوړ کړئ"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"د خپرونې فیس نه دی ورکړل شوی. د مهالوېش لپاره لیکوال ته خبر ورکړئ چې فیس "
+"ورکړي یا معاف شي."
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"ایا ډاډه یاست چې غواړئ دا مقاله له ګڼې لرې کړئ؟ دا مقاله د بلې ګڼې لپاره د "
+"مهالوېش لپاره چمتو وي."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"عامه پېژندونکی '{publicIdentifier$}' لا دمخه د ورته ډول یو بل شی لپاره موجود "
+"دي. مهرباني وکړئ د ورته ډول شیانو لپاره ځانګړي پېژندونکي وټاکئ."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"مخکې له دې چې سپارنه د کاپي اېډېټ ته واستول شي، د لیکوال د خبرولو لېنک "
+"وکاروئ ترڅو لیکوال ته پرېکړه ورکړئ او هغه نسخه وټاکئ چې واستول شي."
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+"دا پیغام ټولو هغو کاروونکو ته واستوئ چې له دغه ژورنال سره تړلي دي ({count$} "
+"کاروونکي)"
+
+msgid "editor.issues.yearRequired"
+msgstr "کال لازمي دی او باید یو مثبت عدد وي."
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"سټایل‌شیټ بڼه با اعتباره نه ده. ډاډ ترلاسه کړئ چې فایل یو سم CSS فایل دی. "
+"(یادونه: هغه سټایل‌شیټونه چې په سر کې نظر (کومېنټ) لري، ښايي رد شي.)"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "ایا تاسو ډاډه یاست چې غواړئ خپره شوې ګڼه بېرته خپره نه کړئ؟"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "ایا غواړئ دا ګالۍ حذف کړئ؟"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "مهالوېش شوې خپرونه وښایئ"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"د طرحې اېډېټر دا فایلونه د هرې ګالۍ لپاره چمتو کوي او بیا د بیا کتنې لپاره "
+"اړوند <span class=\"pkp_help_title\">Proofs</span> ځای ته پورته کوي."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr ""
+"د ګڼې پېژندنه لازمي ده. مهرباني وکړئ د ګڼې د پېژندلو لږ تر لږه یو انتخاب "
+"وټاکئ."
+
+msgid "editor.issues.openAccess"
+msgstr "آزاد لاسرسی"
+
+msgid "editor.issues.pages"
+msgstr "پاڼې"
+
+msgid "editor.navigation.issueArchive"
+msgstr "پخوانۍ ګڼې"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "ایا غواړئ د پوښ د پاڼې انځور لیرې کړئ؟"
+
+msgid "editor.issues.cover"
+msgstr "پوښ"
+
+msgid "editor.issues.viewingGalley"
+msgstr "د ټولو ګڼو د فارمت لیدل"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"ټولې مقالې به بېرته د اېډېټ قطار ته واستول شي او ټول تړلي فایلونه به د تل "
+"لپاره له سیستم څخه لیرې شي. آیا تاسو ډاډه یاست چې غواړئ دا ګڼه حذف کړئ؟"
+
+msgid "editor.issues.saveChanges"
+msgstr "ایا غواړئ د مطالبو د لیکلړ بدلونونه ثبت کړئ؟"

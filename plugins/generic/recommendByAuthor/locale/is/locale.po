@@ -21,6 +21,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Mest lesnu greinar eftir sama höfund(a)"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""

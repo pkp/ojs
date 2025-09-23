@@ -1,7 +1,7 @@
 # Murari P Tapaswi <tapaswimurari@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-02-13 08:08+0000\n"
+"PO-Revision-Date: 2025-03-23 23:25+0000\n"
 "Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
 "Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/manager/mr/>"
 "\n"
@@ -2622,3 +2622,9 @@ msgid "mailable.paymentRequest.description"
 msgstr ""
 "लेखकाचे सादरीकरण स्वीकारल्यावर प्रकाशन शुल्क भरण्याची विनंती करणारा हा "
 "स्वनियंत्रित ई-मेल पाठवला जातो."
+
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr "विशिष्ट अंकातील सर्व सादरीकरणाची यादी, जसे की अनुक्रमणिका."
+
+msgid "manager.setup.contextSummary.description"
+msgstr "तुमच्या नियतकालिकाचा विषय आणि उद्देश याची थोडक्यात माहिती द्या."

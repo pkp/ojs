@@ -1,17 +1,17 @@
-# Cyril Kamburov <cc@intermedia.bg>, 2021, 2022.
+# Cyril Kamburov <cc@intermedia.bg>, 2021, 2022, 2025.
 # Pencho Toncgev <ptonchev@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-10-11 20:06+0000\n"
-"Last-Translator: Pencho Toncgev <ptonchev@gmail.com>\n"
-"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
-"bg_BG/>\n"
-"Language: bg_BG\n"
+"PO-Revision-Date: 2025-03-24 22:19+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/editor/bg/"
+">\n"
+"Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "editor.home"
 msgstr "Редактор - Начало"
@@ -501,3 +501,15 @@ msgstr ""
 
 msgid "editor.article.coverImage"
 msgstr "Изображение на корицата"
+
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr ""
+"Ако остане празно, датата ще бъде зададена автоматично при публикуването на "
+"броя."
+
+msgid "editor.issues.datePublished.invalid"
+msgstr ""
+"Датата на публикуване не е валидна. Датата трябва да е във формат ГГГГ-ММ-ДД."
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr "Датата на публикуване се изисква, когато изданието е публикувано."

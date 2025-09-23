@@ -293,7 +293,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
                             null,
                             'article',
                             'view',
-                            $urlParts[1],
+                            [$urlParts[1]],
                             null,
                             $anchor
                         );
@@ -305,7 +305,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
                             null,
                             'issue',
                             'view',
-                            $urlParts[1],
+                            [$urlParts[1]],
                             null,
                             $anchor
                         );
@@ -335,8 +335,4 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
         }
         return $matchArray[1] . $url . $matchArray[3];
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\generic\htmlArticleGalley\HtmlArticleGalleyPlugin', '\HtmlArticleGalleyPlugin');
 }

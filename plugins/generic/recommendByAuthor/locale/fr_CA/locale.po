@@ -25,11 +25,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Articles les plus lus du,de la,des même-s auteur-e-s"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""
-"Attention : Ce plugiciel nécessite qu'au moins un plugiciel de statistiques/"
-"rapport soit activé. Si vos plugiciels de statistiques fournissent plus "
-"d'une mesure, veuillez également sélectionner une mesure principale sur la "
-"page des paramètres du site de l'administrateur et/ou sur les pages des "
-"paramètres du responsable de la publication."

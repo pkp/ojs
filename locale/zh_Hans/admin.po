@@ -1,20 +1,21 @@
 # Huang Feilong <hfl@nominsang.org>, 2021.
 # 米白冰 <mibaibing@gmail.com>, 2023.
+# wenshao521！ <wainixueer3334@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2023-03-27 19:30+0000\n"
-"Last-Translator: 米白冰 <mibaibing@gmail.com>\n"
+"PO-Revision-Date: 2025-05-15 10:57+0000\n"
+"Last-Translator: wenshao521！ <wainixueer3334@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
-"ojs/admin/zh_CN/>\n"
-"Language: zh_CN\n"
+"ojs/admin/zh_Hans/>\n"
+"Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "admin.hostedContexts"
 msgstr "托管期刊"
@@ -56,7 +57,7 @@ msgid "admin.systemConfiguration"
 msgstr "OJS 配置"
 
 msgid "admin.systemConfigurationDescription"
-msgstr "设置<tt>config.inc.php</tt>对 OJS 进行配置。"
+msgstr "来自 <tt>config.inc.php</tt> 的 OJS 配置设置。"
 
 msgid "admin.journals.createInstructions"
 msgstr ""
@@ -135,8 +136,8 @@ msgstr "所有注册用户"
 
 msgid "admin.mergeUsers.confirm"
 msgstr ""
-"您确认将合并用户名为 {$oldAccountCount} 的帐户到用户名为 \"{$newUsername}\"的"
-"帐户里吗？{$oldAccountCount}  账号将不复存在。此操作不可撤销。"
+"您确认将合并用户名为 {$oldAccountCount} 的帐户到用户名为 \"{$newUsername}"
+"\"的帐户里吗？{$oldAccountCount} 账号将不复存在。此操作不可撤销。"
 
 msgid "admin.mergeUsers.noneEnrolled"
 msgstr "未注册用户。"
@@ -153,14 +154,12 @@ msgstr "评审提醒"
 msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr "问题编号不是一个整数。"
 
-#, fuzzy
 msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
-msgstr "问题厨房的编号不是一个整数"
+msgstr "期刊排版稿 ID 不是整数。"
 
-#, fuzzy
 msgid ""
 "admin.scheduledTask.usageStatsLoader.invalidLogEntry.issueAssocTypeNoMatch"
-msgstr "问题编号与he assoc 编号不匹配。"
+msgstr "期刊期次 ID 与关联 ID 不匹配。"
 
 msgid "admin.settings.enableBulkEmails.description"
 msgstr ""
@@ -184,19 +183,30 @@ msgstr ""
 "点设置</a> 中启用此功能。"
 
 msgid "admin.siteManagement.description"
-msgstr ""
+msgstr "在此站点添加、编辑或删除期刊，并管理全站设置。"
 
 msgid "admin.settings.statistics.geo.description"
 msgstr ""
+"选择本站点期刊可以收集的地理使用统计数据类型。更详细的地理统计数据可能会显著"
+"增加数据库大小，并且在某些罕见情况下，可能会破坏访问者的匿名性。每个期刊可以"
+"根据需要单独配置此设置，但期刊所收集的记录不会超过此处配置的详细程度。例如，"
+"如果站点只支持国家和地区，期刊可以选择国家和地区，或者仅选择国家。该期刊将无"
+"法跟踪国家、地区和城市。"
 
 msgid "admin.settings.statistics.institutions.description"
 msgstr ""
+"启用机构统计功能，如果您希望本站点的期刊能够按机构收集使用统计数据。"
+"期刊需要添加机构及其 IP "
+"范围才能使用此功能。启用机构统计功能可能会显著增加您的数据库大小。"
 
 msgid "admin.settings.statistics.sushi.public.description"
 msgstr ""
+"是否允许将 SUSHI API 端点对本站点所有期刊公开访问。如果启用公共 "
+"API，每个期刊可以覆盖此设置，将其统计数据设为私有。然而，如果禁用公共 API，"
+"期刊将无法将其 API 设置为公开。"
 
 #~ msgid "admin.contexts.confirmDelete"
 #~ msgstr "您确定要永久删除此期刊和其所有内容?"
 
 msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
-msgstr ""
+msgstr "将本站点作为所有期刊的平台。"

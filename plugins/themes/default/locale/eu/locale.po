@@ -1,9 +1,10 @@
 # Josu Aramberri <josu.aramberri@gmail.com>, 2022.
 # Informatikaria <informatikaria@ueu.eus>, 2023.
+# Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-12-12 12:31+0000\n"
-"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
+"PO-Revision-Date: 2025-08-04 04:49+0000\n"
+"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/eu/>\n"
 "Language: eu\n"
@@ -14,73 +15,89 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.themes.default.name"
-msgstr "Itxura lehenetsia"
+msgstr "Gai Lehenetsia"
 
 msgid "plugins.themes.default.description"
-msgstr ""
+msgstr "Gai honek lehenetsitako gaia ezartzen du."
 
 msgid "plugins.themes.default.option.typography.label"
-msgstr ""
+msgstr "Tipografia"
 
 msgid "plugins.themes.default.option.typography.description"
-msgstr ""
+msgstr "Aukeratu aldizkari honi egokitzen zaion letra-tipoaren konbinazioa."
 
 msgid "plugins.themes.default.option.typography.notoSans"
 msgstr ""
+"Noto Sans: Google-k diseinatutako letra-tipo digital natiboa, hizkuntza-"
+"laguntza zabalarekin."
 
 msgid "plugins.themes.default.option.typography.notoSerif"
-msgstr ""
+msgstr "Noto Serif: Googleren letra-tipo digital natiboaren serif aldaera bat."
 
 msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
 msgstr ""
+"Noto Serif/Noto Sans: Serif izenburuen eta sans-serif gorputzeko testuaren "
+"parekatze osagarria."
 
 msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
 msgstr ""
+"Noto Sans/Noto Serif: Sans-serif izenburuen eta serif gorputzeko testuaren "
+"parekatze osagarria."
 
 msgid "plugins.themes.default.option.typography.lato"
-msgstr ""
+msgstr "Lato: Sans-serif letra-tipo moderno ezaguna."
 
 msgid "plugins.themes.default.option.typography.lora"
-msgstr ""
+msgstr "Lora: Sarean irakurtzeko ona den serif letra-tipo zabala."
 
 msgid "plugins.themes.default.option.typography.lora_openSans"
 msgstr ""
+"Lora/Open Sans: Serif izenburuen eta sans-serif gorputzeko testuaren "
+"parekatze osagarria."
 
 msgid "plugins.themes.default.option.colour.label"
-msgstr ""
+msgstr "Kolorea"
 
 msgid "plugins.themes.default.option.colour.description"
-msgstr ""
+msgstr "Aukeratu kolore bat goibururako."
 
 msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
-msgstr ""
+msgstr "Erakutsi aldizkariaren laburpena hasierako orrian."
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
-msgstr ""
+msgstr "Goiburuaren atzeko planoko irudia"
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
 msgstr ""
+"Hasierako orriko irudi bat kargatu denean, erakutsi goiburuaren atzealdean, "
+"hasierako orriko ohiko kokalekuaren ordez."
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
-msgstr ""
+msgstr "Erakutsi hasierako orriaren irudia goiburuaren atzeko plano gisa."
 
 msgid "plugins.themes.default.option.displayStats.label"
-msgstr ""
+msgstr "Erabilera-estatistikak bistaratzeko aukerak"
 
 msgid "plugins.themes.default.option.displayStats.none"
-msgstr ""
+msgstr "Ez erakutsi bidalketen erabilera-estatistiken grafikoa irakurleei."
 
 msgid "plugins.themes.default.option.displayStats.bar"
-msgstr ""
+msgstr "Erabili barra motako grafikoa erabilera-estatistikak bistaratzeko."
 
 msgid "plugins.themes.default.option.displayStats.line"
-msgstr ""
+msgstr "Erabili lerro motako grafikoa erabilera-estatistikak bistaratzeko."
 
 msgid "plugins.themes.default.displayStats.monthInitials"
-msgstr ""
+msgstr "Urt Ots Mar Api Mai Eka Uzt Abu Ira Urr Aza Abe"
 
 msgid "plugins.themes.default.displayStats.downloads"
-msgstr ""
+msgstr "Deskargak"
 
 msgid "plugins.themes.default.displayStats.noStats"
-msgstr ""
+msgstr "Deskarga-datuak ez daude oraindik eskuragarri."
+
+msgid "plugins.themes.default.nextSlide"
+msgstr "Hurrengo diapositiba"
+
+msgid "plugins.themes.default.prevSlide"
+msgstr "Aurreko diapositiva"

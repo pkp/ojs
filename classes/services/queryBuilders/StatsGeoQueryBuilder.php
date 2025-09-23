@@ -17,7 +17,7 @@
 
 namespace APP\services\queryBuilders;
 
-use APP\submission\Submission;
+use APP\publication\Publication;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Support\Facades\DB;
 use PKP\services\queryBuilders\PKPStatsGeoQueryBuilder;
@@ -45,13 +45,12 @@ class StatsGeoQueryBuilder extends PKPStatsGeoQueryBuilder
     protected function _getAppSpecificQuery(Builder &$q): void
     {
         if (!empty($this->issueIds)) {
-            $issueSubmissionIds = DB::table('publications as p')->select('p.submission_id')->distinct()
-                ->from('publications as p')
-                ->leftJoin('publication_settings as ps', 'ps.setting_name', '=', DB::raw('\'issueId\''))
-                ->where('p.status', Submission::STATUS_PUBLISHED)
-                ->whereIn('ps.setting_value', $this->issueIds);
-            $q->joinSub($issueSubmissionIds, 'is', function ($join) {
-                $join->on('metrics_submission_geo_monthly.' . PKPStatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID, '=', 'is.submission_id');
+            $q->whereExists(function ($query) {
+                $query->select(DB::raw(1))
+                    ->from('publications as p')
+                    ->whereRaw('p.submission_id = metrics_submission_geo_monthly.' . PKPStatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID)
+                    ->where('p.status', Publication::STATUS_PUBLISHED)
+                    ->whereIn('p.issue_id', $this->issueIds);
             });
         }
     }

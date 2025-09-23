@@ -43,9 +43,6 @@ msgstr ""
 "duren (bv. afhankelijk van uw cronjob instellingen). U kunt alle "
 "ongeregistreerde artikelen bekijken."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr "Gebruik de DOAJ test API (testomgeving) voor de registratie. Vergeet deze test-optie niet te verwijderen voor de uiteindelijke publicatie."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "Automatische registratie bij DOAJ"
 

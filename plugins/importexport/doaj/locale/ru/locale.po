@@ -37,9 +37,6 @@ msgstr "Вы найдете ключ API на своей странице пол
 msgid "plugins.importexport.doaj.settings.form.automaticRegistration.description"
 msgstr "OJS будет автоматически депонировать статьи в DOAJ. Обратите внимание, что это может потребовать небольшого количества времени после публикации для обработки (например, в зависимости от настроек вашего cron). Вы можете проверить все незарегистрированные статьи."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr "Использовать тестовый API DOAJ (среда тестирования) для регистрации. Пожалуйста, не забудьте убрать этот параметр для реальной работы."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "Задача автоматической регистрации DOAJ"
 

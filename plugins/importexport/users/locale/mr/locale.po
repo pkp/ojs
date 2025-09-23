@@ -1,0 +1,121 @@
+# Murari P Tapaswi <tapaswimurari@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-03-14 19:53+0000\n"
+"Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
+"Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-users/mr/>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"उदाहरणे :\n"
+"\tmyImportFile.xml वरून वापरकर्ते myJournal मध्ये दाखल (इम्पोर्ट) करा :\n"
+"\tmyImportFile.xml myJournal मधील {$scriptName} {$pluginName} दाखल (इम्पोर्ट)"
+" करा\n"
+"\n"
+"\tmyJournal वरून सर्व वापरकर्ते स्थलांतरीत (एक्स्पोर्ट) करा :\n"
+"\tmyExportFile.xml myJournal मधील {$scriptName} {$pluginName} स्थलांतरीत "
+"(एक्स्पोर्ट) करा\n"
+"\n"
+"\tत्यांच्या ID द्वारे निर्दिष्ट केलेले वापरकर्ते स्थलांतरीत (एक्स्पोर्ट) करा "
+":\n"
+"\tmyExportFile.xml myJournal 1 2 मधील {$scriptName} {$pluginName} स्थलांतरीत "
+"(एक्स्पोर्ट) करा\n"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
+"वापरकर्ता माहिती असलेली XML डेटा फाईल या नियतकालिकामध्ये दाखल (इम्पोर्ट) "
+"करण्यासाठी निवडा. या फाईलच्या स्वरूपाच्या तपशीलांसाठी नियतकालिकासंबंधी सहाय्"
+"य (journal help) पहा.<br /><br />लक्षात ठेवा की जर दाखल (इम्पोर्ट) केलेल्या "
+"फाईलमधील वापरकर्तानाव किंवा ई-मेल पत्ते प्रणाली (सिस्टम) मध्ये आधीच अस्तित्वा"
+"त असतील तर त्या वापरकर्त्यांसाठी वापरकर्ता डेटा आयात केला जाणार नाही पण "
+"विद्यमान वापरकर्त्यांसाठी कोणत्याही नवीन भूमिका फाईलमध्ये असतील तर त्यांची "
+"भर घातली जाईल."
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"वापर : {$scriptName} {$pluginName} [command] ...\n"
+"आज्ञा :\n"
+"\t[xmlFileName] [journal_path] दाखल (इम्पोर्ट) करा\n"
+"\t[xmlFileName] [journal_path] स्थलांतरीत (एक्स्पोर्ट) करा\n"
+"\t[xmlFileName] [journal_path] [userId1] [userId2] स्थलांतरीत (एक्स्पोर्ट) "
+"करा...\n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "XML प्लगइन वापरून वापरकर्त्यांची यादी"
+
+msgid "plugins.importexport.users.description"
+msgstr "वापरकर्ते दाखल (इम्पोर्ट) आणि स्थलांतरीत (एक्स्पोर्ट) करा"
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "वापरकर्ते दाखल (इम्पोर्ट) करा"
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "वापरकर्ता डेटा फाईल"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr ""
+"दाखल (इम्पोर्ट) केलेल्या प्रत्येक वापरकर्त्याला वापरकर्त्याचे वापरकर्तानाव "
+"आणि पासवर्ड ई-मेलने पाठवा."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr ""
+"जर एखादा वापरकर्ता दाखल (इम्पोर्ट) करण्यात अडचण आली तर इतर वापरकर्ते दाखल "
+"(इम्पोर्ट) करणे सुरू ठेवा."
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr ""
+"खालील वापरकर्ते प्रणाली (सिस्टम)मध्ये यशस्वीरित्या दाखल (इम्पोर्ट) केले गेले"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "दाखल (इम्पोर्ट) करताना काही त्रुटी आल्या"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr ""
+"या वापरकर्त्यांना तुम्ही प्रणाली (सिस्टम)मध्ये दाखल (इम्पोर्ट) करू इच्छिता "
+"यासाठी दुजोरा द्या"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "पूर्वसूचना"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"{$importHash} सह हॅश केलेले पासवर्ड वापरू शकत नाही; OJS {$ojsHash} "
+"वापरण्यासाठी कॉन्फिगर केले आहे. तुम्ही याकडे दुर्लक्ष केल्यास, तुम्हाला दाखल "
+"(इम्पोर्ट) केलेल्या वापरकर्त्यांचे पासवर्ड रीसेट करावे लागतील."
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "\"{$journalPath}\" हा एका अज्ञात नियतकालिकाचा पत्ता दिला होता."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "वापरकर्ते स्थलांतरीत (एक्स्पोर्ट) करा"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "भूमिकेनुसार स्थलांतरीत (एक्स्पोर्ट) करा"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "सगळे स्थलांतरीत (एक्स्पोर्ट) करा"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "स्थलांतरीत (एक्स्पोर्ट) करताना त्रुटी आल्या"
+
+msgid "plugins.importexport.users.results"
+msgstr "फलनिष्पत्ती (Results)"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr ""
+"पुढे जाण्यासाठी कृपया \"दाखल (इम्पोर्ट)\" अंतर्गत एक फाईल संक्रमित (अपलोड) "
+"करा."
+
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"दाखल करणे (इम्पोर्ट) यशस्वीरित्या पूर्ण झाले. वापरकर्तानावे आणि ई-मेल पत्ते "
+"असलेले वापरकर्ते जे आधीच वापरात नाहीत ते सोबतच्या वापरकर्ता गटांसह दाखल "
+"(इम्पोर्ट) केले गेले आहेत."

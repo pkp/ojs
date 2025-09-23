@@ -21,10 +21,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Am häufigsten gelesenen Artikel dieser/dieses Autor/in"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""
-"Bitte beachten Sie: Dieses Plugin erfordert, dass mindestens ein Statistik/"
-"Berichts-Plugin aktiviert ist. Wenn Ihr Statistik-Plugin mehr als eine "
-"Metrik unterstütztzt, wählen Sie bitte eine Hauptmetrik auf den Seiten des/"
-"der Adminsitrator/in oder Zeitschriftenverwalter/in aus."

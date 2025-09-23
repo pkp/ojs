@@ -25,10 +25,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Mest leste artikler av samme forfatter(e)"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""
-"Merk: Programtillegget krever at minst ett programtillegg for statistikk "
-"eller rapportering er slått på. Dersom programtillegget måler mer enn en "
-"variabel, velg også hovedvariabel på administratorens sideinnstillinger og/"
-"eller tidsskriftsadministratorens innstillingssider."

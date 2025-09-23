@@ -1,0 +1,187 @@
+# "10 ..." <jaana.tonisson@tlulib.ee>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-07 10:50+0000\n"
+"Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
+"Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/default/et/"
+">\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "section.default.title"
+msgstr "Artiklid"
+
+msgid "section.default.abbrev"
+msgstr "ART"
+
+msgid "default.genres.article"
+msgstr "Artikli tekst"
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>Ajakirja veebisaidil sisestatud nimesid ja e-posti aadresse kasutatakse "
+"ainult selle ajakirja mainitud eesmärkidel ja neid ei tehta kättesaadavaks "
+"ühelgi muul eesmärgil ega ühelegi teisele osapoolele.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"See ajakiri pakub kohest avatud juurdepääsu oma sisule põhimõttel, et "
+"uurimistöö avalikult kättesaadavaks tegemine toetab suuremat ülemaailmset "
+"teadmiste vahetust."
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"Kas olete huvitatud sellesse ajakirja kaastööd esitama? Soovitame teil "
+"vaadata lehte <a href=\"{$indexUrl}/{$contextPath}/about\">Ajakirja kohta</"
+"a> ajakirja rubriikide poliitikate kohta, samuti <a href=\""
+"{$indexUrl}/{$contextPath}/about/submissions#authorGuidelines\">Autorite "
+"juhiseid</a>. Autorid peavad enne esitamist <a href=\""
+"{$indexUrl}/{$contextPath}/user/register\">registreeruma</a> ajakirja juures "
+"või kui juba registreeritud, võivad lihtsalt <a href=\"{$indexUrl}/index/"
+"login\">sisse logida</a> ja alustada viiesammulist protsessi."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"Julgustame teadusraamatukogude töötajaid lisama selle ajakirja oma "
+"raamatukogu elektrooniliste ajakirjade hulka. Samuti tasub märkida, et selle "
+"ajakirja avatud lähtekoodiga avaldamissüsteem sobib raamatukogudele "
+"majutamiseks oma teaduskonna liikmete kasutamiseks ajakirjadega, mille "
+"toimetamisega nad tegelevad (vaata <a href=\"https://pkp.sfu.ca/ojs\">Open "
+"Journal Systems</a>)."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"See ajakiri kasutab LOCKSS süsteemi, et luua osalevate raamatukogude vahel "
+"hajutatud arhiveerimissüsteem ja lubab nendel raamatukogudel luua ajakirja "
+"püsiarhiive säilitamise ja taastamise eesmärgil. <a href=\"https://www.lockss"
+".org\">Loe edasi...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"See ajakiri kasutab CLOCKSS süsteemi, et luua osalevate raamatukogude vahel "
+"hajutatud arhiveerimissüsteem ja lubab nendel raamatukogudel luua ajakirja "
+"püsiarhiive säilitamise ja taastamise eesmärgil. <a href=\"https://clockss."
+"org\">Loe edasi...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "Ajakirja haldur"
+
+msgid "default.groups.plural.manager"
+msgstr "Ajakirja haldurid"
+
+msgid "default.groups.abbrev.manager"
+msgstr "AH"
+
+msgid "default.groups.name.editor"
+msgstr "Ajakirja toimetaja"
+
+msgid "default.groups.plural.editor"
+msgstr "Ajakirja toimetajad"
+
+msgid "default.groups.abbrev.editor"
+msgstr "AT"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Külalistoimetaja"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Külalistoimetajad"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "KT"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Rubriigi toimetaja"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Rubriigi toimetajad"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "RubT"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Tellimuste haldur"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Tellimuste haldurid"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "TelH"
+
+msgid "default.genres.researchInstrument"
+msgstr "Uurimisinstrument"
+
+msgid "default.genres.researchMaterials"
+msgstr "Uurimismaterjalid"
+
+msgid "default.genres.researchResults"
+msgstr "Uurimistulemused"
+
+msgid "default.genres.transcripts"
+msgstr "Transkriptsioonid"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Andmeanalüüs"
+
+msgid "default.genres.dataSet"
+msgstr "Andmestik"
+
+msgid "default.genres.sourceTexts"
+msgstr "Lähtetekstid"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Retsensent"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Retsensendid"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "Ret"
+
+msgid "section.default.policy"
+msgstr "Rubriigi vaikimisi poliitikad"
+
+msgid "default.contextSettings.authorGuidelines"
+msgstr ""
+"<p>Autoreid kutsutakse tegema kaastöid sellele ajakirjale. Kõiki kaastöid "
+"hindab toimetaja, et teha kindlaks, kas need vastavad selle ajakirja "
+"eesmärkidele ja ulatusele. Need, mis sobivad, saadetakse enne vastuvõtmise "
+"või tagasilükkamise otsustamist retsenseerimisele.</p><p>Enne esitamist "
+"vastutavad autorid kaastööga kaasnevate materjalide, nagu fotode, "
+"dokumentide ja andmestike avaldamiseks loa saamise eest. Kõik märgitud "
+"autorid peavad nõustuma autorina identifitseerimisega. Kui see on "
+"asjakohane, peaks uurimistöö olema heaks kiidetud asjakohase eetikakomitee "
+"poolt vastavalt uurimisriigi õiguslikele nõuetele.</p><p>Toimetaja võib "
+"kaastöö tagasi lükata, kui see ei vasta kvaliteedi miinimumnõuetele. Enne "
+"esitamist veenduge, et uurimistöö ülesehitus ja uurimisargument oleksid "
+"korralikult struktureeritud ja artikuleeritud. Pealkiri peaks olema lühike "
+"ja lühikokkuvõte peaks olema iseseisvalt arusaadav. See suurendab "
+"tõenäosust, et retsensendid nõustuvad teie tööd üle vaatama. Kui olete "
+"rahul, et teie kaastöö vastab sellele standardile, järgige kaastöö "
+"ettevalmistamiseks allpool olevat kontrollnimekirja.</p>"
+
+msgid "default.contextSettings.checklist"
+msgstr ""
+"<p>Kõik kaastööd peavad vastama järgmistele nõuetele.</p><ul><li>See kaastöö "
+"vastab <a href=\"{$submissionGuidelinesUrl}\">Autorite juhendis</a> "
+"kirjeldatud nõuetele.</li><li>Seda kaastööd ei ole varem avaldatud ega ole "
+"teise ajakirja kaalumise all.</li><li>Kõik viited on kontrollitud täpsuse ja "
+"täielikkuse osas.</li><li>Kõik tabelid ja joonised on nummerdatud ja "
+"varustatud siltidega.</li><li>On saadud luba avaldada kõik fotod, "
+"andmestikud ja muu selle kaastööga kaasnev materjal.</li></ul>"
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"Julgustame lugejaid registreeruma selle ajakirja väljaannete teavituste "
+"teenusele. Kasutage ajakirja kodulehe ülaosas olevat <a href=\""
+"{$indexUrl}/{$contextPath}/user/register\">Registreeru</a> linki. See "
+"registreerimine toob lugejale e-posti teel iga uue ajakirja numbri "
+"sisukorra. See nimekiri võimaldab ajakirjal väita teatud taseme toetuse või "
+"lugejaskonna olemasolu. Vaadake ajakirja <a href=\""
+"{$indexUrl}/{$contextPath}/about/submissions#privacyStatement\""
+">Privaatsusavaldust</a>, mis kinnitab lugejatele, et nende nime ja e-posti "
+"aadressi ei kasutata muudel eesmärkidel."

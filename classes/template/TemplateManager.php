@@ -22,7 +22,7 @@ use APP\core\Application;
 use APP\core\PageRouter;
 use APP\file\PublicFileManager;
 use APP\journal\Journal;
-use PKP\config\Config;
+use APP\publication\Publication;
 use PKP\core\PKPSessionGuard;
 use PKP\facades\Locale;
 use PKP\i18n\LocaleMetadata;
@@ -45,7 +45,6 @@ class TemplateManager extends PKPTemplateManager
         $this->assign([
             'brandImage' => 'templates/images/ojs_brand.png',
         ]);
-
         if (!PKPSessionGuard::isSessionDisable()) {
             /**
              * Kludge to make sure no code that tries to connect to
@@ -141,12 +140,15 @@ class TemplateManager extends PKPTemplateManager
                 'icon' => 'Issues'
             ];
             $index = false;
-            if(Config::getVar('features', 'enable_new_submission_listing')) {
-                $index = array_search('dashboards', array_keys($menu));
+            $reviewAssignmentsIndex = array_search('reviewAssignments', array_keys($menu));
+            $mySubmissionsIndex = array_search('mySubmissions', array_keys($menu));
+            if ($mySubmissionsIndex !== false) {
+                $index = $mySubmissionsIndex;
+            } elseif ($reviewAssignmentsIndex !== false) {
+                $index = $reviewAssignmentsIndex;
             } else {
-                $index = array_search('submissions', array_keys($menu));
+                $index = array_search('dashboards', array_keys($menu));
             }
-
 
             if ($index === false || count($menu) <= $index + 1) {
                 $menu['issues'] = $issuesLink;
@@ -200,10 +202,13 @@ class TemplateManager extends PKPTemplateManager
                 array_slice($menu, $paymentsIndex, null, true);
         }
 
+        $this->setConstants([
+            'publication' => [
+                'STATUS_READY_TO_PUBLISH' => Publication::STATUS_READY_TO_PUBLISH,
+                'STATUS_READY_TO_SCHEDULE' => Publication::STATUS_READY_TO_SCHEDULE,
+            ],
+        ]);
+
         $this->setState(['menu' => $menu]);
     }
-}
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\template\TemplateManager', '\TemplateManager');
 }

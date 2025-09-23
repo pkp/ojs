@@ -20,7 +20,6 @@ namespace APP\core;
 use APP\facades\Repo;
 use APP\journal\JournalDAO;
 use APP\payment\ojs\OJSPaymentManager;
-use APP\search\ArticleSearchIndex;
 use PKP\context\Context;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
@@ -47,7 +46,6 @@ class Application extends PKPApplication
         parent::__construct();
         if (!PKP_STRICT_MODE) {
             foreach ([
-                'REQUIRES_XSL',
                 'ASSOC_TYPE_ARTICLE',
                 'ASSOC_TYPE_GALLEY',
                 'ASSOC_TYPE_JOURNAL',
@@ -106,12 +104,12 @@ class Application extends PKPApplication
     public function getDAOMap(): array
     {
         return array_merge(parent::getDAOMap(), [
-            'ArticleSearchDAO' => 'APP\search\ArticleSearchDAO',
             'IndividualSubscriptionDAO' => 'APP\subscription\IndividualSubscriptionDAO',
             'InstitutionalSubscriptionDAO' => 'APP\subscription\InstitutionalSubscriptionDAO',
             'IssueGalleyDAO' => 'APP\issue\IssueGalleyDAO',
             'IssueFileDAO' => 'APP\issue\IssueFileDAO',
             'JournalDAO' => 'APP\journal\JournalDAO',
+            'GalleyDAO' => 'APP\galley\DAO',
             'OAIDAO' => 'APP\oai\ojs\OAIDAO',
             'OJSCompletedPaymentDAO' => 'APP\payment\ojs\OJSCompletedPaymentDAO',
             'SubscriptionDAO' => 'APP\subscription\SubscriptionDAO',
@@ -163,22 +161,6 @@ class Application extends PKPApplication
     }
 
     /**
-     * Get a SubmissionSearchIndex instance.
-     */
-    public static function getSubmissionSearchIndex(): ArticleSearchIndex
-    {
-        return new ArticleSearchIndex();
-    }
-
-    /**
-     * Get a SubmissionSearchDAO instance.
-     */
-    public static function getSubmissionSearchDAO(): \APP\search\ArticleSearchDAO
-    {
-        return DAORegistry::getDAO('ArticleSearchDAO');
-    }
-
-    /**
      * Get the stages used by the application.
      */
     public static function getApplicationStages(): array
@@ -190,6 +172,14 @@ class Application extends PKPApplication
             WORKFLOW_STAGE_ID_EDITING,
             WORKFLOW_STAGE_ID_PRODUCTION
         ];
+    }
+
+    /**
+     * Get the review workflow stages used by this application.
+     */
+    public function getReviewStages(): array
+    {
+        return [WORKFLOW_STAGE_ID_EXTERNAL_REVIEW];
     }
 
     /**
@@ -226,5 +216,21 @@ class Application extends PKPApplication
     public function getPaymentManager(Context $context): OJSPaymentManager
     {
         return new OJSPaymentManager($context);
+    }
+
+    /**
+     * Define if the application has customizable reviewer recommendation functionality
+     */
+    public function hasCustomizableReviewerRecommendation(): bool
+    {
+        return true;
+    }
+
+    /**
+     * Get the help URL of this application
+     */
+    public static function getHelpUrl(): string
+    {
+        return 'https://docs.pkp.sfu.ca/learning-ojs/';
     }
 }

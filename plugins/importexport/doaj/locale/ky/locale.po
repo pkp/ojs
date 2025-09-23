@@ -21,11 +21,6 @@ msgstr "DOAJ API ачкычы"
 msgid "plugins.importexport.doaj.settings.form.apiKey.description"
 msgstr "API ачкычын DOAJ колдонуучу бетиңизден табасыз."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Каттоо үчүн DOAJ сыноо API'син (сыноо чөйрөсү) колдонуңуз. Өндүрүш үчүн бул "
-"параметрди алып салууну унутпаңыз."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "DOAJ Автоматтык каттоо тапшырмасы"
 

@@ -1,0 +1,334 @@
+# Emma U <emmaupkp@gmail.com>, 2025.
+# Juan Pablo Martínez <juanpabl@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-06-04 23:19+0000\n"
+"Last-Translator: Juan Pablo Martínez <juanpabl@gmail.com>\n"
+"Language-Team: Aragonese <http://translate.pkp.sfu.ca/projects/ojs/author/an/"
+">\n"
+"Language: an\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "author.submit.filesSummary"
+msgstr "Resumen d'o fichero"
+
+msgid "author.submit"
+msgstr "Nuevo ninvio"
+
+msgid "author.submit.submitArticle"
+msgstr "Ninviar un articlo"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Ninviar un articlo en cinco pasos"
+
+msgid "author.submit.startHereTitle"
+msgstr "Empecipiar un nuevo ninvio"
+
+msgid "author.submit.step1"
+msgstr "Paso 1. Empecipiar lo ninvio"
+
+msgid "author.submit.step2"
+msgstr "Paso 2. Cargar lo ninvio"
+
+msgid "author.submit.step3"
+msgstr "Paso 3. Introducir los metadatos d'o ninvio"
+
+msgid "author.submit.step4"
+msgstr "Paso 4. Cargar los fichers complementarios"
+
+msgid "author.submit.step4a"
+msgstr "Paso 4a. Anyadir un fichero complementario"
+
+msgid "author.submit.step5"
+msgstr "Paso 5. Confirmar lo ninvio"
+
+msgid "author.submit.start"
+msgstr "Inicio"
+
+msgid "author.submit.upload"
+msgstr "Cargar lo ninvio"
+
+msgid "author.submit.metadata"
+msgstr "Introducir los metadatos"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Cargar los fichers complementarios"
+
+msgid "author.submit.nextSteps"
+msgstr "Siguients pasos"
+
+msgid "author.submit.requestWaiver"
+msgstr "Solicitut d'exención de cuotas"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "Considere la posibilidat d'exención d'a cuota de ninvio pa este articlo"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr ""
+"Deixe un comentario en a caixeta que trobará contino pa indicar per qué no "
+"s'habrían d'aplicar las cuotas."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr ""
+"Si solicita una exención de cuotas, habrá d'introducir un motivo en o "
+"espacio que se le proporciona."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "En tongada de revisión {$round}"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "En revisión: Publicable con modificacions"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "En edición: Se requiere corrección d'orichinals"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "En edición: Se requiere corrección de prebas"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Cargar la versión correchida"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Modificacions d'a corrección de prebas"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Ye seguro/a que deseya eliminar lo ninvio incompleto?"
+
+msgid "author.submissions.viewStatus"
+msgstr "Veyer estau"
+
+msgid "author.submit.journalSection"
+msgstr "Sección d'a revista"
+
+msgid "author.submit.verifyChecklist"
+msgstr ""
+"Antes de continar, ha d'asegurar-se que se cumplen toz los requisitos d'a "
+"lista de comprebación."
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr ""
+"Ha d'acceptar las condicions de l'aviso de dreitos d'autor/a antes de "
+"continar."
+
+msgid "submission.submit.coverNote"
+msgstr "Comentarios pa lo editor/a"
+
+msgid "author.submit.comments"
+msgstr "Introduzca texto (opcional)"
+
+msgid "author.submit.form.localeRequired"
+msgstr "Tríe l'idioma d'o ninvio."
+
+msgid "author.submit.reorderInstructions"
+msgstr ""
+"Reordenar a los autors/as pa que amaneixcan en l'orden en o cual serán "
+"enumeraus en a publicación."
+
+msgid "author.submit.reorder"
+msgstr "Reordenar lo nombre de l'autor/a"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Contacto prencipal pa la correspondencia editorial."
+
+msgid "author.submit.addAuthor"
+msgstr "Anyadir autor/a"
+
+msgid "author.submit.deleteAuthor"
+msgstr "Eliminar autor/a"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr ""
+"Proporcione termins pa indexar lo ninvio y los desepare con un punto y coma "
+"(término1; término2; término3)."
+
+msgid "author.submit.coverageInstructions"
+msgstr ""
+"Se refiere a la localización cheografica, a la cobertura cronolochica u "
+"historica u a las caracteristicas d'a muestra d'investigación."
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+"Inglés=en; francés=fr; espanyol=ye. <a href=\"http://www.loc.gov/standards/"
+"iso639-2/php/code_list.php\" target=\"_blank\">Codigos adicionals</a>."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr ""
+"Fique lo nombre, apellidos y adreza de correu electronico de cada autor/a."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Introduzca lo títol de l'articlo."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Introduzca lo resumen de l'articlo."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "Ha superau lo limite maximo de parolas pa resúmenes en esta sección."
+
+msgid "author.submit.submissionFile"
+msgstr "Fichero de ninvio"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Cargar lo fichero de ninvio"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Reemplazar lo fichero de ninvio"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "No s'ha cargau garra fichero de ninvio."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "Ye seguro/a que deseya continar sin cargar un fichero de ninvio?"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr ""
+"Este paso opcional permite anyadir fichers complementarios a lo ninvio. "
+"Estes fichers, que pueden estar en cualsequier formato, pueden incluyir (a) "
+"ferramientas d'investigación; (b) conchuntos de datos que cumplan con os "
+"termins establius per la revisión etica d'a investigación; (c) fuents que "
+"d'unatro modo no serían disponibles pa los lectors/as, (d) figuras y tablas "
+"que no se puedan integrar en o texto u atros materials que se anyadan a la "
+"contribución d'o treballo."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr ""
+"Faiga clic en Alzar pa cargar lo fichero (dimpués se podrán cargar los "
+"fichers adicionals)."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr ""
+"Ye seguro/a que deseya continar sin cargar lo fichero complementario que ha "
+"triau?"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "No s'han anyadiu fichers complementarios a este ninvio."
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Tornar a Fichers complementarios"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Ye seguro/a que deseya eliminar este fichero complementario?"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Cargar fichero complementario"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Anyadir un fichero complementario"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Editar un fichero complementario"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Metadatos de fichers complementarios"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr ""
+"Pa indexar lo material complementario, lo fichero cargau ha d'incluyir los "
+"siguients metadatos."
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Fichero complementario"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Creyador/a (u propietario/a) d'o fichero"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Ferramienta d'investigación"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Materials d'investigación"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Resultaus d'a investigación"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Transcripcions"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Analisi d'os datos"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Conchunto de datos"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Texto fuent"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Descripción breu"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr ""
+"Present lo fichero a los revisors (sin metadatos), ya que no comprometerá la "
+"revisión anonima."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Utilizar nomás con materials publicaus formalment."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Data en a cuala se recopilaron los datos u se creó lo traste."
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Nombre d'o estudeyo u unatro punto d'orichen."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Especificar atros"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "No s'ha cargau garra fichero."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Introduzca lo títol d'o fichero complementario."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Introduzca un tema."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Introduzca una descripción."
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "La identificación publica d'o fichero complementario ya existe."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Identificador publico d'o fichero complementario"
+
+msgid "author.submit.finishSubmission"
+msgstr "Finalizar ninvio"
+
+msgid "author.submit.submissionComplete"
+msgstr "Ninvio completau. Gracias per la suya publicación en {$journalTitle}."
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Cargar la versión de l'autor/a"
+
+msgid "author.article.copyeditedFile"
+msgstr "Fichero correchiu"
+
+msgid "author.article.authorRevisedFile"
+msgstr "Fichero de l'autor/a"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr ""
+"Ye necesario disposar d'una cuenta d'usuario/a pa realizar ninvios a la "
+"revista. Esto permite que nuestros editors/as faigan un seguimiento d'os "
+"suyos ninvios y puedan contactar-le cuan cambie lo estau d'os mesmos u si ye "
+"necesario proporcionar información adicional."
+
+msgid "author.track"
+msgstr "Ninvios activos"
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">Faga clic aquí</a> pa ir a lo "
+"primer paso d'o proceso de ninvio en cinco pasos."
+
+msgid "author.submit.notAccepting"
+msgstr "La revista no acepta ninvios en este momento."
+
+msgid "author.submissions.noSubmissions"
+msgstr "Sin ninvios."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Ha d'introducir a lo menos un/a autor/a."

@@ -1,9 +1,9 @@
-# Cyril Kamburov <cc@intermedia.bg>, 2021, 2022, 2023.
+# Cyril Kamburov <cc@intermedia.bg>, 2021, 2022, 2023, 2025.
 # Albena Vassileva <albena.ava@gmail.com>, 2022.
 # Pencho Toncgev <ptonchev@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-03-06 18:33+0000\n"
+"PO-Revision-Date: 2025-03-05 20:25+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "bg/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "manager.distribution.access"
 msgstr "Достъп"
@@ -2642,3 +2642,12 @@ msgid "plugins.importexport.common.error.issueGalleyFileMissing"
 msgstr ""
 "Типография на брой {$id} не може да бъде експортирана, нейният файл не е "
 "намерен в пътя „{$path}“."
+
+msgid "manager.setup.contextSummary.description"
+msgstr ""
+"Предложете кратко описание на вашето списание, за да предоставите представа "
+"за неговото съдържание и цел."
+
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr ""
+"Съдържанието на броя, като списък на всички свързани подадени материали."

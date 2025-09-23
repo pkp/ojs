@@ -21,10 +21,3 @@ msgstr ""
 
 msgid "plugins.generic.recommendByAuthor.heading"
 msgstr "Các bài báo được đọc nhiều nhất của cùng tác giả"
-
-msgid "plugins.generic.recommendByAuthor.noMetric"
-msgstr ""
-"Obs.: Plugin này yêu cầu ít nhất một plugin thống kê/báo cáo được kích hoạt. "
-"Nếu các plugin thống kê của bạn cung cấp nhiều hơn một số liệu thì vui lòng "
-"chọn một số liệu chính trên trang cài đặt trang của quản trị viên và / hoặc "
-"trên các trang cài đặt của người quản lý tạp chí."

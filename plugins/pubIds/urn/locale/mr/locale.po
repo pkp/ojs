@@ -1,0 +1,267 @@
+# Murari P Tapaswi <tapaswimurari@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-04-12 09:06+0000\n"
+"Last-Translator: Murari P Tapaswi <tapaswimurari@gmail.com>\n"
+"Language-Team: Marathi <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
+"mr/>\n"
+"Language: mr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "URN (संसाधनाचे एकसमान नाव)"
+
+msgid "plugins.pubIds.urn.description"
+msgstr ""
+"हे प्लगइन OJS मधील अंक, लेख आणि गॅलींसारख्या संसाधनांना एकसमान नावं (Uniform "
+"Resource Names) देण्याचे काम कार्यान्वित (enable) करते."
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "नियतकालिकातील मजकूर (Content)"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "कुठल्या संसाधनांना URN (एकसमान नाव) द्यायचे ते कृपया निवडा."
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "लेख"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "अंक"
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "गॅली संचय"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "संसाधनाच्या एकसमान नावासाठी उपसर्ग (URN Prefix)"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr ""
+"संसाधनाच्या एकसमान नावाच्या उपसर्गाचे (URN Prefix) प्रारूप (pattern) \"urn:\""
+"&lt;NID&gt;\":\"&lt;NSS&gt; या स्वरूपात (form) असावे."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "संसाधनाच्या एकसमान नावापुढील जोड (प्रत्यय) (URN Suffix)"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr ""
+"उदाहरणार्थ, vol%viss%ipp%p हा संसाधनाच्या एकसमान नावापुढील जोड (प्रत्यय) ("
+"URN Suffix) \"vol3iss2pp230\" तयार करू शकतो."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "अंकांसाठी"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "लेखांसाठी"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "गॅलींसाठी"
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr ""
+"कृपया अंकांसाठी संसाधनाच्या एकसमान नावापुढील जोड (प्रत्यय) (URN Suffix) नमुना"
+" नोंदवा."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "सर्वसाधारण प्रारूप (default patterns) वापरा."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "नियंत्रण क्रमांक (Check Number)"
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr ""
+"नियंत्रण क्रमांकाचे (Check Number) निर्मिती आपोआप केली जाईल आणि शेवटी "
+"संसाधनाच्या एकसमान नावाचा (URN) शेवटचा अंक म्हणून जोडला जाईल."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "नेमस्पेस (Namespace)"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "निवड करा"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "URL रिझोल्व्हर"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(उदा. https://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "कृपया रिझोल्व्हर URL ची नोंद करा."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "URN (संसाधनाचे एकसमान नाव) पुन्हा द्या (Reassign)"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr ""
+"तुम्ही खात्रीने अस्तित्वात असलेले सगळे URN (संसाधनाची एकसमान नावं) हटवू "
+"इच्छिता का?"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN (संसाधनाचे एकसमान नाव)"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "अंक"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "लेख"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "गॅली"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr ""
+"सानुकूल प्रत्यय (custom suffix) नसल्याने संसाधनाचे एकसमान नाव (URN) देता येणे"
+" अशक्य आहे."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "संसाधनाचे एकसमान नाव (URN) या {$pubObjectType} ला दिला आहे."
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "पुसून टाका (Clear)"
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "तुम्हाला खात्री आहे की तुम्ही विद्यमान URN हटवू इच्छिता?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "अंकांना दिलेले URN (संसाधनाचे एकसमान नाव) पुसून टाका"
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "नियंत्रण क्रमांकाचा (Check Number) समावेश करा"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "या {$pubObjectType} ला URN {$pubId} द्या"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "सानुकूल प्रत्यय (custom suffix) नसल्याने URN देता येत (assign) नाही."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr ""
+"URN {$pubId} देता येत नाही कारण त्यात एक न उलगडणारे प्रारूप (pattern) आहे."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "URN {$pubId} दिला गेला (assign) आहे."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "नियंत्रण क्रमांक (Check Number) उपलब्ध नाही."
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "URN उपसर्ग {$prefix} (Prefix) ने सुरू होणे आवश्यक आहे."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "द्या (assign)"
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr ""
+"जोपर्यंत हे प्रकाशन एखाद्या अंकाशी जोडले जात नाही तोपर्यंत तुम्ही त्याला URN "
+"देऊ शकत नाही."
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"URN प्रारूपाच्या (pattern) एक किंवा अधिक भागामध्ये डेटा नसल्याने तुम्ही URN "
+"निर्माण करू शकत नाही. तुम्हाला हा लेख एखाद्या अंकाशी जोडावा लागेल, प्रकाशक "
+"ID ठरवावा लागेल किंवा पृष्ठ क्रमांकाची नोंद करावी लागेल."
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "URN {$urnPrefix} त्याच्या उपसर्गाने सुरू होणे आवश्यक आहे."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "या प्रकाशनासाठी हा URN {$urn} असेल."
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "या प्रकाशनाला URN नियुक्त केलेला नाही."
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "गॅली : {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "लेख, गॅली वगैरे (Item)"
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr ""
+"OJS मधील URN (संसाधनाचे एकसमान नाव) व्यवस्थापित करण्यासाठी आणि वापरण्यासाठी "
+"कृपया URN प्लगइन कॉन्फिगर करा:"
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr ""
+"कुठल्या कुठल्या प्रकाशनांच्या संसाधनांना URN (एकसमान नाव) द्यायचे ती निवडा:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
+msgstr ""
+"कृपया लेखांसाठी संसाधनाच्या एकसमान नावापुढील जोड (प्रत्यय) (URN Suffix) नमुना"
+" नोंदवा."
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr ""
+"संसाधनाच्या एकसमान नावाला जोड (प्रत्यय) (URN suffix) दुसऱ्या प्रकाशित "
+"लेखासाठी (item) आधीच वापरात आहे. कृपया प्रत्येक लेखासाठी एकमेव URN प्रत्यय ("
+"URN suffix) नोंदवा."
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr ""
+"तुम्हाला खात्री आहे की तुम्ही विद्यमान अंकांना दिलेले URN (संसाधनाचे एकसमान "
+"नाव) पुसून टाकू इच्छिता?"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr ""
+"संसाधनाच्या एकसमान नावाचा उपसर्ग (URN Prefix) हा URN चा कधीही न बदलणारा भाग "
+"असतो (उदा. \"urn:nbn:de:0000-\")."
+
+msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr ""
+"कृपया गॅलींसाठी संसाधनाच्या एकसमान नावापुढील जोड (प्रत्यय) (URN Suffix) नमुना"
+" नोंदवा."
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr ""
+"या अंकासाठी सध्या शेड्यूल केलेले सर्व ऑब्जेक्ट्सचे (लेख आणि गॅली) URN "
+"((संसाधनाची एकसमान नावं) पुसून टाकण्यासाठी खालील पर्याय वापरा."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr ""
+"संसाधनाच्या एकसमान नावापुढील जोड (प्रत्यय) (URN Suffix) कोणत्याही स्वरूपात "
+"(form) असू शकते, परंतु तो समान एकसमान संसाधनाच्या नावाचा उपसर्ग (URN Prefix) "
+"दिलेल्या सर्व प्रकाशनांच्या संसाधनांना एकमेव (unique) असावा:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr ""
+"अंकांसाठी %j.v%vi%i<br />लेखांसाठी %j.v%vi%i.%a <br />गॅलींसाठी %j.v%vi%i.%a."
+"g%g."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr ""
+"संसाधनाच्या एकसमान नावापुढील जोड (प्रत्यय) (URN Suffix) निर्माण करायला खाली "
+"दिलेले प्रारूप (pattern) वापरा. नियतकालिकाच्या आद्याक्षरांसाठी %j, खंड "
+"क्रमांकासाठी %v, अंकासाठी %i, वर्षासाठी %Y, OJS लेख IDसाठी %a, OJS गॅली "
+"IDसाठी %g, OJS फाईल IDसाठी %f, पृष्ठ क्रमांकासाठी %p आणि \"कस्टम आयडेंटिफा"
+"यर\" साठी %x वापरा."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr ""
+"प्रत्येक प्रकाशित लेखासाठी स्वतंत्र संसाधनाच्या एकसमान नावापुढील जोड "
+"(प्रत्यय) (URN Suffix) नोंदवा. प्रत्येक लेखाच्या मेटाडेटा पृष्ठावर तुम्हाला "
+"एक अतिरिक्त एकसमान संसाधनाच्या नावाची (URN) नोंद करायला फील्ड असेल."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr ""
+"नोंदणीसाठी सहसा आवश्यक असलेले पर्सिस्टंट आयडेंटिफायर नेमस्पेस (उदा. ड्यूश "
+"नॅशनलबिब्लिओथेक येथे)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr ""
+"जर तुम्ही तुमचे URN (संसाधनाचे एकसमान नाव) कॉन्फिगरेशन बदलले तर, आधीच "
+"दिलेल्या URN वर परिणाम होणार नाही. एकदा URN कॉन्फिगरेशन सेव्ह झाल्यानंतर, हे "
+"बटण वापरले की अस्तित्वातले सर्व URN पुसून टाकले जाऊन सगळ्या जुन्या ऑब्जेक्टना"
+" नवा URN मिळेल."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr ""
+"संसाधनाचे एकसमान नाव (URN) देणे अशक्य आहे कारण त्यात एक न उलगडणारे प्रारूप "
+"(pattern) आहे."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr ""
+"तुम्हाला जे दिसतेय ते संसाधनाचे एकसमान नावाचे (URN) पूर्वावलोकन आहे. चेकबॉक्"
+"स निवडून URN देण्यासाठी फॉर्म सेव्ह करा."

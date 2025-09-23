@@ -1,19 +1,20 @@
 # Huang Feilong <hfl@nominsang.org>, 2021.
+# wenshao521！ <wainixueer3334@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-04T08:59:12-08:00\n"
-"PO-Revision-Date: 2021-11-09 12:41+0000\n"
-"Last-Translator: Huang Feilong <hfl@nominsang.org>\n"
+"PO-Revision-Date: 2025-05-14 06:24+0000\n"
+"Last-Translator: wenshao521！ <wainixueer3334@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <http://translate.pkp.sfu.ca/projects/"
-"ojs/editor/zh_CN/>\n"
-"Language: zh_CN\n"
+"ojs/editor/zh_Hans/>\n"
+"Language: zh_Hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "editor.home"
 msgstr "编辑首页"
@@ -410,7 +411,7 @@ msgid "editor.article.payment.publicationFeeNotPaid"
 msgstr "出版费未支付，通知作者支付或者提交免费申请，然后计划出版。"
 
 msgid "editor.article.payment.requestPayment"
-msgstr ""
+msgstr "请求付款"
 
 msgid "editor.article.removeCoverImageFileNotFound"
 msgstr "找不到您要删除的封面图片。 它可能已被删除。 尝试重新加载页面。"
@@ -482,3 +483,12 @@ msgstr "封面图片"
 
 #~ msgid "editor.submissionReview.sendToCopyediting"
 #~ msgstr "发送给文字编辑"
+
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr "如果留空，日期将在期刊期次发布时自动设置。"
+
+msgid "editor.issues.datePublished.invalid"
+msgstr "发布日期无效。日期必须采用 YYYY-MM-DD 格式。"
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr "期刊期次发布时必须填写发布日期。"

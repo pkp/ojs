@@ -1,0 +1,248 @@
+# Petra Cacic <petracacic3@gmail.com>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-05-21 16:34+0000\n"
+"Last-Translator: Petra Cacic <petracacic3@gmail.com>\n"
+"Language-Team: Croatian <http://translate.pkp.sfu.ca/projects/ojs/pubIds-urn/"
+"hr/>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjects"
+msgstr "Sadržaj časopisa"
+
+msgid "plugins.pubIds.urn.manager.settings.explainURNs"
+msgstr ""
+"Molimo odaberite objekte za objavljivanje kojima će biti dodijeljen URN:"
+
+msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
+msgstr "Brojevi"
+
+msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
+msgstr "Članci"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix"
+msgstr "URN prefiks"
+
+msgid "plugins.pubIds.urn.manager.settings.urnPrefix.description"
+msgstr ""
+"URN prefiks je fiksni, nepromjenjivi dio URN-a (npr. \"urn:nbn:de:0000-\")."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix"
+msgstr "URN sufiks"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffix.description"
+msgstr ""
+"DOI sufiks može biti u bilo kojem formatu, mora biti jedinstven među svim "
+"objektima za objavljivanje kojima je dodijeljen jednaki URN prefiks:"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.example"
+msgstr ""
+"Na primjer, vol%viss%ipp%p može kreirati URN sufiks kao što je "
+"\"vol3iss2pp230\"."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.issues"
+msgstr "za brojeve"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.submissions"
+msgstr "za članke"
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern.representations"
+msgstr "za prijelome"
+
+msgid "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
+msgstr "Molimo unesite uzorak DOI sufiksa za prijelome."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
+msgstr ""
+"Unesite pojedinačni URN sufiks za svaku objavljenu stavku. Na stranici s "
+"metapodacima svake stavke se nalazi dodatno polje za unos URN-a."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo"
+msgstr "Broj provjere"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace"
+msgstr "Imenski prostor"
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.choose"
+msgstr "Odaberi"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver"
+msgstr "URL rezolvera"
+
+msgid "plugins.pubIds.urn.manager.settings.urnResolver.description"
+msgstr "(npr. http://nbn-resolving.de/)"
+
+msgid "plugins.pubIds.urn.displayName"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.description"
+msgstr ""
+"Ovaj dodatak omogućava dodjeljivanje URN-a (Uniform Resource Name) "
+"brojevima, člancima i prijelomima u OJS-u."
+
+msgid "plugins.pubIds.urn.manager.settings.description"
+msgstr ""
+"Molimo konfigurirajte URN dodatak kako biste mogli upravljati i koristiti "
+"URN-ove u OJS-u:"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnPrefixPattern"
+msgstr ""
+"Uzorak URN prefiksa mora biti u formatu \"urn:\"&lt;NID&gt;\":\"&lt;NSS&gt;."
+
+msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
+msgstr "Molimo odaberite objekte kojima treba dodijeliti URN."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixPattern"
+msgstr ""
+"Koristite uzorak koji se nalazi u nastavku kako biste generirali URN "
+"sufikse. Koristite %j za inicijale časopisa, %v za broj volumena, %i za broj "
+"časopisa, %Y za godinu, %a za ID članka u OJS, %g za ID prijeloma u OJS-u, "
+"%f za ID datoteke u OJS-u, %p za broj stranice %x za \"prilagođeni "
+"identifikator\"."
+
+msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
+msgstr "Prijelomi"
+
+msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
+msgstr "Molimo unesite uzorak DOI sufiksa za brojeve."
+
+msgid "plugins.pubIds.urn.manager.settings.checkNo.label"
+msgstr ""
+"Broj provjere će biti automatski izračunat i dodan na kraju, kao posljednji "
+"broj URN-a."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault"
+msgstr "Koristi zadane uzorke."
+
+msgid "plugins.pubIds.urn.manager.settings.namespace.description"
+msgstr ""
+"Trajni identifikator imenski prostor koji je obično potreban za registraciju "
+"(npr. Deutsche Nationalbibliothek)."
+
+msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
+msgstr ""
+"%j.v%vi%i za brojeve<br />%j.v%vi%i.%a za članke<br />%j.v%vi%i.%a.g%g za "
+"prijelome."
+
+msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
+msgstr "Molimo unesite obrazac sufiksa URN-a za članke."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign"
+msgstr "Ponovno dodijeli URN-ove"
+
+msgid "plugins.pubIds.urn.manager.settings.form.urnResolverRequired"
+msgstr "Molimo unesite URL rezolvera."
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.confirm"
+msgstr "Jeste li sigurni da želite izbrisati sve postojeće URN-ove?"
+
+msgid "plugins.pubIds.urn.editor.urn"
+msgstr "URN"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeIssue"
+msgstr "broj"
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeRepresentation"
+msgstr "prijelom"
+
+msgid "plugins.pubIds.urn.editor.customSuffixMissing"
+msgstr "Nije moguće dodijeliti URN jer nedostaje prilagođeni sufiks."
+
+msgid "plugins.pubIds.urn.editor.canBeAssigned"
+msgstr ""
+"Trenutno vidite pretpregled URN-a. Označite kućicu na popisu i spremite "
+"obrazac kako bi se URN dodijelio."
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.description"
+msgstr ""
+"Koristite sljedeću opciju kako biste izbrisali URN-ove svih objekata ("
+"članaka i prijeloma) koji su trenutno na rasporedu za ovaj broj."
+
+msgid "plugins.pubIds.urn.editor.addCheckNo"
+msgstr "Dodaj broj provjere"
+
+msgid "plugins.pubIds.urn.editor.assignURN.emptySuffix"
+msgstr "Nije moguće dodijeliti URN jer nedostaje prilagođeni sufiks."
+
+msgid "plugins.pubIds.urn.editor.assignURN.pattern"
+msgstr "Nije moguće dodijeliti URN {$pubId} jer sadrži nerazjašnjen uzorak."
+
+msgid "plugins.pubIds.urn.editor.assignURN.assigned"
+msgstr "URN {$pubId} je dodijeljen."
+
+msgid "plugins.pubIds.urn.form.checkNoRequired"
+msgstr "Nedostaje broj provjere."
+
+msgid "plugins.pubIds.urn.editor.urn.assignUrn"
+msgstr "Dodijeli"
+
+msgid "plugins.pubIds.urn.editor.missingPrefix"
+msgstr "URN mora započinjati s {$urnPrefix}."
+
+msgid "plugins.pubIds.urn.editor.preview.publication"
+msgstr "URN za ovu publikaciju bit će {$urn}."
+
+msgid "plugins.pubIds.urn.editor.preview.publication.none"
+msgstr "URN nije dodijeljen ovoj publikaciji."
+
+msgid "plugins.pubIds.urn.editor.preview.galleys"
+msgstr "Prijelom: {$galleyLabel}"
+
+msgid "plugins.pubIds.urn.editor.preview.objects"
+msgstr "Stavka"
+
+msgid "plugins.pubIds.urn.manager.settings.urnReassign.description"
+msgstr ""
+"Ako promijenite svoju URN konfiguraciju, to neće utjecati na DOI-je koji su "
+"već dodijeljeni. Nakon što je URN konfiguracija spremljena, koristite ovu "
+"tipku za brisanje svih postojećih DOI-ja kako bi nove postavke imale učinka "
+"na postojeće objekte."
+
+msgid "plugins.pubIds.urn.editor.urnObjectTypeSubmission"
+msgstr "članak"
+
+msgid "plugins.pubIds.urn.editor.urn.description"
+msgstr "URN mora započinjati s {$prefix}."
+
+msgid "plugins.pubIds.urn.editor.patternNotResolved"
+msgstr "Nije moguće dodijeliti URN jer sadrži nerazjašnjen uzorak."
+
+msgid "plugins.pubIds.urn.editor.assigned"
+msgstr "URN je dodijeljen ovome {$pubObjectType}."
+
+msgid "plugins.pubIds.urn.editor.missingIssue"
+msgstr ""
+"URN se ne može generirati dok ova publikacija ne bude dodijeljena broju "
+"časopisa."
+
+msgid "plugins.pubIds.urn.editor.urnSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Dani URN sufiks je već u upotrebi za drugu objavljenu stavku. Molimo unesite "
+"jedinstveni URN sufiks za svaku stavku."
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN"
+msgstr "Izbriši URN"
+
+msgid "plugins.pubIds.urn.editor.missingParts"
+msgstr ""
+"URN se ne može generirati jer nedostaju podaci za jedan ili više dijelova "
+"obrasca URN-a. Možda ćete trebati dodijeliti publikaciju broju časopisa, "
+"postaviti identifikator izdavača ili unijeti brojeve stranica."
+
+msgid "plugins.pubIds.urn.editor.clearObjectsURN.confirm"
+msgstr "Jeste li sigurni da želite izbrisati postojeći URN?"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN"
+msgstr "Izbriši URN-ove objekata broja"
+
+msgid "plugins.pubIds.urn.editor.clearIssueObjectsURN.confirm"
+msgstr "Jeste li sigurni da želite izbrisati postojeće URN-ove objekata broja?"
+
+msgid "plugins.pubIds.urn.editor.assignURN"
+msgstr "Dodijeli URN {$pubId} ovome {$pubObjectType}"

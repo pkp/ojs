@@ -41,11 +41,6 @@ msgstr ""
 "dobu po spracovaní publikácie. Môžete si prezrieť všetky nezaregistrované "
 "články."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Pre registráciu použite testovacie rozhrania API (testovacie prostredie) "
-"DOAJ. Nezabudnite túto možnosť odstrániť pred produkčnou fázou."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "Automatická registrácia DOAJ"
 

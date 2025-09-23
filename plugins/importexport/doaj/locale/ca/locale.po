@@ -45,11 +45,6 @@ msgstr ""
 "funció de la vostra configuració del cron). Podeu comprovar tots els "
 "articles no registrats."
 
-msgid "plugins.importexport.doaj.settings.form.testMode.description"
-msgstr ""
-"Utilitzeu la API de prova de DOAJ (entorn de prova) per al registre. No "
-"oblideu desactivar aquesta opció en la versió de producció."
-
 msgid "plugins.importexport.doaj.senderTask.name"
 msgstr "Tasca de registre automàtic de DOAJ"
 

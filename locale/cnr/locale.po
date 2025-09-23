@@ -2196,6 +2196,7 @@ msgstr ""
 "<p>2. Dirtektorij koji će sadržvati fajlove postavljene na server mora biti "
 "kreiran i upisiv (viđi \"podešavanja fajlova\" ispod).</p>"
 
+#, fuzzy
 msgid "installer.upgradeInstructions"
 msgstr ""
 "<h4>OJS verzija {$version}</h4>\n"

@@ -1,10 +1,10 @@
-# Mirko Spiroski <mspiroski@id-press.eu>, 2021.
+# Mirko Spiroski <mspiroski@id-press.eu>, 2021, 2025.
 # Jovan Jonovski <jonovski@hotmail.com>, 2022.
 # Teodora Fildishevska <t.fildishevska@gmail.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-03-15 15:21+0000\n"
-"Last-Translator: Teodora Fildishevska <t.fildishevska@gmail.com>\n"
+"PO-Revision-Date: 2025-04-02 08:12+0000\n"
+"Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "mk/>\n"
 "Language: mk\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n==1 || n%10==1 ? 0 : 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "editor.home"
 msgstr "Насловна страна за уредници"
@@ -490,3 +490,15 @@ msgstr ""
 
 msgid "editor.article.coverImage"
 msgstr "Насловна слика"
+
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr ""
+"Ако се остави празно, податоците автоматски ќе се подесат кога ќе се објави "
+"бројот."
+
+msgid "editor.issues.datePublished.invalid"
+msgstr ""
+"Датата за објавување не е валидна. Датат мора да биде во формат YYYY-MM-DD."
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr "Потребна е дата на објавување кога ќе се објави бројот."

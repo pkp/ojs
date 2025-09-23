@@ -36,7 +36,3 @@ class NotificationSettingsForm extends PKPNotificationSettingsForm
         return $categories;
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\notification\form\NotificationSettingsForm', '\NotificationSettingsForm');
-}
