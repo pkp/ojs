@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/components/form/dashboard/SubmissionFilters.php
  *
@@ -16,8 +17,8 @@
 namespace APP\components\forms\dashboard;
 
 use APP\components\forms\FieldSelectIssues;
-use APP\facades\Repo;
 use APP\core\Application;
+use APP\facades\Repo;
 use Illuminate\Support\LazyCollection;
 use PKP\components\forms\dashboard\PKPSubmissionFilters;
 use PKP\context\Context;

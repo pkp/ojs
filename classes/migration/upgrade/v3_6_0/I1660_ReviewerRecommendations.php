@@ -15,8 +15,8 @@
 
 namespace APP\migration\upgrade\v3_6_0;
 
-use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use PKP\facades\Locale;
 use PKP\install\DowngradeNotSupportedException;
@@ -170,8 +170,7 @@ class I1660_ReviewerRecommendations extends \APP\migration\install\ReviewerRecom
         int $contextId,
         array $recommendations,
         array $contextSupportedLocales
-    ): array
-    {
+    ): array {
         $reviewerRecommendationIds = [];
 
         foreach ($recommendations as $recommendationValue => $recommendation) {

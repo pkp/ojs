@@ -30,7 +30,7 @@ enum JournalContentOption: int
     public static function default(?Context $context = null): array
     {
         $context ??= Application::get()->getRequest()->getContext();
-        
+
         if (!$context) {
             return [static::ISSUE_TOC->value];
         }

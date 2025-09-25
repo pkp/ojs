@@ -21,7 +21,6 @@ use APP\journal\Journal;
 use APP\journal\JournalDAO;
 use APP\section\Section;
 use PKP\context\Context;
-use PKP\core\PKPString;
 use PKP\db\DAORegistry;
 use PKP\doi\exceptions\DoiException;
 use PKP\tombstone\DataObjectTombstoneDAO;
@@ -79,7 +78,7 @@ class Repository extends \PKP\submission\Repository
 
         // Abstract/Plain Language Summary word limit
         if ($section->getAbstractWordCount()) {
-            
+
             // validate abstract error count and add to errors
             $abstractErrors = $this->validateWordCount(
                 $context,

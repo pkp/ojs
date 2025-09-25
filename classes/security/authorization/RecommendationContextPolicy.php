@@ -15,8 +15,8 @@
 
 namespace APP\security\authorization;
 
-use PKP\core\PKPRequest;
 use PKP\context\Context;
+use PKP\core\PKPRequest;
 use PKP\security\authorization\AuthorizationPolicy;
 use PKP\submission\reviewer\recommendation\ReviewerRecommendation;
 

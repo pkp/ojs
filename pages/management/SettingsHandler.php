@@ -16,11 +16,11 @@
 
 namespace APP\pages\management;
 
-use APP\core\Application;
 use APP\API\v1\reviewers\recommendations\resources\ReviewerRecommendationResource;
 use APP\components\forms\context\AccessForm;
 use APP\components\forms\context\ArchivingLockssForm;
 use APP\components\listPanels\ReviewerRecommendationsListPanel;
+use APP\core\Application;
 use APP\template\TemplateManager;
 use PKP\components\forms\context\PKPContextStatisticsForm;
 use PKP\components\forms\context\PKPDisableSubmissionsForm;
