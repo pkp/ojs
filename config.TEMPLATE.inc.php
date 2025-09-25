@@ -639,4 +639,4 @@ expiration_days = 3
 
 [features]
 
-enable_new_discussions = Off
+enable_new_discussions = On
