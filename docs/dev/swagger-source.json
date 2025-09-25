@@ -553,8 +553,11 @@
 				"contents": {
 					"type": "string"
 				},
+				"createdByEmail": {
+					"type": "string"
+				},
 				"createdByName": {
-					"type": "integer"
+					"type": "string"
 				},
 				"createdByUsername": {
 					"type": "string"
