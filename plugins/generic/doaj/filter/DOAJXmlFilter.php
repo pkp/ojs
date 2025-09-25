@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/importexport/doaj/filter/DOAJXmlFilter.php
+ * @file plugins/generic/doaj/filter/DOAJXmlFilter.php
  *
  * Copyright (c) 2014-2025 Simon Fraser University
  * Copyright (c) 2000-2025 John Willinsky
@@ -12,15 +12,15 @@
  * @brief Class that converts an Article to a DOAJ XML document.
  */
 
-namespace APP\plugins\importexport\doaj\filter;
+namespace APP\plugins\generic\doaj\filter;
 
 use APP\core\Application;
 use APP\facades\Repo;
-use APP\plugins\importexport\doaj\DOAJExportDeployment;
-use APP\plugins\importexport\doaj\DOAJExportPlugin;
+use APP\plugins\generic\doaj\DOAJExportDeployment;
+use APP\plugins\generic\doaj\DOAJExportPlugin;
 use APP\publication\Publication;
 use APP\submission\Submission;
-use PKP\controlledVocab\ControlledVocab;
+use PKP\context\Context;
 use PKP\core\PKPString;
 use PKP\i18n\LocaleConversion;
 
@@ -64,16 +64,40 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
         $rootNode = $this->createRootNode($doc);
         $doc->appendChild($rootNode);
 
-        foreach ($pubObjects as $pubObject) { /** @var Submission $pubObject */
-            $publication = $pubObject->getCurrentPublication();
-            $issueId = $publication->getData('issueId');
-            if ($cache->isCached('issues', $issueId)) {
-                $issue = $cache->get('issues', $issueId);
+        foreach ($pubObjects as $pubObject) { /** @var Submission|Publication $pubObject */
+
+            if (is_a($pubObject, 'Submission')) {
+                $publication = $pubObject->getCurrentPublication();
+                /** @var Submission $article */
+                $article = $pubObject;
+                if (!$cache->isCached('articles', $article->getId())) {
+                    $cache->add($article, null);
+                }
             } else {
-                $issue = Repo::issue()->get($issueId);
-                $issue = $issue->getJournalId() == $context->getId() ? $issue : null;
-                if ($issue) {
-                    $cache->add($issue, null);
+                /** @var Publication $publication */
+                $publication = $pubObject;
+                if ($cache->isCached('articles', $publication->getData('submissionId'))) {
+                    /** @var Submission $article */
+                    $article = $cache->get('articles', $publication->getData('submissionId'));
+                } else {
+                    $article = Repo::submission()->get($publication->getData('submissionId'));
+                    $article = $article->getData('contextId') == $context->getId() ? $article : null;
+                    if ($article) {
+                        $cache->add($article, null);
+                    }
+                }
+            }
+
+            $issueId = $publication->getData('issueId');
+            if ($issueId) {
+                if ($cache->isCached('issues', $issueId)) {
+                    $issue = $cache->get('issues', $issueId);
+                } else {
+                    $issue = Repo::issue()->get($issueId);
+                    $issue = $issue?->getJournalId() == $context->getId() ? $issue : null;
+                    if ($issue) {
+                        $cache->add($issue, null);
+                    }
                 }
             }
 
@@ -102,17 +126,17 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
             if (!empty($eissn)) {
                 $recordNode->appendChild($node = $doc->createElement('eissn', $eissn));
             }
-            // Article's publication date, volume, issue
+            // Publication's publication date, volume, issue
             if ($publication->getData('datePublished')) {
                 $recordNode->appendChild($node = $doc->createElement('publicationDate', $this->formatDate($publication->getData('datePublished'))));
-            } else {
+            } elseif ($issue?->getDatePublished()) {
                 $recordNode->appendChild($node = $doc->createElement('publicationDate', $this->formatDate($issue->getDatePublished())));
             }
-            $volume = $issue->getVolume();
+            $volume = $issue?->getVolume();
             if (!empty($volume) && $issue->getShowVolume()) {
                 $recordNode->appendChild($node = $doc->createElement('volume', htmlspecialchars($volume, ENT_COMPAT, 'UTF-8')));
             }
-            $issueNumber = $issue->getNumber();
+            $issueNumber = $issue?->getNumber();
             if (!empty($issueNumber) && $issue->getShowNumber()) {
                 $recordNode->appendChild($node = $doc->createElement('issue', htmlspecialchars($issueNumber, ENT_COMPAT, 'UTF-8')));
             }
@@ -128,7 +152,7 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
                 $recordNode->appendChild($node = $doc->createElement('endPage', htmlspecialchars($endPage, ENT_COMPAT, 'UTF-8')));
             }
             // DOI
-            $doi = $publication->getStoredPubId('doi');
+            $doi = $publication->getDoi();
             if (!empty($doi)) {
                 $recordNode->appendChild($node = $doc->createElement('doi', htmlspecialchars($doi, ENT_COMPAT, 'UTF-8')));
             }
@@ -186,16 +210,15 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
             }
             // FullText URL
             $request = Application::get()->getRequest();
-            $recordNode->appendChild($node = $doc->createElement('fullTextUrl', htmlspecialchars($request->getDispatcher()->url($request, Application::ROUTE_PAGE, null, 'article', 'view', [$pubObject->getId()], urlLocaleForPage: ''), ENT_COMPAT, 'UTF-8')));
+            if ($context->getData(Context::SETTING_DOI_VERSIONING)) {
+                $recordNode->appendChild($node = $doc->createElement('fullTextUrl', htmlspecialchars($request->getDispatcher()->url($request, Application::ROUTE_PAGE, null, 'article', 'view', [$article->getId(), 'version', $publication->getId()], urlLocaleForPage: ''), ENT_COMPAT, 'UTF-8')));
+            } else {
+                $recordNode->appendChild($node = $doc->createElement('fullTextUrl', htmlspecialchars($request->getDispatcher()->url($request, Application::ROUTE_PAGE, null, 'article', 'view', [$article->getId()], urlLocaleForPage: ''), ENT_COMPAT, 'UTF-8')));
+            }
             $node->setAttribute('format', 'html');
 
             // Keywords
-            $articleKeywords = Repo::controlledVocab()->getBySymbolic(
-                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
-                Application::ASSOC_TYPE_PUBLICATION,
-                $publication->getId()
-            );
-
+            $articleKeywords = $publication->getData('keywords');
             if (array_key_exists($publication->getData('locale'), $articleKeywords)) {
                 $keywordsInArticleLocale = $articleKeywords[$publication->getData('locale')];
                 unset($articleKeywords[$publication->getData('locale')]);
