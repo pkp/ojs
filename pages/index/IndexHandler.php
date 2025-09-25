@@ -29,7 +29,6 @@ use PKP\db\DAORegistry;
 use PKP\pages\index\PKPIndexHandler;
 use PKP\security\Role;
 use PKP\security\Validation;
-use PKP\userGroup\UserGroup;
 
 class IndexHandler extends PKPIndexHandler
 {
@@ -70,11 +69,6 @@ class IndexHandler extends PKPIndexHandler
         $this->_setupAnnouncements($journal ?? $request->getSite(), $templateMgr);
 
         if ($journal) {
-            $authorUserGroups = UserGroup::withRoleIds([Role::ROLE_ID_AUTHOR])
-                ->withContextIds([$journal->getId()])
-                ->get();
-            $templateMgr->assign(['authorUserGroups' => $authorUserGroups]);
-
             $activeTheme = $templateMgr->getTemplateVars('activeTheme');
 
             if (in_array(JournalContentOption::CATEGORY_LISTING->value, $activeTheme->getOption('journalContentOrganization'))) {
