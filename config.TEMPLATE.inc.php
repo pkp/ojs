@@ -39,6 +39,10 @@ base_url = "https://pkp.sfu.ca/ojs"
 ; deprecated behaviour exists in the codebase.
 strict = Off
 
+; Sentry error logging support (see https://sentry.io)
+; To enable Sentry support, configure the Sentry DSN here.
+; sentry_dsn = ""
+
 ; Session cookie name
 session_cookie_name = OJSSID
 
