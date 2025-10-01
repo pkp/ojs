@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:17-08:00\n"
-"PO-Revision-Date: 2025-10-01 10:29+0000\n"
+"PO-Revision-Date: 2025-10-01 11:03+0000\n"
 "Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/emails/eu/>\n"
 "Language: eu\n"
@@ -109,9 +109,9 @@ msgstr ""
 "Eskerrik asko gure lana interesez jarraitzeagatik,<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.editorAssign.subject"
-msgstr "Editore-lana esleitzea"
+msgstr ""
+"{$contextName} aldizkarirako bidalketa bateko editore gisa esleitu zaitugu"
 
 #, fuzzy
 msgid "emails.editorAssign.body"
@@ -132,9 +132,8 @@ msgstr ""
 msgid "emails.editorAssignProduction.body"
 msgstr ""
 
-#, fuzzy
 msgid "emails.reviewRequest.subject"
-msgstr "Artikulua ebaluatzeko eskaera"
+msgstr "Berrikuspenerako gonbidapena"
 
 #, fuzzy
 msgid "emails.reviewRequest.body"
@@ -169,9 +168,8 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
-msgstr "Artikulua ebaluatzeko eskaera"
+msgstr "Hau berrikusteko aukera izango duzu?"
 
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
@@ -207,7 +205,7 @@ msgstr ""
 "{$submissionAbstract}"
 
 msgid "emails.reviewRequestSubsequent.subject"
-msgstr "Artikulua berrikusteko eskakizuna"
+msgstr "Berrikusitako bidalketa berrikusteko eskaera"
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
@@ -262,7 +260,7 @@ msgstr ""
 "Galderaren bat baduzu, jar zaitez harremanetan nirekin, mesedez."
 
 msgid "emails.reviewReinstate.subject"
-msgstr ""
+msgstr "Oraindik berrikusi dezakezu zerbait {$contexname}(e)rako?"
 
 msgid "emails.reviewReinstate.body"
 msgstr ""
@@ -281,9 +279,8 @@ msgstr ""
 "<br />\n"
 "{$senderName}"
 
-#, fuzzy
 msgid "emails.reviewRemind.subject"
-msgstr "Artikulua ebaluatzeko oroigarria"
+msgstr "Zure berrikuspena osatzeko gogorarazpena"
 
 #, fuzzy
 msgid "emails.reviewRemind.body"
@@ -307,9 +304,8 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
-msgstr "Artikulua ebaluatzeko oroigarri automatizatua"
+msgstr "Zure berrikuspena osatzeko gogorarazpena"
 
 #, fuzzy
 msgid "emails.reviewRemindAuto.body"
@@ -335,7 +331,7 @@ msgstr ""
 "{$contextSignature}"
 
 msgid "emails.editorDecisionAccept.subject"
-msgstr "Editorearen erabakia"
+msgstr "Zure bidalketa {$contextName}-ra onartu da"
 
 #, fuzzy
 msgid "emails.editorDecisionAccept.body"
@@ -348,14 +344,13 @@ msgstr ""
 "Gure erabakia:"
 
 msgid "emails.editorDecisionSkipReview.subject"
-msgstr ""
+msgstr "Zure bidalketa zuzentzeko bidali da"
 
 msgid "emails.editorDecisionSkipReview.body"
 msgstr ""
 
-#, fuzzy
 msgid "emails.layoutRequest.subject"
-msgstr "Galeradak eskatzea"
+msgstr "{$submissionId} bidalketa {$contextAcronym}-en ekoizpenerako prest dago"
 
 #, fuzzy
 msgid "emails.layoutRequest.body"
@@ -377,9 +372,8 @@ msgstr ""
 "jar zaitez harremanetan nirekin, mesedez. Eskerrik asko aldizkariari egiten "
 "diozun ekarpenagatik."
 
-#, fuzzy
 msgid "emails.layoutComplete.subject"
-msgstr "Galeradak eginda"
+msgstr "Galeradak osatuta"
 
 #, fuzzy
 msgid "emails.layoutComplete.body"
@@ -437,9 +431,10 @@ msgstr ""
 "<br />\n"
 "{$subscriptionSignature}"
 
-#, fuzzy
 msgid "emails.openAccessNotify.subject"
-msgstr "Zenbakia sarrera librekoa da orain"
+msgstr ""
+"Sarbide irekia: {$contextName}-ren {$issueIdentification}(e)k sarbide irekia "
+"du orain"
 
 msgid "emails.openAccessNotify.body"
 msgstr ""
@@ -493,7 +488,7 @@ msgstr ""
 "{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiryLast.subject"
-msgstr "Harpidetza amaitu da - Azkeneko jakinarazpena"
+msgstr "Harpidetza amaitu da - Azken jakinarazpena"
 
 msgid "emails.subscriptionAfterExpiryLast.body"
 msgstr ""
@@ -514,9 +509,8 @@ msgstr ""
 "<br />\n"
 "{$subscriptionSignature}"
 
-#, fuzzy
 msgid "emails.subscriptionPurchaseIndl.subject"
-msgstr "Harpidetza-erosketa: Indibiduala"
+msgstr "Harpidetza-erosketa: banakakoa"
 
 msgid "emails.subscriptionPurchaseIndl.body"
 msgstr ""
@@ -570,7 +564,7 @@ msgstr ""
 "Harpidetza URLa: {$subscriptionUrl}"
 
 msgid "emails.subscriptionRenewIndl.subject"
-msgstr "Harpidetza-berritzea: Indibiduala"
+msgstr "Harpidetza-berritzea: banakakoa"
 
 msgid "emails.subscriptionRenewIndl.body"
 msgstr ""
