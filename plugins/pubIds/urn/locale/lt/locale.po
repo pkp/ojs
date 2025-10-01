@@ -1,7 +1,7 @@
 # Darius Zviedris <darius.zviedris@lki.lt>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-30 14:12+0000\n"
+"PO-Revision-Date: 2025-10-01 13:47+0000\n"
 "Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/"
 "pubIds-urn/lt/>\n"
@@ -127,8 +127,8 @@ msgstr "Trūksta maketų URN sufikso šablono."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixDefault.description"
 msgstr ""
-"Numatytieji šablonai:<br />%j.v%vi%i – numeriams<br />%j.v%vi%i.%a – "
-"straipsniams<br />%j.v%vi%i.%a.g%g – maketams."
+"%j.v%vi%i – numeriams<br />%j.v%vi%i.%a – straipsniams<br />%j.v%vi%i.%a.g%g "
+"– publikacijos versijoms."
 
 msgid "plugins.pubIds.urn.manager.settings.urnSuffixCustomIdentifier"
 msgstr ""
