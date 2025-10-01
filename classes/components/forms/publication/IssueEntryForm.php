@@ -25,7 +25,7 @@ use PKP\components\forms\FormComponent;
 
 class IssueEntryForm extends FormComponent
 {
-    use HasFieldIssueSelection;
+    // use HasFieldIssueSelection;
 
     public const FORM_ISSUE_ENTRY = 'issueEntry';
     public $id = self::FORM_ISSUE_ENTRY;
@@ -62,13 +62,13 @@ class IssueEntryForm extends FormComponent
             ];
         }
 
-        $issueCount = Repo::issue()->getCollector()
-            ->filterByContextIds([$publicationContext->getId()])
-            ->getCount();
+        // $issueCount = Repo::issue()->getCollector()
+        //     ->filterByContextIds([$publicationContext->getId()])
+        //     ->getCount();
 
-        if ($issueCount > 0) {
-            $this->addFieldIssueSelection($publication, $publicationContext);
-        }
+        // if ($issueCount > 0) {
+        //     $this->addFieldIssueSelection($publication, $publicationContext);
+        // }
 
 
         $this->addField(new FieldSelect('sectionId', [
