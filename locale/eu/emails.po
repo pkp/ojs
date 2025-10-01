@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:17-08:00\n"
-"PO-Revision-Date: 2025-10-01 11:03+0000\n"
+"PO-Revision-Date: 2025-10-01 11:14+0000\n"
 "Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/emails/eu/>\n"
 "Language: eu\n"
@@ -614,7 +614,7 @@ msgstr ""
 "Harpidetza URLa: {$subscriptionUrl}"
 
 msgid "emails.revisedVersionNotify.subject"
-msgstr "Bertsio errebisatua gora kargatu da"
+msgstr "Bertsio errebisatua kargatu da"
 
 #, fuzzy
 msgid "emails.revisedVersionNotify.body"
@@ -629,19 +629,19 @@ msgstr ""
 "{$signature}"
 
 msgid "emails.statisticsReportNotification.subject"
-msgstr ""
+msgstr "Argitalpen-jarduera: {$month}, {$year}"
 
 msgid "emails.statisticsReportNotification.body"
 msgstr ""
 
 msgid "emails.announcement.subject"
-msgstr ""
+msgstr "{$announcementTitle}"
 
 msgid "emails.announcement.body"
 msgstr ""
 
 msgid "emails.paymentRequestNotification.subject"
-msgstr ""
+msgstr "Ordainketa-eskaeraren jakinarazpena"
 
 msgid "emails.paymentRequestNotification.body"
 msgstr ""
