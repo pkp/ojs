@@ -1,7 +1,7 @@
 # Darius Zviedris <darius.zviedris@lki.lt>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-03 06:41+0000\n"
+"PO-Revision-Date: 2025-10-01 13:47+0000\n"
 "Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/editor/"
 "lt/>\n"
@@ -36,7 +36,7 @@ msgid "editor.me"
 msgstr "Mano paskyra"
 
 msgid "editor.notifyUsers"
-msgstr "Informuoti vartotojus:"
+msgstr "Pranešti naudotojams"
 
 msgid "editor.notifyUsers.allIndividualSubscribers"
 msgstr "visus žurnalą prenumeruojančius asmenis (iš viso {$count})"
@@ -208,13 +208,13 @@ msgid "editor.issues.datePublished"
 msgstr "Paskelbimo data"
 
 msgid "editor.issues.volumeRequired"
-msgstr "Nurodykite tomą (teigiamą skaičių)"
+msgstr "Tomas yra privalomas ir turi būti teigiama skaitinė reikšmė."
 
 msgid "editor.issues.numberRequired"
 msgstr "Nurodykite numerį (teigiamą skaičių)."
 
 msgid "editor.issues.yearRequired"
-msgstr "Nurodykite metus (teigiamą skaičių)"
+msgstr "Metai yra privalomi ir turi būti teigiama skaitinė reikšmė."
 
 msgid "editor.issues.titleRequired"
 msgstr "Užrašykite leidinio pavadinimą."
@@ -313,8 +313,8 @@ msgstr ""
 
 msgid "editor.issues.resetSectionOrder"
 msgstr ""
-"This issue uses custom section ordering. <a href=\"{$url}\" class=\"action\""
-">Reset to defaults</a>"
+"Šiame numeryje naudojamas pasirinktinės skyrių tvarkos nustatymas. <a href=\""
+"{$url}\" class=\"action\">Atkurti numatytuosius</a>"
 
 msgid "editor.issues.issueData"
 msgstr "Numerio duomenys"
@@ -353,10 +353,10 @@ msgid "editor.issues.galleyPublicIdentificationExists"
 msgstr "Toks numerio skilties viešasis identifikatorius jau yra."
 
 msgid "editor.issues.publicArticleIdExists"
-msgstr "Išsaugoti viešojo identifikatoriaus straipsniui negalima."
+msgstr "Nepavyko išsaugoti viešojo ID straipsniui:"
 
 msgid "editor.issues.noLiveIssues"
-msgstr "Rengiamų numerių nėra."
+msgstr "Nėra gyvų numerių"
 
 msgid "editor.issues.open"
 msgstr "Atverti"
@@ -407,7 +407,7 @@ msgid "grid.action.addIssue"
 msgstr "Kurti leidinį"
 
 msgid "grid.action.viewIssue"
-msgstr "Rodyti"
+msgstr "Peržiūrėti"
 
 msgid "grid.action.previewIssue"
 msgstr "Peržvelgti"
@@ -464,7 +464,7 @@ msgid "editor.issues.invalidAccessDate"
 msgstr "Neteisingai nurodyta atvirosios prieigos data."
 
 msgid "editor.issues.editIssueGalley"
-msgstr "Redaguoti numerio skiltį."
+msgstr "Redaguoti numerio maketą"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
 msgstr ""
@@ -472,7 +472,7 @@ msgstr ""
 "tinkamus korektūros <span class=\"pkp_help_title\">taisymus</span>."
 
 msgid "editor.submission.selectGalleyFiles"
-msgstr "Pasirinkti skilčių dokumentus."
+msgstr "Pasirinkti maketo failus"
 
 msgid "editor.submission.editorial.finalDraftDescription"
 msgstr ""
