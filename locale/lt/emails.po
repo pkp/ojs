@@ -1,7 +1,7 @@
 # Darius Zviedris <darius.zviedris@lki.lt>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-30 13:22+0000\n"
+"PO-Revision-Date: 2025-10-01 13:47+0000\n"
 "Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/emails/"
 "lt/>\n"
@@ -24,7 +24,7 @@ msgid "emails.editorAssign.subject"
 msgstr "Redaktoriaus paskyrimas"
 
 msgid "emails.reviewResponseOverdueAuto.subject"
-msgstr "Prašymas recenzuoti straipsnį"
+msgstr "Ar galėsite tai peržiūrėti mums?"
 
 msgid "emails.reviewCancel.subject"
 msgstr "Prašymas recenzuoti atšaukiamas"
