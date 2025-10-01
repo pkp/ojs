@@ -1,7 +1,7 @@
 # Darius Zviedris <darius.zviedris@lki.lt>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-10-01 10:29+0000\n"
+"PO-Revision-Date: 2025-10-01 13:47+0000\n"
 "Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/"
 "blocks-developedBy/lt/>\n"
@@ -15,10 +15,10 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.block.developedBy.displayName"
-msgstr "\"Developed By\" Blokas"
+msgstr "Blokas „Sukūrė“"
 
 msgid "plugins.block.developedBy.description"
-msgstr "Šis įskiepis pateikia šoninę juostą su nuoroda \"Developed By\""
+msgstr "Šis papildinys pateikia šoninę nuorodą „Sukūrė“."
 
 msgid "plugins.block.developedBy.blockTitle"
-msgstr "Developed By"
+msgstr "Sukūrė"
