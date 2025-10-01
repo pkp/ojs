@@ -1,7 +1,7 @@
 # Darius Zviedris <darius.zviedris@lki.lt>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-10-01 10:29+0000\n"
+"PO-Revision-Date: 2025-10-01 13:47+0000\n"
 "Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-counter/lt/>\n"
@@ -53,3 +53,6 @@ msgstr ""
 "ataskaitos nepadaro žurnalo suderinamu su „COUNTER“ standartais. Norėdami "
 "užtikrinti atitiktį „COUNTER“ standartams, peržiūrėkite reikalavimus "
 "projekto „COUNTER“ svetainėje."
+
+msgid "plugins.reports.counter.1a.name"
+msgstr "COUNTER ataskaita JR1 (R3)"
