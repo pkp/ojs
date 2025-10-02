@@ -2,7 +2,7 @@
 # Juan Pablo Martínez <juanpabl@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-29 22:50+0000\n"
+"PO-Revision-Date: 2025-09-24 06:15+0000\n"
 "Last-Translator: Juan Pablo Martínez <juanpabl@gmail.com>\n"
 "Language-Team: Aragonese <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "an/>\n"
@@ -81,9 +81,9 @@ msgstr ""
 
 msgid "default.contextSettings.lockssLicense"
 msgstr ""
-"Esta revista utiliza lo sistema LOCKSS pa crear un sistema de fichers "
+"Esta revista utiliza lo sistema LOCKSS pa crear un sistema de archius "
 "distribuyiu entre las bibliotecas participants y permite a estas bibliotecas "
-"crear fichers permanents d'a revista con finalidat de preservación y "
+"crear archius permanents d'a revista con finalidat de preservación y "
 "restauración. <a href=\"https://lockss.org/\">Mas información...</a>"
 
 msgid "default.groups.name.manager"
@@ -154,9 +154,9 @@ msgstr "R"
 
 msgid "default.contextSettings.clockssLicense"
 msgstr ""
-"Esta revista utiliza lo sistema CLOCKSS pa crear un sistema de fichers "
+"Esta revista utiliza lo sistema CLOCKSS pa crear un sistema de archius "
 "distribuyiu entre las bibliotecas participants y permite a estas bibliotecas "
-"de crear fichers permanents d'a revista con finalidat de preservación y "
+"de crear archius permanents d'a revista con finalidat de preservación y "
 "restauración. <a href=\"https://clockss.org/\">Mas información...</a>"
 
 msgid "default.contextSettings.authorGuidelines"

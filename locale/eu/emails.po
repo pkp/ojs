@@ -1,19 +1,20 @@
 # Josu Acosta <josuacostacalvo@gmail.com>, 2023.
-# Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023.
+# Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023, 2025.
+# Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:17-08:00\n"
-"PO-Revision-Date: 2023-04-19 22:35+0000\n"
-"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
+"PO-Revision-Date: 2025-10-02 10:49+0000\n"
+"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/emails/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "emails.passwordResetConfirm.subject"
 msgstr "Pasahitza berrezartzeko berrespena"
@@ -73,30 +74,23 @@ msgid "emails.userValidateSite.body"
 msgstr ""
 
 msgid "emails.reviewerRegister.subject"
-msgstr "{$contextName} aldizkarian Ebaluatzaile gisa erregistratzea"
+msgstr "Ebaluatzaile gisa erregistratzea {$contextName} aldizkarian"
 
 msgid "emails.reviewerRegister.body"
 msgstr ""
-"{$recipientName} estimatua:<br />\n"
-"<br />\n"
-"{$contextName} aldizkarian lantzen dugun jakintza-arloan aditua zarenez, "
-"zure izena ebaluatzaileen datu-basean erregistratzeko atrebentzia izan dugu. "
-"Horrek ez zaitu ezertara konprometitzen, baina zuregana jotzeko aukera "
-"emango digu bidalketaren baten ebaluazioa egiteko prest egongo zinatekeen "
-"galdetzeko. Ebaluazioa egiteko gonbitarekin batera, artikuluaren edo "
-"paperaren izenburua eta laburpena bidaliko dizkizugu, eta beti izango duzu "
-"gonbita onartzeko edo ez onartzeko aukera. Edozein unetan eska dezakezu zure "
-"izena ebaluatzaileen zerrendatik kentzeko.<br />\n"
-"<br />\n"
-"Erabiltzaile-izena eta pasahitza eman dizkizugu, aldizkariaren webgunean "
-"sartzeko eta gurekin elkarlanean aritzeko. Beharbada zure profila aldatu "
-"ahal izango duzu, ebaluazioak egiteko interesak barne.<br />\n"
-"<br />\n"
-"Erabiltzaile-izena: {$recipientUsername}<br />\n"
-"Pasahitza: {$password}<br />\n"
-"<br />\n"
-"Eskerrik asko,<br />\n"
-"{$signature}"
+"<p>{$recipientName} estimatua:</p><p>{$contextName} aldizkarian lantzen "
+"dugun jakintza-arloan aditua zarenez, zure izena ebaluatzaileen datu-basean "
+"erregistratzeko atrebentzia izan dugu. Horrek ez zaitu ezertara "
+"konprometitzen, baina zuregana jotzeko aukera emango digu bidalketaren baten "
+"ebaluazioa egiteko prest egongo zinatekeen galdetzeko. Ebaluazioa egiteko "
+"gonbitarekin batera, artikuluaren edo paperaren izenburua eta laburpena "
+"bidaliko dizkizugu, eta beti izango duzu gonbita onartzeko edo ez onartzeko "
+"aukera. Edozein unetan eska dezakezu zure izena ebaluatzaileen zerrendatik "
+"kentzeko.</p><p>Erabiltzaile-izena eta pasahitza eman dizkizugu, "
+"aldizkariaren webgunean sartzeko eta gurekin elkarlanean aritzeko. Beharbada "
+"zure profila aldatu ahal izango duzu, ebaluazioak egiteko interesak "
+"barne.</p><p>Erabiltzaile-izena: {$recipientUsername}<br />Pasahitza: "
+"{$password}</p><p>Eskerrik asko,</p>{$signature}"
 
 msgid "emails.issuePublishNotify.subject"
 msgstr ""
@@ -115,22 +109,21 @@ msgstr ""
 "Eskerrik asko gure lana interesez jarraitzeagatik,<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.editorAssign.subject"
-msgstr "Editore-lana esleitzea"
+msgstr ""
+"{$contextName} aldizkarirako bidalketa bateko editore gisa esleitu zaitugu"
 
-#, fuzzy
 msgid "emails.editorAssign.body"
 msgstr ""
-"{$recipientName}:<br />\n"
-"<br />\n"
-"{$contextName} aldizkariko “{$submissionTitle}” artikulua esleitu dizugu "
-"prozesu editorialean eraman dezazun, Ataleko editore gisa.<br />\n"
-"<br />\n"
-"Artikuluaren URLa: {$submissionUrl}<br />\n"
-"Erabiltzaile-izena: {$recipientUsername}<br />\n"
-"<br />\n"
-"Eskerrik asko."
+"<p>{$recipientName} estimatua,</p><p>Ondorengo bidalketa esleitu dizugu bere "
+"argitalpen-prozesua eraman dezazun.</p><p><a href=\"{$submissionUrl}\""
+">{$submissionUrl}</a><br "
+"/>{$authors}</p><p><b>Laburpena</b></p>{$submissionAbstract}<p>Artikulua "
+"{$contextName} aldizkarirako egokia dela uste baduzu, bidali ezazu bidalketa "
+"ebaluazio-fasera \"Send to Review\" botoian klik eginez, eta esleitu "
+"ebaluatzaileak \"Add Reviewer\" botoian klik eginez.</p><p>Zure ustez "
+"artikulua aldizkarirako egokia ez bada, ez onartu bidalketa.</p><p>Eskerrik "
+"asko aldez aurretik.</p><p>Adeitasunez,</p>{$contextSignature}"
 
 msgid "emails.editorAssignReview.body"
 msgstr ""
@@ -138,9 +131,8 @@ msgstr ""
 msgid "emails.editorAssignProduction.body"
 msgstr ""
 
-#, fuzzy
 msgid "emails.reviewRequest.subject"
-msgstr "Artikulua ebaluatzeko eskaera"
+msgstr "Berrikuspenerako gonbidapena"
 
 #, fuzzy
 msgid "emails.reviewRequest.body"
@@ -175,9 +167,8 @@ msgstr ""
 "<br />\n"
 "{$submissionAbstract}"
 
-#, fuzzy
 msgid "emails.reviewResponseOverdueAuto.subject"
-msgstr "Artikulua ebaluatzeko eskaera"
+msgstr "Hau berrikusteko aukera izango duzu?"
 
 #, fuzzy
 msgid "emails.reviewResponseOverdueAuto.body"
@@ -213,7 +204,7 @@ msgstr ""
 "{$submissionAbstract}"
 
 msgid "emails.reviewRequestSubsequent.subject"
-msgstr "Artikulua berrikusteko eskakizuna"
+msgstr "Berrikusitako bidalketa berrikusteko eskaera"
 
 #, fuzzy
 msgid "emails.reviewRequestSubsequent.body"
@@ -268,7 +259,7 @@ msgstr ""
 "Galderaren bat baduzu, jar zaitez harremanetan nirekin, mesedez."
 
 msgid "emails.reviewReinstate.subject"
-msgstr ""
+msgstr "Oraindik berrikusi dezakezu zerbait {$contexname}(e)rako?"
 
 msgid "emails.reviewReinstate.body"
 msgstr ""
@@ -278,18 +269,17 @@ msgstr "Ebaluazioa egin ezina"
 
 msgid "emails.reviewDecline.body"
 msgstr ""
-"{$recipientName}:<br />\n"
+"Editoreak:<br />\n"
 "<br />\n"
 "Sentitzen dut, baina oraingoan ezingo dut egin {$contextName} aldizkarirako "
 "&quot;{$submissionTitle}&quot; artikuluaren ebaluazioa. Eskerrik asko nigan "
-"pentsatzeagatik, eta espero dut hurrengo batean ere niregana joko duzuela."
-"<br />\n"
+"pentsatzeagatik, eta espero dut hurrengo batean ere niregana joko "
+"duzuela.<br />\n"
 "<br />\n"
 "{$senderName}"
 
-#, fuzzy
 msgid "emails.reviewRemind.subject"
-msgstr "Artikulua ebaluatzeko oroigarria"
+msgstr "Zure berrikuspena osatzeko gogorarazpena"
 
 #, fuzzy
 msgid "emails.reviewRemind.body"
@@ -313,9 +303,8 @@ msgstr ""
 "<br />\n"
 "{$signature}"
 
-#, fuzzy
 msgid "emails.reviewRemindAuto.subject"
-msgstr "Artikulua ebaluatzeko oroigarri automatizatua"
+msgstr "Zure berrikuspena osatzeko gogorarazpena"
 
 #, fuzzy
 msgid "emails.reviewRemindAuto.body"
@@ -341,27 +330,30 @@ msgstr ""
 "{$contextSignature}"
 
 msgid "emails.editorDecisionAccept.subject"
-msgstr "Editorearen erabakia"
+msgstr "Zure bidalketa {$contextName}-ra onartu da"
 
-#, fuzzy
 msgid "emails.editorDecisionAccept.body"
 msgstr ""
-"{$authors}:<br />\n"
+"<p>{$recipientName} estimatua,</p><p>Hartu dugu {$contextName} aldizkarira "
+"bidali zenuen &quot;{$submissionTitle}&quot; artikuluari buruzko "
+"erabakia.<br />\n"
 "<br />\n"
-"Hartu dugu {$contextName} aldizkarira bidali zenuen &quot;{$submissionTitle}"
-"&quot; artikuluari buruzko erabakia.<br />\n"
+"Gure erabakia: artikulua onartzea.<br />\n"
 "<br />\n"
-"Gure erabakia:"
+"Zure artikulua edizio eta formateatze fasera pasatu da, argitalpena "
+"prestatzeko. Laster jarraibide gehiago jasoko dituzu.<br />\n"
+"<p>Edozein galdera izanez gero, nirekin harremanetan jarri zure <a href=\""
+"{$authorSubmissionUrl}\"></a></a>bidalketaren kontrol-panela</a> "
+"erabiliz.</p><p>Adeitasunez,</p>{$signature}"
 
 msgid "emails.editorDecisionSkipReview.subject"
-msgstr ""
+msgstr "Zure bidalketa zuzentzeko bidali da"
 
 msgid "emails.editorDecisionSkipReview.body"
 msgstr ""
 
-#, fuzzy
 msgid "emails.layoutRequest.subject"
-msgstr "Galeradak eskatzea"
+msgstr "{$submissionId} bidalketa {$contextAcronym}-en ekoizpenerako prest dago"
 
 #, fuzzy
 msgid "emails.layoutRequest.body"
@@ -383,9 +375,8 @@ msgstr ""
 "jar zaitez harremanetan nirekin, mesedez. Eskerrik asko aldizkariari egiten "
 "diozun ekarpenagatik."
 
-#, fuzzy
 msgid "emails.layoutComplete.subject"
-msgstr "Galeradak eginda"
+msgstr "Galeradak osatuta"
 
 #, fuzzy
 msgid "emails.layoutComplete.body"
@@ -402,6 +393,7 @@ msgstr ""
 msgid "emails.emailLink.subject"
 msgstr "Interesgarria izan litekeen artikulu bat"
 
+#, fuzzy
 msgid "emails.emailLink.body"
 msgstr ""
 "Artikulu hau zuretzat interesgarria izango dela uste dut:<br />\n"
@@ -443,10 +435,12 @@ msgstr ""
 "<br />\n"
 "{$subscriptionSignature}"
 
-#, fuzzy
 msgid "emails.openAccessNotify.subject"
-msgstr "Zenbakia sarrera librekoa da orain"
+msgstr ""
+"Sarbide irekia: {$contextName}-ren {$issueIdentification}(e)k sarbide irekia "
+"du orain"
 
+#, fuzzy
 msgid "emails.openAccessNotify.body"
 msgstr ""
 "Irakurle:<br />\n"
@@ -499,7 +493,7 @@ msgstr ""
 "{$subscriptionSignature}"
 
 msgid "emails.subscriptionAfterExpiryLast.subject"
-msgstr "Harpidetza amaitu da - Azkeneko jakinarazpena"
+msgstr "Harpidetza amaitu da - Azken jakinarazpena"
 
 msgid "emails.subscriptionAfterExpiryLast.body"
 msgstr ""
@@ -520,9 +514,8 @@ msgstr ""
 "<br />\n"
 "{$subscriptionSignature}"
 
-#, fuzzy
 msgid "emails.subscriptionPurchaseIndl.subject"
-msgstr "Harpidetza-erosketa: Indibiduala"
+msgstr "Harpidetza-erosketa: banakakoa"
 
 msgid "emails.subscriptionPurchaseIndl.body"
 msgstr ""
@@ -576,7 +569,7 @@ msgstr ""
 "Harpidetza URLa: {$subscriptionUrl}"
 
 msgid "emails.subscriptionRenewIndl.subject"
-msgstr "Harpidetza-berritzea: Indibiduala"
+msgstr "Harpidetza-berritzea: banakakoa"
 
 msgid "emails.subscriptionRenewIndl.body"
 msgstr ""
@@ -626,7 +619,7 @@ msgstr ""
 "Harpidetza URLa: {$subscriptionUrl}"
 
 msgid "emails.revisedVersionNotify.subject"
-msgstr "Bertsio errebisatua gora kargatu da"
+msgstr "Bertsio errebisatua kargatu da"
 
 #, fuzzy
 msgid "emails.revisedVersionNotify.body"
@@ -641,19 +634,19 @@ msgstr ""
 "{$signature}"
 
 msgid "emails.statisticsReportNotification.subject"
-msgstr ""
+msgstr "Argitalpen-jarduera: {$month}, {$year}"
 
 msgid "emails.statisticsReportNotification.body"
 msgstr ""
 
 msgid "emails.announcement.subject"
-msgstr ""
+msgstr "{$announcementTitle}"
 
 msgid "emails.announcement.body"
 msgstr ""
 
 msgid "emails.paymentRequestNotification.subject"
-msgstr ""
+msgstr "Ordainketa-eskaeraren jakinarazpena"
 
 msgid "emails.paymentRequestNotification.body"
 msgstr ""

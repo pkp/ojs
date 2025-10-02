@@ -1,0 +1,111 @@
+# Darius Zviedris <darius.zviedris@lki.lt>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-10-01 10:29+0000\n"
+"Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
+"Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-users/lt/>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
+"19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
+"1 : 2);\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.importexport.users.displayName"
+msgstr "Vartotojų XML įskiepis"
+
+msgid "plugins.importexport.users.description"
+msgstr "Importuoti ir eksportuoti vartotojus"
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Vartotojo duomenų failas"
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Šie vartotojai buvo sėkmingai importuoti į sistemą"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Importavimo metu įvyko klaidų"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr ""
+"Patvirtinkite, kad tai yra vartotojai, kuriuos norite importuoti į sistemą"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Įspėjimas"
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Nurodytas nežinomas žurnalo kelias „{$journalPath}“."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Eksportuoti vartotojus"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Eksportuoti pagal vaidmenį"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Eksportuoti viską"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Eksportuojant įvyko klaidų"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"Importavimas sėkmingai atliktas. Vartotojai, kurių vartotojo vardai ir el. "
+"pašto adresai dar nenaudojami, buvo importuoti kartu su atitinkamomis "
+"vartotojų grupėmis."
+
+msgid "plugins.importexport.users.results"
+msgstr "Rezultatai"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Norėdami tęsti, įkelkite failą skiltyje „Importuoti“."
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Naudojimas: {$scriptName} {$pluginName} [komanda] ...\n"
+"Komandos:\n"
+"import [xmlFileName] [žurnalo_kelias]\n"
+"export [xmlFileName] [žurnalo_kelias]\n"
+"export [xmlFileName] [žurnalo_kelias] [vartotojoId1] [vartotojoId2] ...\n"
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Pavyzdžiai:\n"
+"Importuoti vartotojus į „myJournal“ iš „myImportFile.xml“:\n"
+"{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"Eksportuoti visus vartotojus iš „myJournal“:\n"
+"{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"Eksportuoti vartotojus, nurodytus pagal jų ID:\n"
+"{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Importuoti vartotojus"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
+"Pasirinkite XML duomenų failą su vartotojo informacija, kurį norite "
+"importuoti į šį žurnalą. Išsamesnės informacijos apie šio failo formatą "
+"rasite žurnalo žinyne.<br /><br />Atkreipkite dėmesį, kad jei importuotame "
+"faile yra sistemoje jau esančių vartotojo vardų ar el. pašto adresų, tų "
+"vartotojų duomenys nebus importuoti, o visi nauji kuriami vaidmenys bus "
+"priskirti esamiems vartotojams."
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr ""
+"Kiekvienam importuotam vartotojui išsiųskite el. laišką su pranešimu apie "
+"vartotojo vardą ir slaptažodį."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Jei įvyksta klaida, toliau importuokite kitus vartotojus."
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"Negalima naudoti slaptažodžių, sumaišytų su {$importHash}; OJS "
+"sukonfigūruota naudoti {$ojsHash}. Jei tęsite, turėsite iš naujo nustatyti "
+"importuotų vartotojų slaptažodžius."

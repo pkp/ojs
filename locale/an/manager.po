@@ -2,7 +2,7 @@
 # Juan Pablo Martínez <juanpabl@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-06-08 18:51+0000\n"
+"PO-Revision-Date: 2025-09-24 06:15+0000\n"
 "Last-Translator: Juan Pablo Martínez <juanpabl@gmail.com>\n"
 "Language-Team: Aragonese <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "an/>\n"
@@ -1096,7 +1096,7 @@ msgstr ""
 msgid "manager.setup.enableOai.description"
 msgstr ""
 "Proporcione metadatos pa servicios d'indexación de tercers a traviés de la "
-"<a href=\"https://www.openarchives.org/\">iniciativa de fichers ubiertos</a>."
+"<a href=\"https://www.openarchives.org/\">iniciativa de archius ubiertos</a>."
 
 msgid "manager.setup.typeExamples"
 msgstr ""

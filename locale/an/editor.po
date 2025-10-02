@@ -2,7 +2,7 @@
 # Juan Pablo Martínez <juanpabl@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-05-26 10:57+0000\n"
+"PO-Revision-Date: 2025-09-24 06:15+0000\n"
 "Last-Translator: Juan Pablo Martínez <juanpabl@gmail.com>\n"
 "Language-Team: Aragonese <http://translate.pkp.sfu.ca/projects/ojs/editor/an/"
 ">\n"
@@ -63,7 +63,7 @@ msgstr ""
 "exclusivos en a revista."
 
 msgid "editor.submissionArchive.noSubmissions"
-msgstr "Garra ninvio en o fichero."
+msgstr "Garra ninvio en l'archiu."
 
 msgid "editor.submissionReview.emailWillArchive"
 msgstr ""
@@ -109,7 +109,7 @@ msgid "editor.notifyUsers.includeToc"
 msgstr "Incluyir la tabla de conteniu d'este numero:"
 
 msgid "editor.editorAdministration"
-msgstr "Administración d'o editor/a"
+msgstr "Administración de l'editor/a"
 
 msgid "editor.issues.createIssue"
 msgstr "Crear numero"
@@ -399,10 +399,10 @@ msgid "editor.article.coverImage"
 msgstr "Imachen de portalada"
 
 msgid "editor.home"
-msgstr "Pachina principal d'o editor/a"
+msgstr "Pachina principal de l'editor/la editora"
 
 msgid "editor.submissionArchive"
-msgstr "Archivo de ninvios"
+msgstr "Archiu de ninvios"
 
 msgid "editor.allEditors"
 msgstr "Toz los editors/as"
@@ -410,7 +410,7 @@ msgstr "Toz los editors/as"
 msgid "editor.submissionArchive.saveChanges"
 msgstr ""
 "Quiere alzar los cambios en ninvios archivaus? Los ninvios que se tríen pa "
-"estar eliminaus s'eliminarán permanentment d'o sistema."
+"estar eliminaus s'eliminarán pa cutio d'o sistema."
 
 msgid "editor.notifyUsers.allIndividualSubscribers"
 msgstr "Toz los suscriptors/as individuals ({$count} usuarios/as)"
