@@ -1,13 +1,14 @@
 # Josu Acosta <josuacostacalvo@gmail.com>, 2023.
 # Informatikaria <informatikaria@ueu.eus>, 2025.
 # Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
+# Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2025-07-17 19:00+0000\n"
-"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
+"PO-Revision-Date: 2025-10-02 09:37+0000\n"
+"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/editor/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
@@ -469,16 +470,16 @@ msgstr "Galerada fitxategiak aukeratu"
 
 msgid "editor.submission.editorial.finalDraftDescription"
 msgstr ""
-"Zerrenda honetako azken zirriborroak zuzentzaileak bertsio berrikusitak "
-"bihurtzen ditu, eta ondoren <span class=\"pkp_help_title\">Jatorrizkoen "
-"zuzenketa</span> kargatzen ditu."
+"Zerrenda honetako azken zirriborroak zuzentzaile batek bertsio berrikusiak "
+"bihurtzen ditu, eta ondoren <span class=\"pkp_help_title\">Zuzenketan</span> "
+"kargatzen ditu."
 
 msgid "editor.submission.proof.manageProofFilesDescription"
 msgstr ""
-"Bidalketa fasetan dagoeneko kargatu izan dadin edozein fitxategi Berrikuspen "
-"zerrendara gehi daiteke \"Sartu\" izeneko hurrengo laukia markatuz eta "
-"\"Bilatu\" klik eginez: eskuragarri dauden fitxategi guztiak zerrendatuko "
-"dira eta sartzeko aukeratu daitezke."
+"Dagoeneko bidalketaren edozein fasetan kargatu den edozein fitxategi proba-"
+"zuzenketen zerrendara gehi daiteke \"Sartu\" izeneko hurrengo laukia "
+"markatuz eta \"Bilatu\"-n klik eginez. Eskuragarri dauden fitxategi guztiak "
+"zerrendatuko dira eta sartzeko aukera izango dute."
 
 msgid "editor.publicIdentificationExistsForTheSameType"
 msgstr ""
