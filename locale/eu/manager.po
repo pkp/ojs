@@ -1,4 +1,4 @@
-# Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023.
+# Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023, 2025.
 # Josu Acosta <josuacostacalvo@gmail.com>, 2023, 2024.
 # Informatikaria <informatikaria@ueu.eus>, 2024.
 # Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
 "PO-Revision-Date: 2025-10-02 13:00+0000\n"
-"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
+"Last-Translator: Ricardo Gómez-López <ricardogomezlopez@gmail.com>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/manager/eu/>"
 "\n"
 "Language: eu\n"
@@ -970,10 +970,10 @@ msgstr "Probak zuzentzeko instrukzioak"
 
 msgid "manager.setup.proofingInstructionsDescription"
 msgstr ""
-"Probak zuzentzeko instrukzioak eskuragarri izango dituzte Proba-"
-"zuzentzaileek, Egileek, Maketatzaileek eta Ataleko editoreek Bidalketen "
+"Probak zuzentzeko instrukzioak eskuragarri izango dituzte proba-"
+"zuzentzaileek, egileek, maketatzaileek eta ataleko editoreek bidalketen "
 "edizioaren fasean. Behean ematen da instrukzio multzo lehenetsi bat, HTML "
-"formatuan. Edozein unetan aldatu edo ordeztu dezake Aldizkariaren "
+"formatuan. Edozein unetan aldatu edo ordeztu dezake aldizkariaren "
 "kudeatzaileak (HTML formatuan nahiz testu arruntean)."
 
 msgid "manager.setup.publicationSchedule"
