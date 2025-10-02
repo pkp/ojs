@@ -1,13 +1,14 @@
 # rl <biuro@fimagis.pl>, 2022.
 # Dariusz Lis <Dariusz@Lis.PL>, 2023.
 # Mikołaj Machowski <mikmach@gmail.com>, 2025.
+# Adam <koleszka2006@hotmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-01-30T17:55:22+00:00\n"
-"PO-Revision-Date: 2025-09-04 06:23+0000\n"
-"Last-Translator: Mikołaj Machowski <mikmach@gmail.com>\n"
+"PO-Revision-Date: 2025-09-25 18:08+0000\n"
+"Last-Translator: Adam <koleszka2006@hotmail.com>\n"
 "Language-Team: Polish <http://translate.pkp.sfu.ca/projects/ojs/locale/pl/>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -2003,15 +2004,14 @@ msgstr ""
 "\n"
 "<p>2. Folder dla przesyłanych plików musi zostać utworzony i zapisywalny.</p>"
 
-#, fuzzy
 msgid "installer.upgradeInstructions"
 msgstr ""
 "<h4>Wersja OJS {$version}</h4>\n"
 "\n"
 "<p>Dziękujemy za pobranie aplikacji Projektu Wiedzy Publicznej <strong>Open "
 "Journal System</strong>. Zanim przejdziesz do dalszej procedury, prosimy, "
-"przeczytaj <a href=\"{$baseUrl}/docs/README.md\">README</a> i <a href="
-"\"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a> pliki załączone w tym "
+"przeczytaj <a href=\"{$baseUrl}/docs/README.md\">README</a> i <a href=\""
+"{$baseUrl}/docs/UPGRADE.md\">UPGRADE</a> pliki załączone w tym "
 "oprogramowaniu. Po więcej informacji o Projekcie i jego oprogramowaniach "
 "sięgnij na stronę <a href=\"https://pkp.sfu.ca/\" target=\"_blank\">PKP web "
 "site</a>. Jeśli chcesz zgłosić błąd lub zapytanie dotycząca technicznej "

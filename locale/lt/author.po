@@ -1,7 +1,7 @@
 # Darius Zviedris <darius.zviedris@lki.lt>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-02 14:49+0000\n"
+"PO-Revision-Date: 2025-09-30 13:22+0000\n"
 "Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "lt/>\n"
@@ -95,7 +95,7 @@ msgid "author.submit.requestWaiver"
 msgstr "Atidėti teikimą"
 
 msgid "author.submit.qualifyForWaiver"
-msgstr "Nurodykite, kad turi būti atidedamas straipsnio mokestis."
+msgstr "Nurodykite, kad turi būti atidedamas straipsnio mokestis"
 
 msgid "author.submit.addReasonsForWaiver"
 msgstr "Prašom apatiniame langelyje įrašyti, kodėl mokestis turi būti atidėtas."
@@ -154,7 +154,7 @@ msgid "author.submit.reorderInstructions"
 msgstr "Autorius nurodykite ta tvarka, kaip jie nurodomi straipsnyje."
 
 msgid "author.submit.reorder"
-msgstr "Keisti autorių nurodymo tvarką."
+msgstr "Keisti autorių nurodymo tvarką"
 
 msgid "author.submit.selectPrincipalContact"
 msgstr "Pagrindinis adresatas susirašinėjimui redakciniais klausimais."
@@ -163,7 +163,7 @@ msgid "author.submit.addAuthor"
 msgstr "Pridėti autorių"
 
 msgid "author.submit.deleteAuthor"
-msgstr "Ištrinti autorių."
+msgstr "Ištrinti autorių"
 
 msgid "author.submit.submissionIndexingDescription"
 msgstr ""
@@ -199,10 +199,10 @@ msgid "author.submit.submissionFile"
 msgstr "Tekstas"
 
 msgid "author.submit.uploadSubmissionFile"
-msgstr "Įkelti straipsnio failą."
+msgstr "Įkelti straipsnio failą"
 
 msgid "author.submit.replaceSubmissionFile"
-msgstr "Pakeisti straipsnio failą."
+msgstr "Pakeisti straipsnio failą"
 
 msgid "author.submit.noSubmissionFile"
 msgstr "Neįkelta jokių straipsnių."
@@ -229,22 +229,22 @@ msgid "author.submit.noSupplementaryFiles"
 msgstr "Nepridėta jokių papildomų failų."
 
 msgid "author.submit.backToSupplementaryFiles"
-msgstr "Grįžti į papildomuosius failus."
+msgstr "Grįžti į papildomuosius failus"
 
 msgid "author.submit.confirmDeleteSuppFile"
 msgstr "Ar tikrai šį papildomą failąnorite ištrinti?"
 
 msgid "author.submit.uploadSuppFile"
-msgstr "Įkelkite papildomą failą."
+msgstr "Įkelkite papildomą failą"
 
 msgid "author.submit.addSupplementaryFile"
-msgstr "Pridėkite papildomą failą."
+msgstr "Pridėkite papildomą failą"
 
 msgid "author.submit.editSupplementaryFile"
-msgstr "Papildomą failą taisykite."
+msgstr "Papildomą failą taisykite"
 
 msgid "author.submit.supplementaryFileData"
-msgstr "Papildomo failo metaduomenys."
+msgstr "Papildomo failo metaduomenys"
 
 msgid "author.submit.supplementaryFileDataDescription"
 msgstr ""

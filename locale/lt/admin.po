@@ -1,7 +1,7 @@
 # Darius Zviedris <darius.zviedris@lki.lt>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-02 14:49+0000\n"
+"PO-Revision-Date: 2025-10-01 13:47+0000\n"
 "Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/admin/lt/"
 ">\n"
@@ -85,15 +85,15 @@ msgid "admin.journals.journalSettings"
 msgstr "Žurnalo nustatymai"
 
 msgid "admin.journals.noneCreated"
-msgstr "Nėra sukurtų žurnalų"
+msgstr "Nėra sukurtų žurnalų."
 
 msgid "admin.contexts.create"
 msgstr "Sukurti žurnalą"
 
 msgid "admin.journals.urlWillBe"
 msgstr ""
-"Tai turi būti vienas trumpas žodis arba akronimas, kuris identifikuoja "
-"žurnalą. Nuorodą į žurnalą (URL) bus {$sampleUrl}"
+"Tai turi būti vienas trumpas žodis arba akronimas, identifikuojantis "
+"žurnalą. Žurnalo URL bus {$sampleUrl}."
 
 msgid "admin.contexts.form.titleRequired"
 msgstr "Reikia nurodyti antraštę."
@@ -128,7 +128,7 @@ msgid "admin.journals.transcode"
 msgstr "Perkoduoti straipsnio metaduomenis iš ISO8859-1"
 
 msgid "admin.journals.redirect"
-msgstr "Sugeneruoti kodą, OJS 1 nuorodas (URL) atvaizduojantį OJS 2 aplinkoje."
+msgstr "Sugeneruoti kodą, OJS 1 nuorodas (URL) atvaizduojantį OJS 2 aplinkoje"
 
 msgid "admin.journals.form.importPathRequired"
 msgstr "Reikia nurodyti importavimo kelią."

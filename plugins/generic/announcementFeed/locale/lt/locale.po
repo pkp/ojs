@@ -1,0 +1,53 @@
+# Darius Zviedris <darius.zviedris@lki.lt>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-10-01 13:47+0000\n"
+"Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
+"Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-announcementFeed/lt/>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
+"19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
+"1 : 2);\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "Pranešimų kanalo papildinys"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Rodyti kanalo nuorodas visose žurnalo puslapiuose."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "Rodyti kanalo nuorodas tik pranešimų puslapyje."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Apriboti kanalą iki"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "naujausių pranešimų."
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "Įveskite teigiamą sveikąjį skaičių naujausiems pranešimams."
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Atom logotipas"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "RSS1 logotipas"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "RSS2 logotipas"
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr ""
+"Šis papildinys generuoja RSS/Atom žiniatinklio srautus žurnalo pranešimams."
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Nustatymai"
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr ""
+"Rodyti kanalo nuorodas tik pagrindiniame puslapyje ir pranešimų puslapyje."
