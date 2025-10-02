@@ -146,24 +146,8 @@ class TemplateManager extends PKPTemplateManager
                 'isCurrent' => $request->getRequestedPage() === 'manageIssues',
                 'icon' => 'Issues'
             ];
-            $index = false;
-            $reviewAssignmentsIndex = array_search('reviewAssignments', array_keys($menu));
-            $mySubmissionsIndex = array_search('mySubmissions', array_keys($menu));
-            if ($mySubmissionsIndex !== false) {
-                $index = $mySubmissionsIndex;
-            } elseif ($reviewAssignmentsIndex !== false) {
-                $index = $reviewAssignmentsIndex;
-            } else {
-                $index = array_search('dashboards', array_keys($menu));
-            }
-
-            if ($index === false || count($menu) <= $index + 1) {
-                $menu['issues'] = $issuesLink;
-            } else {
-                $menu = array_slice($menu, 0, $index + 1, true)
-                    + ['issues' => $issuesLink]
-                    + array_slice($menu, $index + 1, null, true);
-            }
+            
+            $menu['content']['submenu'] = ['issues' => $issuesLink] + $menu['content']['submenu'];
         }
 
         if (count(array_intersect([Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN, Role::ROLE_ID_SUB_EDITOR], $userRoles))) {
