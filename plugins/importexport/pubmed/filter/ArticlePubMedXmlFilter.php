@@ -154,7 +154,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
                     $objectNode = $doc->createElement('Object');
                     $objectNode->setAttribute('Type', 'keyword');
                     $keywordNode = $doc->createElement('Param');
-                    $keywordNode->appendChild($doc->createTextNode($keyword));
+                    $keywordNode->appendChild($doc->createTextNode($keyword['name']));
                     $keywordNode->setAttribute('Name', 'value');
                     $objectNode->appendChild($keywordNode);
                     $objectListNode->appendChild($objectNode);
