@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file plugins/importexport/doaj/filter/DOAJJsonFilter.php
+ * @file plugins/generic/doaj/filter/DOAJJsonFilter.php
  *
  * Copyright (c) 2014-2025 Simon Fraser University
  * Copyright (c) 2000-2025 John Willinsky
@@ -9,18 +9,20 @@
  *
  * @class DOAJJsonFilter
  *
- * @ingroup plugins_importexport_doaj
+ * @ingroup plugins_generic_doaj
  *
  * @brief Class that converts an Article to a DOAJ JSON string.
  */
 
-namespace APP\plugins\importexport\doaj\filter;
+namespace APP\plugins\generic\doaj\filter;
 
 use APP\core\Application;
 use APP\facades\Repo;
-use APP\plugins\importexport\doaj\DOAJExportDeployment;
-use APP\plugins\importexport\doaj\DOAJExportPlugin;
-use PKP\controlledVocab\ControlledVocab;
+use APP\plugins\generic\doaj\DOAJExportDeployment;
+use APP\plugins\generic\doaj\DOAJExportPlugin;
+use APP\publication\Publication;
+use APP\submission\Submission;
+use PKP\context\Context;
 use PKP\core\PKPString;
 use PKP\plugins\importexport\PKPImportExportFilter;
 
@@ -43,7 +45,7 @@ class DOAJJsonFilter extends PKPImportExportFilter
     /**
      * @see Filter::process()
      *
-     * @param \APP\submission\Submission $pubObject
+     * @param Submission|Publication $pubObject
      *
      * @return string JSON
      */
@@ -60,31 +62,53 @@ class DOAJJsonFilter extends PKPImportExportFilter
         // Article JSON example bibJson https://github.com/DOAJ/harvester/blob/9b59fddf2d01f7c918429d33b63ca0f1a6d3d0d0/service/tests/fixtures/article.py
         // S. also https://doaj.github.io/doaj-docs/master/data_models/IncomingAPIArticle
 
-        $publication = $pubObject->getCurrentPublication();
+        if (is_a($pubObject, 'Submission')) {
+            $publication = $pubObject->getCurrentPublication();
+            /** @var Submission $article */
+            $article = $pubObject;
+            if (!$cache->isCached('articles', $article->getId())) {
+                $cache->add($article, null);
+            }
+        } else {
+            /** @var Publication $publication */
+            $publication = $pubObject;
+            if ($cache->isCached('articles', $publication->getData('submissionId'))) {
+                /** @var Submission $article */
+                $article = $cache->get('articles', $publication->getData('submissionId'));
+            } else {
+                $article = Repo::submission()->get($publication->getData('submissionId'));
+                $article = $article->getData('contextId') == $context->getId() ? $article : null;
+                if ($article) {
+                    $cache->add($article, null);
+                }
+            }
+        }
         $publicationLocale = $publication->getData('locale');
 
         $issueId = $publication->getData('issueId');
-        if ($cache->isCached('issues', $issueId)) {
-            $issue = $cache->get('issues', $issueId);
-        } else {
-            $issue = Repo::issue()->get($issueId);
-            $issue = $issue->getJournalId() == $context->getId() ? $issue : null;
-            if ($issue) {
-                $cache->add($issue, null);
+        if ($issueId) {
+            if ($cache->isCached('issues', $issueId)) {
+                $issue = $cache->get('issues', $issueId);
+            } else {
+                $issue = Repo::issue()->get($issueId);
+                $issue = $issue?->getJournalId() == $context->getId() ? $issue : null;
+                if ($issue) {
+                    $cache->add($issue, null);
+                }
             }
         }
 
-        $article = [];
-        $article['bibjson']['journal'] = [];
+        $doajArticle = [];
+        $doajArticle['bibjson']['journal'] = [];
         // Publisher name (i.e. institution name)
         $publisher = $context->getData('publisherInstitution');
         if (!empty($publisher)) {
-            $article['bibjson']['journal']['publisher'] = $publisher;
+            $doajArticle['bibjson']['journal']['publisher'] = $publisher;
         }
         // To-Do: license ???
         // Journal's title (M)
         $journalTitle = $context->getName($context->getPrimaryLocale());
-        $article['bibjson']['journal']['title'] = $journalTitle;
+        $doajArticle['bibjson']['journal']['title'] = $journalTitle;
         // Identification Numbers
         $issns = [];
         $pissn = $context->getData('printIssn');
@@ -96,42 +120,43 @@ class DOAJJsonFilter extends PKPImportExportFilter
             $issns[] = $eissn;
         }
         if (!empty($issns)) {
-            $article['bibjson']['journal']['issns'] = $issns;
+            $doajArticle['bibjson']['journal']['issns'] = $issns;
         }
         // Volume, Number
-        $volume = $issue->getVolume();
+        $volume = $issue?->getVolume();
         if (!empty($volume)) {
-            $article['bibjson']['journal']['volume'] = $volume;
+            $doajArticle['bibjson']['journal']['volume'] = $volume;
         }
-        $issueNumber = $issue->getNumber();
+        $issueNumber = $issue?->getNumber();
         if (!empty($issueNumber)) {
-            $article['bibjson']['journal']['number'] = $issueNumber;
+            $doajArticle['bibjson']['journal']['number'] = $issueNumber;
         }
 
         // Article title
-        $article['bibjson']['title'] = $publication?->getLocalizedTitle($publicationLocale) ?? '';
+        $doajArticle['bibjson']['title'] = $publication?->getLocalizedTitle($publicationLocale) ?? '';
         // Identifiers
-        $article['bibjson']['identifier'] = [];
+        $doajArticle['bibjson']['identifier'] = [];
         // DOI
         $doi = $publication->getDoi();
         if (!empty($doi)) {
-            $article['bibjson']['identifier'][] = ['type' => 'doi', 'id' => $doi];
+            $doajArticle['bibjson']['identifier'][] = ['type' => 'doi', 'id' => $doi];
         }
         // Print and online ISSN
         if (!empty($pissn)) {
-            $article['bibjson']['identifier'][] = ['type' => 'pissn', 'id' => $pissn];
+            $doajArticle['bibjson']['identifier'][] = ['type' => 'pissn', 'id' => $pissn];
         }
         if (!empty($eissn)) {
-            $article['bibjson']['identifier'][] = ['type' => 'eissn', 'id' => $eissn];
+            $doajArticle['bibjson']['identifier'][] = ['type' => 'eissn', 'id' => $eissn];
         }
         // Year and month from article's publication date
-        $publicationDate = $this->formatDate($issue->getDatePublished());
         if ($publication->getData('datePublished')) {
             $publicationDate = $this->formatDate($publication->getData('datePublished'));
+        } elseif ($issue?->getDatePublished()) {
+            $publicationDate = $this->formatDate($issue->getDatePublished());
         }
         $yearMonth = explode('-', $publicationDate);
-        $article['bibjson']['year'] = $yearMonth[0];
-        $article['bibjson']['month'] = $yearMonth[1];
+        $doajArticle['bibjson']['year'] = $yearMonth[0];
+        $doajArticle['bibjson']['month'] = $yearMonth[1];
         /** --- FirstPage / LastPage (from PubMed plugin)---
          * there is some ambiguity for online journals as to what
          * "page numbers" are; for example, some journals (eg. JMIR)
@@ -140,21 +165,29 @@ class DOAJJsonFilter extends PKPImportExportFilter
         $startPage = $publication->getStartingPage();
         $endPage = $publication->getEndingPage();
         if (isset($startPage) && $startPage !== '') {
-            $article['bibjson']['start_page'] = $startPage;
-            $article['bibjson']['end_page'] = $endPage;
+            $doajArticle['bibjson']['start_page'] = $startPage;
+            $doajArticle['bibjson']['end_page'] = $endPage;
         }
         // FullText URL
         $request = Application::get()->getRequest();
-        $article['bibjson']['link'] = [];
-        $article['bibjson']['link'][] = [
-            'url' => $request->getDispatcher()->url($request, Application::ROUTE_PAGE, $context->getPath(), 'article', 'view', [$pubObject->getId()], urlLocaleForPage: ''),
-            'type' => 'fulltext',
-            'content_type' => 'html'
-        ];
+        $doajArticle['bibjson']['link'] = [];
+        if ($context->getData(Context::SETTING_DOI_VERSIONING)) {
+            $doajArticle['bibjson']['link'][] = [
+                'url' => $request->getDispatcher()->url($request, Application::ROUTE_PAGE, $context->getPath(), 'article', 'view', [$article->getId(), 'version', $publication->getId()], urlLocaleForPage: ''),
+                'type' => 'fulltext',
+                'content_type' => 'html'
+            ];
+        } else {
+            $doajArticle['bibjson']['link'][] = [
+                'url' => $request->getDispatcher()->url($request, Application::ROUTE_PAGE, $context->getPath(), 'article', 'view', [$article->getId()], urlLocaleForPage: ''),
+                'type' => 'fulltext',
+                'content_type' => 'html'
+            ];
+        }
         // Authors: name, affiliation and ORCID
         $articleAuthors = $publication->getData('authors');
         if ($articleAuthors->isNotEmpty()) {
-            $article['bibjson']['author'] = [];
+            $doajArticle['bibjson']['author'] = [];
 
             foreach ($articleAuthors as $articleAuthor) {
                 $author = ['name' => $articleAuthor->getFullName(false, false, $publicationLocale)];
@@ -165,29 +198,23 @@ class DOAJJsonFilter extends PKPImportExportFilter
                 if ($articleAuthor->getData('orcid') && $articleAuthor->getData('orcidIsVerified')) {
                     $author['orcid_id'] = $articleAuthor->getData('orcid');
                 }
-                $article['bibjson']['author'][] = $author;
+                $doajArticle['bibjson']['author'][] = $author;
             }
         }
 
         // Abstract
         $abstract = $publication->getData('abstract', $publicationLocale);
         if (!empty($abstract)) {
-            $article['bibjson']['abstract'] = PKPString::html2text($abstract);
+            $doajArticle['bibjson']['abstract'] = PKPString::html2text($abstract);
         }
         // Keywords
-        $keywords = Repo::controlledVocab()->getBySymbolic(
-            ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
-            Application::ASSOC_TYPE_PUBLICATION,
-            $publication->getId(),
-            [$publicationLocale]
-        );
-
+        $keywords = $publication->getData('keywords');
         $allowedNoOfKeywords = array_slice($keywords[$publicationLocale] ?? [], 0, 6);
         if (!empty($keywords[$publicationLocale])) {
-            $article['bibjson']['keywords'] = $allowedNoOfKeywords;
+            $doajArticle['bibjson']['keywords'] = $allowedNoOfKeywords;
         }
 
-        $json = json_encode($article);
+        $json = json_encode($doajArticle);
         return $json;
     }
 

@@ -17,6 +17,9 @@ msgstr "DOAJ Export Plugin"
 msgid "plugins.importexport.doaj.description"
 msgstr "Export Journal for DOAJ."
 
+msgid "plugins.importexport.doaj.status.deleted"
+msgstr "Deleted"
+
 msgid "plugins.importexport.doaj.export.contact"
 msgstr "Contact DOAJ for inclusion"
 
@@ -46,8 +49,18 @@ msgid "plugins.importexport.doaj.register.error.mdsError"
 msgstr ""
 "Deposit was not successful! The DOAJ API returned an error: '{$param}'."
 
+msgid "plugins.importexport.doaj.delete.error.mdsError"
+msgstr ""
+"Delete was not successful! The DOAJ API returned an error: '{$param}'."
+
 msgid "plugins.importexport.doaj.cliUsage"
 msgstr ""
 "Usage:\n"
 "{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles "
 "objectId1 [objectId2] ...\n"
+
+msgid "plugins.generic.doaj.displayName"
+msgstr "DOAJ Plugin"
+
+msgid "plugins.generic.doaj.description"
+msgstr "Handles registration of articles or article versions with DOAJ"
