@@ -20,7 +20,6 @@ use APP\core\Application;
 use APP\facades\Repo;
 use APP\plugins\importexport\doaj\DOAJExportDeployment;
 use APP\plugins\importexport\doaj\DOAJExportPlugin;
-use PKP\controlledVocab\ControlledVocab;
 use PKP\core\PKPString;
 use PKP\plugins\importexport\PKPImportExportFilter;
 
@@ -174,13 +173,15 @@ class DOAJJsonFilter extends PKPImportExportFilter
         if (!empty($abstract)) {
             $article['bibjson']['abstract'] = PKPString::html2text($abstract);
         }
+
         // Keywords
-        $keywords = Repo::controlledVocab()->getBySymbolic(
-            ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
-            Application::ASSOC_TYPE_PUBLICATION,
-            $publication->getId(),
-            [$publicationLocale]
-        );
+        $keywords = collect($publication->getData('keywords') ?? [])
+            ->map(
+                fn (array $items): array => collect($items)
+                    ->pluck('name')
+                    ->all()
+            )
+            ->all();
 
         $allowedNoOfKeywords = array_slice($keywords[$publicationLocale] ?? [], 0, 6);
         if (!empty($keywords[$publicationLocale])) {
