@@ -1,40 +1,36 @@
 <?php
 
 /**
- * @file controllers/grid/submissions/ExportPublishedSubmissionsListGridCellProvider.php
+ * @file controllers/grid/publications/ExportPublishedPublicationsListGridCellProvider.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2025 Simon Fraser University
+ * Copyright (c) 2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * @class ExportPublishedSubmissionsListGridCellProvider
+ * @class ExportPublishedPublicationsListGridCellProvider
  *
- * @ingroup controllers_grid_submissions
+ * @ingroup controllers_grid_publications
  *
- * @brief Class for a cell provider that can retrieve labels from submissions
+ * @brief Class for a cell provider that can retrieve labels from publications
  */
 
-namespace APP\controllers\grid\submissions;
+namespace APP\controllers\grid\publications;
 
-use APP\core\Application;
 use APP\facades\Repo;
 use APP\plugins\PubObjectsExportPlugin;
 use PKP\controllers\grid\DataObjectGridCellProvider;
+use PKP\controllers\grid\GridColumn;
 use PKP\controllers\grid\GridHandler;
-use PKP\core\PKPApplication;
 use PKP\linkAction\LinkAction;
-use PKP\linkAction\request\AjaxModal;
 use PKP\linkAction\request\RedirectAction;
-use PKP\plugins\ImportExportPlugin;
 
-class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellProvider
+class ExportPublishedPublicationsListGridCellProvider extends DataObjectGridCellProvider
 {
-    /** @var ImportExportPlugin */
-    public $_plugin;
+    public PubObjectsExportPlugin $_plugin;
 
     public $_authorizedRoles;
 
-    public $_titleColumn;
+    public GridColumn $_titleColumn;
 
     /**
      * Constructor
@@ -60,17 +56,17 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
      */
     public function getCellActions($request, $row, $column, $position = GridHandler::GRID_ACTION_POSITION_DEFAULT)
     {
-        $submission = $row->getData();
+        $publication = $row->getData();
+        $submission = Repo::submission()->get($publication->getData('submissionId'));
         $columnId = $column->getId();
-
         switch ($columnId) {
             case 'title':
                 $this->_titleColumn = $column;
-                $title = $submission->getCurrentPublication()->getLocalizedTitle(null, 'html');
+                $title = $publication->getLocalizedTitle(null, 'html');
                 if (empty($title)) {
                     $title = __('common.untitled');
                 }
-                $authorsInTitle = $submission->getCurrentPublication()->getShortAuthorString();
+                $authorsInTitle = $publication->getShortAuthorString();
                 $title = $authorsInTitle . '; ' . $title;
                 return [
                     new LinkAction(
@@ -81,32 +77,10 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
                         $title
                     )
                 ];
-            case 'issue':
-                $contextId = $submission->getData('contextId');
-                $issueId = $submission->getCurrentPublication()->getData('issueId');
-                $issue = $issueId ? Repo::issue()->get($issueId) : null;
-                $issue = $issue?->getJournalId() == $contextId ? $issue : null;
-                if ($issue) {
-                    // Link to the issue edit modal
-                    $application = Application::get();
-                    $dispatcher = $application->getDispatcher();
-                    return [
-                        new LinkAction(
-                            'edit',
-                            new AjaxModal(
-                                $dispatcher->url($request, PKPApplication::ROUTE_COMPONENT, null, 'grid.issues.BackIssueGridHandler', 'editIssue', null, ['issueId' => $issue->getId()]),
-                                __('plugins.importexport.common.settings.DOIPluginSettings'),
-                            ),
-                            $issue->getIssueIdentification(),
-                            null
-                        )
-                    ];
-                }
-                break;
             case 'status':
-                $status = $submission->getData($this->_plugin->getDepositStatusSettingName());
+                $status = $publication->getData($this->_plugin->getDepositStatusSettingName());
                 $statusNames = $this->_plugin->getStatusNames();
-                $statusActions = $this->_plugin->getStatusActions($submission);
+                $statusActions = $this->_plugin->getStatusActions($publication);
                 if ($status && array_key_exists($status, $statusActions)) {
                     return [$statusActions[$status]];
                 }
@@ -123,20 +97,20 @@ class ExportPublishedSubmissionsListGridCellProvider extends DataObjectGridCellP
      */
     public function getTemplateVarsFromRowColumn($row, $column)
     {
-        $submission = $row->getData();
+        $publication = $row->getData();
         $columnId = $column->getId();
 
         switch ($columnId) {
-            case 'id':
-                return ['label' => $submission->getId()];
+            case 'submissionId':
+                return ['label' => $publication->getData('submissionId')];
+            case 'version':
+                return ['label' => $publication->getData('versionMajor') . '.' . $publication->getData('versionMinor')];
             case 'title':
                 return ['label' => ''];
-            case 'issue':
-                return ['label' => ''];
             case 'status':
-                $status = $submission->getData($this->_plugin->getDepositStatusSettingName());
+                $status = $publication->getData($this->_plugin->getDepositStatusSettingName());
                 $statusNames = $this->_plugin->getStatusNames();
-                $statusActions = $this->_plugin->getStatusActions($submission);
+                $statusActions = $this->_plugin->getStatusActions($publication);
                 if ($status) {
                     if (array_key_exists($status, $statusActions)) {
                         $label = '';
