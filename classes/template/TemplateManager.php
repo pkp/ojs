@@ -131,32 +131,17 @@ class TemplateManager extends PKPTemplateManager
 
         $menu = (array) $this->getState('menu');
 
-        // Add issues after submissions items
         if (count(array_intersect([Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN], $userRoles))) {
             $issuesLink = [
                 'name' => __('editor.navigation.issues'),
                 'url' => $router->url($request, null, 'manageIssues'),
-                'isCurrent' => $request->getRequestedPage() === 'manageIssues',
-                'icon' => 'Issues'
+                'isCurrent' => $request->getRequestedPage() === 'manageIssues'
             ];
-            $index = false;
-            $reviewAssignmentsIndex = array_search('reviewAssignments', array_keys($menu));
-            $mySubmissionsIndex = array_search('mySubmissions', array_keys($menu));
-            if ($mySubmissionsIndex !== false) {
-                $index = $mySubmissionsIndex;
-            } elseif ($reviewAssignmentsIndex !== false) {
-                $index = $reviewAssignmentsIndex;
-            } else {
-                $index = array_search('dashboards', array_keys($menu));
-            }
 
-            if ($index === false || count($menu) <= $index + 1) {
-                $menu['issues'] = $issuesLink;
-            } else {
-                $menu = array_slice($menu, 0, $index + 1, true)
-                    + ['issues' => $issuesLink]
-                    + array_slice($menu, $index + 1, null, true);
-            }
+            $contentCommentsIndex = array_search('userComments', array_keys($menu['content']));
+            $menu['content']['submenu'] = array_slice($menu['content']['submenu'], 0, $contentCommentsIndex + 1, true) +
+                ['issues' => $issuesLink] +
+                array_slice($menu['content']['submenu'], $contentCommentsIndex + 1, null, true);
         }
 
         if (count(array_intersect([Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN, Role::ROLE_ID_SUB_EDITOR], $userRoles))) {
