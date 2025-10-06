@@ -245,7 +245,7 @@
 			{/if}
 
 			{* References *}
-			{if $parsedCitations || (string) $publication->getData('citationsRaw')}
+			{if $currentContext->getData('citations') && ($parsedCitations->count() || (string) $publication->getData('citationsRaw'))}
 				<section class="item references">
 					<h2 class="label">
 						{translate key="submission.citations"}
