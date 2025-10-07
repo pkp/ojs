@@ -38,18 +38,8 @@ class DAO extends \PKP\submission\DAO
 
     /**
      * Get all published submissions (eventually with a pubId assigned and) matching the specified settings.
-     *
-     * @param null|mixed $pubIdType
-     * @param null|mixed $title
-     * @param null|mixed $author
-     * @param null|mixed $issueId
-     * @param null|mixed $pubIdSettingName
-     * @param null|mixed $pubIdSettingValue
-     * @param ?DBResultRange $rangeInfo
-     *
-     * @return DAOResultFactory<Submission>
      */
-    public function getExportable(int $contextId, $pubIdType = null, $title = null, $author = null, $issueId = null, $pubIdSettingName = null, $pubIdSettingValue = null, $rangeInfo = null)
+    public function getExportable(int $contextId, ?string $pubIdType = null, ?string $title = null, ?string $author = null, ?int $issueId = null, ?string $settingName = null, ?string $settingValue = null, ?DBResultRange $rangeInfo = null): DAOResultFactory
     {
         $q = DB::table('submissions', 's')
             ->leftJoin('publications AS p', 's.current_publication_id', '=', 'p.publication_id')
@@ -74,11 +64,11 @@ class DAO extends \PKP\submission\DAO
                     )
             )
             ->when(
-                $pubIdSettingName,
+                $settingName,
                 fn (Builder $q) => $q->leftJoin(
                     'submission_settings AS pss',
                     fn (JoinClause $j) => $j->on('s.submission_id', '=', 'pss.submission_id')
-                        ->where('pss.setting_name', '=', $pubIdSettingName)
+                        ->where('pss.setting_name', '=', $settingName)
                 )
             )
             ->where('s.context_id', '=', $contextId)
@@ -89,14 +79,18 @@ class DAO extends \PKP\submission\DAO
             ->when($author != null, fn (Builder $q) => $q->whereRaw("CONCAT(COALESCE(asgs.setting_value, ''), ' ', COALESCE(asfs.setting_value, '')) LIKE ?", ["%{$author}%"]))
             ->when($issueId != null, fn (Builder $q) => $q->where('p.issue_id', '=', $issueId))
             ->when(
-                $pubIdSettingName,
+                $settingName,
                 fn (Builder $q) => $q->when(
-                    $pubIdSettingValue === null,
+                    $settingValue === null,
                     fn (Builder $q) => $q->whereRaw("COALESCE(pss.setting_value, '') = ''"),
                     fn (Builder $q) => $q->when(
-                        $pubIdSettingValue != PubObjectsExportPlugin::EXPORT_STATUS_NOT_DEPOSITED,
-                        fn (Builder $q) => $q->where('pss.setting_value', '=', $pubIdSettingValue),
-                        fn (Builder $q) => $q->whereNull('pss.setting_value')
+                        $settingValue == PubObjectsExportPlugin::EXPORT_STATUS_NOT_DEPOSITED,
+                        fn (Builder $q) => $q->whereNull('pss.setting_value'),
+                        fn (Builder $q) => $q->when(
+                            $settingValue == PubObjectsExportPlugin::EXPORT_STATUS_DEPOSITABLE,
+                            fn (Builder $q) => $q->whereNull('pss.setting_value')->orWhere('pss.setting_value', '=', PubObjectsExportPlugin::EXPORT_STATUS_STALE),
+                            fn (Builder $q) => $q->where('pss.setting_value', '=', $settingValue)
+                        )
                     )
                 )
             )
