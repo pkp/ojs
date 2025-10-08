@@ -116,6 +116,13 @@ class TemplateManager extends PKPTemplateManager
     {
         parent::setupBackendPage();
 
+        $this->setConstants([
+            'publication' => [
+                'STATUS_READY_TO_PUBLISH' => Publication::STATUS_READY_TO_PUBLISH,
+                'STATUS_READY_TO_SCHEDULE' => Publication::STATUS_READY_TO_SCHEDULE,
+            ],
+        ]);
+
         $request = Application::get()->getRequest();
         if (PKPSessionGuard::isSessionDisable() ||
             !$request->getContext() ||
@@ -139,24 +146,8 @@ class TemplateManager extends PKPTemplateManager
                 'isCurrent' => $request->getRequestedPage() === 'manageIssues',
                 'icon' => 'Issues'
             ];
-            $index = false;
-            $reviewAssignmentsIndex = array_search('reviewAssignments', array_keys($menu));
-            $mySubmissionsIndex = array_search('mySubmissions', array_keys($menu));
-            if ($mySubmissionsIndex !== false) {
-                $index = $mySubmissionsIndex;
-            } elseif ($reviewAssignmentsIndex !== false) {
-                $index = $reviewAssignmentsIndex;
-            } else {
-                $index = array_search('dashboards', array_keys($menu));
-            }
-
-            if ($index === false || count($menu) <= $index + 1) {
-                $menu['issues'] = $issuesLink;
-            } else {
-                $menu = array_slice($menu, 0, $index + 1, true)
-                    + ['issues' => $issuesLink]
-                    + array_slice($menu, $index + 1, null, true);
-            }
+            
+            $menu['content']['submenu'] = ['issues' => $issuesLink] + $menu['content']['submenu'];
         }
 
         if (count(array_intersect([Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN, Role::ROLE_ID_SUB_EDITOR], $userRoles))) {
@@ -201,13 +192,6 @@ class TemplateManager extends PKPTemplateManager
                 ['institutions' => $institutionsLink] +
                 array_slice($menu, $paymentsIndex, null, true);
         }
-
-        $this->setConstants([
-            'publication' => [
-                'STATUS_READY_TO_PUBLISH' => Publication::STATUS_READY_TO_PUBLISH,
-                'STATUS_READY_TO_SCHEDULE' => Publication::STATUS_READY_TO_SCHEDULE,
-            ],
-        ]);
 
         $this->setState(['menu' => $menu]);
     }

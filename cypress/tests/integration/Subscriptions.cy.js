@@ -40,7 +40,8 @@ describe('Subscription tests', function() {
 		cy.get('#access [role="status"]').contains('Saved');
 
 		// Configure an issue for subscription.
-		cy.get('nav').contains('Issues').click();
+		cy.get('nav').contains('Content').click();		
+		cy.get('nav').contains('Issues').click({ force: true }); // Ensure submenu item click despite animation
 		cy.get('button:contains("Back Issues")').click();
 		cy.get('a:contains("Vol. 1 No. 2 (2014)")').click();
 		cy.get('[role="dialog"] a:contains("Access")').click();
