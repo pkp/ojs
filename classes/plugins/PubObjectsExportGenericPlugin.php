@@ -93,7 +93,8 @@ abstract class PubObjectsExportGenericPlugin extends GenericPlugin
     /**
      * Handle publishing a version:
      * If the same DOI is used for all versions: mark the registered submission stale if a new current publication has been published.
-     * If different DOIs are used for different versions: if a new minor (but already registered) version has been published, mark the version stale
+     * If different DOIs are used for different versions: if a minor (already registered - either a new or an upblished->published) version
+     * has been published, mark the version stale. If an already registered major version is published, mark it stale.
      *
      * @return bool Hook processing status
      */
@@ -112,24 +113,27 @@ abstract class PubObjectsExportGenericPlugin extends GenericPlugin
         ];
         $context = Application::get()->getRequest()->getContext();
         if ($context->getData(Context::SETTING_DOI_VERSIONING) &&
-            in_array($newPublication->getData($this->exportPlugin->getDepositStatusSettingName()), $updatableStatuses) &&
-            $newPublication->getData('versionMinor') != '0') {
+            in_array($newPublication->getData($this->exportPlugin->getDepositStatusSettingName()), $updatableStatuses)) {
+            if ($newPublication->getData('versionMinor') != '0') {
 
-            $lastMinorPublications = Repo::publication()->getCollector()
-                ->filterBySubmissionIds([$newPublication->getData('submissionId')])
-                ->filterByVersionStage($newPublication->getData('versionStage'))
-                ->filterByVersionMajor($newPublication->getData('versionMajor'))
-                ->filterByStatus([PKPSubmission::STATUS_PUBLISHED])
-                ->orderByVersion()
-                ->getMany()
-                ->last(); // minor versions are sorted ASC, so get only the last
+                $lastMinorPublications = Repo::publication()->getCollector()
+                    ->filterBySubmissionIds([$newPublication->getData('submissionId')])
+                    ->filterByVersionStage($newPublication->getData('versionStage'))
+                    ->filterByVersionMajor($newPublication->getData('versionMajor'))
+                    ->filterByStatus([PKPSubmission::STATUS_PUBLISHED])
+                    ->orderByVersion()
+                    ->getMany()
+                    ->last(); // minor versions are sorted ASC, so get only the last
 
-            // if it is the last published minor version
-            if ($newPublication->getId() == $lastMinorPublications->getId()) {
+                // if it is the last published minor version
+                if ($newPublication->getId() == $lastMinorPublications->getId()) {
 
-                // This will be the case if a new minor version, of a version that is already registered, is published
-                // (Because the settings are copied at versioning, this version will also have the status registered).
-                // Or if a last minor version was unpublished (its registered status did not change) and then published again.
+                    // This will be the case if a new minor version, of a version that is already registered, is published
+                    // (Because the settings are copied at versioning, this version will also have the status registered).
+                    // Or if a last minor version was unpublished (its registered status did not change) and then published again.
+                    $this->exportPlugin->markStale($newPublication);
+                }
+            } else {
                 $this->exportPlugin->markStale($newPublication);
             }
 
@@ -157,6 +161,7 @@ abstract class PubObjectsExportGenericPlugin extends GenericPlugin
 
         $newPublication = &$params[0];
         $submission = $params[2];
+        $wasCurrentPublication = $params[3];
 
         $updatableStatuses = [
             PubObjectsExportPlugin::EXPORT_STATUS_REGISTERED,
@@ -182,7 +187,7 @@ abstract class PubObjectsExportGenericPlugin extends GenericPlugin
                 $this->exportPlugin->markStale($lastMinorPublication);
             }
 
-        } elseif ($submission->getData('currentPublicationId') === $newPublication->getId() &&
+        } elseif ($wasCurrentPublication &&
             in_array($submission->getData($this->exportPlugin->getDepositStatusSettingName()), $updatableStatuses)) {
 
             $this->exportPlugin->markStale($submission);
