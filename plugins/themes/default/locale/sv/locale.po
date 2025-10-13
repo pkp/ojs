@@ -1,12 +1,12 @@
-# Magnus Annemark <magnus.annemark@ub.lu.se>, 2022.
+# Magnus Annemark <magnus.annemark@ub.lu.se>, 2022, 2025.
 # Ramana Fragola <ramana.fragola@kb.se>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:19+00:00\n"
-"PO-Revision-Date: 2025-10-07 10:45+0000\n"
-"Last-Translator: Ramana Fragola <ramana.fragola@kb.se>\n"
+"PO-Revision-Date: 2025-10-13 08:28+0000\n"
+"Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/sv/>\n"
 "Language: sv\n"
@@ -100,3 +100,6 @@ msgstr "Nedladdningsstatistik är inte tillgänglig ännu."
 
 msgid "plugins.themes.default.nextSlide"
 msgstr "Nästa bild"
+
+msgid "plugins.themes.default.prevSlide"
+msgstr "Förra bilden"
