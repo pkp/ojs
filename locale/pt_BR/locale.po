@@ -4,13 +4,14 @@
 # Daniel Caixeta <daniel.caixeta@inep.gov.br>, 2023.
 # Rodrigo Emmanuel Santana Borges <rodrigo@borges.net.br>, 2025.
 # Carolina Miki Tanigushi <carolina.tanigushi@scielo.org>, 2025.
+# Pedro Felipe de Oliveira Rocha <pedrofelipe.roc@gmail.com>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:43-07:00\n"
-"PO-Revision-Date: 2025-03-28 17:41+0000\n"
-"Last-Translator: Carolina Miki Tanigushi <carolina.tanigushi@scielo.org>\n"
+"PO-Revision-Date: 2025-10-14 20:08+0000\n"
+"Last-Translator: Pedro Felipe de Oliveira Rocha <pedrofelipe.roc@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -1482,10 +1483,10 @@ msgid "user.subscriptions.purchaseInstitutionalSubscription"
 msgstr "Adquirir Assinatura Institucional"
 
 msgid "user.subscriptions.expires"
-msgstr "Vencimento"
+msgstr "Vencimento: {$date}"
 
 msgid "user.subscriptions.expired"
-msgstr "Vencida"
+msgstr "Vencida: {$date}"
 
 msgid "user.subscriptions.viewSubscriptionTypes"
 msgstr "Ver tipos disponíveis de Assinaturas"
