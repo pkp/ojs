@@ -241,6 +241,7 @@ class ArticleHandler extends Handler
             'fileId' => $this->submissionFileId, // DEPRECATED in 3.4.0: https://github.com/pkp/pkp-lib/issues/6545
             'submissionFileId' => $this->submissionFileId,
             'enablePublicComments' => $enablePublicComments,
+            'publicationsPeerReviews' => Repo::publication()->getPeerReviews($article->getPublishedPublications()),
         ]);
         $this->setupTemplate($request);
 
