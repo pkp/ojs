@@ -285,7 +285,7 @@
 			{/if}
 
 			{if $enablePublicComments}
-				<section class="item comments" data-vue-root>
+				<section id="public-comments" class="item comments" data-vue-root>
 					<h2 class="label">
 						{translate key="userComment.commentsOnThisPublication"}
 					</h2>
