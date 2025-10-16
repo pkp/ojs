@@ -69,7 +69,7 @@ class SubscriptionForm extends Form
 
         // User is provided and valid
         $this->addCheck(new \PKP\form\validation\FormValidator($this, 'userId', 'required', 'manager.subscriptions.form.userIdRequired'));
-        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.userIdValid', fn ($userId) => !!Repo::user()->get($userId)));
+        $this->addCheck(new \PKP\form\validation\FormValidatorCustom($this, 'userId', 'required', 'manager.subscriptions.form.userIdValid', fn ($userId) => filter_var($userId, FILTER_VALIDATE_INT) && Repo::user()->get((int) $userId)));
 
         // Subscription status is provided and valid
         $this->addCheck(new \PKP\form\validation\FormValidator($this, 'status', 'required', 'manager.subscriptions.form.statusRequired'));
