@@ -827,7 +827,27 @@
 			}
 		},
 		"User": "user",
-		"UserGroup": "userGroup",
+		"UserGroup": {
+			"type": "object",
+			"description": "A group that a user belongs to. Defines a role and an access level",
+			"properties": {
+				"id": {
+					"type": "integer"
+				},
+				"roleId": {
+					"type": "integer"
+				},
+				"isDefault": {
+					"type": "boolean"
+				},
+				"showTitle": {
+					"type": "boolean"
+				},
+				"name": {
+					"type": "string"
+				}
+			}
+		},
 		"UserInterest": {
 			"type": "object",
 			"description": "A user's review interests.",
@@ -4300,6 +4320,50 @@
 					"403": {
 						"x-summary": "Request Unauthorized",
 						"description": "There are two possible conditions that will result in a `403` response. 1. You do not have permission to edit this context. 2. You submitted changes for one context from the API endpoint of another context. To edit a context, you must make a request to that context's API endpoint or the site-wide API endpoint.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested context could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/contexts/{contextId}/userGroup": {
+			"get": {
+				"tags": [
+					"User Groups"
+				],
+				"summary": "Get a list of user groups for a context.",
+				"description": "Get a list of user groups for any journal (OJS), press (OMP) or preprint server (OPS).",
+				"parameters": [
+					{
+						"name": "contextId",
+						"description": "Context ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "List of user groups.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/UserGroup"
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view this context.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
