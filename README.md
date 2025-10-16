@@ -54,7 +54,7 @@ ext-zlib             8.2.28     success
 lib-pcre             10.42      success                                       
 php                  8.2.28     success
   ```
-
+(Note that some PHP environments have different `php.ini` configuration files for web-based and command line invocation. In that case, running the Composer platform check from the command line may not reflect the PHP configuration that is used for web-based invocation.)
 </details>
 
 MySQL 5.7.22+, MariaDB 4.1+ or PostgreSQL 9.5+
