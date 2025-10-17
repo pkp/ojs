@@ -139,10 +139,10 @@ class TemplateManager extends PKPTemplateManager
                 'isCurrent' => $request->getRequestedPage() === 'manageIssues'
             ];
 
-            $contentCommentsIndex = array_search('userComments', array_keys($menu['content']));
-            $menu['content']['submenu'] = array_slice($menu['content']['submenu'], 0, $contentCommentsIndex + 1, true) +
+            $contentCommentsIndex = array_search('userComments', array_keys($menu['content'] ?? []));
+            $menu['content']['submenu'] = array_slice($menu['content']['submenu'] ?? [], 0, $contentCommentsIndex + 1, true) +
                 ['issues' => $issuesLink] +
-                array_slice($menu['content']['submenu'], $contentCommentsIndex + 1, null, true);
+                array_slice($menu['content']['submenu'] ?? [], $contentCommentsIndex + 1, null, true);
         }
 
         if (count(array_intersect([Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN, Role::ROLE_ID_SUB_EDITOR], $userRoles))) {
