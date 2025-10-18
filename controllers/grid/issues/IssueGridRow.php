@@ -71,7 +71,7 @@ class IssueGridRow extends GridRow
                 )
             );
 
-            if ($issue->getDatePublished()) {
+            if ($issue->getPublished()) {
                 $this->addAction(
                     new LinkAction(
                         'unpublish',
@@ -110,7 +110,7 @@ class IssueGridRow extends GridRow
 
             $currentIssue = Repo::issue()->getCurrent($issue->getJournalId());
             $isCurrentIssue = $currentIssue != null && $issue->getId() == $currentIssue->getId();
-            if ($issue->getDatePublished() && !$isCurrentIssue) {
+            if ($issue->getPublished() && !$isCurrentIssue) {
                 $this->addAction(
                     new LinkAction(
                         'setCurrentIssue',
