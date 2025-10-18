@@ -62,16 +62,16 @@ class IssueGridRow extends GridRow
             $dispatcher = $request->getDispatcher();
             $this->addAction(
                 new LinkAction(
-                    $issue->getDatePublished() ? 'viewIssue' : 'previewIssue',
+                    $issue->getPublished() ? 'viewIssue' : 'previewIssue',
                     new OpenWindowAction(
                         $dispatcher->url($request, PKPApplication::ROUTE_PAGE, null, 'issue', 'view', [$issueId])
                     ),
-                    __($issue->getDatePublished() ? 'grid.action.viewIssue' : 'grid.action.previewIssue'),
+                    __($issue->getPublished() ? 'grid.action.viewIssue' : 'grid.action.previewIssue'),
                     'information'
                 )
             );
 
-            if ($issue->getDatePublished()) {
+            if ($issue->getPublished()) {
                 $this->addAction(
                     new LinkAction(
                         'unpublish',
@@ -110,7 +110,7 @@ class IssueGridRow extends GridRow
 
             $currentIssue = Repo::issue()->getCurrent($issue->getJournalId());
             $isCurrentIssue = $currentIssue != null && $issue->getId() == $currentIssue->getId();
-            if ($issue->getDatePublished() && !$isCurrentIssue) {
+            if ($issue->getPublished() && !$isCurrentIssue) {
                 $this->addAction(
                     new LinkAction(
                         'setCurrentIssue',
