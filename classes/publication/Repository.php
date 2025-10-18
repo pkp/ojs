@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/publication/Repository.php
  *
@@ -153,21 +154,29 @@ class Repository extends \PKP\publication\Repository
         return $newId;
     }
 
-    /** @copydoc \PKP\publication\Repository::setStatusOnPublish() */
+    /**
+     * Set the publication status and datePublished on publish
+     *
+     * When an issue is published, any attached publications inherit the
+     * issue's `datePublished` in IssueGridHandler if they do not already
+     * have a specific publication date set.
+     *
+     * - If the issue is **not published**, the publication status is set to `STATUS_SCHEDULED`.
+     * - If the issue is **published** or there is no issue, the status is set to `STATUS_PUBLISHED`.
+     * - If the publication does not have a `datePublished`, it is set to the current date.
+     */
     protected function setStatusOnPublish(Publication $publication)
     {
-        // A publication may be scheduled in a future issue. In such cases,
-        // the `datePublished` should remain empty and the status should be set to
-        // scheduled.
-        //
-        // If there is no assigned issue, the journal may be using a continuous
-        // publishing model in which articles are published right away.
         $issue = Repo::issue()->get($publication->getData('issueId'));
+
+        // If issue is not published just set publication status to STATUS_SCHEDULED
         if ($issue && !$issue->getData('published')) {
-            $publication->setData('datePublished', null);
             $publication->setData('status', Submission::STATUS_SCHEDULED);
         } else {
+            // If issue is published or no issue, set publication status to STATUS_PUBLISHED
             $publication->setData('status', Submission::STATUS_PUBLISHED);
+
+            // If no predefined datePublished available for the publication, use current date
             if (!$publication->getData('datePublished')) {
                 $publication->setData('datePublished', Core::getCurrentDate());
             }
