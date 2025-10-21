@@ -108,7 +108,8 @@ class ArticlePubMedXmlFilter extends PersistableFilter
                 $articleNode->appendChild($doiNode);
             }
 
-            $articleNode->appendChild($doc->createElement('Language'))->appendChild($doc->createTextNode(LocaleConversion::get3LetterIsoFromLocale($publicationLocale)));
+            $languageCode = LocaleConversion::get3LetterIsoFromLocale($publicationLocale);
+            $articleNode->appendChild($doc->createElement('Language'))->appendChild($doc->createTextNode($languageCode));
 
             $authorListNode = $doc->createElement('AuthorList');
             foreach ($publication->getData('authors') ?? [] as $author) {
@@ -143,6 +144,14 @@ class ArticlePubMedXmlFilter extends PersistableFilter
 
             if ($abstract = PKPString::html2text($publication->getLocalizedData('abstract', $publicationLocale))) {
                 $articleNode->appendChild($doc->createElement('Abstract'))->appendChild($doc->createTextNode($abstract));
+            }
+
+            if ($otherAbstract = PKPString::html2text($publication->getLocalizedData('plainLanguageSummary', $publicationLocale))) {
+                $plainLanguageSummaryNode = $doc->createElement('OtherAbstract');
+                $plainLanguageSummaryNode->setAttribute('Language', $languageCode);
+                $plainLanguageSummaryNode->setAttribute('Type', 'plain-language-summary');
+                $plainLanguageSummaryNode->appendChild($doc->createTextNode($otherAbstract));
+                $articleNode->appendChild($plainLanguageSummaryNode);
             }
 
             // Keywords
