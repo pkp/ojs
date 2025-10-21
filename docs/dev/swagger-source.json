@@ -4348,6 +4348,20 @@
 						"in": "path",
 						"required": true,
 						"type": "integer"
+					},
+					{
+						"name": "stageIds",
+						"description": "Filter user groups by stage IDs they have access to.",
+						"in": "query",
+						"required": false,
+						"type": "array"
+					},
+					{
+						"name": "roleIds",
+						"description": "Filter user groups by associated role IDs.",
+						"in": "query",
+						"required": false,
+						"type": "array"
 					}
 				],
 				"responses": {
