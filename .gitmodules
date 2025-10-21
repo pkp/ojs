@@ -56,3 +56,7 @@
 [submodule "plugins/generic/credit"]
 	path = plugins/generic/credit
 	url = https://github.com/pkp/credit
+[submodule "plugins/generic/pflPlugin"]
+	path = plugins/generic/pflPlugin
+	url = https://github.com/pkp/pflPlugin
+	branch = main
