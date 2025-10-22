@@ -135,21 +135,44 @@ class TemplateManager extends PKPTemplateManager
         $router = $request->getRouter();
         $handler = $router->getHandler();
         $userRoles = (array) $handler->getAuthorizedContextObject(Application::ASSOC_TYPE_USER_ROLES);
+        $userGroups = (array) $router->getHandler()->getAuthorizedContextObject(Application::ASSOC_TYPE_USER_GROUP);
+        $hasSettingsAccess = array_reduce($userGroups, fn ($carry, $userGroup) => $carry || $userGroup->permitSettings, false);
 
         $menu = (array) $this->getState('menu');
 
-        // Add issues under content menu
+        // Add content before statistics menu
         if (count(array_intersect([Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN], $userRoles))) {
-            $issuesLink = [
+            $contentSubmenu = [];
+
+            if ($hasSettingsAccess) {
+                $contentSubmenu['userComments'] = [
+                    'name' => __('manager.userComment.comments'),
+                    'url' => $router->url($request, null, 'management', 'settings', ['userComments']),
+                    'isCurrent' => $router->getRequestedPage($request) === 'management' && in_array('userComments', (array) $router->getRequestedArgs($request)),
+                ];
+            }
+
+            $contentSubmenu['issues'] = [
                 'name' => __('editor.navigation.issues'),
                 'url' => $router->url($request, null, 'manageIssues'),
-                'isCurrent' => $request->getRequestedPage() === 'manageIssues'
+                'isCurrent' => $request->getRequestedPage() === 'manageIssues',
             ];
 
-            $contentCommentsIndex = array_search('userComments', array_keys($menu['content'] ?? []));
-            $menu['content']['submenu'] = array_slice($menu['content']['submenu'] ?? [], 0, $contentCommentsIndex + 1, true) +
-                ['issues' => $issuesLink] +
-                array_slice($menu['content']['submenu'] ?? [], $contentCommentsIndex + 1, null, true);
+            $contentLink = [
+                'name' => __('navigation.content'),
+                'icon' => 'Content',
+                'submenu' => $contentSubmenu
+            ];
+
+            $index = false;
+            $index = array_search('statistics', array_keys($menu));
+            if ($index === false || count($menu) === $index) {
+                $menu['content'] = $contentLink;
+            } else {
+                $menu = array_slice($menu, 0, $index, true) +
+                    ['content' => $contentLink] +
+                    array_slice($menu, $index, null, true);
+            }
         }
 
         if (count(array_intersect([Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN, Role::ROLE_ID_SUB_EDITOR], $userRoles))) {
