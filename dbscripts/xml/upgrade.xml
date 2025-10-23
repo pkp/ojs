@@ -208,6 +208,7 @@
 		<migration class="PKP\migration\upgrade\v3_6_0\I11779_UseEmailTemplateKeyOnEditTaskTemplates"/>
 		<migration class="PKP\migration\upgrade\v3_6_0\I11701_Notes"/>
 		<migration class="APP\migration\upgrade\v3_6_0\I11593_DOAJGenericPlugin"/>
+		<migration class="PKP\migration\upgrade\v3_6_0\I11917_TaskTemplateDueDate"/>
 		<note file="docs/release-notes/README-3.6.0" />
 	</upgrade>
 

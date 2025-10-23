@@ -2984,6 +2984,70 @@
 				}
 			}
 		},
+		"/submissions/{submissionId}/stage/{stageId}/tasks/fromTemplate/{templateId}": {
+			"get": {
+				"tags": [
+					"Submissions / Tasks"
+				],
+				"summary": "Get a task created from a specific template" ,
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "stageId",
+						"in": "path",
+						"description": "Stage ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "templateId",
+						"in": "path",
+						"description": "Template ID",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "A task created from a template",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/EditorialTask"
+							}
+						}
+					},
+					"401": {
+						"x-summary": "Request Unauthorized",
+						"description": "A workflow stage is invalid",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You are not allowed to access the requested submission or stage.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested submission or task template could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
 		"/submissions/{submissionId}/tasks/": {
 			"post": {
 				"tags": [
