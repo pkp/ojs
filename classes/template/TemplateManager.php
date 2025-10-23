@@ -116,6 +116,13 @@ class TemplateManager extends PKPTemplateManager
     {
         parent::setupBackendPage();
 
+        $this->setConstants([
+            'publication' => [
+                'STATUS_READY_TO_PUBLISH' => Publication::STATUS_READY_TO_PUBLISH,
+                'STATUS_READY_TO_SCHEDULE' => Publication::STATUS_READY_TO_SCHEDULE,
+            ],
+        ]);
+
         $request = Application::get()->getRequest();
         if (PKPSessionGuard::isSessionDisable() ||
             !$request->getContext() ||
@@ -187,13 +194,6 @@ class TemplateManager extends PKPTemplateManager
                 ['institutions' => $institutionsLink] +
                 array_slice($menu, $paymentsIndex, null, true);
         }
-
-        $this->setConstants([
-            'publication' => [
-                'STATUS_READY_TO_PUBLISH' => Publication::STATUS_READY_TO_PUBLISH,
-                'STATUS_READY_TO_SCHEDULE' => Publication::STATUS_READY_TO_SCHEDULE,
-            ],
-        ]);
 
         $this->setState(['menu' => $menu]);
     }

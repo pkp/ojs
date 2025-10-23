@@ -76,8 +76,12 @@ class IndexHandler extends PKPIndexHandler
             $templateMgr->assign(['authorUserGroups' => $authorUserGroups]);
 
             $activeTheme = $templateMgr->getTemplateVars('activeTheme');
+            $journalContentOptions = $activeTheme->getOption('journalContentOrganization');
+            if (!is_array($journalContentOptions)) {
+                $journalContentOptions = JournalContentOption::default($journal);
+            }
 
-            if (in_array(JournalContentOption::CATEGORY_LISTING->value, $activeTheme->getOption('journalContentOrganization'))) {
+            if (in_array(JournalContentOption::CATEGORY_LISTING->value, $journalContentOptions)) {
                 $categories = Repo::category()
                     ->getCollector()
                     ->filterByContextIds([$journal->getId()])
@@ -86,7 +90,7 @@ class IndexHandler extends PKPIndexHandler
                 $templateMgr->assign(['categories' => $categories]);
             }
 
-            if (in_array(JournalContentOption::RECENT_PUBLISHED->value, $activeTheme->getOption('journalContentOrganization'))) {
+            if (in_array(JournalContentOption::RECENT_PUBLISHED->value, $journalContentOptions)) {
                 $rangeInfo = $this->getRangeInfo($request, 'publishedPublications');
                 $itemsPerPage = $journal->getData('itemsPerPage');
 
@@ -117,8 +121,7 @@ class IndexHandler extends PKPIndexHandler
                 'journalDescription' => $journal->getLocalizedData('description'),
             ]);
 
-            if (in_array(JournalContentOption::ISSUE_TOC->value, $activeTheme->getOption('journalContentOrganization'))) {
-
+            if (in_array(JournalContentOption::ISSUE_TOC->value, $journalContentOptions)) {
                 $issue = Repo::issue()->getCurrent($journal->getId(), true);
                 if (isset($issue) && $journal->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE) {
                     // The current issue TOC/cover page should be displayed below the custom home page.

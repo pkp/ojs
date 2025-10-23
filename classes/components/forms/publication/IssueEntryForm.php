@@ -15,7 +15,6 @@
 
 namespace APP\components\forms\publication;
 
-use APP\components\forms\publication\traits\HasFieldIssueSelection;
 use APP\facades\Repo;
 use PKP\components\forms\FieldAutosuggestPreset;
 use PKP\components\forms\FieldSelect;
@@ -25,8 +24,6 @@ use PKP\components\forms\FormComponent;
 
 class IssueEntryForm extends FormComponent
 {
-    use HasFieldIssueSelection;
-
     public const FORM_ISSUE_ENTRY = 'issueEntry';
     public $id = self::FORM_ISSUE_ENTRY;
     public $method = 'PUT';
@@ -61,15 +58,6 @@ class IssueEntryForm extends FormComponent
                 'value' => (int) $section['id'],
             ];
         }
-
-        $issueCount = Repo::issue()->getCollector()
-            ->filterByContextIds([$publicationContext->getId()])
-            ->getCount();
-
-        if ($issueCount > 0) {
-            $this->addFieldIssueSelection($publication, $publicationContext);
-        }
-
 
         $this->addField(new FieldSelect('sectionId', [
             'label' => __('section.section'),
