@@ -89,7 +89,19 @@ class NativeXmlIssueGalleyFilter extends NativeImportFilter {
 				$issueFile->setIssueId($issue->getId());
 
 				for ($o = $n->firstChild; $o !== null; $o=$o->nextSibling) if (is_a($o, 'DOMElement')) switch($o->tagName) {
-					case 'file_name': $issueFile->setServerFileName($o->textContent); break;
+					case 'file_name':
+						$issueFile->setServerFileName(trim(
+							preg_replace(
+								"/[^a-z0-9\.\-]+/",
+								"",
+								str_replace(
+									[' ', '_', ':'],
+									'-',
+									strtolower($o->textContent)
+								)
+							)
+						));
+						break;
 					case 'file_type': $issueFile->setFileType($o->textContent); break;
 					case 'file_size': $issueFile->setFileSize($o->textContent); break;
 					case 'content_type': $issueFile->setContentType((int)$o->textContent); break;
