@@ -1,13 +1,14 @@
 # Josu Acosta <josuacostacalvo@gmail.com>, 2023.
 # Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023, 2025.
 # Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
+# HIZBEA Euskaltzaindia <hizbea@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:17-08:00\n"
-"PO-Revision-Date: 2025-10-02 10:49+0000\n"
-"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
+"PO-Revision-Date: 2025-10-24 11:13+0000\n"
+"Last-Translator: HIZBEA Euskaltzaindia <hizbea@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/emails/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
