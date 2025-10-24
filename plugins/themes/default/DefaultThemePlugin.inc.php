@@ -129,9 +129,10 @@ class DefaultThemePlugin extends ThemePlugin {
 		}
 
 		// Update colour based on theme option
-		if ($this->getOption('baseColour') !== '#1E6292') {
-			$additionalLessVariables[] = '@bg-base:' . $this->getOption('baseColour') . ';';
-			if (!$this->isColourDark($this->getOption('baseColour'))) {
+		if (($baseColour = $this->getOption('baseColour')) !== '#1E6292') {
+			if (!preg_match('/^#[0-9a-fA-F]{1,6}$/', $baseColour)) $baseColour = '#1E6292'; // pkp/pkp-lib#11974
+			$additionalLessVariables[] = '@bg-base:' . $baseColour . ';';
+			if (!$this->isColourDark($baseColour)) {
 				$additionalLessVariables[] = '@text-bg-base:rgba(0,0,0,0.84);';
 				$additionalLessVariables[] = '@bg-base-border-color:rgba(0,0,0,0.2);';
 			}
@@ -197,6 +198,14 @@ class DefaultThemePlugin extends ThemePlugin {
 	 */
 	function getContextSpecificPluginSettingsFile() {
 		return $this->getPluginPath() . '/settings.xml';
+	}
+
+	/** @see ThemePlugin::saveOption */
+	public function saveOption($name, $value, $contextId = null) {
+		// Validate the base colour setting value.
+		if ($name == 'baseColour' && !preg_match('/^#[0-9a-fA-F]{1,6}$/', $value)) $value = null; // pkp/pkp-lib#11974
+
+		parent::saveOption($name, $value, $contextId);
 	}
 
 	/**
