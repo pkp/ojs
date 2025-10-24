@@ -109,7 +109,18 @@ class NativeXmlIssueGalleyFilter extends \PKP\plugins\importexport\native\filter
                         for ($o = $n->firstChild; $o !== null; $o = $o->nextSibling) {
                             if ($o instanceof DOMElement) {
                                 switch ($o->tagName) {
-                                    case 'file_name': $issueFile->setServerFileName($o->textContent);
+                                    case 'file_name':
+                                        $issueFile->setServerFileName(trim(
+                                            preg_replace(
+                                                "/[^a-z0-9\.\-]+/",
+                                                "",
+                                                str_replace(
+                                                    [' ', '_', ':'],
+                                                    '-',
+                                                    strtolower($o->textContent)
+                                                )
+                                            )
+                                        ));
                                         break;
                                     case 'file_type': $issueFile->setFileType($o->textContent);
                                         break;
