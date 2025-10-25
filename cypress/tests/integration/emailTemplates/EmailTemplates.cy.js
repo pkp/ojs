@@ -1,5 +1,5 @@
 /**
- * @file cypress/tests/integration/emailTemplates/emailTemplates.cy.js
+ * @file cypress/tests/integration/emailTemplates/EmailTemplates.cy.js
  *
  * Copyright (c) 2014-2024 Simon Fraser University
  * Copyright (c) 2000-2024 John Willinsky
