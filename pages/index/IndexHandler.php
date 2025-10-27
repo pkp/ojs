@@ -101,10 +101,9 @@ class IndexHandler extends PKPIndexHandler
                     ->filterByStatus([Submission::STATUS_PUBLISHED]);
 
                 $totalPublications = $collector->getCount();
-
                 $templateMgr->assign('publishedPublications', new \Illuminate\Pagination\LengthAwarePaginator(
                     $collector
-                        ->offset($rangeInfo->page * $itemsPerPage)
+                        ->offset(max(0, $rangeInfo->page - 1) * $itemsPerPage)
                         ->limit($itemsPerPage)
                         ->getMany(),
                     $totalPublications,
