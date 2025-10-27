@@ -135,8 +135,6 @@ class TemplateManager extends PKPTemplateManager
         $router = $request->getRouter();
         $handler = $router->getHandler();
         $userRoles = (array) $handler->getAuthorizedContextObject(Application::ASSOC_TYPE_USER_ROLES);
-        $userGroups = (array) $router->getHandler()->getAuthorizedContextObject(Application::ASSOC_TYPE_USER_GROUP);
-        $hasSettingsAccess = array_reduce($userGroups, fn ($carry, $userGroup) => $carry || $userGroup->permitSettings, false);
 
         $menu = (array) $this->getState('menu');
 
@@ -144,7 +142,7 @@ class TemplateManager extends PKPTemplateManager
         if (count(array_intersect([Role::ROLE_ID_MANAGER, Role::ROLE_ID_SITE_ADMIN], $userRoles))) {
             $contentSubmenu = [];
 
-            if ($hasSettingsAccess) {
+            if ($request->getContext()->getData('enablePublicComments')) {
                 $contentSubmenu['userComments'] = [
                     'name' => __('manager.userComment.comments'),
                     'url' => $router->url($request, null, 'management', 'settings', ['userComments']),
