@@ -20,32 +20,12 @@ use PKP\mail\variables\ContextEmailVariable as PKPContextEmailVariable;
 
 class ContextEmailVariable extends PKPContextEmailVariable
 {
-    public const CONTEXT_ACRONYM = 'contextAcronym';
-
-    /**
-     * @copydoc Variable::descriptions()
-     */
-    public static function descriptions(): array
-    {
-        return array_merge(
-            parent::descriptions(),
-            [
-                static::CONTEXT_ACRONYM => __('emailTemplate.variable.context.contextAcronym'),
-            ]
-        );
-    }
-
     /**
      * @copydoc Variable::values()
      */
     public function values(string $locale): array
     {
-        $values = array_merge(
-            parent::values($locale),
-            [
-                static::CONTEXT_ACRONYM => htmlspecialchars($this->context->getLocalizedData('acronym')),
-            ],
-        );
+        $values = parent::values($locale);
 
         // Pass the values into the context signature so variables
         // used in the signature can be rendered.
