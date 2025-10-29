@@ -205,6 +205,9 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             );
         }
         if (!empty($subjects)) {
+
+            $subjects = array_map(static fn ($s) => $s['name'], $subjects);
+
             $subjectsNode = $doc->createElementNS($deployment->getNamespace(), 'subjects');
             foreach ($subjects as $subject) {
                 $subjectsNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'subject', htmlspecialchars($subject, ENT_COMPAT, 'UTF-8')));
