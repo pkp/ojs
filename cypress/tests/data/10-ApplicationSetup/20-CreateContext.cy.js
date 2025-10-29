@@ -54,6 +54,7 @@ describe('Data suite tests', function() {
 
 		// Wait for it to finish up before moving on
 		cy.contains('Settings Wizard', {timeout: 30000});
+		cy.logout();
 	});
 
 	it('Tests the settings wizard', function() {
@@ -92,6 +93,7 @@ describe('Data suite tests', function() {
 		cy.get('input[name="abbreviation-en"]').type('publicknowledge', {delay: 0});
 		cy.get('div[id=context]').find('button').contains('Save').click();
 		cy.get('#context [role="status"]').contains('Saved');
+		cy.logout();
 	});
 
 	it('Tests context settings form', function() {
@@ -119,6 +121,7 @@ describe('Data suite tests', function() {
 
 		cy.get('div[id=masthead]').find('button').contains('Save').click();
 		cy.get('#masthead [role="status"]').contains('Saved');
+		cy.logout();
 	});
 
 	it('Tests contact settings form', function() {
@@ -146,5 +149,6 @@ describe('Data suite tests', function() {
 		cy.get('input[name=supportEmail').clear().type('rvaca@mailinator.com', {delay: 0});
 		cy.get('div[id=contact').find('button').contains('Save').click();
 		cy.get('#contact [role="status"]').contains('Saved');
+		cy.logout();
 	});
 })

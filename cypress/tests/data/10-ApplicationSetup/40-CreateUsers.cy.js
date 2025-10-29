@@ -125,9 +125,9 @@ describe('Data suite tests', function() {
 				'roles': ['Proofreader']
 			}
 		];
+		cy.logout();
 		users.forEach(user => {
 			cy.createUserByInvitation(user);
 		});
-		cy.logout();
 	});
 })

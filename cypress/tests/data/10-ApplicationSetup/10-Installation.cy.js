@@ -10,5 +10,6 @@
 describe('Data Suite Tests', function() {
 	it('Installs the software', function() {
 		cy.install();
+		cy.logout();
 	})
 })
