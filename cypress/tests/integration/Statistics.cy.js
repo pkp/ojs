@@ -37,5 +37,6 @@ describe('Statistics Tests', function() {
 			'Articles',
 			'Reviews',
 		]);
+		cy.logout();
 	});
 });
