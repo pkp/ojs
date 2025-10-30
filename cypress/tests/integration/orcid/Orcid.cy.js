@@ -17,6 +17,7 @@ describe('ORCID tests', function() {
 			'index.php/publicknowledge/en/dashboard/editorial?currentViewId=assigned-to-me'
 		);
 		cy.wait(10000);
+		cy.logout();
 
 		// Select a submission in submission list
 		cy.findSubmissionAsEditor('dbarnes', null, 'Diouf');

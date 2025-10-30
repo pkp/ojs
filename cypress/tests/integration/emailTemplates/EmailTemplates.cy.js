@@ -32,6 +32,7 @@ describe('Email Template Access Tests', function() {
 		cy.contains('a', 'Add discussion').click();
 
 		cy.get('select#template').find('option').contains('Discussion (Copyediting)').should('not.exist');
+		cy.logout();
 	});
 
 	it('Checks that user can access unrestricted template not specifically assigned to their group', () => {
@@ -63,6 +64,7 @@ describe('Email Template Access Tests', function() {
 		cy.contains('a', 'Add discussion').click();
 
 		cy.get('select#template').find('option').contains('Discussion (Copyediting)').should('to.exist');
+		cy.logout();
 	});
 
 	it('Checks that user can access template assigned to their group', () => {
@@ -85,5 +87,6 @@ describe('Email Template Access Tests', function() {
 		cy.contains('a', 'Add discussion').click();
 
 		cy.get('select#template').find('option').contains('Discussion (Copyediting)').should('to.exist');
+		cy.logout();
 	});
 });
