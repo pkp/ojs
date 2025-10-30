@@ -2,7 +2,7 @@
 # Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-10-02 15:31+0000\n"
+"PO-Revision-Date: 2025-10-29 13:10+0000\n"
 "Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/default/eu/>"
 "\n"
@@ -161,7 +161,7 @@ msgstr ""
 
 msgid "default.contextSettings.checklist"
 msgstr ""
-"<p>Aurkezpen guztiek honako baldintza hauek bete behar dituzte.</"
+"<p>Bidalketa guztiek honako baldintza hauek bete behar dituzte.</"
 "p><ul><li>Bidalketa honek <a href=\"{$submissionGuidelinesUrl}\">Egileen "
 "jarraibideetan</a> azaldutako baldintzak betetzen ditu.</li><li>Bidalketa "
 "hau ez da lehenago argitaratu, ezta beste aldizkari batean aztertzeko "

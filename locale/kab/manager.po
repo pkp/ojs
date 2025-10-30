@@ -1,0 +1,218 @@
+# Athmane MOKRAOUI <butterflyoffire@users.noreply.translate.pkp.sfu.ca>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-10-15 20:38+0000\n"
+"Last-Translator: Athmane MOKRAOUI <butterflyoffire@users.noreply.translate."
+"pkp.sfu.ca>\n"
+"Language-Team: Kabyle <http://translate.pkp.sfu.ca/projects/ojs/manager/kab/>"
+"\n"
+"Language: kab\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "manager.setup.details"
+msgstr "Talqayt"
+
+msgid "manager.setup.information.forAuthors"
+msgstr "I yimeskaren"
+
+msgid "manager.setup.contextSummary"
+msgstr "Agzul n weɣmis"
+
+msgid "manager.setup.journalLogo.altText"
+msgstr "Alugu n weɣmis"
+
+msgid "manager.setup.lists"
+msgstr "Tibdarin"
+
+msgid "manager.setup.contextTitle"
+msgstr "Azwel n weɣmis"
+
+msgid "manager.setup.labelName"
+msgstr "Isem n tebzimt"
+
+msgid "manager.setup.management"
+msgstr "Asefrek"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Agwi"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Ẓreg"
+
+msgid "manager.subscriptions.form.status"
+msgstr "Addad"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Anermes"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Taɣult"
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Kkes"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Rnu"
+
+msgid "manager.subscriptions.notes"
+msgstr "Tizmilin"
+
+msgid "manager.subscriptions.user"
+msgstr "Aseqdac"
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Tanzagt"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Ẓreg"
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Aglam"
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Amasal"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Jerred"
+
+msgid "stats.publications.galleys"
+msgstr "Ifuyla"
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "manager.distribution.access"
+msgstr "Addaf"
+
+msgid "manager.distribution.publication"
+msgstr "Tasuffeɣt"
+
+msgid "manager.payment.action"
+msgstr "Tigawt"
+
+msgid "manager.payment.description"
+msgstr "Aglam"
+
+msgid "manager.payment.details"
+msgstr "Talqayt"
+
+msgid "manager.setup.aboutItemContent"
+msgstr "Agbur"
+
+msgid "manager.setup.information"
+msgstr "Talɣut"
+
+msgid "manager.setup.note"
+msgstr "Tazmilt"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Qbel"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Snulfu-d"
+
+msgid "manager.subscriptions.domain"
+msgstr "Taɣult"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Akk"
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Aseqdac"
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Tizmilin"
+
+msgid "manager.subscriptions.select"
+msgstr "Fren"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Snulfu-d"
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Tanzagt"
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Tixtiṛiyin"
+
+msgid "manager.setup.categories"
+msgstr "Taggayin"
+
+msgid "grid.category.path"
+msgstr "Abrid"
+
+msgid "plugins.importexport.common.settings"
+msgstr "Iɣewwaren"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Imagraden"
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Awal n uɛeddi"
+
+msgid "plugins.importexport.common.action"
+msgstr "Tigawt"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Sifeḍ"
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Ula yiwen"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "amagrad"
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "Sfeḍ"
+
+msgid "doi.editor.preview.objects"
+msgstr "Aferdis"
+
+msgid "manager.payment.generalOptions"
+msgstr "Tixtiṛiyin timuta"
+
+msgid "manager.people.allJournals"
+msgstr "Akk iɣmisen"
+
+msgid "manager.sections.readingTools"
+msgstr "Ifecka n tɣuṛi"
+
+msgid "manager.setup.contextName"
+msgstr "Isem n weɣmis"
+
+msgid "manager.setup.addItem"
+msgstr "Rnu aferdis"
+
+msgid "manager.setup.journalLogo"
+msgstr "Alugu n weɣmis"
+
+msgid "manager.setup.navigationBar"
+msgstr "Afeggag n tunigin"
+
+msgid "manager.payment.enable"
+msgstr "Rmed"
+
+msgid "manager.payment.options"
+msgstr "Tixtiṛiyin"
+
+msgid "manager.payment.notFound"
+msgstr "Ulac it"
+
+msgid "manager.setup"
+msgstr "Iɣewwaren n uɣmis"
+
+msgid "manager.setup.addNavItem"
+msgstr "Rnu aferdis"

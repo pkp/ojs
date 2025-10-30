@@ -2,7 +2,7 @@
 # Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-08-01 05:42+0000\n"
+"PO-Revision-Date: 2025-10-08 13:18+0000\n"
 "Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-users/eu/>\n"
@@ -18,3 +18,73 @@ msgstr "Erabiltzaileen XML plugina"
 
 msgid "plugins.importexport.users.description"
 msgstr "Inportatu eta esportatu erabiltzaileak"
+
+msgid "plugins.importexport.users.cliUsage"
+msgstr ""
+"Erabilera: {$scriptName} {$pluginName} [command] ...\n"
+"Komandoak:\n"
+"\timport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path]\n"
+"\texport [xmlFileName] [journal_path] [userId1] [userId2] ...\n"
+
+msgid "plugins.importexport.users.cliUsage.examples"
+msgstr ""
+"\n"
+"Adibideak:\n"
+"\tInportatu erabiltzaileak myJournal-era myImportFile.xml-tik:\n"
+"\t{$scriptName} {$pluginName} import myImportFile.xml myJournal\n"
+"\n"
+"\tEsportatu erabiltzaile guztiak myJournal-etik:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal\n"
+"\n"
+"\tEsportatu IDaren bidez zehaztutako erabiltzaileak:\n"
+"\t{$scriptName} {$pluginName} export myExportFile.xml myJournal 1 2\n"
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr ""
+"Jarraitu beste erabiltzaile batzuk inportatzen, errore bat gertatzen bada."
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Erroreak gertatu dira esportazioan"
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Inportatu erabiltzaileak"
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Erabiltzaile-datuen fitxategia"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr ""
+"Bidali jakinarazpen-mezu elektroniko bat inportatutako erabiltzaile "
+"bakoitzari, erabiltzailearen erabiltzaile-izena eta pasahitza dituena."
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Ondorengo erabiltzaileak arrakastaz inportatu dira sistemara"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Erroreak gertatu dira inportazioan"
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Berretsi hauek direla sistemara inportatu nahi dituzun erabiltzaileak"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Abisua"
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "\"{$journalPath}\" aldizkariaren helbide ezezaguna zehaztu da."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Esportatu erabiltzaileak"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Esportatu rolaren arabera"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Esportatu guztia"
+
+msgid "plugins.importexport.users.results"
+msgstr "Emaitzak"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr ""
+"Mesedez, kargatu fitxategi bat \"Inportatu\" atalean, jarraitu ahal izateko."

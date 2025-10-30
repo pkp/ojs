@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2025-04-16 12:58+0000\n"
+"PO-Revision-Date: 2025-10-27 16:55+0000\n"
 "Last-Translator: Pia Piontkowitz <pia.piontkowitz@rub.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/locale/de/>\n"
 "Language: de\n"
@@ -748,19 +748,19 @@ msgid "search.results.orderBy"
 msgstr "Ergebnisse sortieren nach"
 
 msgid "search.results.orderBy.article"
-msgstr "Artikeltitel"
+msgstr "Titel des Artikels"
 
 msgid "search.results.orderBy.author"
 msgstr "Autor/in"
 
 msgid "search.results.orderBy.date"
-msgstr "Veröffentlichungsdatum"
+msgstr "Publikationsdatum"
 
 msgid "search.results.orderBy.issue"
 msgstr "Ausgabe"
 
 msgid "search.results.orderBy.journal"
-msgstr "Zeitschriftentitel"
+msgstr "Titel der Zeitschrift"
 
 msgid "search.results.orderBy.popularityAll"
 msgstr "Beliebtheit (gesamte Zeit)"

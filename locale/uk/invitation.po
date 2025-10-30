@@ -1,0 +1,87 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-10-07 13:49+0000\n"
+"Last-Translator: Petro Bilous <petrobilous@ukr.net>\n"
+"Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/ojs/"
+"invitation/uk/>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "acceptInvitation.accountDetails.stepName"
+msgstr "Створити акаунт OJS"
+
+msgid "acceptInvitation.detailsReview.nextButtonLabel"
+msgstr "Прийняти й продовжити в OJS"
+
+msgid "acceptInvitation.modal.title"
+msgstr "Вам призначено нову роль в OJS"
+
+msgid "userInvitation.enterDetails.stepDescription"
+msgstr "Ви можете запросити їх отримати роль в OJS"
+
+msgid "userInvitation.roleTable.journalMasthead"
+msgstr "Заголовок журналу"
+
+msgid "userInvitation.search.userFound"
+msgstr "Користувач у журналі вже існує"
+
+msgid "userInvitation.search.userNotFound"
+msgstr "Користувач не має жодної ролі в цьому журналі"
+
+msgid "userInvitation.searchUser.stepDescription"
+msgstr ""
+"Знайдіть користувача, використовуючи його адресу електронної пошти, ім'я "
+"користувача або ORCID iD. Введіть принаймні одну інформацію, щоб розпочати. "
+"Якщо користувача не існує, можна запросити його зайняти певні ролі та стати "
+"частиною Вашого журналу. Якщо користувач уже існує в системі, можна "
+"переглянути інформацію про користувача й запросити його отримати додаткові "
+"ролі."
+
+msgid "userInvitation.sendMail.stepDescription"
+msgstr ""
+"Надішліть користувачеві електронного листа, щоб повідомити його про "
+"запрошення, наступні кроки, політику Загального регламенту про захист даних "
+"(GDPR) журналу та перевірку ORCID"
+
+msgid "acceptInvitation.accountDetails.stepDescription"
+msgstr ""
+"Щоби розпочати користуватися OJS і прийняти нову роль, Вам знадобиться "
+"створити в нас обліковий запис (акаунт). З цією метою, будь ласка, введіть "
+"ім'я користувача й пароль."
+
+msgid "userInvitation.modal.message"
+msgstr ""
+"Користувача {$email} запросили на нову роль в OJS. Ви можете отримувати "
+"оновлення про рішення користувача на сторінці «Користувачі та ролі», у "
+"сповіщеннях OJS та/або на своїй електронній пошті"
+
+msgid "acceptInvitation.accountDetails.stepLabel"
+msgstr "{$step} – Створити акаунт OJS"
+
+msgid "acceptInvitation.detailsReview.stepDescription"
+msgstr "Перегляньте деталі, щоб започаткувати свої нові ролі в OJS"
+
+msgid "acceptInvitation.modal.message"
+msgstr ""
+"Вітаємо з Вашою новою роллю в OJS! Тепер Ви можете мати доступ до нових "
+"опцій. Якщо Вам потрібна допомога в розумінні системи, будь ласка, натисніть "
+"кнопку «Допомога» всередині системи для інструкцій."
+
+msgid "acceptInvitation.verifyOrcid.stepDescription"
+msgstr ""
+"Ви можете підтвердити свій ORCID iD або пропустити цей процес. Якщо Ви "
+"вирішили пропустити цей процес зараз, то зможете підтвердити свій ORCID iD "
+"пізніше в розділі профілю в OJS"
+
+msgid "invitation.role.masthead"
+msgstr "Заголовок журналу"
+
+msgid "invitation.wizard.pageTitleDescription"
+msgstr ""
+"Ви запрошуєте користувача взяти участь в OJS, а також з'явитися в заголовку "
+"журналу"

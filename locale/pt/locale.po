@@ -2,13 +2,14 @@
 # Carla Marques <carla.marques@usdb.uminho.pt>, 2022, 2023.
 # José Carvalho <jcarvalho@keep.pt>, 2022, 2023.
 # António Moreira <amdsmoreira@gmail.com>, 2025.
+# Lívia Carolina Gouvêa de Faria <livia@mail.mayfirst.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2025-08-07 13:47+0000\n"
-"Last-Translator: António Moreira <amdsmoreira@gmail.com>\n"
+"PO-Revision-Date: 2025-10-28 17:30+0000\n"
+"Last-Translator: Lívia Carolina Gouvêa de Faria <livia@mail.mayfirst.org>\n"
 "Language-Team: Portuguese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "pt/>\n"
 "Language: pt\n"
@@ -195,7 +196,7 @@ msgid "article.suppFiles"
 msgstr "Documento(s) Suplementar(es)"
 
 msgid "article.suppFilesAbbrev"
-msgstr "Docs. Sup."
+msgstr "Aquivos Supl."
 
 msgid "article.discipline"
 msgstr "Área e sub-área do Conhecimento Académico"

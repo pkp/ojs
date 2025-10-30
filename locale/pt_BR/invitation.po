@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-10-21 10:46+0000\n"
+"Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
+"invitation/pt_BR/>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "acceptInvitation.accountDetails.stepLabel"
+msgstr "{$step} - Criar conta no OJS"
+
+msgid "acceptInvitation.accountDetails.stepName"
+msgstr "Criar conta no OJS"
+
+msgid "acceptInvitation.detailsReview.nextButtonLabel"
+msgstr "Aceitar e continuar para o OJS"
+
+msgid "acceptInvitation.modal.title"
+msgstr "Você recebeu um novo papel no OJS"
+
+msgid "userInvitation.roleTable.journalMasthead"
+msgstr "Expediente da Revista"
+
+msgid "userInvitation.search.userFound"
+msgstr "O usuário já existe na revista"
+
+msgid "userInvitation.search.userNotFound"
+msgstr "O usuário não possui um papel nesta revista"
+
+msgid "userInvitation.searchUser.stepDescription"
+msgstr ""
+"Busque o usuário utilizando o endereço de e-mail, nome de usuário ou ID "
+"ORCID. Insira pelo menos uma dessas informações para começar. Se o usuário "
+"não existir, você poderá convidá-lo para assumir papéis e fazer parte do seu "
+"periódico. Se o usuário já existir no sistema, você poderá visualizar suas "
+"informações e convidá-lo para assumir papéis adicionais."
+
+msgid "userInvitation.sendMail.stepDescription"
+msgstr ""
+"Envie um e-mail ao usuário para informá-lo sobre o convite, os próximos "
+"passos, as políticas de GDPR da revista e a verificação do ORCID"
+
+msgid "acceptInvitation.accountDetails.stepDescription"
+msgstr ""
+"Para começar a usar o OJS e aceitar o novo papel, você precisará criar uma "
+"conta conosco. Para isso, insira um nome de usuário e uma senha."
+
+msgid "acceptInvitation.detailsReview.stepDescription"
+msgstr "Revise os detalhes para iniciar seus novos papeis no OJS"
+
+msgid "acceptInvitation.modal.message"
+msgstr ""
+"Parabéns pela sua novo papel no OJS! Agora você pode ter acesso a novas "
+"opções. Se precisar de ajuda para entender o sistema, clique no botão “Ajuda”"
+" disponível em todo o sistema para obter orientações."
+
+msgid "acceptInvitation.verifyOrcid.stepDescription"
+msgstr ""
+"Você pode optar por verificar seu iD ORCID ou pular essa etapa. Se decidir "
+"pular agora, poderá verificar seu iD ORCID posteriormente na seção de perfil "
+"do OJS"
+
+msgid "invitation.wizard.pageTitleDescription"
+msgstr ""
+"Você está convidando um usuário para assumir um papel no OJS, além de "
+"aparecer no expediente da revista"
+
+msgid "invitation.role.masthead"
+msgstr "Expediente da Revista"
+
+msgid "userInvitation.enterDetails.stepDescription"
+msgstr "Você pode convidá-los para assumir um papel no OJS"
+
+msgid "userInvitation.modal.message"
+msgstr ""
+"{$email} foi convidado para um novo papel no OJS. Você poderá acompanhar a "
+"decisão do usuário na página “Usuários e Papéis”, nas suas notificações do "
+"OJS e/ou por e-mail"
