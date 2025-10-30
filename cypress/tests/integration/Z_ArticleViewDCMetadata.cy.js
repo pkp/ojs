@@ -483,6 +483,7 @@ describe('Article View Metadata - DC Plugin', function() {
 
 		// Publish the submission
 		cy.publish(submission.source.volume, submission.source.issueTitle);
+		cy.logout();
 	});
 
 	it('Tests if Header DC Metadata are present and consistent', function() {
