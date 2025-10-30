@@ -37,5 +37,6 @@ describe('Data suite tests', function() {
 		cy.get('label').contains('Daniel Barnes').click();
 		cy.get('label').contains('Minoti Inoue').click();
 		cy.get('form[id=sectionForm]').contains('Save').click();
+		cy.logout();
 	});
 })

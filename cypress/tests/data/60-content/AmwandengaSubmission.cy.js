@@ -253,6 +253,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('a').contains('Return to your dashboard');
 		cy.get('a').contains('Review this submission').click();
 		cy.get('[data-cy="active-modal"] p:contains("' + submission.title + '")');
+		cy.logout();
 	});
 
 	it('Sends a submission to review, assigns reviewers, accepts a submission, and sends to production', function() {
@@ -272,14 +273,13 @@ describe('Data suite: Amwandenga', function() {
 		cy.isActiveStageTab('Production');
 		cy.assignParticipant('Layout Editor', 'Stephen Hellier');
 		cy.assignParticipant('Proofreader', 'Sabine Kumar');
+		cy.logout();
 	});
 
 	it('Editor can edit publication details', function() {
 		cy.login('dbarnes');
 		cy.visit('/index.php/publicknowledge/workflow/access/' + submission.id);
 		cy.openWorkflowMenu('Unassigned version', 'Title & Abstract')
-
-
 
 		// Title and abstract
 		submission.prefix = 'The';
@@ -374,6 +374,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('button').contains('Continue').click();
 		cy.get('button').contains('Continue').click();
 		cy.get('button').contains('Complete').click();
+		cy.logout();
 	});
 
 	it('Author can not edit publication details', function() {
@@ -392,6 +393,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.openWorkflowMenu('Unassigned version', 'Galleys')
 		cy.get('button:contains("Add galley")').should('not.exist');
 		cy.get('[data-cy="active-modal"] button[aria-label="More Actions"]').should('not.exist')
+		cy.logout();
 	});
 
 	it('Allow author to edit publication details', function() {
@@ -411,6 +413,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.openWorkflowMenu('Unassigned version', 'Title & Abstract')
 		cy.get('button').contains('Save').click();
 		cy.get('[role="status"]').contains('Saved');
+		cy.logout();
 	});
 
 	it('Publish submission', function() {
@@ -428,6 +431,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.contains('Nicolas Riouf');
 		cy.contains('Professional Development');
 		cy.contains('Social Transformation');
+		cy.logout();
 	});
 
 	it('Article is not available when unpublished', function() {
@@ -463,6 +467,7 @@ describe('Data suite: Amwandenga', function() {
 		
 		cy.contains('All publication requirements have been met.');
 		cy.get('.pkpWorkflow__publishModal button').contains('Publish').click();
+		cy.logout();
 	});
 
 	it('Editor must create version to make changes', function() {
@@ -489,7 +494,6 @@ describe('Data suite: Amwandenga', function() {
 
 		// Edit Contributor
 		cy.openWorkflowMenu('Version of Record 1.1', 'Contributors')
-
 
 		cy.get('[data-cy="contributor-manager"]').contains('li','Alan Mwandenga').find('button').contains('Edit').click();
 
@@ -531,6 +535,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.wait(1000);
 		cy.contains('All publication requirements have been met.');
 		cy.get('.pkpWorkflow__publishModal button').contains('Publish').click();
+		cy.logout();
 	});
 
 	it('Article landing page displays versions at correct url path', function() {
@@ -558,6 +563,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.wait(1000);
 		cy.get('button').contains('View').click();
 		cy.contains('The Signalling Theory Dividends Version 2').should('not.exist');
+		cy.logout();
 	});
 
 	it('Recommend-only editors can not publish, unpublish or create versions', function() {
@@ -578,6 +584,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.openWorkflowMenu('Version of Record 1.0', 'Title & Abstract')
 		cy.contains('This version has been published and can not be edited.');
 		cy.get('button:contains("Unpublish")').should('not.exist');
+		cy.logout();
 	});
 
 	it('Section editors can have their permission to edit publication data revoked', function() {
@@ -593,6 +600,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('button').contains('OK').click();
 		cy.openWorkflowMenu('Version of Record 1.1', 'Title & Abstract');
 		cy.get('button').contains('Save').should('be.disabled');
+		cy.logout();
 	});
 
 	it('Logout as should redirect to the same submission workflow', function() {
@@ -611,5 +619,6 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('[data-cy="active-modal"] [data-cy="app-user-nav"] button').click();
 		cy.get('[data-cy="active-modal"] a:contains("Logout as amwandenga")').first().click();
 		cy.location('search').should('include', `workflowSubmissionId=${submission.id}`);
+		cy.logout();
 	});
 });
