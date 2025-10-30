@@ -33,5 +33,6 @@ describe('Data suite tests', function() {
 		cy.get('input[id=abstractsNotRequired]').click();
 		cy.get('label').contains('Minoti Inoue').click();
 		cy.get('form[id=sectionForm]').contains('Save').click();
+		cy.logout();
 	});
 })
