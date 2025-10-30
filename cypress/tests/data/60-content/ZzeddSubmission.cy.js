@@ -684,6 +684,7 @@ describe('Data suite tests', function() {
 
         cy.get('[data-cy="reviewer-manager"]').contains(suggestions[8].fullname);
         cy.get('[data-cy="reviewer-suggestion-manager"]').should('not.exist');
+        cy.logout();
     });
 
     after(function() {
