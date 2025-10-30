@@ -60,5 +60,6 @@ describe('Data suite tests', function() {
 		cy.logout();
 		cy.findSubmissionAsEditor('dbarnes', null, familyName);
 		cy.get('div.pkp_workflow_recommendations:contains("Recommendations: Accept Submission")');
+		cy.logout();
 	});
 })

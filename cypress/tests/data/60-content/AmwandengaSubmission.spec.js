@@ -46,6 +46,7 @@ describe('Data suite tests', function() {
 		cy.get('li.ui-state-active a:contains("Production")');
 		cy.assignParticipant('Layout Editor', 'Stephen Hellier');
 		cy.assignParticipant('Proofreader', 'Sabine Kumar');
+		cy.logout();
 	});
 
 	it('Editor can edit publication details', function() {
@@ -137,6 +138,7 @@ describe('Data suite tests', function() {
 		cy.get('button').contains('Continue').click();
 		cy.get('button').contains('Continue').click();
 		cy.get('button').contains('Complete').click();
+		cy.logout();
 	});
 
 	it('Author can not edit publication details', function() {
@@ -154,6 +156,7 @@ describe('Data suite tests', function() {
 		cy.get('#galleys-button').click();
 		cy.get('[id*="addGalley-button"]').should('not.exist');
 		cy.get('[id*="editGalley-button"]').contains('View').should('exist');
+		cy.logout();
 	});
 
 	it('Allow author to edit publication details', function() {
@@ -174,6 +177,7 @@ describe('Data suite tests', function() {
 		cy.get('#publication-button').click();
 		cy.get('#titleAbstract button').contains('Save').click();
 		cy.get('#titleAbstract [role="status"]').contains('Saved');
+		cy.logout();
 	});
 
 	it('Publish submission', function() {
@@ -190,6 +194,7 @@ describe('Data suite tests', function() {
 		cy.contains('Lorem Ipsum');
 		cy.contains('Professional Development');
 		cy.contains('Social Transformation');
+		cy.logout();
 	});
 
 	it('Article is not available when unpublished', function() {
@@ -216,6 +221,7 @@ describe('Data suite tests', function() {
 		cy.get('.pkpPublication button').contains('Schedule For Publication').click();
 		cy.contains('All publication requirements have been met.');
 		cy.get('.pkpWorkflow__publishModal button').contains('Publish').click();
+		cy.logout();
 	});
 
 	it('Editor must create version to make changes', function() {
@@ -281,6 +287,7 @@ describe('Data suite tests', function() {
 		cy.get('#publication button').contains('Publish').click();
 		cy.contains('All publication requirements have been met.');
 		cy.get('.pkpWorkflow__publishModal button').contains('Publish').click();
+		cy.logout();
 	});
 
 	it('Article landing page displays versions at correct url path', function() {
@@ -309,6 +316,7 @@ describe('Data suite tests', function() {
 		cy.get('.pkpWorkflow__header a').contains('View').click();
 		cy.contains('The Signalling Theory Dividends Version 2').should('not.exist');
 		cy.get('.versions').should('not.exist');
+		cy.logout();
 	});
 
 	it('Recommend-only editors can not publish, unpublish or create versions', function() {
@@ -332,6 +340,7 @@ describe('Data suite tests', function() {
 		cy.get('.pkpPublication__versions .pkpDropdown__action').eq(0).click();
 		cy.contains('This version has been published and can not be edited.');
 		cy.get('.pkpPublication .pkpHeader__actions button:contains("Unpublish")').should('not.exist');
+		cy.logout();
 	});
 
 	it('Section editors can have their permission to edit publication data revoked', function() {
@@ -350,5 +359,6 @@ describe('Data suite tests', function() {
 		cy.get('.pkpModalConfirmButton').contains('OK').click();
 		cy.get('#publication-button').click();
 		cy.get('#titleAbstract button').contains('Save').should('be.disabled');
+		cy.logout();
 	});
 });
