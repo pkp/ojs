@@ -36,6 +36,7 @@ describe('Submission Wizard', function() {
         cy.get('label:contains("Yes, my submission meets all of these requirements.")').click();
         cy.get('label:contains("Yes, I agree to have my data collected")').click();
         cy.get('button:contains("Begin Submission")').click();
+        cy.logout();
     }
 
     it('The comments for the editor are converted to a discussion with all editors and authors assigned', function() {
@@ -270,6 +271,7 @@ describe('Submission Wizard', function() {
             }).then(xhr => {
                 expect(xhr.status).to.eq(200);
             });
+        cy.logout();
     });
 
     it('When I try to submit without required data, it throws a validation error. I can submit after clearing all visible validation errors.', function() {
@@ -642,5 +644,6 @@ describe('Submission Wizard', function() {
             }).then(xhr => {
                 expect(xhr.status).to.eq(200);
             });
+        cy.logout();
     });
 })
