@@ -40,5 +40,6 @@ describe('ORCID tests', function() {
 					'ORCID Verification has been requested! Resend Verification Email'
 				).should('be.visible');
 			});
+		cy.logout();
 	});
 });
