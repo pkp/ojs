@@ -1,0 +1,137 @@
+# Athmane MOKRAOUI <butterflyoffire@users.noreply.translate.pkp.sfu.ca>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-10-15 20:38+0000\n"
+"Last-Translator: Athmane MOKRAOUI <butterflyoffire@users.noreply.translate."
+"pkp.sfu.ca>\n"
+"Language-Team: Kabyle <http://translate.pkp.sfu.ca/projects/ojs/locale/kab/>"
+"\n"
+"Language: kab\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "navigation.categories.browse"
+msgstr "Snirem"
+
+msgid "common.payment"
+msgstr "Lexlaṣ"
+
+msgid "common.queue.short.active"
+msgstr "D urmid"
+
+msgid "article.article"
+msgstr "Amagrad"
+
+msgid "article.articles"
+msgstr "Imagraden"
+
+msgid "common.publication"
+msgstr "Amagrad"
+
+msgid "common.publications"
+msgstr "Imagraden"
+
+msgid "article.authors"
+msgstr "Imeskaren"
+
+msgid "article.language"
+msgstr "Tutlayt"
+
+msgid "article.details"
+msgstr "Talqayt"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.suppFile"
+msgstr "Afaylu amernan"
+
+msgid "article.commentsToEditor"
+msgstr "Iwenniten n umeskar"
+
+msgid "article.comments.enable"
+msgstr "Rmed"
+
+msgid "article.fontSize.small.altText"
+msgstr "D tameẓyant"
+
+msgid "article.fontSize.large.altText"
+msgstr "D tameqrant"
+
+msgid "article.comments.disable"
+msgstr "Kkes armad"
+
+msgid "article.fontSize"
+msgstr "Tiddi n tsefsit"
+
+msgid "article.return"
+msgstr "Uɣal ar telqayt n umagrad"
+
+msgid "comments.commentsOnArticle"
+msgstr "Iwenniten ɣef umagrad-a"
+
+msgid "navigation.categories"
+msgstr "Taggayin"
+
+msgid "doi.manager.settings.publications"
+msgstr "Imagraden"
+
+msgid "navigation.current"
+msgstr "Amiran"
+
+msgid "common.queue.long.active"
+msgstr "D urmid"
+
+msgid "article.title"
+msgstr "Azwel"
+
+msgid "article.file"
+msgstr "Afaylu"
+
+msgid "article.subject"
+msgstr "Awalen tisura"
+
+msgid "submission.sent"
+msgstr "Yettwaceyyeɛ"
+
+msgid "reviewer.article.automatic"
+msgstr "(Awurman)"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Iwenniten"
+
+msgid "article.fontSize.medium.altText"
+msgstr "D talemmast"
+
+msgid "submission.logType.article"
+msgstr "Amagrad"
+
+msgid "submission.search"
+msgstr "Nadi amagrad"
+
+msgid "comments.authenticated"
+msgstr "sɣur <a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "search.results.orderBy.article"
+msgstr "Azwel n umagrad"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Tiririt-ik·im"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Wali iwenniten"
+
+msgid "section.abbreviation.example"
+msgstr "(Amedya, Imagraden=ART)"
+
+msgid "search.searchFor"
+msgstr "Anadi n imagraden i"
+
+msgid "article.pageTitle"
+msgstr "Taskant n {$title}"
+
+msgid "catalog.sortBy"
+msgstr "Asmizzwer n imagraden"

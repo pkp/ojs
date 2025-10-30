@@ -1,0 +1,58 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-10-27 16:55+0000\n"
+"Last-Translator: Pia Piontkowitz <pia.piontkowitz@rub.de>\n"
+"Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/invitation/"
+"de/>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "acceptInvitation.accountDetails.stepLabel"
+msgstr "{$step} - OJS Account kreieren"
+
+msgid "acceptInvitation.accountDetails.stepName"
+msgstr "OJS Account kreieren"
+
+msgid "acceptInvitation.detailsReview.nextButtonLabel"
+msgstr "Annehmen und weiter zu OJS"
+
+msgid "acceptInvitation.detailsReview.stepDescription"
+msgstr "Details ansehen, um mit Ihrer neuen Rolle in OJS zu arbeiten"
+
+msgid "invitation.role.masthead"
+msgstr "Impressum der Zeitschrift"
+
+msgid "invitation.wizard.pageTitleDescription"
+msgstr ""
+"Sie laden eine/n Benutzer/in dazu ein, eine Rolle in OJS anzunehmen, sowie "
+"im Impressum der Zeitschrift zu erscheinen"
+
+msgid "userInvitation.enterDetails.stepDescription"
+msgstr ""
+"Sie können diese Person dazu einladen, eine neue Rolle in OJS anzunehmen"
+
+msgid "acceptInvitation.accountDetails.stepDescription"
+msgstr ""
+"Um mit OJS zu arbeiten und die neue Rolle anzunehmen, müssen Sie einen "
+"Account kreieren. Geben Sie dafür bitte einen Benutzer/innennamen und ein "
+"Passwort ein."
+
+msgid "acceptInvitation.modal.message"
+msgstr ""
+"Herzlichen Glückwunsch zu Ihrer neuen Rolle in OJS! Sie haben jetzt "
+"möglicherweise Zugriff auf neue Optionen. Wenn Sie Hilfe bei der Verwendung "
+"des Systems benötigen, klicken Sie an entsprechender Stelle auf den \"Hilfe\""
+"-Button."
+
+msgid "acceptInvitation.modal.title"
+msgstr "Ihnen wurde eine neue Rolle in OJS zugewiesen"
+
+msgid "acceptInvitation.verifyOrcid.stepDescription"
+msgstr ""
+"Sie können Ihre ORCID iD verifizieren oder diesen Schritt überspringen. "
+"Sollten Sie den Schritt jetzt überspringen, können Sie die iD später noch in "
+"Ihrem OJS-Profil verifzieren"

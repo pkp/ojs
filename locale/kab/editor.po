@@ -1,0 +1,65 @@
+# Athmane MOKRAOUI <butterflyoffire@users.noreply.translate.pkp.sfu.ca>, 2025.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-10-15 20:38+0000\n"
+"Last-Translator: Athmane MOKRAOUI <butterflyoffire@users.noreply.translate."
+"pkp.sfu.ca>\n"
+"Language-Team: Kabyle <http://translate.pkp.sfu.ca/projects/ojs/editor/kab/>"
+"\n"
+"Language: kab\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "editor.me"
+msgstr "Nekki"
+
+msgid "editor.editorAdministration"
+msgstr "Tadbelt n umaẓrag"
+
+msgid "editor.issues.access"
+msgstr "Addaf"
+
+msgid "editor.submissions.accept"
+msgstr "Qbel"
+
+msgid "editor.issues.numArticles"
+msgstr "Iferdisen"
+
+msgid "editor.issues.description"
+msgstr "Aglam"
+
+msgid "editor.issues.remove"
+msgstr "Kkes"
+
+msgid "editor.issues.order"
+msgstr "Asmizzwer"
+
+msgid "editor.issues.preview"
+msgstr "Taskant"
+
+msgid "editor.issues.open"
+msgstr "Ldi"
+
+msgid "editor.issues.pages"
+msgstr "Isebtar"
+
+msgid "grid.action.viewIssue"
+msgstr "Wali"
+
+msgid "editor.submissions.invite"
+msgstr "Snubeg"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Taneggarut"
+
+msgid "editor.article.remove"
+msgstr "Kkes"
+
+msgid "editor.allEditors"
+msgstr "Akk imaẓragen"
+
+msgid "editor.submissions.showBy"
+msgstr "Sken-d s"

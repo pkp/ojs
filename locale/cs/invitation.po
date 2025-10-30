@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-10-04 09:29+0000\n"
+"Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
+"Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/invitation/cs/"
+">\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "acceptInvitation.accountDetails.stepLabel"
+msgstr "{$step} - Vytvoření OJS účtu"
+
+msgid "acceptInvitation.accountDetails.stepName"
+msgstr "Vytvořit OJS účet"
+
+msgid "acceptInvitation.detailsReview.stepDescription"
+msgstr "Zkontrolujte podrobnosti a začněte plnit své nové role v OJS"
+
+msgid "acceptInvitation.modal.title"
+msgstr "Byla vám přidělena nová role v OJS"
+
+msgid "userInvitation.enterDetails.stepDescription"
+msgstr "Můžete je pozvat, aby se zapojili do role v systému OJS"
+
+msgid "userInvitation.roleTable.journalMasthead"
+msgstr "Tiráž časopisu"
+
+msgid "userInvitation.search.userFound"
+msgstr "Uživatel již v časopisu existuje"
+
+msgid "userInvitation.search.userNotFound"
+msgstr "Uživatel nemá v tomto časopise žádnou roli"
+
+msgid "acceptInvitation.accountDetails.stepDescription"
+msgstr ""
+"Abyste mohli začít používat OJS a přijmout novou roli, musíte si u nás "
+"vytvořit účet. Za tímto účelem zadejte uživatelské jméno a heslo."
+
+msgid "acceptInvitation.detailsReview.nextButtonLabel"
+msgstr "Přijmout a pokračovat do OJS"
+
+msgid "acceptInvitation.modal.message"
+msgstr ""
+"Gratulujeme k vaší nové roli v OJS! Nyní máte přístup k novým možnostem. "
+"Pokud potřebujete pomoc s porozuměním systému, klikněte na tlačítko "
+"„Nápověda“ v systému a zobrazí se vám pokyny."
+
+msgid "acceptInvitation.verifyOrcid.stepDescription"
+msgstr ""
+"Můžete se rozhodnout ověřit své ORCID iD nebo tento krok přeskočit. Pokud se "
+"rozhodnete tento krok nyní přeskočit, můžete své ORCID iD ověřit později v "
+"sekci svého profilu v OJS"
+
+msgid "invitation.wizard.pageTitleDescription"
+msgstr ""
+"Zvete uživatele, aby převzal roli v OJS a zároveň se objevil v tiráži "
+"časopisu"
+
+msgid "invitation.role.masthead"
+msgstr "Tiráž časopisu"
+
+msgid "userInvitation.modal.message"
+msgstr ""
+"{$email} byl pozván do nové role v OJS. O rozhodnutí uživatele můžete být "
+"informováni na stránce Uživatelé a role, ve vašich oznámeních OJS a/nebo ve "
+"vašem e-mailu"
+
+msgid "userInvitation.searchUser.stepDescription"
+msgstr ""
+"Vyhledejte uživatele pomocí jeho e-mailové adresy, uživatelského jména nebo "
+"ORCID ID. Zadejte alespoň jeden údaj, abyste mohli začít. Pokud uživatel "
+"neexistuje, můžete ho pozvat, aby přijal role a stal se součástí vašeho "
+"časopisu. Pokud uživatel již v systému existuje, můžete zobrazit informace o "
+"uživateli a pozvat ho, aby přijal další role."
+
+msgid "userInvitation.sendMail.stepDescription"
+msgstr ""
+"Pošlete uživateli e-mail s informacemi o pozvánce, dalších krocích, zásadách "
+"GDPR pro časopis a ověření ORCID"

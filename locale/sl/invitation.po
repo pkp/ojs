@@ -1,0 +1,83 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-10-05 22:34+0000\n"
+"Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
+"Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/"
+"invitation/sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "acceptInvitation.accountDetails.stepLabel"
+msgstr "{$step} - Ustvarite OJS račun"
+
+msgid "acceptInvitation.accountDetails.stepName"
+msgstr "Ustvarite OJS račun"
+
+msgid "acceptInvitation.detailsReview.nextButtonLabel"
+msgstr "Sprejmite in nadaljujte v OJS"
+
+msgid "acceptInvitation.detailsReview.stepDescription"
+msgstr "Preglejte podrobnosti, da začnete s svojo novo vloge v OJS"
+
+msgid "acceptInvitation.modal.title"
+msgstr "V OJS ste dobili novo vlogo"
+
+msgid "acceptInvitation.verifyOrcid.stepDescription"
+msgstr ""
+"Lahko se odločite, da potrdite svoj ORCID iD ali to preskočite. Če se "
+"odločite, da to zdaj preskočite, lahko svoj ORCID iD potrdite kasneje v "
+"svojem profilu v OJS"
+
+msgid "invitation.role.masthead"
+msgstr "Kolofon revije"
+
+msgid "invitation.wizard.pageTitleDescription"
+msgstr ""
+"Uporabnika vabite, da prevzame vlogo v OJS in se pojavi v kolofonu revije"
+
+msgid "userInvitation.enterDetails.stepDescription"
+msgstr "Lahko jih povabite, da prevzamejo vlogo v OJS"
+
+msgid "userInvitation.modal.message"
+msgstr ""
+"{$email} je bil povabljen za novo vlogo v OJS. Odločitev uporabnika lahko "
+"spremljate na strani Uporabniki in vloge, v obvestilih OJS in/ali v svojem e-"
+"poštnem predalu"
+
+msgid "userInvitation.roleTable.journalMasthead"
+msgstr "Kolofon revije"
+
+msgid "userInvitation.search.userFound"
+msgstr "Ta uporabnik že obstaja pri reviji"
+
+msgid "userInvitation.search.userNotFound"
+msgstr "Ta uporabnik še nima vloge pri reviji"
+
+msgid "userInvitation.searchUser.stepDescription"
+msgstr ""
+"Poiščite uporabnika po njegovem e-poštnem naslovu, uporabniškem imenu ali "
+"ORCID ID. Vnesite vsaj en podatek, da lahko začnete. Če uporabnik ne "
+"obstaja, ga lahko povabite, da prevzame vloge in postane del vašega "
+"časopisa. Če uporabnik že obstaja v sistemu, lahko pregledate njegove "
+"podatke in ga povabite, da prevzame dodatne vloge."
+
+msgid "userInvitation.sendMail.stepDescription"
+msgstr ""
+"Uporabniku pošljite e-poštno sporočilo, v katerem ga obvestite o povabilu, "
+"naslednjih korakih, pravilih GDPR in preverjanju ORCID"
+
+msgid "acceptInvitation.accountDetails.stepDescription"
+msgstr ""
+"Da začnete delati z OJS in sprejeti novo vlogo, morate najprej narediti svoj "
+"uporabniški račun. Prosimo vnesite uporabniško ime in geslo."
+
+msgid "acceptInvitation.modal.message"
+msgstr ""
+"Čestitamo za novo vlogo v OJS! Sedaj imate morda dostop do novih možnosti. "
+"Če potrebujete pomoč pri razumevanju sistema, kliknite na gumb „Pomoč“, kjer "
+"boste našli navodila."

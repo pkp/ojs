@@ -1,20 +1,20 @@
 # Edvin Erdtman <edvin.erdtman@liu.se>, 2021.
-# Magnus Annemark <magnus.annemark@ub.lu.se>, 2022.
+# Magnus Annemark <magnus.annemark@ub.lu.se>, 2022, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:35+00:00\n"
-"PO-Revision-Date: 2022-06-14 12:37+0000\n"
+"PO-Revision-Date: 2025-10-13 08:28+0000\n"
 "Last-Translator: Magnus Annemark <magnus.annemark@ub.lu.se>\n"
-"Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/editor/"
-"sv_SE/>\n"
-"Language: sv_SE\n"
+"Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/editor/sv/>"
+"\n"
+"Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "editor.home"
 msgstr "Startsida för redaktör"
@@ -231,7 +231,7 @@ msgid "editor.issues.coverPageDisplay"
 msgstr "Visa"
 
 msgid "editor.issues.openAccess"
-msgstr "Open access"
+msgstr "Öppen tillgång"
 
 msgid "editor.issues.subscription"
 msgstr "Prenumeration"
@@ -490,3 +490,15 @@ msgstr ""
 
 msgid "editor.article.coverImage"
 msgstr "Omslagsbild"
+
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr ""
+"Om fältet lämnas tomt kommer datumet att tilldelas automatiskt när numret "
+"publiceras."
+
+msgid "editor.issues.datePublished.invalid"
+msgstr "Felaktigt datumformat. Formatet måste vara ÅÅÅÅ-MM-DD."
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr ""
+"Publiceringsdatum måste vara ifyllt i samband med att datumet publiceras."
