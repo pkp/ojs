@@ -38,6 +38,7 @@ describe('DOI/Crossref tests', function() {
 		// Save
 		cy.get('form#doiSettingsForm button:contains("Save")').click();
 		cy.get('div:contains("Your changes have been saved.")');
+		cy.logout();
 	});
 
 	it('Check Issue DOI Configuration', function() {
@@ -61,6 +62,7 @@ describe('DOI/Crossref tests', function() {
 		cy.get('div#editIssueTabs a').contains('Identifiers').click();
 
 		cy.get('fieldset#pubIdDOIFormArea p').contains('The DOI is assigned to this issue.');
+		cy.logout();
 	});
 
 	it('Check Issue DOI Visible', function() {
@@ -106,6 +108,7 @@ describe('DOI/Crossref tests', function() {
 					cy.get('.pkpWorkflow__publishModal button').contains('Publish').click();
 			}
 		});
+		cy.logout();
 	});
 
 	it('Check Submission DOI Visible', function() {
@@ -116,6 +119,7 @@ describe('DOI/Crossref tests', function() {
 
 		cy.get('section.item.doi')
 			.find('span.value').contains('https://doi.org/10.1234/');
+		cy.logout();
 	});
 
 	it('Check Submission Crossref Export', function() {
@@ -139,6 +143,7 @@ describe('DOI/Crossref tests', function() {
 		cy.get('button#export').click();
 
 		cy.contains('Validation successful!');
+		cy.logout();
 	});
 	
 })
