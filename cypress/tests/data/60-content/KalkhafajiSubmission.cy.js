@@ -23,6 +23,7 @@ describe('Data suite tests', function() {
 		],
 		'additionalAuthors': [
 			{
+				contributorType: Cypress.env('contributorTypePerson'),
 				givenName: {en: 'Margaret'},
 				familyName: {en: 'Morse'},
 				affiliations: [
@@ -32,7 +33,7 @@ describe('Data suite tests', function() {
 				],
 				email: 'mmorse@mailinator.com',
 				country: 'US',
-				userGroupId: Cypress.env('authorUserGroupId')
+				contributorRoles: [Cypress.env('contributorRoleAuthor')]
 			}
 		],
 		files: [

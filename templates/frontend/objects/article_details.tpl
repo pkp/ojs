@@ -122,12 +122,16 @@
 									{/foreach}
 								</span>
 							{/if}
-							{assign var=authorUserGroup value=$userGroupsById[$author->getData('userGroupId')]}
-							{if $authorUserGroup->showTitle}
-								<span class="userGroup">
-									{$authorUserGroup->getLocalizedData('name')|escape}
-								</span>
-							{/if}
+							<span class="contributor_roles">
+								{foreach $author->getLocalizedContributorRoleNames() as $contributorRoleName}
+									{strip}
+									<span class="value">
+										{$contributorRoleName|escape}
+									</span>
+									{if !$contributorRoleName@last}{translate key="common.commaListSeparator"}{/if}
+									{strip}
+								{/foreach}
+							</span>
 							{if $author->getData('orcid')}
 								<span class="orcid">
 									{if $author->hasVerifiedOrcid()}
