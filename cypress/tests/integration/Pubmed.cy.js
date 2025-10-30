@@ -34,5 +34,6 @@ describe('Pubmed tests', function () {
 			expect(Cypress.$(response.body).find('Article > Journal > Issn').text()).to.equal('0378-5955');
 			expect(Cypress.$(response.body).find('Article > ArticleTitle').text()).to.equal('The Signalling Theory Dividends');
 		});
+		cy.logout();
 	});
 });

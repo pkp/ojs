@@ -29,6 +29,7 @@ describe('Customize reviewer recommendations test', () => {
                 .find('tr:contains("' + recommendation + '")')
                 .should('exist');
         });
+		cy.logout();
     });
 
     it('Add, edit, and delete reviewer recommendations', () => {
@@ -118,6 +119,7 @@ describe('Customize reviewer recommendations test', () => {
             .find('tbody > tr')
             .should('have.length', defaultRecommendations.length);
             
+		cy.logout();
     });
 
     it('Enable/disable reviewer recommendations', () => {
@@ -175,6 +177,7 @@ describe('Customize reviewer recommendations test', () => {
             .find('tr:contains("See Comments")')
             .find('input[type="checkbox"]')
             .should('be.checked');
+		cy.logout();
     });
 
     it('Not allow to edit or delete a recommendation aleady used', () => {
@@ -184,6 +187,7 @@ describe('Customize reviewer recommendations test', () => {
             .find('tr:contains("Decline Submission")')
             .find('button[aria-label*="More Actions"]')
             .should('have.length', 0);
+		cy.logout();
     });
 
     it('Inactive recommendation not available in review assignment for selection', () => {
@@ -207,7 +211,7 @@ describe('Customize reviewer recommendations test', () => {
             .last()
             .find('select#reviewerRecommendationId option:contains("Resubmit Elsewhere")')
             .should('not.exist');
-        cy.logout
+        cy.logout();
 
         cy.accessReviewerRecommendations('dbarnes', null, 'publicknowledge');
 

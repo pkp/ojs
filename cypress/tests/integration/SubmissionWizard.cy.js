@@ -270,6 +270,7 @@ describe('Submission Wizard', function() {
             }).then(xhr => {
                 expect(xhr.status).to.eq(200);
             });
+		cy.logout();
     });
 
     it('When I try to submit without required data, it throws a validation error. I can submit after clearing all visible validation errors.', function() {
@@ -645,5 +646,6 @@ describe('Submission Wizard', function() {
             }).then(xhr => {
                 expect(xhr.status).to.eq(200);
             });
+		cy.logout();
     });
 })
