@@ -65,6 +65,7 @@ describe('Data suite tests', function() {
 		cy.get('button').contains('Continue').click();
 		cy.get('button').contains('Continue').click();
 		cy.get('button').contains('Complete').click();
+		cy.logout();
 	});
 
 	it('Schedule for publication', function() {
@@ -96,6 +97,7 @@ describe('Data suite tests', function() {
 		cy.visit('index.php/publicknowledge/manageIssues#future');
 		cy.get('a:contains("' + issueTitle + '")').click();
 		cy.get('div[id^="component-grid-toc-tocgrid-"] span:contains("' + submission.title + '")');
+		cy.logout();
 	});
 
 	it('Publish the issue', function() {
@@ -118,6 +120,7 @@ describe('Data suite tests', function() {
 		// and the button "Create New Version" (connected with submission) exist
 		cy.get('#publication button:contains("Unpublish")');
 		cy.get('#publication button:contains("Create New Version")');
+		cy.logout();
 	});
 
 	it('Unpublish the issue', function() {
@@ -139,6 +142,7 @@ describe('Data suite tests', function() {
 		cy.get('#publication button:contains("Unschedule")');
 		cy.get('#publication button:contains("Create New Version")').should('not.exist');
 		cy.get('#publication button:contains("Unpublish")').should('not.exist');
+		cy.logout();
 	});
 
 	it('Republish the issue', function() {
@@ -161,6 +165,7 @@ describe('Data suite tests', function() {
 		// and the button "Create New Version" (connected with submission) exist
 		cy.get('#publication button:contains("Unpublish")');
 		cy.get('#publication button:contains("Create New Version")');
+		cy.logout();
 	});
 
 	it('Remove submisison from TOC', function() {
@@ -183,6 +188,7 @@ describe('Data suite tests', function() {
 		cy.get('.pkpPublication__header:contains("Unscheduled")');
 		// the button "Schedule For Publication" exists
 		cy.get('#publication button:contains("Schedule For Publication")');
+		cy.logout();
 	});
 
 	it('Return back to the original state', function() {
@@ -212,5 +218,6 @@ describe('Data suite tests', function() {
 		cy.get('button:contains("OK")').click();
 		cy.visit('index.php/publicknowledge/issue/current');
 		cy.contains(submission.title);
+		cy.logout();
 	});
 });
