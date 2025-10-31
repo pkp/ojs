@@ -95,8 +95,6 @@ describe('Subscription tests', function() {
 			'roles': ['Reader']
 		});
 
-		cy.logout();
-
 		// See if the newly-subscribed user has a subscription
 		cy.login('reader', null, 'publicknowledge');
 		cy.visit('');
