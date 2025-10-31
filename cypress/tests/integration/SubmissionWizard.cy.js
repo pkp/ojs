@@ -36,7 +36,6 @@ describe('Submission Wizard', function() {
         cy.get('label:contains("Yes, my submission meets all of these requirements.")').click();
         cy.get('label:contains("Yes, I agree to have my data collected")').click();
         cy.get('button:contains("Begin Submission")').click();
-        cy.logout();
     }
 
     it('The comments for the editor are converted to a discussion with all editors and authors assigned', function() {
