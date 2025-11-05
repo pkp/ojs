@@ -53,9 +53,6 @@
 [submodule "plugins/oaiMetadataFormats/oaiJats"]
 	path = plugins/oaiMetadataFormats/oaiJats
 	url = https://github.com/pkp/oaiJats
-[submodule "plugins/generic/credit"]
-	path = plugins/generic/credit
-	url = https://github.com/pkp/credit
 [submodule "plugins/generic/pflPlugin"]
 	path = plugins/generic/pflPlugin
 	url = https://github.com/pkp/pflPlugin
