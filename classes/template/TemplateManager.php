@@ -164,7 +164,7 @@ class TemplateManager extends PKPTemplateManager
 
             $index = false;
             $index = array_search('statistics', array_keys($menu));
-            if ($index === false || count($menu) === $index) {
+            if ($index === false || $index === count($menu) - 1) {
                 $menu['content'] = $contentLink;
             } else {
                 $menu = array_slice($menu, 0, $index, true) +
@@ -195,7 +195,7 @@ class TemplateManager extends PKPTemplateManager
             ];
 
             $index = array_search('settings', array_keys($menu));
-            if ($index === false || count($menu) === $index) {
+            if ($index === false || $index === count($menu) - 1) {
                 $menu['payments'] = $paymentsLink;
             } else {
                 $menu = array_slice($menu, 0, $index, true) +
