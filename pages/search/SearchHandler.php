@@ -95,12 +95,12 @@ class SearchHandler extends Handler
         $yearStart = substr($yearRange->min_date_published, 0, 4);
         $yearEnd = substr($yearRange->max_date_published, 0, 4);
 
+        $this->_assignDateFromTo($request, $templateMgr);
+
         $templateMgr->assign([
             'query' => $query,
             'results' => $results,
             'searchContext' => $contextId,
-            'dateFrom' => $dateFrom ? date('Y-m-d H:i:s', $dateFrom) : null,
-            'dateTo' => $dateTo ? date('Y-m-d H:i:s', $dateTo) : null,
             'yearStart' => $yearStart,
             'yearEnd' => $yearEnd,
             'authorUserGroups' => UserGroup::withRoleIds([\PKP\security\Role::ROLE_ID_AUTHOR])
@@ -115,6 +115,46 @@ class SearchHandler extends Handler
         }
 
         $templateMgr->display('frontend/pages/search.tpl');
+    }
+
+    /**
+     * Assign dateFrom* and dateTo* variables to template
+     *
+     */
+    public function _assignDateFromTo(PKPRequest $request, TemplateManager &$templateMgr)
+    {
+        // Special case: publication date filters.
+        foreach (['From', 'To'] as $fromTo) {
+            $month = $request->getUserVar("date{$fromTo}Month");
+            $day = $request->getUserVar("date{$fromTo}Day");
+            $year = $request->getUserVar("date{$fromTo}Year");
+            if (empty($year)) {
+                $date = null;
+                $hasEmptyFilters = true;
+            } else {
+                $defaultMonth = ($fromTo == 'From' ? 1 : 12);
+                $defaultDay = ($fromTo == 'From' ? 1 : 31);
+                $date = date(
+                    'Y-m-d H:i:s',
+                    mktime(
+                        0,
+                        0,
+                        0,
+                        empty($month) ? $defaultMonth : $month,
+                        empty($day) ? $defaultDay : $day,
+                        $year
+                    )
+                );
+                $hasActiveFilters = true;
+            }
+
+            $templateMgr->assign([
+                "date{$fromTo}Month" => $month,
+                "date{$fromTo}Day" => $day,
+                "date{$fromTo}Year" => $year,
+                "date{$fromTo}" => $date
+            ]);
+        }
     }
 
     /**
