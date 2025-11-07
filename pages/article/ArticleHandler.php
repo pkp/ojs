@@ -45,7 +45,6 @@ use PKP\submission\Genre;
 use PKP\submission\GenreDAO;
 use PKP\submission\PKPSubmission;
 use PKP\submissionFile\SubmissionFile;
-use PKP\userGroup\UserGroup;
 use stdClass;
 
 class ArticleHandler extends Handler
@@ -317,9 +316,6 @@ class ArticleHandler extends Handler
         $templateMgr->assign([
             'primaryGalleys' => $primaryGalleys,
             'supplementaryGalleys' => $supplementaryGalleys,
-            'userGroupsById' => UserGroup::withPublicationIds([$this->publication->getId()])
-                ->get()
-                ->all()
         ]);
 
         // Citations
