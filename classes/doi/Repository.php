@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/doi/Repository.php
  *
@@ -62,28 +63,23 @@ class Repository extends \PKP\doi\Repository
         }
 
         // If not using default suffix, additional checks are required
-        $issueId = $publication->getData('issueId');
-        if ($issueId === null) {
-            throw new DoiException(
-                DoiException::PUBLICATION_MISSING_ISSUE,
-                $submission->getCurrentPublication()->getLocalizedFullTitle(),
-                $publication->getLocalizedFullTitle()
-            );
-        }
-
+        $patternNeedsIssue = PubIdPlugin::suffixHasIssuePattern($this->getPubIdSuffixPattern($publication, $context));
         $issue = Repo::issue()->get($publication->getData('issueId'));
-        if ($issue === null) {
-            throw new DoiException(
-                DoiException::PUBLICATION_MISSING_ISSUE,
-                $submission->getCurrentPublication()->getLocalizedFullTitle(),
-                $publication->getLocalizedFullTitle()
-            );
-        } elseif ($issue && $context->getId() != $issue->getJournalId()) {
-            throw new DoiException(
-                DoiException::PUBLICATION_MISSING_ISSUE,
-                $submission->getCurrentPublication()->getLocalizedFullTitle(),
-                $publication->getLocalizedFullTitle()
-            );
+
+        if ($patternNeedsIssue) {
+            if ($issue === null) {
+                throw new DoiException(
+                    DoiException::PUBLICATION_MISSING_ISSUE,
+                    $submission->getCurrentPublication()->getLocalizedFullTitle(),
+                    $publication->getLocalizedFullTitle()
+                );
+            } elseif ($issue && $context->getId() != $issue->getJournalId()) {
+                throw new DoiException(
+                    DoiException::PUBLICATION_MISSING_ISSUE,
+                    $submission->getCurrentPublication()->getLocalizedFullTitle(),
+                    $publication->getLocalizedFullTitle()
+                );
+            }
         }
 
         $doiSuffix = $this->generateSuffixPattern($publication, $context, $context->getData(Context::SETTING_DOI_SUFFIX_TYPE), $issue, $submission);
@@ -104,20 +100,23 @@ class Repository extends \PKP\doi\Repository
         }
 
         // If not using default suffix, additional checks are required
+        $patternNeedsIssue = PubIdPlugin::suffixHasIssuePattern($this->getPubIdSuffixPattern($galley, $context));
         $issue = Repo::issue()->getBySubmissionId($submission->getId());
 
-        if ($issue === null) {
-            throw new DoiException(
-                DoiException::REPRESENTATION_MISSING_ISSUE,
-                $submission->getCurrentPublication()->getLocalizedFullTitle(),
-                $galley->getLabel()
-            );
-        } elseif ($issue && $context->getId() != $issue->getJournalId()) {
-            throw new DoiException(
-                DoiException::REPRESENTATION_MISSING_ISSUE,
-                $submission->getCurrentPublication()->getLocalizedFullTitle(),
-                $galley->getLabel()
-            );
+        if ($patternNeedsIssue) {
+            if ($issue === null) {
+                throw new DoiException(
+                    DoiException::REPRESENTATION_MISSING_ISSUE,
+                    $submission->getCurrentPublication()->getLocalizedFullTitle(),
+                    $galley->getLabel()
+                );
+            } elseif ($issue && $context->getId() != $issue->getJournalId()) {
+                throw new DoiException(
+                    DoiException::REPRESENTATION_MISSING_ISSUE,
+                    $submission->getCurrentPublication()->getLocalizedFullTitle(),
+                    $galley->getLabel()
+                );
+            }
         }
 
         $doiSuffix = $this->generateSuffixPattern($galley, $context, $context->getData(Context::SETTING_DOI_SUFFIX_TYPE), $issue, $submission, $galley);
