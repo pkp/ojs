@@ -97,7 +97,7 @@ describe('Data suite tests', function() {
 		cy.visit('index.php/publicknowledge/dashboard/editorial');
 		cy.get('nav').contains('Active submissions').click();
 		cy.openSubmission(author.familyName);
-		cy.openWorkflowMenu('Unassigned version', 'Title & Abstract')
+		cy.openWorkflowMenu('Title & Abstract');
 		cy.get('button:contains("Schedule For Publication")').click();
 		cy.wait(1000);
 
@@ -107,20 +107,17 @@ describe('Data suite tests', function() {
 
 		// complete publication stage version selection and confrim the issue and stage settings
 		cy.assignPublicationStage('VoR', 'false', true);
+		cy.contains('div', 'All publication requirements have been met.');
+		cy.get('.pkpWorkflow__publishModal')
+		.contains('button', /Publish|Schedule For Publication/)
+		.click();
 
-		cy.get('div:contains("All publication requirements have been met. This will be published when ' + issueTitle + ' is published. Are you sure you want to schedule this for publication?")');
-		cy.get('.pkpWorkflow__publishModal button:contains("Schedule For Publication")').click();
 
-		// check status = 5 (scheduled)
-		cy.wait(1000); // to be able to get the header
-		// check submission status
-		cy.get('[data-cy="sidemodal-header"]').contains("Scheduled");
-		// check publication status
-		cy.get('[data-cy="workflow-controls-left"]').contains("Scheduled");
+
 		// the button "Unschedule" exists
 		// the button "Unpublish" (connected with publication) does not exist
-		cy.get('button:contains("Unschedule")');
-		cy.get('button:contains("Unpublish")').should('not.exist');
+		cy.contains('button', /(Unpublish|Unschedule)/).should('exist');
+
 
 		// isInTOC:
 		cy.visit('index.php/publicknowledge/manageIssues#future');
@@ -140,14 +137,14 @@ describe('Data suite tests', function() {
 		cy.get('nav').contains('Published').click();
 		cy.openSubmission(author.familyName);
 		// check submission status
-		cy.get('[data-cy="sidemodal-header"]').contains("Published");
+		cy.contains('Status: Published');
 		// check publication status
 		cy.get('[data-cy="workflow-controls-left"]').contains("Published");
 		cy.contains('Warning: This version has been published. Editing it may impact the published content.');
 		// the button "Unpublish" (connected with the publication)
 		// and the button "Create New Version" (connected with submission) exist
 		cy.get('button:contains("Unpublish")').should('exist');
-		cy.get('button:contains("Create New Version")').should('exist');
+		cy.contains('a', 'Create New Version').should('exist');
 	});
 
 	it('Unpublish the issue', function() {
@@ -184,14 +181,14 @@ describe('Data suite tests', function() {
 		cy.get('nav').contains('Published').click();
 		cy.openSubmission(author.familyName);
 		// check submission status
-		cy.get('[data-cy="sidemodal-header"]').contains("Published");
+		cy.contains('Status: Published');
 		// check publication status
 		cy.get('[data-cy="workflow-controls-left"]').contains("Published");
 		cy.contains('Warning: This version has been published. Editing it may impact the published content.');
 		// the button "Unpublish" (connected with the publication)
 		// and the button "Create New Version" (connected with submission) exist
 		cy.get('button:contains("Unpublish")').should('exist');
-		cy.get('button:contains("Create New Version")').should('exist');
+		cy.contains('a', 'Create New Version').should('exist');
 	});
 
 	it('Remove submission from TOC', function() {

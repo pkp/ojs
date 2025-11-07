@@ -474,20 +474,15 @@ describe('Data suite: Amwandenga', function() {
 		cy.login('dbarnes');
 		cy.visit('/index.php/publicknowledge/workflow/access/' + submission.id);
 		cy.openWorkflowMenu('Title & Abstract')
-		cy.get('button').contains('Create New Version').click();
-		cy.contains('Are you sure you want to create a new version?');
-		cy.get('div[role=dialog]:contains("Create New Version")').get('button').contains('Yes').click();
+		cy.get('a').contains('Create New Version').click();
+		cy.get('div[role="dialog"]').should('contain', 'Create New Version');
+		cy.get('div[role="dialog"]').contains('Confirm').click();
 
-		// Toggle between versions
-		cy.get('button').contains('All Versions').click();
-		cy.get('button').contains('Version 1').click();
+		cy.openWorkflowMenu('Version of Record 1.0', 'Title & Abstract');
 		// check for the warning text on published version
 		cy.contains('Warning: This version has been published. Editing it may impact the published content.');
 
-		cy.openWorkflowMenu('Title & Abstract')
-		cy.get('button').contains('All Versions').click();
-		cy.get('button').contains('Version 2').click();
-	
+		cy.openWorkflowMenu('Version of Record 1.1', 'Title & Abstract');
 		cy.get('button').contains('Publish');
 
 		// Edit unpublished version's title
@@ -562,7 +557,7 @@ describe('Data suite: Amwandenga', function() {
 	it('Article landing page displays correct version after version is unpublished', function() {
 		cy.login('dbarnes');
 		cy.visit('/index.php/publicknowledge/workflow/access/' + submission.id);
-		cy.openWorkflowMenu('Title & Abstract')
+		cy.openWorkflowMenu('Version of Record 1.1', 'Title & Abstract')
 		cy.get('button').contains('Unpublish').should('exist').click();
 		cy.contains('Are you sure you don\'t want this to be published?');
 		cy.get('[data-cy="dialog"] button').contains('Unpublish').click();
@@ -584,15 +579,13 @@ describe('Data suite: Amwandenga', function() {
 		cy.waitJQuery();
 		cy.clickStageParticipantButton('Stephanie Berardo', 'Login As');
 		cy.get('button').contains('OK').click();
-		cy.openWorkflowMenu('Title & Abstract')
+		cy.openWorkflowMenu('Version of Record 1.1', 'Title & Abstract');
 		cy.wait(1000); // let the UI load fully
 	  
 		cy.get('button:contains("Publish")').should('not.exist');
 		cy.get('button:contains("Create Version")').should('not.exist');
 		cy.get('button:contains("Unpublish")').should('not.exist');
-	  	cy.get('button:contains("All Versions")').click();
-		cy.wait(500);
-		cy.get('button').contains('Version 1').click();
+		cy.openWorkflowMenu('Version of Record 1.0', 'Title & Abstract');
 		cy.contains('Warning: This version has been published. Editing it may impact the published content.');
 	});
 
