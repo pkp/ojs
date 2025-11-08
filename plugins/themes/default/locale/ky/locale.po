@@ -1,7 +1,7 @@
-# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-04-15 17:38+0000\n"
+"PO-Revision-Date: 2025-11-08 16:37+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/ky/>\n"
@@ -93,3 +93,9 @@ msgstr "Жүктөлүп алынгандар"
 
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Жүктөө дайындары азырынча жеткиликтүү эмес."
+
+msgid "plugins.themes.default.prevSlide"
+msgstr "Мурунку бет"
+
+msgid "plugins.themes.default.nextSlide"
+msgstr "Кийинки бет"
