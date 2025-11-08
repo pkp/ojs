@@ -1,7 +1,7 @@
-# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-04-15 17:38+0000\n"
+"PO-Revision-Date: 2025-11-08 16:37+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/locale/ky/>\n"
 "Language: ky\n"
@@ -166,3 +166,2151 @@ msgstr "Белгиленген редакторлор"
 
 msgid "article.submissionId"
 msgstr "Материал ID"
+
+msgid "submission.authorVersion"
+msgstr "Автор версиясы"
+
+msgid "user.role.journalAssistants"
+msgstr "Журнал ассистенттери"
+
+msgid "issue.title"
+msgstr "Аталыш"
+
+msgid "subscriptions.status"
+msgstr "Статус"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Онлайн төлөмдү күтүп жатат"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Сизде активдүү жазылуу жок."
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>ЭСКЕРТҮҮ!</h4>\n"
+"<p>Система конфигурация файлын автоматтык түрдө кайра жазып коё алган жок. "
+"Конфигурация өзгөртүүлөрүн колдонуу үчүн <tt>config.inc.php</tt> файлын "
+"ылайыктуу текст редакторунда ачып, анын мазмунун төмөнкү текст талаасындагы "
+"мазмун менен алмаштырышыңыз керек.</p>"
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+"Авторизация плагиндери Open Journal Systems’ге колдонуучуну "
+"аутентификациялоо тапшырмаларын башка системаларга (мисалы, LDAP "
+"серверлерине) өткөрүүгө мүмкүндүк берет."
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Кадамдар: Тапшыруулар кезеги &gt; Тапшырууну кароо &gt; Тапшырууну түзөтүү "
+"&gt; Мазмундар тизмеси.<br /><br />\n"
+"Редакциялык процесстин бул аспектилерин башкаруу үчүн үлгү тандаңыз. (Башкы "
+"редакторду жана Бөлүм редакторлорун дайындоо үчүн Журналды башкаруу "
+"бөлүмүндөгү Редакторлорго өтүңүз.)"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Бул колдонуучуну өчүрөсүзбү? Бул аны системага кирүүдөн тосот.\n"
+"\n"
+"Кааласаңыз, колдонуучунун аккаунтун өчүрүү себебин көрсөтсөңүз болот."
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"    <li>Белгиленген пункттар редактор тарабынан аракет талап кылынганын "
+"көрсөтөт, төмөнкүдөй белгилер менен:\n"
+"        <ul>\n"
+"            <li class=\"highlightCopyediting\">Копи-редакция стадиясында "
+"аракет талап кылынат</li>\n"
+"            <li class=\"highlightLayoutEditing\">Макет редакция стадиясында "
+"аракет талап кылынат</li>\n"
+"            <li class=\"highlightProofreading\">Корректура стадиясында "
+"аракет талап кылынат</li>\n"
+"        </ul>\n"
+"    </li>\n"
+"</ol>"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "Рецензент кароого макул болгондо тапшырма жеткиликтүү болот"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Тапшырма редактору"
+
+msgid "reviewer.article.recommendation"
+msgstr "Сунуш"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"Кароо боюнча көрсөтмөлөр рецензенттерге макаланын журналда жарыяланууга "
+"ылайыктуулугун баалоо критерийлерин берет жана натыйжалуу жана пайдалуу "
+"кароону даярдоо үчүн атайын көрсөтмөлөрдү камтышы мүмкүн. Кароону жүргүзүүдө "
+"рецензенттерге эки ачык текст кутучасы сунушталат: биринчиси \"автор жана "
+"редактор үчүн\", экинчиси \"редактор үчүн\". Альтернативдүү түрдө, Журнал "
+"менеджери \"Кароо формалары\" бөлүмүндө рецензия формасын түзө алат. Бардык "
+"учурларда редакторлор автор менен кат алышууда рецензияларды кошуу "
+"мүмкүнчүлүгүнө ээ болушат."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"Тапшырууга байланышкан файлдарды жүктөп алуу жана кароо үчүн файлдын атын "
+"чыкылдатыңыз (экранда же басып чыгаруу аркылуу)."
+
+msgid "reviewer.article.enterReviewA"
+msgstr ""
+"Бул тапшыруу боюнча рецензияңызды киргизүү (же чаптоо) үчүн белгини "
+"чыкылдатыңыз."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"Процессти аяктоо үчүн сунушту тандап, кароону жөнөтүңүз. Сунушту тандаардан "
+"мурун сөзсүз рецензия киргизишиңиз же файл жүктөшүңүз керек."
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"Чечимди жазгандан кийин бул кароого өзгөртүү киргизе албайсыз. Улантууну "
+"каалайсызбы?"
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr "Файл редакциялоо үчүн жүктөлмөйүнчө өтүнүч кат жөнөтүлбөйт."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Баштапкы редакциялоо"
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"Сураныч кат файл копи-редакцияга тандалмайынча жөнөтүлбөйт. Бул тандоо "
+"\"Редактордун чечими\" бөлүмүндөгү \"Кароо\" бетинде жасалат."
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Редактордун редакциялоосу"
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"Жок (Өтүнүч жөнөтүүдөн мурун акыркы редакциялоо версиясын макет версиясы "
+"катары жүктөө)"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Коомдук галлей идентификатору мурунтан бар."
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Макет редакторун дайындоо"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Шилтемелерди байланыштоо"
+
+msgid "submission.proofreadingComments"
+msgstr "Корректура комментарийлери"
+
+msgid "submission.logType.article"
+msgstr "Макала"
+
+msgid "submission.logType.editor"
+msgstr "Редактор"
+
+msgid "submission.logType.review"
+msgstr "Кароо"
+
+msgid "submission.logType.proofread"
+msgstr "Корректура"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Редактор/Автор кат алышуусу"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Редакциялоо комментарийлери"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Автор жана редактор үчүн"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Бул комментарийлер автор менен бөлүшүлүшү мүмкүн.<br />\n"
+"(Сактагандан кийин кошумча комментарийлерди кошсо болот.)"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Сактап, авторго электрондук кат жөнөтүү"
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Бул сайттын купуялык билдирүүсүнө макул болушуңуз керек."
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"Активдүү жана мөөнөтү бүткөн жазылуулар төмөндө мөөнөтү менен көрсөтүлгөн. "
+"Мындан тышкары ар бир жазылуу үчүн кошумча статус маалыматтары камтылышы "
+"мүмкүн."
+
+msgid "user.subscriptions.status"
+msgstr "Статус"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Сүрөттөмө"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Жазылуу активдештирилерден мурун кошумча маалымат талап кылынат"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Жазылуу активдештирилерден мурун каралышы керек"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Кол менен төлөм башталды, бирок али алынган жок"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Онлайн төлөм башталды, бирок жокко чыгарылды же аяктаган жок"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Жеке жазылуу"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Институционалдык жазылуу сатып алуу"
+
+msgid "user.subscriptions.expires"
+msgstr "Мөөнөтү бүтөт: {$date}"
+
+msgid "user.subscriptions.expired"
+msgstr "Мөөнөтү бүттү: {$date}"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Бар болгон жазылуу түрлөрүн көрүү"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Жазылуу түрү"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Мүчөлүк"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Тандалган жазылуу түрү мүчөлүк маалыматын талап кылат."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Туура жазылуу түрүн тандаңыз."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Бул колдонуучу аккаунтунда мурунтан жеке жазылуу бар."
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Туура IP диапазонун киргизиңиз."
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Кошуу"
+
+msgid "search.authorIndex"
+msgstr "Автор индексин карап чыгуу"
+
+msgid "article.pageTitle"
+msgstr "{$title} көрүү"
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>Тандалган PDF файл бул жерде ачылышы керек, эгерде веб-браузериңизде PDF "
+"окуучу плагин орнотулган болсо (мисалы, <a href=\"https://get.adobe.com/"
+"reader/\">Adobe Acrobat Reader</a> акыркы версиясы).</p>"
+
+msgid "article.nonpdf.title"
+msgstr "Макаланы жүктөп алуу"
+
+msgid "article.nonpdf.note"
+msgstr ""
+"Тандалган файл автоматтык түрдө жүктөлүшү керек. Эгер жүктөлбөсө, төмөнкү "
+"шилтемеге басыңыз. Бул файлды көрүү үчүн атайын программа же плагин талап "
+"кылынышы мүмкүн.<br /><br />Эгер файл автоматтык түрдө жүктөлбөсө, <a href=\""
+"{$url}\">бул жерге басыңыз</a>."
+
+msgid "site.journalsHosted"
+msgstr "Бул сайтта жайгашкан журналдар"
+
+msgid "site.journalView"
+msgstr "Журналды көрүү"
+
+msgid "site.journalRegister"
+msgstr "Катталуу"
+
+msgid "site.journalCurrent"
+msgstr "Азыркы чыгарылыш"
+
+msgid "about.submissions"
+msgstr "Тапшырмалар"
+
+msgid "about.publicationFrequency"
+msgstr "Жарыялоо жыштыгы"
+
+msgid "about.archiving"
+msgstr "Архивдөө"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Жазылуу түрлөрү"
+
+msgid "about.memberships"
+msgstr "Мүчөлүктөр"
+
+msgid "payment.paid"
+msgstr "Төлөндү"
+
+msgid "payment.waived"
+msgstr "Төлөмдөн бошотулган"
+
+msgid "payment.type.publication"
+msgstr "Жарыялоо төлөмү"
+
+msgid "payment.donation.makeDonation"
+msgstr "Кайрымдуулук кылуу"
+
+msgid "payment.submission.paySubmission"
+msgstr "Тапшырма төлөмүн төлөө"
+
+msgid "installer.installApplication"
+msgstr "Open Journal Systems орнотуу"
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"OJS жаңы версиясы жеткиликтүү! Учурда сиз OJS {$currentVersion} колдонуп "
+"жатасыз. Эң акыркы версия OJS {$latestVersion}. Жаңы версияны жүктөп алуу "
+"жана жаңыртуу көрсөтмөлөрүн табуу үчүн <a href=\"https://pkp.sfu.ca/"
+"ojs_download\" target=\"_new\">бул бетке</a> кириңиз."
+
+msgid "log.author.documentRevised"
+msgstr ""
+"{$authorName} {$submissionId} макаласын оңдоду. Жаңы файл ID: {$fileId}."
+
+msgid "log.review.resubmit"
+msgstr "{$submissionId} тапшырмасы кайра кароого тапшырылды."
+
+msgid "log.review.reviewerFile"
+msgstr "Кароочу файлы жүктөлдү."
+
+msgid "log.editor.decision"
+msgstr ""
+"{$editorName} тарабынан {$submissionId} макала үчүн редактор чечими "
+"({$decision}) катталды."
+
+msgid "log.editor.recommendation"
+msgstr ""
+"{$editorName} тарабынан {$submissionId} макала үчүн редактор сунушу "
+"({$decision}) катталды."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr ""
+"{$copyeditorName} {$submissionId} тапшырмасын редакциялык оңдоого дайындалды."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr ""
+"{$editorName} {$submissionId} тапшырмасы үчүн макет редактору кызматынан "
+"бошотулду."
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "Туура эмес редакциялык тапшырма же редакциялык тапшырма суралган эмес!"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Бул верстканы жарыялоо үчүн бекитиңиз.</p>"
+
+msgid "about.authorFeesMessage"
+msgstr "Бул журнал төмөнкү автордук төлөмдөрдү талап кылат."
+
+msgid "about.peerReviewProcess"
+msgstr "Рецензия процесси"
+
+msgid "help.ojsHelp"
+msgstr "Open Journal Systems Жардам"
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS Жардам"
+
+msgid "help.searchReturnResults"
+msgstr "Издөө натыйжаларына кайтуу"
+
+msgid "help.goToEditPage"
+msgstr "{$sectionTitle} түзөтүү"
+
+msgid "donations.thankYou"
+msgstr "Рахмат"
+
+msgid "payment.paymentReceived"
+msgstr "Төлөм алынды"
+
+msgid "payment.paymentSent"
+msgstr "Төлөм мурунтан жөнөтүлгөн"
+
+msgid "payment.authorFees"
+msgstr "Автордук төлөмдөр"
+
+msgid "payment.type.submission"
+msgstr "Тапшырма төлөмү"
+
+msgid "payment.type.publication.required"
+msgstr "Жарыялоо төлөмү төлөнүшү керек."
+
+msgid "payment.type.fastTrack"
+msgstr "Ыкчам кароо төлөмү"
+
+msgid "payment.type.membership"
+msgstr "Жеке мүчөлүк төлөмү"
+
+msgid "log.review.reviewInitiated"
+msgstr ""
+"{$reviewerName} тарабынан {$submissionId} тапшырмасы үчүн {$round} айлампа "
+"кароо башталды."
+
+msgid "log.review.reviewerRated"
+msgstr ""
+"{$reviewerName} {$submissionId} тапшырмасынын {$round} айлампа кароосу үчүн "
+"бааланды."
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"{$reviewerName} тарабынан {$submissionId} тапшырмасынын {$round} айлампа "
+"кароосунун мөөнөтү {$dueDate} болуп коюлду."
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+"{$reviewerName} {$submissionId} тапшырмасынын {$round} айлампа кароосунан "
+"баш тартты."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName} {$reviewerName} атынан {$submissionId} тапшырмасынын {$round} "
+"айлампа кароосун кабыл алды."
+
+msgid "log.editor.metadataModified"
+msgstr "Бул макаланын метадайындары {$editorName} тарабынан өзгөртүлдү."
+
+msgid "log.editor.editorFile"
+msgstr "Тапшырма файлынын редактордук версиясы жүктөлдү."
+
+msgid "log.editor.archived"
+msgstr "{$submissionId} тапшырмасы архивге киргизилди."
+
+msgid "log.editor.restored"
+msgstr "{$submissionId} тапшырмасы кезекке кайра киргизилди."
+
+msgid "log.editor.editorAssigned"
+msgstr ""
+"{$editorName} {$submissionId} тапшырмасы үчүн редактор болуп дайындалды."
+
+msgid "notification.type.editorDecisionComment"
+msgstr "\"{$title}\" боюнча редактор чечимине комментарий калтырылды."
+
+msgid "notification.type.galleyModified"
+msgstr "\"{$title}\" үчүн верстка өзгөртүлдү."
+
+msgid "notification.type.issuePublished"
+msgstr "Чыгарылыш жарыяланды."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Жаңы билдирүү түзүлдү."
+
+msgid "notification.type.openAccess"
+msgstr "Чыгарылыш ачык жеткиликтүү кылынды."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "\"{$title}\" үчүн кароо формасы тапшырылды."
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Башка журналдарды жашыруу"
+
+msgid "article.view.interstitial"
+msgstr "Жүктөп алуу үчүн макала файлын тандаңыз."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Бекитилди"
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Бул категориядагы макалаларды кантип тартипке келтирүүнү тандаңыз."
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Издөө боюнча кеңештер: \n"
+"<ul>\n"
+"<li>Издөө терминдери тамга чоң-кичине айырмалабайт</li>\n"
+"<li>Жалпы сөздөр эске алынбайт</li>\n"
+"<li>Адатта суроодо көрсөтүлгөн <em>бардык</em> терминдерди камтыган "
+"макалалар гана кайтарылат (б.а. <em>AND</em> автоматтык түрдө "
+"колдонулат)</li>\n"
+"<li>Бир нече сөздү <em>OR</em> менен бириктирип, эки терминдин бирин "
+"камтыган макалаларды табыңыз; мисалы: <em>education OR research</em></li>\n"
+"<li>Татаалыраак суроолорду түзүү үчүн кашааларды колдонуңуз; мисалы: "
+"<em>archive ((journal OR conference) NOT theses)</em></li>\n"
+"<li>Так сөз айкаштарын издөө үчүн аны тырмакчага алыңыз; мисалы: <em>\"open "
+"access publishing\"</em></li>\n"
+"<li>Сөздү издөөдөн чыгаруу үчүн анын алдына <strong>-</strong> же <em>NOT</"
+"em> коюңуз; мисалы: <em>online -politics</em> же <em>online NOT "
+"politics</em></li>\n"
+"<li>Терминде <strong>*</strong> белгисин колдонуп, каалаган символдордун "
+"тизмегин дал келтирсе болот; мисалы: <em>soci* morality</em> \"sociological\""
+" же \"societal\" камтыган документтерди табат</li>\n"
+"</ul>"
+
+msgid "article.authors"
+msgstr "Авторлор"
+
+msgid "article.indexingInformation"
+msgstr "Индекстөө маалыматы"
+
+msgid "article.metadata"
+msgstr "Метадата"
+
+msgid "article.journalSection"
+msgstr "Журнал бөлүмү"
+
+msgid "article.file"
+msgstr "Файл"
+
+msgid "article.suppFile"
+msgstr "Кошумча файл"
+
+msgid "article.suppFiles"
+msgstr "Кошумча файл(дар)"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Кошумча файлдар"
+
+msgid "article.discipline"
+msgstr "Академиялык тармак жана тармакчалар"
+
+msgid "article.subject"
+msgstr "Ачкыч сөздөр"
+
+msgid "article.coverage"
+msgstr "Камтуу"
+
+msgid "article.type"
+msgstr "Түрү, ыкмасы же ыкмасы"
+
+msgid "article.language"
+msgstr "Тил"
+
+msgid "article.sectionEditor"
+msgstr "SE"
+
+msgid "article.commentsToEditor"
+msgstr "Автордун комментарийлери"
+
+msgid "article.submission"
+msgstr "Тапшырма"
+
+msgid "article.submissions"
+msgstr "Тапшырмалар"
+
+msgid "article.details"
+msgstr "Деталдар"
+
+msgid "article.abstract"
+msgstr "Аннотация"
+
+msgid "article.coverPage.altText"
+msgstr "Капкак сүрөтү"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Ачык жеткиликтүүлүк"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Чектелген жеткиликтүүлүк"
+
+msgid "article.comments.sectionDefault"
+msgstr "Демейки"
+
+msgid "article.comments.disable"
+msgstr "Өчүрүү"
+
+msgid "article.comments.enable"
+msgstr "Иштетүү"
+
+msgid "article.fontSize"
+msgstr "Шрифт өлчөмү"
+
+msgid "article.fontSize.small.altText"
+msgstr "Кичине"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Орто"
+
+msgid "article.fontSize.large.altText"
+msgstr "Чоң"
+
+msgid "article.return"
+msgstr "Макала деталдарына кайтуу"
+
+msgid "submission.submissionEditing"
+msgstr "Тапшырманы түзөтүү"
+
+msgid "submission.changeSection"
+msgstr "Өзгөртүү"
+
+msgid "submission.sent"
+msgstr "Жөнөтүлдү"
+
+msgid "submission.editorDecision"
+msgstr "Редактор чечими"
+
+msgid "submission.round"
+msgstr "Айлампа&nbsp;{$round}"
+
+msgid "submission.editorReview"
+msgstr "Редактордук кароо"
+
+msgid "submission.notifyAuthor"
+msgstr "Авторго билдирүү"
+
+msgid "submission.notifyEditor"
+msgstr "Редакторго билдирүү"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Редактор/Автор электрондук кат жазуусу"
+
+msgid "submission.reviewersVersion"
+msgstr "Рецензенттин белгиленген файл версиясы"
+
+msgid "submission.postReviewVersion"
+msgstr "Кароодон кийинки файл версиясы"
+
+msgid "submission.editorVersion"
+msgstr "Редактор версиясы"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Автордун оңдолгон файл версиясы"
+
+msgid "submission.copyediting"
+msgstr "Редакциялоо"
+
+msgid "submission.copyedit"
+msgstr "Редакциялоо"
+
+msgid "submission.proofreading"
+msgstr "Корректура"
+
+msgid "submission.scheduling"
+msgstr "Пландаштыруу"
+
+msgid "submission.scheduledIn"
+msgstr "{$issueName} ичинде жарыяланууга пландалды."
+
+msgid "submission.scheduledIn.tba"
+msgstr "(Кийин белгиленет)"
+
+msgid "submissions.step1"
+msgstr "1-кадам"
+
+msgid "submissions.step3"
+msgstr "3-кадам"
+
+msgid "submissions.queuedReview"
+msgstr "Кароодо"
+
+msgid "submissions.published"
+msgstr "Жарыяланды"
+
+msgid "submissions.initial"
+msgstr "Баштапкы"
+
+msgid "submissions.proofread"
+msgstr "Корректура жасалды"
+
+msgid "submissions.initialProof"
+msgstr "Баштапкы корректура"
+
+msgid "submissions.postAuthor"
+msgstr "Автордон кийинки"
+
+msgid "submissions.reviewRound"
+msgstr "Кароо айлампасы"
+
+msgid "submissions.proof"
+msgstr "Корректура"
+
+msgid "submissions.editorDecision"
+msgstr "Редактор чечими"
+
+msgid "submissions.editorRuling"
+msgstr "Редактор токтому"
+
+msgid "submission.eventLog"
+msgstr "Окуя журналы"
+
+msgid "submissions.copyeditComplete"
+msgstr "Редакцияланды"
+
+msgid "submissions.layoutComplete"
+msgstr "Макет түзөтүлдү"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Корректура жасалды"
+
+msgid "submission.search"
+msgstr "Макала издөө"
+
+msgid "journal.currentIssue"
+msgstr "Азыркы чыгарылыш"
+
+msgid "context.contexts"
+msgstr "Журналдар"
+
+msgid "journal.path"
+msgstr "Жол"
+
+msgid "context.context"
+msgstr "Журнал"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "journal.viewAllIssues"
+msgstr "Бардык чыгарылыштарды көрүү"
+
+msgid "user.authorization.representationNotFound"
+msgstr "Суралган галлей табылган жок."
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Бул журналда ролу жок колдонуучуларды кошуу."
+
+msgid "user.profile.profileImage"
+msgstr "Профиль сүрөтү"
+
+msgid "user.showAllJournals"
+msgstr "Менин журналдарымды көрсөтүү"
+
+msgid "user.registerForOtherJournals"
+msgstr "Башка журналдарга катталуу"
+
+msgid "user.reviewerPrompt"
+msgstr "Бул журналга тапшырмаларды кароого макулсузбу?"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Ооба, {$userGroup} ролун сураңыз."
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Ооба, бул журналга тапшырмаларды кароо өтүнүчү менен байланышкыңыз келет."
+
+msgid "user.register.contextsPrompt"
+msgstr "Бул сайттагы кайсы журналдарга катталгыңыз келет?"
+
+msgid "user.register.otherContextRoles"
+msgstr "Төмөнкү ролдорду сураңыз."
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Эгер кандайдыр бир журналда рецензент болууну сурасаңыз, предметтик "
+"кызыкчылыктарыңызды киргизиңиз."
+
+msgid "user.myJournals"
+msgstr "Менин журналдарым"
+
+msgid "user.manageMySubscriptions"
+msgstr "Менин жазылууларымды башкаруу"
+
+msgid "user.noRoles.chooseJournal"
+msgstr ""
+"Аккаунтуңуз азырынча журналдар менен байланышкан эмес. Журналды тандаңыз:"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"Аккаунтуңузда бул журнал үчүн ролдор жок. Төмөнкү аракеттерден тандаңыз:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Сунуш берүү"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Макала тапшыруу: Автор каттоосу азыр өчүрүлгөн."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Рецензент катары катталуу"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "Рецензент катары катталуу: Рецензент каттоосу азыр өчүрүлгөн."
+
+msgid "user.role.manager"
+msgstr "Журнал менеджери"
+
+msgid "user.role.subEditor"
+msgstr "Бөлүм редактору"
+
+msgid "user.role.subscriptionManager"
+msgstr "Жазылуу менеджери"
+
+msgid "user.role.managers"
+msgstr "Журнал менеджерлери"
+
+msgid "user.role.subEditors"
+msgstr "Бөлүм редакторлору"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Жазылуу менеджерлери"
+
+msgid "user.role.journalAssistant"
+msgstr "Журнал ассистенти"
+
+msgid "issue.issue"
+msgstr "Чыгарылыш"
+
+msgid "issue.issues"
+msgstr "Чыгарылыштар"
+
+msgid "issue.viewIssueIdentification"
+msgstr "{$identification} көрүү"
+
+msgid "issue.volume"
+msgstr "Том"
+
+msgid "issue.number"
+msgstr "Номер"
+
+msgid "issue.vol"
+msgstr "Том"
+
+msgid "issue.no"
+msgstr "№"
+
+msgid "issue.year"
+msgstr "Жыл"
+
+msgid "issue.noIssues"
+msgstr "Чыгарылыштар жок"
+
+msgid "issue.toc"
+msgstr "Мазмун тизмеси"
+
+msgid "issue.abstract"
+msgstr "Аннотация"
+
+msgid "issue.coverPage.altText"
+msgstr "Капкак барак"
+
+msgid "issue.fullIssue"
+msgstr "Толук чыгарылыш"
+
+msgid "issue.nonpdf.title"
+msgstr "Чыгарылышты жүктөө"
+
+msgid "issue.viewIssue"
+msgstr "Чыгарылышты көрүү"
+
+msgid "issue.return"
+msgstr "Чыгарылыш деталдарына кайтуу"
+
+msgid "doi.issue.incorrectContext"
+msgstr ""
+"Төмөнкү чыгарылыш үчүн DOI түзүлбөйт: {$itemTitle}. Ал учурдагы журнал "
+"контекстинде жок."
+
+msgid "doi.issue.incorrectStaleStatus"
+msgstr ""
+"Төмөнкү чыгарылыш үчүн DOI статусу «эскирген» болуп коюлбайт: {$itemTitle}. "
+"DOI «Катталган» же «Жөнөтүлгөн» статусунда болушу керек."
+
+msgid "doi.issue.notPublished"
+msgstr ""
+"{$pubObjectTitle} үчүн DOI «катталган» деп белгиленген жок. Статус "
+"жаңыртылышы үчүн чыгарылыш жарыялануусу керек."
+
+msgid "subscriptionTypes.currency"
+msgstr "Валюта"
+
+msgid "subscriptionTypes.year"
+msgstr "жыл"
+
+msgid "subscriptionTypes.years"
+msgstr "жылдар"
+
+msgid "subscriptionTypes.month"
+msgstr "ай"
+
+msgid "subscriptionTypes.months"
+msgstr "айлар"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Мөөнөтсүз"
+
+msgid "subscriptionTypes.format"
+msgstr "Формат"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Онлайн"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Басма"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Басма жана онлайн"
+
+msgid "subscriptions.inactive"
+msgstr "Иштебейт"
+
+msgid "subscriptions.status.active"
+msgstr "Активдүү"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Маалымат талап кылынат"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Бекитүү талап кылынат"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Кол менен төлөмдү күтүп жатат"
+
+msgid "subscriptions.status.other"
+msgstr "Башка, эскертмелерди караңыз"
+
+msgid "subscriptions.individualDescription"
+msgstr "Жеке жазылуулар мазмунга кирүү үчүн кирүүнү талап кылат."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"Институционалдык жазылуулар кирүүнү талап кылбайт. Колдонуучунун домени жана/"
+"же IP дареги мазмунга жетүү үчүн колдонулат."
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>Эскертүү:</strong> Онлайн сатып алынган институционалдык жазылуулар "
+"активдештирилерден мурун домен жана IP диапазондорунун бекитилишин талап "
+"кылат."
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Тапшырма окуясы"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Макала тапшырылды"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Тапшырма чыгарылышты пландоо кезегине жөнөтүлдү"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Тапшырма чыгарылышка дайындалды"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Макала жарыяланды"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Автордун оңдоосу тапшырылды"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Автордун оңдоо файлы жаңыртылды"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Редактор тапшырмага дайындалды"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Редактор тапшырмадан алынган"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Редактор чечими тапшырылды"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Редактор файлы жаңыртылды"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Тапшырма архивге жөнөтүлдү"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Тапшырма архивден калыбына келтирилди"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Редакциялоочу тапшырмага дайындалды"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Редакциялоочу тапшырмадан алынган"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Редакциялоо тапшырмасы башталды"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Редакциялоочунун оңдоо файлы жаңыртылды"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Баштапкы редакциялоо аяктады"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Акыркы редакциялоо аяктады"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Редакциялоо файлы жаңыртылды"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Корректурачы тапшырмага дайындалды"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Корректурачы тапшырмадан алынган"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Корректура тапшырмасы башталды"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Корректурачынын оңдоо файлы жаңыртылды"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Корректура тапшырмасы аяктады"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Макет редактору тапшырмага дайындалды"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Макет редактору тапшырмадан алынган"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Макет тапшырмасы башталды"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Макет галлейи жаңыртылды"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Макет тапшырмасы аяктады"
+
+msgid "reader.subscribersOnly"
+msgstr "Жазылуучулар гана"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"Бул элементке кирүү үчүн жазылуу талап кылынат. Жазылууну текшерүү үчүн "
+"журналга кириңиз."
+
+msgid "reader.openAccess"
+msgstr "Ачык жеткиликтүүлүк"
+
+msgid "reader.subscriptionAccess"
+msgstr "Жазылуу талап кылынат"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Жазылуу же төлөм талап кылынат"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "comments.commentsOnArticle"
+msgstr "Бул макала боюнча комментарийлер"
+
+msgid "comments.authenticated"
+msgstr ""
+"<a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a> тарабынан"
+
+msgid "search.results.orderBy"
+msgstr "Натыйжаларды иреттөө"
+
+msgid "search.results.orderBy.article"
+msgstr "Макаланын аталышы"
+
+msgid "search.results.orderBy.author"
+msgstr "Автор"
+
+msgid "search.results.orderBy.date"
+msgstr "Жарыялоо датасы"
+
+msgid "search.results.orderBy.issue"
+msgstr "Чыгарылыш"
+
+msgid "search.results.orderBy.journal"
+msgstr "Журналдын аталышы"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Популярдуулук (Бардык убакыт)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Популярдуулук (Өткөн ай)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Тийиштүүлүк"
+
+msgid "search.results.orderDir.asc"
+msgstr "Өсүү тартиби"
+
+msgid "search.results.orderDir.desc"
+msgstr "Төмөндөө тартиби"
+
+msgid "search.results.similarDocuments"
+msgstr "окшош документтер"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Жазылууну башкаруу"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Жеке жазылуулар"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Институционалдык жазылуулар"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Жазылуу түрлөрү"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Макала галлей плагиндери"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"Макала галлей плагиндери ар кандай документ түрлөрүн галлей катары "
+"көрсөтүүгө мүмкүнчүлүк берет."
+
+msgid "plugins.categories.generic.description"
+msgstr ""
+"Жалпы плагиндер Open Journal Systems’ди башка плагин категориялары "
+"колдобогон ар кандай жолдор менен кеңейтүү үчүн колдонулат."
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Активдүү редакциялык тапшырмалар"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Аяктаган редакциялык тапшырмалар"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Тапшырмалар дайындалган жок."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"Бул редакциялоочуга кайра билдирүү анын тапшырмасын кайра баштайт. Муну "
+"каалайсызбы?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"Бул авторго кайра билдирүү анын тапшырмасын кайра баштайт. Муну каалайсызбы?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"Бул макет редакторуна кайра билдирүү анын тапшырмасын кайра баштайт. Муну "
+"каалайсызбы?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"Бул корректурачыга кайра билдирүү анын тапшырмасын кайра баштайт. Муну "
+"каалайсызбы?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Тилекке каршы"
+
+msgid "sectionEditor.regrets.title"
+msgstr ""
+"#{$submissionId} Рецензенттин баш тартуулары, жокко чыгаруулар жана мурунку "
+"айлампалар"
+
+msgid "sectionEditor.regrets"
+msgstr "Тилекке каршы"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Баш тартууларды, жокко чыгарууларды жана мурунку айлампаларды көрүү"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Рецензия, айлампа {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Редактор чечими, айлампа {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Рецензенттин баш тартуулары жана жокко чыгаруулар"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Тилекке каршы"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Натыйжа"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Бар болгон колдонуучуну рецензент катары каттоо"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Жаңы рецензент түзүү"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Активдүү редакциялык тапшырмалар"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Аяктаган редакциялык тапшырмалар"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Активдүү редакциялык тапшырмалар жок."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Макет түзөтүү тапшырмалары"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Галлей форматты жүктөө"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Файлды алмаштыруу"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Кошумча файлды жүктөө"
+
+msgid "submission.layout.imageInvalid"
+msgstr "Сүрөт форматы жараксыз. Кабыл алынган форматтар: .gif, .jpg жана .png."
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Бул галлей өзүнчө вебсайтта жеткиликтүү болот."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "Алыстан жайгашкан мазмундун URL дареги"
+
+msgid "reviewer.pendingReviews"
+msgstr "Кароого күтүп жаткан макалалар"
+
+msgid "reviewer.completedReviews"
+msgstr "Аяктады"
+
+msgid "reviewer.averageQuality"
+msgstr "Баалоо"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Кароого файл"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Редакторго билдирүү"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Кароону жасайт"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Кароону жасай албайт"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Бул жерге кароо комментарийлерин жазыңыз же чаптаңыз"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Редактор киргизет"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Эскертүү жөнөтүү"
+
+msgid "reviewer.article.automatic"
+msgstr "(Авто)"
+
+msgid "reviewer.article.submitReview"
+msgstr "Кароону редакторго жөнөтүү"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Комментарийлер"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Жүктөлгөн файлдар"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Рецензент жүктөгөн версия"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(Эгер файлга белгилөө кошкуңуз келсе, редактор үчүн аны дискиңизге сактап, "
+"Browse/Upload колдонуңуз.)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Редактордун өтүнүчү"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Сиздин жообуңуз"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Кароо тапшырылды"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Кароо мөөнөтү"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Тапшырманы кабыл алуу"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Оңдоолор талап кылынат"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Кароо үчүн кайра тапшыруу"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Башка жерге кайра тапшыруу"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Тапшырманы четке кагуу"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Комментарийлерди көрүү"
+
+msgid "reviewer.article.schedule"
+msgstr "План"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Кароого тапшырма"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Кароо графиги"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Кароо кадамдары"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Рецензент үчүн көрсөтмөлөр"
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Тапшырманын редакторуна билдирүү"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "кароону жасайсызбы же жокпу."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr ""
+"Эгер кароо жасай турган болсоңуз, төмөнкү рецензент көрсөтмөлөрүн караңыз."
+
+msgid "reviewer.competingInterests"
+msgstr "Атаандаш кызыкчылыктар"
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+"Мындан тышкары, редактор жана/же автор карай турган файлдарды жүктөй аласыз."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Рецензенттин сунушун коюу же өзгөртүү."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "Сунуш тандалган жок. Тапшыруу үчүн сунуш тандашыңыз керек."
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "C/E үчүн файл"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Редакциялоочу файл"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Редакциялоочу файл"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Корректура тапшырмалары жок"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr "Кароо версиясы болмоюнча өтүнүч кат жөнөтүлбөйт."
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Автордун редакциялоосу"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Акыркы редакциялоо"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "C/E версиясы"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Редакциялоочуну дайындоо"
+
+msgid "submission.copyedit.useFile"
+msgstr "Файлды колдонуу"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Редакциялоо комментарийлери"
+
+msgid "submission.copyedit.instructions"
+msgstr "Редакциялоо көрсөтмөлөрү"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Макет редакторун алмаштыруу"
+
+msgid "submission.layout.layoutComments"
+msgstr "Макет комментарийлери"
+
+msgid "submission.layout.instructions"
+msgstr "Макет көрсөтмөлөрү"
+
+msgid "submission.proofread.corrections"
+msgstr "Корректура оңдоолору"
+
+msgid "submission.proofread.instructions"
+msgstr "Корректура көрсөтмөлөрү"
+
+msgid "submission.logType.author"
+msgstr "Автор"
+
+msgid "submission.logType.copyedit"
+msgstr "Редакциялоо"
+
+msgid "submission.logType.layout"
+msgstr "Макет"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Редактор үчүн"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr ""
+"Жөнөтүлгөндөн кийин рецензенттерге жөнөтүү үчүн түзөтүлүүчү BCC көчүрмөсүн "
+"көрсөтүңүз."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Автор жана редактор үчүн"
+
+msgid "submission.comments.forEditor"
+msgstr "Редактор үчүн"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Сактап, редакторго электрондук кат жөнөтүү"
+
+msgid "user.register.selectContext"
+msgstr "Катталуу үчүн журналды тандаңыз:"
+
+msgid "user.register.noJournals"
+msgstr "Бул сайтта каттала турган журналдар жок."
+
+msgid "user.register.privacyStatement"
+msgstr "Купуялык билдирүүсү"
+
+msgid "user.register.registrationDisabled"
+msgstr "Бул журнал азыр колдонуучуларды каттоону кабыл албайт."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Киргизген сыр сөзүңүз жетиштүү узун эмес."
+
+msgid "user.register.readerDescription"
+msgstr "Журнал чыгарылышы жарыяланганда электрондук кат аркылуу билдирилет."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr ""
+"Журнал чыгарылышы ачык жеткиликтүү болгондо электрондук кат аркылуу "
+"билдирилет."
+
+msgid "user.register.authorDescription"
+msgstr "Журналга материалдарды тапшыра алат."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Журналга тапшырмаларды рецензиялоого макул."
+
+msgid "user.register.reviewerDescription"
+msgstr "Сайтка тапшырмаларды рецензиялоого макул."
+
+msgid "user.register.reviewerInterests"
+msgstr "Кароо кызыкчылыктарын аныктаңыз (таң темалар жана изилдөө ыкмалары):"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"Ооба, катталган бардык журналдар боюнча жаңы жарыялар жана билдирүүлөр "
+"тууралуу билдирүү алгым келет."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Ооба, бул журналдын <a href=\"{$privacyUrl}\" target=\"_blank\">купуялык "
+"билдирүүсүнө</a> ылайык маалыматтарымдын чогултулуп сакталуусуна макулмун."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Катталып жаткан ар бир журнал үчүн купуялык билдирүүсүнө макул болушуңуз "
+"керек."
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Менин жазылууларым"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Жазылуу статусу"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Институционалдык жазылуулар"
+
+msgid "user.subscriptions.renew"
+msgstr "Жаңылоо"
+
+msgid "user.subscriptions.purchase"
+msgstr "Сатып алуу"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Жаңы жазылуу сатып алуу"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Жеке жазылуу сатып алуу"
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Тандалган жазылуу түрү үчүн мүчөлүк маалыматы талап кылынса."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Институттун аты"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Институттун аты талап кылынат."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Почта дареги"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Домен"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"Эгер бул жерге домен киргизилсе, IP диапазондору кошумча болуп саналат.<br /"
+">Туура маанилер домен аттары (мисалы, lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Тандалган жазылуу түрү жазылууну текшерүү үчүн домен жана/же IP диапазонун "
+"талап кылат."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Туура доменди киргизиңиз."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP диапазондору"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Өчүрүү"
+
+msgid "search.browseAuthorIndex"
+msgstr "Автор индексин карап чыгуу"
+
+msgid "search.searchFor"
+msgstr "Макалаларды издөө"
+
+msgid "search.withinJournal"
+msgstr "Ичинде"
+
+msgid "search.journal"
+msgstr "Журнал боюнча"
+
+msgid "search.allJournals"
+msgstr "Бардык журналдар"
+
+msgid "search.authorDetails"
+msgstr "Автордун деталдары"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.download"
+msgstr "Бул PDF файлды жүктөп алуу"
+
+msgid "site.noJournals"
+msgstr "Журналдар жеткиликтүү эмес."
+
+msgid "current.current"
+msgstr "Азыркы"
+
+msgid "current.noCurrentIssue"
+msgstr "Азыркы чыгарылыш жок"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Бул журналда эч кандай чыгарылыш жарыяланган эмес."
+
+msgid "archive.archives"
+msgstr "Архивдер"
+
+msgid "archive.archivesPageNumber"
+msgstr "Архивдер – {$pageNumber}-барак"
+
+msgid "archive.browse"
+msgstr "Эски чыгарылыштарды карап чыгуу"
+
+msgid "archive.issueUnavailable"
+msgstr "Чыгарылыш жеткиликсиз"
+
+msgid "about.statistics"
+msgstr "Статистика"
+
+msgid "about.contact"
+msgstr "Байланыш"
+
+msgid "about.aboutContext"
+msgstr "Журнал жөнүндө"
+
+msgid "about.history"
+msgstr "Журнал тарыхы"
+
+msgid "about.editorialPolicies"
+msgstr "Редакциялык саясат"
+
+msgid "about.focusAndScope"
+msgstr "Фокус жана көлөмү"
+
+msgid "about.sectionPolicies"
+msgstr "Бөлүм саясаты"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Кирүү"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Катталуу"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "Тапшырма берүү үчүн {$login} же {$register}."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} же {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "Жаңы тапшырманы <a href=\"{$url}\">{$name}</a> бөлүмүнө тапшырыңыз."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Жаңы тапшырма берүү"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "Күтүп жаткан тапшырмаларыңызды көрүү"
+
+msgid "about.authorGuidelines"
+msgstr "Автор үчүн көрсөтмөлөр"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Тапшырманы даярдоо текшерүү тизмеси"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"Тапшырма процесси учурунда авторлор төмөнкү пункттардын баарына ылайык "
+"экенин белгилеши керек, көрсөтмөлөргө ылайык келбеген тапшырмалар авторлорго "
+"кайтарылышы мүмкүн."
+
+msgid "about.copyrightNotice"
+msgstr "Автордук укук эскертүүсү"
+
+msgid "about.privacyStatement"
+msgstr "Купуялык билдирүүсү"
+
+msgid "about.authorFees"
+msgstr "Автордук төлөмдөр"
+
+msgid "about.openAccessPolicy"
+msgstr "Ачык жеткиликтүүлүк саясаты"
+
+msgid "about.delayedOpenAccess"
+msgstr "Кечиктирилген ачык жеткиликтүүлүк"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr "Бул журналдын мазмуну ачык жеткиликтүүлүк форматында жеткиликтүү болот"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "чыгарылыш жарыялангандан кийин ай(лар)."
+
+msgid "about.subscriptions"
+msgstr "Жазылуулар"
+
+msgid "about.subscriptions.individual"
+msgstr "Жеке жазылуулар"
+
+msgid "about.subscriptions.institutional"
+msgstr "Институционалдык жазылуулар"
+
+msgid "about.subscriptionsContact"
+msgstr "Жазылуу боюнча байланыш"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Аты"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Формат"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Мөөнөт"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Баасы"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr ""
+"OJS/PKP тарабынан жарыялоо системасы, платформа жана иш процесси тууралуу "
+"кошумча маалымат."
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "OJS редакциялык жана жарыялоо процесси"
+
+msgid "about.aboutSoftware"
+msgstr "Open Journal Systems жөнүндө"
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"Бул журнал Open Journal Systems {$ojsVersion} колдонууда, ал Public "
+"Knowledge Project тарабынан GNU General Public License астында иштелип "
+"чыккан, колдоого алынган жана эркин таратылган ачык булактуу журналды "
+"башкаруу жана жарыялоо программасы. Программа тууралуу көбүрөөк билүү үчүн "
+"PKP вебсайтына <a href=\"https://pkp.sfu.ca/\">кирүү</a>. Журнал жана "
+"тапшырмалар боюнча суроолор үчүн түздөн-түз <a href=\"{$contactUrl}\">журнал "
+"менен байланышсаңыз</a>."
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"Бул сайт Open Journal Systems {$ojsVersion} колдонууда, ал Public Knowledge "
+"Project тарабынан GNU General Public License астында иштелип чыккан, "
+"колдоого алынган жана эркин таратылган ачык булактуу журналды башкаруу жана "
+"жарыялоо программасы. Программа тууралуу көбүрөөк билүү үчүн PKP вебсайтына "
+"<a href=\"https://pkp.sfu.ca/\">кирүү</a>. Журналдар жана тапшырмалар боюнча "
+"суроолор үчүн сайт менен түздөн-түз байланышсаңыз."
+
+msgid "payment.loginRequired"
+msgstr "Төлөм жасоо үчүн системага киришиңиз керек."
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"Бул элементке кирүү үчүн жазылуу же макала сатып алуу талап кылынат. "
+"Жазылууну текшерүү, мурунку сатып алууну көрүү же макала сатып алуу үчүн "
+"журналга кириңиз."
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"Бул элементке кирүү үчүн жазылуу же чыгарылыш сатып алуу талап кылынат. "
+"Жазылууну текшерүү, мурунку сатып алууну көрүү же чыгарылыш сатып алуу үчүн "
+"журналга кириңиз."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Кайрымдуулук кылуу үчүн системага киришиңиз керек."
+
+msgid "payment.unpaid"
+msgstr "Төлөнгөн эмес"
+
+msgid "payment.payNow"
+msgstr "Азыр төлөө"
+
+msgid "payment.waive"
+msgstr "Бошотуу"
+
+msgid "payment.alreadyPaid"
+msgstr "Мурунтан төлөнгөн"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Макала сатып алуу төлөмү"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Чыгарылыш сатып алуу төлөмү"
+
+msgid "payment.type.subscription"
+msgstr "Жазылуу төлөмү"
+
+msgid "payment.type.donation"
+msgstr "Кайрымдуулуктар"
+
+msgid "payment.requestPublicationFee"
+msgstr "Жарыялоо төлөмүн талап кылуу ({$feeAmount})"
+
+msgid "payment.requestPublicationFee.notEnabled"
+msgstr "Жарыялоо төлөмү иштетилген эмес."
+
+msgid "payment.notFound"
+msgstr ""
+"Төлөм суралган, бирок өтүнүч мөөнөтү бүттү. Толук маалымат үчүн Журнал "
+"менеджери менен байланышсаңыз."
+
+msgid "payment.publication.payPublication"
+msgstr "Жарыялоо үчүн төлөө"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Жарыялоо төлөмү төлөндү"
+
+msgid "payment.membership.buyMembership"
+msgstr "Жеке мүчөлүк сатып алуу"
+
+msgid "payment.membership.renewMembership"
+msgstr "Жеке мүчөлүктү жаңылоо"
+
+msgid "payment.membership.ends"
+msgstr "Аяктоо"
+
+msgid "payment.subscription.purchase"
+msgstr "Жазылуу сатып алуу"
+
+msgid "payment.subscription.renew"
+msgstr "Жазылууну жаңылоо"
+
+msgid "payment.subscription.expires"
+msgstr "Мөөнөтү бүтөт"
+
+msgid "installer.appInstallation"
+msgstr "OJS Орнотуу"
+
+msgid "installer.ojsUpgrade"
+msgstr "OJS Жаңыртуу"
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"Эгер OJS орнотуусун жаңыртып жатсаңыз, улантуу үчүн <a href=\"{$upgradeUrl}\""
+">бул жерге басыңыз</a>."
+
+msgid "installer.installationInstructions"
+msgstr ""
+"\"<h4>OJS Версиясы {$version}</h4> … (толук кыргызча текст, README, PKP "
+"вебсайты, форум, системалык талаптар, колдоого алынган базалар толук берилди)"
+"\"\n"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"\"<h4>Орнотуудан мурун кадамдар</h4> … (config.inc.php, public/, cache/ "
+"каталогдорунун жазылуучу болушу керектиги жана файл сактоо каталогунун "
+"түзүлүшү толук берилди)\""
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"\"<h4>OJS Версиясы {$version}</h4> … (README жана Upgrade Guide окуу, PKP "
+"вебсайты, форум, баг системасы, маалымат базасын жана каталогдорду сактоо "
+"боюнча толук кыргызча текст)\""
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"\"Толук Unicode колдоосу үчүн PHP <a href=\\\"https://www.php.net/mbstring\\"
+"\" target=\\\"_blank\\\">mbstring</a> китепканасы менен компиляцияланышы "
+"керек … Сервериңиз учурда mbstring колдойт: "
+"<strong>{$supportsMBString}</strong>\""
+
+msgid "installer.allowFileUploads"
+msgstr ""
+"Сервериңиз учурда файл жүктөөгө уруксат берет: "
+"<strong>{$allowFileUploads}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"Сервериңиз учурда максималдуу файл жүктөө өлчөмүнө уруксат берет: "
+"<strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr ""
+"Бул система үчүн негизги тил. Бул жерде көрсөтүлбөгөн тилдерди колдоо боюнча "
+"OJS документациясын караңыз."
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+"Жүктөлгөн файлдар сакталуучу каталогдун толук жолун киргизиңиз. Бул каталог "
+"түздөн-түз вебден жеткиликтүү болбошу керек. <strong>Орнотуудан мурун бул "
+"каталог бар экенине жана жазылуучу экенине ишениңиз.</strong> Windows "
+"жолдорунда түз сызыктарды колдонуңуз, мисалы: \"C:/myjournal/files\"."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+"OJS маалыматтарын сактоо үчүн SQL базасына кирүү талап кылат. Жогорудагы "
+"системалык талаптардан колдоого алынган базалардын тизмесин караңыз. Төмөнкү "
+"талааларда базага туташуу үчүн жөндөөлөрдү киргизиңиз."
+
+msgid "installer.upgradeApplication"
+msgstr "Open Journal Systems жаңыртуу"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+"<strong>Эскертүү:</strong> Эгер орнотуу база орнотуу учурунда токтосо, кайра "
+"орнотуудан мурун OJS базасын же таблицаларды өчүрүүңүз керек болушу мүмкүн."
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"\"<h4>МААНИЛҮҮ!</h4><p>Орнотуучу конфигурация файлын автоматтык түрдө "
+"алмаштыра алган жок. Системаны колдонууга аракет кылуудан мурун <tt>config."
+"inc.php</tt> файлын ылайыктуу текст редакторунда ачып, анын мазмунун төмөнкү "
+"текст талаасындагы мазмун менен алмаштырыңыз.</p>\""
+
+msgid "installer.installationComplete"
+msgstr ""
+"\"<p>OJS орнотуу ийгиликтүү аяктады.</p><p>Системаны колдонууга киришүү үчүн "
+"мурунку бетте киргизилген колдонуучу аты жана сырсөз менен <a href=\""
+"{$loginUrl}\">кирүү</a>.</p><p>Коопсуздук эскертүүлөрүн жана жаңы "
+"чыгарылыштар, плагиндер жана пландалган функциялар боюнча жаңылыктарды алуу "
+"үчүн биздин <a href=\"https://forum.pkp.sfu.ca\" target=\"_new\">коомдук "
+"форумга</a> кириңиз же <a href=\"https://pkp.sfu.ca/developer-newsletter\" "
+"target=\"_new\">иштеп чыгуучулар бюллетенине</a> жазылыңыз.</p>\""
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"\"<p>OJS {$version} версиясына жаңыртуу ийгиликтүү аяктады.</"
+"p><p>config.inc.php конфигурация файлыңыздагы \\\"installed\\\" жөндөөнү "
+"кайра <em>On</em> кылып коюуну унутпаңыз.</p><p>Коопсуздук эскертүүлөрүн "
+"жана жаңы чыгарылыштар, плагиндер жана пландалган функциялар боюнча "
+"жаңылыктарды алуу үчүн биздин <a href=\"https://forum.pkp.sfu.ca\" target="
+"\"_new\">коомдук форумга</a> кириңиз же <a href=\"https://pkp.sfu.ca/"
+"developer-newsletter\" target=\"_new\">иштеп чыгуучулар бюллетенине</a> "
+"жазылыңыз.</p>\""
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"OJS жаңы версиясы жеткиликтүү! Учурда сиз OJS {$currentVersion} колдонуп "
+"жатасыз. Эң акыркы версия OJS {$latestVersion}. Бул жаңы чыгарылыш тууралуу "
+"кабарлоо үчүн Сайт Администратору ({$siteAdminName}, <a href=\"mailto"
+":{$siteAdminEmail}\">{$siteAdminEmail}</a>) менен байланышсаңыз. Көбүрөөк "
+"маалыматты <a href=\"https://pkp.sfu.ca/ojs/ojs_download/\" target=\"_new\""
+">бул жерден</a> таба аласыз."
+
+msgid "log.review.reviewerUnassigned"
+msgstr ""
+"{$reviewerName} {$submissionId} тапшырмасын {$round} айлампа кароодон "
+"бошотулду."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+"{$reviewerName} тарабынан {$submissionId} тапшырмасынын {$round} айлампа "
+"кароосу боюнча сунуш коюлду."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"Редактор {$editorName} {$reviewerName} атынан {$submissionId} тапшырмасынын "
+"{$round} айлампа кароосу боюнча сунушту койду."
+
+msgid "log.review.reviewAccepted"
+msgstr ""
+"{$reviewerName} {$submissionId} тапшырмасынын {$round} айлампа кароосун "
+"кабыл алды."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName} {$reviewerName} атынан {$submissionId} тапшырмасынын {$round} "
+"айлампа кароосунан баш тартты."
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"Редактор {$userName} {$reviewerName} атынан {$submissionId} тапшырмасынын "
+"{$round} айлампасы үчүн кароо файлын жүктөдү."
+
+msgid "log.copyedit.initiate"
+msgstr ""
+"{$copyeditorName} тарабынан {$submissionId} тапшырмасы боюнча редакциялык "
+"оңдоо башталды."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Демейки редакциялык файл тандалды."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+"{$copyeditorName} {$submissionId} тапшырмасынын баштапкы редакциялык "
+"оңдоосун аяктады."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+"{$copyeditorName} {$submissionId} тапшырмасынын акыркы редакциялык оңдоосун "
+"аяктады."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "Тапшырма файлынын редакциялык версиясы жүктөлдү."
+
+msgid "log.copyedit.authorFile"
+msgstr "Автор тарабынан редакцияланган тапшырма файлынын версиясы жүктөлдү."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr ""
+"{$editorName} {$submissionId} тапшырмасы үчүн макет редактору болуп "
+"дайындалды."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} {$submissionId} тапшырмасынын макеттик оңдоосун аяктады."
+
+msgid "log.proofread.assign"
+msgstr ""
+"{$assignerName} {$proofreaderName}’ди {$submissionId} тапшырмасын "
+"корректордук текшерүүгө дайындады."
+
+msgid "log.proofread.complete"
+msgstr ""
+"{$proofreaderName} {$submissionId} тапшырмасын графикке киргизүү үчүн "
+"тапшырды."
+
+msgid "log.imported"
+msgstr "{$userName} {$submissionId} макаласын импорттоду."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Рецензияланган макала"
+
+msgid "notification.type.editing"
+msgstr "Оңдоо окуялары"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Жаңы макала \"{$title}\" тапшырылды."
+
+msgid "notification.type.reviewing"
+msgstr "Кароо окуялары"
+
+msgid "notification.type.site"
+msgstr "Сайт окуялары"
+
+msgid "notification.type.submissionComment"
+msgstr "Редактор \"{$title}\" боюнча комментарий калтырды."
+
+msgid "notification.type.submissions"
+msgstr "Тапшырма окуялары"
+
+msgid "notification.type.userComment"
+msgstr "Окурман \"{$title}\" боюнча комментарий калтырды."
+
+msgid "notification.type.public"
+msgstr "Коомдук билдирүүлөр"
+
+msgid "notification.savedIssueMetadata"
+msgstr "Чыгарылыштын жарыялоо метадайындары сакталды."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Жаңы макала тапшырылды, ага редактор дайындалышы керек."
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+"Катышуучулар тизмесиндеги Дайында баскычын колдонуп, верстка түзүү үчүн "
+"колдонуучуну дайындаңыз."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Верстканы күтүп жатат."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr ""
+"Кирүү тыюу салынды! Бул макала үчүн сиз редакциялык оңдоочу болуп "
+"дайындалган эмессиз."
+
+msgid "user.authorization.noContext"
+msgstr "Сиздин сурооңузга туура келген журнал табылган жок."
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Сиз өз бөлүмүңүзгө кирбеген макалага кирүүгө аракет кылып жатасыз."
+
+msgid "user.authorization.invalidIssue"
+msgstr "Туура эмес чыгарылыш суралды!"
+
+msgid "grid.action.createContext"
+msgstr "Жаңы журнал түзүү"
+
+msgid "editor.navigation.issues"
+msgstr "Чыгарылыштар"
+
+msgid "notification.type.approveSubmission"
+msgstr ""
+"Бул тапшырма учурда чыгарылышта пайда болуудан мурун бекитүүнү күтүп жатат."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Бекитүүнү күтүп жатат."
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Башка журналдарга катталуу"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Бекитүүнү күтүп жатат"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Верстканы бекитүү"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Бул верстканын бекитүүсүн алып салыңыз.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "Индекстөө \"{$journalName}\""
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "Берилген журнал жолу \"{$journalPath}\" журналга туура келбейт."
+
+msgid "editor.issues.backIssues"
+msgstr "Мурунку чыгарылыштар"
+
+msgid "editor.issues.futureIssues"
+msgstr "Келечектеги чыгарылыштар"
+
+msgid "navigation.subscriptions"
+msgstr "Жазылуулар"
+
+msgid "log.editor.submissionExpedited"
+msgstr "{$editorName} {$submissionId} макаласынын оңдоо процессин баштады."
+
+msgid "catalog.sortBy"
+msgstr "Макалалардын тартиби"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Окурмандарга автор көрсөткөн эмгектин онлайн версиясын табууга "
+"мүмкүнчүлүк берүү үчүн төмөнкү варианттар жеткиликтүү.</p>\n"
+"\n"
+"<ol>\n"
+"    <li><strong>Окуу куралын кошуу</strong><p>Журнал менеджери жарыяланган "
+"материалдарга коштолгон Окуу куралдарына \"Шилтемелерди табуу\" функциясын "
+"кошо алат. Бул окурмандарга шилтеменин аталышын киргизип, алдын ала "
+"тандалган илимий маалымат базаларынан көрсөтүлгөн эмгекти издөө "
+"мүмкүнчүлүгүн берет.</p></li>\n"
+"    <li><strong>Шилтемелерге байланыштарды кошуу</strong><p>Макет редактору "
+"онлайн табылуучу шилтемелерге байланыш кошо алат. Бул үчүн төмөнкү "
+"көрсөтмөлөрдү (өзгөртүүгө болот) колдонсо болот.</p></li>\n"
+"</ol>"
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Creative Commons Автордук укук боюнча сунушталган эскертүүлөр</h3>\n"
+"<h4>1. Ачык жеткиликтүүлүк сунуштаган журналдар үчүн сунушталган саясат</h4>"
+"\n"
+"Бул журналда жарыяланган авторлор төмөнкү шарттарга макул болушат:\n"
+"<ol type=\"a\">\n"
+"    <li>Авторлор автордук укукту сактап калышат жана журналга алгачкы "
+"жарыялоо укугун беришет. Эмгек ошол эле учурда <a target=\"_new\" href="
+"\"https://creativecommons.org/licenses/by/3.0/\">Creative Commons "
+"Attribution License</a> лицензиясы менен берилет. Бул башкаларга эмгекти "
+"бөлүшүүгө мүмкүнчүлүк берет, бирок авторлук жана журналдагы алгачкы жарыялоо "
+"көрсөтүлүшү керек.</li>\n"
+"    <li>Авторлор эмгектин журналда жарыяланган версиясын эксклюзивдүү эмес "
+"түрдө бөлүшүү үчүн кошумча келишимдерди түзө алышат (мисалы, аны институттук "
+"репозиторийге жайгаштыруу же китепте жарыялоо), бирок алгачкы жарыялоо бул "
+"журналда болгондугу көрсөтүлүшү зарыл.</li>\n"
+"    <li>Авторлорго өз эмгектерин онлайн жайгаштырууга уруксат берилет жана "
+"бул демилге колдоого алынат (мисалы, институттук репозиторийлерде же жеке "
+"вебсайтында), анткени бул пайдалуу пикир алмашууга жана жарыяланган эмгектин "
+"эрте жана кеңири цитаталанышына алып келет (караңыз: <a target=\"_new\" href="
+"\"https://web-archive.southampton.ac.uk/opcit.eprints.org/oacitation-biblio."
+"html\">Ачык жеткиликтүүлүктүн таасири</a>).</li>\n"
+"</ol>\n"
+"<h4>2. Кечиктирилген ачык жеткиликтүүлүк сунуштаган журналдар үчүн "
+"сунушталган саясат</h4>\n"
+"Бул журналда жарыяланган авторлор төмөнкү шарттарга макул болушат:\n"
+"<ol type=\"a\">\n"
+"    <li>Авторлор автордук укукту сактап калышат жана журналга алгачкы "
+"жарыялоо укугун беришет. Эмгек жарыялангандан кийин [МӨӨНӨТТҮ КӨРСӨТҮҢҮЗ] "
+"өткөн соң ошол эле учурда <a target=\"_new\" href=\"https://creativecommons."
+"org/licenses/by/3.0/\">Creative Commons Attribution License</a> лицензиясы "
+"менен берилет. Бул башкаларга эмгекти бөлүшүүгө мүмкүнчүлүк берет, бирок "
+"авторлук жана журналдагы алгачкы жарыялоо көрсөтүлүшү керек.</li>\n"
+"    <li>Авторлор эмгектин журналда жарыяланган версиясын эксклюзивдүү эмес "
+"түрдө бөлүшүү үчүн кошумча келишимдерди түзө алышат (мисалы, аны институттук "
+"репозиторийге жайгаштыруу же китепте жарыялоо), бирок алгачкы жарыялоо бул "
+"журналда болгондугу көрсөтүлүшү зарыл.</li>\n"
+"    <li>Авторлорго өз эмгектерин онлайн жайгаштырууга уруксат берилет жана "
+"бул демилге колдоого алынат (мисалы, институттук репозиторийлерде же жеке "
+"вебсайтында), анткени бул пайдалуу пикир алмашууга жана жарыяланган эмгектин "
+"эрте жана кеңири цитаталанышына алып келет (караңыз: <a target=\"_new\" href="
+"\"https://web-archive.southampton.ac.uk/opcit.eprints.org/oacitation-biblio."
+"html\">Ачык жеткиликтүүлүктүн таасири</a>).</li>\n"
+"</ol>"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Кечиресиз, бул колдонуучуга карата сизде административдик укуктар жок. Бул "
+"төмөнкү себептерден болушу мүмкүн:\n"
+"    <ul>\n"
+"        <li>Колдонуучу сайттын администратору болуп саналат</li>\n"
+"        <li>Колдонуучу сиз башкарбаган журналдарда активдүү</li>\n"
+"    </ul>\n"
+"Бул тапшырманы сайттын администратору гана аткара алат.\n"
+"\t"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"    <li>Белгиленген пункттар редактор тарабынан аракет талап кылынганын "
+"көрсөтөт, төмөнкүдөй белгилер менен:\n"
+"        <ul>\n"
+"            <li class=\"highlightReviewerNotNotified\">Рецензент "
+"дайындалган, бирок электрондук почта аркылуу кабарланбаган</li>\n"
+"            <li class=\"highlightNoDecision\">Бардык рецензенттер "
+"комментарийлерин кайтарып беришкен, бирок чечим жазыла элек</li>\n"
+"            <li class=\"highlightRevisedCopyUploaded\">Автор жаңыртылган кол "
+"жазманы жүктөгөн</li>\n"
+"            <li class=\"highlightReviewerConfirmationOverdue\">Рецензент "
+"рецензияга чакырууну тастыктоодо кечигип жатат</li>\n"
+"            <li class=\"highlightReviewerCompletionOverdue\">Рецензент "
+"кароону бүтүрүүдө кечигип жатат</li>\n"
+"        </ul>\n"
+"    </li>\n"
+"    <li>\"Мөөнөт\" рецензент кароого макул болгондо толтурулат; анда "
+"кароонун мөөнөтүнө калган жума саны же кечиккен жума саны (-) "
+"көрсөтүлөт.</li>\n"
+"</ol>"
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"Изилдөөгө байланыштуу атаандаш кызыкчылыктарыңыз бар же жок экенин "
+"жарыялаңыз (караңыз <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">КИ&nbsp;Саясаты</a>)."
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>Бул журналга кол жазманы жүктөө үчүн төмөнкү кадамдарды аткарыңыз.</p>\n"
+"<ol>\n"
+"<li>Бул бетте \"Browse\" (же \"Choose File\") баскычын чыкылдатыңыз, ал "
+"сиздин компьютердин катуу дискинен файлды табуу үчүн \"Choose File\" "
+"терезесин ачат.</li>\n"
+"<li>Жүктөөнү каалаган файлды табыңыз жана аны белгилеңиз.</li>\n"
+"<li>\"Choose File\" терезесинде \"Open\" баскычын чыкылдатыңыз, бул файлдын "
+"атын ушул бетке жайгаштырат.</li>\n"
+"<li>Бул бетте \"Upload\" баскычын чыкылдатыңыз, бул файлды компьютерден "
+"журналдын веб-сайтына жүктөйт жана журналдын эрежелерине ылайык атын "
+"өзгөртөт.</li>\n"
+"<li>Тапшыруу жүктөлгөндөн кийин, бул беттин ылдый жагындагы \"Save and "
+"Continue\" баскычын чыкылдатыңыз.</li>\n"
+"</ol>"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Эгерде бул жерге IP диапазондору киргизилсе, доменди көрсөтүү милдеттүү "
+"эмес.<br />\n"
+"Жарактуу маанилерге төмөнкүлөр кирет: IP дарек (мисалы, 142.58.103.1), IP "
+"диапазону (мисалы, 142.58.103.1 - 142.58.103.4), '*' белгиси менен IP "
+"диапазону (мисалы, 142.58.*.*), жана CIDR менен IP диапазону (мисалы, 142.58."
+"100.0/24)."
+
+msgid "donations.thankYouMessage"
+msgstr "Сиздин салымыңыз үчүн рахмат. Сиздин салымыңыз абдан бааланат."
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"Тапшыруу процессин аяктоо үчүн журналга төлөмдү жөнөткөн болсоңуз, бул "
+"кутучаны белгилеңиз. Төлөм жетмейинче тапшыруу каралбайт. Төлөм "
+"көрсөтмөлөрүн көрүү үчүн жогорудагы \"PAY NOW\" баскычын чыкылдатыңыз."
