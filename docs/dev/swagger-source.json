@@ -8705,6 +8705,42 @@
 				}
 			}
 		},
+		"/vocabs/interests": {
+			"get": {
+				"tags": [
+					"Vocabs"
+				],
+				"summary": "Get user interests vocabulary.",
+				"description": "Returns a list of all user interests stored site-wide. This endpoint is publicly accessible and does not require authentication. Interests are not multilingual and are shared across the entire application.",
+				"parameters": [
+					{
+						"name": "term",
+						"description": "Optional search term to filter interests by partial name matching.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "A list of interest entries.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"name": {
+										"type": "string",
+										"description": "The name of the interest"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		},
 		"/temporaryFiles": {
 			"options": {
 				"tags": [
