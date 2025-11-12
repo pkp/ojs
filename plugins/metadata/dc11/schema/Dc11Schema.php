@@ -32,7 +32,3 @@ class Dc11Schema extends \PKP\plugins\metadata\dc11\schema\PKPDc11Schema
         parent::__construct([PKPApplication::ASSOC_TYPE_SUBMISSION, MetadataTypeDescription::ASSOC_TYPE_ANY]);
     }
 }
-
-if (!PKP_STRICT_MODE) {
-    class_alias('\APP\plugins\metadata\dc11\schema\Dc11Schema', '\Dc11Schema');
-}
