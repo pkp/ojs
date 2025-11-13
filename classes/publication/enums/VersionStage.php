@@ -19,18 +19,14 @@ namespace APP\publication\enums;
 enum VersionStage: string
 {
     case AUTHOR_ORIGINAL = 'AO';
-    case ACCEPTED_MANUSCRIPT = 'AM';
-    case SUBMITTED_MANUSCRIPT = 'SM';
-    case PROOF = 'PF';
+    case PUBLISHED_MANUSCRIPT_UNDER_REVIEW = 'PMUR';
     case VERSION_OF_RECORD = 'VoR';
 
     public function labelKey(): string
     {
         return match ($this) {
             self::AUTHOR_ORIGINAL => 'publication.versionStage.authorOriginal',
-            self::ACCEPTED_MANUSCRIPT => 'publication.versionStage.acceptedManuscript',
-            self::SUBMITTED_MANUSCRIPT => 'publication.versionStage.submittedManuscript',
-            self::PROOF => 'publication.versionStage.proof',
+            self::PUBLISHED_MANUSCRIPT_UNDER_REVIEW => 'publication.versionStage.publishedManuscriptUnderReview',
             self::VERSION_OF_RECORD => 'publication.versionStage.versionOfRecord',
         };
     }
@@ -39,10 +35,8 @@ enum VersionStage: string
     {
         return match ($this) {
             self::AUTHOR_ORIGINAL => 1,
-            self::SUBMITTED_MANUSCRIPT => 2,
-            self::ACCEPTED_MANUSCRIPT => 3,
-            self::PROOF => 4,
-            self::VERSION_OF_RECORD => 5,
+            self::PUBLISHED_MANUSCRIPT_UNDER_REVIEW => 2,
+            self::VERSION_OF_RECORD => 3,
         };
     }
 

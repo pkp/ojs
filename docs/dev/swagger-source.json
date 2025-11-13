@@ -864,8 +864,8 @@
 		"Ror": "Ror",
 		"VersionStage": {
 			"type": "string",
-			"enum": ["AO", "AM", "SM", "PF", "VoR"],
-			"description": "Enum for version stages: AO (Author Original), AM (Accepted Manuscript), SM (Submitted Manuscript), PF (Proof), VoR (Version of Record)"
+			"enum": ["AO", "PMUR", "VoR"],
+			"description": "Enum for version stages: AO (Author Original), PMUR (Published Manuscript Under Review), VoR (Version of Record)"
 		},
 		"PublicationVersionInfo": {
 			"type": "object",
@@ -873,7 +873,7 @@
 			"properties": {
 				"versionStage": {
 					"type": "string",
-					"description": "The code of the version stage (e.g., AO, AM, SM, PF, VoR)."
+					"description": "The code of the version stage (e.g., AO, PMUR, VoR)."
 				},
 				"versionStageLabelKey": {
 					"type": "string",
@@ -1537,7 +1537,7 @@
 					"name": "versionStage",
 					"in": "query",
 					"type": "string",
-					"enum": ["AO", "AM", "SM", "PF", "VoR"],
+					"enum": ["AO", "PMUR", "VoR"],
 					"description": "Enum representing the version stage"
 				},
 				{
@@ -2342,7 +2342,7 @@
 					"Submissions / Publications"
 				],
 				"summary": "Create a new version of a publication.",
-				"description": "Create a new version of an existing publication. This will clone the current publication and bump its version number. You can optionally specify the `versionStage` (e.g., AO, AM, SM, PF, VoR) and whether this is a minor version update using the `versionIsMinor` boolean flag.",
+				"description": "Create a new version of an existing publication. This will clone the current publication and bump its version number. You can optionally specify the `versionStage` (e.g., AO, PMUR, VoR) and whether this is a minor version update using the `versionIsMinor` boolean flag.",
 				"parameters": [
 					{
 						"name": "submissionId",
@@ -2368,8 +2368,8 @@
 							"properties": {
 							"versionStage": {
 								"type": "string",
-								"enum": ["AO", "AM", "SM", "PF", "VoR"],
-								"description": "Enum representing the version stage: AO (Author Original), AM (Accepted Manuscript), SM (Submitted Manuscript), PF (Proof), VoR (Version of Record)."
+								"enum": ["AO", "PMUR", "VoR"],
+								"description": "Enum representing the version stage: AO (Author Original), PMUR (Published Manuscript Under Review), VoR (Version of Record)."
 							},
 							"versionIsMinor": {
 								"type": "boolean",
@@ -2428,8 +2428,8 @@
 						"properties": {
 							"versionStage": {
 								"type": "string",
-								"enum": ["AO", "AM", "SM", "PF", "VoR"],
-								"description": "Enum representing the version stage: AO (Author Original), AM (Accepted Manuscript), SM (Submitted Manuscript), PF (Proof), VoR (Version of Record)"
+								"enum": ["AO", "PMUR", "VoR"],
+								"description": "Enum representing the version stage: AO (Author Original), PMUR (Published Manuscript Under Review), VoR (Version of Record)"
 							},
 								"versionIsMinor": {
 								"type": "boolean",
