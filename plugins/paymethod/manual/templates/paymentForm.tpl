@@ -28,7 +28,7 @@
 		{/if}
 	</table>
 
-	<p>{$manualInstructions|nl2br}</p>
+	<p>{$manualInstructions|strip_unsafe_html|nl2br}</p>
 
 	<p>
 		<a class="cmp_button" href="{url page="payment" op="plugin" path="ManualPayment"|to_array:"notify":$queuedPaymentId}" class="action">
