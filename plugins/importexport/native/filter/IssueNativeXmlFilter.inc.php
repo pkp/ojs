@@ -220,6 +220,7 @@ class IssueNativeXmlFilter extends NativeExportFilter {
 		$nativeExportFilters = $filterDao->getObjectsByGroup('issuegalley=>native-xml');
 		assert(count($nativeExportFilters)==1); // Assert only a single serialization filter
 		$exportFilter = array_shift($nativeExportFilters);
+		$exportFilter->setOpts($this->opts);
 		$exportFilter->setDeployment($this->getDeployment());
 
 		$issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /* @var $issueGalleyDao IssueGalleyDAO */
