@@ -1,7 +1,7 @@
-# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-02-29 11:39+0000\n"
+"PO-Revision-Date: 2025-11-08 16:37+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ky/>\n"
@@ -13,25 +13,25 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "submission.submit.userGroup"
-msgstr "Менин ролум менен тапшырыңыз..."
+msgstr "Өз ролумда тапшырма берүү..."
 
 msgid "submission.title"
 msgstr "Макаланын аталышы"
 
 msgid "submission.submit.newSubmissionMultiple"
-msgstr "Жаңы материалды жөнөтө баштаңыз"
+msgstr "Жаңы тапшырманы баштоо"
 
 msgid "submission.submit.newSubmissionSingle"
-msgstr "Жаңы материал"
+msgstr "Жаңы тапшырма"
 
 msgid "grid.action.workflow"
-msgstr "Тапшыруу процесси"
+msgstr "Тапшырма процесси"
 
 msgid "submission.abstract.wordCount.description"
 msgstr "Аннотация {$wordCount} сөздөн ашпашы керек."
 
 msgid "submission.upload.selectComponent"
-msgstr "Макала компонентин тандаңыз"
+msgstr "Макаланын бөлүгүн тандаңыз"
 
 msgid "submission.title.tip"
 msgstr ""
@@ -43,7 +43,365 @@ msgstr ""
 "usageguide/generic.shtml#type</a>"
 
 msgid "submission.submit.noContext"
-msgstr "Бул материал үчүн журнал табылган жок."
+msgstr "Бул тапшырманын журналы табылган жок."
 
 msgid "submission.issueEntry"
-msgstr "Метаберилиштер"
+msgstr "Метадата"
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Аталыш жана аннотация"
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Галлей чыгарылышта көрсөтүлөт"
+
+msgid "grid.action.issueEntry"
+msgstr "Бул тапшырманын метадатасын көрүү"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Макаланын галлейи \"{$galleyFormatName}\" жеткиликтүү кылынды."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Макаланын галлейи \"{$galleyFormatName}\" жеткиликсиз кылынды."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Тапшырманын коомдук идентификаторлору жаңыртылды."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Форматты бекитүү"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Бул галлей <em>мындан ары окурмандарга жеткиликтүү болбойт</em>.</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Бул галлей <em>окурмандарга жеткиликтүү болот</em>.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Бул галлейди жеткиликтүү кылуу"
+
+msgid "submission.galleyFiles"
+msgstr "Галлей файлдары"
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Макет редактору бул жерге жарыяланууга даяр файлдарды жүктөйт. <em>Аудитор "
+"дайындоо</em> функциясын колдонуп авторлорду жана башкаларды галлейди "
+"текшерүүгө дайындаңыз, оңдолгон файлдар жарыялануудан мурун бекитүү үчүн "
+"жүктөлөт."
+
+msgid "grid.action.approveProof"
+msgstr "Бул корректураны галлейге кошууга бекитүү."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Бул корректура галлейге кошууга бекитилди."
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Бул тапшырмага байланыштуу файлдарды жүктөө: макала, мультимедиа, маалымат "
+"топтомдору, сүрөттөр ж.б."
+
+msgid "submission.pageProofs"
+msgstr "Корректура"
+
+msgid "workflow.review.externalReview"
+msgstr "Кароо"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Тапшырманын чыгарылыш метадатасы жаңыртылды."
+
+msgid "submission.upload.fileContents"
+msgstr "Макаланын бөлүгү"
+
+msgid "submission.complete"
+msgstr "Бекитилди"
+
+msgid "submission.incomplete"
+msgstr "Бекитүүнү күтүп жатат"
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Тапшырма текшерүү тизмеси"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Купуялык билдирүүсү"
+
+msgid "submission.submit.contributorRole"
+msgstr "Салымчынын ролу"
+
+msgid "submission.citationFormat.notFound"
+msgstr "Суралган шилтеме форматы табылган жок."
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Бул спецификациялар журнал мазмунун сүрөттөө үчүн колдонулган эл аралык "
+"стандарт — Dublin Core метадата топтомуна негизделген."
+
+msgid "section.any"
+msgstr "Ар кандай бөлүм"
+
+msgid "submission.sectionOptions"
+msgstr "Бөлүм параметрлери"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} элемент"
+
+msgid "catalog.category.heading"
+msgstr "Бардык элементтер"
+
+msgid "galley.editPublishedDisabled"
+msgstr "Бул жарыянын галлейлери түзөтүлбөйт, анткени ал мурунтан жарыяланган."
+
+msgid "galley.publicationNotFound"
+msgstr "Бул галлейге тиешелүү жарыя табылган жок."
+
+msgid "publication.assignToissue"
+msgstr "Чыгарылышка дайындоо"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Бул <a href=\"{$issueUrl}\">{$issueName}</a> чыгарылышына дайындалды, бирок "
+"жарыяланууга пландалган эмес."
+
+msgid "publication.changeIssue"
+msgstr "Чыгарылышты өзгөртүү"
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Жарыялануу датасы чыгарылыш жарыяланганда автоматтык түрдө коюлат. Эгер "
+"макала мурун башка жерде жарыяланган болсо жана артка даталоо керек болсо "
+"гана дата киргизиңиз."
+
+msgid "publication.invalidSection"
+msgstr "Бул жарыянын бөлүмү табылган жок."
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (Иштебейт)"
+
+msgid "publication.invalidIssue"
+msgstr "Бул жарыянын чыгарылышы табылган жок."
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Бардык жарыялоо талаптары аткарылды. Бул макаланы жарыялагыңыз келгенине "
+"ишенесизби?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Бардык жарыялоо талаптары аткарылды. Бул {$issue} жарыяланганда жарыяланат. "
+"Жарыялоо үчүн пландагыңыз келгенине ишенесизби?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Бардык жарыялоо талаптары аткарылды. Бул дароо {$issue} ичинде жарыяланат. "
+"Жарыялагыңыз келгенине ишенесизби?"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Бардык жарыялоо талаптары аткарылды. Бул дароо жарыяланат, анткени жарыялоо "
+"датасы {$datePublished} болуп коюлган. Жарыялагыңыз келгенине ишенесизби?"
+
+msgid "publication.required.issue"
+msgstr "Жарыялануудан мурун чыгарылышка дайындалышы керек."
+
+msgid "publication.publishedIn"
+msgstr "<a href=\"{$issueUrl}\">{$issueName}</a> ичинде жарыяланды."
+
+msgid "publication.scheduledIn"
+msgstr "<a href=\"{$issueUrl}\">{$issueName}</a> ичинде жарыяланууга пландалды."
+
+msgid "publication.unscheduledIn"
+msgstr "Бул чыгарылышта жарыяланууга пландалган эмес."
+
+msgid "publication.selectIssue"
+msgstr "Жарыялоо үчүн чыгарылышты тандаңыз"
+
+msgid "submission.publication"
+msgstr "Жарыялоо"
+
+msgid "publication.status.published"
+msgstr "Жарыяланды"
+
+msgid "submission.status.scheduled"
+msgstr "Пландалды"
+
+msgid "publication.status.unscheduled"
+msgstr "Пландалган эмес"
+
+msgid "submission.publications"
+msgstr "Жарыялар"
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr "Автордук укук жылы чыгарылыш жарыяланганда автоматтык түрдө коюлат."
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr "Автордук укук жылы жарыялоо датасына жараша автоматтык түрдө коюлат."
+
+msgid "publication.datePublished"
+msgstr "Жарыялоо датасы"
+
+msgid "publication.editDisabled"
+msgstr "Бул версия жарыяланды жана түзөтүлбөйт."
+
+msgid "publication.event.published"
+msgstr "Тапшырма жарыяланды."
+
+msgid "publication.event.scheduled"
+msgstr "Тапшырма жарыяланууга пландалды."
+
+msgid "publication.event.unpublished"
+msgstr "Тапшырма жарыялануудан алынды."
+
+msgid "publication.event.versionPublished"
+msgstr "Жаңы версия жарыяланды."
+
+msgid "publication.event.versionScheduled"
+msgstr "Жаңы версия жарыяланууга пландалды."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Версия жарыялануудан алынды."
+
+msgid "publication.invalidSubmission"
+msgstr "Бул жарыяга тиешелүү тапшырма табылган жок."
+
+msgid "publication.publish"
+msgstr "Жарыялоо"
+
+msgid "publication.publish.requirements"
+msgstr "Бул жарыялануудан мурун төмөнкү талаптар аткарылышы керек."
+
+msgid "publication.required.declined"
+msgstr "Тонулган тапшырма жарыяланбайт."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Тапшырма жарыялануудан мурун редакциялоо же өндүрүш баскычында болушу керек."
+
+msgid "submission.license.description"
+msgstr ""
+"Жарыяланганда лицензия автоматтык түрдө <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> болуп коюлат."
+
+msgid "submission.copyrightHolder.description"
+msgstr ""
+"Жарыяланганда автордук укук автоматтык түрдө {$copyright} болуп дайындалат."
+
+msgid "submission.copyrightOther.description"
+msgstr "Жарыяланган тапшырмалардын автордук укугун төмөнкү тарапка дайындаңыз."
+
+msgid "publication.unpublish"
+msgstr "Жарыялануудан алуу"
+
+msgid "publication.unpublish.confirm"
+msgstr "Бул жарыяланбасын деген чечимиңизге ишенесизби?"
+
+msgid "publication.unschedule.confirm"
+msgstr "Бул жарыяланууга пландалбасын деген чечимиңизге ишенесизби?"
+
+msgid "publication.version.details"
+msgstr "{$version} версиясынын жарыялоо маалыматтары"
+
+msgid "submission.queries.production"
+msgstr "Өндүрүш талкуулары"
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Кароого кайтуу"
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr ""
+"Бул тапшырманы кабыл алуу чечимин жокко чыгарып, кайра кароо баскычына "
+"жөнөтүү."
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} бул тапшырманы кабыл алуу чечимин жокко чыгарып, кайра кароо "
+"баскычына жөнөттү."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Кароого кайра жөнөтүлдү"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "{$title} тапшырмасы кайра кароо баскычына жөнөтүлдү."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Авторлорго тапшырмасы кайра кароого жөнөтүлгөнүн билдирүү үчүн электрондук "
+"кат жөнөтүңүз. Бул чечимдин себебин түшүндүрүп, андан ары кандай кароо "
+"жүргүзүлөрүн маалымдаңыз."
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"Авторлорго бул тапшырма рецензияга жөнөтүлөрүн билдирүү үчүн электрондук кат "
+"жөнөтүңүз. Мүмкүн болсо, рецензия процесси канча убакытка созуларын жана "
+"редакторлордон качан жооп күтүшү керектигин айтыңыз. Бул кат чечим "
+"жазылганга чейин жөнөтүлбөйт."
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+"{$itemTitle} тапшырмасы үчүн {$pubObjectTitle} галлейине DOI түзүлбөйт. DOI "
+"түзүлүшү үчүн тапшырма чыгарылышка дайындалышы керек."
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+"Төмөнкү тапшырма үчүн DOI түзүлбөйт: {$pubObjectTitle}. Ал учурдагы журнал "
+"контекстинде жок."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Кароо баскычына жөнөтүлө турган файлдарды тандаңыз."
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+"Төмөнкү тапшырма үчүн DOI түзүлбөйт: {$pubObjectTitle}. DOI түзүлүшү үчүн "
+"тапшырма чыгарылышка дайындалышы керек."
+
+msgid "submission.layout.viewGalley"
+msgstr "Галлейди көрүү"
+
+msgid "galley.cantEditPublished"
+msgstr "Бул галлей түзөтүлбөйт, анткени ал мурунтан жарыяланган."
+
+msgid "submission.copyright.description"
+msgstr "Бул журналга тапшырмалар үчүн автордук укук шарттарын окуп, түшүнүңүз."
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+"Бул журналга тапшырма берүүгө уруксат жок, анткени авторлор редакциялык "
+"кызматкерлер тарабынан катталууга тийиш. Эгер бул ката деп ойлосоңуз, <a "
+"href='mailto:{$email}'>{$name}</a> менен байланышсаңыз."
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+"Бул журналга тапшырма берүүгө уруксат жок, анткени бардык бөлүмдөргө "
+"тапшырмалар өчүрүлгөн же чектелген. Эгер бул ката деп ойлосоңуз, <a "
+"href='mailto:{$email}'>{$name}</a> менен байланышсаңыз."
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+"{$contextName} {$section} бөлүмүнө тапшырмаларды кабыл албай жатат. Эгер "
+"тапшырмаңызды калыбына келтирүүдө жардам керек болсо, <a "
+"href='mailto:{$email}'>{$name}</a> менен байланышсаңыз."
+
+msgid "submission.sectionNotFound"
+msgstr "Бул тапшырмага тиешелүү бөлүм табылган жок."
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr "Бул бөлүмгө тапшырма берүүгө редакциялык кызматкерлер гана уруксаттуу."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Аз дегенде бир автор талап кылынат."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Макалаңыздын аталышын киргизиңиз."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Макалаңыздын аннотациясын киргизиңиз."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Аннотацияңыз өтө узун. Бул бөлүм үчүн көрсөтүлгөн сөз чегинен кыскартыңыз."
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Салымчынын ролун тандаңыз."
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Журнал сиздин тапшырууңуз жөнүндө кабардар болду жана сизге жазуу үчүн "
+"ырастоо кат жөнөтүлдү. Редактор тапшырууну карап чыккандан кийин сиз менен "
+"байланышат."

@@ -1,0 +1,82 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-11-08 16:37+0000\n"
+"Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
+"Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/invitation/"
+"ky/>\n"
+"Language: ky\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "acceptInvitation.accountDetails.stepDescription"
+msgstr ""
+"OJS менен иштөөнү баштап, жаңы ролду кабыл алуу үчүн биздин системада "
+"аккаунт түзүшүңүз керек. Бул үчүн колдонуучу атын жана сыр сөздү киргизиңиз."
+
+msgid "acceptInvitation.accountDetails.stepLabel"
+msgstr "{$step} – OJS аккаунтун түзүү"
+
+msgid "invitation.wizard.pageTitleDescription"
+msgstr ""
+"Сиз колдонуучуну OJS’де роль алууга жана журналдын башкы бетинде "
+"көрсөтүлүүгө чакырып жатасыз"
+
+msgid "userInvitation.enterDetails.stepDescription"
+msgstr "Сиз аларды OJS’де роль алууга чакыра аласыз"
+
+msgid "userInvitation.modal.message"
+msgstr ""
+"{$email} OJS’де жаңы ролго чакырылды. Колдонуучунун чечими тууралуу "
+"маалыматты “Колдонуучулар жана Ролдор” бетинен, OJS билдирүүлөрүнөн же "
+"электрондук почтаңыздан ала аласыз."
+
+msgid "userInvitation.roleTable.journalMasthead"
+msgstr "Журналдын башкы бетиндеги маалымат"
+
+msgid "userInvitation.search.userFound"
+msgstr "Колдонуучу журналда мурунтан бар"
+
+msgid "userInvitation.search.userNotFound"
+msgstr "Колдонуучунун бул журналда ролу жок"
+
+msgid "userInvitation.searchUser.stepDescription"
+msgstr ""
+"Колдонуучуну электрондук почта, колдонуучу аты же ORCID ID аркылуу издеңиз. "
+"Баштоо үчүн жок дегенде бир маалымат киргизиңиз. Эгер колдонуучу жок болсо, "
+"аны ролго чакырып, журналыңыздын бир бөлүгү кылсаңыз болот. Эгер колдонуучу "
+"системада бар болсо, анын маалыматтарын көрүп, кошумча ролдорго чакыра "
+"аласыз."
+
+msgid "userInvitation.sendMail.stepDescription"
+msgstr ""
+"Колдонуучуга чакыруу, кийинки кадамдар, журналдын GDPR саясаты жана ORCID "
+"текшерүүсү тууралуу электрондук кат жөнөтүңүз."
+
+msgid "acceptInvitation.accountDetails.stepName"
+msgstr "OJS аккаунтун түзүү"
+
+msgid "acceptInvitation.detailsReview.nextButtonLabel"
+msgstr "Кабыл алуу жана OJS менен улантуу"
+
+msgid "acceptInvitation.detailsReview.stepDescription"
+msgstr "OJS’деги жаңы ролду баштоо үчүн маалыматтарды карап чыгыңыз"
+
+msgid "acceptInvitation.modal.message"
+msgstr ""
+"OJS’деги жаңы ролуңуз менен куттуктайбыз! Эми жаңы мүмкүнчүлүктөргө ээ "
+"болушуңуз мүмкүн. Эгер системаны түшүнүүдө жардам керек болсо, ар кайсы "
+"жерден “Жардам” баскычын басыңыз."
+
+msgid "acceptInvitation.modal.title"
+msgstr "Сизге OJS’де жаңы роль дайындалды"
+
+msgid "acceptInvitation.verifyOrcid.stepDescription"
+msgstr ""
+"Сиз ORCID iD’ни текшерүүнү же өткөрүп жиберүүнү тандай аласыз. Эгер азыр "
+"өткөрүп жиберсеңиз, кийин OJS профилиңизден аны текшере аласыз."
+
+msgid "invitation.role.masthead"
+msgstr "Журналдын башкы бетиндеги маалымат"

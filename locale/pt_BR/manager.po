@@ -4,13 +4,14 @@
 # cicilia conceiçao de maria <ccmaria@uem.br>, 2022, 2023.
 # William Costa Rodrigues <webmaster@antsoft.com.br>, 2023.
 # Rodrigo Emmanuel Santana Borges <rodrigo@borges.net.br>, 2025.
+# Lívia Carolina Gouvêa de Faria <livia@mail.mayfirst.org>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-30T11:58:53-07:00\n"
-"PO-Revision-Date: 2025-03-07 21:13+0000\n"
-"Last-Translator: Rodrigo Emmanuel Santana Borges <rodrigo@borges.net.br>\n"
+"PO-Revision-Date: 2025-11-07 19:54+0000\n"
+"Last-Translator: Lívia Carolina Gouvêa de Faria <livia@mail.mayfirst.org>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -788,7 +789,7 @@ msgstr ""
 "de revistas."
 
 msgid "manager.setup.contextTitle"
-msgstr "Título"
+msgstr "Nome da Revista"
 
 msgid "manager.setup.labelName"
 msgstr "Rótulo"

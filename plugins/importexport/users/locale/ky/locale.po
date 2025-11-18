@@ -1,7 +1,7 @@
 # Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-04-07 10:50+0000\n"
+"PO-Revision-Date: 2025-11-08 16:37+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-users/ky/>\n"
@@ -38,3 +38,71 @@ msgstr ""
 "\n"
 " Идентификатору менен көрсөтүлгөн колдонуучуларды экспорттоо:\n"
 " {$scriptName} {$pluginName} myExportFile.xml myJournal 1 2 экспорттоо\n"
+
+msgid "plugins.importexport.users.import.importUsers"
+msgstr "Колдонуучуларды импорттоо"
+
+msgid "plugins.importexport.users.import.usersWereImported"
+msgstr "Төмөнкү колдонуучулар системага ийгиликтүү импорттолду"
+
+msgid "plugins.importexport.users.import.errorsOccurred"
+msgstr "Импорттоо учурунда каталар кетти"
+
+msgid "plugins.importexport.users.import.instructions"
+msgstr ""
+"Бул журналга импорттоо үчүн колдонуучу маалыматтарын камтыган XML файлды "
+"тандаңыз. Бул файлдын форматы боюнча журнал жардамын караңыз.<br /><br "
+"/>Эскертүү: Эгер импорттолгон файлда системада мурунтан бар колдонуучу "
+"аттары же электрондук почта даректери болсо, ал колдонуучулардын "
+"маалыматтары импорттолбойт жана түзүлө турган жаңы ролдор учурдагы "
+"колдонуучуларга дайындалат."
+
+msgid "plugins.importexport.users.import.dataFile"
+msgstr "Колдонуучу маалымат файлы"
+
+msgid "plugins.importexport.users.import.sendNotify"
+msgstr ""
+"Ар бир импорттолгон колдонуучуга анын колдонуучу аты жана сырсөзү камтылган "
+"эскертүү электрондук кат жөнөтүңүз."
+
+msgid "plugins.importexport.users.import.continueOnError"
+msgstr "Ката кетсе да башка колдонуучуларды импорттоону улантыңыз."
+
+msgid "plugins.importexport.users.import.confirmUsers"
+msgstr "Бул колдонуучуларды системага импорттоону каалаганыңызды ырастаңыз"
+
+msgid "plugins.importexport.users.import.warning"
+msgstr "Эскертүү"
+
+msgid "plugins.importexport.users.import.encryptionMismatch"
+msgstr ""
+"{$importHash} менен хэштелген сырсөздөрдү колдонууга болбойт; OJS {$ojsHash} "
+"колдонууга конфигурацияланган. Эгер улантсаңыз, импорттолгон "
+"колдонуучулардын сырсөздөрүн кайра коюшуңуз керек болот."
+
+msgid "plugins.importexport.users.unknownPress"
+msgstr "Белгисиз журнал жолу \"{$journalPath}\" көрсөтүлдү."
+
+msgid "plugins.importexport.users.export.exportUsers"
+msgstr "Колдонуучуларды экспорттоо"
+
+msgid "plugins.importexport.users.export.exportByRole"
+msgstr "Роль боюнча экспорттоо"
+
+msgid "plugins.importexport.users.export.exportAllUsers"
+msgstr "Бардыгын экспорттоо"
+
+msgid "plugins.importexport.users.export.errorsOccurred"
+msgstr "Экспорттоо учурунда каталар кетти"
+
+msgid "plugins.importexport.users.importComplete"
+msgstr ""
+"Импорттоо ийгиликтүү аяктады. Колдонуучу аттары жана электрондук почта "
+"даректери мурунтан колдонулбаган колдонуучулар, тиешелүү колдонуучу топтору "
+"менен кошо импорттолду."
+
+msgid "plugins.importexport.users.results"
+msgstr "Натыйжалар"
+
+msgid "plugins.importexport.users.uploadFile"
+msgstr "Улантуу үчүн \"Импорттоо\" бөлүмүнө файл жүктөңүз."
