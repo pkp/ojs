@@ -1,7 +1,7 @@
-# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-06-21 18:39+0000\n"
+"PO-Revision-Date: 2025-11-08 16:37+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/manager/ky/>"
 "\n"
@@ -819,3 +819,1735 @@ msgstr "Негизги маалымат"
 
 msgid "manager.setup.contextInitials"
 msgstr "Журналдын аталышынын аббревиатурасы"
+
+msgid "manager.setup.contextSummary.description"
+msgstr ""
+"Журналыңыздын мазмуну жана максаты тууралуу түшүнүк берүү үчүн кыскача "
+"сүрөттөмө бериңиз."
+
+msgid "manager.setup.otherLockss"
+msgstr "LOCKSS жана CLOCKSS"
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr "LOCKSS лицензиясынын сүрөттөлүшү"
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+"Журналды каттап, кэштей турган 6–10 китепкананы аныктаңыз. Мисалы, "
+"редакторлор же Кеңеш мүчөлөрү иштеген мекемелерге жана/же LOCKSSке катышып "
+"жаткан мекемелерге кайрылыңыз. Караңыз: <a href=\"https://www.lockss.org/"
+"join-lockss/partner-communities\" target=\"_blank\">LOCKSS коомчулугу</a>."
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+"CLOCKSS лицензиясы Журнал жөнүндө бөлүмүндө Архивдөө астында пайда болот: <a "
+"href=\"https://clockss.org\" target=\"_blank\">CLOCKSS License</a>"
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr "Сүрөт файлы жүктөлгөн жок."
+
+msgid "manager.setup.onlineIssn"
+msgstr "Онлайн ISSN"
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr "Барак номерлөө параметри"
+
+msgid "manager.setup.publisher"
+msgstr "Басмачы"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr "Бир баскыч менен кароочунун кирүүсү"
+
+msgid "manager.setup.siteAccess.view"
+msgstr "Сайтка кирүү"
+
+msgid "manager.setup.submissionGuidelines"
+msgstr "Тапшыруу көрсөтмөлөрү"
+
+msgid "manager.setup.submissions"
+msgstr "Тапшыруулар"
+
+msgid "manager.setup.enableOai"
+msgstr "OAI иштетүү"
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr "Чыгарылыштын мазмун бетин көрүүлөр"
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr "Толук мөөнөт бүтүү"
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr ""
+"Жазылуу мөөнөтү бүткөндө окурмандар бардык жазылуу мазмунуна кирүү "
+"мүмкүнчүлүгүн жоготот."
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr "Жарым-жартылай мөөнөт бүтүү"
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr "{$x} Ай"
+
+msgid "manager.subscriptions.form.institution"
+msgstr "Институция"
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr "Туура институцияны тандаңыз."
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr "Баштоо датасы"
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr "Жазылуунун баштоо датасы талап кылынат."
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr "Шилтеме номери"
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Тандалган жазылуу түрү жазылууну текшерүү үчүн доменди жана/же IP диапазонун "
+"талап кылат."
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr "Туура IP диапазонун киргизиңиз."
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr "Өчүрүү"
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr "Кошуу"
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr "Сактап, дагы бирди түзүү"
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr "Бул колдонуучунун бул журналга жазылуусу бар."
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr "Жазылуу түрү"
+
+msgid "manager.subscriptions.user"
+msgstr "Колдонуучу"
+
+msgid "manager.subscriptions.contact"
+msgstr "Байланыш аты"
+
+msgid "manager.subscriptions.institutionName"
+msgstr "Институциянын аты"
+
+msgid "manager.subscriptionTypes"
+msgstr "Жазылуу түрлөрү"
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr ""
+"Эскертүү! Бул жазылуу түрү менен бардык жазылуулар да өчүрүлөт. Улантууну "
+"жана бул жазылуу түрүн өчүрүүнү каалаганыңызга ишенесизби?"
+
+msgid "manager.subscriptionTypes.cost"
+msgstr "Баасы"
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr "Жазылуулар"
+
+msgid "manager.subscriptionTypes.individual"
+msgstr "Жеке"
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr "Институционалдык"
+
+msgid "manager.subscriptionTypes.create"
+msgstr "Жаңы жазылуу түрүн түзүү"
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr "Түзүү"
+
+msgid "manager.setup.categories"
+msgstr "Категориялар"
+
+msgid "manager.setup.categories.description"
+msgstr ""
+"Жогорудагы тизмеден эң ылайыктуу категорияларды тандаңыз. Окурмандар "
+"журналдын толук топтомун категория боюнча карай алышат."
+
+msgid "grid.category.path"
+msgstr "Жол"
+
+msgid "manager.publication.library"
+msgstr "Басмачы китепканасы"
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr "Жаңы макаланын автордук укук жылын негиздөө"
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr ""
+"Бардык макалалар үчүн уруксат маалыматтарын кайра коюуну каалаганыңызга "
+"ишенесизби? Бул аракетти артка кайтарууга болбойт."
+
+msgid "plugins.importexport.common.export.representations"
+msgstr "Версткалар"
+
+msgid "plugins.importexport.common.action.register"
+msgstr "Каттоо"
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr "{$path} жолу менен журнал үчүн DOI префикси жок."
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr "Көрсөтүлгөн объекттер табылган жок."
+
+msgid "stats.contextStats"
+msgstr "Журнал статистикасы"
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr ""
+"Ар бир чыгарылыш үчүн мазмун тизмесин көрүүлөрдүн жана верстканы "
+"жүктөөлөрдүн саны."
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr "Чыгарылыштарды жүктөө"
+
+msgid "stats.issues.countOfTotal"
+msgstr "{$total} чыгарылыштын ичинен {$count}"
+
+msgid "stats.issues.tooltip.label"
+msgstr "Чыгарылыш статистикасы жөнүндө"
+
+msgid "emailTemplate.variable.issueId"
+msgstr "Чыгарылыш ID"
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr "чыгарылыштар үчүн"
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr "Тазалоо"
+
+msgid "doi.editor.preview.galleys"
+msgstr "Верстка: {$galleyLabel}"
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+"Бул электрондук кат авторго анын тапшырмасы кароо этабына чейин четке "
+"кагылганын билдирет, анткени тапшырма журналда жарыялоо талаптарына жооп "
+"бербейт."
+
+msgid "manager.institutions.noContext"
+msgstr "Бул институциянын журналы табылган жок."
+
+msgid "mailable.subscriptionNotify.name"
+msgstr "Жазылуу эскертүүсү"
+
+msgid "mailable.layoutComplete.name"
+msgstr "Версткалар аяктады"
+
+msgid "mailable.publicationVersionNotify.name"
+msgstr "Жаңы версия түзүлдү"
+
+msgid "mailable.publicationVersionNotify.description"
+msgstr ""
+"Бул электрондук кат жаңы тапшырма версиясы түзүлгөндө дайындалган "
+"редакторлорго автоматтык түрдө билдирет."
+
+msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+"Бул электрондук кат жаңы тапшырма берилгенде жана редакторлор "
+"дайындалбаганда журнал менеджерлерине жөнөтүлөт."
+
+msgid "mailable.paymentRequest.name"
+msgstr "Төлөм талабы"
+
+msgid "mailable.paymentRequest.description"
+msgstr ""
+"Бул автоматтык электрондук кат авторго тапшырмасы кабыл алынганда жарыялоо "
+"акысынын төлөмүн сурап жөнөтүлөт."
+
+msgid "stats.issueStats"
+msgstr "Чыгарылыш статистикасы"
+
+msgid "manager.setup.labelName"
+msgstr "Белги аталышы"
+
+msgid "manager.setup.lists"
+msgstr "Тизмелер"
+
+msgid "manager.setup.plnPluginEnable"
+msgstr "PKP PN плагинин иштетүү"
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+"PKP Preservation Network (PN) негизги талаптарга жооп берген бардык OJS "
+"журналдары үчүн акысыз сактоо кызматын көрсөтөт."
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+"PKP PN колдонуу шарттарын кабыл алуу үчүн <button>плагин жөндөөлөрүн</"
+"button> көрүңүз."
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr "PKP Preservation Network (PN)"
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr "PN Plugin from the Plugin Gallery."
+
+msgid "manager.setup.management"
+msgstr "Башкаруу"
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+"LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a> "
+"барагы аркылуу катышуучу китепканаларда журнал мазмунун сактоо жана таратуу "
+"үчүн LOCKSSти иштетиңиз."
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+"LOCKSS лицензиясы Журнал жөнүндө бөлүмүндө Архивдөө астында пайда болот: <a "
+"href=\"http://www.lockss.org/community/publishers-titles-gln/\" target="
+"\"_blank\">LOCKSS License</a>"
+
+msgid "manager.setup.lockssTitle"
+msgstr "LOCKSS"
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+"CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</a> "
+"барагы аркылуу катышуучу китепканаларда журнал мазмунун сактоо жана таратуу "
+"үчүн CLOCKSSти иштетиңиз."
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr "CLOCKSS лицензиясынын сүрөттөлүшү"
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+"CLOCKSS кызматына катталуу үчүн <a href=\"https://clockss.org\" target="
+"\"_blank\">CLOCKSS вебсайтына</a> кириңиз."
+
+msgid "manager.setup.clockssTitle"
+msgstr "CLOCKSS"
+
+msgid "manager.setup.look"
+msgstr "Көрүнүшү"
+
+msgid "manager.setup.look.description"
+msgstr ""
+"Башкы беттин башы, мазмуну, журналдын башы, асты, навигация тилкеси жана "
+"стилдик барак."
+
+msgid "manager.setup.navigationBarDescription"
+msgstr "Кошумча навигация тилкесинин элементтерин кошуу же алып салуу."
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr ""
+"URL абсолюттук болушу керек (мисалы, \"http://www.example.com\"), сайтка "
+"салыштырмалуу жол эмес (мисалы, \"/manager/setup\")."
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr ""
+"Белги мааниси локализациялык ачкыч эмес, түз маанидеги сап болушу керек ("
+"мисалы, \"Journal Setup\")."
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr "Стилдик барак жүктөлгөн жок."
+
+msgid "manager.setup.policies"
+msgstr "Саясаттар"
+
+msgid "manager.setup.policies.description"
+msgstr ""
+"Фокус, рецензиялоо, бөлүмдөр, купуялуулук, коопсуздук жана кошумча маалымат "
+"элементтери."
+
+msgid "manager.setup.printIssn"
+msgstr "Басма ISSN"
+
+msgid "manager.setup.proofingInstructions"
+msgstr "Корректордук көрсөтмөлөр"
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+"Корректордук көрсөтмөлөр Тапшырманы оңдоо этабында корректорлорго, "
+"авторлорго, макет редакторлоруна жана бөлүм редакторлоруна жеткиликтүү "
+"болот. Төмөндө HTML форматындагы демейки көрсөтмөлөр берилген, аларды "
+"каалаган убакта Журнал менеджери түзөтө же алмаштыра алат (HTML же жөнөкөй "
+"текст түрүндө)."
+
+msgid "manager.setup.publicationSchedule"
+msgstr "Жарыялоо графиги"
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+"Журнал материалдары өзүнүн мазмуну менен чыгарылыштын бир бөлүгү катары "
+"чогуу жарыяланса болот. Же болбосо, даяр болгон жеке материалдар дароо "
+"\"азыркы\" томдун мазмунуна кошулуп жарыяланат. Окурмандарга Журнал жөнүндө "
+"бөлүмүндө бул журнал колдонгон система жана жарыялоо жыштыгы тууралуу "
+"маалымат бериңиз."
+
+msgid "manager.setup.publicationScheduling"
+msgstr "Жарыялоо графигин пландоо"
+
+msgid "manager.setup.publicIdentifier"
+msgstr "Журнал мазмунун аныктоо"
+
+msgid "manager.setup.referenceLinking"
+msgstr "Шилтемелерди байланыштоо"
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr ""
+"Ачык жеткиликтүү мазмунду көрүү үчүн колдонуучулар катталып, кириши керек."
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr "Журнал сайтына кирүү үчүн колдонуучулар катталып, кириши керек."
+
+msgid "manager.setup.reviewGuidelines"
+msgstr "Кароо көрсөтмөлөрү"
+
+msgid "manager.setup.reviewOptions"
+msgstr "Кароо параметрлери"
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr "Автоматтык электрондук почта эскертүүлөрү"
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr "Кароону аяктоо үчүн уруксат берилген жума саны"
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr ""
+"Ар бир кароодон кийин редакторлор кароочуларды беш баллдык сапат шкаласы "
+"боюнча баалашат."
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr "Файлга кирүүнү чектөө"
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+"Кароочулар кароого макул болгонго чейин тапшырма файлына кирүү мүмкүнчүлүгү "
+"берилбейт."
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr "Кароочунун кирүү мүмкүнчүлүгү"
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr ""
+"Кароочуларга электрондук чакырууда коопсуз шилтеме жөнөтүлүп, аны басканда "
+"автоматтык түрдө киришет."
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr "Кароочуларга электрондук чакырууга коопсуз шилтемени кошуңуз."
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr "Кароочулардын баалары"
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr "Кароочулар үчүн эскертүүлөр"
+
+msgid "manager.setup.reviewPolicy"
+msgstr "Кароо саясаты"
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr "Издөө индекстөө"
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+"Google сыяктуу издөө системаларына сайтыңызды табууга жана көрсөтүүгө жардам "
+"бериңиз. <a href=\"{$sitemapUrl}\" target=\"_blank\">sitemap</a> жөнөтүү "
+"сунушталат."
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+"Журналды издөө системалары натыйжаларда көрсөтө алышы үчүн (50–300 белгиден) "
+"кыскача сүрөттөмө бериңиз."
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr "Бөлүмдөр жана бөлүм редакторлору"
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr ""
+"(Эгер бөлүмдөр кошулбаса, анда материалдар демейки боюнча Макалалар бөлүмүнө "
+"тапшырылат.)"
+
+msgid "manager.setup.sectionsDescription"
+msgstr ""
+"Журнал үчүн бөлүмдөрдү түзүү же өзгөртүү үчүн (мисалы, Макалалар, Китеп "
+"сындары ж.б.) Бөлүмдөрдү башкарууга кириңиз.<br /><br />Авторлор "
+"материалдарды тапшырганда белгилешет..."
+
+msgid "manager.setup.selectEditorDescription"
+msgstr "Редакциялык процессти жүргүзө турган журнал редактору."
+
+msgid "manager.setup.selectSectionDescription"
+msgstr "Материал карала турган журнал бөлүмү."
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr "Ар дайым верстка шилтемелерин көрсөтүп, чектелген кирүүнү белгилеңиз."
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr "Макала мазмунун көрүү"
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr "Журнал вебсайтына беш кадам"
+
+msgid "manager.setup.subjectExamples"
+msgstr ""
+"(Мисалы, Фотосинтез; Кара тешиктер; Төрт түстүү карта маселеси; Байес "
+"теориясы)"
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr "Ачкыч сөздөр"
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr "Авторлор үчүн мисал ачкыч сөздөрдү же темаларды көрсөтүңүз"
+
+msgid "manager.setup.submissions.description"
+msgstr "Автор көрсөтмөлөрү, автордук укук жана индекстөө (каттоо менен кошо)."
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+"Колдонуучуларды журналга жаңы макалаларды тапшыруудан токтотуңуз. "
+"Тапшырууларды ар бир журнал бөлүмү үчүн <a href=\"{$url}\">журнал бөлүмдөрү</"
+"a> жөндөөлөр бетинде өчүрсө болот."
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+"Бул журнал учурда макалаларды кабыл албайт. Тапшырууларды уруксат берүү үчүн "
+"иш агымынын жөндөөлөрүнө кириңиз."
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+"<a href=\"https://www.openarchives.org/\">Open Archives Initiative</a> "
+"аркылуу үчүнчү тарап индекстөө кызматтарына метадайындарды бериңиз."
+
+msgid "manager.setup.typeExamples"
+msgstr ""
+"(Мисалы, Тарыхый изилдөө; Квази-эксперименталдык; Адабий талдоо; "
+"Сурамжылоо/Интервью)"
+
+msgid "manager.setup.typeMethodApproach"
+msgstr "Түрү (Метод/Ыкма)"
+
+msgid "manager.setup.typeProvideExamples"
+msgstr ""
+"Бул тармак үчүн тиешелүү изилдөө түрлөрүнүн, методдорунун жана ыкмаларынын "
+"мисалдарын бериңиз"
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr "Уникалдуу идентификатор"
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr ""
+"Макалалар жана чыгарылыштар идентификациялык номер же сап менен белгилениши "
+"мүмкүн, мисалы DOI системасы аркылуу."
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr "Журнал редакциялык/кароо кеңешин колдонот."
+
+msgid "manager.setup.useThumbnail"
+msgstr "Миниатюра"
+
+msgid "manager.setup.useImageTitle"
+msgstr "Аталыш сүрөтү"
+
+msgid "manager.setup.userRegistration"
+msgstr "Колдонуучуну каттоо"
+
+msgid "manager.setup.useTextTitle"
+msgstr "Аталыш тексти"
+
+msgid "manager.statistics.statistics"
+msgstr "Журнал статистикасы"
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr "Макаланы көрүү саны (Авторлор үчүн гана)"
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr "Кабыл алуу"
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr "Баш тартуу"
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr "Кайра тапшыруу"
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr "Кароо үчүн күндөр"
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr "Жарыялоо үчүн күндөр"
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+"OJS ар бир журнал үчүн төмөнкү статистикаларды эсептейт. \"Кароо күндөрү\" "
+"тапшырма берилген күндөн (же Кароо версиясы дайындалган күндөн) баштап "
+"баштапкы редактор чечимине чейин эсептелет, ал эми \"жарыялоо күндөрү\" "
+"кабыл алынган тапшырмалар үчүн баштапкы жүктөөдөн жарыяланганга чейин "
+"өлчөнөт."
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr "Жарыяланган материалдар"
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr ""
+"Журнал жөнүндө бөлүмүндө окурмандарга жеткиликтүү боло турган материалдарды "
+"белгилеңиз."
+
+msgid "manager.statistics.statistics.note"
+msgstr ""
+"Эскертүү: Рецензияланган тапшырмалардын пайыздары 100%га жетпеши мүмкүн, "
+"анткени кайра тапшырылган материалдар кабыл алынат, четке кагылат же дагы "
+"процессте болот."
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr "Жарыяланган чыгарылыштар"
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr "Жалпы тапшырмалар"
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr "Рецензияланган"
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr "Катталган окурмандар"
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr "Дайындалгандардын саны"
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr "Кароочулар"
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr "Редактор баасы"
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr "Кароолордун саны"
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr ""
+"Бул журналдын рецензияланган статистикасын эсептөө үчүн бөлүмдөрдү тандаңыз."
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr "Жазылуулар"
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr "Макала файлдарын жүктөөлөр"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr "Макала аннотация бетин көрүүлөр"
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr "Макала аннотация бетин көрүүлөр жана жүктөөлөр"
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr "Журналдын башкы бетин көрүүлөр"
+
+msgid "manager.subscriptionPolicies"
+msgstr "Жазылуу саясаты"
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr "Кечиктирилген ачык жеткиликтүүлүк"
+
+msgid "manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "Берилген белгини колдонуңуз."
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr "Жазылуунун мөөнөтү бүтүү"
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr ""
+"Жазылуу мөөнөтү бүткөндө окурмандар бардык жазылуу мазмунуна кирүү "
+"мүмкүнчүлүгүн жоготушу мүмкүн же мөөнөт бүткөнгө чейин жарыяланган мазмунга "
+"кирүү мүмкүнчүлүгүн сактап калышы мүмкүн."
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr ""
+"Окурмандар акыркы жарыяланган жазылуу мазмунуна кирүү мүмкүнчүлүгүн жоготот, "
+"бирок мөөнөт бүткөнгө чейин жарыяланган мазмунга кирүү мүмкүнчүлүгүн сактап "
+"калышат."
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr "{$x} Жума"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr ""
+"Жазылуу мөөнөтү бүткөндөн кийин абоненттерге электрондук кат аркылуу "
+"кабарлаңыз"
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr ""
+"Жазылуу мөөнөтү бүткөндөн кийин абоненттерге электрондук кат аркылуу "
+"кабарлаңыз."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr ""
+"Жазылуу мөөнөтү бүткөнгө чейин абоненттерге электрондук кат аркылуу "
+"кабарлаңыз."
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr ""
+"Жазылуу мөөнөтү бүткөнгө чейин абоненттерге электрондук кат аркылуу "
+"кабарлаңыз."
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr "Жазылуу мөөнөтү бүтүү эскертүүлөрү"
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr ""
+"Автоматтык электрондук почта эскертүүлөрү (OJS электрондук каттарында Журнал "
+"менеджери тарабынан түзөтүлө алат) жазылуу мөөнөтү бүткөнгө чейин жана андан "
+"кийин абоненттерге жөнөтүлүшү мүмкүн."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+"Жеке жазылуу онлайн сатып алынганда Жазылуу менеджерине электрондук кат "
+"аркылуу кабарлаңыз."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+"Институционалдык жазылуу онлайн сатып алынганда Жазылуу менеджерине "
+"электрондук кат аркылуу кабарлаңыз (сунушталат)."
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr "Төмөнкүлөрдүн бирин тандаңыз:"
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr ""
+"HTML текст аянтчасында колдонулушу мүмкүн (шрифт өлчөмү, түс ж.б.), \"return"
+"\" <tt>&lt;br&gt;</tt> катары каралат; HTML редактору Firefox браузерлеринде "
+"иштейт."
+
+msgid "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "Жазылуу мөөнөтү бүткөндөн кийин айлардын санын туура тандаңыз."
+
+msgid "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "Жазылуу мөөнөтү бүткөнгө чейин айлардын санын туура тандаңыз."
+
+msgid "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "Жазылуу мөөнөтү бүткөндөн кийин жумалардын санын туура тандаңыз."
+
+msgid "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "Жазылуу мөөнөтү бүткөнгө чейин жумалардын санын туура тандаңыз."
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+"Катталган окурмандар чыгарылыш ачык жеткиликтүү болгондо мазмун тизмесин "
+"электрондук почта аркылуу алууга мүмкүнчүлүк алышат."
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr "Онлайн төлөм эскертүүлөрү"
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+"Автоматтык электрондук почта эскертүүлөрү (OJS электрондук каттарында Журнал "
+"менеджери тарабынан түзөтүлө алат) жазылуунун онлайн төлөмү аяктагандан "
+"кийин Жазылуу менеджерине жөнөтүлүшү мүмкүн."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+"Жеке жазылуу онлайн жаңыртылганда Жазылуу менеджерине электрондук кат "
+"аркылуу кабарлаңыз."
+
+msgid "manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+"Институционалдык жазылуу онлайн жаңыртылганда Жазылуу менеджерине "
+"электрондук кат аркылуу кабарлаңыз."
+
+msgid "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+"<strong>Эскертүү:</strong> Онлайн сатып алынган институционалдык жазылуулар "
+"берилген домен жана IP диапазондорунун бекитилишин жана Жазылуу менеджери "
+"тарабынан жазылуунун активдештирилишин талап кылат."
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+"<strong>Эскертүү:</strong> Бул параметрлерди иштетүү үчүн Журнал менеджери "
+"Окурман төлөмдөрүнүн астында онлайн төлөм модулун, анын ичинде жазылуу үчүн "
+"онлайн төлөмдөрдү иштетиши керек."
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr "Жазылуу журналдары үчүн ачык жеткиликтүүлүк параметрлери"
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr ""
+"Жазылуу журналдары жарыяланган мазмунуна \"кечиктирилген ачык "
+"жеткиликтүүлүк\" бере алышат жана \"автордук өзүн-өзү архивдөөгө\" уруксат "
+"беришет (экөө тең окурмандардын санын жана шилтемелерди көбөйтөт)."
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr "Жазылуу маалыматы"
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+"Жазылуу түрлөрү жана төлөм түзүмү жазылуу бетинде Жазылуу менеджеринин аты "
+"жана байланыш маалыматы менен көрсөтүлөт. Жазылуу тууралуу кошумча маалымат, "
+"мисалы төлөм ыкмалары же өнүгүп жаткан өлкөлөрдөгү абоненттер үчүн колдоо "
+"бул жерге кошулушу мүмкүн."
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr "Жазылуу менеджери"
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr ""
+"Бул байланыш маалыматтары жазылуу бетинде жазылуу боюнча суроолору бар "
+"кардарлар үчүн көрсөтүлөт."
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr "Туура электрондук почта дарегин киргизиңиз."
+
+msgid "manager.subscriptions"
+msgstr "Жазылуулар"
+
+msgid "manager.individualSubscriptions"
+msgstr "Жеке жазылуулар"
+
+msgid "manager.institutionalSubscriptions"
+msgstr "Институционалдык жазылуулар"
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr "Бул жазылууну жаңыртууну каалаганыңызга ишенесизби?"
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr "Бул жазылууну өчүрүүнү каалаганыңызга ишенесизби?"
+
+msgid "manager.subscriptions.summary"
+msgstr "Жазылуулардын жыйынтыгы"
+
+msgid "manager.subscriptions.create"
+msgstr "Жаңы жазылуу түзүү"
+
+msgid "manager.subscriptions.createTitle"
+msgstr "Түзүү"
+
+msgid "manager.subscriptions.renew"
+msgstr "Жаңыртуу"
+
+msgid "manager.subscriptions.dateEnd"
+msgstr "Аяктоо"
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr "Аяктоо датасы"
+
+msgid "manager.subscriptions.dateStart"
+msgstr "Баштоо"
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr "Баштоо датасы"
+
+msgid "manager.subscriptions.domain"
+msgstr "Домен"
+
+msgid "manager.subscriptions.edit"
+msgstr "Жазылууну түзөтүү"
+
+msgid "manager.subscriptions.editTitle"
+msgstr "Түзөтүү"
+
+msgid "manager.subscriptions.withStatus"
+msgstr "Статус менен"
+
+msgid "manager.subscriptions.allStatus"
+msgstr "Бардыгы"
+
+msgid "manager.subscriptions.form.status"
+msgstr "Статус"
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr "Жазылуу статусу талап кылынат."
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr "Туура жазылуу статусун тандаңыз."
+
+msgid "manager.subscriptions.form.typeId"
+msgstr "Жазылуу түрү"
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr "Жазылуу түрү талап кылынат."
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr "Туура жазылуу түрүн тандаңыз."
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr "Туура жазылуунун баштоо датасын тандаңыз."
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr "Аяктоо датасы"
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr "Жазылуунун аяктоо датасы талап кылынат."
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr "Институциянын аты"
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr "Бул мөөнөтү бүтпөгөн жазылуу түрү; баштоо датасын көрсөтпөңүз."
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr "Бул мөөнөтү бүтпөгөн жазылуу түрү; аяктоо датасын көрсөтпөңүз."
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr "Туура жазылуунун аяктоо датасын тандаңыз."
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr ""
+"Эскертүү: Төмөндөгү бардык өзгөртүүлөр колдонуучунун системалык профилине "
+"тиешелүү."
+
+msgid "manager.subscriptions.form.userId"
+msgstr "Колдонуучу"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Байланыш"
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr "Колдонуучу талап кылынат."
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr "Туура колдонуучуну тандаңыз."
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr "Туура өлкөнү тандаңыз."
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr ""
+"Колдонуучуга анын колдонуучу аты жана жазылуу маалыматы менен электрондук "
+"кат жөнөтүңүз."
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr "Берилген белгини колдонуңуз."
+
+msgid "manager.subscriptions.form.membership"
+msgstr "Мүчөлүк"
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr ""
+"Эгер жазылуу түрү абоненттерди ассоциацияга же уюмга мүчө болууну талап "
+"кылса, мүчөлүк маалыматын киргизиңиз."
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr "Тандалган жазылуу түрү мүчөлүк маалыматын талап кылат."
+
+msgid "manager.subscriptions.form.notes"
+msgstr "Эскертүүлөр"
+
+msgid "manager.subscriptions.form.domain"
+msgstr "Домен"
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr "Институциянын аты талап кылынат."
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr "Почта дареги"
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr ""
+"Эгер бул жерге домен киргизилсе, IP диапазондору кошумча болуп саналат.<br /"
+">Туура маанилер домен аттары (мисалы, lib.sfu.ca)."
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr "Туура доменди киргизиңиз."
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr "IP диапазондору"
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr "Баа оң сандык мааниге ээ болушу керек."
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr "•"
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Эгер бул жерге IP диапазондору киргизилсе, домен кошумча болуп саналат.<br /"
+">Туура маанилерге IP дарек (мисалы, 142.58.103.1), IP диапазону (мисалы, "
+"142.58.103.1 - 142.58.103.4), '' белгиси менен IP диапазону (мисалы, 142."
+"58..*), жана CIDR менен IP диапазону (мисалы, 142.58.100.0/24) кирет."
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr ""
+"Колдонуучуга эскертүү электрондук кат жөнөтүү үчүн журнал жөндөөлөрүндө "
+"жазылуу байланыш аты жана электрондук почта дареги көрсөтүлүшү керек."
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr "Жаңы жазылууларды түзүүдөн мурун жазылуу түрү түзүлүшү керек."
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr "Жаңы жазылууларды түзүүдөн мурун институция түзүлүшү керек."
+
+msgid "manager.subscriptions.ipRange"
+msgstr "IP диапазону"
+
+msgid "manager.subscriptions.membership"
+msgstr "Мүчөлүк"
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr "Шилтеме номери"
+
+msgid "manager.subscriptions.notes"
+msgstr "Эскертүүлөр"
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr "Баа талап кылынат."
+
+msgid "manager.subscriptions.noneCreated"
+msgstr "Жазылуулар жок"
+
+msgid "manager.subscriptions.selectContact"
+msgstr "Жазылуу байланыш адамын тандаңыз"
+
+msgid "manager.subscriptions.selectUser"
+msgstr "Колдонуучуну тандаңыз"
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr ""
+"Жазылууга кирүү укуктары автоматтык түрдө журналдын Менеджерлерине, "
+"Редакторлоруна, Бөлүм редакторлоруна, Макет редакторлоруна, Оңдоочуларына "
+"жана Корректорлоруна берилет."
+
+msgid "manager.subscriptions.select"
+msgstr "Тандоо"
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr "Жазылуу ийгиликтүү түзүлдү."
+
+msgid "manager.subscriptionTypes.duration"
+msgstr "Узактыгы"
+
+msgid "manager.subscriptionTypes.edit"
+msgstr "Жазылуу түрүн түзөтүү"
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr "Түзөтүү"
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr "Баасы"
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr "Символсуз (мисалы, $) сандык маанини киргизиңиз (мисалы, 40 же 40.00)."
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr "Валюта"
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr "Валюта талап кылынат."
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr "Туура валютаны тандаңыз."
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr "Сүрөттөмө"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr "Мөөнөтү бүтөт"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr "ай (мисалы, 12)"
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr "Мөөнөтү эч качан бүтпөйт"
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr "Берилген параметрлерди колдонуңуз."
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr "Узактыгы"
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr "Жазылуунун узактыгы ай менен (мисалы, 12)."
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr "Узактык оң сандык мааниге ээ болушу керек."
+
+msgid "manager.subscriptionTypes.name"
+msgstr "Жазылуу түрү"
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr "Жазылуу түрлөрү түзүлгөн эмес."
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr "Узактык талап кылынат."
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr "Формат"
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr "Жазылуу түрүнүн форматы талап кылынат."
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr "Туура жазылуу түрүнүн форматын тандаңыз."
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr "Жазылуулар"
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr "Жеке (колдонуучулар кирүү аркылуу текшерилет)"
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr "Институционалдык (колдонуучулар домен же IP дарек аркылуу текшерилет)"
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr "Берилген параметрлерди колдонуңуз."
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr ""
+"Жазылуулар мүчөлүк маалыматын талап кылат (мисалы, ассоциация, уюм, "
+"консорциум ж.б.)."
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr "Берилген белгини колдонуңуз."
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr "Параметрлер"
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr "Бул жазылуу түрүн коомдук жеткиликтүү же вебсайтта көрүнүктүү кылбаңыз."
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr "Берилген белгини колдонуңуз."
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr "Сактап, дагы бирди түзүү"
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr "Түрдүн аты"
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr "Бул ат менен жазылуу түрү мурунтан эле бар."
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr "Жазылуу түрүнүн аты талап кылынат."
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr "Жазылуу түрү ийгиликтүү түзүлдү."
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr "Сиз сунуштаган жазылууларды сүрөттөгөн бетке шилтеме."
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr ""
+"Келген адамдын учурдагы жана мурунку жазылууларын сүрөттөгөн бетке шилтеме."
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr "Бул шилтеме келген адам киргенде гана көрсөтүлөт."
+
+msgid "grid.action.addSection"
+msgstr "Бөлүм кошуу"
+
+msgid "manager.setup.section.description"
+msgstr ""
+"Журналдын жарыяланган чыгарылыштарындагы макалалар бөлүмдөргө уюштурулат, "
+"адатта тема же мазмун түрү боюнча (мисалы, Кароо макалалары, Изилдөө ж.б.)."
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+"Ролдор журналдагы колдонуучулар топтору болуп саналат, аларга ар кандай "
+"уруксат деңгээлдери жана журналдагы иш агымдары берилет. Беш уруксат "
+"деңгээли бар: Журнал менеджерлери журналдагы бардык нерсеге кире алышат ("
+"бардык мазмун жана жөндөөлөр); Бөлүм редакторлору дайындалган мазмунга толук "
+"кире алышат; Журнал ассистенттери редактор тарабынан ачык дайындалган "
+"тапшырмаларга гана чектелген кирүү мүмкүнчүлүгүнө ээ; Кароочулар аларга "
+"кароо үчүн дайындалган тапшырмаларды көрүп, аткара алышат; Авторлор өз "
+"тапшырмалары боюнча чектелген маалыматка кире алышат. Мындан тышкары, "
+"ролдорго кирүү мүмкүнчүлүгү берилген беш этаптык дайындоо бар: Тапшыруу, "
+"Ички кароо, Кароо, Редакциялык жана Продакшн."
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr ""
+"Макала: демейки жыл макаланын жарыяланган датасынан алынат, \"дароо "
+"жарыялоо\" сыяктуу."
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr "Чыгарылыш: демейки жыл чыгарылыштын жарыяланган датасынан алынат."
+
+msgid "manager.setup.resetPermissions"
+msgstr "Макаланын уруксаттарын кайра коюу"
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+"Ар бир жарыяланган макала үчүн автордук укук билдирүүсүн жана лицензия "
+"маалыматын алып салыңыз, аларды журналдын учурдагы демейки жөндөөлөрүнө "
+"кайтарыңыз. Бул макалаларга тиркелген мурунку автордук укук жана лицензия "
+"маалыматтарын түбөлүккө алып салат. Айрым учурларда башка лицензия менен "
+"жарыяланган иштерди кайра лицензиялоого мыйзамдуу түрдө уруксат берилбеши "
+"мүмкүн. Бул куралды колдонууда этият болуңуз жана журналда жарыяланган "
+"макалалар боюнча укуктарыңызга ишенбесеңиз, юридикалык адистер менен "
+"кеңешиңиз."
+
+msgid "manager.setup.resetPermissions.success"
+msgstr "Макаланын уруксаттары ийгиликтүү кайра коюлду."
+
+msgid "grid.genres.title.short"
+msgstr "Компоненттер"
+
+msgid "grid.genres.title"
+msgstr "Макала компоненттери"
+
+msgid "grid.genres.description"
+msgstr ""
+"Бул компоненттер файл атын коюу үчүн колдонулат жана файл жүктөөдө ачылуучу "
+"менюда көрсөтүлөт. Белгиленген ## жанрлар колдонуучуга файлды бүт тапшырма "
+"99Z же белгилүү бир компонент менен номер аркылуу (мисалы, 02) байланыштыруу "
+"мүмкүнчүлүгүн берет."
+
+msgid "plugins.importexport.common.settings"
+msgstr "Жөндөөлөр"
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr "DOI плагин жөндөөлөрү"
+
+msgid "plugins.importexport.common.export.articles"
+msgstr "Макалалар"
+
+msgid "plugins.importexport.common.export.issues"
+msgstr "Чыгарылыштар"
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr "Плагин талаптары аткарылган жок"
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+"Бул плагинди колдонуу үчүн \"Public Identifier\" плагин категориясына "
+"кириңиз, DOI плагинин иштетиңиз жана туура DOI префиксин көрсөтүңүз."
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr "Плагин толук орнотулган эмес."
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr ""
+"DOI public identifier плагининде DOI дайындоо үчүн эч кандай жарыялоо "
+"объекттери тандалган эмес, ошондуктан бул плагинде депозит же экспорт мүмкүн "
+"эмес."
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "Чыгарылыш версткасы импорттоло алган жок, анын файлы жок."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"{$id} чыгарылыш версткасы экспорттоло алган жок, анын файлы \"{$path}\" "
+"жолунда табылган жок."
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"{$id} чыгарылыштын мукаба сүрөтү экспорттоло алган жок, анын файлы \"{$path}"
+"\" жолунда табылган жок."
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr "Сырсөз"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "Сырсөз жөнөкөй текст түрүндө сакталат, башкача айтканда, шифрленбейт."
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr "Каалаган чыгарылыш"
+
+msgid "plugins.importexport.common.status.any"
+msgstr "Каалаган статус"
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr "Депозитке коюлган эмес"
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr "Катталган деп белгиленди"
+
+msgid "plugins.importexport.common.status.registered"
+msgstr "Катталган"
+
+msgid "plugins.importexport.common.action"
+msgstr "Аракет"
+
+msgid "plugins.importexport.common.action.export"
+msgstr "Экспорттоо"
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr "Катталган деп белгилөө"
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr "Эч кандай объект тандалган жок."
+
+msgid "plugins.importexport.common.error.validation"
+msgstr "Тандалган объекттерди конвертациялоо мүмкүн болгон жок."
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr "Туура эмес XML:"
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr "Чыгуу файлы {$param} жазылуучу эмес."
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr "Кирүү файлы {$param} окулбайт."
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr "Каттоо ийгиликсиз болду! DOI каттоо сервери ката кайтарды: '{$param}'."
+
+msgid "plugins.importexport.common.register.success"
+msgstr "Каттоо ийгиликтүү болду!"
+
+msgid "plugins.importexport.common.validation.success"
+msgstr "Текшерүү ийгиликтүү болду!"
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr "Текшерүү ийгиликсиз болду."
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr ""
+"Журнал жөндөөлөрүндө көрсөтүлгөн негизги байланыш адамга көчүрмө жөнөтүңүз."
+
+msgid "stats.context.tooltip.text"
+msgstr "Журналдын индекс бетин көргөн коноктордун саны."
+
+msgid "stats.context.tooltip.label"
+msgstr "Журнал статистикасы жөнүндө"
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+"Бул журнал үчүн колдонуу статистикасын камтыган CSV/Excel таблицасын төмөнкү "
+"параметрлерге ылайык жүктөп алыңыз."
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr "Журналдын индекс бетин көрүүлөрдүн саны."
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr "Журналды жүктөө"
+
+msgid "stats.issues.details"
+msgstr "Көрүүлөр жана жүктөөлөр"
+
+msgid "stats.issues.searchIssueDescription"
+msgstr "Чыгарылыштын аталышын, томун жана номерин издөө"
+
+msgid "stats.issues.none"
+msgstr ""
+"Бул параметрлерге туура келген колдонуу статистикасы бар чыгарылыштар "
+"табылган жок."
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+"Чыгарылыштар үчүн колдонуу статистикасын камтыган CSV/Excel таблицасын "
+"төмөнкү параметрлерге ылайык жүктөп алыңыз."
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+"<strong>Көрүүлөр</strong>: Чыгарылыштын мазмунун көргөн коноктордун "
+"саны.<br><strong>Жүктөөлөр</strong>: Чыгарылыш версткасы болсо, анын "
+"жүктөөлөрүнүн саны."
+
+msgid "stats.publicationStats"
+msgstr "Макала статистикасы"
+
+msgid "stats.publications.details"
+msgstr "Макала деталдары"
+
+msgid "stats.publications.none"
+msgstr ""
+"Бул параметрлерге туура келген колдонуу статистикасы бар макалалар табылган "
+"жок."
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr "Дата боюнча жалпы аннотация көрүүлөрү"
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr "Дата боюнча жалпы файл көрүүлөрү"
+
+msgid "stats.publications.countOfTotal"
+msgstr "{$total} макаланын ичинен {$count}"
+
+msgid "stats.publications.abstracts"
+msgstr "Аннотациялар"
+
+msgid "stats.publications.galleys"
+msgstr "Файлдар"
+
+msgid "stats.publications.downloadReport.description"
+msgstr ""
+"Макалалар үчүн колдонуу статистикасын камтыган CSV/Excel таблицасын төмөнкү "
+"параметрлерге ылайык жүктөп алыңыз."
+
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr "Макалаларды жүктөө"
+
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr "Ар бир макала үчүн аннотация көрүүлөрүнүн жана файл жүктөөлөрүнүн саны."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+"Бул журналдын негизги байланыш адамына тапшырма кабыл алынгандыгы тууралуу "
+"электрондук каттын көчүрмөсүн жөнөтүңүз."
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr ""
+"Бул журнал үчүн негизги байланыш адам аныкталган эмес. Негизги байланыш "
+"адамды <a href=\"{$url}\">журнал жөндөөлөрүндө</a> киргизсеңиз болот."
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr "Чыгарылыш натыйжаларын экспорттоо"
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr "Чыгарылыш версткаларын талдоо процесси ийгиликсиз болду"
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr "Журналдын аты"
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr "Журналдын башкы бетине URL"
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr "Журналдын негизги байланыш адамынын аты"
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr "Журналдын баш тамгалары"
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr "Журналдын автоматтык электрондук каттары үчүн кол тамгасы"
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr "Журналдын негизги байланыш адамынын электрондук почта дареги"
+
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr "Журналдын почта дареги"
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr "Төлөм түрүнүн аты"
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr "Төлөм суммасы"
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr "Төлөм суммасынын валютасы, мисалы USD"
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr "Бир нече журнал жайгаштырылганда вебсайттын аты"
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr ""
+"Абоненттин аты, байланыш уюму, телефон номери жана электрондук почта дареги"
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr "Жазылуу менеджеринин байланыш маалыматы"
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr "Жазылуу бетине URL"
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr "Жазылуу аяктаган дата"
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr "Жазылуунун түрү, аты, узактыгы жана баасы боюнча жыйынтык"
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr "Абоненттин мүчөлүгү тууралуу маалымат"
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr "Жазылган институциянын аты"
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr "Жазылган институциянын почта дареги"
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr "Бул жазылуу үчүн туура IP даректеринин домен аты"
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr "Бул жазылуу үчүн туура IP диапазондору"
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr "Автор төлөм жасай ала турган бетке URL"
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr "Тапшыруу көрсөтмөлөрүнө URL"
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr "Жарыяланган макалалар статистика бетине шилтеме"
+
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr "Чыгарылыштын мазмуну, мисалы бардык байланышкан тапшырмалардын тизмеси."
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
+"Бул электрондук кат ай сайын редакторлорго жана журнал менеджерлерине "
+"системанын абалы боюнча маалымат берүү үчүн автоматтык түрдө жөнөтүлөт."
+
+msgid "mailable.validateEmailContext.name"
+msgstr "Электрондук почтаны текшерүү (Журналга каттоо)"
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+"Бул электрондук кат жаңы колдонуучуга журналга катталганда жөнөтүлөт, эгер "
+"жөндөөлөр электрондук почтаны текшерүүнү талап кылса."
+
+msgid "doi.displayName"
+msgstr "DOI"
+
+msgid "doi.description"
+msgstr ""
+"Бул плагин OJSдеги чыгарылыштарга, макалаларга жана версткаларга санариптик "
+"объект идентификаторлорун (DOI) дайындоого мүмкүндүк берет."
+
+msgid "doi.readerDisplayName"
+msgstr "DOI"
+
+msgid "doi.manager.displayName"
+msgstr "DOIлер"
+
+msgid "doi.manager.settings.description"
+msgstr ""
+"OJSде DOIлерди башкаруу жана колдонуу үчүн DOI плагинин конфигурациялаңыз:"
+
+msgid "doi.manager.settings.explainDois"
+msgstr "DOI дайындалуучу жарыялоо объекттерин тандаңыз:"
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr "Макала версткалары"
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr "Макала версткалары, мисалы жарыяланган PDF"
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr "DOI префикси"
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr "DOI префикси милдеттүү жана 10.xxxx форматында болушу керек."
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr ""
+"Ар бир жарыялоо түрү үчүн атайын суффикс үлгүсүн киргизиңиз. Атайын суффикс "
+"үлгүсү төмөнкү белгилерди колдоно алат:<br><br> <code>%j</code> Журналдын "
+"баш тамгалары<br> <code>%v</code> Чыгарылыш том<br> <code>%i</code> "
+"Чыгарылыш номери<br> <code>%Y</code> Чыгарылыш жылы<br> <code>%a</code> "
+"Макала ID<br> <code>%g</code> Верстка ID<br> <code>%f</code> Файл ID<br> "
+"<code>%p</code> Барак номери<br> <code>%x</code> Атайын "
+"идентификатор<br><br> Эскертүү: атайын суффикс үлгүлөрү көбүнчө DOI түзүү "
+"жана каттоо көйгөйлөрүнө алып келет. Атайын суффикс үлгүсүн колдонгондо, "
+"редакторлор DOI түзүп, Crossref сыяктуу каттоо агенттигине тапшыра алышын "
+"кылдат текшериңиз. "
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr "Мисалы, vol%viss%ipp%p үлгүсү 10.1234/vol3iss2pp230 DOI түзө алат"
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr "макалалар үчүн"
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr "версткалар үчүн"
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr "Чыгарылыштар үчүн DOI суффикс үлгүсүн киргизиңиз."
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr "Макалалар үчүн DOI суффикс үлгүсүн киргизиңиз."
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr "Версткалар үчүн DOI суффикс үлгүсүн киргизиңиз."
+
+msgid "doi.manager.settings.doiReassign"
+msgstr "DOIлерди кайра дайындоо"
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr ""
+"Эгер DOI конфигурациясын өзгөртсөңүз, мурун дайындалган DOIлерге таасир "
+"этпейт. DOI конфигурациясы сакталгандан кийин бул баскычты колдонуп бардык "
+"учурдагы DOIлерди тазалаңыз, ошондо жаңы жөндөөлөр учурдагы объекттерге "
+"таасир этет."
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr "Бардык учурдагы DOIлерди өчүрүүнү каалаганыңызга ишенесизби?"
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr "DOIлерди дайындоо"
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+"DOI дайындалбаган бардык жарыяланган журнал объекттерине DOIлерди "
+"дайындаңыз. Бул аракетти жеке суффикс конфигурациясы менен колдонууга "
+"болбойт. Эгер жогоруда DOI конфигурациясын өзгөртсөңүз, бул аракетти "
+"баштоодон мурун өзгөртүүлөрдү сактаңыз. DOIлерди дайындоо журналдагы "
+"жарыяланган объекттердин санына жараша көп убакытты талап кылышы мүмкүн."
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+"DOI дайындалбаган бардык жарыяланган объекттерге DOIлерди дайындагыңыз "
+"келгенине ишенесизби?"
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr "Каттоо агенттиги"
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr "DOIлерди тапшырууда колдонгуңуз келген каттоо агенттигин тандаңыз."
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr "Жок"
+
+msgid "doi.editor.doi"
+msgstr "DOI"
+
+msgid "doi.editor.doi.description"
+msgstr "DOI {$prefix} менен башталышы керек."
+
+msgid "doi.editor.doi.assignDoi"
+msgstr "Дайындаңыз"
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr "чыгарылыш"
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr "макала"
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr "верстка"
+
+msgid "doi.editor.customSuffixMissing"
+msgstr "DOI дайындала албайт, анткени атайын суффикс жок."
+
+msgid "doi.editor.missingIssue"
+msgstr "Бул жарыя чыгарылышка дайындалмайынча DOI түзө албайсыз."
+
+msgid "doi.editor.missingParts"
+msgstr ""
+"DOI түзө албайсыз, анткени DOI үлгүсүнүн бир же бир нече бөлүгүндө маалымат "
+"жок. Жарыяны чыгарылышка дайындоо, басмачы ID коюу же барак номерлерин "
+"киргизүү талап кылынышы мүмкүн."
+
+msgid "doi.editor.patternNotResolved"
+msgstr "DOI дайындала албайт, анткени ал чечилбеген үлгүнү камтыйт."
+
+msgid "doi.editor.canBeAssigned"
+msgstr ""
+"Бул жерде DOI алдын ала көрүү көрсөтүлүп жатат. DOI дайындоо үчүн белгини "
+"тандап, форманы сактаңыз."
+
+msgid "doi.editor.assigned"
+msgstr "DOI бул {$pubObjectType} үчүн дайындалды."
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+"Берилген DOI суффикси башка жарыяланган материал үчүн колдонулуп жатат. Ар "
+"бир материал үчүн уникалдуу DOI суффиксин киргизиңиз."
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr "Учурдагы DOIни өчүрүүнү каалаганыңызга ишенесизби?"
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr "Чыгарылыш объекттеринин DOIлерин тазалоо"
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr ""
+"Учурдагы чыгарылыш объекттеринин DOIлерин өчүрүүнү каалаганыңызга ишенесизби?"
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+"Бул чыгарылышка пландалган бардык объекттердин (макалалар жана версткалар) "
+"DOIлерин тазалоо үчүн төмөнкү параметрди колдонуңуз."
+
+msgid "doi.editor.assignDoi"
+msgstr "DOI {$pubId} бул {$pubObjectType} үчүн дайындалсын"
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr "DOI дайындала албайт, анткени атайын суффикс жок."
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr "DOI {$pubId} дайындала албайт, анткени ал чечилбеген үлгүнү камтыйт."
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr ""
+"DOI {$pubId} дайындалды. DOIни түзөтүү үчүн <a href=\"{$doiManagementLink}\""
+">DOI башкаруу бетине</a> кириңиз."
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr "DOI {$pubId} жарыяланганда дайындалат."
+
+msgid "doi.editor.missingPrefix"
+msgstr "DOI {$doiPrefix} менен башталышы керек."
+
+msgid "doi.editor.preview.publication"
+msgstr "Бул жарыя үчүн DOI {$doi} болот."
+
+msgid "doi.editor.preview.publication.none"
+msgstr "Бул жарыяга DOI дайындалган эмес."
+
+msgid "doi.editor.preview.objects"
+msgstr "Элемент"
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr "Сиз сураган верстка бул жарыянын бөлүгү эмес."
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr "Жарыя/верстка жарыялангандан кийин DOIлер гана түзөтүлө алат"
+
+msgid "api.issue.400.invalidDoi"
+msgstr "Жөнөтүлгөн DOI жараксыз"
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr "Жарыя жарыялангандан кийин DOIлер гана түзөтүлө алат"
+
+msgid "api.issue.404.issuesNotFound"
+msgstr "Сиз сураган чыгарылыштар табылган жок"
+
+msgid "doi.manager.submissionDois"
+msgstr "Макала DOIлер"
+
+msgid "doi.manager.issueDois"
+msgstr "Чыгарылыш DOIлер"
+
+msgid "mailable.subscriptionNotify.description"
+msgstr ""
+"Бул электрондук кат катталган окурманга Менеджер алар үчүн жазылуу түзгөнүн "
+"билдирет. Ал журналдын URL дарегин жана кирүү боюнча көрсөтмөлөрдү камтыйт."
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr "Жазылуу жакында бүтөт"
+
+msgid "mailable.subscriptionExpired.name"
+msgstr "Жазылуу мөөнөтү бүттү"
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr "Жазылуу акыркы жолу бүттү"
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr "Жеке жазылууну сатып алуу"
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr ""
+"Бул электрондук кат Жазылуу менеджерине жеке жазылуу онлайн сатып алынганын "
+"билдирет. Ал жазылуу тууралуу кыскача маалымат жана сатып алынган жазылууга "
+"тез кирүү шилтемесин камтыйт."
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr "Институционалдык жазылууну сатып алуу"
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr ""
+"Бул электрондук кат Жазылуу менеджерине институционалдык жазылуу онлайн "
+"сатып алынганын билдирет. Ал жазылуу тууралуу кыскача маалымат жана сатып "
+"алынган жазылууга тез кирүү шилтемесин камтыйт."
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr "Жеке жазылууну жаңыртуу"
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr ""
+"Бул электрондук кат Жазылуу менеджерине жеке жазылуу онлайн жаңыртылганын "
+"билдирет. Ал жазылуу тууралуу кыскача маалымат жана жаңыртылган жазылууга "
+"тез кирүү шилтемесин камтыйт."
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr "Институционалдык жазылууну жаңыртуу"
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr ""
+"Бул электрондук кат Жазылуу менеджерине институционалдык жазылуу онлайн "
+"жаңыртылганын билдирет. Ал жазылуу тууралуу кыскача маалымат жана "
+"жаңыртылган жазылууга тез кирүү шилтемесин камтыйт."
+
+msgid "mailable.openAccessNotify.name"
+msgstr "Ачык жеткиликтүүлүк эскертүүсү"
+
+msgid "mailable.openAccessNotify.description"
+msgstr ""
+"Бул электрондук кат чыгарылыш ачык жеткиликтүү болгондо эскертүү алууну "
+"сураган катталган окурмандарга жөнөтүлөт."
+
+msgid "mailable.issuePublishNotify.name"
+msgstr "Чыгарылыш жарыяланган эскертүү"
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+"Бул электрондук кат жаңы чыгарылыш жарыяланганда катталган колдонуучуларга "
+"автоматтык түрдө жөнөтүлөт."
+
+msgid "manager.manageEmails.description"
+msgstr ""
+"Бул журналдан жөнөтүлгөн электрондук каттардагы билдирүүлөрдү түзөтүңүз."

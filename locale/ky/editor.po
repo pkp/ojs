@@ -1,7 +1,7 @@
 # Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-04-07 10:50+0000\n"
+"PO-Revision-Date: 2025-11-08 16:37+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/editor/ky/>\n"
 "Language: ky\n"
@@ -384,3 +384,111 @@ msgstr "Чыгарылган датасы чыгарылыш жарыяланг�
 
 msgid "editor.submissions.submitMMDD"
 msgstr "MM-DD тапшырыңыз"
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"Бул макаланы чыгарылыштан алып салууну каалаганыңызга ишенесизби? Макала "
+"башка чыгарылышта пландоо үчүн жеткиликтүү болот."
+
+msgid "editor.submissions.showBy"
+msgstr "Көрсөтүү боюнча"
+
+msgid "issues.submissions.issueIds"
+msgstr "Чыгарылышка дайындалган"
+
+msgid "editor.submissions.invite"
+msgstr "Чакыруу"
+
+msgid "editor.submissions.accept"
+msgstr "Кабыл алуу"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Тапшыруулар жок"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Акыркы"
+
+msgid "editor.submissions.averageTime"
+msgstr "Жумалар"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Акыркы аяктаган"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Редакторго дайындалган"
+
+msgid "editor.submissions.inSection"
+msgstr "Бөлүмдө"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Пландалган жарыяны көрсөтүү"
+
+msgid "editor.article.publishVersion"
+msgstr "Версияны жарыялоо"
+
+msgid "editor.article.viewMetadata"
+msgstr "Версиянын метадайындарын көрүү"
+
+msgid "editor.article.editMetadata"
+msgstr "Версиянын метадайындарын түзөтүү"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Жарыялоо үчүн пландоо"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Дайындалышы керек"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"Жарыялоо акысы төлөнгөн эмес. Жарыялоо үчүн авторго төлөмдү төлөөнү же "
+"акыдан баш тартууну билдирүү керек."
+
+msgid "editor.article.payment.requestPayment"
+msgstr "Төлөм суранычы"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"Сиз өчүрүүнү сураган мукаба сүрөтү табылган жок. Балким ал мурунтан "
+"өчүрүлгөн. Баракты кайра жүктөп көрүңүз."
+
+msgid "grid.action.removeArticle"
+msgstr "Макаланы чыгарылыштан алып салуу"
+
+msgid "editor.article.remove"
+msgstr "Алып салуу"
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Кирүү датасы жараксыз."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Чыгарылыш версткасын түзөтүү"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"Макет редактору бул файлдарды ар бир верстка үчүн даярдап, андан кийин "
+"тиешелүү <span class=\"pkp_help_title\">Корректордук</span> бөлүмүнө жүктөйт."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Верстка файлдарын тандоо"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"Бул тизмедеги акыркы долбоор файлдары редакциялык оңдоочу тарабынан оңдолгон "
+"версияларга айландырылып, төмөндө <span class=\"pkp_help_title\">Редакциялык "
+"оңдоо</span> бөлүмүнө жүктөлөт."
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"Ар кандай тапшырма этабына мурунтан жүктөлгөн файлдар төмөнкү \"Кошуу\" "
+"белгисин белгилеп жана \"Издөө\" баскычын басуу менен Корректордук тизмеге "
+"кошулушу мүмкүн: бардык жеткиликтүү файлдар көрсөтүлөт жана кошуу үчүн "
+"тандалса болот."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"'{$publicIdentifier}' коомдук идентификатору ошол эле түрдөгү башка объект "
+"үчүн мурунтан бар. Журналдагы ошол эле түрдөгү объекттер үчүн уникалдуу "
+"идентификаторлорду тандаңыз."
+
+msgid "editor.article.coverImage"
+msgstr "Мукачанын сүрөтү"

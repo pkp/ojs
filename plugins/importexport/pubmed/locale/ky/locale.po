@@ -1,7 +1,7 @@
-# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-03-26 14:05+0000\n"
+"PO-Revision-Date: 2025-11-08 16:37+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-pubmed/ky/>\n"
@@ -53,3 +53,12 @@ msgstr ""
 "[articleId1] [articleId2] ...\n"
 "{$scriptName} {$pluginName} [xmlFileName] [journal_path] маселе [issueId]"
 "vvv\n"
+
+msgid "plugins.importexport.pubmed.settings.form.nlmTitle"
+msgstr "NLM журнал аталышынын кыскартмасы"
+
+msgid "plugins.importexport.pubmed.settings.form.nlmTitle.description"
+msgstr ""
+"Журнал үчүн NLM аталышынын кыскартмасы. Эгер кыскартманы билбесеңиз, <a href="
+"\"https://www.ncbi.nlm.nih.gov/nlmcatalog/\">NLM Каталогунан издөө "
+"жүргүзүңүз</a>."
