@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-11-19 10:09+0000\n"
+"PO-Revision-Date: 2025-11-20 07:55+0000\n"
 "Last-Translator: \"Jesper B. Thestrup\" <jbt@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/invitation/"
 "da/>\n"
@@ -57,3 +57,6 @@ msgstr ""
 
 msgid "invitation.role.masthead"
 msgstr "Tidsskriftets sidehoved"
+
+msgid "userInvitation.search.userFound"
+msgstr "Brugeren findes allerede på serveren"
