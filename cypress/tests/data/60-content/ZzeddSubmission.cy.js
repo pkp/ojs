@@ -207,6 +207,7 @@ describe('Data suite tests', function() {
 		cy.get('.pkpFormField:contains("Family Name")').find('input[name*="-en"]').type(submission.authors[0].familyName);
 		cy.get('.pkpFormField:contains("Country")').find('select').select(submission.authors[0].country)
         cy.get('.pkpFormField:contains("Email")').find('input').type(submission.authors[0].email);
+        cy.get(`input[name=contributorRoles][value="${Cypress.env('contributorRoleAuthor')}"]`).check();
 		cy.get('div[role=dialog]:contains("Add Contributor")').find('button').contains('Save').click();
 		cy.wait(3000);
         cy.get('.submissionWizard__footer button').contains('Continue').click();
@@ -620,7 +621,7 @@ describe('Data suite tests', function() {
         cy.logout();
     });
 
-    it('Enroll an existing user who match with a suggested revirwer', function () {
+    it('Enroll an existing user who match with a suggested reviewer', function () {
         cy.findSubmissionAsEditor('dbarnes', null, 'Zedd');
 		
         cy.get('[data-cy="reviewer-manager"]')

@@ -33,20 +33,22 @@ describe('Article View Metadata - DC Plugin', function() {
 			submitterRole: 'Journal manager',
 			additionalAuthors: [
 				{
+					contributorType: Cypress.env('contributorTypePerson'),
 					givenName: {en: 'Name 1'},
 					familyName: {en: 'Author 1'},
 					country: 'US',
 					affiliation: {en: 'Stanford University'},
 					email: 'nameauthor1Test@mailinator.com',
-					userGroupId: Cypress.env('authorUserGroupId')
+					contributorRoles: [Cypress.env('contributorRoleAuthor')]
 				},
 				{
+					contributorType: Cypress.env('contributorTypePerson'),
 					givenName: {en: 'Name 2'},
 					familyName: {en: 'Author 2'},
 					country: 'US',
 					affiliation: {en: 'Stanford University'},
 					email: 'nameauthor2Test@mailinator.com',
-					userGroupId: Cypress.env('authorUserGroupId')
+					contributorRoles: [Cypress.env('contributorRoleAuthor')]
 				}
 			],
 			files: [

@@ -22,6 +22,7 @@ describe('Data suite tests', function() {
 		],
 		'additionalAuthors': [
 			{
+				contributorType: Cypress.env('contributorTypePerson'),
 				givenName: {en: 'Frank'},
 				familyName: {en: 'van Laerhoven'},
 				affiliations: [
@@ -31,7 +32,7 @@ describe('Data suite tests', function() {
 				],
 				email: 'fvanlaerhoven@mailinator.com',
 				country: 'US',
-				userGroupId: Cypress.env('authorUserGroupId')
+				contributorRoles: [Cypress.env('contributorRoleAuthor')]
 			}
 		],
 		files: [
