@@ -17,28 +17,28 @@
 			symbolic="article=>doaj-xml"
 			displayName="plugins.importexport.doaj.displayName"
 			description="plugins.importexport.doaj.description"
-			inputType="class::classes.submission.Submission[]"
+			inputType="class::APP\submission\Submission[]"
 			outputType="xml::schema(plugins/generic/doaj/doajArticles.xsd)" />
 		<!-- DOAJ JSON article output -->
 		<filterGroup
 			symbolic="article=>doaj-json"
 			displayName="plugins.importexport.doaj.displayName"
 			description="plugins.importexport.doaj.description"
-			inputType="class::classes.submission.Submission"
+			inputType="class::APP\submission\Submission"
 			outputType="primitive::string" />
 		<!-- DOAJ XML publication output -->
 		<filterGroup
 			symbolic="publication=>doaj-xml"
 			displayName="plugins.importexport.doaj.displayName"
 			description="plugins.importexport.doaj.description"
-			inputType="class::classes.publication.Publication[]"
+			inputType="class::APP\publication\Publication[]"
 			outputType="xml::schema(plugins/generic/doaj/doajArticles.xsd)" />
 		<!-- DOAJ JSON publication output -->
 		<filterGroup
 			symbolic="publication=>doaj-json"
 			displayName="plugins.importexport.doaj.displayName"
 			description="plugins.importexport.doaj.description"
-			inputType="class::classes.publication.Publication"
+			inputType="class::APP\publication\Publication"
 			outputType="primitive::string" />
 	</filterGroups>
 	<filters>

@@ -17,21 +17,21 @@
 			symbolic="issue=>datacite-xml"
 			displayName="plugins.importexport.datacite.displayName"
 			description="plugins.importexport.datacite.description"
-			inputType="class::classes.issue.Issue"
+			inputType="class::APP\issue\Issue"
 			outputType="xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)" />
 		<!-- DataCite XML article output -->
 		<filterGroup
 			symbolic="article=>datacite-xml"
 			displayName="plugins.importexport.datacite.displayName"
 			description="plugins.importexport.datacite.description"
-			inputType="class::classes.submission.Submission"
+			inputType="class::APP\submission\Submission"
 			outputType="xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)" />
 		<!-- DataCite XML galley output -->
 		<filterGroup
 			symbolic="galley=>datacite-xml"
 			displayName="plugins.importexport.datacite.displayName"
 			description="plugins.importexport.datacite.description"
-			inputType="class::lib.pkp.classes.galley.Galley"
+			inputType="class::PKP\galley\Galley"
 			outputType="xml::schema(http://schema.datacite.org/meta/kernel-4/metadata.xsd)" />
 	</filterGroups>
 	<filters>

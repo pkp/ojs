@@ -17,7 +17,7 @@
 			symbolic="article=>dc11"
 			displayName="plugins.metadata.dc11.articleAdapter.displayName"
 			description="plugins.metadata.dc11.articleAdapter.description"
-			inputType="class::classes.submission.Submission"
+			inputType="class::APP\submission\Submission"
 			outputType="metadata::APP\plugins\metadata\dc11\schema\Dc11Schema(ARTICLE)" />
 	</filterGroups>
 	<filters>
