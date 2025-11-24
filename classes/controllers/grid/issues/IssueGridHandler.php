@@ -379,7 +379,13 @@ class IssueGridHandler extends GridHandler
             $publications = $submission->getData('publications');
             foreach ($publications as $publication) {
                 if ($publication->getData('issueId') === (int) $issue->getId()) {
-                    Repo::publication()->edit($publication, ['issueId' => '', 'status' => Submission::STATUS_QUEUED]);
+                    Repo::publication()->edit(
+                        $publication,
+                        [
+                            'issueId' => null,
+                            'status' => Submission::STATUS_QUEUED,
+                        ]
+                    );
                 }
             }
             $newSubmission = Repo::submission()->get($submission->getId());
