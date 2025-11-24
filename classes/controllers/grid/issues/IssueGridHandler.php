@@ -381,7 +381,7 @@ class IssueGridHandler extends GridHandler
                 if ($publication->getData('issueId') === (int) $issue->getId()) {
                     Repo::publication()->edit(
                         $publication,
-                        ['issueId' => '', 'status' => Publication::STATUS_QUEUED]
+                        ['issueId' => null, 'status' => Publication::STATUS_QUEUED]
                     );
                 }
             }
