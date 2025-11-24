@@ -53,6 +53,12 @@ describe('Data suite tests', function() {
 		cy.readFile(downloadedIssuePath).then(fileContent => {
 			// Setup year in the future to avoid conflicts
 			fileContent = fileContent.replace(/<year>\d+<\/year>/g, `<year>${issueYear}</year>`);
+
+			// FIX: Hard wait required for CI stability.
+			// The uploader initializes asynchronously.
+			// DOM presence checks (e.g. moxie-shim) pass before event listeners are fully bound.
+			// This wait ensures the file is uploaded as 'multipart/form-data' instead of failing as 'application/octet-stream'.
+			cy.wait(1000);
 			cy.get('input[type=file]').attachFile({fileContent, filePath: downloadedIssuePath, mimeType: 'text/xml', encoding: 'utf8'});
 		});
 
