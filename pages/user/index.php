@@ -29,7 +29,6 @@ switch ($op) {
     case 'completePurchaseSubscription':
     case 'payRenewSubscription':
     case 'payMembership':
-    case 'getInterests':
         return new APP\pages\user\UserHandler();
     default:
         return require_once('lib/pkp/pages/user/index.php');
