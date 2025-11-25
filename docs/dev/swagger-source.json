@@ -4558,7 +4558,7 @@
 				}
 			}
 		},
-		"/contexts/{contextId}/userGroup": {
+		"/userGroups": {
 			"get": {
 				"tags": [
 					"User Groups"
