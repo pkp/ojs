@@ -2,11 +2,29 @@ on:
   schedule:
     - cron: '5 5 * * *'
   workflow_dispatch:
+    inputs:
+      job:
+        description: "Which OJS workflow job to run?"
+        required: true
+        type: choice
+        options:
+          - ojs-main
+          - ojs-stable-3_5_0
+          - ojs-stable-3_4_0
+          - ojs-stable-3_3_0
+      database:
+        description: "Select database"
+        required: true
+        type: choice
+        options:
+          - mysql
+          - pgsql
+          - mariadb
 
 name: schedule
 jobs:
   ojs-main:
-    if: github.repository == 'pkp/ojs'
+    if: github.repository == 'pkp/ojs' && (github.event_name == 'schedule' || inputs.job == 'ojs-main')
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -35,15 +53,20 @@ jobs:
             upgrade_test: 'stable-3_3_0,stable-3_4_0,stable-3_5_0'
     name: ojs-main
     steps:
+      - name: Skip if DB does not match
+        if: matrix.database != inputs.database
+        run: exit 0
+
       - uses: pkp/pkp-github-actions@v1
+        if: matrix.database == inputs.database
         with:
           node_version: 20
-          dataset_branch: 'main'
-          DATASETS_ACCESS_KEY:  ${{secrets.DATASETS_ACCESS_KEY}}
+          dataset_branch: "main"
+          DATASETS_ACCESS_KEY: ${{ secrets.DATASETS_ACCESS_KEY }}
           DEBUG_IN_TMATE: false
 
   ojs-stable-3_5_0:
-    if: github.repository == 'pkp/ojs'
+    if: github.repository == 'pkp/ojs' && (github.event_name == 'schedule' || inputs.job == 'ojs-stable-3_5_0')
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -70,15 +93,20 @@ jobs:
             upgrade_test: 'stable-3_3_0,stable-3_4_0'
     name: ojs-stable-3_5_0
     steps:
+      - name: Skip if DB does not match
+        if: matrix.database != inputs.database
+        run: exit 0
+
       - uses: pkp/pkp-github-actions@v1
+        if: matrix.database == inputs.database
         with:
           node_version: 20
-          dataset_branch: 'stable-3_5_0'
-          DATASETS_ACCESS_KEY: ${{secrets.DATASETS_ACCESS_KEY}}
+          dataset_branch: "stable-3_5_0"
+          DATASETS_ACCESS_KEY: ${{ secrets.DATASETS_ACCESS_KEY }}
           DEBUG_IN_TMATE: false
 
   ojs-stable-3_4_0:
-    if: github.repository == 'pkp/ojs'
+    if: github.repository == 'pkp/ojs' && (github.event_name == 'schedule' || inputs.job == 'ojs-stable-3_4_0')
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -104,15 +132,20 @@ jobs:
             upgrade_test: '3.1.0,3.1.1-2,3.1.2,stable-3_2_0,stable-3_2_1,stable-3_3_0'
     name: ojs-stable-3_4_0
     steps:
+      - name: Skip if DB does not match
+        if: matrix.database != inputs.database
+        run: exit 0
+
       - uses: pkp/pkp-github-actions@v1
+        if: matrix.database == inputs.database
         with:
           node_version: 16
-          dataset_branch: 'stable-3_4_0'
-          DATASETS_ACCESS_KEY: ${{secrets.DATASETS_ACCESS_KEY}}
+          dataset_branch: "stable-3_4_0"
+          DATASETS_ACCESS_KEY: ${{ secrets.DATASETS_ACCESS_KEY }}
           DEBUG_IN_TMATE: false
 
   ojs-stable-3_3_0:
-    if: github.repository == 'pkp/ojs'
+    if: github.repository == 'pkp/ojs' && (github.event_name == 'schedule' || inputs.job == 'ojs-stable-3_3_0')
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -129,9 +162,14 @@ jobs:
             SAVE_BUILD: 'save_build'
     name: ojs-stable-3_3_0
     steps:
+      - name: Skip if DB does not match
+        if: matrix.database != inputs.database
+        run: exit 0
+
       - uses: pkp/pkp-github-actions@v1
+        if: matrix.database == inputs.database
         with:
           node_version: 12
-          dataset_branch: 'stable-3_3_0'
-          DATASETS_ACCESS_KEY: ${{secrets.DATASETS_ACCESS_KEY}}
+          dataset_branch: "stable-3_3_0"
+          DATASETS_ACCESS_KEY: ${{ secrets.DATASETS_ACCESS_KEY }}
           DEBUG_IN_TMATE: false
