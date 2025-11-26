@@ -53,10 +53,6 @@ jobs:
             upgrade_test: 'stable-3_3_0,stable-3_4_0,stable-3_5_0'
     name: ojs-main
     steps:
-      - name: Skip if DB does not match
-        if: matrix.database != inputs.database
-        run: exit 0
-
       - uses: pkp/pkp-github-actions@v1
         if: matrix.database == inputs.database
         with:
@@ -93,10 +89,6 @@ jobs:
             upgrade_test: 'stable-3_3_0,stable-3_4_0'
     name: ojs-stable-3_5_0
     steps:
-      - name: Skip if DB does not match
-        if: matrix.database != inputs.database
-        run: exit 0
-
       - uses: pkp/pkp-github-actions@v1
         if: matrix.database == inputs.database
         with:
@@ -132,10 +124,6 @@ jobs:
             upgrade_test: '3.1.0,3.1.1-2,3.1.2,stable-3_2_0,stable-3_2_1,stable-3_3_0'
     name: ojs-stable-3_4_0
     steps:
-      - name: Skip if DB does not match
-        if: matrix.database != inputs.database
-        run: exit 0
-
       - uses: pkp/pkp-github-actions@v1
         if: matrix.database == inputs.database
         with:
@@ -162,10 +150,6 @@ jobs:
             SAVE_BUILD: 'save_build'
     name: ojs-stable-3_3_0
     steps:
-      - name: Skip if DB does not match
-        if: matrix.database != inputs.database
-        run: exit 0
-
       - uses: pkp/pkp-github-actions@v1
         if: matrix.database == inputs.database
         with:
