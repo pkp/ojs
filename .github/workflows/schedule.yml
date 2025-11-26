@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       job:
-        description: "Which OJS workflow job to run?"
+        description: 'Which OJS workflow job to run?''
         required: true
         type: choice
         options:
@@ -13,7 +13,7 @@ on:
           - ojs-stable-3_4_0
           - ojs-stable-3_3_0
       database:
-        description: "Select database"
+        description: 'Select database'
         required: true
         type: choice
         options:
@@ -61,7 +61,7 @@ jobs:
         if: matrix.database == inputs.database
         with:
           node_version: 20
-          dataset_branch: "main"
+          dataset_branch: 'main'
           DATASETS_ACCESS_KEY: ${{ secrets.DATASETS_ACCESS_KEY }}
           DEBUG_IN_TMATE: false
 
@@ -101,7 +101,7 @@ jobs:
         if: matrix.database == inputs.database
         with:
           node_version: 20
-          dataset_branch: "stable-3_5_0"
+          dataset_branch: 'stable-3_5_0'
           DATASETS_ACCESS_KEY: ${{ secrets.DATASETS_ACCESS_KEY }}
           DEBUG_IN_TMATE: false
 
@@ -140,7 +140,7 @@ jobs:
         if: matrix.database == inputs.database
         with:
           node_version: 16
-          dataset_branch: "stable-3_4_0"
+          dataset_branch: 'stable-3_4_0'
           DATASETS_ACCESS_KEY: ${{ secrets.DATASETS_ACCESS_KEY }}
           DEBUG_IN_TMATE: false
 
@@ -170,6 +170,6 @@ jobs:
         if: matrix.database == inputs.database
         with:
           node_version: 12
-          dataset_branch: "stable-3_3_0"
+          dataset_branch: 'stable-3_3_0'
           DATASETS_ACCESS_KEY: ${{ secrets.DATASETS_ACCESS_KEY }}
           DEBUG_IN_TMATE: false
