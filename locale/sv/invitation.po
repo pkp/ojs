@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-10-07 10:45+0000\n"
+"PO-Revision-Date: 2025-11-26 15:15+0000\n"
 "Last-Translator: Ramana Fragola <ramana.fragola@kb.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/invitation/"
 "sv/>\n"
@@ -21,3 +21,52 @@ msgid "acceptInvitation.accountDetails.stepDescription"
 msgstr ""
 "För att komma igång med OJS och acceptera den nya rollen behöver du skapa "
 "ett konto hos oss. Ange ett användarnamn och ett lösenord för detta ändamål."
+
+msgid "acceptInvitation.detailsReview.nextButtonLabel"
+msgstr "Acceptera och fortsätt till OJS"
+
+msgid "acceptInvitation.modal.title"
+msgstr "Du har tilldelats en ny roll i OJS"
+
+msgid "acceptInvitation.verifyOrcid.stepDescription"
+msgstr ""
+"Du kan verifiera ditt ORCID-iD nu eller hoppa över det. Om du väljer att "
+"hoppa över det nu kan du verifiera ditt ORCID-iD senare från din profilsida "
+"i OJS"
+
+msgid "userInvitation.enterDetails.stepDescription"
+msgstr "Du kan bjuda in dem att ta en roll i OJS"
+
+msgid "userInvitation.search.userFound"
+msgstr "Användaren finns redan i tidskriften"
+
+msgid "userInvitation.search.userNotFound"
+msgstr "Användaren har ingen roll i den här tidskriften"
+
+msgid "userInvitation.sendMail.stepDescription"
+msgstr ""
+"Skicka ett mejl till användaren för att informera om inbjudan, nästa steg, "
+"tidskriftens GDPR-policyer och ORCID-verifiering"
+
+msgid "acceptInvitation.modal.message"
+msgstr ""
+"Välkommen till din nya roll i OJS! Du kan nu ha tillgång till nya funktioner "
+"i systemet. Om du behöver hjälp med att förstå hur något fungerar kan du "
+"klicka på knappen ”Hjälp”, som finns på flera ställen i systemet."
+
+msgid "userInvitation.modal.message"
+msgstr ""
+"{$email} har blivit inbjuden till en ny roll i OJS. Du kan följa användarens "
+"beslut på sidan Användare och roller, via dina OJS-aviseringar och/eller via "
+"e-post"
+
+msgid "userInvitation.searchUser.stepDescription"
+msgstr ""
+"Sök efter användaren med e-postadress, användarnamn eller ORCID-iD. Ange "
+"minst en uppgift för att börja. Om användaren inte finns kan du bjuda in hen "
+"att ta en roll och bli en del av tidskriften. Om användaren redan finns i "
+"systemet kan du visa användarinformation och bjuda in till ytterligare "
+"roller."
+
+msgid "acceptInvitation.detailsReview.stepDescription"
+msgstr "Granska uppgifterna för att aktivera dina nya roller i OJS"
