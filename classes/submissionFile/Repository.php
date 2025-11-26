@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/submissionFile/Repository.php
  *
@@ -99,6 +100,7 @@ class Repository extends BaseRepository
             SubmissionFile::SUBMISSION_FILE_REVIEW_REVISION,
             SubmissionFile::SUBMISSION_FILE_DEPENDENT,
             SubmissionFile::SUBMISSION_FILE_QUERY,
+            SubmissionFile::SUBMISSION_FILE_BODY_TEXT
         ];
 
         Hook::call('SubmissionFile::fileStages', [&$stages]);
