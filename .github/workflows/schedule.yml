@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       job:
-        description: 'Which OJS workflow job to run?''
+        description: 'Which OJS workflow job to run?'
         required: true
         type: choice
         options:
