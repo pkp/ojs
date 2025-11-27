@@ -607,7 +607,7 @@ delete_failed_jobs_after = 180
 ; Sample for the *nix crontab:
 ; * * * * * php lib/pkp/tools/scheduler.php run >> /dev/null 2>&1
 ;
-; See: <link-to-documentation>
+; See: https://docs.pkp.sfu.ca/admin-guide/en/deploy-scheduled-tasks
 task_runner = On
 
 ; How often the built-in scheduled task runner should run at the
