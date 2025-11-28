@@ -874,6 +874,9 @@
 							},
 							"name": {
 								"type": "string"
+							},
+							"reviewMethod": {
+								"type": "int"
 							}
 						}
 					}
