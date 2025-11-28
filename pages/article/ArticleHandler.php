@@ -323,6 +323,27 @@ class ArticleHandler extends Handler
             'parsedCitations' => $publication->getData('citations'),
         ]);
 
+        // Data Citations
+        $publicationDataCitations = $publication->getData('dataCitations');
+
+        $dataCitations = [];
+        if (!empty($publicationDataCitations)) {
+            foreach ($publicationDataCitations as $dataCitation) {
+                $dataCitations[] = [
+                    'title' => $dataCitation->title,
+                    'authors' => $dataCitation->authors ?? [],
+                    'identifier' => $dataCitation->identifier,
+                    'repository' => $dataCitation->repository,
+                    'url' => $dataCitation->url,
+                    'year' => $dataCitation->year,
+                ];
+            }
+        }
+
+        $templateMgr->assign([
+            'dataCitations' => $dataCitations,
+        ]);
+
         $rorIconPath = Core::getBaseDir() . '/' . PKP_LIB_PATH . '/templates/images/ror.svg';
         $rorIdIcon = file_exists($rorIconPath) ? file_get_contents($rorIconPath) : '';
 

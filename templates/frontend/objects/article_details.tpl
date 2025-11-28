@@ -288,6 +288,37 @@
 				</section>
 			{/if}
 
+			{* Data Citations *}
+			{if $dataCitations|@count > 0}
+				<section class="item dataCitations" id="data-citations">
+					<h2 class="label">{translate key="submission.dataCitation.dataCitations"}</h2>
+						{foreach from=$dataCitations item=citation}
+						<div class="value" itemscope itemtype="https://schema.org/Dataset">
+							{strip}
+							<p>
+								{if $citation.authors}
+									{foreach from=$citation.authors item=author name=authors}
+										<span itemprop="creator" itemscope itemtype="https://schema.org/Person">
+											<span itemprop="familyName">{$author.familyName|escape}</span>,{' '}
+											<span itemprop="givenName">{$author.givenName|escape}</span>
+										</span>{if not $smarty.foreach.authors.last};{' '}{/if}
+									{/foreach}.
+								{/if}
+								{if $citation.year}{' '}(<span itemprop="datePublished">{$citation.year}</span>){/if}
+								{' '}<span itemprop="name"><strong>{$citation.title|escape}</strong></span>.
+								{if $citation.repository}{' '}<span itemprop="publisher">{$citation.repository|escape}</span>.{/if}
+								{if $citation.identifier}
+									{' '}<a href="{$citation.identifier|escape}" itemprop="identifier">{$citation.identifier|escape}</a>.
+								{elseif $citation.url}
+									{' '}<a href="{$citation.url|escape}" itemprop="identifier">{$citation.url|escape}</a>.
+								{/if}
+							</p>
+							{/strip}
+						</div>
+						{/foreach}
+				</section>
+			{/if}
+
 			{if $enablePublicComments}
 				<section id="public-comments" class="item comments" data-vue-root>
 					<h2 class="label">
