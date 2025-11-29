@@ -1,8 +1,8 @@
 OJS 3.3.0 Release Notes
-Git tag: 3_3_0-21
+Git tag: 3_3_0-22
 
-Release date: May 23, 2025
-==========================
+Release date: November 19, 2025
+===============================
 
 Configuration Changes
 ---------------------
@@ -29,6 +29,19 @@ configuration parameters.
   - email.smtp_oauth_refreshtoken
 - The setting general.session_samesite (default value: Lax) has been added to control the "SameSite" setting for the session cookie.
 - The setting security.force_ssl, when enabled, will also set the "Secure" flag for the session cookie.
+
+3.3.0-22 Build
+--------------
+	#10139: By Author search pulls in keywords too
+	#11598: [DOI deposit] OPS Crossref deposit does not include title prefix
+	#11305: Add a Hook for PKPReviewerReviewStep3Form::saveForLater
+	#10941: Section policies are shown for inactive sections on Submissions page (3.3)
+	#11978: [Sessions] | Log in form is missing a CSRF check
+	#12022: Payments | Properly escape payment instructions
+	#11974: Themes | Validate base colour setting in default theme
+	#12039: Import | Permit hrefs only for command-line based imports
+	#11973: Import/Export | Sanitize imported issue file filenames
+	#11977: [Subscriptions/stats] |Properly escape keyword search contents in institution collector
 
 3.3.0-21 Build
 --------------

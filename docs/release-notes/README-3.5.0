@@ -1,8 +1,8 @@
 OJS 3.5.0 Release Notes
-Git tag: 3_5_0-1
+Git tag: 3_5_0-2
 
-Release date: July 9, 2025
-==========================
+Release date: November 28, 2025
+===============================
 
 Configuration Changes
 ---------------------
@@ -28,6 +28,62 @@ In [queues]:
 In [cache]:
     - default (default value: 'file'). Can be either 'file' or 'opcache' to indicate which Laravel cache should be used.
     - path (default value: 'cache/opcache'). Use to specify a path for cache storage when using 'file' or 'opcache' drivers.
+
+3.5.0-2 Build
+-------------
+    #11793: Plugins should always register hooks and check getEnabled(context) in the hook functions
+    #12002: Make a new submission - When a user doesn't have a role in a journal they are unable to make a new submission
+    #11621: DataCite exportAndDeposit does not save errors
+    #11658: Create Submission - New Submission, Chinese locale fails validation
+    #11496: Fix PHP warning about missing locale key {$loggedInUsername}
+    #11568: [Notifications] | Disable email notification for editor assignment for new submissions
+    #11303: [Queue Jobs] | Mail translation does not correspond to the defined locale using queue worker
+    #11396: PHP fatal error after upgrade when the current theme plugin is missing
+    #11703: [Native XML Import] | Can't import article without author
+    #11752: Issue page - Race conditions might lead to unexpected section sorting/data loss
+    #11862: Administration - View Failed Jobs, Payload data is incorrect
+    #11550: Make DataciteExportPlugin available to the jobs
+    #11886: When distribution for DOIs is set to never assign DOIs and DOI versioning is set to Yes it is being overridden
+    #11451: Exception when calling PKP\submission\DAO::getByPubId()
+    #10361: Migration from 3.1.2 to 3.4.0.6 : lost decision in activity log
+    #11951: Issues - Grid, 3.4 Unpublishing an issue changes the publication dates
+    #12039: Permit hrefs only for command-line based imports
+    #12022: Properly escape payment instructions
+    #11978: Log in form is missing a CSRF check
+    #11977: Properly escape keyword search contents in institution collector
+    #11974: Validate base colour setting in default theme
+    #11973: Sanitize imported issue file filenames
+    #11305: Add a Hook for PKPReviewerReviewStep3Form::saveForLater
+    #10941: Section policies are shown for inactive sections on Submissions page (3.3)
+    #10139: By Author search pulls in keywords too
+    #11663: Upgrade from 3.3: I7014_DoiMigration violation of foreign key
+    #11791: User management performs poorly with large databases
+    #12017: UserGroup::scopeWithUserUserGroupStatus does not work correctly, fix getting user that is active in a role
+    #11970: [Notifications] | PHP Fatal error - assocType is null
+    #12058: [Search Index] | Rebuilding search index fails due to missing $context orcidApiType
+    #11668: Fix notification bug: Cast notification type to integer
+    #12033: [Delete Issue] | Issues - Delete issue, when issue has published articles attached it throws an exception
+    #11558: [Accessibility] | Chart Component in Storybook throwing img needs alt text violation
+    #11567: [JATS OAI] | Metadata - Multilingual keywords should use submission locales
+    #11631: Add ability for plugin to attach authorization policies to API controller
+    #11642: Add "Change Language" translation for 3.5
+    #11653: [Quick Submit] | New Submission - Contributor Form, Affiliation is required
+    #11667: [Notifications] | New Notifications are no longer bold in 3.5
+    #11671: [Users & Roles] | Invite user to take a role - Enter Details, error when adding a role for an existing user
+    #11673: [Reviewer Suggestion] | Unable to fetch appropriate submission in multi context system
+    #11675: [Contributor Affiliations] | Upgrade - Multilingual non-ROR affiliations are migrated into separate affiliations
+    #11677: [Disabled user] | New submission workflow - final step, there is a fatal error when trying to complete a new submission
+    #11682: Improve performance
+    #11683: Monthly Statistics Report sent via email everyday
+    #11690: [Invitation] | Invitation request auto declined on opening email due to mail client's safe link feature
+    #11691: JS tooling dependencies update & adding Engine requirements
+    #11692: [New Submission] | Adding Keyword - Final Step summary, when reloading the page or selecting save and continue the keyword field is summarized incorrectly
+    #11693: TinyMCE modal-based controls are not clickable
+    #11730: [API] Fatal error if any request to submissions endpoints includes invalid submission ID
+    #11740: Misplaced Comma in InstitutionalSubscriptionDAO.php
+    #11756: Type Casting Error in /classes/subscription/form/SubscriptionForm.php
+    #11766: DMARC compliance logic ordering causes SES/SMTP failures
+    #11772: ReviewReminder diffInDays Parameter Order Bug in OJS 3.5.0.1
 
 3.5.0-1 Build
 -------------
