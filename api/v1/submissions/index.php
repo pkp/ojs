@@ -27,6 +27,10 @@ if (in_array('jats', $urlParts)) {
     return new \PKP\handler\APIHandler(new \PKP\API\v1\jats\PKPJatsController());
 }
 
+if (in_array('bodyText', $urlParts)) {
+    return new \PKP\handler\APIHandler(new \PKP\API\v1\bodyText\PKPBodyTextController());
+}
+
 if (in_array('suggestions', $urlParts)) {
     return new \PKP\handler\APIHandler(new PKP\API\v1\reviewers\suggestions\ReviewerSuggestionController());
 }
