@@ -19,8 +19,10 @@
 namespace APP\components\forms\publication;
 
 use APP\facades\Repo;
+use APP\publication\enums\VersionStage;
 use APP\publication\Publication;
 use PKP\components\forms\FieldHTML;
+use PKP\components\forms\FieldOptions;
 use PKP\components\forms\FormComponent;
 
 class PublishForm extends FormComponent
@@ -53,6 +55,10 @@ class PublishForm extends FormComponent
         $this->errors = $requirementErrors;
         $this->publication = $publication;
         $this->submissionContext = $submissionContext;
+
+        // Used in triggering creation of additional publication version/review round
+        // as part of publish-review-curate workflows.
+        $isPMUR = false;
 
         // Set separate messages and buttons if publication requirements have passed
         if (empty($requirementErrors)) {
@@ -90,6 +96,8 @@ class PublishForm extends FormComponent
 
             // If publication does not have a version stage assigned
             $publicationVersion = $publication->getVersion();
+            $isPMUR = $publicationVersion->stage === VersionStage::PUBLISHED_MANUSCRIPT_UNDER_REVIEW;
+
             if (!isset($publicationVersion)) {
                 $submission = Repo::submission()->get($publication->getData('submissionId'));
                 $nextVersion = Repo::submission()->getNextAvailableVersion($submission, Publication::DEFAULT_VERSION_STAGE, false);
@@ -131,5 +139,18 @@ class PublishForm extends FormComponent
                 'description' => $msg,
                 'groupId' => 'default',
             ]));
+
+        if ($isPMUR) {
+            $this->addField(new FieldOptions('createPMURReviewRound', [
+                'groupId' => 'default',
+                'label' => __('publication.publishReviewCurate.options.heading'),
+                'description' => __('publication.publishReviewCurate.options.description'),
+                'type' => 'checkbox',
+                'value' => true,
+                'options' => [
+                    ['value' => true, 'label' => __('publication.publishReviewCurate.options.label')]
+                ],
+            ]));
+        }
     }
 }
