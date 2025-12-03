@@ -212,6 +212,7 @@
 		<migration class="PKP\migration\upgrade\v3_6_0\I857_ContributorRolesTypes"/>
         <migration class="APP\migration\upgrade\v3_6_0\I12046_AssignMachineReadableRecommendationType"/>
 		<migration class="PKP\migration\upgrade\v3_6_0\I12108_RestrictEditTemplatesToUserGroups"/>
+        <migration class="PKP\migration\upgrade\v3_6_0\I12049_AddPublishReviewCurateSupport"/>
 		<code function="rebuildSearchIndex" />
 		<note file="docs/release-notes/README-3.6.0" />
 	</upgrade>
