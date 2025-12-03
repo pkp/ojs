@@ -19,8 +19,10 @@
 namespace APP\components\forms\publication;
 
 use APP\facades\Repo;
+use APP\publication\enums\VersionStage;
 use APP\publication\Publication;
 use PKP\components\forms\FieldHTML;
+use PKP\components\forms\FieldOptions;
 use PKP\components\forms\FormComponent;
 
 class PublishForm extends FormComponent
@@ -53,6 +55,8 @@ class PublishForm extends FormComponent
         $this->errors = $requirementErrors;
         $this->publication = $publication;
         $this->submissionContext = $submissionContext;
+
+        $isPMUR = false;
 
         // Set separate messages and buttons if publication requirements have passed
         if (empty($requirementErrors)) {
@@ -90,6 +94,8 @@ class PublishForm extends FormComponent
 
             // If publication does not have a version stage assigned
             $publicationVersion = $publication->getVersion();
+            $isPMUR = $publicationVersion->stage === VersionStage::PUBLISHED_MANUSCRIPT_UNDER_REVIEW;
+
             if (!isset($publicationVersion)) {
                 $submission = Repo::submission()->get($publication->getData('submissionId'));
                 $nextVersion = Repo::submission()->getNextAvailableVersion($submission, Publication::DEFAULT_VERSION_STAGE, false);
@@ -102,6 +108,10 @@ class PublishForm extends FormComponent
                 $msg .= '<p>' . __('publication.required.versionStage.alreadyAssignment', [
                     'versionString' => $publicationVersion
                 ]) . '</p>';
+
+                if ($isPMUR) {
+                    $msg .= '<p>' . 'Additional info about PMUR and review rounds.' . '</p>';
+                }
             }
 
             $this->addPage([
@@ -131,5 +141,18 @@ class PublishForm extends FormComponent
                 'description' => $msg,
                 'groupId' => 'default',
             ]));
+
+        if ($isPMUR) {
+            $this->addField(new FieldOptions('createPMURReviewRound', [
+                'groupId' => 'default',
+                'label' => 'createPMURReviewRound Label',
+                'description' => 'createPMURReviewRound description text.',
+                'type' => 'checkbox',
+                'value' => true,
+                'options' => [
+                    [ 'value' => true, 'label' => 'Option value', ]
+                ],
+            ]));
+        }
     }
 }
