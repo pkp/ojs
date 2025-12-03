@@ -31,6 +31,7 @@ class ReviewerRecommendationResource extends JsonResource
             'status' => $this->status,
             'removable' => $this->removable,
             'title' => $this->title,
+            'type' => $this->type,
         ];
     }
 }

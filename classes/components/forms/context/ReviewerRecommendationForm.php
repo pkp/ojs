@@ -14,6 +14,7 @@
 
 namespace APP\components\forms\context;
 
+use APP\facades\Repo;
 use PKP\components\forms\FieldSelect;
 use PKP\components\forms\FieldText;
 use PKP\components\forms\FormComponent;
@@ -35,6 +36,12 @@ class ReviewerRecommendationForm extends FormComponent
         $this->action = $action;
         $this->locales = $locales;
 
+        $recommendationTypeOptions = collect(Repo::reviewerRecommendation()->getRecommendationTypeLabels())
+            ->map(fn ($value, $key) => [
+                'label' => $value,
+                'value' => $key,
+            ])->all();
+
         $this
             ->addField(new FieldText('title', [
                 'label' => __('manager.reviewerRecommendations.title.label'),
@@ -42,6 +49,12 @@ class ReviewerRecommendationForm extends FormComponent
                 'size' => 'large',
                 'isRequired' => true,
                 'isMultilingual' => true,
+            ]))
+            ->addField(new FieldSelect('type', [
+                'label' => __('manager.reviewerRecommendations.recommendationType'),
+                'isRequired' => true,
+                'options' => $recommendationTypeOptions,
+                'size' => 'normal',
             ]))
             ->addField(new FieldSelect('status', [
                 'options' => [
