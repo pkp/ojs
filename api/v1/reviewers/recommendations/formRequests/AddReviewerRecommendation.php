@@ -18,6 +18,7 @@ namespace APP\API\v1\reviewers\recommendations\formRequests;
 use APP\core\Application;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
+use PKP\submission\reviewer\recommendation\enums\ReviewerRecommendationType;
 use PKP\submission\reviewer\recommendation\ReviewerRecommendation;
 use PKP\validation\traits\HasMultilingualRule;
 
@@ -68,6 +69,11 @@ class AddReviewerRecommendation extends FormRequest
             'status' => [
                 'required',
                 'boolean'
+            ],
+            'type' => [
+                'required',
+                'integer',
+                Rule::in(array_column(ReviewerRecommendationType::cases(), 'value'))
             ],
         ];
     }

@@ -19,11 +19,11 @@ describe('Customize reviewer recommendations test', () => {
 
     it('Access the reviewer recommendations page', () => {
         cy.accessReviewerRecommendations('dbarnes', null, 'publicknowledge');
-        
+
         cy.get('[data-cy="reviewer-recommendation-manager"]')
             .find('tbody > tr')
             .should('have.length', defaultRecommendations.length);
-        
+
         defaultRecommendations.forEach((recommendation) => {
             cy.get('[data-cy="reviewer-recommendation-manager"]')
                 .find('tr:contains("' + recommendation + '")')
@@ -51,7 +51,10 @@ describe('Customize reviewer recommendations test', () => {
         cy.get('div[role=dialog]:contains("Add Recommendation")')
             .find('input#reviewerRecommendation-title-control-fr_CA')
             .type('Recommandation de test');
-        
+
+        // Select a recommendation type
+        cy.get('select[name="type"]').select(0);
+
         cy.get('div[role=dialog]:contains("Add Recommendation")')
             .find('button:contains("Save")')
             .click();
@@ -63,7 +66,7 @@ describe('Customize reviewer recommendations test', () => {
         cy.get('[data-cy="reviewer-recommendation-manager"]')
             .find('tbody > tr')
             .contains('Test Recommendation');
-        
+
         // Edit the recommendation
         cy.get('[data-cy="reviewer-recommendation-manager"]')
             .find('tr:contains("Test Recommendation")')
@@ -77,6 +80,10 @@ describe('Customize reviewer recommendations test', () => {
             .find('input#reviewerRecommendation-title-control-en')
             .clear()
             .type('Edited Recommendation');
+
+        // Change the recommendation type
+        cy.get('select[name="type"]').select(1);
+
         cy.get('div[role=dialog]:contains("Edit Recommendation")')
             .find('button:contains("Save")')
             .click();
@@ -84,7 +91,7 @@ describe('Customize reviewer recommendations test', () => {
         cy.get('[data-cy="reviewer-recommendation-manager"]')
             .find('tbody > tr')
             .contains('Edited Recommendation');
-        
+
         // Delete the recommendation
         cy.get('[data-cy="reviewer-recommendation-manager"]')
             .find('tr:contains("Edited Recommendation")')
@@ -118,7 +125,7 @@ describe('Customize reviewer recommendations test', () => {
         cy.get('[data-cy="reviewer-recommendation-manager"]')
             .find('tbody > tr')
             .should('have.length', defaultRecommendations.length);
-            
+
 		cy.logout();
     });
 
@@ -129,7 +136,7 @@ describe('Customize reviewer recommendations test', () => {
             .find('tr:contains("See Comments")')
             .find('input[type="checkbox"]')
             .should('be.checked');
-        
+
         // Deactivate the recommendation
         cy.get('[data-cy="reviewer-recommendation-manager"]')
             .find('tr:contains("See Comments")')
@@ -153,7 +160,7 @@ describe('Customize reviewer recommendations test', () => {
             .find('tr:contains("See Comments")')
             .find('input[type="checkbox"]')
             .should('not.be.checked');
-        
+
         // Activate the recommendation
         cy.get('[data-cy="reviewer-recommendation-manager"]')
             .find('tr:contains("See Comments")')
@@ -233,7 +240,7 @@ describe('Customize reviewer recommendations test', () => {
             .last()
             .find('select#reviewerRecommendationId option:contains("Resubmit Elsewhere")')
             .should('exist');
-        
+
         cy.logout();
     });
 });

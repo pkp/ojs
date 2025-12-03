@@ -142,9 +142,9 @@ class ReviewerRecommendationController extends PKPBaseController
      */
     public function add(AddReviewerRecommendation $illuminateRequest): JsonResponse
     {
-        $validateds = $illuminateRequest->validated();
+        $validated = $illuminateRequest->validated();
 
-        $recommendation = ReviewerRecommendation::create($validateds);
+        $recommendation = ReviewerRecommendation::create($validated);
 
         return response()->json(
             (new ReviewerRecommendationResource($recommendation->refresh()))

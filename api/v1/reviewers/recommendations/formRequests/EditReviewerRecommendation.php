@@ -15,6 +15,9 @@
 
 namespace APP\API\v1\reviewers\recommendations\formRequests;
 
+use Illuminate\Validation\Rule;
+use PKP\submission\reviewer\recommendation\enums\ReviewerRecommendationType;
+
 class EditReviewerRecommendation extends AddReviewerRecommendation
 {
     /**
@@ -29,6 +32,11 @@ class EditReviewerRecommendation extends AddReviewerRecommendation
             'status' => [
                 'required',
                 'boolean'
+            ],
+            'type' => [
+                'required',
+                'integer',
+                Rule::in(array_column(ReviewerRecommendationType::cases(), 'value'))
             ],
         ];
     }
