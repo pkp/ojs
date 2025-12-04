@@ -108,10 +108,6 @@ class PublishForm extends FormComponent
                 $msg .= '<p>' . __('publication.required.versionStage.alreadyAssignment', [
                     'versionString' => $publicationVersion
                 ]) . '</p>';
-
-                if ($isPMUR) {
-                    $msg .= '<p>' . 'Additional info about PMUR and review rounds.' . '</p>';
-                }
             }
 
             $this->addPage([
@@ -145,12 +141,12 @@ class PublishForm extends FormComponent
         if ($isPMUR) {
             $this->addField(new FieldOptions('createPMURReviewRound', [
                 'groupId' => 'default',
-                'label' => 'createPMURReviewRound Label',
-                'description' => 'createPMURReviewRound description text.',
+                'label' => __('publication.publishReviewCurate.options.heading'),
+                'description' => __('publication.publishReviewCurate.options.description'),
                 'type' => 'checkbox',
                 'value' => true,
                 'options' => [
-                    [ 'value' => true, 'label' => 'Option value', ]
+                    ['value' => true, 'label' => __('publication.publishReviewCurate.options.label')]
                 ],
             ]));
         }
