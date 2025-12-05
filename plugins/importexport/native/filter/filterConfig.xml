@@ -17,7 +17,7 @@
 			symbolic="article=>native-xml"
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
-			inputType="class::classes.submission.Submission[]"
+			inputType="class::APP\submission\Submission[]"
 			outputType="xml::schema(plugins/importexport/native/native.xsd)" />
 		<!-- Native XML article input -->
 		<filterGroup
@@ -25,13 +25,13 @@
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
 			inputType="xml::schema(plugins/importexport/native/native.xsd)"
-			outputType="class::classes.submission.Submission[]" />
+			outputType="class::APP\submission\Submission[]" />
 		<!-- Native XML issue output -->
 		<filterGroup
 			symbolic="issue=>native-xml"
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
-			inputType="class::classes.issue.Issue[]"
+			inputType="class::APP\issue\Issue[]"
 			outputType="xml::schema(plugins/importexport/native/native.xsd)" />
 		<!-- Native XML issue input -->
 		<filterGroup
@@ -39,13 +39,13 @@
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
 			inputType="xml::schema(plugins/importexport/native/native.xsd)"
-			outputType="class::classes.issue.Issue[]" />
+			outputType="class::APP\issue\Issue[]" />
 		<!-- Native XML issue galley output -->
 		<filterGroup
 			symbolic="issuegalley=>native-xml"
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
-			inputType="class::classes.issue.IssueGalley[]"
+			inputType="class::APP\issue\IssueGalley[]"
 			outputType="xml::schema(plugins/importexport/native/native.xsd)" />
 		<!-- Native XML issue galley input -->
 		<filterGroup
@@ -53,13 +53,13 @@
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
 			inputType="xml::schema(plugins/importexport/native/native.xsd)"
-			outputType="class::classes.issue.IssueGalley[]" />
+			outputType="class::APP\issue\IssueGalley[]" />
 		<!-- Native XML author output -->
 		<filterGroup
 			symbolic="author=>native-xml"
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
-			inputType="class::classes.author.Author[]"
+			inputType="class::APP\author\Author[]"
 			outputType="xml::schema(plugins/importexport/native/native.xsd)" />
 		<!-- Native XML author input -->
 		<filterGroup
@@ -67,13 +67,13 @@
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
 			inputType="xml::schema(plugins/importexport/native/native.xsd)"
-			outputType="class::classes.author.Author[]" />
+			outputType="class::APP\author\Author[]" />
 		<!-- Article file native XML output -->
 		<filterGroup
 			symbolic="SubmissionFile=>native-xml"
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
-			inputType="class::lib.pkp.classes.submissionFile.SubmissionFile"
+			inputType="class::PKP\submissionFile\SubmissionFile"
 			outputType="xml::schema(plugins/importexport/native/native.xsd)" />
 		<!-- Article file native XML input -->
 		<filterGroup
@@ -81,13 +81,13 @@
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
 			inputType="xml::schema(plugins/importexport/native/native.xsd)"
-			outputType="class::lib.pkp.classes.submissionFile.SubmissionFile[]" />
+			outputType="class::PKP\submissionFile\SubmissionFile[]" />
 		<!-- Article Galley native XML output -->
 		<filterGroup
 			symbolic="article-galley=>native-xml"
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
-			inputType="class::lib.pkp.classes.galley.Galley"
+			inputType="class::PKP\galley\Galley"
 			outputType="xml::schema(plugins/importexport/native/native.xsd)" />
 		<!-- Article Galley native XML input -->
 		<filterGroup
@@ -95,13 +95,13 @@
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
 			inputType="xml::schema(plugins/importexport/native/native.xsd)"
-			outputType="class::lib.pkp.classes.galley.Galley[]" />
+			outputType="class::PKP\galley\Galley[]" />
 		<!-- Publication native XML input -->
 		<filterGroup
 			symbolic="publication=>native-xml"
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
-			inputType="class::classes.publication.Publication"
+			inputType="class::APP\publication\Publication"
 			outputType="xml::schema(plugins/importexport/native/native.xsd)" />
 		<!-- Publication native XML input -->
 		<filterGroup
@@ -109,7 +109,7 @@
 			displayName="plugins.importexport.native.displayName"
 			description="plugins.importexport.native.description"
 			inputType="xml::schema(plugins/importexport/native/native.xsd)"
-			outputType="class::classes.publication.Publication[]" />
+			outputType="class::APP\publication\Publication[]" />
 	</filterGroups>
 	<filters>
 		<!-- Native XML article output -->

@@ -18,7 +18,7 @@
 		);
 	{rdelim});
 </script>
-{if $pubObject instanceof Article}
+{if $pubObject instanceof PKP\submission\PKPSubmission}
 	<form class="pkp_form" id="publicIdentifiersForm" method="post" action="{url router=PKP\core\PKPApplication::ROUTE_COMPONENT op="updateIdentifiers"}">
 		{include file="controllers/notification/inPlaceNotification.tpl" notificationId="publicationIdentifiersFormFieldsNotification"}
 		<input type="hidden" name="submissionId" value="{$pubObject->getId()|escape}" />
@@ -29,10 +29,10 @@
 {elseif $pubObject instanceof \PKP\galley\Galley}
 	<form class="pkp_form" id="publicIdentifiersForm" method="post" action="{url component="grid.articleGalleys.ArticleGalleyGridHandler" op="updateIdentifiers" submissionId=$submissionId publicationId=$pubObject->getData('publicationId') representationId=$pubObject->getId() escape=false}">
 		{include file="controllers/notification/inPlaceNotification.tpl" notificationId="representationIdentifiersFormFieldsNotification"}
-{elseif $pubObject instanceof SubmissionFile}
+{elseif $pubObject instanceof PKP\submissionFile\SubmissionFile}
 	<form class="pkp_form" id="publicIdentifiersForm" method="post" action="{url component="api.file.ManageFileApiHandler" op="updateIdentifiers" fileId=$pubObject->getId() submissionId=$pubObject->getData('submissionId') stageId=$stageId fileStageId=$pubObject->getFileStage() escape=false}">
 		{include file="controllers/notification/inPlaceNotification.tpl" notificationId="fileIdentifiersFormFieldsNotification"}
-{else} {* $pubObject instanceof Issue *}
+{else} {* $pubObject instanceof APP\issue\Issue *}
 	<form class="pkp_form" id="publicIdentifiersForm" method="post" action="{url router=PKP\core\PKPApplication::ROUTE_COMPONENT op="updateIdentifiers" issueId=$pubObject->getId()}">
 		{include file="controllers/notification/inPlaceNotification.tpl" notificationId="issueIdentifiersFormFieldsNotification"}
 {/if}
