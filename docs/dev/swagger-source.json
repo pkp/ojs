@@ -385,17 +385,47 @@
 		},
 		"EditTaskTemplate": {
 			"type": "object",
-			"required": ["id", "stageId", "title", "include", "type"],
+			"required": [
+				"id",
+				"stageId",
+				"title",
+				"include",
+				"type"
+			],
 			"properties": {
-				"id": { "type": "integer", "format": "int64" },
-				"stageId": { "type": "integer" },
-				"title": { "type": "string" },
-				"include": { "type": "boolean" },
-				"emailTemplateKey": { "type": "string" },
-				"type": { "type": "integer", "enum": [1, 2], "description": "1 = discussion, 2 = task" },
+				"id": {
+					"type": "integer",
+					"format": "int64"
+				},
+				"stageId": {
+					"type": "integer"
+				},
+				"title": {
+					"type": "string"
+				},
+				"include": {
+					"type": "boolean"
+				},
+				"emailTemplateKey": {
+					"type": "string"
+				},
+				"type": {
+					"type": "integer",
+					"enum": [
+						1,
+						2
+					],
+					"description": "1 = discussion, 2 = task"
+				},
 				"userGroups": {
-				"type": "array",
-				"items": { "$ref": "#/definitions/UserGroupSummary" }
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/UserGroupSummary"
+					}
+				},
+				"restrictToUserGroups": {
+					"type": "boolean",
+					"description": "Whether the task/discussion is restricted to the specified user groups."
 				}
 			},
 			"example": {
@@ -410,17 +440,48 @@
 		},
 		"AddTaskTemplateRequest": {
 			"type": "object",
-			"required": ["stageId", "title", "type", "userGroupIds"],
+			"required": [
+				"stageId",
+				"title",
+				"type",
+				"userGroupIds"
+			],
 			"properties": {
-				"stageId": { "type": "integer", "description": "Workflow stage id" },
-				"title": { "type": "string", "maxLength": 255 },
-				"include": { "type": "boolean", "default": false },
-				"emailTemplateKey": { "type": "string", "maxLength": 255 },
-				"type": { "type": "integer", "enum": [1, 2], "description": "1 = discussion, 2 = task" },
+				"stageId": {
+					"type": "integer",
+					"description": "Workflow stage id"
+				},
+				"title": {
+					"type": "string",
+					"maxLength": 255
+				},
+				"include": {
+					"type": "boolean",
+					"default": false
+				},
+				"emailTemplateKey": {
+					"type": "string",
+					"maxLength": 255
+				},
+				"type": {
+					"type": "integer",
+					"enum": [
+						1,
+						2
+					],
+					"description": "1 = discussion, 2 = task"
+				},
 				"userGroupIds": {
-				"type": "array",
-				"items": { "type": "integer" },
-				"minItems": 1
+					"type": "array",
+					"items": {
+						"type": "integer"
+					},
+					"minItems": 1
+				},
+				"restrictToUserGroups": {
+					"type": "boolean",
+					"default": false,
+					"description": "Whether the task/discussion is restricted to the specified user groups."
 				}
 			},
 			"example": {
@@ -429,7 +490,10 @@
 				"include": true,
 				"emailTemplateKey": "COPYEDIT_REQUEST",
 				"type": 2,
-				"userGroupIds": [5, 7]
+				"userGroupIds": [
+					5,
+					7
+				]
 			}
 		},
 		"UserGroupSummary": {
@@ -455,16 +519,41 @@
 			"type": "object",
 			"description": "All properties are optional; only provided fields will be updated.",
 			"properties": {
-				"stageId": { "type": "integer", "description": "Workflow stage id" },
-				"title": { "type": "string", "maxLength": 255 },
-				"include": { "type": "boolean" },
-				"emailTemplateKey": { "type": "string", "maxLength": 255 },
-				"type": { "type": "integer", "enum": [1, 2], "description": "1 = discussion, 2 = task" },
+				"stageId": {
+					"type": "integer",
+					"description": "Workflow stage id"
+				},
+				"title": {
+					"type": "string",
+					"maxLength": 255
+				},
+				"include": {
+					"type": "boolean"
+				},
+				"emailTemplateKey": {
+					"type": "string",
+					"maxLength": 255
+				},
+				"type": {
+					"type": "integer",
+					"enum": [
+						1,
+						2
+					],
+					"description": "1 = discussion, 2 = task"
+				},
 				"userGroupIds": {
-				"type": "array",
-				"items": { "type": "integer" },
-				"minItems": 1,
-				"description": "If provided, replaces the full set of linked user groups."
+					"type": "array",
+					"items": {
+						"type": "integer"
+					},
+					"minItems": 1,
+					"description": "If provided, replaces the full set of linked user groups."
+				},
+				"restrictToUserGroups": {
+					"type": "boolean",
+					"default": false,
+					"description": "Whether the task/discussion is restricted to the specified user groups."
 				}
 			},
 			"example": {
@@ -473,7 +562,10 @@
 				"include": true,
 				"emailTemplateKey": "COPYEDIT_REQUEST",
 				"type": 2,
-				"userGroupIds": [5, 7]
+				"userGroupIds": [
+					5,
+					7
+				]
 			}
 		},
 		"EmailTemplate": "emailTemplate",
