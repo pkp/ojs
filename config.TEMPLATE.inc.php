@@ -640,6 +640,3 @@ expiration_days = 3
 [features]
 
 enable_new_discussions = Off
-
-; Enable the experimental body text editor for article content
-enable_body_text_editor = On
