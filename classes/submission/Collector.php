@@ -161,6 +161,30 @@ class Collector extends \PKP\submission\Collector
         });
     }
 
+    /**
+     * APP-specific filtering for submissions that should be listed on the DOI management page.
+     * Those are:
+     * submissions in the workflow editing and production stage,
+     * submissions that have a published publication, and
+     * submissions whose sub objects have a DOI.
+     */
+    protected function addOnDoiPageFilterToQuery(Builder $q)
+    {
+        $q->whereIn('s.stage_id', [WORKFLOW_STAGE_ID_EDITING, WORKFLOW_STAGE_ID_PRODUCTION])
+            ->orWhereIn('s.submission_id', function (Builder $q) {
+                $q->select('submission_publications.submission_id')
+                    ->from('publications as submission_publications')
+                    ->where('submission_publications.status', '=', Publication::STATUS_PUBLISHED);
+                $q->when(in_array(Repo::doi()::TYPE_PUBLICATION, $this->enabledDoiTypes), function (Builder $q) {
+                    $q->orWhereNotNull('submission_publications.doi_id');
+                });
+                $q->when(in_array(Repo::doi()::TYPE_REPRESENTATION, $this->enabledDoiTypes), function (Builder $q) {
+                    $q->leftJoin('publication_galleys as submission_publication_galleys', 'submission_publication_galleys.publication_id', '=', 'submission_publications.publication_id')
+                        ->orWhereNotNull('submission_publication_galleys.doi_id');
+                });
+            });
+    }
+
     /** @copydoc PKP/classes/submission/Collector::addFilterByAssociatedDoiIdsToQuery() */
     protected function addFilterByAssociatedDoiIdsToQuery(Builder $q)
     {
