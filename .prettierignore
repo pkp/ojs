@@ -2,6 +2,7 @@ cypress/tests/**/*
 lib/pkp/cypress/**/*
 lib/pkp/js/classes/**/*
 lib/pkp/js/controllers/**/*
+lib/pkp/schemas/**/*
 plugins/themes/default/**/*
 
 package.json
