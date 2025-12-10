@@ -1021,9 +1021,6 @@
 				"isDefault": {
 					"type": "boolean"
 				},
-				"showTitle": {
-					"type": "boolean"
-				},
 				"name": {
 					"type": "string"
 				}
