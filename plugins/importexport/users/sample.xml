@@ -15,7 +15,6 @@
 			<role_id>16</role_id>
 			<context_id>1</context_id>
 			<is_default>true</is_default>
-			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
 			<permit_metadata_edit>true</permit_metadata_edit>
 			<name locale="en">Journal manager</name>
@@ -29,7 +28,6 @@
 			<role_id>16</role_id>
 			<context_id>1</context_id>
 			<is_default>true</is_default>
-			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
 			<permit_metadata_edit>true</permit_metadata_edit>
 			<name locale="en">Journal editor</name>
@@ -43,7 +41,6 @@
 			<role_id>16</role_id>
 			<context_id>1</context_id>
 			<is_default>true</is_default>
-			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
 			<permit_metadata_edit>true</permit_metadata_edit>
 			<name locale="en">Production editor</name>
@@ -57,7 +54,6 @@
 			<role_id>17</role_id>
 			<context_id>1</context_id>
 			<is_default>true</is_default>
-			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
 			<permit_metadata_edit>true</permit_metadata_edit>
 			<name locale="en">Section editor</name>
@@ -71,7 +67,6 @@
 			<role_id>17</role_id>
 			<context_id>1</context_id>
 			<is_default>true</is_default>
-			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
 			<permit_metadata_edit>false</permit_metadata_edit>
 			<name locale="en">Guest editor</name>
@@ -85,7 +80,6 @@
 			<role_id>4097</role_id>
 			<context_id>1</context_id>
 			<is_default>true</is_default>
-			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
 			<permit_metadata_edit>false</permit_metadata_edit>
 			<name locale="en">Copyeditor</name>
@@ -99,7 +93,6 @@
 			<role_id>4097</role_id>
 			<context_id>1</context_id>
 			<is_default>true</is_default>
-			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
 			<permit_metadata_edit>false</permit_metadata_edit>
 			<name locale="en">Designer</name>
@@ -113,7 +106,6 @@
 			<role_id>4097</role_id>
 			<context_id>1</context_id>
 			<is_default>true</is_default>
-			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
 			<permit_metadata_edit>false</permit_metadata_edit>
 			<name locale="en">Funding coordinator</name>
@@ -127,7 +119,6 @@
 			<role_id>4097</role_id>
 			<context_id>1</context_id>
 			<is_default>true</is_default>
-			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
 			<permit_metadata_edit>false</permit_metadata_edit>
 			<name locale="en">Indexer</name>
@@ -141,7 +132,6 @@
 			<role_id>4097</role_id>
 			<context_id>1</context_id>
 			<is_default>true</is_default>
-			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
 			<permit_metadata_edit>false</permit_metadata_edit>
 			<name locale="en">Layout Editor</name>
@@ -155,7 +145,6 @@
 			<role_id>4097</role_id>
 			<context_id>1</context_id>
 			<is_default>true</is_default>
-			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
 			<permit_metadata_edit>false</permit_metadata_edit>
 			<name locale="en">Marketing and sales coordinator</name>
@@ -169,7 +158,6 @@
 			<role_id>4097</role_id>
 			<context_id>1</context_id>
 			<is_default>true</is_default>
-			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
 			<permit_metadata_edit>false</permit_metadata_edit>
 			<name locale="en">Proofreader</name>
@@ -183,7 +171,6 @@
 			<role_id>65536</role_id>
 			<context_id>1</context_id>
 			<is_default>true</is_default>
-			<show_title>true</show_title>
 			<permit_self_registration>true</permit_self_registration>
 			<permit_metadata_edit>false</permit_metadata_edit>
 			<name locale="en">Author</name>
@@ -197,7 +184,6 @@
 			<role_id>65536</role_id>
 			<context_id>1</context_id>
 			<is_default>true</is_default>
-			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
 			<permit_metadata_edit>false</permit_metadata_edit>
 			<name locale="en">Translator</name>
@@ -211,7 +197,6 @@
 			<role_id>4096</role_id>
 			<context_id>1</context_id>
 			<is_default>true</is_default>
-			<show_title>true</show_title>
 			<permit_self_registration>true</permit_self_registration>
 			<permit_metadata_edit>false</permit_metadata_edit>
 			<name locale="en">Reviewer</name>
@@ -225,7 +210,6 @@
 			<role_id>1048576</role_id>
 			<context_id>1</context_id>
 			<is_default>true</is_default>
-			<show_title>true</show_title>
 			<permit_self_registration>true</permit_self_registration>
 			<permit_metadata_edit>false</permit_metadata_edit>
 			<name locale="en">Reader</name>
@@ -239,7 +223,6 @@
 			<role_id>2097152</role_id>
 			<context_id>1</context_id>
 			<is_default>true</is_default>
-			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
 			<permit_metadata_edit>false</permit_metadata_edit>
 			<name locale="en">Subscription Manager</name>
@@ -253,7 +236,6 @@
 			<role_id>4097</role_id>
 			<context_id>1</context_id>
 			<is_default>true</is_default>
-			<show_title>true</show_title>
 			<permit_self_registration>false</permit_self_registration>
 			<permit_metadata_edit>false</permit_metadata_edit>
 			<name locale="en">Editorial Board Member</name>
