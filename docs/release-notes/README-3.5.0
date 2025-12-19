@@ -1,7 +1,7 @@
 OJS 3.5.0 Release Notes
-Git tag: 3_5_0-2
+Git tag: 3_5_0-3
 
-Release date: November 28, 2025
+Release date: December 19, 2025
 ===============================
 
 Configuration Changes
@@ -28,6 +28,16 @@ In [queues]:
 In [cache]:
     - default (default value: 'file'). Can be either 'file' or 'opcache' to indicate which Laravel cache should be used.
     - path (default value: 'cache/opcache'). Use to specify a path for cache storage when using 'file' or 'opcache' drivers.
+
+3.5.0-3 Build
+-------------
+    #12144: Update ROR dataset filename and handle missing data
+    #12127: Unclear pre-flight warning during upgrade
+    #12100: Reviewer search is broken
+    #12099: Fatal error in editor workflow with disabled reviewer user account
+    #11697: Edit contributor deletes authenticated ORCID
+    #11693: TinyMCE modal-based controls are not clickable
+    #11657: View Submissions - Submissions Lists, Fatal error with disabled user account
 
 3.5.0-2 Build
 -------------
