@@ -240,6 +240,11 @@
 		<migration class="PKP\migration\upgrade\v3_4_0\I9822_ChangeUsageStatsTemporaryTablesIndexes"/>
 	</upgrade>
 
+	<upgrade minversion="3.4.0.0" maxversion="3.4.0.11">
+		<!-- Only new 3.4 installations need this fix -->
+		<migration class="PKP\migration\upgrade\v3_4_0\I12140_MissingDecisionConstantsUpdate"/>
+	</upgrade>
+
 	<!-- update plugin configuration - should be done as the final upgrade task -->
 	<code function="addPluginVersions" />
 </install>
