@@ -1636,7 +1636,7 @@ msgid "plugins.importexport.common.settings.form.password"
 msgstr "Password"
 
 msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "Please note that the password will be saved as plain text, i.e. not encrypted."
+msgstr "Please note that the password will be saved in encrypted format."
 
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Any Issue"
