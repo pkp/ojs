@@ -97,6 +97,17 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
     }
 
     /**
+     * @copydoc \PKP\plugins\Plugin::getEncryptedSettingFieldNames()
+     */
+    public function getEncryptedSettingFieldNames(): array
+    {
+        return [
+            'password',
+            'testPassword',
+        ];
+    }
+
+    /**
      * @param \APP\submission\Submission[] $submissions
      *
      */
