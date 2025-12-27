@@ -2,7 +2,7 @@
 # Monika Tylawska <monika.tylawska@gmail.com>, 2025.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-12-21 06:32+0000\n"
+"PO-Revision-Date: 2025-12-27 18:00+0000\n"
 "Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/default/rue/>"
 "\n"
@@ -18,3 +18,9 @@ msgstr "Статі"
 
 msgid "section.default.abbrev"
 msgstr "СТА"
+
+msgid "default.genres.article"
+msgstr "Зміст статі"
+
+msgid "section.default.policy"
+msgstr "Додумливы принципы секциі"
