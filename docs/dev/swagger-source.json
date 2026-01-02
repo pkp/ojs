@@ -378,6 +378,18 @@
 				"status": {
 					"type": "string"
 				},
+				"submissionFileIds": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				},
+				"temporaryFileIds": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				},
 				"title": {
 					"type": "string"
 				}
