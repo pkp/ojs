@@ -1986,9 +1986,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Adgangskode"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "Bemærk: Adgangskoden gemmes i klartekst dvs. ikke-krypteret."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Ethvert nummer"
 

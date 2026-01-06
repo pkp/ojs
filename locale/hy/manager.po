@@ -2006,11 +2006,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Գաղտնաբառ"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Խնդրում ենք նկատի ունենալ, որ գաղտնաբառը կպահվի որպես պարզ տեքստ, այսինքն՝ "
-"կոդավորված չէ:"
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Ցանկացած թողարկում"
 

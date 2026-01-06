@@ -1957,11 +1957,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Parole"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Lūdzu, ņemiet vērā, ka parole tiks saglabāta kā vienkāršs teksts, t. i., "
-"netiks šifrēta."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Jebkurš žurnāla numurs"
 

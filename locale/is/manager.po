@@ -1807,11 +1807,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Lykilorð"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Vinsamlega athugaðu að lykilorðið verður vistað sem texti, þ.e.a.s. ekki "
-"dulkóðað."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Hvaða tölublað sem er"
 

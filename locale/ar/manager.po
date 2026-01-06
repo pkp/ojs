@@ -1898,9 +1898,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "كلمة المرور"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "لطفاً، لاحظ أن كلمة المرور سيتم حفظها بشكل نص صريح غير مشفر."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "أي عدد"
 

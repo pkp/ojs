@@ -1965,9 +1965,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Lösenord"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "Lösenordet kommer att sparas i text, det är alltså inte krypterad."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Något nummer"
 

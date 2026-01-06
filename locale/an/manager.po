@@ -1667,11 +1667,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Clau"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Per favor, tienga en cuenta que la clau s'alzará como texto plano, no "
-"encriptada."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Cualsequier numero"
 

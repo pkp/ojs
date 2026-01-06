@@ -2024,11 +2024,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Contrasinal"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Ten en conta que o contrasinal gardarase como texto plano, é dicir, non "
-"cifrado."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Calquera número"
 

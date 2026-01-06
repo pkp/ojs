@@ -1935,9 +1935,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "รหัสผ่าน"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "กรุณาทราบว่ารหัสผ่านจะถูกบันทึกเป็นข้อความล้วน ซึ่งไม่ได้เข้ารหัส"
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "ทุกฉบับ"
 

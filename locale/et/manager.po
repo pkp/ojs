@@ -2395,9 +2395,6 @@ msgstr ""
 "Numbri {$id} kaanepilti ei eksporditud, selle faili ei leitud asukohas \""
 "{$path}\"."
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "Pane tähele, et parool salvestatakse lihttekstina, st krüpteerimata."
-
 msgid "doi.manager.settings.doiAssignJournalWide.description"
 msgstr ""
 "Määra DOI-d kõigile avaldatud ajakirja objektidele, millele pole DOI-sid "

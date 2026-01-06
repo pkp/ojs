@@ -2507,10 +2507,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "पासवर्ड"
 
-# (pofilter) endpunc: Different punctuation at the end
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "कृपया ध्यान दें कि पासवर्ड सादे पाठ के रूप में सहेजा जाएगा, अर्थात् एन्क्रिप्टेड नहीं।"
-
 # (pofilter) endwhitespace: Different whitespace at the end
 msgid "plugins.importexport.common.filter.issue"
 msgstr "कोई अंक"

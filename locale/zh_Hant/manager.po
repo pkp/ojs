@@ -1735,9 +1735,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "密碼"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "請注意密碼將以純文字方式儲存，即無加密。"
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "任何期號"
 

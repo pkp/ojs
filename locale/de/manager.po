@@ -2041,11 +2041,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Passwort"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Bitte beachten Sie, dass das Passwort im Klartext, d.h. unverschlüsselt, "
-"gespeichert wird."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Jede Ausgabe"
 

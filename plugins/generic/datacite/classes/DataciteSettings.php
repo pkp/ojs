@@ -77,7 +77,6 @@ class DataciteSettings extends \PKP\doi\RegistrationAgencySettings
             ]),
             new FieldText('password', [
                 'label' => __('plugins.importexport.common.settings.form.password'),
-                'description' => __('plugins.importexport.common.settings.form.password.description'),
                 'inputType' => 'password',
                 'value' => $this->agencyPlugin->getSetting($context->getId(), 'password'),
             ]),
@@ -94,7 +93,6 @@ class DataciteSettings extends \PKP\doi\RegistrationAgencySettings
             ]),
             new FieldText('testPassword', [
                 'label' => __('plugins.importexport.datacite.settings.form.testPassword'),
-                'description' => __('plugins.importexport.common.settings.form.password.description'),
                 'inputType' => 'password',
                 'value' => $this->agencyPlugin->getSetting($context->getId(), 'testPassword'),
             ]),

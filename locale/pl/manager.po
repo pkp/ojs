@@ -1929,9 +1929,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Hasło"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "Hasło zostanie zapisane w postaci tekstu, nie zostanie zaszyfrowane."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Dowolny numer"
 

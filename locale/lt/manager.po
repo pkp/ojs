@@ -1929,11 +1929,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Slaptažodis"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Atkreipkite dėmesį, kad slaptažodis bus išsaugotas kaip grynasis tekstas, t. "
-"y. jis nebus užkoduotas."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Bet kuris numeris"
 

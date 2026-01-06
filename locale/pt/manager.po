@@ -1990,9 +1990,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Senha"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "Tenha em atenção que a senha será guardada como texto, não encriptada."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Qualquer Número"
 

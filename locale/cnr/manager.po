@@ -1966,11 +1966,6 @@ msgstr ""
 "dugme da bi se vratile na početno stanje informacije o spremljenim dozvolama "
 "uz objavljen sadržaj članka."
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Obratite pažnju da će lozinka biti sačuvana kao običan tekst tj. neće biti "
-"dodatno šifrovana."
-
 msgid "plugins.importexport.common.export.error.outputFileNotWritable"
 msgstr "U fajl {$param} nije moguće pisati."
 

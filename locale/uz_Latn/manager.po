@@ -2010,10 +2010,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Parol"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"E'tibor bering, parol oddiy matn sifatida saqlanadi, ya'ni shifrlanmagan."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Har qanday muammo"
 

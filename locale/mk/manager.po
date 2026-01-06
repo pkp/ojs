@@ -2002,11 +2002,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Лозинка"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Имајте предвид дека лозинката ќе биде зачувана како обичен текст, т.е. не "
-"криптирана."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Било кое издание"
 
