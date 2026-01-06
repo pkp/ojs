@@ -1969,9 +1969,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Passord"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "Merk: passordet blir lagret som ren tekst, dvs. ikke kryptert."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Alle utgaver"
 

@@ -1904,11 +1904,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Lozinka"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Obratite pažnju da će lozinka biti sačuvana kao običan tekst tj. neće biti "
-"dodatno šifrovana."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Bilo koji broj"
 

@@ -46,7 +46,6 @@ msgstr ""
 "\t\tpassword you'll still be able to export into the DataCite XML format but "
 "you\n"
 "\t\tcannot register your DOIs with DataCite from within OJS.\n"
-"\t\tPlease note that the password will be saved in encrypted format. "
 "\t"
 
 msgid "plugins.importexport.datacite.settings.form.username"

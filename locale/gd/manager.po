@@ -1603,9 +1603,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr ""
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr ""
 

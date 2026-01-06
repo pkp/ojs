@@ -1976,11 +1976,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Salasana"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Huomaathan, että salasana tallennetaan pelkkänä tekstinä, eli ei salatussa "
-"muodossa."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Mikä tahansa numero"
 

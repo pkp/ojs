@@ -1982,11 +1982,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "პაროლი"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"გთხოვთ გაითვალისწინოთ, რომ პაროლი შეინახება როგორც მარტივი ტექსტი, ანუ არ "
-"არის დაშიფრული."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "ნებისმიერი გამოცემა"
 

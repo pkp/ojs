@@ -2040,11 +2040,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Κωδικός πρόσβασης"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Παρακαλούμε σημειώστε ότι ο κωδικός θα αποθηκευτεί ως απλό κείμενο και δεν "
-"θα είναι κρυπτογραφημένος."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Όλα τα τεύχη"
 

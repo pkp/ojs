@@ -1940,11 +1940,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Geslo"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Prosimo, da se zavedate, da bo geslo shranjeno v prostem besedilu, torej ne "
-"bo enkriptirano."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Katerakoli številka"
 

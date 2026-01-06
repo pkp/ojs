@@ -1973,10 +1973,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Heslo"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Upozornenie: heslo bude uložené ako obyčajný text, nebude teda zašifrované."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Ľubovoľné číslo"
 

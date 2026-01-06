@@ -2058,11 +2058,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Contraseña"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Por favor, tenga en cuenta que la contraseña se guardará como texto plano, "
-"no encriptada."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Cualquier número"
 

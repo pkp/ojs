@@ -2010,11 +2010,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Senha"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Por favor, note que a senha será guardada como texto simples, isto é, não "
-"criptografado."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Qualquer Edição"
 

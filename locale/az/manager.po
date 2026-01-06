@@ -2349,11 +2349,6 @@ msgstr "#YOK"
 msgid "plugins.importexport.common.error.issueCoverImageMissing"
 msgstr "#YOK"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Şifrənin düz mətn kimi, yəni şifrələnməmiş olaraq yadda saxlanacağını zəhmət "
-"olmasa unutmayın."
-
 msgid "plugins.importexport.common.error.noObjectsSelected"
 msgstr "Heç bir obyekt seçilmədi."
 

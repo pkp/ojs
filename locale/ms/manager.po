@@ -1973,11 +1973,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Kata Laluan"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Harap perhatikan bahawa kata laluan akan disimpan sebagai teks biasa, iaitu "
-"tidak disulitkan."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Sebarang Terbitan"
 

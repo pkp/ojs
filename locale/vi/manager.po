@@ -1956,11 +1956,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Mật khẩu"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Xin lưu ý rằng mật khẩu sẽ được lưu dưới dạng văn bản thuần túy, tức là "
-"không được mã hóa."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Số bất kỳ"
 

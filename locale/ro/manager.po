@@ -1996,9 +1996,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Parolă"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "Rețineți că parola va fi salvată ca text simplu, adică nu criptată."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Orice număr"
 

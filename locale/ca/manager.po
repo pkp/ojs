@@ -2051,11 +2051,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Contrasenya"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Heu de tenir en compte que la contrasenya serà guardada en text sense "
-"format, p. ex. no encriptada."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Qualsevol número"
 

@@ -2017,9 +2017,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Password"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "La password verrà salvata come testo, non crittografata."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Qualsiasi fascicolo"
 

@@ -1887,9 +1887,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "رمز عبور"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "توجه داشته باشید که رمز به صورت متن خام (رمزگذاری نشده) ذخیره می شود."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "هر شماره‌ای"
 

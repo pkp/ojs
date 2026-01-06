@@ -1994,10 +1994,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Wachtwoord"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Merk op dat het wachtwoord als tekst wordt opgeslagen; niet versleuteld."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Eender welk nummer"
 

@@ -2010,11 +2010,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Pasahitza"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Kontuan izan pasahitza testu arrunt gisa gordeko dela, hau da, ez dago "
-"enkriptatuta."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Edozein zenbaki"
 

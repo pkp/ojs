@@ -1978,11 +1978,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Jelszó"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Felhívjuk a figyelmét, hogy a jelszó sima szövegként lesz mentve, azaz nem "
-"lesz titkosítva."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Bármelyik folyóiratszám"
 

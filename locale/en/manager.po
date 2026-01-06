@@ -1635,9 +1635,6 @@ msgstr "The cover image of the issue {$id} was not exported, its file was not fo
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Password"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "Please note that the password will be saved in encrypted format."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Any Issue"
 

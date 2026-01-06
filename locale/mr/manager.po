@@ -2375,11 +2375,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "सांकेतिक शब्द (पासवर्ड)"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"सांकेतिक शब्द (पासवर्ड) सांकेतिक लिपीऐवजी (एनक्रिप्ट) साध्या मजकूराच्या रूपा"
-"त सेव्ह केला जाईल याची नोंद घ्या."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "कुठलाही अंक"
 

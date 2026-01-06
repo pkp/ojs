@@ -1875,11 +1875,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "パスワード"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"パスワードはプレーンテキストとして保存される、つまり暗号化されないので、ご注"
-"意ください。"
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "任意の巻号"
 

@@ -1925,9 +1925,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "وشەی نهێنی"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "تکایە ئاگادار بە کە وشەی نهێنی وەک نوسین خەزن دەبێت."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "هەر ژمارەیەک"
 

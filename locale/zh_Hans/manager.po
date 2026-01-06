@@ -1776,9 +1776,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "密码"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "请注意密码已纯文本的形式保存，如：不加密。"
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "任意期次"
 

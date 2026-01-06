@@ -2005,11 +2005,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Пароль"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Обратите внимание, что пароль будет сохранен в виде обычного текста, то есть "
-"не будет зашифрован."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Любой выпуск"
 

@@ -2027,9 +2027,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Сырсөз"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr "Сырсөз жөнөкөй текст түрүндө сакталат, башкача айтканда, шифрленбейт."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Каалаган чыгарылыш"
 

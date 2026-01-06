@@ -2057,11 +2057,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Mot de passe"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Veuillez noter que le mot de passe sera enregistré en tant que texte brut "
-"(il ne sera pas chiffré)."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Numéro"
 

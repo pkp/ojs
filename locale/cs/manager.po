@@ -1962,10 +1962,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Heslo"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Upozornění: heslo bude uloženo jako prostý text, nebude tedy zašifrováno."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Libovolné číslo"
 

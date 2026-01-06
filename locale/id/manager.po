@@ -1948,11 +1948,6 @@ msgstr ""
 msgid "plugins.importexport.common.settings.form.password"
 msgstr "Katakunci"
 
-msgid "plugins.importexport.common.settings.form.password.description"
-msgstr ""
-"Mohon diperhatikan bahwa katakunci akan disimpan dalam bentuk plain text, "
-"tidak dienkripsi."
-
 msgid "plugins.importexport.common.filter.issue"
 msgstr "Semua Terbitan"
 
