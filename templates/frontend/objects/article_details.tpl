@@ -397,6 +397,14 @@
 				</section>
 			{/if}
 
+			{* Funding Statement *}
+			{if $publication->getLocalizedData('fundingStatement')}
+				<section class="item fundingStatement" id="funding-statement">
+					<h2 class="label">{translate key="submission.fundingStatement"}</h2>
+					{$publication->getLocalizedData('fundingStatement')|strip_unsafe_html}
+				</section>
+			{/if}
+
 			{* Issue article appears in *}
 			{if $issue || $section || $categories}
 				<div class="item issue">
