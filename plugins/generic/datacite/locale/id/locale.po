@@ -28,6 +28,7 @@ msgstr "Pengaturan DataCite"
 msgid "plugins.importexport.datacite.registrationAgency.name"
 msgstr "DataCite"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.intro"
 msgstr ""
 "\n"

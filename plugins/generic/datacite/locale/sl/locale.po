@@ -32,6 +32,7 @@ msgstr "Nastavitve za Datacite"
 msgid "plugins.importexport.datacite.registrationAgency.name"
 msgstr "Datacite"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.intro"
 msgstr ""
 "\n"
