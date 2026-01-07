@@ -29,6 +29,7 @@ msgstr ""
 msgid "plugins.importexport.datacite.registrationAgency.name"
 msgstr ""
 
+#, fuzzy
 msgid "plugins.importexport.datacite.intro"
 msgstr ""
 "اگر می خواهید DOI ها را با DataCite ثبت کنید، لطفا از طریق <a href=\"http://"

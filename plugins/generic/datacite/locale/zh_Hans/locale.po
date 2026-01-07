@@ -30,6 +30,7 @@ msgstr "DataCite 设置"
 msgid "plugins.importexport.datacite.registrationAgency.name"
 msgstr "DataCite（数据引用）"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.intro"
 msgstr ""
 "\n"

@@ -82,6 +82,7 @@ msgstr ""
 "Erregistroa ez da behar bezala egin. Mesedez, egiaztatu konfigurazioa eta "
 "saiatu berriro."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.intro"
 msgstr ""
 "\n"
