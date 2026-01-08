@@ -133,7 +133,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 if ($cache->isCached('genres', $galleyFile->getData('genreId'))) {
                     $genre = $cache->get('genres', $galleyFile->getData('genreId'));
                 } else {
-                    $genre = Repo::genre()->get((int)$galleyFile->getData('genreId'));
+                    $genre = Genre::findById((int) $galleyFile->getData('genreId'));
                     if ($genre) {
                         $cache->add($genre, null);
                     }

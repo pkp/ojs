@@ -241,11 +241,9 @@ class IssueController extends PKPBaseController
                 $issue,
                 $context,
                 $this->getUserGroups($context->getId()),
-                // make sure to pass a plain array here, not a Collection
                 $this->getGenres($context->getId())->all()
             );
 
-        // use the JsonResponse constructor directly so it accepts your array
         return new JsonResponse($data, Response::HTTP_OK);
     }
 

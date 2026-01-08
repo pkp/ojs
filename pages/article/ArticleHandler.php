@@ -533,7 +533,7 @@ class ArticleHandler extends Handler
                 // if the file is a galley file (i.e. not a dependent file e.g. CSS or images), fire an usage event.
                 if ($this->galley->getData('submissionFileId') == $this->submissionFileId) {
                     $assocType = Application::ASSOC_TYPE_SUBMISSION_FILE;
-                    $genre = Repo::genre()->get((int) $submissionFile->getData('genreId'));
+                    $genre = Genre::findById((int) $submissionFile->getData('genreId'));
                     // TO-DO: is this correct ?
                     if ($genre->category != Genre::GENRE_CATEGORY_DOCUMENT || $genre->supplementary || $genre->dependent) {
                         $assocType = Application::ASSOC_TYPE_SUBMISSION_FILE_COUNTER_OTHER;
