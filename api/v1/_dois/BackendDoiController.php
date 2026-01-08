@@ -21,8 +21,8 @@ use APP\facades\Repo;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Route;
-use PKP\db\DAORegistry;
 use PKP\userGroup\UserGroup;
 
 class BackendDoiController extends \PKP\API\v1\_dois\PKPBackendDoiController
@@ -82,15 +82,13 @@ class BackendDoiController extends \PKP\API\v1\_dois\PKPBackendDoiController
 
         Repo::galley()->edit($galley, ['doiId' => $doi->getId()]);
 
-        /** @var \PKP\submission\GenreDAO $genreDao */
-        $genreDao = DAORegistry::getDAO('GenreDAO');
-        $genres = $genreDao->getByContextId($context->getId())->toAssociativeArray();
+        $genres = Repo::genre()->getByContextId($context->getId());
         // Re-fetch submission and publication to reflect changes in galley
         $submission = Repo::submission()->get((int) $submissionId);
         $publication = Repo::publication()->get((int) $publicationId);
         $galley = Repo::galley()->get($galley->getId());
 
-        $galleyProps = Repo::galley()->getSchemaMap($submission, $publication, $genres)->map($galley);
+        $galleyProps = Repo::galley()->getSchemaMap($submission, $publication, $genres->all())->map($galley);
 
         return response()->json($galleyProps, Response::HTTP_OK);
     }
@@ -138,16 +136,14 @@ class BackendDoiController extends \PKP\API\v1\_dois\PKPBackendDoiController
                     $issue,
                     $context,
                     $userGroups,
-                    $this->getGenres($context->getId())
+                    $this->getGenres($context->getId())->all()
                 ),
             Response::HTTP_OK
         );
     }
 
-    protected function getGenres(int $contextId): array
+    protected function getGenres(int $contextId): Collection
     {
-        /** @var \PKP\submission\GenreDAO $genreDao */
-        $genreDao = DAORegistry::getDAO('GenreDAO');
-        return $genreDao->getByContextId($contextId)->toAssociativeArray();
+        return Repo::genre()->getByContextId($contextId);
     }
 }

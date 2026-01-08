@@ -216,6 +216,7 @@
         <migration class="PKP\migration\upgrade\v3_6_0\I12078_RemoveSettingTypeInCitationSettings"/>
         <migration class="PKP\migration\upgrade\v3_6_0\I11971_RemoveShowTitleInUserGroups"/>
 		<migration class="PKP\migration\upgrade\v3_6_0\I11583_ClassNamespaceFromDotNotationClassPath"/>
+		<migration class="PKP\migration\upgrade\v3_6_0\I10133_FixGenreSettingsType"/>
 		<code function="rebuildSearchIndex" />
 		<note file="docs/release-notes/README-3.6.0" />
 	</upgrade>

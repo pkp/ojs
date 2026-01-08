@@ -41,8 +41,7 @@ use PKP\plugins\PluginRegistry;
 use PKP\publication\PKPPublication;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\Validation;
-use PKP\submission\Genre;
-use PKP\submission\GenreDAO;
+use PKP\submission\genre\Genre;
 use PKP\submission\PKPSubmission;
 use PKP\submissionFile\SubmissionFile;
 use stdClass;
@@ -297,15 +296,8 @@ class ArticleHandler extends Handler
         $primaryGalleys = [];
         $supplementaryGalleys = [];
         if ($galleys) {
-            $genreDao = DAORegistry::getDAO('GenreDAO'); /** @var GenreDAO $genreDao */
-            $primaryGenres = $genreDao->getPrimaryByContextId($context->getId())->toArray();
-            $primaryGenreIds = array_map(function ($genre) {
-                return $genre->getId();
-            }, $primaryGenres);
-            $supplementaryGenres = $genreDao->getBySupplementaryAndContextId(true, $context->getId())->toArray();
-            $supplementaryGenreIds = array_map(function ($genre) {
-                return $genre->getId();
-            }, $supplementaryGenres);
+            $primaryGenreIds = Repo::genre()->getPrimaryIdsByContextId($context->getId());
+            $supplementaryGenreIds = Repo::genre()->getSupplementaryIdsByContextId($context->getId());
 
             foreach ($galleys as $galley) {
                 $remoteUrl = $galley->getData('urlRemote');
@@ -541,11 +533,9 @@ class ArticleHandler extends Handler
                 // if the file is a galley file (i.e. not a dependent file e.g. CSS or images), fire an usage event.
                 if ($this->galley->getData('submissionFileId') == $this->submissionFileId) {
                     $assocType = Application::ASSOC_TYPE_SUBMISSION_FILE;
-                    /** @var GenreDAO */
-                    $genreDao = DAORegistry::getDAO('GenreDAO');
-                    $genre = $genreDao->getById($submissionFile->getData('genreId'));
+                    $genre = Genre::findById((int) $submissionFile->getData('genreId'));
                     // TO-DO: is this correct ?
-                    if ($genre->getCategory() != Genre::GENRE_CATEGORY_DOCUMENT || $genre->getSupplementary() || $genre->getDependent()) {
+                    if ($genre->category != Genre::GENRE_CATEGORY_DOCUMENT || $genre->supplementary || $genre->dependent) {
                         $assocType = Application::ASSOC_TYPE_SUBMISSION_FILE_COUNTER_OTHER;
                     }
                     event(new UsageEvent($assocType, $request->getContext(), $this->article, $this->galley, $submissionFile, $this->issue));
