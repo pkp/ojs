@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @file api/v1/publicationPeerReviews/index.php
+ * @file api/v1/peerReviews/index.php
  *
  * Copyright (c) 2025 Simon Fraser University
  * Copyright (c) 2025 John Willinsky
@@ -13,4 +13,4 @@
  *
  */
 
-return new \PKP\handler\APIHandler(new \PKP\API\v1\publicationPeerReviews\PublicationPeerReviewController());
+return new \PKP\handler\APIHandler(new \PKP\API\v1\peerReviews\PeerReviewController());
