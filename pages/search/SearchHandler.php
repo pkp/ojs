@@ -21,9 +21,7 @@ use APP\handler\Handler;
 use APP\search\SubmissionSearchResult;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\template\TemplateManager;
-use Laravel\Scout\Builder;
 use PKP\core\PKPRequest;
-use PKP\plugins\Hook;
 
 class SearchHandler extends Handler
 {
@@ -51,36 +49,13 @@ class SearchHandler extends Handler
 
     /**
      * Show the search form
-     *
-     * @hook SearchHandler::search::builder ['builder' => $builder, 'request' => $request]
      */
     public function search(array $args, PKPRequest $request): void
     {
         $this->validate(null, $request);
 
-        $context = $request->getContext();
-        $contextId = $context?->getId() ?? (int) $request->getUserVar('searchContext');
-
-        $query = (string) $request->getUserVar('query');
-        $dateFrom = $request->getUserDateVar('dateFrom');
-        $dateTo = $request->getUserDateVar('dateTo');
-
         $rangeInfo = $this->getRangeInfo($request, 'search');
-
-        $builder = new Builder(new SubmissionSearchResult(), $query);
-        // Retrieve results.
-        $builder
-            ->where('contextId', $contextId)
-            ->where('publishedFrom', $dateFrom)
-            ->where('publishedTo', $dateTo)
-            ->whereIn('categoryIds', $request->getUserVar('categoryIds'))
-            ->whereIn('sectionIds', $request->getUserVar('sectionIds'))
-            ->whereIn('keywords', $request->getUserVar('keywords'))
-            ->whereIn('subjects', $request->getUserVar('subjects'));
-
-        // Allow hook registrants to adjust the builder before querying
-        Hook::run('SearchHandler::search::builder', ['builder' => $builder, 'request' => $request]);
-
+        $builder = (new SubmissionSearchResult())->builderFromRequest($request, $rangeInfo);
         $results = $builder->paginate($rangeInfo->getCount(), 'submissions', $rangeInfo->getPage());
 
         $this->setupTemplate($request);
@@ -89,7 +64,8 @@ class SearchHandler extends Handler
 
         // Assign the year range.
         $collector = Repo::publication()->getCollector();
-        $collector->filterByContextIds($contextId ? [$contextId] : null);
+        $context = $request->getContext();
+        $collector->filterByContextIds($context ? [$context->getId()] : null);
         $yearRange = Repo::publication()->getDateBoundaries($collector);
         $yearStart = substr($yearRange->min_date_published, 0, 4);
         $yearEnd = substr($yearRange->max_date_published, 0, 4);
@@ -97,17 +73,15 @@ class SearchHandler extends Handler
         $this->_assignDateFromTo($request, $templateMgr);
 
         $templateMgr->assign([
-            'query' => $query,
+            'query' => $builder->query,
             'results' => $results,
-            'searchContext' => $contextId,
+            'searchContext' => $context?->getId(),
             'yearStart' => $yearStart,
             'yearEnd' => $yearEnd,
         ]);
 
-        if (!$request->getContext()) {
-            $templateMgr->assign([
-                'searchableContexts' => $this->getSearchableContexts(),
-            ]);
+        if (!$context) {
+            $templateMgr->assign('searchableContexts', $this->getSearchableContexts());
         }
 
         $templateMgr->display('frontend/pages/search.tpl');
