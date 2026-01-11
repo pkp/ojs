@@ -206,8 +206,16 @@ class DOAJJsonFilter extends PKPImportExportFilter
         if (!empty($abstract)) {
             $doajArticle['bibjson']['abstract'] = PKPString::html2text($abstract);
         }
+
         // Keywords
-        $keywords = $publication->getData('keywords');
+        $keywords = collect($publication->getData('keywords') ?? [])
+            ->map(
+                fn (array $items): array => collect($items)
+                    ->pluck('name')
+                    ->all()
+            )
+            ->all();
+
         $allowedNoOfKeywords = array_slice($keywords[$publicationLocale] ?? [], 0, 6);
         if (!empty($keywords[$publicationLocale])) {
             $doajArticle['bibjson']['keywords'] = $allowedNoOfKeywords;

@@ -216,7 +216,14 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
             $node->setAttribute('format', 'html');
 
             // Keywords
-            $articleKeywords = $publication->getData('keywords');
+            $articleKeywords = collect($publication->getData('keywords') ?? [])
+                ->map(
+                    fn (array $items): array => collect($items)
+                        ->pluck('name')
+                        ->all()
+                )
+                ->all();
+
             if (array_key_exists($publication->getData('locale'), $articleKeywords)) {
                 $keywordsInArticleLocale = $articleKeywords[$publication->getData('locale')];
                 unset($articleKeywords[$publication->getData('locale')]);
