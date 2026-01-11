@@ -40,6 +40,7 @@ use Mockery;
 use PHPUnit\Framework\Attributes\CoversClass;
 use PHPUnit\Framework\MockObject\MockObject;
 use PKP\author\Repository as AuthorRepository;
+use PKP\controlledVocab\ControlledVocab;
 use PKP\controlledVocab\Repository as ControlledVocabRepository;
 use PKP\core\Dispatcher;
 use PKP\core\Registry;
@@ -86,8 +87,23 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->twice()
             ->withAnyArgs()
             ->andReturn(
-                ['en' => ['article-keyword']],
-                ['en' => ['article-subject', 'article-subject-class']]
+                [
+                    'en' => [
+                        [
+                            'name' => 'article-keyword',
+                        ],
+                    ]
+                ],
+                [
+                    'en' => [
+                        [
+                            'name' => 'article-subject',
+                        ],
+                        [
+                            'name' => 'article-subject-class'
+                        ]
+                    ]
+                ]
             )
             ->getMock();
 
@@ -136,6 +152,24 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $publication->setData('copyrightHolder', 'article-copyright');
         $publication->setData('copyrightYear', 'year');
         $publication->setData('authors', collect([$author]));
+        $publication->setData(
+            'keywords',
+            Repo::controlledVocab()->getBySymbolic(
+                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
+                0,
+                Application::ASSOC_TYPE_PUBLICATION
+            )['en'],
+            'en'
+        );
+        $publication->setData(
+            'subjects',
+            Repo::controlledVocab()->getBySymbolic(
+                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_SUBJECT,
+                0,
+                Application::ASSOC_TYPE_PUBLICATION
+            )['en'],
+            'en'
+        );
 
         // Article
         /** @var Submission|MockObject */

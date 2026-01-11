@@ -20,7 +20,6 @@ use APP\plugins\importexport\doaj\DOAJExportDeployment;
 use APP\plugins\importexport\doaj\DOAJExportPlugin;
 use APP\publication\Publication;
 use APP\submission\Submission;
-use PKP\controlledVocab\ControlledVocab;
 use PKP\core\PKPString;
 use PKP\i18n\LocaleConversion;
 
@@ -190,11 +189,13 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
             $node->setAttribute('format', 'html');
 
             // Keywords
-            $articleKeywords = Repo::controlledVocab()->getBySymbolic(
-                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
-                Application::ASSOC_TYPE_PUBLICATION,
-                $publication->getId()
-            );
+            $articleKeywords = collect($publication->getData('keywords') ?? [])
+                ->map(
+                    fn (array $items): array => collect($items)
+                        ->pluck('name')
+                        ->all()
+                )
+                ->all();
 
             if (array_key_exists($publication->getData('locale'), $articleKeywords)) {
                 $keywordsInArticleLocale = $articleKeywords[$publication->getData('locale')];
