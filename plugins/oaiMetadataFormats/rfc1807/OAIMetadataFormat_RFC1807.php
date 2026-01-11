@@ -18,14 +18,12 @@ namespace APP\plugins\oaiMetadataFormats\rfc1807;
 
 use APP\author\Author;
 use APP\core\Application;
-use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\issue\IssueAction;
 use APP\journal\Journal;
 use APP\publication\Publication;
 use APP\section\Section;
 use APP\submission\Submission;
-use PKP\controlledVocab\ControlledVocab;
 use PKP\oai\OAIMetadataFormat;
 use PKP\oai\OAIUtils;
 
@@ -75,17 +73,22 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
         }
 
         $subjects = array_merge_recursive(
-            Repo::controlledVocab()->getBySymbolic(
-                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_KEYWORD,
-                Application::ASSOC_TYPE_PUBLICATION,
-                $publication->getId()
-            ),
-            Repo::controlledVocab()->getBySymbolic(
-                ControlledVocab::CONTROLLED_VOCAB_SUBMISSION_SUBJECT,
-                Application::ASSOC_TYPE_PUBLICATION,
-                $article->getCurrentPublication()->getId()
-            )
+            collect($publication->getData('keywords'))
+                ->map(
+                    fn (array $items): array => collect($items)
+                        ->pluck('name')
+                        ->all()
+                )
+                ->all(),
+            collect($publication->getData('subjects'))
+                ->map(
+                    fn (array $items): array => collect($items)
+                        ->pluck('name')
+                        ->all()
+                )
+                ->all()
         );
+
         $subject = $subjects[$publicationLocale] ?? $subjects[$journal->getPrimaryLocale()] ?? '';
 
         $coverage = $publication->getData('coverage', $publicationLocale);
