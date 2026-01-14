@@ -122,7 +122,7 @@
 	{else}
 		<div class="cmp_pagination">
 			{page_info iterator=$results}
-			{page_links anchor="results" iterator=$results name="search" query=$query searchContext=$searchContext authors=$authors dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear}
+			{page_links anchor="results" iterator=$results name="search" query=$query searchContext=$searchContext authors=$authors dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear orderBy=$orderBy orderDir=$orderDir}
 		</div>
 	{/if}
 

@@ -11,10 +11,8 @@
  * @uses $results array List of published submissions in this category
  * @uses $parentCategory Category Parent category if one exists
  * @uses $subcategories array List of subcategories if they exist
- * @uses $prevPage int The previous page number
- * @uses $nextPage int The next page number
- * @uses $showingStart int The number of the first item on this page
- * @uses $showingEnd int The number of the last item on this page
+ * @uses $orderBy string Order option
+ * @uses $orderDir string When set, either 'asc' or 'desc'
  *}
 {include file="frontend/components/header.tpl" pageTitleTranslated=$category->getLocalizedTitle()|escape}
 
@@ -79,7 +77,7 @@
 		</ul>
 
 		{page_info iterator=$results}
-		{page_links anchor="results" iterator=$results name="category" query=$query searchContext=$searchContext authors=$authors dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear}
+		{page_links anchor="results" iterator=$results name="category" query=$query searchContext=$searchContext authors=$authors dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear orderBy=$orderBy orderDir=$orderDir}
 	{/if}
 
 </div><!-- .page -->

@@ -70,6 +70,12 @@ class rebuildSearchIndex extends CommandLineTool
 
         $searchEngine = app(\Laravel\Scout\EngineManager::class)->engine();
         $searchEngine->flush(Config::getVar('search_index_name', 'submissions'));
+        try {
+            $searchEngine->deleteIndex(Config::getVar('search_index_name', 'submissions'));
+        } catch (Throwable $t) {
+            // Ignore index deletion problems
+        }
+        $searchEngine->createIndex(Config::getVar('search_index_name', 'submissions'));
 
         // Let the search implementation re-build the index.
         $submissions = Repo::submission()->getCollector()
