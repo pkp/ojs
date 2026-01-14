@@ -1,6 +1,10 @@
 # Shoyim Obloqulov <obloqulovshoyim1@gmail.com>
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2026-01-14 13:01+0000\n"
+"Last-Translator: Shoyim Obloqulov <obloqulovshoyim1@gmail.com>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/manager/"
+"uz_UZ@cyrillic/>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
