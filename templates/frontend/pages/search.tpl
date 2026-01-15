@@ -31,7 +31,7 @@
 		{translate key="common.search"}
 	</h1>
 
-	{capture name="searchFormUrl"}{url path=Application::get()->getRequest()->getRequestedArgs() escape=false}{/capture}
+	{capture name="searchFormUrl"}{url path=\APP\core\Application::get()->getRequest()->getRequestedArgs() escape=false}{/capture}
 	{assign var=formUrlParameters value=[]}{* Prevent Smarty warning *}
 	{$smarty.capture.searchFormUrl|parse_url:$smarty.const.PHP_URL_QUERY|default:""|parse_str:$formUrlParameters}
 	<form class="cmp_form" method="get" action="{$smarty.capture.searchFormUrl|strtok:"?"|escape}" role="form">
@@ -122,7 +122,7 @@
 	{else}
 		<div class="cmp_pagination">
 			{page_info iterator=$results}
-			{page_links anchor="results" iterator=$results name="search" query=$query searchContext=$searchContext authors=$authors dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear}
+			{page_links anchor="results" iterator=$results name="search" query=$query searchContext=$searchContext authors=$authors dateFromMonth=$dateFromMonth dateFromDay=$dateFromDay dateFromYear=$dateFromYear dateToMonth=$dateToMonth dateToDay=$dateToDay dateToYear=$dateToYear orderBy=$orderBy orderDir=$orderDir}
 		</div>
 	{/if}
 
