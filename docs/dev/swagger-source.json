@@ -65,7 +65,8 @@
 				"Edit Task Templates",
 				"Categories",
 				"Comments",
-				"Comments / Reports"
+				"Comments / Reports",
+				"Navigation Menus"
 			]
 		}
 	],
@@ -237,6 +238,10 @@
 		{
 			"name": "Comments / Reports",
 			"description": "Endpoints used to manage comment reports."
+		},
+		{
+			"name": "Navigation Menus",
+			"description": "Endpoints to manage navigation menus and their items. Only admins and journal managers can access these endpoints."
 		}
 	],
 	"definitions": {
@@ -736,6 +741,8 @@
 				]
 			}
 		},
+		"NavigationMenu": "navigationMenu",
+		"NavigationMenuItem": "navigationMenuItem",
 		"Note": {
 			"type": "object",
 			"description": "A note attached to a task or discussion.",
@@ -6862,6 +6869,252 @@
 					"404": {
 						"x-summary": "Request Not Found",
 						"description": "The requested mailable could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/navigationMenus": {
+			"post": {
+				"tags": [
+					"Navigation Menus"
+				],
+				"summary": "Create a new navigation menu.",
+				"description": "Create a new navigation menu for the current context.",
+				"parameters": [
+					{
+						"name": "body",
+						"in": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/NavigationMenu"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Details of the created navigation menu.",
+						"schema": {
+							"$ref": "#/definitions/NavigationMenu"
+						}
+					},
+					"400": {
+						"x-summary": "Bad Request",
+						"description": "The request was invalid or contained errors.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to create navigation menus.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/navigationMenus/areas": {
+			"get": {
+				"tags": [
+					"Navigation Menus"
+				],
+				"summary": "Get available navigation areas.",
+				"description": "Returns a list of available navigation areas (theme locations) where menus can be assigned.",
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "List of available navigation areas.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"areas": {
+									"type": "object",
+									"description": "Key-value pairs of area names.",
+									"additionalProperties": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to access navigation areas.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/navigationMenus/items": {
+			"get": {
+				"tags": [
+					"Navigation Menus"
+				],
+				"summary": "Get all navigation menu items for new menu creation.",
+				"description": "Returns all navigation menu items for the current context. Used when creating a new menu to get all available items as unassigned.",
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Object containing assigned (empty) and unassigned items.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"assigned": {
+									"type": "array",
+									"description": "Empty array for new menu creation.",
+									"items": {
+										"type": "object"
+									}
+								},
+								"unassigned": {
+									"type": "array",
+									"description": "All available menu items.",
+									"items": {
+										"type": "object"
+									}
+								},
+								"itemTypes": {
+									"type": "object",
+									"description": "Available menu item types."
+								},
+								"maxDepth": {
+									"type": "integer",
+									"description": "Maximum nesting depth for menu items."
+								}
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to access navigation menu items.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/navigationMenus/{navigationMenuId}": {
+			"put": {
+				"tags": [
+					"Navigation Menus"
+				],
+				"summary": "Update a navigation menu.",
+				"description": "Update the properties of an existing navigation menu.",
+				"parameters": [
+					{
+						"name": "navigationMenuId",
+						"description": "Navigation Menu ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "body",
+						"in": "body",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/NavigationMenu"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Details of the updated navigation menu.",
+						"schema": {
+							"$ref": "#/definitions/NavigationMenu"
+						}
+					},
+					"400": {
+						"x-summary": "Bad Request",
+						"description": "The request was invalid or contained errors.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to edit this navigation menu.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested navigation menu could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/navigationMenus/{navigationMenuId}/items": {
+			"get": {
+				"tags": [
+					"Navigation Menus"
+				],
+				"summary": "Get items for a navigation menu.",
+				"description": "Returns assigned items (as a tree) and unassigned items for a specific navigation menu.",
+				"parameters": [
+					{
+						"name": "navigationMenuId",
+						"description": "Navigation Menu ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Object containing assigned and unassigned items for the menu.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"assigned": {
+									"type": "array",
+									"description": "Hierarchical tree of assigned menu items.",
+									"items": {
+										"type": "object"
+									}
+								},
+								"unassigned": {
+									"type": "array",
+									"description": "Flat list of unassigned menu items.",
+									"items": {
+										"type": "object"
+									}
+								},
+								"itemTypes": {
+									"type": "object",
+									"description": "Available menu item types."
+								},
+								"maxDepth": {
+									"type": "integer",
+									"description": "Maximum nesting depth for menu items."
+								}
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to access this navigation menu.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested navigation menu could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
