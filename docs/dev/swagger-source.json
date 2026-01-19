@@ -378,6 +378,18 @@
 				"status": {
 					"type": "string"
 				},
+				"submissionFileIds": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				},
+				"temporaryFileIds": {
+					"type": "array",
+					"items": {
+						"type": "integer"
+					}
+				},
 				"title": {
 					"type": "string"
 				}
@@ -751,6 +763,12 @@
 				},
 				"userId": {
 					"type": "integer"
+				},
+				"submissionFiles": {
+					"type": "array",
+					"items": {
+						"$ref": "#/definitions/SubmissionFile"
+					}
 				}
 			}
 		},
@@ -3277,6 +3295,14 @@
 										}
 									}
 								},
+								"temporaryFileIds": {
+									"type": "array",
+									"description": "An array of temporary file IDs to attach to this task or discussion.",
+									"required": false,
+									"items": {
+										"type": "integer"
+									}
+								},
 								"title": {
 									"type": "string",
 									"description": "The title of the task or discussion.",
@@ -3291,6 +3317,14 @@
 									"type": "integer",
 									"description": "The workflow stage ID that this task belongs to. Creator must have access to it.",
 									"required": true
+								},
+								"submissionFileIds": {
+									"type": "array",
+									"description": "An array of existing submission file IDs to attach to this task or discussion.",
+									"required": false,
+									"items": {
+										"type": "integer"
+									}
 								}
 							}
 						}
@@ -3671,6 +3705,22 @@
 									"type": "string",
 									"description": "The contents of the note.",
 									"required": true
+								},
+								"temporaryFileIds": {
+									"type": "array",
+									"description": "An array of temporary file IDs to attach to this note.",
+									"required": false,
+									"items": {
+										"type": "integer"
+									}
+								},
+								"submissionFileIds": {
+									"type": "array",
+									"description": "An array of existing submission file IDs to attach to this note.",
+									"required": false,
+									"items": {
+										"type": "integer"
+									}
 								}
 							}
 						}
