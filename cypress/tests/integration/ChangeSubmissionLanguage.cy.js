@@ -9,7 +9,6 @@
 describe('Change Submission Language', function() {
 	let user;
 	let author;
-	let password;
 	let originalLanguage;
 	let originalLocaleKey;
 	let newLanguage;
@@ -19,7 +18,6 @@ describe('Change Submission Language', function() {
 
 	before(function() {
 		user = 'dbarnes';
-		password = user + user;
 		author = {
 			familyName: 'Karbasizaed',
 		}
@@ -36,14 +34,14 @@ describe('Change Submission Language', function() {
 	});
 
 	it('Try to change submission language after publication', function() {
-		cy.login(user, password, 'publicknowledge');
+		cy.login(user, null, 'publicknowledge');
 		cy.get('nav').contains('Published').click();
 		cy.openSubmission(author.familyName);
 		cy.get('[data-cy="workflow-controls-left"] button:contains("Change")').should('not.exist');
 	});
 
 	it('Change submission language', function() {
-		cy.login(user, password, 'publicknowledge');
+		cy.login(user, null, 'publicknowledge');
 		cy.get('nav').contains('Published').click();
 		cy.openSubmission(author.familyName);
 		// Unpublish
@@ -60,7 +58,7 @@ describe('Change Submission Language', function() {
 	});
 
 	it('Change submission language back to the original', function() {
-		cy.findSubmissionAsEditor(user, password, author.familyName);
+		cy.findSubmissionAsEditor(user, null, author.familyName);
 		// Change language
 		cy.openWorkflowMenu('Version of Record 1.0', 'Title & Abstract')
 		cy.get('[data-cy="workflow-controls-left"] button').contains('Change').click();
