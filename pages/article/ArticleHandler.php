@@ -242,13 +242,12 @@ class ArticleHandler extends Handler
             'enablePublicComments' => $enablePublicComments,
         ]);
 
-        $arePeersReviewPublic = $context->arePeersReviewPublic();
-        if ($arePeersReviewPublic) {
-            $templateMgr->assign(
-                'publicationsPeerReviews',
-                Repo::publication()->getPeerReviews($article->getPublishedPublications()),
-            );
-        }
+
+        $templateMgr->assign(
+            'publicationsPeerReviews',
+            Repo::publication()->getPeerReviews($article->getPublishedPublications()),
+        );
+
         $this->setupTemplate($request);
 
         $doiObject = $publication->getData('doiObject');
