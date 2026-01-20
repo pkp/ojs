@@ -293,6 +293,11 @@ allowed_title_html = "b,i,u,sup,sub"
 
 ;N.b.: The implicit_auth parameter has been removed in favor of plugin implementations such as shibboleth
 
+; This setting allows control over how new plugins can be installed. Supported options:
+;  on: Plugins can be installed by upload and through the Plugin Gallery. (This is the default.)
+;  gallery_only: Plugins can only be installed through the Plugin Gallery.
+;  off: Plugins cannot be installed.
+allow_plugin_install = on
 
 ;;;;;;;;;;;;;;;;;;
 ; Email Settings ;
