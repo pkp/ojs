@@ -6983,10 +6983,6 @@
 								"itemTypes": {
 									"type": "object",
 									"description": "Available menu item types."
-								},
-								"maxDepth": {
-									"type": "integer",
-									"description": "Maximum nesting depth for menu items."
 								}
 							}
 						}
@@ -7097,10 +7093,6 @@
 								"itemTypes": {
 									"type": "object",
 									"description": "Available menu item types."
-								},
-								"maxDepth": {
-									"type": "integer",
-									"description": "Maximum nesting depth for menu items."
 								}
 							}
 						}
