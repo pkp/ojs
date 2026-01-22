@@ -6894,8 +6894,8 @@
 					}
 				],
 				"responses": {
-					"200": {
-						"x-summary": "Success",
+					"201": {
+						"x-summary": "Created",
 						"description": "Details of the created navigation menu.",
 						"schema": {
 							"$ref": "#/definitions/NavigationMenu"
