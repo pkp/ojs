@@ -135,10 +135,6 @@ user_validation_period = 28
 ; Use this for development or testing purposes.
 sandbox = Off
 
-; Maximum nesting depth for navigation menu items (default: 2)
-navigation_menu_max_depth = 2
-
-
 ;;;;;;;;;;;;;;;;;;;;;
 ; Database Settings ;
 ;;;;;;;;;;;;;;;;;;;;;
@@ -437,6 +433,10 @@ items_per_page = 25
 
 ; Number of page links to display; can be overridden on a per-journal basis
 page_links = 10
+
+; Maximum nesting depth for navigation menu items (default: 2)
+navigation_menu_max_depth = 2
+
 
 
 ;;;;;;;;;;;;;;;;;;;;
