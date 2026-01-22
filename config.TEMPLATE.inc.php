@@ -135,6 +135,7 @@ user_validation_period = 28
 ; Use this for development or testing purposes.
 sandbox = Off
 
+
 ;;;;;;;;;;;;;;;;;;;;;
 ; Database Settings ;
 ;;;;;;;;;;;;;;;;;;;;;
@@ -436,7 +437,6 @@ page_links = 10
 
 ; Maximum nesting depth for navigation menu items (default: 2)
 navigation_menu_max_depth = 2
-
 
 
 ;;;;;;;;;;;;;;;;;;;;
