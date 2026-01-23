@@ -2,12 +2,12 @@ import PkpLoad from '../lib/pkp/js/load_frontend.js';
 import {usePageStore} from '../lib/ui-library/src/frontend/stores/pkpPageStore.js';
 window.pkp = Object.assign(PkpLoad, window.pkp || {});
 
-document.addEventListener('DOMContentLoaded', () => {
-	const pageStore = usePageStore();
-	if (pkp?._piniaData) {
-		pageStore.setData(pkp._piniaData);
-	}
+const pageStore = usePageStore();
+if (pkp?._piniaData) {
+	pageStore.setData(pkp._piniaData);
+}
 
+document.addEventListener('DOMContentLoaded', () => {
 	// pkp-modal-manager:
 	const div = document.createElement('div');
 	div.setAttribute('data-vue-root', '');
