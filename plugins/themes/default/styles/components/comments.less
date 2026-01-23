@@ -1,86 +1,75 @@
 @import (reference) "../components.less";
 
-.BaseCommentsVersions {
-    display: flex;
-    flex-direction: column;
-    gap: @base;
-}
-
-.BaseCommentsVersionHeader {
-	width: 100%;
-}
-h3.BaseCommentsVersionHeader {
-    margin: 0;
-}
-
-.BaseCommentsVersionHeaderTrigger {
-	width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: @base;
-	background-color: lighten(@bg-shade, 5%);
+// Style the accordion trigger for comments version headers
+.pkpComments__version .PkpAccordionHeader__trigger {
+    padding: @base;
+    background-color: lighten(@bg-shade, 5%);
     border: 1px solid @bg-border-color;
-	color: @text;
+
+    &:hover {
+        background-color: @bg-shade;
+    }
+}
+
+// Version label text in primary color
+.pkpComments__version-header-label {
+    color: @primary;
     font-weight: @bold;
     font-size: @font-base;
-	cursor: pointer;
 }
 
-.BaseCommentsVersionHeaderTrigger:hover {
-    background-color: @bg-shade;
+// Chevron in primary color
+.pkpComments__version .PkpAccordionHeader__chevron {
+    color: @primary;
 }
 
-.BaseCommentsVersionHeaderTrigger[data-state='open']
-	.BaseCommentsVersionHeaderChevron {
-	transform: rotate(180deg);
-}
-
-// use the form elements styling
-.BaseCommentsNew {
+.pkpComments__new {
     margin-top: @base;
-    &:extend(.cmp_form all);
+
+    .pkpTextarea__element {
+        padding: 0.5em;
+        width: 100%;
+        height: 8em;
+        background: #fff;
+        border: @form-border;
+        border-radius: @radius;
+        font-size: @font-sml;
+    }
 }
 
-.BaseCommentsNewSubmit {
+.pkpComments__new-submit {
     margin-top: @base;
 }
 
-.BaseCommentsLogInto {
+.pkpComments__log-into {
     margin-top: @base;
 }
 
-.BaseCommentsMessages {
+.pkpComments__messages {
     margin-top: @double;
-    display: flex;
-    flex-direction: column;
     gap: @base;
 }
 
-.BaseCommentsNotificationNotLatest{
+.pkpComments__notification-not-latest {
     font-size: @font-tiny;
-    display: flex;
-    align-items: center;
     gap: @half;
     margin-top: @base;
     margin-bottom: @base;
     padding: @base;
     border-radius: @radius;
     background-color: #F9E1E173;
+
     > svg {
         color: @offset;
         height: 1rem;
         width: 1rem;
     }
-
 }
 
 
-.BaseCommentsNotificationMessageNeedsApproval {
+.pkpComments__notification-needs-approval {
     color: @primary;
     font-size: @font-tiny;
-    display: flex;
-    align-items: center;
     gap: @half;
     margin-bottom: @half;
 
@@ -88,74 +77,65 @@ h3.BaseCommentsVersionHeader {
         height: 1rem;
         width: 1rem;
     }
-
 }
 
-.BaseCommentsMessage {
+.pkpComments__message {
     padding: @double;
     background-color: lighten(@bg-shade, 10%);
 	border-radius: @radius;
 }
 
-.BaseCommentsMessageHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.pkpComments__message-header {
+    // structural styles in BaseComments.vue
 }
 
-.BaseCommentsMessageDate {
+.pkpComments__message-date {
     font-size: @font-tiny;
 }
 
-.BaseCommentsMessageBody {
+.pkpComments__message-body {
     margin-top: @double;
     white-space: pre-line;
 }
 
-.BaseCommentsMessageAuthor {
+.pkpComments__message-author {
     margin-top: @double;
-    display: flex;
-    flex-direction: column;
 }
-.BaseCommentsMessageAuthorName {
+.pkpComments__author-name {
     margin-top: @half;
     font-weight: @bold;
     font-size: @font-sml;
 }
 
-.BaseCommentsMessageAuthorOrcid {
+.pkpComments__author-orcid {
     color: @text-light;
     font-size: @font-tiny;
-    display: flex;
-    align-items: center;
     column-gap: 0.2rem;
+
     > svg {
         height: 0.9rem;
         width: 0.9rem;
     }
-
 }
 
-.BaseCommentsMessageAuthorAffiliation{
+.pkpComments__author-affiliation {
     font-size: @font-tiny;
 }
 
-.BaseCommentReportDialogAuthor {
+.pkpCommentReportDialog__author {
     font-size: @font-sml;
     color: @text-light;
 }
 
-.BaseCommentReportDialogCommentText {
+.pkpCommentReportDialog__comment-text {
     margin-bottom: @double;
 }
 
-.BaseCommentReportDialogReasonInput {
+.pkpCommentReportDialog__reason-input {
     &:extend(.cmp_form all);
 }
 
-.BaseScrollToComments {
-    display: flex;
-    flex-direction: column;
+.pkpScrollToComments {
     gap: @double;
 }
 

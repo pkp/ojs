@@ -28,6 +28,7 @@ use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use Firebase\JWT\Key;
+use PKP\components\OpenReviewComponent;
 use PKP\components\UserCommentComponent;
 use PKP\config\Config;
 use PKP\context\Context;
@@ -228,6 +229,7 @@ class ArticleHandler extends Handler
         if ($enablePublicComments) {
             $userCommentComponent = new UserCommentComponent($article, $request);
             $templateMgr->setLocaleKeys($userCommentComponent->getLocaleKeys());
+            $templateMgr->addSvgIcons($userCommentComponent->getSvgIcons());
             $templateMgr->assign('userCommentsInitConfig', $userCommentComponent->getConfig());
         }
 
@@ -242,11 +244,11 @@ class ArticleHandler extends Handler
             'enablePublicComments' => $enablePublicComments,
         ]);
 
+        $openReviewComponent = new OpenReviewComponent($article);
+        $templateMgr->setLocaleKeys($openReviewComponent->getLocaleKeys());
+        $templateMgr->assign('openReviewConfig', $openReviewComponent->getConfig());
+        $templateMgr->setConstants($openReviewComponent->getConstants());
 
-        $templateMgr->assign(
-            'publicationsPeerReviews',
-            Repo::publication()->getPeerReviews($article->getPublishedPublications()),
-        );
 
         $this->setupTemplate($request);
 

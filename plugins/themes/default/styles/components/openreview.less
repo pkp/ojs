@@ -1,0 +1,413 @@
+@import (reference) "../components.less";
+
+// ============================================
+// Open Review Styles
+// ============================================
+.pkpOpenReview {
+    display: flex;
+    flex-direction: column;
+    gap: @double;
+}
+
+.pkpOpenReview__tabs-header {
+    display: flex;
+    align-items: center;
+    gap: @base;
+    padding-bottom: @base;
+    border-bottom: 1px solid @bg-border-color;
+}
+
+.pkpOpenReview__tabs-label {
+    font-size: @font-sml;
+    color: @text-light;
+}
+
+.pkpOpenReview__tabs-list {
+    display: flex;
+    background: @bg-shade;
+    border-radius: @radius;
+    padding: @half;
+}
+
+.pkpOpenReview__tabs-list .PkpTabTrigger {
+    padding: @half @base;
+    font-size: @font-sml;
+    font-weight: @bold;
+    border-radius: @radius;
+    color: @text;
+}
+
+.pkpOpenReview__tabs-list .PkpTabTrigger:hover {
+    background: darken(@bg-shade, 5%);
+}
+
+.pkpOpenReview__tabs-list .PkpTabTrigger[data-state='active'] {
+    background: @bg;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.pkpOpenReview__tabs-list .PkpTabTrigger[data-state='active']::after {
+    display: none;
+}
+
+.pkpOpenReview__heading {
+    font-size: @font-bump;
+    font-weight: @bold;
+    color: @text;
+    margin: 0;
+}
+
+// Details/Summary (accordion replacement)
+.pkpOpenReview__details {
+    border: 1px solid @bg-border-color;
+    border-radius: @radius;
+    background: @bg;
+    overflow: hidden;
+    margin-top: @base;
+}
+
+.pkpOpenReview__details:first-of-type {
+    margin-top: 0;
+}
+
+.pkpOpenReview__summary {
+    display: flex;
+    flex-direction: column;
+    gap: @half;
+    padding: @base (@base * 2.5) @base @base;
+    background: @bg;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    list-style: none;
+    position: relative;
+}
+
+.pkpOpenReview__summary::-webkit-details-marker {
+    display: none;
+}
+
+.pkpOpenReview__summary::marker {
+    content: '';
+}
+
+.pkpOpenReview__summary::after {
+    content: '';
+    position: absolute;
+    right: @base;
+    top: @base + 2px;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-right: 2px solid @text-light;
+    border-bottom: 2px solid @text-light;
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+}
+
+.pkpOpenReview__details[open] > .pkpOpenReview__summary::after {
+    transform: rotate(-135deg);
+}
+
+.pkpOpenReview__summary:hover {
+    background: lighten(@bg-shade, 5%);
+}
+
+.pkpOpenReview__summary:focus-visible {
+    outline: 2px solid @primary;
+    outline-offset: -2px;
+}
+
+.pkpOpenReview__content {
+    padding: 0 @base @base @base;
+}
+
+// Header title group
+.pkpOpenReview__header-title {
+    margin: 0;
+}
+
+.pkpOpenReview__header-title h3 {
+    font-weight: @bold;
+    font-size: @font-base;
+    color: @text;
+    margin: 0;
+}
+
+.pkpOpenReview__header-title p {
+    font-size: @font-sml;
+    color: @text-light;
+    margin: @half 0 0;
+}
+
+.pkpOpenReview__review-count {
+    font-size: @font-sml;
+    color: @text-light;
+    margin: @half 0 0;
+}
+
+// Stats list (review summary icons)
+.pkpOpenReview__stats {
+    display: flex;
+    gap: @base;
+    margin: @half 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pkpOpenReview__stats li {
+    display: inline-flex;
+    align-items: center;
+    gap: @half;
+    font-size: @font-tiny;
+}
+
+.pkpOpenReview__stats .PkpIcon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.pkpOpenReview__stats [data-recommendation='approved'] .PkpIcon {
+    color: #0d6d3d;
+}
+
+.pkpOpenReview__stats [data-recommendation='revisions_requested'] .PkpIcon {
+    color: #b45309;
+}
+
+.pkpOpenReview__stats [data-recommendation='not_approved'] .PkpIcon {
+    color: #dc2626;
+}
+
+.pkpOpenReview__stats [data-recommendation='with_comments'] .PkpIcon {
+    color: #2563eb;
+}
+
+// Reviews list
+.pkpOpenReview__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.pkpOpenReview__list li {
+    display: flex;
+    align-items: center;
+    gap: @base;
+    padding: @base 0;
+    border-top: 1px solid @bg-border-color;
+}
+
+.pkpOpenReview__list li:first-child {
+    border-top: none;
+}
+
+// Status badge
+.pkpOpenReview__status {
+    display: inline-flex;
+    align-items: center;
+    gap: @half;
+    font-size: @font-tiny;
+    padding-right: @base;
+    border-right: 1px solid @bg-border-color;
+    white-space: nowrap;
+}
+
+.pkpOpenReview__status .PkpIcon {
+    width: 1.125rem;
+    height: 1.125rem;
+}
+
+.pkpOpenReview__status[data-recommendation='approved'] .PkpIcon {
+    color: #0d6d3d;
+}
+
+.pkpOpenReview__status[data-recommendation='revisions_requested'] .PkpIcon {
+    color: #b45309;
+}
+
+.pkpOpenReview__status[data-recommendation='not_approved'] .PkpIcon {
+    color: #dc2626;
+}
+
+.pkpOpenReview__status[data-recommendation='with_comments'] .PkpIcon {
+    color: #2563eb;
+}
+
+// Reviewer info
+.pkpOpenReview__reviewer,
+.pkpOpenReview__version {
+    font-weight: @bold;
+    font-size: @font-sml;
+    color: @text;
+}
+
+.pkpOpenReview__affiliation,
+.pkpOpenReview__date {
+    flex: 1;
+    font-size: @font-sml;
+    color: @text-light;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// Read Button
+.BaseOpenReviewReadButton {
+    padding: @half @base;
+    background: @bg;
+    border: 1px solid @primary;
+    border-radius: @radius;
+    font-size: @font-sml;
+    font-weight: @bold;
+    color: @primary;
+    cursor: pointer;
+    white-space: nowrap;
+    margin-left: auto;
+}
+
+.BaseOpenReviewReadButton:hover {
+    background: @primary;
+    color: @bg;
+}
+
+// ============================================
+// Open Review Modal Styles
+// ============================================
+
+// Style the dialog container when it contains this modal
+.pkpDialog__content:has(.pkpOpenReviewModal) {
+    width: 80vw;
+    max-width: 800px;
+}
+
+.pkpOpenReviewModal {
+    display: flex;
+    flex-direction: column;
+}
+
+.pkpOpenReviewModal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: @base;
+}
+
+.pkpOpenReviewModal__title {
+    font-size: @font-bump;
+    font-weight: @bold;
+    margin: 0;
+    color: @text;
+}
+
+.pkpOpenReviewModal__nav {
+    display: flex;
+    gap: @half;
+}
+
+.pkpOpenReviewModal__nav-btn {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: @bg;
+    border: 1px solid @bg-border-color;
+    border-radius: @radius;
+    font-size: @font-bump;
+    color: @text;
+    cursor: pointer;
+}
+
+.pkpOpenReviewModal__nav-btn:hover:not(:disabled) {
+    background: @bg-shade;
+}
+
+.pkpOpenReviewModal__nav-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.pkpOpenReviewModal__meta {
+    margin-bottom: @double;
+}
+
+.pkpOpenReviewModal__reviewer {
+    display: flex;
+    align-items: center;
+    gap: @half;
+    font-weight: @bold;
+    font-size: @font-base;
+    color: @text;
+    margin-bottom: @half;
+}
+
+.pkpOpenReviewModal__recommendation-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.pkpOpenReviewModal__recommendation-icon[data-recommendation='approved'] {
+    color: #0d6d3d;
+}
+
+.pkpOpenReviewModal__recommendation-icon[data-recommendation='revisions_requested'] {
+    color: #b45309;
+}
+
+.pkpOpenReviewModal__recommendation-icon[data-recommendation='not_approved'] {
+    color: #dc2626;
+}
+
+.pkpOpenReviewModal__recommendation-icon[data-recommendation='with_comments'] {
+    color: #2563eb;
+}
+
+.pkpOpenReviewModal__affiliation {
+    font-size: @font-sml;
+    color: @text-light;
+    margin-bottom: @half;
+}
+
+.pkpOpenReviewModal__version {
+    font-size: @font-sml;
+    color: @text-light;
+}
+
+.pkpOpenReviewModal__content {
+    max-height: 60vh;
+    overflow-y: auto;
+    line-height: 1.6;
+}
+
+.pkpOpenReviewModal__comment {
+    margin: 0 0 @base;
+    color: @text;
+}
+
+.pkpOpenReviewModal__comment:last-child {
+    margin-bottom: 0;
+}
+
+.pkpOpenReviewModal__form-question {
+    margin-bottom: @double;
+}
+
+.pkpOpenReviewModal__form-question:last-child {
+    margin-bottom: 0;
+}
+
+.pkpOpenReviewModal__form-question strong {
+    display: block;
+    margin-bottom: @half;
+    color: @text;
+}
+
+.pkpOpenReviewModal__form-question p {
+    margin: 0 0 @half;
+    color: @text;
+}
+
+.pkpOpenReviewModal__no-content {
+    color: @text-light;
+    font-style: italic;
+}
