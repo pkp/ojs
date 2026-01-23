@@ -539,6 +539,66 @@ deprecation_warnings = Off
 log_web_service_info = Off
 
 
+;;;;;;;;;;;;;;;;
+; Log Settings ;
+;;;;;;;;;;;;;;;;
+
+[logs]
+
+; Default logging channel. Available channels:
+;   - stack: Combines multiple channels (default, uses 'single')
+;   - single: Single log file (storage/logs/laravel.log)
+;   - daily: Daily rotating log files
+;   - stderr: Output to stderr
+;   - syslog: System log
+;   - errorlog: PHP error log
+;   - null: Discard all logs
+log_channel = stack
+
+; Minimum log level to record. Available levels (in order of severity):
+;   - debug: Detailed debug information
+;   - info: Interesting events
+;   - notice: Normal but significant events
+;   - warning: Exceptional occurrences that are not errors
+;   - error: Runtime errors that do not require immediate action
+;   - critical: Critical conditions
+;   - alert: Action must be taken immediately
+;   - emergency: System is unusable
+log_level = error
+
+;;; Log Viewer External Files ;;;
+;
+; Optional: Define paths to external log files for the Log Viewer
+; (/index/admin/log-viewer). Only logs defined here will be shown
+; in addition to Laravel logs from storage/logs/.
+;
+; Supported log types:
+;   - nginx_error_log: Nginx error logs
+;   - apache_error_log: Apache error logs
+;   - php_fpm_log: PHP-FPM error logs
+;   - postgres_log: PostgreSQL logs
+;   - supervisor_log: Supervisor daemon logs
+;   - http_access_log: HTTP access logs (Nginx or Apache)
+
+; For Nginx installations
+; nginx_error_log = /var/log/nginx/error.log
+
+; For Apache installations
+; apache_error_log = /var/log/apache2/error.log
+
+; PHP-FPM logs
+; php_fpm_log = /var/log/php-fpm.log
+
+; PostgreSQL logs (if using PostgreSQL)
+; postgres_log = /var/log/postgresql/postgresql.log
+
+; Supervisor logs (if using supervisor for job daemon)
+; supervisor_log = /var/log/supervisor/supervisord.log
+
+; HTTP access logs
+; http_access_log = /var/log/nginx/access.log
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;
 ; Job Queues Settings ;
 ;;;;;;;;;;;;;;;;;;;;;;;
