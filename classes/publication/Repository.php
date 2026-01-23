@@ -187,12 +187,12 @@ class Repository extends \PKP\publication\Repository
      */
     protected function setStatusOnPublish(Publication $publication)
     {
-        $currentPublicaionStatus = (int) $publication->getData('status');
+        $currentPublicationStatus = (int) $publication->getData('status');
 
-        if (in_array($currentPublicaionStatus, [Publication::STATUS_READY_TO_PUBLISH, Publication::STATUS_READY_TO_SCHEDULE])) {
+        if (in_array($currentPublicationStatus, [Publication::STATUS_READY_TO_PUBLISH, Publication::STATUS_READY_TO_SCHEDULE])) {
             $publication->setData(
                 'status',
-                $currentPublicaionStatus === Publication::STATUS_READY_TO_PUBLISH
+                $currentPublicationStatus === Publication::STATUS_READY_TO_PUBLISH
                     ? Publication::STATUS_PUBLISHED
                     : Publication::STATUS_SCHEDULED
             );
