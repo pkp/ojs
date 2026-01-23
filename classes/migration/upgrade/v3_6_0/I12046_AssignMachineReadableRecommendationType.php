@@ -36,7 +36,7 @@ class I12046_AssignMachineReadableRecommendationType extends BaseI12046_AssignMa
     {
         /**
          * Mapping of machine-readable recommendation types to the locale keys of the default recommendations.
-         * Each key is a type, and its value is an array of locale keys for associated default recommendations.
+         * Each key is a type(see ReviewerRecommendationType.php), and its value is an array of locale keys for associated default recommendations.
          */
         $recommendationTypes = [
             // Accept
@@ -63,38 +63,21 @@ class I12046_AssignMachineReadableRecommendationType extends BaseI12046_AssignMa
             ->orderBy('journal_id')
             ->chunk(100, function ($contexts) use ($recommendationTypes) {
                 foreach ($contexts as $context) {
-                    $primaryLocale = $context->primary_locale;
                     $contextId = $context->journal_id;
 
                     foreach ($recommendationTypes as $type => $localeKeys) {
-                        $defaultRecommendations = DB::table('reviewer_recommendations as rr')
+                        $defaultRecommendationIdsToUpdate = DB::table('reviewer_recommendations as rr')
                             ->join('reviewer_recommendation_settings as rrs_default', 'rr.reviewer_recommendation_id', '=', 'rrs_default.reviewer_recommendation_id')
-                            ->leftJoin('reviewer_recommendation_settings as rrs_title', function ($join) use ($primaryLocale) {
-                                $join->on('rr.reviewer_recommendation_id', '=', 'rrs_title.reviewer_recommendation_id')
-                                    ->where('rrs_title.setting_name', '=', 'title')
-                                    ->where('rrs_title.locale', '=', $primaryLocale);
-                            })
-                            ->where('rr.context_id', $contextId)
                             ->where('rrs_default.setting_name', 'defaultTranslationKey')
                             ->whereIn('rrs_default.setting_value', $localeKeys)
-                            ->select(
-                                'rr.reviewer_recommendation_id',
-                                'rrs_default.setting_value as default_key',
-                                'rrs_title.setting_value as title_value'
-                            )
-                            ->get();
+                            ->where('rr.context_id', $contextId)
+                            ->select('rr.reviewer_recommendation_id as id')
+                            ->get()
+                            ->pluck('id');
 
-                        $idsToUpdate = [];
-
-                        foreach ($defaultRecommendations as $defaultRecommendation) {
-                            if ($defaultRecommendation->title_value && $defaultRecommendation->title_value === __($defaultRecommendation->default_key, [], $primaryLocale)) {
-                                $idsToUpdate[] = $defaultRecommendation->reviewer_recommendation_id;
-                            }
-                        }
-
-                        if (!empty($idsToUpdate)) {
+                        if (!empty($defaultRecommendationIdsToUpdate)) {
                             DB::table('reviewer_recommendations')
-                                ->whereIn('reviewer_recommendation_id', $idsToUpdate)
+                                ->whereIn('reviewer_recommendation_id', $defaultRecommendationIdsToUpdate)
                                 ->update(['type' => $type]);
                         }
                     }
