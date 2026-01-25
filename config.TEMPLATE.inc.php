@@ -296,6 +296,7 @@ allowed_title_html = "b,i,u,sup,sub"
 ; This setting allows control over how new plugins can be installed. Supported options:
 ;  on: Plugins can be installed by upload and through the Plugin Gallery. (This is the default.)
 ;  gallery_only: Plugins can only be installed through the Plugin Gallery.
+;  upgrade_only: Plugins can be upgraded only through the Plugin Gallery; no new plugins can be installed
 ;  off: Plugins cannot be installed.
 allow_plugin_install = on
 
