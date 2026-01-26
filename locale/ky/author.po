@@ -1,7 +1,7 @@
 # Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-01-26 10:50+0000\n"
+"PO-Revision-Date: 2026-01-26 11:35+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/author/ky/>\n"
 "Language: ky\n"
@@ -30,7 +30,7 @@ msgid "author.submit.step2"
 msgstr "2-кадам. Тапшырууну жүктөө"
 
 msgid "author.submit.step3"
-msgstr "3-кадам. Тапшыруунун метадайындарын киргизүү"
+msgstr "3-кадам. Тапшыруунун метадатасын киргизүү"
 
 msgid "author.submit.step4a"
 msgstr "4a-кадам. Кошумча файл кошуу"
@@ -45,7 +45,7 @@ msgid "author.submit.upload"
 msgstr "Тапшырууну жүктөө"
 
 msgid "author.submit.metadata"
-msgstr "Метадайындарды киргизүү"
+msgstr "Метадата киргизүү"
 
 msgid "author.submit.nextSteps"
 msgstr "Кийинки кадамдар"
@@ -54,30 +54,28 @@ msgid "author.submit.notAccepting"
 msgstr "Бул журнал учурда тапшырмаларды кабыл албайт."
 
 msgid "author.submit.requestWaiver"
-msgstr "Төлөмдөн бошотуу өтүнүчү"
+msgstr "Жеңилдик сураңыз"
 
 msgid "author.submit.mustEnterWaiverReason"
-msgstr ""
-"Эгер төлөмдөн бошотуу үчүн кайрылсаңыз, себебин көрсөтүлгөн жерге "
-"киргизишиңиз керек."
+msgstr "Эгер жеңилдик сурасаңыз, себебин көрсөтүшүңүз керек."
 
 msgid "author.submissions.queuedReviewSubsequent"
-msgstr "Рецензиянын {$round}-айлампасында"
+msgstr "Кароо раунду {$round}"
 
 msgid "author.submissions.queuedReviewRevisions"
-msgstr "Рецензияда: Түзөтүүлөр талап кылынат"
+msgstr "Кароо: Түзөтүүлөр талап кылынат"
 
 msgid "author.submissions.queuedEditingCopyedit"
-msgstr "Редакцияда: Копи-редакт талап кылынат"
+msgstr "Редакциялоо: Копи-редакт талап кылынат"
 
 msgid "author.submissions.uploadCopyeditedVersion"
-msgstr "Копи-редактталган версияны жүктөө"
+msgstr "Редактталган версияны жүктөө"
 
 msgid "author.submissions.proofreadingCorrections"
-msgstr "Корректурадагы түзөтүүлөр"
+msgstr "Корректура түзөтүүлөрү"
 
 msgid "author.submissions.viewStatus"
-msgstr "Абалды көрүү"
+msgstr "Статусту көрүү"
 
 msgid "author.submissions.noSubmissions"
 msgstr "Тапшыруулар жок."
@@ -94,13 +92,13 @@ msgid "submission.submit.coverNote"
 msgstr "Редактор үчүн комментарийлер"
 
 msgid "author.submit.comments"
-msgstr "Текст киргизүү (милдеттүү эмес)"
+msgstr "Текст киргизиңиз (милдеттүү эмес)"
 
 msgid "author.submit.form.localeRequired"
 msgstr "Тапшыруу тилин тандаңыз."
 
 msgid "author.submit.reorder"
-msgstr "Автордун атын кайра иреттөө"
+msgstr "Автордун атын кайра жайгаштыруу"
 
 msgid "author.submit.selectPrincipalContact"
 msgstr "Редакциялык кат алышуу үчүн негизги байланыш."
@@ -113,8 +111,8 @@ msgstr "Авторду өчүрүү"
 
 msgid "author.submit.languageInstructions"
 msgstr ""
-"Англисче=en; Французча=fr; Испанча=es. <a href=\"https://www.loc.gov/"
-"standards/iso639-2/php/code_list.php\" target=\"_blank\">Кошумча коддор</a>."
+"English=en; French=fr; Spanish=es. <a href=\"https://www.loc.gov/standards/"
+"iso639-2/php/code_list.php\" target=\"_blank\">Кошумча коддор</a>."
 
 msgid "author.submit.form.authorRequired"
 msgstr "Кеминде бир автор талап кылынат."
@@ -144,7 +142,8 @@ msgstr ""
 "жүктөөгө болот)."
 
 msgid "author.submit.forgottenSubmitSuppFile"
-msgstr "Тандалган кошумча файлды жүктөбөй улантууну каалайсызбы?"
+msgstr ""
+"Тандаган кошумча файлыңызды жүктөбөй улантууну каалаганыңызга ишенесизби?"
 
 msgid "author.submit.noSupplementaryFiles"
 msgstr "Бул тапшырмага кошумча файлдар кошулган жок."
@@ -153,7 +152,7 @@ msgid "author.submit.backToSupplementaryFiles"
 msgstr "Кошумча файлдарга кайтуу"
 
 msgid "author.submit.confirmDeleteSuppFile"
-msgstr "Бул кошумча файлды өчүрүүнү каалайсызбы?"
+msgstr "Бул кошумча файлды өчүрүүнү каалаганыңызга ишенесизби?"
 
 msgid "author.submit.uploadSuppFile"
 msgstr "Кошумча файлды жүктөө"
@@ -165,7 +164,7 @@ msgid "author.submit.editSupplementaryFile"
 msgstr "Кошумча файлды түзөтүү"
 
 msgid "author.submit.supplementaryFileData"
-msgstr "Кошумча файлдын метадайындары"
+msgstr "Кошумча файлдын метадатасы"
 
 msgid "author.submit.supplementaryFileUpload"
 msgstr "Кошумча файл"
@@ -174,19 +173,19 @@ msgid "author.submit.suppFile.createrOrOwner"
 msgstr "Файлдын түзүүчүсү (же ээси)"
 
 msgid "author.submit.suppFile.researchInstrument"
-msgstr "Изилдөө куралы"
+msgstr "Изилдөө аспабы"
 
 msgid "author.submit.suppFile.researchMaterials"
 msgstr "Изилдөө материалдары"
 
 msgid "author.submit.suppFile.researchResults"
-msgstr "Изилдөө жыйынтыктары"
+msgstr "Изилдөө натыйжалары"
 
 msgid "author.submit.suppFile.transcripts"
 msgstr "Транскрипттер"
 
 msgid "author.submit.suppFile.dataAnalysis"
-msgstr "Маалыматты талдоо"
+msgstr "Маалыматтарды талдоо"
 
 msgid "author.submit.suppFile.dataSet"
 msgstr "Маалымат топтому"
@@ -198,10 +197,10 @@ msgid "author.submit.suppFile.briefDescription"
 msgstr "Кыскача сүрөттөмө"
 
 msgid "author.submit.suppFile.publisherDescription"
-msgstr "Формалдуу жарыяланган материалдар менен гана колдонуңуз."
+msgstr "Формалдуу жарыяланган материалдар менен гана колдонуу."
 
 msgid "author.submit.suppFile.dateDescription"
-msgstr "Маалымат чогултулган же курал түзүлгөн дата."
+msgstr "Маалымат чогултулган же аспап түзүлгөн дата."
 
 msgid "author.submit.suppFile.form.subjectRequired"
 msgstr "Тема киргизиңиз."
@@ -213,14 +212,14 @@ msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Коомдук кошумча файл идентификатору"
 
 msgid "author.submit.filesSummary"
-msgstr "Файлдардын жыйынтыгы"
+msgstr "Файлдын кыскача мазмуну"
 
 msgid "author.track"
 msgstr "Активдүү тапшырмалар"
 
 msgid "author.submit.startHereLink"
 msgstr ""
-"<a href=\"{$submitUrl}\" class=\"action\">Бул жерди басыңыз</a> беш кадамдуу "
+"<a href=\"{$submitUrl}\" class=\"action\">Бул жерди басыңыз</a> беш кадамдык "
 "тапшырма процессинин биринчи кадамына өтүү үчүн."
 
 msgid "author.submit.submissionIndexingDescription"
@@ -233,63 +232,65 @@ msgstr "4-кадам. Кошумча файлдарды жүктөө"
 
 msgid "author.submit.coverageInstructions"
 msgstr ""
-"Гео-кеңдик жайгашкан жерди, хронологиялык же тарыхый камтууну жана/же "
-"изилдөө үлгүсүнүн өзгөчөлүктөрүн билдирет."
+"Гео-кеңистик жайгашкан жерге, хронологиялык же тарыхый камтууга жана/же "
+"изилдөө үлгүсүнүн мүнөздөмөлөрүнө тиешелүү."
 
 msgid "author.submit.supplementaryFiles"
 msgstr "Кошумча файлдарды жүктөө"
 
 msgid "author.submit.form.authorRequiredFields"
-msgstr "Ар бир автордун аты, фамилиясы жана электрондук дареги талап кылынат."
+msgstr ""
+"Ар бир автордун аты, фамилиясы жана электрондук почта дареги талап кылынат."
 
 msgid "author.submit.qualifyForWaiver"
-msgstr "Бул макала үчүн тапшырма төлөмүн алып салууну карап көрүңүз"
+msgstr "Бул макала үчүн тапшырма акысына жеңилдик берүүнү карап көрүңүз"
 
 msgid "author.submit.replaceSubmissionFile"
 msgstr "Тапшыруу файлын алмаштыруу"
 
 msgid "author.submit.addReasonsForWaiver"
 msgstr ""
-"Төлөмдөрдү алып салуу себебин төмөнкү комментарий кутучасына киргизиңиз."
+"Төмөнкү комментарий кутучасын колдонуп, эмнеге акы алынбашы керек экенин "
+"көрсөтүңүз."
 
 msgid "author.submit.noSubmissionConfirm"
-msgstr "Тапшыруу файлын жүктөбөй улантууну каалайсызбы?"
+msgstr "Тапшыруу файлын жүктөбөй улантууну каалаганыңызга ишенесизби?"
 
 msgid "author.submissions.queuedEditingProofread"
-msgstr "Редакцияда: Корректура талап кылынат"
+msgstr "Редакциялоо: Корректура талап кылынат"
 
 msgid "author.submit.supplementaryFilesInstructions"
 msgstr ""
 "Бул кошумча кадам тапшырмага кошумча файлдарды кошууга мүмкүндүк берет. "
-"Файлдар каалаган форматта болушу мүмкүн жана төмөнкүлөрдү камтышы мүмкүн: (а)"
-" изилдөө куралдары, (б) изилдөөнүн этикалык талаптарына жооп берген маалымат "
-"топтомдору, (в) окурмандар үчүн жеткиликсиз булактар, (г) текстке түз "
-"киргизүүгө мүмкүн болбогон сүрөттөр жана таблицалар, же иштин салымын "
-"толуктаган башка материалдар."
+"Файлдар каалаган форматта болушу мүмкүн жана (а) изилдөө аспаптары, (б) "
+"изилдөөнүн этикалык кароосунун шарттарына ылайык келген маалымат топтомдору, "
+"(в) окурмандар үчүн жеткиликсиз булактар, (г) тексттин өзүнө киргизүүгө "
+"мүмкүн болбогон сүрөттөр жана таблицалар же иштин салымын толуктаган башка "
+"материалдар болушу мүмкүн."
 
 msgid "author.submissions.confirmDelete"
-msgstr "Бул толук эмес тапшырманы өчүрүүнү каалайсызбы?"
+msgstr "Бул толук эмес тапшырманы өчүрүүнү каалаганыңызга ишенесизби?"
 
 msgid "author.submit.supplementaryFileDataDescription"
 msgstr ""
-"Бул кошумча материалды индекстөө үчүн жүктөлгөн кошумча файлдын төмөнкү "
-"метадайындарын бериңиз."
+"Бул кошумча материалды индекстөө үчүн жүктөлгөн кошумча файлдын метадатасын "
+"бериңиз."
 
 msgid "author.submit.verifyChecklist"
 msgstr ""
 "Улантуудан мурун тапшырма текшерүү тизмесиндеги бардык пункттар "
-"аткарылганына ишениңиз."
+"аткарылганына ишенишиңиз керек."
 
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
-"Файлды рецензенттерге көрсөтүү (метадайындарсыз), бул анонимдүү рецензияга "
+"Файлды рецензенттерге (метадатасыз) көрсөтүңүз, бул анонимдүү кароого "
 "тоскоол болбойт."
 
 msgid "author.submit.reorderInstructions"
-msgstr "Авторлорду публикацияда көрсөтүлө турган тартипте кайра иреттеңиз."
+msgstr "Авторлорду басылып чыкканда көрсөтүлө турган тартипте жайгаштырыңыз."
 
 msgid "author.submit.suppFile.sourceDescription"
-msgstr "Изилдөөнүн аты же башка баштапкы булак."
+msgstr "Изилдөөнүн аты же башка баштапкы чекит."
 
 msgid "author.submit.suppFile.specifyOtherType"
 msgstr "Башкасын көрсөтүңүз"
@@ -308,21 +309,19 @@ msgstr "Тапшырууну аяктоо"
 
 msgid "author.submit.submissionComplete"
 msgstr ""
-"Тапшыруу аяктады. {$journalTitle} журналына жарыялоо кызыкчылыгыңыз үчүн "
-"рахмат."
+"Тапшыруу аяктады. {$journalTitle} менен жарыялоо кызыкчылыгыңыз үчүн рахмат."
 
 msgid "author.article.copyeditedFile"
-msgstr "Копи-редактталган файл"
+msgstr "Редактталган файл"
 
 msgid "author.article.authorRevisedFile"
-msgstr "Автордук файл"
+msgstr "Автор файлы"
 
 msgid "author.article.uploadAuthorVersion"
-msgstr "Автордук версияны жүктөө"
+msgstr "Автор версиясын жүктөө"
 
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr ""
 "Бул журналга тапшырма берүү үчүн колдонуучу аккаунту талап кылынат. Бул "
-"биздин редакторлорго тапшырмаларыңызды көзөмөлдөөгө жана тапшырмаңыздын "
-"абалы өзгөргөндө же кошумча маалымат талап кылынганда сиз менен байланышууга "
-"мүмкүндүк берет."
+"биздин редакторлорго тапшырмаларыңызды көзөмөлдөөгө жана статус өзгөргөндө "
+"же кошумча маалымат талап кылынганда сиз менен байланышууга мүмкүндүк берет."
