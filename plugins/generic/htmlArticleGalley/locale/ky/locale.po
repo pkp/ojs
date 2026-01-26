@@ -1,7 +1,7 @@
-# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-02 18:59+0000\n"
+"PO-Revision-Date: 2026-01-26 14:55+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/"
 "generic-htmlArticleGalley/ky/>\n"
@@ -13,7 +13,7 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.generic.htmlArticleGalley.displayName"
-msgstr "\"HTML макала галереясы\" модулу"
+msgstr "HTML макала галлейи"
 
 msgid "plugins.generic.htmlArticleGalley.description"
-msgstr "HTML макала галлеялары үчүн дисплей колдоосун камсыз кылат."
+msgstr "Бул плагин HTML макала галлейлерин көрсөтүүгө колдоо берет."
