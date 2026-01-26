@@ -1,7 +1,7 @@
-# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-02-28 05:39+0000\n"
+"PO-Revision-Date: 2026-01-26 14:55+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-doaj/ky/>\n"
@@ -13,43 +13,41 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.importexport.doaj.description"
-msgstr "DOAJ үчүн журналды экспорттойт."
+msgstr "Журналды DOAJ үчүн экспорттоо."
 
 msgid "plugins.importexport.doaj.settings.form.apiKey"
 msgstr "DOAJ API ачкычы"
 
 msgid "plugins.importexport.doaj.settings.form.apiKey.description"
-msgstr "API ачкычын DOAJ колдонуучу бетиңизден табасыз."
+msgstr "API ачкычыңызды DOAJ колдонуучу баракчаңыздан таба аласыз."
 
 msgid "plugins.importexport.doaj.senderTask.name"
-msgstr "DOAJ Автоматтык каттоо тапшырмасы"
+msgstr "DOAJ автоматтык каттоо тапшырмасы"
 
 msgid "plugins.importexport.doaj.register.error.mdsError"
-msgstr "Депозит ишке ашкан жок! DOAJ API катаны кайтарды: \"{$param}\"."
+msgstr "Жүктөө ийгиликсиз болду! DOAJ API ката кайтарды: '{$param}'."
 
 msgid "plugins.importexport.doaj.cliUsage"
 msgstr ""
-"Чалуу:\n"
-"{$scriptName} {$pluginName} экспорттоо [XMLFileName] [log_path] "
-"articlesObjectId1 [ObjectId2] ...\n"
+"Колдонуу:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles "
+"objectId1 [objectId2] ...\n"
 
 msgid "plugins.importexport.doaj.displayName"
-msgstr "\"DOAJге экспорттоо\" модулу"
+msgstr "DOAJ экспорт плагини"
 
 msgid "plugins.importexport.doaj.export.contact"
-msgstr "Журнал кошуу үчүн DOAJ менен байланышыңыз"
+msgstr "DOAJ менен байланышып, кошуу өтүнүчүн жөнөтүү"
 
 msgid "plugins.importexport.doaj.registrationIntro"
 msgstr ""
-"Эгер сиз макалаларды түздөн-түз OJSдан каттагыңыз келсе, DOAJ API "
-"ачкычыңызды киргизиңиз. Эгер сизде DOAJ API ачкычы жок болсо, дагы эле DOAJ "
-"XML форматына экспорттой аласыз, бирок DOAJ макалаларыңызды түздөн-түз "
-"OJSден каттай албайсыз."
+"Эгер макалаларды OJS ичинен каттоону кааласаңыз, DOAJ API ачкычыңызды "
+"киргизиңиз. Болбосо, DOAJ XML форматына экспорттой аласыз, бирок макалаларды "
+"OJS ичинен DOAJга каттай албайсыз."
 
 msgid ""
 "plugins.importexport.doaj.settings.form.automaticRegistration.description"
 msgstr ""
-"OJS макалаларды DOAJ менен автоматтык түрдө каттайт. Бул жарыялангандан "
-"кийин бир аз убакыт талап кылынышы мүмкүн экенин эске алыңыз (мисалы, "
-"пландаштырылган аракеттериңиздин жөндөөлөрүнө жараша кечигүүлөр). Сиз бардык "
-"сакталбаган макалаларды текшере аласыз."
+"OJS макалаларды автоматтык түрдө DOAJга жүктөйт. Бул жарыялангандан кийин "
+"иштетүү үчүн бир аз убакыт талап кылынышы мүмкүн (мисалы, cronjob "
+"конфигурациясына жараша). Бардык катталбаган макалаларды текшере аласыз."
