@@ -362,8 +362,22 @@
 				"id": {
 					"type": "integer"
 				},
-				"latestActivity": {
-					"type": "string"
+				"latestActivities": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"id": {
+								"type": "integer"
+							},
+							"message": {
+								"type": "string"
+							},
+							"type": {
+								"type": "integer"
+							}
+						}
+					}
 				},
 				"notes": {
 					"type": "array",
