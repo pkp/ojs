@@ -362,6 +362,9 @@
 				"id": {
 					"type": "integer"
 				},
+				"latestActivity": {
+					"type": "string"
+				},
 				"notes": {
 					"type": "array",
 					"items": {
