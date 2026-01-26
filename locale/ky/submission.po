@@ -1,7 +1,7 @@
-# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2025.
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-11-08 16:37+0000\n"
+"PO-Revision-Date: 2026-01-26 10:50+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "ky/>\n"
@@ -235,7 +235,7 @@ msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr "Автордук укук жылы жарыялоо датасына жараша автоматтык түрдө коюлат."
 
 msgid "publication.datePublished"
-msgstr "Жарыялоо датасы"
+msgstr "Жарыяланган күнү"
 
 msgid "publication.editDisabled"
 msgstr "Бул версия жарыяланды жана түзөтүлбөйт."
