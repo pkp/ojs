@@ -1,7 +1,7 @@
-# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2025.
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-11-08 16:37+0000\n"
+"PO-Revision-Date: 2026-01-26 14:55+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-pubmed/ky/>\n"
@@ -13,52 +13,50 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.importexport.pubmed.displayName"
-msgstr "\"PubMed XMLге экспорттоо\" модулу"
+msgstr "PubMed XML экспорт плагини"
 
 msgid "plugins.importexport.pubmed.description"
 msgstr ""
-"MEDLINEда индекстөө үчүн макаланын метадайындарын PubMed XML форматына "
-"экспорттойт."
+"Макала метадатасын MEDLINE индекстөө үчүн PubMed XML форматында экспорттоо."
 
 msgid "plugins.importexport.pubmed.export"
-msgstr "Маалыматтарды экспорттоо"
+msgstr "Маалыматты экспорттоо"
 
 msgid "plugins.importexport.pubmed.export.selectIssue"
-msgstr "Экспорттоо үчүн санды тандаңыз."
+msgstr "Экспорттоо үчүн чыгарылышты тандаңыз."
 
 msgid "plugins.importexport.pubmed.cliError"
 msgstr "КАТА:"
 
 msgid "plugins.importexport.pubmed.export.error.issueNotFound"
 msgstr ""
-"\"{$issueId}\" уникалдуу маселе ID менен эч кандай маселе дал келген жок."
+"Көрсөтүлгөн чыгарылыш ID \"{$issueId}\" боюнча эч кандай чыгарылыш табылган "
+"жок."
 
 msgid "plugins.importexport.pubmed.export.error.articleNotFound"
 msgstr ""
-"\"{$articleId}\" уникалдуу макала номерине эч кандай макала дал келген жок."
+"Көрсөтүлгөн макала ID \"{$articleId}\" боюнча эч кандай макала табылган жок."
 
 msgid "plugins.importexport.pubmed.export.issues"
-msgstr "Сандарды экспорттоо"
+msgstr "Чыгарылыштарды экспорттоо"
 
 msgid "plugins.importexport.pubmed.export.articles"
 msgstr "Макалаларды экспорттоо"
 
 msgid "plugins.importexport.pubmed.export.selectArticle"
-msgstr "Экспорттоо үчүн макаланы тандаңыз."
+msgstr "Экспорттоо үчүн макалаларды тандаңыз."
 
 msgid "plugins.importexport.pubmed.cliUsage"
 msgstr ""
-"Колдонуу:\n"
-"{$scriptName} {$pluginName} [xmlFileName] [journal_path] макалалар "
+"Колдонуу: \n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] articles "
 "[articleId1] [articleId2] ...\n"
-"{$scriptName} {$pluginName} [xmlFileName] [journal_path] маселе [issueId]"
-"vvv\n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] issue [issueId]\n"
 
 msgid "plugins.importexport.pubmed.settings.form.nlmTitle"
-msgstr "NLM журнал аталышынын кыскартмасы"
+msgstr "NLM журналдын кыскартылган аталышы"
 
 msgid "plugins.importexport.pubmed.settings.form.nlmTitle.description"
 msgstr ""
-"Журнал үчүн NLM аталышынын кыскартмасы. Эгер кыскартманы билбесеңиз, <a href="
-"\"https://www.ncbi.nlm.nih.gov/nlmcatalog/\">NLM Каталогунан издөө "
-"жүргүзүңүз</a>."
+"Журнал үчүн NLM кыскартылган аталышы. Эгер кыскартууну билбесеңиз, <a href="
+"\"https://www.ncbi.nlm.nih.gov/nlmcatalog/\">NLM Каталогунан издеңиз</a>."
