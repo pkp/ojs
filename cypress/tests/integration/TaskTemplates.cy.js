@@ -65,6 +65,15 @@ describe('Tasks & Discussions Templates', function() {
 		});
 	}
 
+	/**
+	 * Helper to get date N days from now in YYYY-MM-DD format
+	 */
+	function getDateFromNow(days) {
+		const date = new Date();
+		date.setDate(date.getDate() + days);
+		return date.toISOString().split('T')[0];
+	}
+
 	before(function() {
 		cy.login('admin', 'admin', 'publicknowledge');
 		cy.visit('/index.php/publicknowledge/management/settings/workflow#taskTemplates');
@@ -124,7 +133,7 @@ describe('Tasks & Discussions Templates', function() {
 
 		cy.contains(unrestrictedTemplateName).should('exist');
 
-		// ===== 3. Create Copyeditor-restricted template (reused in E2E tests) =====
+		// ===== 3. Create Copyeditor-restricted template with task info (reused in E2E tests) =====
 		openAddTemplateModal('Copyediting Stage');
 
 		cy.get('[data-cy="active-modal"]').within(() => {
@@ -134,6 +143,12 @@ describe('Tasks & Discussions Templates', function() {
 
 		// Select Copyeditor role specifically
 		selectRole('Copyeditor');
+
+		// Add task info with 1 week due date
+		cy.get('[data-cy="active-modal"]').within(() => {
+			cy.get('input[name="taskInfoAdd"]').check();
+			cy.get('select[name="dueInterval"]').select('P1W');
+		});
 
 		cy.setTinyMceContent('taskTemplate-description-control', 'This template is restricted to Copyeditors only.');
 
@@ -271,6 +286,28 @@ describe('Tasks & Discussions Templates', function() {
 				cy.get('ul[role="list"]').should('exist');
 				cy.contains(unrestrictedTemplateName).should('exist');
 				cy.contains(restrictedTemplateName).should('exist');
+			});
+
+			// Select the restricted template and verify form is prefilled
+			cy.get('[data-cy="discussion-form-modal"]').within(() => {
+				cy.contains(restrictedTemplateName).click();
+			});
+
+			// Verify title is prefilled with template name
+			cy.get('[data-cy="discussion-form-modal"]').within(() => {
+				cy.get('input[name="title"]').should('have.value', restrictedTemplateName);
+			});
+
+			// Verify description is prefilled with template message
+			cy.get('[data-cy="discussion-form-modal"]')
+				.find('iframe[id$="_ifr"]')
+				.its('0.contentDocument.body')
+				.should('contain.text', 'This template is restricted to Copyeditors only.');
+
+			// Verify due date is prefilled (P1W = 7 days from now)
+			const expectedDueDate = getDateFromNow(7);
+			cy.get('[data-cy="discussion-form-modal"]').within(() => {
+				cy.get('input[name="dateDue"]').should('have.value', expectedDueDate);
 			});
 
 			// Close the modal using Cancel button
