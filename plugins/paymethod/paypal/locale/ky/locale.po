@@ -1,7 +1,7 @@
-# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-03 21:35+0000\n"
+"PO-Revision-Date: 2026-01-26 14:55+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/"
 "paymethod-paypal/ky/>\n"
@@ -13,30 +13,30 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.paymethod.paypal.displayName"
-msgstr "Модул \"PayPal аркылуу төлөмдөр\""
+msgstr "PayPal аркылуу төлөм"
 
 msgid "plugins.paymethod.paypal.description"
-msgstr "Төлөмдөр PayPal аркылуу иштетилет."
+msgstr "Төлөмдөр PayPal кызматы аркылуу иштетилет."
 
 msgid "plugins.paymethod.paypal"
-msgstr "PayPal аркылуу төлөмдөр"
+msgstr "PayPal аркылуу төлөм"
 
 msgid "plugins.paymethod.paypal.settings"
-msgstr "Paypal аркылуу төлөм орнотуулары"
+msgstr "PayPal төлөм орнотуулары"
 
 msgid "plugins.paymethod.paypal.settings.testMode"
-msgstr "Сыноо режими"
+msgstr "Тест режими"
 
 msgid "plugins.paymethod.paypal.settings.accountName"
-msgstr "эсеп аты"
+msgstr "Эсептин аты"
 
 msgid "plugins.paymethod.paypal.settings.clientId"
 msgstr "Кардар ID"
 
 msgid "plugins.paymethod.paypal.settings.secret"
-msgstr "Жашыруун код"
+msgstr "Жашыруун ачкыч"
 
 msgid "plugins.paymethod.paypal.error"
 msgstr ""
-"Транзакция катасы кетти. Көбүрөөк маалымат алуу үчүн журналдын менеджери "
-"менен байланышыңыз."
+"Транзакцияда ката кетти. Толук маалымат алуу үчүн журнал менеджери менен "
+"байланышсаңыз."
