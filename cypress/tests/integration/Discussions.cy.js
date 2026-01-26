@@ -5,7 +5,10 @@
  * Copyright (c) 2000-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * Optimized test structure: 2 batched test flows with single login per batch.
+ * Optimized test structure: 3 batched test flows with single login per batch.
+ * Batch 1: Discussions - display, templates, create, view, message, edit, delete
+ * Batch 2: Tasks - create with different start options, status transitions, edit restrictions
+ * Batch 3: Access Control - edit/delete permissions based on role
  * Uses minimal data-cy attributes (only 3: discussion-manager, discussion-form-modal, discussion-display-modal)
  */
 
@@ -19,6 +22,39 @@ describe('Tasks & Discussions Manager', function() {
 		const date = new Date();
 		date.setFullYear(date.getFullYear() + 1);
 		return date.toISOString().split('T')[0];
+	}
+
+	/**
+	 * Helper to verify actions menu is visible for an item
+	 */
+	function verifyActionsMenuVisible(itemTitle) {
+		cy.get('[data-cy="discussion-manager"]')
+			.contains(itemTitle)
+			.parents('tr')
+			.find('button[aria-label="More Actions"]')
+			.should('exist');
+	}
+
+	/**
+	 * Helper to verify actions menu is NOT visible for an item
+	 */
+	function verifyActionsMenuNotVisible(itemTitle) {
+		cy.get('[data-cy="discussion-manager"]')
+			.contains(itemTitle)
+			.parents('tr')
+			.find('button[aria-label="More Actions"]')
+			.should('not.exist');
+	}
+
+	/**
+	 * Helper to verify table checkboxes are disabled for an item
+	 */
+	function verifyTableCheckboxesDisabled(itemTitle) {
+		cy.get('[data-cy="discussion-manager"]')
+			.contains(itemTitle)
+			.parents('tr')
+			.find('input[type="checkbox"]')
+			.should('be.disabled');
 	}
 
 	/**
@@ -332,6 +368,109 @@ describe('Tasks & Discussions Manager', function() {
 
 			// 12. Verify task moved to "Closed" group
 			verifyItemInGroup(notStartedTaskTitle, 'Closed');
+		});
+	});
+
+	/**
+	 * Batch 3: Access Control
+	 * Tests: edit/delete permissions based on role (owner, manager, responsible participant, non-responsible participant)
+	 */
+	describe('Access Control', function() {
+		const accessTestTaskTitle = 'Access Control Test Task ' + Date.now();
+
+		it('verifies edit/delete access based on role', function() {
+			// 1. SETUP: dbarnes creates task with participants
+			cy.findSubmissionAsEditor('dbarnes', null, author);
+			cy.get('[data-cy="discussion-manager"]').should('exist');
+
+			openAddModal();
+
+			const futureDate = getFutureDate();
+
+			cy.get('[data-cy="discussion-form-modal"]').within(() => {
+				cy.get('input[name="title"]').type(accessTestTaskTitle);
+
+				// Add participants - dbuskins will be responsible, minoue will not
+				cy.contains('David Buskins').find('[name="participants"]').check();
+				cy.contains('Minoti Inoue').find('[name="participants"]').check();
+
+				// Enable task info
+				cy.get('[name="taskInfoAdd"]').check();
+				cy.get('input[name="dateDue"]').type(futureDate);
+
+				// Set dbuskins as responsible assignee (radio button)
+				cy.get('label:has([name="taskInfoAssignee"])')
+					.contains('David Buskins')
+					.click();
+
+				cy.get('select[name="taskInfoShouldStart"]').select('true');
+				cy.setTinyMceContent('discussionForm-description-control', 'Access control test message');
+				cy.contains('button', 'Save').click();
+			});
+
+			cy.get('[data-cy="discussion-form-modal"]').should('not.exist');
+
+			// Verify task was created
+			cy.get('[data-cy="discussion-manager"]').contains(accessTestTaskTitle).should('exist');
+
+			// Verify owner (dbarnes) sees actions menu
+			verifyActionsMenuVisible(accessTestTaskTitle);
+
+			cy.logout();
+
+			// 2. MANAGER ACCESS: rvaca (Journal Manager has full access)
+			cy.findSubmissionAsEditor('rvaca', null, author);
+			cy.get('[data-cy="discussion-manager"]').should('exist');
+
+			// Verify manager sees actions menu
+			verifyActionsMenuVisible(accessTestTaskTitle);
+
+			cy.logout();
+
+			// 3. RESPONSIBLE PARTICIPANT: dbuskins (assigned as responsible)
+			cy.findSubmissionAsEditor('dbuskins', null, author);
+			cy.get('[data-cy="discussion-manager"]').should('exist');
+
+			// Verify responsible participant sees actions menu
+			verifyActionsMenuVisible(accessTestTaskTitle);
+
+			cy.logout();
+
+			// 4. NON-RESPONSIBLE PARTICIPANT: minoue (participant but NOT responsible)
+			cy.findSubmissionAsEditor('minoue', null, author);
+			cy.get('[data-cy="discussion-manager"]').should('exist');
+
+			// Verify non-responsible participant does NOT see actions menu
+			verifyActionsMenuNotVisible(accessTestTaskTitle);
+
+			// Verify table checkboxes are disabled
+			verifyTableCheckboxesDisabled(accessTestTaskTitle);
+
+			// Verify can still view task (click title) but no edit/delete access
+			cy.get('[data-cy="discussion-manager"]').contains('button', accessTestTaskTitle).click();
+			cy.get('[data-cy="discussion-display-modal"]').should('be.visible');
+
+			// Verify Edit button is hidden (not present)
+			cy.get('[data-cy="discussion-display-modal"]')
+				.contains('button', 'Edit')
+				.should('not.exist');
+
+			cy.get('[data-cy="discussion-display-modal"]')
+				.contains('button', 'Cancel')
+				.click({force: true});
+
+			cy.get('[data-cy="discussion-display-modal"]').should('not.exist');
+
+			cy.logout();
+
+			// 5. CLEANUP: dbarnes deletes task
+			cy.findSubmissionAsEditor('dbarnes', null, author);
+			cy.get('[data-cy="discussion-manager"]').should('exist');
+
+			openActionsAndClick(accessTestTaskTitle, 'Delete');
+			cy.contains('button', 'OK').click();
+
+			cy.get('[data-cy="discussion-manager"]').should('not.contain', accessTestTaskTitle);
 		});
 	});
 });
