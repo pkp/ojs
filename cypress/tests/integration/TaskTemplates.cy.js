@@ -80,22 +80,6 @@ describe('Tasks & Discussions Templates', function() {
 		cy.contains('Tasks and Discussions Templates').should('be.visible');
 	});
 
-	after(function() {
-		// Clean up all templates created during tests
-		cy.login('admin', 'admin', 'publicknowledge');
-		cy.visit('/index.php/publicknowledge/management/settings/workflow#taskTemplates');
-		cy.contains('Tasks and Discussions Templates').should('be.visible');
-
-		// Delete unrestricted template
-		openActionsAndClick(unrestrictedTemplateName, 'Delete');
-		cy.contains('button', 'OK').click();
-		cy.contains(unrestrictedTemplateName).should('not.exist');
-
-		// Delete restricted template
-		openActionsAndClick(restrictedTemplateName, 'Delete');
-		cy.contains('button', 'OK').click();
-		cy.contains(restrictedTemplateName).should('not.exist');
-	});
 
 	it('manages task and discussion templates', function() {
 		const editableTemplateName = 'Editable Template ' + Date.now();
@@ -220,8 +204,8 @@ describe('Tasks & Discussions Templates', function() {
 	 * Uses templates created in the first test.
 	 */
 	describe('Template Visibility by Role', function() {
-		it('Author sees unrestricted but NOT Copyeditor-restricted template', function() {
-			// zwoods is an Author (NOT a Copyeditor) - should not see Copyeditor-only template
+		it('verifies template visibility by role and cleans up', function() {
+			// === AUTHOR (zwoods) - should NOT see Copyeditor-restricted template ===
 			cy.login('zwoods', null, 'publicknowledge');
 			cy.visit('index.php/publicknowledge/dashboard/mySubmissions');
 
@@ -247,22 +231,20 @@ describe('Tasks & Discussions Templates', function() {
 			});
 
 			// Wait for form modal to be visible
-			cy.get('[data-cy="discussion-form-modal"]', {timeout: 10000}).should('be.visible');
+			cy.get('[data-cy="active-modal"]', {timeout: 10000}).should('be.visible');
 
 			// Verify unrestricted template is visible but restricted is NOT
-			cy.get('[data-cy="discussion-form-modal"]').within(() => {
+			cy.get('[data-cy="active-modal"]').within(() => {
 				cy.get('ul[role="list"]').should('exist');
 				cy.contains(unrestrictedTemplateName).should('exist');
 				cy.contains(restrictedTemplateName).should('not.exist');
 			});
 
 			// Close the modal using Cancel button
-			cy.get('[data-cy="discussion-form-modal"]').contains('button', 'Cancel').click({force: true});
+			cy.get('[data-cy="active-modal"]').contains('button', 'Cancel').click({force: true});
 			cy.logout();
-		});
 
-		it('Copyeditor sees both unrestricted and Copyeditor-restricted template', function() {
-			// svogt is a Copyeditor - should see Copyeditor-only template
+			// === COPYEDITOR (svogt) - should see both templates ===
 			cy.findSubmissionAsEditor('svogt', null, submissionAuthor);
 
 			// Navigate to Copyediting stage
@@ -279,40 +261,55 @@ describe('Tasks & Discussions Templates', function() {
 			});
 
 			// Wait for form modal to be visible
-			cy.get('[data-cy="discussion-form-modal"]', {timeout: 10000}).should('be.visible');
+			cy.get('[data-cy="active-modal"]', {timeout: 10000}).should('be.visible');
 
 			// Verify both templates are visible (Copyeditor sees unrestricted + their restricted)
-			cy.get('[data-cy="discussion-form-modal"]').within(() => {
+			cy.get('[data-cy="active-modal"]').within(() => {
 				cy.get('ul[role="list"]').should('exist');
 				cy.contains(unrestrictedTemplateName).should('exist');
 				cy.contains(restrictedTemplateName).should('exist');
 			});
 
 			// Select the restricted template and verify form is prefilled
-			cy.get('[data-cy="discussion-form-modal"]').within(() => {
+			cy.get('[data-cy="active-modal"]').within(() => {
 				cy.contains(restrictedTemplateName).click();
 			});
 
 			// Verify title is prefilled with template name
-			cy.get('[data-cy="discussion-form-modal"]').within(() => {
+			cy.get('[data-cy="active-modal"]').within(() => {
 				cy.get('input[name="title"]').should('have.value', restrictedTemplateName);
 			});
 
 			// Verify description is prefilled with template message
-			cy.get('[data-cy="discussion-form-modal"]')
+			cy.get('[data-cy="active-modal"]')
 				.find('iframe[id$="_ifr"]')
 				.its('0.contentDocument.body')
 				.should('contain.text', 'This template is restricted to Copyeditors only.');
 
 			// Verify due date is prefilled (P1W = 7 days from now)
 			const expectedDueDate = getDateFromNow(7);
-			cy.get('[data-cy="discussion-form-modal"]').within(() => {
+			cy.get('[data-cy="active-modal"]').within(() => {
 				cy.get('input[name="dateDue"]').should('have.value', expectedDueDate);
 			});
 
 			// Close the modal using Cancel button
-			cy.get('[data-cy="discussion-form-modal"]').contains('button', 'Cancel').click({force: true});
+			cy.get('[data-cy="active-modal"]').contains('button', 'Cancel').click({force: true});
 			cy.logout();
+
+			// === CLEANUP: Delete templates as admin ===
+			cy.login('admin', 'admin', 'publicknowledge');
+			cy.visit('/index.php/publicknowledge/management/settings/workflow#taskTemplates');
+			cy.contains('Tasks and Discussions Templates').should('be.visible');
+
+			// Delete unrestricted template
+			openActionsAndClick(unrestrictedTemplateName, 'Delete');
+			cy.contains('button', 'OK').click();
+			cy.contains(unrestrictedTemplateName).should('not.exist');
+
+			// Delete restricted template
+			openActionsAndClick(restrictedTemplateName, 'Delete');
+			cy.contains('button', 'OK').click();
+			cy.contains(restrictedTemplateName).should('not.exist');
 		});
 	});
 });
