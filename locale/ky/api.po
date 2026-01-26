@@ -1,7 +1,7 @@
-# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2025.
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-04-07 10:50+0000\n"
+"PO-Revision-Date: 2026-01-26 10:50+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/api/ky/>\n"
 "Language: ky\n"
@@ -12,73 +12,73 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "api.announcements.400.contextsNotMatched"
-msgstr "Сиз сураган жарнак бул журналдын бир бөлүгү эмес."
+msgstr "Суралган билдирүү бул журналдын бөлүгү эмес."
 
 msgid "api.emails.403.disabled"
-msgstr "Бул журнал үчүн электрондук почта билдирүүсү иштетилген эмес."
+msgstr "Бул журнал үчүн электрондук билдирүү функциясы иштетилген эмес."
 
 msgid "api.submissions.400.wrongContext"
-msgstr "Сиз сураган материал бул журналда жок."
+msgstr "Суралган тапшырма бул журналда жок."
 
 msgid "api.submissions.403.cantChangeContext"
-msgstr "Сиз материалдын журналын өзгөртө албайсыз."
+msgstr "Тапшырманын журналын өзгөртө албайсыз."
 
 msgid "api.submissions.403.unpublishedIssues"
-msgstr "Жарыяланбаган маселелерди көрүүгө уруксатыңыз жок."
+msgstr "Жарыяланбаган сандарды көрүүгө уруксатыңыз жок."
 
 msgid "api.contexts.403.requestedDisabledContexts"
-msgstr "Сиз бөлүшүлгөн журналдарды гана көрө аласыз."
+msgstr "Сиз иштетилген журналдарды гана көрө аласыз."
 
 msgid "api.contexts.403.notAllowed"
 msgstr "Бул журналды көрүүгө уруксатыңыз жок."
 
 msgid "api.contexts.403.contextsDidNotMatch"
 msgstr ""
-"Бул журналды log API же жалпы сайт API'сине сурамсыз көрүп же түзөтө "
-"албайсыз."
+"Бул журналды көрүү же түзөтүү үчүн журналдын API'сине же сайттык API'ге "
+"суроо жөнөтүшүңүз керек."
 
 msgid "api.contexts.403.requiresContext"
-msgstr "Бул журналды сайттын API аркылуу түзөтө албайсыз."
+msgstr "Бул журналды сайттык API аркылуу түзөтө албайсыз."
 
 msgid "api.contexts.403.notAllowedEdit"
 msgstr "Бул журналды түзөтүүгө уруксатыңыз жок."
 
 msgid "api.contexts.403.notAllowedDelete"
-msgstr "Бул журналды жок кылууга уруксатыңыз жок."
+msgstr "Бул журналды өчүрүүгө уруксатыңыз жок."
 
 msgid "api.contexts.404.contextNotFound"
-msgstr "Сиз сураган журнал табылган жок."
+msgstr "Суралган журнал табылган жок."
 
 msgid "api.dois.403.contextsNotMatched"
-msgstr "Сиз сураган DOI бул журналдын бир бөлүгү эмес."
+msgstr "Суралган DOI бул журналдын бөлүгү эмес."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"
-msgstr "Бул журнал үчүн конфигурацияланган DOI каттоо агенттиги жок."
+msgstr "Бул журнал үчүн DOI каттоо агенттиги конфигурацияланбаган."
 
 msgid "api.dois.400.depositFailed"
 msgstr ""
-"Кээ бир нерселердин эскроосу ишке ашкан жок. Ката билдирүүлөрү үчүн жеке "
-"элементтерди текшериңиз."
+"Кээ бир элементтер ийгиликтүү жайгаштырылган жок. Ар бир элементтин өзгөчө "
+"ката билдирүүлөрүн текшериңиз."
 
 msgid "api.emailTemplates.403.notAllowedChangeContext"
-msgstr "Бул каттын үлгүсүн башка журналга жылдырууга уруксатыңыз жок."
+msgstr "Бул электрондук кат шаблонун башка журналга көчүрүүгө уруксатыңыз жок."
 
 msgid "api._payments.400.invalidPaymentMethod"
-msgstr "Сиз тандаган төлөм ыкмасы колдоого алынбайт."
+msgstr "Тандалган төлөм ыкмасы колдоого алынбайт."
 
 msgid "api.publications.403.contextsDidNotMatch"
-msgstr "Сиз сураган басылма бул журналдын бир бөлүгү эмес."
+msgstr "Суралган публикация бул журналдын бөлүгү эмес."
 
 msgid "api.publications.403.submissionsDidNotMatch"
-msgstr "Сиз сураган басылма бул материалдын бир бөлүгү эмес."
+msgstr "Суралган публикация бул тапшырманын бөлүгү эмес."
 
 msgid "api.submissionFiles.400.badRepresentationAssocType"
-msgstr "Бул этаптагы файлды галлеяга байланыштыра албайсыз."
+msgstr "Бул файл стадиясынан файлды галлейге байланыштыра албайсыз."
 
 msgid "api.submission.400.inactiveSection"
-msgstr "Бул бөлүм мындан ары тапшырыктарды кабыл албайт."
+msgstr "Бул бөлүм эми тапшырмаларды кабыл албайт."
 
 msgid "api.publications.403.paymentFeesNotEnabled"
 msgstr ""
-"Тапшыруу төлөмдөрүнүн формасы жеткиликтүү эмес, анткени жарыялоо үчүн "
-"төлөмдөр иштетилбейт."
+"Тапшыруу төлөм формасы жеткиликтүү эмес, анткени публикация төлөмдөрү "
+"иштетилген эмес."
