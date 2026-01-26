@@ -1,2 +1,84 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2026-01-26 10:50+0000\n"
+"Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
+"Language-Team: Turkish <http://translate.pkp.sfu.ca/projects/ojs/invitation/"
+"tr/>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "acceptInvitation.accountDetails.stepName"
+msgstr "OJS Hesabı Oluştur"
+
+msgid "acceptInvitation.detailsReview.nextButtonLabel"
+msgstr "OJS'ye Kabul Et ve Devam Et"
+
+msgid "invitation.role.masthead"
+msgstr "Dergi Künyesi"
+
+msgid "invitation.wizard.pageTitleDescription"
+msgstr ""
+"OJS’de bir kullanıcıyı rol almaya ve dergi künyesinde görünmeye davet "
+"ediyorsunuz"
+
+msgid "userInvitation.enterDetails.stepDescription"
+msgstr "Onları OJS’de bir rol üstlenmeye davet edebilirsiniz"
+
+msgid "userInvitation.roleTable.journalMasthead"
+msgstr "Dergi Künyesi"
+
+msgid "userInvitation.search.userFound"
+msgstr "Kullanıcı zaten dergide mevcut"
+
+msgid "userInvitation.search.userNotFound"
+msgstr "Kullanıcının bu dergide bir rolü yok"
+
+msgid "acceptInvitation.accountDetails.stepDescription"
+msgstr ""
+"OJS ile çalışmaya başlamak ve yeni rolü kabul etmek için bizimle bir hesap "
+"oluşturmanız gerekmektedir. Bu amaçla lütfen bir kullanıcı adı ve şifre "
+"giriniz."
+
+msgid "acceptInvitation.accountDetails.stepLabel"
+msgstr "{$step} - OJS Hesabı Oluştur"
+
+msgid "acceptInvitation.detailsReview.stepDescription"
+msgstr "Yeni rollerinize OJS’de başlamak için ayrıntıları gözden geçirin"
+
+msgid "acceptInvitation.modal.message"
+msgstr ""
+"OJS’deki yeni rolünüz için tebrikler! Artık yeni seçeneklere erişiminiz "
+"olabilir. Sistemi anlamada herhangi bir yardıma ihtiyaç duyarsanız, "
+"rehberlik için sistem genelinde bulunan “Yardım” düğmesine tıklayınız."
+
+msgid "acceptInvitation.modal.title"
+msgstr "OJS’de size yeni bir rol atandı"
+
+msgid "acceptInvitation.verifyOrcid.stepDescription"
+msgstr ""
+"ORCID iD’nizi doğrulamayı ya da bu adımı geçmeyi seçebilirsiniz. Şu anda "
+"geçmeyi seçerseniz, ORCID iD’nizi ileride OJS’deki profil bölümünden "
+"doğrulayabilirsiniz."
+
+msgid "userInvitation.modal.message"
+msgstr ""
+"{$email} OJS’de yeni bir göreve davet edilmiştir. Kullanıcının kararını "
+"Kullanıcılar & Roller sayfası, OJS bildirimleri ve e-posta aracılığıyla "
+"takip edebilirsiniz."
+
+msgid "userInvitation.sendMail.stepDescription"
+msgstr ""
+"Kullanıcıya davet, izlenecek adımlar, derginin GDPR politikaları ve ORCID "
+"doğrulaması konusunda bilgi vermek amacıyla bir e-posta gönderiniz."
+
+msgid "userInvitation.searchUser.stepDescription"
+msgstr ""
+"Kullanıcıyı e-posta adresi, kullanıcı adı veya ORCID iD ile arayın. Başlamak "
+"için en az bir bilgiyi girin. Eğer kullanıcı mevcut değilse, onları roller "
+"üstlenmeye davet edebilir ve derginizin bir parçası olmalarını "
+"sağlayabilirsiniz. Eğer kullanıcı sistemde zaten mevcutsa, kullanıcı "
+"bilgilerini görüntüleyebilir ve ek roller için davet edebilirsiniz."
