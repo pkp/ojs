@@ -1,7 +1,7 @@
 # Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-01-26 10:50+0000\n"
+"PO-Revision-Date: 2026-01-26 11:35+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/api/ky/>\n"
 "Language: ky\n"
@@ -12,16 +12,16 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "api.announcements.400.contextsNotMatched"
-msgstr "Суралган билдирүү бул журналдын бөлүгү эмес."
+msgstr "Суралган билдирүү бул журналга тиешелүү эмес."
 
 msgid "api.emails.403.disabled"
-msgstr "Бул журнал үчүн электрондук билдирүү функциясы иштетилген эмес."
+msgstr "Бул журнал үчүн электрондук кат эскертүү функциясы иштетилген эмес."
 
 msgid "api.submissions.400.wrongContext"
-msgstr "Суралган тапшырма бул журналда жок."
+msgstr "Суралган материал бул журналда эмес."
 
 msgid "api.submissions.403.cantChangeContext"
-msgstr "Тапшырманын журналын өзгөртө албайсыз."
+msgstr "Материалдын журналын өзгөртө албайсыз."
 
 msgid "api.submissions.403.unpublishedIssues"
 msgstr "Жарыяланбаган сандарды көрүүгө уруксатыңыз жок."
@@ -34,11 +34,11 @@ msgstr "Бул журналды көрүүгө уруксатыңыз жок."
 
 msgid "api.contexts.403.contextsDidNotMatch"
 msgstr ""
-"Бул журналды көрүү же түзөтүү үчүн журналдын API'сине же сайттык API'ге "
-"суроо жөнөтүшүңүз керек."
+"Бул журналды көрүү же түзөтүү үчүн журналдын API'сине же сайттын жалпы "
+"API'сине суроо жөнөтүшүңүз керек."
 
 msgid "api.contexts.403.requiresContext"
-msgstr "Бул журналды сайттык API аркылуу түзөтө албайсыз."
+msgstr "Сайттын жалпы API'синен бул журналды түзөтө албайсыз."
 
 msgid "api.contexts.403.notAllowedEdit"
 msgstr "Бул журналды түзөтүүгө уруксатыңыз жок."
@@ -50,14 +50,14 @@ msgid "api.contexts.404.contextNotFound"
 msgstr "Суралган журнал табылган жок."
 
 msgid "api.dois.403.contextsNotMatched"
-msgstr "Суралган DOI бул журналдын бөлүгү эмес."
+msgstr "Суралган DOI бул журналга тиешелүү эмес."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"
 msgstr "Бул журнал үчүн DOI каттоо агенттиги конфигурацияланбаган."
 
 msgid "api.dois.400.depositFailed"
 msgstr ""
-"Кээ бир элементтер ийгиликтүү жайгаштырылган жок. Ар бир элементтин өзгөчө "
+"Айрым элементтер ийгиликтүү жайгаштырылган жок. Ар бир элементтин өзгөчө "
 "ката билдирүүлөрүн текшериңиз."
 
 msgid "api.emailTemplates.403.notAllowedChangeContext"
@@ -67,18 +67,18 @@ msgid "api._payments.400.invalidPaymentMethod"
 msgstr "Тандалган төлөм ыкмасы колдоого алынбайт."
 
 msgid "api.publications.403.contextsDidNotMatch"
-msgstr "Суралган публикация бул журналдын бөлүгү эмес."
+msgstr "Суралган публикация бул журналга тиешелүү эмес."
 
 msgid "api.publications.403.submissionsDidNotMatch"
-msgstr "Суралган публикация бул тапшырманын бөлүгү эмес."
+msgstr "Суралган публикация бул материалга тиешелүү эмес."
 
 msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr "Бул файл стадиясынан файлды галлейге байланыштыра албайсыз."
 
 msgid "api.submission.400.inactiveSection"
-msgstr "Бул бөлүм эми тапшырмаларды кабыл албайт."
+msgstr "Бул бөлүм материалдарды кабыл албай калды."
 
 msgid "api.publications.403.paymentFeesNotEnabled"
 msgstr ""
-"Тапшыруу төлөм формасы жеткиликтүү эмес, анткени публикация төлөмдөрү "
-"иштетилген эмес."
+"Жариялоо төлөмдөрү иштетилбегендиктен материалды төлөө формасы жеткиликтүү "
+"эмес."
