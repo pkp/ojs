@@ -1,7 +1,7 @@
-# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-06-21 18:39+0000\n"
+"PO-Revision-Date: 2026-01-26 14:16+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/"
 "blocks-subscription/ky/>\n"
@@ -13,31 +13,32 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.block.subscription.displayName"
-msgstr "\"Жазылууну\" бөгөттөө"
+msgstr "Жазылуу блогу"
 
 msgid "plugins.block.subscription.description"
-msgstr "Бул модул каптал тилкеге жазылуу маалыматын кошот."
+msgstr "Бул плагин каптал тилкесинде жазылуу маалыматын камсыз кылат."
 
 msgid "plugins.block.subscription.blockTitle"
 msgstr "Жазылуу"
 
 msgid "plugins.block.subscription.expires"
-msgstr "жарамдык датасы"
+msgstr "Мөөнөтү бүтөт"
 
 msgid "plugins.block.subscription.providedBy"
-msgstr "Кирүү мүмкүнчүлүгүн берген: {$institutionName}"
+msgstr "Жеткиликтүүлүк камсыз кылган: {$institutionName}"
 
 msgid "plugins.block.subscription.comingFromIP"
-msgstr "IP даректен кирүү: {$ip}"
+msgstr "Кирген IP дарек: {$ip}"
 
 msgid "plugins.block.subscription.about"
 msgstr "Жазылуулар"
 
 msgid "plugins.block.subscription.loginToVerifySubscription"
-msgstr "Абоненттик ресурстарга кирүү үчүн кириңиз."
+msgstr ""
+"Жазылуучуларга гана жеткиликтүү ресурстарга кирүү үчүн системага кириңиз."
 
 msgid "plugins.block.subscription.subscriptionRequired"
-msgstr "Кээ бир ресурстарга кирүү үчүн жазылуу талап кылынат."
+msgstr "Айрым ресурстарга жетүү үчүн жазылуу талап кылынат."
 
 msgid "plugins.block.subscription.subscriptionRequired.learnMore"
-msgstr "Көбүрөөк билүү үчүн"
+msgstr "Көбүрөөк билүү"
