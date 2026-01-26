@@ -1,7 +1,7 @@
-# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024.
+# Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-01-02 18:44+0000\n"
+"PO-Revision-Date: 2026-01-26 14:55+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-counter/ky/>\n"
@@ -13,44 +13,44 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.reports.counter"
-msgstr "COUNTER Reports модулу"
+msgstr "COUNTER отчеттору"
 
 msgid "plugins.reports.counter.release"
-msgstr "COUNTER чыгаруу версиясы"
+msgstr "COUNTER чыгарылышы"
 
 msgid "plugins.reports.counter.error.badParameters"
-msgstr "Туура эмес отчеттун параметрлери."
+msgstr "Отчет параметрлери жараксыз."
 
 msgid "plugins.reports.counter.error.badRequest"
-msgstr "Жараксыз отчет сурамы."
+msgstr "Отчет суроо-талап жараксыз."
 
 msgid "plugins.reports.counter.error.noXML"
-msgstr "Натыйжаларды XML форматында форматтоого болбойт."
+msgstr "Натыйжаларды XML форматында түзүүгө мүмкүн болгон жок."
 
 msgid "plugins.reports.counter.1a.name"
-msgstr "COUNTER JR1 (R3) жөнүндө кабарлоо"
+msgstr "COUNTER отчет JR1 (R3)"
 
 msgid "plugins.reports.counter.1a.description"
 msgstr ""
-"COUNTER Journal Report 1 (R3): Ай жана журнал боюнча толук тексттик "
-"макалаларды сурайт"
+"COUNTER Journal Report 1 (R3): Ай жана журнал боюнча толук текст макала "
+"суроо-талаптары"
 
 msgid "plugins.reports.counter.allCustomers"
-msgstr "Бардык сатып алуучулар"
+msgstr "Бардык кардарлар"
 
 msgid "plugins.reports.counter.ar1.title"
-msgstr "1-пункттар боюнча отчет"
+msgstr "Макала отчету 1"
 
 msgid "plugins.reports.counter.jr1.title"
-msgstr "Каттоо отчету 1"
+msgstr "Журнал отчету 1"
 
 msgid "plugins.reports.counter.description"
 msgstr ""
-"\"COUNTER\" модулу <a href=\"http://www.projectcounter.org\">COUNTER</a> "
-"стандартын колдонуу менен журналдын аракети боюнча отчетторду түзүүгө "
-"мүмкүндүк берет. Бул отчеттор гана журналды COUNTER стандартына шайкеш "
-"келтирбейт. Журналды ушул стандартка ылайык келтирүү үчүн COUNTER "
-"долбоорунун веб-сайтындагы талаптарды карап чыгыңыз."
+"COUNTER плагини журналдын активдүүлүгү боюнча отчетторду <a href=\"https"
+"://www.projectcounter.org\">COUNTER стандарты</a> аркылуу түзүүгө мүмкүндүк "
+"берет. Бул отчеттор гана журналды COUNTER талаптарына шайкеш кылбайт. "
+"COUNTER шайкештигин камсыз кылуу үчүн Project COUNTER веб-сайтындагы "
+"талаптарды караңыз."
 
 msgid "plugins.reports.counter.error.noResults"
-msgstr "Бул отчет боюнча эч кандай жыйынтык табылган жок."
+msgstr "Бул отчет үчүн натыйжалар табылган жок."
