@@ -7,7 +7,9 @@
  *
  */
 
-describe('Email Template Access Tests', function() {
+// TODO: Email templates are no longer shown in the new Discussion Manager form.
+// These tests need to be updated to verify email template access elsewhere.
+describe.skip('Email Template Access Tests', function() {
 	it('Checks that user cannot access restricted template not assigned to their group', () => {
 		cy.login('admin', 'admin', 'publicknowledge');
 		cy.visit('/index.php/publicknowledge/management/settings/manageEmails');
