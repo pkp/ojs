@@ -66,9 +66,10 @@ describe('Tasks & Discussions Manager', function() {
 		cy.get('[data-cy="discussion-manager"]').contains(itemTitle)
 			.parents('tr')
 			.find('button[aria-label="More Actions"]')
-			.click({force: true});
-
-		cy.contains('button', actionName).click({force: true});
+			.click()
+			.then(() => {
+				cy.get(`[role="menuitem"]:contains("${actionName}")`).click();
+			});
 	}
 
 	/**
@@ -120,10 +121,9 @@ describe('Tasks & Discussions Manager', function() {
 
 			// 4. View discussion, close it, and add a message
 			cy.get('[data-cy="discussion-manager"]').contains('button', discussionTitle).click();
-			cy.get('[data-cy="active-modal"]').should('be.visible');
 
 			cy.get('[data-cy="active-modal"]').within(() => {
-				cy.contains(discussionTitle).should('exist');
+				cy.contains(discussionTitle).should('be.visible');
 				cy.contains(discussionMessage).should('exist');
 				cy.contains('Close this Discussion').click();
 				cy.contains('button', 'Add New Message').click();
@@ -164,7 +164,9 @@ describe('Tasks & Discussions Manager', function() {
 
 			// 6. Edit the discussion title
 			openActionsAndClick(discussionTitle, 'Edit');
-			cy.get('[data-cy="active-modal"]', {timeout: 15000}).should('be.visible');
+
+			// Wait for form modal to load
+			cy.get('[data-cy="active-modal"] input[name="title"]', {timeout: 15000}).should('exist');
 
 			cy.get('[data-cy="active-modal"]').within(() => {
 				cy.get('input[name="title"]').clear().type(editedDiscussionTitle);
@@ -193,7 +195,6 @@ describe('Tasks & Discussions Manager', function() {
 				.contains('button', 'Cancel')
 				.click({force: true});
 			cy.get('[data-cy="dialog"]').contains('button', 'No').click();
-			cy.get('[data-cy="active-modal"]').should('be.visible');
 
 			// Continue with task creation
 			cy.get('[data-cy="active-modal"]').within(() => {
@@ -211,10 +212,9 @@ describe('Tasks & Discussions Manager', function() {
 
 			// View task, start it, then complete it in one modal session
 			cy.get('[data-cy="discussion-manager"]').contains('button', taskTitle).click();
-			cy.get('[data-cy="active-modal"]').should('be.visible');
 
 			cy.get('[data-cy="active-modal"]').within(() => {
-				cy.contains(taskTitle).should('exist');
+				cy.contains(taskTitle).should('be.visible');
 				cy.contains(taskMessage).should('exist');
 				cy.contains('Task Information').should('exist');
 				cy.contains('Start this task').click();
@@ -300,7 +300,10 @@ describe('Tasks & Discussions Manager', function() {
 
 			// Verify can view task but no edit access
 			cy.get('[data-cy="discussion-manager"]').contains('button', accessTestTaskTitle).click();
-			cy.get('[data-cy="active-modal"]').should('be.visible');
+
+			cy.get('[data-cy="active-modal"]')
+				.contains(accessTestTaskTitle)
+				.should('be.visible');
 
 			cy.get('[data-cy="active-modal"]')
 				.contains('button', 'Edit')

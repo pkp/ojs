@@ -215,7 +215,7 @@ describe('Tasks & Discussions Templates', function() {
 				.click({force: true});
 
 			// Wait for submission modal to load
-			cy.get('[data-cy="active-modal"]', {timeout: 10000}).should('be.visible');
+			cy.get('[data-cy="active-modal"]', {timeout: 10000}).contains(submissionAuthor).should('be.visible');
 
 			// Navigate to Copyediting stage
 			cy.get('[data-cy="active-modal"]').find('nav').contains('a', 'Copyediting').click();
@@ -230,11 +230,8 @@ describe('Tasks & Discussions Templates', function() {
 				cy.contains('button', 'Add').click();
 			});
 
-			// Wait for form modal to be visible
-			cy.get('[data-cy="active-modal"]', {timeout: 10000}).should('be.visible');
-
 			// Verify unrestricted template is visible but restricted is NOT
-			cy.get('[data-cy="active-modal"]').within(() => {
+			cy.get('[data-cy="active-modal"]', {timeout: 10000}).within(() => {
 				cy.get('ul[role="list"]').should('exist');
 				cy.contains(unrestrictedTemplateName).should('exist');
 				cy.contains(restrictedTemplateName).should('not.exist');
@@ -260,11 +257,8 @@ describe('Tasks & Discussions Templates', function() {
 				cy.contains('button', 'Add').click();
 			});
 
-			// Wait for form modal to be visible
-			cy.get('[data-cy="active-modal"]', {timeout: 10000}).should('be.visible');
-
 			// Verify both templates are visible (Copyeditor sees unrestricted + their restricted)
-			cy.get('[data-cy="active-modal"]').within(() => {
+			cy.get('[data-cy="active-modal"]', {timeout: 10000}).within(() => {
 				cy.get('ul[role="list"]').should('exist');
 				cy.contains(unrestrictedTemplateName).should('exist');
 				cy.contains(restrictedTemplateName).should('exist');
