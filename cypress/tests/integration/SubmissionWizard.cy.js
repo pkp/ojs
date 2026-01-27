@@ -68,14 +68,11 @@ describe('Submission Wizard', function() {
 
         // View submission discussion and check participants
         cy.get('a:contains("Review this submission")').click();
-        cy.get('h4:contains("Pre-Review Discussions")')
-            .parents('.pkp_controllers_grid')
-            .find('a:contains("Comments for the Editor")')
-            .click();
-        cy.get('#participantsListPlaceholder li:contains("Daniel Barnes")');
-        cy.get('#participantsListPlaceholder li:contains("Minoti Inoue")');
-        cy.get('#participantsListPlaceholder li:contains("Carlo Corino")');
-        cy.get('#queryNotesGrid .gridCellContainer').contains(comments);
+        cy.get('[data-cy="discussion-manager"]').contains('button', 'Comments for the Editor').click();
+        cy.get('[data-cy="active-modal"]').contains('Daniel Barnes').should('exist');
+        cy.get('[data-cy="active-modal"]').contains('Minoti Inoue').should('exist');
+        cy.get('[data-cy="active-modal"]').contains('Carlo Corino').should('exist');
+        cy.get('[data-cy="active-modal"]').contains(comments).should('exist');
 
         cy.logout();
     });
