@@ -56,7 +56,7 @@ describe('Tasks & Discussions Manager', function() {
 	 */
 	function openAddModal() {
 		cy.get('[data-cy="discussion-manager"]').contains('button', 'Add').click();
-		cy.get('[data-cy="active-modal"]').should('be.visible');
+		cy.get('[data-cy="active-modal"] input[name="title"]').should('exist');
 	}
 
 	/**

@@ -22,8 +22,8 @@ describe('Tasks & Discussions Templates', function() {
 			.closest('tr')
 			.contains('Add template')
 			.click();
-		// Wait for modal to open
-		cy.get('[data-cy="active-modal"]').should('be.visible');
+		// Wait for modal form to be ready
+		cy.get('[data-cy="active-modal"] input[name="title"]').should('exist');
 	}
 
 	/**
