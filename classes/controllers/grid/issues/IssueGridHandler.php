@@ -390,8 +390,7 @@ class IssueGridHandler extends GridHandler
         }
 
         Repo::issue()->delete($issue);
-        $currentIssue = Repo::issue()->getCurrent($issue->getJournalId());
-        if ($currentIssue != null && $issue->getId() == $currentIssue->getId()) {
+        if ($journal->getData('currentIssueId') == $issue->getId()) {
             $issues = Repo::issue()->getCollector()
                 ->filterByContextIds([$journal->getId()])
                 ->filterByPublished(true)
@@ -402,7 +401,7 @@ class IssueGridHandler extends GridHandler
             }
         }
 
-        return DAO::getDataChangedEvent($issue->getId());
+        return DAO::getDataChangedEvent();
     }
 
     /**
