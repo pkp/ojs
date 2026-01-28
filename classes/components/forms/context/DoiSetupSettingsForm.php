@@ -44,7 +44,17 @@ class DoiSetupSettingsForm extends PKPDoiSetupSettingsForm
                 'value' => Repo::doi()::TYPE_REPRESENTATION,
                 'label' => __('doi.manager.settings.galleysWithDescription'),
                 'allowedBy' => [],
-            ]
+            ],
+            [
+                'value' => Repo::doi()::TYPE_PEER_REVIEW,
+                'label' => __('submission.peerReview'),
+                'allowedBy' => [],
+            ],
+            [
+                'value' => Repo::doi()::TYPE_AUTHOR_RESPONSE,
+                'label' => __('submission.reviewRound.authorResponse'),
+                'allowedBy' => [],
+            ],
         ];
         Hook::call('DoiSetupSettingsForm::getObjectTypes', [&$this->objectTypeOptions]);
         if ($this->enabledRegistrationAgency === null) {
