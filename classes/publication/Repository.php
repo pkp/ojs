@@ -241,9 +241,9 @@ class Repository extends \PKP\publication\Repository
     }
 
     /** @copydoc \PKP\publication\Repository::createDois() */
-    public function createDois(Publication $publication): array
+    public function createDois(Publication $publication, ?Submission $submission = null): array
     {
-        $submission = Repo::submission()->get($publication->getData('submissionId'));
+        $submission ??= Repo::submission()->get($publication->getData('submissionId'));
 
         /** @var JournalDAO $contextDao */
         $contextDao = Application::getContextDAO();
@@ -276,6 +276,37 @@ class Repository extends \PKP\publication\Repository
             }
         }
 
+        // Peer review
+        if ($context->isDoiTypeEnabled(Repo::doi()::TYPE_PEER_REVIEW)) {
+            $reviewAssignments = $this->getCompletedReviewAssignments([$publication->getId()]);
+            foreach ($reviewAssignments as $reviewAssignment) {
+                if (empty($reviewAssignment->getData('doiId'))) {
+                    try {
+                        $doiId = Repo::doi()->mintDoi($context);
+                        Repo::reviewAssignment()->edit($reviewAssignment, ['doiId' => $doiId]);
+                    } catch (DoiException $exception) {
+                        $doiCreationFailures[] = $exception;
+                    }
+                }
+            }
+        }
+
+        // Author response
+        if ($context->isDoiTypeEnabled(Repo::doi()::TYPE_AUTHOR_RESPONSE)) {
+            $authorResponses = $this->getReviewAuthorResponses([$publication->getId()]);
+            foreach ($authorResponses as $authorResponse) {
+                if (empty($authorResponses->doiId)) {
+                    try {
+                        $doiId = Repo::doi()->mintDoi($context);
+                        $authorResponse->doiId = $doiId;
+                        $authorResponse->save();
+                    } catch (DoiException $exception) {
+                        $doiCreationFailures[] = $exception;
+                    }
+                }
+            }
+        }
+
         return $doiCreationFailures;
     }
 
@@ -290,16 +321,16 @@ class Repository extends \PKP\publication\Repository
 
         if ($publication->getData('status') == Publication::STATUS_QUEUED) {
             if (!$issue) {
-                // As the is no issue association
-                // if it was previously published and then got unpublished e.g has `date_published`
-                // the it was previously issueless e.g. NO_ISSUE
+                // As there is no issue association,
+                // if it was previously published and then got unpublished e.g., has `date_published`
+                // then it was previously issueless e.g., NO_ISSUE
                 // otherwise we get the default assignment
                 return $publication->getData('datePublished')
                     ? IssueAssignment::NO_ISSUE
                     : IssueAssignment::defaultAssignment($context);
             }
 
-            // There is issue association and based on the assignment will be deduced
+            // There is an issue association and based on the assignment will be deduced
             return $issue->getData('published')
                 ? IssueAssignment::CURRENT_BACK_ISSUES_PUBLISHED
                 : (
