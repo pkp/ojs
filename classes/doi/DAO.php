@@ -48,6 +48,7 @@ class DAO extends \PKP\doi\DAO
                     $q->whereIn('d.doi_id', function (Builder $q) {
                         $q->select('p.doi_id')
                             ->from('publications', 'p')
+                            // PR_TODO: It doesn't look like this takes DOI versioning into consideration.
                             ->leftJoin('submissions as s', 'p.publication_id', '=', 's.current_publication_id')
                             ->whereColumn('p.publication_id', '=', 's.current_publication_id')
                             ->whereNotNull('p.doi_id')
@@ -60,9 +61,32 @@ class DAO extends \PKP\doi\DAO
                             $q->select('g.doi_id')
                                 ->from('publication_galleys', 'g')
                                 ->leftJoin('publications as p', 'g.publication_id', '=', 'p.publication_id')
+                                // PR_TODO: It doesn't look like this takes DOI versioning into consideration.
                                 ->leftJoin('submissions as s', 'p.publication_id', '=', 's.current_publication_id')
                                 ->whereColumn('p.publication_id', '=', 's.current_publication_id')
                                 ->whereNotNull('g.doi_id')
+                                ->where('p.status', '=', PKPPublication::STATUS_PUBLISHED);
+                        });
+                    })
+                    // Peer Review DOIs
+                    ->when(in_array(Repo::doi()::TYPE_PEER_REVIEW, $enabledDoiTypes), function (Builder $q) {
+                        $q->orWhereIn('d.doi_id', function (Builder $q) {
+                            $q->select('ra.doi_id')
+                                ->from('review_assignments', 'ra')
+                                ->leftJoin('review_rounds as rr', 'ra.review_round_id', '=', 'rr.review_round_id')
+                                ->leftJoin('publications as p', 'rr.publication_id', '=', 'p.publication_id')
+                                ->whereNotNull('ra.doi_id')
+                                ->where('p.status', '=', PKPPublication::STATUS_PUBLISHED);
+                        });
+                    })
+                    // Author Response DOIs
+                    ->when(in_array(Repo::doi()::TYPE_AUTHOR_RESPONSE, $enabledDoiTypes), function (Builder $q) {
+                        $q->orWhereIn('d.doi_id', function (Builder $q) {
+                            $q->select('rrar.doi_id')
+                                ->from('review_round_author_responses', 'rrar')
+                                ->leftJoin('review_rounds as rr', 'rrar.review_round_id', '=', 'rr.review_round_id')
+                                ->leftJoin('publications as p', 'rr.publication_id', '=', 'p.publication_id')
+                                ->whereNotNull('rrar.doi_id')
                                 ->where('p.status', '=', PKPPublication::STATUS_PUBLISHED);
                         });
                     });

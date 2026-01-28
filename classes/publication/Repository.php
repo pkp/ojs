@@ -276,6 +276,8 @@ class Repository extends \PKP\publication\Repository
             }
         }
 
+        // PR_TODO: Add peer review and author response DOIs
+
         return $doiCreationFailures;
     }
 

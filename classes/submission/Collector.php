@@ -157,6 +157,8 @@ class Collector extends \PKP\submission\Collector
                             });
                         });
                     });
+
+                    // PR_TODO: Add query for peer review and author response DOIs
                 });
         });
     }
@@ -170,6 +172,7 @@ class Collector extends \PKP\submission\Collector
      */
     protected function addOnDoiPageFilterToQuery(Builder $q)
     {
+        // PR_TODO: See how peer review and author response DOIs should factor into this section
         $q->where(function (Builder $q) {
             $q->whereIn('s.stage_id', [WORKFLOW_STAGE_ID_EDITING, WORKFLOW_STAGE_ID_PRODUCTION])
                 ->orWhereIn('s.submission_id', function (Builder $q) {
@@ -221,6 +224,8 @@ class Collector extends \PKP\submission\Collector
                             ->whereLike('d.doi', "{$this->searchPhrase}%");
                     });
                 });
+
+            // PR_TODO: Add query for peer review and author response DOIs
         });
     }
 }

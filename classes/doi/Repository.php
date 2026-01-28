@@ -38,8 +38,11 @@ use PKP\submission\Representation;
 class Repository extends \PKP\doi\Repository
 {
     public const TYPE_ISSUE = 'issue';
-
+    public const TYPE_PEER_REVIEW = 'peerReview';
+    public const TYPE_AUTHOR_RESPONSE = 'authorResponse';
     public const CUSTOM_ISSUE_PATTERN = 'doiIssueSuffixPattern';
+
+
 
     public function __construct(DAO $dao, Request $request, PKPSchemaService $schemaService)
     {
@@ -223,6 +226,8 @@ class Repository extends \PKP\doi\Repository
                     $doiIds->add($galleyDoiId);
                 }
             }
+
+            // PR_TODO: Add peer reviews and author responses
         }
 
         return $doiIds->unique()->toArray();
@@ -257,6 +262,8 @@ class Repository extends \PKP\doi\Repository
                 $doiIds->add($galleyDoiId);
             }
         }
+
+        // PR_TODO: Add peer reviews and author responses
 
         return $doiIds->unique()->toArray();
     }
@@ -354,6 +361,8 @@ class Repository extends \PKP\doi\Repository
         return [
             self::TYPE_PUBLICATION,
             self::TYPE_REPRESENTATION,
+            self::TYPE_PEER_REVIEW,
+            self::TYPE_AUTHOR_RESPONSE,
         ];
     }
 
