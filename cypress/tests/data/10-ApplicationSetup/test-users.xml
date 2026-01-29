@@ -1,0 +1,923 @@
+<PKPUsers xmlns="http://pkp.sfu.ca"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pkp.sfu.ca pkp-users.xsd">
+    <user_groups xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pkp.sfu.ca pkp-users.xsd">
+        <user_group>
+            <role_id>16</role_id>
+            <context_id>1</context_id>
+            <is_default>true</is_default>
+            <permit_self_registration>false</permit_self_registration>
+            <permit_metadata_edit>true</permit_metadata_edit>
+            <name locale="en">Journal manager</name>
+            <name locale="fr_CA">Directeur-trice de la revue</name>
+            <abbrev locale="en">JM</abbrev>
+            <abbrev locale="fr_CA">DIR</abbrev>
+            <stage_assignments/>
+            <masthead>false</masthead>
+        </user_group>
+        <user_group>
+            <role_id>16</role_id>
+            <context_id>1</context_id>
+            <is_default>true</is_default>
+            <permit_self_registration>false</permit_self_registration>
+            <permit_metadata_edit>true</permit_metadata_edit>
+            <name locale="en">Journal editor</name>
+            <name locale="fr_CA">Rédacteur-trice</name>
+            <abbrev locale="en">JE</abbrev>
+            <abbrev locale="fr_CA">RÉD</abbrev>
+            <stage_assignments>1:3:4:5</stage_assignments>
+            <masthead>true</masthead>
+        </user_group>
+        <user_group>
+            <role_id>16</role_id>
+            <context_id>1</context_id>
+            <is_default>true</is_default>
+            <permit_self_registration>false</permit_self_registration>
+            <permit_metadata_edit>true</permit_metadata_edit>
+            <name locale="en">Production editor</name>
+            <name locale="fr_CA">Directeur-trice de production</name>
+            <abbrev locale="en">ProdE</abbrev>
+            <abbrev locale="fr_CA">DirProd</abbrev>
+            <stage_assignments>4:5</stage_assignments>
+            <masthead>false</masthead>
+        </user_group>
+        <user_group>
+            <role_id>17</role_id>
+            <context_id>1</context_id>
+            <is_default>true</is_default>
+            <permit_self_registration>false</permit_self_registration>
+            <permit_metadata_edit>true</permit_metadata_edit>
+            <name locale="en">Section editor</name>
+            <name locale="fr_CA">Rédacteur-trice de rubrique</name>
+            <abbrev locale="en">SecE</abbrev>
+            <abbrev locale="fr_CA">RÉDRUB</abbrev>
+            <stage_assignments>1:3:4:5</stage_assignments>
+            <masthead>true</masthead>
+        </user_group>
+        <user_group>
+            <role_id>17</role_id>
+            <context_id>1</context_id>
+            <is_default>true</is_default>
+            <permit_self_registration>false</permit_self_registration>
+            <permit_metadata_edit>false</permit_metadata_edit>
+            <name locale="en">Guest editor</name>
+            <name locale="fr_CA">Rédacteur-trice invité-e</name>
+            <abbrev locale="en">GE</abbrev>
+            <abbrev locale="fr_CA">RÉDINV</abbrev>
+            <stage_assignments>1:3:4:5</stage_assignments>
+            <masthead>false</masthead>
+        </user_group>
+        <user_group>
+            <role_id>4097</role_id>
+            <context_id>1</context_id>
+            <is_default>true</is_default>
+            <permit_self_registration>false</permit_self_registration>
+            <permit_metadata_edit>false</permit_metadata_edit>
+            <name locale="en">Copyeditor</name>
+            <name locale="fr_CA">Réviseur-e</name>
+            <abbrev locale="en">CE</abbrev>
+            <abbrev locale="fr_CA">RÉV</abbrev>
+            <stage_assignments>4</stage_assignments>
+            <masthead>false</masthead>
+        </user_group>
+        <user_group>
+            <role_id>4097</role_id>
+            <context_id>1</context_id>
+            <is_default>true</is_default>
+            <permit_self_registration>false</permit_self_registration>
+            <permit_metadata_edit>false</permit_metadata_edit>
+            <name locale="en">Designer</name>
+            <name locale="fr_CA">Designer</name>
+            <abbrev locale="en">Design</abbrev>
+            <abbrev locale="fr_CA">Design</abbrev>
+            <stage_assignments>5</stage_assignments>
+            <masthead>false</masthead>
+        </user_group>
+        <user_group>
+            <role_id>4097</role_id>
+            <context_id>1</context_id>
+            <is_default>true</is_default>
+            <permit_self_registration>false</permit_self_registration>
+            <permit_metadata_edit>false</permit_metadata_edit>
+            <name locale="en">Funding coordinator</name>
+            <name locale="fr_CA">Coordonnateur-trice du financement</name>
+            <abbrev locale="en">FC</abbrev>
+            <abbrev locale="fr_CA">CF</abbrev>
+            <stage_assignments>1:3</stage_assignments>
+            <masthead>false</masthead>
+        </user_group>
+        <user_group>
+            <role_id>4097</role_id>
+            <context_id>1</context_id>
+            <is_default>true</is_default>
+            <permit_self_registration>false</permit_self_registration>
+            <permit_metadata_edit>false</permit_metadata_edit>
+            <name locale="en">Indexer</name>
+            <name locale="fr_CA">Indexeur-e</name>
+            <abbrev locale="en">IND</abbrev>
+            <abbrev locale="fr_CA">Indx</abbrev>
+            <stage_assignments>5</stage_assignments>
+            <masthead>false</masthead>
+        </user_group>
+        <user_group>
+            <role_id>4097</role_id>
+            <context_id>1</context_id>
+            <is_default>true</is_default>
+            <permit_self_registration>false</permit_self_registration>
+            <permit_metadata_edit>false</permit_metadata_edit>
+            <name locale="en">Layout Editor</name>
+            <name locale="fr_CA">Responsable de la mise en page</name>
+            <abbrev locale="en">LE</abbrev>
+            <abbrev locale="fr_CA">RespMP</abbrev>
+            <stage_assignments>5</stage_assignments>
+            <masthead>false</masthead>
+        </user_group>
+        <user_group>
+            <role_id>4097</role_id>
+            <context_id>1</context_id>
+            <is_default>true</is_default>
+            <permit_self_registration>false</permit_self_registration>
+            <permit_metadata_edit>false</permit_metadata_edit>
+            <name locale="en">Marketing and sales coordinator</name>
+            <name locale="fr_CA">Coordonnateur-trice des ventes et du marketing</name>
+            <abbrev locale="en">MS</abbrev>
+            <abbrev locale="fr_CA">CVM</abbrev>
+            <stage_assignments>4</stage_assignments>
+            <masthead>false</masthead>
+        </user_group>
+        <user_group>
+            <role_id>4097</role_id>
+            <context_id>1</context_id>
+            <is_default>true</is_default>
+            <permit_self_registration>false</permit_self_registration>
+            <permit_metadata_edit>false</permit_metadata_edit>
+            <name locale="en">Proofreader</name>
+            <name locale="fr_CA">Correcteur-trice d'épreuves</name>
+            <abbrev locale="en">PR</abbrev>
+            <abbrev locale="fr_CA">CorEp</abbrev>
+            <stage_assignments>5</stage_assignments>
+            <masthead>false</masthead>
+        </user_group>
+        <user_group>
+            <role_id>65536</role_id>
+            <context_id>1</context_id>
+            <is_default>true</is_default>
+            <permit_self_registration>true</permit_self_registration>
+            <permit_metadata_edit>false</permit_metadata_edit>
+            <name locale="en">Author</name>
+            <name locale="fr_CA">Auteur-e</name>
+            <abbrev locale="en">AU</abbrev>
+            <abbrev locale="fr_CA">AU</abbrev>
+            <stage_assignments>1:3:4:5</stage_assignments>
+            <masthead>false</masthead>
+        </user_group>
+        <user_group>
+            <role_id>65536</role_id>
+            <context_id>1</context_id>
+            <is_default>true</is_default>
+            <permit_self_registration>false</permit_self_registration>
+            <permit_metadata_edit>false</permit_metadata_edit>
+            <name locale="en">Translator</name>
+            <name locale="fr_CA">Traducteur-trice</name>
+            <abbrev locale="en">Trans</abbrev>
+            <abbrev locale="fr_CA">Trad</abbrev>
+            <stage_assignments>1:3:4:5</stage_assignments>
+            <masthead>false</masthead>
+        </user_group>
+        <user_group>
+            <role_id>4096</role_id>
+            <context_id>1</context_id>
+            <is_default>true</is_default>
+            <permit_self_registration>true</permit_self_registration>
+            <permit_metadata_edit>false</permit_metadata_edit>
+            <name locale="en">Reviewer</name>
+            <name locale="fr_CA">Évaluateur-trice</name>
+            <abbrev locale="en">R</abbrev>
+            <abbrev locale="fr_CA">ÉVAL</abbrev>
+            <stage_assignments>3</stage_assignments>
+            <masthead>true</masthead>
+        </user_group>
+        <user_group>
+            <role_id>1048576</role_id>
+            <context_id>1</context_id>
+            <is_default>true</is_default>
+            <permit_self_registration>true</permit_self_registration>
+            <permit_metadata_edit>false</permit_metadata_edit>
+            <name locale="en">Reader</name>
+            <name locale="fr_CA">Lecteur-trice</name>
+            <abbrev locale="en">Read</abbrev>
+            <abbrev locale="fr_CA">Lect</abbrev>
+            <stage_assignments/>
+            <masthead>false</masthead>
+        </user_group>
+        <user_group>
+            <role_id>2097152</role_id>
+            <context_id>1</context_id>
+            <is_default>true</is_default>
+            <permit_self_registration>false</permit_self_registration>
+            <permit_metadata_edit>false</permit_metadata_edit>
+            <name locale="en">Subscription Manager</name>
+            <name locale="fr_CA">Responsable des abonnements</name>
+            <abbrev locale="en">SubM</abbrev>
+            <abbrev locale="fr_CA">RespAB</abbrev>
+            <stage_assignments/>
+            <masthead>false</masthead>
+        </user_group>
+        <user_group>
+            <role_id>4097</role_id>
+            <context_id>1</context_id>
+            <is_default>true</is_default>
+            <permit_self_registration>false</permit_self_registration>
+            <permit_metadata_edit>false</permit_metadata_edit>
+            <name locale="en">Editorial Board Member</name>
+            <name locale="fr_CA">##default.groups.name.editorialBoardMember##</name>
+            <abbrev locale="en">EBM</abbrev>
+            <abbrev locale="fr_CA">##default.groups.abbrev.editorialBoardMember##</abbrev>
+            <stage_assignments/>
+            <masthead>true</masthead>
+        </user_group>
+    </user_groups>
+    <users>
+        <user>
+            <givenname locale="en">Daniel</givenname>
+            <givenname locale="fr_CA">Daniel</givenname>
+            <familyname locale="en">Barnes</familyname>
+            <familyname locale="fr_CA">Barnes</familyname>
+            <affiliation>
+                <name locale="en">University of Melbourne</name>
+                <name locale="fr_CA">Australia</name>
+            </affiliation>
+            <country>AU</country>
+            <email>dbarnes@mailinator.com</email>
+            <username>dbarnes</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$uEtjR39zv9gbkgvJWPk2C.djSD6R6bRRW9kxon/8rZjEpah5d5.4W</value>
+            </password>
+            <date_registered>2025-12-15 05:39:22</date_registered>
+            <date_last_login>2026-01-27 20:19:14</date_last_login>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Journal editor</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">David</givenname>
+            <givenname locale="fr_CA">David</givenname>
+            <familyname locale="en">Buskins</familyname>
+            <familyname locale="fr_CA">Buskins</familyname>
+            <affiliation>
+                <name locale="en">University of Chicago</name>
+                <name locale="fr_CA">United States</name>
+            </affiliation>
+            <country>US</country>
+            <email>dbuskins@mailinator.com</email>
+            <username>dbuskins</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$d9zBLrwG.de67aH2m5gEC.wCovyvVvL/eTx6AKJdb5grol3iJkviG</value>
+            </password>
+            <date_registered>2025-12-15 05:39:45</date_registered>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Section editor</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Stephanie</givenname>
+            <givenname locale="fr_CA">Stephanie</givenname>
+            <familyname locale="en">Berardo</familyname>
+            <familyname locale="fr_CA">Berardo</familyname>
+            <affiliation>
+                <name locale="en">University of Toronto</name>
+                <name locale="fr_CA">Canada</name>
+            </affiliation>
+            <country>CA</country>
+            <email>sberardo@mailinator.com</email>
+            <username>sberardo</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$wDPyb9l775u0v/pma7tsuevNoHh9pwlN2tmhe7JDQel7jt7/vOSwm</value>
+            </password>
+            <date_registered>2025-12-15 05:40:09</date_registered>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Section editor</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Minoti</givenname>
+            <givenname locale="fr_CA">Minoti</givenname>
+            <familyname locale="en">Inoue</familyname>
+            <familyname locale="fr_CA">Inoue</familyname>
+            <affiliation>
+                <name locale="en">Kyoto University</name>
+                <name locale="fr_CA">Japan</name>
+            </affiliation>
+            <country>JP</country>
+            <email>minoue@mailinator.com</email>
+            <username>minoue</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$dI0/G0Vr9AgfvhcWV0mDlOM36e1fJns7ag.vITJ/o9i9/ENvZs8Ri</value>
+            </password>
+            <date_registered>2025-12-15 05:40:35</date_registered>
+            <date_last_login>2025-12-15 05:53:16</date_last_login>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Section editor</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Julie</givenname>
+            <givenname locale="fr_CA">Julie</givenname>
+            <familyname locale="en">Janssen</familyname>
+            <familyname locale="fr_CA">Janssen</familyname>
+            <affiliation>
+                <name locale="en">Utrecht University</name>
+                <name locale="fr_CA">Netherlands</name>
+            </affiliation>
+            <country>NL</country>
+            <email>jjanssen@mailinator.com</email>
+            <username>jjanssen</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$d4bz9Khk2gniKS3RA81hueh9gcJHHSA2yYpg9V1XGbjwWWwcUMv1a</value>
+            </password>
+            <date_registered>2025-12-15 05:41:02</date_registered>
+            <date_last_login>2025-12-15 05:59:05</date_last_login>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Reviewer</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Paul</givenname>
+            <givenname locale="fr_CA">Paul</givenname>
+            <familyname locale="en">Hudson</familyname>
+            <familyname locale="fr_CA">Hudson</familyname>
+            <affiliation>
+                <name locale="en">McGill University</name>
+                <name locale="fr_CA">Canada</name>
+            </affiliation>
+            <country>CA</country>
+            <email>phudson@mailinator.com</email>
+            <username>phudson</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$XzJS1bYBEkQnQsp3Zg8.Q.LxG7otvf6H2ev2yY4p2n5vRJPK9mr9O</value>
+            </password>
+            <date_registered>2025-12-15 05:41:30</date_registered>
+            <date_last_login>2025-12-15 05:56:06</date_last_login>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Reviewer</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Aisla</givenname>
+            <givenname locale="fr_CA">Aisla</givenname>
+            <familyname locale="en">McCrae</familyname>
+            <familyname locale="fr_CA">McCrae</familyname>
+            <affiliation>
+                <name locale="en">University of Manitoba</name>
+                <name locale="fr_CA">Canada</name>
+            </affiliation>
+            <country>CA</country>
+            <email>amccrae@mailinator.com</email>
+            <username>amccrae</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$LJZ6qj.iQ3IiX4w8mNWteueoUZcpROazT04KyRGU19TJfesRrxxne</value>
+            </password>
+            <date_registered>2025-12-15 05:42:01</date_registered>
+            <date_last_login>2025-12-15 05:57:24</date_last_login>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Reviewer</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Adela</givenname>
+            <givenname locale="fr_CA">Adela</givenname>
+            <familyname locale="en">Gallego</familyname>
+            <familyname locale="fr_CA">Gallego</familyname>
+            <affiliation>
+                <name locale="en">State University of New York</name>
+                <name locale="fr_CA">United States</name>
+            </affiliation>
+            <country>US</country>
+            <email>agallego@mailinator.com</email>
+            <username>agallego</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$pCJLdzFMJ6LKfNxLnj1K7uhqcPpQt/6l60xaUOQSkCYkRRcL5azaS</value>
+            </password>
+            <date_registered>2025-12-15 05:42:31</date_registered>
+            <date_last_login>2025-12-15 05:59:24</date_last_login>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Reviewer</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Maria</givenname>
+            <givenname locale="fr_CA">Maria</givenname>
+            <familyname locale="en">Fritz</familyname>
+            <familyname locale="fr_CA">Fritz</familyname>
+            <affiliation>
+                <name locale="en">Ghent University</name>
+                <name locale="fr_CA">Belgium</name>
+            </affiliation>
+            <country>BE</country>
+            <email>mfritz@mailinator.com</email>
+            <username>mfritz</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$tTOyVzs6lw9dRB3yyVeTY.REOIgxzKWuP3gPAUCFGt7KOiK/tWG7W</value>
+            </password>
+            <date_registered>2025-12-15 05:43:03</date_registered>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Copyeditor</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Sarah</givenname>
+            <givenname locale="fr_CA">Sarah</givenname>
+            <familyname locale="en">Vogt</familyname>
+            <familyname locale="fr_CA">Vogt</familyname>
+            <affiliation>
+                <name locale="en">Universidad de Chile</name>
+                <name locale="fr_CA">Chile</name>
+            </affiliation>
+            <country>CL</country>
+            <email>svogt@mailinator.com</email>
+            <username>svogt</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$b4E.pu79MOZ5bdRdtLI43.NyLHx2Gh0ynkp/F/P8U0WsLHzyUgEDG</value>
+            </password>
+            <date_registered>2025-12-15 05:43:38</date_registered>
+            <date_last_login>2026-01-27 20:21:51</date_last_login>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Copyeditor</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Graham</givenname>
+            <givenname locale="fr_CA">Graham</givenname>
+            <familyname locale="en">Cox</familyname>
+            <familyname locale="fr_CA">Cox</familyname>
+            <affiliation>
+                <name locale="en">Duke University</name>
+                <name locale="fr_CA">United States</name>
+            </affiliation>
+            <country>US</country>
+            <email>gcox@mailinator.com</email>
+            <username>gcox</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$9rAiDVsBoP7SKqPt/yN1Je0jk8GDOpoG0oU3Zol7UUwHaXQYnb4cC</value>
+            </password>
+            <date_registered>2025-12-15 05:44:15</date_registered>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Layout Editor</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Stephen</givenname>
+            <givenname locale="fr_CA">Stephen</givenname>
+            <familyname locale="en">Hellier</familyname>
+            <familyname locale="fr_CA">Hellier</familyname>
+            <affiliation>
+                <name locale="en">University of Cape Town</name>
+                <name locale="fr_CA">South Africa</name>
+            </affiliation>
+            <country>ZA</country>
+            <email>shellier@mailinator.com</email>
+            <username>shellier</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$EIXKhRktWhm7zKQNVHpg7OOYayCDa/6tLh1ka4cIW8AZlgUlu7iUW</value>
+            </password>
+            <date_registered>2025-12-15 05:44:54</date_registered>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Layout Editor</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+            <user_user_group>
+                <user_group_ref>Reviewer</user_group_ref>
+                <date_start>2025-12-15 06:08:08</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Catherine</givenname>
+            <givenname locale="fr_CA">Catherine</givenname>
+            <familyname locale="en">Turner</familyname>
+            <familyname locale="fr_CA">Turner</familyname>
+            <affiliation>
+                <name locale="en">Imperial College London</name>
+                <name locale="fr_CA">United Kingdom</name>
+            </affiliation>
+            <country>GB</country>
+            <email>cturner@mailinator.com</email>
+            <username>cturner</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$kMIWEUj8UysbKzTXjdyVou87eFP7d603GlrVJy4GBaNeAaWARyUfS</value>
+            </password>
+            <date_registered>2025-12-15 05:45:35</date_registered>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Proofreader</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+            <user_user_group>
+                <user_group_ref>Reviewer</user_group_ref>
+                <date_start>2025-12-15 06:08:37</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Sabine</givenname>
+            <givenname locale="fr_CA">Sabine</givenname>
+            <familyname locale="en">Kumar</familyname>
+            <familyname locale="fr_CA">Kumar</familyname>
+            <affiliation>
+                <name locale="en">National University of Singapore</name>
+                <name locale="fr_CA">Singapore</name>
+            </affiliation>
+            <country>SG</country>
+            <email>skumar@mailinator.com</email>
+            <username>skumar</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$OYabORdonm3Coi0b5O0oEeV1P2jzQj2CewMxuYBSWveSe8vdR7eqm</value>
+            </password>
+            <date_registered>2025-12-15 05:46:17</date_registered>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Proofreader</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+            <user_user_group>
+                <user_group_ref>Reviewer</user_group_ref>
+                <date_start>2025-12-15 06:07:55</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Robert</givenname>
+            <givenname locale="fr_CA">Robert</givenname>
+            <familyname locale="en">Baxter</familyname>
+            <familyname locale="fr_CA">Baxter</familyname>
+            <affiliation>
+                <name locale="en">University of Edinburgh</name>
+                <name locale="fr_CA">United Kingdom</name>
+            </affiliation>
+            <country>GB</country>
+            <email>rbaxter@mailinator.com</email>
+            <username>rbaxter</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$46K6kaTdsXhCevw5gRwbaObZvY4luwBL/bqP4ejMLpmCzYCo98FVK</value>
+            </password>
+            <date_registered>2025-12-15 05:47:00</date_registered>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Reviewer</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Lena</givenname>
+            <givenname locale="fr_CA">Lena</givenname>
+            <familyname locale="en">Rodriguez</familyname>
+            <familyname locale="fr_CA">Rodriguez</familyname>
+            <affiliation>
+                <name locale="en">University of Barcelona</name>
+                <name locale="fr_CA">Spain</name>
+            </affiliation>
+            <country>ES</country>
+            <email>lrodriguez@mailinator.com</email>
+            <username>lrodriguez</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$KQZxN8vY7jE5LqW6nR4sxOxBdN0qF5tX3bG8hR6jN4qP7sT9uV1wC</value>
+            </password>
+            <date_registered>2025-12-15 05:48:00</date_registered>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Production editor</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Marcus</givenname>
+            <givenname locale="fr_CA">Marcus</givenname>
+            <familyname locale="en">Chen</familyname>
+            <familyname locale="fr_CA">Chen</familyname>
+            <affiliation>
+                <name locale="en">National Taiwan University</name>
+                <name locale="fr_CA">Taiwan</name>
+            </affiliation>
+            <country>TW</country>
+            <email>mchen@mailinator.com</email>
+            <username>mchen</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$HbR5qK8pN6jL4sF9tD3wE.OxMdP2nQ7uR6vS8tY9zC1aV3bX5dW7Y</value>
+            </password>
+            <date_registered>2025-12-15 05:48:30</date_registered>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Guest editor</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Nadia</givenname>
+            <givenname locale="fr_CA">Nadia</givenname>
+            <familyname locale="en">Patel</familyname>
+            <familyname locale="fr_CA">Patel</familyname>
+            <affiliation>
+                <name locale="en">University of Mumbai</name>
+                <name locale="fr_CA">India</name>
+            </affiliation>
+            <country>IN</country>
+            <email>npatel@mailinator.com</email>
+            <username>npatel</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$JfQ8rN9pL5kM6vT4yE2zA.RbCdF3nH7wS8xG9zD1eP2fU4aW6bX8V</value>
+            </password>
+            <date_registered>2025-12-15 05:49:00</date_registered>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Designer</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Omar</givenname>
+            <givenname locale="fr_CA">Omar</givenname>
+            <familyname locale="en">Hassan</familyname>
+            <familyname locale="fr_CA">Hassan</familyname>
+            <affiliation>
+                <name locale="en">American University in Cairo</name>
+                <name locale="fr_CA">Egypt</name>
+            </affiliation>
+            <country>EG</country>
+            <email>ohassan@mailinator.com</email>
+            <username>ohassan</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$LgS9qP8rM7jN5vU3xF1zB.TcDeG4oJ6yT7wH8yA2fR3gV5bY7cZ9X</value>
+            </password>
+            <date_registered>2025-12-15 05:49:30</date_registered>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Funding coordinator</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Patricia</givenname>
+            <givenname locale="fr_CA">Patricia</givenname>
+            <familyname locale="en">Wong</familyname>
+            <familyname locale="fr_CA">Wong</familyname>
+            <affiliation>
+                <name locale="en">University of Hong Kong</name>
+                <name locale="fr_CA">Hong Kong</name>
+            </affiliation>
+            <country>HK</country>
+            <email>pwong@mailinator.com</email>
+            <username>pwong</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$MhT8pR9sL6kO5wV4yG2zC.UdEfH3nK7xU8yJ9zA1gS4hW6cZ8dY9A</value>
+            </password>
+            <date_registered>2025-12-15 05:50:00</date_registered>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Indexer</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Quinn</givenname>
+            <givenname locale="fr_CA">Quinn</givenname>
+            <familyname locale="en">Anderson</familyname>
+            <familyname locale="fr_CA">Anderson</familyname>
+            <affiliation>
+                <name locale="en">University of Washington</name>
+                <name locale="fr_CA">United States</name>
+            </affiliation>
+            <country>US</country>
+            <email>qanderson@mailinator.com</email>
+            <username>qanderson</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$NiU9qS7tM5lP6xW3zH1yD.VeGgJ2oL8yV7zK8yB0hT3iX5dA7eZ8B</value>
+            </password>
+            <date_registered>2025-12-15 05:50:30</date_registered>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Marketing and sales coordinator</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Rosa</givenname>
+            <givenname locale="fr_CA">Rosa</givenname>
+            <familyname locale="en">Silva</familyname>
+            <familyname locale="fr_CA">Silva</familyname>
+            <affiliation>
+                <name locale="en">University of São Paulo</name>
+                <name locale="fr_CA">Brazil</name>
+            </affiliation>
+            <country>BR</country>
+            <email>rsilva@mailinator.com</email>
+            <username>rsilva</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$OjV8rT6uN4mQ5yX2zI0zE.WfHhK1pM7zW6yL7yC9iU2jY4eB6fA7C</value>
+            </password>
+            <date_registered>2025-12-15 05:51:00</date_registered>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Translator</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Samuel</givenname>
+            <givenname locale="fr_CA">Samuel</givenname>
+            <familyname locale="en">Mbeki</familyname>
+            <familyname locale="fr_CA">Mbeki</familyname>
+            <affiliation>
+                <name locale="en">University of Pretoria</name>
+                <name locale="fr_CA">South Africa</name>
+            </affiliation>
+            <country>ZA</country>
+            <email>smbeki@mailinator.com</email>
+            <username>smbeki</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$PkW7sU5vO3nR4zY1zJ9yF.XgIiL0qN6zX5zM6yD8jV1kZ3fC5gB6D</value>
+            </password>
+            <date_registered>2025-12-15 05:51:30</date_registered>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Subscription Manager</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Talia</givenname>
+            <givenname locale="fr_CA">Talia</givenname>
+            <familyname locale="en">Nguyen</familyname>
+            <familyname locale="fr_CA">Nguyen</familyname>
+            <affiliation>
+                <name locale="en">Vietnam National University</name>
+                <name locale="fr_CA">Vietnam</name>
+            </affiliation>
+            <country>VN</country>
+            <email>tnguyen@mailinator.com</email>
+            <username>tnguyen</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$QlX6tV4wP2oS3zA0zK8zG.YhJjM9rO5zY4zN5yE7kW0lA2gD4hC5E</value>
+            </password>
+            <date_registered>2025-12-15 05:52:00</date_registered>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Editorial Board Member</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+        <user>
+            <givenname locale="en">Alex</givenname>
+            <givenname locale="fr_CA">Alex</givenname>
+            <familyname locale="en">Thompson</familyname>
+            <familyname locale="fr_CA">Thompson</familyname>
+            <affiliation>
+                <name locale="en">University of Oxford</name>
+                <name locale="fr_CA">United Kingdom</name>
+            </affiliation>
+            <country>GB</country>
+            <email>athompson@mailinator.com</email>
+            <username>athompson</username>
+            <password is_disabled="false" must_change="false" encryption="bcrypt">
+                <value>$2y$10$RmY5uW3xQ1pT2zB9yL7xH.ZiKkN8sP4yX3zO4yF6lX9mB1hE3jD2G</value>
+            </password>
+            <date_registered>2025-12-15 05:52:30</date_registered>
+            <inline_help>true</inline_help>
+            <user_user_group>
+                <user_group_ref>Journal manager</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+            <user_user_group>
+                <user_group_ref>Journal editor</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+            <user_user_group>
+                <user_group_ref>Production editor</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+            <user_user_group>
+                <user_group_ref>Section editor</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+            <user_user_group>
+                <user_group_ref>Guest editor</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+            <user_user_group>
+                <user_group_ref>Copyeditor</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+            <user_user_group>
+                <user_group_ref>Designer</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+            <user_user_group>
+                <user_group_ref>Funding coordinator</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+            <user_user_group>
+                <user_group_ref>Indexer</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+            <user_user_group>
+                <user_group_ref>Layout Editor</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+            <user_user_group>
+                <user_group_ref>Marketing and sales coordinator</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+            <user_user_group>
+                <user_group_ref>Proofreader</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+            <user_user_group>
+                <user_group_ref>Author</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+            <user_user_group>
+                <user_group_ref>Translator</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+            <user_user_group>
+                <user_group_ref>Reviewer</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+            <user_user_group>
+                <user_group_ref>Reader</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>false</masthead>
+            </user_user_group>
+            <user_user_group>
+                <user_group_ref>Subscription Manager</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+            <user_user_group>
+                <user_group_ref>Editorial Board Member</user_group_ref>
+                <date_start>2025-12-15 00:00:00</date_start>
+                <masthead>true</masthead>
+            </user_user_group>
+        </user>
+    </users>
+</PKPUsers>
