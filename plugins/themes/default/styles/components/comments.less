@@ -1,5 +1,39 @@
 @import (reference) "../components.less";
 
+/* --- Structural (required for layout) --- */
+.PkpComments__messages {
+	display: flex;
+	flex-direction: column;
+}
+
+.PkpComments__messageHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.PkpComments__messageAuthor {
+	display: flex;
+	flex-direction: column;
+}
+
+.PkpComments__authorOrcid {
+	display: flex;
+	align-items: center;
+}
+
+.PkpComments__notificationNotLatest {
+	display: flex;
+	align-items: center;
+}
+
+.PkpComments__notificationNeedsApproval {
+	display: flex;
+	align-items: center;
+}
+
+/* --- Visual (customize these) --- */
+
 // Style the accordion trigger for comments version headers
 .PkpComments__version .PkpAccordionHeader__trigger {
     padding: @base;

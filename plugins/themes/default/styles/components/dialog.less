@@ -1,11 +1,82 @@
 /**
  * Dialog Component - Theme Styles
- *
- * Visual styling for the PkpDialog component.
- * Structural positioning is handled in PkpDialog.vue
  */
 
-/* Overlay background */
+/* --- Structural (required for component to function) --- */
+.PkpDialog__overlay {
+	position: fixed;
+	inset: 0;
+	z-index: 30;
+}
+
+.PkpDialog__positionContainer {
+	position: fixed;
+	inset: 0;
+	z-index: 40;
+	overflow-y: auto;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	padding: 1rem;
+	pointer-events: none;
+}
+
+@media (min-width: 640px) {
+	.PkpDialog__positionContainer {
+		align-items: center;
+		padding: 0;
+	}
+}
+
+.PkpDialog__content {
+	position: relative;
+	z-index: 100;
+	width: 100%;
+	max-height: calc(100vh - 2rem);
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	pointer-events: auto;
+}
+
+@media (min-width: 640px) {
+	.PkpDialog__content {
+		max-height: 85vh;
+		margin: 2rem 0;
+	}
+}
+
+.PkpDialog__content--default {
+	max-width: 28rem;
+}
+
+.PkpDialog__content--large {
+	max-width: 50rem;
+}
+
+.PkpDialog__body {
+	flex: 1;
+	overflow-y: auto;
+	min-height: 0;
+}
+
+.PkpDialog__content:focus {
+	outline: none;
+}
+
+.PkpDialog__actionButtons {
+	flex-shrink: 0;
+	display: flex;
+}
+
+.PkpDialog__close {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* --- Visual (customize these) --- */
 .PkpDialog__overlay {
 	background-color: fade(#000000, 60%);
 }
