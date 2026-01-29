@@ -6,38 +6,38 @@
  */
 
 /* Overlay background */
-.pkpDialog__overlay {
+.PkpDialog__overlay {
 	background-color: fade(#000000, 60%);
 }
 
-.pkpDialog__overlay[data-state='open'] {
+.PkpDialog__overlay[data-state='open'] {
 	animation: overlayShow 550ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Title */
-h2.pkpDialog__title {
+h2.PkpDialog__title {
 	margin: 0;
 }
 
 /* Body spacing */
-.pkpDialog__body {
+.PkpDialog__body {
 	margin-top: @base;
 }
 
 /* Content panel visual styling */
-.pkpDialog__content {
+.PkpDialog__content {
 	background-color: @bg;
 	border-radius: @radius;
 	padding: @double;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-.pkpDialog__content[data-state='open'] {
+.PkpDialog__content[data-state='open'] {
 	animation: contentShow 550ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* Close button */
-.pkpDialog__close {
+.PkpDialog__close {
 	top: @base;
 	right: @base;
 	background: transparent;
@@ -57,7 +57,7 @@ h2.pkpDialog__title {
 }
 
 /* Action buttons */
-.pkpDialog__action-buttons {
+.PkpDialog__actionButtons {
 	margin-top: @triple;
 	gap: @base;
 }

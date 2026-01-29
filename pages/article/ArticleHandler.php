@@ -246,6 +246,7 @@ class ArticleHandler extends Handler
 
         $openReviewComponent = new OpenReviewComponent($article);
         $templateMgr->setLocaleKeys($openReviewComponent->getLocaleKeys());
+        $templateMgr->addSvgIcons($openReviewComponent->getSvgIcons());
         $templateMgr->assign('openReviewConfig', $openReviewComponent->getConfig());
         $templateMgr->setConstants($openReviewComponent->getConstants());
 
