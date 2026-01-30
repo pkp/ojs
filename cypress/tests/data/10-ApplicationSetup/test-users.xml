@@ -1,3 +1,6 @@
+<!DOCTYPE PKPUsers [
+  <!ELEMENT PKPUsers ANY>
+]>
 <PKPUsers xmlns="http://pkp.sfu.ca"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pkp.sfu.ca pkp-users.xsd">
     <user_groups xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pkp.sfu.ca pkp-users.xsd">
