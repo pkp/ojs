@@ -6918,16 +6918,16 @@
 							"$ref": "#/definitions/NavigationMenu"
 						}
 					},
-					"400": {
-						"x-summary": "Bad Request",
-						"description": "The request was invalid or contained errors.",
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to create navigation menus.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
 					},
-					"403": {
-						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to create navigation menus.",
+					"422": {
+						"x-summary": "Unprocessable Entity",
+						"description": "Validation errors occurred. The title may already exist or the area may already be assigned to another menu.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -7046,13 +7046,6 @@
 							"$ref": "#/definitions/NavigationMenu"
 						}
 					},
-					"400": {
-						"x-summary": "Bad Request",
-						"description": "The request was invalid or contained errors.",
-						"schema": {
-							"$ref": "#/definitions/ErrorResponse"
-						}
-					},
 					"403": {
 						"x-summary": "Request Unauthorized",
 						"description": "You do not have permission to edit this navigation menu.",
@@ -7063,6 +7056,13 @@
 					"404": {
 						"x-summary": "Request Not Found",
 						"description": "The requested navigation menu could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"422": {
+						"x-summary": "Unprocessable Entity",
+						"description": "Validation errors occurred. The title may already exist or the area may already be assigned to another menu.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
