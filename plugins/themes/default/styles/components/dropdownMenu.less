@@ -1,11 +1,37 @@
 /**
  * Dropdown Menu - Theme Styles
- *
- * Visual styling for PkpDropdownMenu component.
- * Structural styles are in PkpDropdownMenu.vue
  */
 
-.pkpDropdownMenu__trigger {
+/* --- Structural (required for component to function) --- */
+.PkpDropdownMenu__trigger {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+.PkpDropdownMenu__triggerIcon {
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+.PkpDropdownMenu__items {
+	min-width: 160px;
+	z-index: 50;
+}
+
+.PkpDropdownMenu__item {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.PkpDropdownMenu__item[data-disabled] {
+	cursor: not-allowed;
+}
+
+/* --- Visual (customize these) --- */
+.PkpDropdownMenu__trigger {
 	background-color: transparent;
 	border: transparent;
 	color: @primary;
@@ -13,27 +39,27 @@
 	border-radius: @radius;
 }
 
-.pkpDropdownMenu__trigger:hover {
+.PkpDropdownMenu__trigger:hover {
 	background-color: @primary;
 	color: @bg;
 }
 
-.pkpDropdownMenu__items {
+.PkpDropdownMenu__items {
 	background-color: @bg;
 	border-radius: @radius;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-.pkpDropdownMenu__item {
+.PkpDropdownMenu__item {
 	font-size: @font-sml;
 	color: @primary;
 	padding: @half @base;
 }
 
-.pkpDropdownMenu__item:hover:not([data-disabled]) {
+.PkpDropdownMenu__item:hover:not([data-disabled]) {
 	background-color: @bg-shade;
 }
 
-.pkpDropdownMenu__item[data-disabled] {
+.PkpDropdownMenu__item[data-disabled] {
 	color: @text-light;
 }

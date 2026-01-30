@@ -1,7 +1,41 @@
 @import (reference) "../components.less";
 
+/* --- Structural (required for layout) --- */
+.PkpComments__messages {
+	display: flex;
+	flex-direction: column;
+}
+
+.PkpComments__messageHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.PkpComments__messageAuthor {
+	display: flex;
+	flex-direction: column;
+}
+
+.PkpComments__authorOrcid {
+	display: flex;
+	align-items: center;
+}
+
+.PkpComments__notificationNotLatest {
+	display: flex;
+	align-items: center;
+}
+
+.PkpComments__notificationNeedsApproval {
+	display: flex;
+	align-items: center;
+}
+
+/* --- Visual (customize these) --- */
+
 // Style the accordion trigger for comments version headers
-.pkpComments__version .PkpAccordionHeader__trigger {
+.PkpComments__version .PkpAccordionHeader__trigger {
     padding: @base;
     background-color: lighten(@bg-shade, 5%);
     border: 1px solid @bg-border-color;
@@ -12,21 +46,21 @@
 }
 
 // Version label text in primary color
-.pkpComments__version-header-label {
+.PkpComments__versionHeaderLabel {
     color: @primary;
     font-weight: @bold;
     font-size: @font-base;
 }
 
 // Chevron in primary color
-.pkpComments__version .PkpAccordionHeader__chevron {
+.PkpComments__version .PkpAccordionHeader__chevron {
     color: @primary;
 }
 
-.pkpComments__new {
+.PkpComments__new {
     margin-top: @base;
 
-    .pkpTextarea__element {
+    .PkpTextarea__element {
         padding: 0.5em;
         width: 100%;
         height: 8em;
@@ -37,20 +71,20 @@
     }
 }
 
-.pkpComments__new-submit {
+.PkpComments__newSubmit {
     margin-top: @base;
 }
 
-.pkpComments__log-into {
+.PkpComments__logInto {
     margin-top: @base;
 }
 
-.pkpComments__messages {
+.PkpComments__messages {
     margin-top: @double;
     gap: @base;
 }
 
-.pkpComments__notification-not-latest {
+.PkpComments__notificationNotLatest {
     font-size: @font-tiny;
     gap: @half;
     margin-top: @base;
@@ -67,7 +101,7 @@
 }
 
 
-.pkpComments__notification-needs-approval {
+.PkpComments__notificationNeedsApproval {
     color: @primary;
     font-size: @font-tiny;
     gap: @half;
@@ -79,35 +113,35 @@
     }
 }
 
-.pkpComments__message {
+.PkpComments__message {
     padding: @double;
     background-color: lighten(@bg-shade, 10%);
 	border-radius: @radius;
 }
 
-.pkpComments__message-header {
+.PkpComments__messageHeader {
     // structural styles in BaseComments.vue
 }
 
-.pkpComments__message-date {
+.PkpComments__messageDate {
     font-size: @font-tiny;
 }
 
-.pkpComments__message-body {
+.PkpComments__messageBody {
     margin-top: @double;
     white-space: pre-line;
 }
 
-.pkpComments__message-author {
+.PkpComments__messageAuthor {
     margin-top: @double;
 }
-.pkpComments__author-name {
+.PkpComments__authorName {
     margin-top: @half;
     font-weight: @bold;
     font-size: @font-sml;
 }
 
-.pkpComments__author-orcid {
+.PkpComments__authorOrcid {
     color: @text-light;
     font-size: @font-tiny;
     column-gap: 0.2rem;
@@ -118,24 +152,23 @@
     }
 }
 
-.pkpComments__author-affiliation {
+.PkpComments__authorAffiliation {
     font-size: @font-tiny;
 }
 
-.pkpCommentReportDialog__author {
+.PkpCommentReportDialog__author {
     font-size: @font-sml;
     color: @text-light;
 }
 
-.pkpCommentReportDialog__comment-text {
+.PkpCommentReportDialog__commentText {
     margin-bottom: @double;
 }
 
-.pkpCommentReportDialog__reason-input {
+.PkpCommentReportDialog__reasonInput {
     &:extend(.cmp_form all);
 }
 
-.pkpScrollToComments {
+.PkpScrollToComments {
     gap: @double;
 }
-

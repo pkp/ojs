@@ -3,13 +3,13 @@
 // ============================================
 // Open Review Styles
 // ============================================
-.pkpOpenReview {
+.PkpOpenReview {
     display: flex;
     flex-direction: column;
     gap: @double;
 }
 
-.pkpOpenReview__tabs-header {
+.PkpOpenReview__tabsHeader {
     display: flex;
     align-items: center;
     gap: @base;
@@ -17,19 +17,19 @@
     border-bottom: 1px solid @bg-border-color;
 }
 
-.pkpOpenReview__tabs-label {
+.PkpOpenReview__tabsLabel {
     font-size: @font-sml;
     color: @text-light;
 }
 
-.pkpOpenReview__tabs-list {
+.PkpOpenReview__tabsList {
     display: flex;
     background: @bg-shade;
     border-radius: @radius;
     padding: @half;
 }
 
-.pkpOpenReview__tabs-list .PkpTabTrigger {
+.PkpOpenReview__tabsList .PkpTabTrigger {
     padding: @half @base;
     font-size: @font-sml;
     font-weight: @bold;
@@ -37,20 +37,20 @@
     color: @text;
 }
 
-.pkpOpenReview__tabs-list .PkpTabTrigger:hover {
+.PkpOpenReview__tabsList .PkpTabTrigger:hover {
     background: darken(@bg-shade, 5%);
 }
 
-.pkpOpenReview__tabs-list .PkpTabTrigger[data-state='active'] {
+.PkpOpenReview__tabsList .PkpTabTrigger[data-state='active'] {
     background: @bg;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-.pkpOpenReview__tabs-list .PkpTabTrigger[data-state='active']::after {
+.PkpOpenReview__tabsList .PkpTabTrigger[data-state='active']::after {
     display: none;
 }
 
-.pkpOpenReview__heading {
+.PkpOpenReview__heading {
     font-size: @font-bump;
     font-weight: @bold;
     color: @text;
@@ -58,7 +58,7 @@
 }
 
 // Details/Summary (accordion replacement)
-.pkpOpenReview__details {
+.PkpOpenReview__details {
     border: 1px solid @bg-border-color;
     border-radius: @radius;
     background: @bg;
@@ -66,11 +66,11 @@
     margin-top: @base;
 }
 
-.pkpOpenReview__details:first-of-type {
+.PkpOpenReview__details:first-of-type {
     margin-top: 0;
 }
 
-.pkpOpenReview__summary {
+.PkpOpenReview__summary {
     display: flex;
     flex-direction: column;
     gap: @half;
@@ -83,15 +83,15 @@
     position: relative;
 }
 
-.pkpOpenReview__summary::-webkit-details-marker {
+.PkpOpenReview__summary::-webkit-details-marker {
     display: none;
 }
 
-.pkpOpenReview__summary::marker {
+.PkpOpenReview__summary::marker {
     content: '';
 }
 
-.pkpOpenReview__summary::after {
+.PkpOpenReview__summary::after {
     content: '';
     position: absolute;
     right: @base;
@@ -104,49 +104,49 @@
     transition: transform 0.2s ease;
 }
 
-.pkpOpenReview__details[open] > .pkpOpenReview__summary::after {
+.PkpOpenReview__details[open] > .PkpOpenReview__summary::after {
     transform: rotate(-135deg);
 }
 
-.pkpOpenReview__summary:hover {
+.PkpOpenReview__summary:hover {
     background: lighten(@bg-shade, 5%);
 }
 
-.pkpOpenReview__summary:focus-visible {
+.PkpOpenReview__summary:focus-visible {
     outline: 2px solid @primary;
     outline-offset: -2px;
 }
 
-.pkpOpenReview__content {
+.PkpOpenReview__content {
     padding: 0 @base @base @base;
 }
 
 // Header title group
-.pkpOpenReview__header-title {
+.PkpOpenReview__headerTitle {
     margin: 0;
 }
 
-.pkpOpenReview__header-title h3 {
+.PkpOpenReview__headerTitle h3 {
     font-weight: @bold;
     font-size: @font-base;
     color: @text;
     margin: 0;
 }
 
-.pkpOpenReview__header-title p {
+.PkpOpenReview__headerTitle p {
     font-size: @font-sml;
     color: @text-light;
     margin: @half 0 0;
 }
 
-.pkpOpenReview__review-count {
+.PkpOpenReview__reviewCount {
     font-size: @font-sml;
     color: @text-light;
     margin: @half 0 0;
 }
 
 // Stats list (review summary icons)
-.pkpOpenReview__stats {
+.PkpOpenReview__stats {
     display: flex;
     gap: @base;
     margin: @half 0 0;
@@ -154,42 +154,42 @@
     list-style: none;
 }
 
-.pkpOpenReview__stats li {
+.PkpOpenReview__stats li {
     display: inline-flex;
     align-items: center;
     gap: @half;
     font-size: @font-tiny;
 }
 
-.pkpOpenReview__stats .PkpIcon {
+.PkpOpenReview__stats .PkpIcon {
     width: 1rem;
     height: 1rem;
 }
 
-.pkpOpenReview__stats [data-recommendation='approved'] .PkpIcon {
+.PkpOpenReview__stats [data-recommendation='approved'] .PkpIcon {
     color: #0d6d3d;
 }
 
-.pkpOpenReview__stats [data-recommendation='revisions_requested'] .PkpIcon {
+.PkpOpenReview__stats [data-recommendation='revisions_requested'] .PkpIcon {
     color: #b45309;
 }
 
-.pkpOpenReview__stats [data-recommendation='not_approved'] .PkpIcon {
+.PkpOpenReview__stats [data-recommendation='not_approved'] .PkpIcon {
     color: #dc2626;
 }
 
-.pkpOpenReview__stats [data-recommendation='with_comments'] .PkpIcon {
+.PkpOpenReview__stats [data-recommendation='with_comments'] .PkpIcon {
     color: #2563eb;
 }
 
 // Reviews list
-.pkpOpenReview__list {
+.PkpOpenReview__list {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.pkpOpenReview__list li {
+.PkpOpenReview__list li {
     display: flex;
     align-items: center;
     gap: @base;
@@ -197,12 +197,12 @@
     border-top: 1px solid @bg-border-color;
 }
 
-.pkpOpenReview__list li:first-child {
+.PkpOpenReview__list li:first-child {
     border-top: none;
 }
 
 // Status badge
-.pkpOpenReview__status {
+.PkpOpenReview__status {
     display: inline-flex;
     align-items: center;
     gap: @half;
@@ -212,37 +212,37 @@
     white-space: nowrap;
 }
 
-.pkpOpenReview__status .PkpIcon {
+.PkpOpenReview__status .PkpIcon {
     width: 1.125rem;
     height: 1.125rem;
 }
 
-.pkpOpenReview__status[data-recommendation='approved'] .PkpIcon {
+.PkpOpenReview__status[data-recommendation='approved'] .PkpIcon {
     color: #0d6d3d;
 }
 
-.pkpOpenReview__status[data-recommendation='revisions_requested'] .PkpIcon {
+.PkpOpenReview__status[data-recommendation='revisions_requested'] .PkpIcon {
     color: #b45309;
 }
 
-.pkpOpenReview__status[data-recommendation='not_approved'] .PkpIcon {
+.PkpOpenReview__status[data-recommendation='not_approved'] .PkpIcon {
     color: #dc2626;
 }
 
-.pkpOpenReview__status[data-recommendation='with_comments'] .PkpIcon {
+.PkpOpenReview__status[data-recommendation='with_comments'] .PkpIcon {
     color: #2563eb;
 }
 
 // Reviewer info
-.pkpOpenReview__reviewer,
-.pkpOpenReview__version {
+.PkpOpenReview__reviewer,
+.PkpOpenReview__version {
     font-weight: @bold;
     font-size: @font-sml;
     color: @text;
 }
 
-.pkpOpenReview__affiliation,
-.pkpOpenReview__date {
+.PkpOpenReview__affiliation,
+.PkpOpenReview__date {
     flex: 1;
     font-size: @font-sml;
     color: @text-light;
@@ -275,36 +275,36 @@
 // ============================================
 
 // Style the dialog container when it contains this modal
-.pkpDialog__content:has(.pkpOpenReviewModal) {
+.PkpDialog__content:has(.PkpOpenReviewModal) {
     width: 80vw;
     max-width: 800px;
 }
 
-.pkpOpenReviewModal {
+.PkpOpenReviewModal {
     display: flex;
     flex-direction: column;
 }
 
-.pkpOpenReviewModal__header {
+.PkpOpenReviewModal__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: @base;
 }
 
-.pkpOpenReviewModal__title {
+.PkpOpenReviewModal__title {
     font-size: @font-bump;
     font-weight: @bold;
     margin: 0;
     color: @text;
 }
 
-.pkpOpenReviewModal__nav {
+.PkpOpenReviewModal__nav {
     display: flex;
     gap: @half;
 }
 
-.pkpOpenReviewModal__nav-btn {
+.PkpOpenReviewModal__navBtn {
     width: 2.5rem;
     height: 2.5rem;
     display: flex;
@@ -318,20 +318,20 @@
     cursor: pointer;
 }
 
-.pkpOpenReviewModal__nav-btn:hover:not(:disabled) {
+.PkpOpenReviewModal__navBtn:hover:not(:disabled) {
     background: @bg-shade;
 }
 
-.pkpOpenReviewModal__nav-btn:disabled {
+.PkpOpenReviewModal__navBtn:disabled {
     opacity: 0.4;
     cursor: not-allowed;
 }
 
-.pkpOpenReviewModal__meta {
+.PkpOpenReviewModal__meta {
     margin-bottom: @double;
 }
 
-.pkpOpenReviewModal__reviewer {
+.PkpOpenReviewModal__reviewer {
     display: flex;
     align-items: center;
     gap: @half;
@@ -341,73 +341,73 @@
     margin-bottom: @half;
 }
 
-.pkpOpenReviewModal__recommendation-icon {
+.PkpOpenReviewModal__recommendationIcon {
     width: 1.25rem;
     height: 1.25rem;
 }
 
-.pkpOpenReviewModal__recommendation-icon[data-recommendation='approved'] {
+.PkpOpenReviewModal__recommendationIcon[data-recommendation='approved'] {
     color: #0d6d3d;
 }
 
-.pkpOpenReviewModal__recommendation-icon[data-recommendation='revisions_requested'] {
+.PkpOpenReviewModal__recommendationIcon[data-recommendation='revisions_requested'] {
     color: #b45309;
 }
 
-.pkpOpenReviewModal__recommendation-icon[data-recommendation='not_approved'] {
+.PkpOpenReviewModal__recommendationIcon[data-recommendation='not_approved'] {
     color: #dc2626;
 }
 
-.pkpOpenReviewModal__recommendation-icon[data-recommendation='with_comments'] {
+.PkpOpenReviewModal__recommendationIcon[data-recommendation='with_comments'] {
     color: #2563eb;
 }
 
-.pkpOpenReviewModal__affiliation {
+.PkpOpenReviewModal__affiliation {
     font-size: @font-sml;
     color: @text-light;
     margin-bottom: @half;
 }
 
-.pkpOpenReviewModal__version {
+.PkpOpenReviewModal__version {
     font-size: @font-sml;
     color: @text-light;
 }
 
-.pkpOpenReviewModal__content {
+.PkpOpenReviewModal__content {
     max-height: 60vh;
     overflow-y: auto;
     line-height: 1.6;
 }
 
-.pkpOpenReviewModal__comment {
+.PkpOpenReviewModal__comment {
     margin: 0 0 @base;
     color: @text;
 }
 
-.pkpOpenReviewModal__comment:last-child {
+.PkpOpenReviewModal__comment:last-child {
     margin-bottom: 0;
 }
 
-.pkpOpenReviewModal__form-question {
+.PkpOpenReviewModal__formQuestion {
     margin-bottom: @double;
 }
 
-.pkpOpenReviewModal__form-question:last-child {
+.PkpOpenReviewModal__formQuestion:last-child {
     margin-bottom: 0;
 }
 
-.pkpOpenReviewModal__form-question strong {
+.PkpOpenReviewModal__formQuestion strong {
     display: block;
     margin-bottom: @half;
     color: @text;
 }
 
-.pkpOpenReviewModal__form-question p {
+.PkpOpenReviewModal__formQuestion p {
     margin: 0 0 @half;
     color: @text;
 }
 
-.pkpOpenReviewModal__no-content {
+.PkpOpenReviewModal__noContent {
     color: @text-light;
     font-style: italic;
 }
