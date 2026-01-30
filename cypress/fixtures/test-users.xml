@@ -1,6 +1,11 @@
-<!DOCTYPE PKPUsers [
-  <!ELEMENT PKPUsers ANY>
-]>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  * cypress/fixtures/test-users.xml
+  *
+  * Copyright (c) 2014-2021 Simon Fraser University
+  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
+  *
+  -->
 <PKPUsers xmlns="http://pkp.sfu.ca"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pkp.sfu.ca pkp-users.xsd">
     <user_groups xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pkp.sfu.ca pkp-users.xsd">

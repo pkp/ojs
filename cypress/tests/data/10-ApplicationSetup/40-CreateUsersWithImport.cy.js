@@ -12,7 +12,7 @@ describe('Data suite tests', function() {
 		// Use the CLI import tool to quickly import users from XML
 		// This is much faster than creating users through the UI
 		cy.exec(
-			'php tools/importExport.php UserImportExportPlugin import cypress/tests/data/10-ApplicationSetup/test-users.xml publicknowledge',
+			'php tools/importExport.php UserImportExportPlugin import cypress/fixtures/test-users.xml publicknowledge',
 			{
 				timeout: 60000,
 				failOnNonZeroExit: true
