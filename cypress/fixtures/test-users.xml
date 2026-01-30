@@ -527,11 +527,6 @@
                 <date_start>2025-12-15 00:00:00</date_start>
                 <masthead>true</masthead>
             </user_user_group>
-            <user_user_group>
-                <user_group_ref>Reviewer</user_group_ref>
-                <date_start>2025-12-15 06:08:08</date_start>
-                <masthead>true</masthead>
-            </user_user_group>
         </user>
         <user>
             <givenname locale="en">Catherine</givenname>
@@ -555,11 +550,6 @@
                 <date_start>2025-12-15 00:00:00</date_start>
                 <masthead>true</masthead>
             </user_user_group>
-            <user_user_group>
-                <user_group_ref>Reviewer</user_group_ref>
-                <date_start>2025-12-15 06:08:37</date_start>
-                <masthead>true</masthead>
-            </user_user_group>
         </user>
         <user>
             <givenname locale="en">Sabine</givenname>
@@ -581,11 +571,6 @@
             <user_user_group>
                 <user_group_ref>Proofreader</user_group_ref>
                 <date_start>2025-12-15 00:00:00</date_start>
-                <masthead>true</masthead>
-            </user_user_group>
-            <user_user_group>
-                <user_group_ref>Reviewer</user_group_ref>
-                <date_start>2025-12-15 06:07:55</date_start>
                 <masthead>true</masthead>
             </user_user_group>
         </user>
