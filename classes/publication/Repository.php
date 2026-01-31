@@ -148,9 +148,9 @@ class Repository extends \PKP\publication\Repository
     }
 
     /** @copydoc \PKP\publication\Repository::version() */
-    public function version(Publication $publication, ?VersionStage $versionStage = null, bool $isMinorVersion = true): int
+    public function version(Publication $publication, ?VersionStage $versionStage = null, bool $isMinorVersion = true, ?int $submissionStatus = null): int
     {
-        $newId = parent::version($publication, $versionStage, $isMinorVersion);
+        $newId = parent::version($publication, $versionStage, $isMinorVersion, $submissionStatus);
 
         $context = Application::get()->getRequest()->getContext();
 
@@ -227,7 +227,7 @@ class Repository extends \PKP\publication\Repository
     }
 
     /** @copydoc \PKP\publication\Repository::delete() */
-    public function delete(Publication $publication)
+    public function delete(Publication $publication, false|int|null $submissionStatus = null): null
     {
         $galleys = Repo::galley()->getCollector()
             ->filterByPublicationIds([$publication->getId()])
