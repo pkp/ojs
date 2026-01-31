@@ -822,22 +822,7 @@
             <date_registered>2025-12-15 05:52:30</date_registered>
             <inline_help>true</inline_help>
             <user_user_group>
-                <user_group_ref>Journal manager</user_group_ref>
-                <date_start>2025-12-15 00:00:00</date_start>
-                <masthead>true</masthead>
-            </user_user_group>
-            <user_user_group>
-                <user_group_ref>Journal editor</user_group_ref>
-                <date_start>2025-12-15 00:00:00</date_start>
-                <masthead>true</masthead>
-            </user_user_group>
-            <user_user_group>
                 <user_group_ref>Production editor</user_group_ref>
-                <date_start>2025-12-15 00:00:00</date_start>
-                <masthead>true</masthead>
-            </user_user_group>
-            <user_user_group>
-                <user_group_ref>Section editor</user_group_ref>
                 <date_start>2025-12-15 00:00:00</date_start>
                 <masthead>true</masthead>
             </user_user_group>
