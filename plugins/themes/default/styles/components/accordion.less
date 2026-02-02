@@ -14,15 +14,17 @@
 	cursor: pointer;
 }
 
-.PkpAccordionHeader__chevron {
+.PkpAccordionHeader__indicator {
+	display: flex;
+	flex-shrink: 0;
 	transition: transform 0.2s;
 }
 
-.PkpAccordionHeader__chevron svg {
+.PkpAccordionHeader__indicator svg {
 	width: 1rem;
 	height: 1rem;
 }
 
-[data-state='open'] > .PkpAccordionHeader__trigger .PkpAccordionHeader__chevron {
+[data-state='open'] > .PkpAccordionHeader__trigger .PkpAccordionHeader__indicator {
 	transform: rotate(180deg);
 }

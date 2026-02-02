@@ -32,6 +32,11 @@
 	align-items: center;
 }
 
+.PkpScrollToComments {
+	display: flex;
+	flex-direction: column;
+}
+
 /* --- Visual (customize these) --- */
 
 // Style the accordion trigger for comments version headers
@@ -52,8 +57,8 @@
     font-size: @font-base;
 }
 
-// Chevron in primary color
-.PkpComments__version .PkpAccordionHeader__chevron {
+// Indicator in primary color
+.PkpComments__version .PkpAccordionHeader__indicator {
     color: @primary;
 }
 
@@ -117,10 +122,6 @@
     padding: @double;
     background-color: lighten(@bg-shade, 10%);
 	border-radius: @radius;
-}
-
-.PkpComments__messageHeader {
-    // structural styles in BaseComments.vue
 }
 
 .PkpComments__messageDate {
