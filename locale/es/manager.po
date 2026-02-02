@@ -967,7 +967,7 @@ msgstr ""
 "privacidad, seguridad y otros."
 
 msgid "manager.setup.printIssn"
-msgstr "Imprimir ISSN"
+msgstr "ISSN impreso"
 
 msgid "manager.setup.proofingInstructions"
 msgstr "Instrucciones de corrección de pruebas"
