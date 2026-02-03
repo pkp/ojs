@@ -405,7 +405,7 @@ class IssueHandler extends Handler
         $issueAction = new IssueAction();
         $subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
         $subscribedUser = $issueAction->subscribedUser($user, $journal);
-        $subscribedDomain = $issueAction->subscribedDomain($request, $journal);
+        $subscribedDomain = $issueAction->subscribedDomain($request, $journal, $issue->getId());
 
         if ($subscriptionRequired && !$subscribedUser && !$subscribedDomain) {
             $templateMgr->assign('subscriptionExpiryPartial', true);
