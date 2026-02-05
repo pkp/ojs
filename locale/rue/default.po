@@ -2,7 +2,7 @@
 # Monika Tylawska <monika.tylawska@gmail.com>, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-01-07 18:12+0000\n"
+"PO-Revision-Date: 2026-02-05 12:42+0000\n"
 "Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/default/rue/>"
 "\n"
@@ -94,3 +94,100 @@ msgstr ""
 "часописа або - кєд сут уж зареґіструваны - просто <a href=\"{$indexUrl}/"
 "index/login\">ся залоґувати </a>і зачати пятьоетаповый процес зголашаня "
 "статі."
+
+msgid "default.groups.name.manager"
+msgstr "Адміністратор часописа"
+
+msgid "default.groups.plural.editor"
+msgstr "Редакторы часописа"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Менаґер субскрибциі"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Аналіза даных"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Рецнезенты"
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"Заохочуєме бібліотекарів до доданя того часописа до свойой колекциі цифровых "
+"часописів. Вартат тіж спомянути, же тот систем публикаций в отвореным "
+"доступі остал запроєктуваный з думком про науковы бібліотекы, жебы іх "
+"науковы робітникы могли з него користати в часописах, в котрых роблят (see "
+"<a href=\"https://pkp.sfu.ca/ojs\">Open Journal Systems</a>)."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"Тот часопис користат з систему LOCKSS цілю створіня дистрибуциі архівів в "
+"бібліотеках, якы берут участ в проєкті, як тіж дає можніст тым бібліотекам "
+"творіня сталых архівів часописа для цілів забезпечыня і одтворюваня засобів. "
+"<a href=\"https://www.lockss.org\">More...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"Тот часопис користат з цистему CLOCKSS в ціли створіня розпрошеной системы "
+"архівізациі в бібліотеках, якы берут участ в проєкті як тіж дає можніст тым "
+"бібліотекам творіня сталых архівів часописа для цілів забезпечыня і "
+"одтворюваня засобів. <a href=\"https://clockss.org\">"
+
+msgid "default.groups.plural.manager"
+msgstr "Адміністраторы часописа"
+
+msgid "default.groups.abbrev.manager"
+msgstr "Адмін"
+
+msgid "default.groups.name.editor"
+msgstr "Редактор часописа"
+
+msgid "default.groups.abbrev.editor"
+msgstr "Ред"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Редактор гіст"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Гостинны редакторы"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "Ред Г"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Редактор ділу"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Редакторы ділу"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "РедД"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Менаґеры субскрибциі"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "СубМ"
+
+msgid "default.genres.researchInstrument"
+msgstr "Дослідниче нарядя"
+
+msgid "default.genres.researchMaterials"
+msgstr "Дослідничы метриялы"
+
+msgid "default.genres.researchResults"
+msgstr "Результаты досліджынь"
+
+msgid "default.genres.transcripts"
+msgstr "Транскрипциі"
+
+msgid "default.genres.dataSet"
+msgstr "Зоставліня даных"
+
+msgid "default.genres.sourceTexts"
+msgstr "Джерельны коды"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Рецензент"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "Рец"
