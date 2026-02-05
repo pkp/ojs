@@ -1,8 +1,8 @@
 # rl <biuro@fimagis.pl>, 2025.
-# Monika Tylawska <monika.tylawska@gmail.com>, 2025.
+# Monika Tylawska <monika.tylawska@gmail.com>, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-11-18 19:16+0000\n"
+"PO-Revision-Date: 2026-02-05 12:42+0000\n"
 "Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/author/rue/>\n"
 "Language: rue\n"
@@ -23,3 +23,153 @@ msgstr "Нове зголошыня"
 
 msgid "author.track"
 msgstr "Актывны зголошыня"
+
+msgid "author.submit.startHereLink"
+msgstr ""
+"<a href=\"{$submitUrl}\" class=\"action\">Притисний гев</a> жебы перейти до "
+"карты зголошыня."
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr ""
+"Подай сутьови слова для зголошеного тексту. Поєдны сутьови слова треба "
+"одділити серединиками (сутьове слово; сутьове слово; сутьове слово)."
+
+msgid "author.submit.step3"
+msgstr "Крок 3. Введ метадны зголошыня"
+
+msgid "author.submit.coverageInstructions"
+msgstr ""
+"Оприділят ґеоґрафічну (ґео-просторну) локалізацию, хронолоґічный або "
+"історичный закрес як тіж/або характеристыку дослідничой пробы."
+
+msgid "author.submit.step5"
+msgstr "Крок 5. Потведжыня зголошыня"
+
+msgid "author.submit.notAccepting"
+msgstr "Часопис не принимат тепер новых зголошынь."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Подай абстракт пересланого тексту."
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "Прошу пояснити чом заплата повинна остати принята до звільніня з нєй."
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "В едициі: Выслано просьбу о провіріня кінцьовой версиі"
+
+msgid "author.submit.startHereTitle"
+msgstr "Першлий зміст до публикациі в часописі"
+
+msgid "author.submit.step1"
+msgstr "Крок 1. Початок процедуры зголошыня"
+
+msgid "author.submit.step2"
+msgstr "Крок 2. Перешлий плік"
+
+msgid "author.submit.step4"
+msgstr "Крок 4. Першлий додатковы плікы"
+
+msgid "author.submit.step4a"
+msgstr "Крок 4а. Додай плік, котры буде узуполніньом"
+
+msgid "author.submit.start"
+msgstr "Старт"
+
+msgid "author.submit.upload"
+msgstr "Перешлий плік"
+
+msgid "author.submit.metadata"
+msgstr "Введ метадны"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Перешлий додатковы плікы"
+
+msgid "author.submit.nextSteps"
+msgstr "Слідуючы крокы"
+
+msgid "author.submit.requestWaiver"
+msgstr "Просьба о звільніня з оплаты"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "Прошу о звільніня з оплаты за зголошыня статі"
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "Кєд вносиш о звільніня з заплаты, мусиш подати поясніня."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "В рецензиі, етап {$round}"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "В рецензиі: Вымагана коректа"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "В коректі: Выслано просьбу о коректу"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Перешлий версию по коректі"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Коректа пліку до публикациі"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Ци на певно хочеш усунути тото некомплетне зглошыня?"
+
+msgid "author.submissions.viewStatus"
+msgstr "Вкаж статус тексту"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Брак пересланых текстів."
+
+msgid "author.submit.journalSection"
+msgstr "Діл часописа"
+
+msgid "author.submit.verifyChecklist"
+msgstr ""
+"Жебы піти дальше, мусиш мати певніст, же вшыткы пункты на контрольній листі "
+"остали сполнены."
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr ""
+"Жебы іти дальше треба заакцептувати варункы осцідчыня о авторскых правах."
+
+msgid "submission.submit.coverNote"
+msgstr "Відоміст для редактора"
+
+msgid "author.submit.comments"
+msgstr "Впиш коментар дла редактора (опцийональне)"
+
+msgid "author.submit.form.localeRequired"
+msgstr "Прошу выбрати язык зголошыня."
+
+msgid "author.submit.reorderInstructions"
+msgstr ""
+"Змін чергу авторів так, жебы была згідна з чергом в якій мают быти вымінены "
+"в публикациі."
+
+msgid "author.submit.reorder"
+msgstr "Змін чергу высвітляня авторів."
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Головный адрес до редакцийной кореспонденциі."
+
+msgid "author.submit.addAuthor"
+msgstr "Додай автора"
+
+msgid "author.submit.deleteAuthor"
+msgstr "Усун автора"
+
+msgid "author.submit.languageInstructions"
+msgstr ""
+"Анґлийскій=анґ; Французскій=фр; Іспанскій=ісп.<a href=\"https://www.loc.gov/"
+"standards/iso639-2/php/code_list.php\" target=\"_blank\">Остальны коды</a>."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Вымаганый є хоц єден автор."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr ""
+"Мено, назвиско як тіж адрес елктронной почты сут вымаганы для каждого з "
+"авторів."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Подай наголовок пересланого тексту."
