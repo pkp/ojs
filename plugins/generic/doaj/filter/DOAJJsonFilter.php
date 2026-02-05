@@ -62,7 +62,7 @@ class DOAJJsonFilter extends PKPImportExportFilter
         // Article JSON example bibJson https://github.com/DOAJ/harvester/blob/9b59fddf2d01f7c918429d33b63ca0f1a6d3d0d0/service/tests/fixtures/article.py
         // S. also https://doaj.github.io/doaj-docs/master/data_models/IncomingAPIArticle
 
-        if (is_a($pubObject, 'Submission')) {
+        if (is_a($pubObject, Submission::class)) {
             $publication = $pubObject->getCurrentPublication();
             /** @var Submission $article */
             $article = $pubObject;
