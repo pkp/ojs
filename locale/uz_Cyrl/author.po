@@ -1,0 +1,303 @@
+# Jurayev Tuychi <jurayevtuychi@gmail.com>, 2022.
+# Shoyim Obloqulov <obloqulovshoyim1@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-05-10 10:56+0000\n"
+"Last-Translator: Jurayev Tuychi <jurayevtuychi@gmail.com>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/author/"
+"uz_UZ@cyrillic/>\n"
+"Language: uz_UZ@cyrillic\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "author.submit"
+msgstr "Янги ариза юбориш"
+
+msgid "author.track"
+msgstr "Фаол мақолалар"
+
+msgid "author.submit.submitArticle"
+msgstr "Мақола юборинг"
+
+msgid "author.submit.stepsToSubmit"
+msgstr "Юбориш босқичлари"
+
+msgid "author.submit.startHereTitle"
+msgstr "Янги тақдимотни бошланг"
+
+msgid "author.submit.startHereLink"
+msgstr "Янги ариза юбориш учун бу ерни босинг (Биринчи қадамга ўтиш)."
+
+msgid "author.submit.step1"
+msgstr "1-қадам. Аризани жўнатишни бошланг"
+
+msgid "author.submit.step2"
+msgstr "2-қадам. Ариза файлини юклаш"
+
+msgid "author.submit.step3"
+msgstr "3-қадам. Ариза метамаълумотларини киритинг"
+
+msgid "author.submit.step4"
+msgstr "4-қадам. Қўшимча файлларни юклаш"
+
+msgid "author.submit.step4a"
+msgstr "4а-қадам. Қўшимча файлларни юклаш"
+
+msgid "author.submit.step5"
+msgstr "5-қадам. Тасдиқлаш"
+
+msgid "author.submit.start"
+msgstr "Бошлаш"
+
+msgid "author.submit.upload"
+msgstr "Юклаш"
+
+msgid "author.submit.metadata"
+msgstr "Маълумотни киритинг"
+
+msgid "author.submit.supplementaryFiles"
+msgstr "Қўшимча файлларни юклаш"
+
+msgid "author.submit.nextSteps"
+msgstr "Кейинги қадамлар"
+
+msgid "author.submit.notAccepting"
+msgstr "Бу журнал ҳозирда мақолаларни қабул қилмаяпти."
+
+msgid "author.submit.requestWaiver"
+msgstr "Тўловдан воз кечишни сўраш"
+
+msgid "author.submit.qualifyForWaiver"
+msgstr "Илтимос, ушбу мақола учун мақола топшириш тўловидан воз кечишни ўйлаб кўринг"
+
+msgid "author.submit.addReasonsForWaiver"
+msgstr "Илтимос, нима учун тўловлардан воз кечиш кераклигини кўрсатиш учун қуйидаги шарҳлар майдонидан фойдаланинг."
+
+msgid "author.submit.mustEnterWaiverReason"
+msgstr "Агар сиз воз кечиш учун ариза бераётган бўлсангиз, берилган майдонга сабабни киритишингиз керак."
+
+msgid "author.submissions.queuedReviewSubsequent"
+msgstr "Кўриб чиқиш босқичида"
+
+msgid "author.submissions.queuedReviewRevisions"
+msgstr "Кўриб чиқишда: Таҳрир қилиш керак"
+
+msgid "author.submissions.queuedEditingCopyedit"
+msgstr "Таҳрирлашда: Нусхалаш сўралган"
+
+msgid "author.submissions.queuedEditingProofread"
+msgstr "Таҳрирлашда: Текшириш талаб қилинади"
+
+msgid "author.submissions.uploadCopyeditedVersion"
+msgstr "Нусхаланган версияни юкланг"
+
+msgid "author.submissions.proofreadingCorrections"
+msgstr "Корректорлик тузатишлари"
+
+msgid "author.submissions.confirmDelete"
+msgstr "Ҳақиқатан ҳам бу тўлиқ бўлмаган юборишни ўчириб ташламоқчимисиз?"
+
+msgid "author.submissions.viewStatus"
+msgstr "Ҳолатни кўриш"
+
+msgid "author.submissions.noSubmissions"
+msgstr "Мақола йўқ"
+
+msgid "author.submit.journalSection"
+msgstr "Журнал бўлими"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Ушбу ариза учун тегишли бўлимни танланг."
+
+msgid "author.submit.verifyChecklist"
+msgstr "Давом этишдан олдин назорат рўйхатидаги барча бандлар бажарилганлигига ишонч ҳосил қилинг."
+
+msgid "author.submit.copyrightNoticeAgreeRequired"
+msgstr "Давом этишдан олдин Муаллифлик ҳуқуқи эслатмаси шартларига рози бўлишингиз керак."
+
+msgid "submission.submit.coverNote"
+msgstr "Муҳаррир учун шарҳлар"
+
+msgid "author.submit.comments"
+msgstr "Муҳаррир учун шарҳларни киритинг (ихтиёрий)"
+
+msgid "author.submit.form.localeRequired"
+msgstr "Илтимос, ариза тилини танланг."
+
+msgid "author.submit.reorderInstructions"
+msgstr "Муаллифларни нашрда пайдо бўладиган кетма-кетликда қайта тартибланг."
+
+msgid "author.submit.reorder"
+msgstr "Муаллифлар тартибини ўзгартириш"
+
+msgid "author.submit.selectPrincipalContact"
+msgstr "Муҳаррир билан боғланиш учун асосий шахсни танланг."
+
+msgid "author.submit.addAuthor"
+msgstr "Муаллиф қўшиш"
+
+msgid "author.submit.deleteAuthor"
+msgstr "Муаллифни ўчириш"
+
+msgid "author.submit.submissionIndexingDescription"
+msgstr "Аризани индекслаш учун терминларни киритинг; терминларни нуқтали вергул билан ажратинг (термин1; термин2; термин3)."
+
+msgid "author.submit.coverageInstructions"
+msgstr "Тадқиқот объектининг гео-фазовий, хронологик ёки тарихий қамровини кўрсатинг."
+
+msgid "author.submit.languageInstructions"
+msgstr "Инглиз тили=en; Француз тили=fr; Ўзбек тили=uz. Қўшимча тил кодларини қаранг."
+
+msgid "author.submit.form.authorRequired"
+msgstr "Камида битта муаллиф кўрсатилиши шарт."
+
+msgid "author.submit.form.authorRequiredFields"
+msgstr "Ҳар бир муаллифнинг исми, фамилияси ва электрон почта манзили киритилиши шарт."
+
+msgid "author.submit.form.titleRequired"
+msgstr "Илтимос, мақола сарлавҳасини киритинг."
+
+msgid "author.submit.form.abstractRequired"
+msgstr "Илтимос, мақола аннотациясини киритинг."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "Сиз ушбу бўлим учун белгиланган сўз лимитидан ошиб кетдингиз."
+
+msgid "author.submit.submissionFile"
+msgstr "Ариза файли"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Ариза файлини юклаш"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Ариза файлини алмаштириш"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Ҳеч қандай ариза файли юкланмаган."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "Ҳақиқатан ҳам ариза файлини юкламасдан давом этмоқчимисиз?"
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr "Ушбу ихтиёрий босқич аризага қўшимча файлларни қўшиш имконини беради."
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr "Файлни юклаш учун «Сақлаш» тугмасини босинг."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr "Қўшимча файлни юкламасдан давом этмоқчимисиз?"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Ҳеч қандай қўшимча файллар қўшилмаган."
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Қўшимча файлларга қайтиш"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Ҳақиқатан ҳам ушбу қўшимча файлни ўчириб ташламоқчимисиз?"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Қўшимча файлни юклаш"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Қўшимча файл қўшиш"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Қўшимча файлни таҳрирлаш"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Қўшимча файл метамаълумотлари"
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr "Ушбу қўшимча материални индекслаш учун метамаълумотларни тақдим этинг."
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Қўшимча файл"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Файл яратувчиси (ёки эгаси)"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Тадқиқот воситаси"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Тадқиқот материаллари"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Тадқиқот натижалари"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Стенограммалар"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Маълумотлар таҳлили"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Маълумотлар тўплами"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Манба матни"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Қисқача тавсиф"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr "Файлни тақризчиларга тақдим этиш (анонимликни бузмаган ҳолда)."
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Фақат расмий нашр этилган материаллар билан ишлатинг."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Маълумотлар тўпланган ёки асбоб яратилган сана."
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Тадқиқот номи ёки бошқа келиб чиқиш манбаси."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Бошқасини кўрсатинг"
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Файл юкланмаган."
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Илтимос, ушбу қўшимча файл сарлавҳасини киритинг."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Илтимос, мавзуни киритинг."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Илтимос, тавсифни киритинг."
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "Қўшимча файлнинг оммавий идентификатори аллақачон мавжуд."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Қўшимча файлнинг оммавий идентификатори"
+
+msgid "author.submit.filesSummary"
+msgstr "Файллар хулосаси"
+
+msgid "author.submit.finishSubmission"
+msgstr "Ариза юборишни якунлаш"
+
+msgid "author.submit.submissionComplete"
+msgstr "Ариза юбориш муваффақиятли якунланди. Журналга қизиқиш билдирганингиз учун ташаккур."
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Муаллиф версиясини юклаш"
+
+msgid "author.article.copyeditedFile"
+msgstr "Нусхаланган файл"
+
+msgid "author.article.authorRevisedFile"
+msgstr "Муаллиф файли"
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr ""
+"Ушбу журналга ариза топшириш учун фойдаланувчи ҳисоби талаб қилинади. Бу бизнинг "
+"муҳаррирларимизга юборилган хабарларингизни кузатиб бориш ва агар сизнинг "
+"аризангиз ҳолати ўзгарганда ёки сиздан қўшимча маълумот талаб этилса, сиз "
+"билан боғланиш имконини беради."
