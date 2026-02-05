@@ -488,7 +488,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.openWorkflowMenu('Version of Record 1.1', 'Title & Abstract');
 		cy.get('button').contains('Publish');
 
-		// Edit unpublished version's title
+		// Edit new published version's title
 		cy.setTinyMceContent('titleAbstract-title-control-en', 'The Signalling Theory Dividends Version 2');
 		cy.get('button').contains('Save').click();
 		cy.get('[role="status"]').contains('Saved');

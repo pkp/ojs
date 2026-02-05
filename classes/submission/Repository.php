@@ -103,7 +103,7 @@ class Repository extends \PKP\submission\Repository
         return $errors;
     }
 
-    public function updateStatus(Submission $submission, ?int $newStatus = null, ?Section $section = null)
+    public function updateStatus(Submission $submission, ?int $newStatus = null, ?Section $section = null): void
     {
         $oldStatus = $submission->getData('status');
         parent::updateStatus($submission, $newStatus, $section);
