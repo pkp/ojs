@@ -37,10 +37,10 @@ use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
+use PKP\publication\PKPPublication;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\Validation;
 use PKP\submission\GenreDAO;
-use PKP\submission\PKPSubmission;
 
 class IssueHandler extends Handler
 {
@@ -357,22 +357,7 @@ class IssueHandler extends Handler
 
         $genreDao = DAORegistry::getDAO('GenreDAO'); /** @var GenreDAO $genreDao */
         $primaryGenres = $genreDao->getPrimaryByContextId($journal->getId())->toArray();
-        $primaryGenreIds = array_map(function ($genre) {
-            return $genre->getId();
-        }, $primaryGenres);
-
-        // Show scheduled submissions if this is a preview
-        $allowedStatuses = [PKPSubmission::STATUS_PUBLISHED];
-        if (!$issue->getPublished()) {
-            $allowedStatuses[] = PKPSubmission::STATUS_SCHEDULED;
-        }
-
-        $issueSubmissions = Repo::submission()->getCollector()
-            ->filterByContextIds([$issue->getJournalId()])
-            ->filterByIssueIds([$issue->getId()])
-            ->filterByStatus($allowedStatuses)
-            ->orderBy(\APP\submission\Collector::ORDERBY_SEQUENCE, \APP\submission\Collector::ORDER_DIR_ASC)
-            ->getMany();
+        $primaryGenreIds = array_map(fn ($genre) => $genre->getId(), $primaryGenres);
 
         $sections = Repo::section()->getByIssueId($issue->getId());
         $issueSubmissionsInSection = [];
@@ -383,8 +368,22 @@ class IssueHandler extends Handler
                 'articles' => [],
             ];
         }
+
+        $issueSubmissions = Repo::submission()->getCollector()
+            ->filterByContextIds([$issue->getJournalId()])
+            ->filterByIssueIds([$issue->getId()])
+            ->orderBy(\APP\submission\Collector::ORDERBY_SEQUENCE, \APP\submission\Collector::ORDER_DIR_ASC)
+            ->getMany();
+
         foreach ($issueSubmissions as $submission) {
-            if (!$sectionId = $submission->getCurrentPublication()->getData('sectionId')) {
+            // Ensure that the publication is published, or the issue is being previewed, and that it has a section
+            $currentPublication = $submission->getCurrentPublication();
+            $status = $currentPublication->getData('status');
+            if (
+                !($sectionId = $currentPublication->getData('sectionId')) ||
+                ($issue->getPublished() && $status != PKPPublication::STATUS_PUBLISHED) ||
+                (!$issue->getPublished() && !in_array($status, [PKPPublication::STATUS_SCHEDULED, PKPPublication::STATUS_PUBLISHED]))
+            ) {
                 continue;
             }
             $issueSubmissionsInSection[$sectionId]['articles'][] = $submission;

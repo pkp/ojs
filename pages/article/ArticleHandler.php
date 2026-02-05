@@ -20,10 +20,12 @@ namespace APP\pages\article;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\handler\Handler;
+use APP\issue\Issue;
 use APP\issue\IssueAction;
 use APP\observers\events\UsageEvent;
 use APP\payment\ojs\OJSCompletedPaymentDAO;
 use APP\payment\ojs\OJSPaymentManager;
+use APP\publication\Publication;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
@@ -36,6 +38,7 @@ use PKP\core\Core;
 use PKP\core\PKPApplication;
 use PKP\core\PKPJwt as JWT;
 use PKP\db\DAORegistry;
+use PKP\galley\Galley;
 use PKP\orcid\OrcidManager;
 use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
@@ -51,27 +54,13 @@ use stdClass;
 
 class ArticleHandler extends Handler
 {
-    /** @var \APP\journal\Journal Context associated with the request */
-    public $context;
-
-    /** @var ?\APP\issue\Issue Issue associated with the request */
-    public $issue;
-
-    /** @var \APP\submission\Submission Submission associated with the request */
-    public $article;
-
-    /** @var \PKP\category\Category Category associated with the request */
+    public Journal $context;
+    public ?Issue $issue = null;
+    public Submission $article;
     public $categories;
-
-    /** @var \APP\publication\Publication Publication associated with the request */
-    public $publication;
-
-    /** @var \PKP\galley\Galley galley associated with the request */
-    public $galley;
-
-    /** @var int submissionFileId associated with the request */
-    public $submissionFileId;
-
+    public Publication $publication;
+    public ?Galley $galley = null;
+    public ?int $submissionFileId = null;
 
     /**
      * @copydoc PKPHandler::authorize()
@@ -129,8 +118,8 @@ class ArticleHandler extends Handler
 
         $user = $request->getUser();
 
-        // Serve 404 if no submission available OR submission is unpublished and no user is logged in OR submission is unpublished and we have a user logged in but the user does not have access to preview
-        if (!$submission || ($submission->getData('status') !== PKPSubmission::STATUS_PUBLISHED && !$user) || ($submission->getData('status') !== PKPSubmission::STATUS_PUBLISHED && $user && !Repo::submission()->canPreview($user, $submission))) {
+        // Serve 404 if no submission available
+        if (!$submission) {
             throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
         }
 
@@ -160,7 +149,8 @@ class ArticleHandler extends Handler
             $galleyId = $subPath;
         }
 
-        if ($this->publication->getData('status') !== PKPPublication::STATUS_PUBLISHED && !Repo::submission()->canPreview($user, $submission)) {
+        // Serve 404 if publication is unpublished and no user is logged in OR publication is unpublished and we have a user logged in but the user does not have access to preview
+        if ($this->publication->getData('status') !== PKPPublication::STATUS_PUBLISHED && (!$user || !Repo::submission()->canPreview($user, $submission))) {
             throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
         }
 
