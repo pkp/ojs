@@ -2,7 +2,7 @@
 # Monika Tylawska <monika.tylawska@gmail.com>, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-05 12:42+0000\n"
+"PO-Revision-Date: 2026-02-06 07:26+0000\n"
 "Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/author/rue/>\n"
 "Language: rue\n"
@@ -173,3 +173,38 @@ msgstr ""
 
 msgid "author.submit.form.titleRequired"
 msgstr "Подай наголовок пересланого тексту."
+
+msgid "author.submit.supplementaryFilesInstructions"
+msgstr ""
+"Тота опция дає можніст доданя узуполняючых пліків до зголошыня. Тоты плікы, "
+"можут мати довільный формат, можут обнимати: (а) дослідничы нарядя, (б) "
+"збіркы даных, котры сут згідны з варунками комісиі етыкы науковых "
+"досліджынь, (в) джерела, котры в інчый спосіб были бы недоступны для "
+"чытателів , (г) риціны і табелі, котрых не можна влучыти до самого тексту, "
+"або інчы материялы , котры вносят вклад в наукову роботу."
+
+msgid "author.submit.form.wordCountAlert"
+msgstr "Перекрочыл (а) єс максимальне чысло слів для абстрактів в тій секциі."
+
+msgid "author.submit.submissionFile"
+msgstr "Плік з текстом"
+
+msgid "author.submit.uploadSubmissionFile"
+msgstr "Перешлий плік з текстом"
+
+msgid "author.submit.replaceSubmissionFile"
+msgstr "Замін плік з текстом"
+
+msgid "author.submit.noSubmissionFile"
+msgstr "Плік з текстом не остал іщы высланый."
+
+msgid "author.submit.noSubmissionConfirm"
+msgstr "Ци напевно хочеш іти дальше без пересыланя пліку зголошыня?"
+
+msgid "author.submit.supplementaryFiles.saveToUpload"
+msgstr ""
+"Притисный Запиш, жебы переслати плік (пак буде мож додати натупны плікы)."
+
+msgid "author.submit.forgottenSubmitSuppFile"
+msgstr ""
+"Ци напевно хочеш іти дальше без пересыланя выбраного узуполняючого пліку?"
