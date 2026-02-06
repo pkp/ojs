@@ -2,7 +2,7 @@
 # Monika Tylawska <monika.tylawska@gmail.com>, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-06 09:23+0000\n"
+"PO-Revision-Date: 2026-02-06 23:18+0000\n"
 "Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/author/rue/>\n"
 "Language: rue\n"
@@ -229,3 +229,100 @@ msgstr "Поправ поміцничый плік"
 
 msgid "author.submit.supplementaryFileData"
 msgstr "Метаданы для поміцничых пліків"
+
+msgid "author.submit.suppFile.sourceText"
+msgstr "Джерельный текст"
+
+msgid "author.submit.suppFile.availableToPeers"
+msgstr ""
+"Удоступный плік рецензаентам (без метаданых), зато же не зламле тото "
+"принципів анонімовой рецензиі."
+
+msgid "author.submit.suppFile.noFile"
+msgstr "Ниякій плік не остал пересланый."
+
+msgid "author.suppFile.suppFilePublicIdentificationExists"
+msgstr "Публичный ідентыфікатор поміцничого пліку уж фунґує."
+
+msgid "author.submit.submissionComplete"
+msgstr ""
+"Зголошыня остало закінчене. Дякуєме за заінтересуваня публикацийом в "
+"{$journalTitle}."
+
+msgid "author.submit.authorSubmitLoginMessage"
+msgstr ""
+"До пересыланя текстів до того часопису вымагане є утворіня конта "
+"ужытковника. Дозвалят тото нашым редакторам на сліджыня Вашых зголошынь як "
+"тіж контактуваня ся з Вами в припадку зміны статусу зголошыня або коли "
+"вымаганы сут додатковы інформациі."
+
+msgid "author.submit.supplementaryFileDataDescription"
+msgstr ""
+"Жебы зідексувати додатковый материял, подай наступуючы даны для помічного "
+"пліку."
+
+msgid "author.submit.supplementaryFileUpload"
+msgstr "Поміцничый плік"
+
+msgid "author.submit.suppFile.createrOrOwner"
+msgstr "Творця (або властитель) пліку"
+
+msgid "author.submit.suppFile.researchInstrument"
+msgstr "Дослідниче нарядя"
+
+msgid "author.submit.suppFile.researchMaterials"
+msgstr "Дослідничы материялы"
+
+msgid "author.submit.suppFile.researchResults"
+msgstr "Результаты досліджынь"
+
+msgid "author.submit.suppFile.transcripts"
+msgstr "Транскрипция"
+
+msgid "author.submit.suppFile.dataAnalysis"
+msgstr "Аналіза даных"
+
+msgid "author.submit.suppFile.dataSet"
+msgstr "Збіркы даных"
+
+msgid "author.submit.suppFile.briefDescription"
+msgstr "Короткій опис"
+
+msgid "author.submit.suppFile.publisherDescription"
+msgstr "Стосувати выключні в припадку материялів формальні опубликуваных."
+
+msgid "author.submit.suppFile.dateDescription"
+msgstr "Дата зобраня даных або утворіня нарядя."
+
+msgid "author.submit.suppFile.sourceDescription"
+msgstr "Назва студиюм або джерела інчого походжыня."
+
+msgid "author.submit.suppFile.specifyOtherType"
+msgstr "Оприділь інчый рід"
+
+msgid "author.submit.suppFile.form.titleRequired"
+msgstr "Подай назву поміцничого пліку."
+
+msgid "author.submit.suppFile.form.subjectRequired"
+msgstr "Прошу подати тему."
+
+msgid "author.submit.suppFile.form.descriptionRequired"
+msgstr "Порошу подати опис."
+
+msgid "author.suppFile.publicSuppFileIdentifier"
+msgstr "Публичный ідентыфікатор поміцничого пліку"
+
+msgid "author.submit.filesSummary"
+msgstr "Підсумуваня"
+
+msgid "author.submit.finishSubmission"
+msgstr "Закінч зголошыня"
+
+msgid "author.article.uploadAuthorVersion"
+msgstr "Першлий поправлену версию"
+
+msgid "author.article.copyeditedFile"
+msgstr "Плік по коректі"
+
+msgid "author.article.authorRevisedFile"
+msgstr "Плік автора"
