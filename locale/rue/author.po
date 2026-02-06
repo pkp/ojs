@@ -2,7 +2,7 @@
 # Monika Tylawska <monika.tylawska@gmail.com>, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-06 07:26+0000\n"
+"PO-Revision-Date: 2026-02-06 09:23+0000\n"
 "Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/author/rue/>\n"
 "Language: rue\n"
@@ -208,3 +208,24 @@ msgstr ""
 msgid "author.submit.forgottenSubmitSuppFile"
 msgstr ""
 "Ци напевно хочеш іти дальше без пересыланя выбраного узуполняючого пліку?"
+
+msgid "author.submit.noSupplementaryFiles"
+msgstr "Пміцничы плікы не остали даоданы до того зголошыня."
+
+msgid "author.submit.backToSupplementaryFiles"
+msgstr "Верний до поміцничых пліків"
+
+msgid "author.submit.confirmDeleteSuppFile"
+msgstr "Ци напевно чочеш усунути поміцничый плік?"
+
+msgid "author.submit.uploadSuppFile"
+msgstr "Перешлий поміцничый плік"
+
+msgid "author.submit.addSupplementaryFile"
+msgstr "Додай поміцничый плік"
+
+msgid "author.submit.editSupplementaryFile"
+msgstr "Поправ поміцничый плік"
+
+msgid "author.submit.supplementaryFileData"
+msgstr "Метаданы для поміцничых пліків"
