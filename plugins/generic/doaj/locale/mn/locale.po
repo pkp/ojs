@@ -1,0 +1,55 @@
+# Gantulga <cybermon@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-02-07 06:31+0000\n"
+"Last-Translator: Gantulga <cybermon@gmail.com>\n"
+"Language-Team: Mongolian <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-doaj/mn/>\n"
+"Language: mn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.importexport.doaj.displayName"
+msgstr "DOAJ экспорт нэмэгдэл (Plugin)"
+
+msgid "plugins.importexport.doaj.description"
+msgstr "Сэтгүүлийг DOAJ-д зориулан экспортлох."
+
+msgid "plugins.importexport.doaj.export.contact"
+msgstr "Бүртгүүлэх талаар DOAJ-тай холбоо барих"
+
+msgid "plugins.importexport.doaj.registrationIntro"
+msgstr ""
+"Хэрэв та OJS систем дотроос өгүүлэл бүртгэхийг хүсвэл өөрийн DOAJ API "
+"түлхүүрийг оруулна уу. Үгүй бол та өгүүллүүдийг DOAJ XML форматаар "
+"экспортлох боломжтой хэвээр байх боловч OJS дотроос DOAJ-д шууд бүртгэх "
+"боломжгүй болно."
+
+msgid "plugins.importexport.doaj.settings.form.apiKey"
+msgstr "DOAJ API түлхүүр"
+
+msgid "plugins.importexport.doaj.settings.form.apiKey.description"
+msgstr "Та өөрийн API түлхүүрийг DOAJ хэрэглэгчийн хуудаснаасаа олох боломжтой."
+
+msgid ""
+"plugins.importexport.doaj.settings.form.automaticRegistration.description"
+msgstr ""
+"OJS нь өгүүллүүдийг DOAJ руу автоматаар илгээх болно. Нийтлэгдсэний дараа "
+"боловсруулахад бага зэрэг хугацаа шаардагдаж болохыг анхаарна уу (жишээ нь: "
+"таны cronjob тохиргооноос хамаарч). Та бүртгэгдээгүй бүх өгүүллүүдийг шалгах "
+"боломжтой."
+
+msgid "plugins.importexport.doaj.senderTask.name"
+msgstr "DOAJ автомат бүртгэлийн даалгавар"
+
+msgid "plugins.importexport.doaj.register.error.mdsError"
+msgstr "Илгээлт амжилтгүй боллоо! DOAJ API алдаа буцаалаа: '{$param}'."
+
+msgid "plugins.importexport.doaj.cliUsage"
+msgstr ""
+"Ашиглах заавар:\n"
+"{$scriptName} {$pluginName} export [xmlFileName] [journal_path] articles "
+"objectId1 [objectId2] ...\n"
