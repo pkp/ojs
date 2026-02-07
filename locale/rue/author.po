@@ -2,7 +2,7 @@
 # Monika Tylawska <monika.tylawska@gmail.com>, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-06 23:18+0000\n"
+"PO-Revision-Date: 2026-02-07 12:39+0000\n"
 "Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/author/rue/>\n"
 "Language: rue\n"
@@ -64,25 +64,25 @@ msgid "author.submit.step1"
 msgstr "Крок 1. Початок процедуры зголошыня"
 
 msgid "author.submit.step2"
-msgstr "Крок 2. Перешлий плік"
+msgstr "Крок 2. Перешлий файль"
 
 msgid "author.submit.step4"
-msgstr "Крок 4. Першлий додатковы плікы"
+msgstr "Крок 4. Першлий додатковы файлі"
 
 msgid "author.submit.step4a"
-msgstr "Крок 4а. Додай плік, котры буде узуполніньом"
+msgstr "Крок 4а. Додай файль, котрый буде узуполніньом"
 
 msgid "author.submit.start"
 msgstr "Старт"
 
 msgid "author.submit.upload"
-msgstr "Перешлий плік"
+msgstr "Перешлий файль"
 
 msgid "author.submit.metadata"
 msgstr "Введ метадны"
 
 msgid "author.submit.supplementaryFiles"
-msgstr "Перешлий додатковы плікы"
+msgstr "Перешлий додатковы файлі"
 
 msgid "author.submit.nextSteps"
 msgstr "Слідуючы крокы"
@@ -121,7 +121,7 @@ msgid "author.submissions.noSubmissions"
 msgstr "Брак пересланых текстів."
 
 msgid "author.submit.journalSection"
-msgstr "Діл часописа"
+msgstr "Діл часопису"
 
 msgid "author.submit.verifyChecklist"
 msgstr ""
@@ -130,7 +130,7 @@ msgstr ""
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
-"Жебы іти дальше треба заакцептувати варункы осцідчыня о авторскых правах."
+"Жебы іти дальше треба заакцептувати варункы освідчыня о авторскых правах."
 
 msgid "submission.submit.coverNote"
 msgstr "Відоміст для редактора"
@@ -147,7 +147,7 @@ msgstr ""
 "в публикациі."
 
 msgid "author.submit.reorder"
-msgstr "Змін чергу высвітляня авторів."
+msgstr "Змін чергу высвітляня авторів"
 
 msgid "author.submit.selectPrincipalContact"
 msgstr "Головный адрес до редакцийной кореспонденциі."
@@ -168,7 +168,7 @@ msgstr "Вымаганый є хоц єден автор."
 
 msgid "author.submit.form.authorRequiredFields"
 msgstr ""
-"Мено, назвиско як тіж адрес елктронной почты сут вымаганы для каждого з "
+"Мено, назвиско як тіж адрес елeктронной почты сут вымаганы для каждого з "
 "авторів."
 
 msgid "author.submit.form.titleRequired"
@@ -176,7 +176,7 @@ msgstr "Подай наголовок пересланого тексту."
 
 msgid "author.submit.supplementaryFilesInstructions"
 msgstr ""
-"Тота опция дає можніст доданя узуполняючых пліків до зголошыня. Тоты плікы, "
+"Тота опция дає можніст доданя узуполняючых файлів до зголошыня. Тоты файлі, "
 "можут мати довільный формат, можут обнимати: (а) дослідничы нарядя, (б) "
 "збіркы даных, котры сут згідны з варунками комісиі етыкы науковых "
 "досліджынь, (в) джерела, котры в інчый спосіб были бы недоступны для "
@@ -187,62 +187,62 @@ msgid "author.submit.form.wordCountAlert"
 msgstr "Перекрочыл (а) єс максимальне чысло слів для абстрактів в тій секциі."
 
 msgid "author.submit.submissionFile"
-msgstr "Плік з текстом"
+msgstr "Файль з текстом"
 
 msgid "author.submit.uploadSubmissionFile"
-msgstr "Перешлий плік з текстом"
+msgstr "Перешлий файль з текстом"
 
 msgid "author.submit.replaceSubmissionFile"
-msgstr "Замін плік з текстом"
+msgstr "Замін файль з текстом"
 
 msgid "author.submit.noSubmissionFile"
-msgstr "Плік з текстом не остал іщы высланый."
+msgstr "Файль з текстом не остал іщы высланый."
 
 msgid "author.submit.noSubmissionConfirm"
-msgstr "Ци напевно хочеш іти дальше без пересыланя пліку зголошыня?"
+msgstr "Ци напевно хочеш іти дальше без пересыланя файлю зголошыня?"
 
 msgid "author.submit.supplementaryFiles.saveToUpload"
 msgstr ""
-"Притисный Запиш, жебы переслати плік (пак буде мож додати натупны плікы)."
+"Притисный Запиш, жебы переслати файль (пак буде мож додати натупны файлі)."
 
 msgid "author.submit.forgottenSubmitSuppFile"
 msgstr ""
-"Ци напевно хочеш іти дальше без пересыланя выбраного узуполняючого пліку?"
+"Ци напевно хочеш іти дальше без пересыланя выбраного узуполняючого файлю?"
 
 msgid "author.submit.noSupplementaryFiles"
-msgstr "Пміцничы плікы не остали даоданы до того зголошыня."
+msgstr "Пміцничы файлі не остали доданы до того зголошыня."
 
 msgid "author.submit.backToSupplementaryFiles"
-msgstr "Верний до поміцничых пліків"
+msgstr "Верний до поміцничых файлів"
 
 msgid "author.submit.confirmDeleteSuppFile"
-msgstr "Ци напевно чочеш усунути поміцничый плік?"
+msgstr "Ци напевно чочеш усунути поміцничый файль?"
 
 msgid "author.submit.uploadSuppFile"
-msgstr "Перешлий поміцничый плік"
+msgstr "Перешлий поміцничый файль"
 
 msgid "author.submit.addSupplementaryFile"
-msgstr "Додай поміцничый плік"
+msgstr "Додай поміцничый файль"
 
 msgid "author.submit.editSupplementaryFile"
-msgstr "Поправ поміцничый плік"
+msgstr "Поправ поміцничый файль"
 
 msgid "author.submit.supplementaryFileData"
-msgstr "Метаданы для поміцничых пліків"
+msgstr "Метаданы для поміцничых файлів"
 
 msgid "author.submit.suppFile.sourceText"
 msgstr "Джерельный текст"
 
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
-"Удоступный плік рецензаентам (без метаданых), зато же не зламле тото "
+"Удоступный файль рецензентам (без метаданых), зато же не зламле тото "
 "принципів анонімовой рецензиі."
 
 msgid "author.submit.suppFile.noFile"
-msgstr "Ниякій плік не остал пересланый."
+msgstr "Ниякій файль не остал пересланый."
 
 msgid "author.suppFile.suppFilePublicIdentificationExists"
-msgstr "Публичный ідентыфікатор поміцничого пліку уж фунґує."
+msgstr "Публичный ідентыфікатор поміцничого файлю уж фунґує."
 
 msgid "author.submit.submissionComplete"
 msgstr ""
@@ -258,14 +258,14 @@ msgstr ""
 
 msgid "author.submit.supplementaryFileDataDescription"
 msgstr ""
-"Жебы зідексувати додатковый материял, подай наступуючы даны для помічного "
-"пліку."
+"Жебы зідексувати додатковый материял, подай слідуючы даны для помічного "
+"файлю."
 
 msgid "author.submit.supplementaryFileUpload"
-msgstr "Поміцничый плік"
+msgstr "Поміцничый файль"
 
 msgid "author.submit.suppFile.createrOrOwner"
-msgstr "Творця (або властитель) пліку"
+msgstr "Творця (або властитель) файлю"
 
 msgid "author.submit.suppFile.researchInstrument"
 msgstr "Дослідниче нарядя"
@@ -301,16 +301,16 @@ msgid "author.submit.suppFile.specifyOtherType"
 msgstr "Оприділь інчый рід"
 
 msgid "author.submit.suppFile.form.titleRequired"
-msgstr "Подай назву поміцничого пліку."
+msgstr "Подай назву поміцничого файлю."
 
 msgid "author.submit.suppFile.form.subjectRequired"
 msgstr "Прошу подати тему."
 
 msgid "author.submit.suppFile.form.descriptionRequired"
-msgstr "Порошу подати опис."
+msgstr "Прошу подати опис."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
-msgstr "Публичный ідентыфікатор поміцничого пліку"
+msgstr "Публичный ідентыфікатор поміцничого файлю"
 
 msgid "author.submit.filesSummary"
 msgstr "Підсумуваня"
@@ -322,7 +322,7 @@ msgid "author.article.uploadAuthorVersion"
 msgstr "Першлий поправлену версию"
 
 msgid "author.article.copyeditedFile"
-msgstr "Плік по коректі"
+msgstr "Файль по коректі"
 
 msgid "author.article.authorRevisedFile"
-msgstr "Плік автора"
+msgstr "Файль автора"
