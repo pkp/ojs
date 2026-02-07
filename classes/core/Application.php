@@ -20,7 +20,6 @@ namespace APP\core;
 use APP\facades\Repo;
 use APP\journal\JournalDAO;
 use APP\payment\ojs\OJSPaymentManager;
-use PKP\core\PKPContainer;
 use PKP\context\Context;
 use PKP\core\PKPApplication;
 use PKP\db\DAORegistry;
@@ -36,6 +35,7 @@ class Application extends PKPApplication
     public const ASSOC_TYPE_JOURNAL = 0x0000100;
     public const ASSOC_TYPE_ISSUE = 0x0000103;
     public const ASSOC_TYPE_ISSUE_GALLEY = 0x0000105;
+    public const ASSOC_TYPE_JATS = 0x0000106;
 
     public const REQUIRES_XSL = false;
 
@@ -53,6 +53,7 @@ class Application extends PKPApplication
                 'ASSOC_TYPE_JOURNAL',
                 'ASSOC_TYPE_ISSUE',
                 'ASSOC_TYPE_ISSUE_GALLEY',
+                'ASSOC_TYPE_JATS',
             ]);
         }
 

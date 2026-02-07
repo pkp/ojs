@@ -190,4 +190,51 @@ class StatsHandler extends PKPStatsHandler
             'filters' => $filters
         ]);
     }
+
+    protected function getTableColumns(): array
+    {
+        return [
+            [
+                'name' => 'title',
+                'label' => __('common.title'),
+            ],
+            [
+                'name' => 'abstractViews',
+                'label' => __('submission.abstractViews'),
+                'value' => 'abstractViews',
+            ],
+            [
+                'name' => 'galleyViews',
+                'label' => __('stats.fileViews'),
+                'value' => 'galleyViews',
+            ],
+            [
+                'name' => 'pdf',
+                'label' => __('stats.pdf'),
+                'value' => 'pdfViews',
+            ],
+            [
+                'name' => 'html',
+                'label' => __('stats.html'),
+                'value' => 'htmlViews',
+            ],
+            [
+                'name' => 'other',
+                'label' => __('common.other'),
+                'value' => 'otherViews',
+            ],
+            [
+                'name' => 'jats',
+                'label' => __('stats.jats'),
+                'value' => 'jatsViews',
+            ],
+            [
+                'name' => 'total',
+                'label' => __('stats.total'),
+                'value' => 'total',
+                'orderBy' => 'total',
+                'initialOrderDirection' => true,
+            ],
+        ];
+    }
 }
