@@ -1,3 +1,496 @@
 # Gantulga <cybermon@gmail.com>, 2026.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2026-02-07 06:31+0000\n"
+"Last-Translator: Gantulga <cybermon@gmail.com>\n"
+"Language-Team: Mongolian <http://translate.pkp.sfu.ca/projects/ojs/editor/mn/"
+">\n"
+"Language: mn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "editor.issues.titleRequired"
+msgstr "Дугаарын гарчиг шаардлагатай."
+
+msgid "editor.issues.coverPageDisplay"
+msgstr "Харуулах"
+
+msgid "grid.action.viewIssue"
+msgstr "Харах"
+
+msgid "editor.submission.proof.manageProofFilesDescription"
+msgstr ""
+"Илгээлтийн аль ч шатанд аль хэдийн хуулагдсан файлуудыг доорх 'Багтаах' "
+"нүдийг чагталж, 'Хайх' товчийг дарснаар Үсгийн алдаа шалгах жагсаалтад нэмэх "
+"боломжтой: бүх боломжит файлуудыг жагсааж, багтаахаар сонгож болно."
+
+msgid "editor.publicIdentificationExistsForTheSameType"
+msgstr ""
+"Нийтийн таних тэмдэг '{$publicIdentifier}' ижил төрлийн өөр объектод аль "
+"хэдийн байна. Сэтгүүл доторх ижил төрлийн объектуудад давхцахгүй таних "
+"тэмдэг сонгоно уу."
+
+msgid "editor.article.coverImage"
+msgstr "Нүүр зураг"
+
+msgid "editor.home"
+msgstr "Редакторын нүүр"
+
+msgid "editor.submissionsAndPublishing"
+msgstr "Илгээлт ба Хэвлэлт"
+
+msgid "editor.submissionQueue"
+msgstr "Илгээлтийн дараалал"
+
+msgid "editor.submissionArchive"
+msgstr "Илгээлтийн архив"
+
+msgid "editor.publishing"
+msgstr "Хэвлэх"
+
+msgid "editor.publishedIssues"
+msgstr "Нийтлэгдсэн дугаарууд"
+
+msgid "editor.allSections"
+msgstr "Бүх салбар хэсэг"
+
+msgid "editor.allEditors"
+msgstr "Бүх редактор"
+
+msgid "editor.me"
+msgstr "Минийх"
+
+msgid "editor.publicIdentificationExists"
+msgstr ""
+"Нийтийн таних тэмдэг '{$publicIdentifier}' өөр объект (дугаар, өгүүлэл, эх "
+"бэлтгэл эсвэл файл)-д аль хэдийн байна. Сэтгүүл доторх таних тэмдэгтүүдээ "
+"давхцуулахгүй сонгоно уу."
+
+msgid "editor.submissionArchive.noSubmissions"
+msgstr "Архивт илгээлт байхгүй байна."
+
+msgid "editor.submissionArchive.saveChanges"
+msgstr ""
+"Архивлагдсан илгээлтийн өөрчлөлтийг хадгалах уу? Устгахаар тэмдэглэсэн "
+"илгээлтүүд системээс бүрмөсөн устах болно."
+
+msgid "editor.submissionReview.confirmDecision"
+msgstr "Та энэхүү шийдвэрийг бүртгэхдээ итгэлтэй байна уу?"
+
+msgid "editor.submissionReview.emailWillArchive"
+msgstr ""
+"Зохиогчид мэдэгдэх имэйл илгээгдсэн эсвэл имэйлийг алгасах товч дарагдсаны "
+"дараа энэ илгээлт архивлагдах болно."
+
+msgid "editor.submissionReview.cannotSendToCopyediting"
+msgstr ""
+"Илгээлтийг Хянан тохиолдуулах шат руу илгээхээс өмнө 'Зохиогчид мэдэгдэх' "
+"холбоосыг ашиглан зохиогчид шийдвэрийг мэдэгдэж, илгээх хувилбарыг сонгоно "
+"уу."
+
+msgid "editor.notifyUsers"
+msgstr "Хэрэглэгчдэд мэдэгдэх"
+
+msgid "editor.notifyUsers.allReaders"
+msgstr "Бүх уншигчид ({$count} хэрэглэгч)"
+
+msgid "editor.notifyUsers.allAuthors"
+msgstr "Бүх нийтлэгдсэн зохиогчид ({$count} хэрэглэгч)"
+
+msgid "editor.notifyUsers.allIndividualSubscribers"
+msgstr "Бүх хувь захиалагчид ({$count} хэрэглэгч)"
+
+msgid "editor.notifyUsers.allInstitutionalSubscribers"
+msgstr "Бүх байгууллагын захиалагчид ({$count} хэрэглэгч)"
+
+msgid "editor.notifyUsers.inProgress"
+msgstr "Хэрэглэгчдэд мэдэгдэж байна..."
+
+msgid "editor.usersNotified"
+msgstr "Мэдэгдсэн хэрэглэгчид"
+
+msgid "editor.notifyUsers.allUsers"
+msgstr ""
+"Энэ мессежийг тухайн сэтгүүлтэй холбоотой бүх хэрэглэгчдэд илгээх ({$count} "
+"хэрэглэгч)"
+
+msgid "editor.notifyUsers.interestedUsers"
+msgstr ""
+"Энэ мессежийг тухайн сэтгүүлтэй холбоотой бөгөөд шинэчлэлт хүлээн авах "
+"хүсэлтэй хэрэглэгчдэд илгээх ({$count} хэрэглэгч)"
+
+msgid "editor.notifyUsers.includeToc"
+msgstr "Энэ дугаарын гарчгийн жагсаалтыг багтаах:"
+
+msgid "editor.editorAdministration"
+msgstr "Редакторын удирдлага"
+
+msgid "editor.issues.createIssue"
+msgstr "Дугаар үүсгэх"
+
+msgid "editor.issues.editIssue"
+msgstr "Дугаарын удирдлага: {$issueIdentification}"
+
+msgid "editor.issues.currentIssue"
+msgstr "Одоогийн дугаар"
+
+msgid "editor.issues.numArticles"
+msgstr "Бичлэгүүд"
+
+msgid "editor.issues.noArticles"
+msgstr "Энэ дугаарт одоогоор төлөвлөгдсөн бичлэг алга."
+
+msgid "editor.issues.confirmDelete"
+msgstr "Та энэ дугаарыг бүрмөсөн устгахдаа итгэлтэй байна уу?"
+
+msgid "editor.issues.published"
+msgstr "Нийтлэгдсэн"
+
+msgid "editor.issues.unpublished"
+msgstr "Нийтлэгдээгүй"
+
+msgid "editor.issues.datePublished"
+msgstr "Нийтэлсэн огноо"
+
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr ""
+"Хоосон үлдээвэл дугаар нийтлэгдэх үед огноо автоматаар тохируулагдах болно."
+
+msgid "editor.issues.datePublished.invalid"
+msgstr ""
+"Нийтэлсэн огноо хүчингүй байна. Огноо ЖЖЖЖ-СС-ӨӨ (YYYY-MM-DD) форматтай байх "
+"ёстой."
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr "Дугаар нийтлэгдсэн үед нийтэлсэн огноог заавал оруулах шаардлагатай."
+
+msgid "editor.issues.volumeRequired"
+msgstr "Боть (Volume) шаардлагатай бөгөөд эерэг тоон утга байх ёстой."
+
+msgid "editor.issues.numberRequired"
+msgstr "Дугаар (Number) шаардлагатай бөгөөд эерэг тоон утга байх ёстой."
+
+msgid "editor.issues.yearRequired"
+msgstr "Он шаардлагатай бөгөөд эерэг тоон утга байх ёстой."
+
+msgid "editor.issues.issueIdentificationRequired"
+msgstr ""
+"Дугаарын таних мэдээлэл шаардлагатай. Дугаар таних сонголтуудын дор хаяж "
+"нэгийг нь сонгоно уу."
+
+msgid "editor.issues.issueIdentification"
+msgstr "Дугаарын таних мэдээлэл"
+
+msgid "editor.issues.publicIssueIdentifier"
+msgstr "Дугаарын нийтийн таних тэмдэг"
+
+msgid "editor.issues.description"
+msgstr "Тайлбар"
+
+msgid "editor.issues.accessStatus"
+msgstr "Хандалтын төлөв"
+
+msgid "editor.issues.accessDate"
+msgstr "Нээлттэй хандалт болох огноо"
+
+msgid "editor.issues.enableOpenAccessDate"
+msgstr "Хойшлогдсон нээлттэй хандалтыг идэвхжүүлэх"
+
+msgid "editor.issues.coverPage"
+msgstr "Нүүр зураг"
+
+msgid "editor.issues.coverPageInstructions"
+msgstr "(Зөвшөөрөгдөх форматууд: .gif, .jpg, эсвэл .png)"
+
+msgid "editor.issues.uploaded"
+msgstr "Хуулсан"
+
+msgid "editor.issues.remove"
+msgstr "Устгах"
+
+msgid "editor.issues.proofed"
+msgstr "Хянагдсан (Proofed)"
+
+msgid "editor.issues.removeCoverPage"
+msgstr "Нүүр хуудасны зургийг устгах уу?"
+
+msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
+msgstr ""
+"Таны устгахыг хүссэн нүүр зураг өөр сэтгүүлийн дугаарт хамаарч байна. Та зөв "
+"сэтгүүл, зөв дугаарын ID ашиглаж байгаа эсэхээ шалгаад дахин оролдоно уу."
+
+msgid "editor.issues.removeCoverImageFileNameMismatch"
+msgstr ""
+"Таны устгахыг хүссэн нүүр зураг энэ дугаарын нүүр зурагтай тохирохгүй байна. "
+"Хуудсыг дахин ачаалж дахин оролдоно уу."
+
+msgid "editor.issues.removeCoverImageFileNotFound"
+msgstr ""
+"Таны устгахыг хүссэн нүүр зураг олдсонгүй. Аль хэдийн устгагдсан байж "
+"магадгүй. Хуудсыг дахин ачаалж үзнэ үү."
+
+msgid "editor.issues.invalidCoverImageFormat"
+msgstr ""
+"Нүүр хуудасны формат хүчингүй байна. .gif, .jpg, эсвэл .png форматуудыг "
+"зөвшөөрнө."
+
+msgid "editor.issues.styleFile"
+msgstr "Загварын файл (Stylesheet)"
+
+msgid "editor.issues.invalidStyleFormat"
+msgstr ""
+"Загварын файлын формат хүчингүй байна. Илгээсэн файл хүчинтэй CSS байгаа "
+"эсэхийг шалгана уу. (Эхэндээ тайлбар агуулсан загварын файлаас татгалзаж "
+"болзошгүйг анхаарна уу.)"
+
+msgid "editor.issues.removeStyleFile"
+msgstr "Загварын файлыг устгах уу?"
+
+msgid "editor.issues.coverPageCaption"
+msgstr "Нүүрний тайлбар"
+
+msgid "editor.issues.showCoverPage"
+msgstr "Энэ дугаарт дараах элементүүд бүхий нүүр хуудас үүсгэх."
+
+msgid "editor.issues.openAccess"
+msgstr "Нээлттэй хандалт"
+
+msgid "editor.issues.subscription"
+msgstr "Захиалга"
+
+msgid "editor.issues.identification"
+msgstr "Таних мэдээлэл"
+
+msgid "editor.issues.access"
+msgstr "Хандалт"
+
+msgid "editor.issues.cover"
+msgstr "Нүүр"
+
+msgid "editor.issues.confirmIssueDelete"
+msgstr ""
+"Бүх өгүүллүүд засварлах дараалал руу буцаж, холбогдох бүх файлууд бүрмөсөн "
+"устах болно. Та энэ дугаарыг устгахдаа итгэлтэй байна уу?"
+
+msgid "editor.issues.resetIssueOrder"
+msgstr ""
+"Энэ сэтгүүл дугаарын тусгай эрэмбэ ашигладаг. <a href=\"{$url}\" class="
+"\"action\">Үндсэн тохиргоо руу буцаах</a>"
+
+msgid "editor.issues.resetSectionOrder"
+msgstr ""
+"Энэ дугаар салбар хэсгийн тусгай эрэмбэ ашигладаг. <a href=\"{$url}\" class="
+"\"action\">Үндсэн тохиргоо руу буцаах</a>"
+
+msgid "editor.issues.issueData"
+msgstr "Дугаарын өгөгдөл"
+
+msgid "editor.issues.saveChanges"
+msgstr "Гарчгийн жагсаалтын өөрчлөлтийг хадгалах уу?"
+
+msgid "editor.issues.default"
+msgstr "Үндсэн"
+
+msgid "editor.issues.order"
+msgstr "Эрэмбэ"
+
+msgid "editor.issues.publicId"
+msgstr "Нийтийн ID"
+
+msgid "editor.issues.publishIssue"
+msgstr "Дугаарыг нийтлэх"
+
+msgid "editor.issues.unpublishIssue"
+msgstr "Дугаарыг нийтлэхээс буцаах"
+
+msgid "editor.issues.previewIssue"
+msgstr "Дугаарыг урьдчилан харах"
+
+msgid "editor.issues.preview"
+msgstr "Урьдчилан харах"
+
+msgid "editor.issues.confirmPublish"
+msgstr "Та шинэ дугаарыг нийтлэхдээ итгэлтэй байна уу?"
+
+msgid "editor.issues.confirmUnpublish"
+msgstr "Та нийтлэгдсэн энэ дугаарыг нийтлэхээс буцаахдаа итгэлтэй байна уу?"
+
+msgid "editor.issues.confirmSetCurrentIssue"
+msgstr "Та энэ дугаарыг одоогийн дугаар болгон тохируулахдаа итгэлтэй байна уу?"
+
+msgid "editor.issues.publicArticleIdExists"
+msgstr "Өгүүллийн нийтийн ID-г хадгалах боломжгүй байна:"
+
+msgid "editor.issues.noLiveIssues"
+msgstr "Идэвхтэй дугаар алга"
+
+msgid "editor.issues.open"
+msgstr "Нээх"
+
+msgid "editor.issues.pages"
+msgstr "Хуудаснууд"
+
+msgid "editor.issues.galleys"
+msgstr "Дугаарын эх бэлтгэлүүд"
+
+msgid "editor.issues.galley"
+msgstr "Дугаарын эх бэлтгэл"
+
+msgid "editor.issues.viewingGalley"
+msgstr "Дугаарын эх бэлтгэлийг харж байна"
+
+msgid "editor.issues.issueGalleysDescription"
+msgstr "Дугаарыг бүхэлд нь агуулсан эх бэлтгэлүүдийг нийтлэх."
+
+msgid "editor.issues.noneIssueGalleys"
+msgstr "Дугаарын эх бэлтгэл нийтлэгдээгүй байна."
+
+msgid "editor.issues.galleyLabelRequired"
+msgstr "Дугаарын эх бэлтгэлийн шошго шаардлагатай."
+
+msgid "editor.issues.galleyLocaleRequired"
+msgstr "Дугаарын эх бэлтгэлийн локал (хэл) шаардлагатай."
+
+msgid "editor.issues.galleyPublicIdentificationExists"
+msgstr "Дугаарын эх бэлтгэлийн нийтийн таних тэмдэг аль хэдийн байна."
+
+msgid "editor.issues.backToIssueGalleys"
+msgstr "Дугаарын эх бэлтгэлүүд рүү буцах"
+
+msgid "editor.issues.confirmDeleteGalley"
+msgstr "Та энэ дугаарын эх бэлтгэлийг устгахдаа итгэлтэй байна уу?"
+
+msgid "editor.issues.identifiers"
+msgstr "Таних тэмдэгтүүд"
+
+msgid "editor.navigation.futureIssues"
+msgstr "Ирээдүйн дугаарууд"
+
+msgid "grid.action.addGalley"
+msgstr "Эх бэлтгэл нэмэх"
+
+msgid "grid.action.publish"
+msgstr "Дугаар нийтлэх"
+
+msgid "grid.action.addIssue"
+msgstr "Дугаар үүсгэх"
+
+msgid "grid.action.previewIssue"
+msgstr "Урьдчилан харах"
+
+msgid "grid.action.addIssueGalley"
+msgstr "Дугаарын эх бэлтгэл үүсгэх"
+
+msgid "grid.action.setCurrentIssue"
+msgstr "Одоогийн дугаар болгох"
+
+msgid "editor.navigation.issueArchive"
+msgstr "Өмнөх дугаарууд"
+
+msgid "editor.article.designateReviewVersion"
+msgstr "Эх файлыг Хяналтын хувилбар болгон тодорхойлох"
+
+msgid "editor.article.decision"
+msgstr "Шийдвэр"
+
+msgid "editor.submissions.showBy"
+msgstr "Шүүлт"
+
+msgid "editor.submissions.submitMMDD"
+msgstr "Илгээсэн СС-ӨӨ"
+
+msgid "editor.submissions.activeAssignments"
+msgstr "Идэвхтэй даалгаврууд"
+
+msgid "editor.submissions.invite"
+msgstr "Урих"
+
+msgid "editor.submissions.accept"
+msgstr "Хүлээн авах"
+
+msgid "editor.submissions.noSubmissions"
+msgstr "Илгээлт алга"
+
+msgid "editor.submissions.lastAssigned"
+msgstr "Хамгийн сүүлийн"
+
+msgid "editor.submissions.averageTime"
+msgstr "Долоо хоног"
+
+msgid "editor.submissions.lastCompleted"
+msgstr "Сүүлд дууссан"
+
+msgid "editor.submissions.assignedTo"
+msgstr "Редакторт оноосон"
+
+msgid "issues.submissions.issueIds"
+msgstr "Дугаарт оноосон"
+
+msgid "editor.submissions.inSection"
+msgstr "Салбар хэсэгт"
+
+msgid "editor.article.showPublicationVersion"
+msgstr "Төлөвлөсөн хэвлэлийг харуулах"
+
+msgid "editor.article.publishVersion"
+msgstr "Хувилбарыг нийтлэх"
+
+msgid "editor.article.viewMetadata"
+msgstr "Хувилбарын мета өгөгдлийг харах"
+
+msgid "editor.article.editMetadata"
+msgstr "Хувилбарын мета өгөгдлийг засварлах"
+
+msgid "editor.article.scheduleForPublication"
+msgstr "Хэвлэхээр төлөвлөх:"
+
+msgid "editor.article.scheduleForPublication.toBeAssigned"
+msgstr "Оноогдохоор хүлээгдэж буй"
+
+msgid "editor.article.payment.publicationFeeNotPaid"
+msgstr ""
+"Хэвлэлийн төлбөр төлөгдөөгүй байна. Бичлэгийг хэвлэхээр төлөвлөхийн тулд "
+"зохиогчид төлбөр төлөхийг мэдэгдэх эсвэл төлбөрөөс чөлөөлнө үү."
+
+msgid "editor.article.payment.requestPayment"
+msgstr "Төлбөр нэхэмжлэх"
+
+msgid "editor.article.removeCoverImageFileNotFound"
+msgstr ""
+"Таны устгахыг хүссэн нүүр зураг олдсонгүй. Аль хэдийн устгагдсан байж "
+"магадгүй. Хуудсыг дахин ачаалж үзнэ үү."
+
+msgid "grid.action.removeArticle"
+msgstr "Дугаараас өгүүллийг хасах"
+
+msgid "editor.article.remove"
+msgstr "Устгах"
+
+msgid "editor.article.remove.confirm"
+msgstr ""
+"Та энэ өгүүллийг дугаараас хасахдаа итгэлтэй байна уу? Өгүүлэл өөр дугаарт "
+"төлөвлөгдөхөд бэлэн болох болно."
+
+msgid "editor.issues.invalidAccessDate"
+msgstr "Хандалтын огноо хүчингүй байна."
+
+msgid "editor.issues.editIssueGalley"
+msgstr "Дугаарын эх бэлтгэлийг засварлах"
+
+msgid "editor.submission.production.productionReadyFilesDescription"
+msgstr ""
+"Эх бэлтгэлийн редактор эдгээр файлуудыг эх бэлтгэл бүрт зориулж бэлтгэж, "
+"дараа нь үсгийн алдаа шалгахаар зохих <span class=\"pkp_help_title\""
+">Хяналтын хувь (Proofs)</span> хэсэгт хуулдаг."
+
+msgid "editor.submission.selectGalleyFiles"
+msgstr "Эх бэлтгэлийн файлуудыг сонгох"
+
+msgid "editor.submission.editorial.finalDraftDescription"
+msgstr ""
+"Энэ жагсаалт дахь эцсийн ноорог файлуудыг Хянан тохиолдуулагч хянан "
+"тохиолдуулсан хувилбар болгон хувиргаж, доорх <span class=\"pkp_help_title\""
+">Хянан тохиолдуулга</span> хэсэгт хуулдаг."
