@@ -1,2115 +1,2428 @@
+# Gantulga <cybermon@gmail.com>, 2026.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2026-02-07 06:31+0000\n"
+"Last-Translator: Gantulga <cybermon@gmail.com>\n"
+"Language-Team: Mongolian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
+"mn/>\n"
+"Language: mn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "manager.distribution.access"
-msgstr ""
+msgstr "Хандалт"
 
 msgid "manager.distribution.copyrightYearBasis.description"
 msgstr ""
+"Өгүүлэлд зориулсан зохиогчийн эрхийн үндсэн оныг хэрхэн сонгохыг тодорхойлно "
+"уу. Энэхүү үндсэн тохиргоог бичлэг бүрт тусад нь өөрчилж болно. Хэрэв та "
+"бэлэн болмогц нь нийтэлдэг бол (publish as you go) дугаарын нийтлэгдсэн "
+"огноог бүү ашиглаарай."
 
 msgid "manager.distribution.copyrightYearBasis.issue"
-msgstr ""
+msgstr "Дугаарын нийтлэгдсэн огноог ашиглах"
 
 msgid "manager.distribution.copyrightYearBasis.submission"
-msgstr ""
+msgstr "Өгүүллийн нийтлэгдсэн огноог ашиглах"
 
 msgid "manager.distribution.publication"
-msgstr ""
+msgstr "Нийтлэл"
 
 msgid "manager.distribution.publishingMode"
-msgstr ""
+msgstr "Нийтлэх горим"
 
 msgid "manager.distribution.publishingMode.none"
-msgstr ""
+msgstr "OJS-ийг сэтгүүлийн агуулгыг онлайнаар нийтлэхэд ашиглахгүй."
 
 msgid "manager.distribution.publishingMode.openAccess"
-msgstr ""
+msgstr "Сэтгүүл агуулгадаа нээлттэй хандалт олгоно."
 
 msgid "manager.distribution.publishingMode.subscription"
 msgstr ""
+"Сэтгүүлийн агуулгын зарим эсвэл бүх хэсэгт хандахын тулд захиалга шаардана."
 
 msgid "manager.setup.enableDois.description"
 msgstr ""
+"Энэ сэтгүүлд нийтлэгдсэн бүтээлүүдэд Дижитал Объект Танигч (DOI) оноохыг "
+"зөвшөөрөх."
 
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr ""
+"DOI оноох зүйлсийг сонгоно уу. Ихэнх сэтгүүлүүд өгүүлэлд DOI оноодог боловч "
+"та нийтлэгдсэн бүх зүйлд DOI оноож болно."
 
 msgid "doi.manager.settings.doiSuffixLegacy"
 msgstr ""
+"Үндсэн загваруудыг ашиглах.<br />Дугаарт: %j.v%vi%i<br />Өгүүлэлд: "
+"%j.v%vi%i.%a<br />Эх бэлтгэлд: %j.v%vi%i.%a.g%g."
 
 msgid "doi.manager.settings.doiCreationTime.copyedit"
-msgstr ""
+msgstr "Хянан тохиолдуулах шатанд хүрэх үед"
 
 msgid "manager.website.archiving"
-msgstr ""
+msgstr "Архивлах"
 
 msgid "manager.files.note"
 msgstr ""
+"Тэмдэглэл: Файл хөтөч (Files Browser) нь сэтгүүлтэй холбоотой файл, "
+"хавтаснуудыг шууд харах, удирдах боломжийг олгодог ахисан түвшний функц юм."
 
 msgid "manager.journalManagement"
-msgstr ""
+msgstr "Сэтгүүлийн удирдлага"
 
 msgid "manager.language.ui"
-msgstr ""
+msgstr "Хэрэглэгчийн интерфэйс"
 
 msgid "manager.language.submissions"
-msgstr ""
+msgstr "Илгээлтүүд"
 
 msgid "manager.language.forms"
-msgstr ""
+msgstr "Маягтууд"
 
 msgid "manager.language.confirmDefaultSettingsOverwrite"
 msgstr ""
+"Энэ нь тухайн хэлэнд зориулж өмнө нь хийсэн сэтгүүлийн тусгай тохиргоог дарж "
+"бичих болно"
 
 msgid "manager.languages.languageInstructions"
 msgstr ""
+"OJS-ийг дэмжигдсэн хэд хэдэн хэлээр ашиглах боломжтой. Мөн OJS нь олон "
+"хэлний системээр ажиллаж, хэрэглэгчдэд хуудас бүр дээр хэл солих боломжийг "
+"олгохоос гадна зарим өгөгдлийг нэмэлт хэлээр оруулахыг зөвшөөрдөг.<br /><br/"
+">Хэрэв OJS-ийн дэмждэг хэл доорх жагсаалтад байхгүй бол сайтын "
+"администратороосоо тухайн хэлийг суулгахыг хүснэ үү."
 
 msgid "manager.languages.noneAvailable"
 msgstr ""
+"Уучлаарай, нэмэлт хэл байхгүй байна. Хэрэв та энэ сэтгүүлд нэмэлт хэл "
+"ашиглахыг хүсвэл сайтын администратортой холбогдоно уу."
 
 msgid "manager.languages.primaryLocaleInstructions"
-msgstr ""
+msgstr "Энэ нь сэтгүүлийн сайтын үндсэн хэл байх болно."
 
 msgid "manager.managementPages"
-msgstr ""
+msgstr "Удирдлагын хуудаснууд"
 
 msgid "manager.payment.action"
-msgstr ""
+msgstr "Үйлдэл"
 
 msgid "manager.payment.addPayment"
-msgstr ""
+msgstr "Төлбөр нэмэх"
 
 msgid "manager.payment.amount"
-msgstr ""
+msgstr "Дүн"
 
 msgid "manager.payment.authorFees"
-msgstr ""
+msgstr "Зохиогчийн хураамж"
 
 msgid "manager.payment.authorFeesDescription"
 msgstr ""
+"Зохиогчийн боловсруулалтын хураамжийг идэвхжүүлэхийн тулд доорх дүнгийн "
+"мэдээллийг оруулна уу."
 
 msgid "manager.payment.currencymessage"
 msgstr ""
+"OJS нь валют хөрвүүлэлт хийдэггүй. Хэрэв захиалгын төлбөр хүлээн авч байгаа "
+"бол захиалгын валют нь энд заасантай таарч байгаа эсэхийг шалгана уу."
 
 msgid "manager.payment.description"
-msgstr ""
+msgstr "Тайлбар"
 
 msgid "manager.payment.details"
-msgstr ""
+msgstr "Дэлгэрэнгүй"
 
 msgid "manager.payment.editSubscription"
-msgstr ""
+msgstr "Захиалга засварлах"
 
 msgid "manager.payment.enable"
-msgstr ""
+msgstr "Идэвхжүүлэх"
 
 msgid "manager.payment.feePaymentOptions"
-msgstr ""
+msgstr "Хураамж төлөх сонголтууд"
 
 msgid "manager.payment.form.numeric"
-msgstr ""
+msgstr "Бүх зардал эерэг тоон утга байх ёстой (аравтын бутархай зөвшөөрөгдөнө)"
 
 msgid "manager.payment.generalFees"
-msgstr ""
+msgstr "Ерөнхий хураамж"
 
 msgid "manager.payment.generalFeesDescription"
 msgstr ""
+"Холбооны гишүүнчлэл нь 'Сэтгүүлийн тухай' хэсгийн 'Бодлого' доор харагдах "
+"болно."
 
 msgid "manager.payment.generalOptions"
-msgstr ""
+msgstr "Ерөнхий сонголтууд"
 
 msgid "manager.payment.noPayments"
-msgstr ""
+msgstr "Төлбөр алга"
 
 msgid "manager.payment.notFound"
-msgstr ""
+msgstr "Олдсонгүй"
 
 msgid "manager.payment.options"
-msgstr ""
+msgstr "Сонголтууд"
 
 msgid "manager.payment.options.acceptSubscriptionPayments"
 msgstr ""
+"Энэ нь Захиалгын төлбөрийг идэвхжүүлнэ. Захиалгын төрөл, үнэ, хугацааг "
+"Сэтгүүлийн (Захиалгын) Менежер удирдана."
 
 msgid "subscriptionManager.subscription.confirmRemove"
-msgstr ""
+msgstr "Та энэ захиалгыг устгахдаа итгэлтэй байна уу?"
 
 msgid "manager.payment.options.enablePayments"
 msgstr ""
+"Энэ сэтгүүлийн төлбөрүүдийг идэвхжүүлнэ. Төлбөр хийхийн тулд хэрэглэгчид "
+"нэвтэрсэн байх шаардлагатайг анхаарна уу."
 
 msgid "manager.payment.options.fee"
-msgstr ""
+msgstr "Хураамж"
 
 msgid "manager.payment.options.feeDescription"
-msgstr ""
+msgstr "Хураамжийн тайлбар"
 
 msgid "manager.payment.options.feeName"
-msgstr ""
+msgstr "Хураамжийн нэр"
 
 msgid "manager.payment.options.membershipFee"
-msgstr ""
+msgstr "Холбооны гишүүнчлэл"
 
 msgid "manager.payment.options.onlypdf"
-msgstr ""
+msgstr "Зөвхөн дугаар болон өгүүллийн PDF хувилбарт хандах эрхийг хязгаарлах"
 
 msgid "manager.payment.options.publicationFee"
-msgstr ""
+msgstr "Өгүүлэл боловсруулах хураамж (APC)"
 
 msgid "manager.payment.options.purchaseArticleFee"
-msgstr ""
+msgstr "Өгүүлэл худалдан авах"
 
 msgid "manager.payment.options.purchaseIssueFee"
-msgstr ""
+msgstr "Дугаар худалдан авах"
 
 msgid "manager.payment.options.text"
-msgstr ""
+msgstr "Төлбөрийн хэрэгслийн тайлбар"
 
 msgid "manager.payment.paymentId"
-msgstr ""
+msgstr "Төлбөрийн ID"
 
 msgid "manager.payment.paymentMethod"
-msgstr ""
+msgstr "Төлбөрийн хэрэгсэл"
 
 msgid "manager.payment.paymentMethod.description"
 msgstr ""
+"Та энэ дэлгэцээс Төлбөрийн хэрэгслийн дурын нэмэгдлийг (Plugin) тохируулж "
+"болно."
 
 msgid "manager.payment.paymentMethods"
-msgstr ""
+msgstr "Хураамж төлөх хэрэгслүүд"
 
 msgid "manager.payment.paymentType"
-msgstr ""
+msgstr "Төлбөрийн төрөл"
 
 msgid "manager.payment.readerFees"
-msgstr ""
+msgstr "Уншигчийн хураамж"
 
 msgid "manager.payment.readerFeesDescription"
 msgstr ""
+"Сонгосон сонголтууд, тэдгээрийн тайлбар болон хураамж нь 'Сэтгүүлийн тухай' "
+"хэсгийн 'Бодлого' доор, мөн төлбөр шаардлагатай цэгүүдэд харагдах болно."
 
 msgid "manager.payment.records"
-msgstr ""
+msgstr "Бичлэгүүд"
 
 msgid "manager.paymentTypes"
-msgstr ""
+msgstr "Төлбөрийн төрлүүд"
 
 msgid "manager.payment.userName"
-msgstr ""
+msgstr "Төлбөрийн ID"
 
 msgid "manager.people.allEnrolledUsers"
-msgstr ""
+msgstr "Энэ сэтгүүлд бүртгэлтэй хэрэглэгчид"
 
 msgid "manager.people.allJournals"
-msgstr ""
+msgstr "Бүх сэтгүүлүүд"
 
 msgid "manager.people.allSiteUsers"
-msgstr ""
+msgstr "Энэ сайтын хэрэглэгчийг энэ сэтгүүлд бүртгэх"
 
 msgid "manager.people.showNoRole"
-msgstr ""
+msgstr "Үүрэггүй хэрэглэгчдийг харуулах"
 
 msgid "manager.people.allUsers"
-msgstr ""
+msgstr "Бүх бүртгэлтэй хэрэглэгчид"
 
 msgid "manager.people.confirmRemove"
 msgstr ""
+"Энэ хэрэглэгчийг сэтгүүлээс хасах уу? Энэ үйлдэл нь хэрэглэгчийг энэ сэтгүүл "
+"дэх бүх үүргээс нь чөлөөлөх болно."
 
 msgid "manager.people.emailUsers.selectTemplate"
-msgstr ""
+msgstr "Загвар сонгоно уу"
 
 msgid "manager.people.enrollExistingUser"
-msgstr ""
+msgstr "Системд байгаа хэрэглэгчийг бүртгэх"
 
 msgid "manager.people.enrollSyncJournal"
-msgstr ""
+msgstr "Дараах сэтгүүлээс"
 
 msgid "manager.people.mergeUsers.from.description"
 msgstr ""
+"Өөр хэрэглэгчийн данстай нэгтгэх хэрэглэгчийг сонгоно уу. Эхний сонгосон "
+"данс устаж, бүх илгээлт, даалгаврууд нь хоёр дахь дансанд шилжих болно."
 
 msgid "manager.people.mergeUsers.into.description"
 msgstr ""
+"Өмнөх хэрэглэгчийн зохиогчийн эрх, засварлах даалгавар зэргийг шилжүүлэн "
+"авах хэрэглэгчийг сонгоно уу."
 
 msgid "manager.people.roleEnrollment"
-msgstr ""
+msgstr "{$role} бүртгэл"
 
 msgid "manager.people.syncUserDescription"
 msgstr ""
+"Бүртгэл синхрончлох нь заасан сэтгүүлийн заасан үүрэг бүхий бүх "
+"хэрэглэгчдийг энэ сэтгүүлийн ижил үүрэгт бүртгэх болно. Энэ нь хянагч нарын "
+"нэгдсэн санг сэтгүүлүүдийн хооронд ижилсүүлэх боломжийг олгодог."
 
 msgid "manager.sections.abstractsNotRequired"
-msgstr ""
+msgstr "Хураангуй шаардахгүй"
 
 msgid "manager.sections.assigned"
-msgstr ""
+msgstr "Энэ салбар хэсгийн редакторууд"
 
 msgid "manager.sections.confirmDelete"
-msgstr ""
+msgstr "Та энэ салбар хэсгийг бүрмөсөн устгахдаа итгэлтэй байна уу?"
 
 msgid "manager.sections.alertDelete"
 msgstr ""
+"Энэ салбар хэсгийг устгахын өмнө энд ирсэн өгүүллүүдийг өөр хэсэг рүү "
+"шилжүүлэх ёстой."
 
 msgid "manager.sections.create"
-msgstr ""
+msgstr "Салбар хэсэг үүсгэх"
 
 msgid "manager.section.sectionEditorInstructions"
 msgstr ""
+"Ирсэн илгээлтүүдийг автоматаар хуваарилахын тулд энэ хэсэгт Салбар хэсгийн "
+"редактор нэмнэ үү. Үгүй бол редакторуудыг илгээлт ирсний дараа гараар оноож "
+"болно. Салбар хэсгийн редакторыг 'Сэтгүүлийн удирдлага' доорх 'Үүрэгүүд' "
+"хэсгээс үүсгэдэг."
 
 msgid "manager.sections.editorRestriction"
 msgstr ""
+"Бичлэгийг зөвхөн Ерөнхий редактор болон Салбар хэсгийн редакторууд илгээх "
+"боломжтой."
 
 msgid "manager.sections.editors"
-msgstr ""
+msgstr "Салбар хэсгийн редакторууд"
 
 msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
+"Дор хаяж нэг салбар хэсэг идэвхтэй байх ёстой. Хэрэв бүх илгээлтийг хаахыг "
+"хүсвэл 'Ажлын урсгал' тохиргоо руу орно уу."
 
 msgid "manager.sections.form.abbrevRequired"
-msgstr ""
+msgstr "Салбар хэсгийн товчилсон нэр шаардлагатай"
 
 msgid "manager.sections.form.mustAllowPermission"
 msgstr ""
+"Салбар хэсгийн редакторын оноолт бүрт дор хаяж нэг чагтыг чагталсан эсэхийг "
+"шалгана уу."
 
 msgid "manager.sections.form.reviewFormId"
-msgstr ""
+msgstr "Хүчинтэй хяналтын маягт сонгосон эсэхээ шалгана уу."
 
 msgid "manager.sections.form.titleRequired"
-msgstr ""
+msgstr "Салбар хэсгийн гарчиг шаардлагатай."
 
 msgid "manager.sections.hideTocAuthor"
 msgstr ""
+"Энэ хэсгийн бичлэгүүдийн зохиогчийн нэрийг дугаарын гарчгийн жагсаалтаас "
+"хасах."
 
 msgid "manager.sections.hideTocTitle"
-msgstr ""
+msgstr "Энэ салбар хэсгийн нэрийг дугаарын гарчгийн жагсаалтаас хасах."
 
 msgid "manager.sections.identifyType"
-msgstr ""
+msgstr "Энэ хэсэгт нийтлэгдсэн зүйлсийг дараах байдлаар тодорхойлох"
 
 msgid "manager.sections.identifyTypeExamples"
 msgstr ""
+"(Жишээ нь: \"Peer-reviewed Article\", \"Book Review\", \"Commentary\" гэх "
+"мэт)"
 
 msgid "manager.sections.indexed"
-msgstr ""
+msgstr "Индексжүүлсэн"
 
 msgid "manager.sections.noneCreated"
-msgstr ""
+msgstr "Салбар хэсэг үүсгээгүй байна."
 
 msgid "manager.sections.open"
-msgstr ""
+msgstr "Илгээлтэд нээлттэй"
 
 msgid "manager.sections.policy"
-msgstr ""
+msgstr "Салбар хэсгийн бодлого"
 
 msgid "manager.sections.readingTools"
-msgstr ""
+msgstr "Унших хэрэгсэл"
 
 msgid "manager.sections.reviewed"
-msgstr ""
+msgstr "Хөндлөнгийн хяналт хийгддэг"
 
 msgid "manager.sections.submissionIndexing"
-msgstr ""
+msgstr "Сэтгүүлийн индексжүүлэлтэд орохгүй"
 
 msgid "manager.sections.submissionReview"
-msgstr ""
+msgstr "Хөндлөнгийн хяналт хийгдэхгүй"
 
 msgid "manager.section.submissionsToThisSection"
-msgstr ""
+msgstr "Сэтгүүлийн энэ хэсэгт ирсэн илгээлтүүд"
 
 msgid "manager.sections.unassigned"
-msgstr ""
+msgstr "Боломжит салбар хэсгийн редакторууд"
 
 msgid "manager.sections.wordCount"
-msgstr ""
+msgstr "Үгийн тоо"
 
 msgid "manager.sections.wordCountInstructions"
-msgstr ""
+msgstr "Энэ хэсгийн хураангуйн үгийн хязгаар (0 бол хязгааргүй)"
 
 msgid "manager.setup"
-msgstr ""
+msgstr "Сэтгүүлийн тохиргоо"
 
 msgid "manager.setup.homepageContent"
-msgstr ""
+msgstr "Нүүр хуудасны агуулга"
 
 msgid "manager.setup.homepageContentDescription"
 msgstr ""
+"Сэтгүүлийн нүүр хуудас үндсэн тохиргоогоор навигацийн холбоосуудаас бүрддэг. "
+"Доорх сонголтуудыг ашиглан нэмэлт агуулга оруулж болно."
 
 msgid "manager.setup.useStyleSheet"
-msgstr ""
+msgstr "Сэтгүүлийн загварын файл (CSS)"
 
 msgid "manager.setup.contextName"
-msgstr ""
+msgstr "Сэтгүүлийн нэр"
 
 msgid "manager.setup.pageHeader"
-msgstr ""
+msgstr "Сэтгүүлийн хуудасны толгой"
 
 msgid "manager.setup.aboutItemContent"
-msgstr ""
+msgstr "Агуулга"
 
 msgid "manager.setup.addAboutItem"
-msgstr ""
+msgstr "About-д зүйл нэмэх"
 
 msgid "manager.setup.addChecklistItem"
-msgstr ""
+msgstr "Хяналтын хуудасны зүйл нэмэх"
 
 msgid "manager.setup.addItem"
-msgstr ""
+msgstr "Зүйл нэмэх"
 
 msgid "manager.setup.addItemtoAboutJournal"
-msgstr ""
+msgstr "\"Сэтгүүлийн тухай\" хэсэгт харагдах зүйл нэмэх"
 
 msgid "manager.setup.addNavItem"
-msgstr ""
+msgstr "Цэсний зүйл нэмэх"
 
 msgid "manager.setup.addReviewerDatabaseLink"
-msgstr ""
+msgstr "Шинэ өгөгдлийн сангийн холбоос нэмэх"
 
 msgid "manager.setup.addSponsor"
-msgstr ""
+msgstr "Ивээн тэтгэгч байгууллага нэмэх"
 
 msgid "manager.setup.alternateHeader"
-msgstr ""
+msgstr "Өөр хувилбарын толгой хэсэг"
 
 msgid "manager.setup.alternateHeaderDescription"
 msgstr ""
+"Гарчиг болон логоны оронд толгой хэсгийн HTML хувилбарыг доор оруулж болно. "
+"Шаардлагагүй бол хоосон үлдээнэ үү."
 
 msgid "manager.setup.announcements"
-msgstr ""
+msgstr "Зарлал"
 
 msgid "manager.setup.announcementsIntroduction"
-msgstr ""
+msgstr "Удиртгал"
 
 msgid "manager.setup.announcementsIntroduction.description"
-msgstr ""
+msgstr "Зарлалын хуудсан дээр харуулахыг хүссэн мэдээллээ оруулна уу."
 
 msgid "manager.setup.appearInAboutJournal"
-msgstr ""
+msgstr "(Сэтгүүлийн тухай хэсэгт харагдах) "
 
 msgid "manager.setup.competingInterests.requireReviewers"
 msgstr ""
+"Хянагч нараас хяналт бүртээ ашиг сонирхлын зөрчлийн мэдэгдэл гаргахыг "
+"шаардах."
 
 msgid "manager.setup.history"
-msgstr ""
+msgstr "Сэтгүүлийн түүх"
 
 msgid "manager.setup.historyDescription"
 msgstr ""
+"Энэ текст нь сэтгүүлийн 'Тухай' хэсэгт харагдах бөгөөд нэр өөрчлөгдсөн, "
+"редакцийн зөвлөл болон бусад түүхэн мэдээллийг тайлбарлахад ашиглаж болно."
 
 msgid "manager.setup.currentIssue"
-msgstr ""
+msgstr "Одоогийн дугаар"
 
 msgid "manager.setup.customizingTheLook"
-msgstr ""
+msgstr "Алхам 5. Харагдах байдлыг тохируулах"
 
 msgid "manager.setup.details"
-msgstr ""
+msgstr "Дэлгэрэнгүй"
 
 msgid "manager.setup.details.description"
-msgstr ""
+msgstr "Сэтгүүлийн нэр, ISSN, холбоо барих хаяг, ивээн тэтгэгч, хайлтын систем."
 
 msgid "manager.setup.disableUserRegistration"
 msgstr ""
+"Сэтгүүлийн менежер бүх хэрэглэгчдийг бүртгэнэ. Редакторууд хянагч нарын "
+"бүртгэлийг үүсгэж болно."
 
 msgid "manager.setup.discipline"
-msgstr ""
+msgstr "Эрдэм шинжилгээний салбар ба дэд салбарууд"
 
 msgid "manager.setup.disciplineDescription"
 msgstr ""
+"Сэтгүүл олон салбарыг хамардаг эсвэл зохиогчид салбар дундын бүтээл илгээдэг "
+"тохиолдолд хэрэгтэй."
 
 msgid "manager.setup.disciplineExamples"
-msgstr ""
+msgstr "(Жишээ нь: Түүх; Боловсрол; Социологи; Сэтгэл судлал; Хууль)"
 
 msgid "manager.setup.disciplineProvideExamples"
-msgstr ""
+msgstr "Сэтгүүлд хамаарах эрдэм шинжилгээний салбаруудын жишээг оруулна уу"
 
 msgid "manager.setup.displayCurrentIssue"
-msgstr ""
+msgstr "Одоогийн дугаарын гарчгийн жагсаалтыг нэмэх (хэрэв боломжтой бол)."
 
 msgid "manager.setup.editorDecision"
-msgstr ""
+msgstr "Редакторын шийдвэр"
 
 msgid "manager.setup.emailBounceAddress"
-msgstr ""
+msgstr "Буцаах хаяг (Bounce Address)"
 
 msgid "manager.setup.emailBounceAddress.description"
-msgstr ""
+msgstr "Хүргэгдээгүй имэйлүүдийн алдааны мэдэгдэл энэ хаяг руу очих болно."
 
 msgid "manager.setup.emailBounceAddress.disabled"
 msgstr ""
+"Энэ функцийг ашиглахын тулд сайтын администратор "
+"<code>allow_envelope_sender</code> сонголтыг идэвхжүүлсэн байх ёстой."
 
 msgid "manager.setup.emails"
-msgstr ""
+msgstr "Имэйлийн таних мэдээлэл"
 
 msgid "manager.setup.emailSignature"
-msgstr ""
+msgstr "Гарын үсэг"
 
 msgid "manager.setup.emailSignature.description"
 msgstr ""
+"Сэтгүүлийн нэрийн өмнөөс автоматаар илгээгдэх имэйлүүдийн төгсгөлд дараах "
+"гарын үсэг нэмэгдэнэ."
 
 msgid "manager.setup.enableAnnouncements.enable"
-msgstr ""
+msgstr "Зарлалыг идэвхжүүлэх"
 
 msgid "manager.setup.enableAnnouncements.description"
 msgstr ""
+"Уншигчдад сэтгүүлийн мэдээ, үйл явдлыг мэдээлэх зорилгоор зарлал нийтэлж "
+"болно."
 
 msgid "manager.setup.numAnnouncementsHomepage"
-msgstr ""
+msgstr "Нүүр хуудсан дээр харуулах тоо"
 
 msgid "manager.setup.numAnnouncementsHomepage.description"
 msgstr ""
+"Нүүр хуудсан дээр хэдэн зарлал харуулах вэ. Харуулахгүй бол хоосон үлдээнэ "
+"үү."
 
 msgid "manager.setup.enableUserRegistration"
-msgstr ""
+msgstr "Зочид өөрсдөө хэрэглэгчийн бүртгэл үүсгэх боломжтой."
 
 msgid "manager.setup.focusAndScope"
-msgstr ""
+msgstr "Зорилго ба Хамрах хүрээ"
 
 msgid "manager.setup.focusAndScope.description"
 msgstr ""
+"Зохиогч, уншигч, номын санчдад зориулж сэтгүүлийн нийтлэх өгүүлэл, бүтээлийн "
+"хүрээг тайлбарлана уу."
 
 msgid "manager.setup.forAuthorsToIndexTheirWork"
-msgstr ""
+msgstr "Зохиогчид бүтээлээ индексжүүлэхэд зориулав"
 
 msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
 msgstr ""
+"OJS нь мета өгөгдөл цуглуулах Open Archives Initiative протоколыг дагаж "
+"мөрддөг. Зохиогчид бүтээлээ илгээхдээ ижил төстэй загварыг ашиглан мета "
+"өгөгдөл оруулна."
 
 msgid "manager.setup.form.issnInvalid"
-msgstr ""
+msgstr "Заасан ISSN хүчингүй байна."
 
 msgid "manager.setup.form.contactEmailRequired"
-msgstr ""
+msgstr "Үндсэн холбоо барих имэйл хаяг шаардлагатай."
 
 msgid "manager.setup.form.contactNameRequired"
-msgstr ""
+msgstr "Үндсэн холбоо барих хүний нэр шаардлагатай."
 
 msgid "manager.setup.form.journalInitialsRequired"
-msgstr ""
+msgstr "Сэтгүүлийн товчилсон нэр шаардлагатай."
 
 msgid "manager.setup.form.journalTitleRequired"
-msgstr ""
+msgstr "Сэтгүүлийн нэр шаардлагатай."
 
 msgid "manager.setup.form.numReviewersPerSubmission"
-msgstr ""
+msgstr "Илгээлт бүрт оноох хянагчийн тоог оруулна уу."
 
 msgid "manager.setup.form.supportEmailRequired"
-msgstr ""
+msgstr "Техник дэмжлэгийн имэйл хаяг шаардлагатай."
 
 msgid "manager.setup.form.supportNameRequired"
-msgstr ""
+msgstr "Техник дэмжлэгийн хүний нэр шаардлагатай."
 
 msgid "manager.setup.generalInformation"
-msgstr ""
+msgstr "Ерөнхий мэдээлэл"
 
 msgid "manager.setup.gettingDownTheDetails"
-msgstr ""
+msgstr "Алхам 1. Дэлгэрэнгүй мэдээлэл оруулах"
 
 msgid "manager.setup.guidelines"
-msgstr ""
+msgstr "Удирдамж"
 
 msgid "manager.setup.guidingSubmissions"
-msgstr ""
+msgstr "Алхам 3. Илгээлтийн зааварчилгаа"
 
 msgid "manager.setup.identity"
-msgstr ""
+msgstr "Сэтгүүлийн тодорхойлолт"
 
 msgid "manager.setup.includeCreativeCommons"
 msgstr ""
+"Нээлттэй хандалттай сэтгүүлүүдийн хувьд нийтлэгдсэн бүх бүтээлд зохих "
+"Creative Commons лицензийг багтаана уу."
 
 msgid "manager.setup.information"
-msgstr ""
+msgstr "Мэдээлэл"
 
 msgid "manager.setup.information.description"
 msgstr ""
+"Номын санчид, зохиогчид болон уншигчдад зориулсан сэтгүүлийн товч тайлбар. "
+"Эдгээр нь 'Мэдээлэл' блок нэмэгдсэн үед сайтын хажуугийн хэсэгт харагдана."
 
 msgid "manager.setup.information.forAuthors"
-msgstr ""
+msgstr "Зохиогчдод"
 
 msgid "manager.setup.information.forLibrarians"
-msgstr ""
+msgstr "Номын санчдад"
 
 msgid "manager.setup.information.forReaders"
-msgstr ""
+msgstr "Уншигчдад"
 
 msgid "manager.setup.initialIssue"
-msgstr ""
+msgstr "Анхны дугаар"
 
 msgid "manager.setup.initialIssueDescription"
 msgstr ""
+"Сонгосон форматаас хамаарч OJS-ээр нийтлэгдэх анхны дугаарын дугаар, боть, "
+"болон/эсвэл оныг тодорхойлно уу:"
 
 msgid "manager.setup.institution"
-msgstr ""
+msgstr "Байгууллага"
 
 msgid "manager.setup.itemsDescription"
 msgstr ""
+"Хуудасны дээд хэсэгт байрлах навигацийн цэсэнд (Нүүр, Тухай, Хэрэглэгчийн "
+"нүүр гэх мэт) шинэ зүйл нэмж болно."
 
 msgid "manager.setup.itemsPerPage"
-msgstr ""
+msgstr "Хуудас дахь зүйлийн тоо"
 
 msgid "manager.setup.itemsPerPage.description"
 msgstr ""
+"Жагсаалтад нэг хуудсанд харуулах зүйлсийн (илгээлт, хэрэглэгч, даалгавар гэх "
+"мэт) тоог хязгаарлах."
 
 msgid "manager.setup.journalAbbreviation"
-msgstr ""
+msgstr "Сэтгүүлийн товчилсон нэр"
 
 msgid "manager.setup.journalArchiving"
-msgstr ""
+msgstr "Сэтгүүл архивлах"
 
 msgid "manager.setup.contextSummary"
-msgstr ""
+msgstr "Сэтгүүлийн хураангуй"
 
 msgid "manager.setup.contextAbout"
-msgstr ""
+msgstr "Сэтгүүлийн тухай"
 
 msgid "manager.setup.contextAbout.description"
 msgstr ""
+"Уншигчид, зохиогчид эсвэл хянагч нарын сонирхлыг татаж болох сэтгүүлийнхээ "
+"талаарх бүх мэдээллийг оруулна уу. Үүнд нээлттэй хандалтын бодлого, зорилго, "
+"хамрах хүрээ, зохиогчийн эрх, ивээн тэтгэлэг, түүх, нууцлалын мэдэгдэл "
+"зэргийг багтааж болно."
 
 msgid "manager.setup.journalHomepageContent"
-msgstr ""
+msgstr "Сэтгүүлийн нүүр хуудасны агуулга"
 
 msgid "manager.setup.journalHomepageContentDescription"
 msgstr ""
+"Үндсэн тохиргоогоор нүүр хуудас навигацийн холбоосуудаас бүрдэнэ. Одоогийн "
+"дугаар үргэлж 'Одоогийн' холбоосоор нээлттэй байдаг."
 
 msgid "manager.setup.journalHomepageHeader"
-msgstr ""
+msgstr "Сэтгүүлийн нүүр хуудасны толгой"
 
 msgid "manager.setup.journalHomepageHeader.altText"
-msgstr ""
+msgstr "Сэтгүүлийн нүүр хуудасны толгой"
 
 msgid "manager.setup.journalHomepageHeaderDescription"
 msgstr ""
+"Нүүр хуудсанд сэтгүүлийн нэр, логоны график хувилбарыг (.gif, .jpg, эсвэл ."
+"png) хуулж болох бөгөөд энэ нь текстийг орлох болно."
 
 msgid "manager.setup.contextInitials"
-msgstr ""
+msgstr "Сэтгүүлийн товчлол"
 
 msgid "manager.setup.selectCountry"
-msgstr ""
+msgstr "Сэтгүүл байрлаж буй улс эсвэл хэвлэн нийтлэгчийн улсыг сонгоно уу."
 
 msgid "manager.setup.journalLayout"
-msgstr ""
+msgstr "Сэтгүүлийн бүтэц (Layout)"
 
 msgid "manager.setup.journalLayoutDescription"
 msgstr ""
+"Сэтгүүлийн загвар (Theme) болон бүтцийн бүрэлдэхүүн хэсгүүдийг энд сонгоно "
+"уу. Мөн системийн загварыг өөрчлөх загварын файл (CSS) хуулж болно."
 
 msgid "manager.setup.journalLogo"
-msgstr ""
+msgstr "Сэтгүүлийн лого"
 
 msgid "manager.setup.journalLogo.altText"
-msgstr ""
+msgstr "Сэтгүүлийн лого"
 
 msgid "manager.setup.journalPageFooter"
-msgstr ""
+msgstr "Сэтгүүлийн хуудасны доод хэсэг (Footer)"
 
 msgid "manager.setup.journalPageFooterDescription"
 msgstr ""
+"Энэ бол сэтгүүлийн доод хэсэг юм. Хуудас бүрийн төгсгөлд харагдах HTML кодыг "
+"энд оруулна уу."
 
 msgid "manager.setup.journalPolicies"
-msgstr ""
+msgstr "Алхам 2. Сэтгүүлийн бодлого"
 
 msgid "manager.setup.journalSetup"
-msgstr ""
+msgstr "Сэтгүүлийн тохиргоо"
 
 msgid "manager.setup.journalSetupUpdated"
-msgstr ""
+msgstr "Сэтгүүлийн тохиргоо шинэчлэгдлээ."
 
 msgid "manager.setup.journalStyleSheetInvalid"
-msgstr ""
+msgstr "Загварын файлын формат хүчингүй байна. Зөвхөн .css зөвшөөрөгдөнө."
 
 msgid "manager.setup.journalTheme"
-msgstr ""
+msgstr "Сэтгүүлийн загвар (Theme)"
 
 msgid "manager.setup.journalThumbnail"
-msgstr ""
+msgstr "Сэтгүүлийн жижиг зураг (Thumbnail)"
 
 msgid "manager.setup.journalThumbnail.description"
-msgstr ""
+msgstr "Сэтгүүлүүдийн жагсаалтад ашиглагдах жижиг лого эсвэл дүрслэл."
 
 msgid "manager.setup.contextTitle"
-msgstr ""
+msgstr "Сэтгүүлийн гарчиг"
 
 msgid "manager.setup.labelName"
-msgstr ""
+msgstr "Шошгоны нэр"
 
 msgid "manager.setup.lists"
-msgstr ""
+msgstr "Жагсаалтууд"
 
 msgid "manager.setup.plnPluginEnable"
-msgstr ""
+msgstr "PKP PN нэмэгдлийг идэвхжүүлэх"
 
 msgid "manager.setup.plnDescription"
 msgstr ""
+"PKP Preservation Network (PN) нь OJS-ийн сэтгүүлүүдэд хадгалалт, "
+"хамгаалалтын үйлчилгээг үнэ төлбөргүй үзүүлдэг."
 
 msgid "manager.setup.plnSettingsDescription"
 msgstr ""
+"PKP PN-ийн ашиглалтын нөхцөлийг зөвшөөрөхийн тулд <button>нэмэгдлийн "
+"тохиргоог</button> үзнэ үү."
 
 msgid "manager.setup.plnPluginArchiving"
-msgstr ""
+msgstr "PKP Preservation Network (PN)"
 
 msgid "manager.setup.plnPluginNotInstalled"
 msgstr ""
+"PKP PN нь хадгалалтын үйлчилгээ үзүүлдэг. Хэрэв та сэтгүүлээ энд архивлахыг "
+"хүсвэл администратороосоо PKP|PN нэмэгдлийг суулгахыг хүснэ үү."
 
 msgid "manager.setup.otherLockss"
-msgstr ""
+msgstr "LOCKSS болон CLOCKSS"
 
 msgid "manager.setup.lockssEnable"
 msgstr ""
+"Оролцогч номын сангуудад сэтгүүлийн агуулгыг хадгалах, түгээх боломж олгох "
+"LOCKSS-ийг идэвхжүүлэх."
 
 msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
+msgstr "LOCKSS лиценз нь Сэтгүүлийн тухай хэсгийн Архивлах доор харагдах болно."
 
 msgid "manager.setup.lockssLicenseLabel"
-msgstr ""
+msgstr "LOCKSS лицензийн тайлбар"
 
 msgid "manager.setup.lockssRegister"
-msgstr ""
+msgstr "Сэтгүүлийг бүртгэж, кэшлэх 6-10 номын санг тодорхойлно уу."
 
 msgid "manager.setup.lockssTitle"
-msgstr ""
+msgstr "LOCKSS"
 
 msgid "manager.setup.clockssEnable"
 msgstr ""
+"Оролцогч номын сангуудад сэтгүүлийн агуулгыг хадгалах, түгээх боломж олгох "
+"CLOCKSS-ийг идэвхжүүлэх."
 
 msgid "manager.setup.clockssLicenseDescription"
 msgstr ""
+"CLOCKSS лиценз нь Сэтгүүлийн тухай хэсгийн Архивлах доор харагдах болно."
 
 msgid "manager.setup.clockssLicenseLabel"
-msgstr ""
+msgstr "CLOCKSS лицензийн тайлбар"
 
 msgid "manager.setup.clockssRegister"
-msgstr ""
+msgstr "CLOCKSS вэб сайтад зочилж үйлчилгээнд бүртгүүлнэ үү."
 
 msgid "manager.setup.clockssTitle"
-msgstr ""
+msgstr "CLOCKSS"
 
 msgid "manager.setup.look"
-msgstr ""
+msgstr "Харагдах байдал"
 
 msgid "manager.setup.look.description"
 msgstr ""
+"Нүүр хуудасны толгой, агуулга, сэтгүүлийн толгой, хөл, навигацийн цэс, "
+"загварын файл."
 
 msgid "manager.setup.management"
-msgstr ""
+msgstr "Удирдлага"
 
 msgid "manager.setup.management.description"
 msgstr ""
+"Хандалт, аюулгүй байдал, төлөвлөлт, зарлал, хянан тохиолдуулах, эх бэлтгэл."
 
 msgid "manager.setup.managementOfBasicEditorialSteps"
-msgstr ""
+msgstr "Редакцийн үндсэн алхмуудын удирдлага"
 
 msgid "manager.setup.managingPublishingSetup"
-msgstr ""
+msgstr "Удирдлага болон хэвлэлийн тохиргоо"
 
 msgid "manager.setup.managingTheJournal"
-msgstr ""
+msgstr "Алхам 4. Сэтгүүлийг удирдах"
 
 msgid "manager.setup.navigationBar"
-msgstr ""
+msgstr "Навигацийн цэс"
 
 msgid "manager.setup.navigationBarDescription"
-msgstr ""
+msgstr "Цэсний зүйл нэмэх эсвэл хасах."
 
 msgid "manager.setup.navItemIsAbsolute"
-msgstr ""
+msgstr "URL нь абсолют хаяг байна (жишээ нь: 'http://www.example.com')"
 
 msgid "manager.setup.navItemIsLiteral"
 msgstr ""
+"Шошгоны утга нь шууд текст байна ('Journal Setup') харин орчуулгын түлхүүр "
+"биш ('manager.setup')"
 
 msgid "manager.setup.noImageFileUploaded"
-msgstr ""
+msgstr "Зургийн файл хуулаагүй байна."
 
 msgid "manager.setup.noStyleSheetUploaded"
-msgstr ""
+msgstr "Загварын файл хуулаагүй байна."
 
 msgid "manager.setup.note"
-msgstr ""
+msgstr "Тэмдэглэл"
 
 msgid "manager.setup.notifications.submissionAckDisabled"
 msgstr ""
+"<strong>Тэмдэглэл:</strong> Илгээлтийн баталгаажуулах имэйл одоогоор "
+"идэвхгүй байна. 'Имэйл' хэсгээс 'Submission Ack' имэйлийг идэвхжүүлнэ үү."
 
 msgid "manager.setup.numPageLinks"
-msgstr ""
+msgstr "Хуудасны холбоосууд"
 
 msgid "manager.setup.numPageLinks.description"
-msgstr ""
+msgstr "Жагсаалтад харуулах хуудасны холбоосын тоог хязгаарлах."
 
 msgid "manager.setup.onlineIssn"
-msgstr ""
+msgstr "Онлайн ISSN"
 
 msgid "manager.setup.pageNumberIdentifier"
-msgstr ""
+msgstr "Хуудасны дугаарын сонголт"
 
 msgid "manager.setup.policies"
-msgstr ""
+msgstr "Бодлогууд"
 
 msgid "manager.setup.policies.description"
-msgstr ""
+msgstr "Зорилго, хөндлөнгийн хяналт, салбар хэсгүүд, нууцлал, аюулгүй байдал."
 
 msgid "manager.setup.printIssn"
-msgstr ""
+msgstr "Хэвлэмэл ISSN"
 
 msgid "manager.setup.proofingInstructions"
-msgstr ""
+msgstr "Үсгийн алдаа шалгах заавар"
 
 msgid "manager.setup.proofingInstructionsDescription"
 msgstr ""
+"Энэ зааварчилгаа нь илгээлтийг засварлах шатанд үсгийн алдаа шалгагч, "
+"зохиогч, эх бэлтгэгч нарт харагдах болно."
 
 msgid "manager.setup.publicationSchedule"
-msgstr ""
+msgstr "Нийтлэх хуваарь"
 
 msgid "manager.setup.publicationScheduleDescription"
 msgstr ""
+"Сэтгүүлийн зүйлсийг дугаар болгон багцаар нь нийтлэх, эсвэл бэлэн болмогц нь "
+"'одоогийн' ботид нэмж шууд нийтлэх боломжтой. Сэтгүүлийн нийтлэх давтамжийг "
+"'Сэтгүүлийн тухай' хэсэгт мэдээлнэ үү."
 
 msgid "manager.setup.publicationScheduling"
-msgstr ""
+msgstr "Нийтлэх хуваарь"
 
 msgid "manager.setup.publicIdentifier"
-msgstr ""
+msgstr "Сэтгүүлийн агуулгыг таних тэмдэг"
 
 msgid "manager.setup.publisher"
-msgstr ""
+msgstr "Хэвлэн нийтлэгч"
 
 msgid "manager.setup.referenceLinking"
-msgstr ""
+msgstr "Ишлэл холбох"
 
 msgid "manager.setup.restrictArticleAccess"
 msgstr ""
+"Нээлттэй хандалтын агуулгыг үзэхийн тулд хэрэглэгчид бүртгүүлж, нэвтрэх "
+"ёстой."
 
 msgid "manager.setup.restrictSiteAccess"
-msgstr ""
+msgstr "Сэтгүүлийн сайтыг үзэхийн тулд хэрэглэгчид бүртгүүлж, нэвтрэх ёстой."
 
 msgid "manager.setup.reviewGuidelines"
-msgstr ""
+msgstr "Хянан үзэх удирдамж"
 
 msgid "manager.setup.reviewOptions"
-msgstr ""
+msgstr "Хяналтын сонголтууд"
 
 msgid "manager.setup.reviewOptions.automatedReminders"
-msgstr ""
+msgstr "Автомат имэйл сануулга"
 
 msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
 msgstr ""
 
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
-msgstr ""
+msgstr "Хяналтыг дуусгахад зөвшөөрөгдөх хугацаа (долоо хоногоор)"
 
 msgid "manager.setup.reviewOptions.onQuality"
-msgstr ""
+msgstr "Редакторууд хяналт бүрийн дараа хянагч нарыг таван оноогоор үнэлнэ."
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
-msgstr ""
+msgstr "Файл хандалтыг хязгаарлах"
 
 msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
 msgstr ""
+"Хянагч хяналтыг хийхийг зөвшөөрөх хүртэл илгээх файл руу хандах эрх өгөхгүй."
 
 msgid "manager.setup.reviewOptions.reviewerAccess"
-msgstr ""
+msgstr "Хянагчийн хандалт"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
-msgstr ""
+msgstr "Нэг товшилтоор хандах (One-click Access)"
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
 msgstr ""
+"Хянагч нарт имэйл урилга дотор хамгаалалттай холбоос илгээх бөгөөд холбоос "
+"дээр дармагц автоматаар системд нэвтэрнэ."
 
 msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
-msgstr ""
+msgstr "Хянагч нарт илгээх имэйл урилгад хамгаалалттай холбоос багтаах."
 
 msgid "manager.setup.reviewOptions.reviewerRatings"
-msgstr ""
+msgstr "Хянагчийн үнэлгээ"
 
 msgid "manager.setup.reviewOptions.reviewerReminders"
-msgstr ""
+msgstr "Хянагчийн сануулга"
 
 msgid "manager.setup.reviewPolicy"
-msgstr ""
+msgstr "Хяналтын бодлого"
 
 msgid "manager.setup.searchEngineIndexing"
-msgstr ""
+msgstr "Хайлтын системийн индексжүүлэлт"
 
 msgid "manager.setup.searchEngineIndexing.description"
 msgstr ""
+"Google зэрэг хайлтын системүүдэд танай сайтыг олоход туслах. Та өөрийн <a "
+"href=\"{$sitemapUrl}\" target=\"_blank\">sitemap</a>-аа илгээхийг зөвлөж "
+"байна."
 
 msgid "manager.setup.searchDescription.description"
-msgstr ""
+msgstr "Хайлтын үр дүнд харагдах сэтгүүлийн товч тайлбар (50-300 тэмдэгт)."
 
 msgid "manager.setup.sectionsAndSectionEditors"
-msgstr ""
+msgstr "Салбар хэсгүүд болон Салбар хэсгийн редакторууд"
 
 msgid "manager.setup.sectionsDefaultSectionDescription"
 msgstr ""
+"(Хэрэв салбар хэсэг нэмээгүй бол бичлэгүүд үндсэн 'Өгүүлэл' хэсэгт "
+"илгээгдэнэ.)"
 
 msgid "manager.setup.sectionsDescription"
 msgstr ""
+"Сэтгүүлийн салбар хэсгүүдийг (жишээ нь: Өгүүлэл, Номын шүүмж гэх мэт) "
+"үүсгэх, өөрчлөх бол 'Салбар хэсгийн удирдлага' руу орно уу."
 
 msgid "manager.setup.selectEditorDescription"
-msgstr ""
+msgstr "Редакцийн үйл явцыг хариуцан ажиллах сэтгүүлийн редактор."
 
 msgid "manager.setup.selectSectionDescription"
-msgstr ""
+msgstr "Бичлэгийг хамааруулан үзэх сэтгүүлийн салбар хэсэг."
 
 msgid "manager.setup.showGalleyLinksDescription"
 msgstr ""
+"Эх бэлтгэлийн холбоосуудыг үргэлж харуулж, хязгаарлагдмал хандалтыг заах."
 
 msgid "manager.setup.siteAccess.view"
-msgstr ""
+msgstr "Сайтын хандалт"
 
 msgid "manager.setup.siteAccess.viewContent"
-msgstr ""
+msgstr "Өгүүллийн агуулгыг үзэх"
 
 msgid "manager.setup.stepsToJournalSite"
-msgstr ""
+msgstr "Сэтгүүлийн вэб сайт үүсгэх таван алхам"
 
 msgid "manager.setup.subjectExamples"
-msgstr ""
+msgstr "(Жишээ нь: Фотосинтез; Хар нүх; Байесын онол)"
 
 msgid "manager.setup.subjectKeywordTopic"
-msgstr ""
+msgstr "Түлхүүр үгс"
 
 msgid "manager.setup.subjectProvideExamples"
-msgstr ""
+msgstr "Зохиогчдод заавар болгож түлхүүр үг эсвэл сэдвүүдийн жишээ оруулна уу"
 
 msgid "manager.setup.submissionGuidelines"
-msgstr ""
+msgstr "Илгээлт хийх удирдамж"
 
 msgid "manager.setup.submissions"
-msgstr ""
+msgstr "Илгээлтүүд"
 
 msgid "manager.setup.submissions.description"
-msgstr ""
+msgstr "Зохиогчийн удирдамж, зохиогчийн эрх, индексжүүлэлт."
 
 msgid "manager.setup.disableSubmissions.description"
 msgstr ""
+"Хэрэглэгчдийг сэтгүүлд шинэ өгүүлэл илгээхийг зогсоох. Илгээлтийг салбар "
+"хэсэг бүрээр <a href=\"{$url}\">салбар хэсгийн тохиргоо</a> хуудсан дээр "
+"идэвхгүй болгож болно."
 
 msgid "manager.setup.disableSubmissions.notAccepting"
 msgstr ""
+"Энэ сэтгүүл одоогоор илгээлт хүлээн авахгүй байна. Ажлын урсгалын "
+"тохиргооноос зөвшөөрнө үү."
 
 msgid "manager.setup.enableOai"
-msgstr ""
+msgstr "OAI идэвхжүүлэх"
 
 msgid "manager.setup.enableOai.description"
 msgstr ""
+"Open Archives Initiative-ээр дамжуулан гуравдагч талын индексжүүлэх "
+"үйлчилгээнүүдэд мета өгөгдөл олгох."
 
 msgid "manager.setup.typeExamples"
 msgstr ""
+"(Жишээ нь: Түүхэн судалгаа; Туршилт; Уран зохиолын дүн шинжилгээ; "
+"Судалгаа/Ярилцлага)"
 
 msgid "manager.setup.typeMethodApproach"
-msgstr ""
+msgstr "Төрөл (Арга зүй/Хандлага)"
 
 msgid "manager.setup.typeProvideExamples"
-msgstr ""
+msgstr "Энэ салбарын судалгааны төрөл, арга зүй, хандлагын жишээг оруулна уу"
 
 msgid "manager.setup.uniqueIdentifier"
-msgstr ""
+msgstr "Үл давхцах таних тэмдэг"
 
 msgid "manager.setup.uniqueIdentifierDescription"
 msgstr ""
+"Өгүүлэл болон дугааруудыг DOI (Digital Object Identifier) зэрэг систем "
+"ашиглан таних тэмдэгтээр тэмдэглэж болно."
 
 msgid "manager.setup.useEditorialReviewBoard"
-msgstr ""
+msgstr "Сэтгүүл редакцийн/хяналтын зөвлөлтэй байна."
 
 msgid "manager.setup.useThumbnail"
-msgstr ""
+msgstr "Жижиг зураг (Thumbnail)"
 
 msgid "manager.setup.useImageTitle"
-msgstr ""
+msgstr "Зураг гарчиг"
 
 msgid "manager.setup.userRegistration"
-msgstr ""
+msgstr "Хэрэглэгчийн бүртгэл"
 
 msgid "manager.setup.useTextTitle"
-msgstr ""
+msgstr "Текст гарчиг"
 
 msgid "manager.statistics.statistics"
-msgstr ""
+msgstr "Сэтгүүлийн статистик"
 
 msgid "manager.statistics.statistics.articleViews"
-msgstr ""
+msgstr "Өгүүлэл үзсэн тоо (Зөвхөн зохиогчдод)"
 
 msgid "manager.statistics.statistics.count.accept"
-msgstr ""
+msgstr "Хүлээн авсан"
 
 msgid "manager.statistics.statistics.count.decline"
-msgstr ""
+msgstr "Татгалзсан"
 
 msgid "manager.statistics.statistics.count.revise"
-msgstr ""
+msgstr "Дахин ирүүлэх"
 
 msgid "manager.statistics.statistics.daysPerReview"
-msgstr ""
+msgstr "Хянахад зарцуулсан хоног"
 
 msgid "manager.statistics.statistics.daysToPublication"
-msgstr ""
+msgstr "Нийтлэх хүртэлх хоног"
 
 msgid "manager.statistics.statistics.description"
 msgstr ""
+"OJS сэтгүүл бүрт дараах статистикийг тооцдог. 'Хянахад зарцуулсан хоног' нь "
+"илгээсэн өдрөөс редакторын анхны шийдвэр хүртэл, 'нийтлэх хүртэлх хоног' нь "
+"илгээсэн өдрөөс нийтлэгдэх хүртэлх хугацааг хэмждэг."
 
 msgid "manager.statistics.statistics.itemsPublished"
-msgstr ""
+msgstr "Нийтлэгдсэн бичлэгүүд"
 
 msgid "manager.statistics.statistics.makePublic"
-msgstr ""
+msgstr "Сэтгүүлийн тухай хэсэгт уншигчдад харуулах зүйлсийг сонгоно уу."
 
 msgid "manager.statistics.statistics.note"
 msgstr ""
+"Тэмдэглэл: Хөндлөнгийн хяналттай илгээлтүүдийн хувь нийлбэр 100% болохгүй "
+"байж болно, учир нь дахин илгээсэн зүйлс нь зөвшөөрөгдсөн, татгалзсан эсвэл "
+"одоо хүртэл боловсруулагдаж байгаа байж болно."
 
 msgid "manager.statistics.statistics.numIssues"
-msgstr ""
+msgstr "Нийтлэгдсэн дугаарууд"
 
 msgid "manager.statistics.statistics.numSubmissions"
-msgstr ""
+msgstr "Нийт илгээлтүүд"
 
 msgid "manager.statistics.statistics.peerReviewed"
-msgstr ""
+msgstr "Хөндлөнгийн хяналт хийгдсэн"
 
 msgid "manager.statistics.statistics.registeredReaders"
-msgstr ""
+msgstr "Бүртгэлтэй уншигчид"
 
 msgid "manager.statistics.statistics.reviewerCount"
-msgstr ""
+msgstr "Оноосон тоо"
 
 msgid "manager.statistics.statistics.reviewers"
-msgstr ""
+msgstr "Хянагч нар"
 
 msgid "manager.statistics.statistics.reviewerScore"
-msgstr ""
+msgstr "Редакторын үнэлгээ"
 
 msgid "manager.statistics.statistics.reviewsPerReviewer"
-msgstr ""
+msgstr "Хяналтын тоо"
 
 msgid "manager.statistics.statistics.selectSections"
 msgstr ""
+"Энэ сэтгүүлийн хяналттай статистикийг тооцоолох салбар хэсгүүдийг сонгоно уу."
 
 msgid "manager.statistics.statistics.subscriptions"
-msgstr ""
+msgstr "Захиалгууд"
 
 msgid "manager.statistics.reports.defaultReport.articleDownloads"
-msgstr ""
+msgstr "Өгүүлэл татсан тоо"
 
 msgid "manager.statistics.reports.defaultReport.articleAbstract"
-msgstr ""
+msgstr "Өгүүллийн хураангуй үзсэн тоо"
 
 msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
-msgstr ""
+msgstr "Өгүүллийн хураангуй үзсэн болон татсан тоо"
 
 msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
-msgstr ""
+msgstr "Сэтгүүлийн нүүр хуудас үзсэн тоо"
 
 msgid "manager.statistics.reports.defaultReport.issuePageViews"
-msgstr ""
+msgstr "Дугаарын гарчгийн жагсаалт үзсэн тоо"
 
 msgid "manager.subscriptionPolicies"
-msgstr ""
+msgstr "Захиалгын бодлого"
 
 msgid "manager.subscriptionPolicies.delayedOpenAccess"
-msgstr ""
+msgstr "Хойшлогдсон нээлттэй хандалт"
 
 msgid ""
 "manager.subscriptionPolicies."
 "enableSubscriptionExpiryReminderBeforeMonthsValid"
-msgstr ""
+msgstr "Өгөгдсөн чагтыг ашиглана уу."
 
 msgid "manager.subscriptionPolicies.expiry"
-msgstr ""
+msgstr "Захиалга дуусах"
 
 msgid "manager.subscriptionPolicies.expiryDescription"
 msgstr ""
+"Захиалгын хугацаа дууссаны дараа уншигчид бүх агуулгад хандах эрхгүй болох "
+"эсвэл захиалга дуусахаас өмнөх агуулгад хандах эрхтэй үлдэх эсэхийг "
+"тохируулна."
 
 msgid "manager.subscriptionPolicies.expiryFull"
-msgstr ""
+msgstr "Бүрэн дуусах"
 
 msgid "manager.subscriptionPolicies.expiryFullDescription"
-msgstr ""
+msgstr "Захиалгын хугацаа дуусмагц уншигч бүх агуулгад хандах эрхгүй болно."
 
 msgid "manager.subscriptionPolicies.expiryPartial"
-msgstr ""
+msgstr "Хэсэгчлэн дуусах"
 
 msgid "manager.subscriptionPolicies.expiryPartialDescription"
 msgstr ""
+"Уншигчид сүүлд нийтлэгдсэн агуулгад хандах эрхгүй болох боловч захиалга "
+"дуусахаас өмнө нийтлэгдсэн агуулгад хандах эрхээ хадгална."
 
 msgid "manager.subscriptionPolicies.xMonths"
-msgstr ""
+msgstr "{$x} Сар"
 
 msgid "manager.subscriptionPolicies.xWeeks"
-msgstr ""
+msgstr "{$x} Долоо хоног"
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
-msgstr ""
+msgstr "Захиалга дууссаны дараа имэйлээр мэдэгдэх"
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
-msgstr ""
+msgstr "Захиалга дууссаны дараа имэйлээр мэдэгдэх."
 
 msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
-msgstr ""
+msgstr "Захиалга дуусахаас өмнө имэйлээр мэдэгдэх."
 
 msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
-msgstr ""
+msgstr "Захиалга дуусахаас өмнө имэйлээр мэдэгдэх."
 
 msgid "manager.subscriptionPolicies.expiryReminders"
-msgstr ""
+msgstr "Захиалга дуусах тухай сануулга"
 
 msgid "manager.subscriptionPolicies.expiryRemindersDescription"
 msgstr ""
+"Захиалга дуусахаас өмнө болон дараа нь автомат имэйл сануулга илгээж болно."
 
 msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
 msgstr ""
 
 msgid "manager.subscriptionPolicies.expirySelectOne"
-msgstr ""
+msgstr "Дараахын аль нэгийг сонгоно уу:"
 
 msgid "manager.subscriptionPolicies.htmlInstructions"
-msgstr ""
+msgstr "Текст талбарт HTML ашиглаж болно (үсгийн хэмжээ, өнгө гэх мэт)."
 
 msgid ""
 "manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
-msgstr ""
+msgstr "Захиалга дууссаны дараах сарын тоонд хүчинтэй утга сонгоно уу."
 
 msgid ""
 "manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
-msgstr ""
+msgstr "Захиалга дуусахаас өмнөх сарын тоонд хүчинтэй утга сонгоно уу."
 
 msgid ""
 "manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
-msgstr ""
+msgstr "Захиалга дууссаны дараах долоо хоногийн тоонд хүчинтэй утга сонгоно уу."
 
 msgid ""
 "manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
-msgstr ""
+msgstr "Захиалга дуусахаас өмнөх долоо хоногийн тоонд хүчинтэй утга сонгоно уу."
 
 msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
 msgstr ""
+"Дугаар нээлттэй хандалттай болох үед бүртгэлтэй уншигчид гарчгийн жагсаалтыг "
+"имэйлээр хүлээн авах боломжтой байна."
 
 msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
 msgstr ""
 
 msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
-msgstr ""
+msgstr "Онлайн төлбөрийн мэдэгдэл"
 
 msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
 msgstr ""
+"Захиалгын төлбөр хийгдэж дуусмагц Захиалгын Менежерт автомат имэйл мэдэгдэл "
+"илгээж болно."
 
 msgid ""
 "manager.subscriptionPolicies."
 "enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
 msgstr ""
+"Хувь хүний захиалга онлайнаар худалдаж авах үед Захиалгын Менежерт мэдэгдэх."
 
 msgid ""
 "manager.subscriptionPolicies."
 "enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
 msgstr ""
+"Байгууллагын захиалга онлайнаар худалдаж авах үед Захиалгын Менежерт "
+"мэдэгдэх (зөвлөж байна)."
 
 msgid ""
 "manager.subscriptionPolicies."
 "enableSubscriptionOnlinePaymentNotificationRenewIndividual"
-msgstr ""
+msgstr "Хувь хүний захиалгыг онлайнаар сунгах үед Захиалгын Менежерт мэдэгдэх."
 
 msgid ""
 "manager.subscriptionPolicies."
 "enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
 msgstr ""
+"Байгууллагын захиалгыг онлайнаар сунгах үед Захиалгын Менежерт мэдэгдэх."
 
 msgid ""
 "manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
 msgstr ""
+"<strong>Тэмдэглэл:</strong> Онлайнаар худалдаж авсан байгууллагын захиалгыг "
+"идэвхжүүлэхийн тулд Захиалгын Менежер домайн болон IP мужийг баталгаажуулах "
+"шаардлагатай."
 
 msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
 msgstr ""
+"<strong>Тэмдэглэл:</strong> Эдгээр сонголтыг ашиглахын тулд Сэтгүүлийн "
+"Менежер 'Уншигчийн хураамж' хэсгээс онлайн төлбөрийн модулийг идэвхжүүлсэн "
+"байх ёстой."
 
 msgid "manager.subscriptionPolicies.openAccessOptions"
-msgstr ""
+msgstr "Захиалгатай сэтгүүлүүдэд зориулсан нээлттэй хандалтын сонголтууд"
 
 msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
 msgstr ""
+"Захиалгатай сэтгүүлүүд нь нийтлэгдсэн агуулгадаа 'хойшлогдсон нээлттэй "
+"хандалт' олгохоос гадна 'зохиогчийн өөрийн архивлалт'-ыг зөвшөөрч болно."
 
 msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
-msgstr ""
+msgstr "Захиалгын мэдээлэл"
 
 msgid ""
 "manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
 msgstr ""
+"Захиалгын төрөл, хураамжийн бүтэц, Захиалгын Менежерийн нэр, холбоо барих "
+"мэдээлэл захиалгын хуудсан дээр харагдах болно. Бусад нэмэлт мэдээллийг энд "
+"оруулж болно."
 
 msgid "manager.subscriptionPolicies.subscriptionContact"
-msgstr ""
+msgstr "Захиалгын менежер"
 
 msgid "manager.subscriptionPolicies.subscriptionContactDescription"
 msgstr ""
+"Захиалгатай холбоотой лавлагаа авах үйлчлүүлэгчдэд зориулсан холбоо барих "
+"мэдээлэл."
 
 msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
-msgstr ""
+msgstr "Хүчинтэй имэйл хаяг оруулна уу."
 
 msgid "manager.subscriptions"
-msgstr ""
+msgstr "Захиалгууд"
 
 msgid "manager.individualSubscriptions"
-msgstr ""
+msgstr "Хувь хүний захиалга"
 
 msgid "manager.institutionalSubscriptions"
-msgstr ""
+msgstr "Байгууллагын захиалга"
 
 msgid "manager.subscriptions.confirmRenew"
-msgstr ""
+msgstr "Та энэ захиалгыг сунгахдаа итгэлтэй байна уу?"
 
 msgid "manager.subscriptions.confirmDelete"
-msgstr ""
+msgstr "Та энэ захиалгыг устгахдаа итгэлтэй байна уу?"
 
 msgid "manager.subscriptions.summary"
-msgstr ""
+msgstr "Захиалгын хураангуй"
 
 msgid "manager.subscriptions.create"
-msgstr ""
+msgstr "Шинэ захиалга үүсгэх"
 
 msgid "manager.subscriptions.createTitle"
-msgstr ""
+msgstr "Үүсгэх"
 
 msgid "manager.subscriptions.renew"
-msgstr ""
+msgstr "Сунгах"
 
 msgid "manager.subscriptions.dateEnd"
-msgstr ""
+msgstr "Дуусах"
 
 msgid "manager.subscriptions.dateEndSearch"
-msgstr ""
+msgstr "Дуусах огноо"
 
 msgid "manager.subscriptions.dateStart"
-msgstr ""
+msgstr "Эхлэх"
 
 msgid "manager.subscriptions.dateStartSearch"
-msgstr ""
+msgstr "Эхлэх огноо"
 
 msgid "manager.subscriptions.domain"
-msgstr ""
+msgstr "Домайн"
 
 msgid "manager.subscriptions.edit"
-msgstr ""
+msgstr "Захиалга засварлах"
 
 msgid "manager.subscriptions.editTitle"
-msgstr ""
+msgstr "Засварлах"
 
 msgid "manager.subscriptions.withStatus"
-msgstr ""
+msgstr "Дараах төлөвтэй"
 
 msgid "manager.subscriptions.allStatus"
-msgstr ""
+msgstr "Бүх"
 
 msgid "manager.subscriptions.form.status"
-msgstr ""
+msgstr "Төлөв"
 
 msgid "manager.subscriptions.form.statusRequired"
-msgstr ""
+msgstr "Захиалгын төлөв шаардлагатай."
 
 msgid "manager.subscriptions.form.statusValid"
-msgstr ""
+msgstr "Хүчинтэй захиалгын төлөв сонгоно уу."
 
 msgid "manager.subscriptions.form.typeId"
-msgstr ""
+msgstr "Захиалгын төрөл"
 
 msgid "manager.subscriptions.form.typeIdRequired"
-msgstr ""
+msgstr "Захиалгын төрөл шаардлагатай."
 
 msgid "manager.subscriptions.form.typeIdValid"
-msgstr ""
+msgstr "Хүчинтэй захиалгын төрөл сонгоно уу."
 
 msgid "manager.subscriptions.form.institution"
-msgstr ""
+msgstr "Байгууллага"
 
 msgid "manager.subscriptions.form.institutionIdValid"
-msgstr ""
+msgstr "Хүчинтэй байгууллага сонгоно уу."
 
 msgid "manager.subscriptions.form.dateStart"
-msgstr ""
+msgstr "Эхлэх огноо"
 
 msgid "manager.subscriptions.form.dateStartRequired"
-msgstr ""
+msgstr "Захиалгын эхлэх огноо шаардлагатай."
 
 msgid "manager.subscriptions.form.dateStartValid"
-msgstr ""
+msgstr "Хүчинтэй эхлэх огноо сонгоно уу."
 
 msgid "manager.subscriptions.form.dateEnd"
-msgstr ""
+msgstr "Дуусах огноо"
 
 msgid "manager.subscriptions.form.dateEndRequired"
-msgstr ""
+msgstr "Захиалгын дуусах огноо шаардлагатай."
 
 msgid "manager.subscriptions.form.dateStartEmpty"
-msgstr ""
+msgstr "Энэ бол хугацаагүй захиалгын төрөл; эхлэх огноо заахгүй байж болно."
 
 msgid "manager.subscriptions.form.dateEndEmpty"
-msgstr ""
+msgstr "Энэ бол хугацаагүй захиалгын төрөл; дуусах огноо заахгүй байж болно."
 
 msgid "manager.subscriptions.form.dateEndValid"
-msgstr ""
+msgstr "Хүчинтэй дуусах огноо сонгоно уу."
 
 msgid "manager.subscriptions.form.userProfileInstructions"
 msgstr ""
+"Тэмдэглэл: Доорх бүх өөрчлөлтүүд хэрэглэгчийн системийн хэмжээний профайлд "
+"хийгдэнэ."
 
 msgid "manager.subscriptions.form.userId"
-msgstr ""
+msgstr "Хэрэглэгч"
 
 msgid "manager.subscriptions.form.userContact"
-msgstr ""
+msgstr "Холбоо барих"
 
 msgid "manager.subscriptions.form.userIdRequired"
-msgstr ""
+msgstr "Хэрэглэгч шаардлагатай."
 
 msgid "manager.subscriptions.form.userIdValid"
-msgstr ""
+msgstr "Хүчинтэй хэрэглэгч сонгоно уу."
 
 msgid "manager.subscriptions.form.userCountryValid"
-msgstr ""
+msgstr "Хүчинтэй улс сонгоно уу."
 
 msgid "manager.subscriptions.form.notifyEmail"
 msgstr ""
+"Хэрэглэгчийн нэр болон захиалгын дэлгэрэнгүй мэдээллийг имэйлээр илгээх."
 
 msgid "manager.subscriptions.form.notifyEmailValid"
-msgstr ""
+msgstr "Өгөгдсөн чагтыг ашиглана уу."
 
 msgid "manager.subscriptions.form.membership"
-msgstr ""
+msgstr "Гишүүнчлэл"
 
 msgid "manager.subscriptions.form.referenceNumber"
-msgstr ""
+msgstr "Лавлах дугаар"
 
 msgid "manager.subscriptions.form.membershipInstructions"
 msgstr ""
+"Хэрэв захиалгын төрөл нь гишүүнчлэл шаарддаг бол гишүүнчлэлийн мэдээллийг "
+"оруулна уу."
 
 msgid "manager.subscriptions.form.membershipRequired"
-msgstr ""
+msgstr "Сонгосон захиалгын төрөл гишүүнчлэлийн мэдээлэл шаардаж байна."
 
 msgid "manager.subscriptions.form.notes"
-msgstr ""
+msgstr "Тэмдэглэл"
 
 msgid "manager.subscriptions.form.domain"
-msgstr ""
+msgstr "Домайн"
 
 msgid "manager.subscriptions.form.institutionName"
-msgstr ""
+msgstr "Байгууллагын нэр"
 
 msgid "manager.subscriptions.form.institutionNameRequired"
-msgstr ""
+msgstr "Байгууллагын нэр шаардлагатай."
 
 msgid "manager.subscriptions.form.institutionMailingAddress"
-msgstr ""
+msgstr "Шуудангийн хаяг"
 
 msgid "manager.subscriptions.form.domainInstructions"
-msgstr ""
+msgstr "Хэрэв домайн оруулбал IP муж заавал биш байна."
 
 msgid "manager.subscriptions.form.domainIPRangeRequired"
-msgstr ""
+msgstr "Захиалгын баталгаажуулалтад домайн эсвэл IP муж шаардлагатай."
 
 msgid "manager.subscriptions.form.domainValid"
-msgstr ""
+msgstr "Хүчинтэй домайн оруулна уу."
 
 msgid "manager.subscriptions.form.ipRange"
-msgstr ""
+msgstr "IP мужууд"
 
 msgid "manager.subscriptions.form.ipRangeItem"
-msgstr ""
+msgstr "&#8226;"
 
 msgid "manager.subscriptions.form.ipRangeInstructions"
 msgstr ""
+"Хэрэв IP мужууд оруулбал домайн заавал биш байна. IP хаяг (жишээ нь: 142.58."
+"103.1), IP муж (жишээ нь: 142.58.103.1 - 142.58.103.4), '*' тэмдэгт бүхий IP "
+"муж (жишээ нь: 142.58.*.*), эсвэл CIDR ашиглаж болно."
 
 msgid "manager.subscriptions.form.ipRangeValid"
-msgstr ""
+msgstr "Хүчинтэй IP муж оруулна уу."
 
 msgid "manager.subscriptions.form.deleteIpRange"
-msgstr ""
+msgstr "Устгах"
 
 msgid "manager.subscriptions.form.addIpRange"
-msgstr ""
+msgstr "Нэмэх"
 
 msgid "manager.subscriptions.form.saveAndCreateAnother"
-msgstr ""
+msgstr "Хадгалаад дахин нэгийг үүсгэх"
 
 msgid "manager.subscriptions.form.subscriptionContactRequired"
 msgstr ""
+"Мэдэгдэл илгээхийн тулд сэтгүүлийн тохиргоонд захиалгын холбоо барих хүний "
+"мэдээллийг зааж өгөх ёстой."
 
 msgid "manager.subscriptions.form.subscriptionExists"
-msgstr ""
+msgstr "Энэ хэрэглэгч энэ сэтгүүлд аль хэдийн захиалгатай байна."
 
 msgid "manager.subscriptions.form.typeRequired"
-msgstr ""
+msgstr "Шинэ захиалга үүсгэхийн өмнө захиалгын төрөл үүсгэсэн байх ёстой."
 
 msgid "manager.subscriptions.form.institutionRequired"
-msgstr ""
+msgstr "Шинэ захиалга үүсгэхийн өмнө байгууллага үүсгэсэн байх ёстой."
 
 msgid "manager.subscriptions.ipRange"
-msgstr ""
+msgstr "IP Муж"
 
 msgid "manager.subscriptions.membership"
-msgstr ""
+msgstr "Гишүүнчлэл"
 
 msgid "manager.subscriptions.referenceNumber"
-msgstr ""
+msgstr "Лавлах дугаар"
 
 msgid "manager.subscriptions.notes"
-msgstr ""
+msgstr "Тэмдэглэл"
 
 msgid "manager.subscriptions.noneCreated"
-msgstr ""
+msgstr "Захиалга алга"
 
 msgid "manager.subscriptions.selectContact"
-msgstr ""
+msgstr "Захиалгын холбоо барих хүнийг сонгох"
 
 msgid "manager.subscriptions.selectUser"
-msgstr ""
+msgstr "Хэрэглэгч сонгох"
 
 msgid "manager.subscriptions.selectSubscriber.desc"
 msgstr ""
+"Захиалгаар хандах эрхийг Сэтгүүлийн Менежер, Редактор, Салбар хэсгийн "
+"редактор, Эх бэлтгэгч, Хянан тохиолдуулагч нарт автоматаар олгодог."
 
 msgid "manager.subscriptions.select"
-msgstr ""
+msgstr "Сонгох"
 
 msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
-msgstr ""
+msgstr "Захиалгыг амжилттай үүсгэлээ."
 
 msgid "manager.subscriptions.subscriptionType"
-msgstr ""
+msgstr "Захиалгын төрөл"
 
 msgid "manager.subscriptions.user"
-msgstr ""
+msgstr "Хэрэглэгч"
 
 msgid "manager.subscriptions.contact"
-msgstr ""
+msgstr "Холбоо барих хүний нэр"
 
 msgid "manager.subscriptions.institutionName"
-msgstr ""
+msgstr "Байгууллагын нэр"
 
 msgid "manager.subscriptionTypes"
-msgstr ""
+msgstr "Захиалгын төрлүүд"
 
 msgid "manager.subscriptionTypes.confirmDelete"
 msgstr ""
+"Анхаар! Энэ төрөлд хамаарах бүх захиалгууд мөн устах болно. Та энэ захиалгын "
+"төрлийг устгахдаа итгэлтэй байна уу?"
 
 msgid "manager.subscriptionTypes.cost"
-msgstr ""
+msgstr "Үнэ"
 
 msgid "manager.subscriptionTypes.subscriptions"
-msgstr ""
+msgstr "Захиалгууд"
 
 msgid "manager.subscriptionTypes.individual"
-msgstr ""
+msgstr "Хувь хүн"
 
 msgid "manager.subscriptionTypes.institutional"
-msgstr ""
+msgstr "Байгууллага"
 
 msgid "manager.subscriptionTypes.create"
-msgstr ""
+msgstr "Шинэ захиалгын төрөл үүсгэх"
 
 msgid "manager.subscriptionTypes.createTitle"
-msgstr ""
+msgstr "Үүсгэх"
 
 msgid "manager.subscriptionTypes.duration"
-msgstr ""
+msgstr "Үргэлжлэх хугацаа"
 
 msgid "manager.subscriptionTypes.edit"
-msgstr ""
+msgstr "Захиалгын төрөл засварлах"
 
 msgid "manager.subscriptionTypes.editTitle"
-msgstr ""
+msgstr "Засварлах"
 
 msgid "manager.subscriptionTypes.form.cost"
-msgstr ""
+msgstr "Үнэ"
 
 msgid "manager.subscriptionTypes.form.costInstructions"
-msgstr ""
+msgstr "Тоон утга оруулна уу (жишээ нь: 40 эсвэл 40.00), тэмдэг ($) оруулахгүй."
 
 msgid "manager.subscriptionTypes.form.costNumeric"
-msgstr ""
+msgstr "Үнэ нь эерэг тоон утга байх ёстой."
 
 msgid "manager.subscriptionTypes.form.costRequired"
-msgstr ""
+msgstr "Үнэ шаардлагатай."
 
 msgid "manager.subscriptionTypes.form.currency"
-msgstr ""
+msgstr "Валют"
 
 msgid "manager.subscriptionTypes.form.currencyRequired"
-msgstr ""
+msgstr "Валют шаардлагатай."
 
 msgid "manager.subscriptionTypes.form.currencyValid"
-msgstr ""
+msgstr "Хүчинтэй валют сонгоно уу."
 
 msgid "manager.subscriptionTypes.form.description"
-msgstr ""
+msgstr "Тайлбар"
 
 msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
-msgstr ""
+msgstr "Дуусах хугацаа"
 
 msgid "manager.subscriptionTypes.form.nonExpiring.months"
-msgstr ""
+msgstr "сар (жишээ нь: 12)"
 
 msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
-msgstr ""
+msgstr "Хэзээ ч дуусахгүй"
 
 msgid "manager.subscriptionTypes.form.nonExpiringValid"
-msgstr ""
+msgstr "Өгөгдсөн сонголтуудыг ашиглана уу."
 
 msgid "manager.subscriptionTypes.form.duration"
-msgstr ""
+msgstr "Үргэлжлэх хугацаа"
 
 msgid "manager.subscriptionTypes.form.durationInstructions"
-msgstr ""
+msgstr "Захиалгын үргэлжлэх сарын тоо (жишээ нь: 12)."
 
 msgid "manager.subscriptionTypes.form.durationNumeric"
-msgstr ""
+msgstr "Хугацаа нь эерэг тоон утга байх ёстой."
 
 msgid "manager.subscriptionTypes.form.durationRequired"
-msgstr ""
+msgstr "Хугацаа шаардлагатай."
 
 msgid "manager.subscriptionTypes.form.format"
-msgstr ""
+msgstr "Формат"
 
 msgid "manager.subscriptionTypes.form.formatRequired"
-msgstr ""
+msgstr "Захиалгын төрлийн формат шаардлагатай."
 
 msgid "manager.subscriptionTypes.form.formatValid"
-msgstr ""
+msgstr "Хүчинтэй формат сонгоно уу."
 
 msgid "manager.subscriptionTypes.form.subscriptions"
-msgstr ""
+msgstr "Захиалгууд"
 
 msgid "manager.subscriptionTypes.form.individual"
-msgstr ""
+msgstr "Хувь хүн (хэрэглэгч нэвтэрч баталгаажуулна)"
 
 msgid "manager.subscriptionTypes.form.institutional"
-msgstr ""
+msgstr "Байгууллага (IP хаяг эсвэл домайнаар баталгаажуулна)"
 
 msgid "manager.subscriptionTypes.form.institutionalValid"
-msgstr ""
+msgstr "Өгөгдсөн сонголтуудыг ашиглана уу."
 
 msgid "manager.subscriptionTypes.form.membership"
 msgstr ""
+"Захиалга нь гишүүнчлэлийн мэдээлэл шаардана (жишээ нь: холбоо, байгууллага, "
+"консорциум)."
 
 msgid "manager.subscriptionTypes.form.membershipValid"
-msgstr ""
+msgstr "Өгөгдсөн чагтыг ашиглана уу."
 
 msgid "manager.subscriptionTypes.form.options"
-msgstr ""
+msgstr "Сонголтууд"
 
 msgid "manager.subscriptionTypes.form.public"
-msgstr ""
+msgstr "Энэ захиалгын төрлийг вэб сайт дээр ил харуулахгүй байх."
 
 msgid "manager.subscriptionTypes.form.publicValid"
-msgstr ""
+msgstr "Өгөгдсөн чагтыг ашиглана уу."
 
 msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
-msgstr ""
+msgstr "Хадгалаад дахин нэгийг үүсгэх"
 
 msgid "manager.subscriptionTypes.form.typeName"
-msgstr ""
+msgstr "Төрлийн нэр"
 
 msgid "manager.subscriptionTypes.form.typeNameExists"
-msgstr ""
+msgstr "Ийм нэртэй захиалгын төрөл аль хэдийн байна."
 
 msgid "manager.subscriptionTypes.form.typeNameRequired"
-msgstr ""
+msgstr "Төрлийн нэр шаардлагатай."
 
 msgid "manager.subscriptionTypes.name"
-msgstr ""
+msgstr "Захиалгын төрөл"
 
 msgid "manager.subscriptionTypes.noneCreated"
-msgstr ""
+msgstr "Захиалгын төрөл үүсгээгүй байна."
 
 msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
-msgstr ""
+msgstr "Захиалгын төрлийг амжилттай үүсгэлээ."
 
 msgid "manager.navigationMenus.subscriptions.description"
-msgstr ""
+msgstr "Таны санал болгож буй захиалгуудыг тайлбарлах хуудасны холбоос."
 
 msgid "manager.navigationMenus.mySubscriptions.description"
-msgstr ""
+msgstr "Зочны одоогийн болон өмнөх захиалгуудыг харуулах хуудасны холбоос."
 
 msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
-msgstr ""
+msgstr "Энэ холбоос зөвхөн хэрэглэгч нэвтэрсэн үед харагдана."
 
 msgid "manager.setup.categories"
-msgstr ""
+msgstr "Ангилалууд"
 
 msgid "manager.setup.categories.description"
 msgstr ""
+"Дээрх жагсаалтаас хамгийн тохиромжтой ангилалуудыг сонгоно уу. Уншигчид "
+"ангиллаар шүүж үзэх боломжтой болно."
 
 msgid "grid.category.path"
-msgstr ""
+msgstr "Зам (Path)"
 
 msgid "grid.action.addSection"
-msgstr ""
+msgstr "Салбар хэсэг нэмэх"
 
 msgid "manager.setup.section.description"
 msgstr ""
+"Сэтгүүлийн нийтлэгдсэн дугаар дахь өгүүллүүд нь Салбар хэсгүүдэд (жишээ нь: "
+"Шүүмж, Судалгаа гэх мэт) хуваагддаг."
 
 msgid "settings.roles.gridDescription"
 msgstr ""
+"Үүрэг нь сэтгүүл доторх өөр өөр эрх бүхий хэрэглэгчдийн бүлэг юм. Сэтгүүлийн "
+"Менежер бүх зүйлд хандах эрхтэй; Салбар хэсгийн редакторууд оноосон "
+"агуулгадаа хандана; Сэтгүүлийн туслахууд редактороос оноосон илгээлтүүдэд "
+"хязгаарлагдмал эрхтэй хандана; Хянагч нар оноосон илгээлтийг хянах боломжтой;"
+" Зохиогчид өөрийн илгээлтийн мэдээллийг харна."
 
 msgid "manager.publication.library"
-msgstr ""
+msgstr "Хэвлэн нийтлэгчийн сан"
 
 msgid "manager.setup.copyrightYearBasis"
-msgstr ""
+msgstr "Шинэ өгүүллийн зохиогчийн эрхийн оныг дараах дээр үндэслэх"
 
 msgid "manager.setup.copyrightYearBasis.article"
-msgstr ""
+msgstr "Өгүүлэл: Үндсэн он нь өгүүллийн нийтлэгдсэн огнооноос авагдана."
 
 msgid "manager.setup.copyrightYearBasis.issue"
-msgstr ""
+msgstr "Дугаар: Үндсэн он нь дугаарын нийтлэгдсэн огнооноос авагдана."
 
 msgid "manager.setup.resetPermissions"
-msgstr ""
+msgstr "Өгүүллийн зөвшөөрлүүдийг шинэчлэх (Reset)"
 
 msgid "manager.setup.resetPermissions.confirm"
 msgstr ""
+"Та бүх өгүүллийн зөвшөөрлийн өгөгдлийг шинэчлэхдээ итгэлтэй байна уу? Энэ "
+"үйлдлийг буцаах боломжгүй."
 
 msgid "manager.setup.resetPermissions.description"
 msgstr ""
+"Нийтлэгдсэн өгүүлэл бүрийн зохиогчийн эрхийн мэдэгдэл болон лицензийн "
+"мэдээллийг устгаж, сэтгүүлийн одоогийн үндсэн тохиргоонд шилжүүлнэ. Энэ нь "
+"өмнөх бүх мэдээллийг бүрмөсөн устгах тул болгоомжтой ашиглана уу."
 
 msgid "manager.setup.resetPermissions.success"
-msgstr ""
+msgstr "Өгүүллийн зөвшөөрлүүдийг амжилттай шинэчиллээ."
 
 msgid "grid.genres.title.short"
-msgstr ""
+msgstr "Бүрэлдэхүүн хэсэг"
 
 msgid "grid.genres.title"
-msgstr ""
+msgstr "Өгүүллийн бүрэлдэхүүн хэсгүүд"
 
 msgid "grid.genres.description"
 msgstr ""
+"Эдгээр бүрэлдэхүүн хэсгүүдийг файл нэрлэхэд ашигладаг бөгөөд файл хуулах үед "
+"цэснээс сонгогддог."
 
 msgid "plugins.importexport.common.settings"
-msgstr ""
+msgstr "Тохиргоо"
 
 msgid "plugins.importexport.common.settings.DOIPluginSettings"
-msgstr ""
+msgstr "DOI нэмэгдлийн тохиргоо"
 
 msgid "plugins.importexport.common.export.articles"
-msgstr ""
+msgstr "Өгүүлэлүүд"
 
 msgid "plugins.importexport.common.export.issues"
-msgstr ""
+msgstr "Дугаарууд"
 
 msgid "plugins.importexport.common.export.representations"
-msgstr ""
+msgstr "Эх бэлтгэлүүд"
 
 msgid "plugins.importexport.common.missingRequirements"
-msgstr ""
+msgstr "Нэмэгдлийн шаардлага хангагдаагүй байна"
 
 msgid "plugins.importexport.common.error.DOIsNotAvailable"
 msgstr ""
+"Энэ нэмэгдлийг ашиглахын тулд 'Public Identifier' нэмэгдлийн ангилал руу "
+"орж, DOI нэмэгдлийг идэвхжүүлж, хүчинтэй DOI префикс зааж өгнө үү."
 
 msgid "plugins.importexport.common.error.pluginNotConfigured"
-msgstr ""
+msgstr "Нэмэгдлийн тохиргоо бүрэн хийгдээгүй байна."
 
 msgid "plugins.importexport.common.error.noDOIContentObjects"
-msgstr ""
+msgstr "DOI оноохоор сонгосон объект байхгүй байна."
 
 msgid "plugins.importexport.common.settings.form.password"
-msgstr ""
+msgstr "Нууц үг"
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr "Нууц үгийг шифрлэхгүйгээр энгийн текстээр хадгалахыг анхаарна уу."
 
 msgid "plugins.importexport.common.filter.issue"
-msgstr ""
+msgstr "Дурын дугаар"
 
 msgid "plugins.importexport.common.status.any"
-msgstr ""
+msgstr "Дурын төлөв"
 
 msgid "plugins.importexport.common.status.notDeposited"
-msgstr ""
+msgstr "Байршуулаагүй"
 
 msgid "plugins.importexport.common.status.markedRegistered"
-msgstr ""
+msgstr "Бүртгэгдсэнээр тэмдэглэсэн"
 
 msgid "plugins.importexport.common.status.registered"
-msgstr ""
+msgstr "Бүртгэгдсэн"
 
 msgid "plugins.importexport.common.action"
-msgstr ""
+msgstr "Үйлдэл"
 
 msgid "plugins.importexport.common.action.export"
-msgstr ""
+msgstr "Экспортлох"
 
 msgid "plugins.importexport.common.action.markRegistered"
-msgstr ""
+msgstr "Бүртгэгдсэнээр тэмдэглэх"
 
 msgid "plugins.importexport.common.action.register"
-msgstr ""
+msgstr "Бүртгүүлэх"
 
 msgid "plugins.importexport.common.error.noObjectsSelected"
-msgstr ""
+msgstr "Объект сонгоогүй байна."
 
 msgid "plugins.importexport.common.error.validation"
-msgstr ""
+msgstr "Сонгосон объектуудыг хөрвүүлж чадсангүй."
 
 msgid "plugins.importexport.common.invalidXML"
-msgstr ""
+msgstr "Хүчингүй XML:"
 
 msgid "plugins.importexport.common.export.error.outputFileNotWritable"
-msgstr ""
+msgstr "Гаралтын файл {$param} руу бичих боломжгүй байна."
 
 msgid "plugins.importexport.common.export.error.inputFileNotReadable"
-msgstr ""
+msgstr "Оролтын файл {$param}-ыг унших боломжгүй байна."
 
 msgid "plugins.importexport.common.register.error.mdsError"
 msgstr ""
+"Бүртгэл амжилтгүй боллоо! DOI бүртгэлийн сервер алдаа буцаалаа: '{$param}'."
 
 msgid "plugins.importexport.common.register.success"
-msgstr ""
+msgstr "Бүртгэл амжилттай боллоо!"
 
 msgid "plugins.importexport.common.validation.success"
-msgstr ""
+msgstr "Шалгалт (Validation) амжилттай!"
 
 msgid "plugins.importexport.common.validation.fail"
-msgstr ""
+msgstr "Шалгалт амжилтгүй боллоо."
 
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
-msgstr ""
+msgstr "{$path} замтай сэтгүүлд DOI префикс байхгүй байна."
 
 msgid "plugins.importexport.common.error.unknownObjects"
-msgstr ""
+msgstr "Заасан объектууд олдсонгүй."
 
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr ""
+"Сэтгүүлийн тохиргоонд заасан үндсэн холбоо барих хүн рүү хуулбарыг илгээх."
 
 msgid "stats.contextStats"
-msgstr ""
+msgstr "Сэтгүүлийн статистик"
 
 msgid "stats.context.tooltip.text"
-msgstr ""
+msgstr "Сэтгүүлийн нүүр хуудсыг үзсэн зочдын тоо."
 
 msgid "stats.context.tooltip.label"
-msgstr ""
+msgstr "Сэтгүүлийн статистикийн тухай"
 
 msgid "stats.context.downloadReport.description"
 msgstr ""
+"Дараах үзүүлэлтүүдэд тохирох сэтгүүлийн ашиглалтын статистикийг CSV/Excel "
+"файлаар татах."
 
 msgid "stats.context.downloadReport.downloadContext.description"
-msgstr ""
+msgstr "Сэтгүүлийн нүүр хуудсыг үзсэн тоо."
 
 msgid "stats.context.downloadReport.downloadContext"
-msgstr ""
+msgstr "Сэтгүүлийг татах"
 
 msgid "stats.issueStats"
-msgstr ""
+msgstr "Дугаарын статистик"
 
 msgid "stats.issues.details"
-msgstr ""
+msgstr "Үзсэн болон Татсан тоо"
 
 msgid "stats.issues.searchIssueDescription"
-msgstr ""
+msgstr "Дугаарын гарчиг, боть, дугаараар хайх"
 
 msgid "stats.issues.none"
-msgstr ""
+msgstr "Эдгээр үзүүлэлтэд тохирох статистик бүхий дугаар олдсонгүй."
 
 msgid "stats.issues.downloadReport.description"
-msgstr ""
+msgstr "Дугааруудын ашиглалтын статистикийг татах."
 
 msgid "stats.issues.downloadReport.downloadIssues.description"
-msgstr ""
+msgstr "Дугаар бүрийн гарчгийн жагсаалтыг үзсэн болон эх бэлтгэлийг татсан тоо."
 
 msgid "stats.issues.downloadReport.downloadIssues"
-msgstr ""
+msgstr "Дугааруудыг татах"
 
 msgid "stats.issues.countOfTotal"
-msgstr ""
+msgstr "Нийт {$total} дугаараас {$count}"
 
 msgid "stats.issues.tooltip.label"
-msgstr ""
+msgstr "Дугаарын статистикийн тухай"
 
 msgid "stats.issues.tooltip.text"
 msgstr ""
+"<strong>Үзсэн</strong>: Дугаарын гарчгийн жагсаалтыг үзсэн "
+"тоо.<br><strong>Татсан</strong>: Дугаарын эх бэлтгэлийг татсан тоо."
 
 msgid "stats.publicationStats"
-msgstr ""
+msgstr "Өгүүллийн статистик"
 
 msgid "stats.publications.details"
-msgstr ""
+msgstr "Өгүүллийн дэлгэрэнгүй"
 
 msgid "stats.publications.none"
-msgstr ""
+msgstr "Эдгээр үзүүлэлтэд тохирох статистик бүхий өгүүлэл олдсонгүй."
 
 msgid "stats.publications.totalAbstractViews.timelineInterval"
-msgstr ""
+msgstr "Огноогоорх нийт хураангуй үзсэн тоо"
 
 msgid "stats.publications.totalGalleyViews.timelineInterval"
-msgstr ""
+msgstr "Огноогоорх нийт файл үзсэн тоо"
 
 msgid "stats.publications.countOfTotal"
-msgstr ""
+msgstr "Нийт {$total} өгүүллээс {$count}"
 
 msgid "stats.publications.abstracts"
-msgstr ""
+msgstr "Хураангуй"
 
 msgid "stats.publications.galleys"
-msgstr ""
+msgstr "Файлууд"
 
 msgid "stats.publications.downloadReport.description"
-msgstr ""
+msgstr "Өгүүллүүдийн ашиглалтын статистикийг татах."
 
 msgid "stats.publications.downloadReport.downloadSubmissions"
-msgstr ""
+msgstr "Өгүүлэлүүдийг татах"
 
 msgid "stats.publications.downloadReport.downloadSubmissions.description"
-msgstr ""
+msgstr "Өгүүлэл бүрийн хураангуйг үзсэн болон файл татсан тоо."
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
+"Илгээлтийг хүлээн авсан тухай баталгаажуулах имэйлийн хуулбарыг сэтгүүлийн "
+"үндсэн холбоо барих хүн рүү илгээх."
 
 msgid ""
 "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled."
 "description"
 msgstr ""
+"Сэтгүүлд үндсэн холбоо барих хүн тодорхойлоогүй байна. <a href=\"{$url}\""
+">сэтгүүлийн тохиргоо</a> хэсэгт оруулна уу."
 
 msgid "plugins.importexport.native.export.issues.results"
-msgstr ""
+msgstr "Дугаар экспортолсон үр дүн"
 
 msgid "plugins.importexport.issue.cli.display"
-msgstr ""
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
 
 msgid "plugins.importexport.issueGalleys.exportFailed"
-msgstr ""
+msgstr "Дугаарын эх бэлтгэлийг боловсруулахад алдаа гарлаа"
 
 msgid "emailTemplate.variable.context.contextName"
-msgstr ""
+msgstr "Сэтгүүлийн нэр"
 
 msgid "emailTemplate.variable.context.contextUrl"
-msgstr ""
+msgstr "Сэтгүүлийн нүүр хуудасны URL"
 
 msgid "emailTemplate.variable.context.contactName"
-msgstr ""
+msgstr "Сэтгүүлийн үндсэн холбоо барих хүний нэр"
 
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr ""
+msgstr "Сэтгүүлийн товчлол"
 
 msgid "emailTemplate.variable.context.contextSignature"
-msgstr ""
+msgstr "Автомат имэйлд зориулсан сэтгүүлийн имэйл гарын үсэг"
 
 msgid "emailTemplate.variable.context.contactEmail"
-msgstr ""
+msgstr "Сэтгүүлийн үндсэн холбоо барих хүний имэйл"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "Сэтгүүлийн шуудангийн хаяг"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
-msgstr ""
+msgstr "Төлбөрийн төрлийн нэр"
 
 msgid "emailTemplate.variable.queuedPayment.itemCost"
-msgstr ""
+msgstr "Төлбөрийн дүн"
 
 msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
-msgstr ""
+msgstr "Төлбөрийн валютын код (жишээ нь: USD)"
 
 msgid "emailTemplate.variable.site.siteTitle"
-msgstr ""
+msgstr "Олон сэтгүүл байршуулсан үеийн вэб сайтын нэр"
 
 msgid "emailTemplate.variable.subscription.subscriberDetails"
-msgstr ""
+msgstr "Захиалагчийн нэр, харьяалал, утас болон имэйл хаяг"
 
 msgid "emailTemplate.variable.subscription.subscriptionSignature"
-msgstr ""
+msgstr "Захиалгын менежерийн холбоо барих мэдээлэл"
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
-msgstr ""
+msgstr "Захиалгын хуудасны URL"
 
 msgid "emailTemplate.variable.subscription.expiryDate"
-msgstr ""
+msgstr "Захиалга дуусах огноо"
 
 msgid "emailTemplate.variable.subscription.subscriptionType"
-msgstr ""
+msgstr "Захиалгын төрөл, нэр, хугацаа, үнийн хураангуй"
 
 msgid "emailTemplate.variable.subscription.membership"
-msgstr ""
+msgstr "Захиалагчийн гишүүнчлэлийн мэдээлэл"
 
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr ""
+msgstr "Захиалагч байгууллагын нэр"
 
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr ""
+msgstr "Захиалагч байгууллагын шуудангийн хаяг"
 
 msgid "emailTemplate.variable.subscription.domain"
-msgstr ""
+msgstr "Энэ захиалгад хүчинтэй IP хаягуудын домайн нэр"
 
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr ""
+msgstr "Энэ захиалгад хүчинтэй IP мужууд"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "Зохиогч төлбөр хийх хуудасны URL"
 
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "Илгээлт хийх удирдамжийн URL"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "Нийтлэгдсэн өгүүллийн статистик хуудасны холбоос"
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "Дугаарын ID"
 
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
+"Системийн ерөнхий төлөвийг мэдээлэх зорилгоор редактор болон сэтгүүлийн "
+"менежерүүдэд сар бүр автоматаар илгээгддэг имэйл."
 
 msgid "mailable.validateEmailContext.name"
-msgstr ""
+msgstr "Имэйл баталгаажуулах (Сэтгүүлийн бүртгэл)"
 
 msgid "mailable.validateEmailContext.description"
 msgstr ""
+"Тохиргоонд имэйл баталгаажуулах шаардлагатай гэж заасан үед шинэ хэрэглэгч "
+"бүртгүүлэхэд автоматаар илгээгддэг имэйл."
 
 msgid "doi.displayName"
-msgstr ""
+msgstr "DOI"
 
 msgid "doi.description"
 msgstr ""
+"Энэ нэмэгдэл нь OJS дахь дугаар, өгүүлэл, эх бэлтгэлүүдэд Дижитал Объект "
+"Танигч (DOI) оноох боломжийг олгоно."
 
 msgid "doi.readerDisplayName"
-msgstr ""
+msgstr "DOI"
 
 msgid "doi.manager.displayName"
-msgstr ""
+msgstr "DOI-нууд"
 
 msgid "doi.manager.settings.description"
-msgstr ""
+msgstr "OJS-д DOI-г удирдах, ашиглахын тулд нэмэгдлийг тохируулна уу:"
 
 msgid "doi.manager.settings.explainDois"
-msgstr ""
+msgstr "DOI оноох объектуудыг сонгоно уу:"
 
 msgid "doi.manager.settings.enableRepresentationDoi"
-msgstr ""
+msgstr "Өгүүллийн эх бэлтгэлүүд (Galleys)"
 
 msgid "doi.manager.settings.galleysWithDescription"
-msgstr ""
+msgstr "Нийтлэгдсэн PDF зэрэг өгүүллийн эх бэлтгэлүүд"
 
 msgid "doi.manager.settings.doiPrefix"
-msgstr ""
+msgstr "DOI префикс"
 
 msgid "doi.manager.settings.doiPrefixPattern"
-msgstr ""
+msgstr "DOI префикс заавал байх ёстой бөгөөд 10.xxxx хэлбэртэй байна."
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr ""
+"Нийтлэлийн төрөл бүрт зориулсан тусгай дагавар (suffix) загварыг оруулна уу. "
+"Дараах тэмдэгтүүдийг ашиглаж болно:<br><br> <code>%j</code> Сэтгүүлийн "
+"товчлол<br> <code>%v</code> Дугаарын боть<br> <code>%i</code> Дугаарын "
+"дугаар<br> <code>%Y</code> Дугаарын он<br> <code>%a</code> Өгүүллийн ID<br> "
+"<code>%g</code> Эх бэлтгэлийн ID<br> <code>%f</code> Файлын ID<br> <code>%p</"
+"code> Хуудасны дугаар<br> <code>%x</code> Тусгай танигч "
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
 msgstr ""
+"Жишээ нь: vol%viss%ipp%p гэвэл 10.1234/vol3iss2pp230 гэсэн DOI үүсгэж болно"
 
 msgid "doi.manager.settings.doiSuffixPattern.issues"
-msgstr ""
+msgstr "дугаарт зориулсан"
 
 msgid "doi.manager.settings.doiSuffixPattern.submissions"
-msgstr ""
+msgstr "өгүүлэлд зориулсан"
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
-msgstr ""
+msgstr "эх бэлтгэлд зориулсан"
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
-msgstr ""
+msgstr "Дугаарын DOI дагаврын загварыг оруулна уу."
 
 msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
-msgstr ""
+msgstr "Өгүүллийн DOI дагаврын загварыг оруулна уу."
 
 msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
-msgstr ""
+msgstr "Эх бэлтгэлийн DOI дагаврын загварыг оруулна уу."
 
 msgid "doi.manager.settings.doiReassign"
-msgstr ""
+msgstr "DOI-г дахин оноох"
 
 msgid "doi.manager.settings.doiReassign.description"
 msgstr ""
+"DOI тохиргоогоо өөрчилбөл өмнө нь оноосон DOI-нуудад нөлөөлөхгүй. Шинэ "
+"тохиргоог одоо байгаа объектуудад хэрэгжүүлэхийн тулд энэ товчийг ашиглан "
+"хуучин DOI-нуудыг цэвэрлэж болно."
 
 msgid "doi.manager.settings.doiReassign.confirm"
-msgstr ""
+msgstr "Та бүх DOI-г устгахдаа итгэлтэй байна уу?"
 
 msgid "doi.manager.settings.doiAssignJournalWide"
-msgstr ""
+msgstr "DOI оноох"
 
 msgid "doi.manager.settings.doiAssignJournalWide.description"
 msgstr ""
+"DOI оноогоогүй нийтлэгдсэн бүх объектуудад DOI оноох. Энэ үйлдэл нь "
+"нийтлэгдсэн объектын тооноос хамаарч удаан үргэлжилж магадгүй."
 
 msgid "doi.manager.settings.doiAssignJournalWide.confirm"
-msgstr ""
+msgstr "Та DOI оноогоогүй бүх объектуудад DOI оноохдоо итгэлтэй байна уу?"
 
 msgid "doi.manager.settings.registrationAgency"
-msgstr ""
+msgstr "Бүртгэлийн агентлаг"
 
 msgid "doi.manager.settings.registrationAgency.description"
-msgstr ""
+msgstr "DOI байршуулахдаа ашиглах бүртгэлийн агентлагийг сонгоно уу."
 
 msgid "doi.manager.settings.registrationAgency.none"
-msgstr ""
+msgstr "Байхгүй"
 
 msgid "doi.editor.doi"
-msgstr ""
+msgstr "DOI"
 
 msgid "doi.editor.doi.description"
-msgstr ""
+msgstr "DOI нь {$prefix}-ээр эхлэх ёстой."
 
 msgid "doi.editor.doi.assignDoi"
-msgstr ""
+msgstr "Оноох"
 
 msgid "doi.editor.doiObjectTypeIssue"
-msgstr ""
+msgstr "дугаар"
 
 msgid "doi.editor.doiObjectTypeSubmission"
-msgstr ""
+msgstr "өгүүлэл"
 
 msgid "doi.editor.doiObjectTypeRepresentation"
-msgstr ""
+msgstr "эх бэлтгэл"
 
 msgid "doi.editor.customSuffixMissing"
-msgstr ""
+msgstr "Тусгай дагавар байхгүй тул DOI оноох боломжгүй."
 
 msgid "doi.editor.missingIssue"
-msgstr ""
+msgstr "Энэ нийтлэлийг аль нэг дугаарт оноох хүртэл DOI үүсгэх боломжгүй."
 
 msgid "doi.editor.missingParts"
 msgstr ""
+"DOI загварын зарим хэсэгт өгөгдөл дутуу байгаа тул DOI үүсгэж чадсангүй. Та "
+"нийтлэлийг дугаарт оноох, хэвлэн нийтлэгчийн ID тохируулах эсвэл хуудасны "
+"дугаар оруулах шаардлагатай байж магадгүй."
 
 msgid "doi.editor.patternNotResolved"
-msgstr ""
+msgstr "DOI нь шийдэгдээгүй загвар агуулсан тул оноох боломжгүй."
 
 msgid "doi.editor.canBeAssigned"
 msgstr ""
+"Таны харж буй зүйл бол DOI-ийн урьдчилан харалт юм. Чагтыг чагталж, маягтыг "
+"хадгалснаар DOI оноогдоно."
 
 msgid "doi.editor.assigned"
-msgstr ""
+msgstr "DOI энэ {$pubObjectType}-д оноогдсон байна."
 
 msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
 msgstr ""
+"Өгөгдсөн DOI дагавар өөр бичлэгт аль хэдийн ашиглагдсан байна. Бичлэг бүрт "
+"үл давхцах дагавар оруулна уу."
 
 msgid "doi.editor.clearObjectsDoi"
-msgstr ""
+msgstr "Цэвэрлэх"
 
 msgid "doi.editor.clearObjectsDoi.confirm"
-msgstr ""
+msgstr "Та байгаа DOI-г устгахдаа итгэлтэй байна уу?"
 
 msgid "doi.editor.clearIssueObjectsDoi"
-msgstr ""
+msgstr "Дугаарын объектуудын DOI-г цэвэрлэх"
 
 msgid "doi.editor.clearIssueObjectsDoi.confirm"
-msgstr ""
+msgstr "Та энэ дугаарын объектуудын DOI-г устгахдаа итгэлтэй байна уу?"
 
 msgid "doi.editor.clearIssueObjectsDoi.description"
 msgstr ""
+"Энэ дугаарт төлөвлөгдсөн бүх объектуудын (өгүүлэл, эх бэлтгэл) DOI-г "
+"цэвэрлэхэд энэ сонголтыг ашиглана уу."
 
 msgid "doi.editor.assignDoi"
-msgstr ""
+msgstr "Энэ {$pubObjectType}-д {$pubId} DOI-г оноох"
 
 msgid "doi.editor.assignDoi.emptySuffix"
-msgstr ""
+msgstr "Тусгай дагавар байхгүй тул DOI оноох боломжгүй."
 
 msgid "doi.editor.assignDoi.pattern"
-msgstr ""
+msgstr "{$pubId} DOI нь шийдэгдээгүй загвар агуулсан тул оноох боломжгүй."
 
 msgid "doi.editor.assignDoi.assigned"
 msgstr ""
+"{$pubId} DOI оноогдлоо. DOI-г засварлах бол <a href=\"{$doiManagementLink}\""
+">DOI удирдлагын хуудсанд</a> зочилно уу."
 
 msgid "doi.editor.assignDoi.toBeAssigned"
-msgstr ""
+msgstr "{$pubId} DOI нийтлэгдэх үед оноогдоно."
 
 msgid "doi.editor.missingPrefix"
-msgstr ""
+msgstr "DOI нь {$doiPrefix}-ээр эхлэх ёстой."
 
 msgid "doi.editor.preview.publication"
-msgstr ""
+msgstr "Энэ нийтлэлийн DOI нь {$doi} байх болно."
 
 msgid "doi.editor.preview.publication.none"
-msgstr ""
+msgstr "Энэ нийтлэлд DOI оноогоогүй байна."
 
 msgid "doi.editor.preview.galleys"
-msgstr ""
+msgstr "Эх бэлтгэл: {$galleyLabel}"
 
 msgid "doi.editor.preview.objects"
-msgstr ""
+msgstr "Бичлэг"
 
 msgid "api.galley.403.publicationDidNotMatch"
-msgstr ""
+msgstr "Таны хүссэн эх бэлтгэл энэ нийтлэлийн хэсэг биш байна."
 
 msgid "api.galley.403.canEditPublishedDoi"
-msgstr ""
+msgstr "Нийтлэл/эх бэлтгэл нийтлэгдсэний дараа зөвхөн DOI-г засварлаж болно"
 
 msgid "api.issue.400.invalidDoi"
-msgstr ""
+msgstr "Илгээсэн DOI хүчингүй байна"
 
 msgid "api.issue.403.canEditPublishedDoi"
-msgstr ""
+msgstr "Нийтлэл нийтлэгдсэний дараа зөвхөн DOI-г засварлаж болно"
 
 msgid "api.issue.404.issuesNotFound"
-msgstr ""
+msgstr "Таны хүссэн дугаарууд олдсонгүй"
 
 msgid "doi.manager.submissionDois"
-msgstr ""
+msgstr "Өгүүллийн DOI-нууд"
 
 msgid "doi.manager.issueDois"
-msgstr ""
+msgstr "Дугаарын DOI-нууд"
 
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr ""
+"Бичлэг нь сэтгүүлийн шаардлага хангахгүй байгаа тул хяналтын шатнаас өмнө "
+"татгалзаж буйг зохиогчид мэдэгдэх имэйл."
 
 msgid "manager.institutions.noContext"
-msgstr ""
+msgstr "Энэ байгууллагын сэтгүүл олдсонгүй."
 
 msgid "mailable.subscriptionNotify.name"
-msgstr ""
+msgstr "Захиалгын мэдэгдэл"
 
 msgid "mailable.subscriptionNotify.description"
 msgstr ""
+"Менежер хэрэглэгчид зориулж захиалга үүсгэсэн тухай мэдэгдэх имэйл. Үүнд "
+"сэтгүүлийн URL болон хандах заавар багтана."
 
 msgid "mailable.subscriptionExpiresSoon.name"
-msgstr ""
+msgstr "Захиалгын хугацаа удахгүй дуусна"
 
 msgid "mailable.subscriptionExpiresSoon.description"
 msgstr ""
 
 msgid "mailable.subscriptionExpired.name"
-msgstr ""
+msgstr "Захиалгын хугацаа дууссан"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
 
 msgid "mailable.subscriptionExpiredLast.name"
-msgstr ""
+msgstr "Захиалга дууссан (Эцсийн сануулга)"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
-msgstr ""
+msgstr "Хувь хүний захиалга худалдан авах"
 
 msgid "mailable.subscriptionPurchaseIndividual.description"
 msgstr ""
+"Хувь хүний захиалга онлайнаар худалдаж авсан тухай Захиалгын Менежерт "
+"мэдэгдэх имэйл."
 
 msgid "mailable.subscriptionPurchaseInstitutional.name"
-msgstr ""
+msgstr "Байгууллагын захиалга худалдан авах"
 
 msgid "mailable.subscriptionPurchaseInstitutional.description"
 msgstr ""
+"Байгууллагын захиалга онлайнаар худалдаж авсан тухай Захиалгын Менежерт "
+"мэдэгдэх имэйл."
 
 msgid "mailable.subscriptionRenewIndividual.name"
-msgstr ""
+msgstr "Хувь хүний захиалга сунгах"
 
 msgid "mailable.subscriptionRenewIndividual.description"
 msgstr ""
+"Хувь хүний захиалга онлайнаар сунгагдсан тухай Захиалгын Менежерт мэдэгдэх "
+"имэйл."
 
 msgid "mailable.subscriptionRenewInstitutional.name"
-msgstr ""
+msgstr "Байгууллагын захиалга сунгах"
 
 msgid "mailable.subscriptionRenewInstitutional.description"
 msgstr ""
+"Байгууллагын захиалга онлайнаар сунгагдсан тухай Захиалгын Менежерт мэдэгдэх "
+"имэйл."
 
 msgid "mailable.openAccessNotify.name"
-msgstr ""
+msgstr "Нээлттэй хандалтын мэдэгдэл"
 
 msgid "mailable.openAccessNotify.description"
 msgstr ""
+"Дугаар нээлттэй хандалттай болох үед мэдэгдэл авахаар хүсэлт гаргасан "
+"уншигчдад илгээх имэйл."
 
 msgid "mailable.issuePublishNotify.name"
-msgstr ""
+msgstr "Дугаар нийтлэгдсэн мэдэгдэл"
 
 msgid "mailable.issuePublishNotify.description"
 msgstr ""
+"Шинэ дугаар нийтлэгдэх үед бүртгэлтэй хэрэглэгчдэд автоматаар илгээгдэх "
+"имэйл."
 
 msgid "manager.manageEmails.description"
-msgstr ""
+msgstr "Энэ сэтгүүлээс илгээгдэх имэйлүүдийг засварлах."
 
 msgid "mailable.layoutComplete.name"
-msgstr ""
+msgstr "Эх бэлтгэл дууссан"
 
 msgid "mailable.publicationVersionNotify.name"
-msgstr ""
+msgstr "Шинэ хувилбар үүсгэгдлээ"
 
 msgid "mailable.publicationVersionNotify.description"
 msgstr ""
+"Илгээлтийн шинэ хувилбар үүсэх үед томилогдсон редакторуудад автоматаар "
+"мэдэгдэх имэйл."
 
 msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
+"Шинэ илгээлт ирсэн боловч редактор оноогоогүй үед Сэтгүүлийн Менежерүүдэд "
+"илгээгдэх имэйл."
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "Төлбөрийн хүсэлт"
 
 msgid "mailable.paymentRequest.description"
 msgstr ""
+"Илгээлтийг хүлээн авах үед нийтлэлийн хураамж төлөхийг хүсэж зохиогчид "
+"илгээх автомат имэйл."
+
+msgid "manager.setup.contextSummary.description"
+msgstr "Сэтгүүлийн агуулга, зорилгын талаар товч тайлбар оруулна уу."
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "Дугаарын эх бэлтгэлийг импортлож чадсангүй, файл нь дутуу байна."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"Дугаарын эх бэлтгэлийг {$id} экспортлож чадсангүй, файл нь '{$path}' замаас "
+"олдсонгүй."
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"Дугаарын {$id} нүүр зургийг экспортлож чадсангүй, файл нь '{$path}' замаас "
+"олдсонгүй."
+
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr "Дугаарын гарчгийн жагсаалт (холбогдох бүх илгээлтүүдийн жагсаалт)"
