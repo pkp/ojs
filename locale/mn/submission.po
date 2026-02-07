@@ -1,3 +1,410 @@
 # Gantulga <cybermon@gmail.com>, 2026.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2026-02-07 06:31+0000\n"
+"Last-Translator: Gantulga <cybermon@gmail.com>\n"
+"Language-Team: Mongolian <http://translate.pkp.sfu.ca/projects/ojs/"
+"submission/mn/>\n"
+"Language: mn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "submission.submit.userGroup"
+msgstr "Дараах үүргээр илгээх..."
+
+msgid "submission.upload.selectComponent"
+msgstr "Өгүүллийн бүрэлдэхүүн хэсгийг сонгоно уу"
+
+msgid "submission.submit.newSubmissionSingle"
+msgstr "Шинэ илгээлт"
+
+msgid "grid.action.workflow"
+msgstr "Илгээлтийн ажлын урсгал"
+
+msgid "submission.submit.form.contributorRoleRequired"
+msgstr "Оролцогчийн үүргийг сонгоно уу."
+
+msgid "submission.title"
+msgstr "Өгүүллийн гарчиг"
+
+msgid "submission.title.tip"
+msgstr ""
+"Илгээлтийн төрөл нь ихэвчлэн 'зураг', 'текст' эсвэл 'програм хангамж', "
+"'интерактив' зэрэг бусад мультимедиа төрлүүдийн нэг байдаг. Таны илгээлтэд "
+"хамгийн их хамааралтайг нь сонгоно уу. Жишээг <a target=\"_blank\" href="
+"\"http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type\""
+">http://dublincore.org/documents/2001/04/12/usageguide/generic.shtml#type</"
+"a> хаягаас харж болно."
+
+msgid "submission.submit.newSubmissionMultiple"
+msgstr "Дараах хэсэгт шинэ илгээлт эхлүүлэх"
+
+msgid "submission.abstract.wordCount.description"
+msgstr "Хураангуй нь {$wordCount} буюу түүнээс цөөн үгтэй байх ёстой."
+
+msgid "submission.submit.noContext"
+msgstr "Энэхүү илгээлтэд харгалзах сэтгүүл олдсонгүй."
+
+msgid "submission.issueEntry"
+msgstr "Мета өгөгдөл"
+
+msgid "submission.submit.whatNext.description"
+msgstr ""
+"Таны илгээлтийн талаар сэтгүүлийн газарт мэдэгдсэн бөгөөд таны бүртгэлд "
+"баталгаажуулалт имэйлээр очсон болно. Редактор илгээлтийг хянаж дуусаад "
+"тантай холбогдох болно."
+
+msgid "grid.action.galleyInIssueEntry"
+msgstr "Эх бэлтгэл дугаарын бүртгэлд харагдаж байна"
+
+msgid "grid.action.issueEntry"
+msgstr "Энэхүү илгээлтийн мета өгөгдлийг харах"
+
+msgid "submission.event.articleGalleyMadeAvailable"
+msgstr "Өгүүллийн эх бэлтгэл \"{$galleyFormatName}\" нээлттэй боллоо."
+
+msgid "submission.event.articleGalleyMadeUnavailable"
+msgstr "Өгүүллийн эх бэлтгэл \"{$galleyFormatName}\" хаалттай боллоо."
+
+msgid "submission.event.publicIdentifiers"
+msgstr "Илгээлтийн нийтийн таних тэмдэгтүүд шинэчлэгдлээ."
+
+msgid "grid.issueEntry.availableGalley.title"
+msgstr "Форматыг батлах"
+
+msgid "grid.issueEntry.availableGalley.removeMessage"
+msgstr "<p>Энэхүү эх бэлтгэл уншигчдад <em>харагдахгүй</em> болно.</p>"
+
+msgid "grid.issueEntry.availableGalley.message"
+msgstr "<p>Энэхүү эх бэлтгэл уншигчдад <em>нээлттэй</em> болно.</p>"
+
+msgid "grid.action.availableArticleGalley"
+msgstr "Энэхүү эх бэлтгэлийг нээлттэй болгох"
+
+msgid "submission.galleyFiles"
+msgstr "Эх бэлтгэлийн файлууд"
+
+msgid "submission.proofReadingDescription"
+msgstr ""
+"Эх бэлтгэлийн редактор хэвлэхэд бэлэн болсон файлуудыг энд хуулна. "
+"<em>Аудитор томилох</em> хэсгийг ашиглан зохиогч болон бусад хүмүүсийг эх "
+"бэлтгэлийг хянуулахаар онооно. Засварласан файлуудыг нийтлэхээс өмнө "
+"баталгаажуулахаар хуулна."
+
+msgid "grid.action.approveProof"
+msgstr "Энэхүү хяналтын хувийг (proof) эх бэлтгэлд оруулахаар батлах."
+
+msgid "grid.action.pageProofApproved"
+msgstr "Энэхүү хяналтын хувийг эх бэлтгэлд оруулахаар баталлаа."
+
+msgid "submission.submit.titleAndSummary"
+msgstr "Гарчиг болон Хураангуй"
+
+msgid "submission.submit.upload.description"
+msgstr ""
+"Энэхүү илгээлттэй холбоотой файлуудыг хуулна уу. Үүнд өгүүлэл, мультимедиа, "
+"өгөгдлийн багц, зураг гэх мэт багтана."
+
+msgid "workflow.review.externalReview"
+msgstr "Хяналтын шат"
+
+msgid "submission.event.issueMetadataUpdated"
+msgstr "Илгээлтийн дугаарын мета өгөгдөл шинэчлэгдлээ."
+
+msgid "submission.upload.fileContents"
+msgstr "Өгүүллийн бүрэлдэхүүн хэсэг"
+
+msgid "submission.complete"
+msgstr "Баталсан"
+
+msgid "submission.incomplete"
+msgstr "Батлахыг хүлээж байна"
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Илгээлтийн хяналтын хуудас"
+
+msgid "submission.submit.privacyStatement"
+msgstr "Нууцлалын мэдэгдэл"
+
+msgid "submission.submit.contributorRole"
+msgstr "Оролцогчийн үүрэг"
+
+msgid "submission.citationFormat.notFound"
+msgstr "Хүссэн ишлэлийн формат олдсонгүй."
+
+msgid "submission.pageProofs"
+msgstr "Хэвлэлтийн өмнөх сүүлийн шалгалт"
+
+msgid "submission.metadataDescription"
+msgstr ""
+"Эдгээр тодорхойлолтууд нь сэтгүүлийн агуулгыг тодорхойлоход ашигладаг олон "
+"улсын стандарт болох Dublin Core мета өгөгдлийн багц дээр суурилсан болно."
+
+msgid "section.any"
+msgstr "Дурын салбар хэсэг"
+
+msgid "submission.sectionOptions"
+msgstr "Салбар хэсгийн сонголтууд"
+
+msgid "catalog.browseTitles"
+msgstr "{$numTitles} Бичлэг"
+
+msgid "catalog.category.heading"
+msgstr "Бүх бичлэг"
+
+msgid "galley.editPublishedDisabled"
+msgstr "Нийтлэгдсэн бичлэгийн эх бэлтгэлийг засварлах боломжгүй."
+
+msgid "galley.publicationNotFound"
+msgstr "Энэхүү эх бэлтгэлд харгалзах нийтлэл олдсонгүй."
+
+msgid "publication.assignToissue"
+msgstr "Дугаарт оноох"
+
+msgid "publication.assignedToIssue"
+msgstr ""
+"Энийг <a href=\"{$issueUrl}\">{$issueName}</a> дугаарт оноосон боловч "
+"нийтлэх хуваарьт ороогүй байна."
+
+msgid "publication.changeIssue"
+msgstr "Дугаарыг өөрчлөх"
+
+msgid "publication.datePublished.description"
+msgstr ""
+"Дугаар нийтлэгдэх үед нийтлэх огноо автоматаар тохируулагдана. Хэрэв өгүүлэл "
+"өмнө нь өөр газар нийтлэгдсэн бөгөөд та огноог нь ухрааж тохируулах "
+"шаардлагагүй бол огноо бүү оруулна уу."
+
+msgid "publication.invalidSection"
+msgstr "Энэхүү нийтлэлд харгалзах салбар хэсэг олдсонгүй."
+
+msgid "publication.inactiveSection"
+msgstr "{$section} (Идэвхгүй)"
+
+msgid "publication.invalidIssue"
+msgstr "Энэхүү нийтлэлд харгалзах дугаар олдсонгүй."
+
+msgid "publication.publish.confirmation"
+msgstr ""
+"Нийтлэх бүх шаардлага хангагдлаа. Та үүнийг нийтлэхдээ итгэлтэй байна уу?"
+
+msgid "publication.publish.confirmation.futureIssue"
+msgstr ""
+"Нийтлэх бүх шаардлага хангагдлаа. Үүнийг {$issue} дугаар нийтлэгдэх үед "
+"нийтлэх болно. Та үүнийг нийтлэх хуваарьт оруулахдаа итгэлтэй байна уу?"
+
+msgid "publication.publish.confirmation.backIssue"
+msgstr ""
+"Нийтлэх бүх шаардлага хангагдлаа. Үүнийг {$issue} дугаарт шууд нийтлэх "
+"болно. Та нийтлэхдээ итгэлтэй байна уу?"
+
+msgid "publication.publish.confirmation.datePublishedInPast"
+msgstr ""
+"Нийтлэх бүх шаардлага хангагдлаа. Нийтлэх огноог {$datePublished} гэж "
+"тохируулсан тул шууд нийтлэгдэх болно. Та нийтлэхдээ итгэлтэй байна уу?"
+
+msgid "publication.required.issue"
+msgstr "Нийтлэхийн өмнө илгээлтийг аль нэг дугаарт оноосон байх ёстой."
+
+msgid "publication.publishedIn"
+msgstr "<a href=\"{$issueUrl}\">{$issueName}</a> дугаарт нийтлэгдсэн."
+
+msgid "publication.scheduledIn"
+msgstr "<a href=\"{$issueUrl}\">{$issueName}</a> дугаарт нийтлэхээр төлөвлөв."
+
+msgid "publication.unscheduledIn"
+msgstr "Үүнийг аль нэг дугаарт нийтлэхээр хараахан төлөвлөөгүй байна."
+
+msgid "publication.selectIssue"
+msgstr "Нийтлэх хуваарьт оруулах дугаарыг сонгоно уу"
+
+msgid "submission.publication"
+msgstr "Нийтлэл"
+
+msgid "publication.status.published"
+msgstr "Нийтлэгдсэн"
+
+msgid "submission.status.scheduled"
+msgstr "Төлөвлөсөн"
+
+msgid "publication.status.unscheduled"
+msgstr "Төлөвлөөгүй"
+
+msgid "submission.publications"
+msgstr "Нийтлэлүүд"
+
+msgid "publication.copyrightYearBasis.issueDescription"
+msgstr ""
+"Үүнийг дугаарт нийтлэх үед зохиогчийн эрхийн он автоматаар тохируулагдана."
+
+msgid "publication.copyrightYearBasis.submissionDescription"
+msgstr ""
+"Зохиогчийн эрхийн оныг нийтэлсэн огноон дээр үндэслэн автоматаар тохируулна."
+
+msgid "publication.editDisabled"
+msgstr "Энэ хувилбар нийтлэгдсэн тул засварлах боломжгүй."
+
+msgid "publication.event.published"
+msgstr "Илгээлтийг нийтлэв."
+
+msgid "publication.event.scheduled"
+msgstr "Илгээлтийг нийтлэхээр төлөвлөв."
+
+msgid "publication.event.unpublished"
+msgstr "Илгээлтийг нийтлэхээс буцаав."
+
+msgid "publication.event.versionPublished"
+msgstr "Шинэ хувилбар нийтлэгдлээ."
+
+msgid "publication.event.versionScheduled"
+msgstr "Шинэ хувилбарыг нийтлэхээр төлөвлөв."
+
+msgid "publication.event.versionUnpublished"
+msgstr "Хувилбарыг нийтлэлээс хаслаа."
+
+msgid "publication.datePublished"
+msgstr "Хэвлэгдсэн огноо"
+
+msgid "publication.invalidSubmission"
+msgstr "Энэхүү нийтлэлд харгалзах илгээлт олдсонгүй."
+
+msgid "publication.publish.requirements"
+msgstr "Нийтлэхийн өмнө дараах шаардлагуудыг хангасан байх ёстой."
+
+msgid "publication.required.declined"
+msgstr "Татгалзсан илгээлтийг нийтлэх боломжгүй."
+
+msgid "publication.required.reviewStage"
+msgstr ""
+"Нийтлэхийн өмнө илгээлт Хянан тохиолдуулах (Copyediting) эсвэл Хэвлэлийн "
+"бэлтгэл (Production) шатанд байх ёстой."
+
+msgid "submission.license.description"
+msgstr ""
+"Нийтлэх үед лицензийг автоматаар <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> болгож тохируулна."
+
+msgid "submission.copyrightHolder.description"
+msgstr "Нийтлэх үед зохиогчийн эрхийг автоматаар {$copyright}-д онооно."
+
+msgid "submission.copyrightOther.description"
+msgstr "Нийтлэгдсэн илгээлтийн зохиогчийн эрхийг дараах талд оноох."
+
+msgid "publication.unpublish"
+msgstr "Нийтлэхээс буцаах"
+
+msgid "publication.unpublish.confirm"
+msgstr "Та үүнийг нийтлэхээс буцаахдаа итгэлтэй байна уу?"
+
+msgid "publication.unschedule.confirm"
+msgstr "Та үүнийг нийтлэх хуваариас хасахдаа итгэлтэй байна уу?"
+
+msgid "publication.version.details"
+msgstr "{$version} хувилбарын нийтлэх мэдээлэл"
+
+msgid "publication.publish"
+msgstr "Хэвлэх"
+
+msgid "submission.queries.production"
+msgstr "Хэвлэлийн бэлтгэлийн хэлэлцүүлэг"
+
+msgid "editor.submission.decision.backToReview"
+msgstr "Хяналтын шат руу буцаах"
+
+msgid "editor.submission.decision.backToReview.description"
+msgstr "Энэ илгээлтийг хүлээн авах шийдвэрийг цуцалж, хяналтын шат руу буцаах."
+
+msgid "editor.submission.decision.backToReview.log"
+msgstr ""
+"{$editorName} илгээлтийг хүлээн авах шийдвэрийг цуцалж, хяналтын шат руу "
+"буцаалаа."
+
+msgid "editor.submission.decision.backToReview.completed"
+msgstr "Хяналт руу буцаав"
+
+msgid "editor.submission.decision.backToReview.completed.description"
+msgstr "{$title} илгээлтийг хяналтын шат руу буцаалаа."
+
+msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
+msgstr ""
+"Зохиогчдод тэдний илгээлтийг хяналтын шат руу буцааж байгаа талаар имэйл "
+"илгээнэ үү. Яагаад ийм шийдвэр гаргасан, цаашид ямар хяналт хийгдэх талаар "
+"тайлбарлана уу."
+
+msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
+msgstr ""
+"Зохиогчдод энэхүү илгээлтийг хөндлөнгийн хяналтад (peer review) илгээж буй "
+"талаар имэйл илгээнэ үү. Боломжтой бол хяналтын үйл явц хэр удаан үргэлжлэх, "
+"хэзээ хариу өгөх талаар мэдээлэл өгнө үү. Энэ имэйл нь шийдвэрийг бүртгэх "
+"хүртэл илгээгдэхгүй."
+
+msgid "editor.submission.decision.promoteFiles.externalReview"
+msgstr "Хяналтын шат руу илгээх файлуудыг сонгоно уу."
+
+msgid "doi.submission.issueMissing.publication"
+msgstr ""
+"Дараах илгээлтэд DOI үүсгэж чадсангүй: {$pubObjectTitle}. DOI үүсгэхийн өмнө "
+"илгээлтийг аль нэг дугаарт оноосон байх ёстой."
+
+msgid "doi.submission.issueMissing.representation"
+msgstr ""
+"Дараах илгээлтийн {$pubObjectTitle} эх бэлтгэлд DOI үүсгэж чадсангүй: "
+"{$itemTitle}. DOI үүсгэхийн өмнө илгээлтийг аль нэг дугаарт оноосон байх "
+"ёстой."
+
+msgid "doi.submission.incorrectContext"
+msgstr ""
+"Дараах илгээлтэд DOI үүсгэж чадсангүй: {$pubObjectTitle}. Энэ нь одоогийн "
+"сэтгүүлийн хүрээнд байхгүй байна."
+
+msgid "submission.layout.viewGalley"
+msgstr "Эх бэлтгэлийг харах"
+
+msgid "galley.cantEditPublished"
+msgstr "Энэхүү эх бэлтгэл нийтлэгдсэн тул засварлах боломжгүй."
+
+msgid "submission.copyright.description"
+msgstr ""
+"Энэхүү сэтгүүлд илгээх бүтээлийн зохиогчийн эрхийн нөхцөлийг уншиж танилцана "
+"уу."
+
+msgid "submission.wizard.notAllowed.description"
+msgstr ""
+"Зохиогчид редакцийн ажилтнуудаар бүртгүүлэх ёстой тул танд энэ сэтгүүлд "
+"илгээлт хийх эрх байхгүй байна. Хэрэв алдаа гарсан гэж үзвэл <a "
+"href='mailto:{$email}'>{$name}</a> хаягаар холбогдоно уу."
+
+msgid "submission.wizard.noSectionAllowed.description"
+msgstr ""
+"Энэ сэтгүүлийн бүх салбар хэсгийн илгээлт хүлээн авахыг зогсоосон эсвэл "
+"хязгаарласан тул танд илгээлт хийх эрх байхгүй байна. Хэрэв алдаа гарсан гэж "
+"үзвэл <a href='mailto:{$email}'>{$name}</a> хаягаар холбогдоно уу."
+
+msgid "submission.wizard.sectionClosed.message"
+msgstr ""
+"{$contextName} сэтгүүлийн {$section} салбар хэсэг илгээлт хүлээн авахгүй "
+"байна. Хэрэв танд илгээлтээ сэргээхэд тусламж хэрэгтэй бол <a "
+"href='mailto:{$email}'>{$name}</a> хаягаар холбогдоно уу."
+
+msgid "submission.sectionNotFound"
+msgstr "Энэхүү илгээлтэд харгалзах салбар хэсэг олдсонгүй."
+
+msgid "submission.sectionRestrictedToEditors"
+msgstr "Энэ хэсэгт зөвхөн редакцийн ажилтнууд илгээлт хийх боломжтой."
+
+msgid "submission.submit.form.authorRequired"
+msgstr "Дор хаяж нэг зохиогч байх ёстой."
+
+msgid "submission.submit.form.titleRequired"
+msgstr "Өгүүллийнхээ гарчгийг оруулна уу."
+
+msgid "submission.submit.form.abstractRequired"
+msgstr "Өгүүллийнхээ хураангуйг оруулна уу."
+
+msgid "submission.submit.form.wordCountAlert"
+msgstr ""
+"Таны хураангуй хэтэрхий урт байна. Энэ хэсэгт заасан үгийн хязгаарт багтаан "
+"богиносгоно уу."
