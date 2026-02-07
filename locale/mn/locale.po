@@ -1,8 +1,2361 @@
-# Gantulga <cybermon@gmail.com>, 2023.
+# Gantulga <cybermon@gmail.com>, 2023, 2026.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2026-02-07 06:31+0000\n"
+"Last-Translator: Gantulga <cybermon@gmail.com>\n"
+"Language-Team: Mongolian <http://translate.pkp.sfu.ca/projects/ojs/locale/mn/"
+">\n"
 "Language: mn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "navigation.categories.browse"
+msgstr "Шүүх"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Хяналтын хуудсыг бөглөхийн тулд дүрс дээр дарна уу."
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Шаардлагатай талбаруудыг бөглөнө үү."
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "common.confirmComplete"
+msgstr ""
+"Та энэ даалгаврыг дууссанд тооцохдоо итгэлтэй байна уу? Үүний дараа өөрчлөлт "
+"хийх боломжгүй байж магадгүй."
+
+msgid "common.payment"
+msgstr "Төлбөр"
+
+msgid "common.payments"
+msgstr "Төлбөрүүд"
+
+msgid "common.homePageHeader.altText"
+msgstr "Нүүр хуудасны толгой"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Сэтгүүлийн нүүр хуудасны зураг"
+
+msgid "doi.manager.settings.publications"
+msgstr "Өгүүлэлүүд"
+
+msgid "navigation.journalHelp"
+msgstr "Сэтгүүлийн тусламж"
+
+msgid "navigation.current"
+msgstr "Одоогийн"
+
+msgid "navigation.otherJournals"
+msgstr "Бусад сэтгүүлүүд"
+
+msgid "navigation.browseByIssue"
+msgstr "Дугаараар"
+
+msgid "navigation.browseByAuthor"
+msgstr "Зохиогчоор"
+
+msgid "navigation.infoForAuthors"
+msgstr "Зохиогчдод"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Номын санчдад"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Ашиг сонирхлын зөрчлийн удирдамж"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Зохиогчдод зориулсан мэдээлэл"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Номын санчдад зориулсан мэдээлэл"
+
+msgid "navigation.skip.about"
+msgstr "Сэтгүүлийн тухай хэсэг рүү алгасах"
+
+msgid "navigation.skip.issue"
+msgstr "Одоогийн дугаар руу алгасах"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Хуваарилаагүй"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Хуваарилаагүй"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Засварлагдаж буй илгээлтүүд"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "Засварлагдаж буй"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Хянагдаж буй илгээлтүүд"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Архив"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Архив"
+
+msgid "common.queue.long.active"
+msgstr "Идэвхтэй"
+
+msgid "common.queue.short.active"
+msgstr "Идэвхтэй"
+
+msgid "common.queue.long.completed"
+msgstr "Архив"
+
+msgid "common.queue.short.completed"
+msgstr "Архив"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Томилогдсон редакторууд"
+
+msgid "section.section"
+msgstr "Салбар хэсэг"
+
+msgid "section.sections"
+msgstr "Салбар хэсгүүд"
+
+msgid "section.title"
+msgstr "Салбар хэсгийн гарчиг"
+
+msgid "section.abbreviation"
+msgstr "Товчлол"
+
+msgid "section.abbreviation.example"
+msgstr "(Жишээ нь: Өгүүлэл=ӨГҮ)"
+
+msgid "section.policy"
+msgstr "Салбар хэсгийн бодлого"
+
+msgid "article.article"
+msgstr "Өгүүлэл"
+
+msgid "article.articles"
+msgstr "Өгүүлэлүүд"
+
+msgid "common.publication"
+msgstr "Өгүүлэл"
+
+msgid "common.publications"
+msgstr "Өгүүлэлүүд"
+
+msgid "article.submissionId"
+msgstr "Илгээлтийн ID"
+
+msgid "article.title"
+msgstr "Гарчиг"
+
+msgid "article.authors"
+msgstr "Зохиогчид"
+
+msgid "article.indexingInformation"
+msgstr "Индексжүүлэх мэдээлэл"
+
+msgid "article.metadata"
+msgstr "Мета өгөгдөл"
+
+msgid "article.journalSection"
+msgstr "Сэтгүүлийн салбар хэсэг"
+
+msgid "article.file"
+msgstr "Файл"
+
+msgid "article.suppFile"
+msgstr "Нэмэлт файл"
+
+msgid "article.suppFiles"
+msgstr "Нэмэлт файл(ууд)"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Нэмэлт файл"
+
+msgid "article.discipline"
+msgstr "Эрдэм шинжилгээний салбар ба дэд салбарууд"
+
+msgid "article.subject"
+msgstr "Түлхүүр үгс"
+
+msgid "article.coverage"
+msgstr "Хамрах хүрээ"
+
+msgid "article.type"
+msgstr "Төрөл, арга зүй эсвэл хандлага"
+
+msgid "article.language"
+msgstr "Хэл"
+
+msgid "article.sectionEditor"
+msgstr "СхР"
+
+msgid "article.commentsToEditor"
+msgstr "Зохиогчийн тайлбар"
+
+msgid "article.submission"
+msgstr "Илгээлт"
+
+msgid "article.submissions"
+msgstr "Илгээлтүүд"
+
+msgid "article.details"
+msgstr "Дэлгэрэнгүй"
+
+msgid "article.abstract"
+msgstr "Хураангуй"
+
+msgid "article.coverPage.altText"
+msgstr "Нүүр зураг"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Нээлттэй хандалт"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Хязгаарлагдмал хандалт"
+
+msgid "article.comments.sectionDefault"
+msgstr "Үндсэн"
+
+msgid "article.comments.disable"
+msgstr "Идэвхгүй болгох"
+
+msgid "article.comments.enable"
+msgstr "Идэвхжүүлэх"
+
+msgid "article.fontSize"
+msgstr "Үсгийн хэмжээ"
+
+msgid "article.fontSize.small.altText"
+msgstr "Жижиг"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Дунд"
+
+msgid "article.fontSize.large.altText"
+msgstr "Том"
+
+msgid "article.return"
+msgstr "Өгүүллийн дэлгэрэнгүй рүү буцах"
+
+msgid "submission.submissionEditing"
+msgstr "Илгээлтийг засварлах"
+
+msgid "submission.changeSection"
+msgstr "Рүү өөрчлөх"
+
+msgid "submission.sent"
+msgstr "Илгээсэн"
+
+msgid "submission.editorDecision"
+msgstr "Редакторын шийдвэр"
+
+msgid "submission.round"
+msgstr "Үе&nbsp;{$round}"
+
+msgid "submission.editorReview"
+msgstr "Редакторын хяналт"
+
+msgid "submission.notifyAuthor"
+msgstr "Зохиогчид мэдэгдэх"
+
+msgid "submission.notifyEditor"
+msgstr "Редакторт мэдэгдэх"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Редактор/Зохиогчийн имэйл бичлэг"
+
+msgid "submission.reviewersVersion"
+msgstr "Хянагчийн тайлбартай файлын хувилбар"
+
+msgid "submission.postReviewVersion"
+msgstr "Хяналтын дараах файлын хувилбар"
+
+msgid "submission.editorVersion"
+msgstr "Редакторын хувилбар"
+
+msgid "submission.proofreading"
+msgstr "Үсгийн алдаа шалгах"
+
+msgid "submission.scheduling"
+msgstr "Төлөвлөлт"
+
+msgid "submission.scheduledIn"
+msgstr "{$issueName} дугаарт нийтлэхээр төлөвлөгдсөн."
+
+msgid "submission.scheduledIn.tba"
+msgstr "(Тун удахгүй)"
+
+msgid "submissions.step1"
+msgstr "Алхам 1"
+
+msgid "submissions.step3"
+msgstr "Алхам 3"
+
+msgid "submissions.queuedReview"
+msgstr "Хянагдаж буй"
+
+msgid "submissions.published"
+msgstr "Нийтлэгдсэн"
+
+msgid "submissions.initial"
+msgstr "Анхны"
+
+msgid "submissions.proofread"
+msgstr "Үсгийн алдаа шалгасан"
+
+msgid "submissions.initialProof"
+msgstr "Анхны хяналтын хувь"
+
+msgid "submissions.postAuthor"
+msgstr "Зохиогчийн дараах"
+
+msgid "submissions.reviewRound"
+msgstr "Хяналтын үе"
+
+msgid "submissions.proof"
+msgstr "Хяналтын хувь (Proof)"
+
+msgid "submissions.editorDecision"
+msgstr "Редакторын шийдвэр"
+
+msgid "submissions.editorRuling"
+msgstr "Редакторын тушаал"
+
+msgid "submission.eventLog"
+msgstr "Үйл явдлын лог"
+
+msgid "submissions.copyeditComplete"
+msgstr "Хянан тохиолдуулсан"
+
+msgid "submissions.layoutComplete"
+msgstr "Эх бэлтгэл дууссан"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Үсгийн алдаа шалгаж дууссан"
+
+msgid "submission.search"
+msgstr "Өгүүлэл хайх"
+
+msgid "journal.currentIssue"
+msgstr "Одоогийн дугаар"
+
+msgid "context.contexts"
+msgstr "Сэтгүүлүүд"
+
+msgid "journal.path"
+msgstr "Зам (Path)"
+
+msgid "context.context"
+msgstr "Сэтгүүл"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "journal.viewAllIssues"
+msgstr "Бүх дугаарыг харах"
+
+msgid "user.authorization.representationNotFound"
+msgstr "Хүссэн эх бэлтгэл (galley) олдсонгүй."
+
+msgid "user.profile.profileImage"
+msgstr "Профайл зураг"
+
+msgid "user.showAllJournals"
+msgstr "Миний сэтгүүлүүдийг харуулах"
+
+msgid "user.registerForOtherJournals"
+msgstr "Бусад сэтгүүлүүдэд бүртгүүлэх"
+
+msgid "user.reviewerPrompt"
+msgstr "Та энэхүү сэтгүүлд ирсэн илгээлтүүдийг хянан үзэхэд бэлэн үү?"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Тийм, {$userGroup} үүргийг хүсэж байна."
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Тийм, энэхүү сэтгүүлийн илгээлтүүдийг хянан үзэх хүсэлт авахад бэлэн байна."
+
+msgid "user.register.contextsPrompt"
+msgstr "Та энэ сайтын аль сэтгүүлүүдэд бүртгүүлэх хүсэлтэй байна вэ?"
+
+msgid "user.register.otherContextRoles"
+msgstr "Дараах үүрэгүүдийг хүсэх."
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Хэрэв та аль нэг сэтгүүлд хянагчаар бүртгүүлэх хүсэлт гаргасан бол сонирхож "
+"буй сэдвүүдээ оруулна уу."
+
+msgid "user.myJournals"
+msgstr "Миний сэтгүүлүүд"
+
+msgid "user.manageMySubscriptions"
+msgstr "Захиалгуудаа удирдах"
+
+msgid "user.noRoles.chooseJournal"
+msgstr ""
+"Таны бүртгэл одоогоор ямар нэгэн сэтгүүлтэй холбогдоогүй байна. Сэтгүүл "
+"сонгоно уу:"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"Таны бүртгэл энэ сэтгүүлд ямар нэгэн үүрэггүй байна. Дараах үйлдлүүдээс "
+"сонгоно уу:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Санал ирүүлэх"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Өгүүлэл илгээх: Зохиогчийн бүртгэл одоогоор хаалттай байна."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Хянагчаар бүртгүүлэх"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "Хянагчаар бүртгүүлэх: Хянагчийн бүртгэл одоогоор хаалттай байна."
+
+msgid "user.role.manager"
+msgstr "Сэтгүүлийн менежер"
+
+msgid "user.role.subEditor"
+msgstr "Салбар хэсгийн редактор"
+
+msgid "user.role.managers"
+msgstr "Сэтгүүлийн менежерүүд"
+
+msgid "user.role.subEditors"
+msgstr "Салбар хэсгийн редакторууд"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Захиалгын менежерүүд"
+
+msgid "user.role.journalAssistant"
+msgstr "Сэтгүүлийн туслах"
+
+msgid "user.role.journalAssistants"
+msgstr "Сэтгүүлийн туслахууд"
+
+msgid "issue.issues"
+msgstr "Дугаарууд"
+
+msgid "issue.title"
+msgstr "Гарчиг"
+
+msgid "issue.viewIssueIdentification"
+msgstr "{$identification} үзэх"
+
+msgid "issue.volume"
+msgstr "Боть"
+
+msgid "issue.number"
+msgstr "Дугаар"
+
+msgid "issue.vol"
+msgstr "Боть"
+
+msgid "issue.no"
+msgstr "Дугаар"
+
+msgid "issue.year"
+msgstr "Он"
+
+msgid "issue.noIssues"
+msgstr "Дугаар байхгүй"
+
+msgid "issue.toc"
+msgstr "Гарчиг (Table of Contents)"
+
+msgid "issue.abstract"
+msgstr "Хураангуй"
+
+msgid "issue.coverPage.altText"
+msgstr "Нүүр хуудас"
+
+msgid "issue.fullIssue"
+msgstr "Бүрэн дугаар"
+
+msgid "issue.nonpdf.title"
+msgstr "Дугаар татах"
+
+msgid "issue.viewIssue"
+msgstr "Дугаар үзэх"
+
+msgid "issue.return"
+msgstr "Дугаарын дэлгэрэнгүй рүү буцах"
+
+msgid "doi.issue.incorrectContext"
+msgstr ""
+"Дараах дугаарт DOI үүсгэж чадсангүй: {$itemTitle}. Энэ нь одоогийн "
+"сэтгүүлийн хүрээнд байхгүй байна."
+
+msgid "doi.issue.incorrectStaleStatus"
+msgstr ""
+"Дараах дугаарын DOI төлөвийг хуучирсан (stale) гэж тохируулж чадсангүй: "
+"{$itemTitle}. DOI нь \"Registered\" эсвэл \"Submitted\" төлөвтэй байх ёстой."
+
+msgid "doi.issue.notPublished"
+msgstr ""
+"{$pubObjectTitle}-д DOI бүртгэгдсэн гэж тэмдэглэж чадсангүй. Төлөвийг "
+"шинэчлэхийн өмнө дугаар нийтлэгдсэн байх ёстой."
+
+msgid "subscriptionTypes.currency"
+msgstr "Валют"
+
+msgid "subscriptionTypes.year"
+msgstr "жил"
+
+msgid "subscriptionTypes.years"
+msgstr "жилүүд"
+
+msgid "subscriptionTypes.month"
+msgstr "сар"
+
+msgid "subscriptionTypes.months"
+msgstr "сарууд"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Хугацаагүй"
+
+msgid "subscriptionTypes.format"
+msgstr "Формат"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Онлайн"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Хэвлэмэл"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Хэвлэмэл болон Онлайн"
+
+msgid "subscriptions.inactive"
+msgstr "Идэвхгүй"
+
+msgid "subscriptions.status"
+msgstr "Төлөв"
+
+msgid "subscriptions.status.active"
+msgstr "Идэвхтэй"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Батлах шаардлагатай"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Гараар хийх төлбөрийг хүлээж байна"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Онлайн төлбөрийг хүлээж байна"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Танд идэвхтэй захиалга байхгүй байна."
+
+msgid "subscriptions.status.other"
+msgstr "Бусад, Тайлбарыг үзнэ үү"
+
+msgid "subscriptions.individualDescription"
+msgstr "Хувь хүний захиалгаар агуулгад хандахын тулд нэвтрэх шаардлагатай."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"Байгууллагын захиалгад нэвтрэх шаардлагагүй. Хэрэглэгчийн домайн болон/эсвэл "
+"IP хаягийг ашиглан хандалт олгодог."
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>Тэмдэглэл:</strong> Онлайнаар худалдаж авсан байгууллагын захиалгыг "
+"идэвхжүүлэхийн өмнө домайн болон IP мужийг батлах шаардлагатай."
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Илгээлтийн үйл явдал"
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Өгүүлэл илгээсэн"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Илгээлтийг дугаарт төлөвлөх дараалалд оруулсан"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Илгээлтийг дугаарт хуваарилсан"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Өгүүлэл нийтлэгдсэн"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Зохиогчийн засвар ирсэн"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Зохиогчийн засварласан файл шинэчлэгдсэн"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Илгээлтэд редактор томилогдсон"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Илгээлтээс редакторыг чөлөөлсөн"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Редакторын шийдвэр ирсэн"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Редакторын файл шинэчлэгдсэн"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Илгээлтийг архив руу шилжүүлсэн"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Илгээлтийг архиваас сэргээсэн"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Илгээлтэд хянан тохиолдуулагч томилогдсон"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Илгээлтээс хянан тохиолдуулагчийг чөлөөлсөн"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Хянан тохиолдуулах даалгавар эхэлсэн"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Хянан тохиолдуулагчийн засварласан файл шинэчлэгдсэн"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Анхны хянан тохиолдуулалт дууссан"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Эцсийн хянан тохиолдуулалт дууссан"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Хянан тохиолдуулах файл шинэчлэгдсэн"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Илгээлтэд үсгийн алдаа шалгагч томилогдсон"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Илгээлтээс үсгийн алдаа шалгагчийг чөлөөлсөн"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Үсгийн алдаа шалгах даалгавар эхэлсэн"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Үсгийн алдаа шалгагчийн засварласан файл шинэчлэгдсэн"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Үсгийн алдаа шалгах даалгавар дууссан"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Илгээлтэд эх бэлтгэлийн редактор томилогдсон"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "Илгээлтээс эх бэлтгэлийн редакторыг чөлөөлсөн"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Эх бэлтгэлийн даалгавар эхэлсэн"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Эх бэлтгэлийн хувь (galley) шинэчлэгдсэн"
+
+msgid "comments.commentsOnArticle"
+msgstr "Энэ өгүүллийн талаарх сэтгэгдэл"
+
+msgid "comments.authenticated"
+msgstr ""
+"<a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a> бичсэн"
+
+msgid "search.results.orderBy.article"
+msgstr "Өгүүллийн гарчиг"
+
+msgid "search.results.orderBy.author"
+msgstr "Зохиогч"
+
+msgid "search.results.orderBy.date"
+msgstr "Нийтэлсэн огноо"
+
+msgid "search.results.orderBy.issue"
+msgstr "Дугаар"
+
+msgid "search.results.orderBy.journal"
+msgstr "Сэтгүүлийн гарчиг"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Хамгийн их үзсэн (Бүх цаг үеийн)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Хамгийн их үзсэн (Сүүлийн сар)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Хамаарал"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"Энэхүү нэмэгдлүүд нь өгүүллийн эх бэлтгэлийг өөр өөр төрлийн баримт бичгээр "
+"харуулах боломжийг олгодог."
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+"Зөвшөөрлийн нэмэгдлүүд нь OJS системийг LDAP сервер гэх мэт бусад "
+"системүүдтэй хэрэглэгчийн баталгаажуулалт хийх боломжийг олгодог."
+
+msgid "plugins.categories.generic.description"
+msgstr ""
+"Ерөнхий нэмэгдлүүд нь OJS системийг бусад ангилалд багтаагүй янз бүрийн "
+"аргаар өргөтгөхөд ашиглагддаг."
+
+msgid "manager.setup.copyrightNotice.sample"
+msgstr ""
+"<h3>Санал болгож буй Creative Commons зохиогчийн эрхийн мэдэгдэл</h3>\n"
+"<h4>1. Нээлттэй хандалт санал болгодог сэтгүүлүүдэд зориулсан бодлого</h4>\n"
+"Энэхүү сэтгүүлд бүтээлээ нийтлүүлсэн зохиогчид дараах нөхцөлийг зөвшөөрнө:\n"
+"<ol type=\"a\">\n"
+"\t<li>Зохиогчид зохиогчийн эрхийг өөртөө үлдээх бөгөөд бүтээлийг анх нийтлэх "
+"эрхийг сэтгүүлд олгоно. Үүний зэрэгцээ бүтээл нь <a target=\"_new\" href="
+"\"https://creativecommons.org/licenses/by/3.0/\">Creative Commons "
+"Attribution License</a> лицензээр хамгаалагдах бөгөөд энэ нь бусад хүмүүст "
+"бүтээлийг зохиогч болон энэ сэтгүүлд анх нийтлэгдсэн болохыг дурдах "
+"нөхцөлтэйгээр хуваалцах боломжийг олгоно.</li>\n"
+"\t<li>Зохиогчид сэтгүүлд нийтлэгдсэн хувилбарыг (жишээ нь: байгууллагын санд "
+"байршуулах эсвэл номонд хэвлэх) энэ сэтгүүлд анх нийтлэгдсэнийг дурдах "
+"замаар тусад нь, нэмэлт гэрээний үндсэн дээр түгээх боломжтой.</li>\n"
+"\t<li>Зохиогчид бүтээлээ илгээхээс өмнө болон илгээх явцад онлайнаар (жишээ "
+"нь: байгууллагын санд эсвэл өөрийн вэб сайт дээр) байршуулахыг зөвшөөрөх "
+"бөгөөд энэ нь үр дүнтэй хэлэлцүүлэг өрнүүлэх, ишлэлийн тоог нэмэгдүүлэхэд "
+"тустай (<a target=\"_new\" href=\"https://web-archive.southampton.ac.uk/opcit"
+".eprints.org/oacitation-biblio.html\">Нээлттэй хандалтын нөлөө</a> үзнэ "
+"үү).</li>\n"
+"</ol>"
+
+msgid "manager.setup.basicEditorialStepsDescription"
+msgstr ""
+"Алхмууд: Илгээлтийн дараалал &gt; Хяналтын шат &gt; Засварлах шат &gt; "
+"Гарчиг (Table of Contents).<br /><br />\n"
+"Редакцийн үйл явцыг удирдах загвараа сонгоно уу. (Ерөнхий редактор болон "
+"салбар хэсгийн редакторуудыг томилох бол Сэтгүүлийн удирдлага дахь "
+"Редакторууд хэсэг рүү орно уу.)"
+
+msgid "manager.setup.referenceLinkingDescription"
+msgstr ""
+"<p>Уншигчдад зохиогчийн иш татсан бүтээлийн онлайн хувилбарыг олоход "
+"туслахын тулд дараах сонголтууд байдаг.</p>\n"
+"\n"
+"<ol>\n"
+"\t<li><strong>Унших хэрэгсэл нэмэх</strong><p>Сэтгүүлийн менежер нийтлэгдсэн "
+"бүтээлд дагалддаг Унших хэрэгсэлд \"Ишлэл хайх\" (Find References) функцийг "
+"нэмж болно. Энэ нь уншигчдад ишлэлийн гарчгийг хуулж тавиад судалгааны "
+"өгөгдлийн сангуудаас хайх боломжийг олгодог.</p></li>\n"
+"\t<li><strong>Ишлэлд холбоос оруулах</strong><p>Эх бэлтгэлийн редактор "
+"онлайнаар олдох боломжтой ишлэлүүдэд холбоос нэмж болно.</p></li>\n"
+"</ol>"
+
+msgid "manager.people.noAdministrativeRights"
+msgstr ""
+"Уучлаарай, танд энэ хэрэглэгчийг удирдах эрх байхгүй байна. Шалтгаан нь:\n"
+"\t\t<ul>\n"
+"\t\t\t<li>Хэрэглэгч нь сайтын администратор байна</li>\n"
+"\t\t\t<li>Хэрэглэгч таны удирддаггүй өөр сэтгүүлүүдэд идэвхтэй байна</li>\n"
+"\t\t</ul>\n"
+"\tЭнэ үйлдлийг сайтын администратор гүйцэтгэх ёстой.\n"
+"\t"
+
+msgid "editor.submissionReview.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Тодруулсан зүйлс нь редакторын оролцоо шаардлагатайг илтгэнэ:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightReviewerNotNotified\">Хянагчийг томилсон боловч "
+"имэйлээр мэдэгдээгүй байна</li>\n"
+"\t\t\t<li class=\"highlightNoDecision\">Бүх хянагчид саналаа ирүүлсэн боловч "
+"шийдвэр бүртгээгүй байна</li>\n"
+"\t\t\t<li class=\"highlightRevisedCopyUploaded\">Зохиогч засварласан гар "
+"бичмэлээ хуулсан байна</li>\n"
+"\t\t\t<li class=\"highlightReviewerConfirmationOverdue\">Хянагч урилгыг "
+"баталгаажуулах хугацаа хэтэрсэн байна</li>\n"
+"\t\t\t<li class=\"highlightReviewerCompletionOverdue\">Хянагч хяналтыг "
+"дуусгах хугацаа хэтэрсэн байна</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"\t<li>\"Дуусах хугацаа\" нь хянагч хүсэлтийг хүлээн авсан үед бөглөгдөнө; "
+"энэ нь хяналт дуусах хүртэлх долоо хоногийн тоо эсвэл хэтэрсэн (-) долоо "
+"хоногийг харуулна.</li>\n"
+"</ol>"
+
+msgid "editor.submissionEditing.notes"
+msgstr ""
+"\n"
+"\t<ol>\n"
+"\t<li>Тодруулсан зүйлс нь редакторын оролцоо шаардлагатайг илтгэнэ:\n"
+"\t\t<ul>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Хянан тохиолдуулах шатанд үйлдэл "
+"шаардлагатай</li>\n"
+"\t\t\t<li class=\"highlightLayoutEditing\">Эх бэлтгэлийн шатанд үйлдэл "
+"шаардлагатай</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">Үсгийн алдаа шалгах шатанд үйлдэл "
+"шаардлагатай</li>\n"
+"\t\t</ul>\n"
+"\t</li>\n"
+"</ol>"
+
+msgid "sectionEditor.completedEditorialAssignments"
+msgstr "Дууссан редакторын даалгаврууд"
+
+msgid "sectionEditor.noneAssigned"
+msgstr "Хуваарилсан илгээлт алга."
+
+msgid "sectionEditor.copyedit.confirmRenotify"
+msgstr ""
+"Энэ хянан тохиолдуулагчид дахин мэдэгдэх нь тэдний даалгаврыг дахин эхлүүлэх "
+"болно. Та итгэлтэй байна уу?"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"Энэ зохиогчид дахин мэдэгдэх нь тэдний даалгаврыг дахин эхлүүлэх болно. Та "
+"итгэлтэй байна уу?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"Энэ эх бэлтгэлийн редакторт дахин мэдэгдэх нь тэдний даалгаврыг дахин "
+"эхлүүлэх болно. Та итгэлтэй байна уу?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"Энэ үсгийн алдаа шалгагчид дахин мэдэгдэх нь тэдний даалгаврыг дахин "
+"эхлүүлэх болно. Та итгэлтэй байна уу?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Татгалзал"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} Хянагчийн татгалзал, цуцлалт болон өмнөх үеүүд"
+
+msgid "sectionEditor.regrets"
+msgstr "Татгалзал"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Татгалзал, цуцлалт, өмнөх үеүүдийг харах"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Хөндлөнгийн хяналт, Үе {$round}"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Редакторын шийдвэр, Үе {$round}"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Хянагчийн татгалзал болон цуцлалтууд"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Татгалзал"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Үр дүн"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Системд байгаа хэрэглэгчийг хянагчаар бүртгэх"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Шинэ хянагч үүсгэх"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Идэвхтэй редакторын даалгаврууд"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Дууссан редакторын даалгаврууд"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Идэвхтэй редакторын даалгавар алга."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Эх бэлтгэлийн даалгаврууд"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Эх бэлтгэлийн форматыг хуулах"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Нэмэлт файл хуулах"
+
+msgid "submission.layout.imageInvalid"
+msgstr ""
+"Зургийн формат хүчингүй байна. .gif, .jpg, болон .png форматуудыг зөвшөөрнө."
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Энэхүү эх бэлтгэл нь тусдаа вэб сайт дээр байх болно."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "Алсаас байршуулсан агуулгын URL"
+
+msgid "reviewer.pendingReviews"
+msgstr "Хянагдахаар хүлээгдэж буй өгүүлэлүүд"
+
+msgid "reviewer.completedReviews"
+msgstr "Дууссан"
+
+msgid "reviewer.averageQuality"
+msgstr "Үнэлгээ"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Хянагдах файл"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Редакторт мэдэгдэх"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr ""
+"Хянагч хяналтыг хийхийг зөвшөөрсөн тохиолдолд илгээлтийг харах боломжтой "
+"болно"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Илгээлтийн редактор"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Хяналтын сэтгэгдлээ энд бичнэ үү эсвэл хуулж тавина уу"
+
+msgid "reviewer.article.submitReview"
+msgstr "Хяналтын хариуг редакторт илгээх"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Сэтгэгдэл"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Хуулсан файлууд"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Хянагчийн хуулсан хувилбар"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(Хэрэв та редакторын хувьд файлд тэмдэглэл хийхийг хүсвэл файлдаа хадгалаад "
+"Browse/Upload ашиглана уу.)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Редакторын хүсэлт"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Таны хариу"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Хяналтын хариу ирсэн"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Хяналт дуусах хугацаа"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Илгээлтийг зөвшөөрөх"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Засвар хийх шаардлагатай"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Дахин хянуулахаар илгээх"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "Өөр газар илгээхийг санал болгох"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Сэтгэгдлийг үзнэ үү"
+
+msgid "reviewer.article.schedule"
+msgstr "Хуваарь"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Хянагдах илгээлт"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Хяналтын хуваарь"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Хяналтын алхмууд"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Хянагчид зориулсан удирдамж"
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"Хяналтын удирдамж нь хянагч нарт тухайн илгээлт сэтгүүлд нийтлэгдэхэд "
+"тохиромжтой эсэхийг үнэлэх шалгууруудыг өгөх бөгөөд үр дүнтэй хяналт бэлтгэх "
+"тусгай зааварчилгааг агуулж болно. Хяналт хийх явцад хянагч нарт хоёр текст "
+"хайрцаг харагдах бөгөөд эхнийх нь \"зохиогч болон редакторт\", хоёр дахь нь "
+"\"зөвхөн редакторт\" зориулагдсан байна. Мөн сэтгүүлийн менежер хяналтын "
+"тусгай маягт үүсгэсэн байж болно."
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Илгээлтийн редакторт"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "хяналтыг хийж чадах эсэхээ мэдэгдэнэ үү."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr "Хэрэв та хяналтыг хийхээр бол доорх Хянагчийн удирдамжтай танилцана уу."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"Илгээлттэй холбоотой файлуудыг татаж авах, хянахын тулд файлын нэр дээр "
+"дарна уу."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"Энэхүү судалгаатай холбоотой ашиг сонирхлын зөрчил байгаа эсэхээ мэдэгдэнэ "
+"үү."
+
+msgid "reviewer.competingInterests"
+msgstr "Ашиг сонирхлын зөрчил"
+
+msgid "reviewer.article.enterReviewA"
+msgstr ""
+"Энэ илгээлтийн талаарх хяналтын саналаа оруулахын тулд дүрс дээр дарна уу."
+
+msgid "reviewer.article.uploadFile"
+msgstr "Нэмж дурдахад та редактор болон зохиогчид зориулж файл хуулж болно."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"Зөвлөмжөө сонгоод хяналтын хариуг илгээж үйл явцыг дуусгана уу. Зөвлөмж "
+"сонгохын өмнө саналаа бичих эсвэл файл хуулах шаардлагатай."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Хянагчийн зөвлөмжийг тохируулах эсвэл өөрчлөх."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr "Зөвлөмж сонгоогүй байна. Илгээхийн тулд зөвлөмж сонгоно уу."
+
+msgid "reviewer.article.confirmDecision"
+msgstr ""
+"Шийдвэрийг бүртгэсний дараа та энэхүү хяналтад өөрчлөлт хийх боломжгүй "
+"болно. Та үргэлжлүүлэхдээ итгэлтэй байна уу?"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Хянан тохиолдуулах файл"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Хянан тохиолдуулагчийн файл"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Хянан тохиолдуулагчийн файл"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Үсгийн алдаа шалгах даалгавар алга"
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>Гар бичмэлийг энэхүү сэтгүүлд хуулахын тулд дараах алхмуудыг гүйцэтгэнэ "
+"үү.</p>\n"
+"<ol>\n"
+"<li>Энэ хуудаснаас 'Browse' (эсвэл 'Choose File') дээр дарж файлаа сонгоно "
+"уу.</li>\n"
+"<li>Илгээхийг хүссэн файлаа олж тэмдэглэнэ үү.</li>\n"
+"<li>Сонгосон файлын нэр хуудсан дээр харагдана.</li>\n"
+"<li>'Upload' товчийг дарж файлыг сэтгүүлийн вэб сайт руу хуулна уу.</li>\n"
+"<li>Файл хуулагдсаны дараа хуудасны доод хэсэгт байх 'Save and Continue' "
+"товчийг дарна уу.</li>\n"
+"</ol>"
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr ""
+"Хяналтын хувилбар (Review Version) бэлэн болтол хүсэлтийн имэйл илгээх "
+"боломжгүй."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"Редакторын шийдвэр, Хяналтын хуудсанд хянан тохиолдуулах файл сонгогдох "
+"хүртэл хүсэлтийн имэйл илгээх боломжгүй."
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr ""
+"Хянан тохиолдуулахаар файл хуулах хүртэл хүсэлтийн имэйл илгээх боломжгүй."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Анхны хянан тохиолдуулалт"
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Редакторын хянан тохиолдуулалт"
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Зохиогчийн хянан тохиолдуулалт"
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Эцсийн хянан тохиолдуулалт"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Хянан тохиолдуулагч томилох"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Хянан тохиолдуулалтын тайлбар"
+
+msgid "submission.copyedit.instructions"
+msgstr "Хянан тохиолдуулах заавар"
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"Байхгүй (Хүсэлт илгээхийн өмнө эцсийн хянан тохиолдуулсан хувилбарыг Эх "
+"бэлтгэлийн хувилбар болгож хуулна уу)"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Нийтийн эх бэлтгэлийн (galley) таних тэмдэг аль хэдийн байна."
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Эх бэлтгэлийн редактор томилох"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Эх бэлтгэлийн редакторыг солих"
+
+msgid "submission.layout.layoutComments"
+msgstr "Эх бэлтгэлийн тайлбар"
+
+msgid "submission.layout.instructions"
+msgstr "Эх бэлтгэлийн заавар"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Ишлэл холбох"
+
+msgid "submission.proofreadingComments"
+msgstr "Үсгийн алдаа шалгах тайлбар"
+
+msgid "submission.proofread.corrections"
+msgstr "Үсгийн алдааны засварууд"
+
+msgid "submission.proofread.instructions"
+msgstr "Үсгийн алдаа шалгах заавар"
+
+msgid "submission.logType.article"
+msgstr "Өгүүлэл"
+
+msgid "submission.logType.author"
+msgstr "Зохиогч"
+
+msgid "submission.logType.editor"
+msgstr "Редактор"
+
+msgid "submission.logType.review"
+msgstr "Хяналт"
+
+msgid "submission.logType.copyedit"
+msgstr "Хянан тохиолдуулах"
+
+msgid "submission.logType.layout"
+msgstr "Эх бэлтгэл"
+
+msgid "submission.logType.proofread"
+msgstr "Үсгийн алдаа шалгах"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Редактор/Зохиогчийн харилцаа"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Хянан тохиолдуулалтын тайлбар"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Эдгээр тайлбарыг зохиогчтой хуваалцаж болно.<br />\n"
+"(Хадгалсны дараа нэмэлт тайлбар оруулах боломжтой.)"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Зохиогч болон редакторт"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Зөвхөн редакторт"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr ""
+"Илгээсний дараа хянагч нарт илгээх засварлах боломжтой BCC хуулбарыг "
+"харуулна уу."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Зохиогч болон редакторт"
+
+msgid "submission.comments.forEditor"
+msgstr "Зөвхөн редакторт"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Хадгалаад зохиогч руу имэйл илгээх"
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Хадгалаад редактор руу имэйл илгээх"
+
+msgid "user.register.selectContext"
+msgstr "Бүртгүүлэх сэтгүүлээ сонгоно уу:"
+
+msgid "user.register.noJournals"
+msgstr "Энэ сайт дээр таны бүртгүүлж болох сэтгүүл алга байна."
+
+msgid "user.register.privacyStatement"
+msgstr "Нууцлалын мэдэгдэл"
+
+msgid "user.register.registrationDisabled"
+msgstr "Энэ сэтгүүл одоогоор хэрэглэгчийн бүртгэл хүлээн авахгүй байна."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Таны оруулсан нууц үг хангалттай урт биш байна."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Сэтгүүлийн илгээлтүүдэд хөндлөнгийн хяналт хийх хүсэлтэй."
+
+msgid "user.register.reviewerDescription"
+msgstr "Энэ сайтын илгээлтүүдэд хөндлөнгийн хяналт хийх хүсэлтэй."
+
+msgid "user.register.reviewerInterests"
+msgstr "Хянан үзэх сонирхдог чиглэлүүд (салбар, судалгааны аргууд):"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"Тиймээ, миний бүртгүүлсэн бүх сэтгүүлүүдийн шинэ нийтлэл, зарлалын талаар "
+"мэдэгдэл хүлээн авахыг хүсэж байна."
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Тиймээ, миний өгөгдлийг энэхүү сэтгүүлийн <a href=\"{$privacyUrl}\" target="
+"\"_blank\">нууцлалын мэдэгдлийн</a> дагуу цуглуулж, хадгалахыг зөвшөөрч "
+"байна."
+
+msgid "user.register.form.missingContextConsent"
+msgstr "Та бүртгүүлж буй сэтгүүл бүрийн нууцлалын мэдэгдлийг зөвшөөрөх ёстой."
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Захиалгын төлөв"
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"Идэвхтэй болон хугацаа нь дууссан захиалгууд дуусах огнооны хамт доор "
+"харагдаж байна. Нэмж дурдахад захиалга бүрт дараах төлөвийн мэдээлэл багтаж "
+"болно."
+
+msgid "user.subscriptions.status"
+msgstr "Төлөв"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Тайлбар"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Захиалгыг идэвхжүүлэхийн өмнө нэмэлт мэдээлэл шаардлагатай"
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Захиалгыг идэвхжүүлэхийн өмнө хянаж үзэх шаардлагатай"
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Гараар хийх төлбөрийг эхлүүлсэн боловч хараахан хүлээн аваагүй байна"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr "Онлайн төлбөрийг эхлүүлсэн боловч цуцлагдсан эсвэл дуусаагүй байна"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Хувь хүний захиалга"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Байгууллагын захиалга"
+
+msgid "user.subscriptions.renew"
+msgstr "Сунгах"
+
+msgid "user.subscriptions.purchase"
+msgstr "Худалдаж авах"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Шинэ захиалга авах"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Хувь хүний захиалга авах"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Байгууллагын захиалга авах"
+
+msgid "user.subscriptions.expires"
+msgstr "Дуусах хугацаа: {$date}"
+
+msgid "user.subscriptions.expired"
+msgstr "Хугацаа дууссан: {$date}"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Боломжит захиалгын төрлүүдийг харах"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Захиалгын төрөл"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Гишүүнчлэл"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Сонгосон захиалгын төрөл нь гишүүнчлэлийн мэдээлэл шаарддаг."
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Хүчинтэй захиалгын төрөл сонгоно уу."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Энэ хэрэглэгчийн данс аль хэдийн хувь хүний захиалгатай байна."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Сонгосон захиалгын төрөлд шаардлагатай бол гишүүнчлэлийн мэдээлэл."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Байгууллагын нэр"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Байгууллагын нэр шаардлагатай."
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Шуудангийн хаяг"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Домайн"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"Хэрэв энд домайн оруулбал IP муж заавал биш байна.<br />Домайн нэр оруулна ("
+"жишээ нь: lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Сонгосон захиалгын төрөл нь баталгаажуулалт хийхэд домайн эсвэл IP муж "
+"шаарддаг."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "IP мужууд"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Хэрэв энд IP мужууд оруулбал домайн заавал биш байна.<br />IP хаяг (жишээ нь:"
+" 142.58.103.1), IP муж (жишээ нь: 142.58.103.1 - 142.58.103.4), '*' тэмдэгт "
+"бүхий IP муж (жишээ нь: 142.58.*.*), болон CIDR бүхий IP муж (жишээ нь: 142."
+"58.100.0/24) оруулж болно."
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Хүчинтэй IP муж оруулна уу."
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Нэмэх"
+
+msgid "search.browseAuthorIndex"
+msgstr "Зохиогчийн индексээр хайх"
+
+msgid "search.searchFor"
+msgstr "Өгүүлэл хайх утга"
+
+msgid "search.withinJournal"
+msgstr "Дотор"
+
+msgid "search.journal"
+msgstr "Сэтгүүлээр"
+
+msgid "search.allJournals"
+msgstr "Бүх сэтгүүлүүд"
+
+msgid "search.authorIndex"
+msgstr "Зохиогчийн индекс"
+
+msgid "article.pdf.title"
+msgstr "Portable Document Format (PDF)"
+
+msgid "article.download"
+msgstr "Энэ PDF файлыг татах"
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>Хэрэв таны вэб хөтөч PDF уншигч нэмэгдэлтэй бол сонгосон PDF файл энд "
+"ачаалагдах ёстой (жишээ нь: <a href=\"https://get.adobe.com/reader/\">Adobe "
+"Acrobat Reader</a>).</p>"
+
+msgid "article.nonpdf.note"
+msgstr ""
+"Таны сонгосон файл автоматаар татагдаж эхлэх ёстой. Хэрэв эхлэхгүй бол доорх "
+"холбоос дээр дарна уу. Энэ файлыг үзэхийн тулд тусгай тоглуулагч эсвэл "
+"нэмэгдэл шаардлагатай байж магадгүйг анхаарна уу.<br /><br />Хэрэв файл "
+"автоматаар татагдахгүй бол <a href=\"{$url}\">энд дарна уу</a>."
+
+msgid "site.journalsHosted"
+msgstr "Энэ сайт дээр байршуулсан сэтгүүлүүд"
+
+msgid "site.journalView"
+msgstr "Сэтгүүл үзэх"
+
+msgid "site.journalRegister"
+msgstr "Бүртгүүлэх"
+
+msgid "site.journalCurrent"
+msgstr "Одоогийн дугаар"
+
+msgid "current.noCurrentIssue"
+msgstr "Одоогийн дугаар алга"
+
+msgid "current.noCurrentIssueDesc"
+msgstr "Энэ сэтгүүл хараахан дугаар нийтлээгүй байна."
+
+msgid "archive.archives"
+msgstr "Архив"
+
+msgid "archive.archivesPageNumber"
+msgstr "Архив - Хуудас {$pageNumber}"
+
+msgid "archive.browse"
+msgstr "Өмнөх дугааруудыг шүүх"
+
+msgid "about.statistics"
+msgstr "Статистик"
+
+msgid "about.contact"
+msgstr "Холбоо барих"
+
+msgid "about.aboutContext"
+msgstr "Сэтгүүлийн тухай"
+
+msgid "about.history"
+msgstr "Сэтгүүлийн түүх"
+
+msgid "about.submissions"
+msgstr "Илгээлтүүд"
+
+msgid "about.onlineSubmissions.login"
+msgstr "Нэвтрэх"
+
+msgid "about.onlineSubmissions.registrationRequired"
+msgstr "Бичлэг илгээхийн тулд {$login} эсвэл {$register} хийнэ үү."
+
+msgid "about.onlineSubmissions.submissionActions"
+msgstr "{$newSubmission} эсвэл {$viewSubmissions}."
+
+msgid "about.onlineSubmissions.submitToSection"
+msgstr "<a href=\"{$url}\">{$name}</a> салбар хэсэгт шинэ илгээлт хийх."
+
+msgid "about.onlineSubmissions.newSubmission"
+msgstr "Шинэ илгээлт хийх"
+
+msgid "about.onlineSubmissions.viewSubmissions"
+msgstr "хянагдаж буй илгээлтүүдээ харах"
+
+msgid "about.authorGuidelines"
+msgstr "Зохиогчид зориулсан удирдамж"
+
+msgid "about.submissionPreparationChecklist.description"
+msgstr ""
+"Илгээлтийн үйл явцын хүрээнд зохиогчид өөрийн илгээлт нь дараах бүх зүйлсийг "
+"хангаж буй эсэхийг шалгах шаардлагатай бөгөөд эдгээр удирдамжийг дагаж "
+"мөрдөөгүй илгээлтийг зохиогчид буцааж болно."
+
+msgid "about.copyrightNotice"
+msgstr "Зохиогчийн эрхийн мэдэгдэл"
+
+msgid "about.privacyStatement"
+msgstr "Нууцлалын мэдэгдэл"
+
+msgid "about.authorFees"
+msgstr "Зохиогчийн хураамж"
+
+msgid "about.authorFeesMessage"
+msgstr "Энэ сэтгүүл дараах зохиогчийн хураамжийг авдаг."
+
+msgid "about.peerReviewProcess"
+msgstr "Хөндлөнгийн хяналтын үйл явц"
+
+msgid "about.publicationFrequency"
+msgstr "Нийтлэлийн давтамж"
+
+msgid "about.openAccessPolicy"
+msgstr "Нээлттэй хандалтын бодлого"
+
+msgid "about.delayedOpenAccess"
+msgstr "Хойшлогдсон нээлттэй хандалт"
+
+msgid "about.delayedOpenAccessDescription1"
+msgstr ""
+"Энэхүү сэтгүүлийн агуулга нь нээлттэй хандалтын форматаар хүрэх боломжтой "
+"болно"
+
+msgid "about.subscriptions"
+msgstr "Захиалгууд"
+
+msgid "about.subscriptions.individual"
+msgstr "Хувь хүний захиалга"
+
+msgid "about.subscriptions.institutional"
+msgstr "Байгууллагын захиалга"
+
+msgid "about.subscriptionsContact"
+msgstr "Захиалгын харилцаа холбоо"
+
+msgid "about.subscriptionTypes.name"
+msgstr "Нэр"
+
+msgid "about.subscriptionTypes.format"
+msgstr "Формат"
+
+msgid "about.subscriptionTypes.duration"
+msgstr "Үргэлжлэх хугацаа"
+
+msgid "about.subscriptionTypes.cost"
+msgstr "Үнэ"
+
+msgid "about.availableSubscriptionTypes"
+msgstr "Захиалгын төрлүүд"
+
+msgid "about.memberships"
+msgstr "Гишүүнчлэлүүд"
+
+msgid "about.aboutThisPublishingSystem"
+msgstr ""
+"OJS/PKP-ийн хэвлэлийн систем, платформ болон ажлын урсгалын талаарх "
+"дэлгэрэнгүй мэдээлэл."
+
+msgid "about.aboutThisPublishingSystem.altText"
+msgstr "OJS Редакцийн болон хэвлэлийн үйл явц"
+
+msgid "about.aboutSoftware"
+msgstr "Open Journal Systems-ийн тухай"
+
+msgid "about.aboutOJSJournal"
+msgstr ""
+"Энэхүү сэтгүүл нь Public Knowledge Project-ээс GNU General Public License-"
+"ийн дагуу хөгжүүлсэн, үнэгүй түгээгддэг нээлттэй эх бүхий сэтгүүлийн "
+"удирдлага, хэвлэлийн програм болох Open Journal Systems {$ojsVersion}-ийг "
+"ашигладаг. PKP-ийн вэб сайтад зочилж <a href=\"https://pkp.sfu.ca/\">програм "
+"хангамжийн талаар илүү ихийг мэдэж</a> болно. Сэтгүүл болон илгээлттэй "
+"холбоотой асуулт байвал <a href=\"{$contactUrl}\">сэтгүүлтэй</a> шууд "
+"холбогдоно уу."
+
+msgid "about.aboutOJSSite"
+msgstr ""
+"Энэхүү сайт нь Public Knowledge Project-ээс GNU General Public License-ийн "
+"дагуу хөгжүүлсэн, үнэгүй түгээгддэг нээлттэй эх бүхий сэтгүүлийн удирдлага, "
+"хэвлэлийн програм болох Open Journal Systems {$ojsVersion}-ийг ашигладаг. "
+"PKP-ийн вэб сайтад зочилж <a href=\"https://pkp.sfu.ca/\">програм хангамжийн "
+"талаар илүү ихийг мэдэж</a> болно. Сэтгүүлүүд болон илгээлттэй холбоотой "
+"асуулт байвал сайттай шууд холбогдоно уу."
+
+msgid "help.ojsHelpAbbrev"
+msgstr "OJS тусламж"
+
+msgid "help.searchReturnResults"
+msgstr "Хайлтын үр дүн рүү буцах"
+
+msgid "help.goToEditPage"
+msgstr "{$sectionTitle}-ийг засварлах"
+
+msgid "donations.thankYou"
+msgstr "Танд баярлалаа"
+
+msgid "payment.loginRequired"
+msgstr "Төлбөр хийхийн тулд та нэвтэрсэн байх ёстой."
+
+msgid "payment.loginRequired.forArticle"
+msgstr ""
+"Бичлэгт хандахын тулд захиалга эсвэл өгүүлэл худалдан авах шаардлагатай. "
+"Захиалгаа баталгаажуулах эсвэл өгүүлэл худалдаж авахын тулд сэтгүүлд "
+"нэвтэрнэ үү."
+
+msgid "payment.loginRequired.forIssue"
+msgstr ""
+"Бичлэгт хандахын тулд захиалга эсвэл дугаар худалдан авах шаардлагатай. "
+"Захиалгаа баталгаажуулах эсвэл дугаар худалдаж авахын тулд сэтгүүлд нэвтэрнэ "
+"үү."
+
+msgid "payment.loginRequired.forDonation"
+msgstr "Хандив өгөхийн тулд та нэвтэрсэн байх ёстой."
+
+msgid "payment.unpaid"
+msgstr "Төлөөгүй"
+
+msgid "payment.waived"
+msgstr "Чөлөөлөгдсөн"
+
+msgid "payment.payNow"
+msgstr "Одоо төлөх"
+
+msgid "payment.waive"
+msgstr "Чөлөөлөх"
+
+msgid "payment.alreadyPaid"
+msgstr "Аль хэдийн төлсөн"
+
+msgid "payment.alreadyPaidMessage"
+msgstr ""
+"Хэрэв та илгээлтийн үйл явцыг дуусгахын тулд төлбөрөө сэтгүүлд аль хэдийн "
+"илгээсэн бол энэ нүдийг чагтална уу. Төлбөр иртэл илгээлтийг хянахгүй. "
+"Төлбөрийн зааврыг үзэхийн тулд дээрх ОДОО ТӨЛӨХ товчийг дарна уу."
+
+msgid "payment.authorFees"
+msgstr "Зохиогчийн хураамж"
+
+msgid "payment.type.submission"
+msgstr "Илгээлтийн хураамж"
+
+msgid "payment.type.publication"
+msgstr "Нийтлэлийн хураамж"
+
+msgid "payment.type.publication.required"
+msgstr "Нийтлэлийн хураамжийг төлөх шаардлагатай."
+
+msgid "payment.type.donation"
+msgstr "Хандив"
+
+msgid "payment.requestPublicationFee.notEnabled"
+msgstr "Нийтлэлийн хураамж идэвхжээгүй байна."
+
+msgid "payment.notFound"
+msgstr ""
+"Төлбөр нэхэмжилсэн боловч хүсэлтийн хугацаа дууссан байна. Дэлгэрэнгүй "
+"мэдээллийг сэтгүүлийн менежерээс авна уу."
+
+msgid "payment.donation.makeDonation"
+msgstr "Хандив өгөх"
+
+msgid "payment.submission.paySubmission"
+msgstr "Илгээлтийн хураамж төлөх"
+
+msgid "payment.publication.payPublication"
+msgstr "Нийтлэхийн тулд төлөх"
+
+msgid "payment.publication.publicationPaid"
+msgstr "Нийтлэлийн хураамж төлөгдсөн"
+
+msgid "payment.membership.buyMembership"
+msgstr "Хувь хүний гишүүнчлэл авах"
+
+msgid "payment.membership.renewMembership"
+msgstr "Хувь хүний гишүүнчлэл сунгах"
+
+msgid "payment.membership.ends"
+msgstr "Дуусах"
+
+msgid "installer.ojsUpgrade"
+msgstr "OJS шинэчлэлт"
+
+msgid "installer.updatingInstructions"
+msgstr ""
+"Хэрэв та одоо байгаа OJS-ийг шинэчилж байгаа бол үргэлжлүүлэхийн тулд <a "
+"href=\"{$upgradeUrl}\">энд дарна уу</a>."
+
+msgid "installer.installationInstructions"
+msgstr ""
+"<h4>OJS Хувилбар {$version}</h4>\n"
+"\n"
+"<p>Public Knowledge Project-ийн <strong>Open Journal Systems</strong>-ийг "
+"татан авсанд баярлалаа. Үргэлжлүүлэхийн өмнө энэ програмтай хамт ирсэн <a "
+"href=\"{$baseUrl}/README.md\">README</a> файлыг уншина уу. PKP болон түүний "
+"төслүүдийн талаарх дэлгэрэнгүй мэдээллийг <a href=\"https://pkp.sfu.ca/\" "
+"target=\"_blank\">PKP вэб сайтаас</a> авна уу. Хэрэв танд алдааны тайлан "
+"эсвэл техникийн тусламж хэрэгтэй бол <a href=\"https://forum.pkp.sfu.ca\" "
+"target=\"_blank\">дэмжлэгийн форум</a> эсвэл PKP-ийн онлайн <a href=\"https"
+"://github.com/pkp/pkp-lib#issues\" target=\"_blank\">алдаа бүртгэх системд</"
+"a> хандана уу. Форумаар хандахыг илүүд үзэх боловч та баг руу <a href="
+"\"mailto:pkp.contact@gmail.com\">pkp.contact@gmail.com</a> хаягаар имэйл "
+"бичиж болно.</p>\n"
+"\n"
+"<h4>Системд тавигдах шаардлага</h4>\n"
+"\n"
+"<ul>\n"
+"\t<li><a href=\"https://www.php.net/\" target=\"_blank\">PHP</a> >= "
+"{$phpRequiredVersion}; та одоо PHP {$phpVersion} ашиглаж "
+"байна{$wrongPhpText}</li>\n"
+"\t<li><a href=\"https://www.mysql.com/\" target=\"_blank\">MySQL</a> >= 4.1 "
+"эсвэл <a href=\"https://www.postgresql.org/\" target=\"_blank\">PostgreSQL</"
+"a> >= 9.1.5</li>\n"
+"\t<li><a href=\"https://httpd.apache.org/\" target=\"_blank\">Apache</a> >= "
+"1.3.2x эсвэл >= 2.0.4x эсвэл Microsoft IIS 6</li>\n"
+"\t<li>Үйлдлийн систем: Дээрх програмуудыг дэмждэг дурын систем, үүнд <a href="
+"\"https://www.linux.org/\" target=\"_blank\">Linux</a>, <a href=\"https://www"
+".bsd.org\" target=\"_blank\">BSD</a>, <a href=\"https://www.oracle.com/"
+"solaris/\" target=\"_blank\">Solaris</a>, <a href=\"https://www.apple.com/\" "
+"target=\"_blank\">Mac OS X</a>, <a href=\"https://www.microsoft.com/\""
+">Windows</a></li>\n"
+"</ul>\n"
+"\n"
+"<p>PKP нь програм хангамжийн бүх хувилбар, платформын хослолыг турших нөөц "
+"байхгүй тул зөв ажиллагаа болон дэмжлэгт баталгаа өгөх боломжгүй.</p>\n"
+"\n"
+"<p>Эдгээр тохиргоонд суурилуулсны дараа OJS-ийн үндсэн лавлах дахь <tt>config"
+".inc.php</tt> файлыг засварлах эсвэл сайтын удирдлагын вэб интерфэйсийг "
+"ашиглан өөрчлөлт хийж болно.</p>\n"
+"\n"
+"<h4>Дэмжигдсэн өгөгдлийн сангийн системүүд</h4>\n"
+"\n"
+"<p>OJS нь одоогоор зөвхөн MySQL болон PostgreSQL дээр туршигдсан боловч <a "
+"href=\"https://adodb.org\" target=\"_blank\">ADOdb</a>-ийн дэмждэг бусад "
+"өгөгдлийн сангийн удирдлагын системүүд (бүрэн эсвэл хэсэгчлэн) ажиллаж "
+"магадгүй юм.</p>\n"
+
+msgid "installer.preInstallationInstructions"
+msgstr ""
+"\n"
+"<h4>Суурилуулалтын өмнөх алхмууд</h4>\n"
+"\n"
+"\n"
+"<p>1. Дараах файл, хавтаснууд (болон тэдгээрийн агуулга) бичих эрхтэй "
+"(writable) байх ёстой:</p>\n"
+"<ul>\n"
+"\t<li><tt>config.inc.php</tt> бичих эрхтэй (заавал биш): "
+"{$writable_config}</li>\n"
+"\t<li><tt>public/</tt> бичих эрхтэй: {$writable_public}</li>\n"
+"\t<li><tt>cache/</tt> бичих эрхтэй: {$writable_cache}</li>\n"
+"\t<li><tt>cache/t_cache/</tt> бичих эрхтэй: {$writable_templates_cache}</li>"
+"\n"
+"\t<li><tt>cache/t_compile/</tt> бичих эрхтэй: "
+"{$writable_templates_compile}</li>\n"
+"\t<li><tt>cache/_db</tt> бичих эрхтэй: {$writable_db_cache}</li>\n"
+"</ul>\n"
+"\n"
+"<p>2. Хуулсан файлуудыг хадгалах хавтас үүсгэж, бичих эрх олгосон байх ёстой "
+"(доороос \"Файлын тохиргоо\" хэсгийг үзнэ үү).</p>"
+
+msgid "installer.upgradeInstructions"
+msgstr ""
+"<h4>OJS Хувилбар {$version}</h4>\n"
+"\n"
+"<p>Public Knowledge Project-ийн <strong>Open Journal Systems</strong>-ийг "
+"татан авсанд баярлалаа. Үргэлжлүүлэхийн өмнө <a href=\"{$baseUrl}/README.md\""
+">README</a> болон <a href=\"https://docs.pkp.sfu.ca/dev/upgrade-guide)\""
+">Шинэчлэх зааварчилгааг</a> уншина уу. PKP болон түүний төслүүдийн талаарх "
+"дэлгэрэнгүй мэдээллийг <a href=\"https://pkp.sfu.ca/\" target=\"_blank\">PKP "
+"вэб сайтаас</a> авна уу. Хэрэв танд алдааны тайлан эсвэл техникийн тусламж "
+"хэрэгтэй бол <a href=\"https://forum.pkp.sfu.ca\" target=\"_blank\""
+">дэмжлэгийн форум</a> эсвэл PKP-ийн онлайн <a href=\"https://github.com/pkp/"
+"pkp-lib/issues\" target=\"_blank\">алдаа бүртгэх системд</a> хандана уу. "
+"Форумаар хандахыг илүүд үзэх боловч та баг руу <a href=\"mailto:pkp."
+"contact@gmail.com\">pkp.contact@gmail.com</a> хаягаар имэйл бичиж болно.</p>"
+"\n"
+"<p>Үргэлжлүүлэхийн өмнө өгөгдлийн сан, файлын хавтас болон OJS суурилуулсан "
+"хавтасны <strong>нөөц хуулбарыг (backup) заавал авахыг</strong> зөвлөж "
+"байна.</p>"
+
+msgid "installer.localeSettingsInstructions"
+msgstr ""
+"Юникодын бүрэн дэмжлэг авахын тулд PHP нь <a href=\"https://www.php.net/"
+"mbstring\" target=\"_blank\">mbstring</a> санг дэмждэгээр бэлтгэгдсэн байх "
+"ёстой (ихэнх сүүлийн үеийн PHP суурилуулалтад үндсэн тохиргоогоор идэвхжсэн "
+"байдаг). Хэрэв таны сервер эдгээр шаардлагыг хангахгүй бол тэмдэгтийн багц "
+"ашиглахад асуудал гарч болзошгүй.\n"
+"<br /><br />\n"
+"Таны сервер одоогоор mbstring дэмжиж байна: "
+"<strong>{$supportsMBString}</strong>"
+
+msgid "installer.maxFileUploadSize"
+msgstr ""
+"Таны серверийн зөвшөөрөх файлын дээд хэмжээ: "
+"<strong>{$maxFileUploadSize}</strong>"
+
+msgid "installer.localeInstructions"
+msgstr ""
+"Энэ системд ашиглах үндсэн хэл. Хэрэв та энд байхгүй хэлний дэмжлэг авахыг "
+"сонирхож байвал OJS-ийн баримт бичгээс үзнэ үү."
+
+msgid "installer.filesDirInstructions"
+msgstr ""
+"Хуулсан файлуудыг хадгалах хавтасны бүтэн замыг оруулна уу. Энэ хавтас нь "
+"вэбээс шууд хандах боломжгүй байх ёстой. <strong>Суурилуулахаас өмнө энэ "
+"хавтас үүсгэгдсэн бөгөөд бичих эрхтэй байгаа эсэхийг шалгана уу.</strong> "
+"Windows системд замын нэрийг урагш налуу зураасаар бичнэ, жишээ нь: \"C:/"
+"myjournal/files\"."
+
+msgid "installer.databaseSettingsInstructions"
+msgstr ""
+"OJS өгөгдлөө хадгалахын тулд SQL өгөгдлийн санд хандах шаардлагатай. Дээрх "
+"системийн шаардлага хэсгээс дэмжигдсэн өгөгдлийн сангуудын жагсаалтыг үзнэ "
+"үү. Доорх талбаруудад өгөгдлийн сантай холбогдох тохиргоог оруулна уу."
+
+msgid "installer.installApplication"
+msgstr "Open Journal Systems-ийг суурилуулах"
+
+msgid "installer.upgradeApplication"
+msgstr "Open Journal Systems-ийг шинэчлэх"
+
+msgid "installer.reinstallAfterDatabaseError"
+msgstr ""
+"<strong>Анхааруулга:</strong> Хэрэв өгөгдлийн сан суурилуулах явцад алдаа "
+"гарсан бол дахин суурилуулахын өмнө OJS өгөгдлийн сан эсвэл хүснэгтүүдийг "
+"устгах (drop) шаардлагатай байж магадгүй."
+
+msgid "installer.installationComplete"
+msgstr ""
+"<p>OJS-ийг суурилуулж дууслаа.</p>\n"
+"<p>Системийг ашиглаж эхлэхийн тулд өмнөх хуудсанд оруулсан хэрэглэгчийн нэр, "
+"нууц үгээрээ <a href=\"{$loginUrl}\">нэвтэрнэ үү</a>.</p>\n"
+"<p>Манай <a href=\"https://forum.pkp.sfu.ca\" target=\"_new\">хамт олны "
+"форумд</a> зочлох эсвэл <a href=\"https://pkp.sfu.ca/developer-newsletter\" "
+"target=\"_new\">хөгжүүлэгчийн мэдээллийн товхимолд</a> бүртгүүлж аюулгүй "
+"байдлын мэдэгдэл, шинэ хувилбар болон төлөвлөгдсөн функцүүдийн талаар "
+"мэдээлэл аваарай.</p>"
+
+msgid "installer.upgradeComplete"
+msgstr ""
+"<p>OJS-ийг {$version} хувилбар руу шинэчилж дууслаа.</p>\n"
+"<p>config.inc.php тохиргооны файл дахь \"installed\" тохиргоог <em>On</em> "
+"болгож буцаахаа мартуузай.</p>\n"
+"<p>Манай <a href=\"https://forum.pkp.sfu.ca\" target=\"_new\">хамт олны "
+"форумд</a> зочлох эсвэл <a href=\"https://pkp.sfu.ca/developer-newsletter\" "
+"target=\"_new\">хөгжүүлэгчийн мэдээллийн товхимолд</a> бүртгүүлж мэдээлэл "
+"аваарай.</p>"
+
+msgid "site.upgradeAvailable.admin"
+msgstr ""
+"OJS-ийн шинэ хувилбар гарсан байна! Та одоо OJS {$currentVersion} ашиглаж "
+"байна. Хамгийн сүүлийн хувилбар нь OJS {$latestVersion} юм. Шинэ хувилбарыг "
+"татаж авах болон шинэчлэх зааврыг <a href=\"https://pkp.sfu.ca/ojs_download\""
+" target=\"_new\">энэ хуудаснаас</a> үзнэ үү."
+
+msgid "site.upgradeAvailable.manager"
+msgstr ""
+"OJS-ийн шинэ хувилбар гарсан байна! Та одоо OJS {$currentVersion} ашиглаж "
+"байна. Хамгийн сүүлийн хувилбар нь OJS {$latestVersion} юм. Шинэ хувилбарын "
+"талаар Сайтын Администраторт ({$siteAdminName}, <a href=\"mailto"
+":{$siteAdminEmail}\">{$siteAdminEmail}</a>) мэдэгдэнэ үү. Дэлгэрэнгүй "
+"мэдээллийг <a href=\"https://pkp.sfu.ca/ojs/ojs_download/\" target=\"_new\""
+">эндээс</a> авч болно."
+
+msgid "log.author.documentRevised"
+msgstr ""
+"{$authorName} зохиогч {$submissionId} дугаартай өгүүллийг засварласан байна. "
+"Шинэ файлын ID нь {$fileId}."
+
+msgid "log.review.reviewerUnassigned"
+msgstr ""
+"{$reviewerName} хянагчийг {$submissionId} илгээлтийн {$round}-р үеийн "
+"хяналтаас чөлөөлөв."
+
+msgid "log.review.reviewInitiated"
+msgstr ""
+"{$submissionId} илгээлтэд зориулсан {$reviewerName} хянагчийн {$round}-р "
+"үеийн хяналтыг эхлүүллээ."
+
+msgid "log.review.reviewerRated"
+msgstr ""
+"{$submissionId} илгээлтийн {$round}-р үеийн хяналтыг хийсэн {$reviewerName} "
+"хянагчийг үнэллээ."
+
+msgid "log.review.reviewDueDateSet"
+msgstr ""
+"{$submissionId} илгээлтийн {$round}-р үеийн хяналтыг хийх {$reviewerName} "
+"хянагчийн дуусах хугацааг {$dueDate} болгож тохирууллаа."
+
+msgid "log.review.reviewRecommendationSet"
+msgstr ""
+"{$submissionId} илгээлтийн {$round}-р үеийн хяналтыг хийсэн {$reviewerName} "
+"хянагчийн зөвлөмжийг тохирууллаа."
+
+msgid "log.review.reviewRecommendationSetByProxy"
+msgstr ""
+"{$submissionId} илгээлтийн {$round}-р үеийн хяналтын зөвлөмжийг хянагч "
+"{$reviewerName}-ийн нэрийн өмнөөс редактор {$editorName} тохирууллаа."
+
+msgid "log.review.resubmit"
+msgstr "{$submissionId} илгээлтийг дахин хянуулахаар ирүүлсэн байна."
+
+msgid "log.review.reviewDeclined"
+msgstr ""
+"{$reviewerName} хянагч {$submissionId} илгээлтийн {$round}-р үеийн хяналтыг "
+"хийхээс татгалзлаа."
+
+msgid "log.review.reviewAccepted"
+msgstr ""
+"{$reviewerName} хянагч {$submissionId} илгээлтийн {$round}-р үеийн хяналтыг "
+"хийхийг зөвшөөрлөө."
+
+msgid "log.review.reviewDeclinedByProxy"
+msgstr ""
+"{$userName} хэрэглэгч хянагч {$reviewerName}-ийн нэрийн өмнөөс "
+"{$submissionId} илгээлтийн {$round}-р үеийн хяналтыг хийхээс татгалзлаа."
+
+msgid "log.review.reviewAcceptedByProxy"
+msgstr ""
+"{$userName} хэрэглэгч хянагч {$reviewerName}-ийн нэрийн өмнөөс "
+"{$submissionId} илгээлтийн {$round}-р үеийн хяналтыг хийхийг зөвшөөрлөө."
+
+msgid "log.review.reviewFileByProxy"
+msgstr ""
+"Редактор {$userName} нь хянагч {$reviewerName}-ийн нэрийн өмнөөс "
+"{$submissionId} илгээлтийн {$round}-р үеийн хяналтын файлыг хууллаа."
+
+msgid "log.editor.decision"
+msgstr ""
+"{$submissionId} өгүүлэлд зориулсан редакторын шийдвэрийг ({$decision}) "
+"редактор {$editorName} бүртгэлээ."
+
+msgid "log.editor.recommendation"
+msgstr ""
+"{$submissionId} өгүүлэлд зориулсан редакторын зөвлөмжийг ({$decision}) "
+"редактор {$editorName} бүртгэлээ."
+
+msgid "log.copyedit.initiate"
+msgstr ""
+"{$submissionId} илгээлтийг хянан тохиолдуулах ажлыг хянан тохиолдуулагч "
+"{$copyeditorName} эхлүүллээ."
+
+msgid "log.copyedit.copyeditFileSet"
+msgstr "Үндсэн хянан тохиолдуулах файлыг сонголоо."
+
+msgid "log.copyedit.initialEditComplete"
+msgstr ""
+"Хянан тохиолдуулагч {$copyeditorName} {$submissionId} илгээлтийн анхны хянан "
+"тохиолдуулалтыг дуусгалаа."
+
+msgid "log.copyedit.finalEditComplete"
+msgstr ""
+"Хянан тохиолдуулагч {$copyeditorName} {$submissionId} илгээлтийн эцсийн "
+"хянан тохиолдуулалтыг дуусгалаа."
+
+msgid "log.copyedit.copyeditorAssigned"
+msgstr ""
+"{$submissionId} илгээлтийг хянан тохиолдуулахаар {$copyeditorName} "
+"томилогдлоо."
+
+msgid "log.copyedit.copyeditorFile"
+msgstr "Илгээлтийн файлын хянан тохиолдуулсан хувилбарыг хууллаа."
+
+msgid "log.copyedit.authorFile"
+msgstr "Илгээлтийн файлын зохиогчийн хянан тохиолдуулсан хувилбарыг хууллаа."
+
+msgid "log.layout.layoutEditorAssigned"
+msgstr ""
+"{$submissionId} илгээлтийн эх бэлтгэлийн редактороор {$editorName} "
+"томилогдлоо."
+
+msgid "log.layout.layoutEditorUnassigned"
+msgstr ""
+"{$submissionId} илгээлтийн эх бэлтгэлийн редакторын томилгоог редактор "
+"{$editorName}-ээс чөлөөллөө."
+
+msgid "log.layout.layoutEditComplete"
+msgstr "{$editorName} {$submissionId} илгээлтийн эх бэлтгэлийг дуусгалаа."
+
+msgid "log.editor.restored"
+msgstr "{$submissionId} илгээлтийг архиваас дараалал руу буцаалаа."
+
+msgid "log.proofread.assign"
+msgstr ""
+"{$assignerName} нь {$submissionId} илгээлтийн үсгийн алдааг шалгуулахаар "
+"{$proofreaderName}-ийг томиллоо."
+
+msgid "log.proofread.complete"
+msgstr ""
+"Үсгийн алдаа шалгагч {$proofreaderName} {$submissionId} илгээлтийг "
+"төлөвлөлтөд шилжүүлэв."
+
+msgid "log.imported"
+msgstr "{$userName} хэрэглэгч {$submissionId} өгүүллийг импортлон орууллаа."
+
+msgid "metadata.pkp.peerReviewed"
+msgstr "Хөндлөнгийн хяналт хийгдсэн өгүүлэл"
+
+msgid "notification.type.editing"
+msgstr "Засварлах үеийн үйл явдлууд"
+
+msgid "notification.type.submissionSubmitted"
+msgstr "Шинэ өгүүлэл \"{$title}\" ирлээ."
+
+msgid "notification.type.newAnnouncement"
+msgstr "Шинэ зарлал үүслээ."
+
+msgid "notification.type.openAccess"
+msgstr "Дугаар нээлттэй хандалттай боллоо."
+
+msgid "notification.type.reviewerFormComment"
+msgstr "\"{$title}\" өгүүлэлд зориулсан хяналтын маягтын хариу ирлээ."
+
+msgid "notification.type.reviewing"
+msgstr "Хяналтын үеийн үйл явдлууд"
+
+msgid "notification.type.site"
+msgstr "Сайтын үйл явдлууд"
+
+msgid "notification.type.submissions"
+msgstr "Илгээлтийн үйл явдлууд"
+
+msgid "notification.type.userComment"
+msgstr "Уншигч \"{$title}\" өгүүлэлд тайлбар үлдээлээ"
+
+msgid "notification.type.public"
+msgstr "Нийтийн зарлалууд"
+
+msgid "notification.savedIssueMetadata"
+msgstr "Дугаарын хэвлэлийн мета өгөгдлийг хадгаллаа."
+
+msgid "notification.type.editorAssignmentTask"
+msgstr "Редактор томилох шаардлагатай шинэ өгүүлэл ирлээ."
+
+msgid "notification.type.assignProductionUser"
+msgstr ""
+"Оролцогчдын жагсаалт дахь 'Томилох' холбоосыг ашиглан эх бэлтгэл хийх "
+"хэрэглэгчийг томилно уу."
+
+msgid "notification.type.awaitingRepresentations"
+msgstr "Эх бэлтгэлийн хувийг (Galleys) хүлээж байна."
+
+msgid "user.authorization.copyeditorAssignmentMissing"
+msgstr ""
+"Хандалт татгалзав! Та энэ өгүүлэлд хянан тохиолдуулагчаар томилогдоогүй "
+"байна."
+
+msgid "user.authorization.sectionAssignment"
+msgstr "Та өөрийн салбар хэсэгт хамааралгүй өгүүлэлд хандахыг оролдож байна."
+
+msgid "user.authorization.invalidIssue"
+msgstr "Хүчингүй дугаар хүслээ!"
+
+msgid "user.authorization.invalidCopyditorSubmission"
+msgstr "Хянан тохиолдуулагчийн илгээлт хүчингүй эсвэл хүсэлт гаргаагүй байна!"
+
+msgid "grid.action.createContext"
+msgstr "Шинэ сэтгүүл үүсгэх"
+
+msgid "editor.navigation.issues"
+msgstr "Дугаарууд"
+
+msgid "user.profile.form.showOtherContexts"
+msgstr "Бусад сэтгүүлүүдэд бүртгүүлэх"
+
+msgid "user.profile.form.hideOtherContexts"
+msgstr "Бусад сэтгүүлүүдийг нуух"
+
+msgid "article.view.interstitial"
+msgstr "Татах өгүүллийн файлыг сонгоно уу."
+
+msgid "grid.catalogEntry.availableRepresentation.approved"
+msgstr "Батлагдсан"
+
+msgid "grid.catalogEntry.availableRepresentation.notApproved"
+msgstr "Батлахыг хүлээж байна"
+
+msgid "grid.catalogEntry.approvedRepresentation.title"
+msgstr "Эх бэлтгэлийг (Galley) батлах"
+
+msgid "grid.catalogEntry.approvedRepresentation.message"
+msgstr "<p>Энэхүү эх бэлтгэлийг нийтлэхийг зөвшөөрөх.</p>"
+
+msgid "grid.catalogEntry.approvedRepresentation.removeMessage"
+msgstr "<p>Энэхүү эх бэлтгэлийн зөвшөөрлийг цуцлах.</p>"
+
+msgid "search.cli.rebuildIndex.indexing"
+msgstr "\"{$journalName}\"-ийг индексжүүлж байна"
+
+msgid "search.cli.rebuildIndex.unknownJournal"
+msgstr "Заасан \"{$journalPath}\" замаар сэтгүүл олдохгүй байна."
+
+msgid "editor.issues.backIssues"
+msgstr "Өмнөх дугаарууд"
+
+msgid "editor.issues.futureIssues"
+msgstr "Ирээдүйн дугаарууд"
+
+msgid "navigation.subscriptions"
+msgstr "Захиалгууд"
+
+msgid "log.editor.submissionExpedited"
+msgstr ""
+"Редактор {$editorName} {$submissionId} өгүүллийг засварлах үйл явцыг өөртөө "
+"авлаа."
+
+msgid "catalog.sortBy"
+msgstr "Өгүүлэл эрэмбэлэх"
+
+msgid "notification.type.submissionComment"
+msgstr "Редактор \"{$title}.\" өгүүлэлд тайлбар хийлээ"
+
+msgid "user.authorization.journalDoesNotPublish"
+msgstr "Энэ сэтгүүл агуулгаа онлайнаар нийтэлдэггүй."
+
+msgid "context.current"
+msgstr "Одоогийн сэтгүүл:"
+
+msgid "context.select"
+msgstr "Өөр сэтгүүл рүү шилжих:"
+
+msgid "navigation.categories"
+msgstr "Ангилал"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "Хянагдаж буй"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Зохиогчийн засварласан файлын хувилбар"
+
+msgid "submission.authorVersion"
+msgstr "Зохиогчийн хувилбар"
+
+msgid "submission.copyediting"
+msgstr "Хянан тохиолдуулах"
+
+msgid "submission.copyedit"
+msgstr "Хянан тохиолдуулах"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Энэ сэтгүүлд үүрэггүй хэрэглэгчдийг багтаах."
+
+msgid "user.role.subscriptionManager"
+msgstr "Захиалгын менежер"
+
+msgid "issue.issue"
+msgstr "Дугаар"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Мэдээлэл шаардлагатай"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Эх бэлтгэлийн даалгавар дууссан"
+
+msgid "reader.subscribersOnly"
+msgstr "Зөвхөн захиалагчдад"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"Энэ бичлэгт хандахын тулд захиалга шаардлагатай. Захиалгаа баталгаажуулахын "
+"тулд сэтгүүлд нэвтэрнэ үү."
+
+msgid "reader.openAccess"
+msgstr "Нээлттэй хандалт"
+
+msgid "reader.subscriptionAccess"
+msgstr "Захиалга шаардлагатай"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Захиалга эсвэл Төлбөр шаардлагатай"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "search.results.orderBy"
+msgstr "Үр дүнг эрэмбэлэх"
+
+msgid "search.results.orderDir.asc"
+msgstr "Өсөхөөр"
+
+msgid "search.results.orderDir.desc"
+msgstr "Буурахаар"
+
+msgid "search.results.similarDocuments"
+msgstr "төстэй баримт бичгүүд"
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>АНХААР!</h4>\n"
+"<p>Систем тохиргооны файлыг автоматаар дарж бичиж чадсангүй. Өөрчлөлтийг "
+"хэрэгжүүлэхийн тулд та <tt>config.inc.php</tt> файлыг текст засварлагчаар "
+"нээж, агуулгыг нь доорх текстээр солих шаардлагатай.</p>"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Захиалгын удирдлага"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Хувь хүний захиалга"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Байгууллагын захиалга"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Захиалгын төрлүүд"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Өгүүллийн эх бэлтгэлийн нэмэгдлүүд (Plugins)"
+
+msgid "manager.people.confirmDisable"
+msgstr ""
+"Энэ хэрэглэгчийг идэвхгүй болгох уу? Энэ нь хэрэглэгчийг системд нэвтрэх "
+"боломжгүй болгоно.\n"
+"\n"
+"Та хэрэглэгчид бүртгэлийг нь идэвхгүй болгосон шалтгааныг тайлбарлаж болно."
+
+msgid "sectionEditor.activeEditorialAssignments"
+msgstr "Идэвхтэй редакторын даалгаврууд"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Файл солих"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Хянаж чадна"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Хянах боломжгүй"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Редактор оруулах"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Сануулга илгээх"
+
+msgid "reviewer.article.automatic"
+msgstr "(Автомат)"
+
+msgid "reviewer.article.recommendation"
+msgstr "Зөвлөмж"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Илгээлтээс татгалзах"
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Х/Т хувилбар"
+
+msgid "submission.copyedit.useFile"
+msgstr "Файл ашиглах"
+
+msgid "user.register.readerDescription"
+msgstr "Сэтгүүлийн шинэ дугаар нийтлэгдэх үед имэйлээр мэдэгдэл хүлээн авна."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr ""
+"Сэтгүүлийн дугаар нээлттэй хандалттай болох үед имэйлээр мэдэгдэл хүлээн "
+"авна."
+
+msgid "user.register.authorDescription"
+msgstr "Сэтгүүлд бичлэг илгээх боломжтой."
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Та энэхүү сайтын нууцлалын мэдэгдлийг зөвшөөрөх ёстой."
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Миний захиалгууд"
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Хүчинтэй домайн оруулна уу."
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Устгах"
+
+msgid "article.pageTitle"
+msgstr "{$title}-ийг үзэх"
+
+msgid "site.noJournals"
+msgstr "Боломжит сэтгүүл алга байна."
+
+msgid "current.current"
+msgstr "Одоогийн"
+
+msgid "about.onlineSubmissions.register"
+msgstr "Бүртгүүлэх"
+
+msgid "help.ojsHelp"
+msgstr "Open Journal Systems тусламж"
+
+msgid "donations.thankYouMessage"
+msgstr "Хандив өгсөнд баярлалаа. Таны хандив бидэнд маш их тустай."
+
+msgid "payment.paid"
+msgstr "Төлсөн"
+
+msgid "payment.requestPublicationFee"
+msgstr "Нийтлэлийн хураамж нэхэмжлэх ({$feeAmount})"
+
+msgid "installer.allowFileUploads"
+msgstr ""
+"Таны сервер одоогоор файл хуулахыг зөвшөөрч байна: "
+"<strong>{$allowFileUploads}</strong>"
+
+msgid "installer.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>ЧУХАЛ!</h4>\n"
+"<p>Суурилуулагч тохиргооны файлыг автоматаар дарж бичиж чадсангүй. Системийг "
+"ашиглахаас өмнө <tt>config.inc.php</tt> файлыг текст засварлагчаар нээж, "
+"агуулгыг нь доорх текстээр солино уу.</p>"
+
+msgid "log.review.reviewerFile"
+msgstr "Хянагчийн файл хууллаа."
+
+msgid "log.editor.metadataModified"
+msgstr "Энэ өгүүллийн мета өгөгдлийг редактор {$editorName} өөрчиллөө."
+
+msgid "log.editor.editorFile"
+msgstr "Илгээлтийн файлын редакторын хувилбарыг хууллаа."
+
+msgid "log.editor.archived"
+msgstr "{$submissionId} илгээлтийг архивлалаа."
+
+msgid "search.authorDetails"
+msgstr "Зохиогчийн дэлгэрэнгүй"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Хайлтын зөвлөгөө: <ul>\n"
+"<li>Хайлтын үг том жижиг үсэг ялгахгүй</li>\n"
+"<li>Түгээмэл үгсийг алгасна</li>\n"
+"<li>Үндсэн тохиргоогоор хүсэлтийн <em>бүх</em> үгийг агуулсан өгүүллүүдийг "
+"харуулна (өөрөөр хэлбэл <em>AND</em>)</li>\n"
+"<li>Олон үгсийг <em>OR</em>-оор холбож аль нэгийг нь агуулсан өгүүллийг хайж "
+"болно; жишээ нь: <em>боловсрол OR судалгаа</em></li>\n"
+"<li>Нарийн төвөгтэй хүсэлт үүсгэхийн тулд хаалт ашиглана; жишээ нь: "
+"<em>архив ((сэтгүүл OR бага хурал) NOT диплом)</em></li>\n"
+"<li>Яг таг хэллэгийг хайхын тулд хашилтанд хийнэ; жишээ нь: <em>\"нээлттэй "
+"хандалттай хэвлэл\"</em></li>\n"
+"<li>Үгийг хасахын тулд өмнө нь <strong>-</strong> эсвэл <em>NOT</em> бичнэ; "
+"жишээ нь: <em>онлайн -улс төр</em></li>\n"
+"<li>Үгийн төгсгөлд <strong>*</strong> ашиглан дурын тэмдэгтүүдийг нөхөж "
+"болно; жишээ нь: <em>нийгэм*</em> гэвэл \"нийгэм\", \"нийгэм судлал\" "
+"зэргийг олно</li>\n"
+"</ul>"
+
+msgid "article.nonpdf.title"
+msgstr "Өгүүлэл татах"
+
+msgid "archive.issueUnavailable"
+msgstr "Дугаар боломжгүй байна"
+
+msgid "about.editorialPolicies"
+msgstr "Редакцийн бодлого"
+
+msgid "about.focusAndScope"
+msgstr "Зорилго ба Хамрах хүрээ"
+
+msgid "about.sectionPolicies"
+msgstr "Салбар хэсгийн бодлого"
+
+msgid "about.submissionPreparationChecklist"
+msgstr "Илгээлт бэлтгэх хяналтын хуудас"
+
+msgid "about.delayedOpenAccessDescription2"
+msgstr "дугаар нийтлэгдсэнээс хэдэн сарын дараа."
+
+msgid "about.archiving"
+msgstr "Архивлах"
+
+msgid "payment.paymentReceived"
+msgstr "Төлбөр хүлээн авсан"
+
+msgid "payment.paymentSent"
+msgstr "Төлбөр аль хэдийн илгээгдсэн"
+
+msgid "payment.type.fastTrack"
+msgstr "Түргэвчилсэн хяналтын хураамж"
+
+msgid "payment.type.membership"
+msgstr "Хувь хүний гишүүнчлэлийн хураамж"
+
+msgid "payment.type.purchaseArticle"
+msgstr "Өгүүлэл худалдан авах хураамж"
+
+msgid "payment.type.purchaseIssue"
+msgstr "Дугаар худалдан авах хураамж"
+
+msgid "payment.type.subscription"
+msgstr "Захиалгын хураамж"
+
+msgid "payment.subscription.purchase"
+msgstr "Захиалга худалдаж авах"
+
+msgid "payment.subscription.renew"
+msgstr "Захиалга сунгах"
+
+msgid "payment.subscription.expires"
+msgstr "Дуусах"
+
+msgid "installer.appInstallation"
+msgstr "OJS суурилуулалт"
+
+msgid "log.editor.editorAssigned"
+msgstr "{$submissionId} илгээлтэд редактороор {$editorName} томилогдлоо."
+
+msgid "notification.type.issuePublished"
+msgstr "Дугаар нийтлэгдлээ."
+
+msgid "notification.type.editorDecisionComment"
+msgstr "\"{$title}.\" өгүүллийн редакторын шийдвэр дээр тайлбар үлдээсэн байна"
+
+msgid "notification.type.galleyModified"
+msgstr "\"{$title}.\" өгүүллийн эх бэлтгэлийн хувийг (galley) өөрчиллөө"
+
+msgid "user.authorization.noContext"
+msgstr "Таны хүсэлтэд тохирох сэтгүүл олдсонгүй."
+
+msgid "notification.type.approveSubmission"
+msgstr "Энэ илгээлт дугаарт орохоос өмнө батлагдахыг хүлээж байна."
+
+msgid "notification.type.approveSubmissionTitle"
+msgstr "Батлахыг хүлээж байна."
+
+msgid "catalog.sortBy.categoryDescription"
+msgstr "Энэ ангилал дахь өгүүллүүдийг хэрхэн эрэмбэлэхийг сонгоно уу."
