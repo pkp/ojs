@@ -2,7 +2,7 @@
 # Monika Tylawska <monika.tylawska@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-06 23:18+0000\n"
+"PO-Revision-Date: 2026-02-07 12:39+0000\n"
 "Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/rue/>\n"
@@ -21,3 +21,82 @@ msgstr "Тот мотыв імплементує додумливый мотыв
 
 msgid "plugins.themes.default.option.typography.label"
 msgstr "Тыпоґрафія"
+
+msgid "plugins.themes.default.option.typography.notoSerif_notoSans"
+msgstr ""
+"Noto Serif/Noto Sans: Комбінация шерифовых зоставлінь наголовків з "
+"безшерифовым головным текстом."
+
+msgid "plugins.themes.default.option.typography.lora_openSans"
+msgstr ""
+"Lora/Open Sans: Комбінация зоставліня шерифовых наголовків з з безшерифовым "
+"головным текстом."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
+msgstr ""
+"Кєд образ головной стороны буде пересланый, вкаж го в фоні наголовка взамін "
+"в його стандардовым місци на головній стороні."
+
+msgid "plugins.themes.default.displayStats.monthInitials"
+msgstr "Січ Лют Мар Кві Май Чер Лип Сер Вер Жол Лис Гру"
+
+msgid "plugins.themes.default.option.typography.notoSans"
+msgstr ""
+"Noto Sans: Цифровый шрифт запроєктуваный през Google з думком про шырокє "
+"языкове спертя."
+
+msgid "plugins.themes.default.option.typography.description"
+msgstr "Выбер комбінацию шрифтів одповідню для того часопису."
+
+msgid "plugins.themes.default.option.typography.notoSerif"
+msgstr "Noto Serif: Шерифова версия цифрового шрифту Google."
+
+msgid "plugins.themes.default.option.typography.notoSans_notoSerif"
+msgstr ""
+"Noto Sans/Noto Serif: Комбінация зоставліня безшерифовых наголовків з "
+"шерифовым головным текстом."
+
+msgid "plugins.themes.default.option.typography.lato"
+msgstr "Lato: Знаный, модерный безшрифовый шрифт."
+
+msgid "plugins.themes.default.option.typography.lora"
+msgstr "Lora: Шырикій шерифовый шрифт добрый до чытаня з екрану."
+
+msgid "plugins.themes.default.option.colour.label"
+msgstr "Кольор"
+
+msgid "plugins.themes.default.option.colour.description"
+msgstr "Выбер кольор наголовка."
+
+msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
+msgstr "Вкаж опис часопису на головній стороні."
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
+msgstr "Образ фону в наголовку"
+
+msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
+msgstr "Вкаж образ головной стороны яко фон наголовка."
+
+msgid "plugins.themes.default.option.displayStats.label"
+msgstr "Опциі вказуваня статистык"
+
+msgid "plugins.themes.default.option.displayStats.none"
+msgstr "Не вказуй статистык чытателям."
+
+msgid "plugins.themes.default.option.displayStats.bar"
+msgstr "Ужый колонной схемы до высвітляня статистык выкористаня."
+
+msgid "plugins.themes.default.option.displayStats.line"
+msgstr "Ужый ленийовой схемы до высвітляня статистык выкористаня."
+
+msgid "plugins.themes.default.displayStats.downloads"
+msgstr "Побраня"
+
+msgid "plugins.themes.default.displayStats.noStats"
+msgstr "Статистыкы побрань сут недоступны."
+
+msgid "plugins.themes.default.nextSlide"
+msgstr "Слідуючый сляйд"
+
+msgid "plugins.themes.default.prevSlide"
+msgstr "Попередній сляйд"
