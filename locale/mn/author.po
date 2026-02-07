@@ -1,7 +1,7 @@
-# Gantulga <cybermon@gmail.com>, 2023.
+# Gantulga <cybermon@gmail.com>, 2023, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-08-25 17:18+0000\n"
+"PO-Revision-Date: 2026-02-07 06:31+0000\n"
 "Last-Translator: Gantulga <cybermon@gmail.com>\n"
 "Language-Team: Mongolian <http://translate.pkp.sfu.ca/projects/ojs/author/mn/"
 ">\n"
@@ -10,130 +10,139 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "author.submit"
-msgstr "Шинэ бүтээл илгээх"
+msgstr "Шинэ илгээлт"
 
 msgid "author.track"
-msgstr "Идэвхтэй бүтээлүүд"
+msgstr "Идэвхтэй илгээлтүүд"
 
 msgid "author.submit.submitArticle"
-msgstr "Бүтээлээ илгээх"
+msgstr "Өгүүлэл илгээх"
 
 msgid "author.submit.stepsToSubmit"
-msgstr "Бүтээл илгээх 5-н алхамтай"
+msgstr "Илгээх таван алхам"
 
 msgid "author.submit.startHereTitle"
-msgstr "Шинэ бүтээл илгээхийг эхлүүлэх"
+msgstr "Шинэ илгээлт эхлүүлэх"
 
 msgid "author.submit.startHereLink"
 msgstr ""
+"Илгээх таван алхамт үйл явцын нэгдүгээр алхам руу очихын тулд <a href=\""
+"{$submitUrl}\" class=\"action\">энд дарна уу</a>."
 
 msgid "author.submit.step1"
-msgstr "Алхам 1. Бүтээл оруулах эхлэх"
+msgstr "Алхам 1. Илгээлтийг эхлүүлэх"
 
 msgid "author.submit.step2"
-msgstr "Алхам 2. Бүтээлийн файл оруулах"
+msgstr "Алхам 2. Илгээх файлыг хуулах"
 
 msgid "author.submit.step3"
-msgstr "Алхам 3. Бүтээлийн метадата оруулах"
+msgstr "Алхам 3. Илгээлтийн мета өгөгдлийг оруулах"
 
 msgid "author.submit.step4"
-msgstr "Алхам 4. Нэмэлт файлуудыг оруулах"
+msgstr "Алхам 4. Нэмэлт файлуудыг хуулах"
 
 msgid "author.submit.step4a"
-msgstr "Алхам 4а. Нэмэлт файл оруулах"
+msgstr "Алхам 4а. Нэмэлт файл нэмэх"
 
 msgid "author.submit.step5"
-msgstr "Адхам 5. Оруулсан бүтээлийг баталгаажуулах"
+msgstr "Алхам 5. Илгээлтийг баталгаажуулах"
 
 msgid "author.submit.start"
 msgstr "Эхлэх"
 
 msgid "author.submit.upload"
-msgstr "Илгээх файл оруулах"
+msgstr "Илгээлт хуулах"
 
 msgid "author.submit.metadata"
-msgstr "Метадата оруулах"
+msgstr "Мета өгөгдөл оруулах"
 
 msgid "author.submit.supplementaryFiles"
-msgstr "Нэмэлт файлуудыг оруулах"
+msgstr "Нэмэлт файлууд хуулах"
 
 msgid "author.submit.nextSteps"
-msgstr "Дараагийн алхамууд"
+msgstr "Дараагийн алхмууд"
 
 msgid "author.submit.notAccepting"
-msgstr ""
+msgstr "Энэ сэтгүүл одоогоор илгээлт хүлээн авахгүй байна."
 
 msgid "author.submit.requestWaiver"
-msgstr ""
+msgstr "Төлбөрөөс чөлөөлөх хүсэлт гаргах"
 
 msgid "author.submit.qualifyForWaiver"
-msgstr ""
+msgstr "Энэхүү өгүүллийг илгээх төлбөрөөс чөлөөлж өгөхийг анхаарч үзнэ үү"
 
 msgid "author.submit.addReasonsForWaiver"
 msgstr ""
+"Төлбөрөөс яагаад чөлөөлөх ёстой талаарх тайлбараа доорх сэтгэгдлийн хэсэгт "
+"оруулна уу."
 
 msgid "author.submit.mustEnterWaiverReason"
 msgstr ""
+"Хэрэв та төлбөрөөс чөлөөлөх хүсэлт гаргаж байгаа бол заасан хэсэгт "
+"шалтгаанаа бичих ёстой."
 
 msgid "author.submissions.queuedReviewSubsequent"
-msgstr ""
+msgstr "Хяналтын {$round}-р шатанд"
 
 msgid "author.submissions.queuedReviewRevisions"
-msgstr ""
+msgstr "Хянагдаж буй: Засвар хийх шаардлагатай"
 
 msgid "author.submissions.queuedEditingCopyedit"
-msgstr ""
+msgstr "Засварлагдаж буй: Хянан тохиолдуулах хүсэлт илгээсэн"
 
 msgid "author.submissions.queuedEditingProofread"
-msgstr ""
+msgstr "Засварлагдаж буй: Үсгийн алдаа шалгах хүсэлт илгээсэн"
 
 msgid "author.submissions.uploadCopyeditedVersion"
-msgstr ""
+msgstr "Хянан тохиолдуулсан хувилбарыг хуулах"
 
 msgid "author.submissions.proofreadingCorrections"
-msgstr ""
+msgstr "Үсгийн алдааны засварууд"
 
 msgid "author.submissions.confirmDelete"
-msgstr ""
+msgstr "Та энэ дутуу илгээлтийг устгахдаа итгэлтэй байна уу?"
 
 msgid "author.submissions.viewStatus"
-msgstr ""
+msgstr "Төлөв харах"
 
 msgid "author.submissions.noSubmissions"
-msgstr ""
+msgstr "Илгээлт байхгүй."
 
 msgid "author.submit.journalSection"
-msgstr ""
+msgstr "Сэтгүүлийн салбар хэсэг"
 
 msgid "author.submit.journalSectionDescription"
 msgstr ""
 
 msgid "author.submit.verifyChecklist"
 msgstr ""
+"Үргэлжлүүлэхийн өмнө илгээлтийн хяналтын хуудасны бүх зүйл хангагдсан "
+"эсэхийг шалгах ёстой."
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
+"Үргэлжлүүлэхийн өмнө Зохиогчийн эрхийн мэдэгдлийн нөхцөлийг зөвшөөрөх ёстой."
 
 msgid "submission.submit.coverNote"
-msgstr ""
+msgstr "Редакторт зориулсан тайлбар"
 
 msgid "author.submit.comments"
-msgstr ""
+msgstr "Текст оруулна уу (заавал биш)"
 
 msgid "author.submit.form.localeRequired"
-msgstr ""
+msgstr "Илгээх хэлээ сонгоно уу."
 
 msgid "author.submit.reorderInstructions"
-msgstr ""
+msgstr "Зохиогчдын нэрийг нийтлэлд гарах дарааллаар нь эрэмбэлнэ үү."
 
 msgid "author.submit.reorder"
-msgstr ""
+msgstr "Зохиогчийн нэрийг дахин эрэмбэлэх"
 
 msgid "author.submit.selectPrincipalContact"
-msgstr ""
+msgstr "Редакцийн харилцаа холбоо барих үндсэн хүн."
 
 msgid "author.submit.addAuthor"
 msgstr "Зохиогч нэмэх"
@@ -143,156 +152,180 @@ msgstr "Зохиогч устгах"
 
 msgid "author.submit.submissionIndexingDescription"
 msgstr ""
+"Илгээлтийн индексжүүлэх нэр томьёог оруулна уу; нэр томьёог цэгтэй таслалаар "
+"тусгаарлана (нэр томьёо1; нэр томьёо2; нэр томьёо3)."
 
 msgid "author.submit.coverageInstructions"
 msgstr ""
+"Газарзүйн байршил, он цаг буюу түүхэн хамрах хүрээ, болон/эсвэл судалгааны "
+"түүвэрлэлтийн шинж чанарт хамаарна."
 
 msgid "author.submit.languageInstructions"
 msgstr ""
+"English=en; French=fr; Spanish=es. <a href=\"https://www.loc.gov/standards/"
+"iso639-2/php/code_list.php\" target=\"_blank\">Бусад кодууд</a>."
 
 msgid "author.submit.form.authorRequired"
-msgstr ""
+msgstr "Дор хаяж нэг зохиогч байх ёстой."
 
 msgid "author.submit.form.authorRequiredFields"
-msgstr ""
+msgstr "Зохиогч бүрийн нэр, овог, имэйл хаяг шаардлагатай."
 
 msgid "author.submit.form.titleRequired"
-msgstr ""
+msgstr "Өгүүллийнхээ гарчгийг оруулна уу."
 
 msgid "author.submit.form.abstractRequired"
-msgstr ""
+msgstr "Өгүүллийнхээ хураангуйг оруулна уу."
 
 msgid "author.submit.form.wordCountAlert"
-msgstr ""
+msgstr "Та энэ хэсгийн хураангуйд заасан үгийн дээд хязгаарыг хэтрүүлсэн байна."
 
 msgid "author.submit.submissionFile"
-msgstr ""
+msgstr "Илгээх файл"
 
 msgid "author.submit.uploadSubmissionFile"
-msgstr ""
+msgstr "Илгээх файлыг хуулах"
 
 msgid "author.submit.replaceSubmissionFile"
-msgstr ""
+msgstr "Илгээх файлыг солих"
 
 msgid "author.submit.noSubmissionFile"
-msgstr ""
+msgstr "Илгээх файл хуулаагүй байна."
 
 msgid "author.submit.noSubmissionConfirm"
-msgstr ""
+msgstr "Та илгээх файл хуулахгүйгээр үргэлжлүүлэхдээ итгэлтэй байна уу?"
 
 msgid "author.submit.supplementaryFilesInstructions"
 msgstr ""
+"Энэхүү заавал биш алхам нь илгээлтэд нэмэлт файлууд хавсаргах боломжийг "
+"олгоно. Дурын форматтай байж болох эдгээр файлд (а) судалгааны хэрэгсэл, (б) "
+"судалгааны ёс зүйн хяналтын нөхцөлийг хангасан өгөгдлийн багц, (в) уншигчид "
+"өөрөөр олж авах боломжгүй эх сурвалж, (г) текст дотор оруулах боломжгүй "
+"зураг, хүснэгтүүд, эсвэл ажлын үр өгөөжийг нэмэгдүүлэх бусад материалууд "
+"багтаж болно."
 
 msgid "author.submit.supplementaryFiles.saveToUpload"
 msgstr ""
+"Файлыг хуулахын тулд Хадгалах товчийг дарна уу (үүний дараа нэмэлт файлууд "
+"хуулж болно)."
 
 msgid "author.submit.forgottenSubmitSuppFile"
 msgstr ""
+"Та сонгосон нэмэлт файлаа хуулахгүйгээр үргэлжлүүлэхдээ итгэлтэй байна уу?"
 
 msgid "author.submit.noSupplementaryFiles"
-msgstr ""
+msgstr "Энэ илгээлтэд нэмэлт файл оруулаагүй байна."
 
 msgid "author.submit.backToSupplementaryFiles"
-msgstr ""
+msgstr "Нэмэлт файлууд руу буцах"
 
 msgid "author.submit.confirmDeleteSuppFile"
-msgstr ""
+msgstr "Та энэ нэмэлт файлыг устгахдаа итгэлтэй байна уу?"
 
 msgid "author.submit.uploadSuppFile"
-msgstr ""
+msgstr "Нэмэлт файл хуулах"
 
 msgid "author.submit.addSupplementaryFile"
-msgstr ""
+msgstr "Нэмэлт файл нэмэх"
 
 msgid "author.submit.editSupplementaryFile"
-msgstr ""
+msgstr "Нэмэлт файл засварлах"
 
 msgid "author.submit.supplementaryFileData"
-msgstr ""
+msgstr "Нэмэлт файлын мета өгөгдөл"
 
 msgid "author.submit.supplementaryFileDataDescription"
 msgstr ""
+"Энэхүү нэмэлт материалыг индексжүүлэхийн тулд хуулсан файлын дараах мета "
+"өгөгдлийг оруулна уу."
 
 msgid "author.submit.supplementaryFileUpload"
-msgstr ""
+msgstr "Нэмэлт файл"
 
 msgid "author.submit.suppFile.createrOrOwner"
-msgstr ""
+msgstr "Файлыг үүсгэгч (эсвэл эзэмшигч)"
 
 msgid "author.submit.suppFile.researchInstrument"
-msgstr ""
+msgstr "Судалгааны хэрэгсэл"
 
 msgid "author.submit.suppFile.researchMaterials"
-msgstr ""
+msgstr "Судалгааны материалууд"
 
 msgid "author.submit.suppFile.researchResults"
-msgstr ""
+msgstr "Судалгааны үр дүн"
 
 msgid "author.submit.suppFile.transcripts"
-msgstr ""
+msgstr "Бичвэрүүд (Transcripts)"
 
 msgid "author.submit.suppFile.dataAnalysis"
-msgstr ""
+msgstr "Өгөгдлийн шинжилгээ"
 
 msgid "author.submit.suppFile.dataSet"
-msgstr ""
+msgstr "Өгөгдлийн багц"
 
 msgid "author.submit.suppFile.sourceText"
-msgstr ""
+msgstr "Эх бичвэр"
 
 msgid "author.submit.suppFile.briefDescription"
-msgstr ""
+msgstr "Товч тайлбар"
 
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
+"Нэргүй хяналтын зарчмыг алдагдуулахгүй тул файлыг хянагч нарт (мета "
+"өгөгдөлгүйгээр) харуулна уу."
 
 msgid "author.submit.suppFile.publisherDescription"
-msgstr ""
+msgstr "Зөвхөн албан ёсоор нийтлэгдсэн материалуудад ашиглана уу."
 
 msgid "author.submit.suppFile.dateDescription"
-msgstr ""
+msgstr "Өгөгдөл цуглуулсан эсвэл хэрэгслийг үүсгэсэн огноо."
 
 msgid "author.submit.suppFile.sourceDescription"
-msgstr ""
+msgstr "Судалгааны нэр эсвэл бусад гарал үүсэл."
 
 msgid "author.submit.suppFile.specifyOtherType"
-msgstr ""
+msgstr "Бусад төрлийг заах"
 
 msgid "author.submit.suppFile.noFile"
-msgstr ""
+msgstr "Файл хуулаагүй байна."
 
 msgid "author.submit.suppFile.form.titleRequired"
-msgstr ""
+msgstr "Энэхүү нэмэлт файлын гарчгийг оруулна уу."
 
 msgid "author.submit.suppFile.form.subjectRequired"
-msgstr ""
+msgstr "Сэдвийг оруулна уу."
 
 msgid "author.submit.suppFile.form.descriptionRequired"
-msgstr ""
+msgstr "Тайлбарыг оруулна уу."
 
 msgid "author.suppFile.suppFilePublicIdentificationExists"
-msgstr ""
+msgstr "Нэмэлт файлын нийтийн таних тэмдэг аль хэдийн байна."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
-msgstr ""
+msgstr "Нэмэлт файлын нийтийн таних тэмдэг"
 
 msgid "author.submit.filesSummary"
-msgstr ""
+msgstr "Файлын хураангуй"
 
 msgid "author.submit.finishSubmission"
-msgstr ""
+msgstr "Илгээлтийг дуусгах"
 
 msgid "author.submit.submissionComplete"
 msgstr ""
+"Илгээлт амжилттай боллоо. {$journalTitle} сэтгүүлд бүтээлээ нийтлүүлэхээр "
+"сонирхсонд баярлалаа."
 
 msgid "author.article.uploadAuthorVersion"
-msgstr ""
+msgstr "Зохиогчийн хувилбарыг хуулах"
 
 msgid "author.article.copyeditedFile"
-msgstr ""
+msgstr "Хянан тохиолдуулсан файл"
 
 msgid "author.article.authorRevisedFile"
-msgstr ""
+msgstr "Зохиогчийн файл"
 
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr ""
+"Энэ сэтгүүлд илгээлт хийхийн тулд хэрэглэгчийн бүртгэл шаардлагатай. Энэ нь "
+"манай редакторуудад таны илгээлтийг хянах, илгээлтийн төлөв өөрчлөгдөх эсвэл "
+"танаас нэмэлт мэдээлэл шаардлагатай үед тантай холбогдох боломжийг олгоно."
