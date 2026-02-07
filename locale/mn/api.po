@@ -1,3 +1,85 @@
 # Gantulga <cybermon@gmail.com>, 2026.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2026-02-07 06:31+0000\n"
+"Last-Translator: Gantulga <cybermon@gmail.com>\n"
+"Language-Team: Mongolian <http://translate.pkp.sfu.ca/projects/ojs/api/mn/>\n"
+"Language: mn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Таны хүссэн нийтлэл нь энэ илгээмжийн хэсэг биш байна."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Та энэ файлын шатны файлыг эх бэлтгэлтэй (galley) холбох боломжгүй."
+
+msgid "api.publications.403.paymentFeesNotEnabled"
+msgstr ""
+"Нийтлэлийн төлбөрийн хураамж идэвхжээгүй тул илгээмжийн төлбөрийн маягтыг "
+"ашиглах боломжгүй."
+
+msgid "api.submission.400.inactiveSection"
+msgstr "Энэ салбар хэсэг илгээмж хүлээн авахаа зогсоосон байна."
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Таны хүсэлт гаргасан зарлал нь энэ сэтгүүлийн хэсэг биш байна."
+
+msgid "api.emails.403.disabled"
+msgstr "Энэ сэтгүүлийн хувьд имэйл мэдэгдлийн функцийг идэвхжүүлээгүй байна."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "Таны хүсэлт гаргасан илгээмж энэ сэтгүүлд байхгүй байна."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Та илгээмжийн харьяалагдах сэтгүүлийг өөрчлөх боломжгүй."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Танд хэвлэгдээгүй дугааруудыг үзэх зөвшөөрөл байхгүй байна."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Та зөвхөн идэвхжүүлсэн сэтгүүлүүдийг үзэх боломжтой."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Танд энэ сэтгүүлийг үзэх зөвшөөрөл байхгүй байна."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Та сэтгүүлийн API эсвэл сайтын хэмжээний API-д хүсэлт гаргахаас нааш энэ "
+"сэтгүүлийг үзэх эсвэл засварлах боломжгүй."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Та сайтын хэмжээний API-аас энэ сэтгүүлийг засварлах боломжгүй."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Танд энэ сэтгүүлийг засварлах зөвшөөрөл байхгүй байна."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Танд энэ сэтгүүлийг устгах зөвшөөрөл байхгүй байна."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Таны хүссэн сэтгүүл олдсонгүй."
+
+msgid "api.dois.403.contextsNotMatched"
+msgstr "Таны хүссэн DOI нь энэ сэтгүүлийн хэсэг биш байна."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "Энэ сэтгүүлд DOI бүртгэлийн агентлаг тохируулаагүй байна."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Зарим зүйлсийг амжилттай байршуулж чадсангүй. Тухайн зүйл бүрийн тусгай "
+"алдааны мэдэгдлийг шалгана уу."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Танд энэ имэйл загварыг өөр сэтгүүл рүү шилжүүлэх зөвшөөрөл байхгүй байна."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Таны сонгосон төлбөрийн хэрэгслийг дэмжихгүй байна."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Таны хүссэн нийтлэл нь энэ сэтгүүлийн хэсэг биш байна."
