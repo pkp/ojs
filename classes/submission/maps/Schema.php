@@ -23,7 +23,6 @@ use APP\publication\Publication;
 use APP\submission\Submission;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Enumerable;
-use PKP\db\DAORegistry;
 use PKP\decision\DecisionType;
 use PKP\decision\types\BackFromCopyediting;
 use PKP\decision\types\BackFromProduction;
@@ -40,7 +39,6 @@ use PKP\decision\types\SendToProduction;
 use PKP\plugins\Hook;
 use PKP\security\Role;
 use PKP\submission\PKPSubmission;
-use PKP\submission\reviewRound\ReviewRoundDAO;
 
 class Schema extends \PKP\submission\maps\Schema
 {
@@ -143,10 +141,10 @@ class Schema extends \PKP\submission\maps\Schema
                         new NewExternalReviewRound()
                     ];
                     $cancelReviewRound = new CancelReviewRound();
-                    $reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO'); /** @var ReviewRoundDAO $reviewRoundDao */
-                    $reviewRound = $reviewRoundDao->getLastReviewRoundBySubmissionId($submission->getId(), $stageId);
 
-                    if ($cancelReviewRound->canRetract($submission, $reviewRound->getId())) {
+                    $reviewRound = Repo::reviewRound()->getLastReviewRoundBySubmissionId($submission->getId(), $stageId);
+
+                    if ($cancelReviewRound->canRetract($submission, $reviewRound->id)) {
                         $decisionTypes[] = $cancelReviewRound;
                     }
                     if ($submission->getData('status') === Submission::STATUS_DECLINED) {
