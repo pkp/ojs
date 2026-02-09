@@ -26,3 +26,6 @@ msgstr "You may also {$advancedSearchLink} for this article."
 
 msgid "plugins.generic.recommendBySimilarity.advancedSearch"
 msgstr "start an advanced similarity search"
+
+msgid "plugins.generic.recommendBySimilarity.publishedIn"
+msgstr "{$author}; {$title}, in {$issue}"

@@ -20,7 +20,6 @@ use APP\facades\Repo;
 use APP\handler\Handler;
 use APP\search\ArticleSearch;
 use APP\statistics\StatisticsHelper;
-use PKP\core\VirtualArrayIterator;
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
 use PKP\submission\PKPSubmission;
@@ -160,9 +159,26 @@ class RecommendByAuthorPlugin extends GenericPlugin
         // Visualization.
         $articleSearch = new ArticleSearch();
         $pagedResults = $articleSearch->formatResults($pagedResults);
-        $returner = new VirtualArrayIterator($pagedResults, $totalResults, $page, $itemsPerPage);
-        $smarty->assign('articlesBySameAuthor', $returner);
+        $countResults = count($pagedResults);
+
+        $nextPage = $rangeInfo->getPage() * $countResults < $totalResults
+            ? $request->getDispatcher()->url($request, Application::ROUTE_PAGE, path: [$displayedArticle->getId()], params: ['articlesBySameAuthorPage' => $rangeInfo->getPage() + 1], urlLocaleForPage: '')
+            : null;
+        $previousPage = $rangeInfo->getPage() > 1
+            ? $request->getDispatcher()->url($request, Application::ROUTE_PAGE, path: [$displayedArticle->getId()], params: ['articlesBySameAuthorPage' => $rangeInfo->getPage() - 1], urlLocaleForPage: '')
+            : null;
+
+        $smarty->assign('articlesBySameAuthor', (object) [
+            'results' => $pagedResults,
+            'start' => $offset + 1,
+            'end' => $offset + $countResults,
+            'total' => $totalResults,
+            'nextUrl' => $nextPage,
+            'previousUrl' => $previousPage
+        ]);
+
         $output .= $smarty->fetch($this->getTemplateResource('articleFooter.tpl'));
+
         return false;
     }
 }
