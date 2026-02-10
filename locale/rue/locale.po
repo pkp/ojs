@@ -2,7 +2,7 @@
 # Monika Tylawska <monika.tylawska@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-10 14:00+0000\n"
+"PO-Revision-Date: 2026-02-10 15:40+0000\n"
 "Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/locale/rue/>\n"
 "Language: rue\n"
@@ -26,3 +26,230 @@ msgstr "Катеґориі"
 
 msgid "navigation.categories.browse"
 msgstr "Переглядай"
+
+msgid "reviewer.article.enterReviewForm"
+msgstr "Влуч іконку хмаркы, жебы выполнити карту рецензиі."
+
+msgid "common.payment"
+msgstr "Заплата"
+
+msgid "common.journalHomepageImage.altText"
+msgstr "Знимка на головну сторону часопису"
+
+msgid "navigation.journalHelp"
+msgstr "Поміч"
+
+msgid "navigation.current"
+msgstr "Біжучый номер"
+
+msgid "navigation.otherJournals"
+msgstr "Інчы часописы"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Інформациі для авторів"
+
+msgid "navigation.skip.about"
+msgstr "Перейд до інцформаций о часописі"
+
+msgid "navigation.skip.issue"
+msgstr "Перейд до біжучого номеру"
+
+msgid "common.queue.short.submissionsUnassigned"
+msgstr "Неприписане"
+
+msgid "common.queue.short.submissionsInEditing"
+msgstr "В едициі"
+
+msgid "common.queue.long.submissionsInReview"
+msgstr "Пересланый текст в рецензиі"
+
+msgid "common.queue.short.submissionsArchives"
+msgstr "Архів"
+
+msgid "common.queue.long.active"
+msgstr "Актывне"
+
+msgid "common.queue.long.completed"
+msgstr "Архів"
+
+msgid "common.queue.short.completed"
+msgstr "Архів"
+
+msgid "section.section"
+msgstr "Діл"
+
+msgid "section.title"
+msgstr "Назва ділу"
+
+msgid "section.sections"
+msgstr "Ділы"
+
+msgid "section.abbreviation"
+msgstr "Скорочыня"
+
+msgid "section.abbreviation.example"
+msgstr "(На примір, Статі=СТА)"
+
+msgid "section.policy"
+msgstr "Принципы ділу"
+
+msgid "article.article"
+msgstr "Статя"
+
+msgid "article.articles"
+msgstr "Статі"
+
+msgid "common.publication"
+msgstr "Статя"
+
+msgid "article.title"
+msgstr "Наголовок"
+
+msgid "article.authors"
+msgstr "Авторы"
+
+msgid "article.indexingInformation"
+msgstr "Інформация о індексуваню"
+
+msgid "article.file"
+msgstr "Файль"
+
+msgid "article.suppFiles"
+msgstr "Поміцничы файлі"
+
+msgid "article.suppFilesAbbrev"
+msgstr "Поміц. файлі"
+
+msgid "article.subject"
+msgstr "Основны слова"
+
+msgid "article.coverage"
+msgstr "Засяг"
+
+msgid "article.sectionEditor"
+msgstr "РД"
+
+msgid "article.commentsToEditor"
+msgstr "Коментарі для автора"
+
+msgid "article.submissions"
+msgstr "Зголошыня"
+
+msgid "article.details"
+msgstr "Дрібниці"
+
+msgid "article.abstract"
+msgstr "Абстракт"
+
+msgid "article.coverPage.altText"
+msgstr "Образ окладинкы"
+
+msgid "article.accessLogoOpen.altText"
+msgstr "Отвореный доступ"
+
+msgid "article.accessLogoRestricted.altText"
+msgstr "Ограниченый доступ"
+
+msgid "article.comments.sectionDefault"
+msgstr "Додумливе"
+
+msgid "article.comments.enable"
+msgstr "Влуч коментуваня"
+
+msgid "article.fontSize"
+msgstr "Велькіст тексту"
+
+msgid "article.fontSize.small.altText"
+msgstr "Малый"
+
+msgid "article.fontSize.medium.altText"
+msgstr "Середній"
+
+msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
+msgstr "Выполный прошу вымаганы поля."
+
+msgid "common.publications"
+msgstr "Статі"
+
+msgid "article.metadata"
+msgstr "Метаданы"
+
+msgid "article.journalSection"
+msgstr "Діл часопису"
+
+msgid "common.software"
+msgstr "Open Journal Systems"
+
+msgid "article.submissionId"
+msgstr "Ідентыфікатор зголошыня"
+
+msgid "common.confirmComplete"
+msgstr ""
+"Ци напевно хочеш означыти задачы як зроблены? Пізнійше введіня змін може "
+"быти неможливе."
+
+msgid "common.payments"
+msgstr "Заплаты"
+
+msgid "common.homePageHeader.altText"
+msgstr "Наголовок головной стороны"
+
+msgid "article.suppFile"
+msgstr "Пміцничый файль"
+
+msgid "doi.manager.settings.publications"
+msgstr "Статі"
+
+msgid "navigation.browseByIssue"
+msgstr "Подля номеру"
+
+msgid "navigation.browseByAuthor"
+msgstr "Подля автора"
+
+msgid "navigation.infoForAuthors"
+msgstr "Для авторів"
+
+msgid "article.discipline"
+msgstr "Науковы ділины і субділины"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Для бібліотекарів"
+
+msgid "navigation.competingInterestGuidelines"
+msgstr "Принципы односячы ся до конфлікту інтересів"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Інформациі для бібліотекарів"
+
+msgid "common.queue.long.submissionsUnassigned"
+msgstr "Неприписане"
+
+msgid "common.queue.long.submissionsInEditing"
+msgstr "Зголошеный текст в едициі"
+
+msgid "common.queue.short.submissionsInReview"
+msgstr "В рецензиі"
+
+msgid "common.queue.long.submissionsArchives"
+msgstr "Архів"
+
+msgid "common.queue.short.active"
+msgstr "Актывне"
+
+msgid "submissionGroup.assignedSubEditors"
+msgstr "Приписаны редакторы"
+
+msgid "article.type"
+msgstr "Рід, метода або підхід"
+
+msgid "article.language"
+msgstr "Язык"
+
+msgid "article.submission"
+msgstr "Зголошыня"
+
+msgid "article.comments.disable"
+msgstr "Вылуч коментуваня"
+
+msgid "article.fontSize.large.altText"
+msgstr "Великій"
