@@ -272,6 +272,9 @@ session_check_ip = On
 ; migration of old password hashes.
 encryption = sha1
 
+; When set to On, expire cookie-based sessions upon closing the browser window.
+session_expire_on_close = Off
+
 ; The unique salt to use for generating password reset hashes
 salt = "YouMustSetASecretKeyHere!!"
 
