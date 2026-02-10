@@ -2,7 +2,7 @@
 # Monika Tylawska <monika.tylawska@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-10 15:40+0000\n"
+"PO-Revision-Date: 2026-02-10 21:53+0000\n"
 "Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/locale/rue/>\n"
 "Language: rue\n"
@@ -253,3 +253,150 @@ msgstr "Вылуч коментуваня"
 
 msgid "article.fontSize.large.altText"
 msgstr "Великій"
+
+msgid "article.return"
+msgstr "Верний до дрібниць статі"
+
+msgid "submission.submissionEditing"
+msgstr "Едиция зголошеных текстів"
+
+msgid "submission.changeSection"
+msgstr "Замін на"
+
+msgid "submission.round"
+msgstr "Рунда&nbsp;{$round}"
+
+msgid "submission.notifyEditor"
+msgstr "Дай знати редакторови"
+
+msgid "submission.editorAuthorRecord"
+msgstr "Реєстр кореспонденциі редактор/автор"
+
+msgid "submission.postReviewVersion"
+msgstr "Файль з текстом по рецензиі"
+
+msgid "submission.authorVersion"
+msgstr "Текст пересланий през автора"
+
+msgid "submission.copyediting"
+msgstr "Коректа тексту"
+
+msgid "submission.scheduling"
+msgstr "Гармоноґрам"
+
+msgid "submission.scheduledIn.tba"
+msgstr "До узгодніня"
+
+msgid "submissions.step1"
+msgstr "Крок 1"
+
+msgid "submissions.step3"
+msgstr "Крок 3"
+
+msgid "submissions.queuedReview"
+msgstr "В рецензиі"
+
+msgid "submissions.published"
+msgstr "Опубликуване"
+
+msgid "submissions.initial"
+msgstr "Первістный"
+
+msgid "submissions.initialProof"
+msgstr "Вступна коректа"
+
+msgid "submission.eventLog"
+msgstr "Реєстр подій"
+
+msgid "submissions.layoutComplete"
+msgstr "По складі"
+
+msgid "submissions.proofreadingComplete"
+msgstr "Заакцептуване до опубликуваня"
+
+msgid "submission.search"
+msgstr "Глядай статі"
+
+msgid "context.contexts"
+msgstr "Часописы"
+
+msgid "journal.path"
+msgstr "Стежка"
+
+msgid "context.context"
+msgstr "Часопис"
+
+msgid "journal.issn"
+msgstr "ISSN"
+
+msgid "journal.viewAllIssues"
+msgstr "Вкаж вшыткы номеры"
+
+msgid "user.noRoles.selectUsersWithoutRoles"
+msgstr "Воз до увагы ужытковників без приписаных ріль в часописі."
+
+msgid "user.profile.profileImage"
+msgstr "Профільова знимка"
+
+msgid "user.showAllJournals"
+msgstr "Вкаж моі часописы"
+
+msgid "user.registerForOtherJournals"
+msgstr "Зареґіструй для інчых часописів"
+
+msgid "submission.sent"
+msgstr "Выслане"
+
+msgid "submission.editorVersion"
+msgstr "Версия до редакцийных робіт"
+
+msgid "submission.editorDecision"
+msgstr "Рішыня редактора"
+
+msgid "submission.editorReview"
+msgstr "Рецензия редактора"
+
+msgid "submission.authorsRevisedVersion"
+msgstr "Файль з текстом поправленым през автора"
+
+msgid "submission.notifyAuthor"
+msgstr "Дай знати авторови"
+
+msgid "submission.copyedit"
+msgstr "Коректа тексту"
+
+msgid "submission.reviewersVersion"
+msgstr "Файль з увагами рецензента"
+
+msgid "submission.proofreading"
+msgstr "Коректа авторска"
+
+msgid "submission.scheduledIn"
+msgstr "Заплянувано до публикациі в {$issueName}."
+
+msgid "submissions.proofread"
+msgstr "Коректа файлю до публикациі"
+
+msgid "submissions.postAuthor"
+msgstr "По авторскій коректі"
+
+msgid "submissions.reviewRound"
+msgstr "Етап рецензиі"
+
+msgid "submissions.proof"
+msgstr "Заакцептувана версия"
+
+msgid "submissions.editorDecision"
+msgstr "Рішыня редактора часопису"
+
+msgid "submissions.editorRuling"
+msgstr "Присуд редактора часопису"
+
+msgid "submissions.copyeditComplete"
+msgstr "По коректі"
+
+msgid "journal.currentIssue"
+msgstr "Актуальный номер"
+
+msgid "user.authorization.representationNotFound"
+msgstr "Жадана коректа не остала найдена."
