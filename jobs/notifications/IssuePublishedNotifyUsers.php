@@ -30,7 +30,7 @@ use PKP\emailTemplate\EmailTemplate;
 use PKP\jobs\BaseJob;
 use PKP\user\User;
 
-class IssuePublishedNotifyUsers extends BaseJob
+class IssuePublishedNotifyUsers extends BaseJob implements \PKP\queue\ContextAwareJob
 {
     use Batchable;
 
@@ -56,6 +56,14 @@ class IssuePublishedNotifyUsers extends BaseJob
         $this->issue = $issue;
         $this->locale = $locale;
         $this->sender = $sender;
+    }
+
+    /**
+     * Get the context ID for this job.
+     */
+    public function getContextId(): int
+    {
+        return $this->contextId;
     }
 
     public function handle()
