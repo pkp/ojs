@@ -3,13 +3,14 @@
 # Fulvio Delle Donne <fulviodelledonne@libero.it>, 2022.
 # Leonardo Mancini <leonardo.mancini@unito.it>, 2024.
 # Gabriele Raimondi <gabriele.raimondi5@unibo.it>, 2024.
+# Walter <posta@walteriacobelli.it>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:26+00:00\n"
-"PO-Revision-Date: 2024-08-26 13:24+0000\n"
-"Last-Translator: Gabriele Raimondi <gabriele.raimondi5@unibo.it>\n"
+"PO-Revision-Date: 2026-02-11 16:57+0000\n"
+"Last-Translator: Walter <posta@walteriacobelli.it>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/admin/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
@@ -68,8 +69,7 @@ msgid "admin.systemConfiguration"
 msgstr "Configurazione di OJS"
 
 msgid "admin.systemConfigurationDescription"
-msgstr ""
-"Impostazioni di configurazione di OJS prese da <tt>config.inc.php</tt>."
+msgstr "Impostazioni di configurazione di OJS prese da <tt>config.inc.php</tt>."
 
 msgid "admin.journals.createInstructions"
 msgstr ""
