@@ -4,13 +4,14 @@
 # Leonardo Mancini <leonardo.mancini@unito.it>, 2024.
 # Martina Marafioti <martina.marafioti3@unibo.it>, 2024.
 # Gabriele Raimondi <gabriele.raimondi5@unibo.it>, 2024.
+# Walter <posta@walteriacobelli.it>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2024-08-26 17:58+0000\n"
-"Last-Translator: Gabriele Raimondi <gabriele.raimondi5@unibo.it>\n"
+"PO-Revision-Date: 2026-02-11 16:57+0000\n"
+"Last-Translator: Walter <posta@walteriacobelli.it>\n"
 "Language-Team: Italian <http://translate.pkp.sfu.ca/projects/ojs/manager/it/>"
 "\n"
 "Language: it\n"
@@ -2712,3 +2713,14 @@ msgid "plugins.importexport.common.error.issueCoverImageMissing"
 msgstr ""
 "L'immagine di copertina del numero {$id} non è stata esportata, poiché il "
 "file corrispondente non è stato trovato nel percorso \"{$path}\"."
+
+msgid "manager.setup.contextSummary.description"
+msgstr ""
+"Fornisci una breve descrizione della tua rivista per offrire una panoramica "
+"dei suoi contenuti e delle sue finalità."
+
+#, fuzzy
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr ""
+"L’indice del fascicolo, ad esempio l’elenco di tutte le sottomissioni "
+"associate."
