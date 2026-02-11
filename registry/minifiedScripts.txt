@@ -95,6 +95,7 @@ lib/pkp/js/controllers/grid/users/UserGridHandler.js
 lib/pkp/js/controllers/grid/users/reviewer/AdvancedReviewerSearchHandler.js
 lib/pkp/js/controllers/grid/users/reviewer/form/EditReviewFormHandler.js
 lib/pkp/js/controllers/grid/users/reviewer/form/AddReviewerFormHandler.js
+lib/pkp/js/controllers/grid/users/reviewer/form/ReviewReminderFormHandler.js
 lib/pkp/js/controllers/grid/users/stageParticipant/StageParticipantGridHandler.js
 lib/pkp/js/controllers/grid/users/stageParticipant/form/StageParticipantNotifyHandler.js
 lib/pkp/js/controllers/grid/users/stageParticipant/form/AddParticipantFormHandler.js
