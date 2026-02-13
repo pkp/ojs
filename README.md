@@ -80,3 +80,4 @@ Read the [Contributor's Guide](https://docs.pkp.sfu.ca/dev/contributors/) to lea
 This software is released under the GNU General Public License. See the file `docs/COPYING` included with this distribution for the terms of this license.
 
 Third parties are welcome to modify and redistribute OJS in entirety or parts according to the terms of this license. PKP also welcomes patches for improvements or bug fixes to the software.
+
