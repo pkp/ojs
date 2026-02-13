@@ -18,7 +18,6 @@ namespace APP\components\forms\context;
 
 use APP\facades\Repo;
 use PKP\components\forms\context\PKPDoiSetupSettingsForm;
-use PKP\components\forms\FieldHTML;
 use PKP\components\forms\FieldOptions;
 use PKP\components\forms\FieldText;
 use PKP\context\Context;
@@ -45,18 +44,7 @@ class DoiSetupSettingsForm extends PKPDoiSetupSettingsForm
                 'value' => Repo::doi()::TYPE_REPRESENTATION,
                 'label' => __('doi.manager.settings.galleysWithDescription'),
                 'allowedBy' => [],
-            ],
-            [
-                'value' => Repo::doi()::TYPE_PEER_REVIEW,
-                'label' => __('submission.peerReview'),
-                'allowedBy' => [],
-            ],
-            // NB: Functionality for author response DOIs exists but is not currently supported
-            //             [
-            //                 'value' => Repo::doi()::TYPE_AUTHOR_RESPONSE,
-            //                 'label' => __('submission.reviewRound.authorResponse'),
-            //                'allowedBy' => [],
-            //             ],
+            ]
         ];
         Hook::call('DoiSetupSettingsForm::getObjectTypes', [&$this->objectTypeOptions]);
         if ($this->enabledRegistrationAgency === null) {
@@ -79,16 +67,6 @@ class DoiSetupSettingsForm extends PKPDoiSetupSettingsForm
                 'label' => __('issue.issues'),
                 'groupId' => self::DOI_CUSTOM_SUFFIX_GROUP,
                 'value' => $context->getData(Repo::doi()::CUSTOM_ISSUE_PATTERN),
-            ]))
-            ->addField(new FieldHTML('peerReviewCustomSuffixMessage', [
-                'label' => __('submission.peerReview'),
-                'groupId' => self::DOI_CUSTOM_SUFFIX_GROUP,
-                'description' => __('doi.manager.settings.doiSuffixUserDefine.notSupported'),
             ]));
-        //            ->addField(new FieldHTML('authorResponseCustomSuffixMessage', [
-        //                'label' => __('submission.reviewRound.authorResponse'),
-        //                'groupId' => self::DOI_CUSTOM_SUFFIX_GROUP,
-        //                'description' => __('doi.manager.settings.doiSuffixUserDefine.notSupported'),
-        //            ]));
     }
 }

@@ -47,7 +47,7 @@
 			"items": {
 				"type": "string",
 				"validation": [
-					"in:publication,representation,issue,peerReview,authorResponse"
+					"in:publication,representation,issue"
 				]
 			},
 		  	"default": ["publication"]

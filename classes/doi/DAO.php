@@ -48,7 +48,6 @@ class DAO extends \PKP\doi\DAO
                     $q->whereIn('d.doi_id', function (Builder $q) {
                         $q->select('p.doi_id')
                             ->from('publications', 'p')
-                            // FIXME: Consider how downstream metadata services expect publication versions to be handled
                             ->leftJoin('submissions as s', 'p.publication_id', '=', 's.current_publication_id')
                             ->whereColumn('p.publication_id', '=', 's.current_publication_id')
                             ->whereNotNull('p.doi_id')
@@ -61,56 +60,10 @@ class DAO extends \PKP\doi\DAO
                             $q->select('g.doi_id')
                                 ->from('publication_galleys', 'g')
                                 ->leftJoin('publications as p', 'g.publication_id', '=', 'p.publication_id')
-                                // FIXME: Consider how downstream metadata services expect publication versions to be handled
                                 ->leftJoin('submissions as s', 'p.publication_id', '=', 's.current_publication_id')
                                 ->whereColumn('p.publication_id', '=', 's.current_publication_id')
                                 ->whereNotNull('g.doi_id')
                                 ->where('p.status', '=', PKPPublication::STATUS_PUBLISHED);
-                        });
-                    })
-                    // Peer Review DOIs
-                    ->when(in_array(Repo::doi()::TYPE_PEER_REVIEW, $enabledDoiTypes), function (Builder $q) {
-                        $q->orWhereIn('d.doi_id', function (Builder $q) {
-                            $q->select('ra.doi_id')
-                                ->from('review_assignments', 'ra')
-                                ->leftJoin('review_rounds as rr', 'ra.review_round_id', '=', 'rr.review_round_id')
-                                ->leftJoin('publications as p', 'rr.publication_id', '=', 'p.publication_id')
-                                ->whereNotNull('ra.doi_id')
-                                ->where('p.status', '=', PKPPublication::STATUS_PUBLISHED)
-                                // Peer reviews should be public to be considered
-                                ->where('ra.is_review_publicly_visible', '=', 1);
-                        });
-                    })
-                    // Author Response DOIs
-                    ->when(in_array(Repo::doi()::TYPE_AUTHOR_RESPONSE, $enabledDoiTypes), function (Builder $q) {
-                        $q->orWhereIn('d.doi_id', function (Builder $q) {
-                            $q->select('rrar.doi_id')
-                                ->from('review_round_author_responses', 'rrar')
-                                ->leftJoin('review_rounds as rr', 'rrar.review_round_id', '=', 'rr.review_round_id')
-                                ->leftJoin('publications as p', 'rr.publication_id', '=', 'p.publication_id')
-                                ->whereNotNull('rrar.doi_id')
-                                ->where('p.status', '=', PKPPublication::STATUS_PUBLISHED)
-                                // The following `whereExists` and `whereNotExists` check if author response is public.
-                                // At least one eligible review assignment exists
-                                ->whereExists(function (Builder $sq) {
-                                    $sq->select(DB::raw(1))
-                                        ->from('review_assignments', 'ra')
-                                        ->whereColumn('ra.review_round_id', '=', 'rrar.review_round_id')
-                                        ->where('ra.declined', 0)
-                                        ->where('ra.cancelled', 0);
-                                })
-                                // No non-public review assignments exist
-                                ->whereNotExists(function (Builder $sq) {
-                                    $sq->select(DB::raw(1))
-                                        ->from('review_assignments', 'ra')
-                                        ->whereColumn('ra.review_round_id', '=', 'rrar.review_round_id')
-                                        ->where('ra.declined', 0)
-                                        ->where('ra.cancelled', 0)
-                                        ->where(function (Builder $q) {
-                                            $q->where('ra.is_review_publicly_visible', '=', 0)
-                                                ->orWhereNull('ra.is_review_publicly_visible');
-                                        });
-                                });
                         });
                     });
             });
