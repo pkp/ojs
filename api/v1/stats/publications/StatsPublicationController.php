@@ -56,4 +56,34 @@ class StatsPublicationController extends \PKP\API\v1\stats\publications\PKPStats
         }
         return $returnParams;
     }
+
+    /**
+     * Get column names for the submission CSV report
+     */
+    protected function _getSubmissionReportColumnNames(): array
+    {
+        $columns = parent::_getSubmissionReportColumnNames();
+        $columns[] = __('stats.jats');
+        return $columns;
+    }
+
+    /**
+     * Get the CSV row with submission metrics
+     */
+    protected function getItemForCSV(int $submissionId, int $abstractViews, int $pdfViews, int $htmlViews, int $otherViews, int $jatsViews = 0): array
+    {
+        $row = parent::getItemForCSV($submissionId, $abstractViews, $pdfViews, $htmlViews, $otherViews, $jatsViews);
+        $row[] = $jatsViews;
+        return $row;
+    }
+
+    /**
+     * Get the JSON data with submission metrics
+     */
+    protected function getItemForJSON(int $submissionId, int $abstractViews, int $pdfViews, int $htmlViews, int $otherViews, int $jatsViews = 0): array
+    {
+        $data = parent::getItemForJSON($submissionId, $abstractViews, $pdfViews, $htmlViews, $otherViews, $jatsViews);
+        $data['jatsViews'] = $jatsViews;
+        return $data;
+    }
 }
