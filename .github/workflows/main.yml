@@ -38,7 +38,7 @@ jobs:
             test: 'test'
     name: ojs-main
     steps:
-      - uses: pkp/pkp-github-actions@v1
+      - uses: jardakotesovec/pkp-github-actions@sendria_update
         with:
           node_version: 20
           dataset_branch: 'main'
