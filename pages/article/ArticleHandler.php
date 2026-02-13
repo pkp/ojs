@@ -327,6 +327,28 @@ class ArticleHandler extends Handler
             'supplementaryGalleys' => $supplementaryGalleys,
         ]);
 
+        // JATS XML public availability
+        $jatsAvailable = false;
+        $jatsDownloadUrl = null;
+
+        // Check if JATS is publicly available for this publication
+        if ($publication->getData('jatsPublicVisibility') &&
+            $publication->getData('status') === PKPPublication::STATUS_PUBLISHED) {
+
+            $jatsAvailable = true;
+            $jatsDownloadUrl = $request->getDispatcher()->url(
+                $request,
+                PKPApplication::ROUTE_API,
+                $context->getPath(),
+                "submissions/{$article->getId()}/publications/{$publication->getId()}/jats/download"
+            );
+        }
+
+        $templateMgr->assign([
+            'jatsAvailable' => $jatsAvailable,
+            'jatsDownloadUrl' => $jatsDownloadUrl,
+        ]);
+
         // Citations
         $templateMgr->assign([
             'parsedCitations' => $publication->getData('citations'),
