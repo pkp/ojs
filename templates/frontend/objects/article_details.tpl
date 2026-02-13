@@ -335,6 +335,16 @@
 					</ul>
 				</div>
 			{/if}
+
+			{* JATS XML Link *}
+			{if $jatsDownloadUrl}
+				<div class="item jats">
+					<span class="value jats_link">
+						{include file="frontend/objects/jats_link.tpl" jatsDownloadUrl=$jatsDownloadUrl}
+					</span>
+				</div>
+			{/if}
+
 			{if $supplementaryGalleys}
 				<div class="item galleys">
 					<h3 class="pkp_screen_reader">
