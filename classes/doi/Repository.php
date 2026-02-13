@@ -41,8 +41,6 @@ use PKP\submission\reviewRound\authorResponse\AuthorResponse;
 class Repository extends \PKP\doi\Repository
 {
     public const TYPE_ISSUE = 'issue';
-    public const TYPE_PEER_REVIEW = 'peerReview';
-    public const TYPE_AUTHOR_RESPONSE = 'authorResponse';
     public const CUSTOM_ISSUE_PATTERN = 'doiIssueSuffixPattern';
 
 
