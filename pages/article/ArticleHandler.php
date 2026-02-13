@@ -42,6 +42,7 @@ use PKP\plugins\PluginRegistry;
 use PKP\publication\PKPPublication;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\Validation;
+use PKP\services\PKPStatsPublicationService;
 use PKP\submission\Genre;
 use PKP\submission\GenreDAO;
 use PKP\submission\PKPSubmission;
@@ -233,6 +234,9 @@ class ArticleHandler extends Handler
             $templateMgr->assign('userCommentsInitConfig', $userCommentComponent->getConfig());
         }
 
+        $statsService = app()->get('publicationStats'); /** @var PKPStatsPublicationService $statsService */
+        $metricsByType = $statsService->getTotalsByType($article->getId(), $context->getId(), null, null);
+
         $templateMgr->assign([
             'issue' => $issue,
             'article' => $article,
@@ -242,6 +246,7 @@ class ArticleHandler extends Handler
             'fileId' => $this->submissionFileId, // DEPRECATED in 3.4.0: https://github.com/pkp/pkp-lib/issues/6545
             'submissionFileId' => $this->submissionFileId,
             'enablePublicComments' => $enablePublicComments,
+            'metricsByType' => $metricsByType,
         ]);
 
         $openReviewComponent = new OpenReviewComponent($article);
