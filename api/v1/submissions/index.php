@@ -27,6 +27,10 @@ if (in_array('jats', $urlParts)) {
     return new \PKP\handler\APIHandler(new \PKP\API\v1\jats\PKPJatsController());
 }
 
+if (in_array('dataCitations', $urlParts)) {
+    return new \PKP\handler\APIHandler(new \PKP\API\v1\dataCitations\PKPDataCitationController());
+}
+
 if (count($urlParts) >= 8 && $urlParts[7] == 'bodyText') {
     return new \PKP\handler\APIHandler(new \PKP\API\v1\bodyText\PKPBodyTextController());
 }

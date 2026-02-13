@@ -3,8 +3,8 @@
 <!--
   * dbscripts/xml/upgrade.xml
   *
-  * Copyright (c) 2014-2025 Simon Fraser University
-  * Copyright (c) 2003-2025 John Willinsky
+  * Copyright (c) 2014-2026 Simon Fraser University
+  * Copyright (c) 2003-2026 John Willinsky
   * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
   *
   * Upgrade descriptor file.
@@ -223,6 +223,7 @@
         <migration class="PKP\migration\upgrade\v3_6_0\I12048_ReviewRoundAuthorResponse"/>
 		<migration class="PKP\migration\upgrade\v3_6_0\I11993_MakeNotesUserIdNullable" />
         <migration class="PKP\migration\upgrade\v3_6_0\I11332_AddPeerReviewDois" />
+		<migration class="PKP\migration\upgrade\v3_6_0\I6278_DataCitations" />
 		<code function="rebuildSearchIndex" />
 		<note file="docs/release-notes/README-3.6.0" />
 	</upgrade>
