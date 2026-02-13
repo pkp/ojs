@@ -26,7 +26,6 @@ use APP\publication\Publication;
 use APP\submission\Submission;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
-use Illuminate\Support\LazyCollection;
 use PKP\context\Context;
 use PKP\core\DataObject;
 use PKP\db\DAORegistry;
@@ -35,17 +34,12 @@ use PKP\doi\exceptions\DoiException;
 use PKP\galley\Galley;
 use PKP\services\PKPSchemaService;
 use PKP\submission\Representation;
-use PKP\submission\reviewAssignment\ReviewAssignment;
-use PKP\submission\reviewRound\authorResponse\AuthorResponse;
 
 class Repository extends \PKP\doi\Repository
 {
     public const TYPE_ISSUE = 'issue';
-    public const TYPE_PEER_REVIEW = 'peerReview';
-    public const TYPE_AUTHOR_RESPONSE = 'authorResponse';
+
     public const CUSTOM_ISSUE_PATTERN = 'doiIssueSuffixPattern';
-
-
 
     public function __construct(DAO $dao, Request $request, PKPSchemaService $schemaService)
     {
@@ -206,7 +200,7 @@ class Repository extends \PKP\doi\Repository
         $doiIds = Collection::make();
 
         $submission = Repo::submission()->get($submissionId);
-        /** @var LazyCollection<Publication> $publications */
+        /** @var Publication[] $publications */
         $publications = $submission->getData('publications');
 
 
@@ -222,39 +216,13 @@ class Repository extends \PKP\doi\Repository
             }
 
             // Galleys
-            if ($context->isDoiTypeEnabled(self::TYPE_REPRESENTATION)) {
-                $galleys = $publication->getData('galleys');
-                foreach ($galleys as $galley) {
-                    $galleyDoiId = $galley->getData('doiId');
-                    if (!empty($galleyDoiId)) {
-                        $doiIds->add($galleyDoiId);
-                    }
+            $galleys = $publication->getData('galleys');
+            foreach ($galleys as $galley) {
+                $galleyDoiId = $galley->getData('doiId');
+                if (!empty($galleyDoiId) && $context->isDoiTypeEnabled(self::TYPE_REPRESENTATION)) {
+                    $doiIds->add($galleyDoiId);
                 }
             }
-        }
-
-        $publicationIds = $publications->map(fn (Publication $publication) => $publication->getId())->toArray();
-
-        // Peer reviews
-        if ($context->isDoiTypeEnabled(self::TYPE_PEER_REVIEW)) {
-            $reviewAssignments = Repo::publication()->getCompletedReviewAssignments($publicationIds);
-            $reviewAssignments->each(function (ReviewAssignment $reviewAssignment) use ($context, $doiIds) {
-                $reviewAssignmentDoiId = $reviewAssignment->getData('doiId');
-                if (!empty($reviewAssignmentDoiId)) {
-                    $doiIds->add($reviewAssignmentDoiId);
-                }
-            });
-        }
-
-        // Author responses
-        if ($context->isDoiTypeEnabled(self::TYPE_AUTHOR_RESPONSE)) {
-            $authorResponses = Repo::publication()->getReviewAuthorResponses($publicationIds);
-            $authorResponses->each(function (AuthorResponse $authorResponse) use ($context, $doiIds) {
-                $authorResponseDoiId = $authorResponse->doiId;
-                if (!empty($authorResponseDoiId)) {
-                    $doiIds->add($authorResponseDoiId);
-                }
-            });
         }
 
         return $doiIds->unique()->toArray();
@@ -282,36 +250,12 @@ class Repository extends \PKP\doi\Repository
         }
 
         // Galleys
-        if ($context->isDoiTypeEnabled(self::TYPE_REPRESENTATION)) {
-            $galleys = $publication->getData('galleys');
-            foreach ($galleys as $galley) {
-                $galleyDoiId = $galley->getData('doiId');
-                if (!empty($galleyDoiId)) {
-                    $doiIds->add($galleyDoiId);
-                }
+        $galleys = $publication->getData('galleys');
+        foreach ($galleys as $galley) {
+            $galleyDoiId = $galley->getData('doiId');
+            if (!empty($galleyDoiId) && $context->isDoiTypeEnabled(self::TYPE_REPRESENTATION)) {
+                $doiIds->add($galleyDoiId);
             }
-        }
-
-        // Peer reviews
-        if ($context->isDoiTypeEnabled(self::TYPE_PEER_REVIEW)) {
-            $reviewAssignments = Repo::publication()->getCompletedReviewAssignments([$publication->getId()]);
-            $reviewAssignments->each(function (ReviewAssignment $reviewAssignment) use ($doiIds) {
-                $reviewAssignmentDoiId = $reviewAssignment->getData('doiId');
-                if (!empty($reviewAssignmentDoiId)) {
-                    $doiIds->add($reviewAssignmentDoiId);
-                }
-            });
-        }
-
-        // Author responses
-        if ($context->isDoiTypeEnabled(self::TYPE_AUTHOR_RESPONSE)) {
-            $authorResponses = Repo::publication()->getReviewAuthorResponses([$publication->getId()]);
-            $authorResponses->each(function (AuthorResponse $authorResponse) use ($doiIds) {
-                $authorResponseDoiId = $authorResponse->doiId;
-                if (!empty($authorResponseDoiId)) {
-                    $doiIds->add($authorResponseDoiId);
-                }
-            });
         }
 
         return $doiIds->unique()->toArray();
@@ -410,9 +354,6 @@ class Repository extends \PKP\doi\Repository
         return [
             self::TYPE_PUBLICATION,
             self::TYPE_REPRESENTATION,
-            self::TYPE_PEER_REVIEW,
-            // NB: Author response DOIs currently not supported
-            //            self::TYPE_AUTHOR_RESPONSE,
         ];
     }
 
