@@ -57,11 +57,11 @@
     "vue-scrollto": "^2.20.0"
   },
   "overrides": {
-    "vite": "npm:rolldown-vite@7.2.6"
+    "vite": "^8.0.0-beta.14"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.11.0",
-    "@vitejs/plugin-vue": "^6.0.1",
+    "@vitejs/plugin-vue": "^6.0.4",
     "@vue/eslint-config-prettier": "^8.0.0",
     "autoprefixer": "^10.4.21",
     "cypress": "^14.5.3",
@@ -80,7 +80,7 @@
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^3.4.17",
-    "vite": "npm:rolldown-vite@7.2.6",
+    "vite": "^8.0.0-beta.14",
     "vite-plugin-static-copy": "^3.1.1"
   },
   "prettier": {
