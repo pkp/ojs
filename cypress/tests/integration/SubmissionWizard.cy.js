@@ -276,6 +276,7 @@ describe('Submission Wizard', function() {
             title: 'Massa tincidunt dui ut ornare lectus sit amet est',
             keywords: 'Social Transformation',
             citations: 'Massa tincidunt dui ut ornare lectus sit amet est',
+            dataAvailability: 'Viverra',
             metadata: {
                 autosuggest: {
                     disciplines: 'Faucibus',
@@ -287,9 +288,6 @@ describe('Submission Wizard', function() {
                     rights: 'Aliquet',
                     source: 'Condimentum',
                     type: 'Tincidunt',
-                },
-                tinyMce: {
-                    dataAvailability: 'Viverra',
                 },
             }
         };
@@ -304,7 +302,6 @@ describe('Submission Wizard', function() {
         const forTheEditorFields = [
             'Supporting Agencies',
             'Coverage',
-            'Data Availability Statement',
             'Disciplines',
             'Rights',
             'Source',
@@ -327,7 +324,7 @@ describe('Submission Wizard', function() {
                         agencies: 'require',
                         citations: 'require',
                         coverage: 'require',
-                        dataAvailability: 'require',
+                        dataAvailability: 'request',
                         disciplines: 'require',
                         keywords: 'require',
                         rights: 'require',
@@ -405,9 +402,7 @@ describe('Submission Wizard', function() {
         Object.keys(submission.metadata.string).forEach(field => {
             cy.get('#forTheEditors-' + field + '-control-en').type(submission.metadata.string[field]);
         });
-        Object.keys(submission.metadata.tinyMce).forEach(field => {
-            cy.setTinyMceContent('forTheEditors-' + field + '-control-en', submission.metadata.tinyMce[field]);
-        });
+        cy.setTinyMceContent('dataAvailability-dataAvailability-control-en', submission.dataAvailability);
 
         // All errors should be gone and submit should be allowed.
         cy.get('.pkpSteps button:contains("Review")').click({ force: true });
@@ -538,12 +533,13 @@ describe('Submission Wizard', function() {
             rights: "Rights",
             source: "Source",
             type: "Type",
-            dataAvailability: "Data Availability Statement",
         }
         Object.keys(metadata).forEach((prop) => {
             cy.get('label[for="forTheEditors-' + prop + '-control-fr_CA"]:contains("' + metadata[prop] + '")');
             cy.get('label:contains("' + metadata[prop] + ' in English")').should('not.be.visible');
         });
+
+        cy.get('label[for="dataAvailability-dataAvailability-control-fr_CA"]:contains("Data Availability Statement")');
 
         // Show English fields alongside French (Canada) fields
         cy.get('.pkpStep:contains("For the Editors") button.pkpFormLocales__locale:contains("English")').click();
