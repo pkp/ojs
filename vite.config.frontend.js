@@ -33,7 +33,7 @@ export default defineConfig(({mode}) => {
 			target: ['chrome66', 'edge79', 'firefox67', 'safari12'],
 			emptyOutDir: false,
 			cssCodeSplit: false,
-			rollupOptions: {
+			rolldownOptions: {
 				input: {
 					build: './js/load_frontend.js',
 				},
