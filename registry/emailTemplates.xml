@@ -82,4 +82,5 @@
 	<email key="USER_ROLE_ASSIGNMENT_INVITATION" name="mailable.userRoleAssignmentInvitationNotify.name" subject="emails.userRoleAssignmentInvitationNotify.subject" body="emails.userRoleAssignmentInvitationNotify.body"/>
 	<email key="USER_ROLE_END" name="mailable.userRoleEndNotify.name" subject="emails.userRoleEndNotify.subject" body="emails.userRoleEndNotify.body"/>
 	<email key="ORCID_REQUEST_UPDATE_SCOPE" name="orcid.orcidRequestUpdateScope.name"  subject="emails.orcidRequestUpdateScope.subject" body="emails.orcidRequestUpdateScope.body"/>
+	<email key="REQUEST_REVIEW_ROUND_AUTHOR_RESPONSE" name="mailable.reviewRound.requestAuthorResponse.name"  subject="emails.reviewRound.requestAuthorResponse.subject" body="emails.reviewRound.requestAuthorResponse.body"/>
 </emails>
