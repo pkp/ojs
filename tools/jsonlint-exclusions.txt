@@ -5,3 +5,4 @@
 ./node_modules
 ./lib/ui-library/node_modules
 ./lib/pkp/js/lib
+./plugins/generic/credit/credit-translation/translations/sv.json
