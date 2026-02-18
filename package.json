@@ -22,6 +22,7 @@
   "dependencies": {
     "@atlaskit/pragmatic-drag-and-drop": "^1.7.7",
     "@atlaskit/pragmatic-drag-and-drop-hitbox": "^1.1.0",
+    "@fastify/deepmerge": "^3.2.0",
     "@headlessui/vue": "^1.7.23",
     "@highlightjs/vue-plugin": "^2.1.2",
     "@lk77/vue3-color": "^3.0.6",
