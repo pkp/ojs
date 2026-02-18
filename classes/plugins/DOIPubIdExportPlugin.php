@@ -22,7 +22,6 @@ use APP\journal\Journal;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\galley\Galley;
-use PKP\submission\PKPSubmission;
 
 // Configuration errors.
 define('DOI_EXPORT_CONFIG_ERROR_DOIPREFIX', 0x01);
@@ -132,7 +131,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
         $allSubmissionIds = Repo::submission()
             ->getCollector()
             ->filterByContextIds([$context->getId()])
-            ->filterByStatus([PKPSubmission::STATUS_PUBLISHED])
+            ->filterByCurrentPublicationStatus([PKPPublication::STATUS_PUBLISHED])
             ->getIds()
             ->toArray();
         $validSubmissionIds = array_intersect($allSubmissionIds, $submissionIds);

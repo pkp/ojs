@@ -18,7 +18,6 @@ namespace APP\pages\sitemap;
 
 use APP\facades\Repo;
 use APP\issue\Collector;
-use APP\submission\Submission;
 use PKP\pages\sitemap\PKPSitemapHandler;
 use PKP\plugins\Hook;
 
@@ -55,7 +54,7 @@ class SitemapHandler extends PKPSitemapHandler
                     ->getCollector()
                     ->filterByContextIds([$journal->getId()])
                     ->filterByIssueIds([$issue->getId()])
-                    ->filterByStatus([Submission::STATUS_PUBLISHED])
+                    ->filterByLatestPublished(true)
                     ->getMany();
 
                 foreach ($submissions as $submission) {

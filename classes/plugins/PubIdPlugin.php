@@ -25,6 +25,7 @@ use APP\notification\NotificationManager;
 use APP\submission\Submission;
 use Illuminate\Support\Str;
 use PKP\core\JSONMessage;
+use PKP\publication\PKPPublication;
 use PKP\submission\Representation;
 use PKP\submissionFile\SubmissionFile;
 
@@ -81,13 +82,16 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
                 $representationDao = Application::getRepresentationDAO();
                 $submissions = Repo::submission()->getCollector()
                     ->filterByContextIds([$context->getId()])
-                    ->filterByStatus([Submission::STATUS_PUBLISHED])
                     ->getMany();
 
                 foreach ($submissions as $submission) {
                     $publications = $submission->getData('publications');
                     if ($publicationEnabled) {
                         foreach ($publications as $publication) {
+                            if ($publication->getStatus() != PKPPublication::STATUS_PUBLISHED) {
+                                continue;
+                            }
+
                             $publicationPubId = $publication->getStoredPubId($this->getPubIdType());
                             if (empty($publicationPubId)) {
                                 $publicationPubId = $this->getPubId($publication);
@@ -101,6 +105,10 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
                     }
                     if ($representationEnabled) {
                         foreach ($publications as $publication) {
+                            if ($publication->getStatus() != PKPPublication::STATUS_PUBLISHED) {
+                                continue;
+                            }
+
                             $representations = Repo::galley()->getCollector()
                                 ->filterByPublicationIds([$publication->getId()])
                                 ->getMany();

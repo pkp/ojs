@@ -17,13 +17,13 @@ namespace APP\publication;
 use APP\facades\Repo;
 use APP\plugins\PubObjectsExportPlugin;
 use APP\publication\enums\VersionStage;
-use APP\submission\Submission;
 use Illuminate\Contracts\Database\Query\Builder;
 use Illuminate\Database\Query\JoinClause;
 use Illuminate\Support\Facades\DB;
 use PKP\db\DAOResultFactory;
 use PKP\db\DBResultRange;
 use PKP\identity\Identity;
+use PKP\publication\PKPPublication;
 
 class DAO extends \PKP\publication\DAO
 {
@@ -79,7 +79,7 @@ class DAO extends \PKP\publication\DAO
                     ->on('p2.version_stage', '=', 'p.version_stage')
                     ->on('p2.version_major', '=', 'p.version_major')
                     ->on('p.version_minor', '<', 'p2.version_minor')
-                    ->where('p2.status', '=', Submission::STATUS_PUBLISHED)
+                    ->where('p2.status', '=', PKPPublication::STATUS_PUBLISHED)
             )
             ->when(
                 $pubIdType != null,

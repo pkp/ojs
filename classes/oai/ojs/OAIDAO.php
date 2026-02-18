@@ -28,7 +28,7 @@ use PKP\oai\OAISet;
 use PKP\oai\OAIUtils;
 use PKP\oai\PKPOAIDAO;
 use PKP\plugins\Hook;
-use PKP\submission\PKPSubmission;
+use PKP\publication\PKPPublication;
 use PKP\tombstone\DataObjectTombstoneDAO;
 
 class OAIDAO extends PKPOAIDAO
@@ -280,7 +280,7 @@ class OAIDAO extends PKPOAIDAO
             ->join('sections AS s', 's.section_id', '=', 'p.section_id')
             ->join('journals AS j', 'j.journal_id', '=', 'a.context_id')
             ->where('j.enabled', '=', 1)
-            ->where('a.status', '=', PKPSubmission::STATUS_PUBLISHED)
+            ->where('p.status', '=', PKPPublication::STATUS_PUBLISHED)
             ->when($excludeJournals, function ($query, $excludeJournals) {
                 return $query->whereNotIn('j.journal_id', $excludeJournals);
             })

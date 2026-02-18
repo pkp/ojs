@@ -99,7 +99,7 @@ class CounterReportAR1 extends CounterReport
             $issueIdsSubmissionIds = Repo::submission()
                 ->getCollector()
                 ->filterByContextIds([Application::get()->getRequest()->getContext()->getId()])
-                ->filterByStatus([\APP\submission\Submission::STATUS_PUBLISHED])
+                ->filterByLatestPublished(true)
                 ->filterByIssueIds($validFilters['issueIds'])
                 ->getIds()
                 ->toArray();

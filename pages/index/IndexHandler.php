@@ -22,7 +22,6 @@ use APP\journal\enums\JournalContentOption;
 use APP\journal\JournalDAO;
 use APP\observers\events\UsageEvent;
 use APP\pages\issue\IssueHandler;
-use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\config\Config;
 use PKP\db\DAORegistry;
@@ -90,8 +89,7 @@ class IndexHandler extends PKPIndexHandler
                 $collector = Repo::submission()
                     ->getCollector()
                     ->filterByContextIds([$journal->getId()])
-                    ->filterByLatestPublished(true)
-                    ->filterByStatus([Submission::STATUS_PUBLISHED]);
+                    ->filterByLatestPublished(true);
 
                 $totalPublications = $collector->getCount();
                 $templateMgr->assign('publishedPublications', new \Illuminate\Pagination\LengthAwarePaginator(

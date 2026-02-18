@@ -44,6 +44,7 @@ use PKP\plugins\importexport\native\filter\NativeExportFilter;
 use PKP\plugins\importexport\PKPImportExportDeployment;
 use PKP\plugins\ImportExportPlugin;
 use PKP\plugins\PluginRegistry;
+use PKP\publication\PKPPublication;
 use PKP\submission\PKPSubmission;
 use PKP\user\User;
 
@@ -895,7 +896,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
         $allPublicationIds = Repo::publication()
             ->getCollector()
             ->filterByContextIds([$context->getId()])
-            ->filterByStatus([PKPSubmission::STATUS_PUBLISHED])
+            ->filterByStatus([PKPPublication::STATUS_PUBLISHED])
             ->getIds()
             ->toArray();
         $validPublicationIds = array_intersect($allPublicationIds, $publicationIds);

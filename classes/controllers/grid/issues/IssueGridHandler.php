@@ -53,6 +53,7 @@ use PKP\notification\NotificationSubscriptionSettingsDAO;
 use PKP\observers\events\MetadataChanged;
 use PKP\plugins\Hook;
 use PKP\plugins\PluginRegistry;
+use PKP\publication\PKPPublication;
 use PKP\security\authorization\ContextAccessPolicy;
 use PKP\security\Role;
 
@@ -603,7 +604,7 @@ class IssueGridHandler extends GridHandler
             $submissions = Repo::submission()->getCollector()
                 ->filterByContextIds([$issue->getJournalId()])
                 ->filterByIssueIds([$issue->getId()])
-                ->filterByStatus([Submission::STATUS_SCHEDULED, Submission::STATUS_PUBLISHED])
+                ->filterByCurrentPublicationStatus([PKPPublication::STATUS_SCHEDULED, PKPPublication::STATUS_PUBLISHED])
                 ->getMany();
 
             foreach ($submissions as $submission) { /** @var Submission $submission */

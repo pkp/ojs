@@ -119,7 +119,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin
             ->getCollector()
             ->excludeIds([$submissionId])
             ->filterByContextIds([$context->getId()])
-            ->filterByStatus([Submission::STATUS_PUBLISHED])
+            ->filterByLatestPublished(true)
             ->searchPhrase($searchPhrase, static::MAX_SEARCH_KEYWORDS);
 
         $offset = ($rangeInfo->getPage() - 1) * $rangeInfo->getCount();

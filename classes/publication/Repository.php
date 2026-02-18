@@ -237,7 +237,7 @@ class Repository extends \PKP\publication\Repository
             Repo::galley()->delete($galley);
         }
 
-        parent::delete($publication);
+        parent::delete($publication, $submissionStatus);
     }
 
     /** @copydoc \PKP\publication\Repository::createDois() */

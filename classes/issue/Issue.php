@@ -28,7 +28,7 @@ use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use PKP\core\Core;
 use PKP\facades\Locale;
-use PKP\submission\PKPSubmission;
+use PKP\publication\PKPPublication;
 
 class Issue extends \PKP\core\DataObject
 {
@@ -651,15 +651,13 @@ class Issue extends \PKP\core\DataObject
 
     /**
      * Get number of articles in this issue.
-     *
-     * @return int
      */
-    public function getNumArticles()
+    public function getNumArticles(): int
     {
         return Repo::submission()->getCollector()
             ->filterByContextIds([$this->getData('journalId')])
             ->filterByIssueIds([$this->getId()])
-            ->filterByStatus([PKPSubmission::STATUS_SCHEDULED, PKPSubmission::STATUS_PUBLISHED])
+            ->filterByCurrentPublicationStatus([PKPPublication::STATUS_SCHEDULED, PKPPublication::STATUS_PUBLISHED])
             ->getCount();
     }
 

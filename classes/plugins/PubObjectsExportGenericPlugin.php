@@ -23,7 +23,7 @@ use APP\facades\Repo;
 use PKP\context\Context;
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
-use PKP\submission\PKPSubmission;
+use PKP\publication\PKPPublication;
 
 abstract class PubObjectsExportGenericPlugin extends GenericPlugin
 {
@@ -120,7 +120,7 @@ abstract class PubObjectsExportGenericPlugin extends GenericPlugin
                     ->filterBySubmissionIds([$newPublication->getData('submissionId')])
                     ->filterByVersionStage($newPublication->getData('versionStage'))
                     ->filterByVersionMajor($newPublication->getData('versionMajor'))
-                    ->filterByStatus([PKPSubmission::STATUS_PUBLISHED])
+                    ->filterByStatus([PKPPublication::STATUS_PUBLISHED])
                     ->orderByVersion()
                     ->getMany()
                     ->last(); // minor versions are sorted ASC, so get only the last
@@ -176,7 +176,7 @@ abstract class PubObjectsExportGenericPlugin extends GenericPlugin
                 ->filterBySubmissionIds([$newPublication->getData('submissionId')])
                 ->filterByVersionStage($newPublication->getData('versionStage'))
                 ->filterByVersionMajor($newPublication->getData('versionMajor'))
-                ->filterByStatus([PKPSubmission::STATUS_PUBLISHED])
+                ->filterByStatus([PKPPublication::STATUS_PUBLISHED])
                 ->orderByVersion()
                 ->getMany()
                 ->last(); // minor versions are sorted ASC, so get only the last

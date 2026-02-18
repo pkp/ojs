@@ -19,9 +19,9 @@
 namespace APP\section;
 
 use APP\facades\Repo;
-use APP\submission\Submission;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\LazyCollection;
+use PKP\publication\PKPPublication;
 use PKP\services\PKPSchemaService;
 
 class DAO extends \PKP\section\DAO
@@ -70,20 +70,20 @@ class DAO extends \PKP\section\DAO
     {
         return LazyCollection::make(function () use ($issueId) {
             $issue = Repo::issue()->get($issueId);
-            $allowedStatuses = [Submission::STATUS_PUBLISHED];
+            $allowedStatuses = [PKPPublication::STATUS_PUBLISHED];
             if (!$issue->getPublished()) {
-                $allowedStatuses[] = Submission::STATUS_SCHEDULED;
+                $allowedStatuses[] = PKPPublication::STATUS_SCHEDULED;
             }
 
             $submissionsCollector = Repo::submission()->getCollector()
                 ->filterByContextIds([$issue->getJournalId()])
                 ->filterByIssueIds([$issueId])
-                ->filterByStatus($allowedStatuses)
                 ->orderBy(\APP\submission\Collector::ORDERBY_SEQUENCE, \APP\submission\Collector::ORDER_DIR_ASC);
 
             // Extend the submissions query to fetch the list of section IDs instead
             $sectionIdsQuery = $submissionsCollector->getQueryBuilder()
                 ->join('publications AS p', 'p.publication_id', '=', 's.current_publication_id')
+                ->whereIn('p.status', $allowedStatuses)
                 ->select('p.section_id');
 
             $rows = DB::table('sections', 's')
