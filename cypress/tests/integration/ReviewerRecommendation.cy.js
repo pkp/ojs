@@ -32,6 +32,35 @@ describe('Customize reviewer recommendations test', () => {
 		cy.logout();
     });
 
+  it('Check that default reviewer recommendations has a type', () => {
+    cy.accessReviewerRecommendations('dbarnes', null, 'publicknowledge');
+
+    cy.get('[data-cy="reviewer-recommendation-manager"]')
+      .find('tbody > tr')
+      .should('have.length', defaultRecommendations.length);
+
+    // Default Recommendations that are already used cannot be edited/viewed, so to satisfy this test, we will only check the recommendations that are not used.
+    [
+      'Accept Submission',
+      'Resubmit Elsewhere',
+      'See Comments'
+    ].forEach((recommendation) => {
+      cy.get('[data-cy="reviewer-recommendation-manager"]')
+        .find('tr:contains("' + recommendation + '")')
+        .find('button[aria-label*="More Actions"]').click();
+      cy.get('[data-cy="reviewer-recommendation-manager"]')
+        .find('button:contains("Edit")').click();
+
+      cy.get('select[name="type"]').should('not.be.empty');
+
+			cy.get('[data-cy="active-modal"]')
+				.contains('button', 'Close')
+				.click({force: true});
+    });
+
+    cy.logout();
+  });
+
     it('Add, edit, and delete reviewer recommendations', () => {
         cy.accessReviewerRecommendations('dbarnes', null, 'publicknowledge');
 
@@ -187,7 +216,7 @@ describe('Customize reviewer recommendations test', () => {
 		cy.logout();
     });
 
-    it('Not allow to edit or delete a recommendation aleady used', () => {
+    it('Not allow to edit or delete a recommendation already used', () => {
         cy.accessReviewerRecommendations('dbarnes', null, 'publicknowledge');
 
         cy.get('[data-cy="reviewer-recommendation-manager"]')
