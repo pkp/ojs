@@ -1,2 +1,84 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2026-02-20 11:31+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/ojs/"
+"invitation/bg/>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "acceptInvitation.accountDetails.stepName"
+msgstr "Създаване на OJS акаунт"
+
+msgid "acceptInvitation.detailsReview.nextButtonLabel"
+msgstr "Приемам и продължавам към OJS"
+
+msgid "acceptInvitation.modal.title"
+msgstr "Назначена ви е нова роля в OJS"
+
+msgid "userInvitation.roleTable.journalMasthead"
+msgstr "Титул на списанието (заглавна страница с екип на изданието)"
+
+msgid "userInvitation.search.userFound"
+msgstr "Потребителят вече съществува (регистриран е) в списанието"
+
+msgid "userInvitation.search.userNotFound"
+msgstr "Потребителят няма роля в това списание"
+
+msgid "userInvitation.sendMail.stepDescription"
+msgstr ""
+"Изпратете имейл на потребителя, за да го уведомите за поканата, следващите "
+"стъпки, правилата на списанието относно GDPR и проверката на ORCID"
+
+msgid "invitation.role.masthead"
+msgstr "Титул на списанието (заглавна страница с екип на изданието)"
+
+msgid "invitation.wizard.pageTitleDescription"
+msgstr ""
+"Каните потребител да участва в OJS, както и да се появи в титула на "
+"списанието (заглавна страница с екип на изданието)"
+
+msgid "acceptInvitation.accountDetails.stepDescription"
+msgstr ""
+"За да започнете работа с OJS и да приемете новата роля, ще трябва да "
+"създадете акаунт при нас. За тази цел, моля, въведете потребителско име и "
+"парола."
+
+msgid "acceptInvitation.accountDetails.stepLabel"
+msgstr "{$step} - Създаване на OJS акаунт"
+
+msgid "acceptInvitation.detailsReview.stepDescription"
+msgstr "Прегледайте подробностите, за да започнете в новите си роли в OJS"
+
+msgid "userInvitation.enterDetails.stepDescription"
+msgstr "Можете да ги поканите да поемат роля в OJS"
+
+msgid "acceptInvitation.modal.message"
+msgstr ""
+"Поздравления за новата ви роля в OJS! Вече може да имате достъп до нови "
+"опции. Ако имате нужда от помощ за разбиране на системата, моля, кликнете "
+"върху бутона „Помощ“ в цялата система за насоки."
+
+msgid "acceptInvitation.verifyOrcid.stepDescription"
+msgstr ""
+"Можете да изберете да потвърдите вашия ORCID iD или да го пропуснете. Ако "
+"сте избрали да го пропуснете сега, можете да го направите по-късно от "
+"секцията на вашия профил в OJS"
+
+msgid "userInvitation.modal.message"
+msgstr ""
+"{$email} е поканен за нова роля в OJS. Можете да получавате актуализации за "
+"решението на потребителя на страницата „Потребители и роли“, в известията си "
+"от OJS и/или на имейла си"
+
+msgid "userInvitation.searchUser.stepDescription"
+msgstr ""
+"Търсете потребителя, използвайки неговия имейл адрес, потребителско име или "
+"ORCID ID. Въведете поне една информация, за да започнете. Ако потребителят "
+"не съществува, можете да го поканите да поеме роли и да стане част от вашето "
+"списание. Ако потребителят вече съществува в системата, можете да видите "
+"информацията за него и да го поканите да поеме допълнителни роли."
