@@ -1,0 +1,195 @@
+# Komronbek Tufliyev <komronbek773@gmail.com>, 2024.
+# Shoyim Obloqulov <obloqulovshoyim1@gmail.com>, 2026.
+
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-01-30 11:06+0000\n"
+"Last-Translator: Komronbek Tufliyev <komronbek773@gmail.com>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/default/uz/>\n"
+"Language: uz@cyrillic\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "section.default.title"
+msgstr "Мақолалар"
+
+msgid "section.default.abbrev"
+msgstr "МАҚ"
+
+msgid "section.default.policy"
+msgstr "Бўлим стандарт сиёсати"
+
+msgid "default.genres.article"
+msgstr "Мақола матни"
+
+msgid "default.contextSettings.authorGuidelines"
+msgstr ""
+"<p>Муаллифлар ушбу журналга ўз мақолаларини тақдим этишга таклиф "
+"қилинади. Барча тақдим этилган материаллар муҳаррир томонидан ушбу "
+"журналнинг мақсадлари ва кўламига мос келишини аниқлаш учун баҳоланади. "
+"Мувофиқ деб топилганлар, улар қабул қилинадими ёки рад этиладими ёки йў"
+"қлигини аниқлашдан аввал экспертизадан ўтказиш учун юборилади.</p>"
+"<p>Тақдим этишдан олдин муаллифлар тақдимномага киритилган ҳар қандай "
+"материални нашр қилиш учун рухсат олиш учун жавобгардирлар, "
+"фотосуратлар, ҳужжатлар ва маълумотлар тўплами каби. Тақдимнотда "
+"кўрсатилган барча муаллифлар муаллиф сифатида тан олинишига розилик "
+"беришлари керак. Тегишли ҳолларда тадқиқот тегишли этика қўмитаси "
+"томонидан тадқиқот ўтказилаётган мамлакатнинг қонуний талабларига мувофиқ "
+"тасдиқланиши керак.</p><p>Агар у минимал сифат стандартларига жавоб "
+"бермаса, муҳаррир таклифни рад этиши мумкин. Тақдим этишдан олдин, "
+"илтимос, тадқиқот дизайни ва тадқиқот аргументи тўғри тузилган ва "
+"ифодаланганлигига ишонч ҳосил қилинг. Сарлавҳа қисқа бўлиши ва аннотация "
+"ўз-ўзидан тушунарли бўлиши керак. Бу тақризчиларнинг ишни кўриб чиқишга "
+"рози бўлиш эҳтимолини оширади. Тақдимотингиз ушбу стандартга жавоб "
+"беришига ишончингиз комил бўлса, илтимос, топширишингизни тайёрлаш "
+"учун қуйидаги назорат рўйхатига амал қилинг.</p>"
+
+msgid "default.contextSettings.checklist"
+msgstr ""
+"<p>Барча тақдимотлар қуйидаги талабларга жавоб бериши керак.</"
+"p><ul><li>Ушбу тақдимнома <a href=\"{$submissionGuidelinesUrl}\">Муаллифлик "
+"кўрсатмаларида</a> кўрсатилган талабларга жавоб беради.</li><li>Ушбу "
+"тақдимнома илгари нашр этилмаган ва бошқа журналда кўриб чиқилмаган.</"
+"li><li>Барча ҳаволалар тўғрилиги ва тўлиқлиги текширилган.</"
+"li><li>Барча жадвал ва расмлар рақамланган ва номланган.</"
+"li><li>Ушбу тақдимномада тақдим этилган барча фотосуратлар, маълумотлар "
+"тўплами ва бошқа материалларни нашр қилиш учун рухсат олинган.</li></ul>"
+
+msgid "default.contextSettings.privacyStatement"
+msgstr ""
+"<p>Ушбу журнал сайтига киритилган исмлар ва электрон почта манзиллари "
+"фақат ушбу журналнинг белгиланган мақсадлари учун ишлатилади ва бошқа "
+"мақсадларда ёки бошқа томонларга тақдим этилмайди.</p>"
+
+msgid "default.contextSettings.openAccessPolicy"
+msgstr ""
+"Ушбу журнал ўз мазмунига зудлик билан очиқ киришни таъминлайди, тамойил "
+"асосида тадқиқотнинг жамоатчиликка бепул тақдим этилиши глобал билим "
+"алмашинувини қўллаб-қувватлайди."
+
+msgid "default.contextSettings.forReaders"
+msgstr ""
+"Биз ўқувчиларни ушбу журнал учун нашриёт хабарномаси хизматига "
+"рўйхатдан ўтишни таклиф қиламиз. Журнал учун бош саҳифанинг юқори "
+"қисмидаги <a href=\"{$indexUrl}/{$contextPath}/user/register\">Рўйхатдан "
+"ўтиш</a> ҳаволасидан фойдаланинг. Ушбу рўйхатга олиш ўқувчига "
+"журналнинг ҳар бир янги сони учун электрон почта орқали Мундарижани "
+"олишига имкон беради. Ушбу рўйхат, шунингдек, журналга маълум даражадаги "
+"қўллаб-қувватлашни ёки ўқувчилар сонини аниқлаш имконини беради. "
+"Журналнинг <a href=\"{$indexUrl}/{$contextPath}/about/submissions#"
+"privacyStatement\">Махфийлик баённомаси</a> билан танишиб чиқинг, бу эса "
+"ўқувчиларни уларнинг исми ва электрон почта манзилидан бошқа мақсадларда "
+"фойдаланилмаслигини кафолатлайди."
+
+msgid "default.contextSettings.forAuthors"
+msgstr ""
+"Биз ўқувчиларни ушбу журнал учун нашриёт хабарномаси хизматига "
+"рўйхатдан ўтишни таклиф қиламиз. Журнал учун бош саҳифанинг юқори "
+"қисмидаги <a href=\"{$indexUrl}/{$contextPath}/user/register\">Рўйхатдан "
+"ўтиш</a> ҳаволасидан киринг. Ушбу рўйхатдан ўтиш ўқувчига журналнинг "
+"ҳар бир янги сони учун электрон почта орқали Мундарижани олишига олиб "
+"келади. Ушбу рўйхат, журналга маълум текшириш ёки қўллаб-қувватлашни ёки "
+"ўқувчилар базасини шакллантириш имконини беради. Журналнинг <a href=\""
+"{$indexUrl}/{$contextPath}/about/submissions#privacyStatement\">Махфийлик "
+"баённомаси</a> билан танишиб чиқинг."
+
+msgid "default.contextSettings.forLibrarians"
+msgstr ""
+"Биз тадқиқотчи кутубхоначиларни ушбу журнални кутубхонанинг электрон "
+"журнал фондлари қаторига қўйишни таклиф қиламиз. Бундан ташқари, шуни "
+"таъкидлаш жоизки, ушбу журналнинг очиқ манбали нашриёт тизими "
+"кутубхоналар учун ўз профессор-ўқитувчилари таҳрирлашда иштирок "
+"этадиган журналлар билан фойдаланишлари учун мос келади (қаранг: <a href="
+"\"https://pkp.sfu.ca/ojs\">Очиқ журнал тизимлари</a>)."
+
+msgid "default.contextSettings.lockssLicense"
+msgstr ""
+"Ушбу журнал иштирокчи кутубхоналар ўртасида тақсимланган архив тизимини "
+"яратиш учун LOCKSS тизимидан фойдаланади ва бу кутубхоналарга журналнинг "
+"доимий архивларини сақлаш ва тиклаш мақсадида яратишга рухсат беради. <a "
+"href=\"https://www.lockss.org\">Батафсил...</a>"
+
+msgid "default.contextSettings.clockssLicense"
+msgstr ""
+"Ушбу журнал иштирокчи кутубхоналар ўртасида тақсимланган архив тизимини "
+"яратиш учун CLOCKSS тизимидан фойдаланади ва ушбу кутубхоналарга "
+"журналнинг доимий архивларини сақлаш ва тиклаш мақсадларида яратишга "
+"рухсат беради. <a href=\"https://clockss.org\">Батафсил...</a>"
+
+msgid "default.groups.name.manager"
+msgstr "Журнал менежери"
+
+msgid "default.groups.plural.manager"
+msgstr "Журнал менежерлари"
+
+msgid "default.groups.abbrev.manager"
+msgstr "ЖМ"
+
+msgid "default.groups.name.editor"
+msgstr "Журнал муҳаррири"
+
+msgid "default.groups.plural.editor"
+msgstr "Журнал муҳаррирлари"
+
+msgid "default.groups.abbrev.editor"
+msgstr "ЖМУ"
+
+msgid "default.groups.name.guestEditor"
+msgstr "Меҳмон муҳаррир"
+
+msgid "default.groups.plural.guestEditor"
+msgstr "Меҳмон муҳаррирлар"
+
+msgid "default.groups.abbrev.guestEditor"
+msgstr "ММ"
+
+msgid "default.groups.name.sectionEditor"
+msgstr "Бўлим муҳаррири"
+
+msgid "default.groups.plural.sectionEditor"
+msgstr "Бўлим муҳаррирлари"
+
+msgid "default.groups.abbrev.sectionEditor"
+msgstr "БМ"
+
+msgid "default.groups.name.subscriptionManager"
+msgstr "Обуна менежери"
+
+msgid "default.groups.plural.subscriptionManager"
+msgstr "Обуна менежерлари"
+
+msgid "default.groups.abbrev.subscriptionManager"
+msgstr "ОМ"
+
+msgid "default.genres.researchInstrument"
+msgstr "Тадқиқот воситаси"
+
+msgid "default.genres.researchMaterials"
+msgstr "Тадқиқот материаллари"
+
+msgid "default.genres.researchResults"
+msgstr "Тадқиқот натижалари"
+
+msgid "default.genres.transcripts"
+msgstr "Транскрипциялар"
+
+msgid "default.genres.dataAnalysis"
+msgstr "Маълумотлар таҳлили"
+
+msgid "default.genres.dataSet"
+msgstr "Маълумотлар тўплами"
+
+msgid "default.genres.sourceTexts"
+msgstr "Манба матнлари"
+
+msgid "default.groups.name.externalReviewer"
+msgstr "Тақризчи"
+
+msgid "default.groups.plural.externalReviewer"
+msgstr "Тақризчилар"
+
+msgid "default.groups.abbrev.externalReviewer"
+msgstr "Т"
