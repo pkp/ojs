@@ -57,3 +57,6 @@
 	path = plugins/generic/pflPlugin
 	url = https://github.com/pkp/pflPlugin
 	branch = main
+[submodule "plugins/generic/openCitations"]
+	path = plugins/generic/openCitations
+	url = https://github.com/pkp/openCitations
