@@ -21,7 +21,9 @@ describe.skip('Email Template Access Tests', function() {
 			.as('checkboxes')
 			.uncheck({force: true});
 
-		cy.contains('button', 'Save').click();
+		cy.get('[data-cy="active-modal"]').within(() => {
+			cy.contains('button', 'Save').click();
+		});
 		cy.logout();
 
 		// Login as user without access - copyedit
@@ -47,13 +49,17 @@ describe.skip('Email Template Access Tests', function() {
 			.as('checkboxes')
 			.uncheck({force: true});
 
-		cy.contains('button', 'Save').click();
+		cy.get('[data-cy="active-modal"]').within(() => {
+			cy.contains('button', 'Save').click();
+		});
 		cy.reload();
 		cy.openEmailTemplate('Discussion (Copyediting)', 'Discussion (Copyediting)');
 
 		cy.setEmailTemplateUnrestrictedTo(true);
 
-		cy.contains('button', 'Save').click();
+		cy.get('[data-cy="active-modal"]').within(() => {
+			cy.contains('button', 'Save').click();
+		});
 		cy.logout();
 
 		// Login as user with access - copyedit
@@ -76,7 +82,9 @@ describe.skip('Email Template Access Tests', function() {
 		cy.openEmailTemplate('Discussion (Copyediting)', 'Discussion (Copyediting)');
 		cy.setEmailTemplateUnrestrictedTo(false);
 		cy.contains('label', 'Copyeditor').find('input[type="checkbox"]').check({force: true});
-		cy.contains('button', 'Save').click();
+		cy.get('[data-cy="active-modal"]').within(() => {
+			cy.contains('button', 'Save').click();
+		});
 		cy.logout();
 
 		// Login as user with access - copyedit
