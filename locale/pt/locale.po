@@ -1,6 +1,6 @@
 # José Carvalho <josekarvalho@gmail.com>, 2022.
 # Carla Marques <carla.marques@usdb.uminho.pt>, 2022, 2023.
-# José Carvalho <jcarvalho@keep.pt>, 2022, 2023.
+# José Carvalho <jcarvalho@keep.pt>, 2022, 2023, 2026.
 # António Moreira <amdsmoreira@gmail.com>, 2025.
 # Lívia Carolina Gouvêa de Faria <livia@mail.mayfirst.org>, 2025.
 msgid ""
@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2025-10-28 17:30+0000\n"
-"Last-Translator: Lívia Carolina Gouvêa de Faria <livia@mail.mayfirst.org>\n"
+"PO-Revision-Date: 2026-02-24 03:08+0000\n"
+"Last-Translator: José Carvalho <jcarvalho@keep.pt>\n"
 "Language-Team: Portuguese <http://translate.pkp.sfu.ca/projects/ojs/locale/"
 "pt/>\n"
 "Language: pt\n"
@@ -196,7 +196,7 @@ msgid "article.suppFiles"
 msgstr "Documento(s) Suplementar(es)"
 
 msgid "article.suppFilesAbbrev"
-msgstr "Aquivos Supl."
+msgstr "Ficheiros Suplementares"
 
 msgid "article.discipline"
 msgstr "Área e sub-área do Conhecimento Académico"
@@ -2321,7 +2321,7 @@ msgid "notification.type.openAccess"
 msgstr "Uma edição ficou em acesso aberto."
 
 msgid "notification.type.reviewerFormComment"
-msgstr "Um formulário de revisão sobre \"{$title}\" foi enviado."
+msgstr "Foi enviado um formulário de revisão de \"{$title}\"."
 
 msgid "notification.type.reviewing"
 msgstr "Eventos da Revisão"
