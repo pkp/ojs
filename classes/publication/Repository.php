@@ -227,7 +227,7 @@ class Repository extends \PKP\publication\Repository
     }
 
     /** @copydoc \PKP\publication\Repository::delete() */
-    public function delete(Publication $publication, false|int|null $submissionStatus = null): null
+    public function delete(Publication $publication, false|int|null $submissionStatus = null): void
     {
         $galleys = Repo::galley()->getCollector()
             ->filterByPublicationIds([$publication->getId()])
