@@ -137,7 +137,7 @@ class Collector extends \PKP\submission\Collector
                 ->from('publications', 'current_p')
                 ->leftJoin('submissions as current_s', 'current_s.current_publication_id', '=', 'current_p.publication_id')
                 ->leftJoin('publication_galleys as current_g', 'current_g.publication_id', '=', 'current_p.publication_id')
-                ->leftJoin('review_round as current_rr', 'current_rr.publication_id', '=', 'current_p.publication_id')
+                ->leftJoin('review_rounds as current_rr', 'current_rr.publication_id', '=', 'current_p.publication_id')
                 ->leftJoin('review_assignments as current_ra', 'current_ra.review_round_id', '=', 'current_rr.review_round_id')
                 ->leftJoin('review_round_author_responses as current_rrar', 'current_rrar.review_round_id', '=', 'current_rr.review_round_id')
                 ->where(function (Builder $q) {
