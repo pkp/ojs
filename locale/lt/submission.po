@@ -293,6 +293,7 @@ msgstr "Ar tikrai nenorite, kad tai būtų suplanuota publikuoti?"
 msgid "publication.version.details"
 msgstr "Leidinio {$version} versijos informacija"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Gamybos diskusijos"
 

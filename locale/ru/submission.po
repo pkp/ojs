@@ -319,6 +319,7 @@ msgstr "Вы уверены, что не хотите запланировать
 msgid "publication.version.details"
 msgstr "Информация о публикации для версии {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Обсуждения публикации"
 

@@ -313,6 +313,7 @@ msgstr "Ertu viss um að þú viljir ekki setja þetta á útgáfuáætlun?"
 msgid "publication.version.details"
 msgstr "Nánar um útgáfuna fyrir útgáfu {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Framleiðsluumræður"
 

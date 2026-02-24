@@ -319,6 +319,7 @@ msgstr "Ziur zaude ez duzula nahi hau argitaratzeko programatzea?"
 msgid "publication.version.details"
 msgstr "{$version} bertsioaren argitalpen-xehetasunak"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Ekoizpenari buruzko eztabaidak"
 

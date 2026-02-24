@@ -285,6 +285,7 @@ msgstr "您确定不希望此计划出版吗？"
 msgid "publication.version.details"
 msgstr "出版物版本{$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "出版讨论"
 

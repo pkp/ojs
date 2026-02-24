@@ -319,6 +319,7 @@ msgstr "Сіз бұл жазбаны жариялауды жоспарлағың
 msgid "publication.version.details"
 msgstr "{$version} нұсқасы үшін ақпарат жариялануда"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Басылым туралы пікірталастар"
 

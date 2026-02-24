@@ -331,6 +331,7 @@ msgstr "Confermi di non voler pianificare la pubblicazione di questo articolo?"
 msgid "publication.version.details"
 msgstr "Dettagli di pubblicazione per la versione {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Discussioni durante la produzione"
 

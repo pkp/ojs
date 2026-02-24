@@ -301,6 +301,7 @@ msgstr "هل أنت متأكد من رغبتك في عدم جدولته للنش
 msgid "publication.version.details"
 msgstr "تفاصيل النشر للنسخة {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "مناقشات الإنتاج"
 
