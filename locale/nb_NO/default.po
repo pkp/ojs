@@ -4,16 +4,17 @@
 # Jan Erik Frantsvåg <jan.e.frantsvag@uit.no>, 2022.
 # John David Didriksen <john.d.didriksen@uis.no>, 2023.
 # Johanna Skaug <johanna.skaug@ub.uio.no>, 2024.
+# Aysa Ekanger <aysa.ekanger@uit.no>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2024-06-25 13:30+0000\n"
-"Last-Translator: Johanna Skaug <johanna.skaug@ub.uio.no>\n"
+"PO-Revision-Date: 2026-02-25 11:12+0000\n"
+"Last-Translator: Aysa Ekanger <aysa.ekanger@uit.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "default/nb_NO/>\n"
-"Language: nb\n"
+"Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -32,7 +33,6 @@ msgstr "Retningslinjer for seksjonen"
 msgid "default.genres.article"
 msgstr "Artikkeltekst"
 
-#, fuzzy
 msgid "default.contextSettings.authorGuidelines"
 msgstr ""
 "<p>Forfattere inviteres til å sende inn bidrag til dette tidsskriftet. Alle "
@@ -49,9 +49,9 @@ msgstr ""
 "ikke møter et minimumskrav til kvalitet. Før innsending, vennligst forsikre "
 "om at studiens vitenskapelige design og argumentasjon er strukturert og "
 "framført på en tilfredsstillende måte. Tittelen bør være konsis, og "
-"sammendraget bør fungere selvstendig. Dette vil øke sannsynligheten for at "
-"de som blir spurt om å fagfellevurdere bidraget aksepterer. Når du føler at "
-"ditt innsendte bidrag møter ønsket standard, vennligst følg sjekklisten "
+"sammendraget bør være forståelig. Dette vil øke sannsynligheten for at de "
+"som blir spurt om å fagfellevurdere bidraget aksepterer forespørselen. Når "
+"du føler at ditt bidrag møter ønsket standard, vennligst følg sjekklisten "
 "nedenfor for å forberede ditt bidrag for å sendes inn.</p>"
 
 msgid "default.contextSettings.checklist"
