@@ -1,11 +1,11 @@
 # Tormod Strømme <tormod.stromme@uib.no>, 2022.
-# Aysa Ekanger <aysa.ekanger@uit.no>, 2023.
+# Aysa Ekanger <aysa.ekanger@uit.no>, 2023, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2023-01-24 13:28+0000\n"
+"PO-Revision-Date: 2026-02-25 11:12+0000\n"
 "Last-Translator: Aysa Ekanger <aysa.ekanger@uit.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "editor/nb_NO/>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "editor.home"
 msgstr "Startside for redaktør"
@@ -518,3 +518,16 @@ msgstr "Omslagsbilde"
 
 #~ msgid "editor.article.hideCoverPageAbstract"
 #~ msgstr "Ikke vis omslagsbilde i sammendragsvisningen."
+
+#, fuzzy
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr ""
+"Hvis feltet er tomt, vil datoen automatisk settes til den datoen når utgaven "
+"publiseres."
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr "Publiseringsdatoen er påkrevd når utgaven publiseres."
+
+#, fuzzy
+msgid "editor.issues.datePublished.invalid"
+msgstr "Publiseringsdatoen er ugyldig. Datoen skal være i formatet År-MM-DD."
