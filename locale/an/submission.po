@@ -267,6 +267,7 @@ msgstr "Retirar de publicación"
 msgid "publication.unpublish.confirm"
 msgstr "Seguro que no quiere que esto sía publicau?"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Discusions de producción"
 

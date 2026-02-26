@@ -285,6 +285,7 @@ msgstr "Bunun yayımlanmaq üzrə planlaşdırılmasını istəmədiyinizə əmi
 msgid "publication.version.details"
 msgstr "{$version} versiyası üçün nəşr detalları"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Çap müzakirələri"
 

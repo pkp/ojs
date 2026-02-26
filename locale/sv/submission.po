@@ -324,6 +324,7 @@ msgstr "Vill du ta bort denna från publiceringsplanen?"
 msgid "publication.version.details"
 msgstr "Publiceringsdetaljer för version {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Produktionsdiskussioner"
 

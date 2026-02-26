@@ -322,6 +322,7 @@ msgstr "Ви впевнені, що не хочете запланувати ц�
 msgid "publication.version.details"
 msgstr "Деталі публікації для версії {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Обговорення подання"
 

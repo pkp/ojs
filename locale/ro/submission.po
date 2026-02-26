@@ -324,6 +324,7 @@ msgstr "Sunteți sigur că nu doriți ca acest program să fie publicat?"
 msgid "publication.version.details"
 msgstr "Detalii de publicare pentru versiunea {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Discuții producție"
 

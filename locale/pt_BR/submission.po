@@ -323,6 +323,7 @@ msgstr "Tem certeza que não deseja agendar isto para publicação?"
 msgid "publication.version.details"
 msgstr "Detalhes da publicação da versão {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Discussão da Editoração"
 

@@ -319,6 +319,7 @@ msgstr "Oletko varma, että et halua ajoittaa tätä julkaistavaksi?"
 msgid "publication.version.details"
 msgstr "Version {$version} tiedot"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Tuotantoon liittyvät keskustelut"
 

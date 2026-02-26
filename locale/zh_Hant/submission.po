@@ -291,6 +291,7 @@ msgstr "是否取消安排出版此項目？"
 msgid "publication.version.details"
 msgstr "{$version}版本出版細節"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "製作討論"
 

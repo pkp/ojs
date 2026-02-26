@@ -168,6 +168,7 @@ msgstr "तुम्ही प्रकाशित करू इच्छित
 msgid "publication.version.details"
 msgstr "आवृत्ती {$version} साठी प्रकाशनाचा तपशील"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "प्रकाशनासंबंधी विचारविनिमय"
 

@@ -301,6 +301,7 @@ msgstr "本当に公開予約をキャンセルしてよろしいですか？"
 msgid "publication.version.details"
 msgstr "バージョン{$version}の公開詳細"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "制作ディスカッション"
 

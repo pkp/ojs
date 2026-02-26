@@ -314,6 +314,7 @@ msgstr "Bunun yayınlanmak üzere zamanlanmasını istemediğinizden emin misini
 msgid "publication.version.details"
 msgstr "{$version} sürümü için yayın ayrıntıları"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Basım Tartışmaları"
 
