@@ -1,13 +1,15 @@
 # Pierre Couchet <pierre.couchet@gmail.com>, 2023.
 # Olivier Roueff <olivier.roueff@cnrs.fr>, 2023, 2025.
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
+# Stéphanie Louison <stephanie.louison@u-bordeaux-montaigne.fr>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:24+00:00\n"
-"PO-Revision-Date: 2025-03-07 21:13+0000\n"
-"Last-Translator: Olivier Roueff <olivier.roueff@cnrs.fr>\n"
+"PO-Revision-Date: 2026-02-27 16:59+0000\n"
+"Last-Translator: Stéphanie Louison <stephanie.louison@u-bordeaux-montaigne."
+"fr>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "fr/>\n"
 "Language: fr\n"
@@ -21,7 +23,7 @@ msgid "submission.submit.userGroup"
 msgstr "Soumettre en qualité de …"
 
 msgid "submission.upload.selectComponent"
-msgstr "Sélectionner l'élément de l'article"
+msgstr "Sélectionner un type de document"
 
 msgid "submission.title"
 msgstr "Titre de l'article"
@@ -40,7 +42,7 @@ msgid "submission.submit.newSubmissionMultiple"
 msgstr "Commencer une nouvelle soumission dans"
 
 msgid "submission.submit.newSubmissionSingle"
-msgstr "Nouvelle soumission"
+msgstr "Soumettre"
 
 msgid "grid.action.workflow"
 msgstr "Processus éditorial pour la soumission"
@@ -56,8 +58,8 @@ msgstr "Métadonnées"
 
 msgid "submission.submit.whatNext.description"
 msgstr ""
-"Le journal a été informé de votre soumission et vous a envoyé par courriel "
-"une confirmation à archiver. L'éditeur vous contactera une fois que votre "
+"La revue a été informée de votre soumission. Vous avez dû recevoir une "
+"confirmation par courriel. La rédaction vous contactera une fois que votre "
 "soumission aura été examinée."
 
 msgid "grid.action.galleyInIssueEntry"
@@ -119,7 +121,7 @@ msgid "submission.pageProofs"
 msgstr "Correction d'épreuves"
 
 msgid "workflow.review.externalReview"
-msgstr "Évaluation"
+msgstr "Évaluation & Révisions"
 
 msgid "submission.event.issueMetadataUpdated"
 msgstr ""
@@ -238,7 +240,7 @@ msgid "publication.selectIssue"
 msgstr "Choisir un numéro pour programmer la publication"
 
 msgid "submission.publication"
-msgstr "Publication"
+msgstr "Métadonnées & Publication"
 
 msgid "publication.status.published"
 msgstr "Publié"
@@ -334,7 +336,7 @@ msgid "publication.version.details"
 msgstr "Renseignements de publication pour la version {$version}"
 
 msgid "submission.queries.production"
-msgstr "Discussions sur la production"
+msgstr "Discuter et envoyer des fichiers"
 
 msgid "editor.submission.decision.backToReview"
 msgstr "Retour au journal"
