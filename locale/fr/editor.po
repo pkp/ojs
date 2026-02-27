@@ -3,13 +3,15 @@
 # Germán Huélamo Bautista <germanhuelamo@gmail.com>, 2024.
 # François Théron <francois.theron@uvsq.fr>, 2025.
 # Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2025.
+# Stéphanie Louison <stephanie.louison@u-bordeaux-montaigne.fr>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
-"PO-Revision-Date: 2025-04-11 17:19+0000\n"
-"Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
+"PO-Revision-Date: 2026-02-27 16:59+0000\n"
+"Last-Translator: Stéphanie Louison <stephanie.louison@u-bordeaux-montaigne."
+"fr>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/editor/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -353,7 +355,7 @@ msgid "editor.navigation.futureIssues"
 msgstr "Numéros à venir"
 
 msgid "grid.action.addGalley"
-msgstr "Ajouter une épreuve"
+msgstr "Ajouter un document à publier"
 
 msgid "grid.action.publish"
 msgstr "Publier le numéro"
