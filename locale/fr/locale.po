@@ -3,13 +3,15 @@
 # Germán Huélamo Bautista <germanhuelamo@gmail.com>, 2024.
 # Pierre Couchet <pierre.couchet@gmail.com>, 2024.
 # Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2024, 2025.
+# Stéphanie Louison <stephanie.louison@u-bordeaux-montaigne.fr>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:24+00:00\n"
-"PO-Revision-Date: 2025-08-14 13:30+0000\n"
-"Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
+"PO-Revision-Date: 2026-02-27 16:59+0000\n"
+"Last-Translator: Stéphanie Louison <stephanie.louison@u-bordeaux-montaigne."
+"fr>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/locale/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -165,7 +167,7 @@ msgid "common.publication"
 msgstr "Article"
 
 msgid "common.publications"
-msgstr "Articles"
+msgstr "Consultation des articles"
 
 msgid "article.submissionId"
 msgstr "ID de la soumission"
@@ -1121,13 +1123,13 @@ msgid "reviewer.article.decision.accept"
 msgstr "Accepter la soumission"
 
 msgid "reviewer.article.decision.pendingRevisions"
-msgstr "Révisions requises"
+msgstr "Révisions mineures requises"
 
 msgid "reviewer.article.decision.resubmitHere"
-msgstr "Soumettre à nouveau pour évaluation"
+msgstr "Révisions majeures requises"
 
 msgid "reviewer.article.decision.resubmitElsewhere"
-msgstr "Soumettre à nouveau ailleurs"
+msgstr "Soumission à proposer à une autre revue"
 
 msgid "reviewer.article.decision.decline"
 msgstr "Refuser la soumission"
@@ -1695,16 +1697,16 @@ msgid "about.sectionPolicies"
 msgstr "Politiques de rubriques"
 
 msgid "about.submissions"
-msgstr "Soumissions"
+msgstr "Soumettre"
 
 msgid "about.onlineSubmissions.login"
-msgstr "Ouvrir une session"
+msgstr "Se connecter"
 
 msgid "about.onlineSubmissions.register"
 msgstr "S'inscrire"
 
 msgid "about.onlineSubmissions.registrationRequired"
-msgstr "{$login} ou {$register} pour faire une soumission."
+msgstr "{$login} (ou {$register}) pour soumettre une contribution."
 
 msgid "about.onlineSubmissions.submissionActions"
 msgstr "{$newSubmission} ou {$viewSubmissions}."
@@ -1715,10 +1717,10 @@ msgstr ""
 "a>."
 
 msgid "about.onlineSubmissions.newSubmission"
-msgstr "Faire une nouvelle soumission"
+msgstr "Soumettre une contribution"
 
 msgid "about.onlineSubmissions.viewSubmissions"
-msgstr "Voir vos soumissions en attente"
+msgstr "Accéder à mon tableau de bord"
 
 msgid "about.authorGuidelines"
 msgstr "Directives aux auteurs"
