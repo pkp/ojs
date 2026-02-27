@@ -2,13 +2,15 @@
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
 # Rodolphe Lemétayer <rlemetayer@protonmail.com>, 2024.
 # Olivier Roueff <olivier.roueff@cnrs.fr>, 2025.
+# Stéphanie Louison <stephanie.louison@u-bordeaux-montaigne.fr>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:24+00:00\n"
-"PO-Revision-Date: 2025-03-07 21:13+0000\n"
-"Last-Translator: Olivier Roueff <olivier.roueff@cnrs.fr>\n"
+"PO-Revision-Date: 2026-02-27 16:59+0000\n"
+"Last-Translator: Stéphanie Louison <stephanie.louison@u-bordeaux-montaigne."
+"fr>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/manager/fr/>"
 "\n"
 "Language: fr\n"
@@ -479,7 +481,7 @@ msgstr ""
 "elle n'est pas obligatoire."
 
 msgid "manager.setup.announcements"
-msgstr "Annonces"
+msgstr "Actualités"
 
 msgid "manager.setup.announcementsIntroduction"
 msgstr "Introduction"
