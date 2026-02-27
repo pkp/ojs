@@ -1,15 +1,16 @@
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
 # Germán Huélamo Bautista <germanhuelamo@gmail.com>, 2024.
+# Stéphanie Louison <stephanie.louison@u-bordeaux-montaigne.fr>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
-"PO-Revision-Date: 2024-05-10 23:21+0000\n"
-"Last-Translator: Germán Huélamo Bautista <germanhuelamo@gmail.com>\n"
-"Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/author/fr_FR/"
-">\n"
-"Language: fr_FR\n"
+"PO-Revision-Date: 2026-02-27 16:59+0000\n"
+"Last-Translator: Stéphanie Louison <stephanie.louison@u-bordeaux-montaigne."
+"fr>\n"
+"Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/author/fr/>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,7 +30,7 @@ msgid "author.submit.stepsToSubmit"
 msgstr "Les cinq étapes d'une soumission"
 
 msgid "author.submit.startHereTitle"
-msgstr "Commencer une nouvelle soumission"
+msgstr "Avant de commencer"
 
 msgid "author.submit.startHereLink"
 msgstr ""
@@ -58,7 +59,7 @@ msgid "author.submit.start"
 msgstr "Commencer"
 
 msgid "author.submit.upload"
-msgstr "Transférer la soumission"
+msgstr "Déposer le ou les fichiers"
 
 msgid "author.submit.metadata"
 msgstr "Saisir les métadonnées"
@@ -137,7 +138,7 @@ msgstr ""
 "pouvoir continuer."
 
 msgid "submission.submit.coverNote"
-msgstr "Commentaires pour le Rédacteur"
+msgstr "Commentaires pour la rédaction"
 
 msgid "author.submit.comments"
 msgstr "Saisir du texte (optionnel)"
