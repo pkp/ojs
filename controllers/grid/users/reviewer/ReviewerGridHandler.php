@@ -42,7 +42,8 @@ class ReviewerGridHandler extends PKPReviewerGridHandler
 
             // Add log entry
             $submission = $this->getSubmission();
-            $reviewer = Repo::user()->get($reviewAssignment->getReviewerId(), true);
+            $reviewer = $reviewAssignment->getReviewerId() ?
+                Repo::user()->get($reviewAssignment->getReviewerId(), true) : null;
             $user = $request->getUser();
 
             $eventLog = Repo::eventLog()->newDataObject([
@@ -57,7 +58,7 @@ class ReviewerGridHandler extends PKPReviewerGridHandler
                 'submissionId' => $submission->getId(),
                 'editorName' => $user->getFullName(),
                 'reviewAssignmentId' => $reviewAssignment->getId(),
-                'reviewerName' => $reviewer->getFullName(),
+                'reviewerName' => $reviewer ? $reviewer->getFullName() : $reviewAssignment->getData('email')
             ]);
             Repo::eventLog()->add($eventLog);
         }
