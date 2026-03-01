@@ -26,7 +26,7 @@ use PKP\job\exceptions\JobException;
 use PKP\jobs\BaseJob;
 use PKP\plugins\PluginRegistry;
 
-class DOAJRegister extends BaseJob
+class DOAJRegister extends BaseJob implements \PKP\queue\ContextAwareJob
 {
     public function __construct(
         protected string $jsonString,
@@ -34,6 +34,14 @@ class DOAJRegister extends BaseJob
         protected Context $context
     ) {
         parent::__construct();
+    }
+
+    /**
+     * Get the context ID for this job.
+     */
+    public function getContextId(): int
+    {
+        return $this->context->getId();
     }
 
     /**
