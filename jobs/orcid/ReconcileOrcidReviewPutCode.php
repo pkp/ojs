@@ -26,13 +26,21 @@ use PKP\orcid\OrcidManager;
 use PKP\submission\reviewAssignment\ReviewAssignment;
 use PKP\user\User;
 
-class ReconcileOrcidReviewPutCode extends BaseJob
+class ReconcileOrcidReviewPutCode extends BaseJob implements \PKP\queue\ContextAwareJob
 {
     public function __construct(
         private int $reviewerId,
         private int $contextId
     ) {
         parent::__construct();
+    }
+
+    /**
+     * Get the context ID for this job.
+     */
+    public function getContextId(): int
+    {
+        return $this->contextId;
     }
 
     /**

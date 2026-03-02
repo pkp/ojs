@@ -27,7 +27,7 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Mail;
 use PKP\jobs\BaseJob;
 
-class OpenAccessMailUsers extends BaseJob
+class OpenAccessMailUsers extends BaseJob implements \PKP\queue\ContextAwareJob
 {
     use Batchable;
 
@@ -42,6 +42,14 @@ class OpenAccessMailUsers extends BaseJob
         $this->userIds = $userIds;
         $this->contextId = $contextId;
         $this->issueId = $issueId;
+    }
+
+    /**
+     * Get the context ID for this job.
+     */
+    public function getContextId(): int
+    {
+        return $this->contextId;
     }
 
     public function handle()
