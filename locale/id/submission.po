@@ -318,6 +318,7 @@ msgstr "Yakin tidak ingin menjadwalkan naskah ini untuk diterbitkan?"
 msgid "publication.version.details"
 msgstr "Rincian publikasi naskah versi {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Diskusi Produksi"
 

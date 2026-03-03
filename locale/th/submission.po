@@ -109,6 +109,7 @@ msgstr "คุณแน่ใจหรือไม่ว่าต้องกา
 msgid "publication.version.details"
 msgstr "รายละเอียดการตีพิมพ์สำหรับเวอร์ชัน {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "การสนทนาช่วงการผลิต"
 

@@ -321,6 +321,7 @@ msgstr ""
 msgid "publication.version.details"
 msgstr "ინფორმაცია პუბლიკაციის შესახებ ვერსიისათვის: {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "პუბლიკაციის განხილვა"
 

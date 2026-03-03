@@ -235,6 +235,7 @@ msgstr "Kas olete kindel, et te ei soovi seda avaldamiseks ajatada?"
 msgid "publication.version.details"
 msgstr "Versiooni {$version} avaldamise üksikasjad"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Tootmise arutelud"
 

@@ -320,6 +320,7 @@ msgstr "¿Está seguro de que no desea que se programe su publicación?"
 msgid "publication.version.details"
 msgstr "Detalles de publicación de la versión {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Discusiones de producción"
 

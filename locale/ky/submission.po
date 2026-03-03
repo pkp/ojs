@@ -298,6 +298,7 @@ msgstr "Бул жарыяланууга пландалбасын деген че
 msgid "publication.version.details"
 msgstr "{$version} версиясынын жарыялоо маалыматтары"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Өндүрүш талкуулары"
 

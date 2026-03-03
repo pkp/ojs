@@ -312,6 +312,7 @@ msgstr "Ste prepričani, da ne želite načrtovati te objave?"
 msgid "publication.version.details"
 msgstr "Podrobnosti objave za verzijo {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Produkcijska diskusija"
 

@@ -323,6 +323,7 @@ msgstr "Сигурни ли сте, че не сте съгласен/а с то
 msgid "publication.version.details"
 msgstr "Подробности за публикацията за версия {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Продукционни дискусии"
 

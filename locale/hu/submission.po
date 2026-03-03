@@ -320,6 +320,7 @@ msgstr "Biztosan nem szeretné publikálásra ütemezni?"
 msgid "publication.version.details"
 msgstr "A publikáció részletei ennél a verziónál: {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Publikálási megbeszélések"
 

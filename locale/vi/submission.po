@@ -312,6 +312,7 @@ msgstr "Bạn có chắc chắn rằng bạn không muốn lên lịch xuất b�
 msgid "publication.version.details"
 msgstr "Chi tiết xuất bản cho phiên bản {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Thảo luận về sản xuất"
 

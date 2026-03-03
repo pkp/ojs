@@ -312,6 +312,7 @@ msgstr "Jeste li sigurni da ne želite da ovo bude zakazano za objavljivanje?"
 msgid "publication.version.details"
 msgstr "Detalji o publikaciji za verziju {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Rasprave o produkciji"
 

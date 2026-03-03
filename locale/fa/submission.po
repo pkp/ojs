@@ -308,6 +308,7 @@ msgstr "آیا مطمئن هستید که نمی‌خواهید این مقال�
 msgid "publication.version.details"
 msgstr "جزئیات انتشار برای نسخه {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "گفتگوی انتشار"
 

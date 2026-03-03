@@ -308,6 +308,7 @@ msgstr "Opravdu si nepřejete, aby to bylo naplánováno na zveřejnění?"
 msgid "publication.version.details"
 msgstr "Podrobnosti o zveřejnění pro verzi {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Diskuse během produkčního procesu"
 

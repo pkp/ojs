@@ -317,6 +317,7 @@ msgstr "Jesteś pewien, że nie chcesz zaplanować tego do publikacji?"
 msgid "publication.version.details"
 msgstr "Szczegóły publikacji dla wersji {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Dyskusja w trakcie realizacji"
 

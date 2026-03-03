@@ -220,6 +220,7 @@ msgstr "Atcelt publicēšanu"
 msgid "publication.unpublish.confirm"
 msgstr "Vai tiešām nevēlaties, lai tas tiktu publicēts?"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Izstrādes apspriedes"
 

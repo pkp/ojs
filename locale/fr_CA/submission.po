@@ -335,6 +335,7 @@ msgstr ""
 msgid "publication.version.details"
 msgstr "Renseignements de publication pour la version {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Discussions sur la production"
 

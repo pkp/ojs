@@ -332,6 +332,7 @@ msgstr "Είστε βέβαιοι ότι δεν θέλετε αυτό να πρ�
 msgid "publication.version.details"
 msgstr "Λεπτομέρειες δημοσίευσης για την έκδοση {$version}"
 
+#, fuzzy
 msgid "submission.queries.production"
 msgstr "Συζητήσεις Παραγωγής"
 
