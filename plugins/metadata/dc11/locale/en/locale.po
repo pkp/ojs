@@ -15,4 +15,4 @@ msgid "plugins.metadata.dc11.articleAdapter.displayName"
 msgstr "DC 1.1 Article Format Adapter"
 
 msgid "plugins.metadata.dc11.articleAdapter.description"
-msgstr "Extracts/injects meta-data from/into article format."
+msgstr "Extracts/injects metadata from/into article format."
