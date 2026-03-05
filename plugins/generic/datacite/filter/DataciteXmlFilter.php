@@ -257,6 +257,13 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         if ($descriptionsNode) {
             $rootNode->appendChild($descriptionsNode);
         }
+
+        // FundingReferences
+        $fundingReferencesNode = $this->createFundingReferencesNode($doc, $issue, $article, $publication, $galley);
+        if ($fundingReferencesNode) {
+            $rootNode->appendChild($fundingReferencesNode);
+        }
+
         // relatedItems
         $relatedItemsNode = $this->createRelatedItemsNode($doc, $issue, $article, $publication, $publisher, $objectLocalePrecedence);
         if ($relatedItemsNode) {
@@ -792,6 +799,80 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             $relatedItemsNode->appendChild($relatedItemNode);
         }
         return $relatedItemsNode;
+    }
+
+    /**
+     * Create fundingReferences node.
+     */
+    public function createFundingReferencesNode(DOMDocument $doc, Issue $issue, Submission $article, ?Publication $publication, ?Galley $galley): ?DOMNode
+    {
+        /** @var DataciteExportDeployment */
+        $deployment = $this->getDeployment();
+
+        if (!isset($article) || !isset($publication)) {
+            return null;
+        }
+
+        $funders = $publication->getData('funders');
+        if (empty($funders)) {
+            return null;
+        }
+
+        $locale = $publication->getData('locale');
+
+        $fundingReferencesNode = $doc->createElementNS($deployment->getNamespace(), 'fundingReferences');
+
+        foreach ($funders as $funder) {
+
+            $funderName = $funder->name[$locale] ?? null;
+            if (empty($funderName)) {
+                continue;
+            }
+
+            $grants = $funder->grants ?? [];
+
+            if (empty($grants)) {
+
+                $fundingReferenceNode = $doc->createElementNS($deployment->getNamespace(), 'fundingReference');
+
+                $fundingReferenceNode->appendChild(
+                    $doc->createElementNS($deployment->getNamespace(), 'funderName', htmlspecialchars($funderName, ENT_COMPAT, 'UTF-8'))
+                );
+
+                if (!empty($funder->ror)) {
+                    $funderIdentifierNode = $doc->createElementNS($deployment->getNamespace(), 'funderIdentifier', $funder->ror);
+                    $funderIdentifierNode->setAttribute('funderIdentifierType', 'ROR');
+                    $fundingReferenceNode->appendChild($funderIdentifierNode);
+                }
+
+                $fundingReferencesNode->appendChild($fundingReferenceNode);
+
+            } else {
+                foreach ($grants as $grant) {
+
+                    $fundingReferenceNode = $doc->createElementNS($deployment->getNamespace(), 'fundingReference');
+                    $fundingReferenceNode->appendChild(
+                        $doc->createElementNS($deployment->getNamespace(), 'funderName', htmlspecialchars($funderName, ENT_COMPAT, 'UTF-8'))
+                    );
+
+                    if (!empty($funder->ror)) {
+                        $funderIdentifierNode = $doc->createElementNS($deployment->getNamespace(), 'funderIdentifier', $funder->ror);
+                        $funderIdentifierNode->setAttribute('funderIdentifierType', 'ROR');
+                        $fundingReferenceNode->appendChild($funderIdentifierNode);
+                    }
+
+                    if (!empty($grant['grantNumber'])) {
+                        $fundingReferenceNode->appendChild(
+                            $doc->createElementNS($deployment->getNamespace(), 'awardNumber', htmlspecialchars($grant['grantNumber'], ENT_COMPAT, 'UTF-8'))
+                        );
+                    }
+
+                    $fundingReferencesNode->appendChild($fundingReferenceNode);
+                }
+            }
+        }
+
+        return $fundingReferencesNode->hasChildNodes() ? $fundingReferencesNode : null;
     }
 
 
