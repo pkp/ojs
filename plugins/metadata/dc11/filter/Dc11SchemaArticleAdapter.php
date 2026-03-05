@@ -14,8 +14,8 @@
  * @see Article
  * @see PKPDc11Schema
  *
- * @brief Abstract base class for meta-data adapters that
- *  injects/extracts Dublin Core schema compliant meta-data into/from
+ * @brief Abstract base class for metadata adapters that
+ *  injects/extracts Dublin Core schema compliant metadata into/from
  *  a Submission object.
  */
 
@@ -67,7 +67,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         // Retrieve data that belongs to the article.
         // FIXME: Retrieve this data from the respective entity DAOs rather than
         // from the OAIDAO once we've migrated all OAI providers to the
-        // meta-data framework. We're using the OAIDAO here because it
+        // metadata framework. We're using the OAIDAO here because it
         // contains cached entities and avoids extra database access if this
         // adapter is called from an OAI context.
         $oaiDao = DAORegistry::getDAO('OAIDAO'); /** @var OAIDAO $oaiDao */
