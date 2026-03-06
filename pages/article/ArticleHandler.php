@@ -18,6 +18,7 @@
 namespace APP\pages\article;
 
 use APP\core\Application;
+use APP\journal\Journal;
 use APP\facades\Repo;
 use APP\handler\Handler;
 use APP\issue\Issue;
@@ -322,23 +323,19 @@ class ArticleHandler extends Handler
             'supplementaryGalleys' => $supplementaryGalleys,
         ]);
 
-        // JATS XML public availability
-        $jatsDownloadUrl = null;
-
         // Check if JATS is publicly available for this publication
         if ($publication->getData('jatsPublicVisibility') &&
-            $publication->getData('status') === PKPPublication::STATUS_PUBLISHED) {
-            $jatsDownloadUrl = $request->getDispatcher()->url(
-                $request,
-                PKPApplication::ROUTE_API,
-                $context->getPath(),
-                "submissions/{$article->getId()}/publications/{$publication->getId()}/jats/download"
-            );
-        }
+            $publication->getData('status') == PKPPublication::STATUS_PUBLISHED) {
 
-        $templateMgr->assign([
-            'jatsDownloadUrl' => $jatsDownloadUrl,
-        ]);
+            $templateMgr->assign([
+                'jatsDownloadUrl' => $request->getDispatcher()->url(
+                    $request,
+                    PKPApplication::ROUTE_API,
+                    $context->getPath(),
+                    "submissions/{$article->getBestId()}/publications/{$publication->getId()}/jats/download"
+                )
+            ]);
+        }
 
         // Citations
         $templateMgr->assign([
