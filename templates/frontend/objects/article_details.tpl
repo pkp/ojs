@@ -337,10 +337,12 @@
 			{/if}
 
 			{* JATS XML Link *}
-			{if $jatsDownloadUrl}
+			{if isset($jatsDownloadUrl)}
 				<div class="item jats">
 					<span class="value jats_link">
-						{include file="frontend/objects/jats_link.tpl" jatsDownloadUrl=$jatsDownloadUrl}
+						<a class="obj_galley_link xml" href="{$jatsDownloadUrl|escape}">
+							{translate key="publication.jats.download"}
+						</a>
 					</span>
 				</div>
 			{/if}
