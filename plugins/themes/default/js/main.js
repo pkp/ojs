@@ -70,9 +70,9 @@
 		$roles.change(function() {
 			var $thisRoles = $(this).closest('.roles');
 			if ($thisRoles.find(':checked').length) {
-				$thisRoles.siblings('.context_policy').addClass('context_policy_visible');
+				$thisRoles.siblings('.context_privacy').addClass('context_privacy_visible');
 			} else {
-				$thisRoles.siblings('.context_policy').removeClass('context_policy_visible');
+				$thisRoles.siblings('.context_privacy').removeClass('context_privacy_visible');
 			}
 		});
 	}
