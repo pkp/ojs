@@ -463,6 +463,9 @@ captcha_on_register = on
 ; Whether or not to use Captcha on user login
 captcha_on_login = on
 
+; Whether or not to use Captcha on user lost password
+captcha_on_lost_password = on
+
 ; Validate the hostname in the ReCaptcha response
 recaptcha_enforce_hostname = Off
 
