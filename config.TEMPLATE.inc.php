@@ -155,6 +155,18 @@ name = ojs
 ; Database collation
 ; collation = utf8_general_ci
 
+; Enable SSL/TLS for the database connection
+; secure = Off
+
+; Path to the CA certificate file for SSL/TLS verification
+; For MySQL/MariaDB: path to the CA certificate (PEM format)
+; For PostgreSQL: path to the root certificate
+; capath = /path/to/ca-cert.pem
+
+; Verify the server's SSL/TLS certificate (default to On when secure is enabled)
+; Set to Off to connect with encryption but skip certificate verification (not recommended for production)
+; verify = On
+
 ; Enable database debug output (very verbose!)
 debug = Off
 
