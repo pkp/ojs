@@ -222,6 +222,7 @@
 		<migration class="PKP\migration\upgrade\v3_6_0\I12204_ReviewAssignmentPublicVisibility"/>
         <migration class="PKP\migration\upgrade\v3_6_0\I12048_ReviewRoundAuthorResponse"/>
 		<migration class="PKP\migration\upgrade\v3_6_0\I11993_MakeNotesUserIdNullable" />
+		<migration class="PKP\migration\upgrade\v3_6_0\I4142_AddMessageIdToNotesAndReviewAssignments" />
         <migration class="PKP\migration\upgrade\v3_6_0\I11332_AddPeerReviewDois" />
 		<migration class="PKP\migration\upgrade\v3_6_0\I6278_DataCitations" />
         <migration class="PKP\migration\upgrade\v3_6_0\I12307_ReviewRoundRequestAuthorResponseMail" />
