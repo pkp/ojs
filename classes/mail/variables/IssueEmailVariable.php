@@ -78,7 +78,7 @@ class IssueEmailVariable extends Variable
         $request = Application::get()->getRequest();
         $templateMgr = TemplateManager::getManager($request);
 
-        IssueHandler::_setupIssueTemplate($request, $this->issue, $this->getContext(), true, false);
+        IssueHandler::setupIssueTemplate($request, $this->issue, $this->getContext(), false);
 
         $templateMgr->assign([
             'includeIssuePublishDate' => false,
