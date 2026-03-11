@@ -96,7 +96,8 @@ class ArticleGalleyGridRow extends GridRow
                         SubmissionFile::SUBMISSION_FILE_PROOF,
                         Application::ASSOC_TYPE_REPRESENTATION,
                         $rowId,
-                        null
+                        null,
+                        $galley->getData('submissionFileId')
                     ));
                 }
 
