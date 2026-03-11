@@ -335,6 +335,18 @@
 					</ul>
 				</div>
 			{/if}
+
+			{* JATS XML Link *}
+			{if isset($jatsDownloadUrl)}
+				<div class="item jats">
+					<span class="value jats_link">
+						<a class="obj_galley_link xml" href="{$jatsDownloadUrl|escape}">
+							{translate key="publication.jats.download"}
+						</a>
+					</span>
+				</div>
+			{/if}
+
 			{if $supplementaryGalleys}
 				<div class="item galleys">
 					<h3 class="pkp_screen_reader">
