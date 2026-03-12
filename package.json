@@ -17,7 +17,7 @@
     "format": "prettier --write ./js/load.js ./lib/pkp/js/load.js ./lib/pkp/js/usage-stats-chart.js ./lib/pkp/js/classes/VueRegistry.js",
     "php-fix": "php lib/pkp/lib/vendor/bin/php-cs-fixer fix --config .php-cs-fixer.php --allow-risky=yes",
     "prepare": "husky install",
-    "postinstall": "copyfiles -f node_modules/swiper/swiper-bundle*.{js,css} plugins/themes/default/js/lib/swiper && copyfiles -f node_modules/altcha/dist/altcha.js lib/pkp/js/lib/altcha"
+    "postinstall": "copyfiles -f node_modules/swiper/swiper-bundle*.{js,css} plugins/themes/default/js/lib/swiper && copyfiles -f node_modules/altcha/dist/altcha.i18n.js lib/pkp/js/lib/altcha"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.23",
@@ -26,7 +26,7 @@
     "@tinymce/tinymce-vue": "^6.1.0",
     "@vue-a11y/announcer": "^3.1.5",
     "@vueuse/core": "^10.11.1",
-    "altcha": "^1.2.0",
+    "altcha": "^2.3.0",
     "chart.js": "^4.4.8",
     "clone-deep": "^4.0.1",
     "copyfiles": "^2.4.1",
@@ -43,7 +43,7 @@
     "pinia": "^2.3.1",
     "primevue": "^4.3.1",
     "reka-ui": "^2.3.2",
-    "swiper": "^10.3.1",
+    "swiper": "^12.1.2",
     "tiny-emitter": "^2.1.0",
     "tinymce": "^7.7.1",
     "uuid": "^9.0.1",
