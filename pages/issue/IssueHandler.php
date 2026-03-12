@@ -33,6 +33,7 @@ use APP\payment\ojs\OJSPaymentManager;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\template\TemplateManager;
+use Carbon\Carbon;
 use PKP\config\Config;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
@@ -402,8 +403,10 @@ class IssueHandler extends Handler
 
         // Subscription Access
         if (!$withSubscriptionDetails) {
+            $openAccessDate = $issue->getOpenAccessDate();
             $hasAccess = ($journal->getData('publishingMode') == Journal::PUBLISHING_MODE_OPEN) ||
-                         ($issue->getAccessStatus() == Issue::ISSUE_ACCESS_OPEN);
+                ($issue->getAccessStatus() == Issue::ISSUE_ACCESS_OPEN) ||
+                ($openAccessDate && Carbon::parse($openAccessDate)->lessThanOrEqualTo(Carbon::now()));
             $templateMgr->assign('hasAccess', $hasAccess);
             return;
         }
