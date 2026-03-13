@@ -115,7 +115,7 @@ class IndexHandler extends PKPIndexHandler
                 $issue = Repo::issue()->getCurrent($journal->getId(), true);
                 if (isset($issue) && $journal->getData('publishingMode') != \APP\journal\Journal::PUBLISHING_MODE_NONE) {
                     // The current issue TOC/cover page should be displayed below the custom home page.
-                    IssueHandler::_setupIssueTemplate($request, $issue);
+                    IssueHandler::setupIssueTemplate($request, $issue);
                 }
             }
 

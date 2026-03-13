@@ -3,8 +3,8 @@
 /**
  * @file pages/issue/IssueHandler.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2026 Simon Fraser University
+ * Copyright (c) 2003-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class IssueHandler
@@ -24,6 +24,7 @@ use APP\handler\Handler;
 use APP\issue\Collector;
 use APP\issue\Issue;
 use APP\issue\IssueAction;
+use APP\issue\IssueGalley;
 use APP\issue\IssueGalleyDAO;
 use APP\journal\Journal;
 use APP\observers\events\UsageEvent;
@@ -32,6 +33,7 @@ use APP\payment\ojs\OJSPaymentManager;
 use APP\security\authorization\OjsIssueRequiredPolicy;
 use APP\security\authorization\OjsJournalMustPublishPolicy;
 use APP\template\TemplateManager;
+use Carbon\Carbon;
 use PKP\config\Config;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
@@ -44,9 +46,8 @@ use PKP\submission\GenreDAO;
 
 class IssueHandler extends Handler
 {
-    /** @var \APP\issue\IssueGalley retrieved issue galley */
-    public $_galley = null;
-
+    /** @var ?IssueGalley the retrieved issue galley */
+    public ?IssueGalley $galley = null;
 
     /**
      * @copydoc PKPHandler::authorize()
@@ -74,7 +75,6 @@ class IssueHandler extends Handler
         if ($galleyId) {
             $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
             $galleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $galleyDao */
-            $journal = $request->getJournal();
             $galley = $galleyDao->getByBestId($galleyId, $issue->getId());
 
             // Invalid galley id, redirect to issue page
@@ -89,18 +89,18 @@ class IssueHandler extends Handler
     /**
      * Display about index page.
      */
-    public function index($args, $request)
+    public function index($args, $request): void
     {
         $this->current($args, $request);
     }
 
     /**
-     * Display current issue page.
+     * Display the current issue page.
      */
-    public function current($args, $request)
+    public function current($args, $request): void
     {
         $journal = $request->getJournal();
-        $issue = Repo::issue()->getCurrent($journal->getId(), true);
+        $issue = Repo::issue()->getCurrent($journal->getId());
 
         if ($issue != null) {
             $request->redirect(null, 'issue', 'view', [$issue->getBestIssueId()]);
@@ -118,11 +118,11 @@ class IssueHandler extends Handler
      * View an issue.
      *
      * @param array $args
-     * @param \APP\core\Request $request
+     * @param Request $request
      *
      * @hook IssueHandler::view::galley [[&$request, &$issue, &$galley]]
      */
-    public function view($args, $request)
+    public function view($args, $request): void
     {
         $issue = $this->getAuthorizedContextObject(Application::ASSOC_TYPE_ISSUE);
         $this->setupTemplate($request);
@@ -134,7 +134,7 @@ class IssueHandler extends Handler
                 $request->redirect(null, null, 'download', [$issue->getBestIssueId($journal), $galley->getBestGalleyId()]);
             }
         } else {
-            self::_setupIssueTemplate($request, $issue, $journal, $request->getUserVar('showToc') ? true : false);
+            self::setupIssueTemplate($request, $issue, $journal);
             $templateMgr->assign('issueId', $issue->getBestIssueId());
 
             // consider public identifiers
@@ -142,7 +142,6 @@ class IssueHandler extends Handler
             $templateMgr->assign('pubIdPlugins', $pubIdPlugins);
             $templateMgr->display('frontend/pages/issue.tpl');
             event(new UsageEvent(Application::ASSOC_TYPE_ISSUE, $journal, null, null, null, $issue));
-            return;
         }
     }
 
@@ -150,7 +149,7 @@ class IssueHandler extends Handler
      * Display the issue archive listings
      *
      * @param array $args
-     * @param \APP\core\Request $request
+     * @param Request $request
      */
     public function archive($args, $request)
     {
@@ -159,7 +158,9 @@ class IssueHandler extends Handler
         $templateMgr = TemplateManager::getManager($request);
         $context = $request->getContext();
 
-        $count = $context->getData('itemsPerPage') ? $context->getData('itemsPerPage') : Config::getVar('interface', 'items_per_page');
+        $count = $context->getData('itemsPerPage') ?
+            $context->getData('itemsPerPage') :
+            Config::getVar('interface', 'items_per_page');
         $offset = $page > 1 ? ($page - 1) * $count : 0;
 
         $collector = Repo::issue()->getCollector()
@@ -197,7 +198,7 @@ class IssueHandler extends Handler
      * Downloads an issue galley file
      *
      * @param array $args ($issueId, $galleyId)
-     * @param \APP\core\Request $request
+     * @param Request $request
      *
      * @hook IssueHandler::download [[&$issue, &$galley]]
      */
@@ -209,7 +210,7 @@ class IssueHandler extends Handler
 
             if (!Hook::call('IssueHandler::download', [&$issue, &$galley])) {
                 $issueFileManager = new IssueFileManager($issue->getId());
-                if ($issueFileManager->downloadById($galley->getFileId(), $request->getUserVar('inline') ? true : false)) {
+                if ($issueFileManager->downloadById($galley->getFileId(), (bool)$request->getUserVar('inline'))) {
                     event(new UsageEvent(Application::ASSOC_TYPE_ISSUE_GALLEY, $request->getContext(), null, null, null, $issue, $galley));
                     return true;
                 }
@@ -219,31 +220,29 @@ class IssueHandler extends Handler
     }
 
     /**
-     * Get the retrieved issue galley
-     *
-     * @return \APP\issue\IssueGalley
+     * Get the retrieved issue galleys
      */
-    public function getGalley()
+    public function getGalley(): ?IssueGalley
     {
-        return $this->_galley;
+        return $this->galley;
     }
 
     /**
      * Set a retrieved issue galley
      *
-     * @param \APP\issue\IssueGalley $galley
+     * @param IssueGalley $galley
      */
-    public function setGalley($galley)
+    public function setGalley($galley): void
     {
-        $this->_galley = $galley;
+        $this->galley = $galley;
     }
 
     /**
      * Determines whether or not a user can view an issue galley.
      *
-     * @param \APP\core\Request $request
+     * @param Request $request
      */
-    public function userCanViewGalley($request)
+    public function userCanViewGalley($request): bool
     {
         $issueAction = new IssueAction();
 
@@ -322,16 +321,17 @@ class IssueHandler extends Handler
      * frontend/objects/issue_toc.tpl to function properly (i.e. current issue
      * and view issue).
      *
-     * @param \APP\core\Request         $request                    The core request object
-     * @param \APP\issue\Issue          $issue                      The issue to display
-     * @param \APP\journal\Journal|null $journal                    The journal associated with the request
-     * @param bool                      $showToc                    If false and a custom cover page exists,
-     * 	                                                            the cover page will be displayed. Otherwise table of contents
-     * 	                                                            will be displayed.
-     * @param bool                      $withSubscriptionDetails    Should include the subscription related information into the template
+     * @param Request $request                The core request object
+     * @param Issue $issue                    The issue to display
+     * @param Journal|null $journal           The journal associated with the request
+     * @param bool $withSubscriptionDetails   Should include the subscription-related information for the template
      */
-    public static function _setupIssueTemplate(Request $request, Issue $issue, ?Journal $journal = null, $showToc = false, $withSubscriptionDetails = true)
-    {
+    public static function setupIssueTemplate(
+        Request $request,
+        Issue $issue,
+        ?Journal $journal = null,
+        bool $withSubscriptionDetails = true
+    ): void {
         $journal ??= $request->getJournal();
         $templateMgr = TemplateManager::getManager($request);
 
@@ -397,10 +397,15 @@ class IssueHandler extends Handler
         ]);
 
         // Subscription Access
-        $user = $request->getUser();
-        if (!$withSubscriptionDetails || !$user) {
+        if (!$withSubscriptionDetails) {
+            $openAccessDate = $issue->getOpenAccessDate();
+            $hasAccess = ($journal->getData('publishingMode') == Journal::PUBLISHING_MODE_OPEN) ||
+                ($issue->getAccessStatus() == Issue::ISSUE_ACCESS_OPEN) ||
+                ($openAccessDate && Carbon::parse($openAccessDate)->lessThanOrEqualTo(Carbon::now()));
+            $templateMgr->assign('hasAccess', $hasAccess);
             return;
         }
+        $user = $request->getUser();
         $issueAction = new IssueAction();
         $subscriptionRequired = $issueAction->subscriptionRequired($issue, $journal);
         $subscribedUser = $issueAction->subscribedUser($user, $journal);
@@ -428,11 +433,13 @@ class IssueHandler extends Handler
             $templateMgr->assign('articleExpiryPartial', $articleExpiryPartial);
         }
 
-        $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */
+        /** @var OJSCompletedPaymentDAO $completedPaymentDao */
+        $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO');
         $templateMgr->assign([
             'hasAccess' => !$subscriptionRequired ||
-                $issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_OPEN ||
-                $subscribedUser || $subscribedDomain ||
+                $issue->getAccessStatus() == Issue::ISSUE_ACCESS_OPEN ||
+                $subscribedUser ||
+                $subscribedDomain ||
                 ($user && $completedPaymentDao->hasPaidPurchaseIssue($user->getId(), $issue->getId()))
         ]);
 
