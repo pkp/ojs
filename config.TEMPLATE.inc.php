@@ -148,8 +148,15 @@ name = ojs
 ; port = 3306
 ; unix_socket = /var/run/mysqld/mysqld.sock
 
-; Database collation
-; collation = utf8_general_ci
+; Database collation (MySQL / MariaDB only).
+; utf8mb4 supports the full Unicode range (including emoji); recommended for new installs.
+; Existing databases still using the legacy 3-byte utf8 encoding should keep utf8_general_ci
+; to avoid re-encoding the database.
+; Note: for PostgreSQL this setting is ignored — collation is a database-level property
+; that cannot be set per connection.
+collation = utf8mb4_unicode_ci
+; Legacy value (keep for upgrades from older installations):
+;collation = utf8_general_ci
 
 ; Enable database debug output (very verbose!)
 debug = Off
@@ -195,8 +202,13 @@ web_cache_hours = 1
 ; Default locale
 locale = en
 
-; Database connection character set
-connection_charset = utf8
+; Database connection charset (MySQL / MariaDB / PostgreSQL).
+; utf8mb4 is recommended for new installs. Existing databases using legacy utf8 should keep utf8.
+; For PostgreSQL, utf8mb4 is automatically mapped to utf8 at runtime.
+; Must be consistent with [database] collation above (mismatches are auto-corrected with a warning).
+connection_charset = utf8mb4
+; Legacy value:
+;connection_charset = utf8
 
 
 ;;;;;;;;;;;;;;;;;
