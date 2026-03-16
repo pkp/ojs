@@ -30,13 +30,10 @@ class I11241_MissingDecisionConstantsUpdate extends \PKP\migration\upgrade\v3_4_
     {
         return [
             // \PKP\decision\Decision::ACCEPT
-            /**
-             * NOTE : Accept of submission can happen at the
-             * 1. submission stage without going through external review phase
-             * 2. external review stage after going through external review phase
-             */
+            // PRODUCTION added: OJS 3.3 allowed ACCEPT at any stage via "change decision" UI
+            // See https://github.com/pkp/pkp-lib/issues/12357
             [
-                'stage_id' => [WORKFLOW_STAGE_ID_SUBMISSION, WORKFLOW_STAGE_ID_EXTERNAL_REVIEW],
+                'stage_id' => [WORKFLOW_STAGE_ID_SUBMISSION, WORKFLOW_STAGE_ID_EXTERNAL_REVIEW, WORKFLOW_STAGE_ID_PRODUCTION],
                 'current_value' => 1,
                 'updated_value' => 2,
             ],
@@ -101,7 +98,14 @@ class I11241_MissingDecisionConstantsUpdate extends \PKP\migration\upgrade\v3_4_
             return;
         }
 
-        // Upgrading from a 3.4.0-*
+        // If upgrading from 3.4.0-11 or above, then we have a fixed applied also for it
+        // at https://github.com/pkp/pkp-lib/issues/12140
+        // so nothing to do and return
+        if ($currentVersion->major == 3 && $currentVersion->minor == 4 && $currentVersion->build >= 11) {
+            return;
+        }
+
+        // Upgrading from a 3.4.0-10 or below version
         // Need to figure out the first installed date of 3.4.0-*
         // Then need to update the decisions made before the first version of 3.4.0-* installed
         $firstVersionOf34 = DB::table('versions')
