@@ -30,13 +30,10 @@ class I12140_MissingDecisionConstantsUpdate extends \PKP\migration\upgrade\v3_4_
     {
         return [
             // \PKP\decision\Decision::ACCEPT
-            /**
-             * NOTE : Accept of submission can happen at the
-             * 1. submission stage without going through external review phase
-             * 2. external review stage after going through external review phase
-             */
+            // PRODUCTION added: OJS 3.3 allowed ACCEPT at any stage via "change decision" UI
+            // See https://github.com/pkp/pkp-lib/issues/12357
             [
-                'stage_id' => [WORKFLOW_STAGE_ID_SUBMISSION, WORKFLOW_STAGE_ID_EXTERNAL_REVIEW],
+                'stage_id' => [WORKFLOW_STAGE_ID_SUBMISSION, WORKFLOW_STAGE_ID_EXTERNAL_REVIEW, WORKFLOW_STAGE_ID_PRODUCTION],
                 'current_value' => 1,
                 'updated_value' => 2,
             ],
