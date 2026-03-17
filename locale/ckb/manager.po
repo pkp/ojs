@@ -795,12 +795,6 @@ msgstr ""
 "بەشداربووەکان لە ڕێگای لیستی دەزگای بڵاوکردنەوەی لۆکس. <a href=\"{$lockssUrl}"
 "\" target=\"_blank\"> </a>."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"ڕێپێدانی LOCKSSلە بەشی دەربارەی گۆڤاردا ئاماژەی بۆ کراوە <a href=\"http://www"
-".lockss.org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS "
-"ڕێپێدانی</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "ناساندنی ڕێگەپێدانی LOCKSS"
 
@@ -820,11 +814,6 @@ msgstr ""
 "بەشی کلۆکس چالاک بکە تۆ هەڵگرتن و دابەشکردنی ناوەڕۆکی گۆڤار لە کتێبخانە "
 "بەشداربووەکاندا لە ڕێگای لیستی دەزگای بڵاوکردنەوەی کلۆکس <a href="
 "\"{$clockssUrl}\" target=\"_blank\"> پەڕی</a>."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"مۆڵەتی کڵۆکس بەشی (دەربارەی گۆڤارەکە) لە ژێر بەشی ئەرشیفکردن:<a href="
-"\"http://clockss.org/\" target=\"_blank\"> مۆڵەتی کڵۆکس</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "ناساندنی ڕێگەپێدانی CLOCKSS"

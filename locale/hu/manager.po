@@ -824,12 +824,6 @@ msgstr ""
 "megosztásra kerüljenek a kapcsolódó könyvtárakkal a LOCKSS <a href="
 "\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a> oldalon."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"A LOCKSS lincensz az Információk oldal Archiválás részében fog megjelenni: "
-"<a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target="
-"\"_blank\">LOCKSS License</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS Licenc leírás"
 
@@ -848,12 +842,6 @@ msgstr ""
 "A CLOCKSS rendszer engedélyezése, hogy a folyóirat tartalmak letárolásra és "
 "megosztásra kerüljenek a kapcsolódó könyvtárakkal a CLOCKSS <a href="
 "\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</a> oldalon."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"A CLOCKSS licenc a folyóirat információs oldalán fog megjelenni az "
-"archiválásnál: <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS "
-"Licenc</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS Licenc Leírás"

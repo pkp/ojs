@@ -831,12 +831,6 @@ msgstr ""
 "tijdschrift bij deelnemende bibliotheken via een LOCKSS <a href="
 "\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a> pagina."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"Een LOCKSS licentie zal worden getoond in Over het tijdschrift, onder de "
-"hoofding Archivering: <a href=\"http://www.lockss.org/community/publishers-"
-"titles-gln/\" target=\"_blank\">LOCKSS licentie</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "Beschrijving van de LOCKSS licentie"
 
@@ -855,12 +849,6 @@ msgstr ""
 "Schakel CLOCKSS in om tijdschriftinhoud te bewaren en verspreiden bij "
 "bibliotheken die deelnemen in CLOCKSS, via een <a href=\"{$clockssUrl}\" "
 "target=\"_blank\">Uitgeversmanifest</a> page."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"Een CLOCKSS licentie zal worden getoond in Over het tijdschrift, onder de "
-"hoofding Archivering: <a href=\"http://clockss.org/\" target=\"_blank"
-"\">CLOCKSS licentie</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "Beschrijving van de CLOCKSS licentie"

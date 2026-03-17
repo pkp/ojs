@@ -831,12 +831,6 @@ msgstr ""
 "bidaltzeko LOCKSSen <a href=\"{$lockssUrl}\" target=\"_blank\""
 ">Argitaratzailearen Manifestu</a> orri baten bidez."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"LOCKSS lizentzia bat agertuko da \"Aldizkariari buruz\" atalean, "
-"\"Artxibatuta\" atalean: <a href=\"http://www.lockss.org/community/"
-"publishers-titles-gln/\" target=\"_blank\">LOCKSS Lizentzia</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS lizentziaren deskribapena"
 
@@ -855,12 +849,6 @@ msgstr ""
 "Gaitu CLOCKSS aldizkariaren edukia parte hartzen duten liburutegietan "
 "gordetzeko eta banatzeko CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\""
 ">Publisher Manifest</a> orri baten bidez."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"CLOCKSS lizentzia bat agertuko da \"Aldizkariari buruz\" atalean, "
-"\"Artxibatuta\" atalean: <a href=\"https://clockss.org\" target=\"_blank\""
-">CLOCKSS Lizentzia</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS lizentziaren deskribapena"

@@ -773,9 +773,6 @@ msgstr ""
 "Оролцогч номын сангуудад сэтгүүлийн агуулгыг хадгалах, түгээх боломж олгох "
 "LOCKSS-ийг идэвхжүүлэх."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr "LOCKSS лиценз нь Сэтгүүлийн тухай хэсгийн Архивлах доор харагдах болно."
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS лицензийн тайлбар"
 
@@ -789,10 +786,6 @@ msgid "manager.setup.clockssEnable"
 msgstr ""
 "Оролцогч номын сангуудад сэтгүүлийн агуулгыг хадгалах, түгээх боломж олгох "
 "CLOCKSS-ийг идэвхжүүлэх."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"CLOCKSS лиценз нь Сэтгүүлийн тухай хэсгийн Архивлах доор харагдах болно."
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS лицензийн тайлбар"
