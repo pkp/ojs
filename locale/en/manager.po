@@ -672,9 +672,6 @@ msgstr "LOCKSS and CLOCKSS"
 msgid "manager.setup.lockssEnable"
 msgstr "Enable LOCKSS to store and distribute journal content at participating libraries via a LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a> page."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr "A LOCKSS license will appear in About the Journal under Archiving: <a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS License</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS License Description"
 
@@ -691,11 +688,6 @@ msgstr "LOCKSS"
 
 msgid "manager.setup.clockssEnable"
 msgstr "Enable CLOCKSS to store and distribute journal content at participating libraries via a CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</a> page."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"A CLOCKSS license will appear in About the Journal under Archiving: <a href="
-"\"https://clockss.org\" target=\"_blank\">CLOCKSS License</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS License Description"

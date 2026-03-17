@@ -825,12 +825,6 @@ msgstr ""
 "biblioteker via LOCKSS-siden <a href=\"{$lockssUrl}\" target=\"_blank"
 "\">Publisher Manifest</a>."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"En LOCKSS licens vil fremtræde i afsnittet 'Om tidsskriftet' under "
-"arkivering: <a href=\"http://www.lockss.org/community/publishers-titles-gln/"
-"\" target=\"_blank\">LOCKSS License</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS licensbeskrivelse"
 
@@ -850,11 +844,6 @@ msgstr ""
 "Aktivér CLOCKSS for at gemme og distribuere tidsskriftsindhold hos "
 "deltagende biblioteker via CLOCKSS-siden <a href=\"{$clockssUrl}\" target="
 "\"_blank\">Publisher Manifest</a> page."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"En CLOCKSS licens vil fremgå i afsnittet 'Om tidsskriftet' under arkivering: "
-"<a href=\"https://clockss.org\" target=\"_blank\">CLOCKSS Licens</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS licensbeskrivelse"

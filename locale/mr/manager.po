@@ -1045,23 +1045,11 @@ msgstr "PKP प्रिझर्वेशन नेटवर्क (PN)"
 msgid "manager.setup.otherLockss"
 msgstr "LOCKSS आणि CLOCKSS"
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"नियतकालिकाविषयीच्या पानावर संग्रहणाच्या परिच्छेदात LOCKSS परवाना दिसेल: <a "
-"href=\"http://www.lockss.org/community/publishers-titles-gln/\" target="
-"\"_blank\">LOCKSS परवाना</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS परवान्याचे वर्णन"
 
 msgid "manager.setup.lockssTitle"
 msgstr "LOCKSS"
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"नियतकालिकाविषयीच्या पानावर संग्रहणाच्या परिच्छेदात CLOCKSS परवाना दिसेल: <a "
-"href=\"http://www.clockss.org/community/publishers-titles-gln/\" target="
-"\"_blank\">CLOCKSS परवाना</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS परवान्याचे वर्णन"

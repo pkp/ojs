@@ -824,12 +824,6 @@ msgstr ""
 "գրադարաններում LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">Հրատարակչի "
 "մանիֆեստ</a> էջի միջոցով:"
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"LOCKSS արտոնագիրը կհայտնվի Ամսագրի մասին՝ Արխիվացման ներքո՝ <a href=\"http://"
-"www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS "
-"արտոնագիր</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS արտոնագրի նկարագրություն"
 
@@ -849,11 +843,6 @@ msgstr ""
 "Միացրեք CLOCKSS-ը` պահելու և տարածելու ամսագրի բովանդակությունը մասնակից "
 "գրադարաններում CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank"
 "\">Հրատարակչի մանիֆեստ</a> էջի միջոցով:"
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"CLOCKSS արտոնագիրը կհայտնվի Ամսագրի մասին՝ Արխիվացման ներքո՝ <a href="
-"\"https://clockss.org\" target=\"_blank\">CLOCKSS արտոնագիր</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS արտոնագրի նկարագրություն"

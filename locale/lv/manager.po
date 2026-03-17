@@ -804,12 +804,6 @@ msgstr ""
 "izmantojot LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">Publisher "
 "Manifest</a> lapu."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"LOCKSS licence būs pieejama sadaļā Par žurnālu, sadaļā Arhivēšana: <a href="
-"\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank"
-"\">LOCKSS Licence</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS licences apraksts"
 
@@ -828,11 +822,6 @@ msgstr ""
 "Ļauj CLOCKSS uzglabāt un izplatīt žurnāla saturu iesaistītajās bibliotēkās, "
 "izmantojot CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\">Publisher "
 "Manifest</a> lapu."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"CLOCKSS licence būs pieejama sadaļā Par žurnālu, sadaļā Arhivēšana: <a href="
-"\"https://clockss.org\" target=\"_blank\">CLOCKSS Licence</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS licences apraksts"

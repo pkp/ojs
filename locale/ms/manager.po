@@ -816,12 +816,6 @@ msgstr ""
 "perpustakaan yang mengambil bahagian melalui halaman <a href="
 "\"{$lockssUrl}\" target=\"_blank\"> Publisher Manifest </a> LOCKSS."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"Lesen LOCKSS akan muncul di Mengenai Jurnal di bawah Pengarkiban: <a href="
-"\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank"
-"\"> LOCKSS License </a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "Penerangan Lesen LOCKSS"
 
@@ -841,11 +835,6 @@ msgstr ""
 "Dayakan CLOCKSS untuk menyimpan dan menyebarkan kandungan jurnal di "
 "perpustakaan yang mengambil bahagian melalui halaman CLOCKSS <a href="
 "\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</a>."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"Lesen CLOCKSS akan muncul di Mengenai Jurnal di bawah Pengarkiban: <a href="
-"\"http://clockss.org/\" target=\"_blank\"> Lesen CLOCKSS </a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "Penerangan Lesen CLOCKSS"

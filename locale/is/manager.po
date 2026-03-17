@@ -760,9 +760,6 @@ msgstr "LOCKSS og CLOCKSS"
 msgid "manager.setup.lockssEnable"
 msgstr ""
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "Lýsing á LOCKSS leyfi"
 
@@ -773,9 +770,6 @@ msgid "manager.setup.lockssTitle"
 msgstr "LOCKSS"
 
 msgid "manager.setup.clockssEnable"
-msgstr ""
-
-msgid "manager.setup.clockssLicenseDescription"
 msgstr ""
 
 msgid "manager.setup.clockssLicenseLabel"

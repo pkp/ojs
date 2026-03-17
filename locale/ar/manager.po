@@ -788,11 +788,6 @@ msgstr ""
 "LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">وثيقة الناشر الأساسية</a>. "
 "إن رخصة LOCKSS ستظهر ضمن (عن المجلة) تحت (الحفظ)."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"رخصة LOCKSS ستظهر في (عن المجلة) تحت باب الحفظ: <a href=\"http://www.lockss."
-"org/community/publishers-titles-gln/\" target=\"_blank\">رخصة LOCKSS</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "وصف رخصة LOCKSS"
 
@@ -810,11 +805,6 @@ msgid "manager.setup.clockssEnable"
 msgstr ""
 "تمكين CLOCKSS لتخزين وتوزيع محتوى المجلة لدى المكتبات المساهمة بواسطة صفحة "
 "<a href=\"{$clockssUrl}\" target=\"_blank\">وثيقة الناشر الأساسية</a>."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"رخصة CLOCKSS ستظهر في (عن المجلة) تحت باب الحفظ: <a href=\"https://clockss."
-"org\" target=\"_blank\">رخصة CLOCKSS</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "وصف رخصة CLOCKSS"

@@ -829,12 +829,6 @@ msgstr ""
 "участващите библиотеки чрез страницата LOCKSS <a href=\"{$lockssUrl}\" "
 "target=\"_blank\">Издателски манифест</a>."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"Лиценз LOCKSS ще се появи в „За списанието“ под „Архивиране“: <a href="
-"\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank"
-"\">LOCKSS лиценз</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "Описание на LOCKSS лиценза"
 
@@ -854,11 +848,6 @@ msgstr ""
 "Активирайте DLOCKSS да съхранява и разпространява съдържание на списания в "
 "участващите библиотеки чрез страницата CLOCKSS <a href=\"{$clockssUrl}\" "
 "target=\"_blank\">Издателски манифест</a>."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"Лиценз CLOCKSS ще се появи в „За списанието“ под „Архивиране“:<a href="
-"\"http://clockss.org/\" target=\"_blank\">CLOCKSS лиценз</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "Описание на CLOCKSS лиценза"
