@@ -827,12 +827,6 @@ msgstr ""
 "бібліотеками, що беруть участь у проєкті, через сторінку <a href=\""
 "{$lockssUrl}\" target=\"_blank\">Видавничий маніфест LOCKSS</a>."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"Ліцензія LOCKSS з'явиться в розділі \"Про журнал\" під заголовком \"Архівація"
-" журналу\": <a href=\"http://www.lockss.org/community/publishers-titles-gln/"
-"\" target=\"_blank\">Ліцензія LOCKSS</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "Опис ліцензії LOCKSS"
 
@@ -852,12 +846,6 @@ msgstr ""
 "Дозволити CLOCKSS для збереження та розповсюдження змісту журналу "
 "бібліотеками, що беруть участь у проєкті, через сторінку <a href=\""
 "{$clockssUrl}\" target=\"_blank\">Видавничий маніфест CLOCKSS</a>."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"Ліцензія CLOCKSS з'явиться в розділі \"Про журнал\" під заголовком "
-"\"Архівація журналу\": <a href=\"http://clockss.org/\" target=\"_blank\""
-">Ліцензія CLOCKSS</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "Опис ліцензії CLOCKSS"

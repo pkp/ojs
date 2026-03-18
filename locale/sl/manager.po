@@ -798,12 +798,6 @@ msgstr ""
 "knjižnicah, ki sodelujejo v LOCKSS sistemu. Več o LOCKSS na <a href="
 "\"{$lockssUrl}\" target=\"_blank\">Publisher Manifest</a> strani."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"LOCKSS licenca se bo pojavila na strani O reviji pod Arhiviranje: <a href="
-"\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank"
-"\">LOCKSS License</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "Razlaga LOCKSS licence"
 
@@ -823,11 +817,6 @@ msgstr ""
 "Omogočite sistemu CLOCKSS, da shranjuje in distribuira vsebino revije po "
 "knjižnicah, ki sodelujejo v CLOCKSS sistemu. Več o na <a href="
 "\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</a> strani."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"A CLOCKSS cenca se bo pojavila na strani O reviji pod Arhiviranje: <a href="
-"\"https://clockss.org/\" target=\"_blank\">CLOCKSS licenca</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "Razlaga CLOCKSS licence"

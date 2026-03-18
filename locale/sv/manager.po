@@ -809,12 +809,6 @@ msgstr ""
 "deltagande bibliotek via LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank"
 "\">Utgivarmanifest</a> sida."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"En LOCKSS-licens kommer då att visas i ”Om tidskriften” under ”Arkivering”: "
-"<a href=\"http://www.lockss.org/community/publishers-titles-gln/\" target="
-"\"_blank\">LOCKSS License</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "Beskrivning av LOCKSS-licensen"
 
@@ -834,11 +828,6 @@ msgstr ""
 "Aktivera CLOCKSS för att arkivera och distribuera tidskriftens innehåll till "
 "deltagande bibliotek via CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank"
 "\">Utgivarmanifest</a> sida."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"En CLOCKSS-licens kommer då att visas i \"Om\" tidskriften under \"Arkivering"
-"\": <a href=\"https://clockss.org\" target=\"_blank\">CLOCKSS Licens</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "Beskrivning av CLOCKSS-licensen"

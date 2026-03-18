@@ -650,9 +650,6 @@ msgstr ""
 msgid "manager.setup.lockssEnable"
 msgstr ""
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr ""
 
@@ -663,9 +660,6 @@ msgid "manager.setup.lockssTitle"
 msgstr ""
 
 msgid "manager.setup.clockssEnable"
-msgstr ""
-
-msgid "manager.setup.clockssLicenseDescription"
 msgstr ""
 
 msgid "manager.setup.clockssLicenseLabel"

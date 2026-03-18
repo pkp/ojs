@@ -810,12 +810,6 @@ msgstr ""
 "zúčastněných knihovnách přes LOCKSS stránku <a href=\"{$lockssUrl}\" target="
 "\"_blank\">Seznam vydavatelů</a>."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"Licence LOCKSS se objeví v O časopise pod Archivace: <a href=\"http://www."
-"lockss.org/community/publishers-titles-gln/\" target=\"_blank\">Licence "
-"LOCKSS</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "Popis licence LOCKSS"
 
@@ -835,11 +829,6 @@ msgstr ""
 "Povolte službě CLOCKSS ukládat a distribuovat obsah časopisu v zúčastněných "
 "knihovnách prostřednictvím stránky <a href=\"{$clockssUrl}\" target=\"_blank"
 "\">stránky Manifest vydavatele </a>."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"Licence CLOCKSS se objeví v sekci O časopise v sekci Archivování: <a href="
-"\"https://clockss.org\" target=\"_blank\"> Licence CLOCKSS </a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "Popis licence CLOCKSS"

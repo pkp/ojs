@@ -687,12 +687,6 @@ msgstr ""
 "raamatukogudes LOCKSS-i <a href=\"{$lockssUrl}\" target=\"_blank\""
 ">kirjastaja manifestilehe</a> kaudu."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"LOCKSS-i litsents ilmub ajakirja kohta käivas teabes arhiveerimise all: <a "
-"href=\"http://www.lockss.org/community/publishers-titles-gln/\" target="
-"\"_blank\">LOCKSS-i litsents</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS-i litsentsi kirjeldus"
 
@@ -704,11 +698,6 @@ msgstr ""
 "Luba CLOCKSS, et säilitada ja levitada ajakirja sisu osalevates "
 "raamatukogudes CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\""
 ">kirjastaja manifesti</a> lehe kaudu."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"CLOCKSS litsents ilmub ajakirja kohta käivas teabes arhiveerimise all: <a "
-"href=\"https://clockss.org\" target=\"_blank\">CLOCKSS litsents</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS litsentsi kirjeldus"

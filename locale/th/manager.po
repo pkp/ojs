@@ -571,12 +571,6 @@ msgstr "เครือข่ายการเก็บรักษา PKP (PN)
 msgid "manager.setup.otherLockss"
 msgstr "LOCKSS และ CLOCKSS"
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"ใบอนุญาต LOCKSS จะปรากฏใน 'เกี่ยวกับวารสาร' ภายใต้การเก็บถาวร: <a href=\"http"
-"://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">ใบอนุ"
-"ญาต LOCKSS</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "คำอธิบายใบอนุญาต LOCKSS"
 
@@ -605,11 +599,6 @@ msgstr "รูปลักษณ์"
 
 msgid "manager.setup.management"
 msgstr "การจัดการ"
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"ใบอนุญาต CLOCKSS จะปรากฏใน 'เกี่ยวกับวารสาร' ภายใต้การเก็บถาวร: <a href="
-"\"https://clockss.org\" target=\"_blank\">ใบอนุญาต CLOCKSS</a>"
 
 msgid "manager.setup.managementOfBasicEditorialSteps"
 msgstr "การจัดการขั้นตอนการบรรณาธิการขั้นพื้นฐาน"

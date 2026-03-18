@@ -819,11 +819,6 @@ msgstr ""
 "join-lockss/partner-communities\" target=\"_blank\">LOCKSS коомчулугун</a> "
 "караңыз."
 
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"CLOCKSS лицензиясы Журнал жөнүндө бөлүмүндө Архивдөө астында көрүнөт: <a "
-"href=\"https://clockss.org\" target=\"_blank\">CLOCKSS лицензиясы</a>"
-
 msgid "manager.setup.noImageFileUploaded"
 msgstr "Сүрөт файлы жүктөлгөн жок."
 
@@ -1079,12 +1074,6 @@ msgstr ""
 "LOCKSSти иштетип, катышкан китепканаларда журнал мазмунун сактап жана "
 "таратуу үчүн LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">Publisher "
 "Manifest</a> бетин колдонуу."
-
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"LOCKSS лицензиясы Журнал жөнүндө бөлүмүндө Архивдөө астында көрүнөт: <a href="
-"\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\""
-">LOCKSS лицензиясы</a>"
 
 msgid "manager.setup.lockssTitle"
 msgstr "LOCKSS"
