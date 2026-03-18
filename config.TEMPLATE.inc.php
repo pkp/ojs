@@ -320,6 +320,11 @@ allowed_title_html = "b,i,u,sup,sub"
 ;  off: Plugins cannot be installed.
 allow_plugin_install = on
 
+; The URLs to use to fetch the plugin gallery plugin list
+; BEWARE: You should not extend the gallery with custom plugin gallery listing that collide with the official ones!
+;plugin_gallery_urls = '["https://pkp.sfu.ca/ojs/xml/plugins.xml"]'
+
+
 ;;;;;;;;;;;;;;;;;;
 ; Email Settings ;
 ;;;;;;;;;;;;;;;;;;
