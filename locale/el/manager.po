@@ -834,12 +834,6 @@ msgstr ""
 "βιβλιοθήκες που συμμετέχουν στο δίκτυο, μέσω της σελίδας <a  href="
 "\"{$lockssUrl}\" target=\"_blank\">Διακήρυξη του Εκδότη</a> του LOCKSS."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"Η άδεια του LOCKSS θα εμφανίζεται στο μενού \"Σχετικά με το περιοδικό\", "
-"στην ενότητα \"Αρχειοθέτηση\": <a href=\"http://www.lockss.org/community/"
-"publishers-titles-gln/\" target=\"_blank\">Άδεια LOCKSS</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "Περιγραφή άδειας LOCKSS"
 
@@ -857,12 +851,6 @@ msgstr ""
 "Ενεργοποίηση του CLOCKSS για τη διανομή και αποθήκευση του περιεχομένου σε "
 "βιβλιοθήκες που συμμετέχουν στο δίκτυο, μέσω της σελίδας <a href="
 "\"{$clockssUrl}\" target=\"_blank\">Διακήρυξη του Εκδότη</a> του CLOCKSS."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"Η άδεια του CLOCKSS θα εμφανίζεται στο μενού \"Σχετικά με το περιοδικό\", "
-"στην ενότητα \"Αρχειοθέτηση\": <a href=\"http://clockss.org/\" target="
-"\"_blank\">;Άδεια CLOCKSS</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "Περιγραφή άδειας CLOCKSS"

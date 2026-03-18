@@ -816,12 +816,6 @@ msgstr ""
 "ბიბლიოთეკებში LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">Publisher "
 "Manifest</a> გვერდის საშუალებით."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"LOCKSS ლიცენზია გამოჩნდება არქივის ქვეშ ჟურნალში: <a href=\"http://www."
-"lockss.org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS "
-"ლიცენზია</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS ლიცენზიის აღწერა"
 
@@ -841,12 +835,6 @@ msgstr ""
 "CLOCKSS-ის ჩართვა, ჟურნალის შიგთავსის გასავრცელებლად CLOCKSS-ის <a href="
 "\"{$clockssUrl}\" target=\"_blank\">გამომცემლის მანიფესტი</a> გვერდის "
 "საშუალებით."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"CLOCKSS-ის ლიცენზია გამოჩნდება „ჟურნალის შესახებ“ სექციაში, სათაურით "
-"„ჟურნალის არქივაცია“: <a href=\"http://clockss.org/\" target=\"_blank"
-"\">CLOCKSS ლიცენზია</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS ლიცენზიის აღწერა"

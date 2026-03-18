@@ -819,12 +819,6 @@ msgstr ""
 "knjižnicama putem LOCKSS <a href=\"{$lockssUrl}\" target=\"_blank\">stranice "
 "izdavačkog manifesta</a>."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"LOCKSS licenca će biti prikazana u O časopisu pod Arhiviranje: <a href="
-"\"http://www.lockss.org/community/publishers-titles-gln/\" target=\"_blank"
-"\">LOCKSS Licenca</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "Opis LOCKSS licence"
 
@@ -844,11 +838,6 @@ msgstr ""
 "Omogućite CLOCKSS za pohranu i distribuciju sadržaja časopisa u sudjelujućim "
 "knjižnicama putem CLOCKSS <a href=\"{$clockssUrl}\" target=\"_blank\""
 ">stranice izdavačkog manifesta</a>."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"CLOCKSS licenca će biti prikazana u O časopisu pod Arhiviranje: <a href="
-"\"http://clockss.org/\" target=\"_blank\">CLOCKSS Licenca</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "Opis CLOCKSS Licence"

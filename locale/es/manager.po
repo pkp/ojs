@@ -844,12 +844,6 @@ msgstr ""
 "bibliotecas colaboradoras a través de una página del <a href="
 "\"{$lockssUrl}\" target=\"_blank\">Manifiesto editorial</a> LOCKSS."
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"Una licencia LOCKSS aparecerá en \"Acerca de la revista\" debajo de "
-"\"Archivado\": <a href=\"http://www.lockss.org/community/publishers-titles-"
-"gln/\" target=\"_blank\">LOCKSS License</a>"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "Descripción de la licencia LOCKSS"
 
@@ -869,12 +863,6 @@ msgstr ""
 "Permitir a CLOCKSS almacenar y distribuir contenido de la revista a las "
 "bibliotecas participantes a través de la página CLOCKSS <a href="
 "\"{$clockssUrl}\" target=\"_blank\">Publisher Manifest</a>."
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"Una licencia CLOCKSS aparecerá en \"Acerca de la revista\" debajo de "
-"\"Archivado\": <a href=\"http://clockss.org/\" target=\"_blank\">CLOCKSS "
-"License</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "Descripción de la licencia CLOCKSS"

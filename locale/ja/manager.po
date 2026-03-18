@@ -780,12 +780,6 @@ msgstr ""
 "\"{$lockssUrl}\" target=\"_blank\">発行者マニフェスト</a>ページを介して可能に"
 "します。"
 
-msgid "manager.setup.lockssLicenseDescription"
-msgstr ""
-"LOCKSSライセンスは、「ジャーナルについて」に掲載されます：<a href=\"http://"
-"www.lockss.org/community/publishers-titles-gln/\" target=\"_blank\">LOCKSS ラ"
-"イセンス</a>をご覧下さい"
-
 msgid "manager.setup.lockssLicenseLabel"
 msgstr "LOCKSS ライセンスの説明"
 
@@ -804,11 +798,6 @@ msgstr ""
 "CLOCKSSを有効にして、CLOCKSSの<a href=\"{$clockssUrl}\" target=\"_blank"
 "\">Publisher マニフェスト</a>ページ経由で参加図書館からジャーナルコンテンツを"
 "保存・配信する。"
-
-msgid "manager.setup.clockssLicenseDescription"
-msgstr ""
-"CLOCKSSライセンスは「ジャーナルについて」に掲載されます。<a href=\"http://"
-"clockss.org/\" target=\"_blank\">CLOCKSS ライセンス</a>"
 
 msgid "manager.setup.clockssLicenseLabel"
 msgstr "CLOCKSS ライセンスの説明"

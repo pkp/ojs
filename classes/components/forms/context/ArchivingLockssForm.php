@@ -1,9 +1,10 @@
 <?php
+
 /**
  * @file classes/components/form/context/ArchivingLockssForm.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2014-2026 Simon Fraser University
+ * Copyright (c) 2000-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArchivingLockssForm
@@ -41,7 +42,6 @@ class ArchivingLockssForm extends FormComponent
 
         $this->addField(new FieldOptions('enableLockss', [
             'label' => __('manager.setup.lockssTitle'),
-            'description' => __('manager.setup.lockssLicenseDescription'),
             'options' => [
                 [
                     'value' => true,
@@ -52,7 +52,6 @@ class ArchivingLockssForm extends FormComponent
         ]))
             ->addField(new FieldOptions('enableClockss', [
                 'label' => __('manager.setup.clockssTitle'),
-                'description' => __('manager.setup.clockssLicenseDescription'),
                 'options' => [
                     [
                         'value' => true,
