@@ -324,9 +324,7 @@ class ArticleHandler extends Handler
         ]);
 
         // Check if JATS is publicly available for this publication
-        if ($publication->getData('jatsPublicVisibility') &&
-            $publication->getData('status') == PKPPublication::STATUS_PUBLISHED) {
-
+        if ($publication->getData('jatsPublicVisibility')) {
             $templateMgr->assign([
                 'jatsDownloadUrl' => $request->getDispatcher()->url(
                     $request,
