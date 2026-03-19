@@ -282,6 +282,10 @@ allowed_html = "a[href|target|title],em,strong,cite,code,ul,ol,li[class],dl,dt,d
 ;Is implicit authentication enabled or not
 ;implicit_auth = On
 
+; The URL to use to fetch the plugin gallery plugin list
+; BEWARE: You should not extend the gallery with custom plugin gallery listing that collide with the official ones!
+;plugin_gallery_urls = '["https://pkp.sfu.ca/ojs/xml/plugins.xml"]'
+
 
 ;;;;;;;;;;;;;;;;;;
 ; Email Settings ;
