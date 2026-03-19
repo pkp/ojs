@@ -3,14 +3,14 @@
 # Rodolphe Lemétayer <rlemetayer@protonmail.com>, 2024.
 # Olivier Roueff <olivier.roueff@cnrs.fr>, 2025.
 # Stéphanie Louison <stephanie.louison@u-bordeaux-montaigne.fr>, 2026.
+# Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:24+00:00\n"
-"PO-Revision-Date: 2026-02-27 16:59+0000\n"
-"Last-Translator: Stéphanie Louison <stephanie.louison@u-bordeaux-montaigne."
-"fr>\n"
+"PO-Revision-Date: 2026-03-19 17:39+0000\n"
+"Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/manager/fr/>"
 "\n"
 "Language: fr\n"
@@ -1144,7 +1144,7 @@ msgstr "Soumissions"
 
 msgid "manager.setup.submissions.description"
 msgstr ""
-"Directeurs aux auteurs, droits d'auteur et indexation (comprenant "
+"Directives aux auteurs, droits d'auteur et indexation (comprenant "
 "l'inscription)."
 
 msgid "manager.setup.disableSubmissions.description"
