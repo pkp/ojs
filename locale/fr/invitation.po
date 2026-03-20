@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-03-19 17:39+0000\n"
-"Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
+"PO-Revision-Date: 2026-03-20 14:40+0000\n"
+"Last-Translator: Gwenn Dossmann Ritter <gwenn.dossmann@openedition.org>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/invitation/"
 "fr/>\n"
 "Language: fr\n"
@@ -19,3 +19,29 @@ msgstr "Créer un compte OJS"
 
 msgid "acceptInvitation.detailsReview.nextButtonLabel"
 msgstr "Accepter et continuer vers OJS"
+
+msgid "acceptInvitation.accountDetails.stepDescription"
+msgstr ""
+"Pour commencer avec OJS et accepter un nouveau rôle, vous devrez vous créer "
+"un compte. Merci d'entrer un nom d'utilisateur et un mot de passe."
+
+msgid "acceptInvitation.detailsReview.stepDescription"
+msgstr "Vérifier les informations pour commencer vos nouveaux rôles sur OJS"
+
+msgid "acceptInvitation.modal.message"
+msgstr ""
+"Félicitations pour votre nouveau rôle sur OJS ! Vous devriez avoir accès à "
+"de nouvelles options. Si vous avez besoin d'aide dans la prise en main du "
+"logiciel, veuillez cliquer sur le bouton \"Aide\" sur l'interface."
+
+msgid "acceptInvitation.modal.title"
+msgstr "Un nouveau rôle vous a été attribué"
+
+msgid "acceptInvitation.verifyOrcid.stepDescription"
+msgstr ""
+"Vous pouvez choisir de vérifier votre identifiant ORCID ou passer cette "
+"étape. Si vous passez cette étape, vous pourrez vérifier à tout moment votre "
+"identifiant ORCID depuis votre profil utilisateur."
+
+msgid "invitation.role.masthead"
+msgstr "Équipe éditoriale"
