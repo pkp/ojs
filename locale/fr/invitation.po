@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-03-20 14:40+0000\n"
+"PO-Revision-Date: 2026-03-20 14:54+0000\n"
 "Last-Translator: Gwenn Dossmann Ritter <gwenn.dossmann@openedition.org>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/invitation/"
 "fr/>\n"
@@ -45,3 +45,39 @@ msgstr ""
 
 msgid "invitation.role.masthead"
 msgstr "Équipe éditoriale"
+
+msgid "invitation.wizard.pageTitleDescription"
+msgstr ""
+"Vous invitez un/e utilisateur/ice à prendre un rôle sur OJS et à figurer "
+"parmi l'équipe éditoriale"
+
+msgid "userInvitation.enterDetails.stepDescription"
+msgstr "Vous pouvez inviter ces personnes à prendre un rôle"
+
+msgid "userInvitation.modal.message"
+msgstr ""
+"Un nouveau rôle a été proposé à {$email}. Vous pouvez être informé/e de la "
+"décision de l'utilisateur/ice sur la page « Utilisateur/ices et rôles », via "
+"les notifications OJS et/ou par courriel"
+
+msgid "userInvitation.roleTable.journalMasthead"
+msgstr "Équipe éditoriale"
+
+msgid "userInvitation.search.userFound"
+msgstr "L'utilisateur/ice existe déjà dans cette revue"
+
+msgid "userInvitation.search.userNotFound"
+msgstr "L'utilisateur/ice n'a aucun rôle dans cette revue"
+
+msgid "userInvitation.searchUser.stepDescription"
+msgstr ""
+"Recherchez l'utilisateur/ice à l'aide de son courriel ou de son nom "
+"d'utilisateur ou de son identifiant ORCID. Si l'utilisateur/ice n'existe pas "
+"dans le logiciel, vous pouvez l'inviter à rejoindre votre revue en acceptant "
+"au moins un rôle. Si l'utilisateur/ice existe déjà, vous pouvez consulter "
+"ses informations et l'inviter à accepter des rôles supplémentaires."
+
+msgid "userInvitation.sendMail.stepDescription"
+msgstr ""
+"Envoyer un courriel à l'utilisateur/ice à propos du processus d'invitation, "
+"des prochaines étapes, du RGPD et de la vérification ORCID"
