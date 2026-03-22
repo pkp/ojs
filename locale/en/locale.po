@@ -375,6 +375,12 @@ msgstr "Proofread"
 msgid "submission.search"
 msgstr "Article Search"
 
+msgid "submission.task.validation.error.headnote.author"
+msgstr "You can only edit your own discussion message."
+
+msgid "submission.task.validation.error.headnote.editExpired"
+msgstr "This discussion message can only be edited within 1 hour of creation."
+
 msgid "journal.currentIssue"
 msgstr "Current Issue"
 
