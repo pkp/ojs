@@ -3694,6 +3694,13 @@
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
+					},
+					"422": {
+						"x-summary": "Request Invalid",
+						"description": "The task cannot be started without participants or an assignee.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
 					}
 				}
 			}
