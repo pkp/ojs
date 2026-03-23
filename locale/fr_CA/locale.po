@@ -39,6 +39,9 @@ msgstr "Cliquez sur l'icône pour compléter le formulaire d'évaluation."
 msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
 msgstr "Veuillez remplir les champs obligatoires."
 
+msgid "reviewer.submission.reviewFormResponse.form.notFilledIn"
+msgstr "Certains champs obligatoires ne sont pas remplis. Veuillez les compléter avant de soumettre votre évaluation."
+
 msgid "common.software"
 msgstr "Open Journal Systems"
 
