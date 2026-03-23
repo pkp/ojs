@@ -17,4 +17,7 @@
 	<date>2016-05-16</date>
 	<lazy-load>1</lazy-load>
 	<class>URNPubIdPlugin</class>
+  <compatibility application="ojs2">
+	  <release>~3.6.0.0</release>
+	</compatibility>
 </version>

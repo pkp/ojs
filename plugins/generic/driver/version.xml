@@ -17,4 +17,7 @@
 	<date>2011-09-13</date>
 	<lazy-load>1</lazy-load>
 	<class>DRIVERPlugin</class>
+  <compatibility application="ojs2">
+	  <release>~3.6.0.0</release>
+	</compatibility>
 </version>
