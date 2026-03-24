@@ -19,8 +19,12 @@
 namespace APP\publication;
 
 use APP\core\Application;
+use APP\facades\Repo;
 use APP\file\PublicFileManager;
+use APP\journal\Journal;
+use APP\journal\JournalDAO;
 use APP\publication\enums\VersionStage;
+use PKP\plugins\PluginRegistry;
 use PKP\publication\PKPPublication;
 
 class Publication extends PKPPublication
@@ -80,5 +84,30 @@ class Publication extends PKPPublication
     public function setIssueId(?int $issueId): void
     {
         $this->setData('issueId', $issueId);
+    }
+
+    /**
+     * Set the current journal identity metadata.
+     * If CSL plugin is enabled then publisher location from this plugin settings is also set.
+     */
+    public function stampContextIdentity(): void
+    {
+        $submission = Repo::submission()->get((int) $this->getData('submissionId'));
+        $contextId = $submission->getData('contextId');
+
+        /** @var JournalDAO $contextDao */
+        $contextDao = Application::getContextDAO();
+        /** @var Journal $context*/
+        $context = $contextDao->getById($contextId);
+        $this->setData('contextName', $context->getName());
+        $this->setData('printIssn', $context->getData('printIssn'));
+        $this->setData('onlineIssn', $context->getData('onlineIssn'));
+        $this->setData('publisherInstitution', $context->getData('publisherInstitution'));
+        $this->setData('country', $context->getData('country'));
+
+        $cslPlugin = PluginRegistry::getPlugin('generic', 'citationstylelanguageplugin');
+        if ($cslPlugin->getEnabled($contextId)) {
+            $this->setData('publisherLocation', $cslPlugin->getSetting($contextId, 'publisherLocation'));
+        }
     }
 }

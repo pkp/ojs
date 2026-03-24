@@ -61,7 +61,7 @@ class OrcidReview
         $submissionLocale = $this->submission->getData('locale');
         $currentPublication = $this->submission->getCurrentPublication();
 
-        if (empty($this->review->getData('dateCompleted')) || empty($this->context->getData('onlineIssn'))) {
+        if (empty($this->review->getData('dateCompleted')) || empty($currentPublication->getData('onlineIssn'))) {
             return [];
         }
 
@@ -81,10 +81,10 @@ class OrcidReview
                     'value' => $reviewCompletionDate->format('d')
                 ]
             ],
-            'review-group-id' => 'issn:' . $this->context->getData('onlineIssn'),
+            'review-group-id' => 'issn:' . $currentPublication->getData('onlineIssn'),
 
             'convening-organization' => [
-                'name' => $this->context->getData('publisherInstitution'),
+                'name' => $currentPublication->getData('publisherInstitution'),
                 'address' => [
                     'city' => OrcidManager::getCity($this->context),
                     'country' => OrcidManager::getCountry($this->context),
