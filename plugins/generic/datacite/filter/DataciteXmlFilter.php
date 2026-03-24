@@ -164,7 +164,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $objectLocalePrecedence = $this->getObjectLocalePrecedence($context, $article, $publication, $galley);
         // The publisher is required.
         // Use the journal title as DataCite recommends for now.
-        $publisher = $this->getPrimaryTranslation($context->getData('name'), $objectLocalePrecedence);
+        $publisher = $this->getPrimaryTranslation($publication->getData('contextName'), $objectLocalePrecedence);
         assert(!empty($publisher));
         // The publication date is required.
         if ($publication) {
@@ -560,12 +560,12 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $node->setAttribute('alternateIdentifierType', DATACITE_IDTYPE_PROPRIETARY);
         // ISSN - for issues only.
         if (!isset($article) && !isset($galley)) {
-            $onlineIssn = $context->getData('onlineIssn');
+            $onlineIssn = $issue->getData('onlineIssn');
             if (!empty($onlineIssn)) {
                 $alternateIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'alternateIdentifier', $onlineIssn));
                 $node->setAttribute('alternateIdentifierType', DATACITE_IDTYPE_EISSN);
             }
-            $printIssn = $context->getData('printIssn');
+            $printIssn = $issue->getData('printIssn');
             if (!empty($printIssn)) {
                 $alternateIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'alternateIdentifier', $printIssn));
                 $node->setAttribute('alternateIdentifierType', DATACITE_IDTYPE_ISSN);
@@ -745,11 +745,11 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             $relatedItemNode->setAttribute('relationType', DATACITE_RELTYPE_ISPUBLISHEDIN);
             $relatedItemNode->setAttribute('relatedItemType', 'Journal');
 
-            if (null !== $context->getData('onlineIssn')) {
-                $relatedItemIdentifierNode = $doc->createElementNS($deployment->getNamespace(), 'relatedItemIdentifier', $context->getData('onlineIssn'));
+            if (null !== $publication->getData('onlineIssn')) {
+                $relatedItemIdentifierNode = $doc->createElementNS($deployment->getNamespace(), 'relatedItemIdentifier', $publication->getData('onlineIssn'));
                 $relatedItemIdentifierNode->setAttribute('relatedItemIdentifierType', DATACITE_IDTYPE_EISSN);
-            } elseif (null !== $context->getData('printIssn')) {
-                $relatedItemIdentifierNode = $doc->createElementNS($deployment->getNamespace(), 'relatedItemIdentifier', $context->getData('printIssn'));
+            } elseif (null !== $publication->getData('printIssn')) {
+                $relatedItemIdentifierNode = $doc->createElementNS($deployment->getNamespace(), 'relatedItemIdentifier', $publication->getData('printIssn'));
                 $relatedItemIdentifierNode->setAttribute('relatedItemIdentifierType', DATACITE_IDTYPE_ISSN);
             } else {
                 $contextUrl = $request->getDispatcher()->url(
@@ -948,16 +948,15 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
     public function getIssueInformation(Issue $issue, array $objectLocalePrecedence = null): array|string
     {
         $deployment = $this->getDeployment();
-        $context = $deployment->getContext();
         $issueIdentification = $issue->getIssueIdentification();
         assert(!empty($issueIdentification));
         if (is_null($objectLocalePrecedence)) {
             $issueInfo = [];
-            foreach ($context->getName(null) as $locale => $contextName) {
+            foreach ($issue->getData('contextName', null) as $locale => $contextName) {
                 $issueInfo[$locale] = "{$contextName}, {$issueIdentification}";
             }
         } else {
-            $issueInfo = $this->getPrimaryTranslation($context->getName(null), $objectLocalePrecedence);
+            $issueInfo = $this->getPrimaryTranslation($issue->getData('contextName', null), $objectLocalePrecedence);
             if (!empty($issueInfo)) {
                 $issueInfo .= ', ';
             }

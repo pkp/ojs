@@ -268,7 +268,7 @@ class IR extends CounterR5Report
             $item = [
                 'Title' => $itemTitle,
                 'Platform' => $this->platformName,
-                'Publisher' => $this->context->getData('publisherInstitution'),
+                'Publisher' => $currentPublication->getData('publisherInstitution'),
             ];
             $item['Item_ID'][] = [
                 'Type' => 'Proprietary',
@@ -282,20 +282,20 @@ class IR extends CounterR5Report
                 ];
             }
             if ($this->includeParentDetails == 'True') {
-                $parentItem['Item_Name'] = $this->context->getName($this->context->getPrimaryLocale());
+                $parentItem['Item_Name'] = $currentPublication->getData('contextName', $this->context->getPrimaryLocale());
                 $parentItem['Item_ID'] = [
                     ['Type' => 'Proprietary', 'Value' => $this->platformId . ':' . $this->context->getId()]
                 ];
-                if (null !== $this->context->getData('onlineIssn')) {
+                if (null !== $currentPublication->getData('onlineIssn')) {
                     $parentItem['Item_ID'][] = [
                         'Type' => 'Online_ISSN',
-                        'Value' => $this->context->getData('onlineIssn'),
+                        'Value' => $currentPublication->getData('onlineIssn'),
                     ];
                 }
-                if (null !== $this->context->getData('printIssn')) {
+                if (null !== $currentPublication->getData('printIssn')) {
                     $parentItem['Item_ID'][] = [
                         'Type' => 'Print_ISSN',
-                        'Value' => $this->context->getData('printIssn'),
+                        'Value' => $currentPublication->getData('printIssn'),
                     ];
                 }
                 $parentItem['Data_Type'] = self::PARENT_DATA_TYPE;
@@ -469,7 +469,7 @@ class IR extends CounterR5Report
 
                     $resultRow = [
                         $currentPublication->getLocalizedTitle($submissionLocale), // Item
-                        $this->context->getData('publisherInstitution'), // Publisher
+                        $currentPublication->getData('publisherInstitution'), // Publisher
                         '', // Publisher ID
                         $this->platformName, // Platform
                     ];
@@ -504,7 +504,7 @@ class IR extends CounterR5Report
                     if ($this->includeParentDetails == 'True') {
                         array_push(
                             $resultRow,
-                            $this->context->getName($this->context->getPrimaryLocale()), // Parent_Title
+                            $currentPublication->getData('contextName', $this->context->getPrimaryLocale()), // Parent_Title
                             '', // Parent_Authors
                             '', // Parent_Publication_Date
                             '', // Parent_Article_Version
@@ -513,10 +513,10 @@ class IR extends CounterR5Report
                             $this->platformId . ':' . $this->context->getId(), // Parent_Proprietary_ID
                             '', //Parent_ISBN
                         );
-                        $printIssn = $this->context->getData('printIssn') ?? '';
+                        $printIssn = $currentPublication->getData('printIssn') ?? '';
                         array_push($resultRow, $printIssn); // Parent_Print_ISSN
 
-                        $onlineIssn = $this->context->getData('onlineIssn') ?? '';
+                        $onlineIssn = $currentPublication->getData('onlineIssn') ?? '';
                         array_push($resultRow, $onlineIssn); // Parent_Online_ISSN
 
                         array_push($resultRow, ''); // Parent_URI

@@ -19,6 +19,7 @@ use APP\facades\Repo;
 use Illuminate\Support\Facades\DB;
 use PKP\install\DowngradeNotSupportedException;
 use PKP\migration\Migration;
+use PKP\plugins\PluginRegistry;
 
 class I7527_IdentityMetadata extends Migration
 {
@@ -55,6 +56,19 @@ class I7527_IdentityMetadata extends Migration
                 if ($context->getData('onlineIssn')) {
                     $publication->setData('onlineIssn', $context->getData('onlineIssn'));
                 }
+                if ($context->getData('publisherInstitution')) {
+                    $publication->setData('publisherInstitution', $context->getData('publisherInstitution'));
+                }
+                if ($context->getData('country')) {
+                    $publication->setData('country', $context->getData('country'));
+                }
+
+                $cslPlugin = PluginRegistry::getPlugin('generic', 'citationstylelanguageplugin');
+                if ($cslPlugin->getEnabled($submission->getData('contextId'))
+                    && $cslPlugin->getSetting($submission->getData('contextId'), 'publisherLocation')) {
+                    $publication->setData('publisherLocation', $cslPlugin->getSetting($submission->getData('contextId'), 'publisherLocation'));
+                }
+
 
                 Repo::publication()->edit($publication, []);
 
@@ -79,6 +93,18 @@ class I7527_IdentityMetadata extends Migration
             }
             if ($context->getData('onlineIssn')) {
                 $issue->setData('onlineIssn', $context->getData('onlineIssn'));
+            }
+            if ($context->getData('publisherInstitution')) {
+                $issue->setData('publisherInstitution', $context->getData('publisherInstitution'));
+            }
+            if ($context->getData('country')) {
+                $issue->setData('country', $context->getData('country'));
+            }
+
+            $cslPlugin = PluginRegistry::getPlugin('generic', 'citationstylelanguageplugin');
+            if ($cslPlugin->getEnabled($issue->getData('journalId'))
+                && $cslPlugin->getSetting($issue->getData('journalId'), 'publisherLocation')) {
+                $issue->setData('publisherLocation', $cslPlugin->getSetting($issue->getData('journalId'), 'publisherLocation'));
             }
 
             Repo::issue()->edit($issue, []);

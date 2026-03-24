@@ -24,6 +24,7 @@ require(dirname(__FILE__) . '/bootstrap.php');
 
 class StampJournalIdentityMetadata extends CommandLineTool
 {
+    public int $contextId;
     public string $command;
     public array $parameters;
 
@@ -31,14 +32,16 @@ class StampJournalIdentityMetadata extends CommandLineTool
      *  use null if it should not be considered
      */
     // required fields:
-    public $locale = 'en';
-    public $title = [
+    public ?string $locale = 'en';
+    public ?array $title = [
         'en' => 'Journal Title in en',
-        'de' => 'Journal Title in de'
+        'de' => 'Journal des Tests'
     ];
-
     public $onlineIssn = '1234-1234';
     public $printIssn = '1234-1234';
+    public $country = 'CA';
+    public $publisherInstitution = 'SFU Library';
+    public $publisherLocation = 'Vancouver';
 
 
     /**
@@ -49,10 +52,11 @@ class StampJournalIdentityMetadata extends CommandLineTool
     public function __construct($argv = [])
     {
         parent::__construct($argv);
-        if (count($this->argv) < 1) {
+        if (count($this->argv) < 2) {
             $this->usage();
             exit();
         }
+        $this->contextId = (int)array_shift($this->argv);
         $this->command = array_shift($this->argv);
         $this->parameters = $this->argv;
     }
@@ -64,59 +68,98 @@ class StampJournalIdentityMetadata extends CommandLineTool
     {
         echo "Adds journal identity metadata to issues and publications.\n"
             . "Usage:\n"
-            . "\t{$this->scriptName} issue_id [...]\n"
-            . "\t{$this->scriptName} year [...]\n";
+            . "\t{$this->scriptName} [context_id] issue_id [...]\n"
+            . "\t{$this->scriptName} [context_id] year [...]\n";
     }
 
     /**
-     * Delete submission data and associated files
+     * Stamp metadata to issue and publication
      */
     public function execute()
     {
+        $issueIds = [];
         if ($this->command === 'issue_id') {
             foreach ($this->parameters as $issueId) {
-                $issue = Repo::issue()->get($issueId);
-                if (!isset($issue)) {
-                    printf("Error: Skipping {$issueId}. Unknown issue.\n");
-                    continue;
-                }
-                /** @var JournalDAO $contextDao */
-                $contextDao = Application::getContextDAO();
-                /** @var Journal $context */
-                $context = $contextDao->getById($issue->getData('journalId'));
-                $contextPrimaryLocale = $context->getPrimaryLocale();
-                $issue->setData('contextName', $this->title);
-                if (!in_array($contextPrimaryLocale, array_keys($this->title))) {
-                    $issue->setData('contextName', $this->title[$this->locale], $contextPrimaryLocale);
-                }
-                $issue->setData('onlineIssn', $this->onlineIssn);
-                $issue->setData('printIssn', $this->printIssn);
-                Repo::issue()->edit($issue, []);
+                $issueIds[] = $issueId;
+            }
+        }
 
-                $submissionIds = Repo::submission()
-                    ->getCollector()
-                    ->filterByContextIds([$issue->getData('journalId')])
-                    ->filterByIssueIds([$issueId])
-                    ->getIds()
-                    ->toArray();
-                $publications = Repo::publication()
-                    ->getCollector()
-                    ->filterByContextIds([$issue->getData('journalId')])
-                    ->filterBySubmissionIds($submissionIds)
-                    ->getMany();
-                foreach ($publications as $publication) {
-                    if ($publication->getData('issueId') != $issueId) {
-                        continue;
+        if ($this->command === 'year') {
+            $allYears = [];
+            foreach ($this->parameters as $year) {
+                if (str_contains($year, '-')) {
+                    [$start, $end] = explode('-', $year);
+                    if (strlen($start) === 4 && ctype_digit($start)
+                        && strlen($end) === 4 && ctype_digit($end)) {
+                        $years = range((int)$start, (int)$end);
+                        $missingYears = array_diff($years, $allYears);
+                        $allYears = array_merge($allYears, $missingYears);
                     }
-                    $publication->setData('contextName', $this->title);
-                    $publicationLocale = $publication->getData('locale');
-                    if (!in_array($publicationLocale, array_keys($this->title))) {
-                        $issue->setData('contextName', $this->title[$this->locale], $publicationLocale);
+                } elseif (strlen($year) === 4 && ctype_digit($year)) {
+                    if (!in_array((int)$year, $allYears)) {
+                        $allYears[] = (int)$year;
                     }
-                    $publication->setData('onlineIssn', $this->onlineIssn);
-                    $publication->setData('printIssn', $this->printIssn);
-                    Repo::publication()->edit($publication, []);
                 }
+            }
+
+            $issues = Repo::issue()->getCollector()
+                ->filterByContextIds([$this->contextId])
+                ->filterByYears($allYears)
+                ->getMany();
+
+            foreach ($issues as $issue) {
+                if (!in_array($issue->getId(), $issueIds)) {
+                    $issueIds[] = $issue->getId();
+                }
+            }
+        }
+
+        foreach ($issueIds as $issueId) {
+            $issue = Repo::issue()->get($issueId);
+            if (!isset($issue)) {
+                printf("Error: Skipping {$issueId}. Unknown issue.\n");
+                continue;
+            }
+            /** @var JournalDAO $contextDao */
+            $contextDao = Application::getContextDAO();
+            /** @var Journal $context */
+            $context = $contextDao->getById($this->contextId);
+            $contextPrimaryLocale = $context->getPrimaryLocale();
+            $issue->setData('contextName', $this->title);
+            if (!in_array($contextPrimaryLocale, array_keys($this->title))) {
+                $issue->setData('contextName', $this->title[$this->locale], $contextPrimaryLocale);
+            }
+            $issue->setData('onlineIssn', $this->onlineIssn);
+            $issue->setData('printIssn', $this->printIssn);
+            $issue->setData('country', $this->country);
+            $issue->setData('publisherInstitution', $this->publisherInstitution);
+            $issue->setData('publisherLocation', $this->publisherLocation);
+            Repo::issue()->edit($issue, []);
+
+            $submissionIds = Repo::submission()
+                ->getCollector()
+                ->filterByContextIds([$this->contextId])
+                ->filterByIssueIds([$issueId])
+                ->getIds()
+                ->toArray();
+            $publications = Repo::publication()
+                ->getCollector()
+                ->filterByContextIds([$this->contextId])
+                ->filterByIssueIds([$issueId])
+                ->filterBySubmissionIds($submissionIds)
+                ->getMany();
+            foreach ($publications as $publication) {
+                $publication->setData('contextName', $this->title);
+                $publicationLocale = $publication->getData('locale');
+                if (!in_array($publicationLocale, array_keys($this->title))) {
+                    $publication->setData('contextName', $this->title[$this->locale], $publicationLocale);
+                }
+                $publication->setData('onlineIssn', $this->onlineIssn);
+                $publication->setData('printIssn', $this->printIssn);
+                $publication->setData('country', $this->country);
+                $publication->setData('publisherInstitution', $this->publisherInstitution);
+                $publication->setData('publisherLocation', $this->publisherLocation);
+                Repo::publication()->edit($publication, []);
             }
         }
     }

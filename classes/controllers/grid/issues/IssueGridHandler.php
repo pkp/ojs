@@ -559,6 +559,10 @@ class IssueGridHandler extends GridHandler
             }
             $assignPublicIdentifiersForm->execute();
             Repo::issue()->createDoi($issue);
+
+            if (!$issue->getData('datePublished') || strtotime($issue->getData('datePublished')) > time()) {
+                $issue->stampContextIdentity();
+            }
         }
 
         if (!$request->checkCSRF()) {

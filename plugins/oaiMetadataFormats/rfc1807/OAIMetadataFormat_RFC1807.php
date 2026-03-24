@@ -53,8 +53,8 @@ class OAIMetadataFormat_RFC1807 extends OAIMetadataFormat
 
         $publicationLocale = $publication->getData('locale');
 
-        $publisher = $journal->getName($journal->getPrimaryLocale()); // Default
-        $publisherInstitution = $journal->getData('publisherInstitution');
+        $publisher = $publication->getData('contextName', $journal->getPrimaryLocale()); // Default
+        $publisherInstitution = $publication->getData('publisherInstitution');
         if (!empty($publisherInstitution)) {
             $publisher = $publisherInstitution;
         }

@@ -27,9 +27,11 @@
 			"type": "string",
 			"multilingual": true,
 			"apiSummary": true,
-			"validation": [
-				"nullable"
-			]
+			"validation": ["nullable"]
+		},
+		"country": {
+			"type": "string",
+			"validation": ["country"]
 		},
 		"coverImage": {
 			"type": "string",
@@ -46,22 +48,16 @@
 			"multilingual": true,
 			"apiSummary": true,
 			"readOnly": true,
-			"validation": [
-				"url"
-			]
+			"validation": ["url"]
 		},
 		"dateNotified": {
 			"type": "string",
-			"validation": [
-				"date:Y-m-d H:i:s"
-			]
+			"validation": ["date:Y-m-d H:i:s"]
 		},
 		"datePublished": {
 			"type": "string",
 			"apiSummary": true,
-			"validation": [
-				"date:Y-m-d H:i:s"
-			]
+			"validation": ["date:Y-m-d H:i:s"]
 		},
 		"description": {
 			"type": "string",
@@ -79,9 +75,7 @@
 			"type": "integer",
 			"description": "Reference to the DOI for this galley",
 			"writeOnly": true,
-			"validation": [
-				"nullable"
-			]
+			"validation": ["nullable"]
 		},
 		"galleys": {
 			"type": "array",
@@ -106,9 +100,7 @@
 		},
 		"lastModified": {
 			"type": "string",
-			"validation": [
-				"date:Y-m-d H:i:s"
-			]
+			"validation": ["date:Y-m-d H:i:s"]
 		},
 		"number": {
 			"type": "string",
@@ -116,26 +108,18 @@
 		},
 		"onlineIssn": {
 			"type": "string",
-			"validation": [
-				"nullable",
-				"issn"
-			]
+			"validation": ["nullable", "issn"]
 		},
 		"openAccessDate": {
 			"type": "string",
-			"validation": [
-				"date:Y-m-d H:i:s"
-			]
+			"validation": ["date:Y-m-d H:i:s"]
 		},
 		"originalStyleFileName": {
 			"type": "string"
 		},
 		"printIssn": {
 			"type": "string",
-			"validation": [
-				"nullable",
-				"issn"
-			]
+			"validation": ["nullable", "issn"]
 		},
 		"published": {
 			"type": "boolean",
@@ -144,9 +128,15 @@
 		"publishedUrl": {
 			"type": "string",
 			"apiSummary": true,
-			"validation": [
-				"url"
-			]
+			"validation": ["url"]
+		},
+		"publisherInstitution": {
+			"type": "string",
+			"validation": ["nullable"]
+		},
+		"publisherLocation": {
+			"type": "string",
+			"validation": ["nullable"]
 		},
 		"sections": {
 			"type": "array",
