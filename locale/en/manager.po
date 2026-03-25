@@ -2065,21 +2065,18 @@ msgstr "This email notifies a registered reader that the Manager has created a s
 msgid "mailable.subscriptionExpiresSoon.name"
 msgstr "Subscription Expires Soon"
 
-#, fuzzy
 msgid "mailable.subscriptionExpiresSoon.description"
 msgstr "This email is sent automatically to notify a subscriber that their subscription expires soon."
 
 msgid "mailable.subscriptionExpired.name"
 msgstr "Subscription Expired"
 
-#, fuzzy
 msgid "mailable.subscriptionExpired.description"
 msgstr "This Email sent automatically to notify a subscriber that their subscription has expired"
 
 msgid "mailable.subscriptionExpiredLast.name"
 msgstr "Subscription Expired Last"
 
-#, fuzzy
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr "This email sent automatically to notify a subscriber the second time that their subscription has expired"
 
