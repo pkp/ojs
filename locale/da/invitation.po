@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-11-20 10:16+0000\n"
+"PO-Revision-Date: 2026-03-26 07:25+0000\n"
 "Last-Translator: Alexandra Fogtmann-Schulz <alfo@kb.dk>\n"
 "Language-Team: Danish <http://translate.pkp.sfu.ca/projects/ojs/invitation/"
 "da/>\n"
@@ -82,3 +82,7 @@ msgstr ""
 
 msgid "userInvitation.roleTable.journalMasthead"
 msgstr "Tidsskriftets kolofon"
+
+msgid "invitation.orcid.acceptInvitation.message"
+msgstr ""
+"Ikke verificeret. Du kan verificere dit ORCID iD fra din profilsektion i OJS."
