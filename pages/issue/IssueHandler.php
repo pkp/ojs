@@ -42,6 +42,7 @@ use PKP\plugins\PluginRegistry;
 use PKP\publication\PKPPublication;
 use PKP\security\authorization\ContextRequiredPolicy;
 use PKP\security\Validation;
+use PKP\submission\PKPSubmission;
 
 class IssueHandler extends Handler
 {

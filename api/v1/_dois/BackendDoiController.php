@@ -82,7 +82,7 @@ class BackendDoiController extends \PKP\API\v1\_dois\PKPBackendDoiController
 
         Repo::galley()->edit($galley, ['doiId' => $doi->getId()]);
 
-        $genres = Repo::genre()->getByContextId($context->getId());
+        $genres = Repo::genre()->getByContextId($context->getId())->keyBy('genre_id');
         // Re-fetch submission and publication to reflect changes in galley
         $submission = Repo::submission()->get((int) $submissionId);
         $publication = Repo::publication()->get((int) $publicationId);
@@ -144,6 +144,6 @@ class BackendDoiController extends \PKP\API\v1\_dois\PKPBackendDoiController
 
     protected function getGenres(int $contextId): Collection
     {
-        return Repo::genre()->getByContextId($contextId);
+        return Repo::genre()->getByContextId($contextId)->keyBy('genre_id');
     }
 }
