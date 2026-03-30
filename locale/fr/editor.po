@@ -2,16 +2,15 @@
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
 # Germán Huélamo Bautista <germanhuelamo@gmail.com>, 2024.
 # François Théron <francois.theron@uvsq.fr>, 2025.
-# Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2025.
+# Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2025, 2026.
 # Stéphanie Louison <stephanie.louison@u-bordeaux-montaigne.fr>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
-"PO-Revision-Date: 2026-02-27 16:59+0000\n"
-"Last-Translator: Stéphanie Louison <stephanie.louison@u-bordeaux-montaigne."
-"fr>\n"
+"PO-Revision-Date: 2026-03-20 18:58+0000\n"
+"Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/editor/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -67,13 +66,13 @@ msgstr "Êtes-vous certain de vouloir enregistrer cette décision ?"
 
 msgid "editor.submissionReview.emailWillArchive"
 msgstr ""
-"Cette soumission sera archivée après l'envoi du courriel Avis à l'auteur, ou "
-"après avoir cliqué sur le bouton Omettre le courriel."
+"Cette soumission sera archivée après l'envoi du courriel Avis à l'auteur/"
+"ice, ou après l'activation du bouton Ne pas envoyer le courriel."
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
 msgstr ""
-"Avant d'envoyer une soumission en Édition, utiliser le lien Aviser l'auteur "
-"pour l'informer de la décision et sélectionner la version à envoyer."
+"Avant d'envoyer une soumission en Édition, utiliser le lien Aviser l'auteur/"
+"ice pour l'informer de la décision, et sélectionner la version à envoyer."
 
 msgid "editor.notifyUsers"
 msgstr "Informer les utilisateurs"
@@ -82,7 +81,7 @@ msgid "editor.notifyUsers.allReaders"
 msgstr "Tous les lecteurs ({$count} utilisateurs)"
 
 msgid "editor.notifyUsers.allAuthors"
-msgstr "Tous les auteurs publiés ({$count} utilisateurs)"
+msgstr "Tous les auteur/ices publié/es ({$count} utilisateur/ices)"
 
 msgid "editor.notifyUsers.allIndividualSubscribers"
 msgstr "Tous les abonnés individuels ({$count} utilisateurs)"
@@ -441,7 +440,8 @@ msgstr "À assigner"
 msgid "editor.article.payment.publicationFeeNotPaid"
 msgstr ""
 "Frais de publication non payés. Pour planifier la publication d'un article, "
-"aviser l'auteur qu'il doit payer les frais ou demander une dérogation."
+"aviser l'auteur/ice qu'il ou elle doit payer les frais ou demander une "
+"dérogation."
 
 msgid "editor.article.payment.requestPayment"
 msgstr "Demander le paiement"

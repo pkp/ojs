@@ -1,12 +1,12 @@
 # IgorVeha <igor.veha@gmail.com>, 2022.
 # Pavel Usenko <mail@openscience.in.ua>, 2022.
-# Petro Bilous <petrobilous@ukr.net>, 2023, 2025.
+# Petro Bilous <petrobilous@ukr.net>, 2023, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:37+00:00\n"
-"PO-Revision-Date: 2025-03-22 19:52+0000\n"
+"PO-Revision-Date: 2026-03-29 11:40+0000\n"
 "Last-Translator: Petro Bilous <petrobilous@ukr.net>\n"
 "Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "uk/>\n"
@@ -2534,16 +2534,16 @@ msgstr "Підписка закінчилася"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
-"Цей лист сповіщає передплатника про те, що його передплата закінчилась. У "
-"листі міститься URL-адреса журналу та інструкції щодо отримання доступу."
+"Цей електронний лист надсилається автоматично, щоб повідомити передплатника "
+"про закінчення строку дії його підписки"
 
 msgid "mailable.subscriptionExpiredLast.name"
 msgstr "Термін дії передплати минув востаннє"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
-"Цей лист сповіщає передплатника про те, що його передплата закінчилась. У "
-"листі міститься URL-адреса журналу та інструкції щодо отримання доступу."
+"Цей електронний лист надсилається автоматично, щоб сповістити передплатника "
+"вдруге про закінчення строку дії його підписки"
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
 msgstr "Придбайте індивідуальну підписку"
