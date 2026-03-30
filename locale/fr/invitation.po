@@ -1,2 +1,83 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2026-03-20 14:54+0000\n"
+"Last-Translator: Gwenn Dossmann Ritter <gwenn.dossmann@openedition.org>\n"
+"Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/invitation/"
+"fr/>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "acceptInvitation.accountDetails.stepLabel"
+msgstr "{$step} - Créer un compte OJS"
+
+msgid "acceptInvitation.accountDetails.stepName"
+msgstr "Créer un compte OJS"
+
+msgid "acceptInvitation.detailsReview.nextButtonLabel"
+msgstr "Accepter et continuer vers OJS"
+
+msgid "acceptInvitation.accountDetails.stepDescription"
+msgstr ""
+"Pour commencer avec OJS et accepter un nouveau rôle, vous devrez vous créer "
+"un compte. Merci d'entrer un nom d'utilisateur et un mot de passe."
+
+msgid "acceptInvitation.detailsReview.stepDescription"
+msgstr "Vérifier les informations pour commencer vos nouveaux rôles sur OJS"
+
+msgid "acceptInvitation.modal.message"
+msgstr ""
+"Félicitations pour votre nouveau rôle sur OJS ! Vous devriez avoir accès à "
+"de nouvelles options. Si vous avez besoin d'aide dans la prise en main du "
+"logiciel, veuillez cliquer sur le bouton \"Aide\" sur l'interface."
+
+msgid "acceptInvitation.modal.title"
+msgstr "Un nouveau rôle vous a été attribué"
+
+msgid "acceptInvitation.verifyOrcid.stepDescription"
+msgstr ""
+"Vous pouvez choisir de vérifier votre identifiant ORCID ou passer cette "
+"étape. Si vous passez cette étape, vous pourrez vérifier à tout moment votre "
+"identifiant ORCID depuis votre profil utilisateur."
+
+msgid "invitation.role.masthead"
+msgstr "Équipe éditoriale"
+
+msgid "invitation.wizard.pageTitleDescription"
+msgstr ""
+"Vous invitez un/e utilisateur/ice à prendre un rôle sur OJS et à figurer "
+"parmi l'équipe éditoriale"
+
+msgid "userInvitation.enterDetails.stepDescription"
+msgstr "Vous pouvez inviter ces personnes à prendre un rôle"
+
+msgid "userInvitation.modal.message"
+msgstr ""
+"Un nouveau rôle a été proposé à {$email}. Vous pouvez être informé/e de la "
+"décision de l'utilisateur/ice sur la page « Utilisateur/ices et rôles », via "
+"les notifications OJS et/ou par courriel"
+
+msgid "userInvitation.roleTable.journalMasthead"
+msgstr "Équipe éditoriale"
+
+msgid "userInvitation.search.userFound"
+msgstr "L'utilisateur/ice existe déjà dans cette revue"
+
+msgid "userInvitation.search.userNotFound"
+msgstr "L'utilisateur/ice n'a aucun rôle dans cette revue"
+
+msgid "userInvitation.searchUser.stepDescription"
+msgstr ""
+"Recherchez l'utilisateur/ice à l'aide de son courriel ou de son nom "
+"d'utilisateur ou de son identifiant ORCID. Si l'utilisateur/ice n'existe pas "
+"dans le logiciel, vous pouvez l'inviter à rejoindre votre revue en acceptant "
+"au moins un rôle. Si l'utilisateur/ice existe déjà, vous pouvez consulter "
+"ses informations et l'inviter à accepter des rôles supplémentaires."
+
+msgid "userInvitation.sendMail.stepDescription"
+msgstr ""
+"Envoyer un courriel à l'utilisateur/ice à propos du processus d'invitation, "
+"des prochaines étapes, du RGPD et de la vérification ORCID"

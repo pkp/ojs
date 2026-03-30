@@ -1,8 +1,8 @@
 # Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
-# Tigran Zargaryan <tigran@flib.sci.am>, 2022, 2023, 2025.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022, 2023, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-03-03 19:43+0000\n"
+"PO-Revision-Date: 2026-03-27 05:57+0000\n"
 "Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
 "Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/ojs/manager/hy/"
 ">\n"
@@ -2540,16 +2540,16 @@ msgstr "Բաժանորդագրության ժամկետը սպառվել է"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
-"Այս էլ․ նամակը ծանուցում է բաժանորդին, որ նրա բաժանորդագրության ժամկետը "
-"լրացել է: Այն տրամադրում է ամսագրի URL-ը և մուտքի հրահանգները:"
+"Այս էլ. նամակն ուղարկվում է ինքնաշխատ կերպով՝ բաժանորդին տեղեկացնելու համար, "
+"որ նրանց բաժանորդագրությունը լրացել է"
 
 msgid "mailable.subscriptionExpiredLast.name"
 msgstr "Բաժանորդագրության ժամկետը վերջացել է"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
-"Այս էլ․ նամակը ծանուցում է բաժանորդին, որ նրանց բաժանորդագրության ժամկետը "
-"լրացել է: Այն տրամադրում է ամսագրի URL-ը և մուտքի հրահանգները:"
+"Այս էլ. նամակն ուղարկվում է ինքնաշխատ կերպով՝ բաժանորդին երկրորդ անգամ "
+"տեղեկացնելու համար, որ նրա բաժանորդագրությունը լրացել է"
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
 msgstr "Գնեք անհատական բաժանորդագրություն"

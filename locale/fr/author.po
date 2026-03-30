@@ -1,14 +1,14 @@
 # Stefan Schneider <mail@stefan-schneider.at>, 2023.
 # Germán Huélamo Bautista <germanhuelamo@gmail.com>, 2024.
 # Stéphanie Louison <stephanie.louison@u-bordeaux-montaigne.fr>, 2026.
+# Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:23+00:00\n"
-"PO-Revision-Date: 2026-02-27 16:59+0000\n"
-"Last-Translator: Stéphanie Louison <stephanie.louison@u-bordeaux-montaigne."
-"fr>\n"
+"PO-Revision-Date: 2026-03-20 18:58+0000\n"
+"Last-Translator: Jean-Blaise Claivaz <jean-blaise.claivaz@unige.ch>\n"
 "Language-Team: French <http://translate.pkp.sfu.ca/projects/ojs/author/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgid "author.submit"
 msgstr "Nouvelle soumission"
 
 msgid "author.track"
-msgstr "Soumissions actives"
+msgstr "Contributions en cours"
 
 msgid "author.submit.submitArticle"
 msgstr "Soumettre un article"
@@ -148,20 +148,20 @@ msgstr "Veuillez sélectionner une langue de soumission."
 
 msgid "author.submit.reorderInstructions"
 msgstr ""
-"Réordonner les auteurs pour qu'ils paraissent dans l'ordre dans lequel ils "
-"seront listés lors de la publication."
+"Réordonner les auteur/ices pour qu'ils ou elles apparaissent dans le même "
+"ordre que sur publication."
 
 msgid "author.submit.reorder"
-msgstr "Réordonner le nom de l'auteur"
+msgstr "Réordonner le nom de l'auteur/ice"
 
 msgid "author.submit.selectPrincipalContact"
 msgstr "Contact principal pour la correspondance éditoriale."
 
 msgid "author.submit.addAuthor"
-msgstr "Ajouter un auteur"
+msgstr "Ajouter un/e auteur/ice"
 
 msgid "author.submit.deleteAuthor"
-msgstr "Supprimer un auteur"
+msgstr "Supprimer un/e auteur/ice"
 
 msgid "author.submit.submissionIndexingDescription"
 msgstr ""
@@ -180,11 +180,11 @@ msgstr ""
 "supplémentaires</a>."
 
 msgid "author.submit.form.authorRequired"
-msgstr "Au moins un auteur est obligatoire."
+msgstr "Au moins un/e auteur/ice est obligatoire."
 
 msgid "author.submit.form.authorRequiredFields"
 msgstr ""
-"Les prénom, nom de famille, et courriel de chaque auteur sont obligatoires."
+"Le prénom, nom de famille et courriel de chaque auteur/ice sont obligatoires."
 
 msgid "author.submit.form.titleRequired"
 msgstr "Veuillez saisir le titre de votre article."
@@ -340,13 +340,13 @@ msgstr ""
 "{$journalTitle}."
 
 msgid "author.article.uploadAuthorVersion"
-msgstr "Transférer la version de l'auteur"
+msgstr "Charger la version de l'auteur/ice"
 
 msgid "author.article.copyeditedFile"
 msgstr "Fichier révisé"
 
 msgid "author.article.authorRevisedFile"
-msgstr "Fichier de l'auteur"
+msgstr "Fichier de l'auteur/ice"
 
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr ""
