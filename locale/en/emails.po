@@ -166,6 +166,9 @@ msgstr ""
 msgid "emails.reviewResponseOverdueAuto.subject"
 msgstr "Will you be able to review this for us?"
 
+msgid "emailTemplate.variable.recipient.reviewAssignmentUrl"
+msgstr "The URL to the submission review page for the reviewer."
+
 msgid "emails.reviewResponseOverdueAuto.body"
 msgstr ""
 "<p>Dear {$recipientName},</p>"
@@ -245,6 +248,9 @@ msgstr ""
 
 msgid "emails.reviewRemind.subject"
 msgstr "A reminder to please complete your review"
+
+msgid "emails.reviewRemind.reviewAssignmentUrlPlaceholder"
+msgstr "Log in to the review here: {$reviewAssignmentUrl}"
 
 msgid "emails.reviewRemind.body"
 msgstr ""
