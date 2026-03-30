@@ -14,64 +14,25 @@
 
 namespace APP\migration\upgrade\v3_5_0;
 
-use Exception;
 use Illuminate\Support\Facades\DB;
-use PKP\db\XMLDAO;
-use PKP\facades\Locale;
-use PKP\migration\Migration;
+use PKP\migration\upgrade\v3_5_0\InstallEmailTemplates;
 
-class I10045_AddReviewRemindDefaultData extends Migration
+class I10045_AddReviewRemindDefaultData extends InstallEmailTemplates
 {
-    public function up(): void
+    protected function getEmailTemplateKeys(): array
     {
-        $templateKey = 'REVIEW_REMIND';
-
-        if (DB::table('email_templates_default_data')->where('email_key', $templateKey)->exists()) {
-            return;
-        }
-
-        $xmlDao = new XMLDAO();
-        $data = $xmlDao->parseStruct('registry/emailTemplates.xml', ['email']);
-        if (empty($data['email'])) {
-            throw new Exception('No <email> entries found in registry/emailTemplates.xml');
-        }
-
-        $locales = json_decode(DB::table('site')->pluck('installed_locales')->first());
-        $found = false;
-
-        foreach ($data['email'] as $entry) {
-            $attrs = $entry['attributes'];
-            if ($attrs['key'] !== $templateKey) {
-                continue;
-            }
-            $found = true;
-
-            // to temporarily suppress missing‑key warnings so __() fall back cleanly
-            $prevHandler = Locale::getMissingKeyHandler();
-            Locale::setMissingKeyHandler(fn (string $key) => '');
-
-            foreach ($locales as $locale) {
-                DB::table('email_templates_default_data')->insert([
-                    'email_key' => $templateKey,
-                    'locale' => $locale,
-                    'name' => __($attrs['name'], [], $locale),
-                    'subject' => __($attrs['subject'], [], $locale),
-                    'body' => __($attrs['body'], [], $locale),
-                ]);
-            }
-
-            Locale::setMissingKeyHandler($prevHandler);
-            break;
-        }
-
-        if (!$found) {
-            throw new Exception("Email template {$templateKey} not defined in registry/emailTemplates.xml");
-        }
+        return [
+            'REVIEW_REMIND',
+        ];
     }
 
     public function down(): void
     {
         DB::table('email_templates_default_data')
+            ->where('email_key', 'REVIEW_REMIND')
+            ->delete();
+
+        DB::table('email_templates')
             ->where('email_key', 'REVIEW_REMIND')
             ->delete();
     }

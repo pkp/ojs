@@ -249,6 +249,9 @@ msgstr ""
 msgid "emails.reviewRemind.subject"
 msgstr "A reminder to please complete your review"
 
+msgid "emails.reviewRemind.reviewAssignmentUrlPlaceholder"
+msgstr "Log in to the review here: {$reviewAssignmentUrl}"
+
 msgid "emails.reviewRemind.body"
 msgstr ""
 "<p>Dear {$recipientName},</p>"
