@@ -24,125 +24,30 @@ class I7725_DecisionConstantsUpdate extends \PKP\migration\upgrade\v3_4_0\I7725_
      */
     public function getDecisionMappings(): array
     {
+        // stage_id filtering removed: all old OJS 3.3 decision values are unique,
+        // and the parent class's updated_at tracking mechanism prevents collisions
+        // between sequential mappings (e.g., 1→2 then 2→4).
+        // OJS 3.3 had no validation on which decisions could be recorded at which
+        // stages, so decisions can exist at any stage in legacy data.
+        // See https://github.com/pkp/pkp-lib/issues/12357
         return [
-            // \PKP\decision\Decision::ACCEPT
-            [
-                'stage_id' => [WORKFLOW_STAGE_ID_EDITING],
-                'current_value' => 1,
-                'updated_value' => 2,
-            ],
-
-            // \PKP\decision\Decision::EXTERNAL_REVIEW
-            [
-                'stage_id' => [WORKFLOW_STAGE_ID_EXTERNAL_REVIEW],
-                'current_value' => 8,
-                'updated_value' => 3,
-            ],
-
-            // \PKP\decision\Decision::PENDING_REVISIONS
-            [
-                'stage_id' => [WORKFLOW_STAGE_ID_EXTERNAL_REVIEW],
-                'current_value' => 2,
-                'updated_value' => 4,
-            ],
-
-            // \PKP\decision\Decision::RESUBMIT
-            [
-                'stage_id' => [WORKFLOW_STAGE_ID_EXTERNAL_REVIEW],
-                'current_value' => 3,
-                'updated_value' => 5,
-            ],
-
-            // \PKP\decision\Decision::DECLINE
-            [
-                'stage_id' => [WORKFLOW_STAGE_ID_EXTERNAL_REVIEW],
-                'current_value' => 4,
-                'updated_value' => 6,
-            ],
-
-            // \PKP\decision\Decision::INITIAL_DECLINE
-            [
-                'stage_id' => [WORKFLOW_STAGE_ID_SUBMISSION],
-                'current_value' => 9,
-                'updated_value' => 8,
-            ],
-
-            // \PKP\decision\Decision::RECOMMEND_ACCEPT
-            [
-                'stage_id' => [WORKFLOW_STAGE_ID_EXTERNAL_REVIEW],
-                'current_value' => 11,
-                'updated_value' => 9,
-            ],
-
-            // \PKP\decision\Decision::RECOMMEND_PENDING_REVISIONS
-            [
-                'stage_id' => [WORKFLOW_STAGE_ID_EXTERNAL_REVIEW],
-                'current_value' => 12,
-                'updated_value' => 10,
-            ],
-
-            // \PKP\decision\Decision::RECOMMEND_RESUBMIT
-            [
-                'stage_id' => [WORKFLOW_STAGE_ID_EXTERNAL_REVIEW],
-                'current_value' => 13,
-                'updated_value' => 11,
-            ],
-
-            // \PKP\decision\Decision::RECOMMEND_DECLINE
-            [
-                'stage_id' => [WORKFLOW_STAGE_ID_EXTERNAL_REVIEW],
-                'current_value' => 14,
-                'updated_value' => 12,
-            ],
-
-            // \PKP\decision\Decision::NEW_EXTERNAL_ROUND
-            [
-                'stage_id' => [WORKFLOW_STAGE_ID_EXTERNAL_REVIEW],
-                'current_value' => 16,
-                'updated_value' => 14,
-            ],
-
-            // \PKP\decision\Decision::REVERT_DECLINE
-            [
-                'stage_id' => [WORKFLOW_STAGE_ID_EXTERNAL_REVIEW],
-                'current_value' => 17,
-                'updated_value' => 15,
-            ],
-
-            // \PKP\decision\Decision::REVERT_INITIAL_DECLINE
-            [
-                'stage_id' => [WORKFLOW_STAGE_ID_SUBMISSION],
-                'current_value' => 18,
-                'updated_value' => 16
-            ],
-
-            // \PKP\decision\Decision::SKIP_EXTERNAL_REVIEW
-            [
-                'stage_id' => [WORKFLOW_STAGE_ID_EDITING],
-                'current_value' => 19,
-                'updated_value' => 17,
-            ],
-
-            // \PKP\decision\Decision::BACK_FROM_PRODUCTION
-            [
-                'stage_id' => [WORKFLOW_STAGE_ID_EDITING],
-                'current_value' => 31,
-                'updated_value' => 29,
-            ],
-
-            // \PKP\decision\Decision::BACK_FROM_COPYEDITING
-            [
-                'stage_id' => [WORKFLOW_STAGE_ID_SUBMISSION, WORKFLOW_STAGE_ID_EXTERNAL_REVIEW],
-                'current_value' => 32,
-                'updated_value' => 30,
-            ],
-
-            // \PKP\decision\Decision::CANCEL_REVIEW_ROUND
-            [
-                'stage_id' => [WORKFLOW_STAGE_ID_SUBMISSION, WORKFLOW_STAGE_ID_EXTERNAL_REVIEW],
-                'current_value' => 33,
-                'updated_value' => 31,
-            ],
+            ['current_value' => 1,  'updated_value' => 2],   // ACCEPT
+            ['current_value' => 8,  'updated_value' => 3],   // EXTERNAL_REVIEW
+            ['current_value' => 2,  'updated_value' => 4],   // PENDING_REVISIONS
+            ['current_value' => 3,  'updated_value' => 5],   // RESUBMIT
+            ['current_value' => 4,  'updated_value' => 6],   // DECLINE
+            ['current_value' => 9,  'updated_value' => 8],   // INITIAL_DECLINE
+            ['current_value' => 11, 'updated_value' => 9],   // RECOMMEND_ACCEPT
+            ['current_value' => 12, 'updated_value' => 10],  // RECOMMEND_PENDING_REVISIONS
+            ['current_value' => 13, 'updated_value' => 11],  // RECOMMEND_RESUBMIT
+            ['current_value' => 14, 'updated_value' => 12],  // RECOMMEND_DECLINE
+            ['current_value' => 16, 'updated_value' => 14],  // NEW_EXTERNAL_ROUND
+            ['current_value' => 17, 'updated_value' => 15],  // REVERT_DECLINE
+            ['current_value' => 18, 'updated_value' => 16],  // REVERT_INITIAL_DECLINE
+            ['current_value' => 19, 'updated_value' => 17],  // SKIP_EXTERNAL_REVIEW
+            ['current_value' => 31, 'updated_value' => 29],  // BACK_FROM_PRODUCTION
+            ['current_value' => 32, 'updated_value' => 30],  // BACK_FROM_COPYEDITING
+            ['current_value' => 33, 'updated_value' => 31],  // CANCEL_REVIEW_ROUND
         ];
     }
 }
