@@ -29,12 +29,24 @@ use PKP\orcid\enums\OrcidDepositType;
 use PKP\orcid\OrcidManager;
 use PKP\submission\reviewAssignment\ReviewAssignment;
 
-class DepositOrcidReview extends BaseJob implements ShouldBeUnique
+class DepositOrcidReview extends BaseJob implements ShouldBeUnique, \PKP\queue\ContextAwareJob
 {
     public function __construct(
         private int $reviewAssignmentId
     ) {
         parent::__construct();
+    }
+
+    /**
+     * Get the context ID for this job.
+     */
+    public function getContextId(): int
+    {
+        $reviewAssignment = Repo::reviewAssignment()->get($this->reviewAssignmentId);
+
+        return Repo::submission()
+            ->get($reviewAssignment->getData('submissionId'))
+            ->getData('contextId');
     }
 
     /**
