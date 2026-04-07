@@ -569,6 +569,10 @@ job_runner_max_execution_time = 30
 ; memory_limit the server has configured for PHP.
 job_runner_max_memory = 80
 
+; Prevent multiple web requests from running JobRunner simultaneously.
+; Recommended On for shared/weak hosting. Dedicated servers can disable for throughput.
+job_runner_cross_request_lock = On
+
 ; Controls whether queued jobs should be processed by the task scheduler.
 ; This setting has no effect when the job_runner and the [schedule].task_runner are enabled,
 ; on this situation the jobs will be processed solely by the job runner.
