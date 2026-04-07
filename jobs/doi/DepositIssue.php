@@ -22,7 +22,7 @@ use PKP\context\Context;
 use PKP\job\exceptions\JobException;
 use PKP\jobs\BaseJob;
 
-class DepositIssue extends BaseJob
+class DepositIssue extends BaseJob implements \PKP\queue\ContextAwareJob
 {
     protected int $issueId;
 
@@ -44,6 +44,14 @@ class DepositIssue extends BaseJob
         $this->issueId = $issueId;
         $this->context = $context;
         $this->agency = $agency;
+    }
+
+    /**
+     * Get the context ID for this job.
+     */
+    public function getContextId(): int
+    {
+        return $this->context->getId();
     }
 
     public function handle()
