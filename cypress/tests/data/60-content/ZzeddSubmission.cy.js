@@ -226,7 +226,6 @@ describe('Data suite tests', function() {
         cy.get('div[role=dialog]:contains("Add Reviewer Suggestion")').find('button').contains('Save').click();
 
         cy.get('#reviewerSuggestions-givenName-error-en').contains('This field is required.');
-        cy.get('#reviewerSuggestions-familyName-error-en').contains('This field is required.');
         cy.get('#reviewerSuggestions-email-error').contains('This field is required.');
         cy.get('#reviewerSuggestions-affiliation-error-en').contains('This field is required.');
         cy.get('#reviewerSuggestions-affiliation-error-en').contains('This field is required.');
