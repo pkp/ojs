@@ -324,6 +324,10 @@ allow_plugin_install = on
 ; BEWARE: You should not extend the gallery with custom plugin gallery listing that collide with the official ones!
 ;plugin_gallery_urls = '["https://pkp.sfu.ca/ojs/xml/plugins.xml"]'
 
+; When set to a value greater than 0, admins must re-authenticate to access the administration area.
+; The authentication remains valid for the specified number of minutes before re-authentication is required again.
+; Set to 0 to disable re-authentication.
+;password_timeout = 0
 
 ;;;;;;;;;;;;;;;;;;
 ; Email Settings ;
