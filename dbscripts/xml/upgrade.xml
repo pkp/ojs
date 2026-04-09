@@ -182,6 +182,10 @@
 		<migration class="APP\migration\upgrade\v3_4_0\InstallEmailTemplates"/>
 	</upgrade>
 
+	<upgrade minversion="3.1.0.0" maxversion="3.5.0.3">
+		<migration class="PKP\migration\upgrade\v3_5_0\I11800_AddUserRoleMastheadUpdateEmail"/>
+	</upgrade>
+
 	<upgrade minversion="3.5.0.0" maxversion="3.5.0.1">
 		<migration class="PKP\migration\upgrade\v3_5_0\I11603_AddMissingUserRoleAssignmentInvitationEmail"/>
 	</upgrade>
@@ -227,6 +231,10 @@
         <migration class="PKP\migration\upgrade\v3_6_0\I12307_ReviewRoundRequestAuthorResponseMail" />
 		<code function="rebuildSearchIndex" />
 		<note file="docs/release-notes/README-3.6.0" />
+	</upgrade>
+
+	<upgrade minversion="3.5.0.0" maxversion="3.5.9.9">
+		<migration class="PKP\migration\upgrade\v3_5_0\I10962_UpdateEmailTemplateVariables"/>
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
