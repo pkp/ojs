@@ -179,23 +179,11 @@
 	</upgrade>
 
 	<upgrade minversion="3.5.0.0" maxversion="3.5.0.9">
-		<migration class="PKP\migration\upgrade\v3_5_0\I11800_AddUserRoleMastheadUpdateEmail"/>
-	</upgrade>
-
-	<upgrade minversion="3.5.0.0" maxversion="3.5.0.1">
-		<migration class="PKP\migration\upgrade\v3_5_0\I11603_AddMissingUserRoleAssignmentInvitationEmail"/>
-	</upgrade>
-
-	<upgrade minversion="3.5.0.0" maxversion="3.5.0.2">
-		<migration class="PKP\migration\upgrade\v3_5_0\I11673_AddMissingApprovalToReviewerSuggestion"/>
-	</upgrade>
-
-	<upgrade minversion="3.5.0.0" maxversion="3.5.0.3">
-		<migration class="APP\migration\upgrade\v3_5_0\I12357_FixDecisionConstantsMissedStageId"/>
-	</upgrade>
-
-	<upgrade minversion="3.5.0.0" maxversion="3.5.9.9">
 		<migration class="PKP\migration\upgrade\v3_5_0\I10962_UpdateEmailTemplateVariables"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I11603_AddMissingUserRoleAssignmentInvitationEmail"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I11673_AddMissingApprovalToReviewerSuggestion"/>
+		<migration class="APP\migration\upgrade\v3_5_0\I12357_FixDecisionConstantsMissedStageId"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I11800_AddUserRoleMastheadUpdateEmail"/>
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
