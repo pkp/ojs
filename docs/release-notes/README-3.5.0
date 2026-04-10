@@ -1,8 +1,8 @@
 OJS 3.5.0 Release Notes
-Git tag: 3_5_0-3
+Git tag: 3_5_0-4
 
-Release date: December 19, 2025
-===============================
+Release date: April 10, 2026
+============================
 
 Configuration Changes
 ---------------------
@@ -28,6 +28,63 @@ In [queues]:
 In [cache]:
     - default (default value: 'file'). Can be either 'file' or 'opcache' to indicate which Laravel cache should be used.
     - path (default value: 'cache/opcache'). Use to specify a path for cache storage when using 'file' or 'opcache' drivers.
+
+3.5.0-4 Build
+-------------
+    pkp/credit#4: Update credit-translation to lastest version
+    pkp/pkp-lib#10463: [OJS 3.4] The email "A new submission needs an editor to be assigned" is not available in the email template list
+    pkp/pkp-lib#10496: Null pointer in the Editorial Reminder if the user has blocked notifications
+    pkp/pkp-lib#10862: Context menu of TinyMCE is overriding the default context menu
+    pkp/pkp-lib#11557: Centralise the publication's object metadata structure
+    pkp/pkp-lib#11645: Upgrade process interrupted due to invalid context IDs at the access_keys table
+    pkp/pkp-lib#11758: [Upgrade to >= 3.4] | I8866_DispatchRegionCodesFixingJobs - FixRegionCodes Job
+    pkp/pkp-lib#11760: When errors occur while submitting a review, the way OJS displays errors is misleading.
+    pkp/pkp-lib#11800: Allow manager to edit user setting Appear on the masthead
+    pkp/pkp-lib#11803: User invitation email modifications are lost
+    pkp/pkp-lib#11850: [Select Reviewer] | Workflow Section - Selecting a new Reviewer modal, affiliation and orcid do not wrap
+    pkp/pkp-lib#11894: [Front-office] | Issue galley, download links displays red Icon with closed lock but the file is downloadable
+    pkp/pkp-lib#12024: [Eloquent] | Saving arrays to settings tables with Eloquent breaks the values
+    pkp/pkp-lib#12050: Custom API endpoint for plugins
+    pkp/pkp-lib#12060: [Discussion Boards] | Any Workflow Section - Cannot reorder discussions
+    pkp/pkp-lib#12089: [JATS Template] | Handle missing Journal Abbreviation in JATS export
+    pkp/pkp-lib#12134: [UI Library] | Unable to modify format options in FieldRichText.vue (one line rich text field)
+    pkp/pkp-lib#12140: Back port decision lost solution for 3.4 which introduced for 3.5/main upgrade
+    pkp/pkp-lib#12154: Check ROR API response handling
+    pkp/pkp-lib#12173: [Citations] | Publication Metadata - references fields, cannot be saved when empty
+    pkp/pkp-lib#12182: Crossref plugin uppercases names when it should not
+    pkp/pkp-lib#12188: Get the latest ROR registry version in a different way
+    pkp/pkp-lib#12189: Update counterBots submodule
+    pkp/pkp-lib#12265: PHP fatal error when downloading review
+    pkp/pkp-lib#12273: [UI Navigation] | Review Workflow - Previous Review round, several navigation elements are unclickable
+    pkp/pkp-lib#12287: [SUSHI API] | JSON and TSV response
+    pkp/pkp-lib#12291: Hooks | $issueId parameter missing from call to IssueAction::subscribedDomain
+    pkp/pkp-lib#12293: Improve submission list performance
+    pkp/pkp-lib#12309: Authors cannot access workflow on some servers
+    pkp/pkp-lib#12332: Account Invites - Microsoft auto declines invitations
+    pkp/pkp-lib#12349: [Editorial Workflow] | Galley file allow unintended revision upload of past files
+    pkp/pkp-lib#12360: [Users] | Editing user profile - Identity, Family name is set to uppercase
+    pkp/pkp-lib#12369: Fatal error on missing function withJson when viewing statistics
+    pkp/pkp-lib#12374: [Users & Roles] | Invite new user - Email link redirect new user, with Site Access options setting for users who must be registered enabled user cannot be registered
+    pkp/pkp-lib#12396: VersionCheck::checkIfNewVersionExists() fires HTTP request even when show_upgrade_warning is Off
+    pkp/pkp-lib#12404: [Reader-ui] | iFrames on content pages get sandboxed by tinyMCE
+    pkp/pkp-lib#12436: [Privacy Consent] | Reviewer's Page, Privacy Consent checkbox hidden by browser content blockers (Brave Shields, Safari)
+    pkp/pkp-lib#12446: Improve ROR dataset update: check schema version, use JSON, improve error reporting, remove temporary table, schedule monthly
+    pkp/pkp-lib#12453: [Metadata Defaults] | Enhancements to our current metadata defaults (Part 1 - Easy wins)
+    pkp/pkp-lib#12468: Allow for plugin gallery source to be extended/overridden
+    pkp/pkp-lib#12476: [ORCID] | Auth tokens not transfered from user to author
+    pkp/pkp-lib#12484: pkp/pkp-lib#12374 Fix issue preventing users from accepting invitations while logged out by taslangraham
+    pkp/pkp-lib#12489: [Plugins] Provide good example/docs for Plugin Settings in Vue.js + API
+    pkp/pkp-lib#12493: [Reviewer Suggestion] Locales to render & validate form does not match
+    pkp/pkp-lib#12496: pkp/pkp-lib#11760 Add client side validations for reviewer custom forms by nibou230
+    pkp/pkp-lib#12497: [Main Feature] | Workflow Section - Recommend only option
+    pkp/pkp-lib#12523: Few type fixes
+    pkp/pkp-lib#12532: Enhancement of Queue JobRunner
+    pkp/pkp-lib#12538: [User Invitation] | Inviting user sets NULL for empty fields and causes error on change of site primary locale
+    pkp/pkp-lib#12540: [Forms] Improve multilingual behaviour of old & current forms
+    pkp/pkp-lib#5836: Long filenames with no spaces push content off of editorial history modal
+    pkp/pkp-lib#6682: Enabling Clockss and Lockss does not add license in About the Journal page
+    pkp/pkp-lib#7161: [Website Settings] | Appearance, Make obtaining Journal Style Sheet easier
+
 
 3.5.0-3 Build
 -------------
