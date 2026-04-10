@@ -1,2 +1,49 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2026-04-08 13:02+0000\n"
+"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
+"Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
+"invitation/nb_NO/>\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "acceptInvitation.accountDetails.stepDescription"
+msgstr ""
+"For å komme i gang med OJS og godta den nye rollen trenger du en konto hos "
+"oss. Skriv inn brukernavn og passord."
+
+msgid "acceptInvitation.accountDetails.stepLabel"
+msgstr "{$step} - Opprett OJS-konto"
+
+msgid "acceptInvitation.accountDetails.stepName"
+msgstr "Opprett OJS-konto"
+
+msgid "acceptInvitation.detailsReview.nextButtonLabel"
+msgstr "Godta og fortsett til OJS"
+
+msgid "acceptInvitation.detailsReview.stepDescription"
+msgstr "Se over detaljene for å komme i gang med dine nye roller i OJS"
+
+msgid "acceptInvitation.modal.message"
+msgstr ""
+"Gratulerer med den nye rollen din i OJS! Du har nå kanskje tilgang til nye "
+"funksjoner. Hvis du trenger hjelp til å forstå systemet, kan du klikke på "
+"«Hjelp»-knappen for veiledning."
+
+msgid "acceptInvitation.modal.title"
+msgstr "Du har fått en ny rolle i OJS"
+
+msgid "acceptInvitation.verifyOrcid.stepDescription"
+msgstr ""
+"Du kan velge å bekrefte din ORCID iD, eller hoppe over det. Hvis du velger å "
+"hoppe over det nå, kan du bekrefte din ORCID iD fra profilen din i OJS senere"
+
+msgid "invitation.orcid.acceptInvitation.message"
+msgstr "Ikke bekreftet. Du kan bekrefte din ORCID iD fra profilen din i OJS."
+
+msgid "invitation.role.masthead"
+msgstr "Tidsskriftets kolofonside"
