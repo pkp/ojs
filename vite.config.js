@@ -56,6 +56,10 @@ export default defineConfig(({mode}) => {
 						src: 'node_modules/chart.js/dist/**/*.umd.js',
 						dest: 'js/build/chart.js',
 					},
+					{
+						src: 'node_modules/mathjax/**/*',
+						dest: 'js/build/mathjax',
+					},
 				],
 			}),
 		],
