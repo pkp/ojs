@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-04-08 13:02+0000\n"
+"PO-Revision-Date: 2026-04-15 15:52+0000\n"
 "Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "invitation/nb_NO/>\n"
@@ -47,3 +47,39 @@ msgstr "Ikke bekreftet. Du kan bekrefte din ORCID iD fra profilen din i OJS."
 
 msgid "invitation.role.masthead"
 msgstr "Tidsskriftets kolofonside"
+
+msgid "invitation.wizard.pageTitleDescription"
+msgstr ""
+"Du inviteres til å få en rolle på tidsskriftsplattformen og samtidig bli "
+"vist på tidsskriftets kolofonside"
+
+msgid "userInvitation.enterDetails.stepDescription"
+msgstr "Du kan invitere dem til å ta en rolle på tidsskriftsplattformen"
+
+msgid "userInvitation.modal.message"
+msgstr ""
+"{$email} har blitt invitert til en ny rolle på tidsskriftsplattformen. Du "
+"kan sjekke status om brukerens valg på siden om Brukere og roller, i dine "
+"OJS-varsler og/eller din e-post"
+
+msgid "userInvitation.roleTable.journalMasthead"
+msgstr "Tidsskriftets kolofonside"
+
+msgid "userInvitation.search.userFound"
+msgstr "Brukeren finnes allerede hos tidsskriftet"
+
+msgid "userInvitation.search.userNotFound"
+msgstr "Brukeren har ikke en rolle i dette tidsskriftet"
+
+msgid "userInvitation.searchUser.stepDescription"
+msgstr ""
+"Søk etter brukeren ved å bruke deres e-post adresse, brukernavn eller ORCID "
+"iD. Skriv inn minst en av disse for å starte. Hvis brukeren ikke finnes, kan "
+"du invitere vedkommende til å ta en rolle og bli en del av tidsskriftet. "
+"Hvis brukeren allerede finnes i systemet, kan du se brukerinformasjon og "
+"invitere vedkommende til å ta på seg flere roller."
+
+msgid "userInvitation.sendMail.stepDescription"
+msgstr ""
+"Send brukeren en e-post for å informere om invitasjonen, neste steg, "
+"tidsskriftets GDPR-policy og ORCiD verifisering"
