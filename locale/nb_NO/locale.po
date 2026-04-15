@@ -1,16 +1,17 @@
 # Tormod Strømme <tormod.stromme@uib.no>, 2022.
 # Aysa Ekanger <aysa.ekanger@uit.no>, 2023, 2024.
 # Johanna Skaug <johanna.skaug@ub.uio.no>, 2024.
+# Eirik Hanssen <eirikh@oslomet.no>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2024-09-16 08:02+0000\n"
-"Last-Translator: Johanna Skaug <johanna.skaug@ub.uio.no>\n"
+"PO-Revision-Date: 2026-04-15 13:23+0000\n"
+"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/nb_NO/>\n"
-"Language: nb\n"
+"Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2543,3 +2544,6 @@ msgstr "Velg hvordan du ønsker å ordne artikler i denne kategorien."
 
 #~ msgid "category.category"
 #~ msgstr "Kategorier"
+
+msgid "search.journal"
+msgstr "Etter tidsskrift"
