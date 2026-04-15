@@ -171,7 +171,7 @@ describe('Submission Wizard', function() {
             });
         cy.wait(1500); // Let modal render. Fixes console error, maybe with TinyMCE init
         cy.get('label:contains("Items can only be submitted by Editors and Section Editors.")').click();
-        cy.get('label:contains("Deactivate this section")').click();
+        cy.get('label:contains("Mark this section as inactive")').click();
         cy.get('[role="dialog"] button:contains("Save")').click();
         cy.get('[role="dialog"]').should('not.exist');
 
