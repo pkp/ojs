@@ -25,7 +25,7 @@ use PKP\job\exceptions\JobException;
 use PKP\jobs\BaseJob;
 use PKP\plugins\PluginRegistry;
 
-class DOAJDelete extends BaseJob
+class DOAJDelete extends BaseJob implements \PKP\queue\ContextAwareJob
 {
     public function __construct(
         protected string $doajId,
@@ -34,6 +34,14 @@ class DOAJDelete extends BaseJob
         protected string $jsonString
     ) {
         parent::__construct();
+    }
+
+    /**
+     * Get the context ID for this job.
+     */
+    public function getContextId(): int
+    {
+        return $this->context->getId();
     }
 
     public function handle()
