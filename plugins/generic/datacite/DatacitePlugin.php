@@ -135,6 +135,11 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         return ['temporaryFileId' => $temporaryFileId, 'xmlErrors' => $xmlErrors];
     }
 
+    public function exportPeerReviews(array $reviewAssignments, Context $context): array
+    {
+        return [];
+    }
+
     /**
      * @param \APP\submission\Submission[] $submissions
      */
