@@ -64,6 +64,7 @@ export default defineConfig(({mode}) => {
 				],
 			}),
 		],
+		assetsInclude: ['**/*.wasm'],
 		publicDir: false,
 		resolve: {
 			alias: {

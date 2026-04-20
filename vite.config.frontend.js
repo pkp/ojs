@@ -18,6 +18,7 @@ export default defineConfig(({mode}) => {
 				isProduction: mode === 'production',
 			}),
 		],
+		assetsInclude: ['**/*.wasm'],
 		publicDir: false,
 		resolve: {
 			alias: {
