@@ -126,6 +126,9 @@ export default defineConfig(({mode}) => {
 						if (/\.(css)$/.test(assetInfo.name)) {
 							return 'styles/build.css';
 						}
+						if (/\.wasm$/.test(assetInfo.name)) {
+							return `js/build/[name].${extType}`;
+						}
 						return `[name].${extType}`;
 					}, // Provide global variables to use in the UMD build
 					// for externalized deps
