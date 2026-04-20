@@ -31,6 +31,7 @@ export default defineConfig(({mode}) => {
 					compilerOptions: {
 						// to keep vue2 behaviour where spaces between html tags are preserved
 						whitespace: 'preserve',
+						isCustomElement: (tag) => tag.startsWith('sciflow-'),
 					},
 				},
 			}),
@@ -69,10 +70,6 @@ export default defineConfig(({mode}) => {
 				'@': path.resolve(__dirname, 'lib/ui-library/src'),
 				// use vue version with template compiler
 				vue: 'vue/dist/vue.esm-bundler.js',
-				'@sciflow/editor-start/dist/bundle/sciflow-editor.js': path.resolve(
-					__dirname,
-					'node_modules/@sciflow/editor-start/dist/bundle/sciflow-editor.js',
-				),
 			},
 			// https://github.com/vitejs/vite/discussions/15906
 			dedupe: [
