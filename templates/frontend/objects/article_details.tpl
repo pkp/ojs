@@ -1,8 +1,8 @@
 {**
  * templates/frontend/objects/article_details.tpl
  *
- * Copyright (c) 2014-2025 Simon Fraser University
- * Copyright (c) 2003-2025 John Willinsky
+ * Copyright (c) 2014-2026 Simon Fraser University
+ * Copyright (c) 2003-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @brief View of an Article which displays all details about the article.
@@ -129,7 +129,7 @@
 										{$contributorRoleName|escape}
 									</span>
 									{if !$contributorRoleName@last}{translate key="common.commaListSeparator"}{/if}
-									{strip}
+									{/strip}
 								{/foreach}
 							</span>
 							{if $author->getData('orcid')}
@@ -190,7 +190,7 @@
 				</h2>
 				<span class="value">
 					{foreach name="keywords" from=$publication->getLocalizedData('keywords') item="keyword"}
-						{$keyword.name|escape}{if !$smarty.foreach.keywords.last}{translate key="common.commaListSeparator"}{/if}					
+						{$keyword.name|escape}{if !$smarty.foreach.keywords.last}{translate key="common.commaListSeparator"}{/if}
 					{/foreach}
 				</span>
 			</section>
@@ -417,9 +417,8 @@
 			{/if}
 
 			{* Issue article appears in *}
-			{if $issue || $section || $categories}
+			{if $issue || $section || $categories || $publication->getData('articleNumber')}
 				<div class="item issue">
-
 					{if $issue}
 						<section class="sub_item">
 							<h2 class="label">
@@ -455,6 +454,17 @@
 										<li><a href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page="catalog" op="category" path=$category->getPath()|escape}">{$category->getLocalizedTitle()|escape}</a></li>
 									{/foreach}
 								</ul>
+							</div>
+						</section>
+					{/if}
+
+					{if $publication->getData('articleNumber')}
+						<section class="sub_item">
+							<h2 class="label">
+								{translate key="submission.articleNumber"}
+							</h2>
+							<div class="value">
+								{$publication->getData('articleNumber')|escape}
 							</div>
 						</section>
 					{/if}

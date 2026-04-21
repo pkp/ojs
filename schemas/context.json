@@ -62,6 +62,12 @@
 				"nullable"
 			]
 		},
+		"enableArticleNumber": {
+			"type": "boolean",
+			"validation": [
+				"nullable"
+			]
+		},
 		"enableOpenAccessNotification": {
 			"type": "boolean",
 			"validation": [
