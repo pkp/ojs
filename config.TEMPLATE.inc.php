@@ -49,8 +49,9 @@ session_cookie_name = OJSSID
 ; Session cookie path; if not specified, defaults to the detected base path
 ; session_cookie_path = /
 
-; Number of days to save login cookie for if user selects to remember
-; (set to 0 to force expiration at end of current session)
+; Number of days a session remains valid while idle (minimum 1 day)
+; Values less than 1 are clamped to 1 day
+; To expire sessions when the browser closes, use session_expire_on_close in [security]
 session_lifetime = 30
 
 ; SameSite configuration for the cookie, see possible values and explanations
@@ -289,7 +290,9 @@ session_check_ip = On
 ; migration of old password hashes.
 encryption = sha1
 
-; When set to On, expire cookie-based sessions upon closing the browser window.
+; When set to On, the session cookie expires when the browser is closed.
+; The server-side session data still persists for session_lifetime days
+; and is cleaned up by garbage collection.
 session_expire_on_close = Off
 
 ; The unique salt to use for generating password reset hashes
