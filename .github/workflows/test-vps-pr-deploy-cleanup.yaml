@@ -3,8 +3,6 @@ name: Test VPS Cleanup PR Deployment
 on:
   pull_request_target:
     types: [closed]
-    branches:
-      - main
   workflow_dispatch:
     inputs:
       pr_number:
