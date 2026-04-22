@@ -4,7 +4,7 @@
 # "Dauren S." <danek_ok@mail.ru>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-04-22 12:41+0000\n"
+"PO-Revision-Date: 2026-04-22 14:06+0000\n"
 "Last-Translator: \"Dauren S.\" <danek_ok@mail.ru>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "kk/>\n"
@@ -395,6 +395,9 @@ msgstr ""
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
+"Бұл журналға ұсыным жіберуге рұқсатыңыз жоқ, себебі журналдың барлық "
+"бөлімдеріне ұсыным қабылдау тоқтатылған немесе шектелген. Егер бұл қате деп "
+"санасаңыз, <a href='mailto:{$email}'>{$name}</a> мекенжайына хабарласыңыз."
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
