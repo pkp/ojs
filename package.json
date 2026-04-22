@@ -16,6 +16,14 @@
     "lint": "eslint --fix ./js/load.js ./lib/pkp/js/load.js ./lib/pkp/js/usage-stats-chart.js ./lib/pkp/js/classes/VueRegistry.js",
     "format": "prettier --write ./js/load.js ./lib/pkp/js/load.js ./lib/pkp/js/usage-stats-chart.js ./lib/pkp/js/classes/VueRegistry.js",
     "php-fix": "php lib/pkp/lib/vendor/bin/php-cs-fixer fix --config .php-cs-fixer.php --allow-risky=yes",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:debug": "PWDEBUG=1 playwright test",
+    "test:e2e:setup": "playwright test --project=setup",
+    "test:e2e:ojs": "playwright test --project=ojs",
+    "test:e2e:install": "playwright install --with-deps chromium",
+    "test:e2e:reset": "APPLICATION_ENV=test php lib/pkp/tools/resetTest.php",
+    "test:e2e:serve": "APPLICATION_ENV=test php -S 127.0.0.1:8000 -t .",
     "prepare": "husky install",
     "postinstall": "copyfiles -f node_modules/swiper/swiper-bundle*.{js,css} plugins/themes/default/js/lib/swiper && copyfiles -f node_modules/altcha/dist/altcha.i18n.js lib/pkp/js/lib/altcha"
   },
@@ -62,6 +70,7 @@
     "vite": "^8.0.0-beta.14"
   },
   "devDependencies": {
+    "@playwright/test": "^1.49.0",
     "@rushstack/eslint-patch": "^1.11.0",
     "@vitejs/plugin-vue": "^6.0.4",
     "@vue/eslint-config-prettier": "^8.0.0",
@@ -72,6 +81,7 @@
     "cypress-iframe": "^1.0.1",
     "cypress-wait-until": "^2.0.1",
     "dompurify": "^3.2.5",
+    "dotenv": "^16.4.5",
     "eslint": "^8.57.1",
     "eslint-plugin-vue": "^9.33.0",
     "google-closure-compiler-java": "^20200719.0.0",
