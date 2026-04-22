@@ -29,12 +29,19 @@
  *   OJS_ADMIN_EMAIL        default: 'admin@test.local'
  */
 
-require(dirname(__FILE__) . '/bootstrap.php');
-
+// Refuse early — before the bootstrap chain fires the
+// APPLICATION_ENV=test config-redirect hook. The caller is responsible
+// for ensuring config.test.inc.php exists (the Playwright webServer
+// command seeds it from config.TEMPLATE.inc.php on first start). If you
+// run this tool outside Playwright, copy the template yourself first:
+//
+//   cp config.TEMPLATE.inc.php config.test.inc.php
 if (getenv('APPLICATION_ENV') !== 'test') {
     fwrite(STDERR, "installTest.php refuses to run unless APPLICATION_ENV=test\n");
     exit(1);
 }
+
+require(dirname(__FILE__) . '/bootstrap.php');
 
 class OJSTestInstallTool extends \PKP\cliTool\InstallTool
 {

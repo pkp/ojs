@@ -1,6 +1,8 @@
 /config.inc.php
 /config.test.inc.php
-.claude
+.claude/settings.local.json
+.claude/.auth/
+.claude/*.state.json
 ./build
 temp
 /files
