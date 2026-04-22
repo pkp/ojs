@@ -4,7 +4,7 @@
 # "Dauren S." <danek_ok@mail.ru>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-04-22 10:53+0000\n"
+"PO-Revision-Date: 2026-04-22 12:14+0000\n"
 "Last-Translator: \"Dauren S.\" <danek_ok@mail.ru>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/submission/"
 "kk/>\n"
@@ -367,18 +367,24 @@ msgstr ""
 
 msgid "doi.submission.issueMissing.representation"
 msgstr ""
+"Келесі ұсынымдағы {$pubObjectTitle} түзету нұсқасы үшін DOI қалыптастыру "
+"мүмкін болмады: {$itemTitle}. DOI жасалмас бұрын, ұсыным шығарылымға "
+"тағайындалуы тиіс."
 
 msgid "doi.submission.incorrectContext"
 msgstr ""
+"Келесі ұсыным үшін DOI жасау мүмкін болмады: {$pubObjectTitle}. Ол ағымдағы "
+"журнал контекстінде жоқ."
 
 msgid "submission.layout.viewGalley"
-msgstr ""
+msgstr "Түзету нұсқасын қарау"
 
 msgid "galley.cantEditPublished"
-msgstr ""
+msgstr "Бұл түзету нұсқасын өңдеу мүмкін емес, себебі ол бұрын жарияланған."
 
 msgid "submission.copyright.description"
 msgstr ""
+"Осы журналға ұсыным жіберудің авторлық құқық шарттарын оқып, түсініп алыңыз."
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
