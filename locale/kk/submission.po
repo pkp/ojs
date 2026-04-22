@@ -1,18 +1,19 @@
 # Madi <nmdbzk@gmail.com>, 2021.
 # Gabit Aitbayev <gabit.aitbayev@ayu.edu.kz>, 2022.
 # Beibarys <beibarys_sultan@mail.ru>, 2022.
+# "Dauren S." <danek_ok@mail.ru>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-05-03 16:29+0000\n"
-"Last-Translator: Beibarys <beibarys_sultan@mail.ru>\n"
+"PO-Revision-Date: 2026-04-22 10:53+0000\n"
+"Last-Translator: \"Dauren S.\" <danek_ok@mail.ru>\n"
 "Language-Team: Kazakh <http://translate.pkp.sfu.ca/projects/ojs/submission/"
-"kk_KZ/>\n"
-"Language: kk_KZ\n"
+"kk/>\n"
+"Language: kk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "submission.submit.userGroup"
 msgstr "Менің топтағы рөлімді ескере отырып жіберу."
@@ -361,6 +362,8 @@ msgstr "Тексеру кезеңіне жіберілетін файлдард�
 
 msgid "doi.submission.issueMissing.publication"
 msgstr ""
+"Келесі жіберілім үшін DOI жасау мүмкін болмады: {$pubObjectTitle}. DOI "
+"жасалмас бұрын жіберілім мәселеге тағайындалуы керек."
 
 msgid "doi.submission.issueMissing.representation"
 msgstr ""
