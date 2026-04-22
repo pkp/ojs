@@ -24,3 +24,12 @@ cypress/screenshots/
 .phpunit.result.cache
 /plugins/themes/default/js/lib/swiper/
 registry/uiLocaleKeysBackend.json
+
+# Playwright
+/test-results/
+/playwright-report/
+/playwright/.auth/
+!/playwright/.auth/.gitkeep
+/.env.playwright
+/blob-report/
+/playwright/.cache/
