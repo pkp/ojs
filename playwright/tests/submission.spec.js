@@ -12,7 +12,7 @@ const {SubmissionWizardPage} = require('../pages/SubmissionWizardPage.js');
  * Tag convention — filter on the CLI with `--grep @smoke` / `--grep @regression`.
  * See lib/pkp/playwright/tests/login.spec.js for the full tag list.
  */
-test.use({storageState: 'playwright/.auth/author.json'});
+test.use({user: 'author'});
 
 test.describe('author submission', () => {
 	// Declaration-level test.fixme — body never runs, storageState not loaded.

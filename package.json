@@ -22,6 +22,8 @@
     "test:e2e:setup": "playwright test --project=setup",
     "test:e2e:ojs": "playwright test --project=ojs",
     "test:e2e:install": "playwright install --with-deps chromium",
+    "test:e2e:reset": "APPLICATION_ENV=test php lib/pkp/tools/resetTest.php",
+    "test:e2e:serve": "APPLICATION_ENV=test php -S 127.0.0.1:8000 -t .",
     "prepare": "husky install",
     "postinstall": "copyfiles -f node_modules/swiper/swiper-bundle*.{js,css} plugins/themes/default/js/lib/swiper && copyfiles -f node_modules/altcha/dist/altcha.i18n.js lib/pkp/js/lib/altcha"
   },
