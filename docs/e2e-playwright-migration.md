@@ -50,11 +50,11 @@ Columns in the wave tables:
 | # | Feature | Home | Spec file | Cypress source | Tests | Ext? |
 |---|---|---|---|---|---|---|
 | 1 | Announcements CRUD ✅ DONE | lib/pkp | `announcements.spec.js` | `lib/pkp/.../Announcements.cy.js` | E: create (TinyMCE body); edit; delete — on E0 scratch journal | **E0** |
-| 2 | Navigation menus | lib/pkp | `navigation-menus.spec.js` | `lib/pkp/.../NavigationMenus.cy.js` | E: add menu item; reorder; custom URL; remove · R: menu items render on site | **E0** |
+| 2 | Navigation menus ⏸️ DEFERRED | lib/pkp | `navigation-menus.spec.js` | `lib/pkp/.../NavigationMenus.cy.js` | DEFERRED — the Navigation Menu Editor mixes modern Vue tabs with the legacy `pkp_controllers_linkAction` grid; worth porting only after evaluating whether to also migrate the legacy grid handler away or accept fragile text/CSS-class selectors | **E0** |
 | 3 | Editorial masthead ✅ DONE | lib/pkp | `editorial-masthead.spec.js` | `lib/pkp/.../EditorialMasthead.cy.js` | R: masthead page renders for anonymous readers | — |
 | 4 | Email templates | lib/pkp | `email-templates.spec.js` | `lib/pkp/.../emailTemplates/EmailTemplates.cy.js` + `cypress/.../emailTemplates/EmailTemplates.cy.js` | E: list; edit default body; restore default; create custom; delete custom; role scope | **E0** |
 | 5 | Multilingual form fields | lib/pkp | `multilingual.spec.js` | `lib/pkp/.../Multilingual.cy.js` | E: switch locale; required-in-primary rule; copy-between-locales | — |
-| 6 | Reviewer-recommendation customisation | lib/pkp | `reviewer-recommendations.spec.js` | `ReviewerRecommendation.cy.js` | E: defaults render; CRUD custom recommendation; unused-in-review edit/delete; in-use edit behaviour | **E0** |
+| 6 | Reviewer-recommendation customisation ✅ DONE | lib/pkp | `reviewer-recommendations.spec.js` | `ReviewerRecommendation.cy.js` | E: defaults render + have type; CRUD custom recommendation; active/inactive toggle. "Used recommendation can't be edited" and "inactive recommendation hidden in review form" deferred to row #28 (need in-review scenario) | **E0** |
 | 7 | Issues | ojs | `issues.spec.js` | `cypress/.../50-CreateIssues.cy.js` | E: create; edit volume/number/year; publish; unpublish; set current · R: issue shows in journal archive; issue TOC renders | **E0** |
 | 8 | Sections | ojs | `sections.spec.js` | `cypress/.../50-CreateSections.cy.js` | E: create; set inactive; editor-only flag blocks authors (verified at wizard level) | **E0** |
 | 9 | Subscription types & policies | ojs | `subscription-config.spec.js` | `Subscriptions.cy.js` (first half) | E: create subscription type; edit policy; delete type | **E0** |
