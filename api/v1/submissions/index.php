@@ -43,4 +43,8 @@ if (in_array('tasks', $urlParts)) {
     return new \PKP\handler\APIHandler(new \PKP\API\v1\submissions\tasks\EditorialTaskController());
 }
 
+if (in_array('mediaFiles', $urlParts)) {
+    return new \PKP\handler\APIHandler(new \PKP\API\v1\submissions\MediaFilesController());
+}
+
 return new \PKP\handler\APIHandler(new \APP\API\v1\submissions\SubmissionController());
