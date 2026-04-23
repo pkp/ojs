@@ -337,7 +337,7 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
         $section->setContextId($context->getId());
         $reviewFormId = $node->getAttribute('review_form_id');
         $section->setReviewFormId($reviewFormId ? (int) $reviewFormId : null);
-        $section->setSequence($node->getAttribute('seq'));
+        $section->setSequence((int) $node->getAttribute('seq'));
         $section->setEditorRestricted((bool) $node->getAttribute('editor_restricted'));
         $section->setMetaIndexed((bool) $node->getAttribute('meta_indexed'));
         $section->setMetaReviewed((bool) $node->getAttribute('meta_reviewed'));
