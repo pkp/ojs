@@ -13,8 +13,18 @@
  *
  * @ingroup api_v1_test
  *
- * @brief Handler for test-only endpoints. Routes inside are gated by
- *        TestModeGate middleware (APPLICATION_ENV === 'test' + key).
+ * @brief Dispatcher for test-only endpoints. Routes inside each
+ *        controller are gated by TestModeGate middleware
+ *        (APPLICATION_ENV === 'test' + key). Mirrors the path-based
+ *        dispatch pattern used by api/v1/stats/index.php.
  */
+
+use APP\core\Application;
+
+$requestPath = Application::get()->getRequest()->getRequestPath();
+
+if (strpos($requestPath, '/_test/scenarios') !== false) {
+    return new \PKP\handler\APIHandler(new \APP\API\v1\_test\SubmissionScenarioController());
+}
 
 return new \PKP\handler\APIHandler(new \APP\API\v1\_test\BootstrapController());

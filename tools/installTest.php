@@ -73,6 +73,12 @@ class OJSTestInstallTool extends \PKP\cliTool\InstallTool
             'oaiRepositoryId' => 'ojs-test',
             'enableBeacon' => 0,
             'install' => true,
+            // Matches the UI installer's default. PKPTemplateManager exposes
+            // this to the browser as `pkp.context.timeZone`; components like
+            // the Discussion Manager's date formatters throw when it's empty,
+            // which silently breaks Vue renders in ways that look like click
+            // handlers "not firing".
+            'timeZone' => 'UTC',
         ];
 
         return true;
