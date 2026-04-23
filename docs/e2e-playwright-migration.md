@@ -49,7 +49,7 @@ Columns in the wave tables:
 
 | # | Feature | Home | Spec file | Cypress source | Tests | Ext? |
 |---|---|---|---|---|---|---|
-| 1 | Announcements CRUD | lib/pkp | `announcements.spec.js` | `lib/pkp/.../Announcements.cy.js` | E: create; edit; delete; localized fields | **E0** |
+| 1 | Announcements CRUD ✅ DONE | lib/pkp | `announcements.spec.js` | `lib/pkp/.../Announcements.cy.js` | E: create (TinyMCE body); edit; delete — on E0 scratch journal | **E0** |
 | 2 | Navigation menus | lib/pkp | `navigation-menus.spec.js` | `lib/pkp/.../NavigationMenus.cy.js` | E: add menu item; reorder; custom URL; remove · R: menu items render on site | **E0** |
 | 3 | Editorial masthead ✅ DONE | lib/pkp | `editorial-masthead.spec.js` | `lib/pkp/.../EditorialMasthead.cy.js` | R: masthead page renders for anonymous readers | — |
 | 4 | Email templates | lib/pkp | `email-templates.spec.js` | `lib/pkp/.../emailTemplates/EmailTemplates.cy.js` + `cypress/.../emailTemplates/EmailTemplates.cy.js` | E: list; edit default body; restore default; create custom; delete custom; role scope | **E0** |
