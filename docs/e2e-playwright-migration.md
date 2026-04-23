@@ -56,7 +56,7 @@ Columns in the wave tables:
 | 5 | Multilingual form fields | lib/pkp | `multilingual.spec.js` | `lib/pkp/.../Multilingual.cy.js` | E: switch locale; required-in-primary rule; copy-between-locales | — |
 | 6 | Reviewer-recommendation customisation ✅ DONE | lib/pkp | `reviewer-recommendations.spec.js` | `ReviewerRecommendation.cy.js` | E: defaults render + have type; CRUD custom recommendation; active/inactive toggle. "Used recommendation can't be edited" and "inactive recommendation hidden in review form" deferred to row #28 (need in-review scenario) | **E0** |
 | 7 | Issues | ojs | `issues.spec.js` | `cypress/.../50-CreateIssues.cy.js` | E: create; edit volume/number/year; publish; unpublish; set current · R: issue shows in journal archive; issue TOC renders | **E0** |
-| 8 | Sections | ojs | `sections.spec.js` | `cypress/.../50-CreateSections.cy.js` | E: create; set inactive; editor-only flag blocks authors (verified at wizard level) | **E0** |
+| 8 | Sections ✅ DONE | ojs | `sections.spec.js` | `cypress/.../50-CreateSections.cy.js` | E: create new section; edit-inactive flag persists across reload; edit editor-only flag persists across reload. Wizard-side effect of editor-only sections deferred to row #12 (Wizard — section rules) to keep this spec scoped to admin-UI. | **E0** |
 | 9 | Subscription types & policies | ojs | `subscription-config.spec.js` | `Subscriptions.cy.js` (first half) | E: create subscription type; edit policy; delete type | **E0** |
 
 ### Wave 2 · Submission wizard
