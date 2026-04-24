@@ -35,6 +35,8 @@ interface IDoiRegistrationAgency extends IPKPDoiRegistrationAgency
      */
     public function depositSubmissions(array $submissions, Context $context): array;
 
+    public function depositPeerReviews(array $peerReviews, Context $context): array;
+
     /**
      * @param Issue[] $issues
      *
@@ -46,4 +48,6 @@ interface IDoiRegistrationAgency extends IPKPDoiRegistrationAgency
      *
      */
     public function depositIssues(array $issues, Context $context): array;
+
+    public function exportPeerReviews(array $reviewAssignments, Context $context): array;
 }

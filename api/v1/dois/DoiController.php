@@ -20,15 +20,17 @@ namespace APP\API\v1\dois;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\jobs\doi\DepositIssue;
+use APP\plugins\IDoiRegistrationAgency;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Route;
+use PKP\API\v1\dois\PKPDoiController;
 use PKP\context\Context;
 use PKP\doi\Doi;
 use PKP\doi\exceptions\DoiException;
 
-class DoiController extends \PKP\API\v1\dois\PKPDoiController
+class DoiController extends PKPDoiController
 {
     /**
      * @copydoc \PKP\core\PKPBaseController::getGroupRoutes()
@@ -364,4 +366,11 @@ class DoiController extends \PKP\API\v1\dois\PKPDoiController
             default => null,
         };
     }
+
+    /** @copydoc PKPDoiController::getPeerReviewExports() */
+    public function getPeerReviewExports(array $peerReviews, Context $context, IDoiRegistrationAgency $agency): array
+    {
+        return $agency->exportPeerReviews($peerReviews, $context);
+    }
+
 }
