@@ -1,9 +1,10 @@
 <?php
+
 /**
  * @file classes/components/form/context/MetadataSettingsForm.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2014-2026 Simon Fraser University
+ * Copyright (c) 2000-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class MetadataSettingsForm
@@ -27,28 +28,37 @@ class MetadataSettingsForm extends PKPMetadataSettingsForm
     {
         parent::__construct($action, $context);
 
-        $this->addField(new FieldOptions('enablePublisherId', [
-            'label' => __('submission.publisherId'),
-            'description' => __('submission.publisherId.description'),
-            'options' => [
-                [
-                    'value' => 'publication',
-                    'label' => __('submission.publisherId.enable', ['objects' => __('submission.publications')]),
+        $this
+            ->addField(new FieldOptions('enablePublisherId', [
+                'label' => __('submission.publisherId'),
+                'description' => __('submission.publisherId.description'),
+                'options' => [
+                    [
+                        'value' => 'publication',
+                        'label' => __('submission.publisherId.enable', ['objects' => __('submission.publications')]),
+                    ],
+                    [
+                        'value' => 'galley',
+                        'label' => __('submission.publisherId.enable', ['objects' => __('submission.layout.galleys')]),
+                    ],
+                    [
+                        'value' => 'issue',
+                        'label' => __('submission.publisherId.enable', ['objects' => __('issue.issues')]),
+                    ],
+                    [
+                        'value' => 'issueGalley',
+                        'label' => __('submission.publisherId.enable', ['objects' => __('editor.issues.galleys')]),
+                    ],
                 ],
-                [
-                    'value' => 'galley',
-                    'label' => __('submission.publisherId.enable', ['objects' => __('submission.layout.galleys')]),
+                'value' => $context->getData('enablePublisherId') ? $context->getData('enablePublisherId') : [],
+            ]))
+            ->addField(new FieldOptions('enableArticleNumber', [
+                'label' => __('submission.articleNumber'),
+                'description' => __('submission.articleNumber.description'),
+                'options' => [
+                    ['value' => true, 'label' => __('manager.setup.metadata.articleNumber.enable')]
                 ],
-                [
-                    'value' => 'issue',
-                    'label' => __('submission.publisherId.enable', ['objects' => __('issue.issues')]),
-                ],
-                [
-                    'value' => 'issueGalley',
-                    'label' => __('submission.publisherId.enable', ['objects' => __('editor.issues.galleys')]),
-                ],
-            ],
-            'value' => $context->getData('enablePublisherId') ? $context->getData('enablePublisherId') : [],
-        ]));
+                'value' => (bool) $context->getData('enableArticleNumber'),
+            ]));
     }
 }

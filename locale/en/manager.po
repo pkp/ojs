@@ -955,6 +955,13 @@ msgstr "Continuous Publication"
 msgid "manager.setup.issuelessPublication"
 msgstr "Issueless Publication"
 
+msgid "manager.setup.metadata.articleNumber.description"
+msgstr ""
+"The article number can be used in citations and other metadata instead of page numbers."
+
+msgid "manager.setup.metadata.articleNumber.enable"
+msgstr "Enable article number metadata"
+
 msgid "manager.statistics.statistics"
 msgstr "Journal Statistics"
 

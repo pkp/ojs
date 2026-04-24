@@ -469,3 +469,8 @@ msgstr ""
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Please select the contributor's role."
 
+msgid "submission.articleNumber"
+msgstr "Article Number"
+
+msgid "submission.articleNumber.description"
+msgstr "The article number can be used in citations and other metadata instead of page numbers."

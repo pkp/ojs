@@ -20,6 +20,12 @@
 				"nullable"
 			]
 		},
+		"articleNumber": {
+			"type": "string",
+			"validation": [
+				"nullable"
+			]
+		},
 		"galleys": {
 			"type": "array",
 			"apiSummary": true,
