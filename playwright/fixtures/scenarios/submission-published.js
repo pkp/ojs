@@ -23,7 +23,9 @@
  * @param {Object} opts
  * @param {string} opts.tag                  required; appended to every title locale for parallel isolation
  * @param {string} [opts.submitter='rvaca']  baseline user that submits
- * @param {string} [opts.editor='dbarnes']   baseline user that makes the editorial decisions
+ * @param {string} [opts.editor='dbarnes']   baseline user that makes the editorial decisions (used only when `participants` not provided)
+ * @param {Array}  [opts.participants]       override default participant list; defaults to `[{user: editor, role: 'editor'}]`.
+ *                                           Each item may include `recommendOnly` / `canChangeMetadata` flags.
  * @param {object|string} [opts.issue]       issue reference — defaults to the bootstrap's published Vol 1, No 2, 2014
  * @returns {object} scenario spec payload
  */
@@ -31,6 +33,7 @@ module.exports = function submissionPublished({
 	tag,
 	submitter = 'rvaca',
 	editor = 'dbarnes',
+	participants,
 	issue = {volume: 1, number: 2, year: 2014},
 } = {}) {
 	if (!tag) {
@@ -44,7 +47,7 @@ module.exports = function submissionPublished({
 		section: 'ART',
 		locale: 'en',
 
-		participants: [{user: editor, role: 'editor'}],
+		participants: participants ?? [{user: editor, role: 'editor'}],
 
 		decisions: [
 			{type: 'sendExternalReview', by: editor},
