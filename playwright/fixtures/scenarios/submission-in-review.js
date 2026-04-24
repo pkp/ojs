@@ -18,7 +18,9 @@
  * @param {Object} opts
  * @param {string} opts.tag                  required; appended to every title locale for parallel isolation
  * @param {string} [opts.submitter='rvaca']  baseline user that submits
- * @param {string} [opts.editor='dbarnes']   baseline user that sends to review
+ * @param {string} [opts.editor='dbarnes']   baseline user that sends to review (used only when `participants` not provided)
+ * @param {Array}  [opts.participants]       override default participant list; defaults to `[{user: editor, role: 'editor'}]`.
+ *                                           Each item may include `recommendOnly` / `canChangeMetadata` flags.
  * @param {Array}  [opts.reviewers]          override default reviewer list
  * @returns {object} scenario spec payload
  */
@@ -26,6 +28,7 @@ module.exports = function submissionInReview({
 	tag,
 	submitter = 'rvaca',
 	editor = 'dbarnes',
+	participants,
 	reviewers,
 } = {}) {
 	if (!tag) {
@@ -39,7 +42,7 @@ module.exports = function submissionInReview({
 		section: 'ART',
 		locale: 'en',
 
-		participants: [{user: editor, role: 'editor'}],
+		participants: participants ?? [{user: editor, role: 'editor'}],
 
 		decisions: [{type: 'sendExternalReview', by: editor}],
 
