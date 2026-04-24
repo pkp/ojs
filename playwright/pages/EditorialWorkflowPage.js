@@ -1,4 +1,5 @@
 // @ts-check
+const {expect} = require('@playwright/test');
 const {BasePage} = require('../../lib/pkp/playwright/pages/BasePage.js');
 
 /**
@@ -64,5 +65,127 @@ exports.EditorialWorkflowPage = class EditorialWorkflowPage extends BasePage {
 			);
 		}
 		return loc;
+	}
+
+	/**
+	 * Click a primary-decision action button on the workflow page.
+	 * Decision buttons render as PkpButton (role=button) with the
+	 * decision label from editor.submission.decision.*. Clicking the
+	 * button navigates away to `decision/record/{id}` — wait for that
+	 * navigation before returning so callers can drive the decision page.
+	 *
+	 * @param {string} label  e.g. 'Send for Review', 'Decline Submission'
+	 */
+	async clickDecision(label) {
+		await this.page
+			.getByRole('button', {name: label, exact: true})
+			.first()
+			.click();
+		await this.page.waitForURL(/\/decision\/record\//, {timeout: 15_000});
+	}
+
+	/**
+	 * Wait for the Composer email step to finish auto-loading its
+	 * template. Email steps (e.g. "notifyAuthors") ship an empty
+	 * subject/body in the initial server payload and populate them via
+	 * an AJAX GET once the Composer mounts — see Composer.vue
+	 * `isLoadingTemplate` / `.composer__loadingTemplateMask`. Submitting
+	 * the decision while the subject/body are empty fails server-side
+	 * validation ("This field is required"), so every email step must
+	 * be awaited before Continue/Record Decision.
+	 */
+	async awaitEmailTemplateLoaded() {
+		const mask = this.page.locator('.composer__loadingTemplateMask');
+		// Mask may flicker in-and-out; wait to observe it gone.
+		await expect(mask).toHaveCount(0, {timeout: 15_000});
+	}
+
+	/**
+	 * Advance past a wizard-style step on the decision page. Every step
+	 * except the last exposes a Continue button; the last swaps it out
+	 * for "Record Decision" (see lib/pkp/templates/decision/record.tpl).
+	 *
+	 * Waits for any pending email-template load on the current step to
+	 * settle first — otherwise a "Continue" click on an email step
+	 * carries forward empty subject/body and the decision submit fails
+	 * server-side validation.
+	 */
+	async clickContinue() {
+		await this.awaitEmailTemplateLoaded();
+		await this.page
+			.getByRole('button', {name: 'Continue', exact: true})
+			.click();
+	}
+
+	/**
+	 * Submit the decision (final step) and wait for the success dialog.
+	 * The success dialog is a role=dialog containing a "View Submission"
+	 * link back to the workflow page.
+	 *
+	 * @param {string} [expectedMessage]  substring of the completion text
+	 *   (DecisionType::getCompletedMessage), e.g. "has been sent to the
+	 *   review stage". Omit to skip the message assertion.
+	 */
+	async recordDecision(expectedMessage) {
+		await this.awaitEmailTemplateLoaded();
+		await this.page
+			.getByRole('button', {name: 'Record Decision', exact: true})
+			.click();
+		// The completion dialog is rendered by reka-ui inside a PkpDialog
+		// (lib/ui-library/src/components/Modal/Dialog.vue) with
+		// data-cy="dialog". role=dialog is set by reka but the portal
+		// nests multiple; scope to the legacy hook for stability.
+		const dialog = this.page.locator('[data-cy="dialog"]');
+		await expect(dialog).toBeVisible({timeout: 15_000});
+		if (expectedMessage) {
+			await expect(dialog).toContainText(expectedMessage);
+		}
+	}
+
+	/**
+	 * Click "View Submission" on the success dialog and wait to land
+	 * back on the editorial workflow page.
+	 *
+	 * @param {number} submissionId  the submission we decided on
+	 */
+	async viewSubmissionFromCompletionDialog(submissionId) {
+		// DecisionPage.vue offers either "View Submission" (workflow-page
+		// entry point) or "View Submission Summary" (dashboard entry
+		// point, via a `ret` query param pointing at
+		// dashboard/editorial?workflowSubmissionId=...). We land in the
+		// dashboard shape today because the EditorialWorkflowPage POM
+		// goto() uses the dashboard URL. Match either.
+		await Promise.all([
+			this.page.waitForURL(/workflowSubmissionId=/, {timeout: 15_000}),
+			this.page
+				.locator('[data-cy="dialog"]')
+				.getByRole('link', {name: /^View Submission( Summary)?$/})
+				.click(),
+		]);
+		// Sanity: we're on the right submission.
+		await expect(this.page).toHaveURL(
+			new RegExp(`workflowSubmissionId=${submissionId}(?:&|$)`),
+		);
+	}
+
+	/**
+	 * Fetch the submission as JSON via the REST API using the page's
+	 * session cookies. Used after a decision to verify status/stage
+	 * without depending on a specific UI indicator.
+	 *
+	 * @param {number} submissionId
+	 * @param {string} [journalPath='publicknowledge']
+	 * @returns {Promise<object>}
+	 */
+	async fetchSubmission(submissionId, journalPath = 'publicknowledge') {
+		const res = await this.page.request.get(
+			`/index.php/${journalPath}/api/v1/submissions/${submissionId}`,
+		);
+		if (!res.ok()) {
+			throw new Error(
+				`GET submission ${submissionId} failed: ${res.status()} ${await res.text()}`,
+			);
+		}
+		return res.json();
 	}
 };
