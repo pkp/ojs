@@ -170,6 +170,11 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         ];
     }
 
+    public function depositPeerReviews(array $peerReviews, Context $context): array
+    {
+        return [];
+    }
+
     /**
      * @param \APP\issue\Issue[] $issues
      *
