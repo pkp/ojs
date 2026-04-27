@@ -85,6 +85,42 @@ exports.EditorialWorkflowPage = class EditorialWorkflowPage extends BasePage {
 	}
 
 	/**
+	 * Drive the "Request Revisions" entry point. Unlike the other primary
+	 * decisions, this button doesn't navigate straight to /decision/record/
+	 * — it first opens a side modal (WorkflowSelectRevisionFormModal) with
+	 * a radio choice between PENDING_REVISIONS (no new round; default) and
+	 * RESUBMIT (new round). The user clicks "Next" and only then does the
+	 * page navigate to /decision/record/?decision={id}. See
+	 * lib/ui-library/.../useWorkflowDecisions.js#decisionRequestRevision.
+	 *
+	 * @param {{newRound?: boolean}} [opts]  defaults to {newRound: false}
+	 *   (PENDING_REVISIONS — "Revisions will not be subject to a new round")
+	 */
+	async clickRequestRevisions({newRound = false} = {}) {
+		await this.page
+			.getByRole('button', {name: 'Request Revisions', exact: true})
+			.first()
+			.click();
+		// The side modal is a SideModalBody with the i18n title
+		// "Request Revisions". Match by accessible name to scope the radio
+		// + Next button picks to it (the workflow modal uses the same
+		// data-cy="active-modal" hook).
+		const modal = this.page.getByRole('dialog', {name: 'Request Revisions'});
+		await expect(modal).toBeVisible({timeout: 10_000});
+		if (newRound) {
+			await modal
+				.getByLabel('Revisions will be subject to a new round of peer reviews.')
+				.check();
+		}
+		// "Next" submits the radio form; on success the modal closes and
+		// the page navigates to the decision/record/ URL.
+		await Promise.all([
+			this.page.waitForURL(/\/decision\/record\//, {timeout: 15_000}),
+			modal.getByRole('button', {name: 'Next', exact: true}).click(),
+		]);
+	}
+
+	/**
 	 * Wait for the Composer email step to finish auto-loading its
 	 * template. Email steps (e.g. "notifyAuthors") ship an empty
 	 * subject/body in the initial server payload and populate them via
