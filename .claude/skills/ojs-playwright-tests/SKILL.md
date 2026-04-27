@@ -30,15 +30,19 @@ Put tests here when the feature is **OJS-only**: issues, galleys, subscriptions,
 Structure:
 ```
 playwright/
-├── tests/        # Spec files — import from ../support/fixtures.js
-├── support/      # OJS-only fixtures (ojsApi, submission factory)
-├── pages/        # OJS-only POMs (SubmissionWizardPage, IssuePage)
-├── fixtures/     # Static seed data (bootstrap.js for publicknowledge)
-├── data/         # Test data
-└── .auth/        # Auto-generated storage-state cache per user (gitignored)
+├── tests/             # Spec files — flat, no subfolder taxonomy
+├── support/           # OJS-only fixtures (ojsApi, submission factory)
+├── pages/             # OJS-only POMs (EditorialWorkflowPage, SubmissionWizardPage, IssuePage)
+├── fixtures/
+│   ├── bootstrap.js   # Static seed data for publicknowledge
+│   └── scenarios/     # Spec-builders for the scenario API (submission-draft, etc.)
+├── data/              # Test data
+└── .auth/             # Auto-generated storage-state cache per user (gitignored)
 ```
 
 OJS specs import from `'../support/fixtures.js'` — this layers OJS fixtures (`ojsApi`, `submission`) on top of the shared base.
+
+**Spec-folder convention is flat.** No subfolder taxonomy yet — file name is the only grouping. Clusters can emerge as a refactor PR once ~25–30 specs are written and natural groupings are obvious. Don't pre-emptively invent folders.
 
 ### `lib/pkp/playwright/` — shared across OJS/OMP/OPS
 
@@ -49,20 +53,22 @@ Be conservative. If the test relies on any OJS-specific concept (a journal, an i
 Structure:
 ```
 lib/pkp/playwright/
-├── tests/
+├── tests/                   # Flat — shared specs live directly here
 │   ├── bootstrap.setup.js   # Serial setup — seeds DB via /api/v1/_test/bootstrap
 │   └── login.spec.js        # Smoke test
 ├── support/
 │   ├── base-test.js         # The extended `test` fixture — start here
-│   ├── auth.js              # ensureAuthStateFor — storage-state cache
+│   ├── auth.js              # ensureAuthStateFor — storage-state cache w/ liveness probe
 │   ├── api.js               # pkpApi client
+│   ├── mail.js              # pkpMail — Mailpit HTTP API wrapper
+│   ├── tinymce.js           # TinyMCE input helpers
 │   └── scenarios.js         # Scenario API stub (TODO)
 ├── pages/
 │   ├── BasePage.js          # POM base class
 │   ├── LoginPage.js         # /login form
 │   └── DashboardPage.js     # post-login landing
 ├── data/
-│   └── users.js             # The 16 baseline users + getPassword()
+│   └── users.js             # The 17 baseline users + getPassword()
 └── config-factory.js        # defineConfig() used by all three apps
 ```
 
@@ -74,13 +80,13 @@ Ask: *does this behavior exist and mean the same thing in OMP (monographs) and O
 
 ## The `asUser` helper
 
-Defined at `lib/pkp/playwright/support/base-test.js:46-62`.
+Defined at `lib/pkp/playwright/support/base-test.js`.
 
 ```js
 asUser: async (username) => BrowserContext
 ```
 
-Returns a browser context **already authenticated** as the named user. First call for a given username performs a real UI login and caches the storage state to `playwright/.auth/<username>.json`. Later calls in the same run (and later runs until DB reset) short-circuit and load the file. Every opened context auto-closes at test teardown.
+Returns a browser context **already authenticated** as the named user. First call for a given username performs a real UI login and caches the storage state to `playwright/.auth/<username>.json`. Later calls in the same run (and later runs until DB reset) short-circuit and load the file — but only after a cheap HTTP probe confirms the cached cookies still authenticate; impersonation flows can invalidate them. Every opened context auto-closes at test teardown.
 
 Use `asUser` for **multi-actor flows** — an author submits, an editor reviews, a reviewer rates. For single-actor specs, prefer `test.use({user: 'dbarnes'})`: it wires storage state via the `storageState` fixture override and you get an authenticated `page` directly.
 
@@ -138,11 +144,20 @@ Env vars the tests depend on (all in `.env.playwright.example`):
 
 ## Companion files in this skill
 
-- `users.md` — role constants, the 16 seeded users, password rule, login flow internals, journal context
+- `users.md` — role constants, the 17 seeded users, password rule, login flow internals (incl. storage-state liveness probe), journal context
 - `app-map.md` — screens organized by editorial journey: URL patterns, Vue components, PHP handlers, controls
-- `patterns.md` — locator priority, fixture selection, waiting strategy, tag conventions, POM hierarchy, canonical test skeleton
+- `patterns.md` — locator priority + OJS pitfalls, fixture selection, waiting strategy, parallel-load lessons, tag conventions, decision-button labels, POM hierarchy, canonical test skeleton, verify-before-trusting
+- `scenarios.md` — scenario API (`/api/v1/_test/scenarios/*`) endpoints and schema, fixture builders at `playwright/fixtures/scenarios/`, decision/round-status quirks, Mailpit (`pkpMail`) usage
 
 Load those on demand. You do not need to read them for every task.
+
+## Commit discipline
+
+Two repos: `lib/pkp/` (shared submodule) and the OJS root.
+
+- **Never bump the submodule pointer in an OJS root commit.** Always `git restore --staged lib/pkp` before committing in OJS root. Submodule pointer changes get their own dedicated commit (or none — leave the working tree dirty).
+- Pattern: `lib/pkp` commits hold spec/POM/processor changes; OJS root commits hold doc updates or OJS-only specs.
+- Shared specs live in `lib/pkp/playwright/tests/`; OJS-only specs in `playwright/tests/`. Both folders are flat — no subfolder taxonomy yet.
 
 ## Verify before trusting this skill
 

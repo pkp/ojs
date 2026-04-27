@@ -87,20 +87,23 @@ Do not treat this as an exhaustive DOM catalog. It's a map to the **source of tr
 This is the hub once a submission is in-flight. A single URL drives a multi-stage UI.
 
 ### D1. Workflow page
-- **URL:** `/publicknowledge/workflow/{submissionId}` (legacy: `/publicknowledge/workflow/index/{submissionId}/{stageId}`)
+- **URL:** `/{journalPath}/{locale}/dashboard/editorial?workflowSubmissionId={id}` (the workflow is rendered as a reka-ui dialog inside the editorial dashboard; legacy `/workflow/index/{submissionId}/{stageId}` may still resolve)
 - **Roles:** Editor, section editor, manager, assistant (per-stage participants), reviewer (sees their own view — D4)
 - **Handler:** `pages/workflow/WorkflowHandler.php` (OJS) + `lib/pkp/pages/workflow/PKPWorkflowHandler.php`
 - **Vue page:** `lib/ui-library/src/pages/workflow/WorkflowPage.vue` → OJS-specific extension at `WorkflowPageOJS.vue`
 - **Store:** `lib/ui-library/src/pages/workflow/workflowStore.js`
 - **Side menu stages:** Submission → Review → Copyediting → Production → Publication
+- **POM:** `playwright/pages/EditorialWorkflowPage.js` — see source for decision/publish/galley helpers
+- **Modal scoping:** the workflow renders inside `[data-cy="active-modal"]`. Sub-modals (publish details, decisions) stack as additional dialogs; scope by accessible name to disambiguate.
 
 ### D2. Submission stage
-- First stop when the submission arrives. Editor decisions: send to review, accept, decline.
-- **Controls:** Assign participants (author, editors), "Send to Review" / "Accept Submission" / "Decline Submission" buttons (in the right-rail control area, marked with `data-cy="workflow-controls-right"` — a legacy Cypress hook that still ships in the DOM).
+- First stop when the submission arrives. Editor decisions: send to review, accept-and-skip-review, decline.
+- **Controls:** Assign participants (author, editors); decision buttons labeled `Send for Review`, `Accept and Skip Review`, `Decline` (in the right-rail control area, marked with `data-cy="workflow-controls-right"` — a legacy Cypress hook that still ships in the DOM).
 
 ### D3. Review stage (external review)
 - Where reviewers get assigned and their reviews land.
-- **Controls:** "Add Reviewer" modal, reviewer list with status (Requested, Accepted, Declined, Complete, Overdue), "Request Revisions" / "Accept Submission" / "Decline Submission" / "Resubmit for Review" decision buttons, round management ("New Review Round").
+- **Controls:** "Add Reviewer" modal, reviewer list with status (Requested, Accepted, Declined, Complete, Overdue), decision buttons `Request Revisions`, `Accept Submission`, `Decline`, plus round management.
+- **`Request Revisions` quirk:** opens a `WorkflowSelectRevisionFormModal` first (radio between PENDING_REVISIONS and RESUBMIT) before navigating to `decision/record/`. All other primary decisions navigate directly. Use `EditorialWorkflowPage#clickRequestRevisions`.
 - **Components:** workflow primary modals at `lib/ui-library/src/pages/workflow/modals/`.
 
 ### D4. Reviewer-side view
@@ -113,7 +116,7 @@ This is the hub once a submission is in-flight. A single URL drives a multi-stag
 ### D5. Copyediting stage
 - Side menu → "Copyediting" on the workflow page.
 - **Roles:** Editor (assigns), copyeditor (does the work)
-- **Controls:** Upload copyedited manuscript, participant list (add copyeditor), "Send to Production" decision.
+- **Controls:** Upload copyedited manuscript, participant list (add copyeditor), `Send To Production` decision.
 
 ### D6. Production stage
 - **Roles:** Editor, layout editor, proofreader
@@ -131,7 +134,8 @@ This is the hub once a submission is in-flight. A single URL drives a multi-stag
   - **Identifiers** — DOI, URN
   - **Version control** — `components/publication/WorkflowPublicationVersionControl.vue`
   - **Permissions & Disclosure** — license
-  - Top-right: "Schedule for Publication" / "Publish" button. Once published, "Unpublish" replaces it.
+  - Top-right: "Schedule For Publication" (initial version) / "Publish" (later versions) button. Both open the same `Review Publishing Details` side-modal. After confirming, a separate `.pkpWorkflow__publishModal` ("All publication requirements have been met…") commits the publish. Once published, "Unpublish" replaces the entry button.
+- **POM helper:** `EditorialWorkflowPage#publishCurrentPanel` drives the full chain. `createNewVersion` opens a versioning dialog; `unpublishCurrentPanel` reverses the publish.
 
 ---
 
