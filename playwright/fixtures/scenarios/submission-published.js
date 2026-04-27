@@ -24,6 +24,7 @@
  * @param {string} opts.tag                  required; appended to every title locale for parallel isolation
  * @param {string} [opts.submitter='rvaca']  baseline user that submits
  * @param {string} [opts.editor='dbarnes']   baseline user that makes the editorial decisions (used only when `participants` not provided)
+ * @param {string} [opts.journal='publicknowledge']  journal urlPath; override for E0 scratch journals
  * @param {Array}  [opts.participants]       override default participant list; defaults to `[{user: editor, role: 'editor'}]`.
  *                                           Each item may include `recommendOnly` / `canChangeMetadata` flags.
  * @param {object|string} [opts.issue]       issue reference — defaults to the bootstrap's published Vol 1, No 2, 2014
@@ -33,6 +34,7 @@ module.exports = function submissionPublished({
 	tag,
 	submitter = 'rvaca',
 	editor = 'dbarnes',
+	journal = 'publicknowledge',
 	participants,
 	issue = {volume: 1, number: 2, year: 2014},
 } = {}) {
@@ -42,7 +44,7 @@ module.exports = function submissionPublished({
 
 	return {
 		tag,
-		journal: 'publicknowledge',
+		journal,
 		submitter,
 		section: 'ART',
 		locale: 'en',
