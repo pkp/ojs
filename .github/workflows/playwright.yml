@@ -1,0 +1,103 @@
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      ['main']
+name: ojs-playwright
+jobs:
+  playwright:
+    runs-on: ubuntu-latest
+    name: ojs-playwright
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - uses: tj-actions/install-postgresql@v3
+        with:
+          postgresql-version: 16
+
+      - name: Configure postgres trust auth
+        run: |
+          sudo sed -i -E 's\peer|scram-sha-256\trust\g' /etc/postgresql/16/main/pg_hba.conf
+          sudo systemctl restart postgresql
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          extensions: bcmath, bz2, curl, gd, intl, mbstring, mysql, mysqlnd, mysqli, opcache, pdo_mysql, pgsql, json, soap, xml, zip
+          coverage: none
+          ini-values: assert.exception=1,zend.assertions=1
+        env:
+          update: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Create database and user
+        run: |
+          sudo -u postgres psql -c "CREATE USER \"ojs-ci\" WITH PASSWORD 'ojs-ci';"
+          sudo -u postgres psql -c "CREATE DATABASE \"ojs-ci\" OWNER \"ojs-ci\";"
+
+      - name: Install Mailpit
+        run: |
+          curl -sSL https://github.com/axllent/mailpit/releases/latest/download/mailpit-linux-amd64.tar.gz | sudo tar -xz -C /usr/local/bin mailpit
+          sudo chmod +x /usr/local/bin/mailpit
+          mailpit --smtp 127.0.0.1:1025 --listen 127.0.0.1:8025 >/tmp/mailpit.log 2>&1 &
+          sleep 2
+
+      - name: Install Composer dependencies
+        run: |
+          find . -maxdepth 4 -name composer.json -exec bash -c 'composer --no-ansi --working-dir="`dirname {}`" install --optimize-autoloader' ";"
+
+      - name: Install npm dependencies and build
+        run: |
+          npm install
+          npm run build
+
+      - name: Create files directory
+        run: mkdir -p files
+
+      - name: Write .env.playwright
+        run: |
+          cat > .env.playwright <<'EOF'
+          PLAYWRIGHT_BASE_URL=http://127.0.0.1:8000
+          OJS_DB_DRIVER=postgres9
+          OJS_DB_HOST=localhost
+          OJS_DB_USER=ojs-ci
+          OJS_DB_PASSWORD=ojs-ci
+          OJS_DB_NAME=ojs-ci
+          OJS_FILES_DIR=files
+          TEST_API_KEY=playwright-test-key
+          MAILPIT_URL=http://127.0.0.1:8025
+          EOF
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run Playwright tests
+        run: npx playwright test --project=ojs
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: playwright-report
+          if-no-files-found: ignore
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-test-results
+          path: test-results
+          if-no-files-found: ignore
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: mailpit-log
+          path: /tmp/mailpit.log
+          if-no-files-found: ignore
