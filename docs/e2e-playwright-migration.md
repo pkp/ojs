@@ -157,7 +157,7 @@ E0 is a **prerequisite** — build it first, before starting Wave 1 work on any 
 | E3 | **RevisionRoundProcessor** | 50 | Multi-round review: seed a submission with a completed round + author revision pending. | `lib/pkp` |
 | E4 | **SubscriptionProcessor** | 52 | Seed subscription types and per-user subscriptions. Extends OJS's currently-empty `SubmissionScenarioController` (`api/v1/_test/SubmissionScenarioController.php`). | OJS |
 | E5 | **GalleyProcessor** | 51 | Attach galleys (PDF/HTML) to a publication with specified file fixture. Pairs with E1. | OJS |
-| E6 | **Decision-rich DecisionProcessor** | polish 19–26 | Existing processor seeds decision + deciding editor but lacks to-author / to-editor comments + recommendation payloads surfaced in UI. Extend existing. | `lib/pkp` |
+| E6 | **Decision-rich DecisionProcessor** ✅ phase 1 landed | polish 19–26 | Each decision spec now accepts optional `toAuthor` / `toReviewers` / `toEditor` (string) fields. `toAuthor` / `toReviewers` flow through `Repo::decision()->add()`'s actions array (same wiring the live form uses); `toEditor` writes a `submission_comments` row with `comment_type = COMMENT_TYPE_EDITOR_DECISION`, `viewable=0`. Soft-fails `toReviewers` when the decision type has no NotifyReviewers trait (e.g. `skipExternalReview`) — the response carries a `warnings` array and the action drops silently. See `lib/pkp/playwright/tests/scenario-decision-comments.spec.js`. Object form for `toReviewers` (per-status bodies) is still pending. | `lib/pkp` |
 
 ### Operational note on E0
 
