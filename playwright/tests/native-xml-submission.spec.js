@@ -211,16 +211,20 @@ test.describe('Native XML — submission export/import', () => {
 		expect(importBody.content).not.toMatch(/processFailed/i);
 
 		// 5. Verify a NEW submission was created with the same title.
-		//    `searchPhrase=Published+article+[tag]` matches both the
-		//    original and the freshly imported submission, so we expect
-		//    >=2 hits. The original submission id is `submission.id`; the
-		//    second item is the newly imported one — its id differs.
-		const searchTerm = `Published article ${tag}`;
+		//    Search by the tag alone — Submission::Collector tokenises
+		//    `searchPhrase` on whitespace and OR-joins the keywords
+		//    against publication_settings.title. Including "Published"
+		//    or "article" would balloon the result set under parallel
+		//    load (every submissionPublished fixture across other specs
+		//    matches "Published"), and the count=30 cap could push our
+		//    tagged rows off the first page. The tag is a single
+		//    whitespace-free token and unique to this test instance, so
+		//    it's the most selective phrase we can send.
 		const subsRes = await page.request.get(
 			'/index.php/publicknowledge/api/v1/submissions',
 			{
 				params: {
-					searchPhrase: searchTerm,
+					searchPhrase: tag,
 					count: 30,
 				},
 			},
