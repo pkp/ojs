@@ -279,12 +279,18 @@ exports.EditorialWorkflowPage = class EditorialWorkflowPage extends BasePage {
 	} = {}) {
 		const modal = this.workflowModal();
 		// Both button labels open the same Review Publishing Details flow;
-		// try the initial-version label first and fall back to the v2+ label.
+		// the initial-version Title & Abstract panel uses
+		// "Schedule For Publication", v2+ panels (and a few sibling panels)
+		// use "Publish". Whichever the server renders, the side-nav loads
+		// the panel async so the button isn't immediately visible. Use a
+		// `.or()` locator + waitFor so we don't race the panel's mount and
+		// then misidentify which label is present.
 		const schedule = modal.getByRole('button', {
 			name: 'Schedule For Publication',
 			exact: true,
 		});
 		const publish = modal.getByRole('button', {name: 'Publish', exact: true});
+		await schedule.or(publish).first().waitFor({state: 'visible', timeout: 15_000});
 		if (await schedule.isVisible().catch(() => false)) {
 			await schedule.click();
 		} else {
