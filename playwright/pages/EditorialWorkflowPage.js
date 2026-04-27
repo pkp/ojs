@@ -384,4 +384,116 @@ exports.EditorialWorkflowPage = class EditorialWorkflowPage extends BasePage {
 		await dialog.getByRole('button', {name: 'Confirm', exact: true}).click();
 		await expect(dialog).toBeHidden({timeout: 15_000});
 	}
+
+	/**
+	 * Drive the full Add Galley → Upload File wizard from the Galleys
+	 * sub-panel. Caller is responsible for first opening the Galleys
+	 * sub-panel via `openPublicationPanel('Galleys', …)`.
+	 *
+	 * The "Add galley" button opens a legacy fbv form ("Create New
+	 * Galley") with a label / locale / urlPath; submitting that form
+	 * opens a stacked 3-step file upload wizard (Upload File → Review
+	 * Details → Confirm). Each step's primary advance button reuses
+	 * `id=continueButton`; on the last step its label is "Complete".
+	 *
+	 * The file input is opacity-0 absolute (plupload-style); we drive
+	 * it via `setInputFiles()` directly rather than going through the
+	 * "Upload File" affordance (which opens a native file dialog).
+	 *
+	 * @param {object} opts
+	 * @param {string} opts.label                    galley label, e.g. 'PDF'
+	 * @param {string} opts.filePath                 absolute path to the file to upload
+	 * @param {string} [opts.urlPath]                optional urlPath (omit to skip)
+	 * @param {string} [opts.locale='en']            select option value for locale
+	 * @param {string} [opts.genreLabel='Article Text']  Article Component select label
+	 */
+	async addGalley({label, filePath, urlPath, locale = 'en', genreLabel = 'Article Text'}) {
+		// 1. Click "Add galley" inside the Galleys panel of the workflow modal.
+		await this.workflowModal()
+			.getByRole('button', {name: 'Add galley', exact: true})
+			.click();
+
+		// 2. "Create New Galley" form dialog. Multiple stacked dialogs may
+		//    coexist (workflow modal + this one); scope by accessible name.
+		const galleyForm = this.page
+			.getByRole('dialog', {name: 'Create New Galley'})
+			.first();
+		await expect(galleyForm).toBeVisible({timeout: 10_000});
+		await galleyForm.locator('input[name=label]').fill(label);
+		await galleyForm.locator('select[name=locale]').selectOption(locale);
+		if (urlPath) {
+			await galleyForm.locator('input[name=urlPath]').fill(urlPath);
+		}
+		await galleyForm
+			.locator('button[name=submitFormButton]')
+			.click();
+
+		// 3. Step 1 — pick genre + upload file. The next dialog has no
+		//    accessible name; scope by the visible step text instead.
+		const uploadDialog = this.page
+			.locator('[role=dialog]')
+			.filter({hasText: 'Upload a File Ready for Publication'})
+			.first();
+		await expect(uploadDialog).toBeVisible({timeout: 10_000});
+		await uploadDialog
+			.locator('select[name=genreId]')
+			.selectOption({label: genreLabel});
+		await uploadDialog.locator('input[type=file]').setInputFiles(filePath);
+		// The file input dispatches an async upload; the "Change File"
+		// affordance only appears once the upload settles. Wait for it
+		// before clicking Continue, otherwise the form posts with no file.
+		await expect(uploadDialog.getByText('Change File')).toBeVisible({
+			timeout: 15_000,
+		});
+		await uploadDialog.locator('button#continueButton').click();
+
+		// 4. Step 2 — Review Details (name pre-filled from filename).
+		await expect(uploadDialog.getByText(/Name the file/i)).toBeVisible({
+			timeout: 10_000,
+		});
+		await uploadDialog.locator('button#continueButton').click();
+
+		// 5. Step 3 — Confirm. Same button id, label is now "Complete".
+		await expect(uploadDialog.getByText('File Added')).toBeVisible({
+			timeout: 10_000,
+		});
+		await uploadDialog.locator('button#continueButton').click();
+
+		// 6. Wizard closes; the galley row appears in the Galleys panel.
+		await expect(uploadDialog).toBeHidden({timeout: 15_000});
+		await expect(
+			this.workflowModal().getByRole('cell', {name: label, exact: true}),
+		).toBeVisible({timeout: 15_000});
+	}
+
+	/**
+	 * Delete a galley row from the Galleys panel via its More-Actions menu.
+	 * Caller is responsible for first opening the Galleys panel.
+	 *
+	 * @param {string} label  the galley label (matches the NAME column cell)
+	 */
+	async deleteGalley(label) {
+		const modal = this.workflowModal();
+		const row = modal
+			.locator('tr', {has: this.page.getByRole('cell', {name: label, exact: true})})
+			.first();
+		await row.getByRole('button', {name: 'More Actions'}).click();
+		// Menu items render as role=menuitem in a portaled `[role=menu]`
+		// container; the legacy fbv "Delete" action surfaces here.
+		await this.page
+			.getByRole('menuitem', {name: 'Delete', exact: true})
+			.click();
+		// Confirmation modal uses the fbv-style PkpDialog with OK/Cancel.
+		const dialog = this.page.locator('[data-cy="dialog"]').filter({
+			hasText: 'Are you sure you wish to delete this item',
+		}).first();
+		await expect(dialog).toBeVisible({timeout: 10_000});
+		await dialog
+			.getByRole('button', {name: 'OK', exact: true})
+			.click();
+		await expect(dialog).toBeHidden({timeout: 10_000});
+		await expect(
+			modal.getByRole('cell', {name: label, exact: true}),
+		).toHaveCount(0, {timeout: 15_000});
+	}
 };
