@@ -78,22 +78,58 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps chromium
 
+      - name: Start memory observer
+        run: |
+          mkdir -p temp
+          nohup sh -c '
+            while sleep 5; do
+              echo "=== $(date -u +%H:%M:%S) ==="
+              free -m
+              ps -eo rss,pid,user,comm --sort=-rss | head -20
+            done
+          ' >> temp/memory.log 2>&1 &
+          echo $! > temp/memory-observer.pid
+
       - name: Run Playwright tests
         run: npx playwright test --project=ojs
+
+      - name: Stop memory observer
+        if: always()
+        run: |
+          if [ -f temp/memory-observer.pid ]; then
+            kill "$(cat temp/memory-observer.pid)" 2>/dev/null || true
+          fi
 
       - name: Diagnose PHP server log
         if: always()
         run: |
+          echo '--- free -m (snapshot now) ---'
+          free -m || true
+          echo
+          echo '--- dmesg tail (OOM-killer evidence lives here) ---'
+          sudo dmesg | tail -200 || true
+          echo
           echo '--- temp/ listing ---'
           ls -la temp/ || true
-          echo '--- looking for php-server.log anywhere on disk ---'
-          find / -name 'php-server.log' 2>/dev/null || true
+          echo
           echo '--- temp/php-server.log contents (head 200) ---'
           if [ -f temp/php-server.log ]; then
             head -200 temp/php-server.log
           else
             echo 'MISSING'
           fi
+          echo
+          echo '--- temp/memory.log: peak total used + last 5 samples ---'
+          if [ -f temp/memory.log ]; then
+            echo 'Peak Mem used (MB):'
+            grep '^Mem:' temp/memory.log | awk '{print $3}' | sort -n | tail -1 || true
+            echo
+            echo 'Last 5 samples:'
+            tail -150 temp/memory.log
+          else
+            echo 'MISSING'
+          fi
+          echo
           echo '--- still-running php processes ---'
           ps -ef | grep -E '[p]hp' || echo 'none'
 
@@ -123,4 +159,11 @@ jobs:
         with:
           name: php-server-log
           path: temp/php-server.log
+          if-no-files-found: ignore
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: memory-log
+          path: temp/memory.log
           if-no-files-found: ignore
