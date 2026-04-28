@@ -231,4 +231,155 @@ test.describe('Sections', () => {
 			}
 		},
 	);
+
+	test(
+		'manager configures section fields (wordCount, identifyType, abstractsNotRequired) and they persist on reload',
+		{tag: '@regression'},
+		async ({pkpApi, browser, baseURL}) => {
+			// Ports the field-config half of Cypress's
+			// 50-CreateSections.cy.js: editing a section to add a
+			// `wordCount`, ticking `abstractsNotRequired`, and entering an
+			// `identifyType` translation. wordCount is a plain integer
+			// (not locale-keyed); identifyType is multilingual; the
+			// abstractsNotRequired checkbox carries a stable
+			// `id="abstractsNotRequired"` (not fbv-suffixed).
+			const tag = uniqueTag();
+			const {context} = await pkpApi.createJournal({
+				tag,
+				users: [{username: 'dbarnes', roles: ['manager']}],
+			});
+			const ctx = await browser.newContext({
+				storageState: await ensureAuthStateFor(browser, 'dbarnes', {baseURL}),
+				baseURL,
+				reducedMotion: 'reduce',
+			});
+			try {
+				const page = await ctx.newPage();
+				await openSectionsTab(page, context.path);
+
+				const title = 'Articles';
+				const identifyType = `Review Article ${tag}`;
+
+				let form = await openEditSectionForm(page, title);
+				// fbv suffixes ids with a runtime uniqId, so anchor on the
+				// stable `name=` attribute. The multilingual identifyType
+				// renders as `name="identifyType[en]"`. When the form has
+				// only one supported locale (the scratch journal default),
+				// the id collapses to `identifyType-{uniqId}` with no
+				// locale segment, so `id^="identifyType-en-"` would miss.
+				await form.locator('input[name="wordCount"]').fill('500');
+				await form
+					.locator('input[name="identifyType[en]"]')
+					.fill(identifyType);
+				const abstractsNotRequired = form.locator(
+					'input#abstractsNotRequired',
+				);
+				await expect(abstractsNotRequired).not.toBeChecked();
+				await abstractsNotRequired.check({force: true});
+				await saveSectionForm(page);
+
+				// Reload the settings page and re-open Edit — fields should
+				// be persisted.
+				await openSectionsTab(page, context.path);
+				form = await openEditSectionForm(page, title);
+				await expect(form.locator('input[name="wordCount"]')).toHaveValue(
+					'500',
+				);
+				await expect(
+					form.locator('input[name="identifyType[en]"]'),
+				).toHaveValue(identifyType);
+				await expect(form.locator('input#abstractsNotRequired')).toBeChecked();
+
+				// Sanity-check via REST that the persisted values match.
+				const sectionsResp = await page.request.get(
+					`/index.php/${context.path}/api/v1/sections`,
+				);
+				expect(sectionsResp.ok(), 'list sections').toBe(true);
+				const body = await sectionsResp.json();
+				const articles = (body.items || []).find(
+					(s) => (s.title?.en || '').trim() === 'Articles',
+				);
+				expect(articles, 'Articles section in REST listing').toBeTruthy();
+				expect(articles.wordCount).toBe(500);
+				expect(articles.abstractsNotRequired).toBe(true);
+				expect(articles.identifyType?.en).toBe(identifyType);
+			} finally {
+				await ctx.close();
+			}
+		},
+	);
+
+	test(
+		'manager assigns multiple section editors to a section and the assignment persists',
+		{tag: '@regression'},
+		async ({pkpApi, browser, baseURL}) => {
+			// Ports the editor-assignment half of Cypress's
+			// 50-CreateSections.cy.js. The section-edit form's
+			// `assignableUserGroups` query (PKPSectionForm::fetch) filters
+			// user-groups by `withStageIds([WORKFLOW_STAGE_ID_SUBMISSION])`,
+			// which excludes the bare `manager` user-group (registry/
+			// userGroups.xml gives it no stages). dbarnes therefore needs
+			// the `editor` user-group (stages=1,3,4,5) to surface in the
+			// list — matches the bootstrap publicknowledge fixture where
+			// the original Cypress spec ran. Seed two extra
+			// sectionEditor users so the form renders three editor
+			// candidates: dbarnes (Journal editor), dbuskins (Section
+			// editor), minoue (Section editor). Each label reads
+			// "Assign {Name} as {Role}" — match by the user's full name.
+			const tag = uniqueTag();
+			const {context} = await pkpApi.createJournal({
+				tag,
+				users: [
+					{username: 'dbarnes', roles: ['manager', 'editor']},
+					{username: 'dbuskins', roles: ['sectionEditor']},
+					{username: 'minoue', roles: ['sectionEditor']},
+				],
+			});
+			const ctx = await browser.newContext({
+				storageState: await ensureAuthStateFor(browser, 'dbarnes', {baseURL}),
+				baseURL,
+				reducedMotion: 'reduce',
+			});
+			try {
+				const page = await ctx.newPage();
+				await openSectionsTab(page, context.path);
+
+				const title = 'Articles';
+				const editorNames = ['Daniel Barnes', 'David Buskins', 'Minoti Inoue'];
+
+				let form = await openEditSectionForm(page, title);
+				for (const name of editorNames) {
+					// Each editor renders one <label> per user-group it can
+					// be assigned under. dbarnes is a manager (one row);
+					// dbuskins / minoue are sectionEditors (one row each).
+					// Click only the first matching label per user — that's
+					// what the Cypress source did (`label.contains(name)`
+					// returns the first match).
+					const label = form
+						.locator('label', {hasText: `Assign ${name} as `})
+						.first();
+					await expect(label).toBeVisible();
+					await label.click();
+				}
+				await saveSectionForm(page);
+
+				// Reload the settings page and re-open Edit — the three
+				// matching checkboxes should all be checked. fbv's
+				// checkbox.tpl nests the <input> directly inside the
+				// <label>, so the input is reachable as a label
+				// descendant.
+				await openSectionsTab(page, context.path);
+				form = await openEditSectionForm(page, title);
+				for (const name of editorNames) {
+					const checkbox = form
+						.locator(`label:has-text("Assign ${name} as ")`)
+						.locator('input[type="checkbox"]')
+						.first();
+					await expect(checkbox).toBeChecked();
+				}
+			} finally {
+				await ctx.close();
+			}
+		},
+	);
 });
