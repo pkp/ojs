@@ -101,3 +101,10 @@ jobs:
           name: mailpit-log
           path: /tmp/mailpit.log
           if-no-files-found: ignore
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: php-server-log
+          path: /tmp/php-server.log
+          if-no-files-found: ignore
