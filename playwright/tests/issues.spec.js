@@ -1,6 +1,7 @@
 // @ts-check
 const {test, expect} = require('../support/fixtures.js');
 const {ensureAuthStateFor} = require('../../lib/pkp/playwright/support/auth.js');
+const {waitForJQueryIdle} = require('../../lib/pkp/playwright/support/jquery.js');
 
 /**
  * Issues — row #7 in docs/e2e-playwright-migration.md.
@@ -80,6 +81,13 @@ async function openFutureTab(page) {
 			'a[id^="component-grid-issues-futureissuegrid-addIssue-button-"]',
 		),
 	).toBeVisible();
+	// Tab handler triggers a load_url_in_div fetch that repopulates the
+	// grid. Without waiting for jQuery to settle, the next interaction
+	// (typically expandAllRows or a row-control click) can land before
+	// rows are rendered or while the grid is still mid-refresh — the
+	// row's tr.row_controls then stays hidden and a subsequent click
+	// races into "element is not visible".
+	await waitForJQueryIdle(page);
 }
 
 /**
@@ -88,6 +96,7 @@ async function openFutureTab(page) {
 async function openBackTab(page) {
 	await page.locator('#back-button').click();
 	await expect(page.locator('#backIssuesGridContainer')).toBeVisible();
+	await waitForJQueryIdle(page);
 }
 
 /**
@@ -104,6 +113,10 @@ async function fillIssueForm(page, {volume, number, year}) {
 	await form.locator('input#showTitle').uncheck({force: true});
 	await form.locator('button[id^="submitFormButton"]').click();
 	await expect(form).toHaveCount(0, {timeout: 15_000});
+	// AjaxFormHandler chains close + grid refresh; the next step (often
+	// expandAllRows or another save) can otherwise race the in-flight
+	// repopulate and click a row that gets detached.
+	await waitForJQueryIdle(page);
 }
 
 /**
@@ -172,6 +185,11 @@ async function publishFirstFutureIssue(page, {sendNotification = true} = {}) {
 	}
 	await publishForm.locator('button[id^="submitFormButton"]').click();
 	await expect(publishForm).toHaveCount(0, {timeout: 15_000});
+	// Wait for the jQuery grid refresh chained off the publish save to
+	// complete — without this, a subsequent publishFirstFutureIssue can
+	// resolve a now-detached row and the click fails as
+	// "element was detached from the DOM".
+	await waitForJQueryIdle(page);
 }
 
 test.describe('Issues', () => {
@@ -187,7 +205,6 @@ test.describe('Issues', () => {
 			const ctx = await browser.newContext({
 				storageState: await ensureAuthStateFor(browser, 'dbarnes', {baseURL}),
 				baseURL,
-				reducedMotion: 'reduce',
 			});
 			try {
 				const page = await ctx.newPage();
@@ -270,7 +287,6 @@ test.describe('Issues', () => {
 			const ctx = await browser.newContext({
 				storageState: await ensureAuthStateFor(browser, 'dbarnes', {baseURL}),
 				baseURL,
-				reducedMotion: 'reduce',
 			});
 			try {
 				const page = await ctx.newPage();
@@ -345,6 +361,10 @@ test.describe('Issues', () => {
 				await expect(setCurrentDialog).toBeVisible();
 				await setCurrentDialog.getByRole('button', {name: 'OK'}).click();
 				await expect(setCurrentDialog).toHaveCount(0, {timeout: 15_000});
+				// Grid auto-refreshes after setCurrentIssue's jQuery save —
+				// settle before the next openBackTab/expandAllRows so row
+				// controls aren't read mid-repopulate.
+				await waitForJQueryIdle(page);
 
 				// The setCurrentIssue action should flip — now on 2022,
 				// not on 2021.
@@ -372,6 +392,7 @@ test.describe('Issues', () => {
 				await expect(unpublishDialog).toBeVisible();
 				await unpublishDialog.getByRole('button', {name: 'OK'}).click();
 				await expect(unpublishDialog).toHaveCount(0, {timeout: 15_000});
+				await waitForJQueryIdle(page);
 
 				// Back tab should no longer have the 2022 row.
 				await expect(
@@ -411,7 +432,6 @@ test.describe('Issues', () => {
 			const editorCtx = await browser.newContext({
 				storageState: await ensureAuthStateFor(browser, 'dbarnes', {baseURL}),
 				baseURL,
-				reducedMotion: 'reduce',
 			});
 			try {
 				const editorPage = await editorCtx.newPage();
@@ -429,7 +449,6 @@ test.describe('Issues', () => {
 			// Anonymous reader context: no storageState.
 			const anon = await browser.newContext({
 				baseURL,
-				reducedMotion: 'reduce',
 			});
 			try {
 				const anonPage = await anon.newPage();
@@ -493,7 +512,6 @@ test.describe('Issues', () => {
 					baseURL,
 				}),
 				baseURL,
-				reducedMotion: 'reduce',
 			});
 
 			// Clear Mailpit before triggering the publish — other parallel
@@ -528,20 +546,39 @@ test.describe('Issues', () => {
 				// is "Just published: {$issueIdentification} of {$contextName}",
 				// so the rendered subject must contain the issue
 				// identification.
-				const latest = await pkpMail.latestTo(
+				// Filter by the scratch journal's unique tag in the
+				// Subject so a parallel worker's "Just published" email
+				// to dbarnes can't race us — every parallel run uses
+				// `Vol. 5 No. 1 (2025)` so the volume alone isn't unique,
+				// but `Scratch context ${tag}` is.
+				//
+				// Note on To/Bcc: OJS dispatches batch notifications with
+				// the sender (admin) in To and the actual subscribers
+				// (including dbarnes) in BCC. Mailpit's `to:` search
+				// matches any recipient header (To/Cc/Bcc), which is why
+				// `inboxFor('dbarnes@mailinator.com')` finds the message
+				// even though `latest.To` only lists admin. Don't assert
+				// on the visible To shape — it's an OJS implementation
+				// detail, not the contract under test.
+				const messages = await pkpMail.inboxFor(
 					'dbarnes@mailinator.com',
 				);
+				const ours = messages.find((m) =>
+					(m.Subject || '').includes(tag),
+				);
 				expect(
-					latest.To.some(
-						(addr) => addr.Address === 'dbarnes@mailinator.com',
-					),
-				).toBe(true);
-				expect(latest.Subject).toContain('Vol. 5 No. 1 (2025)');
+					ours,
+					`expected an issue-published email with tag "${tag}" in ` +
+						`the subject, got subjects: ${messages
+							.map((m) => m.Subject)
+							.join(' | ')}`,
+				).toBeTruthy();
+				expect(ours.Subject).toContain('Vol. 5 No. 1 (2025)');
 
 				// fullMessage round-trip — the body should reference the
 				// issue identification too (the default template body
 				// includes the {$issueIdentification} variable).
-				const full = await pkpMail.fullMessage(latest.ID);
+				const full = await pkpMail.fullMessage(ours.ID);
 				const bodyText = (full.HTML || '') + (full.Text || '');
 				expect(bodyText).toContain('Vol. 5 No. 1 (2025)');
 			} finally {
