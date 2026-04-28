@@ -216,10 +216,17 @@ test.describe('Publication language change', () => {
 
 			// --- 4. Republish the publication ---
 			//
-			// The store's success handler reloaded the page; re-navigate to
-			// the workflow on a clean route so we don't fight any stale Vue
-			// state, then drive the standard publish flow.
-			await workflow.goto(submission.id);
+			// The store's success handler called window.location.reload();
+			// the page is already on the workflow URL (with whatever
+			// workflowMenuKey was active before the modal opened). Don't
+			// re-goto — that fights the page's localStorage-driven auto
+			// redirect and Playwright reports the goto as interrupted.
+			// Wait for the page to settle, then open the panel directly.
+			await page
+				.locator('.pkpSpinner')
+				.first()
+				.waitFor({state: 'detached', timeout: 15_000})
+				.catch(() => {});
 			await workflow.openPublicationPanel('Title & Abstract');
 			await workflow.publishCurrentPanel();
 			const afterRepublish = await workflow.fetchPublications(submission.id);
