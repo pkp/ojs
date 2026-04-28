@@ -1,6 +1,5 @@
 // @ts-check
 const {test, expect} = require('../support/fixtures.js');
-const {ensureAuthStateFor} = require('../../lib/pkp/playwright/support/auth.js');
 const submissionPublished = require('../fixtures/scenarios/submission-published.js');
 
 const SCRATCH_ISSUE = {volume: 1, number: '1', year: 2026};
@@ -77,7 +76,7 @@ test.describe('DOI Crossref registration', () => {
 	test(
 		'manager configures Crossref plugin and marks a submission DOI registered',
 		{tag: '@regression'},
-		async ({pkpApi, browser, baseURL}) => {
+		async ({pkpApi, asUser}) => {
 			const tag = uniqueTag(test.info(), 'crossref');
 			const prefix = '10.9999';
 
@@ -129,106 +128,100 @@ test.describe('DOI Crossref registration', () => {
 
 			// Authenticated manager session. Every DOI API call below
 			// carries this session's cookies.
-			const ctx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'dbarnes', {baseURL}),
-				baseURL,
-			});
-			try {
-				const page = await ctx.newPage();
+			const ctx = await asUser('dbarnes');
+			const page = await ctx.newPage();
 
-				// Warm the page so window.pkp.currentUser.csrfToken is
-				// available — mirrors the Cypress source's
-				// cy.window().then(win => win.pkp.currentUser.csrfToken).
-				// The DOI management landing page is the right surface:
-				// it both confirms the manager session is live and it's
-				// what a real user lands on before deposits.
-				const mgmtResp = await page.goto(
-					`/index.php/${context.path}/dois`,
-				);
-				expect(mgmtResp?.status()).toBe(200);
-				const csrfToken = await page.evaluate(
-					() => window.pkp?.currentUser?.csrfToken,
-				);
-				expect(csrfToken).toBeTruthy();
+			// Warm the page so window.pkp.currentUser.csrfToken is
+			// available — mirrors the Cypress source's
+			// cy.window().then(win => win.pkp.currentUser.csrfToken).
+			// The DOI management landing page is the right surface:
+			// it both confirms the manager session is live and it's
+			// what a real user lands on before deposits.
+			const mgmtResp = await page.goto(
+				`/index.php/${context.path}/dois`,
+			);
+			expect(mgmtResp?.status()).toBe(200);
+			const csrfToken = await page.evaluate(
+				() => window.pkp?.currentUser?.csrfToken,
+			);
+			expect(csrfToken).toBeTruthy();
 
-				// Sanity: verify the context's REST payload confirms our
-				// Crossref wiring. getConfiguredDoiAgency reads
-				// `registrationAgency` and resolves the IDoiRegistrationAgency
-				// plugin; a 200 with the agency string in the payload
-				// is enough to prove the end-to-end wiring for downstream
-				// DOI API routes that gate on it.
-				const ctxResp = await page.request.get(
-					`/index.php/${context.path}/api/v1/contexts/${context.id}`,
-				);
-				expect(ctxResp.ok()).toBeTruthy();
-				const ctxBody = await ctxResp.json();
-				expect(ctxBody.registrationAgency).toBe('crossrefplugin');
+			// Sanity: verify the context's REST payload confirms our
+			// Crossref wiring. getConfiguredDoiAgency reads
+			// `registrationAgency` and resolves the IDoiRegistrationAgency
+			// plugin; a 200 with the agency string in the payload
+			// is enough to prove the end-to-end wiring for downstream
+			// DOI API routes that gate on it.
+			const ctxResp = await page.request.get(
+				`/index.php/${context.path}/api/v1/contexts/${context.id}`,
+			);
+			expect(ctxResp.ok()).toBeTruthy();
+			const ctxBody = await ctxResp.json();
+			expect(ctxBody.registrationAgency).toBe('crossrefplugin');
 
-				// Negative control: agency gating works. Hitting the
-				// export endpoint without a configured registration
-				// agency returns 400 `api.dois.400.noRegistrationAgencyConfigured`.
-				// With our agency wired above the handler proceeds to the
-				// Crossref XML filter — we don't assert on the XML body
-				// here because the Crossref XSD enforces a long list of
-				// metadata fields (license URLs, resource-URL pattern,
-				// various locale rules) that a minimal scratch journal
-				// doesn't carry. The meaningful "deposit flow" capability
-				// this row asks for is the registration-agency resolution
-				// + state transition below; the XML-shape assertion is
-				// row #37 territory (Pubmed export) and lives in a
-				// dedicated spec.
-				//
-				// Route: `PUT /api/v1/dois/submissions/export` on the
-				// DoiController. The handler's agency gate is the first
-				// check we care about — a 200 here would also validate
-				// the XML filter, but the scratch-journal XSD shape is
-				// out of scope for this row.
+			// Negative control: agency gating works. Hitting the
+			// export endpoint without a configured registration
+			// agency returns 400 `api.dois.400.noRegistrationAgencyConfigured`.
+			// With our agency wired above the handler proceeds to the
+			// Crossref XML filter — we don't assert on the XML body
+			// here because the Crossref XSD enforces a long list of
+			// metadata fields (license URLs, resource-URL pattern,
+			// various locale rules) that a minimal scratch journal
+			// doesn't carry. The meaningful "deposit flow" capability
+			// this row asks for is the registration-agency resolution
+			// + state transition below; the XML-shape assertion is
+			// row #37 territory (Pubmed export) and lives in a
+			// dedicated spec.
+			//
+			// Route: `PUT /api/v1/dois/submissions/export` on the
+			// DoiController. The handler's agency gate is the first
+			// check we care about — a 200 here would also validate
+			// the XML filter, but the scratch-journal XSD shape is
+			// out of scope for this row.
 
-				// Mark the submission's DOI as registered — the terminal
-				// "I deposited this offline" state transition.
-				// `markSubmissionsRegistered` requires the submission to
-				// be `filterByCurrentPublicationStatus([STATUS_PUBLISHED])`
-				// which submissionPublished satisfies. The handler writes
-				// `doi.status = STATUS_REGISTERED (3)` + stamps
-				// `registrationAgency` on the doi row via
-				// Repo::doi()->markRegistered.
-				const markResp = await page.request.put(
-					`/index.php/${context.path}/api/v1/dois/submissions/markRegistered`,
-					{
-						headers: {'X-Csrf-Token': csrfToken},
-						data: {ids: [submission.id]},
-					},
-				);
-				expect(
-					markResp.status(),
-					`markRegistered failed: ${await markResp.text()}`,
-				).toBe(200);
+			// Mark the submission's DOI as registered — the terminal
+			// "I deposited this offline" state transition.
+			// `markSubmissionsRegistered` requires the submission to
+			// be `filterByCurrentPublicationStatus([STATUS_PUBLISHED])`
+			// which submissionPublished satisfies. The handler writes
+			// `doi.status = STATUS_REGISTERED (3)` + stamps
+			// `registrationAgency` on the doi row via
+			// Repo::doi()->markRegistered.
+			const markResp = await page.request.put(
+				`/index.php/${context.path}/api/v1/dois/submissions/markRegistered`,
+				{
+					headers: {'X-Csrf-Token': csrfToken},
+					data: {ids: [submission.id]},
+				},
+			);
+			expect(
+				markResp.status(),
+				`markRegistered failed: ${await markResp.text()}`,
+			).toBe(200);
 
-				// Re-fetch the publication — doiObject.status should now
-				// be Doi::STATUS_REGISTERED (3). Constants come from
-				// lib/pkp/classes/doi/Doi.php: UNREGISTERED=1, SUBMITTED=2,
-				// REGISTERED=3, ERROR=4, STALE=5.
-				const subResp = await page.request.get(
-					`/index.php/${context.path}/api/v1/submissions/${submission.id}`,
-				);
-				expect(subResp.ok()).toBeTruthy();
-				const subBody = await subResp.json();
-				const currentPub = subBody.publications.find(
-					(p) => p.id === subBody.currentPublicationId,
-				);
-				expect(currentPub.doiObject).toBeTruthy();
-				expect(currentPub.doiObject.status).toBe(3);
-				// And the doi string still carries our prefix — full
-				// end-to-end: seed enableDois + prefix + agency → seed
-				// publication → auto-mint DOI on publish → export XML →
-				// mark registered. The prefix assertion pins the mint
-				// path to our seeded config.
-				expect(currentPub.doiObject.doi).toMatch(
-					new RegExp(`^${escapeRegex(prefix)}/`),
-				);
-			} finally {
-				await ctx.close();
-			}
+			// Re-fetch the publication — doiObject.status should now
+			// be Doi::STATUS_REGISTERED (3). Constants come from
+			// lib/pkp/classes/doi/Doi.php: UNREGISTERED=1, SUBMITTED=2,
+			// REGISTERED=3, ERROR=4, STALE=5.
+			const subResp = await page.request.get(
+				`/index.php/${context.path}/api/v1/submissions/${submission.id}`,
+			);
+			expect(subResp.ok()).toBeTruthy();
+			const subBody = await subResp.json();
+			const currentPub = subBody.publications.find(
+				(p) => p.id === subBody.currentPublicationId,
+			);
+			expect(currentPub.doiObject).toBeTruthy();
+			expect(currentPub.doiObject.status).toBe(3);
+			// And the doi string still carries our prefix — full
+			// end-to-end: seed enableDois + prefix + agency → seed
+			// publication → auto-mint DOI on publish → export XML →
+			// mark registered. The prefix assertion pins the mint
+			// path to our seeded config.
+			expect(currentPub.doiObject.doi).toMatch(
+				new RegExp(`^${escapeRegex(prefix)}/`),
+			);
+		
 		},
 	);
 });

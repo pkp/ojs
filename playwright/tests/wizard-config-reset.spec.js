@@ -1,6 +1,5 @@
 // @ts-check
 const {test, expect} = require('../support/fixtures.js');
-const {ensureAuthStateFor} = require('../../lib/pkp/playwright/support/auth.js');
 const {SubmissionWizardPage} = require('../../lib/pkp/playwright/pages/SubmissionWizardPage.js');
 
 /**
@@ -174,7 +173,7 @@ test.describe('Submission wizard — field-config reset', () => {
 	test(
 		'toggling keywords to Require surfaces it as required in the wizard',
 		{tag: '@regression'},
-		async ({pkpApi, browser, baseURL}) => {
+		async ({pkpApi, asUser}) => {
 			const tag = uniqueTag();
 
 			// E0 scratch journal, dbarnes = manager. Editor-cum-manager is
@@ -186,55 +185,47 @@ test.describe('Submission wizard — field-config reset', () => {
 				users: [{username: 'dbarnes', roles: ['manager']}],
 			});
 
-			const ctx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'dbarnes', {
-					baseURL,
-				}),
-				baseURL,
-			});
-			try {
-				const page = await ctx.newPage();
+			const ctx = await asUser('dbarnes');
+			const page = await ctx.newPage();
 
-				// Flip keywords → require via the Metadata settings form.
-				await openMetadataSettingsTab(page, context.path);
-				await setKeywordsMode(page, 'require');
+			// Flip keywords → require via the Metadata settings form.
+			await openMetadataSettingsTab(page, context.path);
+			await setKeywordsMode(page, 'require');
 
-				// New wizard session. The Keywords field is rendered by
-				// publication/Details.php only when keywords is REQUEST
-				// or REQUIRE, and its isRequired prop tracks REQUIRE
-				// specifically. FormFieldLabel.vue adds a
-				// pkpFormFieldLabel__required span when isRequired is
-				// truthy — this span is absent by default (keywords
-				// defaults to REQUEST, not REQUIRE).
-				const wizard = new SubmissionWizardPage(page, context.path);
-				await wizard.goto();
-				await wizard.start({title: `Require-keywords ${tag}`});
+			// New wizard session. The Keywords field is rendered by
+			// publication/Details.php only when keywords is REQUEST
+			// or REQUIRE, and its isRequired prop tracks REQUIRE
+			// specifically. FormFieldLabel.vue adds a
+			// pkpFormFieldLabel__required span when isRequired is
+			// truthy — this span is absent by default (keywords
+			// defaults to REQUEST, not REQUIRE).
+			const wizard = new SubmissionWizardPage(page, context.path);
+			await wizard.goto();
+			await wizard.start({title: `Require-keywords ${tag}`});
 
-				// Step 1 Upload Files → Continue (skip file upload, not
-				// the feature under test here).
-				await wizard.continueStep();
+			// Step 1 Upload Files → Continue (skip file upload, not
+			// the feature under test here).
+			await wizard.continueStep();
 
-				// On Details. The Keywords control id is
-				// `titleAbstract-keywords-control-{locale}` — the label
-				// wraps it via for=controlId. Assert the label carries
-				// the required-asterisk marker.
-				const keywordsLabel = page.locator(
-					'label[for="titleAbstract-keywords-control-en"]',
-				);
-				await expect(keywordsLabel).toBeVisible({timeout: 15_000});
-				await expect(
-					keywordsLabel.locator('.pkpFormFieldLabel__required'),
-				).toBeVisible();
-			} finally {
-				await ctx.close();
-			}
+			// On Details. The Keywords control id is
+			// `titleAbstract-keywords-control-{locale}` — the label
+			// wraps it via for=controlId. Assert the label carries
+			// the required-asterisk marker.
+			const keywordsLabel = page.locator(
+				'label[for="titleAbstract-keywords-control-en"]',
+			);
+			await expect(keywordsLabel).toBeVisible({timeout: 15_000});
+			await expect(
+				keywordsLabel.locator('.pkpFormFieldLabel__required'),
+			).toBeVisible();
+		
 		},
 	);
 
 	test(
 		'toggling keywords to Do-not-ask removes it from the wizard Details step',
 		{tag: '@regression'},
-		async ({pkpApi, browser, baseURL}) => {
+		async ({pkpApi, asUser}) => {
 			const tag = uniqueTag();
 
 			const {context} = await pkpApi.createJournal({
@@ -242,48 +233,40 @@ test.describe('Submission wizard — field-config reset', () => {
 				users: [{username: 'dbarnes', roles: ['manager']}],
 			});
 
-			const ctx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'dbarnes', {
-					baseURL,
-				}),
-				baseURL,
-			});
-			try {
-				const page = await ctx.newPage();
+			const ctx = await asUser('dbarnes');
+			const page = await ctx.newPage();
 
-				// Flip keywords → disabled (METADATA_DISABLE = 0).
-				await openMetadataSettingsTab(page, context.path);
-				await setKeywordsMode(page, 'disable');
+			// Flip keywords → disabled (METADATA_DISABLE = 0).
+			await openMetadataSettingsTab(page, context.path);
+			await setKeywordsMode(page, 'disable');
 
-				const wizard = new SubmissionWizardPage(page, context.path);
-				await wizard.goto();
-				await wizard.start({title: `No-keywords ${tag}`});
+			const wizard = new SubmissionWizardPage(page, context.path);
+			await wizard.goto();
+			await wizard.start({title: `No-keywords ${tag}`});
 
-				await wizard.continueStep();
+			await wizard.continueStep();
 
-				// On Details. With keywords disabled, the Details form
-				// doesn't add the `keywords` field at all
-				// (Details.php#L48 gate), so the control + label are
-				// absent.
-				await expect(
-					page.locator(
-						'label[for="titleAbstract-keywords-control-en"]',
-					),
-				).toHaveCount(0);
-				await expect(
-					page.locator('#titleAbstract-keywords-control-en'),
-				).toHaveCount(0);
+			// On Details. With keywords disabled, the Details form
+			// doesn't add the `keywords` field at all
+			// (Details.php#L48 gate), so the control + label are
+			// absent.
+			await expect(
+				page.locator(
+					'label[for="titleAbstract-keywords-control-en"]',
+				),
+			).toHaveCount(0);
+			await expect(
+				page.locator('#titleAbstract-keywords-control-en'),
+			).toHaveCount(0);
 
-				// Sanity: the Details form itself did render — the Title
-				// control (which isn't config-gated) is present.
-				await expect(
-					page.locator(
-						'textarea#titleAbstract-title-control-en',
-					),
-				).toBeAttached();
-			} finally {
-				await ctx.close();
-			}
+			// Sanity: the Details form itself did render — the Title
+			// control (which isn't config-gated) is present.
+			await expect(
+				page.locator(
+					'textarea#titleAbstract-title-control-en',
+				),
+			).toBeAttached();
+		
 		},
 	);
 });

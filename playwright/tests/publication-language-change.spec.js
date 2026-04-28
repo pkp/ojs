@@ -244,20 +244,16 @@ async function expectArticleRendered({
 	expectedTitleFragment,
 	readerLocale,
 }) {
-	const ctx = await browser.newContext({baseURL});
-	try {
-		const page = await ctx.newPage();
-		const localePrefix = readerLocale ? `/${readerLocale}` : '';
-		const resp = await page.goto(
-			`/index.php/publicknowledge${localePrefix}/article/view/${submissionId}`,
-		);
-		expect(resp?.status()).toBe(200);
-		await expect(page.locator('h1').first()).toContainText(
-			expectedTitleFragment,
-		);
-	} finally {
-		await ctx.close();
-	}
+	const ctx = await browser.newContext({baseURL});	const page = await ctx.newPage();
+	const localePrefix = readerLocale ? `/${readerLocale}` : '';
+	const resp = await page.goto(
+		`/index.php/publicknowledge${localePrefix}/article/view/${submissionId}`,
+	);
+	expect(resp?.status()).toBe(200);
+	await expect(page.locator('h1').first()).toContainText(
+		expectedTitleFragment,
+	);
+
 }
 
 /**

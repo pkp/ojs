@@ -1,6 +1,5 @@
 // @ts-check
 const {test, expect} = require('../support/fixtures.js');
-const {ensureAuthStateFor} = require('../../lib/pkp/playwright/support/auth.js');
 const {waitForJQueryIdle} = require('../../lib/pkp/playwright/support/jquery.js');
 
 /**
@@ -196,232 +195,220 @@ test.describe('Issues', () => {
 	test(
 		'manager creates a future issue, edits volume/number/year, and the metadata persists',
 		{tag: '@regression'},
-		async ({pkpApi, browser, baseURL}) => {
+		async ({pkpApi, asUser}) => {
 			const tag = uniqueTag();
 			const {context} = await pkpApi.createJournal({
 				tag,
 				users: [{username: 'dbarnes', roles: ['manager']}],
 			});
-			const ctx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'dbarnes', {baseURL}),
-				baseURL,
+			const ctx = await asUser('dbarnes');
+			const page = await ctx.newPage();
+			await openManageIssues(page, context.path);
+
+			// Create initial future issue with volume/number/year.
+			await createFutureIssue(page, {volume: 1, number: 1, year: 2020});
+			const firstRow = findRow(page, '#futureIssuesGridContainer', {
+				volume: 1,
+				number: 1,
+				year: 2020,
 			});
-			try {
-				const page = await ctx.newPage();
-				await openManageIssues(page, context.path);
+			await expect(firstRow).toBeVisible();
 
-				// Create initial future issue with volume/number/year.
-				await createFutureIssue(page, {volume: 1, number: 1, year: 2020});
-				const firstRow = findRow(page, '#futureIssuesGridContainer', {
-					volume: 1,
-					number: 1,
-					year: 2020,
-				});
-				await expect(firstRow).toBeVisible();
+			// Edit the same issue and bump each field. The per-row
+			// Edit action opens a side-modal with a jQuery-UI tabset
+			// (#editIssueTabs) — Table of Contents / Issue Data /
+			// Issue Galleys. The volume/number/year form lives under
+			// the "Issue Data" tab and is lazy-loaded from
+			// `editIssueData`.
+			await expandAllRows(page, '#futureIssuesGridContainer');
+			await page
+				.locator(
+					'#futureIssuesGridContainer tr.row_controls a[id*="futureissuegrid-row-"][id*="-edit-button-"]',
+				)
+				.first()
+				.click();
+			await expect(page.locator('#editIssueTabs')).toBeVisible();
+			await page
+				.locator('#editIssueTabs a', {hasText: 'Issue Data'})
+				.click();
+			const form = page.locator('form#issueForm');
+			await expect(form.locator('input[name="volume"]')).toBeAttached();
+			await form.locator('input[name="volume"]').fill('3');
+			await form.locator('input[name="number"]').fill('4');
+			await form.locator('input[name="year"]').fill('2023');
+			await form.locator('button[id^="submitFormButton"]').click();
+			// AjaxFormHandler closes the whole Edit side-modal on
+			// successful save — wait for the tabset to detach before
+			// re-querying the grid.
+			await expect(page.locator('#editIssueTabs')).toHaveCount(0, {
+				timeout: 15_000,
+			});
 
-				// Edit the same issue and bump each field. The per-row
-				// Edit action opens a side-modal with a jQuery-UI tabset
-				// (#editIssueTabs) — Table of Contents / Issue Data /
-				// Issue Galleys. The volume/number/year form lives under
-				// the "Issue Data" tab and is lazy-loaded from
-				// `editIssueData`.
-				await expandAllRows(page, '#futureIssuesGridContainer');
-				await page
-					.locator(
-						'#futureIssuesGridContainer tr.row_controls a[id*="futureissuegrid-row-"][id*="-edit-button-"]',
-					)
-					.first()
-					.click();
-				await expect(page.locator('#editIssueTabs')).toBeVisible();
-				await page
-					.locator('#editIssueTabs a', {hasText: 'Issue Data'})
-					.click();
-				const form = page.locator('form#issueForm');
-				await expect(form.locator('input[name="volume"]')).toBeAttached();
-				await form.locator('input[name="volume"]').fill('3');
-				await form.locator('input[name="number"]').fill('4');
-				await form.locator('input[name="year"]').fill('2023');
-				await form.locator('button[id^="submitFormButton"]').click();
-				// AjaxFormHandler closes the whole Edit side-modal on
-				// successful save — wait for the tabset to detach before
-				// re-querying the grid.
-				await expect(page.locator('#editIssueTabs')).toHaveCount(0, {
-					timeout: 15_000,
-				});
+			// The grid refreshes in place; the edited row must show
+			// the new identification.
+			await expect(
+				findRow(page, '#futureIssuesGridContainer', {
+					volume: 3,
+					number: 4,
+					year: 2023,
+				}),
+			).toBeVisible();
 
-				// The grid refreshes in place; the edited row must show
-				// the new identification.
-				await expect(
-					findRow(page, '#futureIssuesGridContainer', {
-						volume: 3,
-						number: 4,
-						year: 2023,
-					}),
-				).toBeVisible();
-
-				// Reload the whole page and re-check — the updated
-				// identification must persist across reloads.
-				await openManageIssues(page, context.path);
-				await expect(
-					findRow(page, '#futureIssuesGridContainer', {
-						volume: 3,
-						number: 4,
-						year: 2023,
-					}),
-				).toBeVisible();
-			} finally {
-				await ctx.close();
-			}
+			// Reload the whole page and re-check — the updated
+			// identification must persist across reloads.
+			await openManageIssues(page, context.path);
+			await expect(
+				findRow(page, '#futureIssuesGridContainer', {
+					volume: 3,
+					number: 4,
+					year: 2023,
+				}),
+			).toBeVisible();
+		
 		},
 	);
 
 	test(
 		'manager publishes, swaps current, and unpublishes — state transitions show in the grid',
 		{tag: '@regression'},
-		async ({pkpApi, browser, baseURL}) => {
+		async ({pkpApi, asUser}) => {
 			const tag = uniqueTag();
 			const {context} = await pkpApi.createJournal({
 				tag,
 				users: [{username: 'dbarnes', roles: ['manager']}],
 			});
-			const ctx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'dbarnes', {baseURL}),
-				baseURL,
-			});
-			try {
-				const page = await ctx.newPage();
-				await openManageIssues(page, context.path);
+			const ctx = await asUser('dbarnes');
+			const page = await ctx.newPage();
+			await openManageIssues(page, context.path);
 
-				// Seed two future issues.
-				await createFutureIssue(page, {volume: 1, number: 1, year: 2021});
-				await createFutureIssue(page, {volume: 2, number: 1, year: 2022});
+			// Seed two future issues.
+			await createFutureIssue(page, {volume: 1, number: 1, year: 2021});
+			await createFutureIssue(page, {volume: 2, number: 1, year: 2022});
 
-				// Publish the first one — Repo::issue::updateCurrent
-				// auto-promotes it as current.
-				await publishFirstFutureIssue(page);
+			// Publish the first one — Repo::issue::updateCurrent
+			// auto-promotes it as current.
+			await publishFirstFutureIssue(page);
 
-				// After one publish: the remaining future row is the
-				// second issue. Publish it too.
-				await publishFirstFutureIssue(page);
+			// After one publish: the remaining future row is the
+			// second issue. Publish it too.
+			await publishFirstFutureIssue(page);
 
-				// Both issues are now on the Back tab. Verify they
-				// appear, and that the non-current row exposes the
-				// setCurrentIssue action.
-				await openBackTab(page);
-				await expect(
-					findRow(page, '#backIssuesGridContainer', {
-						volume: 1,
-						number: 1,
-						year: 2021,
-					}),
-				).toBeVisible();
-				await expect(
-					findRow(page, '#backIssuesGridContainer', {
-						volume: 2,
-						number: 1,
-						year: 2022,
-					}),
-				).toBeVisible();
-
-				await expandAllRows(page, '#backIssuesGridContainer');
-				// The second publish auto-promoted the 2022 issue to
-				// current, so the 2021 row should have setCurrentIssue
-				// and the 2022 row should not.
-				const row2021 = findRow(page, '#backIssuesGridContainer', {
+			// Both issues are now on the Back tab. Verify they
+			// appear, and that the non-current row exposes the
+			// setCurrentIssue action.
+			await openBackTab(page);
+			await expect(
+				findRow(page, '#backIssuesGridContainer', {
 					volume: 1,
 					number: 1,
 					year: 2021,
-				});
-				const row2021Id = await row2021.first().getAttribute('id');
-				const row2022 = findRow(page, '#backIssuesGridContainer', {
+				}),
+			).toBeVisible();
+			await expect(
+				findRow(page, '#backIssuesGridContainer', {
 					volume: 2,
 					number: 1,
 					year: 2022,
-				});
-				const row2022Id = await row2022.first().getAttribute('id');
+				}),
+			).toBeVisible();
 
-				await expect(
-					page.locator(
-						`a[id^="${row2021Id}-setCurrentIssue-button-"]`,
-					),
-				).toHaveCount(1);
-				await expect(
-					page.locator(
-						`a[id^="${row2022Id}-setCurrentIssue-button-"]`,
-					),
-				).toHaveCount(0);
+			await expandAllRows(page, '#backIssuesGridContainer');
+			// The second publish auto-promoted the 2022 issue to
+			// current, so the 2021 row should have setCurrentIssue
+			// and the 2022 row should not.
+			const row2021 = findRow(page, '#backIssuesGridContainer', {
+				volume: 1,
+				number: 1,
+				year: 2021,
+			});
+			const row2021Id = await row2021.first().getAttribute('id');
+			const row2022 = findRow(page, '#backIssuesGridContainer', {
+				volume: 2,
+				number: 1,
+				year: 2022,
+			});
+			const row2022Id = await row2022.first().getAttribute('id');
 
-				// Set 2021 as current.
-				await page
-					.locator(`a[id^="${row2021Id}-setCurrentIssue-button-"]`)
-					.click();
-				const setCurrentDialog = page.locator('[role="dialog"]', {
-					hasText: 'Are you sure you want to set this issue as current',
-				});
-				await expect(setCurrentDialog).toBeVisible();
-				await setCurrentDialog.getByRole('button', {name: 'OK'}).click();
-				await expect(setCurrentDialog).toHaveCount(0, {timeout: 15_000});
-				// Grid auto-refreshes after setCurrentIssue's jQuery save —
-				// settle before the next openBackTab/expandAllRows so row
-				// controls aren't read mid-repopulate.
-				await waitForJQueryIdle(page);
+			await expect(
+				page.locator(
+					`a[id^="${row2021Id}-setCurrentIssue-button-"]`,
+				),
+			).toHaveCount(1);
+			await expect(
+				page.locator(
+					`a[id^="${row2022Id}-setCurrentIssue-button-"]`,
+				),
+			).toHaveCount(0);
 
-				// The setCurrentIssue action should flip — now on 2022,
-				// not on 2021.
-				await openBackTab(page);
-				await expandAllRows(page, '#backIssuesGridContainer');
-				await expect(
-					page.locator(
-						`a[id^="${row2021Id}-setCurrentIssue-button-"]`,
-					),
-				).toHaveCount(0);
-				await expect(
-					page.locator(
-						`a[id^="${row2022Id}-setCurrentIssue-button-"]`,
-					),
-				).toHaveCount(1);
+			// Set 2021 as current.
+			await page
+				.locator(`a[id^="${row2021Id}-setCurrentIssue-button-"]`)
+				.click();
+			const setCurrentDialog = page.locator('[role="dialog"]', {
+				hasText: 'Are you sure you want to set this issue as current',
+			});
+			await expect(setCurrentDialog).toBeVisible();
+			await setCurrentDialog.getByRole('button', {name: 'OK'}).click();
+			await expect(setCurrentDialog).toHaveCount(0, {timeout: 15_000});
+			// Grid auto-refreshes after setCurrentIssue's jQuery save —
+			// settle before the next openBackTab/expandAllRows so row
+			// controls aren't read mid-repopulate.
+			await waitForJQueryIdle(page);
 
-				// Unpublish the 2022 issue — it returns to the Future
-				// tab.
-				await page
-					.locator(`a[id^="${row2022Id}-unpublish-button-"]`)
-					.click();
-				const unpublishDialog = page.locator('[role="dialog"]', {
-					hasText: 'Are you sure you want to unpublish this published issue',
-				});
-				await expect(unpublishDialog).toBeVisible();
-				await unpublishDialog.getByRole('button', {name: 'OK'}).click();
-				await expect(unpublishDialog).toHaveCount(0, {timeout: 15_000});
-				await waitForJQueryIdle(page);
+			// The setCurrentIssue action should flip — now on 2022,
+			// not on 2021.
+			await openBackTab(page);
+			await expandAllRows(page, '#backIssuesGridContainer');
+			await expect(
+				page.locator(
+					`a[id^="${row2021Id}-setCurrentIssue-button-"]`,
+				),
+			).toHaveCount(0);
+			await expect(
+				page.locator(
+					`a[id^="${row2022Id}-setCurrentIssue-button-"]`,
+				),
+			).toHaveCount(1);
 
-				// Back tab should no longer have the 2022 row.
-				await expect(
-					findRow(page, '#backIssuesGridContainer', {
-						volume: 2,
-						number: 1,
-						year: 2022,
-					}),
-				).toHaveCount(0, {timeout: 15_000});
+			// Unpublish the 2022 issue — it returns to the Future
+			// tab.
+			await page
+				.locator(`a[id^="${row2022Id}-unpublish-button-"]`)
+				.click();
+			const unpublishDialog = page.locator('[role="dialog"]', {
+				hasText: 'Are you sure you want to unpublish this published issue',
+			});
+			await expect(unpublishDialog).toBeVisible();
+			await unpublishDialog.getByRole('button', {name: 'OK'}).click();
+			await expect(unpublishDialog).toHaveCount(0, {timeout: 15_000});
+			await waitForJQueryIdle(page);
 
-				// Future tab should now contain the 2022 row.
-				await openFutureTab(page);
-				await expect(
-					findRow(page, '#futureIssuesGridContainer', {
-						volume: 2,
-						number: 1,
-						year: 2022,
-					}),
-				).toBeVisible();
-			} finally {
-				await ctx.close();
-			}
+			// Back tab should no longer have the 2022 row.
+			await expect(
+				findRow(page, '#backIssuesGridContainer', {
+					volume: 2,
+					number: 1,
+					year: 2022,
+				}),
+			).toHaveCount(0, {timeout: 15_000});
+
+			// Future tab should now contain the 2022 row.
+			await openFutureTab(page);
+			await expect(
+				findRow(page, '#futureIssuesGridContainer', {
+					volume: 2,
+					number: 1,
+					year: 2022,
+				}),
+			).toBeVisible();
+		
 		},
 	);
 
 	test(
 		'published issue appears on the public archive and its public view page loads',
 		{tag: '@regression'},
-		async ({pkpApi, browser, baseURL}) => {
+		async ({pkpApi, browser, baseURL, asUser}) => {
 			const tag = uniqueTag();
 			const {context} = await pkpApi.createJournal({
 				tag,
@@ -429,22 +416,16 @@ test.describe('Issues', () => {
 			});
 
 			// Editor context: create + publish one issue.
-			const editorCtx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'dbarnes', {baseURL}),
-				baseURL,
+			const editorCtx = await asUser('dbarnes');
+			const editorPage = await editorCtx.newPage();
+			await openManageIssues(editorPage, context.path);
+			await createFutureIssue(editorPage, {
+				volume: 7,
+				number: 2,
+				year: 2024,
 			});
-			try {
-				const editorPage = await editorCtx.newPage();
-				await openManageIssues(editorPage, context.path);
-				await createFutureIssue(editorPage, {
-					volume: 7,
-					number: 2,
-					year: 2024,
-				});
-				await publishFirstFutureIssue(editorPage);
-			} finally {
-				await editorCtx.close();
-			}
+			await publishFirstFutureIssue(editorPage);
+		
 
 			// Anonymous reader context: no storageState.
 			const anon = await browser.newContext({
@@ -477,7 +458,7 @@ test.describe('Issues', () => {
 	test(
 		'publishing an issue with sendIssueNotification ticked dispatches an issue-published email',
 		{tag: '@regression'},
-		async ({pkpApi, pkpMail, browser, baseURL}) => {
+		async ({pkpApi, pkpMail, asUser}) => {
 			// Recipient model verified via classes/controllers/grid/issues/
 			// IssueGridHandler::publishIssue + NotificationSubscriptionSettingsDAO::
 			// getSubscribedUserIds: every user with an active user_user_groups
@@ -507,12 +488,7 @@ test.describe('Issues', () => {
 				tag,
 				users: [{username: 'dbarnes', roles: ['manager']}],
 			});
-			const ctx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'dbarnes', {
-					baseURL,
-				}),
-				baseURL,
-			});
+			const ctx = await asUser('dbarnes');
 
 			// Clear Mailpit before triggering the publish — other parallel
 			// workers may have left issue-publish mail addressed to
@@ -582,7 +558,6 @@ test.describe('Issues', () => {
 				const bodyText = (full.HTML || '') + (full.Text || '');
 				expect(bodyText).toContain('Vol. 5 No. 1 (2025)');
 			} finally {
-				await ctx.close();
 				// Leave Mailpit empty for the next test/worker so a stale
 				// "Vol. 5 No. 1 (2025)" message can't shadow a future
 				// assertion.

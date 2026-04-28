@@ -78,7 +78,7 @@ const submissionPublished = require('../fixtures/scenarios/submission-published.
 test.describe('Subscription-based access', () => {
 	test(
 		'anonymous reader is blocked from a subscription-required article; editor bypasses the gate',
-		async ({pkpApi, browser, baseURL}) => {
+		async ({pkpApi, browser, baseURL, asUser}) => {
 			const tag = uniqueTag(test.info(), 'sub');
 
 			// 1. Scratch journal with publishingMode=SUBSCRIPTION (1) and
@@ -132,61 +132,53 @@ test.describe('Subscription-based access', () => {
 			//       — the auto-rendered JATS XML link in article_details.tpl
 			//       (#341-348) is hardcoded without the `restricted` class
 			//       and so isn't a usable gate signal. Hence we add a PDF.
-			const managerCtx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'dbarnes', {
-					baseURL,
-				}),
-				baseURL,
+			const managerCtx = await asUser('dbarnes');
+			const managerPage = await managerCtx.newPage();
+
+			// (a) subscription type
+			await managerPage.goto(`/index.php/${journalPath}/payments`);
+			await managerPage.locator('a[name="subscriptionTypes"]').click();
+			await expect(
+				managerPage.locator('a.pkp_linkaction_addSubscriptionType'),
+			).toBeVisible({timeout: 15_000});
+			await managerPage
+				.locator('a.pkp_linkaction_addSubscriptionType')
+				.click();
+
+			const form = managerPage.locator('form#subscriptionTypeForm');
+			await expect(form).toBeVisible({timeout: 10_000});
+			const typeName = `Yearly ${tag}`;
+			await form.locator('input[name="name[en]"]').fill(typeName);
+			await form.locator('select#currency').selectOption('CAD');
+			await form.locator('input[name="cost"]').fill('50');
+			// SUBSCRIPTION_TYPE_FORMAT_ONLINE — first option in $validFormats.
+			await form.locator('select#format').selectOption({index: 0});
+			await form.locator('input[name="duration"]').fill('12');
+			await form.locator('input#individual').check({force: true});
+			await form.locator('button[type="submit"]').click();
+			await expect(form).toHaveCount(0, {timeout: 15_000});
+
+			// Confirm the type row appears (sanity).
+			await expect(
+				managerPage.locator(
+					'#subscriptionTypesGridContainer tr.gridRow',
+					{hasText: typeName},
+				),
+			).toBeVisible();
+
+			// (b) PDF galley on the published submission. Reuses the
+			// addGalley POM helper from row #51 (galleys.spec.js).
+			// The POM hardcodes the workflow URL through a
+			// journalPath option — pass our scratch journal.
+			const workflow = new EditorialWorkflowPage(managerPage);
+			await workflow.goto(submission.id, {journalPath});
+			await workflow.openPublicationPanel('Galleys');
+			await workflow.addGalley({
+				label: 'PDF',
+				filePath: galleyFixturePath(),
+				urlPath: `pdf-${tag}`,
 			});
-			try {
-				const managerPage = await managerCtx.newPage();
-
-				// (a) subscription type
-				await managerPage.goto(`/index.php/${journalPath}/payments`);
-				await managerPage.locator('a[name="subscriptionTypes"]').click();
-				await expect(
-					managerPage.locator('a.pkp_linkaction_addSubscriptionType'),
-				).toBeVisible({timeout: 15_000});
-				await managerPage
-					.locator('a.pkp_linkaction_addSubscriptionType')
-					.click();
-
-				const form = managerPage.locator('form#subscriptionTypeForm');
-				await expect(form).toBeVisible({timeout: 10_000});
-				const typeName = `Yearly ${tag}`;
-				await form.locator('input[name="name[en]"]').fill(typeName);
-				await form.locator('select#currency').selectOption('CAD');
-				await form.locator('input[name="cost"]').fill('50');
-				// SUBSCRIPTION_TYPE_FORMAT_ONLINE — first option in $validFormats.
-				await form.locator('select#format').selectOption({index: 0});
-				await form.locator('input[name="duration"]').fill('12');
-				await form.locator('input#individual').check({force: true});
-				await form.locator('button[type="submit"]').click();
-				await expect(form).toHaveCount(0, {timeout: 15_000});
-
-				// Confirm the type row appears (sanity).
-				await expect(
-					managerPage.locator(
-						'#subscriptionTypesGridContainer tr.gridRow',
-						{hasText: typeName},
-					),
-				).toBeVisible();
-
-				// (b) PDF galley on the published submission. Reuses the
-				// addGalley POM helper from row #51 (galleys.spec.js).
-				// The POM hardcodes the workflow URL through a
-				// journalPath option — pass our scratch journal.
-				const workflow = new EditorialWorkflowPage(managerPage);
-				await workflow.goto(submission.id, {journalPath});
-				await workflow.openPublicationPanel('Galleys');
-				await workflow.addGalley({
-					label: 'PDF',
-					filePath: galleyFixturePath(),
-					urlPath: `pdf-${tag}`,
-				});
-			} finally {
-				await managerCtx.close();
-			}
+		
 
 			// 4. Access checks. Article URL on the scratch journal.
 			const articleUrl = `/index.php/${journalPath}/article/view/${submission.id}`;
@@ -206,35 +198,27 @@ test.describe('Subscription-based access', () => {
 			// URL, fresh dbarnes context. canPreview() returns true for
 			// manager-role users → subscribedUser() returns true →
 			// hasAccess=true → galley link rendered without `restricted`.
-			const editorCtx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'dbarnes', {
-					baseURL,
-				}),
-				baseURL,
-			});
-			try {
-				const editorPage = await editorCtx.newPage();
-				const resp = await editorPage.goto(articleUrl);
-				expect(resp?.status()).toBe(200);
-				const pdfLink = editorPage
-					.locator('a.obj_galley_link.pdf')
-					.filter({hasText: 'PDF'});
-				await expect(pdfLink).toBeVisible({timeout: 15_000});
-				expect(
-					await pdfLink
-						.evaluate((el) => el.classList.contains('restricted'))
-						.catch(() => false),
-					'editor (dbarnes manager) bypasses subscription gating',
-				).toBe(false);
-			} finally {
-				await editorCtx.close();
-			}
+			const editorCtx = await asUser('dbarnes');
+			const editorPage = await editorCtx.newPage();
+			const resp = await editorPage.goto(articleUrl);
+			expect(resp?.status()).toBe(200);
+			const pdfLink = editorPage
+				.locator('a.obj_galley_link.pdf')
+				.filter({hasText: 'PDF'});
+			await expect(pdfLink).toBeVisible({timeout: 15_000});
+			expect(
+				await pdfLink
+					.evaluate((el) => el.classList.contains('restricted'))
+					.catch(() => false),
+				'editor (dbarnes manager) bypasses subscription gating',
+			).toBe(false);
+		
 		},
 	);
 
 	test(
 		'subscriber reader sees the full article body',
-		async ({pkpApi, browser, baseURL}) => {
+		async ({pkpApi, asUser}) => {
 			// Mirrors the setup of the gate-engaged test: scratch journal
 			// in subscription mode, published issue marked
 			// ISSUE_ACCESS_SUBSCRIPTION, published submission, PDF galley.
@@ -285,244 +269,236 @@ test.describe('Subscription-based access', () => {
 
 			const subscriptionTypeName = `Yearly ${tag}`;
 
-			const managerCtx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'dbarnes', {
-					baseURL,
-				}),
-				baseURL,
+			const managerCtx = await asUser('dbarnes');
+			const managerPage = await managerCtx.newPage();
+
+			// (a) Create a subscription type so the
+			//     IndividualSubscriptionForm has a non-empty `typeId`
+			//     select. Same flow as the gate-engaged test.
+			await managerPage.goto(`/index.php/${journalPath}/payments`);
+			await managerPage.locator('a[name="subscriptionTypes"]').click();
+			await expect(
+				managerPage.locator('a.pkp_linkaction_addSubscriptionType'),
+			).toBeVisible({timeout: 15_000});
+			await managerPage
+				.locator('a.pkp_linkaction_addSubscriptionType')
+				.click();
+			const typeForm = managerPage.locator('form#subscriptionTypeForm');
+			await expect(typeForm).toBeVisible({timeout: 10_000});
+			await typeForm
+				.locator('input[name="name[en]"]')
+				.fill(subscriptionTypeName);
+			await typeForm.locator('select#currency').selectOption('CAD');
+			await typeForm.locator('input[name="cost"]').fill('50');
+			await typeForm
+				.locator('select#format')
+				.selectOption({index: 0});
+			await typeForm.locator('input[name="duration"]').fill('12');
+			await typeForm.locator('input#individual').check({force: true});
+			await typeForm.locator('button[type="submit"]').click();
+			await expect(typeForm).toHaveCount(0, {timeout: 15_000});
+			// Sanity — the new type row is in the grid; the
+			// IndividualSubscriptionForm reads the same
+			// SubscriptionTypeDAO::getByInstitutional() to populate
+			// its `typeId` select, so this guarantees the modal will
+			// render a non-empty option set.
+			await expect(
+				managerPage.locator(
+					'#subscriptionTypesGridContainer tr.gridRow',
+					{hasText: subscriptionTypeName},
+				),
+			).toBeVisible();
+
+			// (b) PDF galley on the published submission so the
+			//     reader-side gate signal lives on a real publication
+			//     galley (the auto-rendered JATS XML link in
+			//     article_details.tpl#341-348 is hardcoded outside
+			//     galley_link.tpl and never carries the `restricted`
+			//     class regardless of subscription state).
+			const workflow = new EditorialWorkflowPage(managerPage);
+			await workflow.goto(submission.id, {journalPath});
+			await workflow.openPublicationPanel('Galleys');
+			await workflow.addGalley({
+				label: 'PDF',
+				filePath: galleyFixturePath(),
+				urlPath: `pdf-${tag}`,
 			});
-			try {
-				const managerPage = await managerCtx.newPage();
 
-				// (a) Create a subscription type so the
-				//     IndividualSubscriptionForm has a non-empty `typeId`
-				//     select. Same flow as the gate-engaged test.
-				await managerPage.goto(`/index.php/${journalPath}/payments`);
-				await managerPage.locator('a[name="subscriptionTypes"]').click();
-				await expect(
-					managerPage.locator('a.pkp_linkaction_addSubscriptionType'),
-				).toBeVisible({timeout: 15_000});
-				await managerPage
-					.locator('a.pkp_linkaction_addSubscriptionType')
-					.click();
-				const typeForm = managerPage.locator('form#subscriptionTypeForm');
-				await expect(typeForm).toBeVisible({timeout: 10_000});
-				await typeForm
-					.locator('input[name="name[en]"]')
-					.fill(subscriptionTypeName);
-				await typeForm.locator('select#currency').selectOption('CAD');
-				await typeForm.locator('input[name="cost"]').fill('50');
-				await typeForm
-					.locator('select#format')
-					.selectOption({index: 0});
-				await typeForm.locator('input[name="duration"]').fill('12');
-				await typeForm.locator('input#individual').check({force: true});
-				await typeForm.locator('button[type="submit"]').click();
-				await expect(typeForm).toHaveCount(0, {timeout: 15_000});
-				// Sanity — the new type row is in the grid; the
-				// IndividualSubscriptionForm reads the same
-				// SubscriptionTypeDAO::getByInstitutional() to populate
-				// its `typeId` select, so this guarantees the modal will
-				// render a non-empty option set.
-				await expect(
-					managerPage.locator(
-						'#subscriptionTypesGridContainer tr.gridRow',
-						{hasText: subscriptionTypeName},
-					),
-				).toBeVisible();
+			// (c) Drive the IndividualSubscriptionsGridHandler "Create
+			//     New Subscription" AjaxModal. The grid lives at
+			//     /payments → "Individual Subscriptions" tab.
+			await managerPage.goto(`/index.php/${journalPath}/payments`);
+			await managerPage
+				.locator('a[name="individualSubscription"]')
+				.click();
+			// "Create New Subscription" is a top-level link action
+			// above the grid. PKPHandler#setId chops the trailing
+			// "Handler" off the component id and lowercases the rest
+			// (PKPHandler.php#427), so the grid's stable DOM id is
+			// `grid-subscriptions-individualsubscriptionsgrid` and
+			// the button id starts with
+			// `component-grid-subscriptions-individualsubscriptionsgrid-addSubscription-button-`.
+			const addAction = managerPage.locator(
+				'a[id^="component-grid-subscriptions-individualsubscriptionsgrid-addSubscription-button-"]',
+			);
+			await expect(addAction).toBeVisible({timeout: 15_000});
+			await addAction.click();
 
-				// (b) PDF galley on the published submission so the
-				//     reader-side gate signal lives on a real publication
-				//     galley (the auto-rendered JATS XML link in
-				//     article_details.tpl#341-348 is hardcoded outside
-				//     galley_link.tpl and never carries the `restricted`
-				//     class regardless of subscription state).
-				const workflow = new EditorialWorkflowPage(managerPage);
-				await workflow.goto(submission.id, {journalPath});
-				await workflow.openPublicationPanel('Galleys');
-				await workflow.addGalley({
-					label: 'PDF',
-					filePath: galleyFixturePath(),
-					urlPath: `pdf-${tag}`,
-				});
+			// AjaxModal opens the IndividualSubscriptionForm
+			// (templates/payments/individualSubscriptionForm.tpl) into
+			// a jQuery-UI dialog. Form id =
+			// individualSubscriptionForm. Wait for jQuery to settle so
+			// the form HTML is fully rendered AND the jQuery UI
+			// datepicker init has run — datepicker init renames the
+			// visible date input to `name=dateStart-removed` and
+			// inserts the canonical hidden alt-field. Driving the
+			// dates before that init completes (under heavy parallel
+			// load) lands the value on the wrong field and the save
+			// fails validation. Mirrors Cypress `cy.waitJQuery()` at
+			// `cypress/tests/integration/Subscriptions.cy.js:131`.
+			const subForm = managerPage.locator(
+				'form#individualSubscriptionForm',
+			);
+			await expect(subForm).toBeVisible({timeout: 10_000});
+			await waitForJQueryIdle(managerPage);
 
-				// (c) Drive the IndividualSubscriptionsGridHandler "Create
-				//     New Subscription" AjaxModal. The grid lives at
-				//     /payments → "Individual Subscriptions" tab.
-				await managerPage.goto(`/index.php/${journalPath}/payments`);
-				await managerPage
-					.locator('a[name="individualSubscription"]')
-					.click();
-				// "Create New Subscription" is a top-level link action
-				// above the grid. PKPHandler#setId chops the trailing
-				// "Handler" off the component id and lowercases the rest
-				// (PKPHandler.php#427), so the grid's stable DOM id is
-				// `grid-subscriptions-individualsubscriptionsgrid` and
-				// the button id starts with
-				// `component-grid-subscriptions-individualsubscriptionsgrid-addSubscription-button-`.
-				const addAction = managerPage.locator(
-					'a[id^="component-grid-subscriptions-individualsubscriptionsgrid-addSubscription-button-"]',
-				);
-				await expect(addAction).toBeVisible({timeout: 15_000});
-				await addAction.click();
+			// User pick — the form embeds a SubscriberSelectGrid via
+			// load_url_in_div. Search for phudson by family name to
+			// narrow the result list, then click the row's radio.
+			// `userSearchForm` is the grid's filter form (action
+			// component=grid.users.subscriberSelect.SubscriberSelectGridHandler
+			// op=fetchGrid). The grid renders rows with a radio
+			// `input[name=userId]` per
+			// userSelectRadioButton.tpl.
+			const userSearch = managerPage.locator('form#userSearchForm');
+			await expect(userSearch).toBeVisible({timeout: 10_000});
+			await userSearch.locator('input[name="search"]').fill('Hudson');
+			await userSearch
+				.getByRole('button', {name: 'Search', exact: true})
+				.click();
+			// Wait for the SubscriberSelectGrid filter AJAX to settle
+			// before asserting on the filtered rows.
+			await waitForJQueryIdle(managerPage);
+			const phudsonRow = managerPage.locator(
+				'#subscriberSelectGridContainer tr.gridRow',
+				{hasText: 'Paul Hudson'},
+			);
+			await expect(phudsonRow).toBeVisible({timeout: 15_000});
+			await phudsonRow
+				.locator('input[type="radio"][name="userId"]')
+				.check({force: true});
 
-				// AjaxModal opens the IndividualSubscriptionForm
-				// (templates/payments/individualSubscriptionForm.tpl) into
-				// a jQuery-UI dialog. Form id =
-				// individualSubscriptionForm. Wait for jQuery to settle so
-				// the form HTML is fully rendered AND the jQuery UI
-				// datepicker init has run — datepicker init renames the
-				// visible date input to `name=dateStart-removed` and
-				// inserts the canonical hidden alt-field. Driving the
-				// dates before that init completes (under heavy parallel
-				// load) lands the value on the wrong field and the save
-				// fails validation. Mirrors Cypress `cy.waitJQuery()` at
-				// `cypress/tests/integration/Subscriptions.cy.js:131`.
-				const subForm = managerPage.locator(
-					'form#individualSubscriptionForm',
-				);
-				await expect(subForm).toBeVisible({timeout: 10_000});
-				await waitForJQueryIdle(managerPage);
-
-				// User pick — the form embeds a SubscriberSelectGrid via
-				// load_url_in_div. Search for phudson by family name to
-				// narrow the result list, then click the row's radio.
-				// `userSearchForm` is the grid's filter form (action
-				// component=grid.users.subscriberSelect.SubscriberSelectGridHandler
-				// op=fetchGrid). The grid renders rows with a radio
-				// `input[name=userId]` per
-				// userSelectRadioButton.tpl.
-				const userSearch = managerPage.locator('form#userSearchForm');
-				await expect(userSearch).toBeVisible({timeout: 10_000});
-				await userSearch.locator('input[name="search"]').fill('Hudson');
-				await userSearch
-					.getByRole('button', {name: 'Search', exact: true})
-					.click();
-				// Wait for the SubscriberSelectGrid filter AJAX to settle
-				// before asserting on the filtered rows.
-				await waitForJQueryIdle(managerPage);
-				const phudsonRow = managerPage.locator(
-					'#subscriberSelectGridContainer tr.gridRow',
-					{hasText: 'Paul Hudson'},
-				);
-				await expect(phudsonRow).toBeVisible({timeout: 15_000});
-				await phudsonRow
-					.locator('input[type="radio"][name="userId"]')
-					.check({force: true});
-
-				// Subscription type, status, date range. The
-				// `dateStart` / `dateEnd` fbvElement renders id="dateStart"
-				// / id="dateEnd" on the form even with the
-				// `class="datepicker"` decoration; the picker overlays a
-				// hidden input but the underlying text field still
-				// accepts a value via fill.
-				// SubscriptionType::getSummaryString() renders the option
-				// label as e.g. "Yearly w0-sub-subsc-r724 - 1 year - 50.00 CAD";
-				// pick by index 0 — the manager just created exactly one
-				// type on this scratch journal, so the first non-empty
-				// option is unambiguous.
-				const typeSelect = subForm.locator('select[name="typeId"]');
-				const typeValue = await typeSelect
-					.locator('option:not([value=""])')
-					.first()
-					.getAttribute('value');
-				if (!typeValue) {
-					throw new Error('typeId select is empty — type creation step failed');
-				}
-				await typeSelect.selectOption(typeValue);
-				await subForm
-					.locator('select[name="status"]')
-					.selectOption({label: 'Active'});
-				const today = new Date();
-				const oneYearOut = new Date(today);
-				oneYearOut.setFullYear(today.getFullYear() + 1);
-				// templates/form/textInput.tpl#59-77 renders datepicker
-				// fields as TWO inputs sharing the same name: a visible
-				// `<input type="text">` whose user-friendly format is
-				// driven by `dateFormatShort` (config has "Y-m-d" — the
-				// same canonical format), and a hidden alt-field also
-				// named `dateStart`. jQuery UI datepicker keeps them in
-				// sync as the user types in the visible input.
-				//
-				// On submit, AjaxFormHandler does `$form.serialize()`
-				// which emits BOTH name=value pairs to PHP; since they
-				// share a key, PHP's `$_POST['dateStart']` ends up as
-				// the LAST one (the alt-field). So both fields must
-				// carry the right value, OR at minimum the alt-field
-				// must, but the visible field's `change` is what nudges
-				// the alt-field via the picker. Easiest robust path:
-				// drive both via JS and fire change, so listeners and
-				// serializers all see canonical values.
-				// jQuery UI datepicker renames the visible input to
-				// `name=dateStart-removed` on init (and exposes the
-				// canonical hidden alt-field under `name=dateStart`).
-				// Filling the visible input fires the picker's `onSelect`
-				// only if the picker recognises the value as a real date
-				// in its expected format. Simpler and more reliable:
-				// drive both inputs directly via JS — set the visible
-				// `dateStart-removed` text input and the hidden
-				// `dateStart` alt-field to the same canonical Y-m-d
-				// value, then dispatch a `change` so any client-side
-				// validators clear their error state. The serializer
-				// reads the hidden input (it's the only one the form
-				// knows as `dateStart`) and PHP gets the right value.
-				await managerPage.evaluate(
-					({startVal, endVal}) => {
-						const setByName = (name, value) => {
-							const inputs = document.querySelectorAll(
-								`form#individualSubscriptionForm input[name="${name}"]`,
-							);
-							inputs.forEach((el) => {
-								/** @type {HTMLInputElement} */ (el).value = value;
-								el.dispatchEvent(
-									new Event('change', {bubbles: true}),
-								);
-							});
-							return inputs.length;
-						};
-						setByName('dateStart-removed', startVal);
-						setByName('dateStart', startVal);
-						setByName('dateEnd-removed', endVal);
-						setByName('dateEnd', endVal);
-					},
-					{
-						startVal: formatDate(today),
-						endVal: formatDate(oneYearOut),
-					},
-				);
-				// Notify checkbox — leave unchecked (default). The form's
-				// "Notify Email" check fires a SubscriptionNotify mailable
-				// that the subscriptionEmail/Name policy fields gate; we
-				// don't seed those on the scratch journal so leaving the
-				// box unchecked keeps the save fast.
-
-				await subForm
-					.getByRole('button', {name: 'Save', exact: true})
-					.click();
-				// AjaxFormHandler closes the dialog on a successful save
-				// (DataChangedEvent). On a validation failure it
-				// re-renders the form inline; if that happens this
-				// assert times out and the failure surfaces clearly.
-				// Wait for jQuery to settle first so the AjaxFormHandler
-				// success chain (POST + decode + close + grid refresh)
-				// completes before we assert on the modal-closed state.
-				await waitForJQueryIdle(managerPage);
-				await expect(subForm).toHaveCount(0, {timeout: 15_000});
-
-				// Sanity — the subscription row appears in the grid.
-				// `IndividualSubscriptionsGridContainer` is the legacy
-				// jQuery grid div the SubscriptionsGridCellProvider
-				// hydrates with the subscriber's name in the `name`
-				// column.
-				await expect(
-					managerPage.locator(
-						'#individualSubscriptionsGridContainer tr.gridRow',
-						{hasText: 'Paul Hudson'},
-					),
-				).toBeVisible({timeout: 15_000});
-			} finally {
-				await managerCtx.close();
+			// Subscription type, status, date range. The
+			// `dateStart` / `dateEnd` fbvElement renders id="dateStart"
+			// / id="dateEnd" on the form even with the
+			// `class="datepicker"` decoration; the picker overlays a
+			// hidden input but the underlying text field still
+			// accepts a value via fill.
+			// SubscriptionType::getSummaryString() renders the option
+			// label as e.g. "Yearly w0-sub-subsc-r724 - 1 year - 50.00 CAD";
+			// pick by index 0 — the manager just created exactly one
+			// type on this scratch journal, so the first non-empty
+			// option is unambiguous.
+			const typeSelect = subForm.locator('select[name="typeId"]');
+			const typeValue = await typeSelect
+				.locator('option:not([value=""])')
+				.first()
+				.getAttribute('value');
+			if (!typeValue) {
+				throw new Error('typeId select is empty — type creation step failed');
 			}
+			await typeSelect.selectOption(typeValue);
+			await subForm
+				.locator('select[name="status"]')
+				.selectOption({label: 'Active'});
+			const today = new Date();
+			const oneYearOut = new Date(today);
+			oneYearOut.setFullYear(today.getFullYear() + 1);
+			// templates/form/textInput.tpl#59-77 renders datepicker
+			// fields as TWO inputs sharing the same name: a visible
+			// `<input type="text">` whose user-friendly format is
+			// driven by `dateFormatShort` (config has "Y-m-d" — the
+			// same canonical format), and a hidden alt-field also
+			// named `dateStart`. jQuery UI datepicker keeps them in
+			// sync as the user types in the visible input.
+			//
+			// On submit, AjaxFormHandler does `$form.serialize()`
+			// which emits BOTH name=value pairs to PHP; since they
+			// share a key, PHP's `$_POST['dateStart']` ends up as
+			// the LAST one (the alt-field). So both fields must
+			// carry the right value, OR at minimum the alt-field
+			// must, but the visible field's `change` is what nudges
+			// the alt-field via the picker. Easiest robust path:
+			// drive both via JS and fire change, so listeners and
+			// serializers all see canonical values.
+			// jQuery UI datepicker renames the visible input to
+			// `name=dateStart-removed` on init (and exposes the
+			// canonical hidden alt-field under `name=dateStart`).
+			// Filling the visible input fires the picker's `onSelect`
+			// only if the picker recognises the value as a real date
+			// in its expected format. Simpler and more reliable:
+			// drive both inputs directly via JS — set the visible
+			// `dateStart-removed` text input and the hidden
+			// `dateStart` alt-field to the same canonical Y-m-d
+			// value, then dispatch a `change` so any client-side
+			// validators clear their error state. The serializer
+			// reads the hidden input (it's the only one the form
+			// knows as `dateStart`) and PHP gets the right value.
+			await managerPage.evaluate(
+				({startVal, endVal}) => {
+					const setByName = (name, value) => {
+						const inputs = document.querySelectorAll(
+							`form#individualSubscriptionForm input[name="${name}"]`,
+						);
+						inputs.forEach((el) => {
+							/** @type {HTMLInputElement} */ (el).value = value;
+							el.dispatchEvent(
+								new Event('change', {bubbles: true}),
+							);
+						});
+						return inputs.length;
+					};
+					setByName('dateStart-removed', startVal);
+					setByName('dateStart', startVal);
+					setByName('dateEnd-removed', endVal);
+					setByName('dateEnd', endVal);
+				},
+				{
+					startVal: formatDate(today),
+					endVal: formatDate(oneYearOut),
+				},
+			);
+			// Notify checkbox — leave unchecked (default). The form's
+			// "Notify Email" check fires a SubscriptionNotify mailable
+			// that the subscriptionEmail/Name policy fields gate; we
+			// don't seed those on the scratch journal so leaving the
+			// box unchecked keeps the save fast.
+
+			await subForm
+				.getByRole('button', {name: 'Save', exact: true})
+				.click();
+			// AjaxFormHandler closes the dialog on a successful save
+			// (DataChangedEvent). On a validation failure it
+			// re-renders the form inline; if that happens this
+			// assert times out and the failure surfaces clearly.
+			// Wait for jQuery to settle first so the AjaxFormHandler
+			// success chain (POST + decode + close + grid refresh)
+			// completes before we assert on the modal-closed state.
+			await waitForJQueryIdle(managerPage);
+			await expect(subForm).toHaveCount(0, {timeout: 15_000});
+
+			// Sanity — the subscription row appears in the grid.
+			// `IndividualSubscriptionsGridContainer` is the legacy
+			// jQuery grid div the SubscriptionsGridCellProvider
+			// hydrates with the subscriber's name in the `name`
+			// column.
+			await expect(
+				managerPage.locator(
+					'#individualSubscriptionsGridContainer tr.gridRow',
+					{hasText: 'Paul Hudson'},
+				),
+			).toBeVisible({timeout: 15_000});
+		
 
 			// Now, as phudson, verify the article reads as fully
 			// accessible — PDF galley link is NOT `.restricted`, and
@@ -532,42 +508,34 @@ test.describe('Subscription-based access', () => {
 			// session is journal-agnostic for read access on any
 			// journal in the installation.
 			const articleUrl = `/index.php/${journalPath}/article/view/${submission.id}`;
-			const readerCtx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'phudson', {
-					baseURL,
-				}),
-				baseURL,
-			});
-			try {
-				const readerPage = await readerCtx.newPage();
-				const resp = await readerPage.goto(articleUrl);
-				expect(resp?.status()).toBe(200);
-				const pdfLink = readerPage
-					.locator('a.obj_galley_link.pdf')
-					.filter({hasText: 'PDF'});
-				await expect(pdfLink).toBeVisible({timeout: 15_000});
-				expect(
-					await pdfLink
-						.evaluate((el) => el.classList.contains('restricted'))
-						.catch(() => false),
-					'subscriber (phudson) bypasses subscription gating',
-				).toBe(false);
-				// Article body — the published submission's abstract
-				// from submissionPublished is "<p>A fully-processed,
-				// published article in scenario form.</p>". The article
-				// landing page renders that abstract inside
-				// `.item.abstract` on the bootstrap default theme.
-				// Anchor on the abstract's stable text fragment to
-				// confirm the reader sees the non-galley body content
-				// too.
-				await expect(
-					readerPage.getByText(
-						'A fully-processed, published article in scenario form.',
-					),
-				).toBeVisible({timeout: 10_000});
-			} finally {
-				await readerCtx.close();
-			}
+			const readerCtx = await asUser('phudson');
+			const readerPage = await readerCtx.newPage();
+			const resp = await readerPage.goto(articleUrl);
+			expect(resp?.status()).toBe(200);
+			const pdfLink = readerPage
+				.locator('a.obj_galley_link.pdf')
+				.filter({hasText: 'PDF'});
+			await expect(pdfLink).toBeVisible({timeout: 15_000});
+			expect(
+				await pdfLink
+					.evaluate((el) => el.classList.contains('restricted'))
+					.catch(() => false),
+				'subscriber (phudson) bypasses subscription gating',
+			).toBe(false);
+			// Article body — the published submission's abstract
+			// from submissionPublished is "<p>A fully-processed,
+			// published article in scenario form.</p>". The article
+			// landing page renders that abstract inside
+			// `.item.abstract` on the bootstrap default theme.
+			// Anchor on the abstract's stable text fragment to
+			// confirm the reader sees the non-galley body content
+			// too.
+			await expect(
+				readerPage.getByText(
+					'A fully-processed, published article in scenario form.',
+				),
+			).toBeVisible({timeout: 10_000});
+		
 		},
 	);
 });

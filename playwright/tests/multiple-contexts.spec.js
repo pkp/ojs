@@ -1,7 +1,5 @@
 // @ts-check
 const {test, expect} = require('../../lib/pkp/playwright/support/base-test.js');
-const {ensureAuthStateFor} = require('../../lib/pkp/playwright/support/auth.js');
-
 /**
  * Multiple contexts — row #46 in docs/e2e-playwright-migration.md.
  *
@@ -49,7 +47,7 @@ test.describe('Multiple contexts', () => {
 	test(
 		'user with different roles across two journals reaches both dashboards',
 		{tag: '@regression'},
-		async ({pkpApi, browser, baseURL}) => {
+		async ({pkpApi, browser, baseURL, asUser}) => {
 			const tag = uniqueTag(test.info(), 'mc');
 
 			// E0 scratch journal. dbarnes is already a publicknowledge
@@ -102,89 +100,81 @@ test.describe('Multiple contexts', () => {
 			// As dbarnes, reach publicknowledge's editorial dashboard
 			// (her editor role there). A live 200 without /login
 			// redirect proves the session is valid for that journal.
-			const dbarnesCtx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'dbarnes', {
-					baseURL,
-				}),
-				baseURL,
+			const dbarnesCtx = await asUser('dbarnes');
+			const page = await dbarnesCtx.newPage();
+
+			// Journal 1: publicknowledge. Editor role → editorial
+			// dashboard. The backend layout (lib/pkp/templates/
+			// layouts/backend.tpl) renders:
+			//   - `.app__contextTitle` — the current journal's name
+			//   - `.app__contexts` dropdown — list of OTHER journals
+			//     the user holds a role on (populated from
+			//     `$availableContexts`, filtered to exclude the
+			//     current one)
+			// The existence of that dropdown is the canonical "user
+			// has roles on more than one journal" UI signal.
+			const resp1 = await page.goto(
+				'/index.php/publicknowledge/dashboard/editorial',
+			);
+			expect(resp1?.status()).toBe(200);
+			await expect(page).not.toHaveURL(/\/login/);
+			// `.app__contextTitle` renders "Journal of Public
+			// Knowledge" — the current journal.
+			await expect(page.locator('.app__contextTitle')).toContainText(
+				'Journal of Public Knowledge',
+				{timeout: 15_000},
+			);
+			// The `.app__contexts` dropdown surfaces only the OTHER
+			// journal(s). Open it and assert an <a> pointing to the
+			// scratch journal's URL path exists in its dropdown
+			// list.
+			await page.locator('.app__contexts button').first().click();
+			await expect(
+				page.locator(
+					`.app__contexts a[href*="/${context.path}"]`,
+				),
+			).toBeVisible({timeout: 10_000});
+
+			// Cross-journal navigation. Walk directly to the scratch
+			// journal's dashboard — dbarnes holds the manager role
+			// there, which also resolves into the editorial
+			// dashboard role-assignment set (ROLE_ID_MANAGER is in
+			// the addRoleAssignment list for `editorial`).
+			const resp2 = await page.goto(
+				`/index.php/${context.path}/dashboard/editorial`,
+			);
+			expect(resp2?.status()).toBe(200);
+			await expect(page).not.toHaveURL(/\/login/);
+			// URL must have landed inside the scratch journal path,
+			// not redirected back to publicknowledge.
+			expect(page.url()).toContain(`/${context.path}/`);
+			// Current context reflects the scratch journal now. The
+			// scratch journal's default localized name is set by
+			// ContextBuilderProcessor and includes the tag.
+			await expect(
+				page.locator('.app__contextTitle'),
+			).not.toContainText('Journal of Public Knowledge', {
+				timeout: 15_000,
 			});
-			try {
-				const page = await dbarnesCtx.newPage();
+			// And the app__contexts dropdown lists the OTHER
+			// journal — publicknowledge — because its link is
+			// filtered out of the current context's slot.
+			await page.locator('.app__contexts button').first().click();
+			await expect(
+				page
+					.locator('.app__contexts a')
+					.filter({hasText: 'Journal of Public Knowledge'}),
+			).toBeVisible({timeout: 10_000});
 
-				// Journal 1: publicknowledge. Editor role → editorial
-				// dashboard. The backend layout (lib/pkp/templates/
-				// layouts/backend.tpl) renders:
-				//   - `.app__contextTitle` — the current journal's name
-				//   - `.app__contexts` dropdown — list of OTHER journals
-				//     the user holds a role on (populated from
-				//     `$availableContexts`, filtered to exclude the
-				//     current one)
-				// The existence of that dropdown is the canonical "user
-				// has roles on more than one journal" UI signal.
-				const resp1 = await page.goto(
-					'/index.php/publicknowledge/dashboard/editorial',
-				);
-				expect(resp1?.status()).toBe(200);
-				await expect(page).not.toHaveURL(/\/login/);
-				// `.app__contextTitle` renders "Journal of Public
-				// Knowledge" — the current journal.
-				await expect(page.locator('.app__contextTitle')).toContainText(
-					'Journal of Public Knowledge',
-					{timeout: 15_000},
-				);
-				// The `.app__contexts` dropdown surfaces only the OTHER
-				// journal(s). Open it and assert an <a> pointing to the
-				// scratch journal's URL path exists in its dropdown
-				// list.
-				await page.locator('.app__contexts button').first().click();
-				await expect(
-					page.locator(
-						`.app__contexts a[href*="/${context.path}"]`,
-					),
-				).toBeVisible({timeout: 10_000});
-
-				// Cross-journal navigation. Walk directly to the scratch
-				// journal's dashboard — dbarnes holds the manager role
-				// there, which also resolves into the editorial
-				// dashboard role-assignment set (ROLE_ID_MANAGER is in
-				// the addRoleAssignment list for `editorial`).
-				const resp2 = await page.goto(
-					`/index.php/${context.path}/dashboard/editorial`,
-				);
-				expect(resp2?.status()).toBe(200);
-				await expect(page).not.toHaveURL(/\/login/);
-				// URL must have landed inside the scratch journal path,
-				// not redirected back to publicknowledge.
-				expect(page.url()).toContain(`/${context.path}/`);
-				// Current context reflects the scratch journal now. The
-				// scratch journal's default localized name is set by
-				// ContextBuilderProcessor and includes the tag.
-				await expect(
-					page.locator('.app__contextTitle'),
-				).not.toContainText('Journal of Public Knowledge', {
-					timeout: 15_000,
-				});
-				// And the app__contexts dropdown lists the OTHER
-				// journal — publicknowledge — because its link is
-				// filtered out of the current context's slot.
-				await page.locator('.app__contexts button').first().click();
-				await expect(
-					page
-						.locator('.app__contexts a')
-						.filter({hasText: 'Journal of Public Knowledge'}),
-				).toBeVisible({timeout: 10_000});
-
-				// Hop back to publicknowledge. The session retains
-				// access — no login re-prompt.
-				const resp3 = await page.goto(
-					'/index.php/publicknowledge/dashboard/editorial',
-				);
-				expect(resp3?.status()).toBe(200);
-				await expect(page).not.toHaveURL(/\/login/);
-				expect(page.url()).toContain('/publicknowledge/');
-			} finally {
-				await dbarnesCtx.close();
-			}
+			// Hop back to publicknowledge. The session retains
+			// access — no login re-prompt.
+			const resp3 = await page.goto(
+				'/index.php/publicknowledge/dashboard/editorial',
+			);
+			expect(resp3?.status()).toBe(200);
+			await expect(page).not.toHaveURL(/\/login/);
+			expect(page.url()).toContain('/publicknowledge/');
+		
 		},
 	);
 });

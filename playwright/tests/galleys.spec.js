@@ -136,24 +136,20 @@ async function expectReaderShowsGalley({
 	label,
 	urlPathFragment,
 }) {
-	const ctx = await browser.newContext({baseURL});
-	try {
-		const page = await ctx.newPage();
-		const resp = await page.goto(
-			`/index.php/publicknowledge/article/view/${submissionId}`,
-		);
-		expect(resp?.status()).toBe(200);
-		const link = page
-			.locator('a.obj_galley_link')
-			.filter({hasText: label});
-		await expect(link).toHaveCount(1);
-		await expect(link).toHaveAttribute(
-			'href',
-			new RegExp(`/article/view/${submissionId}/${escapeRegex(urlPathFragment)}`),
-		);
-	} finally {
-		await ctx.close();
-	}
+	const ctx = await browser.newContext({baseURL});	const page = await ctx.newPage();
+	const resp = await page.goto(
+		`/index.php/publicknowledge/article/view/${submissionId}`,
+	);
+	expect(resp?.status()).toBe(200);
+	const link = page
+		.locator('a.obj_galley_link')
+		.filter({hasText: label});
+	await expect(link).toHaveCount(1);
+	await expect(link).toHaveAttribute(
+		'href',
+		new RegExp(`/article/view/${submissionId}/${escapeRegex(urlPathFragment)}`),
+	);
+
 }
 
 /**
@@ -172,19 +168,15 @@ async function expectReaderShowsGalley({
  * }} opts
  */
 async function expectReaderHasNoGalley({browser, baseURL, submissionId, label}) {
-	const ctx = await browser.newContext({baseURL});
-	try {
-		const page = await ctx.newPage();
-		const resp = await page.goto(
-			`/index.php/publicknowledge/article/view/${submissionId}`,
-		);
-		expect(resp?.status()).toBe(200);
-		await expect(
-			page.locator('a.obj_galley_link').filter({hasText: label}),
-		).toHaveCount(0);
-	} finally {
-		await ctx.close();
-	}
+	const ctx = await browser.newContext({baseURL});	const page = await ctx.newPage();
+	const resp = await page.goto(
+		`/index.php/publicknowledge/article/view/${submissionId}`,
+	);
+	expect(resp?.status()).toBe(200);
+	await expect(
+		page.locator('a.obj_galley_link').filter({hasText: label}),
+	).toHaveCount(0);
+
 }
 
 /**

@@ -20,7 +20,7 @@ test.describe('author submission', () => {
 	test.fixme(
 		'creates submission via API',
 		{tag: '@smoke'},
-		async ({ojsApi, page}) => {
+		async ({ojsApi}) => {
 			// TODO: ojsApi.createSubmission(...), open wizard POM, assert
 		},
 	);

@@ -1,6 +1,5 @@
 // @ts-check
 const {test, expect} = require('../support/fixtures.js');
-const {ensureAuthStateFor} = require('../../lib/pkp/playwright/support/auth.js');
 const submissionPublished = require('../fixtures/scenarios/submission-published.js');
 
 const SCRATCH_ISSUE = {volume: 1, number: '1', year: 2026};
@@ -69,7 +68,7 @@ test.describe('DOI assignment', () => {
 	test(
 		'manager enables auto-DOI-assignment and a newly-published article receives a DOI',
 		{tag: '@regression'},
-		async ({pkpApi, browser, baseURL}) => {
+		async ({pkpApi, browser, baseURL, asUser}) => {
 			const tag = uniqueTag(test.info(), 'auto');
 			const prefix = '10.9999';
 
@@ -107,60 +106,54 @@ test.describe('DOI assignment', () => {
 			// with dbarnes's session cookies. Anonymous GET doesn't include
 			// doiObject; a manager's does (see
 			// lib/pkp/schemas/publication.json: doiObject is apiSummary).
-			const ctx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'dbarnes', {baseURL}),
-				baseURL,
-			});
+			const ctx = await asUser('dbarnes');
+			const page = await ctx.newPage();
+			const resp = await page.request.get(
+				`/index.php/${context.path}/api/v1/submissions/${submission.id}`,
+			);
+			expect(resp.ok(), `GET submission: ${resp.status()}`).toBeTruthy();
+			const submissionBody = await resp.json();
+			const currentPub = submissionBody.publications.find(
+				(p) => p.id === submissionBody.currentPublicationId,
+			);
+			expect(currentPub, 'currentPublication present').toBeTruthy();
+
+			// doiObject is hydrated by PublicationDAO::_fromRow when
+			// doiId is non-null; the shape is a Doi API-serialized
+			// object with a `.doi` string "prefix/suffix".
+			expect(
+				currentPub.doiObject,
+				`publication ${currentPub.id} has a DOI auto-assigned`,
+			).toBeTruthy();
+			expect(currentPub.doiObject.doi).toMatch(
+				new RegExp(`^${escapeRegex(prefix)}/`),
+			);
+
+			// R: the anonymous article page renders the DOI section.
+			// The default theme wraps it in <section class="item doi">
+			// with a <a href=.../doi/..> link carrying the DOI URL.
+			// See templates/frontend/objects/article_details.tpl ~170.
+			const anon = await browser.newContext({baseURL});
 			try {
-				const page = await ctx.newPage();
-				const resp = await page.request.get(
-					`/index.php/${context.path}/api/v1/submissions/${submission.id}`,
+				const anonPage = await anon.newPage();
+				const articleResp = await anonPage.goto(
+					`/index.php/${context.path}/article/view/${submission.id}`,
 				);
-				expect(resp.ok(), `GET submission: ${resp.status()}`).toBeTruthy();
-				const submissionBody = await resp.json();
-				const currentPub = submissionBody.publications.find(
-					(p) => p.id === submissionBody.currentPublicationId,
-				);
-				expect(currentPub, 'currentPublication present').toBeTruthy();
-
-				// doiObject is hydrated by PublicationDAO::_fromRow when
-				// doiId is non-null; the shape is a Doi API-serialized
-				// object with a `.doi` string "prefix/suffix".
-				expect(
-					currentPub.doiObject,
-					`publication ${currentPub.id} has a DOI auto-assigned`,
-				).toBeTruthy();
-				expect(currentPub.doiObject.doi).toMatch(
-					new RegExp(`^${escapeRegex(prefix)}/`),
-				);
-
-				// R: the anonymous article page renders the DOI section.
-				// The default theme wraps it in <section class="item doi">
-				// with a <a href=.../doi/..> link carrying the DOI URL.
-				// See templates/frontend/objects/article_details.tpl ~170.
-				const anon = await browser.newContext({baseURL});
-				try {
-					const anonPage = await anon.newPage();
-					const articleResp = await anonPage.goto(
-						`/index.php/${context.path}/article/view/${submission.id}`,
-					);
-					expect(articleResp?.status()).toBe(200);
-					const doiSection = anonPage.locator('section.item.doi');
-					await expect(doiSection).toBeVisible({timeout: 10_000});
-					await expect(doiSection).toContainText(currentPub.doiObject.doi);
-				} finally {
-					await anon.close();
-				}
+				expect(articleResp?.status()).toBe(200);
+				const doiSection = anonPage.locator('section.item.doi');
+				await expect(doiSection).toBeVisible({timeout: 10_000});
+				await expect(doiSection).toContainText(currentPub.doiObject.doi);
 			} finally {
-				await ctx.close();
+				await anon.close();
 			}
+		
 		},
 	);
 
 	test(
 		'versioned DOIs: a new major version receives its own DOI',
 		{tag: '@regression'},
-		async ({pkpApi, browser, baseURL}) => {
+		async ({pkpApi, asUser}) => {
 			const tag = uniqueTag(test.info(), 'ver');
 			const prefix = '10.9999';
 
@@ -201,44 +194,38 @@ test.describe('DOI assignment', () => {
 			});
 			const {submission} = await pkpApi.createSubmission(spec);
 
-			const ctx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'dbarnes', {baseURL}),
-				baseURL,
-			});
-			try {
-				const page = await ctx.newPage();
-				const resp = await page.request.get(
-					`/index.php/${context.path}/api/v1/submissions/${submission.id}/publications`,
-				);
-				expect(resp.ok()).toBeTruthy();
-				const body = await resp.json();
-				const pubs = body.items ?? body;
-				expect(pubs.length).toBeGreaterThanOrEqual(2);
+			const ctx = await asUser('dbarnes');
+			const page = await ctx.newPage();
+			const resp = await page.request.get(
+				`/index.php/${context.path}/api/v1/submissions/${submission.id}/publications`,
+			);
+			expect(resp.ok()).toBeTruthy();
+			const body = await resp.json();
+			const pubs = body.items ?? body;
+			expect(pubs.length).toBeGreaterThanOrEqual(2);
 
-				// Order isn't guaranteed by the REST response — sort by
-				// versionMajor ascending so [0]=v1 and [1]=v2 regardless
-				// of DAO ORDER BY.
-				const sorted = [...pubs].sort(
-					(a, b) => (a.versionMajor ?? 0) - (b.versionMajor ?? 0),
-				);
-				const v1 = sorted[0];
-				const v2 = sorted[sorted.length - 1];
+			// Order isn't guaranteed by the REST response — sort by
+			// versionMajor ascending so [0]=v1 and [1]=v2 regardless
+			// of DAO ORDER BY.
+			const sorted = [...pubs].sort(
+				(a, b) => (a.versionMajor ?? 0) - (b.versionMajor ?? 0),
+			);
+			const v1 = sorted[0];
+			const v2 = sorted[sorted.length - 1];
 
-				expect(v1.doiObject, 'v1 has a DOI').toBeTruthy();
-				expect(v2.doiObject, 'v2 has a DOI').toBeTruthy();
-				expect(v1.doiObject.doi).toMatch(
-					new RegExp(`^${escapeRegex(prefix)}/`),
-				);
-				expect(v2.doiObject.doi).toMatch(
-					new RegExp(`^${escapeRegex(prefix)}/`),
-				);
-				expect(
-					v2.doiObject.doi,
-					`v2 DOI (${v2.doiObject.doi}) must differ from v1 (${v1.doiObject.doi})`,
-				).not.toBe(v1.doiObject.doi);
-			} finally {
-				await ctx.close();
-			}
+			expect(v1.doiObject, 'v1 has a DOI').toBeTruthy();
+			expect(v2.doiObject, 'v2 has a DOI').toBeTruthy();
+			expect(v1.doiObject.doi).toMatch(
+				new RegExp(`^${escapeRegex(prefix)}/`),
+			);
+			expect(v2.doiObject.doi).toMatch(
+				new RegExp(`^${escapeRegex(prefix)}/`),
+			);
+			expect(
+				v2.doiObject.doi,
+				`v2 DOI (${v2.doiObject.doi}) must differ from v1 (${v1.doiObject.doi})`,
+			).not.toBe(v1.doiObject.doi);
+		
 		},
 	);
 });

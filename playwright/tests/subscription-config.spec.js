@@ -1,6 +1,5 @@
 // @ts-check
 const {test, expect} = require('../support/fixtures.js');
-const {ensureAuthStateFor} = require('../../lib/pkp/playwright/support/auth.js');
 const {waitForJQueryIdle} = require('../../lib/pkp/playwright/support/jquery.js');
 
 /**
@@ -121,171 +120,147 @@ test.describe('Subscription types & policies', () => {
 	test(
 		'manager creates a subscription type',
 		{tag: '@regression'},
-		async ({pkpApi, browser, baseURL}) => {
+		async ({pkpApi, asUser}) => {
 			const tag = uniqueTag();
 			const {context} = await pkpApi.createJournal({
 				tag,
 				users: [{username: 'dbarnes', roles: ['manager']}],
 			});
-			const ctx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'dbarnes', {
-					baseURL,
-				}),
-				baseURL,
+			const ctx = await asUser('dbarnes');
+			const page = await ctx.newPage();
+			await openSubscriptionTypesTab(page, context.path);
+
+			const name = `Yearly ${tag}`;
+			await page
+				.locator('a.pkp_linkaction_addSubscriptionType')
+				.click();
+			await createSubscriptionType(page, {
+				name,
+				cost: '50',
+				duration: '12',
 			});
-			try {
-				const page = await ctx.newPage();
-				await openSubscriptionTypesTab(page, context.path);
 
-				const name = `Yearly ${tag}`;
-				await page
-					.locator('a.pkp_linkaction_addSubscriptionType')
-					.click();
-				await createSubscriptionType(page, {
-					name,
-					cost: '50',
-					duration: '12',
-				});
-
-				// The grid refreshes in place; the new row appears with the
-				// entered name + currency + duration string.
-				await expect(
-					page.locator('#subscriptionTypesGridContainer tr.gridRow', {
-						hasText: name,
-					}),
-				).toBeVisible();
-				await expect(
-					page.locator('#subscriptionTypesGridContainer tr.gridRow', {
-						hasText: name,
-					}),
-				).toContainText('50.00 (CAD)');
-			} finally {
-				await ctx.close();
-			}
+			// The grid refreshes in place; the new row appears with the
+			// entered name + currency + duration string.
+			await expect(
+				page.locator('#subscriptionTypesGridContainer tr.gridRow', {
+					hasText: name,
+				}),
+			).toBeVisible();
+			await expect(
+				page.locator('#subscriptionTypesGridContainer tr.gridRow', {
+					hasText: name,
+				}),
+			).toContainText('50.00 (CAD)');
+		
 		},
 	);
 
 	test(
 		'manager edits the subscription policy and changes persist on reload',
 		{tag: '@regression'},
-		async ({pkpApi, browser, baseURL}) => {
+		async ({pkpApi, asUser}) => {
 			const tag = uniqueTag();
 			const {context} = await pkpApi.createJournal({
 				tag,
 				users: [{username: 'dbarnes', roles: ['manager']}],
 			});
-			const ctx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'dbarnes', {
-					baseURL,
-				}),
-				baseURL,
-			});
-			try {
-				const page = await ctx.newPage();
-				await openSubscriptionPoliciesTab(page, context.path);
+			const ctx = await asUser('dbarnes');
+			const page = await ctx.newPage();
+			await openSubscriptionPoliciesTab(page, context.path);
 
-				const contactName = `Contact ${tag}`;
-				const contactEmail = `contact-${tag}@example.test`;
-				const mailingAddress = `123 Any St. ${tag}`;
+			const contactName = `Contact ${tag}`;
+			const contactEmail = `contact-${tag}@example.test`;
+			const mailingAddress = `123 Any St. ${tag}`;
 
-				const form = page.locator('form#subscriptionPolicies');
-				await form
-					.locator('input[id^="subscriptionName"]')
-					.fill(contactName);
-				await form
-					.locator('input[id^="subscriptionEmail"]')
-					.fill(contactEmail);
-				await form
-					.locator('textarea[id^="subscriptionMailingAddress"]')
-					.fill(mailingAddress);
+			const form = page.locator('form#subscriptionPolicies');
+			await form
+				.locator('input[id^="subscriptionName"]')
+				.fill(contactName);
+			await form
+				.locator('input[id^="subscriptionEmail"]')
+				.fill(contactEmail);
+			await form
+				.locator('textarea[id^="subscriptionMailingAddress"]')
+				.fill(mailingAddress);
 
-				await form.locator('button[type="submit"]').click();
-				// AjaxFormHandler emits a trivial notification but keeps
-				// the form mounted on success. Wait for jQuery to settle
-				// (the PUT + chained handlers) before reloading.
-				await waitForJQueryIdle(page);
+			await form.locator('button[type="submit"]').click();
+			// AjaxFormHandler emits a trivial notification but keeps
+			// the form mounted on success. Wait for jQuery to settle
+			// (the PUT + chained handlers) before reloading.
+			await waitForJQueryIdle(page);
 
-				// Reload and re-open the tab; values should be re-populated
-				// from the database.
-				await openSubscriptionPoliciesTab(page, context.path);
-				await expect(
-					page.locator(
-						'form#subscriptionPolicies input[id^="subscriptionName"]',
-					),
-				).toHaveValue(contactName);
-				await expect(
-					page.locator(
-						'form#subscriptionPolicies input[id^="subscriptionEmail"]',
-					),
-				).toHaveValue(contactEmail);
-				await expect(
-					page.locator(
-						'form#subscriptionPolicies textarea[id^="subscriptionMailingAddress"]',
-					),
-				).toHaveValue(mailingAddress);
-			} finally {
-				await ctx.close();
-			}
+			// Reload and re-open the tab; values should be re-populated
+			// from the database.
+			await openSubscriptionPoliciesTab(page, context.path);
+			await expect(
+				page.locator(
+					'form#subscriptionPolicies input[id^="subscriptionName"]',
+				),
+			).toHaveValue(contactName);
+			await expect(
+				page.locator(
+					'form#subscriptionPolicies input[id^="subscriptionEmail"]',
+				),
+			).toHaveValue(contactEmail);
+			await expect(
+				page.locator(
+					'form#subscriptionPolicies textarea[id^="subscriptionMailingAddress"]',
+				),
+			).toHaveValue(mailingAddress);
+		
 		},
 	);
 
 	test(
 		'manager deletes a subscription type',
 		{tag: '@regression'},
-		async ({pkpApi, browser, baseURL}) => {
+		async ({pkpApi, asUser}) => {
 			const tag = uniqueTag();
 			const {context} = await pkpApi.createJournal({
 				tag,
 				users: [{username: 'dbarnes', roles: ['manager']}],
 			});
-			const ctx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'dbarnes', {
-					baseURL,
-				}),
-				baseURL,
+			const ctx = await asUser('dbarnes');
+			const page = await ctx.newPage();
+			await openSubscriptionTypesTab(page, context.path);
+
+			const name = `Disposable ${tag}`;
+			await page
+				.locator('a.pkp_linkaction_addSubscriptionType')
+				.click();
+			await createSubscriptionType(page, {
+				name,
+				cost: '10',
+				duration: '1',
 			});
-			try {
-				const page = await ctx.newPage();
-				await openSubscriptionTypesTab(page, context.path);
 
-				const name = `Disposable ${tag}`;
-				await page
-					.locator('a.pkp_linkaction_addSubscriptionType')
-					.click();
-				await createSubscriptionType(page, {
-					name,
-					cost: '10',
-					duration: '1',
-				});
+			const row = page.locator(
+				'#subscriptionTypesGridContainer tr.gridRow',
+				{hasText: name},
+			);
+			await expect(row).toBeVisible();
 
-				const row = page.locator(
-					'#subscriptionTypesGridContainer tr.gridRow',
-					{hasText: name},
-				);
-				await expect(row).toBeVisible();
+			await revealRowControls(page);
+			// The Delete link action lives in the sibling `tr.row_controls`
+			// — click the one whose id encodes `-delete-button-`.
+			await page
+				.locator('a.pkp_linkaction_delete', {hasText: 'Delete'})
+				.first()
+				.click();
 
-				await revealRowControls(page);
-				// The Delete link action lives in the sibling `tr.row_controls`
-				// — click the one whose id encodes `-delete-button-`.
-				await page
-					.locator('a.pkp_linkaction_delete', {hasText: 'Delete'})
-					.first()
-					.click();
+			// Reka-ui dialog with OK/Cancel; click OK to confirm.
+			const dialog = page.locator('[role="dialog"]', {
+				hasText: 'delete this subscription type',
+			});
+			await expect(dialog).toBeVisible();
+			await dialog.getByRole('button', {name: 'OK'}).click();
 
-				// Reka-ui dialog with OK/Cancel; click OK to confirm.
-				const dialog = page.locator('[role="dialog"]', {
-					hasText: 'delete this subscription type',
-				});
-				await expect(dialog).toBeVisible();
-				await dialog.getByRole('button', {name: 'OK'}).click();
-
-				// Grid re-fetches; let jQuery settle before asserting
-				// the row is gone.
-				await waitForJQueryIdle(page);
-				await expect(row).toHaveCount(0, {timeout: 15_000});
-			} finally {
-				await ctx.close();
-			}
+			// Grid re-fetches; let jQuery settle before asserting
+			// the row is gone.
+			await waitForJQueryIdle(page);
+			await expect(row).toHaveCount(0, {timeout: 15_000});
+		
 		},
 	);
 });

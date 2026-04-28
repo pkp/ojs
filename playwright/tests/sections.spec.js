@@ -1,7 +1,5 @@
 // @ts-check
 const {test, expect} = require('../support/fixtures.js');
-const {ensureAuthStateFor} = require('../../lib/pkp/playwright/support/auth.js');
-
 /**
  * Sections — row #8 in docs/e2e-playwright-migration.md.
  *
@@ -106,94 +104,82 @@ test.describe('Sections', () => {
 	test(
 		'manager creates a new section',
 		{tag: '@regression'},
-		async ({pkpApi, browser, baseURL}) => {
+		async ({pkpApi, asUser}) => {
 			const tag = uniqueTag();
 			const {context} = await pkpApi.createJournal({
 				tag,
 				users: [{username: 'dbarnes', roles: ['manager']}],
 			});
-			const ctx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'dbarnes', {baseURL}),
-				baseURL,
-			});
-			try {
-				const page = await ctx.newPage();
-				await openSectionsTab(page, context.path);
+			const ctx = await asUser('dbarnes');
+			const page = await ctx.newPage();
+			await openSectionsTab(page, context.path);
 
-				const title = `Reviews ${tag}`;
-				const abbrev = `REV-${tag}`;
+			const title = `Reviews ${tag}`;
+			const abbrev = `REV-${tag}`;
 
-				const form = await openAddSectionForm(page);
-				await form.locator('input[id^="title-"]').fill(title);
-				await form.locator('input[id^="abbrev-"]').fill(abbrev);
-				await saveSectionForm(page);
+			const form = await openAddSectionForm(page);
+			await form.locator('input[id^="title-"]').fill(title);
+			await form.locator('input[id^="abbrev-"]').fill(abbrev);
+			await saveSectionForm(page);
 
-				// After save the grid refreshes in-place; the new row
-				// appears with the entered title.
-				await expect(
-					page.locator('tr.gridRow', {hasText: title}),
-				).toBeVisible();
-			} finally {
-				await ctx.close();
-			}
+			// After save the grid refreshes in-place; the new row
+			// appears with the entered title.
+			await expect(
+				page.locator('tr.gridRow', {hasText: title}),
+			).toBeVisible();
+		
 		},
 	);
 
 	test(
 		'manager edits a section — sets it inactive and the flag persists on reload',
 		{tag: '@regression'},
-		async ({pkpApi, browser, baseURL}) => {
+		async ({pkpApi, asUser}) => {
 			const tag = uniqueTag();
 			const {context} = await pkpApi.createJournal({
 				tag,
 				users: [{username: 'dbarnes', roles: ['manager']}],
 			});
-			const ctx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'dbarnes', {baseURL}),
-				baseURL,
-			});
-			try {
-				const page = await ctx.newPage();
-				await openSectionsTab(page, context.path);
+			const ctx = await asUser('dbarnes');
+			const page = await ctx.newPage();
+			await openSectionsTab(page, context.path);
 
-				// SectionForm::validate() rejects `isInactive` when the
-				// target section is the only active one (cf. lib/pkp
-				// commit history on manager.sections.confirmDeactivateSection.error).
-				// A scratch journal starts with a single default
-				// "Articles" section, so first create a second section
-				// and deactivate the original.
-				const extraTitle = `Extra ${tag}`;
-				const extraAbbrev = `EX-${tag}`;
-				let form = await openAddSectionForm(page);
-				await form.locator('input[id^="title-"]').fill(extraTitle);
-				await form.locator('input[id^="abbrev-"]').fill(extraAbbrev);
-				await saveSectionForm(page);
-				await expect(
-					page.locator('tr.gridRow', {hasText: extraTitle}),
-				).toBeVisible();
+			// SectionForm::validate() rejects `isInactive` when the
+			// target section is the only active one (cf. lib/pkp
+			// commit history on manager.sections.confirmDeactivateSection.error).
+			// A scratch journal starts with a single default
+			// "Articles" section, so first create a second section
+			// and deactivate the original.
+			const extraTitle = `Extra ${tag}`;
+			const extraAbbrev = `EX-${tag}`;
+			let form = await openAddSectionForm(page);
+			await form.locator('input[id^="title-"]').fill(extraTitle);
+			await form.locator('input[id^="abbrev-"]').fill(extraAbbrev);
+			await saveSectionForm(page);
+			await expect(
+				page.locator('tr.gridRow', {hasText: extraTitle}),
+			).toBeVisible();
 
-				const title = 'Articles';
-				form = await openEditSectionForm(page, title);
-				const inactive = form.locator('input#isInactive');
-				await expect(inactive).not.toBeChecked();
-				await inactive.check({force: true});
-				await saveSectionForm(page);
+			const title = 'Articles';
+			form = await openEditSectionForm(page, title);
+			const inactive = form.locator('input#isInactive');
+			await expect(inactive).not.toBeChecked();
+			await inactive.check({force: true});
+			await saveSectionForm(page);
 
-				// Reload the settings page and re-open Edit — the
-				// checkbox should still be checked.
-				await openSectionsTab(page, context.path);
-				form = await openEditSectionForm(page, title);
-				await expect(form.locator('input#isInactive')).toBeChecked();
-			} finally {
-				await ctx.close();
-			}
+			// Reload the settings page and re-open Edit — the
+			// checkbox should still be checked.
+			await openSectionsTab(page, context.path);
+			form = await openEditSectionForm(page, title);
+			await expect(form.locator('input#isInactive')).toBeChecked();
+		
 		},
 	);
 
 	test(
 		'manager marks a section as editor-only and the flag persists on reload',
 		{tag: '@regression'},
-		async ({pkpApi, browser, baseURL}) => {
+		async ({pkpApi, asUser}) => {
 			// Scope deviation: the Cypress source never tested the
 			// wizard-side effect of editor-only sections; row #12
 			// (Wizard — section rules) covers that. Here we verify the
@@ -204,35 +190,29 @@ test.describe('Sections', () => {
 				tag,
 				users: [{username: 'dbarnes', roles: ['manager']}],
 			});
-			const ctx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'dbarnes', {baseURL}),
-				baseURL,
-			});
-			try {
-				const page = await ctx.newPage();
-				await openSectionsTab(page, context.path);
+			const ctx = await asUser('dbarnes');
+			const page = await ctx.newPage();
+			await openSectionsTab(page, context.path);
 
-				const title = 'Articles';
+			const title = 'Articles';
 
-				let form = await openEditSectionForm(page, title);
-				const editorRestricted = form.locator('input#editorRestricted');
-				await expect(editorRestricted).not.toBeChecked();
-				await editorRestricted.check({force: true});
-				await saveSectionForm(page);
+			let form = await openEditSectionForm(page, title);
+			const editorRestricted = form.locator('input#editorRestricted');
+			await expect(editorRestricted).not.toBeChecked();
+			await editorRestricted.check({force: true});
+			await saveSectionForm(page);
 
-				await openSectionsTab(page, context.path);
-				form = await openEditSectionForm(page, title);
-				await expect(form.locator('input#editorRestricted')).toBeChecked();
-			} finally {
-				await ctx.close();
-			}
+			await openSectionsTab(page, context.path);
+			form = await openEditSectionForm(page, title);
+			await expect(form.locator('input#editorRestricted')).toBeChecked();
+		
 		},
 	);
 
 	test(
 		'manager configures section fields (wordCount, identifyType, abstractsNotRequired) and they persist on reload',
 		{tag: '@regression'},
-		async ({pkpApi, browser, baseURL}) => {
+		async ({pkpApi, asUser}) => {
 			// Ports the field-config half of Cypress's
 			// 50-CreateSections.cy.js: editing a section to add a
 			// `wordCount`, ticking `abstractsNotRequired`, and entering an
@@ -245,70 +225,64 @@ test.describe('Sections', () => {
 				tag,
 				users: [{username: 'dbarnes', roles: ['manager']}],
 			});
-			const ctx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'dbarnes', {baseURL}),
-				baseURL,
-			});
-			try {
-				const page = await ctx.newPage();
-				await openSectionsTab(page, context.path);
+			const ctx = await asUser('dbarnes');
+			const page = await ctx.newPage();
+			await openSectionsTab(page, context.path);
 
-				const title = 'Articles';
-				const identifyType = `Review Article ${tag}`;
+			const title = 'Articles';
+			const identifyType = `Review Article ${tag}`;
 
-				let form = await openEditSectionForm(page, title);
-				// fbv suffixes ids with a runtime uniqId, so anchor on the
-				// stable `name=` attribute. The multilingual identifyType
-				// renders as `name="identifyType[en]"`. When the form has
-				// only one supported locale (the scratch journal default),
-				// the id collapses to `identifyType-{uniqId}` with no
-				// locale segment, so `id^="identifyType-en-"` would miss.
-				await form.locator('input[name="wordCount"]').fill('500');
-				await form
-					.locator('input[name="identifyType[en]"]')
-					.fill(identifyType);
-				const abstractsNotRequired = form.locator(
-					'input#abstractsNotRequired',
-				);
-				await expect(abstractsNotRequired).not.toBeChecked();
-				await abstractsNotRequired.check({force: true});
-				await saveSectionForm(page);
+			let form = await openEditSectionForm(page, title);
+			// fbv suffixes ids with a runtime uniqId, so anchor on the
+			// stable `name=` attribute. The multilingual identifyType
+			// renders as `name="identifyType[en]"`. When the form has
+			// only one supported locale (the scratch journal default),
+			// the id collapses to `identifyType-{uniqId}` with no
+			// locale segment, so `id^="identifyType-en-"` would miss.
+			await form.locator('input[name="wordCount"]').fill('500');
+			await form
+				.locator('input[name="identifyType[en]"]')
+				.fill(identifyType);
+			const abstractsNotRequired = form.locator(
+				'input#abstractsNotRequired',
+			);
+			await expect(abstractsNotRequired).not.toBeChecked();
+			await abstractsNotRequired.check({force: true});
+			await saveSectionForm(page);
 
-				// Reload the settings page and re-open Edit — fields should
-				// be persisted.
-				await openSectionsTab(page, context.path);
-				form = await openEditSectionForm(page, title);
-				await expect(form.locator('input[name="wordCount"]')).toHaveValue(
-					'500',
-				);
-				await expect(
-					form.locator('input[name="identifyType[en]"]'),
-				).toHaveValue(identifyType);
-				await expect(form.locator('input#abstractsNotRequired')).toBeChecked();
+			// Reload the settings page and re-open Edit — fields should
+			// be persisted.
+			await openSectionsTab(page, context.path);
+			form = await openEditSectionForm(page, title);
+			await expect(form.locator('input[name="wordCount"]')).toHaveValue(
+				'500',
+			);
+			await expect(
+				form.locator('input[name="identifyType[en]"]'),
+			).toHaveValue(identifyType);
+			await expect(form.locator('input#abstractsNotRequired')).toBeChecked();
 
-				// Sanity-check via REST that the persisted values match.
-				const sectionsResp = await page.request.get(
-					`/index.php/${context.path}/api/v1/sections`,
-				);
-				expect(sectionsResp.ok(), 'list sections').toBe(true);
-				const body = await sectionsResp.json();
-				const articles = (body.items || []).find(
-					(s) => (s.title?.en || '').trim() === 'Articles',
-				);
-				expect(articles, 'Articles section in REST listing').toBeTruthy();
-				expect(articles.wordCount).toBe(500);
-				expect(articles.abstractsNotRequired).toBe(true);
-				expect(articles.identifyType?.en).toBe(identifyType);
-			} finally {
-				await ctx.close();
-			}
+			// Sanity-check via REST that the persisted values match.
+			const sectionsResp = await page.request.get(
+				`/index.php/${context.path}/api/v1/sections`,
+			);
+			expect(sectionsResp.ok(), 'list sections').toBe(true);
+			const body = await sectionsResp.json();
+			const articles = (body.items || []).find(
+				(s) => (s.title?.en || '').trim() === 'Articles',
+			);
+			expect(articles, 'Articles section in REST listing').toBeTruthy();
+			expect(articles.wordCount).toBe(500);
+			expect(articles.abstractsNotRequired).toBe(true);
+			expect(articles.identifyType?.en).toBe(identifyType);
+		
 		},
 	);
 
 	test(
 		'manager assigns multiple section editors to a section and the assignment persists',
 		{tag: '@regression'},
-		async ({pkpApi, browser, baseURL}) => {
+		async ({pkpApi, asUser}) => {
 			// Ports the editor-assignment half of Cypress's
 			// 50-CreateSections.cy.js. The section-edit form's
 			// `assignableUserGroups` query (PKPSectionForm::fetch) filters
@@ -331,50 +305,44 @@ test.describe('Sections', () => {
 					{username: 'minoue', roles: ['sectionEditor']},
 				],
 			});
-			const ctx = await browser.newContext({
-				storageState: await ensureAuthStateFor(browser, 'dbarnes', {baseURL}),
-				baseURL,
-			});
-			try {
-				const page = await ctx.newPage();
-				await openSectionsTab(page, context.path);
+			const ctx = await asUser('dbarnes');
+			const page = await ctx.newPage();
+			await openSectionsTab(page, context.path);
 
-				const title = 'Articles';
-				const editorNames = ['Daniel Barnes', 'David Buskins', 'Minoti Inoue'];
+			const title = 'Articles';
+			const editorNames = ['Daniel Barnes', 'David Buskins', 'Minoti Inoue'];
 
-				let form = await openEditSectionForm(page, title);
-				for (const name of editorNames) {
-					// Each editor renders one <label> per user-group it can
-					// be assigned under. dbarnes is a manager (one row);
-					// dbuskins / minoue are sectionEditors (one row each).
-					// Click only the first matching label per user — that's
-					// what the Cypress source did (`label.contains(name)`
-					// returns the first match).
-					const label = form
-						.locator('label', {hasText: `Assign ${name} as `})
-						.first();
-					await expect(label).toBeVisible();
-					await label.click();
-				}
-				await saveSectionForm(page);
-
-				// Reload the settings page and re-open Edit — the three
-				// matching checkboxes should all be checked. fbv's
-				// checkbox.tpl nests the <input> directly inside the
-				// <label>, so the input is reachable as a label
-				// descendant.
-				await openSectionsTab(page, context.path);
-				form = await openEditSectionForm(page, title);
-				for (const name of editorNames) {
-					const checkbox = form
-						.locator(`label:has-text("Assign ${name} as ")`)
-						.locator('input[type="checkbox"]')
-						.first();
-					await expect(checkbox).toBeChecked();
-				}
-			} finally {
-				await ctx.close();
+			let form = await openEditSectionForm(page, title);
+			for (const name of editorNames) {
+				// Each editor renders one <label> per user-group it can
+				// be assigned under. dbarnes is a manager (one row);
+				// dbuskins / minoue are sectionEditors (one row each).
+				// Click only the first matching label per user — that's
+				// what the Cypress source did (`label.contains(name)`
+				// returns the first match).
+				const label = form
+					.locator('label', {hasText: `Assign ${name} as `})
+					.first();
+				await expect(label).toBeVisible();
+				await label.click();
 			}
+			await saveSectionForm(page);
+
+			// Reload the settings page and re-open Edit — the three
+			// matching checkboxes should all be checked. fbv's
+			// checkbox.tpl nests the <input> directly inside the
+			// <label>, so the input is reachable as a label
+			// descendant.
+			await openSectionsTab(page, context.path);
+			form = await openEditSectionForm(page, title);
+			for (const name of editorNames) {
+				const checkbox = form
+					.locator(`label:has-text("Assign ${name} as ")`)
+					.locator('input[type="checkbox"]')
+					.first();
+				await expect(checkbox).toBeChecked();
+			}
+		
 		},
 	);
 });
