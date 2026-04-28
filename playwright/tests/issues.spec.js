@@ -146,8 +146,15 @@ function findRow(page, gridSelector, {volume, number, year}) {
  * Publish the first (and at this point only) future issue via the
  * per-row publish action. The action opens an AjaxModal form with
  * the "send issue notification" checkbox; submitting confirms.
+ *
+ * The publish form's `sendIssueNotification` checkbox is rendered
+ * `checked=true` in the template; the optional `sendNotification`
+ * argument lets a caller force-uncheck it (default: leave the
+ * template default in place). Tests that want to assert on the
+ * notification email ride the default checked state — they don't
+ * need to flip the checkbox themselves, only verify it is checked.
  */
-async function publishFirstFutureIssue(page) {
+async function publishFirstFutureIssue(page, {sendNotification = true} = {}) {
 	await expandAllRows(page, '#futureIssuesGridContainer');
 	await page
 		.locator(
@@ -157,6 +164,12 @@ async function publishFirstFutureIssue(page) {
 		.click();
 	const publishForm = page.locator('form#assignPublicIdentifierForm');
 	await expect(publishForm).toBeVisible();
+	const checkbox = publishForm.locator('input#sendIssueNotification');
+	if (sendNotification) {
+		await checkbox.check({force: true});
+	} else {
+		await checkbox.uncheck({force: true});
+	}
 	await publishForm.locator('button[id^="submitFormButton"]').click();
 	await expect(publishForm).toHaveCount(0, {timeout: 15_000});
 }
@@ -438,6 +451,105 @@ test.describe('Issues', () => {
 				).toBeVisible();
 			} finally {
 				await anon.close();
+			}
+		},
+	);
+
+	test(
+		'publishing an issue with sendIssueNotification ticked dispatches an issue-published email',
+		{tag: '@regression'},
+		async ({pkpApi, pkpMail, browser, baseURL}) => {
+			// Recipient model verified via classes/controllers/grid/issues/
+			// IssueGridHandler::publishIssue + NotificationSubscriptionSettingsDAO::
+			// getSubscribedUserIds: every user with an active user_user_groups
+			// row in the journal context who hasn't blocked
+			// NOTIFICATION_TYPE_PUBLISHED_ISSUE gets both an in-app
+			// notification and (because $sender is non-null on the second
+			// batch) an email via the IssuePublishedNotifyUsers job. dbarnes
+			// (manager of the scratch journal) is therefore a valid
+			// recipient — no extra reader user needs to be seeded. The
+			// publishingMode != _NONE gate passes because OJS's context
+			// schema leaves publishingMode unset by default; only
+			// PUBLISHING_MODE_NONE (=2) would suppress notification.
+			//
+			// The job dispatches via Bus::batch and runs in
+			// PKPQueueProvider's register_shutdown_function on every web
+			// request. By the time the publish POST has returned and the
+			// next page action settles, Mailpit has the email;
+			// pkpMail.inboxFor polls up to 10s.
+			//
+			// The publish form's `sendIssueNotification` checkbox is
+			// rendered checked=true by assignPublicIdentifiersForm.tpl; we
+			// still tick it explicitly via publishFirstFutureIssue's
+			// default branch so the test is independent of the template's
+			// default state.
+			const tag = uniqueTag();
+			const {context} = await pkpApi.createJournal({
+				tag,
+				users: [{username: 'dbarnes', roles: ['manager']}],
+			});
+			const ctx = await browser.newContext({
+				storageState: await ensureAuthStateFor(browser, 'dbarnes', {
+					baseURL,
+				}),
+				baseURL,
+				reducedMotion: 'reduce',
+			});
+
+			// Clear Mailpit before triggering the publish — other parallel
+			// workers may have left issue-publish mail addressed to
+			// dbarnes@mailinator.com (a shared address across the suite),
+			// which would race our latestTo() lookup.
+			await pkpMail.clearAll();
+
+			try {
+				const page = await ctx.newPage();
+				await openManageIssues(page, context.path);
+				await createFutureIssue(page, {
+					volume: 5,
+					number: 1,
+					year: 2025,
+				});
+				await publishFirstFutureIssue(page, {sendNotification: true});
+
+				// Sanity-check the publish flow itself before asserting on
+				// the email — the issue must now be on the Back tab.
+				await openBackTab(page);
+				await expect(
+					findRow(page, '#backIssuesGridContainer', {
+						volume: 5,
+						number: 1,
+						year: 2025,
+					}),
+				).toBeVisible();
+
+				// IssuePublishedNotify subject template
+				// (locale/en/emails.po `emails.issuePublishNotify.subject`)
+				// is "Just published: {$issueIdentification} of {$contextName}",
+				// so the rendered subject must contain the issue
+				// identification.
+				const latest = await pkpMail.latestTo(
+					'dbarnes@mailinator.com',
+				);
+				expect(
+					latest.To.some(
+						(addr) => addr.Address === 'dbarnes@mailinator.com',
+					),
+				).toBe(true);
+				expect(latest.Subject).toContain('Vol. 5 No. 1 (2025)');
+
+				// fullMessage round-trip — the body should reference the
+				// issue identification too (the default template body
+				// includes the {$issueIdentification} variable).
+				const full = await pkpMail.fullMessage(latest.ID);
+				const bodyText = (full.HTML || '') + (full.Text || '');
+				expect(bodyText).toContain('Vol. 5 No. 1 (2025)');
+			} finally {
+				await ctx.close();
+				// Leave Mailpit empty for the next test/worker so a stale
+				// "Vol. 5 No. 1 (2025)" message can't shadow a future
+				// assertion.
+				await pkpMail.clearAll();
 			}
 		},
 	);
