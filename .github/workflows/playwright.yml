@@ -81,6 +81,22 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test --project=ojs
 
+      - name: Diagnose PHP server log
+        if: always()
+        run: |
+          echo '--- temp/ listing ---'
+          ls -la temp/ || true
+          echo '--- looking for php-server.log anywhere on disk ---'
+          find / -name 'php-server.log' 2>/dev/null || true
+          echo '--- temp/php-server.log contents (head 200) ---'
+          if [ -f temp/php-server.log ]; then
+            head -200 temp/php-server.log
+          else
+            echo 'MISSING'
+          fi
+          echo '--- still-running php processes ---'
+          ps -ef | grep -E '[p]hp' || echo 'none'
+
       - uses: actions/upload-artifact@v4
         if: failure()
         with:
@@ -106,5 +122,5 @@ jobs:
         if: failure()
         with:
           name: php-server-log
-          path: /tmp/php-server.log
+          path: temp/php-server.log
           if-no-files-found: ignore
