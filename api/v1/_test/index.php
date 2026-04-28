@@ -24,15 +24,11 @@ use APP\core\Application;
 $requestPath = Application::get()->getRequest()->getRequestPath();
 
 // Scenarios share the `_test/scenarios` handler path but split by resource:
-// /scenarios/journal builds a scratch context; /scenarios/submission builds
-// a submission. Each needs its own controller because Laravel routes are
-// registered per-controller via getGroupRoutes().
+// /scenarios/journal builds a scratch (or baseline) context;
+// /scenarios/submission builds a submission. Each needs its own controller
+// because Laravel routes are registered per-controller via getGroupRoutes().
 if (strpos($requestPath, '/_test/scenarios/journal') !== false) {
     return new \PKP\handler\APIHandler(new \APP\API\v1\_test\JournalScenarioController());
 }
 
-if (strpos($requestPath, '/_test/scenarios') !== false) {
-    return new \PKP\handler\APIHandler(new \APP\API\v1\_test\SubmissionScenarioController());
-}
-
-return new \PKP\handler\APIHandler(new \APP\API\v1\_test\BootstrapController());
+return new \PKP\handler\APIHandler(new \APP\API\v1\_test\SubmissionScenarioController());
