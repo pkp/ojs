@@ -19,9 +19,13 @@ jobs:
         with:
           postgresql-version: 16
 
-      - name: Configure postgres trust auth
+      - name: Configure postgres trust auth + bump max_connections
         run: |
           sudo sed -i -E 's\peer|scram-sha-256\trust\g' /etc/postgresql/16/main/pg_hba.conf
+          # Default max_connections=100 may be exhausted by ~20+ concurrent
+          # scratch-journal test contexts × multiple PHP workers each holding
+          # connections. Bump to 500 to test the connection-leak theory.
+          sudo sed -i -E 's/^#?max_connections.*/max_connections = 500/' /etc/postgresql/16/main/postgresql.conf
           sudo systemctl restart postgresql
 
       - uses: shivammathur/setup-php@v2
@@ -132,6 +136,10 @@ jobs:
           echo
           echo '--- still-running php processes ---'
           ps -ef | grep -E '[p]hp' || echo 'none'
+          echo
+          echo '--- postgres connection state ---'
+          sudo -u postgres psql -c "SHOW max_connections;" || true
+          sudo -u postgres psql -c "SELECT count(*) AS total, state, application_name FROM pg_stat_activity GROUP BY state, application_name ORDER BY total DESC;" || true
 
       - uses: actions/upload-artifact@v4
         if: failure()
