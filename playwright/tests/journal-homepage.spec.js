@@ -44,7 +44,7 @@ test.describe('Journal homepage', () => {
 			const tag = uniqueTag(test.info(), 'home-index');
 			await pkpApi.createSubmission(submissionPublished({tag}));
 
-			const ctx = await browser.newContext({baseURL, reducedMotion: 'reduce'});
+			const ctx = await browser.newContext({baseURL});
 			try {
 				const page = await ctx.newPage();
 				const resp = await page.goto('/index.php/publicknowledge/');
@@ -91,7 +91,7 @@ test.describe('Journal homepage', () => {
 	test(
 		'issue archive lists the bootstrapped published issue',
 		async ({browser, baseURL}) => {
-			const ctx = await browser.newContext({baseURL, reducedMotion: 'reduce'});
+			const ctx = await browser.newContext({baseURL});
 			try {
 				const page = await ctx.newPage();
 				const resp = await page.goto(

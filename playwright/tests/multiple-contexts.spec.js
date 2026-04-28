@@ -68,7 +68,6 @@ test.describe('Multiple contexts', () => {
 			// scratch journal's URL path.
 			const anonCtx = await browser.newContext({
 				baseURL,
-				reducedMotion: 'reduce',
 			});
 			try {
 				const page = await anonCtx.newPage();
@@ -108,7 +107,6 @@ test.describe('Multiple contexts', () => {
 					baseURL,
 				}),
 				baseURL,
-				reducedMotion: 'reduce',
 			});
 			try {
 				const page = await dbarnesCtx.newPage();

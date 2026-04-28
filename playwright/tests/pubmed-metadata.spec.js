@@ -122,7 +122,7 @@ test.describe('Pubmed metadata export', () => {
 		browser,
 		baseURL,
 	}) => {
-		const anonCtx = await browser.newContext({baseURL, reducedMotion: 'reduce'});
+		const anonCtx = await browser.newContext({baseURL});
 		try {
 			// No CSRF header, no session cookie. The /management/
 			// route is guarded by the authorize() callback on

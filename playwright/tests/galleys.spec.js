@@ -136,7 +136,7 @@ async function expectReaderShowsGalley({
 	label,
 	urlPathFragment,
 }) {
-	const ctx = await browser.newContext({baseURL, reducedMotion: 'reduce'});
+	const ctx = await browser.newContext({baseURL});
 	try {
 		const page = await ctx.newPage();
 		const resp = await page.goto(
@@ -172,7 +172,7 @@ async function expectReaderShowsGalley({
  * }} opts
  */
 async function expectReaderHasNoGalley({browser, baseURL, submissionId, label}) {
-	const ctx = await browser.newContext({baseURL, reducedMotion: 'reduce'});
+	const ctx = await browser.newContext({baseURL});
 	try {
 		const page = await ctx.newPage();
 		const resp = await page.goto(

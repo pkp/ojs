@@ -230,7 +230,7 @@ async function expectArticleInIssueToc({
 	issueId,
 	articleTitle,
 }) {
-	const ctx = await browser.newContext({baseURL, reducedMotion: 'reduce'});
+	const ctx = await browser.newContext({baseURL});
 	try {
 		const page = await ctx.newPage();
 		const resp = await page.goto(
@@ -257,7 +257,7 @@ async function expectArticleNotInIssueToc({
 	issueId,
 	articleTitle,
 }) {
-	const ctx = await browser.newContext({baseURL, reducedMotion: 'reduce'});
+	const ctx = await browser.newContext({baseURL});
 	try {
 		const page = await ctx.newPage();
 		const resp = await page.goto(

@@ -137,7 +137,6 @@ test.describe('Subscription-based access', () => {
 					baseURL,
 				}),
 				baseURL,
-				reducedMotion: 'reduce',
 			});
 			try {
 				const managerPage = await managerCtx.newPage();
@@ -212,7 +211,6 @@ test.describe('Subscription-based access', () => {
 					baseURL,
 				}),
 				baseURL,
-				reducedMotion: 'reduce',
 			});
 			try {
 				const editorPage = await editorCtx.newPage();
@@ -292,7 +290,6 @@ test.describe('Subscription-based access', () => {
 					baseURL,
 				}),
 				baseURL,
-				reducedMotion: 'reduce',
 			});
 			try {
 				const managerPage = await managerCtx.newPage();
@@ -540,7 +537,6 @@ test.describe('Subscription-based access', () => {
 					baseURL,
 				}),
 				baseURL,
-				reducedMotion: 'reduce',
 			});
 			try {
 				const readerPage = await readerCtx.newPage();
@@ -602,7 +598,7 @@ async function expectPdfGalleyRestriction({
 	expectRestricted,
 	label,
 }) {
-	const ctx = await browser.newContext({baseURL, reducedMotion: 'reduce'});
+	const ctx = await browser.newContext({baseURL});
 	try {
 		const page = await ctx.newPage();
 		const resp = await page.goto(articleUrl);

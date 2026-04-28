@@ -110,7 +110,6 @@ test.describe('DOI assignment', () => {
 			const ctx = await browser.newContext({
 				storageState: await ensureAuthStateFor(browser, 'dbarnes', {baseURL}),
 				baseURL,
-				reducedMotion: 'reduce',
 			});
 			try {
 				const page = await ctx.newPage();
@@ -139,7 +138,7 @@ test.describe('DOI assignment', () => {
 				// The default theme wraps it in <section class="item doi">
 				// with a <a href=.../doi/..> link carrying the DOI URL.
 				// See templates/frontend/objects/article_details.tpl ~170.
-				const anon = await browser.newContext({baseURL, reducedMotion: 'reduce'});
+				const anon = await browser.newContext({baseURL});
 				try {
 					const anonPage = await anon.newPage();
 					const articleResp = await anonPage.goto(
@@ -205,7 +204,6 @@ test.describe('DOI assignment', () => {
 			const ctx = await browser.newContext({
 				storageState: await ensureAuthStateFor(browser, 'dbarnes', {baseURL}),
 				baseURL,
-				reducedMotion: 'reduce',
 			});
 			try {
 				const page = await ctx.newPage();

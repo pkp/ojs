@@ -191,7 +191,6 @@ test.describe('Submission wizard — field-config reset', () => {
 					baseURL,
 				}),
 				baseURL,
-				reducedMotion: 'reduce',
 			});
 			try {
 				const page = await ctx.newPage();
@@ -248,7 +247,6 @@ test.describe('Submission wizard — field-config reset', () => {
 					baseURL,
 				}),
 				baseURL,
-				reducedMotion: 'reduce',
 			});
 			try {
 				const page = await ctx.newPage();

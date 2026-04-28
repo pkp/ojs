@@ -49,7 +49,6 @@ test.describe('Admin add journal UI', () => {
 			const adminCtx = await browser.newContext({
 				storageState: await ensureAdminAuthState(browser, baseURL),
 				baseURL,
-				reducedMotion: 'reduce',
 			});
 			try {
 				const page = await adminCtx.newPage();
@@ -190,7 +189,6 @@ test.describe('Admin add journal UI', () => {
 			//    under the default OJS site skin.
 			const anonCtx = await browser.newContext({
 				baseURL,
-				reducedMotion: 'reduce',
 			});
 			try {
 				const page = await anonCtx.newPage();

@@ -62,7 +62,7 @@ test.describe('Article DC metadata', () => {
 			const {submission, publications} = await pkpApi.createSubmission(spec);
 			expect(publications).toHaveLength(1);
 
-			const ctx = await browser.newContext({baseURL, reducedMotion: 'reduce'});
+			const ctx = await browser.newContext({baseURL});
 			try {
 				const page = await ctx.newPage();
 				const resp = await page.goto(
@@ -166,7 +166,7 @@ test.describe('Article DC metadata', () => {
 			spec.publications[0].metadata.keywords = {en: keywords};
 			const {submission} = await pkpApi.createSubmission(spec);
 
-			const ctx = await browser.newContext({baseURL, reducedMotion: 'reduce'});
+			const ctx = await browser.newContext({baseURL});
 			try {
 				const page = await ctx.newPage();
 				const resp = await page.goto(
