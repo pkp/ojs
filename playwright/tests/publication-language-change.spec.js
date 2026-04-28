@@ -43,35 +43,14 @@ const submissionPublished = require('../fixtures/scenarios/submission-published.
  * lib/pkp/playwright/tests/multilingual.spec.js for context); match on
  * URL only, not on method.
  *
- * Bootstrap caveat — the publicknowledge bootstrap declares
- * `supportedLocales: ['en', 'fr_CA']` but JournalProcessor doesn't pass
- * that through to `supportedSubmissionMetadataLocales`, and
- * PKPContextService::add() then defaults it to `['en']`. The
- * `/changeLocale` validator intersects this setting with
- * `Submission::getPublicationLanguages()` — so a naive run yields 400
- * with `{title: {fr_CA: ["This language is not accepted."]}}`. The
- * original Cypress suite paid this cost in 20-CreateContext.cy.js,
- * which clicked through the Languages settings grid to enable fr_CA as
- * a submission/metadata locale. We replicate that in
- * `withSubmissionMetadataLocale()` below: a journal-config touch via
- * PUT /api/v1/contexts/{id} that adds the locale, runs the test body,
- * and reverts in a finally block. Reverting matters because the same
- * setting drives the wizard's per-locale review panel (see
- * `lib/pkp/playwright/tests/wizard-comments-become-discussion.spec.js`,
- * which fails strict-mode if it sees fr_CA in metadata locales).
- * Promoting the helper into the shared bootstrap would need a lib/pkp
- * change (out of scope per submodule discipline). This is the only
- * journal-level mutation in this spec; everything else is per-submission.
+ * Bootstrap note — `JournalProcessor` mirrors the spec's
+ * `supportedLocales` onto `supportedSubmissionMetadataLocales` and
+ * `supportedAddedSubmissionLocales` so the `/changeLocale` validator
+ * accepts fr_CA out of the box. Earlier revisions of this spec paid
+ * for that gap with a `withSubmissionMetadataLocale()` wrapper that
+ * PUT'd the journal config at runtime; the bootstrap fix made the
+ * wrapper redundant.
  */
-// Serial mode — the change-locale flow needs publicknowledge's
-// `supportedSubmissionMetadataLocales` extended (then reverted) for the
-// duration of the test, so two parallel runs would clobber each other's
-// revert and the second worker's `changeLocale` PUT would fail validation.
-// Within-file serialization isn't enough for the cross-file race against
-// `wizard-comments-become-discussion` (which assumes a single-locale
-// metadata setting); the cross-file window is bounded by the
-// add+revert pair, but flakes are possible. Reopen if needed.
-test.describe.configure({mode: 'serial'});
 
 test.describe('Publication language change', () => {
 	test(
@@ -113,19 +92,6 @@ test.describe('Publication language change', () => {
 			const page = await ctx.newPage();
 			const workflow = new EditorialWorkflowPage(page);
 
-			// Resolve the journal's numeric id by fetching the submission
-			// payload (it carries `contextId`). Used by the locale-bump
-			// helper below.
-			const fullSubmission = await workflow.fetchSubmission(submission.id);
-
-			// Wrap the body in a locale-add/revert pair so the rest of
-			// the suite sees the journal in its original state. See
-			// `withSubmissionMetadataLocale` for why the wrapper exists.
-			await withSubmissionMetadataLocale({
-				asUser,
-				locale: 'fr_CA',
-				contextId: fullSubmission.contextId,
-				fn: async () => {
 			await workflow.goto(submission.id);
 
 			// --- 1. Affordance is hidden while published ---
@@ -251,8 +217,6 @@ test.describe('Publication language change', () => {
 				expectedTitleFragment: frenchTitle,
 				readerLocale: 'fr_CA',
 			});
-				},
-			});
 		},
 	);
 });
@@ -260,134 +224,6 @@ test.describe('Publication language change', () => {
 // Publication status ints — see lib/pkp/classes/submission/PKPSubmission.php.
 const STATUS_QUEUED = 1;
 const STATUS_PUBLISHED = 3;
-
-/**
- * Add `locale` to publicknowledge's `supportedSubmissionMetadataLocales`,
- * run `fn`, then revert the array to its prior value.
- *
- * Uses the dbarnes (manager) context so the PUT carries a valid session
- * + CSRF token. We deliberately don't reach into the bootstrap because
- * `JournalProcessor` doesn't pass `supportedSubmissionMetadataLocales`
- * through the spec, and bumping the bootstrap would require a lib/pkp
- * change (out of scope per the migration's submodule discipline).
- *
- * @param {{
- *   asUser: (user: string) => Promise<import('@playwright/test').BrowserContext>,
- *   locale: string,
- *   contextId: number,
- *   fn: () => Promise<void>,
- * }} args
- */
-async function withSubmissionMetadataLocale({asUser, locale, contextId, fn}) {
-	// Add `locale` to the journal's supportedSubmissionMetadataLocales,
-	// run `fn`, then revert the array to its prior value. The metadata
-	// locales list is what the publication validator intersects against
-	// the change-locale request body (see
-	// PKPSubmissionController::changeLocale → Repo::publication()->
-	// validate, which calls
-	// `Submission::getPublicationLanguages($context->
-	// getSupportedSubmissionMetadataLocales())`); without fr_CA in there
-	// the validator rejects the new title/abstract with "This language
-	// is not accepted." But the same setting also drives the wizard's
-	// per-locale review panel (PKPSubmissionHandler::getSteps reads it
-	// into `$locales` for review-details.tpl), so leaving fr_CA enabled
-	// after the test would cause `wizard-comments-become-discussion`
-	// to see two "For the Editors" panels and fail strict-mode on its
-	// heading locator. Do the touch inside a finally-revert wrapper.
-	const ctx = await asUser('dbarnes');
-	let priorMetadataLocales = null;
-	try {
-		const page = await ctx.newPage();
-		try {
-			await page.goto('/index.php/publicknowledge/dashboard/editorial');
-			const csrfToken = await page.evaluate(
-				() => window.pkp?.currentUser?.csrfToken,
-			);
-			if (!csrfToken) {
-				throw new Error(
-					'withSubmissionMetadataLocale: csrfToken not available on dashboard',
-				);
-			}
-
-			// Fetch the full context payload (the path-scoped GET returns
-			// the locale arrays we need). The site-wide /index/api/v1/contexts
-			// list endpoint requires site-admin, so we use the path-scoped
-			// route instead.
-			const fullResp = await ctx.request.get(
-				`/index.php/publicknowledge/api/v1/contexts/${contextId}`,
-			);
-			if (!fullResp.ok()) {
-				throw new Error(
-					`GET context ${contextId} failed: ${fullResp.status()} ${await fullResp.text()}`,
-				);
-			}
-			const fullCtx = await fullResp.json();
-			priorMetadataLocales =
-				fullCtx.supportedSubmissionMetadataLocales || [];
-
-			if (!priorMetadataLocales.includes(locale)) {
-				const resp = await ctx.request.fetch(
-					`/index.php/publicknowledge/api/v1/contexts/${contextId}`,
-					{
-						method: 'PUT',
-						headers: {
-							'X-Csrf-Token': csrfToken,
-							'Content-Type': 'application/json',
-						},
-						data: {
-							supportedSubmissionMetadataLocales: [
-								...priorMetadataLocales,
-								locale,
-							],
-						},
-					},
-				);
-				if (!resp.ok()) {
-					throw new Error(
-						`PUT context (add locale) failed: ${resp.status()} ${await resp.text()}`,
-					);
-				}
-			} else {
-				// Locale already present — nothing to revert at the end.
-				priorMetadataLocales = null;
-			}
-
-			try {
-				await fn();
-			} finally {
-				if (priorMetadataLocales !== null) {
-					// Best-effort revert. If this fails the suite is left in
-					// a state where `wizard-comments-become-discussion`
-					// would see two "For the Editors" panels — surface the
-					// failure rather than silently swallowing it.
-					const revertResp = await ctx.request.fetch(
-						`/index.php/publicknowledge/api/v1/contexts/${contextId}`,
-						{
-							method: 'PUT',
-							headers: {
-								'X-Csrf-Token': csrfToken,
-								'Content-Type': 'application/json',
-							},
-							data: {
-								supportedSubmissionMetadataLocales:
-									priorMetadataLocales,
-							},
-						},
-					);
-					if (!revertResp.ok()) {
-						throw new Error(
-							`PUT context (revert locale) failed: ${revertResp.status()} ${await revertResp.text()}`,
-						);
-					}
-				}
-			}
-		} finally {
-			await page.close();
-		}
-	} finally {
-		await ctx.close();
-	}
-}
 
 /**
  * Anonymous GET of the public article page; asserts 200 and that the
