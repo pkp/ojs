@@ -1,6 +1,7 @@
 // @ts-check
 const {test, expect} = require('../support/fixtures.js');
 const {ensureAuthStateFor} = require('../../lib/pkp/playwright/support/auth.js');
+const {waitForJQueryIdle} = require('../../lib/pkp/playwright/support/jquery.js');
 
 /**
  * Subscription types & policies — row #9 in
@@ -63,6 +64,7 @@ function uniqueTag() {
 async function openSubscriptionTypesTab(page, journalPath) {
 	await page.goto(`/index.php/${journalPath}/payments`);
 	await page.locator('a[name="subscriptionTypes"]').click();
+	await waitForJQueryIdle(page);
 	await expect(
 		page.locator('a.pkp_linkaction_addSubscriptionType'),
 	).toBeVisible();
@@ -74,6 +76,7 @@ async function openSubscriptionTypesTab(page, journalPath) {
 async function openSubscriptionPoliciesTab(page, journalPath) {
 	await page.goto(`/index.php/${journalPath}/payments`);
 	await page.locator('a[name="subscriptionPolicies"]').click();
+	await waitForJQueryIdle(page);
 	await expect(page.locator('form#subscriptionPolicies')).toBeVisible();
 }
 
@@ -107,7 +110,10 @@ async function createSubscriptionType(page, {name, cost, duration}) {
 	await form.locator('input[name="duration"]').fill(duration);
 	await form.locator('input#individual').check({force: true});
 	await form.locator('button[type="submit"]').click();
-	// AjaxFormHandler closes the DialogContent side-modal on success.
+	// AjaxFormHandler chains close + grid refresh; wait for jQuery to
+	// settle before asserting the modal closed so a slow save under
+	// parallel load doesn't race the assertion.
+	await waitForJQueryIdle(page);
 	await expect(form).toHaveCount(0, {timeout: 15_000});
 }
 
@@ -196,10 +202,10 @@ test.describe('Subscription types & policies', () => {
 					.fill(mailingAddress);
 
 				await form.locator('button[type="submit"]').click();
-				// AjaxFormHandler emits a trivial notification but keeps the
-				// form mounted on success. Wait for a network settle before
-				// reloading so the PUT completes.
-				await page.waitForLoadState('networkidle');
+				// AjaxFormHandler emits a trivial notification but keeps
+				// the form mounted on success. Wait for jQuery to settle
+				// (the PUT + chained handlers) before reloading.
+				await waitForJQueryIdle(page);
 
 				// Reload and re-open the tab; values should be re-populated
 				// from the database.
@@ -276,7 +282,9 @@ test.describe('Subscription types & policies', () => {
 				await expect(dialog).toBeVisible();
 				await dialog.getByRole('button', {name: 'OK'}).click();
 
-				// Grid re-fetches; the matching row is gone.
+				// Grid re-fetches; let jQuery settle before asserting
+				// the row is gone.
+				await waitForJQueryIdle(page);
 				await expect(row).toHaveCount(0, {timeout: 15_000});
 			} finally {
 				await ctx.close();

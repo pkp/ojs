@@ -116,6 +116,27 @@ await response;
 
 Prefer this over toast-based assertions when running in parallel — see "Parallel-load lessons" below.
 
+### Wait on jQuery to settle for legacy AjaxModal / grid flows
+Helper: `lib/pkp/playwright/support/jquery.js` → `waitForJQueryIdle(page)`.
+
+```js
+const {waitForJQueryIdle} = require('../../lib/pkp/playwright/support/jquery.js');
+
+await form.locator('button[type="submit"]').click();
+await waitForJQueryIdle(page);
+await expect(form).toHaveCount(0); // modal closed by AjaxFormHandler
+```
+
+`window.jQuery.active` is jQuery's in-flight AJAX counter; `waitForJQueryIdle` polls until it reaches 0. This is the Playwright counterpart to Cypress's `cy.waitJQuery()` — call it after any interaction with legacy jQuery-driven UI:
+
+- AjaxModal open + AjaxFormHandler save chains (subscription types/policies, sections, the broader Distribution/Settings pages still on the legacy stack)
+- Smarty grid refreshes (`pkp_controllers_linkAction` row deletes / inline edits)
+- Tab-handler clicks (`a[name="..."]` on PaymentsHandler-style multi-tab pages)
+
+When NOT to use it: modern Vue surfaces don't use jQuery's AJAX, so calling it on a Vue-only flow is a no-op (jQuery is absent or stays at 0). Safe to call defensively, but prefer `waitForResponse` on Vue surfaces — it gives stronger guarantees about which call settled.
+
+Symptom that points to this fix: a spec passes solo or at `--workers=1` but flakes at `--workers=2` with timeouts on the next assertion after a legacy form save. The save's success callback (close modal, refresh grid) is racing the assertion.
+
 ## Parallel-load lessons
 
 The suite runs in parallel by default. The shared seed data is the unit of contention.

@@ -2,6 +2,7 @@
 const path = require('path');
 const {test, expect} = require('../support/fixtures.js');
 const {ensureAuthStateFor} = require('../../lib/pkp/playwright/support/auth.js');
+const {waitForJQueryIdle} = require('../../lib/pkp/playwright/support/jquery.js');
 const {EditorialWorkflowPage} = require('../pages/EditorialWorkflowPage.js');
 const submissionPublished = require('../fixtures/scenarios/submission-published.js');
 
@@ -371,11 +372,20 @@ test.describe('Subscription-based access', () => {
 				// AjaxModal opens the IndividualSubscriptionForm
 				// (templates/payments/individualSubscriptionForm.tpl) into
 				// a jQuery-UI dialog. Form id =
-				// individualSubscriptionForm.
+				// individualSubscriptionForm. Wait for jQuery to settle so
+				// the form HTML is fully rendered AND the jQuery UI
+				// datepicker init has run — datepicker init renames the
+				// visible date input to `name=dateStart-removed` and
+				// inserts the canonical hidden alt-field. Driving the
+				// dates before that init completes (under heavy parallel
+				// load) lands the value on the wrong field and the save
+				// fails validation. Mirrors Cypress `cy.waitJQuery()` at
+				// `cypress/tests/integration/Subscriptions.cy.js:131`.
 				const subForm = managerPage.locator(
 					'form#individualSubscriptionForm',
 				);
 				await expect(subForm).toBeVisible({timeout: 10_000});
+				await waitForJQueryIdle(managerPage);
 
 				// User pick — the form embeds a SubscriberSelectGrid via
 				// load_url_in_div. Search for phudson by family name to
@@ -391,6 +401,9 @@ test.describe('Subscription-based access', () => {
 				await userSearch
 					.getByRole('button', {name: 'Search', exact: true})
 					.click();
+				// Wait for the SubscriberSelectGrid filter AJAX to settle
+				// before asserting on the filtered rows.
+				await waitForJQueryIdle(managerPage);
 				const phudsonRow = managerPage.locator(
 					'#subscriberSelectGridContainer tr.gridRow',
 					{hasText: 'Paul Hudson'},
@@ -493,6 +506,10 @@ test.describe('Subscription-based access', () => {
 				// (DataChangedEvent). On a validation failure it
 				// re-renders the form inline; if that happens this
 				// assert times out and the failure surfaces clearly.
+				// Wait for jQuery to settle first so the AjaxFormHandler
+				// success chain (POST + decode + close + grid refresh)
+				// completes before we assert on the modal-closed state.
+				await waitForJQueryIdle(managerPage);
 				await expect(subForm).toHaveCount(0, {timeout: 15_000});
 
 				// Sanity — the subscription row appears in the grid.
