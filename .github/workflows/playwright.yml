@@ -30,7 +30,7 @@ jobs:
 
       - uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2'
+          php-version: '8.4'
           extensions: bcmath, bz2, curl, gd, intl, mbstring, mysql, mysqlnd, mysqli, opcache, pdo_mysql, pgsql, json, soap, xml, zip
           coverage: none
           ini-values: assert.exception=1,zend.assertions=1
