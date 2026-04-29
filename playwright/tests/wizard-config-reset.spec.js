@@ -25,19 +25,22 @@ const {SubmissionWizardPage} = require('../../lib/pkp/playwright/pages/Submissio
  * to "Do not ask" (METADATA_DISABLE) removes the field entirely.
  *
  * Scope kept:
- *   - One capability assertion per direction: require → Keywords label
- *     acquires the required asterisk in the Details step.
- *   - disable → the Keywords control disappears from the Details form.
+ *   - require / disable directions on `keywords`.
+ *   - One non-keywords field (`subjects`) flipped to Require, to prove
+ *     the FieldMetadataSetting wiring is general across the
+ *     ForTheEditors form (subjects renders in step #4, not step #2 like
+ *     keywords — different component, same configuration plumbing).
+ *   - Review-step required-field error: with keywords flipped to
+ *     Require and the field left empty, the Review step's Details
+ *     panel surfaces "This field is required." for the keywords entry,
+ *     and the wizard's top-level errors banner appears.
  *
  * Scope dropped:
  *   - The full 10-field Cypress preamble (agencies / citations /
- *     coverage / dataAvailability / disciplines / keywords / rights /
- *     source / subjects / type). Picking a single field (keywords)
- *     proves the wiring without turning the spec into a config-knob
- *     smoke test. All fields go through the same
- *     FieldMetadataSetting component + the same `in_array(...,
- *     [METADATA_REQUEST, METADATA_REQUIRE])` gate, so exercising one
- *     covers the capability.
+ *     coverage / dataAvailability / disciplines / rights / source /
+ *     type). With one keywords + one subjects test the wiring is
+ *     exercised across both Details (titleAbstract) and ForTheEditors
+ *     forms — covering the two FieldMetadataSetting host surfaces.
  *   - The Cypress source's "reset to defaults" test (test 6) just un-did
  *     what tests 4–5 configured. With E0 per-test scratch journals that
  *     teardown cost doesn't exist — each journal starts clean — so the
@@ -88,75 +91,68 @@ async function openMetadataSettingsTab(page, journalPath) {
 }
 
 /**
- * Set the `keywords` metadata flag on the open Metadata form.
+ * Set a metadata field's mode on the open Metadata form. Each metadata
+ * field is rendered by the same FieldMetadataSetting.vue, so the helper
+ * scopes to the field's fieldset by its uniquely-named "Enable …
+ * metadata" checkbox label and otherwise treats every field
+ * identically.
  *
- * FieldMetadataSetting.vue renders as two layers: (a) an "Enable" checkbox
- * whose state is bound to isEnabled, and (b) a radio group of
+ * FieldMetadataSetting.vue renders as two layers: (a) an "Enable"
+ * checkbox whose state is bound to isEnabled, and (b) a radio group of
  * submissionOptions (noRequest / request / require) that only appears
  * when isEnabled is true. Toggling the checkbox OFF sets value to the
- * disabledValue (METADATA_DISABLE = 0); toggling it ON sets value to the
- * enabledOnlyValue (METADATA_ENABLE = "enable"); picking a radio sets
- * value to the corresponding submissionOption.
+ * disabledValue (METADATA_DISABLE = 0); toggling it ON sets value to
+ * the enabledOnlyValue (METADATA_ENABLE = "enable"); picking a radio
+ * sets value to the corresponding submissionOption.
  *
  * The form is a shared `<pkp-form>` — its Save button is the footer
- * "Save" whose click triggers a PUT on the context endpoint. We wait for
- * the success notification to know the round-trip is done.
+ * "Save" whose click triggers a PUT on the context endpoint via
+ * X-Http-Method-Override. Race the click with a waitForResponse on the
+ * context PUT to know the round-trip is done.
  *
  * @param {import('@playwright/test').Page} page
+ * @param {Object} field                     Metadata field descriptor.
+ * @param {string} field.enableLabel         The "Enable …" checkbox label
+ *                                            text — uniquely identifies the
+ *                                            field's fieldset on the form
+ *                                            (e.g. "Enable keyword metadata").
+ * @param {RegExp} field.requireLabel        Regex matching the field's
+ *                                            "Require the author …" radio
+ *                                            label text.
  * @param {'require' | 'disable'} mode
  */
-async function setKeywordsMode(page, mode) {
-	// Scope to the keywords field — the Metadata form has a stack of
-	// similarly-structured fieldsets. Anchor on the uniquely-named
-	// "Enable keyword metadata" checkbox label (the keywords field's
-	// options[0].label from PKPMetadataSettingsForm.php). This avoids
-	// the whitespace-anchoring gotcha of `<legend>^Keywords$</legend>`
-	// (the legend contains a child span with padding whitespace, so
-	// anchored substring matching fails).
-	const keywordsField = page.locator('fieldset.pkpFormField--metadata', {
-		has: page.locator('label', {hasText: 'Enable keyword metadata'}),
+async function setMetadataFieldMode(page, {enableLabel, requireLabel}, mode) {
+	const fieldset = page.locator('fieldset.pkpFormField--metadata', {
+		has: page.locator('label', {hasText: enableLabel}),
 	});
-	await expect(keywordsField).toBeVisible();
+	await expect(fieldset).toBeVisible();
 
-	const enableCheckbox = keywordsField
+	const enableCheckbox = fieldset
 		.locator('input.pkpFormField--options__input[type="checkbox"]')
 		.first();
 
 	if (mode === 'disable') {
-		// Default is "request" (schema default), so the checkbox is
-		// already ticked. Untick it → metadata setting flips to 0.
-		await expect(enableCheckbox).toBeChecked();
-		await enableCheckbox.uncheck();
+		// Schema defaults vary by field — keywords ships request,
+		// subjects ships noRequest (i.e. disabled). Only flip if
+		// currently enabled.
+		if (await enableCheckbox.isChecked()) {
+			await enableCheckbox.uncheck();
+		}
 	} else if (mode === 'require') {
-		// Checkbox already ticked (default is "request"). Click the
-		// "Require" radio — its label text comes from
-		// manager.setup.metadata.keywords.require:
-		// "Require the author to suggest keywords before accepting
-		//  their submission."
-		await expect(enableCheckbox).toBeChecked();
-		const requireLabel = keywordsField.locator('label', {
-			hasText: /Require the author to suggest keywords/,
-		});
-		await expect(requireLabel).toBeVisible();
-		await requireLabel.click();
+		// Make sure the field is enabled so the submissionOptions
+		// radios render. (FieldMetadataSetting.vue keeps the radios
+		// unmounted when isEnabled is false.)
+		if (!(await enableCheckbox.isChecked())) {
+			await enableCheckbox.check();
+		}
+		const target = fieldset.locator('label', {hasText: requireLabel});
+		await expect(target).toBeVisible();
+		await target.click();
 	} else {
 		throw new Error(`Unknown mode: ${mode}`);
 	}
 
-	// Save the Metadata form. The `<pkp-form>` renders exactly one
-	// primary "Save" button inside its footer — scope to the form wrapper.
-	// The form element doesn't advertise a stable id, but it's the one
-	// containing the keywords fieldset, so scope via ancestor.
-	const form = page.locator('form', {has: keywordsField});
-	// Race the click with a waitForResponse on the PUT to the context
-	// endpoint — the form posts as POST + X-Http-Method-Override: PUT, so
-	// we intercept the server path. The response carrying the updated
-	// context is the authoritative "save succeeded" signal, and once it
-	// returns we can safely navigate away without losing the change.
-	// pkp-form doesn't emit a user-visible toast on success inside
-	// workflow.tpl (no SettingsPage-level form-success → notify wiring
-	// for this particular form); relying on the network round-trip is
-	// more reliable than polling for a transient UI cue.
+	const form = page.locator('form', {has: fieldset});
 	await Promise.all([
 		page.waitForResponse(
 			(res) =>
@@ -168,6 +164,15 @@ async function setKeywordsMode(page, mode) {
 		form.getByRole('button', {name: 'Save', exact: true}).click(),
 	]);
 }
+
+const KEYWORDS = {
+	enableLabel: 'Enable keyword metadata',
+	requireLabel: /Require the author to suggest keywords/,
+};
+const SUBJECTS = {
+	enableLabel: 'Enable subject metadata',
+	requireLabel: /Require the author to provide subjects/,
+};
 
 test.describe('Submission wizard — field-config reset', () => {
 	test(
@@ -190,7 +195,7 @@ test.describe('Submission wizard — field-config reset', () => {
 
 			// Flip keywords → require via the Metadata settings form.
 			await openMetadataSettingsTab(page, context.path);
-			await setKeywordsMode(page, 'require');
+			await setMetadataFieldMode(page, KEYWORDS, 'require');
 
 			// New wizard session. The Keywords field is rendered by
 			// publication/Details.php only when keywords is REQUEST
@@ -238,7 +243,7 @@ test.describe('Submission wizard — field-config reset', () => {
 
 			// Flip keywords → disabled (METADATA_DISABLE = 0).
 			await openMetadataSettingsTab(page, context.path);
-			await setKeywordsMode(page, 'disable');
+			await setMetadataFieldMode(page, KEYWORDS, 'disable');
 
 			const wizard = new SubmissionWizardPage(page, context.path);
 			await wizard.goto();
@@ -266,7 +271,109 @@ test.describe('Submission wizard — field-config reset', () => {
 					'textarea#titleAbstract-title-control-en',
 				),
 			).toBeAttached();
-		
+
+		},
+	);
+
+	test(
+		'toggling subjects to Require surfaces it as required in the For-the-Editors step',
+		{tag: '@regression'},
+		async ({pkpApi, asUser}) => {
+			const tag = uniqueTag();
+
+			const {context} = await pkpApi.createJournal({
+				tag,
+				users: [{username: 'dbarnes', roles: ['manager']}],
+			});
+
+			const ctx = await asUser('dbarnes');
+			const page = await ctx.newPage();
+
+			// Flip subjects → require. subjects renders inside the
+			// ForTheEditors form (Step 4) rather than Details — proves
+			// the FieldMetadataSetting wiring is general across the two
+			// host forms (titleAbstract for keywords, forTheEditors for
+			// subjects). Same FieldMetadataSetting component, same
+			// PKPMetadataSettingsForm submit, same context schema gate.
+			await openMetadataSettingsTab(page, context.path);
+			await setMetadataFieldMode(page, SUBJECTS, 'require');
+
+			const wizard = new SubmissionWizardPage(page, context.path);
+			await wizard.goto();
+			await wizard.start({title: `Require-subjects ${tag}`});
+
+			// Walk past Upload + Details + Contributors to land on
+			// "For the Editors" — Step 4. The subjects control id
+			// follows `forTheEditors-subjects-control-{locale}`.
+			await wizard.continueStep(); // Upload Files
+			await wizard.continueStep(); // Details
+			await wizard.continueStep(); // Contributors
+
+			const subjectsLabel = page.locator(
+				'label[for="forTheEditors-subjects-control-en"]',
+			);
+			await expect(subjectsLabel).toBeVisible({timeout: 15_000});
+			await expect(
+				subjectsLabel.locator('.pkpFormFieldLabel__required'),
+			).toBeVisible();
+		},
+	);
+
+	test(
+		'missing required keyword surfaces a validation error in Review',
+		{tag: '@regression'},
+		async ({pkpApi, asUser}) => {
+			const tag = uniqueTag();
+
+			const {context} = await pkpApi.createJournal({
+				tag,
+				users: [{username: 'dbarnes', roles: ['manager']}],
+			});
+
+			const ctx = await asUser('dbarnes');
+			const page = await ctx.newPage();
+
+			// Same setup as test 1: keywords flipped to require. This
+			// time the wizard advances all the way to Review without
+			// supplying a keyword, and the assertion is on Review's
+			// validation panel surfacing the missing-keyword error.
+			await openMetadataSettingsTab(page, context.path);
+			await setMetadataFieldMode(page, KEYWORDS, 'require');
+
+			const wizard = new SubmissionWizardPage(page, context.path);
+			await wizard.goto();
+			await wizard.start({title: `Require-review-error ${tag}`});
+
+			// Step 1 → 2 → 3 → 4 → Review (4 Continues land on Review).
+			await wizard.continueStep(); // Upload
+			await wizard.continueStep(); // Details (keywords required, but step
+			//                              gate doesn't validate yet)
+			await wizard.continueStep(); // Contributors
+			await wizard.continueStep(); // For the Editors
+
+			// Wizard's top-level errors banner appears once at least
+			// one required field is missing across the steps. Anchor
+			// on its localized phrase rather than a CSS class.
+			await expect(
+				page.getByText(/There are one or more problems/i),
+			).toBeVisible({timeout: 15_000});
+
+			// The Review panel's Details section reports per-field
+			// validation. On a single-locale scratch journal the
+			// heading reads simply "Details" (the "(English)" suffix
+			// only appears when supportedSubmissionLocales has 2+
+			// entries). The Keywords entry must carry the localized
+			// "This field is required." string. Scope to the Details
+			// review panel by heading so an error elsewhere on the
+			// page can't fool us.
+			const detailsPanel = page
+				.locator('.submissionWizard__reviewPanel')
+				.filter({
+					has: page.getByRole('heading', {name: /^Details$/i}),
+				});
+			await expect(detailsPanel).toHaveCount(1);
+			await expect(detailsPanel).toContainText('Keywords');
+			await expect(detailsPanel).toContainText('This field is required.');
 		},
 	);
 });
