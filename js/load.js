@@ -35,6 +35,7 @@ import StatsContextPage from '@/components/Container/StatsContextPage.vue';
 import StatsIssuesPage from '@/components/Container/StatsIssuesPage.vue';
 import StatsUsersPage from '@/components/Container/StatsUsersPage.vue';
 import SubmissionWizardPage from '@/components/Container/SubmissionWizardPage.vue';
+import SubmissionFileMetadataForm from '@/components/Container/SubmissionFileMetadataForm.vue';
 import DashboardPage from '@/pages/dashboard/DashboardPage.vue';
 
 // Helper for initializing and tracking Vue controllers
@@ -62,6 +63,7 @@ window.pkp = Object.assign(PkpLoad, window.pkp || {}, {
 		StatsIssuesPage,
 		StatsUsersPage,
 		SubmissionWizardPage,
+		SubmissionFileMetadataForm,
 		DashboardPage,
 	},
 });
