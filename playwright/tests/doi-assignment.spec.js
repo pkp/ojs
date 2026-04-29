@@ -225,7 +225,101 @@ test.describe('DOI assignment', () => {
 				v2.doiObject.doi,
 				`v2 DOI (${v2.doiObject.doi}) must differ from v1 (${v1.doiObject.doi})`,
 			).not.toBe(v1.doiObject.doi);
-		
+
+		},
+	);
+
+	test(
+		'manager configures DOI settings via the UI: enable + per-type toggles + prefix + creation time persist on reload',
+		{tag: '@regression'},
+		async ({pkpApi, asUser}) => {
+			const tag = uniqueTag(test.info(), 'cfg');
+			// Scratch journal with DOIs OFF (skip the
+			// ContextBuilderProcessor passthrough so the UI flow has
+			// something to flip). dbarnes is manager.
+			const {context} = await pkpApi.createJournal({
+				tag,
+				users: [{username: 'dbarnes', roles: ['manager']}],
+			});
+			const ctx = await asUser('dbarnes');
+			const page = await ctx.newPage();
+
+			// Navigate directly to the Distribution DOIs tab. The OJS
+			// settings tabs are id-anchored: outer #distribution-button,
+			// inner #dois-button. Cypress's `checkDoiConfig` clicks
+			// through Settings menu → Distribution → DOIs; the URL
+			// hash drives the same activation.
+			await page.goto(
+				`/index.php/${context.path}/management/settings/distribution#dois`,
+			);
+			await page.locator('#dois-button').click();
+
+			const form = page.locator('form#doisSetup, #doisSetup form').first();
+			await expect(form).toBeVisible({timeout: 15_000});
+
+			// Enable DOIs.
+			const enableCheckbox = form
+				.locator('input[name="enableDois"]')
+				.first();
+			await expect(enableCheckbox).toBeVisible();
+			await enableCheckbox.check();
+
+			// Tick each pubObject type the Cypress helper enabled
+			// (publication / issue / representation). The form
+			// renders these as a FieldOptions group with
+			// `name="enabledDoiTypes"` and per-type values.
+			for (const t of ['publication', 'issue', 'representation']) {
+				await form
+					.locator(`input[name="enabledDoiTypes"][value="${t}"]`)
+					.check();
+			}
+
+			const prefix = `10.${1000 + (test.info().parallelIndex || 0)}`;
+			await form.locator('input[name="doiPrefix"]').fill(prefix);
+
+			// doiCreationTime is a select; pick copyEditCreationTime
+			// (matches Cypress).
+			await form
+				.locator('select[name="doiCreationTime"]')
+				.selectOption('copyEditCreationTime');
+
+			// Save the DOIs form. Race with the context PUT.
+			await Promise.all([
+				page.waitForResponse(
+					(res) =>
+						/\/api\/v1\/contexts\/\d+/.test(res.url()) &&
+						res.ok() &&
+						['POST', 'PUT'].includes(res.request().method()),
+					{timeout: 15_000},
+				),
+				form.getByRole('button', {name: 'Save', exact: true}).click(),
+			]);
+
+			// Reload + reactivate the tab; persistence is what proves
+			// the round-trip.
+			await page.reload();
+			await page.locator('#dois-button').click();
+			const reloaded = page
+				.locator('form#doisSetup, #doisSetup form')
+				.first();
+			await expect(reloaded).toBeVisible({timeout: 15_000});
+
+			await expect(
+				reloaded.locator('input[name="enableDois"]').first(),
+			).toBeChecked();
+			for (const t of ['publication', 'issue', 'representation']) {
+				await expect(
+					reloaded.locator(
+						`input[name="enabledDoiTypes"][value="${t}"]`,
+					),
+				).toBeChecked();
+			}
+			await expect(reloaded.locator('input[name="doiPrefix"]')).toHaveValue(
+				prefix,
+			);
+			await expect(
+				reloaded.locator('select[name="doiCreationTime"]'),
+			).toHaveValue('copyEditCreationTime');
 		},
 	);
 });
