@@ -260,7 +260,202 @@ test.describe('Subscription types & policies', () => {
 			// the row is gone.
 			await waitForJQueryIdle(page);
 			await expect(row).toHaveCount(0, {timeout: 15_000});
-		
+
+		},
+	);
+
+	test(
+		'manager configures Payments via Distribution > Payments tab; settings persist on reload',
+		{tag: '@regression'},
+		async ({pkpApi, asUser}) => {
+			const tag = uniqueTag();
+			const {context} = await pkpApi.createJournal({
+				tag,
+				users: [{username: 'dbarnes', roles: ['manager']}],
+			});
+			const ctx = await asUser('dbarnes');
+			const page = await ctx.newPage();
+
+			// Distribution → Payments tab. PkpTabs id-anchored:
+			// outer `#distribution-button`, inner `#payments-button`.
+			await page.goto(
+				`/index.php/${context.path}/management/settings/distribution#payments`,
+			);
+			await page.locator('#payments-button').click();
+
+			// PKPPaymentSettingsForm starts with just an Enable
+			// checkbox visible — the plugin select, currency select,
+			// and plugin-specific fields cascade in only after Enable
+			// is ticked (FieldOptions showWhen pattern). Anchor the
+			// form by the always-present Enable label.
+			const form = page
+				.locator('form', {
+					has: page.locator('label', {
+						hasText: 'Payments will be enabled',
+					}),
+				})
+				.first();
+			await expect(form).toBeVisible({timeout: 15_000});
+
+			// Tick Enable.
+			await form
+				.locator('label', {hasText: 'Payments will be enabled'})
+				.first()
+				.click();
+
+			// Wait for the plugin select to mount.
+			const pluginSelect = form.locator(
+				'select#paymentSettings-paymentPluginName-control',
+			);
+			await expect(pluginSelect).toBeVisible({timeout: 15_000});
+			await pluginSelect.selectOption({label: 'Manual Fee Payment'});
+
+			// Currency.
+			await form
+				.locator('select#paymentSettings-currency-control')
+				.selectOption({label: 'Canadian Dollar'});
+
+			const instructions = `Test manual instructions ${tag}.`;
+			const instrTextarea = form.locator(
+				'textarea#paymentSettings-manualInstructions-control',
+			);
+			await expect(instrTextarea).toBeVisible({timeout: 15_000});
+			await instrTextarea.fill(instructions);
+
+			// Save the main paymentSettings form. The Payments tab
+			// renders multiple forms (paymentSettings + per-plugin
+			// settings), each with its own Save. Scope to the form
+			// containing the manualInstructions textarea (since we
+			// just selected manualpayment, that field is part of the
+			// paymentSettings form). Race with the context PUT.
+			const settingsForm = page.locator('form', {
+				has: page.locator(
+					'textarea#paymentSettings-manualInstructions-control',
+				),
+			});
+			const settingsSaveBtn = settingsForm.getByRole('button', {
+				name: 'Save',
+				exact: true,
+			});
+			await expect(settingsSaveBtn).toHaveCount(1);
+			await settingsSaveBtn.scrollIntoViewIfNeeded();
+			await expect(settingsSaveBtn).toBeEnabled();
+			await Promise.all([
+				page.waitForResponse(
+					(res) =>
+						// PKPPaymentSettingsForm posts to the
+						// `_payments` API route (see
+						// ManagementHandler.php#377), not the generic
+						// `/api/v1/contexts/{id}` URL — match both for
+						// robustness.
+						/\/api\/v1\/(_payments|contexts\/\d+)/.test(res.url()) &&
+						res.ok() &&
+						['POST', 'PUT'].includes(res.request().method()),
+					{timeout: 15_000},
+				),
+				settingsSaveBtn.click(),
+			]);
+
+			// Reload + reactivate the tab; the persisted instructions
+			// + currency + plugin name are the stable signals. After
+			// enable persists, the cascade fields render on first
+			// paint (no need to re-toggle).
+			await page.reload();
+			await page.locator('#payments-button').click();
+			const reloaded = page
+				.locator('form', {
+					has: page.locator('label', {
+						hasText: 'Payments will be enabled',
+					}),
+				})
+				.first();
+			await expect(reloaded).toBeVisible({timeout: 15_000});
+			await expect(
+				reloaded.locator(
+					'textarea#paymentSettings-manualInstructions-control',
+				),
+			).toHaveValue(instructions);
+			// Currency + plugin selects don't expose their selected
+			// option's TEXT through Playwright directly — assert on
+			// the underlying option values via the `<select>`'s
+			// `value` property.
+			await expect(
+				reloaded.locator('select#paymentSettings-currency-control'),
+			).toHaveValue('CAD');
+			// The paymentPluginName option value uses the plugin's
+			// class basename (CamelCase), per
+			// PKPPaymentSettingsForm's plugin enumeration —
+			// `ManualPayment` for the manualpayment plugin.
+			await expect(
+				reloaded.locator('select#paymentSettings-paymentPluginName-control'),
+			).toHaveValue('ManualPayment');
+		},
+	);
+
+	test(
+		'manager flips Distribution > Access publishingMode to Subscription; setting persists',
+		{tag: '@regression'},
+		async ({pkpApi, asUser}) => {
+			const tag = uniqueTag();
+			const {context} = await pkpApi.createJournal({
+				tag,
+				users: [{username: 'dbarnes', roles: ['manager']}],
+			});
+			const ctx = await asUser('dbarnes');
+			const page = await ctx.newPage();
+
+			// Distribution → Access tab. publishingMode is a
+			// FieldOptions radio with three values: 0 (Open Access),
+			// 1 (Subscription), 2 (None of the above).
+			await page.goto(
+				`/index.php/${context.path}/management/settings/distribution#access`,
+			);
+			await page.locator('#access-button').click();
+
+			const form = page.locator('#access form').first();
+			await expect(form).toBeVisible({timeout: 15_000});
+
+			// Click the "subscription" radio label — the i18n string
+			// "The journal will require subscriptions" maps to
+			// publishingMode=1 (PUBLISHING_MODE_SUBSCRIPTION). Use a
+			// regex-anchored label match because the surrounding text
+			// drifts across versions.
+			await form
+				.locator('label', {
+					hasText: /journal will require subscriptions/i,
+				})
+				.first()
+				.click();
+
+			await Promise.all([
+				page.waitForResponse(
+					(res) =>
+						/\/api\/v1\/contexts\/\d+/.test(res.url()) &&
+						res.ok() &&
+						['POST', 'PUT'].includes(res.request().method()),
+					{timeout: 15_000},
+				),
+				form.getByRole('button', {name: 'Save', exact: true}).click(),
+			]);
+
+			// Reload, reactivate the tab, assert the radio still
+			// reads value=1.
+			await page.reload();
+			await page.locator('#access-button').click();
+			const reloaded = page.locator('#access form').first();
+			await expect(reloaded).toBeVisible({timeout: 15_000});
+			await expect(
+				reloaded
+					.locator('input[name="publishingMode"]:checked')
+					.first(),
+			).toHaveValue('1');
+
+			// REST sanity-check: the context's publishingMode is now 1.
+			const ctxResp = await page.request.get(
+				`/index.php/${context.path}/api/v1/contexts/${context.id}`,
+			);
+			expect(ctxResp.ok()).toBeTruthy();
+			expect((await ctxResp.json()).publishingMode).toBe(1);
 		},
 	);
 });
