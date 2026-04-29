@@ -283,13 +283,115 @@ All four ❌ gap rows from the original audit have closed. Five ⚠️ partials 
 
 **Status**: with all original ❌ gaps closed and Phase 1–5 of the post-audit remediation landed, the residual ⚠️ partials are tracked individually above. None block the migration's coverage-parity claim — each is a narrowly-scoped Vue widget or environmental issue that can be picked up independently.
 
+## §4 · Cypress source coverage map (inverse view)
+
+§1's table is keyed by Playwright spec — "this Playwright file came from these Cypress sources". §4 inverts that view: keyed by Cypress file on disk, "this Cypress file's coverage went where in Playwright". The two views are complementary; §1 is the writing-side checklist, §4 is the reviewing-side checklist.
+
+Columns:
+- **Cypress file** — relative path under the repo root.
+- **Coverage** — one-line summary of the file's `describe` / `it` bodies (the surfaces it exercises).
+- **Playwright destination** — spec(s) that took over the coverage. References the §1 row in parentheses.
+- **Gap** — `✅` covered · `⚠️` partial (deferred surfaces — see §3) · `❌` no Playwright equivalent.
+
+### §4.1 · Shared Cypress (`lib/pkp/cypress/tests/integration/`) — 14 files
+
+| Cypress file | Coverage | Playwright destination | Gap |
+|---|---|---|---|
+| `Announcements.cy.js` | Announcements feature toggle, listPanel CRUD, reader page, sitemap inclusion | `lib/pkp/.../announcements.spec.js` (#1) | ✅ |
+| `API.cy.js` | api_key_secret config, anonymous /users 401, profile API-key create/delete, authenticated /users via apiToken | `lib/pkp/.../api-smoke.spec.js` (#47) | ✅ — apiToken-UI flow (legacy ApiProfileForm) intentionally retired in favour of session-auth path |
+| `Categories.cy.js` | Category CRUD on Catalog Settings + assign-to-submission via wizard | `lib/pkp/.../categories.spec.js` (#15) | ✅ |
+| `DataAvailabilityStatements.cy.js` | Manager enables stmt + reader sees it on article view + reviewer-visibility matrix | `lib/pkp/.../data-availability.spec.js` (#40) | ✅ — 2 env-flag-gated Cypress tests intentionally not portable |
+| `EditorialMasthead.cy.js` | Anonymous reader masthead route renders | `lib/pkp/.../editorial-masthead.spec.js` (#3) | ✅ |
+| `emailTemplates/EmailTemplates.cy.js` | Template restricted/unrestricted toggle, custom-template CRUD, UG checkbox reactivity | `lib/pkp/.../email-templates.spec.js` (#4) | ✅ |
+| `Filenames.cy.js` | Submission file with non-ASCII name + Content-Disposition download header | `lib/pkp/.../filenames.spec.js` (#17) | ✅ |
+| `Jobs.cy.js` | Jobs queue display + failed-job requeue/details/delete | `lib/pkp/.../jobs.spec.js` (#45) | ✅ — Cypress's `jobs.php` shell-out flow legitimately not portable; covered by `lib/pkp/tests/jobs/` PHPUnit |
+| `Multilingual.cy.js` | UI-locale grid toggle + masthead acronym FR + submission Title & Abstract FR | `lib/pkp/.../multilingual.spec.js` (#5) | ✅ |
+| `NativeXmlImportExportSubmission.cy.js` | Native-XML submission export + import round-trip | `lib/pkp/.../native-xml-submission.spec.js` (#53) | ✅ |
+| `NavigationMenus.cy.js` | Modern Vue menu-editor CRUD + legacy AjaxModal items grid | `lib/pkp/.../navigation-menus.spec.js` (#2) | ✅ |
+| `oai/DC.cy.js` | OAI-PMH DC endpoint payload | `lib/pkp/.../oai-dc.spec.js` (#39) | ✅ |
+| `orcid/Orcid.cy.js` (shared) | ORCID member API config + author profile sync + submission contributor flow + verification request mail | `lib/pkp/.../orcid.spec.js` (#55) | ✅ |
+| `publicComents/PublicComments.cy.js` | Reader-side approve flow + login gate, moderator approve/hide/delete + tab filters + reports + version-closes-discussion + auth | `lib/pkp/.../public-comments.spec.js` (#38) + `user-comments-moderation.spec.js` (#61) | ⚠️ — reader side ✅; moderator data-driven row interactions deferred (see §3 row #61) |
+
+### §4.2 · OJS-only feature Cypress (`cypress/tests/integration/`) — 18 files
+
+| Cypress file | Coverage | Playwright destination | Gap |
+|---|---|---|---|
+| `API.cy.js` (OJS) | OJS-side apiToken create/delete + author /submissions returns own item | `playwright/tests/api-smoke.spec.js` (#47) | ✅ |
+| `ChangeSubmissionLanguage.cy.js` | Affordance suppression + change-language modal + reader article URL | `playwright/tests/publication-language-change.spec.js` (#33) | ✅ |
+| `Discussions.cy.js` | Discussion Manager CRUD + role-scoped edit/delete | `lib/pkp/.../discussion-manager.spec.js` (#18) | ✅ |
+| `Doi.cy.js` | DOI plugin enable + DOI-management UI + assign DOIs | `playwright/tests/doi-assignment.spec.js` (#31) | ✅ — manual-DOI-assign + mark-registered are Cypress-side `.skip`'d on pkp-lib#10606; no successor |
+| `DoiCrossref.cy.js` | Crossref Settings UI + plugin enable + agency select + depositor fields + export XML | `playwright/tests/doi-crossref.spec.js` (#32) | ⚠️ — Settings UI ✅; export XML round-trip deferred (env: PHP `max_execution_time` on XSD validation) |
+| `emailTemplates/EmailTemplates.cy.js` (OJS) | OJS-specific email template instances (overlap with shared spec) | `lib/pkp/.../email-templates.spec.js` (#4) | ✅ |
+| `MultipleContexts.cy.js` | Multi-journal role scoping + journal enable/disable grid | `playwright/tests/multiple-contexts.spec.js` (#46) | ✅ — legacy enable/disable journal grid intentionally out of scope; capability covered |
+| `orcid/Orcid.cy.js` (OJS) | OJS-specific ORCID overlay (shared with lib/pkp source) | `lib/pkp/.../orcid.spec.js` (#55) | ✅ |
+| `Pubmed.cy.js` | Pubmed XML export | `playwright/tests/pubmed-metadata.spec.js` (#37) | ✅ |
+| `ReviewerRecommendation.cy.js` | Custom recommendations CRUD + active toggle + locked-by-use + dropdown filtering | `lib/pkp/.../reviewer-recommendations.spec.js` (#6) | ✅ |
+| `Statistics.cy.js` | Articles statistics page + per-author search + date-range filter | `playwright/tests/article-statistics.spec.js` (#36) | ⚠️ — structural mount ✅; per-author + date-range tests deferred (needs metrics scenario passthrough — see §3 row #36) |
+| `SubmissionWizard.cy.js` | Validation, copyright gate, language change, comments→discussion, section rules, field-config reset (6 wizard concerns) | `lib/pkp/.../wizard-validation.spec.js` (#10), `wizard-copyright-notice.spec.js` (#11), `wizard-section-rules.spec.js` (#12), `wizard-language.spec.js` (#13), `wizard-comments-become-discussion.spec.js` (#14), `playwright/.../wizard-config-reset.spec.js` (#16) | ✅ |
+| `Subscriptions.cy.js` | Subscription types CRUD + policies + Payments tab + Access publishingMode + per-issue access + reader gate | `playwright/.../subscription-config.spec.js` (#9) + `subscription-access.spec.js` (#52) | ✅ |
+| `TaskTemplates.cy.js` | Task-template config CRUD + apply on stage transition + edit/delete/auto-add toggle | `lib/pkp/.../task-templates.spec.js` (#25) | ✅ |
+| `Y_NativeXmlImportExportIssue.cy.js` | Native-XML issue+articles export and import | `playwright/tests/native-xml-issue.spec.js` (#54) | ✅ |
+| `Z_ArticleViewDCMetadata.cy.js` | Reader article view DC.* meta tags | `playwright/tests/article-dc-metadata.spec.js` (#34) | ✅ — DC.Coverage / Type.localized / Description / Title.Alternative / Format / Identifier.DOI dropped (need row #16/#5/#51/#31 dependencies — already documented) |
+
+### §4.3 · OJS-only ApplicationSetup (`cypress/tests/data/10-ApplicationSetup/`) — 6 files
+
+| Cypress file | Coverage | Playwright destination | Gap |
+|---|---|---|---|
+| `10-Installation.cy.js` | Walks the OJS installer wizard end-to-end | `lib/pkp/playwright/tests/bootstrap.setup.js` (programmatic) | ✅ — installer UI replaced by programmatic bootstrap; the UI flow has no successor row by design |
+| `20-CreateContext.cy.js` | Site admin → Add Journal form + validation + Settings Wizard redirect | `playwright/tests/admin-add-journal.spec.js` (#59) | ✅ |
+| `40-CreateUsers.cy.js` | Site-admin user creation + per-context role assignment | `lib/pkp/playwright/data/users.js` (programmatic) + `playwright/tests/user-invitation.spec.js` (#57) + `user-registration.spec.js` (#58) + `user-role-assignment.spec.js` (#60) | ✅ — split: baseline users seeded programmatically; UI flows for invite/register/role-assign in dedicated specs |
+| `50-CreateCategories.cy.js` | Category CRUD on the Catalog Settings page | `lib/pkp/.../categories.spec.js` (#15) | ✅ |
+| `50-CreateIssues.cy.js` | Issue CRUD + publish + set-current + reader archive page | `playwright/tests/issues.spec.js` (#7) | ✅ |
+| `50-CreateSections.cy.js` | Section CRUD + flags (inactive, editor-only) + assign section editors | `playwright/tests/sections.spec.js` (#8) | ✅ |
+
+### §4.4 · OJS-only submission-fixture chains (`cypress/tests/data/60-content/`) — 26 files
+
+Per **Principle #6**, these serial fixtures are being retired wholesale. Each file has one mandatory `it('Create a submission')` block that doubles as fixture seed; about half also embed editorial-workflow assertions in subsequent `it()` blocks. The fixture half becomes per-test scenario seeding; the embedded assertions get migrated piecewise into feature-scoped specs.
+
+#### Files with named, distinct feature coverage:
+
+| Cypress file | Embedded coverage | Playwright destination | Gap |
+|---|---|---|---|
+| `AmwandengaSubmission.cy.js` | Editor edits publication; author-edit-permission gate; publish/unpublish; new version + reader version-switch | `publication-metadata-editing.spec.js` (#27), `versioning.spec.js` (#29), `publish-unpublish.spec.js` (#28), `author-edit-published.spec.js` (#43) | ⚠️ — Permissions + Issue Vue widgets deferred on rows #27 / #29 (see §3) |
+| `CcorinoSubmission.cy.js` | Section-editor recommends Accept | `lib/pkp/.../section-editor-recommendation.spec.js` (#22) | ✅ — keyword-selection during send-to-review folded into row #15 (categories/keywords) |
+| `DdioufSubmission.cy.js` | Stage-participant management across review/copyediting/production | `lib/pkp/.../stage-participants.spec.js` (#23) | ✅ |
+| `LkumiegaSubmission.cy.js` | Decision: request revisions + author uploads revisions | `lib/pkp/.../decision-request-revisions.spec.js` (#48) | ✅ |
+| `VkarbasizaedSubmission.cy.js` | Schedule for publication, publish/unpublish/republish issue, remove from TOC | `playwright/tests/issues.spec.js` (#7) + `publish-unpublish.spec.js` (#28) + `issue-assignment.spec.js` (#30) | ✅ |
+| `VwilliamsonSubmission.cy.js` | Decision: decline | `lib/pkp/.../decision-decline.spec.js` (#21) | ✅ |
+| `ZzeddSubmission.cy.js` | **Reviewer suggestions** — author submits suggestions; manager-side suggestion panel; add suggestion → reviewer; existing-reviewer + new-reviewer paths (7 it() blocks) | *(no Playwright spec)* | ❌ — entire feature absent from §1; new row needed |
+
+#### Files contributing to "scattered decision/role" rows:
+
+These files contain `Sends to review …` / `performs review` / `Declines the submission` / similar embedded `it()` blocks that the roadmap consolidates into:
+- Decision: send to review (#19) · Reviewer assignment (#20) · Decision: decline (#21) · Decision: accept (#24) · Decision: send to production (#26) · Reviewer completes review (#49) · Review-round lifecycle (#50)
+
+| Cypress file | Embedded coverage | Status |
+|---|---|---|
+| `CkwantesSubmission.cy.js` | Send to review + assign reviewers + accept | ✅ folded into rows #19, #20, #24 |
+| `DphillipsSubmission.cy.js` | Send to review/copyedit/production + assign reviewers/copyeditor/layout | ✅ folded into rows #19, #20, #26 |
+| `DsokoloffSubmission.cy.js` | Send to review + perform review with decline recommendation | ✅ folded into rows #19, #20, #49 |
+| `FpaglieriSubmission.cy.js` | Full review→copyedit→production assignments incl. proofreader | ✅ folded into rows #19, #20, #26 |
+| `JnovakSubmission.cy.js` | Send to review + perform two reviews | ✅ folded into rows #19, #49 |
+| `LchristopherSubmission.cy.js` | Send to review + assign two reviewers | ✅ folded into rows #19, #20 |
+| `RbaiyewuSubmission.cy.js` | Full review→copyedit→production assignments | ✅ folded into rows #19, #20, #26 |
+| `ZwoodsSubmission.cy.js` | Send to review and copyedit + assign reviewers + copyeditor | ✅ folded into rows #19, #20 |
+
+#### Pure-fixture files (only `it('Create a submission')`):
+
+`CmontgomerieSubmission.cy.js`, `EostromSubmission.cy.js`, `KalkhafajiSubmission.cy.js`, `PdanielSubmission.cy.js`, `RrossiSubmission.cy.js` — 5 files. Replaced by per-test `pkpApi.createSubmission(scenario)` calls; no migration target needed.
+
+### §4.5 · Newly identified gap
+
+**Reviewer suggestions** (ZzeddSubmission.cy.js, 7 `it()` blocks) — author-side suggestion entry + manager-side suggestion-manager panel + adding existing/new reviewer from suggestion. The feature is in OJS today (the spec drives `reviewer-suggestion`-tagged UI elements); it has no row in §1, no entry in §3. Recommend opening this as a new row (Wave 3 — in-review submission state).
+
 ## How to use this doc
 
 1. **Pick a row** from §1. Start at the top of the lowest open wave.
 2. **Check §2** — if the row has a non-dash Ext? that is not yet built, either build the extension first or pick a different row.
 3. **Check §3** — if the row appears with ⚠️ partial or ❌ gap there, the listed missing surfaces also need to be addressed (either as part of this PR or as a follow-up).
-4. **Write the spec** at `{Home}/playwright/tests/{Spec file}` following the shape of `playwright/tests/discussions/discussion-manager.spec.js`.
-5. **Tick the row** — mark ✅ DONE next to the feature name in the PR that lands the spec, and update the verdict in §3 if the audit's coverage delta has been resolved.
-6. **Update this doc** if the row's scope changes or you discover the Cypress source was misread.
+4. **Reviewing? Use §4** — when reviewing a migration PR, look up the Cypress file(s) it claims to retire in §4 and verify each surface is accounted for in the listed Playwright destination(s).
+5. **Write the spec** at `{Home}/playwright/tests/{Spec file}` following the shape of `playwright/tests/discussions/discussion-manager.spec.js`.
+6. **Tick the row** — mark ✅ DONE next to the feature name in the PR that lands the spec, and update the verdict in §3 if the audit's coverage delta has been resolved.
+7. **Update this doc** if the row's scope changes or you discover the Cypress source was misread.
 
 Existing scenario fixtures to reuse: `playwright/fixtures/scenarios/submission-draft.js`, `submission-in-review.js`, `submission-published.js`. The scenario endpoint lives at `api/v1/_test/SubmissionScenarioController.php` (currently an empty OJS subclass) and `lib/pkp/api/v1/_test/PKPSubmissionScenarioController.php` (shared implementation).
