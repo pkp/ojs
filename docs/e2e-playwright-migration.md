@@ -222,7 +222,7 @@ This section records a row-by-row parity audit against the Cypress sources, perf
 | 33 | Publication language change | 3 | 1 | ✅ | — (consolidated; affordance-suppression + modal + reader all covered) |
 | 34 | Article DC metadata | 1 | 2 | ✅ | — |
 | 35 | Journal homepage | — | 2 | ✅ | — (no formal Cypress source; reader-only coverage) |
-| 36 | Article statistics | 2 | 1 | ⚠️ partial | Generated metrics (`generateTestMetrics.php`), per-author row search, date-range filter apply/filter set |
+| 36 | Article statistics | 2 | 1 | ⚠️ partial — explicit defer | Metrics seeding via `generateTestMetrics.php` requires either a `child_process.exec` shell-out (fragile, environment-dependent) or a new scenario passthrough. The Cypress source's per-author + date-range assertions also target baseline-journal submissions that don't translate cleanly to scratch journals. Reopen when metrics become a first-class scenario passthrough. |
 | 37 | Pubmed metadata | 1 | 2 | ✅ | — |
 | 38 | Public comments | 24 | 2 | ❌ gap | **22+ moderator-side surfaces uncovered**: side-modal Approve/Hide/Delete buttons, the four `userComments` management tabs (Approved / Hidden / Needs Approval / Reported), Reports tab + report-deletion flows (12 distinct report-related Cypress tests), table-row delete via more-actions, version-closes-discussion gating, delete-own-comment authorization, delete-others-comment authorization. Row admits drop with "deserves its own row" but no such row exists. |
 | 39 | OAI — DC endpoint | 1 | 2 | ✅ | — |
@@ -279,7 +279,7 @@ The 4 ❌ gap rows and the 15 ⚠️ partial rows need follow-up. Triage by impa
 | 27 | Permissions panel `optIntoEdit` Override-then-edit + Issue panel save round-trip (Contributors landed; Galleys covered by row #51) | ~2 hours; Vue-widget timing issues need investigation |
 | 29 | v2 galley + v2 issue panel edits (v2 Contributors landed; same Vue widget blockers as row #27) | bundle with row #27's Issue investigation |
 | 32 | Crossref export XML round-trip (Settings UI landed); environmental — needs PHP `max_execution_time` raised or XSD pre-cached for the validation pass | blocked on infra |
-| 36 | Stats: metrics seeding (port `generateTestMetrics.php` invocation) + filtering tests | ~2 hours, may need infrastructure |
+| 36 | Stats: metrics seeding via new scenario passthrough (or refactor `generateTestMetrics.php` into REST), then per-author + date-range filter tests | needs infrastructure — defer until the scenario API gets a metrics passthrough |
 | 47 | API key create/delete UI from legacy profile form | ~1 hour |
 
 **Total remediation estimate**: ~3 days for partial rows + ~1 day for the public-comments moderator spec + ~2 hours each for the other three gap rows. Roughly 1 working week to land full surface-coverage parity.

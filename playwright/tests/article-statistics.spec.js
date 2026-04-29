@@ -23,19 +23,25 @@ const submissionPublished = require('../fixtures/scenarios/submission-published.
  *     Details detail-table (`h2#publicationDetailTableLabel` + its
  *     `Abstract Views` / `File Views` column headers).
  *
- * Scope deviations vs. Cypress:
- *   - No generated usage numbers. Cypress shells out to
- *     `lib/pkp/tools/generateTestMetrics.php` to seed 90 days of synthetic
- *     counter events; the original spec then asserts specific author
- *     names render in the table's authors column and specific date-range
- *     pickers apply. The capability under test for this row is "the
- *     editor can load the stats page without errors and the page emits
- *     its structural landmarks" — generated-metrics-driven assertions
- *     (checkGraph's per-day timeline rows, checkTable's author search,
- *     checkFilters's section-filter list) all depend on that metrics
- *     seed. Porting the metrics generator is a separate piece of
- *     infrastructure; until it lands, the counters in the items row will
- *     all be 0 but the row for the seeded submission still renders.
+ * Scope deviations vs. Cypress (deferred):
+ *   - **No generated usage numbers / no per-author row search / no
+ *     date-range filter test.** Cypress shells out to
+ *     `lib/pkp/tools/generateTestMetrics.php` to seed 90 days of
+ *     synthetic counter events, then asserts specific baseline
+ *     submission rows ("Mwandenga", "Karbasizaed") appear in the
+ *     detail-table. Porting the metrics generator into Playwright
+ *     would require either:
+ *       (a) a `child_process.exec` shell-out — fragile across host
+ *           environments and creates a hidden cross-test dependency on
+ *           the legacy baseline submissions the metrics target, or
+ *       (b) a new scenario passthrough that seeds metrics via REST or
+ *           direct DB insert.
+ *     Both add meaningful infrastructure for what is ultimately a
+ *     "rows render with non-zero counters" smoke check. The
+ *     per-author + date-range assertions are also tied to the
+ *     baseline `publicknowledge` submissions that don't translate to
+ *     a scratch-journal scenario. Deferred until metrics seeding
+ *     becomes a first-class scenario passthrough.
  *   - Filter toggle (`cy.checkFilters([...])`) dropped — the filters
  *     sidebar only appears when server-side filters are configured and
  *     they live on per-context knobs (sections) that add nothing beyond
