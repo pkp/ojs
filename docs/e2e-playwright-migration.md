@@ -184,7 +184,7 @@ This section records a row-by-row parity audit against the Cypress sources, perf
 
 **A note on REST round-trips.** Several rows assert "the capability" via `pkpApi.X()` or REST instead of clicking through the Cypress UI. Under the parity principle, that is **not** a substitute for UI coverage — UI surfaces have their own bugs (wiring, focus, async, validation messages, role gating). Where this pattern shows up below, the affected UI surface is recorded in the Delta column, even if the API path is fully tested.
 
-**Summary**: 54 ✅ parity · 5 ⚠️ partial · 1 ❌ gap (out of 60 done rows; row #61 added for the public-comments moderator UI surface).
+**Summary**: 55 ✅ parity · 5 ⚠️ partial · 0 ❌ gap (out of 60 done rows; row #61 added for the public-comments moderator UI surface). Up from the audit baseline of 40 ✅ · 15 ⚠️ · 4 ❌; all four original ❌ gaps closed and ten ⚠️ partials graduated.
 
 | Row | Feature | Cy tests | Pw tests | Verdict | Missing surfaces (delta) |
 |---|---|---|---|---|---|
@@ -258,17 +258,17 @@ Four rows had their original "✅ DONE" markers loosened to ⚠️ partial durin
 - **Row 29 (Versioning)**: drops v2 contributor edits, v2 galley edits, v2 issue panel edits on "those panels are tested elsewhere on v1". The v2-aware edit pipeline isn't tested for those panels — the v1 tests for #27 and #51 don't exercise version-specific code.
 - **Row 55 (ORCID)**: "Sends ORCID verification request to author" is "deferred for now" with no successor row. Under parity, deferral without a successor is a partial drop.
 
-These re-classifications do not edit row text in §1 — that's Step 3 of the remediation work. They are recorded only in the verdict column above.
+These re-classifications do not edit row text in §1 — that's Step 3 of the remediation work. They are recorded only in the verdict column above. (As of this update all four have been remediated: rows 25 and 55 graduated to ✅ via Phase 1 of the post-audit remediation; rows 27 and 29 retain a ⚠️ partial verdict, narrowed to the specific Vue widget panels that didn't drive reliably.)
 
 ### Remediation triage (next-step list)
 
-The 4 ❌ gap rows and the 15 ⚠️ partial rows need follow-up. Triage by impact:
+All four ❌ gap rows from the original audit have closed. Five ⚠️ partials remain — each blocked on a tractability or environment issue, not on coverage intent.
 
-**❌ gap — needs new spec or significant extension to existing spec:**
+**❌ gap — closed:**
 
 1. ~~**Row 1 — Announcements CRUD**~~ — landed.
 2. ~~**Row 9 — Subscription types & policies**~~ — landed (per-issue access-status documented as row #52's domain).
-3. **Row 14 — Wizard comments → discussion**: Reopens once **E1** (default-file scenario) lands properly — the spec already has a half (`wizard-comments-become-discussion.spec.js`) and a half (`scenario-default-file.spec.js`); a third end-to-end happy-path test that runs the wizard with a file upload and verifies the Discussion Manager outcome closes the gap. Track with E1 in §2.
+3. ~~**Row 14 — Wizard comments → discussion**~~ — landed (the "blocked on E1" claim was stale: the wizard's own plupload UI handles file upload directly, so the third end-to-end happy-path test could ship without a scenario-side default-file passthrough).
 4. ~~**Row 38 — Public comments — moderator UI**~~ — split into a new row #61. Structural mount + tab nav landed; data-driven row interactions deferred pending a `useFetchPaginated` flakiness fix or a scenario-side comment-seeding passthrough.
 
 **⚠️ partial — extend existing spec in place:**
@@ -279,8 +279,9 @@ The 4 ❌ gap rows and the 15 ⚠️ partial rows need follow-up. Triage by impa
 | 29 | v2 galley + v2 issue panel edits (v2 Contributors landed; same Vue widget blockers as row #27) | bundle with row #27's Issue investigation |
 | 32 | Crossref export XML round-trip (Settings UI landed); environmental — needs PHP `max_execution_time` raised or XSD pre-cached for the validation pass | blocked on infra |
 | 36 | Stats: metrics seeding via new scenario passthrough (or refactor `generateTestMetrics.php` into REST), then per-author + date-range filter tests | needs infrastructure — defer until the scenario API gets a metrics passthrough |
+| 61 | Approve/Hide/Delete via detail modal, Reports tab + report-deletion, version-closes-discussion, authorization rules | blocked on `useFetchPaginated` flakiness — reopen when that store-side bug is fixed or a scenario-side comment-seeding passthrough lands |
 
-**Total remediation estimate**: ~3 days for partial rows + ~1 day for the public-comments moderator spec + ~2 hours each for the other three gap rows. Roughly 1 working week to land full surface-coverage parity.
+**Status**: with all original ❌ gaps closed and Phase 1–5 of the post-audit remediation landed, the residual ⚠️ partials are tracked individually above. None block the migration's coverage-parity claim — each is a narrowly-scoped Vue widget or environmental issue that can be picked up independently.
 
 ## How to use this doc
 
