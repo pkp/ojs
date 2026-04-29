@@ -10,12 +10,13 @@ The Discussion Manager migration shipped on `e2e_revamp` demonstrates the altern
 
 ## Principles
 
-1. **A feature is defined by its capability, not by its UI surface.** One feature = one spec. If a capability exists on the editor side *and* the reader side (e.g., versioning: editor creates v2, reader sees a version picker), a single spec tests both. Split only when there's genuinely no shared concept (e.g., "announcements CRUD" is one feature; "article DC metadata on the reader page" is a different one — they don't share state).
-2. **Each test seeds its own state.** Use `pkpApi.createSubmission(scenario)` per test; never rely on state left by another spec. Unique tags (worker-index + suffix) keep parallel runs from colliding.
-3. **The bootstrapped journal is read-only for tests.** Bootstrap seeds a stable `publicknowledge` journal that every spec can *read from* (default sections, default email templates, default plugins off, etc.). Any test that needs to *mutate* journal-level configuration — creating sections, enabling Categories/Data-availability, adding navigation items, configuring a plugin (DOI, Crossref, Pubmed, ORCID), customising reviewer recommendations, creating task templates, changing wizard field config, etc. — must create its own scratch journal via extension **E0** (see §2). Same reason submissions are per-test: shared mutable state is what made Cypress fragile.
-4. **Honor the shared / OJS-root split.** Behavior identical in OJS + OMP + OPS → `lib/pkp/playwright/tests/`. OJS-only concepts (issues, galleys, subscriptions, journal homepage, DOI, Pubmed, Crossref, native XML issue export) → `playwright/tests/`. POMs for shared UI components live under `lib/pkp/playwright/pages/` regardless of where the spec lives (the Discussion Manager precedent).
-5. **Retire the submission-fixture specs entirely.** The 20 files under `cypress/tests/data/60-content/` have no feature value that isn't covered by more-specific specs elsewhere; their "data" value becomes per-test scenario seeding.
-6. **Scenario endpoint grows only when needed.** Extend `PKPSubmissionScenarioController` lazily, per the first feature that needs a capability. Extensions are consolidated in §2.
+1. **One feature = one spec.** A feature is the unit of organization, not the unit of testing. A single spec can — and often should — contain many `test()` blocks covering the feature's distinct UI surfaces, roles, and edge cases. The benefit Playwright brings over Cypress is **test independence** (each test seeds its own state, parallel-safe), not necessarily fewer tests. Consolidating Cypress's redundant serial fixtures into one self-contained test is correct; *dropping* a UI surface that Cypress covered is not. Split into multiple specs only when one spec would become genuinely unwieldy (rough threshold: more than ~10 tests on visibly distinct surfaces) — and then split by surface, not by capability.
+2. **Surface coverage parity with Cypress is the baseline.** Every distinct UI surface, role, screen, and assertion that the Cypress source exercises must remain covered after migration. The migrated spec may have far fewer `test()` blocks (Cypress's serial chain frequently re-exercises the same surface across files), but no surface that Cypress covered may disappear without an explicit, recorded reason in the row. Valid drop reasons: the assertion duplicates an existing unit test; the flow is genuinely obsolete; the feature has been removed from the product. **Not valid:** "the capability is also asserted via the API" — UI surfaces have their own bugs (wiring, focus, async, validation messages, role gating) that an API round-trip misses.
+3. **Each test seeds its own state.** Use `pkpApi.createSubmission(scenario)` per test; never rely on state left by another spec. Unique tags (worker-index + suffix) keep parallel runs from colliding.
+4. **The bootstrapped journal is read-only for tests.** Bootstrap seeds a stable `publicknowledge` journal that every spec can *read from* (default sections, default email templates, default plugins off, etc.). Any test that needs to *mutate* journal-level configuration — creating sections, enabling Categories/Data-availability, adding navigation items, configuring a plugin (DOI, Crossref, Pubmed, ORCID), customising reviewer recommendations, creating task templates, changing wizard field config, etc. — must create its own scratch journal via extension **E0** (see §2). Same reason submissions are per-test: shared mutable state is what made Cypress fragile.
+5. **Honor the shared / OJS-root split.** Behavior identical in OJS + OMP + OPS → `lib/pkp/playwright/tests/`. OJS-only concepts (issues, galleys, subscriptions, journal homepage, DOI, Pubmed, Crossref, native XML issue export) → `playwright/tests/`. POMs for shared UI components live under `lib/pkp/playwright/pages/` regardless of where the spec lives (the Discussion Manager precedent).
+6. **Retire the submission-fixture specs entirely.** The 20 files under `cypress/tests/data/60-content/` have no feature value that isn't covered by more-specific specs elsewhere; their "data" value becomes per-test scenario seeding.
+7. **Scenario endpoint grows only when needed.** Extend `PKPSubmissionScenarioController` lazily, per the first feature that needs a capability. Extensions are consolidated in §2.
 
 ## Organization: migration waves
 
@@ -52,7 +53,7 @@ Columns in the wave tables:
 | 1 | Announcements CRUD ✅ DONE | lib/pkp | `announcements.spec.js` | `lib/pkp/.../Announcements.cy.js` | E: create (TinyMCE body); edit; delete — on E0 scratch journal | **E0** |
 | 2 | Navigation menus ✅ DONE | lib/pkp | `navigation-menus.spec.js` | `lib/pkp/.../NavigationMenus.cy.js` | E: (a) on E0 scratch journal, dbarnes opens Setup → Navigation; clicks `a.pkp_linkaction_addNavigationMenu` to open the modern Vue `NavigationMenuManagerFormModal` (`[data-cy="active-modal"]` + embedded `[data-cy="navigation-menu-editor"]`); asserts assigned panel is empty + unassigned panel has >4 items including Register / Login; saves a new menu, edits its title via the row's title-link (re-opens the same Vue modal in edit mode), tests duplicate-title validation ("This title already exists…" stays in the modal), tests area-conflict validation against the default Primary Navigation Menu installed by `NavigationMenuDAO::installSettings`; cancels validation-failed modals through the `[data-cy="dialog"]` Yes/No unsaved-changes prompt; deletes the menu via the row's `a.show_extras` → Remove → OK confirmation. (b) on a separate E0 scratch journal, exercises the legacy items grid (still pure jQuery `AjaxModal` + fbv `form#navigationMenuItemsForm`): adds a `NMI_TYPE_CUSTOM` item with localized title + path; edits the title via row controls; deletes via row controls. The form-handler split (Vue modal for the menu editor; legacy AjaxModal for the items) tracks the live mid-migration UI surface and is the reason the row was deferred — keeping coverage on both sides confirms the link-action contract still hands off correctly to either pipeline. | **E0** |
 | 3 | Editorial masthead ✅ DONE | lib/pkp | `editorial-masthead.spec.js` | `lib/pkp/.../EditorialMasthead.cy.js` | R: masthead page renders for anonymous readers | — |
-| 4 | Email templates ✅ DONE | lib/pkp | `email-templates.spec.js` | `lib/pkp/.../emailTemplates/EmailTemplates.cy.js` + `cypress/.../emailTemplates/EmailTemplates.cy.js` | E: toggle default template unrestricted→restricted with user-group assignment; create restricted custom template with TinyMCE body + two user groups; create unrestricted custom template and verify user-group checkboxes are hidden. Dropped reset-to-default and delete-custom flows (pure UI confirmations of API ops — no meaningful delta vs. the create tests) and the standalone "hide/show user groups" toggle tests (folded into the three create/edit flows). | **E0** |
+| 4 | Email templates ✅ DONE | lib/pkp | `email-templates.spec.js` | `lib/pkp/.../emailTemplates/EmailTemplates.cy.js` + `cypress/.../emailTemplates/EmailTemplates.cy.js` | E: toggle default template unrestricted→restricted with user-group assignment; create restricted custom template with TinyMCE body + two user groups; create unrestricted custom template and verify user-group checkboxes are hidden — and within the same session flip the radio back to restricted to verify the user-group checkboxes reactively reappear (Cypress test 9 show-direction); create a restricted custom template with zero user groups and confirm the form persists the no-UG state across reload (Cypress test 7). Cypress's bidirectional toggle pair (mark unrestricted → mark restricted) folds into the single round-trip in test 1 — direction, not surface. | **E0** |
 | 5 | Multilingual form fields ✅ DONE | lib/pkp | `multilingual.spec.js` | `lib/pkp/.../Multilingual.cy.js` | E: toggle fr_CA UI-active flag from the Languages grid (round-trip via reload); enter French in the masthead acronym field when the UI locale is disabled and verify the value persists across reload. Submission-metadata-in-French (Cypress step 3) deferred — the existing submission-draft scenario fixture hard-codes `journal='publicknowledge'`, so an in-review submission on a scratch journal needs an inline scenario spec; worth a dedicated future row. | **E0** |
 | 6 | Reviewer-recommendation customisation ✅ DONE | lib/pkp | `reviewer-recommendations.spec.js` | `ReviewerRecommendation.cy.js` | E: defaults render + have type; CRUD custom recommendation; active/inactive toggle; in-use recommendation locks Edit/Delete (DropdownActions hidden via `v-if="item.removable"` once a review_assignment row references it); inactive recommendation does not appear in the reviewer Step 3 dropdown (`Repo::reviewerRecommendation()->getRecommendationOptions` filters by ACTIVE). The two in-review-dependent tests landed once `submission-in-review.js` accepted a `journal` override and `ParticipantProcessor` reconciled flags onto pre-existing stage assignments. | **E0** |
 | 7 | Issues ✅ DONE | ojs | `issues.spec.js` | `cypress/.../50-CreateIssues.cy.js` | E: create future issue; edit volume/number/year (value persists on reload); publish; set-current swaps between two published issues; unpublish moves the issue back to Future · R: anonymous archive page lists the published issue and its public view page loads · M: publishing with `sendIssueNotification` ticked dispatches the IssuePublishedNotify email — Mailpit `latestTo(dbarnes@mailinator.com)` shows subject "Just published: Vol. 5 No. 1 (2025) of …" and the body references the issue identification. dbarnes is both manager and recipient because `NotificationSubscriptionSettingsDAO::getSubscribedUserIds` keys off active user_user_groups rows in the journal context (no separate reader user needed); jobs run in `PKPQueueProvider`'s `register_shutdown_function` so the email lands within Mailpit's 10s poll window. Reader "TOC renders with section grouping" reduced to "view page loads + shows Vol/No/Year heading" — a seeded TOC assertion requires issue-assigned published articles (row #30) and galleys (row #51). | **E0** |
@@ -169,12 +170,131 @@ E0 is a **prerequisite** — build it first, before starting Wave 1 work on any 
 - **Cleanup** — not required for correctness (DB is nuked between runs), but add a `deleteByTag` teardown hook if the per-run DB grows large.
 - **Discoverability** — the returned payload should include path + primary-manager credentials so tests can `goto(journal.path + '/manager/settings')` without scraping the settings tree.
 
+## §3 · Coverage parity audit
+
+This section records a row-by-row parity audit against the Cypress sources, performed after the principles in §Principles were tightened to make surface-coverage parity an explicit baseline. Each row's verdict reflects whether every distinct Cypress UI surface remains covered by Playwright.
+
+**Scoring rules:**
+- ✅ **parity** — every Cypress UI surface is covered (consolidation into fewer `test()` blocks is fine).
+- ⚠️ **partial** — small coverage drop (≤2 surfaces, or surfaces ambiguous in value).
+- ❌ **gap** — significant uncovered surfaces (≥3 distinct, or an entire role/screen, or an explicit "Dropped" surface with no successor row covering it).
+
+**A note on REST round-trips.** Several rows assert "the capability" via `pkpApi.X()` or REST instead of clicking through the Cypress UI. Under the parity principle, that is **not** a substitute for UI coverage — UI surfaces have their own bugs (wiring, focus, async, validation messages, role gating). Where this pattern shows up below, the affected UI surface is recorded in the Delta column, even if the API path is fully tested.
+
+**Summary**: 41 ✅ parity · 14 ⚠️ partial · 4 ❌ gap (out of 59 done rows).
+
+| Row | Feature | Cy tests | Pw tests | Verdict | Missing surfaces (delta) |
+|---|---|---|---|---|---|
+| 1 | Announcements CRUD | 6 | 1 | ❌ gap | Enable/disable feature toggle, reader public `/announcement` page render, sitemap XML announcement URL |
+| 2 | Navigation menus | 2 | 2 | ✅ | — |
+| 3 | Editorial masthead | 2 | 1 | ✅ | — (consolidated) |
+| 4 | Email templates | 9 | 4 | ✅ | — (Cypress test 7's no-UG-restricted variant + test 9's UG-show reactivity now covered) |
+| 5 | Multilingual form fields | 1 | 2 | ⚠️ partial | Submission publication metadata in non-UI locale (Cypress step 3 — deferred per scratch-journal scenario shape) |
+| 6 | Reviewer-recommendation customisation | 6 | 5 | ✅ | — |
+| 7 | Issues | 1 | 4 | ✅ | — (Playwright extends) |
+| 8 | Sections | 1 | 5 | ✅ | — (Playwright extends) |
+| 9 | Subscription types & policies | 5 | 3 | ❌ gap | Distribution → Payments tab config (manual-payment plugin select, currency, instructions), Distribution → Access publishingMode toggle, per-issue access-status config (some surfaces partly land in row #52, but #9's UI surfaces are uncovered) |
+| 10 | Wizard — validation | 1 | 1 | ✅ | — |
+| 11 | Wizard — copyright gate | 1 | 1 | ⚠️ partial | French-locale copyright notice + checkbox-gate assertion |
+| 12 | Wizard — section rules | 1 | 1 | ⚠️ partial | Editor-restricted (`editorRestricted`) section filtering — author-side "Not Allowed" page (row admits drop pending an author baseline user) |
+| 13 | Wizard — language change | 1 | 1 | ⚠️ partial | Secondary-locale reveal (En-alongside-Fr `.pkpFormLocales__locale` button), validation errors re-render in FR locale, categories UI-language assertion |
+| 14 | Wizard — comments → discussion | 1 | 1 | ❌ gap | Full happy-path flow missing — file upload → successful submit → Discussion Manager creation w/ participants. Row admits E1 file-upload blocker. |
+| 15 | Categories | 3 | 3 | ✅ | — |
+| 16 | Wizard — field-config reset | 1 | 2 | ⚠️ partial | 9-field config preamble (only `keywords` exercised); validation errors in Review mentioning each required metadata field |
+| 17 | Filenames sanitization | 1 | 1 | ⚠️ partial | Download `Content-Disposition: filename*=UTF-8''…` header round-trip (row admits E1 file-seeding blocker) |
+| 18 | Discussion Manager | 2 | 2 | ✅ | — |
+| 19 | Decision: send to review | 3× | 1 | ✅ | — (consolidated from embedded submission-spec instances) |
+| 20 | Reviewer assignment (UI-level) | 3× | 1 | ✅ | — |
+| 21 | Decision: decline | 2 | 2 | ✅ | — |
+| 22 | Section-editor recommendation | 1 | 1 | ✅ | — |
+| 23 | Stage-participant management | 1 | 2 | ✅ | — |
+| 24 | Decision: accept | 2 | 2 | ✅ | — |
+| 25 | Task templates (config + apply) | 6 | 2 | ⚠️ partial | Edit / delete / auto-add-toggle / validation variants (row admits drop, but no successor row covers them) |
+| 26 | Decision: send to production | 2 | 1 | ✅ | — |
+| 27 | Publication metadata editing | 1 | 1 | ⚠️ partial | Permissions / Issue / Contributors / Galleys publication-side panel saves (row admits drop on "same Save→Toast pattern" basis — under parity principle, each pane's save round-trip is its own surface) |
+| 28 | Publish & unpublish | 2 | 1 | ✅ | — |
+| 29 | Versioning | 3 | 1 | ⚠️ partial | v2 contributor edits, v2 galley edits, v2 issue panel edits (row admits drop; no v2-specific tests for these panels exist elsewhere) |
+| 30 | Issue assignment | 1 | 1 | ✅ | — |
+| 31 | DOI assignment | 3 (1 active + 2 skipped) | 2 | ⚠️ partial | Manual DOI-assign UI (Cypress already `.skip`'d the flow on bug #10606), DOI configuration check, mark-registered UI |
+| 32 | DOI Crossref registration | 2 | 1 | ⚠️ partial | Settings UI for Crossref plugin enable + agency select + depositor form fields (Playwright seeds via context-builder, not UI); export XML round-trip |
+| 33 | Publication language change | 3 | 1 | ✅ | — (consolidated; affordance-suppression + modal + reader all covered) |
+| 34 | Article DC metadata | 1 | 2 | ✅ | — |
+| 35 | Journal homepage | — | 2 | ✅ | — (no formal Cypress source; reader-only coverage) |
+| 36 | Article statistics | 2 | 1 | ⚠️ partial | Generated metrics (`generateTestMetrics.php`), per-author row search, date-range filter apply/filter set |
+| 37 | Pubmed metadata | 1 | 2 | ✅ | — |
+| 38 | Public comments | 24 | 2 | ❌ gap | **22+ moderator-side surfaces uncovered**: side-modal Approve/Hide/Delete buttons, the four `userComments` management tabs (Approved / Hidden / Needs Approval / Reported), Reports tab + report-deletion flows (12 distinct report-related Cypress tests), table-row delete via more-actions, version-closes-discussion gating, delete-own-comment authorization, delete-others-comment authorization. Row admits drop with "deserves its own row" but no such row exists. |
+| 39 | OAI — DC endpoint | 1 | 2 | ✅ | — |
+| 40 | Data-availability statements | 4 (2 active + 2 env-flag-gated) | 2 | ✅ | — |
+| 41 | Recommend-only editor restrictions | 2 | 1 | ✅ | — |
+| 42 | Section-editor metadata permissions | 1 | 2 | ✅ | — |
+| 43 | Author edit-publication permission | 2 | 2 | ✅ | — |
+| 44 | Login-as (impersonation) | 1 | 1 | ✅ | — |
+| 45 | Jobs queue | 2 | 2 | ✅ | — (jobs.php shell-out flow legitimately not portable; covered by lib/pkp/tests/jobs/ unit tests) |
+| 46 | Multiple contexts | 1 | 1 | ✅ | — (Cypress's enable/disable journal grid UI is a legacy concern; the audited capability is multi-context role scoping) |
+| 47 | API smoke | 9 | 3 | ⚠️ partial | API key create/delete UI on the legacy profile form (`ApiProfileForm`); author-specific single-item assertion (blocked by row #43's seeded-author-submission gate) |
+| 48 | Decision: request revisions | 1 | 1 | ✅ | — |
+| 49 | Reviewer completes review | scattered | 1 | ✅ | — (consolidated from `cy.performReview` callsites across submission specs) |
+| 50 | Review-round lifecycle | scattered | 1 | ✅ | — |
+| 51 | Galleys | embedded | 2 | ✅ | — |
+| 52 | Subscription-based access | 3 | 2 | ✅ | — |
+| 53 | Native XML: submission | 2 | 1 | ✅ | — |
+| 54 | Native XML: issue | 2 | 2 | ✅ | — |
+| 55 | ORCID integration | 6 | 4 | ⚠️ partial | "Sends ORCID verification request to author" — OJS-only contributor sidemodal flow that dispatches `RequestOrcidVerification` job + queues mail. Row admits "deferred for now" with no successor row. |
+| 57 | User invitation flow (multi-actor) | 1 | 1 | ✅ | — |
+| 58 | Public user registration | 1 | 1 | ✅ | — |
+| 59 | Site admin Add Journal UI | 4 | 1 | ✅ | — (consolidated; both validation arms + happy path + REST + reader-side covered) |
+| 60 | Manager assigns user to role (non-invite) | helper | 1 | ✅ | — (Cypress source is an embedded helper, not a standalone test; the OJS UI exposes no truly non-invite path, so all role assignments route through the invitation pipeline shared with row #57) |
+
+### Audit-driven re-classifications
+
+Four rows had their original "✅ DONE" markers loosened to ⚠️ partial during this audit because they invoked rationalizations that the tightened §Principles disallows:
+
+- **Row 25 (Task templates)**: row text drops "edit / delete / auto-add-toggle / validation variants" with "reuse the shared DropdownActions-in-PkpTable pattern covered by row #6". Under parity, *the variants on this surface aren't covered by row #6's recommendation-CRUD test*; the surface is the task-template form's edit/delete/validation behaviour specifically.
+- **Row 27 (Publication metadata editing)**: drops Permissions / Issue / Contributors / Galleys panel saves on "same Save→Toast pattern as Title&Abstract". Each pane has its own form fields, save endpoint, and field validations.
+- **Row 29 (Versioning)**: drops v2 contributor edits, v2 galley edits, v2 issue panel edits on "those panels are tested elsewhere on v1". The v2-aware edit pipeline isn't tested for those panels — the v1 tests for #27 and #51 don't exercise version-specific code.
+- **Row 55 (ORCID)**: "Sends ORCID verification request to author" is "deferred for now" with no successor row. Under parity, deferral without a successor is a partial drop.
+
+These re-classifications do not edit row text in §1 — that's Step 3 of the remediation work. They are recorded only in the verdict column above.
+
+### Remediation triage (next-step list)
+
+The 4 ❌ gap rows and the 15 ⚠️ partial rows need follow-up. Triage by impact:
+
+**❌ gap — needs new spec or significant extension to existing spec:**
+
+1. **Row 1 — Announcements CRUD**: Extend `announcements.spec.js` with three more tests: (a) feature toggle on/off via Website Settings, (b) reader visit to `/announcement` listing + detail page, (c) sitemap XML containing announcement URL. ~1–2 hours.
+2. **Row 9 — Subscription types & policies**: Extend `subscription-config.spec.js` with three more tests: (a) Distribution → Payments tab plugin/currency/instructions config + reload persistence, (b) Distribution → Access publishingMode toggle + reload, (c) per-issue access-status config (or document explicit move into row #52 if reader-side suffices). ~2 hours.
+3. **Row 14 — Wizard comments → discussion**: Reopens once **E1** (default-file scenario) lands properly — the spec already has a half (`wizard-comments-become-discussion.spec.js`) and a half (`scenario-default-file.spec.js`); a third end-to-end happy-path test that runs the wizard with a file upload and verifies the Discussion Manager outcome closes the gap. Track with E1 in §2.
+4. **Row 38 — Public comments — moderator UI**: Add a new spec `user-comments-moderation.spec.js` (lib/pkp) covering: side-modal Approve/Hide/Delete on a pending comment, the four tab filters (Approved / Hidden / Needs Approval / Reported), Reports tab + report-deletion (3 consolidated tests is enough — the 12 Cypress tests overlap heavily), table-row delete via more-actions, version-closes-discussion gating, delete-own vs delete-others authorization. Estimated: ~6 tests, ~1 day. Should also be added as a new row in §1 with its own row number.
+
+**⚠️ partial — extend existing spec in place:**
+
+| Row | Extension scope | Effort |
+|---|---|---|
+| 5 | Submission metadata in fr_CA (after E1) | ~1 hour, blocked on author-baseline seed |
+| 11 | French-locale copyright notice variant | ~30 min |
+| 12 | Editor-restricted section author-side test | ~1 hour, needs author baseline user |
+| 13 | Secondary-locale reveal + FR error re-render + categories UI-locale assertion | ~1 hour |
+| 16 | One representative non-keywords config field + Review-step error assertion | ~30 min |
+| 17 | Download Content-Disposition assertion (after E1) | ~30 min, blocked on E1 |
+| 25 | Edit + delete + auto-add-toggle + validation variants for task templates | ~1 hour |
+| 27 | Save round-trips for Permissions / Issue / Contributors / Galleys panes (4 small tests) | ~2 hours |
+| 29 | v2 contributor / v2 galley / v2 issue panel edits | ~1.5 hours |
+| 31 | Manual-assign UI (if implemented post-#10606), mark-registered UI flow, DOI configuration check | ~2 hours |
+| 32 | Crossref Settings UI flow (plugin enable + agency select + form fields), export XML schema check | ~1.5 hours |
+| 36 | Stats: metrics seeding (port `generateTestMetrics.php` invocation) + filtering tests | ~2 hours, may need infrastructure |
+| 47 | API key create/delete UI from legacy profile form | ~1 hour |
+| 55 | "Sends ORCID verification request to author" Mailpit-keyed test | ~1 hour |
+
+**Total remediation estimate**: ~3 days for partial rows + ~1 day for the public-comments moderator spec + ~2 hours each for the other three gap rows. Roughly 1 working week to land full surface-coverage parity.
+
 ## How to use this doc
 
 1. **Pick a row** from §1. Start at the top of the lowest open wave.
 2. **Check §2** — if the row has a non-dash Ext? that is not yet built, either build the extension first or pick a different row.
-3. **Write the spec** at `{Home}/playwright/tests/{Spec file}` following the shape of `playwright/tests/discussions/discussion-manager.spec.js`.
-4. **Tick the row** — mark ✅ DONE next to the feature name in the PR that lands the spec.
-5. **Update this doc** if the row's scope changes or you discover the Cypress source was misread.
+3. **Check §3** — if the row appears with ⚠️ partial or ❌ gap there, the listed missing surfaces also need to be addressed (either as part of this PR or as a follow-up).
+4. **Write the spec** at `{Home}/playwright/tests/{Spec file}` following the shape of `playwright/tests/discussions/discussion-manager.spec.js`.
+5. **Tick the row** — mark ✅ DONE next to the feature name in the PR that lands the spec, and update the verdict in §3 if the audit's coverage delta has been resolved.
+6. **Update this doc** if the row's scope changes or you discover the Cypress source was misread.
 
 Existing scenario fixtures to reuse: `playwright/fixtures/scenarios/submission-draft.js`, `submission-in-review.js`, `submission-published.js`. The scenario endpoint lives at `api/v1/_test/SubmissionScenarioController.php` (currently an empty OJS subclass) and `lib/pkp/api/v1/_test/PKPSubmissionScenarioController.php` (shared implementation).
