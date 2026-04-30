@@ -466,7 +466,9 @@ Per-discrepancy fixes. One commit per row. Audit-doc rows in §1 flip to ✅ as 
 
 Captured 2026-04-30, lib/pkp at `c1f6b2f567` — all Processor fixes applied (UserAssignment inlineHelp, Participant event-log + EDITOR_ASSIGNMENT_REQUIRED cleanup, SubmissionBuilder ContributorRole linkage, Publications AUTHOR canChangeMetadata clear, ReviewRound REVIEW_ASSIGNMENT/REVIEWER_COMMENT notifications + REVIEW_ASSIGN/REVIEW_READY event-log rows + task-removal on terminal status). Full Playwright suite, `--workers=2`, 143 passed / 1 skipped — same pass rate as baseline.
 
-**Test verification**: all 143 tests that pass on baseline also pass post-fix. No regressions. Both runs identical pass-count (143/0/1).
+**Test verification**: same pass count on both runs at the time of capture (143 passed / 1 skipped). After the §1.7 follow-up commit (dueDates + editor-confirm fidelity) re-verified — all 12 reviewer/decision specs still green, including the high-traffic ones (decision-accept, decision-decline, decision-request-revisions, review-round, reviewer-assignment, decision-send-to-review, decision-send-to-production, section-editor-recommendation).
+
+**Pre-existing flake**: `lib/pkp/playwright/tests/wizard-comments-become-discussion.spec.js` test 2 (`wizard end-to-end`) intermittently fails with `commentsForTheEditors=null` after the wizard's Submit click. **Verified independent of this audit**: the failure reproduces with all Processor changes reverted to the pre-audit `b8b47466b1` state. Likely DB state accumulation (dbarnes carries 10+ task notifications by the time the test reaches it) or a TinyMCE init race. Out of scope for the Processor parity audit; flag for separate investigation.
 
 **Performance delta** (top buckets sorted by total time; positive Δ = post-fix slower, negative Δ = post-fix faster):
 
