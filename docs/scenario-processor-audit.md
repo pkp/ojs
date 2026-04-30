@@ -189,6 +189,72 @@ Role assignment (UserRoleAssignmentReceiveController only):
 **Verdict (initial)**: ⚠️ 2–3 actionable gaps (#2, #3, #4).
 **Verdict (post-fix)**: ✅ #2, #4 resolved; #3 deferred (no current consumer).
 
+### 4. SubmissionBuilderProcessor
+
+**File**: `lib/pkp/classes/testing/scenario/Processor/SubmissionBuilderProcessor.php`
+**Domain**: `submissions`, `publications`, `authors`, `author_contributor_roles`, `stage_assignments`, `submission_files`, `files`, plus the `submission_comments` row created by `Repo::submission()->submit()` when `commentsForTheEditors` is set
+**Current implementation summary**: Creates submission + bare publication via Repo, assigns submitter as author to stage 1, builds Author from submitter user, attaches the bundled default-article.pdf via file service, optionally writes `commentsForTheEditors` and calls `Repo::submission()->submit()` to mirror the wizard's final Submit click.
+
+**Canonical UI/REST entry point**:
+- The submission wizard is a multi-step UI; each step has its own REST call:
+  - `POST /api/v1/submissions` — `PKPSubmissionController::add()` (`lib/pkp/api/v1/submissions/PKPSubmissionController.php:622–766`) — creates submission + first publication + first author + first stage assignment
+  - `POST /api/v1/submissions/{id}/files` — `PKPSubmissionFileController::add()` (`lib/pkp/api/v1/submissions/PKPSubmissionFileController.php:291`) — file upload
+  - `PUT /api/v1/submissions/{id}` — generic edit, used by the wizard's Comments step to set `commentsForTheEditors`
+  - `PUT /api/v1/submissions/{id}/submit` — `PKPSubmissionController::submit()` (lib/pkp/api/v1/submissions/PKPSubmissionController.php:866) — converts wizard-in-progress into submitted
+
+**What the production paths do**:
+
+`PKPSubmissionController::add()`:
+- Validates schema; checks `disableSubmissions`, section inactive/editorRestricted gates
+- **Disambiguates submitter UserGroup**: picks Manager group if user has it, else Author group; auto-assigns Author group if user has neither. The picked group becomes the stage assignment's `userGroupId`.
+- `Repo::submission()->add()` — fires `Hook::call('Submission::add', [$submission])`
+- `Repo::stageAssignment()->build()` with `recommendOnly: $userGroup->recommendOnly` and `canChangeMetadata: submissionProgress ? true : $userGroup->permitMetadataEdit`
+- **Only if submitter's chosen group is AUTHOR role**: creates Author from user, sets `publicationId`, `contributorType=PERSON`, **calls `setContributorRoles([AUTHOR ContributorRole])`**, calls `Repo::author()->add()`, edits publication `primaryContactId`
+
+`PKPSubmissionFileController::add()`:
+- Uploads file via `app('file')->add()`
+- Auto-defaults genre if only one is enabled; auto-defaults filename from upload basename
+- Validates fileStage — disallows NOTE / REVIEW_ATTACHMENT / QUERY here; gate review-stage uploads on a valid review_round
+- `Repo::submissionFile()->newDataObject()` + `Repo::submissionFile()->add()` — fires hooks
+
+`PKPSubmissionController::submit()`:
+- `Repo::submission()->validateSubmit()` (fires `Submission::validateSubmit` hook)
+- Section inactive/editorRestricted gate
+- `Repo::submission()->submit($submission, $context)` — clears `submissionProgress`, sets `dateSubmitted`, fires `event(SubmissionSubmitted)`, optionally creates the comments-for-the-editors discussion via `Repo::editorialTask()->addCommentsForEditorsQuery()`
+- **If `confirmCopyright` was in the wizard request**: writes a `SUBMISSION_LOG_COPYRIGHT_AGREED` EventLog row
+
+**What the Processor does today**:
+- `Repo::submission()->newDataObject([...])` + `Repo::publication()->newDataObject([...])` — sets `versionMajor=1`, `versionMinor=0`
+- `Repo::submission()->add()` — same `Submission::add` hook fires
+- `Repo::stageAssignment()->build()` with **default flags** (no `recommendOnly` / `canChangeMetadata` passed; `Repo::stageAssignment()->build()` defaults `canChangeMetadata` to `userGroup->permitMetadataEdit ?? false`, `recommendOnly` to `false`)
+- **Always uses AUTHOR group** for the submitter's stage assignment (no Manager-vs-Author disambiguation)
+- `Repo::author()->newAuthorFromUser()` + `setData('publicationId')` + `setData('contributorType', PERSON)`. **Does NOT call `setContributorRoles`** — author is added without a ContributorRole linkage.
+- `Repo::author()->add()` — same hook fires
+- Optional: `Repo::author()->edit()` for orcid/orcidIsVerified/email passthrough (bypasses the orcid validator)
+- `Repo::publication()->edit($pub, ['primaryContactId' => $authorId])`
+- `attachDefaultArticleFile()`: `app('file')->add()` + `Repo::submissionFile()->dao->newDataObject()` + `Repo::submissionFile()->add()` — same as production file controller, minus the genre-auto-default and review-stage validation (Processor hardcodes genre=ARTICLE, fileStage=SUBMISSION)
+- Optional: `Repo::submission()->edit($sub, ['commentsForTheEditors' => …])`
+- Optional: `Repo::submission()->submit($submission, $context)` — same SubmissionSubmitted event fires
+
+**Discrepancies**:
+
+| # | Gap | Severity | Recommended fix |
+|---|---|---|---|
+| 1 | Author created without `ContributorRoles` linkage; production calls `setContributorRoles([AUTHOR])` before `Repo::author()->add()` | ✅ resolved | After `setData('contributorType', PERSON)` and before `Repo::author()->add($author)`, fetch the AUTHOR `ContributorRole` for the context and call `$author->setContributorRoles([...])`. **Resolved** in `e2e_revamp_2` lib/pkp commit (SubmissionBuilderProcessor: link AUTHOR ContributorRole). |
+| 2 | StageAssignment uses Repo defaults rather than the picked UserGroup's `recommendOnly` / `permitMetadataEdit` | ✅ matches in practice | For the AUTHOR UserGroup the Repo defaults converge to the same values (`recommendOnly=false`, `canChangeMetadata=permitMetadataEdit`). Document only. |
+| 3 | Submitter is always assigned as AUTHOR; production disambiguates between Manager and Author groups based on the user's existing memberships | ⚠️ deferred — no current consumer | Tests where submitter is a Manager would land an incorrect AUTHOR stage assignment. No spec currently uses a Manager submitter. Defer; optionally document on the `submissionDraft` fixture. |
+| 4 | No `SUBMISSION_LOG_COPYRIGHT_AGREED` EventLog when submit() runs | ✅ acceptable | Production only writes this when the wizard's `confirmCopyright` checkbox was ticked. The spec doesn't expose `copyrightAgreed`; tests don't surface this. |
+| 5 | File attachment: same `app('file')->add()` + `Repo::submissionFile()->add()` as `PKPSubmissionFileController::add()` | ✅ matches | None. |
+| 6 | `Repo::submission()->submit()` shared between Processor and `PKPSubmissionController::submit()` — fires `SubmissionSubmitted` event identically; auto-creates Stage 1 cover-note discussion when `commentsForTheEditors` is set | ✅ matches | None. |
+| 7 | `commentsForTheEditors` saved via `Repo::submission()->edit()` — same path as wizard's PUT step | ✅ matches | None. |
+| 8 | Schema validation + `disableSubmissions` / `validateSubmit` / inactive-section gates skipped | ✅ acceptable | Test seeding intentionally bypasses these. |
+| 9 | `Repo::author()->edit($author, ['orcid' => …])` passthrough bypasses Author validator's `api.orcid.403.cannotUpdateAuthorOrcid` block | ✅ deliberate | Documented in Processor; needed for ORCID-verified contributor seeding. |
+
+**Verdict (initial)**: ⚠️ 1 actionable gap (#1 ContributorRoles). #3 deferred.
+**Verdict (post-fix)**: ✅ #1 resolved; #3 deferred (no current consumer).
+
+
+
 
 
 ## §2 · Remediation log
@@ -200,6 +266,7 @@ Per-discrepancy fixes. One commit per row. Audit-doc rows in §1 flip to ✅ as 
 | 2026-04-30 | UserAssignment | `inlineHelp` left NULL on Processor-created users | Set `inlineHelp = 1` to match both production paths (RegistrationForm, UserRoleAssignmentReceive) | lib/pkp |
 | 2026-04-30 | Participant | EventLog `SUBMISSION_LOG_ADD_PARTICIPANT` row not written | Mirror `Repo::eventLog()->add()` from `StageParticipantGridHandler::saveParticipant` for each participant | lib/pkp |
 | 2026-04-30 | Participant | `EDITOR_ASSIGNMENT_REQUIRED` notifications not cleaned up after manager/sub-editor assignment | Delete `withAssoc(SUBMISSION, $id)->withType(EDITOR_ASSIGNMENT_REQUIRED)` once any editor lands (idempotent) | lib/pkp |
+| 2026-04-30 | SubmissionBuilder | Author created without ContributorRoles linkage | `$author->setContributorRoles([AUTHOR ContributorRole])` before `Repo::author()->add()` — mirrors PKPSubmissionController::add lines 741–748 | lib/pkp |
 
 ## §3 · Post-fix performance comparison
 
