@@ -88,14 +88,15 @@ Role assignment (UserRoleAssignmentReceiveController only):
 
 | # | Gap | Severity | Recommended fix |
 |---|---|---|---|
-| 1 | `inlineHelp` field left NULL on Processor-created users; both production paths set it to `1` | ⚠️ partial — real DB drift; tests querying `users.inline_help` would see different values | Set `'inlineHelp' => 1` in the `newDataObject()` array (UserAssignmentProcessor.php:80–101) |
-| 2 | Spec doesn't expose `dateEnd` or `masthead` for `assignUserToGroup`; both default to NULL | ⚠️ partial — affects tests that need future-dated assignments or masthead presentation | Extend spec → forward optional `dateEnd` / `masthead` args from per-role entry through to `assignUserToGroup`. Schema bump. |
+| 1 | `inlineHelp` field left NULL on Processor-created users; both production paths set it to `1` | ✅ resolved | Set `'inlineHelp' => 1` in the `newDataObject()` array. **Resolved** in `e2e_revamp_2` lib/pkp commit (UserAssignmentProcessor: set inlineHelp=1). |
+| 2 | Spec doesn't expose `dateEnd` or `masthead` for `assignUserToGroup`; both default to NULL | ⚠️ deferred — no current consumer | Extend spec → forward optional `dateEnd` / `masthead` args from per-role entry through to `assignUserToGroup`. Schema bump. **Deferred** until a test surfaces the need; YAGNI. |
 | 3 | No `Invitation` row created for role assignments; production always lands one (status=ACCEPTED) | ⚠️ partial — only matters for tests that hit `/api/v1/invitations` and expect to see prior assignments | Optional. Skip unless a test surfaces the gap. Recommend: document in PHPDoc rather than fix (Processor's role is "post-acceptance state", not "audit trail"). |
 | 4 | RegistrationForm-specific side effects (UserRegisteredContext event, blocked notifications, user interests, auto-Reader assignment, validation-email gate) | ✅ matches by design | Processor simulates the *invitation-accept* path, not the *self-registration* path; those side effects are registration-form-only and intentionally skipped. No fix. |
 | 5 | `Hook::call('User::add', [$user])` fires on both production paths and on Processor (via `Repo::user()->add()`) | ✅ matches | None. |
 | 6 | `dateRegistered` set; password pre-encrypted; field accessors used either via array or setters land at the same DB row | ✅ matches | None. |
 
-**Verdict**: ⚠️ 2 actionable gaps (#1, #2). Gap #3 is a deferred/document call.
+**Verdict (initial)**: ⚠️ 2 actionable gaps (#1, #2). Gap #3 is a deferred/document call.
+**Verdict (post-fix)**: ✅ #1 resolved; #2 deferred (YAGNI); #3 documented. No further action.
 
 ### 2. ContextBuilderProcessor
 
@@ -179,13 +180,14 @@ Role assignment (UserRoleAssignmentReceiveController only):
 | # | Gap | Severity | Recommended fix |
 |---|---|---|---|
 | 1 | `Repo::stageAssignment()->build()` is the shared write — no hooks, no events fire on either path | ✅ matches | None. |
-| 2 | `EDITOR_ASSIGNMENT_REQUIRED` notification cleanup — production removes any pending instances when a manager/sub-editor lands; Processor doesn't | ⚠️ partial | Whether this matters depends on whether scenario setup ever *creates* the notification. SubmissionBuilderProcessor's `Repo::submission()->submit()` may auto-add it for managers via `NotificationSubscriptionSettings`. If so, scenario-seeded submissions will carry stale `EDITOR_ASSIGNMENT_REQUIRED` rows that a real UI flow would have cleared. **Fix**: after each manager/sub-editor `build()`, run the same `Notification::withAssoc(…ASSOC_TYPE_SUBMISSION…submissionId)->withType(EDITOR_ASSIGNMENT_REQUIRED)->delete()` cleanup. |
-| 3 | Decision-stage notification recompute on manager assignment | ⚠️ partial | Same conditionality as #2. Skip unless a test surfaces the gap. The recompute touches `getDecisionStageNotifications()`, which the migration suite hasn't inspected directly — keep deferred. |
-| 4 | `EventLog` row of type `SUBMISSION_LOG_ADD_PARTICIPANT` not written | ⚠️ partial | Tests that read the submission event log (e.g. an "activity" view) would see an incomplete history. **Fix**: append the same `Repo::eventLog()->newDataObject([...]) + add()` after each Processor `build()`, attributing to the admin user. |
+| 2 | `EDITOR_ASSIGNMENT_REQUIRED` notification cleanup — production removes any pending instances when a manager/sub-editor lands; Processor doesn't | ✅ resolved | After all participants are processed, if any was a Manager/Sub-editor and the submission now has at least one such assignment, delete pending `EDITOR_ASSIGNMENT_REQUIRED` notifications (idempotent). **Resolved** in `e2e_revamp_2` lib/pkp commit (ParticipantProcessor: log + EDITOR_ASSIGNMENT_REQUIRED cleanup). |
+| 3 | Decision-stage notification recompute on manager assignment | ⚠️ deferred | Touches `notificationMgr->updateNotification()` which has wide surface area. No current spec inspects decision-stage notifications; defer until a test surfaces the gap. |
+| 4 | `EventLog` row of type `SUBMISSION_LOG_ADD_PARTICIPANT` not written | ✅ resolved | Append the same `Repo::eventLog()->newDataObject([...]) + add()` after each Processor `build()`, attributing to the admin user. **Resolved** in `e2e_revamp_2` lib/pkp commit (ParticipantProcessor: log + EDITOR_ASSIGNMENT_REQUIRED cleanup). |
 | 5 | "Trivial" success notification for the actor | ✅ skip | UI-only feedback for the clicker; not relevant to seeded state. |
 | 6 | Spec doesn't expose stage scoping per assignment (uses UserGroup's implicit stage) | ✅ matches | The form does the same — UserGroup membership in a stage is the gate (`UserGroupStage::withStageId()->withUserGroupId()`). |
 
-**Verdict**: ⚠️ 2–3 actionable gaps (#2, #3, #4). The most user-visible is #4 (event log). #2 and #3 are conditional on whether the EDITOR_ASSIGNMENT_REQUIRED / decision-stage notifications fire in the test environment to begin with — verify before fixing.
+**Verdict (initial)**: ⚠️ 2–3 actionable gaps (#2, #3, #4).
+**Verdict (post-fix)**: ✅ #2, #4 resolved; #3 deferred (no current consumer).
 
 
 
@@ -195,7 +197,9 @@ Per-discrepancy fixes. One commit per row. Audit-doc rows in §1 flip to ✅ as 
 
 | Date | Processor | Discrepancy | Resolved by | Commit |
 |---|---|---|---|---|
-| _(pending)_ | _(pending)_ | _(pending)_ | _(pending)_ | _(pending)_ |
+| 2026-04-30 | UserAssignment | `inlineHelp` left NULL on Processor-created users | Set `inlineHelp = 1` to match both production paths (RegistrationForm, UserRoleAssignmentReceive) | lib/pkp |
+| 2026-04-30 | Participant | EventLog `SUBMISSION_LOG_ADD_PARTICIPANT` row not written | Mirror `Repo::eventLog()->add()` from `StageParticipantGridHandler::saveParticipant` for each participant | lib/pkp |
+| 2026-04-30 | Participant | `EDITOR_ASSIGNMENT_REQUIRED` notifications not cleaned up after manager/sub-editor assignment | Delete `withAssoc(SUBMISSION, $id)->withType(EDITOR_ASSIGNMENT_REQUIRED)` once any editor lands (idempotent) | lib/pkp |
 
 ## §3 · Post-fix performance comparison
 
