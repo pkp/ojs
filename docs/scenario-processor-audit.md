@@ -97,6 +97,60 @@ Role assignment (UserRoleAssignmentReceiveController only):
 
 **Verdict**: ⚠️ 2 actionable gaps (#1, #2). Gap #3 is a deferred/document call.
 
+### 2. ContextBuilderProcessor
+
+**File**: `lib/pkp/classes/testing/scenario/Processor/ContextBuilderProcessor.php`
+**Domain**: `journals` (or `presses` / `servers`), `plugin_settings`, plus everything `PKPContextService::add()` installs (default user groups, email templates, genres, nav menus, contributor roles)
+**Current implementation summary**: Builds a `Journal` data object, hydrates from spec, calls `app('context')->add()` (same service the UI calls). Optionally writes plugin settings through `PluginSettingsDAO::updateSetting`.
+
+**Canonical UI/REST entry point**:
+- Form / page: site-admin "Add Journal" form
+- REST endpoint: `POST /api/v1/contexts`
+- Controller method: `PKPContextController::add()` (`lib/pkp/api/v1/contexts/PKPContextController.php:317–360`)
+
+**What the production path does**:
+- `convertStringsToSchema(SCHEMA_CONTEXT, …)` to coerce types
+- `$contextService->validate(VALIDATE_ACTION_ADD, …)` — schema validation, returns errors
+- `$contextDao->newDataObject() + setAllData($params)`
+- `$contextService->add($context, $request)` — the heavy lifting (PKPContextService.php:465–608):
+  - `Hook::call('Context::defaults::localeParams', …)`
+  - `app('schema')->setDefaults(SCHEMA_CONTEXT, …)` — fills in schema defaults
+  - Auto-defaults `supportedFormLocales` / `supportedDefaultSubmissionLocale` / `supportedAddedSubmissionLocales` / `supportedSubmissionLocales` / `supportedSubmissionMetadataLocales` to `[primaryLocale]` *only* if not set
+  - `$contextDao->insertObject() + resequence()`
+  - Saves uploaded files (favicon, homepageImage, pageHeaderLogoImage)
+  - `GenreDAO::installDefaults()` — default genres
+  - `UserGroupRepository::installSettings()` — default user groups
+  - Auto-assigns currentUser to default Manager group via `UserUserGroup::create()`
+  - Creates context file dirs
+  - `NavigationMenuDAO::installSettings()`
+  - `Repo::emailTemplate()->dao->installAlternateEmailTemplates()` + `setTemplateDefaultUnrestirctedSetting()`
+  - Adds default ContributorRoles (Author, Translator)
+  - `PluginRegistry::loadAllPlugins()`
+  - `Hook::call('Context::add', [&$context, $request])`
+
+**What the Processor does today**:
+- Builds `$data` array from spec defaults + optional fields (copyrightNotice, submitWithCategories, enableDois, doiPrefix, doiVersioning, registrationAgency, onlineIssn, printIssn, enablePublicComments, enableAnnouncements, publishingMode, enabledDoiTypes)
+- **Skips** `validate()` — goes straight to insert
+- **Mirrors `supportedLocales` to `supportedFormLocales` / `supportedSubmissionLocales` / `supportedSubmissionMetadataLocales` / `supportedAddedSubmissionLocales`** rather than letting the service default to `[primaryLocale]` (deliberate — see gap #3 below)
+- Sets `enabled = 1` explicitly
+- Stuffs admin into `Registry::get('user')` so `$contextService->add()` picks them up as the new context's first manager
+- Calls `app('context')->add()` — same path as production
+- Optionally writes plugin settings via direct `PluginSettingsDAO::updateSetting()`
+
+**Discrepancies**:
+
+| # | Gap | Severity | Recommended fix |
+|---|---|---|---|
+| 1 | Schema validation (`$contextService->validate()`) is skipped | ✅ acceptable | Tests own the spec; validation would just fail-fast on malformed specs we control. Document only. |
+| 2 | `enabled = 1` set explicitly | ✅ matches | Same DB row state — context schema's default is enabled. No fix. |
+| 3 | `supportedFormLocales` / `supportedSubmissionLocales` / `supportedSubmissionMetadataLocales` / `supportedAddedSubmissionLocales` mirrored from `supportedLocales` rather than defaulting to `[primaryLocale]` | ⚠️ deliberate divergence | This is *intentionally* off-default: a multilingual scratch journal needs all four arrays seeded so the publication validator + wizard locale panels accept multi-locale data. A real user adding a journal would later toggle these via Languages settings; the Processor seeds the post-configuration state up front. **Document, don't fix.** |
+| 4 | Plugin settings written via direct `PluginSettingsDAO::updateSetting()` | ⚠️ partial | The UI path is each plugin's own `SettingsForm::execute()`, which typically just validates + writes the same DAO row. For most plugins the DB result is identical. For Crossref / DOI plugins specifically the form's `execute()` may fire a hook plugins listen to. **Defer**: only fix if a specific plugin's tests surface a regression. |
+| 5 | `Hook::call('Context::add')` fires on both paths (via shared service `add()`) | ✅ matches | None. |
+| 6 | Default genres / user groups / nav menus / email templates / contributor roles installed; currentUser auto-assigned as manager | ✅ matches | All inside service `add()`; identical regardless of caller. |
+| 7 | `Registry::set('user', $admin)` trick to satisfy `$request->getUser()` inside service `add()` without rotating the browser session | ✅ matches | Manager assignment lands on admin user identically to production where the logged-in admin would be `$currentUser`. |
+
+**Verdict**: ✅ parity (with one deliberate divergence on multilingual locales — by design — and one deferred concern on plugin-settings hooks that has no known impact today).
+
 
 
 ## §2 · Remediation log
