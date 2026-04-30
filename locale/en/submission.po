@@ -205,6 +205,51 @@ msgstr "Set a custom URL for this publication, or leave blank to use the default
 msgid "publication.publicationTiming"
 msgstr "Publication Timing"
 
+msgid "publication.updateType.label"
+msgstr "Update Type"
+
+msgid "publication.updateType.description"
+msgstr ""
+"Classify the nature of this version update. Select \"Correction\" if an "
+"error has been fixed, \"Addendum\" if new content has been added, or leave "
+"as \"New Version\" if this is a standard revision. This will be shown publicly."
+
+msgid "publication.updateType.addendum"
+msgstr "Addendum"
+
+msgid "publication.updateType.clarification"
+msgstr "Clarification"
+
+msgid "publication.updateType.correction"
+msgstr "Correction"
+
+msgid "publication.updateType.corrigendum"
+msgstr "Corrigendum"
+
+msgid "publication.updateType.erratum"
+msgstr "Erratum"
+
+msgid "publication.updateType.expressionOfConcern"
+msgstr "Expression of Concern"
+
+msgid "publication.updateType.newEdition"
+msgstr "New Edition"
+
+msgid "publication.updateType.newVersion"
+msgstr "New Version"
+
+msgid "publication.updateType.partialRetraction"
+msgstr "Partial Retraction"
+
+msgid "publication.updateType.removal"
+msgstr "Removal"
+
+msgid "publication.updateType.retraction"
+msgstr "Retraction"
+
+msgid "publication.updateType.withdrawal"
+msgstr "Withdrawal"
+
 msgid "publication.section.description"
 msgstr "Choose the journal section where this publication will appear."
 
