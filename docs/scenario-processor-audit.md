@@ -305,6 +305,55 @@ Role assignment (UserRoleAssignmentReceiveController only):
 **Verdict (initial)**: ⚠️ 2 actionable gaps (#1 publish-arg, #2 author canChangeMetadata clear).
 **Verdict (post-fix)**: ✅ both resolved.
 
+### 6. DecisionProcessor
+
+**File**: `lib/pkp/classes/testing/scenario/Processor/DecisionProcessor.php`
+**Domain**: `edit_decisions`, `event_log`, `submission_comments` (legacy COMMENT_TYPE_EDITOR_DECISION rows), plus everything `DecisionType::runAdditionalActions()` triggers (stage advance, status change, review round creation, mail sends, etc.)
+**Current implementation summary**: For each `decisions[]` entry — maps friendly type strings to Decision constants, builds the decision object with stageId / editorId / dateDecided / reviewRoundId, attaches optional notifyAuthors / notifyReviewers `actions`, and calls `Repo::decision()->add()`. After round-creating decisions, delegates to `ReviewRoundProcessor`. Optionally writes a private `COMMENT_TYPE_EDITOR_DECISION` row when `toEditor` is set.
+
+**Canonical UI/REST entry point**:
+- `POST /api/v1/submissions/{id}/decisions/{decision-type}` — `PKPSubmissionController::addDecision()` (`lib/pkp/api/v1/submissions/PKPSubmissionController.php:1948–1977`)
+
+**What the production path does**:
+- Schema-coerces input
+- Sets `submissionId`, `dateDecided`, `editorId`, `stageId`
+- **`Repo::decision()->validate($params, $decisionType, $submission, $context)`** — fires `Hook::call('Decision::validate', [&$errors, $props])`
+- `Repo::decision()->newDataObject($params)`
+- **`Repo::decision()->add($decision)`** — heavy lifting:
+  - Strips `actions` off the decision
+  - Auto-sets `round` from `reviewRoundId`
+  - DAO insert
+  - Fires `Hook::call('Decision::add', [$decision])`
+  - Writes EventLog row of type `SUBMISSION_LOG_EDITOR_DECISION` (or `SUBMISSION_LOG_EDITOR_RECOMMENDATION`) — message from `decisionType->getLog()`
+  - **Calls `decisionType->runAdditionalActions($decision, $submission, $editor, $context, $actions)`** — this dispatches per-trait `sendAuthorEmail`, `sendReviewersEmail`, stage-advance, status-change, round-create
+  - Fires `event(DecisionAdded)` (round-trip catch on Exception)
+
+**What the Processor does today**:
+- Re-fetches submission per iteration so cascades are visible
+- Maps friendly decision string → Decision const
+- Builds decision params (`submissionId`, `decision`, `stageId`, `editorId`, `dateDecided`, optional `reviewRoundId` for in-review decisions)
+- Builds `actions` array with synthetic subjects (via `defaultSubject()` helper — `[scenario] {type} — notify {audience}`); body comes from spec
+- Soft-fails `toReviewers` on decision types lacking the `NotifyReviewers` trait — logs a ScenarioContext warning
+- **Skips `Repo::decision()->validate()`** — goes straight to `Repo::decision()->newDataObject()` + `Repo::decision()->add()`
+- After round-creating decisions, delegates to `ReviewRoundProcessor`
+- **Writes a `submission_comments` row of type `COMMENT_TYPE_EDITOR_DECISION` when `toEditor` is set** — see gap #3 below
+
+**Discrepancies**:
+
+| # | Gap | Severity | Recommended fix |
+|---|---|---|---|
+| 1 | `Repo::decision()->validate()` skipped | ⚠️ minor | Production fires `Hook::Decision::validate`; plugin-injected validations don't run on the Processor path. Tests typically control inputs so plugin-defined invariants aren't exercised. **Defer**: only fix if a test surfaces a plugin-validated decision. |
+| 2 | Action subject text uses synthetic literal (`[scenario] {type} — notify {audience}`) rather than the decision-type's mailable email-template subject | ⚠️ cosmetic | The form submits real composed subjects; the Processor synthesises a placeholder. Mail::fake() suppresses the actual send, but `submission_emails` log rows record the synthetic subject. **Acceptable** for tests; flag if a test asserts on subject contents. |
+| 3 | `submission_comments` row of type `COMMENT_TYPE_EDITOR_DECISION` written on `toEditor` — the legacy decision form once wrote these but the current Vue decision UI no longer does | ⚠️ deliberate divergence FROM production | The Processor provides a test-only "internal editor note" capability that production no longer exposes. Removing it would break `scenario-decision-comments.spec.js`, `submission-published.js` (uses toEditor), and `reviewer-recommendations.spec.js`. **Deliberate** — the constant + DAO storage remain wired through; the divergence is a forward-compat rather than a parity bug. Document. |
+| 4 | `Repo::decision()->add()` is the shared write — fires `Hook::Decision::add`, writes `SUBMISSION_LOG_EDITOR_DECISION` event log, runs `runAdditionalActions`, fires `event(DecisionAdded)` | ✅ matches | None. |
+| 5 | `runAdditionalActions` includes stage advance, status change, review round creation, email sends — all driven by `actions` array → DecisionType per-trait handlers | ✅ matches | Both paths feed the same `actions` array shape into `runAdditionalActions`. |
+| 6 | Mail::fake() at controller level prevents real sends on both paths | ✅ matches | None. |
+| 7 | Processor's `toReviewers` recipient list is computed from completed reviewer assignments on the active round (mirrors `NotifyReviewers::validateNotifyReviewersAction`) | ✅ matches | None — both paths constrain to completed reviewer IDs. |
+
+**Verdict**: ✅ parity with three documented divergences (#1 minor hook skip, #2 cosmetic synthetic subjects, #3 deliberate test-only `toEditor` capability). All deferred — none break the parity rule meaningfully enough to fix without breaking existing tests.
+
+
+
 
 
 
