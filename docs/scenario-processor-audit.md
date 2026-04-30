@@ -151,6 +151,42 @@ Role assignment (UserRoleAssignmentReceiveController only):
 
 **Verdict**: ✅ parity (with one deliberate divergence on multilingual locales — by design — and one deferred concern on plugin-settings hooks that has no known impact today).
 
+### 3. ParticipantProcessor
+
+**File**: `lib/pkp/classes/testing/scenario/Processor/ParticipantProcessor.php`
+**Domain**: `stage_assignments`
+**Current implementation summary**: For each `participants[]` entry — resolves UserGroup via `UserGroupLookup`, calls `Repo::stageAssignment()->build()`, optionally `update()`s `recommendOnly` / `canChangeMetadata` flags if the spec specified them and the existing row's defaults don't match.
+
+**Canonical UI/REST entry point**:
+- Form / page: workflow page → "Stage Participants" panel → "Add Participant" sidemodal
+- Controller: `StageParticipantGridHandler::saveParticipant()` (`lib/pkp/controllers/grid/users/stageParticipant/StageParticipantGridHandler.php:329–405`)
+- Form: `AddParticipantForm::execute()` (`lib/pkp/controllers/grid/users/stageParticipant/form/AddParticipantForm.php:262–302`) — the same `Repo::stageAssignment()->build()` call
+
+**What the production path does** (saveParticipant):
+1. `AddParticipantForm::execute()` → `Repo::stageAssignment()->build($submissionId, $userGroupId, $userId, $recommendOnly, $canChangeMetadata)` — Eloquent firstOr-create on `stage_assignments`. **No hooks, no events fire** in `build()` itself (`lib/pkp/classes/stageAssignment/Repository.php:30–47`).
+2. If the assigned UserGroup is the Manager role: `notificationMgr->updateNotification($request, getDecisionStageNotifications(), null, ASSOC_TYPE_SUBMISSION, $submissionId)` — recomputes pending decision-stage notifications.
+3. **Removes `NOTIFICATION_TYPE_EDITOR_ASSIGNMENT_REQUIRED` notifications** across all stages where the submission now has at least one assigned manager/sub-editor (lines 360–374).
+4. Creates a "trivial" success notification for the *actor* ("Stage participant added") — UI feedback only.
+5. Writes an `EventLog` row of type `SUBMISSION_LOG_ADD_PARTICIPANT` capturing `userFullName`, `username`, `userGroupName`.
+
+**What the Processor does today**:
+1. Calls `Repo::stageAssignment()->build()` — same Eloquent firstOr-create.
+2. If existing row's flag values don't match spec: `$stageAssignment->update($flagUpdates)`. ✅ matches form's behaviour for the form's own `_assignmentId`-edit branch, although the trigger is different (Processor uses spec presence; form uses an existing assignment ID).
+3. **Skips all post-form notification + event-log work** (steps 2–5 above).
+
+**Discrepancies**:
+
+| # | Gap | Severity | Recommended fix |
+|---|---|---|---|
+| 1 | `Repo::stageAssignment()->build()` is the shared write — no hooks, no events fire on either path | ✅ matches | None. |
+| 2 | `EDITOR_ASSIGNMENT_REQUIRED` notification cleanup — production removes any pending instances when a manager/sub-editor lands; Processor doesn't | ⚠️ partial | Whether this matters depends on whether scenario setup ever *creates* the notification. SubmissionBuilderProcessor's `Repo::submission()->submit()` may auto-add it for managers via `NotificationSubscriptionSettings`. If so, scenario-seeded submissions will carry stale `EDITOR_ASSIGNMENT_REQUIRED` rows that a real UI flow would have cleared. **Fix**: after each manager/sub-editor `build()`, run the same `Notification::withAssoc(…ASSOC_TYPE_SUBMISSION…submissionId)->withType(EDITOR_ASSIGNMENT_REQUIRED)->delete()` cleanup. |
+| 3 | Decision-stage notification recompute on manager assignment | ⚠️ partial | Same conditionality as #2. Skip unless a test surfaces the gap. The recompute touches `getDecisionStageNotifications()`, which the migration suite hasn't inspected directly — keep deferred. |
+| 4 | `EventLog` row of type `SUBMISSION_LOG_ADD_PARTICIPANT` not written | ⚠️ partial | Tests that read the submission event log (e.g. an "activity" view) would see an incomplete history. **Fix**: append the same `Repo::eventLog()->newDataObject([...]) + add()` after each Processor `build()`, attributing to the admin user. |
+| 5 | "Trivial" success notification for the actor | ✅ skip | UI-only feedback for the clicker; not relevant to seeded state. |
+| 6 | Spec doesn't expose stage scoping per assignment (uses UserGroup's implicit stage) | ✅ matches | The form does the same — UserGroup membership in a stage is the gate (`UserGroupStage::withStageId()->withUserGroupId()`). |
+
+**Verdict**: ⚠️ 2–3 actionable gaps (#2, #3, #4). The most user-visible is #4 (event log). #2 and #3 are conditional on whether the EDITOR_ASSIGNMENT_REQUIRED / decision-stage notifications fire in the test environment to begin with — verify before fixing.
+
 
 
 ## §2 · Remediation log
