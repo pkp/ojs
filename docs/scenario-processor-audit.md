@@ -294,7 +294,7 @@ Role assignment (UserRoleAssignmentReceiveController only):
 
 | # | Gap | Severity | Recommended fix |
 |---|---|---|---|
-| 1 | `Repo::publication()->publish()` called with default `submissionStatus=null`; production passes `false` | ✅ resolved | Pass `false` as the second arg to `publish()` to match production. **Resolved** in `e2e_revamp_2` lib/pkp commit (PublicationsProcessor: align publish() with UI flow). |
+| 1 | `Repo::publication()->publish()` called with default `submissionStatus=null`; production passes `false` | ✅ deliberate divergence | Initially "fixed" by passing `false`, but that broke `submissionPublished` scenario seeding — the publication-language-change spec failed because submission.status stayed STATUS_QUEUED while the publication was PUBLISHED. Production reaches publish() through a decision chain that already advanced submission.status; the Processor consolidates create → publish in one pass and **needs** the auto-status-update. The `false` was reverted; the original default-null behaviour is correct for the Processor's all-in-one shape. **Documented** in `e2e_revamp_2` lib/pkp commit (PublicationsProcessor: keep default submissionStatus arg). |
 | 2 | After publish, production iterates `stage_assignments` and clears `canChangeMetadata = 0` on every AUTHOR role assignment; Processor doesn't | ✅ resolved | After publish, iterate AUTHOR role stage_assignments and set `canChangeMetadata = 0`. Mirrors PKPSubmissionController.php:1444–1453. **Resolved** in same commit. |
 | 3 | Issue assignment: `Repo::publication()->edit($pub, ['issueId' => $id])` before publish | ✅ matches | Issue panel save in UI uses the same `edit()` call; the publish endpoint then runs publish(). Same DB sequence. |
 | 4 | Version creation: `Repo::publication()->version()` shared with UI's Create New Version dialog | ✅ matches | Same Repo facade — fires `Publication::version` hook + copies authors/citations. |
@@ -303,7 +303,7 @@ Role assignment (UserRoleAssignmentReceiveController only):
 | 7 | Title `[tag]` suffix for parallel isolation | ✅ deliberate | Documented; required for parallel-safe scratch journals. Production doesn't do this; the divergence is by design. |
 
 **Verdict (initial)**: ⚠️ 2 actionable gaps (#1 publish-arg, #2 author canChangeMetadata clear).
-**Verdict (post-fix)**: ✅ both resolved.
+**Verdict (post-fix)**: ✅ #2 resolved. #1 reverted on test-run feedback — the "production passes `false`" parity reading was wrong for the Processor's consolidated shape; default-null is correct.
 
 ### 6. DecisionProcessor
 
@@ -433,7 +433,7 @@ Per-discrepancy fixes. One commit per row. Audit-doc rows in §1 flip to ✅ as 
 | 2026-04-30 | Participant | EventLog `SUBMISSION_LOG_ADD_PARTICIPANT` row not written | Mirror `Repo::eventLog()->add()` from `StageParticipantGridHandler::saveParticipant` for each participant | lib/pkp |
 | 2026-04-30 | Participant | `EDITOR_ASSIGNMENT_REQUIRED` notifications not cleaned up after manager/sub-editor assignment | Delete `withAssoc(SUBMISSION, $id)->withType(EDITOR_ASSIGNMENT_REQUIRED)` once any editor lands (idempotent) | lib/pkp |
 | 2026-04-30 | SubmissionBuilder | Author created without ContributorRoles linkage | `$author->setContributorRoles([AUTHOR ContributorRole])` before `Repo::author()->add()` — mirrors PKPSubmissionController::add lines 741–748 | lib/pkp |
-| 2026-04-30 | Publications | `publish()` called with default submissionStatus arg, runs an extra updateStatus that production skips | Pass `false` to `publish()` — mirrors PKPSubmissionController::publishPublication line 1442 | lib/pkp |
+| 2026-04-30 | Publications | `publish()` called with default submissionStatus arg, runs an extra updateStatus that production skips | Initially fixed by passing `false`; reverted after test-run feedback (publication-language-change broke because submission.status stayed STATUS_QUEUED). Default-null is correct for the Processor's consolidated shape; flagged as a deliberate divergence in §1.5. | lib/pkp |
 | 2026-04-30 | Publications | After publish, AUTHOR canChangeMetadata not cleared | Iterate AUTHOR-role stage_assignments and set canChangeMetadata = 0 — mirrors PKPSubmissionController.php:1444–1453 | lib/pkp |
 | 2026-04-30 | ReviewRound | REVIEW_ASSIGNMENT task notification not created on assignment | createNotification(REVIEW_ASSIGNMENT, LEVEL_TASK) after Repo::reviewAssignment()->add() — mirrors EditorAction::addReviewer | lib/pkp |
 | 2026-04-30 | ReviewRound | SUBMISSION_LOG_REVIEW_ASSIGN event-log row not written | Append eventLog row after assignment — mirrors EditorAction::addReviewer lines 121–135 | lib/pkp |
