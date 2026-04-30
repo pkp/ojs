@@ -422,6 +422,16 @@ Role assignment (UserRoleAssignmentReceiveController only):
 **Verdict (initial)**: ⚠️ 5 actionable gaps (#3, #4, #5, #6, #7) — all about audit-trail / notification fidelity that production lands but the Processor skipped.
 **Verdict (post-fix)**: ✅ all five resolved.
 
+#### Follow-up gaps surfaced by user-side UI inspection
+
+After the initial sweep landed, a screenshot of the workflow's reviewer popover surfaced two more parity holes — both visible to the user but invisible to the test suite:
+
+| # | Gap | Severity | Recommended fix |
+|---|---|---|---|
+| 13 | `dateDue` and `dateResponseDue` not set when the spec doesn't pass them — both default to NULL on the row, and UI surfaces that compute "days remaining / overdue" render `null days` or `overdue by 0 days` | ⚠️ partial — **user-visible** | Always default the dates from the context's `numWeeksPerReview` / `numWeeksPerResponse` (falling back to 4 / 3 weeks via `Carbon::today()->endOfDay()->addWeeks(N)` — same logic as the UI's `HasReviewDueDate` trait). **Resolved** in `e2e_revamp_2` lib/pkp commit (ReviewRound: dueDates + editor-confirm fidelity). |
+| 14 | `dateConsidered` not set + `SUBMISSION_LOG_REVIEW_CONFIRMED` event-log row not written when status='completed'. Production splits the reviewer's submit (`PKPReviewerReviewStep3Form`) from the editor's confirm (`PKPReviewerGridHandler::reviewRead`) — the Processor was lumping them but only doing the reviewer half | ⚠️ partial | When status='completed', also: (a) `Repo::reviewAssignment()->edit($a, ['dateConsidered' => $now])` to mirror the editor confirm; (b) write a `SUBMISSION_LOG_REVIEW_CONFIRMED` event-log row mirroring `PKPReviewerGridHandler::reviewRead` lines 791–807. **Resolved** in same commit. |
+
+
 
 
 
@@ -449,6 +459,8 @@ Per-discrepancy fixes. One commit per row. Audit-doc rows in §1 flip to ✅ as 
 | 2026-04-30 | ReviewRound | REVIEWER_COMMENT notification to editors not created on completion | Per Manager/Sub-editor stage assignment, createNotification(REVIEWER_COMMENT) — mirrors PKPReviewerReviewStep3Form lines 196–249 | lib/pkp |
 | 2026-04-30 | ReviewRound | Reviewer's REVIEW_ASSIGNMENT task notification not removed on terminal status | Delete on status='completed' / 'declined' / 'cancelled' — mirrors PKPReviewerReviewStep3Form line 252 + UnassignReviewerForm line 93 | lib/pkp |
 | 2026-04-30 | ReviewRound | SUBMISSION_LOG_REVIEW_READY event-log row not written on completion | Append eventLog row when dateCompleted set — mirrors PKPReviewerReviewStep3Form lines 257–272 | lib/pkp |
+| 2026-04-30 | ReviewRound | `dateDue` / `dateResponseDue` defaulted to NULL when spec doesn't pass them — UI shows "overdue by 0 days" | Default from context's `numWeeksPerReview` / `numWeeksPerResponse` (or 4 / 3 weeks fallback) — mirrors HasReviewDueDate trait | lib/pkp |
+| 2026-04-30 | ReviewRound | Editor "confirm review" half of the completion flow missing — `dateConsidered` not set + SUBMISSION_LOG_REVIEW_CONFIRMED event-log row not written | When status='completed', set `dateConsidered = now` and write the event-log row — mirrors PKPReviewerGridHandler::reviewRead lines 779–807 | lib/pkp |
 
 ## §3 · Post-fix performance comparison
 
