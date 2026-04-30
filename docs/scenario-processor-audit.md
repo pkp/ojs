@@ -253,6 +253,60 @@ Role assignment (UserRoleAssignmentReceiveController only):
 **Verdict (initial)**: ⚠️ 1 actionable gap (#1 ContributorRoles). #3 deferred.
 **Verdict (post-fix)**: ✅ #1 resolved; #3 deferred (no current consumer).
 
+### 5. PublicationsProcessor
+
+**File**: `lib/pkp/classes/testing/scenario/Processor/PublicationsProcessor.php`
+**Domain**: `publications`, `publication_settings`, `submission_dois`, `event_log`, `stage_assignments` (after publish, on AUTHOR roles)
+**Current implementation summary**: For each publication entry — index 0 edits the bare publication created by SubmissionBuilder, index >0 calls `Repo::publication()->version()` to chain a new version. Applies metadata + UI-settable attributes via one `Repo::publication()->edit()`. Optionally resolves an issue and calls `Repo::publication()->publish()`.
+
+**Canonical UI/REST entry points**:
+- Per-panel save: `PUT /api/v1/submissions/{id}/publications/{id}` — `PKPPublicationController::edit()` → `Repo::publication()->edit()`
+- Create new version: `POST /api/v1/submissions/{id}/publications` (or via the Vue "Create New Version" dialog) → `Repo::publication()->version()`
+- Publish: `PUT /api/v1/submissions/{id}/publications/{id}/publish` — `PKPSubmissionController::publishPublication()` (`lib/pkp/api/v1/submissions/PKPSubmissionController.php:1395–1454`)
+
+**What the production publish path does** (PKPSubmissionController::publishPublication):
+- Guards: 404 if not found, 403 if already published
+- `Repo::publication()->validatePublish()` — fires `Publication::validatePublish` hook
+- **`Repo::publication()->publish($publication, false)`** — pass `false` to skip the auto-status-update on the submission
+- **Iterates stage_assignments and sets `canChangeMetadata = 0` on every AUTHOR role assignment** — authors lose metadata-edit after publish
+
+`Repo::publication()->publish()` itself fires (regardless of caller):
+- `setStatusOnPublish()` — flips publication status
+- Auto-defaults missing copyrightHolder / copyrightYear / licenseUrl from the context
+- Auto-versions if missing
+- `Hook::call('Publication::publish::before')` → DAO update → re-fetch
+- `Repo::submission()->updateStatus()` IF `$submissionStatus !== false`
+- `Repo::submission()->updateCurrentPublication()`
+- EventLog row of type `SUBMISSION_LOG_METADATA_PUBLISH` ('publication.event.published' / 'scheduled' / 'versionPublished' / 'versionScheduled')
+- DOI staling (DOI versioning rules)
+- `Hook::call('Publication::publish')`
+- `event(PublicationPublished)`
+
+**What the Processor does today**:
+- Index 0 → `Repo::publication()->edit()` for metadata
+- Index >0 → `Repo::publication()->version()` (auto-sets `versionStage` if provided), then `edit()` for metadata
+- Optional `Repo::publication()->edit($pub, ['issueId' => $resolvedId])` before publish
+- **`Repo::publication()->publish($publication)`** — uses default `submissionStatus = null` (which means: run `Repo::submission()->updateStatus()`)
+- **No iteration of stage_assignments** to clear AUTHOR `canChangeMetadata` after publish
+- Appends `[tag]` to every locale of the title for parallel isolation
+
+**Discrepancies**:
+
+| # | Gap | Severity | Recommended fix |
+|---|---|---|---|
+| 1 | `Repo::publication()->publish()` called with default `submissionStatus=null`; production passes `false` | ✅ resolved | Pass `false` as the second arg to `publish()` to match production. **Resolved** in `e2e_revamp_2` lib/pkp commit (PublicationsProcessor: align publish() with UI flow). |
+| 2 | After publish, production iterates `stage_assignments` and clears `canChangeMetadata = 0` on every AUTHOR role assignment; Processor doesn't | ✅ resolved | After publish, iterate AUTHOR role stage_assignments and set `canChangeMetadata = 0`. Mirrors PKPSubmissionController.php:1444–1453. **Resolved** in same commit. |
+| 3 | Issue assignment: `Repo::publication()->edit($pub, ['issueId' => $id])` before publish | ✅ matches | Issue panel save in UI uses the same `edit()` call; the publish endpoint then runs publish(). Same DB sequence. |
+| 4 | Version creation: `Repo::publication()->version()` shared with UI's Create New Version dialog | ✅ matches | Same Repo facade — fires `Publication::version` hook + copies authors/citations. |
+| 5 | Metadata edits: `Repo::publication()->edit()` shared with all panel saves | ✅ matches | Same hook chain (`Publication::edit`). |
+| 6 | `Repo::publication()->publish()` itself fires every side effect identically (event log, DOI staling, hooks, `PublicationPublished` event) | ✅ matches | All inside the shared `publish()` body. |
+| 7 | Title `[tag]` suffix for parallel isolation | ✅ deliberate | Documented; required for parallel-safe scratch journals. Production doesn't do this; the divergence is by design. |
+
+**Verdict (initial)**: ⚠️ 2 actionable gaps (#1 publish-arg, #2 author canChangeMetadata clear).
+**Verdict (post-fix)**: ✅ both resolved.
+
+
+
 
 
 
@@ -267,6 +321,8 @@ Per-discrepancy fixes. One commit per row. Audit-doc rows in §1 flip to ✅ as 
 | 2026-04-30 | Participant | EventLog `SUBMISSION_LOG_ADD_PARTICIPANT` row not written | Mirror `Repo::eventLog()->add()` from `StageParticipantGridHandler::saveParticipant` for each participant | lib/pkp |
 | 2026-04-30 | Participant | `EDITOR_ASSIGNMENT_REQUIRED` notifications not cleaned up after manager/sub-editor assignment | Delete `withAssoc(SUBMISSION, $id)->withType(EDITOR_ASSIGNMENT_REQUIRED)` once any editor lands (idempotent) | lib/pkp |
 | 2026-04-30 | SubmissionBuilder | Author created without ContributorRoles linkage | `$author->setContributorRoles([AUTHOR ContributorRole])` before `Repo::author()->add()` — mirrors PKPSubmissionController::add lines 741–748 | lib/pkp |
+| 2026-04-30 | Publications | `publish()` called with default submissionStatus arg, runs an extra updateStatus that production skips | Pass `false` to `publish()` — mirrors PKPSubmissionController::publishPublication line 1442 | lib/pkp |
+| 2026-04-30 | Publications | After publish, AUTHOR canChangeMetadata not cleared | Iterate AUTHOR-role stage_assignments and set canChangeMetadata = 0 — mirrors PKPSubmissionController.php:1444–1453 | lib/pkp |
 
 ## §3 · Post-fix performance comparison
 
