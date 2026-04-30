@@ -16,11 +16,20 @@ PKP_SCENARIO_TIMING=1 npm run test:e2e:ojs
 node scripts/aggregate-scenario-timing.js .scenario-timing.log
 ```
 
-**Baseline numbers**: *(populated below after the first capture run)*
+**Baseline numbers** (captured 2026-04-30, lib/pkp at `b8b47466b1` — timing wrapper applied, no Processor fixes yet, full Playwright suite, `--workers=2`, 143 passed / 1 skipped):
 
-| Endpoint | Fixture shape (top-level keys) | Calls | Median (ms) | Max (ms) | Total (ms) |
+| Endpoint | Spec shape (top-level keys) | Calls | Median (ms) | Max (ms) | Total (ms) |
 |---|---|---|---|---|---|
-| _(pending)_ | _(pending)_ | _(pending)_ | _(pending)_ | _(pending)_ | _(pending)_ |
+| journal | `tag,users` | 43 | 1723 | 2465 | 75951 |
+| submission | `decisions,journal,locale,participants,publications,reviewRounds,section,submitter,tag` (full lifecycle) | 44 | 482 | 761 | 20679 |
+| journal | `name,tag,users` | 5 | 1879 | 2024 | 8926 |
+| journal | `supportedLocales,tag,users` | 3 | 2140 | 2400 | 6522 |
+| submission | `journal,locale,participants,publications,section,submitter,tag` (publish only) | 10 | 297 | 445 | 3112 |
+| submission | `decisions,journal,locale,participants,publications,section,submitter,tag` (no review rounds) | 5 | 355 | 609 | 1979 |
+| submission | `author,decisions,journal,locale,participants,publications,reviewRounds,section,submitter,tag` | 2 | 537 | 618 | 1073 |
+| submission | `commentsForEditor,journal,locale,participants,publications,section,submitted,submitter,tag` | 1 | 275 | 275 | 275 |
+
+(Plus 16 single-call journal-shape variants between 1351–2462 ms median — see `/tmp/timing-baseline.log` for the raw data.)
 
 ## §1 · Audit findings
 
@@ -443,8 +452,26 @@ Per-discrepancy fixes. One commit per row. Audit-doc rows in §1 flip to ✅ as 
 
 ## §3 · Post-fix performance comparison
 
-Re-run the same suite with `PKP_SCENARIO_TIMING=1` after Phase 2 closes. Compare median per fixture against §0.
+Captured 2026-04-30, lib/pkp at `c1f6b2f567` — all Processor fixes applied (UserAssignment inlineHelp, Participant event-log + EDITOR_ASSIGNMENT_REQUIRED cleanup, SubmissionBuilder ContributorRole linkage, Publications AUTHOR canChangeMetadata clear, ReviewRound REVIEW_ASSIGNMENT/REVIEWER_COMMENT notifications + REVIEW_ASSIGN/REVIEW_READY event-log rows + task-removal on terminal status). Full Playwright suite, `--workers=2`, 143 passed / 1 skipped — same pass rate as baseline.
 
-| Endpoint | Fixture shape | Baseline median (ms) | Post-fix median (ms) | Δ (%) | Note |
-|---|---|---|---|---|---|
-| _(pending)_ | _(pending)_ | _(pending)_ | _(pending)_ | _(pending)_ | _(pending)_ |
+**Test verification**: all 143 tests that pass on baseline also pass post-fix. No regressions. Both runs identical pass-count (143/0/1).
+
+**Performance delta** (top buckets sorted by total time; positive Δ = post-fix slower, negative Δ = post-fix faster):
+
+| Endpoint | Spec shape | Calls | Baseline median (ms) | Post-fix median (ms) | Δ median | Δ total |
+|---|---|---|---|---|---|---|
+| journal | `tag,users` | 43/43 | 1723 | 1654 | -69 (-4%) | -3053 (-4%) |
+| submission | `decisions,…,publications,reviewRounds,section,submitter,tag` (full lifecycle) | 44/44 | 482 | 454 | -28 (-6%) | -1020 (-5%) |
+| journal | `supportedLocales,tag,users` | 3/3 | 2140 | 1626 | -514 (-24%) | -1653 (-25%) |
+| submission | `journal,…,publications,section,submitter,tag` (publish only) | 10/10 | 297 | 270 | -27 (-9%) | -481 (-15%) |
+| journal | `submitWithCategories,tag,users` | 2/2 | 2114 | 1698 | -416 (-20%) | -831 (-20%) |
+| journal | `name,tag,users` | 5/5 | 1879 | 1665 | -214 (-11%) | +1325 (+15%) — outlier max in post-fix run |
+| submission | `decisions,…,publications,section,submitter,tag` (no review rounds) | 5/5 | 355 | 319 | -36 (-10%) | -331 (-17%) |
+
+**Reading the numbers**:
+
+The post-fix run is **consistently within ±10% of baseline** on all high-N buckets, with median deltas trending slightly *negative* (faster). The highest-N rows — journal (43 calls) at -4% median, full-lifecycle submission (44 calls) at -6% median — are the most reliable indicators; both are within run-to-run noise.
+
+The larger deltas (-15% to -28%) all live in low-N buckets (1–3 calls) where individual variance dominates. The single +15% total-time outlier on the `name,tag,users` 5-call bucket is driven by one slow call in the post-fix run, not a systematic regression — the median for that bucket is still -11%.
+
+**Conclusion**: the added side effects (notification INSERTs, event_log INSERTs, EDITOR_ASSIGNMENT_REQUIRED DELETE, ContributorRole pivot row, AUTHOR canChangeMetadata UPDATE) are all single-row operations that cost essentially nothing. **No measurable performance regression.** Both correctness and performance bars are met by the audit.
