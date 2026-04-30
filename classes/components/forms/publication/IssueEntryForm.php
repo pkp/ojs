@@ -16,6 +16,7 @@
 namespace APP\components\forms\publication;
 
 use APP\facades\Repo;
+use APP\publication\enums\UpdateType;
 use PKP\components\forms\FieldAutosuggestPreset;
 use PKP\components\forms\FieldRichTextarea;
 use PKP\components\forms\FieldSelect;
@@ -125,6 +126,17 @@ class IssueEntryForm extends FormComponent
                 'label' => __('publication.publicationDate'),
                 'description' => __('publication.datePublished.description'),
                 'value' => $publication->getData('datePublished'),
+                'size' => 'large',
+            ]))
+            ->addField(new FieldSelect('updateType', [
+                'groupId' => self::GROUP_VERSION_AND_UPDATES,
+                'label' => __('publication.updateType.label'),
+                'description' => __('publication.updateType.description'),
+                'options' => array_map(
+                    fn (UpdateType $case) => ['value' => $case->value, 'label' => $case->label()],
+                    UpdateType::cases()
+                ),
+                'value' => $publication->getData('updateType'),
                 'size' => 'large',
             ]))
             ->addField(new FieldRichTextarea('summaryOfChanges', [
