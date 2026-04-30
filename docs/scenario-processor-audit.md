@@ -352,6 +352,69 @@ Role assignment (UserRoleAssignmentReceiveController only):
 
 **Verdict**: ✅ parity with three documented divergences (#1 minor hook skip, #2 cosmetic synthetic subjects, #3 deliberate test-only `toEditor` capability). All deferred — none break the parity rule meaningfully enough to fix without breaking existing tests.
 
+### 7. ReviewRoundProcessor
+
+**File**: `lib/pkp/classes/testing/scenario/Processor/ReviewRoundProcessor.php`
+**Domain**: `review_assignments`, `submission_comments` (COMMENT_TYPE_PEER_REVIEW), `notifications`, `event_log`, `email_log`
+**Current implementation summary**: For each `reviewers[]` entry on a round — `Repo::reviewAssignment()->newDataObject() + ->add()` (creating with method, dates, round number), then `Repo::reviewAssignment()->edit()` to apply status-derived field combos (dateConfirmed / dateCompleted / declined / cancelled / reviewerRecommendationId). Writes COMMENT_TYPE_PEER_REVIEW comments for completed reviews via direct DAO insert.
+
+**Canonical UI/REST entry points** (this is two distinct flows folded into one Processor):
+
+| Sub-operation | Entry point |
+|---|---|
+| Reviewer assignment | `EditorAction::addReviewer()` (`lib/pkp/classes/submission/action/EditorAction.php:70–164`) — invoked from the workflow page's "Add Reviewer" sidemodal (`PKPReviewerForm`) |
+| Reviewer completes review | `PKPReviewerReviewStep3Form::execute()` (`lib/pkp/classes/submission/reviewer/form/PKPReviewerReviewStep3Form.php:161–275`) — invoked when a reviewer submits the final review-form step |
+
+**What the production paths do**:
+
+`EditorAction::addReviewer()`:
+- Idempotency check (already assigned?)
+- **`Hook::call('EditorAction::addReviewer', [&$submission, $reviewerId])`** — gives plugins a chance to bail
+- `Repo::reviewAssignment()->newDataObject()` + `Repo::reviewAssignment()->add()` — fires `Hook::ReviewAssignment::add`
+- `setDueDates()` — fires `Hook::EditorAction::setDueDates` then `Repo::reviewAssignment()->edit()` for `dateDue` + `dateResponseDue`
+- **`createNotification(NOTIFICATION_TYPE_REVIEW_ASSIGNMENT)`** for the reviewer (LEVEL_TASK)
+- **EventLog row of type `SUBMISSION_LOG_REVIEW_ASSIGN`** with reviewerName + reviewAssignment + stageId + round
+- Mail send + email log entry (skipped if `skipEmail`)
+
+`PKPReviewerReviewStep3Form::execute()`:
+- `saveReviewForm` — saves review-form responses (review_form_responses)
+- `updateReviewStepAndSaveSubmission` — bumps reviewStep
+- `Repo::reviewAssignment()->edit($a, ['dateCompleted', 'reviewerRecommendationId'])` — fires `Hook::ReviewAssignment::edit`
+- For each manager/sub-editor stage assignment:
+  - **`createNotification(NOTIFICATION_TYPE_REVIEWER_COMMENT)`** for the editor
+  - Sends `ReviewCompleteNotifyEditors` mail + email log entry (gated on subscription)
+- **Removes the reviewer's `NOTIFICATION_TYPE_REVIEW_ASSIGNMENT`** task notification
+- **EventLog row of type `SUBMISSION_LOG_REVIEW_READY`** with reviewerName + reviewAssignmentId + round
+
+**What the Processor does today**:
+- `Repo::reviewAssignment()->newDataObject()` + `Repo::reviewAssignment()->add()` — fires `Hook::ReviewAssignment::add`
+- Sets `dateDue` / `dateResponseDue` directly via `createParams` — converges to the same DB row but skips `Hook::EditorAction::setDueDates`
+- For non-`invited` statuses, `Repo::reviewAssignment()->edit()` — fires `Hook::ReviewAssignment::edit`
+- For `completed` with `comments`, writes COMMENT_TYPE_PEER_REVIEW rows (one per `toEditor`/`toAuthor` field) via direct DAO insert — same shape the legacy review form wrote
+- **Skips** assignment-time NOTIFICATION_TYPE_REVIEW_ASSIGNMENT, completion-time NOTIFICATION_TYPE_REVIEWER_COMMENT, both EventLog rows (assign + ready), reviewer-task notification removal on completion, mail sends (faked anyway)
+
+**Discrepancies**:
+
+| # | Gap | Severity | Recommended fix |
+|---|---|---|---|
+| 1 | `Hook::call('EditorAction::addReviewer')` not fired | ⚠️ minor | Plugins can't intercept. No plugin uses this in the migration suite. Defer. |
+| 2 | `Hook::call('EditorAction::setDueDates')` not fired (Processor sets dates via direct field assignment) | ⚠️ minor | Same — plugin hook skip. Defer. |
+| 3 | `NOTIFICATION_TYPE_REVIEW_ASSIGNMENT` task notification not created on assignment | ✅ resolved | After `Repo::reviewAssignment()->add()`, create the LEVEL_TASK notification scoped to the reviewer, contextId, ASSOC_TYPE_REVIEW_ASSIGNMENT. **Resolved** in `e2e_revamp_2` lib/pkp commit (ReviewRoundProcessor: notification + event-log fidelity). |
+| 4 | `SUBMISSION_LOG_REVIEW_ASSIGN` EventLog not written | ✅ resolved | Append EventLog row after each assignment, attributing to admin. **Resolved** in same commit. |
+| 5 | `NOTIFICATION_TYPE_REVIEWER_COMMENT` not created for editors when status='completed' | ✅ resolved | After completion edit, iterate Manager/Sub-editor stage assignments and create the notification per recipient. **Resolved** in same commit. |
+| 6 | Reviewer's task notification not removed on status='completed' / 'declined' / 'cancelled' | ✅ resolved | When terminal status reached, delete the LEVEL_TASK notification (idempotent). **Resolved** in same commit. |
+| 7 | `SUBMISSION_LOG_REVIEW_READY` EventLog not written when status='completed' | ✅ resolved | Append EventLog row when `dateCompleted` is set. **Resolved** in same commit. |
+| 8 | Mail sends (review-request to reviewer; review-complete to editors) skipped | ✅ acceptable | Mail::fake() suppresses real sends; email_log rows are also skipped (acceptable — tests don't assert on email_log for review notifications). |
+| 9 | `saveReviewForm` (review_form_responses table writes) not called | ✅ acceptable | Tests don't seed reviewForm responses. |
+| 10 | `updateReviewStepAndSaveSubmission` not called (reviewStep field not bumped) | ⚠️ minor | The reviewStep field tracks the reviewer's UI progress; for completed reviews production sets it to step 4. Tests don't typically inspect this. **Defer**. |
+| 11 | `Repo::reviewAssignment()->add()` and `->edit()` are shared writes — `ReviewAssignment::add` and `ReviewAssignment::edit` hooks fire on both paths | ✅ matches | None. |
+| 12 | COMMENT_TYPE_PEER_REVIEW rows for completed reviews | ✅ matches | Same shape as the legacy review form's writes; both paths land identical rows. |
+
+**Verdict (initial)**: ⚠️ 5 actionable gaps (#3, #4, #5, #6, #7) — all about audit-trail / notification fidelity that production lands but the Processor skipped.
+**Verdict (post-fix)**: ✅ all five resolved.
+
+
+
 
 
 
@@ -372,6 +435,11 @@ Per-discrepancy fixes. One commit per row. Audit-doc rows in §1 flip to ✅ as 
 | 2026-04-30 | SubmissionBuilder | Author created without ContributorRoles linkage | `$author->setContributorRoles([AUTHOR ContributorRole])` before `Repo::author()->add()` — mirrors PKPSubmissionController::add lines 741–748 | lib/pkp |
 | 2026-04-30 | Publications | `publish()` called with default submissionStatus arg, runs an extra updateStatus that production skips | Pass `false` to `publish()` — mirrors PKPSubmissionController::publishPublication line 1442 | lib/pkp |
 | 2026-04-30 | Publications | After publish, AUTHOR canChangeMetadata not cleared | Iterate AUTHOR-role stage_assignments and set canChangeMetadata = 0 — mirrors PKPSubmissionController.php:1444–1453 | lib/pkp |
+| 2026-04-30 | ReviewRound | REVIEW_ASSIGNMENT task notification not created on assignment | createNotification(REVIEW_ASSIGNMENT, LEVEL_TASK) after Repo::reviewAssignment()->add() — mirrors EditorAction::addReviewer | lib/pkp |
+| 2026-04-30 | ReviewRound | SUBMISSION_LOG_REVIEW_ASSIGN event-log row not written | Append eventLog row after assignment — mirrors EditorAction::addReviewer lines 121–135 | lib/pkp |
+| 2026-04-30 | ReviewRound | REVIEWER_COMMENT notification to editors not created on completion | Per Manager/Sub-editor stage assignment, createNotification(REVIEWER_COMMENT) — mirrors PKPReviewerReviewStep3Form lines 196–249 | lib/pkp |
+| 2026-04-30 | ReviewRound | Reviewer's REVIEW_ASSIGNMENT task notification not removed on terminal status | Delete on status='completed' / 'declined' / 'cancelled' — mirrors PKPReviewerReviewStep3Form line 252 + UnassignReviewerForm line 93 | lib/pkp |
+| 2026-04-30 | ReviewRound | SUBMISSION_LOG_REVIEW_READY event-log row not written on completion | Append eventLog row when dateCompleted set — mirrors PKPReviewerReviewStep3Form lines 257–272 | lib/pkp |
 
 ## §3 · Post-fix performance comparison
 
