@@ -63,8 +63,11 @@ class Repository extends \PKP\doi\Repository
         }
 
         // If not using default suffix, additional checks are required
-        $patternNeedsIssue = PubIdPlugin::suffixHasIssuePattern($this->getPubIdSuffixPattern($publication, $context));
-        $issue = Repo::issue()->get($publication->getData('issueId'));
+        $pubIdSuffixPattern = $this->getPubIdSuffixPattern($publication, $context);
+        if (empty($pubIdSuffixPattern)) { throw new DoiException(DoiException::PUBLICATION_MISSING_ISSUE, $submission->getCurrentPublication()->getLocalizedFullTitle(), $publication->getLocalizedFullTitle()); }
+        $patternNeedsIssue = PubIdPlugin::suffixHasIssuePattern($pubIdSuffixPattern);
+        $issueId = $publication->getData('issueId');
+        $issue = $issueId ? Repo::issue()->get($issueId) : null;
 
         if ($patternNeedsIssue) {
             if ($issue === null) {
