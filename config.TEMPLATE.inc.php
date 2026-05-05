@@ -582,7 +582,7 @@ log_web_service_info = Off
 
 ; Default logging channel. Available channels:
 ;   - stack: Combines multiple channels (default, uses 'single')
-;   - single: Single log file (storage/logs/laravel.log)
+;   - single: Single log file ({files_dir}/logs/{log_file_name})
 ;   - daily: Daily rotating log files
 ;   - stderr: Output to stderr
 ;   - syslog: System log
@@ -600,6 +600,10 @@ log_channel = stack
 ;   - alert: Action must be taken immediately
 ;   - emergency: System is unusable
 log_level = error
+
+; Filename for the application log under {files_dir}/logs/.
+; Defaults to {application name}.log (e.g. ojs2.log, omp2.log, ops2.log).
+; log_file_name = ojs2.log
 
 ;;; Log Viewer External Files ;;;
 ;
