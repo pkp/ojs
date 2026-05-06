@@ -383,7 +383,7 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     }
 
     /**
-     * Get the submission filter.
+     * Get the Peer Review filter.
      *
      * @return string|null
      */

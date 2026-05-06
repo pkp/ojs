@@ -368,9 +368,16 @@ class DoiController extends PKPDoiController
     }
 
     /** @copydoc PKPDoiController::getPeerReviewExports() */
-    public function getPeerReviewExports(array $peerReviews, Context $context, IDoiRegistrationAgency $agency): array
+    public function getPeerReviewExports(array $submissionIds, Context $context, IDoiRegistrationAgency $agency): array
     {
+        $exportablePeerReviewIds = Repo::reviewAssignment()
+            ->getExportableDOIsPeerReviewIds($context->getId(), $context->getData(Context::SETTING_DOI_VERSIONING), $submissionIds);
+
+        $peerReviews = array_map(
+            fn ($exportablePeerReviewId) => Repo::reviewAssignment()->get($exportablePeerReviewId),
+            $exportablePeerReviewIds
+        );
+
         return $agency->exportPeerReviews($peerReviews, $context);
     }
-
 }

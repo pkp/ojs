@@ -333,32 +333,29 @@ class Repository extends \PKP\doi\Repository
     }
 
     /**
-     * Gets all DOIs associated with an issue
-     * NB: Assumes only enabled DOI types are allowed
+     * Gets all DOIs associated with a Peer Review.
+     * NB: Assumes only enabled DOI types are allowed.
      *
-     * @param bool $enabledDoiTypesOnly
-     *
-     * @throws \Exception
      *
      * @return array<int> DOI IDs
      *
      */
-    public function getDoisForPeerReview(int $issueId, $enabledDoiTypesOnly = false): array
+    public function getDoisForReviewAssignment(int $reviewId, bool $enabledDoiTypesOnly = false): array
     {
         $doiIds = [];
 
-        $reviewAssignment = Repo::reviewAssignment()->get($issueId);
+        $reviewAssignment = Repo::reviewAssignment()->get($reviewId);
         $reviewDoiId = $reviewAssignment->getData('doiId');
 
-        $submission = Repo::submission()->get($reviewAssignment->getData('submissionId'));
-
-        /** @var JournalDAO $contextDao */
-        $contextDao = DAORegistry::getDAO('JournalDAO');
-
-        /** @var Journal $context */
-        $context = $contextDao->getById($submission->getData('contextId'));
-
         if (!empty($reviewDoiId)) {
+            $submission = Repo::submission()->get($reviewAssignment->getData('submissionId'));
+
+            /** @var JournalDAO $contextDao */
+            $contextDao = DAORegistry::getDAO('JournalDAO');
+
+            /** @var Journal $context */
+            $context = $contextDao->getById($submission->getData('contextId'));
+
             if (!$enabledDoiTypesOnly || $context->isDoiTypeEnabled(self::TYPE_PEER_REVIEW)) {
                 $doiIds[] = $reviewDoiId;
             }
