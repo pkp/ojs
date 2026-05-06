@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-01-26 13:12+0000\n"
+"PO-Revision-Date: 2026-05-06 16:49+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/invitation/"
 "ky/>\n"
@@ -80,3 +80,7 @@ msgstr ""
 
 msgid "invitation.role.masthead"
 msgstr "Журналдын титулдук барагы"
+
+msgid "invitation.orcid.acceptInvitation.message"
+msgstr ""
+"Тастыкталган жок. ORCID iDңызды OJSтеги профилұңыздын тастыктасаңыз болот."
