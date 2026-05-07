@@ -21,6 +21,7 @@ use APP\observers\events\UsageEvent;
 use APP\publication\Publication;
 use APP\template\TemplateManager;
 use PKP\plugins\Hook;
+use PKP\submissionFile\enums\MediaVariantType;
 use PKP\submissionFile\SubmissionFile;
 
 class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
@@ -167,7 +168,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
         $contents = app()->get('file')->fs->read($submissionFile->getData('path'));
 
         // Replace media file references
-        $embeddableFiles = Repo::submissionFile()
+        $dependentFiles = Repo::submissionFile()
             ->getCollector()
             ->filterByAssoc(
                 Application::ASSOC_TYPE_SUBMISSION_FILE,
@@ -176,6 +177,23 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
             ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_DEPENDENT])
             ->includeDependentFiles()
             ->getMany();
+
+        // Publication-level media files can be referenced from any HTML galley of
+        // the same publication. Embed only the web variant; high-resolution variants
+        // are reserved for download/export use cases (e.g. PubMed Central).
+        $mediaFiles = Repo::submissionFile()
+            ->getCollector()
+            ->filterByAssoc(
+                Application::ASSOC_TYPE_PUBLICATION,
+                [$galley->getData('publicationId')]
+            )
+            ->filterByFileStages([SubmissionFile::SUBMISSION_FILE_MEDIA])
+            ->getMany()
+            ->filter(fn ($file) => $file->getData('variantType') !== MediaVariantType::HIGH_RESOLUTION->value);
+
+        // Iterate media first so that a dependent file with the same filename wins,
+        // since dependents are explicitly bound to this galley.
+        $embeddableFiles = $mediaFiles->concat($dependentFiles);
 
         $referredArticle = null;
         foreach ($embeddableFiles as $embeddableFile) {
