@@ -166,9 +166,6 @@ msgstr ""
 msgid "galley.publicationNotFound"
 msgstr "The publication for this galley could not be found."
 
-msgid "publication.access"
-msgstr "Access"
-
 msgid "publication.assignToIssue.description"
 msgstr "Choose whether to publish this now or include it in an issue."
 
@@ -181,17 +178,8 @@ msgstr "Assign categories to help organize and filter this publication."
 msgid "publication.coverImage.description"
 msgstr "Upload an image to represent this publication."
 
-msgid "publication.display"
-msgstr "Display"
-
-msgid "publication.insertContent.empty"
-msgstr "No saved summaries found for this submission's review revisions."
-
 msgid "publication.pages.description"
 msgstr "Enter page numbers for this publication, if applicable."
-
-msgid "publication.placement"
-msgstr "Placement"
 
 msgid "publication.publicationDate"
 msgstr "Publication Date"
@@ -202,17 +190,8 @@ msgstr "Publication Settings"
 msgid "publication.publicationSettings.urlPath.description"
 msgstr "Set a custom URL for this publication, or leave blank to use the default."
 
-msgid "publication.publicationTiming"
-msgstr "Publication Timing"
-
 msgid "publication.section.description"
 msgstr "Choose the journal section where this publication will appear."
-
-msgid "publication.summaryOfChanges.description"
-msgstr "This will appear publicly as the version amendment notice. Ensure it accurately reflects the changes made in this version before publishing."
-
-msgid "publication.versionAndUpdates"
-msgstr "Version and Updates"
 
 msgid "publication.assignedToIssue"
 msgstr ""
