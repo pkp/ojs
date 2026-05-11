@@ -65,6 +65,7 @@ class DashboardHandler extends PKPDashboardHandler
             ];
         }
         $pageInitConfig['componentForms']['updateTypeOptions'] = $updateTypeOptions;
+        $pageInitConfig['componentForms']['defaultUpdateType'] = UpdateType::NEW_VERSION->value;
 
         $templateMgr->setState(['pageInitConfig' => $pageInitConfig]);
     }

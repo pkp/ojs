@@ -136,7 +136,7 @@ class IssueEntryForm extends FormComponent
                     fn (UpdateType $case) => ['value' => $case->value, 'label' => $case->label()],
                     UpdateType::cases()
                 ),
-                'value' => $publication->getData('updateType'),
+                'value' => $publication->getData('updateType') ?? UpdateType::NEW_VERSION->value,
                 'size' => 'large',
             ]))
             ->addField(new FieldRichTextarea('summaryOfChanges', [
