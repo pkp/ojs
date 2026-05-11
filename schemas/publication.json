@@ -59,6 +59,15 @@
 		"sectionId": {
 			"type": "integer",
 			"apiSummary": true
+		},
+		"updateType": {
+			"type": "string",
+			"description": "The type of update represented by this publication version (e.g. addendum, correction, retraction). One of the UpdateType enumeration values.",
+			"apiSummary": true,
+			"validation": [
+				"nullable",
+				"in:addendum,clarification,correction,corrigendum,erratum,expression_of_concern,new_edition,new_version,partial_retraction,removal,retraction,withdrawal"
+			]
 		}
 	}
 }

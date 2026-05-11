@@ -20,6 +20,7 @@ use APP\components\forms\dashboard\SubmissionFilters;
 use APP\core\Application;
 use APP\core\Request;
 use APP\facades\Repo;
+use APP\publication\enums\UpdateType;
 use APP\template\TemplateManager;
 use PKP\pages\dashboard\PKPDashboardHandler;
 use PKP\submission\reviewer\recommendation\ReviewerRecommendation;
@@ -55,6 +56,15 @@ class DashboardHandler extends PKPDashboardHandler
             ->getCollector()
             ->filterByContextIds([$context->getId()])
             ->getCount();
+
+        $updateTypeOptions = [];
+        foreach (UpdateType::cases() as $updateType) {
+            $updateTypeOptions[] = [
+                'label' => $updateType->label(),
+                'value' => $updateType->value,
+            ];
+        }
+        $pageInitConfig['componentForms']['updateTypeOptions'] = $updateTypeOptions;
 
         $templateMgr->setState(['pageInitConfig' => $pageInitConfig]);
     }
