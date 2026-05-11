@@ -16,13 +16,13 @@
 namespace APP\components\forms\publication;
 
 use APP\facades\Repo;
-use APP\publication\enums\UpdateType;
 use PKP\components\forms\FieldAutosuggestPreset;
 use PKP\components\forms\FieldRichTextarea;
 use PKP\components\forms\FieldSelect;
 use PKP\components\forms\FieldText;
 use PKP\components\forms\FieldUploadImage;
 use PKP\components\forms\FormComponent;
+use PKP\publication\enums\UpdateType;
 
 class IssueEntryForm extends FormComponent
 {
