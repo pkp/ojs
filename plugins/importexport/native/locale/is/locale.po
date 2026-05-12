@@ -1,35 +1,42 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
+# Helgi Sigurbjörnsson <helgi.sigurbjornsson@landsbokasafn.is>, 2026.
 msgid ""
 msgstr ""
-"Language: is_IS\n"
+"PO-Revision-Date: 2026-05-12 12:20+0000\n"
+"Last-Translator: Helgi Sigurbjörnsson <helgi.sigurbjornsson@landsbokasafn.is>"
+"\n"
+"Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-native/is/>\n"
+"Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.importexport.native.displayName"
-msgstr ""
+msgstr "Innbyggð XML-viðbót"
 
 msgid "plugins.importexport.native.description"
-msgstr ""
+msgstr "Flytja inn og út greinar og tölublöð á innbyggðu XML-sniði OJS."
 
 msgid "plugins.importexport.native.import"
-msgstr ""
+msgstr "Flytja inn"
 
 msgid "plugins.importexport.native.import.instructions"
-msgstr ""
+msgstr "Hlaða upp XML skrá til innflutnings"
 
 msgid "plugins.importexport.native.exportSubmissionsSelect"
-msgstr ""
+msgstr "Velja greinar til útflutnings"
 
 msgid "plugins.importexport.native.exportSubmissions"
-msgstr ""
+msgstr "Flytja greinar út"
 
 msgid "plugins.importexport.native.exportIssues"
-msgstr ""
+msgstr "FLytja tölublöð út"
 
 msgid "plugins.importexport.native.results"
-msgstr ""
+msgstr "Niðurstöður innflutnings"
 
 msgid "plugins.inportexport.native.uploadFile"
 msgstr ""
