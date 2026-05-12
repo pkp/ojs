@@ -2,7 +2,7 @@
 # Monika Tylawska <monika.tylawska@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-10 21:53+0000\n"
+"PO-Revision-Date: 2026-05-12 10:27+0000\n"
 "Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/locale/rue/>\n"
 "Language: rue\n"
@@ -178,7 +178,7 @@ msgid "article.journalSection"
 msgstr "Діл часопису"
 
 msgid "common.software"
-msgstr "Open Journal Systems"
+msgstr "Отворены системы денників"
 
 msgid "article.submissionId"
 msgstr "Ідентыфікатор зголошыня"
@@ -195,7 +195,7 @@ msgid "common.homePageHeader.altText"
 msgstr "Наголовок головной стороны"
 
 msgid "article.suppFile"
-msgstr "Пміцничый файль"
+msgstr "Поміцничый файль"
 
 msgid "doi.manager.settings.publications"
 msgstr "Статі"
@@ -400,3 +400,199 @@ msgstr "Актуальный номер"
 
 msgid "user.authorization.representationNotFound"
 msgstr "Жадана коректа не остала найдена."
+
+msgid "user.role.manager"
+msgstr "Адміністратор Часопису"
+
+msgid "subscriptions.status.needsInformation"
+msgstr "Вымагат інформациі"
+
+msgid "user.role.subEditors"
+msgstr "Редакторы ділів"
+
+msgid "user.role.subscriptionManagers"
+msgstr "Адміністраторы субскрибциі"
+
+msgid "user.role.journalAssistants"
+msgstr "Прислужникы часопису"
+
+msgid "user.noRoles.noRolesForJournal"
+msgstr ""
+"Твоє конто не ма выбраных ріль до того часопису. Выбер єдну одповідню акцию "
+"з листы долов:"
+
+msgid "doi.issue.incorrectContext"
+msgstr ""
+"Не можна утворити ідентыфікатора DOI для слідуючого номеру: {$itemTitle}. "
+"Номер тот не фунґує в теперішнім часописі."
+
+msgid "doi.issue.notPublished"
+msgstr ""
+"Зле означыня статі през DOI для {$pubObjectTitle}. Номер мусит быти "
+"опубликуваний закля буде можніст актуалізациі."
+
+msgid "user.reviewerPrompt"
+msgstr "Ци хтіл быс рецензувати тексты зголашаны до того часопису?"
+
+msgid "user.reviewerPrompt.userGroup"
+msgstr "Гей, вышлий просьбу о наданя {$userGroup} управніня."
+
+msgid "user.reviewerPrompt.optin"
+msgstr ""
+"Гей, хцу доставати звіданя о рецензуваня текстів, котры сут зголошаны до "
+"того часопису."
+
+msgid "user.register.contextsPrompt"
+msgstr ""
+"До котрых часописів на тій стороні хтіл бы-с (хотіла бы-с) ся зареґіструвати?"
+
+msgid "user.register.otherContextRoles"
+msgstr "Вышлий звіданя о наданя управнінь."
+
+msgid "user.register.noContextReviewerInterests"
+msgstr ""
+"Кєд зголосил єс охоту, жебы остати рецензентом в буд-котрым часописі, введ "
+"своі науковы заінтересуваня."
+
+msgid "user.myJournals"
+msgstr "Моі часописы"
+
+msgid "user.manageMySubscriptions"
+msgstr "Заряджай моіма субскрибциями"
+
+msgid "user.noRoles.chooseJournal"
+msgstr "Твоє конто не є тепер приписане до ниякых часописів. Выбер часопис:"
+
+msgid "user.noRoles.submitArticle"
+msgstr "Зголос рекомендацию"
+
+msgid "user.noRoles.submitArticleRegClosed"
+msgstr "Перешлий статю: Реґістрация авторів є тепер вылучена."
+
+msgid "user.noRoles.regReviewer"
+msgstr "Зареґіструй яко рецензент"
+
+msgid "user.noRoles.regReviewerClosed"
+msgstr "Зареґіструй яко рецензент: Реґістрация рецензентів є тепер вылучена."
+
+msgid "user.role.subEditor"
+msgstr "Редактор Ділу"
+
+msgid "user.role.subscriptionManager"
+msgstr "Адміністратор субскрибциі"
+
+msgid "user.role.managers"
+msgstr "Адміністраторы часопису"
+
+msgid "user.role.journalAssistant"
+msgstr "Прислужник часопису"
+
+msgid "issue.issue"
+msgstr "Номер"
+
+msgid "issue.issues"
+msgstr "Номеры"
+
+msgid "issue.title"
+msgstr "Наголовок"
+
+msgid "issue.viewIssueIdentification"
+msgstr "Вкаж {$identification}"
+
+msgid "issue.volume"
+msgstr "Том"
+
+msgid "issue.number"
+msgstr "Номер"
+
+msgid "issue.vol"
+msgstr "Том"
+
+msgid "issue.no"
+msgstr "Но."
+
+msgid "issue.year"
+msgstr "Рік"
+
+msgid "issue.noIssues"
+msgstr "Брак номерів"
+
+msgid "issue.toc"
+msgstr "Зміст"
+
+msgid "issue.abstract"
+msgstr "Абстракт"
+
+msgid "issue.coverPage.altText"
+msgstr "Окладинка"
+
+msgid "issue.fullIssue"
+msgstr "Полный номер"
+
+msgid "issue.nonpdf.title"
+msgstr "Побер номер"
+
+msgid "issue.viewIssue"
+msgstr "Вкаж номер"
+
+msgid "issue.return"
+msgstr "Верний до дрібниць номеру"
+
+msgid "doi.issue.incorrectStaleStatus"
+msgstr ""
+"Неправильный статус DOI для слідуючого номеру: {$itemTitle}. DOI мусит мати "
+"статус \"Зареґіструваный\" або \"Зголошеный\"."
+
+msgid "subscriptionTypes.currency"
+msgstr "Грошы"
+
+msgid "subscriptionTypes.year"
+msgstr "рік"
+
+msgid "subscriptionTypes.years"
+msgstr "рокы"
+
+msgid "subscriptionTypes.month"
+msgstr "місяц"
+
+msgid "subscriptionTypes.months"
+msgstr "місцяці"
+
+msgid "subscriptionTypes.nonExpiring"
+msgstr "Неограничено"
+
+msgid "subscriptionTypes.format"
+msgstr "Формат"
+
+msgid "subscriptionTypes.format.online"
+msgstr "Версия онляйн"
+
+msgid "subscriptionTypes.format.print"
+msgstr "Версия друкувана"
+
+msgid "subscriptionTypes.format.printOnline"
+msgstr "Версия друкувана як тіж онляйн"
+
+msgid "subscriptions.inactive"
+msgstr "Неактывна"
+
+msgid "subscriptions.status"
+msgstr "Статус"
+
+msgid "subscriptions.status.active"
+msgstr "Актывна"
+
+msgid "subscriptions.status.needsApproval"
+msgstr "Вымагат затверджыня"
+
+msgid "subscriptions.status.awaitingManualPayment"
+msgstr "Жде на оплату"
+
+msgid "subscriptions.status.awaitingOnlinePayment"
+msgstr "Жде на оплату онляйн"
+
+msgid "subscriptions.status.noSubscription"
+msgstr "Не маш актывной субскрибциі."
+
+msgid "subscriptions.status.other"
+msgstr "Інча, смотр увагы"
