@@ -1,9 +1,11 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
 # Haukur Arnthorsson <haukura@haukura.is>, 2023.
+# Helgi Sigurbjörnsson <helgi.sigurbjornsson@landsbokasafn.is>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-10-16 13:22+0000\n"
-"Last-Translator: Haukur Arnthorsson <haukura@haukura.is>\n"
+"PO-Revision-Date: 2026-05-12 10:27+0000\n"
+"Last-Translator: Helgi Sigurbjörnsson <helgi.sigurbjornsson@landsbokasafn.is>"
+"\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/locale/is/"
 ">\n"
 "Language: is\n"
@@ -11,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "user.authorization.journalDoesNotPublish"
 msgstr "Þetta tímarit birtir ekki innihald sitt á vefnum."
@@ -55,7 +57,7 @@ msgid "common.journalHomepageImage.altText"
 msgstr "Forsíðumynd tímaritsins"
 
 msgid "doi.manager.settings.publications"
-msgstr ""
+msgstr "Tímaritsgreinar"
 
 msgid "navigation.journalHelp"
 msgstr "Hjálp"
