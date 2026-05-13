@@ -3919,7 +3919,7 @@
 						"description": "Available variables",
 						"schema": {
 							"type": "object",
-							"description": "The variables that can be used in task templates. The key indicates the variable name and the value its localized description",
+							"description": "The variables that can be used in task templates. The key indicates the variable name and the value of its localized description",
 							"example": {
 								"taskDueDate": "The specific date by which the task should be finished",
 								"taskOwnerName": "The full name of the user responsible for the task"
