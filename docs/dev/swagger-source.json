@@ -62,7 +62,7 @@
 				"Backend",
 				"ORCID",
 				"Emails",
-				"Edit Task Templates",
+				"Editorial Task Templates",
 				"Categories",
 				"Comments",
 				"Comments / Reports",
@@ -168,7 +168,7 @@
 			"description": "Only admins and journal managers can access these endpoints."
 		},
 		{
-			"name": "Edit Task Templates",
+			"name": "Editorial Task Templates",
 			"description": "Endpoints used to manage editorial task templates (discussions and tasks)."
 		},
 		{
@@ -3907,6 +3907,25 @@
 				},
 				"404": { "description": "Template not found in current context" },
 				"422": { "description": "Validation error" }
+				}
+			}
+		},
+		"/editTaskTemplates/variables": {
+			"get": {
+				"tags": ["Editorial Task Templates"],
+				"summary": "List available variables for task/discussion templates",
+				"responses": {
+					"200": {
+						"description": "Available variables",
+						"schema": {
+							"type": "object",
+							"description": "The variables that can be used in task templates. The key indicates the variable name and the value of its localized description",
+							"example": {
+								"taskDueDate": "The specific date by which the task should be finished",
+								"taskOwnerName": "The full name of the user responsible for the task"
+							}
+						}
+					}
 				}
 			}
 		},
