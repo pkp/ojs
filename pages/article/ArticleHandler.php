@@ -324,16 +324,16 @@ class ArticleHandler extends Handler
         ]);
 
         // Check if JATS is publicly available for this publication
-        if ($publication->getData('jatsPublicVisibility')) {
-            $templateMgr->assign([
-                'jatsDownloadUrl' => $request->getDispatcher()->url(
+        $templateMgr->assign([
+            'jatsDownloadUrl' => $publication->getData('jatsPublicVisibility')
+                ? $request->getDispatcher()->url(
                     $request,
                     PKPApplication::ROUTE_API,
                     $context->getPath(),
                     "submissions/{$article->getBestId()}/publications/{$publication->getId()}/jats/download"
                 )
-            ]);
-        }
+                : ''
+        ]);
 
         // Citations
         $templateMgr->assign([
@@ -402,12 +402,8 @@ class ArticleHandler extends Handler
             );
 
             $paymentManager = Application::get()->getPaymentManager($context);
-            if ($paymentManager->onlyPdfEnabled()) {
-                $templateMgr->assign('restrictOnlyPdf', true);
-            }
-            if ($paymentManager->purchaseArticleEnabled()) {
-                $templateMgr->assign('purchaseArticleEnabled', true);
-            }
+            $templateMgr->assign('restrictOnlyPdf', (bool) $paymentManager->onlyPdfEnabled());
+            $templateMgr->assign('purchaseArticleEnabled', (bool) $paymentManager->purchaseArticleEnabled());
 
             if (!Hook::call('ArticleHandler::view', [&$request, &$issue, &$article, $publication])) {
                 $templateMgr->display('frontend/pages/article.tpl');
