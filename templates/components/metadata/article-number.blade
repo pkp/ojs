@@ -1,0 +1,8 @@
+@if ($publication->getData('articleNumber'))
+    <x-metadata.default
+        slug="article-number"
+        title="{{ __('submission.articleNumber') }}"
+    >
+        {{ $publication->getData('articleNumber') }}
+    </x-metadata.default>
+@endif

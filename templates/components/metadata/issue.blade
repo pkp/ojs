@@ -1,0 +1,24 @@
+@if ($issue)
+    <x-metadata.default
+        slug="issue"
+        title="{{ __('issue.issue') }}"
+    >
+        <x-arrow-link
+            href="{{
+                ViewHelper::url([
+                    'page' => 'issue',
+                    'op' => 'view',
+                    'path' => $issue->getBestIssueId()
+                ])
+            }}"
+        >
+            {{
+                $issue->getIssueIdentification([
+                    'showVolume' => true,
+                    'showNumber' => true,
+                    'showYear' => true,
+                ])
+            }}
+        </x-arrow-link>
+    </x-metadata.default>
+@endif

@@ -1,0 +1,8 @@
+@if ($publication->getData('pages'))
+    <x-metadata.default
+        slug="pages"
+        title="{{ __('editor.issues.pages') }}"
+    >
+        {{ $publication->getData('pages') }}
+    </x-metadata.default>
+@endif

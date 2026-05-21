@@ -1,0 +1,8 @@
+@if ($section)
+    <x-metadata.default
+        slug="section"
+        title="{{ __('section.section') }}"
+    >
+        {{ $section->getLocalizedTitle() }}
+    </x-metadata.default>
+@endif
