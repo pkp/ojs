@@ -231,6 +231,7 @@ class ArticleHandler extends Handler
         $templateMgr->assign([
             'issue' => $issue,
             'article' => $article,
+            'submission' => $article,
             'publication' => $publication,
             'currentPublication' => $article->getCurrentPublication(),
             'galley' => $this->galley,
