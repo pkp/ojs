@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
-"PO-Revision-Date: 2026-05-22 12:39+0000\n"
+"PO-Revision-Date: 2026-05-22 13:10+0000\n"
 "Last-Translator: lena bojcic <lenabojcicck@gmail.com>\n"
 "Language-Team: Serbian (latin) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/sr_Latn/>\n"
@@ -1041,6 +1041,8 @@ msgstr ""
 
 msgid "manager.setup.searchDescription.description"
 msgstr ""
+"Unesite kratak opis časopisa (50–300 znakova) koji pretraživači mogu "
+"prikazati prilikom navođenja časopisa u rezultatima pretrage."
 
 msgid "manager.setup.sectionsAndSectionEditors"
 msgstr "Sekcije i urednici sekcija"
@@ -1066,10 +1068,10 @@ msgid "manager.setup.showGalleyLinksDescription"
 msgstr "Uvek pokaži veze prem finalnim kopijama i ukaži na ograničen pristup."
 
 msgid "manager.setup.siteAccess.view"
-msgstr ""
+msgstr "Pristup sajtu"
 
 msgid "manager.setup.siteAccess.viewContent"
-msgstr ""
+msgstr "Vidi sadržaj članka"
 
 msgid "manager.setup.stepsToJournalSite"
 msgstr "Pet koraka do sajta časopisa"
@@ -1096,15 +1098,22 @@ msgstr ""
 
 msgid "manager.setup.disableSubmissions.description"
 msgstr ""
+"Spreči korisnike da šalju nove članke časopisu. Podnošenje može biti "
+"onemogućeno za pojedinačne rubrike časopisa na stranici podešavanja <a href="
+"\"{$url}\">rubrika časopisa</a>."
 
 msgid "manager.setup.disableSubmissions.notAccepting"
 msgstr ""
+"Ovaj časopis ne prihvata trenutno podneske. Pogledajte podešavanja toka rada "
+"kako biste omogućili podnošenje."
 
 msgid "manager.setup.enableOai"
-msgstr ""
+msgstr "Omogući OAI"
 
 msgid "manager.setup.enableOai.description"
 msgstr ""
+"Pružite metapodatke spoljnim servisima za indeksiranje putem <a href=\"https"
+"://www.openarchives.org/\">Open Archives Initiative</a>."
 
 msgid "manager.setup.typeExamples"
 msgstr ""
@@ -1267,22 +1276,22 @@ msgstr ""
 "isteka pretplate."
 
 msgid "manager.subscriptionPolicies.xMonths"
-msgstr ""
+msgstr "{$x} meseci"
 
 msgid "manager.subscriptionPolicies.xWeeks"
-msgstr ""
+msgstr "{$x} nedelja"
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
-msgstr ""
+msgstr "Obavestite pretplatnike imejlom nakon isteka pretplate"
 
 msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
-msgstr ""
+msgstr "Obavestite pretplatnike imejlom nakon isteka pretplate."
 
 msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
-msgstr ""
+msgstr "Obavestite pretplatnike imejlom pre isteka pretplate."
 
 msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
-msgstr ""
+msgstr "Obavestite pretplatnike imejlom pre isteka pretplate."
 
 msgid "manager.subscriptionPolicies.expiryReminders"
 msgstr "Podsetnici o isteku pretplate"
@@ -1423,7 +1432,7 @@ msgid "manager.institutionalSubscriptions"
 msgstr "Institucionalne pretplate"
 
 msgid "manager.subscriptions.confirmRenew"
-msgstr ""
+msgstr "Da li ste sigurni da želite da obnovite ovu pretplatu?"
 
 msgid "manager.subscriptions.confirmDelete"
 msgstr "Da li ste sigurni da želite obrisati ovu pretplatu?"
@@ -1486,10 +1495,10 @@ msgid "manager.subscriptions.form.typeIdValid"
 msgstr "Odaberite ispravan tip pretplate."
 
 msgid "manager.subscriptions.form.institution"
-msgstr ""
+msgstr "Institucija"
 
 msgid "manager.subscriptions.form.institutionIdValid"
-msgstr ""
+msgstr "Molimo izaberite važeću instituciju."
 
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Datum početka"
@@ -1508,9 +1517,12 @@ msgstr "Potreban je datum završetka pretplate."
 
 msgid "manager.subscriptions.form.dateStartEmpty"
 msgstr ""
+"Ovo je vrsta pretplate koja ne ističe; molimo vas ne navodite datum početka."
 
 msgid "manager.subscriptions.form.dateEndEmpty"
 msgstr ""
+"Ovo je vrsta pretplate koja ne ističe; molimo vas ne navodite datum "
+"završetka."
 
 msgid "manager.subscriptions.form.dateEndValid"
 msgstr "Odaberite ispravan datum završetka pretplate."
@@ -1621,6 +1633,8 @@ msgstr ""
 
 msgid "manager.subscriptions.form.institutionRequired"
 msgstr ""
+"Institucija mora da bude kreirana pre nego što se mogu napraviti nove "
+"pretplate."
 
 msgid "manager.subscriptions.ipRange"
 msgstr "IP opseg"
@@ -1813,13 +1827,13 @@ msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
 msgstr "Uspešno kreiran tip pretplate."
 
 msgid "manager.navigationMenus.subscriptions.description"
-msgstr ""
+msgstr "Link ka stranici koja opisuje pretplate koje nudite."
 
 msgid "manager.navigationMenus.mySubscriptions.description"
-msgstr ""
+msgstr "Link ka stranici koja opisuje trenutne i prethodne pretplate posetioca."
 
 msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
-msgstr ""
+msgstr "Ovaj link će biti prikazan samo kada je posetilac prijavljen."
 
 msgid "manager.setup.categories"
 msgstr "Kategorije"
@@ -1842,6 +1856,17 @@ msgstr ""
 
 msgid "settings.roles.gridDescription"
 msgstr ""
+"Uloge su grupe korisnika u časopisu kojima se dodeljuju različiti nivoi "
+"dozvola i pripadajući radni tokovi unutar časopisa. Postoji pet različitih "
+"nivoa dozvola: Urednici časopisa imaju pristup svemu u časopisu (svom "
+"sadržaju i svim podešavanjima); Urednici rubrika imaju potpun pristup svim "
+"dodeljenim sadržajima; Urednički asistenti imaju ograničen pristup svim "
+"podnescima koji su im eksplicitno dodeljeni od strane urednika; Recenzenti "
+"mogu da vide i obavljaju recenziju podnesaka koji su im dodeljeni; Autori "
+"mogu da vide i komuniciraju sa ograničenim brojem informacija o svojim "
+"sopstvenim podnescima. Pored toga, postoji pet različitih faza kojima uloge "
+"mogu imati pristup: Podnošenje, Interna recenzija, Recenzija, Urednički "
+"proces i Produkcija."
 
 msgid "manager.publication.library"
 msgstr "Izdavačka biblioteka"
@@ -1867,9 +1892,17 @@ msgstr ""
 
 msgid "manager.setup.resetPermissions.description"
 msgstr ""
+"Uklonite izjavu o autorskim pravima i informacije o licenci za svaki "
+"objavljeni članak, vraćajući ih na trenutna podrazumevana podešavanja "
+"časopisa. Ovo će trajno ukloniti sve prethodne informacije o autorskim "
+"pravima i licenciranju povezane sa člancima. U nekim slučajevima možda "
+"nemate zakonsko pravo da promenite licencu dela koje je objavljeno pod "
+"drugačijom licencom. Pažljivo koristite ovaj alat i konsultujte pravnog "
+"stručnjaka ako niste sigurni koja prava imate nad člancima objavljenim u "
+"svom časopisu."
 
 msgid "manager.setup.resetPermissions.success"
-msgstr ""
+msgstr "Dozvole članka su uspešno resetovane."
 
 msgid "grid.genres.title.short"
 msgstr "Komponente"
@@ -2519,3 +2552,6 @@ msgid "manager.setup.contextSummary.description"
 msgstr ""
 "Ponudite kratak opis svog časopisa kako biste pružili uvid u njegov sadržaj "
 "i svrhu."
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "Prelom broja nije mogao biti uvezen, nedostaje fajl."
