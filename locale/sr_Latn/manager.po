@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
-"PO-Revision-Date: 2026-05-22 13:10+0000\n"
+"PO-Revision-Date: 2026-05-22 13:29+0000\n"
 "Last-Translator: lena bojcic <lenabojcicck@gmail.com>\n"
 "Language-Team: Serbian (latin) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/sr_Latn/>\n"
@@ -1997,7 +1997,7 @@ msgid "plugins.importexport.common.export.error.outputFileNotWritable"
 msgstr "U fajl {$param} nije moguće pisati."
 
 msgid "plugins.importexport.common.export.error.inputFileNotReadable"
-msgstr ""
+msgstr "Ulazni fajl {$param} nije čitljiv."
 
 msgid "plugins.importexport.common.register.error.mdsError"
 msgstr ""
@@ -2008,43 +2008,46 @@ msgid "plugins.importexport.common.register.success"
 msgstr "Uspešna registracija!"
 
 msgid "plugins.importexport.common.validation.success"
-msgstr ""
+msgstr "Validacija uspešna!"
 
 msgid "plugins.importexport.common.validation.fail"
-msgstr ""
+msgstr "Validacija nije uspela."
 
 msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
 msgstr "Nedostaje DOI prefiks za časopis sa putanjom {$path}."
 
 msgid "plugins.importexport.common.error.unknownObjects"
-msgstr ""
+msgstr "Navedeni objekti nisu pronađeni."
 
 msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr ""
+"Pošaljite kopiju primarnom kontaktu, navedenom u podešavanjima časopisa."
 
 msgid "stats.contextStats"
-msgstr ""
+msgstr "Statistika časopisa"
 
 msgid "stats.context.tooltip.text"
-msgstr ""
+msgstr "Broj posetilaca koji gledaju početnu stranicu časopisa."
 
 msgid "stats.context.tooltip.label"
-msgstr ""
+msgstr "O statistici časopisa"
 
 msgid "stats.context.downloadReport.description"
 msgstr ""
+"Preuzmi CVS/Excel tabelu sa statistikom korišćenja ovog časopisa prema "
+"sledećim parametrima."
 
 msgid "stats.context.downloadReport.downloadContext.description"
-msgstr ""
+msgstr "Broj poseta početnoj stranici časopisa."
 
 msgid "stats.context.downloadReport.downloadContext"
-msgstr ""
+msgstr "Preuzmi časopis"
 
 msgid "stats.issueStats"
-msgstr ""
+msgstr "Statistika broja"
 
 msgid "stats.issues.details"
-msgstr ""
+msgstr "Pregledi i preuzimanja"
 
 msgid "stats.issues.searchIssueDescription"
 msgstr ""
@@ -2555,3 +2558,13 @@ msgstr ""
 
 msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
 msgstr "Prelom broja nije mogao biti uvezen, nedostaje fajl."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"Prelom broja {$id} nije mogao biti izvezen, njegov fajl nije mogao biti "
+"pronađen na putanji\"{$path}\"."
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"Naslovna strana broja {$id} nije mogla biti izvezena, njen fajl nije "
+"pronađen na putanjii \"{$path}\"."
