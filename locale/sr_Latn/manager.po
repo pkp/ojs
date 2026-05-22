@@ -1,38 +1,43 @@
 # Biljana Cubrovic <biljana.cubrovic@gmail.com>, 2021.
+# lena bojcic <lenabojcicck@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
-"PO-Revision-Date: 2021-07-08 13:00+0000\n"
-"Last-Translator: Biljana Cubrovic <biljana.cubrovic@gmail.com>\n"
+"PO-Revision-Date: 2026-05-22 11:44+0000\n"
+"Last-Translator: lena bojcic <lenabojcicck@gmail.com>\n"
 "Language-Team: Serbian (latin) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/sr_Latn/>\n"
-"Language: sr_RS@latin\n"
+"Language: sr_Latn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "manager.distribution.access"
 msgstr "Pristup"
 
 msgid "manager.distribution.copyrightYearBasis.description"
 msgstr ""
+"Izaberite kako se određuje podrazumevani datum autorskih prava za članak. "
+"Ova podrazumevana vrednost može biti promenjena za pojedinačne slučajeve. "
+"Ako objavljujete članke pojedinačno po prijemu, nemojte koristiti datum "
+"objavljivanja broja."
 
 msgid "manager.distribution.copyrightYearBasis.issue"
-msgstr ""
+msgstr "Koristiti datum objavljivanja broja"
 
 msgid "manager.distribution.copyrightYearBasis.submission"
-msgstr ""
+msgstr "Koristi datum objavljivanja članka"
 
 msgid "manager.distribution.publication"
-msgstr ""
+msgstr "Publikacija"
 
 msgid "manager.distribution.publishingMode"
-msgstr ""
+msgstr "Način objavljivanja"
 
 msgid "manager.distribution.publishingMode.none"
 msgstr "OJS neće biti korišćen za objavljivanje sadržaja časopisa onlajn."
@@ -47,6 +52,8 @@ msgstr ""
 
 msgid "manager.setup.enableDois.description"
 msgstr ""
+"Dopusti dodjeljivanje digitalnih identifikatora objekata (DOI) za radove "
+"objavljene u ovom časopisu."
 
 #, fuzzy
 msgid "doi.manager.settings.doiObjectsRequired"
@@ -54,9 +61,11 @@ msgstr "Odaberite objekte kojima bi DOI-i trebali biti dodeljeni."
 
 msgid "doi.manager.settings.doiSuffixLegacy"
 msgstr ""
+"Koristite podrazumevane obrasce..<br />%j.v%vi%i za brojeve časopisa<br /"
+">%j.v%vi%i.%a za članke<br />%j.v%vi%i.%a.g%g za prelome."
 
 msgid "doi.manager.settings.doiCreationTime.copyedit"
-msgstr ""
+msgstr "Po dolasku u fazu lektorisanja"
 
 msgid "manager.website.archiving"
 msgstr "Arhiviranje"
@@ -173,7 +182,7 @@ msgstr ""
 "naknadu pretplate odredio Upravnik časopisa (za pretplate)."
 
 msgid "subscriptionManager.subscription.confirmRemove"
-msgstr ""
+msgstr "Da li ste sigurni da želite da obrišete ovu pretplatu?"
 
 msgid "manager.payment.options.enablePayments"
 msgstr ""
@@ -237,7 +246,7 @@ msgid "manager.payment.records"
 msgstr "Zabeleške"
 
 msgid "manager.paymentTypes"
-msgstr ""
+msgstr "Načini plaćanja"
 
 msgid "manager.payment.userName"
 msgstr "ID Plaćanja"
@@ -328,6 +337,8 @@ msgstr "Urednici rubrika"
 
 msgid "manager.sections.confirmDeactivateSection.error"
 msgstr ""
+"Najmanje jedna sekcija mora biti aktivna. Posetite podešavanja toka rada da "
+"biste onemogućili sva podnošenja ovom časopisu."
 
 msgid "manager.sections.form.abbrevRequired"
 msgstr "Neophodan je skraćeni naziv za ovu rubriku"
