@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
-"PO-Revision-Date: 2026-05-22 14:55+0000\n"
+"PO-Revision-Date: 2026-05-22 16:16+0000\n"
 "Last-Translator: lena bojcic <lenabojcicck@gmail.com>\n"
 "Language-Team: Serbian (latin) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/sr_Latn/>\n"
@@ -2063,90 +2063,98 @@ msgstr ""
 "odgovaraju sledećim parametrima."
 
 msgid "stats.issues.downloadReport.downloadIssues.description"
-msgstr ""
+msgstr "Broj pregleda sadržaja i preuzimanja preloma za svaki broj."
 
 msgid "stats.issues.downloadReport.downloadIssues"
-msgstr ""
+msgstr "Preuzmi brojeve"
 
 msgid "stats.issues.countOfTotal"
-msgstr ""
+msgstr "{$count} od {$total} brojeva"
 
 msgid "stats.issues.tooltip.label"
-msgstr ""
+msgstr "O statistici brojeva"
 
 msgid "stats.issues.tooltip.text"
 msgstr ""
 
 msgid "stats.publicationStats"
-msgstr ""
+msgstr "Statistika članka"
 
 msgid "stats.publications.details"
-msgstr ""
+msgstr "Detalji članka"
 
 msgid "stats.publications.none"
 msgstr ""
+"Nisu pronađeni članci sa statistikom korišćenja koja odgovara ovim "
+"parametrima."
 
 msgid "stats.publications.totalAbstractViews.timelineInterval"
-msgstr ""
+msgstr "Ukupno pregleda apstrakta po datumu"
 
 msgid "stats.publications.totalGalleyViews.timelineInterval"
-msgstr ""
+msgstr "Ukupan pregled fajlova po datumu"
 
 msgid "stats.publications.countOfTotal"
-msgstr ""
+msgstr "{$count} od {$total} članaka"
 
 msgid "stats.publications.abstracts"
-msgstr ""
+msgstr "Apstrakti"
 
 msgid "stats.publications.galleys"
-msgstr ""
+msgstr "Fajlovi"
 
 msgid "stats.publications.downloadReport.description"
 msgstr ""
+"Preuzmite CSV/Excel tabelu sa statistikom korišćenja za članke koji "
+"odgovaraju sledećim parametrima."
 
 msgid "stats.publications.downloadReport.downloadSubmissions"
-msgstr ""
+msgstr "Preuzmi članke"
 
 msgid "stats.publications.downloadReport.downloadSubmissions.description"
-msgstr ""
+msgstr "Broj pregleda apstrakta i preuzimanja datoteka za svaki članak."
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
+"Pošaljite kopiju mejla o potvrdi prijema podneska primarnom kontaktu ovog "
+"časopisa."
 
 msgid ""
 "manager.setup.notifications.copySubmissionAckPrimaryContact.disabled."
 "description"
 msgstr ""
+"Nije definisan primarni kontakt za ovaj časopis. Primarni kontakt možete "
+"uneti u <a href=\"{$url}\">podešavanjima časopisa</a>."
 
 msgid "plugins.importexport.native.export.issues.results"
-msgstr ""
+msgstr "Izvezi rezultate brojeva časopisa"
 
 msgid "plugins.importexport.issue.cli.display"
-msgstr ""
+msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
 
 msgid "plugins.importexport.issueGalleys.exportFailed"
 msgstr ""
 
 msgid "emailTemplate.variable.context.contextName"
-msgstr ""
+msgstr "Ime časopisa"
 
 msgid "emailTemplate.variable.context.contextUrl"
-msgstr ""
+msgstr "URL početne stranice časopisa"
 
 msgid "emailTemplate.variable.context.contactName"
-msgstr ""
+msgstr "Ime primarnog kontakta časopisa"
 
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr ""
+msgstr "Inicijali časopisa"
 
 msgid "emailTemplate.variable.context.contextSignature"
-msgstr ""
+msgstr "Potpis imejla časopisa za automatske imejlove"
 
 msgid "emailTemplate.variable.context.contactEmail"
-msgstr ""
+msgstr "Imejl adresa primarnog kontatka časopisa"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "Poštanska adresa časopisa"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr ""
