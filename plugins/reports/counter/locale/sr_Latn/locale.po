@@ -1,15 +1,20 @@
+# lena bojcic <lenabojcicck@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:10+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:10+00:00\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: \n"
+"PO-Revision-Date: 2026-05-22 16:32+0000\n"
+"Last-Translator: lena bojcic <lenabojcicck@gmail.com>\n"
+"Language-Team: Serbian (latin) <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-counter/sr_Latn/>\n"
+"Language: sr_Latn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.reports.counter.description"
 msgstr ""
@@ -20,34 +25,36 @@ msgid "plugins.reports.counter"
 msgstr "COUNTER statistika"
 
 msgid "plugins.reports.counter.release"
-msgstr ""
+msgstr "COUNTER izdanje"
 
 msgid "plugins.reports.counter.error.badParameters"
-msgstr ""
+msgstr "Parametri izveštaja nisu bili važeći."
 
 msgid "plugins.reports.counter.error.badRequest"
-msgstr ""
+msgstr "Zahtev za izveštaj je nevažeći."
 
 msgid "plugins.reports.counter.error.noResults"
-msgstr ""
+msgstr "Nisu pronađeni rezultati za ovaj izveštaj."
 
 msgid "plugins.reports.counter.error.noXML"
-msgstr ""
+msgstr "Rezultati nisu mogli biti formatirani kao XML."
 
 msgid "plugins.reports.counter.1a.name"
-msgstr ""
+msgstr "COUNTER Izveštaj JR1 (R3)"
 
 msgid "plugins.reports.counter.1a.description"
 msgstr ""
+"COUNTER izveštaj za časopis 1 (R3): zahtevi za preuzimanje celog teksta "
+"članaka po mesecu i časopisu"
 
 msgid "plugins.reports.counter.allCustomers"
-msgstr ""
+msgstr "Svi korisnici"
 
 msgid "plugins.reports.counter.ar1.title"
-msgstr ""
+msgstr "Izveštaj o članku 1"
 
 msgid "plugins.reports.counter.jr1.title"
-msgstr ""
+msgstr "Izveštaj o časopisu 1"
 
 #~ msgid "plugins.reports.counter.migrate"
 #~ msgstr "Migriraj Log fajl"
