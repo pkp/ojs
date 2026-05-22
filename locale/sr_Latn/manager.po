@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
-"PO-Revision-Date: 2026-05-22 11:44+0000\n"
+"PO-Revision-Date: 2026-05-22 12:11+0000\n"
 "Last-Translator: lena bojcic <lenabojcicck@gmail.com>\n"
 "Language-Team: Serbian (latin) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/sr_Latn/>\n"
@@ -462,7 +462,7 @@ msgid "manager.setup.announcements"
 msgstr "Obaveštenja"
 
 msgid "manager.setup.announcementsIntroduction"
-msgstr ""
+msgstr "Uvod"
 
 msgid "manager.setup.announcementsIntroduction.description"
 msgstr ""
@@ -561,10 +561,12 @@ msgstr ""
 "stranici Obaveštenja."
 
 msgid "manager.setup.numAnnouncementsHomepage"
-msgstr ""
+msgstr "Prikaži na početnoj stranici"
 
 msgid "manager.setup.numAnnouncementsHomepage.description"
 msgstr ""
+"Koliko obaveštenja prikazati na početnoj stranici. Ostavite prazno ako ne "
+"želite da se prikazuje nijedno."
 
 msgid "manager.setup.enableUserRegistration"
 msgstr "Posetioci mogu sami da se registruju"
@@ -627,7 +629,7 @@ msgid "manager.setup.guidingSubmissions"
 msgstr "Korak 3. Smernice za prijavu članaka"
 
 msgid "manager.setup.identity"
-msgstr ""
+msgstr "Identitet časopisa"
 
 msgid "manager.setup.includeCreativeCommons"
 msgstr ""
@@ -672,6 +674,9 @@ msgstr "Stavki po strani"
 
 msgid "manager.setup.itemsPerPage.description"
 msgstr ""
+"Ograniči broj stavki (na primer, podnesaka, korisnika ili uređivačkih "
+"zadataka) za prikaz u listi pre nego što se naknadne stavke prikažu na "
+"sledećoj stranici."
 
 msgid "manager.setup.journalAbbreviation"
 msgstr "Skraćenica časopisa"
@@ -720,6 +725,8 @@ msgstr "Inicijali časopisa"
 
 msgid "manager.setup.selectCountry"
 msgstr ""
+"Izaberite zemlju u kojoj se časopis nalazi ili zemlju poštanske adrese "
+"časopisa ili izdavača."
 
 msgid "manager.setup.journalLayout"
 msgstr "Izgled časopisa"
@@ -778,7 +785,7 @@ msgid "manager.setup.lists"
 msgstr "Liste"
 
 msgid "manager.setup.plnPluginEnable"
-msgstr ""
+msgstr "Omogućite PKP PN dodatak"
 
 msgid "manager.setup.plnDescription"
 msgstr ""
@@ -2499,3 +2506,8 @@ msgstr ""
 
 #~ msgid "doi.manager.settings.enableSubmissionDoi"
 #~ msgstr "Članak"
+
+msgid "manager.setup.contextSummary.description"
+msgstr ""
+"Ponudite kratak opis svog časopisa kako biste pružili uvid u njegov sadržaj "
+"i svrhu."
