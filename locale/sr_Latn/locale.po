@@ -1,12 +1,13 @@
 # Biljana Cubrovic <biljana.cubrovic@gmail.com>, 2021.
 # Marko Simendic <marko.simendic@gmail.com>, 2026.
+# lena bojcic <lenabojcicck@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
-"PO-Revision-Date: 2026-02-24 03:08+0000\n"
-"Last-Translator: Marko Simendic <marko.simendic@gmail.com>\n"
+"PO-Revision-Date: 2026-05-22 11:44+0000\n"
+"Last-Translator: lena bojcic <lenabojcicck@gmail.com>\n"
 "Language-Team: Serbian (latin) <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/sr_Latn/>\n"
 "Language: sr_Latn\n"
@@ -18,7 +19,7 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "user.authorization.journalDoesNotPublish"
-msgstr ""
+msgstr "Ovaj časopis ne objavljuje svoj sadržaj onlajn."
 
 msgid "context.current"
 msgstr "Aktuelni časopis:"
