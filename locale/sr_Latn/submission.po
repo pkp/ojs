@@ -1,15 +1,20 @@
+# lena bojcic <lenabojcicck@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:34+00:00\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: sr_RS@latin\n"
+"PO-Revision-Date: 2026-05-22 20:01+0000\n"
+"Last-Translator: lena bojcic <lenabojcicck@gmail.com>\n"
+"Language-Team: Serbian (latin) <http://translate.pkp.sfu.ca/projects/ojs/"
+"submission/sr_Latn/>\n"
+"Language: sr_Latn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "submission.submit.userGroup"
 msgstr "Predaj u mojoj ulozi kao..."
@@ -39,10 +44,10 @@ msgid "grid.action.workflow"
 msgstr "Proces predaje"
 
 msgid "submission.abstract.wordCount.description"
-msgstr ""
+msgstr "Apstrakt mora imati {$wordCount} reči ili manje."
 
 msgid "submission.submit.noContext"
-msgstr ""
+msgstr "Časopis ovog podneska nije mogao biti pronađen."
 
 msgid "submission.issueEntry"
 msgstr "Metapodaci"
@@ -140,58 +145,73 @@ msgstr ""
 "standardu koji se koristi za opisivanje sadržaja časopisa."
 
 msgid "section.any"
-msgstr ""
+msgstr "Bilo koja rubrika"
 
 msgid "submission.sectionOptions"
-msgstr ""
+msgstr "Opcije rubrike"
 
 msgid "catalog.browseTitles"
-msgstr ""
+msgstr "{$numTitles} stavke"
 
 msgid "catalog.category.heading"
-msgstr ""
+msgstr "Sve stavke"
 
 msgid "galley.editPublishedDisabled"
-msgstr ""
+msgstr "Prelomi ove publikacije ne mogu se uređivati jer je već objavljena."
 
 msgid "galley.publicationNotFound"
-msgstr ""
+msgstr "Publikacija za ovaj prelom nije pronađena."
 
 msgid "publication.assignToissue"
-msgstr ""
+msgstr "Dodeli broju"
 
 msgid "publication.assignedToIssue"
 msgstr ""
+"Ovo je dodeljeno broju <a href=\"{$issueUrl}\">{$issueName}</a>, ali nije "
+"zakazano za objavljivanje."
 
 msgid "publication.changeIssue"
-msgstr ""
+msgstr "Promeni broj"
 
 msgid "publication.datePublished.description"
 msgstr ""
+"Datum objavljivanja biće automatski postavljen kada broj bude objavljen. Ne "
+"unosite datum objavljivanja osim ako je članak prethodno objavljen na drugom "
+"mestu i potrebno je uneti raniji datum."
 
 msgid "publication.invalidSection"
-msgstr ""
+msgstr "Rubrika za ovu publikaciju nije pronađena."
 
 msgid "publication.inactiveSection"
-msgstr ""
+msgstr "{$section} (Inactive)"
 
 msgid "publication.invalidIssue"
-msgstr ""
+msgstr "Broj za ovu publikaciju nije pronađen."
 
 msgid "publication.publish.confirmation"
 msgstr ""
+"Svi zahtevi za publikaciju su ispunjeni. Da li ste sigurni da želite ovo da "
+"objavite?"
 
 msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
+"Svi zahtevi za objavljivanje su ispunjeni. Ovo će biti objavljeno kada se "
+"objavi {$issue}. Da li ste sigurni da želite da zakažete objavljivanje?"
 
 msgid "publication.publish.confirmation.backIssue"
 msgstr ""
+"Svi zahtevi za objavljivanje su ispunjeni. Ovo će biti odmah objavljeno u "
+"{$issue}. Da li ste sigurni da želite da objavite ovo?"
 
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
+"Svi zahtevi za objavljivanje su ispunjeni. Ovo će biti odmah objavljeno jer "
+"je datum objavljivanja postavljen na {$datePublished}. Da li ste sigurni da "
+"želite da objavite ovo?"
 
 msgid "publication.required.issue"
 msgstr ""
+"Publikacija mora biti dodeljena broju pre nego što može biti objavljena."
 
 msgid "publication.publishedIn"
 msgstr ""
