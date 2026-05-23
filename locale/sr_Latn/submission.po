@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
-"PO-Revision-Date: 2026-05-22 20:01+0000\n"
+"PO-Revision-Date: 2026-05-23 21:34+0000\n"
 "Last-Translator: lena bojcic <lenabojcicck@gmail.com>\n"
 "Language-Team: Serbian (latin) <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/sr_Latn/>\n"
@@ -214,67 +214,71 @@ msgstr ""
 "Publikacija mora biti dodeljena broju pre nego što može biti objavljena."
 
 msgid "publication.publishedIn"
-msgstr ""
+msgstr "Objavljeno u <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.scheduledIn"
-msgstr ""
+msgstr "Zakazano za objavljivanje u <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.unscheduledIn"
-msgstr ""
+msgstr "Ovo nije zakazano za objavljivanje u broju."
 
 msgid "publication.selectIssue"
-msgstr ""
+msgstr "Izaberite broj koji se zakazuje za objavljivanje"
 
 msgid "submission.publication"
 msgstr "Publikacije"
 
 msgid "publication.status.published"
-msgstr ""
+msgstr "Objavljeno"
 
 msgid "submission.status.scheduled"
-msgstr ""
+msgstr "Zakazano"
 
 msgid "publication.status.unscheduled"
-msgstr ""
+msgstr "Nije zakazano"
 
 msgid "submission.publications"
-msgstr ""
+msgstr "Publikacije"
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
+"Godina autorskih prava biće automatski postavljena kada ovo bude objavljeno "
+"u broju."
 
 msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr ""
+"Godina autorskih prava biće automatski postavljena na osnovu datuma "
+"objavljivanja."
 
 msgid "publication.datePublished"
-msgstr ""
+msgstr "Datum objavljivanja"
 
 msgid "publication.editDisabled"
-msgstr ""
+msgstr "Ova verzija je objavljena i ne može se uređivati."
 
 msgid "publication.event.published"
-msgstr ""
+msgstr "Podnesak je objavljen."
 
 msgid "publication.event.scheduled"
-msgstr ""
+msgstr "Podnesak je zakazan za objavljivanje."
 
 msgid "publication.event.unpublished"
-msgstr ""
+msgstr "Podnesak nije objavljen."
 
 msgid "publication.event.versionPublished"
-msgstr ""
+msgstr "Nova verzija je objavljena."
 
 msgid "publication.event.versionScheduled"
-msgstr ""
+msgstr "Nova verzija je zakazana za objavljivanje."
 
 msgid "publication.event.versionUnpublished"
-msgstr ""
+msgstr "Verzija je uklonjena iz publikacije."
 
 msgid "publication.invalidSubmission"
-msgstr ""
+msgstr "Podnesak za ovu publikaciju nije mogao biti pronađen."
 
 msgid "publication.publish"
-msgstr ""
+msgstr "Objavi"
 
 msgid "publication.publish.requirements"
 msgstr ""
@@ -341,30 +345,43 @@ msgstr ""
 
 msgid "doi.submission.incorrectContext"
 msgstr ""
+"Nije moguće kreirati DOI za sledeći podnesak: {$pubObjectTitle}. Ne postoji "
+"u trenutnom kontekstu časopisa."
 
 msgid "submission.layout.viewGalley"
-msgstr ""
+msgstr "Vidi prelom"
 
 msgid "galley.cantEditPublished"
-msgstr ""
+msgstr "Ovaj prelom ne može da se uređuje jer je već objavljen."
 
 msgid "submission.copyright.description"
 msgstr ""
+"Molimo vas da pročitate i razumete uslove autorskih prava za podneske u ovom "
+"časopisu."
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
+"Nije vam dozvoljeno da šaljete radove u ovaj časopis jer autore mora "
+"registrovati urednički tim. Ako smatrate da je ovo greška, kontaktirajte <a "
+"href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
+"Nije vam dozvoljeno da šaljete radove u ovaj časopis jer su predaje u svim "
+"sekcijama ovog časopisa deaktivirane ili ograničene. Ako smatrate da je ovo "
+"greška, kontaktirajte <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
+"{$contextName} ne prihvata podneske u rubrici {$section}. Ako vam je "
+"potrebna pomoć pri vraćanju podneska, kontaktirajte <a "
+"href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.sectionNotFound"
-msgstr ""
+msgstr "Rubrika za ovaj podnesak nije pronađena."
 
 msgid "submission.sectionRestrictedToEditors"
-msgstr ""
+msgstr "Samo uredničko osoblje može da šalje radove u ovu rubriku."
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Potreban je barem jedan autor."
@@ -377,6 +394,8 @@ msgstr "Unesite apstrakt rada."
 
 msgid "submission.submit.form.wordCountAlert"
 msgstr ""
+"Apstrakt je predugačak. Molimo vas da ga skratite ispod ograničenja broja "
+"reči koje je navedeno za ovu rubriku."
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Odaberite ulogu saradnika."
