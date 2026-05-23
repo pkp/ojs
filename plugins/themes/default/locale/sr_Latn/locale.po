@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:19+00:00\n"
-"PO-Revision-Date: 2026-05-23 21:34+0000\n"
+"PO-Revision-Date: 2026-05-23 23:37+0000\n"
 "Last-Translator: lena bojcic <lenabojcicck@gmail.com>\n"
 "Language-Team: Serbian (latin) <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/sr_Latn/>\n"
@@ -67,27 +67,35 @@ msgstr "Pozadinska slika zaglavlja"
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
 msgstr ""
+"Kada je otpremljena slika za početnu stranicu, prikaži je kao pozadinu "
+"zaglavlja umesto na njenoj uobičajenoj poziciji na početnoj stranici."
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
-msgstr ""
+msgstr "Prikaži sliku početne stranice kao pozadinu zaglavlja."
 
 msgid "plugins.themes.default.option.displayStats.label"
-msgstr ""
+msgstr "Opcije prikaza statistike korišćenja"
 
 msgid "plugins.themes.default.option.displayStats.none"
-msgstr ""
+msgstr "Ne prikazuj grafikon statistike korišćenja podnesaka za čitaoce."
 
 msgid "plugins.themes.default.option.displayStats.bar"
-msgstr ""
+msgstr "Koristi stubičasti (bar) tip grafikona za prikaz statistike korišćenja."
 
 msgid "plugins.themes.default.option.displayStats.line"
-msgstr ""
+msgstr "Koristi linijski tip grafikona za prikaz statistike korišćenja."
 
 msgid "plugins.themes.default.displayStats.monthInitials"
-msgstr ""
+msgstr "Jan Feb Mar Apr Maj Jun Jul Avg Sep Okt Nov Dec"
 
 msgid "plugins.themes.default.displayStats.downloads"
-msgstr ""
+msgstr "Preuzimanja"
 
 msgid "plugins.themes.default.displayStats.noStats"
-msgstr ""
+msgstr "Podaci za preuzimanje još uvek nisu dostupni."
+
+msgid "plugins.themes.default.nextSlide"
+msgstr "Sledeći slajd"
+
+msgid "plugins.themes.default.prevSlide"
+msgstr "Prethodni slajd"
