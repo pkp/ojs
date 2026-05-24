@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
-"PO-Revision-Date: 2026-05-23 21:34+0000\n"
+"PO-Revision-Date: 2026-05-24 19:30+0000\n"
 "Last-Translator: lena bojcic <lenabojcicck@gmail.com>\n"
 "Language-Team: Serbian (latin) <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/sr_Latn/>\n"
@@ -282,66 +282,87 @@ msgstr "Objavi"
 
 msgid "publication.publish.requirements"
 msgstr ""
+"Sledeći zahtevi moraju biti ispunjeni pre nego što ovo može biti objavljeno."
 
 msgid "publication.required.declined"
-msgstr ""
+msgstr "Odbijen rad ne može biti objavljen."
 
 msgid "publication.required.reviewStage"
 msgstr ""
+"Rad mora biti u fazi lekture ili produkcije pre nego što može biti objavljen."
 
 msgid "submission.license.description"
 msgstr ""
+"Licenca će biti automatski postavljena na <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> kada ovo bude objavljeno."
 
 msgid "submission.copyrightHolder.description"
 msgstr ""
+"Autorska prava će automatski biti dodeljena {$copyright} kada ovo bude "
+"objavljeno."
 
 msgid "submission.copyrightOther.description"
-msgstr ""
+msgstr "Dodeli autorska prava za objavljene radove sledećoj strani."
 
 msgid "publication.unpublish"
-msgstr ""
+msgstr "Poništi objavu"
 
 msgid "publication.unpublish.confirm"
-msgstr ""
+msgstr "Da li ste sigurni da ne želite da ovo bude objavljeno?"
 
 msgid "publication.unschedule.confirm"
-msgstr ""
+msgstr "Da li ste sigurni da ne želite da ovo bude zakazano za objavljivanje?"
 
 msgid "publication.version.details"
-msgstr ""
+msgstr "Detalji publikacije za verziju {$version}"
 
 msgid "submission.queries.production"
 msgstr "Produkcione diskusije"
 
 msgid "editor.submission.decision.backToReview"
-msgstr ""
+msgstr "Nazad na recenziju"
 
 msgid "editor.submission.decision.backToReview.description"
-msgstr ""
+msgstr "Poništi odluku o prihvatanju ovog rada i vrati ga u fazu recenzije."
 
 msgid "editor.submission.decision.backToReview.log"
 msgstr ""
+"{$editorName} je poništio odluku o prihvatanju ovog rada i vratio ga u fazu "
+"recenzije."
 
 msgid "editor.submission.decision.backToReview.completed"
-msgstr ""
+msgstr "Vrati nazad na recenziju"
 
 msgid "editor.submission.decision.backToReview.completed.description"
-msgstr ""
+msgstr "Rad „{$title}“ je vraćen u fazu recenzije."
 
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
+"Pošaljite imejl autorima kako biste ih obavestili da se njihov rad vraća u "
+"fazu recenzije. Objasnite zbog čega je ova odluka doneta i informišite "
+"autore o tome koja će dalja recenzija biti sprovedena."
 
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
+"Pošaljite imejl autorima kako biste ih obavestili da će ovaj rad biti poslat "
+"na recenziju. Ako je moguće, navedite autorima okvirnu informaciju o tome "
+"koliko bi proces recenzije mogao da traje i kada mogu očekivati sledeći "
+"kontakt od uredništva. Ovaj imejl neće biti poslat dok odluka ne bude "
+"zabeležena."
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
-msgstr ""
+msgstr "Izaberite fajlove koji treba da budu poslati u fazu recenzije."
 
 msgid "doi.submission.issueMissing.publication"
 msgstr ""
+"Nije moguće kreirati DOI za sledeći rad: {$pubObjectTitle}. Rad mora biti "
+"dodeljen broju pre nego što se DOI može generisati."
 
 msgid "doi.submission.issueMissing.representation"
 msgstr ""
+"Nije moguće kreirati DOI za galeriju „{$pubObjectTitle}“ za sledeći rad: "
+"{$itemTitle}. Rad mora biti dodeljen broju pre nego što se DOI može "
+"generisati."
 
 msgid "doi.submission.incorrectContext"
 msgstr ""
