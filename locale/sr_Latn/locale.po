@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
-"PO-Revision-Date: 2026-05-24 00:16+0000\n"
+"PO-Revision-Date: 2026-05-24 19:30+0000\n"
 "Last-Translator: lena bojcic <lenabojcicck@gmail.com>\n"
 "Language-Team: Serbian (latin) <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/sr_Latn/>\n"
@@ -133,7 +133,7 @@ msgid "common.queue.short.completed"
 msgstr "Arhiva"
 
 msgid "submissionGroup.assignedSubEditors"
-msgstr ""
+msgstr "Dodeljeni urednici"
 
 msgid "section.section"
 msgstr "Rubrika"
@@ -391,7 +391,7 @@ msgid "journal.viewAllIssues"
 msgstr "Pogledaj sve brojeve"
 
 msgid "user.authorization.representationNotFound"
-msgstr ""
+msgstr "Traženi prelom nije pronađen."
 
 msgid "user.noRoles.selectUsersWithoutRoles"
 msgstr "Uključi i korisnike bez uloga u ovom časopisu."
@@ -490,7 +490,7 @@ msgid "issue.title"
 msgstr "Naslov"
 
 msgid "issue.viewIssueIdentification"
-msgstr ""
+msgstr "Pogledaj {$identification}"
 
 msgid "issue.volume"
 msgstr "Godina"
@@ -533,12 +533,18 @@ msgstr "Vrati se na detalje broja"
 
 msgid "doi.issue.incorrectContext"
 msgstr ""
+"Nije moguće kreirati DOI za sledeći broj: {$itemTitle}. On ne postoji u "
+"trenutnom kontekstu časopisa."
 
 msgid "doi.issue.incorrectStaleStatus"
 msgstr ""
+"Nije moguće postaviti status DOI-ja na „zastareo“ za sledeći broj: "
+"{$itemTitle}. DOI mora imati status „registrovan“ ili „poslat“."
 
 msgid "doi.issue.notPublished"
 msgstr ""
+"Nije moguće označiti DOI kao registrovan za {$pubObjectTitle}. Broj mora "
+"biti objavljen pre nego što se status može ažurirati."
 
 msgid "subscriptionTypes.currency"
 msgstr "Valuta"
@@ -720,7 +726,7 @@ msgid "reader.subscriptionOrFeeAccess"
 msgstr "Pretplatnički ili otvoren pristup"
 
 msgid "reader.purchasePrice"
-msgstr ""
+msgstr "({$currency} {$price})"
 
 msgid "comments.commentsOnArticle"
 msgstr "Komentari na ovaj članak"
@@ -1371,15 +1377,21 @@ msgstr ""
 
 msgid "user.register.form.emailConsentAllContexts"
 msgstr ""
+"Da, želim da primam obaveštenja o novim publikacijama i najavama za sve "
+"časopise u kojima sam registrovan."
 
 msgid "user.register.form.privacyConsentThisContext"
 msgstr ""
+"Da, slažem se da se moji podaci prikupljaju i čuvaju u skladu sa <a href=\""
+"{$privacyUrl}\" target=\"_blank\">izjavom o privatnosti</a> ovog časopisa."
 
 msgid "user.register.form.missingContextConsent"
 msgstr ""
+"Morate dati saglasnost za izjavu o privatnosti za svaki časopis u koji se "
+"registrujete."
 
 msgid "user.register.form.missingSiteConsent"
-msgstr ""
+msgstr "Morate dati saglasnost za izjavu o privatnosti ovog sajta."
 
 msgid "user.subscriptions.mySubscriptions"
 msgstr "Moje pretplate"
@@ -1642,7 +1654,7 @@ msgid "about.onlineSubmissions.submissionActions"
 msgstr "{$newSubmission} ili {$viewSubmissions}."
 
 msgid "about.onlineSubmissions.submitToSection"
-msgstr ""
+msgstr "Podnesite novi rad u rubriku <a href=\"{$url}\">{$name}</a>."
 
 msgid "about.onlineSubmissions.newSubmission"
 msgstr "Nova predaja članka"
@@ -1732,7 +1744,7 @@ msgid "about.aboutThisPublishingSystem.altText"
 msgstr "Proces uređivanja i izdavanja u OJS-u"
 
 msgid "about.aboutSoftware"
-msgstr ""
+msgstr "O Open Journal Systems"
 
 #, fuzzy
 msgid "about.aboutOJSJournal"
@@ -1792,10 +1804,10 @@ msgid "payment.paid"
 msgstr "Uplaćeno"
 
 msgid "payment.unpaid"
-msgstr ""
+msgstr "Neplaćeno"
 
 msgid "payment.waived"
-msgstr ""
+msgstr "Oslobođeno plaćanja"
 
 msgid "payment.payNow"
 msgstr "Uplatite sada"
@@ -1828,7 +1840,7 @@ msgid "payment.type.publication"
 msgstr "Cena objavljivanja članka"
 
 msgid "payment.type.publication.required"
-msgstr ""
+msgstr "Naknada za objavljivanje je dospela za plaćanje."
 
 msgid "payment.type.fastTrack"
 msgstr "Cena ubrzanog recenzijskog postupka"
@@ -1849,13 +1861,15 @@ msgid "payment.type.donation"
 msgstr "Donacije"
 
 msgid "payment.requestPublicationFee"
-msgstr ""
+msgstr "Zahtev za naknadu za objavljivanje ({$feeAmount})"
 
 msgid "payment.requestPublicationFee.notEnabled"
-msgstr ""
+msgstr "Naknada za objavljivanje nije omogućena."
 
 msgid "payment.notFound"
 msgstr ""
+"Zahtev za plaćanje je poslat, ali je istekao. Kontaktirajte upravnika "
+"časopisa za detalje."
 
 msgid "payment.donation.makeDonation"
 msgstr "Uplatite donaciju"
@@ -1895,6 +1909,8 @@ msgstr "OJS nadogradnja"
 
 msgid "installer.updatingInstructions"
 msgstr ""
+"Ako nadograđujete postojeću instalaciju OJS-a, <a href=\"{$upgradeUrl}\""
+">kliknite ovde</a> da nastavite."
 
 #, fuzzy
 msgid "installer.installationInstructions"
@@ -2203,6 +2219,8 @@ msgstr ""
 
 msgid "log.editor.recommendation"
 msgstr ""
+"Preporuka urednika ({$decision}) za rad {$submissionId} je zabeležena od "
+"strane {$editorName}."
 
 msgid "log.copyedit.initiate"
 msgstr "{$copyeditorName} je započeo lekturu priloga {$submissionId}"
@@ -2285,7 +2303,7 @@ msgid "notification.type.newAnnouncement"
 msgstr "Novo obaveštenje je napravljeno."
 
 msgid "notification.type.openAccess"
-msgstr ""
+msgstr "Broj je postavljen u otvoreni pristup."
 
 msgid "notification.type.reviewerFormComment"
 msgstr "Recenzija preko recenzentske forme je predata za \"{$title}\"."
@@ -2306,7 +2324,7 @@ msgid "notification.type.userComment"
 msgstr "Čitalac je komentarisao \"{$title}'s\""
 
 msgid "notification.type.public"
-msgstr ""
+msgstr "Javna obaveštenja"
 
 msgid "notification.savedIssueMetadata"
 msgstr "Sačuvani metapodaci izdanja broja."
@@ -2387,16 +2405,16 @@ msgid "editor.issues.futureIssues"
 msgstr "Budući brojevi"
 
 msgid "navigation.subscriptions"
-msgstr ""
+msgstr "Pretplate"
 
 msgid "log.editor.submissionExpedited"
-msgstr ""
+msgstr "{$editorName} je preuzeo uređivanje članka {$submissionId}."
 
 msgid "catalog.sortBy"
-msgstr ""
+msgstr "Redosled članaka"
 
 msgid "catalog.sortBy.categoryDescription"
-msgstr ""
+msgstr "Izaberite kako će članci biti poređani u ovoj kategoriji."
 
 #~ msgid "admin.settings.oaiRegistrationDescription"
 #~ msgstr ""
@@ -2435,3 +2453,6 @@ msgstr ""
 
 #~ msgid "category.category"
 #~ msgstr "Категорије"
+
+msgid "search.journal"
+msgstr "Prema časopisu"
