@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
-"PO-Revision-Date: 2026-05-22 16:16+0000\n"
+"PO-Revision-Date: 2026-05-24 19:30+0000\n"
 "Last-Translator: lena bojcic <lenabojcicck@gmail.com>\n"
 "Language-Team: Serbian (latin) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/sr_Latn/>\n"
@@ -1365,7 +1365,7 @@ msgid ""
 "manager.subscriptionPolicies."
 "enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
 msgstr ""
-"Obavesti Upravnika za pretplatu emajlom o kupovini institucionalne pretplate "
+"Obavesti Upravnika za pretplatu imejlom o kupovini institucionalne pretplate "
 "(preporučeno)."
 
 msgid ""
@@ -2076,6 +2076,9 @@ msgstr "O statistici brojeva"
 
 msgid "stats.issues.tooltip.text"
 msgstr ""
+"<strong>Pregledi</strong>: Broj posetilaca koji su pregledali sadržaj "
+"broja.<br><strong>Preuzimanja</strong>: Broj preuzimanja preloma broja, ako "
+"on postoji."
 
 msgid "stats.publicationStats"
 msgstr "Statistika članka"
@@ -2133,7 +2136,7 @@ msgid "plugins.importexport.issue.cli.display"
 msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
 
 msgid "plugins.importexport.issueGalleys.exportFailed"
-msgstr ""
+msgstr "Neuspešna obrada pri parsiranju preloma broja"
 
 msgid "emailTemplate.variable.context.contextName"
 msgstr "Ime časopisa"
@@ -2157,67 +2160,71 @@ msgid "emailTemplate.variable.context.mailingAddress"
 msgstr "Poštanska adresa časopisa"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
-msgstr ""
+msgstr "Naziv vrste plaćanja"
 
 msgid "emailTemplate.variable.queuedPayment.itemCost"
-msgstr ""
+msgstr "Iznos plaćanja"
 
 msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
-msgstr ""
+msgstr "Valuta iznosa plaćanja, na primer USD"
 
 msgid "emailTemplate.variable.site.siteTitle"
-msgstr ""
+msgstr "Naziv sajta kada je hostovano više časopisa"
 
 msgid "emailTemplate.variable.subscription.subscriberDetails"
-msgstr ""
+msgstr "Ime, institucija, telefon i imejl adresa pretplatnika"
 
 msgid "emailTemplate.variable.subscription.subscriptionSignature"
-msgstr ""
+msgstr "Kontakt podaci menadžera pretplate"
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
-msgstr ""
+msgstr "URL stranice za pretplatu"
 
 msgid "emailTemplate.variable.subscription.expiryDate"
-msgstr ""
+msgstr "Datum isteka pretplate"
 
 msgid "emailTemplate.variable.subscription.subscriptionType"
-msgstr ""
+msgstr "Sažetak tipa, naziva, trajanja i cene pretplate"
 
 msgid "emailTemplate.variable.subscription.membership"
-msgstr ""
+msgstr "Informacije o članstvu pretplatnika"
 
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr ""
+msgstr "Naziv institucije koje se pretplaćuje"
 
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr ""
+msgstr "Imejl adresa institucije koje se pretplaćuje"
 
 msgid "emailTemplate.variable.subscription.domain"
-msgstr ""
+msgstr "Naziv domena važećih IP adresa za ovu pretplatu"
 
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr ""
+msgstr "Važeći IP opsezi za ovu pretplatu"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "URL stranice na kojoj autor može izvršiti plaćanje"
 
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "URL smernica za podnošenje radova"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "Link ka stranici sa statistikom objavljenih članaka"
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "ID broja"
 
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
+"Ovaj imejl se automatski šalje mesečno urednicima i upravnicima časopisa "
+"kako bi im pružio pregled stanja sistema."
 
 msgid "mailable.validateEmailContext.name"
-msgstr ""
+msgstr "Potvrdi imejl (registracija časopisa)"
 
 msgid "mailable.validateEmailContext.description"
 msgstr ""
+"Ovaj imejl se automatski šalje novom korisniku kada se registruje u "
+"časopisu, u slučajevima kada podešavanja zahtevaju potvrdu imejl adrese."
 
 msgid "doi.displayName"
 msgstr "DOI"
@@ -2229,7 +2236,7 @@ msgid "doi.readerDisplayName"
 msgstr "DOI"
 
 msgid "doi.manager.displayName"
-msgstr ""
+msgstr "DOI-jevi"
 
 msgid "doi.manager.settings.description"
 msgstr "Podesite DOI dodatak kako biste mogli koristiti DOI-e u OJS-u:"
@@ -2242,7 +2249,7 @@ msgid "doi.manager.settings.enableRepresentationDoi"
 msgstr "Prikaz"
 
 msgid "doi.manager.settings.galleysWithDescription"
-msgstr ""
+msgstr "Prelomi članaka, poput objavljenog PDF-a"
 
 msgid "doi.manager.settings.doiPrefix"
 msgstr "DOI prefiks"
@@ -2290,31 +2297,40 @@ msgid "doi.manager.settings.doiReassign.confirm"
 msgstr "Da li želite da obrišete sve postojeće DOI-je?"
 
 msgid "doi.manager.settings.doiAssignJournalWide"
-msgstr ""
+msgstr "Dodeli DOI-jeve"
 
 msgid "doi.manager.settings.doiAssignJournalWide.description"
 msgstr ""
+"Dodeli DOI oznake svim objavljenim objektima časopisa kojima DOI još nije "
+"dodeljen. Ova akcija ne može se koristiti sa konfiguracijom pojedinačnih "
+"sufiksa. Ako ste izmenili DOI konfiguraciju iznad, sačuvajte promene pre "
+"pokretanja ove akcije. Dodeljivanje DOI oznaka može potrajati, u zavisnosti "
+"od broja objavljenih objekata u časopisu."
 
 msgid "doi.manager.settings.doiAssignJournalWide.confirm"
 msgstr ""
+"Da li ste sigurni da želite da dodelite DOI oznake svim objavljenim "
+"objektima kojima DOI još nije dodeljen?"
 
 msgid "doi.manager.settings.registrationAgency"
-msgstr ""
+msgstr "Agencija za registraciju"
 
 msgid "doi.manager.settings.registrationAgency.description"
 msgstr ""
+"Molimo izaberite registracionu agenciju koju želite da koristite prilikom "
+"deponovanja DOI oznaka."
 
 msgid "doi.manager.settings.registrationAgency.none"
-msgstr ""
+msgstr "Nijedno"
 
 msgid "doi.editor.doi"
 msgstr "DOI"
 
 msgid "doi.editor.doi.description"
-msgstr ""
+msgstr "DOI mora počinjati sa {$prefix}."
 
 msgid "doi.editor.doi.assignDoi"
-msgstr ""
+msgstr "Dodeli"
 
 msgid "doi.editor.doiObjectTypeIssue"
 msgstr "jedinica (broj)"
@@ -2329,10 +2345,13 @@ msgid "doi.editor.customSuffixMissing"
 msgstr "Nedostaje prilagođeni sufiks"
 
 msgid "doi.editor.missingIssue"
-msgstr ""
+msgstr "Ne možete generisati DOI dok ova publikacija ne bude dodeljena broju."
 
 msgid "doi.editor.missingParts"
 msgstr ""
+"Ne možete generisati DOI jer nedostaju podaci za jedan ili više delova DOI "
+"obrasca. Možda je potrebno dodeliti publikaciju broju, postaviti izdavački "
+"ID ili uneti brojeve stranica."
 
 msgid "doi.editor.patternNotResolved"
 msgstr "Nečitljiva niska"
@@ -2380,52 +2399,55 @@ msgid "doi.editor.assignDoi.assigned"
 msgstr "DOI {$pubId} je dodeljen."
 
 msgid "doi.editor.assignDoi.toBeAssigned"
-msgstr ""
+msgstr "DOI {$pubId} biće dodeljen prilikom objavljivanja."
 
 msgid "doi.editor.missingPrefix"
-msgstr ""
+msgstr "DOI mora počinjati sa {$doiPrefix}."
 
 msgid "doi.editor.preview.publication"
-msgstr ""
+msgstr "DOI za ovu publikaciju biće {$doi}."
 
 msgid "doi.editor.preview.publication.none"
-msgstr ""
+msgstr "Ovoj publikaciji nije dodeljen DOI."
 
 msgid "doi.editor.preview.galleys"
-msgstr ""
+msgstr "Prelom: {$galleyLabel}"
 
 msgid "doi.editor.preview.objects"
-msgstr ""
+msgstr "Stavka"
 
 msgid "api.galley.403.publicationDidNotMatch"
-msgstr ""
+msgstr "Prelom koji ste zatražili nije deo ove publikacije."
 
 msgid "api.galley.403.canEditPublishedDoi"
 msgstr ""
+"Samo DOI-ji mogu biti uređivani nakon što je publikacija/prelom objavljen/a"
 
 msgid "api.issue.400.invalidDoi"
-msgstr ""
+msgstr "Uneti DOI nije validan"
 
 msgid "api.issue.403.canEditPublishedDoi"
-msgstr ""
+msgstr "Samo DOI-ji mogu biti uređivani nakon što je publikacija objavljena"
 
 msgid "api.issue.404.issuesNotFound"
-msgstr ""
+msgstr "Brojevi koje ste zatražili nisu pronađeni"
 
 msgid "doi.manager.submissionDois"
-msgstr ""
+msgstr "DOI oznake članaka"
 
 msgid "doi.manager.issueDois"
-msgstr ""
+msgstr "DOI-ji brojeva"
 
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr ""
+"Ovaj imejl obaveštava autora da je njegov rad odbijen pre faze recenzije, "
+"jer ne ispunjava uslove za objavljivanje u časopisu."
 
 msgid "manager.institutions.noContext"
-msgstr ""
+msgstr "Časopis ove institucije nije pronađen."
 
 msgid "mailable.subscriptionNotify.name"
-msgstr ""
+msgstr "Obaveštenje o pretplati"
 
 msgid "mailable.subscriptionNotify.description"
 msgstr ""
@@ -2434,79 +2456,107 @@ msgstr ""
 "pristup."
 
 msgid "mailable.subscriptionExpiresSoon.name"
-msgstr ""
+msgstr "Pretplata uskoro ističe"
 
 msgid "mailable.subscriptionExpiresSoon.description"
 msgstr ""
+"Ovaj imejl se automatski šalje kako bi obavestio pretplatnika da njegova "
+"pretplata uskoro ističe."
 
 msgid "mailable.subscriptionExpired.name"
-msgstr ""
+msgstr "Pretplata je istekla"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
+"Ovaj imejl se automatski šalje kako bi obavestio pretplatnika da je njegova "
+"pretplata istekla"
 
 msgid "mailable.subscriptionExpiredLast.name"
-msgstr ""
+msgstr "Poslednje obaveštenje o isteku pretplate"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
+"Ovaj imejl se automatski šalje kako bi po drugi put obavestio pretplatnika "
+"da je njegova pretplata istekla"
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
-msgstr ""
+msgstr "Kupi individualnu pretplatu"
 
 msgid "mailable.subscriptionPurchaseIndividual.description"
 msgstr ""
+"Ovaj imejl obaveštava upravnika pretplata da je individualna pretplata "
+"kupljena putem interneta. Sadrži sažete informacije o pretplati i brzi "
+"pristup linku ka kupljenoj pretplati."
 
 msgid "mailable.subscriptionPurchaseInstitutional.name"
-msgstr ""
+msgstr "Kupi institucionalnu pretplatu"
 
 msgid "mailable.subscriptionPurchaseInstitutional.description"
 msgstr ""
+"Ovaj imejl obaveštava upravnika pretplata da je institucionalna pretplata "
+"kupljena putem interneta. Sadrži sažete informacije o pretplati i brzi "
+"pristup linku ka kupljenoj pretplati."
 
 msgid "mailable.subscriptionRenewIndividual.name"
-msgstr ""
+msgstr "Obnovi individualnu pretplatu"
 
 msgid "mailable.subscriptionRenewIndividual.description"
 msgstr ""
+"Ovaj imejl obaveštava upravnika pretplata da je individualna pretplata "
+"obnovljena putem interneta. Sadrži sažete informacije o pretplati i brzi "
+"pristup linku ka obnovljenoj pretplati."
 
 msgid "mailable.subscriptionRenewInstitutional.name"
-msgstr ""
+msgstr "Obnovi institucionalnu pretplatu"
 
 msgid "mailable.subscriptionRenewInstitutional.description"
 msgstr ""
+"Ovaj imejl obaveštava upravnika pretplata da je institucionalna pretplata "
+"obnovljena putem interneta. Sadrži sažete informacije o pretplati i brzi "
+"pristup linku ka obnovljenoj pretplati."
 
 msgid "mailable.openAccessNotify.name"
-msgstr ""
+msgstr "Obaveštenje o otvorenom pristupu"
 
 msgid "mailable.openAccessNotify.description"
 msgstr ""
+"Ovaj imejl se šalje registrovanim čitaocima koji su zatražili da dobijaju "
+"obaveštenje kada neki broj postane otvorenog pristupa."
 
 msgid "mailable.issuePublishNotify.name"
-msgstr ""
+msgstr "Obaveštenje o objavljenom broju"
 
 msgid "mailable.issuePublishNotify.description"
 msgstr ""
+"Ovaj imejl se automatski šalje registrovanim korisnicima kada se objavi novi "
+"broj."
 
 msgid "manager.manageEmails.description"
-msgstr ""
+msgstr "Uredite poruke koje se šalju u imejlovima ovog časopisa."
 
 msgid "mailable.layoutComplete.name"
-msgstr ""
+msgstr "Prelomi su završeni"
 
 msgid "mailable.publicationVersionNotify.name"
-msgstr ""
+msgstr "Nova verzija je stvorena"
 
 msgid "mailable.publicationVersionNotify.description"
 msgstr ""
+"Ovaj imejl automatski obaveštava dodeljene urednike kada se kreira nova "
+"verzija rada."
 
 msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
+"Ovaj imejl se šalje upravnicima časopisa kada je podnet novi rad, a urednici "
+"još nisu dodeljeni."
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "Zahtev za plaćanje"
 
 msgid "mailable.paymentRequest.description"
 msgstr ""
+"Ovaj automatski imejl se šalje autoru kao zahtev za plaćanje naknade za "
+"objavljivanje kada je njegov rad prihvaćen."
 
 #~ msgid "manager.statistics.reports.today"
 #~ msgstr "Danas"
@@ -2580,3 +2630,6 @@ msgid "plugins.importexport.common.error.issueCoverImageMissing"
 msgstr ""
 "Naslovna strana broja {$id} nije mogla biti izvezena, njen fajl nije "
 "pronađen na putanjii \"{$path}\"."
+
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr "Sadržaj broja, kao što je lista svih povezanih radova."
