@@ -1,16 +1,18 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
+# Helgi Sigurbjörnsson <helgi.sigurbjornsson@landsbokasafn.is>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-02-10 00:38+0000\n"
-"Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
-"Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/reports-"
-"articles/is_IS/>\n"
-"Language: is_IS\n"
+"PO-Revision-Date: 2026-05-12 12:20+0000\n"
+"Last-Translator: Helgi Sigurbjörnsson <helgi.sigurbjornsson@landsbokasafn.is>"
+"\n"
+"Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/"
+"reports-articles/is/>\n"
+"Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.reports.articles.displayName"
 msgstr "Greinaskýrsla"
@@ -22,3 +24,6 @@ msgstr ""
 
 msgid "plugins.reports.articles.nodecision"
 msgstr "Engin ákvörðun"
+
+msgid "plugins.reports.articles.initialDecline"
+msgstr "Hafna (fyrir ritrýni)"

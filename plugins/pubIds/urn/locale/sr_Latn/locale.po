@@ -1,15 +1,20 @@
+# lena bojcic <lenabojcicck@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:03+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:03+00:00\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: \n"
+"PO-Revision-Date: 2026-05-23 21:34+0000\n"
+"Last-Translator: lena bojcic <lenabojcicck@gmail.com>\n"
+"Language-Team: Serbian (latin) <http://translate.pkp.sfu.ca/projects/ojs/"
+"pubIds-urn/sr_Latn/>\n"
+"Language: sr_Latn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.pubIds.urn.displayName"
 msgstr "URN"
@@ -38,7 +43,7 @@ msgid "plugins.pubIds.urn.manager.settings.enableIssueURN"
 msgstr "URN-ovi će biti dodeljeni jedinicama."
 
 msgid "plugins.pubIds.urn.manager.settings.enablePublicationURN"
-msgstr ""
+msgstr "Članci"
 
 msgid "plugins.pubIds.urn.manager.settings.enableRepresentationURN"
 msgstr "URN-ovi će biti dodeljeni prikazima (npr. HTML ili PDF faljlovi)."
@@ -85,7 +90,7 @@ msgid "plugins.pubIds.urn.manager.settings.urnIssueSuffixPatternRequired"
 msgstr "Unesite URN sufiks obrazac za jedinicu."
 
 msgid "plugins.pubIds.urn.manager.settings.urnPublicationSuffixPatternRequired"
-msgstr ""
+msgstr "Molimo vas da unesete obrazac URN sufiksa za članke."
 
 msgid ""
 "plugins.pubIds.urn.manager.settings.urnRepresentationSuffixPatternRequired"
@@ -214,31 +219,34 @@ msgid "plugins.pubIds.urn.form.checkNoRequired"
 msgstr "Broj za proveru nedostaje."
 
 msgid "plugins.pubIds.urn.editor.urn.description"
-msgstr ""
+msgstr "URN mora da počinje sa {$prefix}."
 
 msgid "plugins.pubIds.urn.editor.urn.assignUrn"
-msgstr ""
+msgstr "Dodeli"
 
 msgid "plugins.pubIds.urn.editor.missingIssue"
-msgstr ""
+msgstr "Ne možete generisati URN dok ova publikacija ne bude dodeljena broju."
 
 msgid "plugins.pubIds.urn.editor.missingParts"
 msgstr ""
+"Ne možete generisati URN jer nedostaju podaci za jedan ili više delova "
+"obrasca URN-a. Možda je potrebno dodeliti publikaciju broju, postaviti ID "
+"izdavača ili uneti brojeve stranica."
 
 msgid "plugins.pubIds.urn.editor.missingPrefix"
-msgstr ""
+msgstr "URN mora da počinje sa {$urnPrefix}."
 
 msgid "plugins.pubIds.urn.editor.preview.publication"
-msgstr ""
+msgstr "URN za ovu publikaciju biće {$urn}."
 
 msgid "plugins.pubIds.urn.editor.preview.publication.none"
-msgstr ""
+msgstr "Ovoj publikaciji nije dodeljen URN."
 
 msgid "plugins.pubIds.urn.editor.preview.galleys"
-msgstr ""
+msgstr "Prelom: {$galleyLabel}"
 
 msgid "plugins.pubIds.urn.editor.preview.objects"
-msgstr ""
+msgstr "Stavka"
 
 #~ msgid "plugins.pubIds.urn.manager.settings.enableSubmissionURN"
 #~ msgstr "URN-ovi će biti dodeljeni člancima."

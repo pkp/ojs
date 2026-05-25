@@ -1,15 +1,20 @@
+# lena bojcic <lenabojcicck@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
-"PO-Revision-Date: 2019-11-19T10:49:34+00:00\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: sr_RS@latin\n"
+"PO-Revision-Date: 2026-05-24 19:30+0000\n"
+"Last-Translator: lena bojcic <lenabojcicck@gmail.com>\n"
+"Language-Team: Serbian (latin) <http://translate.pkp.sfu.ca/projects/ojs/"
+"submission/sr_Latn/>\n"
+"Language: sr_Latn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "submission.submit.userGroup"
 msgstr "Predaj u mojoj ulozi kao..."
@@ -39,10 +44,10 @@ msgid "grid.action.workflow"
 msgstr "Proces predaje"
 
 msgid "submission.abstract.wordCount.description"
-msgstr ""
+msgstr "Apstrakt mora imati {$wordCount} reči ili manje."
 
 msgid "submission.submit.noContext"
-msgstr ""
+msgstr "Časopis ovog podneska nije mogao biti pronađen."
 
 msgid "submission.issueEntry"
 msgstr "Metapodaci"
@@ -140,211 +145,264 @@ msgstr ""
 "standardu koji se koristi za opisivanje sadržaja časopisa."
 
 msgid "section.any"
-msgstr ""
+msgstr "Bilo koja rubrika"
 
 msgid "submission.sectionOptions"
-msgstr ""
+msgstr "Opcije rubrike"
 
 msgid "catalog.browseTitles"
-msgstr ""
+msgstr "{$numTitles} stavke"
 
 msgid "catalog.category.heading"
-msgstr ""
+msgstr "Sve stavke"
 
 msgid "galley.editPublishedDisabled"
-msgstr ""
+msgstr "Prelomi ove publikacije ne mogu se uređivati jer je već objavljena."
 
 msgid "galley.publicationNotFound"
-msgstr ""
+msgstr "Publikacija za ovaj prelom nije pronađena."
 
 msgid "publication.assignToissue"
-msgstr ""
+msgstr "Dodeli broju"
 
 msgid "publication.assignedToIssue"
 msgstr ""
+"Ovo je dodeljeno broju <a href=\"{$issueUrl}\">{$issueName}</a>, ali nije "
+"zakazano za objavljivanje."
 
 msgid "publication.changeIssue"
-msgstr ""
+msgstr "Promeni broj"
 
 msgid "publication.datePublished.description"
 msgstr ""
+"Datum objavljivanja biće automatski postavljen kada broj bude objavljen. Ne "
+"unosite datum objavljivanja osim ako je članak prethodno objavljen na drugom "
+"mestu i potrebno je uneti raniji datum."
 
 msgid "publication.invalidSection"
-msgstr ""
+msgstr "Rubrika za ovu publikaciju nije pronađena."
 
 msgid "publication.inactiveSection"
-msgstr ""
+msgstr "{$section} (Inactive)"
 
 msgid "publication.invalidIssue"
-msgstr ""
+msgstr "Broj za ovu publikaciju nije pronađen."
 
 msgid "publication.publish.confirmation"
 msgstr ""
+"Svi zahtevi za publikaciju su ispunjeni. Da li ste sigurni da želite ovo da "
+"objavite?"
 
 msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
+"Svi zahtevi za objavljivanje su ispunjeni. Ovo će biti objavljeno kada se "
+"objavi {$issue}. Da li ste sigurni da želite da zakažete objavljivanje?"
 
 msgid "publication.publish.confirmation.backIssue"
 msgstr ""
+"Svi zahtevi za objavljivanje su ispunjeni. Ovo će biti odmah objavljeno u "
+"{$issue}. Da li ste sigurni da želite da objavite ovo?"
 
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
+"Svi zahtevi za objavljivanje su ispunjeni. Ovo će biti odmah objavljeno jer "
+"je datum objavljivanja postavljen na {$datePublished}. Da li ste sigurni da "
+"želite da objavite ovo?"
 
 msgid "publication.required.issue"
 msgstr ""
+"Publikacija mora biti dodeljena broju pre nego što može biti objavljena."
 
 msgid "publication.publishedIn"
-msgstr ""
+msgstr "Objavljeno u <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.scheduledIn"
-msgstr ""
+msgstr "Zakazano za objavljivanje u <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.unscheduledIn"
-msgstr ""
+msgstr "Ovo nije zakazano za objavljivanje u broju."
 
 msgid "publication.selectIssue"
-msgstr ""
+msgstr "Izaberite broj koji se zakazuje za objavljivanje"
 
 msgid "submission.publication"
 msgstr "Publikacije"
 
 msgid "publication.status.published"
-msgstr ""
+msgstr "Objavljeno"
 
 msgid "submission.status.scheduled"
-msgstr ""
+msgstr "Zakazano"
 
 msgid "publication.status.unscheduled"
-msgstr ""
+msgstr "Nije zakazano"
 
 msgid "submission.publications"
-msgstr ""
+msgstr "Publikacije"
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
+"Godina autorskih prava biće automatski postavljena kada ovo bude objavljeno "
+"u broju."
 
 msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr ""
+"Godina autorskih prava biće automatski postavljena na osnovu datuma "
+"objavljivanja."
 
 msgid "publication.datePublished"
-msgstr ""
+msgstr "Datum objavljivanja"
 
 msgid "publication.editDisabled"
-msgstr ""
+msgstr "Ova verzija je objavljena i ne može se uređivati."
 
 msgid "publication.event.published"
-msgstr ""
+msgstr "Podnesak je objavljen."
 
 msgid "publication.event.scheduled"
-msgstr ""
+msgstr "Podnesak je zakazan za objavljivanje."
 
 msgid "publication.event.unpublished"
-msgstr ""
+msgstr "Podnesak nije objavljen."
 
 msgid "publication.event.versionPublished"
-msgstr ""
+msgstr "Nova verzija je objavljena."
 
 msgid "publication.event.versionScheduled"
-msgstr ""
+msgstr "Nova verzija je zakazana za objavljivanje."
 
 msgid "publication.event.versionUnpublished"
-msgstr ""
+msgstr "Verzija je uklonjena iz publikacije."
 
 msgid "publication.invalidSubmission"
-msgstr ""
+msgstr "Podnesak za ovu publikaciju nije mogao biti pronađen."
 
 msgid "publication.publish"
-msgstr ""
+msgstr "Objavi"
 
 msgid "publication.publish.requirements"
 msgstr ""
+"Sledeći zahtevi moraju biti ispunjeni pre nego što ovo može biti objavljeno."
 
 msgid "publication.required.declined"
-msgstr ""
+msgstr "Odbijen rad ne može biti objavljen."
 
 msgid "publication.required.reviewStage"
 msgstr ""
+"Rad mora biti u fazi lekture ili produkcije pre nego što može biti objavljen."
 
 msgid "submission.license.description"
 msgstr ""
+"Licenca će biti automatski postavljena na <a href='{$licenseUrl}' "
+"target='_blank'>{$licenseName}</a> kada ovo bude objavljeno."
 
 msgid "submission.copyrightHolder.description"
 msgstr ""
+"Autorska prava će automatski biti dodeljena {$copyright} kada ovo bude "
+"objavljeno."
 
 msgid "submission.copyrightOther.description"
-msgstr ""
+msgstr "Dodeli autorska prava za objavljene radove sledećoj strani."
 
 msgid "publication.unpublish"
-msgstr ""
+msgstr "Poništi objavu"
 
 msgid "publication.unpublish.confirm"
-msgstr ""
+msgstr "Da li ste sigurni da ne želite da ovo bude objavljeno?"
 
 msgid "publication.unschedule.confirm"
-msgstr ""
+msgstr "Da li ste sigurni da ne želite da ovo bude zakazano za objavljivanje?"
 
 msgid "publication.version.details"
-msgstr ""
+msgstr "Detalji publikacije za verziju {$version}"
 
 msgid "submission.queries.production"
 msgstr "Produkcione diskusije"
 
 msgid "editor.submission.decision.backToReview"
-msgstr ""
+msgstr "Nazad na recenziju"
 
 msgid "editor.submission.decision.backToReview.description"
-msgstr ""
+msgstr "Poništi odluku o prihvatanju ovog rada i vrati ga u fazu recenzije."
 
 msgid "editor.submission.decision.backToReview.log"
 msgstr ""
+"{$editorName} je poništio odluku o prihvatanju ovog rada i vratio ga u fazu "
+"recenzije."
 
 msgid "editor.submission.decision.backToReview.completed"
-msgstr ""
+msgstr "Vrati nazad na recenziju"
 
 msgid "editor.submission.decision.backToReview.completed.description"
-msgstr ""
+msgstr "Rad „{$title}“ je vraćen u fazu recenzije."
 
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
+"Pošaljite imejl autorima kako biste ih obavestili da se njihov rad vraća u "
+"fazu recenzije. Objasnite zbog čega je ova odluka doneta i informišite "
+"autore o tome koja će dalja recenzija biti sprovedena."
 
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
+"Pošaljite imejl autorima kako biste ih obavestili da će ovaj rad biti poslat "
+"na recenziju. Ako je moguće, navedite autorima okvirnu informaciju o tome "
+"koliko bi proces recenzije mogao da traje i kada mogu očekivati sledeći "
+"kontakt od uredništva. Ovaj imejl neće biti poslat dok odluka ne bude "
+"zabeležena."
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
-msgstr ""
+msgstr "Izaberite fajlove koji treba da budu poslati u fazu recenzije."
 
 msgid "doi.submission.issueMissing.publication"
 msgstr ""
+"Nije moguće kreirati DOI za sledeći rad: {$pubObjectTitle}. Rad mora biti "
+"dodeljen broju pre nego što se DOI može generisati."
 
 msgid "doi.submission.issueMissing.representation"
 msgstr ""
+"Nije moguće kreirati DOI za galeriju „{$pubObjectTitle}“ za sledeći rad: "
+"{$itemTitle}. Rad mora biti dodeljen broju pre nego što se DOI može "
+"generisati."
 
 msgid "doi.submission.incorrectContext"
 msgstr ""
+"Nije moguće kreirati DOI za sledeći podnesak: {$pubObjectTitle}. Ne postoji "
+"u trenutnom kontekstu časopisa."
 
 msgid "submission.layout.viewGalley"
-msgstr ""
+msgstr "Vidi prelom"
 
 msgid "galley.cantEditPublished"
-msgstr ""
+msgstr "Ovaj prelom ne može da se uređuje jer je već objavljen."
 
 msgid "submission.copyright.description"
 msgstr ""
+"Molimo vas da pročitate i razumete uslove autorskih prava za podneske u ovom "
+"časopisu."
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
+"Nije vam dozvoljeno da šaljete radove u ovaj časopis jer autore mora "
+"registrovati urednički tim. Ako smatrate da je ovo greška, kontaktirajte <a "
+"href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
+"Nije vam dozvoljeno da šaljete radove u ovaj časopis jer su predaje u svim "
+"sekcijama ovog časopisa deaktivirane ili ograničene. Ako smatrate da je ovo "
+"greška, kontaktirajte <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
+"{$contextName} ne prihvata podneske u rubrici {$section}. Ako vam je "
+"potrebna pomoć pri vraćanju podneska, kontaktirajte <a "
+"href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.sectionNotFound"
-msgstr ""
+msgstr "Rubrika za ovaj podnesak nije pronađena."
 
 msgid "submission.sectionRestrictedToEditors"
-msgstr ""
+msgstr "Samo uredničko osoblje može da šalje radove u ovu rubriku."
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Potreban je barem jedan autor."
@@ -357,6 +415,8 @@ msgstr "Unesite apstrakt rada."
 
 msgid "submission.submit.form.wordCountAlert"
 msgstr ""
+"Apstrakt je predugačak. Molimo vas da ga skratite ispod ograničenja broja "
+"reči koje je navedeno za ovu rubriku."
 
 msgid "submission.submit.form.contributorRoleRequired"
 msgstr "Odaberite ulogu saradnika."
