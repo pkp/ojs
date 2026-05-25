@@ -1,7 +1,7 @@
 # Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-01-26 11:35+0000\n"
+"PO-Revision-Date: 2026-05-06 16:49+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/author/ky/>\n"
 "Language: ky\n"
@@ -325,3 +325,6 @@ msgstr ""
 "Бул журналга тапшырма берүү үчүн колдонуучу аккаунту талап кылынат. Бул "
 "биздин редакторлорго тапшырмаларыңызды көзөмөлдөөгө жана статус өзгөргөндө "
 "же кошумча маалымат талап кылынганда сиз менен байланышууга мүмкүндүк берет."
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Тапшырмалар журналдын бөлүмдөрүнөн бирүүнө жасалуу керек."

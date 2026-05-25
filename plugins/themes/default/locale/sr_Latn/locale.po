@@ -1,15 +1,20 @@
+# lena bojcic <lenabojcicck@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T11:06:19+00:00\n"
-"PO-Revision-Date: 2019-11-19T11:06:19+00:00\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: \n"
+"PO-Revision-Date: 2026-05-23 23:37+0000\n"
+"Last-Translator: lena bojcic <lenabojcicck@gmail.com>\n"
+"Language-Team: Serbian (latin) <http://translate.pkp.sfu.ca/projects/ojs/"
+"themes-default/sr_Latn/>\n"
+"Language: sr_Latn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.themes.default.name"
 msgstr "Osnovna tema"
@@ -55,34 +60,42 @@ msgid "plugins.themes.default.option.colour.description"
 msgstr "Odaberite boju zaglavlja."
 
 msgid "plugins.themes.default.option.showDescriptionInJournalIndex.option"
-msgstr ""
+msgstr "Prikaži sažetak časopisa na početnoj stranici."
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
-msgstr ""
+msgstr "Pozadinska slika zaglavlja"
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.description"
 msgstr ""
+"Kada je otpremljena slika za početnu stranicu, prikaži je kao pozadinu "
+"zaglavlja umesto na njenoj uobičajenoj poziciji na početnoj stranici."
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
-msgstr ""
+msgstr "Prikaži sliku početne stranice kao pozadinu zaglavlja."
 
 msgid "plugins.themes.default.option.displayStats.label"
-msgstr ""
+msgstr "Opcije prikaza statistike korišćenja"
 
 msgid "plugins.themes.default.option.displayStats.none"
-msgstr ""
+msgstr "Ne prikazuj grafikon statistike korišćenja podnesaka za čitaoce."
 
 msgid "plugins.themes.default.option.displayStats.bar"
-msgstr ""
+msgstr "Koristi stubičasti (bar) tip grafikona za prikaz statistike korišćenja."
 
 msgid "plugins.themes.default.option.displayStats.line"
-msgstr ""
+msgstr "Koristi linijski tip grafikona za prikaz statistike korišćenja."
 
 msgid "plugins.themes.default.displayStats.monthInitials"
-msgstr ""
+msgstr "Jan Feb Mar Apr Maj Jun Jul Avg Sep Okt Nov Dec"
 
 msgid "plugins.themes.default.displayStats.downloads"
-msgstr ""
+msgstr "Preuzimanja"
 
 msgid "plugins.themes.default.displayStats.noStats"
-msgstr ""
+msgstr "Podaci za preuzimanje još uvek nisu dostupni."
+
+msgid "plugins.themes.default.nextSlide"
+msgstr "Sledeći slajd"
+
+msgid "plugins.themes.default.prevSlide"
+msgstr "Prethodni slajd"

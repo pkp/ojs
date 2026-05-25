@@ -1,7 +1,7 @@
 # Mahmut  VURAL <mahmut.vural@outlook.com>, 2024, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-01-26 13:12+0000\n"
+"PO-Revision-Date: 2026-05-06 16:49+0000\n"
 "Last-Translator: Mahmut  VURAL <mahmut.vural@outlook.com>\n"
 "Language-Team: Kyrgyz <http://translate.pkp.sfu.ca/projects/ojs/manager/ky/>"
 "\n"
@@ -2534,3 +2534,17 @@ msgstr ""
 
 msgid "manager.manageEmails.description"
 msgstr "Бул журналдан жөнөтүлгөн электрондук каттардагы билдирүүлөрдү түзөтүү."
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr ""
+"Бул билдирүү жазылуусу жакында бүтүүчү жазылуучуга автоматтык түрдө "
+"жөнөтүлөт."
+
+msgid "mailable.subscriptionExpired.description"
+msgstr ""
+"Бул электрондук кат жазылуусу бүткөнү жазылуучуга автоматтык түрдө жөнөтүлөт"
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr ""
+"Бул электрондук кат жазылуусу бүткөнөнү екинчи жолу жазылуучуга автоматтык "
+"түрдө жөнөтүлөт."

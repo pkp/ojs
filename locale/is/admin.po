@@ -1,92 +1,121 @@
 # Emma U <emmaupkp@gmail.com>, 2022.
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
+# Helgi Sigurbjörnsson <helgi.sigurbjornsson@landsbokasafn.is>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-01-25 15:24+0000\n"
-"Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
-"Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/admin/"
-"is_IS/>\n"
-"Language: is_IS\n"
+"PO-Revision-Date: 2026-05-12 12:20+0000\n"
+"Last-Translator: Helgi Sigurbjörnsson <helgi.sigurbjornsson@landsbokasafn.is>"
+"\n"
+"Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/admin/is/>"
+"\n"
+"Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "admin.hostedContexts"
 msgstr "Tengd tímarit"
 
 msgid "admin.settings.redirect"
-msgstr ""
+msgstr "Áframsending tímarits"
 
 msgid "admin.settings.redirectInstructions"
 msgstr ""
+"Beiðnum til aðalvefsins verður vísað áfram á þetta tímarit. Þetta getur "
+"verið gagnlegt ef vefurinn hýsir aðeins eitt tímarit, til dæmis."
 
 msgid "admin.languages.confirmDisable"
 msgstr ""
+"Ertu viss um að þú viljir gera þessa tungumálastaðfærslu óvirka? Þetta gæti "
+"haft áhrif á tímarit sem nota hana nú þegar."
 
 msgid "admin.languages.primaryLocaleInstructions"
 msgstr ""
+"Þetta verður sjálfgefið tungumál fyrir vefinn og öll tímarit sem þar eru "
+"hýst."
 
 msgid "admin.languages.supportedLocalesInstructions"
 msgstr ""
+"Veldu allar tungumálastaðfærslur sem eiga að vera studdar á vefnum. Valdar "
+"staðfærslur verða aðgengilegar öllum tímaritum sem hýst eru á vefnum og munu "
+"einnig birtast í tungumálavalmynd á hverri síðu vefsins (sem hægt er að "
+"yfirskrifa á síðum einstakra tímarita). Ef fleiri en ein tungumálastaðfærsla "
+"er ekki valin mun tungumálavalmyndin ekki birtast og ítarlegri "
+"tungumálastillingar verða ekki í boði fyrir tímaritin."
 
 msgid "admin.locale.maybeIncomplete"
 msgstr "Þýðingu er mögulega ekki lokið fyrir tugumál merkt með *."
 
 msgid "admin.languages.confirmUninstall"
 msgstr ""
+"Ertu viss um að þú viljir fjarlægja þessa tungumálastaðfærslu? Þetta gæti "
+"haft áhrif á tímarit sem nota hana nú þegar."
 
 msgid "admin.languages.installNewLocalesInstructions"
 msgstr ""
+"Veldu öll viðbótar tungumál  sem setja á upp stuðning fyrir í þessu kerfi. "
+"Setja þarf upp staðfærslur áður en tímarit sem hýst eru í kerfinu geta notað "
+"þær. Sjá skjölun Open Journal Systems fyrir upplýsingar um hvernig bæta má "
+"við stuðningi fyrir ný tungumál."
 
 msgid "admin.systemVersion"
-msgstr ""
+msgstr "OJS útgáfa"
 
 msgid "admin.systemConfiguration"
-msgstr ""
+msgstr "OJS stillingar"
 
 msgid "admin.systemConfigurationDescription"
-msgstr ""
+msgstr "Stillingar OJS úr <tt>config.inc.php</tt>."
 
 msgid "admin.journals.createInstructions"
 msgstr ""
+"Þú verður sjálfkrafa skráður sem stjórnandi þessa tímarits. Eftir að nýtt "
+"tímarit hefur verið búið til verður þér vísað í stillingahjálp kerfisins til "
+"að ljúka upphafsstillingu tímaritsins."
 
 msgid "admin.journals.journalSettings"
-msgstr ""
+msgstr "Stillingar tímarits"
 
 msgid "admin.journals.noneCreated"
-msgstr ""
+msgstr "Engin tímarit hafa verið búin til."
 
 msgid "admin.contexts.create"
-msgstr ""
+msgstr "Búa til tímarit"
 
 msgid "admin.journals.urlWillBe"
 msgstr ""
+"Þetta ætti að vera eitt stutt orð eða skammstöfun sem auðkennir tímaritið. "
+"Vefslóð tímaritsins verður {$sampleUrl}."
 
 msgid "admin.contexts.form.titleRequired"
-msgstr ""
+msgstr "Þörf er á titli."
 
 msgid "admin.contexts.form.pathRequired"
-msgstr ""
+msgstr "Þörf er á vefslóð."
 
 msgid "admin.contexts.form.pathAlphaNumeric"
 msgstr ""
+"Slóðin má aðeins innihalda bókstafi, tölur og táknin _ og -. Hún verður að "
+"byrja og enda á bókstaf eða tölu."
 
 msgid "admin.contexts.form.pathExists"
-msgstr ""
+msgstr "Slóðin sem þú gafst upp er nú þegar í notkun hjá öðru tímariti."
 
 msgid "admin.contexts.form.primaryLocaleNotSupported"
 msgstr ""
+"Aðaltungumálastaðfærslan verður að vera ein af studdum staðfærslum "
+"tímaritsins."
 
 msgid "admin.journals.enableJournalInstructions"
-msgstr ""
+msgstr "Gera þetta tímarit sýnilegt opinberlega á vefnum"
 
 msgid "admin.contexts.contextDescription"
-msgstr ""
+msgstr "Lýsing tímarits"
 
 msgid "admin.journal.pathImportInstructions"
-msgstr ""
+msgstr "Núverandi tímaritsslóð eða slóð sem á að búa til (t.d. „ojs“)."
 
 msgid "admin.journals.importSubscriptions"
 msgstr ""

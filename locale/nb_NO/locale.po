@@ -1,16 +1,18 @@
 # Tormod Strømme <tormod.stromme@uib.no>, 2022.
 # Aysa Ekanger <aysa.ekanger@uit.no>, 2023, 2024.
 # Johanna Skaug <johanna.skaug@ub.uio.no>, 2024.
+# Eirik Hanssen <eirikh@oslomet.no>, 2026.
+# "FRITT, University of Oslo Library" <fritt-info@journals.uio.no>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:27+00:00\n"
-"PO-Revision-Date: 2024-09-16 08:02+0000\n"
-"Last-Translator: Johanna Skaug <johanna.skaug@ub.uio.no>\n"
+"PO-Revision-Date: 2026-04-21 10:35+0000\n"
+"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "locale/nb_NO/>\n"
-"Language: nb\n"
+"Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -92,7 +94,7 @@ msgid "navigation.infoForLibrarians.long"
 msgstr "Informasjon for bibliotekarer"
 
 msgid "navigation.skip.about"
-msgstr "Gå til om tidsskriftet"
+msgstr "Gå til \"Om tidsskriftet\""
 
 msgid "navigation.skip.issue"
 msgstr "Gå til nyeste nummer"
@@ -392,7 +394,7 @@ msgid "journal.viewAllIssues"
 msgstr "Vis alle utgavene"
 
 msgid "user.authorization.representationNotFound"
-msgstr "Oppsettet ble ikke funnet."
+msgstr "Det forespurte oppsettet ble ikke funnet."
 
 msgid "user.noRoles.selectUsersWithoutRoles"
 msgstr "Inkluder brukere som ikke har noen rolle i dette tidsskriftet."
@@ -501,7 +503,7 @@ msgid "issue.number"
 msgstr "Nummer"
 
 msgid "issue.vol"
-msgstr "Vol"
+msgstr "Vol."
 
 msgid "issue.no"
 msgstr "Nr."
@@ -1042,7 +1044,7 @@ msgid "reviewer.averageQuality"
 msgstr "Rangering"
 
 msgid "reviewer.article.fileToBeReviewed"
-msgstr "Fil til vurdering"
+msgstr "Fil som skal vurderes"
 
 msgid "reviewer.article.notifyTheEditor"
 msgstr "Send beskjed til redaktøren"
@@ -1075,7 +1077,7 @@ msgid "reviewer.article.recommendation"
 msgstr "Anbefaling"
 
 msgid "reviewer.article.submitReview"
-msgstr "Send fagfellevurdering til redaktør"
+msgstr "Send anbefaling til redaktør"
 
 msgid "reviewer.article.reviewerComments"
 msgstr "Kommentarer"
@@ -1107,7 +1109,7 @@ msgid "reviewer.article.decision.accept"
 msgstr "Aksepteres"
 
 msgid "reviewer.article.decision.pendingRevisions"
-msgstr "Aksepteres med forbehold om omarbeiding"
+msgstr "Omarbeiding kreves"
 
 msgid "reviewer.article.decision.resubmitHere"
 msgstr "Sendes til enda en fagfellevurdering"
@@ -1188,7 +1190,7 @@ msgstr ""
 "anbefaling."
 
 msgid "reviewer.article.selectRecommendation.byEditor"
-msgstr "Instill eller juster fagfellens anbefaling."
+msgstr "Sett inn eller juster fagfellens anbefaling."
 
 msgid "reviewer.article.mustSelectDecision"
 msgstr "Ingen anbefaling er valgt. Du må velge en anbefaling."
@@ -2012,7 +2014,6 @@ msgstr ""
 "<p>2. Det må lages en mappe for å lagre opplastede filer. Mappen må være "
 "overskrivbar. (Se «Filinnstillinger» under).</p>"
 
-#, fuzzy
 msgid "installer.upgradeInstructions"
 msgstr ""
 "<h4>OJS versjon {$version}</h4>\n"
@@ -2029,8 +2030,8 @@ msgstr ""
 "\"_blank\">feilmeldingssystem</a>. Selv om støtteforumet er den foretrukne "
 "kontaktkanalen, kan du også sende en e-post til teamet: <a href=\"mailto:pkp."
 "contact@gmail.com\">pkp.contact@gmail.com</a>.</p>\n"
-"<p>Det er <strong>på det sterkeste anbefalt</strong> at du tar backup av "
-"databasen din, filmappen og OJS installasjonsmappe før du går videre.</p>"
+"<p>Det <strong>anbefales på det sterkeste</strong> at du tar backup av "
+"databasen din, filmappen og OJS installasjonsmappe før du går videre!</p>"
 
 msgid "installer.localeSettingsInstructions"
 msgstr ""
@@ -2079,9 +2080,9 @@ msgstr "Oppgrader Open Journal Systems"
 
 msgid "installer.reinstallAfterDatabaseError"
 msgstr ""
-"<b>Advarsel:</b> Hvis installasjonen feilet under databaseinstallasjonen, "
-"kan du måtte droppe OJS-databasen din eller databasetabellene dine før du "
-"forsøker å reinstallere databasen."
+"<strong>Advarsel:</strong> Hvis installasjonen feilet under "
+"databaseinstallasjonen, kan du måtte droppe OJS-databasen din eller "
+"databasetabellene dine før du forsøker å reinstallere databasen."
 
 msgid "installer.overwriteConfigFileInstructions"
 msgstr ""
@@ -2091,7 +2092,6 @@ msgstr ""
 "tekstbehandlingsprogram og erstatt innholdet i den med innholdet i "
 "tekstfeltet nedenfor.</p>"
 
-#, fuzzy
 msgid "installer.installationComplete"
 msgstr ""
 "<p>Installasjonen av OJS er fullført.</p> \n"
@@ -2099,11 +2099,10 @@ msgstr ""
 "brukernavnet og passordet som ble oppgitt på forrige side.</p> \n"
 "<p>Besøk <a href=\"https://forum.pkp.sfu.ca\" target=\"_new\">støtteforumet</"
 "a> eller meld deg på vårt <a href=\"https://pkp.sfu.ca/developer-newsletter\""
-" target=\"_new\">nyhetsbrev for utviklere</a> for å motta sikkerhetsnotiser, "
+" target=\"_new\">nyhetsbrev for utviklere</a> for å motta info om sikkerhet, "
 "oppdateringer om kommende utgivelser, nye plugins og planlagte "
 "funksjoner.</p>"
 
-#, fuzzy
 msgid "installer.upgradeComplete"
 msgstr ""
 "<p>Oppgradering av OJS til versjon {$version} er fullført.</p> \n"
@@ -2543,3 +2542,6 @@ msgstr "Velg hvordan du ønsker å ordne artikler i denne kategorien."
 
 #~ msgid "category.category"
 #~ msgstr "Kategorier"
+
+msgid "search.journal"
+msgstr "Etter tidsskrift"

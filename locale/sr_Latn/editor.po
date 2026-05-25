@@ -1,20 +1,21 @@
 # Biljana Cubrovic <biljana.cubrovic@gmail.com>, 2021.
+# lena bojcic <lenabojcicck@gmail.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
-"PO-Revision-Date: 2021-07-08 13:00+0000\n"
-"Last-Translator: Biljana Cubrovic <biljana.cubrovic@gmail.com>\n"
+"PO-Revision-Date: 2026-05-24 19:30+0000\n"
+"Last-Translator: lena bojcic <lenabojcicck@gmail.com>\n"
 "Language-Team: Serbian (latin) <http://translate.pkp.sfu.ca/projects/ojs/"
 "editor/sr_Latn/>\n"
-"Language: sr_RS@latin\n"
+"Language: sr_Latn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "editor.home"
 msgstr "Urednička"
@@ -187,6 +188,9 @@ msgstr "Ukloni naslovnicu?"
 
 msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
 msgstr ""
+"Slika naslovnice koju pokušavate da obrišete odgovara broju drugog časopisa. "
+"Proverite da li radite u ispravnom časopisu, da li koristite tačan ID broja "
+"i pokušajte ponovo."
 
 msgid "editor.issues.removeCoverImageFileNameMismatch"
 msgstr ""
@@ -285,7 +289,7 @@ msgid "editor.issues.confirmUnpublish"
 msgstr "Da li ste sigurni da želite da vratite u neobjavljeno?"
 
 msgid "editor.issues.confirmSetCurrentIssue"
-msgstr ""
+msgstr "Da li ste sigurni da želite da ovaj broj postavite kao aktuelni?"
 
 msgid "editor.issues.publicArticleIdExists"
 msgstr "Ne mogu da sačuvam javni id fa članak:"
@@ -354,7 +358,7 @@ msgid "grid.action.addIssueGalley"
 msgstr "Napravi fajl prikaza broja"
 
 msgid "grid.action.setCurrentIssue"
-msgstr ""
+msgstr "Postavi trenutni broj"
 
 msgid "editor.navigation.issueArchive"
 msgstr "Prethodni brojevi"
@@ -396,22 +400,22 @@ msgid "editor.submissions.assignedTo"
 msgstr "Dodeljeno za"
 
 msgid "issues.submissions.issueIds"
-msgstr ""
+msgstr "Dodeljeno broju"
 
 msgid "editor.submissions.inSection"
 msgstr "U sekciji/rubrici"
 
 msgid "editor.article.showPublicationVersion"
-msgstr ""
+msgstr "Prikaži zakazano objavljivanje"
 
 msgid "editor.article.publishVersion"
-msgstr ""
+msgstr "Objavi verziju"
 
 msgid "editor.article.viewMetadata"
-msgstr ""
+msgstr "Prikaži metapodatke verzije"
 
 msgid "editor.article.editMetadata"
-msgstr ""
+msgstr "Uredi metapodatke verzije"
 
 msgid "editor.article.scheduleForPublication"
 msgstr "Dodeli za objavljivanje u"
@@ -425,7 +429,7 @@ msgstr ""
 "autora da plati naknadu ili da traži izuzeće od plaćanja."
 
 msgid "editor.article.payment.requestPayment"
-msgstr ""
+msgstr "Zatraži uplatu"
 
 msgid "editor.article.removeCoverImageFileNotFound"
 msgstr ""
@@ -473,6 +477,9 @@ msgstr ""
 
 msgid "editor.publicIdentificationExistsForTheSameType"
 msgstr ""
+"Javni identifikator „{$publicIdentifier}“ već postoji za drugi objekat istog "
+"tipa. Molimo vas da izaberete jedinstvene identifikatore za objekte istog "
+"tipa u okviru vašeg časopisa."
 
 msgid "editor.article.coverImage"
 msgstr "Slika naslovne strane"
@@ -510,3 +517,14 @@ msgstr "Slika naslovne strane"
 
 #~ msgid "editor.article.decision.decline"
 #~ msgstr "Ne prihvatiti prijavljen članak"
+
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr ""
+"Ako se ostavi prazno, datum će biti automatski postavljen kada broj bude "
+"objavljen."
+
+msgid "editor.issues.datePublished.invalid"
+msgstr "Datum objavljivanja nije validan. Datum mora biti u formatu YYYY-MM-DD."
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr "Datum objavljivanja je obavezan kada se broj objavljuje."
