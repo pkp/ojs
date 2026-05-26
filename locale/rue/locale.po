@@ -2,7 +2,7 @@
 # Monika Tylawska <monika.tylawska@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-05-12 10:27+0000\n"
+"PO-Revision-Date: 2026-05-26 05:13+0000\n"
 "Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/locale/rue/>\n"
 "Language: rue\n"
@@ -596,3 +596,7 @@ msgstr "Не маш актывной субскрибциі."
 
 msgid "subscriptions.status.other"
 msgstr "Інча, смотр увагы"
+
+msgid "subscriptions.individualDescription"
+msgstr ""
+"В ситуациі індивідуальной субскрибциі доступ до змісту вымагат залоґуваня."
