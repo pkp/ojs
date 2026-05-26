@@ -2,7 +2,7 @@
 # Monika Tylawska <monika.tylawska@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-05-26 05:13+0000\n"
+"PO-Revision-Date: 2026-05-26 06:36+0000\n"
 "Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/locale/rue/>\n"
 "Language: rue\n"
@@ -600,3 +600,198 @@ msgstr "Інча, смотр увагы"
 msgid "subscriptions.individualDescription"
 msgstr ""
 "В ситуациі індивідуальной субскрибциі доступ до змісту вымагат залоґуваня."
+
+msgid "submission.event.general.defaultEvent"
+msgstr "Акция"
+
+msgid "subscriptions.institutionalOnlinePaymentDescription"
+msgstr ""
+"<strong>Увага:</strong> При заплаті онляйн за інституцийональну субскрибцию "
+"вымагат ся потверджыня домены і адресу IP, котры дают можніст актывавиі "
+"субскрибциі."
+
+msgid "submission.event.submissionSubmitted"
+msgstr "Статя переслана"
+
+msgid "submission.event.general.issueScheduled"
+msgstr "Статя остала переслана до плянуваня чергы"
+
+msgid "submission.event.general.issueAssigned"
+msgstr "Статя приписана до номеру"
+
+msgid "submission.event.general.articlePublished"
+msgstr "Статя опубликуваня"
+
+msgid "submission.event.author.authorRevision"
+msgstr "Коректа автора переслана"
+
+msgid "submission.event.editor.editorAssigned"
+msgstr "Редактор приписаный до зголошеного тексту"
+
+msgid "submission.event.editor.editorDecision"
+msgstr "Рішыня редактора выслане"
+
+msgid "submission.event.editor.editorFile"
+msgstr "Файль редактора зактуалізуваный"
+
+msgid "submission.event.editor.submissionRestored"
+msgstr "Высланый текст приверненый з архіву"
+
+msgid "submission.event.copyedit.copyeditorUnassigned"
+msgstr "Коректор одлученый од зголошеного тексту"
+
+msgid "submission.event.copyedit.copyeditInitiated"
+msgstr "Коректа ся зачала"
+
+msgid "submission.event.copyedit.copyeditRevision"
+msgstr "Файль з коректом зактуалізуваный"
+
+msgid "submission.event.copyedit.copyeditInitialCompleted"
+msgstr "Вступна коректа закінчена"
+
+msgid "submission.event.copyedit.copyeditFinalCompleted"
+msgstr "Коректа закінчена"
+
+msgid "submission.event.copyedit.copyeditSetFile"
+msgstr "Файль по коректі зактуалізуваный"
+
+msgid "submission.event.proofread.proofreaderAssigned"
+msgstr "Коректор файля до публикациі приписаный до зголошыня"
+
+msgid "submission.event.proofread.proofreadInitiated"
+msgstr "Коректа файля до публикациі зачала ся"
+
+msgid "submission.event.proofread.proofreadRevision"
+msgstr "Файль по коректі файля до публикациі остал зактуалізуваный"
+
+msgid "submission.event.proofread.proofreadCompleted"
+msgstr "Коректа файля до публикациі остала закінчена"
+
+msgid "submission.event.layout.layoutEditorAssigned"
+msgstr "Редактор складу остал пруписаный до тексту"
+
+msgid "submission.event.layout.layoutInitiated"
+msgstr "Склад ся зачал"
+
+msgid "submission.event.layout.layoutGalleyCreated"
+msgstr "Файль по складі остал зактуалізуваный"
+
+msgid "submission.event.layout.layoutComplete"
+msgstr "Склад закінченый"
+
+msgid "reader.subscribersOnly"
+msgstr "Лем для субскрибентів"
+
+msgid "reader.openAccess"
+msgstr "Доступ отвореный"
+
+msgid "reader.subscriptionAccess"
+msgstr "Доступ през субскробцию"
+
+msgid "reader.subscriptionOrFeeAccess"
+msgstr "Доступ през субскрибцию або за оплатом"
+
+msgid "reader.purchasePrice"
+msgstr "({$currency} {$price})"
+
+msgid "comments.commentsOnArticle"
+msgstr "Увагы до статі"
+
+msgid "comments.authenticated"
+msgstr "през<a href=\"{$publicProfileUrl}\" target=\"_parent\">{$userName}</a>"
+
+msgid "search.results.orderBy"
+msgstr "Порядкуй результаты подля"
+
+msgid "search.results.orderBy.article"
+msgstr "Наголовок"
+
+msgid "search.results.orderBy.author"
+msgstr "Автор"
+
+msgid "search.results.orderBy.date"
+msgstr "Дата публикациі"
+
+msgid "search.results.orderBy.issue"
+msgstr "Номер"
+
+msgid "search.results.orderBy.journal"
+msgstr "Наголовок часопису"
+
+msgid "search.results.orderBy.popularityAll"
+msgstr "Популярніст (фурт)"
+
+msgid "search.results.orderBy.popularityMonth"
+msgstr "Популярніст (остатній місяц)"
+
+msgid "search.results.orderBy.relevance"
+msgstr "Допасуваня"
+
+msgid "search.results.orderDir.asc"
+msgstr "Збільшаючо"
+
+msgid "search.results.orderDir.desc"
+msgstr "Поменшаючо"
+
+msgid "subscriptionManager.subscriptionManagement"
+msgstr "Заряджяня субскрибцийом"
+
+msgid "subscriptionManager.individualSubscriptions"
+msgstr "Індивідуальны субскрибциі"
+
+msgid "subscriptionManager.institutionalSubscriptions"
+msgstr "Інституцийональны субскрибциі"
+
+msgid "subscriptionManager.subscriptionTypes"
+msgstr "Роды субскрибциі"
+
+msgid "plugins.categories.viewableFiles"
+msgstr "Втычкы виду файлів зо статями"
+
+msgid "submission.event.general.authorRevision"
+msgstr "Файль коректы автора остал зактуалізуваный"
+
+msgid "submission.event.editor.editorUnassigned"
+msgstr "Редактор одлученый од зголошеного тексту"
+
+msgid "submission.event.editor.submissionArchived"
+msgstr "Высланый текст перенесеный до архіву"
+
+msgid "submission.event.copyedit.copyeditorAssigned"
+msgstr "Коректор приписаный до зголошеного тексту"
+
+msgid "submission.event.proofread.proofreaderUnassigned"
+msgstr "Коректор файля до публикациі одлуленый од зголошыня"
+
+msgid "submission.event.layout.layoutEditorUnassigned"
+msgstr "редактор складу до зголошеного тексту остал одлучленый"
+
+msgid "reader.subscriptionRequiredLoginText"
+msgstr ""
+"Вымагана субскрибция. Жебы зверифікувати субскрибцию, залоґуй ся до часопису."
+
+msgid "search.results.similarDocuments"
+msgstr "подібны докуманты"
+
+msgid "plugins.categories.viewableFiles.description"
+msgstr ""
+"Втычкы виду файля зо стятями сперают ріжны форматы файлів в обсягу способів "
+"высвітляня."
+
+msgid "plugins.categories.auth.description"
+msgstr ""
+"Втычка вторизациі дозвалят жебы Open Journal Systems провірял реальніст "
+"хоснователів при поочы зовнішніх системів, такых як LDAP."
+
+msgid "subscriptions.institutionalDescription"
+msgstr ""
+"В ситуациі інституцийональной субскрибциі доступ до змісту не вымагат "
+"лоґуваня. Доступ до змісту мате завдякы домені або адресови IP, з котрого "
+"лучыт ся хоснуватель."
+
+msgid "admin.overwriteConfigFileInstructions"
+msgstr ""
+"<h4>Увага</h4>\n"
+"<p>Систем не был в силі автоматычні надписати файля конфіґурациі. Жебы "
+"зхоснувати зміны в конфіґурациі мусиш отворити файль<tt>onfig.inc.php</tt> в "
+"едиторі тексту і змінити його зміст поміщеный долов.</p>"
