@@ -172,12 +172,6 @@ msgstr "Choose whether to publish this now or include it in an issue."
 msgid "publication.assignToissue"
 msgstr "Assign to Issue"
 
-msgid "publication.categories.description"
-msgstr "Assign categories to help organize and filter this publication."
-
-msgid "publication.coverImage.description"
-msgstr "Upload an image to represent this publication."
-
 msgid "publication.pages.description"
 msgstr "Enter page numbers for this publication, if applicable."
 
