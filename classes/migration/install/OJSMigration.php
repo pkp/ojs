@@ -246,7 +246,7 @@ class OJSMigration extends \PKP\migration\Migration
             $table->enum('version_stage', array_column(VersionStage::cases(), 'value'))->nullable();
             $table->integer('version_minor')->nullable();
             $table->integer('version_major')->nullable();
-            $table->enum('update_type', array_column(UpdateType::cases(), 'value'))->nullable();
+            $table->enum('update_type', array_column(UpdateType::cases(), 'value'))->default(UpdateType::NEW_VERSION->value);
             $table->datetime('created_at')->useCurrent();
 
             $table->bigInteger('issue_id')->nullable();
