@@ -17,6 +17,7 @@ jobs:
     with:
       project: ${{ github.event.repository.name }}
       tag: ${{ inputs.tag }}
+      copies: qa,hosting
     secrets:
       SSH_PRIVATE_KEY: ${{ secrets.TEST_VPS_CI_SSH_PRIVATE_KEY }}
       SSH_HOST: ${{ secrets.TEST_VPS_CI_SSH_HOST }}
