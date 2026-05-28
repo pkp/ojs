@@ -17,14 +17,23 @@ namespace APP\components\forms\publication;
 
 use APP\facades\Repo;
 use PKP\components\forms\FieldAutosuggestPreset;
+use PKP\components\forms\FieldRichTextarea;
 use PKP\components\forms\FieldSelect;
 use PKP\components\forms\FieldText;
 use PKP\components\forms\FieldUploadImage;
 use PKP\components\forms\FormComponent;
+use PKP\publication\enums\UpdateType;
 
 class IssueEntryForm extends FormComponent
 {
     public const FORM_ISSUE_ENTRY = 'issueEntry';
+
+    public const GROUP_PLACEMENT = 'placement';
+    public const GROUP_PUBLICATION_TIMING = 'publicationTiming';
+    public const GROUP_VERSION_AND_UPDATES = 'versionAndUpdates';
+    public const GROUP_DISPLAY = 'display';
+    public const GROUP_ACCESS = 'access';
+
     public $id = self::FORM_ISSUE_ENTRY;
     public $method = 'PUT';
 
@@ -49,6 +58,13 @@ class IssueEntryForm extends FormComponent
         $this->action = $action;
         $this->locales = $locales;
 
+        $this
+            ->addGroup(['id' => self::GROUP_PLACEMENT, 'label' => __('publication.placement')])
+            ->addGroup(['id' => self::GROUP_PUBLICATION_TIMING, 'label' => __('publication.publicationTiming')])
+            ->addGroup(['id' => self::GROUP_VERSION_AND_UPDATES, 'label' => __('publication.versionAndUpdates')])
+            ->addGroup(['id' => self::GROUP_DISPLAY, 'label' => __('publication.display')])
+            ->addGroup(['id' => self::GROUP_ACCESS, 'label' => __('publication.access')]);
+
         // Section options
         $sections = Repo::section()->getSectionList($publicationContext->getId());
         $sectionOptions = [];
@@ -60,7 +76,9 @@ class IssueEntryForm extends FormComponent
         }
 
         $this->addField(new FieldSelect('sectionId', [
+            'groupId' => self::GROUP_PLACEMENT,
             'label' => __('section.section'),
+            'description' => __('publication.section.description'),
             'options' => $sectionOptions,
             'value' => (int) $publication->getData('sectionId'),
             'size' => 'large',
@@ -86,8 +104,9 @@ class IssueEntryForm extends FormComponent
             $vocabulary = Repo::category()->getCategoryVocabularyStructure($categories);
 
             $this->addField(new FieldAutosuggestPreset('categoryIds', [
+                'groupId' => self::GROUP_PLACEMENT,
                 'label' => __('submission.submit.placement.categories'),
-                'description' => $hasAllBreadcrumbs ? '' : __('submission.categories.circularReferenceWarning'),
+                'description' => __('publication.categories.description') . ($hasAllBreadcrumbs ? '' : ' ' . __('submission.categories.circularReferenceWarning')),
                 'value' => $publication->getData('categoryIds'),
                 'options' => $categoryOptions,
                 'vocabularies' => [
@@ -102,8 +121,35 @@ class IssueEntryForm extends FormComponent
         }
 
         $this
+            ->addField(new FieldText('datePublished', [
+                'groupId' => self::GROUP_PUBLICATION_TIMING,
+                'label' => __('publication.publicationDate'),
+                'description' => __('publication.datePublished.description'),
+                'value' => $publication->getData('datePublished'),
+                'size' => 'large',
+            ]))
+            ->addField(new FieldSelect('updateType', [
+                'groupId' => self::GROUP_VERSION_AND_UPDATES,
+                'label' => __('publication.updateType.label'),
+                'description' => __('publication.updateType.description'),
+                'options' => array_map(
+                    fn (UpdateType $case) => ['value' => $case->value, 'label' => $case->label()],
+                    UpdateType::cases()
+                ),
+                'value' => $publication->getData('updateType') ?? UpdateType::NEW_VERSION->value,
+                'size' => 'large',
+            ]))
+            ->addField(new FieldRichTextarea('summaryOfChanges', [
+                'groupId' => self::GROUP_VERSION_AND_UPDATES,
+                'label' => __('submission.form.summaryOfChanges'),
+                'description' => __('publication.summaryOfChanges.description'),
+                'isMultilingual' => true,
+                'value' => $publication->getData('summaryOfChanges'),
+            ]))
             ->addField(new FieldUploadImage('coverImage', [
+                'groupId' => self::GROUP_DISPLAY,
                 'label' => __('editor.article.coverImage'),
+                'description' => __('publication.coverImage.description'),
                 'value' => $publication->getData('coverImage'),
                 'isMultilingual' => true,
                 'baseUrl' => $baseUrl,
@@ -112,19 +158,18 @@ class IssueEntryForm extends FormComponent
                 ],
             ]))
             ->addField(new FieldText('pages', [
+                'groupId' => self::GROUP_DISPLAY,
                 'label' => __('editor.issues.pages'),
+                'description' => __('publication.pages.description'),
                 'value' => $publication->getData('pages'),
+                'size' => 'large',
             ]))
             ->addField(new FieldText('urlPath', [
+                'groupId' => self::GROUP_ACCESS,
                 'label' => __('publication.urlPath'),
-                'description' => __('publication.urlPath.description'),
+                'description' => __('publication.publicationSettings.urlPath.description'),
                 'value' => $publication->getData('urlPath'),
-            ]))
-            ->addField(new FieldText('datePublished', [
-                'label' => __('publication.datePublished'),
-                'description' => __('publication.datePublished.description'),
-                'value' => $publication->getData('datePublished'),
-                'size' => 'small',
+                'size' => 'large',
             ]));
     }
 }

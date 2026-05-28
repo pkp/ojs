@@ -328,8 +328,8 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('[role="status"]').contains('Saved');
 		//cy.wait(1000);
 
-		// Issue
-		cy.openWorkflowMenu('Unassigned version', 'Issue')
+		// Publication Settings
+		cy.openWorkflowMenu('Unassigned version', 'Publication Settings')
 
 		// Initially set to no issue
 		cy.get('label:Contains("Don\'t Assign To An Issue")').click();
@@ -518,7 +518,7 @@ describe('Data suite: Amwandenga', function() {
 		cy.get('[data-cy="galley-manager"]').contains("PDF Version 2");
 
 		// Edit url path and select issue
-		cy.openWorkflowMenu('Version of Record 1.1', 'Issue')
+		cy.openWorkflowMenu('Version of Record 1.1', 'Publication Settings')
 		cy.wait(2000);
 		cy.get('select[name="issueId"]').select('Vol. 1 No. 2 (2014)');
 		cy.get('[name="urlPath"]').clear();
