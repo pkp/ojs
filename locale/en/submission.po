@@ -166,8 +166,26 @@ msgstr ""
 msgid "galley.publicationNotFound"
 msgstr "The publication for this galley could not be found."
 
+msgid "publication.assignToIssue.description"
+msgstr "Choose whether to publish this now or include it in an issue."
+
 msgid "publication.assignToissue"
 msgstr "Assign to Issue"
+
+msgid "publication.pages.description"
+msgstr "Enter page numbers for this publication, if applicable."
+
+msgid "publication.publicationDate"
+msgstr "Publication Date"
+
+msgid "publication.publicationSettings"
+msgstr "Publication Settings"
+
+msgid "publication.publicationSettings.urlPath.description"
+msgstr "Set a custom URL for this publication, or leave blank to use the default."
+
+msgid "publication.section.description"
+msgstr "Choose the journal section where this publication will appear."
 
 msgid "publication.assignedToIssue"
 msgstr ""

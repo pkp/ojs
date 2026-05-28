@@ -44,6 +44,7 @@ class DAO extends \PKP\publication\DAO
         'versionStage' => 'version_stage',
         'versionMinor' => 'version_minor',
         'versionMajor' => 'version_major',
+        'updateType' => 'update_type',
         'createdAt' => 'created_at',
         'sourcePublicationId' => 'source_publication_id'
     ];

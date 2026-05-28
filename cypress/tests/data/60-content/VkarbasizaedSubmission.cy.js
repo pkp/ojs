@@ -221,7 +221,7 @@ describe('Data suite tests', function() {
 		cy.visit('index.php/publicknowledge/dashboard/editorial');
 		cy.get('nav').contains('Active submissions').click();
 		cy.openSubmission(author.familyName);
-		cy.openWorkflowMenu('Version of Record 1.0', 'Issue')
+		cy.openWorkflowMenu('Version of Record 1.0', 'Publication Settings')
 
 		// update issue selection and publish
 		cy.get('button').contains('Schedule For Publication').click();
