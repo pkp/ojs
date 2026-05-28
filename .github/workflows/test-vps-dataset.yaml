@@ -5,7 +5,7 @@ on:
     inputs:
       branch:
         type: choice
-        description: "Branch to update dataset for"
+        description: "What to update — pick a branch, or '(use tag below)' to target a tag"
         required: true
         default: "main"
         options:
@@ -13,6 +13,11 @@ on:
           - stable-3_5_0
           - stable-3_4_0
           - stable-3_3_0
+          - (use tag below)
+      tag:
+        type: string
+        description: "Tag to update (used only when '(use tag below)' is selected — e.g., '3_5_0-2')"
+        required: false
       update_default:
         type: boolean
         description: "Update the default copy (no suffix)"
@@ -32,6 +37,12 @@ jobs:
     outputs:
       copies: ${{ steps.set-copies.outputs.copies }}
     steps:
+      - id: validate
+        run: |
+          if [ "${{ inputs.branch }}" = "(use tag below)" ] && [ -z "${{ inputs.tag }}" ]; then
+            echo "::error::Selected '(use tag below)' but the Tag field is empty. Pick a branch, or fill in the Tag."
+            exit 1
+          fi
       - id: set-copies
         run: |
           COPIES=""
@@ -54,7 +65,8 @@ jobs:
     uses: jardakotesovec/pkp-test-vps-ci/.github/workflows/update-dataset.yaml@main
     with:
       project: ${{ github.event.repository.name }}
-      branch: ${{ inputs.branch }}
+      branch: ${{ inputs.branch == '(use tag below)' && '' || inputs.branch }}
+      tag: ${{ inputs.branch == '(use tag below)' && inputs.tag || '' }}
       copies: ${{ needs.build-copies-string.outputs.copies }}
     secrets:
       SSH_PRIVATE_KEY: ${{ secrets.TEST_VPS_CI_SSH_PRIVATE_KEY }}
