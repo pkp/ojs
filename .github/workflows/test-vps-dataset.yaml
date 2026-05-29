@@ -1,4 +1,7 @@
 name: Test VPS Update Dataset
+run-name: >-
+  Update dataset: ${{ inputs.branch == '(use tag below)' && format('tag {0}', inputs.tag) || inputs.branch }}
+  → copies: ${{ inputs.update_default && 'default ' || '' }}${{ inputs.update_qa && 'qa ' || '' }}${{ inputs.update_hosting && 'hosting' || '' }}
 
 on:
   workflow_dispatch:

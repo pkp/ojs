@@ -1,4 +1,5 @@
 name: Test VPS Deploy Tag
+run-name: "Deploy tag ${{ inputs.tag }}"
 
 on:
   workflow_dispatch:

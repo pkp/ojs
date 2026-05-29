@@ -1,4 +1,5 @@
 name: Test VPS Cleanup PR Deployment
+run-name: "Cleanup PR #${{ github.event.number || inputs.pr_number }}"
 
 on:
   pull_request_target:

@@ -1,4 +1,5 @@
 name: Test VPS Deploy stable branch
+run-name: "Deploy ${{ inputs.branch || github.ref_name }}"
 
 on:
   push:
