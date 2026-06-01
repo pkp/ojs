@@ -94,9 +94,9 @@ class SearchHandler extends Handler
                         0,
                         0,
                         0,
-                        empty($month) ? $defaultMonth : $month,
-                        empty($day) ? $defaultDay : $day,
-                        $year
+                        filter_var($month, FILTER_VALIDATE_INT, ['min_range' => 1, 'max_range' => 12, 'default' => $defaultMonth]),
+                        filter_var($day, FILTER_VALIDATE_INT, ['min_range' => 1, 'max_range' => 31, 'default' => $defaultDay]),
+                        filter_var($year, FILTER_VALIDATE_INT, ['default' => date('Y')])
                     )
                 );
                 $hasActiveFilters = true;
