@@ -1,12 +1,13 @@
 # Tormod Strømme <tormod.stromme@uib.no>, 2022.
 # Aysa Ekanger <aysa.ekanger@uit.no>, 2026.
+# Anne-Inger <annrag@oslomet.no>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-03-20T15:57:55+00:00\n"
-"PO-Revision-Date: 2026-02-25 11:12+0000\n"
-"Last-Translator: Aysa Ekanger <aysa.ekanger@uit.no>\n"
+"PO-Revision-Date: 2026-06-02 10:29+0000\n"
+"Last-Translator: Anne-Inger <annrag@oslomet.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -98,10 +99,8 @@ msgstr "Nedlastinger"
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Nedlastingsdata er foreløpig ikke tilgjengelig."
 
-#, fuzzy
 msgid "plugins.themes.default.nextSlide"
 msgstr "Neste side"
 
-#, fuzzy
 msgid "plugins.themes.default.prevSlide"
 msgstr "Forrige side"
