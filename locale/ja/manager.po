@@ -48,16 +48,22 @@ msgstr ""
 "要となります。"
 
 msgid "manager.setup.enableDois.description"
-msgstr ""
+msgstr "このジャーナルで公開されるコンテンツにデジタルオブジェクト識別子（DOI）を割り当てられるようにします。"
+
 
 msgid "doi.manager.settings.doiObjectsRequired"
-msgstr ""
+msgstr "DOIを割り当てる対象を選択してください。多くのジャーナルでは論文にDOIを割り当てますが、公開済み項目すべてに割り当てることもできます。"
+
 
 msgid "doi.manager.settings.doiSuffixLegacy"
 msgstr ""
+"既定のパターンを使用します。<br />号: %j.v%vi%i<br />論文: %j.v%vi%i.%a<br />ゲラ: "
+"%j.v%vi%i.%a.g%g"
+
 
 msgid "doi.manager.settings.doiCreationTime.copyedit"
-msgstr ""
+msgstr "コピーエディット段階に到達したとき"
+
 
 msgid "manager.website.archiving"
 msgstr "アーカイブする"
@@ -71,7 +77,7 @@ msgid "manager.journalManagement"
 msgstr "ジャーナル管理"
 
 msgid "manager.language.ui"
-msgstr "UI"
+msgstr ""
 
 msgid "manager.language.submissions"
 msgstr "投稿物"
@@ -791,7 +797,7 @@ msgstr ""
 "LOCKSS コミュニティ</a>をご覧ください。"
 
 msgid "manager.setup.lockssTitle"
-msgstr "LOCKSS"
+msgstr ""
 
 msgid "manager.setup.clockssEnable"
 msgstr ""
@@ -808,7 +814,7 @@ msgstr ""
 "\"_blank\">CLOCKSSウェブサイト</a>をご覧ください。"
 
 msgid "manager.setup.clockssTitle"
-msgstr "CLOCKSS"
+msgstr ""
 
 msgid "manager.setup.look"
 msgstr "見た目"
@@ -935,13 +941,6 @@ msgstr "査読オプション"
 
 msgid "manager.setup.reviewOptions.automatedReminders"
 msgstr "自動メールリマインダー"
-
-msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
-msgstr ""
-"自動化された電子メールによるリマインダーを送信するには、サイト管理者がOJSの設"
-"定ファイルで<tt>スケジュールされたタスク</tt>オプションを有効にする必要があり"
-"ます。OJSのドキュメントに示されているように、追加のサーバー設定が必要な場合も"
-"あります。"
 
 msgid "manager.setup.reviewOptions.numWeeksPerReview"
 msgstr "レビュー完了までの期間"
@@ -1239,13 +1238,6 @@ msgstr ""
 "自動化されたリマインダーメール（ジャーナル管理者がOJSの「メール」で編集可能）"
 "を、購読期限が切れる前と後の両方で購読者に送ることができます。"
 
-msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
-msgstr ""
-"<strong>注:</strong> これらのオプションを有効にするには、サイト管理者がOJS設"
-"定ファイルの<tt>スケジュールタスク</tt>オプションを有効にする必要があります。"
-"この機能をサポートするためには、OJSのドキュメントに示されているように、追加の"
-"サーバー設定が必要な場合があります（すべてのサーバーで可能とは限りません）。"
-
 msgid "manager.subscriptionPolicies.expirySelectOne"
 msgstr "いずれかを選択:"
 
@@ -1274,13 +1266,6 @@ msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
 msgstr ""
 "読者登録された方は、その巻号がオープンアクセスになった際に、電子メールで目次"
 "を受け取ることができます。"
-
-msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
-msgstr ""
-"<strong>注:</strong> このオプションを有効にするには、サイト管理者がOJS設定"
-"ファイルで<tt>スケジュールタスク</tt>のオプションを有効にする必要があります。"
-"この機能のサポートには、OJSのドキュメントに示されているように、追加のサーバー"
-"設定が必要な場合があります（すべてのサーバーで可能とは限りません）。"
 
 msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
 msgstr "オンライン決済のお知らせ"
@@ -1426,10 +1411,12 @@ msgid "manager.subscriptions.form.typeIdValid"
 msgstr "有効な購読種別を選択してください。"
 
 msgid "manager.subscriptions.form.institution"
-msgstr ""
+msgstr "機関"
+
 
 msgid "manager.subscriptions.form.institutionIdValid"
-msgstr ""
+msgstr "有効な機関を選択してください。"
+
 
 msgid "manager.subscriptions.form.dateStart"
 msgstr "開始日"
@@ -1525,7 +1512,7 @@ msgid "manager.subscriptions.form.ipRange"
 msgstr "IPアドレス範囲"
 
 msgid "manager.subscriptions.form.ipRangeItem"
-msgstr "&#8226;"
+msgstr ""
 
 msgid "manager.subscriptions.form.ipRangeInstructions"
 msgstr ""
@@ -1558,7 +1545,8 @@ msgid "manager.subscriptions.form.typeRequired"
 msgstr "新しい購読を作成する前に、購読種別を作成する必要があります。"
 
 msgid "manager.subscriptions.form.institutionRequired"
-msgstr ""
+msgstr "新しい購読を作成する前に、機関を作成する必要があります。"
+
 
 msgid "manager.subscriptions.ipRange"
 msgstr "IPアドレス範囲"
@@ -1751,7 +1739,9 @@ msgid "manager.navigationMenus.mySubscriptions.description"
 msgstr "訪問者の現在および過去の購読情報を記載したページへのリンク。"
 
 msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
-msgstr "このリンクは、訪問者がログインしている場合にのみ表示されます。"
+msgstr ""
+"このリンクは、訪問者がログインしており、「設定」→「流通」→「支払い」で決済が有効になっており、「設定」→「流通」→「アクセス」で購読が必要な場合にのみ表示されます。"
+
 
 msgid "manager.setup.categories"
 msgstr "カテゴリー"
@@ -1934,52 +1924,70 @@ msgid "manager.setup.notifications.copyPrimaryContact"
 msgstr "「ジャーナル設定」で指定された「連絡責任者」にコピーを送信します。"
 
 msgid "stats.contextStats"
-msgstr ""
+msgstr "ジャーナル統計"
+
 
 msgid "stats.context.tooltip.text"
-msgstr ""
+msgstr "ジャーナルのインデックスページを閲覧した訪問者数です。"
+
 
 msgid "stats.context.tooltip.label"
-msgstr ""
+msgstr "ジャーナル統計について"
+
 
 msgid "stats.context.downloadReport.description"
-msgstr ""
+msgstr "以下の条件に一致する、このジャーナルの利用統計をCSV/Excel形式でダウンロードします。"
+
 
 msgid "stats.context.downloadReport.downloadContext.description"
-msgstr ""
+msgstr "ジャーナルのインデックスページ閲覧数です。"
+
 
 msgid "stats.context.downloadReport.downloadContext"
-msgstr ""
+msgstr "ジャーナルをダウンロード"
+
 
 msgid "stats.issueStats"
-msgstr ""
+msgstr "号統計"
+
 
 msgid "stats.issues.details"
-msgstr ""
+msgstr "閲覧数とダウンロード数"
+
 
 msgid "stats.issues.searchIssueDescription"
-msgstr ""
+msgstr "号のタイトル、巻、号数で検索"
+
 
 msgid "stats.issues.none"
-msgstr ""
+msgstr "指定条件に一致する利用統計を持つ号は見つかりませんでした。"
+
 
 msgid "stats.issues.downloadReport.description"
-msgstr ""
+msgstr "以下の条件に一致する号の利用統計をCSV/Excel形式でダウンロードします。"
+
 
 msgid "stats.issues.downloadReport.downloadIssues.description"
-msgstr ""
+msgstr "各号の目次閲覧数と号ゲラのダウンロード数です。"
+
 
 msgid "stats.issues.downloadReport.downloadIssues"
-msgstr ""
+msgstr "号をダウンロード"
+
 
 msgid "stats.issues.countOfTotal"
-msgstr ""
+msgstr "{$total} 件中 {$count} 件の号"
+
 
 msgid "stats.issues.tooltip.label"
-msgstr ""
+msgstr "号統計について"
+
 
 msgid "stats.issues.tooltip.text"
 msgstr ""
+"<strong>閲覧数</strong>: 号の目次を閲覧した訪問者数です。<br><strong>ダウンロード数</strong>: "
+"号ゲラが存在する場合、そのダウンロード数です。"
+
 
 msgid "stats.publicationStats"
 msgstr "記事の統計情報"
@@ -2006,13 +2014,16 @@ msgid "stats.publications.galleys"
 msgstr "ファイル"
 
 msgid "stats.publications.downloadReport.description"
-msgstr ""
+msgstr "以下の条件に一致する論文の利用統計をCSV/Excel形式でダウンロードします。"
+
 
 msgid "stats.publications.downloadReport.downloadSubmissions"
-msgstr ""
+msgstr "論文をダウンロード"
+
 
 msgid "stats.publications.downloadReport.downloadSubmissions.description"
-msgstr ""
+msgstr "各論文の抄録閲覧数とファイルダウンロード数です。"
+
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr "投稿確認メールのコピーを本誌の連絡責任者に送る。"
@@ -2028,7 +2039,7 @@ msgid "plugins.importexport.native.export.issues.results"
 msgstr "刊行結果のエクスポート"
 
 msgid "plugins.importexport.issue.cli.display"
-msgstr "\"{$issueId}\" - \"{$issueIdentification}\""
+msgstr ""
 
 msgid "plugins.importexport.issueGalleys.exportFailed"
 msgstr "刊行ゲラの解析に失敗したプロセス"
@@ -2043,7 +2054,8 @@ msgid "emailTemplate.variable.context.contactName"
 msgstr "ジャーナルの連絡責任者の名前"
 
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr ""
+msgstr "ジャーナルの略称"
+
 
 msgid "emailTemplate.variable.context.contextSignature"
 msgstr "ジャーナルの自動送信メールのメール署名"
@@ -2052,7 +2064,8 @@ msgid "emailTemplate.variable.context.contactEmail"
 msgstr "ジャーナルの連絡責任者の電子メールアドレス"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "ジャーナルの郵送先住所"
+
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
 msgstr "決済の種類の名称"
@@ -2067,49 +2080,64 @@ msgid "emailTemplate.variable.site.siteTitle"
 msgstr "複数のジャーナルがホストされている場合のWebサイト名"
 
 msgid "emailTemplate.variable.subscription.subscriberDetails"
-msgstr ""
+msgstr "購読者の氏名、所属、電話番号、メールアドレス"
+
 
 msgid "emailTemplate.variable.subscription.subscriptionSignature"
-msgstr ""
+msgstr "購読管理者の連絡先詳細"
+
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
-msgstr ""
+msgstr "購読ページのURL"
+
 
 msgid "emailTemplate.variable.subscription.expiryDate"
-msgstr ""
+msgstr "購読が終了する日付"
+
 
 msgid "emailTemplate.variable.subscription.subscriptionType"
-msgstr ""
+msgstr "購読種別、名称、期間、費用の概要"
+
 
 msgid "emailTemplate.variable.subscription.membership"
-msgstr ""
+msgstr "購読者の会員情報"
+
 
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr ""
+msgstr "購読機関の名称"
+
 
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr ""
+msgstr "購読機関の郵送先住所"
+
 
 msgid "emailTemplate.variable.subscription.domain"
-msgstr ""
+msgstr "この購読で有効なIPアドレスのドメイン名"
+
 
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr ""
+msgstr "この購読で有効なIP範囲"
+
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
-msgstr ""
+msgstr "著者が支払いを行うページのURL"
+
 
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "投稿規程のURL"
+
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
-msgstr ""
+msgstr "公開論文統計ページへのリンク"
+
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "号ID"
+
 
 msgid "mailable.statisticsReportNotify.description"
-msgstr ""
+msgstr "このメールは、システム状態の概要を提供するため、編集者およびジャーナル管理者へ毎月自動送信されます。"
+
 
 msgid "mailable.validateEmailContext.name"
 msgstr "電子メールの検証（ジャーナル登録）"
@@ -2122,197 +2150,264 @@ msgstr ""
 msgid "doi.displayName"
 msgstr ""
 
+
 msgid "doi.description"
-msgstr ""
+msgstr "このプラグインは、OJS内の号、論文、ゲラにデジタルオブジェクト識別子（DOI）を割り当てられるようにします。"
+
 
 msgid "doi.readerDisplayName"
 msgstr ""
 
+
 msgid "doi.manager.displayName"
-msgstr ""
+msgstr "DOI"
+
 
 msgid "doi.manager.settings.description"
-msgstr ""
+msgstr "OJSでDOIを管理・利用するには、DOIプラグインを設定してください:"
+
 
 msgid "doi.manager.settings.explainDois"
-msgstr ""
+msgstr "デジタルオブジェクト識別子（DOI）を割り当てる出版物を選択してください:"
+
 
 msgid "doi.manager.settings.enableRepresentationDoi"
-msgstr ""
+msgstr "論文ゲラ"
+
 
 msgid "doi.manager.settings.galleysWithDescription"
-msgstr ""
+msgstr "公開PDFなどの論文ゲラ"
+
 
 msgid "doi.manager.settings.doiPrefix"
-msgstr ""
+msgstr "DOIプレフィックス"
+
 
 msgid "doi.manager.settings.doiPrefixPattern"
-msgstr ""
+msgstr "DOIプレフィックスは必須で、10.xxxx の形式で入力してください。"
+
 
 msgid "doi.manager.settings.doiSuffixPattern"
-msgstr ""
+msgstr "出版物の種類ごとにカスタムサフィックスパターンを入力してください。カスタムサフィックスパターンでは、以下の記号を使用できます。"
+
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
-msgstr ""
+msgstr "例: vol%viss%ipp%p は 10.1234/vol3iss2pp230 のようなDOIを生成できます。"
+
 
 msgid "doi.manager.settings.doiSuffixPattern.issues"
-msgstr ""
+msgstr "号用"
+
 
 msgid "doi.manager.settings.doiSuffixPattern.submissions"
-msgstr ""
+msgstr "論文用"
+
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
-msgstr ""
+msgstr "ゲラ用"
+
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
-msgstr ""
+msgstr "号用のDOIサフィックスパターンを入力してください。"
+
 
 msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
-msgstr ""
+msgstr "論文用のDOIサフィックスパターンを入力してください。"
+
 
 msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
-msgstr ""
+msgstr "ゲラ用のDOIサフィックスパターンを入力してください。"
+
 
 msgid "doi.manager.settings.doiReassign"
-msgstr ""
+msgstr "DOIを再割当"
+
 
 msgid "doi.manager.settings.doiReassign.description"
-msgstr ""
+msgstr "DOI設定を変更しても、すでに割り当てられたDOIには影響しません。既存DOIを削除すると、新しい設定に基づいて再割当できます。"
+
 
 msgid "doi.manager.settings.doiReassign.confirm"
-msgstr ""
+msgstr "既存のすべてのDOIを削除してもよろしいですか？"
+
 
 msgid "doi.manager.settings.doiAssignJournalWide"
-msgstr ""
+msgstr "DOIを割り当てる"
+
 
 msgid "doi.manager.settings.doiAssignJournalWide.description"
-msgstr ""
+msgstr "DOIが未割当の公開済みジャーナル項目すべてにDOIを割り当てます。この操作は取り消せません。"
+
 
 msgid "doi.manager.settings.doiAssignJournalWide.confirm"
-msgstr ""
+msgstr "DOIが未割当の公開済み項目すべてにDOIを割り当ててもよろしいですか？"
+
 
 msgid "doi.manager.settings.registrationAgency"
-msgstr ""
+msgstr "登録機関"
+
 
 msgid "doi.manager.settings.registrationAgency.description"
-msgstr ""
+msgstr "DOIを登録する際に使用する登録機関を選択してください。"
+
 
 msgid "doi.manager.settings.registrationAgency.none"
-msgstr ""
+msgstr "なし"
+
 
 msgid "doi.editor.doi"
 msgstr ""
 
+
 msgid "doi.editor.doi.description"
-msgstr ""
+msgstr "DOIは {$prefix} で始まる必要があります。"
+
 
 msgid "doi.editor.doi.assignDoi"
-msgstr ""
+msgstr "割り当て"
+
 
 msgid "doi.editor.doiObjectTypeIssue"
-msgstr ""
+msgstr "号"
+
 
 msgid "doi.editor.doiObjectTypeSubmission"
-msgstr ""
+msgstr "論文"
+
 
 msgid "doi.editor.doiObjectTypeRepresentation"
-msgstr ""
+msgstr "ゲラ"
+
 
 msgid "doi.editor.customSuffixMissing"
-msgstr ""
+msgstr "カスタムサフィックスがないため、DOIを割り当てられません。"
+
 
 msgid "doi.editor.missingIssue"
-msgstr ""
+msgstr "この出版物が号に割り当てられるまでDOIを生成できません。"
+
 
 msgid "doi.editor.missingParts"
-msgstr ""
+msgstr "DOIパターンの一部に必要なデータが不足しているため、DOIを生成できません。出版物のメタデータを確認してください。"
+
 
 msgid "doi.editor.patternNotResolved"
-msgstr ""
+msgstr "未解決のパターンが含まれているため、DOIを割り当てられません。"
+
 
 msgid "doi.editor.canBeAssigned"
-msgstr ""
+msgstr "表示されているDOIはプレビューです。DOIを割り当てるには、チェックボックスを選択してフォームを保存してください。"
+
 
 msgid "doi.editor.assigned"
-msgstr ""
+msgstr "DOIはこの {$pubObjectType} に割り当てられています。"
+
 
 msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
-msgstr ""
+msgstr "指定されたDOIサフィックスは、別の公開済み項目で既に使用されています。一意のDOIサフィックスを入力してください。"
+
 
 msgid "doi.editor.clearObjectsDoi"
-msgstr ""
+msgstr "クリア"
+
 
 msgid "doi.editor.clearObjectsDoi.confirm"
-msgstr ""
+msgstr "既存のDOIを削除してもよろしいですか？"
+
 
 msgid "doi.editor.clearIssueObjectsDoi"
-msgstr ""
+msgstr "号内項目のDOIをクリア"
+
 
 msgid "doi.editor.clearIssueObjectsDoi.confirm"
-msgstr ""
+msgstr "既存の号内項目DOIを削除してもよろしいですか？"
+
 
 msgid "doi.editor.clearIssueObjectsDoi.description"
-msgstr ""
+msgstr "現在この号に割り当て予定のすべての項目（論文およびゲラ）のDOIをクリアするには、次のオプションを使用します。"
+
 
 msgid "doi.editor.assignDoi"
-msgstr ""
+msgstr "DOI {$pubId} をこの {$pubObjectType} に割り当て"
+
 
 msgid "doi.editor.assignDoi.emptySuffix"
-msgstr ""
+msgstr "カスタムサフィックスがないため、DOIを割り当てられません。"
+
 
 msgid "doi.editor.assignDoi.pattern"
-msgstr ""
+msgstr "未解決のパターンが含まれているため、DOI {$pubId} を割り当てられません。"
+
 
 msgid "doi.editor.assignDoi.assigned"
 msgstr ""
+"DOI {$pubId} が割り当てられました。DOIを編集するには、<a "
+"href=\"{$doiManagementLink}\">DOI管理ページ</a>にアクセスしてください。"
+
 
 msgid "doi.editor.assignDoi.toBeAssigned"
-msgstr ""
+msgstr "DOI {$pubId} は公開時に割り当てられます。"
+
 
 msgid "doi.editor.missingPrefix"
-msgstr ""
+msgstr "DOIは {$doiPrefix} で始まる必要があります。"
+
 
 msgid "doi.editor.preview.publication"
-msgstr ""
+msgstr "この出版物のDOIは {$doi} になります。"
+
 
 msgid "doi.editor.preview.publication.none"
-msgstr ""
+msgstr "この出版物にはDOIが割り当てられていません。"
+
 
 msgid "doi.editor.preview.galleys"
-msgstr ""
+msgstr "ゲラ: {$galleyLabel}"
+
 
 msgid "doi.editor.preview.objects"
-msgstr ""
+msgstr "項目"
+
 
 msgid "api.galley.403.publicationDidNotMatch"
-msgstr ""
+msgstr "要求されたゲラはこの出版物に含まれていません。"
+
 
 msgid "api.galley.403.canEditPublishedDoi"
-msgstr ""
+msgstr "出版物/ゲラが公開された後に編集できるのはDOIのみです。"
+
 
 msgid "api.issue.400.invalidDoi"
-msgstr ""
+msgstr "送信されたDOIは無効です。"
+
 
 msgid "api.issue.403.canEditPublishedDoi"
-msgstr ""
+msgstr "出版物が公開された後に編集できるのはDOIのみです。"
+
 
 msgid "api.issue.404.issuesNotFound"
-msgstr ""
+msgstr "要求された号は見つかりませんでした。"
+
 
 msgid "doi.manager.submissionDois"
-msgstr ""
+msgstr "論文DOI"
+
 
 msgid "doi.manager.issueDois"
-msgstr ""
+msgstr "巻号DOI"
+
 
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
-msgstr ""
+msgstr "このメールは、投稿がジャーナルの掲載要件を満たしていないため、査読段階前に却下されたことを著者に通知します。"
+
 
 msgid "manager.institutions.noContext"
-msgstr ""
+msgstr "この機関のジャーナルが見つかりませんでした。"
+
 
 msgid "mailable.subscriptionNotify.name"
-msgstr ""
+msgstr "購読通知"
+
 
 msgid "mailable.subscriptionNotify.description"
 msgstr ""
@@ -2320,7 +2415,8 @@ msgstr ""
 "す。メールでは、雑誌のURLとアクセス方法を提供しています。"
 
 msgid "mailable.subscriptionExpiresSoon.name"
-msgstr ""
+msgstr "購読期限間近"
+
 
 msgid "mailable.subscriptionExpiresSoon.description"
 msgstr ""
@@ -2328,7 +2424,8 @@ msgstr ""
 "ルでは雑誌のURLとアクセス方法を提供しています。"
 
 msgid "mailable.subscriptionExpired.name"
-msgstr ""
+msgstr "購読期限切れ"
+
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
@@ -2336,7 +2433,8 @@ msgstr ""
 "誌のURLとアクセス方法を提供しています。"
 
 msgid "mailable.subscriptionExpiredLast.name"
-msgstr ""
+msgstr "購読期限切れ（最終通知）"
+
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
@@ -2344,7 +2442,8 @@ msgstr ""
 "誌のURLとアクセス方法を提供しています。"
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
-msgstr ""
+msgstr "個人購読の購入"
+
 
 msgid "mailable.subscriptionPurchaseIndividual.description"
 msgstr ""
@@ -2352,7 +2451,8 @@ msgstr ""
 "す。メールには購読情報の概要と購読内容へのクイックリンクが含まれています。"
 
 msgid "mailable.subscriptionPurchaseInstitutional.name"
-msgstr ""
+msgstr "機関購読の購入"
+
 
 msgid "mailable.subscriptionPurchaseInstitutional.description"
 msgstr ""
@@ -2360,7 +2460,8 @@ msgstr ""
 "す。メールには購読情報の概要と購読内容へのクイックリンクが含まれています。"
 
 msgid "mailable.subscriptionRenewIndividual.name"
-msgstr ""
+msgstr "個人購読の更新"
+
 
 msgid "mailable.subscriptionRenewIndividual.description"
 msgstr ""
@@ -2369,7 +2470,8 @@ msgstr ""
 "す。"
 
 msgid "mailable.subscriptionRenewInstitutional.name"
-msgstr ""
+msgstr "機関購読の更新"
+
 
 msgid "mailable.subscriptionRenewInstitutional.description"
 msgstr ""
@@ -2378,7 +2480,8 @@ msgstr ""
 "す。"
 
 msgid "mailable.openAccessNotify.name"
-msgstr ""
+msgstr "オープンアクセス通知"
+
 
 msgid "mailable.openAccessNotify.description"
 msgstr ""
@@ -2386,31 +2489,40 @@ msgstr ""
 "る読者に送信されるものです。"
 
 msgid "mailable.issuePublishNotify.name"
-msgstr ""
+msgstr "号公開通知"
+
 
 msgid "mailable.issuePublishNotify.description"
-msgstr ""
+msgstr "新しい号が公開されたときに、登録ユーザーへ自動送信されるメールです。"
+
 
 msgid "manager.manageEmails.description"
-msgstr ""
+msgstr "このジャーナルから送信されるメール文面を編集します。"
+
 
 msgid "mailable.layoutComplete.name"
-msgstr ""
+msgstr "ゲラ完了"
+
 
 msgid "mailable.publicationVersionNotify.name"
-msgstr ""
+msgstr "新しいバージョン作成"
+
 
 msgid "mailable.publicationVersionNotify.description"
-msgstr ""
+msgstr "投稿の新しいバージョンが作成されたとき、割り当てられた編集者へ自動通知します。"
+
 
 msgid "mailable.submissionNeedsEditor.description"
-msgstr ""
+msgstr "新しい投稿が行われ、編集者が割り当てられていない場合に、ジャーナル管理者へ送信されるメールです。"
+
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "支払い依頼"
+
 
 msgid "mailable.paymentRequest.description"
-msgstr ""
+msgstr "投稿が受理された際に、掲載料の支払いを依頼するため著者へ自動送信されるメールです。"
+
 
 #~ msgid "manager.publication.submissionStage"
 #~ msgstr "投稿"
@@ -2461,3 +2573,63 @@ msgstr ""
 
 #~ msgid "manager.setup.privacyStatement"
 #~ msgstr "個人情報の取り扱いについて"
+
+msgid ""
+"manager.subscriptionPolicies.enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr "指定されたチェックボックスを使用してください。"
+
+
+msgid ""
+"manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr "購読期限後のリマインダー月数として有効な値を選択してください。"
+
+
+msgid ""
+"manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr "購読期限前のリマインダー月数として有効な値を選択してください。"
+
+
+msgid ""
+"manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr "購読期限後のリマインダー週数として有効な値を選択してください。"
+
+
+msgid ""
+"manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr "購読期限前のリマインダー週数として有効な値を選択してください。"
+
+
+msgid ""
+"manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr "個人購読がオンライン更新されたとき、購読管理者へメールで通知します。"
+
+
+msgid ""
+"manager.subscriptionPolicies.enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr "機関購読がオンライン更新されたとき、購読管理者へメールで通知します。"
+
+
+msgid ""
+"manager.setup.notifications.copySubmissionAckPrimaryContact.disabled.description"
+msgstr "このジャーナルには主要連絡先が定義されていません。<a href=\"{$url}\">ジャーナル設定</a>で主要連絡先を入力できます。"
+
+
+msgid "manager.setup.contextSummary.description"
+msgstr "ジャーナルの内容と目的が伝わるよう、簡潔な説明を入力してください。"
+
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr "号ゲラのファイルが見つからないため、インポートできませんでした。"
+
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr "号ゲラ {$id} は、パス「{$path}」にファイルが見つからなかったためエクスポートできませんでした。"
+
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr "号 {$id} の表紙画像は、パス「{$path}」にファイルが見つからなかったためエクスポートされませんでした。"
+
+
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr "関連付けられたすべての投稿一覧など、号の目次。"
+
