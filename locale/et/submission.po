@@ -247,9 +247,11 @@ msgstr ""
 "{$editorName} tühistas otsuse selle kaastöö vastuvõtmise kohta ja saatis "
 "selle tagasi retsenseerimise etappi."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Tagasi retsenseerimisele saadetud"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Kaastöö {$title} saadeti tagasi retsenseerimise etappi."
 
@@ -392,6 +394,7 @@ msgstr ""
 "Tühista otsus selle kaastöö vastuvõtmise kohta ja saada see tagasi "
 "retsenseerimise etappi."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Saada autoritele e-kiri, et teavitada neid kaastöö tagasisaatmisest "

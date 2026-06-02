@@ -304,12 +304,15 @@ msgstr "更改接受此投稿的決定及還原至評審階段。"
 msgid "editor.submission.decision.backToReview.log"
 msgstr "{$editorName}更改了接受此投稿的決定及還原至評審階段。"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "還原至評審階段"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "投稿{$title}已還原至評審階段。"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "發送電郵給作者通知其投稿已回到評審階段。解釋為何有此決定及向作者說明會如何再"

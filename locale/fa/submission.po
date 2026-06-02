@@ -324,12 +324,15 @@ msgstr ""
 "{$editorName} تصمیم‌گیری برای پذیرش این مقاله را برگرداند و به مرحله داوری "
 "ارسال نمود."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "جهت داوری برگشت خورده"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "مقاله ارسالی با عنوان \"{$title}\" به مرحله داوری بازگردانده شد."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "برای نویسندگان ایمیل ارسال کنید تا به آنها اطلاع داده شود که مقاله ارسالی آن‌"

@@ -352,12 +352,15 @@ msgstr ""
 "{$editorName} a annulé la décision d'accepter cette soumission et l'a remise "
 "à l'étape d'évaluation."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Retourné-e à l'étape d'évaluation"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "La soumission, {$title}, a été retournée à l'étape d'évaluation."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Envoyer un courriel aux auteur.e.s pour les informer que leur soumission est "

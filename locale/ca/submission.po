@@ -339,12 +339,15 @@ msgstr ""
 "{$editorName} ha revertit la decisió per acceptar aquesta tramesa i retornar-"
 "la a la fase de revisió."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Retornar a revisió"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "La tramesa, {$title}, s'ha retornat a la fase de revisió."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Envieu un correu electrònic als autors/ores per fer-los saber que la seva "

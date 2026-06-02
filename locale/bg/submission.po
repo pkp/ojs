@@ -340,13 +340,16 @@ msgstr ""
 "{$editorName} отмени решението да приеме тези материали и ги изпрати обратно "
 "на етап за рецензиране."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Изпратено обратно към етап на рецензиране"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr ""
 "Подадените материали {$title} бяха изпратени обратно към етап на рецензиране."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Изпратете имейл до авторите, за да ги уведомите, че тяхното подаване на "

@@ -324,12 +324,15 @@ msgstr ""
 "{$editorName} zrušil rozhodnutí o přijetí tohoto příspěvku a vrátil ho zpět "
 "do recenzní fáze."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Posláno zpět to recenzní fáze"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Příspěvek {$title} byl poslán zpět do recenzní fáze."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Pošlete autorům e-mail, ve kterém jim oznámíte, že jejich příspěvky byly "

@@ -334,12 +334,15 @@ msgstr ""
 "{$editorName} -ը չեղարկեց այս ներկայացումն ընդունելու որոշումը և այն հետ "
 "ուղարկեց վերանայման փուլ:"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Ուղարկվել է հետ Վերանայման"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Այս ներկայացումը՝ {$title}, հետ է ուղարկվել վերանայման փուլ:"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Նամակ ուղարկեք հեղինակներին՝ տեղեկացնելով, որ իրենց ներկայացումը հետ է "

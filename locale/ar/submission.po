@@ -315,12 +315,15 @@ msgid "editor.submission.decision.backToReview.log"
 msgstr ""
 "{$editorName} تراجع عن قرار قبول طلب التقديم هذا وأعاده إلى مرحلة التحكيم."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "إعادة إلى التحكيم"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "طلب التقديم، {$title}، تمت إعادته إلى مرحلة التحكيم."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "إرسال بريد الكتروني إلى المؤلفين لإبلاغهم بأن طلب تقديمهم تجري إعادته إلى "

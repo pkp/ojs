@@ -344,9 +344,11 @@ msgstr ""
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Відправити назад на перевірку"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Заявка, {$title}, була відправлена назад на етап розгляду."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Надішліть авторам електронний лист із повідомленням про те, що їхня робота "

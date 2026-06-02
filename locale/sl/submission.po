@@ -327,12 +327,15 @@ msgstr ""
 "{$editorName} je preklical odločitev o sprejetju prispevka in ga je poslal "
 "nazaj v fazo recenzije."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Pošlji nazaj v recenzijo"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Prispevek, {$title}, je bil poslan nazaj v fazo recenzije."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Pošljite avtorjem email z obvestilom, da je bil njihov prispevek vrnjen "

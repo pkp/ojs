@@ -397,15 +397,15 @@ msgstr ""
 "back to the review stage."
 
 msgid "editor.submission.decision.backToReview.completed"
-msgstr "Sent Back to Review"
+msgstr "Moved to Review"
 
 msgid "editor.submission.decision.backToReview.completed.description"
-msgstr "The submission, {$title}, was sent back to the review stage."
+msgstr "The submission, {$title}, was moved to the review stage."
 
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Send an email to the authors to let them know that their submission is being "
-"sent back to the review stage. Explain why this decision was made and inform "
+"moved to the review stage. Explain why this decision was made and inform "
 "the author of what further review will be undertaken."
 
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"

@@ -329,12 +329,15 @@ msgstr ""
 "{$editorName} đã hủy bỏ quyết định chấp nhận nội dung gửi này và gửi nó trở "
 "lại giai đoạn xem xét."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Gửi lại để xem xét"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Bài gửi {$title} đã được gửi trở lại giai đoạn xem xét."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Gửi email cho các tác giả để cho họ biết rằng bài nộp của họ đang được gửi "

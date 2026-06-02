@@ -336,12 +336,15 @@ msgstr ""
 "{$editorName}-(e)k bidalketa hau onartzeko erabakia atzera bota du eta "
 "ebaluazio-fasera bidali du berriro."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Ebaluatzeko birbidalia"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Bidalketa, {$title}, ebaluazio-fasera bueltan bidali da."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Bidali mezu elektroniko bat egileei beren lana ebaluazio-fasera itzuliko "

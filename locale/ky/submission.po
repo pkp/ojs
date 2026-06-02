@@ -316,12 +316,15 @@ msgstr ""
 "{$editorName} бул тапшырманы кабыл алуу чечимин жокко чыгарып, кайра кароо "
 "баскычына жөнөттү."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Кароого кайра жөнөтүлдү"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Тапшырма, {$title}, кайра кароо баскычына жөнөтүлдү."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Авторлорго тапшырмасы кайра кароого жөнөтүлгөнүн билдирүү үчүн электрондук "

@@ -332,12 +332,15 @@ msgstr ""
 "{$editorName} cofnął decyzję o zaakceptowaniu zgłoszenia. Tekst powrócił do "
 "etapu recenzji."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Wyślij z powrotem do recenzji"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Zgłoszenie, {$title}, zostało odesłane do etapu recenzji."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Wyślij email do autorów aby powiadomić ich, że zgłoszenie zostało odesłane "

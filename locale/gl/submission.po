@@ -332,12 +332,15 @@ msgstr ""
 "{$editorName} reverteu a decisión de aceptar esta presentación e enviouna de "
 "volta á etapa de revisión."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Devolto para revisión"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "O envío, {$title}, foi devolto á fase de revisión."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Envía un correo aos autores para informarlles de que a súa presentación está "

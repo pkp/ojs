@@ -336,12 +336,15 @@ msgstr ""
 "{$editorName} perui päätöksen hyväksyä käsikirjoitus ja palautti sen "
 "arviointivaiheeseen."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Palautettu arviointivaiheeseen"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Käsikirjoitus {$title} on palautettu arviointivaiheeseen."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Lähetä sähköpostia kirjoittajille ja ilmoita käsikirjoituksen "
