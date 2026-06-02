@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2026-06-02 10:29+0000\n"
+"PO-Revision-Date: 2026-06-02 11:01+0000\n"
 "Last-Translator: Anne-Inger <annrag@oslomet.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/nb_NO/>\n"
@@ -2206,7 +2206,7 @@ msgstr "Postadressen til institusjonen"
 
 #, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
-msgstr "Domene"
+msgstr "Domene for gyldig IP-adresser for dette abonnementet"
 
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "De gyldige IP-intervallene for dette abonnementet"
@@ -2214,7 +2214,6 @@ msgstr "De gyldige IP-intervallene for dette abonnementet"
 msgid "emailTemplate.variable.queuedPaymentUrl"
 msgstr "URL til siden hvor forfatteren kan foreta betaling"
 
-#, fuzzy
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
 msgstr "URL til forfatterveiledning"
 
@@ -2563,7 +2562,6 @@ msgstr "Rediger beskjedene som sendes som e-post fra dette tidsskriftet."
 msgid "mailable.layoutComplete.name"
 msgstr "Ferdige oppsett"
 
-#, fuzzy
 msgid "mailable.publicationVersionNotify.name"
 msgstr "Ny versjon opprettet"
 
@@ -3160,3 +3158,9 @@ msgid "manager.setup.contextSummary.description"
 msgstr ""
 "Gi en kort beskrivelse av tidsskriftet ditt for å gi innsikt i innhold og "
 "formål."
+
+#, fuzzy
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr ""
+"Nummerets innholdsfortegnelse, for eksempel i form av en liste over alle "
+"tilhørende innleveringer."
