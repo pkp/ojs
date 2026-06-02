@@ -5,16 +5,17 @@
 # Johanna Skaug <johanna.skaug@ub.uio.no>, 2024.
 # "My L. Bjørnflaten" <myl@uio.no>, 2024.
 # Jan Erik Frantsvåg <jan.e.frantsvag@uit.no>, 2025.
+# Anne-Inger <annrag@oslomet.no>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2025-01-29 17:28+0000\n"
-"Last-Translator: Jan Erik Frantsvåg <jan.e.frantsvag@uit.no>\n"
+"PO-Revision-Date: 2026-06-02 10:29+0000\n"
+"Last-Translator: Anne-Inger <annrag@oslomet.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/nb_NO/>\n"
-"Language: nb\n"
+"Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2053,7 +2054,6 @@ msgstr "Utgavestatistikk"
 msgid "stats.issues.details"
 msgstr "Visninger og nedlastinger"
 
-#, fuzzy
 msgid "stats.issues.searchIssueDescription"
 msgstr "Søk i utgavetittel, volum og nummer"
 
@@ -2062,11 +2062,10 @@ msgstr ""
 "Ingen utgaver ble funnet med bruksstatistikk som samsvarer med disse "
 "parameterne."
 
-#, fuzzy
 msgid "stats.issues.downloadReport.description"
 msgstr ""
-"Last ned CSV/Excel-tabell med bruksstatistikk for denne utgivelsen som "
-"treffer følgende parametre."
+"Last ned CSV/Excel-fil med bruksstatistikk for denne utgivelsen som "
+"samsvarer med følgende parametre."
 
 msgid "stats.issues.downloadReport.downloadIssues.description"
 msgstr ""
@@ -3156,3 +3155,8 @@ msgid "plugins.importexport.common.error.issueGalleyFileMissing"
 msgstr ""
 "Utgaveoppsettet {$id} kunne ikke eksporteres, filen ble ikke funnet på \""
 "{$path}\"."
+
+msgid "manager.setup.contextSummary.description"
+msgstr ""
+"Gi en kort beskrivelse av tidsskriftet ditt for å gi innsikt i innhold og "
+"formål."
