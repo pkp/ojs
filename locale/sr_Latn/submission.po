@@ -331,12 +331,15 @@ msgstr ""
 "{$editorName} je poništio odluku o prihvatanju ovog rada i vratio ga u fazu "
 "recenzije."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Vrati nazad na recenziju"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Rad „{$title}“ je vraćen u fazu recenzije."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Pošaljite imejl autorima kako biste ih obavestili da se njihov rad vraća u "

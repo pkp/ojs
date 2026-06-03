@@ -344,12 +344,15 @@ msgstr ""
 "{$editorName} draaide de beslissing om deze inzending te accepteren terug en "
 "zond het terug naar de reviewfase."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Stuur terug naar Review"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "De inzending, {$title}, is teruggestuurd naar de reviewfase."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Stuur een mail naar de auteurs om hen te laten weten dat hun inzending "

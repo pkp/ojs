@@ -341,12 +341,15 @@ msgstr ""
 "{$editorName} återkallade beslutet att acceptera bidraget och skickade "
 "tillbaka det till granskningssteget."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Återtagen till granskning"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Bidraget {$title} har skickats tillbaka till granskningssteget."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Skicka ett e-postmeddelande till författarna om att deras bidrag har "

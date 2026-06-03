@@ -335,12 +335,15 @@ msgstr ""
 "{$editorName} telah mengembalikan keputusan untuk menerima penyerahan ini "
 "dan menghantarnya kembali ke peringkat semakan."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Dihantar Kembali untuk Semakan"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Penyerahan, {$title}, telah dihantar semula ke peringkat semakan."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Hantar e-mel kepada pengarang untuk memberitahu mereka bahawa penyerahan "

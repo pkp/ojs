@@ -325,12 +325,15 @@ msgstr ""
 msgid "editor.submission.decision.backToReview.log"
 msgstr ""
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr ""
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr ""
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 

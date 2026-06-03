@@ -338,12 +338,15 @@ msgstr ""
 "{$editorName}-მა დააბრუნა გადაწყვეტილება ამ წარდგენის მიღების შესახებ და "
 "დააბრუნა განხილვის ეტაპზე."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "გაიგზავნა უკან მიმოხილვაზე"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "გაგზავნა, {$title}, დაბრუნდა განხილვის ეტაპზე."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "გაუგზავნეთ ელფოსტა ავტორებს, რათა აცნობონ, რომ მათი წარდგენა იგზავნება "

@@ -334,12 +334,15 @@ msgstr ""
 "{$editorName} membatalkan keputusan untuk menerima naskah ini dan "
 "mengirimnya kembali ke tahap review."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Kirim Kembali ke Review"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Naskah, {$title}, telah dikembalikan ke tahap review."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Kirim email pemberitahuan kepada penulis bahwa naskahnya sedang dikembalikan "

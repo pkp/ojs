@@ -350,12 +350,15 @@ msgstr ""
 "{$editorName} "
 "ได้ยกเลิกการตัดสินใจยอมรับบทความนี้และส่งกลับไปยังขั้นตอนการพิจารณาอีกครั้ง"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "ส่งกลับไปที่การพิจารณาแล้ว"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "บทความ {$title} ได้ถูกส่งกลับไปยังขั้นตอนการพิจารณาอีกครั้ง"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "ส่งอีเมลถึงผู้เขียนเพื่อแจ้งให้ทราบว่าบทความของพวกเขาถูกส่งกลับไปยังขั้นตอนกา"

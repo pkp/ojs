@@ -336,12 +336,15 @@ msgstr ""
 "Редактор «{$editorName}» отменил решение о приёме этого материала и вернул "
 "его на этап рецензирования."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Возвращён обратно на рецензию"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Материал «{$title}» был возвращён на этап рецензирования."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Отправьте авторам письмо электронной почтой, чтобы уведомить их о том, что "

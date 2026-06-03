@@ -348,12 +348,15 @@ msgstr ""
 "{$editorName} ha modificato la decisione di accettare questa proposta e la "
 "ha riportato alla fase di revisione."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Ritornata alla revisione"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "La proposta, {$title}, è stata riportata alla fase di revisione."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Invia una email agli autori per informarli che la loro sottomissione è stata "

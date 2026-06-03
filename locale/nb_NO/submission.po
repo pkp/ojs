@@ -334,13 +334,16 @@ msgstr ""
 "{$editorName} omgjorde beslutningen om å akseptere dette manuskriptet og "
 "sendte det tilbake til fagfellevurderingssteget."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Sendt tilbake til fagfellevurdering"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr ""
 "Innleveringen, {$title}, ble sendt tilbake til fagfellevurderingssteget."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Send en e-post til forfatterne om at deres manuskript sendes tilbake til "

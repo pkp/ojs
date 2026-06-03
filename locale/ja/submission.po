@@ -315,12 +315,15 @@ msgid "editor.submission.decision.backToReview.log"
 msgstr "{$editorName} "
 "はこの投稿を採用するという決定を元に戻し、査読段階に戻しました。"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "査読に戻した"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "投稿「{$title}」は査読段階に戻されました。"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "著者にメールを送信して、投稿が査読段階に戻されることを知らせます。この決定が"

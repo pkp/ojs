@@ -348,12 +348,15 @@ msgstr ""
 "{$editorName} hat die Entscheidung, diese Einreichung zu akzeptieren, "
 "rückgängig gemacht und sie in die Begutachtung zurückgeschickt."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "In die Begutachtung zurückgeschickt"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Die Einreichung {$title} wurde in die Begutachtung zurückgeschickt."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Eine E-Mail an die Autor/innen senden, um sie darüber zu informieren, dass "

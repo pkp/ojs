@@ -301,12 +301,15 @@ msgid "editor.submission.decision.backToReview.description"
 msgstr ""
 "Atšaukti sprendimą priimti šį pateikimą ir grąžinti jį peržiūros etapui."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Išsiųsta atgal peržiūrai"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Pateiktas darbas, {$title}, buvo grąžintas peržiūros etapui."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Išsiųskite autoriams el. laišką, kad praneštumėte, jog jų pateiktas darbas "

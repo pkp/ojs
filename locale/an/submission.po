@@ -290,12 +290,15 @@ msgstr ""
 "{$editorName} ha revertiu la decisión d'aceptar este ninvio y tornar-lo ta "
 "la etapa de revisión."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Ninviau de tornada ta revisión"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Lo ninvio, {$title}, s'a retornau ta la fase de revisión."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Ninvie un correu electronico a los autors pa informar-les que lo suyo ninvio "

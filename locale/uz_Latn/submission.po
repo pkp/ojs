@@ -336,12 +336,15 @@ msgstr ""
 "{$editorName} ushbu yuborishni qabul qilish qarorini bekor qildi va uni "
 "qayta ko‘rib chiqish bosqichiga yubordi."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Ko'rib chiqish uchun yuborildi"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "{$title} taqdimoti koʻrib chiqish bosqichiga qaytarildi."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Mualliflarga e-pochta orqali xabar yuboring, ularning taqdimoti ko'rib "

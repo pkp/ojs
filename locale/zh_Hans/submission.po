@@ -298,12 +298,15 @@ msgstr "撤回接受该提交的决定，并将其送回审稿阶段。"
 msgid "editor.submission.decision.backToReview.log"
 msgstr "{$editorName} 撤回了接受该提交的决定，并将其送回审稿阶段。"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "送回审稿"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "提交的稿件 {$title} 被送回审稿阶段。"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr "向作者发送电子邮件，告知他们其提交稿件已被送回审稿阶段。解释做出此决定的原因"
 "，并告知作者将进行的进一步审稿工作。"

@@ -322,12 +322,15 @@ msgstr ""
 "{$editorName} илгээлтийг хүлээн авах шийдвэрийг цуцалж, хяналтын шат руу "
 "буцаалаа."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Хяналт руу буцаав"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "{$title} илгээлтийг хяналтын шат руу буцаалаа."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Зохиогчдод тэдний илгээлтийг хяналтын шат руу буцааж байгаа талаар имэйл "

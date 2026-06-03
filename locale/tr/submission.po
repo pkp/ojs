@@ -329,12 +329,15 @@ msgstr ""
 "{$editorName}, aday makalenin kabul kararını geri aldı ve değerlendirme "
 "aşamasına geri gönderdi."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Değerlendirme için Geri Gönder"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "{$title} başlıklı aday makale değerlendirme aşamasına geri gönderildi."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Aday makalenin değerlendirme aşamasına geri gönderildiğini bildirmek için "

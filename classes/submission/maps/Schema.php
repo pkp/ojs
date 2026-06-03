@@ -163,10 +163,7 @@ class Schema extends \PKP\submission\maps\Schema
                     ];
                     break;
                 case WORKFLOW_STAGE_ID_PRODUCTION:
-                    if ($submission->getData('status') !== Submission::STATUS_PUBLISHED) {
-                        $decisionTypes[] = new BackFromProduction();
-                    }
-
+                    $decisionTypes[] = new BackFromProduction();
                     break;
             }
         }

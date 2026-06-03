@@ -353,12 +353,15 @@ msgstr ""
 "{$editorName} est revenu sur la décision d'accepter la soumission et renvoie "
 "au stade évaluation."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Renvoyer en évaluation"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "La soumission, {$title}, a été renvoyée à l'étape d'évaluation."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Envoyer un message aux auteur/ices pour leur faire savoir que leur "

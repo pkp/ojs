@@ -232,9 +232,11 @@ msgstr ""
 "{$editorName} atcēla lēmumu pieņemt šo materiālu un nosūtīja to atpakaļ uz "
 "recenzēšanas posmu."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Nosūtīts atpakaļ recenzēšanai"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Materiāls {$title} tika nosūtīts atpakaļ uz recenzēšanas posmu."
 
@@ -405,6 +407,7 @@ msgstr ""
 "Atcelt lēmumu par šī materiāla pieņemšanu un nosūtīt to atpakaļ uz "
 "recenzēšanas posmu."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Nosūtīt autoriem e-pastu, lai informētu, ka viņu iesniegtais materiāls "

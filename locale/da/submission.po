@@ -343,12 +343,15 @@ msgstr ""
 "{$editorName} tilbagekaldte beslutningen om at acceptere denne indsendelse "
 "og sendte den tilbage til bedømmelsestrinnet."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
 msgstr "Sendt tilbage til bedømmelse"
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
 msgstr "Indsendelsen, {$title}, blev sendt tilbage til bedømmelsestrinnet."
 
+#, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
 "Send en e-mail til forfatterne for at fortælle dem, at deres indsendelse "
