@@ -2,7 +2,7 @@
 # Helgi Sigurbjörnsson <helgi.sigurbjornsson@landsbokasafn.is>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-06-04 13:35+0000\n"
+"PO-Revision-Date: 2026-06-04 14:31+0000\n"
 "Last-Translator: Helgi Sigurbjörnsson <helgi.sigurbjornsson@landsbokasafn.is>"
 "\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/"
@@ -19,15 +19,19 @@ msgstr "URN"
 
 msgid "plugins.pubIds.urn.description"
 msgstr ""
+"Viðbótin virkjar úthlutun Uniform Resource Names fyrir tölublöð, greinar og "
+"galley-skjöl í OJS."
 
 msgid "plugins.pubIds.urn.manager.settings.description"
 msgstr ""
+"Stillið URN viðbótina til að hægt sé að hafa umsjón með og nota URN-auðkenni "
+"í OJS:"
 
 msgid "plugins.pubIds.urn.manager.settings.urnObjects"
-msgstr ""
+msgstr "Innihald tímarits"
 
 msgid "plugins.pubIds.urn.manager.settings.urnObjectsRequired"
-msgstr ""
+msgstr "Veldu þau atriði sem úthluta á URN-auðkennum."
 
 msgid "plugins.pubIds.urn.manager.settings.explainURNs"
 msgstr ""
