@@ -65,9 +65,12 @@ class HtmlGalleyHelper
             ->getMany()
             ->filter(fn ($file) => $file->getData('variantType') !== MediaVariantType::HIGH_RESOLUTION->value);
 
-        // Iterate media first so that a dependent file with the same filename wins,
-        // since dependents are explicitly bound to this galley.
-        $embeddableFiles = $mediaFiles->concat($dependentFiles);
+        // Dedupe by filename (dependent, concatenated last, wins over a same-named media
+        // file). collect() makes keyBy() dedupe eagerly; toArray() yields a plain array.
+        $embeddableFiles = $mediaFiles->concat($dependentFiles)
+            ->collect()
+            ->keyBy(fn ($file) => $file->getLocalizedData('name'))
+            ->toArray();
 
         $referredArticle = null;
         foreach ($embeddableFiles as $embeddableFile) {
@@ -135,7 +138,7 @@ class HtmlGalleyHelper
         }
 
         $templateMgr = TemplateManager::getManager($request);
-        $contents = $templateMgr->loadHtmlGalleyStyles($contents, $embeddableFiles->toArray());
+        $contents = $templateMgr->loadHtmlGalleyStyles($contents, $embeddableFiles);
 
         // Perform variable replacement for journal, issue, site info
         $issue = Repo::issue()->getBySubmissionId($submissionId);
