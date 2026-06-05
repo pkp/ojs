@@ -211,7 +211,6 @@
 		<migration class="PKP\migration\upgrade\v3_6_0\I857_ContributorRolesTypes"/>
         <migration class="APP\migration\upgrade\v3_6_0\I12046_AssignMachineReadableRecommendationType"/>
 		<migration class="PKP\migration\upgrade\v3_6_0\I12108_RestrictEditTemplatesToUserGroups"/>
-        <migration class="PKP\migration\upgrade\v3_6_0\I12049_AddPublishReviewCurateSupport"/>
         <migration class="PKP\migration\upgrade\v3_6_0\I12078_RemoveSettingTypeInCitationSettings"/>
         <migration class="PKP\migration\upgrade\v3_6_0\I11971_RemoveShowTitleInUserGroups"/>
 		<migration class="PKP\migration\upgrade\v3_6_0\I11583_ClassNamespaceFromDotNotationClassPath"/>
@@ -226,6 +225,7 @@
         <migration class="PKP\migration\upgrade\v3_6_0\I12251_SupportMediaFiles" />
         <migration class="PKP\migration\upgrade\v3_6_0\I12772_UserCommentForeignKeys" />
 		<migration class="PKP\migration\upgrade\v3_6_0\I12584_AddPublicationUpdateType" />
+        <migration class="PKP\migration\upgrade\v3_6_0\I12800_ReviewPublicationAssociationNullable" />
 		<code function="rebuildSearchIndex" />
 		<note file="docs/release-notes/README-3.6.0" />
 	</upgrade>
