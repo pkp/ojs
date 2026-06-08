@@ -1,19 +1,19 @@
 # Manolis Saldaris <omanos@gmail.com>, 2022.
+# Theodoros Theodoropoulos <bujam1@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
-"PO-Revision-Date: 2022-05-25 08:54+0000\n"
-"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
-"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/editor/el_GR/"
-">\n"
-"Language: el_GR\n"
+"PO-Revision-Date: 2026-06-08 08:24+0000\n"
+"Last-Translator: Theodoros Theodoropoulos <bujam1@yahoo.com>\n"
+"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/editor/el/>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "editor.home"
 msgstr "Αρχική σελίδα Επιμελητή περιοδικού"
@@ -86,10 +86,10 @@ msgid "editor.notifyUsers.allInstitutionalSubscribers"
 msgstr "Όλοι οι φορείς με συνδρομή ({$count})"
 
 msgid "editor.notifyUsers.inProgress"
-msgstr "Ενημέρωση Χρηστών"
+msgstr "Ενημέρωση Χρηστών..."
 
 msgid "editor.usersNotified"
-msgstr "Οι Χρήστες ενημερώθηκαν."
+msgstr "Οι Χρήστες ενημερώθηκαν"
 
 msgid "editor.notifyUsers.allUsers"
 msgstr ""
@@ -98,8 +98,8 @@ msgstr ""
 
 msgid "editor.notifyUsers.interestedUsers"
 msgstr ""
-"Αποστολή του μηνύματος στους Χρήστες του περιοδικού που έχουν δηλώσει ότι "
-"επιθυμούν να λαμβάνουν ενημερώσεις ({$count} Χρήστες)."
+"Αποστολή του μηνύματος στους χρήστες του περιοδικού που έχουν δηλώσει ότι "
+"επιθυμούν να λαμβάνουν ενημερώσεις ({$count} Χρήστες)"
 
 msgid "editor.notifyUsers.includeToc"
 msgstr "Συμπεριλάβετε τον πίνακα περιεχομένων του τεύχους:"
@@ -108,13 +108,13 @@ msgid "editor.editorAdministration"
 msgstr "Διαχείριση Επιμελητή"
 
 msgid "editor.issues.createIssue"
-msgstr "Δημιουργία τεύχους"
+msgstr "Δημιουργία Τεύχους"
 
 msgid "editor.issues.editIssue"
 msgstr "Διαχείριση τεύχους: {$issueIdentification}"
 
 msgid "editor.issues.currentIssue"
-msgstr "Τρέχον τεύχος"
+msgstr "Τρέχον Τεύχος"
 
 msgid "editor.issues.numArticles"
 msgstr "Άρθρα"
@@ -137,13 +137,13 @@ msgid "editor.issues.datePublished"
 msgstr "Ημερομηνία δημοσίευσης"
 
 msgid "editor.issues.volumeRequired"
-msgstr "Απαιτείται η εισαγωγή τόμου."
+msgstr "Απαιτείται η εισαγωγή τόμου και πρέπει να είναι ένας θετικός αριθμός."
 
 msgid "editor.issues.numberRequired"
-msgstr "Απαιτείται εισαγωγή αρίθμησης."
+msgstr "Απαιτείται η εισαγωγή ενός θετικού αριθμού."
 
 msgid "editor.issues.yearRequired"
-msgstr "Απαιτείται η εισαγωγή έτους."
+msgstr "Απαιτείται η εισαγωγή του έτους και πρέπει να είναι αριθμός."
 
 msgid "editor.issues.titleRequired"
 msgstr "Απαιτείται τίτλος για το τεύχος."
@@ -191,6 +191,9 @@ msgstr "Αφαίρεση εικόνας εξωφύλλου;"
 
 msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
 msgstr ""
+"Η εικόνα εξωφύλλου που ζητήσατε να διαγράψετε αντιστοιχεί σε τεύχος "
+"διαφορετικού περιοδικού. Βεβαιωθείτε ότι εργάζεστε με το σωστό περιοδικό, "
+"ότι χρησιμοποιείτε τον σωστό κωδικό τεύχους και δοκιμάστε ξανά."
 
 msgid "editor.issues.removeCoverImageFileNameMismatch"
 msgstr ""
@@ -224,7 +227,7 @@ msgid "editor.issues.coverPageCaption"
 msgstr "Λεζάντα εξωφύλλου"
 
 msgid "editor.issues.showCoverPage"
-msgstr "Δημιουργία εξωφύλλου για το τεύχος αυτό με τα ακόλουθα στοιχεία"
+msgstr "Δημιουργία εξωφύλλου για αυτό το τεύχος με τα ακόλουθα στοιχεία."
 
 msgid "editor.issues.coverPageDisplay"
 msgstr "Εμφάνιση"
@@ -257,8 +260,8 @@ msgstr ""
 
 msgid "editor.issues.resetSectionOrder"
 msgstr ""
-"Το περιοδικό αυτό χρησιμοποιεί προσαρμοσμένη διάταξη ενοτήτων.  <a href="
-"\"{$url}\" class=\"action\">Επαναφορά στις προεπιλεγμένες ρυθμίσεις</a>"
+"Αυτό το τεύχος χρησιμοποιεί προσαρμοσμένη διάταξη ενοτήτων. <a href=\"{$url}"
+"\" class=\"action\">Επαναφορά στις προεπιλεγμένες ρυθμίσεις</a>"
 
 msgid "editor.issues.issueData"
 msgstr "Δεδομένα τεύχους"
@@ -318,7 +321,7 @@ msgid "editor.issues.viewingGalley"
 msgstr "Προβολή τυπογραφικού δοκιμίου τεύχους"
 
 msgid "editor.issues.issueGalleysDescription"
-msgstr "Δημοσίευση τυπογραφικών δοκιμίων με το περιεχόμενο όλου του τεύχους"
+msgstr "Δημοσίευση τυπογραφικών δοκιμίων με το περιεχόμενο όλου του τεύχους."
 
 msgid "editor.issues.noneIssueGalleys"
 msgstr "Δεν έχουν δημοσιευτεί τυπογραφικά δοκίμια τεύχους."
@@ -436,7 +439,7 @@ msgstr ""
 "να ζητήσει απαλλαγή από την εισφορά."
 
 msgid "editor.article.payment.requestPayment"
-msgstr ""
+msgstr "Αίτηση Πληρωμής"
 
 msgid "editor.article.removeCoverImageFileNotFound"
 msgstr ""
@@ -489,3 +492,16 @@ msgstr ""
 
 msgid "editor.article.coverImage"
 msgstr "Εικόνα εξωφύλλου"
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr "Η Ημερομηνία Δημοσίευσης απαιτείται όταν δημοσιεύεται το τεύχος."
+
+msgid "editor.issues.datePublished.invalid"
+msgstr ""
+"Η Ημερομηνία Δημοσίευσης δεν είναι έγκυρη. Η ημερομηνία πρέπει να είναι της "
+"μορφής ΕΕΕΕ-ΜΜ-ΗΗ."
+
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr ""
+"Εάν μείνει κενή, η ημερομηνία θα ορισθεί αυτόματα, όταν δημοσιευτεί το "
+"τεύχος."
