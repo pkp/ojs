@@ -1,19 +1,21 @@
+# Theodoros Theodoropoulos <bujam1@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:19+00:00\n"
-"PO-Revision-Date: 2020-07-15 12:45+0000\n"
-"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
+"PO-Revision-Date: 2026-06-08 08:24+0000\n"
+"Last-Translator: Theodoros Theodoropoulos <bujam1@yahoo.com>\n"
 "Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/admin/el/>\n"
-"Language: el_GR\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "admin.hostedContexts"
-msgstr "Φιλοξενούμενα περιοδικά"
+msgstr "Φιλοξενούμενα Περιοδικά"
 
 msgid "admin.settings.redirect"
 msgstr "Προώθηση σε περιοδικό"
@@ -66,7 +68,7 @@ msgid "admin.systemConfiguration"
 msgstr "Ρύθμιση παραμέτρων του OJS"
 
 msgid "admin.systemConfigurationDescription"
-msgstr "Ρύθμιση παραμέτρων του OJS από το <tt>config.inc.php</tt>."
+msgstr "Ρυθμίσεις παραμέτρων του OJS από το αρχείο <tt>config.inc.php</tt>."
 
 msgid "admin.journals.createInstructions"
 msgstr ""
@@ -75,13 +77,13 @@ msgstr ""
 "περιοδικού για να ολοκληρώσετε τη διαδικασία οργάνωσής του."
 
 msgid "admin.journals.journalSettings"
-msgstr "Ρυθμίσεις περιοδικού"
+msgstr "Ρυθμίσεις Περιοδικού"
 
 msgid "admin.journals.noneCreated"
 msgstr "Δεν έχει δημιουργηθεί κανένα περιοδικό."
 
 msgid "admin.contexts.create"
-msgstr "Δημιουργία περιοδικού"
+msgstr "Δημιουργία Περιοδικού"
 
 msgid "admin.journals.urlWillBe"
 msgstr ""
@@ -129,7 +131,7 @@ msgid "admin.journals.form.importPathRequired"
 msgstr "Απαιτείται η διαδρομή εισαγωγής."
 
 msgid "admin.journals.importErrors"
-msgstr "Η εισαγωγή δεν ολοκληρώθηκε επιτυχώς."
+msgstr "Η εισαγωγή δεν ολοκληρώθηκε επιτυχώς"
 
 msgid "admin.mergeUsers"
 msgstr "Συγχώνευση Χρηστών"
@@ -160,16 +162,16 @@ msgstr ""
 "σμοί) θα διαγραφεί(-ούν). Αυτή η ενέργεια δεν είναι αναστρέψιμη."
 
 msgid "admin.mergeUsers.noneEnrolled"
-msgstr "Κανένας εγγεγραμμένος Χρήστης"
+msgstr "Κανένας εγγεγραμμένος χρήστης."
 
 msgid "admin.scheduledTask.subscriptionExpiryReminder"
 msgstr "Υπενθύμιση λήξης συνδρομής"
 
 msgid "admin.scheduledTask.openAccessNotification"
-msgstr "Γνωστοποίηση ανοικτής πρόσβασης"
+msgstr "Γνωστοποίηση Ανοικτής Πρόσβασης"
 
 msgid "admin.scheduledTask.reviewReminder"
-msgstr "Υπενθύμιση αξιολόγησης"
+msgstr "Υπενθύμιση Αξιολόγησης"
 
 msgid "admin.job.processLogFile.invalidLogEntry.issueId"
 msgstr ""
