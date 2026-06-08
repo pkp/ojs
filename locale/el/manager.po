@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
-"PO-Revision-Date: 2026-06-08 09:11+0000\n"
+"PO-Revision-Date: 2026-06-08 13:37+0000\n"
 "Last-Translator: Theodoros Theodoropoulos <bujam1@yahoo.com>\n"
 "Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/manager/el/>\n"
 "Language: el\n"
@@ -751,6 +751,8 @@ msgstr "Αρχικά Περιοδικού"
 
 msgid "manager.setup.selectCountry"
 msgstr ""
+"Επιλέξτε τη χώρα στην οποία βρίσκεται αυτό το περιοδικό ή τη χώρα της "
+"ταχυδρομικής διεύθυνσης του περιοδικού ή του εκδότη."
 
 msgid "manager.setup.journalLayout"
 msgstr "Εμφάνιση περιοδικού"
@@ -1562,10 +1564,10 @@ msgid "manager.subscriptions.form.typeIdValid"
 msgstr "Παρακαλούμε επιλέξτε έναν έγκυρο τύπο συνδρομής."
 
 msgid "manager.subscriptions.form.institution"
-msgstr ""
+msgstr "Ίδρυμα"
 
 msgid "manager.subscriptions.form.institutionIdValid"
-msgstr ""
+msgstr "Παρακαλώ επιλέξτε ένα έγκυρο ίδρυμα."
 
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Ημερομηνία έναρξης"
@@ -1709,7 +1711,7 @@ msgstr ""
 "συνδρομών."
 
 msgid "manager.subscriptions.form.institutionRequired"
-msgstr ""
+msgstr "Πρέπει να δημιουργηθεί ένα ίδρυμα προτού γίνουν νέες εγγραφές."
 
 msgid "manager.subscriptions.ipRange"
 msgstr "Περιοχή διευθύνσεων IP"
@@ -1755,7 +1757,7 @@ msgid "manager.subscriptions.contact"
 msgstr "Όνομα προσώπου επαφής"
 
 msgid "manager.subscriptions.institutionName"
-msgstr "Όνομα ιδρύματος"
+msgstr "Όνομα Ιδρύματος"
 
 msgid "manager.subscriptionTypes"
 msgstr "Τύποι συνδρομών"
@@ -2458,9 +2460,11 @@ msgstr ""
 
 msgid "doi.editor.assignDoi.assigned"
 msgstr ""
+"Το DOI {$pubId} εκχωρήθηκε επιτυχώς. Για να το επεξεργαστείτε, επισκεφθείτε "
+"την <a href=\"{$doiManagementLink}\">Σελίδα Διαχείρισης DOI </a>."
 
 msgid "doi.editor.assignDoi.toBeAssigned"
-msgstr ""
+msgstr "Το DOI {$pubId} θα εκχωρηθεί κατά την δημοσίευση."
 
 msgid "doi.editor.missingPrefix"
 msgstr ""
@@ -2496,13 +2500,16 @@ msgid "doi.manager.submissionDois"
 msgstr ""
 
 msgid "doi.manager.issueDois"
-msgstr ""
+msgstr "DOIs Τεύχους"
 
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr ""
+"Με αυτό το μήνυμα ηλεκτρονικού ταχυδρομείου ενημερώνεται ο συγγραφέας ότι η "
+"υποβολή του απορρίπτεται, πριν από το στάδιο της αξιολόγησης, επειδή δεν "
+"πληροί τις προϋποθέσεις για δημοσίευση στο περιοδικό."
 
 msgid "manager.institutions.noContext"
-msgstr ""
+msgstr "Αυτό το περιοδικό του ιδρύματος δεν μπόρεσε να βρεθεί."
 
 msgid "mailable.subscriptionNotify.name"
 msgstr ""
@@ -2514,7 +2521,7 @@ msgstr ""
 "Παρέχει τον σύνδεσμο του περιοδικού καθώς και οδηγίες πρόσβασης σε αυτό."
 
 msgid "mailable.subscriptionExpiresSoon.name"
-msgstr ""
+msgstr "Η Συνδρομή Λήγει Σύντομα"
 
 msgid "mailable.subscriptionExpiresSoon.description"
 msgstr ""
@@ -2890,3 +2897,18 @@ msgstr ""
 #~ msgid "manager.setup.masthead.success"
 #~ msgstr ""
 #~ "Ενημερώθηκαν οι λεπυομέρειες του κύριου τίτλου αυτού του περιοδικού."
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr ""
+"Δεν μπορεί να γίνει εισαγωγή του δοκιμίου τυπογραφίας του τεύχους γιατί "
+"λείπει το σχετικό αρχείο."
+
+msgid "manager.setup.contextSummary.description"
+msgstr ""
+"Παραθέστε μια σύντομη περιγραφή του περιοδικού σας, ώστε να δώσετε μια "
+"εικόνα για το περιεχόμενο και τον σκοπό του."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"Δεν μπόρεσε να γίνει εξαγωγή του τυπογραφικού δοκιμίου {$id} , το σχετικό "
+"αρχείο δεν βρέθηκε στην διαδρομή \"{$path}\"."
