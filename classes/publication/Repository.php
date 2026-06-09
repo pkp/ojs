@@ -28,6 +28,7 @@ use PKP\context\Context;
 use PKP\core\Core;
 use PKP\db\DAORegistry;
 use PKP\doi\exceptions\DoiException;
+use PKP\submission\reviewAssignment\ReviewAssignment;
 
 class Repository extends \PKP\publication\Repository
 {
@@ -278,8 +279,13 @@ class Repository extends \PKP\publication\Repository
 
         // Peer review
         if ($context->isDoiTypeEnabled(Repo::doi()::TYPE_PEER_REVIEW)) {
+            /** @var ReviewAssignment[] $reviewAssignments */
             $reviewAssignments = $this->getCompletedReviewAssignments([$publication->getId()]);
             foreach ($reviewAssignments as $reviewAssignment) {
+                if (!$reviewAssignment->getIsReviewPubliclyVisible()) {
+                    continue;
+                }
+
                 if (empty($reviewAssignment->getData('doiId'))) {
                     try {
                         $doiId = Repo::doi()->mintDoi($context);

@@ -20,7 +20,6 @@ namespace APP\API\v1\dois;
 use APP\facades\Repo;
 use APP\issue\Issue;
 use APP\jobs\doi\DepositIssue;
-use APP\plugins\IDoiRegistrationAgency;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -365,19 +364,5 @@ class DoiController extends PKPDoiController
             Repo::doi()::TYPE_ISSUE => Repo::issue(),
             default => null,
         };
-    }
-
-    /** @copydoc PKPDoiController::getPeerReviewExports() */
-    public function getPeerReviewExports(array $submissionIds, Context $context, IDoiRegistrationAgency $agency): array
-    {
-        $exportablePeerReviewIds = Repo::reviewAssignment()
-            ->getExportableDOIsPeerReviewIds($context->getId(), $context->getData(Context::SETTING_DOI_VERSIONING), $submissionIds);
-
-        $peerReviews = array_map(
-            fn ($exportablePeerReviewId) => Repo::reviewAssignment()->get($exportablePeerReviewId),
-            $exportablePeerReviewIds
-        );
-
-        return $agency->exportPeerReviews($peerReviews, $context);
     }
 }

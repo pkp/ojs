@@ -345,7 +345,7 @@ class Repository extends \PKP\doi\Repository
         $doiIds = [];
 
         $reviewAssignment = Repo::reviewAssignment()->get($reviewId);
-        $reviewDoiId = $reviewAssignment->getData('doiId');
+        $reviewDoiId = $reviewAssignment?->getData('doiId');
 
         if (!empty($reviewDoiId)) {
             $submission = Repo::submission()->get($reviewAssignment->getData('submissionId'));
