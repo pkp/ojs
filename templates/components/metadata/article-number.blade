@@ -2,6 +2,7 @@
     <x-metadata.default
         slug="article-number"
         title="{{ __('submission.articleNumber') }}"
+        :$headingTag
     >
         {{ $publication->getData('articleNumber') }}
     </x-metadata.default>

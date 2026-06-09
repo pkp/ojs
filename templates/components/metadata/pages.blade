@@ -2,6 +2,7 @@
     <x-metadata.default
         slug="pages"
         title="{{ __('editor.issues.pages') }}"
+        :$headingTag
     >
         {{ $publication->getData('pages') }}
     </x-metadata.default>

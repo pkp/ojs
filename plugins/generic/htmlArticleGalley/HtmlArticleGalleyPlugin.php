@@ -52,7 +52,7 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin implements HasM
                 component: 'htmlarticlegalleyplugin::metadata.galley',
                 title: 'HTML Galley',
                 loader: function (Publication $publication, Submission $submission) {
-                    view()->share('htmlGalleyTest', 'This is an example of a custom article metadata block in a plugin.');
+                    view()->share('htmlGalleyTest', '<p>This is an example of a <a href="https://example.org">custom article metadata</a> block in a plugin.</p>');
                 }
             )
         );
