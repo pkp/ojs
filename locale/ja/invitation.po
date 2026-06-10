@@ -1,0 +1,17 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PKP ojs/invitation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 21:05+0000\n"
+"PO-Revision-Date: 2026-06-01 21:05+0900\n"
+"Last-Translator: OJS Japanese translators\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "userInvitation.searchUser.stepDescription"
+msgstr "ユーザーが存在しない場合は、役割への招待を送信できます。既存ユーザーの場合は、ユーザー情報を確認し、追加の役割へ招待できます。"

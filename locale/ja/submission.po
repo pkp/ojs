@@ -118,14 +118,16 @@ msgid "submission.upload.fileContents"
 msgstr "投稿要素"
 
 msgid "submission.complete"
-msgstr "承認"
+msgstr "完了"
+
 
 msgid "submission.incomplete"
 msgstr "承認待ち"
 
 #, fuzzy
 msgid "submission.submit.submissionChecklist"
-msgstr "投稿チェックリスト"
+msgstr "投稿前の確認リスト"
+
 
 msgid "submission.submit.privacyStatement"
 msgstr "個人情報の扱いについて"
@@ -180,7 +182,7 @@ msgid "publication.invalidSection"
 msgstr "本書のセクションは見つかりませんでした。"
 
 msgid "publication.inactiveSection"
-msgstr "{$section} (Inactive)"
+msgstr ""
 
 msgid "publication.invalidIssue"
 msgstr "本書の巻号は見つかりませんでした。"

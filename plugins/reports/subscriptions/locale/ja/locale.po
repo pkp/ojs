@@ -1,0 +1,26 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PKP ojs/plugin-reports-subscriptions\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 21:05+0000\n"
+"PO-Revision-Date: 2026-06-01 21:05+0900\n"
+"Last-Translator: OJS Japanese translators\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "plugins.reports.subscriptions.displayName"
+msgstr "購読レポート"
+
+msgid "plugins.reports.subscriptions.description"
+msgstr "購読関連の利用状況レポートを生成します。"
+
+msgid "plugins.reports.subscriptions.institutionMailingAddress"
+msgstr "機関の郵送先住所"
+
+msgid "plugins.reports.subscriptions.ipRanges"
+msgstr "IP範囲"

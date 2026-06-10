@@ -207,7 +207,7 @@ msgid "article.language"
 msgstr "言語"
 
 msgid "article.sectionEditor"
-msgstr "SE"
+msgstr ""
 
 msgid "article.commentsToEditor"
 msgstr "編集者へのコメント"
@@ -216,7 +216,8 @@ msgid "article.submission"
 msgstr "投稿物"
 
 msgid "article.submissions"
-msgstr "投稿物"
+msgstr "投稿"
+
 
 msgid "article.details"
 msgstr "詳細"
@@ -300,7 +301,8 @@ msgid "submission.authorVersion"
 msgstr "著者版"
 
 msgid "submission.copyediting"
-msgstr "原稿整理"
+msgstr "原稿整理中"
+
 
 msgid "submission.copyedit"
 msgstr "原稿整理"
@@ -381,7 +383,7 @@ msgid "context.context"
 msgstr "雑誌"
 
 msgid "journal.issn"
-msgstr "ISSN"
+msgstr ""
 
 msgid "journal.viewAllIssues"
 msgstr "全ての巻号の閲覧"
@@ -606,7 +608,8 @@ msgid "submission.event.general.defaultEvent"
 msgstr "投稿イベント"
 
 msgid "submission.event.submissionSubmitted"
-msgstr "投稿論文"
+msgstr "初回投稿が完了した。"
+
 
 msgid "submission.event.general.issueScheduled"
 msgstr "投稿物が巻号スケジューリングキューに送られた"
@@ -710,7 +713,7 @@ msgid "reader.subscriptionOrFeeAccess"
 msgstr "購読アクセスまたはフリーアクセス"
 
 msgid "reader.purchasePrice"
-msgstr "({$currency} {$price})"
+msgstr ""
 
 msgid "comments.commentsOnArticle"
 msgstr "この論文に対するコメント"
@@ -1468,7 +1471,7 @@ msgid "user.subscriptions.form.ipRange"
 msgstr "IPアドレス範囲"
 
 msgid "user.subscriptions.form.ipRangeItem"
-msgstr "&#8226;"
+msgstr ""
 
 msgid "user.subscriptions.form.ipRangeInstructions"
 msgstr ""
@@ -1529,7 +1532,8 @@ msgid "article.pageTitle"
 msgstr "{$title}の閲覧"
 
 msgid "article.pdf.title"
-msgstr "Portable Document Format (PDF)"
+msgstr "PDF形式"
+
 
 msgid "article.download"
 msgstr "このPDFファイルをダウンロードする"
