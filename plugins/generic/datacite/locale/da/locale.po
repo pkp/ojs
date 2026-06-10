@@ -82,11 +82,6 @@ msgstr ""
 "Det er påkrævet at angive et test DOI præfix, når \"anvend test præfix til "
 "DOI registrering\" er valgt."
 
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Det er påkrævet at angive et test brugernavn, når der angives et "
-"produktionsbrugernavn."
-
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "DataCite automatisk registreringsopgave"
 

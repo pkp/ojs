@@ -88,9 +88,6 @@ msgstr ""
 "بادئة معَّرف المكون الرقمي الاختبارية مطلوبة عند تأشير \"استعمل بادئة مُعرَّ"
 "ف المكون الرقمي الاختبارية عند التسجيل\"."
 
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr "اسم المستخدم الاختباري مطلوب عند إعطاء اسم مستخدم من مرحلة الإنتاج."
-
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "مهمة التسجيل التلقائي لـ DataCite"
 

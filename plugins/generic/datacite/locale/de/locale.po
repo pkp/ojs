@@ -91,11 +91,6 @@ msgstr ""
 "Ein Test-DOI-Präfix ist erforderlich, wenn die Option \"Testpräfix für DOI-"
 "Registrierung verwenden\" ausgewählt wird."
 
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Ein Testbenutzername ist erforderlich, wenn ein Produktionsbenutzername "
-"angegeben wird."
-
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "DataCite automatische Registrierung"
 

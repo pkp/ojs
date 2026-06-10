@@ -78,11 +78,6 @@ msgstr ""
 "Un prefisso DOI di prova è richiesto quando si seleziona \"usa prefisso di "
 "prova per la registrazione DOI\"."
 
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Un nome utente di prova è richiesto quando viene fornito un nome utente di "
-"produzione."
-
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Nome della task di registrazione automatica su DataCite"
 

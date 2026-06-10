@@ -85,11 +85,6 @@ msgstr ""
 "Pokud je vybrána možnost „použít testovací předponu pro registraci DOI“, je "
 "vyžadována testovací předpona DOI."
 
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Při zadání produkčního uživatelského jména je vyžadováno testovací "
-"uživatelské jméno."
-
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Automatická úloha registrace DataCite"
 

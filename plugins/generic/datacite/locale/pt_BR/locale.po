@@ -83,11 +83,6 @@ msgstr ""
 "Um prefixo DOI de teste é necessário quando a opção \"usar prefixo de teste "
 "para registro DOI\" é selecionada."
 
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Um nome de usuário de teste é necessário quando um nome de usuário de "
-"produção é fornecido."
-
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Dados DataCite do remetente"
 

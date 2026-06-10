@@ -83,9 +83,6 @@ msgstr "Prefixo DOI de test"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr ""
 
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Tarefa de rexistro automático DataCite"
 

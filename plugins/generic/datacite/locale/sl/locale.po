@@ -84,11 +84,6 @@ msgstr ""
 "Če je izbrana opcija \"uporabi testno predpono za DOI registracijo\", mora "
 "biti testna DOI predpona določena."
 
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Tesno uporabniško ime je obvezno, če je določeno produkcijsko uporabniško "
-"ime."
-
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Opravilo avtomatske registracije pri DataCite"
 

@@ -82,10 +82,6 @@ msgstr ""
 "Awalan DOI pengujian diperlukan saat \"gunakan awalan uji untuk registrasi "
 "DOI\" dipilih."
 
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Nama pengguna pengujian diperlukan saat nama pengguna produksi diberikan."
-
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Tugas pendaftaran otomatis DataCite"
 
