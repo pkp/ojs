@@ -1,0 +1,83 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PKP ojs/plugin-importexport-native\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-01 21:05+0000\n"
+"PO-Revision-Date: 2026-06-01 21:05+0900\n"
+"Last-Translator: OJS Japanese translators\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "plugins.importexport.native.displayName"
+msgstr "OJS標準XMLプラグイン"
+
+msgid "plugins.importexport.native.description"
+msgstr "OJS標準XML形式で論文・巻号をインポート/エクスポートします。"
+
+msgid "plugins.importexport.native.import"
+msgstr ""
+
+msgid "plugins.importexport.native.import.instructions"
+msgstr ""
+
+msgid "plugins.importexport.native.exportSubmissionsSelect"
+msgstr ""
+
+msgid "plugins.importexport.native.exportSubmissions"
+msgstr ""
+
+msgid "plugins.importexport.native.exportIssues"
+msgstr ""
+
+msgid "plugins.importexport.native.results"
+msgstr ""
+
+msgid "plugins.inportexport.native.uploadFile"
+msgstr ""
+
+msgid "plugins.importexport.native.importComplete"
+msgstr ""
+
+msgid "plugins.importexport.native.cliUsage"
+msgstr ""
+
+msgid "plugins.importexport.native.error.unknownSection"
+msgstr ""
+
+msgid "plugins.importexport.common.error.invalidFileExtension"
+msgstr ""
+
+msgid "plugins.importexport.common.error.coverImageNameUnspecified"
+msgstr ""
+
+msgid "plugins.importexport.native.error.unknownUser"
+msgstr ""
+
+msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
+msgstr ""
+
+msgid "plugins.importexport.native.import.error.sectionTitleMatch"
+msgstr ""
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMismatch"
+msgstr ""
+
+msgid "plugins.importexport.native.import.error.sectionAbbrevMatch"
+msgstr ""
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMatch"
+msgstr ""
+
+msgid "plugins.importexport.native.import.error.issueIdentificationDuplicate"
+msgstr ""
+
+msgid "plugins.importexport.native.import.error.issueIdentificationMissing"
+msgstr ""
+
+msgid "plugins.importexport.native.import.error.publishedDateMissing"
+msgstr ""
