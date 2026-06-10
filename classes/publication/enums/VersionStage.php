@@ -22,6 +22,15 @@ enum VersionStage: string
     case PUBLISHED_MANUSCRIPT_UNDER_REVIEW = 'PMUR';
     case VERSION_OF_RECORD = 'VoR';
 
+    /**
+     * The version stage that, when published, marks a submission as final /
+     * eligible to move to the Done stage.
+     */
+    public static function finalVersionStage(): self
+    {
+        return self::VERSION_OF_RECORD;
+    }
+
     public function labelKey(): string
     {
         return match ($this) {
