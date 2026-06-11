@@ -28,6 +28,7 @@ use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\journal\Journal;
 use APP\journal\JournalDAO;
+use APP\publication\HasContextIdentityMetadata;
 use PKP\core\Core;
 use PKP\facades\Locale;
 use PKP\plugins\PluginRegistry;
@@ -35,6 +36,8 @@ use PKP\publication\PKPPublication;
 
 class Issue extends \PKP\core\DataObject
 {
+    use HasContextIdentityMetadata;
+
     public const ISSUE_ACCESS_OPEN = 1;
     public const ISSUE_ACCESS_SUBSCRIPTION = 2;
 
@@ -724,14 +727,14 @@ class Issue extends \PKP\core\DataObject
         /** @var Journal $context*/
         $context = $contextDao->getById($this->getJournalId());
         $this->setData('contextName', $context->getName());
+        $this->setData('contextPrimaryLocale', $context->getPrimaryLocale());
         $this->setData('printIssn', $context->getData('printIssn'));
         $this->setData('onlineIssn', $context->getData('onlineIssn'));
-        $this->setData('publisherInstitution', $context->getData('publisherInstitution'));
-        $this->setData('country', $context->getData('country'));
+        $this->setData('publisher', $context->getData('publisherInstitution'));
 
         $cslPlugin = PluginRegistry::getPlugin('generic', 'citationstylelanguageplugin');
-        if ($cslPlugin->getEnabled($this->getData('journalId'))) {
-            $this->setData('publisherLocation', $cslPlugin->getSetting($this->getData('journalId'), 'publisherLocation'));
+        if ($cslPlugin?->getEnabled($this->getJournalId()) && !empty($publisherLocation = $cslPlugin->getSetting($this->getJournalId(), 'publisherLocation'))) {
+            $this->setData('publisherLocation', $publisherLocation);
         }
     }
 }

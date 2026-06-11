@@ -173,6 +173,40 @@ class NativeXmlIssueFilter extends \PKP\plugins\importexport\native\filter\Nativ
                         $this->parseIssueIdentification($n, $issue);
                     }
                     break;
+                case 'contextName':
+                    if (!$processOnlyChildren) {
+                        [$locale, $value] = $this->parseLocalizedContent($n);
+                        if (empty($locale)) {
+                            $locale = $context->getPrimaryLocale();
+                        }
+                        $issue->setData('contextName', $value, $locale);
+                    }
+                    break;
+                case 'contextPrimaryLocale':
+                    if (!$processOnlyChildren) {
+                        $issue->setData('contextPrimaryLocale', $n->textContent);
+                    }
+                    break;
+                case 'onlineIssn':
+                    if (!$processOnlyChildren) {
+                        $issue->setData('onlineIssn', $n->textContent);
+                    }
+                    break;
+                case 'printIssn':
+                    if (!$processOnlyChildren) {
+                        $issue->setData('printIssn', $n->textContent);
+                    }
+                    break;
+                case 'publisher':
+                    if (!$processOnlyChildren) {
+                        $issue->setData('publisher', $n->textContent);
+                    }
+                    break;
+                case 'publisherLocation':
+                    if (!$processOnlyChildren) {
+                        $issue->setData('publisherLocation', $n->textContent);
+                    }
+                    break;
                 default:
                     $deployment->addWarning(Application::ASSOC_TYPE_ISSUE, $issue->getId(), __('plugins.importexport.common.error.unknownElement', ['param' => $n->tagName]));
             }

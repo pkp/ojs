@@ -107,6 +107,15 @@ class NativeXmlPublicationFilter extends \PKP\plugins\importexport\native\filter
                 $nativeFilterHelper = new NativeFilterHelper();
                 $nativeFilterHelper->parsePublicationCovers($this, $n, $publication);
                 break;
+            case 'onlineIssn':
+                $publication->setData('onlineIssn', $n->textContent);
+                break;
+            case 'printIssn':
+                $publication->setData('printIssn', $n->textContent);
+                break;
+            case 'publisher':
+                $publication->setData('publisher', $n->textContent);
+                break;
             default:
                 parent::handleChildElement($n, $publication);
         }

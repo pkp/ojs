@@ -1,12 +1,6 @@
 {
 	"title": "Issue",
 	"description": "An issue.",
-	"required": [
-		"contextName",
-		"onlineIssn",
-		"printIssn",
-		"sectionId"
-	],
 	"properties": {
 		"_href": {
 			"type": "string",
@@ -26,12 +20,13 @@
 		"contextName": {
 			"type": "string",
 			"multilingual": true,
-			"apiSummary": true,
+			"writeDisabledInApi": true,
 			"validation": ["nullable"]
 		},
-		"country": {
+		"contextPrimaryLocale": {
 			"type": "string",
-			"validation": ["country"]
+			"writeDisabledInApi": true,
+			"validation": ["nullable"]
 		},
 		"coverImage": {
 			"type": "string",
@@ -64,18 +59,18 @@
 			"multilingual": true,
 			"apiSummary": true
 		},
+		"doiId": {
+			"type": "integer",
+			"description": "Reference to the DOI for this galley",
+			"writeOnly": true,
+			"validation": ["nullable"]
+		},
 		"doiObject": {
 			"type": "object",
 			"description": "DOI object for this galley",
 			"apiSummary": true,
 			"readOnly": true,
 			"$ref": "#/definitions/Doi"
-		},
-		"doiId": {
-			"type": "integer",
-			"description": "Reference to the DOI for this galley",
-			"writeOnly": true,
-			"validation": ["nullable"]
 		},
 		"galleys": {
 			"type": "array",
@@ -108,6 +103,7 @@
 		},
 		"onlineIssn": {
 			"type": "string",
+			"writeDisabledInApi": true,
 			"validation": ["nullable", "issn"]
 		},
 		"openAccessDate": {
@@ -119,6 +115,7 @@
 		},
 		"printIssn": {
 			"type": "string",
+			"writeDisabledInApi": true,
 			"validation": ["nullable", "issn"]
 		},
 		"published": {
@@ -130,12 +127,14 @@
 			"apiSummary": true,
 			"validation": ["url"]
 		},
-		"publisherInstitution": {
+		"publisher": {
 			"type": "string",
+			"writeDisabledInApi": true,
 			"validation": ["nullable"]
 		},
 		"publisherLocation": {
 			"type": "string",
+			"writeDisabledInApi": true,
 			"validation": ["nullable"]
 		},
 		"sections": {

@@ -1,17 +1,9 @@
 {
 	"description": "A published version of an article.",
 	"required": [
-		"contextName",
 		"sectionId"
 	],
 	"properties": {
-		"status": {
-			"type": "integer",
-			"description": "Whether the publication is Queued (not yet scheduled for publication), Declined, Published or Scheduled (scheduled for publication at a future date). One of the `PKPPublication::STATUS_*` constants. Default is `PKPPublication::STATUS_QUEUED`.",
-			"apiSummary": true,
-			"default": 1,
-			"validation": ["in:1,3,4,5,6,7"]
-		},
 		"accessStatus": {
 			"type": "integer",
 			"default": 0,
@@ -43,7 +35,7 @@
 		},
 		"onlineIssn": {
 			"type": "string",
-			"apiSummary": true,
+			"writeDisabledInApi": true,
 			"validation": ["nullable", "issn"]
 		},
 		"pages": {
@@ -54,16 +46,24 @@
 		},
 		"printIssn": {
 			"type": "string",
-			"apiSummary": true,
+			"writeDisabledInApi": true,
 			"validation": ["nullable", "issn"]
 		},
-		"publisherInstitution": {
+		"publisher": {
 			"type": "string",
+			"writeDisabledInApi": true,
 			"validation": ["nullable"]
 		},
 		"sectionId": {
 			"type": "integer",
 			"apiSummary": true
+		},
+		"status": {
+			"type": "integer",
+			"description": "Whether the publication is Queued (not yet scheduled for publication), Declined, Published or Scheduled (scheduled for publication at a future date). One of the `PKPPublication::STATUS_*` constants. Default is `PKPPublication::STATUS_QUEUED`.",
+			"apiSummary": true,
+			"default": 1,
+			"validation": ["in:1,3,4,5,6,7"]
 		}
 	}
 }

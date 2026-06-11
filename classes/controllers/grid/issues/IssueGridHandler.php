@@ -560,7 +560,8 @@ class IssueGridHandler extends GridHandler
             $assignPublicIdentifiersForm->execute();
             Repo::issue()->createDoi($issue);
 
-            if (!$issue->getData('datePublished') || strtotime($issue->getData('datePublished')) > time()) {
+            // Only stamp on first publish; skip if contextName is already set (issue was previously published then unpublished).
+            if (!$issue->getData('contextName')) {
                 $issue->stampContextIdentity();
             }
         }
