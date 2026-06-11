@@ -1,12 +1,6 @@
 {
 	"title": "Issue",
 	"description": "An issue.",
-	"required": [
-		"contextName",
-		"onlineIssn",
-		"printIssn",
-		"sectionId"
-	],
 	"properties": {
 		"_href": {
 			"type": "string",
@@ -23,15 +17,28 @@
 				"$ref": "#/definitions/SubmissionSummary"
 			}
 		},
+		"contextAbbreviation": {
+			"type": "string",
+			"multilingual": true,
+			"writeDisabledInApi": true,
+			"validation": [
+				"nullable"
+			]
+		},
 		"contextName": {
 			"type": "string",
 			"multilingual": true,
-			"apiSummary": true,
-			"validation": ["nullable"]
+			"writeDisabledInApi": true,
+			"validation": [
+				"nullable"
+			]
 		},
-		"country": {
+		"contextPrimaryLocale": {
 			"type": "string",
-			"validation": ["country"]
+			"writeDisabledInApi": true,
+			"validation": [
+				"nullable"
+			]
 		},
 		"coverImage": {
 			"type": "string",
@@ -48,21 +55,35 @@
 			"multilingual": true,
 			"apiSummary": true,
 			"readOnly": true,
-			"validation": ["url"]
+			"validation": [
+				"url"
+			]
 		},
 		"dateNotified": {
 			"type": "string",
-			"validation": ["date:Y-m-d H:i:s"]
+			"validation": [
+				"date:Y-m-d H:i:s"
+			]
 		},
 		"datePublished": {
 			"type": "string",
 			"apiSummary": true,
-			"validation": ["date:Y-m-d H:i:s"]
+			"validation": [
+				"date:Y-m-d H:i:s"
+			]
 		},
 		"description": {
 			"type": "string",
 			"multilingual": true,
 			"apiSummary": true
+		},
+		"doiId": {
+			"type": "integer",
+			"description": "Reference to the DOI for this issue",
+			"writeOnly": true,
+			"validation": [
+				"nullable"
+			]
 		},
 		"doiObject": {
 			"type": "object",
@@ -70,12 +91,6 @@
 			"apiSummary": true,
 			"readOnly": true,
 			"$ref": "#/definitions/Doi"
-		},
-		"doiId": {
-			"type": "integer",
-			"description": "Reference to the DOI for this issue",
-			"writeOnly": true,
-			"validation": ["nullable"]
 		},
 		"galleys": {
 			"type": "array",
@@ -100,7 +115,9 @@
 		},
 		"lastModified": {
 			"type": "string",
-			"validation": ["date:Y-m-d H:i:s"]
+			"validation": [
+				"date:Y-m-d H:i:s"
+			]
 		},
 		"number": {
 			"type": "string",
@@ -108,18 +125,28 @@
 		},
 		"onlineIssn": {
 			"type": "string",
-			"validation": ["nullable", "issn"]
+			"writeDisabledInApi": true,
+			"validation": [
+				"nullable",
+				"issn"
+			]
 		},
 		"openAccessDate": {
 			"type": "string",
-			"validation": ["date:Y-m-d H:i:s"]
+			"validation": [
+				"date:Y-m-d H:i:s"
+			]
 		},
 		"originalStyleFileName": {
 			"type": "string"
 		},
 		"printIssn": {
 			"type": "string",
-			"validation": ["nullable", "issn"]
+			"writeDisabledInApi": true,
+			"validation": [
+				"nullable",
+				"issn"
+			]
 		},
 		"published": {
 			"type": "boolean",
@@ -128,15 +155,23 @@
 		"publishedUrl": {
 			"type": "string",
 			"apiSummary": true,
-			"validation": ["url"]
+			"validation": [
+				"url"
+			]
 		},
-		"publisherInstitution": {
+		"publisher": {
 			"type": "string",
-			"validation": ["nullable"]
+			"writeDisabledInApi": true,
+			"validation": [
+				"nullable"
+			]
 		},
 		"publisherLocation": {
 			"type": "string",
-			"validation": ["nullable"]
+			"writeDisabledInApi": true,
+			"validation": [
+				"nullable"
+			]
 		},
 		"sections": {
 			"type": "array",

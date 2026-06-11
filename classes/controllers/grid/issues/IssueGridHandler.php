@@ -566,8 +566,9 @@ class IssueGridHandler extends GridHandler
             $assignPublicIdentifiersForm->execute();
             Repo::issue()->createDoi($issue);
 
-            if (!$issue->getData('datePublished') || strtotime($issue->getData('datePublished')) > time()) {
-                $issue->stampContextIdentity();
+            // Stamp only on first publish, so a republished issue keeps its identity
+            if (!$issue->hasContextIdentity()) {
+                $issue->stampContextIdentity($context);
             }
         }
 

@@ -21,14 +21,15 @@ namespace APP\publication;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
-use APP\journal\Journal;
-use APP\journal\JournalDAO;
 use APP\publication\enums\VersionStage;
+use PKP\context\Context;
 use PKP\plugins\PluginRegistry;
 use PKP\publication\PKPPublication;
 
 class Publication extends PKPPublication
 {
+    use HasContextIdentityMetadata;
+
     // Case of no issue, published issue and future issue with publish intent
     public const STATUS_READY_TO_PUBLISH = 6;
     // Case of future issue with schedule intent
@@ -87,27 +88,55 @@ class Publication extends PKPPublication
     }
 
     /**
-     * Set the current journal identity metadata.
-     * If CSL plugin is enabled then publisher location from this plugin settings is also set.
+     * Stamp the journal's current identity metadata, also for an article in an issue: the identity
+     * at the time the article itself is published. The publisher location is taken from the CSL
+     * plugin settings if that plugin is enabled, and cleared otherwise.
      */
-    public function stampContextIdentity(): void
+    public function stampContextIdentity(Context $context): void
     {
-        $submission = Repo::submission()->get((int) $this->getData('submissionId'));
-        $contextId = $submission->getData('contextId');
-
-        /** @var JournalDAO $contextDao */
-        $contextDao = Application::getContextDAO();
-        /** @var Journal $context*/
-        $context = $contextDao->getById($contextId);
-        $this->setData('contextName', $context->getName());
+        parent::stampContextIdentity($context);
         $this->setData('printIssn', $context->getData('printIssn'));
         $this->setData('onlineIssn', $context->getData('onlineIssn'));
-        $this->setData('publisherInstitution', $context->getData('publisherInstitution'));
-        $this->setData('country', $context->getData('country'));
+        $this->setData('publisher', $context->getData('publisherInstitution'));
 
+        // Always set, so a re-stamp does not keep an old location when CSL provides none
         $cslPlugin = PluginRegistry::getPlugin('generic', 'citationstylelanguageplugin');
-        if ($cslPlugin->getEnabled($contextId)) {
-            $this->setData('publisherLocation', $cslPlugin->getSetting($contextId, 'publisherLocation'));
+        $publisherLocation = $cslPlugin?->getEnabled($context->getId()) ? $cslPlugin->getSetting($context->getId(), 'publisherLocation') : null;
+        $this->setData('publisherLocation', $publisherLocation ?: null);
+    }
+
+    /**
+     * Inherit the identity of the publication's issue when that issue is published and stamped.
+     * Used by the native XML import, so imported back content takes its issue's identity.
+     *
+     * @return bool Whether an identity was inherited
+     */
+    public function inheritContextIdentityFromIssue(): bool
+    {
+        $issue = $this->getIssueId() ? Repo::issue()->get($this->getIssueId()) : null;
+        if (!$issue || !$issue->getData('published') || !$issue->hasContextIdentity()) {
+            return false;
         }
+        $this->setData('contextName', $issue->getData('contextName'));
+        $this->setData('contextAbbreviation', $issue->getData('contextAbbreviation'));
+        $this->setData('contextPrimaryLocale', $issue->getData('contextPrimaryLocale'));
+        $this->setData('printIssn', $issue->getData('printIssn'));
+        $this->setData('onlineIssn', $issue->getData('onlineIssn'));
+        $this->setData('publisher', $issue->getData('publisher'));
+        $this->setData('publisherLocation', $issue->getData('publisherLocation'));
+        return true;
+    }
+
+    /**
+     * @copydoc PKPPublication::clearIdentityMetadata()
+     *
+     * Also clears the ISSNs and the publisher.
+     */
+    public function clearIdentityMetadata(): void
+    {
+        parent::clearIdentityMetadata();
+        $this->setData('publisher', null);
+        $this->setData('onlineIssn', null);
+        $this->setData('printIssn', null);
     }
 }
