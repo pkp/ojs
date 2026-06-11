@@ -79,6 +79,16 @@ class PublicationNativeXmlFilter extends \PKP\plugins\importexport\native\filter
             $entityNode->appendChild($coversNode);
         }
 
+        if ($onlineIssn = $entity->getData('onlineIssn')) {
+            $entityNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'onlineIssn', htmlspecialchars($onlineIssn, ENT_COMPAT, 'UTF-8')));
+        }
+        if ($printIssn = $entity->getData('printIssn')) {
+            $entityNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'printIssn', htmlspecialchars($printIssn, ENT_COMPAT, 'UTF-8')));
+        }
+        if ($publisher = $entity->getData('publisher')) {
+            $entityNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'publisher', htmlspecialchars($publisher, ENT_COMPAT, 'UTF-8')));
+        }
+
         return $entityNode;
     }
 }

@@ -100,21 +100,21 @@ class DOAJJsonFilter extends PKPImportExportFilter
         $doajArticle = [];
         $doajArticle['bibjson']['journal'] = [];
         // Publisher name (i.e. institution name)
-        $publisher = $publication->getData('publisherInstitution');
+        $publisher = $publication->getPublisher($context);
         if (!empty($publisher)) {
             $doajArticle['bibjson']['journal']['publisher'] = $publisher;
         }
         // To-Do: license ???
         // Journal's title (M)
-        $journalTitle = $publication->getData('contextName', $context->getPrimaryLocale());
+        $journalTitle = $publication->getPrimaryContextName($context);
         $doajArticle['bibjson']['journal']['title'] = $journalTitle;
         // Identification Numbers
         $issns = [];
-        $pissn = $publication->getData('printIssn');
+        $pissn = $publication->getPrintIssn($context);
         if (!empty($pissn)) {
             $issns[] = $pissn;
         }
-        $eissn = $publication->getData('onlineIssn');
+        $eissn = $publication->getOnlineIssn($context);
         if (!empty($eissn)) {
             $issns[] = $eissn;
         }

@@ -295,6 +295,9 @@ msgstr "Choose how to assign this publication to an issue."
 msgid "publication.assignToIssue.issueDescription"
 msgstr "Select the issue to assign this publication to."
 
+msgid "publication.journalIdentity"
+msgstr "Journal Identity at Publication"
+
 msgid "submission.publication"
 msgstr "Publication"
 

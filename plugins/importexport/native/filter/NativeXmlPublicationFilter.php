@@ -86,6 +86,14 @@ class NativeXmlPublicationFilter extends \PKP\plugins\importexport\native\filter
     }
 
     /**
+     * @copydoc \PKP\plugins\importexport\native\filter\NativeXmlPKPPublicationFilter::inheritImportedIdentity()
+     */
+    protected function inheritImportedIdentity(Publication $publication): void
+    {
+        $publication->inheritContextIdentityFromIssue();
+    }
+
+    /**
      * Handle an element whose parent is the submission element.
      *
      * @param DOMElement $n
@@ -106,6 +114,15 @@ class NativeXmlPublicationFilter extends \PKP\plugins\importexport\native\filter
             case 'covers':
                 $nativeFilterHelper = new NativeFilterHelper();
                 $nativeFilterHelper->parsePublicationCovers($this, $n, $publication);
+                break;
+            case 'onlineIssn':
+                $publication->setData('onlineIssn', $n->textContent);
+                break;
+            case 'printIssn':
+                $publication->setData('printIssn', $n->textContent);
+                break;
+            case 'publisher':
+                $publication->setData('publisher', $n->textContent);
                 break;
             default:
                 parent::handleChildElement($n, $publication);

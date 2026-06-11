@@ -61,7 +61,10 @@ class OrcidReview
         $submissionLocale = $this->submission->getData('locale');
         $currentPublication = $this->submission->getCurrentPublication();
 
-        if (empty($this->review->getData('dateCompleted')) || empty($currentPublication->getData('onlineIssn'))) {
+        // Live context intentional: reviews are not stamped, and using the publication's
+        // stamped ISSN/publisher would mis-file a new review on an old publication under
+        // the old journal identity in ORCID's registry.
+        if (empty($this->review->getData('dateCompleted')) || empty($this->context->getData('onlineIssn'))) {
             return [];
         }
 
@@ -81,10 +84,10 @@ class OrcidReview
                     'value' => $reviewCompletionDate->format('d')
                 ]
             ],
-            'review-group-id' => 'issn:' . $currentPublication->getData('onlineIssn'),
+            'review-group-id' => 'issn:' . $this->context->getData('onlineIssn'),
 
             'convening-organization' => [
-                'name' => $currentPublication->getData('publisherInstitution'),
+                'name' => $this->context->getData('publisherInstitution'),
                 'address' => [
                     'city' => OrcidManager::getCity($this->context),
                     'country' => OrcidManager::getCountry($this->context),
