@@ -27,7 +27,7 @@ use APP\core\Application;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\journal\Journal;
-use APP\journal\JournalDAO;
+use APP\publication\HasContextIdentityMetadata;
 use PKP\core\Core;
 use PKP\facades\Locale;
 use PKP\plugins\PluginRegistry;
@@ -35,6 +35,8 @@ use PKP\publication\PKPPublication;
 
 class Issue extends \PKP\core\DataObject
 {
+    use HasContextIdentityMetadata;
+
     public const ISSUE_ACCESS_OPEN = 1;
     public const ISSUE_ACCESS_SUBSCRIPTION = 2;
 
@@ -714,24 +716,21 @@ class Issue extends \PKP\core\DataObject
     }
 
     /**
-     * Set the current journal identity metadata.
-     * If CSL plugin is enabled then publisher location from this plugin settings is also set.
+     * Stamp the journal's current identity metadata. The publisher location is taken from the
+     * CSL plugin settings if that plugin is enabled, and cleared otherwise.
      */
-    public function stampContextIdentity(): void
+    public function stampContextIdentity(Journal $context): void
     {
-        /** @var JournalDAO $contextDao */
-        $contextDao = Application::getContextDAO();
-        /** @var Journal $context*/
-        $context = $contextDao->getById($this->getJournalId());
-        $this->setData('contextName', $context->getName());
+        $this->setData('contextName', array_filter((array) $context->getName()) ?: null);
+        $this->setData('contextAbbreviation', $context->getAbbreviationOrAcronym());
+        $this->setData('contextPrimaryLocale', $context->getPrimaryLocale());
         $this->setData('printIssn', $context->getData('printIssn'));
         $this->setData('onlineIssn', $context->getData('onlineIssn'));
-        $this->setData('publisherInstitution', $context->getData('publisherInstitution'));
-        $this->setData('country', $context->getData('country'));
+        $this->setData('publisher', $context->getData('publisherInstitution'));
 
+        // Always set, so a re-stamp does not keep an old location when CSL provides none
         $cslPlugin = PluginRegistry::getPlugin('generic', 'citationstylelanguageplugin');
-        if ($cslPlugin->getEnabled($this->getData('journalId'))) {
-            $this->setData('publisherLocation', $cslPlugin->getSetting($this->getData('journalId'), 'publisherLocation'));
-        }
+        $publisherLocation = $cslPlugin?->getEnabled($context->getId()) ? $cslPlugin->getSetting($context->getId(), 'publisherLocation') : null;
+        $this->setData('publisherLocation', $publisherLocation ?: null);
     }
 }

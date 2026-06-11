@@ -614,7 +614,7 @@ msgid "manager.setup.journalHomepageHeaderDescription"
 msgstr "A graphic version of the journal's title and logo (as a .gif, .jpg, or .png file) can be uploaded for the homepage, which will replace the text version that otherwise appears."
 
 msgid "manager.setup.contextInitials"
-msgstr "Journal initials"
+msgstr "Journal Initials"
 
 msgid "manager.setup.selectCountry"
 msgstr "Select the country where this journal is located, or the country of the mailing address for the journal or publisher."
@@ -659,7 +659,7 @@ msgid "manager.setup.journalThumbnail.description"
 msgstr "A small logo or representation of the journal that can be used in lists of journals."
 
 msgid "manager.setup.contextTitle"
-msgstr "Journal title"
+msgstr "Journal Title"
 
 msgid "manager.setup.labelName"
 msgstr "Label name"

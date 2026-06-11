@@ -190,9 +190,6 @@ class IssueForm extends Form
                 'coverImage' => $this->issue->getCoverImage($locale),
                 'coverImageAltText' => $this->issue->getCoverImageAltText($locale),
                 'urlPath' => $this->issue->getData('urlPath'),
-                'contextName' => $this->issue->getData('contextName', $locale),
-                'printIssn' => $this->issue->getData('printIssn'),
-                'onlineIssn' => $this->issue->getData('onlineIssn'),
             ];
             parent::initData();
         } else {
@@ -282,10 +279,8 @@ class IssueForm extends Form
 
         // If it is a new issue, first insert it, then update the cover
         // because the cover name needs an issue id.
-        // Stamping journal identity metadata only by creating a new issue.
         if ($isNewIssue) {
             $issue->setPublished(0);
-            $issue->stampContextIdentity();
             Repo::issue()->add($issue);
         }
 

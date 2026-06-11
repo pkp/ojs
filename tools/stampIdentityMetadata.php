@@ -1,166 +1,212 @@
 <?php
 
 /**
- * @file tools/stampJournalIdentityMetadata.php
+ * @file tools/stampIdentityMetadata.php
  *
- * Copyright (c) 2023 Simon Fraser University
- * Copyright (c) 2023 John Willinsky
+ * Copyright (c) 2026 Simon Fraser University
+ * Copyright (c) 2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class StampJournalIdentityMetadata
  *
  * @ingroup tools
  *
- * @brief CLI tool to to stamp journal identity metadata to issues and publications
+ * @brief CLI tool to re-stamp the journal identity metadata onto published issues and
+ *   publications. Use this to backfill historical records or to correct stamps after a
+ *   journal identity change.
  */
 
-use APP\core\Application;
 use APP\facades\Repo;
-use APP\journal\Journal;
-use APP\journal\JournalDAO;
-use PKP\cliTool\CommandLineTool;
+use APP\issue\Issue;
+use APP\publication\Publication;
+use PKP\cliTool\StampIdentityMetadataTool;
+use PKP\validation\ValidatorISSN;
 
 require(dirname(__FILE__) . '/bootstrap.php');
 
-class StampJournalIdentityMetadata extends CommandLineTool
+class StampJournalIdentityMetadata extends StampIdentityMetadataTool
 {
-    public int $contextId;
-    public string $command;
-    public array $parameters;
-
-    /** Fields to be defined for stamping,
-     *  use null if it should not be considered
-     */
-    // required fields:
-    public ?string $locale = 'en';
-    public ?array $title = [
-        'en' => 'Journal Title in en',
-        'de' => 'Journal des Tests'
-    ];
-    public $onlineIssn = '1234-1234';
-    public $printIssn = '1234-1234';
-    public $country = 'CA';
-    public $publisherInstitution = 'SFU Library';
-    public $publisherLocation = 'Vancouver';
-
+    /** @var ?int[] IDs of the journal's published issues */
+    protected ?array $publishedIssueIds = null;
 
     /**
-     * Constructor.
+     * @copydoc StampIdentityMetadataTool::getContextNoun()
+     */
+    protected function getContextNoun(): string
+    {
+        return 'journal';
+    }
+
+    /**
+     * @copydoc StampIdentityMetadataTool::getScalarOptions()
+     */
+    protected function getScalarOptions(): array
+    {
+        $options = parent::getScalarOptions();
+        return [
+            'primary-locale' => $options['primary-locale'],
+            'print-issn' => ['field' => 'printIssn', 'label' => 'Print ISSN', 'description' => 'Print ISSN'],
+            'online-issn' => ['field' => 'onlineIssn', 'label' => 'Online ISSN', 'description' => 'Online ISSN'],
+            'publisher' => ['field' => 'publisher', 'label' => 'Publisher', 'description' => 'Publisher name'],
+            'publisher-location' => $options['publisher-location'],
+        ];
+    }
+
+    /**
+     * @copydoc StampIdentityMetadataTool::parseOptions()
      *
-     * @param array $argv command-line arguments
+     * Also checks the ISSNs.
      */
-    public function __construct($argv = [])
+    protected function parseOptions(): void
     {
-        parent::__construct($argv);
-        if (count($this->argv) < 2) {
-            $this->usage();
-            exit();
+        parent::parseOptions();
+        $validator = new ValidatorISSN();
+        foreach (['printIssn' => 'print-issn', 'onlineIssn' => 'online-issn'] as $field => $option) {
+            $issn = $this->scalarOverrides[$field] ?? '';
+            if ($issn !== '' && !$validator->isValid($issn)) {
+                $this->exitWithError("Invalid ISSN '{$issn}' in --{$option}.");
+            }
         }
-        $this->contextId = (int)array_shift($this->argv);
-        $this->command = array_shift($this->argv);
-        $this->parameters = $this->argv;
     }
 
     /**
-     * Print command usage information.
+     * @copydoc StampIdentityMetadataTool::getCommands()
      */
-    public function usage()
+    protected function getCommands(): array
     {
-        echo "Adds journal identity metadata to issues and publications.\n"
-            . "Usage:\n"
-            . "\t{$this->scriptName} [context_id] issue_id [...]\n"
-            . "\t{$this->scriptName} [context_id] year [...]\n";
+        return ['issue_id', ...parent::getCommands()];
     }
 
     /**
-     * Stamp metadata to issue and publication
+     * @copydoc StampIdentityMetadataTool::getCommandUsage()
      */
-    public function execute()
+    protected function getCommandUsage(): array
     {
-        $issueIds = [];
-        if ($this->command === 'issue_id') {
-            foreach ($this->parameters as $issueId) {
-                $issueIds[] = $issueId;
-            }
+        return ['issue_id <id> [<id> ...]', ...parent::getCommandUsage()];
+    }
+
+    /**
+     * @copydoc StampIdentityMetadataTool::getCommandNotes()
+     */
+    protected function getCommandNotes(): array
+    {
+        return [
+            "'issue_id' stamps the given published issues and all their published publications, including later versions.",
+            "'publication_id' stamps the given published publications, e.g. a single version.",
+            "'submission_id' stamps all published publications (versions) of the given submissions.",
+            "'year' stamps the published issues of the given years with their publications, and the publications without a\n"
+                . 'published issue published in those years. Year ranges are YYYY-YYYY, e.g. 2010-2020.',
+            "'all' stamps all published issues and all published publications.",
+        ];
+    }
+
+    /**
+     * @copydoc StampIdentityMetadataTool::getIdError()
+     */
+    protected function getIdError(int $id): ?string
+    {
+        if ($this->command !== 'issue_id') {
+            return parent::getIdError($id);
         }
-
-        if ($this->command === 'year') {
-            $allYears = [];
-            foreach ($this->parameters as $year) {
-                if (str_contains($year, '-')) {
-                    [$start, $end] = explode('-', $year);
-                    if (strlen($start) === 4 && ctype_digit($start)
-                        && strlen($end) === 4 && ctype_digit($end)) {
-                        $years = range((int)$start, (int)$end);
-                        $missingYears = array_diff($years, $allYears);
-                        $allYears = array_merge($allYears, $missingYears);
-                    }
-                } elseif (strlen($year) === 4 && ctype_digit($year)) {
-                    if (!in_array((int)$year, $allYears)) {
-                        $allYears[] = (int)$year;
-                    }
-                }
-            }
-
-            $issues = Repo::issue()->getCollector()
-                ->filterByContextIds([$this->contextId])
-                ->filterByYears($allYears)
-                ->getMany();
-
-            foreach ($issues as $issue) {
-                if (!in_array($issue->getId(), $issueIds)) {
-                    $issueIds[] = $issue->getId();
-                }
-            }
+        $issue = Repo::issue()->get($id, $this->contextId);
+        if (!$issue) {
+            return "Unknown issue {$id}, or it does not belong to context {$this->contextId}.";
         }
+        if (!$issue->getData('published')) {
+            return "Issue {$id} is not published.";
+        }
+        return null;
+    }
 
-        foreach ($issueIds as $issueId) {
-            $issue = Repo::issue()->get($issueId);
-            if (!isset($issue)) {
-                printf("Error: Skipping {$issueId}. Unknown issue.\n");
-                continue;
-            }
-            /** @var JournalDAO $contextDao */
-            $contextDao = Application::getContextDAO();
-            /** @var Journal $context */
-            $context = $contextDao->getById($this->contextId);
-            $contextPrimaryLocale = $context->getPrimaryLocale();
-            $issue->setData('contextName', $this->title);
-            if (!in_array($contextPrimaryLocale, array_keys($this->title))) {
-                $issue->setData('contextName', $this->title[$this->locale], $contextPrimaryLocale);
-            }
-            $issue->setData('onlineIssn', $this->onlineIssn);
-            $issue->setData('printIssn', $this->printIssn);
-            $issue->setData('country', $this->country);
-            $issue->setData('publisherInstitution', $this->publisherInstitution);
-            $issue->setData('publisherLocation', $this->publisherLocation);
-            Repo::issue()->edit($issue, []);
+    /**
+     * @copydoc StampIdentityMetadataTool::runCommand()
+     */
+    protected function runCommand(): void
+    {
+        if ($this->command !== 'issue_id') {
+            parent::runCommand();
+            return;
+        }
+        foreach ($this->parameters as $issueId) {
+            $this->stampIssue(Repo::issue()->get((int) $issueId, $this->contextId));
+        }
+    }
 
-            $submissionIds = Repo::submission()
-                ->getCollector()
-                ->filterByContextIds([$this->contextId])
-                ->filterByIssueIds([$issueId])
-                ->getIds()
-                ->toArray();
-            $publications = Repo::publication()
-                ->getCollector()
-                ->filterByContextIds([$this->contextId])
-                ->filterByIssueIds([$issueId])
-                ->filterBySubmissionIds($submissionIds)
-                ->getMany();
-            foreach ($publications as $publication) {
-                $publication->setData('contextName', $this->title);
-                $publicationLocale = $publication->getData('locale');
-                if (!in_array($publicationLocale, array_keys($this->title))) {
-                    $publication->setData('contextName', $this->title[$this->locale], $publicationLocale);
-                }
-                $publication->setData('onlineIssn', $this->onlineIssn);
-                $publication->setData('printIssn', $this->printIssn);
-                $publication->setData('country', $this->country);
-                $publication->setData('publisherInstitution', $this->publisherInstitution);
-                $publication->setData('publisherLocation', $this->publisherLocation);
-                Repo::publication()->edit($publication, []);
+    /**
+     * Stamp all published issues with their publications, and the publications without a published issue.
+     */
+    protected function stampAll(): void
+    {
+        $issues = Repo::issue()->getCollector()
+            ->filterByContextIds([$this->contextId])
+            ->filterByPublished(true)
+            ->getMany();
+        foreach ($issues as $issue) {
+            $this->stampIssue($issue);
+        }
+        parent::stampAll();
+    }
+
+    /**
+     * Stamp the published issues of the given years with their publications, and the publications
+     * without a published issue published in those years.
+     */
+    protected function stampByYears(array $years): void
+    {
+        $issues = Repo::issue()->getCollector()
+            ->filterByContextIds([$this->contextId])
+            ->filterByPublished(true)
+            ->filterByYears($years)
+            ->getMany();
+        foreach ($issues as $issue) {
+            $this->stampIssue($issue);
+        }
+        parent::stampByYears($years);
+    }
+
+    /**
+     * Publications in a published issue are stamped with their issue.
+     */
+    protected function includePublication(Publication $publication): bool
+    {
+        return !$this->isInPublishedIssue($publication);
+    }
+
+    /**
+     * Whether the publication is in one of the journal's published issues.
+     */
+    protected function isInPublishedIssue(Publication $publication): bool
+    {
+        $this->publishedIssueIds ??= Repo::issue()->getCollector()
+            ->filterByContextIds([$this->contextId])
+            ->filterByPublished(true)
+            ->getIds()
+            ->all();
+        return in_array($publication->getData('issueId'), $this->publishedIssueIds);
+    }
+
+    /**
+     * Stamp an issue, then its published publications, which take the issue's new identity.
+     */
+    protected function stampIssue(Issue $issue): void
+    {
+        $this->stampObject(
+            $issue,
+            'issue',
+            "issue {$issue->getId()}",
+            fn () => $issue->stampContextIdentity($this->context),
+            function () use ($issue) {
+                Repo::issue()->edit($issue, []);
+                Repo::doi()->markStale(Repo::doi()->getDoisForIssue($issue->getId()));
             }
+        );
+
+        $publications = Repo::publication()->getCollector()
+            ->filterByIssueIds([$issue->getId()])
+            ->filterByStatus([Publication::STATUS_PUBLISHED])
+            ->getMany();
+        foreach ($publications as $publication) {
+            $this->stampPublication($publication);
         }
     }
 }
