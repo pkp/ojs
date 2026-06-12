@@ -64,6 +64,7 @@ msgstr ""
 "khoảng thời gian ngắn sau khi xuất bản để xử lý (ví dụ: tùy thuộc vào cấu "
 "hình cronjob của bạn). Bạn có thể kiểm tra tất cả các DOI chưa đăng ký."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Sử dụng tiền tố kiểm tra DataCite để đăng ký DOI. Xin đừng quên loại bỏ tùy "
@@ -78,10 +79,8 @@ msgstr ""
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr ""
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
-msgstr ""
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
 msgstr ""
 
 msgid "plugins.importexport.datacite.senderTask.name"

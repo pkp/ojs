@@ -62,6 +62,7 @@ msgstr ""
 "OJS zdeponuje DOI automatycznie w DataCite. Zauważ, że czynność ta następuje "
 "krótko po publikacji. Sprawdź, czy wszystkie dane zostały zdeponowane."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Użyj test prefiksu DataCite do rejestracji DOI. Nie zapomnij usunąć tej "
@@ -76,10 +77,8 @@ msgstr ""
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Test prefiksu DOI"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
-msgstr ""
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
 msgstr ""
 
 msgid "plugins.importexport.datacite.senderTask.name"

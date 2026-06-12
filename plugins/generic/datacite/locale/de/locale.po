@@ -38,7 +38,7 @@ msgstr ""
 "\n"
 "\t\tWenn Sie DOI bei DataCite registrieren möchten, kontaktieren Sie bitte "
 "die/den\n"
-"\t\tBevollmächtigte/n über die <a href=\"https://datacite.org/contact.html\" "
+"\t\tBevollmächtigte/n über die <a href=\"https://datacite.org/contact\" "
 "target=\"_blank\">\n"
 "\t\tDataCite-Homepage</a>, die/der Sie an Ihr lokales DataCite-Mitglied "
 "verweisen wird.\n"
@@ -72,6 +72,7 @@ msgstr ""
 "Veröffentlichung dauern kann (z.B. abhängig von Ihrer Cronjob-"
 "Konfiguration). Sie können nach bisher unregistrierten DOI suchen."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Den DataCite-Test-Präfix für die DOI-Registrierung benutzen. Bitte vergessen "
@@ -86,15 +87,11 @@ msgstr "Test-Passwort"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Test-DOI-Prefix"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr ""
 "Ein Test-DOI-Präfix ist erforderlich, wenn die Option \"Testpräfix für DOI-"
 "Registrierung verwenden\" ausgewählt wird."
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Ein Testbenutzername ist erforderlich, wenn ein Produktionsbenutzername "
-"angegeben wird."
 
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "DataCite automatische Registrierung"

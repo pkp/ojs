@@ -63,6 +63,7 @@ msgstr ""
 "hogy ez egy kis időt vesz igénybe a megjelenés utáni feldolgozás. "
 "Ellenőrizheti az összes regisztrálatlan DOI-t."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Használja a DataCite teszt előtagot a DOI regisztrációhoz. Kérjük, ne "
@@ -77,10 +78,8 @@ msgstr ""
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr ""
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
-msgstr ""
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
 msgstr ""
 
 msgid "plugins.importexport.datacite.senderTask.name"

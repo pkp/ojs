@@ -35,7 +35,7 @@ msgid "plugins.importexport.datacite.intro"
 msgstr ""
 "\n"
 "\t\tSe vuoi registrare DOI con DataCite, contatta un agente dalla <a href="
-"\"https://datacite.org/contact.html\" target=\"_blank\">DataCite homepage</"
+"\"https://datacite.org/contact\" target=\"_blank\">DataCite homepage</"
 "a>, che ti metterà in contatto con un agente locale. Una volta stabilito "
 "l'accordo, riceverai le credenziali per accedere al servizio e registrare "
 "metadati. Se non hai le credenziali, puoi comunque esportare i metadati nel "
@@ -59,6 +59,7 @@ msgstr ""
 "nota che può passare un certo tempo dalla pubblicazione prima della fine del "
 "processo. Puoi controllare tutti i DOI non registrati."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Usa il prefisso di test di DataCite per la registrazione dei DOI. Per favore "
@@ -73,15 +74,11 @@ msgstr "Test Password"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Prefisso DOI del test"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr ""
 "Un prefisso DOI di prova è richiesto quando si seleziona \"usa prefisso di "
 "prova per la registrazione DOI\"."
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Un nome utente di prova è richiesto quando viene fornito un nome utente di "
-"produzione."
 
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Nome della task di registrazione automatica su DataCite"
@@ -95,7 +92,7 @@ msgstr ""
 "galleys} objectId1 [objectId2] ...\n"
 
 msgid "plugins.generic.datacite.displayName"
-msgstr "Plugin Datacite Manager"
+msgstr "Plugin DataCite Manager"
 
 msgid "plugins.generic.datacite.description"
 msgstr "Gestisce il deposito e l'esportazione di metadati DataCite"
