@@ -39,7 +39,7 @@ msgstr ""
 "\n"
 "\t\tSi vous souhaitez enregistrer vos DOI avec DataCite, veuillez contacter "
 "l'administrateur ou l'administratrice\n"
-"\t\tvia la <a href=\"https://datacite.org/contact.html\" target=\"_blank\""
+"\t\tvia la <a href=\"https://datacite.org/contact\" target=\"_blank\""
 ">page d'accueil de DataCite</a>, \n"
 "\t\tqui vous renverra à votre membre local DataCite. Une fois que vous aurez "
 "établi un contact\n"
@@ -71,6 +71,7 @@ msgstr ""
 "exemple en fonction de votre configuration cronjob). Vous pouvez vérifier "
 "tous les DOI non enregistrés."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Utiliser le préfixe de test DataCite pour l'enregistrement des DOI. Prière "
@@ -85,16 +86,11 @@ msgstr "Vérifier le mot de passe"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Vérifier le préfixe DOI"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr ""
 "Un préfixe DOI de test est requis lorsque l'option \"utiliser un préfixe de "
 "test pour l'enregistrement DOi\" est sélectionnée."
-
-#, fuzzy
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Un nom d'utilisateur-trice de test est requis lorsqu'un nom d'utilisateur-"
-"trice est fourni en production"
 
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Tâche automatique d'enregistrement DataCite"

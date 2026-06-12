@@ -36,7 +36,7 @@ msgid "plugins.importexport.datacite.intro"
 msgstr ""
 "\n"
 "\t\tSekiranya anda ingin mendaftarkan DOI dengan DataCite, sila hubungi "
-"pihak Urusan Ejen melalui <a href=\"https://datacite.org/contact.html\" "
+"pihak Urusan Ejen melalui <a href=\"https://datacite.org/contact\" "
 "target=\"_blank\"> DataCite laman utama </a>, yang akan merujuk anda kepada "
 "Ahli DataCite tempatan anda. Sebaik sahaja anda mempunyai\n"
 "menjalin hubungan dengan Ahli organisasi, anda akan diberikan\n"
@@ -67,6 +67,7 @@ msgstr ""
 "Bergantung pada konfigurasi cronjob anda). Anda boleh memeriksa semua DOI "
 "yang tidak berdaftar."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Gunakan awalan ujian DataCite untuk pendaftaran DOI. Jangan lupa untuk "
@@ -81,10 +82,8 @@ msgstr "Uji Kata Laluan"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Uji Awalan DOI"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
-msgstr ""
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
 msgstr ""
 
 msgid "plugins.importexport.datacite.senderTask.name"

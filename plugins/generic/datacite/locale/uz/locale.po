@@ -35,7 +35,7 @@ msgstr ""
 "\n"
 "\t\tAgar siz DOIlarni DataCite bilan ro'yxatdan o'tkazmoqchi bo'lsangiz, "
 "iltimos, boshqaruvchi bilan bog'laning\n"
-"\t\tAgent <a href=\"https://datacite.org/contact.html\" target=\"_blank\""
+"\t\tAgent <a href=\"https://datacite.org/contact\" target=\"_blank\""
 ">DataCite orqali\n"
 "\t\tbosh sahifa</a>da, sizni mahalliy DataCite a'zosiga yo'naltiradi. Bir "
 "marta\n"
@@ -68,6 +68,7 @@ msgstr ""
 "unutmang (masalan, cronjob konfiguratsiyangizga qarab). Siz barcha "
 "roʻyxatdan oʻtmagan DOIlarni tekshirishingiz mumkin."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "DOI ro'yxatdan o'tish uchun DataCite test prefiksidan foydalaning. Iltimos, "
@@ -82,15 +83,11 @@ msgstr "Test paroli"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "DOI prefiksini sinab ko'ring"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr ""
 "\"DOI ro'yxatdan o'tish uchun test prefiksidan foydalanish\" tanlanganda "
 "test DOI prefiksi talab qilinadi."
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Ishlab chiqarish username nomi taqdim etilganda sinov username talab "
-"qilinadi."
 
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "DataCite avtomatik ro'yxatdan o'tish vazifasi"
@@ -104,7 +101,7 @@ msgstr ""
 "{issues|articles|galleys} objectId1 [objectId2] ...\n"
 
 msgid "plugins.generic.datacite.displayName"
-msgstr "Datacite Manager plagini"
+msgstr "DataCite Manager plagini"
 
 msgid "plugins.generic.datacite.description"
 msgstr "DataCite metama'lumotlarini saqlash va eksport qilishni amalga oshiradi"

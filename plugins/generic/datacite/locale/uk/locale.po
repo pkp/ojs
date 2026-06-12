@@ -40,7 +40,7 @@ msgstr ""
 "\n"
 "\t\tЯкщо Ви хочете зареєструвати DOI через DataCite, будь ласка, зв'яжіться "
 "з керуючим \n"
-"\t\t\tагентом за допомогою <a href=\"https://datacite.org/contact.html\" "
+"\t\t\tагентом за допомогою <a href=\"https://datacite.org/contact\" "
 "target=\"_blank\">головної сторінки \n"
 "\t\t\tDataCite</a>, яка спрямує Вас до Вашого регіонального члена DataCite. "
 "Після встановлення контакту з членською\n"
@@ -73,6 +73,7 @@ msgstr ""
 "публікації обробка може зайняти деякий час (наприклад, залежно від "
 "налаштувань вашого cron). Ви можете перевірити всі незареєстровані DOI."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Використовувати тестовий префікс DataCite для реєстрації DOI. Будь ласка, не "
@@ -87,15 +88,11 @@ msgstr "Тестовий пароль"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Тестовий префікс DOI"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr ""
 "Коли вибрано \"використати тестовий префікс для реєстрації DOI\", потрібно "
 "вказати префікс DOI."
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Коли надається робоче ім’я користувача, потрібно вказати тестове ім’я "
-"користувача."
 
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Завдання автоматичної реєстрації DataCite"

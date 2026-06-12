@@ -27,17 +27,17 @@ msgid "plugins.importexport.datacite.settings.description"
 msgstr "Pred prvo uporabo prosimo nastavite DataCite vtičnik."
 
 msgid "plugins.importexport.datacite.settings.label"
-msgstr "Nastavitve za Datacite"
+msgstr "Nastavitve za DataCite"
 
 msgid "plugins.importexport.datacite.registrationAgency.name"
-msgstr "Datacite"
+msgstr "DataCite"
 
 #, fuzzy
 msgid "plugins.importexport.datacite.intro"
 msgstr ""
 "\n"
 "\t\tČe želite registrirati DOI-je pri DataCite, kontaktirajte upravljalskega "
-"agenta na <a href=\"https://datacite.org/contact.html\" target=\"_blank"
+"agenta na <a href=\"https://datacite.org/contact\" target=\"_blank"
 "\">DataCite\n"
 "\t\tdomači strani</a>, ki vas bo napotil na vašega lokalnega člana DataCite. "
 "Ko boste uredili članstvo v\n"
@@ -66,6 +66,7 @@ msgstr ""
 "upoštevajte, da je za to lahko potrebno nekaj časa po tistem, ko objavite "
 "novo številko. Lahko preverite vse neregistrirane DOI-je."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Uporabi DataCite test prefix za DOI registracijo. Ne pozabite odstraniti te "
@@ -80,15 +81,11 @@ msgstr "Testno geslo"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Tesntna DOI predpona"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr ""
 "Če je izbrana opcija \"uporabi testno predpono za DOI registracijo\", mora "
 "biti testna DOI predpona določena."
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Tesno uporabniško ime je obvezno, če je določeno produkcijsko uporabniško "
-"ime."
 
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Opravilo avtomatske registracije pri DataCite"
@@ -102,13 +99,13 @@ msgstr ""
 "galleys} objectId1 [objectId2] ...\n"
 
 msgid "plugins.generic.datacite.displayName"
-msgstr "Vtičnik za upravljanje Datacite"
+msgstr "Vtičnik za upravljanje DataCite"
 
 msgid "plugins.generic.datacite.description"
-msgstr "Skrbi za shranjevanje in izvažanje metapodatkov Datacite"
+msgstr "Skrbi za shranjevanje in izvažanje metapodatkov DataCite"
 
 msgid "plugins.generic.datacite.registrationAgency.name"
-msgstr "Datacite"
+msgstr "DataCite"
 
 msgid "plugins.generic.datacite.deposit.unsuccessful"
 msgstr ""

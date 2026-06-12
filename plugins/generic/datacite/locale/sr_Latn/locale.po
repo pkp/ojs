@@ -51,6 +51,7 @@ msgstr ""
 "potrajati neko vreme nakon procesa objavljivanja. U svakom momentu možete "
 "proveriti neregistrovane DOI-je."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Koristite DataCite test prefiks za registraciju DOI-ja. Ne zaboravite da "
@@ -65,10 +66,8 @@ msgstr ""
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr ""
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
-msgstr ""
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
 msgstr ""
 
 msgid "plugins.importexport.datacite.senderTask.name"
