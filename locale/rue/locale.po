@@ -2,7 +2,7 @@
 # Monika Tylawska <monika.tylawska@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-06-06 06:58+0000\n"
+"PO-Revision-Date: 2026-06-15 07:32+0000\n"
 "Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/locale/rue/>\n"
 "Language: rue\n"
@@ -921,3 +921,8 @@ msgstr ""
 "</ul>\n"
 "</li>\n"
 "</ol>"
+
+msgid "sectionEditor.author.confirmRenotify"
+msgstr ""
+"Поновне повідмліня того автора спричынит зресетуваня приписаной му задачы. "
+"Ци напевно хочеш тото зробити?"
