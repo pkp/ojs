@@ -32,7 +32,6 @@ class DataciteSettings extends \PKP\doi\RegistrationAgencySettings
             'type' => 'object',
             'required' => [],
             'properties' => (object) [
-
                 'username' => (object) [
                     'type' => 'string',
                     'validation' => ['nullable', 'max:50']
@@ -69,7 +68,7 @@ class DataciteSettings extends \PKP\doi\RegistrationAgencySettings
         return [
             new FieldHTML('preamble', [
                 'label' => __('plugins.importexport.datacite.settings.label'),
-                'description' => $this->_getPreambleText(),
+                'description' => $this->getPreambleText(),
             ]),
             new FieldText('username', [
                 'label' => __('plugins.importexport.datacite.settings.form.username'),
@@ -84,7 +83,10 @@ class DataciteSettings extends \PKP\doi\RegistrationAgencySettings
             new FieldOptions('testMode', [
                 'label' => __('plugins.importexport.common.settings.form.testMode.label'),
                 'options' => [
-                    ['value' => true, 'label' => __('plugins.importexport.datacite.settings.form.testMode.description')],
+                    [
+                        'value' => true,
+                        'label' => __('plugins.importexport.datacite.settings.form.testMode.description')
+                    ],
                 ],
                 'value' => $this->agencyPlugin->getSetting($context->getId(), 'testMode'),
             ]),
@@ -118,22 +120,12 @@ class DataciteSettings extends \PKP\doi\RegistrationAgencySettings
                 }
             }
         });
-
-        // If username exists, there will be the possibility to register from within OJS,
-        // so the test username must exist too
-        $validator->after(function (Validator $validator) use ($props) {
-            if (!empty($props['username']) && empty($props['testUsername'])) {
-                $validator->errors()->add('testUsername', __('plugins.importexport.datacite.settings.form.testUsernameRequired'));
-            }
-        });
     }
 
-    protected function _getPreambleText(): string
+    protected function getPreambleText(): string
     {
-        $text = '';
-        $text .= '<p>' . __('plugins.importexport.datacite.settings.description') . '</p>';
+        $text = '<p>' . __('plugins.importexport.datacite.settings.description') . '</p>';
         $text .= '<p>' . __('plugins.importexport.datacite.intro') . '</p>';
-
         return $text;
     }
 }

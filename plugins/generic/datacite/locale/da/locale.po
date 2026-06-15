@@ -38,7 +38,7 @@ msgid "plugins.importexport.datacite.intro"
 msgstr ""
 "\n"
 "\t\tHvis du vil registrere DOI'er hos DataCite, skal du kontakte "
-"administrationsagenten via <a href=\"https://datacite.org/contact.html\" "
+"administrationsagenten via <a href=\"https://datacite.org/contact\" "
 "target=\"_blank\">DataCite-hjemmesiden</a>, som vil henvise til dit lokale "
 "DataCite-medlem. Når du har etableret kontakt til medlemsorganisationen, får "
 "du adgang til DataCite-tjenesten så du vedvarende kan generere DOI'er og "
@@ -64,6 +64,7 @@ msgstr ""
 "tid efter offentliggørelsen inden det registreres. Du kan tjekke for "
 "eventuelt uregistrerede DOI'er."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Brug DataCite test-præfix til DOI registrering. Husk at fjerne denne "
@@ -78,15 +79,11 @@ msgstr "Test-password"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Test-DOI præfix"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr ""
 "Det er påkrævet at angive et test DOI præfix, når \"anvend test præfix til "
 "DOI registrering\" er valgt."
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Det er påkrævet at angive et test brugernavn, når der angives et "
-"produktionsbrugernavn."
 
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "DataCite automatisk registreringsopgave"

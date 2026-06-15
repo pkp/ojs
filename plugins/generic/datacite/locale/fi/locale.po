@@ -35,7 +35,7 @@ msgstr ""
 "\n"
 "\t\tMikäli haluat luoda DOI-tunnuksia DataCite-palvelun kautta, ota ensin "
 "yhteyttä\n"
-"\t\t<a href=\"https://datacite.org/contact.html\" target=\"_blank\">palvelun "
+"\t\t<a href=\"https://datacite.org/contact\" target=\"_blank\">palvelun "
 "kotisivujen kautta</a>\n"
 "\t\tja sinut ohjataan paikalliselle DataCiten jäsenelle. DataCiten "
 "jäsenorganisaatiolta saat \n"
@@ -63,6 +63,7 @@ msgstr ""
 "Huomioithan, että käsittely saattaa kestää hetken julkaisemisen jälkeen. "
 "Voit tarkistaa kaikki rekisteröimättömät DOI-tunnisteet."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Käytä DataCite-palvelun testiprefiksiä DOI-tunnisteen rekisteröintiin. "
@@ -77,13 +78,11 @@ msgstr "Testisalasana"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Testiprefiksi"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr ""
 "Testiprefiksi vaaditaan, kun \"käytä DOI-rekisteröinnissä testiprefiksiä\" "
 "on valittuna."
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr "Testikäyttäjätunnus vaaditaan, kun tuotantokäyttäjätunnus on annettu."
 
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "DataCite-palvelun automaattinen rekisteröintitehtävä"

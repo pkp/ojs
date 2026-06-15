@@ -40,7 +40,7 @@ msgstr ""
 "\n"
 "\t\tЕсли вы хотите зарегистрировать DOI в DataCite, пожалуйста, свяжитесь с "
 "управляющим\n"
-"\t\tагентом через <a href=\"https://datacite.org/contact.html\" target="
+"\t\tагентом через <a href=\"https://datacite.org/contact\" target="
 "\"_blank\">главную страницу\n"
 "\t\tDataCite</a>, который перенаправит вас к вашему региональному члену "
 "DataCite. Как только вы\n"
@@ -71,6 +71,7 @@ msgstr ""
 "обработки (например, в зависимости от настроек вашего cron). Вы можете "
 "проверить все незарегистрированные DOI."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Использовать тестовый префикс DataCite для регистрации DOI. Пожалуйста, не "
@@ -85,15 +86,11 @@ msgstr "Пароль для тестирования"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Префикс DOI для тестирования"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr ""
 "Тестовый префикс DOI обязателен, если выбран параметр «Использовать тестовый "
 "префикс для регистрации DOI»."
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Требуется имя пользователя для тестирования, а сейчас указано имя "
-"пользователя для реальной работы."
 
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Задача автоматической регистрации DataCite"
@@ -107,7 +104,7 @@ msgstr ""
 "galleys} IdОбъекта1 [IdОбъекта2] ...\n"
 
 msgid "plugins.generic.datacite.displayName"
-msgstr "Модуль «Менеджер Datacite»"
+msgstr "Модуль «Менеджер DataCite»"
 
 msgid "plugins.generic.datacite.description"
 msgstr "Управляет депонированием и экспортом метаданных DataCite"

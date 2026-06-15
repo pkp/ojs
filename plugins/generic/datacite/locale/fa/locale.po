@@ -56,6 +56,7 @@ msgstr ""
 "باشید که ممکن است پس از انتشار زمان کوتاهی برای پردازش سپری شود. شما می "
 "توانید تمام DOI های ثبت نشده را تیک بزنید."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "از پیشوند تست DataCite برای ثبت نام DOI استفاده کنید.لطفا فراموش نکنید که "
@@ -70,10 +71,8 @@ msgstr ""
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr ""
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
-msgstr ""
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
 msgstr ""
 
 msgid "plugins.importexport.datacite.senderTask.name"

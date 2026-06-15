@@ -35,7 +35,7 @@ msgstr ""
 "\n"
 "\t\tთუ გსურთ DOI-ს რეგისტრაცია DataCite-ს საშუალებით, გთხოვთ დაუკავშირდეთ "
 "მმართველ\n"
-"\t\tაგენტს <a href=\"https://datacite.org/contact.html\" target=\"_blank"
+"\t\tაგენტს <a href=\"https://datacite.org/contact\" target=\"_blank"
 "\">DataCite-ს\n"
 "\t\tმთავარი გვერდი</a>-ს საშუალებით, რომელიც გადაგამისამართებთ DataCite-ს "
 "რეგიონულ წევრთან. როგორც კი\n"
@@ -66,6 +66,7 @@ msgstr ""
 "(მაგალითად, cron-ის პარამეტრებიდან გამომდინარე). თქვენ შეგიძლიათ შეამოწმოთ "
 "ყველა რეგისტრირებული DOI."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "DataCite-ს ტექსტური პრეფიქსის გამოყენება DOI-ს რეგისტრაციისათვის. გთხოვთ, არ "
@@ -80,10 +81,8 @@ msgstr "პაროლი ტესტირებისათვის"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "სატესტო DOI პრეფიქსი"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
-msgstr ""
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
 msgstr ""
 
 msgid "plugins.importexport.datacite.senderTask.name"
