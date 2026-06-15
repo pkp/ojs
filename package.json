@@ -46,6 +46,7 @@
     "luxon": "^3.6.1",
     "mathjax": "^4",
     "ofetch": "^1.4.1",
+    "pandoc-wasm": "^1.1.0",
     "pinia": "^2.3.1",
     "primevue": "^4.3.3",
     "reka-ui": "^2.8.0",
