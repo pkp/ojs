@@ -3,7 +3,7 @@
 # Helgi Sigurbjörnsson <helgi.sigurbjornsson@landsbokasafn.is>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-06-04 12:01+0000\n"
+"PO-Revision-Date: 2026-06-15 12:39+0000\n"
 "Last-Translator: Helgi Sigurbjörnsson <helgi.sigurbjornsson@landsbokasafn.is>"
 "\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/"
@@ -64,7 +64,7 @@ msgid "grid.action.issueEntry"
 msgstr "Skoða lýsigögn innsendingar"
 
 msgid "submission.event.articleGalleyMadeAvailable"
-msgstr "Galley fyrir greinar: \"{$galleyFormatName}\"  er aðgengilegt."
+msgstr "Galley fyrir greinar: \"{$galleyFormatName}\" er aðgengilegt."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
 msgstr ""
