@@ -328,7 +328,7 @@ class DoiController extends \PKP\API\v1\dois\PKPDoiController
 
         // Assign DOIs
         foreach ($ids as $id) {
-            $issue = Repo::issue()->get($id);
+            $issue = Repo::issue()->get($id, $context->getId());
             if ($issue !== null) {
                 $creationFailureResults = Repo::issue()->createDoi($issue);
                 $failedDoiActions = array_merge($failedDoiActions, $creationFailureResults);
