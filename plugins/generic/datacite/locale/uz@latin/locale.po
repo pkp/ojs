@@ -85,9 +85,6 @@ msgstr "DOI prefiksini sinab ko'ring"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr ""
 
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "DataCite avtomatik ro'yxatga olish vazifasi"
 

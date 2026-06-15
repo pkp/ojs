@@ -89,11 +89,6 @@ msgstr ""
 "Тестовый префикс DOI обязателен, если выбран параметр «Использовать тестовый "
 "префикс для регистрации DOI»."
 
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Требуется имя пользователя для тестирования, а сейчас указано имя "
-"пользователя для реальной работы."
-
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Задача автоматической регистрации DataCite"
 

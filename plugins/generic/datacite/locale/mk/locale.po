@@ -85,10 +85,6 @@ msgstr ""
 "Потребен е пробен ДОИ префикс кога се одбира „користи тест префикс за ДОИ "
 "регистрација“."
 
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Тест корисничко име е потребно кога се внесува продукциско корисничко име."
-
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Задача за автоматска регистрација на DataCite"
 

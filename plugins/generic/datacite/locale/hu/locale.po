@@ -80,9 +80,6 @@ msgstr ""
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr ""
 
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "DataCite automatikus regisztrálási feladat"
 

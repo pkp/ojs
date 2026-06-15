@@ -118,14 +118,6 @@ class DataciteSettings extends \PKP\doi\RegistrationAgencySettings
                 }
             }
         });
-
-        // If username exists, there will be the possibility to register from within OJS,
-        // so the test username must exist too
-        $validator->after(function (Validator $validator) use ($props) {
-            if (!empty($props['username']) && empty($props['testUsername'])) {
-                $validator->errors()->add('testUsername', __('plugins.importexport.datacite.settings.form.testUsernameRequired'));
-            }
-        });
     }
 
     protected function _getPreambleText(): string

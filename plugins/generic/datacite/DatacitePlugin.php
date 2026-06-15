@@ -245,8 +245,14 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
         }
 
         $doiPrefix = $context->getData(Context::SETTING_DOI_PREFIX);
-        if (empty($doiPrefix)) {
+        $testMode = $this->getSetting($context->getId(), 'testMode');
+        if (!$testMode && empty($doiPrefix)) {
             return false;
+        } elseif ($testMode) {
+            $testDOIPrefix = $this->getSetting($context->getId(), 'testDOIPrefix');
+            if (empty($testDOIPrefix)) {
+                return false;
+            }
         }
 
         return true;

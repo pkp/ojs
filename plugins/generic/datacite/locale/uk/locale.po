@@ -91,11 +91,6 @@ msgstr ""
 "Коли вибрано \"використати тестовий префікс для реєстрації DOI\", потрібно "
 "вказати префікс DOI."
 
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Коли надається робоче ім’я користувача, потрібно вказати тестове ім’я "
-"користувача."
-
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Завдання автоматичної реєстрації DataCite"
 
