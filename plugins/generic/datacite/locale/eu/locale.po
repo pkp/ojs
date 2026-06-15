@@ -38,6 +38,7 @@ msgstr ""
 "Mesedez, sartu DataCite-tik lortu duzun erabiltzaile-izena (sinboloa). "
 "Erabiltzaile-izenak ezin ditu bi puntu izan."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr ""
 "\"DOI erregistrorako proba aurrizkia erabili\" hautatzen denean, probarako "
@@ -52,11 +53,6 @@ msgstr "Probarako pasahitza"
 msgid "plugins.importexport.datacite.settings.form.testUsername"
 msgstr "Probarako erabiltzaile-izena"
 
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Produkzioko erabiltzaile-izen bat ematen denean, probarako erabiltzaile-izen "
-"bat behar da."
-
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "DataCite erregistro automatikoaren zeregina"
 
@@ -69,7 +65,7 @@ msgstr ""
 "{issues|articles|galleys} objectId1 [objectId2] ...\n"
 
 msgid "plugins.generic.datacite.displayName"
-msgstr "Datacite Manager plugina"
+msgstr "DataCite Manager plugina"
 
 msgid "plugins.generic.datacite.description"
 msgstr "DataCite-ko metadatuen bilketa eta esportazioa kudeatzen ditu"
@@ -87,7 +83,7 @@ msgstr ""
 "\n"
 "\t\tDOIak DataCite-n erregistratu nahi badituzu, jarri harremanetan "
 "kudeaketa\n"
-"\t\tagentearekin <a href=\"https://datacite.org/contact.html\" target="
+"\t\tagentearekin <a href=\"https://datacite.org/contact\" target="
 "\"_blank\">DataCite-ren\n"
 "\t\torri nagusia</a> erabiliz, eta hark zure tokiko DataCite-ko kidearengana "
 "bideratuko\n"
@@ -105,6 +101,7 @@ msgstr ""
 "\t\terregistro-zerbitzuaren baldintzak direla eta.\n"
 "\t"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Erabili DataCite probako aurrizkia DOI erregistrorako. Mesedez, ez ahaztu "

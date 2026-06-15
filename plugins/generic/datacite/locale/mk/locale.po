@@ -35,7 +35,7 @@ msgstr ""
 "\n"
 "\t\tАко сакате да регистрирате DOI со DataCite, ве молиме контактирајте го "
 "Управниот\n"
-"Агент преку <a href=\"https://datacite.org/contact.html\" target=\"_blank\"> "
+"Агент преку <a href=\"https://datacite.org/contact\" target=\"_blank\"> "
 "DataCite\n"
 "почетна страница </a>, кој ќе ве упати на вашиот локален член на DataCite. "
 "Откако ќе имате\n"
@@ -66,6 +66,7 @@ msgstr ""
 "од вашата конфигурација за cronjob). Може да проверите за сите "
 "нерегистрирани DOI."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Користете го префиксот за тестирање DataCite за регистрација на DOI. Ве "
@@ -80,14 +81,11 @@ msgstr "Тест лозинка"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Тест DOI префикс"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr ""
 "Потребен е пробен ДОИ префикс кога се одбира „користи тест префикс за ДОИ "
 "регистрација“."
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Тест корисничко име е потребно кога се внесува продукциско корисничко име."
 
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Задача за автоматска регистрација на DataCite"
@@ -101,7 +99,7 @@ msgstr ""
 "| галии} objectId1 [objectId2] ...\n"
 
 msgid "plugins.generic.datacite.displayName"
-msgstr "Плагин за Datacite менаџер"
+msgstr "Плагин за DataCite менаџер"
 
 msgid "plugins.generic.datacite.description"
 msgstr "Се справува со депонирање и извоз на метаподатоци на DataCite"

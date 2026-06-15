@@ -37,7 +37,7 @@ msgstr ""
 "\n"
 "\t\tPokud chcete registrovat čísla DOI v rámci DataCite, kontaktujte, prosím "
 "Managing\n"
-"\t\tAgenta pomocí odkazu <a href=\"https://datacite.org/contact.html\" "
+"\t\tAgenta pomocí odkazu <a href=\"https://datacite.org/contact\" "
 "target=\"_blank\">Domovská stránka DataCite\n"
 "\t\t</a>, který vás odkáže na vašeho lokálního správce členů DataCite. \n"
 "\t\tJakmile navážete\n"
@@ -66,6 +66,7 @@ msgstr ""
 "trvat krátkou dobu po zpracování publikace. Můžete zkontrolovat všechny "
 "neregistrované DOI."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Použijte testovací prefix DataCite pro registraci DOI. Nezapomeňte tuto "
@@ -80,15 +81,11 @@ msgstr "Testovací heslo"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Testovací předpona DOI (DOI Prefix)"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr ""
 "Pokud je vybrána možnost „použít testovací předponu pro registraci DOI“, je "
 "vyžadována testovací předpona DOI."
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Při zadání produkčního uživatelského jména je vyžadováno testovací "
-"uživatelské jméno."
 
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Automatická úloha registrace DataCite"
@@ -102,7 +99,7 @@ msgstr ""
 "galleys} objectId1 [objectId2] ...\n"
 
 msgid "plugins.generic.datacite.displayName"
-msgstr "Plugin Datacite Manager"
+msgstr "Plugin DataCite Manager"
 
 msgid "plugins.generic.datacite.description"
 msgstr "Zpracovává ukládání a export metadat DataCite"

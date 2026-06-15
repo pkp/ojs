@@ -70,6 +70,7 @@ msgstr ""
 "proceso puede llevar cierto tiempo tras la publicación (p.ej. en función de "
 "su configuración cron). Puede comprobar todos los DOI no registrados."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Utilice el prefijo de prueba DataCite para registrar los DOI. No olvide "
@@ -84,15 +85,11 @@ msgstr "Contraseña de test"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Prefijo DOI de test"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr ""
 "Es necesario un prefijo DOI de prueba cuando \"usar un prefijo de prueba "
 "para el registro del DOI\" está seleccionado."
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Es necesario un nombre de usuario/a de prueba cuando se suministra un nombre "
-"de usuario/a de producción."
 
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Tarea de registro automático DataCite"
@@ -106,7 +103,7 @@ msgstr ""
 "galleys} objectId1 [objectId2] ...\n"
 
 msgid "plugins.generic.datacite.displayName"
-msgstr "Módulo Datacite Manager"
+msgstr "Módulo DataCite Manager"
 
 msgid "plugins.generic.datacite.description"
 msgstr "Maneja el depósito y la exportación de metadatos de Datacite"

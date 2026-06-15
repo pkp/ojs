@@ -28,16 +28,16 @@ msgstr ""
 "primeira vez."
 
 msgid "plugins.importexport.datacite.settings.label"
-msgstr "Configurações do Datacite"
+msgstr "Configurações do DataCite"
 
 msgid "plugins.importexport.datacite.registrationAgency.name"
-msgstr "Datacite"
+msgstr "DataCite"
 
 msgid "plugins.importexport.datacite.intro"
 msgstr ""
 "\n"
 "\t\tCaso deseje registrar DOIs no DataCite, entre em contato com o Gerente "
-"por meio da <a href=\"https://datacite.org/contact.html\" target=\"_blank"
+"por meio da <a href=\"https://datacite.org/contact\" target=\"_blank"
 "\">página do DataCite</a>, que irá encaminhá-lo ao seu Representante "
 "DataCite local. Uma vez estabelecido o relacionamento com a organização "
 "representante, será providenciado o acesso ao serviço  DataCite para a "
@@ -64,6 +64,7 @@ msgstr ""
 "pode levar um tempo depois da publicação. Você pode verificar os DOIs não "
 "registrados."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Use o prefixo de testes do DataCite para registro dos DOI. Não esqueça de "
@@ -78,15 +79,11 @@ msgstr "Senha de teste"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Prefixo DOI de teste"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr ""
 "Um prefixo DOI de teste é necessário quando a opção \"usar prefixo de teste "
 "para registro DOI\" é selecionada."
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Um nome de usuário de teste é necessário quando um nome de usuário de "
-"produção é fornecido."
 
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Dados DataCite do remetente"
@@ -100,13 +97,13 @@ msgstr ""
 "galleys} objectId1 [objectId2] ...\n"
 
 msgid "plugins.generic.datacite.displayName"
-msgstr "Plugin Gerenciador de Datacite"
+msgstr "Plugin Gerenciador de DataCite"
 
 msgid "plugins.generic.datacite.description"
-msgstr "Manipula depósito e exportação de metadados Datacite"
+msgstr "Manipula depósito e exportação de metadados DataCite"
 
 msgid "plugins.generic.datacite.registrationAgency.name"
-msgstr "Datacite"
+msgstr "DataCite"
 
 msgid "plugins.generic.datacite.deposit.unsuccessful"
 msgstr ""

@@ -38,7 +38,7 @@ msgstr ""
 "\n"
 "\t\tSi voleu registrar els DOIs amb DataCite, contacteu amb l'agent "
 "administrador\n"
-"\t\ta través de la <a href=\"https://datacite.org/contact.html\" target="
+"\t\ta través de la <a href=\"https://datacite.org/contact\" target="
 "\"_blank\">pàgina\n"
 "\t\td'inici de DataCite</a>, on se us indicarà  el vostre membre local de "
 "DataCite.\n"
@@ -71,6 +71,7 @@ msgstr ""
 "funció de la vostra configuració del cron). Podeu comprovar tots els DOI no "
 "registrats."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Utilitzeu el prefix de prova de DataCite per al registre de DOI. No oblideu "
@@ -85,10 +86,8 @@ msgstr "Contrasenya de test"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Prefix DOI de test"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
-msgstr ""
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
 msgstr ""
 
 msgid "plugins.importexport.datacite.senderTask.name"

@@ -62,6 +62,7 @@ msgstr ""
 "yayınlama işleminden sonra kısa bir süre alabileceğini unutmayın. Kayıtsız "
 "tüm DOI'leri kontrol edebilirsiniz."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "DOI kaydı için DataCite test önekini kullanın. Lütfen bu seçeneği yayın için "
@@ -76,10 +77,8 @@ msgstr "Test Şifre"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Test DOI Öneki"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
-msgstr ""
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
 msgstr ""
 
 msgid "plugins.importexport.datacite.senderTask.name"

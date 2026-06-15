@@ -37,7 +37,7 @@ msgid "plugins.importexport.datacite.intro"
 msgstr ""
 "\n"
 "\t\tHvis du vil registere DOI-er med DataCite, ta kontakt med «Managing "
-"Agent» via <a href=\"https://datacite.org/contact.html\" target=\"_blank\""
+"Agent» via <a href=\"https://datacite.org/contact\" target=\"_blank\""
 ">DataCites hjemmeside</a>. \n"
 "\n"
 "\t\tVedkommende vil henvise deg videre til ditt lokale DataCite-medlem. Du "
@@ -65,6 +65,7 @@ msgstr ""
 "OJS vil overføre DOI-er automatisk til DataCite. Merk at dette kan ta noe "
 "tid å få behandlet etter publiseringen. Du kan velge alle uregisterte DOI-er."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "Legg til et DataCite test-prefix for DOI-registeringen. Husk å fjerne dette "
@@ -79,15 +80,11 @@ msgstr "Test-passord"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Test-DOI prefiks"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr ""
 "Et testprefiks for DOI kreves når «bruk testprefiks for DOI-registrering» er "
 "valgt."
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr ""
-"Det er påkrevd å bruke et testbrukernavn når et produksjonsbrukernavn er "
-"oppgitt."
 
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "DataCites automatiske registrering"
@@ -101,7 +98,7 @@ msgstr ""
 "galleys|suppfiles} objekstId1 [objekttId2] ...\n"
 
 msgid "plugins.generic.datacite.displayName"
-msgstr "Datacite Manger programtillegg"
+msgstr "DataCite Manger programtillegg"
 
 msgid "plugins.generic.datacite.description"
 msgstr "Deponerer og eksporterer DataCite-metadata"

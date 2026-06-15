@@ -35,7 +35,7 @@ msgid "plugins.importexport.datacite.intro"
 msgstr ""
 "\n"
 "\t\tЕгер сіз DOI идентификаторларын DataCite көмегімен тіркегіңіз келсе, \n"
-"\t<a href=\"https://datacite.org/contact.html\" target= \"_blank\">DataCite "
+"\t<a href=\"https://datacite.org/contact\" target= \"_blank\">DataCite "
 "порталының басты бетіндегі</a>\n"
 "\tбайланыс ақпаратын пайдалана отырып басқармаға хабарласыңыз, ол сізді\n"
 "\tDataCite операторына бағыттайды. Байланыс орнатылғаннан кейін, тұрақты\n"
@@ -65,6 +65,7 @@ msgstr ""
 "(мысалы, cronjob параметрлеріне байланысты). Сіз барлық тіркелмеген DOI "
 "идентификаторларын тексере аласыз."
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
 "DOI идентификаторын тіркеу үшін DataCite сынақ префиксін қолданыңыз. Нақты "
@@ -79,10 +80,8 @@ msgstr "Тестілеуге арналған құпия сөз"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Тестілеуге арналған DOI префиксі"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
-msgstr ""
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
 msgstr ""
 
 msgid "plugins.importexport.datacite.senderTask.name"

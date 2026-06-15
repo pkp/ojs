@@ -34,7 +34,7 @@ msgid "plugins.importexport.datacite.intro"
 msgstr ""
 "\n"
 "\t\t如果您希望在Datacite注册DOI，请联系代管人\n"
-"\t\t<a href=\"https://datacite.org/contact.html\" target=\"_blank"
+"\t\t<a href=\"https://datacite.org/contact\" target=\"_blank"
 "\">DataCite\n"
 "\t\t主页</a>，他会建议你去加入当地 DataCite 会员。一旦您成为其中的会员，\n"
 "\t\t您将获得永久的 DOI 和注册相关元数据的服务。如果您没有自己的用户名\n"
@@ -54,6 +54,7 @@ msgstr ""
 "OJS 将自动将 DOI 存入 DataCite。 请注意，这可能需要在发布后用一小段时间来处理"
 "（这可能取决于您的 cronjob 配置）。 您可以检查所有未注册的DOI。"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr "使用 DataCite 测试前缀进行DOI注册。 请不要忘记在生产环境中删除此选项。"
 
@@ -66,11 +67,9 @@ msgstr "测试密码"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "测试 DOI 前缀"
 
+#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr "当选择“使用测试前缀进行 DOI 注册”时，必须填写测试 DOI 前缀。"
-
-msgid "plugins.importexport.datacite.settings.form.testUsernameRequired"
-msgstr "当提供生产环境用户名时，必须填写测试环境用户名。"
 
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "DataCite 自动注册任务"
