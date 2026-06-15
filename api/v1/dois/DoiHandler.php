@@ -333,7 +333,7 @@ class DoiHandler extends \PKP\API\v1\dois\PKPDoiHandler
 
         // Assign DOIs
         foreach ($ids as $id) {
-            $issue = Repo::issue()->get($id);
+            $issue = Repo::issue()->get($id, $context->getId());
             if ($issue !== null) {
                 $creationFailureResults = Repo::issue()->createDoi($issue);
                 $failedDoiActions = array_merge($failedDoiActions, $creationFailureResults);
