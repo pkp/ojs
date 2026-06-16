@@ -348,6 +348,19 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
         return $pubIdSuffix;
     }
 
+    /**
+     * Checks if the given pubId suffix pattern includes any elements that would require
+     * the publication object to be assigned to an issue (volume number, issue number, or year).
+     *
+     * @param string $pubIdSuffix Full legacy suffix pattern to check against
+     */
+    public static function suffixHasIssuePattern(string $pubIdSuffix): bool
+    {
+        return str_contains($pubIdSuffix, '%v')
+            || str_contains($pubIdSuffix, '%i')
+            || str_contains($pubIdSuffix, '%Y');
+    }
+
     //
     // Public API
     //
