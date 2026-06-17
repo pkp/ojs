@@ -64,12 +64,14 @@ export default defineConfig(({mode}) => {
 				],
 			}),
 		],
+		assetsInclude: ['**/*.wasm'],
 		publicDir: false,
 		resolve: {
 			alias: {
 				'@': path.resolve(__dirname, 'lib/ui-library/src'),
 				// use vue version with template compiler
 				vue: 'vue/dist/vue.esm-bundler.js',
+				'pandoc-core': path.resolve(__dirname, 'node_modules/pandoc-wasm/src'),
 			},
 			// https://github.com/vitejs/vite/discussions/15906
 			dedupe: [
@@ -124,6 +126,9 @@ export default defineConfig(({mode}) => {
 						const extType = info[info.length - 1];
 						if (/\.(css)$/.test(assetInfo.name)) {
 							return 'styles/build.css';
+						}
+						if (/\.wasm$/.test(assetInfo.name)) {
+							return `js/build/[name].${extType}`;
 						}
 						return `[name].${extType}`;
 					}, // Provide global variables to use in the UMD build
