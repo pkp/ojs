@@ -475,6 +475,38 @@
 				</div>
 			{/if}
 
+			{* Funders *}
+			{if $publication->getData('funders')}
+			<section class="item funders" id="funding-data">
+				<h2 class="label">
+					{translate key="submission.funders"}
+				</h2>
+				<div class="value">
+					<ul>
+						{foreach from=$publication->getData('funders') item=funder}
+							<li>
+								<span class="funder">
+									{$funder->getLocalizedData('name')|escape}
+									{if $funder->ror}<a href="{$funder->ror|escape}">{$rorIdIcon}</a>{/if}
+								</span>
+								{if $funder->grants}
+									<ul>
+										{foreach from=$funder->grants item=grant}
+											<li>
+												{if $grant.grantName}<span>{$grant.grantName|escape}</span><br />{/if}
+												{if $grant.grantNumber}<span>{translate key="submission.funders.funder.grant.number"} {$grant.grantNumber|escape}</span><br />{/if}
+												{if $grant.grantDoi}<span>{translate key="submission.funders.funder.grant.doi"} <a href="https://doi.org/{$grant.grantDoi|escape}">https://doi.org/{$grant.grantDoi|escape}</a></span>{/if}
+											</li>
+										{/foreach}
+									</ul>
+								{/if}
+							</li>
+						{/foreach}
+					</ul>
+				</div>
+			</section>
+			{/if}
+
 			{if $enablePublicComments}
 			    <div class="item comments">
 				    <section class="sub_item" data-vue-root>
