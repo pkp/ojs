@@ -71,6 +71,7 @@ export default defineConfig(({mode}) => {
 				'@': path.resolve(__dirname, 'lib/ui-library/src'),
 				// use vue version with template compiler
 				vue: 'vue/dist/vue.esm-bundler.js',
+				'pandoc-core': path.resolve(__dirname, 'node_modules/pandoc-wasm/src'),
 			},
 			// https://github.com/vitejs/vite/discussions/15906
 			dedupe: [
