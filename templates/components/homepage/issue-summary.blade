@@ -1,0 +1,16 @@
+@if($issue)
+    <x-homepage.default slug="issue-summary">
+        <x-issue-summary
+            :issue="$issue"
+        >
+            <x-slot:actions>
+                <a class="button button-highlight" href="{{ ViewHelper::url(['page' => 'issue', 'op' => 'current']) }}">
+                    {{ __('manager.homepageBlocks.issueSmmary.viewLatest') }}
+                </a>
+                <a class="button" href="{{ ViewHelper::url(['page' => 'issue', 'op' => 'archive']) }}">
+                    {{ __('journal.viewAllIssues') }}
+                </a>
+            </x-slot:actions>
+        </x-issue-summary>
+    </x-homepage.default>
+@endif

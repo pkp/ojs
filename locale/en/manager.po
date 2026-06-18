@@ -2230,3 +2230,9 @@ msgstr "Payment Request"
 
 msgid "mailable.paymentRequest.description"
 msgstr "This automated email is sent to the author to request payment of the publication fee when their submission is accepted."
+
+msgid "manager.homepageBlocks.issueSummary"
+msgstr "Current Issue (Summary)"
+
+msgid "manager.homepageBlocks.issueSmmary.viewLatest"
+msgstr "View Latest Issue"
