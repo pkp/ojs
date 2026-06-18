@@ -2234,5 +2234,8 @@ msgstr "This automated email is sent to the author to request payment of the pub
 msgid "manager.homepageBlocks.issueSummary"
 msgstr "Current Issue (Summary)"
 
+msgid "manager.homepageBlocks.issueToc"
+msgstr "Current Issue (Table of Contents)"
+
 msgid "manager.homepageBlocks.issueSmmary.viewLatest"
 msgstr "View Latest Issue"

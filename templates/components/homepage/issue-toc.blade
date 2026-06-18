@@ -1,0 +1,11 @@
+@if($issue)
+    <x-homepage.default slug="issue-toc">
+        <h2 class="sr-only">
+            {{ __('journal.currentIssue') }}
+        </h2>
+        @includeIf('components/issue-toc', [
+            'issue' => $issue,
+            'headingStart' => 3,
+        ])
+    </x-homepage.default>
+@endif
