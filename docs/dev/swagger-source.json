@@ -375,6 +375,35 @@
 							},
 							"type": {
 								"type": "integer"
+							},
+							"date": {
+								"type": "string"
+							},
+							"userId": {
+								"type": "integer"
+							},
+							"userFullName": {
+								"type": "string"
+							},
+							"settings": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"fileId": {
+											"type": "int"
+										},
+										"filename": {
+											"type": "string"
+										},
+										"stageId": {
+											"type": "int"
+										},
+										"submissionFileId": {
+											"type": "int"
+										}
+									}
+								}
 							}
 						}
 					}
