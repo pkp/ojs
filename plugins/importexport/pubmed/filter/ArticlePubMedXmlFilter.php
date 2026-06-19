@@ -267,8 +267,12 @@ class ArticlePubMedXmlFilter extends PersistableFilter
             $authorElement->appendChild($doc->createElement('LastName'))->appendChild($doc->createTextNode(ucfirst($author->getFamilyName($publicationLocale))));
         }
         foreach ($author->getAffiliations() as $affiliation) {
+            $affiliationName = $affiliation->getLocalizedName($publicationLocale);
+            if (trim($affiliationName ?? '') === '') {
+                continue;
+            }
             $affiliationInfoElement = $doc->createElement('AffiliationInfo');
-            $affiliationInfoElement->appendChild($doc->createElement('Affiliation'))->appendChild($doc->createTextNode($affiliation->getLocalizedName($publicationLocale)));
+            $affiliationInfoElement->appendChild($doc->createElement('Affiliation'))->appendChild($doc->createTextNode($affiliationName));
             if ($affiliation->getRor()) {
                 $affiliationInfoElement->appendChild($identifierNode = $doc->createElement('Identifier'))->appendChild($doc->createTextNode($affiliation->getRor()));
                 $identifierNode->setAttribute('Source', 'ROR');

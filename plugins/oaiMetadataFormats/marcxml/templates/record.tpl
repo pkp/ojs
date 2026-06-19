@@ -45,7 +45,7 @@
 			<subfield code="a">{$author->getFullName(false, true, $publicationLocale)|escape}</subfield>
 			{foreach from=$author->getAffiliations() item=$affiliation}
 				{if $affiliation->getRor()}<subfield code="u">{$affiliation->getRor()|escape}</subfield>
-				{else}<subfield code="u">{$affiliation->getLocalizedName($publicationLocale)|escape}</subfield>{/if}
+				{elseif $affiliation->getLocalizedName($publicationLocale)}<subfield code="u">{$affiliation->getLocalizedName($publicationLocale)|escape}</subfield>{/if}
 			{/foreach}
 			{if $author->getUrl()}<subfield code="0">{$author->getUrl()|escape}</subfield>{/if}
 			{if $author->getData('orcid') && $author->getData('orcidIsVerified')}<subfield code="0">{$author->getData('orcid')|escape}</subfield>{/if}
