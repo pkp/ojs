@@ -340,6 +340,10 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             if ($creator['affiliations']) {
                 // Currently affiliations are only there for Publication objects
                 foreach ($creator['affiliations'] as $affiliation) {
+                    $institutionName = $affiliation->getLocalizedName($publication->getData('locale'));
+                    if (trim($institutionName ?? '') === '') {
+                        continue;
+                    }
                     $node = $doc->createElementNS($deployment->getNamespace(), 'affiliation');
                     $ror = $affiliation->getRor();
                     if ($ror) {
@@ -347,7 +351,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                         $node->setAttribute('affiliationIdentifierScheme', 'ROR');
                         $node->setAttribute('schemeURI', 'https://ror.org');
                     }
-                    $node->appendChild($doc->createTextNode($affiliation->getLocalizedName($publication->getData('locale'))));
+                    $node->appendChild($doc->createTextNode($institutionName));
                     $creatorNode->appendChild($node);
                 }
             }

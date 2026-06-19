@@ -115,10 +115,14 @@
 							</span>
 							{if count($author->getAffiliations()) > 0}
 								<span class="affiliation">
-									{foreach name="affiliations" from=$author->getAffiliations() item="affiliation"}
-										<span>{$affiliation->getLocalizedName()|escape}</span>
-										{if $affiliation->getRor()}<a href="{$affiliation->getRor()|escape}">{$rorIdIcon}</a>{/if}
-										{if !$smarty.foreach.affiliations.last}{translate key="common.commaListSeparator"}{/if}
+									{assign var="renderedAffiliation" value=false}
+									{foreach from=$author->getAffiliations() item="affiliation"}
+										{if $affiliation->getLocalizedName() || $affiliation->getRor()}
+											{if $renderedAffiliation}{translate key="common.commaListSeparator"}{/if}
+											{if $affiliation->getLocalizedName()}<span>{$affiliation->getLocalizedName()|escape}</span>{/if}
+											{if $affiliation->getRor()}<a href="{$affiliation->getRor()|escape}">{$rorIdIcon}</a>{/if}
+											{assign var="renderedAffiliation" value=true}
+										{/if}
 									{/foreach}
 								</span>
 							{/if}
