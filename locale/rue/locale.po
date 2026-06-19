@@ -2,7 +2,7 @@
 # Monika Tylawska <monika.tylawska@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-06-15 07:32+0000\n"
+"PO-Revision-Date: 2026-06-19 05:58+0000\n"
 "Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/locale/rue/>\n"
 "Language: rue\n"
@@ -926,3 +926,28 @@ msgid "sectionEditor.author.confirmRenotify"
 msgstr ""
 "Поновне повідмліня того автора спричынит зресетуваня приписаной му задачы. "
 "Ци напевно хочеш тото зробити?"
+
+msgid "sectionEditor.layout.confirmRenotify"
+msgstr ""
+"Поновне повідомліня того автора спричынит зресетуваня приписаной му задачы. "
+"Ци на певно хочеш тото зробити?"
+
+msgid "sectionEditor.proofreader.confirmRenotify"
+msgstr ""
+"Поновне повідомліня того коректора спричынит зресетуваня приписаной му "
+"задачы. Ци на певно хочеш тото зробити?"
+
+msgid "sectionEditor.regrets.breadcrumb"
+msgstr "Одгвар"
+
+msgid "sectionEditor.regrets"
+msgstr "Одгвары"
+
+msgid "sectionEditor.regrets.link"
+msgstr "Вкаж одгвары, анулюваня і скоршы етапы"
+
+msgid "sectionEditor.regrets.reviewRound"
+msgstr "Наукова рецензия, етап {$round}"
+
+msgid "sectionEditor.regrets.title"
+msgstr "#{$submissionId} Одгвары рецензентів, анулюваня і скоршы етапы"
