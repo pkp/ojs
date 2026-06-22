@@ -5,16 +5,17 @@
 # Johanna Skaug <johanna.skaug@ub.uio.no>, 2024.
 # "My L. Bjørnflaten" <myl@uio.no>, 2024.
 # Jan Erik Frantsvåg <jan.e.frantsvag@uit.no>, 2025.
+# Anne-Inger <annrag@oslomet.no>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2025-01-29 17:28+0000\n"
-"Last-Translator: Jan Erik Frantsvåg <jan.e.frantsvag@uit.no>\n"
+"PO-Revision-Date: 2026-06-11 06:53+0000\n"
+"Last-Translator: Anne-Inger <annrag@oslomet.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/nb_NO/>\n"
-"Language: nb\n"
+"Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2053,7 +2054,6 @@ msgstr "Utgavestatistikk"
 msgid "stats.issues.details"
 msgstr "Visninger og nedlastinger"
 
-#, fuzzy
 msgid "stats.issues.searchIssueDescription"
 msgstr "Søk i utgavetittel, volum og nummer"
 
@@ -2062,11 +2062,10 @@ msgstr ""
 "Ingen utgaver ble funnet med bruksstatistikk som samsvarer med disse "
 "parameterne."
 
-#, fuzzy
 msgid "stats.issues.downloadReport.description"
 msgstr ""
-"Last ned CSV/Excel-tabell med bruksstatistikk for denne utgivelsen som "
-"treffer følgende parametre."
+"Last ned CSV/Excel-fil med bruksstatistikk for denne utgivelsen som "
+"samsvarer med følgende parametre."
 
 msgid "stats.issues.downloadReport.downloadIssues.description"
 msgstr ""
@@ -2201,13 +2200,11 @@ msgstr "Informasjon om abbonentens medlemsskap"
 msgid "emailTemplate.variable.subscription.institutionName"
 msgstr "Navn på institusjon"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr "Postadressen til institusjonen"
+msgstr "Institusjonens postadresse til institusjonen"
 
-#, fuzzy
 msgid "emailTemplate.variable.subscription.domain"
-msgstr "Domene"
+msgstr "Domenenavn for gyldig IP-adresser for dette abonnementet"
 
 msgid "emailTemplate.variable.subscription.ipRanges"
 msgstr "De gyldige IP-intervallene for dette abonnementet"
@@ -2215,7 +2212,6 @@ msgstr "De gyldige IP-intervallene for dette abonnementet"
 msgid "emailTemplate.variable.queuedPaymentUrl"
 msgstr "URL til siden hvor forfatteren kan foreta betaling"
 
-#, fuzzy
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
 msgstr "URL til forfatterveiledning"
 
@@ -2564,7 +2560,6 @@ msgstr "Rediger beskjedene som sendes som e-post fra dette tidsskriftet."
 msgid "mailable.layoutComplete.name"
 msgstr "Ferdige oppsett"
 
-#, fuzzy
 msgid "mailable.publicationVersionNotify.name"
 msgstr "Ny versjon opprettet"
 
@@ -3156,3 +3151,14 @@ msgid "plugins.importexport.common.error.issueGalleyFileMissing"
 msgstr ""
 "Utgaveoppsettet {$id} kunne ikke eksporteres, filen ble ikke funnet på \""
 "{$path}\"."
+
+msgid "manager.setup.contextSummary.description"
+msgstr ""
+"Gi en kort beskrivelse av tidsskriftet ditt for å gi innsikt i innhold og "
+"formål."
+
+#, fuzzy
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr ""
+"Nummerets innholdsfortegnelse, for eksempel i form av en liste over alle "
+"tilhørende innleveringer."

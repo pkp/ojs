@@ -1,17 +1,19 @@
 # Emma U <emmaupkp@gmail.com>, 2022.
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
+# Helgi Sigurbjörnsson <helgi.sigurbjornsson@landsbokasafn.is>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-03-22 15:04+0000\n"
-"Last-Translator: Kolbrun Reynisdottir <kolla@probus.is>\n"
+"PO-Revision-Date: 2026-06-15 12:39+0000\n"
+"Last-Translator: Helgi Sigurbjörnsson <helgi.sigurbjornsson@landsbokasafn.is>"
+"\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/"
-"submission/is_IS/>\n"
-"Language: is_IS\n"
+"submission/is/>\n"
+"Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "submission.submit.userGroup"
 msgstr "Senda inn í hlutverki mínu sem...."
@@ -62,11 +64,11 @@ msgid "grid.action.issueEntry"
 msgstr "Skoða lýsigögn innsendingar"
 
 msgid "submission.event.articleGalleyMadeAvailable"
-msgstr "Galley  fyrir greinar: \"{$galleyFormatName}\"  er aðgengilegt."
+msgstr "Galley fyrir greinar: \"{$galleyFormatName}\" er aðgengilegt."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
 msgstr ""
-"Galley  fyrir greinar: \"{$galleyFormatName}\"  er ekki lengur aðgengilegt."
+"Galley fyrir greinar: \"{$galleyFormatName}\" er ekki lengur aðgengilegt."
 
 msgid "submission.event.publicIdentifiers"
 msgstr "Auðkenni innsendingar hefur verið uppfært."
@@ -75,10 +77,10 @@ msgid "grid.issueEntry.availableGalley.title"
 msgstr "Samþykki á uppsetningu"
 
 msgid "grid.issueEntry.availableGalley.removeMessage"
-msgstr "<p>Þetta galley verður  <em>ekki lengur aðgengilegt</em> lesendum.</p>"
+msgstr "<p>Þetta galley verður <em>ekki lengur aðgengilegt</em> lesendum.</p>"
 
 msgid "grid.issueEntry.availableGalley.message"
-msgstr "<p>Þetta galley verður  <em>aðgengilegt</em> lesendum.</p>"
+msgstr "<p>Þetta galley verður <em>aðgengilegt</em> lesendum.</p>"
 
 msgid "grid.action.availableArticleGalley"
 msgstr "Gera þetta galley aðgengilegt"
@@ -88,7 +90,7 @@ msgstr "Galleyskrár - lokaprófarkir"
 
 msgid "submission.proofReadingDescription"
 msgstr ""
-"Setjari hleður hér upp skrám sem búið er að undirbúa fyrir birtingu. Notaðu  "
+"Setjari hleður hér upp skrám sem búið er að undirbúa fyrir birtingu. Notaðu "
 "<em>'Úthluta eftirlitsaðila</em> til að tilgreina höfund og aðra til að "
 "prófarkalesa lokaprófarkir í þessu galley, með leiðréttum skrám sem búið er "
 "að hlaða upp til samþykkis fyrir birtingu."
@@ -168,7 +170,7 @@ msgstr "Tengja við tölublað"
 
 msgid "publication.assignedToIssue"
 msgstr ""
-"Þetta hefur verið tengt við  <a href=\"{$issueUrl}\">{$issueName}</a> en er "
+"Þetta hefur verið tengt við <a href=\"{$issueUrl}\">{$issueName}</a> en er "
 "ekki búið að setja í birtingaráætlun."
 
 msgid "publication.changeIssue"
@@ -184,7 +186,7 @@ msgid "publication.invalidSection"
 msgstr "Kaflinn fyrir þessa útgáfu fannst ekki."
 
 msgid "publication.inactiveSection"
-msgstr "{$section} (Inactive)"
+msgstr "{$section} (Óvirk)"
 
 msgid "publication.invalidIssue"
 msgstr "Tölublað fyrir þessa útgáfu finnst ekki."
@@ -203,7 +205,7 @@ msgstr ""
 msgid "publication.publish.confirmation.backIssue"
 msgstr ""
 "Búið er að uppfylla allar kröfur varðandi útgáfuna. Þetta verður birt strax "
-"í tölublaði {$issue}. Ertu  viss um að þú viljir birta þetta?"
+"í tölublaði {$issue}. Ertu viss um að þú viljir birta þetta?"
 
 msgid "publication.publish.confirmation.datePublishedInPast"
 msgstr ""
@@ -218,7 +220,7 @@ msgid "publication.publishedIn"
 msgstr "Birt í <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.scheduledIn"
-msgstr "Á birtingaráætlun fyrir  <a href=\"{$issueUrl}\">{$issueName}</a>."
+msgstr "Á birtingaráætlun fyrir <a href=\"{$issueUrl}\">{$issueName}</a>."
 
 msgid "publication.unscheduledIn"
 msgstr "Þetta hefur ekki verið sett á birtingaráætlun í tölublaði."
@@ -286,12 +288,12 @@ msgstr "Ekki er hægt að gefa út handrit sem hefur verið hafnað."
 
 msgid "publication.required.reviewStage"
 msgstr ""
-"Innsendingin þarf að vera  í yfirferð eða á framleiðsluþrepi áður en hægt er "
+"Innsendingin þarf að vera í yfirferð eða á framleiðsluþrepi áður en hægt er "
 "að birta hana."
 
 msgid "submission.license.description"
 msgstr ""
-"Leyfið verður sjálfkrafa  <a href='{$licenseUrl}' "
+"Leyfið verður sjálfkrafa <a href='{$licenseUrl}' "
 "target='_blank'>{$licenseName}</a> þegar þetta er gefið út."
 
 msgid "submission.copyrightHolder.description"
@@ -317,61 +319,94 @@ msgid "submission.queries.production"
 msgstr "Framleiðsluumræður"
 
 msgid "editor.submission.decision.backToReview"
-msgstr ""
+msgstr "Senda aftur í ritrýni"
 
 msgid "editor.submission.decision.backToReview.description"
 msgstr ""
+"Afturkalla ákvörðun um að samþykkja þessa innsendingu og senda hana aftur í "
+"ritrýniferli."
 
 msgid "editor.submission.decision.backToReview.log"
 msgstr ""
+"{$editorName} afturkallaði ákvörðun um að samþykkja þessa innsendingu og "
+"sendi hana aftur í ritrýniferli."
 
 msgid "editor.submission.decision.backToReview.completed"
-msgstr ""
+msgstr "Sent aftur í ritrýni"
 
 msgid "editor.submission.decision.backToReview.completed.description"
-msgstr ""
+msgstr "Innsendingin, {$title}, var send aftur á ritrýnistig."
 
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
+"Sendu höfundum tölvupóst til að láta þá vita að innsending þeirra sé send "
+"aftur á ritrýnistig. Útskýrðu hvers vegna þessi ákvörðun var tekin og "
+"upplýstu höfunda um hvaða frekari ritrýni fari fram."
 
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
+"Sendu höfundum tölvupóst til að láta þá vita að þessi innsending verði send "
+"í ritrýni. Ef mögulegt er, gefðu höfundum einhverja vísbendingu um hversu "
+"langan tíma ritrýniferlið gæti tekið og hvenær þeir megi vænta þess að heyra "
+"aftur frá ritstjórninni. Þessi tölvupóstur verður ekki sendur fyrr en "
+"ákvörðunin hefur verið skráð."
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
-msgstr ""
+msgstr "Veldu skrár sem á að senda á ritrýnistig."
 
 msgid "doi.submission.issueMissing.publication"
 msgstr ""
+"Tókst ekki að mynda DOI fyrir eftirfarandi innsendingu:{$pubObjectTitle}. "
+"Innsendingin verður að vera komin í tölublað áður en hægt er að mynda DOI."
 
 msgid "doi.submission.issueMissing.representation"
 msgstr ""
+"Ekki tókst að búa til DOI fyrir galley-skjal {$pubObjectTitle} fyrir "
+"eftirfarandi innsendingu: {$itemTitle}. Innsendingin verður að vera komin í "
+"tölublað áður en hægt er að mynda DOI."
 
 msgid "doi.submission.incorrectContext"
 msgstr ""
+"Ekki tókst að búa til DOI fyrir innsendinguna: {$pubObjectTitle}. Hún er "
+"ekki til í núverandi samhengi tímaritsins."
 
 msgid "submission.layout.viewGalley"
-msgstr ""
+msgstr "Skoða galley-skrá"
 
 msgid "galley.cantEditPublished"
 msgstr ""
+"Ekki er hægt að breyta þessu galley-skjali vegna þess að það hefur þegar "
+"verið birt."
 
 msgid "submission.copyright.description"
 msgstr ""
+"Vinsamlegast lestu og kynntu þér höfundaréttarskilmála fyrir innsendingar "
+"til þessa tímarits."
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
+"Þú hefur ekki heimild til að senda inn efni í þetta tímarit, þar sem "
+"höfundar verða að vera skráðir af ritstjórn. Ef þú telur að um mistök sé að "
+"ræða skaltu hafa samband við <a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
+"Þú hefur ekki heimild til að senda inn efni í þetta tímarit, þar sem lokað "
+"hefur verið fyrir innsendingar í alla flokka tímaritsins eða þær "
+"takmarkaðar. Ef þú telur að um mistök sé að ræða skaltu hafa samband við <a "
+"href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
+"{$contextName} tekur ekki við innsendingum í flokkinn {$section}. Ef þú "
+"þarft aðstoð við að endurheimta innsendinguna þína skaltu hafa samband við "
+"<a href='mailto:{$email}'>{$name}</a>."
 
 msgid "submission.sectionNotFound"
-msgstr ""
+msgstr "Ekki fannst flokkur fyrir þessa innsendingu."
 
 msgid "submission.sectionRestrictedToEditors"
-msgstr ""
+msgstr "Aðeins ritstjórn hefur heimild til að senda inn í þennan flokk."
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Það þarf að vera a.m.k. einn höfundur."

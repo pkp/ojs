@@ -1,20 +1,20 @@
 # Jonas Raoni Soares da Silva <weblate@raoni.org>, 2021.
 # Manolis Saldaris <omanos@gmail.com>, 2022.
+# Theodoros Theodoropoulos <bujam1@yahoo.com>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:20+00:00\n"
-"PO-Revision-Date: 2022-05-27 12:09+0000\n"
-"Last-Translator: Manolis Saldaris <omanos@gmail.com>\n"
-"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/manager/el_GR/"
-">\n"
-"Language: el_GR\n"
+"PO-Revision-Date: 2026-06-09 08:28+0000\n"
+"Last-Translator: Theodoros Theodoropoulos <bujam1@yahoo.com>\n"
+"Language-Team: Greek <http://translate.pkp.sfu.ca/projects/ojs/manager/el/>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "manager.distribution.access"
 msgstr "Πρόσβαση"
@@ -53,15 +53,22 @@ msgstr ""
 
 msgid "manager.setup.enableDois.description"
 msgstr ""
+"Να επιτρέπεται η απονομή μοναδικών αναγνωριστικών ψηφιακών αντικειμένων (DOI)"
+" σε εργασίες που δημοσιεύονται στο παρόν περιοδικό."
 
 msgid "doi.manager.settings.doiObjectsRequired"
 msgstr ""
+"Επιλέξτε σε ποια στοιχεία θα αποδοθεί κωδικός DOI. Τα περισσότερα περιοδικά "
+"αποδίδουν κωδικούς DOI στα άρθρα, αλλά ενδεχομένως να προτιμάτε να αποδώσετε "
+"κωδικούς DOI σε όλα τα δημοσιευμένα στοιχεία."
 
 msgid "doi.manager.settings.doiSuffixLegacy"
 msgstr ""
+"Χρησιμοποιήστε τα προεπιλεγμένα πρότυπα.<br />%j.v%vi%i για τεύχη<br /"
+">%j.v%vi%i.%a για άρθρα<br />%j.v%vi%i.%a.g%g για τυπογραφικά δοκίμια."
 
 msgid "doi.manager.settings.doiCreationTime.copyedit"
-msgstr ""
+msgstr "Κατά το στάδιο της επιμέλειας"
 
 msgid "manager.website.archiving"
 msgstr "Αρχειοθέτηση"
@@ -744,6 +751,8 @@ msgstr "Αρχικά Περιοδικού"
 
 msgid "manager.setup.selectCountry"
 msgstr ""
+"Επιλέξτε τη χώρα στην οποία βρίσκεται αυτό το περιοδικό ή τη χώρα της "
+"ταχυδρομικής διεύθυνσης του περιοδικού ή του εκδότη."
 
 msgid "manager.setup.journalLayout"
 msgstr "Εμφάνιση περιοδικού"
@@ -1555,10 +1564,10 @@ msgid "manager.subscriptions.form.typeIdValid"
 msgstr "Παρακαλούμε επιλέξτε έναν έγκυρο τύπο συνδρομής."
 
 msgid "manager.subscriptions.form.institution"
-msgstr ""
+msgstr "Ίδρυμα"
 
 msgid "manager.subscriptions.form.institutionIdValid"
-msgstr ""
+msgstr "Παρακαλώ επιλέξτε ένα έγκυρο ίδρυμα."
 
 msgid "manager.subscriptions.form.dateStart"
 msgstr "Ημερομηνία έναρξης"
@@ -1702,7 +1711,7 @@ msgstr ""
 "συνδρομών."
 
 msgid "manager.subscriptions.form.institutionRequired"
-msgstr ""
+msgstr "Πρέπει να δημιουργηθεί ένα ίδρυμα προτού γίνουν νέες εγγραφές."
 
 msgid "manager.subscriptions.ipRange"
 msgstr "Περιοχή διευθύνσεων IP"
@@ -1748,7 +1757,7 @@ msgid "manager.subscriptions.contact"
 msgstr "Όνομα προσώπου επαφής"
 
 msgid "manager.subscriptions.institutionName"
-msgstr "Όνομα ιδρύματος"
+msgstr "Όνομα Ιδρύματος"
 
 msgid "manager.subscriptionTypes"
 msgstr "Τύποι συνδρομών"
@@ -2101,52 +2110,63 @@ msgstr ""
 "Ρυθμίσεις του Περιοδικού."
 
 msgid "stats.contextStats"
-msgstr ""
+msgstr "Στατιστικά Περιοδικού"
 
 msgid "stats.context.tooltip.text"
-msgstr ""
+msgstr "Αριθμός επισκεπτών που βλέπουν την αρχική σελίδα του περιοδικού."
 
 msgid "stats.context.tooltip.label"
-msgstr ""
+msgstr "Σχετικά με τα στατιστικά του περιοδικού"
 
 msgid "stats.context.downloadReport.description"
 msgstr ""
+"Κατεβάστε ένα αρχείο CSV/Excel με στατιστικά στοιχεία χρήσης για αυτό το "
+"περιοδικό, σύμφωνα με τις παρακάτω παραμέτρους."
 
 msgid "stats.context.downloadReport.downloadContext.description"
-msgstr ""
+msgstr "Ο αριθμός προβολών της αρχικής σελίδας του περιοδικού."
 
 msgid "stats.context.downloadReport.downloadContext"
-msgstr ""
+msgstr "Λήψη Περιοδικού"
 
 msgid "stats.issueStats"
-msgstr ""
+msgstr "Στατιστικά Τεύχους"
 
 msgid "stats.issues.details"
-msgstr ""
+msgstr "Προβολές και Λήψεις"
 
 msgid "stats.issues.searchIssueDescription"
-msgstr ""
+msgstr "Αναζήτηση τίτλου τεύχους, τόμου και αριθμού"
 
 msgid "stats.issues.none"
 msgstr ""
+"Δεν εντοπίστηκαν τεύχη στα στατιστικά χρήσης που να αντιστοιχούν σε αυτές "
+"τις παραμέτρους."
 
 msgid "stats.issues.downloadReport.description"
 msgstr ""
+"Κατεβάστε ένα αρχείο CSV/Excel με στατιστικά στοιχεία χρήσης για τεύχη που "
+"να ανταποκρίνονται στις παρακάτω παραμέτρους."
 
 msgid "stats.issues.downloadReport.downloadIssues.description"
 msgstr ""
+"Ο αριθμός των προβολών του πίνακα περιεχομένων και των λήψεων του "
+"τυπογραφικού δοκιμίου για κάθε τεύχος."
 
 msgid "stats.issues.downloadReport.downloadIssues"
-msgstr ""
+msgstr "Λήψη Τευχών"
 
 msgid "stats.issues.countOfTotal"
-msgstr ""
+msgstr "{$count} από {$total} τεύχη"
 
 msgid "stats.issues.tooltip.label"
-msgstr ""
+msgstr "Σχετικά με τα στατιστικά τεύχους"
 
 msgid "stats.issues.tooltip.text"
 msgstr ""
+"<strong>Προβολές</strong>: Αριθμός επισκεπτών που είδαν τον πίνακα "
+"περιεχομένων του τεύχους.<br><strong>Λήψεις</strong>: Αριθμός λήψεων του "
+"τυπογραφικού δοκιμίου του τεύχους, εφόσον υπάρχει."
 
 msgid "stats.publicationStats"
 msgstr "Στατιστικά Άρθρου"
@@ -2176,12 +2196,15 @@ msgstr "Αρχεία"
 
 msgid "stats.publications.downloadReport.description"
 msgstr ""
+"Κατεβάστε ένα αρχείο CSV/Excel με στατιστικά στοιχεία χρήσης για άρθρα που "
+"ανταποκρίνονται στις παρακάτω παραμέτρους."
 
 msgid "stats.publications.downloadReport.downloadSubmissions"
-msgstr ""
+msgstr "Λήψη Άρθρων"
 
 msgid "stats.publications.downloadReport.downloadSubmissions.description"
 msgstr ""
+"Ο αριθμός των προβολών περιλήψεων και των λήψεων αρχείων για κάθε άρθρο."
 
 msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
 msgstr ""
@@ -2196,13 +2219,13 @@ msgstr ""
 "μια κύρια επαφή στις <a href=\"{$url}\">ρυθμίσεις ημερολογίου</a>."
 
 msgid "plugins.importexport.native.export.issues.results"
-msgstr ""
+msgstr "Αποτελέσματα Εξαγωγής Τευχών"
 
 msgid "plugins.importexport.issue.cli.display"
 msgstr "\"{$issueId}\" -  \"{$issueIdentification}\""
 
 msgid "plugins.importexport.issueGalleys.exportFailed"
-msgstr ""
+msgstr "Η διαδικασία δεν κατάφερε να αναλύσει τα τυπογραφικά δοκίμια τεύχους"
 
 msgid "emailTemplate.variable.context.contextName"
 msgstr "Ο τίτλος του περιοδικού"
@@ -2211,88 +2234,106 @@ msgid "emailTemplate.variable.context.contextUrl"
 msgstr "Η διεύθυνση URL στην ιστοσελίδα του περιοδικού"
 
 msgid "emailTemplate.variable.context.contactName"
-msgstr ""
+msgstr "Το όνομα του κύριου υπεύθυνου επικοινωνίας του περιοδικού"
 
 msgid "emailTemplate.variable.context.contextAcronym"
-msgstr ""
+msgstr "Τα αρχικά του περιοδικού"
 
 msgid "emailTemplate.variable.context.contextSignature"
 msgstr ""
+"Η υπογραφή του περιοδικού για τα αυτόματα μηνύματα ηλεκτρονικού ταχυδρομείου"
 
 msgid "emailTemplate.variable.context.contactEmail"
 msgstr ""
+"Η διεύθυνση ηλεκτρονικού ταχυδρομείου του κύριου υπεύθυνου επικοινωνίας του "
+"περιοδικού"
 
 msgid "emailTemplate.variable.context.mailingAddress"
-msgstr ""
+msgstr "Η ταχυδρομική διεύθυνση του περιοδικού"
 
 msgid "emailTemplate.variable.queuedPayment.itemName"
-msgstr ""
+msgstr "Το όνομα του τρόπου πληρωμής"
 
 msgid "emailTemplate.variable.queuedPayment.itemCost"
-msgstr ""
+msgstr "Το ποσό πληρωμής"
 
 msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
-msgstr ""
+msgstr "Το νόμισμα του ποσού πληρωμής, όπως πχ το δολάριο ΗΠΑ"
 
 msgid "emailTemplate.variable.site.siteTitle"
-msgstr ""
+msgstr "Το όνομα του ιστότοπου όταν φιλοξενούνται περισσότερα από ένα περιοδικά"
 
 msgid "emailTemplate.variable.subscription.subscriberDetails"
 msgstr ""
+"Το όνομα, η ιδιότητα, ο αριθμός τηλεφώνου και η διεύθυνση ηλεκτρονικού "
+"ταχυδρομείου του συνδρομητή"
 
 msgid "emailTemplate.variable.subscription.subscriptionSignature"
-msgstr ""
+msgstr "Τα στοιχεία επικοινωνίας του διαχειριστή συνδρομών"
 
 msgid "emailTemplate.variable.subscription.subscriptionUrl"
-msgstr ""
+msgstr "Η διεύθυνση URL της σελίδας εγγραφής"
 
 msgid "emailTemplate.variable.subscription.expiryDate"
-msgstr ""
+msgstr "Η ημερομηνία λήξης της συνδρομής"
 
 msgid "emailTemplate.variable.subscription.subscriptionType"
 msgstr ""
+"Μια σύνοψη του τύπου, του ονόματος, της διάρκειας και του κόστους της "
+"συνδρομής"
 
 msgid "emailTemplate.variable.subscription.membership"
-msgstr ""
+msgstr "Πληροφορίες σχετικά με τη συνδρομή του συνδρομητή"
 
 msgid "emailTemplate.variable.subscription.institutionName"
-msgstr ""
+msgstr "Το όνομα του ιδρύματος που κάνει συνδρομή"
 
 msgid "emailTemplate.variable.subscription.institutionMailingAddress"
-msgstr ""
+msgstr "Η ταχυδρομική διεύθυνση του ιδρύματος που κάνει συνδρομή"
 
 msgid "emailTemplate.variable.subscription.domain"
-msgstr ""
+msgstr "Το όνομα τομέα των έγκυρων διευθύνσεων IP για αυτή τη συνδρομή"
 
 msgid "emailTemplate.variable.subscription.ipRanges"
-msgstr ""
+msgstr "Το έγκυρο εύρος διευθύνσεων IP για αυτή τη συνδρομή"
 
 msgid "emailTemplate.variable.queuedPaymentUrl"
 msgstr ""
+"Διεύθυνση URL της σελίδας όπου ο συγγραφέας μπορεί να πραγματοποιήσει την "
+"πληρωμή"
 
 msgid "emailTemplate.variable.submissionGuidelinesUrl"
-msgstr ""
+msgstr "Διεύθυνση URL της σελίδας που περιέχει τις οδηγίες υποβολής"
 
 msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
 msgstr ""
+"Ο σύνδεσμος προς τη σελίδα με τα στατιστικά στοιχεία των δημοσιευμένων άρθρων"
 
 msgid "emailTemplate.variable.issueId"
-msgstr ""
+msgstr "Το ID του τεύχους"
 
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
+"Αυτό το email αποστέλλεται αυτόματα κάθε μήνα στους επιμελητές και τους "
+"διαχειριστές περιοδικών, προκειμένου να τους παρέχει μια γενική εικόνα της "
+"κατάστασης του συστήματος."
 
 msgid "mailable.validateEmailContext.name"
-msgstr ""
+msgstr "Επαλήθευση διεύθυνσης email (Εγγραφή στο περιοδικό)"
 
 msgid "mailable.validateEmailContext.description"
 msgstr ""
+"Αυτό το μήνυμα ηλεκτρονικού ταχυδρομείου αποστέλλεται αυτόματα σε έναν νέο "
+"χρήστη κατά την εγγραφή του στο περιοδικό, όταν οι ρυθμίσεις απαιτούν την "
+"επικύρωση της διεύθυνσης ηλεκτρονικού ταχυδρομείου."
 
 msgid "doi.displayName"
 msgstr "DOI"
 
 msgid "doi.description"
 msgstr ""
+"Αυτό το πρόσθετο επιτρέπει την εκχώρηση αναγνωριστικών ψηφιακών αντικειμένων "
+"(DOI) σε τεύχη, άρθρα και τυπογραφικά δοκίμια στο OJS."
 
 msgid "doi.readerDisplayName"
 msgstr "DOI"
@@ -2302,183 +2343,242 @@ msgstr "DOIs"
 
 msgid "doi.manager.settings.description"
 msgstr ""
+"Παρακαλούμε ρυθμίστε το πρόσθετο του DOI ώστε να μπορείτε να διαχειρίζεστε "
+"και να χρησιμοποιείτε τα DOIs στο OJS:"
 
 msgid "doi.manager.settings.explainDois"
 msgstr ""
+"Παρακαλώ επιλέξτε τα δημοσιευμένα αντικείμενα στα οποία θα αποδοθούν "
+"Αναγνωριστικοί Κωδικοί Ψηφιακών Αντικειμένων (DOI):"
 
 msgid "doi.manager.settings.enableRepresentationDoi"
-msgstr ""
+msgstr "Τυπογραφικά Δοκίμια Άρθρων"
 
 msgid "doi.manager.settings.galleysWithDescription"
-msgstr ""
+msgstr "Τυπογραφικά Δοκίμια Άρθρων, όπως πχ ένα δημοσιευμένο αρχείο PDF"
 
 msgid "doi.manager.settings.doiPrefix"
-msgstr ""
+msgstr "Πρόθεμα DOI"
 
 msgid "doi.manager.settings.doiPrefixPattern"
-msgstr ""
+msgstr "Το πρόθεμα DOI είναι υποχρεωτικό και πρέπει να έχει την μορφή 10.xxxx."
 
 msgid "doi.manager.settings.doiSuffixPattern"
 msgstr ""
+"Εισάγετε ένα προσαρμοσμένο πρότυπο κατάληξης για κάθε τύπο έκδοσης. Το "
+"προσαρμοσμένο πρότυπο κατάληξης μπορεί να χρησιμοποιεί τα ακόλουθα σύμβολα "
+"για τη δημιουργία μιας κατάληξης:<br><br> <code>%j</code> Αρχικά "
+"περιοδικού<br> <code>%v</code> Τόμος τεύχους<br> <code>%i</code> Αριθμός "
+"τεύχους<br> <code>% Y</code> Έτος έκδοσης<br> <code>%a</code> Αναγνωριστικό "
+"άρθρου<br> <code>%g</code> Αναγνωριστικό τυπογραφικού δοκιμίου<br> <code>%f</"
+"code> Αναγνωριστικό αρχείου<br> <code>%p</code> Αριθμός σελίδας<br> "
+"<code>%x</code> Προσαρμοσμένος αναγνωριστικός κωδικός<br><br> Λάβετε υπόψη "
+"ότι τα προσαρμοσμένα πρότυπα καταλήξεων συχνά δημιουργούν προβλήματα κατά τη "
+"δημιουργία και την καταχώριση των DOI. Όταν χρησιμοποιείτε ένα προσαρμοσμένο "
+"πρότυπο κατάληξης, βεβαιωθείτε ότι οι επιμελητές μπορούν να δημιουργήσουν "
+"DOI και να τα καταχωρίσουν σε έναν οργανισμό καταχώρισης όπως το Crossref. "
 
 msgid "doi.manager.settings.doiSuffixPattern.example"
 msgstr ""
+"Παραδείγματος χάριν, το vol%viss%ipp%p θα δημιουργούσε ένα DOI της μορφής 10."
+"1234/vol3iss2pp230"
 
 msgid "doi.manager.settings.doiSuffixPattern.issues"
-msgstr ""
+msgstr "για τεύχη"
 
 msgid "doi.manager.settings.doiSuffixPattern.submissions"
-msgstr ""
+msgstr "για άρθρα"
 
 msgid "doi.manager.settings.doiSuffixPattern.representations"
-msgstr ""
+msgstr "για τυπογραφικά δοκίμια"
 
 msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
-msgstr ""
+msgstr "Παρακαλώ εισάγετε το μοτίβο κατάληξης του DOI για τα τεύχη."
 
 msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
-msgstr ""
+msgstr "Παρακαλώ εισάγετε το μοτίβο κατάληξης του DOI για τα άρθρα."
 
 msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
 msgstr ""
+"Παρακαλώ εισάγετε το μοτίβο κατάληξης του DOI για τα τυπογραφικά δοκίμια."
 
 msgid "doi.manager.settings.doiReassign"
-msgstr ""
+msgstr "Εκ νέου εκχώρηση DOIs"
 
 msgid "doi.manager.settings.doiReassign.description"
 msgstr ""
+"Εάν αλλάξετε τις ρυθμίσεις των DOI, τα DOI που έχουν ήδη εκχωρηθεί δεν θα "
+"επηρεαστούν. Μόλις αποθηκευτούν οι ρυθμίσεις των DOI, χρησιμοποιήστε αυτό το "
+"κουμπί για να διαγράψετε όλα τα υπάρχοντα DOI, ώστε οι νέες ρυθμίσεις να "
+"εφαρμοστούν στα υπάρχοντα αντικείμενα."
 
 msgid "doi.manager.settings.doiReassign.confirm"
-msgstr ""
+msgstr "Θέλετε σίγουρα να διαγράψετε όλα τα υπάρχοντα DOIs;"
 
 msgid "doi.manager.settings.doiAssignJournalWide"
-msgstr ""
+msgstr "Εκχώρηση DOIs"
 
 msgid "doi.manager.settings.doiAssignJournalWide.description"
 msgstr ""
+"Εκχωρήστε κωδικούς DOI σε όλα τα δημοσιευμένα αντικείμενα του περιοδικού στα "
+"οποία δεν έχουν εκχωρηθεί κωδικοί DOI. Αυτή η ενέργεια δεν μπορεί να "
+"χρησιμοποιηθεί σε συνδυασμό με τη ρύθμιση για μεμονωμένες καταλήξεις. Εάν "
+"έχετε τροποποιήσει τη ρύθμιση DOI παραπάνω, αποθηκεύστε τις αλλαγές σας πριν "
+"ξεκινήσετε αυτή την ενέργεια. Η εκχώρηση κωδικών DOI ενδέχεται να διαρκέσει "
+"αρκετό χρόνο, ανάλογα με τον αριθμό των δημοσιευμένων αντικειμένων στο "
+"περιοδικό."
 
 msgid "doi.manager.settings.doiAssignJournalWide.confirm"
 msgstr ""
+"Θέλετε σίγουρα να εκχωρήσετε DOIs σε όλα τα δημοσιευμένα αντικείμενα που δεν "
+"έχουν ήδη DOI;"
 
 msgid "doi.manager.settings.registrationAgency"
-msgstr ""
+msgstr "Φορέας Καταχώρισης"
 
 msgid "doi.manager.settings.registrationAgency.description"
 msgstr ""
+"Παρακαλώ επιλέξτε τον φορέα καταχώρισης που επιθυμείτε να χρησιμοποιήσετε "
+"κατά την καταχώριση των DOIs."
 
 msgid "doi.manager.settings.registrationAgency.none"
-msgstr ""
+msgstr "Κανένας"
 
 msgid "doi.editor.doi"
-msgstr ""
+msgstr "DOI"
 
 msgid "doi.editor.doi.description"
-msgstr ""
+msgstr "Το DOI πρέπει να ξεκινάει με {$prefix}."
 
 msgid "doi.editor.doi.assignDoi"
-msgstr ""
+msgstr "Ανάθεση"
 
 msgid "doi.editor.doiObjectTypeIssue"
-msgstr ""
+msgstr "τεύχος"
 
 msgid "doi.editor.doiObjectTypeSubmission"
-msgstr ""
+msgstr "άρθρο"
 
 msgid "doi.editor.doiObjectTypeRepresentation"
-msgstr ""
+msgstr "τυπογραφικό δοκίμιο"
 
 msgid "doi.editor.customSuffixMissing"
-msgstr ""
+msgstr "Το DOI δεν μπορεί να εκχωρηθεί, καθώς λείπει η προσαρμοσμένη κατάληξη."
 
 msgid "doi.editor.missingIssue"
 msgstr ""
+"Δεν μπορείτε να δημιουργήσετε DOI μέχρι να αντιστοιχιστεί η συγκεκριμένη "
+"δημοσίευση με κάποιο τεύχος."
 
 msgid "doi.editor.missingParts"
 msgstr ""
+"Δεν είναι δυνατή η δημιουργία ενός DOI, καθώς λείπουν στοιχεία από ένα ή "
+"περισσότερα τμήματα του μοτίβου για το DOI. Ίσως χρειαστεί να αντιστοιχίσετε "
+"τη δημοσίευση σε ένα τεύχος, να ορίσετε ένα αναγνωριστικό εκδότη ή να "
+"εισαγάγετε αριθμούς σελίδων."
 
 msgid "doi.editor.patternNotResolved"
 msgstr ""
+"Το DOI δεν μπορεί να εκχωρηθεί, καθώς περιέχει ένα μοτίβο που δεν επιλύεται."
 
 msgid "doi.editor.canBeAssigned"
 msgstr ""
+"Αυτό που βλέπετε είναι μια προεπισκόπηση του DOI. Επιλέξτε το πλαίσιο "
+"ελέγχου και αποθηκεύστε τη φόρμα για να εκχωρήσετε το DOI."
 
 msgid "doi.editor.assigned"
-msgstr ""
+msgstr "Το DOI έχει εκχωρηθεί σε αυτό το {$pubObjectType}."
 
 msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
 msgstr ""
+"Το συγκεκριμένο DOI χρησιμοποιείται ήδη για ένα άλλο δημοσιευμένο στοιχείο. "
+"Παρακαλώ εισάγετε ένα μοναδικό DOI για κάθε στοιχείο."
 
 msgid "doi.editor.clearObjectsDoi"
-msgstr ""
+msgstr "Καθαρισμός"
 
 msgid "doi.editor.clearObjectsDoi.confirm"
-msgstr ""
+msgstr "Θέλετε σίγουρα να διαγράψετε το υπάρχον DOI;"
 
 msgid "doi.editor.clearIssueObjectsDoi"
-msgstr ""
+msgstr "Καθαρισμός των DOI για τα αντικείμενα των τευχών"
 
 msgid "doi.editor.clearIssueObjectsDoi.confirm"
 msgstr ""
+"Θέλετε σίγουρα να διαγράψετε τα υπάρχοντα DOIs για τα αντικείμενα των τευχών;"
 
 msgid "doi.editor.clearIssueObjectsDoi.description"
 msgstr ""
+"Χρησιμοποιήστε την παρακάτω επιλογή για να διαγράψετε τους κωδικούς DOI όλων "
+"των αντικειμένων (άρθρων και τυπογραφικών δοκιμίων) που έχουν "
+"προγραμματιστεί για αυτό το τεύχος."
 
 msgid "doi.editor.assignDoi"
-msgstr ""
+msgstr "Εκχώρηση του DOI {$pubId} σε αυτό το {$pubObjectType}"
 
 msgid "doi.editor.assignDoi.emptySuffix"
-msgstr ""
+msgstr "Το DOI δεν μπορεί να εκχωρηθεί γιατί λείπει η προσαρμοσμένη κατάληξη."
 
 msgid "doi.editor.assignDoi.pattern"
 msgstr ""
+"Το DOI {$pubId} δεν μπορεί να εκχωρηθεί καθώς περιέχει ένα μοτίβο που δεν "
+"μπορεί να επιλυθεί."
 
 msgid "doi.editor.assignDoi.assigned"
 msgstr ""
+"Το DOI {$pubId} εκχωρήθηκε επιτυχώς. Για να το επεξεργαστείτε, επισκεφθείτε "
+"την <a href=\"{$doiManagementLink}\">Σελίδα Διαχείρισης DOI </a>."
 
 msgid "doi.editor.assignDoi.toBeAssigned"
-msgstr ""
+msgstr "Το DOI {$pubId} θα εκχωρηθεί κατά την δημοσίευση."
 
 msgid "doi.editor.missingPrefix"
-msgstr ""
+msgstr "Το DOI πρέπει να ξεκινάει με {$doiPrefix}."
 
 msgid "doi.editor.preview.publication"
-msgstr ""
+msgstr "Το DOI για αυτή τη δημοσίευση θα είναι {$doi}."
 
 msgid "doi.editor.preview.publication.none"
-msgstr ""
+msgstr "Δεν έχει εκχωρηθεί DOI σε αυτή τη δημοσίευση."
 
 msgid "doi.editor.preview.galleys"
-msgstr ""
+msgstr "Τυπογραφικό Δοκίμιο: {$galleyLabel}"
 
 msgid "doi.editor.preview.objects"
-msgstr ""
+msgstr "Αντικείμενο"
 
 msgid "api.galley.403.publicationDidNotMatch"
 msgstr ""
+"Το τυπογραφικό δοκίμιο που ζητήσατε δεν είναι μέρος αυτής της δημοσίευσης."
 
 msgid "api.galley.403.canEditPublishedDoi"
 msgstr ""
+"Μόνο τα DOIs μπορούν να τροποποιηθούν μετά τη δημοσίευση ενός άρθρου ή ενός "
+"τυπογραφικού δοκιμίου"
 
 msgid "api.issue.400.invalidDoi"
-msgstr ""
+msgstr "Το υποβληθέν DOI δεν είναι έγκυρο"
 
 msgid "api.issue.403.canEditPublishedDoi"
-msgstr ""
+msgstr "Μόνο τα DOIs μπορούν να τροποποιηθούν μετά τη δημοσίευση"
 
 msgid "api.issue.404.issuesNotFound"
-msgstr ""
+msgstr "Τα τεύχη που ζητήσατε δεν ήταν δυνατό να εντοπιστούν"
 
 msgid "doi.manager.submissionDois"
-msgstr ""
+msgstr "DOIs Άρθρων"
 
 msgid "doi.manager.issueDois"
-msgstr ""
+msgstr "DOIs Τεύχους"
 
 msgid "mailable.decision.initialDecline.notifyAuthor.description"
 msgstr ""
+"Με αυτό το μήνυμα ηλεκτρονικού ταχυδρομείου ενημερώνεται ο συγγραφέας ότι η "
+"υποβολή του απορρίπτεται, πριν από το στάδιο της αξιολόγησης, επειδή δεν "
+"πληροί τις προϋποθέσεις για δημοσίευση στο περιοδικό."
 
 msgid "manager.institutions.noContext"
-msgstr ""
+msgstr "Αυτό το περιοδικό του ιδρύματος δεν μπόρεσε να βρεθεί."
 
 msgid "mailable.subscriptionNotify.name"
 msgstr ""
@@ -2490,7 +2590,7 @@ msgstr ""
 "Παρέχει τον σύνδεσμο του περιοδικού καθώς και οδηγίες πρόσβασης σε αυτό."
 
 msgid "mailable.subscriptionExpiresSoon.name"
-msgstr ""
+msgstr "Η Συνδρομή Λήγει Σύντομα"
 
 msgid "mailable.subscriptionExpiresSoon.description"
 msgstr ""
@@ -2517,7 +2617,7 @@ msgstr ""
 "αυτό."
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
-msgstr ""
+msgstr "Προμήθεια Ατομικής Συνδρομής"
 
 msgid "mailable.subscriptionPurchaseIndividual.description"
 msgstr ""
@@ -2526,7 +2626,7 @@ msgstr ""
 "καθώς και έναν γρήγορο σύνδεσμο πρόσβασης στη συνδρομή."
 
 msgid "mailable.subscriptionPurchaseInstitutional.name"
-msgstr ""
+msgstr "Προμήθεια Ιδρυματικής Συνδρομής"
 
 msgid "mailable.subscriptionPurchaseInstitutional.description"
 msgstr ""
@@ -2535,7 +2635,7 @@ msgstr ""
 "συνδρομή καθώς και έναν γρήγορο σύνδεσμο πρόσβασης στη συνδρομή."
 
 msgid "mailable.subscriptionRenewIndividual.name"
-msgstr ""
+msgstr "Ανανέωση Ατομικής Συνδρομής"
 
 msgid "mailable.subscriptionRenewIndividual.description"
 msgstr ""
@@ -2544,7 +2644,7 @@ msgstr ""
 "καθώς και έναν γρήγορο σύνδεσμο πρόσβασης στη συνδρομή."
 
 msgid "mailable.subscriptionRenewInstitutional.name"
-msgstr ""
+msgstr "Ανανέωση Ιδρυματικής Συνδρομής"
 
 msgid "mailable.subscriptionRenewInstitutional.description"
 msgstr ""
@@ -2553,7 +2653,7 @@ msgstr ""
 "συνδρομή καθώς και έναν γρήγορο σύνδεσμο πρόσβασης στη συνδρομή."
 
 msgid "mailable.openAccessNotify.name"
-msgstr ""
+msgstr "Ειδοποίηση Ανοιχτής Πρόσβασης"
 
 msgid "mailable.openAccessNotify.description"
 msgstr ""
@@ -2561,31 +2661,41 @@ msgstr ""
 "να λαμβάνουν ενημερώσεις όταν κάποιο τεύχος διατίθεται με ανοικτή πρόσβαση."
 
 msgid "mailable.issuePublishNotify.name"
-msgstr ""
+msgstr "Ειδοποίηση Δημοσίευσης Τεύχους"
 
 msgid "mailable.issuePublishNotify.description"
 msgstr ""
+"Αυτό το email αποστέλλεται αυτόματα στους εγγεγραμμένους χρήστες όταν "
+"δημοσιεύεται ένα νέο τεύχος."
 
 msgid "manager.manageEmails.description"
 msgstr ""
+"Επεξεργασία των μηνυμάτων που στέλνονται μέσω email από αυτό το περιοδικό."
 
 msgid "mailable.layoutComplete.name"
 msgstr ""
 
 msgid "mailable.publicationVersionNotify.name"
-msgstr ""
+msgstr "Δημιουργήθηκε Νέα Έκδοση"
 
 msgid "mailable.publicationVersionNotify.description"
 msgstr ""
+"Αυτό το email ειδοποιεί αυτόματα τους υπεύθυνους επιμελητές όταν "
+"δημιουργείται μια νέα έκδοση της υποβολής."
 
 msgid "mailable.submissionNeedsEditor.description"
 msgstr ""
+"Αυτό το email ειδοποιεί αυτόματα τους διαχειριστές του περιοδικού όταν "
+"δημιουργείται μια νέα υποβολή και δεν έχουν ανατεθεί επιμελητές."
 
 msgid "mailable.paymentRequest.name"
-msgstr ""
+msgstr "Αίτημα Πληρωμής"
 
 msgid "mailable.paymentRequest.description"
 msgstr ""
+"Αυτό το αυτοματοποιημένο μήνυμα ηλεκτρονικού ταχυδρομείου αποστέλλεται στον "
+"συγγραφέα για να ζητηθεί η καταβολή του τέλους δημοσίευσης, όταν η υποβολή "
+"του γίνει αποδεκτή."
 
 #~ msgid "manager.payment.currency"
 #~ msgstr "Νόμισμα"
@@ -2866,3 +2976,28 @@ msgstr ""
 #~ msgid "manager.setup.masthead.success"
 #~ msgstr ""
 #~ "Ενημερώθηκαν οι λεπυομέρειες του κύριου τίτλου αυτού του περιοδικού."
+
+msgid "plugins.importexport.common.error.import.issueGalleyFileMissing"
+msgstr ""
+"Δεν μπορεί να γίνει εισαγωγή του δοκιμίου τυπογραφίας του τεύχους γιατί "
+"λείπει το σχετικό αρχείο."
+
+msgid "manager.setup.contextSummary.description"
+msgstr ""
+"Παραθέστε μια σύντομη περιγραφή του περιοδικού σας, ώστε να δώσετε μια "
+"εικόνα για το περιεχόμενο και τον σκοπό του."
+
+msgid "plugins.importexport.common.error.issueGalleyFileMissing"
+msgstr ""
+"Δεν μπόρεσε να γίνει εξαγωγή του τυπογραφικού δοκιμίου {$id} , το σχετικό "
+"αρχείο δεν βρέθηκε στην διαδρομή \"{$path}\"."
+
+msgid "plugins.importexport.common.error.issueCoverImageMissing"
+msgstr ""
+"Δεν έγινε εξαγωγή της εικόνας εξωφύλλου του τεύχους {$id}, το αρχείο της δεν "
+"βρέθηκε στη διαδρομή \"{$path}\"."
+
+msgid "emailTemplate.variable.issue.issueTableOfContents"
+msgstr ""
+"Ο πίνακας περιεχομένων του τεύχους, όπως ο κατάλογος όλων των σχετικών "
+"υποβολών."

@@ -1,7 +1,7 @@
 # Cyril Kamburov <cc@intermedia.bg>, 2021.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-10-11 19:51+0000\n"
+"PO-Revision-Date: 2026-06-18 08:34+0000\n"
 "Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
 "Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/plugins/"
 "datacite/bg/>\n"
@@ -68,12 +68,10 @@ msgstr ""
 "в зависимост от конфигурацията на cronjob на сървъра). Можете да проверите "
 "за всички нерегистрирани DOI."
 
-#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testMode.description"
 msgstr ""
-"Използвайте тестовия префикс DataCite за регистрация на DOI. Моля, не "
-"забравяйте да премахнете тази опция при приключване на тестовете и "
-"преминаване в работен режим."
+"Използване на тестовата система на DataCite за регистрация на DOI. Моля, не "
+"забравяйте да премахнете тази опция при преминаване в работен режим."
 
 msgid "plugins.importexport.datacite.settings.form.testUsername"
 msgstr "Тестов Потребител"
@@ -84,11 +82,10 @@ msgstr "Тестова Парола"
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefix"
 msgstr "Тестов DOI префикс"
 
-#, fuzzy
 msgid "plugins.importexport.datacite.settings.form.testDOIPrefixRequired"
 msgstr ""
-"Изисква се тестов DOI префикс, когато е избрано „използване на тестов "
-"префикс за DOI регистрация“."
+"Изисква се тестов DOI префикс, когато е избрано „използване тестовата "
+"система за DOI регистрация“."
 
 msgid "plugins.importexport.datacite.senderTask.name"
 msgstr "Задача за автоматична регистрация на DataCite"

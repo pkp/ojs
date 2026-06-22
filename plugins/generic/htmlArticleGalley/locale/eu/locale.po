@@ -1,11 +1,10 @@
-# HIZBEA Euskaltzaindia <hizbea@euskaltzaindia.eus>, 2025.
 # Informatikaria <informatikaria@ueu.eus>, 2026.
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2026-05-27 08:22+0000\n"
 "Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/"
-"generic-dublinCoreMeta/eu/>\n"
+"generic-htmlArticleGalley/eu/>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,10 +12,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.18.2\n"
 
-msgid "plugins.generic.dublinCoreMeta.name"
-msgstr "Dublin Core indexazio plugina"
+msgid "plugins.generic.htmlArticleGalley.displayName"
+msgstr "HTML artikuluen galerada"
 
-msgid "plugins.generic.dublinCoreMeta.description"
-msgstr ""
-"Plugin honek Dublin Core meta-etiketak txertatzen ditu artikuluen bistetan, "
-"indexazio helburuetarako."
+msgid "plugins.generic.htmlArticleGalley.description"
+msgstr "Plugin honek HTML artikulu-galeraden bistaratzea ahalbidetzen du."
