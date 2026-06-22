@@ -1172,9 +1172,6 @@ msgstr ""
 "\"{$competingInterestGuidelinesUrl}\"> «Erklæring om interessekonflikter»</"
 "a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Interessekonflikter"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "Klikk på ikonet for å skrive eller lime inn fagfellevurderingen."
 

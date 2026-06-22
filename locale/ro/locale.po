@@ -1170,9 +1170,6 @@ msgstr ""
 "cercetare (see <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Interesele concurente"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Faceți clic pe pictogramă pentru a introduce (sau a lipi) recenzia dvs. "

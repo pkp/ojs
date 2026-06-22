@@ -994,9 +994,6 @@ msgstr ""
 msgid "reviewer.article.enterCompetingInterests"
 msgstr ""
 
-msgid "reviewer.competingInterests"
-msgstr ""
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 

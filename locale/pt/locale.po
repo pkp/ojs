@@ -1178,9 +1178,6 @@ msgstr ""
 "\"{$competingInterestGuidelinesUrl}\">Política de Conflito de Interesses</"
 "a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Conflito de Interesses"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "Clique no ícone para inserir (ou colar) a revisão da submissão."
 

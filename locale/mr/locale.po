@@ -1683,9 +1683,6 @@ msgstr ""
 "target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\""
 ">संभाव्य हितसंबंधांबाबत धोरण</a> पहा)."
 
-msgid "reviewer.competingInterests"
-msgstr "संभाव्य हितसंबंध"
-
 msgid "reviewer.article.uploadFile"
 msgstr ""
 "याशिवाय, तुम्ही संपादक आणि/किंवा लेखकाच्या अवलोकनार्थ आणखी फाईल्स संक्रमित "

@@ -1171,9 +1171,6 @@ msgstr ""
 "(zobacz <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">zasady</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Zainteresowania badawcze"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "Kliknij, aby wprowadzić (lub wkleić) recenzję tekstu."
 

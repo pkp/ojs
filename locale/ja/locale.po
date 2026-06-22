@@ -1136,9 +1136,6 @@ msgstr ""
 "\"action\" href=\"{$competingInterestGuidelinesUrl}\">CIポリシー</a>を参"
 "照）。"
 
-msgid "reviewer.competingInterests"
-msgstr "利害の競合"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "アイコンをクリックして、この投稿物に対するコメントを入力してください。"
 

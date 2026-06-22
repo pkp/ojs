@@ -584,9 +584,6 @@ msgstr "Dəyərləndiriləcək müraciətlər"
 msgid "reviewer.article.notifyEditorA"
 msgstr "Məqalə redaktorunu məlumatlandırın"
 
-msgid "reviewer.competingInterests"
-msgstr "Maraqların ziddiyyəti"
-
 msgid "reviewer.article.selectRecommendation.byEditor"
 msgstr "Gözdən keçirmə təklifini incələyin və ya tənzimləyin"
 

@@ -1186,9 +1186,6 @@ msgstr ""
 "\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">"
 "\"Interes-gatazketako&nbsp;politika\"</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Interes-gatazka"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Egin klik ikonoan bidalketari egin diozun ebaluazioa idazteko (edo "

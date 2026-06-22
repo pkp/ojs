@@ -1165,9 +1165,6 @@ msgstr ""
 "bildiriniz (bkz. <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Politikası</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Çıkar Çelişkisi"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Makaleyle ilgili görüş ve yorumlarınızı editöre iletmek için simgeye "

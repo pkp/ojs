@@ -1195,9 +1195,6 @@ msgstr ""
 "recherche (voir <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">Politique de conflits d'intérêts</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Intérêts divergents"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Cliquer sur l'icône pour saisir (ou coller) votre évaluation de cette "

@@ -1092,9 +1092,6 @@ msgstr ""
 "声明您是否有这方面的研究利益冲突 (参阅 <a target=\"_new\" class=\"action\" "
 "href=\"{$competingInterestGuidelinesUrl}\">CI&nbsp;方针</a>)。"
 
-msgid "reviewer.competingInterests"
-msgstr "利益冲突"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "点图标击后，输入（或粘贴）您对本稿件的审稿意见。"
 

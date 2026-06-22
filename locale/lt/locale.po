@@ -1166,9 +1166,6 @@ msgstr ""
 "šiuo tyrimu (žr. <a target=\"_new\" class=\"action\" href=\""
 "{$competingInterestGuidelinesUrl}\">Konkuruojančių interesų politiką</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Dominančios sritys"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Norėdami įvesti (arba įkelti) šio straipsnio recenziją, paspauskite "

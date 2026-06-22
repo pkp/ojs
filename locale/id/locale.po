@@ -1157,9 +1157,6 @@ msgstr ""
 "(lihat<a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Konflik Kepentingan"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "Klik di ikon untuk memasukkan review Anda terhadap naskah ini."
 

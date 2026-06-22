@@ -1139,9 +1139,6 @@ msgstr ""
 "\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">CI&nbsp;"
 "السياسة</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "مصالح تنافسية"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "أنقر الإيقونة للدخول (أو إلصق) تقييمك لطلب النشر هذا."
 

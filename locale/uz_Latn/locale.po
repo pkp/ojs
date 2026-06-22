@@ -1173,9 +1173,6 @@ msgstr ""
 "(qarang: <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\"> CI &nbsp; siyosati </a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Raqobat manfaatlari"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Ushbu taqdimot haqidagi sharhingizni kiritish (yoki joylashtirish) uchun "

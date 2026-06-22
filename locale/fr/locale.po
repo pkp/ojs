@@ -1189,9 +1189,6 @@ msgstr ""
 "recherche (voir <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">Politique de CI</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Conflits d'intérêts"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Cliquer sur l'icône pour saisir (ou coller) votre évaluation de cette "

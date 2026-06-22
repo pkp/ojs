@@ -1095,9 +1095,6 @@ msgstr "Click on file names to download and review (on screen or by printing) th
 msgid "reviewer.article.enterCompetingInterests"
 msgstr "Declare whether or not you have competing interests with regard to this research (see <a target=\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Competing Interests"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "Click on icon to enter (or paste) your review of this submission."
 

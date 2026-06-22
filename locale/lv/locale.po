@@ -1159,9 +1159,6 @@ msgstr ""
 "(skatīt <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">IK&nbsp;politika</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Interešu konflikts"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Noklikšķiniet uz ikonas, lai ievadītu (vai ielīmētu) savu recenziju par šo "

@@ -1178,9 +1178,6 @@ msgstr ""
 "onderzoek (zie <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">SB Beleid</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Strijdige belangen"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Klik op het icoon om uw review van deze inzending in voeren (of te plakken)."

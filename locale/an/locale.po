@@ -1289,9 +1289,6 @@ msgstr ""
 "investigación (consulte <a target=\"_new\" class=\"action\" href=\""
 "{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Conflicto d'intereses"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "Faiga clic en l'icono pa escribir (u apegar) la revisión d'este ninvio."
 

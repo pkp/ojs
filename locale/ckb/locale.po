@@ -1145,9 +1145,6 @@ msgstr ""
 "یاخود نا(see <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "بەرژەوەندییە ڕکابەرەکان"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "کلیک لەسەر ئەم ئایکۆنە بکە بۆ نوسینی هەڵسەنگاندنەکەت."
 

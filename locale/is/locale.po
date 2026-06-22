@@ -1165,9 +1165,6 @@ msgstr ""
 "tengslum við þessa rannsókn (sjá <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Hagsmunaárekstrar"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Smelltu á merkið til að slá inn (eða afrita hingað) ritrýni fyrir þessa "

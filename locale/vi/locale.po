@@ -1172,9 +1172,6 @@ msgstr ""
 "này (xem <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Xung đột lợi ích"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Nhấp vào biểu tượng để nhập (hoặc dán) đánh giá của bạn về bài gửi này."

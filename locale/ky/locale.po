@@ -1433,9 +1433,6 @@ msgstr "кароо жүргүзөрүңүздү билдирүү үчүн."
 msgid "reviewer.article.consultGuidelines"
 msgstr "Эгер кароо жүргүзсөңүз, төмөнкү Рецензент көрсөтмөлөрүн караңыз."
 
-msgid "reviewer.competingInterests"
-msgstr "Атаандаш кызыкчылыктар"
-
 msgid "reviewer.article.uploadFile"
 msgstr ""
 "Мындан тышкары, редактор жана/же автор карап чыгышы үчүн файлдарды жүктөй "
