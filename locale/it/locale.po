@@ -1182,9 +1182,6 @@ msgstr ""
 "target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Interessi concorrenziali"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "Fai click sull'icona per inserire il commento a questa proposta."
 

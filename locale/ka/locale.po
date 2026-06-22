@@ -1161,9 +1161,6 @@ msgstr ""
 "(იხ. <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">CI პოლიტიკა</a> )."
 
-msgid "reviewer.competingInterests"
-msgstr "ინტერესთა კონფლიქტი"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "დააჭირეთ ხატულას (ან ჩასვით) ამ სტატიაზე რეცენზიის შესატანად."
 

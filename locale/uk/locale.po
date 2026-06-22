@@ -1180,9 +1180,6 @@ msgstr ""
 "\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">Політика щодо конфлікту інтересів</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Конфлікт інтересів"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Натисніть на зображенні, щоб ввести (або вставити) Вашу рецензію на це "

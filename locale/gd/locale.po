@@ -1200,9 +1200,6 @@ msgstr ""
 "(faic <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">poileasaidh na còmhstri ùidhean</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Còmhstri ùidhean"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Briog air an ìomhaigheag airson do lèirmheas air an tagradh seo a chur a-"

@@ -1204,9 +1204,6 @@ msgstr ""
 "\"action\" href=\"{$competingInterestGuidelinesUrl}\">Πολιτική&nbsp;"
 "Αντικρουόμενων&nbsp;Συμφερόντων</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Αντικρουόμενα συμφέροντα"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Πατήστε στο εικονίδιο για να εισάγετε (ή να επικολλήσετε) την αξιολόγησή σας "

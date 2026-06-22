@@ -1145,9 +1145,6 @@ msgstr ""
 " class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">смернице о "
 "сукобу интереса</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Сукоб  интереса"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Кликните на иконицу да бисте унели или копирали текст Ваше рецензије везан "

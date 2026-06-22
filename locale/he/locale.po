@@ -1094,9 +1094,6 @@ msgstr ""
 "class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">מדיניות "
 "CI&nbsp;</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "ניגודי אינטרסים"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "לחץ על האיקון כדי להזין (או להדביק) את הסקירה שלך על הגשה זו."
 

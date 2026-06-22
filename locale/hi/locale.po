@@ -1339,9 +1339,6 @@ msgstr ""
 "target='_new' class='action' "
 "href='{$competingInterestGuidelinesUrl}'>CI Policy</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "प्रतिस्पर्धी रुचियां"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "इस सबमिशन की अपनी समीक्षा दर्ज करने (या पेस्ट) करने के लिए आइकन पर क्लिक करें।"
 

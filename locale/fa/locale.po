@@ -1130,9 +1130,6 @@ msgstr ""
 "برای اطلاعات بیشتر لطفاً به آدرس زیر مراجعه کنید:  <a target=\"_new\" class="
 "\"action\" href=\"{$competingInterestGuidelinesUrl}\">سیاست تضاد منافع</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "تضاد منافع"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "بر روی آیکون کلیک کرده و سپس نتیجه داوری خود را در مورد این مقاله وارد کنید"

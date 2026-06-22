@@ -1191,9 +1191,6 @@ msgstr ""
 "\"{$competingInterestGuidelinesUrl}\">Ръководство за попълване на Декларация "
 "за конфликт на интереси</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Конкурентни интереси"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Щракнете върху иконата, за да въведете (или поставите) своята рецензия на "

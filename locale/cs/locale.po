@@ -1162,9 +1162,6 @@ msgstr ""
 "(viz <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\"> Pravidla upravující střet zájmů</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Střet zájmů"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Pro vložení (nebo nakopírování) Vaší recenze tohoto příspěvku klikněte na "

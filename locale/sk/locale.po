@@ -1158,9 +1158,6 @@ msgstr ""
 "\"{$competingInterestGuidelinesUrl}\"> Pravidlá upravujúce konflikt záujmov</"
 "a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Konflikt záujmov"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Pre vloženie (alebo nakopírovanie) Vašej recenzie tohto príspevku kliknite "

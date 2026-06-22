@@ -1163,9 +1163,6 @@ msgstr ""
 "istraživanje (vidi <a target=\"_new\" class=\"action\" href=\""
 "{$competingInterestGuidelinesUrl}\">smernice o sukobu interesa</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Sukob interesa"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Kliknite na ikonicu da biste unijeli ili kopirali tekst Vaše recenzije vezan "

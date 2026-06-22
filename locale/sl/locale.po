@@ -1151,9 +1151,6 @@ msgstr ""
 "(poglej <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">Politika nasprotujočih interesov</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Nasprotujoči interesi"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "Kliknite na ikono za vpis vaše recenzije tega prispevka."
 

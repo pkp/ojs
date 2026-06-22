@@ -955,9 +955,6 @@ msgstr ""
 "vt <a target=\"_new\" class=\"action\" href=\""
 "{$competingInterestGuidelinesUrl}\">CI&nbsp;Huvide konflikti poliitika</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Huvide konflikt"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Klõpsake ikoonil, et sisestada (või kleepida) oma retsensioon esitatud "

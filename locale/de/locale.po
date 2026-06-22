@@ -1203,9 +1203,6 @@ msgstr ""
 "\"{$competingInterestGuidelinesUrl}\">Richtlinien für Interessenkonflikte</"
 "a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Interessenkonflikte"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Bitte klicken Sie auf das Symbol, um Ihr Gutachten zu diesem Beitrag "

@@ -1167,9 +1167,6 @@ msgstr ""
 "kapcsolatban (lásd <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Összeférhetetlenség"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Kattintson az ikonra, hogy begépelhesse (vagy beillessze) ehhez az anyaghoz "

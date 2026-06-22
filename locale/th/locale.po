@@ -1146,9 +1146,6 @@ msgstr ""
 "\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\""
 ">นโยบายผลประโยชน์ทับซ้อน (CI&nbsp;Policy)</a>)"
 
-msgid "reviewer.competingInterests"
-msgstr "ผลประโยชน์ทับซ้อน"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "คลิกที่ไอคอนเพื่อป้อน (หรือวาง) การพิจารณาของคุณสำหรับการส่งบทความนี้"
 

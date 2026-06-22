@@ -1186,9 +1186,6 @@ msgstr ""
 "\"{$competingInterestGuidelinesUrl}\">Руководство по заполнению Декларации о "
 "конфликте интересов</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Конфликт интересов"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Щелкните на значке, чтобы ввести (или вставить) Вашу рецензию на эту статью."

@@ -1181,9 +1181,6 @@ msgstr ""
 "target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">Sidonnaisuuksien ilmoittaminen</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Sidonnaisuudet"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Klikkaa kuvaketta syöttääksesi (tai liittääksesi) arviosi käsikirjoituksesta."

@@ -1155,9 +1155,6 @@ msgstr ""
 "\"_new\" class=\"action\" href=\"{$competingInterestGuidelinesUrl}\">CI&nbsp;"
 "Policy</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Көзқарастар қарама-қайшылығы"
-
 msgid "reviewer.article.enterReviewA"
 msgstr "Осы мақалаға шолу жасау үшін белгішені басыңыз (немесе қойыңыз)."
 

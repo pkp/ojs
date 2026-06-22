@@ -1174,9 +1174,6 @@ msgstr ""
 "(see <a target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Շահերի բախում"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Սեղմեք պատկերակի վրա՝ մուտքագրելու (կամ տեղադրելու) ձեր գրախոսությունը այս "

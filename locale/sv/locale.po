@@ -1175,9 +1175,6 @@ msgstr ""
 "target=\"_new\" class=\"action\" href="
 "\"{$competingInterestGuidelinesUrl}\">CI&nbsp;Policy</a>)."
 
-msgid "reviewer.competingInterests"
-msgstr "Intressekonflikter"
-
 msgid "reviewer.article.enterReviewA"
 msgstr ""
 "Klicka på ikonen för att skriva eller klistra in din granskning av bidraget."
