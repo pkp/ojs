@@ -1,13 +1,14 @@
 # Tormod Strømme <tormod.stromme@uib.no>, 2022, 2023.
 # Aysa Ekanger <aysa.ekanger@uit.no>, 2023, 2024.
 # Johanna Skaug <johanna.skaug@ub.uio.no>, 2024.
+# Anne-Inger <annrag@oslomet.no>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-02-19 14:37+0000\n"
-"Last-Translator: Aysa Ekanger <aysa.ekanger@uit.no>\n"
+"PO-Revision-Date: 2026-06-09 10:36+0000\n"
+"Last-Translator: Anne-Inger <annrag@oslomet.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/nb_NO/>\n"
-"Language: nb\n"
+"Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -154,7 +155,6 @@ msgstr "Seksjonsinnstillinger"
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} titler"
 
-#, fuzzy
 msgid "catalog.category.heading"
 msgstr "Alle objekter"
 

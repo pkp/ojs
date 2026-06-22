@@ -2,7 +2,7 @@
 # Helgi Sigurbjörnsson <helgi.sigurbjornsson@landsbokasafn.is>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-05-12 12:20+0000\n"
+"PO-Revision-Date: 2026-06-05 13:43+0000\n"
 "Last-Translator: Helgi Sigurbjörnsson <helgi.sigurbjornsson@landsbokasafn.is>"
 "\n"
 "Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/"
@@ -39,7 +39,7 @@ msgid "plugins.importexport.native.results"
 msgstr "Niðurstöður innflutnings"
 
 msgid "plugins.inportexport.native.uploadFile"
-msgstr ""
+msgstr "Vinsamlegast hladdu upp skrá undir „Flytja inn“ til að halda áfram."
 
 msgid "plugins.importexport.native.importComplete"
 msgstr ""

@@ -2,7 +2,7 @@
 # Monika Tylawska <monika.tylawska@gmail.com>, 2025, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-07 12:39+0000\n"
+"PO-Revision-Date: 2026-05-26 05:13+0000\n"
 "Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/author/rue/>\n"
 "Language: rue\n"
@@ -326,3 +326,6 @@ msgstr "Файль по коректі"
 
 msgid "author.article.authorRevisedFile"
 msgstr "Файль автора"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Выбер доцільовый діл для пересланого тексту."

@@ -1,14 +1,14 @@
 # Ricardo Gómez-López <ricardogomezlopez@gmail.com>, 2023, 2025.
 # Josu Acosta <josuacostacalvo@gmail.com>, 2023, 2024.
-# Informatikaria <informatikaria@ueu.eus>, 2024.
+# Informatikaria <informatikaria@ueu.eus>, 2024, 2026.
 # Oihan Odriozola <oodriozola@euskaltzaindia.eus>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:21+00:00\n"
-"PO-Revision-Date: 2025-10-29 15:42+0000\n"
-"Last-Translator: Oihan Odriozola <oodriozola@euskaltzaindia.eus>\n"
+"PO-Revision-Date: 2026-05-27 08:22+0000\n"
+"Last-Translator: Informatikaria <informatikaria@ueu.eus>\n"
 "Language-Team: Basque <http://translate.pkp.sfu.ca/projects/ojs/manager/eu/>"
 "\n"
 "Language: eu\n"
@@ -127,13 +127,8 @@ msgstr "Zenbatekoa"
 msgid "manager.payment.authorFees"
 msgstr "Egile-tarifak"
 
-#, fuzzy
 msgid "manager.payment.authorFeesDescription"
-msgstr ""
-"Hautatutako aukerak, dagozkien azalpenekin eta tarifekin batera (behean "
-"edita daitezke), bidalketa-prozesuaren 1. urratsean azalduko dira, eta "
-"halaber Aldizkariari buruz orriko Bidalketak sailean, eta ordainketa "
-"eskatzen duten gainerako puntuetan."
+msgstr "Sartu behean tasen zenbatekoak, egileen prozesamendu-kostuak gaitzeko."
 
 msgid "manager.payment.currencymessage"
 msgstr ""
@@ -2532,16 +2527,16 @@ msgstr "Harpidetza iraungita"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
-"Mezu honek harpidedunari jakinarazten dio harpidetza amaitu zaiola. "
-"Aldizkariaren URLa eta aldizkarian sartzeko argibideak ematen ditu."
+"Mezu elektroniko hau automatikoki bidali da harpidedun bati bere harpidetza "
+"iraungi dela jakinarazteko"
 
 msgid "mailable.subscriptionExpiredLast.name"
 msgstr "Iraungitako azken harpidetza"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
-"Mezu honek harpidedunari jakinarazten dio harpidetza amaitu zaiola. "
-"Aldizkariaren URLa eta aldizkarian sartzeko argibideak ematen ditu."
+"Mezu elektroniko hau automatikoki bidali da harpidedun bati bere harpidetza "
+"bigarren aldiz iraungi dela jakinarazteko"
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
 msgstr "Erosi banakako harpidetza"

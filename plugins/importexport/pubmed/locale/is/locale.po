@@ -1,41 +1,61 @@
 # Kolbrun Reynisdottir <kolla@probus.is>, 2022.
+# Helgi Sigurbjörnsson <helgi.sigurbjornsson@landsbokasafn.is>, 2026.
 msgid ""
 msgstr ""
-"Language: is_IS\n"
+"PO-Revision-Date: 2026-06-04 09:26+0000\n"
+"Last-Translator: Helgi Sigurbjörnsson <helgi.sigurbjornsson@landsbokasafn.is>"
+"\n"
+"Language-Team: Icelandic <http://translate.pkp.sfu.ca/projects/ojs/"
+"importexport-pubmed/is/>\n"
+"Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n % 10 != 1 || n % 100 == 11;\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.importexport.pubmed.displayName"
-msgstr ""
+msgstr "PubMed XML útflutningsviðbót"
 
 msgid "plugins.importexport.pubmed.description"
-msgstr ""
+msgstr "Flytur út lýsigögn greina á PubMed XML-sniði fyrir skráningu í MEDLINE."
 
 msgid "plugins.importexport.pubmed.export"
-msgstr ""
+msgstr "Flytja út gögn"
 
 msgid "plugins.importexport.pubmed.export.issues"
-msgstr ""
+msgstr "Flytja út tölublöð"
 
 msgid "plugins.importexport.pubmed.export.selectIssue"
-msgstr ""
+msgstr "Velja tölublað til að flytja út."
 
 msgid "plugins.importexport.pubmed.export.articles"
-msgstr ""
+msgstr "Flytja út greinar"
 
 msgid "plugins.importexport.pubmed.export.selectArticle"
-msgstr ""
+msgstr "Velja greinar til að flytja út."
 
 msgid "plugins.importexport.pubmed.cliUsage"
 msgstr ""
+"Notkun: \n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] greinar [articleId1]"
+" [articleId2] ...\n"
+"{$scriptName} {$pluginName} [xmlFileName] [journal_path] tölublað [issueId]\n"
 
 msgid "plugins.importexport.pubmed.cliError"
-msgstr ""
+msgstr "VILLA:"
 
 msgid "plugins.importexport.pubmed.export.error.issueNotFound"
-msgstr ""
+msgstr "Ekkert tölublað fannst með tilgreint auðkenni \"{$issueId}\"."
 
 msgid "plugins.importexport.pubmed.export.error.articleNotFound"
+msgstr "Engin grein fannst með tilgreint auðkenni \"{$articleId}\"."
+
+msgid "plugins.importexport.pubmed.settings.form.nlmTitle"
+msgstr "Skammstöfun titils samkvæmt NLM"
+
+msgid "plugins.importexport.pubmed.settings.form.nlmTitle.description"
 msgstr ""
+"NLM skammtstöfun titils tímaritsins. Ef þú þekkir ekki skammstöfunina "
+"skaltu  <a href=\"https://www.ncbi.nlm.nih.gov/nlmcatalog/\">Leita í NLM "
+"spjaldskránni</a>."

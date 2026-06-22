@@ -1,23 +1,24 @@
+# Andrea Dohovičová <andrea.dohovicova@upjs.sk>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-11-27 08:29+0000\n"
-"Last-Translator: mhh <mhh@centrum.sk>\n"
-"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/api/sk_SK/>\n"
-"Language: sk_SK\n"
+"PO-Revision-Date: 2026-06-03 17:16+0000\n"
+"Last-Translator: Andrea Dohovičová <andrea.dohovicova@upjs.sk>\n"
+"Language-Team: Slovak <http://translate.pkp.sfu.ca/projects/ojs/api/sk/>\n"
+"Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "api.announcements.400.contextsNotMatched"
 msgstr "Požadované oznámenie nie je súčasťou tohto časopisu."
 
 msgid "api.emails.403.disabled"
-msgstr ""
+msgstr "Pre tento časopis neboli zapnuté emailové upozornenia."
 
 msgid "api.submissions.400.wrongContext"
-msgstr ""
+msgstr "Príspevok, ktorý ste požadovali nie je v tomto časopise."
 
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Nemôžete zmeniť záznamy príspevku."
@@ -49,13 +50,16 @@ msgid "api.contexts.404.contextNotFound"
 msgstr "Požadovaný časopis nebol nájdený."
 
 msgid "api.dois.403.contextsNotMatched"
-msgstr ""
+msgstr "Požadované DOI nie je súčasťou tohto časopisu."
 
 msgid "api.dois.400.noRegistrationAgencyConfigured"
 msgstr ""
+"Pre tento časopis nebola nakonfigurovaná žiadna registračná agentúra DOI."
 
 msgid "api.dois.400.depositFailed"
 msgstr ""
+"Niektoré položky neboli uložené. Pozrite sa na konkrétne chybové hlásenia "
+"týchto položiek."
 
 msgid "api.emailTemplates.403.notAllowedChangeContext"
 msgstr "Nemáte oprávnenie presunúť túto e-mailovú šablónu do iného časopisu."
@@ -73,4 +77,9 @@ msgid "api.submissionFiles.400.badRepresentationAssocType"
 msgstr "Súbor z tejto fázy súboru nemôžete priradiť k sadzobnici."
 
 msgid "api.submission.400.inactiveSection"
+msgstr "Táto sekcia už príspevky neprijíma."
+
+msgid "api.publications.403.paymentFeesNotEnabled"
 msgstr ""
+"Formulár na platby za príspevky nie je k dispozícii, pretože poplatky za "
+"publikovanie nie sú povolené."
