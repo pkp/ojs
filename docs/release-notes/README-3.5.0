@@ -16,6 +16,8 @@ In the [general] section:
 In the [security] section:
     - cipher: Algorithm used to generate app key and encryption purpose
     - cookie_encryption: Allow cookie encryption when set
+    - session_expire_on_close (default value: Off): expire cookie-based sessions upon closing the browser window.
+    - remember_me_lifetime (default value: 30): Number of days the "remember me" persistent-login cookie remains valid.
 
 In the newly added [schedule] section:
     - task_runner (default value: On): Whether or not to run the schedule tasks through the web based task runner
@@ -24,6 +26,7 @@ In the newly added [schedule] section:
 
 In [queues]:
     - process_jobs_at_task_scheduler (default value: Off): Controls whether queued jobs should be executed together with the scheduled tasks.
+    - job_runner_cross_request_lock (default value: On): Prevent multiple web requests from running JobRunner simultaneously.
 
 In [cache]:
     - default (default value: 'file'). Can be either 'file' or 'opcache' to indicate which Laravel cache should be used.
