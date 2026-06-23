@@ -350,15 +350,9 @@ abstract class PubIdPlugin extends \PKP\plugins\PKPPubIdPlugin
      */
     public static function suffixHasIssuePattern(string $pubIdSuffix): bool
     {
-        $hasVolumeNumber = (bool) PKPString::regexp_match('/%v/', $pubIdSuffix);
-        $hasIssueNumber = (bool) PKPString::regexp_match('/%i/', $pubIdSuffix);
-        $hasYear = (bool) PKPString::regexp_match('/%Y/', $pubIdSuffix);
-
-        if ($hasVolumeNumber || $hasIssueNumber || $hasYear) {
-            return true;
-        }
-
-        return false;
+        return str_contains($pubIdSuffix, '%v')
+            || str_contains($pubIdSuffix, '%i')
+            || str_contains($pubIdSuffix, '%Y');
     }
 
     //
