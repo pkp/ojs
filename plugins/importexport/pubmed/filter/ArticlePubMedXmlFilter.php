@@ -208,10 +208,10 @@ class ArticlePubMedXmlFilter extends PersistableFilter
         $journalNode = $doc->createElement('Journal');
 
         $publisherNameNode = $doc->createElement('PublisherName');
-        $publisherNameNode->appendChild($doc->createTextNode($journal->getData('publisherInstitution')));
+        $publisherNameNode->appendChild($doc->createTextNode($issue->getPublisher($journal)));
         $journalNode->appendChild($publisherNameNode);
 
-        $journalTitle = $nlmTitle ?? $journal->getName($journal->getPrimaryLocale());
+        $journalTitle = $nlmTitle ?? $issue->getPrimaryContextName($journal);
 
         $journalTitleNode = $doc->createElement('JournalTitle');
         $journalTitleNode->appendChild($doc->createTextNode($journalTitle));
@@ -219,15 +219,10 @@ class ArticlePubMedXmlFilter extends PersistableFilter
         $journalNode->appendChild($journalTitleNode);
 
         // check various ISSN fields to create the ISSN tag
-        if ($journal->getData('printIssn') != '') {
-            $issn = $journal->getData('printIssn');
-        } elseif ($journal->getData('issn') != '') {
-            $issn = $journal->getData('issn');
-        } elseif ($journal->getData('onlineIssn') != '') {
-            $issn = $journal->getData('onlineIssn');
-        } else {
-            $issn = '';
-        }
+        $issn = $issue->getPrintIssn($journal)
+            ?: $journal->getData('issn')
+            ?: $issue->getOnlineIssn($journal)
+            ?: '';
         if ($issn != '') {
             $journalNode->appendChild($doc->createElement('Issn', $issn));
         }

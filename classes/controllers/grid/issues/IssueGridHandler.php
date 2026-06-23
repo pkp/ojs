@@ -559,6 +559,11 @@ class IssueGridHandler extends GridHandler
             }
             $assignPublicIdentifiersForm->execute();
             Repo::issue()->createDoi($issue);
+
+            // Only stamp on first publish; skip if contextName is already set (issue was previously published then unpublished).
+            if (!$issue->getData('contextName')) {
+                $issue->stampContextIdentity();
+            }
         }
 
         if (!$request->checkCSRF()) {

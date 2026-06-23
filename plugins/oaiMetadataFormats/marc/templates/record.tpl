@@ -13,14 +13,14 @@
 	{if $publication->getData('datePublished')}
 		<fixfield id="008">"{$publication->getData('datePublished')|strtotime|date_format:"%y%m%d %Y"}                        eng  "</fixfield>
 	{/if}
-	{if $journal->getData('onlineIssn')}
+	{if $publication->getOnlineIssn($journal)}
 		<varfield id="022" i1="#" i2="#">
-			<subfield label="$a">{$journal->getData('onlineIssn')|escape}</subfield>
+			<subfield label="$a">{$publication->getOnlineIssn($journal)|escape}</subfield>
 		</varfield>
 	{/if}
-	{if $journal->getData('printIssn')}
+	{if $publication->getPrintIssn($journal)}
 		<varfield id="022" i1="#" i2="#">
-			<subfield label="$a">{$journal->getData('printIssn')|escape}</subfield>
+			<subfield label="$a">{$publication->getPrintIssn($journal)|escape}</subfield>
 		</varfield>
 	{/if}
 	<varfield id="042" i1=" " i2=" ">
@@ -53,9 +53,9 @@
 		<subfield label="a">{$abstract|escape}</subfield>
 	</varfield>{/if}
 
-	{assign var=publisher value=$journal->getName($journal->getPrimaryLocale())}
-	{if $journal->getData('publisherInstitution')}
-		{assign var=publisher value=$journal->getData('publisherInstitution')}
+	{assign var=publisher value=$publication->getPublisher($journal)}
+	{if !$publisher}
+		{assign var=publisher value=$publication->getPrimaryContextName($journal)}
 	{/if}
 	<varfield id="260" i1=" " i2=" ">
 		<subfield label="b">{$publisher|escape}</subfield>
@@ -79,7 +79,7 @@
 	</varfield>
 
 	<varfield id="773" i1="0" i2=" ">
-		<subfield label="t">{$journal->getName($journal->getPrimaryLocale())|escape};</subfield>
+		<subfield label="t">{$publication->getPrimaryContextName($journal)|escape};</subfield>
 	        <subfield label="g">{$issue->getIssueIdentification()|escape}</subfield>
 	</varfield>
 

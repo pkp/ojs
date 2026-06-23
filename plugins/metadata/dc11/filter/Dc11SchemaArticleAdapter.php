@@ -111,11 +111,11 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         $this->_addLocalizedElements($dc11Description, 'dc:description', $publication->getData('abstract'));
 
         // Publisher
-        $publisherInstitution = $journal->getData('publisherInstitution');
+        $publisherInstitution = $publication->getPublisher($journal);
         if (!empty($publisherInstitution)) {
             $publishers = [$journal->getPrimaryLocale() => $publisherInstitution];
         } else {
-            $publishers = $journal->getName(null); // Default
+            $publishers = $publication->getData('contextName', null) ?: $journal->getName(null); // Default
         }
         $this->_addLocalizedElements($dc11Description, 'dc:publisher', $publishers);
 
@@ -164,7 +164,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         }
 
         // Source (journal title, issue id and pages)
-        $sources = $journal->getName(null);
+        $sources = $publication->getData('contextName', null) ?: $journal->getName(null);
         $pages = $publication->getData('pages');
         if (!empty($pages)) {
             $pages = '; ' . $pages;
@@ -174,10 +174,10 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
             $sources[$locale] .= $pages;
         }
         $this->_addLocalizedElements($dc11Description, 'dc:source', $sources);
-        if ($issn = $journal->getData('onlineIssn')) {
+        if ($issn = $publication->getOnlineIssn($journal)) {
             $dc11Description->addStatement('dc:source', $issn, MetadataDescription::METADATA_DESCRIPTION_UNKNOWN_LOCALE);
         }
-        if ($issn = $journal->getData('printIssn')) {
+        if ($issn = $publication->getPrintIssn($journal)) {
             $dc11Description->addStatement('dc:source', $issn, MetadataDescription::METADATA_DESCRIPTION_UNKNOWN_LOCALE);
         }
 

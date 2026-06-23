@@ -112,6 +112,7 @@ class IssueNativeXmlFilter extends \PKP\plugins\importexport\native\filter\Nativ
         $issueNode->appendChild($nativeFilterHelper->createIssueIdentificationNode($this, $doc, $issue));
 
         $this->addDates($doc, $issueNode, $issue);
+        $this->addIdentityMetadata($doc, $issueNode, $issue);
         $this->addSections($doc, $issueNode, $issue);
         // cover images
         $nativeFilterHelper = new NativeFilterHelper();
@@ -211,6 +212,36 @@ class IssueNativeXmlFilter extends \PKP\plugins\importexport\native\filter\Nativ
 
         if ($issue->getOpenAccessDate()) {
             $issueNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'open_access_date', date('Y-m-d', strtotime($issue->getOpenAccessDate()))));
+        }
+    }
+
+    /**
+     * Create and add stamped identity metadata nodes to an issue node.
+     *
+     * @param \DOMDocument $doc
+     * @param \DOMElement $issueNode
+     * @param Issue $issue
+     */
+    public function addIdentityMetadata($doc, $issueNode, $issue)
+    {
+        $deployment = $this->getDeployment();
+        if ($contextName = $issue->getData('contextName')) {
+            $this->createLocalizedNodes($doc, $issueNode, 'contextName', $contextName);
+        }
+        if ($contextPrimaryLocale = $issue->getData('contextPrimaryLocale')) {
+            $issueNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'contextPrimaryLocale', htmlspecialchars($contextPrimaryLocale, ENT_COMPAT, 'UTF-8')));
+        }
+        if ($onlineIssn = $issue->getData('onlineIssn')) {
+            $issueNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'onlineIssn', htmlspecialchars($onlineIssn, ENT_COMPAT, 'UTF-8')));
+        }
+        if ($printIssn = $issue->getData('printIssn')) {
+            $issueNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'printIssn', htmlspecialchars($printIssn, ENT_COMPAT, 'UTF-8')));
+        }
+        if ($publisher = $issue->getData('publisher')) {
+            $issueNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'publisher', htmlspecialchars($publisher, ENT_COMPAT, 'UTF-8')));
+        }
+        if ($publisherLocation = $issue->getData('publisherLocation')) {
+            $issueNode->appendChild($doc->createElementNS($deployment->getNamespace(), 'publisherLocation', htmlspecialchars($publisherLocation, ENT_COMPAT, 'UTF-8')));
         }
     }
 

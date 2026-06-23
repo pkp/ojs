@@ -802,6 +802,7 @@ msgstr "Identification of Journal Content"
 msgid "manager.setup.publisher"
 msgstr "Publisher"
 
+
 msgid "manager.setup.referenceLinking"
 msgstr "Reference Linking"
 

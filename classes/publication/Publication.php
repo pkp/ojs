@@ -19,12 +19,17 @@
 namespace APP\publication;
 
 use APP\core\Application;
+use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\publication\enums\VersionStage;
+use PKP\context\Context;
+use PKP\plugins\PluginRegistry;
 use PKP\publication\PKPPublication;
 
 class Publication extends PKPPublication
 {
+    use HasContextIdentityMetadata;
+
     // Case of no issue, published issue and future issue with publish intent
     public const STATUS_READY_TO_PUBLISH = 6;
     // Case of future issue with schedule intent
@@ -80,5 +85,45 @@ class Publication extends PKPPublication
     public function setIssueId(?int $issueId): void
     {
         $this->setData('issueId', $issueId);
+    }
+
+    /**
+     * Set the current journal identity metadata.
+     * If CSL plugin is enabled then publisher location from this plugin settings is also set.
+     */
+    public function stampContextIdentity(?Context $context = null): void
+    {
+        // Inherit identity from an already-published issue instead of the current context.
+        // Falls through to the current context when there is no issue (issue-free journals,
+        // or an article published without an issue assignment).
+        $issue = $this->getIssueId() ? Repo::issue()->get($this->getIssueId()) : null;
+        if ($issue && $issue->getData('published') && $issue->getData('contextName')) {
+            $this->setData('contextName', $issue->getData('contextName'));
+            $this->setData('contextPrimaryLocale', $issue->getData('contextPrimaryLocale'));
+            $this->setData('printIssn', $issue->getData('printIssn'));
+            $this->setData('onlineIssn', $issue->getData('onlineIssn'));
+            $this->setData('publisher', $issue->getData('publisher'));
+            $this->setData('publisherLocation', $issue->getData('publisherLocation'));
+            return;
+        }
+
+        $context ??= $this->getStampingContext();
+        parent::stampContextIdentity($context);
+        $this->setData('printIssn', $context->getData('printIssn'));
+        $this->setData('onlineIssn', $context->getData('onlineIssn'));
+        $this->setData('publisher', $context->getData('publisherInstitution'));
+
+        $cslPlugin = PluginRegistry::getPlugin('generic', 'citationstylelanguageplugin');
+        if ($cslPlugin?->getEnabled($context->getId()) && !empty($publisherLocation = $cslPlugin->getSetting($context->getId(), 'publisherLocation'))) {
+            $this->setData('publisherLocation', $publisherLocation);
+        }
+    }
+
+    public function clearIdentityMetadata(): void
+    {
+        parent::clearIdentityMetadata();
+        $this->setData('publisher', null);
+        $this->setData('onlineIssn', null);
+        $this->setData('printIssn', null);
     }
 }

@@ -17,6 +17,17 @@
 				"$ref": "#/definitions/SubmissionSummary"
 			}
 		},
+		"contextName": {
+			"type": "string",
+			"multilingual": true,
+			"writeDisabledInApi": true,
+			"validation": ["nullable"]
+		},
+		"contextPrimaryLocale": {
+			"type": "string",
+			"writeDisabledInApi": true,
+			"validation": ["nullable"]
+		},
 		"coverImage": {
 			"type": "string",
 			"multilingual": true,
@@ -32,27 +43,27 @@
 			"multilingual": true,
 			"apiSummary": true,
 			"readOnly": true,
-			"validation": [
-				"url"
-			]
+			"validation": ["url"]
 		},
 		"dateNotified": {
 			"type": "string",
-			"validation": [
-				"date:Y-m-d H:i:s"
-			]
+			"validation": ["date:Y-m-d H:i:s"]
 		},
 		"datePublished": {
 			"type": "string",
 			"apiSummary": true,
-			"validation": [
-				"date:Y-m-d H:i:s"
-			]
+			"validation": ["date:Y-m-d H:i:s"]
 		},
 		"description": {
 			"type": "string",
 			"multilingual": true,
 			"apiSummary": true
+		},
+		"doiId": {
+			"type": "integer",
+			"description": "Reference to the DOI for this galley",
+			"writeOnly": true,
+			"validation": ["nullable"]
 		},
 		"doiObject": {
 			"type": "object",
@@ -60,14 +71,6 @@
 			"apiSummary": true,
 			"readOnly": true,
 			"$ref": "#/definitions/Doi"
-		},
-		"doiId": {
-			"type": "integer",
-			"description": "Reference to the DOI for this galley",
-			"writeOnly": true,
-			"validation": [
-				"nullable"
-			]
 		},
 		"galleys": {
 			"type": "array",
@@ -92,22 +95,28 @@
 		},
 		"lastModified": {
 			"type": "string",
-			"validation": [
-				"date:Y-m-d H:i:s"
-			]
+			"validation": ["date:Y-m-d H:i:s"]
 		},
 		"number": {
 			"type": "string",
 			"apiSummary": true
 		},
+		"onlineIssn": {
+			"type": "string",
+			"writeDisabledInApi": true,
+			"validation": ["nullable", "issn"]
+		},
 		"openAccessDate": {
 			"type": "string",
-			"validation": [
-				"date:Y-m-d H:i:s"
-			]
+			"validation": ["date:Y-m-d H:i:s"]
 		},
 		"originalStyleFileName": {
 			"type": "string"
+		},
+		"printIssn": {
+			"type": "string",
+			"writeDisabledInApi": true,
+			"validation": ["nullable", "issn"]
 		},
 		"published": {
 			"type": "boolean",
@@ -116,9 +125,17 @@
 		"publishedUrl": {
 			"type": "string",
 			"apiSummary": true,
-			"validation": [
-				"url"
-			]
+			"validation": ["url"]
+		},
+		"publisher": {
+			"type": "string",
+			"writeDisabledInApi": true,
+			"validation": ["nullable"]
+		},
+		"publisherLocation": {
+			"type": "string",
+			"writeDisabledInApi": true,
+			"validation": ["nullable"]
 		},
 		"sections": {
 			"type": "array",
