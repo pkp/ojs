@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/services/ContextService.php
  *
@@ -24,6 +25,7 @@ use APP\subscription\IndividualSubscriptionDAO;
 use APP\subscription\InstitutionalSubscriptionDAO;
 use APP\subscription\SubscriptionTypeDAO;
 use PKP\config\Config;
+use PKP\context\Context;
 use PKP\db\DAORegistry;
 use PKP\file\TemporaryFileManager;
 use PKP\plugins\Hook;
@@ -205,16 +207,12 @@ class ContextService extends \PKP\services\PKPContextService
         $props = $args[2];
         $allowedLocales = $args[3];
 
-        if (!isset($props['journalThumbnail'])) {
-            return;
-        }
-
         // If a journal thumbnail is passed, check that the temporary file exists
         // and the current user owns it
-        $user = Application::get()->getRequest()->getUser();
-        $userId = $user ? $user->getId() : null;
-        $temporaryFileManager = new TemporaryFileManager();
         if (isset($props['journalThumbnail']) && empty($errors['journalThumbnail'])) {
+            $user = Application::get()->getRequest()->getUser();
+            $userId = $user ? $user->getId() : null;
+            $temporaryFileManager = new TemporaryFileManager();
             foreach ($allowedLocales as $localeKey) {
                 if (empty($props['journalThumbnail'][$localeKey]) || empty($props['journalThumbnail'][$localeKey]['temporaryFileId'])) {
                     continue;
@@ -225,6 +223,28 @@ class ContextService extends \PKP\services\PKPContextService
                     }
                     $errors['journalThumbnail'][$localeKey] = [__('common.noTemporaryFile')];
                 }
+            }
+        }
+
+        // Disallow empty custom DOI suffix pattern for issues when the custom pattern type is selected
+        if (
+            isset($props[Context::SETTING_DOI_SUFFIX_TYPE]) ||
+            isset($props[Context::SETTING_ENABLED_DOI_TYPES]) ||
+            isset($props[Repo::doi()::CUSTOM_ISSUE_PATTERN])
+        ) {
+            $context = Application::get()->getRequest()->getContext();
+            $suffixType = $props[Context::SETTING_DOI_SUFFIX_TYPE]
+                ?? $context?->getData(Context::SETTING_DOI_SUFFIX_TYPE);
+            $enabledTypes = $props[Context::SETTING_ENABLED_DOI_TYPES]
+                ?? $context?->getData(Context::SETTING_ENABLED_DOI_TYPES)
+                ?? [];
+
+            if (
+                $suffixType === Repo::doi()::SUFFIX_CUSTOM_PATTERN &&
+                in_array(Repo::doi()::TYPE_ISSUE, $enabledTypes) &&
+                empty($props[Repo::doi()::CUSTOM_ISSUE_PATTERN])
+            ) {
+                $errors[Repo::doi()::CUSTOM_ISSUE_PATTERN] = [__('doi.manager.settings.doiSuffixPattern.required')];
             }
         }
     }
