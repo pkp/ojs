@@ -29,6 +29,13 @@ In [cache]:
     - default (default value: 'file'). Can be either 'file' or 'opcache' to indicate which Laravel cache should be used.
     - path (default value: 'cache/opcache'). Use to specify a path for cache storage when using 'file' or 'opcache' drivers.
 
+In the [database] section (pkp/pkp-lib#11563):
+    - collation (default value: utf8mb4_unicode_ci): This is now the single source of truth for the database connection character set. The charset is derived from the collation: a utf8mb4_* collation uses the utf8mb4 charset; a utf8_*/utf8mb3_* collation uses the legacy utf8 charset. New installs use utf8mb4_unicode_ci. For backwards compatibility, sites that upgrade without setting this keep the legacy utf8 / utf8_general_ci behaviour, and existing tables are never converted automatically. A non-UTF-8 collation (e.g. latin1_*) is rejected with a clear error. PostgreSQL ignores this setting and always uses UTF8.
+      If, during upgrade, the configured charset differs from the charset of the existing tables (for example legacy utf8/utf8mb3 tables, or a database that was created as latin1, a non-blocking warning is logged with the exact ALTER TABLE statement to reconcile it. For PostgreSQL, a non-blocking warning is logged if the database is not UTF8.
+
+In the [i18n] section (pkp/pkp-lib#11563):
+    - connection_charset: This setting is deprecated and no longer used; the connection charset is now derived from the [database] collation. It can be removed.
+
 3.5.0-4 Build
 -------------
     pkp/credit#4: Update credit-translation to lastest version

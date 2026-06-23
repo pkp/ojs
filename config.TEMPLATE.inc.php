@@ -148,8 +148,19 @@ name = ojs
 ; port = 3306
 ; unix_socket = /var/run/mysqld/mysqld.sock
 
-; Database collation
-; collation = utf8_general_ci
+; Database collation (MySQL/MariaDB only; ignored for PostgreSQL).
+; This is the single source of truth for the connection charset, which is derived
+; from the collation: a utf8mb4_* collation uses the utf8mb4 charset, and a utf8_*
+; (or utf8mb3_*) collation uses the legacy utf8 charset. A non-UTF-8 collation
+; (e.g. latin1_*) is rejected with an error.
+; See pkp/pkp-lib#11563.
+; utf8mb4_unicode_ci is recommended and works on MySQL 5.7+ and MariaDB 10.x.
+; Backwards compatibility: if this setting is omitted, the application falls back to the legacy
+; utf8 / utf8_general_ci (the behaviour from before this option existed), so upgrading
+; sites keep their charset and existing tables are left untouched. To keep that legacy
+; behaviour explicitly (and avoid a mixed-charset database after upgrade), set instead:
+;   collation = utf8_general_ci
+collation = utf8mb4_unicode_ci
 
 ; Enable database debug output (very verbose!)
 debug = Off
@@ -196,7 +207,11 @@ web_cache_hours = 1
 locale = en
 
 ; Database connection character set
-connection_charset = utf8
+; DEPRECATED (pkp/pkp-lib#11563): this setting is no longer used. The connection
+; charset is now derived from the [database] collation setting above so that the
+; charset and collation can never be configured inconsistently. Kept here only to
+; avoid breaking existing config files that still define it.
+; connection_charset = utf8
 
 
 ;;;;;;;;;;;;;;;;;
