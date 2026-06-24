@@ -1038,8 +1038,22 @@
 							"name": {
 								"type": "string"
 							},
-							"reviewMethod": {
-								"type": "int"
+							"reviews": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"reviewId": {
+											"type": "integer"
+										},
+										"reviewRound": {
+											"type": "integer"
+										},
+										"reviewMethod": {
+											"type": "integer"
+										}
+									}
+								}
 							}
 						}
 					}
