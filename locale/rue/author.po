@@ -1,9 +1,10 @@
 # rl <biuro@fimagis.pl>, 2025.
 # Monika Tylawska <monika.tylawska@gmail.com>, 2025, 2026.
+# Kamil Federyga <kamilfederyga@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-05-26 05:13+0000\n"
-"Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
+"PO-Revision-Date: 2026-06-27 02:33+0000\n"
+"Last-Translator: Kamil Federyga <kamilfederyga@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/author/rue/>\n"
 "Language: rue\n"
 "MIME-Version: 1.0\n"
@@ -35,7 +36,7 @@ msgstr ""
 "одділити серединиками (сутьове слово; сутьове слово; сутьове слово)."
 
 msgid "author.submit.step3"
-msgstr "Крок 3. Введ метадны зголошыня"
+msgstr "Крок 3. Введ метаданы зголошыня"
 
 msgid "author.submit.coverageInstructions"
 msgstr ""
@@ -79,7 +80,7 @@ msgid "author.submit.upload"
 msgstr "Перешлий файль"
 
 msgid "author.submit.metadata"
-msgstr "Введ метадны"
+msgstr "Введ метаданы"
 
 msgid "author.submit.supplementaryFiles"
 msgstr "Перешлий додатковы файлі"
@@ -109,10 +110,10 @@ msgid "author.submissions.uploadCopyeditedVersion"
 msgstr "Перешлий версию по коректі"
 
 msgid "author.submissions.proofreadingCorrections"
-msgstr "Коректа пліку до публикациі"
+msgstr "Коректа тексту до публикациі"
 
 msgid "author.submissions.confirmDelete"
-msgstr "Ци на певно хочеш усунути тото некомплетне зглошыня?"
+msgstr "Ци напевно хочеш усунути тото некомплетне зглошыня?"
 
 msgid "author.submissions.viewStatus"
 msgstr "Вкаж статус тексту"
@@ -136,7 +137,7 @@ msgid "submission.submit.coverNote"
 msgstr "Відоміст для редактора"
 
 msgid "author.submit.comments"
-msgstr "Впиш коментар дла редактора (опцийональне)"
+msgstr "Впиш коментар для редактора (опцийональне)"
 
 msgid "author.submit.form.localeRequired"
 msgstr "Прошу выбрати язык зголошыня."
@@ -216,7 +217,7 @@ msgid "author.submit.backToSupplementaryFiles"
 msgstr "Верний до поміцничых файлів"
 
 msgid "author.submit.confirmDeleteSuppFile"
-msgstr "Ци напевно чочеш усунути поміцничый файль?"
+msgstr "Ци напевно хочеш усунути поміцничый файль?"
 
 msgid "author.submit.uploadSuppFile"
 msgstr "Перешлий поміцничый файль"
