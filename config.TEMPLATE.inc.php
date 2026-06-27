@@ -49,9 +49,10 @@ session_cookie_name = OJSSID
 ; Session cookie path; if not specified, defaults to the detected base path
 ; session_cookie_path = /
 
-; Number of days to save login cookie for if user selects to remember
-; (set to 0 to force expiration at end of current session)
-session_lifetime = 30
+; Number of days a session remains valid while idle. Fractional days are allowed
+; (e.g. 0.5 = 12 hours, 0.0833 ~ 2 hours); the value is clamped to a minimum of 1 minute.
+; To expire sessions when the browser closes, use session_expire_on_close in [security]
+session_lifetime = 7
 
 ; SameSite configuration for the cookie, see possible values and explanations
 ; at https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite
@@ -289,8 +290,16 @@ session_check_ip = On
 ; migration of old password hashes.
 encryption = sha1
 
-; When set to On, expire cookie-based sessions upon closing the browser window.
+; When set to On, the session cookie expires when the browser is closed.
+; The server-side session data still persists for session_lifetime days
+; and is cleaned up by garbage collection.
 session_expire_on_close = Off
+
+; Number of days the "remember me" persistent-login cookie remains valid. Fractional
+; days are allowed. Only applies when the user ticks "remember me" at login.
+; To extend login beyond the idle session, set this greater than session_lifetime in
+; [general]; it is an absolute window measured from login (not refreshed on activity).
+remember_me_lifetime = 30
 
 ; The unique salt to use for generating password reset hashes
 salt = "YouMustSetASecretKeyHere!!"
