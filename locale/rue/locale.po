@@ -3,7 +3,7 @@
 # Kamil Federyga <kamilfederyga@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-06-27 02:33+0000\n"
+"PO-Revision-Date: 2026-06-27 15:35+0000\n"
 "Last-Translator: Kamil Federyga <kamilfederyga@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/locale/rue/>\n"
 "Language: rue\n"
@@ -41,7 +41,7 @@ msgid "navigation.journalHelp"
 msgstr "Поміч"
 
 msgid "navigation.current"
-msgstr "Біжуче чысло"
+msgstr "Актуальне чысло"
 
 msgid "navigation.otherJournals"
 msgstr "Інчы часописы"
@@ -53,7 +53,7 @@ msgid "navigation.skip.about"
 msgstr "Перейд до інформаций о часописі"
 
 msgid "navigation.skip.issue"
-msgstr "Перейд до біжучого чысла"
+msgstr "Перейд до актуального чысла"
 
 msgid "common.queue.short.submissionsUnassigned"
 msgstr "Неприписане"
@@ -137,7 +137,7 @@ msgid "article.submissions"
 msgstr "Зголошыня"
 
 msgid "article.details"
-msgstr "Дрібниці"
+msgstr "Деталі"
 
 msgid "article.abstract"
 msgstr "Резуме"
@@ -256,7 +256,7 @@ msgid "article.fontSize.large.altText"
 msgstr "Великій"
 
 msgid "article.return"
-msgstr "Верний до дрібниць статі"
+msgstr "Верний до деталів статі"
 
 msgid "submission.submissionEditing"
 msgstr "Едиция зголошеных текстів"
@@ -424,8 +424,8 @@ msgstr ""
 
 msgid "doi.issue.incorrectContext"
 msgstr ""
-"Не мож утворити ідентыфікатора DOI для слідуючого чысла: {$itemTitle}. Чысло "
-"тото не фунґує в теперішнім часописі."
+"Не мож утворити ідентыфікатора DOI для слідуючого выданя: {$itemTitle}. Не "
+"фунґує оно в теперішнім часописі."
 
 msgid "doi.issue.notPublished"
 msgstr ""
@@ -536,12 +536,12 @@ msgid "issue.viewIssue"
 msgstr "Вкаж чысло"
 
 msgid "issue.return"
-msgstr "Верний до дрібниць чысла"
+msgstr "Верний до деталі чысла"
 
 msgid "doi.issue.incorrectStaleStatus"
 msgstr ""
 "Неправильный статус DOI для слідуючого чысла: {$itemTitle}. DOI мусит мати "
-"статус \"Зареґіструваный\" або \"Зголошеный\"."
+"статус «Зареґіструваный» або «Зголошеный»."
 
 msgid "subscriptionTypes.currency"
 msgstr "Грошы"
