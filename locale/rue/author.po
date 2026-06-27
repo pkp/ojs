@@ -3,7 +3,7 @@
 # Kamil Federyga <kamilfederyga@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-06-27 08:44+0000\n"
+"PO-Revision-Date: 2026-06-27 09:00+0000\n"
 "Last-Translator: Kamil Federyga <kamilfederyga@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/author/rue/>\n"
 "Language: rue\n"
@@ -68,10 +68,10 @@ msgid "author.submit.step2"
 msgstr "Крок 2. Перешлий файль"
 
 msgid "author.submit.step4"
-msgstr "Крок 4. Першлий додатковы файлі"
+msgstr "Крок 4. Першлий поміцничы файлі"
 
 msgid "author.submit.step4a"
-msgstr "Крок 4а. Додай додатковый файль"
+msgstr "Крок 4а. Додай поміцничый файль"
 
 msgid "author.submit.start"
 msgstr "Початок"
@@ -83,7 +83,7 @@ msgid "author.submit.metadata"
 msgstr "Введ метаданы"
 
 msgid "author.submit.supplementaryFiles"
-msgstr "Перешлий додатковы файлі"
+msgstr "Перешлий поміцничы файлі"
 
 msgid "author.submit.nextSteps"
 msgstr "Слідуючы крокы"
@@ -178,12 +178,12 @@ msgstr "Введ наголовок пересланого тексту."
 
 msgid "author.submit.supplementaryFilesInstructions"
 msgstr ""
-"Тота опция дає можніст доданя узуполняючых файлів до зголошыня. Тоты файлі, "
-"можут мати довільный формат, можут обнимати: (а) дослідничы нарядя, (б) "
-"збіркы даных, котры сут згідны з варунками комісиі етыкы науковых "
-"досліджынь, (в) джерела, котры в інчый спосіб были бы недоступны для "
-"чытателів , (г) риціны і табелі, котрых не можна влучыти до самого тексту, "
-"або інчы материялы , котры вносят вклад в наукову роботу."
+"Тот опцийональный крок дозвалят долучыти поміцничы файлі до зголошыня. Тоты "
+"файлі можут мати довільный формат і обнимати: (а) дослідничы нарядя; (б) "
+"збіркы даных згідны з варунками комісиі етыкы науковых досліджынь; (в) "
+"джерела, што в інчый спосіб были бы недоступны для чытателів; (г) рысункы і "
+"табелі, котрых не мож влучыти до самого тексту, або інчы материялы, што "
+"збільшают наукову вартіст працы."
 
 msgid "author.submit.form.wordCountAlert"
 msgstr "Перекрочыл(а) єс максимальне чысло слів для резуме."
@@ -205,20 +205,19 @@ msgstr "Ци напевно хочеш іти дальше без пересыл
 
 msgid "author.submit.supplementaryFiles.saveToUpload"
 msgstr ""
-"Притисный Запиш, жебы переслати файль (пак буде мож додати натупны файлі)."
+"Притисный Запиш, жебы переслати файль (пак буде мож додати наступны файлі)."
 
 msgid "author.submit.forgottenSubmitSuppFile"
-msgstr ""
-"Ци напевно хочеш іти дальше без пересыланя выбраного узуполняючого файлю?"
+msgstr "Ци напевно хочеш іти дальше без пересланя выбраного поміцничого файля?"
 
 msgid "author.submit.noSupplementaryFiles"
-msgstr "Пміцничы файлі не остали доданы до того зголошыня."
+msgstr "Поміцничы файлі не остали доданы до того зголошыня."
 
 msgid "author.submit.backToSupplementaryFiles"
 msgstr "Верний до поміцничых файлів"
 
 msgid "author.submit.confirmDeleteSuppFile"
-msgstr "Ци напевно хочеш усунути поміцничый файль?"
+msgstr "Ци напевно хочеш усунути тот поміцничый файль?"
 
 msgid "author.submit.uploadSuppFile"
 msgstr "Перешлий поміцничый файль"
