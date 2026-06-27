@@ -3,7 +3,7 @@
 # Kamil Federyga <kamilfederyga@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-06-27 02:33+0000\n"
+"PO-Revision-Date: 2026-06-27 08:44+0000\n"
 "Last-Translator: Kamil Federyga <kamilfederyga@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/author/rue/>\n"
 "Language: rue\n"
@@ -17,7 +17,7 @@ msgid "author.submit.submitArticle"
 msgstr "Перешлий статю"
 
 msgid "author.submit.stepsToSubmit"
-msgstr "Пят части до пересланя"
+msgstr "Пересланя змісту в пятьох кроках"
 
 msgid "author.submit"
 msgstr "Нове зголошыня"
@@ -32,16 +32,16 @@ msgstr ""
 
 msgid "author.submit.submissionIndexingDescription"
 msgstr ""
-"Подай сутьови слова для зголошеного тексту. Поєдны сутьови слова треба "
-"одділити серединиками (сутьове слово; сутьове слово; сутьове слово)."
+"Подай ключовы слова для зголошеного тексту. Поєдны ключовы слова треба "
+"одділити серединиками (ключове слово; ключове слово; ключове слово)."
 
 msgid "author.submit.step3"
 msgstr "Крок 3. Введ метаданы зголошыня"
 
 msgid "author.submit.coverageInstructions"
 msgstr ""
-"Оприділят ґеоґрафічну (ґео-просторну) локалізацию, хронолоґічный або "
-"історичный закрес як тіж/або характеристыку дослідничой пробы."
+"Окрислят ґеоґрафічну локалізацию, хронолоґічный або історичный закрес як тіж/"
+"або характеристыку дослідничой пробы."
 
 msgid "author.submit.step5"
 msgstr "Крок 5. Потведжыня зголошыня"
@@ -50,10 +50,10 @@ msgid "author.submit.notAccepting"
 msgstr "Часопис не принимат тепер новых зголошынь."
 
 msgid "author.submit.form.abstractRequired"
-msgstr "Подай абстракт пересланого тексту."
+msgstr "Введ резуме пересланого тексту."
 
 msgid "author.submit.addReasonsForWaiver"
-msgstr "Прошу пояснити чом заплата повинна остати принята до звільніня з нєй."
+msgstr "Прошу пояснити, чом повинно ся звільнити з оплаты."
 
 msgid "author.submissions.queuedEditingProofread"
 msgstr "В едициі: Выслано просьбу о провіріня кінцьовой версиі"
@@ -62,7 +62,7 @@ msgid "author.submit.startHereTitle"
 msgstr "Першлий зміст до публикациі в часописі"
 
 msgid "author.submit.step1"
-msgstr "Крок 1. Початок процедуры зголошыня"
+msgstr "Крок 1. Початок зголошыня"
 
 msgid "author.submit.step2"
 msgstr "Крок 2. Перешлий файль"
@@ -71,10 +71,10 @@ msgid "author.submit.step4"
 msgstr "Крок 4. Першлий додатковы файлі"
 
 msgid "author.submit.step4a"
-msgstr "Крок 4а. Додай файль, котрый буде узуполніньом"
+msgstr "Крок 4а. Додай додатковый файль"
 
 msgid "author.submit.start"
-msgstr "Старт"
+msgstr "Початок"
 
 msgid "author.submit.upload"
 msgstr "Перешлий файль"
@@ -101,7 +101,7 @@ msgid "author.submissions.queuedReviewSubsequent"
 msgstr "В рецензиі, етап {$round}"
 
 msgid "author.submissions.queuedReviewRevisions"
-msgstr "В рецензиі: Вымагана коректа"
+msgstr "В рецензиі: Вымагат коректы"
 
 msgid "author.submissions.queuedEditingCopyedit"
 msgstr "В коректі: Выслано просьбу о коректу"
@@ -131,7 +131,7 @@ msgstr ""
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
-"Жебы іти дальше треба заакцептувати варункы освідчыня о авторскых правах."
+"Жебы іти дальше, треба заакцептувати варункы освідчыня о авторскых правах."
 
 msgid "submission.submit.coverNote"
 msgstr "Відоміст для редактора"
@@ -144,14 +144,14 @@ msgstr "Прошу выбрати язык зголошыня."
 
 msgid "author.submit.reorderInstructions"
 msgstr ""
-"Змін чергу авторів так, жебы была згідна з чергом в якій мают быти вымінены "
+"Змін чергу авторів так, жебы была згідна з чергом, в якій мают быти вымінены "
 "в публикациі."
 
 msgid "author.submit.reorder"
 msgstr "Змін чергу высвітляня авторів"
 
 msgid "author.submit.selectPrincipalContact"
-msgstr "Головный адрес до редакцийной кореспонденциі."
+msgstr "Головна особа до редакцийной кореспонденциі."
 
 msgid "author.submit.addAuthor"
 msgstr "Додай автора"
@@ -161,11 +161,12 @@ msgstr "Усун автора"
 
 msgid "author.submit.languageInstructions"
 msgstr ""
-"Анґлийскій=анґ; Французскій=фр; Іспанскій=ісп.<a href=\"https://www.loc.gov/"
-"standards/iso639-2/php/code_list.php\" target=\"_blank\">Остальны коды</a>."
+"Лемківскій/Русиньскій=rue; Польскій=pl; Анґлийскій=en.<a href=\"https://www."
+"loc.gov/standards/iso639-2/php/code_list.php\" target=\"_blank\">Додатковы "
+"коды</a>."
 
 msgid "author.submit.form.authorRequired"
-msgstr "Вымаганый є хоц єден автор."
+msgstr "Вымаганый єст хоц єден автор."
 
 msgid "author.submit.form.authorRequiredFields"
 msgstr ""
@@ -173,7 +174,7 @@ msgstr ""
 "авторів."
 
 msgid "author.submit.form.titleRequired"
-msgstr "Подай наголовок пересланого тексту."
+msgstr "Введ наголовок пересланого тексту."
 
 msgid "author.submit.supplementaryFilesInstructions"
 msgstr ""
@@ -185,7 +186,7 @@ msgstr ""
 "або інчы материялы , котры вносят вклад в наукову роботу."
 
 msgid "author.submit.form.wordCountAlert"
-msgstr "Перекрочыл (а) єс максимальне чысло слів для абстрактів в тій секциі."
+msgstr "Перекрочыл(а) єс максимальне чысло слів для резуме."
 
 msgid "author.submit.submissionFile"
 msgstr "Файль з текстом"
@@ -200,7 +201,7 @@ msgid "author.submit.noSubmissionFile"
 msgstr "Файль з текстом не остал іщы высланый."
 
 msgid "author.submit.noSubmissionConfirm"
-msgstr "Ци напевно хочеш іти дальше без пересыланя файлю зголошыня?"
+msgstr "Ци напевно хочеш іти дальше без пересыланя файля зголошыня?"
 
 msgid "author.submit.supplementaryFiles.saveToUpload"
 msgstr ""
