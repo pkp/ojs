@@ -3,7 +3,7 @@
 # Kamil Federyga <kamilfederyga@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-06-27 15:35+0000\n"
+"PO-Revision-Date: 2026-06-27 19:31+0000\n"
 "Last-Translator: Kamil Federyga <kamilfederyga@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/author/rue/>\n"
 "Language: rue\n"
@@ -27,7 +27,7 @@ msgstr "Актывны зголошыня"
 
 msgid "author.submit.startHereLink"
 msgstr ""
-"<a href=\"{$submitUrl}\" class=\"action\">Притисний гев</a> жебы перейти до "
+"<a href=\"{$submitUrl}\" class=\"action\">Притисний гев</a>, жебы перейти до "
 "карты зголошыня."
 
 msgid "author.submit.submissionIndexingDescription"
