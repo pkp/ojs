@@ -3,7 +3,7 @@
 # Kamil Federyga <kamilfederyga@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-06-27 09:00+0000\n"
+"PO-Revision-Date: 2026-06-27 11:57+0000\n"
 "Last-Translator: Kamil Federyga <kamilfederyga@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/author/rue/>\n"
 "Language: rue\n"
@@ -131,7 +131,7 @@ msgstr ""
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
-"Жебы іти дальше, треба заакцептувати варункы освідчыня о авторскых правах."
+"Жебы піти дальше, треба заакцептувати варункы освідчыня о авторскых правах."
 
 msgid "submission.submit.coverNote"
 msgstr "Відоміст для редактора"
@@ -143,15 +143,13 @@ msgid "author.submit.form.localeRequired"
 msgstr "Прошу выбрати язык зголошыня."
 
 msgid "author.submit.reorderInstructions"
-msgstr ""
-"Змін чергу авторів так, жебы была згідна з чергом, в якій мают быти вымінены "
-"в публикациі."
+msgstr "Устав авторів в такым порядку, в якім мают быти вымінены в публикациі."
 
 msgid "author.submit.reorder"
-msgstr "Змін чергу высвітляня авторів"
+msgstr "Змін порядок высвітляня авторів"
 
 msgid "author.submit.selectPrincipalContact"
-msgstr "Головна особа до редакцийной кореспонденциі."
+msgstr "Головна особа до кореспонденциі з редакцийом."
 
 msgid "author.submit.addAuthor"
 msgstr "Додай автора"
@@ -243,7 +241,7 @@ msgid "author.submit.suppFile.noFile"
 msgstr "Ниякій файль не остал пересланый."
 
 msgid "author.suppFile.suppFilePublicIdentificationExists"
-msgstr "Публичный ідентыфікатор поміцничого файлю уж фунґує."
+msgstr "Публичный ідентыфікатор поміцничого файля уж фунґує."
 
 msgid "author.submit.submissionComplete"
 msgstr ""
@@ -252,21 +250,21 @@ msgstr ""
 
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr ""
-"До пересыланя текстів до того часопису вымагане є утворіня конта "
-"ужытковника. Дозвалят тото нашым редакторам на сліджыня Вашых зголошынь як "
-"тіж контактуваня ся з Вами в припадку зміны статусу зголошыня або коли "
-"вымаганы сут додатковы інформациі."
+"Жебы переслати зміст до того часопису, треба мати конто ужытковника. "
+"Дозвалят тото нашым редакторам слідити Вашы зголошыня як тіж контактувати ся "
+"з Вами в припадку зміны статусу зголошыня або коли вымаганы сут додатковы "
+"інформациі."
 
 msgid "author.submit.supplementaryFileDataDescription"
 msgstr ""
 "Жебы зідексувати додатковый материял, подай слідуючы даны для помічного "
-"файлю."
+"файля."
 
 msgid "author.submit.supplementaryFileUpload"
 msgstr "Поміцничый файль"
 
 msgid "author.submit.suppFile.createrOrOwner"
-msgstr "Творця (або властитель) файлю"
+msgstr "Творця (або властитель) файля"
 
 msgid "author.submit.suppFile.researchInstrument"
 msgstr "Дослідниче нарядя"
@@ -278,7 +276,7 @@ msgid "author.submit.suppFile.researchResults"
 msgstr "Результаты досліджынь"
 
 msgid "author.submit.suppFile.transcripts"
-msgstr "Транскрипция"
+msgstr "Транскрипциі"
 
 msgid "author.submit.suppFile.dataAnalysis"
 msgstr "Аналіза даных"
@@ -296,13 +294,13 @@ msgid "author.submit.suppFile.dateDescription"
 msgstr "Дата зобраня даных або утворіня нарядя."
 
 msgid "author.submit.suppFile.sourceDescription"
-msgstr "Назва студиюм або джерела інчого походжыня."
+msgstr "Назва досліджыня або джерела інчого походжыня."
 
 msgid "author.submit.suppFile.specifyOtherType"
 msgstr "Оприділь інчый рід"
 
 msgid "author.submit.suppFile.form.titleRequired"
-msgstr "Подай назву поміцничого файлю."
+msgstr "Введ назву поміцничого файля."
 
 msgid "author.submit.suppFile.form.subjectRequired"
 msgstr "Прошу подати тему."
@@ -311,7 +309,7 @@ msgid "author.submit.suppFile.form.descriptionRequired"
 msgstr "Прошу подати опис."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
-msgstr "Публичный ідентыфікатор поміцничого файлю"
+msgstr "Публичный ідентыфікатор поміцничого файля"
 
 msgid "author.submit.filesSummary"
 msgstr "Підсумуваня"
