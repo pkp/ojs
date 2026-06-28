@@ -35,22 +35,28 @@
 				"Submissions",
 				"Submissions / Decisions",
 				"Submissions / Files",
+				"Submissions / JATS",
 				"Submissions / Participants",
 				"Submissions / Publications",
 				"Submissions / Publications / Contributors",
+				"Submissions / Reviewer Suggestions",
 				"Submissions / DashboardViews",
 				"Submissions / Tasks",
 				"Issues",
 				"Users",
 				"Contexts",
 				"Site",
+				"Sections",
 				"Announcements",
 				"DOIs",
 				"DOIs / Submissions",
 				"DOIs / Issues",
 				"Email Templates",
 				"Institutions",
+				"Invitations",
 				"Mailables",
+				"Reviews",
+				"RORs",
 				"Stats / Contexts",
 				"Stats / Editorial",
 				"Stats / Issues",
@@ -99,12 +105,12 @@
 		{
 			"name": "Links",
 			"x-traitTag": true,
-			"description": "Some responses will include a `_href` property. The value of this property will be a URL to the full version of this object in the REST API.\n\n```\n{\n\t\"_href\": \"http://example.com/api/v1/submissions/219\"\n\t...\n}\n```"
+			"description": "Some responses will include a `_href` property. The value of this property will be a URL to the full version of this object in the REST API.\n\n```\n{\n\t\"_href\": \"https://example.com/api/v1/submissions/219\"\n\t...\n}\n```"
 		},
 		{
 			"name": "Using Temporary Files",
 			"x-traitTag": true,
-			"description": "Files can be uploaded by sending a `POST` request to the `/temporaryFiles` endpoint. It will return a file ID which can be used in subsequent requests. Let's look at an example.\n\nTo upload a logo for a context (journal, press, or preprint server),  upload the image by sending a `POST` request to `/temporaryFiles`. A successful upload will generate the following response:\n\n```\n{\n\tid: 123\n}\n```\n\nTo save the logo to the context, send a `PUT` request to `/contexts/1`:\n\n```\n{\n\tpageHeaderLogoImage: {\n\t\ttemporaryFileId: 123,\n\t\taltText: \"Logo for the Journal of Public Knowledge\"\n\t}\n}\n```\n\nThe file will be moved from the temporary directory to its public location, overwriting any existing logo.\n\nTemporary files can only be managed by the **the user who uploaded the file**. If a user passes a `temporaryFileId` for a file they did not upload themselves, they will receive an authorization error."
+			"description": "Files can be uploaded by sending a `POST` request to the `/temporaryFiles` endpoint. It will return a file ID which can be used in subsequent requests. Let's look at an example.\n\nTo upload a logo for a context, upload the image by sending a `POST` request to `/temporaryFiles`. A successful upload will generate the following response:\n\n```\n{\n\tid: 123\n}\n```\n\nTo save the logo to the context, send a `PUT` request to `/contexts/1`:\n\n```\n{\n\tpageHeaderLogoImage: {\n\t\ttemporaryFileId: 123,\n\t\taltText: \"Logo for the Journal of Public Knowledge\"\n\t}\n}\n```\n\nThe file will be moved from the temporary directory to its public location, overwriting any existing logo.\n\nTemporary files can only be managed by **the user who uploaded the file**. If a user passes a `temporaryFileId` for a file they did not upload themselves, they will receive an authorization error."
 		},
 		{
 			"name": "Submissions"
@@ -117,6 +123,10 @@
 			"name": "Submissions / Files"
 		},
 		{
+			"name": "Submissions / JATS",
+			"description": "Endpoints for managing the JATS XML source file associated with a submission's current publication."
+		},
+		{
 			"name": "Submissions / Participants"
 		},
 		{
@@ -124,6 +134,10 @@
 		},
 		{
 			"name": "Submissions / Publications / Contributors"
+		},
+		{
+			"name": "Submissions / Reviewer Suggestions",
+			"description": "Endpoints for managing reviewer suggestions made by an author when submitting their work. Suggestions can be reviewed and approved by editors and converted into reviewer assignments.\n\nThe `POST`, `PUT`, and `DELETE` endpoints in this group will only succeed while the submission is still incomplete (i.e. `submissionProgress` is a non-empty string). Once a submission is complete, suggestions become read-only."
 		},
 		{
 			"name": "Submissions / DashboardViews"
@@ -176,8 +190,24 @@
 			"description": "Only admins and journal managers can access these endpoints."
 		},
 		{
+			"name": "Invitations",
+			"description": "Endpoints used to create, send, and respond to email-based invitations. The invitation toolset is used to request an email address change, to provide one-click reviewer access (replacing the older access-keys mechanism), and to support the GDPR-compliant user account creation process. Some endpoints in this group are publicly accessible (using an invitation key) so that invitees can accept, refine, or decline an invitation without authenticating."
+		},
+		{
 			"name": "Mailables",
 			"description": "Only admins and journal managers can access these endpoints."
+		},
+		{
+			"name": "Reviews",
+			"description": "Endpoints to retrieve review round history, confirm review assignments on behalf of a reviewer, export individual review responses as PDF or XML, and submit completed reviews to ORCID."
+		},
+		{
+			"name": "RORs",
+			"description": "Endpoints to query the local cache of records from the [Research Organization Registry (ROR)](https://ror.org/). These records are used to identify institutions when adding author affiliations."
+		},
+		{
+			"name": "Sections",
+			"description": "Endpoints to retrieve sections (or series in OMP) configured in the current context. Most authenticated users can access these endpoints."
 		},
 		{
 			"name": "Stats / Editorial",
@@ -245,24 +275,7 @@
 		}
 	],
 	"definitions": {
-		"Affiliation": {
-			"type": "object",
-			"description": "An institutional affiliation for a contributor.",
-			"properties": {
-				"name": {
-					"type": "string",
-					"description": "Name of the affiliated institution"
-				},
-				"role": {
-					"type": "string",
-					"description": "Role or title of the contributor in the institution"
-				},
-				"country": {
-					"type": "string",
-					"description": "Country of the institution (ISO 3166-1 alpha-2 code)"
-				}
-			}
-		},
+		"Affiliation": "affiliation",
 		"Announcement": "announcement",
 		"Author": "author",
 		"Context": "context",
@@ -559,13 +572,6 @@
 				]
 			}
 		},
-		"UserGroupSummary": {
-				"type": "object",
-				"properties": {
-					"id": { "type": "integer" },
-					"name": { "type": "string" }
-				}
-			},
 		"ErrorResponse": {
 			"type": "object",
 			"description": "A response object that will be returned when the request could not be fulfilled.",
@@ -680,6 +686,204 @@
 							"type": "string"
 						}
 					}
+				}
+			}
+		},
+		"JatsFile": {
+			"type": "object",
+			"description": "Represents the JATS XML attached to a submission's publication. When the publication has an uploaded JATS XML source file, the response also includes the file's summary properties (those of a `SubmissionFileSummary`).",
+			"properties": {
+				"jatsContent": {
+					"type": "string",
+					"description": "The JATS XML content. May be generated dynamically from publication metadata, or read from an uploaded source file."
+				},
+				"isDefaultContent": {
+					"type": "boolean",
+					"description": "`true` when `jatsContent` was generated dynamically from publication metadata (because no JATS source file has been uploaded); `false` when it was read from an uploaded source file."
+				},
+				"loadingContentError": {
+					"type": "string",
+					"description": "Present only if the JATS content could not be loaded. Contains a translated error message."
+				}
+			},
+			"example": {
+				"_href": "https://example.org/publicknowledge/api/v1/submissions/17/files/30",
+				"id": 30,
+				"submissionId": 17,
+				"name": {"en": "jats-23-20250612-101530.xml"},
+				"fileStage": 30,
+				"mimetype": "application/xml",
+				"jatsContent": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<article>...</article>",
+				"isDefaultContent": false
+			}
+		},
+		"InvitationUser": {
+			"type": "object",
+			"description": "A user associated with an invitation. Returned for both an existing matched user and the prospective new user built from the invitation payload.",
+			"properties": {
+				"email": {
+					"type": "string"
+				},
+				"fullName": {
+					"type": "string"
+				},
+				"familyName": {
+					"type": "string",
+					"description": "Family name in the user's primary locale."
+				},
+				"givenName": {
+					"type": "string",
+					"description": "Given name in the user's primary locale."
+				},
+				"country": {
+					"type": "string",
+					"description": "ISO 3166-1 alpha-2 country code."
+				},
+				"affiliation": {
+					"type": "string",
+					"description": "Affiliation in the user's primary locale."
+				},
+				"orcid": {
+					"type": "string"
+				},
+				"orcidIsVerified": {
+					"type": "boolean"
+				}
+			}
+		},
+		"UserRoleAssignmentInvite": {
+			"type": "object",
+			"description": "A user role assignment invitation. Combines the base invitation record with the role-assignment payload (proposed user details, ORCID data and the user groups to be assigned).",
+			"properties": {
+				"id": {
+					"type": "integer",
+					"description": "The invitation ID."
+				},
+				"status": {
+					"type": "string",
+					"description": "The invitation status.",
+					"enum": [
+						"initialized",
+						"pending",
+						"accepted",
+						"declined",
+						"cancelled"
+					]
+				},
+				"createdAt": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"updatedAt": {
+					"type": "string",
+					"format": "date-time"
+				},
+				"expiryDate": {
+					"type": "string",
+					"format": "date-time",
+					"description": "When the invitation key expires."
+				},
+				"contextId": {
+					"type": "integer",
+					"description": "The context the invitation belongs to."
+				},
+				"inviterId": {
+					"type": "integer",
+					"description": "ID of the user who sent the invitation."
+				},
+				"userId": {
+					"type": "integer",
+					"description": "ID of the invited user, or `null` when the invitation is for a new user."
+				},
+				"email": {
+					"type": "string",
+					"description": "The invitee's email address."
+				},
+				"givenName": {
+					"type": "object",
+					"description": "Localized given name, keyed by locale."
+				},
+				"familyName": {
+					"type": "object",
+					"description": "Localized family name, keyed by locale."
+				},
+				"affiliation": {
+					"type": "object",
+					"description": "Localized affiliation, keyed by locale."
+				},
+				"country": {
+					"type": "string",
+					"description": "ISO 3166-1 alpha-2 country code for the invitee."
+				},
+				"username": {
+					"type": "string",
+					"description": "Proposed username for a new user."
+				},
+				"sendEmailAddress": {
+					"type": "string",
+					"description": "Email address the invitation is sent to."
+				},
+				"emailSubject": {
+					"type": "string"
+				},
+				"emailBody": {
+					"type": "string"
+				},
+				"orcid": {
+					"type": "string"
+				},
+				"orcidIsVerified": {
+					"type": "boolean"
+				},
+				"orcidAccessDenied": {
+					"type": "string"
+				},
+				"orcidAccessToken": {
+					"type": "string"
+				},
+				"orcidRefreshToken": {
+					"type": "string"
+				},
+				"orcidAccessScope": {
+					"type": "string"
+				},
+				"orcidAccessExpiresOn": {
+					"type": "string"
+				},
+				"userGroupsToAdd": {
+					"type": "array",
+					"description": "The roles (user groups) to assign when the invitation is accepted.",
+					"items": {
+						"type": "object",
+						"properties": {
+							"userGroupId": {
+								"type": "integer"
+							},
+							"userGroupName": {
+								"type": "string",
+								"description": "Localized name of the user group."
+							},
+							"masthead": {
+								"type": "boolean"
+							},
+							"dateStart": {
+								"type": "string",
+								"format": "date"
+							},
+							"dateEnd": {
+								"type": "string",
+								"format": "date"
+							}
+						}
+					}
+				},
+				"existingUser": {
+					"description": "The matched existing user, or `null` if the invitation is for a new user.",
+					"$ref": "#/definitions/InvitationUser"
+				},
+				"newUser": {
+					"description": "The prospective new user built from the payload, or `null` if an existing user was matched.",
+					"$ref": "#/definitions/InvitationUser"
 				}
 			}
 		},
@@ -952,6 +1156,78 @@
 			}
 		},
 		"Contributor": "author",
+		"ReviewAssignment": "reviewAssignment",
+		"ReviewerSuggestion": {
+			"type": "object",
+			"description": "A reviewer suggestion made by an author when submitting their work.",
+			"properties": {
+				"id": {
+					"type": "integer",
+					"readOnly": true
+				},
+				"submissionId": {
+					"type": "integer"
+				},
+				"suggestingUserId": {
+					"type": "integer",
+					"description": "The ID of the user who created this suggestion (typically the submitting author).",
+					"readOnly": true
+				},
+				"familyName": {
+					"$ref": "#/definitions/LocaleObject"
+				},
+				"givenName": {
+					"$ref": "#/definitions/LocaleObject"
+				},
+				"fullName": {
+					"description": "The reviewer's full name (derived from `givenName` and `familyName`).",
+					"readOnly": true,
+					"$ref": "#/definitions/LocaleObject"
+				},
+				"displayInitials": {
+					"description": "Initials derived from the suggested reviewer's name, used in the UI.",
+					"readOnly": true,
+					"$ref": "#/definitions/LocaleObject"
+				},
+				"email": {
+					"type": "string"
+				},
+				"orcidId": {
+					"type": "string"
+				},
+				"affiliation": {
+					"$ref": "#/definitions/LocaleObject"
+				},
+				"suggestionReason": {
+					"$ref": "#/definitions/LocaleObject"
+				},
+				"approvedAt": {
+					"type": "string",
+					"description": "The date the suggestion was approved by an editor (ISO 8601 date-time, or `null` if not approved)."
+				},
+				"existingUserId": {
+					"type": "integer",
+					"description": "If the suggested reviewer matches an existing user in the system, the user ID of that user.",
+					"readOnly": true
+				},
+				"hasExistingReviewerRole": {
+					"type": "boolean",
+					"description": "Whether the matching existing user already has a reviewer role in the current context.",
+					"readOnly": true
+				},
+				"reviewerId": {
+					"type": "integer",
+					"description": "The user ID assigned to review this submission once the suggestion has been accepted and a reviewer assignment has been created.",
+					"readOnly": true
+				},
+				"reviewer": {
+					"type": "object",
+					"description": "A reviewer-summary representation of the assigned reviewer. Only included when the request is sent with `include_reviewer_data=true` and `reviewerId` is set.",
+					"readOnly": true,
+					"$ref": "#/definitions/ReviewerSummary"
+				}
+			}
+		},
 		"ReviewRound": "reviewRound",
 		"ReviewerSummary": {
 			"type": "object",
@@ -1010,6 +1286,7 @@
 				}
 			}
 		},
+		"Ror": "ror",
 		"Section": "section",
 		"Site": "site",
 		"Submission": "submission",
@@ -1084,7 +1361,7 @@
 				},
 				"label": {
 					"type": "string",
-					"description": "A human-readable format of the date, based on the context's configured date foramts."
+					"description": "A human-readable format of the date, based on the context's configured date formats."
 				},
 				"value": {
 					"type": "integer",
@@ -1093,24 +1370,7 @@
 			}
 		},
 		"User": "user",
-		"UserGroup": {
-			"type": "object",
-			"description": "A group that a user belongs to. Defines a role and an access level",
-			"properties": {
-				"id": {
-					"type": "integer"
-				},
-				"roleId": {
-					"type": "integer"
-				},
-				"isDefault": {
-					"type": "boolean"
-				},
-				"name": {
-					"type": "string"
-				}
-			}
-		},
+		"UserGroup": "userGroup",
 		"UserInterest": {
 			"type": "object",
 			"description": "A user's review interests.",
@@ -1124,7 +1384,6 @@
 			}
 		},
 		"Category": "category",
-		"Ror": "Ror",
 		"VersionStage": {
 			"type": "string",
 			"enum": ["AO", "PMUR", "VoR"],
@@ -1520,11 +1779,9 @@
 		},
 		"/submissions/{submissionId}": {
 			"get": {
-				"tags": [
-					"Submissions"
-				],
+				"tags": ["Submissions"],
 				"summary": "Get a submission by ID.",
-				"description": "* Unpublished submissions are only returned for assigned participants, editors and admins.\n* `abstract` includes HTML markup.\n* `pages` is usually a `string`. But in some cases it may return an array of arrays. Each array contains two items: the start and end page. Example: `[[25, 31], [45, 62]]`.\n* `submissionProgress` will be > 0 if the submission is incomplete.\n* `stages`, `reviewRounds` and `reviewAssignments` should only be returned for participants assigned to the submission.\n* `reviewAssignments` should only expose user-identifying information for editors and admins.",
+				"description": "* Unpublished submissions are only returned for assigned participants, editors and admins.\n* `abstract` includes HTML markup.\n* `pages` is usually a `string`, but in some cases it may return an array of arrays. Each array contains two items: the start and end page. Example: `[[25, 31], [45, 62]]`.\n* `submissionProgress` will be a non-empty string if the submission is incomplete.\n* `stages`, `reviewRounds` and `reviewAssignments` will only be returned for participants assigned to the submission.\n* `reviewAssignments` only expose user-identifying information for editors and admins.\n* `reviewerSuggestions` lists reviewer suggestions made by the author at submission time. This array is read-only here; manage suggestions via the `/submissions/{submissionId}/reviewers/suggestions` endpoints.\n* `scheduledIn` is the ID of the issue this submission has been scheduled into, when applicable.\n* `issueToBePublished` is a summary of the issue this submission will appear in once it is published.",
 				"parameters": [
 					{
 						"name": "submissionId",
@@ -1596,7 +1853,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "This error indicates one of the following:\n* You are not allowed to edit a submission from the site-wide endpoint. You must use a context (journal/press/server) endpoint.\n* You are not allowed to change the context (journal/press/server) of a submission.",
+						"description": "This error indicates one of the following:\n* You are not allowed to edit a submission from the site-wide endpoint. You must use a context endpoint.\n* You are not allowed to change the context of a submission.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -2015,9 +2272,16 @@
 					"Submissions / Files"
 				],
 				"summary": "Create a new submission file.",
-				"description": "A user is allowed to upload to different file stages depending on their stage assignments. See the description for `GET /submission/{submissionId}/files` above. Once a submission has been completed, authors are no longer allowed to upload to `SUBMISSION_FILE_SUBMISSION`. Authors are not allowed to upload to `SUBMISSION_FILE_REVIEW_REVISION` until revisions have been requested.",
-				"consumes": "multipart/form-data",
+				"description": "A user is allowed to upload to different file stages depending on their stage assignments. See the description for `GET /submissions/{submissionId}/files` above. Once a submission has been completed, authors are no longer allowed to upload to `SUBMISSION_FILE_SUBMISSION`. Authors are not allowed to upload to `SUBMISSION_FILE_REVIEW_REVISION` until revisions have been requested.",
+				"consumes": ["multipart/form-data"],
 				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
 					{
 						"description": "Details about the submission file that should be created.",
 						"in": "body",
@@ -2076,7 +2340,7 @@
 					{
 						"name": "stageId",
 						"in": "query",
-						"description": "The workflow stage id of the requested file. For example, `WORKFLOW_STAGE_ID_PRODUCTION`.",
+						"description": "The workflow stage ID of the requested file. For example, `WORKFLOW_STAGE_ID_PRODUCTION`.",
 						"required": true,
 						"type": "integer"
 					}
@@ -2122,7 +2386,7 @@
 					{
 						"name": "stageId",
 						"in": "query",
-						"description": "The workflow stage id of the file to be edited. For example, `WORKFLOW_STAGE_ID_PRODUCTION`.",
+						"description": "The workflow stage ID of the file to be edited. For example, `WORKFLOW_STAGE_ID_PRODUCTION`.",
 						"required": true,
 						"type": "integer"
 					},
@@ -2182,7 +2446,7 @@
 					{
 						"name": "stageId",
 						"in": "query",
-						"description": "The workflow stage id of the file to be edited. For example, `WORKFLOW_STAGE_ID_PRODUCTION`.",
+						"description": "The workflow stage ID of the file to be edited. For example, `WORKFLOW_STAGE_ID_PRODUCTION`.",
 						"required": true,
 						"type": "integer"
 					}
@@ -2237,7 +2501,7 @@
 					{
 						"name": "stageId",
 						"in": "query",
-						"description": "The workflow stage id of the file to be copied. For example, `WORKFLOW_STAGE_ID_PRODUCTION`.",
+						"description": "The workflow stage ID of the file to be copied. For example, `WORKFLOW_STAGE_ID_PRODUCTION`.",
 						"required": true,
 						"type": "integer"
 					},
@@ -2297,7 +2561,7 @@
 					"Submissions / Participants"
 				],
 				"summary": "Get assigned participants.",
-				"description": "Get the participants assigned to a submisssion.",
+				"description": "Get the participants assigned to a submission.",
 				"parameters": [
 					{
 						"name": "submissionId",
@@ -2814,6 +3078,136 @@
 					"404": {
 						"x-summary": "Request Not Found",
 						"description": "The publication could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/publications/{publicationId}/changeLocale": {
+			"put": {
+				"tags": [
+					"Submissions / Publications"
+				],
+				"summary": "Change the primary locale of a publication.",
+				"description": "Change the primary locale used for multilingual metadata on this publication. Locale-specific values that have not yet been entered for the new locale will be carried over from the previous locale where possible.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "publicationId",
+						"in": "path",
+						"description": "Publication ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "ChangeLocale",
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"locale": {
+									"type": "string",
+									"description": "The locale code to set as the publication's primary locale."
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The submission after the locale change. The new locale will be reflected on the submission and propagated into the multilingual properties of its current publication.",
+						"schema": {
+							"$ref": "#/definitions/Submission"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The locale was missing or is not enabled for this context.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to change the locale for this publication. Returned, among other reasons, when the submission has more than one publication or the publication is already published — the language cannot be changed in either case.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The submission or publication could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/publications/{publicationId}/_components/{component}": {
+			"get": {
+				"tags": [
+					"Backend"
+				],
+				"summary": "Get a configured publication form component used by the editorial UI.",
+				"description": "Returns the JSON configuration for one of the publication-edit forms rendered by the editorial UI. The available components are:\n\n- `metadata` – the publication metadata form\n- `reference` – the citations / references form\n- `titleAbstract` – the title and abstract form\n- `changeLanguageMetadata` – the change-primary-language helper used to migrate metadata across locales\n- `identifier` – the publication identifiers form (URL path, etc.)\n- `permissionDisclosure` – the licensing / permissions / copyright form\n- `issue` – OJS only: the issue-entry form (issue, section, cover image, pages, publication date)\n- `submissionPayment` – OJS only: the submission payment form\n\nThese endpoints are part of the private editorial UI and are not intended for third-party use. The exact response shape depends on the requested component and follows the [PKP Form Component](https://docs.pkp.sfu.ca/dev/ui-library/dev/#/component/Form) configuration format.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"description": "Submission ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "publicationId",
+						"in": "path",
+						"description": "Publication ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "component",
+						"in": "path",
+						"description": "The form component name.",
+						"required": true,
+						"type": "string",
+						"enum": [
+							"metadata",
+							"reference",
+							"titleAbstract",
+							"changeLanguageMetadata",
+							"identifier",
+							"permissionDisclosure",
+							"issue",
+							"submissionPayment"
+						]
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The form component configuration."
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to load this form for this publication.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The submission, publication, or form component could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -4506,7 +4900,7 @@
 						"type": "string"
 					}
 				],
-				"responses":  {
+				"responses": {
 					"200": {
 						"x-summary": "Success",
 						"description": "List of contexts.",
@@ -4534,7 +4928,7 @@
 					}
 				}
 			},
-			"post":  {
+			"post": {
 				"tags": [
 					"Contexts"
 				],
@@ -4857,7 +5251,7 @@
 					"Site"
 				],
 				"summary": "Get the site.",
-				"responses":  {
+				"responses": {
 					"200": {
 						"x-summary": "Success",
 						"description": "Site settings.",
@@ -5024,7 +5418,7 @@
 					}
 				}
 			},
-			"post":  {
+			"post": {
 				"tags": [
 					"Announcements"
 				],
@@ -5059,7 +5453,7 @@
 		},
 		"/announcements/{announcementId}": {
 			"get": {
-				"tags":  [
+				"tags": [
 					"Announcements"
 				],
 				"summary": "Get an announcement.",
@@ -5416,7 +5810,11 @@
 							"properties": {
 								"pubObjectType": {
 									"type": "string",
-									"enum": ["publication", "representation", "issue"],
+									"enum": [
+										"publication",
+										"representation",
+										"issue"
+									],
 									"description": "Publication object type to modify the DOI for."
 								},
 								"pubObjectId": {
@@ -5581,7 +5979,7 @@
 					"DOIs / Submissions"
 				],
 				"summary": "Export Submission DOIs.",
-				"description": "Export submission metadata in a format that can be deposited with the currently configured DOI registration agency. This returns a file id which can be downloaded through the API endpoint `/dois/exports/{fileId}`. See \"Download a DOI Export\" above.",
+				"description": "Export submission metadata in a format that can be deposited with the currently configured DOI registration agency. This returns a file ID which can be downloaded through the API endpoint `/dois/exports/{fileId}`. See \"Download a DOI Export\" above.",
 				"parameters": [
 					{
 						"in": "body",
@@ -5975,7 +6373,7 @@
 					"DOIs / Issues"
 				],
 				"summary": "Export Issue DOIs.",
-				"description": "Export issue metadata in a format that can be deposited with the currently configured DOI registration agency. This returns a file id which can be downloaded through the API endpoint `/dois/exports/{fileId}`. See \"Download a DOI Export\" above.",
+				"description": "Export issue metadata in a format that can be deposited with the currently configured DOI registration agency. This returns a file ID which can be downloaded through the API endpoint `/dois/exports/{fileId}`. See \"Download a DOI Export\" above.",
 				"parameters": [
 					{
 						"in": "body",
@@ -6328,7 +6726,7 @@
 						"type": "integer"
 					}
 				],
-				"responses":  {
+				"responses": {
 					"200": {
 						"x-summary": "Success",
 						"description": "List of email templates.",
@@ -6356,7 +6754,7 @@
 					}
 				}
 			},
-			"post":  {
+			"post": {
 				"tags": [
 					"Email Templates"
 				],
@@ -6577,7 +6975,7 @@
 						"type": "integer"
 					}
 				],
-				"responses":  {
+				"responses": {
 					"200": {
 						"x-summary": "Success",
 						"description": "List of emails.",
@@ -6676,7 +7074,7 @@
 					},
 					{
 						"name": "searchPhrase",
-						"description": "Filter results by a search phrase matched against the name or IP adress.",
+						"description": "Filter results by a search phrase matched against the name or IP address.",
 						"in": "query",
 						"required": false,
 						"type": "string"
@@ -6710,7 +7108,7 @@
 					}
 				}
 			},
-			"post":  {
+			"post": {
 				"tags": [
 					"Institutions"
 				],
@@ -6753,7 +7151,7 @@
 		},
 		"/institutions/{institutionId}": {
 			"get": {
-				"tags":  [
+				"tags": [
 					"Institutions"
 				],
 				"summary": "Get an institution.",
@@ -6783,7 +7181,7 @@
 					},
 					"404": {
 						"x-summary": "Request Not Found",
-						"description": "The requested institution could not be found. Or you requested an institution that is not part of this context.",
+						"description": "The requested institution could not be found, or you requested an institution that is not part of this context.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -9062,7 +9460,7 @@
 										"description": "A user-facing name for the role."
 									},
 									"value":{
-										"type":  "integer",
+										"type": "integer",
 										"description": "The number of registered users in this role."
 									}
 								}
@@ -9220,7 +9618,7 @@
 					"Temporary Files"
 				],
 				"summary": "Get headers for file uploads.",
-				"description": "Responds with the appopriate headers to indicate file uploads maybe be sent, required by some file upload utilities which send a preflight request.",
+				"description": "Responds with the appropriate headers to indicate file uploads may be sent. Required by some file upload utilities which send a preflight request.",
 				"responses": {
 					"200": {
 						"x-summary": "Success",
@@ -9321,7 +9719,7 @@
 					"Backend"
 				],
 				"summary": "Get headers for file uploads.",
-				"description": "Responds with the appopriate headers to indicate file uploads maybe be sent, required by some file upload utilities which send a preflight request.",
+				"description": "Responds with the appropriate headers to indicate file uploads may be sent. Required by some file upload utilities which send a preflight request.",
 				"responses": {
 					"200": {
 						"x-summary": "Success",
@@ -9415,7 +9813,7 @@
 				"tags": [
 					"Submissions"
 				],
-				"summary": "Get a list of submissions assigned  to a user",
+				"summary": "Get a list of submissions assigned to a user",
 				"parameters": [
 					{
 						"description": "Accepts most parameters supported by the public `/submissions` endpoint."
@@ -9512,15 +9910,23 @@
 				}
 			}
 		},
-	  	"/contexts/editDoiRegistrationAgencyPlugin" : {
+		"/contexts/{contextId}/registrationAgency": {
 			"put": {
 				"tags": [
 					"Backend"
 				],
 				"summary": "Edit registration agency plugin settings",
-				"description": "This endpoint is for directly editing DOI registration agency plugin settings. It is used as part of the unified DOI management settings options in the UI.",
+				"description": "This endpoint is for directly editing DOI registration agency plugin settings. It is used as part of the unified DOI management settings options in the UI. (Prior to 3.5 this was exposed at `/contexts/editDoiRegistrationAgencyPlugin`.)",
 				"parameters": [
 					{
+						"name": "contextId",
+						"in": "path",
+						"description": "Context (journal, press, or preprint server) ID",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "Settings",
 						"description": "Parameters in addition to those listed will be specific to the plugin and its settings.",
 						"in": "body",
 						"schema": {
@@ -9616,7 +10022,7 @@
 			}
 		},
 		"/orcid/deleteForAuthor/{authorId}": {
-			"delete": {
+			"post": {
 				"tags": [
 					"ORCID"
 				],
@@ -9637,7 +10043,7 @@
 					},
 					"403": {
 						"x-summary": "Request Unauthorized",
-						"description": "You do not have permission to revoke an author's ORCID access and token data or ORCID is not enabled.",
+						"description": "You do not have permission to revoke an author's ORCID access and token data, or ORCID is not enabled.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}
@@ -9645,6 +10051,1535 @@
 					"404": {
 						"x-summary": "A resource was not found.",
 						"description": "Could not find author or there are no context.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/sections": {
+			"get": {
+				"tags": [
+					"Sections"
+				],
+				"summary": "Get a collection of sections.",
+				"description": "Get a list of all sections that have been added to this journal, press or preprint server.",
+				"parameters": [
+					{
+						"name": "count",
+						"description": "How many results to return in a single request.",
+						"in": "query",
+						"required": false,
+						"type": "integer",
+						"default": 30
+					},
+					{
+						"name": "offset",
+						"description": "Offset the results returned. Use this to receive subsequent pages of requests.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					},
+					{
+						"name": "searchPhrase",
+						"description": "Filter results by a search phrase matched against the section title or abbreviation.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "title",
+						"description": "Filter results by sections whose title contains this string.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "abbrev",
+						"description": "Filter results by sections whose abbreviation matches this string.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "isInactive",
+						"description": "Filter results by active or inactive sections.",
+						"in": "query",
+						"required": false,
+						"type": "boolean"
+					},
+					{
+						"name": "editorIds",
+						"description": "Filter results by one or more user IDs assigned to a section as an editor.",
+						"in": "query",
+						"required": false,
+						"type": "array",
+						"items": {
+							"type": "integer"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "List of sections.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"itemsMax": {
+									"type": "integer"
+								},
+								"items": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/SectionSummary"
+									}
+								}
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view sections in this context.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/sections/{sectionId}": {
+			"get": {
+				"tags": [
+					"Sections"
+				],
+				"summary": "Get a section.",
+				"parameters": [
+					{
+						"name": "sectionId",
+						"description": "Section ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Section details.",
+						"schema": {
+							"$ref": "#/definitions/Section"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view this section.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested section could not be found, or is not part of this context.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/rors": {
+			"get": {
+				"tags": [
+					"RORs"
+				],
+				"summary": "Get a collection of ROR records.",
+				"description": "Get a list of cached records from the [Research Organization Registry (ROR)](https://ror.org/), used to identify institutions for author affiliations.",
+				"parameters": [
+					{
+						"name": "count",
+						"description": "How many results to return in a single request.",
+						"in": "query",
+						"required": false,
+						"type": "integer",
+						"default": 30
+					},
+					{
+						"name": "offset",
+						"description": "Offset the results returned. Use this to receive subsequent pages of requests.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					},
+					{
+						"name": "searchPhrase",
+						"description": "Filter results by a search phrase matched against ROR identifiers and institution names.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "List of ROR records.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"itemsMax": {
+									"type": "integer"
+								},
+								"items": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/RorSummary"
+									}
+								}
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view ROR records.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"RORs"
+				],
+				"summary": "Add or update a ROR record.",
+				"description": "Add a new record to the local ROR cache, or update an existing one if a record with the same ROR identifier already exists.",
+				"parameters": [
+					{
+						"name": "Ror",
+						"description": "The ROR record to add or update.",
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/RorEditable"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Details of the ROR record that was added or updated.",
+						"schema": {
+							"$ref": "#/definitions/Ror"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to add or edit ROR records.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/rors/{rorId}": {
+			"get": {
+				"tags": [
+					"RORs"
+				],
+				"summary": "Get a ROR record.",
+				"parameters": [
+					{
+						"name": "rorId",
+						"description": "The internal ID of the ROR record.",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "ROR record details.",
+						"schema": {
+							"$ref": "#/definitions/Ror"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view ROR records.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The requested ROR record could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/reviewers/suggestions": {
+			"get": {
+				"tags": [
+					"Submissions / Reviewer Suggestions"
+				],
+				"summary": "Get reviewer suggestions for a submission.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"description": "Submission ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "approved",
+						"description": "An optional parameter that filters suggestions by whether they have been approved by an editor.",
+						"in": "query",
+						"required": false,
+						"type": "boolean"
+					},
+					{
+						"name": "include_reviewer_data",
+						"description": "When `true`, includes a `reviewer` summary in each suggestion that has been linked to a reviewer assignment.",
+						"in": "query",
+						"required": false,
+						"type": "boolean"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "List of reviewer suggestions.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"itemsMax": {
+									"type": "integer"
+								},
+								"items": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/ReviewerSuggestion"
+									}
+								}
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view reviewer suggestions for this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The submission could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"Submissions / Reviewer Suggestions"
+				],
+				"summary": "Add a reviewer suggestion to a submission.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"description": "Submission ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "ReviewerSuggestion",
+						"description": "Details about the reviewer being suggested.",
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/ReviewerSuggestion"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Details of the reviewer suggestion that was just added.",
+						"schema": {
+							"$ref": "#/definitions/ReviewerSuggestion"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to add a reviewer suggestion to this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/reviewers/suggestions/{suggestionId}": {
+			"get": {
+				"tags": [
+					"Submissions / Reviewer Suggestions"
+				],
+				"summary": "Get a reviewer suggestion.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"description": "Submission ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "suggestionId",
+						"description": "Reviewer Suggestion ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Reviewer suggestion details.",
+						"schema": {
+							"$ref": "#/definitions/ReviewerSuggestion"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view this reviewer suggestion.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The reviewer suggestion could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"Submissions / Reviewer Suggestions"
+				],
+				"summary": "Edit a reviewer suggestion.",
+				"description": "Edit a reviewer suggestion or, by setting `approvedAt`, approve it so that it can be turned into a reviewer assignment. Unlike most edit endpoints, this one requires the full suggestion payload — `givenName`, `email`, `affiliation`, and `suggestionReason` must all be sent on every PUT.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"description": "Submission ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "suggestionId",
+						"description": "Reviewer Suggestion ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "ReviewerSuggestion",
+						"description": "The updated suggestion details. `givenName`, `email`, `affiliation`, and `suggestionReason` are required on every request, even when only changing one of them.",
+						"in": "body",
+						"schema": {
+							"$ref": "#/definitions/ReviewerSuggestion"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The reviewer suggestion after the edit has been applied.",
+						"schema": {
+							"$ref": "#/definitions/ReviewerSuggestion"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to edit this reviewer suggestion.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The reviewer suggestion could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"Submissions / Reviewer Suggestions"
+				],
+				"summary": "Delete a reviewer suggestion.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"description": "Submission ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "suggestionId",
+						"description": "Reviewer Suggestion ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The suggestion was deleted. The response body is an empty array `[]`."
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to delete this reviewer suggestion.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The reviewer suggestion could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/submissions/{submissionId}/publications/{publicationId}/jats": {
+			"get": {
+				"tags": [
+					"Submissions / JATS"
+				],
+				"summary": "Get the JATS XML for a submission's publication.",
+				"description": "Returns a JSON object containing the JATS XML for the specified publication. The XML is exposed via the `jatsContent` string property. It may have been generated dynamically from publication metadata (`isDefaultContent: true`) or read from an uploaded JATS XML source file (`isDefaultContent: false`); when an uploaded source file is used, its summary properties are also included in the response.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"description": "Submission ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "publicationId",
+						"description": "Publication ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The JATS XML and metadata for the publication.",
+						"schema": {
+							"$ref": "#/definitions/JatsFile"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view the JATS XML for this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The submission or publication could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"Submissions / JATS"
+				],
+				"summary": "Upload a JATS XML source file for a submission's publication.",
+				"description": "Attach an uploaded JATS XML file to the submission's publication. The file is sent as a `multipart/form-data` upload in a field named `file`.",
+				"consumes": ["multipart/form-data"],
+				"parameters": [
+					{
+						"name": "submissionId",
+						"description": "Submission ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "publicationId",
+						"description": "Publication ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "file",
+						"description": "The JATS XML file to attach to this publication.",
+						"in": "formData",
+						"required": true,
+						"type": "file"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The JATS XML and metadata for the publication after the upload.",
+						"schema": {
+							"$ref": "#/definitions/JatsFile"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "No file was provided in the request, or the upload failed.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to upload a JATS XML file for this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The submission or publication could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"Submissions / JATS"
+				],
+				"summary": "Delete the JATS XML source file for a submission's publication.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"description": "Submission ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "publicationId",
+						"description": "Publication ID",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The JATS XML and metadata for the publication after the deletion. With the uploaded source file removed, the response will fall back to dynamically generated content (`isDefaultContent: true`).",
+						"schema": {
+							"$ref": "#/definitions/JatsFile"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to delete the JATS XML file for this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The submission or publication could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/invitations/{type}": {
+			"get": {
+				"tags": [
+					"Invitations"
+				],
+				"summary": "Get a collection of invitations of a given type.",
+				"parameters": [
+					{
+						"name": "type",
+						"description": "The invitation type (e.g. the slug identifying the invitation class).",
+						"in": "path",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "count",
+						"in": "query",
+						"required": false,
+						"type": "integer",
+						"default": 30
+					},
+					{
+						"name": "offset",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					},
+					{
+						"name": "status",
+						"description": "Filter by invitation status.",
+						"in": "query",
+						"required": false,
+						"type": "string",
+						"enum": [
+							"initialized",
+							"pending",
+							"accepted",
+							"declined",
+							"cancelled"
+						]
+					},
+					{
+						"name": "invitee",
+						"description": "Filter by invitee email or user ID.",
+						"in": "query",
+						"required": false,
+						"type": "string"
+					},
+					{
+						"name": "inviter",
+						"description": "Filter by the user ID of the inviter.",
+						"in": "query",
+						"required": false,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "List of invitations."
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to list invitations of this type.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/invitations/{invitationId}": {
+			"get": {
+				"tags": [
+					"Invitations"
+				],
+				"summary": "Get a single invitation.",
+				"parameters": [
+					{
+						"name": "invitationId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Invitation details."
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view this invitation.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The invitation could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/invitations/add/{type}": {
+			"post": {
+				"tags": [
+					"Invitations"
+				],
+				"summary": "Create a new invitation.",
+				"description": "Create a new invitation of the given `type`. The request body should contain the data required to populate the invitation (such as invitee email, target context ID, and role assignments).",
+				"parameters": [
+					{
+						"name": "type",
+						"description": "The type of invitation to create.",
+						"in": "path",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "Invitation",
+						"description": "The invitation payload. The exact properties depend on the invitation type.",
+						"in": "body",
+						"schema": {
+							"type": "object"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The created invitation."
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to create invitations of this type.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/invitations/{invitationId}/populate": {
+			"put": {
+				"tags": [
+					"Invitations"
+				],
+				"summary": "Populate an invitation with additional data.",
+				"description": "Update an invitation in progress with additional payload data before it is sent.",
+				"parameters": [
+					{
+						"name": "invitationId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "Invitation",
+						"description": "Additional invitation payload.",
+						"in": "body",
+						"schema": {
+							"type": "object"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The populated invitation."
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to populate this invitation.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/invitations/{invitationId}/invite": {
+			"put": {
+				"tags": [
+					"Invitations"
+				],
+				"summary": "Send the invitation to the invitee.",
+				"description": "Marks the invitation as sent and dispatches the invitation email to the invitee.",
+				"parameters": [
+					{
+						"name": "invitationId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The invitation that was just sent."
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to send this invitation.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/invitations/{invitationId}/getMailable": {
+			"get": {
+				"tags": [
+					"Invitations"
+				],
+				"summary": "Get the mailable that will be used to send this invitation.",
+				"parameters": [
+					{
+						"name": "invitationId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The mailable that will be used to send this invitation.",
+						"schema": {
+							"$ref": "#/definitions/Mailable"
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view the mailable for this invitation.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/invitations/{invitationId}/cancel": {
+			"put": {
+				"tags": [
+					"Invitations"
+				],
+				"summary": "Cancel an invitation.",
+				"description": "Cancels a pending invitation so that it can no longer be accepted.",
+				"parameters": [
+					{
+						"name": "invitationId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The invitation was cancelled successfully. The response body is an empty array `[]`."
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to cancel this invitation.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The invitation could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/invitations/{invitationId}/key/{key}": {
+			"get": {
+				"tags": [
+					"Invitations"
+				],
+				"summary": "Retrieve an invitation using its access key.",
+				"description": "Retrieve the details of an invitation using its public access key. This endpoint does not require authentication and is used to display invitation details to the invitee before they accept, refine or decline.",
+				"parameters": [
+					{
+						"name": "invitationId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "key",
+						"description": "The single-use access key sent to the invitee.",
+						"in": "path",
+						"required": true,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The invitation details.",
+						"schema": {
+							"$ref": "#/definitions/UserRoleAssignmentInvite"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The invitation could not be found, or the key does not match.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/invitations/{invitationId}/key/{key}/finalize": {
+			"put": {
+				"tags": [
+					"Invitations"
+				],
+				"summary": "Finalize (accept) an invitation using its access key.",
+				"parameters": [
+					{
+						"name": "invitationId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "key",
+						"in": "path",
+						"required": true,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The finalized invitation.",
+						"schema": {
+							"$ref": "#/definitions/UserRoleAssignmentInvite"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The invitation cannot be finalized in its current state.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The invitation could not be found, or the key does not match.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/invitations/{invitationId}/key/{key}/refine": {
+			"put": {
+				"tags": [
+					"Invitations"
+				],
+				"summary": "Refine an invitation before accepting it.",
+				"description": "Allows the invitee to update some of the invitation payload (for example to provide additional information about themselves) before finalizing.",
+				"parameters": [
+					{
+						"name": "invitationId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "key",
+						"in": "path",
+						"required": true,
+						"type": "string"
+					},
+					{
+						"name": "Invitation",
+						"description": "The updated invitation payload.",
+						"in": "body",
+						"schema": {
+							"type": "object"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The refined invitation.",
+						"schema": {
+							"$ref": "#/definitions/UserRoleAssignmentInvite"
+						}
+					},
+					"400": {
+						"x-summary": "Request Invalid",
+						"description": "The values you sent with the request did not pass validation.",
+						"schema": {
+							"$ref": "#/definitions/InvalidParametersResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The invitation could not be found, or the key does not match.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/invitations/{invitationId}/key/{key}/decline": {
+			"put": {
+				"tags": [
+					"Invitations"
+				],
+				"summary": "Decline an invitation using its access key.",
+				"parameters": [
+					{
+						"name": "invitationId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "key",
+						"in": "path",
+						"required": true,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The declined invitation.",
+						"schema": {
+							"$ref": "#/definitions/UserRoleAssignmentInvite"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The invitation could not be found, or the key does not match.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/reviews/history/{submissionId}/{reviewRoundId}": {
+			"get": {
+				"tags": [
+					"Reviews"
+				],
+				"summary": "Get the review history for a review round.",
+				"description": "Returns the **calling reviewer's** review-round data for the given submission and round: publication metadata at the time of the review, the review assignment itself, the recommendation, comments, attachments, and the submission files that were under review. The endpoint filters by the authenticated user as the reviewer, so an editor or admin calling it without being personally assigned will receive a 404.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "reviewRoundId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "Aggregated review-round data: publication metadata at the time of review, the review assignment itself, the reviewer's recommendation, viewable and private comments, attachments, and submission files.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"publicationTitle": {
+									"$ref": "#/definitions/LocaleObject"
+								},
+								"publicationType": {
+									"$ref": "#/definitions/LocaleObject"
+								},
+								"publicationAbstract": {
+									"$ref": "#/definitions/LocaleObject"
+								},
+								"publicationKeywords": {
+									"type": "object",
+									"description": "Keywords keyed by locale."
+								},
+								"declineEmail": {
+									"type": "object",
+									"description": "Decline-email metadata, if the review was declined."
+								},
+								"reviewAssignment": {
+									"$ref": "#/definitions/ReviewAssignment"
+								},
+								"recommendation": {
+									"type": "string",
+									"description": "The reviewer's localized recommendation."
+								},
+								"comments": {
+									"type": "array",
+									"items": {
+										"type": "object"
+									},
+									"description": "Comments visible to the author."
+								},
+								"privateComments": {
+									"type": "array",
+									"items": {
+										"type": "object"
+									},
+									"description": "Comments visible only to editors."
+								},
+								"attachments": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/SubmissionFileSummary"
+									}
+								},
+								"files": {
+									"type": "array",
+									"items": {
+										"$ref": "#/definitions/SubmissionFileSummary"
+									}
+								}
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to view the review history for this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The submission or review round could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/reviews/{submissionId}/{reviewAssignmentId}/confirmReview": {
+			"put": {
+				"tags": [
+					"Reviews"
+				],
+				"summary": "Confirm a review assignment.",
+				"description": "Accept or decline a review assignment on behalf of the assigned reviewer.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "reviewAssignmentId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "ConfirmReview",
+						"in": "body",
+						"schema": {
+							"type": "object",
+							"required": ["decision"],
+							"properties": {
+								"decision": {
+									"type": "string",
+									"description": "Whether the reviewer is accepting or declining the assignment.",
+									"enum": ["accept", "decline"]
+								}
+							}
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The confirmed review assignment. The properties of the `ReviewAssignment` schema are returned wrapped in a top-level `_data` object — i.e. the response body looks like `{\"_data\": { … review assignment properties … }}`. This wrapper is a side-effect of the controller returning the raw data object without schema-mapping.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"_data": {
+									"$ref": "#/definitions/ReviewAssignment"
+								}
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to confirm this review assignment.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The submission or review assignment could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/reviews/{submissionId}/{reviewAssignmentId}/export-pdf": {
+			"get": {
+				"tags": [
+					"Reviews"
+				],
+				"summary": "Export a review assignment as a PDF.",
+				"description": "Generates a PDF copy of the review response and stores it as a temporary file. The file can then be downloaded via `/reviews/{submissionId}/exports/{fileId}` using the returned `temporaryFileId`.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "reviewAssignmentId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "authorFriendly",
+						"description": "Required. Pass `\"1\"` to render the exported file in an author-friendly format that anonymises reviewer identities, or `\"0\"` for the reviewer-facing version. Sent as a string, not a boolean.",
+						"in": "query",
+						"required": true,
+						"type": "string",
+						"enum": ["0", "1"]
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The ID of the temporary file containing the exported PDF.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"temporaryFileId": {
+									"type": "integer"
+								}
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to export this review.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The submission or review assignment could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/reviews/{submissionId}/{reviewAssignmentId}/export-xml": {
+			"get": {
+				"tags": [
+					"Reviews"
+				],
+				"summary": "Export a review assignment as XML.",
+				"description": "Generates a JATS XML representation of the review response and stores it as a temporary file. The file can then be downloaded via `/reviews/{submissionId}/exports/{fileId}` using the returned `temporaryFileId`.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "reviewAssignmentId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "authorFriendly",
+						"description": "Required. Pass `\"1\"` to render the exported file in an author-friendly format that anonymises reviewer identities, or `\"0\"` for the reviewer-facing version. Sent as a string, not a boolean.",
+						"in": "query",
+						"required": true,
+						"type": "string",
+						"enum": ["0", "1"]
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The ID of the temporary file containing the exported XML.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"temporaryFileId": {
+									"type": "integer"
+								}
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to export this review.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The submission or review assignment could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/reviews/{submissionId}/exports/{fileId}": {
+			"get": {
+				"tags": [
+					"Reviews"
+				],
+				"summary": "Download an exported review file.",
+				"description": "Streams the temporary file produced by `/reviews/{submissionId}/{reviewAssignmentId}/export-pdf` or `/reviews/{submissionId}/{reviewAssignmentId}/export-xml` to the client as a file download.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "fileId",
+						"description": "The `temporaryFileId` returned by the export-pdf or export-xml endpoints.",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The exported file is streamed in the response body as a binary download."
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to download this file.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The file could not be found.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/reviews/{submissionId}/{reviewAssignmentId}/sendToOrcid": {
+			"post": {
+				"tags": [
+					"Reviews"
+				],
+				"summary": "Submit a completed review to ORCID.",
+				"description": "Queues a job that deposits the completed review as a work on the reviewer's ORCID record. The reviewer must have an authorized ORCID iD on file. The deposit happens asynchronously; on success the review assignment's `orcidReviewPutCode` is updated in the background.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					},
+					{
+						"name": "reviewAssignmentId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The deposit job was queued successfully. The response body is an empty array `[]`."
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You do not have permission to send this review to ORCID, or ORCID is not enabled for this context.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "The submission or review assignment could not be found.",
 						"schema": {
 							"$ref": "#/definitions/ErrorResponse"
 						}

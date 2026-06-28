@@ -53,7 +53,7 @@
 		},
 		"label": {
 			"type": "string",
-			"description": "A human-readable label for this galley. For the primary article, it is usually indicates the format like PDF, ePub or full text. For supplementary files it often indicates the content, such as source data or interview transcripts.",
+			"description": "A human-readable label for this galley. For the primary article, it usually indicates the format like PDF, ePub or full text. For supplementary files it often indicates the content, such as source data or interview transcripts.",
 			"apiSummary": true
 		},
 		"pub-id::publisher-id": {

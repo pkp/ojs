@@ -56,14 +56,14 @@
 		},
 		"doiObject": {
 			"type": "object",
-			"description": "DOI object for this galley",
+			"description": "DOI object for this issue",
 			"apiSummary": true,
 			"readOnly": true,
 			"$ref": "#/definitions/Doi"
 		},
 		"doiId": {
 			"type": "integer",
-			"description": "Reference to the DOI for this galley",
+			"description": "Reference to the DOI for this issue",
 			"writeOnly": true,
 			"validation": [
 				"nullable"
