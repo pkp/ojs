@@ -1,10 +1,11 @@
 # rl <biuro@fimagis.pl>, 2025.
 # Monika Tylawska <monika.tylawska@gmail.com>, 2025, 2026.
 # Kamil Federyga <kamilfederyga@gmail.com>, 2026.
+# Klaudia <nowaksk95@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-06-27 19:31+0000\n"
-"Last-Translator: Kamil Federyga <kamilfederyga@gmail.com>\n"
+"PO-Revision-Date: 2026-06-29 16:15+0000\n"
+"Last-Translator: Klaudia <nowaksk95@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/author/rue/>\n"
 "Language: rue\n"
 "MIME-Version: 1.0\n"
@@ -14,10 +15,10 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "author.submit.submitArticle"
-msgstr "Перешлий статю"
+msgstr "Переслати статю"
 
 msgid "author.submit.stepsToSubmit"
-msgstr "Пересланя змісту в пятьох кроках"
+msgstr "Пят крокiв для пересланя зголошыня"
 
 msgid "author.submit"
 msgstr "Нове зголошыня"
