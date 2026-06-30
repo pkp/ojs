@@ -188,6 +188,7 @@
 		<migration class="PKP\migration\upgrade\v3_5_0\I12608_RestoreActiveReviewerInvitations"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I12513_MissingSiteLocaleUserNames"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I12133_FixCategorySort"/>
+		<migration class="PKP\migration\upgrade\v3_5_0\I12792_FixInvitationEmailButtons"/>
 	</upgrade>
 
 	<!-- update plugin configuration - should be done as the final upgrade task -->
