@@ -11,7 +11,7 @@
   *
   -->
 
-<install version="3.5.0.4">
+<install version="3.5.0.5">
 	<code function="checkPhpVersion" />
 
 	<upgrade minversion="2.0.0.0" maxversion="3.2.9.9">
@@ -179,7 +179,7 @@
 		<note file="docs/release-notes/README-3.5.0" />
 	</upgrade>
 
-	<upgrade minversion="3.5.0.0" maxversion="3.5.0.9">
+	<upgrade minversion="3.5.0.0" maxversion="3.5.0.99">
 		<migration class="PKP\migration\upgrade\v3_5_0\I10962_UpdateEmailTemplateVariables"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I11603_AddMissingUserRoleAssignmentInvitationEmail"/>
 		<migration class="PKP\migration\upgrade\v3_5_0\I11673_AddMissingApprovalToReviewerSuggestion"/>

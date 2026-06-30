@@ -1,8 +1,8 @@
-OJS 3.5.0 Release Notes
-Git tag: 3_5_0-4
+OJS 3.5.0 LTS Release Notes
+Git tag: 3_5_0-5
 
-Release date: April 10, 2026
-============================
+Release date: June 30, 2026
+===========================
 
 Configuration Changes
 ---------------------
@@ -31,6 +31,52 @@ In [queues]:
 In [cache]:
     - default (default value: 'file'). Can be either 'file' or 'opcache' to indicate which Laravel cache should be used.
     - path (default value: 'cache/opcache'). Use to specify a path for cache storage when using 'file' or 'opcache' drivers.
+
+3.5.0-5 Build (LTS)
+-------------------
+	#3477: Permit editors to see competing interests for declining reviewers
+	#10371: Date input parameters in article search must be checked for validity
+	#10971: Users XML plugin | Export - missing username in user selection
+	#11947: [Users & Roles] | Roles Pagination - Roles, with 25 items per page selected and 27 roles it shows only 25 items and no pagination
+	#11999: [Jobs] | Job runner doesn't retry failed jobs properly
+	#12005: [DOI] | Issue always required for legacy DOI suffix pattern
+	#12031: Review and update swagger API docs for 3.5
+	#12133: [Upgrade] | Invalid category order direction value after upgrading from 3.3 to 3.5
+	#12140: Back port decision lost solution for 3.4 which introduced for 3.5/main upgrade
+	#12217: [Submission Decisions] | Submission workflow - Submission page, reviewers & authors who have disabled status throw errors when recording a decision
+	#12250: [Main Feature] | ORCID verification request email fails if no user matching context contactEmail
+	#12461: Align UI text in section/series settings: "Inactive" vs "Deactivate"
+	#12501: Add a CLI tool for marking locale keys as fuzzy
+	#12513: [User invitation] | site locales needs to be consider when creating new user via invitation workflow
+	#12547: [pkp-lib] | Session/cookie management
+	#12565: [Editorial Masthead] | Display masthead, unable to access masthead in postgres installations
+	#12567: [Datacite Plugin] | Registering issue DOI with DataCite not possible in OJS 3.5.0-3
+	#12588: Upgrade laravel version from 11.x to 12.x
+	#12604: [Publication Object Metadata] | Passing array instead of string for supportingAgencies causes fatal error for plugin DublinCoreMeta
+	#12608: [OJS 3.5] The one-click configuration that allows reviewer to access a submission expires after the reviewer click on it for the first time.
+	#12632: [ORCID] | UserRequiredPolicy missing from OrcidHandler
+	#12637: [DOI] | Null custom suffix pattern causes TypeError in mintPublicationDoi when Submissions pattern field is blank
+	#12658: [Eloquent Model] | Passing empty array does not removed existing setting values for eloquent based model with settings table
+	#12712: [Eloquent Model] ModelWithSettings: schema-derived cast silently skipped for multi-word camelCase setting props
+	#12731: fix: incorrect empty check on LazyCollection returned by publication->getData('citations')
+	#12734: [Native Import/Export Plugin] | Publication export, validation errors when certain metadata entered
+	#12737: Indirect direct object reference in DOI assignment
+	#12766: Submission Lists | Some submissions do not appear in author's "Revisions Requested" queue
+	#12767: base_url[journal] with bare domain causes //api/v1/ double-slash on all API calls in OJS 3.5
+	#12783: [Admin Settings] | Editorial Workflow Admin - Settings Wizard > User, the option to remove user fails to be hidden after no roles are available for the user.
+	#12792: [Emails] | User invitation email: Accept/Decline buttons invisible in Outlook (white-on-white)
+	#12795: [Recommend Only Editor | Editorial Workflow Section - Submission in Review, Recommend options are going to 404 error page when selected
+	#12833: [ScheduleTask] | Fatal non-recoverable error for web based task runner at invalid request path which unable to resolve context
+	#12879: [Email Footer] | Reviewer Workflow discussions - Email, part of the email footer discussion exposes author information
+	#12883: [Datacite plugin] | Datacite plugin settings, Test username validation is incorrect
+	#12886: [DOI] | Production - When uploading an article in OJS 3.5 with QuickSubmit, empty author affiliation prevents DOI registration
+	#12944: [Users & Roles] | Editorial Workflow Section - Users & Roles Settings > Roles Page, Search functionality with dropdown to filter List Roles Assigned To is throwing a 500 error
+	#12951: [API keys] | Increase entropy of API key creation
+	#12967: Users cannot submit if they have multiple roles assigned on some servers
+	#12973: Reviewer suggestion API does not correlate submissions with suggestions
+	#12975: Email log entry API does not ensure context matches request
+	#12977: Disable external XML entity loading
+
 
 3.5.0-4 Build
 -------------
