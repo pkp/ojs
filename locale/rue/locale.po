@@ -1,9 +1,10 @@
 # rl <biuro@fimagis.pl>, 2026.
 # Monika Tylawska <monika.tylawska@gmail.com>, 2026.
+# Kamil Federyga <kamilfederyga@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-06-19 05:58+0000\n"
-"Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
+"PO-Revision-Date: 2026-06-27 15:35+0000\n"
+"Last-Translator: Kamil Federyga <kamilfederyga@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/locale/rue/>\n"
 "Language: rue\n"
 "MIME-Version: 1.0\n"
@@ -40,7 +41,7 @@ msgid "navigation.journalHelp"
 msgstr "Поміч"
 
 msgid "navigation.current"
-msgstr "Біжучый номер"
+msgstr "Актуальне чысло"
 
 msgid "navigation.otherJournals"
 msgstr "Інчы часописы"
@@ -49,10 +50,10 @@ msgid "navigation.infoForAuthors.long"
 msgstr "Інформациі для авторів"
 
 msgid "navigation.skip.about"
-msgstr "Перейд до інцформаций о часописі"
+msgstr "Перейд до інформаций о часописі"
 
 msgid "navigation.skip.issue"
-msgstr "Перейд до біжучого номеру"
+msgstr "Перейд до актуального чысла"
 
 msgid "common.queue.short.submissionsUnassigned"
 msgstr "Неприписане"
@@ -121,7 +122,7 @@ msgid "article.suppFilesAbbrev"
 msgstr "Поміц. файлі"
 
 msgid "article.subject"
-msgstr "Основны слова"
+msgstr "Ключовы слова"
 
 msgid "article.coverage"
 msgstr "Засяг"
@@ -136,10 +137,10 @@ msgid "article.submissions"
 msgstr "Зголошыня"
 
 msgid "article.details"
-msgstr "Дрібниці"
+msgstr "Деталі"
 
 msgid "article.abstract"
-msgstr "Абстракт"
+msgstr "Резуме"
 
 msgid "article.coverPage.altText"
 msgstr "Образ окладинкы"
@@ -201,7 +202,7 @@ msgid "doi.manager.settings.publications"
 msgstr "Статі"
 
 msgid "navigation.browseByIssue"
-msgstr "Подля номеру"
+msgstr "Подля чысла"
 
 msgid "navigation.browseByAuthor"
 msgstr "Подля автора"
@@ -255,7 +256,7 @@ msgid "article.fontSize.large.altText"
 msgstr "Великій"
 
 msgid "article.return"
-msgstr "Верний до дрібниць статі"
+msgstr "Верний до деталів статі"
 
 msgid "submission.submissionEditing"
 msgstr "Едиция зголошеных текстів"
@@ -264,7 +265,7 @@ msgid "submission.changeSection"
 msgstr "Замін на"
 
 msgid "submission.round"
-msgstr "Рунда&nbsp;{$round}"
+msgstr "Етап&nbsp;{$round}"
 
 msgid "submission.notifyEditor"
 msgstr "Дай знати редакторови"
@@ -276,7 +277,7 @@ msgid "submission.postReviewVersion"
 msgstr "Файль з текстом по рецензиі"
 
 msgid "submission.authorVersion"
-msgstr "Текст пересланий през автора"
+msgstr "Текст пересланый през автора"
 
 msgid "submission.copyediting"
 msgstr "Коректа тексту"
@@ -330,7 +331,7 @@ msgid "journal.issn"
 msgstr "ISSN"
 
 msgid "journal.viewAllIssues"
-msgstr "Вкаж вшыткы номеры"
+msgstr "Вкаж вшыткы чысла"
 
 msgid "user.noRoles.selectUsersWithoutRoles"
 msgstr "Воз до увагы ужытковників без приписаных ріль в часописі."
@@ -375,7 +376,7 @@ msgid "submission.scheduledIn"
 msgstr "Заплянувано до публикациі в {$issueName}."
 
 msgid "submissions.proofread"
-msgstr "Коректа файлю до публикациі"
+msgstr "Коректа файля до публикациі"
 
 msgid "submissions.postAuthor"
 msgstr "По авторскій коректі"
@@ -396,13 +397,13 @@ msgid "submissions.copyeditComplete"
 msgstr "По коректі"
 
 msgid "journal.currentIssue"
-msgstr "Актуальный номер"
+msgstr "Актуальне чысло"
 
 msgid "user.authorization.representationNotFound"
-msgstr "Жадана коректа не остала найдена."
+msgstr "Не найдено жаданой коректы."
 
 msgid "user.role.manager"
-msgstr "Адміністратор Часопису"
+msgstr "Адміністратор часопису"
 
 msgid "subscriptions.status.needsInformation"
 msgstr "Вымагат інформациі"
@@ -423,16 +424,16 @@ msgstr ""
 
 msgid "doi.issue.incorrectContext"
 msgstr ""
-"Не можна утворити ідентыфікатора DOI для слідуючого номеру: {$itemTitle}. "
-"Номер тот не фунґує в теперішнім часописі."
+"Не мож утворити ідентыфікатора DOI для слідуючого выданя: {$itemTitle}. Не "
+"фунґує оно в теперішнім часописі."
 
 msgid "doi.issue.notPublished"
 msgstr ""
-"Зле означыня статі през DOI для {$pubObjectTitle}. Номер мусит быти "
-"опубликуваний закля буде можніст актуалізациі."
+"Зле означыня статі през DOI для {$pubObjectTitle}. Чысло мусит быти "
+"опубликуване закля буде можніст актуалізациі."
 
 msgid "user.reviewerPrompt"
-msgstr "Ци хтіл быс рецензувати тексты зголашаны до того часопису?"
+msgstr "Ци хтіл(а) бы-с рецензувати тексты зголашаны до того часопису?"
 
 msgid "user.reviewerPrompt.userGroup"
 msgstr "Гей, вышлий просьбу о наданя {$userGroup} управніня."
@@ -443,8 +444,7 @@ msgstr ""
 "того часопису."
 
 msgid "user.register.contextsPrompt"
-msgstr ""
-"До котрых часописів на тій стороні хтіл бы-с (хотіла бы-с) ся зареґіструвати?"
+msgstr "До котрых часописів на тій стороні хтіл(а) бы-с ся зареґіструвати?"
 
 msgid "user.register.otherContextRoles"
 msgstr "Вышлий звіданя о наданя управнінь."
@@ -461,7 +461,7 @@ msgid "user.manageMySubscriptions"
 msgstr "Заряджай моіма субскрибциями"
 
 msgid "user.noRoles.chooseJournal"
-msgstr "Твоє конто не є тепер приписане до ниякых часописів. Выбер часопис:"
+msgstr "Твоє конто неє тепер приписане до ниякых часописів. Выбер часопис:"
 
 msgid "user.noRoles.submitArticle"
 msgstr "Зголос рекомендацию"
@@ -470,13 +470,13 @@ msgid "user.noRoles.submitArticleRegClosed"
 msgstr "Перешлий статю: Реґістрация авторів є тепер вылучена."
 
 msgid "user.noRoles.regReviewer"
-msgstr "Зареґіструй яко рецензент"
+msgstr "Зареґіструй як рецензент"
 
 msgid "user.noRoles.regReviewerClosed"
-msgstr "Зареґіструй яко рецензент: Реґістрация рецензентів є тепер вылучена."
+msgstr "Зареґіструй як рецензент: Реґістрация рецензентів є тепер вылучена."
 
 msgid "user.role.subEditor"
-msgstr "Редактор Ділу"
+msgstr "Редактор ділу"
 
 msgid "user.role.subscriptionManager"
 msgstr "Адміністратор субскрибциі"
@@ -488,10 +488,10 @@ msgid "user.role.journalAssistant"
 msgstr "Прислужник часопису"
 
 msgid "issue.issue"
-msgstr "Номер"
+msgstr "Чысло"
 
 msgid "issue.issues"
-msgstr "Номеры"
+msgstr "Чысла"
 
 msgid "issue.title"
 msgstr "Наголовок"
@@ -503,45 +503,45 @@ msgid "issue.volume"
 msgstr "Том"
 
 msgid "issue.number"
-msgstr "Номер"
+msgstr "Чысло"
 
 msgid "issue.vol"
 msgstr "Том"
 
 msgid "issue.no"
-msgstr "Но."
+msgstr "Ч."
 
 msgid "issue.year"
 msgstr "Рік"
 
 msgid "issue.noIssues"
-msgstr "Брак номерів"
+msgstr "Брак чысла"
 
 msgid "issue.toc"
 msgstr "Зміст"
 
 msgid "issue.abstract"
-msgstr "Абстракт"
+msgstr "Резуме"
 
 msgid "issue.coverPage.altText"
 msgstr "Окладинка"
 
 msgid "issue.fullIssue"
-msgstr "Полный номер"
+msgstr "Полне чысло"
 
 msgid "issue.nonpdf.title"
-msgstr "Побер номер"
+msgstr "Побер чысло"
 
 msgid "issue.viewIssue"
-msgstr "Вкаж номер"
+msgstr "Вкаж чысло"
 
 msgid "issue.return"
-msgstr "Верний до дрібниць номеру"
+msgstr "Верний до деталі чысла"
 
 msgid "doi.issue.incorrectStaleStatus"
 msgstr ""
-"Неправильный статус DOI для слідуючого номеру: {$itemTitle}. DOI мусит мати "
-"статус \"Зареґіструваный\" або \"Зголошеный\"."
+"Неправильный статус DOI для слідуючого чысла: {$itemTitle}. DOI мусит мати "
+"статус «Зареґіструваный» або «Зголошеный»."
 
 msgid "subscriptionTypes.currency"
 msgstr "Грошы"
@@ -617,7 +617,7 @@ msgid "submission.event.general.issueScheduled"
 msgstr "Статя остала переслана до плянуваня чергы"
 
 msgid "submission.event.general.issueAssigned"
-msgstr "Статя приписана до номеру"
+msgstr "Статя приписана до чысла"
 
 msgid "submission.event.general.articlePublished"
 msgstr "Статя опубликуваня"
@@ -713,7 +713,7 @@ msgid "search.results.orderBy.date"
 msgstr "Дата публикациі"
 
 msgid "search.results.orderBy.issue"
-msgstr "Номер"
+msgstr "Чысло"
 
 msgid "search.results.orderBy.journal"
 msgstr "Наголовок часопису"

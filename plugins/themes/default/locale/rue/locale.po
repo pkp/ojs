@@ -1,9 +1,10 @@
 # rl <biuro@fimagis.pl>, 2025.
 # Monika Tylawska <monika.tylawska@gmail.com>, 2026.
+# Kamil Federyga <kamilfederyga@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-07 12:39+0000\n"
-"Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
+"PO-Revision-Date: 2026-06-29 12:05+0000\n"
+"Last-Translator: Kamil Federyga <kamilfederyga@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/rue/>\n"
 "Language: rue\n"
@@ -57,10 +58,10 @@ msgstr ""
 "шерифовым головным текстом."
 
 msgid "plugins.themes.default.option.typography.lato"
-msgstr "Lato: Знаный, модерный безшрифовый шрифт."
+msgstr "Lato: Знаный, модерный безшерифовый шрифт."
 
 msgid "plugins.themes.default.option.typography.lora"
-msgstr "Lora: Шырикій шерифовый шрифт добрый до чытаня з екрану."
+msgstr "Lora: Шырокій шерифовый шрифт добрый до чытаня з екрану."
 
 msgid "plugins.themes.default.option.colour.label"
 msgstr "Кольор"
@@ -75,7 +76,7 @@ msgid "plugins.themes.default.option.useHomepageImageAsHeader.label"
 msgstr "Образ фону в наголовку"
 
 msgid "plugins.themes.default.option.useHomepageImageAsHeader.option"
-msgstr "Вкаж образ головной стороны яко фон наголовка."
+msgstr "Вкаж образ головной стороны як фон наголовка."
 
 msgid "plugins.themes.default.option.displayStats.label"
 msgstr "Опциі вказуваня статистык"
