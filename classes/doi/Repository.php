@@ -333,6 +333,37 @@ class Repository extends \PKP\doi\Repository
     }
 
     /**
+     * Gets all DOIs associated with a Peer Review.
+     * NB: Assumes only enabled DOI types are allowed.
+     *
+     *
+     * @return array<int> DOI IDs
+     *
+     */
+    public function getDoisForReviewAssignment(int $reviewId, bool $enabledDoiTypesOnly = false): array
+    {
+        $doiIds = [];
+
+        $reviewAssignment = Repo::reviewAssignment()->get($reviewId);
+        $reviewDoiId = $reviewAssignment?->getData('doiId');
+
+        if (!empty($reviewDoiId)) {
+            $submission = Repo::submission()->get($reviewAssignment->getData('submissionId'));
+
+            /** @var JournalDAO $contextDao */
+            $contextDao = DAORegistry::getDAO('JournalDAO');
+
+            /** @var Journal $context */
+            $context = $contextDao->getById($submission->getData('contextId'));
+
+            if (!$enabledDoiTypesOnly || $context->isDoiTypeEnabled(self::TYPE_PEER_REVIEW)) {
+                $doiIds[] = $reviewDoiId;
+            }
+        }
+        return $doiIds;
+    }
+
+    /**
      * Schedules DOI deposits with the active registration agency for all valid and
      * unregistered/stale publication items. Items are added as a queued job to be
      * completed asynchronously.

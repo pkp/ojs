@@ -79,8 +79,11 @@ describe('Crossref tests', function () {
 			})
 			.then((response) => {
 				expect(response.status).to.equal(200);
-				expect(response.body).to.haveOwnProperty('temporaryFileId');
-				expect(response.body.temporaryFileId).to.be.a('number');
+				expect(response.body).to.haveOwnProperty('temporaryFileIds');
+				expect(response.body.temporaryFileIds).to.be.a('array');
+				response.body.temporaryFileIds.forEach((value) => {
+					expect(value).to.be.a('number');
+				});
 			});
 
 		cy.log('Deselect Crossref as registered agency for downstream tests');

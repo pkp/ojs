@@ -383,6 +383,16 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     }
 
     /**
+     * Get the Peer Review filter.
+     *
+     * @return string|null
+     */
+    public function getPeerReviewFilter()
+    {
+        return null;
+    }
+
+    /**
      * Get the publication filter.
      */
     public function getPublicationFilter(): ?string
