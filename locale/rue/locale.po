@@ -3,8 +3,8 @@
 # Kamil Federyga <kamilfederyga@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-06-27 15:35+0000\n"
-"Last-Translator: Kamil Federyga <kamilfederyga@gmail.com>\n"
+"PO-Revision-Date: 2026-07-02 12:45+0000\n"
+"Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/locale/rue/>\n"
 "Language: rue\n"
 "MIME-Version: 1.0\n"
@@ -951,3 +951,42 @@ msgstr "Наукова рецензия, етап {$round}"
 
 msgid "sectionEditor.regrets.title"
 msgstr "#{$submissionId} Одгвары рецензентів, анулюваня і скоршы етапы"
+
+msgid "sectionEditor.regrets.regretsAndCancels"
+msgstr "Одгвары рецензентів як тіж анулюваня"
+
+msgid "sectionEditor.regrets.regret"
+msgstr "Одгвар"
+
+msgid "sectionEditor.regrets.result"
+msgstr "Результат"
+
+msgid "sectionEditor.review.createReviewer"
+msgstr "Поклич нового рецензента"
+
+msgid "layoutEditor.completedEditorialAssignments"
+msgstr "Закінчены редакцийны роботы"
+
+msgid "layoutEditor.noActiveAssignments"
+msgstr "Брак приписаных редакцийных задач."
+
+msgid "layoutEditor.layoutEditingAssignments"
+msgstr "Задачы складу"
+
+msgid "layoutEditor.galley.replaceGalley"
+msgstr "Замін файль до публикациі"
+
+msgid "layoutEditor.galley.uploadSuppFile"
+msgstr "Перешлий додатковый файль"
+
+msgid "sectionEditor.regrets.decisionRound"
+msgstr "Рішыня редактора, етап {$round}"
+
+msgid "sectionEditor.review.enrollReviewer"
+msgstr "Реґістрация фунґуючого хоснователя як рецензента"
+
+msgid "layoutEditor.activeEditorialAssignments"
+msgstr "Актывны редакцийны роботы"
+
+msgid "layoutEditor.galley.uploadGalleyFormat"
+msgstr "Першлий файль до публикациі"
