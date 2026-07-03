@@ -84,4 +84,5 @@
 	<email key="USER_ROLE_MASTHEAD_UPDATE" name="mailable.userRoleMastheadUpdateNotify.name" subject="emails.userRoleMastheadUpdateNotify.subject" body="emails.userRoleMastheadUpdateNotify.body"/>
 	<email key="ORCID_REQUEST_UPDATE_SCOPE" name="orcid.orcidRequestUpdateScope.name"  subject="emails.orcidRequestUpdateScope.subject" body="emails.orcidRequestUpdateScope.body"/>
 	<email key="REQUEST_REVIEW_ROUND_AUTHOR_RESPONSE" name="mailable.reviewRound.requestAuthorResponse.name"  subject="emails.reviewRound.requestAuthorResponse.subject" body="emails.reviewRound.requestAuthorResponse.body"/>
+	<email key="AUTHOR_PUBLICATION_PUBLISHED" name="mailable.authorPublicationPublished.name"  subject="mailable.authorPublicationPublished.subject" body="mailable.authorPublicationPublished.body"/>
 </emails>
