@@ -192,9 +192,9 @@
 	</upgrade>
 
 	<upgrade minversion="3.3.0.0" maxversion="3.5.9.9">
-		<migration class="PKP\migration\upgrade\v3_6_0\PreflightCheckMigration" fallback="3.5.9.9" />
+		<migration class="PKP\migration\upgrade\v3_6_0\PreflightCheckMigration" fallback="3.5.9.9"/>
 		<migration class="PKP\migration\upgrade\v3_6_0\I10403_EmailTemplateUserGroupAccess"/>
-		<migration class="APP\migration\install\ReviewerRecommendationsMigration" />
+		<migration class="APP\migration\install\ReviewerRecommendationsMigration"/>
 		<migration class="APP\migration\upgrade\v3_6_0\I1660_ReviewerRecommendations"/>
 		<migration class="APP\migration\upgrade\v3_6_0\I10404_UpdateCategoryImageNameFields"/>
 		<migration class="PKP\migration\upgrade\v3_6_0\I4860_MigratePublicationVersion"/>
@@ -210,9 +210,9 @@
 		<migration class="PKP\migration\upgrade\v3_6_0\I11701_Notes"/>
 		<migration class="APP\migration\upgrade\v3_6_0\I11593_DOAJGenericPlugin"/>
 		<migration class="PKP\migration\upgrade\v3_6_0\I11917_TaskTemplateDueDate"/>
-        <migration class="PKP\migration\upgrade\v3_6_0\I11913_AssociatePublicationsWithReviewRounds"/>
+		<migration class="PKP\migration\upgrade\v3_6_0\I11913_AssociatePublicationsWithReviewRounds"/>
 		<migration class="PKP\migration\upgrade\v3_6_0\I857_ContributorRolesTypes"/>
-        <migration class="APP\migration\upgrade\v3_6_0\I12046_AssignMachineReadableRecommendationType"/>
+		<migration class="APP\migration\upgrade\v3_6_0\I12046_AssignMachineReadableRecommendationType"/>
 		<migration class="PKP\migration\upgrade\v3_6_0\I12108_RestrictEditTemplatesToUserGroups"/>
         <migration class="PKP\migration\upgrade\v3_6_0\I12078_RemoveSettingTypeInCitationSettings"/>
         <migration class="PKP\migration\upgrade\v3_6_0\I11971_RemoveShowTitleInUserGroups"/>
@@ -232,6 +232,7 @@
         <migration class="PKP\migration\upgrade\v3_6_0\I12799_MovePublishedSubmissionsToDone"/>
 		<migration class="APP\migration\upgrade\v3_6_0\I12948_RemoveRFC1807Plugin" />
 		<migration class="PKP\migration\upgrade\v3_5_0\I12133_FixCategorySort"/>
+		<migration class="PKP\migration\upgrade\v3_6_0\I12593_EmailToTaskTemplates"/>
 		<code function="rebuildSearchIndex" />
 		<note file="docs/release-notes/README-3.6.0" />
 	</upgrade>
