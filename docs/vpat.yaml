@@ -1,109 +1,127 @@
-title: OJS Default Theme Accessibility Conformance Report
+title: OMP/OJS/OPS Editorial View Accessibility Conformance Report
 product:
-  name: OJS Default Theme
-  version: OJS 3.3.0-17
-  description: ''
+  name: OMP/OJS/OPS Editorial View
+  version: '3.5'
+  description: >-
+    The Editorial View that ships with OJS, OMP, and OPS is designed to work
+    great for a broad range of users. It employs a common, straightforward
+    design style that should fit user needs and ensures the content is
+    easy-to-access no matter what. This report covers the administrative
+    (Editorial View) interfaces evaluated during the March 2026 accessibility
+    audit.
 author:
   name: Israel Cefrin
-  company_name: 'Public Knowledge Project, Simon Fraser University'
+  company_name: Public Knowledge Project
   address: ''
   email: icefrin@sfu.ca
   phone: ''
-  website: 'http://pkp.sfu.ca/'
+  website: http://pkp.sfu.ca/
 vendor:
-  name: Kevin Stranack
-  company_name: 'Public Knowledge Project, Simon Fraser University'
+  name: Teresa YH Lee
+  company_name: Public Knowledge Project, Simon Fraser University
   address: ''
-  email: kevin_stranack@sfu.ca
+  email: lee_ty@sfu.ca
   phone: ''
-  website: 'http://pkp.sfu.ca/'
-report_date: 5/6/2024
-last_modified_date: 5/8/2024
-version: 5
+  website: http://pkp.sfu.ca/
+report_date: '2026-03-05'
+last_modified_date: '2026-07-03'
+version: 3
 notes: >-
-  The OJS Default Theme audit found many barriers, and most of these have been
-  eliminated. However, the theme will be constantly updated, and new barriers
-  may unknowingly be created. If you encounter barriers, or need accommodations,
-  please report them to us via the PKP web contact form -
-  https://pkp.sfu.ca/contact-us/.
-evaluation_methods_used: >-
+  OJS, OMP, and OPS are authoring platforms — authors submit manuscripts,
+  editors compose announcements and editorial decisions, and reviewers
+  contribute structured feedback. As such, the Authoring Tool Accessibility
+  Guidelines (ATAG) 2.0 are relevant to a comprehensive accessibility evaluation
+  of these products.
+
+
+  This WCAG 2.1 conformance report evaluates the accessibility of content
+  rendered and interacted with by end users, including authoring interfaces such
+  as submission forms, rich text editors, and reviewer workflows. Where
+  applicable, WCAG criteria in the tables below include authoring-tool component
+  findings that overlap with ATAG Part B concerns — particularly around rich
+  text editor operability (2.1.1), programmatic labels on editing fields
+  (3.3.2), and content validation feedback (3.3.1).
+
+
+  A separate ATAG 2.0 Part B assessment is planned as part of PKP's broader
+  accessibility roadmap. This assessment will evaluate the platform's capacity
+  to support authors in producing accessible content, including: guidance for
+  non-text alternatives, heading structure preservation through the rich text
+  editor, and accessibility-aware content transformation during import/export.
+  Until that assessment is complete, ATAG conformance is not claimed.
+
+
+  The Backend administrative interfaces audit found many barriers requiring
+  remediation. While the frontend reader interface has some improvements, the
+  admin interfaces remain critically non-compliant in several areas. If you
+  encounter barriers, or need accommodations, please report them via the PKP
+  accessibility report form: https://pkp.sfu.ca/accessibility-report/.
+evaluation_methods_used: >
   ### Reviewer’s Testing Technologies
 
 
-  * Mac OS Sierra 10.12.6 Firefox and Chrome
+  * Mac Air 
 
-  * PC Windows 10 Firefox and Chrome
+  * iPhone 15 Pro 
 
-  * A minimum of 10 different accessibility related apps, plugins, extensions
-  and
+  * iPhone 14 Pro 
 
-  online checking software were used in both Chrome and Firefox on PC and Mac.
+  * Windows 10 and 11 laptops 
 
-  * Manual testing was completed, and this included different assistive
-  technologies.
+  * Apple Mac Mini (M1, 2020) 
 
+  * iPad Pro 12.9” (5th Generation) 
+
+  * Different accessibility related apps, plugins, extensions, as well as online
+  checking software, were used in Chrome, Edge, Safari, and Firefox.
 
 
   ### Third Party Testers Testing Technologies
 
-  * Screen Reader
 
-  JAWS version 2019.1907.42 on Internet Explorer 8.1 on Windows 10 with PacMate
-  20 Braille Display
+  * JAWS 2026 on Microsoft Edge on Windows 10 (updated February 2026) 
 
-  * Screen Reader
+  * VoiceOver on Safari on iPhone 14, iOS 26 (updated February 2026) 
 
-  NVDA 2019.1.1 on Google Chrome on Windows 8.1
+  * Screen Reader with Braille Device (Deaf-Blind) 
 
-  * Screen Reader
+  * VoiceOver on Safari on iPhone 13 Pro, iOS 17.6.1 with Focus 14 Blue braille
+  display (updated March 2025) 
 
-  Narrator on Microsoft Edge 44.17763.0.1 on Windows 10 Pro 10.0.17763
+  * Screen Reader with Braille Device 
 
-  * Screen Reader
+  * JAWS 2022 on Google Chrome on Windows 11 Pro with Mantis braille display
+  (updated February 2025) 
 
-  JAWS version 2019.1907.42 on Microsoft Edge 44.17763.0.1 on Windows
+  * VoiceOver on Safari on iPhone 14 Pro, iOS 26.3 
 
-  Surface Tablet
+  * Windows Narrator on Microsoft Edge on Windows 11 version 25H2 (up to date
+  March 2026) 
 
-  * Screen Reader
+  * NVDA 2025.3.3 on Google Chrome on Windows 11 version 25H2 (updated February
+  2025) 
 
-  JAWS version: 2018.1811.3 on Google Chrome version: 73.0.3683.103 on
+  * VoiceOver on Safari on iPad Pro 12.9" (5th Generation), iPadOS 26.3, Chrome
+  with pinch-to-zoom and Dynamic Type enabled (19pt+ font) 
 
-  Windows 10 Pro 10.0.17763
+  * Safari on macOS 26.0.1 on Apple Mac Mini (M1, 2020) with 27" external
+  monitor at 1280×720p, increased display contrast, and browser zoom (Ctrl +)
 
-  * Screen Reader
 
-  NVDA version: 2019.1.1 on Google Chrome version: 73.0.3683.103 on Windows
+  ### Testers disabilities
 
-  10 Pro 10.0.17763
 
-  * Screen Reader
+  * Fully blind 
 
-  VoiceOver on Safari 12.1 on OS 12.2 iPhone
+  * Deaf-Blind 
 
-  * Screen Reader
+  * Almost fully blind (near fully blind) 
 
-  VoiceOver on Safari 12.1 on Mac Mini High Sierra Version 10.13.6
+  * Low vision 
 
-  * Screen Reader with Braille Device
+  * ADD 
 
-  iPad Pro 12.9 inch on iOS 12.4.1 VoiceOver with 40 Cell Focus 40 Blue Braille
-
-  Display
-
-  * Screen Reader
-
-  JAWS version 2019.1907.42 on Google Chrome on Windows
-
-  * Version 77.0.3865.75 64-bit on Mac OS Sierra (v10.12.6).
-
-  * Browser Magnification
-
-  Firefox Quantum Version 69.0 on Mac OS Sierra (v10.12.6).
-
-  * Voice Recognition Software
-
-  Dragon Naturally Speaking Premium 13 on Windows 10
+  * Panic and anxiety disorders
 legal_disclaimer: >-
   To the maximum extent permitted by applicable law, in no event will Simon
   Fraser University or any of its affiliates, or any of their respective
@@ -111,8 +129,8 @@ legal_disclaimer: >-
   content on applications implementing this theme to meet these accessibility
   standards, to the extent that such content was submitted or uploaded by a
   third party.
-repository: 'https://github.com/pkp/ojs'
-feedback: 'https://pkp.sfu.ca/contact-us/'
+repository: https://github.com/pkp/ojs
+feedback: https://pkp.sfu.ca/contact-us/
 license: CC-BY-4.0
 related_openacrs: []
 catalog: 2.4-edition-wcag-2.1-en
@@ -126,32 +144,50 @@ chapters:
           - name: web
             adherence:
               level: partially-supports
-              notes: >
-                There is a Google reCaptcha embedded function to prevent or
-                mitigate spammer registering influx. We acknowledge the lack of
-                full support for accessibility to this feature since we rely on
-                the functionality of a third-party vendor, i.e. Google. This
-                plugin is optional and it is disabled by default. 
+              notes: >-
+                Graphs and charts used for statistics (e.g., Monographs,
+                Preprints) lack text alternatives, rendering data points
+                inaccessible to screen reader users. Small action icons (edit,
+                delete, view) often lack descriptive labels, forcing reliance on
+                visual cues alone. Broken links and missing href attributes were
+                also identified.
+
+
+                Platforms: OJS, OPS, OMP
+
+
+                All open WCAG 1.1.1 issue(s): 
+
+                [12596](https://github.com/pkp/pkp-lib/issues/12596),
+
+                [12649](https://github.com/pkp/pkp-lib/issues/12649)
           - name: electronic-docs
             adherence:
-              level: ''
+              level: not-applicable
               notes: ''
           - name: software
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: >-
+                Data structures expose values correctly when properly labeled in
+                the UI layer.
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: partially-supports
+              notes: >-
+                Authors and editors interacting with submission metadata,
+                announcements, and editorial guidance encounter unlabeled action
+                icons (edit, delete, view) and inaccessible statistical graphs.
+                These barriers affect content production workflows where authors
+                upload files and editors manage publication assets.
       - num: 1.2.1
         components:
           - name: web
             adherence:
               level: not-applicable
               notes: >-
-                It relies on the content that authors, editors, or journal
-                managers will upload to the journal. 
+                Audio-only media content is not present in the administrative
+                interfaces.
           - name: electronic-docs
             adherence:
               level: ''
@@ -162,16 +198,16 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: not-applicable
+              notes: No audio-only media authoring in Editorial View interfaces.
       - num: 1.2.2
         components:
           - name: web
             adherence:
               level: not-applicable
               notes: >-
-                It relies on the content that authors, editors, or journal
-                managers will upload to the journal. 
+                Video content without audio transcripts are not commonly present
+                in admin interfaces.
           - name: electronic-docs
             adherence:
               level: ''
@@ -182,16 +218,16 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: not-applicable
+              notes: No video captioning workflows in Editorial View.
       - num: 1.2.3
         components:
           - name: web
             adherence:
               level: not-applicable
               notes: >-
-                It relies on the content that authors, editors, or journal
-                managers will upload to the journal. 
+                Media synchronization alternatives are not required for admin
+                workflow interfaces.
           - name: electronic-docs
             adherence:
               level: ''
@@ -202,35 +238,63 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: not-applicable
+              notes: No media synchronization in authoring workflows.
       - num: 1.3.1
         components:
           - name: web
             adherence:
               level: partially-supports
               notes: >-
-                The theme uses ARIA landmarks to identify regions of a page. It
-                misses only the footer region element although it presents an
-                alternative to reach the footer content.
+                Critical structural failures exist in table semantics and form
+                labeling. Table headers frequently misuse the scope attribute on
+                data cells instead of header cells. Rich text editors (used for
+                Author Guidance, Announcements) are unreadable by screen
+                readers, often labeled only as "clickable application" without
+                exposing content. Filter controls behave incorrectly, and
+                navigation submenus fail to announce their expandable state or
+                auto-expand confusingly. Duplicate headings and improper heading
+                hierarchies are prevalent.
+
+
+                Platforms: OJS, OPS, OMP
+
+
+                All open WCAG 1.3.1 issue(s): 
+
+                [9355](https://github.com/pkp/pkp-lib/issues/9355),
+
+                [9357](https://github.com/pkp/pkp-lib/issues/9357),
+
+                [12467](https://github.com/pkp/pkp-lib/issues/12467),
+
+                [12839](https://github.com/pkp/pkp-lib/issues/12839)
           - name: electronic-docs
             adherence:
               level: ''
               notes: ''
           - name: software
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: >-
+                Backend data structures maintain proper relationships when
+                semantic markup is correctly implemented.
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: partially-supports
+              notes: >-
+                Rich text editors used for Author Guidance, Announcements, and
+                editorial decisions are unreadable by screen readers, labeled
+                only as "clickable application." This directly impedes content
+                authors who rely on these editors to produce published material.
+                Table semantics and form labeling failures also affect authoring
+                contexts.
       - num: 1.3.2
         components:
           - name: web
             adherence:
               level: supports
-              notes: ''
+              notes: Navigation order generally follows logical visual flow.
           - name: electronic-docs
             adherence:
               level: ''
@@ -241,16 +305,16 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: Navigation order follows logical flow for authoring tasks.
       - num: 1.3.3
         components:
           - name: web
             adherence:
               level: supports
               notes: >-
-                Buttons and breadcrumbs provide alternative and complementary
-                text to screen reader users.
+                Buttons and breadcrumbs provide complementary text to screen
+                reader users.
           - name: electronic-docs
             adherence:
               level: ''
@@ -261,14 +325,29 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: >-
+                Instructions in authoring forms don't rely solely on sensory
+                characteristics.
       - num: 1.4.1
         components:
           - name: web
             adherence:
-              level: supports
-              notes: ''
+              level: partially-supports
+              notes: >-
+                Dashboard notification indicators lack explicit context, relying
+                primarily on color to convey meaning. Red bubbles do not define
+                their status or urgency through text or icons, creating barriers
+                for users with color vision deficiencies. 
+
+
+                Platforms: OJS, OPS, OMP
+
+
+                All open WCAG 1.4.1 issue(s): 
+
+
+                [12703](https://github.com/pkp/pkp-lib/issues/12703)
           - name: electronic-docs
             adherence:
               level: ''
@@ -279,14 +358,18 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: partially-supports
+              notes: >-
+                Color-only notification indicators affect content authors
+                monitoring submission queues.
       - num: 1.4.2
         components:
           - name: web
             adherence:
               level: not-applicable
-              notes: ''
+              notes: >-
+                No audio playback features require pause controls in
+                administrative workflows.
           - name: electronic-docs
             adherence:
               level: ''
@@ -297,35 +380,59 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: not-applicable
+              notes: No audio playback in authoring workflows.
       - num: 2.1.1
         components:
           - name: web
             adherence:
-              level: supports
-              notes: The interface is fully operable using the keyboard only.
+              level: partially-supports
+              notes: >-
+                Complex interactions are not fully keyboard accessible.
+                Reordering components (drag-and-drop) lacks a keyboard
+                alternative, and rich text editors trap focus or require
+                undocumented key combinations to exit. Some navigation tabs and
+                dropdowns do not respond correctly to standard tab/enter
+                navigation.
+
+
+                Platforms: OMP, OJS, OPS
+
+
+                All open WCAG 2.1.1 issue(s): 
+
+                [12601](https://github.com/pkp/pkp-lib/issues/12601),
+
+                [12681](https://github.com/pkp/pkp-lib/issues/12681),
+
+                [12838](https://github.com/pkp/pkp-lib/issues/12838) 
           - name: electronic-docs
             adherence:
               level: ''
               notes: ''
           - name: software
             adherence:
-              level: ''
-              notes: ''
+              level: partially-supports
+              notes: >-
+                System functions do not provide full keyboard operability for
+                all interactive elements. Focus management requires improvement
+                across complex workflows.
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: partially-supports
+              notes: >-
+                Drag-and-drop reordering lacks keyboard alternatives, affecting
+                editors who arrange submission files and chapter orders. Rich
+                text editors trap focus, preventing authors from completing
+                content production tasks efficiently via keyboard alone.
       - num: 2.1.2
         components:
           - name: web
             adherence:
               level: supports
               notes: >-
-                There are no modal or alert traps in the Default Theme. It might
-                be possible that some third-party plugins do not comply with
-                this criteria though.
+                No keyboard traps were identified; users can generally navigate
+                away from all focused elements.
           - name: electronic-docs
             adherence:
               level: ''
@@ -336,14 +443,18 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: >-
+                No keyboard traps beyond RTE focus issues already captured under
+                2.1.1.
       - num: 2.1.4
         components:
           - name: web
             adherence:
               level: not-applicable
-              notes: There are not keyboard shortcuts implemented for the theme.
+              notes: >-
+                No custom keyboard shortcuts are implemented in the
+                administrative interfaces.
           - name: electronic-docs
             adherence:
               level: ''
@@ -354,14 +465,18 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: not-applicable
+              notes: >-
+                No custom keyboard shortcuts in Editorial View authoring
+                interfaces.
       - num: 2.2.1
         components:
           - name: web
             adherence:
               level: not-applicable
-              notes: ''
+              notes: >-
+                No time-based limits are enforced on user sessions in the
+                administrative interface.
           - name: electronic-docs
             adherence:
               level: ''
@@ -372,14 +487,16 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: not-applicable
+              notes: No session timeouts enforced.
       - num: 2.2.2
         components:
           - name: web
             adherence:
               level: not-applicable
-              notes: ''
+              notes: >-
+                Moving, blinking, scrolling, or auto-updating information is not
+                commonly used.
           - name: electronic-docs
             adherence:
               level: ''
@@ -390,14 +507,16 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: not-applicable
+              notes: No auto-updating content in authoring contexts.
       - num: 2.3.1
         components:
           - name: web
             adherence:
               level: not-applicable
-              notes: ''
+              notes: >-
+                No content flashes above three times per second in
+                administrative interfaces.
           - name: electronic-docs
             adherence:
               level: ''
@@ -408,16 +527,16 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: not-applicable
+              notes: No flashing content in Editorial View interfaces.
       - num: 2.4.1
         components:
           - name: web
             adherence:
               level: supports
               notes: >-
-                Skipping links are the very first focusable by keyboard elements
-                on the interface.
+                Bypass blocks are available but functionality may vary in
+                complex workflow contexts.
           - name: electronic-docs
             adherence:
               level: ''
@@ -428,34 +547,56 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: >-
+                Bypass blocks available in authoring contexts, though may vary
+                in complex workflows.
       - num: 2.4.2
         components:
           - name: web
             adherence:
-              level: supports
+              level: partially-supports
               notes: >-
-                As long as Journal Managers keep the titles meaningful it will
-                be reflected on the content. 
+                Dynamic administrative pages share identical page titles
+                regardless of the current view (e.g., "Submissions | OJS..."
+                appears for Active, Needs Review, and Published stages). This
+                prevents screen reader users from distinguishing between
+                different workflow stages or contexts.
+
+
+                Platforms: OJS, OPS
+
+
+                All open WCAG 2.4.2 issue(s): 
+
+                [12840](https://github.com/pkp/pkp-lib/issues/12840) 
           - name: electronic-docs
             adherence:
               level: ''
               notes: ''
           - name: software
             adherence:
-              level: ''
-              notes: ''
+              level: partially-supports
+              notes: >-
+                System-generated page titles do not dynamically update to
+                reflect specific view context. Each unique admin view should
+                receive a distinct title identifier.
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: partially-supports
+              notes: >-
+                Identical page titles across workflow stages prevent authors and
+                editors from programmatically identifying which submission or
+                authoring context is currently active, increasing cognitive load
+                during content production.
       - num: 2.4.3
         components:
           - name: web
             adherence:
               level: supports
-              notes: ''
+              notes: >-
+                Focus order generally maintains logical sequence through
+                workflow steps.
           - name: electronic-docs
             adherence:
               level: ''
@@ -466,34 +607,60 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: Focus order follows logical sequence through authoring steps.
       - num: 2.4.4
         components:
           - name: web
             adherence:
-              level: not-applicable
+              level: partially-supports
               notes: >-
-                It relies on the content that authors, editors, or journal
-                managers will upload to the journal. 
+                Dashboard is presenting non-descriptive "View" links that all
+                read identically, making it impossible to identify which
+                specific submission they refer to. Duplicate links per item
+                increase the cognitive load and physical effort required for
+                keyboard navigation.
+
+
+                Platforms: OJS, OPS, OMP
+
+
+                All open WCAG 2.4.4 issue(s): 
+
+                [9339](https://github.com/pkp/pkp-lib/issues/9339),
+
+                [9341](https://github.com/pkp/pkp-lib/issues/9341),
+
+                [12749](https://github.com/pkp/pkp-lib/issues/12749),
+
+                [12836](https://github.com/pkp/pkp-lib/issues/12836) 
           - name: electronic-docs
             adherence:
               level: ''
               notes: ''
           - name: software
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: >-
+                Hyperlink destinations resolve correctly; naming convention is
+                the primary presentation issue.
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: partially-supports
+              notes: >-
+                Non-descriptive "View" links in the submission dashboard make it
+                difficult for authors and editors to navigate to specific
+                submissions during content review and production workflows.
+                Duplicate links per item increase tabbing effort for
+                keyboard-dependent content producers.
       - num: 2.5.1
         components:
           - name: web
             adherence:
               level: not-applicable
-              notes: ''
+              notes: >-
+                Pointer gestures are not required to operate core administrative
+                functions.
           - name: electronic-docs
             adherence:
               level: ''
@@ -504,16 +671,16 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: not-applicable
+              notes: Focus order follows logical sequence through authoring steps.
       - num: 2.5.2
         components:
           - name: web
             adherence:
               level: supports
               notes: >-
-                There are no "Down-Event", which means  that the down-event of
-                the pointer is not used to execute any part of the function;
+                No single-pointer path-based gestures are required to complete
+                workflows.
           - name: electronic-docs
             adherence:
               level: ''
@@ -524,16 +691,16 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: No path-based pointer gestures required.
       - num: 2.5.3
         components:
           - name: web
             adherence:
               level: not-applicable
               notes: >-
-                It relies on the content that authors, editors, or journal
-                managers will upload to the journal. 
+                Label-in-name is not applicable as there are no dynamic label
+                changes triggered by pointer movement.
           - name: electronic-docs
             adherence:
               level: ''
@@ -544,14 +711,16 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: not-applicable
+              notes: No dynamic label changes from pointer interaction.
       - num: 2.5.4
         components:
           - name: web
             adherence:
               level: not-applicable
-              notes: ''
+              notes: >-
+                Motion activation is not used to trigger administrative
+                workflows.
           - name: electronic-docs
             adherence:
               level: ''
@@ -562,16 +731,14 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: not-applicable
+              notes: No motion-activated authoring functions.
       - num: 3.1.1
         components:
           - name: web
             adherence:
               level: supports
-              notes: >-
-                The Default Theme is ready to work with 68 different languages
-                and their writing systems
+              notes: Dashboard supports 68 different languages and writing systems.
           - name: electronic-docs
             adherence:
               level: ''
@@ -582,14 +749,16 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: 68 languages supported, including for authoring interfaces.
       - num: 3.2.1
         components:
           - name: web
             adherence:
               level: supports
-              notes: ''
+              notes: >-
+                Focusing on components does not cause unexpected context changes
+                without user confirmation.
           - name: electronic-docs
             adherence:
               level: ''
@@ -600,14 +769,16 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: No unexpected context changes on focus in authoring forms.
       - num: 3.2.2
         components:
           - name: web
             adherence:
               level: supports
-              notes: ''
+              notes: >-
+                Changing settings does not automatically initiate unintended
+                context changes.
           - name: electronic-docs
             adherence:
               level: ''
@@ -618,55 +789,104 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: >-
+                No unintended context changes from form input in authoring
+                workflows.
       - num: 3.3.1
         components:
           - name: web
             adherence:
-              level: supports
-              notes: >-
-                Register, login, and reset password forms provide users with
-                clear messages of error after submitting. The errors are
-                displayed on the top of the form.
+              level: partially-supports
+              notes: >
+                Error messages appear but are displayed inconsistently
+                (sometimes under a single field rather than listing all errors).
+                Critical feedback like password requirements may not be clearly
+                indicated.
+
+
+                Platforms: OMP, OJS, OPS
+
+
+                All open WCAG 3.3.1 issue(s): 
+
+
+                [12599](https://github.com/pkp/pkp-lib/issues/1283125996) 
           - name: electronic-docs
             adherence:
               level: ''
               notes: ''
           - name: software
             adherence:
-              level: ''
-              notes: ''
+              level: partially-supports
+              notes: >-
+                Focus does not automatically shift to error messages upon
+                validation failure. Users must manually discover and correct
+                errors without systematic guidance.
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: partially-supports
+              notes: >-
+                Users creating content (e.g., announcements, submissions)
+                receive inconsistent validation feedback through the admin
+                interface.
       - num: 3.3.2
         components:
           - name: web
             adherence:
               level: partially-supports
               notes: >-
-                All forms provide previous instructions on how to use them. The
-                search form is still pending on adding the instructions.
+                Rich text editor fields lack descriptive labels, making it
+                impossible to know which section is being edited. Fieldsets are
+                often missing legends, and filter inputs do not provide hints on
+                available options.
+
+
+                Platforms: OMP, OJS, OPS
+
+
+                All open WCAG 3.3.2 issue(s): 
+
+                [9347](https://github.com/pkp/pkp-lib/issues/9347),
+
+                [9347](https://github.com/pkp/pkp-lib/issues/9348),
+
+                [9349](https://github.com/pkp/pkp-lib/issues/9349),
+
+                [9362](https://github.com/pkp/pkp-lib/issues/9362),
+
+                [9363](https://github.com/pkp/pkp-lib/issues/9363),
+
+                [12613](https://github.com/pkp/pkp-lib/issues/12613),
+
+                [12640](https://github.com/pkp/pkp-lib/issues/12640),
+
+                [12725](https://github.com/pkp/pkp-lib/issues/12725)
           - name: electronic-docs
             adherence:
               level: ''
               notes: ''
           - name: software
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: >-
+                Form label associations function correctly when HTML structure
+                is properly implemented in templates.
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: partially-supports
+              notes: >-
+                Users editing content in rich text areas cannot reliably
+                determine which fields require input due to missing programmatic
+                labels.
       - num: 4.1.1
         components:
           - name: web
             adherence:
               level: supports
-              notes: ''
+              notes: >-
+                Parsing is successful for most dynamic content; no critical
+                duplicate IDs detected.
           - name: electronic-docs
             adherence:
               level: ''
@@ -677,28 +897,58 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: >-
+                Parsing successful; no critical duplicate IDs in authoring
+                templates.
       - num: 4.1.2
         components:
           - name: web
             adherence:
-              level: not-applicable
+              level: partially-supports
               notes: >-
-                There are no user interface components developed or scripted
-                other than the native HTML elements.
+                Programmatic accessibility is compromised by non-descriptive
+                ARIA labels and landmark misconfiguration. Multiple main regions
+                exist where only one should be present. Incorrect aside
+                placements confuse screen readers. Dynamic components like radio
+                buttons are incorrectly announced as "invalid" even when
+                functional.
+
+
+                Platforms: OJS, OPS, OMP
+
+
+                All open WCAG 4.1.2 issue(s): 
+
+                [9330](https://github.com/pkp/pkp-lib/issues/9330),
+
+                [12646](https://github.com/pkp/pkp-lib/issues/12646),
+
+                [12709](https://github.com/pkp/pkp-lib/issues/12709),
+
+                [12719](https://github.com/pkp/pkp-lib/issues/12719),
+
+                [12723](https://github.com/pkp/pkp-lib/issues/12723),
+
+                [12837](https://github.com/pkp/pkp-lib/issues/12837)
           - name: electronic-docs
             adherence:
               level: ''
               notes: ''
           - name: software
             adherence:
-              level: ''
-              notes: ''
+              level: partially-supports
+              notes: >-
+                Several interactive elements lack necessary role and property
+                definitions. Custom widgets (filters, graphs) do not expose
+                proper state changes to assistive technologies.
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: partially-supports
+              notes: >-
+                Content created through admin interfaces may inherit
+                accessibility issues if authors rely on improperly labeled rich
+                text editors.
   success_criteria_level_aa:
     notes: ''
     disabled: false
@@ -709,8 +959,8 @@ chapters:
             adherence:
               level: not-applicable
               notes: >-
-                It relies on the content that authors, editors, or journal
-                managers will upload to the journal. 
+                Live captions are not required as live streaming is not part of
+                administrative workflows.
           - name: electronic-docs
             adherence:
               level: ''
@@ -721,16 +971,16 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: not-applicable
+              notes: No live streaming in authoring workflows.
       - num: 1.2.5
         components:
           - name: web
             adherence:
               level: not-applicable
               notes: >-
-                It relies on the content that authors, editors, or journal
-                managers will upload to the journal. 
+                Audio descriptions are not required as video content is minimal
+                in admin interfaces.
           - name: electronic-docs
             adherence:
               level: ''
@@ -741,16 +991,16 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: not-applicable
+              notes: No video content requiring audio descriptions.
       - num: 1.3.4
         components:
           - name: web
             adherence:
               level: supports
               notes: >-
-                The Default Theme provides full support to portrait and
-                landscape orientation to different screen sizes.
+                The interface provides support for both portrait and landscape
+                orientation across screen sizes.
           - name: electronic-docs
             adherence:
               level: ''
@@ -761,14 +1011,16 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: Orientation support applies to authoring interfaces.
       - num: 1.3.5
         components:
           - name: web
             adherence:
               level: supports
-              notes: ''
+              notes: >-
+                Input purpose is properly recognized and autofill-ready for
+                common fields.
           - name: electronic-docs
             adherence:
               level: ''
@@ -779,58 +1031,92 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: Autofill-ready fields benefit authoring forms.
       - num: 1.4.3
         components:
           - name: web
             adherence:
-              level: supports
-              notes: >-
-                Most of elements present a minimum contrast Ratio of 4.57:1 that
-                complies to WCA 2.1 AA. The asterisk "*" element in input files
-                that denotes "required input" has now the color contrast and the
-                font size to comply to this criteria. The remediation can be
-                seen from this Issue in Github:
-                https://github.com/pkp/pkp-lib/issues/9504
+              level: partially-supports
+              notes: >
+                There are UI elements failing contrast requirements, including
+                pink graph lines on dark blue backgrounds, blue text links
+                blending into body text, and red warning banners that are too
+                small or low contrast. Table text, search boxes against dark
+                backgrounds, and notification bubbles are consistently too light
+                or small to be legible.
+
+
+                Platforms: OJS, OPS, OMP
+
+
+                All open WCAG 1.4.3 issue(s): 
+
+                [9333](https://github.com/pkp/pkp-lib/issues/9333),
+
+                [9353](https://github.com/pkp/pkp-lib/issues/9353),
+
+                [12650](https://github.com/pkp/pkp-lib/issues/12650)
           - name: electronic-docs
             adherence:
               level: ''
               notes: ''
           - name: software
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: >-
+                Color selection logic renders correctly; contrast failures are
+                CSS implementation issues.
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: >-
+                Content produced through admin interfaces inherits whatever
+                contrast styling is applied.
       - num: 1.4.4
         components:
           - name: web
             adherence:
-              level: supports
-              notes: ''
+              level: partially-supports
+              notes: >-
+                Text throughout the administrative interface is frequently below
+                the recommended 1rem size. This affects critical areas such as
+                form labels, button text, table data, error messages, and
+                warning banners.
+
+
+                Platforms: OJS, OPS, OMP
+
+
+                All open WCAG 1.4.4 issue(s): 
+
+                [12710](https://github.com/pkp/pkp-lib/issues/12710),
+
+                [12711](https://github.com/pkp/pkp-lib/issues/12711)
           - name: electronic-docs
             adherence:
               level: ''
               notes: ''
           - name: software
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: >-
+                Font sizing is handled by browser typography engines; minimum
+                size recommendations are not programmatically enforced.
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: >-
+                Text scaling works as expected through standard browser
+                controls.
       - num: 1.4.5
         components:
           - name: web
             adherence:
               level: supports
               notes: >-
-                Buttons for galley files contain both icons and text label
-                related to the files they are  linked to.
+                Buttons include both icons and text labels related to the
+                actions they perform.
           - name: electronic-docs
             adherence:
               level: ''
@@ -841,44 +1127,50 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: No images of text used in authoring interface buttons.
       - num: 1.4.10
         components:
           - name: web
             adherence:
-              level: supports
-              notes: >-
-                The Default Theme enables small screen users to read content in
-                both orientation : landscape or portrait, without requiring
-                horizontal scrolling. 
+              level: partially-supports
+              notes: >
+                The administrative interface is completely unusable at 200% and
+                400% magnification. Content is pushed off-screen, scrolling is
+                restricted in key views (e.g., "View Submission"), and layouts
+                collapse requiring endless horizontal scrolling. On small
+                screens (320px), submission pages and dashboard grids are
+                rendered unusable.
 
-                It also relies on content, especially images that editors may
-                upload. As long as they respect the maximum width it will be
-                compliant to this criteria.
+
+                Platforms: OJS, OPS, OMP
+
+
+                All open WCAG 1.4.10 issue(s): 
+
+                [12559](https://github.com/pkp/pkp-lib/issues/12559)
           - name: electronic-docs
             adherence:
               level: ''
               notes: ''
           - name: software
             adherence:
-              level: ''
-              notes: ''
+              level: partially-supports
+              notes: >-
+                System layout rendering fails to adapt gracefully to high
+                magnification levels. Responsive breakpoints need expansion.
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: Content reflows appropriately within the viewport constraints.
       - num: 1.4.11
         components:
           - name: web
             adherence:
               level: supports
               notes: >-
-                A contrast ratio of 6.18:1 is provided to the icons utilized in
-                buttons (PDF, XML, HTML galleys) and search. This number relies
-                on the color of the theme out-of-box. Journal managers can
-                adjust or customize the colors of the interface. That action may
-                change the contrast ratio and turn the interface non-compliant.
+                Most icons utilize sufficient contrast ratios, though specific
+                instances fall short.
           - name: electronic-docs
             adherence:
               level: ''
@@ -896,7 +1188,7 @@ chapters:
           - name: web
             adherence:
               level: supports
-              notes: ''
+              notes: Text spacing does not block content when adjusted by users.
           - name: electronic-docs
             adherence:
               level: ''
@@ -915,10 +1207,8 @@ chapters:
             adherence:
               level: supports
               notes: >-
-                Main menu items are "hoverable". It means that when the pointer
-                hovers a menu item with child menu, it will trigger the
-                additional content. Also, the pointer can be moved over the
-                additional content without the additional content disappearing.
+                Hoverable content remains visible until dismissed; no accidental
+                dismissals reported.
           - name: electronic-docs
             adherence:
               level: ''
@@ -935,14 +1225,10 @@ chapters:
         components:
           - name: web
             adherence:
-              level: partially-supports
+              level: supports
               notes: >-
-                The system itself provides a sitemap in XML under the path:
-                [domain]index.php/[journalPath]/sitemap.
-
-                Also, all issues provide a table of contents for every published
-                article. Finally, journal managers can create static pages
-                listing links to any page as needed. 
+                Multiple ways exist to navigate to administrative pages (main
+                menu, breadcrumbs, dashboard links).
           - name: electronic-docs
             adherence:
               level: ''
@@ -959,49 +1245,86 @@ chapters:
         components:
           - name: web
             adherence:
-              level: supports
+              level: partially-supports
               notes: >-
-                It also relies on the content title that authors, editors, or
-                journal managers will upload to the journal. 
+                Navigation labels are sometimes ambiguous and template
+                configurations do not currently enforce inclusion of descriptive
+                headings on dashboard landing pages.
+
+
+                Platforms: OJS, OMP, OPS
+
+
+                All open WCAG 2.4.6 issue(s): 
+
+                [9342](https://github.com/pkp/pkp-lib/issues/9342),
+
+                [9344](https://github.com/pkp/pkp-lib/issues/9344),
+
+                [9346](https://github.com/pkp/pkp-lib/issues/9346),
+
+                [9351](https://github.com/pkp/pkp-lib/issues/9351),
+
+                [9356](https://github.com/pkp/pkp-lib/issues/9356),
+
+                [9358](https://github.com/pkp/pkp-lib/issues/9358),
+
+                [12727](https://github.com/pkp/pkp-lib/issues/12727)
           - name: electronic-docs
             adherence:
               level: ''
               notes: ''
           - name: software
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: >-
+                Label generation logic is sound; templating inconsistencies
+                require manual enforcement.
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: >-
+                Headings can be applied by content creators using available
+                formatting options.
       - num: 2.4.7
         components:
           - name: web
             adherence:
-              level: supports
-              notes: ''
+              level: partially-supports
+              notes: >-
+                Focus indicators are inconsistent and sometimes invisible. Top
+                account icon dropdown focus states are barely visible, and some
+                interactive elements lack a clear focus ring entirely.
+
+
+                Platforms: OMP, OJS, OPS
+
+
+                All open WCAG 2.4.7 issue(s): 
+
+                [12748](https://github.com/pkp/pkp-lib/issues/12748)
           - name: electronic-docs
             adherence:
               level: ''
               notes: ''
           - name: software
             adherence:
-              level: ''
-              notes: ''
+              level: partially-supports
+              notes: >-
+                System focus management renders CSS styles that may not meet
+                visibility thresholds for low-vision users.
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: Focus indicators apply consistently to user-editable elements.
       - num: 3.1.2
         components:
           - name: web
             adherence:
               level: supports
               notes: >-
-                In the latest release, this was added to the article HTML
-                implementation, which includes support for multi-locale title
-                fields.
+                Language changes are properly communicated to assistive
+                technologies.
           - name: electronic-docs
             adherence:
               level: ''
@@ -1020,8 +1343,8 @@ chapters:
             adherence:
               level: supports
               notes: >-
-                All menus are presented in the same visual position, and tab
-                order.
+                Same navigation placement is maintained across all
+                administrative pages.
           - name: electronic-docs
             adherence:
               level: ''
@@ -1039,7 +1362,9 @@ chapters:
           - name: web
             adherence:
               level: not-applicable
-              notes: ''
+              notes: >-
+                Consistent identification across multiple pages is maintained
+                for repeating components.
           - name: electronic-docs
             adherence:
               level: ''
@@ -1056,30 +1381,41 @@ chapters:
         components:
           - name: web
             adherence:
-              level: supports
-              notes: >-
-                Registering and login forms provide error suggestions after
-                submission.
+              level: partially-supports
+              notes: >+
+                When submitting forms, errors occur and the system provides
+                minimal guidance on how to correct them. A generic "fill out
+                this field" message is usually presented, but there are no
+                actionable suggestions to help users resolve validation
+                failures.
+
+
+                Platforms: OMP, OJS, OPS
+
           - name: electronic-docs
             adherence:
               level: ''
               notes: ''
           - name: software
             adherence:
-              level: ''
-              notes: ''
+              level: partially-supports
+              notes: >-
+                Error suggestion logic is incomplete; additional context should
+                be programmatically communicated alongside error messages.
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: partially-supports
+              notes: >-
+                Users editing content receive limited guidance when validation
+                errors occur, potentially hindering correction efforts.
       - num: 3.3.4
         components:
           - name: web
             adherence:
               level: not-applicable
               notes: >-
-                There are no financial data transaction on the public reader
-                interface.
+                No financial transactions are processed on the administrative
+                reader interface.
           - name: electronic-docs
             adherence:
               level: ''
@@ -1096,8 +1432,10 @@ chapters:
         components:
           - name: web
             adherence:
-              level: not-applicable
-              notes: There is not status messages in the non-authenticated sections.
+              level: supports
+              notes: >-
+                Status messages are conveyed through roles and properties where
+                programmatically determinable.
           - name: electronic-docs
             adherence:
               level: ''
@@ -1108,8 +1446,10 @@ chapters:
               notes: ''
           - name: authoring-tool
             adherence:
-              level: ''
-              notes: ''
+              level: supports
+              notes: >-
+                Status messages in authoring workflows are programmatically
+                conveyed.
   success_criteria_level_aaa:
     notes: ''
     disabled: true
