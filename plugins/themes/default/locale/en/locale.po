@@ -93,6 +93,12 @@ msgstr "Downloads"
 msgid "plugins.themes.default.displayStats.noStats"
 msgstr "Download data is not yet available."
 
+msgid "plugins.themes.default.displayStats.lastYear"
+msgstr "Last 12 months"
+
+msgid "plugins.themes.default.displayStats.allTime"
+msgstr "All time"
+
 msgid "plugins.themes.default.nextSlide"
 msgstr "Next slide"
 
