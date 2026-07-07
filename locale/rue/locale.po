@@ -3,7 +3,7 @@
 # Kamil Federyga <kamilfederyga@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-07-02 12:45+0000\n"
+"PO-Revision-Date: 2026-07-07 07:56+0000\n"
 "Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/locale/rue/>\n"
 "Language: rue\n"
@@ -990,3 +990,39 @@ msgstr "Актывны редакцийны роботы"
 
 msgid "layoutEditor.galley.uploadGalleyFormat"
 msgstr "Першлий файль до публикациі"
+
+msgid "submission.layout.imageInvalid"
+msgstr "Неправильный формат файля. Акцептуваны форматы то .gif, .jpg, and .png."
+
+msgid "submission.layout.galley.remotelyHostedContent"
+msgstr "Файлі до публикациі будут доступны на зовнішній інтернетовій стороні."
+
+msgid "submission.layout.galley.remoteURL"
+msgstr "Адрес URL опубликуваного змісту на зовнішній стороні"
+
+msgid "reviewer.pendingReviews"
+msgstr "Статі в рецензиі"
+
+msgid "reviewer.completedReviews"
+msgstr "Закінчено"
+
+msgid "reviewer.article.notifyTheEditor"
+msgstr "Дай знати редакторови"
+
+msgid "reviewer.article.cannotDoReview"
+msgstr "Не згаджам ся на зробліня рецензиі"
+
+msgid "reviewer.article.restrictedFileAccess"
+msgstr "Зголошыня буде доступне, кєд рецензент згодит ся на зробліня рецензиі"
+
+msgid "reviewer.article.submissionEditor"
+msgstr "Редактор секциі"
+
+msgid "reviewer.averageQuality"
+msgstr "Оціна"
+
+msgid "reviewer.article.canDoReview"
+msgstr "Згаджам ся на рецензуваня"
+
+msgid "reviewer.article.fileToBeReviewed"
+msgstr "Файль до зрецензуваня"
