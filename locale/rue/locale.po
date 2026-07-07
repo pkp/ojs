@@ -3,8 +3,8 @@
 # Kamil Federyga <kamilfederyga@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-07-07 07:56+0000\n"
-"Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
+"PO-Revision-Date: 2026-07-08 01:27+0000\n"
+"Last-Translator: Kamil Federyga <kamilfederyga@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/locale/rue/>\n"
 "Language: rue\n"
 "MIME-Version: 1.0\n"
@@ -992,7 +992,7 @@ msgid "layoutEditor.galley.uploadGalleyFormat"
 msgstr "Першлий файль до публикациі"
 
 msgid "submission.layout.imageInvalid"
-msgstr "Неправильный формат файля. Акцептуваны форматы то .gif, .jpg, and .png."
+msgstr "Неправильный формат файля. Акцептуваны форматы то .gif, .jpg, і .png."
 
 msgid "submission.layout.galley.remotelyHostedContent"
 msgstr "Файлі до публикациі будут доступны на зовнішній інтернетовій стороні."
