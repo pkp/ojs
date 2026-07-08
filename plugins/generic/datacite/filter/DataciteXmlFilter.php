@@ -26,6 +26,8 @@ use APP\publication\Publication;
 use APP\submission\Submission;
 use DOMDocument;
 use DOMNode;
+use PKP\author\contributorRole\ContributorRoleIdentifier;
+use PKP\author\contributorRole\ContributorType;
 use PKP\context\Context;
 use PKP\core\PKPString;
 use PKP\db\DAORegistry;
@@ -213,6 +215,11 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             }
             $rootNode->appendChild($subjectsNode);
         }
+        // Contributors
+        $contributorsNode = $this->createContributorsNode($doc, $publication);
+        if ($contributorsNode) {
+            $rootNode->appendChild($contributorsNode);
+        }
         // Dates
         $rootNode->appendChild($this->createDatesNode($doc, $issue, $article, $publication, $galleyFile, $publicationDate));
         // Language
@@ -315,11 +322,36 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 $authors = $publication->getData('authors');
                 assert(!empty($authors));
                 foreach ($authors as $author) { /** @var Author $author */
-                    $creators[] = [
-                        'name' => $author->getFullName(false, true, $publication->getData('locale')),
-                        'orcid' => $author->getData('orcidIsVerified') ? $author->getData('orcid') : null,
-                        'affiliations' => $author->getAffiliations()
-                    ];
+
+                    // DataCite's creators list is reserved for authors
+                    if (!in_array(ContributorRoleIdentifier::AUTHOR->getName(), $author->getContributorRoleIdentifiers())) {
+                        continue;
+                    }
+
+                    $contributorType = $author->getData('contributorType');
+
+                    // DataCite has no concept of an anonymous creator, ignore
+                    if ($contributorType === ContributorType::ANONYMOUS->getName()) {
+                        continue;
+                    }
+
+                    if ($contributorType === ContributorType::ORGANIZATION->getName()) {
+                        $creators[] = [
+                            'name' => $author->getLocalizedOrganizationName($publication->getData('locale')),
+                            'nameType' => 'Organizational',
+                            'orcid' => null,
+                            'ror' => $author->getData('rorId'),
+                            'affiliations' => $author->getAffiliations()
+                        ];
+                    } else {
+                        $creators[] = [
+                            'name' => $author->getFullName(false, true, $publication->getData('locale')),
+                            'nameType' => 'Personal',
+                            'orcid' => $author->getData('orcidIsVerified') ? $author->getData('orcid') : null,
+                            'ror' => null,
+                            'affiliations' => $author->getAffiliations()
+                        ];
+                    }
                 }
                 break;
             case isset($issue):
@@ -330,16 +362,30 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 ];
                 break;
         }
+
         assert(count($creators) >= 1);
         $creatorsNode = $doc->createElementNS($deployment->getNamespace(), 'creators');
         foreach ($creators as $creator) {
+
             $creatorNode = $doc->createElementNS($deployment->getNamespace(), 'creator');
-            $creatorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'creatorName', htmlspecialchars($creator['name'], ENT_COMPAT, 'UTF-8')));
+            $creatorNameNode = $doc->createElementNS($deployment->getNamespace(), 'creatorName', htmlspecialchars($creator['name'], ENT_COMPAT, 'UTF-8'));
+            if (!empty($creator['nameType'])) {
+                $creatorNameNode->setAttribute('nameType', $creator['nameType']);
+            }
+            $creatorNode->appendChild($creatorNameNode);
+
             if ($creator['orcid']) {
                 $node = $doc->createElementNS($deployment->getNamespace(), 'nameIdentifier');
                 $node->appendChild($doc->createTextNode($creator['orcid']));
-                $node->setAttribute('schemeURI', 'http://orcid.org/');
+                $node->setAttribute('schemeURI', 'https://orcid.org/');
                 $node->setAttribute('nameIdentifierScheme', 'ORCID');
+                $creatorNode->appendChild($node);
+            }
+            if (!empty($creator['ror'])) {
+                $node = $doc->createElementNS($deployment->getNamespace(), 'nameIdentifier');
+                $node->appendChild($doc->createTextNode($creator['ror']));
+                $node->setAttribute('schemeURI', 'https://ror.org/');
+                $node->setAttribute('nameIdentifierScheme', 'ROR');
                 $creatorNode->appendChild($node);
             }
             if ($creator['affiliations']) {
@@ -363,6 +409,112 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             $creatorsNode->appendChild($creatorNode);
         }
         return $creatorsNode;
+    }
+
+    /**
+     * Create contributors node
+     */
+    public function createContributorsNode(DOMDocument $doc, ?Publication $publication): ?DOMNode
+    {
+        /** @var DataciteExportDeployment $deployment */
+        $deployment = $this->getDeployment();
+
+        if (!$publication) {
+            return null;
+        }
+
+        $contributors = [];
+        foreach ($publication->getData('authors') as $author) { /** @var Author $author */
+            $contribRoleIds = $author->getContributorRoleIdentifiers();
+
+            // Authors already appear in <creators>; only non-author roles belong here.
+            $contribRoleIds = array_diff($contribRoleIds, [ContributorRoleIdentifier::AUTHOR->getName()]);
+            if (empty($contribRoleIds)) {
+                continue;
+            }
+
+            $contributorType = $author->getData('contributorType');
+
+            // DataCite has no concept of an anonymous contributor, ignore
+            if ($contributorType === ContributorType::ANONYMOUS->getName()) {
+                continue;
+            }
+
+            // Map OJS contributor roles onto DataCite's contributorType
+            // Only 'Editor' and 'Translator' have a direct equivalent,
+            // other roles fall back to 'Other'.
+            $dataciteContributorTypes = array_unique(array_map(
+                fn (string $roleId): string => match ($roleId) {
+                    ContributorRoleIdentifier::EDITOR->getName() => 'Editor',
+                    ContributorRoleIdentifier::TRANSLATOR->getName() => 'Translator',
+                    default => 'Other',
+                },
+                $contribRoleIds
+            ));
+
+            foreach ($dataciteContributorTypes as $dataciteContributorType) {
+                if ($contributorType === ContributorType::ORGANIZATION->getName()) {
+                    $contributors[] = [
+                        'name' => $author->getLocalizedOrganizationName($publication->getData('locale')),
+                        'nameType' => 'Organizational',
+                        'contributorType' => $dataciteContributorType,
+                        'orcid' => null,
+                        'ror' => $author->getData('rorId'),
+                        'affiliations' => null
+                    ];
+                } else {
+                    $contributors[] = [
+                        'name' => $author->getFullName(false, true, $publication->getData('locale')),
+                        'nameType' => 'Personal',
+                        'contributorType' => $dataciteContributorType,
+                        'orcid' => $author->getData('orcidIsVerified') ? $author->getData('orcid') : null,
+                        'ror' => null,
+                        'affiliations' => $author->getAffiliations()
+                    ];
+                }
+            }
+        }
+
+        if (empty($contributors)) {
+            return null;
+        }
+
+        $contributorsNode = $doc->createElementNS($deployment->getNamespace(), 'contributors');
+        foreach ($contributors as $contributor) {
+            $contributorNode = $doc->createElementNS($deployment->getNamespace(), 'contributor');
+            $contributorNode->setAttribute('contributorType', $contributor['contributorType']);
+            $contributorNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'contributorName', htmlspecialchars($contributor['name'], ENT_COMPAT, 'UTF-8')));
+            $node->setAttribute('nameType', $contributor['nameType']);
+            if ($contributor['orcid']) {
+                $node = $doc->createElementNS($deployment->getNamespace(), 'nameIdentifier');
+                $node->appendChild($doc->createTextNode($contributor['orcid']));
+                $node->setAttribute('schemeURI', 'https://orcid.org/');
+                $node->setAttribute('nameIdentifierScheme', 'ORCID');
+                $contributorNode->appendChild($node);
+            }
+            if ($contributor['ror']) {
+                $node = $doc->createElementNS($deployment->getNamespace(), 'nameIdentifier');
+                $node->appendChild($doc->createTextNode($contributor['ror']));
+                $node->setAttribute('schemeURI', 'https://ror.org/');
+                $node->setAttribute('nameIdentifierScheme', 'ROR');
+                $contributorNode->appendChild($node);
+            }
+            if ($contributor['affiliations']) {
+                foreach ($contributor['affiliations'] as $affiliation) {
+                    $node = $doc->createElementNS($deployment->getNamespace(), 'affiliation');
+                    $ror = $affiliation->getRor();
+                    if ($ror) {
+                        $node->setAttribute('affiliationIdentifier', $ror);
+                        $node->setAttribute('affiliationIdentifierScheme', 'ROR');
+                        $node->setAttribute('schemeURI', 'https://ror.org');
+                    }
+                    $node->appendChild($doc->createTextNode($affiliation->getLocalizedName($publication->getData('locale'))));
+                    $contributorNode->appendChild($node);
+                }
+            }
+            $contributorsNode->appendChild($contributorNode);
+        }
+        return $contributorsNode;
     }
 
     /**
