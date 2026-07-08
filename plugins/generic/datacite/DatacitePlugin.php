@@ -279,6 +279,10 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
             }
         }
 
+        if (!$this->isTarAvailable()) {
+            return false;
+        }
+
         return true;
     }
 
@@ -307,6 +311,16 @@ class DatacitePlugin extends GenericPlugin implements IDoiRegistrationAgency
     public function getRegisteredMessageKey(): ?string
     {
         return null;
+    }
+
+    /**
+     * Whether the tar binary configured in config.inc.php is available.
+     * Required by the server when exporting or depositing more than one
+     * DOI at a time, as the individual XML files are bundled into a tar archive.
+     */
+    public function isTarAvailable(): bool
+    {
+        return $this->_getExportPlugin()->tarFunctional();
     }
 
     /**

@@ -28,6 +28,7 @@ use DOMDocument;
 use DOMNode;
 use PKP\context\Context;
 use PKP\core\PKPString;
+use PKP\dataCitation\DataCitation;
 use PKP\db\DAORegistry;
 use PKP\facades\Locale;
 use PKP\galley\Galley;
@@ -62,6 +63,8 @@ define('DATACITE_RELTYPE_ISPARTOF', 'IsPartOf');
 define('DATACITE_RELTYPE_ISPREVIOUSVERSIONOF', 'IsPreviousVersionOf');
 define('DATACITE_RELTYPE_ISNEWVERSIONOF', 'IsNewVersionOf');
 define('DATACITE_RELTYPE_ISPUBLISHEDIN', 'IsPublishedIn');
+define('DATACITE_RELTYPE_ISSUPPLEMENTEDBY', 'IsSupplementedBy');
+define('DATACITE_RELTYPE_REFERENCES', 'References');
 
 // Description types
 define('DATACITE_DESCTYPE_ABSTRACT', 'Abstract');
@@ -618,6 +621,16 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                     }
                     unset($relatedGalley, $doi);
                 }
+                // Data citations.
+                foreach ($publication->getData('dataCitations') ?? [] as $dataCitation) {
+                    $relatedIdentifier = $this->getDataCitationRelatedIdentifier($dataCitation);
+                    if ($relatedIdentifier) {
+                        $relatedIdentifiersNode->appendChild($node = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifier', htmlspecialchars($relatedIdentifier['identifier'], ENT_COMPAT, 'UTF-8')));
+                        $node->setAttribute('relatedIdentifierType', $relatedIdentifier['relatedIdentifierType']);
+                        $node->setAttribute('relationType', $relatedIdentifier['relationType']);
+                    }
+                    unset($dataCitation, $relatedIdentifier);
+                }
                 break;
             case isset($issue):
                 // Parts: articles in this issue.
@@ -737,6 +750,49 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         }
 
         return $fundingReferencesNode->hasChildNodes() ? $fundingReferencesNode : null;
+    }
+
+    /*
+     * Resolve the relatedIdentifier/relationType attributes for a data citation
+     */
+    public function getDataCitationRelatedIdentifier(DataCitation $dataCitation): ?array
+    {
+        // Mapping based on DataCite relatedIdentifierType https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/relatedIdentifierType/
+        $identifierTypeMapping = [
+            'DOI' => 'DOI',
+            'PURL' => 'PURL',
+            'ARK' => 'ARK',
+            'ARXIV' => 'arXiv',
+            'Handle' => 'Handle',
+            'ISSN' => 'ISSN',
+            'ISBN' => 'ISBN',
+            'PMID' => 'PMID',
+            'URI' => 'URL',
+        ];
+
+        $identifier = $dataCitation->getAttribute('identifier');
+        $identifierType = $identifierTypeMapping[$dataCitation->getAttribute('identifierType')] ?? null;
+        if (!$identifier || !$identifierType) {
+            if (!$identifier = $dataCitation->getAttribute('url')) {
+                return null;
+            }
+            $identifierType = 'URL';
+        }
+
+        // Mapping based on JATS4R recommendation (https://jats4r.niso.org/data-citations)
+        $relationshipTypeMapping = [
+            'supporting' => DATACITE_RELTYPE_REFERENCES,
+            'generated' => DATACITE_RELTYPE_ISSUPPLEMENTEDBY,
+            'analyzed' => DATACITE_RELTYPE_REFERENCES,
+            'non-analyzed' => DATACITE_RELTYPE_REFERENCES,
+        ];
+        $relationType = $relationshipTypeMapping[$dataCitation->getAttribute('relationshipType')] ?? DATACITE_RELTYPE_REFERENCES;
+
+        return [
+            'identifier' => $identifier,
+            'relatedIdentifierType' => $identifierType,
+            'relationType' => $relationType,
+        ];
     }
 
     /**
