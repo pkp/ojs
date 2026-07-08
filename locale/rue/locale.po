@@ -3,8 +3,8 @@
 # Kamil Federyga <kamilfederyga@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-07-08 01:27+0000\n"
-"Last-Translator: Kamil Federyga <kamilfederyga@gmail.com>\n"
+"PO-Revision-Date: 2026-07-08 09:27+0000\n"
+"Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/locale/rue/>\n"
 "Language: rue\n"
 "MIME-Version: 1.0\n"
@@ -1026,3 +1026,79 @@ msgstr "Згаджам ся на рецензуваня"
 
 msgid "reviewer.article.fileToBeReviewed"
 msgstr "Файль до зрецензуваня"
+
+msgid "reviewer.article.reviewerCommentsDescription"
+msgstr "Впиш або вклий увагы односячы ся до рецензиі"
+
+msgid "reviewer.article.editorToEnter"
+msgstr "Рішыня редактора"
+
+msgid "reviewer.article.sendReminder"
+msgstr "Вышлий припомніня"
+
+msgid "reviewer.article.automatic"
+msgstr "Автоматычні"
+
+msgid "reviewer.article.recommendation"
+msgstr "Рекомендациі"
+
+msgid "reviewer.article.reviewerComments"
+msgstr "Коментарі"
+
+msgid "reviewer.article.reviewersAnnotatedVersion"
+msgstr "Версия выслана през рецензента"
+
+msgid "reviewer.article.reviewersAnnotatedVersionDescription"
+msgstr ""
+"(Кєд хочеш узуполнити файль о коментарі для редактора, запиш файль на диску.)"
+
+msgid "reviewer.article.schedule.request"
+msgstr "Просьба редактора"
+
+msgid "reviewer.article.schedule.response"
+msgstr "Твоя одповід"
+
+msgid "reviewer.article.schedule.submitted"
+msgstr "Высланы рецензиі"
+
+msgid "reviewer.article.schedule.due"
+msgstr "Термін"
+
+msgid "reviewer.article.decision.accept"
+msgstr "Заакцептуй текст"
+
+msgid "reviewer.article.decision.pendingRevisions"
+msgstr "Вымагат ся поправок"
+
+msgid "reviewer.article.decision.resubmitHere"
+msgstr "Вымагат ся поправок і новой рецензиі"
+
+msgid "reviewer.article.decision.resubmitElsewhere"
+msgstr "До зголошыня в інчым часописі"
+
+msgid "reviewer.article.decision.decline"
+msgstr "Одмшмар текст"
+
+msgid "reviewer.article.decision.seeComments"
+msgstr "Рекомендациі в коментарі"
+
+msgid "reviewer.article.schedule"
+msgstr "Гармоноґрам"
+
+msgid "reviewer.article.submissionToBeReviewed"
+msgstr "Тексты до зрецензуваня"
+
+msgid "reviewer.article.reviewSchedule"
+msgstr "Гармоноґрам рецензуваня"
+
+msgid "reviewer.article.reviewSteps"
+msgstr "Етапы рецензуваня"
+
+msgid "reviewer.article.reviewerGuidelines"
+msgstr "Вказівкы для рецензентів"
+
+msgid "reviewer.article.submitReview"
+msgstr "Вышлий рецензию до редактора"
+
+msgid "reviewer.article.uploadedFile"
+msgstr "Высыланы файлі"
