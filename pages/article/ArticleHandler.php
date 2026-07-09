@@ -330,7 +330,7 @@ class ArticleHandler extends Handler
                     $request,
                     PKPApplication::ROUTE_API,
                     $context->getPath(),
-                    "submissions/{$article->getBestId()}/publications/{$publication->getId()}/jats/download"
+                    "submissions/{$article->getId()}/publications/{$publication->getId()}/jats/download"
                 )
             ]);
         }
