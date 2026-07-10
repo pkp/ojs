@@ -39,6 +39,10 @@ if (count($urlParts) >= 8 && $urlParts[7] == 'bodyText') {
     return new \PKP\handler\APIHandler(new \PKP\API\v1\bodyText\PKPBodyTextController());
 }
 
+if (count($urlParts) >= 8 && $urlParts[7] == 'citations') {
+    return new \PKP\handler\APIHandler(new \PKP\API\v1\citations\PKPCitationController());
+}
+
 if (in_array('suggestions', $urlParts)) {
     return new \PKP\handler\APIHandler(new PKP\API\v1\reviewers\suggestions\ReviewerSuggestionController());
 }
