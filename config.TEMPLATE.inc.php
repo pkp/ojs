@@ -583,6 +583,49 @@ deprecation_warnings = Off
 log_web_service_info = Off
 
 
+;;;;;;;;;;;;;;;;
+; Log Settings ;
+;;;;;;;;;;;;;;;;
+
+[logs]
+
+; Default logging channel. Available channels:
+;   - stack: Combines multiple channels (configurable via log_stacks; defaults to daily)
+;   - single: Single log file ({files_dir}/logs/app.log)
+;   - daily: Daily rotating log files
+;   - stderr: Output to stderr
+;   - syslog: System log
+;   - errorlog: PHP error log
+;   - null: Discard all logs
+log_channel = daily
+
+; Minimum log level to record. Available levels (in order of severity):
+;   - debug: Detailed debug information
+;   - info: Interesting events
+;   - notice: Normal but significant events
+;   - warning: Exceptional occurrences that are not errors
+;   - error: Runtime errors that do not require immediate action
+;   - critical: Critical conditions
+;   - alert: Action must be taken immediately
+;   - emergency: System is unusable
+log_level = debug
+
+; Channels the 'stack' channel fans out to (comma-separated). Only used when
+; log_channel = stack. Each entry must be one of the channels listed above
+; (single, daily, stderr, syslog, errorlog). Defaults to single.
+log_stacks = daily
+
+; Number of daily log files to retain before rotation deletes the oldest
+; (only applies to the 'daily' channel). Defaults to 30.
+; log_daily_days = 30
+
+; Monolog formatter class for the file/stream channels (single, daily, stderr,
+; syslog). Leave unset for the default human-readable line format (stack traces
+; included). Has no effect on the errorlog or stack channels. See available formatters
+; at https://github.com/Seldaek/monolog/blob/main/doc/02-handlers-formatters-processors.md#formatters
+; log_formatter = Monolog\Formatter\JsonFormatter
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;
 ; Job Queues Settings ;
 ;;;;;;;;;;;;;;;;;;;;;;;
