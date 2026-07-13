@@ -20,7 +20,9 @@ use APP\observers\events\UsageEvent;
 use APP\plugins\generic\htmlArticleGalley\classes\HtmlGalleyHelper;
 use APP\publication\Publication;
 use APP\template\TemplateManager;
+use Illuminate\Support\Facades\Cache;
 use PKP\plugins\Hook;
+use PKP\security\Validation;
 
 class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
 {
@@ -132,15 +134,22 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
         $submissionFile = $galley->getFile();
         if ($galley->getData('submissionFileId') == $fileId && $submissionFile->getData('mimetype') === 'text/html' && $galley->getData('submissionFileId') == $submissionFile->getId()) {
             if (!Hook::call('HtmlArticleGalleyPlugin::articleDownload', [$article,  &$galley, &$fileId])) {
-                echo (new HtmlGalleyHelper())->getHTMLContents($request, $galley);
+                // Logged in users always get a fresh galley HTML; otherwise, potentially serve a cached copy.
+                $htmlGalleyHelper = new HtmlGalleyHelper();
+                $htmlContents = match(Validation::isLoggedIn()) {
+                    true => $htmlGalleyHelper->getHTMLContents($request, $galley),
+                    false => Cache::remember('htmlArticleGalley-' . $galley->getId(), 60 * 60 * 24, fn () => $htmlGalleyHelper->getHTMLContents($request, $galley)),
+                };
+                echo $htmlContents;
                 $returner = true;
                 Hook::call('HtmlArticleGalleyPlugin::articleDownloadFinished', [&$returner]);
                 $publication = Repo::publication()->get($galley->getData('publicationId'));
                 // This part is the same as in ArticleHandler::initialize():
-                if ($publication->getData('issueId')) {
+                if ($issueId = $publication->getData('issueId')) {
                     // TODO: Previously fetched issue from cache. Reimplement when caching added.
-                    $issue = Repo::issue()->get($publication->getData('issueId'));
-                    $issue = $issue->getJournalId() == $article->getData('contextId') ? $issue : null;
+                    $issue = Repo::issue()->get($issueId, $article->getData('contextId'));
+                } else {
+                    $issue = null;
                 }
                 event(new UsageEvent(Application::ASSOC_TYPE_SUBMISSION_FILE, $request->getContext(), $article, $galley, $submissionFile, $issue));
             }
