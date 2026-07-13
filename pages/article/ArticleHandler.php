@@ -185,7 +185,7 @@ class ArticleHandler extends Handler
 
             // Store the file id if it exists
             if (!empty($args)) {
-                $this->submissionFileId = array_shift($args);
+                $this->submissionFileId = (int) array_shift($args);
             }
         }
 
