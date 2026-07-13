@@ -25,11 +25,14 @@ use APP\file\PublicFileManager;
 use APP\issue\Issue;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
+use PKP\config\Config;
 use PKP\core\PKPRequest;
 use PKP\galley\Galley;
 use PKP\publication\PKPPublication;
 use PKP\submissionFile\enums\MediaVariantType;
 use PKP\submissionFile\SubmissionFile;
+use Symfony\Component\HtmlSanitizer\HtmlSanitizer;
+use Symfony\Component\HtmlSanitizer\HtmlSanitizerConfig;
 
 class HtmlGalleyHelper
 {
@@ -149,6 +152,31 @@ class HtmlGalleyHelper
 
         foreach ($paramArray as $key => $value) {
             $contents = str_replace('{$' . $key . '}', $value, $contents);
+        }
+
+        // Pass the generated HTML through the HTML Purifier, if configured.
+        if (Config::getVar('security', 'filter_galley_html')) {
+            $config = (new HtmlSanitizerConfig())
+                ->withMaxInputLength(-1)
+                ->allowRelativeLinks()
+                ->allowMediaSchemes(['http', 'https'])
+                ->allowRelativeMedias()
+                ->allowSafeElements();
+            if ($additionalElementConfig = Config::getVar('security', 'allowed_galley_html')) {
+                foreach (explode(',', $additionalElementConfig) as $elementConfig) {
+                    $elementName = strtok($elementConfig, '[');
+                    $attributes = [];
+                    while ($attribute = strtok('|]')) {
+                        $attributes[] = $attribute;
+                    }
+                    $config->allowElement($elementName, $attributes);
+                }
+            }
+            if ($allowedMediaHosts = Config::getVar('security', 'allowed_media_hosts')) {
+                $config->allowMediaHosts(json_decode($allowedMediaHosts));
+            }
+            $htmlSanitizer = new HtmlSanitizer($config);
+            $contents = $htmlSanitizer->sanitize($contents);
         }
 
         return $contents;
