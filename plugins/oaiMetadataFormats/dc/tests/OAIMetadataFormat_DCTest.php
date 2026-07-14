@@ -154,6 +154,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->getMock();
         $publication->setData('id', 0);
         $publication->setData('issueId', 96);
+        $publication->setData('sectionId', 1);
         $publication->setData('pages', 15);
         $publication->setData('type', 'art-type', 'en');
         $publication->setData('title', 'article-title-en', 'en');
