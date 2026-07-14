@@ -77,6 +77,9 @@ msgstr "A cover image with an invalid file extension was specified."
 msgid "plugins.importexport.common.error.coverImageNameUnspecified"
 msgstr "A cover image was embedded without specifying a name."
 
+msgid "plugins.importexport.common.error.missingHref"
+msgstr "The href element is missing the required href attribute."
+
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr "The specified user, \"{$userName}\", does not exist."
 
@@ -125,3 +128,15 @@ msgid "plugins.importexport.native.import.error.publishedDateMissing"
 msgstr ""
 "The article \"{$articleTitle}\" is contained within an issue, but has no "
 "published date."
+
+msgid "plugins.importexport.native.exportOptions.coverImagesAndSubmissionFiles"
+msgstr "Submission Files and Cover Images Handling"
+
+msgid "plugins.importexport.native.exportOptions.files.embed"
+msgstr "Embed images and submission files in XML (base64) - uses more memory"
+
+msgid "plugins.importexport.native.exportOptions.files.relative"
+msgstr "Use relative URLs for images and submission files - reduces memory usage"
+
+msgid "plugins.importexport.native.exportOptions.files.url"
+msgstr "Use absolute URLs for images and submission files - reduces memory usage"

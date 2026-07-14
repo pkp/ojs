@@ -15,7 +15,6 @@
 	</h1>
 
 <script type="text/javascript">
-	// Attach the JS file tab handler.
 	$(function() {ldelim}
 		$('#importExportTabs').pkpHandler('$.pkp.controllers.TabHandler');
 		$('#importExportTabs').tabs('option', 'cache', true);
@@ -30,7 +29,6 @@
 	<div id="import-tab">
 		<script type="text/javascript">
 			$(function() {ldelim}
-				// Attach the form handler.
 				$('#importXmlForm').pkpHandler('$.pkp.controllers.form.FileUploadFormHandler',
 					{ldelim}
 						$uploader: $('#plupload'),
@@ -45,7 +43,6 @@
 		<form id="importXmlForm" class="pkp_form" action="{plugin_url path="importBounce"}" method="post">
 			{csrf}
 			{fbvFormArea id="importForm"}
-				{* Container for uploaded file *}
 				<input type="hidden" name="temporaryFileId" id="temporaryFileId" value="" />
 
 				{fbvFormArea id="file"}
@@ -61,8 +58,14 @@
 	<div id="exportSubmissions-tab">
 		<script type="text/javascript">
 			$(function() {ldelim}
-				// Attach the form handler.
 				$('#exportXmlForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+
+				$('#exportXmlForm').on('submit', function() {ldelim}
+					setTimeout(function() {ldelim}
+						$('#exportXmlForm .is_visible').removeClass('is_visible');
+						$('#exportXmlForm .pkp_spinner').hide();
+					{rdelim}, 2000);
+				{rdelim});
 			{rdelim});
 		</script>
 		<form id="exportXmlForm" class="pkp_form" action="{plugin_url path="exportSubmissions"}" method="post">
@@ -111,8 +114,14 @@
 	<div id="exportIssues-tab">
 		<script type="text/javascript">
 			$(function() {ldelim}
-				// Attach the form handler.
 				$('#exportIssuesXmlForm').pkpHandler('$.pkp.controllers.form.FormHandler');
+
+				$('#exportIssuesXmlForm').on('submit', function() {ldelim}
+					setTimeout(function() {ldelim}
+						$('#exportIssuesXmlForm .is_visible').removeClass('is_visible');
+						$('#exportIssuesXmlForm .pkp_spinner').hide();
+					{rdelim}, 2000);
+				{rdelim});
 			{rdelim});
 		</script>
 		<form id="exportIssuesXmlForm" class="pkp_form" action="{plugin_url path="exportIssues"}" method="post">
@@ -120,7 +129,14 @@
 			{fbvFormArea id="issuesXmlForm"}
 				{capture assign="issuesListGridUrl"}{url router=$smarty.const.ROUTE_COMPONENT component="grid.issues.ExportableIssuesListGridHandler" op="fetchGrid" escape=false}{/capture}
 				{load_url_in_div id="issuesListGridContainer" url=$issuesListGridUrl}
-				{fbvFormButtons submitText="plugins.importexport.native.exportIssues" hideCancel="true"}
+
+				{fbvFormSection list="true" title="plugins.importexport.native.exportOptions.coverImagesAndSubmissionFiles"}
+					{fbvElement type="radio" id="embed" name="serializationMode" value="embed" label="plugins.importexport.native.exportOptions.files.embed" checked=true}
+					{fbvElement type="radio" id="relative" name="serializationMode" value="relative" label="plugins.importexport.native.exportOptions.files.relative"}
+					{fbvElement type="radio" id="url" name="serializationMode" value="url" label="plugins.importexport.native.exportOptions.files.url"}
+				{/fbvFormSection}
+
+				{fbvFormButtons submitText="common.export" hideCancel="true"}
 			{/fbvFormArea}
 		</form>
 	</div>
