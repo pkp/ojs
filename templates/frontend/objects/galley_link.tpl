@@ -79,3 +79,32 @@
 		</span>
 	{/if}
 </a>
+{** 
+ * Create an accessible version of the HTML ('file') link that uses 'download' instead of 'view' 
+ * as the operation so that it opens outside of the <iframe>.
+ * 
+ * Include only 'file' items that are labelled 'html' (case-insensitive).
+ *}
+ {if $type == 'file' && stripos($galley->getGalleyLabel(), 'html') !== false }
+	{* GF - 2021-10-07 - remove obj_galley_link_supplementary and use obj_galley_link instead *}
+		<a class="{if $isSupplementary}obj_galley_link{else}obj_galley_link{/if} {$type}{if $restricted} restricted{/if}" href="{url page=$page op="download" path=$parentId|to_array:$galley->getBestGalleyId()}">
+		   {* Add some screen reader text to indicate if a galley is restricted *}
+		   {if $restricted}
+			  <span class="pkp_screen_reader">
+				 {if $purchaseArticleEnabled}
+					 {translate key="reader.subscriptionOrFeeAccess"}
+				 {else}
+					 {translate key="reader.subscriptionAccess"}
+				 {/if}
+			  </span>
+		   {/if}
+	
+		   {$galley->getGalleyLabel()|escape} ({translate key="reader.accessibleLinks.buttontext"})       
+	
+		   {if $restricted && $purchaseFee && $purchaseCurrency}
+			  <span class="purchase_cost">
+				  {translate key="reader.purchasePrice" price=$purchaseFee currency=$purchaseCurrency}
+			  </span>
+		   {/if}
+		</a>
+	{/if}
