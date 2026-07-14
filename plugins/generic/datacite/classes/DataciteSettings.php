@@ -124,7 +124,24 @@ class DataciteSettings extends \PKP\doi\RegistrationAgencySettings
 
     protected function getPreambleText(): string
     {
-        $text = '<p>' . __('plugins.importexport.datacite.settings.description') . '</p>';
+        $notices = [];
+        if (!$this->agencyPlugin->isTarAvailable()) {
+            $notices[] = __('plugins.importexport.datacite.error.tarNotConfigured');
+        }
+
+        $text = '';
+        if (!empty($notices)) {
+            $text .= '<div class="pkpNotification pkpNotification--warning">';
+            $text .= '<p><strong>' . __('plugins.importexport.common.missingRequirements') . '</strong></p><ul>';
+
+            foreach ($notices as $notice) {
+                $text .= '<li>' . $notice . '</li>';
+            }
+
+            $text .= '</ul></div>';
+        }
+
+        $text .= '<p>' . __('plugins.importexport.datacite.settings.description') . '</p>';
         $text .= '<p>' . __('plugins.importexport.datacite.intro') . '</p>';
         return $text;
     }

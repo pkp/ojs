@@ -203,8 +203,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
         $fileManager = new TemporaryFileManager();
 
         // Export
-        $result = $this->_checkForTar();
-        if ($result === true) {
+        if ($this->tarFunctional()) {
             $exportedFiles = [];
             foreach ($objects as $object) {
                 $filter = $this->_getFilterFromObject($object);
@@ -356,22 +355,14 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
 
 
     /**
-     * Test whether the tar binary is available.
+     * Test whether the tar binary configured in config.inc.php is available.
      *
-     * @return bool|array Boolean true if available otherwise
-     *  an array with an error message.
+     * @return bool True if the configured tar binary exists on disk.
      */
-    public function _checkForTar()
+    public function tarFunctional(): bool
     {
         $tarBinary = Config::getVar('cli', 'tar');
-        if (empty($tarBinary) || !is_executable($tarBinary)) {
-            $result = [
-                ['manager.plugins.tarCommandNotFound']
-            ];
-        } else {
-            $result = true;
-        }
-        return $result;
+        return !empty($tarBinary) && file_exists($tarBinary);
     }
 
     /**
@@ -383,7 +374,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin
      */
     public function _tarFiles($targetPath, $targetFile, $sourceFiles)
     {
-        assert((bool) $this->_checkForTar());
+        assert($this->tarFunctional());
         // GZip compressed result file.
         $tarCommand = Config::getVar('cli', 'tar') . ' -czf ' . escapeshellarg($targetFile);
         // Do not reveal our internal export path by exporting only relative filenames.

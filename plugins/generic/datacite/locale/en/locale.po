@@ -23,6 +23,9 @@ msgstr "Export or register issue, article, galley and supplementary file metadat
 msgid "plugins.importexport.datacite.settings.description"
 msgstr "Please configure the DataCite export plugin before using it for the first time."
 
+msgid "plugins.importexport.datacite.error.tarNotConfigured"
+msgstr "The tar binary could not be found on the server. Exporting or depositing more than one item at a time requires tar to be installed and its path configured in the [cli] tar setting of config.inc.php."
+
 msgid "plugins.importexport.datacite.settings.label"
 msgstr "DataCite Settings"
 
