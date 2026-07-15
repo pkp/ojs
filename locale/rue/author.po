@@ -4,8 +4,8 @@
 # Klaudia <nowaksk95@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-06-29 16:15+0000\n"
-"Last-Translator: Klaudia <nowaksk95@gmail.com>\n"
+"PO-Revision-Date: 2026-07-15 18:50+0000\n"
+"Last-Translator: Kamil Federyga <kamilfederyga@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/author/rue/>\n"
 "Language: rue\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "author.submit.submitArticle"
-msgstr "Переслати статю"
+msgstr "Перешлий статю"
 
 msgid "author.submit.stepsToSubmit"
 msgstr "Пят крокiв для пересланя зголошыня"
@@ -45,7 +45,7 @@ msgstr ""
 "тіж/або характеристыку дослідничой пробы."
 
 msgid "author.submit.step5"
-msgstr "Крок 5. Потведжыня зголошыня"
+msgstr "Крок 5. Потвед зголошыня"
 
 msgid "author.submit.notAccepting"
 msgstr "Часопис не принимат тепер новых зголошынь."
@@ -54,13 +54,13 @@ msgid "author.submit.form.abstractRequired"
 msgstr "Введ резуме пересланого тексту."
 
 msgid "author.submit.addReasonsForWaiver"
-msgstr "Прошу пояснити, чом повинно ся звільнити з оплаты."
+msgstr "Прошу пояснити долов, чом повинно ся звільнити з оплаты."
 
 msgid "author.submissions.queuedEditingProofread"
 msgstr "В едициі: Выслано просьбу о провіріня кінцьовой версиі"
 
 msgid "author.submit.startHereTitle"
-msgstr "Першлий зміст до публикациі в часописі"
+msgstr "Перешлий зміст до публикациі в часописі"
 
 msgid "author.submit.step1"
 msgstr "Крок 1. Початок зголошыня"
@@ -78,7 +78,7 @@ msgid "author.submit.start"
 msgstr "Початок"
 
 msgid "author.submit.upload"
-msgstr "Перешлий файль"
+msgstr "Перешлий зголошыня"
 
 msgid "author.submit.metadata"
 msgstr "Введ метаданы"
@@ -90,7 +90,7 @@ msgid "author.submit.nextSteps"
 msgstr "Слідуючы крокы"
 
 msgid "author.submit.requestWaiver"
-msgstr "Просьба о звільніня з оплаты"
+msgstr "Попрос о звільніня з оплаты"
 
 msgid "author.submit.qualifyForWaiver"
 msgstr "Прошу о звільніня з оплаты за зголошыня статі"
@@ -120,7 +120,7 @@ msgid "author.submissions.viewStatus"
 msgstr "Вкаж статус тексту"
 
 msgid "author.submissions.noSubmissions"
-msgstr "Брак пересланых текстів."
+msgstr "Брак пересланых зголошынь."
 
 msgid "author.submit.journalSection"
 msgstr "Діл часопису"
@@ -179,8 +179,8 @@ msgid "author.submit.supplementaryFilesInstructions"
 msgstr ""
 "Тот опцийональный крок дозвалят долучыти поміцничы файлі до зголошыня. Тоты "
 "файлі можут мати довільный формат і обнимати: (а) дослідничы нарядя; (б) "
-"збіркы даных згідны з варунками комісиі етыкы науковых досліджынь; (в) "
-"джерела, што в інчый спосіб были бы недоступны для чытателів; (г) рысункы і "
+"зоставліня даных згідны з варунками комісиі етыкы науковых досліджынь; (в) "
+"джерела, што в інчый спосіб были бы недоступны для чытатели; (г) рысункы і "
 "табелі, котрых не мож влучыти до самого тексту, або інчы материялы, што "
 "збільшают наукову вартіст працы."
 
@@ -235,7 +235,7 @@ msgstr "Джерельный текст"
 
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
-"Удоступный файль рецензентам (без метаданых), зато же не зламле тото "
+"Удоступний файль рецензентам (без метаданых), зато же не зламле тото "
 "принципів анонімовой рецензиі."
 
 msgid "author.submit.suppFile.noFile"
@@ -251,14 +251,14 @@ msgstr ""
 
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr ""
-"Жебы переслати зміст до того часопису, треба мати конто ужытковника. "
+"Жебы переслати зміст до того часопису, треба мати конто хоснувателя. "
 "Дозвалят тото нашым редакторам слідити Вашы зголошыня як тіж контактувати ся "
 "з Вами в припадку зміны статусу зголошыня або коли вымаганы сут додатковы "
 "інформациі."
 
 msgid "author.submit.supplementaryFileDataDescription"
 msgstr ""
-"Жебы зідексувати додатковый материял, подай слідуючы даны для помічного "
+"Жебы зіндексувати додатковый материял, подай слідуючы даны для поміцничого "
 "файля."
 
 msgid "author.submit.supplementaryFileUpload"
@@ -283,13 +283,13 @@ msgid "author.submit.suppFile.dataAnalysis"
 msgstr "Аналіза даных"
 
 msgid "author.submit.suppFile.dataSet"
-msgstr "Збіркы даных"
+msgstr "Зоставліня даных"
 
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Короткій опис"
 
 msgid "author.submit.suppFile.publisherDescription"
-msgstr "Стосувати выключні в припадку материялів формальні опубликуваных."
+msgstr "Хоснуй выключні в припадку материялів формальні опубликуваных."
 
 msgid "author.submit.suppFile.dateDescription"
 msgstr "Дата зобраня даных або утворіня нарядя."
@@ -301,13 +301,13 @@ msgid "author.submit.suppFile.specifyOtherType"
 msgstr "Оприділь інчый рід"
 
 msgid "author.submit.suppFile.form.titleRequired"
-msgstr "Введ назву поміцничого файля."
+msgstr "Прошу ввести назву поміцничого файля."
 
 msgid "author.submit.suppFile.form.subjectRequired"
-msgstr "Прошу подати тему."
+msgstr "Прошу ввести тему."
 
 msgid "author.submit.suppFile.form.descriptionRequired"
-msgstr "Прошу подати опис."
+msgstr "Прошу ввести опис."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Публичный ідентыфікатор поміцничого файля"
@@ -328,4 +328,4 @@ msgid "author.article.authorRevisedFile"
 msgstr "Файль автора"
 
 msgid "author.submit.journalSectionDescription"
-msgstr "Выбер доцільову діл часопису для пересланого тексту."
+msgstr "Выбер доцільовый діл часопису для пересланого тексту."
