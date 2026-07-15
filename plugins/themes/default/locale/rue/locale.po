@@ -3,7 +3,7 @@
 # Kamil Federyga <kamilfederyga@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-07-15 18:50+0000\n"
+"PO-Revision-Date: 2026-07-16 00:01+0000\n"
 "Last-Translator: Kamil Federyga <kamilfederyga@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/"
 "themes-default/rue/>\n"
@@ -85,10 +85,10 @@ msgid "plugins.themes.default.option.displayStats.none"
 msgstr "Не вказуй статистык чытателям."
 
 msgid "plugins.themes.default.option.displayStats.bar"
-msgstr "Ужый колонной схемы, жебы высвітлити статистыкы выкористаня."
+msgstr "Схоснуй колонну схему, жебы высвітлити статистыкы выкорыстаня."
 
 msgid "plugins.themes.default.option.displayStats.line"
-msgstr "Ужый ленийовой схемы, жебы высвітлити статистыкы выкористаня."
+msgstr "Схоснуй ленийову схему, жебы высвітлити статистыкы выкорыстаня."
 
 msgid "plugins.themes.default.displayStats.downloads"
 msgstr "Побраня"
