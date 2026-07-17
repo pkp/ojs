@@ -124,13 +124,6 @@ class ArticleHandler extends Handler
             throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
         }
 
-        // If the urlPath does not match the urlPath of the current
-        // publication, redirect to the current URL
-        $currentUrlPath = $submission->getBestId();
-        if ($currentUrlPath != $urlPath) {
-            $request->redirect(null, $request->getRequestedPage(), $request->getRequestedOp(), [$currentUrlPath, ...$args]);
-        }
-
         $this->article = $submission;
         // Get the requested publication or if none requested get the current publication
         $subPath = empty($args) ? 0 : array_shift($args);
@@ -148,6 +141,13 @@ class ArticleHandler extends Handler
         } else {
             $this->publication = $this->article->getCurrentPublication();
             $galleyId = $subPath;
+        }
+
+        // If the urlPath does not match the urlPath of the current
+        // publication, redirect to the current URL
+        $currentUrlPath = $this->publication->getData('urlPath') ?? $submission->getId();
+        if ($currentUrlPath != $urlPath) {
+            $request->redirect(null, $request->getRequestedPage(), $request->getRequestedOp(), [$currentUrlPath, ...$args]);
         }
 
         // Serve 404 if publication is unpublished and no user is logged in OR publication is unpublished and we have a user logged in but the user does not have access to preview
