@@ -18,6 +18,7 @@
 
 namespace APP\issue;
 
+use APP\core\Request;
 use APP\facades\Repo;
 use APP\journal\Journal;
 use APP\subscription\IndividualSubscriptionDAO;
@@ -29,6 +30,7 @@ use PKP\plugins\Hook;
 use PKP\security\Role;
 use PKP\security\RoleDAO;
 use PKP\submission\PKPSubmission;
+use PKP\user\User;
 
 class IssueAction
 {
@@ -92,19 +94,11 @@ class IssueAction
     /**
      * Checks if user has subscription
      *
-     * @param \PKP\user\User $user
-     * @param Journal $journal
-     * @param int $issueId Issue ID (optional)
-     * @param int $articleId Article ID (optional)
-     *
-     * @return bool
-     *
      * @hook IssueAction::subscribedUser [[&$user, &$journal, &$issueId, &$articleId, &$result]]
      */
-    public function subscribedUser($user, $journal, $issueId = null, $articleId = null)
+    public function subscribedUser(?User $user, Journal $journal, ?int $issueId = null, ?PKPSubmission $submission = null): bool
     {
         $subscriptionDao = DAORegistry::getDAO('IndividualSubscriptionDAO'); /** @var IndividualSubscriptionDAO $subscriptionDao */
-        $submission = Repo::submission()->get((int) $articleId);
         $result = false;
         if (isset($user) && isset($journal)) {
             if ($submission && Repo::submission()->canPreview($user, $submission)) {
@@ -132,23 +126,16 @@ class IssueAction
                 }
             }
         }
-        Hook::call('IssueAction::subscribedUser', [&$user, &$journal, &$issueId, &$articleId, &$result]);
+        Hook::call('IssueAction::subscribedUser', [&$user, &$journal, &$issueId, $submission?->getId(), &$result]);
         return $result;
     }
 
     /**
      * Checks if remote client domain or ip is allowed
      *
-     * @param \APP\core\Request $request
-     * @param Journal $journal
-     * @param int $issueId Issue ID (optional)
-     * @param int $articleId Article ID (optional)
-     *
-     * @return bool
-     *
      * @hook IssueAction::subscribedDomain [[&$request, &$journal, &$issueId, &$articleId, &$result]]
      */
-    public function subscribedDomain($request, $journal, $issueId = null, $articleId = null)
+    public function subscribedDomain(Request $request, Journal $journal, ?int $issueId = null, ?PKPSubmission $submission = null): bool
     {
         $subscriptionDao = DAORegistry::getDAO('InstitutionalSubscriptionDAO'); /** @var InstitutionalSubscriptionDAO $subscriptionDao */
         $result = false;
@@ -158,8 +145,7 @@ class IssueAction
             // If no valid subscription, check if there is an expired subscription
             // that was valid during publication date of requested content
             if (!$result && $journal->getData('subscriptionExpiryPartial')) {
-                if (isset($articleId)) {
-                    $submission = Repo::submission()->get($articleId);
+                if ($submission) {
                     $publication = $submission->getCurrentPublication();
                     if ($submission->getData('status') === PKPSubmission::STATUS_PUBLISHED) {
                         $result = $subscriptionDao->isValidInstitutionalSubscription($request->getRemoteDomain(), $request->getRemoteAddr(), $journal->getId(), Subscription::SUBSCRIPTION_DATE_END, $publication->getData('datePublished'));
@@ -172,7 +158,7 @@ class IssueAction
                 }
             }
         }
-        Hook::call('IssueAction::subscribedDomain', [&$request, &$journal, &$issueId, &$articleId, &$result]);
+        Hook::call('IssueAction::subscribedDomain', [&$request, &$journal, &$issueId, $submission?->getId(), &$result]);
         return (bool) $result;
     }
 }
