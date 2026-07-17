@@ -158,7 +158,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         // Identifier: URL
         $issueAction = new IssueAction();
         $request = Application::get()->getRequest();
-        $includeUrls = $journal->getSetting('publishingMode') != Journal::PUBLISHING_MODE_NONE || $issueAction->subscribedUser($request->getUser(), $journal, null, $article->getId());
+        $includeUrls = $journal->getSetting('publishingMode') != Journal::PUBLISHING_MODE_NONE || $issueAction->subscribedUser($request->getUser(), $journal, null, $article);
         if ($includeUrls) {
             $dc11Description->addStatement('dc:identifier', $request->getDispatcher()->url($request, PKPApplication::ROUTE_PAGE, null, 'article', 'view', [$article->getBestId()], urlLocaleForPage: ''));
         }

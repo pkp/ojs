@@ -388,8 +388,8 @@ class ArticleHandler extends Handler
                 $subscriptionRequired = $issueAction->subscriptionRequired($issue, $context);
             }
 
-            $subscribedUser = $issueAction->subscribedUser($user, $context, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
-            $subscribedDomain = $issueAction->subscribedDomain($request, $context, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
+            $subscribedUser = $issueAction->subscribedUser($user, $context, isset($issue) ? $issue->getId() : null, $article);
+            $subscribedDomain = $issueAction->subscribedDomain($request, $context, isset($issue) ? $issue->getId() : null, $article);
 
             $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */
             $templateMgr->assign(
@@ -613,7 +613,7 @@ class ArticleHandler extends Handler
             }
 
             $subscriptionRequired = $issueAction->subscriptionRequired($issue, $context);
-            $isSubscribedDomain = $issueAction->subscribedDomain($request, $context, $issue->getId(), $submission->getId());
+            $isSubscribedDomain = $issueAction->subscribedDomain($request, $context, $issue->getId(), $submission);
 
             // Check if login is required for viewing.
             if (!$isSubscribedDomain && !Validation::isLoggedIn() && $context->getData('restrictArticleAccess') && isset($galleyId) && $galleyId) {
@@ -624,7 +624,7 @@ class ArticleHandler extends Handler
             // or if the user is just requesting the abstract
             if ((!$isSubscribedDomain && $subscriptionRequired) && (isset($galleyId) && $galleyId)) {
                 // Subscription Access
-                $subscribedUser = $issueAction->subscribedUser($user, $context, $issue->getId(), $submission->getId());
+                $subscribedUser = $issueAction->subscribedUser($user, $context, $issue->getId(), $submission);
 
                 $paymentManager = Application::get()->getPaymentManager($context);
 

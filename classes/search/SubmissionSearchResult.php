@@ -39,14 +39,13 @@ class SubmissionSearchResult extends \PKP\search\SubmissionSearchResult
                 $request,
                 $user,
             ) {
-                $submissionId = $result['submission']->getId();
                 $issueId = $result['currentPublication']->getData('issueId');
                 $issue = $issueId ? ($issueCache[$issueId] ??= Repo::issue()->get($issueId)) : null;
 
                 if ($issue) {
                     $issueAvailabilityCache[$issueId] ??= !$issueAction->subscriptionRequired($issue, $result['context'])
-                        || $issueAction->subscribedUser($user, $result['context'], $issueId, $submissionId)
-                        || $issueAction->subscribedDomain($request, $result['context'], $issueId, $submissionId);
+                        || $issueAction->subscribedUser($user, $result['context'], $issueId, $result['submission'])
+                        || $issueAction->subscribedDomain($request, $result['context'], $issueId, $result['submission']);
                 }
 
                 return [
