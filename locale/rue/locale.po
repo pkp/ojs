@@ -3,7 +3,7 @@
 # Kamil Federyga <kamilfederyga@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-07-20 13:22+0000\n"
+"PO-Revision-Date: 2026-07-20 15:44+0000\n"
 "Last-Translator: Kamil Federyga <kamilfederyga@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/locale/rue/>\n"
 "Language: rue\n"
@@ -1002,7 +1002,7 @@ msgid "layoutEditor.galley.replaceGalley"
 msgstr "Замін файль до публикациі"
 
 msgid "layoutEditor.galley.uploadSuppFile"
-msgstr "Перешлий додатковый файль"
+msgstr "Перешлий поміцніиый файль"
 
 msgid "sectionEditor.regrets.decisionRound"
 msgstr "Рішыня редактора, етап {$round}"
@@ -1020,7 +1020,7 @@ msgid "submission.layout.imageInvalid"
 msgstr "Неправильный формат файля. Акцептуваны форматы то .gif, .jpg, і .png."
 
 msgid "submission.layout.galley.remotelyHostedContent"
-msgstr "Файлі до публикациі будут доступны на зовнішній інтернетовій стороні."
+msgstr "Файлі до публикациі будут доступны на зовнішнім сайті."
 
 msgid "submission.layout.galley.remoteURL"
 msgstr "Адрес URL опубликуваного змісту на зовнішній стороні"
@@ -1035,19 +1035,19 @@ msgid "reviewer.article.notifyTheEditor"
 msgstr "Дай знати редакторови"
 
 msgid "reviewer.article.cannotDoReview"
-msgstr "Не згаджам ся на зробліня рецензиі"
+msgstr "Не згаджам ся зробити рецензиі"
 
 msgid "reviewer.article.restrictedFileAccess"
-msgstr "Зголошыня буде доступне, кєд рецензент згодит ся на зробліня рецензиі"
+msgstr "Зголошыня буде доступне, кєд рецензент згодит ся зробити рецензию"
 
 msgid "reviewer.article.submissionEditor"
-msgstr "Редактор секциі"
+msgstr "Ведучый редактор"
 
 msgid "reviewer.averageQuality"
 msgstr "Оціна"
 
 msgid "reviewer.article.canDoReview"
-msgstr "Згаджам ся на рецензуваня"
+msgstr "Згаджам ся зробити рецензию"
 
 msgid "reviewer.article.fileToBeReviewed"
 msgstr "Файль до зрецензуваня"
@@ -1075,7 +1075,8 @@ msgstr "Версия выслана през рецензента"
 
 msgid "reviewer.article.reviewersAnnotatedVersionDescription"
 msgstr ""
-"(Кєд хочеш узуполнити файль о коментарі для редактора, запиш файль на диску.)"
+"(Кєд хочеш додати до файля коментарі для редактора, запиш файль на диску, а "
+"пак схоснуй функцию Переглядай/Перешлий.)"
 
 msgid "reviewer.article.schedule.request"
 msgstr "Просьба редактора"
@@ -1105,7 +1106,7 @@ msgid "reviewer.article.decision.decline"
 msgstr "Одмшмар текст"
 
 msgid "reviewer.article.decision.seeComments"
-msgstr "Рекомендациі в коментарі"
+msgstr "Рекомендациі в коментари"
 
 msgid "reviewer.article.schedule"
 msgstr "Гармоноґрам"
