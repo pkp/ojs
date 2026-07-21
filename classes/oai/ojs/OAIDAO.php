@@ -202,15 +202,20 @@ class OAIDAO extends PKPOAIDAO
         $publicationId = $row['publication_id'] ?? null;
         $currentPublicationId = $row['current_publication_id'] ?? null;
         $versionMajor = $row['version_major'] ?? null;
+        $versionStage = $row['version_stage'] ?? null;
 
         // Older versions are exposed under a version-specific identifier keyed to the
-        // version-of-record major number (stable across minor updates); the current
+        // version stage and major version number (stable across minor updates); the current
         // version keeps the unversioned identifier.
         $isCurrentVersion = !$publicationId || ($publicationId == $currentPublicationId);
 
         /** @var JournalOAI $oai */
         $oai = $this->oai;
-        $record->identifier = $oai->articleIdToIdentifier($articleId, $isCurrentVersion ? null : $versionMajor);
+        $record->identifier = $oai->articleIdToIdentifier(
+            $articleId,
+            $isCurrentVersion ? null : $versionStage,
+            $isCurrentVersion ? null : $versionMajor
+        );
         $record->sets = [self::setSpec($journal, $section)];
 
         if ($isRecord) {
@@ -239,7 +244,7 @@ class OAIDAO extends PKPOAIDAO
     }
 
     /**
-     * @copydoc PKPOAIDAO::_getRecordsRecordSet
+     * @copydoc PKPOAIDAO::getRecordsRecordSetQuery()
      */
     public function getRecordsRecordSetQuery(
         array $setIds,
@@ -280,10 +285,17 @@ class OAIDAO extends PKPOAIDAO
             ->pluck('journal_id')
             ->all();
 
+        // Version stages exposed as their own OAI record when DOI versioning is enabled.
+        $versionedStages = [
+            VersionStage::AUTHOR_ORIGINAL->value,
+            VersionStage::PUBLISHED_MANUSCRIPT_UNDER_REVIEW->value,
+            VersionStage::VERSION_OF_RECORD->value,
+        ];
+
         // Records for the current publication (journals without per-version OAI records).
         $query = DB::table('submissions AS a')
             ->select([
-                DB::raw('GREATEST(a.last_modified, i.last_modified, p.last_modified) AS last_modified'),
+                DB::raw('GREATEST(i.last_modified, p.last_modified) AS last_modified'),
                 'a.submission_id AS submission_id',
                 'i.issue_id',
                 DB::raw('NULL AS tombstone_id'),
@@ -294,6 +306,7 @@ class OAIDAO extends PKPOAIDAO
                 'p.publication_id AS publication_id',
                 'a.current_publication_id AS current_publication_id',
                 'p.version_major AS version_major',
+                'p.version_stage AS version_stage',
             ])
             ->join('publications AS p', 'a.current_publication_id', '=', 'p.publication_id')
             ->leftJoin('issues AS i', 'i.issue_id', '=', 'p.issue_id')
@@ -315,14 +328,14 @@ class OAIDAO extends PKPOAIDAO
             })
             ->when($from, function ($query, $from) {
                 return $query->whereDate(
-                    DB::raw('GREATEST(a.last_modified, i.last_modified, p.last_modified)'),
+                    DB::raw('GREATEST(i.last_modified, p.last_modified)'),
                     '>=',
                     DateTime::createFromFormat('U', $from)
                 );
             })
             ->when($until, function ($query, $until) {
                 return $query->whereDate(
-                    DB::raw('GREATEST(a.last_modified, i.last_modified, p.last_modified)'),
+                    DB::raw('GREATEST(i.last_modified, p.last_modified)'),
                     '<=',
                     DateTime::createFromFormat('U', $until)
                 );
@@ -335,11 +348,11 @@ class OAIDAO extends PKPOAIDAO
             });
 
         // Records for each published (major) version of record, exposed via the latest
-        // minor version of each major, for journals with per-version OAI records.
+        // minor version of each major, for journals with DOI versioning.
         if (!empty($versioningJournalIds)) {
             $versionQuery = DB::table('submissions AS a')
                 ->select([
-                    DB::raw('GREATEST(a.last_modified, i.last_modified, p.last_modified) AS last_modified'),
+                    DB::raw('GREATEST(i.last_modified, p.last_modified) AS last_modified'),
                     'a.submission_id AS submission_id',
                     'i.issue_id',
                     DB::raw('NULL AS tombstone_id'),
@@ -350,6 +363,7 @@ class OAIDAO extends PKPOAIDAO
                     'p.publication_id AS publication_id',
                     'a.current_publication_id AS current_publication_id',
                     'p.version_major AS version_major',
+                    'p.version_stage AS version_stage',
                 ])
                 ->join('publications AS p', 'p.submission_id', '=', 'a.submission_id')
                 // Keep only the latest minor version of each major version of record.
@@ -366,7 +380,7 @@ class OAIDAO extends PKPOAIDAO
                 ->whereNull('p2.publication_id')
                 ->where('j.enabled', '=', 1)
                 ->where('p.status', '=', PKPPublication::STATUS_PUBLISHED)
-                ->where('p.version_stage', '=', VersionStage::VERSION_OF_RECORD->value)
+                ->whereIn('p.version_stage', $versionedStages)
                 ->whereIn('j.journal_id', $versioningJournalIds)
                 ->when($excludeJournals, function ($query, $excludeJournals) {
                     return $query->whereNotIn('j.journal_id', $excludeJournals);
@@ -379,14 +393,14 @@ class OAIDAO extends PKPOAIDAO
                 })
                 ->when($from, function ($query, $from) {
                     return $query->whereDate(
-                        DB::raw('GREATEST(a.last_modified, i.last_modified, p.last_modified)'),
+                        DB::raw('GREATEST(i.last_modified, p.last_modified)'),
                         '>=',
                         DateTime::createFromFormat('U', $from)
                     );
                 })
                 ->when($until, function ($query, $until) {
                     return $query->whereDate(
-                        DB::raw('GREATEST(a.last_modified, i.last_modified, p.last_modified)'),
+                        DB::raw('GREATEST(i.last_modified, p.last_modified)'),
                         '<=',
                         DateTime::createFromFormat('U', $until)
                     );
@@ -436,6 +450,7 @@ class OAIDAO extends PKPOAIDAO
                 DB::raw('NULL AS publication_id'),
                 DB::raw('NULL AS current_publication_id'),
                 DB::raw('NULL AS version_major'),
+                DB::raw('NULL AS version_stage'),
             ])
             ->when(isset($set), function ($query) use ($set) {
                 return $query->where('dot.set_spec', '=', $set)

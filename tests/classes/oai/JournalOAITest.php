@@ -50,30 +50,36 @@ class JournalOAITest extends PKPTestCase
     {
         $oai = $this->getOAI();
         $this->assertSame($this->identifier('5'), $oai->articleIdToIdentifier(5));
-        $this->assertSame($this->identifier('5'), $oai->articleIdToIdentifier(5, null));
+        $this->assertSame($this->identifier('5'), $oai->articleIdToIdentifier(5, null, null));
+        // A stage without a major (or vice versa) is not a full version reference.
+        $this->assertSame($this->identifier('5'), $oai->articleIdToIdentifier(5, 'VoR', null));
+        $this->assertSame($this->identifier('5'), $oai->articleIdToIdentifier(5, null, 2));
     }
 
-    public function testArticleIdToIdentifierIsVersionedWithVersionMajor(): void
+    public function testArticleIdToIdentifierIsVersionedWithStageAndMajor(): void
     {
         $oai = $this->getOAI();
-        $this->assertSame($this->identifier('5/version/2'), $oai->articleIdToIdentifier(5, 2));
+        $this->assertSame($this->identifier('5/version/VoR/2'), $oai->articleIdToIdentifier(5, 'VoR', 2));
+        $this->assertSame($this->identifier('5/version/AO/1'), $oai->articleIdToIdentifier(5, 'AO', 1));
+        $this->assertSame($this->identifier('5/version/PMUR/3'), $oai->articleIdToIdentifier(5, 'PMUR', 3));
     }
 
-    public function testIdentifierToArticleAndVersionMajorParsesBothForms(): void
+    public function testIdentifierToArticleStageAndVersionMajorParsesBothForms(): void
     {
         $oai = $this->getOAI();
-        $this->assertSame([5, null], $oai->identifierToArticleAndVersionMajor($this->identifier('5')));
-        $this->assertSame([5, 2], $oai->identifierToArticleAndVersionMajor($this->identifier('5/version/2')));
+        $this->assertSame([5, null, null], $oai->identifierToArticleStageAndVersionMajor($this->identifier('5')));
+        $this->assertSame([5, 'VoR', 2], $oai->identifierToArticleStageAndVersionMajor($this->identifier('5/version/VoR/2')));
     }
 
     public function testIdentifierRoundTrip(): void
     {
         $oai = $this->getOAI();
-        foreach ([[5, null], [5, 2], [123, 45]] as [$articleId, $versionMajor]) {
-            $identifier = $oai->articleIdToIdentifier($articleId, $versionMajor);
+        $cases = [[5, null, null], [5, 'VoR', 2], [123, 'AO', 45], [7, 'PMUR', 3]];
+        foreach ($cases as [$articleId, $versionStage, $versionMajor]) {
+            $identifier = $oai->articleIdToIdentifier($articleId, $versionStage, $versionMajor);
             $this->assertSame(
-                [$articleId, $versionMajor],
-                $oai->identifierToArticleAndVersionMajor($identifier),
+                [$articleId, $versionStage, $versionMajor],
+                $oai->identifierToArticleStageAndVersionMajor($identifier),
                 $identifier
             );
         }
@@ -84,30 +90,33 @@ class JournalOAITest extends PKPTestCase
         $oai = $this->getOAI();
         // Both the bare and versioned forms resolve to the article (submission) id.
         $this->assertSame(5, $oai->identifierToArticleId($this->identifier('5')));
-        $this->assertSame(5, $oai->identifierToArticleId($this->identifier('5/version/2')));
+        $this->assertSame(5, $oai->identifierToArticleId($this->identifier('5/version/VoR/2')));
     }
 
     public function testValidIdentifierAcceptsBareAndVersionedForms(): void
     {
         $oai = $this->getOAI();
         $this->assertTrue($oai->validIdentifier($this->identifier('5')));
-        $this->assertTrue($oai->validIdentifier($this->identifier('5/version/2')));
+        $this->assertTrue($oai->validIdentifier($this->identifier('5/version/VoR/2')));
     }
 
     public function testMalformedIdentifiersAreRejected(): void
     {
         $oai = $this->getOAI();
         $cases = [
-            'oai:other.repo:article/5',          // wrong repository id
-            $this->identifier('abc'),            // non-numeric article id
-            $this->identifier('5/version/x'),    // non-numeric version
-            $this->identifier('5/version/'),     // empty version
-            $this->identifier('5/foo/12'),       // unknown path segment
-            $this->identifier('5/version/12/34'), // trailing segment
+            'oai:other.repo:article/5',            // wrong repository id
+            $this->identifier('abc'),              // non-numeric article id
+            $this->identifier('5/version/VoR/x'),  // non-numeric version
+            $this->identifier('5/version/VoR/'),   // empty version
+            $this->identifier('5/version/VoR'),    // missing version major
+            $this->identifier('5/version/2'),      // missing version stage
+            $this->identifier('5/version/xx/2'),   // unknown version stage
+            $this->identifier('5/foo/12'),         // unknown path segment
+            $this->identifier('5/version/VoR/12/34'), // trailing segment
             'garbage',
         ];
         foreach ($cases as $identifier) {
-            $this->assertSame([false, null], $oai->identifierToArticleAndVersionMajor($identifier), $identifier);
+            $this->assertSame([false, null, null], $oai->identifierToArticleStageAndVersionMajor($identifier), $identifier);
             $this->assertFalse($oai->identifierToArticleId($identifier), $identifier);
             $this->assertFalse($oai->validIdentifier($identifier), $identifier);
         }
