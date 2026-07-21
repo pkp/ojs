@@ -60,18 +60,17 @@ class JournalOAI extends OAI
     /**
      * Convert article ID to OAI identifier.
      *
-     * When a version (major) number is given, a version-specific identifier is
-     * returned. This exposes older article versions as their own OAI records
-     * when DOI versioning is enabled; the current version keeps the bare
-     * (unversioned) identifier for backwards compatibility. The version number
-     * is the version-of-record major number, which is stable across minor
-     * updates within that major.
+     * When a version stage and major version number are given, a version-specific
+     * identifier is returned. This exposes older article versions as their own
+     * OAI records when DOI versioning is enabled; the current version keeps the
+     * bare (unversioned) identifier for backwards compatibility. The major
+     * version number is stable across minor updates within that stage.
      */
-    public function articleIdToIdentifier(int $articleId, ?int $versionMajor = null): string
+    public function articleIdToIdentifier(int $articleId, ?string $versionStage = null, ?int $versionMajor = null): string
     {
         $identifier = 'oai:' . $this->config->repositoryId . ':' . 'article/' . $articleId;
-        if ($versionMajor) {
-            $identifier .= '/version/' . $versionMajor;
+        if ($versionStage && $versionMajor) {
+            $identifier .= '/version/' . $versionStage . '/' . $versionMajor;
         }
         return $identifier;
     }
@@ -81,42 +80,47 @@ class JournalOAI extends OAI
      */
     public function identifierToArticleId(string $identifier): int|false
     {
-        return $this->identifierToArticleAndVersionMajor($identifier)[0];
+        return $this->identifierToArticleStageAndVersionMajor($identifier)[0];
     }
 
     /**
      * Convert OAI identifier to its article ID and, if the identifier is
-     * version-specific, the version-of-record major number it refers to.
+     * version-specific, the version stage and major version number it refers to.
      *
-     * @return array [int|false $articleId, int|null $versionMajor]
+     * @return array [int|false $articleId, string|null $versionStage, int|null $versionMajor]
      */
-    public function identifierToArticleAndVersionMajor(string $identifier): array
+    public function identifierToArticleStageAndVersionMajor(string $identifier): array
     {
         $prefix = 'oai:' . $this->config->repositoryId . ':' . 'article/';
         if (!str_starts_with($identifier, $prefix)) {
-            return [false, null];
+            return [false, null, null];
         }
         $suffix = substr($identifier, strlen($prefix));
-        if (!preg_match('#^(\d+)(?:/version/(\d+))?$#', $suffix, $matches)) {
-            return [false, null];
+        $stages = implode('|', array_map(fn (VersionStage $stage) => preg_quote($stage->value, '#'), VersionStage::cases()));
+        if (!preg_match('#^(\d+)(?:/version/(' . $stages . ')/(\d+))?$#', $suffix, $matches)) {
+            return [false, null, null];
         }
-        return [(int) $matches[1], isset($matches[2]) ? (int) $matches[2] : null];
+        return [
+            (int) $matches[1],
+            $matches[2] ?? null,
+            isset($matches[3]) ? (int) $matches[3] : null,
+        ];
     }
 
     /**
-     * Resolve a version-of-record major number to the publication that represents
-     * it in OAI: the latest published minor of that major. Returns null when no
+     * Resolve a version stage and major version number to the publication that represents
+     * it in OAI: the latest published minor of that major version. Returns null when no
      * version is given (bare identifier), leaving the DAO to fall back to the
      * current publication, or when no such published major version exists.
      */
-    private function versionMajorToPublicationId(int $articleId, ?int $versionMajor = null): ?int
+    private function versionToPublicationId(int $articleId, ?string $versionStage = null, ?int $versionMajor = null): ?int
     {
-        if ($versionMajor === null) {
+        if ($versionStage === null || $versionMajor === null) {
             return null;
         }
         return Repo::publication()->getCollector()
             ->filterBySubmissionIds([$articleId])
-            ->filterByVersionStage(VersionStage::VERSION_OF_RECORD->value)
+            ->filterByVersionStage($versionStage)
             ->filterByVersionMajor($versionMajor)
             ->filterByStatus([PKPPublication::STATUS_PUBLISHED])
             ->orderByVersion()
@@ -133,14 +137,14 @@ class JournalOAI extends OAI
      */
     private function resolveIdentifier(string $identifier): ?array
     {
-        [$articleId, $versionMajor] = $this->identifierToArticleAndVersionMajor($identifier);
+        [$articleId, $versionStage, $versionMajor] = $this->identifierToArticleStageAndVersionMajor($identifier);
         if (!$articleId) {
             return null;
         }
         if ($versionMajor === null) {
             return [$articleId, null];
         }
-        $publicationId = $this->versionMajorToPublicationId($articleId, $versionMajor);
+        $publicationId = $this->versionToPublicationId($articleId, $versionStage, $versionMajor);
         return ($publicationId === null) ? null : [$articleId, $publicationId];
     }
 
