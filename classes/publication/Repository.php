@@ -14,6 +14,7 @@
 
 namespace APP\publication;
 
+use APP\article\ArticleTombstoneManager;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\issue\enums\IssueAssignment;
@@ -170,6 +171,44 @@ class Repository extends \PKP\publication\Repository
         }
 
         return $newId;
+    }
+
+    /** @copydoc \PKP\publication\Repository::publish() */
+    public function publish(Publication $publication, false|int|null $submissionStatus = null): void
+    {
+        parent::publish($publication, $submissionStatus);
+
+        $newPublication = Repo::publication()->get($publication->getId());
+        $submission = Repo::submission()->get($newPublication->getData('submissionId'));
+        $context = $this->getSubmissionContext($submission);
+
+        (new ArticleTombstoneManager())->reconcileTombstonesOnPublish($newPublication, $submission, $context);
+    }
+
+    /** @copydoc \PKP\publication\Repository::unpublish() */
+    public function unpublish(Publication $publication, false|int|null $submissionStatus = null)
+    {
+        $submissionBefore = Repo::submission()->get($publication->getData('submissionId'));
+        $wasCurrentPublication = $publication->getId() == $submissionBefore->getData('currentPublicationId');
+
+        parent::unpublish($publication, $submissionStatus);
+
+        $submission = Repo::submission()->get($publication->getData('submissionId'));
+        $context = $this->getSubmissionContext($submission);
+
+        (new ArticleTombstoneManager())->reconcileTombstonesOnUnpublish($publication, $wasCurrentPublication, $submission, $context);
+    }
+
+    /**
+     * Get the context a submission belongs to, preferring the request's
+     * current context to avoid an extra lookup when it's the same one.
+     */
+    protected function getSubmissionContext(Submission $submission): Context
+    {
+        $requestContext = Application::get()->getRequest()->getContext();
+        return $requestContext && $requestContext->getId() === $submission->getData('contextId')
+            ? $requestContext
+            : app()->get('context')->get($submission->getData('contextId'));
     }
 
     /**
