@@ -124,13 +124,6 @@ class ArticleHandler extends Handler
             throw new \Symfony\Component\HttpKernel\Exception\NotFoundHttpException();
         }
 
-        // If the urlPath does not match the urlPath of the current
-        // publication, redirect to the current URL
-        $currentUrlPath = $submission->getBestId();
-        if ($currentUrlPath != $urlPath) {
-            $request->redirect(null, $request->getRequestedPage(), $request->getRequestedOp(), [$currentUrlPath, ...$args]);
-        }
-
         $this->article = $submission;
         // Get the requested publication or if none requested get the current publication
         $subPath = empty($args) ? 0 : array_shift($args);
@@ -148,6 +141,13 @@ class ArticleHandler extends Handler
         } else {
             $this->publication = $this->article->getCurrentPublication();
             $galleyId = $subPath;
+        }
+
+        // If the urlPath does not match the urlPath of the current
+        // publication, redirect to the current URL
+        $currentUrlPath = $this->publication->getData('urlPath') ?? $submission->getId();
+        if ($currentUrlPath != $urlPath) {
+            $request->redirect(null, $request->getRequestedPage(), $request->getRequestedOp(), [$currentUrlPath, ...$args]);
         }
 
         // Serve 404 if publication is unpublished and no user is logged in OR publication is unpublished and we have a user logged in but the user does not have access to preview
@@ -388,8 +388,8 @@ class ArticleHandler extends Handler
                 $subscriptionRequired = $issueAction->subscriptionRequired($issue, $context);
             }
 
-            $subscribedUser = $issueAction->subscribedUser($user, $context, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
-            $subscribedDomain = $issueAction->subscribedDomain($request, $context, isset($issue) ? $issue->getId() : null, isset($article) ? $article->getId() : null);
+            $subscribedUser = $issueAction->subscribedUser($user, $context, isset($issue) ? $issue->getId() : null, $article);
+            $subscribedDomain = $issueAction->subscribedDomain($request, $context, isset($issue) ? $issue->getId() : null, $article);
 
             $completedPaymentDao = DAORegistry::getDAO('OJSCompletedPaymentDAO'); /** @var OJSCompletedPaymentDAO $completedPaymentDao */
             $templateMgr->assign(
@@ -613,7 +613,7 @@ class ArticleHandler extends Handler
             }
 
             $subscriptionRequired = $issueAction->subscriptionRequired($issue, $context);
-            $isSubscribedDomain = $issueAction->subscribedDomain($request, $context, $issue->getId(), $submission->getId());
+            $isSubscribedDomain = $issueAction->subscribedDomain($request, $context, $issue->getId(), $submission);
 
             // Check if login is required for viewing.
             if (!$isSubscribedDomain && !Validation::isLoggedIn() && $context->getData('restrictArticleAccess') && isset($galleyId) && $galleyId) {
@@ -624,7 +624,7 @@ class ArticleHandler extends Handler
             // or if the user is just requesting the abstract
             if ((!$isSubscribedDomain && $subscriptionRequired) && (isset($galleyId) && $galleyId)) {
                 // Subscription Access
-                $subscribedUser = $issueAction->subscribedUser($user, $context, $issue->getId(), $submission->getId());
+                $subscribedUser = $issueAction->subscribedUser($user, $context, $issue->getId(), $submission);
 
                 $paymentManager = Application::get()->getPaymentManager($context);
 

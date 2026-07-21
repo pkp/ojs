@@ -424,9 +424,9 @@ class IssueHandler extends Handler
             // Partial subscription expiry for articles
             $articleExpiryPartial = [];
             foreach ($issueSubmissions as $issueSubmission) {
-                $partial = $issueAction->subscribedUser($user, $journal, $issue->getId(), $issueSubmission->getId());
+                $partial = $issueAction->subscribedUser($user, $journal, $issue->getId(), $issueSubmission);
                 if (!$partial) {
-                    $issueAction->subscribedDomain($request, $journal, $issue->getId(), $issueSubmission->getId());
+                    $issueAction->subscribedDomain($request, $journal, $issue->getId(), $issueSubmission);
                 }
                 $articleExpiryPartial[$issueSubmission->getId()] = $partial;
             }
