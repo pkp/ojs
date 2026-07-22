@@ -11316,6 +11316,132 @@
 				}
 			}
 		},
+		"/reviews/{submissionId}/reviewerReview": {
+			"get": {
+				"tags": [
+					"Reviews"
+				],
+				"summary": "Get the calling reviewer's own review of a submission.",
+				"description": "Returns what the reviewer review wizard needs - the review assignment, the assigned review form with the reviewer's saved answers on each element, the recommendation options, the review guidelines and the reviewer's comments. Only the assigned reviewer gets data - the review assignment is resolved from the **calling reviewer** rather than an id in the URL.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The reviewer's review.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"reviewAssignment": {
+									"type": "object",
+									"description": "Reviewer-safe subset of the review assignment: id, submissionId, reviewRoundId, stageId, reviewerRecommendationId, dateCompleted, cancelled, declined, reviewFormId, step."
+								},
+								"reviewForm": {
+									"type": "object",
+									"description": "The assigned custom review form, or null when none is configured.",
+									"properties": {
+										"id": {
+											"type": "integer"
+										},
+										"title": {
+											"type": "string"
+										},
+										"description": {
+											"type": "string"
+										},
+										"elements": {
+											"type": "array",
+											"description": "Form elements, each carrying its own raw saved response value.",
+											"items": {
+												"type": "object",
+												"properties": {
+													"id": {
+														"type": "integer"
+													},
+													"elementType": {
+														"type": "integer",
+														"description": "One of the REVIEW_FORM_ELEMENT_TYPE_ constants."
+													},
+													"question": {
+														"type": "string"
+													},
+													"description": {
+														"type": "string"
+													},
+													"required": {
+														"type": "boolean"
+													},
+													"sequence": {
+														"type": "number"
+													},
+													"possibleResponses": {
+														"type": "array",
+														"description": "Localized options, present only for choice-based element types.",
+														"items": {
+															"type": "string"
+														}
+													},
+													"value": {
+														"description": "The reviewer's raw saved response (string, option index, or array of indices), or null when unanswered."
+													}
+												}
+											}
+										}
+									}
+								},
+								"reviewerRecommendationOptions": {
+									"type": "array",
+									"description": "Recommendation options for the select field.",
+									"items": {
+										"type": "object",
+										"properties": {
+											"value": {
+												"type": "integer"
+											},
+											"label": {
+												"type": "string"
+											}
+										}
+									}
+								},
+								"reviewGuidelines": {
+									"type": "string",
+									"description": "Localized review guidelines for the review stage, or null."
+								},
+								"comments": {
+									"type": "string",
+									"description": "The reviewer's most recent comment visible to the author (used when no review form is configured)."
+								},
+								"commentsPrivate": {
+									"type": "string",
+									"description": "The reviewer's most recent comment visible only to editors."
+								}
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You are not the assigned reviewer for this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "No review assignment could be found for you on this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
 		"/reviews/{submissionId}/{reviewAssignmentId}/confirmReview": {
 			"put": {
 				"tags": [
