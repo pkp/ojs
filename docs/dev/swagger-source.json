@@ -330,6 +330,9 @@
 				}
 			}
 		},
+		"ContributorRole": "contributorRole",
+		"Citation": "citation",
+		"DataCitation": "dataCitation",
 		"Decision": "decision",
 		"DecisionAction": {
 			"a": "b",
@@ -639,6 +642,7 @@
 		},
 		"EmailTemplate": "emailTemplate",
 		"Email": "emailLog",
+		"Funder": "funder",
 		"Galley": "galley",
 		"Institution": "institution",
 		"InvalidParametersResponse": {
