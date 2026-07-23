@@ -3,8 +3,8 @@
 /**
  * @file classes/article/ArticleTombstoneManager.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2000-2021 John Willinsky
+ * Copyright (c) 2014-2026 Simon Fraser University
+ * Copyright (c) 2000-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class ArticleTombstoneManager
@@ -18,6 +18,7 @@ namespace APP\article;
 
 use APP\core\Application;
 use APP\facades\Repo;
+use APP\oai\ojs\JournalOAI;
 use APP\oai\ojs\OAIDAO;
 use APP\publication\enums\VersionStage;
 use APP\publication\Publication;
@@ -41,48 +42,60 @@ class ArticleTombstoneManager
 
     /**
      * Build the OAI identifier for an article, optionally for a specific
-     * version-of-record major number.
+     * version stage and major version number. The format must match the
+     * identifiers OAI records are exposed under.
      *
      * @see \APP\oai\ojs\JournalOAI::articleIdToIdentifier()
      */
-    protected function buildOaiIdentifier(int $articleId, ?int $versionMajor = null): string
+    protected function buildOaiIdentifier(int $articleId, ?string $versionStage = null, ?int $versionMajor = null): string
     {
-        $identifier = 'oai:' . Config::getVar('oai', 'repository_id') . ':' . 'article/' . $articleId;
-        if ($versionMajor) {
-            $identifier .= '/version/' . $versionMajor;
-        }
-        return $identifier;
+        return JournalOAI::formatIdentifier(Config::getVar('oai', 'repository_id'), $articleId, $versionStage, $versionMajor);
     }
 
     /**
-     * Whether this journal exposes one OAI record per published major version,
+     * The version stages exposed as their own OAI record when DOI versioning
+     * is enabled.
+     *
+     * @return string[]
+     *
+     * @see OAIDAO::getRecordsRecordSetQuery ($versionedStages)
+     *
+     */
+    protected function versionedStages(): array
+    {
+        return [
+            VersionStage::AUTHOR_ORIGINAL->value,
+            VersionStage::PUBLISHED_MANUSCRIPT_UNDER_REVIEW->value,
+            VersionStage::VERSION_OF_RECORD->value,
+        ];
+    }
+
+    /**
+     * Whether this journal exposes one OAI record per published version,
      * instead of only the current publication.
      *
-     * @see \APP\oai\ojs\OAIDAO::getRecordsRecordSetQuery()
+     * @see OAIDAO::getRecordsRecordSetQuery
      */
     protected function isVersioningEnabled(Context $context): bool
     {
-        return (bool) $context->getData(Context::SETTING_DOI_VERSIONING)
-            && (bool) $context->getData(Context::SETTING_ENABLE_DOIS);
+        return $context->getData(Context::SETTING_DOI_VERSIONING)
+            && $context->getData(Context::SETTING_ENABLE_DOIS);
     }
 
     /**
-     * The version-of-record major numbers that currently have at least one
-     * published minor version, for a submission.
-     *
-     * @return int[]
+     * Whether a (version stage, major) group still has at least one published
+     * minor version for a submission -- i.e. its versioned OAI identifier is
+     * still live.
      */
-    protected function getLiveVersionMajors(Submission $submission): array
+    protected function isVersionGroupLive(Submission $submission, string $versionStage, int $versionMajor): bool
     {
-        $majors = [];
-        foreach (Repo::publication()->getCollector()
+        return Repo::publication()->getCollector()
             ->filterBySubmissionIds([$submission->getId()])
-            ->filterByVersionStage(VersionStage::VERSION_OF_RECORD->value)
+            ->filterByVersionStage($versionStage)
+            ->filterByVersionMajor($versionMajor)
             ->filterByStatus([PKPPublication::STATUS_PUBLISHED])
-            ->getMany() as $publication) {
-            $majors[$publication->getData('versionMajor')] = true;
-        }
-        return array_keys($majors);
+            ->getMany()
+            ->isNotEmpty();
     }
 
     /**
@@ -90,16 +103,18 @@ class ArticleTombstoneManager
      * its (version stage, version major) group -- the one that represents
      * that group in OAI.
      *
-     * @see \APP\oai\ojs\OAIDAO::getRecordsRecordSetQuery() ($versionQuery's p2 self-join)
+     * @see OAIDAO::getRecordsRecordSetQuery ($versionQuery's p2 self-join)
      */
     protected function isLatestPublishedMinor(Publication $publication): bool
     {
-        foreach (Repo::publication()->getCollector()
-            ->filterBySubmissionIds([$publication->getData('submissionId')])
-            ->filterByVersionStage($publication->getData('versionStage'))
-            ->filterByVersionMajor($publication->getData('versionMajor'))
-            ->filterByStatus([PKPPublication::STATUS_PUBLISHED])
-            ->getMany() as $sibling) {
+        foreach (
+            Repo::publication()->getCollector()
+                ->filterBySubmissionIds([$publication->getData('submissionId')])
+                ->filterByVersionStage($publication->getData('versionStage'))
+                ->filterByVersionMajor($publication->getData('versionMajor'))
+                ->filterByStatus([PKPPublication::STATUS_PUBLISHED])
+                ->getMany() as $sibling
+        ) {
             if ((int) $sibling->getData('versionMinor') > (int) $publication->getData('versionMinor')) {
                 return false;
             }
@@ -113,10 +128,10 @@ class ArticleTombstoneManager
      *
      * @hook ArticleTombstoneManager::insertArticleTombstone [[&$articleTombstone, &$article, &$journal, &$section]]
      */
-    protected function insertIdentifierTombstone(Submission $article, Context $journal, Section $section, ?int $versionMajor): void
+    protected function insertIdentifierTombstone(Submission $article, Context $journal, Section $section, ?string $versionStage, ?int $versionMajor): void
     {
         $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /** @var DataObjectTombstoneDAO $tombstoneDao */
-        $oaiIdentifier = $this->buildOaiIdentifier($article->getId(), $versionMajor);
+        $oaiIdentifier = $this->buildOaiIdentifier($article->getId(), $versionStage, $versionMajor);
 
         if ($tombstoneDao->getByOAIIdentifier($oaiIdentifier)) {
             return;
@@ -144,31 +159,43 @@ class ArticleTombstoneManager
      * Insert a tombstone for every OAI identifier this article was exposing.
      * Used when the whole submission is removed from OAI (deleted, or
      * unpublished at the submission level -- see Submission\Repository::updateStatus()).
+     *
+     * This covers the submission-level case; the reconcileTombstonesOn*()
+     * methods handle the per-publication cases (AO/PMUR-only, or non-current
+     * versions) that don't move the submission's aggregate status.
      */
-    public function insertArticleTombstone($article, $journal, $section)
+    public function insertArticleTombstone($article, $journal, $section): void
     {
-        $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /** @var DataObjectTombstoneDAO $tombstoneDao */
+        /** @var DataObjectTombstoneDAO $tombstoneDao */
+        $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO');
         // delete any existing tombstones for this article, to avoid duplicates/staleness
         $tombstoneDao->deleteByDataObjectId($article->getId());
 
         // Always tombstone the bare identifier.
-        $this->insertIdentifierTombstone($article, $journal, $section, null);
+        $this->insertIdentifierTombstone($article, $journal, $section, null, null);
 
         // If this journal exposes per-version records, also tombstone every
-        // major version this article ever reached VoR for, since each may
-        // have had its own identifier exposed independently of the bare one.
+        // (version stage, major) group this article ever exposed, since each
+        // may have had its own identifier exposed independently of the bare one.
         // Not filtered by current publication status: by the time this runs,
         // the publications involved may already be unpublished.
         if ($this->isVersioningEnabled($journal)) {
-            $majors = [];
-            foreach (Repo::publication()->getCollector()
-                ->filterBySubmissionIds([$article->getId()])
-                ->filterByVersionStage(VersionStage::VERSION_OF_RECORD->value)
-                ->getMany() as $publication) {
-                $majors[$publication->getData('versionMajor')] = true;
+            $versionedStages = $this->versionedStages();
+            $groups = [];
+            foreach (
+                Repo::publication()->getCollector()
+                    ->filterBySubmissionIds([$article->getId()])
+                    ->getMany() as $publication
+            ) {
+                $versionStage = $publication->getData('versionStage');
+                if (!in_array($versionStage, $versionedStages, true)) {
+                    continue;
+                }
+                $major = (int) $publication->getData('versionMajor');
+                $groups[$versionStage . '/' . $major] = [$versionStage, $major];
             }
-            foreach (array_keys($majors) as $major) {
-                $this->insertIdentifierTombstone($article, $journal, $section, $major);
+            foreach ($groups as [$versionStage, $major]) {
+                $this->insertIdentifierTombstone($article, $journal, $section, $versionStage, $major);
             }
         }
     }
@@ -181,8 +208,11 @@ class ArticleTombstoneManager
      * aggregate status (which only reflects the Version of Record) -- an
      * AO/PMUR-only publish is handled the same way as a VoR publish.
      */
-    public function reconcileTombstonesOnPublish(Publication $publication, Submission $submission, Context $context): void
-    {
+    public function reconcileTombstonesOnPublish(
+        Publication $publication,
+        Submission $submission,
+        Context $context
+    ): void {
         if ($publication->getData('status') !== PKPPublication::STATUS_PUBLISHED) {
             return;
         }
@@ -194,15 +224,21 @@ class ArticleTombstoneManager
         // version stage -- independent of whether this journal has per-version
         // OAI records at all.
         if ($publication->getId() == $submission->getData('currentPublicationId')) {
-            $tombstoneDao->deleteByOAIIdentifier($this->buildOaiIdentifier($articleId, null));
+            $tombstoneDao->deleteByOAIIdentifier($this->buildOaiIdentifier($articleId, null, null));
         }
 
-        // Versioned identifier: only relevant for VoR majors in versioning
-        // journals, and only the latest published minor of a major represents it.
-        if ($this->isVersioningEnabled($context)
-            && $publication->getData('versionStage') === VersionStage::VERSION_OF_RECORD->value
-            && $this->isLatestPublishedMinor($publication)) {
-            $tombstoneDao->deleteByOAIIdentifier($this->buildOaiIdentifier($articleId, $publication->getData('versionMajor')));
+        // Versioned identifier: only relevant for exposed version stages in
+        // versioning journals, and only the latest published minor of a
+        // (stage, major) group represents it.
+        $versionStage = $publication->getData('versionStage');
+        if (
+            $this->isVersioningEnabled($context)
+            && in_array($versionStage, $this->versionedStages(), true)
+            && $this->isLatestPublishedMinor($publication)
+        ) {
+            $tombstoneDao->deleteByOAIIdentifier(
+                $this->buildOaiIdentifier($articleId, $versionStage, (int) $publication->getData('versionMajor'))
+            );
         }
     }
 
@@ -212,13 +248,17 @@ class ArticleTombstoneManager
      *
      * Unlike insertArticleTombstone(), this isn't gated on the submission's
      * aggregate status -- an article whose only published publication was
-     * AO/PMUR (submission status never reaches STATUS_PUBLISHED for those,
+     * AO/PMUR (submission status never reaches STATUS_PUBLISHED for those) is
+     * still correctly tombstoned when that publication is unpublished.
      *
-     * @see Submission\Repository::getStatusByPublications()) is still
-     * correctly tombstoned when that publication is unpublished.
+     * @see \APP\submission\Repository::getStatusByPublications()
      */
-    public function reconcileTombstonesOnUnpublish(Publication $publication, bool $wasCurrentPublication, Submission $submission, Context $context): void
-    {
+    public function reconcileTombstonesOnUnpublish(
+        Publication $publication,
+        bool $wasCurrentPublication,
+        Submission $submission,
+        Context $context
+    ): void {
         $section = Repo::section()->get((int) $publication->getData('sectionId'), $context->getId());
         if (!$section) {
             return;
@@ -233,28 +273,29 @@ class ArticleTombstoneManager
                 ->getMany()
                 ->isNotEmpty();
             if (!$stillLive) {
-                $this->insertIdentifierTombstone($submission, $context, $section, null);
+                $this->insertIdentifierTombstone($submission, $context, $section, null, null);
             }
         }
 
-        // Versioned identifier: only relevant for VoR majors in versioning
-        // journals. Independent of the bare-identifier check above -- both
-        // can apply to the same unpublish event.
-        if ($this->isVersioningEnabled($context) && $publication->getData('versionStage') === VersionStage::VERSION_OF_RECORD->value) {
-            $major = $publication->getData('versionMajor');
-            if (!in_array($major, $this->getLiveVersionMajors($submission), true)) {
-                // No published minor left for this major: its versioned
-                // identifier is dead, regardless of whether it used to be
-                // current (bare) or not.
-                $this->insertIdentifierTombstone($submission, $context, $section, $major);
+        // Versioned identifier: only relevant for exposed version stages in
+        // versioning journals. Independent of the bare-identifier check above
+        // -- both can apply to the same unpublish event.
+        $versionStage = $publication->getData('versionStage');
+        if ($this->isVersioningEnabled($context) && in_array($versionStage, $this->versionedStages(), true)) {
+            $major = (int) $publication->getData('versionMajor');
+            if (!$this->isVersionGroupLive($submission, $versionStage, $major)) {
+                // No published minor left for this (stage, major) group: its
+                // versioned identifier is dead, regardless of whether it used
+                // to be current (bare) or not.
+                $this->insertIdentifierTombstone($submission, $context, $section, $versionStage, $major);
             }
         }
     }
 
     /**
-     * Insert tombstone for every published submission
+     * Insert tombstone for every published submission.
      */
-    public function insertTombstonesByContext(Context $context)
+    public function insertTombstonesByContext(Context $context): void
     {
         $submissions = Repo::submission()
             ->getCollector()
@@ -269,11 +310,12 @@ class ArticleTombstoneManager
     }
 
     /**
-     * Delete tombstones for published submissions in this context
+     * Delete tombstones for published submissions in this context.
      */
-    public function deleteTombstonesByContextId(int $contextId)
+    public function deleteTombstonesByContextId(int $contextId): void
     {
-        $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /** @var \PKP\tombstone\DataObjectTombstoneDAO $tombstoneDao */
+        /** @var DataObjectTombstoneDAO $tombstoneDao */
+        $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO');
         $submissions = Repo::submission()->getCollector()
             ->filterByContextIds([$contextId])
             ->filterByStatus([Submission::STATUS_PUBLISHED])
