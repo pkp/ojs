@@ -392,6 +392,7 @@ describe('Submission Wizard', function() {
         cy.get('li:contains("' + submission.keywords + '")');
         cy.get('#titleAbstract-keywords-control-en').type('{downarrow}{enter}');
         cy.get('#citations-citationsRaw-control').type(submission.citations);
+        cy.setTinyMceContent('dataAvailability-dataAvailability-control-en', submission.dataAvailability);
 
         cy.get('.pkpSteps button:contains("For the Editors")').click({ force: true });
         Object.keys(submission.metadata.autosuggest).forEach(field => {
@@ -402,7 +403,6 @@ describe('Submission Wizard', function() {
         Object.keys(submission.metadata.string).forEach(field => {
             cy.get('#forTheEditors-' + field + '-control-en').type(submission.metadata.string[field]);
         });
-        cy.setTinyMceContent('dataAvailability-dataAvailability-control-en', submission.dataAvailability);
 
         // All errors should be gone and submit should be allowed.
         cy.get('.pkpSteps button:contains("Review")').click({ force: true });
@@ -510,6 +510,8 @@ describe('Submission Wizard', function() {
         cy.get('#titleAbstract-keywords-control-fr_CA').type('{downarrow}{enter}');
         cy.setTinyMceContent('titleAbstract-abstract-control-fr_CA', submission.abstract.fr_CA);
 
+        cy.get('label[for="dataAvailability-dataAvailability-control-fr_CA"]:contains("Data Availability Statement")');
+
         // No abstract requirements in Reviews section
         cy.get('label:contains("Abstract *")').should('not.exist');
         cy.get('*:contains("Word Count: 0/500")').should('not.exist');
@@ -538,8 +540,6 @@ describe('Submission Wizard', function() {
             cy.get('label[for="forTheEditors-' + prop + '-control-fr_CA"]:contains("' + metadata[prop] + '")');
             cy.get('label:contains("' + metadata[prop] + ' in English")').should('not.be.visible');
         });
-
-        cy.get('label[for="dataAvailability-dataAvailability-control-fr_CA"]:contains("Data Availability Statement")');
 
         // Show English fields alongside French (Canada) fields
         cy.get('.pkpStep:contains("For the Editors") button.pkpFormLocales__locale:contains("English")').click();
