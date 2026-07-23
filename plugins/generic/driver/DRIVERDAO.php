@@ -16,6 +16,8 @@ namespace APP\plugins\generic\driver;
 
 use APP\oai\ojs\JournalOAI;
 use APP\oai\ojs\OAIDAO;
+use PKP\oai\OAIIdentifier;
+use PKP\oai\OAIRecord;
 
 class DRIVERDAO extends OAIDAO
 {
@@ -24,7 +26,7 @@ class DRIVERDAO extends OAIDAO
      *
      * @param JournalOAI $oai
      */
-    public function setOAI($oai)
+    public function setOAI($oai): void
     {
         $this->oai = $oai;
     }
@@ -34,37 +36,33 @@ class DRIVERDAO extends OAIDAO
     //
 
     /**
-     * Return set of OAI records matching specified parameters.
+     * Return set of OAI records or identifiers matching specified parameters.
      *
      * @param array $setIds Objects ids that specify an OAI set, in this case only journal ID.
-     * @param int $from timestamp
-     * @param int $until timestamp
-     * @param int $offset
-     * @param int $limit
-     * @param int $total
-     * @param string $funcName
+     * @param string $funcName Row conversion method: 'returnRecordFromRow' or 'returnIdentifierFromRow'.
      *
-     * @return array OAIRecord
+     * @return array<OAIRecord|OAIIdentifier>
      */
-    public function &getDRIVERRecordsOrIdentifiers($setIds, $from, $until, $offset, $limit, &$total, $funcName)
-    {
+    public function &getDRIVERRecordsOrIdentifiers(
+        array $setIds,
+        ?int $from,
+        ?int $until,
+        int $offset,
+        int $limit,
+        int &$total,
+        string $funcName = 'returnRecordFromRow'
+    ): array {
         $records = [];
 
-        $result = new \ArrayIterator($this->_getRecordsRecordSetQuery($setIds, $from, $until, null)->get()->all());
+        $query = $this->getRecordsRecordSetQuery($setIds, $from, $until, null);
+        $total = $query->getCountForPagination();
+        $results = $query->offset($offset)->limit($limit)->get();
 
-        $total = 0;
-        for ($i = 0; $i < $offset; $i++) {
-            if ($result->next()) {
-                $total++;
-            } // FIXME: This is inefficient
-        }
-        for ($count = 0; $count < $limit && $result->current(); $count++ && $total++) {
-            $row = (array) $result->current();
-            $record = $this->_returnRecordFromRow($row);
+        foreach ($results as $row) {
+            $record = $this->$funcName((array) $row);
             if (in_array('driver', $record->sets)) {
                 $records[] = $record;
             }
-            $result->next();
         }
         return $records;
     }

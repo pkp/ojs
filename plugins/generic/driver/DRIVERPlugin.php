@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/driver/DRIVERPlugin.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2026 Simon Fraser University
+ * Copyright (c) 2003-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class DRIVERPlugin
@@ -16,8 +16,12 @@ namespace APP\plugins\generic\driver;
 
 use APP\core\Application;
 use APP\facades\Repo;
+use APP\issue\Issue;
+use APP\journal\Journal;
 use APP\journal\JournalDAO;
+use APP\submission\Submission;
 use PKP\db\DAORegistry;
+use PKP\oai\OAISet;
 use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
 use PKP\tombstone\DataObjectTombstoneSettingsDAO;
@@ -35,7 +39,7 @@ class DRIVERPlugin extends GenericPlugin
      *
      * @param null|mixed $mainContextId
      */
-    public function register($category, $path, $mainContextId = null)
+    public function register($category, $path, $mainContextId = null): bool
     {
         $success = parent::register($category, $path, $mainContextId);
         if ($success && $this->getEnabled($mainContextId)) {
@@ -55,12 +59,12 @@ class DRIVERPlugin extends GenericPlugin
         return $success;
     }
 
-    public function getDisplayName()
+    public function getDisplayName(): string
     {
         return __('plugins.generic.driver.displayName');
     }
 
-    public function getDescription()
+    public function getDescription(): string
     {
         return __('plugins.generic.driver.description');
     }
@@ -70,19 +74,19 @@ class DRIVERPlugin extends GenericPlugin
      */
 
     /**
-     * Add DRIVER set
+     * Add the DRIVER set.
      */
-    public function sets($hookName, $params)
+    public function sets($hookName, $params): false
     {
         $sets = & $params[5];
-        array_push($sets, new \PKP\oai\OAISet('driver', 'Open Access DRIVERset', ''));
+        array_push($sets, new OAISet('driver', 'Open Access DRIVERset', ''));
         return false;
     }
 
     /**
-     * Get DRIVER records or identifiers
+     * Get DRIVER records or identifiers.
      */
-    public function recordsOrIdentifiers($hookName, $params)
+    public function recordsOrIdentifiers($hookName, $params): bool
     {
         $journalOAI = & $params[0];
         $from = $params[1];
@@ -98,12 +102,20 @@ class DRIVERPlugin extends GenericPlugin
             $driverDao = DAORegistry::getDAO('DRIVERDAO'); /** @var DRIVERDAO $driverDao */
             $driverDao->setOAI($journalOAI);
             if ($hookName == 'JournalOAI::records') {
-                $funcName = '_returnRecordFromRow';
+                $funcName = 'returnRecordFromRow';
             } elseif ($hookName == 'JournalOAI::identifiers') {
-                $funcName = '_returnIdentifierFromRow';
+                $funcName = 'returnIdentifierFromRow';
             }
             $journalId = $journalOAI->journalId;
-            $records = $driverDao->getDRIVERRecordsOrIdentifiers([$journalId, null], $from, $until, $offset, $limit, $total, $funcName);
+            $records = $driverDao->getDRIVERRecordsOrIdentifiers(
+                [$journalId, null],
+                $from,
+                $until,
+                $offset,
+                $limit,
+                $total,
+                $funcName
+            );
             return true;
         }
         return false;
@@ -141,10 +153,8 @@ class DRIVERPlugin extends GenericPlugin
      * Check if it's a DRIVER record.
      *
      * @param array $row Database fields
-     *
-     * @return bool
      */
-    public function isDRIVERRecord($row)
+    public function isDRIVERRecord($row): bool
     {
         // if the article is alive
         if (!isset($row['tombstone_id'])) {
@@ -153,21 +163,22 @@ class DRIVERPlugin extends GenericPlugin
             $journal = $journalDao->getById($row['journal_id']);
             $submission = Repo::submission()->get($row['submission_id']);
             $publication = $submission->getCurrentPublication();
-            $issue = Repo::issue()->get($publication->getData('issueId'));
+            $issueId = $publication->getData('issueId');
+            $issue = $issueId ? Repo::issue()->get($issueId) : null;
 
             // is open access
             $status = '';
-            if ($journal->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_OPEN) {
+            if ($journal->getData('publishingMode') == Journal::PUBLISHING_MODE_OPEN) {
                 $status = DRIVER_ACCESS_OPEN;
-            } elseif ($journal->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION) {
-                if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_OPEN) {
+            } elseif ($journal->getData('publishingMode') == Journal::PUBLISHING_MODE_SUBSCRIPTION) {
+                if ($issue && ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == Issue::ISSUE_ACCESS_OPEN)) {
                     $status = DRIVER_ACCESS_OPEN;
-                } elseif ($issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION) {
-                    if ($publication->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_OPEN) {
+                } elseif (!$issue || $issue->getAccessStatus() == Issue::ISSUE_ACCESS_SUBSCRIPTION) {
+                    if ($publication->getData('accessStatus') == Submission::ARTICLE_ACCESS_OPEN) {
                         $status = DRIVER_ACCESS_OPEN;
-                    } elseif ($issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() != null) {
+                    } elseif ($issue && $issue->getOpenAccessDate() != null) {
                         $status = DRIVER_ACCESS_EMBARGOED;
-                    } elseif ($issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() == null) {
+                    } elseif ($issue && $issue->getOpenAccessDate() == null) {
                         $status = DRIVER_ACCESS_CLOSED;
                     }
                 }
@@ -176,7 +187,10 @@ class DRIVERPlugin extends GenericPlugin
                 $status = DRIVER_ACCESS_RESTRICTED;
             }
 
-            if ($status == DRIVER_ACCESS_EMBARGOED && date('Y-m-d') >= date('Y-m-d', strtotime($issue->getOpenAccessDate()))) {
+            if (
+                $status == DRIVER_ACCESS_EMBARGOED &&
+                date('Y-m-d') >= date('Y-m-d', strtotime($issue->getOpenAccessDate()))
+            ) {
                 $status = DRIVER_ACCESS_DELAYED;
             }
 
@@ -187,18 +201,17 @@ class DRIVERPlugin extends GenericPlugin
             }
             return false;
         } else {
-            $dataObjectTombstoneSettingsDao = DAORegistry::getDAO('DataObjectTombstoneSettingsDAO'); /** @var DataObjectTombstoneSettingsDAO $dataObjectTombstoneSettingsDao */
-            return $dataObjectTombstoneSettingsDao->getSetting($row['tombstone_id'], 'driver');
+            /** @var DataObjectTombstoneSettingsDAO $dataObjectTombstoneSettingsDao */
+            $dataObjectTombstoneSettingsDao = DAORegistry::getDAO('DataObjectTombstoneSettingsDAO');
+            return (bool) $dataObjectTombstoneSettingsDao->getSetting($row['tombstone_id'], 'driver');
         }
     }
 
 
     /**
      * Check if it's a DRIVER article.
-     *
-     * @return bool
      */
-    public function isDRIVERArticle($journalId, $articleId)
+    public function isDRIVERArticle($journalId, $articleId): bool
     {
         $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */
 
@@ -209,17 +222,17 @@ class DRIVERPlugin extends GenericPlugin
 
         // is open access
         $status = '';
-        if ($journal->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_OPEN) {
+        if ($journal->getData('publishingMode') == Journal::PUBLISHING_MODE_OPEN) {
             $status = DRIVER_ACCESS_OPEN;
-        } elseif ($journal->getData('publishingMode') == \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION) {
-            if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_OPEN) {
+        } elseif ($journal->getData('publishingMode') == Journal::PUBLISHING_MODE_SUBSCRIPTION) {
+            if ($issue->getAccessStatus() == 0 || $issue->getAccessStatus() == Issue::ISSUE_ACCESS_OPEN) {
                 $status = DRIVER_ACCESS_OPEN;
-            } elseif ($issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION) {
-                if ($publication->getData('accessStatus') == \APP\submission\Submission::ARTICLE_ACCESS_OPEN) {
+            } elseif ($issue->getAccessStatus() == Issue::ISSUE_ACCESS_SUBSCRIPTION) {
+                if ($publication->getData('accessStatus') == Submission::ARTICLE_ACCESS_OPEN) {
                     $status = DRIVER_ACCESS_OPEN;
-                } elseif ($issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() != null) {
+                } elseif ($issue->getAccessStatus() == Issue::ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() != null) {
                     $status = DRIVER_ACCESS_EMBARGOED;
-                } elseif ($issue->getAccessStatus() == \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() == null) {
+                } elseif ($issue->getAccessStatus() == Issue::ISSUE_ACCESS_SUBSCRIPTION && $issue->getOpenAccessDate() == null) {
                     $status = DRIVER_ACCESS_CLOSED;
                 }
             }
@@ -228,7 +241,10 @@ class DRIVERPlugin extends GenericPlugin
             $status = DRIVER_ACCESS_RESTRICTED;
         }
 
-        if ($status == DRIVER_ACCESS_EMBARGOED && date('Y-m-d') >= date('Y-m-d', strtotime($issue->getOpenAccessDate()))) {
+        if (
+            $status == DRIVER_ACCESS_EMBARGOED &&
+            date('Y-m-d') >= date('Y-m-d', strtotime($issue->getOpenAccessDate()))
+        ) {
             $status = DRIVER_ACCESS_DELAYED;
         }
 

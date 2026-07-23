@@ -3,8 +3,8 @@
 /**
  * @file classes/oai/ojs/JournalOAI.php
  *
- * Copyright (c) 2014-2021 Simon Fraser University
- * Copyright (c) 2003-2021 John Willinsky
+ * Copyright (c) 2014-2026 Simon Fraser University
+ * Copyright (c) 2003-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class JournalOAI
@@ -21,29 +21,26 @@
 namespace APP\oai\ojs;
 
 use APP\core\Application;
+use APP\facades\Repo;
 use APP\journal\Journal;
+use APP\publication\enums\VersionStage;
+use PKP\db\DAO;
 use PKP\db\DAORegistry;
 use PKP\oai\OAI;
+use PKP\oai\OAIRecord;
 use PKP\oai\OAIRepository;
 use PKP\oai\OAIResumptionToken;
 use PKP\plugins\Hook;
+use PKP\publication\PKPPublication;
 use PKP\site\Site;
 use PKP\site\VersionDAO;
 
 class JournalOAI extends OAI
 {
-    /** @var Site associated site object */
-    public $site;
-
-    /** @var Journal associated journal object */
-    public $journal;
-
-    /** @var int|null Journal ID; null if no journal */
-    public $journalId;
-
-    /** @var OAIDAO DAO for retrieving OAI records/tokens from database */
-    public $dao;
-
+    public ?Site $site;
+    public ?Journal $journal;
+    public ?int $journalId;
+    public DAO|OAIDAO $dao;
 
     /**
      * @copydoc OAI::OAI()
@@ -56,7 +53,6 @@ class JournalOAI extends OAI
         $this->site = $request->getSite();
         $this->journal = $request->getJournal();
         $this->journalId = isset($this->journal) ? $this->journal->getId() : null;
-        /** @var OAIDAO */
         $this->dao = DAORegistry::getDAO('OAIDAO');
         $this->dao->setOAI($this);
     }
@@ -64,42 +60,112 @@ class JournalOAI extends OAI
     /**
      * Convert article ID to OAI identifier.
      *
-     * @param int $articleId
-     *
-     * @return string
+     * When a version stage and major version number are given, a version-specific
+     * identifier is returned. This exposes older article versions as their own
+     * OAI records when DOI versioning is enabled; the current version keeps the
+     * bare (unversioned) identifier for backwards compatibility. The major
+     * version number is stable across minor updates within that stage.
      */
-    public function articleIdToIdentifier($articleId)
+    public function articleIdToIdentifier(int $articleId, ?string $versionStage = null, ?int $versionMajor = null): string
     {
-        return 'oai:' . $this->config->repositoryId . ':' . 'article/' . $articleId;
+        return self::formatIdentifier($this->config->repositoryId, $articleId, $versionStage, $versionMajor);
+    }
+
+    /**
+     * Build an article OAI identifier from its parts. Single source of truth for the
+     * identifier format, shared with the tombstone writer so live and deleted records
+     * always use the same scheme.
+     *
+     * @see JournalOAI::identifierToArticleStageAndVersionMajor() for the inverse.
+     */
+    public static function formatIdentifier(string $repositoryId, int $articleId, ?string $versionStage = null, ?int $versionMajor = null): string
+    {
+        $identifier = 'oai:' . $repositoryId . ':' . 'article/' . $articleId;
+        if ($versionStage && $versionMajor) {
+            $identifier .= '/version/' . $versionStage . '/' . $versionMajor;
+        }
+        return $identifier;
     }
 
     /**
      * Convert OAI identifier to article ID.
-     *
-     * @param string $identifier
-     *
-     * @return int|false
      */
-    public function identifierToArticleId($identifier)
+    public function identifierToArticleId(string $identifier): int|false
+    {
+        return $this->identifierToArticleStageAndVersionMajor($identifier)[0];
+    }
+
+    /**
+     * Convert OAI identifier to its article ID and, if the identifier is
+     * version-specific, the version stage and major version number it refers to.
+     *
+     * @return array [int|false $articleId, string|null $versionStage, int|null $versionMajor]
+     */
+    public function identifierToArticleStageAndVersionMajor(string $identifier): array
     {
         $prefix = 'oai:' . $this->config->repositoryId . ':' . 'article/';
-        if (strstr($identifier, $prefix)) {
-            return (int) str_replace($prefix, '', $identifier);
-        } else {
-            return false;
+        if (!str_starts_with($identifier, $prefix)) {
+            return [false, null, null];
         }
+        $suffix = substr($identifier, strlen($prefix));
+        $stages = implode('|', array_map(fn (VersionStage $stage) => preg_quote($stage->value, '#'), VersionStage::cases()));
+        if (!preg_match('#^(\d+)(?:/version/(' . $stages . ')/(\d+))?$#', $suffix, $matches)) {
+            return [false, null, null];
+        }
+        return [
+            (int) $matches[1],
+            $matches[2] ?? null,
+            isset($matches[3]) ? (int) $matches[3] : null,
+        ];
+    }
+
+    /**
+     * Resolve a version stage and major version number to the publication that represents
+     * it in OAI: the latest published minor of that major version. Returns null when no
+     * version is given (bare identifier), leaving the DAO to fall back to the
+     * current publication, or when no such published major version exists.
+     */
+    private function versionToPublicationId(int $articleId, ?string $versionStage = null, ?int $versionMajor = null): ?int
+    {
+        if ($versionStage === null || $versionMajor === null) {
+            return null;
+        }
+        return Repo::publication()->getCollector()
+            ->filterBySubmissionIds([$articleId])
+            ->filterByVersionStage($versionStage)
+            ->filterByVersionMajor($versionMajor)
+            ->filterByStatus([PKPPublication::STATUS_PUBLISHED])
+            ->orderByVersion()
+            ->getMany()
+            ->last()
+            ?->getId();
+    }
+
+    /**
+     * Resolve an OAI identifier to the [articleId, publicationId] pair for a DAO
+     * lookup, or null if it can't map to an exposable record.
+     *
+     * @return array{0: int, 1: ?int}|null
+     */
+    private function resolveIdentifier(string $identifier): ?array
+    {
+        [$articleId, $versionStage, $versionMajor] = $this->identifierToArticleStageAndVersionMajor($identifier);
+        if (!$articleId) {
+            return null;
+        }
+        if ($versionMajor === null) {
+            return [$articleId, null];
+        }
+        $publicationId = $this->versionToPublicationId($articleId, $versionStage, $versionMajor);
+        return ($publicationId === null) ? null : [$articleId, $publicationId];
     }
 
     /**
      * Get the journal ID and section ID corresponding to a set specifier.
-     *
-     * @param null|mixed $journalId
-     *
-     * @return array
      */
-    public function setSpecToSectionId($setSpec, $journalId = null)
+    public function setSpecToSectionId($setSpec): array
     {
-        $tmpArray = preg_split('/:/', $setSpec);
+        $tmpArray = explode(':', $setSpec);
         if (count($tmpArray) == 1) {
             [$journalSpec] = $tmpArray;
             $sectionSpec = null;
@@ -119,7 +185,7 @@ class JournalOAI extends OAI
     /**
      * @copydoc OAI::repositoryInfo()
      */
-    public function repositoryInfo()
+    public function repositoryInfo(): OAIRepository
     {
         $info = new OAIRepository();
 
@@ -146,7 +212,7 @@ class JournalOAI extends OAI
     /**
      * @copydoc OAI::validIdentifier()
      */
-    public function validIdentifier($identifier)
+    public function validIdentifier(string $identifier): bool
     {
         return $this->identifierToArticleId($identifier) !== false;
     }
@@ -154,29 +220,22 @@ class JournalOAI extends OAI
     /**
      * @copydoc OAI::identifierExists()
      */
-    public function identifierExists($identifier)
+    public function identifierExists(string $identifier): bool
     {
-        $recordExists = false;
-        $articleId = $this->identifierToArticleId($identifier);
-        if ($articleId) {
-            $recordExists = $this->dao->recordExists($articleId, [$this->journalId]);
-        }
-        return $recordExists;
+        $resolved = $this->resolveIdentifier($identifier);
+        return $resolved !== null && $this->dao->recordExists($resolved[0], [$this->journalId], $resolved[1]);
     }
 
     /**
      * @copydoc OAI::record()
      */
-    public function record($identifier)
+    public function record(string $identifier): OAIRecord|false
     {
-        $articleId = $this->identifierToArticleId($identifier);
-        if ($articleId) {
-            $record = $this->dao->getRecord($articleId, [$this->journalId]);
+        $resolved = $this->resolveIdentifier($identifier);
+        if ($resolved === null) {
+            return false;
         }
-        if (!isset($record)) {
-            $record = false;
-        }
-        return $record;
+        return $this->dao->getRecord($resolved[0], [$this->journalId], $resolved[1]) ?? false;
     }
 
     /**
@@ -184,8 +243,15 @@ class JournalOAI extends OAI
      *
      * @hook JournalOAI::records [[$this, $from, $until, $set, $offset, $limit, &$total, &$records]]
      */
-    public function records($metadataPrefix, $from, $until, $set, $offset, $limit, &$total)
-    {
+    public function records(
+        string $metadataPrefix,
+        ?int $from,
+        ?int $until,
+        ?string $set,
+        int $offset,
+        int $limit,
+        int &$total
+    ): ?array {
         $records = null;
         if (!Hook::call('JournalOAI::records', [$this, $from, $until, $set, $offset, $limit, &$total, &$records])) {
             $sectionId = null;
@@ -204,7 +270,7 @@ class JournalOAI extends OAI
      *
      * @hook JournalOAI::identifiers [[$this, $from, $until, $set, $offset, $limit, &$total, &$records]]
      */
-    public function identifiers($metadataPrefix, $from, $until, $set, $offset, $limit, &$total)
+    public function identifiers($metadataPrefix, $from, $until, $set, $offset, $limit, &$total): ?array
     {
         $records = null;
         if (!Hook::call('JournalOAI::identifiers', [$this, $from, $until, $set, $offset, $limit, &$total, &$records])) {
@@ -214,7 +280,15 @@ class JournalOAI extends OAI
             } else {
                 $journalId = $this->journalId;
             }
-            $records = $this->dao->getIdentifiers([$journalId, $sectionId], $from, $until, $set, $offset, $limit, $total);
+            $records = $this->dao->getIdentifiers(
+                [$journalId, $sectionId],
+                $from,
+                $until,
+                $set,
+                $offset,
+                $limit,
+                $total
+            );
         }
         return $records;
     }
@@ -224,7 +298,7 @@ class JournalOAI extends OAI
      *
      * @hook JournalOAI::sets [[$this, $offset, $limit, &$total, &$sets]]
      */
-    public function sets($offset, $limit, &$total)
+    public function sets(int $offset, int $limit, int &$total): ?array
     {
         $sets = null;
         if (!Hook::call('JournalOAI::sets', [$this, $offset, $limit, &$total, &$sets])) {
@@ -236,7 +310,7 @@ class JournalOAI extends OAI
     /**
      * @copydoc OAI::resumptionToken()
      */
-    public function resumptionToken($tokenId)
+    public function resumptionToken(string $tokenId): OAIResumptionToken|false
     {
         $this->dao->clearTokens();
         $token = $this->dao->getToken($tokenId);
@@ -249,7 +323,7 @@ class JournalOAI extends OAI
     /**
      * @copydoc OAI::saveResumptionToken()
      */
-    public function saveResumptionToken($offset, $params)
+    public function saveResumptionToken(int $offset, array $params): OAIResumptionToken
     {
         $token = new OAIResumptionToken(null, $offset, $params, time() + $this->config->tokenLifetime);
         $this->dao->insertToken($token);
