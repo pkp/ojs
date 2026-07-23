@@ -605,7 +605,7 @@ class ArticleHandler extends Handler
         }
 
         // Make sure the reader has rights to view the article/issue.
-        if ($publication->getData('status') == PKPPublication::STATUS_PUBLISHED) {
+        if ($this->publication->getData('status') == PKPPublication::STATUS_PUBLISHED) {
 
             if (!$issue) {
                 return true;
