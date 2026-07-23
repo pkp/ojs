@@ -171,6 +171,10 @@
 			WHERE cv.assoc_type = 1048585 AND s.submission_id = cv.assoc_id
 		</query>
 
+		<!-- On table citations, removes NOT NULL from publication_id, for allow insert datas without error -->
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">ALTER TABLE citations ALTER COLUMN publication_id DROP NOT NULL</query>
+		<query driver="mysql,mysqli">ALTER TABLE citations MODIFY publication_id bigint(20) DEFAULT 0;</query>
+
 		<!-- connect citations to publications -->
 		<!-- To avoid collisions per pkp/pkp-lib#5795, first flip to negative, then clean up. -->
 		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">
@@ -183,6 +187,7 @@
 		<query driver="postgres,postgres64,postgres7,postgres8,postgres9"><![CDATA[
 			UPDATE citations SET publication_id = -publication_id WHERE publication_id < 0
 		]]></query>
+		<query driver="mysql,mysqli">ALTER TABLE citations MODIFY publication_id bigint(20) DEFAULT 0</query>
 		<query driver="mysql,mysqli">
 			UPDATE citations as c
 			SET c.publication_id = (
@@ -192,6 +197,17 @@
 				WHERE c.citation_id = tc.citation_id
 			) ORDER BY c.publication_id ASC
 		</query>
+		
+		<!-- create temporary table for know which registers need to be deleted in table citations -->
+		<query>CREATE TEMPORARY TABLE IF NOT EXISTS citations2delete AS ( SELECT citation_id FROM citations WHERE publication_id IS NULL )</query>
+
+		<!-- remove the registers from tables where citation_id can't be null, but have citation_id in citations2delete -->
+		<query>DELETE FROM citation_settings WHERE citation_id IN (SELECT citation_id FROM citations2delete)</query>
+		<query>DELETE FROM citations WHERE  citation_id IN (SELECT citation_id FROM citations2delete)</query>
+
+		<!-- On table citations, return 'not null' to column publication_id -->
+		<query driver="postgres,postgres64,postgres7,postgres8,postgres9">ALTER TABLE citations ALTER COLUMN publication_id SET NOT NULL</query>
+		<query driver="mysql,mysqli">ALTER TABLE citations MODIFY publication_id bigint(20) NOT NULL DEFAULT 0</query>
 
 		<!-- update the DOI setting names -->
 		<query>
@@ -276,5 +292,6 @@
 		<drop table="temp_submission_galleys" />
 		<drop table="temp_published_submissions" />
 		<drop table="temp_citations" />
+		<drop table="citations2delete" />
 	</sql>
 </data>
