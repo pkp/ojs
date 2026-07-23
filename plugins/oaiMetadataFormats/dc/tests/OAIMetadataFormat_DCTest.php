@@ -7,8 +7,8 @@
 /**
  * @file plugins/oaiMetadataFormats/dc/tests/OAIMetadataFormat_DCTest.php
  *
- * Copyright (c) 2014-2025 Simon Fraser University
- * Copyright (c) 2000-2025 John Willinsky
+ * Copyright (c) 2014-2026 Simon Fraser University
+ * Copyright (c) 2000-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormat_DCTest
@@ -142,13 +142,13 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $author->setContributorRoles([$contributorRoleAuthor]);
 
         // Publication
-        /** @var Doi|MockObject */
+        /** @var Doi|MockObject $publicationDoiObject */
         $publicationDoiObject = $this->getMockBuilder(Doi::class)
             ->onlyMethods([])
             ->getMock();
         $publicationDoiObject->setData('doi', 'article-doi');
 
-        /** @var Publication|MockObject */
+        /** @var Publication|MockObject $publication */
         $publication = $this->getMockBuilder(Publication::class)
             ->onlyMethods([])
             ->getMock();
@@ -185,7 +185,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         );
 
         // Article
-        /** @var Submission|MockObject */
+        /** @var Submission|MockObject $article */
         $article = $this->getMockBuilder(Submission::class)
             ->onlyMethods(['getId', 'getCurrentPublication'])
             ->getMock();
@@ -199,8 +199,10 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $article->expects($this->any())
             ->method('getCurrentPublication')
             ->willReturn($publication);
+        // Single published version: no sibling-version relations are expected.
+        $article->setData('publications', collect([$publication]));
 
-        /** @var Doi|MockObject */
+        /** @var Doi|MockObject $galleyDoiObject */
         $galleyDoiObject = $this->getMockBuilder(Doi::class)
             ->onlyMethods([])
             ->getMock();
@@ -208,7 +210,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
 
         // Galleys
         $galley = Repo::galley()->newDataObject();
-        /** @var Galley|MockObject */
+        /** @var Galley|MockObject $galley */
         $galley = $this->getMockBuilder(Galley::class)
             ->onlyMethods(['getFileType', 'getBestGalleyId'])
             ->setProxyTarget($galley)
@@ -226,7 +228,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $galleys = [$galley];
 
         // Journal
-        /** @var Journal|MockObject */
+        /** @var Journal|MockObject $journal */
         $journal = $this->getMockBuilder(Journal::class)
             ->onlyMethods(['getSetting'])
             ->getMock();
@@ -248,14 +250,14 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $section = new Section();
         $section->setIdentifyType('section-identify-type', 'en');
 
-        /** @var Doi|MockObject */
+        /** @var Doi|MockObject $issueDoiObject */
         $issueDoiObject = $this->getMockBuilder(Doi::class)
             ->onlyMethods([])
             ->getMock();
         $issueDoiObject->setData('doi', 'issue-doi');
 
         // Issue
-        /** @var Issue|MockObject */
+        /** @var Issue|MockObject $issue */
         $issue = $this->getMockBuilder(Issue::class)
             ->onlyMethods(['getIssueIdentification'])
             ->getMock();
@@ -273,7 +275,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         //
 
         // Router
-        /** @var PageRouter|MockObject */
+        /** @var PageRouter|MockObject $router */
         $router = $this->getMockBuilder(PageRouter::class)
             ->onlyMethods(['url'])
             ->getMock();
@@ -284,7 +286,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->willReturnCallback(fn ($request, $newContext = null, $handler = null, $op = null, $path = null) => $handler . '-' . $op . '-' . implode('-', $path));
 
         // Dispatcher
-        /** @var Dispatcher|MockObject */
+        /** @var Dispatcher|MockObject $dispatcher */
         $dispatcher = $this->getMockBuilder(Dispatcher::class)
             ->onlyMethods(['url'])
             ->getMock();
@@ -323,7 +325,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->willReturn($issue);
         DAORegistry::registerDAO('OAIDAO', $oaiDao);
 
-        /** @var GalleyCollector|MockObject */
+        /** @var GalleyCollector|MockObject $mockGalleyCollector */
         $mockGalleyCollector = $this->getMockBuilder(GalleyCollector::class)
             ->disableOriginalConstructor()
             ->onlyMethods(['getMany'])

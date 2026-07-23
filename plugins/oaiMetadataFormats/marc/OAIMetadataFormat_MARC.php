@@ -3,8 +3,8 @@
 /**
  * @file plugins/oaiMetadataFormats/marc/OAIMetadataFormat_MARC.php
  *
- * Copyright (c) 2014-2025 Simon Fraser University
- * Copyright (c) 2003-2025 John Willinsky
+ * Copyright (c) 2014-2026 Simon Fraser University
+ * Copyright (c) 2003-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
  * @class OAIMetadataFormat_MARC
@@ -18,10 +18,13 @@
 
 namespace APP\plugins\oaiMetadataFormats\marc;
 
+use APP\core\Application;
+use APP\facades\Repo;
 use APP\journal\Journal;
 use APP\publication\Publication;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
+use PKP\core\PKPApplication;
 use PKP\core\PKPString;
 use PKP\i18n\LocaleConversion;
 use PKP\oai\OAIMetadataFormat;
@@ -55,6 +58,9 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat
             'issue' => $record->getData('issue'),
             'section' => $record->getData('section'),
             'publicationLocale' => $publicationLocale,
+            'versionString' => Repo::publication()->getVersionString($publication, $article, $journal),
+            'versionRelation' => $this->getVersionRelation($article, $publication, $journal),
+            'versionSummaryOfChanges' => $publication->getData('summaryOfChanges', $publicationLocale),
         ]);
 
         $subjects = array_merge_recursive(
@@ -70,5 +76,39 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat
 
         $plugin = PluginRegistry::getPlugin('oaiMetadataFormats', 'OAIFormatPlugin_MARC');
         return $templateMgr->fetch($plugin->getTemplateResource('record.tpl'));
+    }
+
+    /**
+     * Resolve the preceding-version relation to a citable identifier (DOI when
+     * available, or the version URL) for use in linking fields. Returns null when
+     * there is no earlier version.
+     */
+    protected function getVersionRelation(Submission $article, Publication $publication, Journal $journal): ?object
+    {
+        $relation = Repo::publication()->getVersionRelation($publication, $article, $journal);
+        if (!$relation) {
+            return null;
+        }
+
+        $request = Application::get()->getRequest();
+        $dispatcher = $request->getDispatcher();
+        $relation->identifier = $relation->doi ?:
+            $dispatcher->url(
+                $request,
+                PKPApplication::ROUTE_PAGE,
+                $journal->getPath(),
+                'article',
+                'view',
+                [$article->getBestId(), 'version', $relation->publicationId],
+                urlLocaleForPage: ''
+            );
+        $relation->identifierType = $relation->doi ? 'doi' : 'uri';
+        // Backward-only: the relation targets an older version, a preceding entry (780).
+        // Second indicator 2 = Supersedes.
+        $relation->marcField = '780';
+        $relation->marcRelationIndicator = '2';
+        // Relationship information ($i): name the version.
+        $relation->relationLabel = $relation->versionString;
+        return $relation;
     }
 }
