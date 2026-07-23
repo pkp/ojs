@@ -32,7 +32,8 @@
 			"readOnly": true,
 			"items": {
 				"$ref": "#/definitions/Galley"
-			}
+			},
+			"isPublic": true
 		},
 		"hideAuthor": {
 			"type": "boolean",
