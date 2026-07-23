@@ -466,8 +466,13 @@ class OAIDAO extends PKPOAIDAO
                 return $query->where('dot.data_object_id', '=', (int) $submissionId);
             });
 
+        // A versioning journal emits multiple rows per submission (bare/current,
+        // one per version group, plus per-identifier tombstones), all sharing the
+        // same journal_id and submission_id. Add a deterministic tiebreaker so
+        // offset-based resumption-token pagination stays stable across requests:
+        // publication_id disambiguates live version rows, tombstone_id the tombstones.
         return $query
             ->union($tombstoneQuery)
-            ->orderBy(DB::raw($orderBy));
+            ->orderBy(DB::raw($orderBy . ', publication_id, tombstone_id'));
     }
 }

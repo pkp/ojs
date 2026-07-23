@@ -277,7 +277,22 @@ class Repository extends \PKP\publication\Repository
             Repo::galley()->delete($galley);
         }
 
+        // Deleting a published publication removes its OAI record(s), so tombstone
+        // the identifier(s) it was exposing -- same reconciliation as an unpublish.
+        $wasPublished = $publication->getData('status') === Publication::STATUS_PUBLISHED;
+        $wasCurrentPublication = false;
+        if ($wasPublished) {
+            $submissionBefore = Repo::submission()->get($publication->getData('submissionId'));
+            $wasCurrentPublication = $publication->getId() == $submissionBefore->getData('currentPublicationId');
+        }
+
         parent::delete($publication, $submissionStatus);
+
+        if ($wasPublished) {
+            $submission = Repo::submission()->get($publication->getData('submissionId'));
+            $context = $this->getSubmissionContext($submission);
+            (new ArticleTombstoneManager())->reconcileTombstonesOnUnpublish($publication, $wasCurrentPublication, $submission, $context);
+        }
     }
 
     /** @copydoc \PKP\publication\Repository::createDois() */

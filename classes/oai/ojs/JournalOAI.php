@@ -68,7 +68,19 @@ class JournalOAI extends OAI
      */
     public function articleIdToIdentifier(int $articleId, ?string $versionStage = null, ?int $versionMajor = null): string
     {
-        $identifier = 'oai:' . $this->config->repositoryId . ':' . 'article/' . $articleId;
+        return self::formatIdentifier($this->config->repositoryId, $articleId, $versionStage, $versionMajor);
+    }
+
+    /**
+     * Build an article OAI identifier from its parts. Single source of truth for the
+     * identifier format, shared with the tombstone writer so live and deleted records
+     * always use the same scheme.
+     *
+     * @see JournalOAI::identifierToArticleStageAndVersionMajor() for the inverse.
+     */
+    public static function formatIdentifier(string $repositoryId, int $articleId, ?string $versionStage = null, ?int $versionMajor = null): string
+    {
+        $identifier = 'oai:' . $repositoryId . ':' . 'article/' . $articleId;
         if ($versionStage && $versionMajor) {
             $identifier .= '/version/' . $versionStage . '/' . $versionMajor;
         }
