@@ -28,7 +28,9 @@ class SendReviewToOrcid extends PKPSendReviewToOrcid
     public function execute(): void
     {
         $review = Repo::reviewAssignment()->get($this->reviewAssignmentId);
-        $reviewer = $review ? Repo::user()->get($review->getReviewerId()) : null;
+        $reviewer = $review ?
+            $review->getReviewerId() ? Repo::user()->get($review->getReviewerId()) : null
+            : null;
 
         if ($reviewer && $reviewer->getData('orcidReviewPutCode')) {
             $context = Application::getContextDAO()->getById(
