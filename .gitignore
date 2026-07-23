@@ -1,4 +1,3 @@
-/config.inc.php
 .claude
 ./build
 temp
@@ -24,3 +23,14 @@ cypress/screenshots/
 .phpunit.result.cache
 /plugins/themes/default/js/lib/swiper/
 registry/uiLocaleKeysBackend.json
+
+# Docker / deployment
+database-backup/
+.env
+
+# OJS uploaded files (keep outside Git)
+files/
+
+# Docker volumes
+db_data/
+ojs_files/
