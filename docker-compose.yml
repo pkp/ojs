@@ -1,0 +1,27 @@
+services:
+
+  ojs:
+    build: .
+    container_name: ilpd-ojs
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    volumes:
+      - ./config.inc.php:/var/www/html/config.inc.php
+      - ojs_files:/var/ojs-files
+
+  db:
+    image: mariadb:11
+    container_name: ojs-db
+    environment:
+      MARIADB_ROOT_PASSWORD: root123
+      MARIADB_DATABASE: ojs2
+      MARIADB_USER: ojs2
+      MARIADB_PASSWORD: ojs123
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
+  ojs_files:

@@ -1,0 +1,7 @@
+.git
+.github
+.gitmodules
+tests
+cypress
+node_modules
+.vscode
