@@ -207,6 +207,9 @@ debug = Off
 web_cache = Off
 web_cache_hours = 1
 
+; Cache objects used to build the reader interface using the default cache mechanism configured above.
+object_cache = On
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Localization Settings ;
