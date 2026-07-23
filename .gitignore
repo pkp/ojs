@@ -1,5 +1,8 @@
 /config.inc.php
-.claude
+/config.test.inc.php
+.claude/settings.local.json
+.claude/.auth/
+.claude/*.state.json
 ./build
 temp
 /files
@@ -24,3 +27,12 @@ cypress/screenshots/
 .phpunit.result.cache
 /plugins/themes/default/js/lib/swiper/
 registry/uiLocaleKeysBackend.json
+
+# Playwright
+/test-results/
+/playwright-report/
+/playwright/.auth/
+!/playwright/.auth/.gitkeep
+/.env.playwright
+/blob-report/
+/playwright/.cache/
