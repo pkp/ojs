@@ -132,28 +132,4 @@ class Submission extends PKPSubmission
         }
         return $publication->getData('sectionId');
     }
-
-    /**
-     * Get the galleys for an article.
-     *
-     * @return array Galley
-     *
-     * @deprecated 3.2.0.0
-     */
-    public function getGalleys()
-    {
-        if (!is_null($this->getData('galleys'))) {
-            return $this->getData('galleys');
-        }
-
-        $this->setData(
-            'galleys',
-            Repo::galley()->getCollector()
-                ->filterByPublicationIds([$this->getData('currentPublicationId')])
-                ->getMany()
-                ->toArray()
-        );
-
-        return $this->getData('galleys');
-    }
 }
