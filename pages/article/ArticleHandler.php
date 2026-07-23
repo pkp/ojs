@@ -49,7 +49,6 @@ use PKP\security\Validation;
 use PKP\services\PKPStatsPublicationService;
 use PKP\submission\Genre;
 use PKP\submission\GenreDAO;
-use PKP\submission\PKPSubmission;
 use PKP\submissionFile\SubmissionFile;
 use stdClass;
 
@@ -255,7 +254,7 @@ class ArticleHandler extends Handler
                 // get DOI from a sibling minor version
                 $doiObject = Repo::publication()->getMinorVersionsDoi($publication);
             } else {
-                if ($publication->getId() !== $article->getCurrentPublication()->getId()) {
+                if ($publication->getId() != $article->getData('currentPublicationId')) {
                     $doiObject = $article->getCurrentPublication()->getData('doiObject');
                 }
             }
@@ -416,7 +415,7 @@ class ArticleHandler extends Handler
             }
         } else {
             // Ask robots not to index outdated versions
-            if ($publication->getId() !== $article->getCurrentPublication()->getId()) {
+            if ($publication->getId() != $article->getData('currentPublicationId')) {
                 $templateMgr->addHeader('noindex', '<meta name="robots" content="noindex">');
             }
 
@@ -480,7 +479,7 @@ class ArticleHandler extends Handler
         foreach ($submissionFiles as $submissionFile) {
             if ($submissionFile->getData('old-supp-id') == $suppId) {
                 $articleGalleys = Repo::galley()->getCollector()
-                    ->filterByPublicationIds([$article->getCurrentPublication()->getId()])
+                    ->filterByPublicationIds([$article->getData('currentPublicationId')])
                     ->getMany();
 
                 foreach ($articleGalleys as $articleGalley) {
@@ -606,7 +605,7 @@ class ArticleHandler extends Handler
         }
 
         // Make sure the reader has rights to view the article/issue.
-        if ($submission->getData('status') == PKPSubmission::STATUS_PUBLISHED) {
+        if ($publication->getData('status') == PKPPublication::STATUS_PUBLISHED) {
 
             if (!$issue) {
                 return true;
@@ -634,7 +633,7 @@ class ArticleHandler extends Handler
                     $purchasedIssue = $completedPaymentDao->hasPaidPurchaseIssue($userId, $issue->getId());
                 }
 
-                if (!(!$subscriptionRequired || $submission->getCurrentPublication()->getData('accessStatus') == Submission::ARTICLE_ACCESS_OPEN || $subscribedUser || $purchasedIssue)) {
+                if (!(!$subscriptionRequired || $this->publication->getData('accessStatus') == Submission::ARTICLE_ACCESS_OPEN || $subscribedUser || $purchasedIssue)) {
                     if ($paymentManager->purchaseArticleEnabled() || $paymentManager->membershipEnabled()) {
                         /* if only pdf files are being restricted, then approve all non-pdf galleys
                          * and continue checking if it is a pdf galley */
