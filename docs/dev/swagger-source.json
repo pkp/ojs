@@ -80,7 +80,7 @@
 		{
 			"name": "What's New in 3.6",
 			"x-traitTag": true,
-			"description": "<blockquote style=\"margin-bottom:2rem;padding:1rem;border:2px solid #0073A8;color: #002c40\">Read the <a href=\"https://docs.pkp.sfu.ca/dev/release-notebooks/en/3.4-release-notebook\">3.6 Release Notebook</a> to learn about all the changes introduced in 3.6.</blockquote>\n\nThe following changes were made to the REST API.\n\n-  Changes to the new Publication version endpoint to add new version numbering and naming.\n\nThe following new endpoints have been added.\n\n- New endpoints for managing publication Versions."
+			"description": "<blockquote style=\"margin-bottom:2rem;padding:1rem;border:2px solid #0073A8;color: #002c40\">Read the <a href=\"https://docs.pkp.sfu.ca/dev/release-notebooks/en/3.6-release-notebook\">3.6 Release Notebook</a> to learn about all the changes introduced in 3.6.</blockquote>\n\nThe following changes were made to the REST API.\n\n-  Changes to the new Publication version endpoint to add new version numbering and naming.\n\nThe following new endpoints have been added.\n\n- New endpoints for managing publication Versions."
 		},
 		{
 			"name": "Access",
