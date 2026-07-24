@@ -113,8 +113,8 @@ class ArticleHandler extends Handler
 
         // Get the submission that matches the requested urlPath
         $submission = ctype_digit((string) $urlPath)
-            ? Repo::submission()->get((int) $urlPath, $request->getContext()->getId())
-            : Repo::submission()->getByUrlPath($urlPath, $request->getContext()->getId());
+            ? Repo::submission()->get((int) $urlPath, $request->getContext()->getId(), Config::getVar('cache', 'object_cache') && !Validation::isLoggedIn())
+            : Repo::submission()->getByUrlPath($urlPath, $request->getContext()->getId(), Config::getVar('cache', 'object_cache') && !Validation::isLoggedIn());
 
         $user = $request->getUser();
 
@@ -295,14 +295,10 @@ class ArticleHandler extends Handler
         $supplementaryGalleys = [];
         if ($galleys) {
             $genreDao = DAORegistry::getDAO('GenreDAO'); /** @var GenreDAO $genreDao */
-            $primaryGenres = $genreDao->getPrimaryByContextId($context->getId())->toArray();
-            $primaryGenreIds = array_map(function ($genre) {
-                return $genre->getId();
-            }, $primaryGenres);
-            $supplementaryGenres = $genreDao->getBySupplementaryAndContextId(true, $context->getId())->toArray();
-            $supplementaryGenreIds = array_map(function ($genre) {
-                return $genre->getId();
-            }, $supplementaryGenres);
+            $primaryGenres = $genreDao->getPrimaryByContextId($context->getId(), Config::getVar('cache', 'object_cache') && !Validation::isLoggedIn());
+            $primaryGenreIds = array_map(fn ($genre) => $genre->getId(), $primaryGenres);
+            $supplementaryGenres = $genreDao->getBySupplementaryAndContextId(true, $context->getId(), Config::getVar('cache', 'object_cache') && !Validation::isLoggedIn());
+            $supplementaryGenreIds = array_map(fn ($genre) => $genre->getId(), $supplementaryGenres);
 
             foreach ($galleys as $galley) {
                 $remoteUrl = $galley->getData('urlRemote');
@@ -561,9 +557,8 @@ class ArticleHandler extends Handler
                 // if the file is a galley file (i.e. not a dependent file e.g. CSS or images), fire an usage event.
                 if ($this->galley->getData('submissionFileId') == $this->submissionFileId) {
                     $assocType = Application::ASSOC_TYPE_SUBMISSION_FILE;
-                    /** @var GenreDAO */
-                    $genreDao = DAORegistry::getDAO('GenreDAO');
-                    $genre = $genreDao->getById($submissionFile->getData('genreId'));
+                    $genreDao = DAORegistry::getDAO('GenreDAO'); /** @var GenreDAO */
+                    $genre = $genreDao->getById($submissionFile->getData('genreId'), null, Config::getVar('cache', 'object_cache') && !Validation::isLoggedIn());
                     // TO-DO: is this correct ?
                     if ($genre->getCategory() != Genre::GENRE_CATEGORY_DOCUMENT || $genre->getSupplementary() || $genre->getDependent()) {
                         $assocType = Application::ASSOC_TYPE_SUBMISSION_FILE_COUNTER_OTHER;
