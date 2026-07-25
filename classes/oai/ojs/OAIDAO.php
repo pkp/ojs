@@ -295,7 +295,7 @@ class OAIDAO extends PKPOAIDAO
         // Records for the current publication (journals without per-version OAI records).
         $query = DB::table('submissions AS a')
             ->select([
-                DB::raw('GREATEST(i.last_modified, p.last_modified) AS last_modified'),
+                DB::raw('GREATEST(a.last_modified, i.last_modified, p.last_modified) AS last_modified'),
                 'a.submission_id AS submission_id',
                 'i.issue_id',
                 DB::raw('NULL AS tombstone_id'),
@@ -328,14 +328,14 @@ class OAIDAO extends PKPOAIDAO
             })
             ->when($from, function ($query, $from) {
                 return $query->whereDate(
-                    DB::raw('GREATEST(i.last_modified, p.last_modified)'),
+                    DB::raw('GREATEST(a.last_modified, i.last_modified, p.last_modified)'),
                     '>=',
                     DateTime::createFromFormat('U', $from)
                 );
             })
             ->when($until, function ($query, $until) {
                 return $query->whereDate(
-                    DB::raw('GREATEST(i.last_modified, p.last_modified)'),
+                    DB::raw('GREATEST(a.last_modified, i.last_modified, p.last_modified)'),
                     '<=',
                     DateTime::createFromFormat('U', $until)
                 );
@@ -352,7 +352,7 @@ class OAIDAO extends PKPOAIDAO
         if (!empty($versioningJournalIds)) {
             $versionQuery = DB::table('submissions AS a')
                 ->select([
-                    DB::raw('GREATEST(i.last_modified, p.last_modified) AS last_modified'),
+                    DB::raw('GREATEST(a.last_modified, i.last_modified, p.last_modified) AS last_modified'),
                     'a.submission_id AS submission_id',
                     'i.issue_id',
                     DB::raw('NULL AS tombstone_id'),
@@ -393,14 +393,14 @@ class OAIDAO extends PKPOAIDAO
                 })
                 ->when($from, function ($query, $from) {
                     return $query->whereDate(
-                        DB::raw('GREATEST(i.last_modified, p.last_modified)'),
+                        DB::raw('GREATEST(a.last_modified, i.last_modified, p.last_modified)'),
                         '>=',
                         DateTime::createFromFormat('U', $from)
                     );
                 })
                 ->when($until, function ($query, $until) {
                     return $query->whereDate(
-                        DB::raw('GREATEST(i.last_modified, p.last_modified)'),
+                        DB::raw('GREATEST(a.last_modified, i.last_modified, p.last_modified)'),
                         '<=',
                         DateTime::createFromFormat('U', $until)
                     );

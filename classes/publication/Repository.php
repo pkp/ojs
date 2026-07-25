@@ -182,6 +182,14 @@ class Repository extends \PKP\publication\Repository
         $submission = Repo::submission()->get($newPublication->getData('submissionId'));
         $context = $this->getSubmissionContext($submission);
 
+        // A publish that only results in STATUS_SCHEDULED (e.g. assigned to a not-yet-published
+        // issue) doesn't expose anything via OAI yet -- only stamp once it's actually live, so
+        // this doesn't falsely flag this submission's other, unrelated OAI records as changed.
+        if ($newPublication->getData('status') === Publication::STATUS_PUBLISHED) {
+            $submission->stampModified();
+            Repo::submission()->dao->update($submission);
+        }
+
         (new ArticleTombstoneManager())->reconcileTombstonesOnPublish($newPublication, $submission, $context);
     }
 
@@ -190,11 +198,22 @@ class Repository extends \PKP\publication\Repository
     {
         $submissionBefore = Repo::submission()->get($publication->getData('submissionId'));
         $wasCurrentPublication = $publication->getId() == $submissionBefore->getData('currentPublicationId');
+        // Checked on the original (pre-clone) publication, so this reflects its status before
+        // parent::unpublish() changes it.
+        $wasPublished = $publication->getData('status') === Publication::STATUS_PUBLISHED;
 
         parent::unpublish($publication, $submissionStatus);
 
         $submission = Repo::submission()->get($publication->getData('submissionId'));
         $context = $this->getSubmissionContext($submission);
+
+        // Unpublishing something that was only ever STATUS_SCHEDULED (never actually live) has
+        // no OAI-visible effect -- nothing to signal to harvesters, and stamping anyway would
+        // falsely flag this submission's other, unrelated OAI records as changed.
+        if ($wasPublished) {
+            $submission->stampModified();
+            Repo::submission()->dao->update($submission);
+        }
 
         (new ArticleTombstoneManager())->reconcileTombstonesOnUnpublish($publication, $wasCurrentPublication, $submission, $context);
     }
@@ -291,6 +310,10 @@ class Repository extends \PKP\publication\Repository
         if ($wasPublished) {
             $submission = Repo::submission()->get($publication->getData('submissionId'));
             $context = $this->getSubmissionContext($submission);
+
+            $submission->stampModified();
+            Repo::submission()->dao->update($submission);
+
             (new ArticleTombstoneManager())->reconcileTombstonesOnUnpublish($publication, $wasCurrentPublication, $submission, $context);
         }
     }
