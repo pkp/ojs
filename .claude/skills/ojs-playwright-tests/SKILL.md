@@ -33,9 +33,12 @@ Skip this skill when:
 
 OJS has two Playwright directories. Picking the wrong one means the test lives in the wrong repo.
 
-### `playwright/` (repo root) — OJS-specific
+### `playwright/` (repo root) — the OJS feature suites
 
-Put tests here when the feature is **OJS-only**: issues, galleys, subscriptions, journal-specific submission wizard details, the journal homepage, reader-facing article views.
+**Every OJS feature suite lives here** — the spec's common scenarios implemented
+in OJS context AND the OJS-specific ones (per-app suites, PRINCIPLES multi-app
+convention 1). OMP and OPS have their own equivalent `playwright/` trees in
+their repos.
 
 Structure:
 ```
@@ -56,9 +59,9 @@ OJS specs import from `'../support/fixtures.js'` — this layers OJS fixtures (`
 
 ### `lib/pkp/playwright/` — shared across OJS/OMP/OPS
 
-This directory is **a git submodule shared across OJS, OMP, and OPS**. Changes here propagate to the other two apps. Put tests here when the feature exists identically in all three: login, dashboard mechanics, editorial workflow skeleton, reviewer submission flow, user profile.
+This directory is **a git submodule shared across OJS, OMP, and OPS**. Changes here propagate to the other two apps. It keeps the app-agnostic **infrastructure layer only**: base fixtures, shared POMs, bootstrap + smoke specs (login). **Feature suites do NOT live here** — even a scenario common to all three apps is implemented per app, in each app's own `playwright/tests/` (maintainer ruling 2026-07-26; duplication between app suites is acceptable, the spec is the maintained artifact).
 
-Be conservative. If the test relies on any OJS-specific concept (a journal, an issue, a subscription), it does not belong here.
+Be conservative about what counts as infrastructure; when in doubt it belongs in the app repo.
 
 Structure:
 ```
@@ -86,7 +89,9 @@ Shared specs import from `'../support/base-test.js'`.
 
 ### Rule of thumb
 
-Ask: *does this behavior exist and mean the same thing in OMP (monographs) and OPS (preprints)?* If yes → `lib/pkp/playwright/tests/`. If the test references issues, galleys, subscriptions, or the journal homepage → `playwright/tests/`.
+Infrastructure (fixture, POM, bootstrap/smoke) → `lib/pkp/playwright/`.
+Feature test → the app's own `playwright/tests/` — **always**, even when the
+scenario is common to all three apps.
 
 ## The `asUser` helper
 
@@ -123,7 +128,7 @@ test('section editor assigns reviewer, reviewer sees assignment', async ({page, 
 
 ## Quick start: writing a new test
 
-1. **Pick the folder.** Shared behavior → `lib/pkp/playwright/tests/`. OJS-only → `playwright/tests/`.
+1. **Pick the folder.** Feature test → the app's own `playwright/tests/`; only shared infrastructure (fixtures, POMs, smoke) → `lib/pkp/playwright/`.
 2. **Pick the import.**
    - Shared: `const {test, expect} = require('../support/base-test.js');`
    - OJS: `const {test, expect} = require('../support/fixtures.js');` — gives you `ojsApi` and `submission` fixtures too.
