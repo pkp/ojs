@@ -165,8 +165,8 @@ The suite runs in parallel by default. The shared seed data is the unit of conte
 
 Tests that seed via the scenario API need a unique tag for parallel isolation. Two constraints:
 
-- **`journals.urlPath` is varchar(32).** Long tags trigger 500s with truncation errors. Pattern: `prefix-w{parallelIndex}-{6-char-suffix}`.
-- **Whitespace-free.** `searchPhrase=tag` OR-splits on whitespace, so any space in the tag broadens the search and falls off pagination.
+- **`journals.urlPath` is varchar(32).** Long tags trigger 500s with truncation errors.
+- **Single hyphenless alphanumeric token.** `searchPhrase=` OR-splits on whitespace AND Postgres tokenizes on hyphens (`edd7-w0-x` → `edd7`/`w0`/`x`, so a `-w0-` tag matches every other worker-0 submission — parallel lesson 10). Pattern: `{prefix}w{parallelIndex}{suffix}`, e.g. `subw0k3f9qa`; give the suffix a per-run random component whenever the tag backs a COUNT assertion.
 
 ## Tags
 
