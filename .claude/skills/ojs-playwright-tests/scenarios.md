@@ -1,5 +1,10 @@
 # Scenario API & Mailpit
 
+> **Design record** — the endpoints, schemas and fixtures below were deleted in
+> the 2026-07-26 reset; nothing here is currently callable. This file is the
+> accumulated schema surface + behavior quirks the rebuilt scenario API grows
+> back into (design invariants in `lib/pkp/docs/e2e/PRINCIPLES.md`).
+
 The scenario endpoints assemble realistic submission/journal state in one POST. They live behind `TestModeGate` (key + `APPLICATION_ENV=test`) and are the canonical alternative to driving the UI for setup. Mailpit is the test-side SMTP catcher that the suite asserts against for emails sent during *test actions* (decisions, password resets, invitations) — scenario-side mail is dropped on the floor by `Mail::fake()`.
 
 ## Endpoints
@@ -64,7 +69,7 @@ Notable passthroughs accumulated across feature ports:
 
 **Schema validation is enforced** (Opis, dev dependency): a spec with unknown keys gets a 400 naming the offending key. App-specific keys (`issues`, `subscriptions`, `metrics`) are declared via `schemaOverlayProperties()` overrides in the OJS controllers.
 
-The baseline `publicknowledge` journal is seeded with enriched defaults (see `playwright/fixtures/bootstrap.js` and the inventory's "Bootstrap enrichment decisions"): announcements, public comments, categories-in-wizard, keywords/citations on request, reviewer suggestions, DOIs auto-assigned on publish, CSL plugin, double-anonymous review with deadlines + reminder thresholds. Tests needing any of these OFF use a scratch journal.
+The baseline `publicknowledge` journal is seeded with enriched defaults (see `playwright/fixtures/bootstrap.js`): announcements, public comments, categories-in-wizard, keywords/citations on request, reviewer suggestions, DOIs auto-assigned on publish, CSL plugin, double-anonymous review with deadlines + reminder thresholds. Tests needing any of these OFF use a scratch journal.
 
 ## Available fixtures
 
