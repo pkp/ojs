@@ -1,5 +1,10 @@
 # Users & Roles Reference
 
+> **Design record** — the harness files named below (`users.js`, `auth.js`,
+> `base-test.js`, bootstrap) were deleted in the 2026-07-26 reset; this file
+> preserves the roster + auth design the rebuild recreates. The role constants
+> and journal facts are live app truth.
+
 Everything auth-related for writing OJS Playwright tests. If you need to decide which user to log in as, or you need to know the password, start here.
 
 ## Role constants (PHP side)
@@ -21,7 +26,7 @@ Defined in `lib/pkp/classes/security/Role.php:24-31`. These are the integer IDs 
 
 ## Seeded test users
 
-Source of truth: `lib/pkp/playwright/data/users.js`. All 18 users are seeded into the `publicknowledge` journal (admin is a site-level user, created by the installer; others are created by `bootstrap.setup.js` via `/api/v1/_test/bootstrap`).
+Rebuild home: `lib/pkp/playwright/data/users.js`. All 18 users are seeded into the `publicknowledge` journal (admin is a site-level user, created by the installer; others are created by `bootstrap.setup.js` via `/api/v1/_test/bootstrap`).
 
 The roster is **role-keyed** (maintainer decision 2026-07-10): usernames take the `role.firstname` form, display names read "Firstname Role" (so UI screenshots say the role), emails match usernames, and there is one account per permission archetype. All first names are unique across the roster.
 

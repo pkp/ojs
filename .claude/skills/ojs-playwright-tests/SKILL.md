@@ -11,7 +11,7 @@ description: DESIGN RECORD + app map for the OJS/OMP/OPS Playwright e2e harness.
 > old code is not read back). This skill is retained as the DESIGN RECORD:
 > the folder split, conventions, seeded-roster design, scenario schema and
 > hard-won patterns are the ideas the rebuild follows. The design invariants
-> live in `docs/e2e/PRINCIPLES.md` ("Scenario-endpoint design record" +
+> live in `lib/pkp/docs/e2e/PRINCIPLES.md` ("Scenario-endpoint design record" +
 > "Multi-app conventions"); `app-map.md` (screens/URLs/components) documents
 > the application itself and remains valid regardless.
 
@@ -133,7 +133,9 @@ test('section editor assigns reviewer, reviewer sees assignment', async ({page, 
 
 ## Running tests
 
-From the repo root, with `.env.playwright` in place (copy from `.env.playwright.example`):
+(Design record — these npm scripts were deleted in the reset; this is the
+script surface the rebuild recreates.) From the repo root, with
+`.env.playwright` in place (copy from `.env.playwright.example`):
 
 ```bash
 npm run test:e2e:install    # one-time, installs Chromium
@@ -158,10 +160,11 @@ The campaign runs three fleets side by side: OJS on 8000, OMP (`omp-main`) on 81
 OPS (`ops-main`) on 8200 — sibling checkouts under `/Users/jarda/git/pkp/pkp-main/`,
 all on branch `e2e_ng`, test DBs `ojs_test`/`omp_test`/`ops_test`
 (Postgres), same scenario endpoints and `publicknowledge` context path. Each app repo
-has its own thin `playwright/` tree (config, `support/app.context.js` with the
-capability map and `seed.actors` roster, bootstrap seeds, companion specs).
-Cross-app authoring conventions live in `docs/e2e/PRINCIPLES.md` "Multi-app
-conventions"; Mailpit is ONE shared instance across all three fleets — tag per app.
+has its own `playwright/` tree (config, `support/app.context.js` with the
+capability map and `seed.actors` roster, bootstrap seeds, and that app's full
+feature suites — per-app suites derived from each spec). Cross-app authoring
+conventions live in `lib/pkp/docs/e2e/PRINCIPLES.md` "Multi-app conventions";
+Mailpit is ONE shared instance across all three fleets — tag per app.
 
 ## Companion files in this skill
 
@@ -174,11 +177,11 @@ Load those on demand. You do not need to read them for every task.
 
 ## Commit discipline
 
-Two repos: `lib/pkp/` (shared submodule) and the OJS root.
-
-- **Never bump the submodule pointer in an OJS root commit.** Always `git restore --staged lib/pkp` before committing in OJS root. Submodule pointer changes get their own dedicated commit (or none — leave the working tree dirty).
-- Pattern: `lib/pkp` commits hold spec/POM/processor changes; OJS root commits hold doc updates or OJS-only specs.
-- Shared specs live in `lib/pkp/playwright/tests/`; OJS-only specs in `playwright/tests/`. Both folders are flat — no subfolder taxonomy yet.
+Owned by `lib/pkp/docs/product/RUNBOOK.md` (per-feature loop, Commit step —
+single home). Short form: `lib/pkp` and app root commit separately; never bump
+submodule pointers from ojs-main root (`git restore --staged lib/pkp` first);
+specs + campaign docs + shared harness changes commit inside `lib/pkp`,
+app-only tests in each app's root. Both test folders stay flat.
 
 ## Verify before trusting this skill
 

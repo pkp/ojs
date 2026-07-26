@@ -1,5 +1,10 @@
 # Playwright Patterns for OJS
 
+> **Design record** — POMs, helpers and spec files cited below were deleted in
+> the 2026-07-26 reset; the patterns and pitfalls are the durable content. App
+> behavior described here (grids, modals, redirects, endpoints) is live app
+> truth.
+
 Conventions already established in the existing specs, plus the rationale so you can judge edge cases.
 
 For scenario-endpoint and Mailpit details, see `scenarios.md`.
@@ -39,7 +44,7 @@ Pick the first one that works:
 
 OJS-specific gotchas. Each of these has bitten the migration at least once.
 
-1. **OJS tabs are `role="tab"`, not `role="button"`.** Cypress's `cy.contains('button', 'X')` matched anything labeled X; Playwright's `getByRole('button', {name: ...})` is strict. Stable hook for top-level tabs: `#{name}-button` (`#review-button`, `#setup-button`, etc.). See `lib/pkp/playwright/tests/multilingual.spec.js` for live usage.
+1. **OJS tabs are `role="tab"`, not `role="button"`.** Cypress's `cy.contains('button', 'X')` matched anything labeled X; Playwright's `getByRole('button', {name: ...})` is strict. Stable hook for top-level tabs: `#{name}-button` (`#review-button`, `#setup-button`, etc.).
 2. **Nested tab groups.** Top-level *Setup* vs Appearance → Setup are different tabs with different scopes. Use the outer `#setup-button` for the outer one, descend into the inner via the actual visible-tab role lookup.
 3. **Headlessui menus (More Actions).** Items are `role="menuitem"`, not `button`. The menu portals to the document root, so scope to `page` not the row.
 4. **Side modals scoped via `[data-cy="active-modal"]`.** When stacked (e.g., a decision modal opens a confirmation), filter by a distinctive inner element rather than `.first()` / `.last()`.
@@ -146,7 +151,7 @@ The suite runs in parallel by default. The shared seed data is the unit of conte
 3. **`searchPhrase=` OR-joins on whitespace.** `searchPhrase: 'Published article {tag}'` matches every fixture-seeded "Published article" — falls off the `count=30` cap under load. Search by `tag` alone (single whitespace-free unique token).
 4. **Mailpit inbox is shared across parallel tests in a run.** Never `clearAll()` outside the dedicated serial infrastructure spec (charter principle 8); scope every assertion with `pkpMail.find({to, contains: tag})` / `expectNone`, using throwaway recipients for counting/absence checks.
 5. **`playwright/.auth/{user}.json` can go stale after `login-as` flows.** `PKPSessionGuard::signInAs/signOutAs` migrate the session and destroy the previous row. `ensureAuthStateFor` probes `/index/user/profile` before reusing storage state — it relogs in if the probe doesn't 200.
-6. **All server-side outbound HTTP is firewalled in test runs.** `config.test.inc.php` points `[proxy]` at a dead local port, which PKP wires into Guzzle, PHP streams AND libxml — so a test must never depend on the app reaching an external service (a hung egress call once killed worker PHP servers mid-suite; app-changes.md §2 rows 12–13). Remote DTDs the app validates against are mirrored at `lib/pkp/playwright/fixtures/dtd/` and resolved via `XML_CATALOG_FILES`.
+6. **All server-side outbound HTTP is firewalled in test runs.** `config.test.inc.php` points `[proxy]` at a dead local port, which PKP wires into Guzzle, PHP streams AND libxml — so a test must never depend on the app reaching an external service (a hung egress call once killed worker PHP servers mid-suite). Remote DTDs the app validates against are mirrored at `lib/pkp/playwright/fixtures/dtd/` and resolved via `XML_CATALOG_FILES`.
 7. **Scheduled tasks never run on their own** (`[schedule] task_runner = Off` in the test config). A spec that needs a scheduled task (reminders etc.) belongs in the serial project and invokes `php lib/pkp/tools/scheduler.php run` explicitly. Queued jobs still process at end of request (`[queues] job_runner = On`) — and that end-of-request runner makes the serial isolation two-way (wave-12 verified): a scenario-seeding request anywhere on the shared DB can pop your queued mail job inside its `Mail::fake()` context, committing side effects while silently swallowing the message. Never run serial scheduled-task specs while parallel agents are seeding; the canonical project chain (serial depends on the parallel projects) guarantees this in normal runs.
 8. **"Anonymous" contexts aren't anonymous under `test.use({user})`.** `browser.newContext()` inherits the file's `storageState` context option, so a fresh context carries the logged-in session — and editors can *preview* unpublished articles, turning expected 404s into 200s. Every anonymous-reader check must pass an explicit empty state: `browser.newContext({storageState: {cookies: [], origins: []}})`. (Bit two wave-6 agents independently.)
 9. **Bare front-end URLs 302 to the locale-prefixed form** (`/index.php/<journal>/article/...` → `/index.php/<journal>/en/article/...`). `page.goto` hides this by following redirects, but any `request.get(..., {maxRedirects: 0})` probe must use the locale-prefixed URL. **INVERTED on single-locale journals** (most scratch journals): there the bare URL serves directly and the `/en/`-prefixed form 302s BACK to the bare one — probe scratch journals with bare URLs, publicknowledge with prefixed ones.
@@ -165,7 +170,7 @@ Tests that seed via the scenario API need a unique tag for parallel isolation. T
 
 ## Tags
 
-Filter on the CLI with `--grep @tagname`. Defined at `lib/pkp/playwright/tests/login.spec.js:10-15`:
+Filter on the CLI with `--grep @tagname`. The tag set (recreate with the harness):
 
 - `@smoke` — minimal must-pass coverage; runs on every PR
 - `@regression` — broader coverage; scheduled/nightly
@@ -235,7 +240,7 @@ For decision-constant gotchas, scenario fixtures and round-status quirks, see `s
 Prefer the API over UI for setup. Drive the UI only for what the test is actually exercising.
 
 ### Bootstrap (runs once per DB lifetime)
-Handled for you by `bootstrap.setup.js`. Seeds the `publicknowledge` journal, all 16 non-admin users, sections, categories, issues.
+Handled for you by `bootstrap.setup.js`. Seeds the `publicknowledge` journal, all 17 non-admin users, sections, categories, issues.
 
 ### Scenario API (preferred)
 For composite state (a submission in review, a published article with an issue assignment), POST to `/api/v1/_test/scenarios/submission` or `/scenarios/journal`. Use the fixture functions at `playwright/fixtures/scenarios/` rather than hand-rolling specs. See `scenarios.md` for the full surface.
@@ -320,17 +325,14 @@ test('editor assigns reviewer, reviewer accepts', async ({page, asUser}) => {
 - **Committing `.auth/` files.** Storage states contain session cookies. They're gitignored; if you see one staged, un-stage it.
 - **Mutating a seeded account's flags.** No baseline account is `mustChangePassword`-flagged anymore — `manager.maya` logs straight in when you need "a journal manager". If a test needs an account with unusual flags (e.g. a forced password reset), create a throwaway user in a scratch journal instead of touching the roster.
 
-## UI realities learned the hard way (wave 2)
+## UI realities learned the hard way
 
 - **Dashboard search reacts to `keyup` only.** `fill()` sets the value without firing it — the list never filters. Use `pressSequentially()`.
 - **Paginated lists accumulate state across runs.** The test DB is long-lived locally; shared users like `author.alex` own hundreds of submissions. Never assert presence on an unscoped first page — search by the test's unique tag first. Extra trap: seeded drafts carry no `dateSubmitted` (real-draft parity) so they sort LAST in date-ordered lists.
 - **Server-rendered TinyMCE values never reach the backing textarea.** Assert via `getTinyMceContent()` (support/tinymce.js), not the textarea value.
 - **The wizard Steps rail collapses when it overflows** (non-current pills get `-screenReader`, 1px-clipped); a `force: true` click on a clipped pill is a silent no-op. Use `SubmissionWizardPage.gotoStep()`/`expectStep()` — they handle expansion, end-anchored name matching ('Review' vs 'Reviewer Suggestions'), and re-render-swallowed clicks.
 - **Side-modal wrappers report `visibility: hidden` permanently** — anchor visibility assertions on inner content, not the wrapper.
-- **`useFetch` tunnels DELETE *and PUT* via POST + `X-Http-Method-Override`; unauthorized API calls return 401** (not 403) — `waitForResponse` predicates on `request().method()` must accept POST for both (useFetch.js:130-133); match status assertions accordingly.
-
-## UI realities learned the hard way (wave 3)
-
+- **`useFetch` tunnels DELETE *and PUT* via POST + `X-Http-Method-Override`; unauthorized API calls return 401** (not 403) — `waitForResponse` predicates on `request().method()` must accept POST for both (`useFetch.js`); match status assertions accordingly.
 - **`getByRole` name strings are substring matches** — `{name: 'View'}` happily matches "Assign Re**view**ers". Use `exact: true` (or an anchored regex) for short, common words.
 - **The reviewer dashboard endpoint (`_submissions/reviewerAssignments`) ignores `searchPhrase` AND pagination** — it returns the full list. Reviewer-side list assertions need scratch-journal scoping (or a bounded full-list assertion), not search.
 - **The submission GET's `reviewAssignments` is a hand-rolled summary**: `statusId` + Y-m-d dates only — no `cancelled`/`declined`/`dateReminded`/`dateAcknowledged` fields. Assert state via `statusId` constants or the row's History modal, not via fields that aren't there.
