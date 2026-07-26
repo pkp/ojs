@@ -23,6 +23,7 @@ use APP\core\Application;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\template\TemplateManager;
+use PKP\config\Config;
 use PKP\submissionFile\enums\MediaVariantType;
 use PKP\submissionFile\SubmissionFile;
 
@@ -155,6 +156,13 @@ class HtmlGalleyHelper
 
         foreach ($paramArray as $key => $value) {
             $contents = str_replace('{$' . $key . '}', $value, $contents);
+        }
+
+        // Pass the generated HTML through the HTML Purifier, if configured.
+        if (Config::getVar('security', 'filter_galley_html')) {
+            $config = \HTMLPurifier_Config::createDefault();
+            $purifier = new \HTMLPurifier($config);
+            $contents = $purifier->purify($contents);
         }
 
         return $contents;
