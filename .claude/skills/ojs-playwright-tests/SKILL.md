@@ -203,9 +203,9 @@ Load those on demand. You do not need to read them for every task.
 
 ## Permission contradictions
 
-If a test's result contradicts the spec about who is allowed to do what, don't
-settle it here: report it to the orchestrator (`lib/pkp/docs/product/RUNBOOK.md`
-step 7 hands it to verification). Never leave it as a skipped/`fixme` test or a
+If a test's result contradicts the spec about who is allowed to do what,
+follow the Routing line carried in your brief (`lib/pkp/docs/product/RUNBOOK.md`
+"Private finding routing"). Never leave it as a skipped/`fixme` test or a
 "not covered" header note.
 
 ## Commit discipline
