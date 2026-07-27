@@ -1,9 +1,10 @@
 # Playwright Patterns for OJS
 
-> **Design record** — POMs, helpers and spec files cited below were deleted in
-> the 2026-07-26 reset; the patterns and pitfalls are the durable content. App
-> behavior described here (grids, modals, redirects, endpoints) is live app
-> truth.
+> Patterns and pitfalls — durable content; app behavior described here (grids,
+> modals, redirects, endpoints) is live app truth. The base harness was rebuilt
+> 2026-07-27; feature-level POMs/helpers named below (e.g.
+> `EditorialWorkflowPage#awaitEmailTemplateLoaded`) do NOT exist yet — they
+> return with the feature suites, and the named pattern is the design to follow.
 
 Conventions already established in the existing specs, plus the rationale so you can judge edge cases.
 
