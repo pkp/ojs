@@ -286,11 +286,7 @@ class OAIDAO extends PKPOAIDAO
             ->all();
 
         // Version stages exposed as their own OAI record when DOI versioning is enabled.
-        $versionedStages = [
-            VersionStage::AUTHOR_ORIGINAL->value,
-            VersionStage::PUBLISHED_MANUSCRIPT_UNDER_REVIEW->value,
-            VersionStage::VERSION_OF_RECORD->value,
-        ];
+        $versionedStages = array_column(VersionStage::cases(), 'value');
 
         // Records for the current publication (journals without per-version OAI records).
         $query = DB::table('submissions AS a')

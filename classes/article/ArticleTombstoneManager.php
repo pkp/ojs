@@ -63,11 +63,7 @@ class ArticleTombstoneManager
      */
     protected function versionedStages(): array
     {
-        return [
-            VersionStage::AUTHOR_ORIGINAL->value,
-            VersionStage::PUBLISHED_MANUSCRIPT_UNDER_REVIEW->value,
-            VersionStage::VERSION_OF_RECORD->value,
-        ];
+        return array_column(VersionStage::cases(), 'value');
     }
 
     /**
