@@ -1,20 +1,50 @@
 # Scenario API & Mailpit
 
-> **Design record** — the endpoints, schemas and fixtures below were deleted in
-> the 2026-07-26 reset; nothing here is currently callable. This file is the
-> accumulated schema surface + behavior quirks the rebuilt scenario API grows
-> back into (design invariants in `lib/pkp/docs/e2e/PRINCIPLES.md`).
+> **Partially live** (rebuilt 2026-07-27): the endpoints exist again with the
+> deliberately minimal **step-2 core schema** — see "What is LIVE today" below.
+> Everything else in this file is the recorded pre-reset surface the API grows
+> back into per-feature (PRINCIPLES §3: extend only when multiple tests need
+> the same state; every builder change needs a parity entry in
+> `lib/pkp/docs/e2e/scenario-processor-audit.md`). The behavior quirks noted
+> throughout are live app truth regardless.
+
+## What is LIVE today (step-2 core)
+
+Routes (site-wide: `/index.php/index/api/v1/_test/…`), gated by `X-Test-Key`
+(env `TEST_API_KEY`); schemas in `lib/pkp/classes/testing/scenario/schema/`;
+unknown keys → 400 with a dotted `specKey`. Authoritative field list: stage-A
+report §3 (`docs/product/.reports/step2-harness/A-php-api.md`).
+
+- `POST/GET bootstrap` — declarative base seed (context + sections/series +
+  categories + issues (OJS) + users w/ roles and `sections`/`series`
+  sub-editor assignments); warm calls no-op.
+- `POST scenarios/context` — scratch context: `tag*`, context object,
+  `users[]` throwaways, declared setting passthroughs.
+- `POST scenarios/submission` — `tag*`, `context*`, `submitter*`, `title`,
+  `abstract`, `locale`, `submitted` (false = wizard-resumable draft),
+  `decisions[]` (real decision names, app-resolved), `reviewRounds[].reviewers[]`
+  (invited/accepted/declined), `published`. Overlays: OJS `section`/`issue`;
+  OMP `series`/`seriesPosition` + per-round `stage: internal|external`;
+  OPS `section` (and `reviewRounds` is REJECTED — no review stage).
+
+Per-app controllers: `JournalScenarioController` (OJS),
+`PressScenarioController` (OMP), `ServerScenarioController` (OPS), extending
+the shared `PKP*ScenarioController` base. NOT yet live: everything below this
+section that isn't in the list above (galleys, metrics, subscriptions, media
+files, review forms, reviewer suggestions, user comments, `commentsForEditor`,
+per-decision `toAuthor`/`toReviewers`/`toEditor`, ORCID passthrough,
+`reviewForm` per reviewer, issue `accessStatus` semantics).
 
 The scenario endpoints assemble realistic submission/journal state in one POST. They live behind `TestModeGate` (key + `APPLICATION_ENV=test`) and are the canonical alternative to driving the UI for setup. Mailpit is the test-side SMTP catcher that the suite asserts against for emails sent during *test actions* (decisions, password resets, invitations) — scenario-side mail is dropped on the floor by `Mail::fake()`.
 
-## Endpoints
+## Endpoints (recorded surface — route names updated to the rebuild)
 
-Two routes, dispatched from `api/v1/_test/index.php`:
+Dispatched from `api/v1/_test/index.php` (which 404s before registering
+anything when `TEST_API_KEY` is absent from the server's environment):
 
-- `POST /api/v1/_test/scenarios/journal` — `JournalScenarioController` (extends `PKPContextScenarioController`)
-- `POST /api/v1/_test/scenarios/submission` — `SubmissionScenarioController` (extends `PKPSubmissionScenarioController`; OJS uses the shared impl as-is)
-
-Both share the same `_test/scenarios` path prefix; the suffix selects the controller (per-resource Laravel route registration).
+- `POST /api/v1/_test/scenarios/context` — the app's context scenario controller (extends `PKPContextScenarioController`); named `context`, not `journal`, per the app-neutral schema rule
+- `POST /api/v1/_test/scenarios/submission` — the app's submission scenario controller (extends `PKPSubmissionScenarioController`)
+- `POST/GET /api/v1/_test/bootstrap` — base seed (a trait mixed into each app's bootstrap controller so it inherits the app's context overlay)
 
 ## Submission scenario
 
@@ -71,9 +101,12 @@ Notable passthroughs accumulated across feature ports:
 
 The baseline `publicknowledge` journal is seeded with enriched defaults (see `playwright/fixtures/bootstrap.js`): announcements, public comments, categories-in-wizard, keywords/citations on request, reviewer suggestions, DOIs auto-assigned on publish, CSL plugin, double-anonymous review with deadlines + reminder thresholds. Tests needing any of these OFF use a scratch journal.
 
-## Available fixtures
+## Available fixtures (recorded design — NOT yet recreated)
 
-Co-located at `playwright/fixtures/scenarios/`. Each is a function returning the spec payload, with sensible defaults plus an override surface. Use these instead of hand-rolling specs:
+Spec-builders will return to `playwright/fixtures/scenarios/` when feature
+specs need them; until then, specs POST via `pkpApi.createContext()` /
+`createSubmission()`. The recorded builders and their defaults, as the shapes
+to grow back into:
 
 - **`submission-draft.js`** — stage 1, no decisions. Default participant cast: editor.diana editor + sectioneditor.ana + sectioneditor.ravi section editors. For Discussion Manager tests.
 - **`submission-in-review.js`** — stage 3 with reviewers. Defaults to one invited (reviewer.paul) + one accepted (reviewer.julia). Accepts `submitter`, `participants`, `reviewers` overrides.
@@ -111,6 +144,9 @@ Conventions:
 
 Local: `brew services start mailpit`. CI install scripted separately. Default URL `http://127.0.0.1:8025`; override via `MAILPIT_URL` env var.
 
-## Scenario client (TODO)
+## Scenario client
 
-`lib/pkp/playwright/support/scenarios.js` is still the SEAM stub — its `createSubmissionInReview` / `createPublishedIssue` methods throw. Today, specs POST directly to the scenario endpoints via `pkpApi` or a per-spec helper; the `scenarios` fixture will wrap that once the client is built. When you encounter a TODO, flag it rather than inventing an alternative.
+There is deliberately no typed scenario client (the pre-reset `scenarios.js`
+stub was not recreated): specs POST via `pkpApi.createContext()` /
+`createSubmission()`, which validate server-side. Build a client only when a
+feature suite demonstrates the need.

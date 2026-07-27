@@ -1,9 +1,8 @@
 # Users & Roles Reference
 
-> **Design record** — the harness files named below (`users.js`, `auth.js`,
-> `base-test.js`, bootstrap) were deleted in the 2026-07-26 reset; this file
-> preserves the roster + auth design the rebuild recreates. The role constants
-> and journal facts are live app truth.
+> **Live again** (rebuilt 2026-07-27) — the harness files named below exist and
+> match this file; corrections from the rebuild are folded in (auth probe,
+> maxlength handling, self-healing install).
 
 Everything auth-related for writing OJS Playwright tests. If you need to decide which user to log in as, or you need to know the password, start here.
 
@@ -72,6 +71,8 @@ getPassword(username) {
 
 No seeded user is flagged `mustChangePassword` — every account logs straight in to the dashboard.
 
+**The maxlength trap**: the login form's password input carries `maxlength="32"` while the three `sectioneditor.*` passwords run 34–36 chars. `LoginPage.fillPassword()` lifts the attribute before filling, so specs never see it; the underlying UI limitation is a product finding for the Login & sessions spec, not something a test should assert around.
+
 ## Login flow internals
 
 ### `ensureAuthStateFor(browser, username, {baseURL})`
@@ -79,7 +80,7 @@ No seeded user is flagged `mustChangePassword` — every account logs straight i
 Defined at `lib/pkp/playwright/support/auth.js`.
 
 Flow:
-1. Check for `<appRoot>/playwright/.auth/<username>.json`. If present, **probe** it: replay cookies into a throwaway APIRequestContext and GET `/index/user/profile` with redirects disabled. 200 → return the cached path. Anything else → fall through to a fresh login.
+1. Check for `<appRoot>/playwright/.auth/<username>.json`. If present, **probe** it: replay cookies into a throwaway APIRequestContext, GET the profile URL **following redirects**, and judge by where the request ENDS: `ok() && !url.includes('/login')` → live, return the cached path; otherwise fall through to a fresh login. (The pre-reset design — status-200 with redirects disabled — always fails on this app: even a signed-in profile request redirects twice, first to the locale-prefixed form, then into the single context, so it silently re-logged everyone in on every run.)
 2. Open a fresh browser context, drive `LoginPage` to submit `username` + `getPassword(username)`, wait for redirect away from `/login` (15 s timeout, `waitUntil:'commit'` so it fires on URL change rather than waiting for the full dashboard fan-out), snapshot `context.storageState()` to the JSON file, close the context, return the path.
 3. Under parallel workers, two workers may race on the missing/stale file. Both perform a successful login (OJS allows concurrent sessions per user), last write wins, tests keep working.
 
@@ -114,10 +115,10 @@ See `asUser` in `lib/pkp/playwright/support/base-test.js`.
 
 ### Bootstrap prerequisite
 
-Auth only works after the setup project has run (`bootstrap.setup.js`, governed by `config-factory.js:66-71`). The setup runs serially before every test project and seeds:
-1. The test database (schema via `tools/installTest.php`)
-2. The `publicknowledge` journal (from `playwright/fixtures/bootstrap.js`)
-3. All 17 non-admin users (admin is created by the installer)
+Auth only works after the setup project has run (`bootstrap.setup.js`). The setup runs before every test project; it probes `GET /api/v1/_test/bootstrap?context=publicknowledge` and no-ops warm (<1 s), or cold it:
+1. Installs the test schema (`tools/installTest.php` — self-healing from an empty or partially installed DB; refuses a populated one, which is what `--recreate-db` is for)
+2. Seeds the `publicknowledge` journal (from `playwright/fixtures/bootstrap.js`)
+3. Seeds all 17 non-admin users (admin is created by the installer), including the section-editor→section assignments via `users[].sections`
 
 If `.auth/` is stale (deleted DB, seed-data change), `ensureAuthStateFor` re-creates files on demand. Use `npm run test:e2e:reset` to force a full cold bootstrap.
 
