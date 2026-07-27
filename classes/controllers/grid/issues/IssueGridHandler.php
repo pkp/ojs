@@ -22,6 +22,7 @@
 
 namespace APP\controllers\grid\issues;
 
+use APP\article\ArticleTombstoneManager;
 use APP\controllers\grid\issues\form\IssueAccessForm;
 use APP\controllers\grid\issues\form\IssueForm;
 use APP\controllers\grid\pubIds\form\AssignPublicIdentifiersForm;
@@ -380,10 +381,15 @@ class IssueGridHandler extends GridHandler
             $publications = $submission->getData('publications');
             foreach ($publications as $publication) {
                 if ($publication->getData('issueId') === (int) $issue->getId()) {
+                    $wasCurrentPublication = $publication->getId() == $submission->getData('currentPublicationId');
                     Repo::publication()->edit(
                         $publication,
                         ['issueId' => null, 'status' => Publication::STATUS_QUEUED]
                     );
+                    // edit() bypasses unpublish(), so tombstone the OAI identifier(s)
+                    // this now-offline publication was exposing.
+                    $unpublishedPublication = Repo::publication()->get($publication->getId());
+                    (new ArticleTombstoneManager())->reconcileTombstonesOnUnpublish($unpublishedPublication, $wasCurrentPublication, $submission, $journal);
                 }
             }
             $newSubmission = Repo::submission()->get($submission->getId());
