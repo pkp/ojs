@@ -15,13 +15,32 @@ Defined in `lib/pkp/classes/security/Role.php:24-31`. These are the integer IDs 
 | `ROLE_ID_SITE_ADMIN` | 1 | — (siteAdmin flag) | Site-wide administrator. Outside any journal. |
 | `ROLE_ID_MANAGER` | 16 | `manager` | Journal manager — journal settings, users, plugins |
 | `ROLE_ID_SUB_EDITOR` | 17 | `editor`, `sectionEditor` | Editor / section editor — both map to sub-editor |
-| `ROLE_ID_ASSISTANT` | 4097 | `copyeditor`, `layoutEditor`, `proofreader`, `funding` | Assistants — `funding` (Funding coordinator) is the one default assistant group with review-stage access (stages 1,3) |
+| `ROLE_ID_ASSISTANT` | 4097 | `copyeditor`, `layoutEditor`, `proofreader`, `funding`, `editorialBoardMember` | Assistants. On OJS/OMP, `funding` (Funding coordinator) is the one default assistant group with review-stage access (stages 1,3). **OPS ships neither `funding` nor the production assistants** — its only assistant-slot group is `editorialBoardMember` (Editorial Board Member), which is what `assistant.rita` is enrolled in there (verified 2026-07-28) |
 | `ROLE_ID_REVIEWER` | 4096 | `reviewer` | Peer reviewer |
 | `ROLE_ID_AUTHOR` | 65536 | `author` (also implicit on submit) | Author — anyone can become one by submitting |
 | `ROLE_ID_READER` | 1048576 | `reader` | Reader — any registered user |
 | `ROLE_ID_SUBSCRIPTION_MANAGER` | 2097152 | — (OJS-only) | Manages subscriptions. **Not seeded in baseline users.** OJS-only role. |
 
 **Note on string keys:** `sectionEditor` corresponds to `ROLE_ID_SUB_EDITOR`. **CAUTION (verified wave 11):** on default scratch-journal user groups, the scenario role string `editor` resolves to the "Journal editor" group, which is **`ROLE_ID_MANAGER`** per `registry/userGroups.xml:18` — NOT sub-editor. A `users: [{roles: ['editor']}]` throwaway therefore passes manager-level gates (canPublish, settings access). Use `sectionEditor` when you need a non-manager editorial role.
+
+### Scenario role keys, per app
+
+Every scenario key that names a role — `users[].roles`, `invitations[].roles` — is
+resolved by `PKPTestApiController::resolveUserGroup()` against the group's stored
+`nameLocaleKey`, so the vocabulary is exactly the set of default groups the app
+ships. **There is no `reviewer` key anywhere: it is `externalReviewer`** (OMP also
+has `internalReviewer`). A key the app does not ship throws a 400 that lists the
+whole set, which is also the cheapest way to re-check this list (verified
+2026-07-28):
+
+| App | Keys |
+|---|---|
+| OJS | `manager`, `editor`, `productionEditor`, `sectionEditor`, `guestEditor`, `copyeditor`, `designer`, `funding`, `indexer`, `layoutEditor`, `marketing`, `proofreader`, `author`, `translator`, `externalReviewer`, `reader`, `subscriptionManager`, `editorialBoardMember` |
+| OMP | `manager`, `editor`, `productionEditor`, `sectionEditor`, `copyeditor`, `designer`, `funding`, `indexer`, `layoutEditor`, `marketing`, `proofreader`, `author`, `volumeEditor`, `chapterAuthor`, `translator`, `internalReviewer`, `externalReviewer`, `reader`, `editorialBoardMember` |
+| OPS | `manager`, `sectionEditor`, `author`, `reader`, `editorialBoardMember` — **no `funding`**, no reviewer keys, no production assistants |
+
+The label a screen shows is the app's own: `sectionEditor` renders as "Section
+editor" on OJS, "Series editor" on OMP and "Moderator" on OPS.
 
 ## Seeded test users
 
@@ -49,7 +68,7 @@ When a test needs a user with a given role, use the first one listed for that ro
 | `proofreader.pia` | proofreader | Proofreading actions |
 | `author.alex` | author | A non-privileged author. Use when a spec needs to exercise an author-only permission gate. |
 | `author.bea` | author | A second author — co-author and foreign-submission cases (e.g. one author must not see another's submission) |
-| `assistant.rita` | funding (assistant) | An assistant **with review-stage access** — enrolled in the Funding coordinator group (stages 1,3), the one default assistant group that reaches external review |
+| `assistant.rita` | funding (assistant) on OJS/OMP · editorialBoardMember on OPS | An assistant **with review-stage access** — enrolled in the Funding coordinator group (stages 1,3), the one default assistant group that reaches external review. **OPS has no `funding` group**; there `assistant.rita` is an Editorial Board Member (assistant slot, no stage access) |
 | `reader.rosa` | reader | A registered user with no roles beyond reader — reader-facing gates, "logged in but no editorial access" checks |
 
 **Why `author.alex` matters.** Every other seeded publicknowledge user with workflow access has a manager/editor role that short-circuits `Repo::submission()->canEditPublication` (NOT_CHANGE_METADATA_EDIT_PERMISSION_ROLES). `author.alex` (and `author.bea`) are author-only, so author-side permission tests are meaningful. Password derives normally to `author.alexauthor.alex`.
