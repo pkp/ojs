@@ -176,6 +176,11 @@ class Repository extends \PKP\publication\Repository
     /** @copydoc \PKP\publication\Repository::publish() */
     public function publish(Publication $publication, false|int|null $submissionStatus = null): void
     {
+        // Checked before parent::publish() changes it, so reconcileTombstonesOnPublish()
+        // can tell whether this publish knocked a different (stage, major) pair out of "current".
+        $previousCurrentPublicationId = Repo::submission()->get($publication->getData('submissionId'))
+            ->getData('currentPublicationId');
+
         parent::publish($publication, $submissionStatus);
 
         $newPublication = Repo::publication()->get($publication->getId());
@@ -190,7 +195,7 @@ class Repository extends \PKP\publication\Repository
             Repo::submission()->dao->update($submission);
         }
 
-        (new ArticleTombstoneManager())->reconcileTombstonesOnPublish($newPublication, $submission, $context);
+        (new ArticleTombstoneManager())->reconcileTombstonesOnPublish($newPublication, $submission, $context, $previousCurrentPublicationId);
     }
 
     /** @copydoc \PKP\publication\Repository::unpublish() */

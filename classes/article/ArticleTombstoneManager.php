@@ -207,7 +207,8 @@ class ArticleTombstoneManager
     public function reconcileTombstonesOnPublish(
         Publication $publication,
         Submission $submission,
-        Context $context
+        Context $context,
+        ?int $previousCurrentPublicationId = null
     ): void {
         if ($publication->getData('status') !== PKPPublication::STATUS_PUBLISHED) {
             return;
@@ -215,26 +216,45 @@ class ArticleTombstoneManager
 
         $tombstoneDao = DAORegistry::getDAO('DataObjectTombstoneDAO'); /** @var DataObjectTombstoneDAO $tombstoneDao */
         $articleId = $submission->getId();
+        $becameCurrentPublication = $publication->getId() == $submission->getData('currentPublicationId');
 
         // Bare identifier: tracks the current publication, regardless of its
         // version stage -- independent of whether this journal has per-version
         // OAI records at all.
-        if ($publication->getId() == $submission->getData('currentPublicationId')) {
+        if ($becameCurrentPublication) {
             $tombstoneDao->deleteByOAIIdentifier($this->buildOaiIdentifier($articleId, null, null));
         }
 
-        // Versioned identifier: only relevant for exposed version stages in
-        // versioning journals, and only the latest published minor of a
-        // (stage, major) group represents it.
+        // Versioned identifier: only the latest published minor of a (stage, major)
+        // pair represents it, and only if that pair isn't current (a current pair
+        // has no distinct identifier -- see setOAIData()'s $isCurrentVersion).
         $versionStage = $publication->getData('versionStage');
+        $versionMajor = (int) $publication->getData('versionMajor');
         if (
-            $this->isVersioningEnabled($context)
+            !$becameCurrentPublication
+            && $this->isVersioningEnabled($context)
             && in_array($versionStage, $this->versionedStages(), true)
             && $this->isLatestPublishedMinor($publication)
         ) {
-            $tombstoneDao->deleteByOAIIdentifier(
-                $this->buildOaiIdentifier($articleId, $versionStage, (int) $publication->getData('versionMajor'))
-            );
+            $tombstoneDao->deleteByOAIIdentifier($this->buildOaiIdentifier($articleId, $versionStage, $versionMajor));
+        }
+
+        // If this publish knocked a different (stage, major) pair out of "current",
+        // that pair's own versioned identifier is live again -- clear its tombstone too.
+        if ($becameCurrentPublication && $previousCurrentPublicationId && $previousCurrentPublicationId != $publication->getId() && $this->isVersioningEnabled($context)) {
+            $previousCurrentPublication = Repo::publication()->get($previousCurrentPublicationId);
+            if ($previousCurrentPublication) {
+                $previousVersionStage = $previousCurrentPublication->getData('versionStage');
+                $previousVersionMajor = (int) $previousCurrentPublication->getData('versionMajor');
+                if (
+                    in_array($previousVersionStage, $this->versionedStages(), true)
+                    && ($previousVersionStage !== $versionStage || $previousVersionMajor !== $versionMajor)
+                ) {
+                    $tombstoneDao->deleteByOAIIdentifier(
+                        $this->buildOaiIdentifier($articleId, $previousVersionStage, $previousVersionMajor)
+                    );
+                }
+            }
         }
     }
 
@@ -273,17 +293,31 @@ class ArticleTombstoneManager
             }
         }
 
-        // Versioned identifier: only relevant for exposed version stages in
-        // versioning journals. Independent of the bare-identifier check above
-        // -- both can apply to the same unpublish event.
+        // Only tombstone this group's versioned identifier if it was ever exposed under
+        // it, i.e. this publication wasn't current (see setOAIData()'s $isCurrentVersion).
         $versionStage = $publication->getData('versionStage');
-        if ($this->isVersioningEnabled($context) && in_array($versionStage, $this->versionedStages(), true)) {
-            $major = (int) $publication->getData('versionMajor');
-            if (!$this->isVersionGroupLive($submission, $versionStage, $major)) {
-                // No published minor left for this (stage, major) group: its
-                // versioned identifier is dead, regardless of whether it used
-                // to be current (bare) or not.
-                $this->insertIdentifierTombstone($submission, $context, $section, $versionStage, $major);
+        $versionMajor = (int) $publication->getData('versionMajor');
+        $isVersionedStage = in_array($versionStage, $this->versionedStages(), true);
+        if (!$wasCurrentPublication && $this->isVersioningEnabled($context) && $isVersionedStage) {
+            if (!$this->isVersionGroupLive($submission, $versionStage, $versionMajor)) {
+                $this->insertIdentifierTombstone($submission, $context, $section, $versionStage, $versionMajor);
+            }
+        }
+
+        // If a different (stage, major) pair becomes current by fallback, its
+        // versioned identifier stops resolving on its own -- tombstone it too.
+        if ($wasCurrentPublication && $this->isVersioningEnabled($context)) {
+            $newCurrentPublicationId = $submission->getData('currentPublicationId');
+            if ($newCurrentPublicationId && $newCurrentPublicationId != $publication->getId()) {
+                $newCurrentPublication = Repo::publication()->get($newCurrentPublicationId);
+                $newVersionStage = $newCurrentPublication->getData('versionStage');
+                $newVersionMajor = (int) $newCurrentPublication->getData('versionMajor');
+                if (
+                    in_array($newVersionStage, $this->versionedStages(), true)
+                    && ($newVersionStage !== $versionStage || $newVersionMajor !== $versionMajor)
+                ) {
+                    $this->insertIdentifierTombstone($submission, $context, $section, $newVersionStage, $newVersionMajor);
+                }
             }
         }
     }

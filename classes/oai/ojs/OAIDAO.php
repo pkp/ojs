@@ -222,7 +222,10 @@ class OAIDAO extends PKPOAIDAO
             $submission = Repo::submission()->get($articleId);
 
             // Metadata formats read the submission's current publication, so point
-            // it at the version this record represents.
+            // it at the version this record represents. This only works as long as
+            // format plugins read the publication via this $submission object's
+            // getCurrentPublication() -- a fresh Repo::submission()->get() call
+            // elsewhere would silently return the true-current publication instead.
             if (!$isCurrentVersion) {
                 $submission->setData('currentPublicationId', $publicationId);
             }
