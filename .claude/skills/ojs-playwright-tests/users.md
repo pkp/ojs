@@ -12,7 +12,7 @@ Defined in `lib/pkp/classes/security/Role.php:24-31`. These are the integer IDs 
 
 | Constant | ID | String key | Description |
 |---|---|---|---|
-| `ROLE_ID_SITE_ADMIN` | 1 | — (siteAdmin flag) | Site-wide administrator. Outside any journal. |
+| `ROLE_ID_SITE_ADMIN` | 1 | `siteAdmin` (in `users[].roles` only) | Site-wide administrator. Outside any journal — the group has a **null context id**. |
 | `ROLE_ID_MANAGER` | 16 | `manager` | Journal manager — journal settings, users, plugins |
 | `ROLE_ID_SUB_EDITOR` | 17 | `editor`, `sectionEditor` | Editor / section editor — both map to sub-editor |
 | `ROLE_ID_ASSISTANT` | 4097 | `copyeditor`, `layoutEditor`, `proofreader`, `funding`, `editorialBoardMember` | Assistants. On OJS/OMP, `funding` (Funding coordinator) is the one default assistant group with review-stage access (stages 1,3). **OPS ships neither `funding` nor the production assistants** — its only assistant-slot group is `editorialBoardMember` (Editorial Board Member), which is what `assistant.rita` is enrolled in there (verified 2026-07-28) |
@@ -41,6 +41,40 @@ whole set, which is also the cheapest way to re-check this list (verified
 
 The label a screen shows is the app's own: `sectionEditor` renders as "Section
 editor" on OJS, "Series editor" on OMP and "Moderator" on OPS.
+
+#### `siteAdmin` — the one key that is not in that table
+
+`users[].roles: ['siteAdmin']` seeds a throwaway **site administrator** (U53,
+2026-07-29; all three apps, both `bootstrap` and `scenarios/context`):
+
+```js
+users: [
+    {username: 'u53top.admin.ojs', roles: ['siteAdmin']},            // administrator only
+    {username: 'u53top.both.ojs',  roles: ['siteAdmin', 'manager']}, // and a context role
+]
+```
+
+Everything else about a user spec is unchanged — password is still the username
+doubled, the response still echoes `{username: id}`, a failed build still rolls
+the account back. It is absent from the per-app table above (and from the 400's
+"available roles" list) because it does not live in a context: the site
+administrator group is installed once for the whole site with a null context id
+and no `nameLocaleKey`, so `resolveRoleGroup()` finds it by role id instead of
+by the context-scoped name-key lookup. Enrolment is the app's own
+`Repo::userGroup()->assignUserToGroup()`, the same call the installer makes.
+
+Two things to remember:
+
+- **`invitations[].roles` rejects it on purpose.** No screen invites anyone to
+  the site administrator role, so the invitation seeder does not either — you
+  get the usual "No default user group for role 'siteAdmin'" 400 there.
+- **This is the ONLY way to get a second administrator.** No screen grants the
+  role: the Users & Roles user form intersects the posted group ids with
+  `UserGroup::withContextIds([$contextId])` before saving, and the site admin
+  group is in no context. The installer's `admin` is therefore the only other
+  one, and the suite keeps it **enabled and unmerged** — every test about
+  administrator behaviour (self-disable, merge, admin-acting-on-admin) seeds its
+  own throwaway.
 
 ## Seeded test users
 

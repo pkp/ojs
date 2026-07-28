@@ -198,8 +198,13 @@ deliberately unassigned as a visibility control), `assistant.rita` as Editorial
 Board Member (NO stage access), and has no editor/reviewer/copyeditor/layout/
 proofreader accounts (`seed.actors` maps those archetypes to null). Cross-app
 authoring conventions live in `lib/pkp/docs/e2e/PRINCIPLES.md` "Multi-app
-conventions"; Mailpit is ONE shared instance across all three fleets — scope by
-recipient + per-app tag.
+conventions"; Mailpit is ONE shared instance across all three fleets — scope
+every assertion by a **unique throwaway recipient address** that names the app
+and the test (`u53top-omp@mail.test`), and add a positive control whenever the
+claim is silence. **This install has no Mailpit tags** (verified 2026-07-29:
+`GET /api/v1/tags` → `[]`, every message `Tags: []`, nothing sets `X-Tags`), so
+"scope by the per-app tag" is not something you can do — `find()`'s `contains`
+is a subject/body content marker, a supplement to the recipient scope only.
 
 ## Companion files in this skill
 
