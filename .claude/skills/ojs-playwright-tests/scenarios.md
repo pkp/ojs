@@ -98,6 +98,47 @@ Notable passthroughs accumulated across feature ports:
 - `issues: [...]` — OJS-only via `JournalScenarioController::afterContextCreated()`. Each issue accepts `accessStatus` (e.g., subscription-required), volume/number/year, etc.
 - `subscriptions: [...]` — OJS-only. `{type: {name, duration?, cost?, institutional?}, user?, institution?: {name, ipRanges}, status?: 'active'|'expired', dateStart?, dateEnd?}`. `'expired'` seeds an ACTIVE-status row with a past `date_end` — the lapsed state unreachable through the create form.
 - `invitations: [...]` — **LIVE (added for U6, 2026-07-28)**, all three apps. User-role invitations already sent in this context. See the section below.
+- `users[].roles` accepts **`siteAdmin`** — **LIVE (added for U53, 2026-07-29)**, all three apps, and on `bootstrap` too. See the section below.
+
+## Context scenario · `users[].roles: ['siteAdmin']`
+
+```js
+users: [
+    {username: 'u53top.admin.ojs', roles: ['siteAdmin']},            // administrator only
+    {username: 'u53top.both.ojs',  roles: ['siteAdmin', 'manager']}, // and a context role
+]
+```
+
+A throwaway **site administrator**. Not a new spec key — a role key, obeying every
+user-spec convention: password is the username doubled, the response echoes it in
+the usual `users: {username: id}` map, a later failure rolls the account back.
+Available on `POST scenarios/context` and on `POST bootstrap`.
+
+**Why it has to exist:** no screen in any of the three apps grants this role.
+`UserForm::saveUserGroupAssignments()` intersects the posted group ids with
+`UserGroup::withContextIds([$contextId])` ("secure that user-specified user group
+IDs are from the right context") and the site administrator group belongs to no
+context, so Users & Roles cannot offer it. Without this key the installer's
+`admin` is the only administrator on the install — and it is read-only for the
+suite, because disabling or merging it would break every later feature. Anything
+about administrator behaviour (self-disable, merge, one admin acting on another)
+seeds its own.
+
+Implementation notes worth knowing:
+
+- The group is site-wide (`contextId` null) and has **no `nameLocaleKey`** —
+  `PKPInstall::createData()` writes the translated names directly — so the
+  context-scoped name-key lookup every other role uses can never find it.
+  `PKPTestApiController::resolveRoleGroup()` special-cases this one key and
+  resolves by `Role::ROLE_ID_SITE_ADMIN`.
+- Enrolment is `Repo::userGroup()->assignUserToGroup()`: the installer's own call,
+  and the one the seeder already makes for every other role. Nothing is written by
+  hand. Parity entry: `lib/pkp/docs/e2e/scenario-processor-audit.md`, 2026-07-29.
+- **`invitations[].roles` rejects `siteAdmin`** deliberately (400, "No default user
+  group for role 'siteAdmin'"): no screen invites anyone to it.
+- The seeded administrator needs no context membership to work. Verified live on
+  all three fleets by signing in through the sign-in screen and reaching
+  Administration → Hosted Journals / Presses / Servers.
 
 ## Context scenario · `invitations`
 
@@ -193,6 +234,16 @@ Fixture functions throw if `tag` is missing — every override callsite needs on
 
 Methods:
 
+> **There are no Mailpit tags on this install** (verified 2026-07-29:
+> `GET /api/v1/tags` → `[]`, every message carries `Tags: []`; nothing in the apps
+> sets `X-Tags`). Wherever older wording says "scope by recipient **and** the
+> per-app tag", the executable instruction is: **scope by a unique throwaway
+> recipient address** — put the app and the probe/test in the address itself
+> (`u53top-omp@mail.test`) — and add a positive control whenever the claim is
+> silence. `find()`'s `contains` is a *content marker* (a substring searched in
+> subject/body), not a Mailpit tag: useful when the test controls some text in the
+> message, never a substitute for the recipient scope.
+
 - **`find({to, contains, subject?, timeoutMs?, poll?})`** — THE canonical assertion: polls Mailpit search scoped by recipient + a unique content marker; throws on unscoped use. Use this, not inbox-wide reads.
 - **`expectNone({to, contains, afterControl: {to, contains}})`** — negative assertion done right: waits for the control message to arrive (bounding the wait), then asserts zero matches for the target.
 - **`inboxFor(email, {timeout?, poll?})`** — polls until at least one message addressed to `email` arrives; throws on timeout.
@@ -204,7 +255,7 @@ Methods:
 
 Conventions:
 
-- **Never wipe the shared inbox from a parallel spec.** Mailpit is shared across parallel workers; scope every assertion by recipient + the test's unique tag, and use throwaway recipients when counting or asserting absence (charter principles 7–8).
+- **Never wipe the shared inbox from a parallel spec.** Mailpit is shared across parallel workers *and* across the three fleets; scope every assertion by a unique throwaway recipient address (see the box above — there are no tags), optionally narrowed further by a content marker, and pair every absence claim with a positive control (charter principles 7–8).
 - **`Mail::fake()` in scenario controllers stays.** Seeding-side emails are discarded inside the scenario request. Only test-action mail (decisions submitted via UI, password resets, invitations) reaches Mailpit.
 
 Local: `brew services start mailpit`. CI install scripted separately. Default URL `http://127.0.0.1:8025`; override via `MAILPIT_URL` env var.
