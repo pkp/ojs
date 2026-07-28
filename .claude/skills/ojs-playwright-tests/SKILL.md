@@ -166,6 +166,15 @@ npm run test:e2e:serve      # manual PHP server on :8000 for custom runs
 
 Env vars the tests depend on (all in `.env.playwright.example`):
 - `PLAYWRIGHT_BASE_URL` — default `http://127.0.0.1:8000`
+
+**Always drive the fleets via `127.0.0.1`, never `localhost`.** All three
+`config.test.inc.php` files pin `allowed_hosts` to `127.0.0.1` (+ the fleet's
+port), so any page request carrying `Host: localhost` ends in a bare **400** —
+after a 302 to the locale-prefixed URL, so the first response still looks fine
+and only the followed redirect fails. The `_test` API answers on either host,
+which makes the mistake worse: seeding succeeds, the browser step dies. Three
+separate probe sessions lost time to this (2026-07-28).
+
 - `OJS_DB_*` — the test database; must exist and be empty
 - `OJS_FILES_DIR` — writable files dir, kept separate from Cypress
 - `TEST_API_KEY` — gates `/api/v1/_test/*` bootstrap endpoints
