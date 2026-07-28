@@ -212,9 +212,12 @@ follow the Routing line carried in your brief (`lib/pkp/docs/product/RUNBOOK.md`
 
 Owned by `lib/pkp/docs/product/RUNBOOK.md` (per-feature loop, Commit step —
 single home). Short form: `lib/pkp` and app root commit separately; never bump
-submodule pointers from ojs-main root (`git restore --staged lib/pkp` first);
-specs + campaign docs + shared harness changes commit inside `lib/pkp`,
-app-only tests in each app's root. Both test folders stay flat.
+submodule pointers in ANY app repo — ojs, omp, or ops (`git restore --staged
+lib/pkp` first; no re-pin commits, maintainer ruling 2026-07-28 — sync omp/ops
+by checking out the same `e2e_ng` branch in their `lib/pkp` and leave the
+resulting `M lib/pkp` uncommitted); specs + campaign docs + shared harness
+changes commit inside `lib/pkp`, app-only tests in each app's root. Both test
+folders stay flat.
 
 ## Verify before trusting this skill
 
