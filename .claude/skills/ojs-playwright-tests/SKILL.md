@@ -203,10 +203,10 @@ Load those on demand. You do not need to read them for every task.
 
 ## Permission contradictions
 
-If a test's result contradicts the spec about who is allowed to do what,
-follow the Routing line carried in your brief (`lib/pkp/docs/product/RUNBOOK.md`
-"Private finding routing"). Never leave it as a skipped/`fixme` test or a
-"not covered" header note.
+If a test's result contradicts the spec about who is allowed to do what, the
+SPEC is wrong: report it so the finding reaches the spec's Findings register
+(`lib/pkp/docs/product/RUNBOOK.md` step 7). Never leave it as a skipped/`fixme`
+test or a "not covered" header note.
 
 ## Commit discipline
 
