@@ -27,6 +27,7 @@ use APP\submission\Submission;
 use Illuminate\Support\Facades\DB;
 use PKP\config\Config;
 use PKP\context\Context;
+use PKP\core\PKPRequest;
 use PKP\db\DAORegistry;
 use PKP\publication\PKPPublication;
 use PKP\tests\DatabaseTestCase;
@@ -57,8 +58,10 @@ class ArticleTombstoneManagerTest extends DatabaseTestCase
         parent::setUp();
 
         // A router-less CLI request crashes ->getContext() calls inside the publication/
-        // citation DAOs.
-        $this->mockRequest('publicknowledge/test-page/test-op');
+        // citation DAOs. mockRequest() only replaces the Registry entry, so the container
+        // singleton -- which is what repositories taking a Request get injected -- has to
+        // be pointed at the mock too, or a stale request from an earlier test wins.
+        app()->instance(PKPRequest::class, $this->mockRequest('publicknowledge/test-page/test-op'));
 
         // Save the settings this test flips on, to restore in tearDown().
         foreach ([Context::SETTING_DOI_VERSIONING, Context::SETTING_ENABLE_DOIS] as $settingName) {
@@ -78,6 +81,10 @@ class ArticleTombstoneManagerTest extends DatabaseTestCase
 
     protected function tearDown(): void
     {
+        // Drop the mocked request from the container so it is rebuilt from the request
+        // parent::tearDown() restores into the Registry.
+        app()->forgetInstance(PKPRequest::class);
+
         // Deleting the submission cascades through publications, publication_settings,
         // and submission_settings.
         if ($this->createdSubmissionIds) {
