@@ -20,6 +20,8 @@ use APP\issue\Issue;
 use APP\submission\Submission;
 use PKP\galley\Galley;
 use PKP\submission\Genre;
+use PKP\submission\reviewAssignment\ReviewAssignment;
+use PKP\submission\reviewRound\ReviewRound;
 
 class PubObjectCache
 {
@@ -55,6 +57,12 @@ class PubObjectCache
         }
         if ($object instanceof Genre) {
             $this->_insertInternally($object, 'genres', $object->getId());
+        }
+        if ($object instanceof ReviewAssignment) {
+            $this->_insertInternally($object, 'reviewAssignments', $object->getId());
+        }
+        if ($object instanceof ReviewRound) {
+            $this->_insertInternally($object, 'reviewRounds', $object->getId());
         }
     }
 
