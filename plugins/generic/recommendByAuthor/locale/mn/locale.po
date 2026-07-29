@@ -1,3 +1,24 @@
 # Gantulga <cybermon@gmail.com>, 2026.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2026-07-29 09:09+0000\n"
+"Last-Translator: Gantulga <cybermon@gmail.com>\n"
+"Language-Team: Mongolian <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-recommendByAuthor/mn/>\n"
+"Language: mn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.generic.recommendByAuthor.heading"
+msgstr "Зохиогчийн хамгийн их уншсан бүтээлүүд"
+
+msgid "plugins.generic.recommendByAuthor.displayName"
+msgstr "Зохиогчийн бүтээлийг санал болгох"
+
+msgid "plugins.generic.recommendByAuthor.description"
+msgstr ""
+"Энэ хэрэгсэл нь бүтээлийн хураангуй хуудсан дээр тухайн зохиогчийн "
+"бүтээлүүдийн жагсаалтыг оруулдаг."
