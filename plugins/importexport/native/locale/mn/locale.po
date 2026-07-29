@@ -1,7 +1,7 @@
 # Gantulga <cybermon@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-07 06:31+0000\n"
+"PO-Revision-Date: 2026-07-29 09:09+0000\n"
 "Last-Translator: Gantulga <cybermon@gmail.com>\n"
 "Language-Team: Mongolian <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-native/mn/>\n"
@@ -13,28 +13,28 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "plugins.importexport.native.description"
-msgstr "Import and export articles and issues in OJS's native XML format."
+msgstr "OJS-ийн үндсэн XML форматаар бүтээл, дугаарыг импортлох, экспортлох."
 
 msgid "plugins.importexport.native.import"
-msgstr "Import"
+msgstr "Импорт"
 
 msgid "plugins.importexport.native.import.instructions"
-msgstr "Upload XML file to import"
+msgstr "XML файл импорт хийхэд оруул"
 
 msgid "plugins.importexport.native.exportSubmissionsSelect"
-msgstr "Select articles to export"
+msgstr "Сонгосон өгүүллүүдийг экспорт хийх"
 
 msgid "plugins.importexport.native.exportSubmissions"
-msgstr "Export Articles"
+msgstr "Өгүүллүүдийг экспорт"
 
 msgid "plugins.importexport.native.exportIssues"
-msgstr "Export Issues"
+msgstr "Сэтгүүлийн дугаарыг экспорт"
 
 msgid "plugins.inportexport.native.uploadFile"
-msgstr "Please upload a file under \"Import\" in order to continue."
+msgstr "Үргэлжлүүлэхийн тулд \"Импорт\" хэсэгт файлаа оруулна уу."
 
 msgid "plugins.importexport.native.importComplete"
-msgstr "The import completed successfully. The following items were imported:"
+msgstr "Импорт амжилттай дууслаа. Дараах зүйлсийг импортлов:"
 
 msgid "plugins.importexport.native.cliUsage"
 msgstr ""
@@ -67,7 +67,7 @@ msgstr ""
 
 msgid "plugins.importexport.native.error.unknownUser"
 msgstr ""
-"A user must be provided by using the --user_name or -u command parameter."
+"Хэрэглэгч --user_name эсвэл -u коммандын параметрийг ашиглан оруулах ёстой."
 
 msgid "plugins.importexport.native.import.error.sectionTitleMismatch"
 msgstr ""
@@ -116,16 +116,16 @@ msgstr ""
 "published date."
 
 msgid "plugins.importexport.native.displayName"
-msgstr "Native XML"
+msgstr "Үндсэн XML хэрэгсэл"
 
 msgid "plugins.importexport.native.results"
-msgstr "Import Results"
+msgstr "Оруулсан үр дүнгүүд"
 
 msgid "plugins.importexport.native.error.unknownSection"
-msgstr "Unknown section {$param}"
+msgstr "Мэдэгдэхгүй хэсэг {$param}"
 
 msgid "plugins.importexport.common.error.invalidFileExtension"
-msgstr "A cover image with an invalid file extension was specified."
+msgstr "Хавтасны зургийн файлын өргөтгөл буруу байна."
 
 msgid "plugins.importexport.common.error.coverImageNameUnspecified"
-msgstr "A cover image was embedded without specifying a name."
+msgstr "Хавтасны зурагны нэр тодорхойгүй."
