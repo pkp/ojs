@@ -11320,6 +11320,283 @@
 				}
 			}
 		},
+		"/reviews/{submissionId}/reviewAssignment": {
+			"get": {
+				"tags": [
+					"Reviews"
+				],
+				"summary": "Get the review assignment for a submission.",
+				"description": "Returns the **calling reviewer's** own review assignment, limited to the properties a reviewer may see.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The reviewer-safe view of the review assignment: id, submissionId, reviewRoundId, stageId, reviewerRecommendationId, dateCompleted, cancelled, declined, reviewFormId and step.",
+						"schema": {
+							"type": "object",
+							"description": "Reviewer-safe subset of the review assignment: id, submissionId, reviewRoundId, stageId, reviewerRecommendationId, dateCompleted, cancelled, declined, reviewFormId, step."
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You are not the assigned reviewer for this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "No review assignment could be found for you on this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/reviews/{submissionId}/reviewForm": {
+			"get": {
+				"tags": [
+					"Reviews"
+				],
+				"summary": "Get the review form for a review assignment.",
+				"description": "Returns the custom review form assigned to the **calling reviewer**, with every element carrying that reviewer's own saved answer.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The review form with its elements and the reviewer's raw saved answers, or null when the assignment has no review form.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"id": {
+									"type": "integer"
+								},
+								"title": {
+									"type": "string"
+								},
+								"description": {
+									"type": "string"
+								},
+								"elements": {
+									"type": "array",
+									"description": "Form elements, each carrying its own raw saved response value.",
+									"items": {
+										"type": "object",
+										"properties": {
+											"id": {
+												"type": "integer"
+											},
+											"elementType": {
+												"type": "integer",
+												"description": "One of the REVIEW_FORM_ELEMENT_TYPE_ constants."
+											},
+											"question": {
+												"type": "string"
+											},
+											"description": {
+												"type": "string"
+											},
+											"required": {
+												"type": "boolean"
+											},
+											"sequence": {
+												"type": "number"
+											},
+											"possibleResponses": {
+												"type": "array",
+												"description": "Localized options, present only for choice-based element types.",
+												"items": {
+													"type": "string"
+												}
+											},
+											"value": {
+												"description": "The reviewer's raw saved response (string, option index, or array of indices), or null when unanswered."
+											}
+										}
+									}
+								}
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You are not the assigned reviewer for this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "No review assignment could be found for you on this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/reviews/{submissionId}/reviewerRecommendationOptions": {
+			"get": {
+				"tags": [
+					"Reviews"
+				],
+				"summary": "Get the reviewer recommendation options for a review assignment.",
+				"description": "Returns the context's active reviewer recommendations, shaped for a select field. A recommendation the **calling reviewer** has already chosen stays in the list even if it has since been deactivated.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The recommendation options, each with a value and a localized label.",
+						"schema": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"value": {
+										"type": "integer"
+									},
+									"label": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You are not the assigned reviewer for this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "No review assignment could be found for you on this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/reviews/{submissionId}/reviewGuidelines": {
+			"get": {
+				"tags": [
+					"Reviews"
+				],
+				"summary": "Get the review guidelines for a review assignment.",
+				"description": "Returns the context's localized review guidelines for the stage the **calling reviewer** is assigned to: the internal guidelines for an internal review, otherwise the external ones.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The review guidelines for the stage the reviewer is assigned to.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"reviewGuidelines": {
+									"type": "string",
+									"description": "Localized review guidelines for the review stage, or null when the context has none."
+								}
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You are not the assigned reviewer for this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "No review assignment could be found for you on this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
+		"/reviews/{submissionId}/reviewerComments": {
+			"get": {
+				"tags": [
+					"Reviews"
+				],
+				"summary": "Get a reviewer's comments on a submission.",
+				"description": "Returns the **calling reviewer's** comment shared with the author and their comment kept private to editors. These are what the reviewer fills in when the assignment has no custom review form.",
+				"parameters": [
+					{
+						"name": "submissionId",
+						"in": "path",
+						"required": true,
+						"type": "integer"
+					}
+				],
+				"responses": {
+					"200": {
+						"x-summary": "Success",
+						"description": "The reviewer's viewable and private comments.",
+						"schema": {
+							"type": "object",
+							"properties": {
+								"comments": {
+									"type": "string",
+									"description": "The reviewer's comment visible to the author. Empty string when there is none."
+								},
+								"commentsPrivate": {
+									"type": "string",
+									"description": "The reviewer's comment visible only to editors. Empty string when there is none."
+								}
+							}
+						}
+					},
+					"403": {
+						"x-summary": "Request Unauthorized",
+						"description": "You are not the assigned reviewer for this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					},
+					"404": {
+						"x-summary": "Request Not Found",
+						"description": "No review assignment could be found for you on this submission.",
+						"schema": {
+							"$ref": "#/definitions/ErrorResponse"
+						}
+					}
+				}
+			}
+		},
 		"/reviews/{submissionId}/{reviewAssignmentId}/confirmReview": {
 			"put": {
 				"tags": [

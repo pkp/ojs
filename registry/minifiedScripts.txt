@@ -62,7 +62,6 @@ lib/pkp/js/controllers/form/FileUploadFormHandler.js
 lib/pkp/js/controllers/form/MultilingualInputHandler.js
 lib/pkp/js/controllers/form/CancelActionAjaxFormHandler.js
 lib/pkp/js/controllers/form/UserFormHandler.js
-lib/pkp/js/controllers/form/reviewer/ReviewerReviewStep3FormHandler.js
 lib/pkp/js/controllers/grid/GridHandler.js
 lib/pkp/js/controllers/grid/CategoryGridHandler.js
 lib/pkp/js/controllers/grid/files/review/AuthorReviewRevisionsGridHandler.js
