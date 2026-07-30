@@ -879,7 +879,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
      * @return mixed The value of the primary locale
      *  or null if no primary translation could be found.
      */
-    public function getPrimaryTranslation(array $localizedData, array $localePrecedence): mixed
+    public function getPrimaryTranslation(?array $localizedData, array $localePrecedence): mixed
     {
         // Check whether we have localized data at all.
         if (!is_array($localizedData) || empty($localizedData)) {
