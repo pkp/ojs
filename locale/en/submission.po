@@ -355,6 +355,10 @@ msgstr "The following requirements must be met before this can be published."
 msgid "publication.required.declined"
 msgstr "A declined submission can not be published."
 
+msgid "publication.required.pmurReview"
+msgstr "A PMUR version cannot be published without an associated review round. "
+"Please assign a review round to this publication version before proceeding."
+
 msgid "submission.license.description"
 msgstr ""
 "The license will be set automatically to <a href='{$licenseUrl}' "
