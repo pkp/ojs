@@ -16,14 +16,6 @@
     "lint": "eslint --fix ./js/load.js ./lib/pkp/js/load.js ./lib/pkp/js/usage-stats-chart.js ./lib/pkp/js/classes/VueRegistry.js",
     "format": "prettier --write ./js/load.js ./lib/pkp/js/load.js ./lib/pkp/js/usage-stats-chart.js ./lib/pkp/js/classes/VueRegistry.js",
     "php-fix": "php lib/pkp/lib/vendor/bin/php-cs-fixer fix --config .php-cs-fixer.php --allow-risky=yes",
-    "test:e2e:install": "playwright install chromium",
-    "test:e2e:setup": "playwright test --config=playwright/playwright.config.js --project=setup",
-    "test:e2e": "playwright test --config=playwright/playwright.config.js",
-    "test:e2e:ojs": "playwright test --config=playwright/playwright.config.js --project=ojs --pass-with-no-tests",
-    "test:e2e:ui": "playwright test --config=playwright/playwright.config.js --ui",
-    "test:e2e:debug": "PWDEBUG=1 playwright test --config=playwright/playwright.config.js",
-    "test:e2e:reset": "node lib/pkp/playwright/reset.js",
-    "test:e2e:serve": "tools/testServer.sh restart",
     "prepare": "husky install",
     "postinstall": "copyfiles -f node_modules/swiper/swiper-bundle*.{js,css} plugins/themes/default/js/lib/swiper && copyfiles -f node_modules/altcha/dist/altcha.i18n.js lib/pkp/js/lib/altcha"
   },
@@ -71,7 +63,6 @@
     "vite": "^8.0.0-beta.14"
   },
   "devDependencies": {
-    "@playwright/test": "^1.62.0",
     "@rushstack/eslint-patch": "^1.11.0",
     "@vitejs/plugin-vue": "^6.0.4",
     "@vue/eslint-config-prettier": "^8.0.0",
