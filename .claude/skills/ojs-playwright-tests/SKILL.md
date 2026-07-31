@@ -1,19 +1,16 @@
 ---
 name: ojs-playwright-tests
-description: Design record + app map for the OJS/OMP/OPS Playwright e2e harness (SCRATCHED 2026-07-31 in FULL RESET #2 — paths describe the rebuild target, not what exists). Folder split, asUser/auth fixtures, seeded roster, scenario-endpoint schema, per-worker servers, patterns/lessons, and the application map of key screens. Use when rebuilding the harness or, once it is rebuilt, when writing or debugging Playwright specs, POMs, fixtures, or scenario seeds in any of the three apps.
+description: Live harness guide + app map for the OJS/OMP/OPS Playwright e2e suite (rebuilt clean-room 2026-07-31, step-1 acceptance green on all three fleets). Folder split, asUser/auth fixtures, seeded roster, scenario-endpoint schema, per-worker servers, patterns/lessons, and the application map of key screens. Use when writing or debugging Playwright specs, POMs, fixtures, or scenario seeds in any of the three apps.
 ---
 
 # OJS Playwright Tests
 
-> **STATUS 2026-07-31: SCRATCHED — DESIGN RECORD ONLY** (FULL RESET #2,
-> PROGRESS banner). The harness this skill describes was deleted in all three
-> apps for the Fable-only rebuild; the previous implementation lives on branch
-> `e2e_ng` and in git history and is not read back. Until the rebuild passes
-> PRINCIPLES' Rebuild-acceptance list, every file path, npm script, seeded
-> user and schema key below names where things live once rebuilt — not what
-> exists today. Design invariants stay in `lib/pkp/docs/e2e/PRINCIPLES.md`;
-> parity verdicts in `lib/pkp/docs/e2e/scenario-processor-audit.md`. When the
-> rebuild lands, flip this banner back to live truth in the same commit.
+> **STATUS 2026-07-31: LIVE** — rebuilt clean-room from the design record
+> (FULL RESET #2; the previous implementation on branch `e2e_ng` was not read
+> back) and PRINCIPLES' Rebuild-acceptance list passed on all three fleets
+> (cold bootstrap, login smoke, scenario seeds, reset tool, Mail::fake
+> suppression). Design invariants stay in `lib/pkp/docs/e2e/PRINCIPLES.md`;
+> parity verdicts in `lib/pkp/docs/e2e/scenario-processor-audit.md`.
 
 You are helping the user write Playwright tests for OJS. This skill carries the moving parts that don't live in a single file: which of two folders a spec belongs in, which seeded user has which role, where a given screen lives in the Vue/PHP sources, and the conventions already established in the existing specs.
 
@@ -74,16 +71,24 @@ lib/pkp/playwright/
 │   ├── base-test.js         # The extended `test` fixture — start here
 │   ├── auth.js              # ensureAuthStateFor — storage-state cache w/ liveness probe
 │   ├── api.js               # pkpApi — test-API client (bootstrap, createContext, createSubmission)
-│   └── mail.js              # pkpMail — Mailpit HTTP API wrapper
+│   ├── mail.js              # pkpMail — Mailpit HTTP API wrapper
+│   └── env.js               # loadEnv(appRoot) — .env.playwright parser (shell wins)
 ├── pages/
 │   ├── BasePage.js          # POM base class + siteUrl()/contextUrl()
 │   ├── LoginPage.js         # form#login (lifts the maxlength=32 attr for long roster passwords)
 │   └── DashboardPage.js     # post-login landing
 ├── data/
-│   └── users.js             # The 18 baseline users + getPassword()
-├── reset.js                 # test:e2e:reset — recreate DB + wipe .auth/
+│   └── users.js             # The 18 baseline identities + getPassword()/getEmail()
+├── reset.js                 # test:e2e:reset — drop+recreate DB, wipe files dir + .auth/
+├── serve.js                 # test:e2e:serve — manual PHP server on the fleet's base port
 └── config-factory.js        # definePkpConfig({appName, appRoot, basePort}) used by all three apps
 ```
+
+The PHP side lives in `lib/pkp/classes/testing/` (Spec reader,
+UserSeeder, ContextFactory, PKPBootstrapSeeder, scenario builders) +
+`lib/pkp/api/v1/_test/PKPTestController.php`; each app adds
+`api/v1/_test/{index.php,TestController.php}`, `classes/testing/*` subclasses
+and `tools/installTest.php` (see `scenarios.md`).
 (`tinymce.js` and a typed scenario client are deliberately NOT recreated until
 a spec needs them — `pkpApi.createContext/createSubmission` covers seeding.)
 
