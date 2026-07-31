@@ -1,19 +1,19 @@
 ---
 name: ojs-playwright-tests
-description: Live guide + app map for the OJS/OMP/OPS Playwright e2e harness (rebuilt 2026-07-27 after the full reset). Folder split, asUser/auth fixtures, seeded roster, scenario-endpoint schema (step-2 core live, richer keys return per feature), per-worker servers, patterns/lessons, and the application map of key screens. Use when writing or debugging Playwright specs, POMs, fixtures, or scenario seeds in any of the three apps.
+description: Design record + app map for the OJS/OMP/OPS Playwright e2e harness (SCRATCHED 2026-07-31 in FULL RESET #2 — paths describe the rebuild target, not what exists). Folder split, asUser/auth fixtures, seeded roster, scenario-endpoint schema, per-worker servers, patterns/lessons, and the application map of key screens. Use when rebuilding the harness or, once it is rebuilt, when writing or debugging Playwright specs, POMs, fixtures, or scenario seeds in any of the three apps.
 ---
 
 # OJS Playwright Tests
 
-> **STATUS 2026-07-27: REBUILT** (PROGRESS restart step 2). The harness exists
-> again in all three apps — PHP test API, shared Playwright layer, per-app
-> wiring — verified per PRINCIPLES' Rebuild-acceptance list; stage reports in
-> `lib/pkp/docs/product/.reports/step2-harness/`. This skill is live truth for
-> the step-2 surface. The scenario SCHEMA is deliberately minimal and grows
-> per feature: `scenarios.md` marks live keys vs the recorded pre-reset
-> surface it grows back into. Design invariants stay in
-> `lib/pkp/docs/e2e/PRINCIPLES.md`; parity verdicts in
-> `lib/pkp/docs/e2e/scenario-processor-audit.md`.
+> **STATUS 2026-07-31: SCRATCHED — DESIGN RECORD ONLY** (FULL RESET #2,
+> PROGRESS banner). The harness this skill describes was deleted in all three
+> apps for the Fable-only rebuild; the previous implementation lives on branch
+> `e2e_ng` and in git history and is not read back. Until the rebuild passes
+> PRINCIPLES' Rebuild-acceptance list, every file path, npm script, seeded
+> user and schema key below names where things live once rebuilt — not what
+> exists today. Design invariants stay in `lib/pkp/docs/e2e/PRINCIPLES.md`;
+> parity verdicts in `lib/pkp/docs/e2e/scenario-processor-audit.md`. When the
+> rebuild lands, flip this banner back to live truth in the same commit.
 
 You are helping the user write Playwright tests for OJS. This skill carries the moving parts that don't live in a single file: which of two folders a spec belongs in, which seeded user has which role, where a given screen lives in the Vue/PHP sources, and the conventions already established in the existing specs.
 
