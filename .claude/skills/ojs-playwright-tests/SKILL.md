@@ -217,7 +217,7 @@ is a subject/body content marker, a supplement to the recipient scope only.
 - `users.md` — role constants, the 18 seeded users, password rule, login flow internals (incl. storage-state liveness probe), journal context
 - `app-map.md` — screens organized by editorial journey: URL patterns, Vue components, PHP handlers, controls
 - `patterns.md` — locator priority + OJS pitfalls, fixture selection, waiting strategy, parallel-load lessons, tag conventions, decision-button labels, POM hierarchy, canonical test skeleton, verify-before-trusting
-- `scenarios.md` — scenario API (`/api/v1/_test/scenarios/*`) endpoints and schema, fixture builders at `playwright/fixtures/scenarios/`, decision/round-status quirks, Mailpit (`pkpMail`) usage
+- `scenarios.md` — scenario API (`/api/v1/_test/scenarios/*`) endpoints and the live step-2 core schema, recorded spec-builder designs (`playwright/fixtures/scenarios/` returns with the feature suites), decision/round-status quirks, Mailpit (`pkpMail`) usage
 
 Load those on demand. You do not need to read them for every task.
 
