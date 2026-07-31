@@ -30,6 +30,7 @@ use PKP\core\Core;
 use PKP\db\DAORegistry;
 use PKP\doi\exceptions\DoiException;
 use PKP\submission\reviewAssignment\ReviewAssignment;
+use PKP\submission\reviewRound\ReviewRoundDAO;
 
 class Repository extends \PKP\publication\Repository
 {
@@ -144,6 +145,11 @@ class Repository extends \PKP\publication\Repository
         $publicationFeePayment = $completedPaymentDao->getByAssoc(null, OJSPaymentManager::PAYMENT_TYPE_PUBLICATION, $submission->getId());
         if ($publicationFeeEnabled && !$publicationFeePayment) {
             $errors['publicationFeeStatus'] = __('editor.article.payment.publicationFeeNotPaid');
+        }
+
+        // If publishing a PMUR, check that a review round is associated with it.
+        if ($this->pmurNeedsReviewRound($publication)) {
+            $errors['pmurReview'] = __('publication.required.pmurReview');
         }
 
         return $errors;
@@ -454,5 +460,27 @@ class Repository extends \PKP\publication\Repository
         }
 
         return IssueAssignment::defaultAssignment($context);
+    }
+
+    /**
+     * Checks if a publication is a PMUR and if that PMUR still needs an assigned review round.
+     * Used in pre-publication checks.
+     */
+    private function pmurNeedsReviewRound(Publication $publication): bool
+    {
+        $publicationVersionInfo = $publication->getVersion();
+        if ($publicationVersionInfo === null) {
+            return false;
+        }
+
+        if ($publicationVersionInfo->stage !== VersionStage::PUBLISHED_MANUSCRIPT_UNDER_REVIEW) {
+            return false;
+        }
+
+        /** @var ReviewRoundDAO $reviewRoundDao */
+        $reviewRoundDao = DAORegistry::getDAO('ReviewRoundDAO');
+
+        // PMUR will need review if there are no review rounds associated with this publication.
+        return $reviewRoundDao->getByPublicationId($publication->getId())->wasEmpty();
     }
 }
