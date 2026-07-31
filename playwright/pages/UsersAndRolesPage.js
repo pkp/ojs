@@ -6,9 +6,8 @@
  * Copyright (c) 2003-2026 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file docs/COPYING.
  *
- * Settings → Users & Roles, "Users" tab: the Invitations table, the users table
- * below it ("Current Users"), and the "Invite to a role" button that opens the
- * send-invitation wizard (`InviteUserWizardPage`).
+ * Settings → Users & Roles, "Users" tab: the Invitations table and the users
+ * table below it ("Current Users").
  *
  * Both tables are Vue `PkpTable`s whose accessible name carries a live count
  * ("Invitations (2)"), so the name is matched with a prefix regex and the count
@@ -33,7 +32,6 @@
  */
 
 const {BasePage} = require('../../lib/pkp/playwright/pages/BasePage.js');
-const {InviteUserWizardPage} = require('./InviteUserWizardPage.js');
 
 class UsersAndRolesPage extends BasePage {
 	/**
@@ -216,23 +214,6 @@ class UsersAndRolesPage extends BasePage {
 		return labels;
 	}
 
-	/** Open the send-invitation wizard. */
-	async openInviteWizard() {
-		const wizard = new InviteUserWizardPage(this.page);
-
-		await this.inviteButton.click();
-		await wizard.searchField.waitFor({timeout: 30_000});
-
-		return wizard;
-	}
-
-	/**
-	 * The wizard a row's "Edit" has already navigated to — same screen, opened
-	 * preloaded and without the search step, so there is nothing to click here.
-	 */
-	openedWizard() {
-		return new InviteUserWizardPage(this.page);
-	}
 }
 
 module.exports = {UsersAndRolesPage};

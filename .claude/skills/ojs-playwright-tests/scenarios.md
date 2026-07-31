@@ -19,8 +19,7 @@ report §3 (`docs/product/.reports/step2-harness/A-php-api.md`).
   categories + issues (OJS) + users w/ roles and `sections`/`series`
   sub-editor assignments); warm calls no-op.
 - `POST scenarios/context` — scratch context: `tag*`, context object,
-  `users[]` throwaways, `invitations[]` (U6, all apps — see below), declared
-  setting passthroughs.
+  `users[]` throwaways, declared setting passthroughs.
 - `POST scenarios/submission` — `tag*`, `context*`, `submitter*`, `title`,
   `abstract`, `locale`, `submitted` (false = wizard-resumable draft),
   `decisions[]` (real decision names, app-resolved), `reviewRounds[].reviewers[]`
@@ -97,7 +96,6 @@ Notable passthroughs accumulated across feature ports:
 - `reviewForms: [{title, description?, elements: [{type, question, required?, options?}]}]` — seeds active review forms at grid parity. Response echoes `reviewForms: [{id, title, elementIds}]`.
 - `issues: [...]` — OJS-only via `JournalScenarioController::afterContextCreated()`. Each issue accepts `accessStatus` (e.g., subscription-required), volume/number/year, etc.
 - `subscriptions: [...]` — OJS-only. `{type: {name, duration?, cost?, institutional?}, user?, institution?: {name, ipRanges}, status?: 'active'|'expired', dateStart?, dateEnd?}`. `'expired'` seeds an ACTIVE-status row with a past `date_end` — the lapsed state unreachable through the create form.
-- `invitations: [...]` — **LIVE (added for U6, 2026-07-28)**, all three apps. User-role invitations already sent in this context. See the section below.
 - `users[].roles` accepts **`siteAdmin`** — **LIVE (added for U53, 2026-07-29)**, all three apps, and on `bootstrap` too. See the section below.
 
 ## Context scenario · `users[].roles: ['siteAdmin']`
@@ -134,74 +132,9 @@ Implementation notes worth knowing:
 - Enrolment is `Repo::userGroup()->assignUserToGroup()`: the installer's own call,
   and the one the seeder already makes for every other role. Nothing is written by
   hand. Parity entry: `lib/pkp/docs/e2e/scenario-processor-audit.md`, 2026-07-29.
-- **`invitations[].roles` rejects `siteAdmin`** deliberately (400, "No default user
-  group for role 'siteAdmin'"): no screen invites anyone to it.
 - The seeded administrator needs no context membership to work. Verified live on
   all three fleets by signing in through the sign-in screen and reaching
   Administration → Hosted Journals / Presses / Servers.
-
-## Context scenario · `invitations`
-
-```js
-invitations: [
-    {email: 'newcomer@example.org', roles: ['sectionEditor'],      // a person with no account
-     givenName: 'Nadia', familyName: 'Newcomer', country: 'CA'},
-    {user: 'u6h.existing', roles: ['externalReviewer']},           // an existing account
-    {email: 'lapsed@example.org', roles: ['reader'], status: 'expired'},
-]
-```
-
-Exactly one of **`email`** (a newcomer) or **`user`** (an existing username) names
-the recipient — sending both, or neither, throws. `roles` is required and uses the
-app's scenario role keys ([per-app list](users.md#scenario-role-keys-per-app)).
-Optional: `givenName` / `familyName` / `affiliation` / `country` (newcomer only —
-for an existing account the app prohibits them, and they are skipped), `masthead`
-(default `true`), `inviter` (username; defaults to the site admin), and
-`status: 'pending' | 'expired'` (default `'pending'`).
-
-The builder walks the Invite-a-user wizard's own three API calls
-(add → populate → invite) through the invitation type's controller, so the seeded
-invitation is the real thing: key, expiry date, PENDING status, `email_log` row.
-A step the app refuses throws a 400 carrying the app's own validation errors.
-
-The response echoes one entry per invitation:
-
-```json
-{"id": 312, "status": "PENDING", "email": "…", "userId": null,
- "roles": ["sectionEditor"], "invitedAt": "…", "expiryDate": "…",
- "key": "KtqrSg",
- "acceptUrl": "…/u6harness-ojs-a/invitation/accept?id=312&key=KtqrSg",
- "declineUrl": "…/u6harness-ojs-a/invitation/decline?id=312&key=KtqrSg"}
-```
-
-`key` is the one-time invitation key in plaintext — it exists only for the length
-of the seeding request and is a bcrypt hash afterwards, so this response is the
-only place a test can get it without opening the email. Use the URLs to drive the
-recipient's journey; keep Mailpit for the scenarios where the delivered **email**
-is the thing under test (seeding mail is dropped by `Mail::fake()` as always).
-
-Behaviour worth knowing, all verified live on 8000/8100/8200:
-
-- **Expiry is a date, not a status.** An `'expired'` invitation still echoes
-  `status: "PENDING"`; what makes it expired is `expiryDate` in the past. It is
-  placed exactly one day past whatever `[invitations] expiration_days` the fleet
-  is configured for, with `invitedAt` slid back to match.
-- **The manager's Invitations table only lists still-active invitations** — an
-  expired one is absent from `Users & Roles → Invitations` (and from its count),
-  because `GET /invitations/{type}` filters on `stillActive()`. Assert its absence
-  there, and its state through the link.
-- **Both recipient links land somewhere assertable.** Pending + newcomer → the
-  3-step "Create <APP> account" wizard with the seeded name/country pre-filled;
-  pending + existing account → the 1-step "Review & create account" page listing
-  the roles; expired → the "Invitation Unavailable … accepted, declined, or
-  expired" page (accept AND decline both). Decline on a pending invitation shows
-  the POST-confirm page, not an immediate decline.
-- Role labels are per app: `sectionEditor` reads "Section editor" (OJS), "Series
-  editor" (OMP), "Moderator" (OPS).
-- **You cannot invite an existing user to a role they already hold** — the app's
-  `AddUserGroupRule` refuses it ("The user group is assigned to the invited
-  user") and the seed throws at the `populate` step. Give the throwaway invitee a
-  different role from the one being invited to.
 
 **Schema validation is enforced** (Opis, dev dependency): a spec with unknown keys gets a 400 naming the offending key. App-specific keys (`issues`, `subscriptions`, `metrics`) are declared via `schemaOverlayProperties()` overrides in the OJS controllers.
 

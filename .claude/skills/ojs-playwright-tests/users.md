@@ -25,7 +25,7 @@ Defined in `lib/pkp/classes/security/Role.php:24-31`. These are the integer IDs 
 
 ### Scenario role keys, per app
 
-Every scenario key that names a role — `users[].roles`, `invitations[].roles` — is
+Every scenario key that names a role — `users[].roles` — is
 resolved by `PKPTestApiController::resolveUserGroup()` against the group's stored
 `nameLocaleKey`, so the vocabulary is exactly the set of default groups the app
 ships. **There is no `reviewer` key anywhere: it is `externalReviewer`** (OMP also
@@ -63,11 +63,8 @@ and no `nameLocaleKey`, so `resolveRoleGroup()` finds it by role id instead of
 by the context-scoped name-key lookup. Enrolment is the app's own
 `Repo::userGroup()->assignUserToGroup()`, the same call the installer makes.
 
-Two things to remember:
+One thing to remember:
 
-- **`invitations[].roles` rejects it on purpose.** No screen invites anyone to
-  the site administrator role, so the invitation seeder does not either — you
-  get the usual "No default user group for role 'siteAdmin'" 400 there.
 - **This is the ONLY way to get a second administrator.** No screen grants the
   role: the Users & Roles user form intersects the posted group ids with
   `UserGroup::withContextIds([$contextId])` before saving, and the site admin
