@@ -27,3 +27,5 @@ registry/uiLocaleKeysBackend.json
 /config.test.inc.php
 
 .env.playwright
+playwright/.auth/
+playwright/test-results/

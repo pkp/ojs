@@ -1,8 +1,8 @@
 # Users & Roles Reference
 
-> **Live again** (rebuilt 2026-07-27) — the harness files named below exist and
-> match this file; corrections from the rebuild are folded in (auth probe,
-> maxlength handling, self-healing install).
+> **Live** (rebuilt clean-room 2026-07-31, step-1 rebuild) — the harness files
+> named below exist and match this file. Display names read "Firstname Role"
+> (`admin` is "Site Admin"); emails are `<username>@mail.test`.
 
 Everything auth-related for writing OJS Playwright tests. If you need to decide which user to log in as, or you need to know the password, start here.
 
@@ -139,7 +139,7 @@ See `asUser` in `lib/pkp/playwright/support/base-test.js`.
 ### Bootstrap prerequisite
 
 Auth only works after the setup project has run (`bootstrap.setup.js`). The setup runs before every test project; it probes `GET /api/v1/_test/bootstrap?context=publicknowledge` and no-ops warm (<1 s), or cold it:
-1. Installs the test schema (`tools/installTest.php` — self-healing from an empty or partially installed DB; refuses a populated one, which is what `--recreate-db` is for)
+1. Installs the test schema (`tools/installTest.php` — reads every parameter from `config.test.inc.php`; empty DB → install, install debris without a current version row → drop all tables + reinstall, installed DB → no-op; refuses any DB whose name lacks "test". `npm run test:e2e:reset` is what empties the DB)
 2. Seeds the `publicknowledge` journal (from `playwright/fixtures/bootstrap.js`)
 3. Seeds all 17 non-admin users (admin is created by the installer), including the section-editor→section assignments via `users[].sections`
 

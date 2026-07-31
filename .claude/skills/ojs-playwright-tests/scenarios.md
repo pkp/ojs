@@ -1,39 +1,53 @@
 # Scenario API & Mailpit
 
-> **Partially live** (rebuilt 2026-07-27): the endpoints exist again with the
-> deliberately minimal **step-2 core schema** — see "What is LIVE today" below.
-> Everything else in this file is the recorded pre-reset surface the API grows
-> back into per-feature (PRINCIPLES §3: extend only when multiple tests need
-> the same state; every builder change needs a parity entry in
-> `lib/pkp/docs/e2e/scenario-processor-audit.md`). The behavior quirks noted
-> throughout are live app truth regardless.
+> **Partially live** (rebuilt clean-room 2026-07-31, step-1 rebuild): the
+> endpoints exist with the deliberately minimal **step-2 core schema** — see
+> "What is LIVE today" below. Everything else in this file is the recorded
+> pre-reset surface the API grows back into per-feature (PRINCIPLES §3:
+> extend only when multiple tests need the same state; every builder change
+> needs a parity entry in `lib/pkp/docs/e2e/scenario-processor-audit.md`).
+> The behavior quirks noted throughout are live app truth regardless.
 
 ## What is LIVE today (step-2 core)
 
 Routes (site-wide: `/index.php/index/api/v1/_test/…`), gated by `X-Test-Key`
-(env `TEST_API_KEY`); schemas in `lib/pkp/classes/testing/scenario/schema/`;
-unknown keys → 400 with a dotted `specKey`. Authoritative field list: stage-A
-report §3 (`docs/product/.reports/step2-harness/A-php-api.md`).
+(env `TEST_API_KEY`; endpoint 404s when the server lacks the env var, 403 on a
+wrong header). There is no JSON-schema dir: validation is the strict `Spec`
+reader (`lib/pkp/classes/testing/Spec.php`) — every key a builder does not
+consume → 400 with a dotted `specKey`; the builders themselves are the
+authoritative field list.
 
 - `POST/GET bootstrap` — declarative base seed (context + sections/series +
-  categories + issues (OJS) + users w/ roles and `sections`/`series`
-  sub-editor assignments); warm calls no-op.
-- `POST scenarios/context` — scratch context: `tag*`, context object,
-  `users[]` throwaways, declared setting passthroughs.
-- `POST scenarios/submission` — `tag*`, `context*`, `submitter*`, `title`,
-  `abstract`, `locale`, `submitted` (false = wizard-resumable draft),
-  `decisions[]` (real decision names, app-resolved), `reviewRounds[].reviewers[]`
-  (invited/accepted/declined), `published`. Overlays: OJS `section`/`issue`;
-  OMP `series`/`seriesPosition` + per-round `stage: internal|external`;
+  categories (nested via `children`) + issues (OJS) + users w/ roles and
+  `sections`/`series` sub-editor assignments); warm calls no-op
+  (`{seeded: true, warm: true}`).
+- `POST scenarios/context` — scratch context: `tag*` (≤32 chars, single
+  alphanumeric token; defaults the urlPath), `context` object (path, name,
+  acronym, description, locales, contact, enabled), `users[]` throwaways.
+  Setting passthroughs return per feature.
+- `POST scenarios/submission` — `tag*`, `context*` (urlPath), `submitter*`
+  (username), `title`, `abstract`, `locale`, `submitted` (explicit false =
+  wizard-resumable draft at parity), `decisions[]` (real decision names,
+  app-resolved — unknown name 400s listing the app's roster),
+  `reviewRounds[].reviewers[]` (`{username, status: invited|accepted|declined}`),
+  `published`. Overlays: OJS `section` (abbrev; defaults to first section) /
+  `issue` ({volume, number, year} matching a seeded issue); OMP `series`
+  (path) / `seriesPosition` + per-round `stage: internal|external`;
   OPS `section` (and `reviewRounds` is REJECTED — no review stage).
 
-Per-app controllers: `JournalScenarioController` (OJS),
-`PressScenarioController` (OMP), `ServerScenarioController` (OPS), extending
-the shared `PKP*ScenarioController` base. NOT yet live: everything below this
+Implementation: shared base `lib/pkp/api/v1/_test/PKPTestController.php` +
+builders in `lib/pkp/classes/testing/` (`PKPBootstrapSeeder`,
+`scenario/PKPContextScenarioBuilder`, `scenario/PKPSubmissionScenarioBuilder`,
+`Spec`, `UserSeeder`, `ContextFactory`); per app:
+`api/v1/_test/{index.php,TestController.php}` and `classes/testing/`
+subclasses (`BootstrapSeeder`, `ContextScenarioBuilder`,
+`SubmissionScenarioBuilder`). Every build runs under `Mail::fake()` inside one
+DB transaction (failed builds roll back). NOT yet live: everything below this
 section that isn't in the list above (galleys, metrics, subscriptions, media
 files, review forms, reviewer suggestions, user comments, `commentsForEditor`,
 per-decision `toAuthor`/`toReviewers`/`toEditor`, ORCID passthrough,
-`reviewForm` per reviewer, issue `accessStatus` semantics).
+`reviewForm` per reviewer, issue `accessStatus` semantics, submission
+files — the step-2 core seeds no files).
 
 The scenario endpoints assemble realistic submission/journal state in one POST. They live behind `TestModeGate` (key + `APPLICATION_ENV=test`) and are the canonical alternative to driving the UI for setup. Mailpit is the test-side SMTP catcher that the suite asserts against for emails sent during *test actions* (decisions, password resets, invitations) — scenario-side mail is dropped on the floor by `Mail::fake()`.
 
