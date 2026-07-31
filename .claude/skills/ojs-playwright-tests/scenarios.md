@@ -20,20 +20,29 @@ authoritative field list.
 - `POST/GET bootstrap` — declarative base seed (context + sections/series +
   categories (nested via `children`) + issues (OJS) + users w/ roles and
   `sections`/`series` sub-editor assignments); warm calls no-op
-  (`{seeded: true, warm: true}`).
+  (`{seeded: true, warm: true}`). The FIRST declared section RENAMES the
+  app's hook-created default section (OJS "Articles", OPS "Preprints") instead
+  of duplicating it — so OJS seeds exactly ART+REV and OPS exactly PRE.
 - `POST scenarios/context` — scratch context: `tag*` (≤32 chars, single
   alphanumeric token; defaults the urlPath), `context` object (path, name,
   acronym, description, locales, contact, enabled), `users[]` throwaways.
   Setting passthroughs return per feature.
 - `POST scenarios/submission` — `tag*`, `context*` (urlPath), `submitter*`
-  (username), `title`, `abstract`, `locale`, `submitted` (explicit false =
-  wizard-resumable draft at parity), `decisions[]` (real decision names,
-  app-resolved — unknown name 400s listing the app's roster),
-  `reviewRounds[].reviewers[]` (`{username, status: invited|accepted|declined}`),
+  (username), `title` (default "Submission {tag}"), `abstract` (DEFAULTED —
+  "Seeded abstract for {tag}." — because the wizard requires one on
+  abstract-requiring sections; pass your own to override), `locale`,
+  `submitted` (default true; explicit false = wizard-resumable draft at
+  parity), `decisions[]` (real decision names, app-resolved — unknown name
+  400s listing the app's roster), `reviewRounds[].reviewers[]`
+  (`{username, status: invited|accepted|declined}`),
   `published`. Overlays: OJS `section` (abbrev; defaults to first section) /
   `issue` ({volume, number, year} matching a seeded issue); OMP `series`
   (path) / `seriesPosition` + per-round `stage: internal|external`;
   OPS `section` (and `reviewRounds` is REJECTED — no review stage).
+  Submitted seeds also carry the submit endpoint's APPROVE_SUBMISSION /
+  FORMAT_NEEDS_APPROVED_SUBMISSION notifications and the author as
+  publication primary contact (parity-fixed 2026-07-31 — see the audit
+  ledger).
 
 Implementation: shared base `lib/pkp/api/v1/_test/PKPTestController.php` +
 builders in `lib/pkp/classes/testing/` (`PKPBootstrapSeeder`,
@@ -69,7 +78,7 @@ Required: `tag` (string, ≤64 chars, parallel-isolation key — see [tag conven
 Optional top-level fields beyond the obvious ones:
 
 - **`submitted: boolean`** — defaults true when the scenario has decisions or reviewRounds. Calls `Repo::submission()->submit()`, matching the wizard's final step. An EXPLICIT `submitted: false` seeds a true wizard-resumable draft at parity (no `dateSubmitted`, `submissionProgress` set, author `canChangeMetadata`) — it appears in the author's Incomplete list and the wizard reopens on it. Omitting the key keeps the legacy Discussion-Manager shape.
-- **`commentsForEditor: string`** — sets `commentsForTheEditors` on the submission. Combined with `submitted: true`, fires `SubmissionSubmitted` which creates the Stage 1 discussion automatically.
+- **`commentsForEditor: string`** — sets `commentsForTheEditors` on the submission. Combined with `submitted: true`, fires `SubmissionSubmitted` which creates the editors discussion automatically. (Schema note 2026-07-31: discussions are stored in `edit_tasks` now — there is no `queries` table.)
 - **`author: {orcid, orcidIsVerified}`** — narrow passthrough that bypasses the REST orcid validator, useful for tests that need a pre-verified ORCID without the OAuth flow.
 - **`reviewerSuggestions: [{givenName, familyName, email, affiliation?, suggestionReason?}]`** — seeds the wizard's reviewer suggestions as if the author entered them (strings, not locale maps; wrapped under the spec `locale`).
 - **`userComments: [{user, text, approved?}]`** — public reader comments on the current publication (`approved` defaults true; requires the publication to be published). Mirrors the UserComment REST create + moderation-approve path.

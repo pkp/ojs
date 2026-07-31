@@ -26,7 +26,7 @@ Defined in `lib/pkp/classes/security/Role.php:24-31`. These are the integer IDs 
 ### Scenario role keys, per app
 
 Every scenario key that names a role — `users[].roles` — is
-resolved by `PKPTestApiController::resolveUserGroup()` against the group's stored
+resolved by `PKP\testing\UserSeeder::resolveUserGroup()` against the group's stored
 `nameLocaleKey`, so the vocabulary is exactly the set of default groups the app
 ships. **There is no `reviewer` key anywhere: it is `externalReviewer`** (OMP also
 has `internalReviewer`). A key the app does not ship throws a 400 that lists the

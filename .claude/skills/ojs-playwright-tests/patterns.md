@@ -244,7 +244,7 @@ Prefer the API over UI for setup. Drive the UI only for what the test is actuall
 Handled for you by `bootstrap.setup.js`. Seeds the `publicknowledge` journal, all 17 non-admin users, sections, categories, issues.
 
 ### Scenario API (preferred)
-For composite state (a submission in review, a published article with an issue assignment), POST to `/api/v1/_test/scenarios/submission` or `/scenarios/journal`. Use the fixture functions at `playwright/fixtures/scenarios/` rather than hand-rolling specs. See `scenarios.md` for the full surface.
+For composite state (a submission in review, a published article with an issue assignment), POST to `/api/v1/_test/scenarios/submission` or `/scenarios/context` via `pkpApi.createSubmission()` / `createContext()`. (The spec-builder functions at `playwright/fixtures/scenarios/` are recorded design — they return with the feature suites; until then specs POST through `pkpApi` directly.) See `scenarios.md` for the full surface.
 
 ### Per-test data via REST
 For one-off mutations, use `ojsApi` (OJS specs) or `pkpApi` (shared specs):
@@ -327,6 +327,12 @@ test('editor assigns reviewer, reviewer accepts', async ({page, asUser}) => {
 - **Mutating a seeded account's flags.** No baseline account is `mustChangePassword`-flagged anymore — `manager.maya` logs straight in when you need "a journal manager". If a test needs an account with unusual flags (e.g. a forced password reset), create a throwaway user in a scratch journal instead of touching the roster.
 
 ## UI realities learned the hard way
+
+- **There is no `queries` table on this schema** (verified 2026-07-31, step-1
+  parity check): discussions live in `edit_tasks` now, and
+  `Repo::submission()->submit()` auto-creates editorial tasks via
+  `Repo::editorialTask()`. Any older doc, probe SQL or plan referencing
+  `queries`/`query_participants` is stale — re-derive against `edit_tasks`.
 
 - **Dashboard search reacts to `keyup` only.** `fill()` sets the value without firing it — the list never filters. Use `pressSequentially()`.
 - **Paginated lists accumulate state across runs.** The test DB is long-lived locally; shared users like `author.alex` own hundreds of submissions. Never assert presence on an unscoped first page — search by the test's unique tag first. Extra trap: seeded drafts carry no `dateSubmitted` (real-draft parity) so they sort LAST in date-ordered lists.
