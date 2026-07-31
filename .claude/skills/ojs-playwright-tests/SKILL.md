@@ -183,7 +183,8 @@ separate probe sessions lost time to this (2026-07-28).
 
 The campaign runs three fleets side by side: OJS on 8000, OMP (`omp-main`) on 8100,
 OPS (`ops-main`) on 8200 (each `+parallelIndex` per worker) — sibling checkouts under
-`/Users/jarda/git/pkp/pkp-main/`, all on branch `e2e_ng`, test DBs
+`/Users/jarda/git/pkp/pkp-main/`, all on the campaign branch (`e2e_ng_2` since
+2026-07-31), test DBs
 `ojs_test`/`omp_test`/`ops_test` (Postgres locally; harness code is
 DB-driver-agnostic per PRINCIPLES item 8), same scenario endpoints and
 `publicknowledge` context path. Each app repo has its own `playwright/` tree
@@ -222,13 +223,24 @@ SPEC is wrong: report it so the finding reaches the spec's Findings register
 (`lib/pkp/docs/product/RUNBOOK.md` step 7). Never leave it as a skipped/`fixme`
 test or a "not covered" header note.
 
+## Potential security concerns
+
+If test or probe work surfaces something that could plausibly be a security
+weakness — a role reaching data or actions beyond its entitlement, a guard
+that does not hold, data exposed to the wrong audience — do NOT put it in a
+spec, test, report, PROGRESS note, or commit message: these repos are public.
+Append it to the maintainer's private file `../e2e_ng/security.md` (outside
+every repo, next to `server-questions.md`) and keep the public artifacts
+silent about it until the fix ships. Single home for the rule:
+`lib/pkp/docs/product/RUNBOOK.md` "What goes where".
+
 ## Commit discipline
 
 Owned by `lib/pkp/docs/product/RUNBOOK.md` (per-feature loop, Commit step —
 single home). Short form: `lib/pkp` and app root commit separately; never bump
 submodule pointers in ANY app repo — ojs, omp, or ops (`git restore --staged
 lib/pkp` first; no re-pin commits, maintainer ruling 2026-07-28 — sync omp/ops
-by checking out the same `e2e_ng` branch in their `lib/pkp` and leave the
+by checking out the same campaign branch (`e2e_ng_2`) in their `lib/pkp` and leave the
 resulting `M lib/pkp` uncommitted); specs + campaign docs + shared harness
 changes commit inside `lib/pkp`, app-only tests in each app's root. Both test
 folders stay flat.
