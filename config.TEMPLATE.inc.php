@@ -626,6 +626,11 @@ log_stacks = daily
 ; at https://github.com/Seldaek/monolog/blob/main/doc/02-handlers-formatters-processors.md#formatters
 ; log_formatter = Monolog\Formatter\JsonFormatter
 
+; Enable application-level security audit logging (authentication events, privilege
+; and configuration changes, plugin lifecycle, etc.). Enabled by default; set to Off
+; to disable all audit-log output.
+; log_audit = On
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;
 ; Job Queues Settings ;
