@@ -82,12 +82,27 @@ async function seedInReview(ojsApi, tag, {
     return result;
 }
 
-/** Find the submission's row on a dashboard list by its unique tag. */
+/**
+ * The submissions-table search box (the dashboard also carries a side-nav
+ * searchbox that owns the query in the search view — scope by accessible
+ * name to dodge the two-searchbox collision).
+ */
+function tableSearch(page) {
+    return page.getByRole('searchbox', {name: /Search submissions, ID/});
+}
+
+/**
+ * Find the submission's row on a dashboard list by its unique tag. The search
+ * commits on Enter (Search.vue submits on keydown.enter) and flips the
+ * dashboard to its cross-status search view; the wait is bounded by the
+ * resulting row, not a timer.
+ */
 async function findRowByTag(page, tag) {
-    const search = page.getByRole('searchbox');
+    const search = tableSearch(page);
     await expect(search).toBeVisible({timeout: 30_000});
     await search.click();
     await search.pressSequentially(tag, {delay: 25});
+    await search.press('Enter');
     const row = page.getByRole('row').filter({hasText: tag});
     await expect(row).toBeVisible({timeout: 30_000});
     return row;
