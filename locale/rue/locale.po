@@ -3,7 +3,7 @@
 # Kamil Federyga <kamilfederyga@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-07-20 15:44+0000\n"
+"PO-Revision-Date: 2026-08-03 14:59+0000\n"
 "Last-Translator: Kamil Federyga <kamilfederyga@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/locale/rue/>\n"
 "Language: rue\n"
@@ -1002,7 +1002,7 @@ msgid "layoutEditor.galley.replaceGalley"
 msgstr "Замін файль до публикациі"
 
 msgid "layoutEditor.galley.uploadSuppFile"
-msgstr "Перешлий поміцніиый файль"
+msgstr "Перешлий поміцничый файль"
 
 msgid "sectionEditor.regrets.decisionRound"
 msgstr "Рішыня редактора, етап {$round}"
