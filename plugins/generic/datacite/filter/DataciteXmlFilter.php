@@ -374,31 +374,37 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $creators = [];
         switch (true) {
             case (isset($reviewAssignment)):
+                if (!$publication) {
+                    throw new Exception('DataCite export: Cannot export/deposit review assignment because the associated publication is missing.');
+                }
+
                 $locale = $publication->getData('locale');
-                $reviewer = Repo::user()->get($reviewAssignment->getReviewerId());
+                $reviewer = Repo::user()->get($reviewAssignment->getReviewerId(), true);
+
+                if (empty($reviewer)) {
+                    throw new Exception('DataCite export: Cannot export/deposit review assignment because the associated reviewer is missing.');
+                }
+
                 $affiliation = $reviewer->getAffiliation($locale);
                 $isOpenReview = $reviewAssignment->getReviewMethod() === ReviewAssignment::SUBMISSION_REVIEW_METHOD_OPEN;
 
-                if (!empty($reviewer)) {
-                    $name = null;
-                    $affiliations = [];
-                    $orcid = null;
+                $name = null;
+                $affiliations = [];
+                $orcid = null;
 
-                    if ($isOpenReview) {
-                        $name = $reviewer->getFullName(false, true, $locale);
-                        $affiliations = $affiliation ? [$affiliation] : null;
-                        $orcid = $reviewer->getData('orcidIsVerified') ? $reviewer->getData('orcid') : null;
-                    } else {
-                        $name = DATACITE_UNKNOWN_ANONYMOUS;
-                    }
-
-                    $creators[] = [
-                        'name' => $name,
-                        'orcid' => $orcid,
-                        'affiliations' => $affiliations,
-                    ];
-                    break;
+                if ($isOpenReview) {
+                    $name = $reviewer->getFullName(false, true, $locale);
+                    $affiliations = $affiliation ? [$affiliation] : null;
+                    $orcid = $reviewer->getData('orcidIsVerified') ? $reviewer->getData('orcid') : null;
+                } else {
+                    $name = DATACITE_UNKNOWN_ANONYMOUS;
                 }
+
+                $creators[] = [
+                    'name' => $name,
+                    'orcid' => $orcid,
+                    'affiliations' => $affiliations,
+                ];
                 break;
             case (isset($galleyFile) && ($genre = $plugin->getCache()->get('genres', $galleyFile->getData('genreId'))) && $genre->getSupplementary()):
                 // Check whether we have a supp file creator set...
@@ -491,9 +497,8 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $alternativeTitle = null;
         switch (true) {
             case isset($reviewAssignment):
-
                 /***
-                 * The `getTranslationsByPrecedence` method, which is called further down, expect $titles be an assoc array where the key is the locale key and the value is the localized string.
+                 * The `getTranslationsByPrecedence` method, which is called further down, expect $titles be an assoc array where the key is the locale key and the value is the localized string for that locale.
                  * Since reviews don't have localized titles/names available, manually go through each locale key and add an entry in the $title for that key.
                  */
                 foreach ($objectLocalePrecedence as $locale) {
@@ -778,7 +783,9 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         $relatedIdentifiersNode = $doc->createElementNS($deployment->getNamespace(), 'relatedIdentifiers');
         switch (true) {
             case isset($reviewAssignment):
-                assert(isset($publication));
+                if (!$publication) {
+                    throw new Exception('DataCite export: Cannot export/deposit review assignment because the associated publication is missing.');
+                }
                 // Reviews: publication/article
                 $publicationDoi = $publication->getDoi();
 
