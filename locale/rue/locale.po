@@ -3,8 +3,8 @@
 # Kamil Federyga <kamilfederyga@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-08-03 14:59+0000\n"
-"Last-Translator: Kamil Federyga <kamilfederyga@gmail.com>\n"
+"PO-Revision-Date: 2026-08-04 10:14+0000\n"
+"Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/locale/rue/>\n"
 "Language: rue\n"
 "MIME-Version: 1.0\n"
@@ -1128,3 +1128,20 @@ msgstr "Вышлий рецензию до редактора"
 
 msgid "reviewer.article.uploadedFile"
 msgstr "Высланы файлі"
+
+msgid "reviewer.article.notifyEditorA"
+msgstr "Дай знати ведучому редакторови"
+
+msgid "reviewer.article.notifyEditorB"
+msgstr "ци підоймеш ся рецензиі."
+
+msgid "reviewer.article.reviewGuidelinesDescription"
+msgstr ""
+"Вказівкы для рецензентів окисляют критериі оціны придатности тексту до "
+"публикациі в часописі і можут містити специяльны інструкциі односячы ся до "
+"прирыхтуваня достовірной і помічной рецензиі. В часі творіня рецензиі "
+"рецензенты мают до выкористаня два текстовы выгляды: перше \"для автора і "
+"редактора\" як тіж друге \"для редактора\". Альтернатывні кєрівник часопису "
+"може утворити карту науковой рецензиі в закладці Карты Рецензиі. В каждым "
+"припадку редакторы будут мати можніст влучыня рецензиі до кореспонденциі з "
+"автором."
