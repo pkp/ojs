@@ -1,7 +1,7 @@
 # Gantulga <cybermon@gmail.com>, 2023, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-07 06:31+0000\n"
+"PO-Revision-Date: 2026-07-29 09:09+0000\n"
 "Last-Translator: Gantulga <cybermon@gmail.com>\n"
 "Language-Team: Mongolian <http://translate.pkp.sfu.ca/projects/ojs/"
 "importexport-pubmed/mn/>\n"
@@ -26,8 +26,8 @@ msgstr ""
 
 msgid "plugins.importexport.pubmed.settings.form.nlmTitle.description"
 msgstr ""
-"Сэтгүүлийн NLM гарчгийн товчлол. Хэрэв та товчлолыг мэдэхгүй бол <\" <a href="
-"\\\"https://www.ncbi.nlm.nih.gov/nlmcatalog/\\\">NLM каталогоос хайна уу</a>"
+"Сэтгүүлийн NLM гарчгийн товчлол. Хэрэв та товчлолыг мэдэхгүй бол, <a href="
+"\"https://www.ncbi.nlm.nih.gov/nlmcatalog/\">NLM каталогоос хайна уу</a>."
 
 msgid "plugins.importexport.pubmed.displayName"
 msgstr "PubMed XML экспорт гаргах"

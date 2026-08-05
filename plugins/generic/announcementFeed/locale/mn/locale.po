@@ -1,0 +1,53 @@
+# Gantulga <cybermon@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2026-07-29 09:09+0000\n"
+"Last-Translator: Gantulga <cybermon@gmail.com>\n"
+"Language-Team: Mongolian <http://translate.pkp.sfu.ca/projects/ojs/"
+"generic-announcementFeed/mn/>\n"
+"Language: mn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.generic.announcementfeed.settings.recentItemsRequired"
+msgstr "Саяхны мэдээллүүдийг эерэг бүхэл тоо оруулна уу."
+
+msgid "plugins.generic.announcementfeed.atom.altText"
+msgstr "Atom лого"
+
+msgid "plugins.generic.announcementfeed.rss1.altText"
+msgstr "RSS1 лого"
+
+msgid "plugins.generic.announcementfeed.rss2.altText"
+msgstr "RSS2 лого"
+
+msgid "plugins.generic.announcementfeed.settings"
+msgstr "Тохиргоо"
+
+msgid "plugins.generic.announcementfeed.displayName"
+msgstr "Зарлалын нэмэлт хэрэгсэл"
+
+msgid "plugins.generic.announcementfeed.settings.all"
+msgstr "Бүх сэтгүүлийн хуудсан дээр нэмэлт холбоосуудыг харуулах."
+
+msgid "plugins.generic.announcementfeed.settings.announcement"
+msgstr "Зөвхөн зарын хуудсан дээр мэдээллийн холбоосуудыг харуулах."
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements1"
+msgstr "Мэдээллийг хязгаарлах"
+
+msgid "plugins.generic.announcementfeed.settings.recentAnnouncements2"
+msgstr "хамгийн сүүлийн үеийн зарлалууд."
+
+msgid "plugins.generic.announcementfeed.description"
+msgstr ""
+"Энэ хэрэгсэл нь сэтгүүлийн зарлалуудад зориулсан RSS/Atom вэб мэдээллийг "
+"татаж үүсгэдэг."
+
+msgid "plugins.generic.announcementfeed.settings.homepage"
+msgstr ""
+"Зөвхөн нүүр хуудас болон зарлалын хуудсан дээр мэдээллийн холбоосуудыг "
+"харуулах."
