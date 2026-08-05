@@ -55,4 +55,7 @@ if (in_array('mediaFiles', $urlParts)) {
     return new \PKP\handler\APIHandler(new \PKP\API\v1\submissions\MediaFilesController());
 }
 
+if (in_array('reviewAssignments', $urlParts)) {
+    return new \PKP\handler\APIHandler(new \PKP\API\v1\submissions\reviewAssignments\ReviewAssignmentController());
+}
 return new \PKP\handler\APIHandler(new \APP\API\v1\submissions\SubmissionController());
