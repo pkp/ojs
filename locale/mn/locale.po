@@ -1,7 +1,7 @@
 # Gantulga <cybermon@gmail.com>, 2023, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-07 06:31+0000\n"
+"PO-Revision-Date: 2026-07-29 09:09+0000\n"
 "Last-Translator: Gantulga <cybermon@gmail.com>\n"
 "Language-Team: Mongolian <http://translate.pkp.sfu.ca/projects/ojs/locale/mn/"
 ">\n"
@@ -22,7 +22,7 @@ msgid "reviewer.submission.reviewFormResponse.form.responseRequired"
 msgstr "Шаардлагатай талбаруудыг бөглөнө үү."
 
 msgid "common.software"
-msgstr "Open Journal Systems"
+msgstr "Нээлттэй сэтгүүлийн системүүд"
 
 msgid "common.confirmComplete"
 msgstr ""
@@ -457,10 +457,10 @@ msgid "issue.number"
 msgstr "Дугаар"
 
 msgid "issue.vol"
-msgstr "Боть"
+msgstr "Боть."
 
 msgid "issue.no"
-msgstr "Дугаар"
+msgstr "Дугаар."
 
 msgid "issue.year"
 msgstr "Он"
@@ -691,7 +691,7 @@ msgstr "Хамаарал"
 
 msgid "plugins.categories.viewableFiles.description"
 msgstr ""
-"Энэхүү нэмэгдлүүд нь өгүүллийн эх бэлтгэлийг өөр өөр төрлийн баримт бичгээр "
+"Энэхүү нэмэгдлүүд нь өгүүллийн эх бэлтгэлийг өөр төрлийн баримт бичгээр "
 "харуулах боломжийг олгодог."
 
 msgid "plugins.categories.auth.description"
@@ -996,7 +996,9 @@ msgstr ""
 msgid "reviewer.article.enterCompetingInterests"
 msgstr ""
 "Энэхүү судалгаатай холбоотой ашиг сонирхлын зөрчил байгаа эсэхээ мэдэгдэнэ "
-"үү."
+"үү(<a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">Сэтгүүлийн бодлогыг хэсгээс</a> харна "
+"уу)."
 
 msgid "reviewer.article.enterReviewA"
 msgstr ""
@@ -1945,7 +1947,7 @@ msgid "notification.type.openAccess"
 msgstr "Дугаар нээлттэй хандалттай боллоо."
 
 msgid "notification.type.reviewerFormComment"
-msgstr "\"{$title}\" өгүүлэлд зориулсан хяналтын маягтын хариу ирлээ."
+msgstr "\"{$title}.\" өгүүлэлд зориулсан хяналтын маягтын хариу ирлээ."
 
 msgid "notification.type.reviewing"
 msgstr "Хяналтын үеийн үйл явдлууд"
@@ -2106,7 +2108,7 @@ msgid "reader.subscriptionOrFeeAccess"
 msgstr "Захиалга эсвэл Төлбөр шаардлагатай"
 
 msgid "reader.purchasePrice"
-msgstr "({$currency} {$price})"
+msgstr "({$валют} {$үнэ})"
 
 msgid "search.results.orderBy"
 msgstr "Үр дүнг эрэмбэлэх"

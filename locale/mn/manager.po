@@ -1,7 +1,7 @@
 # Gantulga <cybermon@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-07 06:31+0000\n"
+"PO-Revision-Date: 2026-07-29 09:09+0000\n"
 "Last-Translator: Gantulga <cybermon@gmail.com>\n"
 "Language-Team: Mongolian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "mn/>\n"
@@ -46,7 +46,7 @@ msgstr ""
 
 msgid "manager.setup.enableDois.description"
 msgstr ""
-"Энэ сэтгүүлд нийтлэгдсэн бүтээлүүдэд Дижитал Объект Танигч (DOI) оноохыг "
+"Энэ сэтгүүлд нийтлэгдсэн бүтээлүүдэд Дижитал Объект Танигч (DOIs) оноохыг "
 "зөвшөөрөх."
 
 msgid "doi.manager.settings.doiObjectsRequired"
@@ -2313,18 +2313,24 @@ msgstr "Захиалгын хугацаа удахгүй дуусна"
 
 msgid "mailable.subscriptionExpiresSoon.description"
 msgstr ""
+"Энэ имэйлийг захиалагчдад захиалгын хугацаа нь удахгүй дуусах тухай мэдэгдэх "
+"зорилгоор автоматаар илгээдэг."
 
 msgid "mailable.subscriptionExpired.name"
 msgstr "Захиалгын хугацаа дууссан"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
+"Энэ имэйлийг захиалагчийн захиалгын хугацаа дууссан тухай мэдэгдэх зорилгоор "
+"автоматаар илгээсэн болно"
 
 msgid "mailable.subscriptionExpiredLast.name"
 msgstr "Захиалга дууссан (Эцсийн сануулга)"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
+"Энэ имэйлийг захиалагчийн захиалгын хугацаа хоёр дахь удаагаа дууссан тухай "
+"мэдэгдэх зорилгоор автоматаар илгээнэ"
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
 msgstr "Хувь хүний захиалга худалдан авах"

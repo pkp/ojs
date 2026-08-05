@@ -1,7 +1,7 @@
 # Gantulga <cybermon@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-07 06:31+0000\n"
+"PO-Revision-Date: 2026-07-29 09:09+0000\n"
 "Last-Translator: Gantulga <cybermon@gmail.com>\n"
 "Language-Team: Mongolian <http://translate.pkp.sfu.ca/projects/ojs/editor/mn/"
 ">\n"
@@ -95,16 +95,16 @@ msgid "editor.notifyUsers"
 msgstr "Хэрэглэгчдэд мэдэгдэх"
 
 msgid "editor.notifyUsers.allReaders"
-msgstr "Бүх уншигчид ({$count} хэрэглэгч)"
+msgstr "Бүх уншигчид ({$count} users)"
 
 msgid "editor.notifyUsers.allAuthors"
-msgstr "Бүх нийтлэгдсэн зохиогчид ({$count} хэрэглэгч)"
+msgstr "Бүх нийтлэгдсэн зохиогчид ({$count} users)"
 
 msgid "editor.notifyUsers.allIndividualSubscribers"
-msgstr "Бүх хувь захиалагчид ({$count} хэрэглэгч)"
+msgstr "Бүх хувь захиалагчид ({$count} users)"
 
 msgid "editor.notifyUsers.allInstitutionalSubscribers"
-msgstr "Бүх байгууллагын захиалагчид ({$count} хэрэглэгч)"
+msgstr "Бүх байгууллагын захиалагчид ({$count} users)"
 
 msgid "editor.notifyUsers.inProgress"
 msgstr "Хэрэглэгчдэд мэдэгдэж байна..."
@@ -445,7 +445,7 @@ msgid "editor.article.editMetadata"
 msgstr "Хувилбарын мета өгөгдлийг засварлах"
 
 msgid "editor.article.scheduleForPublication"
-msgstr "Хэвлэхээр төлөвлөх:"
+msgstr "Хэвлэхээр төлөвлөх"
 
 msgid "editor.article.scheduleForPublication.toBeAssigned"
 msgstr "Оноогдохоор хүлээгдэж буй"

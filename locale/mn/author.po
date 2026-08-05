@@ -1,7 +1,7 @@
 # Gantulga <cybermon@gmail.com>, 2023, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-02-07 06:31+0000\n"
+"PO-Revision-Date: 2026-07-29 09:09+0000\n"
 "Last-Translator: Gantulga <cybermon@gmail.com>\n"
 "Language-Team: Mongolian <http://translate.pkp.sfu.ca/projects/ojs/author/mn/"
 ">\n"
@@ -115,7 +115,7 @@ msgid "author.submit.journalSection"
 msgstr "Сэтгүүлийн салбар хэсэг"
 
 msgid "author.submit.journalSectionDescription"
-msgstr ""
+msgstr "Ирүүлсэн бүтээлийг сэтгүүлийн аль нэг хэсэгт илгээх ёстой."
 
 msgid "author.submit.verifyChecklist"
 msgstr ""
