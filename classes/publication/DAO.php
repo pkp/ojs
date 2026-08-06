@@ -52,16 +52,15 @@ class DAO extends \PKP\publication\DAO
     /**
      * @copydoc SchemaDAO::_fromRow()
      */
-    public function fromRow(object $primaryRow): Publication
+    public function fromRow(object $primaryRow, bool $cacheable = false): Publication
     {
-        $publication = parent::fromRow($primaryRow);
+        $publication = parent::fromRow($primaryRow, $cacheable);
 
-        $publication->setData(
-            'galleys',
-            Repo::galley()->getCollector()
-                ->filterByPublicationIds([$publication->getId()])
-                ->getMany()
-        );
+        $galleys = Repo::galley()->getCollector()
+            ->filterByPublicationIds([$publication->getId()])
+            ->getMany();
+
+        $publication->setData('galleys', $cacheable ? $galleys->collect() : $galleys);
 
         return $publication;
     }

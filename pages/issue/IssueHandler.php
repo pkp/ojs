@@ -356,7 +356,7 @@ class IssueHandler extends Handler
         $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */
 
         $genreDao = DAORegistry::getDAO('GenreDAO'); /** @var GenreDAO $genreDao */
-        $primaryGenres = $genreDao->getPrimaryByContextId($journal->getId())->toArray();
+        $primaryGenres = $genreDao->getPrimaryByContextId($journal->getId(), Config::getVar('cache', 'object_cache') && !Validation::isLoggedIn());
         $primaryGenreIds = array_map(fn ($genre) => $genre->getId(), $primaryGenres);
 
         $sections = Repo::section()->getByIssueId($issue->getId());
@@ -373,7 +373,7 @@ class IssueHandler extends Handler
             ->filterByContextIds([$issue->getJournalId()])
             ->filterByIssueIds([$issue->getId()])
             ->orderBy(\APP\submission\Collector::ORDERBY_SEQUENCE, \APP\submission\Collector::ORDER_DIR_ASC)
-            ->getMany();
+            ->getMany(Config::getVar('cache', 'object_cache') && !Validation::isLoggedIn());
 
         foreach ($issueSubmissions as $submission) {
             // Ensure that the publication is published, or the issue is being previewed, and that it has a section
