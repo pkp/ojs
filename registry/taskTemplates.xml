@@ -10,14 +10,14 @@
   * XML file including information about default task and discussion templates.
   -->
 <templates>
-	<template title="mailable.discussionSubmission.name" description="emails.discussion.body" emailKey="DISCUSSION_NOTIFICATION_SUBMISSION" stageId="WORKFLOW_STAGE_ID_SUBMISSION"/>
-	<template title="mailable.discussionReview.name" description="emails.discussion.body" emailKey="DISCUSSION_NOTIFICATION_REVIEW" stageId="WORKFLOW_STAGE_ID_EXTERNAL_REVIEW"/>
-	<template title="mailable.discussionCopyediting.name" description="emails.discussion.body" emailKey="DISCUSSION_NOTIFICATION_COPYEDITING" stageId="WORKFLOW_STAGE_ID_EDITING"/>
-	<template title="mailable.discussionProduction.name" description="emails.discussion.body" emailKey="DISCUSSION_NOTIFICATION_PRODUCTION" stageId="WORKFLOW_STAGE_ID_PRODUCTION"/>
-	<template title="mailable.copyeditRequest.name" description="emails.copyeditRequest.body" emailKey="COPYEDIT_REQUEST" stageId="WORKFLOW_STAGE_ID_EDITING"/>
-	<template title="mailable.editorAssignedManual.name" description="emails.editorAssign.body" emailKey="EDITOR_ASSIGN_SUBMISSION" stageId="WORKFLOW_STAGE_ID_SUBMISSION"/>
-	<template title="mailable.editorAssignedManual.name" description="emails.editorAssignReview.body" emailKey="EDITOR_ASSIGN_REVIEW" stageId="WORKFLOW_STAGE_ID_EXTERNAL_REVIEW"/>
-	<template title="mailable.editorAssignedManual.name" description="emails.editorAssignProduction.body" emailKey="EDITOR_ASSIGN_PRODUCTION" stageId="WORKFLOW_STAGE_ID_PRODUCTION"/>
-	<template title="mailable.layoutRequest.name" description="emails.layoutRequest.body" emailKey="LAYOUT_REQUEST" stageId="WORKFLOW_STAGE_ID_PRODUCTION"/>
-	<template title="mailable.layoutComplete.name" description="emails.layoutComplete.body" emailKey="LAYOUT_COMPLETE" stageId="WORKFLOW_STAGE_ID_PRODUCTION"/>
+	<template title="mailable.discussionSubmission.name" description="emails.discussion.body" key="DISCUSSION_NOTIFICATION_SUBMISSION" stageId="WORKFLOW_STAGE_ID_SUBMISSION"/>
+	<template title="mailable.discussionReview.name" description="emails.discussion.body" key="DISCUSSION_NOTIFICATION_REVIEW" stageId="WORKFLOW_STAGE_ID_EXTERNAL_REVIEW"/>
+	<template title="mailable.discussionCopyediting.name" description="emails.discussion.body" key="DISCUSSION_NOTIFICATION_COPYEDITING" stageId="WORKFLOW_STAGE_ID_EDITING"/>
+	<template title="mailable.discussionProduction.name" description="emails.discussion.body" key="DISCUSSION_NOTIFICATION_PRODUCTION" stageId="WORKFLOW_STAGE_ID_PRODUCTION"/>
+	<template title="mailable.copyeditRequest.name" description="emails.copyeditRequest.body" key="COPYEDIT_REQUEST" stageId="WORKFLOW_STAGE_ID_EDITING"/>
+	<template title="mailable.editorAssignedManual.name" description="emails.editorAssign.body" key="EDITOR_ASSIGN_SUBMISSION" stageId="WORKFLOW_STAGE_ID_SUBMISSION"/>
+	<template title="mailable.editorAssignedManual.name" description="emails.editorAssignReview.body" key="EDITOR_ASSIGN_REVIEW" stageId="WORKFLOW_STAGE_ID_EXTERNAL_REVIEW"/>
+	<template title="mailable.editorAssignedManual.name" description="emails.editorAssignProduction.body" key="EDITOR_ASSIGN_PRODUCTION" stageId="WORKFLOW_STAGE_ID_PRODUCTION"/>
+	<template title="mailable.layoutRequest.name" description="emails.layoutRequest.body" key="LAYOUT_REQUEST" stageId="WORKFLOW_STAGE_ID_PRODUCTION"/>
+	<template title="mailable.layoutComplete.name" description="emails.layoutComplete.body" key="LAYOUT_COMPLETE" stageId="WORKFLOW_STAGE_ID_PRODUCTION"/>
 </templates>
