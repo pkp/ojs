@@ -142,9 +142,9 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
     }
 
     /** @copydoc EntityDAO::fromRow() */
-    public function fromRow(object $row): Issue
+    public function fromRow(object $row, ?callable $populator = null): Issue
     {
-        $issue = parent::fromRow($row);
+        $issue = parent::fromRow($row, $populator);
         $this->setDoiObject($issue);
 
         return $issue;
