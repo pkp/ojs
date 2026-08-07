@@ -302,14 +302,15 @@ exports.addReviewer = async function addReviewer(page, name, {method} = {}) {
 /**
  * Complete a review as the signed-in reviewer: open the reviewer page for the
  * submission, walk whatever steps remain (accept invitation, guidelines),
- * pick a recommendation and submit.
+ * optionally fill the two comment fields, pick a recommendation and submit.
  *
  * @param {import('@playwright/test').Page} page an authenticated reviewer page
  * @param {string} contextPath
  * @param {number} submissionId
- * @param {{recommendation?: string}} options
+ * @param {{recommendation?: string, comments?: string, privateComments?: string}} options
+ *   comments → "For author and editor"; privateComments → the editor-only box.
  */
-exports.performReview = async function performReview(page, contextPath, submissionId, {recommendation = 'Accept Submission'} = {}) {
+exports.performReview = async function performReview(page, contextPath, submissionId, {recommendation = 'Accept Submission', comments, privateComments} = {}) {
     await page.goto(`/index.php/${contextPath}/reviewer/submission/${submissionId}`);
     // Whichever steps remain: a fresh invitation offers "Accept Review,
     // Continue to Step #2"; an already-accepted assignment revisits step 1
@@ -343,6 +344,21 @@ exports.performReview = async function performReview(page, contextPath, submissi
         await step3Button.filter({visible: true}).first().click();
     }
     await expect(submitButton.filter({visible: true})).toBeVisible({timeout: 30_000});
+    // Step 3's comment boxes are TinyMCE-backed: type through the editor
+    // (click + key events) — a DOM-level fill() bypasses the editor model
+    // and the typed text never reaches the submitted textarea.
+    if (comments) {
+        const body = page
+            .frameLocator('iframe[id^="comments"]:not([id^="commentsPrivate"])')
+            .locator('body');
+        await body.click();
+        await body.pressSequentially(comments);
+    }
+    if (privateComments) {
+        const body = page.frameLocator('iframe[id^="commentsPrivate"]').locator('body');
+        await body.click();
+        await body.pressSequentially(privateComments);
+    }
     await page.locator('select[id="reviewerRecommendationId"]').selectOption({label: recommendation});
     await submitButton.click();
     // Legacy confirmation dialog
@@ -350,6 +366,112 @@ exports.performReview = async function performReview(page, contextPath, submissi
     await expect(page.getByRole('heading', {name: 'Review Submitted'})).toBeVisible({
         timeout: 30_000,
     });
+};
+
+/**
+ * A legacy side modal located by the form it carries (the wrapper reports
+ * visibility: hidden during transitions — anchor waits on inner content).
+ *
+ * @param {import('@playwright/test').Page} page
+ * @param {string} formId e.g. 'editReviewForm', 'sendReminderForm'
+ */
+exports.legacyModal = function legacyModal(page, formId) {
+    return page.getByRole('dialog').filter({has: page.locator(`form#${formId}`)});
+};
+
+/**
+ * Pick a date on a jQuery UI datepicker field the way the screen offers it —
+ * a calendar pick (typed dates are discarded by the widget; register A16 of
+ * the reviewer-assignment spec, walked but never asserted). The visible
+ * input's id is runtime-suffixed, so fields are addressed by id prefix.
+ *
+ * @param {import('@playwright/test').Page} page
+ * @param {import('@playwright/test').Locator} scope the form/modal holding the field
+ * @param {string} fieldPrefix 'responseDueDate' | 'reviewDueDate'
+ * @param {Date} date
+ */
+exports.pickDate = async function pickDate(page, scope, fieldPrefix, date) {
+    const input = scope.locator(`input.datepicker[id^="${fieldPrefix}"]`);
+    await input.click();
+    const picker = page.locator('#ui-datepicker-div');
+    await expect(picker).toBeVisible({timeout: 30_000});
+    await picker.locator('select.ui-datepicker-year').selectOption(String(date.getFullYear()));
+    await picker.locator('select.ui-datepicker-month').selectOption(String(date.getMonth()));
+    await picker
+        .locator('td:not(.ui-datepicker-other-month) a')
+        .filter({hasText: new RegExp(`^${date.getDate()}$`)})
+        .first()
+        .click();
+    await expect(picker).toBeHidden({timeout: 30_000});
+};
+
+/**
+ * The Add Reviewer window (legacy form around the Vue search panel), opened
+ * from the Reviewers panel's top button.
+ *
+ * @param {import('@playwright/test').Page} page
+ */
+exports.openAddReviewerModal = async function openAddReviewerModal(page) {
+    await page.getByRole('button', {name: 'Add Reviewer', exact: true}).click();
+    const modal = page
+        .getByRole('dialog')
+        .filter({has: page.locator('.listPanel--selectReviewer')});
+    await expect(
+        modal.locator('.listPanel--selectReviewer input.pkpSearch__input')
+    ).toBeVisible({timeout: 30_000});
+    return modal;
+};
+
+/**
+ * Search the "Locate a Reviewer" list by name (Enter-commit) and return the
+ * matching list item.
+ *
+ * @param {import('@playwright/test').Page} page
+ * @param {import('@playwright/test').Locator} modal from openAddReviewerModal
+ * @param {string} name
+ */
+exports.searchReviewerList = async function searchReviewerList(page, modal, name) {
+    const search = modal.locator('.listPanel--selectReviewer input.pkpSearch__input');
+    await search.fill(name);
+    await search.press('Enter');
+    const item = modal.locator('.listPanel--selectReviewer .listPanel__item').filter({hasText: name});
+    await expect(item).toBeVisible({timeout: 30_000});
+    return item;
+};
+
+/**
+ * Search the "Locate a Reviewer" list and press the entry's Select button.
+ * The selection handler prefills the request letter through the TinyMCE API
+ * (AdvancedReviewerSearchHandler), so the click must wait for the editor to
+ * be initialized — selecting earlier silently loses the prefill.
+ *
+ * @param {import('@playwright/test').Page} page
+ * @param {import('@playwright/test').Locator} modal from openAddReviewerModal
+ * @param {string} name
+ */
+exports.selectReviewer = async function selectReviewer(page, modal, name) {
+    const item = await exports.searchReviewerList(page, modal, name);
+    await page.waitForFunction(() => {
+        const textarea = document.querySelector(
+            '#reviewerFormFooter textarea[name="personalMessage"]'
+        );
+        // eslint-disable-next-line no-undef
+        const editor = textarea && window.tinyMCE && window.tinyMCE.EditorManager.get(textarea.id);
+        // `initialized` matters: get() answers before the async render is
+        // done, and a prefill written in that window is wiped when init
+        // loads the (still empty) textarea — the letter then posts empty
+        // and the add 500s server-side on the empty mail body.
+        return !!(editor && editor.initialized);
+    });
+    // The list re-renders while search fetches settle, which can swallow a
+    // click on the just-replaced node — retry until the request form has
+    // actually swapped in for the search grid.
+    await expect(async () => {
+        await item.getByRole('button', {name: `Select ${name}`}).click({timeout: 5_000});
+        await expect(modal.locator('#regularReviewerForm')).toBeVisible({timeout: 3_000});
+    }).toPass({timeout: 30_000});
+    await expect(modal.locator('[id^="selectedReviewerName"]')).toHaveText(name);
+    await waitForJQueryIdle(page);
 };
 
 /**
