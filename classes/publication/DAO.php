@@ -52,9 +52,9 @@ class DAO extends \PKP\publication\DAO
     /**
      * @copydoc SchemaDAO::_fromRow()
      */
-    public function fromRow(object $primaryRow): Publication
+    public function fromRow(object $primaryRow, ?callable $populator = null): Publication
     {
-        $publication = parent::fromRow($primaryRow);
+        $publication = parent::fromRow($primaryRow, $populator);
 
         $publication->setData(
             'galleys',
