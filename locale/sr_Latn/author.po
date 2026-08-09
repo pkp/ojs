@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:34+00:00\n"
-"PO-Revision-Date: 2026-08-02 16:56+0000\n"
+"PO-Revision-Date: 2026-08-09 19:03+0000\n"
 "Last-Translator: lena bojcic <lenabojcicck@gmail.com>\n"
 "Language-Team: Serbian (latin) <http://translate.pkp.sfu.ca/projects/ojs/"
 "author/sr_Latn/>\n"
@@ -77,7 +77,8 @@ msgstr "Zahtevaj oslobađanje"
 
 msgid "author.submit.qualifyForWaiver"
 msgstr ""
-"Molim vas da razmislite o oslobađanju od plaćanja cene za podnošenje članka."
+"Molimo vas da razmotrite mogućnost oslobađanja od naknade za podnošenje ovog "
+"članka"
 
 msgid "author.submit.addReasonsForWaiver"
 msgstr ""
@@ -105,7 +106,7 @@ msgid "author.submissions.proofreadingCorrections"
 msgstr "Korektorske ispravke"
 
 msgid "author.submissions.confirmDelete"
-msgstr "Da li ste sigurni da želite da obrišete nezavršenu predaju."
+msgstr "Da li ste sigurni da želite da obrišete nezavršenu prijavu?"
 
 msgid "author.submissions.viewStatus"
 msgstr "Vidi status"
@@ -154,7 +155,7 @@ msgstr "Obriši autora"
 
 msgid "author.submit.submissionIndexingDescription"
 msgstr ""
-"Unesite termine za indeksiranje  (ključne reči); odvojite ih , (termin1, "
+"Unesite termine za indeksiranje rada (ključne reči); odvojite ih , (termin1, "
 "termin2, termin3)."
 
 msgid "author.submit.coverageInstructions"
@@ -181,7 +182,7 @@ msgid "author.submit.form.abstractRequired"
 msgstr "Unesite apstrakt članka."
 
 msgid "author.submit.form.wordCountAlert"
-msgstr "Prešli ste dozvoljen broj reči za apstrakt"
+msgstr "Prekoračili ste maksimalan broj reči za sažetke u rubrici ovog odeljka."
 
 msgid "author.submit.submissionFile"
 msgstr "Fajl predaje"
@@ -193,7 +194,7 @@ msgid "author.submit.replaceSubmissionFile"
 msgstr "Zameni fajl predaje"
 
 msgid "author.submit.noSubmissionFile"
-msgstr "Fajl predaje nije dodat"
+msgstr "Fajl rada nije dodat."
 
 msgid "author.submit.noSubmissionConfirm"
 msgstr "Da li ste sigurni da želite da nastavite bez dodatog fajla predaje?"
@@ -238,7 +239,8 @@ msgstr "Meta podaci dodatnog fajla"
 
 msgid "author.submit.supplementaryFileDataDescription"
 msgstr ""
-"Za indeksiranje dodatnog materijala unesite metapodatke za dodatni fajl"
+"Da biste indeksirali ovaj dodatni materijal, navedite sledeće metapodatke za "
+"otpremljeni dodatni fajl."
 
 msgid "author.submit.supplementaryFileUpload"
 msgstr "Dodatni fajl"
@@ -303,7 +305,7 @@ msgid "author.suppFile.suppFilePublicIdentificationExists"
 msgstr "Identifikacija javnog dodatnog fajla već postoji."
 
 msgid "author.suppFile.publicSuppFileIdentifier"
-msgstr "Identifikator javnog dodatnog fajla."
+msgstr "Javni identifikator dodatnog fajla"
 
 msgid "author.submit.filesSummary"
 msgstr "Rezime fajlova"
