@@ -1,3 +1,45 @@
 # Gantulga <cybermon@gmail.com>, 2026.
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2026-08-13 04:57+0000\n"
+"Last-Translator: Gantulga <cybermon@gmail.com>\n"
+"Language-Team: Mongolian <http://translate.pkp.sfu.ca/projects/ojs/"
+"paymethod-manual/mn/>\n"
+"Language: mn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "plugins.paymethod.manual"
+msgstr "Гар аргаар төлбөр төлөх"
+
+msgid "plugins.paymethod.manual.settings"
+msgstr "Гараар төлөх зааварчилгаа"
+
+msgid "plugins.paymethod.manual.sendNotificationOfPayment"
+msgstr "Төлбөрийн мэдэгдэл илгээх"
+
+msgid "plugins.paymethod.manual.notificationSent"
+msgstr "Төлбөрийн мэдэгдэл илгээгдсэн"
+
+msgid "plugins.paymethod.manual.purchase.title"
+msgstr "Гарчиг"
+
+msgid "plugins.paymethod.manual.purchase.fee"
+msgstr "Төлбөр"
+
+msgid "plugins.paymethod.manual.manualPaymentNotify.name"
+msgstr "\"Гар аргаар төлбөр хийх мэдэгдэл\""
+
+msgid "plugins.paymethod.manual.displayName"
+msgstr "Гар аргаар төлбөр төлөх"
+
+msgid "plugins.paymethod.manual.paymentNotification"
+msgstr "Төлбөрийн мэдэгдэл"
+
+msgid "plugins.paymethod.manual.description"
+msgstr ""
+"Менежер нь хэрэглэгчийн төлбөрийн баримтыг (энэ програм хангамжаас гадуур) "
+"гараар бүртгэнэ."
