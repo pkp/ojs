@@ -627,9 +627,9 @@ log_stacks = daily
 ; log_formatter = Monolog\Formatter\JsonFormatter
 
 ; Enable application-level security audit logging (authentication events, privilege
-; and configuration changes, plugin lifecycle, etc.). Enabled by default; set to Off
-; to disable all audit-log output.
-; log_audit = On
+; and configuration changes, plugin lifecycle, etc.). Disabled by default, set to On
+; to record all audit-log output.
+; log_audit = Off
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;
