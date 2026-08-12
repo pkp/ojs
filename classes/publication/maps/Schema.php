@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/publication/maps/Schema.php
  *
@@ -21,12 +22,12 @@ use PKP\services\PKPSchemaService;
 class Schema extends \PKP\publication\maps\Schema
 {
     /** @copydoc \PKP\publication\maps\Schema::mapByProperties() */
-    protected function mapByProperties(array $props, Publication $publication, bool $anonymize): array
+    protected function mapByProperties(array $props, Publication $publication, bool $anonymizeAuthors): array
     {
-        $output = parent::mapByProperties($props, $publication, $anonymize);
+        $output = parent::mapByProperties($props, $publication, $anonymizeAuthors);
 
         if (in_array('galleys', $props)) {
-            if ($anonymize) {
+            if ($anonymizeAuthors) {
                 $output['galleys'] = [];
             } else {
                 $output['galleys'] = Repo::galley()->getSchemaMap($this->submission, $publication, $this->genres)
