@@ -421,6 +421,7 @@ search_index_name = "submissions"
 ;opensearch_username = "admin"
 ;opensearch_password = "password"
 ;opensearch_ssl_verification = On
+;opensearch_debug = Off
 
 ; Minimum indexed word length
 min_word_length = 3
