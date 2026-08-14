@@ -2124,10 +2124,12 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "投稿物 {$submissionId} が査読に差し戻された。"
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} が投稿物 {$submissionId} の{$round}回目の査読を謝絶した。"
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} が投稿物 {$submissionId} の{$round}回目の査読を受諾した。"

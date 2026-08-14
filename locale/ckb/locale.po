@@ -2135,11 +2135,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "توێژینەوەی {$submissionId} دوبارە نێردرایەوە بۆ هەڵسەنگاندن."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "هەڵسەنگێنەر{$reviewerName}بەخشرا لە خولی {$round} بۆ هەڵسەنگاندنی "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "هەڵسەنگێنەر{$reviewerName} خولی {$round} پەسەند کرد بۆ هەڵسەنگاندنی "

@@ -1930,9 +1930,11 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "ההגשה {$submissionId} הוגשה מחדש לסקירה."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr "{$reviewerName} דחה את סבב הסקירה {$round} להגשה {$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr "{$reviewerName} קיבל את הסקירה של {$round} להגשה {$submissionId}."
 

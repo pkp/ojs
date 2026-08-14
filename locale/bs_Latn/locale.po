@@ -2201,11 +2201,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Prilog {$submissionId} je iznova podnesen za recenziju."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} je odbio izraditi {$round}. krug recenzije za prilog "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} je prihvatio izraditi {$round}. krug recenzije za prilog "

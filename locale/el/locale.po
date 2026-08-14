@@ -2249,11 +2249,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Η υποβολή {$submissionId} υποβλήθηκε εκ νέου για αξιολόγηση."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "Ο/Η {$reviewerName} έχει απορρίψει το αίτημα αξιολόγησης του {$round}ου "
 "γύρου για την υποβολή {$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "Ο/Η {$reviewerName} έχει αποδεχτεί το αίτημα αξιολόγησης του {$round}ου "

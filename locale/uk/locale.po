@@ -2188,11 +2188,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Подання {$submissionId} було повторно надіслано на рецензування."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} не прийняв {$round} раунд рецензування подання "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} прийняв {$round} раунд рецензування подання {$submissionId}."

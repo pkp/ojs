@@ -1984,9 +1984,11 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "稿件{$submissionId}已经被重新投稿以进行审阅。"
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr "{$reviewerName}已经婉谢对稿件{$submissionId}进行{$round}审。"
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr "{$reviewerName}已经接受对稿件{$submissionId}进行{$round}审。"
 

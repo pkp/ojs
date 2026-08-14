@@ -2240,11 +2240,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "{$submissionId} nömrəli məqalə yenidən dəyərləndirilməyə təqdim olundu."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} {$submissionId} nömrəli məqalənin {$round}. turdakı "
 "dəyərləndirməsində məqaləni rədd etdi."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} {$submissionId} nömrəli məqalənin {$round}. Turdakı "

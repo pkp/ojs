@@ -558,6 +558,7 @@ msgstr ""
 "{$reviewerName} тарабынан {$submissionId} тапшырмасынын {$round}-раунд "
 "кароосунун мөөнөтү {$dueDate} болуп коюлду."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} {$submissionId} тапшырмасынын {$round}-раунд кароосунан баш "
@@ -2095,6 +2096,7 @@ msgstr ""
 "{$submissionId} тапшырмасынын {$round}-раунд кароосу боюнча сунуш редактор "
 "{$editorName} тарабынан рецензент {$reviewerName} атынан коюлду."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} {$submissionId} тапшырмасынын {$round}-раунд кароосун кабыл "

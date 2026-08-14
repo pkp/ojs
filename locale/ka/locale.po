@@ -2170,11 +2170,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "მასალა {$submissionId} კვლავ გაიგზავნა რეცენზიაზე."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "რეცენზენტმა {$reviewerName} უარი თქვა რეცენზირებაზე {$round} რუნდზე "
 "მასალისათვის რეცენზენტის {$submissionId} დავალებით."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "რეცენზენტი {$reviewerName} დაეთანხმა რეცენზირებაზე {$round} რაუნდზე "

@@ -2325,11 +2325,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "सबमिशन {$submissionId} को समीक्षा के लिए पुन प्रस्तुत किया गया है।"
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$ reviewerName} ने सबमिशन {$ submissionId} के लिए राउंड {$ round} रिव्यू को "
 "अस्वीकार कर दिया है।"
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} ने {$submissionId} के लिए दौर {$round} समीक्षा को स्वीकार कर "

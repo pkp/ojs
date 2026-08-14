@@ -2197,9 +2197,11 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "{$ SubmitId} yuborilishi qayta ko'rib chiqish uchun yuborildi."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr "{$ reviewerName} {$ roundId} yuborish uchun {$ round} turini rad etdi."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$ reviewerName} {$ roundId} yuborish uchun {$ round} turini ko'rib chiqdi."

@@ -2101,11 +2101,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "طلب النشر {$submissionId} قد أعيد تقديمه للتحكيم."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "المحكم {$reviewerName} إعتذر خلال الجولة {$round} من تحكيم المؤلَّف "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "المحكم {$reviewerName} وافق خلال الجولة {$round} لتحكيم المؤلَّف "

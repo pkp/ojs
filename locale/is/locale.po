@@ -2153,10 +2153,12 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Innsending {$submissionId} hefur verið send aftur í ritrýni."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} hefur hafnað ritrýni í umferð {$round} fyrir {$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} hefur samþykkt ritrýni í umferð {$round} fyrir "

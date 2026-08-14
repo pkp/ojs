@@ -2159,11 +2159,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Tekst {$submissionId} został przesłany ponownie do recenzji."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} odmówił(a) wykonania recenzji tekstu {$submissionId} w "
 "{$round} rundzie recenzji."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} zaakceptował(a) wykonanie recenzji tekstu {$submissionId} w "

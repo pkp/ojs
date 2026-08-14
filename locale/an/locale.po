@@ -2201,11 +2201,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "S'ha reninviau {$submissionId} pa la suya revisión."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} ha refusau la tongada de revisión {$round} pa lo ninvio "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} ha aceptau la tongada de revisión {$round} pa lo ninvio "

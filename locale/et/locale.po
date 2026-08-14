@@ -1620,6 +1620,7 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Kaastöö {$submissionId} on uuesti esitatud retsenseerimiseks."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} on aktsepteerinud kaastöö ringi {$round} "
@@ -2147,6 +2148,7 @@ msgstr ""
 "142.58.103.1 - 142.58.103.4), IP-vahemikku metamärgiga '*' (nt 142.58.*.*) "
 "ja IP-vahemikku CIDR-iga (nt 142.58.100.0/24)."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} on keeldunud kaastöö ringi {$round} "

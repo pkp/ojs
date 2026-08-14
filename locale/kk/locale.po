@@ -2167,11 +2167,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "{$submissionId} қайтадан қарауға жіберілді."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} шолушысы {$submissionId} материалына {$round} шолу кезеңін "
 "қараудан бас тартты."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} шолушысы {$submissionId} материалына {$round} шолу кезеңін "

@@ -2283,11 +2283,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Chaidh an tagradh {$submissionId} a chur airson ath-lèirmheas."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "Dhiùlt {$userName} lèirmheas cuairt {$round} mu choinneamh tagradh "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "Ghabh {$reviewerName} ri lèirmheas cuairt {$round} mu choinneamh tagraidh "

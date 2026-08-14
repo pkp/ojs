@@ -1970,11 +1970,9 @@ msgstr "The recommendation for the round {$round} review of submission {$submiss
 msgid "log.review.resubmit"
 msgstr "The submission {$submissionId} has been resubmitted for review."
 
-#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr "The round {$round} review assigned to {$reviewerName} for submission {$submissionId} has been declined."
 
-#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr "The round {$round} review assigned to {$reviewerName} for submission {$submissionId} has been accepted."
 

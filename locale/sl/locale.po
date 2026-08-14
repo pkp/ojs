@@ -2134,11 +2134,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Prispevek {$submissionId} je bil ponovno poslan v recenzijo."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} je zavrnil {$round}. krog recenzije za prispevek "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} je sprejel {$round}. krog recenzije za prispevek "

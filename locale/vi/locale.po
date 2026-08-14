@@ -2173,11 +2173,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Bài gửi {$submissionId} đã được gửi lại để đánh giá tiếp."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} đã từ chối vòng phản biện {$round} của bài gửi "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} đã chấp nhận vòng phản biện {$round} của bài gửi "

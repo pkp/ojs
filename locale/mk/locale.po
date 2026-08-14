@@ -2188,11 +2188,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Поднесувањето {$submissionId} е повторно испратено за преглед."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} го одби целосниот преглед на {$round} преглед за доставување "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} го прифати целосниот преглед на {$round} прегледот за "

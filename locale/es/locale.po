@@ -2204,11 +2204,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Se reenvió {$submissionId} para su revisión."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} rechazó la ronda de revisión {$round} para el envío "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} aceptó la ronda de revisión {$round} para el envío "

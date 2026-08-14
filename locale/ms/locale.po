@@ -2167,11 +2167,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Penyerahan {$submissionId} telah diserah semula untuk ulasan."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} telah menolak ulasan pusingan {$round} untuk penyerahan "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} telah menerima ulasan pusingan {$round} untuk penyerahan "
