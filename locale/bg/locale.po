@@ -2212,11 +2212,13 @@ msgstr ""
 "Изпратени материали с идентификатор {$submissionId} са изпратени отново за "
 "рецензия."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "Рецензентът {$reviewerName} отказа етапа {$round} за рецензия на изпратените "
 "материали с идентификатор {$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "Рецензентът {$reviewerName} прие етапа {$round} за рецензия на изпратените "

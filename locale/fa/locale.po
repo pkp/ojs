@@ -2088,11 +2088,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "مقاله {$submissionId} برای داوری مجدداً ثبت شد."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} از انجام داوری دور  {$round} برای مقاله  {$submissionId} سر "
 "باز زد."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} برای داوری دور  {$round}  مقاله  {$submissionId} اظهار "

@@ -2152,11 +2152,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Materiāls {$submissionId} ir atkārtoti iesniegts recenzēšanai."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} ir atteicies no materiāla {$submissionId} recenzēšanas "
 "{$round}. kārtā."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} ir pieņēmis materiāla {$submissionId} recenzēšanu {$round}. "

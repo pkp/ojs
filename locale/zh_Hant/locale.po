@@ -1799,9 +1799,11 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "已重新提交投稿{$submissionId}予評審。"
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr "{$reviewerName}已拒絕第{$round}輪評審的投稿{$submissionId}。"
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr "{$reviewerName}已接受第{$round}輪評審的投稿{$submissionId}。"
 

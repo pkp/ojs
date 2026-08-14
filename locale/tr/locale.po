@@ -2164,11 +2164,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "{$submissionId} numaralı gönderi yeniden değerlendirmeye sunuldu."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} {$submissionId} numaralı gönderinin {$round}. turdaki "
 "değerlendirmesinde makaleyi reddetti."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} {$submissionId} numaralı gönderinin {$round}. turdaki "

@@ -1838,11 +1838,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "{$submissionId} илгээлтийг дахин хянуулахаар ирүүлсэн байна."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} хянагч {$submissionId} илгээлтийн {$round}-р үеийн хяналтыг "
 "хийхээс татгалзлаа."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} хянагч {$submissionId} илгээлтийн {$round}-р үеийн хяналтыг "

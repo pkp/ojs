@@ -1955,11 +1955,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "การส่งบทความ {$submissionId} ได้ถูกส่งอีกครั้งเพื่อการทบทวน"
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} ปฏิเสธการทบทวนรอบที่ {$round} สำหรับการส่งบทความ "
 "{$submissionId}"
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} ยอมรับการทบทวนรอบที่ {$round} สำหรับการส่งบทความ "

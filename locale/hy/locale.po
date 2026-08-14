@@ -2182,10 +2182,12 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "{$submissionId} ներկայացումը կրկին ուղարկվել է գրախոսման:"
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} -ը մերժել է {$submissionId} -ի {$round} փուլի գրախոսումը:"
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} -ը ընդունել է {$round} փուլի գրախոսությունը {$submissionId} "

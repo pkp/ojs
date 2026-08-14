@@ -2165,11 +2165,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Innleveringen {$submissionId} er levert inn for fagfellevurdering."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} har avslått forespørsel om deltakelse i runde {$round} i "
 "fagfellevurderingen av innleveringen {$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} har akseptert forespørsel om deltakelse i runde {$round} i "

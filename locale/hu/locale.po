@@ -2185,11 +2185,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "{$submissionId} cikk újra el lett küldve szakmai lektorálásra."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} szakmai lektor a {$round} lektorálási körben elutasította a "
 "{$submissionId} cikket."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} szakmai lektor a {$round} lektorálási körben elfogadta a "

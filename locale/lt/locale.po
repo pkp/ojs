@@ -2152,11 +2152,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Straipsnis „{$submissionId}“ pateiktas pakartotiniam recenzavimui."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "Recenzentas {$reviewerName} parengti straipsnio „{$submissionId}“ {$round} "
 "kartą recenziją atsisako."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "Recenzentas {$reviewerName} parengti straipsnio {$submissionId} {$round} "

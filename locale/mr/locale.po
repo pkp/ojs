@@ -1406,6 +1406,7 @@ msgstr ""
 "संपादक, {$editorName}, समीक्षकाच्या वतीने, {$reviewerName} यांनी सेट केली "
 "आहे."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} ने {$submissionId} च्या सादरीकरणासाठी {$round} या फेरीत समीक्"
@@ -2282,6 +2283,7 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "{$submissionId} हे सादरीकरण फेरसमीक्षणासाठी पुन्हा सादर केले गेले आहे."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} ने सादरीकरण {$submissionId} साठीचे {$round} या फेरीत समीक्षण "

@@ -2185,11 +2185,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Inzending {$submissionId} is opnieuw ingezonden voor review."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} heeft de review voor ronde {$round} van inzending "
 "{$submissionId} geweigerd."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} heeft de review voor ronde {$round} van inzending "

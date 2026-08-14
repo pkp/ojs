@@ -2202,11 +2202,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Материал {$submissionId} был снова отправлен на рецензирование."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "Рецензент {$reviewerName} отказался дать рецензию на {$round}-м раунде "
 "рецензирования для материала {$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "Рецензент {$reviewerName} согласился дать рецензию на {$round}-м раунде "

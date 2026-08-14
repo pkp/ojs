@@ -2246,11 +2246,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Beitrag {$submissionId} wurde erneut zur Begutachtung eingereicht."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} hat die Begutachtung von Beitrag {$submissionId} in "
 "Durchgang {$round} abgelehnt."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} hat die Begutachtung von Beitrag {$submissionId} in "

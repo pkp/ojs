@@ -2205,11 +2205,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Manuscrisul {$submissionId} a fost redepus pentru revizie."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} a refuzat runda {$round} de revizie pentru manuscrisul "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} a acceptat runda {$round} de revizuire a manuscrisului "

@@ -2172,11 +2172,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Bidrag {$submissionId} har skickats in för granskning på nytt."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} har tackat nej till omgång {$round} i granskningen av bidrag "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} har tackat ja till omgång {$round} i granskningen av bidrag "

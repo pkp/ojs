@@ -2009,6 +2009,7 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "Prilog {$submissionId} je iznova predat za recenziju."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} je odbio izradu {$round}. kruga recenzije za prilog "
@@ -2249,6 +2250,7 @@ msgstr ""
 "komentare, pośetite <a href=\"http://forum.pkp.sfu.ca\" target=\"_new\""
 ">forum podrške</a>.</p>"
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} je prihvatio izradu {$round}. kruga recenzije za prilog "

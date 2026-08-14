@@ -2195,11 +2195,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "{$submissionId} bidalketa berriro bidali da ebaluatzeko."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} ebaluatzaileak uko egin dio {$submissionId} bidalketaren "
 "{$round}. ebaluazio-itzulia egiteari."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} ebaluatzaileak {$submissionId} bidalketaren {$round}. "

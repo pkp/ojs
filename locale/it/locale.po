@@ -2221,11 +2221,13 @@ msgstr ""
 msgid "log.review.resubmit"
 msgstr "La proposta {$submissionId} è stata presentata di nuovo per la review."
 
+#, fuzzy
 msgid "log.review.reviewDeclined"
 msgstr ""
 "{$reviewerName} ha rifiutato il ciclo di revsione {$round} per la proposta "
 "{$submissionId}."
 
+#, fuzzy
 msgid "log.review.reviewAccepted"
 msgstr ""
 "{$reviewerName} ha accettato il ciclo di revisione {$round} per la "
