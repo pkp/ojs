@@ -1,8 +1,9 @@
 # Darius Zviedris <darius.zviedris@lki.lt>, 2025.
+# Vincas Grigas <vincas.grigas@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-30 13:22+0000\n"
-"Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
+"PO-Revision-Date: 2026-08-17 14:10+0000\n"
+"Last-Translator: Vincas Grigas <vincas.grigas@gmail.com>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "lt/>\n"
 "Language: lt\n"
@@ -24,7 +25,7 @@ msgid "author.submit.step4a"
 msgstr "4a etapas. Papildomų failų įkėlimas"
 
 msgid "author.submit.journalSection"
-msgstr "Žurnalo skyrius"
+msgstr "Žurnalo sekcija"
 
 msgid "author.submit.suppFile.dateDescription"
 msgstr "Duomenų ar priemonių parengimo data."
@@ -33,7 +34,7 @@ msgid "author.submit.suppFile.sourceDescription"
 msgstr "Studijos ar kito šaltinio pavadinimas."
 
 msgid "author.submit.suppFile.specifyOtherType"
-msgstr "Kita"
+msgstr "Nurodykite kitą"
 
 msgid "author.submit.suppFile.noFile"
 msgstr "Neįkelta jokio failo."
@@ -42,7 +43,7 @@ msgid "author.submit.suppFile.form.titleRequired"
 msgstr "Prašom įrašyti šio priedo pavadinimą."
 
 msgid "author.submit.suppFile.form.subjectRequired"
-msgstr "Prašom įrašyti temą."
+msgstr "Prašome įvesti temą."
 
 msgid "author.submit.submitArticle"
 msgstr "Pateikti straipsnį"
@@ -86,16 +87,18 @@ msgid "author.submit.supplementaryFiles"
 msgstr "Įkelti papildomus failus"
 
 msgid "author.submit.nextSteps"
-msgstr "Kas toliau"
+msgstr "Tolesni veiksmai"
 
 msgid "author.submit.notAccepting"
-msgstr "Šiuo metu straipsnių teikti šiam žurnalui negalima."
+msgstr "Šiuo metu šis žurnalas rankraščių nepriima."
 
 msgid "author.submit.requestWaiver"
-msgstr "Atidėti teikimą"
+msgstr "Prašyti mokesčio lengvatos"
 
 msgid "author.submit.qualifyForWaiver"
-msgstr "Nurodykite, kad turi būti atidedamas straipsnio mokestis"
+msgstr ""
+"Prašome apsvarstyti galimybę netaikyti šiam straipsniui straipsnio pateikimo "
+"mokesčio"
 
 msgid "author.submit.addReasonsForWaiver"
 msgstr "Prašom apatiniame langelyje įrašyti, kodėl mokestis turi būti atidėtas."
@@ -106,36 +109,36 @@ msgstr ""
 "priežastį."
 
 msgid "author.submissions.queuedReviewSubsequent"
-msgstr "Rezenzavimo etapai: {$round} recenzavimas"
+msgstr "Recenzavimo etapas {$round}"
 
 msgid "author.submissions.queuedReviewRevisions"
-msgstr "Recenzavimas: reikia recenzuoti"
+msgstr "Recenzuojama: reikalingos pataisos"
 
 msgid "author.submissions.queuedEditingCopyedit"
-msgstr "Redagavimas: reikia redaguoti kalbą"
+msgstr "Redagavimas: paprašyta atlikti kalbinį redagavimą"
 
 msgid "author.submissions.queuedEditingProofread"
-msgstr "Redagavimas: reikia perskaityti korektūrą"
+msgstr "Redagavimas: korektūra užsakyta"
 
 msgid "author.submissions.uploadCopyeditedVersion"
-msgstr "Įkelkite redaguotiną versiją"
+msgstr "Įkelti redaguotą versiją"
 
 msgid "author.submissions.proofreadingCorrections"
-msgstr "Korektūrų taisymai"
+msgstr "Korektūros taisymai"
 
 msgid "author.submissions.confirmDelete"
 msgstr "Ar tikrai norite ištrinti nebaigtą pateikti straipsnį?"
 
 msgid "author.submissions.viewStatus"
-msgstr "Būklė"
+msgstr "Rodyti būseną"
 
 msgid "author.submissions.noSubmissions"
 msgstr "Pateiktų straipsnių nėra."
 
 msgid "author.submit.verifyChecklist"
 msgstr ""
-"Galėsite tęsti tik užtikrinę, kad visi teikiniai tenkina nurodytus "
-"reikalavimus."
+"Prieš tęsdami turite įsitikinti, kad visi pateikimo kontrolinio sąrašo "
+"punktai yra įvykdyti."
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
 msgstr ""
@@ -151,10 +154,12 @@ msgid "author.submit.form.localeRequired"
 msgstr "Prašom pasirinkti teikimo kalbą."
 
 msgid "author.submit.reorderInstructions"
-msgstr "Autorius nurodykite ta tvarka, kaip jie nurodomi straipsnyje."
+msgstr ""
+"Pakeiskite autorių eiliškumą taip, kad jis atitiktų autorių pateikimo tvarką "
+"publikacijoje."
 
 msgid "author.submit.reorder"
-msgstr "Keisti autorių nurodymo tvarką"
+msgstr "Pakeisti autoriaus vardo ir pavardės eiliškumą"
 
 msgid "author.submit.selectPrincipalContact"
 msgstr "Pagrindinis adresatas susirašinėjimui redakciniais klausimais."
@@ -184,7 +189,7 @@ msgid "author.submit.form.authorRequired"
 msgstr "Nurodykite bent vieną autorių."
 
 msgid "author.submit.form.authorRequiredFields"
-msgstr "Nurodykite kiekvieno autoriaus vardą, pavardę, e. pašto adresą."
+msgstr "Nurodykite kiekvieno autoriaus vardą, pavardę, el. pašto adresą."
 
 msgid "author.submit.form.titleRequired"
 msgstr "Prašom nurodyti straipsnio pavadinimą."
@@ -193,37 +198,36 @@ msgid "author.submit.form.abstractRequired"
 msgstr "Prašom įtraukti straipsnio santrauką."
 
 msgid "author.submit.form.wordCountAlert"
-msgstr "Viršijote santraukoms taikomą žodžių skaičių."
+msgstr "Viršijote maksimalų šios skilties santraukai leidžiamą žodžių skaičių."
 
 msgid "author.submit.submissionFile"
-msgstr "Tekstas"
+msgstr "Pateikiamas failas"
 
 msgid "author.submit.uploadSubmissionFile"
-msgstr "Įkelti straipsnio failą"
+msgstr "Įkelti pateikiamą failą"
 
 msgid "author.submit.replaceSubmissionFile"
-msgstr "Pakeisti straipsnio failą"
+msgstr "Pakeisti pateikiamą failą"
 
 msgid "author.submit.noSubmissionFile"
-msgstr "Neįkelta jokių straipsnių."
+msgstr "Pateikimo failas neįkeltas."
 
 msgid "author.submit.noSubmissionConfirm"
-msgstr "Ar tikrai norite tęsti, neįkėlęs jokio failo?"
+msgstr "Ar tikrai norite tęsti neįkėlę jokio failo?"
 
 msgid "author.submit.supplementaryFilesInstructions"
 msgstr ""
-"Toks veiksmas leidžiateikti papildomus failus. Tie bet kokio formato failai "
-"gali būti: a) tyrimui naudotos priemonės; b) duomenys, atitinkantys "
-"moksliniams tyrimams taikomus reikalavimus: c) skaitytojams pateiksimi "
-"šaltiniai; d) į tekstą netelpantys paveikslai ir lentelės arba kitokia su "
-"darbu susijusi medžiaga."
+"Šiame pasirenkamame etape galite pridėti papildomus failus. Tai gali būti "
+"bet kokio formato medžiaga, pavyzdžiui, tyrimo instrumentai, duomenų "
+"rinkiniai, papildomi šaltiniai, paveikslai, lentelės ar kita medžiaga, "
+"papildanti ir praturtinanti pateikiamą darbą."
 
 msgid "author.submit.supplementaryFiles.saveToUpload"
 msgstr ""
 "Kad failas būtų įkeltas, išsaugokite (tada galėsite kelti papildomus failus)."
 
 msgid "author.submit.forgottenSubmitSuppFile"
-msgstr "Ar tikrai norite tęsti, neįkėlęs pasirinkto papildomojo failo?"
+msgstr "Ar tikrai norite tęsti neįkėlęs pasirinkto papildomojo failo?"
 
 msgid "author.submit.noSupplementaryFiles"
 msgstr "Nepridėta jokių papildomų failų."
@@ -232,7 +236,7 @@ msgid "author.submit.backToSupplementaryFiles"
 msgstr "Grįžti į papildomuosius failus"
 
 msgid "author.submit.confirmDeleteSuppFile"
-msgstr "Ar tikrai šį papildomą failąnorite ištrinti?"
+msgstr "Ar tikrai norite ištrinti šį papildomą failą?"
 
 msgid "author.submit.uploadSuppFile"
 msgstr "Įkelkite papildomą failą"
@@ -241,15 +245,15 @@ msgid "author.submit.addSupplementaryFile"
 msgstr "Pridėkite papildomą failą"
 
 msgid "author.submit.editSupplementaryFile"
-msgstr "Papildomą failą taisykite"
+msgstr "Redaguoti papildomą failą"
 
 msgid "author.submit.supplementaryFileData"
 msgstr "Papildomo failo metaduomenys"
 
 msgid "author.submit.supplementaryFileDataDescription"
 msgstr ""
-"Kad pateiktumėte šią medžiagą, į įkeltą papildomą failą įtraukite šiuos "
-"metaduomenis."
+"Norėdami indeksuoti šią papildomą medžiagą, pateikite toliau nurodytus "
+"įkelto papildomo failo metaduomenis."
 
 msgid "author.submit.supplementaryFileUpload"
 msgstr "Papildomas failas"
@@ -258,7 +262,7 @@ msgid "author.submit.suppFile.createrOrOwner"
 msgstr "Failo parengėjas (savininkas)"
 
 msgid "author.submit.suppFile.researchInstrument"
-msgstr "Tiriamoji priemonė"
+msgstr "Tyrimo instrumentas"
 
 msgid "author.submit.suppFile.researchMaterials"
 msgstr "Tyrimo medžiaga"
@@ -267,16 +271,16 @@ msgid "author.submit.suppFile.researchResults"
 msgstr "Tyrimo rezultatai"
 
 msgid "author.submit.suppFile.transcripts"
-msgstr "Kopijos"
+msgstr "Transkriptai"
 
 msgid "author.submit.suppFile.dataAnalysis"
 msgstr "Duomenų analizė"
 
 msgid "author.submit.suppFile.dataSet"
-msgstr "Duomenys"
+msgstr "Duomenų rinkinys"
 
 msgid "author.submit.suppFile.sourceText"
-msgstr "Šaltiniai"
+msgstr "Šaltinio tekstas"
 
 msgid "author.submit.suppFile.briefDescription"
 msgstr "Trumpas aprašymas"
@@ -298,13 +302,15 @@ msgid "author.suppFile.publicSuppFileIdentifier"
 msgstr "Papildomojo viešojo failo identifikatorius"
 
 msgid "author.submit.filesSummary"
-msgstr "Santrauka"
+msgstr "Failo santrauka"
 
 msgid "author.submit.finishSubmission"
 msgstr "Baigti"
 
 msgid "author.submit.submissionComplete"
-msgstr "Straipsnį pateikėte. Ačiū, kad teikiate straipsnius {$journalTitle}."
+msgstr ""
+"Pateikimas baigtas. Dėkojame, kad pasirinkote publikuoti žurnale "
+"„{$journalTitle}“."
 
 msgid "author.article.uploadAuthorVersion"
 msgstr "Įkelti autoriaus versiją"
@@ -317,7 +323,9 @@ msgstr "Autoriaus tekstas"
 
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr ""
-"Kad galėtumėte teikti straipsnius šiam žurnalui, turite turėti paskyrą. Taip "
-"redaktorius galės matyti, kada pateikiate straipsnius, informuoti apie "
-"straipsnio vertinimo ir rengimo eigą ar paprašyti nurodyti papildomą "
-"informaciją."
+"Norint pateikti straipsnį šiam žurnalui, reikia susikurti naudotojo paskyrą. "
+"Ji leidžia redaktoriams stebėti jūsų pateikimus ir susisiekti su jumis, kai "
+"pasikeičia jų būsena arba reikia papildomos informacijos."
+
+msgid "author.submit.journalSectionDescription"
+msgstr "Rankraščiai turi būti teikiami į vieną iš žurnalo sekcijų."
