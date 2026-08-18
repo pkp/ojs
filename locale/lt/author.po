@@ -2,7 +2,7 @@
 # Vincas Grigas <vincas.grigas@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-08-18 11:10+0000\n"
+"PO-Revision-Date: 2026-08-18 14:39+0000\n"
 "Last-Translator: Vincas Grigas <vincas.grigas@gmail.com>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "lt/>\n"
@@ -317,10 +317,10 @@ msgid "author.article.uploadAuthorVersion"
 msgstr "Įkelti autoriaus versiją"
 
 msgid "author.article.copyeditedFile"
-msgstr "Kalbos redaktoriaus suredaguotas tekstas"
+msgstr "Suredaguotas tekstas"
 
 msgid "author.article.authorRevisedFile"
-msgstr "Autoriaus tekstas"
+msgstr "Autoriaus failas"
 
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr ""
