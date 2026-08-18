@@ -2,13 +2,14 @@
 # José Carvalho <jcarvalho@keep.pt>, 2023.
 # Ricardo Otelo Santos Saraiva <ricardo.saraiva@usdb.uminho.pt>, 2023.
 # António Moreira <amdsmoreira@gmail.com>, 2025.
+# Pedro Calheno Pinto <ppinto@keep.pt>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:30+00:00\n"
-"PO-Revision-Date: 2025-08-07 13:47+0000\n"
-"Last-Translator: António Moreira <amdsmoreira@gmail.com>\n"
+"PO-Revision-Date: 2026-08-18 18:19+0000\n"
+"Last-Translator: Pedro Calheno Pinto <ppinto@keep.pt>\n"
 "Language-Team: Portuguese <http://translate.pkp.sfu.ca/projects/ojs/api/pt/>"
 "\n"
 "Language: pt\n"
@@ -87,7 +88,7 @@ msgstr ""
 "Não é possível associar um ficheiro nesta fase com um formato de publicação."
 
 msgid "api.submission.400.inactiveSection"
-msgstr "Esta seção não está a receber novas submissões."
+msgstr "Esta secção não está a receber novas submissões."
 
 msgid "api.publications.403.paymentFeesNotEnabled"
 msgstr ""
