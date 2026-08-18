@@ -2,7 +2,7 @@
 # Vincas Grigas <vincas.grigas@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-08-17 14:10+0000\n"
+"PO-Revision-Date: 2026-08-18 11:10+0000\n"
 "Last-Translator: Vincas Grigas <vincas.grigas@gmail.com>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/author/"
 "lt/>\n"
@@ -19,7 +19,7 @@ msgid "author.submit"
 msgstr "Naujas straipsnis"
 
 msgid "author.track"
-msgstr "Pateiktieji"
+msgstr "Aktyvūs pateikimai"
 
 msgid "author.submit.step4a"
 msgstr "4a etapas. Papildomų failų įkėlimas"
@@ -69,7 +69,7 @@ msgid "author.submit.step3"
 msgstr "3 etapas. Teksto metaduomenų pateikimas"
 
 msgid "author.submit.step4"
-msgstr "4 etapas. Papildomų failų atsisiuntimas"
+msgstr "4 etapas. Papildomų failų įkėlimas"
 
 msgid "author.submit.step5"
 msgstr "5 etapas. Teikimo patvirtinimas"
@@ -78,7 +78,7 @@ msgid "author.submit.start"
 msgstr "Pradėti"
 
 msgid "author.submit.upload"
-msgstr "Įkelti failus"
+msgstr "Įkelti paraišką"
 
 msgid "author.submit.metadata"
 msgstr "Įvesti metaduomenis"
@@ -93,7 +93,7 @@ msgid "author.submit.notAccepting"
 msgstr "Šiuo metu šis žurnalas rankraščių nepriima."
 
 msgid "author.submit.requestWaiver"
-msgstr "Prašyti mokesčio lengvatos"
+msgstr "Prašyti netaikyti mokesčio"
 
 msgid "author.submit.qualifyForWaiver"
 msgstr ""
@@ -101,11 +101,12 @@ msgstr ""
 "mokesčio"
 
 msgid "author.submit.addReasonsForWaiver"
-msgstr "Prašom apatiniame langelyje įrašyti, kodėl mokestis turi būti atidėtas."
+msgstr ""
+"Prašom apatiniame langelyje įrašyti, kodėl mokestis turi būti netaikomas."
 
 msgid "author.submit.mustEnterWaiverReason"
 msgstr ""
-"Jei prašote atidėti mokestį, turite atitinkamame langelyje nurodyti "
+"Jei prašote netaikyti mokesčio, turite atitinkamame langelyje nurodyti "
 "priežastį."
 
 msgid "author.submissions.queuedReviewSubsequent"
