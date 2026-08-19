@@ -258,7 +258,8 @@ class ExportPublishedSubmissionsListGridHandler extends GridHandler
             $issueId,
             $pubIdStatusSettingName,
             $statusId,
-            $this->getGridRangeInfo($request, $this->getId())
+            $this->getGridRangeInfo($request, $this->getId()),
+            $this->_plugin->getExportableVersionStages()
         );
     }
 
