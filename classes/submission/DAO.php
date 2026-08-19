@@ -38,9 +38,13 @@ class DAO extends \PKP\submission\DAO
 
     /**
      * Get all published submissions (eventually with a pubId assigned and) matching the specified settings.
+     *
+     * @param VersionStage[]|null $versionStages Which version stages count as exportable. Defaults to VoR only.
+     * @param int[]|null $ids Restrict to these submission IDs, if given.
      */
-    public function getExportable(int $contextId, ?string $pubIdType = null, ?string $title = null, ?string $author = null, ?int $issueId = null, ?string $settingName = null, ?string $settingValue = null, ?DBResultRange $rangeInfo = null): DAOResultFactory
+    public function getExportable(int $contextId, ?string $pubIdType = null, ?string $title = null, ?string $author = null, ?int $issueId = null, ?string $settingName = null, ?string $settingValue = null, ?DBResultRange $rangeInfo = null, ?array $versionStages = null, ?array $ids = null): DAOResultFactory
     {
+        $versionStages ??= [VersionStage::VERSION_OF_RECORD];
         $q = DB::table('submissions', 's')
             ->leftJoin('publications AS p', 's.current_publication_id', '=', 'p.publication_id')
             ->leftJoin('publication_settings AS ps', 'p.publication_id', '=', 'ps.publication_id')
@@ -72,8 +76,9 @@ class DAO extends \PKP\submission\DAO
                 )
             )
             ->where('s.context_id', '=', $contextId)
-            ->where('p.version_stage', '=', VersionStage::VERSION_OF_RECORD)
+            ->whereIn('p.version_stage', array_map(fn (VersionStage $stage) => $stage->value, $versionStages))
             ->where('p.status', '=', Publication::STATUS_PUBLISHED)
+            ->when($ids !== null, fn (Builder $q) => $q->whereIn('s.submission_id', $ids))
             ->when($pubIdType != null, fn (Builder $q) => $q->where('pspidt.setting_name', '=', "pub-id::{$pubIdType}")->whereNotNull('pspidt.setting_value'))
             ->when($title != null, fn (Builder $q) => $q->where('pst.setting_name', '=', 'title')->where('pst.setting_value', 'LIKE', "%{$title}%"))
             ->when($author != null, fn (Builder $q) => $q->whereRaw("CONCAT(COALESCE(asgs.setting_value, ''), ' ', COALESCE(asfs.setting_value, '')) LIKE ?", ["%{$author}%"]))

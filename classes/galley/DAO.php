@@ -19,6 +19,8 @@ class DAO extends PKPGalleyDAO
      * @param null|mixed $pubIdSettingName
      * @param null|mixed $pubIdSettingValue
      * @param null|mixed $rangeInfo
+     *
+     * @deprecated 3.4
      */
     public function getExportable(int $contextId, $pubIdType = null, $title = null, $author = null, $pubIdSettingName = null, $pubIdSettingValue = null, $rangeInfo = null, ?int $issueId = null)
     {

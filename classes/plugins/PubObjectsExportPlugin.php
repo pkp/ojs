@@ -23,6 +23,7 @@ use APP\issue\Issue;
 use APP\journal\Journal;
 use APP\journal\JournalDAO;
 use APP\notification\NotificationManager;
+use APP\publication\enums\VersionStage;
 use APP\publication\Publication;
 use APP\submission\Submission;
 use APP\template\TemplateManager;
@@ -44,8 +45,6 @@ use PKP\plugins\importexport\native\filter\NativeExportFilter;
 use PKP\plugins\importexport\PKPImportExportDeployment;
 use PKP\plugins\ImportExportPlugin;
 use PKP\plugins\PluginRegistry;
-use PKP\publication\PKPPublication;
-use PKP\submission\PKPSubmission;
 use PKP\user\User;
 
 abstract class PubObjectsExportPlugin extends ImportExportPlugin
@@ -695,7 +694,8 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
             null,
             $this->getDepositStatusSettingName(),
             PubObjectsExportPlugin::EXPORT_STATUS_DEPOSITABLE,
-            null
+            null,
+            $this->getExportableVersionStages()
         );
         return $articles->toArray();
     }
@@ -714,9 +714,21 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
             null,
             $this->getDepositStatusSettingName(),
             PubObjectsExportPlugin::EXPORT_STATUS_DEPOSITABLE,
-            null
+            null,
+            $this->getExportableVersionStages()
         );
         return $publications->toArray();
+    }
+
+    /**
+     * Which version stages count as exportable/depositable for this plugin.
+     * Defaults to the Version of Record only; override where more stages apply.
+     *
+     * @return VersionStage[]
+     */
+    public function getExportableVersionStages(): array
+    {
+        return [VersionStage::VERSION_OF_RECORD];
     }
 
     /**
@@ -884,6 +896,9 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
     /**
      * Get published submissions from submission IDs.
      *
+     * Uses getExportable() rather than submission.status, which only reflects
+     * a published Version of Record, not earlier exportable stages.
+     *
      * @param array $submissionIds
      * @param Journal $context
      *
@@ -891,33 +906,40 @@ abstract class PubObjectsExportPlugin extends ImportExportPlugin
      */
     public function getPublishedSubmissions($submissionIds, $context)
     {
-        $allSubmissionIds = Repo::submission()
-            ->getCollector()
-            ->filterByContextIds([$context->getId()])
-            ->filterByStatus([PKPSubmission::STATUS_PUBLISHED])
-            ->getIds()
-            ->toArray();
-        $validSubmissionIds = array_intersect($allSubmissionIds, $submissionIds);
-        return array_map(function ($submissionId) {
-            return Repo::submission()->get($submissionId);
-        }, $validSubmissionIds);
+        return Repo::submission()->dao->getExportable(
+            $context->getId(),
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            $this->getExportableVersionStages(),
+            $submissionIds
+        )->toArray();
     }
 
     /**
      * Get published publications from publication IDs.
+     *
+     * Uses getExportable() so this stays consistent with what it considers
+     * exportable, including "latest minor version only".
      */
     public function getPublishedPublications(array $publicationIds, Journal $context): array
     {
-        $allPublicationIds = Repo::publication()
-            ->getCollector()
-            ->filterByContextIds([$context->getId()])
-            ->filterByStatus([PKPPublication::STATUS_PUBLISHED])
-            ->getIds()
-            ->toArray();
-        $validPublicationIds = array_intersect($allPublicationIds, $publicationIds);
-        return array_map(function ($publicationId) {
-            return Repo::publication()->get($publicationId);
-        }, $validPublicationIds);
+        return Repo::publication()->dao->getExportable(
+            $context->getId(),
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            $this->getExportableVersionStages(),
+            $publicationIds
+        )->toArray();
     }
 
     /**
