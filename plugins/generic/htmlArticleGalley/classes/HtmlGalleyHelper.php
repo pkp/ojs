@@ -22,6 +22,8 @@ namespace APP\plugins\generic\htmlArticleGalley\classes;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
+use APP\issue\Issue;
+use APP\submission\Submission;
 use APP\template\TemplateManager;
 use PKP\submissionFile\enums\MediaVariantType;
 use PKP\submissionFile\SubmissionFile;
@@ -35,7 +37,7 @@ class HtmlGalleyHelper
      * @param \APP\core\Request $request
      * @param \PKP\galley\Galley $galley
      */
-    public function getHTMLContents($request, $galley): string
+    public function getHTMLContents($request, $galley, ?Submission $submission = null, ?Issue $issue = null): string
     {
         $submissionFile = $galley->getFile();
         $submissionId = $submissionFile->getData('submissionId');
@@ -72,7 +74,7 @@ class HtmlGalleyHelper
             ->keyBy(fn ($file) => $file->getLocalizedData('name'))
             ->toArray();
 
-        $referredArticle = null;
+        $referredArticle = $submission && $submission->getId() == $submissionId ? $submission : null;
         foreach ($embeddableFiles as $embeddableFile) {
             $params = [];
 
@@ -141,7 +143,7 @@ class HtmlGalleyHelper
         $contents = $templateMgr->loadHtmlGalleyStyles($contents, $embeddableFiles);
 
         // Perform variable replacement for journal, issue, site info
-        $issue = Repo::issue()->getBySubmissionId($submissionId);
+        $issue ??= Repo::issue()->getBySubmissionId($submissionId);
 
         $journal = $request->getContext();
         $site = $request->getSite();
