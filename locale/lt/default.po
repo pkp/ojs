@@ -3,7 +3,7 @@
 # Vincas Grigas <vincas.grigas@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-08-18 14:39+0000\n"
+"PO-Revision-Date: 2026-08-20 11:17+0000\n"
 "Last-Translator: Vincas Grigas <vincas.grigas@gmail.com>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/default/"
 "lt/>\n"
@@ -72,15 +72,15 @@ msgstr ""
 
 msgid "default.contextSettings.forReaders"
 msgstr ""
-"Raginame skaitytojus užsiregistruoti šio žurnalo leidybos pranešimų "
-"paslaugai. Naudokite nuorodą <a href=\"{$indexUrl}/{$contextPath}/user/"
-"register\">Registruotis</a>, esančią žurnalo pagrindinio puslapio viršuje. "
-"Užsiregistravę skaitytojai el. paštu gaus kiekvieno naujo žurnalo numerio "
-"turinį. Šis sąrašas taip pat leidžia žurnalui pareikšti tam tikrą paramos ar "
-"skaitytojų skaičių. Žr. žurnalo <a href=\"{$indexUrl}/{$contextPath}/about/"
-"submissions#privacyStatement\">Privatumo pareiškimą</a>, kuriame skaitytojai "
-"užtikrinami, kad jų vardas ir el. pašto adresas nebus naudojami kitais "
-"tikslais."
+"Kviečiame skaitytojus užsiprenumeruoti šio žurnalo pranešimus apie "
+"publikavimą. Tam pasinaudokite pagrindinio žurnalo puslapio viršuje esančia "
+"nuoroda <a href=\"{$indexUrl}/{$contextPath}/user>Registruotis</a>. "
+"Užsiregistravę el. paštu gausite kiekvieno naujo žurnalo numerio turinį. Šis "
+"sąrašas taip pat leidžia žurnalui pagrįsti tam tikrą skaitytojų susidomėjimo "
+"ir palaikymo lygį. Daugiau informacijos rasite žurnalo <a href=\""
+"{$indexUrl}/{$contextPath}/about/submissions#privacyStatement\">Privatumo "
+"pareiškime</a>, kuriame užtikrinama, kad jūsų vardas, el. pašto adresas "
+"nebus naudojami jokiais kitais tikslais."
 
 msgid "default.contextSettings.lockssLicense"
 msgstr ""
@@ -112,20 +112,21 @@ msgstr ""
 
 msgid "default.contextSettings.forLibrarians"
 msgstr ""
-"Raginame mokslinių bibliotekų darbuotojus įtraukti šį žurnalą į savo "
-"bibliotekų elektroninių žurnalų fondus. Taip pat verta paminėti, kad šio "
-"žurnalo atvirojo kodo leidybos sistema tinka bibliotekoms, kad jų dėstytojai "
-"galėtų ja naudotis žurnale, kurį jie redaguoja (žr. <a href=\"https://pkp.sfu"
-".ca/ojs\">Atvirosios žurnalų sistemos</a>)."
+"Skatiname mokslinių bibliotekų darbuotojus įtraukti šį žurnalą į savo "
+"bibliotekų elektroninių žurnalų sąrašus. Taip pat verta paminėti, kad šiame "
+"žurnale naudojama atvirojo kodo leidybos sistema yra tinkama bibliotekoms "
+"diegti ir teikti savo institucijų darbuotojams bei dėstytojams, kurie "
+"dalyvauja redaguojant mokslinius žurnalus (žr. <a href=\"https://pkp.sfu.ca/"
+"ojs\">Open Journal Systems</a>)."
 
 msgid "default.groups.name.manager"
-msgstr "Žurnalo sekretorius (-ė)"
+msgstr "Žurnalo administratorius (-ė)"
 
 msgid "default.groups.plural.manager"
-msgstr "Žurnalo sekretoriai (-ės)"
+msgstr "Žurnalo administratoriai (-ės)"
 
 msgid "default.groups.abbrev.manager"
-msgstr "Sek."
+msgstr "Adm."
 
 msgid "default.groups.name.editor"
 msgstr "Žurnalo redaktorius (-ė)"
@@ -137,19 +138,19 @@ msgid "default.groups.abbrev.editor"
 msgstr "Red."
 
 msgid "default.groups.plural.guestEditor"
-msgstr "Redaktorių kolegijos nariai"
+msgstr "Kviestiniai redaktoriai"
 
 msgid "default.groups.name.guestEditor"
-msgstr "Redaktorių kolegijos narys"
+msgstr "Kviestinis redaktorius"
 
 msgid "default.groups.abbrev.guestEditor"
-msgstr "Red. kolegijos narys (-iai)"
+msgstr "KR"
 
 msgid "default.groups.name.sectionEditor"
-msgstr "Skyriaus redaktorius (-ė)"
+msgstr "Sekcijos redaktorius (-ė)"
 
 msgid "default.groups.plural.sectionEditor"
-msgstr "Skyriaus redaktoriai (-ės)"
+msgstr "Sekcijų redaktoriai (-ės)"
 
 msgid "default.groups.abbrev.sectionEditor"
 msgstr "Sk. red."
@@ -161,28 +162,28 @@ msgid "default.groups.plural.subscriptionManager"
 msgstr "Prenumeratos redaktoriai (-ės)"
 
 msgid "default.groups.abbrev.subscriptionManager"
-msgstr "Prenumer."
+msgstr "Prenum."
 
 msgid "default.genres.researchInstrument"
-msgstr "Tyrimo būdas"
+msgstr "Tyrimo instrumentas"
 
 msgid "default.genres.researchMaterials"
-msgstr "Tiriamoji medžiaga"
+msgstr "Tyrimo medžiaga"
 
 msgid "default.genres.researchResults"
 msgstr "Tyrimo rezultatai"
 
 msgid "default.genres.transcripts"
-msgstr "Rankraščiai"
+msgstr "Transkripcijos"
 
 msgid "default.genres.dataAnalysis"
 msgstr "Duomenų analizė"
 
 msgid "default.genres.dataSet"
-msgstr "Duomenys"
+msgstr "Duomenų rinkinys"
 
 msgid "default.genres.sourceTexts"
-msgstr "Tekstai, kuriais remtasi"
+msgstr "Pirminiai tekstai"
 
 msgid "default.groups.name.externalReviewer"
 msgstr "Recenzentas (-ė)"
