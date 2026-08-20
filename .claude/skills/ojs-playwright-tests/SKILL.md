@@ -40,16 +40,20 @@ their repos.
 Structure:
 ```
 playwright/
-├── tests/             # Spec files — flat, no subfolder taxonomy (serial/ project exists, empty)
+├── tests/             # Spec files — flat, no subfolder taxonomy
+│   └── serial/        # The ojs-serial project — globally-scanning specs (queue drains etc.)
 ├── support/
 │   ├── fixtures.js    # OJS test extension (ojsApi alias; feature fixtures land here)
+│   ├── legacy.js      # waitForJQueryIdle — legacy jQuery surfaces (app-local, not shared)
 │   └── app.context.js # Capability map (APP-GLOSSARY §2) + seed.actors archetype map
+├── pages/             # OJS-only POMs (OrcidPages.js, ReviewStagePages.js, UserInvitationPages.js)
 ├── fixtures/
-│   └── bootstrap.js   # Static seed data for publicknowledge (journal, 18 users, sections+editors, categories, issues)
+│   ├── bootstrap.js   # Static seed data for publicknowledge (journal, 18 users, sections+editors, categories, issues)
+│   └── files/         # Upload fixtures (article.pdf)
 └── .auth/             # Auto-generated storage-state cache per user (gitignored)
 ```
-(`pages/`, `data/` and `fixtures/scenarios/` return when the first feature
-specs need OJS-only POMs, app-local data, or spec-builders.)
+(`data/` and `fixtures/scenarios/` return when the first feature specs need
+app-local data or spec-builders.)
 
 OJS specs import from `'../support/fixtures.js'` — this layers OJS fixtures (`ojsApi`, `submission`) on top of the shared base.
 
@@ -72,6 +76,7 @@ lib/pkp/playwright/
 │   ├── auth.js              # ensureAuthStateFor — storage-state cache w/ liveness probe
 │   ├── api.js               # pkpApi — test-API client (bootstrap, createContext, createSubmission)
 │   ├── mail.js              # pkpMail — Mailpit HTTP API wrapper
+│   ├── jobs.js              # runJobs — drain the fleet's queued jobs (serial-project only)
 │   └── env.js               # loadEnv(appRoot) — .env.playwright parser (shell wins)
 ├── pages/
 │   ├── BasePage.js          # POM base class + siteUrl()/contextUrl()
@@ -97,7 +102,11 @@ Playwright project has one `testDir`, so the shared specs are a sibling
 project of the app suite. **Per-worker servers**: `php -S` is single-threaded,
 so each parallel worker gets its own server at `basePort + parallelIndex`
 (8000, 8001, … — launched by the config's `webServer` array; one shared DB and
-files dir behind them).
+files dir behind them). Server output (request log, PHP warnings) is redirected
+to `playwright/.server-logs/server-<port>.log` in the app root, so the terminal
+shows only the reporter — check those files when debugging server-side errors.
+A server adopted via `reuseExistingServer` (e.g. left over from `test:e2e:serve`)
+keeps logging wherever it was started.
 
 Shared specs import from `'../support/base-test.js'`.
 
@@ -145,7 +154,7 @@ test('section editor assigns reviewer, reviewer sees assignment', async ({page, 
 1. **Pick the folder.** Feature test → the app's own `playwright/tests/`; only shared infrastructure (fixtures, POMs, smoke) → `lib/pkp/playwright/`.
 2. **Pick the import.**
    - Shared: `const {test, expect} = require('../support/base-test.js');`
-   - OJS: `const {test, expect} = require('../support/fixtures.js');` — gives you `ojsApi` and `submission` fixtures too.
+   - OJS: `const {test, expect} = require('../support/fixtures.js');` — gives you the `ojsApi` fixture too.
 3. **Pick a user** — see `users.md` for the registry. A `test.use({user: 'username'})` at the top of the file sets the default logged-in user.
 4. **Find the screen** — see `app-map.md` for URLs, Vue components, and handlers.
 5. **Follow the locator + fixture conventions** — see `patterns.md`.
@@ -170,7 +179,7 @@ npm run test:e2e:serve      # manual PHP server on :8000 for custom runs
 ```
 
 Env vars the tests depend on (all in `.env.playwright.example`):
-- `PLAYWRIGHT_BASE_URL` — default `http://127.0.0.1:8000`
+- `PKP_CONFIG_FILE` — absolute path to `config.test.inc.php`; the whole switch between the dev and test installs (the test DB and files dir are named in there)
 
 **Always drive the fleets via `127.0.0.1`, never `localhost`.** All three
 `config.test.inc.php` files pin `allowed_hosts` to `127.0.0.1` (+ the fleet's
@@ -180,9 +189,9 @@ and only the followed redirect fails. The `_test` API answers on either host,
 which makes the mistake worse: seeding succeeds, the browser step dies. Three
 separate probe sessions lost time to this (2026-07-28).
 
-- `OJS_DB_*` — the test database; must exist and be empty
-- `OJS_FILES_DIR` — writable files dir, kept separate from Cypress
-- `TEST_API_KEY` — gates `/api/v1/_test/*` bootstrap endpoints
+- `PLAYWRIGHT_BASE_PORT` / `PLAYWRIGHT_WORKERS` — worker 0's port (OJS 8000 · OMP 8100 · OPS 8200) and how many per-worker PHP servers to start (unset = auto-detect: half the CPU cores, minimum 2)
+- `TEST_API_KEY` — enables and gates `/api/v1/_test/*` (namespace answers 404 unless the var is in the server's environment, 403 unless the request's `X-Test-Key` header matches)
+- `MAILPIT_URL` — Mailpit HTTP API, shared by every worker and all three fleets (default `http://127.0.0.1:8025`)
 
 ## The other two apps (OMP / OPS)
 

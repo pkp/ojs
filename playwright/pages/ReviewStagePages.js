@@ -289,8 +289,25 @@ exports.addReviewer = async function addReviewer(page, name, {method} = {}) {
     await expect(search).toBeVisible({timeout: 30_000});
     await search.fill(name);
     await search.press('Enter');
+    // Selecting a reviewer copies the Review Request template into the hidden
+    // assignment form's TinyMCE editor (AdvancedReviewerSearchHandler
+    // #handleReviewerAssign_); the server seeds personalMessage empty. If the
+    // editor hasn't finished initializing the content is silently lost and the
+    // submit 500s on an empty mail body — a race the side modal's 450ms
+    // slide-in used to mask before the harness disabled animations.
+    await page.waitForFunction(() => {
+        const textarea = document.querySelector(
+            '#reviewerFormFooter textarea[name="personalMessage"]'
+        );
+        const mce = window.tinyMCE || window.tinymce;
+        return !!(textarea && mce?.get(textarea.id)?.initialized);
+    }, undefined, {timeout: 30_000});
     await modal.getByText(`Select ${name}`).click();
     await waitForJQueryIdle(page);
+    // Guard the submit on the message body actually holding the template.
+    await expect(
+        modal.frameLocator('iframe[id^="personalMessage"]').locator('body')
+    ).not.toHaveText('', {timeout: 30_000});
     if (method) {
         await modal.getByRole('radio', {name: method, exact: true}).check();
     }
