@@ -107,7 +107,7 @@ class IssueEntryForm extends FormComponent
                 'groupId' => self::GROUP_PLACEMENT,
                 'label' => __('submission.submit.placement.categories'),
                 'description' => __('publication.categories.description') . ($hasAllBreadcrumbs ? '' : ' ' . __('submission.categories.circularReferenceWarning')),
-                'value' => $publication->getData('categoryIds'),
+                'value' => $publication->getData('categoryIds')->toArray(),
                 'options' => $categoryOptions,
                 'vocabularies' => [
                     [

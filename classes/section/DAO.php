@@ -95,9 +95,11 @@ class DAO extends \PKP\section\DAO
                 ->whereIn('s.section_id', $sectionIdsQuery)
                 ->orderBy('section_seq')
                 ->get();
+            $ids = $rows->pluck('section_id')->all();
+            $cache = (object) [];
 
             foreach ($rows as $i => $row) {
-                yield $row->section_id => $this->fromRow($row);
+                yield $row->section_id => $this->fromRow($row, $ids, $cache);
             }
         });
     }
