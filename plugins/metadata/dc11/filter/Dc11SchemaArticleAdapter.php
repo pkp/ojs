@@ -106,7 +106,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
         $this->addLocalizedElements($dc11Description, 'dc:subject', $subjects);
 
         // Description
-        $this->addLocalizedElements($dc11Description, 'dc:description', $publication->getData('abstract'));
+        $this->addLocalizedElements($dc11Description, 'dc:description', (array) $publication->getData('abstract'));
 
         // Publisher
         $publisherInstitution = $journal->getData('publisherInstitution');
@@ -320,7 +320,7 @@ class Dc11SchemaArticleAdapter extends MetadataDataObjectAdapter
     private function addLocalizedElements(
         MetadataDescription &$description,
         string $propertyName,
-        array $localizedValues
+        ?array $localizedValues
     ): void {
         foreach (stripAssocArray((array) $localizedValues) as $locale => $values) {
             if (is_scalar($values)) {
