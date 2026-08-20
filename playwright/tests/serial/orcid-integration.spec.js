@@ -36,7 +36,9 @@ function makeTag(scenario, testInfo) {
     return `u4${scenario}ojsw${testInfo.parallelIndex}${Math.random().toString(36).slice(2, 8)}`;
 }
 
-test.describe('ORCID integration (queued email)', () => {
+// Suite disabled 2026-08-20 (maintainer): pending a decision on how ORCID's
+// external communication is handled in tests (mock server vs dead-port proxy).
+test.describe.skip('ORCID integration (queued email)', () => {
     test('S4: "Request verification" emails the contributor an authorization link', async ({asUser, ojsApi, pkpMail}, testInfo) => {
         test.slow();
         const tag = makeTag('s4', testInfo);

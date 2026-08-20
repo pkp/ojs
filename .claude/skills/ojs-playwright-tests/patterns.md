@@ -90,6 +90,8 @@ For reader-facing tests (journal homepage, public article view). Don't set `test
 
 Playwright auto-waits for actionability on every interaction. Explicit waits are only needed for **arrival** (confirming a navigation or DOM transition completed).
 
+**Animations are globally disabled by the harness** — `reducedMotion: 'reduce'` in `config-factory.js` plus a CSS override injected into every context (base fixtures, `asUser`, auth logins) by `lib/pkp/playwright/support/motion.js`, so nothing waits on the side modal's 450ms slide. Durations are forced to 0.01ms, NOT 0: reka-ui/Vue presence helpers wait on `animationend`/`transitionend`, and a true 0 can mean the event never fires, leaving closing elements mounted forever.
+
 ### Wait on a landmark, not the network
 Good:
 ```js
@@ -104,7 +106,7 @@ await page.waitForLoadState('networkidle'); // Vue keeps polling — may never r
 ```
 
 ### Wait on the URL for auth-style redirects
-From `auth.js`:
+From `LoginPage.js#signIn` (`lib/pkp/playwright/pages/LoginPage.js`):
 ```js
 await page.waitForURL((url) => !url.pathname.includes('/login'), {
     timeout: 15_000,
@@ -123,17 +125,17 @@ await response;
 Prefer this over toast-based assertions when running in parallel — see "Parallel-load lessons" below.
 
 ### Wait on jQuery to settle for legacy AjaxModal / grid flows
-Helper: `lib/pkp/playwright/support/jquery.js` → `waitForJQueryIdle(page)`.
+Helper: `playwright/support/legacy.js` (OJS app-local — the shared `lib/pkp/playwright` layer deliberately ships no jQuery helper; promote via a shared-layer proposal if a second app suite needs it) → `waitForJQueryIdle(page)`.
 
 ```js
-const {waitForJQueryIdle} = require('../../lib/pkp/playwright/support/jquery.js');
+const {waitForJQueryIdle} = require('../support/legacy.js');
 
 await form.locator('button[type="submit"]').click();
 await waitForJQueryIdle(page);
 await expect(form).toHaveCount(0); // modal closed by AjaxFormHandler
 ```
 
-`window.jQuery.active` is jQuery's in-flight AJAX counter; `waitForJQueryIdle` polls until it reaches 0. This is the Playwright counterpart to Cypress's `cy.waitJQuery()` — call it after any interaction with legacy jQuery-driven UI:
+`window.jQuery.active` is jQuery's in-flight AJAX counter; `waitForJQueryIdle` waits (`waitForFunction`) until jQuery is absent or the counter reaches 0. This is the Playwright counterpart to Cypress's `cy.waitJQuery()` — call it after any interaction with legacy jQuery-driven UI:
 
 - AjaxModal open + AjaxFormHandler save chains (subscription types/policies, sections, the broader Distribution/Settings pages still on the legacy stack)
 - Smarty grid refreshes (`pkp_controllers_linkAction` row deletes / inline edits)
@@ -152,8 +154,8 @@ The suite runs in parallel by default. The shared seed data is the unit of conte
 3. **`searchPhrase=` OR-joins on whitespace.** `searchPhrase: 'Published article {tag}'` matches every fixture-seeded "Published article" — falls off the `count=30` cap under load. Search by `tag` alone (single whitespace-free unique token).
 4. **Mailpit inbox is shared across parallel tests in a run.** Never `clearAll()` outside the dedicated serial infrastructure spec (charter principle 8); scope every assertion with `pkpMail.find({to, contains: tag})` / `expectNone`, using throwaway recipients for counting/absence checks.
 5. **`playwright/.auth/{user}.json` can go stale after `login-as` flows.** `PKPSessionGuard::signInAs/signOutAs` migrate the session and destroy the previous row. `ensureAuthStateFor` probes `/index/user/profile` before reusing storage state — it relogs in if the probe doesn't 200.
-6. **All server-side outbound HTTP is firewalled in test runs.** `config.test.inc.php` points `[proxy]` at a dead local port, which PKP wires into Guzzle, PHP streams AND libxml — so a test must never depend on the app reaching an external service (a hung egress call once killed worker PHP servers mid-suite). Remote DTDs the app validates against are mirrored at `lib/pkp/playwright/fixtures/dtd/` and resolved via `XML_CATALOG_FILES`.
-7. **Nothing queued or scheduled runs on its own** (`[schedule] task_runner = Off` AND `[queues] job_runner = Off` in all three fleets' test configs — re-verified 2026-08-07 during U4; the earlier "queued jobs process at end of request" note described a prior config and is retired). A spec that needs a scheduled task (reminders etc.) invokes `php lib/pkp/tools/scheduler.php run`; a spec that needs a queued job's side effect (job-dispatched emails such as the ORCID mailables, deposits) invokes `php lib/pkp/tools/jobs.php run` on that fleet's app root — without it the mail never reaches Mailpit. Both belong in the serial project: an explicit runner drains the SHARED queue, so it can pop other tests' pending jobs — e.g. inside a `Mail::fake()` seeding window, committing side effects while silently swallowing the message (the wave-12 hazard, now reachable only via explicit runs). Never invoke either runner while parallel agents are seeding; the canonical project chain (serial depends on the parallel projects) guarantees this in normal runs.
+6. **All server-side outbound HTTP is blocked fail-fast** — `[proxy]` in `config.test.inc.php` points at a dead local port (PKP wires `[proxy]` into Guzzle, PHP streams AND libxml), so tests never reach real external services (ORCID especially); SMTP to Mailpit and browser↔server traffic on 127.0.0.1 are unaffected. This proxy was missing from the rebuild until 2026-08-20 (maintainer ruling reinstated it) and must not be removed: a test must never depend on the app reaching an external service, and a hung outbound call stalls a single-threaded `php -S` worker server (one such hang once killed worker servers mid-suite — the dead port fails fast instead). There is no OS/network-level firewall and no DTD mirror (`XML_CATALOG_FILES` does not exist; recreate a local mirror only if a flow ever needs a remote DTD). Flows that fire outbound calls as a side effect (e.g. ORCID deposit/revocation jobs popped by a queue drain) fail fast at the proxy — harmless, no test asserts on them.
+7. **Nothing queued or scheduled runs on its own** (`[schedule] task_runner = Off` AND `[queues] job_runner = Off` in all three fleets' test configs — re-verified 2026-08-07 during U4; the earlier "queued jobs process at end of request" note described a prior config and is retired). A spec that needs a scheduled task (reminders etc.) invokes `php lib/pkp/tools/scheduler.php run`; a spec that needs a queued job's side effect (job-dispatched emails such as the ORCID mailables, deposits) invokes `php lib/pkp/tools/jobs.php run` on that fleet's app root (wrapped by `runJobs()` in `lib/pkp/playwright/support/jobs.js`) — without it the mail never reaches Mailpit. Both belong in the serial project: an explicit runner drains the SHARED queue, so it can pop other tests' pending jobs — e.g. inside a `Mail::fake()` seeding window, committing side effects while silently swallowing the message (the wave-12 hazard, now reachable only via explicit runs). Never invoke either runner while parallel agents are seeding; the canonical project chain (serial depends on the parallel projects) guarantees this in normal runs.
 8. **"Anonymous" contexts aren't anonymous under `test.use({user})`.** `browser.newContext()` inherits the file's `storageState` context option, so a fresh context carries the logged-in session — and editors can *preview* unpublished articles, turning expected 404s into 200s. Every anonymous-reader check must pass an explicit empty state: `browser.newContext({storageState: {cookies: [], origins: []}})`. (Bit two wave-6 agents independently.)
 9. **Bare front-end URLs 302 to the locale-prefixed form** (`/index.php/<journal>/article/...` → `/index.php/<journal>/en/article/...`). `page.goto` hides this by following redirects, but any `request.get(..., {maxRedirects: 0})` probe must use the locale-prefixed URL. **INVERTED on single-locale journals** (most scratch journals): there the bare URL serves directly and the `/en/`-prefixed form 302s BACK to the bare one — probe scratch journals with bare URLs, publicknowledge with prefixed ones.
 10. **Tags that back COUNT assertions need a per-run random component.** A tag built only from workerIndex + test-title slug repeats across runs, so counting tag matches on a shared surface (issue TOC, archive listing) picks up leftovers from previous runs on a long-lived DB. Existence assertions tolerate this; `toHaveCount(n)` does not. **And tags that back SEARCH assertions must be single hyphenless alphanumeric tokens**: Postgres splits `edd7-w0-x` into `edd7`/`w0`/`x` and the dashboard search OR-matches tokens — a `-w0-` tag search matches every other worker-0 submission still active (deterministic on long-lived DBs with accumulated incomplete drafts; reset the DB before full-suite runs).
@@ -186,7 +188,7 @@ test('name', {tag: ['@smoke', '@regression']}, async ({page}) => { ... });
 
 ## Page Object Model
 
-Inherit from `BasePage` (`lib/pkp/playwright/pages/BasePage.js:11`). POMs hold the Playwright `page` reference and locators as instance properties.
+Inherit from `BasePage` (`lib/pkp/playwright/pages/BasePage.js`). POMs hold the Playwright `page` reference and locators as instance properties.
 
 ```js
 // lib/pkp/playwright/pages/SomePage.js (shared) or playwright/pages/SomePage.js (OJS-only)
@@ -214,10 +216,10 @@ exports.SomePage = class SomePage extends BasePage {
 - Shared across OJS/OMP/OPS (login, dashboard, workflow mechanics) → `lib/pkp/playwright/pages/`
 - OJS-only (issues, galleys, OJS submission wizard, editorial workflow) → `playwright/pages/`
 
-OJS-side POMs of note:
+OJS-side POMs live today: `playwright/pages/OrcidPages.js`, `ReviewStagePages.js`, `UserInvitationPages.js`. The POMs below are recorded designs (header note — they return with their feature suites):
 
 - `playwright/pages/EditorialWorkflowPage.js` — drives the per-submission workflow page including primary decisions, the Publication side-nav, publish/unpublish flows, and galley add/delete. Significant helpers: `clickDecision`, `clickRequestRevisions` (handles the WorkflowSelectRevisionFormModal entry), `awaitEmailTemplateLoaded`, `recordDecision`, `publishCurrentPanel`, `addGalley`, `deleteGalley`.
-- `playwright/pages/SubmissionWizardPage.js`, `playwright/pages/IssuePage.js` — narrower POMs, see source.
+- `playwright/pages/SubmissionWizardPage.js`, `playwright/pages/IssuePage.js` — narrower POMs (recorded design).
 
 ## Decision flow
 
@@ -255,7 +257,7 @@ test('...', async ({ojsApi, page}) => {
 });
 ```
 
-The `submission` fixture at `playwright/support/fixtures.js` is a wired-but-stub for end-of-test cleanup; its methods are TODO. When you encounter a TODO, flag it rather than inventing an alternative.
+There is no `submission` cleanup fixture in the rebuilt harness — `playwright/support/fixtures.js` carries only the `ojsApi` alias today; feature fixtures land there as suites grow. When you encounter a TODO stub, flag it rather than inventing an alternative.
 
 ## Verify before trusting
 
@@ -322,7 +324,7 @@ test('editor assigns reviewer, reviewer accepts', async ({page, asUser}) => {
 
 - **Depending on absolute database IDs.** `submissionId = 1` is wrong — use the ID returned by `ojsApi.createSubmission()` or scrape it from the page.
 - **Changing seed data mid-test.** The seeded journal (`publicknowledge`) and the 18 seeded users are shared across parallel workers. Mutating them (renaming, deleting, changing roles) will break sibling tests. If a test needs a user or journal with specific attributes, create one via the API as per-test setup.
-- **Running the test server manually and also via Playwright.** `webServer` in `config-factory.js:47-65` auto-starts PHP. Trying to run `npm run test:e2e:serve` in another terminal at the same time fights over port 8000. If you need a manual server for poking around, stop the Playwright run first.
+- **Running the test server manually and also via Playwright.** The `webServer` array in `lib/pkp/playwright/config-factory.js` auto-starts PHP (one server per worker, logs redirected to `playwright/.server-logs/`). Trying to run `npm run test:e2e:serve` in another terminal at the same time fights over port 8000. If you need a manual server for poking around, stop the Playwright run first.
 - **Committing `.auth/` files.** Storage states contain session cookies. They're gitignored; if you see one staged, un-stage it.
 - **Mutating a seeded account's flags.** No baseline account is `mustChangePassword`-flagged anymore — `manager.maya` logs straight in when you need "a journal manager". If a test needs an account with unusual flags (e.g. a forced password reset), create a throwaway user in a scratch journal instead of touching the roster.
 
@@ -336,7 +338,7 @@ test('editor assigns reviewer, reviewer accepts', async ({page, asUser}) => {
 
 - **Dashboard search commits on Enter only** (`Search.vue` `@keydown.enter.prevent` — the old keyup-debounce note is dead; 2026-08-02, U25). `fill()` alone never filters and neither does typing: press Enter to commit. A committed search FLIPS the dashboard to a dedicated cross-status "Search Results" view (`currentViewId=search`) that removes the in-page search box (the side-nav searchbox owns the query there — scope by accessible name `/Search submissions, ID/` to dodge the two-searchbox collision). To assert on a specific status view (e.g. Declined), assert on that view's own list response (`status[]=…`), not through search. (U26's `findRowByTag` fixed 2026-08-02 — commits via Enter, scoped to the in-page searchbox; OJS-only, the OMP/OPS review suites never used it.)
 - **Paginated lists accumulate state across runs.** The test DB is long-lived locally; shared users like `author.alex` own hundreds of submissions. Never assert presence on an unscoped first page — search by the test's unique tag first. Extra trap: seeded drafts carry no `dateSubmitted` (real-draft parity) so they sort LAST in date-ordered lists.
-- **Server-rendered TinyMCE values never reach the backing textarea.** Assert via `getTinyMceContent()` (support/tinymce.js), not the textarea value.
+- **Server-rendered TinyMCE values never reach the backing textarea.** No helper exists (`tinymce.js` was deliberately not recreated in the rebuild); read the editor's own content directly — e.g. `page.evaluate((id) => window.tinymce?.get(id)?.getContent(), fieldId)` — never the textarea value.
 - **The wizard Steps rail collapses when it overflows** (non-current pills get `-screenReader`, 1px-clipped); a `force: true` click on a clipped pill is a silent no-op. Use `SubmissionWizardPage.gotoStep()`/`expectStep()` — they handle expansion, end-anchored name matching ('Review' vs 'Reviewer Suggestions'), and re-render-swallowed clicks.
 - **Side-modal wrappers report `visibility: hidden` permanently** — anchor visibility assertions on inner content, not the wrapper.
 - **`useFetch` tunnels DELETE *and PUT* via POST + `X-Http-Method-Override`; unauthorized API calls return 401** (not 403) — `waitForResponse` predicates on `request().method()` must accept POST for both (`useFetch.js`); match status assertions accordingly.
