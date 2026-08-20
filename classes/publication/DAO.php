@@ -50,15 +50,6 @@ class DAO extends \PKP\publication\DAO
         'sourcePublicationId' => 'source_publication_id'
     ];
 
-    protected function populate(object $row, object $schema, \PKP\core\DataObject $object, array $ids, object $cache): void
-    {
-        parent::populate($row, $schema, $object, $ids, $cache);
-
-        $cache->galleys ??= Repo::galley()->getCollector()->filterByPublicationIds($ids)->getMany()
-            ->groupBy(fn ($galley) => $galley->getData('publication_id'));
-        $object->setData('galleys', $cache->galleys->get($row->publication_id) ?? collect());
-    }
-
     /**
      * @copydoc SchemaDAO::_fromRow()
      */
@@ -72,6 +63,10 @@ class DAO extends \PKP\publication\DAO
                 ->filterByPublicationIds([$publication->getId()])
                 ->getMany()
         );
+
+        $cache->galleys ??= Repo::galley()->getCollector()->filterByPublicationIds($ids)->getMany()
+            ->groupBy(fn ($galley) => $galley->getData('publication_id'));
+        $publication->setData('galleys', $cache->galleys->get($row->publication_id) ?? collect());
 
         return $publication;
     }
