@@ -338,6 +338,9 @@ allow_plugin_install = on
 ; Set to 0 to disable re-authentication.
 ;password_timeout = 0
 
+; When set to On, pass article galley HTML through a filter to remove potentially malicious content.
+filter_galley_html = On
+
 ;;;;;;;;;;;;;;;;;;
 ; Email Settings ;
 ;;;;;;;;;;;;;;;;;;
