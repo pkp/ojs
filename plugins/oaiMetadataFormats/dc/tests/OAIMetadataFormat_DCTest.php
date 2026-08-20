@@ -84,6 +84,32 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
 
     public function testToXml()
     {
+        $xml = $this->toXml($this->createOAIRecord());
+        self::assertXmlStringEqualsXmlFile('plugins/oaiMetadataFormats/dc/tests/expectedResult.xml', $xml);
+    }
+
+    /**
+     * A publication without an abstract returns null rather than an empty array.
+     */
+    public function testToXmlWithoutAbstract()
+    {
+        $xml = $this->toXml($this->createOAIRecord(withAbstract: false));
+        self::assertStringContainsString('<dc:title xml:lang="en">article-title-en</dc:title>', $xml);
+        self::assertStringNotContainsString('<dc:description', $xml);
+    }
+
+    private function toXml(OAIRecord $record): string
+    {
+        $prefix = OAIMetadataFormatPlugin_DC::getMetadataPrefix();
+        $schema = OAIMetadataFormatPlugin_DC::getSchema();
+        $namespace = OAIMetadataFormatPlugin_DC::getNamespace();
+        $mdFormat = new OAIMetadataFormat_DC($prefix, $schema, $namespace);
+
+        return $mdFormat->toXml($record);
+    }
+
+    private function createOAIRecord(bool $withAbstract = true): OAIRecord
+    {
         $controlledVocabRepoMock = Mockery::mock(ControlledVocabRepository::class)
             ->makePartial()
             ->shouldReceive('getBySymbolic')
@@ -160,7 +186,9 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $publication->setData('title', 'article-title-en', 'en');
         $publication->setData('title', 'article-title-de', 'de');
         $publication->setData('coverage', ['en' => ['article-coverage-geo', 'article-coverage-chron', 'article-coverage-sample']]);
-        $publication->setData('abstract', 'article-abstract', 'en');
+        if ($withAbstract) {
+            $publication->setData('abstract', 'article-abstract', 'en');
+        }
         $publication->setData('sponsor', 'article-sponsor', 'en');
         $publication->setData('doiObject', $publicationDoiObject);
         $publication->setData('copyrightHolder', 'article-copyright');
@@ -336,10 +364,6 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
             ->willReturn(LazyCollection::wrap($galleys));
         app()->instance(GalleyCollector::class, $mockGalleyCollector);
 
-        //
-        // Test
-        //
-
         // OAI record
         $record = new OAIRecord();
         $record->setData('article', $article);
@@ -348,13 +372,6 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $record->setData('section', $section);
         $record->setData('issue', $issue);
 
-        // Instantiate the OAI metadata format.
-        $prefix = OAIMetadataFormatPlugin_DC::getMetadataPrefix();
-        $schema = OAIMetadataFormatPlugin_DC::getSchema();
-        $namespace = OAIMetadataFormatPlugin_DC::getNamespace();
-        $mdFormat = new OAIMetadataFormat_DC($prefix, $schema, $namespace);
-
-        $xml = $mdFormat->toXml($record);
-        self::assertXmlStringEqualsXmlFile('plugins/oaiMetadataFormats/dc/tests/expectedResult.xml', $xml);
+        return $record;
     }
 }
