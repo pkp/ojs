@@ -22,8 +22,8 @@ use Illuminate\Database\Query\Builder;
 use Illuminate\Database\Query\JoinClause;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\LazyCollection;
 use PKP\core\EntityDAO;
+use PKP\core\interfaces\CollectorInterface;
 use PKP\core\traits\EntityWithParent;
 use PKP\db\DAOResultFactory;
 use PKP\services\PKPSchemaService;
@@ -111,23 +111,6 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
     }
 
     /**
-     * Get a collection of issues matching the configured query
-     *
-     * @return LazyCollection<int,Issue>
-     */
-    public function getMany(Collector $query): LazyCollection
-    {
-        return LazyCollection::make(function () use ($query) {
-            $rows = $query
-                ->getQueryBuilder()
-                ->get();
-            foreach ($rows as $row) {
-                yield $row->issue_id => $this->fromRow($row);
-            }
-        });
-    }
-
-    /**
      * Get the issue id by its url path
      *
      */
@@ -142,9 +125,9 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
     }
 
     /** @copydoc EntityDAO::fromRow() */
-    public function fromRow(object $row, ?callable $populator = null): Issue
+    public function fromRow(object $row, array $ids, object $cache, ?CollectorInterface $query = null): Issue
     {
-        $issue = parent::fromRow($row, $populator);
+        $issue = parent::fromRow($row, $ids, $cache, $query);
         $this->setDoiObject($issue);
 
         return $issue;
