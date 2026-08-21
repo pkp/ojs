@@ -104,7 +104,11 @@ class ExportPublishedPublicationsListGridCellProvider extends DataObjectGridCell
             case 'submissionId':
                 return ['label' => $publication->getData('submissionId')];
             case 'version':
-                return ['label' => $publication->getData('versionMajor') . '.' . $publication->getData('versionMinor')];
+                return ['label' => __('publication.versionStage.display', [
+                    'stage' => $publication->getData('versionStage'),
+                    'majorNumbering' => $publication->getData('versionMajor'),
+                    'minorNumbering' => $publication->getData('versionMinor'),
+                ])];
             case 'title':
                 return ['label' => ''];
             case 'status':

@@ -67,11 +67,15 @@ class DAO extends \PKP\publication\DAO
     }
 
     /**
-     * Get all published VoR versions (eventually with a pubId assigned and) matching the specified settings.
-     * Only the latest minor version of a major version will be considered.
+     * Get all published versions (eventually with a pubId assigned and) matching the specified settings.
+     * Only the latest minor version of a major version will be considered, per version stage.
+     *
+     * @param VersionStage[]|null $versionStages Which version stages count as exportable. Defaults to VoR only.
+     * @param int[]|null $ids Restrict to these publication IDs, if given.
      */
-    public function getExportable(int $contextId, ?string $pubIdType = null, ?string $title = null, ?string $author = null, ?int $issueId = null, ?string $settingName = null, ?string $settingValue = null, ?DBResultRange $rangeInfo = null): DAOResultFactory
+    public function getExportable(int $contextId, ?string $pubIdType = null, ?string $title = null, ?string $author = null, ?int $issueId = null, ?string $settingName = null, ?string $settingValue = null, ?DBResultRange $rangeInfo = null, ?array $versionStages = null, ?array $ids = null): DAOResultFactory
     {
+        $versionStages ??= [VersionStage::VERSION_OF_RECORD];
         $q = DB::table('publications', 'p')
             ->join('submissions AS s', 's.submission_id', '=', 'p.submission_id')
             ->leftJoin(
@@ -110,8 +114,9 @@ class DAO extends \PKP\publication\DAO
                 )
             )
             ->where('s.context_id', '=', $contextId)
-            ->where('p.version_stage', '=', VersionStage::VERSION_OF_RECORD)
+            ->whereIn('p.version_stage', array_map(fn (VersionStage $stage) => $stage->value, $versionStages))
             ->where('p.status', '=', Publication::STATUS_PUBLISHED)
+            ->when($ids !== null, fn (Builder $q) => $q->whereIn('p.publication_id', $ids))
             ->whereNull('p2.publication_id')
             ->when($pubIdType != null, fn (Builder $q) => $q->where('pspidt.setting_name', '=', "pub-id::{$pubIdType}")->whereNotNull('pspidt.setting_value'))
             ->when($title != null, fn (Builder $q) => $q->where('pst.setting_name', '=', 'title')->where('pst.setting_value', 'LIKE', "%{$title}%"))
