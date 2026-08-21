@@ -11,7 +11,7 @@ For each screen:
 Do not treat this as an exhaustive DOM catalog. It's a map to the **source of truth** — selectors should be confirmed against the Vue component or by running the spec with `--ui`.
 
 > Screen facts here are live app truth. POMs this map names are live ONLY if
-> `lib/pkp/docs/e2e/dev/patterns.md` lists them as existing
+> `lib/pkp/docs/e2e/process/patterns.md` lists them as existing
 > (`OrcidPages`, `ReviewStagePages`, `UserInvitationPages` today);
 > `EditorialWorkflowPage` and `SubmissionWizardPage` are **recorded designs**
 > — the named helpers are the shape to build when a suite needs them.

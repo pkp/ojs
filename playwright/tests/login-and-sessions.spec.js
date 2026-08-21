@@ -4,7 +4,7 @@
  *
  * Login & sessions — OJS suite, one test per canonical scenario the spec runs
  * on OJS (scenarios 1–8; scenario 9 needs a config-gated install — see below).
- * Spec: lib/pkp/docs/product/specs/login-and-sessions.md
+ * Spec: lib/pkp/docs/e2e/specs/U01-login-and-sessions.md
  *
  * Deliberately NOT covered (one line per omission, citing the register ID):
  * - Scenario 9 (Confirm Access gate): gated on `password_timeout` in

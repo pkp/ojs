@@ -4,7 +4,7 @@
  * OJS capability map + seeded-actor roster. Shared lib/pkp code gates on
  * these capabilities (never app names) and resolves personas through
  * seed.actors (archetype → seeded-username-or-null). Capability names are
- * canonical in lib/pkp/docs/product/APP-GLOSSARY.md §2 — verbatim.
+ * canonical in lib/pkp/docs/e2e/specs/GLOSSARY.md Part II §2 — verbatim.
  */
 const bootstrap = require('../fixtures/bootstrap.js');
 

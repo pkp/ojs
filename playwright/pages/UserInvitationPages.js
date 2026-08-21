@@ -2,7 +2,7 @@
  * @file playwright/pages/UserInvitationPages.js
  *
  * OJS-local Page Objects for the user-invitations feature (spec:
- * lib/pkp/docs/product/specs/user-invitations.md).
+ * lib/pkp/docs/e2e/specs/U06-user-invitations.md).
  *
  * Three surfaces:
  * - UsersRolesPage — Settings → Users & Roles (Users tab): the Invitations

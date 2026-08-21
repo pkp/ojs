@@ -2,7 +2,7 @@
  * @file playwright/pages/ReviewStagePages.js
  *
  * OJS-local Page Objects and flow helpers for the review stage & rounds
- * feature (spec: lib/pkp/docs/product/specs/review-stage-and-rounds.md).
+ * feature (spec: lib/pkp/docs/e2e/specs/U26-review-stage-and-rounds.md).
  *
  * Surfaces:
  * - WorkflowPage — the per-submission workflow dialog on the editorial

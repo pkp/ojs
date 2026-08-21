@@ -4,7 +4,7 @@
  *
  * Submission stage — OJS suite, one test per canonical scenario the spec runs
  * on OJS (common scenarios 1–7; scenario 8 is OMP-only, 9 OPS-only).
- * Spec: lib/pkp/docs/product/specs/submission-stage.md
+ * Spec: lib/pkp/docs/e2e/specs/U25-submission-stage.md
  *
  * Deliberately NOT covered (register IDs from the spec's Findings register):
  * - A1 ❓: whether "Schedule For Publication" belongs on a declined

@@ -8,7 +8,7 @@
  * tests/serial/orcid-integration.spec.js — ORCID mail only reaches Mailpit
  * after an explicit queue-worker run, which must never happen while parallel
  * agents seed (patterns.md parallel lesson 7).
- * Spec: lib/pkp/docs/product/specs/orcid-integration.md
+ * Spec: lib/pkp/docs/e2e/specs/U04-orcid-integration.md
  *
  * Deliberately NOT covered (one line per omission, citing the register ID):
  * - A4 🐞: S2 asserts the connect button's popup only; the "What is ORCID?"

@@ -5,7 +5,7 @@
  * Reviewer assignment & management — OJS suite, one test per canonical
  * scenario the spec runs on OJS (common scenarios 1–12 + OJS-specific 14;
  * scenario 13 is OMP-only, 15 OPS-only — they live in those repos).
- * Spec: lib/pkp/docs/product/specs/reviewer-assignment-and-management.md
+ * Spec: lib/pkp/docs/e2e/specs/U27-reviewer-assignment-and-management.md
  *
  * Deliberately NOT covered (register IDs from the spec's Findings register —
  * a 🐞 is never asserted as contract, a ❓ is parked, not a gap):

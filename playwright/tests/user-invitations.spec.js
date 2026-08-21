@@ -4,7 +4,7 @@
  *
  * User invitations — OJS suite, one test per canonical scenario the spec runs
  * on OJS (scenarios 1–8; scenario 9 is OPS-only).
- * Spec: lib/pkp/docs/product/specs/user-invitations.md
+ * Spec: lib/pkp/docs/e2e/specs/U06-user-invitations.md
  *
  * Deliberately NOT covered (one line per omission, citing the register ID):
  * - A3 🐞: S6 asserts a replaced invitation's old links no longer open the flow

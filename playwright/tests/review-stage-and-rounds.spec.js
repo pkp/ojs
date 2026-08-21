@@ -4,7 +4,7 @@
  *
  * Review stage & rounds — OJS suite, one test per canonical scenario the spec
  * runs on OJS (common scenarios 1–12; scenario 13 is OMP-only, 14 OPS-only).
- * Spec: lib/pkp/docs/product/specs/review-stage-and-rounds.md
+ * Spec: lib/pkp/docs/e2e/specs/U26-review-stage-and-rounds.md
  *
  * Deliberately NOT covered (register IDs from the spec's Findings register):
  * - A1 🐞: S5 asserts the documented working path only — the two resubmit

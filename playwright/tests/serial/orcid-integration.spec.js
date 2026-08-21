@@ -8,7 +8,7 @@
  * reaches Mailpit until `php lib/pkp/tools/jobs.php run` drains the queue —
  * and that drain pops the SHARED queue, so it must never run while parallel
  * agents seed. Hence the serial project (patterns.md parallel lesson 7).
- * Spec: lib/pkp/docs/product/specs/orcid-integration.md
+ * Spec: lib/pkp/docs/e2e/specs/U04-orcid-integration.md
  *
  * Coverage boundaries are declared in the parallel suite's header
  * (playwright/tests/orcid-integration.spec.js); this file adds only:
