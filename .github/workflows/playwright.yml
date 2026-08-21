@@ -1,0 +1,153 @@
+# Playwright e2e suite for OJS — additional to the Cypress CI in main.yml.
+#
+# Single job, single runner (no matrix/sharding yet). PHP 8.3 + PostgreSQL 16
+# + Node 20 + Mailpit. The harness (lib/pkp/playwright) spawns its own
+# `php -S` servers (one per worker) and cold-bootstraps the test install via
+# tools/installTest.php + the declarative seed, so this workflow only has to
+# provide: a Postgres DB named ojs_test, a Mailpit instance, a built app, and
+# a config.test.inc.php (generated from .github/ci/config.test.inc.php).
+name: ojs-playwright
+
+on:
+  push:
+    branches: ['*']
+  pull_request:
+    branches: ['main']
+
+concurrency:
+  group: ojs-playwright-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  playwright:
+    name: ojs-playwright
+    runs-on: ubuntu-latest
+    env:
+      # The whole switch between dev and test install: the app (php -S servers,
+      # installTest.php CLI) reads its config from this path.
+      PKP_CONFIG_FILE: ${{ github.workspace }}/config.test.inc.php
+      # Enables + gates /api/v1/_test/* (any value; requests send X-Test-Key).
+      TEST_API_KEY: ci-test-key
+      # Mailpit HTTP API for mail assertions (SMTP side is 1025 in the config).
+      MAILPIT_URL: http://127.0.0.1:8025
+      # PLAYWRIGHT_WORKERS deliberately NOT set: the config auto-detects
+      # cores - 2 (= 2 on ubuntu-latest's 4 vcpus), one php -S server each.
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: ojs
+          POSTGRES_PASSWORD: ojs
+          POSTGRES_DB: ojs_test
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U ojs"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+      mailpit:
+        image: axllent/mailpit
+        ports:
+          - 8025:8025
+          - 1025:1025
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 1
+
+      # TEMPORARY — remove at merge time. The campaign convention is "no
+      # submodule re-pins", so the recorded lib/pkp pointer predates the
+      # e2e_ng_2 harness. Until the pointer is officially updated, fetch the
+      # campaign branch from the jardakotesovec fork and use its tip.
+      # Merge-time version: delete this step (the recorded pointer will carry
+      # the harness) and keep plain `submodules: recursive` above.
+      - name: "TEMPORARY: override lib/pkp with jardakotesovec/pkp-lib e2e_ng_2"
+        run: |
+          cd lib/pkp
+          git fetch --depth 1 https://github.com/jardakotesovec/pkp-lib e2e_ng_2
+          git checkout --detach FETCH_HEAD
+          git submodule update --init --depth 1
+
+      - name: Set up PHP 8.3
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          # Canonical pkp-github-actions list, minus the MySQL family,
+          # plus pdo_pgsql (the postgres9 driver needs it).
+          extensions: bcmath, bz2, curl, gd, intl, mbstring, opcache, pdo_pgsql, pgsql, soap, xml, zip
+          coverage: none
+
+      - name: Get composer cache directory
+        id: composer-cache
+        run: echo "dir=$(composer config --global cache-files-dir)" >> "$GITHUB_OUTPUT"
+
+      - name: Cache composer packages
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: composer-${{ runner.os }}-${{ hashFiles('lib/pkp/composer.lock', 'plugins/generic/citationStyleLanguage/composer.lock', 'plugins/paymethod/paypal/composer.lock') }}
+          restore-keys: composer-${{ runner.os }}-
+
+      - name: Install PHP dependencies
+        run: |
+          composer --no-ansi --no-interaction --no-progress --working-dir=lib/pkp install --no-dev --optimize-autoloader
+          composer --no-ansi --no-interaction --no-progress --working-dir=plugins/generic/citationStyleLanguage install --no-dev --optimize-autoloader
+          composer --no-ansi --no-interaction --no-progress --working-dir=plugins/paymethod/paypal install --no-dev --optimize-autoloader
+
+      - name: Set up Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      - name: Build the UI (vite backend + frontend)
+        run: npm run build
+
+      - name: Resolve Playwright version
+        id: playwright-version
+        run: echo "version=$(node -e "console.log(require('@playwright/test/package.json').version)")" >> "$GITHUB_OUTPUT"
+
+      - name: Cache Playwright browsers
+        id: playwright-cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ steps.playwright-version.outputs.version }}
+
+      # On a cache miss, install the browser + system deps. On a hit, skip
+      # both: ubuntu-latest images already carry Chromium's system libraries
+      # (verified: suite green without install-deps, saves ~12 s per run).
+      - name: Install Playwright Chromium (+ system deps)
+        if: steps.playwright-cache.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps chromium
+
+      - name: Generate config.test.inc.php
+        run: |
+          mkdir -p "$RUNNER_TEMP/files-test"
+          sed -e "s|%%FILES_DIR%%|$RUNNER_TEMP/files-test|" \
+              -e "s|%%PUBLIC_FILES_DIR%%|$GITHUB_WORKSPACE/public|" \
+              -e "s|%%DB_USERNAME%%|ojs|" \
+              -e "s|%%DB_PASSWORD%%|ojs|" \
+              .github/ci/config.test.inc.php > "$PKP_CONFIG_FILE"
+
+      - name: Run Playwright suite
+        # --retries=1: covers the known cold-bootstrap flake; the config's
+        # trace 'on-first-retry' records only on the retry, so traces are free
+        # on clean runs and available exactly when a test fails once.
+        run: npx playwright test --config=playwright/playwright.config.js --retries=1
+
+      - name: Upload test artifacts on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-artifacts
+          path: |
+            playwright/test-results/
+            playwright/.server-logs/
+          if-no-files-found: ignore
