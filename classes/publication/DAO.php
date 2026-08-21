@@ -20,6 +20,7 @@ use APP\publication\enums\VersionStage;
 use Illuminate\Contracts\Database\Query\Builder;
 use Illuminate\Database\Query\JoinClause;
 use Illuminate\Support\Facades\DB;
+use PKP\core\interfaces\CollectorInterface;
 use PKP\db\DAOResultFactory;
 use PKP\db\DBResultRange;
 use PKP\identity\Identity;
@@ -52,16 +53,13 @@ class DAO extends \PKP\publication\DAO
     /**
      * @copydoc SchemaDAO::_fromRow()
      */
-    public function fromRow(object $primaryRow): Publication
+    public function fromRow(object $row, array $ids, object $cache, ?CollectorInterface $query = null): Publication
     {
-        $publication = parent::fromRow($primaryRow);
+        $publication = parent::fromRow($row, $ids, $cache, $query);
 
-        $publication->setData(
-            'galleys',
-            Repo::galley()->getCollector()
-                ->filterByPublicationIds([$publication->getId()])
-                ->getMany()
-        );
+        $cache->galleys ??= Repo::galley()->getCollector()->filterByPublicationIds($ids)->getMany()
+            ->groupBy(fn ($galley) => $galley->getData('publicationId'));
+        $publication->setData('galleys', $cache->galleys->get($row->publication_id) ?? collect());
 
         return $publication;
     }
