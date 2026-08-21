@@ -189,7 +189,7 @@ and only the followed redirect fails. The `_test` API answers on either host,
 which makes the mistake worse: seeding succeeds, the browser step dies. Three
 separate probe sessions lost time to this (2026-07-28).
 
-- `PLAYWRIGHT_BASE_PORT` / `PLAYWRIGHT_WORKERS` — worker 0's port (OJS 8000 · OMP 8100 · OPS 8200) and how many per-worker PHP servers to start (unset = auto-detect: half the CPU cores, minimum 2)
+- `PLAYWRIGHT_BASE_PORT` / `PLAYWRIGHT_WORKERS` — worker 0's port (OJS 8000 · OMP 8100 · OPS 8200) and how many per-worker PHP servers to start (unset = auto-detect: CPU cores − 2, minimum 2 — the workload is wait-bound, measured knee 2026-08-21)
 - `TEST_API_KEY` — enables and gates `/api/v1/_test/*` (namespace answers 404 unless the var is in the server's environment, 403 unless the request's `X-Test-Key` header matches)
 - `MAILPIT_URL` — Mailpit HTTP API, shared by every worker and all three fleets (default `http://127.0.0.1:8025`)
 
