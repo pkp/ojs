@@ -58,6 +58,19 @@ trait RequestPayment
     }
 
     /**
+     * Request or waive the publication fee based on the payment decision action
+     */
+    protected function runPaymentAction(array $action, Submission $submission, User $editor, Context $context): void
+    {
+        // Decision form may submit requestPayment as a string
+        if (filter_var($action['requestPayment'], FILTER_VALIDATE_BOOLEAN)) {
+            $this->requestPayment($submission, $editor, $context);
+        } else {
+            $this->waivePayment($submission, $editor, $context);
+        }
+    }
+
+    /**
      * Request payment from authors
      */
     protected function requestPayment(Submission $submission, User $editor, Context $context)
@@ -95,5 +108,27 @@ trait RequestPayment
 
             Mail::send($mailable);
         }
+    }
+
+    /**
+     * Waive the publication fee for this submission
+     *
+     * Records a completed payment with a zero amount so the submission can be
+     * scheduled for publication without requesting payment from authors.
+     */
+    protected function waivePayment(Submission $submission, User $editor, Context $context): void
+    {
+        $request = Application::get()->getRequest();
+        $paymentManager = Application::get()->getPaymentManager($context);
+        $queuedPayment = $paymentManager->createQueuedPayment(
+            $request,
+            OJSPaymentManager::PAYMENT_TYPE_PUBLICATION,
+            $editor->getId(),
+            $submission->getId(),
+            0,
+            '' // Zero amount, no currency
+        );
+        $paymentManager->queuePayment($queuedPayment);
+        $paymentManager->fulfillQueuedPayment($request, $queuedPayment, 'ManualPayment');
     }
 }
