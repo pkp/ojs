@@ -9,7 +9,7 @@
  * Deliberately NOT covered (one line per omission, citing the register ID):
  * - Scenario 9 (Confirm Access gate): gated on `password_timeout` in
  *   config.test.inc.php — a run-global config edit every worker sees
- *   (PRINCIPLES design record 9); declared instead of covered.
+ *   (PRINCIPLES D9); declared instead of covered.
  * - A6 ❓ (sign-in rate limiting): needs the site-settings singleton mutated
  *   plus the open concealment question — not covered.
  * - Spam checks (reCAPTCHA/ALTCHA) and the `[security]`/`[general]` session
