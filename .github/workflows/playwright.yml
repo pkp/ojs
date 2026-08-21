@@ -30,8 +30,11 @@ jobs:
       TEST_API_KEY: ci-test-key
       # Mailpit HTTP API for mail assertions (SMTP side is 1025 in the config).
       MAILPIT_URL: http://127.0.0.1:8025
-      # PLAYWRIGHT_WORKERS deliberately NOT set: the config auto-detects
-      # cores - 2 (= 2 on ubuntu-latest's 4 vcpus), one php -S server each.
+      # Measured 2026-08-21 on ubuntu-latest (4 vcpus): 4 workers beats the
+      # harness auto-detect (cores − 2 = 2) — suite step 197–273 s vs
+      # 274–321 s, no flake. The workload is wait-bound (one single-threaded
+      # `php -S` per worker), so overcommitting the vcpus wins.
+      PLAYWRIGHT_WORKERS: 4
     services:
       postgres:
         image: postgres:16
