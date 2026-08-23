@@ -17,6 +17,7 @@ namespace APP\testing;
 use APP\facades\Repo;
 use PKP\context\Context;
 use PKP\core\Core;
+use PKP\plugins\Hook;
 use PKP\testing\PKPBootstrapSeeder;
 use PKP\testing\Spec;
 
@@ -153,15 +154,35 @@ class BootstrapSeeder extends PKPBootstrapSeeder
             $issue->setData('showVolume', true);
             $issue->setData('showNumber', true);
             $issue->setData('showYear', true);
+            // Access status as the Create Issue form derives it from the
+            // journal's publishing mode (IssueForm::execute ~246-258):
+            // subscription/none → ISSUE_ACCESS_SUBSCRIPTION, open (and the
+            // seed's unset default) → ISSUE_ACCESS_OPEN.
+            $issue->setData('accessStatus', match ((int) $context->getData('publishingMode')) {
+                \APP\journal\Journal::PUBLISHING_MODE_SUBSCRIPTION,
+                \APP\journal\Journal::PUBLISHING_MODE_NONE => \APP\issue\Issue::ISSUE_ACCESS_SUBSCRIPTION,
+                default => \APP\issue\Issue::ISSUE_ACCESS_OPEN,
+            });
             $issue->setData('published', false);
             Repo::issue()->add($issue);
 
             if ($plan['published']) {
-                // The publish flow: mark published, stamp the date, persist +
-                // make current (IssueGridHandler::publishIssue parity).
+                // The publish flow, mirrored from
+                // IssueGridHandler::publishIssue (~556-597): DOI creation
+                // (internally a no-op unless the journal enables issue DOIs
+                // — the seed does not), published flag + datePublished, the
+                // publish hook, current-issue update, stale-DOI marking.
+                // The handler's delayed-open-access branch (subscription
+                // journals only) and its scheduled-publication sweep (no
+                // publications exist at bootstrap) don't apply here.
+                Repo::issue()->createDoi($issue);
                 $issue->setData('published', true);
-                $issue->setData('datePublished', Core::getCurrentDate());
+                if (!$issue->getData('datePublished')) {
+                    $issue->setData('datePublished', Core::getCurrentDate());
+                }
+                Hook::call('IssueGridHandler::publishIssue', [&$issue]);
                 Repo::issue()->updateCurrent($context->getId(), $issue);
+                Repo::doi()->issueUpdated($issue);
             }
         }
     }
