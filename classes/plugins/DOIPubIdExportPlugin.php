@@ -50,6 +50,8 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
     /**
      * Get pub ID type
      *
+     * @deprecated 3.4
+     *
      * @return string
      */
     public function getPubIdType()
@@ -59,6 +61,8 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
 
     /**
      * Get pub ID display type
+     *
+     * @deprecated 3.4
      *
      * @return string
      */
@@ -96,6 +100,8 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
      * @param Journal $context
      * @param Issue|Submission|Galley $object
      * @param string $testPrefix
+     *
+     * @deprecated 3.4
      */
     public function saveRegisteredDoi($context, $object, $testPrefix = '10.1234')
     {
@@ -124,6 +130,8 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
      * @param array $submissionIds
      * @param Journal $context
      *
+     * @deprecated 3.4
+     *
      * @return array
      */
     public function getPublishedSubmissions($submissionIds, $context)
@@ -149,6 +157,8 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
      * @param array $issueIds
      * @param Journal $context
      *
+     * @deprecated 3.4
+     *
      * @return array
      */
     public function getPublishedIssues($issueIds, $context)
@@ -168,6 +178,8 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin
      *
      * @param array $galleyIds
      * @param Journal $context
+     *
+     * @deprecated 3.4
      *
      * @return array
      */
