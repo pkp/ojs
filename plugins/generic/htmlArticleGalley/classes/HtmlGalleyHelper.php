@@ -22,7 +22,12 @@ namespace APP\plugins\generic\htmlArticleGalley\classes;
 use APP\core\Application;
 use APP\facades\Repo;
 use APP\file\PublicFileManager;
+use APP\issue\Issue;
+use APP\submission\Submission;
 use APP\template\TemplateManager;
+use PKP\core\PKPRequest;
+use PKP\galley\Galley;
+use PKP\publication\PKPPublication;
 use PKP\submissionFile\enums\MediaVariantType;
 use PKP\submissionFile\SubmissionFile;
 
@@ -31,11 +36,8 @@ class HtmlGalleyHelper
     /**
      * Return the contents of the galley's HTML file with media-file URLs,
      * ojs:// URLs, context styles and template placeholders all resolved.
-     *
-     * @param \APP\core\Request $request
-     * @param \PKP\galley\Galley $galley
      */
-    public function getHTMLContents($request, $galley): string
+    public function getHTMLContents(PKPRequest $request, Galley $galley, PKPPublication $publication, Submission $submission, ?Issue $issue): string
     {
         $submissionFile = $galley->getFile();
         $submissionId = $submissionFile->getData('submissionId');
@@ -72,7 +74,6 @@ class HtmlGalleyHelper
             ->keyBy(fn ($file) => $file->getLocalizedData('name'))
             ->toArray();
 
-        $referredArticle = null;
         foreach ($embeddableFiles as $embeddableFile) {
             $params = [];
 
@@ -80,11 +81,7 @@ class HtmlGalleyHelper
                 $params['inline'] = 'true';
             }
 
-            // Ensure that the $referredArticle object refers to the article we want
-            if (!$referredArticle || $referredArticle->getId() != $submissionId) {
-                $referredArticle = Repo::submission()->get($submissionId);
-            }
-            $fileUrl = $request->url(null, 'article', 'download', [$referredArticle->getBestId(), 'version', $galley->getData('publicationId'), $galley->getBestGalleyId(), $embeddableFile->getId(), $embeddableFile->getLocalizedData('name')], $params);
+            $fileUrl = $request->url(null, 'article', 'download', [$submission->getBestId(), 'version', $galley->getData('publicationId'), $galley->getBestGalleyId(), $embeddableFile->getId(), $embeddableFile->getLocalizedData('name')], $params);
             $pattern = preg_quote(rawurlencode($embeddableFile->getLocalizedData('name')), '/');
 
             $contents = preg_replace(
@@ -141,13 +138,10 @@ class HtmlGalleyHelper
         $contents = $templateMgr->loadHtmlGalleyStyles($contents, $embeddableFiles);
 
         // Perform variable replacement for journal, issue, site info
-        $issue = Repo::issue()->getBySubmissionId($submissionId);
-
         $journal = $request->getContext();
         $site = $request->getSite();
-
         $paramArray = [
-            'issueTitle' => $issue ? $issue->getIssueIdentification() : __('editor.article.scheduleForPublication.toBeAssigned'),
+            'issueTitle' => $issue?->getIssueIdentification() ?? __('editor.article.scheduleForPublication.toBeAssigned'),
             'journalTitle' => $journal->getLocalizedName(),
             'siteTitle' => $site->getLocalizedTitle(),
             'currentUrl' => $request->getRequestUrl()
