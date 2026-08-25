@@ -1,13 +1,9 @@
----
-name: ojs-playwright-tests
-description: OJS Playwright e2e suite — entry point. Loads the shared harness docs (lib/pkp/docs/e2e/process/) and carries the OJS-specific screen map. Use when writing or debugging Playwright specs, POMs, fixtures, or scenario seeds in OJS.
----
-
-# OJS Playwright Tests
+# OJS Playwright e2e — app entry point
 
 Entry point for Playwright e2e work in OJS. The knowledge lives in the
 **shared docs inside the lib/pkp submodule** — read them on demand, they are
-the single home (OMP and OPS point at the same files):
+the single home (OMP and OPS carry the same per-app entry point and point at
+the same files):
 
 - `lib/pkp/docs/e2e/process/harness.md` — layout, fleets, config contract, env
   vars, running the suite, quick start. **Start here.**
@@ -22,8 +18,8 @@ the single home (OMP and OPS point at the same files):
 - `lib/pkp/docs/e2e/specs/GLOSSARY.md` — spec vocabulary (Part I meanings,
   Part II cross-app names + capability gates).
 
-Skip this skill for Cypress work (`cypress/` — legacy, out of scope) and for
-general OJS development unrelated to testing.
+Out of scope here: Cypress work (`cypress/` — legacy) and general OJS
+development unrelated to testing.
 
 ## OJS-specific facts
 
