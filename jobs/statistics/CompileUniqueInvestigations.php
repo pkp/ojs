@@ -24,6 +24,9 @@ class CompileUniqueInvestigations extends BaseJob
 {
     public int $timeout = 600;
 
+    /** @copydoc BaseJob::$isLongRunning */
+    protected bool $isLongRunning = true;
+
     /**
      * Create a new job instance.
      *

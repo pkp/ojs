@@ -594,6 +594,17 @@ process_jobs_at_task_scheduler = Off
 ; Remove this setting to leave failed jobs in the database.
 delete_failed_jobs_after = 180
 
+; The number of seconds after which a job that is still being processed is considered
+; abandoned, so that another worker or web request may pick it up. It must be LARGER than
+; the time the longest running job needs. Drfault is set to 610 and will ignore anything
+; set less than that.
+; see: https://laravel.com/framework/docs/12.x/queues#job-expirations-and-timeouts
+;
+; To calibrate this value, watch the error log: whenever a job runs for more than 90% of
+; retry_after, a "[JOB RUNTIME]" line reports the job, how long it actually ran and the
+; value that would cover it. Raising this delays the recovery of genuinely crashed jobs by
+; the same amount, so raise it to what the log reports rather than to an arbitrary maximum.
+retry_after = 610
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Scheduled Task Settings ;
