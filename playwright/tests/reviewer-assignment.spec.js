@@ -20,12 +20,15 @@
  *   their values.
  * - A10 🐞: S9 asserts the revert transitions the spec's Rule 16 names; that
  *   viewing never produces "Review Viewed" is not asserted either way.
- * - A11/A12 🐞: S6 asserts the change notice arrives; its body (the stale
- *   deadlines) and its unsubscribe page are the bugs' record.
+ * - A11 (retired 2026-08-25, fixed upstream) / A12 🐞: S6 asserts the change
+ *   notice arrives; its unsubscribe page is A12's record. The body now
+ *   carries the just-saved deadlines (pkp/pkp-lib#13162), asserted neither
+ *   way.
  * - A13/A14/A16 🐞: Email Reviewer body enforcement, the enroll form's false
  *   required message, and typed-date discarding are not exercised (all date
  *   input goes through the calendar, the screen's working path).
- * - A15/A17 ❓ + A3/A4/A5/A6 ❓: parked pending product rulings (no
+ * - A15/A17 ❓ + A3/A4/A6 ❓ (A5 retired 2026-08-25 — its access check was
+ *   reverted upstream): parked pending product rulings (no
  *   assistant-table, editorial-notes, site-admin-add or past-date-warning
  *   assertions; S7 uses the Edit window's past-date route as the spec's own
  *   overdue recipe, asserting nothing about warnings).
