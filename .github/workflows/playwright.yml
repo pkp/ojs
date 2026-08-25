@@ -5,7 +5,8 @@
 # `php -S` servers (one per worker) and cold-bootstraps the test install via
 # tools/installTest.php + the declarative seed, so this workflow only has to
 # provide: a Postgres DB named ojs_test, a Mailpit instance, a built app, and
-# a config.test.inc.php (generated from .github/ci/config.test.inc.php).
+# a config.test.inc.php (generated from config.TEMPLATE.inc.php by
+# lib/pkp/playwright/make-test-config.js).
 name: ojs-playwright
 
 on:
@@ -130,14 +131,14 @@ jobs:
         if: steps.playwright-cache.outputs.cache-hit != 'true'
         run: npx playwright install --with-deps chromium
 
+      # Generated from the app's own config.TEMPLATE.inc.php so the test
+      # config can never drift from the shipped template; every test-env
+      # decision lives in the generator's patch map.
       - name: Generate config.test.inc.php
         run: |
           mkdir -p "$RUNNER_TEMP/files-test"
-          sed -e "s|%%FILES_DIR%%|$RUNNER_TEMP/files-test|" \
-              -e "s|%%PUBLIC_FILES_DIR%%|$GITHUB_WORKSPACE/public|" \
-              -e "s|%%DB_USERNAME%%|ojs|" \
-              -e "s|%%DB_PASSWORD%%|ojs|" \
-              .github/ci/config.test.inc.php > "$PKP_CONFIG_FILE"
+          TEST_FILES_DIR="$RUNNER_TEMP/files-test" \
+            node lib/pkp/playwright/make-test-config.js > "$PKP_CONFIG_FILE"
 
       - name: Run Playwright suite
         # --retries=1: covers the known cold-bootstrap flake; the config's
