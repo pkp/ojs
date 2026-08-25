@@ -18,7 +18,6 @@ use APP\core\Application;
 use APP\facades\Repo;
 use APP\observers\events\UsageEvent;
 use APP\plugins\generic\htmlArticleGalley\classes\HtmlGalleyHelper;
-use APP\publication\Publication;
 use APP\template\TemplateManager;
 use Illuminate\Support\Facades\Cache;
 use PKP\plugins\Hook;
@@ -73,34 +72,23 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
 
     /**
      * Present the article wrapper page.
-     *
-     * @param string $hookName
-     * @param array $args
      */
-    public function articleViewCallback($hookName, $args)
+    public function articleViewCallback(string $hookName, array $args): bool
     {
-        $request = &$args[0];
-        $issue = &$args[1];
-        /** @var \PKP\galley\Galley */
-        $galley = &$args[2];
-        $article = &$args[3];
+        $request = & $args[0];
+        $issue = & $args[1];
+        $galley = & $args[2]; /** @var \PKP\galley\Galley */
+        $article = & $args[3];
+        $publication = & $args[4];
 
         if ($galley && $galley->getFileType() === 'text/html') {
-            /** @var ?Publication */
-            $galleyPublication = null;
-            foreach ($article->getData('publications') as $publication) {
-                if ($publication->getId() === $galley->getData('publicationId')) {
-                    $galleyPublication = $publication;
-                    break;
-                }
-            }
             $templateMgr = TemplateManager::getManager($request);
             $templateMgr->assign([
                 'issue' => $issue,
                 'article' => $article,
                 'galley' => $galley,
                 'isLatestPublication' => $article->getData('currentPublicationId') === $galley->getData('publicationId'),
-                'galleyPublication' => $galleyPublication,
+                'galleyPublication' => $publication,
                 'submissionFile' => $galley->getFile(),
             ]);
             $templateMgr->display($this->getTemplateResource('display.tpl'));
@@ -134,15 +122,6 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
         $submissionFile = $galley->getFile();
         if ($galley->getData('submissionFileId') == $fileId && $submissionFile->getData('mimetype') === 'text/html' && $galley->getData('submissionFileId') == $submissionFile->getId()) {
             if (!Hook::call('HtmlArticleGalleyPlugin::articleDownload', [$article,  &$galley, &$fileId])) {
-                // Logged in users always get a fresh galley HTML; otherwise, potentially serve a cached copy.
-                $htmlGalleyHelper = new HtmlGalleyHelper();
-                $htmlContents = match(Validation::isLoggedIn()) {
-                    true => $htmlGalleyHelper->getHTMLContents($request, $galley),
-                    false => Cache::remember('htmlArticleGalley-' . $galley->getId(), 60 * 60 * 24, fn () => $htmlGalleyHelper->getHTMLContents($request, $galley)),
-                };
-                echo $htmlContents;
-                $returner = true;
-                Hook::call('HtmlArticleGalleyPlugin::articleDownloadFinished', [&$returner]);
                 $publication = Repo::publication()->get($galley->getData('publicationId'));
                 // This part is the same as in ArticleHandler::initialize():
                 if ($issueId = $publication->getData('issueId')) {
@@ -151,6 +130,17 @@ class HtmlArticleGalleyPlugin extends \PKP\plugins\GenericPlugin
                 } else {
                     $issue = null;
                 }
+
+                // Logged in users always get a fresh galley HTML; otherwise, potentially serve a cached copy.
+                $htmlGalleyHelper = new HtmlGalleyHelper();
+                $htmlContents = match(Validation::isLoggedIn()) {
+                    true => $htmlGalleyHelper->getHTMLContents($request, $galley, $publication, $article, $issue),
+                    false => Cache::remember('htmlArticleGalley-' . $galley->getId(), 60 * 60 * 24, fn () => $htmlGalleyHelper->getHTMLContents($request, $galley, $publication, $article, $issue)),
+                };
+                echo $htmlContents;
+
+                $returner = true; // For legacy hook compatibility only
+                Hook::call('HtmlArticleGalleyPlugin::articleDownloadFinished', [&$returner]);
                 event(new UsageEvent(Application::ASSOC_TYPE_SUBMISSION_FILE, $request->getContext(), $article, $galley, $submissionFile, $issue));
             }
             return true;
