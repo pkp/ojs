@@ -1,0 +1,22 @@
+# Runs the Playwright e2e suite for this app on every push/PR. The suite,
+# harness and all CI mechanics live in the pkp-e2e repository — this hook
+# only hands it this repo/commit to test.
+name: e2e
+
+on:
+  push:
+    branches: ['*']
+  pull_request:
+    branches: ['main']
+
+concurrency:
+  group: e2e-hook-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  e2e:
+    uses: jardakotesovec/pkp-e2e/.github/workflows/run-app.yml@main
+    with:
+      app: ojs
+      app_repo: ${{ github.repository }}
+      app_ref: ${{ github.sha }}
