@@ -1,5 +1,12 @@
 <?php
 
+// Nothing below may run over the web: refuse any non-CLI SAPI before the
+// first side effect. (Stronger than the CommandLineTool constructor guard,
+// which fires only after the whole app has bootstrapped.)
+if (PHP_SAPI !== 'cli') {
+    exit('This script can only be executed from the command-line');
+}
+
 /**
  * @file tools/installTest.php
  *
@@ -18,60 +25,66 @@
  * - installed DB (current version row present) → no-op, exit 0.
  * Refuses any database whose name does not contain "test"
  * (`npm run test:e2e:reset` is the tool that empties it).
- *
- * The config keeps installed = On for the web fleet; this tool runs the
- * installer against a temp copy with installed = Off.
  */
 
-// Resolve the config BEFORE the app bootstrap reads it.
+// The installer requires installed = Off, and bootstrapping with
+// installed = On against an empty database fatals on the versions query —
+// so the bootstrap must be pointed at a temp copy with the flag off BEFORE
+// it runs. This is the one step that cannot live inside execute().
 $configFile = getenv('PKP_CONFIG_FILE') ?: dirname(__DIR__) . '/config.test.inc.php';
 if (!is_readable($configFile)) {
     fwrite(STDERR, "installTest: config file not readable: {$configFile}\n");
     exit(1);
 }
-
-$ini = parse_ini_file($configFile, true, INI_SCANNER_RAW);
-$iniGet = function (string $section, string $key, ?string $default = null) use ($ini): ?string {
-    $value = $ini[$section][$key] ?? $default;
-    if (is_string($value)) {
-        $value = trim($value);
-        if (preg_match('/^(["\']).*\1$/', $value)) {
-            $value = substr($value, 1, -1);
-        }
-    }
-    return $value === null ? null : (string) $value;
-};
-
-$dbName = $iniGet('database', 'name');
-if (!$dbName || stripos($dbName, 'test') === false) {
-    fwrite(STDERR, "installTest: database \"{$dbName}\" does not look like a test DB (no \"test\" in the name) — refusing.\n");
-    exit(1);
-}
-
-// The installer path requires installed = Off; run against a temp copy.
 $tmpConfig = tempnam(sys_get_temp_dir(), 'pkp-test-install-');
 file_put_contents(
     $tmpConfig,
     preg_replace('/^(\s*installed\s*=\s*)On\b/mi', '${1}Off', file_get_contents($configFile))
 );
+register_shutdown_function(fn () => @unlink($tmpConfig));
 putenv("PKP_CONFIG_FILE={$tmpConfig}");
 
 require(dirname(__FILE__) . '/bootstrap.php');
 
 use APP\install\Install;
+use PKP\config\Config;
 
 class TestInstallTool extends \PKP\cliTool\InstallTool
 {
-    public function __construct(
-        private array $configParams,
-        array $argv = []
-    ) {
-        parent::__construct($argv);
-    }
-
     public function execute()
     {
-        $this->params = $this->configParams;
+        // All parameters come from the config the bootstrap just loaded
+        // (the temp copy — identical to the fleet config except installed).
+        $dbName = (string) Config::getVar('database', 'name');
+        if (!$dbName || stripos($dbName, 'test') === false) {
+            fwrite(STDERR, "installTest: database \"{$dbName}\" does not look like a test DB (no \"test\" in the name) — refusing.\n");
+            exit(1);
+        }
+
+        $locale = Config::getVar('i18n', 'locale', 'en');
+        $installedLocales = array_values(array_filter(array_map(
+            'trim',
+            explode(',', (string) Config::getVar('i18n', 'installed_locales', $locale))
+        )));
+
+        $this->params = [
+            'locale' => $locale,
+            'additionalLocales' => array_values(array_diff($installedLocales, [$locale])),
+            'timeZone' => Config::getVar('general', 'time_zone', 'UTC'),
+            'filesDir' => Config::getVar('files', 'files_dir'),
+            'adminUsername' => 'admin',
+            'adminPassword' => 'admin',
+            'adminPassword2' => 'admin',
+            'adminEmail' => 'admin@mail.test',
+            'databaseDriver' => Config::getVar('database', 'driver'),
+            'databaseHost' => Config::getVar('database', 'host'),
+            'databaseUsername' => Config::getVar('database', 'username'),
+            'databasePassword' => Config::getVar('database', 'password', ''),
+            'databaseName' => $dbName,
+            'oaiRepositoryId' => 'test',
+            'enableBeacon' => false,
+            'install' => true,
+        ];
 
         // Probe the database state through the installer's own connection
         // setup (driver-agnostic — no raw DSNs here).
@@ -102,29 +115,5 @@ class TestInstallTool extends \PKP\cliTool\InstallTool
     }
 }
 
-$locale = $iniGet('i18n', 'locale', 'en');
-$installedLocales = array_values(array_filter(array_map(
-    'trim',
-    explode(',', $iniGet('i18n', 'installed_locales', $locale))
-)));
-$additionalLocales = array_values(array_diff($installedLocales, [$locale]));
-
-$tool = new TestInstallTool([
-    'locale' => $locale,
-    'additionalLocales' => $additionalLocales,
-    'timeZone' => $iniGet('general', 'time_zone', 'UTC'),
-    'filesDir' => $iniGet('files', 'files_dir'),
-    'adminUsername' => 'admin',
-    'adminPassword' => 'admin',
-    'adminPassword2' => 'admin',
-    'adminEmail' => 'admin@mail.test',
-    'databaseDriver' => $iniGet('database', 'driver'),
-    'databaseHost' => $iniGet('database', 'host'),
-    'databaseUsername' => $iniGet('database', 'username'),
-    'databasePassword' => $iniGet('database', 'password', ''),
-    'databaseName' => $dbName,
-    'oaiRepositoryId' => 'test',
-    'enableBeacon' => false,
-    'install' => true,
-], $argv ?? []);
+$tool = new TestInstallTool($argv ?? []);
 $tool->execute();
