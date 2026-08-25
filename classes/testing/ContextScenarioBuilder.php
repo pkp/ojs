@@ -17,7 +17,7 @@
 namespace APP\testing;
 
 use PKP\context\Context;
-use PKP\testing\scenario\PKPContextScenarioBuilder;
+use PKP\testing\PKPContextScenarioBuilder;
 
 class ContextScenarioBuilder extends PKPContextScenarioBuilder
 {

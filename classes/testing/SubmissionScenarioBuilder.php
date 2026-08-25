@@ -20,7 +20,7 @@ use APP\facades\Repo;
 use PKP\context\Context;
 use PKP\publication\PKPPublication;
 use PKP\submission\PKPSubmission;
-use PKP\testing\scenario\PKPSubmissionScenarioBuilder;
+use PKP\testing\PKPSubmissionScenarioBuilder;
 use PKP\testing\Spec;
 use PKP\testing\SpecException;
 

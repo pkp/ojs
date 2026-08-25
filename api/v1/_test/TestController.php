@@ -20,8 +20,8 @@ use APP\testing\ContextScenarioBuilder;
 use APP\testing\SubmissionScenarioBuilder;
 use PKP\API\v1\_test\PKPTestController;
 use PKP\testing\PKPBootstrapSeeder;
-use PKP\testing\scenario\PKPContextScenarioBuilder;
-use PKP\testing\scenario\PKPSubmissionScenarioBuilder;
+use PKP\testing\PKPContextScenarioBuilder;
+use PKP\testing\PKPSubmissionScenarioBuilder;
 
 class TestController extends PKPTestController
 {
