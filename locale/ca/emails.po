@@ -693,7 +693,7 @@ msgstr ""
 msgid "emails.paymentRequestNotification.footer"
 msgstr ""
 "<br><br>—<br>Aquest és un missatge automàtic de <a href=\"{$contextUrl}\""
-">{$*contextName}</a>."
+">{$contextName}</a>."
 
 #~ msgid "emails.submissionComment.subject"
 #~ msgstr "Comentari de la tramesa"
