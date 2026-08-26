@@ -1,10 +1,10 @@
-# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2021, 2022, 2025.
+# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2021, 2022, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2025-03-20 12:06+0000\n"
+"PO-Revision-Date: 2026-08-26 14:22+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/editor/cs/>\n"
 "Language: cs\n"
@@ -65,8 +65,8 @@ msgstr ""
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
 msgstr ""
-"Před odesláním příspěvku k redigování, použijte odkaz Upozornit autora, "
-"abyste informovali autora o rozhodnutí a vyberte, která verze má být "
+"Před odesláním příspěvku k jazykové redakci, použijte odkaz Upozornit "
+"autora, abyste informovali autora o rozhodnutí a vyberte, která verze má být "
 "odeslána."
 
 msgid "editor.notifyUsers"
@@ -466,9 +466,9 @@ msgstr "Vyberte soubory sazebnice"
 
 msgid "editor.submission.editorial.finalDraftDescription"
 msgstr ""
-"Konečné návrhy souborů v tomto seznamu jsou převedeny copyeditorem/kou do "
-"redakčních verzí, nahrány níže pod <span class = \"pkp_help_title\">Redakce</"
-"span>."
+"Konečné návrhy souborů v tomto seznamu jsou převedeny jazykovým redaktorem/"
+"kou do redakčních verzí, nahrány níže pod <span class = \"pkp_help_title\""
+">Redakce</span>."
 
 msgid "editor.submission.proof.manageProofFilesDescription"
 msgstr ""
