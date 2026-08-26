@@ -1,8 +1,9 @@
 # Darius Zviedris <darius.zviedris@lki.lt>, 2025.
+# Vincas Grigas <vincas.grigas@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-02 11:20+0000\n"
-"Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
+"PO-Revision-Date: 2026-08-18 11:10+0000\n"
+"Last-Translator: Vincas Grigas <vincas.grigas@gmail.com>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/api/lt/>"
 "\n"
 "Language: lt\n"
@@ -21,7 +22,7 @@ msgid "api.emails.403.disabled"
 msgstr "Šiam žurnalui neįjungta el. pašto pranešimų funkcija."
 
 msgid "api.submissions.400.wrongContext"
-msgstr "Jūsų prašomo pateikimo šiame žurnale nėra."
+msgstr "Jūsų prašyto straipsnio šiame žurnale nėra."
 
 msgid "api.submissions.403.cantChangeContext"
 msgstr "Pateikimo žurnalo pakeisti negalima."
@@ -30,14 +31,14 @@ msgid "api.submissions.403.unpublishedIssues"
 msgstr "Jums neleidžiama peržiūrėti nepaskelbtų numerių."
 
 msgid "api.contexts.403.requestedDisabledContexts"
-msgstr "Galite peržiūrėti tik tuos žurnalus, kurie yra įjungti."
+msgstr "Galite peržiūrėti tik aktyvius žurnalus."
 
 msgid "api.contexts.403.notAllowed"
-msgstr "Jūs neturite leidimo peržiūrėti šio žurnalo."
+msgstr "Jūs neturite leidimo peržiūrėti šį žurnalą."
 
 msgid "api.contexts.403.contextsDidNotMatch"
 msgstr ""
-"Šio žurnalo negalite peržiūrėti ar redaguoti, nebent pateiksite užklausą "
+"Negalite peržiūrėti ar redaguoti šio žurnalo, nebent pateiksite užklausą "
 "žurnalo API arba visos svetainės API."
 
 msgid "api.contexts.403.requiresContext"
@@ -60,8 +61,8 @@ msgstr "Šiam žurnalui nesukonfigūruota jokia DOI registracijos agentūra."
 
 msgid "api.dois.400.depositFailed"
 msgstr ""
-"Kai kurių elementų nepavyko sėkmingai įnešti. Patikrinkite atskirus "
-"elementus, ar nėra konkrečių klaidų pranešimų."
+"Kai kurių įrašų nepavyko sėkmingai perduoti. Patikrinkite kiekvieną įrašą "
+"atskirai ir peržiūrėkite jam priskirtą klaidos pranešimą."
 
 msgid "api.emailTemplates.403.notAllowedChangeContext"
 msgstr "Jūs neturite leidimo perkelti šio el. laiško šablono į kitą žurnalą."
@@ -70,13 +71,13 @@ msgid "api._payments.400.invalidPaymentMethod"
 msgstr "Pasirinktas mokėjimo būdas nepalaikomas."
 
 msgid "api.publications.403.contextsDidNotMatch"
-msgstr "Jūsų prašomas leidinys nėra šio žurnalo dalis."
+msgstr "Jūsų prašomas numeris nėra šio žurnalo dalis."
 
 msgid "api.publications.403.submissionsDidNotMatch"
-msgstr "Jūsų prašomas leidinys nėra šio pateikimo dalis."
+msgstr "Jūsų prašomas numeris nėra šio pateikimo dalis."
 
 msgid "api.submissionFiles.400.badRepresentationAssocType"
-msgstr "Šio failo etapo failo negalima susieti su virtuve."
+msgstr "Negalite susieti šio etapo failo su publikavimo formatu."
 
 msgid "api.publications.403.paymentFeesNotEnabled"
 msgstr ""

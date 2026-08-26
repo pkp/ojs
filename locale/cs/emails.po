@@ -1,12 +1,12 @@
-# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2021, 2022, 2023, 2025.
+# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2021, 2022, 2023, 2025, 2026.
 # Michal Jelínek <jelinek@synetix.cz>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-12-02T16:17:17-08:00\n"
-"PO-Revision-Date: 2026-03-25 11:55+0000\n"
-"Last-Translator: Michal Jelínek <jelinek@synetix.cz>\n"
+"PO-Revision-Date: 2026-08-26 14:22+0000\n"
+"Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/emails/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -300,7 +300,7 @@ msgstr ""
 ">našeho periodika</a>.</p><p>S pozdravem,</p>{$signature}"
 
 msgid "emails.editorDecisionSkipReview.subject"
-msgstr "Váš příspěvek byl odeslán do copyeditovací fáze"
+msgstr "Váš příspěvek byl odeslán k jazykové redakci"
 
 msgid "emails.editorDecisionSkipReview.body"
 msgstr ""

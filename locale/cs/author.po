@@ -1,10 +1,10 @@
-# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2022, 2023.
+# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2022, 2023, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2023-04-22 22:54+0000\n"
+"PO-Revision-Date: 2026-08-26 14:22+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/author/cs/>\n"
 "Language: cs\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.13.1\n"
+"X-Generator: Weblate 4.18.2\n"
 
 msgid "author.submit"
 msgstr "Nový příspěvek"
@@ -94,13 +94,13 @@ msgid "author.submissions.queuedReviewRevisions"
 msgstr "V recenzním řízení: Jsou vyžádány menší úpravy"
 
 msgid "author.submissions.queuedEditingCopyedit"
-msgstr "Redakční úpravy: Vyžádáno copyeditování"
+msgstr "Redakční úpravy: Vyžádána jazyková redakce"
 
 msgid "author.submissions.queuedEditingProofread"
 msgstr "Redakční úpravy: Vyžádána jazyková korektura"
 
 msgid "author.submissions.uploadCopyeditedVersion"
-msgstr "Nahrát copyeditovanou verzi"
+msgstr "Nahrát verzi po jazykové redakci"
 
 msgid "author.submissions.proofreadingCorrections"
 msgstr "Opravy korektur"
@@ -328,7 +328,7 @@ msgid "author.article.uploadAuthorVersion"
 msgstr "Nahrát autorovu verzi"
 
 msgid "author.article.copyeditedFile"
-msgstr "Copyeditovaný soubor"
+msgstr "Soubor po jazykové redakci"
 
 msgid "author.article.authorRevisedFile"
 msgstr "Soubor od autora"

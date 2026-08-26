@@ -1,8 +1,9 @@
 # Darius Zviedris <darius.zviedris@lki.lt>, 2025.
+# Vincas Grigas <vincas.grigas@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-10-01 13:47+0000\n"
-"Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
+"PO-Revision-Date: 2026-08-20 11:17+0000\n"
+"Last-Translator: Vincas Grigas <vincas.grigas@gmail.com>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/lt/>\n"
 "Language: lt\n"
@@ -15,10 +16,10 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "submission.submit.userGroup"
-msgstr "Pateikti kaip (nurodykite, kas esate)..."
+msgstr "Pateikti kaip..."
 
 msgid "submission.upload.selectComponent"
-msgstr "Pasirinkite, ką įtraukti į straipsnį"
+msgstr "Pasirinkite straipsnio komponentą"
 
 msgid "submission.submit.form.authorRequired"
 msgstr "Turi būi nurodytas bent vienas autorius."
@@ -27,7 +28,7 @@ msgid "submission.submit.form.titleRequired"
 msgstr "Prašom įrašyti straipsnio pavadinimą."
 
 msgid "submission.submit.form.contributorRoleRequired"
-msgstr "Nurodykite atliekamą funkciją."
+msgstr "Prašome pasirinkti pateikėjo vaidmenį."
 
 msgid "submission.title"
 msgstr "Straipsnio pavadinimas"
@@ -43,13 +44,13 @@ msgstr ""
 "2001/04/12/usageguide/generic.shtml#type)</a>"
 
 msgid "submission.submit.newSubmissionMultiple"
-msgstr "Teikti naują straipsnį (kam)"
+msgstr "Pradėti naują pateikimą"
 
 msgid "submission.submit.newSubmissionSingle"
 msgstr "Naujas straipsnis"
 
 msgid "grid.action.workflow"
-msgstr "Teikimo tvarka"
+msgstr "Pateikimo eiga"
 
 msgid "submission.abstract.wordCount.description"
 msgstr "Santrauką turi sudaryti ne daugiau kaip {$wordCount} žodžių."
@@ -63,16 +64,16 @@ msgstr ""
 "straipsnis gautas. Kai redaktorius straipsnį perskaitys, su jumis susisieks."
 
 msgid "grid.action.galleyInIssueEntry"
-msgstr "Skiltis bus rodoma kaip leidinio elementas"
+msgstr "Publikavimo formatas rodomas numerio įraše"
 
 msgid "grid.action.issueEntry"
 msgstr "Peržiūrėti pateikto straipsnio metaduomenis"
 
 msgid "submission.event.articleGalleyMadeAvailable"
-msgstr "Straipsnio skiltį {$galleyFormatName} jau galima skaityti."
+msgstr "Straipsnio publikavimo formatas „{$galleyFormatName}“ yra paskelbtas."
 
 msgid "submission.event.articleGalleyMadeUnavailable"
-msgstr "Straipsnio skilties {$galleyFormatName} dar negalima skaityti."
+msgstr "Publikavimo formatas „{$galleyFormatName}“ nebėra prieinamas."
 
 msgid "submission.event.publicIdentifiers"
 msgstr "Straipsnių viešieji identifikatoriai atnaujinti."
@@ -89,10 +90,10 @@ msgid "grid.issueEntry.availableGalley.message"
 msgstr "<p>Ši publikacijos versija <em>bus prieinama</em> skaitytojams.</p>"
 
 msgid "grid.action.availableArticleGalley"
-msgstr "Nustatyti, kad šią skiltį jau būtų galima skaityti"
+msgstr "Padaryti šį publikavimo formatą prieinamą"
 
 msgid "submission.galleyFiles"
-msgstr "Skilties failai"
+msgstr "Publikavimo formato failai"
 
 msgid "submission.proofReadingDescription"
 msgstr ""
@@ -102,10 +103,10 @@ msgstr ""
 "patvirtinimui prieš publikaciją."
 
 msgid "grid.action.approveProof"
-msgstr "Patvirtinti, kad šią korektūrą jau būtų galima įtraukti į skiltį."
+msgstr "Patvirtinti šią korektūrą įtraukimui į publikavimo formatą."
 
 msgid "grid.action.pageProofApproved"
-msgstr "Patvirtinta, kad šią korektūrą galima įtraukti į skiltį."
+msgstr "Ši korektūra patvirtinta įtraukti į publikavimo formatą."
 
 msgid "submission.submit.titleAndSummary"
 msgstr "Pavadinimas ir santrauka"
@@ -116,7 +117,7 @@ msgstr ""
 "duomenis, iliustracijas ir kt."
 
 msgid "submission.pageProofs"
-msgstr "Korektūros skaitymas"
+msgstr "Korektūra"
 
 msgid "workflow.review.externalReview"
 msgstr "Recenzuojamas"
@@ -134,16 +135,16 @@ msgid "submission.incomplete"
 msgstr "Laukiama patvirtinimo"
 
 msgid "submission.submit.submissionChecklist"
-msgstr "Straipsnių sąrašas"
+msgstr "Pateikimo kontrolinis sąrašas"
 
 msgid "submission.submit.privacyStatement"
 msgstr "Privatumo deklaracija"
 
 msgid "submission.submit.contributorRole"
-msgstr "Dalyvio funkcija"
+msgstr "Dalyvio vaidmuo"
 
 msgid "submission.citationFormat.notFound"
-msgstr "Turi būti paisoma nustatyto citavimo formato."
+msgstr "Nepavyko gauti pasirinkto citavimo formato."
 
 msgid "submission.metadataDescription"
 msgstr ""
@@ -151,7 +152,7 @@ msgstr ""
 "atvaizduoti taikomi tarptautiniai standartai."
 
 msgid "section.any"
-msgstr "Bet kuris skyrius"
+msgstr "Bet kuri sekcija"
 
 msgid "catalog.browseTitles"
 msgstr "{$numTitles} elementai"
@@ -168,10 +169,10 @@ msgstr ""
 "skaičius."
 
 msgid "submission.submit.noContext"
-msgstr "Šio pateikto žurnalo rasti nepavyko."
+msgstr "Nepavyko rasti žurnalo, kuriam priklauso šis pateikimas."
 
 msgid "submission.sectionOptions"
-msgstr "Skyriaus parinktys"
+msgstr "Sekcijos parinktys"
 
 msgid "galley.editPublishedDisabled"
 msgstr ""
@@ -179,7 +180,7 @@ msgstr ""
 "publikuotas."
 
 msgid "galley.publicationNotFound"
-msgstr "Šios galerijos leidinio rasti nepavyko."
+msgstr "Nepavyko rasti su šiuo publikavimo formatu susietos publikacijos."
 
 msgid "publication.assignToissue"
 msgstr "Priskirti numeriui"
@@ -190,7 +191,7 @@ msgstr ""
 "suplanuota publikuoti."
 
 msgid "publication.invalidSection"
-msgstr "Šio leidinio skyriaus nerasta."
+msgstr "Šio leidinio sekcija nerasta."
 
 msgid "publication.inactiveSection"
 msgstr "{$section} (Neaktyvus)"
@@ -209,7 +210,7 @@ msgstr ""
 "norite tai publikuoti?"
 
 msgid "publication.required.issue"
-msgstr "Prieš publikuojant, leidinys turi būti priskirtas numeriui."
+msgstr "Prieš publikuojant, straipsnis turi būti priskirtas numeriui."
 
 msgid "publication.publishedIn"
 msgstr "Paskelbta <a href=\"{$issueUrl}\">{$issueName}</a>."
@@ -233,7 +234,7 @@ msgid "submission.status.scheduled"
 msgstr "Suplanuota"
 
 msgid "submission.publications"
-msgstr "Leidinys"
+msgstr "Leidiniai"
 
 msgid "publication.copyrightYearBasis.submissionDescription"
 msgstr "Autorių teisių metai bus nustatyti automatiškai pagal išleidimo datą."
@@ -251,19 +252,19 @@ msgid "publication.event.unpublished"
 msgstr "Pateikimas nebuvo paskelbtas."
 
 msgid "publication.event.versionPublished"
-msgstr "Buvo sukurta nauja versija."
+msgstr "Buvo paskelbta nauja versija."
 
 msgid "publication.event.versionScheduled"
-msgstr "Buvo numatyta išleisti naują versiją."
+msgstr "Nauja versija suplanuota publikuoti."
 
 msgid "publication.event.versionUnpublished"
 msgstr "Versija buvo pašalinta iš leidinio."
 
 msgid "publication.invalidSubmission"
-msgstr "Šio autoriaus leidinio rasti nepavyko."
+msgstr "Nepavyko rasti šiai publikacijai priskirto pateikimo."
 
 msgid "publication.publish"
-msgstr "Paskelbta"
+msgstr "Publikuoti"
 
 msgid "publication.required.declined"
 msgstr "Atmestas pateikimas negali būti publikuojamas."
@@ -279,10 +280,10 @@ msgstr ""
 "paskelbtas."
 
 msgid "submission.copyrightOther.description"
-msgstr "Priskirti publikuojamų darbų autorių teises toliau nurodytai šaliai."
+msgstr "Priskirti publikuotų darbų autorių teises šiai šaliai."
 
 msgid "publication.unpublish"
-msgstr "Neskelbta"
+msgstr "Atšaukti publikavimą"
 
 msgid "publication.unpublish.confirm"
 msgstr "Ar tikrai nenorite, kad tai būtų publikuojama?"
@@ -299,36 +300,36 @@ msgstr "Gamybos diskusijos"
 
 msgid "editor.submission.decision.backToReview.description"
 msgstr ""
-"Atšaukti sprendimą priimti šį pateikimą ir grąžinti jį peržiūros etapui."
+"Atšaukti sprendimą publikuoti šį pateikimą ir grąžinti jį į recenzavimą."
 
 #, fuzzy
 msgid "editor.submission.decision.backToReview.completed"
-msgstr "Išsiųsta atgal peržiūrai"
+msgstr "Grąžinti į recenzavimą"
 
 #, fuzzy
 msgid "editor.submission.decision.backToReview.completed.description"
-msgstr "Pateiktas darbas, {$title}, buvo grąžintas peržiūros etapui."
+msgstr "Pateiktas darbas, {$title}, buvo grąžintas į recenzavimą."
 
 #, fuzzy
 msgid "editor.submission.decision.backToReview.notifyAuthorsDescription"
 msgstr ""
-"Išsiųskite autoriams el. laišką, kad praneštumėte, jog jų pateiktas darbas "
-"grąžinamas peržiūros etapui. Paaiškinkite, kodėl buvo priimtas toks "
-"sprendimas, ir informuokite autorių apie tolesnę peržiūrą."
+"Išsiųskite autoriams el. laišką apie rankraščio grąžinimą į recenzavimo "
+"etapą. Paaiškinkite sprendimo priežastis ir nurodykite, koks tolesnis "
+"vertinimas bus atliekamas."
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
-msgstr "Pasirinkite failus, kurie turėtų būti siunčiami peržiūrai."
+msgstr "Pasirinkite failus, kurie turėtų būti siunčiami į recenzavimą."
 
 msgid "doi.submission.issueMissing.publication"
 msgstr ""
-"Nepavyko sukurti DOI šiam pateikimui: {$pubObjectTitle}. Prieš sugeneruojant "
-"DOI, pateikimas turi būti priskirtas problemai."
+"Nepavyko sugeneruoti DOI šiam pateikimui: {$pubObjectTitle}. DOI gali būti "
+"sukurtas tik tada, kai pateikimas yra priskirtas žurnalo numeriui."
 
 msgid "doi.submission.issueMissing.representation"
 msgstr ""
-"Nepavyko sukurti DOI {$pubObjectTitle} galerijai šiam pateikimui: "
-"{$itemTitle}. Prieš sugeneruojant DOI, pateikimas turi būti priskirtas "
-"problemai."
+"Nepavyko sugeneruoti DOI publikavimo formatui „{$pubObjectTitle}“, susietam "
+"su pateikimu „{$itemTitle}“. DOI gali būti sukurtas tik tada, kai pateikimas "
+"yra priskirtas žurnalo numeriui."
 
 msgid "doi.submission.incorrectContext"
 msgstr ""
@@ -336,33 +337,33 @@ msgstr ""
 "žurnalo kontekste jo nėra."
 
 msgid "submission.layout.viewGalley"
-msgstr "Peržiūrėti numeri"
+msgstr "Peržiūrėti publikavimo formatą"
 
 msgid "galley.cantEditPublished"
-msgstr "Šios galerijos negalima redaguoti, nes ji jau buvo publikuota."
+msgstr "Šio publikavimo formato nebegalima redaguoti, nes jis jau paskelbtas."
 
 msgid "submission.copyright.description"
 msgstr ""
-"Prašome perskaityti ir suprasti autorių teisių sąlygas, taikomas pateikiant "
-"straipsnius šiam žurnalui."
+"Prašome perskaityti ir įsigilinti į autorių teisių sąlygas, taikomas "
+"pateikiant straipsnius šiam žurnalui."
 
 msgid "submission.wizard.noSectionAllowed.description"
 msgstr ""
-"Jums neleidžiama pateikti darbų šiam žurnalui, nes pateikimas visuose šio "
-"žurnalo skyriuose buvo išjungtas arba apribotas. Jei manote, kad tai klaida, "
+"Jums neleidžiama pateikti darbų šiam žurnalui, nes pateikimas visose šio "
+"žurnalo sekcijose buvo išjungtas arba apribotas. Jei manote, kad tai klaida, "
 "susisiekite su <a href='mailto:{$email}'>{$name</a>."
 
 msgid "submission.wizard.sectionClosed.message"
 msgstr ""
-"„{$contextName}“ nepriima pateiktų darbų į „{$section}“ skyrių. Jei jums "
+"„{$contextName}“ nepriima pateiktų darbų į „{$section}“ sekciją. Jei jums "
 "reikia pagalbos atkuriant pateiktą darbą, susisiekite su <a "
 "href='mailto:{$email}'>{$name</a>."
 
 msgid "submission.sectionNotFound"
-msgstr "Šio leidinio numerio rasti nepavyko."
+msgstr "Nepavyko rasti šiam pateikimui priskirtos sekcijos."
 
 msgid "submission.sectionRestrictedToEditors"
-msgstr "Šiam skyriui gali teikti darbus tik redakcijos darbuotojai."
+msgstr "Straipsnius į šią sekciją gali teikti tik redakcinės komandos nariai."
 
 msgid "publication.changeIssue"
 msgstr "Pakeisti numeri"
@@ -374,14 +375,14 @@ msgid "publication.publish.requirements"
 msgstr "Prieš publikuojant, turi būti įvykdyti šie reikalavimai."
 
 msgid "editor.submission.decision.backToReview"
-msgstr "Grįžti į apžvalgą"
+msgstr "Grįžti į recenzavimą"
 
 msgid "editor.submission.decision.sendExternalReview.notifyAuthorsDescription"
 msgstr ""
 "Išsiųskite autoriams el. laišką, kad šis pateiktas darbas bus išsiųstas "
 "recenzuoti. Jei įmanoma, nurodykite autoriams, kiek laiko gali užtrukti "
-"recenzavimo procesas ir kada jie turėtų tikėtis kito redaktorių atsakymo. "
-"Šis el. laiškas bus išsiųstas tik tada, kai bus užregistruotas sprendimas."
+"recenzavimass ir kada jie turėtų tikėtis kito redaktorių atsakymo. Šis el. "
+"laiškas bus išsiųstas tik tada, kai bus užregistruotas sprendimas."
 
 msgid "submission.wizard.notAllowed.description"
 msgstr ""
@@ -402,13 +403,14 @@ msgstr ""
 
 msgid "editor.submission.decision.backToReview.log"
 msgstr ""
-"{$editorName} atšaukė sprendimą priimti šį pateiktą darbą ir grąžino jį "
-"peržiūros etapui."
+"{$editorName} atšaukė sprendimą priimti šį pateikimą ir grąžino jį į "
+"recenzavimą."
 
 msgid "publication.publish.confirmation.futureIssue"
 msgstr ""
-"Visi publikavimo reikalavimai įvykdyti. Šis leidinys bus išleistas, kai bus "
-"išleistas {$issue}. Ar tikrai norite suplanuoti jo publikavimą?"
+"Visi publikavimo reikalavimai yra įvykdyti. Šis straipsnis bus paskelbtas, "
+"kai bus paskelbtas numeris {$issue}. Ar tikrai norite suplanuoti jo "
+"publikavimą?"
 
 msgid "publication.publish.confirmation.backIssue"
 msgstr ""
@@ -416,7 +418,7 @@ msgstr ""
 "leidinyje {$issue}. Ar tikrai norite tai publikuoti?"
 
 msgid "publication.status.unscheduled"
-msgstr "Atšaukti suplanuotą"
+msgstr "Nepriskirta numeriui"
 
 msgid "publication.copyrightYearBasis.issueDescription"
 msgstr ""
