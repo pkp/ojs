@@ -1,8 +1,9 @@
 # Darius Zviedris <darius.zviedris@lki.lt>, 2025.
+# Vincas Grigas <vincas.grigas@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-02 08:41+0000\n"
-"Last-Translator: Darius Zviedris <darius.zviedris@lki.lt>\n"
+"PO-Revision-Date: 2026-08-18 11:10+0000\n"
+"Last-Translator: Vincas Grigas <vincas.grigas@gmail.com>\n"
 "Language-Team: Lithuanian <http://translate.pkp.sfu.ca/projects/ojs/"
 "reports-subscriptions/lt/>\n"
 "Language: lt\n"
@@ -25,5 +26,4 @@ msgstr "Prenumeratų ataskaita"
 
 msgid "plugins.reports.subscriptions.description"
 msgstr ""
-"Šis įskiepis įgyvendina CSV ataskaitą, kurioje yra prenumeratų sąrašas ir jų "
-"informacija."
+"Šis įskiepis generuoja CSV ataskaitą su prenumeratų sąrašu ir jų informacija."
