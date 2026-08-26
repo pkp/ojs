@@ -134,6 +134,62 @@ class I13128_FixEmailUrlLinks extends \PKP\migration\upgrade\v3_5_0\I13128_FixEm
         // Two translations translated the variable name, so it was never replaced
         $this->replace('SUBSCRIPTION_PURCHASE_INSTL', '{$ګډون یو آر ایل}', '<a href="{$subscriptionUrl}">{$subscriptionUrl}</a>', '', 'ps');
         $this->replace('USER_VALIDATE_SITE', '{$چالاککردنیUrl}', '<a href="{$activateUrl}">{$activateUrl}</a>', '', 'ckb');
+
+        $this->replace('ISSUE_PUBLISH_NOTIFY', '< p>', '<p>');
+        $this->replace('REVIEW_REQUEST_SUBSEQUENT', '< p>', '<p>');
+        $this->replace('REVISED_VERSION_NOTIFY', '</ p>', '</p>');
+        $this->replace('REVISED_VERSION_NOTIFY', '</a> p>', '</p>');
+        $this->replace('REVIEW_REQUEST_SUBSEQUENT', '<a href="{$reviewAssignmentUrl }"{$submissionTitle}', '<a href="{$reviewAssignmentUrl }">{$submissionTitle}');
+
+        $this->replace('EDITOR_ASSIGN', '{ $submissionTitle}', '{$submissionTitle}');
+        $this->replace('EDITOR_ASSIGN_PRODUCTION', '{ $submissionTitle}', '{$submissionTitle}');
+        $this->replace('EDITOR_ASSIGN_PRODUCTION', '{ $submissionUrl}', '{$submissionUrl}');
+        $this->replace('EDITOR_ASSIGN_PRODUCTION', '{$signature }', '{$signature}');
+        $this->replace('EDITOR_ASSIGN_PRODUCTION', '{$signature: }', '{$signature}');
+        $this->replace('EDITOR_ASSIGN_SUBMISSION', '{ $submissionTitle}', '{$submissionTitle}');
+        $this->replace('EDITOR_DECISION_ACCEPT', '"$authorSubmissionUrl}', '"{$authorSubmissionUrl}');
+        $this->replace('ISSUE_PUBLISH_NOTIFY', '{$identificare număr}', '{$issueIdentification}');
+        $this->replace('ISSUE_PUBLISH_NOTIFY', '{contextName$}', '{$contextName}');
+        $this->replace('ISSUE_PUBLISH_NOTIFY', '{recipientName$}', '{$recipientName}');
+        $this->replace('LAYOUT_COMPLETE', '{ $senderName}', '{$senderName}');
+        $this->replace('LAYOUT_COMPLETE', '{ $signature}', '{$signature}');
+        $this->replace('LAYOUT_COMPLETE', '{ $submissionTitle}', '{$submissionTitle}');
+        $this->replace('LAYOUT_REQUEST', '{$ submissionTitle}', '{$submissionTitle}');
+        $this->replace('LAYOUT_REQUEST', '{$submissionTitle }', '{$submissionTitle}');
+        $this->replace('PAYMENT_REQUEST_NOTIFICATION', '{$ kami submissionGuidelinesUrl}', '{$submissionGuidelinesUrl}');
+        $this->replace('PAYMENT_REQUEST_NOTIFICATION', '{$ submissionGuidelinesUrl}', '{$submissionGuidelinesUrl}');
+        $this->replace('PAYMENT_REQUEST_NOTIFICATION', '{$ uploadGuidelinesUrl}', '{$submissionGuidelinesUrl}');
+        $this->replace('REVIEW_CANCEL', '{contextName$}', '{$contextName}');
+        $this->replace('REVIEW_CANCEL', '{recipientName$}', '{$recipientName}');
+        $this->replace('REVIEW_CANCEL', '{signature$}', '{$signature}');
+        $this->replace('REVIEW_REINSTATE', '{$contextName }', '{$contextName}');
+        $this->replace('REVIEW_REMIND', '{$ PasswordResetUrl}', '{$passwordResetUrl}');
+        $this->replace('REVIEW_REMIND', '{$ reviewDueDate}', '{$reviewDueDate}');
+        $this->replace('REVIEW_REMIND_AUTO', '{$ PasswordResetUrl}', '{$passwordResetUrl}');
+        $this->replace('REVIEW_REMIND_AUTO', '{$ reviewDueDate}', '{$reviewDueDate}');
+        $this->replace('REVIEW_REMIND_AUTO', '{contextName$}', '{$contextName}');
+        $this->replace('REVIEW_REMIND_AUTO', '{recipientName$}', '{$recipientName}');
+        $this->replace('REVIEW_REMIND_AUTO', '{reviewDueDate$}', '{$reviewDueDate}');
+        $this->replace('REVIEW_REMIND_AUTO', '{submissionTitle$}', '{$submissionTitle}');
+        $this->replace('REVIEW_REQUEST', '{$submissionTitle }', '{$submissionTitle}');
+        $this->replace('REVIEW_REQUEST_SUBSEQUENT', '{$reviewAssignmentUrl }', '{$reviewAssignmentUrl}');
+        $this->replace('REVIEW_RESPONSE_OVERDUE_AUTO', '{$ responseDueDate}', '{$responseDueDate}');
+        $this->replace('REVIEW_RESPONSE_OVERDUE_AUTO', '{contextName$}', '{$contextName}');
+        $this->replace('STATISTICS_REPORT_NOTIFICATION', '{$ editorialStatsLink}', '{$editorialStatsLink}');
+        $this->replace('SUBSCRIPTION_AFTER_EXPIRY', '{$ ContextName}', '{$contextName}');
+        $this->replace('SUBSCRIPTION_AFTER_EXPIRY', '{contextUrl}', '{$contextUrl}');
+        $this->replace('SUBSCRIPTION_AFTER_EXPIRY_LAST', '{ $subscriptionType}', '{$subscriptionType}');
+        $this->replace('SUBSCRIPTION_AFTER_EXPIRY_LAST', '{$ username}', '{$recipientUsername}');
+        $this->replace('SUBSCRIPTION_AFTER_EXPIRY_LAST', '{contextUrl}', '{$contextUrl}');
+        $this->replace('SUBSCRIPTION_PURCHASE_INDL', '{$ contextName}', '{$contextName}');
+        $this->replace('SUBSCRIPTION_PURCHASE_INDL', '{$članstvo}', '{$membership}');
+        $this->replace('SUBSCRIPTION_PURCHASE_INSTL', '{ $membership}', '{$membership}');
+        $this->replace('SUBSCRIPTION_PURCHASE_INSTL', '{$ contextName}', '{$contextName}');
+        $this->replace('SUBSCRIPTION_PURCHASE_INSTL', '{$članstvo}', '{$membership}');
+        $this->replace('SUBSCRIPTION_RENEW_INDL', '{$članstvo}', '{$membership}');
+        $this->replace('SUBSCRIPTION_RENEW_INSTL', '{$članstvo}', '{$membership}');
+        $this->replace('USER_VALIDATE_SITE', '{$سایتی واژۆ}', '{$siteSignature}');
+        $this->replace('USER_VALIDATE_SITE', '{$ناوی وەرگر}', '{$recipientName}');
     }
 
     public function down(): void

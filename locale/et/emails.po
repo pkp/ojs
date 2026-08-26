@@ -409,7 +409,7 @@ msgstr ""
 "õnnitleda selle etapi saavutamise puhul.</p><p>Teie kaastöö läbib nüüd "
 "keeletoimetamise ja vormindamise avaldamiseks ettevalmistamiseks.</"
 "p><p>Saate varsti täiendavad juhised.</p><p>Kui teil on küsimusi, võtke "
-"minuga ühendust oma <a href=\"$authorSubmissionUrl}\">kaastööde esitamise "
+"minuga ühendust oma <a href=\"{$authorSubmissionUrl}\">kaastööde esitamise "
 "lehe kaudu</a>.</p><p>Parimate soovidega,</p>{$signature}"
 
 msgid "emails.layoutRequest.body"

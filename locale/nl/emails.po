@@ -715,7 +715,7 @@ msgstr ""
 "p><p>Deze vergoeding dekt de productiekosten voor het publiceren van uw "
 "inzending. Om de betaling uit te voeren, gaat u naar <a href=\""
 "{$queuedPaymentUrl}\">{$queuedPaymentUrl}</a>.</p><p>Als u vragen heeft, "
-"raadpleegt u onze <a href=\"{$ submissionGuidelinesUrl}\""
+"raadpleegt u onze <a href=\"{$submissionGuidelinesUrl}\""
 ">Inzendingsrichtlijnen</a></p>"
 
 msgid "emails.paymentRequestNotification.footer"
