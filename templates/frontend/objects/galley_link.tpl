@@ -18,11 +18,27 @@
  * @uses $currentJournal Journal The current journal context
  * @uses $journalOverride Journal An optional argument to override the current
  *       journal with a specific context
+ * @uses $journal Journal An optional argument naming the journal these galleys
+ *       belong to, for use when the current request has no journal context
  *}
 
 {* Override the $currentJournal context if desired *}
 {if $journalOverride}
 	{assign var="currentJournal" value=$journalOverride}
+{/if}
+
+{* Resolve the journal this link belongs to, so that the URL stays correct when the
+ * current request has no journal context -- for example when this template is rendered
+ * into a notification email from a queued job. See IssueEmailVariable::getIssueToc().
+ * The link below pins ROUTE_PAGE for the same reason: that job may be flushed at the end
+ * of a component request, whose router cannot build a page URL. *}
+{assign var="galleyJournalPath" value=null}
+{if $journalOverride}
+	{assign var="galleyJournalPath" value=$journalOverride->getPath()}
+{elseif $journal}
+	{assign var="galleyJournalPath" value=$journal->getPath()}
+{elseif $currentJournal}
+	{assign var="galleyJournalPath" value=$currentJournal->getPath()}
 {/if}
 
 {* Determine galley type and URL op *}
@@ -62,7 +78,7 @@
 {/if}
 
 {* Don't be frightened. This is just a link *}
-<a class="{if $isSupplementary}obj_galley_link_supplementary{else}obj_galley_link{/if} {$type|escape}{if $restricted} restricted{/if}" href="{url page=$page op="view" path=$path}"{if $id} id="{$id}"{/if}{if $labelledBy} aria-labelledby="{$labelledBy}"{/if}>
+<a class="{if $isSupplementary}obj_galley_link_supplementary{else}obj_galley_link{/if} {$type|escape}{if $restricted} restricted{/if}" href="{url router=PKP\core\PKPApplication::ROUTE_PAGE journal=$galleyJournalPath page=$page op="view" path=$path}"{if $id} id="{$id}"{/if}{if $labelledBy} aria-labelledby="{$labelledBy}"{/if}>
 	{* Add some screen reader text to indicate if a galley is restricted *}
 	{if $restricted}
 		<span class="pkp_screen_reader">

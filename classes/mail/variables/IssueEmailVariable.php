@@ -81,9 +81,19 @@ class IssueEmailVariable extends Variable
         IssueHandler::_setupIssueTemplate($request, $this->issue, $this->getContext(), false);
 
         $templateMgr->assign([
+            // The table of contents is rendered from the front-end templates, whose {url}
+            // calls otherwise resolve the journal from the current request. This value is
+            // compiled inside a queued job, so that request may belong to another journal
+            // or to no journal at all -- the latter producing links such as
+            // <base_url>/index/article/view/1, which fail the ContextRequiredPolicy.
+            'journal' => $this->getContext(),
             'includeIssuePublishDate' => false,
         ]);
 
+        // The templates reached from here pin ROUTE_PAGE on their {url} calls. This runs
+        // inside a queued job, which the job runner may flush at the end of a component
+        // request -- and PKPComponentRouter::url() rejects the page/path arguments those
+        // templates pass, throwing before the mail can be built.
         return $templateMgr->fetch('frontend/objects/issue_toc.tpl');
     }
 }
