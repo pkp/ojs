@@ -1,10 +1,10 @@
-# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2022, 2023, 2025.
+# Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>, 2022, 2023, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:18+00:00\n"
-"PO-Revision-Date: 2025-03-01 11:23+0000\n"
+"PO-Revision-Date: 2026-08-26 14:22+0000\n"
 "Last-Translator: Jiří Dlouhý <jiri.dlouhy@czp.cuni.cz>\n"
 "Language-Team: Czech <http://translate.pkp.sfu.ca/projects/ojs/locale/cs/>\n"
 "Language: cs\n"
@@ -302,10 +302,10 @@ msgid "submission.authorVersion"
 msgstr "Verze autora"
 
 msgid "submission.copyediting"
-msgstr "Redigování"
+msgstr "Jazyková redakce"
 
 msgid "submission.copyedit"
-msgstr "Redigovat"
+msgstr "Jazyková redakce"
 
 msgid "submission.proofreading"
 msgstr "Korektura"
@@ -359,7 +359,7 @@ msgid "submission.eventLog"
 msgstr "Log událostí"
 
 msgid "submissions.copyeditComplete"
-msgstr "Zredigované"
+msgstr "Po jazykové redakci"
 
 msgid "submissions.layoutComplete"
 msgstr "Po typografické úpravě"
@@ -655,25 +655,25 @@ msgid "submission.event.editor.submissionRestored"
 msgstr "Příspěvek obnoven z archívu"
 
 msgid "submission.event.copyedit.copyeditorAssigned"
-msgstr "K příspěvku byl přidělen copyeditor/ka"
+msgstr "K příspěvku byl přidělen/a jazykový redaktor/ka"
 
 msgid "submission.event.copyedit.copyeditorUnassigned"
-msgstr "Copyeditorovy/ce byl odebrán příspěvek"
+msgstr "Jazykovému redaktorovi byl odebrán příspěvek"
 
 msgid "submission.event.copyedit.copyeditInitiated"
-msgstr "Přidělené redigování zahájeno"
+msgstr "Přidělená jazyková redakce byla zahájena"
 
 msgid "submission.event.copyedit.copyeditRevision"
-msgstr "Soubor s úpravami copyeditora/ky byl aktualizován"
+msgstr "Soubor s úpravami jazykového redaktora byl aktualizován"
 
 msgid "submission.event.copyedit.copyeditInitialCompleted"
-msgstr "Úvodní redigování dokončeno"
+msgstr "Úvodní jazyková redakce byla dokončena"
 
 msgid "submission.event.copyedit.copyeditFinalCompleted"
-msgstr "Finální redigování dokončeno"
+msgstr "Finální jazyková redakce byla dokončena"
 
 msgid "submission.event.copyedit.copyeditSetFile"
-msgstr "Redigovaný soubor aktualizován"
+msgstr "Soubor jazykové redakce byl aktualizován"
 
 msgid "submission.event.proofread.proofreaderAssigned"
 msgstr "Korektor přidělen k příspěvku"
@@ -919,15 +919,15 @@ msgid "editor.submissionEditing.notes"
 msgstr ""
 "\n"
 "\t<ol>\n"
-"\t<li>Označené položky vyžadují zásah editora, jednotlivá označení "
-"znamenají:\n"
+"\t<li>Označené položky vyžadují zásah editora, jednotlivá označení znamenají:"
+"\n"
 "\t\t<ul>\n"
-"\t\t\t<li class=\"highlightCopyediting\">Je požadován zásah ve fázi "
-"lektorování</li>\n"
+"\t\t\t<li class=\"highlightCopyediting\">Je požadován zásah ve fázi jazykové "
+"redakce</li>\n"
 "\t\t\t<li class=\"highlightLayoutEditing\">Je požadován zásah ve fázi "
 "rozvržení textu</li>\n"
-"\t\t\t<li class=\"higlightProofreading\">Je požadován zásah ve fázi korektur "
-"textu</li>\n"
+"\t\t\t<li class=\"higlightProofreading\">Je požadován zásah ve fázi "
+"závěrečných korektur textu</li>\n"
 "\t\t</ul>\n"
 "\t</li>\n"
 "</ol>"
@@ -1191,10 +1191,10 @@ msgid "copyeditor.article.fileToCopyedit"
 msgstr "Soubor pro redaktora"
 
 msgid "copyeditor.article.copyeditorFile"
-msgstr "Soubor od copyeditora/ky"
+msgstr "Soubor od jazykového redaktora"
 
 msgid "copyeditor.article.copyeditorFinalFile"
-msgstr "Soubor copyeditora/ky"
+msgstr "Soubor od jazykového redaktora"
 
 msgid "proofreader.noProofreadingAssignments"
 msgstr "Žádné úkoly pro korektora"
@@ -1223,44 +1223,45 @@ msgstr ""
 
 msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
 msgstr ""
-"E-mail se žádostí nemůže být odeslán dokud není vybrán soubor pro redigování "
-"v Rozhodnutí editora na stránce Recenze."
+"E-mail se žádostí nemůže být odeslán dokud není vybrán soubor pro jazykovou "
+"redakci v Rozhodnutí editora na stránce Recenze."
 
 msgid "submission.copyedit.mustUploadFileForCopyedit"
 msgstr ""
-"E-mail se žádostí nemůže být odeslán dokud není nahrán soubor pro redigování."
+"E-mail se žádostí nemůže být odeslán dokud není nahrán soubor pro jazykovou "
+"redakci."
 
 msgid "submission.copyedit.initialCopyedit"
-msgstr "Úvodní verze pro redigování"
+msgstr "Úvodní jazyková redakce"
 
 msgid "submission.copyedit.editorsCopyedit"
-msgstr "Redigovaná verze editora"
+msgstr "Redaktorova jazyková korektura"
 
 msgid "submission.copyedit.editorAuthorReview"
-msgstr "Redigovaná verze autora"
+msgstr "Autorova jazyková korektura"
 
 msgid "submission.copyedit.finalCopyedit"
-msgstr "Finální redigovaná verze"
+msgstr "Závěrečná jazyková redakce"
 
 msgid "submission.copyedit.copyeditVersion"
 msgstr "Redaktorova verze"
 
 msgid "submission.copyedit.selectCopyeditor"
-msgstr "Přidělit copyeditora/ku"
+msgstr "Přidělit jazykového redaktora"
 
 msgid "submission.copyedit.useFile"
 msgstr "Použít soubor"
 
 msgid "submission.copyedit.copyeditComments"
-msgstr "Komentář k redigování"
+msgstr "Komentáře jazykové korektury"
 
 msgid "submission.copyedit.instructions"
-msgstr "Instrukce pro redigování"
+msgstr "Pokyny k jazykové redakci"
 
 msgid "submission.layout.noLayoutFile"
 msgstr ""
-"Žádný (Nahrajte finální redigovanou verzi jako verzi typografa před tím, než "
-"odešlete žádost)"
+"Žádný (Nahrajte finální verzi jazykové redakce jako verzi typografa před "
+"tím, než odešlete žádost)"
 
 msgid "submission.layout.galleyPublicIdentificationExists"
 msgstr "Identifikace veřejné sazebnice již existuje."
@@ -1302,7 +1303,7 @@ msgid "submission.logType.review"
 msgstr "Recenze"
 
 msgid "submission.logType.copyedit"
-msgstr "Redigování"
+msgstr "Jazyková redakce"
 
 msgid "submission.logType.layout"
 msgstr "Typografie"
@@ -1314,7 +1315,7 @@ msgid "submission.comments.editorAuthorCorrespondence"
 msgstr "Korespondence Editor/Autor"
 
 msgid "submission.comments.copyeditComments"
-msgstr "Komentáře pro redigování"
+msgstr "Komentáře jazykové korektury"
 
 msgid "submission.comments.viewableDescription"
 msgstr ""
@@ -2191,10 +2192,11 @@ msgstr ""
 "{$editorName}."
 
 msgid "log.copyedit.initiate"
-msgstr "Redigování příspěvku {$submissionId} zahájil {$copyeditorName}."
+msgstr ""
+"Jazykovou redakci příspěvku {$submissionId} zahájil/a {$copyeditorName}."
 
 msgid "log.copyedit.copyeditFileSet"
-msgstr "Byl vybrán výchozí soubor pro redigování."
+msgstr "Byl vybrán výchozí soubor pro jazykovou redakci."
 
 msgid "log.copyedit.initialEditComplete"
 msgstr ""
@@ -2206,13 +2208,14 @@ msgstr ""
 
 msgid "log.copyedit.copyeditorAssigned"
 msgstr ""
-"{$copyeditorName} byl přidělen pro redigování příspěvku {$submissionId}."
+"{$copyeditorName} byl přidělen pro jazykovou redakci příspěvku "
+"{$submissionId}."
 
 msgid "log.copyedit.copyeditorFile"
-msgstr "Copyeditorova verze souboru s příspěvkem byla nahrána."
+msgstr "Byla nahrána verze souboru s příspěvkem po jazykové redakci."
 
 msgid "log.copyedit.authorFile"
-msgstr "Byla nahrána autorem redigovaná verze souboru s příspěvkem."
+msgstr "Byla nahrána verze souboru s příspěvkem po jazykové korektuře autorem."
 
 msgid "log.layout.layoutEditorAssigned"
 msgstr ""
@@ -2312,8 +2315,8 @@ msgstr "Jsou očekávány sazebnice."
 
 msgid "user.authorization.copyeditorAssignmentMissing"
 msgstr ""
-"Přístup není povolen! Nebyl/a vám přiřazena úloha copyeditora/ky tohoto "
-"článku."
+"Přístup není povolen! Nebyla vám přiřazena úloha jazykového redaktora/ky "
+"tohoto článku."
 
 msgid "user.authorization.noContext"
 msgstr "Nebyl nalezen žádný časopis, který by odpovídal vašemu požadavku."
@@ -2326,8 +2329,8 @@ msgstr "Je vyžadováno chybné číslo!"
 
 msgid "user.authorization.invalidCopyditorSubmission"
 msgstr ""
-"Špatný příspěvek copyeditora/ky, nebo příspěvek copyeditora/ky není "
-"vyžadován!"
+"Špatný příspěvek jazykového redaktora/ky, nebo příspěvek jazykového "
+"redaktora/ky není vyžadován!"
 
 msgid "grid.action.createContext"
 msgstr "Vytvořit nový časopis"
