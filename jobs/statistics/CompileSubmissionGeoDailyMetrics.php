@@ -23,9 +23,6 @@ use PKP\jobs\BaseJob;
 
 class CompileSubmissionGeoDailyMetrics extends BaseJob
 {
-    /** @copydoc BaseJob::$isLongRunning */
-    protected bool $isLongRunning = true;
-
     /**
      * Create a new job instance.
      *

@@ -25,9 +25,6 @@ use PKP\statistics\TemporaryInstitutionsDAO;
 
 class DeleteUsageStatsTemporaryRecords extends BaseJob
 {
-    /** @copydoc BaseJob::$isLongRunning */
-    protected bool $isLongRunning = true;
-
     /**
      * Create a new job instance.
      *
