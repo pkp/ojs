@@ -244,12 +244,12 @@ describe('Customize reviewer recommendations test', () => {
             .click();
         cy.get('[data-cy="active-modal"]')
             .contains('button', 'Modify Review')
-            .click();
-        cy.get('[data-cy="active-modal"]')
+            .click({force: true});
+        cy.get('[data-cy="dialog"]')
             .last()
             .contains('button', 'Modify Review')
             .click();
-        cy.wait(1000)
+        cy.get('[data-cy="active-modal"] h1', { timeout: 15000 }).should('have.text', 'Modify Review');
         cy.get('[data-cy="active-modal"]')
             .last()
             .find('select#reviewerRecommendationId option:contains("Resubmit Elsewhere")')
@@ -277,12 +277,13 @@ describe('Customize reviewer recommendations test', () => {
             .click();
         cy.get('[data-cy="active-modal"]')
             .contains('button', 'Modify Review')
-            .click();
-        cy.get('[data-cy="active-modal"]')
+            .click({force: true});
+        cy.get('[data-cy="dialog"]')
             .last()
             .contains('button', 'Modify Review')
             .click();
-        cy.wait(1000)
+        cy.get('[data-cy="active-modal"] h1', { timeout: 15000 }).should('have.text', 'Modify Review');
+
         cy.get('[data-cy="active-modal"]')
             .last()
             .find('select#reviewerRecommendationId option:contains("Resubmit Elsewhere")')
