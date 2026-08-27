@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file classes/components/form/FieldArchivingPn.php
  *
@@ -56,5 +57,15 @@ class FieldArchivingPn extends FieldOptions
         $config['settingsUrl'] = $this->settingsUrl;
 
         return $config;
+    }
+
+    /**
+     * @copydoc Field::getEmptyValue()
+     *
+     * This field is a single-checkbox boolean toggle.
+     */
+    public function getEmptyValue()
+    {
+        return false;
     }
 }
