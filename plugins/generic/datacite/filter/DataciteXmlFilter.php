@@ -274,7 +274,7 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
             $rootNode->appendChild($relatedItemsNode);
         }
         // Funding references
-        $fundingReferencesNode = $this->createFundingReferencesNode($doc, $publication);
+        $fundingReferencesNode = $this->createFundingReferencesNode($doc, $publication, $article);
         if ($fundingReferencesNode) {
             $rootNode->appendChild($fundingReferencesNode);
         }
@@ -827,12 +827,12 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
     /**
      * Create funding references node.
      */
-    public function createFundingReferencesNode(DOMDocument $doc, Publication $publication): ?DOMNode
+    public function createFundingReferencesNode(DOMDocument $doc, Publication $publication, Submission $submission): ?DOMNode
     {
         /** @var DataciteExportDeployment $deployment */
         $deployment = $this->getDeployment();
 
-        $funders = $publication->getData('funders');
+        $funders = $submission->getData('funders')->toArray();
         if (empty($funders)) {
             return null;
         }
