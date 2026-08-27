@@ -193,7 +193,7 @@ class StatsHandler extends PKPStatsHandler
 
     protected function getTableColumns(): array
     {
-        return [
+        $columns = [
             [
                 'name' => 'title',
                 'label' => __('common.title'),
@@ -223,18 +223,24 @@ class StatsHandler extends PKPStatsHandler
                 'label' => __('common.other'),
                 'value' => 'otherViews',
             ],
-            [
+        ];
+
+        if (app()->get('publicationStats')->isJatsPluginAvailable()) {
+            $columns[] = [
                 'name' => 'jats',
                 'label' => __('stats.jats'),
                 'value' => 'jatsViews',
-            ],
-            [
-                'name' => 'total',
-                'label' => __('stats.total'),
-                'value' => 'total',
-                'orderBy' => 'total',
-                'initialOrderDirection' => true,
-            ],
+            ];
+        }
+
+        $columns[] = [
+            'name' => 'total',
+            'label' => __('stats.total'),
+            'value' => 'total',
+            'orderBy' => 'total',
+            'initialOrderDirection' => true,
         ];
+
+        return $columns;
     }
 }
