@@ -60,6 +60,7 @@ class ProcessUsageStatsLogFile extends PKPProcessUsageStatsLogFile
             Application::ASSOC_TYPE_ISSUE_GALLEY,
             Application::ASSOC_TYPE_ISSUE,
             Application::ASSOC_TYPE_JOURNAL,
+            Application::ASSOC_TYPE_JATS,
         ];
     }
 
@@ -75,7 +76,7 @@ class ProcessUsageStatsLogFile extends PKPProcessUsageStatsLogFile
             $temporaryInstitutionsDao->insert($entry->institutionIds, $lineNumber, $this->loadId);
             if (!empty($entry->submissionId)) {
                 $temporaryItemInvestigationsDao->insert($entry, $lineNumber, $this->loadId);
-                if ($entry->assocType == Application::ASSOC_TYPE_SUBMISSION_FILE) {
+                if (in_array($entry->assocType, [Application::ASSOC_TYPE_SUBMISSION_FILE, Application::ASSOC_TYPE_JATS])) {
                     $temporaryItemRequestsDao->insert($entry, $lineNumber, $this->loadId);
                 }
             }

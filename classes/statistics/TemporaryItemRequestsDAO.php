@@ -16,8 +16,16 @@
 
 namespace APP\statistics;
 
+use APP\core\Application;
 use PKP\statistics\PKPTemporaryItemRequestsDAO;
 
 class TemporaryItemRequestsDAO extends PKPTemporaryItemRequestsDAO
 {
+    /**
+     * @copydoc PKPTemporaryItemRequestsDAO::getItemRequestAssocTypes()
+     */
+    protected function getItemRequestAssocTypes(): array
+    {
+        return array_merge(parent::getItemRequestAssocTypes(), [Application::ASSOC_TYPE_JATS]);
+    }
 }
