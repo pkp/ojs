@@ -252,7 +252,7 @@ describe('Customize reviewer recommendations test', () => {
         cy.get('[data-cy="active-modal"] h1', { timeout: 15000 }).should('have.text', 'Modify Review');
         cy.get('[data-cy="active-modal"]')
             .last()
-            .find('select#reviewerRecommendationId option:contains("Resubmit Elsewhere")')
+            .find('select#reviewDetailsForm-reviewerRecommendationId-control option:contains("Resubmit Elsewhere")')
             .should('not.exist');
         cy.get('[data-cy="active-modal"]')
             .last()
@@ -286,7 +286,7 @@ describe('Customize reviewer recommendations test', () => {
 
         cy.get('[data-cy="active-modal"]')
             .last()
-            .find('select#reviewerRecommendationId option:contains("Resubmit Elsewhere")')
+            .find('select#reviewDetailsForm-reviewerRecommendationId-control option:contains("Resubmit Elsewhere")')
             .should('exist');
 
         cy.logout();
