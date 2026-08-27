@@ -238,12 +238,7 @@ class OAIMetadataFormat_DCTest extends PKPTestCase
         $galleyDoiObject->setData('doi', 'galley-doi');
 
         // Galleys
-        $galley = Repo::galley()->newDataObject();
-        /** @var Galley|MockObject $galley */
-        $galley = $this->getMockBuilder(Galley::class)
-            ->onlyMethods(['getFileType', 'getBestGalleyId'])
-            ->setProxyTarget($galley)
-            ->getMock();
+        $galley = $this->createPartialMock(Galley::class, ['getFileType', 'getBestGalleyId']); /** @var Galley|MockObject $galley */
         $galley->expects(self::any())
             ->method('getFileType')
             ->willReturn('galley-filetype');
