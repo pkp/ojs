@@ -61,7 +61,7 @@ class DAO extends \PKP\publication\DAO
         $publication->setData('galleys', LazyCollection::make(function () use ($row, $ids, $cache) {
             $cache->galleys ??= Repo::galley()->getCollector()->filterByPublicationIds($ids)->getMany()
                 ->collect()
-                ->groupBy(fn ($galley) => $galley->getData('publicationId'));
+                ->groupBy(fn ($galley) => $galley->getData('publicationId'), true);
             yield from $cache->galleys->get($row->publication_id) ?? [];
         }));
 
