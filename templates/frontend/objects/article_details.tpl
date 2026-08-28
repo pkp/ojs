@@ -148,7 +148,7 @@
 									</a>
 								</span>
 							{/if}
-							{if $author->getData('creditRoles')}
+							{if $author->getData('creditRoles')->isNotEmpty()}
 								<span class="credit_roles">
 								{strip}
 								{foreach $author->getData('creditRoles') as $credit}
