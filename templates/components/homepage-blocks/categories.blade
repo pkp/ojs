@@ -1,0 +1,51 @@
+@if($categories && $categories->count())
+    @php
+        $layout = $categories->count() > $maxCategoriesAsBlocks ? 'list' : 'block';
+    @endphp
+    <x-homepage-blocks.default
+        slug="categories"
+        class="homepage-block-categories-as-{{ $layout}}"
+    >
+        <div class="homepage-block-categories-header">
+            <h2 class="homepage-block-categories-title">
+                {{ $browseByCategoryTitle }}
+            </h2>
+            @if ($browseByCategoryDescription)
+                <p class="homepage-block-categories-desc">
+                    {!! ViewHelper::sanitizeHtml($browseByCategoryDescription) !!}
+                </p>
+            @endif
+        </div>
+        <ul class="homepage-block-categories-list">
+            @foreach ($categories as $category)
+                @php $url = ViewHelper::url(['page' => 'catalog', 'op' => 'category', 'path' => $category->getPath()]); @endphp
+                <li class="homepage-block-categories-list-item">
+                    <a
+                        class="homepage-block-categories-category-title"
+                        href="{{ $url }}"
+                    >
+                        <h3>
+                            {{ $category->getLocalizedTitle() }}
+                        </h3>
+                    </a>
+                    @if ($layout === 'block')
+                        @if ($category->getLocalizedDescription())
+                            <div class="homepage-block-categories-category-desc">
+                                {!! ViewHelper::sanitizeHtml($category->getLocalizedDescription()) !!}
+                            </div>
+                        @endif
+                        <div class="homepage-block-categories-category-actions">
+                            <x-arrow-link
+                                href="{{ $url }}"
+                                truncate="{{ true }}"
+                                tabindex="-1"
+                            >
+                                {{ __('submissions.browseByCategory.viewCategory') }}
+                            </x-arrow-link>
+                        </div>
+                    @endif
+                </li>
+            @endforeach
+        </ul>
+    </x-homepage-blocks.default>
+@endif
