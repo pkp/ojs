@@ -832,8 +832,8 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
         /** @var DataciteExportDeployment $deployment */
         $deployment = $this->getDeployment();
 
-        $funders = $submission->getData('funders')->toArray();
-        if (empty($funders)) {
+        $funders = $submission->getData('funders');
+        if ($funders->isEmpty()) {
             return null;
         }
 
