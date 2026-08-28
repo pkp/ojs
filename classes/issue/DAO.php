@@ -375,7 +375,15 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
             ->select('i.*');
 
         $result = $this->deprecatedDao->retrieveRange($q, [], $rangeInfo);
-        return new DAOResultFactory($result, $this, 'fromRow', [], $q, [], $rangeInfo);
+        return new DAOResultFactory($result, $this, 'fromRowDeprecated', [], $q, [], $rangeInfo);
+    }
+
+    /**
+     * Deprecated; remove when getExportable is refactored
+     */
+    public function fromRowDeprecated($row)
+    {
+        return $this->fromRow($row, [$row->issue_id], (object) []);
     }
 
     /**

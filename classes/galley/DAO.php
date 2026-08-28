@@ -39,6 +39,6 @@ class DAO extends PKPGalleyDAO
         }
 
         $result = $this->deprecatedDao->retrieveRange($q, [], $rangeInfo);
-        return new DAOResultFactory($result, $this, 'fromRow', [], $q, [], $rangeInfo);
+        return new DAOResultFactory($result, $this, 'fromRowDeprecated', [], $q, [], $rangeInfo);
     }
 }

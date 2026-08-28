@@ -146,6 +146,14 @@ class DAO extends \PKP\publication\DAO
             ->select('p.*');
 
         $rows = $this->deprecatedDao->retrieveRange($q, [], $rangeInfo);
-        return new DAOResultFactory($rows, $this, 'fromRow', [], $q, [], $rangeInfo);
+        return new DAOResultFactory($rows, $this, 'fromRowDeprecated', [], $q, [], $rangeInfo);
+    }
+
+    /**
+     * Deprecated; remove when getExportable is refactored
+     */
+    public function fromRowDeprecated($row)
+    {
+        return $this->fromRow($row, [$row->publication_id], (object) []);
     }
 }
