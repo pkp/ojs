@@ -1,0 +1,30 @@
+<x-homepage-blocks.default slug="search">
+    <div class="homepage-block-search-header">
+        <h2 class="homepage-block-search-title">
+            {{ $searchBlockTitle }}
+        </h2>
+        @if ($searchBlockDescription)
+            <p class="homepage-block-search-desc">
+                {{ $searchBlockDescription }}
+            </p>
+        @endif
+    </div>
+    <div class="homepage-block-search-main">
+        <form
+            action="{{ ViewHelper::url(['page' => 'search']) }}"
+            class="homepage-block-search-form"
+            method="GET"
+        >
+            <label for="homepage-block-search-input" class="sr-only">
+                {{ __('common.search') }}
+            </label>
+            @include('components/icons/search')
+            <input
+                type="search"
+                name="query"
+                id="homepage-block-search-input"
+                placeholder="{{ __('submissions.search.searchBy') }}"
+            >
+        </form>
+    </div>
+</x-homepage-blocks.default>

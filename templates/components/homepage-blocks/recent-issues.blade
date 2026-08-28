@@ -1,0 +1,39 @@
+@if($recentIssues && count($recentIssues))
+    <x-homepage-blocks.default slug="recent-issues">
+        <h2 class="homepage-block-recent-issues-title">
+            {{ __('issues.recentIssues') }}
+        </h2>
+        <div
+            class="swiper"
+            data-ally-prev="{{ __('common.slide.prev') }}"
+            data-ally-next="{{ __('common.slide.next') }}"
+        >
+            <ol class="swiper-wrapper">
+                @foreach($recentIssues as $issue)
+                    <li class="swiper-slide">
+                        <a
+                            class="homepage-block-recent-issues-link"
+                            href="{{ ViewHelper::url(['page' => 'issue', 'op' => 'view', 'path' => $issue->getBestIssueId()]) }}"
+                        >
+                            <h3 class="sr-only">
+                                {{ $issue->getIssueIdentification() }}
+                            </h3>
+                            @if ($issue->getLocalizedCoverImageUrl())
+                                <img
+                                    class="homepage-block-recent-issues-cover"
+                                    src="{{ $issue->getLocalizedCoverImageUrl() }}"
+                                    alt="{{ $issue->getLocalizedCoverImageAltText() ?? '' }}"
+                                >
+                            @else
+                                @include('components/cover-placeholder')
+                            @endif
+                        </a>
+                    </li>
+                @endforeach
+            </ol>
+            <div class="swiper-pagination"></div>
+            <button class="swiper-button-prev"></button>
+            <button class="swiper-button-next"></button>
+        </div>
+    </x-homepage-blocks.default>
+@endif
