@@ -242,11 +242,22 @@ describe('Customize reviewer recommendations test', () => {
         cy.get('[data-cy="reviewer-manager"]')
             .find('button:contains("Read Review")')
             .click();
-        cy.wait(1000)
-        cy.get('div[role=dialog]:contains("Recommendation")')
+        cy.get('[data-cy="active-modal"]')
+            .contains('button', 'Modify Review')
+            .click({force: true});
+        cy.get('[data-cy="dialog"]')
             .last()
-            .find('select#reviewerRecommendationId option:contains("Resubmit Elsewhere")')
+            .contains('button', 'Modify Review')
+            .click();
+        cy.get('[data-cy="active-modal"] h1', { timeout: 15000 }).should('have.text', 'Modify Review');
+        cy.get('[data-cy="active-modal"]')
+            .last()
+            .find('select#reviewDetailsForm-reviewerRecommendationId-control option:contains("Resubmit Elsewhere")')
             .should('not.exist');
+        cy.get('[data-cy="active-modal"]')
+            .last()
+            .contains('button', 'Cancel')
+            .click({force: true});
         cy.logout();
 
         cy.accessReviewerRecommendations('dbarnes', null, 'publicknowledge');
@@ -264,10 +275,18 @@ describe('Customize reviewer recommendations test', () => {
         cy.get('[data-cy="reviewer-manager"]')
             .find('button:contains("Read Review")')
             .click();
-        cy.wait(1000)
-        cy.get('div[role=dialog]:contains("Recommendation")')
+        cy.get('[data-cy="active-modal"]')
+            .contains('button', 'Modify Review')
+            .click({force: true});
+        cy.get('[data-cy="dialog"]')
             .last()
-            .find('select#reviewerRecommendationId option:contains("Resubmit Elsewhere")')
+            .contains('button', 'Modify Review')
+            .click();
+        cy.get('[data-cy="active-modal"] h1', { timeout: 15000 }).should('have.text', 'Modify Review');
+
+        cy.get('[data-cy="active-modal"]')
+            .last()
+            .find('select#reviewDetailsForm-reviewerRecommendationId-control option:contains("Resubmit Elsewhere")')
             .should('exist');
 
         cy.logout();
