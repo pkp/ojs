@@ -65,11 +65,10 @@ class PaymentHandler extends Handler
         $queuedPaymentDao = DAORegistry::getDAO('QueuedPaymentDAO'); /** @var QueuedPaymentDAO $queuedPaymentDao */
         $queuedPayment = $queuedPaymentDao->getById($queuedPaymentId = array_shift($args));
         if (!$queuedPayment) {
-            $templateMgr->assign([
-                'pageTitle' => 'common.payment',
-                'message' => 'payment.notFound',
-            ]);
-            $templateMgr->display('frontend/pages/message.tpl');
+            $templateMgr->displaySystemMessage(
+                title: __('common.payment'),
+                message: __('payment.notFound'),
+            );
             return;
         }
 
