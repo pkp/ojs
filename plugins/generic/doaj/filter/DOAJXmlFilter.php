@@ -176,7 +176,7 @@ class DOAJXmlFilter extends \PKP\plugins\importexport\native\filter\NativeExport
             }
             // Authors and affiliations
             $authors = $publication->getData('authors');
-            if (!empty($authors)) {
+            if ($authors->isNotEmpty()) {
                 $authorsNode = $doc->createElement('authors');
                 $recordNode->appendChild($authorsNode);
                 $affilList = $this->createAffiliationsList($authors, $publication);

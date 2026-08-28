@@ -173,7 +173,7 @@ class ArticlePubMedXmlFilter extends PersistableFilter
 
             // References
             $rawCitations = $publication->getData('citations');
-            if (!empty($rawCitations)) {
+            if (!$rawCitations->isEmpty()) {
                 $referenceListNode = $doc->createElement('ReferenceList');
                 foreach ($rawCitations as $rawCitation) { /** @var Citation $rawCitation */
                     $referenceNode = $doc->createElement('Reference');
