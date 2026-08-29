@@ -286,9 +286,6 @@ msgstr "Argitaratu"
 msgid "publication.publish.requirements"
 msgstr "Argitaratu ahal izateko, ondorengo baldintzak bete behar dira."
 
-msgid "publication.required.declined"
-msgstr "Baztertutako bidalketa ezin da argitaratu."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Bidalketa edizio edo ekoizpen fasean egon behar du argitaratu ahal izateko."

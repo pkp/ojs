@@ -283,9 +283,6 @@ msgid "publication.publish.requirements"
 msgstr ""
 "Sledeći zahtevi moraju biti ispunjeni pre nego što ovo može biti objavljeno."
 
-msgid "publication.required.declined"
-msgstr "Odbijen rad ne može biti objavljen."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Rad mora biti u fazi lekture ili produkcije pre nego što može biti objavljen."

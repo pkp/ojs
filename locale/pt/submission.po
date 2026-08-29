@@ -288,9 +288,6 @@ msgstr "Publicar"
 msgid "publication.publish.requirements"
 msgstr "Os seguintes requisitos devem ser cumpridos antes de ser publicado."
 
-msgid "publication.required.declined"
-msgstr "Uma submissão rejeitada não pode ser publicada."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "A submissão deve estar nas etapas de 'Edição de Texto' ou 'Produção' antes "

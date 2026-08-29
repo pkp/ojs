@@ -283,9 +283,6 @@ msgstr "Publikuj"
 msgid "publication.publish.requirements"
 msgstr "Następujące wymagania muszą być spełnione przed publikacją."
 
-msgid "publication.required.declined"
-msgstr "Odrzucone zgłoszenie nie może być opublikowane."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Zgłoszenie musi przejść wszystkie etapy procesu wydawniczego i produkcyjnego "

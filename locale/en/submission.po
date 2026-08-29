@@ -68,6 +68,12 @@ msgstr "The article galley \"{$galleyFormatName}\" is made unavailable."
 msgid "submission.event.publicIdentifiers"
 msgstr "The submission's public identifiers updated."
 
+msgid "submission.dashboard.view.withdrawn"
+msgstr "Withdrawn"
+
+msgid "submissions.withdrawn"
+msgstr "Withdrawn"
+
 msgid "grid.issueEntry.availableGalley.title"
 msgstr "Format Approval"
 
@@ -352,8 +358,8 @@ msgstr "Publish"
 msgid "publication.publish.requirements"
 msgstr "The following requirements must be met before this can be published."
 
-msgid "publication.required.declined"
-msgstr "A declined submission can not be published."
+msgid "publication.required.declinedOrWithdrawn"
+msgstr "A declined or withdrawn submission can not be published."
 
 msgid "publication.required.pmurReview"
 msgstr "A PMUR version cannot be published without an associated review round. "
@@ -422,6 +428,45 @@ msgstr ""
 
 msgid "editor.submission.decision.promoteFiles.externalReview"
 msgstr "Select files that should be sent to the review stage."
+
+msgid "editor.submission.decision.withdraw"
+msgstr "Withdraw Submission"
+
+msgid "editor.submission.decision.withdraw.description"
+msgstr "Withdraw this article from consideration."
+
+msgid "editor.submission.decision.withdraw.log"
+msgstr "The article was withdrawn."
+
+msgid "editor.submission.decision.withdraw.completed"
+msgstr "Article Withdrawn"
+
+msgid "editor.submission.decision.withdraw.completed.description"
+msgstr "The article \"{$title}\" has been withdrawn."
+
+msgid "editor.submission.decision.withdraw.errorPublished"
+msgstr "This submission cannot be withdrawn because it has already been published."
+
+msgid "editor.submission.decision.withdraw.notifyAuthorsDescription"
+msgstr "Send an email to notify the author(s) that their submission has been withdrawn."
+
+msgid "editor.submission.decision.revertWithdraw"
+msgstr "Revert Withdrawal"
+
+msgid "editor.submission.decision.revertWithdraw.description"
+msgstr "Return this article to the active queue."
+
+msgid "editor.submission.decision.revertWithdraw.log"
+msgstr "The withdrawal of the article was reverted."
+
+msgid "editor.submission.decision.revertWithdraw.completed"
+msgstr "Withdrawal Reverted"
+
+msgid "editor.submission.decision.revertWithdraw.completed.description"
+msgstr "The withdrawal of \"{$title}\" has been reverted. The submission has been returned to the active queue."
+
+msgid "editor.submission.decision.revertWithdraw.notifyAuthorsDescription"
+msgstr "Send an email to notify the author(s) that their withdrawn submission has been returned to the active queue."
 
 msgid "doi.submission.issueMissing.publication"
 msgstr ""

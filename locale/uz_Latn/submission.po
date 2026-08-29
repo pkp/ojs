@@ -286,9 +286,6 @@ msgstr "Nashr qilish"
 msgid "publication.publish.requirements"
 msgstr "Buni nashr qilishdan oldin quyidagi talablar bajarilishi kerak."
 
-msgid "publication.required.declined"
-msgstr "Rad etilgan arizani e'lon qilib bo'lmaydi."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Arizani nashr etishdan oldin nusxa ko'chirish yoki ishlab chiqarish "

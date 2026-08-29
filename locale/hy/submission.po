@@ -282,9 +282,6 @@ msgstr "Հրապարակել"
 msgid "publication.publish.requirements"
 msgstr "Հետևյալ պահանջները պետք է բավարարվեն՝ նախքան սա կարող է հրապարակվել։"
 
-msgid "publication.required.declined"
-msgstr "Մերժված ներկայացված նյութը չի կարող հրապարակվել:"
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Ներկայացված նյութը պետք է լինի պատճենահանման կամ արտադրության փուլերում, "

@@ -280,9 +280,6 @@ msgstr "Objavi"
 msgid "publication.publish.requirements"
 msgstr "Spodnje zahteve morajo biti izpolnjene pred objavo."
 
-msgid "publication.required.declined"
-msgstr "Zavrnjen prispevek ne more biti objavljen."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Prispevek mora biti v fazi Lektoriranje ali Produkcija preden je lahko "

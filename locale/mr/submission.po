@@ -346,9 +346,6 @@ msgstr "नवी आवृत्ती प्रकाशित करण्य
 msgid "publication.invalidSubmission"
 msgstr "प्रकाशनासाठी हे सादरीकरण उपलब्ध नाही."
 
-msgid "publication.required.declined"
-msgstr "नाकारलेले सादरीकरण प्रकाशित केले जात नाही."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "सादरीकरण प्रकाशित होण्यापूर्वी सुसंगतता आणि अचूकता तपासणी (कॉपी एडिटिंग) तसे"

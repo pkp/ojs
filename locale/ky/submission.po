@@ -267,9 +267,6 @@ msgstr "Жарыялоо"
 msgid "publication.publish.requirements"
 msgstr "Бул жарыялануудан мурун төмөнкү талаптар аткарылышы керек."
 
-msgid "publication.required.declined"
-msgstr "Четке кагылган тапшырма жарыяланбайт."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Тапшырма жарыялануудан мурун копи-редакциялоо же өндүрүш баскычында болушу "

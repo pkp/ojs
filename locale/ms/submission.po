@@ -284,9 +284,6 @@ msgstr "Terbitkan"
 msgid "publication.publish.requirements"
 msgstr "Keperluan berikut mesti dipenuhi sebelum ini dapat diterbitkan."
 
-msgid "publication.required.declined"
-msgstr "Penyerahan yang ditolak tidak dapat diterbitkan."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Penyerahan mestilah dalam peringkat Copyediting atau Produksi sebelum dapat "

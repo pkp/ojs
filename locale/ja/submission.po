@@ -274,9 +274,6 @@ msgstr "公開"
 msgid "publication.publish.requirements"
 msgstr "これを公開するには、以下の要件を満たしていなければなりません。"
 
-msgid "publication.required.declined"
-msgstr "拒否した投稿は公開できません。"
-
 msgid "publication.required.reviewStage"
 msgstr "公開する前に、投稿はコピー編集または制作の段階を経る必要があります。"
 
