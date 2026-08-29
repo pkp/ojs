@@ -31,7 +31,7 @@ class Schema extends \PKP\publication\maps\Schema
                 $output['galleys'] = [];
             } else {
                 $output['galleys'] = Repo::galley()->getSchemaMap($this->submission, $publication, $this->genres)
-                    ->summarizeMany($publication->getData('galleys'));
+                    ->summarizeMany($publication->getData('galleys'))->values();
             }
         }
 
