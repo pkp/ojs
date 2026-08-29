@@ -289,8 +289,7 @@ msgstr ""
 "Следните изисквания трябва да бъдат изпълнени, преди това да може да бъде "
 "публикувано."
 
-msgid "publication.required.declined"
-msgstr ""
+
 "Изпратен е отказ за публикуване и материалът не може да бъде публикуван."
 
 msgid "publication.required.reviewStage"

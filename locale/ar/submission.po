@@ -271,9 +271,6 @@ msgstr "النشر"
 msgid "publication.publish.requirements"
 msgstr "لا بد من تلبية المتطلبات الآتية قبل الشروع بالنشر."
 
-msgid "publication.required.declined"
-msgstr "طلب التقديم المرفوض لا يمكن له أن يُنشر."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "طلب التقديم لا بد أن يكون في مرحلة التدقيق أو الانتاج قبل أن يتسنى نشره."

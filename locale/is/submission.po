@@ -283,9 +283,6 @@ msgstr "Gefa út/Birta"
 msgid "publication.publish.requirements"
 msgstr "Eftirfarandi kröfur þarf að uppfylla áður en hægt er að birta þetta."
 
-msgid "publication.required.declined"
-msgstr "Ekki er hægt að gefa út handrit sem hefur verið hafnað."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Innsendingin þarf að vera í yfirferð eða á framleiðsluþrepi áður en hægt er "

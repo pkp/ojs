@@ -298,9 +298,6 @@ msgstr "Pubblicare"
 msgid "publication.publish.requirements"
 msgstr "Prima della pubblicazione confermare i seguenti requisiti."
 
-msgid "publication.required.declined"
-msgstr "Un articolo rigettato non può essere pubblicato."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Per essere pubblicato un articolo deve essere nella fase di copy-editing o "

@@ -288,9 +288,6 @@ msgstr "Опублікувати"
 msgid "publication.publish.requirements"
 msgstr "Наступні вимоги мають бути виконані перед публікацією."
 
-msgid "publication.required.declined"
-msgstr "Матеріал якому відмовлено, неможливо опублікувати."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "До того як Опублікувати подання, воно має бути на стадії \"Літературне "

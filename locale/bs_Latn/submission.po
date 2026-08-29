@@ -280,9 +280,6 @@ msgstr "Objavi"
 msgid "publication.publish.requirements"
 msgstr "Da bi se ovo moglo objaviti, moraju se ispuniti sljedeći zahtjevi."
 
-msgid "publication.required.declined"
-msgstr "Odbijena predaja rada ne može se objaviti."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Predaja rada mora biti u fazi uređivanja ili izrade prije nego što može biti "

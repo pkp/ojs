@@ -321,9 +321,6 @@ msgstr "ตีพิมพ์"
 msgid "publication.publish.requirements"
 msgstr "ข้อกำหนดต่อไปนี้ต้องได้รับการปฏิบัติตามก่อนที่จะสามารถตีพิมพ์ได้"
 
-msgid "publication.required.declined"
-msgstr "การส่งที่ถูกปฏิเสธไม่สามารถตีพิมพ์ได้"
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "การส่งบทความต้องอยู่ในขั้นตอนการคัดลอกแก้ไขหรือการผลิตก่อนจึงจะสามารถตีพิมพ์ไ"

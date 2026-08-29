@@ -289,9 +289,6 @@ msgstr "Жариялау"
 msgid "publication.publish.requirements"
 msgstr "Жарияламас бұрын келесі талаптарды орындау қажет."
 
-msgid "publication.required.declined"
-msgstr "Қабылданбаған материалды жариялау мүмкін емес."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Материал жарияланар алдында «Әдеби редакциялау» немесе «Баспа ісі» сатысында "

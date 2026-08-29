@@ -285,9 +285,6 @@ msgstr "Објави"
 msgid "publication.publish.requirements"
 msgstr "Следните услови мора да бидат исполнети пред ова да биде објавено."
 
-msgid "publication.required.declined"
-msgstr "Одбиен поднесок не може да биде објавен."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Поднесокот мора да биде во фаза на уредување или продукција пред да биде "

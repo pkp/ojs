@@ -288,9 +288,6 @@ msgstr "Publicar"
 msgid "publication.publish.requirements"
 msgstr "S'han de complir els següents requisits abans de poder-ho publicar."
 
-msgid "publication.required.declined"
-msgstr "Una tramesa rebutjada no pot ser publicada."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "La tramesa ha d'estar en les fases de \"correcció\" o de \"producció\" abans "

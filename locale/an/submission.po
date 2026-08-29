@@ -248,9 +248,6 @@ msgstr "S'ha eliminau una versión de publicación."
 msgid "publication.publish"
 msgstr "Publicar"
 
-msgid "publication.required.declined"
-msgstr "Un ninvio refusau no puede estar publicau."
-
 msgid "submission.license.description"
 msgstr ""
 "La licencia s'achustará automaticament a <a href='{$licenseUrl}' "

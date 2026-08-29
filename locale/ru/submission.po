@@ -285,9 +285,6 @@ msgstr "Опубликовать"
 msgid "publication.publish.requirements"
 msgstr "Перед публикацией необходимо выполнить следующие требования."
 
-msgid "publication.required.declined"
-msgstr "Отклонённый материал нельзя опубликовать."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Перед публикацией материал должен быть на этапе «Литературное "
