@@ -259,8 +259,7 @@ msgstr ""
 msgid "publication.publish.requirements"
 msgstr ""
 
-msgid "publication.required.declined"
-msgstr ""
+
 
 msgid "publication.required.reviewStage"
 msgstr ""

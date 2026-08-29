@@ -292,9 +292,6 @@ msgstr "Publicér"
 msgid "publication.publish.requirements"
 msgstr "Følgende krav skal være opfyldt, før dette kan offentliggøres."
 
-msgid "publication.required.declined"
-msgstr "En afvist indsendelse kan ikke offentliggøres."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Indsendelsen skal være under manuskriptredigerings- eller "

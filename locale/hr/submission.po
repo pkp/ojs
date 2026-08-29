@@ -280,9 +280,6 @@ msgstr "Objavi"
 msgid "publication.publish.requirements"
 msgstr "Prije objave potrebno je ispuniti sljedeće uvjete."
 
-msgid "publication.required.declined"
-msgstr "Odbijena prijava ne može biti objavljena."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Prijava mora biti u fazi lekture (Copyediting) ili produkcije prije nego što "

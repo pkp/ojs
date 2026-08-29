@@ -287,9 +287,6 @@ msgstr "გამოქვეყნება"
 msgid "publication.publish.requirements"
 msgstr "გამოქვეყნების წინ აუცილებელია შემდეგი მოთხოვნების შესრულება."
 
-msgid "publication.required.declined"
-msgstr "დაწუნებული მასალის გამოქვეყენება არ შეიძლება."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "გამოქვეყნების წინ მასალა უნდა იყოს „ლიტერატურული ჩასწორების“, ან "

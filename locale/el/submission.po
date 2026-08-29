@@ -297,9 +297,6 @@ msgstr "Δημοσίευση"
 msgid "publication.publish.requirements"
 msgstr "Πρέπει να πληρούνται οι ακόλουθες προϋποθέσεις για να δημοσιευτεί."
 
-msgid "publication.required.declined"
-msgstr "Δεν είναι δυνατή η δημοσίευση μιας υποβολής που απορρίφθηκε."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Η υποβολή πρέπει να βρίσκεται στα στάδια Αντιγραφής ή Παραγωγής για να "

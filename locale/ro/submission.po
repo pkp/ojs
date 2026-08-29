@@ -289,9 +289,6 @@ msgstr ""
 "Înainte ca manuscrisul să fie publicat, trebuie îndeplinite următoarele "
 "cerințe."
 
-msgid "publication.required.declined"
-msgstr "O înregistrare de manuscris refuzată nu poate fi publicată."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Depunerea trebuie să fie în etapele de editare conținut sau de producție "

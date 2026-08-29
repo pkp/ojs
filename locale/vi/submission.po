@@ -279,9 +279,6 @@ msgid "publication.publish.requirements"
 msgstr ""
 "Các yêu cầu sau phải được đáp ứng trước khi bài này có thể được xuất bản."
 
-msgid "publication.required.declined"
-msgstr "Không thể xuất bản một bài bị từ chối."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Bài gửi phải qua giai đoạn Sao chép hoặc Sản xuất trước khi có thể được xuất "

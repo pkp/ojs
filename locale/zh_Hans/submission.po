@@ -256,9 +256,6 @@ msgstr "出版"
 msgid "publication.publish.requirements"
 msgstr "在出版之前，必须满足以下标准。"
 
-msgid "publication.required.declined"
-msgstr "被退稿的稿件无法出版。"
-
 msgid "publication.required.reviewStage"
 msgstr "稿件必须处于文本编辑或出版阶段才能出版。"
 

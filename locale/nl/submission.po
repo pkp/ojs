@@ -294,9 +294,6 @@ msgstr ""
 "Aan de volgende vereisten moet voldaan worden voordat dit gepubliceerd kan "
 "worden."
 
-msgid "publication.required.declined"
-msgstr "Een afgewezen inzending kan niet worden gepubliceerd."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Een inzending moet in de tekstredactie of productiefase zijn voordat deze "

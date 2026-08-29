@@ -281,9 +281,6 @@ msgid "publication.publish.requirements"
 msgstr ""
 "Bunun yayınlanabilmesi için aşağıdaki gereksinimlerin karşılanması gerekir."
 
-msgid "publication.required.declined"
-msgstr "Reddedilen bir gönderi yayınlanamaz."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Gönderinin yayınlanabilmesi için önce Kopyalama veya Üretim aşamalarında "

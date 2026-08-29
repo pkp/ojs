@@ -284,9 +284,6 @@ msgstr "Publicar"
 msgid "publication.publish.requirements"
 msgstr "Para poder publicar isto débense cumprir os seguintes requisitos."
 
-msgid "publication.required.declined"
-msgstr "Non se pode publicar un envío rexeitado."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "O envío debe estar nas fases de redacción ou produción antes de que poida "

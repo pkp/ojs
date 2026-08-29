@@ -211,9 +211,6 @@ msgstr "Selle väljaande kaastööd ei leitud."
 msgid "publication.publish"
 msgstr "Avalda"
 
-msgid "publication.required.declined"
-msgstr "Tagasilükatud esitust ei saa avaldada."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Kaastöö peab olema toimetamise või küljenduse etapis enne, kui seda saab "

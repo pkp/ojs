@@ -287,9 +287,6 @@ msgstr "Julkaise"
 msgid "publication.publish.requirements"
 msgstr "Seuraavat ehdot pitää täyttyä ennen julkaisua."
 
-msgid "publication.required.declined"
-msgstr "Hylättyä käsikirjoitusta ei voi julkaista."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Käsikirjoituksen pitää olla teknisen toimituksessa tai tuotantovaiheessa, "

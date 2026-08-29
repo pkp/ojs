@@ -285,9 +285,6 @@ msgstr "Terbitkan"
 msgid "publication.publish.requirements"
 msgstr "Persyaratan berikut harus dipenuhi sebelum naskah diterbitkan."
 
-msgid "publication.required.declined"
-msgstr "Naskah yang ditolak tidak bisa diterbitkan."
-
 msgid "publication.required.reviewStage"
 msgstr ""
 "Naskah harus melewati tahap Copyediting atau Produksi sebelum dapat "
