@@ -661,8 +661,7 @@ class IssueGridHandler extends GridHandler
                 $jobs[] = new IssuePublishedNotifyUsers(
                     $notifyUserIds,
                     $contextId,
-                    $issue,
-                    Locale::getLocale(),
+                    $issue
                 );
             }
 
@@ -671,7 +670,6 @@ class IssueGridHandler extends GridHandler
                     $mailUserIds,
                     $contextId,
                     $issue,
-                    Locale::getLocale(),
                     $request->getUser()
                 );
             }
