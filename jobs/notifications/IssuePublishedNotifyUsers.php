@@ -38,7 +38,6 @@ class IssuePublishedNotifyUsers extends BaseJob
     protected Collection $recipientIds;
     protected int $contextId;
     protected Issue $issue;
-    protected string $locale;
 
     // The sender of the email
     protected ?User $sender;
@@ -47,7 +46,6 @@ class IssuePublishedNotifyUsers extends BaseJob
         Collection $recipientIds,
         int $contextId,
         Issue $issue,
-        string $locale,
         ?User $sender = null // Leave null to not send an email
     ) {
         parent::__construct();
@@ -55,7 +53,6 @@ class IssuePublishedNotifyUsers extends BaseJob
         $this->recipientIds = $recipientIds;
         $this->contextId = $contextId;
         $this->issue = $issue;
-        $this->locale = $locale;
         $this->sender = $sender;
     }
 
@@ -63,6 +60,7 @@ class IssuePublishedNotifyUsers extends BaseJob
     {
         $context = Application::getContextDAO()->getById($this->contextId);
         $template = Repo::emailTemplate()->getByKey($this->contextId, IssuePublishedNotify::getEmailTemplateKey());
+        $supportedLocales = $context->getSupportedLocales();
 
         foreach ($this->recipientIds as $recipientId) {
             /** @var int $recipientId */
@@ -85,8 +83,13 @@ class IssuePublishedNotifyUsers extends BaseJob
                 continue;
             }
 
-            $mailable = $this->createMailable($context, $this->issue, $recipient, $template, $notification);
-            $mailable->setLocale($this->locale);
+            // Send in the recipient's working language if the context supports it,
+            // otherwise fall back to the context's primary locale
+            $workingLocales = array_values(array_intersect($recipient->getLocales(), $supportedLocales));
+            $recipientLocale = $workingLocales[0] ?? $context->getPrimaryLocale();
+
+            $mailable = $this->createMailable($context, $this->issue, $recipient, $template, $notification, $recipientLocale);
+            $mailable->setLocale($recipientLocale);
             Mail::send($mailable);
         }
     }
@@ -99,14 +102,15 @@ class IssuePublishedNotifyUsers extends BaseJob
         Issue $issue,
         User $recipient,
         EmailTemplate $template,
-        PKPNotification $notification
+        PKPNotification $notification,
+        string $locale
     ): IssuePublishedNotify {
         $mailable = new IssuePublishedNotify($context, $issue);
         $mailable
-            ->recipients([$recipient])
+            ->recipients([$recipient], $locale)
             ->sender($this->sender)
-            ->body($template->getLocalizedData('body', $this->locale))
-            ->subject($template->getLocalizedData('subject', $this->locale))
+            ->body($template->getLocalizedData('body', $locale))
+            ->subject($template->getLocalizedData('subject', $locale))
             ->allowUnsubscribe($notification);
 
         return $mailable;
