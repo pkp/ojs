@@ -339,7 +339,7 @@ allow_plugin_install = on
 ;password_timeout = 0
 
 ; When set to On, pass article galley HTML through a filter to remove potentially malicious content.
-filter_galley_html = On
+filter_galley_html = Off
 
 ; When the filter_galley_html option is turned On, only allowed "safe" elements will be permitted.
 ; Use the following setting to allow additional elements and attributes.
