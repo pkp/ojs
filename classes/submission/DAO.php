@@ -111,7 +111,7 @@ class DAO extends \PKP\submission\DAO
     /**
      * Deprecated; remove when getExportable is refactored
      */
-    public function fromRowDeprecated($row)
+    public function fromRowDeprecated(object $row): Submission
     {
         return $this->fromRow($row, [$row->submission_id], (object) []);
     }

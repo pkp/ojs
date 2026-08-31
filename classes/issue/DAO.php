@@ -381,7 +381,7 @@ class DAO extends EntityDAO implements \PKP\plugins\PKPPubIdPluginDAO
     /**
      * Deprecated; remove when getExportable is refactored
      */
-    public function fromRowDeprecated($row)
+    public function fromRowDeprecated(object $row): Issue
     {
         return $this->fromRow($row, [$row->issue_id], (object) []);
     }
