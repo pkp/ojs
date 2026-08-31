@@ -140,10 +140,10 @@ class DAO extends \PKP\publication\DAO
                     )
                 )
             )
-            ->groupBy('p.publication_id')
+            ->groupBy('p.publication_id', 's.locale')
             ->orderByDesc('s.submission_id')
             ->orderByDesc('p.version_major')
-            ->select('p.*');
+            ->select(['p.*', 's.locale AS submission_locale']); // see DAO::fromRow for use of submission_locale
 
         $rows = $this->deprecatedDao->retrieveRange($q, [], $rangeInfo);
         return new DAOResultFactory($rows, $this, 'fromRowDeprecated', [], $q, [], $rangeInfo);
@@ -152,7 +152,7 @@ class DAO extends \PKP\publication\DAO
     /**
      * Deprecated; remove when getExportable is refactored
      */
-    public function fromRowDeprecated($row)
+    public function fromRowDeprecated(object $row): Publication
     {
         return $this->fromRow($row, [$row->publication_id], (object) []);
     }
