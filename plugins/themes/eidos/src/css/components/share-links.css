@@ -1,0 +1,45 @@
+.share-links {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.share-link,
+.share-link-copy .PkpCopyToClipboard__button {
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  border-radius: var(--radius);
+  text-align: start;
+  width: 100%;
+  overflow: hidden;
+
+  & svg {
+    width: 2rem;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  & span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &:hover,
+  &:focus-visible {
+    outline: none;
+    background: var(--color-overlay-text);
+    color: var(--color-overlay-background);
+  }
+}
+
+.share-link-copy .PkpCopyToClipboard__button {
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}

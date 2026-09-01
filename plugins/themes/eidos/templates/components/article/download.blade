@@ -1,0 +1,82 @@
+{{--
+
+Article downloads button
+
+A dropdown button to download galleys and JATS files.
+If there is only one download, the button will download
+without
+--}}
+
+@php
+    /**
+     * If the $hasAccess variable has not been set, we
+     * assume the user has access.
+     */
+    $hasAccess = $hasAccess ?? true;
+
+    /**
+     * Assume the galleys are in the current context if
+     * no specific context is passed.
+     */
+    $galleyContextPath = $galleyContextPath ?? $currentContext->getPath();
+@endphp
+
+@if (count($primaryGalleys) === 1 && !$jatsDownloadUrl && !count($supplementaryGalleys))
+    @includeIf('components.galley-link', [
+        'class' => 'article-download-button',
+        'galley' => $primaryGalleys[0],
+        'label' => __('common.download'),
+        'publication' => $publication,
+        'submission' => $submission,
+        'galleyContextPath' => $galleyContextPath,
+        'hasAccess' => $hasAccess,
+    ])
+
+@elseif (count($primaryGalleys) || $jatsDownloadUrl || count($supplementaryGalleys))
+    <x-dropdown
+        class="article-download"
+        triggerClass="article-download-button"
+    >
+        <x-slot:trigger>
+            @include('components/icons/download')
+            <span class="article-download-button-text">
+                {{ __('common.download') }}
+            </span>
+
+        </x-slot:trigger>
+        <ul class="article-download-downloads">
+            @foreach ($primaryGalleys as $galley)
+                <li>
+                    @includeIf('components.galley-link', [
+                        'galley' => $galley,
+                        'label' => $galley->getGalleyLabel(),
+                        'publication' => $publication,
+                        'submission' => $submission,
+                        'galleyContextPath' => $galleyContextPath,
+                        'hasAccess' => $hasAccess,
+                    ])
+                </li>
+            @endforeach
+            @if ($jatsDownloadUrl)
+                <li>
+                    <a class="galley-link" href="{{ $jatsDownloadUrl }}">
+                        @include('components/icons/galley-other')
+                        {{ __('publication.jats.download') }}
+                    </a>
+                </li>
+            @endif
+            @foreach ($supplementaryGalleys as $galley)
+                <li>
+                    @includeIf('components.galley-link', [
+                        'galley' => $galley,
+                        'label' => $galley->getGalleyLabel(),
+                        'publication' => $publication,
+                        'submission' => $submission,
+                        'galleyContextPath' => $galleyContextPath,
+                        'hasAccess' => $hasAccess,
+                    ])
+                </li>
+            @endforeach
+        </ul>
+    </x-dropdown>
+@endif

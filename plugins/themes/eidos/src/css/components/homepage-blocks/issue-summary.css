@@ -1,0 +1,30 @@
+.homepage-block-issue-summary {
+  width: 100%;
+  max-width: 1280px;
+
+  @media (min-width: 1024px) {
+    padding: 2rem;
+    border: var(--border-width) solid;
+    border-radius: var(--radius);
+  }
+
+  @media (min-width: 1200px) {
+
+    & .issue-summary-cover {
+      max-width: 18rem;
+    }
+
+    & .issue-summary-vol {
+      font-size: 2rem;
+    }
+
+    & .issue-summary-year {
+      font-size: 1.5rem;
+    }
+
+    & .issue-summary-title {
+      margin-top: 0.25rem;
+      max-width: 40rem;
+    }
+  }
+}

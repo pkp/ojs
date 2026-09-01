@@ -1,0 +1,23 @@
+.announcement-summary-link {
+  @apply tab-focus;
+  display: block;
+}
+
+.announcement-summary-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.announcement-summary-date {
+  margin-top: 0.25rem;
+  font-size: 1.125rem;
+}
+
+.announcement-summary-desc {
+  @apply html-text;
+  margin-top: 0.75rem;
+}
+
+.announcement-summary-actions {
+  margin-top: 1rem;
+}

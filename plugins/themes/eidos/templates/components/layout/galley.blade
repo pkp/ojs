@@ -1,0 +1,78 @@
+{{--
+
+Galley Layout
+
+This is the layout used to display article galleys, such as
+full-text PDF and HTML files.
+
+--}}
+
+<!doctype html>
+<html lang="{{ str_replace('_', '-', $currentLocale) }}" xml:lang="{{ str_replace('_', '-', $currentLocale) }}">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ $title }}</title>
+    @if ($description)
+        <meta name="description" content="{{ ViewHelper::html2text($description) }}">
+    @endif
+    @loadHeader(['context' => 'frontend'])
+    @loadStylesheet(['context' => 'frontend'])
+    @if (!$usesCustomFonts)
+        <x-header.default-fonts />
+    @endif
+    @if ($head && !$head->isEmpty())
+        {{ $head }}
+    @endif
+</head>
+
+<body
+    class="{{
+        join(' ', [
+            $bodyClasses,
+            'site-width-' . $activeTheme->getOption('siteWidth'),
+            'font-' . ($usesCustomFonts ? $activeTheme->getOption('font') : 'default'),
+            'font-titles-' . ($usesCustomFonts ? $activeTheme->getOption('titlesFont') : 'default'),
+            'font-actions-' . ($usesCustomFonts ? $activeTheme->getOption('actionsFont') : 'default'),
+            $notice ? 'page-galley-has-notice' : '',
+        ])
+    }}"
+    dir="{{ $currentLocaleLangDir ?? 'ltr' }}"
+>
+
+    <header class="page-galley-header">
+        <a
+            class="page-galley-backlink"
+            href="{{ $backUrl }}"
+        >
+            @includeIf('components.icons.arrow-right')
+            <span class="sr-only">
+                {{ __('plugins.themes.eidos.backToTitle', ['title' => $submissionTitle]) }}
+            </span>
+        </a>
+        <h1 class="page-galley-backlink-text" aria-hidden="true">
+            {{ $submissionTitle }}
+        </h1>
+        @if ($downloadUrl)
+            <a class="page-galley-download" href="{{ $downloadUrl }}">
+                @includeIf('components.icons.download')
+                <span class="page-galley-download-text">
+                    {{ __('common.download') }}
+                </span>
+            </a>
+        @endif
+    </header>
+
+    @if ($notice)
+        <div class="page-galley-notice" role="alert">
+            {!! $notice !!}
+        </div>
+    @endif
+
+    {{ $slot }}
+
+    @loadScript(['context' => 'frontend'])
+</body>
+
+</html>

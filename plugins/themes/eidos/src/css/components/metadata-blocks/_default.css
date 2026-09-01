@@ -1,0 +1,39 @@
+/**
+ * Default styles for all article
+ * metadata blocks
+ */
+.metadata-block-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.metadata-block-content {
+  word-break: break-word;
+}
+
+/**
+ * Table layout for article metadata blocks
+ */
+.metadata-blocks-table {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem 3rem;
+  word-break: break-word;
+  max-width: 64rem;
+}
+
+@media (min-width: 1200px) {
+
+  .metadata-blocks-table {
+
+    & .metadata-block {
+      display: grid;
+      grid-template-columns: minmax(10rem, 1fr) 4fr;
+      gap: 1.5rem;
+    }
+
+    & .metadata-block-title {
+      font-size: 1rem;
+    }
+  }
+}

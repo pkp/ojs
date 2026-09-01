@@ -1,0 +1,47 @@
+@php
+    $description = (
+        !$currentContext
+            ? $site->getLocalizedData('about')
+            : (
+                $currentContext->getLocalizedData('additionalHomeContent')
+                    ? $currentContext->getLocalizedData('additionalHomeContent')
+                    : $currentContext->getLocalizedData('description')
+            )
+        );
+    $image = (
+        $activeTheme->getOption('homepageImagePosition') !== 'none'
+            ? null
+            : (
+                $currentContext
+                    ? $currentContext->getLocalizedData('homepageImage')
+                    : null
+            )
+        );
+    $class = $image ? 'homepage-block-about-has-image' : '';
+@endphp
+
+<x-homepage-blocks.default
+    slug="about"
+    :class="$class"
+>
+    @if($image)
+        <div class="homepage-block-about-image-wrapper">
+            <img
+                class="homepage-block-about-image"
+                src="{{ $publicFilesDir }}/{{ $homepageImage['uploadName'] }}"
+                alt="{{ $homepageImage['altText'] }}"
+            >
+        </div>
+    @endif
+    <div class="homepage-block-about-content">
+        @if($description)
+            <h2 class="sr-only">
+                {{ __('about.aboutContext') }}
+            </h2>
+            <div class="homepage-block-about-desc html-text">
+                {!! ViewHelper::sanitizeHtml($description) !!}
+            </div>
+        @endif
+        @loadMenu(['name' => 'homepage', 'id' => 'homepage-menu', 'path' => 'components/menu'])
+    </div>
+</x-homepage-blocks.default>

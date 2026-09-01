@@ -1,0 +1,142 @@
+@php
+    $tabs = [
+        [
+            'id' => 'article',
+            'template' => 'components/article/tab-article',
+            'icon' => 'components/icons/menubar-article',
+            'name' => __('article.article'),
+            'count' => null,
+        ],
+    ];
+
+    if ($currentContext->getData('defaultReviewPublicVisibility')) {
+        $tabs[] = [
+            'id' => 'peer-review',
+            'template' => 'components/article/tab-peer-review',
+            'icon' => 'components/icons/menubar-peer-review',
+            'name' => __('submission.peerReview'),
+            'count' => null,
+        ];
+    }
+
+    if ($enablePublicComments) {
+        $tabs[] = [
+            'id' => 'comments',
+            'template' => 'components/article/tab-comments',
+            'icon' => 'components/icons/menubar-comments',
+            'name' => __('manager.userComment.comments'),
+            'count' => isset($userCommentsInitConfig) ? $userCommentsInitConfig['allCommentsCount'] : null,
+        ];
+    }
+
+    $tabs[] = [
+        'id' => 'metrics',
+        'template' => 'components/article/tab-metrics',
+        'icon' => 'components/icons/menubar-metrics',
+        'name' => __('plugins.themes.eidos.metrics'),
+        'count' => null,
+    ];
+
+    $tabs[] = [
+        'id' => 'metadata',
+        'template' => 'components/article/tab-metadata',
+        'icon' => 'components/icons/menubar-metadata',
+        'name' => __('submission.informationCenter.metadata'),
+        'count' => null,
+    ];
+
+    $config = [
+        'name' => 'section',
+        'defaultValue' => 'article',
+        'scrollTo' => true,
+        'activationMode' => 'manual',
+    ];
+@endphp
+
+<div class="article-tabs-wrapper" data-vue-root>
+    <pkp-tab-root
+        class="article-tabs"
+        v-bind='@json($config)'
+    >
+        <pkp-tab-list
+            class="article-tabs-list"
+            aria-label="{{ __('submission.publication' ) }}"
+        >
+            <div class="article-tabs-list-triggers">
+                @foreach($tabs as $tab)
+                    <pkp-tab-trigger class="article-tabs-trigger" value="{{ $tab['id'] }}">
+                        <span class="article-tabs-trigger-icon">
+                            @includeIf($tab['icon'])
+                        </span>
+                        <span class="article-tabs-trigger-name">
+                            {{ $tab['name'] }}
+                            @if ($tab['count'])
+                                <span class="article-tabs-trigger-count">
+                                    {{ $tab['count'] }}
+                                </span>
+                            @endif
+                        </span>
+                    </pkp-tab-trigger>
+                @endforeach
+            </div>
+            <popover-root class="article-tabs-popover-root">
+                <popover-trigger class="article-tabs-popover-trigger">
+                    <span class="sr-only">
+                        {{ __('list.expand') }}
+                    </span>
+                    <span class="article-tabs-popover-trigger-icon">
+                        @include('components/icons/menubar-expand')
+                    </span>
+                </popover-trigger>
+                <popover-content
+                    class="article-tabs-popover-content"
+                    force-mount="true"
+                    side="top"
+                    align="end"
+                    position-strategy="absolute"
+                >
+                    <div class="article-tabs-popover-items">
+                        @foreach($tabs as $tab)
+                            <button class="article-tabs-popover-item" data-tab-group="section" data-tab="{{ $tab['id'] }}">
+                                <span class="article-tabs-popover-item-icon">
+                                    @includeIf($tab['icon'])
+                                </span>
+                                <span class="article-tabs-popover-item-label">
+                                    <span class="article-tabs-popover-item-label-text">
+                                        {{ $tab['name'] }}
+                                    </span>
+                                    @if ($tab['count'])
+                                        <span class="article-tabs-popover-item-count">
+                                            {{ $tab['count'] }}
+                                        </span>
+                                    @endif
+                                </span>
+                            </button>
+                        @endforeach
+                    </div>
+                    <popover-close class="article-tabs-popover-close">
+                        <span class="sr-only">{{ __('common.close') }}</span>
+                        @include('components/icons/close')
+                    </popover-close>
+                </popover-content>
+            </popover-root>
+        </pkp-tab-list>
+        @foreach($tabs as $tab)
+            <pkp-tab-content
+                class="article-tabs-content"
+                value="{{ $tab['id'] }}"
+                tabindex="-1"
+            >
+                <h2 class="article-tabs-title" id="{{ $tab['id'] }}">
+                    {{ $tab['name'] }}
+                    @if ($tab['count'])
+                        <span class="article-tabs-title-count">
+                            {{ $tab['count'] }}
+                        </span>
+                    @endif
+                </h2>
+                @includeIf($tab['template'])
+            </pkp-tab-content>
+        @endforeach
+    </pkp-tab-root>
+</div>

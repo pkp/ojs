@@ -1,0 +1,8 @@
+<x-layout.basic
+    title="{{ $title }}"
+    pageId="custom"
+>
+  <div class="html-text">
+    {!! ViewHelper::sanitizeHtml($content) !!}
+  </div>
+</x-layout.basic>

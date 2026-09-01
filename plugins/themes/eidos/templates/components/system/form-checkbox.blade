@@ -1,0 +1,27 @@
+@props([
+    'checked' => false,
+    'error' => '',
+    'id' => '',
+    'label' => '',
+    'name' => '',
+    'value' => null,
+])
+
+<label class="system-form-checkbox">
+    <input
+        class="system-form-checkbox-input"
+        type="checkbox"
+        name="{{ $name }}"
+        id="{{ $id }}"
+        value="{{ $value }}"
+        @if ($checked)
+            checked
+        @endif
+        @if ($error)
+            aria-invalid="true"
+        @endif
+    >
+    <span class="system-form-checkbox-label">
+        {!! $label !!}
+    </span>
+</label>
