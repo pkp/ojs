@@ -1,0 +1,24 @@
+{{--
+A small component that shows who the user is logged in as
+and provides a logout link.
+--}}
+<div class="logged-in-as">
+    {!!
+        __(
+            'plugins.themes.eidos.loggedInAs',
+            ['username' => $currentUser->getData('userName')]
+        )
+    !!}
+    <a
+        class="link"
+        href="
+            @if ($isUserLoggedInAs)
+                {{ ViewHelper::url(['page' => 'login', 'op' => 'signOutAsUser']) }}
+            @else
+                {{ ViewHelper::url(['page' => 'login', 'op' => 'signOut']) }}
+            @endif
+        "
+    >
+        {{ __('user.logOut') }}
+    </a>
+</div>

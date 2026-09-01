@@ -1,0 +1,90 @@
+@php
+    $urlEncodedTitle = urlencode($title);
+    $shares = [];
+    foreach ($shareOptions as $shareOption) {
+        switch ($shareOption) {
+            case 'email':
+                $shares[] = [
+                    'url' => "mailto:?subject={$urlEncodedTitle}&body={$url}",
+                    'icon' => 'components/icons/email',
+                    'label' => __('email.email'),
+                ];
+                break;
+            case 'whatsapp':
+                $shares[] = [
+                    'url' => "whatsapp://send?text={$urlEncodedTitle} {$url}",
+                    'icon' => 'components/icons/whatsapp',
+                    'label' => __('plugins.themes.eidos.share.whatsapp'),
+                ];
+                break;
+            case 'facebook':
+                $shares[] = [
+                    'url' => "https://www.facebook.com/sharer/sharer.php?u={$url}",
+                    'icon' => 'components/icons/facebook',
+                    'label' => __('plugins.themes.eidos.share.facebook'),
+                ];
+                break;
+            case 'x':
+                $shares[] = [
+                    'url' => "https://x.com/intent/tweet?text={$urlEncodedTitle}&url={$url}",
+                    'icon' => 'components/icons/twitter-x',
+                    'label' => __('plugins.themes.eidos.share.twitterX'),
+                ];
+                break;
+            case 'reddit':
+                $shares[] = [
+                    'url' => "https://reddit.com/submit?title={$urlEncodedTitle}&url={$url}",
+                    'icon' => 'components/icons/reddit',
+                    'label' => __('plugins.themes.eidos.share.reddit'),
+                ];
+                break;
+            case 'linkedin':
+                $shares[] = [
+                    'url' => "https://www.linkedin.com/shareArticle?mini=true&summary=&title={$urlEncodedTitle}&url={$url}",
+                    'icon' => 'components/icons/linkedin',
+                    'label' => __('plugins.themes.eidos.share.linkedin'),
+                ];
+                break;
+            case 'telegram':
+                $shares[] = [
+                    'url' => "https://telegram.me/share/url?text={$urlEncodedTitle}&url={$url}",
+                    'icon' => 'components/icons/telegram',
+                    'label' => __('plugins.themes.eidos.share.telegram'),
+                ];
+                break;
+            case 'copy':
+            default:
+                $shares[] = $shareOption;
+        }
+    }
+@endphp
+
+<ul class="share-links">
+    @foreach ($shares as $share)
+        <li class="share-links-item">
+            @if (is_string($share) && $share === 'copy')
+                <pkp-copy-to-clipboard
+                    class="share-link-copy"
+                    copy="{{ $url }}"
+                    t-copied="{{ __('common.copied') }}"
+                >
+                    @include('components/icons/copy')
+                    <span>
+                        {{ __('submission.howToCite.copyToClipboard') }}
+                    </span>
+                </pkp-copy-to-clipboard>
+            @elseif (!is_string($share))
+                <a
+                    class="share-link"
+                    href="{{ $share['url'] }}"
+                    target="_blank"
+                >
+                    @include($share['icon'])
+                    <span>
+                        {{ $share['label'] }}
+                    </span>
+                </a>
+            @endif
+        </li>
+    @endforeach
+</ul>

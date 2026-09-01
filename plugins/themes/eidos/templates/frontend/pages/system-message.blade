@@ -1,0 +1,23 @@
+<x-system.layout
+    pageTitle="{{ $title }}"
+>
+    <div class="system-main">
+        <div class="system-header">
+            <h1 class="system-title">
+                {{ $title }}
+            </h1>
+        </div>
+        <div class="system-html-content">
+            <p>
+                {{ $message }}
+            </p>
+            @if ($backLink)
+                <div>
+                    <a class="system-button" href="{{ $backLink }}">
+                        {{ $backLinkLabel }}
+                    </a>
+                </div>
+            @endif
+        </div>
+    </div>
+</x-system.layout>

@@ -1,0 +1,49 @@
+@props([
+    'autocomplete' => '',
+    'error' => null,
+    'id' => '',
+    'label' => '',
+    'maxlength' => '',
+    'name' => '',
+    'type' => 'text',
+    'required' => false,
+    'value' => null,
+])
+
+<div class="system-form-field">
+    <label for="{{ $id }}" class="system-form-label">
+        {{ $label }}
+        @if ($required)
+            <span class="required" aria-hidden="true">*</span>
+            <span class="sr-only">
+                {{ __('common.required') }}
+            </span>
+        @endif
+    </label>
+    <input
+        class="system-form-input"
+        type="{{ $type }}"
+        name="{{ $name }}"
+        id="{{ $id }}"
+        value="{{ $value ?? '' }}"
+        @if ($required)
+            required
+            aria-required="true"
+        @endif
+        @if ($error)
+            aria-invalid="true"
+        @endif
+        @if ($autocomplete)
+            autocomplete="{{ $autocomplete }}"
+        @endif
+        @if ($maxlength)
+            maxlength="{{ $maxlength }}"
+        @endif
+    >
+    @if ($error)
+        <div class="system-form-field-error" role="alert">
+            {!! $error !!}
+        </div>
+    @endif
+    {!! $slot !!}
+</div>

@@ -1,0 +1,92 @@
+@php
+    $homepageImage = $currentContext?->getLocalizedData('homepageImage');
+@endphp
+
+<header
+    class="
+        header-desktop
+        header-desktop-{{ $activeTheme->getOption('header') }}
+        header-desktop-image-{{ $activeTheme->getOption('homepageImagePosition') }}
+    "
+>
+    @includeIf('components.header-desktop-institution')
+    @if ($activeTheme->getOption('header') === 'default' && $homepageImage && in_array($activeTheme->getOption('homepageImagePosition'), ['above']))
+        <div class="header-desktop-above">
+            <img class="header-desktop-image" src="{{ $publicFilesDir }}/{{ $homepageImage['uploadName'] }}"
+                alt="@if(isset($homepageImage['altText'])){{ $homepageImage['altText'] }}@endif">
+        </div>
+    @endif
+    <div class="header-desktop-inner">
+        @if ($homepageImage && $activeTheme->getOption('homepageImagePosition') === 'behind')
+            <div class="header-desktop-behind">
+                <img class="header-desktop-image" src="{{ $publicFilesDir }}/{{ $homepageImage['uploadName'] }}"
+                    alt="@if(isset($homepageImage['altText'])){{ $homepageImage['altText'] }}@endif">
+            </div>
+        @endif
+        <div class="header-desktop-inner-content">
+            @if (in_array($activeTheme->getOption('header'), ['boxed']))
+                <div class="header-desktop-row">
+                    <x-header.desktop-pubids />
+                    <x-header.utility-menu />
+                </div>
+                @if ($homepageImage && in_array($activeTheme->getOption('homepageImagePosition'), ['above']))
+                    <div class="header-desktop-above">
+                        <img class="header-desktop-image" src="{{ $publicFilesDir }}/{{ $homepageImage['uploadName'] }}"
+                            alt="@if(isset($homepageImage['altText'])){{ $homepageImage['altText'] }}@endif">
+                    </div>
+                @else
+                    <div class="header-desktop-row">
+                        <div class="header-desktop-boxed-line"></div>
+                    </div>
+                @endif
+            @endif
+            <div class="header-desktop-row">
+                <div class="header-desktop-context">
+                    <a href="{{ ViewHelper::url(['page' => 'index']) }}" class="tab-focus">
+                        @if ($displayPageHeaderLogo)
+                            <div class="sr-only">
+                                {{ $contextName }}
+                            </div>
+                            <img class="header-desktop-logo"
+                                src="{{ $publicFilesDir }}/{{ $displayPageHeaderLogo['uploadName'] }}">
+                        @else
+                            <div class="header-desktop-name header-desktop-name-{{ $getStringSize($contextName) }}">
+                                {{ $contextName }}
+                            </div>
+                        @endif
+                    </a>
+                    @if (
+                        $displayPageHeaderLogo &&
+                            $activeTheme->getLocalizedOption('tagline') &&
+                            in_array($activeTheme->getOption('header'), ['default', 'boxed']))
+                        <div class="header-desktop-tagline">
+                            {{ $activeTheme->getLocalizedOption('tagline') }}
+                        </div>
+                    @endif
+                </div>
+                @if (in_array($activeTheme->getOption('header'), ['boxed', 'line']))
+                    <nav class="header-desktop-nav-main" id="skip-to-nav-desktop">
+                        @loadMenu(['name' => 'primary', 'id' => 'nav-desktop-primary', 'path' => 'components/menu-dropdowns'])
+                    </nav>
+                @endif
+                @if (in_array($activeTheme->getOption('header'), ['default', 'line']))
+                    <x-header.utility-menu />
+                @endif
+            </div>
+        </div>
+    </div>
+    @if (in_array($activeTheme->getOption('header'), ['default']))
+        <div class="header-desktop-row">
+            <nav class="header-desktop-nav-main" id="skip-to-nav-desktop">
+                @loadMenu(['name' => 'primary', 'id' => 'nav-desktop-primary', 'path' => 'components/menu-dropdowns'])
+            </nav>
+            <x-header.desktop-pubids />
+        </div>
+    @endif
+    @if ($homepageImage && in_array($activeTheme->getOption('homepageImagePosition'), ['below']))
+        <div class="header-desktop-below">
+            <img class="header-desktop-image" src="{{ $publicFilesDir }}/{{ $homepageImage['uploadName'] }}"
+                alt="@if(isset($homepageImage['altText'])){{ $homepageImage['altText'] }}@endif">
+        </div>
+    @endif
+</header>

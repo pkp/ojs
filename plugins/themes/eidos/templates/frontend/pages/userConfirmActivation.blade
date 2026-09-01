@@ -1,0 +1,21 @@
+<x-system.layout
+    pageTitle="{{ __($pageTitle) }}"
+>
+    <div class="system-main">
+        <div class="system-header">
+            <h1 class="system-title">
+                {{ __($pageTitle) }}
+            </h1>
+        </div>
+        <div class="system-html-content">
+            <p>
+                {{ __('user.login.activate.description') }}
+            </p>
+            <div>
+                <a class="system-button" href="{{ $activationUrl }}">
+                    {{ __('user.login.activate') }}
+                </a>
+            </div>
+        </div>
+    </div>
+</x-system.layout>

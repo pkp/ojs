@@ -1,0 +1,24 @@
+<x-layout.basic
+    title="{{ __('announcement.announcements') }}"
+    subtitle="{!! ViewHelper::sanitizeHtml($announcementsIntroduction) !!}"
+    description="{!! ViewHelper::html2text($announcementsIntroduction) !!}"
+    pageId="announcements"
+>
+    @if (!count($announcements))
+        <x-notice>
+            {{ __('plugins.themes.individualizeTheme.announcements.none') }}
+        </x-notice>
+    @else
+        <ol class="page-announcements-list" start="1">
+            @foreach ($announcements as $announcement)
+                <li>
+                    <x-announcement-summary
+                        :announcement="$announcement"
+                        heading="h2"
+                    />
+                </li>
+            @endforeach
+        </ol>
+    @endif
+  </div>
+</x-layout.basic>

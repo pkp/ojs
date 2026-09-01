@@ -1,0 +1,91 @@
+@props([
+    'review',
+])
+
+<div class="peer-review-content">
+    @if ($review['dateCompleted'])
+        <time class="peer-review-content-date">
+            {{ ViewHelper::dateFormat($review['dateCompleted'], $dateFormatLong) }}
+        </time>
+    @endif
+    <div class="peer-review-content-author">
+        <h3 class="peer-review-content-author-name">
+            {{ $review['reviewerFullName'] }}
+            @if ($review['reviewerOrcid'])
+                <x-orcid-link
+                    class="peer-review-content-author-orcid"
+                    name="{{ $review['reviewerFullName'] }}"
+                    orcid="{{ $review['reviewerOrcid'] }}"
+                    :is-verified="$review['reviewerHasVerifiedOrcid']"
+                />
+            @endif
+        </h3>
+        @if ($review['reviewerAffiliation'])
+            <div class="peer-review-content-author-affiliation">
+                {{ $review['reviewerAffiliation'] }}
+            </div>
+        @endif
+    </div>
+
+    @if ($review['competingInterestsDeclared'])
+        <section
+            class="peer-review-content-competing-interests"
+            aria-label="{{ __('reviewer.submission.competingInterests') }}"
+        >
+            <h4 class="peer-review-content-competing-interests-title">
+                {{ __('reviewer.submission.competingInterests') }}
+            </h4>
+            <div class="peer-review-content-competing-interests-statement">
+                @if ($review['competingInterests'])
+                    {!! ViewHelper::sanitizeHtml($review['competingInterests']) !!}
+                @else
+                    {{ __('reviewer.submission.competingInterests.declaredNone') }}
+                @endif
+            </div>
+        </section>
+    @endif
+
+    <section
+        class="peer-review-content-comments"
+        aria-label="{{ __('manager.userComment.comments') }}"
+    >
+        <h4 class="sr-only">
+            {{ __('manager.userComment.comments') }}
+        </h4>
+        @foreach (($review['reviewerComments'] ?? []) as $comment)
+            <div class="peer-review-content-comment">
+                {!! ViewHelper::sanitizeHtml($comment) !!}
+            </div>
+        @endforeach
+        @if ($review['reviewForm'] && count($review['reviewForm']['questions']))
+            <ul class="peer-review-content-questions">
+                @foreach ($review['reviewForm']['questions'] as $question)
+                    <li class="peer-review-content-question">
+                        <h5 class="peer-review-content-question-text">
+                            {!! ViewHelper::sanitizeHtml($question['question']) !!}
+                        </h5>
+                        @foreach ($question['responses'] as $response)
+                            <p class="peer-review-content-response">
+                                {!! ViewHelper::sanitizeHtml($response) !!}
+                            </p>
+                        @endforeach
+                    </li>
+                @endforeach
+            </ul>
+        @elseif (!count($review['reviewerComments'] ?? []))
+            <p class="peer-review-content-no-comments">
+                {{ __('openReview.noCommentsAvailable') }}
+            </p>
+        @endif
+    </section>
+
+    @if ($review['doi'])
+        <section class="peer-review-content-metadata">
+            @if ($review['doi'])
+                <div class="peer-review-content-doi">
+                    {!! ViewHelper::sanitizeHtml(__('openReview.citeDoi', ['doi' => $review['doi']])) !!}
+                </div>
+            @endif
+        </section>
+    @endif
+</div>

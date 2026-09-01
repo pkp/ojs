@@ -1,0 +1,61 @@
+.author-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.author-detail-name {
+  font-weight: 600;
+}
+
+.author-detail-orcid {
+  display: inline-block;
+  position: relative;
+  top: 0.25em;
+  margin-inline-start: 0.25em;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.author-detail-credit {
+  font-size: 0.875rem;
+}
+
+.author-detail-credit-role {
+  @apply link;
+  font-weight: 500;
+}
+
+.author-detail-affiliations {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.875rem;
+}
+
+.author-detail-affiliation-link {
+  @apply tab-focus;
+  gap: 0.5em;
+
+  & svg {
+    display: inline-block;
+    margin: 0.125rem;
+  }
+}
+
+.author-detail-biography {
+  @apply html-text;
+  font-size: 0.875rem;
+}
+
+@media (min-width: 1200px) {
+
+  .author-detail-name {
+    font-size: 1.25rem;
+  }
+
+  .author-detail-credit,
+  .author-detail-affiliations,
+  .author-detail-biography {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,63 @@
+/**
+ * Use this class to set the outer width of
+ * page content consistently across the site.
+ */
+@utility page-container {
+  --page-container-x-padding: 1rem;
+  --page-container-y-padding: 2rem;
+  padding: var(--page-container-y-padding) var(--page-container-x-padding);
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 640px) {
+    --page-container-x-padding: 2rem;
+  }
+
+  @media (min-width: 1024px) {
+    --page-container-x-padding: 4rem;
+  }
+
+  @media (min-width: 1200px) {
+    --page-container-y-padding: 4rem;
+  }
+}
+
+@utility page-container-xs {
+  max-width: calc(640px + var(--page-container-x-padding));
+}
+
+@utility page-container-sm {
+  max-width: calc(1024px + var(--page-container-x-padding));
+}
+
+@utility page-container-md {
+  max-width: calc(1200px + var(--page-container-x-padding));
+}
+
+@utility page-container-lg {
+  max-width: calc(1536px + var(--page-container-x-padding));
+
+  @media (min-width: 1536px) {
+    --page-container-x-padding: 4rem;
+  }
+}
+
+/**
+ * When the site width is set to fixed, the page
+ * content should share a left/right boundary with
+ * the header.
+ */
+.site-width-fixed .page-container {
+  max-width: 1536px;
+
+  @media (min-width: 1600px) {
+    --page-container-x-padding: 0;
+
+  }
+
+  @media (min-width: 1920px) {
+    max-width: 1792px;
+    --page-container-x-padding: 0;
+  }
+}

@@ -1,0 +1,86 @@
+{{--
+
+Navigation Menu with Dropdowns
+
+This template displays a NavigationMenu with submenus in a dropdown.
+
+@see https://reka-ui.com/docs/components/navigation-menu
+
+--}}
+
+@props([
+    'items' => [],
+    'id' => '',
+    'ulClass' => '',
+    'liClass' => '',
+])
+
+@if (count($items))
+    <div class="menu-dropdowns" data-vue-root>
+        <navigation-menu-root class="menu-dropdowns-nav">
+            <navigation-menu-list class="menu-dropdowns-list {{ $ulClass }}">
+                @foreach ($items as $item)
+                    @if (!$item->navigationMenuItem->getIsDisplayed())
+                        @continue
+                    @endif
+                    <navigation-menu-item class="menu-dropdowns-item {{ $liClass }}">
+                        @if (!$item->navigationMenuItem->getIsChildVisible())
+                            <navigation-menu-link
+                                class="menu-dropdowns-button"
+                                href="{{ $item->navigationMenuItem->getUrl() }}"
+                            >
+                                {{ $item->navigationMenuItem->getLocalizedTitle() }}
+                            </navigation-menu-link>
+                        @else
+                            <navigation-menu-trigger class="menu-dropdowns-button">
+                                {{ $item->navigationMenuItem->getLocalizedTitle() }}
+                                <div class="menu-dropdowns-arrow" aria-hidden="true">
+                                    <svg width="10" height="5" rounded="false" viewBox="0 0 12 6" preserveAspectRatio="none" class="dropdown-arrow"><path d="M0 0L6 6L12 0"></path></svg>
+                                </div>
+                            </navigation-menu-trigger>
+                            <navigation-menu-content class="menu-dropdowns-content dropdown-content menu-submenu">
+                                <ul class="menu">
+                                    @foreach ($item->children as $subitem)
+                                        @if (!$subitem->navigationMenuItem->getIsDisplayed())
+                                            @continue
+                                        @endif
+                                        <li class="menu-item {{ $liClass }}">
+                                            <navigation-menu-link
+                                                class="menu-button"
+                                                href="{{ $subitem->navigationMenuItem->getUrl() }}"
+                                            >
+                                                {{ $subitem->navigationMenuItem->getLocalizedTitle() }}
+                                            </navigation-menu-link>
+                                            @if ($subitem->navigationMenuItem->getIsChildVisible())
+                                                <div class="menu-submenu">
+                                                    <ul class="menu">
+                                                        @foreach ($subitem->children as $subsubitem)
+                                                            @if (!$subsubitem->navigationMenuItem->getIsDisplayed())
+                                                                @continue
+                                                            @endif
+                                                            <li class="menu-item {{ $liClass }}">
+                                                                <navigation-menu-link
+                                                                    class="menu-button"
+                                                                    href="{{ $subsubitem->navigationMenuItem->getUrl() }}"
+                                                                >
+                                                                    {{ $subsubitem->navigationMenuItem->getLocalizedTitle() }}
+                                                                </navigation-menu-link>
+                                                            </li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
+                                            @endif
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </navigation-menu-content>
+                        @endif
+                    </navigation-menu-item>
+                @endforeach
+                <navigation-menu-indicator class="menu-dropdowns-arrow">
+                    <svg width="10" height="5" rounded="false" viewBox="0 0 12 6" preserveAspectRatio="none" class="dropdown-arrow"><path d="M0 0L6 6L12 0"></path></svg>
+                </navigation-menu-indicator>
+            </navigation-menu-list>
+        </navigation-menu-root>
+    </div>
+@endif

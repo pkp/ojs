@@ -1,0 +1,174 @@
+.issue-toc {
+  --cover-image-width: 16rem;
+}
+
+.issue-toc-cover {
+  max-width: var(--cover-image-width);
+}
+
+.issue-toc-header {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.issue-toc-galleys {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 90vw;
+}
+
+.issue-galley {
+  @apply button;
+}
+
+.issue-toc-vol {
+  font-family: var(--font-titles);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.issue-toc-year {
+  font-family: var(--font-titles);
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.issue-toc-title {
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.issue-toc-sections {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.issue-toc-articles {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.issue-toc-section-name {
+  font-family: var(--font-titles);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  background: var(--color-block-background);
+  color: var(--color-block-text);
+}
+
+@media (min-width: 768px) {
+
+  .issue-toc-with-cover {
+
+    & .issue-toc-wrapper {
+      display: grid;
+      grid-template-columns: var(--cover-image-width) minmax(0, 1fr);
+      gap: 3rem 1.5rem;
+    }
+
+    .issue-toc-header {
+      grid-column-start: 2;
+    }
+
+    .issue-toc-sections {
+      margin-top: 0;
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+
+  .issue-toc-article .article-download .dropdown-content {
+    min-width: var(--reka-popover-trigger-width);
+    width: max-content;
+    max-width: max(var(--reka-popover-trigger-width), 16rem);
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .issue-toc-wrapper {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .issue-toc-with-cover {
+
+    & .issue-toc-wrapper {
+      max-width: 1536px;
+    }
+
+    & .issue-toc-cover{
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+
+    .issue-toc-sections {
+      grid-column-start: 2;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .issue-toc-with-cover {
+    --cover-image-width: 24rem;
+
+    & .issue-toc-wrapper {
+      gap: 3rem;
+    }
+
+    & .issue-toc-header-top {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (min-width: 1536px) {
+
+  .issue-toc-with-cover {
+    --cover-image-width: 32rem;
+  }
+
+  .issue-toc-galleys {
+    max-width: 20rem;
+  }
+
+  .issue-toc-vol {
+    font-size: 3rem;
+  }
+
+  .issue-toc-year {
+    font-size: 2rem;
+  }
+
+  .issue-toc-title {
+    font-size: 1.25rem;
+  }
+
+  .issue-toc-metadata,
+  .issue-toc-description {
+    font-size: 1.125rem;
+  }
+
+  .issue-toc-section-name {
+    font-size: 1.25rem;
+  }
+
+  .issue-toc-article .article-download .dropdown-content {
+    max-width: max(var(--reka-popover-trigger-width), 20rem);
+  }
+}

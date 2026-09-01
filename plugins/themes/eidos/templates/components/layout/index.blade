@@ -1,0 +1,82 @@
+{{--
+
+Default Layout
+
+This is the layout used for most pages on the site.
+
+--}}
+@php
+    $request = \APP\core\Application::get()->getRequest();
+    $page = $request->getRequestedPage();
+    $op = $request->getRequestedOp();
+
+    /**
+     * Append context/site name to the page title
+     * unless we're on the homepage
+     */
+    if ($page !== 'index') {
+        $title = $title . __('common.titleSeparator') . $contextName;
+    }
+
+    /**
+     * Automatically add classes to the <body> tag
+     * which indicate the page/op of the request
+     */
+    $bodyClasses = $bodyClasses ?? [];
+    if ($page) {
+        $bodyClasses[] = "pkp-page-{$page}";
+    }
+    if ($op) {
+        $bodyClasses[] = "pkp-op-{$op}";
+    }
+@endphp
+
+<!doctype html>
+<html lang="{{ str_replace('_', '-', $currentLocale) }}" xml:lang="{{ str_replace('_', '-', $currentLocale) }}">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ $title }}</title>
+    @if ($description)
+        <meta name="description" content="{{ ViewHelper::html2text($description) }}">
+    @endif
+    @loadHeader(['context' => 'frontend'])
+    @loadStylesheet(['context' => 'frontend'])
+    @if (!$usesCustomFonts)
+        <x-header.default-fonts />
+    @endif
+    @if (isset($head) && !$head->isEmpty())
+        {{ $head }}
+    @endif
+</head>
+
+<body
+    {{
+        $attributes->merge([
+            'class' => join(' ', [
+                join(' ', $bodyClasses),
+                'site-width-' . $activeTheme->getOption('siteWidth'),
+                'font-' . ($usesCustomFonts ? $activeTheme->getOption('font') : 'default'),
+                'font-titles-' . ($usesCustomFonts ? $activeTheme->getOption('titlesFont') : 'default'),
+                'font-actions-' . ($usesCustomFonts ? $activeTheme->getOption('actionsFont') : 'default'),
+            ]),
+            'dir' => $currentLocaleLangDir ?? 'ltr',
+        ])
+    }}
+>
+    <x-header.skip-links>
+        {{ $skiplinks ?? '' }}
+    </x-header.skip-links>
+
+    <x-header.mobile />
+    <x-header.desktop />
+
+    {{ $slot }}
+
+    <x-footer />
+
+    @loadScript(['context' => 'frontend'])
+</body>
+
+</html>

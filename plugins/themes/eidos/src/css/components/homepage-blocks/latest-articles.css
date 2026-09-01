@@ -1,0 +1,42 @@
+.homepage-block-latest-articles-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.homepage-block-latest-articles-desc {
+  @apply html-text;
+  line-height: 1.5;
+}
+
+.homepage-block-latest-articles-list {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (min-width: 1200px) {
+
+  .homepage-block-latest-articles {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 1.5rem;
+    max-width: 1536px;
+  }
+
+  .homepage-block-latest-articles-desc {
+    font-size: 1.125rem;
+    max-width: 30em;
+  }
+
+  .homepage-block-latest-articles-list {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1536px) {
+
+  .homepage-block-latest-articles {
+    gap: 6rem;
+  }
+}

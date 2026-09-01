@@ -1,0 +1,33 @@
+.article-download-button {
+  @apply button;
+}
+
+.article-download-button-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.article-download {
+
+  & .dropdown-content {
+    width: var(--reka-popover-trigger-width);
+    max-height: var(--reka-popover-content-available-height);
+    padding: 0.75rem;
+  }
+}
+
+.article-download-downloads {
+
+  & .galley-link {
+    padding: 0.5rem;
+    border-radius: var(--radius);
+
+    &:hover,
+    &:focus-visible {
+      background: var(--color-overlay-text);
+      color: var(--color-overlay-background);
+      outline: none;
+    }
+  }
+}

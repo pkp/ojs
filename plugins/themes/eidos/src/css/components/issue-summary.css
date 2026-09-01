@@ -1,0 +1,100 @@
+.issue-summary {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.issue-summary-cover {
+  width: 100%;
+  max-width: 12rem;
+  flex-shrink: 0;
+
+  & svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.issue-summary-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.issue-summary-vol {
+  font-family: var(--font-titles);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.issue-summary-year {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.issue-summary-title {
+  font-family: var(--font-titles);
+  font-size: 1.125rem;
+  line-height: 1.25;
+}
+
+.issue-summary-description {
+  position: relative;
+  max-height: 16rem;
+  line-height: 1.5;
+  overflow: hidden;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: -25%;
+    width: 150%;
+    height: 4rem;
+    background: var(--color-page-background);
+    box-shadow: 0 -2rem 2rem var(--color-page-background);
+  }
+}
+
+.issue-summary-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.issue-summary-action {
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+
+  .issue-summary {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .issue-summary-actions {
+    margin-top: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .issue-summary {
+    gap: 3rem;
+  }
+
+  .issue-summary-description {
+    max-height: 9.5rem;
+  }
+
+  .issue-summary-actions {
+    flex-direction: row;
+  }
+}

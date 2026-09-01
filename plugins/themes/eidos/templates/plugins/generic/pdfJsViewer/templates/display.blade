@@ -1,0 +1,32 @@
+<x-layout.galley
+    title="{{ $galleyTitle }}"
+    submissionTitle="{{ $publication->getLocalizedFullTitle() }}"
+    bodyClasses="page-galley page-galley-pdf"
+    backUrl="{{ $parentUrl }}"
+    downloadUrl="{{ $pdfUrl }}"
+    notice="{!!
+        !$isLatestPublication
+        ? ''
+        : __('submission.outdatedVersion', [
+            'datePublished' => ViewHelper::dateFormat($galleyPublication->getData('datePublished'), $dateFormatLong),
+            'urlRecentVersion' => $parentUrl,
+        ])
+    !!}"
+>
+    <iframe
+        name="pdfFrame"
+        id="pdfFrame"
+        src=""
+        title="{{ $galleyTitle }}"
+        class="page-galley-iframe"
+        allowfullscreen
+        webkitallowfullscreen
+    ></iframe>
+
+    <script type="text/javascript">
+        var el = document.getElementById('pdfFrame');
+        if (el) {
+            el.setAttribute('src', '{{ $pluginUrl }}/pdf.js/web/viewer.html?file=' + encodeURIComponent('{{ $pdfUrl }}'));
+        }
+    </script>
+</x-layout.galley>

@@ -1,0 +1,80 @@
+.article-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.article-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.article-authors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25em 0.5em;
+}
+
+.article-author {
+  display: inline-flex;
+  align-items: center;
+}
+
+.article-author-orcid {
+  @apply tab-focus;
+  margin: -0.75em;
+  margin-inline-start: -0.5em;
+  width: 3em;
+  height: 3em;
+  padding: 0.75em;
+}
+
+.article-authors-more {
+  max-width: 100%;
+}
+
+/**
+ * Adjustments to the title when using
+ * the default font.
+ */
+.font-default .article-title {
+  font-weight: 550;
+  font-variation-settings: "wdth" 92;
+}
+
+
+@media (min-width: 640px) {
+
+  .article-title {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .article-header {
+    gap: 1.5rem;
+  }
+
+  .article-title {
+    font-size: 2rem;
+    max-width: 60rem;
+  }
+
+  .article-authors {
+    font-size: 1.125rem;
+    max-width: 50rem;
+  }
+}
+
+@media (min-width: 1536px) {
+
+  .article-title {
+    max-width: 80rem;
+  }
+
+  .article-authors {
+    font-size: 1.25rem;
+  }
+}

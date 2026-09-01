@@ -1,0 +1,39 @@
+.skip-links {
+  @apply sr-only;
+
+  &:focus-within {
+    @apply not-sr-only;
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+    background: var(--color-page-background);
+    color: var(--color-page-text);
+    z-index: 99999999;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: min(80vw, 25rem);
+    padding: 1rem;
+    border-radius: var(--radius);
+    border: 2px solid;
+  }
+}
+
+.skip-link {
+  @apply link;
+}
+
+.skip-link-desktop-only {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+
+  .skip-link-desktop-only {
+    display: block;
+  }
+
+  .skip-link-mobile-only {
+    display: none;
+  }
+}

@@ -1,0 +1,41 @@
+<x-layout.basic
+    title="{{ __('common.editorialHistory') }}"
+    description="{{ __('common.editorialHistory.page.description') }}"
+    pageId="masthead-history"
+>
+  <div class="html-text">
+    <p>
+        {{ __('common.editorialHistory.page.description') }}
+    </p>
+
+    @foreach($mastheadRoles as $mastheadRole)
+        @if(array_key_exists($mastheadRole->id, $mastheadUsers))
+            <h2>
+                {{ $mastheadRole->getLocalizedData('name') }}
+            </h2>
+            <ul class="page-masthead-users">
+                @foreach($mastheadUsers[$mastheadRole->id] as $mastheadUser)
+                    <li class="page-masthead-user">
+                        <x-masthead-user
+                            name="{{ $mastheadUser['user']->getFullName() }}"
+                            orcid="{{ $mastheadUser['user']->getData('orcid') }}"
+                            hasVerifiedOrcid="$mastheadUser['user']->hasVerifiedOrcid()"
+                            affiliation="{{ $mastheadUser['user']->getLocalizedData('affiliation') }}"
+                            dateStart="{{ $mastheadUser['dateStart'] }}"
+                            dateEnd="{{ $mastheadUser['dateEnd'] }}"
+                        />
+                    </li>
+                @endforeach
+            </ul>
+        @endif
+    @endforeach
+
+    @if(count($mastheadUsers) && $currentContext->getLocalizedData('editorialHistory'))
+        <h2>
+            {{ __('common.details') }}
+        </h2>
+    @endif
+
+    {!! ViewHelper::sanitizeHtml($currentContext->getLocalizedData('editorialHistory')) !!}
+  </div>
+</x-layout.basic>

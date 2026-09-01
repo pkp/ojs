@@ -1,0 +1,78 @@
+<x-layout.basic
+    title="{{ __('about.submissions') }}"
+    pageId="submissions"
+>
+    <div class="html-text">
+        @if (!count($sections) || $currentContext->getData('disableSubmissions'))
+            <p>{{ __('author.submit.notAccepting') }}</p>
+        @else
+            <x-notice>
+                <div>
+                    @if($isUserLoggedIn)
+                        {!!
+                            __('about.onlineSubmissions.submissionActions', [
+                                'newSubmission' => '<a href="' . ViewHelper::url(['page' => 'submission']) . '">' . __('about.onlineSubmissions.login') . '</a>',
+                                'viewSubmissions' => '<a href="' . ViewHelper::url(['page' => 'submissions']) . '">' . __('about.onlineSubmissions.viewSubmissions') . '</a>',
+                            ])
+                        !!}
+                    @else
+                        {!!
+                            __('about.onlineSubmissions.registrationRequired', [
+                                'login' => '<a href="' . ViewHelper::url(['page' => 'login']) . '">' . __('navigation.login') . '</a>',
+                                'register' => '<a href="' . ViewHelper::url(['page' => 'register']) . '">' . __('navigation.register') . '</a>',
+                            ])
+                        !!}
+                    @endif
+                </div>
+            </x-notice>
+
+            @if($currentContext->getLocalizedData('authorGuidelines'))
+                <h2>
+                    {{ __('about.authorGuidelines') }}
+                </h2>
+                {!! ViewHelper::sanitizeHtml($currentContext->getLocalizedData('authorGuidelines')) !!}
+            @endif
+
+            @if($submissionChecklist)
+                <h2>
+                    {{ __('about.submissionPreparationChecklist') }}
+                </h2>
+                {!! ViewHelper::sanitizeHtml($submissionChecklist) !!}
+            @endif
+
+            @foreach($sections as $section)
+                @if($section->getLocalizedPolicy())
+                    <h2>
+                        {{ $section->getLocalizedTitle() }}
+                    </h2>
+                    {!! ViewHelper::sanitizeHtml($section->getLocalizedPolicy()) !!}
+                    @if($isUserLoggedIn)
+                        <p>
+                            {!!
+                                __('about.onlineSubmissions.submitToSection', [
+                                    'name' => $section->getLocalizedTitle(),
+                                    'url' => ViewHelper::url(['page' => 'submission', 'sectionId' => $section->getId()]),
+                                ])
+                            !!}
+                        </p>
+                    @endif
+                @endif
+            @endforeach
+
+            @if($currentContext->getLocalizedData('copyrightNotice'))
+                <h2>
+                    {{ __('about.copyrightNotice') }}
+                </h2>
+                {!! ViewHelper::sanitizeHtml($currentContext->getLocalizedData('copyrightNotice')) !!}
+            @endif
+
+            @if($currentContext->getLocalizedData('privacyStatement'))
+                <h2>
+                    {{ __('about.privacyStatement') }}
+                </h2>
+                {!! ViewHelper::sanitizeHtml($currentContext->getLocalizedData('privacyStatement')) !!}
+            @endif
+        @endif
+  </div>
+
+</x-layout.basic>

@@ -1,0 +1,200 @@
+@php
+    $status = $openReviewConfig['submissionPeerReviewSummary']['reviewStatus']['status'] ?? null;
+    $rounds = array_reverse($openReviewConfig['submissionPeerReviews']['reviewRounds'] ?? []);
+
+    /**
+     * Re-sort reviews to be viewed by reviewers
+     */
+    $reviewers = [];
+    foreach ($rounds as $round) {
+        foreach ($round['reviews'] as $review) {
+            $reviewerIndex = array_find_key($reviewers, fn($reviewer) => $reviewer['reviewerId'] === $review['reviewerId']);
+            if ($reviewerIndex === null) {
+                $reviewers[] = [
+                    'reviewerId' => $review['reviewerId'],
+                    'reviewerFullName' => $review['reviewerFullName'],
+                    'reviewerAffiliation' => $review['reviewerAffiliation'],
+                    'rounds' => [],
+                ];
+                $reviewerIndex = count($reviewers) - 1;
+            }
+            $reviewers[$reviewerIndex]['rounds'][] = [
+                'roundId' => $round['roundId'],
+                'roundNumber' => $round['roundNumber'],
+                'review' => $review,
+            ];
+        }
+    }
+@endphp
+
+<div class="article-tab-peer-review">
+    @if ($status === null || !count($rounds))
+        <div class="article-tab-peer-review-not-available">
+            @include('components.icons.reviews-not-available')
+            {{ __('openReview.dataNotAvailable') }}
+        </div>
+    @else
+        <pkp-tab-root default-value="round">
+            <div class="article-tab-peer-review-tabs-header">
+                <span id="review-tabs-sort-by" class="article-tab-peer-review-tabs-label">
+                    {{ __('openReview.sortBy') }}
+                </span>
+                <pkp-tab-list aria-labelledby="review-tabs-sort-by" class="article-tab-peer-review-tabs-buttons">
+                    <pkp-tab-trigger value="round" class="article-tab-peer-review-tabs-button">
+                        {{ __('openReview.sortByReviewRound') }}
+                    </pkp-tab-trigger>
+                    <pkp-tab-trigger value="reviewer" class="article-tab-peer-review-tabs-button">
+                        {{ __('openReview.sortByReviewerName') }}
+                    </pkp-tab-trigger>
+                </pkp-tab-list>
+            </div>
+
+            {{-- Peer reviews sorted by review round --}}
+            <pkp-tab-content value="round">
+                @foreach ($rounds as $round)
+                    @php
+                        $roundLabel = __('openReview.roundNumber', ['number' => $round['roundNumber']]);
+                    @endphp
+                    <section class="peer-reviews" aria-label="{{ $roundLabel }}">
+                        <div class="peer-reviews-header">
+                            <h3 class="peer-reviews-title">
+                                {{ $roundLabel }}
+                            </h3>
+                            @php
+                                $subtitle = $round['publication']['versionString'] ?? '';
+                            @endphp
+                            @if ($subtitle)
+                                <div class="peer-reviews-subtitle">
+                                    {{ $subtitle }}
+                                </div>
+                            @endif
+                        </div>
+                        <accordion-root
+                            type="multiple"
+                            class="peer-reviews-items"
+                        >
+                            @foreach($round['reviews'] as $review)
+                                @php
+                                    $title = $review['reviewerRecommendationDisplayText'] ?? __('common.inProgress');
+                                    $subtitle = $review['reviewerFullName'] ?? __('submission.submit.contributorType.anonymous');
+                                    $openLabel = __('openReview.readReview');
+                                    $closeLabel = __('openReview.hideReview');
+                                @endphp
+                                <accordion-item as="article" value="{{ $review['id'] }}" class="peer-reviews-item">
+                                    <x-article.peer-review-header
+                                        recommendation="{{ $review['reviewerRecommendationTypeId'] }}"
+                                        :$title
+                                        :$subtitle
+                                        :$openLabel
+                                        :$closeLabel
+                                    />
+                                    <accordion-content>
+                                        <x-article.peer-review-content :$review />
+                                    </accordion-content>
+                                </accordion-item>
+                            @endforeach
+                            @if ($round['authorResponse'])
+                                @php
+                                    $authorList = join(
+                                        __('common.commaListSeparator'),
+                                        array_map(
+                                            fn($author) => $author['fullName'],
+                                            $round['authorResponse']['associatedAuthors'] ?? [],
+                                        )
+                                    );
+                                    $openLabel = __('openReview.readResponse');
+                                    $closeLabel = __('openReview.hideResponse');
+                                @endphp
+                                <accordion-item as="article" value="author{{ $round['roundId'] }}`" class="peer-reviews-item peer-reviews-item-author-response">
+                                    <x-article.peer-review-header
+                                        title="{{ __('submission.reviewRound.authorResponse') }}"
+                                        subtitle="{{ $authorList }}"
+                                        :$openLabel
+                                        :$closeLabel
+                                    />
+                                    <accordion-content>
+                                        <div class="peer-review-content">
+                                            @if ($round['authorResponse']['createdAt'])
+                                                <time class="peer-review-content-date">
+                                                    {{ ViewHelper::dateFormat($round['authorResponse']['createdAt'], $dateFormatLong) }}
+                                                </time>
+                                            @endif
+                                            <h3 class="peer-review-content-authors">
+                                                @foreach ($round['authorResponse']['associatedAuthors'] as $author)
+                                                    <span class="peer-review-content-author">
+                                                        <span class="peer-review-content-author-name">
+                                                            {{ $author['fullName'] }}
+                                                        </span>
+                                                        @if ($author['orcid'])
+                                                            <x-orcid-link
+                                                                class="peer-review-content-author-orcid"
+                                                                name="{{ $author['fullName'] }}"
+                                                                orcid="{{ $author['orcid'] }}"
+                                                                :is-verified="$author['hasVerifiedOrcid']"
+                                                            />
+                                                        @endif
+                                                    </span>
+                                                @endforeach
+                                            </h3>
+                                            <section
+                                                class="peer-review-content-response"
+                                                aria-label="{{ __('submission.reviewRound.authorResponse') }}"
+                                            >
+                                                <h4 class="sr-only">
+                                                    {{ __('submission.reviewRound.authorResponse') }}
+                                                </h4>
+                                                <div class="peer-review-content-response-text">
+                                                    {!! $round['authorResponse']['response'] !!}
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </accordion-content>
+                                </accordion-item>
+                            @endif
+                        </accordion-root>
+                    </section>
+                @endforeach
+            </pkp-tab-content>
+
+            {{-- Peer reviews sorted by reviewer --}}
+            <pkp-tab-content value="reviewer">
+                @foreach ($reviewers as $reviewer)
+                    <section class="peer-reviews" aria-label="{{ $reviewer['reviewerFullName'] }}">
+                        <div class="peer-reviews-header">
+                            <h3 class="peer-reviews-title">
+                                {{ $reviewer['reviewerFullName'] }}
+                            </h3>
+                            @php
+                                $subtitle = $reviewer['reviewerAffiliation'] ?? '';
+                            @endphp
+                            @if ($subtitle)
+                                <div class="peer-reviews-subtitle">
+                                    {{ $subtitle }}
+                                </div>
+                            @endif
+                        </div>
+                        <accordion-root
+                            type="multiple"
+                            class="peer-reviews-items"
+                        >
+                            @foreach($reviewer['rounds'] as $round)
+                                <accordion-item as="article" value="{{ $round['roundId'] }}" class="peer-reviews-item">
+                                    <x-article.peer-review-header
+                                        recommendation="{{ $round['review']['reviewerRecommendationTypeId'] }}"
+                                        title="{{ $round['review']['reviewerRecommendationDisplayText'] ?? __('common.inProgress') }}"
+                                        subtitle="{{ __('openReview.roundNumber', ['number' => $round['roundNumber']]) }}"
+                                        openLabel="{{ __('openReview.readReview') }}"
+                                        closeLabel="{{ __('openReview.hideReview') }}"
+                                    />
+                                    <accordion-content>
+                                        <x-article.peer-review-content :review="$round['review']" />
+                                    </accordion-content>
+                                </accordion-item>
+                            @endforeach
+                        </accordion-root>
+                    </section>
+                @endforeach
+            </pkp-tab-content>
+        </pkp-tab-root>
+    @endif
+</div>

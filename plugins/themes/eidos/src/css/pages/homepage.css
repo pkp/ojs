@@ -1,0 +1,6 @@
+.page-homepage .homepage-blocks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+}

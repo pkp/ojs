@@ -1,0 +1,40 @@
+.metadata-block-id-version {
+
+  & .dropdown-trigger {
+    margin-top: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 600;
+    color: var(--color-page-links);
+  }
+}
+
+.metadata-versions-list {
+  margin: -0.25rem -0.5rem;
+}
+
+.metadata-version {
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.metadata-version-current {
+  margin-inline-start: 0;
+}
+
+.metadata-version-other {
+  @apply tab-focus;
+  margin-inline-start: 2rem;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.15em;
+  }
+}
+
+.metadata-version-current {
+  font-weight: 600;
+}

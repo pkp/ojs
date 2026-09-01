@@ -1,0 +1,14 @@
+<div class="article-tab-metadata">
+    <div class="metadata-blocks-table">
+        @foreach ($metadataBlocks as $block)
+            <x-dynamic-component
+                :component="$block->component"
+                headingTag="h3"
+                :id="$block->id"
+                :title="$block->title"
+                :$publication
+                :submission="$article"
+            />
+        @endforeach
+    </div>
+</div>

@@ -1,0 +1,16 @@
+.metadata-block-id-license {
+  .metadata-block-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  & .metadata-license-badge,
+  & .metadata-license-terms {
+    @apply html-text;
+  }
+
+  & .metadata-license-badge p {
+    margin-top: 0.25rem;
+  }
+}

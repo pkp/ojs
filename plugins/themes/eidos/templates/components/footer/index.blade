@@ -1,0 +1,84 @@
+@php
+    $siteName = $currentContext ? $currentContext->getLocalizedName() : $site->getLocalizedTitle();
+    $siteDescription = $currentContext ? $currentContext->getLocalizedDescription() : $site->getLocalizedData('about')
+@endphp
+
+<footer class="footer">
+    <div class="footer-inner" id="skip-to-footer">
+        <h2 class="footer-block footer-name">
+            {{ $siteName }}
+        </h2>
+        <div class="footer-blocks">
+            <div class="footer-block footer-block-masthead">
+                <div class="footer-description html-text" data-reveal data-height="30">
+                    @if($pageFooter)
+                        {!! $pageFooter !!}
+                    @else
+                        {!! ViewHelper::sanitizeHtml($siteDescription) !!}
+                    @endif
+                </div>
+                @if($currentContext?->getData('onlineIssn') || $currentContext?->getData('printIssn'))
+                    <div class="footer-metadata">
+                        @if($currentContext->getData('printIssn'))
+                            <div class="footer-metadata-item">
+                                <h3 class="footer-metadata-title">{{ __('journal.issn') }}</h3>
+                                <div>{{ $currentContext->getData('printIssn') }}</div>
+                            </div>
+                        @endif
+                        @if($currentContext->getData('onlineIssn'))
+                            <div class="footer-metadata-item">
+                            <h3 class="footer-metadata-title">{{ __('metadata.property.displayName.eissn') }}</h3>
+                            <div>{{ $currentContext->getData('onlineIssn') }}</div>
+                            </div>
+                        @endif
+                    </div>
+                @endif
+                <nav class="footer-links">
+                    @php
+                        $policyMenu = \Illuminate\Support\Facades\Blade::render(
+                            "@loadMenu(['name' => 'policy', 'id' => 'nav-footer-policy', 'path' => 'components/menu'])"
+                        );
+                    @endphp
+                    @if($policyMenu)
+                        {!! $policyMenu !!}
+                    @else
+                        <ul class="menu" id="nav-footer-policy">
+                            @if ($currentContext || (!$currentContext && $site->getLocalizedData('privacyStatement')))
+                                <li class="menu-item">
+                                    <a class="menu-button" href="{{ ViewHelper::url(['page' => 'about', 'op' => 'privacy']) }}">
+                                        {{ __('plugins.themes.eidos.privacyPolicy') }}
+                                    </a>
+                                </li>
+                            @endif
+                            @if ($currentContext)
+                                <li class="menu-item">
+                                    <a class="menu-button" href="{{ ViewHelper::url(['page' => 'about', 'op' => 'contact']) }}">
+                                        {{ __('about.contact') }}
+                                    </a>
+                                </li>
+                            @endif
+                        </ul>
+                    @endif
+                </nav>
+                </div>
+                <nav class="footer-block footer-block-menu">
+                    @loadMenu(['name' => 'primary', 'id' => 'nav-footer-primary', 'path' => 'components/menu'])
+                </nav>
+                <nav class="footer-block footer-block-menu">
+                    @loadMenu(['name' => 'user', 'id' => 'nav-footer-user', 'path' => 'components/menu'])
+                </nav>
+            </div>
+            @php
+                $sidebar = \Illuminate\Support\Facades\Blade::render(
+                    "@callHook(['name' => 'Templates::Common::Sidebar'])"
+                );
+            @endphp
+            @if($sidebar)
+                <div class="footer-sidebar">
+                    {!! $sidebar !!}
+                </div>
+            @endif
+        </div>
+    </div>
+    <x-footer.btm />
+</footer>

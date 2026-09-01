@@ -1,0 +1,42 @@
+@props([
+    'autocomplete' => '',
+    'error' => null,
+    'id' => '',
+    'label' => '',
+    'name' => '',
+    'required' => false,
+])
+
+<div class="system-form-field">
+    <label for="{{ $id }}" class="system-form-label">
+        {{ $label }}
+        @if ($required)
+            <span class="required" aria-hidden="true">*</span>
+            <span class="sr-only">
+                {{ __('common.required') }}
+            </span>
+        @endif
+    </label>
+    <select
+        class="system-form-select"
+        name="{{ $name }}"
+        id="{{ $id }}"
+        @if ($required)
+            required
+            aria-required="true"
+        @endif
+        @if ($autocomplete)
+            autocomplete="{{ $autocomplete }}"
+        @endif
+        @if ($error)
+            aria-invalid="true"
+        @endif
+    >
+        {!! $slot !!}
+    </select>
+    @if ($error)
+        <div class="system-form-field-error" role="alert">
+            {!! $error !!}
+        </div>
+    @endif
+</div>

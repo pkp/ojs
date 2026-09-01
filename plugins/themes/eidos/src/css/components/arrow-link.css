@@ -1,0 +1,26 @@
+.arrow-link {
+  @apply tab-focus;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+  color: var(--color-page-links);
+  font-weight: 600;
+}
+
+.arrow-link svg {
+  flex-shrink: 0;
+}
+
+.arrow-link-truncate {
+  display: flex;
+
+  .arrow-link-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+[dir="rtl"] .arrow-link svg {
+  transform: rotate(180deg);
+}

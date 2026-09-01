@@ -1,0 +1,116 @@
+@php
+    $pageTitle = __('common.search');
+    $description = $currentContext
+        ? __('plugins.themes.eidos.search.description', ['url' =>  ViewHelper::url(['page' => 'issue', 'op' => 'archive'])])
+        : __('plugins.themes.eidos.search.description.site', ['url' =>  ViewHelper::url(['page' => 'index'])]);
+
+    if ($query) {
+        $pageTitle = __('plugins.themes.eidos.search.pageTitle', ['phrase' => $query]);
+        $start = (($results->currentPage() - 1) * $results->perPage()) + 1;
+        $end = (min($results->total(), ($results->currentPage() * $results->perPage())));
+        $showing = $results->total()
+            ? __(
+                'plugins.themes.eidos.search.showing',
+                [
+                    'start' => $start,
+                    'end' => $end,
+                    'phrase' => $query
+                ]
+            )
+            : __('plugins.themes.eidos.search.noMatches', ['phrase' => $query]);
+        if ($results->lastPage() > 1) {
+            $queryParam = '&searchPage=' . $results->currentPage();
+            $urlPattern = str_replace($queryParam, '', $_SERVER['REQUEST_URI']) . '&searchPage=__page__';
+        }
+    }
+@endphp
+
+<x-layout
+    title="{{ $pageTitle }}"
+>
+    <x-slot:skiplinks>
+        @if ($query && $results->total())
+            <a class="skip-link" href="#skip-to-search-results">
+                {{ __('plugins.themes.eidos.skip.searchResults') }}
+            </a>
+        @endif
+        <a class="skip-link" href="#skip-to-search-form">
+            {{ __('plugins.themes.eidos.skip.searchForm') }}
+        </a>
+    </x-slot>
+
+    <main class="page-container page-container-lg page-search @if($query && $results->total()) page-search-has-results @endif" id="skip-to-main">
+
+        <section class="page-search-header">
+            <h1 class="page-search-header-title">
+                {{ __('common.search') }}
+            </h1>
+            @if(!$query)
+                <div class="page-search-header-desc">
+                    {!! $description !!}
+                </div>
+            @elseif($results->total())
+                <div class="page-search-header-results">
+                    <div class="page-search-header-results-count">
+                        {{ __('plugins.themes.eidos.search.countResults', ['number' => $results->total()]) }}
+                    </div>
+                </div>
+            @else
+                <x-notice>
+                    <div>
+                        {!! __('plugins.themes.eidos.search.noMatches', ['phrase' => $query]) !!}
+                    </div>
+                </x-notice>
+            @endif
+        </section>
+
+        @if ($query && $results->total())
+            <section class="page-search-results" id="skip-to-search-results">
+                <h2 class="sr-only">
+                    {{ __('search.searchResults') }}
+                </h2>
+                <div class="page-search-results-header">
+                    <div class="page-search-showing">
+                        @include('components/icons/list')
+                        <span class="page-search-showing-text" role="alert">
+                            {!! $showing !!}
+                        </span>
+                    </div>
+                </div>
+                @callHook(['name' => 'Templates::Search::SearchResults::PreResults'])
+                <ul class="page-search-results-list">
+                    @foreach($results as $result)
+                        <li>
+                            <x-article-summary
+                                heading="h3"
+                                :contextPath="$result['context']->getPath()"
+                                :submission="$result['submission']"
+                                :showAbstract="false"
+                            />
+                        </li>
+                    @endforeach
+                </ul>
+
+                @if($query && $results->lastPage() > 1)
+                    <div class="page-search-pagination-btm">
+                        <x-pagination-custom
+                            perPage="{{ $results->perPage() }}"
+                            current="{{ $start }}"
+                            total="{{ $results->total() }}"
+                            urlPattern="{!! $urlPattern !!}"
+                        />
+                    </div>
+                @endif
+            </section>
+        @endif
+
+        <div class="page-search-form" id="skip-to-search-form">
+            @if($query)
+                <h2 class="page-search-form-title">
+                    {{ __('plugins.themes.eidos.search.changeSearch') }}
+                </h2>
+            @endif
+            @include('components/search-form')
+        </div>
+    </main>
+</x-layout>

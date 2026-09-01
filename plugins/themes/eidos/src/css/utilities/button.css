@@ -1,0 +1,122 @@
+/**
+ * Styles for button elements
+ */
+@utility button {
+  @apply tab-focus;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em 1.25em;
+  min-height: 3rem;
+  border: var(--border-width) solid var(--color-button-text);
+  border-radius: var(--button-radius);
+  color: var(--color-button-text);
+  background: var(--color-button-background);
+  font-family: var(--font-actions);
+  font-weight: 700;
+  line-height: 1.25;
+  text-decoration: none;
+  text-align: center;
+
+  &:hover {
+    outline: var(--border-width) solid var(--color-button-text);
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+
+    &:hover {
+      outline: none;
+    }
+  }
+
+  & svg {
+    flex: 0 0 1.5em;
+    width: 1.5em;
+    height: auto;
+  }
+}
+
+@utility button-text {
+  border-color: var(--color-page-text);
+  color: var(--color-page-text);
+  background: var(--color-page-background);
+
+  &:hover {
+    outline: var(--border-width) solid var(--color-page-text);
+  }
+}
+
+@utility button-highlight {
+  background: var(--color-button-text);
+  color: var(--color-button-background);
+
+  &:hover {
+    outline-width: var(--outline-width);
+    outline-offset: var(--outline-width);
+  }
+
+  &:focus-visible {
+    outline-color: var(--color-button-text);
+  }
+}
+
+@utility button-truncate-text {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+@utility button-in-header {
+  background: var(--color-header-background);
+  color: var(--color-header-text);
+  border-color: var(--color-header-text);
+
+  &:hover {
+    outline-color: var(--color-header-text);
+  }
+}
+
+@utility button-highlight-in-header {
+  background: var(--color-header-text);
+  color: var(--color-header-background);
+
+  &:focus-visible {
+    outline-color: var(--color-header-text);
+  }
+}
+
+@utility button-in-block {
+  background: var(--color-block-background);
+  color: var(--color-block-text);
+  border-color: var(--color-block-text);
+
+  &:hover {
+    outline-color: var(--color-block-text);
+  }
+}
+
+@utility button-highlight-in-block {
+  background: var(--color-block-text);
+  color: var(--color-block-background);
+
+  &:focus-visible {
+    outline-color: var(--color-block-text);
+  }
+}
+
+/**
+ * Ensure utilities are used
+ *
+ * Tailwind will only import the utility classes that
+ * are used in a theme template. If the template is
+ * used at the app/pkp level, it will not be included
+ * in the final bundle.
+ */
+.button { @apply button; }
+.button-text { @apply button-text; }
+.button-highlight { @apply button-highlight; }
+.button-truncate-text { @apply button-truncate-text; }
+.button-in-block { @apply button-in-block; }
+.button-highlight-in-block { @apply button-highlight-in-block; }
