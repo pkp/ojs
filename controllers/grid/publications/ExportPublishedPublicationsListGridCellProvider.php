@@ -72,7 +72,12 @@ class ExportPublishedPublicationsListGridCellProvider extends DataObjectGridCell
                     new LinkAction(
                         'itemWorkflow',
                         new RedirectAction(
-                            Repo::submission()->getWorkflowUrlByUserRoles($submission)
+                            Repo::submission()->getWorkflowUrlByUserRoles(
+                                $submission,
+                                null,
+                                // Open the workflow modal on this publication version
+                                ['workflowMenuKey' => 'publication_' . $publication->getId() . '_titleAbstract']
+                            )
                         ),
                         $title
                     )
