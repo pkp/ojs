@@ -1,0 +1,12 @@
+/**
+ * Import tailwind dependencies, including a reset of
+ * default browser styles.
+ */
+@import "tailwindcss";
+
+/**
+ * Styles for the system pages
+ */
+@import "css/system/layout.css";
+@import "css/system/buttons.css";
+@import "css/system/forms.css";

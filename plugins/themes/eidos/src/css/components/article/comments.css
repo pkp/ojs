@@ -1,0 +1,338 @@
+.PkpComments {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.PkpComment {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.PkpComment__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.PkpComment__author {
+  display: flex;
+  flex-direction: column;
+}
+
+.PkpComment__author-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.PkpComment__authorOrcid {
+  display: inline-block;
+  position: relative;
+  top: 0.25em;
+
+  & .PkpOrcidDisplay__icon {
+    width: 1.5rem;
+  }
+}
+
+.PkpComment__author-affiliation {
+  font-size: 1.125rem;
+}
+
+.PkpComment__permalink {
+  @apply tab-focus;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  font-size: 0.875rem;
+  padding: 0.25rem 0.5rem;
+  margin-inline-end: -0.5rem;
+
+  &:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 0.15em;
+  }
+}
+
+.PkpComment__permalink-icon {
+  flex-shrink: 0;
+}
+
+.PkpComment__on {
+
+  & [title] {
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 0.15em;
+    text-underline-offset: 0.25em;
+  }
+
+  & a {
+    @apply link;
+  }
+}
+
+.PkpComment__message {
+  padding-inline-start: 1rem;
+  border-inline-start: 1px solid;
+  line-height: 1.75;
+  white-space: pre-line;
+}
+
+.PkpCommentsCta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
+
+  & .PkpButton {
+    @apply button;
+    @apply button-highlight;
+  }
+}
+
+.PkpCommentsCta__message {
+  font-size: 1.125rem;
+  font-weight: 500;
+  max-width: 30em;
+}
+
+.PkpCommentsVersionDivider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.PkpCommentsVersionDivider__divider {
+  width: 100%;
+  border-top: 2px dashed;
+  margin-bottom: 1rem;
+}
+
+.PkpCommentsVersionDivider__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.PkpCommentsVersionDivider__desc {
+  font-size: 0.875rem;
+}
+
+.PkpCommentAdd__fields-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.PkpCommentAdd {
+
+  & .PkpTextarea__label {
+    display: block;
+    max-width: 40em;
+  }
+
+  & .PkpTextarea__element {
+    @apply input;
+    @apply input-textarea;
+    margin-top: 0.5rem;
+    max-width: 40em;
+  }
+}
+
+.PkpCommentAdd__submit {
+  @apply button;
+  @apply button-highlight;
+}
+
+.PkpComment__pending,
+.PkpCommentReport__prompt,
+.PkpCommentDelete__prompt {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.PkpComment__pending-icon,
+.PkpCommentReport__report-icon,
+.PkpCommentDelete__prompt-icon {
+  flex-shrink: 0;
+}
+
+.PkpCommentReport__prompt-text button,
+.PkpCommentDelete__prompt-text button {
+  @apply link;
+}
+
+.PkpCommentReport__form,
+.PkpCommentDelete__confirm {
+  max-width: 40em;
+  padding: 1rem;
+  background: var(--color-block-background);
+  color: var(--color-block-text);
+  border-radius: var(--radius);
+}
+
+.PkpCommentAdd__buttons,
+.PkpCommentReport__buttons,
+.PkpCommentDelete__buttons {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  gap: 0.5rem;
+}
+
+.PkpCommentAdd__submitting,
+.PkpCommentReport__submitting,
+.PkpCommentDelete__submitting {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.PkpCommentAdd__spinner,
+.PkpCommentReport__spinner,
+.PkpCommentDelete__spinner {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+.PkpCommentReport__reason {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  & .PkpTextarea__label {
+    @apply input-label;
+
+    & strong {
+      font-weight: 400;
+      text-decoration: underline;
+      text-decoration-style: dashed;
+      text-decoration-thickness: 0.1em;
+      text-underline-offset: 0.25em;
+    }
+  }
+
+  & .PkpTextarea__element {
+    @apply input;
+    @apply input-textarea;
+    background: var(--color-block-text);
+    color: var(--color-block-background);
+  }
+}
+
+.PkpCommentReport__submit,
+.PkpCommentDelete__submit {
+  @apply button;
+  @apply button-highlight;
+  @apply button-in-block;
+  @apply button-highlight-in-block;
+}
+
+.PkpCommentReport__cancel,
+.PkpCommentDelete__cancel {
+  @apply button;
+  @apply button-in-block;
+}
+
+.PkpCommentReport__submitted {
+  padding: 0.5rem 1rem;
+  display: inline-flex;
+  gap: 0.5rem;
+  background: var(--color-block-background);
+  color: var(--color-block-text);
+  border-radius: var(--radius);
+}
+
+.PkpCommentsShowMore {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.PkpCommentsShowMore__divider {
+  position: absolute;
+  top: 1.5rem;
+  width: 100%;
+  border-top: 2px dashed;
+  margin-bottom: 1rem;
+}
+
+.PkpCommentsShowMore__button-bg {
+  position: relative;
+  z-index: 10;
+  background: var(--color-page-background);
+}
+
+.PkpCommentsShowMore__button {
+  @apply button;
+  @apply button-highlight;
+}
+
+.PkpCommentsShowMore__loading {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+
+@media (min-width: 640px) {
+
+  .PkpComment__message {
+    padding-inline-start: 1.25rem;
+  }
+
+  .PkpCommentsVersionDivider {
+    position: relative;
+  }
+
+  .PkpCommentsVersionDivider__divider {
+    position: absolute;
+    top: 1em;
+  }
+
+  .PkpCommentsVersionDivider__title {
+    position: relative;
+    padding: 0 1rem;
+    background: var(--color-page-background);
+  }
+
+  .PkpCommentAdd__buttons,
+  .PkpCommentReport__buttons,
+  .PkpCommentDelete__buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1536px) {
+
+  .PkpComments {
+    gap: 6rem;
+  }
+
+  .PkpComment__on,
+  .PkpComment__message {
+    font-size: 1.125rem;
+  }
+
+  .PkpComment__message {
+    padding-inline-start: 2rem;
+  }
+}
+
+@media (min-width: 1920px) {
+
+  .PkpComment__message {
+    font-size: 1.25rem;
+  }
+}

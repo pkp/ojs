@@ -1,0 +1,131 @@
+.page-search {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.page-search-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+
+  & .notice {
+    text-align: start;
+  }
+}
+
+.page-search-header-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  max-width: 28rem;
+}
+
+.page-search-header-desc {
+  @apply html-text;
+}
+
+.page-search-header-results {
+  margin-bottom: 1.5rem;
+}
+
+.page-search-header-results-count {
+  font-size: 1.25rem;
+}
+
+.page-search-showing {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.page-search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.page-search-results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.page-search-form-title {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.page-search-form {
+  width: 100%;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 1024px) {
+
+  .page-search-has-results {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem 2rem;
+
+    & .page-search-header,
+    & .page-search-pagination-btm {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    & .page-search-pagination-btm {
+      grid-row-start: 3;
+    }
+
+    & .page-search-results {
+      grid-column-start: 2;
+      grid-row-start: 2;
+    }
+
+    & .page-search-form {
+      grid-column-start: 1;
+      grid-row-start: 2;
+    }
+
+    & .page-search-form-title {
+      @apply sr-only;
+    }
+  }
+
+  .page-search-results-header {
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .page-search-has-results {
+    grid-template-columns: minmax(24rem, 1fr) 3fr;
+    gap: 4rem 3rem;
+  }
+
+  .page-search-header-title {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1536px) {
+
+  .page-search-has-results {
+    grid-template-columns: minmax(24rem, 1fr) 4fr;
+    gap: 4rem;
+  }
+
+  .page-search-results {
+    gap: 3rem;
+  }
+
+  .page-search-results-header {
+    padding-bottom: 0.75rem;
+  }
+}

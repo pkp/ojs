@@ -1,0 +1,18 @@
+<nav class="skip-links" aria-label="{{ __('navigation.skip.description') }}">
+    <a class="skip-link" href="#skip-to-main">
+        {{ __('navigation.skip.main') }}
+    </a>
+    {{ $slot }}
+    <a class="skip-link skip-link-mobile-only" href="#header-mobile-dropdown-button">
+        {{ __('navigation.skip.nav') }}
+    </a>
+    <a class="skip-link skip-link-desktop-only" href="#skip-to-nav-desktop">
+        {{ __('navigation.skip.nav') }}
+    </a>
+    <a class="skip-link skip-link-desktop-only" href="#skip-to-user-nav-desktop">
+        {{ __('plugins.themes.eidos.skip.userNav') }}
+    </a>
+    <a class="skip-link" href="#skip-to-footer">
+        {{ __('navigation.skip.footer') }}
+    </a>
+</nav>

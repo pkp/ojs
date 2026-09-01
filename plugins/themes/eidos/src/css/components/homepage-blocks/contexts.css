@@ -1,0 +1,126 @@
+.homepage-block-contexts {
+  --padding: 0.75rem;
+  max-width: 1536px;
+}
+
+.homepage-block-contexts-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.homepage-block-contexts-desc  {
+  @apply html-text;
+  line-height: 1.5;
+}
+
+.homepage-block-contexts-item-wrapper {
+  position: relative;
+  margin-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  padding: var(--padding);
+  border: 1px solid;
+  border-radius: var(--radius);
+}
+
+.homepage-block-contexts-item-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  & a {
+    @apply tab-focus;
+  }
+}
+
+.homepage-block-contexts-item-desc {
+  @apply html-text;
+  line-height: 1.5;
+  position: relative;
+}
+
+.homepage-block-contexts-item-actions {
+  margin-top: auto;
+  padding-top: 1.5rem;
+
+  & .arrow-link {
+    padding: 0.25rem 0.5rem;
+    margin-inline-start: -0.5rem;
+    font-size: 1.125rem;
+
+    &:hover {
+      outline: 0.25em solid var(--color-page-links);
+      border-radius: 1px;
+      background: var(--color-page-links);
+      color: var(--color-page-background);
+    }
+  }
+}
+
+@media (min-width: 640px) {
+
+  .homepage-block-contexts {
+    --padding: 1.5rem;
+    border: 1px solid;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .homepage-block-contexts-header {
+    padding: var(--padding);
+    border-bottom: 1px solid;
+  }
+
+  .homepage-block-contexts-title {
+    font-size: 2rem;
+  }
+
+  .homepage-block-contexts-desc {
+    max-width: 35em;
+  }
+
+  .homepage-block-contexts-list {
+    display: grid;
+    align-items: stretch;
+    gap: 1px;
+  }
+
+  .homepage-block-contexts-item-wrapper {
+    margin: 0;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    outline: 1px solid;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .homepage-block-contexts-list-2,
+  .homepage-block-contexts-list-3,
+  .homepage-block-contexts-list-4,
+  .homepage-block-contexts-list-many {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .homepage-block-contexts-desc {
+    font-size: 1.125rem;
+  }
+}
+
+@media (min-width: 1536px) {
+
+  .homepage-block-contexts {
+    --padding: 2rem;
+  }
+
+  .homepage-block-contexts-list-3,
+  .homepage-block-contexts-list-many {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+}
