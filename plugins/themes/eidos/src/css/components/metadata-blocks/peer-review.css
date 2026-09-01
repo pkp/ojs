@@ -1,0 +1,86 @@
+.metadata-block-id-peer-review {
+  position: relative;
+
+  & .metadata-block-content {
+    max-width: 25rem;
+  }
+}
+
+.metadata-block-count-icon {
+  position: absolute;
+  top: 0.125rem;
+  right: 0;
+}
+
+.metadata-block-peer-review-list {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.metadata-block-peer-review-list-item {
+  display: flex;
+  align-items: center;
+}
+
+.metadata-block-peer-view-recommendation {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+}
+
+.metadata-block-peer-review-recommendation-icon {
+  flex-shrink: 0;
+}
+
+.metadata-block-peer-review-recommendation-label {
+  padding: 0.25rem 0.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.metadata-block-peer-view-count {
+  flex-shrink: 0;
+  padding: 0.25rem 0.25rem;
+  min-width: 1.5rem;
+  text-align: center;
+  border: 1px solid;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  line-height: 1;
+}
+
+.metadata-block-peer-review-status {
+  @apply html-text;
+  line-height: 1.5;
+}
+
+.metadata-block-peer-review-list + .metadata-block-peer-review-status {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.metadata-blocks-table {
+
+  .metadata-block-count-icon {
+    display: none;
+  }
+
+  .metadata-block-peer-review-list {
+    margin-top: 0;
+  }
+}
+
+
+@media (min-width: 1536px) {
+
+  .metadata-block-id-peer-review {
+
+    & .metadata-block-content {
+      max-width: 32rem;
+    }
+  }
+}

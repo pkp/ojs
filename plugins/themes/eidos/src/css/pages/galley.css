@@ -1,0 +1,117 @@
+.page-galley-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  background: var(--color-header-background);
+  color: var(--color-header-text);
+}
+
+.page-galley-backlink {
+  @apply tab-focus-inside;
+  width: 4rem;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  border-radius: var(--radius);
+}
+
+[dir="ltr"] .page-galley-backlink svg {
+  transform: rotate(180deg);
+}
+
+.page-galley-backlink-text {
+  overflow: hidden;
+  max-height: 4rem;
+  padding: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+.page-galley-download {
+  @apply tab-focus-inside;
+  margin-inline-start: auto;
+  width: 4rem;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+  flex-shrink: 0;
+  border-radius: var(--radius);
+}
+
+.page-galley-download-text {
+  @apply sr-only;
+}
+
+.page-galley-notice {
+  @apply html-text;
+  line-height: 1.5;
+  position: fixed;
+  z-index: 10;
+  bottom: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100vw - 1.5rem);
+  max-width: 30em;
+  margin-inline: auto;
+  padding: 0.75rem;
+  background: var(--color-overlay-background);
+  color: var(--color-overlay-color);
+  box-shadow: var(--overlay-shadow);
+  border-radius: var(--overlay-radius);
+}
+
+.page-galley-iframe {
+  position: fixed;
+  top: 4rem;
+  width: 100vw;
+  height: calc(100svh - 4rem);
+  overflow: auto;
+}
+
+@media (min-width: 1024px) {
+
+  .page-galley-download {
+    @apply button;
+    @apply button-in-header;
+    width: auto;
+    align-self: center;
+    margin-inline-end: 1rem;
+  }
+
+  .page-galley-download-text {
+    @apply not-sr-only;
+  }
+
+  .page-galley-backlink-text {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .page-galley-notice {
+    left: auto;
+    bottom: auto;
+    right: 1rem;
+    top: 5rem;
+    transform: none;
+    max-width: 24em;
+  }
+
+  .page-galley-pdf .page-galley-notice {
+    top: 7rem;
+  }
+}

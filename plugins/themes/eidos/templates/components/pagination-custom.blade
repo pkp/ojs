@@ -1,0 +1,122 @@
+{{--
+ * Pagination component used by several templates
+ *
+ * In most cases, the $urlPattern is enough to create all
+ * the correct URLs. However, the catalog handler does not support
+ * a /page/1 URL. In this case, we pass a $firstPageUrl variable
+ * that overrides the $urlPattern.
+ *
+ * @param int $currentPage
+ * @param string $urlPattern The URL for pages with a __page__ placeholder
+ *   where the page number should go. For example: /issue/archives/__page__
+ * @param string $firstPageUrl (optional) See comment above.
+ --}}
+@props([
+    'perPage',
+    'current',
+    'total',
+    'maxPages' => 9,
+    'urlPattern',
+    'firstPageUrl'
+])
+
+@php
+    $perPage = (int) $perPage;
+    $current = (int) $current;
+    $total = (int) $total;
+    $maxPages = (int) $maxPages;
+
+    $currentPage = (int) ceil($current / $perPage);
+    $totalPages = (int) ceil($total / $perPage);
+
+    $pages = [];
+    for ($i = 1; $i <= $totalPages; $i++) {
+        $pages[] = $i;
+    }
+
+    if ($totalPages > $maxPages) {
+        if ($currentPage <= $maxPages - 4) {
+            $pages = array_filter(
+                array_merge(array_slice($pages, 0, $maxPages - 2), [-1], array_slice($pages, $totalPages - 1)),
+            );
+        } elseif ($currentPage >= $totalPages - 4) {
+            $end = $totalPages - $maxPages + 2;
+            $pages = array_filter(array_merge(array_slice($pages, 0, 1), [-1], array_slice($pages, $end)));
+        } else {
+            $front = $currentPage - floor($maxPages / 2) + 1;
+            $pages = array_filter(
+                array_merge(
+                    array_slice($pages, 0, 1),
+                    [-1],
+                    array_slice($pages, $front, $maxPages - 4),
+                    [-1],
+                    array_slice($pages, -1),
+                ),
+            );
+        }
+    }
+@endphp
+
+<nav
+    aria-label="{{ __('plugins.themes.eidos.pagination.prompt') }}"
+    class="pagination"
+    role="navigation"
+>
+    <a
+        aria-label="{{ __('plugins.themes.eidos.pagination.previousPage') }}"
+        class="pagination-text-link tab-focus"
+        @if ($currentPage <= 1)
+            disabled=true
+        @else
+            @php $previousPage = $currentPage-1; @endphp
+            @if ($previousPage == 1 && $firstPageUrl)
+                href="{{ $firstPageUrl }}"
+            @else
+                href="{!! str_replace('__page__', $previousPage, $urlPattern) !!}"
+            @endif
+        @endif
+    >
+        @include('components/icons/chevron-left')
+        {{ __('common.back') }}
+    </a>
+    <ul class="pagination-pages">
+        @foreach ($pages as $page)
+            <li>
+                @if ($page < 0)
+                    <span class="pagination-skip">···</span>
+                @else
+                    <a
+                        aria-label="{{ __('plugins.themes.eidos.pagination.goToPage', ['page' => $page]) }}"
+                        class="pagination-page"
+                        @if ($page == $currentPage)
+                            aria-current=true
+                        @elseif($page == 1)
+                            @if ($firstPageUrl)
+                                href="{{ $firstPageUrl }}"
+                            @else
+                                href="{{ str_replace('__page__', '', $urlPattern) }}"
+                            @endif
+                        @else
+                            href="{{ str_replace('__page__', $page, $urlPattern) }}"
+                        @endif
+                    >
+                        {{ $page }}
+                    </a>
+                @endif
+            </li>
+        @endforeach
+    </ul>
+    <a
+        aria-label="{{ __('plugins.themes.eidos.pagination.nextPage') }}"
+        class="pagination-text-link tab-focus"
+        @if ($currentPage >= $pages[count($pages) - 1])
+            disabled=true
+        @else
+            @php $nextPage = $currentPage + 1; @endphp
+            href="{{ str_replace('__page__', $nextPage, $urlPattern) }}"
+        @endif
+    >
+        {{ __('help.next') }}
+        @include('components/icons/chevron-right')
+    </a>
+</nav>

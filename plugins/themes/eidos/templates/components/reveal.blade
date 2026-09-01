@@ -1,0 +1,21 @@
+@props([
+    'id',
+    'class' => '',
+    'height' => 20,
+])
+
+<div
+    id="{{ $id }}"
+    class="reveal {{ $class }}"
+    data-height="{{ $height }}"
+    data-open="false"
+>
+    {{ $slot }}
+    <button
+        class="reveal-link"
+        aria-controls="#{{ $id }}"
+    >
+        {{ $trigger }}
+        @include('components/icons/chevron-down')
+    </button>
+</div>

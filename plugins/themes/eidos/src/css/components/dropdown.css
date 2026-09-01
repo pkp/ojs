@@ -1,0 +1,42 @@
+.dropdown-content {
+  --inner-padding: 1.5rem;
+  padding: var(--inner-padding);
+  background: var(--color-overlay-background);
+  color: var(--color-overlay-text);
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--overlay-shadow);
+}
+
+.dropdown-arrow {
+  fill: var(--color-overlay-background);
+  position: relative;
+}
+
+.dropdown-close {
+  --size-close-button: calc(2 * var(--inner-padding));
+  @apply tab-focus;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--size-close-button);
+  height: var(--size-close-button);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-overlay-background);
+
+  &:focus-visible {
+    opacity: 1;
+  }
+}
+
+.dropdown-close-visible {
+  opacity: 1;
+}
+
+[dir="rtl"] .dropdown-close {
+  right: auto;
+  left: 0;
+}

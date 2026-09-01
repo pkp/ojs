@@ -1,0 +1,50 @@
+/**
+ * Import tailwind dependencies, including a reset of
+ * default browser styles.
+ */
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-xl: 75rem; /* 1200px */
+  --breakpoint-3xl: 160rem; /* 2560px */
+}
+
+body {
+  background: var(--color-page-background);
+  color: var(--color-page-text);
+  font-family: var(--font-base);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
+}
+
+@media (min-width: 75rem) {
+
+  html {
+    scroll-padding-top: 20rem;
+  }
+}
+
+/**
+ * Override Tailwind's placeholder to make the placeholder
+ * text a little more visible.
+ */
+@layer base {
+  @supports (not (-webkit-appearance: -apple-pay-button)) or (contain-intrinsic-size: 1px) {
+    @supports (color: color-mix(in lab, red, red)) {
+      ::placeholder {
+        color: color-mix(in oklab, currentcolor 65%, transparent);
+      }
+    }
+  }
+}
+
+/**
+ * Apply Tailwind's sr-only styles to the .pkp_screen_reader
+ * class, which appears in several default OJS templates
+ */
+.pkp_screen_reader {
+  @apply sr-only;
+}

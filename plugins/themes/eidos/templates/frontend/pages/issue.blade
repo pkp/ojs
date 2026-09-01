@@ -1,0 +1,23 @@
+@if(!$issue)
+    <x-layout.basic
+        title="{{  __('current.noCurrentIssue') }}"
+    >
+        <x-notice>
+            {{ __('current.noCurrentIssueDesc') }}
+        </x-notice>
+    </x-layout.basic>
+@else
+    <x-layout
+        title="{{ $issue->getIssueIdentification() }}"
+        description="{{ $issue->getLocalizedDescription() }}"
+    >
+        <main class="page-container page-container-lg page-issue" id="skip-to-main">
+            @include('components/issue-toc', [
+                'issue' => $issue,
+                'headingStart' => 1,
+                'showArticleGalleys' => $activeTheme->getOption('issueToc') === 'galleys',
+                'showArticleCovers' => $activeTheme->getOption('issueToc') === 'covers',
+            ])
+        </main>
+    </x-layout>
+@endif

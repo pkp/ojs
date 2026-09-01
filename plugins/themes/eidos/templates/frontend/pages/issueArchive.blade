@@ -1,0 +1,82 @@
+<x-layout
+    title="{{ __('plugins.themes.eidos.allIssues') }}"
+>
+    <main class="
+        page-container
+        page-issues
+        page-issues-{{ $activeTheme->getOption('issueArchives') }}
+        @if ($activeTheme->getOption('issueArchives') !== 'covers')
+            page-container-sm
+        @else
+            page-container-lg
+        @endif
+    ">
+
+        <section class="page-issues-header" id="skip-to-main">
+            <h1 class="page-issues-title">
+                {{ __('plugins.themes.eidos.allIssues') }}
+            </h1>
+            @if (!empty($issues))
+                <div class="page-issues-showing">
+                    {!!
+                        __(
+                            'plugins.themes.eidos.issues.showing',
+                            [
+                                'start' => $showingStart,
+                                'end' => $showingEnd,
+                                'total' => $total,
+                                'context' => $currentContext->getLocalizedName(),
+                            ]
+                        )
+                    !!}
+                </div>
+            @endif
+        </section>
+
+        @if (empty($issues))
+            <x-notice>
+                <div class="html-text">
+                    {{ __('current.noCurrentIssueDesc') }}
+                </div>
+            </x-notice>
+        @else
+            <section class="page-issues-content">
+                <ul class="page-issues-items">
+                    @foreach($issues as $issue)
+                        <li>
+                            <article class="page-issues-item">
+                                <a
+                                    class="page-issues-item-link"
+                                    href="{{ ViewHelper::url(['page' => 'issue', 'op' => 'view', 'path' => $issue->getBestIssueId()]) }}"
+                                    aria-label="{{ $issue->getIssueIdentification() }}"
+                                >
+                                    <x-issue-summary
+                                        :issue="$issue"
+                                        heading="h2"
+                                    >
+                                        <x-slot:actions>
+                                            <x-arrow-link>
+                                                {{ __('issue.viewIssue') }}
+                                            </x-arrow-link>
+                                        </x-slot:actions>
+                                    </x-issue-summary>
+                                </a>
+                            </article>
+                        </li>
+                    @endforeach
+                </ul>
+            </section>
+        @endif
+
+        @if($prevPage || $nextPage)
+            <div class="page-issues-pagination">
+                <x-pagination-custom
+                    perPage="{{ $itemsPerPage }}"
+                    current="{{ $showingStart }}"
+                    total="{{ $total }}"
+                    urlPattern="{{ ViewHelper::url(['page' => 'issue', 'op' => 'archive', 'path' => '__page__']) }}"
+                />
+            </div>
+        @endif
+    </main>
+</x-layout>

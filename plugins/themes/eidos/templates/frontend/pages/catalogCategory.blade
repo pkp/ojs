@@ -1,0 +1,159 @@
+@php
+    // Pagination
+    $start = (($results->currentPage() - 1) * $results->perPage()) + 1;
+    $end = (min($results->total(), ($results->currentPage() * $results->perPage())));
+    $urlProps = [
+        'page' => 'catalog',
+        'op' => 'category',
+        'path' => $category->getPath(),
+    ];
+    $urlPattern = ViewHelper::url(array_merge($urlProps, ['categoryPage' => '__page__']))
+@endphp
+
+<x-layout
+    title="{{ $category->getLocalizedTitle() }}"
+    description="{{ $category->getLocalizedDescription() }}"
+>
+    <main
+        class="
+            page-container
+            page-category
+            @if(count($subcategories))
+                page-container-lg
+                page-category-has-subcategories
+            @else
+                page-container-sm
+            @endif
+            @if ($category->getImage())
+                page-category-has-cover
+            @endif
+        "
+        id="skip-to-main"
+    >
+        <div class="page-category-header">
+            <div class="page-category-header-content">
+                @if($parentCategory)
+                    <div class="page-category-breadcrumb">
+                        <a
+                            class="page-category-breadcrumb-item"
+                            href="{{ ViewHelper::url(['page' => 'catalog', 'op' => 'category', 'path' => $parentCategory->getPath()]) }}"
+                            aria-label="{{
+                                __('plugins.themes.individualizeTheme.backToTitle', [
+                                    'title' => $parentCategory->getLocalizedTitle(),
+                                ])
+                            }}"
+                        >
+                            {{ $parentCategory->getLocalizedTitle() }}
+                        </a>
+                    </div>
+                @endif
+
+                <h1 class="page-category-title">
+                    {{ $category->getLocalizedTitle() }}
+                </h1>
+
+                @if($category->getLocalizedDescription())
+                    <div class="page-category-description html-text">
+                        {!! ViewHelper::sanitizeHtml($category->getLocalizedDescription()) !!}
+                    </div>
+                @endif
+            </div>
+
+            @if($category->getImage())
+                <div class="page-category-cover">
+                    <a
+                        class="page-category-cover-link"
+                        href="{!! ViewHelper::url(['page' => 'catalog', 'op' => 'fullSize', 'type' => 'category', 'id' => $category->getId()]) !!}"
+                    >
+                        <img
+                            src="{!! ViewHelper::url(['page' => 'catalog', 'op' => 'thumbnail', 'type' => 'category', 'id' => $category->getId()]) !!}"
+                            alt="{{ $category->getImage()['altText']}}"
+                        >
+                    </a>
+                </div>
+            @endif
+        </div>
+
+        @if(count($subcategories))
+            <section class="page-category-subcategories">
+                <h2 class="page-category-subcategories-title">
+                    {{ __('catalog.category.subcategories') }}
+                </h2>
+                <nav class="page-category-subcategories-nav">
+                    <ul class="page-category-subcategories-list">
+                        @foreach($subcategories as $subcategory)
+                            <li>
+                                <a
+                                    class="page-category-subcategories-link"
+                                    href="{{ ViewHelper::url(['page' => 'catalog', 'op' => 'category', 'path' => $subcategory->getPath()]) }}"
+                                >
+                                    {{ $subcategory->getLocalizedTitle() }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </nav>
+            </section>
+        @endif
+
+        <section class="page-category-items">
+            @if (empty($results->total()))
+                <div class="page-category-empty">
+                    @include('components/icons/category-empty')
+                    <div class="page-category-empty-text">
+                        {{ __('catalog.category.noItems') }}
+                    </div>
+                    <a
+                        class="page-category-empty-button"
+                        href="{{ ViewHelper::url(['page' => 'issue', 'op' => 'archive']) }}"
+                    >
+                        {{ __('plugins.themes.eidos.category.browseFullArchive') }}
+                    </a>
+                </div>
+            @else
+                <h2 class="sr-only">
+                    {{ __('article.articles') }}
+                </h2>
+                @php
+                    $showing = __(
+                        'plugins.themes.eidos.category.showing',
+                        [
+                            'start' => $start,
+                            'end' => $end,
+                            'total' => $results->total(),
+                        ]
+                    );
+                @endphp
+                <div class="page-category-items-header">
+                    <div class="page-category-items-showing">
+                        @include('components/icons/list')
+                        {!! $showing !!}
+                    </div>
+                </div>
+                <ul class="page-category-items-list">
+                    @foreach ($results as $result)
+                        <li>
+                            <x-article-summary
+                                heading="h3"
+                                :submission="$result['submission']"
+                                :showAbstract="false"
+                            />
+                        </li>
+                    @endforeach
+                </ul>
+            @endif
+
+            @if($results->lastPage() > 1)
+                <div class="page-category-pagination-btm">
+                    <x-pagination-custom
+                        perPage="{{ $results->perPage() }}"
+                        current="{{ $start }}"
+                        total="{{ $results->total() }}"
+                        urlPattern="{!! $urlPattern !!}"
+                        firstPageUrl="{{ ViewHelper::url($urlProps)}}"
+                    />
+                </div>
+            @endif
+        </section>
+    </main>
+</x-layout>

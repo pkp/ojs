@@ -1,0 +1,323 @@
+<x-system.layout
+    pageTitle="{{ __('plugins.themes.eidos.createAccount') }}"
+>
+    <div class="system-main">
+        <div class="system-header">
+            <h1 class="system-title">
+                {{ __('plugins.themes.eidos.createAccount') }}
+            </h1>
+            <p class="system-desc">
+                @php
+                    $siteName = $currentContext
+                        ? $currentContext->getLocalizedName()
+                        : $site->getLocalizedTitle();
+                @endphp
+                {!!
+                    __('plugins.themes.eidos.registerAt', [
+                        'at' => '<a href="' . ViewHelper::url(['page' => 'index']) . '">' . $siteName . '</a>'
+                    ])
+                !!}
+            </p>
+        </div>
+        <form
+            class="system-form"
+            method="post"
+            action="{{ ViewHelper::url(['op' => 'register']) }}"
+        >
+            {!! ViewHelper::csrfFormField() !!}
+            @if ($source)
+                <input type="hidden" name="source" value="{{ $source }}" />
+            @endif
+
+            <fieldset class="system-form-fieldset">
+                <legend class="system-form-legend">
+                    {{ __('user.profile') }}
+                </legend>
+                <x-system.form-input
+                    autocomplete="given-name"
+                    error="{{ $errors['givenName'] ?? null }}"
+                    id="givenName"
+                    label="{{ __('user.givenName') }}"
+                    maxlength="255"
+                    name="givenName"
+                    required={{ true }}
+                    type="text"
+                    value="{{ $givenName ?? '' }}"
+                />
+                <x-system.form-input
+                    autocomplete="family-name"
+                    error="{{ $errors['familyName'] ?? null }}"
+                    id="familyName"
+                    label="{{ __('user.familyName') }}"
+                    maxlength="255"
+                    name="familyName"
+                    type="text"
+                    value="{{ $familyName ?? '' }}"
+                />
+                <x-system.form-input
+                    autocomplete="organization"
+                    error="{{ $errors['affiliation'] ?? null }}"
+                    id="affiliation"
+                    label="{{ __('user.affiliation') }}"
+                    name="affiliation"
+                    required={{ true }}
+                    type="text"
+                    value="{{ $affiliation ?? '' }}"
+                />
+                <x-system.form-select
+                    autocomplete="country-name"
+                    error="{{ $errors['country'] ?? null }}"
+                    id="country"
+                    label="{{ __('common.country') }}"
+                    name="country"
+                    required={{ true }}
+                >
+                    <option />
+                    @foreach ($countries as $value => $name)
+                        @php $isSelected = isset($country) && $value === $country; @endphp
+                        <option
+                            value="{{ $value }}"
+                            @if ($isSelected)
+                                selected
+                            @endif
+                        >
+                            {{ $name }}
+                        </option>
+                    @endforeach
+                </x-system.form-select>
+            </fieldset>
+
+            <hr class="system-divider">
+
+            <fieldset class="system-form-fieldset">
+                <legend class="system-form-legend">
+                    {{ __('user.login') }}
+                </legend>
+                <x-system.form-input
+                    autocomplete="email"
+                    error="{{ $errors['email'] ?? null }}"
+                    id="email"
+                    label="{{ __('user.email') }}"
+                    maxlength="90"
+                    name="email"
+                    required={{ true }}
+                    type="email"
+                    value="{{ $email ?? '' }}"
+                />
+                <x-system.form-input
+                    autocomplete="username"
+                    error="{{ $errors['username'] ?? null }}"
+                    id="username"
+                    label="{{ __('user.username') }}"
+                    maxlength="32"
+                    name="username"
+                    required={{ true }}
+                    type="text"
+                    value="{{ $username ?? '' }}"
+                />
+                <x-system.form-input
+                    autocomplete="new-password"
+                    error="{{ $errors['password'] ?? null }}"
+                    id="password"
+                    label="{{ __('user.password') }}"
+                    maxlength="32"
+                    name="password"
+                    required={{ true }}
+                    type="password"
+                />
+                <x-system.form-input
+                    autocomplete="new-password"
+                    error="{{ $errors['password2'] ?? null }}"
+                    id="password2"
+                    label="{{ __('user.repeatPassword') }}"
+                    maxlength="32"
+                    name="password2"
+                    required={{ true }}
+                    type="password"
+                />
+            </fieldset>
+
+            <hr class="system-divider">
+
+            {{-- Registering with a specific context --}}
+            @if ($currentContext)
+                @php
+                    $allowedReviewerUserGroups = [];
+                    foreach ($reviewerUserGroups[$currentContext->getId()] as $userGroup) {
+                        if ($userGroup->permitSelfRegistration) {
+                            $allowedReviewerUserGroups[] = $userGroup;
+                        }
+                    }
+                @endphp
+                @if (count($allowedReviewerUserGroups))
+                    <fieldset class="system-form-fieldset">
+                        <legend class="system-form-legend">
+                            {{ __('user.reviewerPrompt' ) }}
+                        </legend>
+                        @if (count($allowedReviewerUserGroups))
+                            <div class="system-form-checkboxes">
+                                @if (count($allowedReviewerUserGroups) === 1)
+                                    @php
+                                        $userGroupId = $allowedReviewerUserGroups[0]->id;
+                                    @endphp
+                                    <x-system.form-checkbox
+                                        checked="{{ in_array($userGroupId, $userGroupIds) }}"
+                                        id="reviewerGroup_{{ $userGroupId }}"
+                                        label="{{ __('user.reviewerPrompt.optin') }}"
+                                        name="reviewerGroup[{{ $userGroupId }}]"
+                                        value="1"
+                                    />
+                                @elseif (count($allowedReviewerUserGroups) > 1)
+                                    @foreach ($allowedReviewerUserGroups as $userGroup)
+                                        <x-system.form-checkbox
+                                            checked="{{ in_array($userGroup->id, $userGroupIds) }}"
+                                            id="reviewerGroup_{{ $userGroup->id }}"
+                                            label="{{ __('user.reviewerPrompt.userGroup', ['userGroup' => $userGroup->getLocalizedData('name')]) }}"
+                                            name="reviewerGroup[{{ $userGroup->id }}]"
+                                            value="1"
+                                        />
+                                    @endforeach
+                                @endif
+                            </div>
+                        @endif
+                        <x-system.form-input
+                            id="interests"
+                            label="{{ __('user.interests') }}"
+                            name="interests"
+                            type="text"
+                            value="{{ $interests ?? '' }}"
+                        />
+                    </fieldset>
+                    <hr class="system-divider">
+                @endif
+
+            {{-- Registering at the site level --}}
+            @else
+                <fieldset class="system-form-fieldset">
+                    <legend class="system-form-legend">
+                        {{ __('user.register.contextsPrompt') }}
+                    </legend>
+                    @php
+                        $canBeReviewer = false;
+                    @endphp
+                    @foreach ($contexts as $context)
+                        @php
+                            $allowedReaderGroups = [];
+                            foreach ($readerUserGroups[$context->getId()] as $userGroup) {
+                                if ($userGroup->permitSelfRegistration) {
+                                    $allowedReaderGroups[] = $userGroup;
+                                }
+                            }
+                            $allowedReviewerGroups = [];
+                            foreach ($reviewerUserGroups[$context->getId()] as $userGroup) {
+                                if ($userGroup->permitSelfRegistration) {
+                                    $allowedReviewerGroups[] = $userGroup;
+                                }
+                            }
+                            if (count($allowedReviewerGroups)) {
+                                $canBeReviewer = true;
+                            }
+                        @endphp
+                        <fieldset class="system-form-checkboxes">
+                            <legend class="system-form-checkboxes-legend">
+                                {{ $context->getLocalizedName() }}
+                            </legend>
+                            @foreach ($allowedReaderGroups as $userGroup)
+                                <x-system.form-checkbox
+                                    checked="{{ in_array($userGroup->id, $userGroupIds) }}"
+                                    id="readerGroup_{{ $userGroup->id }}"
+                                    label="{{ $userGroup->getLocalizedData('name') }}"
+                                    name="readerGroup[{{ $userGroup->id }}]"
+                                    value="1"
+                                />
+                            @endforeach
+                            @foreach ($allowedReviewerGroups as $userGroup)
+                                <x-system.form-checkbox
+                                    checked="{{ in_array($userGroup->id, $userGroupIds) }}"
+                                    id="reviewerGroup_{{ $userGroup->id }}"
+                                    label="{{ $userGroup->getLocalizedData('name') }}"
+                                    name="reviewerGroup[{{ $userGroup->id }}]"
+                                    value="1"
+                                />
+                            @endforeach
+                            @if (!$enableSiteWidePrivacyStatement && $context->getData('privacyStatement'))
+                                @php
+                                    $privacyUrl = ViewHelper::url(['context' => $context->getPath(), 'page' => 'about', 'op' => 'privacy']);
+                                    $id = 'privacyConsent[' . $context->getId() . ']';
+                                @endphp
+                                <x-system.form-checkbox
+                                    checked="{{ $privacyConsent[$context->getId()] ?? false }}"
+                                    error="{{ $errors[$id] ?? '' }}"
+                                    id="{{ $id }}"
+                                    label="{!! __('user.register.form.privacyConsentThisContext', ['privacyUrl' => $privacyUrl]) !!}"
+                                    name="{{ $id }}"
+                                    value="1"
+                                />
+                                @if ($errors[$id])
+                                    <div class="system-form-field-error" role="alert">
+                                        {!! $errors[$id] !!}
+                                    </div>
+                                @endif
+                            @endif
+                        </fieldset>
+                    @endforeach
+                    @if ($canBeReviewer)
+                        <x-system.form-input
+                            id="interests"
+                            label="{{ __('user.interests') }}"
+                            name="interests"
+                            type="text"
+                            value="{{ $interests ?? '' }}"
+                        />
+                    @endif
+                </fieldset>
+            @endif
+
+            {{-- Privacy consent --}}
+            @if ($currentContext)
+                <fieldset class="system-form-fieldset">
+                    <legend class="sr-only">
+                        {{ __('user.register.form.privacyConsentLabel') }}
+                    </legend>
+                    @php
+                        $privacyUrl = ViewHelper::url(['page' => 'about', 'op' => 'privacy']);
+                    @endphp
+                    <x-system.form-checkbox
+                        checked="{{ $privacyConsent ?? false }}"
+                        error="{{ $errors['privacyConsent'] ?? '' }}"
+                        id="privacyConsent"
+                        label="{!! __('user.register.form.privacyConsent', ['privacyUrl' => $privacyUrl]) !!}"
+                        name="privacyConsent"
+                        value="1"
+                    />
+                    <x-system.form-checkbox
+                        checked="{{ $emailConsent ?? false }}"
+                        id="emailConsent"
+                        label="{!! __('user.register.form.emailConsent', ['privacyUrl' => $privacyUrl]) !!}"
+                        name="emailConsent"
+                        value="1"
+                    />
+                    @if ($errors['privacyConsent'])
+                        <div class="system-form-field-error" role="alert">
+                            {!! $errors['privacyConsent'] !!}
+                        </div>
+                    @endif
+                </fieldset>
+            @endif
+
+            <div class="system-form-buttons">
+                <button class="system-button" type="submit">
+                    {{ __('plugins.themes.eidos.createAccount') }}
+                </button>
+
+                @php
+                    $rolesProfileUrl = ViewHelper::url(['page' => 'user', 'op' => 'profile', 'path' => 'roles']);
+                    $loginUrl = ViewHelper::url(['page' => 'login', 'source' => $rolesProfileUrl]);
+                @endphp
+                <a class="system-button-secondary" href="{{ $loginUrl }}">
+                    {{ __('user.login') }}
+                </a>
+            </div>
+        </form>
+    </div>
+</x-system.layout>

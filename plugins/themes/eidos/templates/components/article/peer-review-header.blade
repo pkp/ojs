@@ -1,0 +1,71 @@
+@props([
+    'recommendation' => '',
+    'title',
+    'subtitle' => '',
+    'closeLabel' => '',
+    'openLabel' => '',
+])
+
+@php
+    /**
+     * Get the icon for the review recommendation
+     *
+     * @see \PKP\submission\reviewer\recommendation\enums\ReviewRecommendationType
+     */
+    switch ($recommendation) {
+        case 1:
+            $icon = 'components/icons/review-approved';
+            break;
+        case 2:
+            $icon = 'components/icons/review-not-approved';
+            break;
+        case 3:
+            $icon = 'components/icons/review-revisions-requested';
+            break;
+        case 4:
+        default:
+            $icon = 'components/icons/review-comments';
+    }
+@endphp
+
+
+<accordion-header as="div" class="peer-review-header">
+    <accordion-trigger class="peer-review-trigger">
+        <div class="peer-review-trigger-left">
+            <h3 class="peer-review-trigger-title">
+                @includeIf($icon)
+                <span class="peer-review-trigger-title-text">
+                    {{ $title }}
+                </span>
+            </h3>
+            @if ($subtitle)
+                <div class="peer-review-trigger-subtitle">
+                    {{ $subtitle }}
+                </div>
+            @endif
+        </div>
+        <div class="peer-review-trigger-right">
+            <div class="peer-review-trigger-toggle">
+                <span class="peer-review-trigger-toggle-text peer-review-trigger-toggle-text-open">
+                    {{ $closeLabel }}
+                </span>
+                <span class="peer-review-trigger-toggle-text peer-review-trigger-toggle-text-closed">
+                    {{ $openLabel }}
+                </span>
+                <svg
+                    class="peer-review-trigger-toggle-icon"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M11.3933 14.7616L7 10.3683L7.86831 9.5L11.3933 13.025L14.9183 9.5L15.7866 10.3683L11.3933 14.7616Z"
+                        fill="currentColor"
+                    />
+                </svg>
+            </div>
+        </div>
+    </accordion-trigger>
+</accordion-header>

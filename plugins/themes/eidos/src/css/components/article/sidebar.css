@@ -1,0 +1,132 @@
+.article-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.article-sidebar-top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.article-sidebar {
+
+  & .article-download-button {
+    @apply button-highlight;
+    width: 100%;
+  }
+
+  & .article-download-button-text {
+    font-size: 1.125rem;
+  }
+
+  & .galley-link {
+    font-weight: 500;
+    font-size: 1.125rem;
+  }
+}
+
+.article-sidebar-cite-button,
+.article-sidebar-share-button {
+  @apply button;
+  width: 100%;
+}
+
+.article-sidebar-cite,
+.article-sidebar-share {
+
+  & .dropdown-content {
+    width: var(--reka-popover-trigger-width);
+    max-height: calc(var(--reka-popover-content-available-height) - 6rem);
+    overflow: auto;
+    z-index: 10;
+  }
+}
+.article-sidebar-share {
+
+  & .dropdown-content {
+    padding: 0.75rem;
+  }
+}
+
+.PkpCiteBody {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  /* Hide the bibliography number produced by some CSL styles */
+  & .csl-left-margin {
+    display: none;
+  }
+}
+
+.PkpCiteBody__output a {
+  @apply link
+}
+
+.PkpCiteBody__styleSelector {
+  @apply input-wrapper;
+}
+
+.PkpCiteBody__label {
+  @apply input-label;
+}
+
+.PkpCiteBody__select {
+  @apply input;
+}
+
+.PkpCiteBody__actions .PkpCopyToClipboard__button {
+  @apply button;
+}
+
+.PkpCiteBody__actions .PkpCopyToClipboard {
+  display: inline-block;
+  position: relative;
+}
+
+@media (min-width: 640px) {
+
+  .article-sidebar-top:has(.article-sidebar-cite):has(.article-sidebar-share) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    & .article-download,
+    & .article-download-button {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+    & .article-sidebar-cite {
+
+      & .dropdown-content {
+        min-width: 24rem;
+      }
+    }
+
+    & .article-sidebar-share {
+
+      & .dropdown-content {
+        min-width: 16rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .article-sidebar-cite {
+
+    & .dropdown-content {
+      max-height: calc(var(--reka-popover-content-available-height) - 1rem);
+    }
+  }
+
+  .article-sidebar-top:has(.article-sidebar-cite):has(.article-sidebar-share) {
+
+    & .article-sidebar-cite {
+      --dropdown-width-scale: 2.5
+    }
+  }
+}

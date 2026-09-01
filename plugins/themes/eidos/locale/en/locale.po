@@ -1,0 +1,389 @@
+msgid "plugins.themes.eidos.name"
+msgstr "Eidos"
+
+msgid "plugins.themes.eidos.description"
+msgstr "An official theme from PKP that is highly configurable."
+
+msgid "plugins.themes.eidos.changeLanguage"
+msgstr "Change Language"
+
+msgid "plugins.themes.eidos.loggedInAs"
+msgstr "Logged in as <strong>{$username}</strong>"
+
+msgid "plugins.themes.eidos.loginOrRegister"
+msgstr "Login or Register"
+
+msgid "plugins.themes.eidos.account"
+msgstr "Account"
+
+msgid "plugins.themes.eidos.privacyPolicy"
+msgstr "Privacy Policy"
+
+msgid "plugins.themes.eidos.usesOjs"
+msgstr "Hosted using <a href=\"{$urlOJS}\">Open Journal Systems</a> by <a href=\"{$urlPKP}\">Public Knowledge Project</a>."
+
+msgid "plugins.themes.eidos.viewAllReferences"
+msgstr "View all references"
+
+msgid "plugins.themes.eidos.viewAuthorDetails"
+msgstr "View author roles and details"
+
+msgid "plugins.themes.eidos.authorDetails"
+msgstr "Author Details"
+
+msgid "plugins.themes.eidos.metrics"
+msgstr "Metrics"
+
+msgid "plugins.themes.eidos.metricsText"
+msgstr "<strong>{$views}</strong> views and <strong>{$downloads}</strong> downloads since {$date}."
+
+msgid "plugins.themes.eidos.cite"
+msgstr "Cite"
+
+msgid "plugins.themes.eidos.share"
+msgstr "Share"
+
+msgid "plugins.themes.eidos.share.facebook"
+msgstr "Facebook"
+
+msgid "plugins.themes.eidos.share.whatsapp"
+msgstr "WhatsApp"
+
+msgid "plugins.themes.eidos.share.twitterX"
+msgstr "X / Twitter"
+
+msgid "plugins.themes.eidos.share.reddit"
+msgstr "Reddit"
+
+msgid "plugins.themes.eidos.share.linkedin"
+msgstr "LinkedIn"
+
+msgid "plugins.themes.eidos.share.telegram"
+msgstr "Telegram"
+
+msgid "plugins.themes.eidos.search.description"
+msgstr "Search all articles or browse every article in our <a href='{$url}'>back issues</a>."
+
+msgid "plugins.themes.eidos.search.description.site"
+msgstr "Search all articles or browse <a href='{$url}'>all journals</a>."
+
+msgid "plugins.themes.eidos.search.countResults"
+msgstr "{$number} Results"
+
+msgid "plugins.themes.eidos.search.showing"
+msgstr "Showing {$start}-{$end} articles matching the phrase <strong>{$phrase}</strong>."
+
+msgid "plugins.themes.eidos.search.noMatches"
+msgstr "No matches were found for the phrase <strong>{$phrase}</strong>."
+
+msgid "plugins.themes.eidos.search.changeSearch"
+msgstr "Change Your Search"
+
+msgid "plugins.themes.eidos.search.pageTitle"
+msgstr "Search Results: {$phrase}"
+
+msgid "plugins.themes.eidos.pagination.prompt"
+msgstr "Goto other pages"
+
+msgid "plugins.themes.eidos.pagination.goToPage"
+msgstr "Goto {$page}"
+
+msgid "plugins.themes.eidos.pagination.nextPage"
+msgstr "Goto next page"
+
+msgid "plugins.themes.eidos.pagination.previousPage"
+msgstr "Goto previous page"
+
+msgid "plugins.themes.eidos.category.browseFullArchive"
+msgstr "Browse the full archive"
+
+msgid "plugins.themes.eidos.category.showing"
+msgstr "Showing {$start}-{$end} of {$total} articles in this category."
+
+msgid "plugins.themes.eidos.allIssues"
+msgstr "All Issues"
+
+msgid "plugins.themes.eidos.issues.showing"
+msgstr "Showing {$start}-{$end} of {$total} issues of <strong>{$context}</strong>."
+
+msgid "plugins.themes.eidos.fromUntilCurrent"
+msgstr "{$from} &ndash; current"
+
+msgid "plugins.themes.eidos.loginTo"
+msgstr "Sign in to your account at {$to}."
+
+msgid "plugins.themes.eidos.registerAt"
+msgstr "Sign up for a new account at {$at}."
+
+msgid "plugins.themes.eidos.createAccount"
+msgstr "Create Account"
+
+msgid "plugins.themes.eidos.manageNotifications"
+msgstr "Manage Notifications"
+
+msgid "plugins.themes.eidos.backToTitle"
+msgstr "Back to {$title}"
+
+msgid "plugins.themes.eidos.skip.userNav"
+msgstr "Skip to login and user account menu"
+
+msgid "plugins.themes.eidos.skip.searchForm"
+msgstr "Skip to search form"
+
+msgid "plugins.themes.eidos.skip.searchResults"
+msgstr "Skip to search results"
+
+msgid "plugins.themes.eidos.option.header.label"
+msgstr "Header"
+
+msgid "plugins.themes.eidos.option.header.description"
+msgstr "Choose the layout of the logo and navigation menus in the header of your site. The default layouts work for most sites. Only use the One Line option if you have a small number of items in your navigation menu."
+
+msgid "plugins.themes.eidos.option.header.default"
+msgstr "Default"
+
+msgid "plugins.themes.eidos.option.header.default-boxed"
+msgstr "Boxed Layout"
+
+msgid "plugins.themes.eidos.option.header.line"
+msgstr "One Line (logo and navigation menu on one line)"
+
+msgid "plugins.themes.eidos.option.tagline.label"
+msgstr "Tagline"
+
+msgid "plugins.themes.eidos.option.tagline.description"
+msgstr "A short description, motto or title to display beside the journal's logo. This will not be displayed if no logo is uploaded."
+
+msgid "plugins.themes.eidos.option.homepageImagePosition.label"
+msgstr "Homepage Image Position"
+
+msgid "plugins.themes.eidos.option.homepageImagePosition.description"
+msgstr "Choose how to display the Homepage Image on the header of your website. The Homepage Image can be uploaded in the <a href='#appearance/appearance-setup'>Appearance > Setup</a> settings."
+
+msgid "plugins.themes.eidos.option.homepageImagePosition.above"
+msgstr "Above Header"
+
+msgid "plugins.themes.eidos.option.homepageImagePosition.behind"
+msgstr "Behind Header"
+
+msgid "plugins.themes.eidos.option.homepageImagePosition.below"
+msgstr "Below Header"
+
+msgid "plugins.themes.eidos.option.homepageImagePosition.none"
+msgstr "Don't show the homepage image in the header"
+
+msgid "plugins.themes.eidos.option.siteWidth.label"
+msgstr "Site Width"
+
+msgid "plugins.themes.eidos.option.siteWidth.description"
+msgstr "Choose how your site should appear when viewed on on very large screens. If you use the Homepage Image in your header, you may want to choose Fixed Width to prevent the image from becoming too large."
+
+msgid "plugins.themes.eidos.option.siteWidth.full"
+msgstr "Full Width - The header and footer will as wide as the full width of the screen."
+
+msgid "plugins.themes.eidos.option.siteWidth.fixed"
+msgstr "Fixed Width - On very large screens, the header and footer will centered on the screen."
+
+msgid "plugins.themes.eidos.option.font.label"
+msgstr "Base Font"
+
+msgid "plugins.themes.eidos.option.font.description"
+msgstr "Select the font to use for the main body text, such as paragraphs and long blocks of text."
+
+msgid "plugins.themes.eidos.option.titlesFont.label"
+msgstr "Headings and Titles Font"
+
+msgid "plugins.themes.eidos.option.titlesFont.description"
+msgstr "Select the font to use for titles, headings and other large text."
+
+msgid "plugins.themes.eidos.option.actionsFont.label"
+msgstr "Buttons, Menus and Forms Font"
+
+msgid "plugins.themes.eidos.option.actionsFont.description"
+msgstr "Select the font to use for interactive elements, such as buttons, navigation menus, and forms."
+
+msgid "plugins.themes.eidos.option.highlightArticleMetadata.label"
+msgstr "Article Highlight Metadata"
+
+msgid "plugins.themes.eidos.option.highlightArticleMetadata.description"
+msgstr "Select the article metadata that you want to show at the top of the article landing page."
+
+msgid "plugins.themes.eidos.option.sidebarArticleMetadata.label"
+msgstr "Article Sidebar Metadata"
+
+msgid "plugins.themes.eidos.option.sidebarArticleMetadata.description"
+msgstr "Select the article metadata that you want to show in the sidebar on the article landing page."
+
+msgid "plugins.themes.eidos.option.shareOptions.label"
+msgstr "Social Share Options"
+
+msgid "plugins.themes.eidos.option.shareOptions.description"
+msgstr "Choose which options readers should have to share an article from the article landing page. Select none of the options to hide the share button."
+
+msgid "plugins.themes.eidos.option.issueToc.label"
+msgstr "Issue Table of Contents"
+
+msgid "plugins.themes.eidos.option.issueToc.description"
+msgstr "Select how to display articles in the issue table of contents."
+
+msgid "plugins.themes.eidos.option.issueToc.default"
+msgstr "Don't show a link to download galleys or article cover images."
+
+msgid "plugins.themes.eidos.option.issueToc.galleys"
+msgstr "Show a link to download galleys."
+
+msgid "plugins.themes.eidos.option.issueToc.covers"
+msgstr "Show the article cover image."
+
+msgid "plugins.themes.eidos.option.issueArchives.label"
+msgstr "Issue Archives"
+
+msgid "plugins.themes.eidos.option.issueArchives.description"
+msgstr "Select how to display the list of published issues in the archive."
+
+msgid "plugins.themes.eidos.option.issueArchives.default"
+msgstr "Show detailed issue summaries with the cover image, volume, number, title, and description. (Default)"
+
+msgid "plugins.themes.eidos.option.issueArchives.covers"
+msgstr "Show a gallery of issue cover images."
+
+msgid "plugins.themes.eidos.option.issueArchives.list"
+msgstr "Show short issue summaries with the volume, number, and title. (Recommended for large back catalogs.)"
+
+msgid "plugins.themes.eidos.option.homepageBlocks.label"
+msgstr "Homepage Blocks"
+
+msgid "plugins.themes.eidos.option.homepageBlocks.description"
+msgstr "Select which blocks to show on your homepage."
+
+msgid "plugins.themes.eidos.option.homepageBlocks.how-to-submit"
+msgstr "How to Submit"
+
+msgid "plugins.themes.eidos.option.homepageBlocks.aboutContext"
+msgstr "About the Journal with Homepage Menu"
+
+msgid "plugins.themes.eidos.option.homepageBlocks.aboutSite"
+msgstr "About the Site with Homepage Menu"
+
+msgid "plugins.themes.eidos.option.homepageBlocks.contexts"
+msgstr "List of Journals"
+
+msgid "plugins.themes.eidos.option.homepageBlocks.contexts.desc"
+msgstr "View the latest research from our academic journals or <a href='{{ $searchUrl }}'>search all journals</a>."
+
+msgid "plugins.themes.eidos.option.howToSubmitTitle.label"
+msgstr "How to Submit - Title"
+
+msgid "plugins.themes.eidos.option.howToSubmitTitle.description"
+msgstr "Change the title for the How to Submit block on the homepage."
+
+msgid "plugins.themes.eidos.option.howToSubmitText.label"
+msgstr "How to Submit - Text"
+
+msgid "plugins.themes.eidos.option.howToSubmitText.description"
+msgstr "Change the short prompt about making a submission to this journal."
+
+msgid "plugins.themes.eidos.option.howToSubmitText.default"
+msgstr "Read our author guidelines and learn how to submit to {$journalName}."
+
+msgid "plugins.themes.eidos.option.howToSubmitAction.label"
+msgstr "How to Submit - Button"
+
+msgid "plugins.themes.eidos.option.howToSubmitAction.description"
+msgstr "Change the text on the button to view the submissions page."
+
+msgid "plugins.themes.eidos.option.howToSubmitAction.default"
+msgstr "How to Submit"
+
+msgid "plugins.themes.eidos.option.homepageBlocks.latestArticlesTitle.label"
+msgstr "Latest Publications - Title"
+
+msgid "plugins.themes.eidos.option.homepageBlocks.latestArticlesTitle.desc"
+msgstr "Change the title shown for the Latest Publications blocks."
+
+msgid "plugins.themes.eidos.option.homepageBlocks.latestArticlesDescription.label"
+msgstr "Latest Publications - Description"
+
+msgid "plugins.themes.eidos.option.homepageBlocks.latestArticlesDescription.desc"
+msgstr "Change the short descripion shown for the Latest Publications blocks."
+
+msgid "plugins.themes.eidos.option.homepageBlocks.searchBlockTitle.label"
+msgstr "Search Block - Title"
+
+msgid "plugins.themes.eidos.option.homepageBlocks.searchBlockTitle.desc"
+msgstr "Change the title shown for the Search block."
+
+msgid "plugins.themes.eidos.option.homepageBlocks.searchBlockDescription.label"
+msgstr "Search Block - Description"
+
+msgid "plugins.themes.eidos.option.homepageBlocks.searchBlockDescription.desc"
+msgstr "Change the short descripion shown for the Search block."
+
+msgid "plugins.themes.eidos.option.homepageBlocks.browseByCategoryTitle.label"
+msgstr "Browse By Category - Title"
+
+msgid "plugins.themes.eidos.option.homepageBlocks.browseByCategoryTitle.desc"
+msgstr "Change the title shown for the Browse By Category block."
+
+msgid "plugins.themes.eidos.option.homepageBlocks.browseByCategoryDescription.label"
+msgstr "Browse By Category - Description"
+
+msgid "plugins.themes.eidos.option.homepageBlocks.browseByCategoryDescription.desc"
+msgstr "Change the short descripion shown for the Browse By Category block."
+
+msgid "plugins.themes.eidos.option.colorMode.label"
+msgstr "Color Options Mode"
+
+msgid "plugins.themes.eidos.option.colorMode.description"
+msgstr "Most journals should use the simple mode. The advanced mode provides designers with more control, but misuse may cause some text on your site to be inaccessible."
+
+msgid "plugins.themes.eidos.option.colorMode.default"
+msgstr "Simple Mode: Choose one or two colors for your site."
+
+msgid "plugins.themes.eidos.option.colorMode.advanced"
+msgstr "Advanced Mode: Set different colors for headers, footers, buttons, text, links and more. "
+
+msgid "plugins.themes.eidos.option.primaryColor.label"
+msgstr "Primary Color"
+
+msgid "plugins.themes.eidos.option.primaryColor.description"
+msgstr "The dominant color of your website used for the header background."
+
+msgid "plugins.themes.eidos.option.accentColor.label"
+msgstr "Accent Color"
+
+msgid "plugins.themes.eidos.option.accentColor.description"
+msgstr "The color used for links and buttons. Choose a dark color that is easy to read against a white background."
+
+msgid "plugins.themes.eidos.option.pageBackgroundColor.label"
+msgstr "Page Background Color"
+
+msgid "plugins.themes.eidos.option.pageTextColor.label"
+msgstr "Page Text Color"
+
+msgid "plugins.themes.eidos.option.pageLinkColor.label"
+msgstr "Page Link Color"
+
+msgid "plugins.themes.eidos.option.headerBackgroundColor.label"
+msgstr "Header Background Color"
+
+msgid "plugins.themes.eidos.option.headerTextColor.label"
+msgstr "Header Text Color"
+
+msgid "plugins.themes.eidos.option.buttonBackgroundColor.label"
+msgstr "Button Background Color"
+
+msgid "plugins.themes.eidos.option.buttonTextColor.label"
+msgstr "Button Text Color"
+
+msgid "plugins.themes.eidos.option.blockBackgroundColor.label"
+msgstr "Block Background Color"
+
+msgid "plugins.themes.eidos.option.blockTextColor.label"
+msgstr "Block Text Color"
+
+msgid "plugins.themes.eidos.option.footerBackgroundColor.label"
+msgstr "Footer Background Color"
+
+msgid "plugins.themes.eidos.option.footerTextColor.label"
+msgstr "Footer Text Color"

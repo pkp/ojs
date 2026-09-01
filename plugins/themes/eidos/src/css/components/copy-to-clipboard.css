@@ -1,0 +1,34 @@
+.PkpCopyToClipboard {
+  position: relative;
+}
+
+.PkpCopyToClipboard__alert {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.875rem;
+  line-height: 1;
+  padding: 0.5em;
+  background: var(--color-button-text);
+  color: var(--color-button-background);
+  border-radius: var(--radius);
+
+  &.v-enter-active,
+  &.v-leave-active {
+    transition: all 0.35s;
+  }
+
+  &.v-enter-from,
+  &.v-leave-to {
+    opacity: 0;
+  }
+
+  &.v-enter-from {
+    transform: translate(-50%, 0);
+  }
+
+  &.v-leave-to {
+    transform: translate(-50%, -100%);
+  }
+}

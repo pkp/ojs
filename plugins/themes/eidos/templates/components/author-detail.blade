@@ -1,0 +1,65 @@
+<div class="author-detail">
+    <div class="author-detail-top">
+        <h4 class="author-detail-name">
+            {{ $author->getFullName() }}
+            @if ($author->getData('orcid'))
+                <x-orcid-link
+                    class="author-detail-orcid"
+                    name="{{ $author->getFullName() }}"
+                    orcid="{{ $author->getData('orcid') }}"
+                    :is-verified="$author->hasVerifiedOrcid()"
+                />
+            @endif
+        </h4>
+        @if(count($author->getAffiliations()))
+            <div class="author-detail-affiliations">
+                @foreach($author->getAffiliations() as $affiliation)
+                    <div class="author-detail-affiliation">
+                        @if($affiliation->getRor())
+                            <a
+                                class="author-detail-affiliation-link"
+                                href="{{ $affiliation->getRor() }}"
+                            >
+                                {{ $affiliation->getLocalizedName() }}
+                                {!! $rorIdIcon !!}
+                            </a>
+                        @else
+                            <span>
+                                {{ $affiliation->getLocalizedName() }}
+                            </span>
+                        @endif
+                    </div>
+                @endforeach
+            </div>
+        @endif
+    </div>
+
+    @if(count($author->getCreditRoles()))
+        <div class="author-detail-credit">
+            <div class="sr-only">
+                {{ __('submission.submit.creditRoles.label') }}
+            </div>
+            @foreach ($author->getCreditRoles() as $credit)
+                <a
+                    class="author-detail-credit-role"
+                    href="{{ $credit['role'] }}"
+                    target="_blank"
+                >
+                    {{ $creditRoleTerms['roles'][$credit['role']] }}
+                    @if ($creditRoleTerms['degrees'][$credit['degree']])
+                        {{ $creditRoleTerms['degrees'][$credit['degree']] }}
+                    @endif
+                </a>
+                @if ($loop->iteration < count($author->getCreditRoles()))
+                    {{ __('common.commaListSeparator') }}
+                @endif
+            @endforeach
+        </div>
+    @endif
+
+    @if ($author->getLocalizedData('biography'))
+        <div class="author-detail-biography">
+            {!! ViewHelper::sanitizeHtml($author->getLocalizedData('biography')) !!}
+        </div>
+    @endif
+</div>

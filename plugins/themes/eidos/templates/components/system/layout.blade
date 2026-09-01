@@ -1,0 +1,49 @@
+{{--
+
+System Layout
+
+The layout template used for system pages, such as login
+and registration, error messages, etc.
+
+--}}
+
+<!doctype html>
+<html lang="{{ str_replace('_', '-', $currentLocale) }}" xml:lang="{{ str_replace('_', '-', $currentLocale) }}">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ $pageTitle }}</title>
+    @if ($description)
+        <meta name="description" content="{{ ViewHelper::html2text($description) }}">
+    @endif
+    @loadHeader(['context' => 'system'])
+    @loadStylesheet(['context' => 'system'])
+    <x-header.default-fonts />
+    @if ($head && !$head->isEmpty())
+        {{ $head }}
+    @endif
+</head>
+
+<body
+    {{
+        $attributes->merge([
+            'class' => join(' ', [
+                'system',
+                $bodyClasses,
+            ]),
+            'dir' => $currentLocaleLangDir ?? 'ltr',
+        ])
+    }}
+>
+
+    <div class="system-bg">
+        <div class="system-panel">
+            {{ $slot }}
+        </div>
+    </div>
+
+    @loadScript(['context' => 'system'])
+</body>
+
+</html>
