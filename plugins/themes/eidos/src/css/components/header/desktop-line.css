@@ -1,0 +1,107 @@
+.header-desktop-line {
+  --header-height: 5rem;
+
+  & .header-desktop-row {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    height: var(--header-height);
+  }
+
+  & .header-desktop-context {
+    max-width: 33%;
+    flex-shrink: 0;
+  }
+
+  .header-desktop-name {
+    position: relative;
+    line-height: 1.25;
+  }
+
+  .header-desktop-name-xs {
+    top: -0.25rem;
+  }
+
+  .header-desktop-name-sm {
+    top: -0.125rem;
+  }
+
+  & .header-desktop-logo {
+    max-height: calc(var(--header-height) - 2rem);
+  }
+
+  & .header-utility-menu {
+    margin-inline-start: auto;
+  }
+
+  & .header-desktop-behind {
+    max-height: var(--header-height);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: var(--radius);
+  }
+
+  & .menu-dropdowns-button {
+    max-height: 6rem;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  /**
+   * .header-desktop-inner will scroll with the
+   * screen while the rest of the header scrolls
+   * away.
+   *
+   * display: contents allows .header-desktop-inner
+   * to "stick" to its next ancestor. Otherwise, it
+   * would scroll away with the rest of the header.
+   */
+  .header-desktop-line {
+    display: contents;
+
+    & .header-desktop-inner {
+      position: sticky;
+      top: 0;
+      z-index: 999999;
+    }
+  }
+}
+
+@media (min-width: 1600px) {
+
+  /**
+   * Header will "detach" from the top and side of the
+   * viewport and float above the page content.
+   */
+  .header-desktop-line {
+    --header-width: 1536px;
+    display: block;
+    min-height: calc(var(--header-height) + 2rem);
+
+    & .header-desktop-inner {
+      position: fixed;
+      width: var(--header-width);
+      top: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: var(--radius);
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+
+  .header-desktop-line {
+    --header-width: 1792px;
+
+    & .header-desktop-name-xs {
+      top: -0.125rem;
+    }
+
+    & .header-desktop-name-sm {
+      top: 0;
+    }
+  }
+}

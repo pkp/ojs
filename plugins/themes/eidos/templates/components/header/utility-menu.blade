@@ -1,0 +1,29 @@
+<div class="header-utility-menu menu-dropdowns menu-dropdowns-align-end" data-vue-root>
+    <navigation-menu-root class="menu-dropdowns-nav">
+        <navigation-menu-list class="menu-dropdowns-list">
+            <navigation-menu-item class="menu-dropdowns-item">
+                <navigation-menu-link
+                    class="menu-dropdowns-button"
+                    href="{{ ViewHelper::url(['page' => 'search']) }}"
+                >
+                    @include('components/icons/search')
+                    {{ __('common.search') }}
+                </navigation-menu-link>
+            </navigation-menu-item>
+            <navigation-menu-item class="menu-dropdowns-item" id="skip-to-user-nav-desktop">
+                <navigation-menu-trigger
+                    aria-label={{ __('plugins.themes.eidos.account') }}
+                    class="header-utility-menu-icon menu-dropdowns-button tab-focus"
+                >
+                    @include('components/icons/circle-user')
+                    <div class="menu-dropdowns-arrow" aria-hidden="true">
+                        <svg width="10" height="5" rounded="false" viewBox="0 0 12 6" preserveAspectRatio="none" class="dropdown-arrow"><path d="M0 0L6 6L12 0"></path></svg>
+                    </div>
+                </navigation-menu-trigger>
+                <navigation-menu-content class="menu-dropdowns-content dropdown-content">
+                    <x-header.user-options />
+                </navigation-menu-content>
+            </navigation-menu-item>
+        </navigation-menu-list>
+    </navigation-menu-root>
+</div>

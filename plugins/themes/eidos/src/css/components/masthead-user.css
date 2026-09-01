@@ -1,0 +1,21 @@
+.masthead-user {
+  display: flex;
+  flex-direction: column;
+}
+
+.masthead-user-name {
+  font-weight: 500;
+}
+
+.masthead-user-orcid {
+  display: inline-block;
+  width: 1.5em;
+  height: auto;
+  position: relative;
+  top: 0.25em;
+}
+
+.masthead-user-date-start {
+  font-weight: 400;
+  font-size: 0.875em;
+}

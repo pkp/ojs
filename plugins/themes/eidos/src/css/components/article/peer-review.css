@@ -1,0 +1,253 @@
+.article-tab-peer-review-not-available {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  max-width: 30em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.article-tab-peer-review-tabs-header,
+.article-tab-peer-review-tabs-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 100%;
+}
+
+.article-tab-peer-review-tabs-label {
+  font-weight: 500;
+}
+
+.article-tab-peer-review-tabs-button {
+  @apply button;
+  max-width: 100%;
+
+  &[data-active] {
+    @apply button-highlight;
+  }
+}
+
+.peer-reviews {
+  margin-top: 4rem;
+}
+
+.peer-reviews-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.peer-reviews-items {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.peer-reviews-item {
+  border: 1px solid var(--color-page-text);
+  border-radius: var(--radius);
+}
+
+.peer-review-trigger {
+  @apply tab-focus;
+  width: 100%;
+  padding: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+
+  &[aria-expanded="false"]:hover {
+    outline: 2px solid var(--color-page-text);
+  }
+}
+
+.peer-review-trigger {
+
+  &:focus-visible {
+    outline-offset: 0;
+  }
+}
+
+.peer-reviews-item-author-response {
+  background: var(--color-block-background);
+  color: var(--color-block-text);
+  border-radius: var(--radius);
+}
+
+.peer-reviews-item-author-response .peer-review-trigger {
+
+  &[aria-expanded="false"]:hover,
+  &:focus-visible {
+    outline-color: var(--color-block-text);
+    outline-offset: -4px;
+  }
+}
+
+.peer-review-trigger-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.peer-review-trigger-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.peer-review-trigger-subtitle {
+  padding-inline-start: 2rem;
+}
+
+.peer-review-trigger-right,
+.peer-review-trigger-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.peer-review-trigger-toggle-text {
+  @apply sr-only;
+}
+
+.peer-review-trigger-toggle-text {
+  display: none;
+}
+
+.peer-review-trigger[data-state="open"] .peer-review-trigger-toggle-text-open {
+  display: block;
+}
+
+.peer-review-trigger[data-state="closed"] .peer-review-trigger-toggle-text-closed {
+  display: block;
+}
+
+.peer-review-trigger-toggle-icon {
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.peer-review-trigger[data-state="open"] .peer-review-trigger-toggle-icon {
+  transform: scaleY(-1);
+}
+
+.peer-review-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.peer-review-content-date {
+  font-weight: 500;
+}
+
+.peer-review-content-doi {
+  font-size: 0.875rem;
+
+  & a {
+    @apply link;
+  }
+}
+
+.peer-review-content-author-name {
+  position: relative;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.peer-review-content-author-orcid {
+  flex-shrink: 0;
+  display: inline-block;
+  position: relative;
+  top: 0.25em;
+
+  & svg {
+    width: 1.5rem;
+  }
+}
+
+.peer-review-content-competing-interests {
+  padding: 0.75rem;
+  border: 1px solid;
+  border-radius: var(--radius);
+}
+
+.peer-review-content-competing-interests-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.peer-review-content-competing-interests-statement {
+  @apply html-text;
+  margin-top: 0.5rem;
+}
+
+.peer-review-content-comment,
+.peer-review-content-response-text {
+  @apply html-text;
+}
+
+.peer-review-content-question-text {
+  margin-top: 1.5rem;
+  font-weight: 700;
+}
+
+.peer-review-content-question:first-child .peer-review-content-question-text {
+  margin-top: 0;
+}
+
+.peer-review-content-question-text + .peer-review-content-response {
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+
+  .peer-review-content {
+    padding-top: 1.5rem;
+    padding-inline-end: 1rem;
+    padding-inline-start: 2.75rem;
+    padding-bottom: 2.75rem;
+  }
+
+  .peer-review-content-competing-interests {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .peer-review-trigger-toggle-text {
+    @apply not-sr-only;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 1536px) {
+
+
+  .peer-review-trigger {
+    padding: 1rem;
+  }
+
+  .peer-review-trigger-toggle-text {
+    font-size: 1rem;
+  }
+
+  .peer-review-content {
+    padding-inline-start: 3rem;
+    padding-bottom: 3rem;
+  }
+}

@@ -1,0 +1,104 @@
+<x-system.layout
+    pageTitle="{{ __('user.login') }}"
+>
+    <div class="system-main">
+        <div class="system-header">
+            <h1 class="system-title">
+                {{ __('user.login') }}
+            </h1>
+            <p class="system-desc">
+                @php
+                    $siteName = $currentContext
+                        ? $currentContext->getLocalizedName()
+                        : $site->getLocalizedTitle();
+                @endphp
+                {!!
+                    __('plugins.themes.eidos.loginTo', [
+                        'to' => '<a href="' . ViewHelper::url(['page' => 'index']) . '">' . $siteName . '</a>'
+                    ])
+                !!}
+            </p>
+        </div>
+        <form
+            class="system-form"
+            method="post"
+            action="{{ $loginUrl }}"
+        >
+            {!! ViewHelper::csrfFormField() !!}
+            @if ($source)
+                <input type="hidden" name="source" value="{{ $source }}" />
+            @endif
+
+            @if ($loginMessage)
+                <p class="system-form-msg">
+                    {!! ViewHelper::sanitizeHtml($loginMessage) !!}
+                </p>
+            @endif
+            @if ($error)
+                <div class="system-form-error" role="alert">
+                    {{ __($error, ['reason' => $reason]) }}
+                </div>
+            @endif
+            <x-system.form-input
+                autocomplete="username"
+                error="{{ null }}"
+                id="username"
+                label="{{ __('user.usernameOrEmail') }}"
+                name="username"
+                type="text"
+                required={{ true }}
+                value="{{ $username ?? '' }}"
+            />
+            <x-system.form-input
+                autocomplete="password"
+                error="{{ null }}"
+                id="password"
+                label="{{ __('user.password') }}"
+                name="password"
+                type="password"
+                required={{ true }}
+            >
+                <div>
+                    <a class="system-link" href="{{ ViewHelper::url(['page' => 'login', 'op' => 'lostPassword']) }}">
+                        {{ __('user.login.forgotPassword') }}
+                    </a>
+                </div>
+            </x-system.form-input>
+            <x-system.form-checkbox
+                checked="{{ $remember ?? false}}"
+                id="remember"
+                label="{{ __('user.login.rememberUsernameAndPassword') }}"
+                name="remember"
+                value="1"
+            />
+
+            @if ($recaptchaPublicKey)
+                <div class="g-recaptcha" data-sitekey="{{ $recaptchaPublicKey }}"></div>
+                <label for="g-recaptcha-response" style="display:none;" hidden>Recaptcha response</label>
+            @endif
+
+            @if ($altchaEnabled)
+                <altcha-widget challengejson='@json($altchaChallenge)' floating></altcha-widget>
+            @endif
+
+            <div class="system-form-buttons">
+                <button class="system-button" type="submit">
+                    {{ __('user.login') }}
+                </button>
+
+                @if(!$disableUserReg)
+                    @php
+                        $registerUrlParams = ['page' => 'user', 'op' => 'register'];
+                        if ($source) {
+                            $registerUrlParms['source'] = $source;
+                        }
+                    @endphp
+                    <a class="system-button-secondary" href="{{ ViewHelper::url($registerUrlParams)}}">
+                        {{ __('plugins.themes.eidos.createAccount') }}
+                    </a>
+                @endif
+            </div>
+
+        </form>
+    </div>
+</x-system.layout>

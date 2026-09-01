@@ -1,0 +1,19 @@
+@if ($currentPublication->getId() !== $publication->getId())
+    <x-notice>
+        <div>
+            {!!
+                __(
+                    'submission.outdatedVersion',
+                    [
+                        'datePublished' => ViewHelper::dateFormat($publication->getData('datePublished'), $dateFormatLong),
+                        'urlRecentVersion' => ViewHelper::url([
+                            'page' => 'article',
+                            'op' => 'view',
+                            'path' => $article->getBestId()
+                        ])
+                    ]
+                )
+            !!}
+        </div>
+    </x-notice>
+@endif

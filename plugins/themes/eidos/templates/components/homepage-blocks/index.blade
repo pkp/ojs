@@ -1,0 +1,15 @@
+@php
+    $blocks = $getBlocks($homepageBlocks, 'homepageBlocks');
+@endphp
+@if (count($blocks))
+    <div class="homepage-blocks">
+        @foreach ($blocks as $block)
+            <x-dynamic-component
+                :component="$block->component"
+                headingTag="h3"
+                :id="$block->id"
+                :title="$block->title"
+            />
+        @endforeach
+    </div>
+@endif

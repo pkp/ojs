@@ -1,0 +1,41 @@
+@php
+    $galleyTitle = __('submission.representationOfTitle', ['representation' => $galley->getLabel(), 'title' => $galleyPublication->getLocalizedFullTitle()]);
+    $backUrl = ViewHelper::url(['page' => 'article', 'op' => 'view', 'path' => $article->getBestId()]);
+
+    $urlParams = [
+        'page' => 'article',
+        'op' => 'download',
+        'path' => [$article->getBestId()],
+        'inline' => true
+    ];
+    if (!$isLatestPublication) {
+        $urlParams['path'][] = 'version';
+        $urlParams['path'][] = $galleyPublication->getId();
+    }
+    $urlParams['path'][] = $galley->getBestGalleyId();
+    $htmlUrl = ViewHelper::url($urlParams);
+@endphp
+
+<x-layout.galley
+    title="{{ $galleyTitle }}"
+    submissionTitle="{{ $publication->getLocalizedFullTitle() }}"
+    bodyClasses="page-galley page-galley-html"
+    backUrl="{{ $backUrl }}"
+    notice="{!!
+        !$isLatestPublication
+        ? ''
+        : __('submission.outdatedVersion', [
+            'datePublished' => ViewHelper::dateFormat($galleyPublication->getData('datePublished'), $dateFormatLong),
+            'urlRecentVersion' => $backUrl,
+        ])
+    !!}"
+>
+    <iframe
+        name="htmlFrame"
+        src="{{ $htmlUrl }}"
+        title="{{ $galleyTitle }}"
+        class="page-galley-iframe"
+        allowfullscreen
+        webkitallowfullscreen
+    ></iframe>
+</x-layout.galley>
