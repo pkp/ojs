@@ -24,6 +24,9 @@ use PKP\jobs\BaseJob;
 
 class CompileCounterSubmissionInstitutionDailyMetrics extends BaseJob
 {
+    /** @copydoc BaseJob::$isLongRunning */
+    protected bool $isLongRunning = true;
+
     /**
      * Create a new job instance.
      *

@@ -37,7 +37,7 @@ class UsageStatsLoader extends PKPUsageStatsLoader
     {
         $logFileName = basename($filePath);
         return [
-            new ProcessUsageStatsLogFile($filePath, $logFileName),
+            new ProcessUsageStatsLogFile($logFileName),
             new RemoveDoubleClicks($logFileName),
             new CompileUniqueInvestigations($logFileName),
             new CompileUniqueRequests($logFileName),
