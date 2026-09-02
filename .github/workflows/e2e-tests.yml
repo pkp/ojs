@@ -20,3 +20,7 @@ jobs:
       app: ojs
       app_repo: ${{ github.repository }}
       app_ref: ${{ github.sha }}
+      # The PR's branch name. When a pkp-e2e branch of the same name exists
+      # (a "companion" carrying the spec and test updates this change needs),
+      # the suite runs from it instead of pkp-e2e main.
+      companion_branch: ${{ github.head_ref || github.ref_name }}
