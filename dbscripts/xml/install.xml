@@ -15,8 +15,6 @@
 
 	<code function="createDirectories"/>
 
-	<migration class="PKP\migration\install\PublishPackageAssetsMigration" />
-
 	<migration class="APP\migration\install\JournalsMigration" />
 
 	<!-- PKP schema components -->
