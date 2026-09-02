@@ -98,7 +98,7 @@ class WorkflowHandler extends PKPWorkflowHandler
         $components[$issueEntryForm::FORM_ISSUE_ENTRY] = $this->getLocalizedForm($issueEntryForm, $submissionLocale, $locales);
         $templateMgr->registerClass($issueEntryForm::class, $issueEntryForm::class); // FORM_ISSUE_ENTRY
 
-        $canEditPublication = Repo::submission()->canEditPublication($submission->getId(), $request->getUser()->getId());
+        $canEditPublication = Repo::submission()->canEditPublication($latestPublication, $request->getUser());
 
         $jatsPanel = $this->getJatsPanel(
             $submission,
