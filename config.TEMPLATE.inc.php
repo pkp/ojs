@@ -644,6 +644,30 @@ log_stacks = daily
 ; to record all audit-log output.
 ; log_audit = Off
 
+;;; Log Viewer External Files ;;;
+;
+; Optional paths to external log files surfaced in the Log Viewer at
+; /index/admin/log-viewer, in addition to the application logs under
+; {files_dir}/logs/ and the scheduled-task and usage-stats logs.
+
+; For Nginx installations
+; nginx_error_log = /var/log/nginx/error.log
+
+; For Apache installations
+; apache_error_log = /var/log/apache2/error.log
+
+; PHP error logs (if not set, falls back to PHP's error_log ini setting)
+; php_error_log = /var/log/php/error.log
+
+; PostgreSQL logs (if using PostgreSQL)
+; postgres_log = /var/log/postgresql/postgresql.log
+
+; Supervisor logs (if using supervisor for the job daemon)
+; supervisor_log = /var/log/supervisor/supervisord.log
+
+; HTTP access logs (Nginx or Apache)
+; http_access_log = /var/log/nginx/access.log
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;
 ; Job Queues Settings ;
