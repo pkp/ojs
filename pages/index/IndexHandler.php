@@ -120,7 +120,7 @@ class IndexHandler extends PKPIndexHandler
             }
 
             $templateMgr->display('frontend/pages/indexJournal.tpl');
-            event(new UsageEvent(Application::ASSOC_TYPE_JOURNAL, $journal));
+            event(new UsageEvent(assocType: Application::ASSOC_TYPE_JOURNAL, context: $journal));
             return;
         } else {
             $journalDao = DAORegistry::getDAO('JournalDAO'); /** @var JournalDAO $journalDao */

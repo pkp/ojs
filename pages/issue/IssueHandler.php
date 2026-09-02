@@ -141,7 +141,7 @@ class IssueHandler extends Handler
             $pubIdPlugins = PluginRegistry::loadCategory('pubIds', true);
             $templateMgr->assign('pubIdPlugins', $pubIdPlugins);
             $templateMgr->display('frontend/pages/issue.tpl');
-            event(new UsageEvent(Application::ASSOC_TYPE_ISSUE, $journal, null, null, null, $issue));
+            event(new UsageEvent(assocType: Application::ASSOC_TYPE_ISSUE, context: $journal, issue: $issue));
         }
     }
 
@@ -211,7 +211,12 @@ class IssueHandler extends Handler
             if (!Hook::call('IssueHandler::download', [&$issue, &$galley])) {
                 $issueFileManager = new IssueFileManager($issue->getId());
                 if ($issueFileManager->downloadById($galley->getFileId(), (bool)$request->getUserVar('inline'))) {
-                    event(new UsageEvent(Application::ASSOC_TYPE_ISSUE_GALLEY, $request->getContext(), null, null, null, $issue, $galley));
+                    event(new UsageEvent(
+                        assocType: Application::ASSOC_TYPE_ISSUE_GALLEY,
+                        context: $request->getContext(),
+                        issue: $issue,
+                        issueGalley: $galley,
+                    ));
                     return true;
                 }
                 return false;

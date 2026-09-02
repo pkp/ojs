@@ -410,7 +410,13 @@ class ArticleHandler extends Handler
 
             if (!Hook::call('ArticleHandler::view', [&$request, &$issue, &$article, $publication])) {
                 $templateMgr->display('frontend/pages/article.tpl');
-                event(new UsageEvent(Application::ASSOC_TYPE_SUBMISSION, $context, $article, null, null, $this->issue));
+                event(new UsageEvent(
+                    assocType: Application::ASSOC_TYPE_SUBMISSION,
+                    context: $context,
+                    submission: $article,
+                    issue: $this->issue,
+                    publication: $publication,
+                ));
                 return;
             }
         } else {
@@ -568,7 +574,15 @@ class ArticleHandler extends Handler
                     if ($genre->getCategory() != Genre::GENRE_CATEGORY_DOCUMENT || $genre->getSupplementary() || $genre->getDependent()) {
                         $assocType = Application::ASSOC_TYPE_SUBMISSION_FILE_COUNTER_OTHER;
                     }
-                    event(new UsageEvent($assocType, $request->getContext(), $this->article, $this->galley, $submissionFile, $this->issue));
+                    event(new UsageEvent(
+                        assocType: $assocType,
+                        context: $request->getContext(),
+                        submission: $this->article,
+                        galley: $this->galley,
+                        submissionFile: $submissionFile,
+                        issue: $this->issue,
+                        publication: $this->publication,
+                    ));
                 }
                 $returner = true;
                 Hook::call('FileManager::downloadFileFinished', [&$returner]);

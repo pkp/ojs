@@ -16,6 +16,7 @@
 
 namespace APP\statistics;
 
+use APP\core\Application;
 use PKP\statistics\PKPStatisticsHelper;
 
 class StatisticsHelper extends PKPStatisticsHelper
@@ -40,5 +41,15 @@ class StatisticsHelper extends PKPStatisticsHelper
             self::STATISTICS_METRIC_REQUESTS,
             self::STATISTICS_METRIC_REQUESTS_UNIQUE,
         ];
+    }
+
+    /**
+     * @copydoc PKPStatisticsHelper::getItemRequestAssocTypes()
+     *
+     * Also counts JATS XML full-text downloads.
+     */
+    public static function getItemRequestAssocTypes(): array
+    {
+        return array_merge(parent::getItemRequestAssocTypes(), [Application::ASSOC_TYPE_JATS]);
     }
 }
