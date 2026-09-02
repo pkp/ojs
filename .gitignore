@@ -24,4 +24,3 @@ cypress/screenshots/
 .phpunit.result.cache
 /plugins/themes/default/js/lib/swiper/
 registry/uiLocaleKeysBackend.json
-public/vendor/
