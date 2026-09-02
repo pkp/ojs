@@ -1,0 +1,18 @@
+@if ($publication->getData('status') !== PKP\publication\PKPPublication::STATUS_PUBLISHED)
+    <x-notice>
+        <div>
+            {!!
+                __(
+                    'submission.viewingPreview',
+                    [
+                        'url' => ViewHelper::url([
+                            'page' => 'dashboard',
+                            'op' => 'editorial',
+                            'workflowSubmissionId' => $article->getId()
+                        ])
+                    ]
+                )
+            !!}
+        </div>
+    </x-notice>
+@endif

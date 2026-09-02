@@ -1,0 +1,51 @@
+@if (count($journals))
+    <x-homepage-blocks.default slug="contexts">
+        <div class="homepage-block-contexts-header">
+            <h2 class="homepage-block-contexts-title">
+                {{ __('search.allJournals') }}
+            </h2>
+            <div class="homepage-block-contexts-desc">
+                {!!
+                    ViewHelper::sanitizeHtml(
+                        __('plugins.themes.eidos.option.homepageBlocks.contexts.desc', [
+                            'url' => ViewHelper::url(['page' => 'search'])
+                        ]
+                    ))
+                !!}
+            </div>
+        </div>
+        @php
+            $count = count($journals);
+            if ($count > 4) {
+                $count = 'many';
+            }
+        @endphp
+        <ul class="homepage-block-contexts-list homepage-block-contexts-list-{{ $count }}">
+            @foreach ($journals as $context)
+                <li class="homepage-block-contexts-item">
+                    <article class="homepage-block-contexts-item-wrapper">
+                        <h2 class="homepage-block-contexts-item-title">
+                            <a href="{{ ViewHelper::url(['context' => $context->getPath()]) }}">
+                                {{ $context->getLocalizedName() }}
+                            </a>
+                        </h2>
+                        @if ($context->getLocalizedData('description'))
+                            <div class="homepage-block-contexts-item-desc">
+                                {!! ViewHelper::sanitizeHtml($context->getLocalizedData('description')) !!}
+                            </div>
+                        @endif
+                        <div class="homepage-block-contexts-item-actions">
+                            <x-arrow-link
+                                href="{{ ViewHelper::url(['context' => $context->getPath()]) }}"
+                                truncate="{{ true }}"
+                                tabindex="-1"
+                            >
+                                {{ __('common.view') }}
+                            </x-arrow-link>
+                        </div>
+                    </article>
+                </li>
+            @endforeach
+        </ul>
+    </x-homepage-blocks.default>
+@endif

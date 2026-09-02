@@ -1,0 +1,66 @@
+@if($latestPublicationsByCategory && $latestPublicationsByCategory->count())
+    <x-homepage-blocks.default slug="latest-articles-by-category">
+        <div class="homepage-block-latest-articles-by-category-header">
+            <h2 class="homepage-block-latest-articles-by-category-title">
+                {{ $latestPublicationsByCategoryTitle }}
+            </h2>
+            @if ($latestPublicationsByCategoryDescription)
+                <p class="homepage-block-latest-articles-by-category-desc">
+                    {!! ViewHelper::sanitizeHtml($latestPublicationsByCategoryDescription) !!}
+                </p>
+            @endif
+        </div>
+        @php
+            $count = $latestPublicationsByCategory->count();
+            if ($count > 4) {
+                $count = 'many';
+            }
+        @endphp
+        <ul class="homepage-block-latest-articles-by-category-list homepage-block-latest-articles-by-category-list-{{ $count }}">
+            @foreach ($latestPublicationsByCategory as $cat)
+                <li class="homepage-block-latest-articles-by-category-list-item">
+                    <h3 class="homepage-block-latest-articles-by-category-list-item-title">
+                        {{ $cat['category']->getLocalizedTitle() }}
+                    </h3>
+                    @if (!count($cat['submissions']))
+                        <p class="homepage-block-latest-articles-by-category-empty">
+                            {{ __('catalog.category.noItems') }}
+                        </p>
+                    @else
+                        <ul class="homepage-block-latest-articles-by-category-articles">
+                            @foreach($cat['submissions'] as $submission)
+                                <li class="homepage-block-latest-articles-by-category-article">
+                                    <a
+                                        class="homepage-block-latest-articles-by-category-article-link"
+                                        href="{{
+                                            ViewHelper::url([
+                                                'page' => 'article',
+                                                'op' => 'view',
+                                                'path' => $submission->getBestId(),
+                                            ])
+                                        }}"
+                                    >
+                                        <h4 class="homepage-block-latest-articles-by-category-article-title">
+                                            {{ $submission->getCurrentPublication()->getLocalizedFullTitle('html') }}
+                                        </h4>
+                                        <time class="homepage-block-latest-articles-by-category-article-date">
+                                            {{ ViewHelper::dateFormat($submission->getCurrentPublication()->getData('datePublished'), $dateFormatLong) }}
+                                        </time>
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
+                    <div class="homepage-block-latest-articles-by-category-list-item-actions">
+                        <x-arrow-link
+                            href="{{ ViewHelper::url(['page' => 'catalog', 'op' => 'category', 'path' => $cat['category']->getPath()]) }}"
+                            aria-label="{{ __('submissions.published.viewAllIn', ['name' => $cat['category']->getLocalizedTitle()]) }}"
+                        >
+                            {{ __('submissions.browseByCategory.viewCategory') }}
+                        </x-arrow-link>
+                    </div>
+                </li>
+            @endforeach
+        </ul>
+    </x-homepage-blocks.default>
+@endif

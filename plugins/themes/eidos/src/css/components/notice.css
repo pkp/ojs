@@ -1,0 +1,58 @@
+.notice {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--color-block-background);
+  color: var(--color-block-text);
+  border-radius: var(--radius);
+
+  & .button {
+    background: var(--color-block-text);
+    color: var(--color-block-background);
+    border-color: var(--color-block-text);
+
+    &:hover,
+    &:focus-visible {
+      outline-color: var(--color-block-text);
+    }
+  }
+}
+
+.notice-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  & a {
+    @apply link;
+    color: var(--color-block-text);
+
+    &:hover {
+      color: var(--color-block-text);
+    }
+  }
+}
+
+.notice-title {
+  margin-bottom: -1rem;
+  font-family: var(--font-titles);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.notice-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .notice-with-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 16rem;
+    align-items: center;
+    gap: 3rem;
+  }
+}

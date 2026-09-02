@@ -1,0 +1,53 @@
+.homepage-block-announcement {
+  width: 100%;
+  max-width: 1024px;
+
+  & .announcement-summary-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.25rem;
+  }
+
+  & .announcement-summary-title {
+    font-size: 1.125rem;
+  }
+
+  & .announcement-summary-date {
+    margin: 0;
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+
+  & .announcement-summary-desc {
+    display: none;
+  }
+
+  & .announcement-summary-actions {
+    margin-top: 2rem;
+  }
+
+  & .arrow-link {
+    text-decoration: none;
+  }
+
+  @media (min-width: 1024px) {
+
+
+    & .announcement-summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    & .announcement-summary-date {
+        font-size: 1rem;
+    }
+
+    & .announcement-summary-actions {
+      margin-top: 0;
+      flex-shrink: 0;
+    }
+  }
+}

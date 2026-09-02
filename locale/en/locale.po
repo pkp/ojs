@@ -336,6 +336,39 @@ msgstr "Published"
 msgid "submissions.published.latest"
 msgstr "Latest Publications"
 
+msgid "submissions.published.latest.description"
+msgstr "Read our most recent articles or browse every article in our <a href='{$url}'>back issues</a>."
+
+msgid "submissions.published.latest.description.site"
+msgstr "Read recently published articles or <a href='{$url}'>search all published work</a>."
+
+msgid "submissions.published.latestByCategory"
+msgstr "Latest Publications by Category"
+
+msgid "submissions.published.viewAllIn"
+msgstr "View all publications in {$name}"
+
+msgid "submissions.search.findArticle"
+msgstr "Find an Article"
+
+msgid "submissions.search.searchArchiveCount"
+msgstr "Search our archive of more than {$count} articles."
+
+msgid "submissions.search.searchBy"
+msgstr "Search by author, title or keyword"
+
+msgid "submissions.browseByCategory"
+msgstr "Browse by Category"
+
+msgid "submissions.browseByCategory.description"
+msgstr "Find articles across our main areas of coverage or browse every article in our <a href='{$url}'>back issues</a>."
+
+msgid "submissions.browseByCategory.viewCategory"
+msgstr "View Category"
+
+msgid "issues.recentIssues"
+msgstr "Recent Issues"
+
 msgid "submissions.initial"
 msgstr "Initial"
 

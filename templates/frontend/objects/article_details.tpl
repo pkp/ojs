@@ -510,7 +510,7 @@
 			{if $enablePublicComments}
 			    <div class="item comments">
 				    <section class="sub_item" data-vue-root>
-                        <h2 class="label"> {translate key="userComment.comments"} </h2>
+                        <h2 class="label"> {translate key="manager.userComment.comments"} </h2>
                         <pkp-scroll-to-comments></pkp-scroll-to-comments>
 				    </section>
 			    </div>

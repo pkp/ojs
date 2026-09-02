@@ -1,0 +1,34 @@
+{{--
+
+Navigation Menu
+
+This template displays a NavigationMenu in a vertical list.
+
+--}}
+
+@props([
+    'items' => [],
+    'id' => '',
+    'ulClass' => '',
+    'liClass' => '',
+])
+
+@if (count($items))
+    <ul id="{{ $id }}" class="menu {{ $ulClass }}">
+        @foreach ($items as $field => $item)
+            @if (!$item->navigationMenuItem->getIsDisplayed())
+                @continue
+            @endif
+            <li class="menu-item {{ $liClass }}">
+                <a class="menu-button" href="{{ $item->navigationMenuItem->getUrl() }}">
+                    {!! $item->navigationMenuItem->getLocalizedTitle() !!}
+                </a>
+                @if ($item->navigationMenuItem->getIsChildVisible())
+                    <div class="menu-submenu">
+                        <x-menu :items="$item->children" />
+                    </div>
+                @endif
+            </li>
+        @endforeach
+    </ul>
+@endif

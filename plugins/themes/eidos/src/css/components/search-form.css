@@ -1,0 +1,113 @@
+.search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.search-input-wrapper {
+  position: relative;
+
+  & svg {
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+  }
+}
+
+.search-input {
+  @apply input;
+  max-width: none;
+  padding: 0.5em;
+  padding-inline-start: 2.5rem;
+}
+
+.search-form-filters-fieldset {
+  @apply input-fieldset;
+}
+
+.search-form-filters-legend {
+  @apply input-legend;
+}
+
+.search-form-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.search-form-button {
+  @apply button;
+  @apply button-highlight;
+  width: 100%;
+}
+
+.search-form-has-query {
+
+  .search-form-footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  & .search-form-button {
+    width: auto;
+  }
+}
+
+.date-select {
+
+  & legend {
+    @apply input-label;
+    margin-bottom: 0.25rem;
+  }
+}
+
+.date-select-fields {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+.date-select-field {
+  width: 100%;
+
+  & label {
+    font-size: 0.875rem;
+  }
+
+  & select {
+    @apply input;
+    max-width: none;
+  }
+}
+
+.date-select-field-year {
+  flex-shrink: 0;
+  width: 6rem;
+}
+
+.date-select-field-month {
+  flex-grow: 1;
+  max-width: none;
+}
+
+.date-select-field-day {
+  flex-shrink: 0;
+  width: 4rem;
+}
+
+@media (min-width: 640px) {
+
+  .search-input-wrapper {
+
+    & svg {
+      left: 0.75rem;
+    }
+  }
+
+  .search-input {
+    padding: 0.75em;
+    padding-inline-start: 3rem;
+  }
+
+}

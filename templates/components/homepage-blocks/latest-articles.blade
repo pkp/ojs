@@ -1,0 +1,39 @@
+@if($latestPublications && $latestPublications->count())
+    <x-homepage-blocks.default slug="latest-articles">
+        <div class="homepage-block-latest-articles-header">
+            <h2 class="homepage-block-latest-articles-title">
+                {{ $latestPublicationsTitle }}
+            </h2>
+            @if ($latestPublicationsDescription)
+                <p class="homepage-block-latest-articles-desc">
+                    {!! ViewHelper::sanitizeHtml($latestPublicationsDescription) !!}
+                </p>
+            @endif
+        </div>
+        <ul class="homepage-block-latest-articles-list">
+            @foreach ($latestPublications as $submission)
+                {{--
+                    When viewing articles at the site level, we must pass
+                    the correct context to the article summary.
+                --}}
+                @php
+                    $submissionContext = $currentContext;
+                    if (!$submissionContext && $journals) {
+                        $submissionContext = array_find($journals, fn($context) => $context->getId() === $submission->getData('contextId'));
+                    }
+                @endphp
+                @if (!$submissionContext)
+                    @continue
+                @endif
+                <li class="homepage-block-latest-articles-list-item">
+                    <x-article-summary
+                        heading="h3"
+                        :contextPath="$submissionContext->getPath()"
+                        :$submission
+                        :sections="$sections ?? []"
+                    />
+                </li>
+            @endforeach
+        </ul>
+    </x-homepage-blocks.default>
+@endif

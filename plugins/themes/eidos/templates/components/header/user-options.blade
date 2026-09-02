@@ -1,0 +1,41 @@
+<div class="user-options">
+    @if (count($locales) > 1)
+        <div class="user-options-languages">
+            <h2 class="sr-only">
+                {{ __('plugins.themes.eidos.changeLanguage') }}
+            </h2>
+            @include('components/icons/circle-languages')
+            <div class="user-options-languages-list">
+                @foreach ($locales as $localeKey => $localeName)
+                    <a
+                        @class([
+                            'user-options-language',
+                            'user-options-language-selected' => $localeKey === $currentLocale,
+                            'tab-focus',
+                        ])
+                        href="{{ ViewHelper::url(['page' => 'user', 'op' => 'setLocale', 'path' => $localeKey]) }}"
+                    >
+                        {{ $localeName }}
+                    </a>
+                @endforeach
+            </div>
+        </div>
+    @endif
+    <div class="user-options-user-group">
+        <div class="user-options-logged-in-as">
+            @include('components/icons/circle-user')
+            @if ($isUserLoggedIn)
+                <x-header.logged-in-as />
+            @else
+                <a class="user-options-login" href="{{ ViewHelper::url(['page' => 'login']) }}">
+                    {{ __('plugins.themes.eidos.loginOrRegister') }}
+                </a>
+            @endif
+        </div>
+        @if ($isUserLoggedIn)
+            <nav class="user-options-user-menu">
+                @loadMenu(['name' => 'user', 'id' => 'nav-mobile-user', 'path' => 'components/menu'])
+            </nav>
+        @endif
+    </div>
+</div>

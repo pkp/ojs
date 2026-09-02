@@ -1,0 +1,14 @@
+<x-layout.basic
+    title="{{ $announcement->getLocalizedData('title') }}"
+    description="{{ ViewHelper::html2text($announcement->getLocalizedData('descriptionShort')) }}"
+    pageId="announcement"
+>
+    <div class="html-text">
+        @if($announcement->getLocalizedData('description'))
+            {!! ViewHelper::sanitizeHtml($announcement->getLocalizedData('description')) !!}
+        @else
+            {!! ViewHelper::sanitizeHtml($announcement->getLocalizedData('descriptionShort')) !!}
+        @endif
+    </div>
+  </div>
+</x-layout.basic>

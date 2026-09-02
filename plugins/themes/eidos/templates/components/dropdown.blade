@@ -1,0 +1,25 @@
+@props([
+    'class' => '',
+    'showClose' => false,
+    'triggerClass' => '',
+    'side' => 'bottom',
+])
+
+<div class="dropdown-root {{ $class }}" data-vue-root>
+    <popover-root class="dropdown">
+        <popover-trigger class="dropdown-trigger {{ $triggerClass }}">
+            {{ $trigger }}
+        </popover-trigger>
+        <popover-content
+            side="{{ $side }}"
+            class="dropdown-content"
+        >
+            {{ $slot }}
+            <popover-close class="dropdown-close @if ($showClose) dropdown-close-visible @endif">
+                <span class="sr-only">{{ __('common.close') }}</span>
+                @include('components/icons/close')
+            </popover-close>
+            <popover-arrow class="dropdown-arrow" />
+        </popover-content>
+    </popover-root>
+</div>

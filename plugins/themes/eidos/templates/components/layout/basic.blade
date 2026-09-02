@@ -1,0 +1,35 @@
+{{--
+
+Basic Layout
+
+This is the layout used for basic HTML content pages,
+like the about or contact page. It is also used for
+custom pages.
+
+--}}
+
+<x-layout
+    title="{{ $title }}"
+    description="{!! $description !!}"
+>
+
+    <main
+        class="page-container page-container-sm page-basic @if($pageId) page-{{ $pageId }} @endif"
+        id="skip-to-main"
+    >
+        <div class="page-heading">
+            <h1 class="page-title">
+                {{ $title }}
+            </h1>
+            @if ($subtitle)
+                <div class="page-subtitle">
+                    {!! $subtitle !!}
+                </div>
+            @endif
+        </div>
+        <div class="page-content">
+            {{ $slot }}
+        </div>
+    </main>
+
+</x-layout>

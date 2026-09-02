@@ -1,0 +1,50 @@
+.system-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em 1.25em;
+  min-height: 3rem;
+  background: var(--dark);
+  color: var(--light);
+  font-weight: 600;
+  line-height: 1.25;
+  border-radius: var(--radius);
+
+  &:focus-visible {
+    outline: 2px solid var(--dark);
+    outline-offset: 2px;
+    text-decoration: none;
+  }
+}
+
+.system-button-secondary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em 1.25em;
+  min-height: 3rem;
+  border: 1px solid;
+  border-radius: var(--radius);
+  font-weight: 600;
+  line-height: 1.25;
+
+  &:focus-visible {
+    outline: 2px solid var(--dark);
+    outline-offset: 2px;
+    text-decoration: none;
+  }
+}
+
+.system-button-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em 1.25em;
+  min-height: 3rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 0.15em;
+}

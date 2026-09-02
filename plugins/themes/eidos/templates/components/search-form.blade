@@ -1,0 +1,51 @@
+<form
+    class="search-form @if($query) search-form-has-query @endif"
+    method="get"
+    action="{{ ViewHelper::url(['page' => 'search']) }}"
+>
+    @foreach ($formUrlParameters as $key => $value)
+        <input type="hidden" name="{{ $key }}" value="{{ $value }}" />
+    @endforeach
+
+    <div class="search-input-wrapper">
+        <label for="search-input" class="sr-only">
+            {$label}
+        </label>
+        @include('components/icons/search')
+        <input
+            type="search"
+            name="query"
+            id="search-input"
+            class="search-input"
+            placeholder="{{ __('submissions.search.searchBy') }}"
+            value="{{ $query }}"
+        >
+    </div>
+
+    <fieldset class="search-form-filters-fieldset">
+        <legend class="search-form-filters-legend">
+            {{ __('search.advancedFilters') }}
+        </legend>
+        <div class="search-form-filters">
+            <div class="search-form-filters-date">
+                <x-date-select prefix="dateFrom" legend="{{ __('search.dateFrom') }}" currentTime="{{ $dateFrom }}"
+                    startYear="{{ $yearStart }}" endYear="{{ $yearEnd }}" />
+            </div>
+            <div class="search-form-filters-date">
+                <x-date-select prefix="dateTo" legend="{{ __('search.dateTo') }}" currentTime="{{ $dateTo }}"
+                    startYear="{{ $yearStart }}" endYear="{{ $yearEnd }}" />
+            </div>
+            @callHook(['name' => 'Templates::Search::SearchResults::AdditionalFilters'])
+        </div>
+    </fieldset>
+    <div class="search-form-footer">
+        <button class="search-form-button" type="submit">
+            @include('components/icons/search')
+            @if ($query)
+                {{ __('search.searchAgain') }}
+            @else
+                {{ __('common.search') }}
+            @endif
+        </button>
+    </div>
+</form>

@@ -1,0 +1,26 @@
+/**
+ * Use this utility to apply focus styles to any
+ * element.
+ *
+ * Used to provide accessible indication of where the
+ * user's focus is when navigating by keyboard. Typically
+ * used on any interactive element, such as links, buttons,
+ * or scrollable panels.
+ */
+@utility tab-focus {
+
+  &:focus-visible {
+    outline: var(--outline-width) solid;
+    outline-offset: var(--outline-width);
+    text-decoration: none;
+  }
+}
+
+@utility tab-focus-inside {
+
+  &:focus-visible {
+    outline: var(--outline-width) solid;
+    outline-offset: calc(-2 * var(--outline-width));
+    text-decoration: none;
+  }
+}

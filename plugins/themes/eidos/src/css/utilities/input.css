@@ -1,0 +1,74 @@
+/**
+ * Styles for user input fields
+ *
+ * Typically applied to <input>, <select>, and
+ * <textarea> elements.
+ */
+@utility input {
+  width: 100%;
+  max-width: 20em;
+  padding: 0.25em 0.5em;
+  background: var(--color-page-background);
+  border: var(--input-border-width) solid;
+  color: var(--color-page-text);
+  border-radius: var(--input-radius);
+  font-family: var(--font-actions);
+  font-weight: 400;
+
+  &:focus-visible {
+    outline: 1px solid;
+  }
+}
+
+@utility input-textarea {
+  max-width: none;
+  padding: 0.5em;
+  min-height: 15em;
+}
+
+@utility input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+@utility input-label {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+@utility input-checkbox-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+@utility input-checkbox {
+  position: relative;
+  top: 0.125em;
+}
+
+@utility input-fieldset {
+  padding: 0.75rem;
+  border: 1px solid var(--color-page-text);
+
+  @media (min-width: 1200px) {
+    padding: 1rem;
+  }
+}
+
+@utility input-legend {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-family: var(--font-actions);
+  font-weight: 600;
+  line-height: 1.25;
+  background: var(--color-page-background);
+  color: var(--color-page-text);
+}
+
+@utility input-error {
+  color: var(--color-error);
+  font-weight: 600;
+}

@@ -1,0 +1,54 @@
+<x-system.layout
+    pageTitle="{{ __($pageTitle) }}"
+>
+    <div class="system-main">
+        <div class="system-header">
+            <h1 class="system-title">
+                {{ __($pageTitle) }}
+            </h1>
+        </div>
+        <div class="system-html-content">
+            <p>
+                {{ __('user.login.registrationComplete.instructions') }}
+            </p>
+            <ul>
+                @if ($currentContext)
+                    @if ($canViewSubmissions)
+                        <li>
+                            <a href="{{ ViewHelper::url(['page' => 'submissions']) }}">
+                                {{ __('user.login.registrationComplete.manageSubmissions') }}
+                            </a>
+                        </li>
+                    @endif
+                    <li>
+                        <a href="{{ ViewHelper::url(['page' => 'submission']) }}">
+                            {{ __('user.login.registrationComplete.newSubmission') }}
+                        </a>
+                    </li>
+                @endif
+                <li>
+                    <a href="{{ ViewHelper::url(['page' => 'user', 'op' => 'profile']) }}">
+                        {{ __('user.editMyProfile') }}
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ ViewHelper::url(['page' => 'user', 'op' => 'profile']) }}">
+                        {{ __('plugins.themes.eidos.manageNotifications') }}
+                    </a>
+                </li>
+            </ul>
+            <p>
+                @php
+                    $siteName = $currentContext
+                        ? $currentContext->getLocalizedName()
+                        : $site->getLocalizedTitle();
+                @endphp
+                {!!
+                    __('navigation.backTo', [
+                        'page' => '<a href="' . ViewHelper::url(['page' => 'index']) . '">' . $siteName . '</a>',
+                    ])
+                !!}
+            </p>
+        </div>
+    </div>
+</x-system.layout>

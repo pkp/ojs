@@ -1,0 +1,43 @@
+@props([
+    'issue' => null,
+    'heading' => "h2",
+])
+
+<div class="issue-summary">
+    <div class="issue-summary-cover">
+        @if ($issue->getLocalizedCoverImageUrl())
+            <img
+                class="issue-summary-cover-image"
+                src="{{ $issue->getLocalizedCoverImageUrl() }}"
+                alt="{{ $issue->getLocalizedCoverImageAltText() ?? '' }}"
+            >
+        @else
+            @include('components/cover-placeholder')
+        @endif
+    </div>
+    <div class="issue-summary-inner">
+        <{{ $heading }} class="issue-summary-header">
+            <div class="issue-summary-vol">
+                {{ $issue->getIssueIdentification(['showTitle' => false, 'showYear' => false]) }}
+            </div>
+            @if ($issue->getYear())
+                <div class="issue-summary-year">
+                    {{ $issue->getYear() }}
+                </div>
+            @endif
+            @if ($issue->getLocalizedTitle())
+                <div class="issue-summary-title">
+                    {{ $issue->getLocalizedTitle() }}
+                </div>
+            @endif
+        </{{ $heading }}>
+        @if ($issue->getLocalizedDescription())
+            <div class="issue-summary-description html-text">
+                {!! ViewHelper::html2text($issue->getLocalizedDescription()) !!}
+            </div>
+        @endif
+        <div class="issue-summary-actions">
+            {!! $actions !!}
+        </div>
+    </div>
+</div>

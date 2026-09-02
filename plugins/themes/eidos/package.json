@@ -1,0 +1,28 @@
+{
+  "name": "eidos",
+  "version": "0.2.1",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "npx vite",
+    "build": "npx vite build"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.4",
+    "baseline-browser-mapping": "^2.10.27",
+    "debounce": "^3.0.0",
+    "postcss": "^8.4.47",
+    "postcss-custom-media": "^11.0.1",
+    "postcss-nesting": "^13.0.0",
+    "tailwindcss": "^4.2.4",
+    "vite": "^8.0.10",
+    "vite-pkp-theme": "^0.2.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "swiper": "^12.2.0"
+  }
+}

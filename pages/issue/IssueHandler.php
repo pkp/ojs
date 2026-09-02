@@ -356,8 +356,15 @@ class IssueHandler extends Handler
         $issueGalleyDao = DAORegistry::getDAO('IssueGalleyDAO'); /** @var IssueGalleyDAO $issueGalleyDao */
 
         $genreDao = DAORegistry::getDAO('GenreDAO'); /** @var GenreDAO $genreDao */
-        $primaryGenres = $genreDao->getPrimaryByContextId($journal->getId())->toArray();
-        $primaryGenreIds = array_map(fn ($genre) => $genre->getId(), $primaryGenres);
+        $primaryFileGenreIds = $genreDao->getIdsBy(
+            contextIds: [$journal->getId()],
+            supplementary: false,
+            dependent: false,
+        )->toArray();
+        $supplementaryFileGenreIds = $genreDao->getIdsBy(
+            contextIds: [$journal->getId()],
+            supplementary: true,
+        )->toArray();
 
         $sections = Repo::section()->getByIssueId($issue->getId());
         $issueSubmissionsInSection = [];
@@ -393,7 +400,9 @@ class IssueHandler extends Handler
             'issue' => $issue,
             'issueGalleys' => $issueGalleyDao->getByIssueId($issue->getId()),
             'publishedSubmissions' => $issueSubmissionsInSection,
-            'primaryGenreIds' => $primaryGenreIds,
+            'primaryGenreIds' => $primaryFileGenreIds,
+            'primaryFileGenreIds' => $primaryFileGenreIds,
+            'supplementaryFileGenreIds' => $supplementaryFileGenreIds,
         ]);
 
         // Subscription Access

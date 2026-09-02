@@ -1,0 +1,72 @@
+@php
+    $siteName = $currentContext ? $currentContext->getLocalizedName() : $site->getLocalizedTitle();
+    $dropdownId = 'header-mobile-dropdown';
+@endphp
+
+<header class="header-mobile">
+    <div class="header-mobile-inner">
+        <div class="header-mobile-context">
+            <a href="{{ ViewHelper::url(['page' => 'index']) }}" class="tab-focus">
+                @if ($displayPageHeaderLogo)
+                    <h1 class="sr-only">
+                        {{ $siteName }}
+                    </h1>
+                    <img
+                        alt="@if(isset($displayPageHeaderLogo['alt'])){{ $displayPageHeaderLogo['alt'] }}@endif"
+                        class="header-mobile-logo"
+                        src="{{ $publicFilesDir }}/{{ $displayPageHeaderLogo['uploadName'] }}"
+                    >
+                @else
+                    @php
+                        $length = strlen($siteName);
+                        $size = $length <= 20 ? 'xs' : ($length <= 40 ? 'sm' : ($length <= 80 ? 'md' : 'lg'));
+                    @endphp
+                    <div class="header-mobile-name header-mobile-name-{{ $size }}">
+                        {{ $siteName }}
+                    </div>
+                @endif
+            </a>
+        </div>
+        <button class="header-mobile-button" type="button" data-mobile-menu="#{{ $dropdownId }}">
+            <span class="sr-only">
+                {{ __('plugins.themes.eidos.menu') }}
+            </span>
+            <span class="header-mobile-button-icon" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+    </div>
+    <div class="header-mobile-dropdown" id="{{ $dropdownId }}">
+        <div class="header-mobile-dropdown-inner">
+            <form
+                action="{{ ViewHelper::url(['page' => 'search']) }}"
+                class="header-mobile-search-input"
+                method="GET"
+            >
+                <label for="header-mobile-search-input" class="sr-only">
+                    {{ __('common.search') }}
+                </label>
+                @include('components/icons/search')
+                <input
+                    type="search"
+                    name="query"
+                    id="header-mobile-search-input"
+                    placeholder="{{ __('common.search') }}"
+                >
+            </form>
+            <nav class="header-mobile-primary-menu">
+                @loadMenu(['name' => 'primary', 'id' => 'nav-mobile-primary', 'path' => 'components/menu'])
+            </nav>
+            <x-header.user-options />
+            <button
+                class="header-mobile-dropdown-close-by-keyboard"
+                data-mobile-menu-close
+            >
+                {{ __('common.close') }}
+            </button>
+        </div>
+        @includeIf('components.header-mobile-institution')
+    </div>
+</header>

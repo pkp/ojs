@@ -1,0 +1,319 @@
+.article-tabs {
+  --button-size: 3rem;
+}
+
+.article-tabs-list {
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  max-width: 25rem;
+  display: flex;
+  flex-direction: column-reverse;
+  border-radius: var(--radius);
+  background: var(--color-overlay-background);
+  color: var(--color-overlay-text);
+  border: 1px solid currentColor;
+  box-shadow: var(--overlay-shadow);
+  z-index: 9999;
+}
+
+.article-tabs-list-triggers {
+  display: flex;
+  align-items: center;
+}
+
+.article-tabs-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.125rem;
+  border-radius: var(--radius);
+  color: var(--color-overlay-text);
+
+  &:focus-visible {
+    outline: 0.125em solid;
+    outline-offset: -0.25em;
+    border-radius: calc(1.5 * var(--radius));
+    color: var(--color-overlay-text);
+  }
+}
+
+.article-tabs-trigger[aria-selected="true"]:focus-visible {
+  outline-color: var(--color-overlay-background);
+  outline-offset: -0.375em;
+}
+
+.article-tabs-trigger-icon {
+  height: var(--button-size);
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius);
+}
+
+.article-tabs-trigger[aria-selected="true"] .article-tabs-trigger-icon {
+  background: var(--color-overlay-text);
+  color: var(--color-overlay-background);
+}
+
+.article-tabs-list-triggers {
+  padding-right: 1.5rem;
+}
+
+.article-tabs-trigger-name {
+  @apply sr-only;
+}
+
+.article-tabs-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid;
+  margin-bottom: 4rem;
+  padding-bottom: 0.25rem;
+  word-wrap: break-word;
+}
+
+.article-tabs-content {
+  max-width: 100%;
+}
+
+.article-tabs-popover-trigger {
+  position: absolute;
+  bottom: 0.125rem;
+  right: 0;
+  transform: translateX(calc(0.5 * var(--button-size)));
+  width: var(--button-size);
+  height: var(--button-size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:focus-visible {
+    outline: none;
+
+    & .article-tabs-popover-trigger-icon {
+      outline: 1px solid var(--color-overlay-text);
+      border: 2px solid var(--color-overlay-background);
+      background: var(--color-overlay-text);
+      color: var(--color-overlay-background);
+    }
+  }
+}
+
+.article-tabs-popover-trigger-icon {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--color-overlay-background);
+  color: var(--color-overlay-text);
+  outline: 1px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.article-tabs-list [data-reka-popper-content-wrapper] {
+  position: relative !important;
+  transform: none !important;
+  min-width: unset !important;
+}
+
+.article-tabs-popover-content {
+  display: none;
+
+  &[data-state="open"] {
+    display: block;
+  }
+}
+
+.article-tabs-popover-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-tabs-popover-item {
+  display: flex;
+  align-items: center;
+  border-radius: calc(2 * var(--radius));
+
+  &:focus-visible {
+    outline: 2px solid;
+    outline-offset: -0.375em;
+  }
+}
+
+.article-tabs-popover-item-icon {
+  width: var(--button-size);
+  height: var(--button-size);
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.article-tabs-popover-item-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+  padding: 0.125rem;
+  padding-inline-end: 1em;
+  font-weight: 600;
+}
+
+.article-tabs-popover-item-label-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.article-tabs-popover-close {
+  @apply sr-only;
+
+  &:focus-visible {
+    @apply not-sr-only;
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    border-radius: var(--radius);
+    background: var(--color-overlay-background);
+    outline: 2px solid;
+  }
+}
+
+.article-tabs-popover-item-count,
+.article-tabs-trigger-count,
+.article-tabs-title-count {
+  position: relative;
+  top: -0.125rem;
+  left: 0.25rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.125rem 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  outline: 1px solid currentColor;
+  border-radius: var(--radius);
+  flex-shrink: 0;
+}
+
+.article-tabs-popover-item-count {
+  top: 0;
+  left: 0;
+}
+
+@media (min-width: 380px) {
+
+  .article-tabs {
+    --button-size: 3.5rem;
+  }
+
+  .article-tabs-list {
+    bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 480px) {
+
+  .article-tabs {
+    --button-size: 4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .article-tabs-list {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    max-width: 100%;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+    z-index: 0;
+  }
+
+  .article-tabs-popover-trigger,
+  .article-tabs-list [data-reka-popper-content-wrapper] {
+    display: none;
+  }
+
+  .article-tabs-list-triggers {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    border-bottom: 1px solid var(--color-page-text);
+  }
+
+  .article-tabs-trigger-count {
+    line-height: 1.5;
+  }
+
+  .article-tabs-trigger {
+    width: auto;
+    padding: 0.25rem 1rem;
+    line-height: 2.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    border-radius: 0;
+    border-top-width: 0.25rem;
+    border-color: transparent;
+    border-bottom-width: 0.25rem;
+    color: var(--color-page-text);
+
+    &[aria-selected="true"] {
+      border-bottom-color: var(--color-page-text);
+
+      &:focus-visible {
+        outline: none;
+      }
+    }
+
+    &:focus-visible {
+      background: var(--color-page-text);
+      color: var(--color-page-background);
+      outline: 0.125rem solid var(--color-page-text);
+      outline-offset: -1px;
+      border-radius: 0;
+    }
+
+    &:hover {
+      border-bottom-color: var(--color-page-text);
+    }
+  }
+
+  .article-tabs-trigger-icon,
+  .article-tabs-expand {
+    display: none;
+  }
+
+  .article-tabs-trigger-name {
+    @apply not-sr-only;
+  }
+
+  .article-tabs-content {
+    margin-top: 4rem;
+  }
+
+  .article-tabs-title {
+    @apply sr-only;
+  }
+}
+
+@media (min-width: 1536px) {
+  .article-tabs-list-triggers {
+    gap: 1rem;
+  }
+
+  .article-tabs-trigger {
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+}

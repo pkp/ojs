@@ -1,0 +1,24 @@
+@php
+    $pageDescription = $publication->getLocalizedData('plainLanguageSummary')
+        ? $publication->getLocalizedData('plainLanguageSummary')
+        : $publication->getLocalizedData('abstract');
+@endphp
+
+<x-layout
+    title="{{ $publication->getLocalizedFullTitle() }}"
+    description="{{ ViewHelper::html2text($pageDescription) }}"
+>
+    <article class="page-container page-article" id="skip-to-main">
+
+        @include('components/article/notice-preview')
+        @include('components/article/notice-outdated')
+
+        <div class="page-article-main">
+            @include('components/article/header')
+            @include('components/article/sidebar')
+            @include('components/article/highlighted-metadata')
+            @include('components/article/tabs')
+        </div>
+
+    </article>
+</x-layout>

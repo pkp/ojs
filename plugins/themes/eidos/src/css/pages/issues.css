@@ -1,0 +1,202 @@
+.page-issues {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.page-issues-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.page-issues-title {
+  font-family: var(--font-titles);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.page-issues-items {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+}
+
+.page-issues-item-link {
+  @apply tab-focus;
+  display: block;
+}
+
+.page-issues-list {
+
+  .page-issues-items {
+    gap: 0.5rem;
+  }
+
+  & .issue-summary {
+    padding: 1rem;
+    border: 1px solid;
+    border-radius: var(--radius);
+  }
+
+  & .issue-summary-inner {
+    gap: 0.75rem;
+  }
+
+  & .issue-summary-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.75rem;
+  }
+
+  & .issue-summary-vol {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+
+  & .issue-summary-year {
+    order: -1;
+    font-weight: 600;
+  }
+
+  & .issue-summary-title {
+    width: 100%;
+    flex-shrink: 0;
+    font-size: 1rem;
+  }
+
+  & .issue-summary-cover,
+  & .issue-summary-description {
+    display: none;
+  }
+}
+
+.page-issues-covers {
+
+  & .page-issues-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 1.5rem;
+  }
+
+  & .issue-summary {
+    gap: 0.5rem;
+  }
+
+  & .issue-summary-cover {
+    max-width: none;
+  }
+
+  & .issue-summary-vol {
+    font-size: 1.25rem;
+  }
+
+  & .issue-summary-year {
+    font-size: 1.125rem;
+  }
+
+  & .issue-summary-title {
+    font-size: 1rem;
+  }
+
+  & .issue-summary-actions,
+  & .issue-summary-description {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) {
+
+  .page-issues-covers {
+
+      & .issue-summary {
+        flex-direction: column;
+      }
+
+      & .page-issues-items {
+        grid-template-columns: repeat(3, 1fr);
+      }
+  }
+}
+
+@media (min-width: 768px) {
+
+  .page-issues-default {
+
+    & .page-issues-items {
+      gap: 1rem;
+    }
+
+    & .issue-summary {
+      padding: 1rem;
+      border: 1px solid;
+      border-radius: var(--radius);
+    }
+  }
+
+  .page-issues-list {
+
+    & .issue-summary-inner {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+      width: 100%;
+    }
+
+    & .issue-summary-actions {
+      margin-top: 0;
+      white-space: nowrap;
+    }
+  }
+
+  .page-issues-covers {
+
+      & .page-issues-items {
+        grid-template-columns: repeat(4, 1fr);
+      }
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .page-issues-default {
+    gap: 1.5rem;
+
+    & .issue-summary {
+      padding: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .page-issues {
+    gap: 4.5rem;
+  }
+
+  .page-issues-title {
+    font-size: 2rem;
+  }
+
+  .page-issues-covers {
+
+      & .page-issues-items {
+        gap: 3rem 6rem;
+      }
+  }
+}
+
+
+@media (min-width: 1536px) {
+
+  .page-issues-covers {
+
+      & .page-issues-items {
+        gap: 3rem 9rem;
+      }
+  }
+}
