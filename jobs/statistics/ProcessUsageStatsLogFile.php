@@ -17,6 +17,7 @@
 namespace APP\jobs\statistics;
 
 use APP\core\Application;
+use APP\statistics\StatisticsHelper;
 use APP\statistics\TemporaryItemInvestigationsDAO;
 use APP\statistics\TemporaryItemRequestsDAO;
 use APP\statistics\TemporaryTotalsDAO;
@@ -76,7 +77,7 @@ class ProcessUsageStatsLogFile extends PKPProcessUsageStatsLogFile
             $temporaryInstitutionsDao->insert($entry->institutionIds, $lineNumber, $this->loadId);
             if (!empty($entry->submissionId)) {
                 $temporaryItemInvestigationsDao->insert($entry, $lineNumber, $this->loadId);
-                if (in_array($entry->assocType, [Application::ASSOC_TYPE_SUBMISSION_FILE, Application::ASSOC_TYPE_JATS])) {
+                if (in_array($entry->assocType, StatisticsHelper::getItemRequestAssocTypes())) {
                     $temporaryItemRequestsDao->insert($entry, $lineNumber, $this->loadId);
                 }
             }

@@ -79,12 +79,4 @@ class TemporaryTotalsDAO extends PKPTemporaryTotalsDAO
             ->groupBy(DB::raw('load_id, context_id, submission_id, assoc_type, DATE(date)'));
         DB::table('metrics_submission')->insertUsing(['load_id', 'context_id', 'submission_id', 'assoc_type', 'date', 'metric'], $selectJatsMetrics);
     }
-
-    /**
-     * @copydoc PKPTemporaryTotalsDAO::getItemRequestAssocTypes()
-     */
-    protected function getItemRequestAssocTypes(): array
-    {
-        return array_merge(parent::getItemRequestAssocTypes(), [Application::ASSOC_TYPE_JATS]);
-    }
 }
