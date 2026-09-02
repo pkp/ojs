@@ -140,7 +140,7 @@ class DAO extends \PKP\publication\DAO
                     )
                 )
             )
-            ->groupBy('p.publication_id', 's.locale')
+            ->groupBy('p.publication_id', 's.submission_id', 's.locale')
             ->orderByDesc('s.submission_id')
             ->orderByDesc('p.version_major')
             ->select(['p.*', 's.locale AS submission_locale']); // see DAO::fromRow for use of submission_locale
