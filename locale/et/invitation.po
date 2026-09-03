@@ -1,2 +1,86 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2026-09-03 15:03+0000\n"
+"Last-Translator: \"10 ...\" <jaana.tonisson@tlulib.ee>\n"
+"Language-Team: Estonian <http://translate.pkp.sfu.ca/projects/ojs/invitation/"
+"et/>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "acceptInvitation.accountDetails.stepLabel"
+msgstr "{$step} - Loo OJS konto"
+
+msgid "acceptInvitation.accountDetails.stepName"
+msgstr "Loo OJS konto"
+
+msgid "acceptInvitation.detailsReview.nextButtonLabel"
+msgstr "Nõustu ja jätka OJSis"
+
+msgid "acceptInvitation.modal.title"
+msgstr "Teile on OJSis määratud uus roll"
+
+msgid "invitation.orcid.acceptInvitation.message"
+msgstr "Kinnitamata. Oma ORCIDi iD saate kinnitada OJS-i profiili jaotises."
+
+msgid "invitation.role.masthead"
+msgstr "Ajakirja andmed"
+
+msgid "userInvitation.enterDetails.stepDescription"
+msgstr "Saate kutsuda ta OJS-is rolli vastu võtma"
+
+msgid "userInvitation.roleTable.journalMasthead"
+msgstr "Ajakirja andmed"
+
+msgid "userInvitation.search.userFound"
+msgstr "Kasutaja on juba ajakirja kasutajate hulgas olemas"
+
+msgid "userInvitation.search.userNotFound"
+msgstr "Kasutajal ei ole selles ajakirjas ühtegi rolli"
+
+msgid "userInvitation.sendMail.stepDescription"
+msgstr ""
+"Saatke kasutajale e-kiri, et teavitada teda kutsest, järgmistest sammudest, "
+"ajakirja isikuandmete kaitse (GDPR) põhimõtetest ja ORCIDi kinnitamisest"
+
+msgid "acceptInvitation.accountDetails.stepDescription"
+msgstr ""
+"OJS-iga alustamiseks ja uue rolli vastuvõtmiseks peate looma meie süsteemis "
+"kasutajakonto. Selleks sisestage palun kasutajanimi ja parool."
+
+msgid "acceptInvitation.detailsReview.stepDescription"
+msgstr "Vaadake üle üksikasjad, et alustada oma uute rollidega OJS-is"
+
+msgid "acceptInvitation.modal.message"
+msgstr ""
+"Õnnitleme teid uue rolli puhul OJS-is! Teil võib nüüd olla juurdepääs uutele "
+"funktsioonidele ja võimalustele. Kui vajate abi süsteemi kasutamisel või "
+"mõistmisel, klõpsake juhiste saamiseks süsteemis olevat nuppu „Abi“."
+
+msgid "acceptInvitation.verifyOrcid.stepDescription"
+msgstr ""
+"Võite valida, kas kinnitada oma ORCIDi iD või selle praegu vahele jätta. Kui "
+"otsustate selle praegu vahele jätta, saate oma ORCIDi iD hiljem kinnitada "
+"OJS-i profiili jaotises"
+
+msgid "invitation.wizard.pageTitleDescription"
+msgstr ""
+"Kutsute kasutajat täitma OJS-is rolli ning olema ühtlasi nimetatud ajakirja "
+"toimetuse koosseisus"
+
+msgid "userInvitation.modal.message"
+msgstr ""
+"{$email} on kutsutud OJS-is uut rolli vastu võtma. Kasutaja otsuse kohta "
+"saate teavet lehelt „Kasutajad ja rollid“, OJS-i teavitustest ja/või oma "
+"e-postist"
+
+msgid "userInvitation.searchUser.stepDescription"
+msgstr ""
+"Otsige kasutajat tema e-posti aadressi, kasutajanime või ORCIDi iD järgi. "
+"Alustamiseks sisestage vähemalt üks otsingutingimus. Kui kasutajat süsteemis "
+"ei ole, saate kutsuda ta rolle vastu võtma ja oma ajakirja tegevuses "
+"osalema. Kui kasutaja on süsteemis juba olemas, saate vaadata tema andmeid "
+"ja kutsuda ta täiendavaid rolle vastu võtma."
