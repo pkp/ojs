@@ -81,6 +81,7 @@ class IssueEmailVariable extends Variable
         IssueHandler::_setupIssueTemplate($request, $this->issue, $this->getContext(), false);
 
         $templateMgr->assign([
+            'journal' => $this->getContext(),
             'includeIssuePublishDate' => false,
         ]);
 
