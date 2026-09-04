@@ -1,0 +1,123 @@
+{
+	"doc": {
+		"type": "doc",
+		"attrs": {"type": "article"},
+		"content": [
+			{
+				"type": "bullet_list",
+				"content": [
+					{
+						"type": "list_item",
+						"content": [
+							{
+								"type": "heading",
+								"attrs": {"id": null, "level": 1, "type": "chapter"},
+								"content": [
+									{"type": "text", "text": "Moby-Dick: A Study in Obsession"}
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "paragraph",
+				"attrs": {"id": null},
+				"content": [
+					{
+						"type": "text",
+						"text": "Introdf Ishmael and the enigmatic Captain Ahab… "
+					},
+					{
+						"type": "citation",
+						"attrs": {
+							"source": "%5B%7B%22id%22:%22299%22%7D%5D",
+							"style": "apa",
+							"id": "citation-mobydick"
+						},
+						"content": [{"type": "text", "text": "(Melville, 2018)"}]
+					},
+					{
+						"type": "text",
+						"text": " offers a canonical touchpoint for exploring literary obsession."
+					}
+				]
+			},
+			{
+				"type": "figure",
+				"attrs": {
+					"id": "demo-figure",
+					"src": "https://placehold.co/600x400",
+					"alt": "Demo figure",
+					"type": "figure",
+					"orientation": "landscape",
+					"scale-width": 1
+				},
+				"content": [
+					{
+						"type": "caption",
+						"content": [
+							{
+								"type": "paragraph",
+								"attrs": {"id": null},
+								"content": [
+									{
+										"type": "text",
+										"text": "A figure caption demonstrating the figure node view."
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"files": [
+		{
+			"id": 55,
+			"url": "http://localhost:7001/index.php/publicknowledge/$$$call$$$/api/file/file-api/download-file?submissionFileId=55&submissionId=19&stageId=5",
+			"mimeType": "image/jpeg"
+		},
+		{
+			"id": 54,
+			"url": "http://localhost:7001/index.php/publicknowledge/$$$call$$$/api/file/file-api/download-file?submissionFileId=54&submissionId=19&stageId=5",
+			"mimeType": "image/jpeg"
+		},
+		{
+			"id": 53,
+			"url": "http://localhost:7001/index.php/publicknowledge/$$$call$$$/api/file/file-api/download-file?submissionFileId=53&submissionId=19&stageId=5",
+			"mimeType": "image/png"
+		},
+		{
+			"id": 52,
+			"url": "http://localhost:7001/index.php/publicknowledge/$$$call$$$/api/file/file-api/download-file?submissionFileId=52&submissionId=19&stageId=5",
+			"mimeType": "image/png"
+		},
+		{
+			"id": 51,
+			"url": "http://localhost:7001/index.php/publicknowledge/$$$call$$$/api/file/file-api/download-file?submissionFileId=51&submissionId=19&stageId=5",
+			"mimeType": "image/png"
+		},
+		{
+			"id": 50,
+			"url": "http://localhost:7001/index.php/publicknowledge/$$$call$$$/api/file/file-api/download-file?submissionFileId=50&submissionId=19&stageId=5",
+			"mimeType": "image/png"
+		},
+		{
+			"id": 49,
+			"url": "http://localhost:7001/index.php/publicknowledge/$$$call$$$/api/file/file-api/download-file?submissionFileId=49&submissionId=19&stageId=5",
+			"mimeType": "application/json"
+		},
+		{
+			"id": 48,
+			"url": "http://localhost:7001/index.php/publicknowledge/$$$call$$$/api/file/file-api/download-file?submissionFileId=48&submissionId=19&stageId=5",
+			"mimeType": "application/json"
+		},
+		{
+			"id": 47,
+			"url": "http://localhost:7001/index.php/publicknowledge/$$$call$$$/api/file/file-api/download-file?submissionFileId=47&submissionId=19&stageId=5",
+			"mimeType": "application/json"
+		}
+	]
+}
