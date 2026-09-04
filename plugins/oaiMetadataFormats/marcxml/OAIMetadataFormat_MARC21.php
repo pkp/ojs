@@ -58,12 +58,16 @@ class OAIMetadataFormat_MARC21 extends OAIMetadataFormat
         ]);
 
         $subjects = array_merge_recursive(
-            stripAssocArray((array) $publication->getData('discipline')),
+            stripAssocArray((array) $publication->getData('disciplines')),
             stripAssocArray((array) $publication->getData('subjects'))
         );
 
+        // Controlled vocabulary entries are returned as ['name' => ...] arrays; pull the names.
+        $subjectValues = $subjects[$publicationLocale] ?? $subjects[$journal->getPrimaryLocale()] ?? [];
+        $subjectValues = collect($subjectValues)->pluck('name')->filter()->values()->all();
+
         $templateMgr->assign([
-            'subject' => $subjects[$publicationLocale] ?? $subjects[$journal->getPrimaryLocale()] ?? '',
+            'subject' => $subjectValues,
             'abstract' => PKPString::html2text($publication->getData('abstract', $publicationLocale)),
             'language' => LocaleConversion::get3LetterIsoFromLocale($publicationLocale)
         ]);
