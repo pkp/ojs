@@ -24,6 +24,7 @@ use APP\core\Request;
 use APP\facades\Repo;
 use APP\issue\IssueAction;
 use PKP\db\DAORegistry;
+use PKP\facades\Locale;
 use PKP\plugins\Hook;
 use PKP\search\SubmissionSearch;
 use PKP\submission\PKPSubmission;
@@ -332,18 +333,33 @@ class ArticleSearch extends SubmissionSearch
             // Retrieve the article.
             $article = Repo::submission()->get($submissionId);
             if ($article->getData('status') === PKPSubmission::STATUS_PUBLISHED) {
-                // Retrieve keywords (if any).
-                $allSearchTerms = collect($article->getCurrentPublication()->getData('keywords'))
-                    ->map(
-                        fn (array $items): array => collect($items)
-                            ->pluck('name')
-                            ->all()
-                    )
-                    ->all();
+                // Retrieve keywords (if any) from a single locale, preferring the one the
+                // reader is served. Searching every locale multiplies the keyword count by
+                // the number of keyword locales, and every additional keyword adds
+                // sub-queries evaluated per candidate row.
+                $locales = array_unique(array_filter([
+                    Locale::getLocale(),
+                    $article->getData('locale'),
+                    Locale::getPrimaryLocale(),
+                ]));
 
-                foreach ($allSearchTerms as $locale => $localeSearchTerms) {
-                    $searchTerms = array_merge($searchTerms, $localeSearchTerms);
-                }
+                $searchTerms = collect($searchTerms)
+                    ->merge(
+                        collect($article->getCurrentPublication()->getData('keywords') ?? [])
+                            ->only($locales)
+                            ->reject(fn ($items): bool => empty($items))
+                            ->sortBy(fn ($items, $locale): int => array_search($locale, $locales))
+                            ->take(1)
+                            ->flatMap(
+                                fn ($items): array => collect((array) $items)
+                                    ->map(fn ($item) => is_array($item) ? ($item['name'] ?? null) : $item)
+                                    ->all()
+                            )
+                    )
+                    ->filter(fn ($searchTerm): bool => is_string($searchTerm) && strlen($searchTerm))
+                    ->unique()
+                    ->values()
+                    ->all();
             }
         }
 
