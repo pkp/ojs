@@ -1,12 +1,13 @@
 # Pia Piontkowitz <pia.piontkowitz@rub.de>, 2023.
 # Marco Tullney <marco.tullney@tib.eu>, 2024.
+# Elisabeth Sawatzky <ejournals.ojs@uni-muenster.de>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-27T09:54:42-07:00\n"
-"PO-Revision-Date: 2024-10-22 19:40+0000\n"
-"Last-Translator: Marco Tullney <marco.tullney@tib.eu>\n"
+"PO-Revision-Date: 2026-09-07 14:43+0000\n"
+"Last-Translator: Elisabeth Sawatzky <ejournals.ojs@uni-muenster.de>\n"
 "Language-Team: German <http://translate.pkp.sfu.ca/projects/ojs/author/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
@@ -138,7 +139,7 @@ msgid "author.submit.reorder"
 msgstr "Autor/innennamen umordnen"
 
 msgid "author.submit.selectPrincipalContact"
-msgstr "Hauptkontakt für die redaktionelle Korrespondenz"
+msgstr "Hauptkontakt für die redaktionelle Korrespondenz."
 
 msgid "author.submit.addAuthor"
 msgstr "Autor/in hinzufügen"
@@ -261,7 +262,7 @@ msgid "author.submit.suppFile.publisherDescription"
 msgstr "Nur bei offiziell veröffentlichtem Material angeben."
 
 msgid "author.submit.suppFile.dateDescription"
-msgstr "Datum der Datenerhebung oder der Erstellung des Forschungsinstruments"
+msgstr "Datum der Datenerhebung oder der Erstellung des Forschungsinstruments."
 
 msgid "author.submit.suppFile.sourceDescription"
 msgstr "Bezeichnung der Studie oder andere Herkunftsbezeichnung."
