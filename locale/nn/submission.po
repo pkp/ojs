@@ -1,7 +1,7 @@
 # Johanna Skaug <johanna.skaug@ub.uio.no>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-09-07 14:43+0000\n"
+"PO-Revision-Date: 2026-09-09 11:59+0000\n"
 "Last-Translator: Johanna Skaug <johanna.skaug@ub.uio.no>\n"
 "Language-Team: Norwegian Nynorsk <http://translate.pkp.sfu.ca/projects/ojs/"
 "submission/nn/>\n"
@@ -23,3 +23,43 @@ msgstr "Tittel"
 
 msgid "submission.submit.newSubmissionMultiple"
 msgstr "Start ei ny inn­levering"
+
+msgid "submission.incomplete"
+msgstr "Avventar godkjenning"
+
+msgid "submission.submit.submissionChecklist"
+msgstr "Sjekkliste for innleveringar"
+
+msgid "section.any"
+msgstr "Alle seksjonar"
+
+msgid "catalog.category.heading"
+msgstr "Alle objekt"
+
+msgid "publication.assignToissue"
+msgstr "Legg til utgåve"
+
+msgid "publication.changeIssue"
+msgstr "Endre utgåve"
+
+msgid "publication.scheduledIn"
+msgstr "Planlagd for publisering i <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+msgid "submission.publication"
+msgstr "Publikasjon"
+
+msgid "publication.status.published"
+msgstr "Publisert"
+
+msgid "publication.publishedIn"
+msgstr "Publisert i <a href=\"{$issueUrl}\">{$issueName}</a>."
+
+#, fuzzy
+msgid "submission.submit.contributorRole"
+msgstr "Bidrags­ytaren si rolle"
+
+msgid "submission.publications"
+msgstr "Publikasjonar"
+
+msgid "submission.complete"
+msgstr "Godkjend"
