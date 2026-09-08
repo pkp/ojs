@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-11-27 09:37+0000\n"
+"PO-Revision-Date: 2026-09-08 11:42+0000\n"
 "Last-Translator: Ramana Fragola <ramana.fragola@kb.se>\n"
 "Language-Team: Swedish <http://translate.pkp.sfu.ca/projects/ojs/invitation/"
 "sv/>\n"
@@ -73,3 +73,8 @@ msgstr "Granska uppgifterna för att aktivera dina nya roller i OJS"
 
 msgid "invitation.role.masthead"
 msgstr "Tidskriftens redaktionella uppgifter"
+
+msgid "invitation.wizard.pageTitleDescription"
+msgstr ""
+"Du bjuder in en användare att ta en roll i OJS och att visas i tidskriftens "
+"redaktionella uppgifter"
