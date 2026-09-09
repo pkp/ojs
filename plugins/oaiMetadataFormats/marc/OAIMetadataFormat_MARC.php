@@ -63,8 +63,11 @@ class OAIMetadataFormat_MARC extends OAIMetadataFormat
         );
 
         // Controlled vocabulary entries are returned as ['name' => ...] arrays; pull the names.
-        $subjectValues = $subjects[$publicationLocale] ?? $subjects[$journal->getPrimaryLocale()] ?? [];
-        $subjectValues = collect($subjectValues)->pluck('name')->filter()->values()->all();
+        $subjectValues = collect($subjects[$publicationLocale] ?? $subjects[$journal->getPrimaryLocale()] ?? [])
+            ->pluck('name')
+            ->filter()
+            ->values()
+            ->all();
 
         $templateMgr->assign([
             'subject' => $subjectValues,
