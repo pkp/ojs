@@ -348,7 +348,7 @@ filter_galley_html = Off
 ; allowed_galley_html = "img[id|style],math"
 
 ; When the filter_galley_html option is turned On, only specified allowed media hosts are allowed.
-; allowed_hosts = '["doi.org", "wikipedia.org"]'
+; allowed_media_hosts = '["doi.org", "wikipedia.org"]'
 
 
 ;;;;;;;;;;;;;;;;;;
