@@ -6,13 +6,14 @@
 # "My L. Bjørnflaten" <myl@uio.no>, 2024.
 # Jan Erik Frantsvåg <jan.e.frantsvag@uit.no>, 2025.
 # Anne-Inger <annrag@oslomet.no>, 2026.
+# Aysa Ekanger <aysa.ekanger@uit.no>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:28+00:00\n"
-"PO-Revision-Date: 2026-06-11 06:53+0000\n"
-"Last-Translator: Anne-Inger <annrag@oslomet.no>\n"
+"PO-Revision-Date: 2026-09-09 18:38+0000\n"
+"Last-Translator: Aysa Ekanger <aysa.ekanger@uit.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -2221,11 +2222,10 @@ msgstr "Lenken til siden med statistikk over publiserte artikler"
 msgid "emailTemplate.variable.issueId"
 msgstr "Utgavens ID"
 
-#, fuzzy
 msgid "mailable.statisticsReportNotify.description"
 msgstr ""
-"Denne e-posten sendes automatisk månedlig til redaktører og redaksjonsleder "
-"for å gi dem en oversikt over systemets tilstand."
+"Denne e-posten sendes automatisk hver måned til redaktører og "
+"redaksjonsledere for å gi dem en oversikt over systemets tilstand."
 
 msgid "mailable.validateEmailContext.name"
 msgstr "Validér E-post ved registrering i tidsskrift"
@@ -2490,16 +2490,14 @@ msgstr "Abbonement utløpt"
 
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
-"Denne e-posten varsler en abonnent om at abonnementet er utløpt. E-posten "
-"gir informasjon om tidsskriftets URL, samt tilgangsintruksjoner."
+"Denne automatiske e-posten varsler en abonnent om at abonnementet er utløpt."
 
 msgid "mailable.subscriptionExpiredLast.name"
 msgstr "Abbonement utløpt sist"
 
 msgid "mailable.subscriptionExpiredLast.description"
 msgstr ""
-"Denne e-posten varsler en abonnent om at abonnementet er utløpt. E-posten "
-"gir informasjon om tidsskriftets URL, samt tilgangsinstruksjoner."
+"Denne automatiske e-posten varsler en abonnent om at abonnementet er utløpt"
 
 msgid "mailable.subscriptionPurchaseIndividual.name"
 msgstr "Kjøp individuelt abbonement"
@@ -2556,9 +2554,8 @@ msgstr ""
 msgid "manager.manageEmails.description"
 msgstr "Rediger beskjedene som sendes som e-post fra dette tidsskriftet."
 
-#, fuzzy
 msgid "mailable.layoutComplete.name"
-msgstr "Ferdige oppsett"
+msgstr "Oppsett ferdigstilt"
 
 msgid "mailable.publicationVersionNotify.name"
 msgstr "Ny versjon opprettet"
@@ -3157,8 +3154,7 @@ msgstr ""
 "Gi en kort beskrivelse av tidsskriftet ditt for å gi innsikt i innhold og "
 "formål."
 
-#, fuzzy
 msgid "emailTemplate.variable.issue.issueTableOfContents"
 msgstr ""
-"Nummerets innholdsfortegnelse, for eksempel i form av en liste over alle "
-"tilhørende innleveringer."
+"Nummerets/utgavens innholdsfortegnelse, for eksempel i form av en liste over "
+"alle tilhørende innleveringer."
