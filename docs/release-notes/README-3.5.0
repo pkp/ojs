@@ -32,6 +32,14 @@ In [cache]:
     - default (default value: 'file'). Can be either 'file' or 'opcache' to indicate which Laravel cache should be used.
     - path (default value: 'cache/opcache'). Use to specify a path for cache storage when using 'file' or 'opcache' drivers.
 
+The following (previously optional) settings have been removed from the config.inc.php file and are now stored in the database. These can safely be removed post-migration.
+    - In the [orcid] section:
+        - client_id
+        - client_secret
+        - api_url
+    - In the [orcidProfilePlugin] section:
+        - orcid_redirect_base_url
+
 3.5.0-5 Build (LTS)
 -------------------
 	#3477: Permit editors to see competing interests for declining reviewers
