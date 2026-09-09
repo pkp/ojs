@@ -47,9 +47,10 @@ class StatsPublicationQueryBuilder extends PKPStatsPublicationQueryBuilder
         if (!empty($this->issueIds)) {
             $issueSubmissionIds = DB::table('publications as p')->select('p.submission_id')->distinct()
                 ->from('publications as p')
-                ->leftJoin('publication_settings as ps', 'ps.setting_name', '=', DB::raw('\'issueId\''))
+                ->join('publication_settings as ps', 'p.publication_id', '=', 'ps.publication_id')
+                ->where('ps.setting_name', '=', 'issueId')
                 ->where('p.status', Submission::STATUS_PUBLISHED)
-                ->whereIn('ps.setting_value', $this->issueIds);
+                ->whereIn('ps.setting_value', array_map('strval', $this->issueIds));
             $q->joinSub($issueSubmissionIds, 'is', function ($join) {
                 $join->on('metrics_submission.' . PKPStatisticsHelper::STATISTICS_DIMENSION_SUBMISSION_ID, '=', 'is.submission_id');
             });
