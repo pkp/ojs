@@ -244,6 +244,7 @@
 		<migration class="PKP\migration\upgrade\v3_6_0\I12903_ReviewerUnassignEmailTemplate" />
 		<migration class="PKP\migration\upgrade\v3_6_0\I12347_FixRevisionUploadLogData" />
 		<migration class="PKP\migration\upgrade\v3_6_0\I13109_PermitPublishedMetadataEdit" />
+		<migration class="PKP\migration\upgrade\v3_6_0\I13213_TaskTemplateForeignConstraint"/>
 		<code function="rebuildSearchIndex" />
 		<note file="docs/release-notes/README-3.6.0" />
 	</upgrade>
