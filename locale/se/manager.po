@@ -1,10 +1,10 @@
 # Huw Robert Grange <huw.r.grange@uit.no>, 2023.
-# Aysa Ekanger <aysa.ekanger@uit.no>, 2024.
+# Aysa Ekanger <aysa.ekanger@uit.no>, 2024, 2026.
 # Sara Ellen Gaup <sara.e.gaup@uit.no>, 2024.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-12-17 16:35+0000\n"
-"Last-Translator: Sara Ellen Gaup <sara.e.gaup@uit.no>\n"
+"PO-Revision-Date: 2026-09-11 13:59+0000\n"
+"Last-Translator: Aysa Ekanger <aysa.ekanger@uit.no>\n"
 "Language-Team: Sami (Northern) <http://translate.pkp.sfu.ca/projects/ojs/"
 "manager/se/>\n"
 "Language: se\n"
@@ -49,3 +49,6 @@ msgstr "Boahtán čállosat"
 
 msgid "doi.editor.doiObjectTypeSubmission"
 msgstr "artihkal"
+
+msgid "manager.subscriptions.form.userContact"
+msgstr "Oktavuohta"
