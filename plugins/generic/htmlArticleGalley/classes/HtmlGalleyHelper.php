@@ -169,11 +169,11 @@ class HtmlGalleyHelper
                     while ($attribute = strtok('|]')) {
                         $attributes[] = $attribute;
                     }
-                    $config->allowElement($elementName, $attributes);
+                    $config = $config->allowElement($elementName, $attributes);
                 }
             }
             if ($allowedMediaHosts = Config::getVar('security', 'allowed_media_hosts')) {
-                $config->allowMediaHosts(json_decode($allowedMediaHosts));
+                $config = $config->allowMediaHosts(json_decode($allowedMediaHosts));
             }
             $htmlSanitizer = new HtmlSanitizer($config);
             $contents = $htmlSanitizer->sanitize($contents);
