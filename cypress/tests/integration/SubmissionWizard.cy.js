@@ -595,6 +595,10 @@ describe('Submission Wizard', function() {
             .click();
         cy.get('input[name="givenName-fr_CA"]').type('Carlo', {delay: 0});
         cy.get('input[name="familyName-fr_CA"]').type('Carlo', {delay: 0});
+        cy.contains('a', 'languages completed').click();
+        cy.contains('.pkpFormField--text', 'Type the institution name in French (Canada)')
+            .find('input[name="name"]')
+            .type('University of Bologna', {delay: 0});
         cy.get('[role=dialog]').find('button:contains("Save")').click();
         cy.get('.pkpSteps button:contains("For the Editors")').click({ force: true });
         cy.get('#forTheEditors-subjects-control-fr_CA').type('Sociologie française', {delay: 0});
