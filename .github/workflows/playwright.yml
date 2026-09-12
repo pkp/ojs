@@ -1,0 +1,177 @@
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      ['main']
+name: ojs-playwright
+jobs:
+  playwright:
+    runs-on: ubuntu-latest
+    name: ojs-playwright
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - uses: tj-actions/install-postgresql@v3
+        with:
+          postgresql-version: 16
+
+      - name: Configure postgres trust auth + bump max_connections
+        run: |
+          sudo sed -i -E 's\peer|scram-sha-256\trust\g' /etc/postgresql/16/main/pg_hba.conf
+          # Default max_connections=100 may be exhausted by ~20+ concurrent
+          # scratch-journal test contexts × multiple PHP workers each holding
+          # connections. Bump to 500 to test the connection-leak theory.
+          sudo sed -i -E 's/^#?max_connections.*/max_connections = 500/' /etc/postgresql/16/main/postgresql.conf
+          sudo systemctl restart postgresql
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: bcmath, bz2, curl, gd, intl, mbstring, mysql, mysqlnd, mysqli, opcache, pdo_mysql, pgsql, json, soap, xml, zip
+          coverage: none
+          ini-values: assert.exception=1,zend.assertions=1
+        env:
+          update: true
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Create database and user
+        run: |
+          sudo -u postgres psql -c "CREATE USER \"ojs-ci\" WITH PASSWORD 'ojs-ci';"
+          sudo -u postgres psql -c "CREATE DATABASE \"ojs-ci\" OWNER \"ojs-ci\";"
+
+      - name: Install Mailpit
+        run: |
+          curl -sSL https://github.com/axllent/mailpit/releases/latest/download/mailpit-linux-amd64.tar.gz | sudo tar -xz -C /usr/local/bin mailpit
+          sudo chmod +x /usr/local/bin/mailpit
+          mailpit --smtp 127.0.0.1:1025 --listen 127.0.0.1:8025 >/tmp/mailpit.log 2>&1 &
+          sleep 2
+
+      - name: Install Composer dependencies
+        run: |
+          find . -maxdepth 4 -name composer.json -exec bash -c 'composer --no-ansi --working-dir="`dirname {}`" install --optimize-autoloader' ";"
+
+      - name: Install npm dependencies and build
+        run: |
+          npm install
+          npm run build
+
+      - name: Create files directory
+        run: mkdir -p files
+
+      - name: Write .env.playwright
+        run: |
+          cat > .env.playwright <<'EOF'
+          PLAYWRIGHT_BASE_URL=http://127.0.0.1:8000
+          OJS_DB_DRIVER=postgres9
+          OJS_DB_HOST=localhost
+          OJS_DB_USER=ojs-ci
+          OJS_DB_PASSWORD=ojs-ci
+          OJS_DB_NAME=ojs-ci
+          OJS_FILES_DIR=files
+          TEST_API_KEY=playwright-test-key
+          MAILPIT_URL=http://127.0.0.1:8025
+          EOF
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Start memory observer
+        run: |
+          mkdir -p temp
+          nohup sh -c '
+            while sleep 5; do
+              echo "=== $(date -u +%H:%M:%S) ==="
+              free -m
+              ps -eo rss,pid,user,comm --sort=-rss | head -20
+            done
+          ' >> temp/memory.log 2>&1 &
+          echo $! > temp/memory-observer.pid
+
+      - name: Run Playwright tests
+        run: npx playwright test --project=ojs
+
+      - name: Stop memory observer
+        if: always()
+        run: |
+          if [ -f temp/memory-observer.pid ]; then
+            kill "$(cat temp/memory-observer.pid)" 2>/dev/null || true
+          fi
+
+      - name: Diagnose PHP server log
+        if: always()
+        run: |
+          echo '--- free -m (snapshot now) ---'
+          free -m || true
+          echo
+          echo '--- dmesg tail (OOM-killer evidence lives here) ---'
+          sudo dmesg | tail -200 || true
+          echo
+          echo '--- temp/ listing ---'
+          ls -la temp/ || true
+          echo
+          echo '--- temp/php-server.log contents (head 200) ---'
+          if [ -f temp/php-server.log ]; then
+            head -200 temp/php-server.log
+          else
+            echo 'MISSING'
+          fi
+          echo
+          echo '--- temp/memory.log: peak total used + last 5 samples ---'
+          if [ -f temp/memory.log ]; then
+            echo 'Peak Mem used (MB):'
+            grep '^Mem:' temp/memory.log | awk '{print $3}' | sort -n | tail -1 || true
+            echo
+            echo 'Last 5 samples:'
+            tail -150 temp/memory.log
+          else
+            echo 'MISSING'
+          fi
+          echo
+          echo '--- still-running php processes ---'
+          ps -ef | grep -E '[p]hp' || echo 'none'
+          echo
+          echo '--- postgres connection state ---'
+          sudo -u postgres psql -c "SHOW max_connections;" || true
+          sudo -u postgres psql -c "SELECT count(*) AS total, state, application_name FROM pg_stat_activity GROUP BY state, application_name ORDER BY total DESC;" || true
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-report
+          path: playwright-report
+          if-no-files-found: ignore
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: playwright-test-results
+          path: test-results
+          if-no-files-found: ignore
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: mailpit-log
+          path: /tmp/mailpit.log
+          if-no-files-found: ignore
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: php-server-log
+          path: temp/php-server.log
+          if-no-files-found: ignore
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: memory-log
+          path: temp/memory.log
+          if-no-files-found: ignore
