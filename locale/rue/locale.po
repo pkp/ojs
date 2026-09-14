@@ -3,7 +3,7 @@
 # Kamil Federyga <kamilfederyga@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-08-04 10:14+0000\n"
+"PO-Revision-Date: 2026-09-15 04:51+0000\n"
 "Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/locale/rue/>\n"
 "Language: rue\n"
@@ -1145,3 +1145,402 @@ msgstr ""
 "може утворити карту науковой рецензиі в закладці Карты Рецензиі. В каждым "
 "припадку редакторы будут мати можніст влучыня рецензиі до кореспонденциі з "
 "автором."
+
+msgid "submission.copyedit.initialCopyedit"
+msgstr "Вступна редакция тексту"
+
+msgid "user.subscriptions.form.addIpRange"
+msgstr "Додай"
+
+msgid "search.browseAuthorIndex"
+msgstr "Переглядай індекс авторів"
+
+msgid "search.searchFor"
+msgstr "Глядай в статях"
+
+msgid "search.withinJournal"
+msgstr "В рамах"
+
+msgid "search.journal"
+msgstr "Подля часопису"
+
+msgid "submission.copyedit.copyeditComments"
+msgstr "Увагы для коректора"
+
+msgid "submission.copyedit.instructions"
+msgstr "Інструкциі до коректы"
+
+msgid "search.authorIndex"
+msgstr "Спис авторів"
+
+msgid "search.authorDetails"
+msgstr "Автор - дрібниці"
+
+msgid "submission.layout.assignLayoutEditor"
+msgstr "Припиш складача"
+
+msgid "submission.layout.replaceLayoutEditor"
+msgstr "Змін складача"
+
+msgid "submission.layout.layoutComments"
+msgstr "Увагы до складу"
+
+msgid "submission.layout.instructions"
+msgstr "Інструкциі для складача"
+
+msgid "submission.layout.referenceLinking"
+msgstr "Лінкуваня однесінь"
+
+msgid "submission.proofreadingComments"
+msgstr "Увагы до коректы"
+
+msgid "submission.logType.article"
+msgstr "Статя"
+
+msgid "submission.logType.author"
+msgstr "Автор"
+
+msgid "submission.logType.copyedit"
+msgstr "Коректа"
+
+msgid "submission.logType.layout"
+msgstr "Склад"
+
+msgid "submission.comments.copyeditComments"
+msgstr "Увагы коректора"
+
+msgid "submission.comments.canShareWithAuthor"
+msgstr "Для автора і редактора часопису"
+
+msgid "submission.comments.cannotShareWithAuthor"
+msgstr "Для редактора часопису"
+
+msgid "submission.comments.blindCcReviewers"
+msgstr "По записаню, представ едитувальну копію для рецензентів."
+
+msgid "submission.comments.forAuthorEditor"
+msgstr "Для автора і редактора часопису"
+
+msgid "submission.comments.forEditor"
+msgstr "Для редактора"
+
+msgid "submission.comments.saveAndEmailAuthor"
+msgstr "Запиш і вышлий е-майль до автора"
+
+msgid "user.register.selectContext"
+msgstr "Выбер часопис, до котрого хочеш ся зареґіструвати:"
+
+msgid "user.register.privacyStatement"
+msgstr "Політыка приватности"
+
+msgid "user.register.registrationDisabled"
+msgstr "Тот часопис не веде тепер реґістрациі."
+
+msgid "user.register.form.passwordLengthTooShort"
+msgstr "Госло, котре єс подал є за короткє."
+
+msgid "user.register.authorDescription"
+msgstr "Можливіст зголашаня статі до часописів."
+
+msgid "user.register.reviewerInterests"
+msgstr ""
+"Оприділь дослідничы заінтересуваня (тематычны обшырі і дослідничы методы):"
+
+msgid "user.register.form.privacyConsentThisContext"
+msgstr ""
+"Так, выражам згоду на громаджыня і переховуваня моіх даных згідні з <a href="
+"\"{$privacyUrl}\" target=\"_blank\">політыком приватности</a>."
+
+msgid "user.register.form.missingSiteConsent"
+msgstr "Мусиш згодити ся на принципы політыкы приватности для той стороны."
+
+msgid "user.subscriptions.mySubscriptions"
+msgstr "Моі субскрипциі"
+
+msgid "user.subscriptions.subscriptionStatus"
+msgstr "Статус субскрипциі"
+
+msgid "user.subscriptions.status"
+msgstr "Статус"
+
+msgid "user.subscriptions.statusDescription"
+msgstr "Опис"
+
+msgid "user.subscriptions.status.needsInformationDescription"
+msgstr "Перед актывацийом субскрипциі потрібне єст поданя додатковых інформаций"
+
+msgid "user.subscriptions.status.awaitingOnlinePaymentDescription"
+msgstr ""
+"Заплата онляйн остала започаткувана, але остала анулювана або не остала "
+"закінчена"
+
+msgid "user.subscriptions.institutionalSubscriptions"
+msgstr "Інституцийональна субскрипция"
+
+msgid "user.subscriptions.renew"
+msgstr "Одновліня"
+
+msgid "user.subscriptions.purchase"
+msgstr "Закуп"
+
+msgid "user.subscriptions.purchaseNewSubscription"
+msgstr "Куп нову субскрибцию"
+
+msgid "user.subscriptions.purchaseIndividualSubscription"
+msgstr "Куп індивідуальну субскрипцию"
+
+msgid "user.subscriptions.purchaseInstitutionalSubscription"
+msgstr "Куп інституцийональну субскрипцию"
+
+msgid "user.subscriptions.expires"
+msgstr "Выгасат:{$date}"
+
+msgid "user.subscriptions.expired"
+msgstr "Выгасат: {$date}"
+
+msgid "user.subscriptions.form.typeIdValid"
+msgstr "Выбер властивый рід субскрипциі."
+
+msgid "user.subscriptions.form.subscriptionExists"
+msgstr "Тото конто ма уж свою індивідуальну субскрипцию."
+
+msgid "user.subscriptions.form.membershipInstructions"
+msgstr "Інформация о членстві, кєд є вамагана для выбраного рода субскрипциі."
+
+msgid "user.subscriptions.form.institutionName"
+msgstr "Назва інституциі"
+
+msgid "user.subscriptions.form.institutionNameRequired"
+msgstr "Вымагана є назва інституциі."
+
+msgid "reviewer.article.consultGuidelines"
+msgstr ""
+"Кєд заміряш написати рецензию, зазнайом ся з слідуючыма вказівками для "
+"рецензентів."
+
+msgid "reviewer.article.downloadSubmission"
+msgstr ""
+"Влуч назвы файлів , жебы побрати і перезріти (на екрані або друкуючы) файлі "
+"повязаны з тым зголошыньом."
+
+msgid "reviewer.article.enterCompetingInterests"
+msgstr ""
+"Окрисль присутніст або брак конфлікту інтересів в однесіню до тых досіджынь ("
+"смотр <a target=\"_new\" class=\"action\" href=\""
+"{$competingInterestGuidelinesUrl}\">CI&nbsp;принципы односячы ся до політыкы "
+"конфліку інтересів</a>)."
+
+msgid "submission.copyedit.copyeditVersion"
+msgstr "Версия по коректі"
+
+msgid "submission.copyedit.selectCopyeditor"
+msgstr "Припиш коректора"
+
+msgid "submission.copyedit.useFile"
+msgstr "Ужый файля"
+
+msgid "submission.proofread.corrections"
+msgstr "Поправкы коректора"
+
+msgid "submission.logType.editor"
+msgstr "Редактор часопису"
+
+msgid "submission.logType.review"
+msgstr "Рецензия"
+
+msgid "submission.logType.proofread"
+msgstr "Заакцептуване"
+
+msgid "submission.comments.editorAuthorCorrespondence"
+msgstr "Кореспонденция редактор/автор"
+
+msgid "user.register.readerDescription"
+msgstr "Хочу доставати відомости е-майль о выданю нового номеру часопису."
+
+msgid "user.subscriptions.statusInformation"
+msgstr ""
+"Пониже высвітляны сут актывны і выгаслы субскрипциі вєдно з датом выгасіня. "
+"Понадто до каждой субскрипциі можут быти долучены слідуючы відомости о "
+"статусі."
+
+msgid "user.subscriptions.status.needsApprovalDescription"
+msgstr "Субскрипцию треба перезрити перед єй актывацийом"
+
+msgid "user.subscriptions.individualSubscriptions"
+msgstr "Індивідуальна субскрипция"
+
+msgid "user.subscriptions.viewSubscriptionTypes"
+msgstr "Посмотр на доступны роды субскрипциі"
+
+msgid "user.subscriptions.form.typeId"
+msgstr "Вид субскрипциі"
+
+msgid "user.subscriptions.form.membership"
+msgstr "Членство"
+
+msgid "user.subscriptions.form.institutionMailingAddress"
+msgstr "Адрес"
+
+msgid "user.subscriptions.form.domain"
+msgstr "Домена"
+
+msgid "user.subscriptions.form.domainInstructions"
+msgstr ""
+"Кєд подано домену, зарес IP є опцийом.<br />Правильны вартости то назвы "
+"домен (нп. lib.sfu.ca)."
+
+msgid "user.subscriptions.form.domainValid"
+msgstr "Прошу о поданя правильной домены."
+
+msgid "user.subscriptions.form.ipRange"
+msgstr "обсяг IP"
+
+msgid "user.subscriptions.form.ipRangeItem"
+msgstr "&#8226;"
+
+msgid "user.subscriptions.form.ipRangeValid"
+msgstr "Введ правильный обсяг IP."
+
+msgid "reviewer.article.enterReviewA"
+msgstr "Влуч, або введ (жебы вклиіти) рецензию тексту."
+
+msgid "reviewer.article.uploadFile"
+msgstr ""
+"Додатково, можеш выслати файлі перезначены для редактора і/або автора (нп. "
+"файль з текстом з нанесеныма коментарями)."
+
+msgid "reviewer.article.selectRecommendation"
+msgstr ""
+"Жебы закінчыти процес рецензиі выбер рекомендацию і влич Вышлий рецензию до "
+"редактора. Мисиш ввести рецензию жебы выслати файль, жебы выбір рекомендациі "
+"был актывный."
+
+msgid "submission.copyedit.editorsCopyedit"
+msgstr "Редакторска коректа"
+
+msgid "submission.layout.noLayoutFile"
+msgstr ""
+"Брак (перед высыланьом замовліня належыт переслати остаточну версию по "
+"коректі як версию до складаня)"
+
+msgid "user.subscriptions.form.membershipRequired"
+msgstr "Выбраны роды субскрипциі вымагают інформациі о членстві."
+
+msgid "user.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+"Выбраный тып субскрипциі вымагат поданя домены і/або обсягу адресів IP на "
+"авторизациі субскрипциі."
+
+msgid "submission.copyedit.editorAuthorReview"
+msgstr "Авторска коректа"
+
+msgid "submission.layout.galleyPublicIdentificationExists"
+msgstr "Публичный ідентыфікатор файля до публикациі уж фунґує."
+
+msgid "submission.copyedit.finalCopyedit"
+msgstr "Кінцьова коректа"
+
+msgid "submission.proofread.instructions"
+msgstr "Інструкциі односячы ся до авторской коректы"
+
+msgid "submission.comments.viewableDescription"
+msgstr ""
+"Увагы можут быти тіж высланы до автора.<br />\n"
+"(По записаню, можна додавати наступны вписы в бесіді.)"
+
+msgid "user.subscriptions.form.ipRangeInstructions"
+msgstr ""
+"Кед подано обсяг IP, домена є опцийом.<br />Правильны вартости то адрес IP ("
+"нп. 142.58.103.1), обсяг IP (нп. 142.58.103.1 -142.58.103.4), обсяг IP разом "
+"з '*' (нп. 142.58.*.*) як тіж обсяг IP з CIDR (нп. 142.58.100.0/24)."
+
+msgid "submission.comments.saveAndEmailEditor"
+msgstr "Запиш вышлий е-майль до редактора часопису"
+
+msgid "user.subscriptions.form.deleteIpRange"
+msgstr "Усун"
+
+msgid "search.allJournals"
+msgstr "Вшыткы часописы"
+
+msgid "user.register.noJournals"
+msgstr "На тій стороні не є часописів, в котрых можна ся зареґіструвати."
+
+msgid "user.register.openAccessNotificationDescription"
+msgstr ""
+"Хочу доставати е-майлі, коли номер часопису буде удоступлений на принципах "
+"Open Access."
+
+msgid "user.register.reviewerDescriptionNoInterests"
+msgstr "Зголашам готовіст до рецензуваня статі публикуваных в часописі."
+
+msgid "user.register.reviewerDescription"
+msgstr "Зголашам готовіст до рецензуваня науковых статі в рамах того сервісу."
+
+msgid "author.submit.uploadInstructions"
+msgstr ""
+"\n"
+"<p>Жебы переслати текст до публикациі в часописі, зроб слідуючы крокы.</p>\n"
+"<ol>\n"
+"<li>На тій стороні влуч Переглядай (або Выбер файль), што спричынит отворіня "
+"выгляду выбору файля в ціли злокалізуваня го на твердым дыску Твойого "
+"комутера.</li>\n"
+"<li>Найд на диску файль, котрый хочеш зголосити і зазнач го.</li>\n"
+"<li>Кликний на притиск Отвор в вікні Выбер файль, што спричынит высвітліня "
+"назвы файля на тій стороні.</li>\n"
+"<li>Кликний притиск Перешлий на тій стороні, што спричынит пересланя файля з "
+"компутера на інтернетову сторону часопису і змін його назвы згідні з "
+"конвенцийом принятом през редакцию.</li>\n"
+"<li>По пересланю зголошыня кликний запиш і ід дале на долині той "
+"стороны.</li>\n"
+"</ol>"
+
+msgid "user.register.form.emailConsentAllContexts"
+msgstr ""
+"Так, хцу доставати повідомліня о новых публикациях і оголошынях зо вшыткых "
+"часописів в котрых єм зареґіструваний."
+
+msgid "submission.review.mustUploadFileForReview"
+msgstr ""
+"Відоміст з просьбом о рецензию не може остати выслана, закля не остане "
+"прирыхтувана версия до рецензиі."
+
+msgid "user.register.form.missingContextConsent"
+msgstr ""
+"Мусиш згодити ся на принципы політыкы приватности для каждого часопису, в "
+"котрым ся реєструєш."
+
+msgid "submission.copyedit.mustUploadFileForInitialCopyedit"
+msgstr ""
+"Відоміст з просьбом о коректу не може остати выслана, закля файль не остане "
+"выбраний до языковой коректы в секциі Рішыня редактора на стороні Рецензия."
+
+msgid "user.subscriptions.status.awaitingManualPaymentDescription"
+msgstr "Ручна оплата была започаткувана, але іщы не достали сме грошы"
+
+msgid "submission.copyedit.mustUploadFileForCopyedit"
+msgstr ""
+"Відоміст з просьбом о коректу не може остати выслана, закля файль до "
+"языковой коректы не остане преселаний."
+
+msgid "reviewer.article.selectRecommendation.byEditor"
+msgstr "Устав або допасуй рекомендацию."
+
+msgid "reviewer.article.mustSelectDecision"
+msgstr ""
+"Рекомендация не остала выбрана. Перед высланьом мусиш выбрати рекомендацию."
+
+msgid "reviewer.article.confirmDecision"
+msgstr "По записаню рішыня, дальшы зміны не будут можливы. Ци хочеш продолжати?"
+
+msgid "copyeditor.article.fileToCopyedit"
+msgstr "Файль для головного редактора"
+
+msgid "copyeditor.article.copyeditorFile"
+msgstr "Файль языкового едитора"
+
+msgid "copyeditor.article.copyeditorFinalFile"
+msgstr "Файль языкового едитора - закінчена версия"
+
+msgid "proofreader.noProofreadingAssignments"
+msgstr "Брак задань звязаных з коректом дописів"
