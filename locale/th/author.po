@@ -1,7 +1,7 @@
-# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
+# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-10-17 09:32+0000\n"
+"PO-Revision-Date: 2026-09-15 04:51+0000\n"
 "Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
 "Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/author/th/>\n"
 "Language: th\n"
@@ -12,16 +12,16 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "author.track"
-msgstr "การส่งที่กำลังดำเนินการ"
+msgstr "บทความที่กำลังดำเนินการ"
 
 msgid "author.submit"
-msgstr "การส่งใหม่"
+msgstr "ส่งบทความใหม่"
 
 msgid "author.submit.suppFile.dateDescription"
-msgstr "วันที่ที่เก็บรวบรวมข้อมูลหรือสร้างเครื่องมือ"
+msgstr "วันที่เก็บรวบรวมข้อมูลหรือสร้างเครื่องมือ"
 
 msgid "author.submit.suppFile.sourceDescription"
-msgstr "ชื่อของการศึกษา หรือจุดเริ่มต้นอื่น ๆ"
+msgstr "ชื่องานวิจัยหรือแหล่งที่มาของข้อมูล"
 
 msgid "author.submit.suppFile.specifyOtherType"
 msgstr "ระบุประเภทอื่น"
@@ -30,267 +30,266 @@ msgid "author.submit.suppFile.noFile"
 msgstr "ยังไม่ได้อัพโหลดไฟล์"
 
 msgid "author.submit.suppFile.form.titleRequired"
-msgstr "กรุณากรอกชื่อเรื่องของไฟล์เสริมนี้"
+msgstr "โปรดระบุชื่อไฟล์ประกอบ"
 
 msgid "author.submit.suppFile.form.subjectRequired"
-msgstr "กรุณากรอกหัวข้อ"
+msgstr "โปรดระบุหัวเรื่อง"
 
 msgid "author.submit.suppFile.form.descriptionRequired"
-msgstr "กรุณากรอกคำอธิบาย"
+msgstr "โปรดระบุคำอธิบาย"
 
 msgid "author.suppFile.suppFilePublicIdentificationExists"
-msgstr "หมายเลขประจำไฟล์เสริมที่เผยแพร่ได้มีอยู่แล้ว"
+msgstr "มีรหัสระบุไฟล์ประกอบสำหรับเผยแพร่นี้อยู่แล้ว"
 
 msgid "author.suppFile.publicSuppFileIdentifier"
-msgstr "หมายเลขประจำไฟล์เสริมที่เผยแพร่ได้"
+msgstr "รหัสระบุไฟล์ประกอบสำหรับเผยแพร่"
 
 msgid "author.submit.filesSummary"
 msgstr "สรุปไฟล์"
 
 msgid "author.submit.finishSubmission"
-msgstr "สิ้นสุดการส่ง"
+msgstr "เสร็จสิ้นการส่งบทความ"
 
 msgid "author.submit.submissionComplete"
-msgstr ""
-"การส่งบทความเสร็จสมบูรณ์ ขอบคุณสำหรับความสนใจในการตีพิมพ์กับ {$journalTitle}."
+msgstr "ส่งบทความเรียบร้อยแล้ว ขอบคุณที่สนใจเผยแพร่ผลงานกับ {$journalTitle}"
 
 msgid "author.article.uploadAuthorVersion"
-msgstr "อัพโหลดเวอร์ชันของผู้เขียน"
+msgstr "อัปโหลดฉบับแก้ไขของผู้เขียน"
 
 msgid "author.article.copyeditedFile"
-msgstr "ไฟล์ที่ได้รับการคัดลอกแก้ไขแล้ว"
+msgstr "ไฟล์ที่ผ่านการตรวจแก้ต้นฉบับ"
 
 msgid "author.article.authorRevisedFile"
-msgstr "ไฟล์ของผู้เขียนที่แก้ไขแล้ว"
+msgstr "ไฟล์ฉบับแก้ไขของผู้เขียน"
 
 msgid "author.submit.submitArticle"
 msgstr "ส่งบทความ"
 
 msgid "author.submit.stepsToSubmit"
-msgstr "ห้าขั้นตอนในการส่งผลงาน"
+msgstr "5 ขั้นตอนการส่งบทความ"
 
 msgid "author.submit.startHereTitle"
-msgstr "เริ่มการส่งใหม่"
+msgstr "เริ่มส่งบทความใหม่"
 
 msgid "author.submit.startHereLink"
 msgstr ""
 "<a href=\"{$submitUrl}\" class=\"action\">คลิกที่นี่</a> "
-"เพื่อไปยังขั้นตอนแรกของกระบวนการส่งผลงานแบบห้าขั้นตอน"
+"เพื่อเริ่มขั้นตอนแรกของกระบวนการส่งบทความ 5 ขั้นตอน"
 
 msgid "author.submit.step1"
-msgstr "ขั้นตอนที่ 1. เริ่มการส่งผลงาน"
+msgstr "ขั้นตอนที่ 1 เริ่มต้นการส่งบทความ"
 
 msgid "author.submit.step2"
-msgstr "ขั้นตอนที่ 2. อัปโหลดผลงาน"
+msgstr "ขั้นตอนที่ 2 อัปโหลดบทความ"
 
 msgid "author.submit.step3"
-msgstr "ขั้นตอนที่ 3. ป้อนข้อมูลเมตาของผลงาน"
+msgstr "ขั้นตอนที่ 3 กรอกข้อมูลเมตาของบทความ"
 
 msgid "author.submit.step4"
-msgstr "ขั้นตอนที่ 4. อัปโหลดไฟล์เสริม"
+msgstr "ขั้นตอนที่ 4 อัปโหลดไฟล์ประกอบ"
 
 msgid "author.submit.step4a"
-msgstr "ขั้นตอนที่ 4a. เพิ่มไฟล์เสริม"
+msgstr "ขั้นตอนที่ 4ก เพิ่มไฟล์ประกอบ"
 
 msgid "author.submit.step5"
-msgstr "ขั้นตอนที่ 5. ยืนยันการส่งผลงาน"
+msgstr "ขั้นตอนที่ 5 ยืนยันการส่งบทความ"
 
 msgid "author.submit.start"
-msgstr "เริ่ม"
+msgstr "เริ่มต้น"
 
 msgid "author.submit.upload"
-msgstr "อัปโหลดผลงาน"
+msgstr "อัปโหลดบทความ"
 
 msgid "author.submit.metadata"
-msgstr "ป้อนข้อมูลเมตา"
+msgstr "กรอกข้อมูลเมตา"
 
 msgid "author.submit.supplementaryFiles"
-msgstr "อัปโหลดไฟล์เสริม"
+msgstr "อัปโหลดไฟล์ประกอบ"
 
 msgid "author.submit.nextSteps"
 msgstr "ขั้นตอนถัดไป"
 
 msgid "author.submit.notAccepting"
-msgstr "วารสารนี้ไม่ได้รับการส่งผลงานในขณะนี้"
+msgstr "ขณะนี้วารสารยังไม่เปิดรับบทความ"
 
 msgid "author.submit.requestWaiver"
 msgstr "ขอยกเว้นค่าธรรมเนียม"
 
 msgid "author.submit.qualifyForWaiver"
-msgstr "กรุณาพิจารณายกเว้นค่าธรรมเนียมการส่งบทความสำหรับบทความนี้"
+msgstr "โปรดพิจารณายกเว้นค่าธรรมเนียมการส่งบทความสำหรับบทความนี้"
 
 msgid "author.submit.addReasonsForWaiver"
-msgstr ""
-"กรุณาใช้ช่องความคิดเห็นด้านล่างเพื่อระบุเหตุผลว่าทำไมควรยกเว้นค่าธรรมเนียม"
+msgstr "โปรดระบุเหตุผลที่ขอยกเว้นค่าธรรมเนียมในช่องความคิดเห็นด้านล่าง"
 
 msgid "author.submit.mustEnterWaiverReason"
-msgstr "หากคุณต้องการขอยกเว้นค่าธรรมเนียม คุณต้องระบุเหตุผลในช่องที่ให้ไว้"
+msgstr "หากต้องการขอยกเว้นค่าธรรมเนียม โปรดระบุเหตุผลในช่องที่กำหนด"
 
 msgid "author.submissions.queuedReviewSubsequent"
-msgstr "กำลังอยู่ในกระบวนการตรวจสอบ รอบที่ {$round}"
+msgstr "อยู่ระหว่างการประเมิน รอบที่ {$round}"
 
 msgid "author.submissions.queuedReviewRevisions"
-msgstr "กำลังตรวจสอบ: ต้องการการแก้ไข"
+msgstr "อยู่ระหว่างการประเมิน: ต้องแก้ไขบทความ"
 
 msgid "author.submissions.queuedEditingCopyedit"
-msgstr "กำลังแก้ไข: ต้องการการตรวจสำเนา"
+msgstr "อยู่ระหว่างการแก้ไขต้นฉบับ: รอตรวจแก้ต้นฉบับ"
 
 msgid "author.submissions.queuedEditingProofread"
-msgstr "กำลังแก้ไข: ต้องการการพิสูจน์อักษร"
+msgstr "อยู่ระหว่างการแก้ไขต้นฉบับ: รอตรวจพิสูจน์อักษร"
 
 msgid "author.submissions.uploadCopyeditedVersion"
-msgstr "อัปโหลดเวอร์ชันที่ตรวจสำเนาแล้ว"
+msgstr "อัปโหลดฉบับที่ตรวจแก้ต้นฉบับแล้ว"
 
 msgid "author.submissions.proofreadingCorrections"
-msgstr "การแก้ไขการพิสูจน์อักษร"
+msgstr "การแก้ไขจากการพิสูจน์อักษร"
 
 msgid "author.submissions.confirmDelete"
-msgstr "คุณแน่ใจหรือว่าต้องการลบการส่งที่ยังไม่เสร็จนี้?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบบทความที่ส่งซึ่งยังดำเนินการไม่เสร็จ?"
 
 msgid "author.submissions.viewStatus"
 msgstr "ดูสถานะ"
 
 msgid "author.submissions.noSubmissions"
-msgstr "ไม่มีการส่งผลงาน"
+msgstr "ไม่มีบทความที่ส่ง"
 
 msgid "author.submit.journalSection"
-msgstr "ส่วนของวารสาร"
+msgstr "หมวดของวารสาร"
 
 msgid "author.submit.verifyChecklist"
-msgstr ""
-"คุณต้องตรวจสอบให้แน่ใจว่าสินค้าในรายการตรวจสอบการส่งทั้งหมดเป็นไปตามที่กำหนดก"
-"่อนดำเนินการต่อ"
+msgstr "โปรดตรวจสอบให้ครบทุกข้อในรายการตรวจสอบการส่งบทความก่อนดำเนินการต่อ"
 
 msgid "author.submit.copyrightNoticeAgreeRequired"
-msgstr "คุณต้องยอมรับเงื่อนไขการแจ้งลิขสิทธิ์ก่อนที่จะดำเนินการต่อ"
+msgstr "คุณต้องยอมรับเงื่อนไขในประกาศลิขสิทธิ์ก่อนดำเนินการต่อ"
 
 msgid "submission.submit.coverNote"
-msgstr "ความคิดเห็นสำหรับบรรณาธิการ"
+msgstr "ข้อความถึงบรรณาธิการ"
 
 msgid "author.submit.comments"
-msgstr "กรอกข้อความ (ถ้ามี)"
+msgstr "กรอกข้อความ (ไม่บังคับ)"
 
 msgid "author.submit.form.localeRequired"
-msgstr "กรุณาเลือกภาษาที่ใช้ในการส่งผลงาน"
+msgstr "โปรดเลือกภาษาของบทความ"
 
 msgid "author.submit.reorderInstructions"
-msgstr "จัดเรียงชื่อผู้แต่งใหม่เพื่อให้ปรากฏในลำดับที่ต้องการเมื่อตีพิมพ์"
+msgstr "จัดลำดับผู้เขียนตามลำดับที่ต้องการให้แสดงเมื่อเผยแพร่"
 
 msgid "author.submit.reorder"
-msgstr "จัดเรียงชื่อผู้แต่งใหม่"
+msgstr "จัดลำดับชื่อผู้เขียน"
 
 msgid "author.submit.selectPrincipalContact"
-msgstr "ผู้ติดต่อหลักสำหรับการติดต่อบรรณาธิการ"
+msgstr "ผู้ติดต่อหลักสำหรับการติดต่อกับกองบรรณาธิการ"
 
 msgid "author.submit.addAuthor"
-msgstr "เพิ่มผู้แต่ง"
+msgstr "เพิ่มผู้เขียน"
 
 msgid "author.submit.deleteAuthor"
-msgstr "ลบผู้แต่ง"
+msgstr "ลบผู้เขียน"
 
 msgid "author.submit.submissionIndexingDescription"
 msgstr ""
-"ระบุคำสำหรับจัดทำดัชนีการส่งผลงาน; แยกแต่ละคำด้วยเครื่องหมายอัฒภาค (คำที่1; "
-"คำที่2; คำที่3)"
+"ระบุคำสำหรับจัดทำดัชนีของบทความ โดยคั่นแต่ละคำด้วยเครื่องหมายอัฒภาค (คำ1; "
+"คำ2; คำ3)"
 
 msgid "author.submit.coverageInstructions"
 msgstr ""
-"ระบุถึงสถานที่เชิงภูมิศาสตร์ ช่วงเวลาหรือการครอบคลุมเชิงประวัติศาสตร์ "
-"และ/หรือคุณลักษณะของตัวอย่างการวิจัย"
+"ระบุพื้นที่ทางภูมิศาสตร์ ช่วงเวลา หรือขอบเขตทางประวัติศาสตร์ "
+"และ/หรือลักษณะของกลุ่มตัวอย่างที่ใช้ในการวิจัย"
 
 msgid "author.submit.languageInstructions"
 msgstr ""
-"ภาษาอังกฤษ=en; ภาษาฝรั่งเศส=fr; ภาษาสเปน=es. <a href=\"https://www.loc.gov/"
-"standards/iso639-2/php/code_list.php\" target=\"_blank\">รหัสเพิ่มเติม</a>"
+"อังกฤษ=en; ฝรั่งเศส=fr; สเปน=es <a href=\"https://www.loc.gov/standards/"
+"iso639-2/php/code_list.php\" target=\"_blank\">ดูรหัสภาษาเพิ่มเติม</a>"
 
 msgid "author.submit.form.authorRequired"
-msgstr "จำเป็นต้องมีผู้แต่งอย่างน้อยหนึ่งคน"
+msgstr "ต้องมีผู้เขียนอย่างน้อยหนึ่งคน"
 
 msgid "author.submit.form.authorRequiredFields"
-msgstr "จำเป็นต้องกรอกชื่อ นามสกุล และอีเมลของผู้แต่งแต่ละคน"
+msgstr "ต้องระบุชื่อ นามสกุล และอีเมลของผู้เขียนทุกคน"
 
 msgid "author.submit.form.titleRequired"
-msgstr "กรุณาใส่ชื่อเรื่องของบทความของคุณ"
+msgstr "โปรดระบุชื่อบทความ"
 
 msgid "author.submit.form.abstractRequired"
-msgstr "กรุณาใส่บทคัดย่อของบทความของคุณ"
+msgstr "โปรดระบุบทคัดย่อของบทความ"
 
 msgid "author.submit.form.wordCountAlert"
-msgstr "คุณได้เกินจำนวนคำสูงสุดที่กำหนดสำหรับบทคัดย่อในส่วนนี้แล้ว"
+msgstr "บทคัดย่อมีจำนวนคำเกินขีดจำกัดที่กำหนดไว้สำหรับหมวดนี้"
 
 msgid "author.submit.submissionFile"
-msgstr "ไฟล์ส่งผลงาน"
+msgstr "ไฟล์บทความ"
 
 msgid "author.submit.uploadSubmissionFile"
-msgstr "อัปโหลดไฟล์ส่งผลงาน"
+msgstr "อัปโหลดไฟล์บทความ"
 
 msgid "author.submit.replaceSubmissionFile"
-msgstr "แทนที่ไฟล์ส่งผลงาน"
+msgstr "เปลี่ยนไฟล์บทความ"
 
 msgid "author.submit.noSubmissionFile"
-msgstr "ยังไม่มีการอัปโหลดไฟล์ส่งผลงาน"
+msgstr "ยังไม่ได้อัปโหลดไฟล์บทความ"
 
 msgid "author.submit.noSubmissionConfirm"
-msgstr "คุณแน่ใจหรือไม่ว่าต้องการดำเนินการต่อโดยไม่อัปโหลดไฟล์ส่งผลงาน?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการดำเนินการต่อโดยไม่อัปโหลดไฟล์บทความ?"
 
 msgid "author.submit.supplementaryFilesInstructions"
 msgstr ""
-"ขั้นตอนนี้เป็นขั้นตอนเสริมที่ให้ผู้ใช้สามารถเพิ่มไฟล์เสริมในการส่งผลงานได้ "
-"ไฟล์เหล่านี้อาจเป็น (ก) เครื่องมือวิจัย, (ข) "
-"ชุดข้อมูลที่สอดคล้องกับข้อกำหนดของการทบทวนจริยธรรมวิจัย, (ค) "
-"แหล่งข้อมูลที่ผู้อ่านอาจหาไม่ได้, (ง) "
-"ภาพและตารางที่ไม่สามารถใส่ลงในเนื้อหาได้ หรือวัสดุอื่น ๆ "
-"ที่เพิ่มมูลค่าให้กับผลงาน"
+"ขั้นตอนนี้เป็นทางเลือกสำหรับเพิ่มไฟล์ประกอบในบทความ "
+"โดยไฟล์สามารถเป็นรูปแบบใดก็ได้ เช่น (ก) เครื่องมือวิจัย (ข) "
+"ชุดข้อมูลที่เป็นไปตามข้อกำหนดด้านจริยธรรมการวิจัยของการศึกษานั้น (ค) "
+"แหล่งข้อมูลที่ผู้อ่านไม่สามารถเข้าถึงได้จากแหล่งอื่น (ง) "
+"รูปภาพและตารางที่ไม่สามารถรวมไว้ในเนื้อหาหลัก หรือเอกสารอื่น ๆ "
+"ที่ช่วยสนับสนุนผลงานนี้"
 
 msgid "author.submit.supplementaryFiles.saveToUpload"
-msgstr "คลิกบันทึกเพื่ออัปโหลดไฟล์ (หลังจากนั้นสามารถอัปโหลดไฟล์เพิ่มเติมได้)"
+msgstr "คลิก บันทึก เพื่ออัปโหลดไฟล์ หลังจากนั้นสามารถอัปโหลดไฟล์เพิ่มเติมได้"
 
 msgid "author.submit.forgottenSubmitSuppFile"
-msgstr "คุณแน่ใจหรือไม่ว่าต้องการดำเนินการต่อโดยไม่อัปโหลดไฟล์เสริมที่คุณเลือก?"
+msgstr ""
+"คุณแน่ใจหรือไม่ว่าต้องการดำเนินการต่อโดยไม่อัปโหลดไฟล์ประกอบที่เลือกไว้?"
 
 msgid "author.submit.noSupplementaryFiles"
-msgstr "ยังไม่มีการเพิ่มไฟล์เสริมในการส่งผลงานนี้"
+msgstr "ยังไม่มีไฟล์ประกอบสำหรับบทความนี้"
 
 msgid "author.submit.backToSupplementaryFiles"
-msgstr "กลับไปที่ไฟล์เสริม"
+msgstr "กลับไปยังไฟล์ประกอบ"
 
 msgid "author.submit.confirmDeleteSuppFile"
-msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบไฟล์เสริมนี้?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบไฟล์ประกอบนี้?"
 
 msgid "author.submit.uploadSuppFile"
-msgstr "อัปโหลดไฟล์เสริม"
+msgstr "อัปโหลดไฟล์ประกอบ"
 
 msgid "author.submit.addSupplementaryFile"
-msgstr "เพิ่มไฟล์เสริม"
+msgstr "เพิ่มไฟล์ประกอบ"
 
 msgid "author.submit.editSupplementaryFile"
-msgstr "แก้ไขไฟล์เสริม"
+msgstr "แก้ไขไฟล์ประกอบ"
 
 msgid "author.submit.supplementaryFileData"
-msgstr "ข้อมูลเมทาดาทาของไฟล์เสริม"
+msgstr "ข้อมูลเมตาของไฟล์ประกอบ"
 
 msgid "author.submit.supplementaryFileDataDescription"
 msgstr ""
-"เพื่อจัดทำดัชนีของวัสดุเสริมนี้ "
-"โปรดระบุข้อมูลเมทาดาทาสำหรับไฟล์เสริมที่อัปโหลด"
+"เพื่อจัดทำดัชนีของไฟล์ประกอบนี้ "
+"โปรดระบุข้อมูลเมตาต่อไปนี้สำหรับไฟล์ที่อัปโหลด"
 
 msgid "author.submit.supplementaryFileUpload"
-msgstr "ไฟล์เสริม"
+msgstr "ไฟล์ประกอบ"
 
 msgid "author.submit.suppFile.createrOrOwner"
-msgstr "ผู้สร้าง (หรือเจ้าของ) ของไฟล์"
+msgstr "ผู้สร้างหรือเจ้าของไฟล์"
 
 msgid "author.submit.suppFile.researchInstrument"
 msgstr "เครื่องมือวิจัย"
 
 msgid "author.submit.suppFile.researchMaterials"
-msgstr "วัสดุวิจัย"
+msgstr ""
+"แหล่งข้อมูล เอกสาร หรือวัสดุอุปกรณ์ต่างๆ "
+"ที่นำมาใช้ประกอบการศึกษาค้นคว้าและทำวิจัย"
 
 msgid "author.submit.suppFile.researchResults"
 msgstr "ผลการวิจัย"
 
 msgid "author.submit.suppFile.transcripts"
-msgstr "บทถอดความ"
+msgstr "บันทึกถอดความ"
 
 msgid "author.submit.suppFile.dataAnalysis"
 msgstr "การวิเคราะห์ข้อมูล"
@@ -306,14 +305,17 @@ msgstr "คำอธิบายโดยย่อ"
 
 msgid "author.submit.suppFile.availableToPeers"
 msgstr ""
-"นำเสนอไฟล์ให้ผู้รีวิว (ไม่รวมข้อมูลเมทาดาทา) "
-"เนื่องจากจะไม่ส่งผลต่อการตรวจทานแบบไม่เปิดเผยตัวตน"
+"แสดงไฟล์นี้แก่ผู้ประเมินโดยไม่แสดงข้อมูลเมตา "
+"เนื่องจากไม่กระทบต่อการประเมินแบบไม่เปิดเผยตัวตน"
 
 msgid "author.submit.suppFile.publisherDescription"
-msgstr "ใช้กับวัสดุที่ตีพิมพ์อย่างเป็นทางการเท่านั้น"
+msgstr "ใช้เฉพาะกับเอกสารที่เผยแพร่อย่างเป็นทางการแล้ว"
 
 msgid "author.submit.authorSubmitLoginMessage"
 msgstr ""
-"จำเป็นต้องมีบัญชีผู้ใช้เพื่อส่งบทความไปยังวารสารนี้ เพื่อให้บรรณาธิการของเราส"
-"ามารถติดตามการส่งบทความของคุณและติดต่อคุณเมื่อสถานะของการส่งบทความมีการเปลี่"
-"ยนแปลง หรือหากต้องการข้อมูลเพิ่มเติมจากคุณ"
+"ต้องมีบัญชีผู้ใช้จึงจะสามารถส่งบทความมายังวารสารนี้ได้ "
+"บัญชีผู้ใช้ช่วยให้กองบรรณาธิการติดตามบทความที่คุณส่ง "
+"และติดต่อคุณเมื่อสถานะของบทความเปลี่ยนแปลงหรือเมื่อต้องการข้อมูลเพิ่มเติม"
+
+msgid "author.submit.journalSectionDescription"
+msgstr "ต้องเลือกหมวดของวารสารสำหรับบทความที่ส่ง"
