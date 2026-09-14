@@ -1,12 +1,12 @@
-# Primož Svetek <primoz.svetek@gmail.com>, 2021, 2022, 2023, 2025.
+# Primož Svetek <primoz.svetek@gmail.com>, 2021, 2022, 2023, 2025, 2026.
 # Matevž Rudolf <matevz.rudolf@uni-lj.si>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-19T10:49:32+00:00\n"
-"PO-Revision-Date: 2025-03-07 21:13+0000\n"
-"Last-Translator: Matevž Rudolf <matevz.rudolf@uni-lj.si>\n"
+"PO-Revision-Date: 2026-09-14 11:53+0000\n"
+"Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
 "Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "sl/>\n"
 "Language: sl\n"
@@ -2452,9 +2452,7 @@ msgid "mailable.subscriptionExpired.name"
 msgstr "Naročnina je potekla"
 
 msgid "mailable.subscriptionExpired.description"
-msgstr ""
-"This email notifies a subscriber that their subscription has expired. It "
-"provides the journal's URL along with instructions for access."
+msgstr "Ta email se avtomatično pošlje naročniku, ko naročnina poteče."
 
 msgid "mailable.subscriptionExpiredLast.name"
 msgstr "Subscription Expired Last"
