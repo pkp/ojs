@@ -1,7 +1,7 @@
-# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024.
+# Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-10-17 09:57+0000\n"
+"PO-Revision-Date: 2026-09-15 04:51+0000\n"
 "Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
 "Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/editor/th/>\n"
 "Language: th\n"
@@ -12,19 +12,19 @@ msgstr ""
 "X-Generator: Weblate 4.18.2\n"
 
 msgid "editor.home"
-msgstr "หน้าหลักของบรรณาธิการ"
+msgstr "หน้าหลักบรรณาธิการ"
 
 msgid "editor.submissionQueue"
-msgstr "คิวการส่งบทความ"
+msgstr "คิวบทความ"
 
 msgid "editor.publishedIssues"
 msgstr "ฉบับที่เผยแพร่แล้ว"
 
 msgid "editor.issues.numArticles"
-msgstr "จำนวนบทความ"
+msgstr "รายการ"
 
 msgid "editor.issues.noArticles"
-msgstr "ยังไม่มีบทความใดที่กำหนดไว้สำหรับฉบับนี้"
+msgstr "ยังไม่มีรายการที่กำหนดให้เผยแพร่ในฉบับนี้"
 
 msgid "editor.issues.coverPage"
 msgstr "ภาพปก"
@@ -33,13 +33,13 @@ msgid "editor.submissionsAndPublishing"
 msgstr "การส่งบทความและการเผยแพร่"
 
 msgid "editor.submissionArchive"
-msgstr "คลังบทความที่ส่ง"
+msgstr "คลังบทความ"
 
 msgid "editor.publishing"
 msgstr "การเผยแพร่"
 
 msgid "editor.allSections"
-msgstr "ทุกส่วน"
+msgstr "ทุกหมวด"
 
 msgid "editor.allEditors"
 msgstr "บรรณาธิการทั้งหมด"
@@ -49,107 +49,106 @@ msgstr "ฉัน"
 
 msgid "editor.publicIdentificationExists"
 msgstr ""
-"ตัวระบุสาธารณะ '{$publicIdentifier}' ถูกใช้งานอยู่กับวัตถุอื่น (ฉบับ, "
-"บทความ, กัลเลย์ หรือไฟล์) กรุณาเลือกตัวระบุที่ไม่ซ้ำภายในวารสารของคุณ"
+"รหัสสาธารณะ '{$publicIdentifier}' ถูกใช้กับรายการอื่นแล้ว เช่น ฉบับวารสาร "
+"บทความ ไฟล์เผยแพร่ หรือไฟล์ โปรดใช้รหัสที่ไม่ซ้ำกันภายในวารสาร"
 
 msgid "editor.submissionArchive.noSubmissions"
 msgstr "ไม่มีบทความในคลัง"
 
 msgid "editor.submissionArchive.saveChanges"
 msgstr ""
-"บันทึกการเปลี่ยนแปลงไปยังบทความที่เก็บถาวรหรือไม่? "
-"บทความที่ถูกทำเครื่องหมายเพื่อลบจะถูกลบออกจากระบบอย่างถาวร"
+"ต้องการบันทึกการเปลี่ยนแปลงของบทความในคลังหรือไม่? "
+"บทความที่ทำเครื่องหมายเพื่อลบจะถูกลบออกจากระบบอย่างถาวร"
 
 msgid "editor.submissionReview.confirmDecision"
-msgstr "คุณแน่ใจหรือว่าต้องการบันทึกการตัดสินใจนี้?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการบันทึกผลการตัดสินใจนี้?"
 
 msgid "editor.submissionReview.emailWillArchive"
 msgstr ""
-"บทความนี้จะถูกเก็บถาวรหลังจากส่งอีเมลแจ้งผู้เขียนหรือกดปุ่มข้ามการส่งอีเมลแล้"
-"ว"
+"บทความนี้จะถูกย้ายไปยังคลังหลังจากส่งอีเมลแจ้งผู้เขียน "
+"หรือกดปุ่มข้ามการส่งอีเมล"
 
 msgid "editor.submissionReview.cannotSendToCopyediting"
 msgstr ""
-"ก่อนส่งบทความไปยังขั้นตอนการแก้ไขสำเนา "
-"ใช้ลิงก์แจ้งผู้เขียนเพื่อแจ้งการตัดสินใจและเลือกเวอร์ชันที่จะส่ง"
+"ก่อนส่งบทความไปยังขั้นตอนตรวจแก้ต้นฉบับ "
+"ให้ใช้ลิงก์แจ้งผู้เขียนเพื่อแจ้งผลการตัดสินใจ และเลือกฉบับที่จะส่งต่อ"
 
 msgid "editor.notifyUsers"
-msgstr "แจ้งเตือนผู้ใช้"
+msgstr "แจ้งผู้ใช้"
 
 msgid "editor.notifyUsers.allReaders"
-msgstr "ผู้อ่านทั้งหมด ({$count} ผู้ใช้)"
+msgstr "ผู้อ่านทั้งหมด ({$count} คน)"
 
 msgid "editor.notifyUsers.allAuthors"
-msgstr "ผู้เขียนที่เผยแพร่ทั้งหมด ({$count} ผู้ใช้)"
+msgstr "ผู้เขียนที่มีผลงานเผยแพร่แล้วทั้งหมด ({$count} คน)"
 
 msgid "editor.notifyUsers.allIndividualSubscribers"
-msgstr "สมาชิกบุคคลทั้งหมด ({$count} ผู้ใช้)"
+msgstr "สมาชิกแบบรายบุคคลทั้งหมด ({$count} คน)"
 
 msgid "editor.notifyUsers.allInstitutionalSubscribers"
-msgstr "สมาชิกสถาบันทั้งหมด ({$count} ผู้ใช้)"
+msgstr "สมาชิกแบบสถาบันทั้งหมด ({$count} คน)"
 
 msgid "editor.notifyUsers.inProgress"
-msgstr "กำลังแจ้งเตือนผู้ใช้..."
+msgstr "กำลังแจ้งผู้ใช้..."
 
 msgid "editor.usersNotified"
-msgstr "ผู้ใช้ได้รับการแจ้งเตือนแล้ว"
+msgstr "แจ้งผู้ใช้แล้ว"
 
 msgid "editor.notifyUsers.allUsers"
-msgstr ""
-"ส่งข้อความนี้ให้กับผู้ใช้ทั้งหมดที่เชื่อมโยงกับวารสารนี้ ({$count} ผู้ใช้)"
+msgstr "ส่งข้อความนี้ถึงผู้ใช้ทั้งหมดที่เกี่ยวข้องกับวารสารนี้ ({$count} คน)"
 
 msgid "editor.notifyUsers.interestedUsers"
 msgstr ""
-"ส่งข้อความนี้ให้กับผู้ใช้ที่เชื่อมโยงกับวารสารนี้ที่ระบุว่าต้องการรับการอั"
-"ปเดต ({$count} ผู้ใช้)"
+"ส่งข้อความนี้ถึงผู้ใช้ที่เกี่ยวข้องกับวารสารและเลือกไว้ว่าต้องการรับข่าวสาร "
+"({$count} คน)"
 
 msgid "editor.notifyUsers.includeToc"
-msgstr "รวมสารบัญของฉบับนี้:"
+msgstr "แนบสารบัญของฉบับนี้:"
 
 msgid "editor.editorAdministration"
-msgstr "การจัดการบรรณาธิการ"
+msgstr "การจัดการสำหรับบรรณาธิการ"
 
 msgid "editor.issues.createIssue"
-msgstr "สร้างฉบับ"
+msgstr "สร้างฉบับวารสาร"
 
 msgid "editor.issues.editIssue"
-msgstr "การจัดการฉบับ: {$issueIdentification}"
+msgstr "จัดการฉบับวารสาร: {$issueIdentification}"
 
 msgid "editor.issues.currentIssue"
 msgstr "ฉบับปัจจุบัน"
 
 msgid "editor.issues.confirmDelete"
-msgstr "คุณแน่ใจหรือว่าต้องการลบฉบับนี้อย่างถาวร?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบฉบับวารสารนี้อย่างถาวร?"
 
 msgid "editor.issues.published"
 msgstr "เผยแพร่แล้ว"
 
 msgid "editor.issues.unpublished"
-msgstr "ยังไม่ได้เผยแพร่"
+msgstr "ยังไม่เผยแพร่"
 
 msgid "editor.issues.datePublished"
 msgstr "วันที่เผยแพร่"
 
 msgid "editor.issues.volumeRequired"
-msgstr "จำเป็นต้องมีหมายเลขเล่มและต้องเป็นค่าตัวเลขที่เป็นบวก"
+msgstr "ต้องระบุปีที่ และต้องเป็นตัวเลขที่มากกว่า 0"
 
 msgid "editor.issues.numberRequired"
-msgstr "จำเป็นต้องมีหมายเลขและต้องเป็นค่าตัวเลขที่เป็นบวก"
+msgstr "ต้องระบุฉบับที่ และต้องเป็นตัวเลขที่มากกว่า 0"
 
 msgid "editor.issues.yearRequired"
-msgstr "จำเป็นต้องมีปีและต้องเป็นค่าตัวเลขที่เป็นบวก"
+msgstr "ต้องระบุปี และต้องเป็นตัวเลขที่มากกว่า 0"
 
 msgid "editor.issues.titleRequired"
-msgstr "จำเป็นต้องมีชื่อสำหรับฉบับนี้"
+msgstr "ต้องระบุชื่อฉบับวารสาร"
 
 msgid "editor.issues.issueIdentificationRequired"
-msgstr "จำเป็นต้องมีการระบุฉบับ กรุณาเลือกอย่างน้อยหนึ่งตัวเลือกการระบุฉบับ"
+msgstr "ต้องระบุข้อมูลสำหรับระบุฉบับวารสาร โปรดเลือกอย่างน้อยหนึ่งตัวเลือก"
 
 msgid "editor.issues.issueIdentification"
-msgstr "การระบุฉบับ"
+msgstr "ข้อมูลระบุฉบับวารสาร"
 
 msgid "editor.issues.publicIssueIdentifier"
-msgstr "ตัวระบุฉบับที่เผยแพร่ต่อสาธารณะ"
+msgstr "รหัสสาธารณะของฉบับวารสาร"
 
 msgid "editor.issues.description"
 msgstr "คำอธิบาย"
@@ -158,73 +157,70 @@ msgid "editor.issues.accessStatus"
 msgstr "สถานะการเข้าถึง"
 
 msgid "editor.issues.accessDate"
-msgstr "วันที่เข้าถึงแบบเปิด"
+msgstr "วันที่เปิดให้เข้าถึง"
 
 msgid "editor.issues.enableOpenAccessDate"
-msgstr "เปิดใช้งานการเข้าถึงแบบเปิดที่ล่าช้า"
+msgstr "เปิดให้เข้าถึงแบบเสรีภายหลัง"
 
 msgid "editor.issues.coverPageInstructions"
-msgstr "(รูปแบบที่อนุญาต: .gif, .jpg, หรือ .png)"
+msgstr "(รูปแบบที่รองรับ: .gif, .jpg หรือ .png)"
 
 msgid "editor.issues.uploaded"
 msgstr "อัปโหลดแล้ว"
 
 msgid "editor.issues.remove"
-msgstr "ลบออก"
+msgstr "ลบ"
 
 msgid "editor.issues.proofed"
-msgstr "ตรวจสอบแล้ว"
+msgstr "ตรวจพิสูจน์แล้ว"
 
 msgid "editor.issues.removeCoverPage"
-msgstr "ต้องการลบภาพหน้าปกหรือไม่?"
+msgstr "ลบภาพปกหรือไม่?"
 
 msgid "editor.issues.removeCoverImageOnDifferentContextNowAllowed"
 msgstr ""
-"ภาพหน้าปกที่คุณต้องการลบตรงกับฉบับของวารสารที่แตกต่างกัน "
-"กรุณาตรวจสอบว่าคุณกำลังทำงานกับวารสารที่ถูกต้อง ใช้ ID ฉบับที่ถูกต้อง "
-"แล้วลองใหม่อีกครั้ง"
+"ภาพปกที่ต้องการลบเป็นของฉบับวารสารในวารสารอื่น "
+"โปรดตรวจสอบว่ากำลังดำเนินการกับวารสารที่ถูกต้อง ใช้รหัสฉบับวารสารถูกต้อง "
+"แล้วลองอีกครั้ง"
 
 msgid "editor.issues.removeCoverImageFileNameMismatch"
 msgstr ""
-"ภาพหน้าปกที่คุณต้องการลบไม่ตรงกับภาพหน้าปกของฉบับนี้ "
-"กรุณารีโหลดหน้าเว็บแล้วลองใหม่อีกครั้ง"
+"ภาพปกที่ต้องการลบไม่ตรงกับภาพปกของฉบับนี้ โปรดโหลดหน้าใหม่แล้วลองอีกครั้ง"
 
 msgid "editor.issues.removeCoverImageFileNotFound"
-msgstr ""
-"ไม่พบภาพหน้าปกที่คุณต้องการลบ อาจจะถูกลบไปแล้ว กรุณารีโหลดหน้าเว็บแล้วลองใหม่"
+msgstr "ไม่พบภาพปกที่ต้องการลบ อาจถูกลบไปแล้ว โปรดโหลดหน้าใหม่แล้วลองอีกครั้ง"
 
 msgid "editor.issues.invalidCoverImageFormat"
-msgstr "รูปแบบภาพหน้าปกไม่ถูกต้อง รูปแบบที่ยอมรับคือ .gif, .jpg, หรือ .png"
+msgstr "รูปแบบภาพปกไม่ถูกต้อง รองรับเฉพาะ .gif, .jpg หรือ .png"
 
 msgid "editor.issues.styleFile"
-msgstr "สไตล์ชีต"
+msgstr "ไฟล์รูปแบบการแสดงผล"
 
 msgid "editor.issues.invalidStyleFormat"
 msgstr ""
-"รูปแบบสไตล์ชีตไม่ถูกต้อง ตรวจสอบให้แน่ใจว่าไฟล์ที่ส่งเป็น CSS ที่ถูกต้อง "
-"(โปรดทราบว่าสไตล์ชีตที่มีความคิดเห็น (comments) "
-"ที่จุดเริ่มต้นอาจถูกปฏิเสธได้)"
+"รูปแบบไฟล์ CSS ไม่ถูกต้อง โปรดตรวจสอบว่าไฟล์ที่ส่งเป็น CSS ที่ใช้งานได้ "
+"(ไฟล์ที่มีความคิดเห็นอยู่ตอนต้นอาจถูกปฏิเสธ)"
 
 msgid "editor.issues.removeStyleFile"
-msgstr "ต้องการลบสไตล์ชีตหรือไม่?"
+msgstr "ลบไฟล์รูปแบบการแสดงผลหรือไม่?"
 
 msgid "editor.issues.coverPageCaption"
-msgstr "คำบรรยายภาพหน้าปก"
+msgstr "คำบรรยายภาพปก"
 
 msgid "editor.issues.showCoverPage"
-msgstr "สร้างปกสำหรับฉบับนี้ด้วยองค์ประกอบดังต่อไปนี้"
+msgstr "สร้างปกสำหรับฉบับนี้โดยใช้องค์ประกอบต่อไปนี้"
 
 msgid "editor.issues.coverPageDisplay"
 msgstr "การแสดงผล"
 
 msgid "editor.issues.openAccess"
-msgstr "การเข้าถึงแบบเปิด"
+msgstr "เปิดให้เข้าถึงแบบเสรี"
 
 msgid "editor.issues.subscription"
-msgstr "การสมัครสมาชิก"
+msgstr "สำหรับสมาชิก"
 
 msgid "editor.issues.identification"
-msgstr "การระบุ"
+msgstr "ข้อมูลระบุฉบับ"
 
 msgid "editor.issues.access"
 msgstr "การเข้าถึง"
@@ -234,25 +230,24 @@ msgstr "ปก"
 
 msgid "editor.issues.confirmIssueDelete"
 msgstr ""
-"บทความทั้งหมดจะถูกส่งกลับไปที่คิวการแก้ไข "
-"และไฟล์ที่เกี่ยวข้องทั้งหมดจะถูกลบออกอย่างถาวร "
-"คุณแน่ใจหรือไม่ว่าต้องการลบฉบับนี้?"
+"บทความทั้งหมดจะถูกส่งกลับไปยังคิวแก้ไข และไฟล์ที่เกี่ยวข้องทั้งหมดจะถูกลบอย่"
+"างถาวร คุณแน่ใจหรือไม่ว่าต้องการลบฉบับนี้?"
 
 msgid "editor.issues.resetIssueOrder"
 msgstr ""
-"วารสารนี้ใช้การเรียงลำดับฉบับแบบกำหนดเอง <a href=\"{$url}\" class=\"action\""
-">รีเซ็ตเป็นค่าเริ่มต้น</a>"
+"วารสารนี้มีการจัดลำดับฉบับแบบกำหนดเอง <a href=\"{$url}\" class=\"action\""
+">กลับเป็นค่าเริ่มต้น</a>"
 
 msgid "editor.issues.resetSectionOrder"
 msgstr ""
-"ฉบับนี้ใช้การเรียงลำดับส่วนแบบกำหนดเอง <a href=\"{$url}\" class=\"action\""
-">รีเซ็ตเป็นค่าเริ่มต้น</a>"
+"ฉบับนี้มีการจัดลำดับหมวดแบบกำหนดเอง <a href=\"{$url}\" class=\"action\""
+">กลับเป็นค่าเริ่มต้น</a>"
 
 msgid "editor.issues.issueData"
-msgstr "ข้อมูลฉบับ"
+msgstr "ข้อมูลฉบับวารสาร"
 
 msgid "editor.issues.saveChanges"
-msgstr "บันทึกการเปลี่ยนแปลงในสารบัญหรือไม่?"
+msgstr "ต้องการบันทึกการเปลี่ยนแปลงของสารบัญหรือไม่?"
 
 msgid "editor.issues.default"
 msgstr "ค่าเริ่มต้น"
@@ -264,31 +259,31 @@ msgid "editor.issues.publicId"
 msgstr "รหัสสาธารณะ"
 
 msgid "editor.issues.publishIssue"
-msgstr "เผยแพร่ฉบับ"
+msgstr "เผยแพร่ฉบับวารสาร"
 
 msgid "editor.issues.unpublishIssue"
-msgstr "ยกเลิกการเผยแพร่ฉบับ"
+msgstr "ยกเลิกการเผยแพร่ฉบับวารสาร"
 
 msgid "editor.issues.previewIssue"
-msgstr "ดูตัวอย่างฉบับ"
+msgstr "ดูตัวอย่างฉบับวารสาร"
 
 msgid "editor.issues.preview"
 msgstr "ดูตัวอย่าง"
 
 msgid "editor.issues.confirmPublish"
-msgstr "คุณแน่ใจหรือไม่ว่าต้องการเผยแพร่ฉบับใหม่?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการเผยแพร่ฉบับใหม่นี้?"
 
 msgid "editor.issues.confirmUnpublish"
-msgstr "คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการเผยแพร่ฉบับที่เผยแพร่แล้วนี้?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการเผยแพร่ฉบับนี้?"
 
 msgid "editor.issues.confirmSetCurrentIssue"
-msgstr "คุณแน่ใจหรือไม่ว่าต้องการตั้งฉบับนี้เป็นฉบับปัจจุบัน?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการกำหนดฉบับนี้เป็นฉบับปัจจุบัน?"
 
 msgid "editor.issues.publicArticleIdExists"
-msgstr "ไม่สามารถบันทึกรหัสสาธารณะสำหรับบทความได้:"
+msgstr "ไม่สามารถบันทึกรหัสสาธารณะของบทความได้:"
 
 msgid "editor.issues.noLiveIssues"
-msgstr "ไม่มีฉบับที่เผยแพร่"
+msgstr "ไม่มีฉบับที่เผยแพร่อยู่"
 
 msgid "editor.issues.open"
 msgstr "เปิด"
@@ -297,88 +292,88 @@ msgid "editor.issues.pages"
 msgstr "หน้า"
 
 msgid "editor.issues.galleys"
-msgstr "กัลเลย์ของฉบับ"
+msgstr "ไฟล์เผยแพร่ของฉบับ"
 
 msgid "editor.issues.galley"
-msgstr "กัลเลย์ของฉบับ"
+msgstr "ไฟล์เผยแพร่ของฉบับ"
 
 msgid "editor.issues.viewingGalley"
-msgstr "กำลังดูตัวอย่างกัลเลย์ของฉบับ"
+msgstr "กำลังดูไฟล์เผยแพร่ของฉบับ"
 
 msgid "editor.issues.issueGalleysDescription"
-msgstr "เผยแพร่กัลเลย์ที่มีเนื้อหาทั้งฉบับ"
+msgstr "เผยแพร่ไฟล์ที่รวมเนื้อหาทั้งหมดของฉบับ"
 
 msgid "editor.issues.noneIssueGalleys"
-msgstr "ยังไม่มีการเผยแพร่กัลเลย์ของฉบับใดๆ"
+msgstr "ยังไม่มีไฟล์เผยแพร่ของฉบับ"
 
 msgid "editor.issues.galleyLabelRequired"
-msgstr "จำเป็นต้องระบุป้ายชื่อกัลเลย์ของฉบับ"
+msgstr "ต้องระบุชื่อไฟล์เผยแพร่ของฉบับ"
 
 msgid "editor.issues.galleyLocaleRequired"
-msgstr "จำเป็นต้องระบุตำแหน่งกัลเลย์ของฉบับ"
+msgstr "ต้องระบุภาษาของไฟล์เผยแพร่ของฉบับ"
 
 msgid "editor.issues.galleyPublicIdentificationExists"
-msgstr "การระบุตัวกัลเลย์ของฉบับที่เป็นสาธารณะมีอยู่แล้ว"
+msgstr "มีรหัสสาธารณะของไฟล์เผยแพร่ฉบับนี้อยู่แล้ว"
 
 msgid "editor.issues.backToIssueGalleys"
-msgstr "กลับไปที่กัลเลย์ของฉบับ"
+msgstr "กลับไปยังไฟล์เผยแพร่ของฉบับ"
 
 msgid "editor.issues.confirmDeleteGalley"
-msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบกัลเลย์ของฉบับนี้?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบไฟล์เผยแพร่ของฉบับนี้?"
 
 msgid "editor.issues.identifiers"
-msgstr "ตัวระบุ"
+msgstr "รหัสระบุ"
 
 msgid "editor.navigation.futureIssues"
-msgstr "ฉบับที่กำลังจะมา"
+msgstr "ฉบับในอนาคต"
 
 msgid "grid.action.addGalley"
-msgstr "เพิ่มกัลเลย์"
+msgstr "เพิ่มไฟล์เผยแพร่"
 
 msgid "grid.action.publish"
-msgstr "เผยแพร่ฉบับ"
+msgstr "เผยแพร่ฉบับวารสาร"
 
 msgid "grid.action.addIssue"
-msgstr "สร้างฉบับ"
+msgstr "สร้างฉบับวารสาร"
 
 msgid "grid.action.viewIssue"
-msgstr "ดูฉบับ"
+msgstr "ดู"
 
 msgid "grid.action.previewIssue"
 msgstr "ดูตัวอย่าง"
 
 msgid "grid.action.addIssueGalley"
-msgstr "สร้างกัลเลย์ของฉบับ"
+msgstr "สร้างไฟล์เผยแพร่ของฉบับ"
 
 msgid "grid.action.setCurrentIssue"
-msgstr "ตั้งเป็นฉบับปัจจุบัน"
+msgstr "กำหนดเป็นฉบับปัจจุบัน"
 
 msgid "editor.navigation.issueArchive"
 msgstr "ฉบับย้อนหลัง"
 
 msgid "editor.article.designateReviewVersion"
-msgstr "กำหนดไฟล์ต้นฉบับเป็นเวอร์ชันสำหรับการทบทวน"
+msgstr "กำหนดไฟล์ต้นฉบับเป็นฉบับสำหรับการประเมิน"
 
 msgid "editor.article.decision"
-msgstr "การตัดสินใจ"
+msgstr "ผลการตัดสินใจ"
 
 msgid "editor.submissions.showBy"
-msgstr "แสดงโดย"
+msgstr "แสดงตาม"
 
 msgid "editor.submissions.submitMMDD"
-msgstr "ส่ง MM-DD"
+msgstr "วันที่ส่ง MM-DD"
 
 msgid "editor.submissions.activeAssignments"
-msgstr "งานที่กำลังดำเนินการ"
+msgstr "งานที่กำลังรับผิดชอบ"
 
 msgid "editor.submissions.invite"
 msgstr "เชิญ"
 
 msgid "editor.submissions.accept"
-msgstr "ยอมรับ"
+msgstr "รับ"
 
 msgid "editor.submissions.noSubmissions"
-msgstr "ไม่มีการส่ง"
+msgstr "ไม่มีบทความ"
 
 msgid "editor.submissions.lastAssigned"
 msgstr "ล่าสุด"
@@ -387,86 +382,97 @@ msgid "editor.submissions.averageTime"
 msgstr "สัปดาห์"
 
 msgid "editor.submissions.lastCompleted"
-msgstr "เสร็จสิ้นล่าสุด"
+msgstr "เสร็จล่าสุด"
 
 msgid "editor.submissions.assignedTo"
-msgstr "มอบหมายให้กับบรรณาธิการ"
+msgstr "มอบหมายให้บรรณาธิการ"
 
 msgid "issues.submissions.issueIds"
-msgstr "กำหนดให้กับฉบับ"
+msgstr "กำหนดไว้ในฉบับ"
 
 msgid "editor.submissions.inSection"
-msgstr "ในส่วน"
+msgstr "อยู่ในหมวด"
 
 msgid "editor.article.showPublicationVersion"
-msgstr "แสดงกำหนดการตีพิมพ์"
+msgstr "ดูฉบับที่กำหนดเผยแพร่"
 
 msgid "editor.article.publishVersion"
-msgstr "เผยแพร่เวอร์ชัน"
+msgstr "เผยแพร่ฉบับนี้"
 
 msgid "editor.article.viewMetadata"
-msgstr "ดูข้อมูลเวอร์ชัน"
+msgstr "ดูข้อมูลเมตาของฉบับ"
 
 msgid "editor.article.editMetadata"
-msgstr "แก้ไขข้อมูลเวอร์ชัน"
+msgstr "แก้ไขข้อมูลเมตาของฉบับ"
 
 msgid "editor.article.scheduleForPublication"
-msgstr "กำหนดสำหรับการตีพิมพ์ใน"
+msgstr "กำหนดให้เผยแพร่ใน"
 
 msgid "editor.article.scheduleForPublication.toBeAssigned"
-msgstr "ต้องกำหนด"
+msgstr "ยังไม่ได้กำหนด"
 
 msgid "editor.article.payment.publicationFeeNotPaid"
 msgstr ""
-"ยังไม่ได้ชำระค่าธรรมเนียมการตีพิมพ์ ต้องแจ้งให้ผู้แต่งชำระค่าธรรมเนียมหรือยกเ"
-"ว้นค่าธรรมเนียมก่อนจึงจะสามารถกำหนดสำหรับการตีพิมพ์ได้"
+"ยังไม่ได้ชำระค่าธรรมเนียมการเผยแพร่ หากต้องการกำหนดบทความนี้เพื่อเผยแพร่ "
+"ให้แจ้งผู้เขียนชำระค่าธรรมเนียมหรือยกเว้นค่าธรรมเนียม"
 
 msgid "editor.article.payment.requestPayment"
-msgstr "ขอการชำระเงิน"
+msgstr "ขอให้ชำระเงิน"
 
 msgid "editor.article.removeCoverImageFileNotFound"
-msgstr "ไม่พบภาพปกที่คุณร้องขอลบ อาจถูกลบไปแล้ว ลองรีโหลดหน้าใหม่อีกครั้ง"
+msgstr "ไม่พบภาพปกที่ต้องการลบ อาจถูกลบไปแล้ว โปรดโหลดหน้าใหม่แล้วลองอีกครั้ง"
 
 msgid "grid.action.removeArticle"
-msgstr "ลบบทความออกจากฉบับ"
+msgstr "นำบทความออกจากฉบับ"
 
 msgid "editor.article.remove"
-msgstr "ลบ"
+msgstr "นำออก"
 
 msgid "editor.article.remove.confirm"
 msgstr ""
-"คุณแน่ใจหรือไม่ว่าต้องการลบบทความนี้ออกจากฉบับ? "
-"บทความจะสามารถกำหนดให้กับฉบับอื่นได้"
+"คุณแน่ใจหรือไม่ว่าต้องการนำบทความนี้ออกจากฉบับ? "
+"บทความจะยังสามารถนำไปกำหนดเผยแพร่ในฉบับอื่นได้"
 
 msgid "editor.issues.invalidAccessDate"
-msgstr "วันที่เข้าถึงไม่ถูกต้อง"
+msgstr "วันที่เปิดให้เข้าถึงไม่ถูกต้อง"
 
 msgid "editor.issues.editIssueGalley"
-msgstr "แก้ไขกัลเลย์ของฉบับ"
+msgstr "แก้ไขไฟล์เผยแพร่ของฉบับ"
 
 msgid "editor.submission.production.productionReadyFilesDescription"
 msgstr ""
-"บรรณาธิการเลย์เอาต์จะจัดเตรียมไฟล์เหล่านี้สำหรับแต่ละกัลเลย์และอัพโหลดไปยัง "
-"<span class=\"pkp_help_title\">หลักฐาน</span> เพื่อทำการตรวจสอบ"
+"บรรณาธิการจัดรูปแบบจะเตรียมไฟล์เหล่านี้สำหรับไฟล์เผยแพร่แต่ละรายการ "
+"แล้วอัปโหลดไปยัง <span class=\"pkp_help_title\">ไฟล์พิสูจน์</span> "
+"ที่เกี่ยวข้องเพื่อดำเนินการพิสูจน์อักษร"
 
 msgid "editor.submission.selectGalleyFiles"
-msgstr "เลือกไฟล์กัลเลย์"
+msgstr "เลือกไฟล์เผยแพร่"
 
 msgid "editor.submission.editorial.finalDraftDescription"
 msgstr ""
-"ไฟล์ร่างสุดท้ายในรายการนี้จะถูกบรรณาธิการคัดลอกแปลงเป็นเวอร์ชันที่คัดลอกแล้วแ"
-"ละอัพโหลดลงใน <span class=\"pkp_help_title\">การคัดลอก</span> ด้านล่าง"
+"ไฟล์ร่างฉบับสมบูรณ์ในรายการนี้จะได้รับการตรวจแก้โดยผู้ตรวจแก้ต้นฉบับ "
+"และอัปโหลดฉบับที่ตรวจแก้แล้วไว้ด้านล่างในส่วน <span class=\"pkp_help_title\""
+">การตรวจแก้ต้นฉบับ</span>"
 
 msgid "editor.submission.proof.manageProofFilesDescription"
 msgstr ""
-"ไฟล์ที่อัพโหลดแล้วในขั้นตอนการส่งใดๆ "
-"สามารถเพิ่มไปยังรายการการตรวจสอบโดยการเลือกช่องทำเครื่องหมาย รวม และคลิกที่ "
-"ค้นหา: ไฟล์ทั้งหมดที่พร้อมจะถูกแสดงและสามารถเลือกได้"
+"ไฟล์ที่เคยอัปโหลดไว้ในขั้นตอนใดของการส่งบทความสามารถเพิ่มลงในรายการพิสูจน์อัก"
+"ษรได้ โดยเลือกช่องรวมด้านล่างแล้วคลิกค้นหา "
+"ระบบจะแสดงไฟล์ทั้งหมดที่มีให้เลือกเพื่อเพิ่มลงในรายการ"
 
 msgid "editor.publicIdentificationExistsForTheSameType"
 msgstr ""
-"รหัสสาธารณะ '{$publicIdentifier}' มีอยู่แล้วสำหรับวัตถุประเภทเดียวกัน "
-"กรุณาเลือกรหัสที่ไม่ซ้ำกันสำหรับวัตถุประเภทเดียวกันภายในวารสารของคุณ"
+"รหัสสาธารณะ '{$publicIdentifier}' ถูกใช้กับรายการประเภทเดียวกันแล้ว "
+"โปรดใช้รหัสที่ไม่ซ้ำกันสำหรับรายการประเภทเดียวกันภายในวารสาร"
 
 msgid "editor.article.coverImage"
 msgstr "ภาพปก"
+
+msgid "editor.issues.datePublished.notPublished.description"
+msgstr "หากเว้นว่าง ระบบจะกำหนดวันที่โดยอัตโนมัติเมื่อเผยแพร่ฉบับวารสาร"
+
+msgid "editor.issues.datePublished.invalid"
+msgstr "วันที่เผยแพร่ไม่ถูกต้อง ต้องอยู่ในรูปแบบ YYYY-MM-DD"
+
+msgid "editor.issues.datePublished.requiredWhenPublished"
+msgstr "ต้องระบุวันที่เผยแพร่เมื่อเผยแพร่ฉบับวารสาร"
