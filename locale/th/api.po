@@ -1,7 +1,7 @@
 # Apichaya <apichaya_cc@thonburi-u.ac.th>, 2024, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-09-14 11:53+0000\n"
+"PO-Revision-Date: 2026-09-15 04:51+0000\n"
 "Last-Translator: Apichaya <apichaya_cc@thonburi-u.ac.th>\n"
 "Language-Team: Thai <http://translate.pkp.sfu.ca/projects/ojs/api/th/>\n"
 "Language: th\n"
@@ -66,13 +66,18 @@ msgid "api._payments.400.invalidPaymentMethod"
 msgstr "วิธีการชำระเงินที่คุณเลือกไม่ได้รับการสนับสนุน"
 
 msgid "api.publications.403.contextsDidNotMatch"
-msgstr "สิ่งพิมพ์ที่คุณร้องขอไม่ได้เป็นส่วนหนึ่งของวารสารนี้"
+msgstr "รายการเผยแพร่ที่คุณร้องขอไม่ได้อยู่ในวารสารนี้"
 
 msgid "api.publications.403.submissionsDidNotMatch"
-msgstr "สิ่งพิมพ์ที่คุณร้องขอไม่ได้เป็นส่วนหนึ่งของการส่งนี้"
+msgstr "รายการเผยแพร่ที่คุณร้องขอไม่ได้เป็นส่วนหนึ่งของบทความที่ส่งนี้"
 
 msgid "api.submissionFiles.400.badRepresentationAssocType"
-msgstr "คุณไม่สามารถเชื่อมโยงไฟล์จากขั้นตอนนี้กับแกลเลอรีได้"
+msgstr "ไม่สามารถเชื่อมโยงไฟล์จากขั้นตอนนี้กับไฟล์เผยแพร่ได้"
 
 msgid "api.submission.400.inactiveSection"
-msgstr "ส่วนนี้ไม่รับการส่งอีกต่อไป"
+msgstr "หมวดนี้ไม่เปิดรับบทความแล้ว"
+
+msgid "api.publications.403.paymentFeesNotEnabled"
+msgstr ""
+"ไม่สามารถใช้แบบฟอร์มชำระค่าธรรมเนียมการส่งบทความได้ "
+"เนื่องจากยังไม่ได้เปิดใช้งานค่าธรรมเนียมการเผยแพร่"
