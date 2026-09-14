@@ -3,7 +3,7 @@
 # Ana Vucurevic <ana.vucurevic97@yahoo.com>, 2023.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-04-22 19:15+0000\n"
+"PO-Revision-Date: 2026-09-15 04:51+0000\n"
 "Last-Translator: Mirko Spiroski <mspiroski@id-press.eu>\n"
 "Language-Team: Macedonian <http://translate.pkp.sfu.ca/projects/ojs/manager/"
 "mk/>\n"
@@ -2532,7 +2532,7 @@ msgstr "Претплатата е Доспеана"
 msgid "mailable.subscriptionExpired.description"
 msgstr ""
 "Оваа е-пошта е испратена автоматски за да го извести претплатникот дека "
-"неговата претплата е истечена"
+"неговата претплата е истечена."
 
 msgid "mailable.subscriptionExpiredLast.name"
 msgstr "Претплатат е Последно Доспеана"
