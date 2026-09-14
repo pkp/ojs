@@ -694,9 +694,9 @@ job_runner_max_memory = 80
 ; Recommended On for shared/weak hosting. Dedicated servers can disable for throughput.
 job_runner_cross_request_lock = On
 
-; Controls whether queued jobs should be processed by the task scheduler.
-; This setting has no effect when the job_runner and the [schedule].task_runner are enabled,
-; on this situation the jobs will be processed solely by the job runner.
+; Controls whether queued jobs should also be processed by the task scheduler
+; (lib/pkp/tools/scheduler.php run). When enabled, up to job_runner_max_jobs jobs
+; are processed on each scheduler run, independently of the job_runner setting.
 process_jobs_at_task_scheduler = Off
 
 ; Remove failed jobs from the database after the following number of days.
@@ -710,26 +710,18 @@ delete_failed_jobs_after = 180
 
 [schedule]
 
-; Whether or not to turn on the built-in scheduled task runner.
-; When enabled, scheduled tasks will be processed at the end of each web
-; request to the application.
-; Use of the built-in scheduled task runner is strongly discouraged for high-volume
-; sites. Use your operating system's task scheduler instead, and configure
-; it to run the task scheduler every minute.
+; Scheduled tasks are only run by the task scheduler command line tool. Configure your
+; operating system's task scheduler to run it every minute, as the same user the
+; web server runs as, so that files created by the tasks remain accessible to the
+; application.
 ;
 ; Sample for the *nix crontab:
-; * * * * * php lib/pkp/tools/scheduler.php run >> /dev/null 2>&1
+; * * * * * cd /path/to/ojs && php lib/pkp/tools/scheduler.php run >> /dev/null 2>&1
+;
+; For local development without a crontab, the scheduler can be kept running with:
+; php lib/pkp/tools/scheduler.php work
 ;
 ; See: https://docs.pkp.sfu.ca/admin-guide/en/deploy-scheduled-tasks
-task_runner = On
-
-; How often the built-in scheduled task runner should run at the
-; end of web request life cycle (value defined in seconds).
-; This configuration will only affect the built-in task runner, it doesn't apply
-; to the system crontab configuration.
-; The default value is 60 seconds (a value smaller than that might affect the
-; application performance negatively).
-task_runner_interval = 60
 
 ; When enabled, an email with the scheduled task result will only be sent when an error
 ; has occurred. Otherwise, all tasks will generate a notification.
