@@ -32,7 +32,7 @@
 <div class="obj_article_summary">
 	{if $publication->getLocalizedData('coverImage')}
 		<div class="cover">
-			<a {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if} class="file">
+			<a {if $journal}href="{url router=PKP\core\PKPApplication::ROUTE_PAGE journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page="article" op="view" path=$articlePath}"{/if} class="file">
 				{assign var="coverImage" value=$publication->getLocalizedData('coverImage')}
 				<img
 					src="{$publication->getLocalizedCoverImageUrl($article->getData('contextId'))|escape}"
@@ -43,7 +43,7 @@
 	{/if}
 
 	<{$heading} class="title">
-		<a id="article-{$article->getId()}" {if $journal}href="{url journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url page="article" op="view" path=$articlePath}"{/if}>
+		<a id="article-{$article->getId()}" {if $journal}href="{url router=PKP\core\PKPApplication::ROUTE_PAGE journal=$journal->getPath() page="article" op="view" path=$articlePath}"{else}href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page="article" op="view" path=$articlePath}"{/if}>
 			{if $currentContext}
 				{$publication->getLocalizedTitle(null, 'html')|strip_unsafe_html}
 				{assign var=localizedSubtitle value=$publication->getLocalizedSubtitle(null, 'html')|strip_unsafe_html}
