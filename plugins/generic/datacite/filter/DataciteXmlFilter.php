@@ -1102,6 +1102,13 @@ class DataciteXmlFilter extends \PKP\plugins\importexport\native\filter\NativeEx
                 $relatedItemNode->appendChild($issueNode);
             }
 
+            if ($articleNumber = $publication->getData('articleNumber')) {
+                $numberNode = $doc->createElementNS($deployment->getNamespace(), 'number');
+                $numberNode->appendChild($doc->createTextNode($articleNumber));
+                $numberNode->setAttribute('numberType', 'Article');
+                $relatedItemNode->appendChild($numberNode);
+            }
+
             $pages = $publication->getPageArray();
             if (!empty($pages)) {
                 $firstRange = array_shift($pages);
