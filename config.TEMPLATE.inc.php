@@ -173,6 +173,12 @@ name = ojs
 ; Set to Off to connect with encryption but skip certificate verification (not recommended for production)
 ; verify = On
 
+; Keep the database connection open and reuse it across requests served by
+; the same PHP process (PDO persistent connection). The primary purpose is to
+; run the end-to-end test suites efficiently, where many short requests are
+; served by long-lived PHP processes. Not recommended for production.
+; persistent = Off
+
 ; Enable database debug output (very verbose!)
 debug = Off
 
