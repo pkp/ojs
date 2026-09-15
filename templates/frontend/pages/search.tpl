@@ -39,14 +39,14 @@
 			<input type="hidden" name="{$paramKey|escape}" value="{$paramValue|escape}"/>
 		{/foreach}
 
-		{* Repeat the label text just so that screen readers have a clear
-		   label/input relationship *}
+		{* The label must stay visible: its text is the accessible name, so
+		   hiding it leaves speech-input users with no term to speak *}
 		<div class="search_input">
-			<label class="pkp_screen_reader" for="query">
+			<label for="query">
 				{translate key="search.searchFor"}
 			</label>
 			{block name=searchQuery}
-				<input type="text" id="query" name="query" value="{$query|escape}" class="query" placeholder="{translate|escape key="common.search"}">
+				<input type="text" id="query" name="query" value="{$query|escape}" class="query">
 			{/block}
 		</div>
 
