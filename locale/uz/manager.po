@@ -1,0 +1,2118 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Weblate\n"
+
+msgid "manager.distribution.access"
+msgstr ""
+
+msgid "manager.distribution.copyrightYearBasis.description"
+msgstr ""
+
+msgid "manager.distribution.copyrightYearBasis.issue"
+msgstr ""
+
+msgid "manager.distribution.copyrightYearBasis.submission"
+msgstr ""
+
+msgid "manager.distribution.publication"
+msgstr ""
+
+msgid "manager.distribution.publishingMode"
+msgstr ""
+
+msgid "manager.distribution.publishingMode.none"
+msgstr ""
+
+msgid "manager.distribution.publishingMode.openAccess"
+msgstr ""
+
+msgid "manager.distribution.publishingMode.subscription"
+msgstr ""
+
+msgid "manager.setup.enableDois.description"
+msgstr ""
+
+msgid "doi.manager.settings.doiObjectsRequired"
+msgstr ""
+
+msgid "doi.manager.settings.doiSuffixLegacy"
+msgstr ""
+
+msgid "doi.manager.settings.doiCreationTime.copyedit"
+msgstr ""
+
+msgid "manager.website.archiving"
+msgstr ""
+
+msgid "manager.files.note"
+msgstr ""
+
+msgid "manager.journalManagement"
+msgstr ""
+
+msgid "manager.language.ui"
+msgstr ""
+
+msgid "manager.language.submissions"
+msgstr ""
+
+msgid "manager.language.forms"
+msgstr ""
+
+msgid "manager.language.confirmDefaultSettingsOverwrite"
+msgstr ""
+
+msgid "manager.languages.languageInstructions"
+msgstr ""
+
+msgid "manager.languages.noneAvailable"
+msgstr ""
+
+msgid "manager.languages.primaryLocaleInstructions"
+msgstr ""
+
+msgid "manager.managementPages"
+msgstr ""
+
+msgid "manager.payment.action"
+msgstr ""
+
+msgid "manager.payment.addPayment"
+msgstr ""
+
+msgid "manager.payment.amount"
+msgstr ""
+
+msgid "manager.payment.authorFees"
+msgstr ""
+
+msgid "manager.payment.authorFeesDescription"
+msgstr ""
+
+msgid "manager.payment.currencymessage"
+msgstr ""
+
+msgid "manager.payment.description"
+msgstr ""
+
+msgid "manager.payment.details"
+msgstr ""
+
+msgid "manager.payment.editSubscription"
+msgstr ""
+
+msgid "manager.payment.enable"
+msgstr ""
+
+msgid "manager.payment.feePaymentOptions"
+msgstr ""
+
+msgid "manager.payment.form.numeric"
+msgstr ""
+
+msgid "manager.payment.generalFees"
+msgstr ""
+
+msgid "manager.payment.generalFeesDescription"
+msgstr ""
+
+msgid "manager.payment.generalOptions"
+msgstr ""
+
+msgid "manager.payment.noPayments"
+msgstr ""
+
+msgid "manager.payment.notFound"
+msgstr ""
+
+msgid "manager.payment.options"
+msgstr ""
+
+msgid "manager.payment.options.acceptSubscriptionPayments"
+msgstr ""
+
+msgid "subscriptionManager.subscription.confirmRemove"
+msgstr ""
+
+msgid "manager.payment.options.enablePayments"
+msgstr ""
+
+msgid "manager.payment.options.fee"
+msgstr ""
+
+msgid "manager.payment.options.feeDescription"
+msgstr ""
+
+msgid "manager.payment.options.feeName"
+msgstr ""
+
+msgid "manager.payment.options.membershipFee"
+msgstr ""
+
+msgid "manager.payment.options.onlypdf"
+msgstr ""
+
+msgid "manager.payment.options.publicationFee"
+msgstr ""
+
+msgid "manager.payment.options.purchaseArticleFee"
+msgstr ""
+
+msgid "manager.payment.options.purchaseIssueFee"
+msgstr ""
+
+msgid "manager.payment.options.text"
+msgstr ""
+
+msgid "manager.payment.paymentId"
+msgstr ""
+
+msgid "manager.payment.paymentMethod"
+msgstr ""
+
+msgid "manager.payment.paymentMethod.description"
+msgstr ""
+
+msgid "manager.payment.paymentMethods"
+msgstr ""
+
+msgid "manager.payment.paymentType"
+msgstr ""
+
+msgid "manager.payment.readerFees"
+msgstr ""
+
+msgid "manager.payment.readerFeesDescription"
+msgstr ""
+
+msgid "manager.payment.records"
+msgstr ""
+
+msgid "manager.paymentTypes"
+msgstr ""
+
+msgid "manager.payment.userName"
+msgstr ""
+
+msgid "manager.people.allEnrolledUsers"
+msgstr ""
+
+msgid "manager.people.allJournals"
+msgstr ""
+
+msgid "manager.people.allSiteUsers"
+msgstr ""
+
+msgid "manager.people.showNoRole"
+msgstr ""
+
+msgid "manager.people.allUsers"
+msgstr ""
+
+msgid "manager.people.confirmRemove"
+msgstr ""
+
+msgid "manager.people.emailUsers.selectTemplate"
+msgstr ""
+
+msgid "manager.people.enrollExistingUser"
+msgstr ""
+
+msgid "manager.people.enrollSyncJournal"
+msgstr ""
+
+msgid "manager.people.mergeUsers.from.description"
+msgstr ""
+
+msgid "manager.people.mergeUsers.into.description"
+msgstr ""
+
+msgid "manager.people.roleEnrollment"
+msgstr ""
+
+msgid "manager.people.syncUserDescription"
+msgstr ""
+
+msgid "manager.sections.abstractsNotRequired"
+msgstr ""
+
+msgid "manager.sections.assigned"
+msgstr ""
+
+msgid "manager.sections.confirmDelete"
+msgstr ""
+
+msgid "manager.sections.alertDelete"
+msgstr ""
+
+msgid "manager.sections.create"
+msgstr ""
+
+msgid "manager.section.sectionEditorInstructions"
+msgstr ""
+
+msgid "manager.sections.editorRestriction"
+msgstr ""
+
+msgid "manager.sections.editors"
+msgstr ""
+
+msgid "manager.sections.confirmDeactivateSection.error"
+msgstr ""
+
+msgid "manager.sections.form.abbrevRequired"
+msgstr ""
+
+msgid "manager.sections.form.mustAllowPermission"
+msgstr ""
+
+msgid "manager.sections.form.reviewFormId"
+msgstr ""
+
+msgid "manager.sections.form.titleRequired"
+msgstr ""
+
+msgid "manager.sections.hideTocAuthor"
+msgstr ""
+
+msgid "manager.sections.hideTocTitle"
+msgstr ""
+
+msgid "manager.sections.identifyType"
+msgstr ""
+
+msgid "manager.sections.identifyTypeExamples"
+msgstr ""
+
+msgid "manager.sections.indexed"
+msgstr ""
+
+msgid "manager.sections.noneCreated"
+msgstr ""
+
+msgid "manager.sections.open"
+msgstr ""
+
+msgid "manager.sections.policy"
+msgstr ""
+
+msgid "manager.sections.readingTools"
+msgstr ""
+
+msgid "manager.sections.reviewed"
+msgstr ""
+
+msgid "manager.sections.submissionIndexing"
+msgstr ""
+
+msgid "manager.sections.submissionReview"
+msgstr ""
+
+msgid "manager.section.submissionsToThisSection"
+msgstr ""
+
+msgid "manager.sections.unassigned"
+msgstr ""
+
+msgid "manager.sections.wordCount"
+msgstr ""
+
+msgid "manager.sections.wordCountInstructions"
+msgstr ""
+
+msgid "manager.setup"
+msgstr ""
+
+msgid "manager.setup.homepageContent"
+msgstr ""
+
+msgid "manager.setup.homepageContentDescription"
+msgstr ""
+
+msgid "manager.setup.useStyleSheet"
+msgstr ""
+
+msgid "manager.setup.contextName"
+msgstr ""
+
+msgid "manager.setup.pageHeader"
+msgstr ""
+
+msgid "manager.setup.aboutItemContent"
+msgstr ""
+
+msgid "manager.setup.addAboutItem"
+msgstr ""
+
+msgid "manager.setup.addChecklistItem"
+msgstr ""
+
+msgid "manager.setup.addItem"
+msgstr ""
+
+msgid "manager.setup.addItemtoAboutJournal"
+msgstr ""
+
+msgid "manager.setup.addNavItem"
+msgstr ""
+
+msgid "manager.setup.addReviewerDatabaseLink"
+msgstr ""
+
+msgid "manager.setup.addSponsor"
+msgstr ""
+
+msgid "manager.setup.alternateHeader"
+msgstr ""
+
+msgid "manager.setup.alternateHeaderDescription"
+msgstr ""
+
+msgid "manager.setup.announcements"
+msgstr ""
+
+msgid "manager.setup.announcementsIntroduction"
+msgstr ""
+
+msgid "manager.setup.announcementsIntroduction.description"
+msgstr ""
+
+msgid "manager.setup.appearInAboutJournal"
+msgstr ""
+
+msgid "manager.setup.competingInterests.requireReviewers"
+msgstr ""
+
+msgid "manager.setup.history"
+msgstr ""
+
+msgid "manager.setup.historyDescription"
+msgstr ""
+
+msgid "manager.setup.currentIssue"
+msgstr ""
+
+msgid "manager.setup.customizingTheLook"
+msgstr ""
+
+msgid "manager.setup.details"
+msgstr ""
+
+msgid "manager.setup.details.description"
+msgstr ""
+
+msgid "manager.setup.disableUserRegistration"
+msgstr ""
+
+msgid "manager.setup.discipline"
+msgstr ""
+
+msgid "manager.setup.disciplineDescription"
+msgstr ""
+
+msgid "manager.setup.disciplineExamples"
+msgstr ""
+
+msgid "manager.setup.disciplineProvideExamples"
+msgstr ""
+
+msgid "manager.setup.displayCurrentIssue"
+msgstr ""
+
+msgid "manager.setup.editorDecision"
+msgstr ""
+
+msgid "manager.setup.emailBounceAddress"
+msgstr ""
+
+msgid "manager.setup.emailBounceAddress.description"
+msgstr ""
+
+msgid "manager.setup.emailBounceAddress.disabled"
+msgstr ""
+
+msgid "manager.setup.emails"
+msgstr ""
+
+msgid "manager.setup.emailSignature"
+msgstr ""
+
+msgid "manager.setup.emailSignature.description"
+msgstr ""
+
+msgid "manager.setup.enableAnnouncements.enable"
+msgstr ""
+
+msgid "manager.setup.enableAnnouncements.description"
+msgstr ""
+
+msgid "manager.setup.numAnnouncementsHomepage"
+msgstr ""
+
+msgid "manager.setup.numAnnouncementsHomepage.description"
+msgstr ""
+
+msgid "manager.setup.enableUserRegistration"
+msgstr ""
+
+msgid "manager.setup.focusAndScope"
+msgstr ""
+
+msgid "manager.setup.focusAndScope.description"
+msgstr ""
+
+msgid "manager.setup.forAuthorsToIndexTheirWork"
+msgstr ""
+
+msgid "manager.setup.forAuthorsToIndexTheirWorkDescription"
+msgstr ""
+
+msgid "manager.setup.form.issnInvalid"
+msgstr ""
+
+msgid "manager.setup.form.contactEmailRequired"
+msgstr ""
+
+msgid "manager.setup.form.contactNameRequired"
+msgstr ""
+
+msgid "manager.setup.form.journalInitialsRequired"
+msgstr ""
+
+msgid "manager.setup.form.journalTitleRequired"
+msgstr ""
+
+msgid "manager.setup.form.numReviewersPerSubmission"
+msgstr ""
+
+msgid "manager.setup.form.supportEmailRequired"
+msgstr ""
+
+msgid "manager.setup.form.supportNameRequired"
+msgstr ""
+
+msgid "manager.setup.generalInformation"
+msgstr ""
+
+msgid "manager.setup.gettingDownTheDetails"
+msgstr ""
+
+msgid "manager.setup.guidelines"
+msgstr ""
+
+msgid "manager.setup.guidingSubmissions"
+msgstr ""
+
+msgid "manager.setup.identity"
+msgstr ""
+
+msgid "manager.setup.includeCreativeCommons"
+msgstr ""
+
+msgid "manager.setup.information"
+msgstr ""
+
+msgid "manager.setup.information.description"
+msgstr ""
+
+msgid "manager.setup.information.forAuthors"
+msgstr ""
+
+msgid "manager.setup.information.forLibrarians"
+msgstr ""
+
+msgid "manager.setup.information.forReaders"
+msgstr ""
+
+msgid "manager.setup.initialIssue"
+msgstr ""
+
+msgid "manager.setup.initialIssueDescription"
+msgstr ""
+
+msgid "manager.setup.institution"
+msgstr ""
+
+msgid "manager.setup.itemsDescription"
+msgstr ""
+
+msgid "manager.setup.itemsPerPage"
+msgstr ""
+
+msgid "manager.setup.itemsPerPage.description"
+msgstr ""
+
+msgid "manager.setup.journalAbbreviation"
+msgstr ""
+
+msgid "manager.setup.journalArchiving"
+msgstr ""
+
+msgid "manager.setup.contextSummary"
+msgstr ""
+
+msgid "manager.setup.contextAbout"
+msgstr ""
+
+msgid "manager.setup.contextAbout.description"
+msgstr ""
+
+msgid "manager.setup.journalHomepageContent"
+msgstr ""
+
+msgid "manager.setup.journalHomepageContentDescription"
+msgstr ""
+
+msgid "manager.setup.journalHomepageHeader"
+msgstr ""
+
+msgid "manager.setup.journalHomepageHeader.altText"
+msgstr ""
+
+msgid "manager.setup.journalHomepageHeaderDescription"
+msgstr ""
+
+msgid "manager.setup.contextInitials"
+msgstr ""
+
+msgid "manager.setup.selectCountry"
+msgstr ""
+
+msgid "manager.setup.journalLayout"
+msgstr ""
+
+msgid "manager.setup.journalLayoutDescription"
+msgstr ""
+
+msgid "manager.setup.journalLogo"
+msgstr ""
+
+msgid "manager.setup.journalLogo.altText"
+msgstr ""
+
+msgid "manager.setup.journalPageFooter"
+msgstr ""
+
+msgid "manager.setup.journalPageFooterDescription"
+msgstr ""
+
+msgid "manager.setup.journalPolicies"
+msgstr ""
+
+msgid "manager.setup.journalSetup"
+msgstr ""
+
+msgid "manager.setup.journalSetupUpdated"
+msgstr ""
+
+msgid "manager.setup.journalStyleSheetInvalid"
+msgstr ""
+
+msgid "manager.setup.journalTheme"
+msgstr ""
+
+msgid "manager.setup.journalThumbnail"
+msgstr ""
+
+msgid "manager.setup.journalThumbnail.description"
+msgstr ""
+
+msgid "manager.setup.contextTitle"
+msgstr ""
+
+msgid "manager.setup.labelName"
+msgstr ""
+
+msgid "manager.setup.lists"
+msgstr ""
+
+msgid "manager.setup.plnPluginEnable"
+msgstr ""
+
+msgid "manager.setup.plnDescription"
+msgstr ""
+
+msgid "manager.setup.plnSettingsDescription"
+msgstr ""
+
+msgid "manager.setup.plnPluginArchiving"
+msgstr ""
+
+msgid "manager.setup.plnPluginNotInstalled"
+msgstr ""
+
+msgid "manager.setup.otherLockss"
+msgstr ""
+
+msgid "manager.setup.lockssEnable"
+msgstr ""
+
+msgid "manager.setup.lockssLicenseDescription"
+msgstr ""
+
+msgid "manager.setup.lockssLicenseLabel"
+msgstr ""
+
+msgid "manager.setup.lockssRegister"
+msgstr ""
+
+msgid "manager.setup.lockssTitle"
+msgstr ""
+
+msgid "manager.setup.clockssEnable"
+msgstr ""
+
+msgid "manager.setup.clockssLicenseDescription"
+msgstr ""
+
+msgid "manager.setup.clockssLicenseLabel"
+msgstr ""
+
+msgid "manager.setup.clockssRegister"
+msgstr ""
+
+msgid "manager.setup.clockssTitle"
+msgstr ""
+
+msgid "manager.setup.look"
+msgstr ""
+
+msgid "manager.setup.look.description"
+msgstr ""
+
+msgid "manager.setup.management"
+msgstr ""
+
+msgid "manager.setup.management.description"
+msgstr ""
+
+msgid "manager.setup.managementOfBasicEditorialSteps"
+msgstr ""
+
+msgid "manager.setup.managingPublishingSetup"
+msgstr ""
+
+msgid "manager.setup.managingTheJournal"
+msgstr ""
+
+msgid "manager.setup.navigationBar"
+msgstr ""
+
+msgid "manager.setup.navigationBarDescription"
+msgstr ""
+
+msgid "manager.setup.navItemIsAbsolute"
+msgstr ""
+
+msgid "manager.setup.navItemIsLiteral"
+msgstr ""
+
+msgid "manager.setup.noImageFileUploaded"
+msgstr ""
+
+msgid "manager.setup.noStyleSheetUploaded"
+msgstr ""
+
+msgid "manager.setup.note"
+msgstr ""
+
+msgid "manager.setup.notifications.submissionAckDisabled"
+msgstr ""
+
+msgid "manager.setup.numPageLinks"
+msgstr ""
+
+msgid "manager.setup.numPageLinks.description"
+msgstr ""
+
+msgid "manager.setup.onlineIssn"
+msgstr ""
+
+msgid "manager.setup.pageNumberIdentifier"
+msgstr ""
+
+msgid "manager.setup.policies"
+msgstr ""
+
+msgid "manager.setup.policies.description"
+msgstr ""
+
+msgid "manager.setup.printIssn"
+msgstr ""
+
+msgid "manager.setup.proofingInstructions"
+msgstr ""
+
+msgid "manager.setup.proofingInstructionsDescription"
+msgstr ""
+
+msgid "manager.setup.publicationSchedule"
+msgstr ""
+
+msgid "manager.setup.publicationScheduleDescription"
+msgstr ""
+
+msgid "manager.setup.publicationScheduling"
+msgstr ""
+
+msgid "manager.setup.publicIdentifier"
+msgstr ""
+
+msgid "manager.setup.publisher"
+msgstr ""
+
+msgid "manager.setup.referenceLinking"
+msgstr ""
+
+msgid "manager.setup.restrictArticleAccess"
+msgstr ""
+
+msgid "manager.setup.restrictSiteAccess"
+msgstr ""
+
+msgid "manager.setup.reviewGuidelines"
+msgstr ""
+
+msgid "manager.setup.reviewOptions"
+msgstr ""
+
+msgid "manager.setup.reviewOptions.automatedReminders"
+msgstr ""
+
+msgid "manager.setup.reviewOptions.automatedRemindersDisabled"
+msgstr ""
+
+msgid "manager.setup.reviewOptions.numWeeksPerReview"
+msgstr ""
+
+msgid "manager.setup.reviewOptions.onQuality"
+msgstr ""
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess"
+msgstr ""
+
+msgid "manager.setup.reviewOptions.restrictReviewerFileAccess.description"
+msgstr ""
+
+msgid "manager.setup.reviewOptions.reviewerAccess"
+msgstr ""
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled"
+msgstr ""
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.description"
+msgstr ""
+
+msgid "manager.setup.reviewOptions.reviewerAccessKeysEnabled.label"
+msgstr ""
+
+msgid "manager.setup.reviewOptions.reviewerRatings"
+msgstr ""
+
+msgid "manager.setup.reviewOptions.reviewerReminders"
+msgstr ""
+
+msgid "manager.setup.reviewPolicy"
+msgstr ""
+
+msgid "manager.setup.searchEngineIndexing"
+msgstr ""
+
+msgid "manager.setup.searchEngineIndexing.description"
+msgstr ""
+
+msgid "manager.setup.searchDescription.description"
+msgstr ""
+
+msgid "manager.setup.sectionsAndSectionEditors"
+msgstr ""
+
+msgid "manager.setup.sectionsDefaultSectionDescription"
+msgstr ""
+
+msgid "manager.setup.sectionsDescription"
+msgstr ""
+
+msgid "manager.setup.selectEditorDescription"
+msgstr ""
+
+msgid "manager.setup.selectSectionDescription"
+msgstr ""
+
+msgid "manager.setup.showGalleyLinksDescription"
+msgstr ""
+
+msgid "manager.setup.siteAccess.view"
+msgstr ""
+
+msgid "manager.setup.siteAccess.viewContent"
+msgstr ""
+
+msgid "manager.setup.stepsToJournalSite"
+msgstr ""
+
+msgid "manager.setup.subjectExamples"
+msgstr ""
+
+msgid "manager.setup.subjectKeywordTopic"
+msgstr ""
+
+msgid "manager.setup.subjectProvideExamples"
+msgstr ""
+
+msgid "manager.setup.submissionGuidelines"
+msgstr ""
+
+msgid "manager.setup.submissions"
+msgstr ""
+
+msgid "manager.setup.submissions.description"
+msgstr ""
+
+msgid "manager.setup.disableSubmissions.description"
+msgstr ""
+
+msgid "manager.setup.disableSubmissions.notAccepting"
+msgstr ""
+
+msgid "manager.setup.enableOai"
+msgstr ""
+
+msgid "manager.setup.enableOai.description"
+msgstr ""
+
+msgid "manager.setup.typeExamples"
+msgstr ""
+
+msgid "manager.setup.typeMethodApproach"
+msgstr ""
+
+msgid "manager.setup.typeProvideExamples"
+msgstr ""
+
+msgid "manager.setup.uniqueIdentifier"
+msgstr ""
+
+msgid "manager.setup.uniqueIdentifierDescription"
+msgstr ""
+
+msgid "manager.setup.useEditorialReviewBoard"
+msgstr ""
+
+msgid "manager.setup.useThumbnail"
+msgstr ""
+
+msgid "manager.setup.useImageTitle"
+msgstr ""
+
+msgid "manager.setup.userRegistration"
+msgstr ""
+
+msgid "manager.setup.useTextTitle"
+msgstr ""
+
+msgid "manager.statistics.statistics"
+msgstr ""
+
+msgid "manager.statistics.statistics.articleViews"
+msgstr ""
+
+msgid "manager.statistics.statistics.count.accept"
+msgstr ""
+
+msgid "manager.statistics.statistics.count.decline"
+msgstr ""
+
+msgid "manager.statistics.statistics.count.revise"
+msgstr ""
+
+msgid "manager.statistics.statistics.daysPerReview"
+msgstr ""
+
+msgid "manager.statistics.statistics.daysToPublication"
+msgstr ""
+
+msgid "manager.statistics.statistics.description"
+msgstr ""
+
+msgid "manager.statistics.statistics.itemsPublished"
+msgstr ""
+
+msgid "manager.statistics.statistics.makePublic"
+msgstr ""
+
+msgid "manager.statistics.statistics.note"
+msgstr ""
+
+msgid "manager.statistics.statistics.numIssues"
+msgstr ""
+
+msgid "manager.statistics.statistics.numSubmissions"
+msgstr ""
+
+msgid "manager.statistics.statistics.peerReviewed"
+msgstr ""
+
+msgid "manager.statistics.statistics.registeredReaders"
+msgstr ""
+
+msgid "manager.statistics.statistics.reviewerCount"
+msgstr ""
+
+msgid "manager.statistics.statistics.reviewers"
+msgstr ""
+
+msgid "manager.statistics.statistics.reviewerScore"
+msgstr ""
+
+msgid "manager.statistics.statistics.reviewsPerReviewer"
+msgstr ""
+
+msgid "manager.statistics.statistics.selectSections"
+msgstr ""
+
+msgid "manager.statistics.statistics.subscriptions"
+msgstr ""
+
+msgid "manager.statistics.reports.defaultReport.articleDownloads"
+msgstr ""
+
+msgid "manager.statistics.reports.defaultReport.articleAbstract"
+msgstr ""
+
+msgid "manager.statistics.reports.defaultReport.articleAbstractAndDownloads"
+msgstr ""
+
+msgid "manager.statistics.reports.defaultReport.journalIndexPageViews"
+msgstr ""
+
+msgid "manager.statistics.reports.defaultReport.issuePageViews"
+msgstr ""
+
+msgid "manager.subscriptionPolicies"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.delayedOpenAccess"
+msgstr ""
+
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionExpiryReminderBeforeMonthsValid"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.expiry"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.expiryDescription"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.expiryFull"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.expiryFullDescription"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.expiryPartial"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.expiryPartialDescription"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.xMonths"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.xWeeks"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterMonths"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.expiryReminderAfterWeeks"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeMonths"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.expiryReminderBeforeWeeks"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.expiryReminders"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.expiryRemindersDescription"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.expiryRemindersDisabled"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.expirySelectOne"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.htmlInstructions"
+msgstr ""
+
+msgid ""
+"manager.subscriptionPolicies.numMonthsAfterSubscriptionExpiryReminderValid"
+msgstr ""
+
+msgid ""
+"manager.subscriptionPolicies.numMonthsBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+
+msgid ""
+"manager.subscriptionPolicies.numWeeksAfterSubscriptionExpiryReminderValid"
+msgstr ""
+
+msgid ""
+"manager.subscriptionPolicies.numWeeksBeforeSubscriptionExpiryReminderValid"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDescription"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.openAccessNotificationDisabled"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotifications"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.onlinePaymentNotificationsDescription"
+msgstr ""
+
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationPurchaseIndividual"
+msgstr ""
+
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional"
+msgstr ""
+
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationRenewIndividual"
+msgstr ""
+
+msgid ""
+"manager.subscriptionPolicies."
+"enableSubscriptionOnlinePaymentNotificationRenewInstitutional"
+msgstr ""
+
+msgid ""
+"manager.subscriptionPolicies.onlinePaymentPurchaseInstitutionalDescription"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.onlinePaymentDisabled"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.openAccessOptions"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.openAccessOptionsDescription"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.subscriptionAdditionalInformation"
+msgstr ""
+
+msgid ""
+"manager.subscriptionPolicies.subscriptionAdditionalInformationDescription"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.subscriptionContact"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.subscriptionContactDescription"
+msgstr ""
+
+msgid "manager.subscriptionPolicies.subscriptionContactEmailValid"
+msgstr ""
+
+msgid "manager.subscriptions"
+msgstr ""
+
+msgid "manager.individualSubscriptions"
+msgstr ""
+
+msgid "manager.institutionalSubscriptions"
+msgstr ""
+
+msgid "manager.subscriptions.confirmRenew"
+msgstr ""
+
+msgid "manager.subscriptions.confirmDelete"
+msgstr ""
+
+msgid "manager.subscriptions.summary"
+msgstr ""
+
+msgid "manager.subscriptions.create"
+msgstr ""
+
+msgid "manager.subscriptions.createTitle"
+msgstr ""
+
+msgid "manager.subscriptions.renew"
+msgstr ""
+
+msgid "manager.subscriptions.dateEnd"
+msgstr ""
+
+msgid "manager.subscriptions.dateEndSearch"
+msgstr ""
+
+msgid "manager.subscriptions.dateStart"
+msgstr ""
+
+msgid "manager.subscriptions.dateStartSearch"
+msgstr ""
+
+msgid "manager.subscriptions.domain"
+msgstr ""
+
+msgid "manager.subscriptions.edit"
+msgstr ""
+
+msgid "manager.subscriptions.editTitle"
+msgstr ""
+
+msgid "manager.subscriptions.withStatus"
+msgstr ""
+
+msgid "manager.subscriptions.allStatus"
+msgstr ""
+
+msgid "manager.subscriptions.form.status"
+msgstr ""
+
+msgid "manager.subscriptions.form.statusRequired"
+msgstr ""
+
+msgid "manager.subscriptions.form.statusValid"
+msgstr ""
+
+msgid "manager.subscriptions.form.typeId"
+msgstr ""
+
+msgid "manager.subscriptions.form.typeIdRequired"
+msgstr ""
+
+msgid "manager.subscriptions.form.typeIdValid"
+msgstr ""
+
+msgid "manager.subscriptions.form.institution"
+msgstr ""
+
+msgid "manager.subscriptions.form.institutionIdValid"
+msgstr ""
+
+msgid "manager.subscriptions.form.dateStart"
+msgstr ""
+
+msgid "manager.subscriptions.form.dateStartRequired"
+msgstr ""
+
+msgid "manager.subscriptions.form.dateStartValid"
+msgstr ""
+
+msgid "manager.subscriptions.form.dateEnd"
+msgstr ""
+
+msgid "manager.subscriptions.form.dateEndRequired"
+msgstr ""
+
+msgid "manager.subscriptions.form.dateStartEmpty"
+msgstr ""
+
+msgid "manager.subscriptions.form.dateEndEmpty"
+msgstr ""
+
+msgid "manager.subscriptions.form.dateEndValid"
+msgstr ""
+
+msgid "manager.subscriptions.form.userProfileInstructions"
+msgstr ""
+
+msgid "manager.subscriptions.form.userId"
+msgstr ""
+
+msgid "manager.subscriptions.form.userContact"
+msgstr ""
+
+msgid "manager.subscriptions.form.userIdRequired"
+msgstr ""
+
+msgid "manager.subscriptions.form.userIdValid"
+msgstr ""
+
+msgid "manager.subscriptions.form.userCountryValid"
+msgstr ""
+
+msgid "manager.subscriptions.form.notifyEmail"
+msgstr ""
+
+msgid "manager.subscriptions.form.notifyEmailValid"
+msgstr ""
+
+msgid "manager.subscriptions.form.membership"
+msgstr ""
+
+msgid "manager.subscriptions.form.referenceNumber"
+msgstr ""
+
+msgid "manager.subscriptions.form.membershipInstructions"
+msgstr ""
+
+msgid "manager.subscriptions.form.membershipRequired"
+msgstr ""
+
+msgid "manager.subscriptions.form.notes"
+msgstr ""
+
+msgid "manager.subscriptions.form.domain"
+msgstr ""
+
+msgid "manager.subscriptions.form.institutionName"
+msgstr ""
+
+msgid "manager.subscriptions.form.institutionNameRequired"
+msgstr ""
+
+msgid "manager.subscriptions.form.institutionMailingAddress"
+msgstr ""
+
+msgid "manager.subscriptions.form.domainInstructions"
+msgstr ""
+
+msgid "manager.subscriptions.form.domainIPRangeRequired"
+msgstr ""
+
+msgid "manager.subscriptions.form.domainValid"
+msgstr ""
+
+msgid "manager.subscriptions.form.ipRange"
+msgstr ""
+
+msgid "manager.subscriptions.form.ipRangeItem"
+msgstr ""
+
+msgid "manager.subscriptions.form.ipRangeInstructions"
+msgstr ""
+
+msgid "manager.subscriptions.form.ipRangeValid"
+msgstr ""
+
+msgid "manager.subscriptions.form.deleteIpRange"
+msgstr ""
+
+msgid "manager.subscriptions.form.addIpRange"
+msgstr ""
+
+msgid "manager.subscriptions.form.saveAndCreateAnother"
+msgstr ""
+
+msgid "manager.subscriptions.form.subscriptionContactRequired"
+msgstr ""
+
+msgid "manager.subscriptions.form.subscriptionExists"
+msgstr ""
+
+msgid "manager.subscriptions.form.typeRequired"
+msgstr ""
+
+msgid "manager.subscriptions.form.institutionRequired"
+msgstr ""
+
+msgid "manager.subscriptions.ipRange"
+msgstr ""
+
+msgid "manager.subscriptions.membership"
+msgstr ""
+
+msgid "manager.subscriptions.referenceNumber"
+msgstr ""
+
+msgid "manager.subscriptions.notes"
+msgstr ""
+
+msgid "manager.subscriptions.noneCreated"
+msgstr ""
+
+msgid "manager.subscriptions.selectContact"
+msgstr ""
+
+msgid "manager.subscriptions.selectUser"
+msgstr ""
+
+msgid "manager.subscriptions.selectSubscriber.desc"
+msgstr ""
+
+msgid "manager.subscriptions.select"
+msgstr ""
+
+msgid "manager.subscriptions.subscriptionCreatedSuccessfully"
+msgstr ""
+
+msgid "manager.subscriptions.subscriptionType"
+msgstr ""
+
+msgid "manager.subscriptions.user"
+msgstr ""
+
+msgid "manager.subscriptions.contact"
+msgstr ""
+
+msgid "manager.subscriptions.institutionName"
+msgstr ""
+
+msgid "manager.subscriptionTypes"
+msgstr ""
+
+msgid "manager.subscriptionTypes.confirmDelete"
+msgstr ""
+
+msgid "manager.subscriptionTypes.cost"
+msgstr ""
+
+msgid "manager.subscriptionTypes.subscriptions"
+msgstr ""
+
+msgid "manager.subscriptionTypes.individual"
+msgstr ""
+
+msgid "manager.subscriptionTypes.institutional"
+msgstr ""
+
+msgid "manager.subscriptionTypes.create"
+msgstr ""
+
+msgid "manager.subscriptionTypes.createTitle"
+msgstr ""
+
+msgid "manager.subscriptionTypes.duration"
+msgstr ""
+
+msgid "manager.subscriptionTypes.edit"
+msgstr ""
+
+msgid "manager.subscriptionTypes.editTitle"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.cost"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.costInstructions"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.costNumeric"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.costRequired"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.currency"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.currencyRequired"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.currencyValid"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.description"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.nonExpiring.expiresAfter"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.nonExpiring.months"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.nonExpiring.neverExpires"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.nonExpiringValid"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.duration"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.durationInstructions"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.durationNumeric"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.durationRequired"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.format"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.formatRequired"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.formatValid"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.subscriptions"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.individual"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.institutional"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.institutionalValid"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.membership"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.membershipValid"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.options"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.public"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.publicValid"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.saveAndCreateAnotherType"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.typeName"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.typeNameExists"
+msgstr ""
+
+msgid "manager.subscriptionTypes.form.typeNameRequired"
+msgstr ""
+
+msgid "manager.subscriptionTypes.name"
+msgstr ""
+
+msgid "manager.subscriptionTypes.noneCreated"
+msgstr ""
+
+msgid "manager.subscriptionTypes.subscriptionTypeCreatedSuccessfully"
+msgstr ""
+
+msgid "manager.navigationMenus.subscriptions.description"
+msgstr ""
+
+msgid "manager.navigationMenus.mySubscriptions.description"
+msgstr ""
+
+msgid "manager.navigationMenus.mySubscriptions.conditionalWarning"
+msgstr ""
+
+msgid "manager.setup.categories"
+msgstr ""
+
+msgid "manager.setup.categories.description"
+msgstr ""
+
+msgid "grid.category.path"
+msgstr ""
+
+msgid "grid.action.addSection"
+msgstr ""
+
+msgid "manager.setup.section.description"
+msgstr ""
+
+msgid "settings.roles.gridDescription"
+msgstr ""
+
+msgid "manager.publication.library"
+msgstr ""
+
+msgid "manager.setup.copyrightYearBasis"
+msgstr ""
+
+msgid "manager.setup.copyrightYearBasis.article"
+msgstr ""
+
+msgid "manager.setup.copyrightYearBasis.issue"
+msgstr ""
+
+msgid "manager.setup.resetPermissions"
+msgstr ""
+
+msgid "manager.setup.resetPermissions.confirm"
+msgstr ""
+
+msgid "manager.setup.resetPermissions.description"
+msgstr ""
+
+msgid "manager.setup.resetPermissions.success"
+msgstr ""
+
+msgid "grid.genres.title.short"
+msgstr ""
+
+msgid "grid.genres.title"
+msgstr ""
+
+msgid "grid.genres.description"
+msgstr ""
+
+msgid "plugins.importexport.common.settings"
+msgstr ""
+
+msgid "plugins.importexport.common.settings.DOIPluginSettings"
+msgstr ""
+
+msgid "plugins.importexport.common.export.articles"
+msgstr ""
+
+msgid "plugins.importexport.common.export.issues"
+msgstr ""
+
+msgid "plugins.importexport.common.export.representations"
+msgstr ""
+
+msgid "plugins.importexport.common.missingRequirements"
+msgstr ""
+
+msgid "plugins.importexport.common.error.DOIsNotAvailable"
+msgstr ""
+
+msgid "plugins.importexport.common.error.pluginNotConfigured"
+msgstr ""
+
+msgid "plugins.importexport.common.error.noDOIContentObjects"
+msgstr ""
+
+msgid "plugins.importexport.common.settings.form.password"
+msgstr ""
+
+msgid "plugins.importexport.common.settings.form.password.description"
+msgstr ""
+
+msgid "plugins.importexport.common.filter.issue"
+msgstr ""
+
+msgid "plugins.importexport.common.status.any"
+msgstr ""
+
+msgid "plugins.importexport.common.status.notDeposited"
+msgstr ""
+
+msgid "plugins.importexport.common.status.markedRegistered"
+msgstr ""
+
+msgid "plugins.importexport.common.status.registered"
+msgstr ""
+
+msgid "plugins.importexport.common.action"
+msgstr ""
+
+msgid "plugins.importexport.common.action.export"
+msgstr ""
+
+msgid "plugins.importexport.common.action.markRegistered"
+msgstr ""
+
+msgid "plugins.importexport.common.action.register"
+msgstr ""
+
+msgid "plugins.importexport.common.error.noObjectsSelected"
+msgstr ""
+
+msgid "plugins.importexport.common.error.validation"
+msgstr ""
+
+msgid "plugins.importexport.common.invalidXML"
+msgstr ""
+
+msgid "plugins.importexport.common.export.error.outputFileNotWritable"
+msgstr ""
+
+msgid "plugins.importexport.common.export.error.inputFileNotReadable"
+msgstr ""
+
+msgid "plugins.importexport.common.register.error.mdsError"
+msgstr ""
+
+msgid "plugins.importexport.common.register.success"
+msgstr ""
+
+msgid "plugins.importexport.common.validation.success"
+msgstr ""
+
+msgid "plugins.importexport.common.validation.fail"
+msgstr ""
+
+msgid "plugins.importexport.common.senderTask.warning.noDOIprefix"
+msgstr ""
+
+msgid "plugins.importexport.common.error.unknownObjects"
+msgstr ""
+
+msgid "manager.setup.notifications.copyPrimaryContact"
+msgstr ""
+
+msgid "stats.contextStats"
+msgstr ""
+
+msgid "stats.context.tooltip.text"
+msgstr ""
+
+msgid "stats.context.tooltip.label"
+msgstr ""
+
+msgid "stats.context.downloadReport.description"
+msgstr ""
+
+msgid "stats.context.downloadReport.downloadContext.description"
+msgstr ""
+
+msgid "stats.context.downloadReport.downloadContext"
+msgstr ""
+
+msgid "stats.issueStats"
+msgstr ""
+
+msgid "stats.issues.details"
+msgstr ""
+
+msgid "stats.issues.searchIssueDescription"
+msgstr ""
+
+msgid "stats.issues.none"
+msgstr ""
+
+msgid "stats.issues.downloadReport.description"
+msgstr ""
+
+msgid "stats.issues.downloadReport.downloadIssues.description"
+msgstr ""
+
+msgid "stats.issues.downloadReport.downloadIssues"
+msgstr ""
+
+msgid "stats.issues.countOfTotal"
+msgstr ""
+
+msgid "stats.issues.tooltip.label"
+msgstr ""
+
+msgid "stats.issues.tooltip.text"
+msgstr ""
+
+msgid "stats.publicationStats"
+msgstr ""
+
+msgid "stats.publications.details"
+msgstr ""
+
+msgid "stats.publications.none"
+msgstr ""
+
+msgid "stats.publications.totalAbstractViews.timelineInterval"
+msgstr ""
+
+msgid "stats.publications.totalGalleyViews.timelineInterval"
+msgstr ""
+
+msgid "stats.publications.countOfTotal"
+msgstr ""
+
+msgid "stats.publications.abstracts"
+msgstr ""
+
+msgid "stats.publications.galleys"
+msgstr ""
+
+msgid "stats.publications.downloadReport.description"
+msgstr ""
+
+msgid "stats.publications.downloadReport.downloadSubmissions"
+msgstr ""
+
+msgid "stats.publications.downloadReport.downloadSubmissions.description"
+msgstr ""
+
+msgid "manager.setup.notifications.copySubmissionAckPrimaryContact.description"
+msgstr ""
+
+msgid ""
+"manager.setup.notifications.copySubmissionAckPrimaryContact.disabled."
+"description"
+msgstr ""
+
+msgid "plugins.importexport.native.export.issues.results"
+msgstr ""
+
+msgid "plugins.importexport.issue.cli.display"
+msgstr ""
+
+msgid "plugins.importexport.issueGalleys.exportFailed"
+msgstr ""
+
+msgid "emailTemplate.variable.context.contextName"
+msgstr ""
+
+msgid "emailTemplate.variable.context.contextUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.context.contactName"
+msgstr ""
+
+msgid "emailTemplate.variable.context.contextAcronym"
+msgstr ""
+
+msgid "emailTemplate.variable.context.contextSignature"
+msgstr ""
+
+msgid "emailTemplate.variable.context.contactEmail"
+msgstr ""
+
+msgid "emailTemplate.variable.context.mailingAddress"
+msgstr ""
+
+msgid "emailTemplate.variable.queuedPayment.itemName"
+msgstr ""
+
+msgid "emailTemplate.variable.queuedPayment.itemCost"
+msgstr ""
+
+msgid "emailTemplate.variable.queuedPayment.itemCurrencyCode"
+msgstr ""
+
+msgid "emailTemplate.variable.site.siteTitle"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.subscriberDetails"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.subscriptionSignature"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.subscriptionUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.expiryDate"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.subscriptionType"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.membership"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.institutionName"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.institutionMailingAddress"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.domain"
+msgstr ""
+
+msgid "emailTemplate.variable.subscription.ipRanges"
+msgstr ""
+
+msgid "emailTemplate.variable.queuedPaymentUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.submissionGuidelinesUrl"
+msgstr ""
+
+msgid "emailTemplate.variable.statisticsReportNotify.publicationStatsLink"
+msgstr ""
+
+msgid "emailTemplate.variable.issueId"
+msgstr ""
+
+msgid "mailable.statisticsReportNotify.description"
+msgstr ""
+
+msgid "mailable.validateEmailContext.name"
+msgstr ""
+
+msgid "mailable.validateEmailContext.description"
+msgstr ""
+
+msgid "doi.displayName"
+msgstr ""
+
+msgid "doi.description"
+msgstr ""
+
+msgid "doi.readerDisplayName"
+msgstr ""
+
+msgid "doi.manager.displayName"
+msgstr ""
+
+msgid "doi.manager.settings.description"
+msgstr ""
+
+msgid "doi.manager.settings.explainDois"
+msgstr ""
+
+msgid "doi.manager.settings.enableRepresentationDoi"
+msgstr ""
+
+msgid "doi.manager.settings.galleysWithDescription"
+msgstr ""
+
+msgid "doi.manager.settings.doiPrefix"
+msgstr ""
+
+msgid "doi.manager.settings.doiPrefixPattern"
+msgstr ""
+
+msgid "doi.manager.settings.doiSuffixPattern"
+msgstr ""
+
+msgid "doi.manager.settings.doiSuffixPattern.example"
+msgstr ""
+
+msgid "doi.manager.settings.doiSuffixPattern.issues"
+msgstr ""
+
+msgid "doi.manager.settings.doiSuffixPattern.submissions"
+msgstr ""
+
+msgid "doi.manager.settings.doiSuffixPattern.representations"
+msgstr ""
+
+msgid "doi.manager.settings.doiIssueSuffixPatternRequired"
+msgstr ""
+
+msgid "doi.manager.settings.doiSubmissionSuffixPatternRequired"
+msgstr ""
+
+msgid "doi.manager.settings.doiRepresentationSuffixPatternRequired"
+msgstr ""
+
+msgid "doi.manager.settings.doiReassign"
+msgstr ""
+
+msgid "doi.manager.settings.doiReassign.description"
+msgstr ""
+
+msgid "doi.manager.settings.doiReassign.confirm"
+msgstr ""
+
+msgid "doi.manager.settings.doiAssignJournalWide"
+msgstr ""
+
+msgid "doi.manager.settings.doiAssignJournalWide.description"
+msgstr ""
+
+msgid "doi.manager.settings.doiAssignJournalWide.confirm"
+msgstr ""
+
+msgid "doi.manager.settings.registrationAgency"
+msgstr ""
+
+msgid "doi.manager.settings.registrationAgency.description"
+msgstr ""
+
+msgid "doi.manager.settings.registrationAgency.none"
+msgstr ""
+
+msgid "doi.editor.doi"
+msgstr ""
+
+msgid "doi.editor.doi.description"
+msgstr ""
+
+msgid "doi.editor.doi.assignDoi"
+msgstr ""
+
+msgid "doi.editor.doiObjectTypeIssue"
+msgstr ""
+
+msgid "doi.editor.doiObjectTypeSubmission"
+msgstr ""
+
+msgid "doi.editor.doiObjectTypeRepresentation"
+msgstr ""
+
+msgid "doi.editor.customSuffixMissing"
+msgstr ""
+
+msgid "doi.editor.missingIssue"
+msgstr ""
+
+msgid "doi.editor.missingParts"
+msgstr ""
+
+msgid "doi.editor.patternNotResolved"
+msgstr ""
+
+msgid "doi.editor.canBeAssigned"
+msgstr ""
+
+msgid "doi.editor.assigned"
+msgstr ""
+
+msgid "doi.editor.doiSuffixCustomIdentifierNotUnique"
+msgstr ""
+
+msgid "doi.editor.clearObjectsDoi"
+msgstr ""
+
+msgid "doi.editor.clearObjectsDoi.confirm"
+msgstr ""
+
+msgid "doi.editor.clearIssueObjectsDoi"
+msgstr ""
+
+msgid "doi.editor.clearIssueObjectsDoi.confirm"
+msgstr ""
+
+msgid "doi.editor.clearIssueObjectsDoi.description"
+msgstr ""
+
+msgid "doi.editor.assignDoi"
+msgstr ""
+
+msgid "doi.editor.assignDoi.emptySuffix"
+msgstr ""
+
+msgid "doi.editor.assignDoi.pattern"
+msgstr ""
+
+msgid "doi.editor.assignDoi.assigned"
+msgstr ""
+
+msgid "doi.editor.assignDoi.toBeAssigned"
+msgstr ""
+
+msgid "doi.editor.missingPrefix"
+msgstr ""
+
+msgid "doi.editor.preview.publication"
+msgstr ""
+
+msgid "doi.editor.preview.publication.none"
+msgstr ""
+
+msgid "doi.editor.preview.galleys"
+msgstr ""
+
+msgid "doi.editor.preview.objects"
+msgstr ""
+
+msgid "api.galley.403.publicationDidNotMatch"
+msgstr ""
+
+msgid "api.galley.403.canEditPublishedDoi"
+msgstr ""
+
+msgid "api.issue.400.invalidDoi"
+msgstr ""
+
+msgid "api.issue.403.canEditPublishedDoi"
+msgstr ""
+
+msgid "api.issue.404.issuesNotFound"
+msgstr ""
+
+msgid "doi.manager.submissionDois"
+msgstr ""
+
+msgid "doi.manager.issueDois"
+msgstr ""
+
+msgid "mailable.decision.initialDecline.notifyAuthor.description"
+msgstr ""
+
+msgid "manager.institutions.noContext"
+msgstr ""
+
+msgid "mailable.subscriptionNotify.name"
+msgstr ""
+
+msgid "mailable.subscriptionNotify.description"
+msgstr ""
+
+msgid "mailable.subscriptionExpiresSoon.name"
+msgstr ""
+
+msgid "mailable.subscriptionExpiresSoon.description"
+msgstr ""
+
+msgid "mailable.subscriptionExpired.name"
+msgstr ""
+
+msgid "mailable.subscriptionExpired.description"
+msgstr ""
+
+msgid "mailable.subscriptionExpiredLast.name"
+msgstr ""
+
+msgid "mailable.subscriptionExpiredLast.description"
+msgstr ""
+
+msgid "mailable.subscriptionPurchaseIndividual.name"
+msgstr ""
+
+msgid "mailable.subscriptionPurchaseIndividual.description"
+msgstr ""
+
+msgid "mailable.subscriptionPurchaseInstitutional.name"
+msgstr ""
+
+msgid "mailable.subscriptionPurchaseInstitutional.description"
+msgstr ""
+
+msgid "mailable.subscriptionRenewIndividual.name"
+msgstr ""
+
+msgid "mailable.subscriptionRenewIndividual.description"
+msgstr ""
+
+msgid "mailable.subscriptionRenewInstitutional.name"
+msgstr ""
+
+msgid "mailable.subscriptionRenewInstitutional.description"
+msgstr ""
+
+msgid "mailable.openAccessNotify.name"
+msgstr ""
+
+msgid "mailable.openAccessNotify.description"
+msgstr ""
+
+msgid "mailable.issuePublishNotify.name"
+msgstr ""
+
+msgid "mailable.issuePublishNotify.description"
+msgstr ""
+
+msgid "manager.manageEmails.description"
+msgstr ""
+
+msgid "mailable.layoutComplete.name"
+msgstr ""
+
+msgid "mailable.publicationVersionNotify.name"
+msgstr ""
+
+msgid "mailable.publicationVersionNotify.description"
+msgstr ""
+
+msgid "mailable.submissionNeedsEditor.description"
+msgstr ""
+
+msgid "mailable.paymentRequest.name"
+msgstr ""
+
+msgid "mailable.paymentRequest.description"
+msgstr ""

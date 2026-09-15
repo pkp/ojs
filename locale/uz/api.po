@@ -1,0 +1,81 @@
+# Komronbek Tufliyev <komronbek773@gmail.com>, 2024.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-01-30 11:06+0000\n"
+"Last-Translator: Komronbek Tufliyev <komronbek773@gmail.com>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/api/uz/>\n"
+"Language: uz@cyrillic\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "api.announcements.400.contextsNotMatched"
+msgstr "Siz soʻragan eʼlon ushbu jurnalning bir qismi emas."
+
+msgid "api.emails.403.disabled"
+msgstr "Bu jurnal uchun elektron pochta xabarnomasi funksiyasi yoqilmagan."
+
+msgid "api.submissions.400.wrongContext"
+msgstr "Siz soʻragan so'rov ushbu jurnalda yoʻq."
+
+msgid "api.submissions.403.cantChangeContext"
+msgstr "Siz topshirish(submission) jurnalini o'zgartira olmaysiz."
+
+msgid "api.submissions.403.unpublishedIssues"
+msgstr "Sizda chop etilmagan nashrlarni ko‘rish uchun ruxsat yo‘q."
+
+msgid "api.contexts.403.requestedDisabledContexts"
+msgstr "Siz faqat yoqilgan(enabled) jurnallarni ko'rishingiz mumkin."
+
+msgid "api.contexts.403.notAllowed"
+msgstr "Sizda bu jurnalni ko‘rish uchun ruxsat yo‘q."
+
+msgid "api.contexts.403.contextsDidNotMatch"
+msgstr ""
+"Jurnal API yoki butun sayt API ga so'rov yubormaguningizcha ushbu jurnalni "
+"ko'ra olmaysiz yoki tahrirlay olmaysiz."
+
+msgid "api.contexts.403.requiresContext"
+msgstr "Siz ushbu jurnalni butun sayt API'sidan tahrirlay olmaysiz."
+
+msgid "api.contexts.403.notAllowedEdit"
+msgstr "Sizda bu jurnalni tahrirlash uchun ruxsat yo'q."
+
+msgid "api.contexts.403.notAllowedDelete"
+msgstr "Sizda bu jurnalni oʻchirishga ruxsatingiz yoʻq."
+
+msgid "api.contexts.404.contextNotFound"
+msgstr "Siz soʻragan jurnal topilmadi."
+
+msgid "api.dois.403.contextsNotMatched"
+msgstr "Siz soʻragan DOI ushbu jurnalning bir qismi emas."
+
+msgid "api.dois.400.noRegistrationAgencyConfigured"
+msgstr "Ushbu jurnal uchun DOI ro'yxatga olish agentligi sozlanmagan."
+
+msgid "api.dois.400.depositFailed"
+msgstr ""
+"Ba'zi elementlar muvaffaqiyatli topshirilmadi. Iltimos, alohida "
+"elementlarning xato xabarlarini tekshiring."
+
+msgid "api.emailTemplates.403.notAllowedChangeContext"
+msgstr ""
+"Ushbu elektron pochta shablonini boshqa jurnalga ko‘chirishga ruxsatingiz "
+"yo‘q."
+
+msgid "api._payments.400.invalidPaymentMethod"
+msgstr "Siz tanlagan toʻlov usuli qoʻllab-quvvatlanmaydi."
+
+msgid "api.publications.403.contextsDidNotMatch"
+msgstr "Siz soʻragan nashr ushbu jurnalning bir qismi emas."
+
+msgid "api.publications.403.submissionsDidNotMatch"
+msgstr "Siz soʻragan nashr ushbu yuborish(submission)ning bir qismi emas."
+
+msgid "api.submissionFiles.400.badRepresentationAssocType"
+msgstr "Ushbu fayl bosqichidagi faylni galley bilan bog‘lay olmaysiz."
+
+msgid "api.submission.400.inactiveSection"
+msgstr "Bu boʻlim endi yubormalarni qabul qilmayapti."

@@ -1,0 +1,216 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Weblate\n"
+
+msgid "emails.passwordResetConfirm.subject"
+msgstr ""
+
+msgid "emails.passwordResetConfirm.body"
+msgstr ""
+
+msgid "emails.userRegister.subject"
+msgstr ""
+
+msgid "emails.userRegister.body"
+msgstr ""
+
+msgid "emails.userValidateContext.subject"
+msgstr ""
+
+msgid "emails.userValidateContext.body"
+msgstr ""
+
+msgid "emails.userValidateSite.subject"
+msgstr ""
+
+msgid "emails.userValidateSite.body"
+msgstr ""
+
+msgid "emails.reviewerRegister.subject"
+msgstr ""
+
+msgid "emails.reviewerRegister.body"
+msgstr ""
+
+msgid "emails.issuePublishNotify.subject"
+msgstr ""
+
+msgid "emails.issuePublishNotify.body"
+msgstr ""
+
+msgid "emails.editorAssign.subject"
+msgstr ""
+
+msgid "emails.editorAssign.body"
+msgstr ""
+
+msgid "emails.editorAssignReview.body"
+msgstr ""
+
+msgid "emails.editorAssignProduction.body"
+msgstr ""
+
+msgid "emails.reviewRequest.subject"
+msgstr ""
+
+msgid "emails.reviewRequest.body"
+msgstr ""
+
+msgid "emails.reviewResponseOverdueAuto.subject"
+msgstr ""
+
+msgid "emails.reviewResponseOverdueAuto.body"
+msgstr ""
+
+msgid "emails.reviewRequestSubsequent.subject"
+msgstr ""
+
+msgid "emails.reviewRequestSubsequent.body"
+msgstr ""
+
+msgid "emails.reviewCancel.subject"
+msgstr ""
+
+msgid "emails.reviewCancel.body"
+msgstr ""
+
+msgid "emails.reviewReinstate.subject"
+msgstr ""
+
+msgid "emails.reviewReinstate.body"
+msgstr ""
+
+msgid "emails.reviewDecline.subject"
+msgstr ""
+
+msgid "emails.reviewDecline.body"
+msgstr ""
+
+msgid "emails.reviewRemind.subject"
+msgstr ""
+
+msgid "emails.reviewRemind.body"
+msgstr ""
+
+msgid "emails.reviewRemindAuto.subject"
+msgstr ""
+
+msgid "emails.reviewRemindAuto.body"
+msgstr ""
+
+msgid "emails.editorDecisionAccept.subject"
+msgstr ""
+
+msgid "emails.editorDecisionAccept.body"
+msgstr ""
+
+msgid "emails.editorDecisionSkipReview.subject"
+msgstr ""
+
+msgid "emails.editorDecisionSkipReview.body"
+msgstr ""
+
+msgid "emails.layoutRequest.subject"
+msgstr ""
+
+msgid "emails.layoutRequest.body"
+msgstr ""
+
+msgid "emails.layoutComplete.subject"
+msgstr ""
+
+msgid "emails.layoutComplete.body"
+msgstr ""
+
+msgid "emails.emailLink.subject"
+msgstr ""
+
+msgid "emails.emailLink.body"
+msgstr ""
+
+msgid "emails.emailLink.description"
+msgstr ""
+
+msgid "emails.subscriptionNotify.subject"
+msgstr ""
+
+msgid "emails.subscriptionNotify.body"
+msgstr ""
+
+msgid "emails.openAccessNotify.subject"
+msgstr ""
+
+msgid "emails.openAccessNotify.body"
+msgstr ""
+
+msgid "emails.subscriptionBeforeExpiry.subject"
+msgstr ""
+
+msgid "emails.subscriptionBeforeExpiry.body"
+msgstr ""
+
+msgid "emails.subscriptionAfterExpiry.subject"
+msgstr ""
+
+msgid "emails.subscriptionAfterExpiry.body"
+msgstr ""
+
+msgid "emails.subscriptionAfterExpiryLast.subject"
+msgstr ""
+
+msgid "emails.subscriptionAfterExpiryLast.body"
+msgstr ""
+
+msgid "emails.subscriptionPurchaseIndl.subject"
+msgstr ""
+
+msgid "emails.subscriptionPurchaseIndl.body"
+msgstr ""
+
+msgid "emails.subscriptionPurchaseInstl.subject"
+msgstr ""
+
+msgid "emails.subscriptionPurchaseInstl.body"
+msgstr ""
+
+msgid "emails.subscriptionRenewIndl.subject"
+msgstr ""
+
+msgid "emails.subscriptionRenewIndl.body"
+msgstr ""
+
+msgid "emails.subscriptionRenewInstl.subject"
+msgstr ""
+
+msgid "emails.subscriptionRenewInstl.body"
+msgstr ""
+
+msgid "emails.revisedVersionNotify.subject"
+msgstr ""
+
+msgid "emails.revisedVersionNotify.body"
+msgstr ""
+
+msgid "emails.statisticsReportNotification.subject"
+msgstr ""
+
+msgid "emails.statisticsReportNotification.body"
+msgstr ""
+
+msgid "emails.announcement.subject"
+msgstr ""
+
+msgid "emails.announcement.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.subject"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.body"
+msgstr ""
+
+msgid "emails.paymentRequestNotification.footer"
+msgstr ""
