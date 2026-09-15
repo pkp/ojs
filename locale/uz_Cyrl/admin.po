@@ -1,0 +1,251 @@
+# Jurayev Tuychi <jurayevtuychi@gmail.com>, 2022.
+# Komronbek Tufliyev <komronbek773@gmail.com>, 2024.
+# Shoyim Obloqulov <obloqulovshoyim1@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2024-01-30 11:06+0000\n"
+"Last-Translator: Komronbek Tufliyev <komronbek773@gmail.com>\n"
+"Language-Team: Uzbek <http://translate.pkp.sfu.ca/projects/ojs/admin/uz/>\n"
+"Language: uz@cyrillic\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.18.2\n"
+
+msgid "admin.hostedContexts"
+msgstr "Журналлар нашр этилди"
+
+msgid "admin.settings.redirect"
+msgstr "Журнални қайта йўналтириш"
+
+msgid "admin.settings.redirectInstructions"
+msgstr ""
+"Асосий сайтга сўровлар ушбу журналга йўналтирилади. Бу, масалан, сайт фақат "
+"битта журналга эга бўлса, фойдали бўлиши мумкин."
+
+msgid "admin.languages.confirmDisable"
+msgstr ""
+"Ҳақиқатан ҳам бу тилни ўчириб қўймоқчимисиз? Бу ҳозирда маҳаллий тилдан "
+"фойдаланаётган ҳар қандай жойлаштирилган журналларга таъсир қилиши мумкин."
+
+msgid "admin.languages.primaryLocaleInstructions"
+msgstr ""
+"Бу сайт ва ҳар қандай жойлаштирилган журналлар учун стандарт тил бўлади."
+
+msgid "admin.languages.supportedLocalesInstructions"
+msgstr ""
+"Сайтда қўллаб-қувватлаш учун барча тилларни танланг. Танланган тиллар "
+"сайтдаги барча журналлар томонидан фойдаланиш учун мавжуд бўлади, шунингдек, "
+"ҳар бир сайт саҳифасида пайдо бўладиган тилни танлаш менюсида пайдо бўлади "
+"(журналнинг махсус саҳифаларида бекор қилиниши мумкин). Агар бир нечта тил "
+"танланмаган бўлса, тилни алмаштириш менюси пайдо бўлмайди ва кенгайтирилган "
+"тил созламалари журналларда мавжуд бўлмайди."
+
+msgid "admin.locale.maybeIncomplete"
+msgstr "Белгиланган тиллар тўлиқ бўлмаслиги мумкин."
+
+msgid "admin.languages.confirmUninstall"
+msgstr ""
+"Ҳақиқатан ҳам бу тилни ўчириб ташламоқчимисиз? Бу ҳозирда маҳаллий тилдан "
+"фойдаланаётган ҳар қандай жойлаштирилган журналларга таъсир қилиши мумкин."
+
+msgid "admin.languages.installNewLocalesInstructions"
+msgstr ""
+"Ушбу тизимда қўллаб-қувватлашни ўрнатиш учун ҳар қандай қўшимча тилларни "
+"танланг. Жойлаштирилган журналлар томонидан ишлатилишидан олдин маҳаллий "
+"тиллар ўрнатилиши керак. Янги тиллар учун қўллаб-қувватлашни қўшиш ҳақида "
+"маълумот олиш учун OJS ҳужжатларига қаранг."
+
+msgid "admin.systemVersion"
+msgstr "OJS версияси\n"
+
+msgid "admin.systemConfiguration"
+msgstr "OJS конфигурацияси\n"
+
+msgid "admin.systemConfigurationDescription"
+msgstr "OJS конфигурация созламалари <tt>config.inc.php</tt> дан."
+
+msgid "admin.journals.createInstructions"
+msgstr ""
+"Сиз автоматик равишда ушбу журналнинг менежери сифатида рўйхатдан "
+"ўтасиз. Янги журнални яратганингиздан сўнг, сиз журнални дастлабки "
+"созлашни якунлаш учун унинг созламалари устасига йўналтириласиз.\n"
+
+msgid "admin.journals.journalSettings"
+msgstr "Журнал созламалари\n"
+
+msgid "admin.journals.noneCreated"
+msgstr "Ҳеч қандай журнал яратилмаган.\n"
+
+msgid "admin.contexts.create"
+msgstr "Журнал яратиш\n"
+
+msgid "admin.journals.urlWillBe"
+msgstr ""
+"Бу журнални аниқлайдиган битта қисқа сўз ёки қисқартма бўлиши керак. "
+"Журналнинг URL манзили {$sampleUrl} бўлади."
+
+msgid "admin.contexts.form.titleRequired"
+msgstr "Сарлавҳа керак."
+
+msgid "admin.contexts.form.pathRequired"
+msgstr "Йўл (Path) керак."
+
+msgid "admin.contexts.form.pathAlphaNumeric"
+msgstr ""
+"Йўл (Path) фақат ҳарфлар, рақамлар ва _ ва - белгиларидан иборат бўлиши "
+"мумкин. У ҳарф ёки рақам билан бошланиши ва тугаши керак."
+
+msgid "admin.contexts.form.pathExists"
+msgstr ""
+"Сиз тақдим этган йўл (path) аллақачон бошқа журнал томонидан ишлатилмоқда."
+
+msgid "admin.contexts.form.primaryLocaleNotSupported"
+msgstr ""
+"Асосий тил журналнинг қўллаб-қувватланадиган тилларидан бири бўлиши керак."
+
+msgid "admin.journals.enableJournalInstructions"
+msgstr "Ушбу журнални сайтда очиқ кўринишини ёқинг"
+
+msgid "admin.contexts.contextDescription"
+msgstr "Журнал тавсифи"
+
+msgid "admin.journal.pathImportInstructions"
+msgstr ""
+"Мавжуд журнал йўли (path) ёки янги яратиш учун йўл (path) (масалан, "
+"\"ojs\")."
+
+msgid "admin.journals.importSubscriptions"
+msgstr "Обуналарни импорт қилиш"
+
+msgid "admin.journals.transcode"
+msgstr "ISO8859-1 дан мақола метамаълумотларини транскод қилиш"
+
+msgid "admin.journals.redirect"
+msgstr ""
+"OJS 1 URL манзилларини OJS 2 URL манзилларига мослаштириш учун код "
+"яратинг"
+
+msgid "admin.journals.form.importPathRequired"
+msgstr "Импорт йўли (path) талаб қилинади."
+
+msgid "admin.journals.importErrors"
+msgstr "Импорт қилиш муваффақиятли якунланмади"
+
+msgid "admin.mergeUsers"
+msgstr "Фойдаланувчиларни бирлаштириш"
+
+msgid "admin.mergeUsers.mergeUser"
+msgstr "Фойдаланувчиларни бирлаштириш"
+
+msgid "admin.mergeUsers.into.description"
+msgstr ""
+"Олдинги фойдаланувчининг муаллифлик ҳуқуқи, таҳрирлаш топшириқлари ва "
+"ҳ.к.ларга тегишли фойдаланувчини танланг."
+
+msgid "admin.mergeUsers.from.description"
+msgstr ""
+"Бошқа фойдаланувчи ҳисобига бирлашиш учун фойдаланувчини (ёки бир "
+"нечтасини) танланг (масалан, кимдир иккита фойдаланувчи ҳисобига эга "
+"бўлса). Аввал танланган ҳисоб(лар) ўчирилади ва ҳар қандай топшириқлар, "
+"топшириқлар ва бошқалар иккинчи ҳисобга тегишли бўлади."
+
+msgid "admin.mergeUsers.allUsers"
+msgstr "Барча рўйхатдан ўтган фойдаланувчилар"
+
+msgid "admin.mergeUsers.confirm"
+msgstr ""
+"Танланган {$oldAccountCount} ҳисоб(лар)ни “{$newUsername}” фойдаланувчи "
+"номи билан бирлаштирмоқчимисиз? Танланган {$oldAccountCount} ҳисоблари "
+"кейин мавжуд бўлмайди. Бу ҳаракатни қайтариб бўлмайди."
+
+msgid "admin.mergeUsers.noneEnrolled"
+msgstr "Рўйхатдан ўтган фойдаланувчилар йўқ."
+
+msgid "admin.scheduledTask.subscriptionExpiryReminder"
+msgstr "Обуна муддати тугаши ҳақида эслатма"
+
+msgid "admin.scheduledTask.openAccessNotification"
+msgstr "Open Access билдиришномаси"
+
+msgid "admin.scheduledTask.reviewReminder"
+msgstr "Тақриз эслатмаси"
+
+msgid "admin.job.processLogFile.invalidLogEntry.issueId"
+msgstr "Нашр ID-си бутун сон эмас."
+
+msgid "admin.job.processLogFile.invalidLogEntry.issueGalleyId"
+msgstr "Нашр galley ID-си бутун сон эмас."
+
+msgid ""
+"admin.job.processLogFile.invalidLogEntry.issueAssocTypeNoMatch"
+msgstr "Нашр ID-си assoc ID билан мос эмас."
+
+msgid "admin.settings.enableBulkEmails.description"
+msgstr ""
+"Оммавий электрон почта хабарларини юборишга рухсат берилиши керак "
+"бўлган жойлаштирилган журналларни танланг. Бу функция ёқилган бўлса, "
+"журнал менежери ўз журналида рўйхатдан ўтган барча фойдаланувчиларга "
+"электрон почта хабарини юбориши мумкин бўлади.<br><br>Бу хусусиятдан "
+"номақбул электрон почта хабарларини юбориш учун нотўғри фойдаланиш "
+"баъзи юрисдикцияларда спамга қарши қонунларни бузиши ва натижага олиб "
+"келиши мумкин. серверингизнинг электрон почта хабарларида спам сифатида "
+"блокланган. Бу функцияни ёқишдан олдин техник маслаҳат сўранг ва ундан "
+"тўғри фойдаланишга ишонч ҳосил қилиш учун журнал менежерлари билан "
+"маслаҳатлашинг.<br><br>Ушбу хусусиятга қўшимча чекловларни ҳар бир "
+"журнал учун <a href=\"{$hostedContextsUrl}\">Ҳостланган журналлар</a> "
+"рўйхатидаги созламалар устасига ташриф буюриб ёқиш мумкин."
+
+msgid "admin.settings.disableBulkEmailRoles.description"
+msgstr ""
+"Журнал менежери қуйида танланган ролларнинг бирортасига оммавий электрон "
+"почта хабарларини юбора олмайди. Электрон почта хабарномаси функциясидан "
+"суиистеъмол қилишни чеклаш учун ушбу созламадан фойдаланинг. Мисол "
+"учун, бундай хатларни олишга рози бўлмаган ўқувчилар, муаллифлар ёки "
+"бошқа йирик фойдаланувчилар гуруҳларига оммавий электрон почта "
+"хабарларини ўчириб қўйиш хавфсизроқ бўлиши мумкин.<br><br>Оммавий э-"
+"почта функциясини ушбу журнал учун тўлиқ ўчириб қўйиш мумкин: <a "
+"href=\"{$siteSettingsUrl}\">Администратор > Сайт созламалари</a>."
+
+msgid "admin.settings.disableBulkEmailRoles.contextDisabled"
+msgstr ""
+"Бу журнал учун оммавий электрон почта функцияси ўчириб қўйилган. Бу "
+"функцияни <a href=\"{$siteSettingsUrl}\">Администратор > Сайт созламалари</"
+"a> орқали ёқинг."
+
+msgid "admin.siteManagement.description"
+msgstr ""
+"Ушбу сайтдан журналларни қўшинг, таҳрирланг ёки ўчиринг ва бутун сайт "
+"созламаларини бошқаринг."
+
+msgid "admin.settings.statistics.geo.description"
+msgstr ""
+"Ушбу сайтдаги журналлар томонидан тўпланиши мумкин бўлган географик "
+"фойдаланиш статистикаси турини танланг. Батафсилроқ географик статистика "
+"маълумотлар базаси ҳажмини сезиларли даражада ошириши ва баъзи камдан-кам "
+"ҳолларда ташриф буюрувчиларингизнинг анонимлигини бузиши мумкин. Ҳар бир "
+"журнал бу созламани бошқача созлаши мумкин, аммо журнал ҳеч қачон бу "
+"ерда созланганидан кўра батафсилроқ ёзувларни тўплай олмайди. Мисол "
+"учун, агар сайт фақат мамлакат ва минтақани қўллаб-қувватласа, журнал "
+"мамлакат ва минтақани ёки фақат мамлакатни танлаши мумкин. Журнал "
+"мамлакат, минтақа ва шаҳарни кузата олмайди."
+
+msgid "admin.settings.statistics.institutions.description"
+msgstr ""
+"Агар сиз ушбу сайтдаги журналлар муассасалар бўйича фойдаланиш "
+"статистикасини тўплашини истасангиз, институционал статистикани ёқинг. "
+"Журналлар ушбу хусусиятдан фойдаланиш учун муассаса ва унинг IP "
+"диапазонларини қўшишлари керак бўлади. Институционал статистикани "
+"ёқиш маълумотлар базаси ҳажмини сезиларли даражада ошириши мумкин."
+
+msgid "admin.settings.statistics.sushi.public.description"
+msgstr ""
+"SUSHI API сўнгги нуқталарини ушбу сайтдаги барча журналлар учун очиқ "
+"қилиш керакми ёки йўқми. Агар сиз оммавий APIни ёқсангиз, ҳар бир журнал "
+"ўз статистикасини шахсий қилиш учун ушбу созламани бекор қилиши "
+"мумкин. Бироқ, агар сиз оммавий APIни ўчириб қўйсангиз, журналлар "
+"ўзларининг API-ларини ҳаммага очиқ қила олмайди."
+
+msgid "admin.settings.statistics.sushiPlatform.isSiteSushiPlatform"
+msgstr "Сайтдан барча журналлар учун платформа сифатида фойдаланинг."
