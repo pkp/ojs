@@ -21,6 +21,10 @@ New config.inc.php section for logging named logs is added, with the following p
     - log_formatter (default value: unset): The Monolog formatter class for the file/stream channels. Leave unset for the default human-readable line format.
     - log_audit (default value: Off): Enable application-level security audit logging (authentication events, privilege and configuration changes, plugin lifecycle, etc.).
 
+The following config.inc.php parameters have been removed from [schedule]:
+    - task_runner: The built-in web based scheduled task runner has been removed. Scheduled tasks are now only run by lib/pkp/tools/scheduler.php, which must be run every minute by the operating system's task scheduler (e.g. cron). Installations that relied on the built-in task runner, which was enabled by default, must set this up, otherwise no scheduled task will run. See the [schedule] section of config.TEMPLATE.inc.php.
+    - task_runner_interval: It only applied to the built-in task runner and is no longer used.
+
 
 New Features
 ------------
