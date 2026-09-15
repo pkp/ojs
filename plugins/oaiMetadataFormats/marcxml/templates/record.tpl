@@ -108,8 +108,8 @@
 
 	<datafield id="773" i1="0" i2=" ">
 		<subfield label="t">{$journal->getName($journal->getPrimaryLocale())|escape};</subfield>
-		{if $issue}
-			<subfield label="g">{$issue->getIssueIdentification()|escape}</subfield>
+		{if $relatedParts}
+			<subfield label="g">{$relatedParts|escape}</subfield>
 		{/if}
 	</datafield>
 
