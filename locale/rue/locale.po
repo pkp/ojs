@@ -3,7 +3,7 @@
 # Kamil Federyga <kamilfederyga@gmail.com>, 2026.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2026-09-15 04:51+0000\n"
+"PO-Revision-Date: 2026-09-16 14:59+0000\n"
 "Last-Translator: Monika Tylawska <monika.tylawska@gmail.com>\n"
 "Language-Team: Rusyn <http://translate.pkp.sfu.ca/projects/ojs/locale/rue/>\n"
 "Language: rue\n"
@@ -1544,3 +1544,43 @@ msgstr "Файль языкового едитора - закінчена вер
 
 msgid "proofreader.noProofreadingAssignments"
 msgstr "Брак задань звязаных з коректом дописів"
+
+msgid "article.pluginMissing"
+msgstr ""
+"<p>Выбраный файль PDF повинен ся высвітлити в тым місци. Кєд в інтернетовій "
+"переглядарці заінсталювана єст втычка до отвераня файлів PDF (на примір "
+"остатня версия<a href=\"https://get.adobe.com/reader/\">Adobe Acrobat "
+"Reader</a>.</p>"
+
+msgid "article.nonpdf.title"
+msgstr "Стіганя статий"
+
+msgid "search.syntaxInstructions"
+msgstr ""
+"Вказівкы односячы ся до гляданя:<ul>\n"
+"<li>Велькіст букв в гляданых гослах не ма значыня</li>\n"
+"<li>Повсядны слова сут іґноруваны </li>\n"
+"<li>Стандартово высвітляны сут выключні дописы, котры містят<em>вшыткы</"
+"em>вертаны сут терміны, што сут в звіданю (т.є.,<em>і</em>є вкрытый)</li>\n"
+"<li>Получ вельо слів <em>або</em>, жебы найти статю, котра містит в собі "
+"окрисленый термін; нп.<em>едукация або досліджыня</em></li>\n"
+"<li>Жебы створити барже зложены звіданя треба хоснувати скобкы; "
+"нп.,<em>архів ((часопис або конференция) без тезы)</em></li>\n"
+"<li>Жебы вынайти докладну фразу, належыт вмістити ю до цитувальника; "
+"нп.,<em>“публикация отвореного доступу”</em></li>\n"
+"<li>Вылуч слово, перез поперджыня "
+"го<strong>-</strong>або<em>ні</em>;нп.<em>онляйн-політыка</em>або<em>онляйн "
+"ні політыка</em></li>\n"
+"<li>Схоснуй<strong>*</strong> в терміні як запевніня допасуваня каждой "
+"секвенциі шрифту; нп.,<em>соций*моральніст</em>допасуй документы, котры "
+"містят в собі “социйолоґічный” або“социялістычный”</li>\n"
+"</ul>"
+
+msgid "article.pageTitle"
+msgstr "Вид {$title}"
+
+msgid "article.pdf.title"
+msgstr "Формат переносных файлів (PDF)"
+
+msgid "article.download"
+msgstr "Стягний тот файль PDF"
