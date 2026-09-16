@@ -98,7 +98,6 @@ export default defineConfig(({mode}) => {
 				'vue',
 				'vue-chartjs',
 				'vue-draggable-plus',
-				'vue-scrollto',
 				'vue3-highlightjs',
 				'mathjax',
 				'@sciflow/editor-core',
