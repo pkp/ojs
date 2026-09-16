@@ -19,12 +19,17 @@
 namespace APP\publication;
 
 use APP\core\Application;
+use APP\facades\Repo;
 use APP\file\PublicFileManager;
 use APP\publication\enums\VersionStage;
+use PKP\context\Context;
+use PKP\plugins\PluginRegistry;
 use PKP\publication\PKPPublication;
 
 class Publication extends PKPPublication
 {
+    use HasContextIdentityMetadata;
+
     // Case of no issue, published issue and future issue with publish intent
     public const STATUS_READY_TO_PUBLISH = 6;
     // Case of future issue with schedule intent
@@ -80,5 +85,59 @@ class Publication extends PKPPublication
     public function setIssueId(?int $issueId): void
     {
         $this->setData('issueId', $issueId);
+    }
+
+    /**
+     * Set the current journal identity metadata.
+     * If CSL plugin is enabled then publisher location from this plugin settings is also set.
+     */
+    public function stampContextIdentity(?Context $context = null): void
+    {
+        // Otherwise stamp the current context: no issue (issue-free journals, or an article
+        // published without an issue assignment), or the issue is not published and stamped.
+        if ($this->inheritContextIdentityFromIssue()) {
+            return;
+        }
+
+        $context ??= $this->getStampingContext();
+        parent::stampContextIdentity($context);
+        $this->setData('printIssn', $context->getData('printIssn'));
+        $this->setData('onlineIssn', $context->getData('onlineIssn'));
+        $this->setData('publisher', $context->getData('publisherInstitution'));
+
+        $cslPlugin = PluginRegistry::getPlugin('generic', 'citationstylelanguageplugin');
+        if ($cslPlugin?->getEnabled($context->getId()) && !empty($publisherLocation = $cslPlugin->getSetting($context->getId(), 'publisherLocation'))) {
+            $this->setData('publisherLocation', $publisherLocation);
+        }
+    }
+
+    /**
+     * Inherit the identity of the publication's issue when that issue is published and stamped,
+     * so an article added to a back issue takes the issue's identity rather than the current one.
+     *
+     * @return bool Whether an identity was inherited
+     */
+    public function inheritContextIdentityFromIssue(): bool
+    {
+        $issue = $this->getIssueId() ? Repo::issue()->get($this->getIssueId()) : null;
+        if (!$issue || !$issue->getData('published') || !$issue->getData('contextName')) {
+            return false;
+        }
+        $this->setData('contextName', $issue->getData('contextName'));
+        $this->setData('contextAbbreviation', $issue->getData('contextAbbreviation'));
+        $this->setData('contextPrimaryLocale', $issue->getData('contextPrimaryLocale'));
+        $this->setData('printIssn', $issue->getData('printIssn'));
+        $this->setData('onlineIssn', $issue->getData('onlineIssn'));
+        $this->setData('publisher', $issue->getData('publisher'));
+        $this->setData('publisherLocation', $issue->getData('publisherLocation'));
+        return true;
+    }
+
+    public function clearIdentityMetadata(): void
+    {
+        parent::clearIdentityMetadata();
+        $this->setData('publisher', null);
+        $this->setData('onlineIssn', null);
+        $this->setData('printIssn', null);
     }
 }

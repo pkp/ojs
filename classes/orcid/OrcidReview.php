@@ -61,6 +61,9 @@ class OrcidReview
         $submissionLocale = $this->submission->getData('locale');
         $currentPublication = $this->submission->getCurrentPublication();
 
+        // Live context intentional: reviews are not stamped, and using the publication's
+        // stamped ISSN/publisher would mis-file a new review on an old publication under
+        // the old journal identity in ORCID's registry.
         if (empty($this->review->getData('dateCompleted')) || empty($this->context->getData('onlineIssn'))) {
             return [];
         }
