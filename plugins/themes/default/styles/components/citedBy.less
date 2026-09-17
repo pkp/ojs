@@ -1,0 +1,87 @@
+@import (reference) "../components.less";
+
+/* --- Structural styles for layout --- */
+.CrossrefCitedByBody__citationsWrapper {
+	max-width: 45rem;
+	width: 100%;
+	overflow-y: auto;
+}
+
+.CrossrefCitedByBody__actions {
+	display: flex;
+	gap: @base;
+}
+
+/* --- Visual --- */
+// Styles for the modal content
+.CrossrefCitedByBody__citationsList {
+	list-style: none;
+	padding: 1.43rem;
+}
+
+.CrossrefCitedByBody__actionsCopyBtn {
+	background-color: @bg-base;
+	color: #ffffff;
+}
+
+.CrossrefCitedByBody__count {
+	font-family: @font;
+	font-size: @font-sml;
+	line-height: @line-base;
+	font-weight: @normal;
+	margin: 0;
+}
+
+.CrossrefCitedByBody__citationTitle {
+	margin: 0 0 @half;
+	font-family: @font-heading;
+	font-size: @font-base;
+	font-weight: @bold;
+	line-height: @line-base;
+}
+
+.CrossrefCitedByBody__citationAuthors {
+	margin: 0 0 @half;
+	font-family: @font;
+	font-size: @font-base;
+	line-height: @line-bump;
+	font-weight: @normal;
+}
+
+.CrossrefCitedByBody__citationSource {
+	margin: 0 0 @half;
+	font-family: @font;
+	font-size: @font-base;
+	line-height: @line-bump;
+	font-weight: @normal;
+	color: @text-light;
+}
+
+.CrossrefCitedByBody__citationSourceDelimiter {
+	vertical-align: 0.2em;
+	margin-right: 0.4rem;
+	margin-left: 0.4rem;
+}
+
+// Styles for citation base component
+.CrossrefCitedBy__viewCitations {
+	font-family: @font;
+	font-size: @font-base;
+	line-height: @line-base;
+	color: @primary;
+	text-decoration: underline;
+
+	&:hover,
+	&:focus {
+		color: @primary-lift;
+	}
+}
+
+.CrossrefCitedBy__label {
+	margin-bottom: @base;
+}
+
+.CrossrefCitedBy__detailed {
+	max-width: 20rem;
+	width: 100%;
+}
